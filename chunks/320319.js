@@ -32,7 +32,7 @@ xMax: 80,
 yMin: -150,
 yMax: -20
   },
-  L = a.memo(e => {
+  v = a.memo(e => {
 let {
   name: t,
   canReveal: n = !0,
@@ -136,14 +136,14 @@ return (a.useEffect(() => {
     children: [
       (0, s.jsx)('div', {
         className: O.flipCardFront,
-        children: (0, s.jsx)(v, {
+        children: (0, s.jsx)(L, {
           ...e,
           className: O.topCover
         })
       }),
       (0, s.jsx)('div', {
         className: O.flipCardBack,
-        children: (0, s.jsx)(v, {
+        children: (0, s.jsx)(L, {
           ...e,
           className: O.topCover
         })
@@ -159,7 +159,7 @@ return (a.useEffect(() => {
       [O.reducedMotion]: D
     }),
     children: [
-      (0, s.jsx)(v, {
+      (0, s.jsx)(L, {
         ...e,
         ref: t === m.u.FREE_BOOST ? en : void 0
       }),
@@ -199,20 +199,20 @@ return (a.useEffect(() => {
       (0, s.jsx)('div', {
         className: O.flipCardHidden,
         'aria-hidden': !0,
-        children: (0, s.jsx)(v, {
+        children: (0, s.jsx)(L, {
           ...e
         })
       }),
       (0, s.jsx)('div', {
         className: O.flipCardFront,
-        children: (0, s.jsx)(v, {
+        children: (0, s.jsx)(L, {
           ...Y.upcomingDropUntimed,
           pillText: ''
         })
       }),
       (0, s.jsx)('div', {
         className: O.flipCardBack,
-        children: (0, s.jsx)(v, {
+        children: (0, s.jsx)(L, {
           ...e,
           description: ''
         })
@@ -226,13 +226,13 @@ return (a.useEffect(() => {
       })
     ]
   })
-}) : (0, s.jsx)(L, {
+}) : (0, s.jsx)(v, {
   ...Y.upcomingDropUntimed,
   forceShadow: p
 });
   });
-L.displayName = 'PerkDiscoverabilityCard';
-let v = a.forwardRef((e, t) => {
+v.displayName = 'PerkDiscoverabilityCard';
+let L = a.forwardRef((e, t) => {
   var n;
   let {
 title: r,
@@ -251,13 +251,13 @@ onClick: m,
 backgroundImage: S,
 pillText: M,
 perkImage: x
-  } = e, b = A === N.R0.CARD_CAROUSEL_FIRST_ROW || A === N.R0.CARD_CAROUSEL_SECOND_ROW || A === N.R0.CARD_CAROUSEL_THIRD_ROW, P = 0 !== c.length || 0 !== d.length || 0 !== o.length && g === N.zW.REWARD, L = (0, C.IB)(), [v, Z] = a.useState(L);
+  } = e, b = A === N.R0.CARD_CAROUSEL_FIRST_ROW || A === N.R0.CARD_CAROUSEL_SECOND_ROW || A === N.R0.CARD_CAROUSEL_THIRD_ROW, P = 0 !== c.length || 0 !== d.length || 0 !== o.length && g === N.zW.REWARD, v = (0, C.IB)(), [L, Z] = a.useState(v);
   a.useEffect(() => {
-L && Z(!0);
-  }, [L]);
+v && Z(!0);
+  }, [v]);
   let D = (0, p._)(g);
   return (0, s.jsxs)(_.Clickable, {
-className: i()(O.card, I, !0 === v ? null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className : void 0, {
+className: i()(O.card, I, !0 === L ? null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className : void 0, {
   [O.clickable]: null != m,
   [O.hideOverflow]: b
 }),
@@ -305,4 +305,4 @@ children: [
 ]
   });
 });
-v.displayName = 'PerkCardContent', t.Z = L;
+L.displayName = 'PerkCardContent', t.Z = v;

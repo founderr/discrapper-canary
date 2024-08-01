@@ -12,7 +12,7 @@ return p;
 return D;
   },
   Od: function() {
-return L;
+return f;
   },
   U_: function() {
 return N;
@@ -27,7 +27,7 @@ return d;
 return u;
   },
   r0: function() {
-return f;
+return L;
   },
   ug: function() {
 return h;
@@ -223,10 +223,10 @@ function D(t, e) {
   return e === T ? t : l(t, e);
 }
 
-function L(t, e) {
+function f(t, e) {
   return e === T ? t : A(t, u(t, e));
 }
-let f = s ? function(t) {
+let L = s ? function(t) {
 return BigInt(1) << BigInt(t);
   } : function(t) {
 return E.fromBit(t);

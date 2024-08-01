@@ -20,8 +20,8 @@ var s = n(120356),
   T = n(430824),
   h = n(158776),
   N = n(594174),
-  C = n(2093),
-  f = n(153124),
+  f = n(2093),
+  C = n(153124),
   p = n(689938),
   g = n(444771);
 let S = {
@@ -39,7 +39,7 @@ gotoChannel: s,
 mentionCount: a,
 channelState: l,
 toggleCollapsed: c
-  } = e, u = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, f.Dt)()));
+  } = e, u = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, C.Dt)()));
   return (0, i.jsx)(o.FocusRing, {
 offset: S,
 children: (0, i.jsxs)('div', {
@@ -51,11 +51,11 @@ children: (0, i.jsxs)('div', {
     null != c && null != l && ('ArrowRight' === e.key && l.collapsed || 'ArrowLeft' === e.key && !l.collapsed) && (null == c || c(l));
   },
   children: [
-    (0, i.jsx)(R, {
+    (0, i.jsx)(M, {
       channel: t,
       gotoChannel: s
     }),
-    (0, i.jsx)(M, {
+    (0, i.jsx)(x, {
       channel: t,
       gotoChannel: s,
       mentionCount: a
@@ -66,21 +66,21 @@ children: (0, i.jsxs)('div', {
   });
 }
 
-function R(e) {
+function M(e) {
   let {
 channel: t,
 gotoChannel: n
   } = e;
-  return t.isPrivate() ? (0, i.jsx)(O, {
+  return t.isPrivate() ? (0, i.jsx)(R, {
 channel: t,
 gotoChannel: n
-  }) : (0, i.jsx)(x, {
+  }) : (0, i.jsx)(O, {
 channel: t,
 gotoChannel: n
   });
 }
 
-function O(e) {
+function R(e) {
   let {
 channel: t,
 gotoChannel: n
@@ -97,7 +97,7 @@ children: (0, i.jsx)('img', {
   });
 }
 
-function x(e) {
+function O(e) {
   let {
 channel: t,
 gotoChannel: n
@@ -113,7 +113,7 @@ tabIndex: -1
   });
 }
 
-function M(e) {
+function x(e) {
   let {
 channel: t,
 gotoChannel: n,
@@ -148,7 +148,7 @@ children: [
           className: g.channelNameSpan,
           children: E
         }),
-        null != s && s > 0 ? (0, i.jsx)(C.Z, {
+        null != s && s > 0 ? (0, i.jsx)(f.Z, {
           value: s,
           className: g.badge
         }) : null

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return f;
   }
 });
 var i = n(735250);
@@ -21,12 +21,12 @@ var s = n(442837),
   h = n(900849),
   N = n(981631);
 
-function C(e) {
+function f(e) {
   let {
 channel: t,
 onClick: n,
-beforeTransition: C,
-className: f,
+beforeTransition: f,
+className: C,
 openChatWithoutConnecting: p
   } = e, g = (0, s.e7)([
 m.default,
@@ -42,9 +42,9 @@ children: e => {
   } = e;
   return (0, i.jsx)(c.Z, {
     role: 'link',
-    className: f,
+    className: C,
     onClick: e => {
-      e.stopPropagation(), null != n ? n() : (null != C && C(), (0, a.closeAllModals)(), ! function(e, t) {
+      e.stopPropagation(), null != n ? n() : (null != f && f(), (0, a.closeAllModals)(), ! function(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (null == e || null == t)
           return;

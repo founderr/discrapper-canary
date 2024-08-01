@@ -14,13 +14,13 @@ var i = n(735250),
   _ = n(827498),
   f = n(663924),
   E = n(998698),
-  g = n(605236),
-  C = n(665906),
+  C = n(605236),
+  g = n(665906),
   I = n(271383),
   x = n(496675),
   T = n(594174),
-  N = n(291407),
-  v = n(981631),
+  v = n(291407),
+  N = n(981631),
   S = n(314734),
   Z = n(921944),
   A = n(689938),
@@ -29,7 +29,7 @@ let b = a.forwardRef(function(e, t) {
   let {
 type: n
   } = e, [s, r] = a.useState(!1), m = (0, o.e7)([p.Z], () => p.Z.shouldShowPopup()), f = a.useCallback(() => {
-(0, d.yw)(v.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, g.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
+(0, d.yw)(N.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, C.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
   dismissAction: Z.L.TAKE_ACTION
 }), h._(_._b.TEXT, n));
   }, [
@@ -37,7 +37,7 @@ m,
 n
   ]), E = () => {
 r(!0);
-  }, C = () => {
+  }, g = () => {
 r(!1);
   };
   return (0, i.jsx)('div', {
@@ -51,9 +51,9 @@ children: (0, i.jsx)(u.Button, {
   onClick: f,
   onMouseEnter: E,
   onMouseOver: E,
-  onMouseLeave: C,
+  onMouseLeave: g,
   onFocus: E,
-  onBlur: C,
+  onBlur: g,
   'aria-label': A.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
   focusProps: {
     offset: {
@@ -90,9 +90,9 @@ let n = e.getGuildId(),
     var n, a;
     let s = e.isPrivate(),
       l = x.Z.computePermissions(e),
-      o = r.e$(l, v.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, v.Plq.CREATE_PRIVATE_THREADS),
-      c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, v.Plq.SEND_MESSAGES)),
-      u = (0, C.xl)(e);
+      o = r.e$(l, N.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, N.Plq.CREATE_PRIVATE_THREADS),
+      c = (!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || r.e$(l, N.Plq.SEND_MESSAGES)),
+      u = (0, g.xl)(e);
     return {
       messagesDisabled: i || !s && !c || u
     };
@@ -121,7 +121,7 @@ return null != e && e === n && p.Z.shouldShowPopup();
   return u && null == c && !l ? (0, i.jsxs)('div', {
 className: M.channelAppLauncher,
 children: [
-  (0, i.jsx)(N.Z, {
+  (0, i.jsx)(v.Z, {
     channel: t,
     animationContainerClassName: M.entrypointAnimation,
     glowClassName: M.animationGlow,

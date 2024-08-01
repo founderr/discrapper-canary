@@ -49,8 +49,8 @@ var i = n(735250),
   W = n(151007),
   K = n(432376),
   z = n(917990),
-  Q = n(996861),
-  q = n(603490),
+  q = n(996861),
+  Q = n(603490),
   X = n(225138),
   J = n(717680),
   $ = n(981631),
@@ -284,9 +284,9 @@ let {
 n.type === $.uaV.AUTO_MODERATION_ACTION && (F = F && p);
 let w = (0, H.a4)(n),
   z = (0, W.Z)(n, t, p),
-  Q = !t.isSystemDM() && (0, Y.Z)(n, d) && _ && !m,
+  q = !t.isSystemDM() && (0, Y.Z)(n, d) && _ && !m,
   {
-    disableReactionCreates: q
+    disableReactionCreates: Q
   } = (0, K.Z)({
     channel: t,
     canChat: N,
@@ -333,7 +333,7 @@ return {
   channel: t,
   message: n,
   canPin: z,
-  canEdit: Q,
+  canEdit: q,
   canDelete: F,
   canReport: w,
   canReply: A,
@@ -342,7 +342,7 @@ return {
   canForward: en && ei,
   canCopy: V.wS,
   hasDeveloperMode: h,
-  canReact: !q && T,
+  canReact: !Q && T,
   canPublish: X,
   canConfigureJoin: et,
   isExpanded: eo && !ec && !i && !s && !a,
@@ -380,7 +380,7 @@ ep(!0);
   }, []), eS = s.useCallback(() => {
 ep(!1);
   }, []), eA = s.useCallback((e, t) => {
-eN(ee.L.TAKE_ACTION), (0, Q.ts)(e, t);
+eN(ee.L.TAKE_ACTION), (0, q.ts)(e, t);
   }, [eN]), {
 canShowReactionsOnMessageHover: eM
   } = z.Z.useExperiment({
@@ -400,63 +400,63 @@ children: [
         key: 'copy-id',
         label: et.Z.Messages.COPY_ID_MESSAGE,
         icon: d.IdIcon,
-        onClick: Q.F4,
+        onClick: q.F4,
         ...eR
       }) : null,
       a && !eu ? el({
         key: 'copy-link',
         label: et.Z.Messages.COPY_LINK,
         icon: d.LinkIcon,
-        onClick: Q.fB,
+        onClick: q.fB,
         ...eR
       }) : null,
       N ? el({
         key: 'configure',
         label: et.Z.Messages.CONFIGURE,
         icon: d.CircleQuestionIcon,
-        onClick: Q.zW,
+        onClick: q.zW,
         ...eR
       }) : null,
       F ? el({
         key: 'mark-reminder',
         label: X ? et.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : et.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
         icon: X ? (0, d.makeIconCompat)(G.Z) : d.ListBulletsIcon,
-        onClick: X ? Q.l9 : Q.W1,
+        onClick: X ? q.l9 : q.W1,
         ...eR
       }) : null,
       em ? el({
         key: 'mark-unread',
         label: et.Z.Messages.MARK_UNREAD,
         icon: d.ChatMarkUnreadIcon,
-        onClick: Q.B8,
+        onClick: q.B8,
         ...eR
       }) : null,
       ei ? el({
         key: 'bookmark',
         label: es ? et.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK : et.Z.Messages.MESSAGE_BOOKMARKS_BOOKMARK,
         icon: d.InboxIcon,
-        onClick: es ? Q.eM : Q.dF,
+        onClick: es ? q.eM : q.dF,
         ...eR
       }) : null,
       r ? el({
         key: 'pin',
         label: n.pinned ? et.Z.Messages.UNPIN_MESSAGE : et.Z.Messages.PIN_MESSAGE,
         icon: d.PinIcon,
-        onClick: Q.rY,
+        onClick: q.rY,
         ...eR
       }) : null,
       g && M ? el({
         key: 'thread',
         label: et.Z.Messages.CREATE_THREAD,
         icon: d.ThreadIcon,
-        onClick: Q.gK,
+        onClick: q.gK,
         ...eR
       }) : null,
       p && _ ? el({
         key: 'reply-self',
         label: et.Z.Messages.MESSAGE_ACTION_REPLY,
         icon: d.ArrowAngleLeftUpIcon,
-        onClick: Q.HH,
+        onClick: q.HH,
         ...eR
       }) : null
     ]
@@ -466,7 +466,7 @@ children: [
       eM && !R ? (0, i.jsx)(er, {
         ...eR
       }) : null,
-      (0, i.jsx)(q.Z, {
+      (0, i.jsx)(Q.Z, {
         togglePopout: eI,
         renderEmojiPicker: ed,
         shouldShow: k,
@@ -480,14 +480,14 @@ children: [
     key: 'reply-other',
     label: et.Z.Messages.MESSAGE_ACTION_REPLY,
     icon: d.ArrowAngleLeftUpIcon,
-    onClick: Q.HH,
+    onClick: q.HH,
     ...eR
   }) : null,
   _ ? el({
     key: 'edit',
     label: et.Z.Messages.EDIT,
     icon: d.PencilIcon,
-    onClick: Q.Hd,
+    onClick: q.Hd,
     ...eR
   }) : null,
   M ? el({
@@ -504,21 +504,21 @@ children: [
     key: 'thread',
     label: et.Z.Messages.CREATE_THREAD,
     icon: d.ThreadIcon,
-    onClick: Q.gK,
+    onClick: q.gK,
     ...eR
   }) : null,
   !g && A ? el({
     key: 'view-thread',
     label: et.Z.Messages.VIEW_THREAD,
     icon: d.ThreadIcon,
-    onClick: Q.qe,
+    onClick: q.qe,
     ...eR
   }) : null,
   m ? el({
     key: 'publish',
     label: eT ? et.Z.Messages.NEWS_CHANNEL_PUBLISHED : et.Z.Messages.NEWS_CHANNEL_PUBLISH,
     icon: d.AnnouncementsIcon,
-    onClick: Q.Xl,
+    onClick: q.Xl,
     disabled: eT,
     ...eR
   }) : null,
@@ -526,7 +526,7 @@ children: [
     key: 'delete',
     label: et.Z.Messages.DELETE,
     icon: d.TrashIcon,
-    onClick: Q.$Z,
+    onClick: q.$Z,
     dangerous: !0,
     separator: !R,
     ...eR
@@ -585,7 +585,7 @@ children: [
     icon: d.RetryIcon,
     channel: t,
     message: n,
-    onClick: Q.mG
+    onClick: q.mG
   }),
   el({
     key: 'delete-usent',
@@ -593,7 +593,7 @@ children: [
     icon: d.TrashIcon,
     channel: t,
     message: n,
-    onClick: Q.$Z
+    onClick: q.$Z
   })
 ]
   });

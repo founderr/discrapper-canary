@@ -1,6 +1,6 @@
 n.d(t, {
   H: function() {
-return C;
+return f;
   }
 });
 var i = n(735250);
@@ -21,31 +21,31 @@ var s = n(399606),
   h = n(226060),
   N = n(981631);
 
-function C(e) {
+function f(e) {
   let {
 guildProductListing: t,
 guildId: n,
-location: C,
-shouldShowFullDescriptionButton: f = !0,
+location: f,
+shouldShowFullDescriptionButton: C = !0,
 hideRoleTag: p = !1,
 lineClamp: g = 1,
 cardWidth: S,
 cardHeight: A,
-thumbnailHeight: R,
-descriptionTextVariant: O = 'text-sm/normal',
-showOpaqueBackground: x = !1
-  } = e, M = (0, s.e7)([o.Z], () => o.Z.getGuild(n), [n]), v = (0, s.e7)([o.Z], () => {
+thumbnailHeight: M,
+descriptionTextVariant: R = 'text-sm/normal',
+showOpaqueBackground: O = !1
+  } = e, x = (0, s.e7)([o.Z], () => o.Z.getGuild(n), [n]), v = (0, s.e7)([o.Z], () => {
 var e;
 return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : N.lds);
-  }), L = (0, a.U)(t, 600), Z = (0, I.C)(t), P = (0, u.SO)(M), {
+  }), Z = (0, a.U)(t, 600), L = (0, I.C)(t), P = (0, u.SO)(x), {
 shouldHideGuildPurchaseEntryPoints: D
   } = (0, l.uP)(n), b = (0, I.k)(t);
-  if (null == M || D)
+  if (null == x || D)
 return null;
   let j = () => (0, T.e)({
   guildId: n,
   guildProductListingId: t.id,
-  analyticsLocation: C
+  analyticsLocation: f
 }),
 U = (0, i.jsx)(m.m, {
   product: t,
@@ -57,7 +57,7 @@ U = (0, i.jsx)(m.m, {
   showDeleteProduct: !1,
   showReportProduct: !0,
   onEditProduct: P ? () => {
-    _.h(M.id, t.id);
+    _.h(x.id, t.id);
   } : () => {},
   onUnpublishProduct: () => {},
   onDeleteProduct: () => {},
@@ -72,7 +72,7 @@ U = (0, i.jsx)(m.m, {
   onTestDownload: () => {}
 });
   return (0, i.jsx)(E.Z, {
-imageUrl: L,
+imageUrl: Z,
 name: t.name,
 description: t.description,
 formattedPrice: b,
@@ -80,20 +80,20 @@ role: v,
 ctaComponent: (0, i.jsx)(h.Z, {
   guildId: n,
   guildProductListingId: t.id,
-  sourceAnalyticsLocations: C
+  sourceAnalyticsLocations: f
 }),
-productType: Z,
-shouldShowFullDescriptionButton: f,
+productType: L,
+shouldShowFullDescriptionButton: C,
 onShowFullDescription: j,
 onTapCard: j,
 actionMenu: U,
-showOpaqueBackground: x,
+showOpaqueBackground: O,
 hideRoleTag: p,
 lineClamp: g,
 cardWidth: S,
 cardHeight: A,
-thumbnailHeight: R,
-descriptionTextVariant: O,
+thumbnailHeight: M,
+descriptionTextVariant: R,
 isDraft: !t.published
   }, t.id);
 }

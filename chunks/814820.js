@@ -1,6 +1,6 @@
 n.d(t, {
   f: function() {
-return f;
+return C;
   }
 }), n(47120);
 var i = n(735250),
@@ -19,7 +19,7 @@ var i = n(735250),
   T = n(981631),
   h = n(689938),
   N = n(356039);
-let C = e => {
+let f = e => {
 let {
   channel: t,
   message: n
@@ -61,7 +61,7 @@ return (0, i.jsx)('div', {
   })
 });
   },
-  f = e => {
+  C = e => {
 let {
   message: t,
   channel: n
@@ -81,7 +81,7 @@ let {
     m = null != I && (I.systemChannelFlags & T.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
   return r && !a && !l && !o && m;
 });
-return null != s && r ? (0, i.jsx)(C, {
+return null != s && r ? (0, i.jsx)(f, {
   message: t,
   channel: n
 }) : null;

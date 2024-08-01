@@ -32,7 +32,7 @@ return (0, s.jsx)('div', {
   })
 });
   },
-  f = e => {
+  g = e => {
 let {
   quest: t
 } = e;
@@ -52,7 +52,7 @@ return (0, s.jsx)('div', {
   })
 });
   },
-  g = e => {
+  f = e => {
 let {
   quest: t,
   useReducedMotion: n,
@@ -86,13 +86,13 @@ let {
   location: u.dr.QUESTS_BAR
 }), C = (0, a.z)(n);
 if (d)
-  return (0, s.jsx)(g, {
+  return (0, s.jsx)(f, {
     quest: n,
     useReducedMotion: o,
     isExpanded: r
   });
 if (p && !m)
-  return (0, s.jsx)(f, {
+  return (0, s.jsx)(g, {
     quest: n
   });
 if (!l && !C && !(0, i.zK)(n, u.S7.IN_HOUSE_CONSOLE_QUEST))

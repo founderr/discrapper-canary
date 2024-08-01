@@ -35,21 +35,21 @@ let {
 } = e, {
   recalculateAnimationPositions: m,
   registerComponent: x,
-  unregisterComponent: f,
-  expansionSpring: g
+  unregisterComponent: g,
+  expansionSpring: f
 } = o.useContext(c), C = o.useRef(null), _ = o.useRef(null), h = o.useContext(l.T);
 o.useEffect(() => {
   m();
 }, [m]), o.useEffect(() => {
   let e = C.current;
   return null != e && x(e, d, u), () => {
-    null != e && f(d, u);
+    null != e && g(d, u);
   };
 }, [
   d,
   u,
   x,
-  f
+  g
 ]);
 let E = o.useRef(null),
   S = null !== (n = E.current) && void 0 !== n ? n : document.getElementById(h ? 'quest-bar-v2-preview-' + d : 'quest-bar-v2-' + d);
@@ -61,12 +61,12 @@ o.useEffect(() => {
   d
 ]);
 let T = null;
-return null == S ? T = null : p && null != g ? T = (0, s.jsxs)(s.Fragment, {
+return null == S ? T = null : p && null != f ? T = (0, s.jsxs)(s.Fragment, {
   children: [
     'collapsed' === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
       style: {
         position: 'absolute',
-        opacity: g.to({
+        opacity: f.to({
           range: [
             0,
             1
@@ -82,7 +82,7 @@ return null == S ? T = null : p && null != g ? T = (0, s.jsxs)(s.Fragment, {
     'expanded' === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
       style: {
         position: 'absolute',
-        opacity: g.to({
+        opacity: f.to({
           range: [
             0,
             1
@@ -140,7 +140,7 @@ let {
       [e]: o
     };
   });
-}, []), f = o.useCallback(() => {
+}, []), g = o.useCallback(() => {
   let e = [];
   for (let t in l) {
     if (null == l[t] || null == n.current || null == r.current)
@@ -156,15 +156,15 @@ let {
       p = a.top - c.top + i.Li,
       m = d.top - u.top,
       x = a.left - c.left + i.Li,
-      f = d.left - u.left,
-      g = -a.right + c.right + i.Li,
+      g = d.left - u.left,
+      f = -a.right + c.right + i.Li,
       C = -d.right + u.right;
     e.push({
       id: t,
-      collapsedLeft: f,
+      collapsedLeft: g,
       expandedLeft: x,
       collapsedRight: C,
-      expandedRight: g,
+      expandedRight: f,
       collapsedTop: m,
       expandedTop: p,
       width: a.width
@@ -184,7 +184,7 @@ return (0, s.jsx)(c.Provider, {
     animatedComponents: l,
     expandedContentRef: n,
     collapsedContentRef: r,
-    recalculateAnimationPositions: f,
+    recalculateAnimationPositions: g,
     animatedComponentProps: u,
     expansionSpring: a
   },

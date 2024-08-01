@@ -24,13 +24,13 @@ enableSelectedTextChannelInvite: m = !1,
 analyticsLocations: T,
 opensAppLauncherModal: h = !1
   } = e, N = T.length > 0 ? T[T.length - 1] : 'open-activity-shelf', {
-enabled: C
+enabled: f
   } = a.m1.getCurrentConfig({
 location: N
   }, {
 autoTrackExposure: !1
   });
-  if (h && C) {
+  if (h && f) {
 null != t && (0, r.Z)({
   openInPopout: _,
   channel: t,
@@ -39,7 +39,7 @@ null != t && (0, r.Z)({
 return;
   }
   _ && (0, l.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-  let f = _ ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT;
+  let C = _ ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT;
   return (0, s.openModalLazy)(async () => {
 let {
   default: e
@@ -59,6 +59,6 @@ return n => (0, i.jsx)(e, {
 });
   }, {
 modalKey: o.AC,
-contextKey: f
+contextKey: C
   });
 }

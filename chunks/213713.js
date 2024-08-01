@@ -116,7 +116,7 @@ T = (0, d.e7)([
   var e, r, t;
   return parseInt(N) > 0 ? N : null !== (t = null === (e = f.Z.getGameByName(N)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = m.Z.getApplicationByName(N)) || void 0 === r ? void 0 : r.id;
 }, [N]),
-Z = (0, b.Z)({
+E = (0, b.Z)({
   applicationId: T,
   location: 'DevToolsContentInventory',
   source: p.m1.DevTools
@@ -215,10 +215,10 @@ children: (0, a.jsxs)(u.ScrollerThin, {
           placeholder: 'App ID or full name',
           onChange: e => (0 === e.length || e.length >= 18) && S(e),
           onKeyDown: e => {
-            'Enter' === e.key && (N === e.currentTarget.value ? null == Z || Z() : S(e.currentTarget.value));
+            'Enter' === e.key && (N === e.currentTarget.value ? null == E || E() : S(e.currentTarget.value));
           },
-          error: N.length > 0 && null == Z ? 'No game profile for '.concat(null != T ? T : N + ' - try by id', '.') : void 0,
-          style: null != Z ? {
+          error: N.length > 0 && null == E ? 'No game profile for '.concat(null != T ? T : N + ' - try by id', '.') : void 0,
+          style: null != E ? {
             border: '1px solid green'
           } : {}
         })

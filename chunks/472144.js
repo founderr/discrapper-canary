@@ -10,9 +10,9 @@ size: l = 42,
 strokeWidth: i = 3,
 glowBlur: c = 0.4,
 children: d
-  } = e, u = (0, r.EK)(n, o > 0), p = l / 2, m = l / 2 - i / 2, x = 2 * Math.PI * m, f = x - o * x, g = {
+  } = e, u = (0, r.EK)(n, o > 0), p = l / 2, m = l / 2 - i / 2, x = 2 * Math.PI * m, g = x - o * x, f = {
 strokeDasharray: ''.concat(x, ' ').concat(x),
-strokeDashoffset: f
+strokeDashoffset: g
   }, C = {
 strokeDasharray: ''.concat(x, ' ').concat(x),
 strokeDashoffset: -o * x
@@ -97,7 +97,7 @@ children: [
         cx: p,
         cy: p,
         stroke: u.foreground,
-        style: g
+        style: f
       })
     ]
   })

@@ -15,11 +15,11 @@ var i = n(735250),
   T = n(716862),
   h = n(372178);
 let N = (e, t) => null == e && null == t || e === t,
-  C = (e, t) => e.findIndex(e => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
-  f = (e, t) => {
+  f = (e, t) => e.findIndex(e => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
+  C = (e, t) => {
 if (null == t)
   return e;
-let n = C(e, t);
+let n = f(e, t);
 return n < 0 ? e : [
   e[n],
   ...e.slice(0, n),
@@ -44,20 +44,20 @@ let {
   isLurking: s,
   isGuest: a,
   isPendingMember: N,
-  isForumToolbar: C,
-  channel: f,
+  isForumToolbar: f,
+  channel: C,
   className: p,
   forceAddReactions: g,
   reactionClassName: S,
   useChatFontScaling: A,
-  forceHideReactionCreates: R,
-  remainingReactions: O,
-  combinedReactions: x,
-  visibleReactionsCount: M
+  forceHideReactionCreates: M,
+  remainingReactions: R,
+  combinedReactions: O,
+  visibleReactionsCount: x
 } = this.props, {
   disableTransitionAppear: v
-} = this.state, L = A ? h : T, Z = M > 0;
-if (!Z && !g)
+} = this.state, Z = A ? h : T, L = x > 0;
+if (!L && !g)
   return null;
 let {
   enabled: P
@@ -65,10 +65,10 @@ let {
   location: 'message_reactions'
 }, {
   autoTrackExposure: !0
-}), D = P && Z;
+}), D = P && L;
 return (0, i.jsxs)(l.W, {
   component: 'div',
-  className: r()(L.reactions, p),
+  className: r()(Z.reactions, p),
   transitionAppear: !v,
   role: 'group',
   transitionLeave: !1,
@@ -81,40 +81,40 @@ return (0, i.jsxs)(l.W, {
   }),
   children: [
     (0, i.jsx)(E.l, {
-      reactions: x,
+      reactions: O,
       message: e,
       readOnly: n,
       isLurking: s,
       isGuest: a,
       isPendingMember: N,
-      isForumToolbar: C,
+      isForumToolbar: f,
       useChatFontScaling: A,
       className: S
     }),
-    O > 0 && (0, i.jsx)(o.Clickable, {
+    R > 0 && (0, i.jsx)(o.Clickable, {
       onClick: t => {
-        t.stopPropagation(), (0, I.op)(f, e);
+        t.stopPropagation(), (0, I.op)(C, e);
       },
-      className: r()(L.reaction, S, L.remainingReactions),
+      className: r()(Z.reaction, S, Z.remainingReactions),
       'aria-label': m.Z.Messages.ADD_REACTION,
       children: (0, i.jsxs)(o.Text, {
-        className: L.reactionInner,
+        className: Z.reactionInner,
         variant: 'text-sm/normal',
         children: [
           '+',
-          O
+          R
         ]
       })
     }),
-    !t && !R && (0, i.jsx)(d.X, {
+    !t && !M && (0, i.jsx)(d.X, {
       type: u.O.NORMAL,
       message: e,
-      channel: f,
+      channel: C,
       useChatFontScaling: A,
       isHovered: this.state.isHovered,
       className: r()({
-        [L.forceShow]: g && !Z || D,
-        [L.forceShowLook]: g || D
+        [Z.forceShow]: g && !L || D,
+        [Z.forceShowLook]: g || D
       })
     })
   ]
@@ -145,7 +145,7 @@ remainingReactions: l,
 visibleReactionsCount: o
   } = s.useMemo(() => {
 let e = [],
-  i = f(t.reactions, a),
+  i = C(t.reactions, a),
   s = null != n && n < i.length ? i.slice(0, n) : i,
   r = i.length - s.length,
   l = i.length;

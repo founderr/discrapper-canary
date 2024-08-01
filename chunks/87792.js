@@ -51,7 +51,7 @@ children: (0, s.jsx)(o.CircleInformationIcon, {
   });
 }
 
-function L(e) {
+function v(e) {
   let {
 displayType: t
   } = e, n = a.useCallback(() => {
@@ -109,7 +109,7 @@ P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
 ]);
   if (0 === l.length)
 return null;
-  let L = l.slice(0, p);
+  let v = l.slice(0, p);
   return (0, s.jsxs)('div', {
 className: O.actionSection,
 children: [
@@ -117,13 +117,13 @@ children: [
   (0, s.jsx)('div', {
     className: O.actions,
     style: {
-      maxHeight: 65 * L.length
+      maxHeight: 65 * v.length
     },
-    children: L.map((e, t) => x({
+    children: v.map((e, t) => x({
       row: t
     }))
   }),
-  L.length !== c ? (0, s.jsx)(o.Clickable, {
+  v.length !== c ? (0, s.jsx)(o.Clickable, {
     className: O.loadMoreBar,
     onClick: h,
     role: 'button',
@@ -134,14 +134,14 @@ children: [
       className: O.loadMore,
       variant: 'text-sm/bold',
       children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-        pageSize: Math.min(c - L.length, M.iB)
+        pageSize: Math.min(c - v.length, M.iB)
       })
     })
   }) : null
 ]
   });
 }
-let v = () => {
+let L = () => {
 let e = (0, g.Z)(),
   t = (0, p.mq)(M.ne.ACTIVE),
   n = (0, T.o)(b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
@@ -245,7 +245,7 @@ children: [
   (0, s.jsxs)('div', {
     className: O.connectedCounter,
     children: [
-      (0, s.jsx)(v, {}),
+      (0, s.jsx)(L, {}),
       (0, s.jsx)(P, {})
     ]
   }),
@@ -275,7 +275,7 @@ children: [
             className: O.activityOverview,
             children: a ? n.map(e => {
               let [t] = e;
-              return (0, s.jsx)(L, {
+              return (0, s.jsx)(v, {
                 displayType: t
               }, ''.concat(t, '-list'));
             }) : (0, s.jsx)(S.Z, {

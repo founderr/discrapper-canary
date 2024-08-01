@@ -13,11 +13,11 @@ var a = r(599295),
   l = r(692378),
   b = r(922474),
   f = r(470079),
-  h = r(639519),
-  d = r.n(h),
+  d = r(639519),
+  h = r.n(d),
   p = r(852153),
-  g = r(140201),
-  y = r(667929),
+  y = r(140201),
+  g = r(667929),
   v = [
 'data',
 'keyPath',
@@ -49,11 +49,11 @@ t % 2 ? m(Object(r), !0).forEach(function(t) {
   }
   return e;
 }
-var k = function(e) {
+var w = function(e) {
   return e;
 };
 
-function w(e) {
+function k(e) {
   var t, r, a, n, s = (t = e.theme, r = e, (n = Object.keys(a = {
 getArrowStyle: 'arrow',
 getListStyle: 'nestedNodeChildren',
@@ -73,8 +73,8 @@ console.error('Styling method "'.concat(e, '" is deprecated, use "theme" propert
   };
 };
   })), t);
-  return e.invertTheme && (s = (0, y.y7)(s)), {
-styling: (0, g.Z)(s)
+  return e.invertTheme && (s = (0, g.y7)(s)), {
+styling: (0, y.Z)(s)
   };
 }
 var E = function(e) {
@@ -96,7 +96,7 @@ return e = r ? Reflect.construct(a, arguments, (0, u.Z)(this).constructor) : a.a
 
   function b(e) {
 var t;
-return (0, s.Z)(this, b), (t = l.call(this, e)).state = w(e), t;
+return (0, s.Z)(this, b), (t = l.call(this, e)).state = k(e), t;
   }
   return (0, o.Z)(b, [{
   key: 'UNSAFE_componentWillReceiveProps',
@@ -107,7 +107,7 @@ return (0, s.Z)(this, b), (t = l.call(this, e)).state = w(e), t;
       'invertTheme'
     ].find(function(r) {
       return e[r] !== t.props[r];
-    }) && this.setState(w(e));
+    }) && this.setState(k(e));
   }
 },
 {
@@ -142,21 +142,21 @@ return (0, s.Z)(this, b), (t = l.call(this, e)).state = w(e), t;
   ]), b;
 }(f.Component);
 (0, l.Z)(E, 'propTypes', {
-  data: d().any,
-  hideRoot: d().bool,
-  theme: d().oneOfType([
-d().object,
-d().string
+  data: h().any,
+  hideRoot: h().bool,
+  theme: h().oneOfType([
+h().object,
+h().string
   ]),
-  invertTheme: d().bool,
-  keyPath: d().arrayOf(d().oneOfType([
-d().string,
-d().number
+  invertTheme: h().bool,
+  keyPath: h().arrayOf(h().oneOfType([
+h().string,
+h().number
   ])),
-  postprocessValue: d().func,
-  sortObjectKeys: d().oneOfType([
-d().func,
-d().bool
+  postprocessValue: h().func,
+  sortObjectKeys: h().oneOfType([
+h().func,
+h().bool
   ])
 }), (0, l.Z)(E, 'defaultProps', {
   shouldExpandNode: function(e, t, r) {
@@ -171,8 +171,8 @@ return f.createElement('span', null, r, ' ', a);
 var t = (0, b.Z)(e, 1)[0];
 return f.createElement('span', null, t, ':');
   },
-  valueRenderer: k,
-  postprocessValue: k,
+  valueRenderer: w,
+  postprocessValue: w,
   isCustomNode: function() {
 return !1;
   },

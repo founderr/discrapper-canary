@@ -14,13 +14,13 @@ expandedContentRef: n,
 expansionSpring: p,
 isExpanded: m,
 isExpansionAnimationComplete: x,
-onCtxMenuOpened: f,
-onCtxMenuClosed: g,
+onCtxMenuOpened: g,
+onCtxMenuClosed: f,
 onCtxMenuSelection: C,
 quest: _,
 useReducedMotion: h,
 collapsedHeight: E
-  } = e, S = o.useRef(null), T = o.useRef(null), v = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, A = (0, r.Rf)(_);
+  } = e, S = o.useRef(null), T = o.useRef(null), v = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = (0, r.Rf)(_);
   return (0, s.jsxs)(l.p, {
 expandedContentRef: n,
 collapsedContentRef: S,
@@ -34,14 +34,14 @@ children: [
     isExpansionAnimationComplete: x,
     quest: _,
     useReducedMotion: h,
-    taskDetails: A
+    taskDetails: N
   }),
   (0, s.jsx)(c.Z, {
     expansionSpring: p,
     className: u.content,
     collapsedHeight: E,
-    onCtxMenuOpen: f,
-    onCtxMenuClose: g,
+    onCtxMenuOpen: g,
+    onCtxMenuClose: f,
     onCtxMenuSelect: C,
     overlayRef: T,
     isExpanded: m,
@@ -49,7 +49,7 @@ children: [
     quest: _,
     useReducedMotion: h,
     ref: n,
-    taskDetails: A,
+    taskDetails: N,
     children: (0, s.jsxs)(s.Fragment, {
       children: [
         (0, s.jsx)(d.Z, {
@@ -62,8 +62,8 @@ children: [
           useReducedMotion: h,
           isExpanded: m,
           isExpansionAnimationComplete: x,
-          onCtxMenuOpen: f,
-          onCtxMenuClose: g,
+          onCtxMenuOpen: g,
+          onCtxMenuClose: f,
           onCtxMenuSelect: C
         })
       ]

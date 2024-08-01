@@ -15,28 +15,28 @@ var s = n(430824),
   d = n(689938);
 
 function _(e) {
-  var t, n, _, E, I, m, T, h, N, C, f, p, g, S, A;
-  let R = null !== (_ = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== _ ? _ : u.lds,
-O = o.ZP.getName(r.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
+  var t, n, _, E, I, m, T, h, N, f, C, p, g, S, A;
+  let M = null !== (_ = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== _ ? _ : u.lds,
+R = o.ZP.getName(r.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
   switch (e.type) {
 case c.O7.INCOMING_FRIEND_REQUESTS:
   return d.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST.format({
-    username: '**'.concat(O, '**')
+    username: '**'.concat(R, '**')
   });
 case c.O7.FRIEND_REQUESTS_GROUPED:
-  let x = o.ZP.getName(r.default.getUser(null === (I = e.other_users) || void 0 === I ? void 0 : null === (E = I[0]) || void 0 === E ? void 0 : E.id)),
-    M = o.ZP.getName(r.default.getUser(null === (T = e.other_users) || void 0 === T ? void 0 : null === (m = T[1]) || void 0 === m ? void 0 : m.id)),
+  let O = o.ZP.getName(r.default.getUser(null === (I = e.other_users) || void 0 === I ? void 0 : null === (E = I[0]) || void 0 === E ? void 0 : E.id)),
+    x = o.ZP.getName(r.default.getUser(null === (T = e.other_users) || void 0 === T ? void 0 : null === (m = T[1]) || void 0 === m ? void 0 : m.id)),
     v = Math.max((null !== (N = null === (h = e.other_users) || void 0 === h ? void 0 : h.length) && void 0 !== N ? N : 0) - 2, 0);
   return d.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUESTS.format({
-    user: x,
-    user2: M,
+    user: O,
+    user2: x,
     count: v
   });
 case c.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-  let L = null !== (f = null === (C = e.local_id) || void 0 === C ? void 0 : C.split('_').pop()) && void 0 !== f ? f : 'unknown';
-  return 'Update to build '.concat(L, ' available!');
+  let Z = null !== (C = null === (f = e.local_id) || void 0 === f ? void 0 : f.split('_').pop()) && void 0 !== C ? C : 'unknown';
+  return 'Update to build '.concat(Z, ' available!');
 case c.DY.FRIEND_SUGGESTION_CREATED:
-  let Z = a.Z.getRelationshipType(R) === u.OGo.PENDING_OUTGOING;
+  let L = a.Z.getRelationshipType(M) === u.OGo.PENDING_OUTGOING;
   return null !== (p = e.body) && void 0 !== p ? p : '';
 case c.DY.GUILD_SCHEDULED_EVENT_STARTED:
   let P = e.guild_scheduled_event_id,
@@ -50,7 +50,7 @@ case c.DY.GUILD_SCHEDULED_EVENT_STARTED:
   });
 case c.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
   return d.Z.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST_ACCEPTED.format({
-    username: '**'.concat(O, '**')
+    username: '**'.concat(R, '**')
   });
   }
   return null !== (A = e.body) && void 0 !== A ? A : '';

@@ -21,22 +21,22 @@ var s = n(533800),
 
 function h(e) {
   var t, h;
-  let N, C, f, {
+  let N, f, C, {
   onTransitionToInviteChannel: p,
   onAcceptInstantInvite: g,
   guild: S,
   invite: A,
-  author: R,
-  currentUserId: O
+  author: M,
+  currentUserId: R
 } = e,
-x = O === R.id,
+O = R === M.id,
 {
-  channel: M,
+  channel: x,
   approximate_member_count: v,
-  approximate_presence_count: L
+  approximate_presence_count: Z
 } = A,
-Z = A.state === I.r2o.ACCEPTING,
-P = null != M ? (0, o.jD)(M) : null,
+L = A.state === I.r2o.ACCEPTING,
+P = null != x ? (0, o.jD)(x) : null,
 D = null != S,
 b = null != P,
 j = null != P && P.isGuildVocal(),
@@ -51,15 +51,15 @@ let e = (0, u.rF)(A.guild.premium_subscription_count, A.guild.id);
 S.premiumTier = e;
   }
   let k = D ? p : g,
-F = (0, _.e)({
+G = (0, _.e)({
   isVoiceChannel: j,
-  isOwnInvite: x,
+  isOwnInvite: O,
   isGuest: y,
   isHubGuild: B,
   isStage: U,
   isStream: !1
 });
-  return C = (0, i.jsxs)('span', {
+  return f = (0, i.jsxs)('span', {
 className: T.infoTitle,
 children: [
   (0, i.jsx)(l.Z.GuildName, {
@@ -74,7 +74,7 @@ children: [
     })
   })
 ]
-  }), y && (f = (0, i.jsx)(a.TooltipContainer, {
+  }), y && (C = (0, i.jsx)(a.TooltipContainer, {
 className: T.tooltipContainer,
 text: m.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
 children: (0, i.jsx)(a.CircleInformationIcon, {
@@ -82,7 +82,7 @@ children: (0, i.jsx)(a.CircleInformationIcon, {
   color: 'currentColor',
   className: T.infoIcon
 })
-  })), j ? (C = (0, i.jsx)(l.Z.Channel, {
+  })), j ? (f = (0, i.jsx)(l.Z.Channel, {
 channel: P
   }), N = (0, i.jsxs)('span', {
 className: T.infoTitle,
@@ -98,9 +98,9 @@ children: [
     })
   })
 ]
-  })) : null != v && v >= 5 || null != L && L > 0 ? N = (0, i.jsx)(l.Z.Data, {
+  })) : null != v && v >= 5 || null != Z && Z > 0 ? N = (0, i.jsx)(l.Z.Data, {
 members: v,
-membersOnline: L
+membersOnline: Z
   }) : b && (N = (0, i.jsx)(l.Z.Channel, {
 channel: P,
 guild: S
@@ -110,8 +110,8 @@ children: [
     guild: S
   }),
   (0, i.jsx)(l.Z.Header, {
-    text: F,
-    extra: f
+    text: G,
+    extra: C
   }),
   (0, i.jsxs)(l.Z.Body, {
     children: [
@@ -122,7 +122,7 @@ children: [
             guild: S
           }),
           (0, i.jsx)(l.Z.Info, {
-            title: C,
+            title: f,
             onClick: D ? k : null,
             children: N
           })
@@ -130,7 +130,7 @@ children: [
       }),
       (0, i.jsx)(l.Z.Button, {
         onClick: k,
-        submitting: Z,
+        submitting: L,
         color: l.Z.Button.Colors.GREEN,
         children: j ? U ? m.Z.Messages.STAGE_CHANNEL_JOIN : m.Z.Messages.INVITE_VOICE_CHANNEL_JOIN : D ? m.Z.Messages.JOINED_GUILD : m.Z.Messages.JOIN_GUILD
       })

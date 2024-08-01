@@ -20,13 +20,13 @@ var i, a = n(735250),
   _ = n(888651),
   f = n(100527),
   E = n(258609),
-  g = n(257115),
-  C = n(569545),
+  C = n(257115),
+  g = n(569545),
   I = n(382182),
   x = n(525925),
   T = n(701362),
-  N = n(224184),
-  v = n(484459),
+  v = n(224184),
+  N = n(484459),
   S = n(103575),
   Z = n(314897),
   A = n(430824),
@@ -116,7 +116,7 @@ let {
   onMouseEnter: i ? void 0 : this.handleMouseEnter,
   onMouseLeave: i ? void 0 : this.handleHidePreview,
   children: (0, a.jsx)(u.Popout, {
-    preload: () => (0, v.W)(s.id, s.getAvatarURL(l.guild_id, 80), {
+    preload: () => (0, N.W)(s.id, s.getAvatarURL(l.guild_id, 80), {
       guildId: l.guild_id,
       channelId: l.id
     }),
@@ -187,7 +187,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     channelId: t.id,
     guildId: t.guild_id
   };
-  Z.default.getId() !== e.id && m.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, C.V9)(a))) : (0, p.iV)(a), null == i || i(e.id);
+  Z.default.getId() !== e.id && m.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, g.V9)(a))) : (0, p.iV)(a), null == i || i(e.id);
 }), D(this, 'handleJoinVoice', () => {
   let {
     user: e,
@@ -252,7 +252,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     user: n,
     channel: i
   } = this.props;
-  return (0, a.jsx)(N.Z, {
+  return (0, a.jsx)(v.Z, {
     userId: n.id,
     channel: i,
     hangStatusActivity: e,
@@ -274,12 +274,12 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     priority: _,
     collapsed: f,
     isStreaming: E,
-    isGuest: C,
+    isGuest: g,
     nick: I,
     video: x,
     serverMute: T,
-    serverDeaf: N,
-    tabIndex: v,
+    serverDeaf: v,
+    tabIndex: N,
     embeddedApplication: S,
     channel: Z,
     hangStatusActivity: A,
@@ -297,7 +297,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     localMute: o,
     localVideoDisabled: c,
     isStreaming: E,
-    isGuest: C,
+    isGuest: g,
     video: x,
     priority: _,
     deaf: p,
@@ -305,8 +305,8 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     collapsed: f,
     overlap: f,
     serverMute: T,
-    serverDeaf: N,
-    tabIndex: v,
+    serverDeaf: v,
+    tabIndex: N,
     otherClientSessionType: n,
     voicePlatform: i,
     embeddedApplication: S,
@@ -328,7 +328,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
   if (t) {
     var w;
     return (0, a.jsx)(u.Tooltip, {
-      text: null !== (w = (0, g.Z)(n)) && void 0 !== w ? w : O.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+      text: null !== (w = (0, C.Z)(n)) && void 0 !== w ? w : O.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
       children: e => {
         let {
           onClick: t,

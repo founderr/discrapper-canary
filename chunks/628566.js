@@ -37,7 +37,7 @@ return m;
   }
 }
 
-function C(e) {
+function f(e) {
   return e.sort((e, t) => e.application.name.localeCompare(t.application.name));
 }
 o = 'PrivateChannelIntegrationStore', (l = 'displayName') in(r = N) ? Object.defineProperty(r, l, {
@@ -46,7 +46,7 @@ o = 'PrivateChannelIntegrationStore', (l = 'displayName') in(r = N) ? Object.def
   configurable: !0,
   writable: !0
 }) : r[l] = o;
-let f = new N(u.Z, {
+let C = new N(u.Z, {
   LOGOUT() {
 E.clear();
   },
@@ -84,7 +84,7 @@ let {
   channelId: t,
   integrations: n
 } = e;
-E.set(t, C(n.map(_.F))), I.set(t, 2);
+E.set(t, f(n.map(_.F))), I.set(t, 2);
   },
   FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL(e) {
 let {
@@ -98,7 +98,7 @@ let {
 } = e, n = E.get(t.channel_id);
 if (null == n)
   return !1;
-E.set(t.channel_id, C([
+E.set(t.channel_id, f([
   ...n,
   (0, _.F)(t)
 ]));
@@ -112,7 +112,7 @@ if (null == n)
 let i = (0, _.F)(t),
   s = n.findIndex(e => e.application.id === i.application.id),
   a = [...n]; -
-1 === s ? a.push(i) : a[s] = i, E.set(i.channel_id, C(a));
+1 === s ? a.push(i) : a[s] = i, E.set(i.channel_id, f(a));
   },
   PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
 let {
@@ -130,4 +130,4 @@ let {
 return E.delete(t.id);
   }
 });
-t.Z = f;
+t.Z = C;

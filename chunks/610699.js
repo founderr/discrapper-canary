@@ -19,24 +19,24 @@ var i = n(735250),
   T = n(884338),
   h = n(100527),
   N = n(906732),
-  C = n(835473),
-  f = n(471445),
+  f = n(835473),
+  C = n(471445),
   p = n(955415),
   g = n(601964),
   S = n(592125),
   A = n(430824),
-  R = n(496675),
-  O = n(594174),
-  x = n(514342),
-  M = n(624138),
+  M = n(496675),
+  R = n(594174),
+  O = n(514342),
+  x = n(624138),
   v = n(358595),
-  L = n(981631),
-  Z = n(245335),
+  Z = n(981631),
+  L = n(245335),
   P = n(689938),
   D = n(556849);
-let b = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-  j = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-  U = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+let b = (0, x.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+  j = (0, x.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+  U = (0, x.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 
 function y(e) {
   let {
@@ -90,7 +90,7 @@ isStacked: s,
 hasEnded: a
   } = e;
   if (null != t && null != n) {
-let e = (0, f.KS)(t, n);
+let e = (0, C.KS)(t, n);
 return (0, i.jsxs)('div', {
   className: r()(D.channel, {
     [D.stacked]: s,
@@ -102,7 +102,7 @@ return (0, i.jsxs)('div', {
       size: 'xs',
       color: 'currentColor'
     }) : null,
-    (0, i.jsx)(x.Z, {
+    (0, i.jsx)(O.Z, {
       children: (0, i.jsx)(d.Text, {
         variant: 'text-xs/normal',
         children: P.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
@@ -119,7 +119,7 @@ className: r()(D.channel, {
   [D.stacked]: s,
   [D.ended]: a
 }),
-children: (0, i.jsx)(x.Z, {
+children: (0, i.jsx)(O.Z, {
   children: (0, i.jsx)(d.Text, {
     variant: 'text-xs/normal',
     children: P.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
@@ -134,64 +134,64 @@ function k(e) {
   var t, n;
   let a, l, {
   invite: u,
-  getAcceptInviteContext: f
+  getAcceptInviteContext: C
 } = e,
 {
-  approximate_member_count: x,
-  approximate_presence_count: M,
+  approximate_member_count: O,
+  approximate_presence_count: x,
   target_type: k,
-  target_application: F
+  target_application: G
 } = u;
-  o()(k === Z.Iq.EMBEDDED_APPLICATION && null != F, 'invalid application invite');
-  let G = s.useRef(null),
+  o()(k === L.Iq.EMBEDDED_APPLICATION && null != G, 'invalid application invite');
+  let F = s.useRef(null),
 [w, V] = s.useState(!1),
 [H, Y] = s.useState(!1);
   s.useEffect(() => {
 let e = new ResizeObserver(() => function() {
     var e;
-    let t = null === (e = G.current) || void 0 === e ? void 0 : e.offsetWidth;
+    let t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetWidth;
     null != t && (V(t < U + j), Y(t <= 2 * b));
   }()),
-  t = G.current;
+  t = F.current;
 return null != t && e.observe(t), () => {
   e.disconnect();
 };
   }, [
-G,
+F,
 V,
 Y
   ]);
   let W = (0, c.e7)([A.Z], () => null != u.guild ? A.Z.getGuild(u.guild.id) : null, [u]),
-K = (0, C.Z)([F.id])[0],
+K = (0, f.Z)([G.id])[0],
 z = (0, c.e7)([E.ZP], () => {
   var e;
-  return (null == u ? void 0 : u.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === F.id;
+  return (null == u ? void 0 : u.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
 }),
-Q = (0, c.e7)([E.ZP], () => {
+q = (0, c.e7)([E.ZP], () => {
   var e;
   return ((null === (e = u.channel) || void 0 === e ? void 0 : e.id) != null ? E.ZP.getEmbeddedActivitiesForChannel(u.channel.id) : []).some(e => {
     let {
       applicationId: t
     } = e;
-    return F.id === t;
+    return G.id === t;
   });
 }),
-q = S.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
-X = (0, c.e7)([R.Z], () => null != q && R.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
+Q = S.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
+X = (0, c.e7)([M.Z], () => null != Q && M.Z.can(Z.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
 {
   analyticsLocations: J
 } = (0, N.ZP)(h.Z.INVITE_EMBED),
 $ = (0, I.Z)({
-  applicationId: F.id,
+  applicationId: G.id,
   size: b,
   names: ['embedded_cover']
 }),
-ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === F.id).flatMap(e => Array.from(e.userIds)) : [], [
-  q,
-  F.id
+ee = (0, c.Wu)([E.ZP], () => null != Q ? E.ZP.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === G.id).flatMap(e => Array.from(e.userIds)) : [], [
+  Q,
+  G.id
 ]),
-et = (0, c.Wu)([O.default], () => ee.map(e => O.default.getUser(e)), [ee]),
-en = u.state === L.r2o.ACCEPTING,
+et = (0, c.Wu)([R.default], () => ee.map(e => R.default.getUser(e)), [ee]),
+en = u.state === Z.r2o.ACCEPTING,
 ei = null != W;
   if (null == W) {
 if (null == u.guild)
@@ -202,13 +202,13 @@ W = new g.ZP(u.guild);
 ea = () => {
   _.Z.acceptInviteAndTransitionToInviteChannel({
     inviteKey: u.code,
-    context: f('Invite Button Embed'),
+    context: C('Invite Button Embed'),
     analyticsLocations: J
   });
 };
-  return (ei && z && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == u.code || '' === u.code) ? null : (0, i.jsxs)('div', {
+  return (ei && z && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = z ? P.Z.Messages.INVITE_EMBED_JOINED : q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == u.code || '' === u.code) ? null : (0, i.jsxs)('div', {
 className: D.container,
-ref: G,
+ref: F,
 children: [
   (0, i.jsx)('div', {
     className: r()(D.imgContainer, {
@@ -246,20 +246,20 @@ children: [
             children: null == K ? void 0 : K.name
           }),
           (0, i.jsx)(B, {
-            channel: q,
+            channel: Q,
             guild: W,
             isStacked: H,
-            hasEnded: !Q
+            hasEnded: !q
           })
         ]
       }),
       (0, i.jsxs)('div', {
         className: r()(D.currentState, {
           [D.large]: w,
-          [D.split]: !Q && H
+          [D.split]: !q && H
         }),
         children: [
-          !Q && ei ? (0, i.jsxs)('div', {
+          !q && ei ? (0, i.jsxs)('div', {
             className: r()(D.endedNote, {
               [D.large]: w
             }),
@@ -275,15 +275,15 @@ children: [
             ]
           }) : null,
           ei ? null : (0, i.jsx)(y, {
-            members: x,
-            membersOnline: M,
+            members: O,
+            membersOnline: x,
             isLarge: w,
             isStacked: H
           }),
           (0, i.jsxs)('div', {
             className: D.cta,
             children: [
-              null != W && Q ? (0, i.jsx)('div', {
+              null != W && q ? (0, i.jsx)('div', {
                 className: D.avatars,
                 children: (0, i.jsx)(T.Z, {
                   guildId: W.id,

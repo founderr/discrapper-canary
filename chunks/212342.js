@@ -11,21 +11,21 @@ var i, s, a, r, l = n(442837),
   T = n(981631);
 let h = 'ChannelFollowingBumpChannels',
   N = new Set(),
-  C = new Set();
-class f extends(i = l.ZP.Store) {
+  f = new Set();
+class C extends(i = l.ZP.Store) {
   initialize() {
 this.waitFor(u.default), N = new Set(o.K.get(h));
   }
   shouldShowBump(e) {
-return C.has(e);
+return f.has(e);
   }
 }
-r = 'ChannelFollowingPublishBumpStore', (a = 'displayName') in(s = f) ? Object.defineProperty(s, a, {
+r = 'ChannelFollowingPublishBumpStore', (a = 'displayName') in(s = C) ? Object.defineProperty(s, a, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new f(c.Z, {
+}) : s[a] = r, t.Z = new C(c.Z, {
   MESSAGE_CREATE: function(e) {
 var t;
 let {
@@ -39,27 +39,27 @@ let a = d.Z.getChannel(n),
   r = E.default.getCurrentUser();
 if (!(null != a && a.type === T.d4z.GUILD_ANNOUNCEMENT && (0, m.Z)(i) && (null != r && (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.id ? _.Z.can(T.Plq.SEND_MESSAGES, a) : _.Z.can(T.Plq.MANAGE_MESSAGES, a)) && !I.yE(Number(i.flags), T.iLy.CROSSPOSTED)))
   return !1;
-C.add(i.id);
+f.add(i.id);
   },
   MESSAGE_UPDATE: function(e) {
 let {
   message: t
 } = e;
-C.has(t.id) && I.yE(Number(t.flags), T.iLy.CROSSPOSTED) && C.delete(t.id);
+f.has(t.id) && I.yE(Number(t.flags), T.iLy.CROSSPOSTED) && f.delete(t.id);
   },
   CHANNEL_SELECT: function(e) {
-C.clear();
+f.clear();
   },
   CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED: function(e) {
 let {
   messageId: t
 } = e;
-C.delete(t);
+f.delete(t);
   },
   CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY: function(e) {
 let {
   channelId: t
 } = e;
-N.add(t), o.K.set(h, N), C.clear();
+N.add(t), o.K.set(h, N), f.clear();
   }
 });

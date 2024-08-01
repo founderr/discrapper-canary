@@ -1,58 +1,58 @@
-var l, s, i, a, r, d, u = t(442837),
-  c = t(570140),
-  o = t(314897),
-  h = t(900849);
-(l = r || (r = {})).UNSET = 'unset', l.FETCHING = 'fetching', l.FAILED = 'failed', l.SUCCEEDED = 'succeeded';
-let _ = {};
-class m extends(d = u.ZP.Store) {
+var a, i, t, n, c, d, r = s(442837),
+  o = s(570140),
+  u = s(314897),
+  h = s(900849);
+(a = c || (c = {})).UNSET = 'unset', a.FETCHING = 'fetching', a.FAILED = 'failed', a.SUCCEEDED = 'succeeded';
+let m = {};
+class x extends(d = r.ZP.Store) {
   initialize() {
-this.waitFor(o.default);
+this.waitFor(u.default);
   }
   isFetchingGuild(e) {
-let n = _[e];
-return null != n && 'fetching' === n.fetchState;
+let l = m[e];
+return null != l && 'fetching' === l.fetchState;
   }
   getGuild(e) {
-let n = _[e];
-return null != n ? n.guild : null;
+let l = m[e];
+return null != l ? l.guild : null;
   }
   hasFetchFailed(e) {
-let n = _[e];
-return null != n && 'failed' === n.fetchState;
+let l = m[e];
+return null != l && 'failed' === l.fetchState;
   }
 }
-a = 'GuildPopoutStore', (i = 'displayName') in(s = m) ? Object.defineProperty(s, i, {
-  value: a,
+n = 'GuildPopoutStore', (t = 'displayName') in(i = x) ? Object.defineProperty(i, t, {
+  value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[i] = a, n.Z = new m(c.Z, {
+}) : i[t] = n, l.Z = new x(o.Z, {
   GUILD_POPOUT_FETCH_START: function(e) {
 let {
-  guildId: n
+  guildId: l
 } = e;
-_[n] = {
-  ..._[n],
+m[l] = {
+  ...m[l],
   fetchState: 'fetching'
 };
   },
   GUILD_POPOUT_FETCH_SUCCESS: function(e) {
 let {
-  guildId: n,
-  guild: t
-} = e, l = (0, h.PP)(t);
-_[n] = {
-  ..._[n],
-  guild: l,
+  guildId: l,
+  guild: s
+} = e, a = (0, h.PP)(s);
+m[l] = {
+  ...m[l],
+  guild: a,
   fetchState: 'succeeded'
 };
   },
   GUILD_POPOUT_FETCH_FAILURE: function(e) {
 let {
-  guildId: n
+  guildId: l
 } = e;
-_[n] = {
-  ..._[n],
+m[l] = {
+  ...m[l],
   fetchState: 'failed'
 };
   }

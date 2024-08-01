@@ -4,9 +4,9 @@ return d;
   }
 });
 var i = t(735250),
-  o = t(470079),
-  l = t(120356),
-  a = t.n(l),
+  l = t(470079),
+  o = t(120356),
+  a = t.n(o),
   s = t(768581),
   r = t(689938),
   u = t(62676);
@@ -15,19 +15,19 @@ function d(e) {
   let {
 application: n,
 className: t,
-size: l,
+size: o,
 botIconFirst: d,
 fallbackAvatar: c
-  } = e, m = o.useMemo(() => s.ZP.getApplicationIconURL({
+  } = e, m = l.useMemo(() => s.ZP.getApplicationIconURL({
 id: n.id,
 icon: n.icon,
 bot: n.bot,
-size: l,
+size: o,
 botIconFirst: d,
 fallbackAvatar: c
   }), [
 n,
-l,
+o,
 d,
 c
   ]);

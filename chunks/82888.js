@@ -38,8 +38,8 @@ return {
   E
 ]), !f)
 return null;
-  let g = null == p ? void 0 : p.applicationId;
-  return _ !== h.Ez.PANEL || null == g ? null : null == m || null == p || (0, u.Z)(m) || null == g ? null : (0, i.jsx)(d.Z, {
+  let C = null == p ? void 0 : p.applicationId;
+  return _ !== h.Ez.PANEL || null == C ? null : null == m || null == p || (0, u.Z)(m) || null == C ? null : (0, i.jsx)(d.Z, {
 maxHeight: t,
 connectedChannelId: m,
 renderExternalHeader: n

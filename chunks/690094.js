@@ -32,8 +32,8 @@ if (null === b)
 this.model = b.model, l = n[this.model].channels, this.color = b.value.slice(0, l), this.valpha = 'number' == typeof b.value[l] ? b.value[l] : 1;
   } else if (e.length) {
 this.model = t || 'rgb', l = n[this.model].channels;
-var h = s.call(e, 0, l);
-this.color = f(h, l), this.valpha = 'number' == typeof e[l] ? e[l] : 1;
+var d = s.call(e, 0, l);
+this.color = f(d, l), this.valpha = 'number' == typeof e[l] ? e[l] : 1;
   } else if ('number' == typeof e)
 e &= 16777215, this.model = 'rgb', this.color = [
   e >> 16 & 255,
@@ -42,17 +42,17 @@ e &= 16777215, this.model = 'rgb', this.color = [
 ], this.valpha = 1;
   else {
 this.valpha = 1;
-var d = Object.keys(e);
-'alpha' in e && (d.splice(d.indexOf('alpha'), 1), this.valpha = 'number' == typeof e.alpha ? e.alpha : 0);
-var p = d.sort().join('');
+var h = Object.keys(e);
+'alpha' in e && (h.splice(h.indexOf('alpha'), 1), this.valpha = 'number' == typeof e.alpha ? e.alpha : 0);
+var p = h.sort().join('');
 if (!(p in i))
   throw Error('Unable to parse color from object: ' + JSON.stringify(e));
 this.model = i[p];
-var g = n[this.model].labels,
-  y = [];
-for (r = 0; r < g.length; r++)
-  y.push(e[g[r]]);
-this.color = f(y);
+var y = n[this.model].labels,
+  g = [];
+for (r = 0; r < y.length; r++)
+  g.push(e[y[r]]);
+this.color = f(g);
   }
   if (c[this.model])
 for (r = 0, l = n[this.model].channels; r < l; r++) {

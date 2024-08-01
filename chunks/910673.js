@@ -1,109 +1,109 @@
-n.r(t);
-var a = n(735250),
-  o = n(470079),
-  r = n(481060),
-  s = n(230711),
-  l = n(782568),
-  d = n(880257),
-  i = n(63063),
-  E = n(163268),
-  _ = n(981631),
-  c = n(526761),
-  u = n(689938),
-  I = n(597784),
-  C = n(444812);
-t.default = e => {
+o.r(a);
+var s = o(735250),
+  t = o(470079),
+  n = o(481060),
+  r = o(230711),
+  E = o(782568),
+  _ = o(880257),
+  l = o(63063),
+  d = o(163268),
+  i = o(981631),
+  c = o(526761),
+  I = o(689938),
+  C = o(597784),
+  R = o(444812);
+a.default = e => {
   let {
-channelId: t,
-messageId: R,
-transitionState: T,
-onClose: N
-  } = e, A = (0, d.Z)(), M = o.useCallback(e => {
-(0, E.aP)({
+channelId: a,
+messageId: N,
+transitionState: A,
+onClose: T
+  } = e, u = (0, _.Z)(), M = t.useCallback(e => {
+(0, d.aP)({
   action: e,
-  channelId: t,
-  messageId: R
+  channelId: a,
+  messageId: N
 });
   }, [
-t,
-R
+a,
+N
   ]);
-  return o.useEffect(() => {
-(0, E.aP)({
-  action: E.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
-  channelId: t,
-  messageId: R
+  return t.useEffect(() => {
+(0, d.aP)({
+  action: d.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
+  channelId: a,
+  messageId: N
 });
   }, [
-t,
-R
-  ]), (0, a.jsxs)(r.ModalRoot, {
-transitionState: T,
-'aria-label': u.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_MODAL_LABEL,
+a,
+N
+  ]), (0, s.jsxs)(n.ModalRoot, {
+transitionState: A,
+'aria-label': I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_MODAL_LABEL,
 children: [
-  (0, a.jsx)(r.ModalHeader, {
+  (0, s.jsx)(n.ModalHeader, {
     separator: !1,
-    className: I.modalHeader,
-    children: (0, a.jsx)('img', {
-      src: C,
-      alt: u.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_HEADER_IMAGE_ALT,
-      className: I.headerImg
+    className: C.modalHeader,
+    children: (0, s.jsx)('img', {
+      src: R,
+      alt: I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_HEADER_IMAGE_ALT,
+      className: C.headerImg
     })
   }),
-  (0, a.jsxs)(r.ModalContent, {
-    className: I.modalBody,
+  (0, s.jsxs)(n.ModalContent, {
+    className: C.modalBody,
     children: [
-      (0, a.jsx)(r.Heading, {
+      (0, s.jsx)(n.Heading, {
         variant: 'heading-lg/bold',
-        className: I.modalInteriorHeader,
-        children: u.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_HEADER
+        className: C.modalInteriorHeader,
+        children: I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_HEADER
       }),
-      (0, a.jsx)(r.Text, {
+      (0, s.jsx)(n.Text, {
         variant: 'text-md/normal',
         color: 'header-secondary',
-        children: A ? u.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT : u.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_TEEN
+        children: u ? I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT : I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_TEEN
       }),
-      (0, a.jsxs)('div', {
-        className: I.buttonContainer,
+      (0, s.jsxs)('div', {
+        className: C.buttonContainer,
         children: [
-          A ? (0, a.jsx)(r.Button, {
-            color: r.Button.Colors.BRAND,
+          u ? (0, s.jsx)(n.Button, {
+            color: n.Button.Colors.BRAND,
             onClick: function() {
-              M(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), s.Z.open(_.oAB.PRIVACY_AND_SAFETY, null, {
+              M(d.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), r.Z.open(i.oAB.PRIVACY_AND_SAFETY, null, {
                 scrollPosition: c.to.EXPLICIT_MEDIA_REDACTION
-              }), N();
+              }), T();
             },
             fullWidth: !0,
-            children: u.Z.Messages.OBSCURED_CONTENT_UPDATE_SETTINGS_CTA
-          }) : (0, a.jsx)(r.Button, {
-            color: r.Button.Colors.BRAND,
+            children: I.Z.Messages.OBSCURED_CONTENT_UPDATE_SETTINGS_CTA
+          }) : (0, s.jsx)(n.Button, {
+            color: n.Button.Colors.BRAND,
             onClick: () => {
-              (0, l.Z)(i.Z.getArticleURL(_.BhN.EXPLICIT_MEDIA_REDACTION));
+              (0, E.Z)(l.Z.getArticleURL(i.BhN.EXPLICIT_MEDIA_REDACTION));
             },
             fullWidth: !0,
-            children: u.Z.Messages.LEARN_MORE
+            children: I.Z.Messages.LEARN_MORE
           }),
-          (0, a.jsx)(r.Button, {
-            color: r.Button.Colors.PRIMARY,
+          (0, s.jsx)(n.Button, {
+            color: n.Button.Colors.PRIMARY,
             onClick: function() {
-              N(), M(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
+              T(), M(d.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
             },
             fullWidth: !0,
-            children: u.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DISMISS
+            children: I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DISMISS
           }),
-          (0, a.jsx)(r.Text, {
+          (0, s.jsx)(n.Text, {
             variant: 'text-sm/medium',
             color: 'header-secondary',
-            children: u.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE.format({
+            children: I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE.format({
               handleFalsePositiveHook: () => {
-                N(), M(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE), (0, r.openModalLazy)(async () => {
+                T(), M(d.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE), (0, n.openModalLazy)(async () => {
                   let {
                     default: e
-                  } = await n(788679);
-                  return n => (0, a.jsx)(e, {
-                    channelId: t,
-                    messageId: R,
-                    ...n
+                  } = await o(788679);
+                  return o => (0, s.jsx)(e, {
+                    channelId: a,
+                    messageId: N,
+                    ...o
                   });
                 });
               }

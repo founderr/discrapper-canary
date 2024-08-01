@@ -16,7 +16,7 @@ isExpanded: p,
 taskDetails: m
   } = e, {
 percentComplete: x
-  } = m, f = (0, c.eQ)(t), g = (0, c.vf)(t, p), C = p ? 'expanded' : 'collapsed';
+  } = m, g = (0, c.eQ)(t), f = (0, c.vf)(t, p), C = p ? 'expanded' : 'collapsed';
   return (0, s.jsxs)('div', {
 className: u.questProgressWrapper,
 children: [
@@ -50,7 +50,7 @@ children: [
           className: u.questProgressHint,
           color: 'header-primary',
           variant: 'text-sm/semibold',
-          children: f
+          children: g
         })
       }),
       (0, s.jsx)(l.l7, {
@@ -62,7 +62,7 @@ children: [
           className: u.questProgressHint,
           color: 'text-muted',
           variant: 'text-xs/normal',
-          children: g
+          children: f
         })
       })
     ]

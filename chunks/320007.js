@@ -23,8 +23,8 @@ function N(e) {
   let {
 canShowReminder: t = !1,
 className: N
-  } = e, C = (0, E.Z)(u.Z), {
-showClipsHeaderEntrypoint: f
+  } = e, f = (0, E.Z)(u.Z), {
+showClipsHeaderEntrypoint: C
   } = d.NV.useExperiment({
 location: 'ClipsButton'
   }, {
@@ -34,16 +34,16 @@ hasClips: p,
 hasNewClips: g,
 lastClipsSession: S,
 remindersEnabled: A,
-hasAnyClipAnimations: R
+hasAnyClipAnimations: M
   } = (0, a.cj)([_.Z], () => ({
 hasClips: _.Z.hasClips(),
 hasNewClips: _.Z.getNewClipIds().length > 0,
 lastClipsSession: _.Z.getLastClipsSession(),
 remindersEnabled: _.Z.getSettings().remindersEnabled,
 hasAnyClipAnimations: _.Z.hasAnyClipAnimations()
-  })), O = null != S && S.newClipIds.length > 0, x = (0, I.n)(e => e.clipsButtonRef), M = (0, I.n)(e => e.setClipsButtonRef), v = (0, a.e7)([c.Z], () => c.Z.hasLayers()), {
-preventIdle: L,
-allowIdle: Z
+  })), R = null != S && S.newClipIds.length > 0, O = (0, I.n)(e => e.clipsButtonRef), x = (0, I.n)(e => e.setClipsButtonRef), v = (0, a.e7)([c.Z], () => c.Z.hasLayers()), {
+preventIdle: Z,
+allowIdle: L
   } = (0, o.Y)('animation');
 
   function P() {
@@ -61,19 +61,19 @@ allowIdle: Z
   modalKey: T.Qr
 });
   }
-  return (s.useEffect(() => (R ? L() : Z(), () => Z()), [
-R,
-L,
-Z
-  ]), f && C && p) ? (0, i.jsxs)(i.Fragment, {
+  return (s.useEffect(() => (M ? Z() : L(), () => L()), [
+M,
+Z,
+L
+  ]), C && f && p) ? (0, i.jsxs)(i.Fragment, {
 children: [
-  null != x && t && A && O && !(0, r.hasAnyModalOpen)() && !v && (0, i.jsx)(m.Z, {
-    clipIconRef: x,
+  null != O && t && A && R && !(0, r.hasAnyModalOpen)() && !v && (0, i.jsx)(m.Z, {
+    clipIconRef: O,
     lastClipsSession: S,
     onOpenClipsGallery: P
   }),
   (0, i.jsx)('div', {
-    ref: M,
+    ref: x,
     children: (0, i.jsx)(l.JO, {
       className: N,
       icon: r.ClipsIcon,

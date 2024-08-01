@@ -28,29 +28,29 @@ botProfilesEnabled: f
 location: t
   }), E = (0, h.Z)();
   (0, o.t)();
-  let [g] = n.recipients, C = (0, r.e7)([c.default], () => c.default.getUser(g));
-  l()(null != C, 'ProfilePanelExperimentWrapper: user cannot be undefined');
+  let [C] = n.recipients, g = (0, r.e7)([c.default], () => c.default.getUser(C));
+  l()(null != g, 'ProfilePanelExperimentWrapper: user cannot be undefined');
   let I = (0, r.e7)([c.default], () => c.default.getCurrentUser());
   return (l()(null != I, 'ProfilePanelExperimentWrapper: currentUser cannot be undefined'), a.useEffect(() => {
-(0, d.W)(C, {
-  withMutualFriends: !C.bot,
+(0, d.W)(g, {
+  withMutualFriends: !g.bot,
   withMutualGuilds: !0,
   channelId: n.id
 });
   }, [
-C,
+g,
 n.id
-  ]), E) ? null : f && C.isNonUserBot() ? (0, i.jsx)(m.Z, {
-user: C,
+  ]), E) ? null : f && g.isNonUserBot() ? (0, i.jsx)(m.Z, {
+user: g,
 channel: n,
 ...s
-  }) : f || !C.bot ? (0, i.jsx)(_.Z, {
-user: C,
+  }) : f || !g.bot ? (0, i.jsx)(_.Z, {
+user: g,
 currentUser: I,
 channel: n,
 ...s
   }) : (0, i.jsx)(p.Z, {
-user: C,
+user: g,
 channel: n,
 ...s
   });

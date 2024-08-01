@@ -1,25 +1,25 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-return u;
+return c;
   }
 });
-var i = t(735250);
-t(470079);
-var a = t(442837),
-  l = t(481060),
-  r = t(196051),
-  o = t(441729),
-  s = t(689938);
+var i = n(735250);
+n(470079);
+var s = n(442837),
+  a = n(481060),
+  r = n(196051),
+  l = n(441729),
+  o = n(689938);
 
-function u(e, n) {
-  let t = (0, a.e7)([o.Z], () => o.Z.isSpeakingMessage(n.id, e.id), [
-n,
+function c(e, t) {
+  let n = (0, s.e7)([l.Z], () => l.Z.isSpeakingMessage(t.id, e.id), [
+t,
 e
   ]);
-  return '' === e.content ? null : (0, i.jsx)(l.MenuItem, {
+  return '' === e.content ? null : (0, i.jsx)(a.MenuItem, {
 id: 'tts',
-label: t ? s.Z.Messages.STOP_SPEAKING_MESSAGE : s.Z.Messages.SPEAK_MESSAGE,
-icon: l.ChatSpeakIcon,
-action: () => t ? (0, r.NB)() : (0, r.LA)(n, e)
+label: n ? o.Z.Messages.STOP_SPEAKING_MESSAGE : o.Z.Messages.SPEAK_MESSAGE,
+icon: a.ChatSpeakIcon,
+action: () => n ? (0, r.NB)() : (0, r.LA)(t, e)
   });
 }

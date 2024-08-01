@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(569545),
   f = n(382182),
   E = n(484459),
-  g = n(103575),
-  C = n(199902),
+  C = n(103575),
+  g = n(199902),
   I = n(430824),
   x = n(496675),
   T = n(979651),
-  N = n(40300),
-  v = n(88751),
+  v = n(40300),
+  N = n(88751),
   S = n(252132),
   Z = n(248400),
   A = n(981631),
@@ -53,7 +53,7 @@ return (0, i.jsx)(o.Popout, {
     guildId: s.guild_id,
     channelId: s.id
   }),
-  renderPopout: e => (0, i.jsx)(g.Z, {
+  renderPopout: e => (0, i.jsx)(C.Z, {
     ...e,
     location: 'StageTile',
     guildId: l,
@@ -91,11 +91,11 @@ let {
   onContextMenu: h,
   inPopout: E
 } = e, {
-  reducedMotion: g
+  reducedMotion: C
 } = a.useContext(o.AccessibilityPreferencesContext), {
-  id: v,
+  id: N,
   blocked: j
-} = t, L = (0, r.Wu)([C.Z], () => C.Z.getAllActiveStreams(), []), {
+} = t, L = (0, r.Wu)([g.Z], () => g.Z.getAllActiveStreams(), []), {
   selectedParticipant: P,
   largeStream: O
 } = (0, r.cj)([m.Z], () => ({
@@ -119,7 +119,7 @@ let {
 return (0, i.jsx)(S.Z, {
   participant: n,
   aspectRatio: R,
-  fit: n.type === M.fO.USER ? N.L.COVER : void 0,
+  fit: n.type === M.fO.USER ? v.L.COVER : void 0,
   blocked: j,
   channel: s,
   className: b.tile,
@@ -128,10 +128,10 @@ return (0, i.jsx)(S.Z, {
   onClick: y,
   onContextMenu: h,
   paused: !1,
-  pulseSpeakingIndicator: !g.enabled,
+  pulseSpeakingIndicator: !C.enabled,
   width: l,
   children: u && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
-}, v);
+}, N);
   };
 t.Z = a.memo(function(e) {
   var t;
@@ -146,7 +146,7 @@ user: p
   } = a, _ = (0, r.e7)([m.Z], () => m.Z.getParticipant(s.id, a.id), [
 s.id,
 a.id
-  ]), f = (0, r.e7)([v.ZP], () => v.ZP.isModerator(p.id, s.id), [
+  ]), f = (0, r.e7)([N.ZP], () => N.ZP.isModerator(p.id, s.id), [
 s.id,
 p.id
   ]);
@@ -195,9 +195,9 @@ return null;
       });
   }
 },
-g = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+C = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
   return (0, i.jsx)(i.Fragment, {
-children: g ? (0, i.jsx)(j, {
+children: C ? (0, i.jsx)(j, {
   stageParticipant: a,
   rtcParticipant: _,
   channel: s,

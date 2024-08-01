@@ -24,13 +24,13 @@ checked: t,
 labelText: n,
 tooltipText: s,
 canToggle: E,
-iconAltText: g,
-onChange: C,
+iconAltText: C,
+onChange: g,
 tooltipColor: I,
 className: x,
 id: T = 'fancybutton-toggle',
-collapseWhenChecked: N = !0,
-onClick: v,
+collapseWhenChecked: v = !0,
+onClick: N,
 disabled: S
   } = e, Z = (0, r.e7)([h.Z], () => h.Z.useReducedMotion), [A, M] = a.useState(!1), b = (0, d.ZP)(), R = (0, o.wj)(b) || t ? f : _, {
 width: j = 0,
@@ -56,9 +56,9 @@ children: [
     onChange: function() {
       if (E) {
         let e = !t;
-        M(!0), null == C || C(e);
+        M(!0), null == g || g(e);
       }
-      'function' == typeof v && v();
+      'function' == typeof N && N();
     },
     id: T,
     type: 'checkbox',
@@ -71,7 +71,7 @@ children: [
       [p.labelChecked]: t,
       [p.labelUnchecked]: !t && !E
     }),
-    style: N ? {
+    style: v ? {
       width: t ? j : j + P
     } : void 0,
     children: [
@@ -82,13 +82,13 @@ children: [
       (0, i.jsx)('img', {
         ref: L,
         src: R,
-        alt: g
+        alt: C
       }),
       (0, i.jsx)('span', {
         ref: O,
         children: (0, i.jsx)(c.Text, {
           className: l()(p.burstText, {
-            [p.visuallyHidden]: t && N,
+            [p.visuallyHidden]: t && v,
             [p.burstTextChecked]: t
           }),
           variant: 'text-sm/semibold',

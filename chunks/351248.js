@@ -18,9 +18,9 @@ var i = n(735250),
   _ = n(354459),
   f = n(861414),
   E = n(483085),
-  g = n(66487);
+  C = n(66487);
 
-function C(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -42,8 +42,8 @@ EASING_IN: r.Z.Easing.inOut(r.Z.Easing.back()),
 EASING_OUT: r.Z.Easing.quad
   },
   T = 200,
-  N = 125;
-class v extends a.PureComponent {
+  v = 125;
+class N extends a.PureComponent {
   componentDidMount() {
 this.componentDidAppear();
   }
@@ -94,7 +94,7 @@ r.Z.sequence([
   r.Z.sequence(s),
   r.Z.timing(a, {
     toValue: 0,
-    duration: N
+    duration: v
   })
 ]).start(e);
   }
@@ -148,8 +148,8 @@ let {
   children: t,
   className: n
 } = this.props, a = (0, u.wj)(e), s = l()(f.sprite, {
-  [g.crossWhite]: a,
-  [g.crossGrey]: !a
+  [C.crossWhite]: a,
+  [C.crossGrey]: !a
 });
 return (0, i.jsxs)(r.Z.div, {
   className: l()(f.transition, n),
@@ -170,7 +170,7 @@ return (0, i.jsxs)(r.Z.div, {
 });
   }
   constructor(...e) {
-super(...e), C(this, 'scaleAnimation', new r.Z.Value(0)), C(this, 'spriteAnimation', new r.Z.Value(0)), C(this, 'spriteOpacity', new r.Z.Value(0)), C(this, 'widthAnimation', new r.Z.Value(0));
+super(...e), g(this, 'scaleAnimation', new r.Z.Value(0)), g(this, 'spriteAnimation', new r.Z.Value(0)), g(this, 'spriteOpacity', new r.Z.Value(0)), g(this, 'widthAnimation', new r.Z.Value(0));
   }
 }
 
@@ -182,8 +182,8 @@ onContextMenu: s,
 className: r,
 onClick: u,
 width: E,
-guildId: g
-  } = e, C = (0, h.ZP)();
+guildId: C
+  } = e, g = (0, h.ZP)();
   let I = (t = E, n = a.length, ((0, d.getAvatarSize)(d.AvatarSizes.SIZE_80) + 16) * n > t ? d.AvatarSizes.SIZE_40 : d.AvatarSizes.SIZE_80),
 x = (0, o.e7)([m.Z], () => m.Z.isFocused()),
 T = a.map(e => {
@@ -196,12 +196,12 @@ T = a.map(e => {
     speaking: r,
     ringing: o
   } = e;
-  return (0, i.jsx)(v, {
+  return (0, i.jsx)(N, {
     className: f.participant,
     width: (0, d.getAvatarSize)(I),
-    theme: C,
+    theme: g,
     children: (0, i.jsx)(p.Z, {
-      src: a.getAvatarURL(g, (0, d.getAvatarSize)(I), r && x),
+      src: a.getAvatarURL(C, (0, d.getAvatarSize)(I), r && x),
       size: I,
       muted: null !== (t = null == l ? void 0 : l.isVoiceMuted()) && void 0 !== t && t,
       deafen: null !== (n = null == l ? void 0 : l.isVoiceDeafened()) && void 0 !== n && n,

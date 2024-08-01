@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(169979),
   f = n(502762),
   E = n(256059),
-  g = n(437758),
-  C = n(544989),
+  C = n(437758),
+  g = n(544989),
   I = n(481932),
   x = n(272510),
   T = n(171368),
-  N = n(926150),
-  v = n(308829),
+  v = n(926150),
+  N = n(308829),
   S = n(940885),
   Z = n(625015),
   A = n(228168),
@@ -61,14 +61,14 @@ children: (0, i.jsx)(d.Mt, {
     children: [
       (0, i.jsxs)(s.u2, {
         children: [
-          (0, i.jsxs)(C.Z, {
+          (0, i.jsxs)(g.Z, {
             profileType: A.y0.PANEL,
             children: [
               (0, i.jsx)(I.Z, {
                 user: t,
                 profileType: A.y0.PANEL
               }),
-              t.bot ? (0, i.jsx)(g.Z, {
+              t.bot ? (0, i.jsx)(C.Z, {
                 user: t
               }) : (0, i.jsx)(x.Z, {
                 user: t
@@ -107,7 +107,7 @@ children: (0, i.jsx)(d.Mt, {
               })
             ]
           }),
-          (0, i.jsx)(N.Z, {
+          (0, i.jsx)(v.Z, {
             user: t,
             currentUser: n,
             displayProfile: L,
@@ -125,7 +125,7 @@ children: (0, i.jsx)(d.Mt, {
           })
         ]
       }),
-      (0, i.jsx)(v.Z, {
+      (0, i.jsx)(N.Z, {
         user: t,
         channelId: b.id
       }),

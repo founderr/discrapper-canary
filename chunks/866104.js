@@ -1,9 +1,9 @@
 n.d(t, {
   C: function() {
-return M;
+return x;
   },
   Z: function() {
-return x;
+return O;
   }
 }), n(47120);
 var i = n(735250),
@@ -22,21 +22,21 @@ var i = n(735250),
   T = n(671533),
   h = n(810090),
   N = n(51144),
-  C = n(506071),
-  f = n(696014),
+  f = n(506071),
+  C = n(696014),
   p = n(847033),
   g = n(544978),
   S = n(893182),
   A = n(689938),
-  R = n(55686);
+  M = n(55686);
 
-function O(e) {
+function R(e) {
   let {
 onClick: t
   } = e;
   return (0, i.jsxs)(o.Clickable, {
 onClick: t,
-className: R.showMoreButton,
+className: M.showMoreButton,
 children: [
   (0, i.jsx)(o.Text, {
     variant: 'text-sm/medium',
@@ -49,40 +49,40 @@ children: [
   }),
   (0, i.jsx)(T.Z, {
     direction: T.Z.Directions.RIGHT,
-    className: R.showMoreArrow
+    className: M.showMoreArrow
   })
 ]
   });
 }
 
-function x(e) {
+function O(e) {
   let {
 coverImageAsset: t,
 isPreview: n = !1
-  } = e, s = E.QK.useSetting(), a = (0, C.n)() && s, [r, l] = (0, _.Z)(t, a), o = a ? (0, i.jsx)(h.Z, {
+  } = e, s = E.QK.useSetting(), a = (0, f.n)() && s, [r, l] = (0, _.Z)(t, a), o = a ? (0, i.jsx)(h.Z, {
 autoPlay: !0,
 loop: !0,
-className: R.coverImage,
+className: M.coverImage,
 width: 655,
 poster: (0, u.b)('server_products/storefront/default-header.png'),
 src: (0, u.b)('server_products/storefront/default-header.mov')
   }) : (0, i.jsx)('img', {
 src: (0, u.b)('server_products/storefront/default-header.png'),
 alt: '',
-className: R.coverImage
+className: M.coverImage
   });
   return (0, i.jsx)('div', {
 ref: r,
-className: R.coverImageContainer,
+className: M.coverImageContainer,
 children: null == l || n ? o : (0, i.jsx)('img', {
   src: l,
   alt: '',
-  className: R.coverImage
+  className: M.coverImage
 })
   });
 }
 
-function M(e) {
+function x(e) {
   var t, n, a;
   let {
 guild: _,
@@ -90,7 +90,7 @@ subscriptionsSettings: E
   } = e, T = _.id;
   let {
 nickname: h,
-nickcolor: C
+nickcolor: f
   } = (a = T, (0, l.cj)([
 I.ZP,
 m.default
@@ -104,27 +104,27 @@ return {
   nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
 };
   }, [a])), {
-isTruncated: M,
+isTruncated: x,
 ExpandableTextContainer: v
-  } = (0, f.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = s.useState(1), D = (0, c.Z)('(max-width: 1439px)'), {
+  } = (0, C.s)(), Z = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [L, P] = s.useState(1), D = (0, c.Z)('(max-width: 1439px)'), {
 selectedTab: b,
 isPhantomPreview: j
-  } = (0, p.m)(), U = b === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
+  } = (0, p.m)(), U = b === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = Z ? (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(v, {
-    lineClamp: D || 2 === Z ? 2 : 3,
+    lineClamp: D || 2 === L ? 2 : 3,
     children: (0, i.jsx)(o.Text, {
       variant: 'text-sm/normal',
       color: 'text-normal',
       children: null == E ? void 0 : E.description
     })
   }),
-  M && (0, i.jsxs)(i.Fragment, {
+  x && (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsx)(o.Spacer, {
         size: 4
       }),
-      (0, i.jsx)(O, {
+      (0, i.jsx)(R, {
         onClick: () => (0, S.Z)({
           guildId: T
         })
@@ -138,10 +138,10 @@ color: 'text-normal',
 children: j ? U : A.Z.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
   });
   return (0, i.jsxs)('div', {
-className: R.container,
+className: M.container,
 children: [
   (0, i.jsxs)('div', {
-    className: R.infoContainer,
+    className: M.infoContainer,
     children: [
       (0, i.jsx)('div', {
         children: (0, i.jsx)(d.Z, {
@@ -182,7 +182,7 @@ children: [
                   usernameHook: function(e, t) {
                     return (0, i.jsx)('span', {
                       style: {
-                        color: C
+                        color: f
                       },
                       children: e
                     }, t);
@@ -199,7 +199,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(x, {
+  (0, i.jsx)(O, {
     coverImageAsset: null == E ? void 0 : E.cover_image_asset,
     isPreview: j
   })

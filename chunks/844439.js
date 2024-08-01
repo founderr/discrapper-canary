@@ -3,7 +3,7 @@ t.d(n, {
 return s;
   }
 });
-var i, o, l, a, s, r, u = t(442837),
+var i, l, o, a, s, r, u = t(442837),
   d = t(570140);
 (i = s || (s = {}))[i.FETCHING = 0] = 'FETCHING', i[i.FETCHED = 1] = 'FETCHED', i[i.ERROR = 2] = 'ERROR';
 let c = {},
@@ -49,21 +49,21 @@ var n;
 let {
   location: t,
   channelId: i,
-  withCommands: o
+  withCommands: l
 } = e;
 return null !== (n = c[E({
   location: t,
   channelId: i,
-  withCommands: o
+  withCommands: l
 })]) && void 0 !== n ? n : I;
   }
 }
-a = void 0, (l = 'displayName') in(o = p) ? Object.defineProperty(o, l, {
+a = void 0, (o = 'displayName') in(l = p) ? Object.defineProperty(l, o, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[l] = a, n.ZP = new p(d.Z, {
+}) : l[o] = a, n.ZP = new p(d.Z, {
   APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function(e) {
 let {
   location: n,
@@ -84,23 +84,23 @@ let {
   recommendations: n,
   location: t,
   channelId: i,
-  withCommands: o
-} = e, l = E({
+  withCommands: l
+} = e, o = E({
   location: t,
   channelId: i,
-  withCommands: o
+  withCommands: l
 });
 c = {
   ...c,
-  [l]: n
+  [o]: n
 }, m = {
   ...m,
-  [l]: 1
+  [o]: 1
 };
 let a = Date.now();
 h = {
   ...h,
-  [l]: a
+  [o]: a
 };
   },
   APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE: function(e) {

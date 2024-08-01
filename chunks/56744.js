@@ -25,10 +25,10 @@ shouldFilterKeywords: m
   }).content : null, [
 I,
 m
-  ]), h = (0, a.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]), N = (0, u.Uj)(I), C = (0, u.Uj)(t);
+  ]), h = (0, a.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]), N = (0, u.Uj)(I), f = (0, u.Uj)(t);
   return (0, i.jsx)(d.Z, {
 repliedAuthor: N,
-baseAuthor: C,
+baseAuthor: f,
 baseMessage: t,
 channel: n,
 referencedMessage: _,

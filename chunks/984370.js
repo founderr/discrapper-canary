@@ -1,6 +1,6 @@
 n.d(t, {
   O: function() {
-return R;
+return M;
   }
 });
 var i = n(735250);
@@ -20,13 +20,13 @@ var s = n(120356),
   T = n(358085),
   h = n(998502),
   N = n(665149),
-  C = n(300986),
-  f = n(314451),
+  f = n(300986),
+  C = n(314451),
   p = n(35583),
   g = n(981631),
   S = n(176505),
   A = n(139715);
-async function R() {
+async function M() {
   if ((0, T.isMac)() && T.isPlatformEmbedded) {
 var e, t, n;
 let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : 'Maximize';
@@ -34,7 +34,7 @@ let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).
   }
 }
 
-function O(e) {
+function R(e) {
   let {
 children: t,
 className: n,
@@ -46,11 +46,11 @@ toolbar: T,
 mobileToolbar: h,
 'aria-label': g,
 'aria-labelledby': S,
-scrollable: O,
-role: x,
-hideSearch: M,
+scrollable: R,
+role: O,
+hideSearch: x,
 showDivider: v
-  } = e, L = (0, l.e7)([m.default], () => m.default.getCurrentUser()), Z = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1, {
+  } = e, Z = (0, l.e7)([m.default], () => m.default.getCurrentUser()), L = (null == Z ? void 0 : Z.isStaff()) || (null == Z ? void 0 : Z.isStaffPersonal()) || !1, {
 enabled: P
   } = _.Z.useExperiment({
 location: 'HeaderBar'
@@ -63,7 +63,7 @@ innerClassName: o,
 toolbar: function() {
   if (null == T)
     return null;
-  let e = null != s && !M;
+  let e = null != s && !x;
   return r.tq ? h : (0, i.jsxs)(i.Fragment, {
     children: [
       T,
@@ -77,21 +77,21 @@ toolbar: function() {
       }),
       (0, i.jsx)(d.Z, {}),
       P ? (0, i.jsx)(E.Z, {}) : null,
-      Z ? (0, i.jsx)(f.Z, {}) : (0, i.jsx)(C.Z, {})
+      L ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(f.Z, {})
     ]
   });
 }(),
 transparent: c,
-onDoubleClick: R,
+onDoubleClick: M,
 'aria-label': g,
 'aria-labelledby': S,
-role: x,
-scrollable: O,
+role: O,
+scrollable: R,
 children: t
   });
 }
 
-function x(e) {
+function O(e) {
   let {
 children: t,
 className: n,
@@ -101,7 +101,7 @@ role: r
   } = e;
   return (0, i.jsx)(N.ZP, {
 className: n,
-onDoubleClick: R,
+onDoubleClick: M,
 'aria-label': s,
 'aria-labelledby': a,
 role: r,
@@ -109,7 +109,7 @@ children: t
   });
 }
 
-function M(e) {
+function x(e) {
   let {
 isAuthenticated: t = !0,
 ...n
@@ -120,13 +120,13 @@ analyticsLocations: s
   });
   return (0, i.jsx)(c.Gt, {
 value: s,
-children: t ? (0, i.jsx)(O, {
+children: t ? (0, i.jsx)(R, {
   ...n,
   className: r
-}) : (0, i.jsx)(x, {
+}) : (0, i.jsx)(O, {
   ...n,
   className: r
 })
   });
 }
-M.Title = N.ZP.Title, M.Icon = N.ZP.Icon, M.Divider = N.ZP.Divider, M.Caret = N.ZP.Caret, t.Z = M;
+x.Title = N.ZP.Title, x.Icon = N.ZP.Icon, x.Divider = N.ZP.Divider, x.Caret = N.ZP.Caret, t.Z = x;

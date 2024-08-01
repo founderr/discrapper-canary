@@ -19,17 +19,17 @@ t.Z = () => {
   let e = (0, l.e7)([_.Z], () => _.Z.getGuildId(), []),
 t = (0, l.e7)([d.Z], () => d.Z.getGuild(e), [e]),
 n = (0, l.e7)([I.Z], () => I.Z.getHistorySnapshot(), []),
-[a, C] = s.useState(!1);
+[a, f] = s.useState(!1);
   if (null == t)
 return null;
-  let f = async () => {
-C(!0);
+  let C = async () => {
+f(!0);
 try {
   E.mT(t.id), await c.Z.joinGuild(t.id, {
     source: m.vtS.NOTICE_BAR
   });
 } catch {
-  C(!1);
+  f(!1);
 }
   };
   return (0, i.jsxs)('div', {
@@ -67,7 +67,7 @@ children: [
     color: o.Button.Colors.WHITE,
     size: o.Button.Sizes.NONE,
     submitting: a,
-    onClick: f,
+    onClick: C,
     children: T.Z.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({
       guild: t.name
     })

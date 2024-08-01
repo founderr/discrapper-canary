@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return c;
+return s;
   }
 });
 var r = n(470079);
@@ -15,7 +15,7 @@ var t = document.createElement('script');
 t.async = !0, t.defer = !0, t.src = e, document.head && document.head.appendChild(t);
   },
   a = /(http|https):\/\/(www)?.+\/recaptcha/,
-  s = [
+  c = [
 'sitekey',
 'theme',
 'size',
@@ -24,10 +24,10 @@ t.async = !0, t.defer = !0, t.src = e, document.head && document.head.appendChil
 'hl',
 'isolated'
   ],
-  c = function(e) {
+  s = function(e) {
 function t() {
-  for (var t, n = arguments.length, o = Array(n), s = 0; s < n; s++)
-    o[s] = arguments[s];
+  for (var t, n = arguments.length, o = Array(n), c = 0; c < n; c++)
+    o[c] = arguments[c];
   return (t = e.call.apply(e, [this].concat(o)) || this).container = void 0, t.timer = void 0, t.state = {
     instanceKey: Date.now(),
     ready: !1,
@@ -140,7 +140,7 @@ return t.prototype = Object.create(e.prototype), t.prototype.constructor = t, o(
   } : null;
 }, t.prototype.componentDidUpdate = function(e) {
   var t = this;
-  s.reduce(function(n, r) {
+  c.reduce(function(n, r) {
     return t.props[r] !== e[r] ? [].concat(n, [r]) : n;
   }, []).length > 0 && this.setState({
     instanceKey: Date.now(),
@@ -150,7 +150,7 @@ return t.prototype = Object.create(e.prototype), t.prototype.constructor = t, o(
   });
 }, t;
   }(r.Component);
-c.defaultProps = {
+s.defaultProps = {
   id: '',
   className: 'g-recaptcha',
   theme: 'light',

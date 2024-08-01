@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return f;
+return E;
   }
 });
 var r = t(735250);
@@ -44,7 +44,7 @@ children: [
   });
 }
 
-function f(e) {
+function E(e) {
   switch (e.ref_type) {
 case s.Qs.CHANNEL:
   return (0, r.jsx)(_, {

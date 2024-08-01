@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(541716),
   f = n(752305),
   E = n(893718),
-  g = n(957730),
-  C = n(789407),
+  C = n(957730),
+  g = n(789407),
   I = n(300429),
   x = n(838440),
   T = n(981631),
-  N = n(689938),
-  v = n(811082);
+  v = n(689938),
+  N = n(811082);
 
 function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -58,11 +58,11 @@ let {
 } = this.props;
 switch (e.type) {
   case T.IIU.LISTENING:
-    return N.Z.Messages.INVITE_EMBED_LISTENING_INVITE;
+    return v.Z.Messages.INVITE_EMBED_LISTENING_INVITE;
   case T.IIU.PLAYING:
   case T.IIU.STREAMING:
   default:
-    return N.Z.Messages.INVITE_EMBED_GAME_INVITE;
+    return v.Z.Messages.INVITE_EMBED_GAME_INVITE;
 }
   }
   render() {
@@ -79,8 +79,8 @@ let {
   cooldown: m,
   application: p,
   transitionState: f,
-  onClose: g
-} = this.props, C = m > 0, I = C ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
+  onClose: C
+} = this.props, g = m > 0, I = g ? v.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
   seconds: Math.round((m + 1000) / 1000)
 }) : null;
 return (0, i.jsxs)(o.ModalRoot, {
@@ -98,21 +98,21 @@ return (0, i.jsxs)(o.ModalRoot, {
     (0, i.jsxs)(o.ModalContent, {
       children: [
         (0, i.jsx)('div', {
-          className: v.subHeader,
-          children: N.Z.Messages.MESSAGE_PREVIEW
+          className: N.subHeader,
+          children: v.Z.Messages.MESSAGE_PREVIEW
         }),
         (0, i.jsx)(u.Z, {
           activityActionType: h,
           activity: s,
-          className: v.preview,
+          className: N.preview,
           application: p,
           partyId: null != s.party ? s.party.id : null,
           isPreview: !0,
           analyticsLocations: r
         }),
         (0, i.jsx)('div', {
-          className: v.subHeader,
-          children: N.Z.Messages.ADD_A_COMMENT_OPTIONAL
+          className: N.subHeader,
+          children: v.Z.Messages.ADD_A_COMMENT_OPTIONAL
         }),
         (0, i.jsx)(o.Popout, {
           position: 'top',
@@ -133,7 +133,7 @@ return (0, i.jsxs)(o.ModalRoot, {
             });
           },
           children: () => (0, i.jsx)(E.Z, {
-            className: v.textArea,
+            className: N.textArea,
             textValue: e,
             richValue: t,
             focused: n,
@@ -154,17 +154,17 @@ return (0, i.jsxs)(o.ModalRoot, {
           children: e => (0, i.jsx)('div', {
             ...e,
             children: (0, i.jsx)(o.Button, {
-              disabled: C,
+              disabled: g,
               onClick: this.handleShare,
-              children: N.Z.Messages.INVITE_EMBED_SEND_INVITE
+              children: v.Z.Messages.INVITE_EMBED_SEND_INVITE
             })
           })
         }),
         (0, i.jsx)(o.Button, {
           look: o.Button.Looks.LINK,
           color: o.Button.Colors.PRIMARY,
-          onClick: g,
-          children: N.Z.Messages.CANCEL
+          onClick: C,
+          children: v.Z.Messages.CANCEL
         })
       ]
     })
@@ -223,7 +223,7 @@ super(...e), S(this, 'state', {
       shouldClear: !1,
       shouldRefocus: !0
     });
-  let r = g.ZP.parse(e, s),
+  let r = C.ZP.parse(e, s),
     o = {
       activity: t,
       type: n
@@ -269,6 +269,6 @@ activity: n
   } = e;
   return {
 cooldown: I.Z.getSlowmodeCooldownGuess(t.id),
-application: null != n.application_id ? p.Z.getApplication(n.application_id) : C.r9
+application: null != n.application_id ? p.Z.getApplication(n.application_id) : g.r9
   };
 })(A);

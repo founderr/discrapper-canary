@@ -24,8 +24,8 @@ required: p,
 value: v
   } = e, [C, h] = r.useState(null != v ? v : ''), {
 state: x,
-executeStateUpdate: E,
-error: I
+executeStateUpdate: I,
+error: E
   } = (0, o.Ee)(e, null != v ? {
 type: t,
 value: v
@@ -44,7 +44,7 @@ minLength: f,
 maxLength: _,
 required: p,
 onChange: e => {
-  h(e), E({
+  h(e), I({
     type: t,
     value: e
   });
@@ -66,7 +66,7 @@ case a.FO.PARAGRAPH:
 title: d,
 required: p,
 className: c.formItem,
-error: I,
+error: E,
 children: n
   });
 }

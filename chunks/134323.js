@@ -1,22 +1,22 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
 return o;
   }
 });
-var i = t(735250);
-t(470079);
-var s = t(481060),
-  l = t(280845),
-  a = t(996861),
-  r = t(689938);
+var i = n(735250);
+n(470079);
+var s = n(481060),
+  a = n(280845),
+  r = n(996861),
+  l = n(689938);
 
-function o(e, n) {
-  return (0, l.U)(n, e) ? (0, i.jsx)(s.MenuItem, {
+function o(e, t) {
+  return (0, a.U)(t, e) ? (0, i.jsx)(s.MenuItem, {
 id: 'reply',
-label: r.Z.Messages.MESSAGE_ACTION_REPLY,
+label: l.Z.Messages.MESSAGE_ACTION_REPLY,
 icon: s.ArrowAngleLeftUpIcon,
-action: t => {
-  (0, a.HH)(n, e, t);
+action: n => {
+  (0, r.HH)(t, e, n);
 }
   }) : null;
 }

@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(243778),
   f = n(488131),
   E = n(375954),
-  g = n(626135),
-  C = n(585483),
+  C = n(626135),
+  g = n(585483),
   I = n(403182),
   x = n(127654),
   T = n(752305),
-  N = n(951211),
-  v = n(981631),
+  v = n(951211),
+  N = n(981631),
   S = n(921944),
   Z = n(489887),
   A = n(689938),
@@ -86,7 +86,7 @@ openClips: O
 analyticsLocations: y
   } = (0, h.ZP)();
   a.useEffect(() => {
-g.default.track(v.rMx.OPEN_POPOUT, {
+C.default.track(N.rMx.OPEN_POPOUT, {
   type: 'Send Attachment',
   channel_id: t.id,
   guild_id: t.guild_id
@@ -101,7 +101,7 @@ t.id
   }
 
   function k() {
-g.default.track(v.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, T.JM)('/'));
+C.default.track(N.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, T.JM)('/'));
   }
 
   function U() {
@@ -125,7 +125,7 @@ O();
   }
 
   function B() {
-g.default.track(v.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+C.default.track(N.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
   channel_type: t.type,
   channel_id: t.id,
   guild_id: t.guild_id
@@ -133,10 +133,10 @@ g.default.track(v.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
   channel: t,
   guildId: t.guild_id,
   locationObject: {
-    page: t.isPrivate() ? v.ZY5.DM_CHANNEL : v.ZY5.GUILD_CHANNEL,
-    section: v.jXE.CHANNEL_TEXT_AREA,
-    object: v.qAy.CONTEXT_MENU_ITEM,
-    objectType: v.Qqv.ACTIVITY
+    page: t.isPrivate() ? N.ZY5.DM_CHANNEL : N.ZY5.GUILD_CHANNEL,
+    section: N.jXE.CHANNEL_TEXT_AREA,
+    object: N.qAy.CONTEXT_MENU_ITEM,
+    objectType: N.Qqv.ACTIVITY
   },
   openInPopout: !1,
   enableSelectedTextChannelInvite: !0,
@@ -153,7 +153,7 @@ let e = L,
   a = L.match(R);
 null != a && (i = a[1], n = a[2], e = a[3], i += a[4]), (0, x.d)([(0, I.dp)(new Blob([e], {
   type: 'text/plain'
-}), 'message.'.concat(n))], t, E), C.S.dispatchToLastSubscribed(v.CkL.CLEAR_TEXT), '' !== i && C.S.dispatchToLastSubscribed(v.CkL.INSERT_TEXT, {
+}), 'message.'.concat(n))], t, E), g.S.dispatchToLastSubscribed(N.CkL.CLEAR_TEXT), '' !== i && g.S.dispatchToLastSubscribed(N.CkL.INSERT_TEXT, {
   plainText: i
 });
   }
@@ -184,13 +184,13 @@ children: l.map(function(e) {
     ]
   });
   switch (e.type) {
-    case N.r.UPLOAD_A_FILE:
+    case v.r.UPLOAD_A_FILE:
       return (0, i.jsx)(o.MenuItem, {
         id: 'upload-file',
         label: a,
         action: c
       }, 'upload-file');
-    case N.r.UPLOAD_TEXT_AS_FILE:
+    case v.r.UPLOAD_TEXT_AS_FILE:
       if ('' === L)
         return null;
       return (0, i.jsx)(o.MenuItem, {
@@ -198,68 +198,68 @@ children: l.map(function(e) {
         label: a,
         action: H
       }, 'upload-text-as-file');
-    case N.r.CLIPS:
+    case v.r.CLIPS:
       return (0, i.jsx)(o.MenuItem, {
         id: 'clips',
         label: a,
         action: U
       }, 'clips');
-    case N.r.POLL:
+    case v.r.POLL:
       return (0, i.jsx)(o.MenuItem, {
         id: 'poll',
         label: a,
         action: w
       }, 'poll');
-    case N.r.INVITE_TO_PLAY_GAME:
+    case v.r.INVITE_TO_PLAY_GAME:
       return (0, i.jsx)(o.MenuItem, {
         id: 'play',
         label: a,
         action: () => {
           var n;
-          return n = e.activity, void(g.default.track(v.rMx.OPEN_MODAL, {
+          return n = e.activity, void(C.default.track(N.rMx.OPEN_MODAL, {
             type: 'Send Join Invite',
             application_id: n.application_id,
-            location: v.jXE.CHANNEL_TEXT_AREA
-          }), b(n, t, v.mFx.JOIN, y));
+            location: N.jXE.CHANNEL_TEXT_AREA
+          }), b(n, t, N.mFx.JOIN, y));
         }
       }, 'play');
-    case N.r.INVITE_TO_LISTEN:
+    case v.r.INVITE_TO_LISTEN:
       return (0, i.jsx)(o.MenuItem, {
         id: 'listen',
         label: a,
         action: () => {
           var n;
-          return n = e.activity, void(g.default.track(v.rMx.OPEN_MODAL, {
+          return n = e.activity, void(C.default.track(N.rMx.OPEN_MODAL, {
             type: 'Send Listen Invite',
-            location: v.jXE.CHANNEL_TEXT_AREA
-          }), b(n, t, v.mFx.LISTEN, y));
+            location: N.jXE.CHANNEL_TEXT_AREA
+          }), b(n, t, N.mFx.LISTEN, y));
         }
       }, 'listen');
-    case N.r.INVITE_TO_WATCH:
+    case v.r.INVITE_TO_WATCH:
       return (0, i.jsx)(o.MenuItem, {
         id: 'watch',
         label: a,
         action: () => {
           var n;
-          return n = e.activity, void(g.default.track(v.rMx.OPEN_MODAL, {
+          return n = e.activity, void(C.default.track(N.rMx.OPEN_MODAL, {
             type: 'Send Watch Invite',
-            location: v.jXE.CHANNEL_TEXT_AREA
-          }), b(n, t, v.mFx.WATCH, y));
+            location: N.jXE.CHANNEL_TEXT_AREA
+          }), b(n, t, N.mFx.WATCH, y));
         }
       }, 'watch');
-    case N.r.CREATE_THREAD:
+    case v.r.CREATE_THREAD:
       return (0, i.jsx)(o.MenuItem, {
         id: 'THREAD',
         label: a,
         action: D
       }, 'THREAD');
-    case N.r.SLASH_COMMAND:
+    case v.r.SLASH_COMMAND:
       return (0, i.jsx)(o.MenuItem, {
         id: 'SLASH_COMMAND',
         label: a,
         action: k
       }, 'SLASH_COMMAND');
-    case N.r.ACTIVITY:
+    case v.r.ACTIVITY:
       return (0, i.jsx)(o.MenuItem, {
         id: 'activity',
         label: a,

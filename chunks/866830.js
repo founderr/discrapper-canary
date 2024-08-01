@@ -1,19 +1,19 @@
-n.d(t, {
+t.d(n, {
   U5: function() {
-return i;
+return o;
   },
   qR: function() {
-return a;
+return i;
   }
 });
-var r = n(273504);
+var r = t(273504);
 
-function a(e) {
-  let t = i();
-  return Array.from(e.defaultActionTypes).map(e => t[e]);
+function i(e) {
+  let n = o();
+  return Array.from(e.defaultActionTypes).map(e => n[e]);
 }
 
-function i() {
+function o() {
   return {
 [r.jj.BLOCK_MESSAGE]: {
   type: r.jj.BLOCK_MESSAGE,

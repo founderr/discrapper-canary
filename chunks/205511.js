@@ -10,8 +10,8 @@ var s = n(735250),
   p = n(497505),
   m = n(918701),
   x = n(566078),
-  f = n(667105),
-  g = n(585857),
+  g = n(667105),
+  f = n(585857),
   C = n(46140),
   _ = n(689938),
   h = n(778239);
@@ -56,11 +56,11 @@ function S(e) {
   let {
 quest: t,
 useReducedMotion: n
-  } = e, r = (0, f.k3)(t.id, p.jn.QUEST_BAR_V2), l = (0, f.g2)({
+  } = e, r = (0, g.k3)(t.id, p.jn.QUEST_BAR_V2), l = (0, g.g2)({
 useReducedMotion: n
   }), {
 errorHints: c,
-startingConsoleQuest: g,
+startingConsoleQuest: f,
 startConsoleQuest: E
   } = (0, u.GI)({
 questId: t.id,
@@ -134,7 +134,7 @@ children: [
       }),
       (0, s.jsx)(i.Clickable, {
         className: a()(h.microphoneUnitRefreshIconWrapper, {
-          [h.disabled]: g
+          [h.disabled]: f
         }),
         onClick: () => E(),
         children: l.render()
@@ -143,7 +143,7 @@ children: [
   }),
   (0, s.jsxs)('div', {
     className: a()({
-      [h.opacity_50]: g
+      [h.opacity_50]: f
     }),
     children: [
       T(),
@@ -176,7 +176,7 @@ taskDetails: n
   } = e, r = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), a = (0, u.z6)(), {
 steps: d,
 hasConnectedAccounts: p,
-isProgressingQuestForLaunchedGame: f,
+isProgressingQuestForLaunchedGame: g,
 isQuestComplete: v
   } = o.useMemo(() => {
 var e;
@@ -187,7 +187,7 @@ let o = a.xboxAndPlaystationAccounts.length > 0,
   c = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
 return {
   steps: [{
-      renderContent: () => (0, s.jsx)(g.Q, {
+      renderContent: () => (0, s.jsx)(f.Q, {
         ...a,
         quest: t
       }),
@@ -240,7 +240,7 @@ children: [
           children: e.renderContent()
         }, t))
       }),
-      p && !f && !v && (0, s.jsx)(S, {
+      p && !g && !v && (0, s.jsx)(S, {
         useReducedMotion: r,
         quest: t
       })

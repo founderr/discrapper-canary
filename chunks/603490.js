@@ -1,78 +1,78 @@
 n.d(t, {
   Z: function() {
-return m;
+return E;
   }
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-  s = n.n(a),
-  l = n(873546),
-  r = n(481060),
+var s = n(120356),
+  a = n.n(s),
+  r = n(873546),
+  l = n(481060),
   o = n(130402),
   c = n(404975),
   u = n(185923),
   d = n(689938),
-  h = n(480283);
+  _ = n(480283);
 
-function m(e) {
+function E(e) {
   let {
 channel: t,
 message: n,
-togglePopout: a,
-renderEmojiPicker: m,
-shouldShow: p,
-buttonClassName: _,
-iconClassName: f
+togglePopout: s,
+renderEmojiPicker: E,
+shouldShow: I,
+buttonClassName: m,
+iconClassName: T
   } = e;
-  return (0, i.jsx)(r.Popout, {
-animation: r.Popout.Animation.FADE,
+  return (0, i.jsx)(l.Popout, {
+animation: l.Popout.Animation.FADE,
 renderPopout: e => {
   let {
     closePopout: i
   } = e;
-  return m(t, n, i, !1);
+  return E(t, n, i, !1);
 },
-shouldShow: p,
-onRequestClose: a,
-position: l.tq ? 'top' : 'left',
-align: l.tq ? 'center' : 'top',
+shouldShow: I,
+onRequestClose: s,
+position: r.tq ? 'top' : 'left',
+align: r.tq ? 'center' : 'top',
 children: (e, t) => {
   let {
     onClick: n,
-    ...l
+    ...r
   } = e, {
-    isShown: m
+    isShown: E
   } = t;
-  return (0, i.jsx)(r.Tooltip, {
+  return (0, i.jsx)(l.Tooltip, {
     disableTooltipPointerEvents: !1,
     text: d.Z.Messages.ADD_REACTION,
-    color: r.TooltipColors.PRIMARY,
+    color: l.TooltipColors.PRIMARY,
     'aria-label': d.Z.Messages.ADD_REACTION,
     hideOnClick: !0,
-    tooltipClassName: h.tooltip,
+    tooltipClassName: _.tooltip,
     children: e => {
       let {
         onMouseEnter: t,
         onMouseLeave: n,
-        onClick: p
+        onClick: I
       } = e;
       return (0, i.jsx)(c.zx, {
-        className: _,
+        className: m,
         onMouseEnter: () => {
           null == t || t(), (0, o.x)(u.qR.MessageContextMenuMouseEntered);
         },
         onMouseLeave: n,
         onClick: () => {
-          a(), null == p || p();
+          s(), null == I || I();
         },
         'aria-label': d.Z.Messages.ADD_REACTION,
-        selected: m,
-        ...l,
-        children: (0, i.jsx)(r.ReactionIcon, {
+        selected: E,
+        ...r,
+        children: (0, i.jsx)(l.ReactionIcon, {
           size: 'sm',
           color: 'currentColor',
-          className: s()(h.icon, f)
+          className: a()(_.icon, T)
         })
       });
     }

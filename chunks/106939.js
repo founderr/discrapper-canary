@@ -34,8 +34,8 @@ var s = n(735250),
   b = n(914788),
   O = n(841409),
   P = n(652262),
-  L = n(880257),
-  v = n(631885),
+  v = n(880257),
+  L = n(631885),
   Z = n(830746),
   D = n(731934),
   B = n(521450),
@@ -59,7 +59,7 @@ function V(e) {
   let {
 section: t,
 handleItemSelect: n
-  } = e, a = (0, v.gU)(), r = (0, L.Z)();
+  } = e, a = (0, L.gU)(), r = (0, v.Z)();
   return (0, s.jsxs)(_.TabBar, {
 className: H.settingsTabBar,
 'aria-label': k.Z.Messages.FAMILY_CENTER_TITLE,
@@ -99,7 +99,7 @@ function W(e) {
 theme: t,
 section: n,
 handleItemSelect: a
-  } = e, r = (0, h.Dt)(), o = (0, v.gU)();
+  } = e, r = (0, h.Dt)(), o = (0, L.gU)();
   return (0, s.jsxs)(g.Z, {
 className: i()((0, M.Q)(t), H.sidebarTabBar),
 scrollable: l.tq,
@@ -147,8 +147,8 @@ children: [
 }
 
 function K() {
-  let e = (0, L.Z)(),
-t = (0, v.M8)(),
+  let e = (0, v.Z)(),
+t = (0, L.M8)(),
 n = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
 r = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()),
 l = (0, P.M)(),
@@ -206,7 +206,7 @@ children: [
 function Y() {
   let {
 analyticsLocations: e
-  } = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, L.Z)(), n = (0, v.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), g = (0, P.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
+  } = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, v.Z)(), n = (0, L.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), g = (0, P.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
 selectedTab: Z,
 handleTabChange: D
   } = (0, O.Z)(), B = (0, h.Dt)(), w = f.default.getCurrentUser(), V = null != t, K = l && null != w && !V;

@@ -1,20 +1,20 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
 return o;
   }
 });
-var i = t(735250);
-t(470079);
-var s = t(481060),
-  l = t(665906),
-  a = t(50284),
-  r = t(689938);
+var i = n(735250);
+n(470079);
+var s = n(481060),
+  a = n(665906),
+  r = n(50284),
+  l = n(689938);
 
-function o(e, n) {
-  return (0, l.$R)(n) ? (0, i.jsx)(s.MenuItem, {
+function o(e, t) {
+  return (0, a.$R)(t) ? (0, i.jsx)(s.MenuItem, {
 id: 'mark-unread',
-label: r.Z.Messages.MARK_UNREAD,
-action: () => (0, a.Z)(n.id, e.id),
+label: l.Z.Messages.MARK_UNREAD,
+action: () => (0, r.Z)(t.id, e.id),
 icon: s.ChatMarkUnreadIcon
   }) : null;
 }

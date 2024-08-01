@@ -1,23 +1,23 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-return s;
+return o;
   },
   z: function() {
 return i;
   }
-}), t(653041);
-var i, a, l = t(442837),
-  r = t(314897);
-(a = i || (i = {}))[a.END_EARLY = 0] = 'END_EARLY';
-let o = [];
+}), n(653041);
+var i, s, a = n(442837),
+  r = n(314897);
+(s = i || (i = {}))[s.END_EARLY = 0] = 'END_EARLY';
+let l = [];
 
-function s(e) {
-  let n = (0, l.e7)([r.default], () => r.default.getId()),
+function o(e) {
+  let t = (0, a.e7)([r.default], () => r.default.getId()),
 {
-  poll: t
+  poll: n
 } = e;
-  if (!e.isPoll() || null == t)
-return o;
+  if (!e.isPoll() || null == n)
+return l;
   let i = [];
-  return !t.expiry.isSameOrBefore(Date.now()) && e.author.id === n && i.push(0), i;
+  return !n.expiry.isSameOrBefore(Date.now()) && e.author.id === t && i.push(0), i;
 }

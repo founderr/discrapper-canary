@@ -32,7 +32,7 @@ if (null != _)
 E,
 _
   ]);
-  let g = (0, s.Wu)([c.ZP], () => {
+  let C = (0, s.Wu)([c.ZP], () => {
   if (null == _)
     return h;
   let e = [];
@@ -43,11 +43,11 @@ _
   E,
   _
 ]),
-C = i.useMemo(() => {
-  if (null == p || 0 === g.length)
+g = i.useMemo(() => {
+  if (null == p || 0 === C.length)
     return m;
   let e = new Set();
-  for (let t of g) {
+  for (let t of C) {
     let n = u.uB({
       user: t,
       context: p
@@ -56,11 +56,11 @@ C = i.useMemo(() => {
   }
   return e;
 }, [
-  g,
+  C,
   p
 ]);
-  return i.useMemo(() => null == t ? void 0 : t.filter(e => C.has(e.author_id)), [
+  return i.useMemo(() => null == t ? void 0 : t.filter(e => g.has(e.author_id)), [
 t,
-C
+g
   ]);
 }

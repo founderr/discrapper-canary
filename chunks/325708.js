@@ -59,13 +59,13 @@ switch (e) {
   case 4:
     return 'homeSidebarWidth';
 }
-  }(t), [g, C] = l.useState(m.ZP[E]), I = l.useCallback(e => {
+  }(t), [C, g] = l.useState(m.ZP[E]), I = l.useCallback(e => {
 d.ZP.updatedUnsyncedSettings({
   [E]: e
 });
   }, [E]), x = (0, p.W)({
 maxWidth: n
-  }), T = (0, c.clamp)(g, p.C, n), N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
+  }), T = (0, c.clamp)(C, p.C, n), v = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
   l.useEffect(() => {
 null == i || i(T, x);
   }, [
@@ -73,7 +73,7 @@ T,
 i,
 x
   ]);
-  let v = (0, s.jsxs)(s.Fragment, {
+  let N = (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)('div', {
     className: o()(_.chatTarget, {
@@ -81,13 +81,13 @@ children: [
       [_.notFloating]: !x
     }),
     style: {
-      width: N
+      width: v
     }
   }),
   !x && (0, s.jsx)(f, {
     maxWidth: n,
     resizableNode: h,
-    onResize: C,
+    onResize: g,
     onResizeEnd: I
   }),
   (0, s.jsx)('div', {
@@ -107,11 +107,11 @@ let e = null != r ? r : l.Fragment;
 return (0, s.jsx)(e, {
   children: (0, s.jsx)('div', {
     className: _.chatLayerWrapper,
-    children: v
+    children: N
   })
 });
   }
   return (0, s.jsx)(s.Fragment, {
-children: v
+children: N
   });
 }

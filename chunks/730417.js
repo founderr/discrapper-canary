@@ -6,13 +6,13 @@ return T;
 return m;
   },
   c: function() {
-return C;
+return f;
   },
   dy: function() {
 return h;
   },
   hs: function() {
-return f;
+return C;
   },
   op: function() {
 return N;
@@ -100,7 +100,7 @@ r
   ]);
 }
 
-function C(e, t, n, i) {
+function f(e, t, n, i) {
   var a;
   let r = m(e),
 c = null == r ? void 0 : r.drop,
@@ -113,15 +113,15 @@ T = (0, l.ot)([
 ]),
 h = (0, o.wE)(i),
 N = null == c || (0, E.hM)(c),
-C = !!(null != c && !N && I && (null == r ? void 0 : r.config.dropsEnabled) && u);
+f = !!(null != c && !N && I && (null == r ? void 0 : r.config.dropsEnabled) && u);
   return {
-partnerGame: C ? e : null,
+partnerGame: f ? e : null,
 dropsActivityPanelExperienceBlocked: T,
 showDropsSparkles: !d && !h
   };
 }
 
-function f(e, t, n) {
+function C(e, t, n) {
   let i = (0, E.BS)(e);
   (0, r.Z)({
 type: t,

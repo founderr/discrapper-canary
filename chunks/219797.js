@@ -1,12 +1,12 @@
 n.d(t, {
   L9: function() {
-return x;
-  },
-  ZK: function() {
 return O;
   },
-  d4: function() {
+  ZK: function() {
 return R;
+  },
+  d4: function() {
+return M;
   },
   dS: function() {
 return p;
@@ -37,8 +37,8 @@ var i = n(735250),
   T = n(850908),
   h = n(524444),
   N = n(981631),
-  C = n(689938),
-  f = n(736984);
+  f = n(689938),
+  C = n(736984);
 
 function p(e) {
   let t = e.item.originalItem;
@@ -64,8 +64,8 @@ function g(e) {
 n = s.useCallback(() => {
   var e;
   return (0, I.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP) ? (0, i.jsxs)(l.DY, {
-    text: C.Z.Messages.CLIPS_BETA_TAG_HOVER,
-    className: f.clipPill,
+    text: f.Z.Messages.CLIPS_BETA_TAG_HOVER,
+    className: C.clipPill,
     children: [
       (0, i.jsx)(o.ClipsIcon, {
         size: 'xs',
@@ -74,7 +74,7 @@ n = s.useCallback(() => {
       (0, i.jsx)(r.x, {
         variant: 'text-xs/semibold',
         color: 'always-white',
-        children: C.Z.Messages.CLIP_TAG
+        children: f.Z.Messages.CLIP_TAG
       })
     ]
   }) : null;
@@ -140,7 +140,7 @@ onError: l
   });
 }
 
-function R(e) {
+function M(e) {
   let t = e.item.originalItem;
   return (0, h.xi)({
 ...e,
@@ -151,7 +151,7 @@ contentType: t.content_type
   });
 }
 
-function O(e) {
+function R(e) {
   let t = e.item.originalItem;
   return (0, h.ur)({
 ...e,
@@ -161,16 +161,16 @@ fileSize: t.size
   });
 }
 
-function x(e) {
+function O(e) {
   if ('CLIP' === e.item.type)
-return (0, i.jsx)(M, {
+return (0, i.jsx)(x, {
   attachment: e.item.originalItem,
   message: e.message
 });
   return null;
 }
 
-function M(e) {
+function x(e) {
   var t;
   let {
 attachment: n,

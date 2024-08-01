@@ -23,11 +23,11 @@ n.enumerable = n.enumerable || !1, n.configurable = !0, 'value' in n && (n.writa
   }
 }
 
-function a(e, t, r) {
+function s(e, t, r) {
   return t && i(e.prototype, t), r && i(e, r), e;
 }
 
-function s(e, t, r) {
+function a(e, t, r) {
   return t in e ? Object.defineProperty(e, t, {
 value: r,
 enumerable: !0,
@@ -37,9 +37,9 @@ writable: !0
 }
 var c = function() {
   function e(t) {
-o(this, e), s(this, 'isDisposed', !1), s(this, 'action', void 0), this.action = (0, n.mf)(t) ? t : n.ZT;
+o(this, e), a(this, 'isDisposed', !1), a(this, 'action', void 0), this.action = (0, n.mf)(t) ? t : n.ZT;
   }
-  return a(e, [{
+  return s(e, [{
 key: 'dispose',
 value: function() {
   !this.isDisposed && (this.action(), this.isDisposed = !0);
@@ -64,17 +64,17 @@ value: function() {
 }
   ]), e;
 }();
-s(c, 'empty', {
+a(c, 'empty', {
   dispose: n.ZT
 });
 var u = function() {
 function e() {
-  o(this, e), s(this, 'isDisposed', !1), s(this, 'disposables', void 0);
+  o(this, e), a(this, 'isDisposed', !1), a(this, 'disposables', void 0);
   for (var t = arguments.length, r = Array(t), n = 0; n < t; n++)
     r[n] = arguments[n];
   this.disposables = r;
 }
-return a(e, [{
+return s(e, [{
     key: 'add',
     value: function(e) {
       this.isDisposed ? e.dispose() : this.disposables.push(e);
@@ -120,9 +120,9 @@ return a(e, [{
   }(),
   d = function() {
 function e() {
-  o(this, e), s(this, 'isDisposed', !1), s(this, 'current', void 0);
+  o(this, e), a(this, 'isDisposed', !1), a(this, 'current', void 0);
 }
-return a(e, [{
+return s(e, [{
     key: 'getDisposable',
     value: function() {
       return this.current;

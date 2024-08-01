@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(527379),
   f = n(484459),
   E = n(318661),
-  g = n(502762),
-  C = n(271383),
+  C = n(502762),
+  g = n(271383),
   I = n(594174),
   x = n(189357),
   T = n(718617),
-  N = n(327250),
-  v = n(228168),
+  v = n(327250),
+  N = n(228168),
   S = n(204246);
 
 function Z(e) {
@@ -35,7 +35,7 @@ onClose: s,
 className: Z,
 infoPanelClassName: A,
 style: M
-  } = e, b = (0, x.ms)(n), R = (0, r.e7)([I.default], () => I.default.getUser(t), [t]), j = (0, r.e7)([C.ZP], () => C.ZP.getMember(n, t), [
+  } = e, b = (0, x.ms)(n), R = (0, r.e7)([I.default], () => I.default.getUser(t), [t]), j = (0, r.e7)([g.ZP], () => g.ZP.getMember(n, t), [
 n,
 t
   ]), [L, P] = a.useState(null == R || null == j), O = (0, u.Z)(j), y = a.useRef(null), {
@@ -96,17 +96,17 @@ value: D,
 children: (0, i.jsx)('div', {
   className: l()(S.sidebarContainer, Z),
   style: M,
-  children: (0, i.jsx)(g.Z, {
+  children: (0, i.jsx)(C.Z, {
     user: R,
     displayProfile: k,
-    profileType: v.y0.MODAL,
+    profileType: N.y0.MODAL,
     themeOverride: U,
     forceShowPremium: !0,
     className: S.profileThemedContainer,
     children: (0, i.jsxs)('div', {
       className: S.innerContainer,
       children: [
-        (0, i.jsx)(N.Z, {
+        (0, i.jsx)(v.Z, {
           userId: t,
           guildId: n,
           onClose: s

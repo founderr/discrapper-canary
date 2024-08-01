@@ -1,21 +1,21 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-return s;
+return o;
   }
 });
-var i = t(735250);
-t(470079);
-var a = t(481060),
-  l = t(726521),
-  r = t(970257),
-  o = t(689938);
+var i = n(735250);
+n(470079);
+var s = n(481060),
+  a = n(726521),
+  r = n(970257),
+  l = n(689938);
 
-function s(e) {
-  return (0, r.a4)(e) ? (0, i.jsx)(a.MenuItem, {
+function o(e) {
+  return (0, r.a4)(e) ? (0, i.jsx)(s.MenuItem, {
 id: 'report',
-label: o.Z.Messages.REPORT_MESSAGE_MENU_OPTION,
-action: () => (0, l.ak)(e, 'web_message_context_menu'),
-icon: a.FlagIcon,
+label: l.Z.Messages.REPORT_MESSAGE_MENU_OPTION,
+action: () => (0, a.ak)(e, 'web_message_context_menu'),
+icon: s.FlagIcon,
 color: 'danger'
   }) : null;
 }

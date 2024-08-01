@@ -55,8 +55,8 @@ let w = {
 ...g.c
   },
   C = {
-...Z(b.K),
-...Z(m.J)
+...E(b.K),
+...E(m.J)
   },
   N = [
 '100',
@@ -101,7 +101,7 @@ function T(e) {
   return 'name' in e;
 }
 
-function Z(e) {
+function E(e) {
   let r = {};
   return Object.keys(e).forEach(t => {
 let a = e[t];
@@ -119,7 +119,7 @@ r[t] = {
   }), r;
 }
 
-function E(e, r) {
+function Z(e, r) {
   let [t, a] = n.useState(() => {
 let t = h.K.get(e);
 return null != t ? t : r;
@@ -141,7 +141,7 @@ function I() {
   rawPalette: r,
   semanticTokens: t
 }, i, l, s, h, m] = function(e, r) {
-  let [t, a] = E(''.concat(e, '-states'), [r]), [i, o] = E(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
+  let [t, a] = Z(''.concat(e, '-states'), [r]), [i, o] = Z(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
     a([
       e,
       ...t
@@ -177,7 +177,7 @@ function I() {
 [g, b] = n.useState(''),
 [v, w] = n.useState({}),
 [S, T] = n.useState({}),
-Z = n.useMemo(() => Object.keys(r).reduce((e, r) => [
+E = n.useMemo(() => Object.keys(r).reduce((e, r) => [
   ...e,
   {
     value: r,
@@ -455,7 +455,7 @@ children: [
             }),
             (0, a.jsx)(f.SearchableSelect, {
               value: l.color,
-              options: Z,
+              options: E,
               onChange: t => {
                 I(r, e, t, l.opacity);
               },

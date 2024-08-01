@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
   W: function() {
 return m;
   },
@@ -6,56 +6,56 @@ return m;
 return I;
   }
 });
-var i = t(735250);
-t(470079);
-var a = t(913527),
-  l = t.n(a),
-  r = t(442837),
-  o = t(481060),
-  s = t(768943),
-  u = t(962796),
-  d = t(742989),
-  c = t(550727),
-  E = t(448239),
-  M = t(689938);
+var i = n(735250);
+n(470079);
+var s = n(913527),
+  a = n.n(s),
+  r = n(442837),
+  l = n(481060),
+  o = n(768943),
+  c = n(962796),
+  u = n(742989),
+  d = n(550727),
+  _ = n(448239),
+  E = n(689938);
 
 function I(e) {
   let {
-showReminders: n
-  } = d.Z.useExperiment({
+showReminders: t
+  } = u.Z.useExperiment({
 location: 'use_message_reminders_item'
   }, {
 autoTrackExposure: !1
-  }), t = (0, r.e7)([s.Z], () => s.Z.isMessageReminder(e.id)), a = m(e, n => (0, u.HG)({
+  }), n = (0, r.e7)([o.Z], () => o.Z.isMessageReminder(e.id)), s = m(e, t => (0, c.HG)({
 channelId: e.channel_id,
 messageId: e.id,
-dueAt: l()().add(n, 'millisecond').toDate()
+dueAt: a()().add(t, 'millisecond').toDate()
   }));
-  return n ? (0, i.jsx)(o.MenuItem, {
+  return t ? (0, i.jsx)(l.MenuItem, {
 id: 'mark-todo',
-label: t ? M.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : M.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
-icon: t ? (0, o.makeIconCompat)(E.Z) : void 0,
-action: () => t ? (0, u.bn)({
+label: n ? E.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : E.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
+icon: n ? (0, l.makeIconCompat)(_.Z) : void 0,
+action: () => n ? (0, c.bn)({
   channelId: e.channel_id,
   messageId: e.id
-}) : (0, u.HG)({
+}) : (0, c.HG)({
   channelId: e.channel_id,
   messageId: e.id
 }),
-children: t ? null : a
+children: n ? null : s
   }) : null;
 }
 
-function m(e, n) {
-  return c.B.map(e => {
+function m(e, t) {
+  return d.B.map(e => {
 let {
-  duration: t,
-  getLabel: a
+  duration: n,
+  getLabel: s
 } = e;
-return (0, i.jsx)(o.MenuItem, {
-  id: 'mark-todo-'.concat(t),
-  label: a(),
-  action: () => n(t)
-}, t);
+return (0, i.jsx)(l.MenuItem, {
+  id: 'mark-todo-'.concat(n),
+  label: s(),
+  action: () => t(n)
+}, n);
   });
 }

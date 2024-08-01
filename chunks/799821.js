@@ -7,7 +7,7 @@ return p;
 return S;
   },
   f7: function() {
-return L;
+return f;
   },
   sn: function() {
 return D;
@@ -122,7 +122,7 @@ durationThreshold: 0
   });
 }
 
-function L(t) {
+function f(t) {
   let e, r;
   let a = N();
   if (!a || !s.m.performance.getEntries || !i.Z1)
@@ -144,8 +144,8 @@ I = a.getEntries();
             'loadEvent',
             'connect'
           ].forEach(n => {
-              f(t, e, n, r);
-            }), f(t, e, 'secureConnection', r, 'TLS/SSL', 'connectEnd'), f(t, e, 'fetch', r, 'cache', 'domainLookupStart'), f(t, e, 'domainLookup', r, 'DNS'),
+              L(t, e, n, r);
+            }), L(t, e, 'secureConnection', r, 'TLS/SSL', 'connectEnd'), L(t, e, 'fetch', r, 'cache', 'domainLookupStart'), L(t, e, 'domainLookup', r, 'DNS'),
             function(t, e, r) {
               (0, l.H)(t, {
                 op: 'browser',
@@ -246,7 +246,7 @@ a && O.fid && ((0, l.H)(t, {
   n = void 0, _ = void 0, O = {};
 }
 
-function f(t, e, r, n, _, a) {
+function L(t, e, r, n, _, a) {
   let i = a ? e[a] : e[`${ r }End`],
 o = e[`${ r }Start`];
   if (!!o && !!i)

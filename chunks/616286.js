@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(880831),
   f = n(774168),
   E = n(871499),
-  g = n(981631),
-  C = n(689938);
+  C = n(981631),
+  g = n(689938);
 
 function I(e) {
   let t = (0, o.e7)([m.Z], () => !(0, r.isEmpty)(m.Z.getTypingUsers(e)), [e]),
@@ -70,9 +70,9 @@ function T(e) {
   ...T
 } = e,
 {
-  disabled: N
+  disabled: v
 } = T,
-v = a.useRef(null),
+N = a.useRef(null),
 S = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
 {
   isShowing: Z,
@@ -118,17 +118,17 @@ R = a.useCallback(e => {
 }, [n]),
 j = a.useCallback(() => {
   var e;
-  null === (e = v.current) || void 0 === e || e.focus();
+  null === (e = N.current) || void 0 === e || e.focus();
 }, []);
   (0, p.yp)({
-event: g.CkL.FOCUS_CHAT_BUTTON,
-handler: N ? null : j
+event: C.CkL.FOCUS_CHAT_BUTTON,
+handler: v ? null : j
   });
   let [L, P] = a.useState(!1), O = a.useCallback(() => {
 h && P(!0);
   }, [h]);
   (0, p.yp)({
-event: g.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
 handler: O
   }), a.useEffect(() => {
 let e;
@@ -138,11 +138,11 @@ return L && (e = setTimeout(() => {
   clearTimeout(e);
 };
   }, [L]);
-  let y = [t = h && N ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT];
-  return M > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+  let y = [t = h && v ? g.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? g.Z.Messages.VIDEO_CALL_HIDE_CHAT : g.Z.Messages.VIDEO_CALL_SHOW_CHAT];
+  return M > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
 mentionCount: M
-  })), A > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, i.jsx)(E.Z, {
-buttonRef: v,
+  })), A > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, i.jsx)(E.Z, {
+buttonRef: N,
 onClick: b,
 label: t,
 'aria-label': y.join(', '),

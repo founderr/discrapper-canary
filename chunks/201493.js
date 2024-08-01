@@ -14,16 +14,16 @@ var i = n(735250),
   _ = n(273387),
   f = n(683818),
   E = n(102888),
-  g = n(65839),
-  C = n(453879),
+  C = n(65839),
+  g = n(453879),
   I = n(408310),
   x = n(486527),
   T = n(981631),
-  N = n(476375);
+  v = n(476375);
 t.Z = e => {
   var t;
   let {
-channel: v,
+channel: N,
 guild: S
   } = e, {
 currentCategoryId: Z,
@@ -32,10 +32,10 @@ categoryCounts: M,
 allEntriesCount: b,
 isLoading: R
   } = (0, s.cj)([_.Z], () => {
-let e = _.Z.getCurrentCategoryId(v.id),
-  t = _.Z.getDirectoryEntries(v.id, e === x.AR.ALL ? null : e),
-  n = _.Z.getDirectoryCategoryCounts(v.id),
-  i = _.Z.getDirectoryAllEntriesCount(v.id);
+let e = _.Z.getCurrentCategoryId(N.id),
+  t = _.Z.getDirectoryEntries(N.id, e === x.AR.ALL ? null : e),
+  n = _.Z.getDirectoryCategoryCounts(N.id),
+  i = _.Z.getDirectoryAllEntriesCount(N.id);
 return {
   currentCategoryId: e,
   directoryEntries: t,
@@ -45,13 +45,13 @@ return {
 };
   });
   a.useEffect(() => () => {
-let e = u.ZP.lastMessageId(v.id);
+let e = u.ZP.lastMessageId(N.id);
 if (null != e)
   r.Z.wait(() => {
-    (0, o.In)(v.id, !0, !0, e);
+    (0, o.In)(N.id, !0, !0, e);
   });
-  }, [v.id]);
-  let j = a.useMemo(() => null != A ? (0, C.v)(Object.values(A), Z) : null, [
+  }, [N.id]);
+  let j = a.useMemo(() => null != A ? (0, g.v)(Object.values(A), Z) : null, [
   A,
   Z
 ]),
@@ -63,11 +63,11 @@ if (null != e)
   let {
     mostRecentQuery: e,
     fetching: t
-  } = p.Z.getSearchState(v.id);
+  } = p.Z.getSearchState(N.id);
   return {
     mostRecentQuery: e,
     searchFetching: t,
-    searchResults: p.Z.getSearchResults(v.id, e)
+    searchResults: p.Z.getSearchResults(N.id, e)
   };
 }),
 [y, D] = a.useState(L),
@@ -81,19 +81,19 @@ k = '' !== L,
   autoTrackExposure: !1
 });
   a.useEffect(() => {
-m.c$(v.id), m.YZ(v.id), U && h.c(v.id), D(L);
-  }, [v.id]), a.useEffect(() => {
+m.c$(N.id), m.YZ(N.id), U && h.c(N.id), D(L);
+  }, [N.id]), a.useEffect(() => {
 d.default.track(T.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
-  directory_channel_id: v.id,
+  directory_channel_id: N.id,
   directory_guild_id: S.id,
   primary_category_id: Z
 });
   }, [
-v.id,
+N.id,
 S.id,
 Z
   ]);
-  let w = (0, f.G)(v) ? () => {
+  let w = (0, f.G)(N) ? () => {
   (0, l.openModalLazy)(async () => {
     let {
       default: e
@@ -102,19 +102,19 @@ Z
       ...t,
       directoryGuildName: S.name,
       directoryGuildId: S.id,
-      directoryChannelId: v.id,
+      directoryChannelId: N.id,
       currentCategoryId: Z === x.AR.ALL ? null : Z
     });
   });
 } : void 0,
 B = e => {
-  0 !== y.trim().length && e.charCode === T.yXg.ENTER && (m.Rq(v.id, y), d.default.track(T.rMx.GUILD_DIRECTORY_SEARCH, {
-    directory_channel_id: v.id,
+  0 !== y.trim().length && e.charCode === T.yXg.ENTER && (m.Rq(N.id, y), d.default.track(T.rMx.GUILD_DIRECTORY_SEARCH, {
+    directory_channel_id: N.id,
     directory_guild_id: S.id
   }));
 },
 H = () => {
-  D(''), m.So(v.id);
+  D(''), m.So(N.id);
 };
   return k ? (0, i.jsx)(I.Z, {
 searchQuery: y,
@@ -126,18 +126,18 @@ handleCreateOrAddGuild: w,
 searchResults: O,
 searchFetching: P
   }) : null == j && null == Z ? (0, i.jsx)('div', {
-className: N.pageContainer,
+className: v.pageContainer,
 children: (0, i.jsx)(l.Spinner, {
-  className: N.spinner
+  className: v.spinner
 })
   }) : (null == j ? void 0 : j.length) === 0 && null == Z ? (0, i.jsx)('div', {
-className: N.pageContainer,
+className: v.pageContainer,
 children: (0, i.jsx)(E.Z, {
   guild: S,
   onAddGuild: w
 })
-  }) : (0, i.jsx)(g.Z, {
-channel: v,
+  }) : (0, i.jsx)(C.Z, {
+channel: N,
 searchQuery: y,
 setSearchQuery: D,
 handleSearchKeyPress: B,
@@ -145,7 +145,7 @@ handleClearSearch: H,
 handleCreateOrAddGuild: w,
 currentCategoryId: Z,
 handleSelectCategory: e => {
-  m.Su(v.id, e);
+  m.Su(N.id, e);
 },
 directoryEntries: j,
 categoryCounts: M,

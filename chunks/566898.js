@@ -1,6 +1,6 @@
 n.d(t, {
   M9: function() {
-return g;
+return C;
   },
   Pb: function() {
 return E;
@@ -9,7 +9,7 @@ return E;
 return _;
   },
   ZP: function() {
-return C;
+return g;
   },
   ZT: function() {
 return h;
@@ -139,9 +139,9 @@ let p = 44,
   _ = 22,
   f = 26,
   E = 26,
-  g = 6;
+  C = 6;
 
-function C(e) {
+function g(e) {
   let {
 messages: t,
 groupSpacing: n = 0,

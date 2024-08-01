@@ -1,4 +1,4 @@
-var i, o, l, a, s, r;
+var i, l, o, a, s, r;
 t.d(n, {
   G0: function() {
 return d;
@@ -7,13 +7,13 @@ return d;
 return u;
   },
   LG: function() {
-return o;
+return l;
   },
   _b: function() {
 return i;
   },
   ti: function() {
-return l;
+return o;
   }
 }), (a = i || (i = {})).NONE = 'NONE', a.TEXT = 'TEXT', a.VOICE = 'VOICE';
 let u = {
@@ -30,4 +30,4 @@ APPS_IN_THIS_SERVER: 'apps_in_this_server'
 HOME: 'home',
 APP_DETAIL: 'app_detail'
   };
-(s = o || (o = {})).HOME_EMPTY = 'home_empty', s.SEARCH_EMPTY = 'search_empty', s.HOME_NO_PERMISSIONS = 'home_no_permissions', s.COMMAND_NO_PERMISSIONS = 'command_no_permissions', s.COMMAND_NOT_FOUND = 'command_not_found', (r = l || (l = {}))[r.DISMISSED = 0] = 'DISMISSED', r[r.COMMAND = 1] = 'COMMAND', r[r.ACTIVITY = 2] = 'ACTIVITY';
+(s = l || (l = {})).HOME_EMPTY = 'home_empty', s.SEARCH_EMPTY = 'search_empty', s.HOME_NO_PERMISSIONS = 'home_no_permissions', s.COMMAND_NO_PERMISSIONS = 'command_no_permissions', s.COMMAND_NOT_FOUND = 'command_not_found', (r = o || (o = {}))[r.DISMISSED = 0] = 'DISMISSED', r[r.COMMAND = 1] = 'COMMAND', r[r.ACTIVITY = 2] = 'ACTIVITY';

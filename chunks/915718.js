@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(243778),
   f = n(590293),
   E = n(970731),
-  g = n(560688),
-  C = n(173507),
+  C = n(560688),
+  g = n(173507),
   I = n(523746),
   x = n(819640),
   T = n(131951),
-  N = n(699516),
-  v = n(594174),
+  v = n(699516),
+  N = n(594174),
   S = n(979651),
   Z = n(810090),
   A = n(585483),
@@ -93,7 +93,7 @@ let m = c.isManaged(),
   p = '',
   f = !1;
 s ? (p = m ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, f = !0) : o ? (p = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : p = a ? m ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : m ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
-let g = (0, i.jsx)(b.ZP.Icon, {
+let C = (0, i.jsx)(b.ZP.Icon, {
   icon: r.PhoneCallIcon,
   onClick: this.handleVoiceClick,
   disabled: f,
@@ -156,9 +156,9 @@ return (0, i.jsx)(_.Z, {
             className: O.tooltip
           });
         },
-        children: () => g
+        children: () => C
       });
-    return g;
+    return C;
   }
 });
   }
@@ -177,7 +177,7 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
     notFriend: i,
     appContext: a
   } = this.props, s = i ? n.getRecipientId() : null, l = () => o.Z.call(n.id, t, !i && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), s);
-  t ? (0, C.Z)(l, a) : l();
+  t ? (0, g.Z)(l, a) : l();
 }), y(this, 'handleJoinCall', e => {
   c.default.selectVoiceChannel(this.props.channel.id, e);
 }), y(this, 'handleVoiceClick', e => {
@@ -199,9 +199,9 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
   let {
     appContext: e
   } = this.props;
-  (0, C.Z)(() => this.handleJoinCall(!0), e);
+  (0, g.Z)(() => this.handleJoinCall(!0), e);
 }), y(this, 'handleBrowserNotSupported', () => {
-  (0, g.Z)();
+  (0, C.Z)();
 });
   }
 }
@@ -216,12 +216,12 @@ callUnavailable: _
 callActive: I.Z.isCallActive(t.id),
 callUnavailable: I.Z.isCallUnavailable(t.id)
   })), E = t.getRecipientId(), {
-notFriend: g,
-isBlocked: C
-  } = (0, s.cj)([N.Z], () => ({
-notFriend: t.type === R.d4z.DM && null != E && !N.Z.isFriend(E),
-isBlocked: t.type === R.d4z.DM && null != E && N.Z.isBlocked(E)
-  })), T = (0, s.e7)([v.default], () => v.default.getUser(E)), Z = (0, u.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, s.e7)([x.Z], () => x.Z.hasLayers());
+notFriend: C,
+isBlocked: g
+  } = (0, s.cj)([v.Z], () => ({
+notFriend: t.type === R.d4z.DM && null != E && !v.Z.isFriend(E),
+isBlocked: t.type === R.d4z.DM && null != E && v.Z.isBlocked(E)
+  })), T = (0, s.e7)([N.default], () => N.default.getUser(E)), Z = (0, u.bp)(), A = [], M = (0, h.Z)(t.id), b = (0, s.e7)([x.Z], () => x.Z.hasLayers());
   M && !b && A.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
   let [j, L] = a.useState(!1);
   return (a.useEffect(() => {
@@ -235,8 +235,8 @@ mode: r,
 inCall: o,
 callActive: p,
 callUnavailable: _,
-notFriend: g,
-isBlocked: C,
+notFriend: C,
+isBlocked: g,
 appContext: Z,
 canShowTooltip: j,
 canShowActivityGdmTooltip: M,

@@ -15,19 +15,19 @@ var i = n(735250),
   T = n(572004),
   h = n(617136),
   N = n(113434),
-  C = n(497505),
-  f = n(918701),
+  f = n(497505),
+  C = n(918701),
   p = n(566078),
   g = n(685613),
   S = n(611855),
   A = n(644646),
-  R = n(670638),
-  O = n(87894),
-  x = n(46140),
-  M = n(689938),
+  M = n(670638),
+  R = n(87894),
+  O = n(46140),
+  x = n(689938),
   v = n(793443);
-let L = (0, l.animated)(d.ChevronSmallDownIcon),
-  Z = (0, l.animated)(m.Z),
+let Z = (0, l.animated)(d.ChevronSmallDownIcon),
+  L = (0, l.animated)(m.Z),
   P = e => {
 let {
   quest: t,
@@ -47,20 +47,20 @@ let _ = () => {
     questContent: n,
     questContentCTA: h.jZ.COPY_QUEST_URL,
     questContentPosition: a
-  }), (0, T.JG)((0, f.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
+  }), (0, T.JG)((0, C.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
 };
 return (0, i.jsx)(d.Tooltip, {
   forceOpen: l,
   shouldShow: l,
   color: d.Tooltip.Colors.GREEN,
-  text: M.Z.Messages.COPY_SUCCESS_1,
+  text: x.Z.Messages.COPY_SUCCESS_1,
   children: () => (0, i.jsx)(d.Button, {
     ...r,
     className: v.shareButton,
     color: d.Button.Colors.PRIMARY,
     size: d.Button.Sizes.SMALL,
     onClick: _,
-    children: M.Z.Messages.QUESTS_SHARE_QUEST
+    children: x.Z.Messages.QUESTS_SHARE_QUEST
   })
 });
   };
@@ -80,12 +80,12 @@ contentPosition: y,
 toggleExpanded: B
   } = e, {
 ref: k,
-height: F
+height: G
   } = (0, _.Z)(), {
-ref: G,
+ref: F,
 width: w,
 scrollWidth: V
-  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = s.useMemo(() => (0, f.nP)(u.config.assets.hero), [u]), K = s.useRef(null), z = (0, O.uq)(m), Q = m === C.jn.QUESTS_EMBED, q = (0, N.t5)(u, x.dr.QUESTS_CARD, m), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(u.config.expiresAt, {
+  } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = s.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]), K = s.useRef(null), z = (0, R.uq)(m), q = m === f.jn.QUESTS_EMBED, Q = (0, N.t5)(u, O.dr.QUESTS_CARD, m), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(u.config.expiresAt, {
 year: 'numeric',
 month: 'long',
 day: 'numeric'
@@ -107,19 +107,19 @@ W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), K.cu
 n,
 W
   ]);
-  let et = (0, f.j8)(u);
+  let et = (0, C.j8)(u);
   return (0, i.jsxs)('div', {
 className: r()(v.outerContainer, {
   [v.outerContainerGiftInventory]: z,
-  [v.outerContainerEmbed]: Q,
+  [v.outerContainerEmbed]: q,
   [v.outerContainerXs]: 'xs' === T
 }),
-'aria-label': M.Z.Messages.EXPAND,
+'aria-label': x.Z.Messages.EXPAND,
 style: {
-  height: z ? F : void 0
+  height: z ? G : void 0
 },
 children: [
-  (0, i.jsx)(Z, {
+  (0, i.jsx)(L, {
     style: {
       opacity: D.to({
         range: [
@@ -142,7 +142,7 @@ children: [
     ref: K,
     children: !Y && W && (0, i.jsx)('source', {
       src: et,
-      type: (0, f.mN)(et)
+      type: (0, C.mN)(et)
     })
   }),
   (0, i.jsxs)('div', {
@@ -151,7 +151,7 @@ children: [
     children: [
       (0, i.jsxs)(l.animated.div, {
         className: r()(v.headerContent, {
-          [v.headerContentEmbed]: Q
+          [v.headerContentEmbed]: q
         }),
         style: {
           y: z ? D.to({
@@ -160,7 +160,7 @@ children: [
               1
             ],
             output: [
-              O.DJ,
+              R.DJ,
               0
             ]
           }) : void 0
@@ -183,7 +183,7 @@ children: [
             },
             'aria-hidden': !b && j,
             children: (0, i.jsxs)(d.ClickableContainer, {
-              'aria-label': M.Z.Messages.EXPAND,
+              'aria-label': x.Z.Messages.EXPAND,
               onClick: ee,
               className: v.headerCollapsedClickableContainer,
               children: [
@@ -193,7 +193,7 @@ children: [
                     quest: u,
                     questContent: m,
                     className: v.headerCollapsedRewardTile,
-                    location: x.dr.QUESTS_CARD
+                    location: O.dr.QUESTS_CARD
                   })
                 }),
                 (0, i.jsxs)('div', {
@@ -215,7 +215,7 @@ children: [
                     }),
                     (0, i.jsx)(d.Text, {
                       variant: 'text-xs/medium',
-                      children: q
+                      children: Q
                     })
                   ]
                 })
@@ -228,7 +228,7 @@ children: [
             },
             className: r()(v.headerExpandedContent, {
               [v.outerContainerGiftInventory]: z,
-              [v.outerContainerEmbed]: Q
+              [v.outerContainerEmbed]: q
             }),
             style: {
               opacity: D.to({
@@ -257,7 +257,7 @@ children: [
                         quest: u,
                         theme: H
                       }),
-                      Q ? null : (0, i.jsx)(S.Z, {
+                      q ? null : (0, i.jsx)(S.Z, {
                         color: 'always-white'
                       })
                     ]
@@ -269,22 +269,22 @@ children: [
                         text: u.config.messages.questName,
                         shouldShow: null != w && null != V && w < V,
                         children: e => (0, i.jsx)(d.Heading, {
-                          ref: G,
+                          ref: F,
                           variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
                           className: v.heading,
                           ...e,
-                          children: M.Z.Messages.QUEST.format({
+                          children: x.Z.Messages.QUEST.format({
                             questName: u.config.messages.questName
                           })
                         })
                       }),
                       (0, i.jsx)(d.Text, {
                         variant: 'text-xs/normal',
-                        children: X ? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
+                        children: X ? x.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
                           expirationDate: $
-                        }) : a ? M.Z.Messages.QUESTS_EXPIRED_ON.format({
+                        }) : a ? x.Z.Messages.QUESTS_EXPIRED_ON.format({
                           expirationDate: J
-                        }) : M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+                        }) : x.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                           expirationDate: J
                         })
                       })
@@ -310,19 +310,19 @@ children: [
               1
             ],
             output: [
-              O.DJ / 2 - O.Z$ / 2,
-              O.jc
+              R.DJ / 2 - R.Z$ / 2,
+              R.jc
             ]
-          }) : O.jc
+          }) : R.jc
         },
         children: [
-          (0, i.jsx)(R.r, {
+          (0, i.jsx)(M.r, {
             questContent: m,
             quest: u,
             questContentPosition: y,
             shouldShowDisclosure: !0,
             hideLearnMore: z,
-            showShareLink: !a && Q,
+            showShareLink: !a && q,
             children: e => (0, i.jsx)(l.animated.div, {
               style: {
                 opacity: D,
@@ -332,7 +332,7 @@ children: [
               children: (0, i.jsx)(d.Clickable, {
                 ...e,
                 className: v.iconWrapper,
-                'aria-label': M.Z.Messages.ACTIONS,
+                'aria-label': x.Z.Messages.ACTIONS,
                 children: (0, i.jsx)(d.MoreHorizontalIcon, {
                   size: 'md',
                   color: o.Z.WHITE
@@ -340,11 +340,11 @@ children: [
               })
             })
           }),
-          U && !(0, O.W_)(m) && (0, i.jsx)(d.Clickable, {
+          U && !(0, R.W_)(m) && (0, i.jsx)(d.Clickable, {
             onClick: ee,
             className: v.iconWrapper,
-            'aria-label': j ? M.Z.Messages.COLLAPSE : M.Z.Messages.EXPAND,
-            children: (0, i.jsx)(L, {
+            'aria-label': j ? x.Z.Messages.COLLAPSE : x.Z.Messages.EXPAND,
+            children: (0, i.jsx)(Z, {
               style: {
                 rotate: D.to({
                   range: [

@@ -116,48 +116,48 @@ placeholder: a,
 maxValues: s,
 minValues: h,
 disabled: x
-  } = e, E = r.useMemo(() => t.filter(e => e.default).map(e => e.value), [t]), {
-state: I,
+  } = e, I = r.useMemo(() => t.filter(e => e.default).map(e => e.value), [t]), {
+state: E,
 executeStateUpdate: T,
 visualState: N,
 isDisabled: g,
 error: S
   } = (0, d.Ee)(e, {
 type: n,
-values: E
-  }), b = s > 1, O = N === m.gH.LOADING, [j, M] = r.useState(!1), [Z, y] = r.useState(() => new Set(t.filter(e => e.default).map(e => e.value))), [R, L] = r.useState(Z), A = r.useMemo(() => t.some(e => null != e.emoji), [t]);
+values: I
+  }), b = s > 1, O = N === m.gH.LOADING, [j, M] = r.useState(!1), [Z, y] = r.useState(() => new Set(t.filter(e => e.default).map(e => e.value))), [L, R] = r.useState(Z), A = r.useMemo(() => t.some(e => null != e.emoji), [t]);
   r.useEffect(() => {
-if ((null == I ? void 0 : I.type) === c.re.STRING_SELECT) {
-  let e = new Set(I.values);
-  y(e), L(e);
+if ((null == E ? void 0 : E.type) === c.re.STRING_SELECT) {
+  let e = new Set(E.values);
+  y(e), R(e);
 } else {
-  let e = new Set(E);
-  y(e), L(e);
+  let e = new Set(I);
+  y(e), R(e);
 }
   }, [
 i,
-E,
-I
+I,
+E
   ]);
   let B = r.useCallback(() => {
-if (R !== Z)
+if (L !== Z)
   T({
     type: c.re.STRING_SELECT,
     values: Array.from(Z)
-  }) && L(Z);
+  }) && R(Z);
   }, [
 Z,
-R,
 L,
+R,
 T
   ]);
   r.useEffect(() => {
-if (!(j || Z.size === R.size && Array.from(R).every(e => Z.has(e))))
+if (!(j || Z.size === L.size && Array.from(L).every(e => Z.has(e))))
   B();
   }, [
 j,
 Z,
-R,
+L,
 B
   ]);
   let P = o.singleSelect;

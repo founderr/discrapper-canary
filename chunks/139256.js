@@ -15,7 +15,7 @@ return B;
 return j;
   },
   zs: function() {
-return F;
+return G;
   }
 }), n(627341);
 var i, s, a = n(735250),
@@ -32,34 +32,34 @@ var i, s, a = n(735250),
   T = n(186523),
   h = n(553826),
   N = n(506071),
-  C = n(203143),
-  f = n(79390),
+  f = n(203143),
+  C = n(79390),
   p = n(839963),
   g = n(294608),
   S = n(65145),
   A = n(981631),
-  R = n(689938),
-  O = n(357298);
+  M = n(689938),
+  R = n(357298);
+
+function O(e) {
+  let {
+className: t,
+children: n
+  } = e;
+  return (0, a.jsx)('ul', {
+'aria-label': M.Z.Messages.POLL_OPTIONS_ARIA,
+className: t,
+children: n
+  });
+}
 
 function x(e) {
   let {
 className: t,
 children: n
   } = e;
-  return (0, a.jsx)('ul', {
-'aria-label': R.Z.Messages.POLL_OPTIONS_ARIA,
-className: t,
-children: n
-  });
-}
-
-function M(e) {
-  let {
-className: t,
-children: n
-  } = e;
   return (0, a.jsx)('div', {
-'aria-label': R.Z.Messages.POLL_OPTIONS_ARIA,
+'aria-label': M.Z.Messages.POLL_OPTIONS_ARIA,
 role: 'group',
 className: t,
 children: n
@@ -74,14 +74,14 @@ children: n
 orientation: 'vertical'
   });
   return (0, a.jsx)('div', {
-'aria-label': R.Z.Messages.POLL_OPTIONS_ARIA,
+'aria-label': M.Z.Messages.POLL_OPTIONS_ARIA,
 ...i,
 className: t,
 children: n
   });
 }
 
-function L(e) {
+function Z(e) {
   let {
 className: t,
 onClick: n,
@@ -93,7 +93,7 @@ pollAnswerRef: l
   } = (0, S.dv)();
   return (0, a.jsx)(u.Clickable, {
 role: 'checkbox',
-className: o()(t, O.enabled),
+className: o()(t, R.enabled),
 onClick: n,
 'aria-checked': i,
 ref: s ? l : void 0,
@@ -101,7 +101,7 @@ children: r
   });
 }
 
-function Z(e) {
+function L(e) {
   let t, {
 className: n,
 children: i,
@@ -116,7 +116,7 @@ pollAnswerRef: d
   } = (0, S.dv)();
   return (0, a.jsx)(u.Clickable, {
 role: 'radio',
-className: o()(n, O.enabled),
+className: o()(n, R.enabled),
 onClick: s,
 'aria-checked': r,
 tabIndex: t,
@@ -149,22 +149,22 @@ answerElementType: 1
   })).with({
 answersInteraction: p.Y7.CHECKBOXES
   }, () => ({
-ContainerComponent: M,
+ContainerComponent: x,
 answerElementType: 2
   })).with({
 canTapAnswers: !0,
 answersInteraction: p.Y7.LIST
   }, () => ({
-ContainerComponent: x,
+ContainerComponent: O,
 answerElementType: 3
   })).otherwise(() => ({
-ContainerComponent: x,
+ContainerComponent: O,
 answerElementType: 0
   }));
   return (0, a.jsx)(_, {
 className: l,
 children: t.map((e, t) => (0, a.jsx)(D, {
-  className: o()(O.__invalid_answer, u),
+  className: o()(R.__invalid_answer, u),
   answer: e,
   isFirstAnswer: 0 === t,
   elementType: E,
@@ -187,7 +187,7 @@ elementType: c
 channelId: u,
 messageId: d
   } = (0, g.pE)(), _ = (0, g.$B)(n.style), E = !0 === n.isSelected, I = r.useCallback(() => {
-C.Z.handlePollAnswerTapped({
+f.Z.handlePollAnswerTapped({
   channelId: u,
   messageId: d,
   answerId: n.answerId
@@ -205,7 +205,7 @@ case 3:
     children: i
   });
 case 1:
-  return (0, a.jsx)(Z, {
+  return (0, a.jsx)(L, {
     className: o()(t, _),
     onClick: I,
     isSelected: E,
@@ -214,7 +214,7 @@ case 1:
     children: i
   });
 case 2:
-  return (0, a.jsx)(L, {
+  return (0, a.jsx)(Z, {
     className: o()(t, _),
     onClick: I,
     isSelected: E,
@@ -232,9 +232,9 @@ className: i
   } = e, s = (0, N.n)(), r = m.QK.useSetting();
   return (0, a.jsx)(I.Z, {
 className: i,
-imageClassName: O.attachmentImage,
+imageClassName: R.attachmentImage,
 src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
-alt: null !== (t = n.description) && void 0 !== t ? t : (0, f.fw)(n.filename),
+alt: null !== (t = n.description) && void 0 !== t ? t : (0, C.fw)(n.filename),
 responsive: !0,
 width: 212,
 height: 212,
@@ -342,12 +342,12 @@ className: i
   } = e, s = {
 width: n,
 height: n,
-background: O.radioBackground,
+background: R.radioBackground,
 'aria-hidden': !0
   };
   return t ? (0, a.jsx)(h.Z, {
 ...s,
-foreground: O.radioForeground,
+foreground: R.radioForeground,
 className: i
   }) : (0, a.jsx)(T.Z, {
 ...s,
@@ -355,15 +355,15 @@ className: i
   });
 }
 
-function F(e) {
+function G(e) {
   let {
 isSelected: t,
 size: n,
 className: i
   } = e, s = 0.85 * n;
   return (0, a.jsx)('div', {
-className: o()(O.checkbox, {
-  [O.checkboxSelected]: t
+className: o()(R.checkbox, {
+  [R.checkboxSelected]: t
 }, i),
 style: {
   width: n,

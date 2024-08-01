@@ -1,72 +1,72 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-return M;
+return E;
   }
 });
-var i = t(735250);
-t(470079);
-var a = t(373793),
-  l = t(481060),
-  r = t(700582),
-  o = t(592180),
-  s = t(565138),
-  u = t(430824),
-  d = t(594174),
-  c = t(689938),
-  E = t(938639);
+var i = n(735250);
+n(470079);
+var s = n(373793),
+  a = n(481060),
+  r = n(700582),
+  l = n(592180),
+  o = n(565138),
+  c = n(430824),
+  u = n(594174),
+  d = n(689938),
+  _ = n(938639);
 
-function M(e) {
-  var n, t, M;
-  if (!(0, o.a)(e))
+function E(e) {
+  var t, n, E;
+  if (!(0, l.a)(e))
 return null;
-  let I = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[a.Y.USER_INSTALL],
-m = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[a.Y.GUILD_INSTALL],
-_ = d.default.getUser(I),
-g = u.Z.getGuild(m),
-f = d.default.getUser(null === (M = e.interactionMetadata) || void 0 === M ? void 0 : M.user.id),
-Z = null;
-  return null != g ? Z = (0, i.jsx)(l.MenuItem, {
-className: E.interactionInfoMenuItem,
+  let I = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[s.Y.USER_INSTALL],
+m = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[s.Y.GUILD_INSTALL],
+T = u.default.getUser(I),
+h = c.Z.getGuild(m),
+N = u.default.getUser(null === (E = e.interactionMetadata) || void 0 === E ? void 0 : E.user.id),
+f = null;
+  return null != h ? f = (0, i.jsx)(a.MenuItem, {
+className: _.interactionInfoMenuItem,
 disabled: !0,
-icon: () => (0, i.jsx)(s.Z, {
-  guild: g,
-  size: s.Z.Sizes.MINI
+icon: () => (0, i.jsx)(o.Z, {
+  guild: h,
+  size: o.Z.Sizes.MINI
 }),
 id: 'integration-owner',
-label: g.name,
+label: h.name,
 showIconFirst: !0,
-subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({
+subtext: d.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({
   application: e.author.username
 })
-  }) : null != _ && (Z = (0, i.jsx)(l.MenuItem, {
-className: E.interactionInfoMenuItem,
+  }) : null != T && (f = (0, i.jsx)(a.MenuItem, {
+className: _.interactionInfoMenuItem,
 disabled: !0,
 icon: () => (0, i.jsx)(r.Z, {
-  user: _,
-  size: l.AvatarSizes.SIZE_20
+  user: T,
+  size: a.AvatarSizes.SIZE_20
 }),
 id: 'integration-owner',
-label: _.username,
+label: T.username,
 showIconFirst: !0,
-subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({
+subtext: d.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({
   application: e.author.username
 })
-  })), (0, i.jsxs)(l.MenuItem, {
+  })), (0, i.jsxs)(a.MenuItem, {
 id: 'view-interaction-info',
-label: c.Z.Messages.VIEW_INTERACTION_INFO,
+label: d.Z.Messages.VIEW_INTERACTION_INFO,
 children: [
-  Z,
-  null != f ? (0, i.jsx)(l.MenuItem, {
-    className: E.interactionInfoMenuItem,
+  f,
+  null != N ? (0, i.jsx)(a.MenuItem, {
+    className: _.interactionInfoMenuItem,
     disabled: !0,
     icon: () => (0, i.jsx)(r.Z, {
-      user: f,
-      size: l.AvatarSizes.SIZE_20
+      user: N,
+      size: a.AvatarSizes.SIZE_20
     }),
     id: 'interaction-user',
-    label: f.username,
+    label: N.username,
     showIconFirst: !0,
-    subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_TRIGGERED_BY
+    subtext: d.Z.Messages.INTERACTION_RESPONSE_CONTEXT_TRIGGERED_BY
   }) : null
 ]
   });

@@ -1,12 +1,12 @@
 n.d(t, {
   $_: function() {
-return L;
+return v;
   },
   FM: function() {
 return B;
   },
   IB: function() {
-return v;
+return L;
   },
   IY: function() {
 return Z;
@@ -156,7 +156,7 @@ switch (e.nitroTenureStatus) {
     return [];
 }
   },
-  L = () => {
+  v = () => {
 let e = M(),
   [t, n] = s.useState(P(e)),
   a = (0, p.c)({
@@ -172,7 +172,7 @@ s.useEffect(() => {
 let [r] = (0, u.U)(a ? t : []);
 return a ? null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, N.Wb)(e.nitroTenureStatus) : null : null;
   },
-  v = () => {
+  L = () => {
 var e;
 let t = null === (e = M()) || void 0 === e ? void 0 : e.nitroTenureStatus,
   n = (0, p.c)({

@@ -1,26 +1,26 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-return c;
+return d;
   }
 });
-var i = t(735250);
-t(470079);
-var a = t(442837),
-  l = t(481060),
-  r = t(904245),
-  o = t(665906),
-  s = t(314897),
-  u = t(418476),
-  d = t(689938);
+var i = n(735250);
+n(470079);
+var s = n(442837),
+  a = n(481060),
+  r = n(904245),
+  l = n(665906),
+  o = n(314897),
+  c = n(418476),
+  u = n(689938);
 
-function c(e, n) {
-  let t = (0, a.e7)([s.default], () => s.default.getId()),
-c = (0, o.$R)(n),
-E = (0, o.Gu)(n);
-  return (0, u.Z)(e, t) && c && !E ? (0, i.jsx)(l.MenuItem, {
+function d(e, t) {
+  let n = (0, s.e7)([o.default], () => o.default.getId()),
+d = (0, l.$R)(t),
+_ = (0, l.Gu)(t);
+  return (0, c.Z)(e, n) && d && !_ ? (0, i.jsx)(a.MenuItem, {
 id: 'edit',
-label: d.Z.Messages.EDIT_MESSAGE,
-action: () => r.Z.startEditMessage(n.id, e.id, e.content),
-icon: l.PencilIcon
+label: u.Z.Messages.EDIT_MESSAGE,
+action: () => r.Z.startEditMessage(t.id, e.id, e.content),
+icon: a.PencilIcon
   }) : null;
 }

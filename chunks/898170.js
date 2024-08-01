@@ -19,7 +19,7 @@ let x = [
 0.5,
 1
   ],
-  f = {
+  g = {
 'layers[1].shapes[1].g.k.k': [
   0,
   0.522,
@@ -49,7 +49,7 @@ let x = [
   0.757
 ]
   };
-async function g(e, t) {
+async function f(e, t) {
   let s = (await n.e('30166').then(n.t.bind(n, 235630, 19))).default;
   return function(e, t, n) {
 for (let s in t) {
@@ -62,7 +62,7 @@ for (let s in t) {
   });
   i().set(e, s, o);
 }
-  }(s, f, t), s;
+  }(s, g, t), s;
 }
 
 function C(e) {
@@ -72,7 +72,7 @@ animationClassName: n,
 className: r,
 quest: l,
 useReducedMotion: i
-  } = e, f = (0, c.e7)([u.Z], () => u.Z.isFocused()), C = o.useRef(null), [_, h] = o.useState(!1), E = o.useMemo(() => {
+  } = e, g = (0, c.e7)([u.Z], () => u.Z.isFocused()), C = o.useRef(null), [_, h] = o.useState(!1), E = o.useMemo(() => {
 if (null == l)
   return null;
 let e = (0, p.oo)(l.config.colors.primary),
@@ -88,14 +88,14 @@ let e = (0, p.oo)(l.config.colors.primary),
     t.g,
     t.b
   ], []);
-return g(l.id, n);
-  }, [l]), S = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !i && f;
+return f(l.id, n);
+  }, [l]), S = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = !i && g;
   o.useEffect(() => {
 var e, t, n, s;
-f ? T && (null === (s = C.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
+g ? T && (null === (s = C.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
   }, [
 T,
-f
+g
   ]);
   let v = o.useCallback(() => {
 h(!0);

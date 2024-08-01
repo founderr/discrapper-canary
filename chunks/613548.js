@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(517525),
   f = n(665149),
   E = n(6242),
-  g = n(757692),
-  C = n(141321),
+  C = n(757692),
+  g = n(141321),
   I = n(44136),
   x = n(651183),
   T = n(618158),
-  N = n(390322),
-  v = n(616286),
+  v = n(390322),
+  N = n(616286),
   S = n(961048),
   Z = n(179424),
   A = n(786915),
@@ -89,7 +89,7 @@ userParticipantCount: H
 selectedParticipant: y.Z.getSelectedParticipant(I),
 voiceParticipantsHidden: y.Z.getVoiceParticipantsHidden(I),
 userParticipantCount: y.Z.getUserParticipantCount(I)
-  }), [I]), F = (0, u.e7)([j.default], () => j.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, g.o)(L, F), K = (0, E.lL)('CallHeader', !0, F, Y), {
+  }), [I]), F = (0, u.e7)([j.default], () => j.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, C.o)(L, F), K = (0, E.lL)('CallHeader', !0, F, Y), {
 preventIdle: q,
 allowIdle: X
   } = (0, T.Y)('popup'), Q = [];
@@ -122,7 +122,7 @@ showQuality: !0,
 premiumIndicator: z || K.enabled
   }, 'live-indicator'))), R && Q.push((0, i.jsx)(d.Popout, {
 position: 'bottom',
-renderPopout: () => (0, i.jsx)(N.Z, {
+renderPopout: () => (0, i.jsx)(v.Z, {
   children: (0, i.jsx)(U.Z, {
     channel: n
   })
@@ -148,7 +148,7 @@ channelId: I,
 isHorizontal: !0
   }, 'select-participant')), !t && Q.push((0, i.jsx)(h.Z, {
 className: G.button
-  }, 'clips')), Q.push((0, i.jsx)(C.Z, {
+  }, 'clips')), Q.push((0, i.jsx)(g.Z, {
 onOpen: q,
 onClose: X,
 className: G.button
@@ -158,7 +158,7 @@ renderPopout: e => {
   let {
     closePopout: t
   } = e;
-  return (0, i.jsx)(N.Z, {
+  return (0, i.jsx)(v.Z, {
     children: (0, i.jsx)(k.Z, {
       channelId: I,
       onClose: t,
@@ -180,7 +180,7 @@ children: (e, t) => {
 }
   }, 'more-options-popout')), !r && (Q.push((0, i.jsx)(f.ZP.Divider, {
 className: G.divider
-  }, 'divider')), Q.push((0, i.jsx)(v.T, {
+  }, 'divider')), Q.push((0, i.jsx)(N.T, {
 channelId: n.id,
 className: G.chatButtonSpacer,
 disabled: !0

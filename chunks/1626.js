@@ -1,20 +1,20 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-return u;
+return c;
   }
 });
-var i = t(735250);
-t(470079);
-var a = t(481060),
-  l = t(111618),
-  r = t(730954),
-  o = t(981631),
-  s = t(689938);
+var i = n(735250);
+n(470079);
+var s = n(481060),
+  a = n(111618),
+  r = n(730954),
+  l = n(981631),
+  o = n(689938);
 
-function u(e, n) {
-  return e.state !== o.yb.SEND_FAILED ? null : (0, i.jsx)(a.MenuItem, {
+function c(e, t) {
+  return e.state !== l.yb.SEND_FAILED ? null : (0, i.jsx)(s.MenuItem, {
 id: 'resend',
-label: s.Z.Messages.RESEND_MESSAGE,
-action: () => (0, r.Z)(n, e, void 0, l.Z.getOptions(e.id))
+label: o.Z.Messages.RESEND_MESSAGE,
+action: () => (0, r.Z)(t, e, void 0, a.Z.getOptions(e.id))
   });
 }

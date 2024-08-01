@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(470956),
   f = n(430824),
   E = n(496675),
-  g = n(199052),
-  C = n(434488),
+  C = n(199052),
+  g = n(434488),
   I = n(27457),
   x = n(251564),
   T = n(695492),
-  N = n(981631),
-  v = n(97727);
+  v = n(981631),
+  N = n(97727);
 
 function S(e) {
   let {
@@ -37,7 +37,7 @@ className: M,
 inCall: b,
 totalNumberOfParticipants: R,
 paused: j = !1
-  } = e, L = (0, o.bp)() === N.IlC.POPOUT, P = (0, l.e7)([f.Z], () => f.Z.getGuild(A.guild_id), [A.guild_id]), {
+  } = e, L = (0, o.bp)() === v.IlC.POPOUT, P = (0, l.e7)([f.Z], () => f.Z.getGuild(A.guild_id), [A.guild_id]), {
 dismissedActivityEntryPointTileChannel: O
   } = (0, x.d)(), y = (0, l.e7)([h.Z], () => h.Z.getUserParticipantCount(A.id), [A]), D = (0, _.bt)(A.id, t), k = a.useCallback(() => {
 x.d.setState({
@@ -65,7 +65,7 @@ F = null != O && O === A.id,
 W = D.map(e => t => (0, i.jsx)(I.ZP, {
   participant: e,
   channel: A,
-  className: v.tile,
+  className: N.tile,
   paused: j,
   onClick: n,
   onDoubleClick: S,
@@ -85,7 +85,7 @@ properties: {
 }
   }, {
 trackOnInitialLoad: !0
-  }, []), null != P && !w && (!(y >= 2) || !H || V || G || F ? B && 1 === y && U && (H && !V ? W.push(e => (0, i.jsx)(C.h, {
+  }, []), null != P && !w && (!(y >= 2) || !H || V || G || F ? B && 1 === y && U && (H && !V ? W.push(e => (0, i.jsx)(g.h, {
 channel: A,
 guild: P,
 width: e,
@@ -97,7 +97,7 @@ width: e,
 channel: A,
 guild: P,
 inPopout: L
-  }))) : W.push(e => (0, i.jsx)(C.h, {
+  }))) : W.push(e => (0, i.jsx)(g.h, {
 channel: A,
 guild: P,
 width: e,
@@ -109,7 +109,7 @@ userParticipantCount: y
 var t, n;
 return null !== (n = null === (t = D[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : 'empty-tile';
   }, [D]);
-  return (0, i.jsx)(g.Z, {
+  return (0, i.jsx)(C.Z, {
 className: M,
 keyExtractor: z,
 paddingTop: 64,

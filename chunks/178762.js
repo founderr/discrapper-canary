@@ -21,13 +21,13 @@ var i = n(735250),
   _ = n(687694),
   f = n(69259),
   E = n(91140),
-  g = n(227172),
-  C = n(551228),
+  C = n(227172),
+  g = n(551228),
   I = n(678869),
   x = n(278399),
   T = n(886217),
-  N = n(555672),
-  v = n(644548),
+  v = n(555672),
+  N = n(644548),
   S = n(335326),
   Z = n(268010),
   A = n(797342),
@@ -60,7 +60,7 @@ switch (t.content_type) {
       entry: t
     });
   case o.s.TOP_GAME:
-    return (0, i.jsx)(N.ZP, {
+    return (0, i.jsx)(v.ZP, {
       ...n,
       entry: t
     });
@@ -70,7 +70,7 @@ switch (t.content_type) {
       entry: t
     });
   case o.s.LISTENED_SESSION:
-    return (0, i.jsx)(C.ZP, {
+    return (0, i.jsx)(g.ZP, {
       ...n,
       entry: t
     });
@@ -85,7 +85,7 @@ let {
 } = e;
 switch (t.content_type) {
   case o.s.PLAYED_GAME:
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(C.Z, {
       ...n,
       entry: t
     });
@@ -95,7 +95,7 @@ switch (t.content_type) {
       entry: t
     });
   case o.s.TOP_GAME:
-    return (0, i.jsx)(v.Z, {
+    return (0, i.jsx)(N.Z, {
       ...n,
       entry: t
     });
@@ -118,28 +118,28 @@ t.ZP = a.memo(e => {
   let {
 index: s,
 ...l
-  } = e, [o, m] = a.useState('default'), E = (0, r.JA)(''.concat(s)), g = null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), {
-isRich: C,
+  } = e, [o, m] = a.useState('default'), E = (0, r.JA)(''.concat(s)), C = null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), {
+isRich: g,
 appName: I
   } = (0, A.n)(l.entry), x = {
 entry: l.entry,
 channelId: l.channel.id,
 guildId: l.channel.guild_id,
 requestId: l.requestId,
-richPresenceName: C ? I : void 0
+richPresenceName: g ? I : void 0
   }, {
 openOnHover: T
   } = (0, _.C)({
 location: 'MemberListContentRow'
-  }), N = a.useRef(!1), [v, S] = a.useState(!1), [Z, b] = a.useState(!1), [R, O] = a.useState(!1), y = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
+  }), v = a.useRef(!1), [N, S] = a.useState(!1), [Z, b] = a.useState(!1), [R, O] = a.useState(!1), y = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
   a.useEffect(() => {
-v && y && O(!0);
+N && y && O(!0);
   }, [
-v,
+N,
 y
   ]);
   let D = a.useCallback(e => {
-  if (!!g)
+  if (!!C)
     (0, d.jW)(e, async () => {
       let {
         default: e
@@ -151,20 +151,20 @@ y
     });
 }, [
   l,
-  g
+  C
 ]),
 k = a.useCallback(() => {
   m(String(Date.now()));
 }, []),
 U = () => {
-  N.current = !1, setTimeout(() => {
-    !N.current && (S(!1), O(y));
+  v.current = !1, setTimeout(() => {
+    !v.current && (S(!1), O(y));
   }, 100);
 };
   return (0, i.jsx)('div', {
 onMouseEnter: () => {
-  N.current = !0, setTimeout(() => {
-    N.current && S(!0), T && (0, f.L)(M.xP.CARD_CLICK, x);
+  v.current = !0, setTimeout(() => {
+    v.current && S(!0), T && (0, f.L)(M.xP.CARD_CLICK, x);
   }, 100);
 },
 onMouseLeave: U,
@@ -180,7 +180,7 @@ children: (0, i.jsx)(u.Popout, {
     });
   },
   position: 'left',
-  shouldShow: T ? v : Z,
+  shouldShow: T ? N : Z,
   positionKey: o,
   onRequestOpen: () => (0, f.L)(M.xP.CARD_CLICK, x),
   onRequestClose: () => {
@@ -193,7 +193,7 @@ children: (0, i.jsx)(u.Popout, {
     } = t;
     return (0, i.jsx)(u.Clickable, {
       onClick: () => {
-        T && !v && S(!0), !T && b(e => !e);
+        T && !N && S(!0), !T && b(e => !e);
       },
       children: (0, i.jsx)(u.FocusRing, {
         offset: {
@@ -212,7 +212,7 @@ children: (0, i.jsx)(u.Popout, {
           children: (0, i.jsx)(L, {
             ...l,
             selected: n,
-            hovered: N.current
+            hovered: v.current
           })
         })
       })

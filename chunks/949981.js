@@ -26,8 +26,8 @@ function T(e) {
   onTransitionToInviteChannel: h,
   onAcceptInstantInvite: N
 } = e,
-C = T === s.id,
-f = n.state === E.r2o.ACCEPTING,
+f = T === s.id,
+C = n.state === E.r2o.ACCEPTING,
 p = (0, r.e7)([c.Z], () => null != n.channel ? c.Z.getChannel(n.channel.id) : null, [n]);
   a()(null == p || p.isPrivate(), 'must be a private channel');
   let g = null != p;
@@ -46,14 +46,14 @@ g && null != e && t.push(e);
   let S = p.name;
   (null == S || '' === S) && (S = t.length > 0 ? t.filter(d.lm).map(e => e.username).join(', ') : I.Z.Messages.UNNAMED);
   let A = g ? h : N,
-R = I.Z.Messages.JOIN_GUILD,
-O = l.Z.Button.Colors.GREEN;
-  g && (R = I.Z.Messages.JOINED_GUILD, O = l.Z.Button.Colors.PRIMARY);
-  let x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
-  return C && (x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(l.Z, {
+M = I.Z.Messages.JOIN_GUILD,
+R = l.Z.Button.Colors.GREEN;
+  g && (M = I.Z.Messages.JOINED_GUILD, R = l.Z.Button.Colors.PRIMARY);
+  let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+  return f && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(l.Z, {
 children: [
   (0, i.jsx)(l.Z.Header, {
-    text: x
+    text: O
   }),
   (0, i.jsxs)(l.Z.Body, {
     children: [
@@ -75,10 +75,10 @@ children: [
       }),
       (0, i.jsx)(l.Z.Button, {
         onClick: A,
-        submitting: f,
+        submitting: C,
         isDisabled: g,
-        color: O,
-        children: R
+        color: R,
+        children: M
       })
     ]
   })

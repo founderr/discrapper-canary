@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return M;
+return x;
   }
 }), n(653041);
 var i = n(735250),
@@ -19,19 +19,19 @@ var i = n(735250),
   T = n(695346),
   h = n(314897),
   N = n(496675),
-  C = n(594174),
-  f = n(55935),
+  f = n(594174),
+  C = n(55935),
   p = n(655354),
   g = n(809780),
   S = n(981631),
   A = n(689938),
-  R = n(104219);
-let O = {
+  M = n(104219);
+let R = {
   left: 4,
   right: -12
 };
 
-function x(e) {
+function O(e) {
   var t;
   let {
 channel: n,
@@ -47,21 +47,21 @@ if ('ArrowLeft' === e.key) {
 }
   }, [n.id]);
   return (0, i.jsx)(c.FocusRing, {
-offset: O,
+offset: R,
 children: (0, i.jsxs)('div', {
-  className: R.messageContainer,
+  className: M.messageContainer,
   onKeyDown: E,
   ..._,
   children: [
     (0, i.jsx)(p.Z, {
-      className: R.jumpButton,
+      className: M.jumpButton,
       onJump: e => d(e, a.id)
     }),
     (0, i.jsx)(m.Z, {
       id: a.id,
       message: a,
       channel: n,
-      className: R.message,
+      className: M.message,
       compact: r,
       animateAvatar: !1,
       isGroupStart: o,
@@ -73,7 +73,7 @@ children: (0, i.jsxs)('div', {
   });
 }
 
-function M(e) {
+function x(e) {
   var t, n;
   let {
 channel: s,
@@ -85,27 +85,27 @@ enabled: m
 location: '20e3b0_1'
   }, {
 autoTrackExposure: !1
-  }), p = T.jU.useSetting(), O = (0, o.e7)([N.Z], () => N.Z.can(S.Plq.CREATE_INSTANT_INVITE, a)), M = (0, E.P1)(a), v = !1, L = 0 === s.messages.length || r()(s.messages[0].timestamp).isSame(r()(), 'day'), Z = null !== (n = null === (t = C.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
+  }), p = T.jU.useSetting(), R = (0, o.e7)([N.Z], () => N.Z.can(S.Plq.CREATE_INSTANT_INVITE, a)), x = (0, E.P1)(a), v = !1, Z = 0 === s.messages.length || r()(s.messages[0].timestamp).isSame(r()(), 'day'), L = null !== (n = null === (t = f.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
   if (!s.collapsed) {
 let e = null,
   t = null,
   n = s.messages.slice(0, g.hC);
 n.forEach(n => {
-  if (!(0, d.Z)(n, O)) {
-    if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
-      let t = (0, f.vc)(n.timestamp, 'LL');
+  if (!(0, d.Z)(n, R)) {
+    if (!Z && (null == e || !e.isSame(n.timestamp, 'day'))) {
+      let t = (0, C.vc)(n.timestamp, 'LL');
       P.push((0, i.jsx)(I.Z, {
-        className: R.divider,
+        className: M.divider,
         children: t
       }, t)), e = r()(n.timestamp);
     }
     let s = null == t || (0, _.Z)(a, t, n);
-    t = n, v = v || (0, E.DQ)(n), P.push((0, i.jsx)(x, {
+    t = n, v = v || (0, E.DQ)(n), P.push((0, i.jsx)(O, {
       channel: a,
       message: n,
       compact: p,
       isGroupStart: s,
-      treatSpam: !Z && m && (0, E.DQ)(n) && M,
+      treatSpam: !L && m && (0, E.DQ)(n) && x,
       gotoChannel: l
     }, n.id));
   }
@@ -119,10 +119,10 @@ n.forEach(n => {
   ]
 }, 'view-all')), 0 === P.length && (P = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
   }
-  return v && M && u.Z.trackExposure({
+  return v && x && u.Z.trackExposure({
 location: '20e3b0_2'
   }), (0, i.jsx)('div', {
-className: R.messages,
+className: M.messages,
 children: P
   });
 }

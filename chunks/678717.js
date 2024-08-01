@@ -30,8 +30,8 @@ var x = t(392750),
   N = t(912072),
   S = t(246992),
   T = t(442954),
-  Z = t(702904),
-  E = t(178821),
+  E = t(702904),
+  Z = t(178821),
   I = t(248526),
   R = t(958328),
   O = t(514866),
@@ -101,7 +101,7 @@ function F() {
   }), e.push({
     id: 'performance',
     name: 'Performance',
-    render: () => (0, a.jsx)(E.Z, {})
+    render: () => (0, a.jsx)(Z.Z, {})
   })), e.push({
     id: 'colors',
     name: 'Colors',
@@ -145,7 +145,7 @@ function F() {
   }), e.push({
     id: 'payments',
     name: 'Payments',
-    render: () => (0, a.jsx)(Z.Z, {})
+    render: () => (0, a.jsx)(E.Z, {})
   }), e.push({
     id: 'subscriptions',
     name: 'Subscriptions',

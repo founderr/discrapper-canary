@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return g;
+return C;
   }
 });
 var i = n(735250);
@@ -20,22 +20,22 @@ var a = n(442837),
   f = n(689938),
   E = n(593269);
 
-function g(e) {
+function C(e) {
   let {
 channelId: t,
 showProfile: n = !1,
-showTrailingDivider: g = !1
-  } = e, C = d.default.cast(t), {
+showTrailingDivider: C = !1
+  } = e, g = d.default.cast(t), {
 joinRequest: I,
 isModmin: x,
 guildId: T,
-maxMembers: N
+maxMembers: v
   } = (0, a.cj)([
 h.Z,
 c.Z,
 u.Z
   ], () => {
-let e = h.Z.getRequest(C),
+let e = h.Z.getRequest(g),
   t = c.Z.getGuild(null == e ? void 0 : e.guildId);
 return {
   joinRequest: e,
@@ -43,7 +43,7 @@ return {
   guildId: null == t ? void 0 : t.id,
   maxMembers: null == t ? void 0 : t.maxMembers
 };
-  }), v = (0, a.e7)([o.Z], () => null != T ? o.Z.getMemberCount(T) : 0), S = null != N && (null != v ? v : 0) >= N, {
+  }), N = (0, a.e7)([o.Z], () => null != T ? o.Z.getMemberCount(T) : 0), S = null != v && (null != N ? N : 0) >= v, {
 approveRequest: Z,
 rejectRequest: A,
 submitting: M
@@ -86,7 +86,7 @@ children: [
     size: s.ButtonSizes.SMALL,
     children: f.Z.Messages.VIEW_PROFILE
   }),
-  g && (0, i.jsx)(l.ZP.Divider, {})
+  C && (0, i.jsx)(l.ZP.Divider, {})
 ]
   }) : null;
 }

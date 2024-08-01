@@ -10,8 +10,8 @@ var s = n(735250),
   p = n(685613),
   m = n(670638),
   x = n(341907),
-  f = n(898170),
-  g = n(689938),
+  g = n(898170),
+  f = n(689938),
   C = n(560594);
 t.Z = e => {
   let {
@@ -23,20 +23,20 @@ onCtxMenuClose: E,
 useReducedMotion: S,
 isExpanded: T,
 isExpansionAnimationComplete: v
-  } = e, A = o.useCallback(() => {
+  } = e, N = o.useCallback(() => {
 (0, x.openDisclosureModal)(t, {
   content: d.jn.QUEST_BAR_V2,
   ctaContent: c.jZ.OPEN_DISCLOSURE
 });
-  }, [t]), N = o.useCallback(() => {
+  }, [t]), j = o.useCallback(() => {
 (0, u.FE)(t, {
   content: d.jn.QUEST_BAR_V2,
   ctaContent: c.jZ.OPEN_GAME_LINK
 });
-  }, [t]), j = T && v;
+  }, [t]), A = T && v;
   return (0, s.jsxs)(l.animated.div, {
 className: a()(C.wrapper, {
-  [C.interactable]: j
+  [C.interactable]: A
 }),
 style: {
   margin: r.to({
@@ -142,7 +142,7 @@ children: [
         ]
       })
     },
-    children: (0, s.jsx)(f.Z, {
+    children: (0, s.jsx)(g.Z, {
       className: C.background,
       animationClassName: C.backgroundAnimation,
       quest: t,
@@ -175,7 +175,7 @@ children: [
         ],
         output: [
           1,
-          j ? 1 : 0.8
+          A ? 1 : 0.8
         ]
       }),
       x: r.to({
@@ -190,9 +190,9 @@ children: [
       })
     },
     children: (0, s.jsx)(i.Clickable, {
-      onClick: N,
+      onClick: j,
       className: a()({
-        [C.logo]: j
+        [C.logo]: A
       }),
       children: (0, s.jsx)(p.Z, {
         quest: t,
@@ -228,7 +228,7 @@ children: [
       color: 'always-white',
       variant: 'text-xs/medium',
       className: C.questAvailableText,
-      children: g.Z.Messages.QUEST_AVAILABLE
+      children: f.Z.Messages.QUEST_AVAILABLE
     })
   }),
   (0, s.jsxs)(l.animated.div, {
@@ -248,12 +248,12 @@ children: [
     children: [
       (0, s.jsxs)(i.Clickable, {
         className: C.promotedBadge,
-        onClick: A,
+        onClick: N,
         children: [
           (0, s.jsx)(i.Text, {
             color: 'always-white',
             variant: 'text-xs/normal',
-            children: g.Z.Messages.QUESTS_PROMOTED
+            children: f.Z.Messages.QUESTS_PROMOTED
           }),
           (0, s.jsx)(i.CircleQuestionIcon, {
             color: i.tokens.colors.WHITE,
@@ -272,7 +272,7 @@ children: [
         children: e => (0, s.jsx)(i.Clickable, {
           ...e,
           className: C.submenuWrapper,
-          'aria-label': g.Z.Messages.ACTIONS,
+          'aria-label': f.Z.Messages.ACTIONS,
           children: (0, s.jsx)(i.MoreHorizontalIcon, {
             size: 'md',
             color: 'currentColor',

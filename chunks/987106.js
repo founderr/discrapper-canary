@@ -48,18 +48,18 @@ style: r,
 disabled: m,
 emoji: v,
 url: x,
-skuId: E
+skuId: I
   } = e, {
-executeStateUpdate: I,
+executeStateUpdate: E,
 visualState: T,
 isDisabled: N
-  } = (0, _.Ee)(e), g = (0, d.I)(E), S = null != E && r === u.ZJ.PREMIUM, b = S && (null == g ? void 0 : g.disabled), O = S ? null == g ? void 0 : g.label : t, j = null != v, M = null != O && O.length > 0, Z = r === u.ZJ.LINK && null != x && x.length > 0, y = T === p.gH.LOADING || S && null == g;
+  } = (0, _.Ee)(e), g = (0, d.I)(I), S = null != I && r === u.ZJ.PREMIUM, b = S && (null == g ? void 0 : g.disabled), O = S ? null == g ? void 0 : g.label : t, j = null != v, M = null != O && O.length > 0, Z = r === u.ZJ.LINK && null != x && x.length > 0, y = T === p.gH.LOADING || S && null == g;
   return n = Z ? () => {
 (0, f.q)({
   href: null != x ? x : '',
   shouldConfirm: !0
 });
-  } : S ? null != g && !1 === g.disabled ? g.onClick : a.noop : () => I(), (0, l.jsxs)(o.Button, {
+  } : S ? null != g && !1 === g.disabled ? g.onClick : a.noop : () => E(), (0, l.jsxs)(o.Button, {
 color: function(e) {
   switch (e) {
     case u.ZJ.PRIMARY:

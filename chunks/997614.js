@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(871499),
   f = n(131951),
   E = n(459273),
-  g = n(304388),
-  C = n(981631),
+  C = n(304388),
+  g = n(981631),
   I = n(689938);
 
 function x(e) {
@@ -27,9 +27,9 @@ function x(e) {
 channel: t,
 themeable: x
   } = e, T = t.getGuildId(), {
-mute: N,
-suppress: v
-  } = (0, m.Z)(t), S = (0, s.e7)([f.Z], () => f.Z.isDeaf()), Z = N || v || S, A = (0, u.sR)({
+mute: v,
+suppress: N
+  } = (0, m.Z)(t), S = (0, s.e7)([f.Z], () => f.Z.isDeaf()), Z = v || N || S, A = (0, u.sR)({
 isSoundboardButtonDisabled: Z
   }), [M, b] = (0, c.c)(A);
 
@@ -50,9 +50,9 @@ L = a.useCallback(() => {
   null === (e = j.current) || void 0 === e || e.hidePopout();
 }, []);
   return (0, E.yp)({
-event: C.CkL.TOGGLE_SOUNDBOARD,
+event: g.CkL.TOGGLE_SOUNDBOARD,
 handler: L
-  }), (0, i.jsx)(g.Z, {
+  }), (0, i.jsx)(C.Z, {
 ref: j,
 renderPopout: e => {
   let {
@@ -74,9 +74,9 @@ renderPopout: e => {
 children: e => (0, i.jsx)(_.Z, {
   themeable: x,
   label: function() {
-    if (N)
-      return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
     if (v)
+      return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+    if (N)
       return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
     if (S)
       return I.Z.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;

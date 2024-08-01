@@ -1,6 +1,6 @@
 n.d(t, {
   $: function() {
-return Z;
+return L;
   }
 }), n(47120), n(411104);
 var i, s = n(735250),
@@ -18,15 +18,15 @@ var i, s = n(735250),
   T = n(112724),
   h = n(812206),
   N = n(283595),
-  C = n(558314),
-  f = n(55563),
+  f = n(558314),
+  C = n(55563),
   p = n(551428),
   g = n(73346),
   S = n(981631),
   A = n(689938),
-  R = n(91612);
+  M = n(91612);
 
-function O(e, t, n) {
+function R(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -34,7 +34,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class x extends(i = a.Component) {
+class O extends(i = a.Component) {
   get analyticsLocation() {
 let {
   analyticsContext: {
@@ -59,7 +59,7 @@ let {
   renderViewInStoreButton() {
 return (0, s.jsx)(o.Button.Link, {
   to: this.getStoreListingLocation(),
-  className: R.actionButton,
+  className: M.actionButton,
   color: o.Button.Colors.GREEN,
   size: o.Button.Sizes.SMALL,
   children: A.Z.Messages.GAME_ACTION_BUTTON_VIEW_IN_STORE
@@ -92,22 +92,22 @@ return e.productLine === S.POd.COLLECTIBLES ? (0, s.jsx)(u.Z, {
 });
   }
   constructor(...e) {
-super(...e), O(this, 'state', {
+super(...e), R(this, 'state', {
   playing: !1,
   muted: !0
-}), O(this, 'handleToggleMute', () => {
+}), R(this, 'handleToggleMute', () => {
   this.setState({
     muted: !this.state.muted
   });
-}), O(this, 'handleMouseEnter', () => {
+}), R(this, 'handleMouseEnter', () => {
   this.setState({
     playing: !0
   });
-}), O(this, 'handleMouseLeave', () => {
+}), R(this, 'handleMouseLeave', () => {
   this.setState({
     playing: !1
   });
-}), O(this, 'getStoreListingLocation', () => {
+}), R(this, 'getStoreListingLocation', () => {
   let {
     sku: e
   } = this.props;
@@ -117,12 +117,12 @@ super(...e), O(this, 'state', {
     slug: e.slug,
     analyticsSource: this.analyticsLocation
   });
-}), O(this, 'handleActionButtonClick', e => e.preventDefault()), O(this, 'handleBuyButtonClick', e => e.preventDefault()), O(this, 'handleLinkClick', e => {
+}), R(this, 'handleActionButtonClick', e => e.preventDefault()), R(this, 'handleBuyButtonClick', e => e.preventDefault()), R(this, 'handleLinkClick', e => {
   let {
     onEmbedClick: t
   } = this.props;
   null != t && t(e);
-}), O(this, 'renderApplicationTile', (e, t) => {
+}), R(this, 'renderApplicationTile', (e, t) => {
   let {
     inLibrary: n,
     width: i,
@@ -147,7 +147,7 @@ super(...e), O(this, 'state', {
     isHorizontal: u,
     isEmbed: !0
   });
-}), O(this, 'renderActions', e => {
+}), R(this, 'renderActions', e => {
   let {
     inLibrary: t,
     application: n,
@@ -157,7 +157,7 @@ super(...e), O(this, 'state', {
   } = this.props;
   if (null != r)
     return (0, s.jsx)('div', {
-      className: R.tileActions,
+      className: M.tileActions,
       children: r()
     });
   if (null == n)
@@ -165,13 +165,13 @@ super(...e), O(this, 'state', {
   let l = null != n && n.primarySkuId === i,
     c = null != a && a.hasFlag(S.eHb.HIDDEN);
   return (0, s.jsxs)('div', {
-    className: R.tileActions,
+    className: M.tileActions,
     children: [
       !l || c ? this.renderViewInStoreButton() : (0, s.jsx)(d.Z, {
         application: n,
         customDisabledColor: o.Button.Colors.PRIMARY,
         size: o.Button.Sizes.SMALL,
-        className: R.actionButton,
+        className: M.actionButton,
         source: S.Sbl.MESSAGE_EMBED,
         onClick: this.handleActionButtonClick
       }),
@@ -185,12 +185,12 @@ super(...e), O(this, 'state', {
 });
   }
 }
-O(x, 'defaultProps', {
+R(O, 'defaultProps', {
   renderFallback: S.dG4
 });
-let M = [
-  f.Z,
+let x = [
   C.Z,
+  f.Z,
   N.Z,
   p.Z
 ];
@@ -198,16 +198,16 @@ let M = [
 function v(e) {
   let {
 skuId: t
-  } = e, n = f.Z.get(t), i = null != n ? h.Z.getApplication(n.applicationId) : null;
+  } = e, n = C.Z.get(t), i = null != n ? h.Z.getApplication(n.applicationId) : null;
   return {
 sku: n,
 application: i,
-fetchFailed: f.Z.didFetchingSkuFail(t),
+fetchFailed: C.Z.didFetchingSkuFail(t),
 inLibrary: null != n && N.Z.hasApplication(n.applicationId, n.applicationId, !0),
 storeListing: null != n ? p.Z.getForSKU(n.id) : null,
 libraryApplication: null != n ? N.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   };
 }
-let L = (0, T.Z)((0, m.Z)(x));
-t.Z = l.ZP.connectStores(M, v)(L);
-let Z = (0, m.Z)(l.ZP.connectStores(M, v)(x));
+let Z = (0, T.Z)((0, m.Z)(O));
+t.Z = l.ZP.connectStores(x, v)(Z);
+let L = (0, m.Z)(l.ZP.connectStores(x, v)(O));

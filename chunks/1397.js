@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(353093),
   f = n(717057),
   E = n(693546),
-  g = n(881952),
-  C = n(305325),
+  C = n(881952),
+  g = n(305325),
   I = n(246364),
   x = n(937111),
   T = n(270801),
-  N = n(652730),
-  v = n(41776),
+  v = n(652730),
+  N = n(41776),
   S = n(657352),
   Z = n(33154),
   A = n(144114),
@@ -91,16 +91,16 @@ let {
   canSendMessages: _,
   channelFollowingUsersSeen: f,
   showLurkerModeUpsellPopout: E,
-  showMemberVerificationModal: g,
-  useReducedMotion: C,
+  showMemberVerificationModal: C,
+  useReducedMotion: g,
   isStaff: x,
   guildJoinRequest: T
 } = this.props, {
-  shouldShowLurkerModeUpsellPopout: N,
-  shouldShowLurkerModeSuccessPopout: v
+  shouldShowLurkerModeUpsellPopout: v,
+  shouldShowLurkerModeSuccessPopout: N
 } = this.state, S = {
   theme: m,
-  useReducedMotion: C
+  useReducedMotion: g
 };
 if (e && !_) {
   if (S.message = B.Z.Messages.FOLLOW_NEWS_CHAT_INPUT_MESSAGE, null != f && f >= 1000) {
@@ -111,8 +111,8 @@ if (e && !_) {
   }
   S.buttonText = B.Z.Messages.FOLLOW, S.onButtonClick = this.handleFollowAnnouncement, S.imageSrc = n(485195), t && (S.onSecondaryButtonClick = this.handleJoinServer, S.secondaryButtonText = B.Z.Messages.LURKER_MODE_CHAT_INPUT_BUTTON);
 } else if (s)
-  S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED, S.buttonText = B.Z.Messages.CLAIM_ACCOUNT, S.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount, S.imageSrc = n(102811);
-else if (g)
+  S.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED, S.buttonText = B.Z.Messages.CLAIM_ACCOUNT, S.onButtonClick = C ? this.handleShowMemberVerification : this.handleClaimAccount, S.imageSrc = n(102811);
+else if (C)
   switch (null == T ? void 0 : T.applicationStatus) {
     case I.wB.SUBMITTED:
       S.message = B.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, S.subtitle = B.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_SUBTITLE, S.buttonText = B.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, S.onButtonClick = this.handleCancelApplication, S.imageSrc = n(281958);
@@ -138,7 +138,7 @@ else
 return (0, i.jsx)(o.Popout, {
   position: 'top',
   align: 'left',
-  shouldShow: v,
+  shouldShow: N,
   onRequestClose: () => this.setState({
     shouldShowLurkerModeSuccessPopout: !1
   }),
@@ -150,7 +150,7 @@ return (0, i.jsx)(o.Popout, {
         this.renderMemberVerificationSuccessModal(),
         E ? (0, i.jsx)(o.Popout, {
           renderPopout: this.renderLurkerModeUpsellPopout,
-          shouldShow: N,
+          shouldShow: v,
           position: 'top',
           children: e => (0, i.jsx)(o.Clickable, {
             ...e,
@@ -214,7 +214,7 @@ super(...e), G(this, 'state', {
   let {
     guild: e
   } = this.props;
-  null != e && (0, C.hk)(e.id);
+  null != e && (0, g.hk)(e.id);
 }), G(this, 'handleClaimAccount', () => {
   m.j();
 }), G(this, 'handleVerifyPhone', () => {
@@ -304,7 +304,7 @@ super(...e), G(this, 'state', {
     guild: e,
     guildJoinRequest: t
   } = this.props, n = (null == t ? void 0 : t.applicationStatus) === I.wB.APPROVED;
-  if (null == e || null == t || !n || (0, g.d3)(t))
+  if (null == e || null == t || !n || (0, C.d3)(t))
     return null;
   let a = () => {
     E.Z.ackUserGuildJoinRequest(e.id, t.joinRequestId);
@@ -333,12 +333,12 @@ function F(e) {
   let {
 channel: s,
 children: l
-  } = e, o = s.getGuildId(), c = (0, r.e7)([L.Z], () => L.Z.getGuild(o)), u = (0, r.e7)([P.Z], () => P.Z.getCheck(o)), d = s.type === U.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(U.oNc.NEWS), m = (0, r.e7)([R.Z], () => d ? R.Z.getFollowerStatsForChannel(s.id) : null), f = (0, r.e7)([v.Z], () => v.Z.isLurking(o)), E = (0, r.e7)([y.default], () => y.default.getCurrentUser()), C = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t, T = (0, r.e7)([j.ZP], () => {
+  } = e, o = s.getGuildId(), c = (0, r.e7)([L.Z], () => L.Z.getGuild(o)), u = (0, r.e7)([P.Z], () => P.Z.getCheck(o)), d = s.type === U.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(U.oNc.NEWS), m = (0, r.e7)([R.Z], () => d ? R.Z.getFollowerStatsForChannel(s.id) : null), f = (0, r.e7)([N.Z], () => N.Z.isLurking(o)), E = (0, r.e7)([y.default], () => y.default.getCurrentUser()), g = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t, T = (0, r.e7)([j.ZP], () => {
 var e, t;
 return null != E && null !== (t = null === (e = j.ZP.getMember(o, E.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
-  }), S = !!(null == c ? void 0 : c.hasVerificationGate()), Z = (T || u.notClaimed) && S, A = (0, r.e7)([N.Z], () => N.Z.shouldShowPopout(o)), M = (0, r.e7)([O.Z], () => O.Z.can(U.Plq.SEND_MESSAGES, s)), k = (0, r.e7)([x.Z], () => x.Z.getRequest(o)), [w, B] = (0, p.L_)(o), H = (0, p.Cc)(o), G = (null == k ? void 0 : k.applicationStatus) === I.wB.APPROVED;
+  }), S = !!(null == c ? void 0 : c.hasVerificationGate()), Z = (T || u.notClaimed) && S, A = (0, r.e7)([v.Z], () => v.Z.shouldShowPopout(o)), M = (0, r.e7)([O.Z], () => O.Z.can(U.Plq.SEND_MESSAGES, s)), k = (0, r.e7)([x.Z], () => x.Z.getRequest(o)), [w, B] = (0, p.L_)(o), H = (0, p.Cc)(o), G = (null == k ? void 0 : k.applicationStatus) === I.wB.APPROVED;
   a.useEffect(() => {
-if (!(!(0, _.EJ)(c) || !G || (0, g.d3)(k)) && null == H)
+if (!(!(0, _.EJ)(c) || !G || (0, C.d3)(k)) && null == H)
   B();
   }, [
 c,
@@ -361,7 +361,7 @@ showMemberVerificationModal: Z,
 guildJoinRequestStatus: null !== (n = null == k ? void 0 : k.applicationStatus) && void 0 !== n ? n : I.wB.STARTED,
 guildJoinRequest: k,
 useReducedMotion: h.Z.useReducedMotion,
-isStaff: C,
+isStaff: g,
 isLoading: w,
 clanInfo: H
   };

@@ -18,18 +18,18 @@ var i = n(735250),
   _ = n(937393),
   f = n(43982),
   E = n(721351),
-  g = n(420529),
-  C = n(927923),
+  C = n(420529),
+  g = n(927923),
   I = n(981631),
   x = n(921944),
   T = n(689938),
-  N = n(646897);
+  v = n(646897);
 
-function v(e) {
+function N(e) {
   let {
 onClose: t,
 channel: n
-  } = e, a = (0, g.Z)(n);
+  } = e, a = (0, C.Z)(n);
   return (0, i.jsx)(r.Menu, {
 onClose: t,
 onSelect: () => null,
@@ -43,7 +43,7 @@ function S(e) {
   let {
 channel: t,
 showLeftDivider: n = !1,
-...g
+...C
   } = e, S = (0, p.Z)(), Z = (0, s.e7)([m.Z], () => {
 var e, t;
 return null === (e = m.Z.getSessionById(null !== (t = null == S ? void 0 : S.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
@@ -68,7 +68,7 @@ children: e => {
   return (0, i.jsxs)(i.Fragment, {
     children: [
       n ? (0, i.jsx)('div', {
-        className: N.leftDivider
+        className: v.leftDivider
       }) : null,
       (0, i.jsx)(r.Popout, {
         position: y,
@@ -88,7 +88,7 @@ children: e => {
                 s(x.L.UNKNOWN), O(!0);
               },
               gameConsoleAccounts: L
-            }) : (0, i.jsx)(v, {
+            }) : (0, i.jsx)(N, {
               onClose: () => {
                 n();
               },
@@ -100,9 +100,9 @@ children: e => {
           var t;
           return (0, i.jsx)(d.Z, {
             ...e,
-            ...g,
+            ...C,
             onClick: () => O(!0),
-            label: null != (t = Z) ? t === C.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW : T.Z.Messages.CONSOLE_TRANSFER,
+            label: null != (t = Z) ? t === g.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW : T.Z.Messages.CONSOLE_TRANSFER,
             iconComponent: (0, E.Z)(Z)
           });
         }

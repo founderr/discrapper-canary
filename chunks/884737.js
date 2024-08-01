@@ -12,7 +12,7 @@ return g;
 return H;
   },
   HN: function() {
-return p;
+return h;
   },
   J5: function() {
 return w;
@@ -39,7 +39,7 @@ return Q;
 return J;
   },
   lR: function() {
-return h;
+return p;
   },
   lU: function() {
 return P;
@@ -206,7 +206,7 @@ let C = new r.Z('AuditLogUtils'),
 [u.zUn.UNICODE_EMOJI]: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
 ...d()
   }),
-  p = () => ({
+  h = () => ({
 [u.zUn.CODE]: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
 [u.zUn.CHANNEL_ID]: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
 [u.zUn.MAX_USES]: {
@@ -223,7 +223,7 @@ let C = new r.Z('AuditLogUtils'),
 },
 ...d()
   }),
-  h = () => ({
+  p = () => ({
 [u.zUn.CHANNEL_ID]: es(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
 [u.zUn.NAME]: es(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE),
 [u.zUn.AVATAR_HASH]: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,

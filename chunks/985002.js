@@ -109,7 +109,7 @@ if (!A) {
 A,
 t,
 n
-  ]), L = s.useCallback(async (e, s) => {
+  ]), v = s.useCallback(async (e, s) => {
 if (!g) {
   p(!0);
   try {
@@ -133,7 +133,7 @@ disconnectLinkRequest: x,
 cancelLinkRequest: b,
 selectTeenUser: P,
 getLinkCode: O,
-requestLink: L,
+requestLink: v,
 loadMore: s.useCallback(async e => {
   let n = i.Z.getActionsForDisplayType(e),
     s = n[n.length - 1],

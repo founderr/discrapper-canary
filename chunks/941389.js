@@ -1,24 +1,24 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-return u;
+return c;
   }
 });
-var i = t(735250);
-t(470079);
-var a = t(481060),
-  l = t(496675),
-  r = t(996861),
-  o = t(981631),
-  s = t(689938);
+var i = n(735250);
+n(470079);
+var s = n(481060),
+  a = n(496675),
+  r = n(996861),
+  l = n(981631),
+  o = n(689938);
 
-function u(e, n) {
-  let t = n.getGuildId();
-  return null != t && (e.type === o.uaV.USER_JOIN || e.type === o.uaV.GUILD_INVITE_REMINDER) && l.Z.canWithPartialContext(o.Plq.MANAGE_GUILD, {
-guildId: t
-  }) ? (0, i.jsx)(a.MenuItem, {
+function c(e, t) {
+  let n = t.getGuildId();
+  return null != n && (e.type === l.uaV.USER_JOIN || e.type === l.uaV.GUILD_INVITE_REMINDER) && a.Z.canWithPartialContext(l.Plq.MANAGE_GUILD, {
+guildId: n
+  }) ? (0, i.jsx)(s.MenuItem, {
 id: 'configure',
-label: s.Z.Messages.CONFIGURE,
-icon: a.CircleQuestionIcon,
-action: () => (0, r.zW)(n)
+label: o.Z.Messages.CONFIGURE,
+icon: s.CircleQuestionIcon,
+action: () => (0, r.zW)(t)
   }) : null;
 }

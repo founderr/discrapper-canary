@@ -17,8 +17,8 @@ buttonSubmitting: p,
 onButtonClick: _,
 imageSrc: f,
 animationSrc: E,
-secondaryButtonText: g,
-onSecondaryButtonClick: C,
+secondaryButtonText: C,
+onSecondaryButtonClick: g,
 children: I,
 useReducedMotion: x = !1
   } = e, T = (0, l.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
@@ -28,12 +28,12 @@ return null;
 return (0, i.jsx)(i.Fragment, {
   children: a.Children.only(I)
 });
-  let N = null;
-  return null != f ? N = (0, i.jsx)('img', {
+  let v = null;
+  return null != f ? v = (0, i.jsx)('img', {
 alt: '',
 src: f,
 className: u.image
-  }) : null != E && (N = (0, i.jsx)(r.LottieAnimation, {
+  }) : null != E && (v = (0, i.jsx)(r.LottieAnimation, {
 importData: E,
 shouldAnimate: !x,
 className: u.animation
@@ -43,7 +43,7 @@ children: [
   (0, i.jsxs)('div', {
     className: u.content,
     children: [
-      N,
+      v,
       (0, i.jsxs)('div', {
         className: u.text,
         children: [
@@ -64,14 +64,14 @@ children: [
   (0, i.jsxs)('div', {
     className: u.buttonContainer,
     children: [
-      null != g && (0, i.jsx)(r.Button, {
+      null != C && (0, i.jsx)(r.Button, {
         className: u.button,
         size: r.Button.Sizes.SMALL,
-        onClick: C,
+        onClick: g,
         look: r.Button.Looks.LINK,
         color: r.Button.Colors.PRIMARY,
         submitting: p,
-        children: g
+        children: C
       }),
       null != h && (0, i.jsx)(r.Button, {
         className: u.button,

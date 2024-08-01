@@ -19,22 +19,22 @@ var i = n(735250),
   T = n(731290),
   h = n(944486),
   N = n(455199),
-  C = n(655354),
-  f = n(999671),
+  f = n(655354),
+  C = n(999671),
   p = n(324081),
   g = n(240126),
   S = n(791914),
   A = n(981631),
-  R = n(689938),
-  O = n(699723);
-let x = {
+  M = n(689938),
+  R = n(699723);
+let O = {
   offset: {
 left: 4,
 right: -12
   }
 };
 
-function M(e, t, n) {
+function x(e, t, n) {
   let i = t ? N.Z.guildFilter : null,
 s = t ? N.Z.roleFilter : null,
 a = t ? N.Z.everyoneFilter : null,
@@ -53,10 +53,10 @@ m.Z,
 h.Z
   ], () => m.Z.getChannel(h.Z.getChannelId())), {
 messages: T,
-hasMore: C,
+hasMore: f,
 loading: p,
 guildFilter: g,
-roleFilter: x,
+roleFilter: O,
 everyoneFilter: v
   } = (0, a.cj)([N.Z], () => ({
 messages: N.Z.getMentions(),
@@ -65,18 +65,18 @@ loading: N.Z.loading,
 guildFilter: N.Z.guildFilter,
 roleFilter: N.Z.roleFilter,
 everyoneFilter: N.Z.everyoneFilter
-  })), L = (0, u.Z)(g), P = (0, u.Z)(x), b = (0, u.Z)(v);
+  })), Z = (0, u.Z)(g), P = (0, u.Z)(O), b = (0, u.Z)(v);
   s.useEffect(() => {
 if (!N.Z.hasLoadedEver) {
-  M(I, !0);
+  x(I, !0);
   return;
 }
-(null != L && g !== L || null != P && x !== P || null != b && v !== b) && M(I, !0);
+(null != Z && g !== Z || null != P && O !== P || null != b && v !== b) && x(I, !0);
   }, [
-L,
+Z,
 g,
 P,
-x,
+O,
 b,
 v,
 I,
@@ -85,7 +85,7 @@ I,
   s.useEffect(() => {
 d.l.getCurrentConfig({
   location: 'mentions'
-}).enabled && (null == T ? void 0 : T.some(_.k5)) && (o.Z.clearMentions(), M(I, !0));
+}).enabled && (null == T ? void 0 : T.some(_.k5)) && (o.Z.clearMentions(), x(I, !0));
   }, []), s.useEffect(() => () => {
 o.Z.truncateMentions(A.DJj);
   }, []);
@@ -94,7 +94,7 @@ tab: r.X.MENTIONS,
 setTab: t,
 badgeState: l,
 closePopout: E,
-children: (0, i.jsx)(f.Z, {})
+children: (0, i.jsx)(C.Z, {})
   }), [
 !0,
 t,
@@ -103,8 +103,8 @@ E
   ]);
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsx)(c.ZP, {
-  className: O.recentMentionsPopout,
-  scrollerClassName: O.scroller,
+  className: R.recentMentionsPopout,
+  scrollerClassName: R.scroller,
   onFetch: () => null,
   onJump: n,
   onCloseMessage: function(e) {
@@ -113,29 +113,29 @@ children: (0, i.jsx)(c.ZP, {
   channel: I,
   messages: T,
   loading: p,
-  hasMore: C,
+  hasMore: f,
   analyticsName: 'Recent Mentions',
   loadMore: function() {
-    M(I, !0, null != T && T.length > 0 ? T[T.length - 1].id : null);
+    x(I, !0, null != T && T.length > 0 ? T[T.length - 1].id : null);
   },
   canCloseAllMessages: !0,
   renderHeader: j,
   renderEmptyState: D,
-  renderMessage: Z,
-  'aria-label': R.Z.Messages.RECENT_MENTIONS,
+  renderMessage: L,
+  'aria-label': M.Z.Messages.RECENT_MENTIONS,
   listName: 'recents'
 })
   });
 }
 
-function L(e, t) {
+function Z(e, t) {
   return [(0, i.jsx)(P, {
 message: e,
 gotoMessage: t
   }, e.id)];
 }
 
-function Z(e, t) {
+function L(e, t) {
   return [(0, i.jsx)(P, {
 message: e,
 gotoMessage: t,
@@ -157,14 +157,14 @@ return null;
   let r = T.Z.didAgree(a.getGuildId()),
 c = !!a.isNSFW() && !r;
   return (0, i.jsxs)('div', {
-className: O.container,
+className: R.container,
 children: [
   (0, i.jsx)(p.Z, {
     channel: a,
     gotoChannel: n,
     children: null != s ? (0, i.jsx)(l.CircleIconButton, {
-      className: O.closeButton,
-      tooltip: R.Z.Messages.CLOSE,
+      className: R.closeButton,
+      tooltip: M.Z.Messages.CLOSE,
       color: l.CircleIconButtonColors.TERTIARY,
       icon: (0, i.jsx)(l.CloseSmallIcon, {
         size: 'xs',
@@ -174,20 +174,20 @@ children: [
     }) : null
   }),
   (0, i.jsxs)('div', {
-    className: O.messageContainer,
+    className: R.messageContainer,
     children: [
-      (0, i.jsx)(C.Z, {
-        className: O.jumpMessageButton,
+      (0, i.jsx)(f.Z, {
+        className: R.jumpMessageButton,
         onJump: n
       }),
       (0, i.jsx)(E.Z, {
         message: t,
         channel: a,
-        className: O.message,
+        className: R.message,
         hideAccessories: c,
         compact: I.jU.getSetting(),
         animateAvatar: !1,
-        focusProps: x,
+        focusProps: O,
         trackAnnouncementViews: !0
       }, t.id)
     ]
@@ -199,7 +199,7 @@ children: [
 function D(e) {
   return (0, i.jsx)(g.Z, {
 Icon: l.AtIcon,
-header: R.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
-tip: R.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
+header: M.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
+tip: M.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
   });
 }

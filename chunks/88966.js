@@ -1,23 +1,23 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
-return d;
+return c;
   }
 });
-var i = t(735250);
-t(470079);
-var r = t(481060),
-  a = t(493683),
-  s = t(37234),
-  l = t(314897),
-  o = t(981631),
-  u = t(689938);
+var i = n(735250);
+n(470079);
+var r = n(481060),
+  a = n(493683),
+  s = n(37234),
+  o = n(314897),
+  d = n(981631),
+  I = n(689938);
 
-function d(e, n) {
-  let t = l.default.getId(),
-d = n === o.IlC.POPOUT;
-  return t === e || d ? null : (0, i.jsx)(r.MenuItem, {
+function c(e, t) {
+  let n = o.default.getId(),
+c = t === d.IlC.POPOUT;
+  return n === e || c ? null : (0, i.jsx)(r.MenuItem, {
 id: 'message-user',
-label: u.Z.Messages.USER_POPOUT_MESSAGE,
+label: I.Z.Messages.USER_POPOUT_MESSAGE,
 action: () => {
   a.Z.openPrivateChannel(e), (0, s.xf)();
 }

@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(906732),
   f = n(605236),
   E = n(448239),
-  g = n(626135),
-  C = n(792125),
+  C = n(626135),
+  g = n(792125),
   I = n(607187),
   x = n(981631),
   T = n(689938),
-  N = n(902141),
-  v = n(334732);
+  v = n(902141),
+  N = n(334732);
 
 function S(e) {
   let {
@@ -77,7 +77,7 @@ analyticsLocations: s
   return (0, i.jsx)(_.Gt, {
 value: s,
 children: (0, i.jsxs)(I.Z, {
-  className: N.root,
+  className: v.root,
   children: [
     (0, i.jsx)(c.Tooltip, {
       text: T.Z.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
@@ -88,12 +88,12 @@ children: (0, i.jsxs)(I.Z, {
         } = e;
         return (0, i.jsx)(c.Clickable, {
           ...n,
-          className: N.clickableTile,
+          className: v.clickableTile,
           onClick: () => {
             null == t || t(), d();
           },
           children: (0, i.jsx)('div', {
-            className: N.iconContainer,
+            className: v.iconContainer,
             children: (0, i.jsx)(c.ActivitiesPlusIcon, {
               size: 'custom',
               color: 'currentColor',
@@ -106,11 +106,11 @@ children: (0, i.jsxs)(I.Z, {
     }),
     (0, i.jsx)(c.Clickable, {
       onClick: a,
-      className: l()((0, C.Q)(x.BRd.DARK), N.shelfButtonCloseButton),
+      className: l()((0, g.Q)(x.BRd.DARK), v.shelfButtonCloseButton),
       children: (0, i.jsx)(c.CircleXIcon, {
         size: 'md',
         color: 'currentColor',
-        className: N.closeButtonIcon,
+        className: v.closeButtonIcon,
         secondaryColor: o.Z.colors.INTERACTIVE_NORMAL.css
       })
     })
@@ -127,7 +127,7 @@ inPopout: l,
 width: r
   } = e;
   a.useEffect(() => {
-g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+C.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
   tile_type: 'activity invite',
   n_participants: 1
 });
@@ -139,27 +139,27 @@ g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
   return (0, i.jsx)(_.Gt, {
 value: d,
 children: (0, i.jsxs)(I.Z, {
-  className: N.root,
+  className: v.root,
   children: [
     r > 400 ? (0, i.jsx)('img', {
-      src: v,
-      className: N.art,
+      src: N,
+      className: v.art,
       alt: T.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
     }) : null,
     (0, i.jsx)(c.Text, {
-      className: N.heading,
+      className: v.heading,
       variant: 'text-md/semibold',
       color: 'always-white',
       children: T.Z.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_INVITE
     }),
     (0, i.jsxs)('div', {
-      className: N.buttonContainer,
+      className: v.buttonContainer,
       children: [
         (0, i.jsxs)(c.Button, {
           size: c.Button.Sizes.LARGE,
           color: c.Button.Colors.PRIMARY,
-          className: N.button,
-          innerClassName: N.buttonContents,
+          className: v.button,
+          innerClassName: v.buttonContents,
           onClick: function() {
             (0, c.openModalLazy)(async () => {
               let {
@@ -188,8 +188,8 @@ children: (0, i.jsxs)(I.Z, {
         }),
         (0, i.jsxs)(c.Button, {
           size: c.Button.Sizes.LARGE,
-          className: N.button,
-          innerClassName: N.buttonContents,
+          className: v.button,
+          innerClassName: v.buttonContents,
           onClick: function() {
             (0, m.Z)({
               channel: t,
@@ -224,7 +224,7 @@ width: o,
 userParticipantCount: u
   } = e;
   a.useEffect(() => {
-g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+C.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
   tile_type: 'activity suggestion',
   n_participants: u
 });
@@ -233,38 +233,38 @@ g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
   guildId: n.id
 }).slice(0, 3),
 {
-  analyticsLocations: C
+  analyticsLocations: g
 } = (0, _.ZP)(p.Z.VC_TILE_ACTIVITY_SUGGESTION);
   return (0, i.jsx)(_.Gt, {
-value: C,
+value: g,
 children: (0, i.jsxs)(I.Z, {
-  className: N.root,
+  className: v.root,
   children: [
     o > 480 ? (0, i.jsx)('img', {
-      className: N.art,
-      src: v,
+      className: v.art,
+      src: N,
       alt: T.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
     }) : null,
     o > 300 ? (0, i.jsx)(c.Text, {
-      className: N.heading,
+      className: v.heading,
       variant: o > 550 ? 'text-md/semibold' : 'text-sm/semibold',
       children: T.Z.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_TITLE
     }) : null,
     (0, i.jsx)('div', {
-      className: l()(N.activitiesContainer, {
-        [N.activitiesContainerSmol]: o <= 300
+      className: l()(v.activitiesContainer, {
+        [v.activitiesContainerSmol]: o <= 300
       }),
       children: m.map(e => (0, i.jsx)(h.Y, {
         channel: t,
         activityItem: e,
         aspectRatio: h.Y.AspectRatio.SIXTEEN_BY_NINE,
-        animatedDivClass: N.activitySuggestion
+        animatedDivClass: v.activitySuggestion
       }, e.application.id))
     }),
     (0, i.jsxs)(c.Clickable, {
-      className: N.checkboxContainer,
+      className: v.checkboxContainer,
       onClick: function() {
-        g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+        C.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
           tile_type: 'activity suggestion',
           close_type: 'permanent',
           n_participants: u
@@ -279,9 +279,9 @@ children: (0, i.jsxs)(I.Z, {
       ]
     }),
     (0, i.jsx)(c.Clickable, {
-      className: N.closeButtonContainer,
+      className: v.closeButtonContainer,
       onClick: function() {
-        g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+        C.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
           tile_type: 'activity suggestion',
           close_type: 'temporary',
           n_participants: u
@@ -290,7 +290,7 @@ children: (0, i.jsxs)(I.Z, {
       children: (0, i.jsx)(c.CloseSmallIcon, {
         size: 'md',
         color: 'currentColor',
-        className: N.closeButton
+        className: v.closeButton
       })
     })
   ]

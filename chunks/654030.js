@@ -14,19 +14,19 @@ var i, s = n(735250),
   T = n(431583),
   h = n(592745),
   N = n(952164),
-  C = n(768419),
-  f = n(456432),
+  f = n(768419),
+  C = n(456432),
   p = n(103575),
   g = n(789407),
   S = n(598077),
   A = n(757266),
-  R = n(831506),
-  O = n(271383),
-  x = n(283595),
-  M = n(293273),
+  M = n(831506),
+  R = n(271383),
+  O = n(283595),
+  x = n(293273),
   v = n(594174),
-  L = n(181106),
-  Z = n(417363),
+  Z = n(181106),
+  L = n(417363),
   P = n(768581),
   D = n(358085),
   b = n(804739),
@@ -45,7 +45,7 @@ writable: !0
 let k = {
   spotify: 'Spotify'
 };
-class F extends(i = a.PureComponent) {
+class G extends(i = a.PureComponent) {
   getCoverImage() {
 let {
   activity: e,
@@ -168,7 +168,7 @@ super(...e), B(this, 'state', {
     channelId: t,
     guildId: n
   } = this.props;
-  return (0, s.jsx)(f.Z, {
+  return (0, s.jsx)(C.Z, {
     guildId: null != n ? n : void 0,
     channelId: t,
     source: 'Invite Embed',
@@ -243,19 +243,19 @@ super(...e), B(this, 'state', {
 });
   }
 }
-B(F, 'defaultProps', {
+B(G, 'defaultProps', {
   isPreview: !1
 }), t.Z = r.ZP.connectStores([
-  C.Z,
-  R.Z,
+  f.Z,
   M.Z,
   x.Z,
+  O.Z,
   h.Z,
-  Z.Z,
-  A.Z,
   L.Z,
+  A.Z,
+  Z.Z,
   v.default,
-  O.ZP
+  R.ZP
 ], e => {
   let {
 activity: t,
@@ -266,10 +266,10 @@ userId: a,
 guildId: r
   } = e, {
 id: l
-  } = null != i ? i : {}, o = null != t && null != t.party && t.party.id === s ? R.Z.getParty(t.party.id) : null, c = null != l ? M.Z.getApplicationActivity(l) : M.Z.findActivity(e => e.type === U.IIU.LISTENING), u = !1;
-  null != l && (u = L.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
+  } = null != i ? i : {}, o = null != t && null != t.party && t.party.id === s ? M.Z.getParty(t.party.id) : null, c = null != l ? x.Z.getApplicationActivity(l) : x.Z.findActivity(e => e.type === U.IIU.LISTENING), u = !1;
+  null != l && (u = Z.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
   let d = Array.from(null != o ? o : []).map(e => {
-  let t = null != r ? O.ZP.getMember(r, e) : null,
+  let t = null != r ? R.ZP.getMember(r, e) : null,
     n = null != t ? t.nick : null,
     i = v.default.getUser(e),
     s = null == i;
@@ -281,8 +281,8 @@ id: l
     nick: n
   };
 }),
-_ = null != t && C.Z.canPlay(t),
-E = C.Z.getSyncingWith(),
+_ = null != t && f.Z.canPlay(t),
+E = f.Z.getSyncingWith(),
 I = null != E && null != a && E.userId === a;
   return {
 analyticsLocations: n,
@@ -292,11 +292,11 @@ myPartyId: null != c && null != c.party ? c.party.id : null,
 isLaunching: u,
 isSyncable: _ && !I,
 isLaunchable: null != l && (0, b.t)({
-  LibraryApplicationStore: x.Z,
+  LibraryApplicationStore: O.Z,
   LaunchableGameStore: h.Z,
-  DispatchApplicationStore: Z.Z,
+  DispatchApplicationStore: L.Z,
   ConnectedAppsStore: A.Z,
   applicationId: l
 })
   };
-})(F);
+})(G);

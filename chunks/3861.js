@@ -13,8 +13,8 @@ var i = n(735250),
   _ = n(430371),
   f = n(236564),
   E = n(981631),
-  g = n(354459),
-  C = n(524465);
+  C = n(354459),
+  g = n(524465);
 t.Z = (0, r.Z)(e => {
   let {
 participants: t,
@@ -24,8 +24,8 @@ participantsVersion: r,
 layout: I,
 onSelectParticipant: x,
 onContextMenuParticipant: T,
-onFullscreenParticipant: N,
-channel: v,
+onFullscreenParticipant: v,
+channel: N,
 hasConnectPermission: S,
 className: Z,
 inCall: A,
@@ -44,51 +44,51 @@ d.S.dispatch(E.CkL.REMEASURE_TARGET);
 R,
 j
   ]);
-  let D = a.useMemo(() => n.filter(e => e.type !== g.fO.ACTIVITY || !e.participants.some(e => (0, o.J)(e))), [
+  let D = a.useMemo(() => n.filter(e => e.type !== C.fO.ACTIVITY || !e.participants.some(e => (0, o.J)(e))), [
 n,
 r
   ]);
-  if ((null == y ? void 0 : y.channelId) === v.id)
+  if ((null == y ? void 0 : y.channelId) === N.id)
 return (0, i.jsx)(m.Z, {
   height: j
 });
-  if ((null == v ? void 0 : v.isGuildVocal()) && !A)
+  if ((null == N ? void 0 : N.isGuildVocal()) && !A)
 return (0, i.jsx)(h.Z, {
-  channel: v,
+  channel: N,
   participants: t,
   hasConnectPermission: S
 });
   if (P === E.WtW.VOICE)
 return (0, i.jsx)(c.Z, {
-  guildId: v.guild_id,
+  guildId: N.guild_id,
   width: R,
-  className: C.voiceCallWrapper,
+  className: g.voiceCallWrapper,
   participants: t,
   onContextMenu: T
 });
   if (n = A ? n : t, null == s)
 return 0 === n.length ? (0, i.jsx)(f.Z, {
-  className: l()(C.videoGrid, C.hiddenParticipants),
-  channelId: v.id,
+  className: l()(g.videoGrid, g.hiddenParticipants),
+  channelId: N.id,
   width: R
 }) : (0, i.jsx)(u.Z, {
-  className: C.videoGridWrapper,
+  className: g.videoGridWrapper,
   justify: u.Z.Justify.CENTER,
   align: u.Z.Align.CENTER,
   children: (0, i.jsx)(p.Z, {
-    channel: v,
-    className: C.videoGrid,
+    channel: N,
+    className: g.videoGrid,
     participants: D,
     totalNumberOfParticipants: t.length,
     onClick: x,
-    onDoubleClick: N,
+    onDoubleClick: v,
     onContextMenu: T,
     paused: b,
     inCall: A
   })
 });
   return (0, i.jsx)(_.Z, {
-onFullscreenParticipant: N,
+onFullscreenParticipant: v,
 onContextMenuParticipant: T,
 onSelectParticipant: x,
 selectedParticipant: s,
@@ -101,7 +101,7 @@ height: j,
 width: R,
 layout: I,
 inCall: A,
-channel: v,
+channel: N,
 showParticipants: M
   });
 });

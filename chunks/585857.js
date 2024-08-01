@@ -16,8 +16,8 @@ var o = n(120356),
   p = n(497505),
   m = n(796111),
   x = n(46140),
-  f = n(981631),
-  g = n(689938),
+  g = n(981631),
+  f = n(689938),
   C = n(276458);
 
 function _(e) {
@@ -37,7 +37,7 @@ onClick: () => {
     platformType: o
   });
 },
-children: o === f.ABu.PLAYSTATION ? (0, s.jsx)(a.K, {
+children: o === g.ABu.PLAYSTATION ? (0, s.jsx)(a.K, {
   colorClass: r()(C.connectConsoleButton, n ? C.playstationButtonConnected : C.connectConsoleButtonUnconnected),
   size: 'sm'
 }) : (0, s.jsx)(l.a, {
@@ -59,7 +59,7 @@ onClick: () => {
     questId: n.id,
     questContent: p.jn.QUEST_BAR_V2,
     questContentCTA: u.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
-  }), c.Z.open(f.oAB.CONNECTIONS);
+  }), c.Z.open(g.oAB.CONNECTIONS);
 },
 children: (0, s.jsx)(i.Text, {
   'aria-label': t,
@@ -86,13 +86,13 @@ children: [
       (0, s.jsx)(i.Text, {
         color: 'header-secondary',
         variant: 'text-xxs/normal',
-        children: c ? g.Z.Messages.QUESTS_CONNECTED : g.Z.Messages.QUESTS_SELECT_TO_START
+        children: c ? f.Z.Messages.QUESTS_CONNECTED : f.Z.Messages.QUESTS_SELECT_TO_START
       }),
       (0, s.jsxs)('div', {
         className: C.inlineConsoleConnectionDetailsIcons,
         children: [
           (0, s.jsx)(_, {
-            consoleType: f.ABu.PLAYSTATION,
+            consoleType: g.ABu.PLAYSTATION,
             isConnected: u,
             quest: t
           }),
@@ -100,7 +100,7 @@ children: [
             className: C.consoleIconDivider
           }),
           (0, s.jsx)(_, {
-            consoleType: f.ABu.XBOX,
+            consoleType: g.ABu.XBOX,
             isConnected: d,
             quest: t
           })
@@ -117,7 +117,7 @@ children: [
           (0, s.jsx)(i.Text, {
             color: 'header-secondary',
             variant: 'text-xxs/normal',
-            children: e.type === f.ABu.XBOX ? g.Z.Messages.QUESTS_XBOX_ID : g.Z.Messages.QUESTS_PSN_ONLINE_ID_V2
+            children: e.type === g.ABu.XBOX ? f.Z.Messages.QUESTS_XBOX_ID : f.Z.Messages.QUESTS_PSN_ONLINE_ID_V2
           }),
           (0, s.jsx)(i.Text, {
             color: 'header-secondary',
@@ -127,7 +127,7 @@ children: [
         ]
       }, t)),
       a.length > 2 && (0, s.jsx)(h, {
-        text: g.Z.Messages.QUESTS_VIEW_MORE_ACCOUNTS,
+        text: f.Z.Messages.QUESTS_VIEW_MORE_ACCOUNTS,
         quest: t
       })
     ]
@@ -142,7 +142,7 @@ xboxAndPlaystationAccounts: t,
 quest: n
   } = e;
   return t.length > 0 ? (0, s.jsx)(h, {
-text: g.Z.Messages.QUESTS_SHOW_CONNECTIONS,
+text: f.Z.Messages.QUESTS_SHOW_CONNECTIONS,
 quest: n
   }) : null;
 }
@@ -156,7 +156,7 @@ children: [
   (0, s.jsx)(i.Text, {
     color: 'text-muted',
     variant: 'text-xs/medium',
-    children: g.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT
+    children: f.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT
   }),
   t ? (0, s.jsx)(E, {
     ...e

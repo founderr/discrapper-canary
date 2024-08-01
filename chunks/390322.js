@@ -1,23 +1,23 @@
 n.d(t, {
   Z: function() {
-return o;
+return r;
   }
 });
-var s = n(735250),
-  r = n(470079),
+var i = n(735250),
+  s = n(470079),
   a = n(618158);
 
-function o(e) {
+function r(e) {
   let {
 children: t
   } = e, {
 preventIdle: n,
-allowIdle: o
+allowIdle: r
   } = (0, a.Y)('popup');
-  return r.useEffect(() => (n(), () => o()), [
-o,
+  return s.useEffect(() => (n(), () => r()), [
+r,
 n
-  ]), (0, s.jsx)(s.Fragment, {
+  ]), (0, i.jsx)(i.Fragment, {
 children: t
   });
 }

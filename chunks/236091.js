@@ -19,7 +19,7 @@ t.Z = e => {
 className: t,
 channelId: n
   } = e, a = (0, m.Go)(), {
-enableDecoupledGameClipping: g
+enableDecoupledGameClipping: C
   } = d.Z.useExperiment({
 location: 'ClipsEnabledIndicator'
   }, {
@@ -36,7 +36,7 @@ if (null == n)
   return !1;
 let t = h.Z.getCurrentUserActiveStream(),
   i = null === (e = u.ZP.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
-return null != t && !!p.Z.getSettings().clipsEnabled && !!a || null != i && !!p.Z.getSettings().decoupledClipsEnabled && !!g || c.Z.getParticipants(n).some(e => e.type === _.fO.USER && p.Z.isClipsEnabledForUser(e.user.id));
+return null != t && !!p.Z.getSettings().clipsEnabled && !!a || null != i && !!p.Z.getSettings().decoupledClipsEnabled && !!C || c.Z.getParticipants(n).some(e => e.type === _.fO.USER && p.Z.isClipsEnabledForUser(e.user.id));
   }) ? (0, i.jsxs)(o.TooltipContainer, {
 text: f.Z.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
 color: o.TooltipColors.GREY,

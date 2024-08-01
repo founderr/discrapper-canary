@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return M;
+return x;
   }
 }), n(47120);
 var i = n(735250),
@@ -19,22 +19,22 @@ var i = n(735250),
   T = n(962796),
   h = n(695346),
   N = n(592125),
-  C = n(655354),
-  f = n(324081),
+  f = n(655354),
+  C = n(324081),
   p = n(240126),
   g = n(791914),
   S = n(981631),
   A = n(689938),
-  R = n(645962),
-  O = n(699723);
-let x = {
+  M = n(645962),
+  R = n(699723);
+let O = {
   offset: {
 left: 4,
 right: -12
   }
 };
 
-function M(e) {
+function x(e) {
   let {
 setTab: t,
 closePopout: n
@@ -44,7 +44,7 @@ closePopout: n
   }, []);
   let [r, l] = s.useState(!1), o = s.useMemo(() => a.filter(e => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [a]), _ = r ? a : o;
   return (0, i.jsxs)('div', {
-className: R.container,
+className: M.container,
 children: [
   (0, i.jsx)(g.Z, {
     tab: u.X.TODOS,
@@ -52,7 +52,7 @@ children: [
     closePopout: n
   }),
   (0, i.jsxs)('div', {
-    className: R.headerText,
+    className: M.headerText,
     children: [
       (0, i.jsx)(d.Heading, {
         variant: 'heading-lg/bold',
@@ -72,7 +72,7 @@ children: [
       })
     ]
   }),
-  0 === _.length ? (0, i.jsx)(L, {}) : (0, i.jsx)(d.AdvancedScrollerThin, {
+  0 === _.length ? (0, i.jsx)(Z, {}) : (0, i.jsx)(d.AdvancedScrollerThin, {
     children: _.map(e => (0, i.jsx)(v, {
       messageReminder: e
     }, e.saveData.messageId))
@@ -100,18 +100,18 @@ duration: o().duration(Date.now() - l.dueAt.getTime(), 'millisecond').humanize()
   }))), null == u || null == m) ? (0, i.jsx)('div', {
 children: 'The message isn\'t accessible. We will deal with this later.'
   }) : (0, i.jsxs)('div', {
-className: O.container,
+className: R.container,
 children: [
-  (0, i.jsx)(f.Z, {
+  (0, i.jsx)(C.Z, {
     channel: m,
     gotoChannel: p,
     children: (0, i.jsxs)('div', {
-      className: R.reminderActions,
+      className: M.reminderActions,
       children: [
         null != s.saveData.notes && s.saveData.notes.length > 0 ? (0, i.jsxs)(d.Text, {
           variant: 'text-sm/normal',
           color: 'text-muted',
-          className: R.notes,
+          className: M.notes,
           selectable: !0,
           children: [
             (0, i.jsx)(d.FileIcon, {
@@ -138,7 +138,7 @@ children: [
                 message: u
               });
             }),
-            className: R.clock,
+            className: M.clock,
             children: (0, i.jsx)(d.ClockIcon, {
               size: 'custom',
               width: 20,
@@ -158,21 +158,21 @@ children: [
     })
   }),
   (0, i.jsxs)('div', {
-    className: r()(O.messageContainer, R.unloadedMessage, {
-      [R.disabledMessage]: a
+    className: r()(R.messageContainer, M.unloadedMessage, {
+      [M.disabledMessage]: a
     }),
     children: [
-      (0, i.jsx)(C.Z, {
-        className: O.jumpMessageButton,
+      (0, i.jsx)(f.Z, {
+        className: R.jumpMessageButton,
         onJump: p
       }),
       (0, i.jsx)(E.Z, {
         message: u,
         channel: m,
-        className: O.message,
+        className: R.message,
         compact: h.jU.getSetting(),
         animateAvatar: !1,
-        focusProps: x,
+        focusProps: O,
         trackAnnouncementViews: !0
       }, u.id)
     ]
@@ -181,7 +181,7 @@ children: [
   });
 }
 
-function L() {
+function Z() {
   return (0, i.jsx)(p.Z, {
 Icon: d.DoubleCheckmarkLargeIcon,
 header: A.Z.Messages.MESSAGE_REMINDERS_EMPTY,

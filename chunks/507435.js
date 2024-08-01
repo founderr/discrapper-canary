@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return O;
+return R;
   }
 });
 var i, s, a = n(735250),
@@ -17,8 +17,8 @@ var i, s, a = n(735250),
   T = n(702346),
   h = n(809026),
   N = n(139256),
-  C = n(489887),
-  f = n(689938),
+  f = n(489887),
+  C = n(689938),
   p = n(619260);
 
 function g() {
@@ -70,7 +70,7 @@ case 'NO_VOTES':
     variant: 'text-sm/semibold',
     color: 'text-normal',
     scaleFontToUserSetting: !0,
-    children: f.Z.Messages.POLL_RESULT_NO_VOTERS
+    children: C.Z.Messages.POLL_RESULT_NO_VOTERS
   });
   break;
 case 'VICTOR':
@@ -103,7 +103,7 @@ case 'VICTOR':
         color: 'input-placeholder-text',
         scaleFontToUserSetting: !0,
         children: [
-          f.Z.Messages.POLL_RESULT_WINNING,
+          C.Z.Messages.POLL_RESULT_WINNING,
           ' \u2022 ',
           r,
           '%'
@@ -122,7 +122,7 @@ case 'TIE':
         variant: 'text-sm/semibold',
         color: 'text-normal',
         scaleFontToUserSetting: !0,
-        children: f.Z.Messages.POLL_RESULT_TIED
+        children: C.Z.Messages.POLL_RESULT_TIED
       }),
       (0, a.jsxs)(u.Text, {
         variant: 'text-xs/medium',
@@ -142,7 +142,7 @@ children: t
   });
 }
 
-function R(e) {
+function M(e) {
   let {
 className: t,
 data: n,
@@ -182,21 +182,21 @@ children: [
       variant: 'text-sm/medium',
       color: 'none',
       scaleFontToUserSetting: !0,
-      children: f.Z.Messages.POLL_RESULT_VIEW_POLL
+      children: C.Z.Messages.POLL_RESULT_VIEW_POLL
     })
   })
 ]
   });
 }
 
-function O(e) {
+function R(e) {
   var t;
   let {
 message: n,
 channel: i,
 compact: s,
 disableInteraction: l = !1
-  } = e, o = n.embeds[0], _ = r.useMemo(() => (0, h.Z)(o), [o]), E = (0, c.aF)(null !== (t = null == _ ? void 0 : _.questionText) && void 0 !== t ? t : '', C.Dv), N = (0, I.ZP)(n), g = (0, m.l)({
+  } = e, o = n.embeds[0], _ = r.useMemo(() => (0, h.Z)(o), [o]), E = (0, c.aF)(null !== (t = null == _ ? void 0 : _.questionText) && void 0 !== t ? t : '', f.Dv), N = (0, I.ZP)(n), g = (0, m.l)({
 user: n.author,
 channelId: i.id,
 guildId: i.guild_id,
@@ -220,14 +220,14 @@ children: [
     }),
     timestamp: n.timestamp,
     compact: s,
-    children: f.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
+    children: C.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
       username: N.nick,
       usernameHook: g(N),
       title: E,
       titleOnClick: A
     })
   }),
-  (0, a.jsx)(R, {
+  (0, a.jsx)(M, {
     className: p.embed,
     data: _,
     onClickPollLink: l ? void 0 : A

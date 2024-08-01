@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(451478),
   f = n(486458),
   E = n(21825),
-  g = n(232495),
-  C = n(10401),
+  C = n(232495),
+  g = n(10401),
   I = n(847418);
 
 function x(e, t, n) {
@@ -82,7 +82,7 @@ m.Z.suppressAll();
 let {
   tutorialId: e
 } = this.props;
-return (0, g.k)(e);
+return (0, C.k)(e);
   }
   render() {
 let {
@@ -103,10 +103,10 @@ let {
   popoutPosition: p
 } = s, {
   offsetX: _,
-  offsetY: g
-} = this.state, C = {
+  offsetY: C
+} = this.state, g = {
   left: null != _ ? a.x + _ : void 0,
-  top: null != g ? a.y + g : void 0
+  top: null != C ? a.y + C : void 0
 }, x = e => {
   let t = n && !e;
   return !0 !== u ? null : (0, i.jsxs)('div', {
@@ -132,7 +132,7 @@ let {
     [I.notAnimating]: !t,
     [I.highPriority]: u
   };
-}, N = this.getTutorialPopoutText();
+}, v = this.getTutorialPopoutText();
 return (0, i.jsx)(f.ZP, {
   position: p,
   renderMedia: r,
@@ -144,7 +144,7 @@ return (0, i.jsx)(f.ZP, {
   arrowAlignment: m,
   onSkipAll: this.handleSkipTips,
   onComplete: this.handleDismiss,
-  ...N,
+  ...v,
   children: (e, t) => {
     let {
       isShown: n
@@ -152,7 +152,7 @@ return (0, i.jsx)(f.ZP, {
     return (0, i.jsx)(h.Clickable, {
       ...e,
       className: I.indicator,
-      style: C,
+      style: g,
       children: (0, i.jsxs)('div', {
         className: l()(I.animationContainer, T(n)),
         children: [
@@ -185,13 +185,13 @@ tutorialData: t,
 windowFocused: n,
 shouldShowAny: a
   } = (0, d.cj)([
-C.Z,
+g.Z,
 _.Z,
 p.Z
   ], () => ({
-indicators: C.Z.getIndicators(),
-tutorialData: C.Z.getData(),
-shouldShowAny: C.Z.shouldShowAnyIndicators() && !p.Z.hasLayers(),
+indicators: g.Z.getIndicators(),
+tutorialData: g.Z.getData(),
+shouldShowAny: g.Z.shouldShowAnyIndicators() && !p.Z.hasLayers(),
 windowFocused: _.Z.isFocused()
   }));
   return a ? (0, i.jsx)(i.Fragment, {

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return R;
+return M;
   }
 }), n(47120);
 var i = n(735250),
@@ -19,23 +19,23 @@ var i = n(735250),
   T = n(661824),
   h = n(430824),
   N = n(626135),
-  C = n(76535),
-  f = n(866104),
+  f = n(76535),
+  C = n(866104),
   p = n(886176),
   g = n(981631),
   S = n(689938),
   A = n(638948);
 
-function R(e) {
+function M(e) {
   var t;
   let {
 guildId: n
   } = e, a = (0, c.e7)([h.Z], () => h.Z.getGuild(n)), {
-loading: R,
-subscriptionsSettings: O
-  } = (0, C.H)(n), {
-listingsLoaded: x
-  } = (0, I.eD)(n), M = (0, I.ue)(n, {
+loading: M,
+subscriptionsSettings: R
+  } = (0, f.H)(n), {
+listingsLoaded: O
+  } = (0, I.eD)(n), x = (0, I.ue)(n, {
 publishedOnly: !0
   }), v = s.useCallback(async () => {
 N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, {
@@ -48,15 +48,15 @@ name: l.ImpressionNames.GUILD_SHOP_EMBED
   }, {
 disableTrack: null == a
   });
-  let L = M.length > 0 ? new Date(Math.min(...M.map(e => Date.parse(e.published_at)))) : void 0;
-  return R || !x ? (0, i.jsx)('div', {
+  let Z = x.length > 0 ? new Date(Math.min(...x.map(e => Date.parse(e.published_at)))) : void 0;
+  return M || !O ? (0, i.jsx)('div', {
 className: r()(A.guildShopEmbed, A.spinnerContainer),
 children: (0, i.jsx)(u.Spinner, {})
-  }) : null == a || null == O ? null : (0, i.jsxs)('div', {
+  }) : null == a || null == R ? null : (0, i.jsxs)('div', {
 className: A.guildShopEmbed,
 children: [
-  (0, i.jsx)(f.Z, {
-    coverImageAsset: null !== (t = O.cover_image_asset) && void 0 !== t ? t : null
+  (0, i.jsx)(C.Z, {
+    coverImageAsset: null !== (t = R.cover_image_asset) && void 0 !== t ? t : null
   }),
   (0, i.jsx)(u.Spacer, {
     size: 16
@@ -94,7 +94,7 @@ children: [
     variant: 'text-sm/normal',
     color: 'text-muted',
     lineClamp: 2,
-    children: O.description
+    children: R.description
   }),
   (0, i.jsx)(u.Spacer, {
     size: 16
@@ -117,16 +117,16 @@ children: [
               variant: 'text-sm/normal',
               color: 'text-muted',
               children: S.Z.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({
-                listingCount: M.length
+                listingCount: x.length
               })
             })
           }),
-          null != L && (0, i.jsx)('li', {
+          null != Z && (0, i.jsx)('li', {
             children: (0, i.jsx)(u.Text, {
               variant: 'text-sm/normal',
               color: 'text-muted',
               children: S.Z.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({
-                createdYear: L.getFullYear()
+                createdYear: Z.getFullYear()
               })
             })
           })

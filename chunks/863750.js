@@ -1,16 +1,16 @@
 t(47120);
-var o, a = t(442837),
+var a, n = t(442837),
   i = t(570140);
 
-function r(e, n, t) {
-  return n in e ? Object.defineProperty(e, n, {
+function o(e, r, t) {
+  return r in e ? Object.defineProperty(e, r, {
 value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[n] = t, e;
+  }) : e[r] = t, e;
 }
-let c = {
+let l = {
 disable_alpha_voice_panel: 'Disable new Voice Panel UI: Currently the new voice ui is defaulted ON for staff.  It\'s not feature complete so if there\'s something you are missing, or you find a problem, you can disable it here.',
 enable_recently_active: 'Enable recently active channels',
 happening_main_tab: 'Enable Happening tab containing summaries',
@@ -30,43 +30,43 @@ disable_channel_list: 'Disable channel list -- for performance testing. You prob
 show_icymi_debug_scores: 'Show ICYMI debug scores',
 only_channel_screen: 'Down with PanelsView, rely on only ChannelScreen!'
   },
-  l = {};
-class s extends(o = a.ZP.DeviceSettingsStore) {
+  c = {};
+class s extends(a = n.ZP.DeviceSettingsStore) {
   getUserAgnosticState() {
 return {
-  toggleStates: l
+  toggleStates: c
 };
   }
   initialize(e) {
-for (var n in c) {
-  var t, o;
-  let a = null !== (o = null == e ? void 0 : null === (t = e.toggleStates) || void 0 === t ? void 0 : t[n]) && void 0 !== o && o;
-  l[n] = a;
+for (var r in l) {
+  var t, a;
+  let n = null !== (a = null == e ? void 0 : null === (t = e.toggleStates) || void 0 === t ? void 0 : t[r]) && void 0 !== a && a;
+  c[r] = n;
 }
   }
   get(e) {
-var n;
-return null !== (n = l[e]) && void 0 !== n && n;
+var r;
+return null !== (r = c[e]) && void 0 !== r && r;
   }
-  set(e, n) {
-return l[e] = n, n;
+  set(e, r) {
+return c[e] = r, r;
   }
   all() {
-return l;
+return c;
   }
   allWithDescriptions() {
-return Object.entries(l).map(e => {
-  let [n, t] = e;
+return Object.entries(c).map(e => {
+  let [r, t] = e;
   return [
-    n,
+    r,
     t,
-    c[n]
+    l[r]
   ];
 });
   }
 }
-r(s, 'displayName', 'DevToolsDesignTogglesStore'), r(s, 'persistKey', 'DevToolsDesignTogglesStore'), n.Z = new s(i.Z, {
+o(s, 'displayName', 'DevToolsDesignTogglesStore'), o(s, 'persistKey', 'DevToolsDesignTogglesStore'), r.Z = new s(i.Z, {
   DEV_TOOLS_DESIGN_TOGGLE_SET: function(e) {
-l[e.toggle] = e.value;
+c[e.toggle] = e.value;
   }
 });

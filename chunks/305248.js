@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return f;
   }
 }), n(47120);
 var i = n(735250),
@@ -20,12 +20,12 @@ var i = n(735250),
   h = n(124368),
   N = n(735501);
 
-function C(e) {
+function f(e) {
   let {
 channel: t,
 channelRecord: n,
 deleteChannel: a
-  } = e, C = (0, l.Wu)([
+  } = e, f = (0, l.Wu)([
 _.Z,
 I.Z
   ], () => r()(_.Z.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
@@ -42,21 +42,21 @@ return I.Z.getChannel(t);
 t.oldestReadMessageId,
 n.guild_id,
 n.id
-  ]), f = s.useCallback((e, t) => {
+  ]), C = s.useCallback((e, t) => {
 (0, E.ok)(e, t, h.on.INBOX);
   }, []);
   return s.useEffect(() => {
-null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === C.length && o.Z.wait(() => {
+null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === f.length && o.Z.wait(() => {
   (0, c.In)(t.channelId, !0), a(t.channelId);
 });
   }), (0, i.jsx)('div', {
 className: N.container,
-children: C.map(e => (0, i.jsx)(d.oL, {
+children: f.map(e => (0, i.jsx)(d.oL, {
   createStore: () => (0, d.NU)(n),
   children: (0, i.jsx)(u.ZP, {
     className: N.forumPost,
     threadId: e.id,
-    goToThread: f
+    goToThread: C
   })
 }, e.id))
   });

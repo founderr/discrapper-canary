@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(471445),
   f = n(905405),
   E = n(255269),
-  g = n(937889),
-  C = n(703656),
+  C = n(937889),
+  g = n(703656),
   I = n(359110),
   x = n(695346),
   T = n(131704),
-  N = n(592125),
-  v = n(430824),
+  v = n(592125),
+  N = n(430824),
   S = n(496675),
   Z = n(699516),
   A = n(768119),
@@ -48,11 +48,11 @@ searchResults: _,
 blockCount: f,
 onChangePage: E
   } = e, {
-offset: g,
+offset: C,
 totalResults: I,
 isSearching: x,
 showBlockedResults: T
-  } = n, v = a.useCallback(e => {
+  } = n, N = a.useCallback(e => {
 if (x)
   return;
 let t = e - 1;
@@ -71,11 +71,11 @@ if (e.blocked)
     confirmText: O.Z.Messages.OKAY
   });
 else {
-  let t = N.Z.getChannel(e.channel_id),
+  let t = v.Z.getChannel(e.channel_id),
     n = null != t ? t.getGuildId() : null;
   u.Z.trackJump(e.channel_id, e.id, 'Search Results', {
     search_id: A.Z.getAnalyticsId(s)
-  }), (0, C.uL)(P.Z5c.CHANNEL(n, e.channel_id, e.id));
+  }), (0, g.uL)(P.Z5c.CHANNEL(n, e.channel_id, e.id));
 }
   }, [s]), M = a.useMemo(() => {
 let e;
@@ -86,7 +86,7 @@ return _.reduce((n, i) => {
   let a = i.find(e => e.isSearchHit);
   if (!T && null != a && Z.Z.isBlockedForMessage(a))
     return n;
-  let s = N.Z.getChannel(i[0].channel_id);
+  let s = v.Z.getChannel(i[0].channel_id);
   return null == s ? n : ((null == e || e !== s.id) && n.push({
     channel: s,
     results: [],
@@ -133,7 +133,7 @@ return (0, i.jsx)(U, {
   scrollTo: p,
   searchId: s,
   renderEmbeds: l,
-  offset: g,
+  offset: C,
   jumpToMessage: S,
   listNavigator: k,
   favoriteSearch: B
@@ -174,8 +174,8 @@ children: [
     ]
   }) : null,
   !x && !B && (0, i.jsx)(j.Z, {
-    changePage: v,
-    offset: g,
+    changePage: N,
+    offset: C,
     totalResults: I,
     pageLength: P.vpv
   })
@@ -230,7 +230,7 @@ startIndex: u,
 resultRefs: d,
 totalResults: h,
 scrollTo: m,
-searchId: C,
+searchId: g,
 renderEmbeds: T,
 offset: A,
 jumpToMessage: j,
@@ -239,12 +239,12 @@ favoriteSearch: D
   } = e, U = x.cC.useSetting(), w = (0, f.p)(), B = a.useCallback(e => {
 if (e === M.Z.getChannelId())
   return;
-let t = N.Z.getChannel(e);
+let t = v.Z.getChannel(e);
 if (null != t && !!S.Z.can(P.Plq.VIEW_CHANNEL, t))
   (0, I.Kh)(t.id);
-  }, []), H = null != l ? (0, p.F6)(l, b.default, Z.Z, !1) : '???', G = D && null != l.guild_id ? null === (t = v.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == l ? void 0 : l.parent_id) != null ? N.Z.getChannel(l.parent_id) : null, F = null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : null, W = null !== (s = (0, _.KS)(l)) && void 0 !== s ? s : o.TextIcon, z = S.Z.can(P.Plq.MANAGE_MESSAGES, l), {
+  }, []), H = null != l ? (0, p.F6)(l, b.default, Z.Z, !1) : '???', G = D && null != l.guild_id ? null === (t = N.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == l ? void 0 : l.parent_id) != null ? v.Z.getChannel(l.parent_id) : null, F = null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : null, W = null !== (s = (0, _.KS)(l)) && void 0 !== s ? s : o.TextIcon, z = S.Z.can(P.Plq.MANAGE_MESSAGES, l), {
 content: Y
-  } = (0, g.ZP)({
+  } = (0, C.ZP)({
 content: H,
 embeds: []
   }, {
@@ -303,7 +303,7 @@ children: (0, i.jsxs)('ul', {
         ref: e => d.current[n] = e,
         totalResults: h,
         scrollTo: m,
-        searchId: C,
+        searchId: g,
         renderEmbeds: T,
         searchOffset: A,
         pageResultsLength: r.length,

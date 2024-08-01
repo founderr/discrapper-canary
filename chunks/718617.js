@@ -18,9 +18,9 @@ var i = n(735250),
   _ = n(313692),
   f = n(596443),
   E = n(50493),
-  g = n(981631);
+  C = n(981631);
 
-function C(e, t) {
+function g(e, t) {
   return n => {
 if (0 === n)
   return 'auto';
@@ -37,8 +37,8 @@ function I(e) {
 userId: I,
 guildId: x,
 onClose: T,
-analyticsLocation: N,
-className: v
+analyticsLocation: v,
+className: N
   } = e, S = (0, l.e7)([d.ZP], () => d.ZP.getGuildSidebarState(x), [x]), Z = null !== (t = null == S ? void 0 : S.details.modViewPanel) && void 0 !== t ? t : E.k.INFO, A = (0, c.Z)(I);
   let M = null == (n = Z) ? null : n === E.k.INFO ? 'backwards' : 'forwards',
 b = (0, h.Z)(M),
@@ -55,7 +55,7 @@ j = a.useCallback(e => {
   I
 ]),
 L = a.useMemo(() => ({
-  [g.EkH.CLOSE_MODAL]: {
+  [C.EkH.CLOSE_MODAL]: {
     binds: ['esc'],
     comboKeysBindGlobal: !0,
     action() {
@@ -105,8 +105,8 @@ children: P((e, t, n) => {
       ...R.enabled ? {
         opacity: null === (a = e.value) || void 0 === a ? void 0 : a.to(e => 1 - Math.abs(e))
       } : {
-        left: null === (l = e.value) || void 0 === l ? void 0 : l.to(C('left', b)),
-        right: null === (r = e.value) || void 0 === r ? void 0 : r.to(C('right', b))
+        left: null === (l = e.value) || void 0 === l ? void 0 : l.to(g('left', b)),
+        right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g('right', b))
       }
     },
     children: function(e) {
@@ -116,21 +116,21 @@ children: P((e, t, n) => {
             userId: I,
             guildId: x,
             onNavigate: j,
-            className: v
+            className: N
           });
         case E.k.MESSAGE_HISTORY:
           return (0, i.jsx)(_.Z, {
             userId: I,
             guildId: x,
             onNavigate: () => j(E.k.INFO),
-            className: v
+            className: N
           });
         case E.k.PERMISSIONS:
           return (0, i.jsx)(f.Z, {
             userId: I,
             guildId: x,
             onNavigate: () => j(E.k.INFO),
-            className: v
+            className: N
           });
         default:
           return null;

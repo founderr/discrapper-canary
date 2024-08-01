@@ -6,7 +6,7 @@ return h;
 return _;
   },
   eQ: function() {
-return g;
+return f;
   },
   vf: function() {
 return C;
@@ -24,25 +24,25 @@ var s = n(470079),
   p = n(585500),
   m = n(566078),
   x = n(46140),
-  f = n(689938);
+  g = n(689938);
 
-function g(e) {
+function f(e) {
   var t, n;
   let s = (0, o.e7)([l.default], () => l.default.locale),
 {
   percentComplete: r
 } = (0, c.Rf)(e);
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null)
-return f.Z.Messages.QUESTS_COMPLETION_COMPLETE;
+return g.Z.Messages.QUESTS_COMPLETION_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && r > 0) {
 let e = (0, i.T3)(s, r, {
   roundingMode: 'floor'
 });
-return f.Z.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({
+return g.Z.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({
   percent: e
 });
   }
-  return (0, u.$J)(e) ? f.Z.Messages.QUEST_BAR_TITLE_START_PLAYING : f.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
+  return (0, u.$J)(e) ? g.Z.Messages.QUEST_BAR_TITLE_START_PLAYING : g.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
 }
 
 function C(e, t) {
@@ -59,7 +59,7 @@ l = (0, p.D)({
   useV2Variants: !0
 });
   if (r)
-return f.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
+return g.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
   expirationDate: s
 });
   if (t)
@@ -68,8 +68,8 @@ return l;
 return a ? (0, u.AV)({
   quest: e,
   taskDetails: o
-}) : f.Z.Messages.QUEST_BAR_TITLE_START_PLAYING;
-  return f.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE;
+}) : g.Z.Messages.QUEST_BAR_TITLE_START_PLAYING;
+  return g.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE;
 }
 
 function _() {

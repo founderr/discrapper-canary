@@ -13,13 +13,13 @@ var i, a = n(735250),
   _ = n(607070),
   f = n(899663),
   E = n(317381),
-  g = n(496616),
-  C = n(100527),
+  C = n(496616),
+  g = n(100527),
   I = n(906732),
   x = n(168551),
   T = n(597952),
-  N = n(628123),
-  v = n(151851),
+  v = n(628123),
+  N = n(151851),
   S = n(587061),
   Z = n(392358),
   A = n(892254),
@@ -134,8 +134,8 @@ let {
   reducedMotionEnabled: d,
   fontScaleClass: _,
   saturation: E,
-  withTitleBar: g,
-  guestWindow: C,
+  withTitleBar: C,
+  guestWindow: g,
   clientThemesClassName: I,
   contentClassName: x
 } = this.props, S = (0, O.getPlatform)(), Z = r()(_, {
@@ -158,18 +158,18 @@ return (0, a.jsx)(u.VK, {
           children: (0, a.jsx)(h.FocusRingScope, {
             containerRef: this.rootRef,
             children: (0, a.jsx)(f.Z, {
-              children: (0, a.jsxs)(N.Z, {
+              children: (0, a.jsxs)(v.Z, {
                 children: [
                   (0, a.jsx)(P.Co, {}),
                   (0, a.jsx)(p.Wu, {
                     appContext: w.IlC.POPOUT,
-                    renderWindow: C,
+                    renderWindow: g,
                     children: (0, a.jsxs)(L.yP, {
                       children: [
                         (0, a.jsxs)('div', {
                           className: H.popout,
                           children: [
-                            g && null != S ? (0, a.jsx)(v.Z, {
+                            C && null != S ? (0, a.jsx)(N.Z, {
                               focused: n,
                               type: S,
                               windowKey: l,
@@ -201,7 +201,7 @@ return (0, a.jsx)(u.VK, {
 super(...e), G(this, 'rootRef', s.createRef()), G(this, '_cleanupWindowActionCreators', void 0), G(this, 'warnPopoutClose', e => {
   if (this.props.connectedToEmbeddedActivity && !R.ZP.disableEmbeddedActivityPopOutAlert) {
     if (e.returnValue = B.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!O.isPlatformEmbedded)
-      (0, g.Z)(() => {
+      (0, C.Z)(() => {
         U.Z.unmountWindow(this.props.windowKey), O.isPlatformEmbedded && D.ZP.close(this.props.windowKey);
       });
   }
@@ -242,9 +242,9 @@ o = (0, d.e7)([_.Z], () => _.Z.useForcedColors ? 'yes' : 'no'),
   keyboardModeEnabled: m,
   reducedMotionEnabled: p,
   fontScaleClass: f,
-  saturation: g,
+  saturation: C,
   systemForcedColors: T,
-  useForcedColors: N
+  useForcedColors: v
 } = (0, d.cj)([_.Z], () => ({
   fontScale: _.Z.fontScale,
   keyboardModeEnabled: _.Z.keyboardModeEnabled,
@@ -254,12 +254,12 @@ o = (0, d.e7)([_.Z], () => _.Z.useForcedColors ? 'yes' : 'no'),
   systemForcedColors: _.Z.systemForcedColors,
   useForcedColors: _.Z.useForcedColors
 })),
-v = (0, d.e7)([E.ZP], () => null != e.channelId && null !== E.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+N = (0, d.e7)([E.ZP], () => null != e.channelId && null !== E.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
   (0, S.Z)(n, !1);
   let A = (0, Z.Z)(n, i),
 {
   analyticsLocations: R
-} = (0, I.ZP)(C.Z.POPOUT_WINDOW),
+} = (0, I.ZP)(g.Z.POPOUT_WINDOW),
 {
   clientThemesClassName: L,
   clientThemesCSS: P
@@ -276,15 +276,15 @@ children: (0, a.jsx)(I.Gt, {
     locale: l,
     theme: r,
     forcedColors: o,
-    useForcedColors: N,
+    useForcedColors: v,
     systemForcedColors: T,
     fontScale: u,
     keyboardModeEnabled: m,
     mouseModeEnabled: A,
     reducedMotionEnabled: p,
-    connectedToEmbeddedActivity: v,
+    connectedToEmbeddedActivity: N,
     fontScaleClass: f,
-    saturation: g,
+    saturation: C,
     clientThemesClassName: L,
     clientThemesCSS: P
   })

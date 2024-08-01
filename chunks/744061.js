@@ -22,17 +22,17 @@ onClose: t,
 onConfirm: _,
 onCancel: f,
 channel: E,
-analyticsType: g,
-popoutText: C,
+analyticsType: C,
+popoutText: g,
 animation: I
   } = e;
   a.useEffect(() => {
 u.default.track(d.rMx.OPEN_POPOUT, {
-  type: g,
+  type: C,
   ...(0, o.v_)(E)
 });
   }, [
-g,
+C,
 E
   ]);
   let x = a.useCallback(() => {
@@ -47,7 +47,7 @@ T = a.useCallback(() => {
   f,
   t
 ]),
-N = a.useRef(null);
+v = a.useRef(null);
   return a.useEffect(() => {
 let e;
 let t = c.Z.theme,
@@ -59,8 +59,8 @@ return null != I && (async () => {
     Promise.resolve().then(n.t.bind(n, 500923, 23)),
     (0, l.wj)(t) ? I.dark() : I.light()
   ]);
-  !i && null != N.current && (e = a.loadAnimation({
-    container: N.current,
+  !i && null != v.current && (e = a.loadAnimation({
+    container: v.current,
     renderer: 'svg',
     loop: !0,
     autoplay: !0,
@@ -80,7 +80,7 @@ children: (0, i.jsxs)('form', {
       children: [
         null != I && (0, i.jsx)('div', {
           className: m.animation,
-          ref: N
+          ref: v
         }),
         (0, i.jsxs)('div', {
           className: m.content,
@@ -93,7 +93,7 @@ children: (0, i.jsxs)('form', {
               id: 'content-warning-popout-label',
               className: p.markup,
               variant: 'text-sm/normal',
-              children: C.body
+              children: g.body
             }),
             (0, i.jsxs)('div', {
               className: m.buttonWrapper,
@@ -137,7 +137,7 @@ children: (0, i.jsxs)('form', {
         })
       ]
     }),
-    null != C.footer && '' !== C.footer ? (0, i.jsxs)('div', {
+    null != g.footer && '' !== g.footer ? (0, i.jsxs)('div', {
       className: m.footer,
       children: [
         (0, i.jsx)(r.CircleInformationIcon, {
@@ -147,7 +147,7 @@ children: (0, i.jsxs)('form', {
         }),
         (0, i.jsx)(r.Text, {
           variant: 'text-sm/normal',
-          children: C.footer
+          children: g.footer
         })
       ]
     }) : null

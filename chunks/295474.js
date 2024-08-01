@@ -3,10 +3,10 @@ n.d(t, {
 return N;
   },
   gS: function() {
-return C;
+return f;
   },
   ww: function() {
-return f;
+return C;
   }
 }), n(789020);
 var i = n(470079),
@@ -37,7 +37,7 @@ return (0, E.EY)(c.ZP.getMember(e, t));
   }, [e]);
 }
 
-function C(e) {
+function f(e) {
   return (0, s.cj)([
 o.default,
 c.ZP,
@@ -71,7 +71,7 @@ return l.has(m.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [h.Z.Messages.GUILD_AUTOMO
   }, [e]);
 }
 
-function f(e) {
+function C(e) {
   let {
 guildId: t,
 scrollPosition: n,

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return x;
+return O;
   }
 }), n(47120);
 var i = n(735250),
@@ -19,24 +19,24 @@ var i = n(735250),
   T = n(906732),
   h = n(973616),
   N = n(314897),
-  C = n(592125),
-  f = n(158776),
+  f = n(592125),
+  C = n(158776),
   p = n(594174),
   g = n(823379),
   S = n(226378),
   A = n(701488),
-  R = n(689938),
-  O = n(606472);
+  M = n(689938),
+  R = n(606472);
 
-function x(e) {
+function O(e) {
   var t;
   let {
 application: n,
-channelId: x,
-guildId: M
-  } = e, [v, L] = s.useState(!1), {
-analyticsLocations: Z
-  } = (0, T.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), D = (0, _.Z)(), b = (0, a.e7)([C.Z], () => C.Z.getChannel(x)), j = (null == b ? void 0 : null === (t = b.isThread) || void 0 === t ? void 0 : t.call(b)) ? null == b ? void 0 : b.parent_id : x, U = (0, a.e7)([N.default], () => N.default.getId()), {
+channelId: O,
+guildId: x
+  } = e, [v, Z] = s.useState(!1), {
+analyticsLocations: L
+  } = (0, T.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), D = (0, _.Z)(), b = (0, a.e7)([f.Z], () => f.Z.getChannel(O)), j = (null == b ? void 0 : null === (t = b.isThread) || void 0 === t ? void 0 : t.call(b)) ? null == b ? void 0 : b.parent_id : O, U = (0, a.e7)([N.default], () => N.default.getId()), {
 embeddedActivity: y,
 currentEmbeddedActivity: B
   } = (0, a.cj)([o.ZP], () => ({
@@ -45,54 +45,54 @@ currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity()
   })), k = (0, a.Wu)([p.default], () => {
 var e;
 return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : []).map(e => p.default.getUser(e)).filter(g.lm);
-  }), F = (0, a.e7)([f.Z], () => {
+  }), G = (0, a.e7)([C.Z], () => {
 var e;
 let t = null == y ? void 0 : y.userIds.values().next().value;
-return null == t ? null : null === (e = f.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
-  }), G = s.useMemo(() => {
+return null == t ? null : null === (e = C.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
+  }), F = s.useMemo(() => {
 let e = new h.Z(n);
 return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;
   }, [n]), w = (0, d.s5)({
 userId: U,
-channelId: x,
-application: G
+channelId: O,
+application: F
   }), V = null == y, H = (0, S.NL)({
 embeddedActivity: y,
 joinability: w,
 currentEmbeddedActivity: B,
 channel: b
   }), Y = async () => {
-L(!0);
+Z(!0);
 try {
   V ? await (0, u.Z)({
     targetApplicationId: n.id,
     currentEmbeddedApplication: D,
-    channelId: x,
-    guildId: M,
+    channelId: O,
+    guildId: x,
     locationObject: P.location,
     embeddedActivitiesManager: E.Z,
-    analyticsLocations: Z
+    analyticsLocations: L
   }) : await (0, c.Z)({
     applicationId: y.applicationId,
     currentEmbeddedApplication: D,
-    activityChannelId: x,
+    activityChannelId: O,
     locationObject: P.location,
     embeddedActivitiesManager: E.Z,
-    analyticsLocations: Z
+    analyticsLocations: L
   });
 } finally {
-  L(!1);
+  Z(!1);
 }
-  }, W = H.disabled ? R.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
+  }, W = H.disabled ? M.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : M.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
   return (0, i.jsx)('div', {
-className: O.container,
+className: R.container,
 children: (0, i.jsxs)('div', {
-  className: O.contentContainer,
+  className: R.contentContainer,
   children: [
     (0, i.jsx)('div', {
-      className: O.headerContainer,
+      className: R.headerContainer,
       children: V ? (0, i.jsx)('div', {
-        className: O.__invalid_endedNote,
+        className: R.__invalid_endedNote,
         children: (0, i.jsx)(r.Text, {
           variant: 'text-md/medium',
           children: W
@@ -101,15 +101,15 @@ children: (0, i.jsxs)('div', {
         variant: 'text-md/medium',
         lineClamp: 1,
         color: 'text-normal',
-        children: null != F ? F : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
+        children: null != G ? G : M.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
       })
     }),
     (0, i.jsxs)('div', {
-      className: O.footerContainer,
+      className: R.footerContainer,
       children: [
         (0, i.jsx)(r.Tooltip, {
           text: H.tooltip,
-          tooltipContentClassName: O.tooltipContent,
+          tooltipContentClassName: R.tooltipContent,
           children: e => {
             let {
               onClick: t,
@@ -128,7 +128,7 @@ children: (0, i.jsxs)('div', {
           }
         }),
         !V && (0, i.jsx)(I.Z, {
-          guildId: M,
+          guildId: x,
           users: k,
           max: 4,
           size: I.u.SIZE_32

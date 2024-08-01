@@ -15,19 +15,19 @@ var i = n(735250),
   T = n(603263),
   h = n(542051),
   N = n(349033),
-  C = n(999650),
-  f = n(933557),
+  f = n(999650),
+  C = n(933557),
   p = n(471445),
   g = n(592125),
   S = n(271383),
   A = n(699516),
-  R = n(250758),
-  O = n(944486),
-  x = n(914010),
-  M = n(246946),
+  M = n(250758),
+  R = n(944486),
+  O = n(914010),
+  x = n(246946),
   v = n(594174),
-  L = n(585483),
-  Z = n(63063),
+  Z = n(585483),
+  L = n(63063),
   P = n(405656),
   D = n(51144),
   b = n(854709),
@@ -44,11 +44,11 @@ writable: !0
   }) : e[t] = n, e;
 }
 let k = _()('2015-05-15').local(),
-  F = (0, E.Un)({
+  G = (0, E.Un)({
 createPromise: () => Promise.resolve().then(n.bind(n, 547800)),
 webpackId: 547800
   }),
-  G = (e, t, n) => {
+  F = (e, t, n) => {
 var s, a, r;
 let {
   user: l,
@@ -76,7 +76,7 @@ return [
   (0, i.jsx)('span', {
     className: y.displayUsername,
     children: D.ZP.getUserTag(l, {
-      identifiable: M.Z.enabled && M.Z.hidePersonalInformation ? 'never' : 'always'
+      identifiable: x.Z.enabled && x.Z.hidePersonalInformation ? 'never' : 'always'
     })
   }, 'display-username-'.concat(t, '-').concat(l.id))
 ];
@@ -99,11 +99,11 @@ return (0, i.jsxs)('div', {
       className: y.searchResultChannelIcon
     }) : null,
     (0, i.jsx)('strong', {
-      children: (0, f.F6)(s, v.default, A.Z)
+      children: (0, C.F6)(s, v.default, A.Z)
     }),
     null != r ? (0, i.jsx)('span', {
       className: y.searchResultChannelCategory,
-      children: (0, f.F6)(r, v.default, A.Z)
+      children: (0, C.F6)(r, v.default, A.Z)
     }) : null
   ]
 });
@@ -124,10 +124,10 @@ let t, n, {
   renderResult: h
 } = e;
 if (T) {
-  var N, f;
+  var N, C;
   t = (0, i.jsx)('span', {
     className: y.filter,
-    children: null !== (f = null === (N = C.ZP[o]) || void 0 === N ? void 0 : N.key) && void 0 !== f ? f : 'addme:'
+    children: null !== (C = null === (N = f.ZP[o]) || void 0 === N ? void 0 : N.key) && void 0 !== C ? C : 'addme:'
   });
 }
 return n = null != h ? h(a, o, l) : (0, i.jsx)('strong', {
@@ -155,7 +155,7 @@ return n = null != h ? h(a, o, l) : (0, i.jsx)('strong', {
   H = e => (0, i.jsx)(V, {
 ...e,
 className: y.user,
-renderResult: G
+renderResult: F
   }),
   Y = {
 [j.dCx.FILTER_FROM]: {
@@ -267,7 +267,7 @@ renderResult: G
       className: y.searchLearnMore,
       ...e,
       children: (0, i.jsx)(m.Anchor, {
-        href: Z.Z.getArticleURL(j.BhN.USING_SEARCH),
+        href: L.Z.getArticleURL(j.BhN.USING_SEARCH),
         title: U.Z.Messages.LEARN_MORE,
         children: (0, i.jsx)(m.CircleQuestionIcon, {
           size: 'md',
@@ -358,7 +358,7 @@ return (0, i.jsx)(h.Z, {
   constructor(...e) {
 var t;
 super(...e), t = this, B(this, 'state', {
-  dateHint: (0, C.Pr)(),
+  dateHint: (0, f.Pr)(),
   selectedIndex: -1
 }), B(this, 'handleDateChange', e => {
   this.setSearchQuery(e.format(j.b2L) + ' ', !0);
@@ -417,7 +417,7 @@ super(...e), t = this, B(this, 'state', {
     r = function(e) {
       let t = !0,
         n = e.trim();
-      return u()(C.ZP).forOwn(e => {
+      return u()(f.ZP).forOwn(e => {
         '' !== e.key && null != e.key && n === e.key && (t = !1);
       }), t;
     }(a);
@@ -431,7 +431,7 @@ super(...e), t = this, B(this, 'state', {
     a = 0;
   null != i.token ? a = i.token.start : (null == s ? void 0 : s.currentToken) != null && (a = s.currentToken.end);
   let r = null != i.token ? i.token.end : a;
-  L.S.dispatch(j.CkL.SET_SEARCH_QUERY, {
+  Z.S.dispatch(j.CkL.SET_SEARCH_QUERY, {
     query: e,
     anchor: a,
     focus: r,
@@ -445,7 +445,7 @@ super(...e), t = this, B(this, 'state', {
 }), B(this, 'renderDatePicker', () => (0, i.jsxs)('div', {
   className: y.datePicker,
   children: [
-    (0, i.jsx)(F, {
+    (0, i.jsx)(G, {
       onSelect: this.handleDateChange,
       maxDate: _()().local(),
       minDate: k
@@ -472,7 +472,7 @@ super(...e), t = this, B(this, 'state', {
 })), B(this, 'handleHintClick', () => {
   this.setSearchQuery(this.state.dateHint, !0);
 }), B(this, 'performSearch', e => {
-  L.S.dispatch(j.CkL.PERFORM_SEARCH, null != e ? e : {});
+  Z.S.dispatch(j.CkL.PERFORM_SEARCH, null != e ? e : {});
 }), B(this, 'renderAutocompletes', () => {
   let {
     selectedIndex: e
@@ -533,15 +533,15 @@ super(...e), t = this, B(this, 'state', {
 }
 t.ZP = s.forwardRef((e, t) => {
   let [n, s, a] = (0, I.Wu)([
-x.Z,
 O.Z,
-R.Z
+R.Z,
+M.Z
   ], () => {
-let e = x.Z.getGuildId(),
-  t = O.Z.getChannelId(),
+let e = O.Z.getGuildId(),
+  t = R.Z.getChannelId(),
   n = null != e ? e : t;
 o()(null != n, 'SearchPopout.getStateFromStores - invalid searchId');
-let i = R.Z.getState(n),
+let i = M.Z.getState(n),
   s = P.BU(i.autocompletes);
 return [
   n,

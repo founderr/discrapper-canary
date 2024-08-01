@@ -3,7 +3,7 @@ n.d(t, {
 return E;
   },
   Z: function() {
-return g;
+return C;
   }
 });
 var i = n(735250);
@@ -64,7 +64,7 @@ children: [
   });
 }
 
-function g(e) {
+function C(e) {
   let {
 user: t,
 onClose: n
@@ -76,14 +76,14 @@ analyticsLocations: l
 guildId: r,
 channelId: c,
 messageId: f,
-roleId: g
-  } = (0, u.KZ)(), C = e => {
+roleId: C
+  } = (0, u.KZ)(), g = e => {
 n(), (0, h.openUserProfileModal)({
   userId: e,
   guildId: r,
   channelId: c,
   messageId: f,
-  roleId: g,
+  roleId: C,
   sourceAnalyticsLocations: l,
   analyticsLocation: {
     section: m.jXE.USER_PROFILE_MUTUAL_FRIENDS
@@ -116,7 +116,7 @@ children: null == a ? (0, i.jsx)('div', {
   return (0, i.jsx)(E, {
     user: n,
     status: a,
-    onSelect: () => C(n.id)
+    onSelect: () => g(n.id)
   }, t);
 })
   });

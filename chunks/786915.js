@@ -23,14 +23,14 @@ applicationId: p,
 stream: _,
 channel: f,
 exitFullScreen: E,
-appContext: g,
-analyticsLocation: C,
+appContext: C,
+analyticsLocation: g,
 guildScheduledEvent: I,
 ...x
-  } = e, T = (0, o.bp)(), N = null == f ? void 0 : f.getGuildId(), v = (0, l.e7)([c.Z], () => null != N ? c.Z.getGuild(N) : null, [N]);
-  return (t = v, a = f, null != t && null != a && u.Z.can(h.Plq.CREATE_INSTANT_INVITE, a)) ? (0, i.jsx)(d.Z, {
+  } = e, T = (0, o.bp)(), v = null == f ? void 0 : f.getGuildId(), N = (0, l.e7)([c.Z], () => null != v ? c.Z.getGuild(v) : null, [v]);
+  return (t = N, a = f, null != t && null != a && u.Z.can(h.Plq.CREATE_INSTANT_INVITE, a)) ? (0, i.jsx)(d.Z, {
 onClick: () => {
-  s()(null != v, 'guild cannot be null'), s()(null != f, 'channel cannot be null'), ! function(e) {
+  s()(null != N, 'guild cannot be null'), s()(null != f, 'channel cannot be null'), ! function(e) {
     let {
       guild: t,
       channel: a,
@@ -63,13 +63,13 @@ onClick: () => {
       contextKey: o === h.IlC.POPOUT ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
     });
   }({
-    guild: v,
+    guild: N,
     channel: f,
     streamUserId: null == _ ? void 0 : _.ownerId,
     applicationId: p,
-    appContext: null != g ? g : T,
+    appContext: null != C ? C : T,
     exitFullScreen: E,
-    analyticsLocation: C,
+    analyticsLocation: g,
     guildScheduledEvent: I
   });
 },

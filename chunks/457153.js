@@ -14,13 +14,13 @@ isExpanded: u,
 isExpansionAnimationComplete: p,
 quest: m,
 taskDetails: x
-  } = e, f = o.useRef(null), g = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
+  } = e, g = o.useRef(null), f = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
   return (0, s.jsx)(l.animated.div, {
 ref: t,
 'aria-hidden': u && p,
 className: a()(r, c.contentCollapsed, {
   [c.contentCollapsedExpanded]: u,
-  [c.contentCollapsedAccepted]: g
+  [c.contentCollapsedAccepted]: f
 }),
 style: {
   opacity: d.to({
@@ -36,9 +36,9 @@ style: {
 },
 children: (0, s.jsx)('div', {
   className: c.contentCollapsedWrapper,
-  children: g ? (0, s.jsx)(i.Z, {
+  children: f ? (0, s.jsx)(i.Z, {
     quest: m,
-    progressBarRef: f,
+    progressBarRef: g,
     isExpanded: !1,
     taskDetails: x
   }) : null

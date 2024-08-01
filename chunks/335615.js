@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(239091),
   f = n(941028),
   E = n(144144),
-  g = n(276264),
-  C = n(607070),
+  C = n(276264),
+  g = n(607070),
   I = n(100527),
   x = n(367907),
   T = n(906732),
-  N = n(493324),
-  v = n(611064),
+  v = n(493324),
+  N = n(611064),
   S = n(677432),
   Z = n(178762),
   A = n(868671),
@@ -57,7 +57,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let K = V.ZP.getEnableHardwareAcceleration(),
-  q = 44 + g.x,
+  q = 44 + C.x,
   X = {
 origin: {
   x: 38,
@@ -91,7 +91,7 @@ let {
   isMobileOnline: _,
   premiumSince: f,
   ...E
-} = this.props, C = null != f ? new Date(f) : null;
+} = this.props, g = null != f ? new Date(f) : null;
 return (0, i.jsx)(p.Popout, {
   preload: () => (0, j.W)(s, {
     channelId: u.id,
@@ -105,7 +105,7 @@ return (0, i.jsx)(p.Popout, {
     let {
       isShown: f
     } = p;
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(C.Z, {
       className: z.member,
       onContextMenu: this.renderUserContextMenu,
       shouldAnimateStatus: K,
@@ -116,7 +116,7 @@ return (0, i.jsx)(p.Popout, {
       activities: r,
       applicationStream: o,
       isOwner: n,
-      premiumSince: C,
+      premiumSince: g,
       colorString: e,
       colorRoleName: t,
       isTyping: m,
@@ -257,7 +257,7 @@ function ee(e) {
   let {
 index: t
   } = e, n = (0, c.JA)(''.concat(t));
-  return (0, i.jsx)(g.Z, {
+  return (0, i.jsx)(C.Z, {
 itemProps: n
   });
 }
@@ -266,7 +266,7 @@ class et extends a.Component {
 return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length;
   }
   componentDidMount() {
-this.updateSubscription(), this.trackMemberListViewed(), this._areActivitiesExperimentallyHidden = (0, N.$)('ChannelMembers');
+this.updateSubscription(), this.trackMemberListViewed(), this._areActivitiesExperimentallyHidden = (0, v.$)('ChannelMembers');
   }
   componentDidUpdate(e) {
 e.channel.id !== this.props.channel.id && this.updateSubscription(), this.trackMemberListViewed(), this.updateMaxContentFeedRowSeen();
@@ -369,7 +369,7 @@ super(...e), Y(this, '_list', null), Y(this, '_areActivitiesExperimentallyHidden
     groups: n,
     channel: s
   } = this.props, l = n[t];
-  return (0, v.R)(l) ? (0, a.createElement)(v.Z, {
+  return (0, N.R)(l) ? (0, a.createElement)(N.Z, {
     ...l,
     key: 'section-'.concat(t)
   }) : 0 === t ? (0, i.jsx)(R.Z, {
@@ -461,7 +461,7 @@ super(...e), Y(this, '_list', null), Y(this, '_areActivitiesExperimentallyHidden
   this.props.updateMaxContentFeedRowSeen(n + t - 40);
 }, 50)), Y(this, 'getContentFeedGroup', () => {
   let e = this.props.groups[A.T];
-  if ((0, v.R)(e))
+  if ((0, N.R)(e))
     return e;
 }), Y(this, 'hasContentFeed', () => null != this.getContentFeedGroup()), Y(this, 'getRowHeightComputer', () => {
   let e = this.getContentFeedGroup();
@@ -532,7 +532,7 @@ channel: t,
 className: n
   } = e, {
 analyticsLocations: s
-  } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([C.Z], () => C.Z.keyboardModeEnabled), o = (0, h.cj)([P.ZP], () => P.ZP.getProps(t.guild_id, t.id)), {
+  } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([g.Z], () => g.Z.keyboardModeEnabled), o = (0, h.cj)([P.ZP], () => P.ZP.getProps(t.guild_id, t.id)), {
 rows: d,
 groups: m,
 version: p,
@@ -561,7 +561,7 @@ n.scrollToIndex({
     });
   }
 });
-  }, []), g = a.useCallback(() => new Promise(e => {
+  }, []), C = a.useCallback(() => new Promise(e => {
 let t = f.current;
 if (null == t)
   return e();
@@ -577,11 +577,11 @@ t.scrollToBottom({
     requestAnimationFrame(() => setTimeout(e, 100));
   }
 });
-  }), []), N = (0, u.ZP)({
+  }), []), v = (0, u.ZP)({
 id: 'members-'.concat(t.id),
 setFocus: E,
 isEnabled: r,
-scrollToStart: g,
+scrollToStart: C,
 scrollToEnd: x
   });
   return (0, i.jsx)(T.Gt, {
@@ -589,7 +589,7 @@ value: s,
 children: (0, i.jsx)('div', {
   className: l()(z.container, n),
   children: (0, i.jsx)(c.bG, {
-    navigator: N,
+    navigator: v,
     children: (0, i.jsx)(et, {
       ...e,
       ...o,

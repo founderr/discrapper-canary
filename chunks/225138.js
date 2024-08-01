@@ -1,186 +1,186 @@
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
-return k;
+return G;
   },
   useMessageMenu: function() {
 return F;
   }
 });
-var i = t(735250);
-t(470079);
-var a = t(374470),
-  l = t(481060),
-  r = t(239091),
-  o = t(911969),
-  s = t(299206),
-  u = t(26737),
-  d = t(29264),
-  c = t(905041),
-  E = t(89013),
-  M = t(988500),
-  I = t(570870),
-  m = t(786095),
-  _ = t(667922),
-  g = t(235624),
-  f = t(941389),
-  Z = t(449751),
-  S = t(749339),
-  v = t(601184),
-  A = t(6148),
-  O = t(519110),
-  T = t(759875),
-  R = t(168405),
-  h = t(536639),
-  N = t(720904),
-  p = t(88791),
-  x = t(235047),
-  b = t(385302),
-  j = t(873699),
-  C = t(134323),
-  P = t(429260),
-  L = t(1626),
-  D = t(279329),
-  G = t(627938),
-  U = t(512303),
-  y = t(481300),
-  w = t(689938);
+var i = n(735250);
+n(470079);
+var s = n(374470),
+  a = n(481060),
+  r = n(239091),
+  l = n(911969),
+  o = n(299206),
+  c = n(26737),
+  u = n(29264),
+  d = n(905041),
+  _ = n(89013),
+  E = n(988500),
+  I = n(570870),
+  m = n(786095),
+  T = n(667922),
+  h = n(235624),
+  N = n(941389),
+  f = n(449751),
+  C = n(749339),
+  p = n(601184),
+  g = n(6148),
+  S = n(519110),
+  A = n(759875),
+  M = n(168405),
+  R = n(536639),
+  O = n(720904),
+  x = n(88791),
+  v = n(235047),
+  Z = n(385302),
+  L = n(873699),
+  P = n(134323),
+  D = n(429260),
+  b = n(1626),
+  j = n(279329),
+  U = n(627938),
+  y = n(512303),
+  B = n(481300),
+  k = n(689938);
 
-function k(e) {
-  var n, t;
-  let i, l, o, s, {
-  channel: u,
-  message: d,
-  target: c,
-  mediaItem: E,
-  shouldHideMediaOptions: M,
+function G(e) {
+  var t, n;
+  let i, a, l, o, {
+  channel: c,
+  message: u,
+  target: d,
+  mediaItem: _,
+  shouldHideMediaOptions: E,
   onSelect: I,
   onHeightUpdate: m
 } = e,
-_ = c,
-g = c.getAttribute('data-type'),
-f = c.getAttribute('data-id'),
-Z = c.getAttribute('data-name');
-  if (null != E)
-l = i = o = E.url;
+T = d,
+h = d.getAttribute('data-type'),
+N = d.getAttribute('data-id'),
+f = d.getAttribute('data-name');
+  if (null != _)
+a = i = l = _.url;
   else
 for (;
-  (0, a.k)(_);)
-  (0, a.k)(_, HTMLImageElement) && null != _.src && (l = _.src), (0, a.k)(_, HTMLAnchorElement) && null != _.href && (i = _.href, s = _.textContent, null == l && 'img' === _.getAttribute('data-role') && (l = i, _.hasAttribute('data-safe-src') && '' !== _.getAttribute('data-safe-src') && (o = _.getAttribute('data-safe-src')))), _ = _.parentNode;
+  (0, s.k)(T);)
+  (0, s.k)(T, HTMLImageElement) && null != T.src && (a = T.src), (0, s.k)(T, HTMLAnchorElement) && null != T.href && (i = T.href, o = T.textContent, null == a && 'img' === T.getAttribute('data-role') && (a = i, T.hasAttribute('data-safe-src') && '' !== T.getAttribute('data-safe-src') && (l = T.getAttribute('data-safe-src')))), T = T.parentNode;
   return F({
-message: d,
-channel: u,
-mediaItem: E,
-textSelection: null !== (t = null === (n = document.getSelection()) || void 0 === n ? void 0 : n.toString()) && void 0 !== t ? t : '',
-favoriteableType: g,
-favoriteableId: f,
-favoriteableName: Z,
+message: u,
+channel: c,
+mediaItem: _,
+textSelection: null !== (n = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== n ? n : '',
+favoriteableType: h,
+favoriteableId: N,
+favoriteableName: f,
 itemHref: i,
-itemSrc: l,
-itemSafeSrc: o,
-itemTextContent: s,
+itemSrc: a,
+itemSafeSrc: l,
+itemTextContent: o,
 canReport: !0,
 onHeightUpdate: m,
 onSelect: I,
 onClose: r.Zy,
 navId: 'message',
-ariaLabel: w.Z.Messages.MESSAGE_ACTIONS_MENU_LABEL,
-shouldHideMediaOptions: M
+ariaLabel: k.Z.Messages.MESSAGE_ACTIONS_MENU_LABEL,
+shouldHideMediaOptions: E
   });
 }
 
 function F(e) {
   let {
-message: n,
-channel: t,
-mediaItem: a,
+message: t,
+channel: n,
+mediaItem: s,
 textSelection: r,
-favoriteableType: k,
+favoriteableType: G,
 favoriteableId: F,
-favoriteableName: K,
+favoriteableName: w,
 itemHref: V,
 itemSrc: H,
-itemSafeSrc: z,
-itemTextContent: X,
-canReport: Y,
-onHeightUpdate: B,
-onSelect: W,
-onClose: q,
-navId: J,
-ariaLabel: $,
-shouldHideMediaOptions: Q = !1
-  } = e, ee = (0, u.Z)(r), en = (0, E.Z)(r), et = (0, N.Z)(n, t), ei = (0, _.Z)(n, t), ea = (0, A.Z)(n, t), el = (0, h.Z)(n, t), er = (0, O.Z)({
-type: k,
+itemSafeSrc: Y,
+itemTextContent: W,
+canReport: K,
+onHeightUpdate: z,
+onSelect: q,
+onClose: Q,
+navId: X,
+ariaLabel: J,
+shouldHideMediaOptions: $ = !1
+  } = e, ee = (0, c.Z)(r), et = (0, _.Z)(r), en = (0, O.Z)(t, n), ei = (0, T.Z)(t, n), es = (0, g.Z)(t, n), ea = (0, R.Z)(t, n), er = (0, S.Z)({
+type: G,
 id: F,
-name: K
-  }), eo = (0, L.Z)(n, t), es = (0, R.Z)(n, t), eu = (0, p.Z)(n), ed = (0, f.Z)(n, t), ec = (0, Z.Z)(n, t), eE = (0, b.Z)(n, t), eM = (0, j.Z)(n, t), eI = (0, v.Z)(n, t), em = (0, P.Z)(n), e_ = (0, D.Z)(n, t), eg = (0, c.Z)(null != V ? V : H, X, n, {
-shouldHideMediaOptions: Q
-  }), ef = (0, d.Z)(z, n, {
-shouldHideMediaOptions: Q
-  }), eZ = (0, y.Z)(n, a), eS = (0, s.Z)({
-id: n.id,
-label: w.Z.Messages.COPY_ID_MESSAGE,
-shiftId: ''.concat(n.channel_id, '-').concat(n.id)
-  }), ev = (0, C.Z)(n, t), eA = (0, T.Z)(n, t), eO = (0, G.Z)(n, t), eT = (0, m.Z)(r, t.getGuildId()), eR = (0, x.Z)(n), eh = (0, g.Z)(n), eN = (0, S.Z)(n), ep = (0, I.Z)({
-commandType: o.yU.MESSAGE,
-commandTargetId: n.id,
-channel: t,
+name: w
+  }), el = (0, b.Z)(t, n), eo = (0, M.Z)(t, n), ec = (0, x.Z)(t), eu = (0, N.Z)(t, n), ed = (0, f.Z)(t, n), e_ = (0, Z.Z)(t, n), eE = (0, L.Z)(t, n), eI = (0, p.Z)(t, n), em = (0, D.Z)(t), eT = (0, j.Z)(t, n), eh = (0, d.Z)(null != V ? V : H, W, t, {
+shouldHideMediaOptions: $
+  }), eN = (0, u.Z)(Y, t, {
+shouldHideMediaOptions: $
+  }), ef = (0, B.Z)(t, s), eC = (0, o.Z)({
+id: t.id,
+label: k.Z.Messages.COPY_ID_MESSAGE,
+shiftId: ''.concat(t.channel_id, '-').concat(t.id)
+  }), ep = (0, P.Z)(t, n), eg = (0, A.Z)(t, n), eS = (0, U.Z)(t, n), eA = (0, m.Z)(r, n.getGuildId()), eM = (0, v.Z)(t), eR = (0, h.Z)(t), eO = (0, C.Z)(t), ex = (0, I.Z)({
+commandType: l.yU.MESSAGE,
+commandTargetId: t.id,
+channel: n,
 guildId: void 0,
-onHeightUpdate: B
-  }), ex = (0, U.Z)(n), eb = (0, M.Z)(n);
-  return (0, i.jsxs)(l.Menu, {
-navId: J,
-onClose: q,
-'aria-label': $,
-onSelect: W,
+onHeightUpdate: z
+  }), ev = (0, y.Z)(t), eZ = (0, E.Z)(t);
+  return (0, i.jsxs)(a.Menu, {
+navId: X,
+onClose: Q,
+'aria-label': J,
+onSelect: q,
 children: [
-  (0, i.jsx)(l.MenuGroup, {
+  (0, i.jsx)(a.MenuGroup, {
     children: ee
   }),
-  (0, i.jsx)(l.MenuGroup, {
-    children: en
+  (0, i.jsx)(a.MenuGroup, {
+    children: et
   }),
-  (0, i.jsxs)(l.MenuGroup, {
+  (0, i.jsxs)(a.MenuGroup, {
     children: [
-      '' === r ? et : null,
+      '' === r ? en : null,
       ei,
-      eu,
-      ea,
-      el,
-      er,
-      ev,
-      eA,
-      eO,
-      eN,
-      ep,
-      eo,
-      es,
-      eh,
-      eR,
-      ed,
       ec,
-      e_,
-      eb,
-      eM,
-      eE,
+      es,
+      ea,
+      er,
+      ep,
+      eg,
+      eS,
+      eO,
       ex,
+      el,
+      eo,
+      eR,
+      eM,
+      eu,
+      ed,
+      eT,
+      eZ,
+      eE,
+      e_,
+      ev,
       eI,
-      Y && em
+      K && em
     ]
   }),
-  null != eT && (0, i.jsx)(l.MenuGroup, {
-    children: eT
+  null != eA && (0, i.jsx)(a.MenuGroup, {
+    children: eA
   }),
-  (0, i.jsxs)(l.MenuGroup, {
+  (0, i.jsxs)(a.MenuGroup, {
     children: [
-      ef,
-      eZ
+      eN,
+      ef
     ]
   }),
-  (0, i.jsx)(l.MenuGroup, {
-    children: eg
+  (0, i.jsx)(a.MenuGroup, {
+    children: eh
   }),
-  (0, i.jsx)(l.MenuGroup, {
-    children: eS
+  (0, i.jsx)(a.MenuGroup, {
+    children: eC
   })
 ]
   });

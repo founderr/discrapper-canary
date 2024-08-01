@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(144144),
   f = n(607070),
   E = n(100527),
-  g = n(906732),
-  C = n(623624),
+  C = n(906732),
+  g = n(623624),
   I = n(518738),
   x = n(965376),
   T = n(159299),
-  N = n(484459),
-  v = n(103575),
+  v = n(484459),
+  N = n(103575),
   S = n(199902),
   Z = n(271383),
   A = n(430824),
@@ -59,7 +59,7 @@ let {
 }, [
   t.guild_id,
   u
-]), E = (0, h.e7)([j.default], () => j.default.getUser(l)), g = (0, h.e7)([j.default], () => j.default.getCurrentUser()), I = (null == E ? void 0 : E.id) === (null == g ? void 0 : g.id), x = (0, h.e7)([
+]), E = (0, h.e7)([j.default], () => j.default.getUser(l)), C = (0, h.e7)([j.default], () => j.default.getCurrentUser()), I = (null == E ? void 0 : E.id) === (null == C ? void 0 : C.id), x = (0, h.e7)([
   M.Z,
   b.Z
 ], () => I ? b.Z.getStatus() : M.Z.getStatus(l, t.guild_id)), L = (0, h.e7)([M.Z], () => M.Z.isMobileOnline(l)), P = (0, h.e7)([
@@ -98,7 +98,7 @@ let {
   E,
   t
 ]), z = a.useCallback(e => {
-  e.stopPropagation(), (0, C.f)({
+  e.stopPropagation(), (0, g.f)({
     guildId: t.guild_id,
     location: {
       section: H.jXE.THREAD_MEMBER_LIST,
@@ -110,11 +110,11 @@ if (null == E)
   return null;
 let Y = null == u ? void 0 : u.premiumSince;
 return (0, i.jsx)(m.Popout, {
-  preload: () => (0, N.W)(E, {
+  preload: () => (0, v.W)(E, {
     guildId: t.guild_id,
     channelId: t.id
   }),
-  renderPopout: e => (0, i.jsx)(v.Z, {
+  renderPopout: e => (0, i.jsx)(N.Z, {
     ...e,
     location: 'ThreadMembers',
     userId: E.id,
@@ -138,7 +138,7 @@ return (0, i.jsx)(m.Popout, {
       onContextMenu: V,
       shouldAnimateStatus: W,
       user: E,
-      currentUser: g,
+      currentUser: C,
       nick: null == u ? void 0 : u.nick,
       status: x,
       activities: P,
@@ -236,9 +236,9 @@ channel: t,
 guild: n
   } = e, s = 'members-'.concat(t.id), {
 analyticsLocations: r
-  } = (0, g.ZP)(E.Z.MEMBER_LIST), d = (0, x.D)(t.id, n), p = d.filter(e => e.userIds.length > 0).reverse()[0], {
+  } = (0, C.ZP)(E.Z.MEMBER_LIST), d = (0, x.D)(t.id, n), p = d.filter(e => e.userIds.length > 0).reverse()[0], {
 navigator: _,
-listRef: C
+listRef: g
   } = function(e, t) {
 let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
   i = a.useRef(null),
@@ -307,8 +307,8 @@ return (0, i.jsx)(Q, {
   channel: t
 });
   let T = o().omit(_.containerProps, ['ref']),
-N = k.iJ(n);
-  return (0, i.jsx)(g.Gt, {
+v = k.iJ(n);
+  return (0, i.jsx)(C.Gt, {
 value: r,
 children: (0, i.jsx)(c.bG, {
   navigator: _,
@@ -316,7 +316,7 @@ children: (0, i.jsx)(c.bG, {
     children: e => (0, i.jsx)('div', {
       className: l()(F.membersWrap, F.hiddenMembers),
       children: (0, i.jsx)(m.List, {
-        ref: C,
+        ref: g,
         className: F.members,
         paddingTop: 0,
         sectionHeight: 40,
@@ -344,7 +344,7 @@ children: (0, i.jsx)(c.bG, {
             channel: t,
             sectionId: l,
             userId: s[a],
-            guildOwnerId: N
+            guildOwnerId: v
           }, s[a]);
         },
         footerHeight: e => d[e] === p && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0,

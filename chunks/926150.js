@@ -19,13 +19,13 @@ var a = n(442837),
   _ = n(483424),
   f = n(681837),
   E = n(91433),
-  g = n(900927),
-  C = n(678738),
+  C = n(900927),
+  g = n(678738),
   I = n(502762),
   x = n(530),
   T = n(7242),
-  N = n(827313),
-  v = n(580512),
+  v = n(827313),
+  N = n(580512),
   S = n(228168),
   Z = n(981631),
   A = n(689938),
@@ -73,7 +73,7 @@ children: [
         (0, i.jsx)(f.Z, {
           userId: t.id
         }),
-        !k && (0, i.jsx)(N.Z, {
+        !k && (0, i.jsx)(v.Z, {
           userId: t.id,
           isHovering: j,
           onOpenProfile: L
@@ -94,7 +94,7 @@ children: [
     user: t,
     currentUser: n,
     className: M.activity
-  }) : (0, i.jsx)(v.Z, {
+  }) : (0, i.jsx)(N.Z, {
     user: t,
     channelId: R.id,
     className: M.activity
@@ -102,7 +102,7 @@ children: [
   (0, i.jsxs)(I.Z.Overlay, {
     className: M.overlay,
     children: [
-      !k && (null == b ? void 0 : b.bio) != null && (null == b ? void 0 : b.bio) !== '' && (0, i.jsx)(C.Z, {
+      !k && (null == b ? void 0 : b.bio) != null && (null == b ? void 0 : b.bio) !== '' && (0, i.jsx)(g.Z, {
         heading: A.Z.Messages.USER_POPOUT_ABOUT_ME,
         headingColor: 'header-primary',
         children: (0, i.jsx)(m.Z, {
@@ -117,10 +117,10 @@ children: [
         commandIds: U.popularApplicationCommandIds,
         channel: R
       }),
-      (0, i.jsx)(C.Z, {
+      (0, i.jsx)(g.Z, {
         heading: t.bot ? A.Z.Messages.BOT_PROFILE_CREATED_ON : A.Z.Messages.USER_PROFILE_MEMBER_SINCE,
         headingColor: 'header-primary',
-        children: (0, i.jsx)(g.Z, {
+        children: (0, i.jsx)(C.Z, {
           userId: t.id
         })
       })

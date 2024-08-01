@@ -1,113 +1,113 @@
 var i = t(735250),
-  r = t(470079),
-  a = t(512722),
-  s = t.n(a),
-  l = t(442837),
-  o = t(481060),
-  u = t(10718),
-  d = t(667204),
+  l = t(470079),
+  u = t(512722),
+  r = t.n(u),
+  a = t(442837),
+  s = t(481060),
+  d = t(10718),
+  o = t(667204),
   c = t(826298),
-  E = t(276022),
-  _ = t(978983),
-  I = t(430824),
-  T = t(594174),
-  N = t(689079),
-  S = t(689938),
+  _ = t(276022),
+  E = t(978983),
+  f = t(430824),
+  A = t(594174),
+  T = t(689079),
+  I = t(689938),
   p = t(768075);
-n.Z = e => {
-  let n, {
+e.Z = n => {
+  let e, {
   commandType: t,
-  commandTargetId: a,
-  channel: f,
-  guildId: A,
-  onHeightUpdate: O,
-  context: h
-} = e,
-Z = (0, l.e7)([I.Z], () => I.Z.getGuild(null != A ? A : f.guild_id)),
-M = (0, l.e7)([T.default], () => T.default.getUser(a)),
-m = (0, E.Z)({
-  user: M,
-  guildId: null == Z ? void 0 : Z.id,
-  channel: f,
-  context: h
+  commandTargetId: u,
+  channel: N,
+  guildId: S,
+  onHeightUpdate: h,
+  context: M
+} = n,
+O = (0, a.e7)([f.Z], () => f.Z.getGuild(null != S ? S : N.guild_id)),
+m = (0, a.e7)([A.default], () => A.default.getUser(u)),
+g = (0, _.Z)({
+  user: m,
+  guildId: null == O ? void 0 : O.id,
+  channel: N,
+  context: M
 }),
 {
-  commands: g,
+  commands: v,
   sectionDescriptors: R,
-  loading: v
-} = u.wi(f, {
+  loading: C
+} = d.wi(N, {
   commandType: t
 }, {
-  limit: N.lr
+  limit: T.lr
 }),
 {
-  sections: C
-} = r.useMemo(() => {
-  let e = {};
-  return R.forEach(n => {
-    e[n.id] = n;
+  sections: b
+} = l.useMemo(() => {
+  let n = {};
+  return R.forEach(e => {
+    n[e.id] = e;
   }), {
-    sections: e
+    sections: n
   };
 }, [R]),
-G = r.useRef(v.current);
-  r.useEffect(() => {
-v.current !== G.current && (G.current = v.current, null == O || O());
+P = l.useRef(C.current);
+  l.useEffect(() => {
+C.current !== P.current && (P.current = C.current, null == h || h());
   }, [
-v,
-O
+C,
+h
   ]);
-  let y = r.useCallback(e => {
-s()(null != f, 'menu item should not show if channel is null');
-let n = C[e.applicationId],
-  t = null != n ? (0, c.ky)(n) : void 0;
-return (0, i.jsx)(o.MenuItem, {
-  id: e.id,
-  label: e.displayName,
+  let Z = l.useCallback(n => {
+r()(null != N, 'menu item should not show if channel is null');
+let e = b[n.applicationId],
+  t = null != e ? (0, c.ky)(e) : void 0;
+return (0, i.jsx)(s.MenuItem, {
+  id: n.id,
+  label: n.displayName,
   showIconFirst: !0,
   icon: () => null != t ? (0, i.jsx)(t, {
-    channel: f,
-    section: n,
+    channel: N,
+    section: e,
     width: 18,
     height: 18,
     selectable: !1
   }) : null,
   action: () => {
-    (0, d.Z)({
-      command: e,
+    (0, o.Z)({
+      command: n,
       optionValues: {},
       context: {
-        channel: f,
-        guild: Z
+        channel: N,
+        guild: O
       },
-      commandTargetId: a
+      commandTargetId: u
     });
   }
-}, e.id);
+}, n.id);
   }, [
-f,
-Z,
-a,
-C
+N,
+O,
+u,
+b
   ]);
-  return v.current ? n = (0, i.jsx)(o.MenuItem, {
+  return C.current ? e = (0, i.jsx)(s.MenuItem, {
 id: 'menu-commands-placeholder',
-render: () => (0, i.jsx)(_.Z, {}),
+render: () => (0, i.jsx)(E.Z, {}),
 disabled: !0
-  }, 'menu-commands-placeholder') : (n = 0 === g.length ? (0, i.jsx)(o.MenuItem, {
+  }, 'menu-commands-placeholder') : (e = 0 === v.length ? (0, i.jsx)(s.MenuItem, {
 id: 'menu-commands-empty',
-label: S.Z.Messages.APPLICATION_COMMAND_NO_COMMANDS,
+label: I.Z.Messages.APPLICATION_COMMAND_NO_COMMANDS,
 disabled: !0
-  }, 'menu-commands-empty') : g.map(y), null != m && (n = (0, i.jsxs)(i.Fragment, {
+  }, 'menu-commands-empty') : v.map(Z), null != g && (e = (0, i.jsxs)(i.Fragment, {
 children: [
-  n,
-  (0, i.jsx)(o.MenuSeparator, {}, 'separator'),
-  m
+  e,
+  (0, i.jsx)(s.MenuSeparator, {}, 'separator'),
+  g
 ]
-  }))), (0, i.jsx)(o.MenuItem, {
+  }))), (0, i.jsx)(s.MenuItem, {
 id: 'apps',
-label: S.Z.Messages.APPS,
+label: I.Z.Messages.APPS,
 listClassName: p.list,
-children: n
+children: e
   });
 };

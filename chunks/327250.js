@@ -19,13 +19,13 @@ var a = n(120356),
   _ = n(271383),
   f = n(430824),
   E = n(496675),
-  g = n(158776),
-  C = n(885110),
+  C = n(158776),
+  g = n(885110),
   I = n(594174),
   x = n(572004),
   T = n(5192),
-  N = n(51144),
-  v = n(981631),
+  v = n(51144),
+  N = n(981631),
   S = n(689938),
   Z = n(614603);
 
@@ -35,10 +35,10 @@ user: t,
 guildId: n,
 onClose: a
   } = e, s = t.id, o = (0, l.e7)([
-C.Z,
 g.Z,
+C.Z,
 p.default
-  ], () => s === p.default.getId() ? C.Z.getStatus() : g.Z.getStatus(s, n), [
+  ], () => s === p.default.getId() ? g.Z.getStatus() : C.Z.getStatus(s, n), [
 s,
 n
   ]);
@@ -70,7 +70,7 @@ children: [
       (0, i.jsx)(r.Text, {
         variant: 'text-md/medium',
         color: 'text-normal',
-        children: N.ZP.getUserTag(t)
+        children: v.ZP.getUserTag(t)
       })
     ]
   }),
@@ -118,16 +118,16 @@ user: t,
 member: a,
 guildId: s
   } = e, _ = (0, l.e7)([f.Z], () => f.Z.getGuild(s)), {
-canKickUser: g,
-canBanUser: C,
+canKickUser: C,
+canBanUser: g,
 canModerateMembers: T
   } = (0, l.cj)([
 E.Z,
 I.default,
 f.Z
   ], () => ({
-canKickUser: null != _ && E.Z.canManageUser(v.Plq.KICK_MEMBERS, t, _),
-canBanUser: null != _ && E.Z.canManageUser(v.Plq.BAN_MEMBERS, t, _),
+canKickUser: null != _ && E.Z.canManageUser(N.Plq.KICK_MEMBERS, t, _),
+canBanUser: null != _ && E.Z.canManageUser(N.Plq.BAN_MEMBERS, t, _),
 canModerateMembers: null != _ && (0, h.F)(_.id, t.id, [
   I.default,
   f.Z,
@@ -136,7 +136,7 @@ canModerateMembers: null != _ && (0, h.F)(_.id, t.id, [
   }), [
 t,
 _
-  ]), N = (0, u.b)(a), {
+  ]), v = (0, u.b)(a), {
 analyticsLocations: A,
 newestAnalyticsLocation: b
   } = (0, c.ZP)(), R = (0, m.sE)(s, {
@@ -168,7 +168,7 @@ children: [
     ]
   }),
   (0, i.jsxs)(M, {
-    disabled: !g,
+    disabled: !C,
     'aria-label': S.Z.Messages.KICK,
     onClick: () => {
       (0, r.openModalLazy)(async () => {
@@ -198,7 +198,7 @@ children: [
     ]
   }),
   (0, i.jsxs)(M, {
-    disabled: !C,
+    disabled: !g,
     'aria-label': S.Z.Messages.BAN,
     onClick: () => {
       (0, r.openModalLazy)(async () => {
@@ -231,7 +231,7 @@ children: [
     disabled: !T,
     'aria-label': S.Z.Messages.TIMEOUT_USER,
     onClick: () => {
-      N ? (0, d.q)(a.guildId, a.userId, A) : (0, d.z)(a.guildId, a.userId, A);
+      v ? (0, d.q)(a.guildId, a.userId, A) : (0, d.z)(a.guildId, a.userId, A);
     },
     children: [
       (0, i.jsx)(r.ClockWarningIcon, {
@@ -243,7 +243,7 @@ children: [
       (0, i.jsx)(r.Text, {
         variant: 'text-sm/normal',
         color: 'none',
-        children: N ? S.Z.Messages.REMOVE : S.Z.Messages.TIMEOUT_USER
+        children: v ? S.Z.Messages.REMOVE : S.Z.Messages.TIMEOUT_USER
       })
     ]
   }),

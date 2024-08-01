@@ -24,30 +24,30 @@ let t, n, {
     className: T,
     count: h,
     me: N,
-    me_burst: C,
-    burst_count: f,
+    me_burst: f,
+    burst_count: C,
     burst_colors: p,
     readOnly: g,
     isLurking: S,
     isGuest: A,
-    isPendingMember: R,
-    type: O
+    isPendingMember: M,
+    type: R
   } = e,
-  x = O === _.O.BURST,
-  M = (0, E.y4)(N, C, O),
-  v = (0, d.v)(x && null != p ? p : []),
-  L = s ? m : I,
-  Z = x ? f : h,
-  P = (0, u.y)(Z, E.aO),
+  O = R === _.O.BURST,
+  x = (0, E.y4)(N, f, R),
+  v = (0, d.v)(O && null != p ? p : []),
+  Z = s ? m : I,
+  L = O ? C : h,
+  P = (0, u.y)(L, E.aO),
   D = {};
-if (x && null != v) {
+if (O && null != v) {
   var b;
   let {
     accentColor: e,
     backgroundColor: i,
     opacity: s
   } = v, a = null !== (b = (0, l.wK)(null != i ? i : '', s)) && void 0 !== b ? b : '';
-  M && (D.borderColor = i), D.background = a, t = e, n = e;
+  x && (D.borderColor = i), D.background = a, t = e, n = e;
 }
 let j = {
   minWidth: P,
@@ -55,25 +55,25 @@ let j = {
   borderColor: n
 };
 return (0, i.jsxs)('div', {
-  className: r()(L.reaction, L.reactionInner, T, {
-    [L.reactionMe]: M,
-    [L.reactionReadOnly]: g && !S && !R && !A
+  className: r()(Z.reaction, Z.reactionInner, T, {
+    [Z.reactionMe]: x,
+    [Z.reactionReadOnly]: g && !S && !M && !A
   }),
   style: D,
   children: [
     (0, i.jsx)(o.Z, {
       className: r()({
-        [L.hideEmoji]: a
+        [Z.hideEmoji]: a
       }),
       emojiId: c.id,
       emojiName: c.name,
       size: 'reaction',
-      animated: x && c.animated
+      animated: O && c.animated
     }),
     (0, i.jsx)('div', {
-      className: L.reactionCount,
+      className: Z.reactionCount,
       style: j,
-      children: Z
+      children: L
     })
   ]
 });

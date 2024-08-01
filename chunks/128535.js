@@ -54,8 +54,8 @@ c = (0, E.g2)({
   className: m.refreshIcon
 }),
 {
-  errorHints: C,
-  startingConsoleQuest: f,
+  errorHints: f,
+  startingConsoleQuest: C,
   startConsoleQuest: p
 } = (0, d.GI)({
   questId: e.quest.id,
@@ -70,7 +70,7 @@ c = (0, E.g2)({
 });
   return (0, i.jsxs)('div', {
 className: a()(m.container, {
-  [m.inFlight]: f
+  [m.inFlight]: C
 }),
 children: [
   (0, i.jsxs)('div', {
@@ -80,7 +80,7 @@ children: [
         className: m.header,
         children: [
           (0, i.jsx)(l.CircleExclamationPointIcon, {
-            className: a()(m.headerIcon, T(C)),
+            className: a()(m.headerIcon, T(f)),
             size: 'custom',
             color: 'currentColor',
             width: 16,
@@ -88,11 +88,11 @@ children: [
           }),
           (0, i.jsx)(l.Text, {
             variant: 'text-sm/semibold',
-            children: h(C, t)
+            children: h(f, t)
           })
         ]
       }),
-      N(C, t, s)
+      N(f, t, s)
     ]
   }),
   (0, i.jsx)('div', {
@@ -100,7 +100,7 @@ children: [
     children: (0, i.jsx)(l.Button, {
       color: l.ButtonColors.PRIMARY,
       onClick: p,
-      disabled: f,
+      disabled: C,
       children: (0, i.jsxs)('div', {
         className: m.ctaInner,
         children: [

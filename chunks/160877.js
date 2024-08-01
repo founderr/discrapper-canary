@@ -28,12 +28,12 @@ let {
   url: n,
   description: s
 } = t;
-return null == n ? null : (0, i.jsx)(f, {
+return null == n ? null : (0, i.jsx)(C, {
   url: n,
   description: s
 });
   },
-  C = e => {
+  f = e => {
 var t, n, s;
 let {
   embed: a
@@ -41,11 +41,11 @@ let {
 if (!m.n2.has(a.type))
   return null;
 let r = void 0 !== a.video && a.type !== l.h.GIFV ? a.video.url : null !== (s = null === (t = a.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== s ? s : null === (n = a.image) || void 0 === n ? void 0 : n.url;
-return null == r ? null : (0, i.jsx)(f, {
+return null == r ? null : (0, i.jsx)(C, {
   url: r
 });
   },
-  f = e => {
+  C = e => {
 let {
   url: t,
   description: n
@@ -82,7 +82,7 @@ embedPreview: c,
 onConfirmPress: u,
 transitionState: d,
 onClose: E
-  } = e, m = (0, _.Dt)(), f = s.useCallback(() => {
+  } = e, m = (0, _.Dt)(), C = s.useCallback(() => {
 (0, I.aP)({
   action: I.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
   channelId: t,
@@ -126,7 +126,7 @@ children: [
   (0, i.jsxs)(o.ModalContent, {
     children: [
       (0, i.jsx)(o.ModalCloseButton, {
-        onClick: f,
+        onClick: C,
         className: h.closeButton
       }),
       (0, i.jsx)(o.Heading, {
@@ -145,7 +145,7 @@ children: [
       null != l && (0, i.jsx)(N, {
         attachment: l
       }),
-      null != c && (0, i.jsx)(C, {
+      null != c && (0, i.jsx)(f, {
         embed: c
       })
     ]
@@ -166,7 +166,7 @@ children: [
         disabled: a,
         color: o.Button.Colors.TRANSPARENT,
         size: o.Button.Sizes.MEDIUM,
-        onClick: f,
+        onClick: C,
         children: T.Z.Messages.CANCEL
       })
     ]

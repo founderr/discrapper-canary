@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(906732),
   f = n(541716),
   E = n(752305),
-  g = n(893718),
-  C = n(303628),
+  C = n(893718),
+  g = n(303628),
   I = n(967128),
   x = n(665149),
   T = n(294218),
-  N = n(913663),
-  v = n(268350),
+  v = n(913663),
+  N = n(268350),
   S = n(695346),
   Z = n(592125),
   A = n(703558),
@@ -126,8 +126,8 @@ return {
   updateThreadSettings: s
 };
   }(t, n), {
-textAreaState: g,
-setTextAreaState: C
+textAreaState: C,
+setTextAreaState: g
   } = function(e, t) {
 let [n, i] = a.useState((0, E.H2)());
 return a.useEffect(() => {
@@ -172,7 +172,7 @@ return {
   messageError: u,
   submit: a.useCallback(async (e, a, s) => {
     var r, o, u;
-    null == e && (e = l.textValue), e = e.trim(), (null == a || 0 === a.length) && (a = null === (r = N.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = R.Z.getUploads(t.id, A.d.FirstThreadMessage));
+    null == e && (e = l.textValue), e = e.trim(), (null == a || 0 === a.length) && (a = null === (r = v.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = R.Z.getUploads(t.id, A.d.FirstThreadMessage));
     let m = null !== (o = i.name) && void 0 !== o ? o : '',
       p = null == n && 0 === m.length,
       _ = '' === e && (null == a || 0 === a.length) && 0 === s.length;
@@ -205,7 +205,7 @@ return {
         shouldRefocus: !0
       };
     }
-    return (0, v.qB)(t.id, F.drafts.type), {
+    return (0, N.qB)(t.id, F.drafts.type), {
       shouldClear: !0,
       shouldRefocus: !1
     };
@@ -222,7 +222,7 @@ parentChannel: t,
 parentMessageId: n,
 threadSettings: p,
 privateThreadMode: x,
-textAreaState: g,
+textAreaState: C,
 location: s
   }), M = (0, D.oD)(p, x) ? o.ThreadLockIcon : o.ThreadIcon;
   return (0, i.jsx)('div', {
@@ -279,8 +279,8 @@ children: (0, i.jsx)('div', {
         children: [
           (0, i.jsx)(q, {
             parentChannel: t,
-            textAreaState: g,
-            setTextAreaState: C,
+            textAreaState: C,
+            setTextAreaState: g,
             submit: Z,
             error: S
           }),
@@ -410,7 +410,7 @@ T = (0, y.Op)(h, {
 });
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(C.Z, {
+  (0, i.jsx)(g.Z, {
     channelId: t.id,
     type: F,
     canAttachFiles: x
@@ -421,7 +421,7 @@ children: [
       error: T
     })
   }),
-  (0, i.jsx)(g.Z, {
+  (0, i.jsx)(C.Z, {
     type: F,
     channel: t,
     placeholder: H.Z.Messages.FORM_THREAD_STARTER_MESSAGE_PLACEHOLDER,

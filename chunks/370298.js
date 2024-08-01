@@ -4,9 +4,9 @@ return w;
   }
 }), t(47120);
 var i = t(735250),
-  o = t(470079),
-  l = t(120356),
-  a = t.n(l),
+  l = t(470079),
+  o = t(120356),
+  a = t.n(o),
   s = t(892814),
   r = t(442837),
   u = t(481060),
@@ -38,11 +38,11 @@ function w(e) {
   let {
 toggleShowMenu: n,
 showMenu: t,
-className: o,
-channelId: l,
+className: l,
+channelId: o,
 imageUrl: a,
 mimeType: s
-  } = e, d = (0, r.e7)([N.Z], () => N.Z.getChannel(l));
+  } = e, d = (0, r.e7)([N.Z], () => N.Z.getChannel(o));
   return null == d ? null : (0, i.jsx)(u.Popout, {
 renderPopout: e => {
   let {
@@ -68,7 +68,7 @@ children: e => {
     text: P.Z.Messages.APP_IMAGE_REC_USE_APP_TOOLTIP,
     children: e => (0, i.jsx)(u.Clickable, {
       ...e,
-      className: o,
+      className: l,
       focusProps: {
         offset: 2
       },
@@ -90,16 +90,16 @@ function D(e) {
   let {
 onSelect: n,
 onClose: t,
-channel: l,
+channel: o,
 imageUrl: a,
 mimeType: N
-  } = e, v = (0, r.e7)([x.Z], () => x.Z.getGuild(l.guild_id)), {
+  } = e, v = (0, r.e7)([x.Z], () => x.Z.getGuild(o.guild_id)), {
 fetchState: y,
 recommendationsSections: w
   } = function(e) {
 let {
   channelId: n
-} = e, t = s.I.CONTEXTUAL_IMAGE, i = o.useMemo(() => ({
+} = e, t = s.I.CONTEXTUAL_IMAGE, i = l.useMemo(() => ({
   channelId: n,
   location: t,
   withCommands: !0
@@ -107,23 +107,23 @@ let {
   n,
   t
 ]);
-o.useEffect(() => {
+l.useEffect(() => {
   (0, A.a)(i);
 }, [i]);
 let {
-  fetchState: l,
+  fetchState: o,
   recommendationsSections: a
 } = (0, r.cj)([O.ZP], () => ({
   fetchState: O.ZP.getFetchState(i),
   recommendationsSections: O.ZP.getRecommendations(i)
 }));
 return {
-  fetchState: l,
+  fetchState: o,
   recommendationsSections: a
 };
   }({
-channelId: l.id
-  }), D = (0, h.PL)(!0, !0), b = (0, h.LD)(l.guild_id, !0), F = y === O.M.FETCHING, Z = o.useMemo(() => {
+channelId: o.id
+  }), D = (0, h.PL)(!0, !0), b = (0, h.LD)(o.guild_id, !0), F = y === O.M.FETCHING, H = l.useMemo(() => {
 let e = w.length > 0 ? w[0].items : void 0;
 return void 0 === e ? [] : e.map(e => {
   let {
@@ -140,27 +140,27 @@ return void 0 === e ? [] : e.map(e => {
   } : null;
 }).filter(g.lm);
   }, [w]);
-  o.useEffect(() => {
+  l.useEffect(() => {
 var e, n;
-if (!F && 0 !== Z.length)
+if (!F && 0 !== H.length)
   f.default.track(j.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
-    guild_id: null !== (e = null == l ? void 0 : l.guild_id) && void 0 !== e ? e : '',
-    channel_id: null !== (n = null == l ? void 0 : l.id) && void 0 !== n ? n : '',
-    application_ids: [...Z.map(e => Number(e.application.id))],
-    command_ids: [...Z.map(e => Number(e.command.id))]
+    guild_id: null !== (e = null == o ? void 0 : o.guild_id) && void 0 !== e ? e : '',
+    channel_id: null !== (n = null == o ? void 0 : o.id) && void 0 !== n ? n : '',
+    application_ids: [...H.map(e => Number(e.application.id))],
+    command_ids: [...H.map(e => Number(e.command.id))]
   });
   }, [
-Z,
-l,
+H,
+o,
 F
   ]);
-  let H = o.useCallback(async () => {
+  let Z = l.useCallback(async () => {
   let e = await fetch(a),
     n = new File([await e.arrayBuffer()], 'ContextualImageRecsUpload', {
       type: N.join('/')
     });
   d.Z.setFile({
-    channelId: l.id,
+    channelId: o.id,
     id: 'image',
     file: {
       id: 'image',
@@ -171,21 +171,21 @@ F
   });
 }, [
   a,
-  l.id,
+  o.id,
   N
 ]),
-V = o.useCallback(async e => {
+V = l.useCallback(async e => {
   var n, t;
   let i = e.applicationId,
-    o = (null === (n = D.result) || void 0 === n ? void 0 : n.sections[i]) != null,
+    l = (null === (n = D.result) || void 0 === n ? void 0 : n.sections[i]) != null,
     a = (null === (t = b.result) || void 0 === t ? void 0 : t.sections[i]) != null;
-  o || a || h.ZP.queryInstallOnDemandApp(e.applicationId, l.id), await (0, C.L)({
+  l || a || h.ZP.queryInstallOnDemandApp(e.applicationId, o.id), await (0, C.L)({
     applicationId: i,
     userIndexState: D,
     guildIndexState: b,
     location: E.Vh.IMAGE_RECS_MENU,
     source: m._b.TEXT
-  }) && (await H(), (0, I.qJ)({
+  }) && (await Z(), (0, I.qJ)({
     command: e,
     location: E.Vh.IMAGE_RECS_MENU,
     source: m._b.TEXT
@@ -200,17 +200,17 @@ V = o.useCallback(async e => {
       }]
     },
     context: {
-      channel: l,
+      channel: o,
       guild: v
     },
     commandOrigin: E.bB.IMAGE_RECS_MENU
   }));
 }, [
-  l,
+  o,
   v,
   D,
   b,
-  H
+  Z
 ]);
   return (0, i.jsxs)(u.Menu, {
 onSelect: n,
@@ -242,7 +242,7 @@ children: [
     navigable: !1,
     disabled: !0
   }, 'menu-image-recs-placeholder') : (0, i.jsx)(i.Fragment, {
-    children: Z.map(e => (0, i.jsx)(u.MenuItem, {
+    children: H.map(e => (0, i.jsx)(u.MenuItem, {
       id: e.command.id,
       action: () => V(e.command),
       render: n => (0, i.jsx)(L, {
@@ -259,11 +259,11 @@ function L(e) {
   let {
 command: n,
 application: t,
-isFocused: o
+isFocused: l
   } = e;
   return (0, i.jsxs)('div', {
 className: a()(y.item, y.labelContainer, y.colorDefault, {
-  [y.focused]: o
+  [y.focused]: l
 }),
 children: [
   (0, i.jsx)('div', {
@@ -278,7 +278,7 @@ children: [
     children: [
       (0, i.jsx)('div', {
         className: a()(S.name, {
-          [S.focused]: o
+          [S.focused]: l
         }),
         children: n.name
       }),

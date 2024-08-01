@@ -9,8 +9,8 @@ return m;
 var i = t(735250);
 t(470079);
 var o = t(481060),
-  l = t(777036),
-  a = t(154921),
+  a = t(777036),
+  l = t(154921),
   r = t(970184),
   s = t(471073),
   u = t(293979),
@@ -28,8 +28,8 @@ components: m,
 applicationIconURL: h,
 applicationName: I,
 submissionState: _,
-error: C,
-validators: g,
+error: g,
+validators: C,
 onSubmit: b
   } = (0, u.X9)(e, t);
   return (0, i.jsx)('form', {
@@ -48,9 +48,9 @@ children: (0, i.jsxs)(o.ModalRoot, {
           'aria-label': I,
           className: p.applicationIcon
         }),
-        (0, i.jsx)(a.Z, {
-          color: a.Z.Colors.HEADER_PRIMARY,
-          size: a.Z.Sizes.SIZE_24,
+        (0, i.jsx)(l.Z, {
+          color: l.Z.Colors.HEADER_PRIMARY,
+          size: l.Z.Sizes.SIZE_24,
           children: n
         }),
         (0, i.jsx)(o.ModalCloseButton, {
@@ -61,13 +61,13 @@ children: (0, i.jsxs)(o.ModalRoot, {
     }),
     (0, i.jsxs)(o.ModalContent, {
       children: [
-        null != C && '' !== C ? (0, i.jsx)(l.Z, {
-          messageType: l.Q.ERROR,
+        null != g && '' !== g ? (0, i.jsx)(a.Z, {
+          messageType: a.Q.ERROR,
           className: p.submissionWarning,
-          children: C
+          children: g
         }) : null,
-        (0, i.jsx)(l.Z, {
-          messageType: l.Q.WARNING,
+        (0, i.jsx)(a.Z, {
+          messageType: a.Q.WARNING,
           className: p.submissionWarning,
           children: c.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({
             applicationName: I
@@ -76,7 +76,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
         (0, i.jsx)(o.FormSection, {
           children: (0, i.jsx)(r.Il, {
             modal: e,
-            validators: g,
+            validators: C,
             children: (0, d.xX)(m)
           })
         })
