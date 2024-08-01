@@ -21,62 +21,60 @@ function p(e) {
   let {
 user: t,
 currentUser: n,
-isHovering: p,
-className: m,
-onClose: I
+className: p,
+onClose: m
   } = e, {
-analyticsLocations: T
+analyticsLocations: I
   } = (0, a.ZP)(), {
-trackUserProfileAction: g,
-...S
+trackUserProfileAction: T,
+...g
   } = (0, l.KZ)(), {
-live: A,
-recent: N,
-stream: v
-  } = (0, d.Z)(t.id), [O] = A, {
-mostRecentActivityEnabled: R
+live: S,
+recent: A,
+stream: N
+  } = (0, d.Z)(t.id), [v] = S, {
+mostRecentActivityEnabled: O
   } = (0, c.z)({
 location: 'UserProfileFeaturedActivity'
-  }), C = i.useMemo(() => N.find(e => o.default.age(e.id) / s.Z.Millis.HOUR < 24), [N]);
-  return null != v ? (0, r.jsx)(f.Z, {
+  }), R = i.useMemo(() => A.find(e => o.default.age(e.id) / s.Z.Millis.HOUR < 24), [A]);
+  return null != N ? (0, r.jsx)(f.Z, {
 user: t,
 currentUser: n,
-stream: v,
-isHovering: p,
-className: m,
-onClose: I,
+stream: N,
+className: p,
+onClose: m,
 onAction: () => {
-  g({
+  T({
     action: 'JOIN_ACTIVITY'
   }), (0, u.Ac)({
     activityType: h.IIU.STREAMING,
-    analyticsLocations: T,
-    ...S
-  }), null == I || I();
+    analyticsLocations: I,
+    ...g
+  }), null == m || m();
 }
-  }) : null != O ? (0, r.jsx)(_.Z, {
+  }) : null != v ? (0, r.jsx)(_.Z, {
 user: t,
 currentUser: n,
-activity: O,
-className: m,
-onClose: I,
+activity: v,
+className: p,
+onClose: m,
 onAction: () => {
-  g({
+  T({
     action: 'JOIN_ACTIVITY'
   }), (0, u.Ac)({
-    activityType: O.type,
-    activityName: O.name,
-    activityPlatform: O.platform,
-    activitySessionId: O.session_id,
-    applicationId: O.application_id,
-    analyticsLocations: T,
-    ...S
-  }), null == I || I();
+    activityType: v.type,
+    activityName: v.name,
+    activityPlatform: v.platform,
+    activitySessionId: v.session_id,
+    applicationId: v.application_id,
+    analyticsLocations: I,
+    ...g
+  }), null == m || m();
 }
-  }) : R && null != C ? (0, r.jsx)(E.Z, {
+  }) : O && null != R ? (0, r.jsx)(E.Z, {
 user: t,
-entry: C,
-className: m,
-onClose: I
+entry: R,
+className: p,
+onClose: m
   }) : null;
 }

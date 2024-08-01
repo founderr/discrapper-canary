@@ -111,7 +111,6 @@ children: [
   F || V ? (0, r.jsx)(h.Z, {
     user: t,
     currentUser: n,
-    isHovering: b,
     onClose: U
   }) : (0, r.jsx)(A.Z, {
     user: t,
