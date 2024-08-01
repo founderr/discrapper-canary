@@ -6,35 +6,35 @@ var i = n(735250),
   l = n(481060),
   o = n(230711),
   c = n(410030),
-  d = n(100527),
-  u = n(252618),
-  _ = n(353926),
-  h = n(212476),
-  E = n(374939),
-  I = n(611928),
-  m = n(791734),
-  g = n(703656),
-  p = n(63063),
-  T = n(113434),
-  S = n(709158),
-  f = n(710914),
-  C = n(906739),
-  N = n(452081),
+  d = n(252618),
+  u = n(353926),
+  _ = n(212476),
+  h = n(374939),
+  E = n(611928),
+  I = n(791734),
+  m = n(703656),
+  g = n(63063),
+  p = n(113434),
+  T = n(709158),
+  S = n(710914),
+  f = n(906739),
+  C = n(452081),
+  N = n(46140),
   A = n(981631),
   v = n(689938),
   Z = n(852595);
 t.Z = function(e) {
-  let {} = e, t = (0, S.Z)(d.Z.QUEST_HOME_PAGE), {
+  let {} = e, t = (0, T.Z)(N.dr.QUEST_HOME_DESKTOP), {
 tabs: L,
 selectedTab: O,
 onSelectTab: R
-  } = (0, N.z)(), {
+  } = (0, C.z)(), {
 onScroll: x,
 scrollPosition: b
-  } = (0, h.c)(), P = (0, c.ZP)(), M = (0, r.wj)(P), D = (0, a.e7)([_.Z], () => _.Z.hasLoadedExperiments), {
+  } = (0, _.c)(), P = (0, c.ZP)(), M = (0, r.wj)(P), D = (0, a.e7)([u.Z], () => u.Z.hasLoadedExperiments), {
 quests: y,
 isFetchingCurrentQuests: j
-  } = (0, T.bA)(O), U = (0, C.Z)(), G = null;
+  } = (0, p.bA)(O), U = (0, f.Z)(), G = null;
   if (window.location.hash.length > 0) {
 let e = window.location.hash.slice(1);
 for (let t of y)
@@ -44,38 +44,38 @@ for (let t of y)
   }
   }
   s.useEffect(() => {
-D && !t && ((0, g.dL)(A.Z5c.FRIENDS), o.Z.open(A.oAB.INVENTORY));
+D && !t && ((0, m.dL)(A.Z5c.FRIENDS), o.Z.open(A.oAB.INVENTORY));
   }, [
 D,
 t
   ]), s.useEffect(() => {}, []);
   let k = s.useCallback(() => {
-window.open(p.Z.getArticleURL(A.BhN.QUESTS_LEARN_MORE));
+window.open(g.Z.getArticleURL(A.BhN.QUESTS_LEARN_MORE));
   }, []);
-  return ((0, u.Tt)({
+  return ((0, d.Tt)({
 location: v.Z.Messages.QUESTS
   }), t && D) ? (0, i.jsxs)('div', {
 className: Z.container,
 children: [
-  (0, i.jsxs)(I.ZP, {
+  (0, i.jsxs)(E.ZP, {
     children: [
       (0, i.jsx)('div', {
         className: Z.dragRegion
       }),
-      (0, i.jsx)(I.z6, {
+      (0, i.jsx)(E.z6, {
         scrollPosition: b
       }),
-      (0, i.jsx)(I.aV, {
+      (0, i.jsx)(E.aV, {
         icon: l.QuestsIcon
       }),
-      (0, i.jsx)(m.Z, {
+      (0, i.jsx)(I.Z, {
         tabs: L,
         selectedTab: O,
         onTabSelect: R
       })
     ]
   }),
-  (0, i.jsx)(E.Z, {
+  (0, i.jsx)(h.Z, {
     title: v.Z.Messages.QUESTS_HOME_HERO_TITLE,
     description: v.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
     backgroundImageUrl: U,
@@ -105,7 +105,7 @@ children: [
     }),
     children: j && 0 === y.length ? (0, i.jsx)(l.Spinner, {
       className: Z.spinner
-    }) : 0 === y.length && O === T.e5.CLAIMED ? (0, i.jsxs)(l.EmptyState, {
+    }) : 0 === y.length && O === p.e5.CLAIMED ? (0, i.jsxs)(l.EmptyState, {
       theme: P,
       children: [
         (0, i.jsx)(l.EmptyStateImage, {
@@ -116,13 +116,13 @@ children: [
         }),
         (0, i.jsx)(l.EmptyStateText, {
           note: v.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({
-            onClick: () => R(T.e5.UNCLAIMED)
+            onClick: () => R(p.e5.UNCLAIMED)
           })
         })
       ]
     }) : (0, i.jsx)('div', {
       className: Z.gridContainer,
-      children: (0, i.jsx)(f.Z, {
+      children: (0, i.jsx)(S.Z, {
         quests: y,
         selectedQuestId: G
       })

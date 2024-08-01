@@ -14,34 +14,34 @@ var i = n(735250),
   I = n(212093),
   m = n(827837),
   g = n(785570),
-  p = n(100527),
-  T = n(963202),
-  S = n(252618),
-  f = n(440190),
-  C = n(665149),
-  N = n(5955),
-  A = n(121711),
-  v = n(709158),
-  Z = n(703656),
-  L = n(108427),
-  O = n(706454),
-  R = n(210887),
-  x = n(480294),
-  b = n(683301),
-  P = n(430824),
-  M = n(230307),
-  D = n(900849),
-  y = n(879484),
-  j = n(117496),
-  U = n(296386),
-  G = n(150192),
-  k = n(769727),
-  w = n(584885),
-  B = n(59222),
-  H = n(749436),
-  V = n(26580),
-  F = n(731455),
-  Y = n(981631),
+  p = n(963202),
+  T = n(252618),
+  S = n(440190),
+  f = n(665149),
+  C = n(5955),
+  N = n(121711),
+  A = n(709158),
+  v = n(703656),
+  Z = n(108427),
+  L = n(706454),
+  O = n(210887),
+  R = n(480294),
+  x = n(683301),
+  b = n(430824),
+  P = n(230307),
+  M = n(900849),
+  D = n(879484),
+  y = n(117496),
+  j = n(296386),
+  U = n(150192),
+  G = n(769727),
+  k = n(584885),
+  w = n(59222),
+  B = n(749436),
+  H = n(26580),
+  V = n(731455),
+  F = n(981631),
+  Y = n(46140),
   W = n(689938),
   z = n(468918),
   K = n(368179),
@@ -68,9 +68,9 @@ let {
   currentHomepageCategoryId: l,
   mostRecentQuery: o
 } = this.props;
-if ((0, m.N)(), (0, U.le)(), null == b.ZP.getSearchIndex() && (0, I.Ue)(), E.Z.wait(() => {
-    (0, g.M)(Y.x8Z.SERVER_DISCOVERY_BADGE);
-  }), !i && 0 === o.length && D.Zt({
+if ((0, m.N)(), (0, j.le)(), null == x.ZP.getSearchIndex() && (0, I.Ue)(), E.Z.wait(() => {
+    (0, g.M)(F.x8Z.SERVER_DISCOVERY_BADGE);
+  }), !i && 0 === o.length && M.Zt({
     loadId: this.loadId,
     gamesYouPlayGuilds: s.guilds,
     allGuilds: a.guilds,
@@ -88,16 +88,16 @@ if ((0, m.N)(), (0, U.le)(), null == b.ZP.getSearchIndex() && (0, I.Ue)(), E.Z.w
     preferredLocale: i,
     offset: parseInt(t, 10),
     filters: {
-      approximate_member_count: D.sq
+      approximate_member_count: M.sq
     },
     length: parseInt(n, 10)
   });
 } else
-  null != l && l !== F.Hk && E.Z.wait(() => (0, I.uY)(l));
-let d = null !== (t = null === (e = (0, Z.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
+  null != l && l !== V.Hk && E.Z.wait(() => (0, I.uY)(l));
+let d = null !== (t = null === (e = (0, v.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
 d > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({
   to: d
-})), (0, L.e)('guild_discovery');
+})), (0, Z.e)('guild_discovery');
   }
   componentDidUpdate(e) {
 let {
@@ -110,7 +110,7 @@ let {
   currentHomepageCategoryId: a,
   currentCategoryId: r
 } = this.props;
-if (e.isFetching && !i && D.Zt({
+if (e.isFetching && !i && M.Zt({
     loadId: this.loadId,
     gamesYouPlayGuilds: t.guilds,
     allGuilds: n.guilds,
@@ -121,7 +121,7 @@ if (e.isFetching && !i && D.Zt({
     to: 0
   });
 }
-e.currentCategoryId !== r && D.Az(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && a !== r && (0, I.uY)(a);
+e.currentCategoryId !== r && M.Az(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && a !== r && (0, I.uY)(a);
   }
   componentWillUnmount() {
 let {
@@ -129,7 +129,7 @@ let {
   recommendationsLoadId: t,
   recommendationsGuilds: n
 } = this.props;
-e === F.Hk ? null != n && null != t && D.Az(t, this.getOrderedGuildIdsSeen(n.map(e => e.id)), 'Game Recommendations') : D.Az(this.loadId, Array.from(this._guildIdsSeen));
+e === V.Hk ? null != n && null != t && M.Az(t, this.getOrderedGuildIdsSeen(n.map(e => e.id)), 'Game Recommendations') : M.Az(this.loadId, Array.from(this._guildIdsSeen));
   }
   getOrderedGuildIdsSeen(e) {
 return e.filter(e => this._guildIdsSeen.has(e));
@@ -140,17 +140,17 @@ let {
   mightHaveGamesYouPlay: t,
   theme: n,
   userGuilds: s
-} = this.props, a = Object.keys(s), r = e[Y.Lcj.GAMES_YOU_PLAY];
+} = this.props, a = Object.keys(s), r = e[F.Lcj.GAMES_YOU_PLAY];
 r.guilds = r.guilds.filter(e => !a.includes(e.id));
 let {
   loadingGuildId: l
 } = this.state;
-return t ? (0, i.jsx)(w.Z, {
+return t ? (0, i.jsx)(k.Z, {
   loadId: this.loadId,
   title: W.Z.Messages.GUILD_DISCOVERY_HEADER_GAMES_YOU_PLAY,
   guildsData: r,
   loadingGuildId: l,
-  analyticsContext: D.P1.RECOMMENDED,
+  analyticsContext: M.P1.RECOMMENDED,
   onViewGuild: this.handleViewGuild,
   onGuildCardSeen: this.handleGuildCardSeen,
   fetchGuilds: I.gk,
@@ -170,21 +170,21 @@ let {
   categories: o,
   currentCategoryName: c
 } = this.props;
-y.w.trackExposure({
+D.w.trackExposure({
   location: '54961b_1'
 });
 let {
   shouldDisplayRecommendedSearchTags: d
-} = y.w.getCurrentConfig({
+} = D.w.getCurrentConfig({
   location: '54961b_2'
 }, {
   autoTrackExposure: !1
-}), u = d ? l === F.Hk ? W.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER_TAGS : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER_TAGS.format({
+}), u = d ? l === V.Hk ? W.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER_TAGS : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER_TAGS.format({
   categoryName: c
-}) : l === F.Hk ? W.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
+}) : l === V.Hk ? W.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
   categoryName: c
-}), _ = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[l]) && void 0 !== t ? t : b.xk;
-return (0, i.jsx)(H.Z, {
+}), _ = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[l]) && void 0 !== t ? t : x.xk;
+return (0, i.jsx)(B.Z, {
   loadId: this.loadId,
   searchResults: _,
   mostRecentQuery: n,
@@ -210,10 +210,10 @@ let {
   currentCategoryName: d
 } = this.props, {
   loadingGuildId: u
-} = this.state, _ = c === F.Hk ? W.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
+} = this.state, _ = c === V.Hk ? W.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
   categoryName: d
-}), h = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[c]) && void 0 !== t ? t : b.xk;
-return (0, i.jsx)(B.Z, {
+}), h = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[c]) && void 0 !== t ? t : x.xk;
+return (0, i.jsx)(w.Z, {
   loadId: this.loadId,
   availableLanguages: a,
   defaultLanguage: r,
@@ -228,7 +228,7 @@ return (0, i.jsx)(B.Z, {
   theme: o,
   onViewGuild: this.handleViewGuild,
   onGuildCardSeen: this.handleGuildCardSeen,
-  onTagClick: (e, t) => this.handleTagSearch(e, t, D.P1.SEARCH)
+  onTagClick: (e, t) => this.handleTagSearch(e, t, M.P1.SEARCH)
 });
   }
   renderRecommendedGuildsSection() {
@@ -238,17 +238,17 @@ let {
 } = this.props, {
   loadingGuildId: n
 } = this.state;
-return (0, i.jsx)(w.Z, {
+return (0, i.jsx)(k.Z, {
   loadId: this.loadId,
   title: W.Z.Messages.GUILD_DISCOVERY_FEATURED_HEADER,
   guildsData: e.featured,
-  analyticsContext: D.P1.POPULAR,
+  analyticsContext: M.P1.POPULAR,
   onViewGuild: this.handleViewGuild,
   onGuildCardSeen: this.handleGuildCardSeen,
   fetchGuilds: () => (0, I.$z)(0, 30),
   loadingGuildId: n,
   theme: t,
-  onTagClick: (e, t) => this.handleTagSearch(e, t, D.P1.POPULAR)
+  onTagClick: (e, t) => this.handleTagSearch(e, t, M.P1.POPULAR)
 });
   }
   renderPopularGuildsSection() {
@@ -259,18 +259,18 @@ let {
 } = this.props, {
   loadingGuildId: s
 } = this.state;
-return (0, i.jsx)(w.Z, {
+return (0, i.jsx)(k.Z, {
   loadId: this.loadId,
   title: W.Z.Messages.GUILD_DISCOVERY_POPULAR_HEADER,
   guildsData: e[n],
   loadingGuildId: s,
-  analyticsContext: D.P1.POPULAR,
+  analyticsContext: M.P1.POPULAR,
   onViewGuild: this.handleViewGuild,
   onGuildCardSeen: this.handleGuildCardSeen,
   fetchGuilds: () => (0, I.K5)(n),
   currentCategoryId: n,
   theme: t,
-  onTagClick: (e, t) => this.handleTagSearch(e, t, D.P1.POPULAR)
+  onTagClick: (e, t) => this.handleTagSearch(e, t, M.P1.POPULAR)
 });
   }
   render() {
@@ -281,27 +281,27 @@ let {
   currentCategoryId: l,
   guilds: c
 } = this.props, d = a.length > 0;
-y.w.trackExposure({
+D.w.trackExposure({
   location: '54961b_3'
 });
 let {
   shouldDisplayRecommendedSearchTags: _
-} = y.w.getCurrentConfig({
+} = D.w.getCurrentConfig({
   location: '54961b_4'
 }, {
   autoTrackExposure: !1
-}), E = l === F.Hk ? null === (e = c[Y.Lcj.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = c[l]) || void 0 === t ? void 0 : t.guilds;
-if (l === F.U)
-  return (0, i.jsx)(N.Z, {
+}), E = l === V.Hk ? null === (e = c[F.Lcj.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = c[l]) || void 0 === t ? void 0 : t.guilds;
+if (l === V.U)
+  return (0, i.jsx)(C.Z, {
     loadId: this.loadId
   });
-let I = l === F.Hk ? W.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
+let I = l === V.Hk ? W.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
   categoryName: n
 });
 return (0, i.jsxs)('div', {
   className: z.pageWrapper,
   children: [
-    (0, i.jsx)(S.yY, {
+    (0, i.jsx)(T.yY, {
       subsection: d ? a : void 0,
       location: I
     }),
@@ -310,7 +310,7 @@ return (0, i.jsxs)('div', {
         [z.searchPageDrag]: d
       })
     }),
-    u.tq && (0, i.jsx)(C.ZP, {
+    u.tq && (0, i.jsx)(f.ZP, {
       children: (0, i.jsx)(s.Fragment, {})
     }),
     (0, i.jsx)(h.AdvancedScrollerAuto, {
@@ -339,22 +339,22 @@ return (0, i.jsxs)('div', {
                     (0, i.jsx)(h.Heading, {
                       variant: 'heading-xl/semibold',
                       className: z.searchTitle,
-                      children: l === F.Hk ? W.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
+                      children: l === V.Hk ? W.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : W.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
                         categoryName: n
                       })
                     }),
                     (0, i.jsx)(h.Text, {
                       variant: 'text-md/normal',
                       className: z.searchSubtitle,
-                      children: l === F.Hk && W.Z.Messages.GUILD_DISCOVERY_HOME_SUBTITLE
+                      children: l === V.Hk && W.Z.Messages.GUILD_DISCOVERY_HOME_SUBTITLE
                     }),
                     this.renderSearchBar(),
-                    _ && (0, i.jsx)(V.F, {
+                    _ && (0, i.jsx)(H.F, {
                       hideOverflow: !0,
-                      section: D.P1.HEADER,
+                      section: M.P1.HEADER,
                       className: z.headerTagContainer,
-                      discoveryTagStyle: V.B.LIGHT,
-                      onTagClick: e => this.handleTagSearch(e, void 0, D.P1.HEADER),
+                      discoveryTagStyle: H.B.LIGHT,
+                      onTagClick: e => this.handleTagSearch(e, void 0, M.P1.HEADER),
                       tags: o().chain(E).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
                     })
                   ]
@@ -365,7 +365,7 @@ return (0, i.jsxs)('div', {
           children: [
             (0, i.jsx)('div', {
               className: z.__invalid_featuredBody,
-              children: l === F.Hk ? this.renderRecommendedGuildsSection() : this.renderPopularGuildsSection()
+              children: l === V.Hk ? this.renderRecommendedGuildsSection() : this.renderPopularGuildsSection()
             }),
             (0, i.jsxs)('div', {
               className: z.footer,
@@ -396,7 +396,7 @@ return (0, i.jsxs)('div', {
 });
   }
   constructor(...e) {
-super(...e), Q(this, '_scroller', s.createRef()), Q(this, '_guildIdsSeen', new Set()), Q(this, 'loadId', (0, j.P)()), Q(this, 'state', {
+super(...e), Q(this, '_scroller', s.createRef()), Q(this, '_guildIdsSeen', new Set()), Q(this, 'loadId', (0, y.P)()), Q(this, 'state', {
   animatedValue: new d.Z.Value(0),
   loadingGuildId: null
 }), Q(this, 'scrollToTop', () => {
@@ -421,16 +421,16 @@ super(...e), Q(this, '_scroller', s.createRef()), Q(this, '_guildIdsSeen', new S
   let o = null !== (a = null === (s = this._scroller.current) || void 0 === s ? void 0 : s.getScrollerState().scrollTop) && void 0 !== a ? a : 0,
     {
       location: c
-    } = (0, Z.s1)();
-  (0, Z.dL)({
+    } = (0, v.s1)();
+  (0, v.dL)({
     ...c,
     state: o
   }), this.setState({
     loadingGuildId: e
   });
-  let d = r !== F.Hk ? r : null;
+  let d = r !== V.Hk ? r : null;
   try {
-    await D.Lq({
+    await M.Lq({
       loadId: null != i ? i : this.loadId,
       guildId: e,
       index: t,
@@ -452,49 +452,49 @@ super(...e), Q(this, '_scroller', s.createRef()), Q(this, '_guildIdsSeen', new S
   if (null == i)
     return;
   let a = {
-    approximate_member_count: D.sq
+    approximate_member_count: M.sq
   };
   (0, I.G7)(e, a), (0, I.bR)(e, {
     filters: a,
     categoryId: i,
     preferredLocale: s.code,
     offset: 0,
-    length: B.D,
+    length: w.D,
     tag: !0
-  }), D.j$(this.loadId, i, n, t), this.scrollToTop();
+  }), M.j$(this.loadId, i, n, t), this.scrollToTop();
 });
   }
 }
 let J = _.ZP.connectStores([
+  O.Z,
+  L.default,
+  P.Z,
   R.Z,
-  O.default,
-  M.Z,
-  x.Z,
-  b.ZP,
-  G.Z,
-  P.Z
+  x.ZP,
+  U.Z,
+  b.Z
 ], () => {
   var e;
-  let t = F.dU,
-n = O.default.locale,
+  let t = V.dU,
+n = L.default.locale,
 i = null !== (e = o().find(t, {
   code: n
 })) && void 0 !== e ? e : t[0],
-s = Object.keys(M.Z.applicationStatistics),
-a = x.Z.hasConsented(Y.pjP.PERSONALIZATION) && s.length > 0,
-r = b.ZP.getCurrentCategoryId(),
-l = b.ZP.getCurrentHomepageCategoryId();
+s = Object.keys(P.Z.applicationStatistics),
+a = R.Z.hasConsented(F.pjP.PERSONALIZATION) && s.length > 0,
+r = x.ZP.getCurrentCategoryId(),
+l = x.ZP.getCurrentHomepageCategoryId();
   return {
-isFetching: b.ZP.isFetching(),
-isFetchingSearch: b.ZP.isFetchingSearch(),
-guilds: b.ZP.getDiscoverableGuilds(),
-mostRecentQuery: b.ZP.getMostRecentQuery(),
+isFetching: x.ZP.isFetching(),
+isFetchingSearch: x.ZP.isFetchingSearch(),
+guilds: x.ZP.getDiscoverableGuilds(),
+mostRecentQuery: x.ZP.getMostRecentQuery(),
 currentCategoryId: r,
 currentHomepageCategoryId: l,
-currentCategoryName: G.Z.getCategoryName(r),
-categories: G.Z.getDiscoveryCategories(),
-userGuilds: P.Z.getGuilds(),
-theme: R.Z.theme,
+currentCategoryName: U.Z.getCategoryName(r),
+categories: U.Z.getDiscoveryCategories(),
+userGuilds: b.Z.getGuilds(),
+theme: O.Z.theme,
 mightHaveGamesYouPlay: a,
 availableLanguages: t,
 defaultLanguage: i
@@ -508,10 +508,10 @@ searchRoute: t
 fetching: n,
 loadId: s,
 recommendedGuilds: a
-  } = (0, _.cj)([f.Z], () => ({
-recommendedGuilds: f.Z.getRecommendedGuilds(),
-loadId: f.Z.getLoadId(),
-fetching: f.Z.isFetching()
+  } = (0, _.cj)([S.Z], () => ({
+recommendedGuilds: S.Z.getRecommendedGuilds(),
+loadId: S.Z.getLoadId(),
+fetching: S.Z.isFetching()
   }));
   return (0, i.jsx)(J, {
 searchRoute: t,
@@ -526,13 +526,13 @@ t.Z = function(e) {
 searchRoute: t
   } = e, {
 guilds: n
-  } = (0, T.C3)({
+  } = (0, p.C3)({
 location: 'guild_discovery',
 includeConverted: !0
   }), s = n.length > 0, {
 clanDiscoveryEnabled: a
-  } = (0, T.nk)('guild_discovery'), r = (0, _.e7)([b.ZP], () => b.ZP.getCurrentCategoryId()), l = (0, _.e7)([b.ZP], () => b.ZP.getIsReady()), o = (0, v.Z)(p.Z.QUEST_HOME_PAGE);
-  return (s || a) && (!l || r === F.Gj.Clans) ? (0, i.jsx)(k.Z, {}) : o && r === F.Gj.Quests ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)($, {
+  } = (0, p.nk)('guild_discovery'), r = (0, _.e7)([x.ZP], () => x.ZP.getCurrentCategoryId()), l = (0, _.e7)([x.ZP], () => x.ZP.getIsReady()), o = (0, A.Z)(Y.dr.QUEST_HOME_DESKTOP);
+  return (s || a) && (!l || r === V.Gj.Clans) ? (0, i.jsx)(G.Z, {}) : o && r === V.Gj.Quests ? (0, i.jsx)(N.Z, {}) : (0, i.jsx)($, {
 searchRoute: t
   });
 };
