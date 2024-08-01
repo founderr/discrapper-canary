@@ -44,7 +44,7 @@ let {
   height: t,
   scrollHeight: n
 } = e;
-null != t && null != n && t < n && M(!0);
+null != t && null != n && n - t > 1 && M(!0);
   }, [M]);
   let D = (null === (n = S.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
 y = (null === (a = S.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
