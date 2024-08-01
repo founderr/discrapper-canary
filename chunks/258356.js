@@ -11,8 +11,8 @@ n(470079);
 var r = n(481060),
   i = n(565138),
   a = n(372769),
-  o = n(742593),
-  l = n(390072),
+  l = n(742593),
+  o = n(390072),
   c = n(601964),
   u = n(230224),
   d = n(689938),
@@ -29,7 +29,7 @@ isSubmitting: c
   return (0, s.jsxs)('div', {
 className: _.guildEventCard,
 children: [
-  (0, s.jsx)(o.ZP, {
+  (0, s.jsx)(l.ZP, {
     name: n.name,
     description: null !== (t = n.description) && void 0 !== t ? t : void 0,
     headerVariant: 'heading-md/medium',
@@ -40,7 +40,7 @@ children: [
   }),
   null != i && (0, s.jsx)('div', {
     className: _.channelInfo,
-    children: (0, s.jsx)(l.Z, {
+    children: (0, s.jsx)(o.Z, {
       guildScheduledEvent: n,
       channel: i
     })
@@ -60,10 +60,10 @@ function E(e) {
   var t;
   let {
 invite: n
-  } = e, o = null != n.guild ? new c.ZP(n.guild) : null;
-  if (null == o)
+  } = e, l = null != n.guild ? new c.ZP(n.guild) : null;
+  if (null == l)
 return null;
-  let l = null !== (t = o.description) && void 0 !== t ? t : '';
+  let o = null !== (t = l.description) && void 0 !== t ? t : '';
   return (0, s.jsxs)('div', {
 className: _.guildInfoCard,
 children: [
@@ -76,7 +76,7 @@ children: [
     className: _.guildContainer,
     children: [
       (0, s.jsx)(i.Z, {
-        guild: o,
+        guild: l,
         active: !0,
         size: i.Z.Sizes.MEDIUM
       }),
@@ -89,9 +89,9 @@ children: [
             variant: 'text-sm/medium',
             tag: 'span',
             children: [
-              o.name,
+              l.name,
               (0, s.jsx)(a.Z, {
-                guild: o,
+                guild: l,
                 className: _.guildBadge,
                 tooltipPosition: 'left'
               })
@@ -106,12 +106,12 @@ children: [
       })
     ]
   }),
-  l.length > 0 && (0, s.jsx)('details', {
+  o.length > 0 && (0, s.jsx)('details', {
     className: _.guildDescriptionContainer,
     children: (0, s.jsx)(r.Text, {
       color: 'header-secondary',
       variant: 'text-sm/normal',
-      children: l
+      children: o
     })
   })
 ]

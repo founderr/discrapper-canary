@@ -79,8 +79,8 @@ null != l && (0, d.jW)(e, async () => {
 });
   }, [t.id]), k = null == O ? 0 : O.length, {
 role: B,
-...V
-  } = (0, s.JA)(t.id), H = l.useRef(null), F = j > 0 ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
+...H
+  } = (0, s.JA)(t.id), V = l.useRef(null), F = j > 0 ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
 channelName: t.name,
 mentionCount: j
   }) : P ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({
@@ -104,8 +104,8 @@ children: [
     }
   }),
   (0, i.jsx)(c.FocusRing, {
-    focusTarget: H,
-    ringTarget: H,
+    focusTarget: V,
+    ringTarget: V,
     offset: {
       top: 2,
       bottom: 2,
@@ -125,8 +125,8 @@ children: [
           className: a()(L.unread, L.unreadImportant)
         }),
         (0, i.jsx)(c.Clickable, {
-          ...V,
-          innerRef: H,
+          ...H,
+          innerRef: V,
           className: L.link,
           onClick: U,
           'aria-label': F,

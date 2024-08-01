@@ -18,17 +18,17 @@ currentUser: c
   } = e, {
 live: u,
 recent: I,
-stream: f
-  } = (0, o.Z)(d.id), _ = null === (s = (0, l.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualFriends) || void 0 === s ? void 0 : s.length, m = null === (i = (0, t.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualGuilds) || void 0 === i ? void 0 : i.length, E = [{
+stream: _
+  } = (0, o.Z)(d.id), f = null === (s = (0, l.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualFriends) || void 0 === s ? void 0 : s.length, m = null === (i = (0, t.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualGuilds) || void 0 === i ? void 0 : i.length, E = [{
 section: a.oh.USER_INFO,
 text: r.Z.Messages.USER_PROFILE_ABOUT_ME
   }];
-  return (u.length > 0 || I.length > 0 || null != f) && E.push({
+  return (u.length > 0 || I.length > 0 || null != _) && E.push({
 section: a.oh.ACTIVITY,
 text: r.Z.Messages.USER_PROFILE_ACTIVITY
   }), d.id !== (null == c ? void 0 : c.id) && (E.push({
 section: a.oh.MUTUAL_FRIENDS,
-text: (0, n.EQ)(_).with(void 0, () => r.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => r.Z.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => r.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
+text: (0, n.EQ)(f).with(void 0, () => r.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => r.Z.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => r.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
   count: e
 }))
   }), E.push({

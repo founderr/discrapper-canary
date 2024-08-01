@@ -21,7 +21,7 @@ return w;
 return v;
   },
   ML: function() {
-return Z;
+return P;
   },
   N$: function() {
 return m;
@@ -42,7 +42,7 @@ return J;
 return p;
   },
   lU: function() {
-return P;
+return f;
   },
   nm: function() {
 return j;
@@ -54,7 +54,7 @@ return X;
 return b;
   },
   pY: function() {
-return f;
+return Z;
   },
   uB: function() {
 return B;
@@ -69,8 +69,8 @@ return z;
 var s = E(654861),
   T = E.n(s),
   I = E(149765),
-  n = E(866442),
-  A = E(144830),
+  A = E(866442),
+  n = E(144830),
   t = E(911969),
   a = E(933557),
   r = E(710845),
@@ -82,8 +82,8 @@ var s = E(654861),
   U = E(592125),
   G = E(430824),
   O = E(699516),
-  i = E(594174),
-  M = E(971130),
+  M = E(594174),
+  i = E(971130),
   R = E(709054),
   u = E(981631),
   o = E(765305),
@@ -93,7 +93,7 @@ let C = new r.Z('AuditLogUtils'),
   d = () => ({
 [u.zUn.REASON]: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
   }),
-  f = () => ({
+  Z = () => ({
 [u.zUn.NAME]: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
 [u.zUn.DESCRIPTION]: eT(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE),
 [u.zUn.ICON_HASH]: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
@@ -145,7 +145,7 @@ let C = new r.Z('AuditLogUtils'),
 [u.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
 ...d()
   }),
-  Z = () => ({
+  P = () => ({
 [u.zUn.NAME]: es(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
 [u.zUn.POSITION]: es(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE),
 [u.zUn.TOPIC]: eI(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR),
@@ -165,7 +165,7 @@ let C = new r.Z('AuditLogUtils'),
 [u.zUn.VIDEO_QUALITY_MODE]: es(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE),
 [u.zUn.DEFAULT_AUTO_ARCHIVE_DURATION]: es(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE)
   }),
-  P = () => ({
+  f = () => ({
 [u.zUn.NICK]: eI(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE),
 [u.zUn.DEAF]: {
   true: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,
@@ -576,16 +576,16 @@ default:
   }
 }
 let k = {
-  [A.J6.SECONDS]: e => c.Z.Messages.DURATION_SECONDS.format({
+  [n.J6.SECONDS]: e => c.Z.Messages.DURATION_SECONDS.format({
 seconds: e
   }),
-  [A.J6.MINUTES]: e => c.Z.Messages.DURATION_MINUTES.format({
+  [n.J6.MINUTES]: e => c.Z.Messages.DURATION_MINUTES.format({
 minutes: e
   }),
-  [A.J6.HOURS]: e => c.Z.Messages.DURATION_HOURS.format({
+  [n.J6.HOURS]: e => c.Z.Messages.DURATION_HOURS.format({
 hours: e
   }),
-  [A.J6.DAYS]: e => c.Z.Messages.DURATION_DAYS.format({
+  [n.J6.DAYS]: e => c.Z.Messages.DURATION_DAYS.format({
 days: e
   })
 };
@@ -601,16 +601,16 @@ case null != _:
       s = R.default.extractTimestamp(e.id),
       T = Math.round((E - s) / 1000 / 60),
       I = [
-        A.J6.DAYS,
-        A.J6.HOURS,
-        A.J6.MINUTES,
-        A.J6.SECONDS
+        n.J6.DAYS,
+        n.J6.HOURS,
+        n.J6.MINUTES,
+        n.J6.SECONDS
       ],
-      n = (0, A.CI)(T, I);
-    if (null == n.unit || null == n.time)
+      A = (0, n.CI)(T, I);
+    if (null == A.unit || null == A.time)
       return null;
-    if (n.unit in k)
-      return k[n.unit](n.time);
+    if (A.unit in k)
+      return k[A.unit](A.time);
     return null;
   }
   if ((null == _ ? void 0 : _.oldValue) != null)
@@ -925,9 +925,9 @@ let s = function(e, _) {
         return _;
       case u.KFR.CHANNEL:
       case u.KFR.CHANNEL_OVERWRITE:
-        return e_(e, u.zUn.NAME, e => U.Z.getChannel(e), e => (0, a.F6)(e, i.default, O.Z, !0));
+        return e_(e, u.zUn.NAME, e => U.Z.getChannel(e), e => (0, a.F6)(e, M.default, O.Z, !0));
       case u.KFR.USER:
-        return e_(e, u.zUn.NICK, e => i.default.getUser(e), void 0);
+        return e_(e, u.zUn.NICK, e => M.default.getUser(e), void 0);
       case u.KFR.ROLE:
         return e_(e, u.zUn.NAME, e => G.Z.getRole(_.id, e), e => e.name);
       case u.KFR.INVITE:
@@ -964,7 +964,7 @@ let s = function(e, _) {
         return C.warn('Unknown targetType for log', e), null;
     }
   }(e, _),
-  I = i.default.getUser(e.userId);
+  I = M.default.getUser(e.userId);
 if (null != I && (null != s || e.action === u.rsA.MEMBER_PRUNE || e.action === u.rsA.MEMBER_DISCONNECT || e.action === u.rsA.MEMBER_MOVE || e.action === u.rsA.CREATOR_MONETIZATION_REQUEST_CREATED || e.action === u.rsA.CREATOR_MONETIZATION_TERMS_ACCEPTED)) {
   if (null != (e = (e = (e = e.set('user', I)).set('target', s)).set('options', function(e) {
       if (null != e.options) {
@@ -974,7 +974,7 @@ if (null != I && (null != s || e.action === u.rsA.MEMBER_PRUNE || e.action === u
         switch (e.options.type) {
           case u.jwA.USER:
             var _, E;
-            (null === (_ = e.options) || void 0 === _ ? void 0 : _.id) != null && (s.subtarget = eE(null == e ? void 0 : null === (E = e.options) || void 0 === E ? void 0 : E.id, e => i.default.getUser(e), e => e.tag));
+            (null === (_ = e.options) || void 0 === _ ? void 0 : _.id) != null && (s.subtarget = eE(null == e ? void 0 : null === (E = e.options) || void 0 === E ? void 0 : E.id, e => M.default.getUser(e), e => e.tag));
             break;
           case u.jwA.ROLE:
             null != e.options.role_name && (s.subtarget = eE(e.options.role_name, u.VqG));
@@ -993,31 +993,31 @@ if (null != I && (null != s || e.action === u.rsA.MEMBER_PRUNE || e.action === u
               e.subtarget = eE(_.id, e => G.Z.getRole(E.id, e), e => e.name);
               break;
             case u.ecB.USER:
-              e.subtarget = eE(_.id, e => i.default.getUser(e), e => e.tag);
+              e.subtarget = eE(_.id, e => M.default.getUser(e), e => e.tag);
               break;
             case u.ecB.CHANNEL:
-              _.id === T()(E.id).subtract(1).toString() ? e.subtarget = c.Z.Messages.ALL_CHANNELS : e.subtarget = eE(_.id, e => U.Z.getChannel(e), e => (0, a.F6)(e, i.default, O.Z, !0));
+              _.id === T()(E.id).subtract(1).toString() ? e.subtarget = c.Z.Messages.ALL_CHANNELS : e.subtarget = eE(_.id, e => U.Z.getChannel(e), e => (0, a.F6)(e, M.default, O.Z, !0));
           }
           return e;
         }
         switch (e.key) {
           case u.zUn.OWNER_ID:
-            return ee(e, e => i.default.getUser(e));
+            return ee(e, e => M.default.getUser(e));
           case u.zUn.CHANNEL_ID:
           case u.zUn.AFK_CHANNEL_ID:
           case u.zUn.SYSTEM_CHANNEL_ID:
           case u.zUn.RULES_CHANNEL_ID:
           case u.zUn.PUBLIC_UPDATES_CHANNEL_ID:
-            return ee(e, e => U.Z.getChannel(e), e => (0, a.F6)(e, i.default, O.Z, !0));
+            return ee(e, e => U.Z.getChannel(e), e => (0, a.F6)(e, M.default, O.Z, !0));
           case u.zUn.AFK_TIMEOUT:
             return ee(e, e => e / 60);
           case u.zUn.BITRATE:
             return ee(e, e => e / 1000);
           case u.zUn.COLOR:
-            return ee(e, e => (0, n.Rf)(e).toUpperCase());
+            return ee(e, e => (0, A.Rf)(e).toUpperCase());
           case u.zUn.MAX_AGE:
             return ee(e, e => {
-              let _ = M.ZP.getMaxAgeOptions.find(_ => {
+              let _ = i.ZP.getMaxAgeOptions.find(_ => {
                 let {
                   value: E
                 } = _;
@@ -1079,8 +1079,8 @@ if (null != I && (null != s || e.action === u.rsA.MEMBER_PRUNE || e.action === u
                   I = (e.newValue & s) === s;
                 if (T === I)
                   return;
-                let n = new l.ms(_[s], !T, !I);
-                E.push(n);
+                let A = new l.ms(_[s], !T, !I);
+                E.push(A);
               }), E;
             }(e);
         }
@@ -1098,18 +1098,18 @@ function $(e, _) {
   let E = I.vB('string' == typeof e ? e : 0),
 s = I.vB('string' == typeof _ ? _ : 0),
 T = I.Od(s, E),
-n = I.Od(E, s),
-A = [],
+A = I.Od(E, s),
+n = [],
 t = [],
 a = {
   ...u.Plq
 };
   for (let e in a) {
 let _ = a[e];
-I.e$(T, _) && A.push(_), I.e$(n, _) && t.push(_);
+I.e$(T, _) && n.push(_), I.e$(A, _) && t.push(_);
   }
   return {
-added: A,
+added: n,
 removed: t
   };
 }
@@ -1122,8 +1122,8 @@ T = e.oldValue;
 
 function e_(e, _, E, s, T) {
   let I = null,
-n = E(T = null != T ? T : e.targetId);
-  if (null != n && null != s && (I = s(n)), null == I && null != n && (I = n), null == I) {
+A = E(T = null != T ? T : e.targetId);
+  if (null != A && null != s && (I = s(A)), null == I && null != A && (I = A), null == I) {
 let _ = L.Z.deletedTargets[e.targetType];
 null != _ && null != _[T] && (I = _[T]);
   }

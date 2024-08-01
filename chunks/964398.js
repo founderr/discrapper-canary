@@ -213,7 +213,7 @@ A,
 y,
 j,
 D
-  ]), V = l.useMemo(() => y[A].map((e, l) => {
+  ]), H = l.useMemo(() => y[A].map((e, l) => {
 let r = h[l];
 if (null == r)
   throw Error('Too many items supplied '.concat(S.length, ' expected max of ').concat(h.length));
@@ -345,7 +345,7 @@ children: (0, i.jsxs)('div', {
         }) : null
       ]
     }),
-    V
+    H
   ]
 })
   });

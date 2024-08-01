@@ -3,8 +3,8 @@ var s = n(735250),
   r = n(470079),
   i = n(593473),
   a = n(990547),
-  o = n(873546),
-  l = n(442837),
+  l = n(873546),
+  o = n(442837),
   c = n(570140),
   u = n(893776),
   d = n(533307),
@@ -50,7 +50,7 @@ var s = n(735250),
   X = n(981631),
   Q = n(188785);
 n(179645);
-l.ZP.initialize();
+o.ZP.initialize();
 let $ = (0, M.Z)(H.Z),
   ee = (0, M.Z)(V.Z),
   et = (0, M.Z)(w.Z),
@@ -59,8 +59,8 @@ let $ = (0, M.Z)(H.Z),
   er = (0, M.Z)(A.Z),
   ei = (0, M.Z)(K.Z),
   ea = (0, M.Z)(j.Z),
-  eo = (0, M.Z)(y.Z),
-  el = (0, M.Z)(J.Z),
+  el = (0, M.Z)(y.Z),
+  eo = (0, M.Z)(J.Z),
   ec = (0, M.Z)(I.Z),
   eu = (0, M.Z)(Y.Z),
   ed = (0, M.Z)(B.Z),
@@ -78,24 +78,24 @@ let {
   location: r
 } = e, {
   backgroundId: a
-} = t, o = null !== (n = (0, i.parse)(r.search).redirect_to) && void 0 !== n ? n : null;
-(null == o || '' === o || !(0, L.B)(o) || o.startsWith(X.Z5c.ME)) && (o = null);
-let l = null;
+} = t, l = null !== (n = (0, i.parse)(r.search).redirect_to) && void 0 !== n ? n : null;
+(null == l || '' === l || !(0, L.B)(l) || l.startsWith(X.Z5c.ME)) && (l = null);
+let o = null;
 if (null == s)
-  l = (0, O.gK)(o);
+  o = (0, O.gK)(l);
 else if ((null == s ? void 0 : s.state) === X.r2o.RESOLVED) {
   let {
     guild: e,
     target_application: t
   } = s;
-  null != t ? null != a && (l = (0, R.getAssetImage)(t.id, a, 1024)) : null != e && 'string' == typeof e.splash && (l = b.ZP.getGuildSplashURL({
+  null != t ? null != a && (o = (0, R.getAssetImage)(t.id, a, 1024)) : null != e && 'string' == typeof e.splash && (o = b.ZP.getGuildSplashURL({
     id: e.id,
     splash: e.splash
   }));
 }
 return {
-  redirectTo: o,
-  splash: l
+  redirectTo: l,
+  splash: o
 };
   }
   componentDidMount() {
@@ -233,7 +233,7 @@ return (0, s.jsxs)(P.Z, {
           location: r,
           transitionTo: i
         } = e, a = (0, x.mb)(t, r.search);
-        return o.tq || o.Em ? (0, s.jsx)(er, {
+        return l.tq || l.Em ? (0, s.jsx)(er, {
           inviteKey: a,
           transitionTo: i
         }, a) : (0, s.jsx)(et, {
@@ -260,7 +260,7 @@ return (0, s.jsxs)(P.Z, {
           location: r,
           transitionTo: i
         } = e;
-        return o.tq || o.Em ? (0, s.jsx)(k.Z, {
+        return l.tq || l.Em ? (0, s.jsx)(k.Z, {
           code: t
         }, t) : (0, s.jsx)(en, {
           code: t,
@@ -272,7 +272,7 @@ return (0, s.jsxs)(P.Z, {
     }),
     (0, s.jsx)(E.Z, {
       path: X.Z5c.VERIFY,
-      render: e => (0, s.jsx)(el, {
+      render: e => (0, s.jsx)(eo, {
         ...e
       })
     }),
@@ -322,7 +322,7 @@ return (0, s.jsxs)(P.Z, {
     }),
     (0, s.jsx)(E.Z, {
       path: X.Z5c.AUTHORIZE_PAYMENT,
-      render: e => (0, s.jsx)(eo, {
+      render: e => (0, s.jsx)(el, {
         ...e
       })
     }),
@@ -374,7 +374,7 @@ super(...e), t = this, s = {
 }) : t[n] = s;
   }
 }
-t.default = l.ZP.connectStores([
+t.default = o.ZP.connectStores([
   C.default,
   Z.Z,
   v.Z,
@@ -385,14 +385,14 @@ t.default = l.ZP.connectStores([
   let {
 match: r,
 location: i
-  } = e, a = null == r ? void 0 : null === (t = r.params) || void 0 === t ? void 0 : t.inviteCode, o = Q.a ? Q.Y : void 0, l = null != a ? (0, x.mb)(a, i.search) : o, c = null == r ? void 0 : null === (n = r.params) || void 0 === n ? void 0 : n.giftCode, u = null == r ? void 0 : null === (s = r.params) || void 0 === s ? void 0 : s.guildTemplateCode;
+  } = e, a = null == r ? void 0 : null === (t = r.params) || void 0 === t ? void 0 : t.inviteCode, l = Q.a ? Q.Y : void 0, o = null != a ? (0, x.mb)(a, i.search) : l, c = null == r ? void 0 : null === (n = r.params) || void 0 === n ? void 0 : n.giftCode, u = null == r ? void 0 : null === (s = r.params) || void 0 === s ? void 0 : s.guildTemplateCode;
   return {
-inviteKey: l,
+inviteKey: o,
 isAuthenticated: C.default.isAuthenticated(),
 giftCode: c,
 guildTemplateCode: u,
 gift: null != c ? v.Z.get(c) : null,
-invite: null != l ? Z.Z.getInvite(l) : null,
+invite: null != o ? Z.Z.getInvite(o) : null,
 guildTemplate: null != u ? f.Z.getGuildTemplate(u) : null,
 hasLoadedExperiments: m.Z.hasLoadedExperiments
   };

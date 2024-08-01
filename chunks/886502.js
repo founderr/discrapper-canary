@@ -17,23 +17,23 @@ S = d ? R : o(t),
 p = O ? R : o(e);
   S = S == I ? T : S, p = p == I ? T : p;
   var D = S == T,
-f = p == T,
-L = S == p;
-  if (L && s(t)) {
+L = p == T,
+f = S == p;
+  if (f && s(t)) {
 if (!s(e))
   return !1;
 d = !0, D = !1;
   }
-  if (L && !D)
+  if (f && !D)
 return N || (N = new n()), d || c(t) ? _(t, e, r, l, A, N) : a(t, e, S, r, l, A, N);
   if (!(1 & r)) {
 var h = D && u.call(t, '__wrapped__'),
-  C = f && u.call(e, '__wrapped__');
+  C = L && u.call(e, '__wrapped__');
 if (h || C) {
   var g = h ? t.value() : t,
     P = C ? e.value() : e;
   return N || (N = new n()), A(g, P, r, l, N);
 }
   }
-  return !!L && (N || (N = new n()), i(t, e, r, l, A, N));
+  return !!f && (N || (N = new n()), i(t, e, r, l, A, N));
 };

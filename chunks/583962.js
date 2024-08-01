@@ -118,14 +118,14 @@ k = () => {
 B = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({
   levelName: (0, I.e9)(R)
 }),
-V = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
+H = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
   numBoosts: u,
   numTotal: (0, I.vn)(t.id)[R]
 });
-  M && (B = (0, I.e9)(R), V = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
+  M && (B = (0, I.e9)(R), H = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({
 numBoosts: u
   }));
-  let H = (0, o.JA)('boosts-'.concat(t.id));
+  let V = (0, o.JA)('boosts-'.concat(t.id));
   return (0, i.jsx)('li', {
 children: (0, i.jsx)(d.Tooltip, {
   text: M ? T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({
@@ -136,7 +136,7 @@ children: (0, i.jsx)(d.Tooltip, {
   delay: 200,
   hideOnClick: !0,
   children: e => (0, i.jsxs)(d.Clickable, {
-    ...H,
+    ...V,
     ...e,
     'aria-label': void 0,
     role: 'button',
@@ -182,7 +182,7 @@ children: (0, i.jsx)(d.Tooltip, {
               (0, i.jsx)(d.Text, {
                 color: 'interactive-normal',
                 variant: 'text-xs/normal',
-                children: V
+                children: H
               }),
               (0, i.jsx)(C.Z, {
                 className: L.count,

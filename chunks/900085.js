@@ -124,7 +124,7 @@ return {
 };
   })(S.n5);
 
-function V(e, t, n) {
+function H(e, t, n) {
   return (0, l.jsx)(u.Tooltip, {
 text: n,
 children: e => (0, l.jsx)('span', {
@@ -134,7 +134,7 @@ children: e => (0, l.jsx)('span', {
 })
   }, e);
 }
-class H extends r.PureComponent {
+class V extends r.PureComponent {
   componentDidMount() {
 p.Z.disable(), p.Z.enableTemp(h.u);
   }
@@ -232,10 +232,10 @@ return (0, l.jsx)(x.Z, {
   }),
   type: x.Z.Types.INLINE,
   children: R.Z.Messages.QUICKSWITCHER_PROTIP.format({
-    userSymbolHook: (e, t) => V(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-    textChannelSymbolHook: (e, t) => V(t, _.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-    voiceChannelSymbolHook: (e, t) => V(t, _.xQ.VOICE_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-    guildSymbolHook: (e, t) => V(t, _.xQ.GUILD, R.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+    userSymbolHook: (e, t) => H(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+    textChannelSymbolHook: (e, t) => H(t, _.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+    voiceChannelSymbolHook: (e, t) => H(t, _.xQ.VOICE_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+    guildSymbolHook: (e, t) => H(t, _.xQ.GUILD, R.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
     helpdeskArticle: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
   })
 });
@@ -595,7 +595,7 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
 
 function F(e) {
   let t = (0, c.cj)([A.Z], () => A.Z.getProps());
-  return (0, l.jsx)(H, {
+  return (0, l.jsx)(V, {
 ...t,
 ...e
   });

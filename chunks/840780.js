@@ -38,8 +38,8 @@ var i = n(735250),
   w = n(382182),
   k = n(74299),
   B = n(914923),
-  V = n(165393),
-  H = n(989941),
+  H = n(165393),
+  V = n(989941),
   F = n(803647),
   W = n(690221),
   Y = n(231664),
@@ -303,7 +303,7 @@ let {
 return (0, i.jsxs)('div', {
   className: eN.gameWrapper,
   children: [
-    e ? (0, i.jsx)(V.Z, {
+    e ? (0, i.jsx)(H.Z, {
       title: s
     }) : (0, i.jsx)(eh.ZP, {
       look: eh.ZP.Looks.GRAY,
@@ -545,7 +545,7 @@ guildId: n,
   } = e, r = (0, c.e7)([Q.default], () => Q.default.getId()), a = (0, c.e7)([
 P.ZP,
 es.Z
-  ], () => (0, H.Z)(P.ZP, es.Z)), s = (0, c.e7)([
+  ], () => (0, V.Z)(P.ZP, es.Z)), s = (0, c.e7)([
 el.Z,
 J.Z
   ], () => J.Z.getChannel(el.Z.getVoiceChannelId())), o = (0, c.e7)([N.ZP], () => N.ZP.getConnectedActivityChannelId()), d = (0, c.e7)([J.Z], () => J.Z.getChannel(o)), h = (0, c.e7)([$.Z], () => $.Z.getGuild(null == d ? void 0 : d.guild_id)), [p, _] = (0, c.Wu)([q.Z], () => [

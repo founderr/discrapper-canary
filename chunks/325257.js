@@ -71,8 +71,8 @@ route: G,
 guild: w,
 animatable: k,
 selected: B = !1,
-unread: V = !1,
-mediaState: H,
+unread: H = !1,
+mediaState: V,
 unavailable: F = !1,
 badge: W = 0,
 contextMenu: Y = O,
@@ -83,7 +83,7 @@ guildJoinRequestStatus: Q
   } = e, {
 id: J,
 parentId: X
-  } = P, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != H ? (0, L.Or)(H) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+  } = P, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != V ? (0, L.Or)(V) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
   null == ee && W > 0 ? ee = null !== (r = (0, L.Ne)(W)) && void 0 !== r ? r : void 0 : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({
 guildJoinRequestStatus: Q
   })) && void 0 !== p ? p : void 0);
@@ -224,7 +224,7 @@ children: [
   (0, i.jsx)(N.Z, {
     hovered: !en && es,
     selected: !en && B,
-    unread: !en && V,
+    unread: !en && H,
     className: M.pill
   }),
   (0, i.jsx)(v.Z, {

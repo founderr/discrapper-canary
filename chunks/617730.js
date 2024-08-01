@@ -8,8 +8,8 @@ n(470079);
 var r = n(481060),
   i = n(973616),
   a = n(131704),
-  o = n(601964),
-  l = n(598077),
+  l = n(601964),
+  o = n(598077),
   c = n(230224),
   u = n(258356),
   d = n(981631),
@@ -36,10 +36,10 @@ disableUser: g = !1
   } = e;
   if (null == t)
 return null;
-  let p = null != t.guild ? new o.ZP(t.guild) : null,
+  let p = null != t.guild ? new l.ZP(t.guild) : null,
 I = null != t.channel ? (0, a.jD)(t.channel) : null,
 m = null != t.target_application ? new i.Z(t.target_application) : null,
-f = g || null == t.inviter ? null : new l.Z(t.inviter),
+f = g || null == t.inviter ? null : new o.Z(t.inviter),
 N = !(null != t.approximate_member_count && t.approximate_member_count > c.mx || null != p && p.hasFeature(d.oNc.COMMUNITY)) && null != f && (0, c.WT)(t),
 T = E(t),
 x = {

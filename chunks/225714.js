@@ -1,6 +1,6 @@
 i.d(s, {
   Z: function() {
-return _;
+return f;
   }
 });
 var n = i(735250);
@@ -14,55 +14,55 @@ var l = i(481060),
   c = i(934861),
   u = i(981631),
   I = i(689938),
-  f = i(682731);
+  _ = i(682731);
 
-function _(e) {
+function f(e) {
   let {
 isCurrentUser: s,
 user: i,
-relationshipType: _,
+relationshipType: f,
 friendToken: m,
 persistentCallCtaEnabled: E = !1,
-activeInviteToCallCtaEnabled: v = !1,
-onClose: x
+activeInviteToCallCtaEnabled: S = !1,
+onClose: v
   } = e, {
-newestAnalyticsLocation: S
+newestAnalyticsLocation: x
   } = (0, o.ZP)();
-  if (s || _ === u.OGo.BLOCKED)
+  if (s || f === u.OGo.BLOCKED)
 return null;
   let Z = E ? (0, n.jsx)(r.Z, {
   user: i,
-  onClose: x
+  onClose: v
 }) : null,
 h = (0, n.jsx)(d.Z, {
   user: i,
-  onClose: x
+  onClose: v
 });
-  if (_ === u.OGo.FRIEND && v && null != h)
+  if (f === u.OGo.FRIEND && S && null != h)
 return (0, n.jsxs)('div', {
-  className: f.multipleButtons,
+  className: _.multipleButtons,
   children: [
     (0, n.jsx)(c.v, {
       userId: i.id,
-      onClose: x
+      onClose: v
     }),
     h
   ]
 });
-  if (_ === u.OGo.FRIEND || i.bot)
+  if (f === u.OGo.FRIEND || i.bot)
 return (0, n.jsxs)('div', {
-  className: f.multipleButtons,
+  className: _.multipleButtons,
   children: [
     Z,
     (0, n.jsx)(c.c, {
       userId: i.id,
-      onClose: x
+      onClose: v
     })
   ]
 });
-  if (_ === u.OGo.PENDING_OUTGOING || _ === u.OGo.PENDING_INCOMING)
-return v && null != h ? (0, n.jsxs)('div', {
-  className: f.multipleButtons,
+  if (f === u.OGo.PENDING_OUTGOING || f === u.OGo.PENDING_INCOMING)
+return S && null != h ? (0, n.jsxs)('div', {
+  className: _.multipleButtons,
   children: [
     (0, n.jsx)(a.ef, {
       icon: l.UserClockIcon,
@@ -71,12 +71,12 @@ return v && null != h ? (0, n.jsxs)('div', {
     }),
     (0, n.jsx)(c.v, {
       userId: i.id,
-      onClose: x
+      onClose: v
     }),
     h
   ]
 }) : (0, n.jsxs)('div', {
-  className: f.multipleButtons,
+  className: _.multipleButtons,
   children: [
     (0, n.jsx)(a.ef, {
       icon: l.UserClockIcon,
@@ -86,12 +86,12 @@ return v && null != h ? (0, n.jsxs)('div', {
     Z,
     (0, n.jsx)(c.c, {
       userId: i.id,
-      onClose: x
+      onClose: v
     })
   ]
 });
-  return v && null != h ? (0, n.jsxs)('div', {
-className: f.multipleButtons,
+  return S && null != h ? (0, n.jsxs)('div', {
+className: _.multipleButtons,
 children: [
   (0, n.jsx)(a.ef, {
     action: 'SEND_FRIEND_REQUEST',
@@ -101,7 +101,7 @@ children: [
       t.Z.addRelationship({
         userId: i.id,
         context: {
-          location: S
+          location: x
         },
         friendToken: m
       });
@@ -109,17 +109,17 @@ children: [
   }),
   (0, n.jsx)(c.v, {
     userId: i.id,
-    onClose: x
+    onClose: v
   }),
   h
 ]
   }) : (0, n.jsxs)('div', {
-className: f.multipleButtons,
+className: _.multipleButtons,
 children: [
   Z,
   (0, n.jsx)(c.v, {
     userId: i.id,
-    onClose: x
+    onClose: v
   }),
   (0, n.jsx)(a.tG, {
     action: 'SEND_FRIEND_REQUEST',
@@ -130,7 +130,7 @@ children: [
       t.Z.addRelationship({
         userId: i.id,
         context: {
-          location: S
+          location: x
         },
         friendToken: m
       });

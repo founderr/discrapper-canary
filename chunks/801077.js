@@ -34,8 +34,8 @@ var i, l, r, a, s = n(392711),
   w = n(981631);
 let k = !1,
   B = !1,
-  V = [],
   H = [],
+  V = [],
   F = {},
   W = {},
   Y = new Set(),
@@ -169,14 +169,14 @@ P = null != s && null != s.party && null != s.party.id ? Array.from(null !== (a 
   }
   let k = 1 === g.length,
 B = [],
-V = new Set(),
-H = new Set();
+H = new Set(),
+V = new Set();
   for (let e of t) {
 let n = ee(e.id),
   i = A.Z.getChannel(n),
   l = null != i ? i.getGuildId() : null,
   r = O.Z.getGuild(l);
-if (H.has(l) && V.has(n) || null == i || null == r || i.id === r.afkChannelId)
+if (V.has(l) && H.has(n) || null == i || null == r || i.id === r.afkChannelId)
   null == i && (u = null, k = !0);
 else {
   let e = o()(U.Z.getVoiceStatesForChannel(i.id)).map(e => {
@@ -185,7 +185,7 @@ else {
     } = e;
     return D.default.getUser(t);
   }).filter(G.lm).orderBy([et], ['desc']).value();
-  e.filter(e => !m.includes(e.id)).forEach(e => t.push(e)), k ? !H.has(l) && (u = null) : (u = r, k = !0), H.add(l), V.add(n), B.push({
+  e.filter(e => !m.includes(e.id)).forEach(e => t.push(e)), k ? !V.has(l) && (u = null) : (u = r, k = !0), V.add(l), H.add(n), B.push({
     channel: i,
     guild: r,
     members: e
@@ -225,7 +225,7 @@ let el = o().throttle(() => {
 var e;
 if (!ei())
   return;
-Y.clear(), H = (V = function(e) {
+Y.clear(), V = (H = function(e) {
   let t = K(),
     n = en.bind(null, t);
   return o()(e).mapValues(n);
@@ -281,10 +281,10 @@ this.syncWith([
 ], er), this.waitFor(E.Z, O.Z, C.Z, D.default, S.Z);
   }
   get currentActivityParties() {
-return V;
+return H;
   }
   get nowPlayingCards() {
-return H;
+return V;
   }
   get isMounted() {
 return k;
@@ -301,7 +301,7 @@ a = 'NowPlayingViewStore', (r = 'displayName') in(l = ea) ? Object.definePropert
 }) : l[r] = a;
 let es = new ea(u.Z, {
   LOGOUT: function() {
-k = !1, V = [], H = [], Y.clear();
+k = !1, H = [], V = [], Y.clear();
   },
   NOW_PLAYING_MOUNTED: function() {
 k = !0, el();

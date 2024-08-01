@@ -2,8 +2,8 @@ var s = n(735250),
   r = n(470079),
   i = n(120356),
   a = n.n(i),
-  o = n(442837),
-  l = n(481060),
+  l = n(442837),
+  o = n(481060),
   c = n(812206),
   u = n(388905),
   d = n(925329),
@@ -19,7 +19,7 @@ var s = n(735250),
   T = n(607348),
   x = n(483085),
   A = n(549856);
-t.Z = o.ZP.connectStores([
+t.Z = l.ZP.connectStores([
   p.Z,
   c.Z,
   g.Z,
@@ -41,14 +41,14 @@ gifter: E.default.getUser(t.userId)
 error: t,
 giftCode: n,
 gifter: i,
-sku: o,
+sku: l,
 application: c,
 subscriptionPlan: E
   } = e, g = null == i ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
 username: i.username
-  }), p = o.name;
+  }), p = l.name;
   return null != E && (p = (E.interval === f.rV.MONTH ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
-skuName: o.name,
+skuName: l.name,
 intervalCount: E.intervalCount
   })), (0, s.jsxs)(r.Fragment, {
 children: [
@@ -58,7 +58,7 @@ children: [
     className: T.seasonalIcon
   }) : (0, s.jsx)(u.qE, {
     src: null != i ? i.getAvatarURL(void 0, 100) : null,
-    size: l.AvatarSizes.DEPRECATED_SIZE_100,
+    size: o.AvatarSizes.DEPRECATED_SIZE_100,
     className: A.marginBottom20
   }),
   null != t ? (0, s.jsxs)(r.Fragment, {
@@ -78,11 +78,11 @@ children: [
       (0, s.jsxs)(u.Dx, {
         className: a()(A.marginTop8, x.flexCenter),
         children: [
-          o.productLine !== m.POd.COLLECTIBLES && (0, s.jsx)(d.Z, {
+          l.productLine !== m.POd.COLLECTIBLES && (0, s.jsx)(d.Z, {
             size: d.Z.Sizes.MEDIUM,
             className: T.applicationIcon,
             game: c,
-            skuId: o.id
+            skuId: l.id
           }),
           p
         ]

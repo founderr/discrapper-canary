@@ -13,12 +13,12 @@ t.Z = function(e) {
 className: t,
 color: n = a.Z.colors.WHITE,
 quest: o,
-isInventory: C
-  } = e, E = (0, u.r)(o), {
+isInventory: E
+  } = e, b = (0, u.r)(o), {
 percentComplete: m,
-completedRatioDisplay: p
+completedRatioDisplay: C
   } = (0, l.I)(o);
-  return E && !C ? (0, s.jsx)(c.Z, {}) : (0, s.jsxs)('div', {
+  return b && !E ? (0, s.jsx)(c.Z, {}) : (0, s.jsxs)('div', {
 className: i()(d.wrapper, t),
 style: {
   color: n.css
@@ -31,7 +31,7 @@ children: [
         variant: 'text-xs/semibold',
         className: d.percentCompleteLabel,
         color: 'none',
-        children: p
+        children: C
       }),
       (0, s.jsx)('div', {
         className: d.percentCompleteLabelOffset,
@@ -52,8 +52,8 @@ children: [
       }
     })
   }),
-  E && (0, s.jsx)(c.Z, {
-    isInventory: C
+  b && (0, s.jsx)(c.Z, {
+    isInventory: E
   })
 ]
   });

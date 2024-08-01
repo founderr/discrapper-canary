@@ -1,12 +1,12 @@
 E.d(_, {
   Wg: function() {
-return i;
+return M;
   }
 }), E(47120);
 var s, T = E(470079),
   I = E(392711),
-  n = E.n(I),
-  A = E(442837),
+  A = E.n(I),
+  n = E(442837),
   t = E(570140),
   a = E(944163),
   r = E(709054),
@@ -50,21 +50,21 @@ requiredGameId: void 0
   });
 
 function O() {
-  let e = n().cloneDeep(G);
+  let e = A().cloneDeep(G);
   return e.badgeKind = (0, N.lP)(), e.banner = (0, L.i1)(), e;
 }
 
-function i() {
+function M() {
   return T.useState(() => O())[0];
 }
 
-function M(e) {
+function i(e) {
   var _;
   return null !== (_ = D.get(e)) && void 0 !== _ ? _ : O();
 }
 
 function R(e, _) {
-  let E = M(e);
+  let E = i(e);
   D.set(e, {
 ...E,
 ..._
@@ -79,10 +79,10 @@ Object.keys(_).forEach(e => {
 }), l.set(e, E);
   }
 }
-class u extends(s = A.ZP.PersistedStore) {
+class u extends(s = n.ZP.PersistedStore) {
   initialize(e) {
 null != e && r.default.keys(e.progressByGuild).forEach(_ => {
-  var E, s, T, I, n;
+  var E, s, T, I, A;
   D.set(_, {
     gameApplicationIds: new Set((E = e.progressByGuild[_]).gameApplicationIds),
     playstyle: E.playstyle,
@@ -100,7 +100,7 @@ null != e && r.default.keys(e.progressByGuild).forEach(_ => {
     badgeKind: null !== (I = E.badgeKind) && void 0 !== I ? I : N.ZD.SWORD,
     badgePrimaryColor: E.badgePrimaryColor,
     badgeSecondaryColor: E.badgeSecondaryColor,
-    banner: null !== (n = E.banner) && void 0 !== n ? n : L.qC.NIGHT_SKY,
+    banner: null !== (A = E.banner) && void 0 !== A ? A : L.qC.NIGHT_SKY,
     brandPrimaryColor: E.brandPrimaryColor,
     brandSecondaryColor: E.brandSecondaryColor,
     currentStep: E.currentStep,
@@ -195,7 +195,7 @@ let {
   isLocalUpdate: T
 } = e;
 T && (_ = null == E ? a.t : {
-  ...M(s).verificationForm,
+  ...i(s).verificationForm,
   ...E
 }, R(s, {
   verificationForm: _

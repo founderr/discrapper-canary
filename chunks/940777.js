@@ -95,8 +95,8 @@ B = function(e) {
     activity: _
   });
 }(j),
-V = w > 0 ? (0, m.N)(w) : null,
-H = l.useCallback(() => {
+H = w > 0 ? (0, m.N)(w) : null,
+V = l.useCallback(() => {
   r();
 }, [r]);
   return (0, i.jsxs)(_.H, {
@@ -108,12 +108,12 @@ children: [
     className: M.pill
   }),
   (0, i.jsx)(L.Z, {
-    onShow: H,
+    onShow: V,
     children: (0, i.jsx)(T.S, {
       children: (0, i.jsx)(c.BlobMask, {
         selected: G || O,
         upperBadge: B,
-        lowerBadge: V,
+        lowerBadge: H,
         children: (0, i.jsx)(c.NavItem, {
           ...e,
           ariaLabel: b.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({

@@ -31,15 +31,15 @@ return (0, i.jsx)(T, {
   footer: t
 });
   if (2 === l)
-return (0, i.jsx)(x, {
-  itemsForLayout: n
-});
-  if (3 === l)
 return (0, i.jsx)(f, {
   itemsForLayout: n
 });
-  if (4 === l)
+  if (3 === l)
 return (0, i.jsx)(g, {
+  itemsForLayout: n
+});
+  if (4 === l)
+return (0, i.jsx)(x, {
   itemsForLayout: n
 });
   let o = l % 3;
@@ -48,7 +48,7 @@ children: [
   1 === o && (0, i.jsx)(T, {
     itemsForLayout: n.slice(0, o)
   }),
-  2 === o && (0, i.jsx)(x, {
+  2 === o && (0, i.jsx)(f, {
     itemsForLayout: n.slice(0, o)
   }),
   0 === o ? (0, i.jsx)(A, {
@@ -81,7 +81,7 @@ children: (0, i.jsx)(j, {
   });
 }
 
-function x(e) {
+function f(e) {
   let {
 itemsForLayout: n
   } = e;
@@ -98,7 +98,7 @@ children: n.map(e => (0, i.jsx)('div', {
   });
 }
 
-function f(e) {
+function g(e) {
   let {
 itemsForLayout: n
   } = e;
@@ -130,7 +130,7 @@ children: [
   });
 }
 
-function g(e) {
+function x(e) {
   let {
 itemsForLayout: n
   } = e;

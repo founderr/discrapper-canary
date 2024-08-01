@@ -28,8 +28,8 @@ var s = n(735250),
   r = n(470079),
   i = n(120356),
   a = n.n(i),
-  o = n(481060),
-  l = n(388905),
+  l = n(481060),
+  o = n(388905),
   c = n(925329),
   u = n(372769),
   d = n(154921),
@@ -81,15 +81,15 @@ if (null != r)
     size: m.appIconSize
   });
 if (null != n)
-  return (0, s.jsx)(l.qE, {
+  return (0, s.jsx)(o.qE, {
     src: n.getAvatarURL(void 0, 100),
-    size: o.AvatarSizes.DEPRECATED_SIZE_100,
+    size: l.AvatarSizes.DEPRECATED_SIZE_100,
     className: m.avatar
   });
 if (null != t)
-  return (0, s.jsx)(l.Vj, {
+  return (0, s.jsx)(o.Vj, {
     guild: t,
-    size: l.Vj.Sizes.LARGER,
+    size: o.Vj.Sizes.LARGER,
     className: m.guildIcon,
     animate: !0
   });
@@ -103,11 +103,11 @@ function O(e) {
 invite: n,
 textClassName: r,
 className: i
-  } = e, o = N(n);
-  return null == o || S(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.fQ ? null : (0, s.jsx)(l.EJ, {
+  } = e, l = N(n);
+  return null == l || S(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.fQ ? null : (0, s.jsx)(o.EJ, {
 className: a()(m.activityCount, i),
-online: o.onlineCount,
-total: o.memberCount,
+online: l.onlineCount,
+total: l.memberCount,
 textClassName: r,
 flat: !0
   });
@@ -137,12 +137,12 @@ className: m.inviteJoinContainer,
 children: [
   null != i && (0, s.jsx)('div', {
     className: m.inviterIconWrapper,
-    children: (0, s.jsx)(l.qE, {
+    children: (0, s.jsx)(o.qE, {
       src: i,
-      size: o.AvatarSizes.SIZE_24
+      size: l.AvatarSizes.SIZE_24
     })
   }),
-  (0, s.jsx)(l.DK, {
+  (0, s.jsx)(o.DK, {
     className: m.__invalid_inviteJoinSubTitle,
     children: a
   })
@@ -159,22 +159,22 @@ application: _,
 showBigUserIcon: E
   } = e;
   if (null != a)
-E && null == _ && (t = (0, s.jsx)(l.Vj, {
+E && null == _ && (t = (0, s.jsx)(o.Vj, {
   guild: a,
-  size: l.Vj.Sizes.SMALL
+  size: o.Vj.Sizes.SMALL
 })), n = a.name, null != _ && (n = _.name, r = (0, s.jsxs)('div', {
   className: m.inviteJoinContainer,
   children: [
-    (0, s.jsx)(l.DK, {
+    (0, s.jsx)(o.DK, {
       className: m.appIn,
       children: I.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_IN
     }),
     (0, s.jsxs)('div', {
       className: m.guildContainer,
       children: [
-        (0, s.jsx)(l.Vj, {
+        (0, s.jsx)(o.Vj, {
           guild: a,
-          size: l.Vj.Sizes.SMALL
+          size: o.Vj.Sizes.SMALL
         }),
         (0, s.jsx)(d.Z, {
           className: m.appGuildName,
@@ -191,15 +191,15 @@ E && null == _ && (t = (0, s.jsx)(l.Vj, {
 if (null == i)
   throw Error('no inviter in group DM invite');
 let e = h.ZP.getFormattedName(i);
-null != c.name && '' !== c.name ? (n = c.name, null != c.icon && (t = (0, s.jsx)(l.MC, {
+null != c.name && '' !== c.name ? (n = c.name, null != c.icon && (t = (0, s.jsx)(o.MC, {
   channel: c,
-  size: o.AvatarSizes.SIZE_32
+  size: l.AvatarSizes.SIZE_32
 }))) : n = e;
   } else if (null != i) {
 let e = h.ZP.getFormattedName(i);
 n = I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
   username: e
-}), r = (0, s.jsx)(l.DK, {
+}), r = (0, s.jsx)(o.DK, {
   className: m.directInviteSubTitle,
   children: I.Z.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION.format({
     username: e
@@ -208,7 +208,7 @@ n = I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
   }
   return (0, s.jsxs)(s.Fragment, {
 children: [
-  (0, s.jsxs)(l.Dx, {
+  (0, s.jsxs)(o.Dx, {
     className: m.title,
     children: [
       null != a ? (0, s.jsx)(u.Z, {

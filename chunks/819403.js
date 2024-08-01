@@ -27,8 +27,8 @@ m = (0, r.e7)([u.Z], () => null != _ ? u.Z.getVoiceStateForChannel(_, e.id) : nu
   _,
   e.id
 ]),
-R = (null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === e.id,
-I = (0, Z.Z)(),
+I = (null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === e.id,
+R = (0, Z.Z)(),
 N = (0, r.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, _), [
   _,
   e.id
@@ -37,13 +37,13 @@ A = (0, o.B)(_);
   if (null == l || null == g || null == m || N.speaker)
 return null;
   let C = () => {
-R ? (0, d.RK)(l, !1) : (0, d._0)(l, e.id);
+I ? (0, d.RK)(l, !1) : (0, d._0)(l, e.id);
   };
   return A ? (0, t.jsx)(i.MenuItem, {
 id: 'invite-speaker',
-label: R ? M.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : M.Z.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
+label: I ? M.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : M.Z.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
 action: C
-  }) : I && R ? (0, t.jsx)(i.MenuItem, {
+  }) : R && I ? (0, t.jsx)(i.MenuItem, {
 id: 'invite-speaker',
 label: M.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER,
 action: C

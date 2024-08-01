@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return l;
+return o;
   }
 });
 var s = n(735250);
@@ -8,9 +8,9 @@ n(470079);
 var r = n(882037),
   i = n(853268),
   a = n(689938),
-  o = n(549856);
+  l = n(549856);
 
-function l() {
+function o() {
   let {
 required: e,
 checked: t
@@ -19,7 +19,7 @@ checked: t
 value: t,
 subText: a.Z.Messages.PROMOTIONAL_EMAIL_OPT_IN_CONSENT,
 onChange: r.ZJ,
-marginTopStyle: o.marginTop8,
+marginTopStyle: l.marginTop8,
 muted: !0
   }) : null;
 }

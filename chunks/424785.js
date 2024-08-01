@@ -43,9 +43,9 @@ var l = n(120356),
   w = n(647086),
   k = n(689938),
   B = n(704672),
-  V = n(368412);
+  H = n(368412);
 
-function H(e, t, n) {
+function V(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -143,7 +143,7 @@ let {
           return (0, i.jsxs)(D.Z, {
             className: B.iconVisibility,
             iconClassName: r()({
-              [V.iconLive]: null != _
+              [H.iconLive]: null != _
             }),
             channel: e,
             selected: !E && t,
@@ -188,13 +188,13 @@ let {
 return p && (S = c(S)), d && (S = a(o(S))), S;
   }
   constructor(...e) {
-super(...e), H(this, 'state', {
+super(...e), V(this, 'state', {
   shouldShowGuildVerificationPopout: !1
-}), H(this, 'closeGuildVerificationPopout', () => {
+}), V(this, 'closeGuildVerificationPopout', () => {
   this.setState({
     shouldShowGuildVerificationPopout: !1
   });
-}), H(this, 'handleClick', () => {
+}), V(this, 'handleClick', () => {
   let {
     channel: e,
     locked: t,
@@ -204,13 +204,13 @@ super(...e), H(this, 'state', {
   null != l && (0, _.n)(l) && (0, p.hk)(l), i && this.setState({
     shouldShowGuildVerificationPopout: !0
   }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, C.Cq)(e), !__OVERLAY__ && (0, g.Kh)(e.id);
-}), H(this, 'handleClickChat', () => {
+}), V(this, 'handleClickChat', () => {
   let {
     channel: e,
     locked: t
   } = this.props;
   !__OVERLAY__ && !t && (0, g.Kh)(e.id);
-}), H(this, 'handleContextMenu', e => {
+}), V(this, 'handleContextMenu', e => {
   let {
     channel: t
   } = this.props, l = T.Z.getGuild(t.getGuildId());
@@ -229,7 +229,7 @@ super(...e), H(this, 'state', {
         guild: l
       });
     });
-}), H(this, 'renderPopout', () => {
+}), V(this, 'renderPopout', () => {
   let {
     channel: e
   } = this.props, {
@@ -242,7 +242,7 @@ super(...e), H(this, 'state', {
       closePopout: this.closeGuildVerificationPopout
     });
   throw Error('VoiceChannel.renderPopout: There must always be something to render');
-}), H(this, 'renderOpenChatButton', () => {
+}), V(this, 'renderOpenChatButton', () => {
   let {
     channel: e,
     locked: t,
@@ -276,12 +276,12 @@ super(...e), H(this, 'state', {
         });
       }
     });
-}), H(this, 'getTooltipText', () => {
+}), V(this, 'getTooltipText', () => {
   let {
     connected: e
   } = this.props;
   return this.isFull() && !e ? k.Z.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null;
-}), H(this, 'renderSubtitle', () => {
+}), V(this, 'renderSubtitle', () => {
   var e;
   let t = null === (e = this.props.stageInstance) || void 0 === e ? void 0 : e.topic;
   return null == t ? null : (0, i.jsx)(O.Z, {

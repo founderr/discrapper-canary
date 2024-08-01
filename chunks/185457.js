@@ -26,12 +26,12 @@ id: f
   } = n, {
 loading: g,
 note: m
-  } = (0, s.Z)(f), R = !g && null != m && m.length > 0, I = _ === Z.IlC.POPOUT, N = r.useContext(c.AnalyticsContext), {
+  } = (0, s.Z)(f), I = !g && null != m && m.length > 0, R = _ === Z.IlC.POPOUT, N = r.useContext(c.AnalyticsContext), {
 analyticsLocations: A
   } = (0, a.ZP)();
-  return f === d.default.getId() || o.Z.hidePersonalInformation || I ? null : (0, t.jsx)(i.MenuItem, {
+  return f === d.default.getId() || o.Z.hidePersonalInformation || R ? null : (0, t.jsx)(i.MenuItem, {
 id: 'note',
-label: g ? M.Z.Messages.LOADING_NOTE : R ? M.Z.Messages.EDIT_NOTE : M.Z.Messages.ADD_NOTE,
+label: g ? M.Z.Messages.LOADING_NOTE : I ? M.Z.Messages.EDIT_NOTE : M.Z.Messages.ADD_NOTE,
 action: () => {
   (0, u.openUserProfileModal)({
     userId: n.id,

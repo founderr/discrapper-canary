@@ -1,6 +1,6 @@
 i.d(s, {
   Z: function() {
-return M;
+return R;
   }
 }), i(47120);
 var n = i(735250);
@@ -14,49 +14,49 @@ var l = i(481060),
   c = i(78675),
   u = i(741308),
   I = i(899007),
-  f = i(438163),
-  _ = i(681837),
+  _ = i(438163),
+  f = i(681837),
   m = i(502762),
   E = i(530),
-  v = i(645410),
-  x = i(437758),
-  S = i(357836),
+  S = i(645410),
+  v = i(437758),
+  x = i(357836),
   Z = i(544989),
   h = i(934861),
   p = i(616140),
-  g = i(29530),
-  T = i(228168),
+  T = i(29530),
+  g = i(228168),
   N = i(981631),
   j = i(689938),
   C = i(984904),
   A = i(505451);
 
-function M(e) {
+function R(e) {
   let {
 user: s,
 currentUser: i,
-guildId: M,
-channelId: R,
+guildId: R,
+channelId: M,
 messageId: U,
 roleId: L,
 initialSection: O,
-initialSubsection: y,
+initialSubsection: P,
 transitionState: b,
-onClose: P,
+onClose: y,
 sourceAnalyticsLocations: D = []
-  } = e, F = M === N.ME ? void 0 : M, B = (0, d.ZP)(s.id, F), {
+  } = e, F = R === N.ME ? void 0 : R, B = (0, d.ZP)(s.id, F), {
 analyticsLocations: G
   } = (0, o.ZP)([
 ...D,
 t.Z.SIMPLIFIED_PROFILE_MODAL
-  ]), w = (0, g.Z)(s);
+  ]), w = (0, T.Z)(s);
   return (0, n.jsx)(o.Gt, {
 value: G,
 children: (0, n.jsx)(r.Mt, {
   layout: 'SIMPLIFIED_MODAL',
   userId: s.id,
   guildId: F,
-  channelId: R,
+  channelId: M,
   messageId: U,
   roleId: L,
   showGuildProfile: !0,
@@ -68,11 +68,11 @@ children: (0, n.jsx)(r.Mt, {
     children: (0, n.jsxs)(m.Z, {
       user: s,
       displayProfile: B,
-      profileType: T.y0.FULL_SIZE,
+      profileType: g.y0.FULL_SIZE,
       children: [
         (0, n.jsx)(Z.Z, {
-          profileType: T.y0.FULL_SIZE,
-          children: (0, n.jsx)(x.Z, {
+          profileType: g.y0.FULL_SIZE,
+          children: (0, n.jsx)(v.Z, {
             user: s,
             guildId: F
           })
@@ -82,7 +82,7 @@ children: (0, n.jsx)(r.Mt, {
             (0, n.jsx)(c.Z, {
               user: s,
               displayProfile: B,
-              profileType: T.y0.FULL_SIZE,
+              profileType: g.y0.FULL_SIZE,
               hasProfileEffect: (null == B ? void 0 : B.profileEffectId) != null
             }),
             (0, n.jsxs)('div', {
@@ -92,36 +92,36 @@ children: (0, n.jsx)(r.Mt, {
                   user: s,
                   displayProfile: B,
                   guildId: F,
-                  channelId: R,
-                  profileType: T.y0.FULL_SIZE
+                  channelId: M,
+                  profileType: g.y0.FULL_SIZE
                 }),
                 (0, n.jsxs)('div', {
                   className: C.buttons,
                   children: [
                     (0, n.jsx)(h.c, {
                       userId: s.id,
-                      onClose: P,
+                      onClose: y,
                       className: C.messageTextButton
                     }),
                     (0, n.jsx)(h.v, {
                       userId: s.id,
-                      onClose: P,
+                      onClose: y,
                       tooltipContainerClassName: C.messageIconButton
                     }),
-                    (0, n.jsx)(S.Z, {
+                    (0, n.jsx)(x.Z, {
                       user: s,
                       guildId: F
                     }),
-                    (0, n.jsx)(v.Z, {
+                    (0, n.jsx)(S.Z, {
                       user: s
                     })
                   ]
                 }),
-                (0, n.jsx)(f.Z, {
+                (0, n.jsx)(_.Z, {
                   user: s,
-                  profileType: T.y0.FULL_SIZE,
+                  profileType: g.y0.FULL_SIZE,
                   hasEntered: b === l.ModalTransitionState.ENTERED,
-                  onClose: P
+                  onClose: y
                 })
               ]
             })
@@ -132,17 +132,17 @@ children: (0, n.jsx)(r.Mt, {
           children: [
             (0, n.jsx)(E.Z, {
               user: s,
-              profileType: T.y0.FULL_SIZE,
-              nickname: a.ZP.getName(F, R, s),
+              profileType: g.y0.FULL_SIZE,
+              nickname: a.ZP.getName(F, M, s),
               pronouns: null == B ? void 0 : B.pronouns,
               nicknameVariant: 'heading-xl/bold',
-              nicknameIcons: (0, n.jsx)(_.Z, {
+              nicknameIcons: (0, n.jsx)(f.Z, {
                 userId: s.id
               }),
               tags: (0, n.jsx)(u.Z, {
                 displayProfile: B,
-                profileType: T.y0.FULL_SIZE,
-                onClose: P
+                profileType: g.y0.FULL_SIZE,
+                onClose: y
               })
             }),
             (0, n.jsx)(m.Z.Overlay, {
@@ -152,9 +152,9 @@ children: (0, n.jsx)(r.Mt, {
                 currentUser: i,
                 displayProfile: B,
                 items: w,
-                initialSection: null != O ? O : T.oh.BOT_INFO,
-                initialSubsection: y,
-                onClose: P
+                initialSection: null != O ? O : g.oh.BOT_INFO,
+                initialSubsection: P,
+                onClose: y
               })
             })
           ]

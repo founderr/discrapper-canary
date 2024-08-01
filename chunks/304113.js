@@ -1,6 +1,6 @@
 i.r(s), i.d(s, {
   default: function() {
-return f;
+return _;
   }
 });
 var n = i(735250);
@@ -15,31 +15,31 @@ var l = i(512722),
   u = i(41527),
   I = i(107889);
 
-function f(e) {
+function _(e) {
   let {
 location: s,
 user: i,
 ...l
   } = e, {
-botProfilesEnabled: f
+botProfilesEnabled: _
   } = (0, r.J)({
 location: s
-  }), _ = (0, o.e7)([a.default], () => a.default.getCurrentUser());
-  return (t()(null != _, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined'), f && i.isNonUserBot()) ? (0, n.jsx)(c.Z, {
+  }), f = (0, o.e7)([a.default], () => a.default.getCurrentUser());
+  return (t()(null != f, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined'), _ && i.isNonUserBot()) ? (0, n.jsx)(c.Z, {
 ...l,
 user: i,
-currentUser: _
-  }) : f && i.bot ? (0, n.jsx)(u.Z, {
+currentUser: f
+  }) : _ && i.bot ? (0, n.jsx)(u.Z, {
 ...l,
 user: i,
-currentUser: _
+currentUser: f
   }) : i.bot ? (0, n.jsx)(d.Z, {
 ...l,
 user: i,
-currentUser: _
+currentUser: f
   }) : (0, n.jsx)(I.Z, {
 ...l,
 user: i,
-currentUser: _
+currentUser: f
   });
 }

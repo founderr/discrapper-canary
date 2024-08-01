@@ -26,28 +26,28 @@ n,
 e.id
   ]);
   (0, s.$)(m), (0, i.e7)([E.Z], () => E.Z.getGuildVersion(n), [n]);
-  let R = (0, i.e7)([c.Z], () => c.Z.getChannel(g)),
-I = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
+  let I = (0, i.e7)([c.Z], () => c.Z.getChannel(g)),
+R = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
 N = (0, i.e7)([M.default], () => M.default.getCurrentUser()),
-A = (0, u.Z)(R, 'Context Menu'),
-C = (0, o.Xb)(R);
+A = (0, u.Z)(I, 'Context Menu'),
+C = (0, o.Xb)(I);
   if ((null == N ? void 0 : N.id) === e.id)
 return [A];
-  if (null == I || null == R || null == N)
+  if (null == R || null == I || null == N)
 return [];
-  let O = C || R.ownerId === N.id && R.type === _.d4z.PRIVATE_THREAD;
+  let O = C || I.ownerId === N.id && I.type === _.d4z.PRIVATE_THREAD;
   return [
 O ? (0, t.jsx)(a.MenuItem, {
   id: 'remove',
-  label: R.isForumPost() ? f.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({
+  label: I.isForumPost() ? f.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({
     user: e.username
   }) : f.Z.Messages.REMOVE_USER_FROM_THREAD.format({
     user: e.username
   }),
   color: 'danger',
-  action: () => d.Z.removeMember(R, e.id, 'Context Menu')
+  action: () => d.Z.removeMember(I, e.id, 'Context Menu')
 }) : null,
-E.Z.canManageUser(_.Plq.KICK_MEMBERS, e, I) ? (0, t.jsx)(a.MenuItem, {
+E.Z.canManageUser(_.Plq.KICK_MEMBERS, e, R) ? (0, t.jsx)(a.MenuItem, {
   id: 'kick',
   label: O ? f.Z.Messages.KICK_USER_FROM_SERVER.format({
     user: e.username
@@ -61,12 +61,12 @@ E.Z.canManageUser(_.Plq.KICK_MEMBERS, e, I) ? (0, t.jsx)(a.MenuItem, {
     } = await l.e('5454').then(l.bind(l, 854360));
     return l => (0, t.jsx)(n, {
       ...l,
-      guildId: I.id,
+      guildId: R.id,
       user: e
     });
   })
 }) : null,
-E.Z.canManageUser(_.Plq.BAN_MEMBERS, e, I) ? (0, t.jsx)(a.MenuItem, {
+E.Z.canManageUser(_.Plq.BAN_MEMBERS, e, R) ? (0, t.jsx)(a.MenuItem, {
   id: 'ban',
   label: O ? f.Z.Messages.BAN_USER_FROM_SERVER.format({
     user: e.username
@@ -80,7 +80,7 @@ E.Z.canManageUser(_.Plq.BAN_MEMBERS, e, I) ? (0, t.jsx)(a.MenuItem, {
     } = await l.e('43350').then(l.bind(l, 98746));
     return l => (0, t.jsx)(n, {
       ...l,
-      guildId: I.id,
+      guildId: R.id,
       user: e
     });
   })

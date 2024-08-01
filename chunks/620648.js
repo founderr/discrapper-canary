@@ -13,13 +13,13 @@ var n = i(735250),
   c = i(369077),
   u = i(706454),
   I = i(246946),
-  f = i(785717),
-  _ = i(648067),
+  _ = i(785717),
+  f = i(648067),
   m = i(588822),
   E = i(900927),
-  v = i(652853),
-  x = i(335191),
-  S = i(988246),
+  S = i(652853),
+  v = i(335191),
+  x = i(988246),
   Z = i(689938),
   h = i(678108);
 
@@ -28,26 +28,26 @@ function p(e) {
   let {
 user: i,
 displayProfile: p,
-autoFocusNote: g = !1,
-scrollToConnections: T = !1
+autoFocusNote: T = !1,
+scrollToConnections: g = !1
   } = e, {
 trackUserProfileAction: N
-  } = (0, f.KZ)(), j = (0, t.e7)([I.Z], () => I.Z.hidePersonalInformation), {
+  } = (0, _.KZ)(), j = (0, t.e7)([I.Z], () => I.Z.hidePersonalInformation), {
 theme: C
-  } = (0, v.z)(), A = (0, t.e7)([u.default], () => u.default.locale), M = (0, d.Z)('user_profile'), R = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, r.Z)(i.id), U = (0, _.Z)(i.id), L = l.useRef(null);
+  } = (0, S.z)(), A = (0, t.e7)([u.default], () => u.default.locale), R = (0, d.Z)('user_profile'), M = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, r.Z)(i.id), U = (0, f.Z)(i.id), L = l.useRef(null);
   return (l.useLayoutEffect(() => {
-if (T) {
+if (g) {
   var e;
   null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView();
 }
-  }, [T]), j) ? (0, n.jsx)(S.Z, {}) : (0, n.jsxs)(o.ScrollerThin, {
+  }, [g]), j) ? (0, n.jsx)(x.Z, {}) : (0, n.jsxs)(o.ScrollerThin, {
 fade: !0,
 className: h.infoScroller,
 children: [
   (0, n.jsxs)('div', {
     className: h.userInfoSection,
     children: [
-      R && (0, n.jsxs)(n.Fragment, {
+      M && (0, n.jsxs)(n.Fragment, {
         children: [
           (0, n.jsx)(o.Heading, {
             variant: 'eyebrow',
@@ -74,7 +74,7 @@ children: [
           })
         ]
       }),
-      M && (0, n.jsx)('div', {
+      R && (0, n.jsx)('div', {
         className: h.clans,
         children: (0, n.jsx)('div', {
           className: h.userInfoText,
@@ -92,7 +92,7 @@ children: [
           }),
           (0, n.jsx)(a.Z, {
             userId: i.id,
-            autoFocus: g,
+            autoFocus: T,
             className: h.note,
             onUpdate: () => N({
               action: 'SET_NOTE'
@@ -102,7 +102,7 @@ children: [
       })
     ]
   }),
-  (0, n.jsx)(x.OA, {
+  (0, n.jsx)(v.OA, {
     ref: L,
     connectedAccounts: U,
     theme: C,

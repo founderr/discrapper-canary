@@ -20,8 +20,8 @@ var r = l(442837),
   f = l(594174),
   g = l(979651),
   m = l(934415),
-  R = l(700785),
-  I = l(981631),
+  I = l(700785),
+  R = l(981631),
   N = l(689938);
 
 function A(e, n) {
@@ -42,14 +42,14 @@ A = (0, r.e7)([
 ]) || null == A)
 return null;
   let C = e.id === d.default.getId();
-  if (!C && !M.Z.can(I.Plq.MOVE_MEMBERS, A))
+  if (!C && !M.Z.can(R.Plq.MOVE_MEMBERS, A))
 return null;
   let O = l.filter(n => {
 let {
   channel: l
 } = n;
-return l.id !== A.id && (C ? M.Z.can(I.Plq.CONNECT, l) && !(0, m.rY)(l, g.Z, E.Z) : M.Z.can(I.Plq.MOVE_MEMBERS, l) && (M.Z.can(I.Plq.CONNECT, l) || R.BT({
-  permission: I.Plq.CONNECT,
+return l.id !== A.id && (C ? M.Z.can(R.Plq.CONNECT, l) && !(0, m.rY)(l, g.Z, E.Z) : M.Z.can(R.Plq.MOVE_MEMBERS, l) && (M.Z.can(R.Plq.CONNECT, l) || I.BT({
+  permission: R.Plq.CONNECT,
   user: e,
   context: l
 })) && !(0, m.rY)(l, g.Z, E.Z));

@@ -10,8 +10,8 @@ var s = n(913527),
   r = n.n(s),
   i = n(990547),
   a = n(570140),
-  o = n(479531),
-  l = n(771308),
+  l = n(479531),
+  o = n(771308),
   c = n(314897),
   u = n(626135),
   d = n(573261),
@@ -95,11 +95,11 @@ a.Z.dispatch({
   action: E.Al.AGE_GATE_SUCCESS
 });
   }, e => {
-let t = new o.Z(e);
+let t = new l.Z(e);
 throw a.Z.dispatch({
   type: 'REGISTER_FAILURE',
   error: t
-}), null != t.getFieldErrors('date_of_birth') && l.wE(E.L0.REGISTER), u.default.track(h.rMx.REGISTER_SUBMIT_ERRORED, {
+}), null != t.getFieldErrors('date_of_birth') && o.wE(E.L0.REGISTER), u.default.track(h.rMx.REGISTER_SUBMIT_ERRORED, {
   is_unique_username_registration: !0,
   email_error_reason: t.getFirstFieldErrorMessage('email'),
   phone_error_reason: t.getFirstFieldErrorMessage('phone'),

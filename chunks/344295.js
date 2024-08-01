@@ -3,8 +3,8 @@ var s = n(735250),
   r = n(470079),
   i = n(120356),
   a = n.n(i),
-  o = n(533800),
-  l = n(756647),
+  l = n(533800),
+  o = n(756647),
   c = n(442837),
   u = n(298444),
   d = n(447543),
@@ -96,7 +96,7 @@ else if (t.state === j.r2o.APP_NOT_OPENED)
 else if (this.getMode() === H.LOGIN && s !== e.authenticated && s) {
   let e = C.default.getFingerprint();
   if (null != e) {
-    let t = (0, l.s)(e);
+    let t = (0, o.s)(e);
     this.track(j.rMx.INVITE_LOGIN_SUCCESSFUL, !0, {
       prev_user_id: t
     });
@@ -285,7 +285,7 @@ switch (e.state) {
     return this.renderSpinner(U.Z.Messages.APP_OPENING);
   case j.r2o.RESOLVED:
     var a;
-    if (n && (0, R.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, o.$.IS_GUEST_INVITE))
+    if (n && (0, R.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, l.$.IS_GUEST_INVITE))
       return d.Z.openApp(e.code), u.x.set(f.J, e.code), this.renderAppOpened(() => r(j.Z5c.APP));
     if (n || !B.KO)
       return this.renderAuthenticatedOrDownload();

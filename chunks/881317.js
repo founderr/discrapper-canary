@@ -3,8 +3,8 @@ var s = n(735250),
   r = n(470079),
   i = n(990547),
   a = n(442837),
-  o = n(481060),
-  l = n(893776),
+  l = n(481060),
+  o = n(893776),
   c = n(232567),
   u = n(388905),
   d = n(353926),
@@ -23,27 +23,27 @@ let T = e => {
 title: t,
 menuType: r
   } = e, a = () => {
-(0, o.openModalLazy)(async () => {
+(0, l.openModalLazy)(async () => {
   let {
     default: e
   } = await n.e('93288').then(n.bind(n, 396410));
   return t => (0, s.jsx)(e, {
     ...t,
-    onSuccess: l,
+    onSuccess: o,
     headerText: m.Z.Messages.ENTER_EMAIL,
     confirmButtonText: m.Z.Messages.NEXT,
-    confirmButtonColor: o.Button.Colors.BRAND,
+    confirmButtonColor: l.Button.Colors.BRAND,
     impressionName: i.ImpressionNames.URF_ENTER_EMAIL
   });
 });
-  }, l = e => {
+  }, o = e => {
 let t = async () => {
   await (0, E.yL)(r, e);
-}, a = async t => await (0, E.RV)(r, e, t), l = e => {
+}, a = async t => await (0, E.RV)(r, e, t), o = e => {
   let t = null == e ? void 0 : e.token;
   r === _.B.MESSAGE ? (0, h.eE)(t) : r === _.B.USER && (0, h.JM)(t);
 };
-t(), (0, o.openModalLazy)(async () => {
+t(), (0, l.openModalLazy)(async () => {
   let {
     default: e
   } = await n.e('94566').then(n.bind(n, 965072));
@@ -51,20 +51,20 @@ t(), (0, o.openModalLazy)(async () => {
     ...n,
     onFormSubmit: a,
     onResend: t,
-    onSuccess: l,
+    onSuccess: o,
     headerText: m.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
     confirmButtonText: m.Z.Messages.VERIFY,
-    confirmButtonColor: o.Button.Colors.BRAND,
+    confirmButtonColor: l.Button.Colors.BRAND,
     impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE
   });
 });
   };
   return (0, s.jsx)('div', {
 className: f.buttonColumn,
-children: (0, s.jsx)(o.Button, {
+children: (0, s.jsx)(l.Button, {
   className: N.__invalid_reportButton,
   fullWidth: !0,
-  color: o.Button.Colors.BRAND,
+  color: l.Button.Colors.BRAND,
   onClick: () => a(),
   children: t
 })
@@ -84,10 +84,10 @@ h ? (t(!0), c.k({
 }).then(() => A()).catch(() => t(!1))) : A();
   }, [h]), r.useEffect(() => {
 (async () => {
-  !x && (await l.Z.getLocationMetadata(), l.Z.getExperiments());
+  !x && (await o.Z.getLocationMetadata(), o.Z.getExperiments());
 })();
   }, [x]), e || !x ? (0, s.jsx)(u.ZP, {
-children: (0, s.jsx)(o.Spinner, {})
+children: (0, s.jsx)(l.Spinner, {})
   }) : n && (0, s.jsxs)(u.ZP, {
 children: [
   (0, s.jsx)(u.Dx, {

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return l;
+return o;
   }
 });
 var s = n(735250);
@@ -8,22 +8,22 @@ n(470079);
 var r = n(120356),
   i = n.n(r),
   a = n(388905),
-  o = n(227314);
+  l = n(227314);
 
-function l(e) {
+function o(e) {
   let {
 children: t,
 className: n,
 ...r
-  } = e, l = t();
+  } = e, o = t();
   return (0, s.jsx)(a.ZP, {
 ...r,
-className: i()(n, o.container),
-contentClassName: o.content,
-children: l.map((e, t) => (0, s.jsx)('div', {
-  className: o.column,
+className: i()(n, l.container),
+contentClassName: l.content,
+children: o.map((e, t) => (0, s.jsx)('div', {
+  className: l.column,
   style: {
-    flexBasis: ''.concat(100 / l.length, '%')
+    flexBasis: ''.concat(100 / o.length, '%')
   },
   children: e
 }, t))

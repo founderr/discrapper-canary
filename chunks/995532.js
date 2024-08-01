@@ -3,7 +3,7 @@ E.d(_, {
 return a;
   }
 });
-var s, T, I, n, A = E(442837),
+var s, T, I, A, n = E(442837),
   t = E(570140);
 let a = {},
   r = {},
@@ -26,7 +26,7 @@ guildId: E
   } = e;
   r[E] = null != _ ? _ : a;
 }
-class G extends(n = A.ZP.Store) {
+class G extends(A = n.ZP.Store) {
   get(e) {
 if (null != e)
   return r[e];

@@ -51,8 +51,8 @@ folderIconContent: w
   } = e, {
 id: k,
 name: B,
-children: V
-  } = t, [H, F] = l.useState(!1), [W, Y] = l.useState(!1), z = H || W;
+children: H
+  } = t, [V, F] = l.useState(!1), [W, Y] = l.useState(!1), z = V || W;
   l.useEffect(() => {
 y && F(!1);
   }, [y]);
@@ -77,7 +77,7 @@ Y(e);
   }, [
 D,
 u
-  ]), X = null != B && '' !== B ? B : null != M && '' !== M ? M : x.Z.Messages.SERVER_FOLDER_PLACEHOLDER, $ = (0, c.Ie)(''.concat(k)), ee = 'folder-items-'.concat(k), et = V.length * (T + L), en = (0, d.useTransition)(!K && u, {
+  ]), X = null != B && '' !== B ? B : null != M && '' !== M ? M : x.Z.Messages.SERVER_FOLDER_PLACEHOLDER, $ = (0, c.Ie)(''.concat(k)), ee = 'folder-items-'.concat(k), et = H.length * (T + L), en = (0, d.useTransition)(!K && u, {
 from: {
   height: 0
 },
@@ -97,7 +97,7 @@ k
 children: [
   (0, i.jsx)(m.Z, {
     disabled: K || u,
-    hovered: H,
+    hovered: V,
     selected: r,
     unread: b,
     className: v.pill
@@ -160,7 +160,7 @@ children: [
       },
       className: S.__invalid_expandedGuilds,
       role: 'group',
-      children: V.map(G)
+      children: H.map(G)
     }, l);
   }),
   O && u ? (0, i.jsx)(C.Zu, {

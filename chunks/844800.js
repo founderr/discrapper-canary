@@ -1,9 +1,9 @@
-var s, r, i, a, o = n(442837),
-  l = n(570140);
+var s, r, i, a, l = n(442837),
+  o = n(570140);
 let c = !1,
   u = null,
   d = null;
-class _ extends(a = o.ZP.Store) {
+class _ extends(a = l.ZP.Store) {
   getState() {
 return {
   verifySuccess: c,
@@ -17,7 +17,7 @@ i = 'HubEmailVerificationStore', (r = 'displayName') in(s = _) ? Object.definePr
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[r] = i, t.Z = new _(l.Z, {
+}) : s[r] = i, t.Z = new _(o.Z, {
   HUB_VERIFY_EMAIL_SUCCESS: function(e) {
 let {
   guildId: t

@@ -1,6 +1,6 @@
 i.d(s, {
   Z: function() {
-return T;
+return g;
   }
 }), i(47120);
 var n = i(735250),
@@ -13,18 +13,18 @@ var n = i(735250),
   c = i(785717),
   u = i(304704),
   I = i(27144),
-  f = i(100849),
-  _ = i(944546),
+  _ = i(100849),
+  f = i(944546),
   m = i(470900),
   E = i(988246),
-  v = i(970041),
-  x = i(715388),
-  S = i(879828),
+  S = i(970041),
+  v = i(715388),
+  x = i(879828),
   Z = i(834534),
   h = i(228168),
   p = i(47460);
 
-function g(e) {
+function T(e) {
   let {
 section: s,
 subsection: i,
@@ -41,24 +41,24 @@ pastActivityEnabled: c
   } = (0, I.z)({
 location: 'SimplifiedUserProfileModalTabs'
   });
-  return s === h.oh.ACTIVITY && (d || c) ? (0, n.jsx)(S.Z, {
+  return s === h.oh.ACTIVITY && (d || c) ? (0, n.jsx)(x.Z, {
 user: l,
 currentUser: t,
 onClose: a
-  }) : s === h.oh.ACTIVITY ? (0, n.jsx)(f.Z, {
+  }) : s === h.oh.ACTIVITY ? (0, n.jsx)(_.Z, {
 showActions: (null == t ? void 0 : t.id) !== l.id,
 user: l,
 type: r.Y.SIMPLIFIED_PROFILE,
 onClose: a
-  }) : s === h.oh.MUTUAL_FRIENDS ? (0, n.jsx)(_.Z, {
+  }) : s === h.oh.MUTUAL_FRIENDS ? (0, n.jsx)(f.Z, {
 user: l,
 onClose: a
   }) : s === h.oh.MUTUAL_GUILDS ? (0, n.jsx)(m.Z, {
 user: l,
 onClose: a
-  }) : s === h.oh.BOT_DATA_ACCESS ? (0, n.jsx)(v.Z, {
+  }) : s === h.oh.BOT_DATA_ACCESS ? (0, n.jsx)(S.Z, {
 user: l
-  }) : s === h.oh.BOT_INFO ? (0, n.jsx)(x.Z, {
+  }) : s === h.oh.BOT_INFO ? (0, n.jsx)(v.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
@@ -73,31 +73,31 @@ onClose: a
   });
 }
 
-function T(e) {
+function g(e) {
   var s, i, r;
   let {
 user: u,
 currentUser: I,
-displayProfile: f,
-items: _,
+displayProfile: _,
+items: f,
 initialSection: m = h.oh.USER_INFO,
-initialSubsection: v,
-onClose: x
+initialSubsection: S,
+onClose: v
   } = e, {
-trackUserProfileAction: S
+trackUserProfileAction: x
   } = (0, c.KZ)(), Z = (0, t.e7)([d.Z], () => d.Z.hidePersonalInformation), [{
-section: T,
+section: g,
 subsection: N
   }, j] = l.useState({
-section: null !== (r = null === (s = _.find(e => {
+section: null !== (r = null === (s = f.find(e => {
   let {
     section: s
   } = e;
   return s === m;
-})) || void 0 === s ? void 0 : s.section) && void 0 !== r ? r : null === (i = _[0]) || void 0 === i ? void 0 : i.section,
-subsection: v
+})) || void 0 === s ? void 0 : s.section) && void 0 !== r ? r : null === (i = f[0]) || void 0 === i ? void 0 : i.section,
+subsection: S
   }), C = l.useCallback(e => {
-S({
+x({
   action: 'PRESS_SECTION',
   section: e
 }), j({
@@ -105,7 +105,7 @@ S({
   subsection: void 0
 });
   }, [
-S,
+x,
 j
   ]);
   return Z ? (0, n.jsx)('div', {
@@ -117,9 +117,9 @@ children: [
   (0, n.jsx)(o.n, {
     className: p.tabBar,
     type: 'top',
-    selectedItem: T,
+    selectedItem: g,
     onItemSelect: C,
-    children: _.map(e => {
+    children: f.map(e => {
       let {
         section: s,
         text: i
@@ -135,14 +135,14 @@ children: [
       }, s);
     })
   }),
-  (0, n.jsx)(g, {
-    items: _,
-    section: T,
+  (0, n.jsx)(T, {
+    items: f,
+    section: g,
     subsection: N,
     user: u,
     currentUser: I,
-    displayProfile: f,
-    onClose: x
+    displayProfile: _,
+    onClose: v
   })
 ]
   });

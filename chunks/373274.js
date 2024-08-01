@@ -44,8 +44,8 @@ var i, l = n(735250),
   w = n(301342),
   k = n(471995),
   B = n(906817),
-  V = n(429122),
-  H = n(285573),
+  H = n(429122),
+  V = n(285573),
   F = n(519358),
   W = n(910595),
   Y = n(466935),
@@ -417,7 +417,7 @@ super(...e), eu(this, '_list', null), eu(this, 'unreadTopRef', r.createRef()), e
     optInEnabled: r,
     guildChannelsVersion: a
   } = this.props;
-  return (0, V.dt)({
+  return (0, H.dt)({
     sectionIndex: e,
     guildChannels: t,
     guildChannelsVersion: a,
@@ -593,7 +593,7 @@ super(...e), eu(this, '_list', null), eu(this, 'unreadTopRef', r.createRef()), e
           selected: s === es.oC.CHANNEL_BROWSER || s === es.oC.CUSTOMIZE_COMMUNITY
         }, el.f.CHANNELS_AND_ROLES);
       case el.f.GUILD_DIRECTORY:
-        return (0, l.jsx)(H.Z, {
+        return (0, l.jsx)(V.Z, {
           guild: i,
           selectedChannelId: s,
           disableManageChannels: h
@@ -719,7 +719,7 @@ super(...e), eu(this, '_list', null), eu(this, 'unreadTopRef', r.createRef()), e
     optInEnabled: o,
     guildId: c
   } = this.props;
-  return (0, l.jsx)(V.ZP, {
+  return (0, l.jsx)(H.ZP, {
     guildId: c,
     guildChannels: n,
     guildChannelsVersion: i,
@@ -728,7 +728,7 @@ super(...e), eu(this, '_list', null), eu(this, 'unreadTopRef', r.createRef()), e
     selectedChannelId: a,
     selectedVoiceChannelId: s,
     optInEnabled: o
-  }, (0, V.eo)(t, n, o));
+  }, (0, H.eo)(t, n, o));
 }), eu(this, 'getAnchorId', (e, t) => {
   var n, i, l;
   let {

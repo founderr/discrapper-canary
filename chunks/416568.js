@@ -38,8 +38,8 @@ var i = n(735250),
   w = n(741616),
   k = n(187835),
   B = n(162050),
-  V = n(118122),
-  H = n(193154),
+  H = n(118122),
+  V = n(193154),
   F = n(602147),
   W = n(773182),
   Y = n(222059),
@@ -252,7 +252,7 @@ eM.scrollTo({
   let eD = o.getRoots(),
 eU = (0, v.Z)(),
 eG = (0, A.U)(),
-ew = ei.map(e => (0, i.jsx)(H.Z, {
+ew = ei.map(e => (0, i.jsx)(V.Z, {
   id: e.id,
   name: e.name,
   icon: e.icon
@@ -330,7 +330,7 @@ children: (0, i.jsx)('nav', {
             })
           }),
           ew,
-          n ? null : (0, i.jsx)(V.Z, {
+          n ? null : (0, i.jsx)(H.Z, {
             disableTooltip: h.length > 0,
             lastTargetNode: eD[eD.length - 1]
           }),
