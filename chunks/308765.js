@@ -147,7 +147,8 @@ neverLoadBeforeConnectionOpen: !0
 actions: [
   'POST_CONNECTION_OPEN',
   'CONNECTION_RESUMED',
-  'CONNECTION_CLOSED'
+  'CONNECTION_CLOSED',
+  'APP_STATE_UPDATE'
 ],
 inlineRequire: () => n(888875).Z
   },
