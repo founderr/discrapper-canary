@@ -49,8 +49,6 @@ children: (0, i.jsx)(s.animated.div, {
       banner: r
     }, c)) && void 0 !== t ? t : '',
     alt: '',
-    height: 135,
-    width: 240,
     'aria-hidden': !0
   })
 })
@@ -132,9 +130,9 @@ children: O,
 headerClassName: y,
 communityInfoVisible: P,
 hasSubheader: j
-  } = e, D = b.hasFeature(m.oNc.ANIMATED_BANNER), U = (0, d.Z)(b), G = !U && b.hasCommunityInfoSubheader(), w = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), V = l.useRef(), H = l.useRef(null), F = l.useRef(), W = h.QK.getSetting();
+  } = e, D = b.hasFeature(m.oNc.ANIMATED_BANNER), U = (0, d.Z)(b), G = !U && b.hasCommunityInfoSubheader(), w = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), F = l.useRef(), W = h.QK.getSetting();
   l.useEffect(() => {
-if (w && n && !V.current && W)
+if (w && n && !H.current && W)
   return B(!0), F.current = setTimeout(() => {
     B(!1);
   }, 5000), () => {
@@ -145,7 +143,7 @@ w,
 n,
 W
   ]), l.useEffect(() => {
-V.current = n;
+H.current = n;
   }, [n]);
   let Y = () => {
   let {
@@ -158,7 +156,7 @@ z = (0, u.Q)('GuildHeader');
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {
-    ref: H,
+    ref: V,
     className: a()(s, {
       [I.container]: !0,
       [I.clickable]: null != S,
@@ -196,7 +194,7 @@ children: [
                 'aria-controls': A,
                 'aria-expanded': L,
                 focusProps: {
-                  ringTarget: H,
+                  ringTarget: V,
                   offset: 4
                 },
                 onClick: S,

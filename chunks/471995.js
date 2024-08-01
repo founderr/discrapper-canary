@@ -1,27 +1,31 @@
 n.d(t, {
   B: function() {
-return f;
+return I;
   }
 });
 var i = n(735250),
   l = n(227879),
-  r = n(704215),
-  a = n(481060),
-  s = n(605236),
-  o = n(527379),
-  c = n(31445),
-  u = n(703656),
-  d = n(443063),
-  h = n(981631),
-  p = n(176505),
-  _ = n(619588);
+  r = n(442837),
+  a = n(704215),
+  s = n(481060),
+  o = n(605236),
+  c = n(523751),
+  u = n(527379),
+  d = n(31445),
+  h = n(703656),
+  p = n(650774),
+  _ = n(443063),
+  f = n(981631),
+  m = n(176505),
+  g = n(689938),
+  C = n(619588);
 
-function f(e) {
+function I(e) {
   let {
 guild: t,
 guildChannels: l,
-hasBanner: f
-  } = e, g = l.getCommunitySection(), C = (0, c.Z)(t), I = async () => {
+hasBanner: I
+  } = e, N = l.getCommunitySection(), x = (0, d.Z)(t), S = (0, r.e7)([p.Z], () => p.Z.getMemberCount(t.id)), v = async () => {
 let {
   default: e
 } = await n.e('46826').then(n.bind(n, 859432));
@@ -36,50 +40,51 @@ return n => {
 };
   };
   return (0, i.jsxs)('div', {
-className: _.header,
-'data-has-banner': f,
+className: C.container,
+'data-has-banner': I,
 children: [
-  (0, i.jsx)(a.Heading, {
-    variant: 'heading-lg/semibold',
-    children: t.name
-  }),
   (0, i.jsxs)('div', {
-    className: _.subheader,
+    className: C.header,
     children: [
-      (0, i.jsx)(a.Text, {
-        variant: 'text-xs/normal',
-        color: 'text-low-contrast',
-        children: '15 Members'
+      (0, i.jsx)(c.Z, {
+        guild: t
       }),
-      (0, i.jsx)('span', {
-        className: _.dot,
-        children: '\u2022'
-      }),
-      (0, i.jsx)(a.Text, {
-        variant: 'text-xs/normal',
-        color: 'text-low-contrast',
-        children: 'Friends Server'
+      (0, i.jsx)(s.Heading, {
+        variant: 'heading-lg/semibold',
+        children: t.name
       })
     ]
   }),
+  (0, i.jsx)('div', {
+    className: C.subheader,
+    children: (0, i.jsx)(s.Text, {
+      variant: 'text-xs/normal',
+      color: 'text-low-contrast',
+      children: g.Z.Messages.MEMBERS_HEADER.format({
+        members: S
+      })
+    })
+  }),
   (0, i.jsxs)('div', {
-    className: _.buttons,
+    className: C.buttons,
     children: [
-      g.getRows().map((e, l) => {
-        switch (g.getRow(l)) {
-          case d.f.CHANNELS_AND_ROLES:
-            return (0, i.jsx)(m, {
+      N.getRows().map((e, l) => {
+        switch (N.getRow(l)) {
+          case _.f.CHANNELS_AND_ROLES:
+            return (0, i.jsx)(E, {
+              tooltip: g.Z.Messages.CHANNELS_AND_ROLES,
               onPress: () => {
-                (0, u.uL)(h.Z5c.CHANNEL(t.id, C ? p.oC.CUSTOMIZE_COMMUNITY : p.oC.CHANNEL_BROWSER));
+                (0, h.uL)(f.Z5c.CHANNEL(t.id, x ? m.oC.CUSTOMIZE_COMMUNITY : m.oC.CHANNEL_BROWSER));
               },
-              children: (0, i.jsx)(a.ChannelListMagnifyingGlassIcon, {
+              children: (0, i.jsx)(s.ChannelListMagnifyingGlassIcon, {
                 size: 'sm'
               })
             });
-          case d.f.GUILD_SCHEDULED_EVENTS:
-            return (0, i.jsx)(m, {
+          case _.f.GUILD_SCHEDULED_EVENTS:
+            return (0, i.jsx)(E, {
+              tooltip: 'Events',
               onPress: async () => {
-                await (0, a.openModalLazy)(async () => {
+                await (0, s.openModalLazy)(async () => {
                   let {
                     default: e
                   } = await Promise.all([
@@ -91,18 +96,19 @@ children: [
                     ...n,
                     guildId: t.id
                   });
-                }), (0, s.EW)(r.z.GUILD_HEADER_EVENT_UPSELL);
+                }), (0, o.EW)(a.z.GUILD_HEADER_EVENT_UPSELL);
               },
-              children: (0, i.jsx)(a.CalendarIcon, {
+              children: (0, i.jsx)(s.CalendarIcon, {
                 size: 'sm'
               })
             });
-          case d.f.GUILD_MOD_DASH_MEMBER_SAFETY:
-            return (0, i.jsx)(m, {
+          case _.f.GUILD_MOD_DASH_MEMBER_SAFETY:
+            return (0, i.jsx)(E, {
+              tooltip: g.Z.Messages.MEMBERS,
               onPress: () => {
-                (0, o._X)(t.id);
+                (0, u._X)(t.id);
               },
-              children: (0, i.jsx)(a.GroupIcon, {
+              children: (0, i.jsx)(s.GroupIcon, {
                 size: 'sm'
               })
             });
@@ -110,14 +116,14 @@ children: [
             return null;
         }
       }),
-      (0, i.jsx)(a.LazyPopout, {
-        renderPopout: I,
+      (0, i.jsx)(s.LazyPopout, {
+        renderPopout: v,
         position: 'bottom',
         align: 'center',
-        animation: a.Popout.Animation.SCALE,
-        children: e => (0, i.jsx)(m, {
+        animation: s.Popout.Animation.SCALE,
+        children: e => (0, i.jsx)(E, {
           ...e,
-          children: (0, i.jsx)(a.MoreHorizontalIcon, {
+          children: (0, i.jsx)(s.MoreHorizontalIcon, {
             size: 'sm'
           })
         })
@@ -128,9 +134,22 @@ children: [
   });
 }
 
-function m(e) {
-  return (0, i.jsx)(l.zx, {
-className: _.button,
-...e
+function E(e) {
+  let {
+children: t,
+tooltip: n,
+...r
+  } = e, a = (0, i.jsx)(l.zx, {
+className: C.button,
+...r,
+children: (0, i.jsx)('span', {
+  className: C.buttonIcon,
+  children: t
+})
+  });
+  return null == n ? a : (0, i.jsx)(s.TooltipContainer, {
+text: n,
+position: 'bottom',
+children: a
   });
 }
