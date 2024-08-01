@@ -152,7 +152,7 @@ children: [
               D || y ? null : (0, i.jsx)(d.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: S.Z.Messages.QUESTS_TILE_BANNER_EXPIRES_ON_DATE.format({
+                children: S.Z.Messages.QUESTS_TILE_BANNER_ENDS_DATE.format({
                   expiryDate: k
                 })
               })
