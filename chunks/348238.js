@@ -1,6 +1,6 @@
 n.d(t, {
   $3: function() {
-return F;
+return G;
   },
   Go: function() {
 return y;
@@ -9,22 +9,22 @@ return y;
 return P;
   },
   Nk: function() {
-return M;
+return x;
   },
   R9: function() {
-return L;
+return Z;
   },
   RN: function() {
 return j;
   },
   Wl: function() {
-return x;
-  },
-  XO: function() {
 return O;
   },
+  XO: function() {
+return R;
+  },
   Xn: function() {
-return G;
+return F;
   },
   bb: function() {
 return k;
@@ -33,7 +33,7 @@ return k;
 return D;
   },
   rY: function() {
-return Z;
+return L;
   },
   sR: function() {
 return U;
@@ -61,8 +61,8 @@ var i = n(735250),
   T = n(630388),
   h = n(358085),
   N = n(51144),
-  C = n(91047),
-  f = n(901461),
+  f = n(91047),
+  C = n(901461),
   p = n(50284),
   g = n(981631),
   S = n(689938);
@@ -79,7 +79,7 @@ t
   ]);
 }
 
-function R(e, t, n) {
+function M(e, t, n) {
   return s.useCallback(i => {
 let s = E.default.getUser(e);
 if (null == s)
@@ -103,19 +103,19 @@ n
   ]);
 }
 
-function O(e, t, n, i) {
+function R(e, t, n, i) {
   let s = A('usernameProfile', n, i);
-  return R(e.author.id, t.id, s);
+  return M(e.author.id, t.id, s);
+}
+
+function O(e, t, n, i) {
+  let s = A('referencedUsernameProfile', n, i);
+  return M(null == e ? void 0 : e.author.id, t.id, s);
 }
 
 function x(e, t, n, i) {
-  let s = A('referencedUsernameProfile', n, i);
-  return R(null == e ? void 0 : e.author.id, t.id, s);
-}
-
-function M(e, t, n, i) {
   let s = A('interactionUsernameProfile', n, i);
-  return R(null == e ? void 0 : e.user.id, t.id, s);
+  return M(null == e ? void 0 : e.user.id, t.id, s);
 }
 
 function v(e) {
@@ -124,11 +124,11 @@ t.preventDefault(), t.stopPropagation(), e();
   }, [e]);
 }
 
-function L(e, t) {
+function Z(e, t) {
   return v(A('avatarProfile', e, t));
 }
 
-function Z(e, t) {
+function L(e, t) {
   return v(A('referencedAvatarProfile', e, t));
 }
 
@@ -142,7 +142,7 @@ id: o
   } = t, {
 id: E,
 flags: I
-  } = e, m = (0, T.yE)(I, g.iLy.EPHEMERAL), N = (0, f.Z)(e), C = (0, c.bp)();
+  } = e, m = (0, T.yE)(I, g.iLy.EPHEMERAL), N = (0, C.Z)(e), f = (0, c.bp)();
   return s.useCallback((e, t) => {
 if (m)
   return;
@@ -164,10 +164,7 @@ if (null != s && null != c && !I)
     if (N) {
       let {
         default: e
-      } = await Promise.all([
-        n.e('29975'),
-        n.e('47919')
-      ]).then(n.bind(n, 240678));
+      } = await n.e('6532').then(n.bind(n, 240678));
       return n => (0, i.jsx)(e, {
         ...n,
         message: c,
@@ -177,12 +174,7 @@ if (null != s && null != c && !I)
     } {
       let {
         default: e
-      } = await Promise.all([
-        n.e('92557'),
-        n.e('29975'),
-        n.e('37220'),
-        n.e('55261')
-      ]).then(n.bind(n, 225138));
+      } = await Promise.resolve().then(n.bind(n, 225138));
       return n => (0, i.jsx)(e, {
         ...n,
         message: c,
@@ -195,14 +187,14 @@ if (null != s && null != c && !I)
     onClose: () => a({
       contextMenu: !1
     }),
-    context: C
+    context: f
   });
   }, [
 m,
 o,
 E,
 a,
-C,
+f,
 N,
 l
   ]);
@@ -212,7 +204,7 @@ function b(e, t) {
   return s.useCallback(n => {
 let i = E.default.getUser(e),
   s = u.Z.getChannel(t);
-null != i && null != s && (n.stopPropagation(), (0, C.Pv)(n, i, s));
+null != i && null != s && (n.stopPropagation(), (0, f.Pv)(n, i, s));
   }, [
 e,
 t
@@ -223,7 +215,7 @@ function j(e, t, n) {
   return s.useCallback(i => {
 let s = E.default.getUser(e),
   a = u.Z.getChannel(t);
-null != s && null != a && (i.stopPropagation(), (0, C._j)(i, {
+null != s && null != a && (i.stopPropagation(), (0, f._j)(i, {
   user: s,
   channel: a,
   moderationAlertId: n
@@ -239,7 +231,7 @@ function U(e, t) {
   return s.useCallback(n => {
 let i = E.default.getUser(e),
   s = u.Z.getChannel(t);
-null != i && null != s && (n.stopPropagation(), (0, C.xS)(n, i, s.guild_id));
+null != i && null != s && (n.stopPropagation(), (0, f.xS)(n, i, s.guild_id));
   }, [
 e,
 t
@@ -300,7 +292,7 @@ hasFocused: a
   };
 }
 
-function F(e, t) {
+function G(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   return s.useCallback(() => {
 null != t && (n ? a.Z.show({
@@ -322,7 +314,7 @@ t
   ]);
 }
 
-function G(e, t) {
+function F(e, t) {
   let n = A('interactionData', e, t);
   return s.useCallback(e => {
 e.preventDefault(), e.stopPropagation(), n();

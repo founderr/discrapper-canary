@@ -3,7 +3,7 @@ n.d(t, {
 return T;
   },
   Z: function() {
-return N;
+return v;
   }
 });
 var i = n(735250);
@@ -22,8 +22,8 @@ var a = n(120356),
   _ = n(162267),
   f = n(228168),
   E = n(981631),
-  g = n(689938),
-  C = n(735393),
+  C = n(689938),
+  g = n(735393),
   I = n(401298);
 let x = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_16);
 
@@ -41,7 +41,7 @@ focusProps: {
     right: 8
   }
 },
-className: C.listRow,
+className: g.listRow,
 onClick: m,
 onContextMenu: e => {
   (0, o.jW)(e, async () => {
@@ -63,16 +63,15 @@ onContextMenu: e => {
       n.e('44156'),
       n.e('59743'),
       n.e('71700'),
+      n.e('43251'),
       n.e('85552'),
-      n.e('51760'),
       n.e('58227'),
       n.e('1187'),
       n.e('10926'),
       n.e('22036'),
-      n.e('92557'),
       n.e('64679'),
       n.e('89622'),
-      n.e('33898'),
+      n.e('92760'),
       n.e('33213'),
       n.e('56845')
     ]).then(n.bind(n, 545135));
@@ -87,7 +86,7 @@ children: [
     tabIndex: -1,
     guild: a,
     showBadge: !0,
-    className: s()(C.listAvatar, null == a.icon ? I.guildAvatarWithoutIcon : null),
+    className: s()(g.listAvatar, null == a.icon ? I.guildAvatarWithoutIcon : null),
     badgeStrokeColor: (0, d.Lq)((0, l.wj)(u) ? E.Ilk.PRIMARY_600 : E.Ilk.WHITE_500),
     badgeTooltipColor: r.TooltipColors.PRIMARY,
     badgeTooltipDelay: f.vB,
@@ -95,10 +94,10 @@ children: [
     active: !0
   }),
   (0, i.jsxs)('div', {
-    className: C.listRowContent,
+    className: g.listRowContent,
     children: [
       (0, i.jsx)('div', {
-        className: C.listName,
+        className: g.listName,
         children: a.toString()
       }),
       _ || null != c ? (0, i.jsxs)('div', {
@@ -119,7 +118,7 @@ children: [
   });
 }
 
-function N(e) {
+function v(e) {
   let {
 user: t,
 onClose: n
@@ -129,20 +128,20 @@ mutualGuilds: a
 (0, m.X)(e), n(), (0, c.xf)();
   };
   return (0, i.jsx)(r.ScrollerThin, {
-className: C.listScroller,
+className: g.listScroller,
 fade: !0,
 children: null == a ? (0, i.jsx)('div', {
-  className: C.empty,
+  className: g.empty,
   children: (0, i.jsx)(r.Spinner, {})
 }) : 0 === a.length ? (0, i.jsxs)('div', {
-  className: C.empty,
+  className: g.empty,
   children: [
     (0, i.jsx)('div', {
-      className: C.emptyIconGuilds
+      className: g.emptyIconGuilds
     }),
     (0, i.jsx)('div', {
-      className: C.emptyText,
-      children: g.Z.Messages.NO_MUTUAL_GUILDS
+      className: g.emptyText,
+      children: C.Z.Messages.NO_MUTUAL_GUILDS
     })
   ]
 }) : a.map(e => {
