@@ -1,5 +1,10 @@
 e.exports = {
+  rowIcon: 'rowIcon_e5da8b',
+  rowDivider: 'rowDivider_e5da8b',
+  appDetailsRowContainer: 'appDetailsRowContainer_e5da8b',
   container: 'container_e5da8b',
+  containerBorderRadius: 'containerBorderRadius_e5da8b',
+  rowContainer: 'rowContainer_e5da8b',
   containerDisabled: 'containerDisabled_e5da8b',
   icon: 'icon_e5da8b',
   iconCard: 'iconCard_e5da8b',

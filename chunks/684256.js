@@ -1,72 +1,77 @@
 t.d(n, {
   Z: function() {
-return p;
+return C;
   }
 });
 var i = t(735250),
   a = t(470079),
-  l = t(481060),
-  r = t(895924),
-  o = t(424602),
-  s = t(827498),
-  c = t(98880),
-  u = t(772606),
-  d = t(689938),
-  m = t(235435);
+  l = t(120356),
+  o = t.n(l),
+  r = t(481060),
+  s = t(895924),
+  c = t(424602),
+  u = t(827498),
+  d = t(98880),
+  m = t(772606),
+  p = t(689938),
+  _ = t(235435);
 
-function p(e) {
+function C(e) {
   let {
 channel: n,
 entrypoint: t,
-title: p,
-look: _,
+title: l,
+look: C,
 items: f,
-sectionName: C
+sectionName: h
   } = e, {
-clickOnHomeActivityOpensAppDetail: h
-  } = o.m1.getCurrentConfig({
+clickOnHomeActivityOpensAppDetail: A
+  } = c.m1.getCurrentConfig({
 location: 'AppLauncherApplicationListViewScreen'
   }, {
 autoTrackExposure: !1
-  }), A = a.useMemo(() => t === s._b.TEXT ? c.kA : c.qR, [t]);
+  }), E = a.useMemo(() => t === u._b.TEXT ? d.kA : d.qR, [t]);
   return (0, i.jsxs)('section', {
-className: m.container,
-'aria-label': d.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({
-  sectionTitle: p
+className: _.container,
+'aria-label': p.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({
+  sectionTitle: l
 }),
 children: [
   (0, i.jsxs)('div', {
-    className: m.header,
+    className: _.header,
     children: [
-      (0, i.jsx)(u.Z, {
-        className: m.backButton
+      (0, i.jsx)(m.Z, {
+        className: _.backButton
       }),
-      (0, i.jsx)(l.Heading, {
+      (0, i.jsx)(r.Heading, {
         variant: 'heading-md/medium',
         color: 'header-primary',
-        children: p
+        children: l
       })
     ]
   }),
-  (0, i.jsx)(l.Scroller, {
+  (0, i.jsx)(r.Scroller, {
     children: (0, i.jsx)('div', {
-      className: m.appGrid,
+      className: o()({
+        [_.appGrid]: C !== d.U4.ROW,
+        [_.rows]: C === d.U4.ROW
+      }),
       children: f.map((e, t) => {
         let {
           application: a,
           isPartner: l,
           installOnDemand: o
         } = e;
-        return (0, i.jsx)(A, {
+        return (0, i.jsx)(E, {
           channel: n,
           application: a,
-          look: _,
+          look: C,
           isPartner: l,
-          sectionName: C,
+          sectionName: h,
           resultsPosition: t,
-          location: r.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
+          location: s.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
           installOnDemand: o,
-          isOneClickCTA: h
+          isOneClickCTA: A
         }, a.id);
       })
     })
