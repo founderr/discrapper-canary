@@ -144,6 +144,7 @@ children: [
 ]
   });
   return t ? (0, a.jsxs)('div', {
+className: $.fullWidth,
 children: [
   (0, a.jsx)('div', {
     className: l()($.authorize, {
@@ -161,6 +162,7 @@ className: l()($.authorize, {
   [$.inApp]: n.inApp
 }),
 children: (0, a.jsx)('div', {
+  className: $.fullWidth,
   children: c
 })
   });
