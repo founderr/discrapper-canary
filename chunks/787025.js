@@ -53,17 +53,19 @@ function I(e) {
 children: t,
 footer: n,
 transitionState: i,
-...a
+overlay: a,
+...s
   } = e;
   return (0, r.jsxs)(o.Y0, {
 size: o.Cg.DYNAMIC,
 transitionState: i,
 className: p.oauth2Wrapper,
-...a,
+...s,
 children: [
   (0, r.jsx)(o.hz, {
     children: t
   }),
+  a,
   null != n && (0, r.jsx)(o.mz, {
     className: p.footer,
     children: n
