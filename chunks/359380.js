@@ -38,7 +38,7 @@ children: [
     children: n
   }),
   (0, a.jsx)('div', {
-    className: d.interestsCategory,
+    className: d.utilityTraits,
     children: o.map(e => {
       let n = c.has(e);
       return (0, a.jsx)(s.Z, {

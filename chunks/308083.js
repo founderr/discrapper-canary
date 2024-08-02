@@ -389,7 +389,7 @@ let V = new Set([
 
 function H() {
   let e = Object.keys(i).filter(e => isNaN(Number(e)));
-  return i[e[Math.round(Math.random() * e.length - 1)]];
+  return i[e[Math.floor(Math.random() * e.length)]];
 }
 (l = i || (i = {}))[l.NIGHT_SKY = 0] = 'NIGHT_SKY', l[l.CASTLE = 1] = 'CASTLE', l[l.WORLD_MAP = 2] = 'WORLD_MAP', l[l.SEA_FOAM = 3] = 'SEA_FOAM', l[l.WARP_TUNNEL = 4] = 'WARP_TUNNEL', l[l.HOUSE = 5] = 'HOUSE', l[l.HEIGHTMAP = 6] = 'HEIGHTMAP', l[l.MESH = 7] = 'MESH', l[l.SPATTER = 8] = 'SPATTER', (u = a || (a = {})).BOULDER = 'Boulder', u.CASCADE = 'Cascade', u.THUNDER = 'Thunder', u.SOUL = 'Soul', u.MARSH = 'Marsh', u.VOLCANO = 'Volcano', u.EARTH = 'Earth', u.ZEPHYR = 'Zephyr';
 let Z = [{
