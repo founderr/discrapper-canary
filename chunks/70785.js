@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 }), n(47120);
 var r = n(735250),
@@ -15,73 +15,74 @@ var r = n(735250),
   _ = n(502762),
   E = n(475413),
   f = n(228168),
-  h = n(895793),
-  p = n(223223);
+  h = n(689938),
+  p = n(895793),
+  m = n(609440);
 
-function m(e) {
+function I(e) {
   let {
 user: t,
 guildId: n,
-setPopoutRef: m,
-channelId: I,
-messageId: T,
-roleId: g,
-onViewBlockedProfileClick: S,
-newAnalyticsLocations: A = []
+setPopoutRef: I,
+channelId: T,
+messageId: g,
+roleId: S,
+onViewBlockedProfileClick: A,
+newAnalyticsLocations: N = []
   } = e, {
-analyticsLocations: N
+analyticsLocations: v
   } = (0, l.ZP)([
-...A,
+...N,
 o.Z.BLOCKED_PROFILE_POPOUT
-  ]), v = (0, c.Q1)({
+  ]), O = (0, c.Q1)({
 layout: 'BLOCKED_PROFILE_POPOUT',
 userId: t.id,
 guildId: n,
-channelId: I,
-messageId: T,
-roleId: g
-  }), O = i.useRef(null), R = (0, d.ZP)(t.id, n), C = (0, a.e7)([u.ZP], () => null != n ? u.ZP.getMember(n, t.id) : null);
+channelId: T,
+messageId: g,
+roleId: S
+  }), R = i.useRef(null), C = (0, d.ZP)(t.id, n), y = (0, a.e7)([u.ZP], () => null != n ? u.ZP.getMember(n, t.id) : null);
   return i.useEffect(() => {
-null == m || m(null == O ? void 0 : O.current);
+null == I || I(null == R ? void 0 : R.current);
   }, [
-O,
-m
+R,
+I
   ]), (0, r.jsx)(l.Gt, {
-value: N,
+value: v,
 children: (0, r.jsx)(c.Mt, {
   layout: 'POPOUT',
   userId: t.id,
   guildId: n,
-  channelId: I,
-  messageId: T,
-  roleId: g,
-  shouldTrackViewOnMount: null == C || null != C.fullProfileLoadedTimestamp,
+  channelId: T,
+  messageId: g,
+  roleId: S,
+  shouldTrackViewOnMount: null == y || null != y.fullProfileLoadedTimestamp,
   children: (0, r.jsx)(s.Dialog, {
-    ref: O,
+    ref: R,
     'aria-label': t.username,
     children: (0, r.jsx)(_.Z, {
       user: t,
-      displayProfile: R,
+      displayProfile: C,
       profileType: f.y0.BITE_SIZE,
       children: (0, r.jsxs)('div', {
-        className: h.container,
+        className: p.container,
         children: [
           (0, r.jsx)('img', {
-            src: p,
-            alt: ' ',
-            className: h.previewForCollected,
+            alt: '',
+            src: m,
+            className: p.previewForCollected,
             'aria-hidden': !0
           }),
           (0, r.jsx)(E.tG, {
-            className: h.centeredButton,
+            className: p.centeredButton,
             action: 'VIEW_BLOCKED_PROFILE',
-            text: 'View Profile',
+            text: h.Z.Messages.VIEW_PROFILE,
             autoFocus: !0,
             fullWidth: !1,
             onClick: () => {
-              null == S || S(), v({
+              null == A || A(), O({
                 action: 'VIEW_BLOCKED_PROFILE',
-                analyticsLocations: N
+                analyticsLocations: v
               });
             }
           })
