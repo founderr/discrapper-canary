@@ -18,24 +18,23 @@ onClick: n,
 ...u
   } = e, {
 profileType: c
-  } = (0, s.z)(), d = c !== o.y0.FULL_SIZE ? 1 : void 0;
-  return null == t || '' === t ? null : null != n ? (0, r.jsx)(i.Clickable, {
-onClick: n,
-className: l.clickable,
-children: (0, r.jsx)(i.Text, {
-  color: 'text-normal',
-  lineClamp: d,
-  ...u,
-  children: (0, r.jsx)(a.Z, {
-    children: t
-  })
-})
+  } = (0, s.z)(), d = 'string' == typeof t ? t.trim() : t;
+  if (null == d || '' === d)
+return null;
+  let _ = () => c === o.y0.FULL_SIZE ? (0, r.jsx)(i.Text, {
+color: 'text-normal',
+...u,
+children: d
   }) : (0, r.jsx)(i.Text, {
 color: 'text-normal',
-lineClamp: d,
 ...u,
 children: (0, r.jsx)(a.Z, {
-  children: t
+  children: d
 })
   });
+  return null != n ? (0, r.jsx)(i.Clickable, {
+onClick: n,
+className: l.clickable,
+children: _()
+  }) : _();
 }
