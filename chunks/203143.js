@@ -250,7 +250,7 @@ return (0, M.eu)(t, n, e => {
 });
   }
 }
-async function F(e) {
+async function G(e) {
   let {
 channelId: t,
 messageId: n,
@@ -318,7 +318,7 @@ default:
   s()(!1, 'Unknown poll action type: '.concat(i));
   }
 }
-async function G(e) {
+async function F(e) {
   let {
 channel: t,
 question: n,
@@ -481,7 +481,7 @@ let u = null === (t = o.poll) || void 0 === t ? void 0 : t.allow_multiselect;
   },
   handlePollSubmitVote: B,
   handleUpdateVoteEditingState: j,
-  handlePollActionTapped: F,
-  createPoll: G,
+  handlePollActionTapped: G,
+  createPoll: F,
   endPollEarly: w
 };

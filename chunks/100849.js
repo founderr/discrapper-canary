@@ -17,8 +17,8 @@ var n = i(735250),
   f = i(785717),
   m = i(221292),
   E = i(981631),
-  S = i(501649),
-  v = i(735393);
+  v = i(501649),
+  S = i(735393);
 
 function x(e) {
   let {
@@ -45,17 +45,17 @@ location: {
 }
   };
   return (0, n.jsxs)(r.ScrollerThin, {
-className: v.listScroller,
+className: S.listScroller,
 fade: !0,
 children: [
   Z ? (0, n.jsx)(d.Z, {
     type: i,
     user: s,
     source: j,
-    className: S.userProfileActivity,
+    className: v.userProfileActivity,
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
     activity: T,
-    actionColor: S.actionColor,
+    actionColor: v.actionColor,
     analyticsParams: R,
     showActions: t,
     onClose: x,
@@ -79,9 +79,9 @@ children: [
     user: s,
     useStoreStream: !1,
     source: j,
-    className: o()(S.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
+    className: o()(v.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && v.simplifiedProfileActivity),
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
-    actionColor: S.actionColor,
+    actionColor: v.actionColor,
     analyticsParams: R,
     showActions: t,
     onClose: x,

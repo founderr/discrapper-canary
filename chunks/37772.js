@@ -72,8 +72,8 @@ message: o,
 compact: N = !1,
 className: U,
 onContextMenu: k,
-onClick: F,
-disableInteraction: G = !1,
+onClick: G,
+disableInteraction: F = !1,
 hasThread: w,
 treatSpam: V
   } = t, H = b.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, l.e7)([T.Z], () => o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), K = m.x4.useSetting(), z = m.RS.useSetting(), Q = m.NA.useSetting(), q = m.QK.useSetting(), X = (0, d.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == a ? void 0 : a.id), {
@@ -106,7 +106,7 @@ collapsedReason: s
 compact: N,
 className: r()(U, {
   [y.ephemeral]: (0, C.yE)(o.flags, b.iLy.EPHEMERAL),
-  [y.disableInteraction]: G,
+  [y.disableInteraction]: F,
   [y.groupStart]: t.isGroupStart
 }),
 childrenRepliedMessage: (0, D.Z)(o, a, H, Y, N),
@@ -143,7 +143,7 @@ childrenExecutedCommand: (0, P.Z)(o, a, N),
 childrenMessageContent: (0, v.Z)(t, ee),
 childrenSystemMessage: (0, Z.Z)(t),
 onContextMenu: k,
-onClick: F,
+onClick: G,
 hasThread: !1 !== w && null != ei && o.hasFlag(b.iLy.HAS_THREAD),
 hasReply: o.type === b.uaV.REPLY,
 isSystemMessage: (0, g.Z)(o),

@@ -43,8 +43,8 @@ var i = n(735250),
   y = n(574650),
   B = n(665302),
   k = n(434404),
-  F = n(918658),
-  G = n(859428),
+  G = n(918658),
+  F = n(859428),
   w = n(963249),
   V = n(774276),
   H = n(14335),
@@ -159,7 +159,7 @@ return (0, i.jsx)(v.A, {
   let eA = null === (e = ec.metadata) || void 0 === e ? void 0 : e.premiumType;
   switch (ec.type) {
 case eu.kVF.LURKING_GUILD:
-  return (0, i.jsx)(G.Z, {});
+  return (0, i.jsx)(F.Z, {});
 case eu.kVF.PENDING_MEMBER:
   return (0, i.jsx)(y.Z, {});
 case eu.kVF.INVITED_TO_SPEAK:
@@ -647,7 +647,7 @@ case eu.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
   let {
     progress: eB,
       total: ek,
-      name: eF
+      name: eG
   } = ec.metadata;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.DEFAULT,
@@ -659,8 +659,8 @@ case eu.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
       (0, i.jsxs)(es.Z, {
         justify: es.Z.Justify.CENTER,
         children: [
-          null != eF ? eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
-            name: ''.concat(eF),
+          null != eG ? eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
+            name: ''.concat(eG),
             progress: ''.concat(eB),
             total: ''.concat(ek)
           }) : eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
@@ -734,7 +734,7 @@ case eu.kVF.APPLICATION_TEST_MODE:
 case eu.kVF.OUTBOUND_PROMOTION:
   return (0, i.jsx)(H.Z, {});
 case eu.kVF.VIEWING_ROLES:
-  return (0, i.jsx)(F.Z, {});
+  return (0, i.jsx)(G.Z, {});
 case eu.kVF.PREMIUM_UNCANCEL:
   return (0, i.jsxs)(c.Notice, {
     color: eA === ed.p9.TIER_1 ? c.NoticeColors.PREMIUM_TIER_1 : eA === ed.p9.TIER_0 ? c.NoticeColors.PREMIUM_TIER_0 : c.NoticeColors.PREMIUM_TIER_2,
@@ -787,7 +787,7 @@ case eu.kVF.PREMIUM_UNCANCEL:
   });
 case eu.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
   let {
-    daysPastDue: eG,
+    daysPastDue: eF,
       dismissUntil: ew
   } = ec.metadata;
   return (0, i.jsxs)(c.Notice, {
@@ -800,7 +800,7 @@ case eu.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
         }
       }),
       eI.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
-        daysPastDue: eG
+        daysPastDue: eF
       }),
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: eu.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,

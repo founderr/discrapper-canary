@@ -39,8 +39,8 @@ t.Z = function(e) {
   let {
 channelId: B,
 previewQuest: k,
-isParticipatingOverride: F
-  } = e, [G, w] = s.useState(!1), V = s.useCallback(() => w(!0), []), H = s.useCallback(() => w(!1), []), Y = s.useContext(I.h9), W = (0, l.e7)([T.default], () => T.default.getCurrentUser()), K = (0, l.e7)([E.Z], () => E.Z.getState().theme), z = (0, o.wj)(K) ? b.BRd.DARK : b.BRd.LIGHT, {
+isParticipatingOverride: G
+  } = e, [F, w] = s.useState(!1), V = s.useCallback(() => w(!0), []), H = s.useCallback(() => w(!1), []), Y = s.useContext(I.h9), W = (0, l.e7)([T.default], () => T.default.getCurrentUser()), K = (0, l.e7)([E.Z], () => E.Z.getState().theme), z = (0, o.wj)(K) ? b.BRd.DARK : b.BRd.LIGHT, {
 isCurrentUserStreamingQuestApplication: Q,
 quest: q
   } = (0, l.cj)([
@@ -100,7 +100,7 @@ return !!(null != t && (0, g.$J)(q) && (0, g._D)(t, q)) || !1;
 q,
 J,
 W
-  ]), ee = !0 === F || Q || $, et = (0, l.e7)([f.Z], () => null != q && f.Z.isEnrolling(q.id), [q]), en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
+  ]), ee = !0 === G || Q || $, et = (0, l.e7)([f.Z], () => null != q && f.Z.isEnrolling(q.id), [q]), en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
 B,
 W
   ]), ei = (0, C.B6)(null == q ? void 0 : q.config.expiresAt), es = (0, C.B6)(null == X ? void 0 : X.rewardsExpireAt), ea = s.useCallback(() => {
@@ -146,7 +146,7 @@ return null;
   let eh = (0, g.il)(q),
 eN = (0, i.jsx)(M.Z, {
   className: y.rewardTile,
-  autoplay: G,
+  autoplay: F,
   quest: q,
   questContent: p.jn.QUEST_LIVE_STREAM,
   location: D.dr.QUEST_CHANNEL_CALL_HEADER
@@ -235,7 +235,7 @@ children: () => {
             ]
           }),
           ed && !e_ && !ee && (0, i.jsx)(Z.Z, {
-            autoplay: G,
+            autoplay: F,
             quest: q,
             questContent: p.jn.QUEST_LIVE_STREAM,
             taskDetails: eh,

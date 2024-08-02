@@ -42,19 +42,19 @@ applicationId: D,
 message: b
   } = e, {
 analyticsLocations: j
-  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = b.channel_id, B = (0, a.e7)([m.Z], () => m.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, F = null != B && (B.isGuildVoice() || B.isPrivate()), G = (0, a.e7)([f.ZP], () => f.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == G ? void 0 : G.applicationId) === D, [V, H] = (0, _.Z)([
+  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = b.channel_id, B = (0, a.e7)([m.Z], () => m.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, a.e7)([f.ZP], () => f.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === D, [V, H] = (0, _.Z)([
 D,
-null !== (n = null == G ? void 0 : G.applicationId) && void 0 !== n ? n : ''
-  ]), Y = (0, S.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0), [W] = (0, a.Wu)([f.ZP], () => F ? f.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === D) : [], [
+null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ''
+  ]), Y = (0, S.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0), [W] = (0, a.Wu)([f.ZP], () => G ? f.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === D) : [], [
 D,
 y,
-F
+G
   ]), K = Array.from(null !== (C = null == W ? void 0 : W.userIds) && void 0 !== C ? C : []), z = (0, a.Wu)([T.default], () => K.map(e => T.default.getUser(e)).filter(N.lm), [K]), Q = (0, A.Z)({
 applicationId: D,
 size: P,
 names: ['embedded_cover']
   }), q = E.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), X = z.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START, J = async () => {
-if (F) {
+if (G) {
   if (null != W && z.length > 0)
     await (0, p.Z)({
       applicationId: W.applicationId,

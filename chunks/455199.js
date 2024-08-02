@@ -79,14 +79,14 @@ return n !== e;
   });
 }
 
-function F(e) {
+function G(e) {
   let {
 id: t
   } = e;
   return k(t);
 }
 
-function G(e) {
+function F(e) {
   let t = {
 ...P
   };
@@ -167,7 +167,7 @@ r = 'RecentMentionsStore', (a = 'displayName') in(s = Y) ? Object.defineProperty
 let {
   guildId: t
 } = e;
-L = !0, null == t && P.guildFilter === O.NgX.THIS_SERVER && G({
+L = !0, null == t && P.guildFilter === O.NgX.THIS_SERVER && F({
   guildFilter: O.NgX.ALL_SERVERS
 });
   },
@@ -184,7 +184,7 @@ i ? M = M.concat(s) : (M = s, v = {}), o().forEach(s, e => {
   LOAD_RECENT_MENTIONS_FAILURE: function() {
 L = !1;
   },
-  SET_RECENT_MENTIONS_FILTER: G,
+  SET_RECENT_MENTIONS_FILTER: F,
   CLEAR_MENTIONS: function(e) {
 w();
   },
@@ -242,8 +242,8 @@ let n = o().findIndex(M, e => {
   i = (M = M.slice())[n];
 null != i && (M[n] = (0, E.wi)(i, e.message));
   },
-  MESSAGE_DELETE: F,
-  RECENT_MENTION_DELETE: F,
+  MESSAGE_DELETE: G,
+  RECENT_MENTION_DELETE: G,
   MESSAGE_DELETE_BULK: function(e) {
 let {
   ids: t

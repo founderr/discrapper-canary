@@ -18,8 +18,8 @@ var l = i(442837),
   f = i(900927),
   m = i(678738),
   E = i(652853),
-  S = i(335191),
-  v = i(351707),
+  v = i(335191),
+  S = i(351707),
   x = i(228168),
   Z = i(689938),
   h = i(247321);
@@ -44,7 +44,7 @@ children: [
     userBio: p.bio,
     setLineClamp: !1
   }),
-  null != A && (0, n.jsx)(v.Z, {
+  null != A && (0, n.jsx)(S.Z, {
     user: s,
     currentUser: i,
     guild: A,
@@ -60,7 +60,7 @@ children: [
   }),
   U.length > 0 && (0, n.jsx)(m.Z, {
     heading: Z.Z.Messages.CONNECTIONS,
-    children: (0, n.jsx)(S.OA, {
+    children: (0, n.jsx)(v.OA, {
       connectedAccounts: U,
       className: h.connections,
       userId: s.id,
@@ -70,7 +70,7 @@ children: [
   }),
   L.length > 0 && (0, n.jsx)(m.Z, {
     heading: Z.Z.Messages.APPS,
-    children: L.map(e => (0, n.jsx)(S.tH, {
+    children: L.map(e => (0, n.jsx)(v.tH, {
       className: h.appsConnections,
       applicationRoleConnection: e,
       locale: M,

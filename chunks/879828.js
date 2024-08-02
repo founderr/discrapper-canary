@@ -17,8 +17,8 @@ var n = i(735250),
   f = i(527790),
   m = i(304042),
   E = i(981631),
-  S = i(921944),
-  v = i(689938),
+  v = i(921944),
+  S = i(689938),
   x = i(122606);
 
 function Z(e) {
@@ -39,7 +39,7 @@ stream: j
   return l.useEffect(() => {
 if (!!C && !A)
   (0, r.EW)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
-    dismissAction: S.L.AUTO_DISMISS,
+    dismissAction: v.L.AUTO_DISMISS,
     forceTrack: !0
   });
   }, [
@@ -88,7 +88,7 @@ children: [
     ]
   }),
   (0, n.jsx)(I.Z, {
-    heading: v.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+    heading: S.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
     children: N.map(e => (0, n.jsx)(f.Z, {
       user: s,
       entry: e,

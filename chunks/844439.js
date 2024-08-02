@@ -1,16 +1,16 @@
 n.d(t, {
   M: function() {
-return s;
+return r;
   }
 });
-var i, o, a, l, s, r, u = n(442837),
+var i, o, a, l, r, s, u = n(442837),
   d = n(570140);
-(i = s || (s = {}))[i.FETCHING = 0] = 'FETCHING', i[i.FETCHED = 1] = 'FETCHED', i[i.ERROR = 2] = 'ERROR';
+(i = r || (r = {}))[i.FETCHING = 0] = 'FETCHING', i[i.FETCHED = 1] = 'FETCHED', i[i.ERROR = 2] = 'ERROR';
 let c = {},
   m = {},
-  h = {};
+  p = {};
 
-function p(e) {
+function h(e) {
   let {
 location: t,
 channelId: n,
@@ -18,15 +18,15 @@ withCommands: i
   } = e;
   return 'location:'.concat(t, ' channelId:').concat('0', ' withCommands:').concat(i);
 }
-let E = Object.freeze([]);
-class I extends(r = u.ZP.Store) {
+let _ = Object.freeze([]);
+class E extends(s = u.ZP.Store) {
   getLastFetchTimeMs(e) {
 let {
   location: t,
   channelId: n,
   withCommands: i
 } = e;
-return h[p({
+return p[h({
   location: t,
   channelId: n,
   withCommands: i
@@ -38,7 +38,7 @@ let {
   channelId: n,
   withCommands: i
 } = e;
-return m[p({
+return m[h({
   location: t,
   channelId: n,
   withCommands: i
@@ -51,19 +51,19 @@ let {
   channelId: i,
   withCommands: o
 } = e;
-return null !== (t = c[p({
+return null !== (t = c[h({
   location: n,
   channelId: i,
   withCommands: o
-})]) && void 0 !== t ? t : E;
+})]) && void 0 !== t ? t : _;
   }
 }
-l = void 0, (a = 'displayName') in(o = I) ? Object.defineProperty(o, a, {
+l = void 0, (a = 'displayName') in(o = E) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.ZP = new I(d.Z, {
+}) : o[a] = l, t.ZP = new E(d.Z, {
   APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function(e) {
 let {
   location: t,
@@ -72,7 +72,7 @@ let {
 } = e;
 m = {
   ...m,
-  [p({
+  [h({
     location: t,
     channelId: n,
     withCommands: i
@@ -85,7 +85,7 @@ let {
   location: n,
   channelId: i,
   withCommands: o
-} = e, a = p({
+} = e, a = h({
   location: n,
   channelId: i,
   withCommands: o
@@ -98,8 +98,8 @@ c = {
   [a]: 1
 };
 let l = Date.now();
-h = {
-  ...h,
+p = {
+  ...p,
   [a]: l
 };
   },
@@ -111,7 +111,7 @@ let {
 } = e;
 m = {
   ...m,
-  [p({
+  [h({
     location: t,
     channelId: n,
     withCommands: i

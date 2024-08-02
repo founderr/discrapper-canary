@@ -45,7 +45,7 @@ writable: !0
 let k = {
   spotify: 'Spotify'
 };
-class F extends(i = a.PureComponent) {
+class G extends(i = a.PureComponent) {
   getCoverImage() {
 let {
   activity: e,
@@ -243,7 +243,7 @@ super(...e), B(this, 'state', {
 });
   }
 }
-B(F, 'defaultProps', {
+B(G, 'defaultProps', {
   isPreview: !1
 }), t.Z = r.ZP.connectStores([
   C.Z,
@@ -299,4 +299,4 @@ isLaunchable: null != l && (0, b.t)({
   applicationId: l
 })
   };
-})(F);
+})(G);

@@ -17,8 +17,8 @@ var n = i(735250),
   f = i(680295),
   m = i(199902),
   E = i(314897),
-  S = i(158776),
-  v = i(594174),
+  v = i(158776),
+  S = i(594174),
   x = i(785717),
   Z = i(621853),
   h = i(318661),
@@ -101,7 +101,7 @@ initialSubsection: D,
 transitionState: F,
 sourceAnalyticsLocations: B = [],
 onClose: G
-  } = e, w = null !== (s = (0, t.e7)([v.default], () => v.default.getUser(Z.id))) && void 0 !== s ? s : Z, k = (0, h.ZP)(null !== (i = w.id) && void 0 !== i ? i : ''), {
+  } = e, w = null !== (s = (0, t.e7)([S.default], () => S.default.getUser(Z.id))) && void 0 !== s ? s : Z, k = (0, h.ZP)(null !== (i = w.id) && void 0 !== i ? i : ''), {
 analyticsLocations: Y
   } = (0, I.ZP)([
 ...B,
@@ -119,7 +119,7 @@ roleId: P
 [p]: [w.id]
   });
   let H = (0, t.e7)([m.Z], () => null != m.Z.getAnyStreamForUser(w.id)),
-W = (0, t.e7)([S.Z], () => S.Z.findActivity(w.id, e => e.type !== R.IIU.CUSTOM_STATUS)),
+W = (0, t.e7)([v.Z], () => v.Z.findActivity(w.id, e => e.type !== R.IIU.CUSTOM_STATUS)),
 [z, K] = l.useState(!1),
 [q, J] = l.useState(!w.isNonUserBot() || w.isClyde() || (0, _.Z)(w.id) ? y : A.oh.MUTUAL_GUILDS),
 Q = (0, t.e7)([E.default], () => E.default.getId() === w.id),

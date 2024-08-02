@@ -2,8 +2,8 @@ I.r(_);
 var A = I(735250);
 I(470079);
 var O = I(481060),
-  T = I(230711),
-  S = I(181211),
+  S = I(230711),
+  T = I(181211),
   C = I(188879),
   N = I(981631),
   D = I(726985),
@@ -14,10 +14,10 @@ _.default = E => {
   let {
 transitionState: _,
 onClose: I,
-classificationId: i,
-source: P
-  } = E, n = (0, S.Z)(), t = () => {
-I(), T.Z.open(N.oAB.PRIVACY_AND_SAFETY, D.s6.PRIVACY_ACCOUNT_STANDING);
+classificationId: P,
+source: i
+  } = E, n = (0, T.Z)(), t = () => {
+I(), S.Z.open(N.oAB.PRIVACY_AND_SAFETY, D.s6.PRIVACY_ACCOUNT_STANDING);
   };
   return (0, A.jsxs)(O.ModalRoot, {
 className: e.modalRoot,
@@ -40,8 +40,8 @@ children: [
   (0, A.jsx)(O.ModalContent, {
     className: e.modalContent,
     children: n ? (0, A.jsx)(O.Spinner, {}) : (0, A.jsx)(C.Z, {
-      classificationId: i,
-      source: P,
+      classificationId: P,
+      source: i,
       onError: t
     })
   }),

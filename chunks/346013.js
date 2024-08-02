@@ -45,8 +45,8 @@ embedUrl: l,
 message: y,
 channel: B
   } = e, k = (0, Z.J)(l, y), {
-setPopout: F
-  } = (0, p.Z)(y.id, D.d$), G = (0, f.qo)(y, B, F, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = s.useState(!1), [W, K] = s.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, d.e7)([
+setPopout: G
+  } = (0, p.Z)(y.id, D.d$), F = (0, f.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = s.useState(!1), [W, K] = s.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, d.e7)([
 R.ZP,
 O.default
   ], () => {
@@ -122,7 +122,7 @@ children: [
         className: r()(j.thumbnail, {
           [j.spoiler]: k.shouldSpoiler
         }),
-        onContextMenu: G,
+        onContextMenu: F,
         onError: () => K(!0)
       }) : (0, i.jsx)(h.Z, {
         src: !(V && (w || H)) && ed ? ''.concat(eu, '?format=png') : eu,
@@ -133,7 +133,7 @@ children: [
           [j.spoiler]: k.shouldSpoiler
         }),
         imageChildClassName: j.thumbnailImage,
-        onContextMenu: G,
+        onContextMenu: F,
         onError: () => K(!0)
       })),
       null != k.coverImageOverlayText && (0, i.jsx)(_.Clickable, {

@@ -17,8 +17,8 @@ var n = i(735250),
   f = i(944546),
   m = i(470900),
   E = i(988246),
-  S = i(970041),
-  v = i(715388),
+  v = i(970041),
+  S = i(715388),
   x = i(879828),
   Z = i(834534),
   h = i(228168),
@@ -56,9 +56,9 @@ onClose: a
   }) : s === h.oh.MUTUAL_GUILDS ? (0, n.jsx)(m.Z, {
 user: l,
 onClose: a
-  }) : s === h.oh.BOT_DATA_ACCESS ? (0, n.jsx)(S.Z, {
+  }) : s === h.oh.BOT_DATA_ACCESS ? (0, n.jsx)(v.Z, {
 user: l
-  }) : s === h.oh.BOT_INFO ? (0, n.jsx)(v.Z, {
+  }) : s === h.oh.BOT_INFO ? (0, n.jsx)(S.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
@@ -81,8 +81,8 @@ currentUser: I,
 displayProfile: _,
 items: f,
 initialSection: m = h.oh.USER_INFO,
-initialSubsection: S,
-onClose: v
+initialSubsection: v,
+onClose: S
   } = e, {
 trackUserProfileAction: x
   } = (0, c.KZ)(), Z = (0, t.e7)([d.Z], () => d.Z.hidePersonalInformation), [{
@@ -95,7 +95,7 @@ section: null !== (r = null === (s = f.find(e => {
   } = e;
   return s === m;
 })) || void 0 === s ? void 0 : s.section) && void 0 !== r ? r : null === (i = f[0]) || void 0 === i ? void 0 : i.section,
-subsection: S
+subsection: v
   }), C = l.useCallback(e => {
 x({
   action: 'PRESS_SECTION',
@@ -142,7 +142,7 @@ children: [
     user: u,
     currentUser: I,
     displayProfile: _,
-    onClose: v
+    onClose: S
   })
 ]
   });

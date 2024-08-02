@@ -18,8 +18,8 @@ var l = i(481060),
   f = i(681837),
   m = i(502762),
   E = i(530),
-  S = i(645410),
-  v = i(437758),
+  v = i(645410),
+  S = i(437758),
   x = i(357836),
   Z = i(544989),
   h = i(934861),
@@ -72,7 +72,7 @@ children: (0, n.jsx)(r.Mt, {
       children: [
         (0, n.jsx)(Z.Z, {
           profileType: g.y0.FULL_SIZE,
-          children: (0, n.jsx)(v.Z, {
+          children: (0, n.jsx)(S.Z, {
             user: s,
             guildId: F
           })
@@ -112,7 +112,7 @@ children: (0, n.jsx)(r.Mt, {
                       user: s,
                       guildId: F
                     }),
-                    (0, n.jsx)(S.Z, {
+                    (0, n.jsx)(v.Z, {
                       user: s
                     })
                   ]

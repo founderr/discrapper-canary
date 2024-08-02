@@ -45,8 +45,8 @@ var i, s = n(735250),
   y = n(637618),
   B = n(225890),
   k = n(364097),
-  F = n(495129),
-  G = n(939170),
+  G = n(495129),
+  F = n(939170),
   w = n(954654),
   V = n(41776),
   H = n(628238),
@@ -99,8 +99,8 @@ var i, s = n(735250),
   ey = n(524444),
   eB = n(319323),
   ek = n(884182),
-  eF = n(546432),
-  eG = n(920888),
+  eG = n(546432),
+  eF = n(920888),
   ew = n(817384),
   eV = n(981631),
   eH = n(474936),
@@ -341,7 +341,7 @@ let {
   channel: o,
   forceAddReactions: c
 } = this.props;
-return n ? null : (0, s.jsx)(eG.Z, {
+return n ? null : (0, s.jsx)(eF.Z, {
   message: e,
   channel: o,
   disableReactionCreates: t,
@@ -390,7 +390,7 @@ let N = l.map(t => {
     let n = (0, W.VY)(t),
       s = {
         message: e,
-        item: (0, eF.OB)(t, u),
+        item: (0, eG.OB)(t, u),
         autoPlayGif: o,
         canRemoveItem: c && (l.length > 1 || '' !== e.content),
         onRemoveItem: this.handleRemoveAttachment,
@@ -440,7 +440,7 @@ let {
   renderEmbeds: t
 } = this.props;
 return 0 !== e.embeds.length && t ? e.embeds.map((t, n) => {
-  if (ew.b.has(t.type) || (0, eN.l3)(t) || (0, G.b)(t))
+  if (ew.b.has(t.type) || (0, eN.l3)(t) || (0, F.b)(t))
     return null;
   let i = {
     renderImageComponent: ey.Yi,
@@ -649,7 +649,7 @@ return 1 === e.embeds.length && e.embeds[0].type === eV.hBH.SAFETY_SYSTEM_NOTIFI
   }
   renderVoiceChannelInvite(e, t) {
 if (1 === e.embeds.length && e.embeds[0].type === eV.hBH.VOICE_CHANNEL)
-  return (0, s.jsx)(F.H, {
+  return (0, s.jsx)(G.H, {
     message: e,
     channel: t
   });
@@ -842,7 +842,7 @@ isAutomodQuarantined: f
 hasInlineForwardButton: k
   } = (0, L.yk)({
 location: 'MessageAccessories'
-  }), F = (0, Z.a)(i) && k;
+  }), G = (0, Z.a)(i) && k;
   return (0, s.jsx)(e1, {
 canSuppressEmbeds: S,
 canDeleteAttachments: A,
@@ -864,7 +864,7 @@ showMaskedLinks: P,
 shouldHideMediaOptions: D,
 shouldRedactExplicitContent: y,
 shouldRenderCtaButton: B,
-hasInlineForwardButton: F
+hasInlineForwardButton: G
   });
 }
 eQ(e1, 'defaultProps', {

@@ -44,11 +44,11 @@ writable: !0
   }) : e[t] = n, e;
 }
 let k = _()('2015-05-15').local(),
-  F = (0, E.Un)({
+  G = (0, E.Un)({
 createPromise: () => Promise.resolve().then(n.bind(n, 547800)),
 webpackId: 547800
   }),
-  G = (e, t, n) => {
+  F = (e, t, n) => {
 var s, a, r;
 let {
   user: l,
@@ -155,7 +155,7 @@ return n = null != h ? h(a, o, l) : (0, i.jsx)('strong', {
   H = e => (0, i.jsx)(V, {
 ...e,
 className: y.user,
-renderResult: G
+renderResult: F
   }),
   Y = {
 [j.dCx.FILTER_FROM]: {
@@ -445,7 +445,7 @@ super(...e), t = this, B(this, 'state', {
 }), B(this, 'renderDatePicker', () => (0, i.jsxs)('div', {
   className: y.datePicker,
   children: [
-    (0, i.jsx)(F, {
+    (0, i.jsx)(G, {
       onSelect: this.handleDateChange,
       maxDate: _()().local(),
       minDate: k

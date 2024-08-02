@@ -23,8 +23,8 @@ user: i,
 relationshipType: f,
 friendToken: m,
 persistentCallCtaEnabled: E = !1,
-activeInviteToCallCtaEnabled: S = !1,
-onClose: v
+activeInviteToCallCtaEnabled: v = !1,
+onClose: S
   } = e, {
 newestAnalyticsLocation: x
   } = (0, o.ZP)();
@@ -32,19 +32,19 @@ newestAnalyticsLocation: x
 return null;
   let Z = E ? (0, n.jsx)(r.Z, {
   user: i,
-  onClose: v
+  onClose: S
 }) : null,
 h = (0, n.jsx)(d.Z, {
   user: i,
-  onClose: v
+  onClose: S
 });
-  if (f === u.OGo.FRIEND && S && null != h)
+  if (f === u.OGo.FRIEND && v && null != h)
 return (0, n.jsxs)('div', {
   className: _.multipleButtons,
   children: [
     (0, n.jsx)(c.v, {
       userId: i.id,
-      onClose: v
+      onClose: S
     }),
     h
   ]
@@ -56,12 +56,12 @@ return (0, n.jsxs)('div', {
     Z,
     (0, n.jsx)(c.c, {
       userId: i.id,
-      onClose: v
+      onClose: S
     })
   ]
 });
   if (f === u.OGo.PENDING_OUTGOING || f === u.OGo.PENDING_INCOMING)
-return S && null != h ? (0, n.jsxs)('div', {
+return v && null != h ? (0, n.jsxs)('div', {
   className: _.multipleButtons,
   children: [
     (0, n.jsx)(a.ef, {
@@ -71,7 +71,7 @@ return S && null != h ? (0, n.jsxs)('div', {
     }),
     (0, n.jsx)(c.v, {
       userId: i.id,
-      onClose: v
+      onClose: S
     }),
     h
   ]
@@ -86,11 +86,11 @@ return S && null != h ? (0, n.jsxs)('div', {
     Z,
     (0, n.jsx)(c.c, {
       userId: i.id,
-      onClose: v
+      onClose: S
     })
   ]
 });
-  return S && null != h ? (0, n.jsxs)('div', {
+  return v && null != h ? (0, n.jsxs)('div', {
 className: _.multipleButtons,
 children: [
   (0, n.jsx)(a.ef, {
@@ -109,7 +109,7 @@ children: [
   }),
   (0, n.jsx)(c.v, {
     userId: i.id,
-    onClose: v
+    onClose: S
   }),
   h
 ]
@@ -119,7 +119,7 @@ children: [
   Z,
   (0, n.jsx)(c.v, {
     userId: i.id,
-    onClose: v
+    onClose: S
   }),
   (0, n.jsx)(a.tG, {
     action: 'SEND_FRIEND_REQUEST',

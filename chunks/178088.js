@@ -93,18 +93,18 @@ location: 'RecentsPopout'
   }, {
 autoTrackExposure: !1
   }), {
-enabled: F
+enabled: G
   } = _.Z.useExperiment({
 location: 'RecentsPopout'
   }, {
 autoTrackExposure: !1
   }), {
-enabled: G
+enabled: F
   } = d.Z.useExperiment({
 location: 'RecentsPopout'
   });
   s.useEffect(() => {
-(!k && P === l.X.TODOS || !F && P === l.X.BOOKMARKS) && D(l.X.MENTIONS);
+(!k && P === l.X.TODOS || !G && P === l.X.BOOKMARKS) && D(l.X.MENTIONS);
   });
   let w = s.useCallback(e => {
 !e.shiftKey && U();
@@ -130,11 +130,11 @@ children: (0, i.jsx)(o.Popout, {
         onJump: w,
         badgeState: O,
         closePopout: U
-      }) : G && P === l.X.GAME_INVITES ? (0, i.jsx)(g.Z, {
+      }) : F && P === l.X.GAME_INVITES ? (0, i.jsx)(g.Z, {
         setTab: D,
         badgeState: O,
         closePopout: U
-      }) : F && P === l.X.BOOKMARKS ? (0, i.jsx)(N.Z, {
+      }) : G && P === l.X.BOOKMARKS ? (0, i.jsx)(N.Z, {
         setTab: D,
         onJump: w,
         closePopout: U

@@ -17,8 +17,8 @@ var n = i(735250),
   f = i(785717),
   m = i(621853),
   E = i(204197),
-  S = i(735336),
-  v = i(520978),
+  v = i(735336),
+  S = i(520978),
   x = i(184325),
   Z = i(652853),
   h = i(225714),
@@ -58,7 +58,7 @@ R
   return (0, n.jsxs)('header', {
 className: U,
 children: [
-  (0, n.jsx)(S.Z, {
+  (0, n.jsx)(v.Z, {
     displayProfile: s,
     onClose: P,
     user: _,
@@ -108,7 +108,7 @@ children: [
           (0, n.jsxs)('div', {
             className: N.relationshipButtons,
             children: [
-              (null == F ? void 0 : F.application) != null && (0, n.jsx)(v.Z, {
+              (null == F ? void 0 : F.application) != null && (0, n.jsx)(S.Z, {
                 className: N.applicationInstallButton,
                 application: F.application
               }),

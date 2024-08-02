@@ -7,8 +7,8 @@ var i = n(735250),
   o = n(470079),
   a = n(120356),
   l = n.n(a),
-  s = n(768581),
-  r = n(689938),
+  r = n(768581),
+  s = n(689938),
   u = n(62676);
 
 function d(e) {
@@ -18,7 +18,7 @@ className: n,
 size: a,
 botIconFirst: d,
 fallbackAvatar: c
-  } = e, m = o.useMemo(() => s.ZP.getApplicationIconURL({
+  } = e, m = o.useMemo(() => r.ZP.getApplicationIconURL({
 id: t.id,
 icon: t.icon,
 bot: t.bot,
@@ -33,7 +33,7 @@ c
   ]);
   return null == m ? null : (0, i.jsx)('img', {
 className: l()(u.icon, n),
-alt: r.Z.Messages.IMAGE,
+alt: s.Z.Messages.IMAGE,
 src: m,
 'aria-hidden': !0
   });

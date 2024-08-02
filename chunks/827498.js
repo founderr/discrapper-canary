@@ -1,4 +1,4 @@
-var i, o, a, l, s, r;
+var i, o, a, l, r, s;
 n.d(t, {
   G0: function() {
 return d;
@@ -30,4 +30,4 @@ APPS_IN_THIS_SERVER: 'apps_in_this_server'
 HOME: 'home',
 APP_DETAIL: 'app_detail'
   };
-(s = o || (o = {})).HOME_EMPTY = 'home_empty', s.SEARCH_EMPTY = 'search_empty', s.HOME_NO_PERMISSIONS = 'home_no_permissions', s.COMMAND_NO_PERMISSIONS = 'command_no_permissions', s.COMMAND_NOT_FOUND = 'command_not_found', (r = a || (a = {}))[r.DISMISSED = 0] = 'DISMISSED', r[r.COMMAND = 1] = 'COMMAND', r[r.ACTIVITY = 2] = 'ACTIVITY';
+(r = o || (o = {})).HOME_EMPTY = 'home_empty', r.SEARCH_EMPTY = 'search_empty', r.HOME_NO_PERMISSIONS = 'home_no_permissions', r.COMMAND_NO_PERMISSIONS = 'command_no_permissions', r.COMMAND_NOT_FOUND = 'command_not_found', (s = a || (a = {}))[s.DISMISSED = 0] = 'DISMISSED', s[s.COMMAND = 1] = 'COMMAND', s[s.ACTIVITY = 2] = 'ACTIVITY';

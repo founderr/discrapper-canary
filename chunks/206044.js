@@ -80,9 +80,9 @@ contentPosition: y,
 toggleExpanded: B
   } = e, {
 ref: k,
-height: F
+height: G
   } = (0, _.Z)(), {
-ref: G,
+ref: F,
 width: w,
 scrollWidth: V
   } = (0, _.Z)(), H = (0, c.e7)([I.Z], () => I.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = s.useMemo(() => (0, f.nP)(u.config.assets.hero), [u]), K = s.useRef(null), z = (0, O.uq)(m), Q = m === C.jn.QUESTS_EMBED, q = (0, N.t5)(u, x.dr.QUESTS_CARD, m), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(u.config.expiresAt, {
@@ -116,7 +116,7 @@ className: r()(v.outerContainer, {
 }),
 'aria-label': M.Z.Messages.EXPAND,
 style: {
-  height: z ? F : void 0
+  height: z ? G : void 0
 },
 children: [
   (0, i.jsx)(Z, {
@@ -269,7 +269,7 @@ children: [
                         text: u.config.messages.questName,
                         shouldShow: null != w && null != V && w < V,
                         children: e => (0, i.jsx)(d.Heading, {
-                          ref: G,
+                          ref: F,
                           variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
                           className: v.heading,
                           ...e,

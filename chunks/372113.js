@@ -108,13 +108,13 @@ isQuestExpired: I,
 isExpanded: f,
 isAnimating: v,
 contentPosition: D
-  } = e, b = (0, E._Q)(t), j = b >= E.OH.ACCEPTED, U = b >= E.OH.COMPLETED, y = b >= E.OH.CLAIMED, B = (0, T.Xv)(t.config), k = (0, S.uq)(n), F = n === m.jn.QUESTS_EMBED, G = f || v, w = j && !y && k, V = (0, E.t5)(t, R.dr.QUESTS_CARD, n), {
+  } = e, b = (0, E._Q)(t), j = b >= E.OH.ACCEPTED, U = b >= E.OH.COMPLETED, y = b >= E.OH.CLAIMED, B = (0, T.Xv)(t.config), k = (0, S.uq)(n), G = n === m.jn.QUESTS_EMBED, F = f || v, w = j && !y && k, V = (0, E.t5)(t, R.dr.QUESTS_CARD, n), {
 xboxAndPlaystationAccounts: H
   } = (0, E.z6)(), Y = (0, r.e7)([c.default], () => c.default.locale), W = (0, E.z)(t), K = k && B, z = I && !U, Q = H.length > 0 && k && (0, T.$J)(t) && j && !U && !W, q = (0, i.jsx)(C.Z, {
 autoplay: o,
 className: a()(M.gridImg, {
   [M.questRewardGiftInventory]: k && 'lg' === s,
-  [M.questRewardEmbed]: F && 'lg' === s,
+  [M.questRewardEmbed]: G && 'lg' === s,
   [M.questRewardEmbedSm]: 'sm' === s,
   [M.questRewardEmbedXs]: 'xs' === s
 }),
@@ -134,9 +134,9 @@ children: [
       [M.outerContainerNoProgress]: !w
     }),
     style: {
-      visibility: G ? 'inherit' : 'hidden'
+      visibility: F ? 'inherit' : 'hidden'
     },
-    'aria-hidden': !G,
+    'aria-hidden': !F,
     children: [
       (0, i.jsx)(l.Tooltip, {
         text: z ? x.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
