@@ -296,10 +296,10 @@ children: (0, r.jsx)(M.Z, {
                 q === U.y0.FULL_SIZE && es()
               ]
             }),
-            ea(),
-            q !== U.y0.FULL_SIZE && es()
+            ea()
           ]
-        })
+        }),
+        q !== U.y0.FULL_SIZE && es()
       ]
     });
   }

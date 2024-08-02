@@ -33660,12 +33660,13 @@ h3.improved_f017d0:after {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px
+    gap: 8px;
+    margin: 4px 0 0
 }
 
 .actions_ae1fa2.fullSize_ae1fa2 {
     flex-wrap: nowrap;
-    margin-left: 20px
+    margin: 0 0 0 20px
 }
 
 .actions_ae1fa2 .primaryButton_ae1fa2 {

@@ -169,10 +169,10 @@ children: (0, r.jsx)(g.Z, {
                 w === v.y0.FULL_SIZE && F()
               ]
             }),
-            B(),
-            w !== v.y0.FULL_SIZE && F()
+            B()
           ]
-        })
+        }),
+        w !== v.y0.FULL_SIZE && F()
       ]
     });
   }

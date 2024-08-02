@@ -227,10 +227,10 @@ children: (0, r.jsx)(y.Z, {
                 H === b.y0.FULL_SIZE && ea()
               ]
             }),
-            ei(),
-            H !== b.y0.FULL_SIZE && ea()
+            ei()
           ]
-        })
+        }),
+        H !== b.y0.FULL_SIZE && ea()
       ]
     });
   }
