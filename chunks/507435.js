@@ -162,9 +162,11 @@ return t ? {
   type: 'TIE',
   tiedVotePercentage: n
 };
-  }(n), [n]);
+  }(n), [n]), l = null != n.victorEmoji || 'NO_VOTES' === s.type;
   return (0, a.jsxs)('div', {
-className: o()(p.container, t),
+className: o()(p.container, {
+  [p.containerWithImage]: l
+}, t),
 children: [
   (0, a.jsx)(S, {
     hasNoVotes: 'NO_VOTES' === s.type,
