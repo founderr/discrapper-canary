@@ -1,4 +1,4 @@
-n(47120), n(653041);
+n(47120), n(733860);
 var r, i, a, s, o = n(873011),
   l = n(442837),
   u = n(570140);
@@ -46,7 +46,9 @@ s = 'SavedMessagesStore', (a = 'displayName') in(i = f) ? Object.defineProperty(
 let {
   savedMessages: t
 } = e;
-_ = new Date().getTime(), c = t.filter(e => e.saveData.type === o.J.BOOKMARK), (d = t.filter(e => e.saveData.type === o.J.REMINDER).map(e => ({
+_ = new Date().getTime();
+let n = t.sort((e, t) => t.saveData.savedAt.getTime() - e.saveData.savedAt.getTime());
+c = n.filter(e => e.saveData.type === o.J.BOOKMARK), (d = n.filter(e => e.saveData.type === o.J.REMINDER).map(e => ({
   ...e,
   complete: !1
 }))).forEach(e => {
@@ -59,10 +61,10 @@ let {
 } = e;
 switch (t.saveData.type) {
   case o.J.BOOKMARK:
-    (c = c.filter(e => e.saveData.messageId !== t.saveData.messageId)).push(t);
+    (c = c.filter(e => e.saveData.messageId !== t.saveData.messageId)).unshift(t);
     break;
   case o.J.REMINDER:
-    (d = d.filter(e => e.saveData.messageId !== t.saveData.messageId)).push({
+    (d = d.filter(e => e.saveData.messageId !== t.saveData.messageId)).unshift({
       ...t,
       complete: !1
     });

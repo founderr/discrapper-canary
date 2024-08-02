@@ -28,7 +28,8 @@ let N = {
 function C(e) {
   let {
 channel: t,
-children: n
+children: n,
+jumpToMessage: s
   } = e;
   return (0, i.jsx)(r.tE, {
 offset: N,
@@ -43,7 +44,8 @@ children: (0, i.jsxs)('div', {
       size: 'xxs'
     }),
     (0, i.jsx)(p, {
-      channel: t
+      channel: t,
+      jumpToMessage: s
     }),
     n
   ]
@@ -80,21 +82,26 @@ alt: '',
 
 function p(e) {
   let {
-channel: t
-  } = e, n = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id)), s = (0, d.ZP)(t, !1), a = (0, _.KS)(t, n), r = t.isPrivate() || null == a, l = t.isDM() ? T.Z.Messages.FOR_LATER_DIRECT_MESSAGE_WITH.format({
-username: s
-  }) : s;
+channel: t,
+jumpToMessage: n
+  } = e, s = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id)), a = (0, d.ZP)(t, !1), r = (0, _.KS)(t, s), l = t.isPrivate() || null == r, u = t.isDM() ? T.Z.Messages.FOR_LATER_DIRECT_MESSAGE_WITH.format({
+username: a
+  }) : a;
   return (0, i.jsxs)('div', {
 className: h.channelNameSection,
 children: [
-  r ? null : (0, i.jsx)(a, {
+  l ? null : (0, i.jsx)(r, {
     className: h.channelTypeIcon,
     size: 'xxs'
   }),
-  (0, i.jsx)(c.Heading, {
-    variant: 'text-md/semibold',
-    color: 'header-secondary',
-    children: l
+  (0, i.jsx)(c.Clickable, {
+    onClick: n,
+    className: h.channelName,
+    children: (0, i.jsx)(c.Heading, {
+      variant: 'text-md/semibold',
+      color: 'header-secondary',
+      children: u
+    })
   })
 ]
   });

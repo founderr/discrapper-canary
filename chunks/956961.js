@@ -97,9 +97,7 @@ g = null;
 duration: o().duration(l.dueAt.getTime() - Date.now(), 'millisecond').humanize()
   })) : (t = 'text-danger', g = A.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
 duration: o().duration(Date.now() - l.dueAt.getTime(), 'millisecond').humanize()
-  }))), null == u || null == m) ? (0, i.jsx)('div', {
-children: 'The message isn\'t accessible. We will deal with this later.'
-  }) : (0, i.jsxs)('div', {
+  }))), null == u || null == m) ? null : (0, i.jsxs)('div', {
 className: O.container,
 children: [
   (0, i.jsx)(f.Z, {

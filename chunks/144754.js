@@ -6,6 +6,7 @@ e.exports = {
   tabBarItem: 'tabBarItem_a6fde8',
   messagesScroller: 'messagesScroller_a6fde8',
   message: 'message_a6fde8',
+  disabledMessage: 'disabledMessage_a6fde8',
   messageContainer: 'messageContainer_a6fde8',
   hoverBar: 'hoverBar_a6fde8'
 };
