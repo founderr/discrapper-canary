@@ -33707,7 +33707,6 @@ h3.improved_f017d0:after {
 .actions_ae1fa2 {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 8px;
     margin: 4px 0 0
 }
@@ -33721,7 +33720,12 @@ h3.improved_f017d0:after {
     flex: 1
 }
 
-.actions_ae1fa2 .customButton_ae1fa2 {
+.actions_ae1fa2:has(>.customButton_ae1fa2) {
+    flex-wrap: wrap;
+    align-content: center
+}
+
+.actions_ae1fa2:has(>.customButton_ae1fa2) .customButton_ae1fa2 {
     flex: 1 1 auto;
     min-width: calc(50% - 8px)
 }

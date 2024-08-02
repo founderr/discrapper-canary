@@ -129,7 +129,8 @@ instanceId: s
   url: k.ANM.ACTIVITY_LEAVE(i, a, s),
   body: {
     session_id: E
-  }
+  },
+  retries: 2
 }), null == l || null == u || null == d)
 return;
   let h = y.ZP.getShelfActivities(_),
