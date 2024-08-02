@@ -128,11 +128,16 @@ if (!i.has(s.id) && null == f.Z.getReadTimestamp(s.id) && (s.type !== S.Rr.MESSA
 }
 
 function $(e, t) {
-  if ((0, C.cn)(t) === C.Jb.MUTED_GUILD)
+  if ((0, C.jv)(t) === C.aL.MUTED)
+Z = Z.filter(t => t.type !== S.Rr.MESSAGE && t.type !== S.Rr.SUMMARY || t.data.channel_id !== e), W = W.filter(t => t.type !== S.Rr.MESSAGE && t.type !== S.Rr.SUMMARY || t.data.channel_id !== e), z = z.filter(t => t.type !== S.Rr.MESSAGE && t.type !== S.Rr.SUMMARY || t.data.channel_id !== e), O = O.filter(t => t.type !== S.Rr.MESSAGE && t.type !== S.Rr.SUMMARY || t.data.channel_id !== e), R = R.filter(t => t.type !== S.Rr.MESSAGE && t.type !== S.Rr.SUMMARY || t.data.channel_id !== e);
+}
+
+function ee(e, t) {
+  if ((0, C.jv)(t) === C.aL.MUTED)
 Z = Z.filter(t => t.type !== S.Rr.MESSAGE && t.type !== S.Rr.SUMMARY || t.data.guild_id !== e), W = W.filter(t => t.type !== S.Rr.MESSAGE && t.type !== S.Rr.SUMMARY || t.data.guild_id !== e), z = z.filter(t => t.type !== S.Rr.MESSAGE && t.type !== S.Rr.SUMMARY || t.data.guild_id !== e), O = O.filter(t => t.type !== S.Rr.MESSAGE && t.type !== S.Rr.SUMMARY || t.data.guild_id !== e), R = R.filter(t => t.type !== S.Rr.MESSAGE && t.type !== S.Rr.SUMMARY || t.data.guild_id !== e);
 }
 
-function ee(e) {
+function et(e) {
   let {
 type: t,
 messageId: n,
@@ -146,7 +151,7 @@ return !1;
   'MESSAGE_REACTION_ADD' === t ? r.message = r.message.addReaction(s, l, e.colors, a) : r.message = r.message.removeReaction(s, l, a);
 }
 
-function et(e) {
+function en(e) {
   let {
 channelId: t
   } = e, n = [], i = [];
@@ -163,7 +168,7 @@ W = i, z = [
   ...n
 ];
 }
-class en extends(i = a.ZP.PersistedStore) {
+class ei extends(i = a.ZP.PersistedStore) {
   initialize(e) {
 if (this.waitFor(h.Z, _.Z, E.ZP, c.Z, m.ZP, u.default, f.Z, l.Z), null != e) {
   var t, n, i, s, a;
@@ -212,12 +217,7 @@ return K;
 return D;
   }
   getCustomChannelScore(e, t) {
-var n;
-return null == j[e] ? 0 : null !== (n = j[e][t]) && void 0 !== n ? n : 0;
-  }
-  getCustomChannelScores(e) {
-var t;
-return null !== (t = j[e]) && void 0 !== t ? t : {};
+return null == j[e] || null == j[e][t] ? C.aL.UNKNOWN : (0, C.jv)(j[e][t]);
   }
   getCustomGuildScore(e) {
 var t;
@@ -260,7 +260,7 @@ return {
 };
   }
 }
-v(en, 'displayName', 'GravityStore'), v(en, 'persistKey', 'GravityStore'), t.Z = new en(r.Z, {
+v(ei, 'displayName', 'GravityStore'), v(ei, 'persistKey', 'GravityStore'), t.Z = new ei(r.Z, {
   POST_CONNECTION_OPEN: function() {
 if (Z.length > 0) {
   let [e, t] = X(Z);
@@ -419,8 +419,8 @@ let {
   scores: t
 } = e;
 for (let e of t)
-  for (let t of (y[e.guild_id] = e.guild_score, $(e.guild_id, e.guild_score), Object.keys(e.custom_channel_scores)))
-    null == j[e.guild_id] && (j[e.guild_id] = {}), j[e.guild_id][t] = e.custom_channel_scores[t];
+  for (let t of (y[e.guild_id] = e.guild_score, ee(e.guild_id, e.guild_score), Object.keys(e.custom_channel_scores)))
+    null == j[e.guild_id] && (j[e.guild_id] = {}), j[e.guild_id][t] = e.custom_channel_scores[t], $(t, e.custom_channel_scores[t]);
 y = {
   ...y
 }, j = {
@@ -433,14 +433,14 @@ let {
   guildId: n,
   guildScore: i
 } = e;
-null != i && (y[n] = i, $(n, i), y = {
+null != i && (y[n] = i, ee(n, i), y = {
   ...y
 }), null == t || t.forEach(e => {
   let {
     channelId: t,
     score: i
   } = e;
-  null == j[n] && (j[n] = {}), j[n][t] = i, j = {
+  null == j[n] && (j[n] = {}), j[n][t] = i, $(t, i), j = {
     ...j
   };
 });
@@ -471,7 +471,7 @@ V = t.summary;
   SET_GRAVITY_SELECTED_CHANNEL: function(e) {
 F = e.channelId;
   },
-  MESSAGE_REACTION_ADD: ee,
+  MESSAGE_REACTION_ADD: et,
   MESSAGE_REACTION_ADD_MANY: function(e) {
 let {
   messageId: t,
@@ -482,7 +482,7 @@ if (null == i || i.type !== S.Rr.MESSAGE)
 let s = u.default.getId();
 i.message = i.message.addReactionBatch(n, s);
   },
-  MESSAGE_REACTION_REMOVE: ee,
+  MESSAGE_REACTION_REMOVE: et,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
 let {
   messageId: t
@@ -500,8 +500,8 @@ if (null == i || i.type !== S.Rr.MESSAGE)
   return !1;
 i.message = i.message.removeReactionsForEmoji(n);
   },
-  CHANNEL_ACK: et,
-  MESSAGE_ACK: et,
+  CHANNEL_ACK: en,
+  MESSAGE_ACK: en,
   CONTENT_INVENTORY_SET_FEED: function(e) {
 let {
   feedId: t

@@ -635,6 +635,7 @@ e.exports = Object.freeze({
   ICYMI_ADJUST_SCORE_ERROR: 'Something went wrong. Please try again later.',
   ICYMI_ADJUST_RANKINGS_TITLE: 'Servers',
   ICYMI_SEE_GUILD_CONTENT: 'Show content in ICYMI',
+  ICYMI_SEE_CHANNEL_CONTENT: 'Show channel content in ICYMI',
   ICYMI_SERVER_SETTINGS: 'Server Preferences',
   ICYMI_SERVER_SETTINGS_SUBTITLE: 'How much content would you like to see from !!{guildName} overall?',
   ICYMI_SERVER_SETTINGS_CHANNELS_SUBTITLE: 'Adjust how much content would you like to see from each channel.',
