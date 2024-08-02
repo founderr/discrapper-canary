@@ -1,6 +1,6 @@
 n.d(t, {
   Q: function() {
-return L;
+return b;
   }
 }), n(47120), n(411104), n(757143), n(653041);
 var r = n(512722),
@@ -78,11 +78,6 @@ emoji: {
 customEmoji: {
   type: 'inlineObject'
 },
-em: {
-  type: 'inlineStyle',
-  before: '*',
-  after: '*'
-},
 looseEm: {
   type: 'inlineStyle',
   before: '*',
@@ -112,11 +107,6 @@ escape: {
   type: 'inlineStyle',
   before: '\\',
   after: ''
-},
-inlineCode: {
-  type: 'inlineStyle',
-  before: '`',
-  after: '`'
 },
 staticRouteLink: {
   type: 'inlineStyle',
@@ -155,6 +145,16 @@ codeBlockLang: {
 },
 timestamp: {
   type: 'inlineObject'
+},
+em: {
+  type: 'inlineStyle',
+  before: '*',
+  after: '*'
+},
+inlineCode: {
+  type: 'inlineStyle',
+  before: '`',
+  after: '`'
 },
 subtext: {
   type: 'inlineStyle',
@@ -230,25 +230,26 @@ codeBlockSyntax: {
   }
 }
   },
-  N = (0, E.Z)([
+  N = /(-# +)/,
+  v = (0, E.Z)([
 T,
 A
   ]),
-  v = (0, E.Z)([
+  O = (0, E.Z)([
 g,
 A
   ]),
-  O = l._p(N),
   R = l._p(v),
-  C = {
+  C = l._p(O),
+  y = {
 max: 1 / 0,
 maxAge: 1 * f.Z.Millis.MINUTE,
 updateAgeOnGet: !0
   },
-  y = new(s())(C),
-  D = new(s())(C);
+  D = new(s())(y),
+  L = new(s())(y);
 
-function L(e, t) {
+function b(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
 i = p.rN(e);
@@ -271,7 +272,7 @@ else {
   let l = e.substring(a, n);
   '' !== l && function(e, t, n) {
     let r = [],
-      i = n ? D : y,
+      i = n ? L : D,
       a = i.get(e);
     if (null != a)
       return a;
@@ -282,13 +283,13 @@ else {
           0: ''
         },
         type: 'paragraph',
-        content: (n ? R : O)(s, !0, {
+        content: (n ? C : R)(s, !0, {
           returnMentionIds: !0,
           disableAutoBlockNewlines: !0,
           guildId: t
         })
       };
-    b(r, s, o, 0, []);
+    M(r, s, o, 0, []);
     let l = function(e) {
       if (0 === (e = e.filter(e => e.text.length > 0)).length)
         return e;
@@ -314,7 +315,7 @@ s = !s, a = n;
   return o;
 }
 
-function b(e, t, n, r, a) {
+function M(e, t, n, r, a) {
   let {
 content: s,
 type: o,
@@ -326,12 +327,12 @@ case 'br':
 case 'paragraph':
 case 'text':
 case 'emoticon':
-  return M(e, t, s || '', r, a);
+  return P(e, t, s || '', r, a);
 case 'emoji':
 case 'customEmoji': {
   let i = t.substring(r);
-  if (!i.startsWith(l[0]) && (r = x(e, t, r, t.length), i = t.substring(r)), i.startsWith(l[0]))
-    return U({
+  if (!i.startsWith(l[0]) && (r = G(e, t, r, t.length), i = t.substring(r)), i.startsWith(l[0]))
+    return w({
       result: e,
       sourceText: t,
       text: l[0],
@@ -353,7 +354,7 @@ case 'channel': {
     id: s
   } = n;
   if (null != a)
-    return i()(a === l[0], 'Slate: text mentions must exactly match the regex match'), U({
+    return i()(a === l[0], 'Slate: text mentions must exactly match the regex match'), w({
       result: e,
       sourceText: t,
       text: a,
@@ -363,7 +364,7 @@ case 'channel': {
         text: a
       }
     });
-  return U({
+  return w({
     result: e,
     sourceText: t,
     text: l[0],
@@ -380,7 +381,7 @@ case 'timestamp':
     }, {
       autoTrackExposure: !1
     }).enabled)
-    return U({
+    return w({
       result: e,
       sourceText: t,
       text: l[0],
@@ -388,7 +389,7 @@ case 'timestamp':
       attributes: [o],
       data: n
     });
-  return M(e, t, l[0], r, a);
+  return P(e, t, l[0], r, a);
 case 'em':
 case 'autolink':
 case 'strong':
@@ -402,7 +403,7 @@ case 'spoiler':
 case 'url':
 case 'link':
 case 'subtext': {
-  r = w(t, r);
+  r = x(t, r);
   let {
     before: n,
     after: i
@@ -417,20 +418,25 @@ case 'subtext': {
         before: '_',
         after: '_'
       };
+    if ('subtext' === t)
+      return {
+        before: N.exec(r.input)[1],
+        after: ''
+      };
     let i = m['link' === t ? 'url' : t];
     if ('inlineStyle' === i.type)
       return i;
     throw Error('Slate: rule must be an inlineStyle');
   }(t, o, r, l);
-  return r = P(e, t, n, r, 'syntaxBefore'), a.push(o), r = M(e, t, null != s ? s : '', r, a), a.pop(), r = P(e, t, i, r, 'syntaxAfter'), w(t, r);
+  return r = U(e, t, n, r, 'syntaxBefore'), a.push(o), r = P(e, t, null != s ? s : '', r, a), a.pop(), r = U(e, t, i, r, 'syntaxAfter'), x(t, r);
 }
 default:
   throw Error('Slate: Unknown rule type: '.concat(o));
   }
 }
 
-function M(e, t, n, r, i) {
-  return 'string' == typeof n ? r = U({
+function P(e, t, n, r, i) {
+  return 'string' == typeof n ? r = w({
 result: e,
 sourceText: t,
 text: n,
@@ -438,11 +444,11 @@ originalStart: r,
 attributes: i,
 data: null
   }) : (!(n instanceof Array) && (n = [n]), n.forEach(n => {
-r = b(e, t, n, r, i);
-  })), w(t, r);
+r = M(e, t, n, r, i);
+  })), x(t, r);
 }
 
-function P(e, t, n, r, a) {
+function U(e, t, n, r, a) {
   if (n.length > 0) {
 let s = t.indexOf(n, r),
   o = t.substring(r, s + n.length);
@@ -456,7 +462,7 @@ i()(s >= 0, 'Slate: Unable to find syntax characters'), e.push({
   return r;
 }
 
-function U(e) {
+function w(e) {
   let {
 result: t,
 sourceText: n,
@@ -464,12 +470,12 @@ text: r,
 originalStart: i,
 attributes: a,
 data: s
-  } = e, o = w(n, i);
+  } = e, o = x(n, i);
   for (;
 '\n' === r.charAt(0) || ' ' === r.charAt(0);)
 r = r.substring(1);
   let l = n.indexOf(r, o);
-  if (l !== o ? o = i = x(t, n, o, l) : '\\' === r && '\\' === n.charAt(l + 1) && (l++, i = ++o), l !== o)
+  if (l !== o ? o = i = G(t, n, o, l) : '\\' === r && '\\' === n.charAt(l + 1) && (l++, i = ++o), l !== o)
 throw new u.Z('MarkdownToSlate').error(JSON.stringify({
   sourceText: n,
   searchText: r,
@@ -486,17 +492,17 @@ data: s
   }), c;
 }
 
-function w(e, t) {
+function x(e, t) {
   for (;
 '\n' === e.charAt(t) || ' ' === e.charAt(t);)
 t++;
   return t;
 }
 
-function x(e, t, n, r) {
+function G(e, t, n, r) {
   for (; n < r;)
 if (I.has(t[n]))
-  n = P(e, t, t[n], n, 'syntaxBefore'), n = w(t, n);
+  n = U(e, t, t[n], n, 'syntaxBefore'), n = x(t, n);
 else
   break;
   return n;
