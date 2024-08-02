@@ -538,11 +538,15 @@ eO.on(m.aB.Connection, e => {
     autoTrackExposure: !0
   });
   _ && e.setExperimentFlag(em.V8.RESET_DECODER_ON_ERRORS, !0), E && e.setExperimentFlag(em.V8.SOFTWARE_FALLBACK_ON_ERRORS, !0), f && e.setExperimentFlag(em.V8.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS, !0);
-  e.context === em.Yn.STREAM && ts() && e.setExperimentFlag(em.V8.GOLIVE_SIMULCAST, !0), (0, et.isWindows)() ? (null == e4 ? void 0 : e4.startsWith('NVIDIA')) ? e.setExperimentFlag(em.V8.SIGNAL_AV1, !0) : (null == e4 ? void 0 : e4.startsWith('AMD')) && U.Z.getCurrentConfig({
+  if (e.context === em.Yn.STREAM && ts()) {
+    let t = G.Z.goliveSimulcastFlag();
+    void 0 !== t && e.setExperimentFlag(t, !0);
+  }
+  (0, et.isWindows)() ? (null == e4 ? void 0 : e4.startsWith('NVIDIA')) ? e.setExperimentFlag(em.V8.SIGNAL_AV1, !0): (null == e4 ? void 0 : e4.startsWith('AMD')) && U.Z.getCurrentConfig({
     location: 'setupMediaEngine'
   }, {
     autoTrackExposure: !0
-  }).signalAV1Support ? e.setExperimentFlag(em.V8.SIGNAL_AV1, !0) : e.setExperimentFlag(em.V8.SIGNAL_AV1_DECODE, !0) : ((0, et.isMac)() || (0, et.isLinux)()) && e.setExperimentFlag(em.V8.SIGNAL_AV1_DECODE, !0), (0, et.isWindows)() && e.setExperimentFlag(em.V8.SIGNAL_AV1_HARDWARE_DECODE, !0);
+  }).signalAV1Support ? e.setExperimentFlag(em.V8.SIGNAL_AV1, !0) : e.setExperimentFlag(em.V8.SIGNAL_AV1_DECODE, !0): ((0, et.isMac)() || (0, et.isLinux)()) && e.setExperimentFlag(em.V8.SIGNAL_AV1_DECODE, !0), (0, et.isWindows)() && e.setExperimentFlag(em.V8.SIGNAL_AV1_HARDWARE_DECODE, !0);
   let {
     allowSettingFullbandAndroid: h
   } = F.Z.getCurrentConfig({

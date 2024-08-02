@@ -448,7 +448,7 @@ if (null != e.desktopDescription ? i = e.desktopDescription.id : null != e.camer
   this.setDesktopEncodingOptions(r, t, n);
   return;
 }
-if (this.videoQualityManager.setGoliveSimulcast(this.experimentFlags.has(A.V8.GOLIVE_SIMULCAST)), this.goLiveSourceIdentifier = i, null != this.conn.setDesktopSource) {
+if (this.videoQualityManager.configGoliveSimulcast(this.experimentFlags), this.goLiveSourceIdentifier = i, null != this.conn.setDesktopSource) {
   if (null != e.desktopDescription) {
     let {
       id: t,
