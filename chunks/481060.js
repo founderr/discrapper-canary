@@ -200,6 +200,12 @@ return tv.mY4;
   BookCheckIcon: function() {
 return tv.snC;
   },
+  BookmarkIcon: function() {
+return tv.plf;
+  },
+  BookmarkOutlineIcon: function() {
+return tv.gt9;
+  },
   BoostTier1Icon: function() {
 return tv.XGX;
   },
