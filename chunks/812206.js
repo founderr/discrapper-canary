@@ -206,5 +206,15 @@ t.forEach(e => function(e) {
     null != e.application && h(u.Z.createFromServer(e.application));
   });
 }(e));
+  },
+  APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: function(e) {
+let {
+  recommendations: t
+} = e;
+t.forEach(e => {
+  e.items.forEach(e => {
+    h(u.Z.createFromServer(e.application));
+  });
+});
   }
 });
