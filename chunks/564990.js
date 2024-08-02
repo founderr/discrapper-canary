@@ -46,7 +46,7 @@ let t = (await r.tn.get({
   url: o.ANM.CONTENT_INVENTORY_OUTBOX(e)
 })).body;
 return i.Z.dispatch({
-  type: 'CONTENT_INVENTORY_SET_USER_OUTBOX',
+  type: 'CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS',
   outbox: t,
   userId: e
 }), t;
