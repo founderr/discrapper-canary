@@ -1,38 +1,38 @@
-t.d(n, {
+n.d(t, {
   Z: function() {
 return d;
   }
 });
-var i = t(735250),
-  l = t(470079),
-  o = t(120356),
-  a = t.n(o),
-  s = t(768581),
-  r = t(689938),
-  u = t(62676);
+var i = n(735250),
+  o = n(470079),
+  a = n(120356),
+  l = n.n(a),
+  s = n(768581),
+  r = n(689938),
+  u = n(62676);
 
 function d(e) {
   let {
-application: n,
-className: t,
-size: o,
+application: t,
+className: n,
+size: a,
 botIconFirst: d,
 fallbackAvatar: c
-  } = e, m = l.useMemo(() => s.ZP.getApplicationIconURL({
-id: n.id,
-icon: n.icon,
-bot: n.bot,
-size: o,
+  } = e, m = o.useMemo(() => s.ZP.getApplicationIconURL({
+id: t.id,
+icon: t.icon,
+bot: t.bot,
+size: a,
 botIconFirst: d,
 fallbackAvatar: c
   }), [
-n,
-o,
+t,
+a,
 d,
 c
   ]);
   return null == m ? null : (0, i.jsx)('img', {
-className: a()(u.icon, t),
+className: l()(u.icon, n),
 alt: r.Z.Messages.IMAGE,
 src: m,
 'aria-hidden': !0

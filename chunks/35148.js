@@ -24,7 +24,7 @@ quest: h,
 useReducedMotion: E
   } = e, S = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {
 percentComplete: T
-  } = (0, i.Rf)(h), v = (0, i.Jf)(h), j = null != v ? v.completedRatio > 0 : T > 0;
+  } = (0, i.Rf)(h), v = (0, i.Jf)(h), N = null != v ? v.completedRatio > 0 : T > 0;
   return (0, s.jsxs)(a.animated.div, {
 'aria-hidden': C && _,
 className: r()(n, f.contentCollapsed, {
@@ -60,7 +60,7 @@ children: [
           autoplay: !1,
           location: x.dr.QUESTS_BAR
         }),
-        j ? (0, s.jsx)(u.Z, {
+        N ? (0, s.jsx)(u.Z, {
           className: f.questProgressBar,
           quest: h
         }) : (0, s.jsx)(l.Text, {

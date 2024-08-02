@@ -19,8 +19,8 @@ var s = n(735250),
   S = n(865364),
   T = n(585500),
   v = n(566078),
-  j = n(340100),
-  N = n(611855),
+  N = n(340100),
+  j = n(611855),
   A = n(644646),
   B = n(78826),
   b = n(670638),
@@ -188,7 +188,7 @@ children: [
           variant: 'text-xs/normal',
           children: ep
         }),
-        (0, s.jsx)(j.Z, {
+        (0, s.jsx)(N.Z, {
           quest: V
         }),
         !em && !ea && !X && es && (0, s.jsx)(M, {
@@ -204,7 +204,7 @@ children: [
             (0, s.jsxs)('div', {
               className: U.utils,
               children: [
-                (0, s.jsx)(N.Z, {
+                (0, s.jsx)(j.Z, {
                   color: 'always-white'
                 }),
                 (0, s.jsx)(b.r, {

@@ -26,7 +26,7 @@ isExpanded: S
   } = e, {
 completionSpring: T,
 startCompletionAnimation: v
-  } = (0, x.GX)(), j = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, N = o.useRef(!1), A = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([m.Z], () => m.Z.hasLayers()), R = (0, u.Z)(b), [y, I] = o.useState(null), [O, q] = o.useState(null), U = o.useRef(new l.qA({
+  } = (0, x.GX)(), N = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, j = o.useRef(!1), A = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([m.Z], () => m.Z.hasLayers()), R = (0, u.Z)(b), [y, I] = o.useState(null), [O, q] = o.useState(null), U = o.useRef(new l.qA({
 gravity: 0,
 wind: 0
   })), k = (0, l.uR)(y, O), M = o.useCallback(() => {
@@ -90,29 +90,29 @@ k,
 A
   ]), P = (0, u.Z)(S);
   return (o.useEffect(() => {
-j && S && !P && (v(), M());
+N && S && !P && (v(), M());
   }, [
 S,
-j,
+N,
 v,
 M,
 P
   ]), o.useEffect(() => {
-j && !b && R && setTimeout(() => {
+N && !b && R && setTimeout(() => {
   v(), M();
 }, 200);
   }, [
-j,
+N,
 R,
 b,
 v,
 M
   ]), o.useEffect(() => {
 if (!!k.isReady)
-  !N.current && j && (v(), M()), N.current = j;
+  !j.current && N && (v(), M()), j.current = N;
   }, [
-j,
 N,
+j,
 M,
 v,
 k
