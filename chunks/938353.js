@@ -840,7 +840,7 @@ isActiveChannelOrUnarchivableThread: g,
 isAutomodQuarantined: f
   }), P = (0, H.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), D = (0, z.Z)(null == n ? void 0 : n.id), b = (0, q.Z)(i), y = (0, O.V)(n.id, i.author.id), B = (0, x.r)(i.id), {
 hasInlineForwardButton: k
-  } = L.w.useExperiment({
+  } = (0, L.yk)({
 location: 'MessageAccessories'
   }), F = (0, Z.a)(i) && k;
   return (0, s.jsx)(e1, {

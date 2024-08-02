@@ -214,7 +214,7 @@ function z() {
   Object.assign(K, function() {
 let {
   canForwardMessages: e
-} = d.w.getCurrentConfig({
+} = (0, d.WT)({
   location: 'SearchTokens'
 }, {
   autoTrackExposure: !1

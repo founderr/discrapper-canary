@@ -67,7 +67,7 @@ children: (0, i.jsx)(l.Text, {
 function T(e, t) {
   let {
 canForwardMessages: n
-  } = o.w.getCurrentConfig({
+  } = (0, o.WT)({
 location: 'ForwardLink'
   }, {
 autoTrackExposure: !1

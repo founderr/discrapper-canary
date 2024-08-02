@@ -89,7 +89,7 @@ switch (n.key.toLowerCase()) {
     (y || w) && (0, c.o)(H, B) && (n.preventDefault(), (0, A.HH)(H, B, n));
     break;
   case 'f':
-    (y || w) && s.w.getCurrentConfig({
+    (y || w) && (0, s.WT)({
       location: 'keyboard-shortcut'
     }, {
       autoTrackExposure: !1

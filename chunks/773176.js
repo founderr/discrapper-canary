@@ -213,7 +213,7 @@ let Y = (0, H.a4)(n),
   }),
   {
     canForwardMessages: en
-  } = g.w.useExperiment({
+  } = (0, g.yk)({
     location: 'useMessageUtilitiesProps'
   }, {
     autoTrackExposure: !1

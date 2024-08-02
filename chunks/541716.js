@@ -1,6 +1,6 @@
 n.d(t, {
   I: function() {
-return A;
+return N;
   },
   O: function() {
 return i;
@@ -414,6 +414,24 @@ showCharacterCount: !0,
 toolbarType: 1
   },
   A = {
+analyticsName: 'atomic_reator_reply_input',
+drafts: {
+  type: s.d.ChannelMessage
+},
+permissions: {
+  requireSendMessages: !0
+},
+users: {
+  allowMentioning: !0
+},
+submit: {
+  useDisabledStylesOnSubmit: !0,
+  disableEnterToSubmit: !0
+},
+disableAutoFocus: !0,
+showCharacterCount: !0
+  },
+  N = {
 NORMAL: o,
 OVERLAY: l,
 SIDEBAR: u,
@@ -429,22 +447,28 @@ RULES_INPUT: g,
 CREATE_FORUM_POST: f,
 CREATE_POLL: h,
 FORUM_CHANNEL_GUIDELINES: S,
-ATOMIC_REACTOR_REPLY_INPUT: {
-  analyticsName: 'atomic_reator_reply_input',
+ATOMIC_REACTOR_REPLY_INPUT: A,
+FORWARD_MESSAGE_INPUT: {
+  analyticsName: 'forward_message_input',
   drafts: {
     type: s.d.ChannelMessage
+  },
+  emojis: {
+    button: !0
   },
   permissions: {
     requireSendMessages: !0
   },
+  submit: {
+    useDisabledStylesOnSubmit: !0
+  },
   users: {
     allowMentioning: !0
   },
-  submit: {
-    useDisabledStylesOnSubmit: !0,
-    disableEnterToSubmit: !0
+  autocomplete: {
+    alwaysUseLayer: !0,
+    small: !0
   },
-  disableAutoFocus: !0,
-  showCharacterCount: !0
+  disableAutoFocus: !0
 }
   };

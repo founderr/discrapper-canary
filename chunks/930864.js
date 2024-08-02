@@ -1,85 +1,164 @@
 n.r(t), n.d(t, {
   ForwardModal: function() {
-return L;
+return M;
   }
 }), n(47120);
 var l = n(735250),
   a = n(470079),
-  i = n(442837),
-  s = n(481060),
-  r = n(359110),
-  c = n(987509),
-  u = n(72214),
-  o = n(592125),
-  d = n(375954),
-  _ = n(934415),
-  h = n(572004),
-  f = n(823379),
-  E = n(859155),
-  g = n(822869),
-  S = n(895442),
-  I = n(757853),
-  A = n(912332),
-  p = n(819727),
-  m = n(689938),
-  C = n(803519),
-  N = n(621054);
+  i = n(392711),
+  s = n(106351),
+  r = n(442837),
+  o = n(481060),
+  u = n(541716),
+  c = n(752305),
+  d = n(893718),
+  _ = n(359110),
+  h = n(987509),
+  f = n(72214),
+  E = n(131704),
+  g = n(592125),
+  S = n(375954),
+  A = n(934415),
+  I = n(572004),
+  p = n(823379),
+  m = n(859155),
+  C = n(822869),
+  N = n(346610),
+  L = n(895442),
+  b = n(757853),
+  T = n(912332),
+  Z = n(819727),
+  y = n(689938),
+  x = n(803519),
+  R = n(621054);
 
-function L(e) {
+function v(e) {
+  let {
+message: t,
+sendLabel: n,
+canSend: i,
+selectedDestinations: _,
+isSending: f,
+onSend: S
+  } = e, A = _.map(h.hl).find(p.lm), I = (0, r.e7)([g.Z], () => g.Z.getChannel(A), [A]), m = a.useMemo(() => null != I ? I : (0, E.kt)({
+id: '1',
+type: s.d.DM
+  }), [I]), N = (0, C.Ad)(), [L, b] = a.useState(() => (0, c.H2)()), {
+textValue: Z,
+richValue: R
+  } = L, [v, M] = a.useState(!1), D = a.useCallback(() => M(!0), []), P = a.useCallback(() => M(!1), []), O = a.useCallback((e, n, l) => {
+b({
+  textValue: n,
+  richValue: l
+}), N(t.channel_id, t.id);
+  }, [
+N,
+t
+  ]), G = a.useCallback(() => {
+S(Z);
+  }, [
+Z,
+S
+  ]), F = a.useCallback(() => (G(), Promise.resolve({
+shouldClear: !1,
+shouldRefocus: !0
+  })), [G]);
+  return (0, l.jsxs)(o.ModalFooter, {
+className: x.footer,
+children: [
+  (0, l.jsx)(o.Button, {
+    className: x.sendWithMessage,
+    submitting: f,
+    disabled: !i,
+    onClick: G,
+    children: n
+  }),
+  (0, l.jsx)(d.Z, {
+    innerClassName: x.messageInput,
+    onChange: O,
+    placeholder: y.Z.Messages.MESSAGE_FORWARD_MESSAGE_PLACEHOLDER,
+    channel: m,
+    textValue: Z,
+    richValue: R,
+    type: u.I.FORWARD_MESSAGE_INPUT,
+    onBlur: P,
+    onFocus: D,
+    focused: v,
+    onSubmit: F,
+    parentModalKey: T.so,
+    autoCompletePosition: 'bottom',
+    emojiPickerCloseOnModalOuterClick: !0
+  })
+]
+  });
+}
+
+function M(e) {
   let {
 channelId: t,
-messageId: L,
-initialSelectedDestinations: b,
-forwardOptions: T,
-onClose: Z,
-onRequestSent: y,
-...x
-  } = e, v = a.useMemo(() => (0, c.dL)(t), [t]), [R, P] = a.useState(!1), M = (0, i.e7)([d.Z], () => d.Z.getMessage(t, L), [
+messageId: s,
+initialSelectedDestinations: u,
+forwardOptions: c,
+onClose: d,
+onRequestSent: E,
+...M
+  } = e, {
+hasOneTapSendButton: D,
+hasMessageInput: P
+  } = (0, N.yk)({
+location: 'ForwardModal'
+  }), O = a.useMemo(() => (0, h.dL)(t), [t]), [G, F] = a.useState(!1), k = (0, r.e7)([S.Z], () => S.Z.getMessage(t, s), [
 t,
-L
-  ]), D = (0, i.e7)([o.Z], () => o.Z.getChannel(t), [t]), O = (0, g.ZF)(), G = (0, g.mh)(), F = a.useRef(0), U = a.useRef(0), [k, j] = a.useState(b), H = k.length, Q = H >= p.G, [w, z] = a.useState(''), W = a.useCallback(e => {
-z(e), U.current += 1, '' !== e && G(t, L);
+s
+  ]), U = (0, r.e7)([g.Z], () => g.Z.getChannel(t), [t]), j = (0, C.ZF)(), H = (0, C.mh)(), w = a.useRef(0), B = a.useRef(0), [Q, z] = a.useState(u), W = Q.length, K = W >= Z.G, [Y, q] = a.useState(''), V = a.useCallback(e => {
+q(e), B.current += 1, '' !== e && H(t, s);
   }, [
 t,
-L,
-G
-  ]), B = (0, u.s)({
-searchText: w,
-selectedDestinations: k,
-originDestination: v,
+s,
+H
+  ]), X = (0, f.s)({
+searchText: Y,
+selectedDestinations: Q,
+originDestination: O,
 includeMissingDMs: !0
-  }), K = a.useCallback(() => {
-(0, g.sF)({
+  }), J = a.useCallback(() => {
+(0, C.sF)({
   channelId: t,
-  messageId: L,
-  numDestinationChanges: F.current,
-  numQueryChanges: U.current
-}), Z();
+  messageId: s,
+  numDestinationChanges: w.current,
+  numQueryChanges: B.current
+}), d();
   }, [
 t,
-L,
-Z
-  ]), Y = a.useCallback(() => {
+s,
+d
+  ]), $ = a.useCallback(() => {
 var e;
-let n = null === (e = o.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
+let n = null === (e = g.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
 if (null == n)
   return;
-let l = (0, _.wR)(n, t, L);
-(0, s.showToast)((0, s.createToast)(m.Z.Messages.COPIED_LINK, s.ToastType.LINK)), (0, h.JG)(l), (0, g.xp)(t, L);
+let l = (0, A.wR)(n, t, s);
+(0, o.showToast)((0, o.createToast)(y.Z.Messages.COPIED_LINK, o.ToastType.LINK)), (0, I.JG)(l), (0, C.xp)(t, s);
   }, [
 t,
-L
-  ]), q = a.useCallback(() => {
-z('');
-  }, [z]), V = a.useRef(null);
+s
+  ]), ee = a.useCallback(() => {
+q('');
+  }, [q]), et = a.useRef(null);
   a.useEffect(() => {
-if ('' === w) {
+if ('' === Y) {
   var e;
-  null === (e = V.current) || void 0 === e || e.focus();
+  null === (e = et.current) || void 0 === e || e.focus();
 }
-  }, [w]);
-  let X = a.useCallback(e => {
-  O(t, L, '' !== w), j(t => {
+  }, [Y]);
+  let en = a.useMemo(() => (0, i.throttle)(() => {
+  (0, o.showToast)((0, o.createToast)(y.Z.Messages.MESSAGE_FORWARD_SUCCESS, o.ToastType.FORWARD));
+}, 3000, {
+  leading: !0,
+  trailing: !1
+}), []),
+el = a.useCallback(e => {
+  j(t, s, '' !== Y), z(t => {
     let n = t.findIndex(t => {
       let {
         type: n,
@@ -88,30 +167,34 @@ if ('' === w) {
       return n === e.type && l === e.id;
     });
     if (-1 === n)
-      return Q ? t : (z(''), F.current += 1, [
+      return K ? t : (q(''), w.current += 1, [
         e,
         ...t
       ]);
     let l = [...t];
-    return l.splice(n, 1), F.current += 1, l;
+    return l.splice(n, 1), w.current += 1, l;
   });
 }, [
   t,
-  Q,
-  L,
-  w,
-  O
+  K,
+  s,
+  Y,
+  j
 ]),
-J = a.useCallback(async () => {
-  let e = d.Z.getMessage(t, L);
-  if (null == e) {
-    (0, s.showToast)((0, s.createToast)(m.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE));
+ea = a.useCallback(async function(e) {
+  let {
+    withMessage: a,
+    transitionToDestination: i,
+    closeAfterSend: r
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, u = S.Z.getMessage(t, s);
+  if (null == u) {
+    (0, o.showToast)((0, o.createToast)(y.Z.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE));
     return;
   }
-  P(!0);
-  let a = (await Promise.all(k.map(c.qx))).filter(f.lm);
-  if ((0, S.Z)(e, a) && !await new Promise(e => {
-      (0, s.openModalLazy)(async () => {
+  F(!0);
+  let d = (await Promise.all(e.map(h.qx))).filter(p.lm);
+  if ((0, L.Z)(u, d) && !await new Promise(e => {
+      (0, o.openModalLazy)(async () => {
         let {
           default: t
         } = await n.e('88643').then(n.bind(n, 466080));
@@ -122,141 +205,175 @@ J = a.useCallback(async () => {
         });
       });
     })) {
-    P(!1);
+    F(!1);
     return;
   }
-  (0, A.mc)(), null == y || y(), 1 === a.length && (0, r.Kh)(a[0]);
-  let i = await E.Z.sendForwards(e, a, T);
-  if (i.every(e => {
+  r && (0, T.mc)(), null == E || E(), i && (0, _.Kh)(d[0]);
+  let f = await m.Z.sendForwards(u, d, {
+    ...c,
+    withMessage: a
+  });
+  if (f.every(e => {
       let {
         status: t
       } = e;
       return 'fulfilled' === t;
     })) {
-    (0, g.gP)({
+    (0, C.gP)({
       channelId: t,
-      messageId: L,
+      messageId: s,
       hasError: !1,
-      numDestinations: a.length,
-      numDestinationChanges: F.current,
-      numQueryChanges: U.current
-    }), (0, s.showToast)((0, s.createToast)(m.Z.Messages.MESSAGE_FORWARD_SUCCESS, s.ToastType.FORWARD));
+      hasContextMessage: null != a && '' !== a,
+      numDestinations: d.length,
+      numDestinationChanges: w.current,
+      numQueryChanges: B.current
+    }), en();
     return;
   }
-  (0, g.gP)({
+  (0, C.gP)({
     channelId: t,
-    messageId: L,
+    messageId: s,
     hasError: !0,
-    numDestinations: a.length,
-    numDestinationChanges: F.current,
-    numQueryChanges: U.current
+    hasContextMessage: null != a && '' !== a,
+    numDestinations: d.length,
+    numDestinationChanges: w.current,
+    numQueryChanges: B.current
   });
-  let u = k.filter((e, t) => 'rejected' === i[t].status);
-  (0, A.Np)({
-    messageId: L,
+  let g = e.filter((e, t) => 'rejected' === f[t].status);
+  (0, T.Np)({
+    messageId: s,
     channelId: t,
-    failedDestinations: u,
-    forwardOptions: T
+    failedDestinations: g,
+    forwardOptions: c
   });
 }, [
   t,
-  T,
-  L,
-  k,
-  y
-]);
-  if (null == M || null == D)
+  c,
+  s,
+  E,
+  en
+]),
+ei = a.useCallback(e => {
+  ea(Q, {
+    withMessage: e,
+    transitionToDestination: 1 === Q.length,
+    closeAfterSend: !0
+  });
+}, [
+  ea,
+  Q
+]),
+es = a.useCallback(() => ei(), [ei]),
+er = a.useCallback(function(e) {
+  let {
+    transitionToDestination: t,
+    closeAfterSend: n
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+  ea([e], {
+    transitionToDestination: t,
+    closeAfterSend: n
+  });
+}, [ea]);
+  if (null == k || null == U)
 return null;
-  let $ = B.length > 0 ? (0, l.jsx)(I.F, {
+  let eo = X.length > 0 ? (0, l.jsx)(b.F, {
   paddingBottom: 16,
   paddingTop: 16,
-  rowData: B,
-  message: M,
-  originChannel: D,
-  handleToggleDestination: X,
-  selectedDestinations: k,
-  disableSelection: Q
-}) : (0, l.jsxs)(s.ModalContent, {
-  className: C.noResults,
+  rowData: X,
+  rowMode: D ? b.G.SEND : b.G.TOGGLE,
+  message: k,
+  originChannel: U,
+  handleToggleDestination: D ? er : el,
+  selectedDestinations: Q,
+  disableSelection: K
+}) : (0, l.jsxs)(o.ModalContent, {
+  className: x.noResults,
   children: [
     (0, l.jsx)('img', {
-      className: C.noResultsImg,
-      src: N,
+      className: x.noResultsImg,
+      src: R,
       alt: ''
     }),
-    (0, l.jsx)(s.Text, {
+    (0, l.jsx)(o.Text, {
       variant: 'text-md/normal',
       color: 'text-muted',
-      children: m.Z.Messages.SEARCH_NO_RESULTS
+      children: y.Z.Messages.SEARCH_NO_RESULTS
     })
   ]
 }),
-ee = H <= 1 ? m.Z.Messages.SEND : m.Z.Messages.MESSAGES_SEND_SEPARATELY.format({
-  count: H
+eu = W <= 1 ? y.Z.Messages.SEND : y.Z.Messages.MESSAGES_SEND_SEPARATELY.format({
+  count: W
 });
-  return (0, l.jsxs)(s.ModalRoot, {
-className: C.modal,
-'aria-label': m.Z.Messages.MESSAGE_ACTION_FORWARD_TO,
-...x,
+  return (0, l.jsxs)(o.ModalRoot, {
+className: x.modal,
+'aria-label': y.Z.Messages.MESSAGE_ACTION_FORWARD_TO,
+...M,
 children: [
-  (0, l.jsxs)(s.ModalHeader, {
-    className: C.header,
+  (0, l.jsxs)(o.ModalHeader, {
+    className: x.header,
     children: [
       (0, l.jsxs)('div', {
-        className: C.titleLine,
+        className: x.titleLine,
         children: [
           (0, l.jsxs)('div', {
-            className: C.title,
+            className: x.title,
             children: [
-              (0, l.jsx)(s.Heading, {
+              (0, l.jsx)(o.Heading, {
                 variant: 'heading-lg/semibold',
-                children: m.Z.Messages.MESSAGE_ACTION_FORWARD_TO
+                children: y.Z.Messages.MESSAGE_ACTION_FORWARD_TO
               }),
-              Q ? (0, l.jsx)(s.Text, {
+              K ? (0, l.jsx)(o.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-warning',
-                children: m.Z.Messages.MESSAGES_FORWARD_MAX_DESTINATION_COUNT.format({
-                  count: p.G
+                children: y.Z.Messages.MESSAGES_FORWARD_MAX_DESTINATION_COUNT.format({
+                  count: Z.G
                 })
               }) : null
             ]
           }),
-          (0, l.jsx)(s.ModalCloseButton, {
-            className: C.closeButton,
-            onClick: K
+          (0, l.jsx)(o.ModalCloseButton, {
+            className: x.closeButton,
+            onClick: J
           })
         ]
       }),
-      (0, l.jsx)(s.SearchBar, {
-        ref: V,
-        size: s.SearchBar.Sizes.MEDIUM,
-        query: w,
-        onChange: W,
-        onClear: q,
-        placeholder: m.Z.Messages.SEARCH,
-        'aria-label': m.Z.Messages.SEARCH,
+      (0, l.jsx)(o.SearchBar, {
+        ref: et,
+        size: o.SearchBar.Sizes.MEDIUM,
+        query: Y,
+        onChange: V,
+        onClear: ee,
+        placeholder: y.Z.Messages.SEARCH,
+        'aria-label': y.Z.Messages.SEARCH,
         autoFocus: !0
       })
     ]
   }),
-  $,
-  (0, l.jsxs)(s.ModalFooter, {
-    className: C.footer,
+  eo,
+  !D && (P ? (0, l.jsx)(v, {
+    message: k,
+    sendLabel: eu,
+    canSend: W > 0,
+    selectedDestinations: Q,
+    isSending: G,
+    onSend: ei
+  }) : (0, l.jsxs)(o.ModalFooter, {
+    className: x.footer,
     children: [
-      (0, l.jsx)(s.Button, {
-        submitting: R,
-        disabled: 0 === H,
-        onClick: J,
-        children: ee
+      (0, l.jsx)(o.Button, {
+        submitting: G,
+        disabled: 0 === W,
+        onClick: es,
+        children: eu
       }),
-      (0, l.jsx)(s.Button, {
-        onClick: Y,
-        look: s.Button.Looks.OUTLINED,
-        color: s.Button.Colors.PRIMARY,
-        children: m.Z.Messages.COPY_LINK
+      (0, l.jsx)(o.Button, {
+        onClick: $,
+        look: o.Button.Looks.OUTLINED,
+        color: o.Button.Colors.PRIMARY,
+        children: y.Z.Messages.COPY_LINK
       })
     ]
-  })
+  }))
 ]
   });
 }

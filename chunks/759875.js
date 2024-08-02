@@ -15,7 +15,7 @@ function u(e, n) {
   let t = (0, r.a)(e),
 {
   canForwardMessages: u
-} = l.w.useExperiment({
+} = (0, l.yk)({
   location: 'MessageActionsMenu'
 }, {
   autoTrackExposure: !1

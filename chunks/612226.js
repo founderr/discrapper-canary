@@ -33,8 +33,8 @@ var i, l, o = t(346610),
   N = t(337482),
   O = t(679080),
   h = t(777019),
-  g = t(523147),
-  D = t(400332),
+  D = t(523147),
+  g = t(400332),
   f = t(510761),
   R = t(189509),
   p = t(673553),
@@ -117,14 +117,14 @@ let Y = {
   [y.EkH.TOGGLE_MUTE]: P.iN,
   [y.EkH.TOGGLE_DEAFEN]: P.oV,
   [y.EkH.TOGGLE_CATEGORY_COLLAPSED]: Z.u,
-  [y.EkH.SEARCH_SOUNDBOARD]: g.Z,
+  [y.EkH.SEARCH_SOUNDBOARD]: D.Z,
   [y.EkH.SCROLL_UP]: N.B2,
   [y.EkH.SCROLL_DOWN]: N.gN,
   [y.EkH.QUICKSWITCHER_SHOW]: T.$,
   [y.EkH.CREATE_DM_GROUP]: a.K,
   [y.EkH.SEARCH_EMOJIS]: O.S,
   [y.EkH.SEARCH_GIFS]: h.O,
-  [y.EkH.SEARCH_STICKERS]: D.U,
+  [y.EkH.SEARCH_STICKERS]: g.U,
   [y.EkH.TOGGLE_HOTKEYS]: b._,
   [y.EkH.JUMP_TO_FIRST_UNREAD]: A.O,
   [y.EkH.CREATE_GUILD]: u.r,
@@ -380,7 +380,7 @@ function W() {
   group: 'MISCELLANEOUS'
 }
   ];
-  return o.w.getCurrentConfig({
+  return (0, o.WT)({
 location: 'keybinds'
   }, {
 autoTrackExposure: !1
