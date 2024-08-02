@@ -20,7 +20,7 @@ var s = n(735250),
   T = n(689938),
   v = n(778239);
 
-function j(e) {
+function N(e) {
   let {
 children: t,
 isComplete: n,
@@ -56,7 +56,7 @@ children: [
   });
 }
 
-function N(e) {
+function j(e) {
   return (0, s.jsx)(c.Text, {
 className: v.microphoneUnitBodyText,
 color: 'text-muted',
@@ -73,7 +73,7 @@ useReducedMotion: n
 useReducedMotion: n
   }), {
 errorHints: h,
-startingConsoleQuest: j,
+startingConsoleQuest: N,
 startConsoleQuest: A
   } = (0, x.GI)({
 questId: t.id,
@@ -97,7 +97,7 @@ let e = h.length > 0,
           r = (0, f.C9)(e),
           a = (0, f._j)(e),
           l = a === S.ABu.XBOX;
-        return (0, s.jsx)(N, {
+        return (0, s.jsx)(j, {
           children: r.format({
             account_name: null == o ? void 0 : o.name,
             onClick: () => {
@@ -107,13 +107,13 @@ let e = h.length > 0,
                 platformType: a
               }, {
                 content: g.jn.QUEST_BAR,
-                ctaContent: p.jZ.DEFIBRILLATOR
+                ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE
               });
             }
           })
         }, n);
       }
-      return (0, s.jsx)(N, {
+      return (0, s.jsx)(j, {
         children: e.message
       }, n);
     })
@@ -168,7 +168,7 @@ children: [
       }),
       (0, s.jsx)(c.Clickable, {
         className: a()(v.microphoneUnitRefreshIconWrapper, {
-          [v.disabled]: j
+          [v.disabled]: N
         }),
         onClick: () => A(),
         children: d.render()
@@ -177,11 +177,11 @@ children: [
   }),
   (0, s.jsxs)('div', {
     className: a()({
-      [v.opacity_50]: j
+      [v.opacity_50]: N
     }),
     children: [
       b(),
-      0 === h.length ? null : (0, s.jsx)(N, {
+      0 === h.length ? null : (0, s.jsx)(j, {
         children: i
       })
     ]
@@ -265,7 +265,7 @@ children: [
     className: v.stepsWrapper,
     children: [
       (0, s.jsx)('ul', {
-        children: l.map((e, t) => (0, s.jsx)(j, {
+        children: l.map((e, t) => (0, s.jsx)(N, {
           isComplete: e.isComplete,
           hasNextStep: t < l.length - 1,
           children: e.renderContent()

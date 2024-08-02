@@ -63,7 +63,7 @@ let I = [
           platformType: a
         }, {
           content: n,
-          ctaContent: _.jZ.DEFIBRILLATOR
+          ctaContent: _.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE
         });
       }
     });
