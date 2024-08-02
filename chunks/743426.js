@@ -509,7 +509,7 @@ let e = !1;
 return 0 === this.connections.size && 0 === this.speedTesters.size;
   }
   constructor() {
-var e, t;
+var e, t, n;
 super(), e = this, p(this, 'Video', f.Z), p(this, 'Camera', E.Z), p(this, 'videoInputDeviceId', h.Av), p(this, 'connections', new Set()), p(this, 'speedTesters', new Set()), p(this, 'lastVoiceActivity', -1), p(this, 'audioSubsystem', 'standard'), p(this, 'audioLayer', ''), p(this, 'deviceChangeGeneration', 0), p(this, 'consecutiveWatchdogFailures', 0), p(this, 'codecSurvey', null), p(this, 'logger', new a.Y('MediaEngineNative')), p(this, 'handleDeviceChange', function() {
   let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
@@ -549,13 +549,13 @@ super(), e = this, p(this, 'Video', f.Z), p(this, 'Camera', E.Z), p(this, 'video
 }), p(this, 'handleNativeScreenSharePickerError', e => {
   this.emit(o.aB.NativeScreenSharePickerError, e);
 });
-let n = (0, _.zS)();
-if (n.setDeviceChangeCallback(this.handleDeviceChange), n.setVolumeChangeCallback(this.handleVolumeChange), n.setOnVoiceCallback(this.handleVoiceActivity), null === (t = n.setVideoInputInitializationCallback) || void 0 === t || t.call(n, this.handleVideoInputInitialization), n.setTransportOptions({
+let r = (0, _.zS)();
+if (r.setDeviceChangeCallback(this.handleDeviceChange), r.setVolumeChangeCallback(this.handleVolumeChange), r.setOnVoiceCallback(this.handleVoiceActivity), null === (t = r.setVideoInputInitializationCallback) || void 0 === t || t.call(r, this.handleVideoInputInitialization), r.setTransportOptions({
     idleJitterBufferFlush: !0,
     ducking: !1
-  }), n.setNativeScreenSharePickerCallbacks(this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError), this.on('removeListener', this.handleRemoveListener), this.on('newListener', this.handleNewListener), null != (0, _.zS)().getAudioSubsystem ? (0, _.zS)().getAudioSubsystem((e, t) => {
+  }), null === (n = r.setNativeScreenSharePickerCallbacks) || void 0 === n || n.call(r, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError), this.on('removeListener', this.handleRemoveListener), this.on('newListener', this.handleNewListener), null != (0, _.zS)().getAudioSubsystem ? (0, _.zS)().getAudioSubsystem((e, t) => {
     this.audioSubsystem = e, this.audioLayer = t;
-  }) : null != (0, _.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, _.zS)().getUseLegacyAudioDevice() ? h.iA.LEGACY : h.iA.STANDARD), null != n.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(), this.getDebugLogging() && !I.installedLogHooks)
+  }) : null != (0, _.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, _.zS)().getUseLegacyAudioDevice() ? h.iA.LEGACY : h.iA.STANDARD), null != r.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(), this.getDebugLogging() && !I.installedLogHooks)
   for (let e of (I.installedLogHooks = !0, [
       'trace',
       'debug',
@@ -574,7 +574,7 @@ if (n.setDeviceChangeCallback(this.handleDeviceChange), n.setVolumeChangeCallbac
       } catch (e) {}
     });
   }
-null != n.setActiveSinksChangeCallback && n.setActiveSinksChangeCallback(this.handleActiveSinksChange), (0, l.Z)(this);
+null != r.setActiveSinksChangeCallback && r.setActiveSinksChangeCallback(this.handleActiveSinksChange), (0, l.Z)(this);
   }
 }
 p(I, 'installedLogHooks', !1);
