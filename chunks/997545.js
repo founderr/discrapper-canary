@@ -189,12 +189,12 @@ return this.connectionState === N.$j.DISCONNECTED ? Promise.resolve(null) : (0, 
 });
   }
   createUser(e, t, n) {
-if (0 === t) {
-  this.logger.warn('Attempting to create user '.concat(e, ' with 0 audio SSRC'));
-  return;
-}
 let r = this.remoteAudioSSRCs[e],
   i = this.remoteVideoSSRCs[e];
+if (null != r && 0 === t) {
+  this.logger.warn('Attempting to recreate user '.concat(e, ' with 0 audio SSRC'));
+  return;
+}
 i = void 0 !== i ? [...i].sort() : [], n = void 0 === n ? null != i ? i : [] : [...n].sort();
 let a = r !== t,
   s = !l()(i, n);

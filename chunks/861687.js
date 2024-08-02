@@ -763,7 +763,10 @@ return {
   }
   _handleClientConnect(e) {
 var t;
-e.forEach(e => this._userIds.add(e)), this.emit(j.z.ClientConnect, e), null === (t = this._goLiveQualityManager) || void 0 === t || t.onClientConnect(e);
+e.forEach(e => {
+  var t;
+  this._userIds.add(e), null === (t = this._connection) || void 0 === t || t.createUser(e, 0);
+}), this.emit(j.z.ClientConnect, e), null === (t = this._goLiveQualityManager) || void 0 === t || t.onClientConnect(e);
   }
   _handleClientDisconnect(e) {
 var t, n, r, i;
