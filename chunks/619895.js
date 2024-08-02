@@ -6,15 +6,15 @@ return d;
 return m;
   },
   hR: function() {
-return h;
+return p;
   }
 }), n(47120);
 var i = n(470079),
   o = n(892814),
   a = n(442837),
   l = n(581364),
-  s = n(823379),
-  r = n(399654),
+  r = n(823379),
+  s = n(399654),
   u = n(844439);
 let d = {
 '1238332854602043454': {
@@ -25,7 +25,7 @@ let d = {
   imageOption: 'image',
   additionalOptions: [{
       motion_prompt: [{
-        text: '$tauba_tauba',
+        text: '$dimi_deadpool_bye_bye_bye',
         type: 'text'
       }],
       background: [{
@@ -35,7 +35,7 @@ let d = {
     },
     {
       motion_prompt: [{
-        text: '$uminarn_double_life_dance',
+        text: '$simone_biles_floor_routine',
         type: 'text'
       }],
       background: [{
@@ -55,7 +55,7 @@ let d = {
     },
     {
       motion_prompt: [{
-        text: '$jojo_locomotar_viral_dance',
+        text: '$apple_guy_running',
         type: 'text'
       }],
       background: [{
@@ -65,7 +65,67 @@ let d = {
     },
     {
       motion_prompt: [{
-        text: '$manin_finance',
+        text: '$man_in_finance',
+        type: 'text'
+      }],
+      background: [{
+        text: 'From template',
+        type: 'text'
+      }]
+    },
+    {
+      motion_prompt: [{
+        text: '$lil_yachty_stage_entrance',
+        type: 'text'
+      }],
+      background: [{
+        text: 'From template',
+        type: 'text'
+      }]
+    },
+    {
+      motion_prompt: [{
+        text: '$anthony_edwards_score',
+        type: 'text'
+      }],
+      background: [{
+        text: 'From template',
+        type: 'text'
+      }]
+    },
+    {
+      motion_prompt: [{
+        text: '$beyonce_single_ladies',
+        type: 'text'
+      }],
+      background: [{
+        text: 'From template',
+        type: 'text'
+      }]
+    },
+    {
+      motion_prompt: [{
+        text: '$rickroll_never_gonna_give_you_up',
+        type: 'text'
+      }],
+      background: [{
+        text: 'From template',
+        type: 'text'
+      }]
+    },
+    {
+      motion_prompt: [{
+        text: '$gimme_head_top',
+        type: 'text'
+      }],
+      background: [{
+        text: 'From template',
+        type: 'text'
+      }]
+    },
+    {
+      motion_prompt: [{
+        text: '$hugo_hilaire_goofy_dance',
         type: 'text'
       }],
       background: [{
@@ -102,7 +162,7 @@ default:
   }
 }
 
-function h(e) {
+function p(e) {
   let {
 channelId: t
   } = e, {
@@ -120,17 +180,17 @@ let {
   n
 ]);
 i.useEffect(() => {
-  (0, r.a)(l);
+  (0, s.a)(l);
 }, [l]);
 let {
-  fetchState: s,
+  fetchState: r,
   recommendationsSections: d
 } = (0, a.cj)([u.ZP], () => ({
   fetchState: u.ZP.getFetchState(l),
   recommendationsSections: u.ZP.getRecommendations(l)
 }));
 return {
-  fetchState: s,
+  fetchState: r,
   recommendationsSections: d
 };
   }({
@@ -153,7 +213,7 @@ imageRecCommandContexts: i.useMemo(() => {
       }),
       application: t
     } : null;
-  }).filter(s.lm);
+  }).filter(r.lm);
 }, [d])
   };
 }
