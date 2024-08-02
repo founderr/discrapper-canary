@@ -777,6 +777,10 @@ null === (r = (i = this.conn).prepareMLSCommitTransition) || void 0 === r || r.c
 var r, i;
 null === (r = (i = this.conn).processMLSWelcome) || void 0 === r || r.call(i, e, t, n);
   }
+  presentDesktopSourcePicker(e) {
+var t, n;
+null === (t = (n = this.conn).presentDesktopSourcePicker) || void 0 === t || t.call(n, e);
+  }
   constructor(e, t, n) {
 super(e, t), v(this, 'mediaEngineConnectionId', 'Native-'.concat(O++)), v(this, 'goLiveSourceIdentifier', void 0), v(this, 'selfMute', !1), v(this, 'selfVideo', !1), v(this, 'forceAudioNormal', !1), v(this, 'forceAudioPriority', !1), v(this, 'codecs', []), v(this, 'videoEncoderFallbackPending', !1), v(this, 'desktopDegradationPreference', (0, T.zS)().DegradationPreference.MAINTAIN_FRAMERATE), v(this, 'sourceDesktopDegradationPreference', (0, T.zS)().DegradationPreference.DISABLED), v(this, 'videoDegradationPreference', (0, T.zS)().DegradationPreference.BALANCED), v(this, 'localPans', {}), v(this, 'remoteAudioSSRCs', {}), v(this, 'remoteVideoSSRCs', {}), v(this, 'inputMode', N.pM.VOICE_ACTIVITY), v(this, 'vadThreshold', -40), v(this, 'vadAutoThreshold', !0), v(this, 'vadUseKrisp', !0), v(this, 'vadLeading', 5), v(this, 'vadTrailing', 25), v(this, 'pttReleaseDelay', 20), v(this, 'soundshareActive', !1), v(this, 'soundshareId', null), v(this, 'soundshareSentSpeakingEvent', !1), v(this, 'echoCancellation', !0), v(this, 'noiseSuppression', !0), v(this, 'automaticGainControl', !0), v(this, 'noiseCancellation', !1), v(this, 'experimentalEncoders', !1), v(this, 'hardwareH264', !0), v(this, 'softwareH264', !0), v(this, 'attenuationFactor', 0.5), v(this, 'attenuateWhileSpeakingSelf', !1), v(this, 'attenuateWhileSpeakingOthers', !0), v(this, 'qos', !0), v(this, 'conn', void 0), v(this, 'minimumJitterBufferLevel', 0), v(this, 'postponeDecodeLevel', 100), v(this, 'reconnectInterval', 60000), v(this, 'keyframeInterval', 0), v(this, 'clipsKeyFrameInterval', 0), v(this, 'videoQualityMeasurement', ''), v(this, 'videoEncoderExperiments', ''), v(this, 'numFastUdpReconnects', 0), v(this, 'logger', void 0), v(this, 'handleSpeakingNative', (e, t) => {
   let n = N.Dg.NONE;

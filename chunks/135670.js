@@ -155,6 +155,9 @@ e([]);
 return Promise.reject(Error('NOT_IMPLEMENTED'));
   }
   setSidechainCompression(e) {}
+  setNativeDesktopVideoSourcePickerActive(e) {}
+  presentNativeScreenSharePicker(e) {}
+  releaseNativeDesktopVideoSourcePickerStream() {}
   constructor(...e) {
 super(...e), s(this, 'Video', o), s(this, 'Camera', l);
   }

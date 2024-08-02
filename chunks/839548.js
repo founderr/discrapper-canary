@@ -54,6 +54,7 @@ this.useElectronVideo = e;
   setRemoteAudioHistory(e) {}
   setClipsKeyFrameInterval(e) {}
   setQualityDecoupling(e) {}
+  presentDesktopSourcePicker(e) {}
   getStreamParameters() {
 return i()(this.videoStreamParameters);
   }

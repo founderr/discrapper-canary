@@ -110,6 +110,8 @@ switch (e) {
     return (0, _.eJ)(h.eR.SCREEN_CAPTURE_KIT);
   case h.AN.CAPTURE_TIMEOUT_EXPERIMENTS:
     return (0, _.eJ)(h.eR.CAPTURE_TIMEOUT_EXPERIMENTS);
+  case h.AN.NATIVE_SCREENSHARE_PICKER:
+    return (0, _.eJ)(h.eR.NATIVE_SCREENSHARE_PICKER);
   case h.AN.DIAGNOSTICS:
   case h.AN.NATIVE_PING:
   case h.AN.AUTOMATIC_VAD:
@@ -483,6 +485,18 @@ return new Promise((n, r) => {
 var t, n;
 null === (t = (n = (0, _.zS)()).setSidechainCompression) || void 0 === t || t.call(n, e);
   }
+  setNativeDesktopVideoSourcePickerActive(e) {
+var t, n;
+null === (t = (n = (0, _.zS)()).setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, e);
+  }
+  presentNativeScreenSharePicker(e) {
+var t, n;
+null === (t = (n = (0, _.zS)()).presentNativeScreenSharePicker) || void 0 === t || t.call(n, e);
+  }
+  releaseNativeDesktopVideoSourcePickerStream() {
+var e, t;
+null === (e = (t = (0, _.zS)()).releaseNativeDesktopVideoSourcePickerStream) || void 0 === e || e.call(t);
+  }
   watchdogTick() {
 let e = !1;
 (0, _.zS)().pingVoiceThread(() => {
@@ -528,12 +542,18 @@ super(), e = this, p(this, 'Video', f.Z), p(this, 'Camera', E.Z), p(this, 'video
   e === o.aB.VoiceActivity && (null != (0, _.zS)().setEmitVADLevel2 ? (0, _.zS)().setEmitVADLevel2(this.listenerCount(o.aB.VoiceActivity) > 0) : (0, _.zS)().setEmitVADLevel(this.listenerCount(o.aB.VoiceActivity) > 0, !1, {}));
 }), p(this, 'handleVideoInputInitialization', e => {
   this.emit(o.aB.VideoInputInitialized, e);
+}), p(this, 'handleNativeScreenSharePickerUpdate', e => {
+  this.emit(o.aB.NativeScreenSharePickerUpdate, e);
+}), p(this, 'handleNativeScreenSharePickerCancel', e => {
+  this.emit(o.aB.NativeScreenSharePickerCancel, e);
+}), p(this, 'handleNativeScreenSharePickerError', e => {
+  this.emit(o.aB.NativeScreenSharePickerError, e);
 });
 let n = (0, _.zS)();
 if (n.setDeviceChangeCallback(this.handleDeviceChange), n.setVolumeChangeCallback(this.handleVolumeChange), n.setOnVoiceCallback(this.handleVoiceActivity), null === (t = n.setVideoInputInitializationCallback) || void 0 === t || t.call(n, this.handleVideoInputInitialization), n.setTransportOptions({
     idleJitterBufferFlush: !0,
     ducking: !1
-  }), this.on('removeListener', this.handleRemoveListener), this.on('newListener', this.handleNewListener), null != (0, _.zS)().getAudioSubsystem ? (0, _.zS)().getAudioSubsystem((e, t) => {
+  }), n.setNativeScreenSharePickerCallbacks(this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError), this.on('removeListener', this.handleRemoveListener), this.on('newListener', this.handleNewListener), null != (0, _.zS)().getAudioSubsystem ? (0, _.zS)().getAudioSubsystem((e, t) => {
     this.audioSubsystem = e, this.audioLayer = t;
   }) : null != (0, _.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, _.zS)().getUseLegacyAudioDevice() ? h.iA.LEGACY : h.iA.STANDARD), null != n.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(), this.getDebugLogging() && !I.installedLogHooks)
   for (let e of (I.installedLogHooks = !0, [
