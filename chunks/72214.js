@@ -8,9 +8,9 @@ var l = n(470079),
   i = n(38618),
   s = n(51596),
   r = n(516373),
-  c = n(314897),
+  o = n(314897),
   u = n(580005),
-  o = n(987509),
+  c = n(987509),
   d = n(601565),
   _ = n(41837);
 
@@ -21,15 +21,15 @@ targetDestination: n,
 selectedDestinations: h,
 originDestination: f,
 includeMissingDMs: E = !1
-  } = e, g = (0, a.e7)([c.default], () => c.default.getId()), S = l.useMemo(() => ({
+  } = e, g = (0, a.e7)([o.default], () => o.default.getId()), S = l.useMemo(() => ({
 searchOptions: {
   blacklist: new Set(['user:'.concat(g)]),
   frecencyBoosters: !0,
   userFilters: null
 }
   }), [g]), {
-search: I,
-query: A,
+search: A,
+query: I,
 results: p
   } = (0, d.Z)(S), m = l.useMemo(() => function(e) {
 let {
@@ -49,18 +49,18 @@ let {
   query: e,
   resultTypes: t
 } = m;
-I({
+A({
   query: e,
   resultTypes: t
 }), L(null != h ? h : []);
   }, [
-I,
+A,
 m
   ]), (0, r.D)();
   let b = (0, a.e7)([u.Z], () => u.Z.getFrequentlyWithoutFetchingLatest()),
 T = (0, a.e7)([i.Z], () => i.Z.isConnected()),
-Z = '' !== A;
-  return l.useMemo(() => (0, o.ZP)({
+Z = '' !== I;
+  return l.useMemo(() => (0, c.ZP)({
 results: p,
 hasQuery: Z,
 queryMode: C,

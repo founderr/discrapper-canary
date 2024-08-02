@@ -10,7 +10,7 @@ var l = n(470079),
 
 function r(e, t, n) {
   let r = (0, i.e7)([s.Z], () => s.Z.keyboardModeEnabled),
-c = l.useCallback(e => {
+o = l.useCallback(e => {
   let n = document.querySelector(e),
     l = t.current;
   null != n && null != l && (n.focus(), l.scrollIntoViewNode({
@@ -27,7 +27,7 @@ u = l.useCallback(() => new Promise(e => {
     callback: () => requestAnimationFrame(() => e())
   });
 }), [t]),
-o = l.useCallback(() => new Promise(e => {
+c = l.useCallback(() => new Promise(e => {
   let n = t.current;
   if (null == n)
     return e();
@@ -39,9 +39,9 @@ o = l.useCallback(() => new Promise(e => {
   return (0, a.ZP)({
 id: e,
 isEnabled: r,
-setFocus: c,
+setFocus: o,
 scrollToStart: u,
-scrollToEnd: o,
+scrollToEnd: c,
 orientation: null == n ? void 0 : n.orientation
   });
 }

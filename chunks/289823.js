@@ -3,9 +3,9 @@ var l = n(735250),
   i = n(120356),
   s = n.n(i),
   r = n(974674),
-  c = n(438784),
+  o = n(438784),
   u = n(481060),
-  o = n(806519),
+  c = n(806519),
   d = n(3682),
   _ = n(976249);
 let h = {},
@@ -26,7 +26,7 @@ style: {
   height: t,
   width: t * d.jR
 },
-children: (0, l.jsx)(c.b, {
+children: (0, l.jsx)(o.b, {
   className: _.dots,
   dotRadius: t * f
 })
@@ -73,60 +73,60 @@ width: n,
 height: n
   });
 }
-let I = {
+let A = {
   [u.AvatarSizes.SIZE_16]: {
-default: o.QS.DIAGONAL_FACEPILE_16,
-typing: o.QS.DIAGONAL_FACEPILE_TYPING_16,
-status: o.QS.DIAGONAL_FACEPILE_STATUS_16
+default: c.QS.DIAGONAL_FACEPILE_16,
+typing: c.QS.DIAGONAL_FACEPILE_TYPING_16,
+status: c.QS.DIAGONAL_FACEPILE_STATUS_16
   },
   [u.AvatarSizes.SIZE_20]: {
-default: o.QS.DIAGONAL_FACEPILE_20,
-typing: o.QS.DIAGONAL_FACEPILE_TYPING_20,
-status: o.QS.DIAGONAL_FACEPILE_STATUS_20
+default: c.QS.DIAGONAL_FACEPILE_20,
+typing: c.QS.DIAGONAL_FACEPILE_TYPING_20,
+status: c.QS.DIAGONAL_FACEPILE_STATUS_20
   },
   [u.AvatarSizes.SIZE_24]: {
-default: o.QS.DIAGONAL_FACEPILE_24,
-typing: o.QS.DIAGONAL_FACEPILE_TYPING_24,
-status: o.QS.DIAGONAL_FACEPILE_STATUS_24
+default: c.QS.DIAGONAL_FACEPILE_24,
+typing: c.QS.DIAGONAL_FACEPILE_TYPING_24,
+status: c.QS.DIAGONAL_FACEPILE_STATUS_24
   },
   [u.AvatarSizes.SIZE_32]: {
-default: o.QS.DIAGONAL_FACEPILE_32,
-typing: o.QS.DIAGONAL_FACEPILE_TYPING_32,
-status: o.QS.DIAGONAL_FACEPILE_STATUS_32
+default: c.QS.DIAGONAL_FACEPILE_32,
+typing: c.QS.DIAGONAL_FACEPILE_TYPING_32,
+status: c.QS.DIAGONAL_FACEPILE_STATUS_32
   },
   [u.AvatarSizes.SIZE_40]: {
-default: o.QS.DIAGONAL_FACEPILE_32,
-typing: o.QS.DIAGONAL_FACEPILE_TYPING_32,
-status: o.QS.DIAGONAL_FACEPILE_STATUS_32
+default: c.QS.DIAGONAL_FACEPILE_32,
+typing: c.QS.DIAGONAL_FACEPILE_TYPING_32,
+status: c.QS.DIAGONAL_FACEPILE_STATUS_32
   },
   [u.AvatarSizes.SIZE_48]: {
-default: o.QS.DIAGONAL_FACEPILE_40,
-typing: o.QS.DIAGONAL_FACEPILE_TYPING_40,
-status: o.QS.DIAGONAL_FACEPILE_STATUS_40
+default: c.QS.DIAGONAL_FACEPILE_40,
+typing: c.QS.DIAGONAL_FACEPILE_TYPING_40,
+status: c.QS.DIAGONAL_FACEPILE_STATUS_40
   },
   [u.AvatarSizes.SIZE_56]: {
-default: o.QS.DIAGONAL_FACEPILE_56,
-typing: o.QS.DIAGONAL_FACEPILE_TYPING_56,
-status: o.QS.DIAGONAL_FACEPILE_STATUS_56
+default: c.QS.DIAGONAL_FACEPILE_56,
+typing: c.QS.DIAGONAL_FACEPILE_TYPING_56,
+status: c.QS.DIAGONAL_FACEPILE_STATUS_56
   },
   [u.AvatarSizes.SIZE_80]: {
-default: o.QS.DIAGONAL_FACEPILE_80,
-typing: o.QS.DIAGONAL_FACEPILE_TYPING_80,
-status: o.QS.DIAGONAL_FACEPILE_STATUS_80
+default: c.QS.DIAGONAL_FACEPILE_80,
+typing: c.QS.DIAGONAL_FACEPILE_TYPING_80,
+status: c.QS.DIAGONAL_FACEPILE_STATUS_80
   },
   [u.AvatarSizes.SIZE_120]: {
-default: o.QS.DIAGONAL_FACEPILE_120,
-typing: o.QS.DIAGONAL_FACEPILE_TYPING_120,
-status: o.QS.DIAGONAL_FACEPILE_STATUS_120
+default: c.QS.DIAGONAL_FACEPILE_120,
+typing: c.QS.DIAGONAL_FACEPILE_TYPING_120,
+status: c.QS.DIAGONAL_FACEPILE_STATUS_120
   }
 };
 t.Z = function(e) {
   var t, n, i;
   let {
-backSrc: c,
+backSrc: o,
 frontSrc: f,
 size: E,
-isTyping: A,
+isTyping: I,
 status: p,
 style: m,
 className: C,
@@ -140,27 +140,27 @@ frontAvatarSizePx: Z,
 backAvatarSizePx: y
   } = a.useMemo(() => {
 var e;
-let t = ''.concat(L, '-').concat(A);
+let t = ''.concat(L, '-').concat(I);
 return null !== (e = h[t]) && void 0 !== e ? e : function(e, t, n) {
   let l = u.AvatarSizeSpecs[e],
     a = l.size / (d.z3 + d.o),
     i = a * d.z3,
     s = a * d.o,
-    c = {
+    o = {
       statusCoords: (0, r.Vq)(l, u.StatusTypes.ONLINE, !1, t),
       frontAvatarSizePx: i,
       backAvatarSizePx: a,
       frontAvatarOffsetPx: s,
       frontAvatarCenter: s + i / 2
     };
-  return h[n] = c, c;
-}(E, A, t);
+  return h[n] = o, o;
+}(E, I, t);
   }, [
 L,
-A,
+I,
 E
   ]);
-  let x = (t = null != p, n = A, i = E, n ? I[i].typing : t ? I[i].status : I[i].default);
+  let x = (t = null != p, n = I, i = E, n ? A[i].typing : t ? A[i].status : A[i].default);
   return (0, l.jsxs)('div', {
 style: {
   width: L,
@@ -171,13 +171,13 @@ style: {
 'aria-hidden': N['aria-hidden'],
 className: s()(_.container, C),
 children: [
-  (0, l.jsxs)(o.ZP, {
+  (0, l.jsxs)(c.ZP, {
     mask: x,
     height: L,
     width: L,
     children: [
       (0, l.jsx)('img', {
-        src: c,
+        src: o,
         alt: '',
         width: y,
         height: y
@@ -191,7 +191,7 @@ children: [
         children: (0, l.jsx)(S, {
           src: f,
           size: Z,
-          isTyping: A,
+          isTyping: I,
           status: p
         })
       })
@@ -200,7 +200,7 @@ children: [
   (0, l.jsx)(g, {
     statusCoords: b,
     status: p,
-    isTyping: A
+    isTyping: I
   })
 ]
   });

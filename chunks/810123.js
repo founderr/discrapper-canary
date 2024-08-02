@@ -7,9 +7,9 @@ var l, a = n(735250),
   i = n(120356),
   s = n.n(i),
   r = n(468194),
-  c = n(471445),
+  o = n(471445),
   u = n(806519),
-  o = n(369717);
+  c = n(369717);
 (l || (l = {})).SMALL_32 = 'SMALL_32';
 let d = {
 SMALL_32: 24
@@ -34,16 +34,16 @@ size: f,
 channel: E,
 guild: g,
 locked: S,
-hasActiveThreads: I
+hasActiveThreads: A
   } = e;
   if (null == g)
 return null;
-  let A = g.getIconURL(48),
+  let I = g.getIconURL(48),
 p = _[f],
 m = d[f],
-C = (0, c.KS)(E, g, {
+C = (0, o.KS)(E, g, {
   locked: S,
-  hasActiveThreads: I
+  hasActiveThreads: A
 });
   if (null == C)
 return null;
@@ -54,16 +54,16 @@ className: i,
 children: [
   (0, a.jsx)(u.ZP, {
     mask: u.QS.GUILD_ICON_WITH_CHANNEL_TYPE,
-    children: null != A ? (0, a.jsx)('img', {
+    children: null != I ? (0, a.jsx)('img', {
       alt: '',
-      src: A,
-      className: o.channelGuildIcon,
+      src: I,
+      className: c.channelGuildIcon,
       style: {
         width: m,
         height: m
       }
     }) : (0, a.jsx)('div', {
-      className: s()(o.channelGuildIcon, o.acronym),
+      className: s()(c.channelGuildIcon, c.acronym),
       style: {
         fontSize: (n = p, (l = N).length - 1 > n.length ? n[n.length - 1] : n[l.length - 1]),
         width: m,
@@ -73,7 +73,7 @@ children: [
     })
   }),
   (0, a.jsx)(C, {
-    className: s()(o.icon, o.iconWithGuildIcon, h),
+    className: s()(c.icon, c.iconWithGuildIcon, h),
     color: 'currentColor'
   })
 ]

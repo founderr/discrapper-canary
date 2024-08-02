@@ -23,8 +23,8 @@ var i = t(374470),
   N = t(306680),
   O = t(944486),
   h = t(914010),
-  g = t(574254),
-  D = t(451478),
+  D = t(574254),
+  g = t(451478),
   f = t(585483),
   R = t(981631);
 let p = {
@@ -34,11 +34,11 @@ let p = {
   ],
   comboKeysBindGlobal: !0,
   action(e) {
-if (D.Z.isElementFullScreen())
+if (g.Z.isElementFullScreen())
   return !1;
 if (f.S.hasSubscribers(R.CkL.CALL_DECLINE))
   return f.S.dispatch(R.CkL.CALL_DECLINE), !1;
-if (g.Z.close())
+if (D.Z.close())
   return !1;
 if (f.S.hasSubscribers(R.CkL.MEDIA_MODAL_CLOSE))
   return f.S.dispatch(R.CkL.MEDIA_MODAL_CLOSE), !1;
