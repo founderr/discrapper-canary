@@ -127,7 +127,8 @@ experimentalSoundshare2: null,
 openH264: !0,
 h265Enabled: !0,
 vadThrehsoldMigrated: !1,
-aecDumpEnabled: !1
+aecDumpEnabled: !1,
+sidechainCompression: !1
   };
 }
 let eO = (0, m.Mt)((0, m.jj)()),
@@ -448,7 +449,14 @@ location: e
   });
 }
 
-function tI() {
+function tI(e) {
+  let t = tl({
+sidechainCompression: e
+  });
+  eO.setSidechainCompression(t.sidechainCompression);
+}
+
+function tT() {
   let e = e7(),
 t = e.inputDeviceId,
 n = eo.Z.hasEchoCancellation(t) || e.echoCancellation,
@@ -463,10 +471,10 @@ noiseCancellation: a
   });
 }
 
-function tT() {
+function tg() {
   return eq || !1;
 }
-async function tg() {
+async function tS() {
   try {
 await er.ZP.ensureModule('discord_krisp'), er.ZP.requireModule('discord_krisp'), eq = !0, r.emitChange();
   } catch (t) {
@@ -486,13 +494,13 @@ ez = !1;
   }
 }
 
-function tS(e) {
+function tA(e) {
   let {
 section: t
   } = e;
   return t === eE.oAB.VOICE && tu(), !1;
 }
-class tA extends(l = p.ZP.Store) {
+class tN extends(l = p.ZP.Store) {
   initialize() {
 eO.on(m.aB.Connection, e => {
   var t, n;
@@ -775,9 +783,9 @@ eO.on(m.aB.Connection, e => {
     function() {
       var e, t, n;
       let r = e7();
-      eO.setAudioInputDevice(r.inputDeviceId), eO.setAudioOutputDevice(r.outputDeviceId), tt(), eO.setInputVolume(r.inputVolume), eO.setOutputVolume(r.outputVolume), eO.setH264Enabled(null === (e = r.hardwareEncoding) || void 0 === e || e || r.openH264), eO.setAv1Enabled(null === (t = r.hardwareEncoding) || void 0 === t || t), eO.setH265Enabled(null === (n = r.hardwareEncoding) || void 0 === n || n), eO.setAecDump(r.aecDumpEnabled);
+      eO.setAudioInputDevice(r.inputDeviceId), eO.setAudioOutputDevice(r.outputDeviceId), tt(), eO.setInputVolume(r.inputVolume), eO.setOutputVolume(r.outputVolume), eO.setH264Enabled(null === (e = r.hardwareEncoding) || void 0 === e || e || r.openH264), eO.setAv1Enabled(null === (t = r.hardwareEncoding) || void 0 === t || t), eO.setH265Enabled(null === (n = r.hardwareEncoding) || void 0 === n || n), eO.setAecDump(r.aecDumpEnabled), eO.setSidechainCompression(r.sidechainCompression);
     }();
-}(), ((0, et.isWindows)() || (0, et.isLinux)() || (0, et.isMac)() && h().satisfies(null === S.Z || void 0 === S.Z ? void 0 : S.Z.os.release, '>=21.0.0')) && !__OVERLAY__ && !ez && !eq ? (ez = !0, tg()) : (0, et.isWeb)() && eO.supports(em.AN.NOISE_CANCELLATION) ? (eq = !0, r.emitChange()) : (0, et.isWeb)() && tl({
+}(), ((0, et.isWindows)() || (0, et.isLinux)() || (0, et.isMac)() && h().satisfies(null === S.Z || void 0 === S.Z ? void 0 : S.Z.os.release, '>=21.0.0')) && !__OVERLAY__ && !ez && !eq ? (ez = !0, tS()) : (0, et.isWeb)() && eO.supports(em.AN.NOISE_CANCELLATION) ? (eq = !0, r.emitChange()) : (0, et.isWeb)() && tl({
   noiseCancellation: !1
 }), tp(), e3 = {
   [em.AN.VIDEO]: eO.supports(em.AN.VIDEO),
@@ -987,6 +995,9 @@ return eP;
 let e = e7();
 return eo.Z.hasEchoCancellation(e.inputDeviceId) || e.echoCancellation;
   }
+  getSidechainCompression() {
+return e7().sidechainCompression;
+  }
   getH265Enabled() {
 return e7().h265Enabled;
   }
@@ -1119,7 +1130,7 @@ return a && n % 100 >= o ? s ? n : n % 100 : 0;
 return null != s;
   }
 }
-eT(tA, 'displayName', 'MediaEngineStore'), r = new tA(g.Z, {
+eT(tN, 'displayName', 'MediaEngineStore'), r = new tN(g.Z, {
   VOICE_CHANNEL_SELECT: function(e) {
 let {
   guildId: t,
@@ -1147,15 +1158,11 @@ let {
 return t.reduce((e, t) => i === t.sessionId ? (eU = t.mute || t.suppress, eG = t.deaf, eO.eachConnection(te), tt(!(null != t.guildId && null != t.channelId && null != eQ && eQ !== t.channelId) && ek), eQ = t.channelId, !0) : (!__OVERLAY__ && t.userId === ea.default.getId() && null == ec.Z.getChannelId() && tt(!1, null), e), !1);
   },
   CONNECTION_OPEN: function(e) {
-i = e.sessionId, eU = !1, eG = !1;
-let {
-  enableSidechainCompression: t
-} = Z.Z.getCurrentConfig({
+i = e.sessionId, eU = !1, eG = !1, Z.Z.subscribe({
   location: 'handleConnectionOpen'
-}, {
-  autoTrackExposure: !1
-});
-eO.setSidechainCompression(t), (0, q.R)() && tE();
+}, e => {
+  !e.enableSidechainCompression && e7().sidechainCompression && tI(!1);
+}), (0, q.R)() && tE();
   },
   CONNECTION_CLOSED: function() {
 i = null;
@@ -1360,31 +1367,34 @@ tl({
 let t = tl({
   echoCancellation: e.enabled
 });
-eO.eachConnection(e => e.setEchoCancellation(t.echoCancellation)), tI(), tm(e.location);
+eO.eachConnection(e => e.setEchoCancellation(t.echoCancellation)), tT(), tm(e.location);
+  },
+  AUDIO_SET_SIDECHAIN_COMPRESSION: function(e) {
+tI(e.enabled);
   },
   AUDIO_SET_LOOPBACK: function(e) {
 let {
   enabled: t
 } = e;
-return e2 = t, tI();
+return e2 = t, tT();
   },
   AUDIO_SET_NOISE_SUPPRESSION: function(e) {
 let t = tl({
   noiseSuppression: e.enabled
 });
-eO.eachConnection(e => e.setNoiseSuppression(t.noiseSuppression)), tI(), tm(e.location);
+eO.eachConnection(e => e.setNoiseSuppression(t.noiseSuppression)), tT(), tm(e.location);
   },
   AUDIO_SET_AUTOMATIC_GAIN_CONTROL: function(e) {
 let t = tl({
   automaticGainControl: e.enabled
 });
-eO.eachConnection(e => e.setAutomaticGainControl(t.automaticGainControl)), tI(), tm(e.location);
+eO.eachConnection(e => e.setAutomaticGainControl(t.automaticGainControl)), tT(), tm(e.location);
   },
   AUDIO_SET_NOISE_CANCELLATION: function(e) {
 let t = tl({
   noiseCancellation: e.enabled
 });
-eO.eachConnection(e => e.setNoiseCancellation(t.noiseCancellation)), tI(), tm(e.location);
+eO.eachConnection(e => e.setNoiseCancellation(t.noiseCancellation)), tT(), tm(e.location);
   },
   AUDIO_SET_DISPLAY_SILENCE_WARNING: function(e) {
 tl({
@@ -1580,8 +1590,8 @@ eO.eachConnection(e => e.setExperimentalEncoders(t.experimentalEncoders));
   MEDIA_ENGINE_INTERACTION_REQUIRED: function(e) {
 return eD !== e.required && (eD = e.required, !e.required && eO.interact(), !0);
   },
-  USER_SETTINGS_MODAL_INIT: tS,
-  USER_SETTINGS_MODAL_SET_SECTION: tS,
+  USER_SETTINGS_MODAL_INIT: tA,
+  USER_SETTINGS_MODAL_SET_SECTION: tA,
   CERTIFIED_DEVICES_SET: function() {
 return eO.eachConnection(tr), !1;
   },

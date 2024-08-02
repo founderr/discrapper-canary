@@ -814,6 +814,11 @@ return Object.freeze({
     searchableTitles: [eb.Z.Messages.ECHO_CANCELLATION],
     parent: ef.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING
   },
+  [ef.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION]: {
+    section: eD.oAB.VOICE,
+    searchableTitles: [eb.Z.Messages.SIDECHAIN_COMPRESSION],
+    parent: ef.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING
+  },
   [ef.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION]: {
     section: eD.oAB.VOICE,
     searchableTitles: [

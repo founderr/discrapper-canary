@@ -194,6 +194,12 @@ if (!m()) {
   location: t
 });
   },
+  setSidechainCompression(e) {
+!m() && r.Z.dispatch({
+  type: 'AUDIO_SET_SIDECHAIN_COMPRESSION',
+  enabled: e
+});
+  },
   setLoopback(e) {
 !m() && r.Z.dispatch({
   type: 'AUDIO_SET_LOOPBACK',
