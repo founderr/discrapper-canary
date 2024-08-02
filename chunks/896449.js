@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 }), n(47120);
 var i = n(735250),
@@ -13,19 +13,19 @@ var i = n(735250),
   u = n(725119),
   d = n(26033),
   h = n(689938),
-  m = n(910331);
+  p = n(910331);
 
-function p(e) {
+function m(e) {
   var t;
   let {
 user: n,
-guildId: p,
+guildId: m,
 channel: _,
 entry: f,
 onSelect: E
   } = e, g = (0, u.Z)({
 userId: n.id,
-guildId: p,
+guildId: m,
 channelId: _.id
   }), C = (0, r.Z)({
 id: n.id,
@@ -66,7 +66,7 @@ renderPopout: () => (0, i.jsx)(s.Menu, {
   })
 }),
 children: () => (0, i.jsx)(s.Clickable, {
-  className: m.menuIcon,
+  className: p.menuIcon,
   onClick: () => {
     N(!0);
   },

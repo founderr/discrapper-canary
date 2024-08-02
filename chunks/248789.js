@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(378298),
   d = n(359119),
   h = n(473092),
-  m = n(177342),
-  p = n(134612),
+  p = n(177342),
+  m = n(134612),
   _ = n(689938);
 
 function f(e) {
@@ -74,7 +74,7 @@ T = a.useCallback(() => {
       });
     };
   }, {
-    modalKey: p.X_
+    modalKey: m.X_
   }), x(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
 }, [
   t,
@@ -124,7 +124,7 @@ S = a.useCallback(() => {
   t,
   x
 ]);
-  return (0, i.jsx)(m.Q, {
+  return (0, i.jsx)(p.Q, {
 channelId: t,
 warningId: f,
 senderId: E,

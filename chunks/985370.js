@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(579185),
   d = n(272929),
   h = n(456631),
-  m = n(643720),
-  p = n(981631),
+  p = n(643720),
+  m = n(981631),
   _ = n(269794);
 t.Z = e => {
   let {
@@ -56,7 +56,7 @@ renderPopout: e => {
   let {
     closePopout: n
   } = e;
-  return (0, i.jsx)(m.Z, {
+  return (0, i.jsx)(p.Z, {
     isHovered: b,
     channel: t,
     closePopout: n,
@@ -77,7 +77,7 @@ children: e => {
     className: l()(_.controlButton, n),
     onKeyDown: e => {
       var t, n;
-      return t = e, n = a, void(t.keyCode === p.yXg.ENTER && t.keyCode === p.yXg.SPACE && M(t, n));
+      return t = e, n = a, void(t.keyCode === m.yXg.ENTER && t.keyCode === m.yXg.SPACE && M(t, n));
     },
     onClick: e => {
       M(e, t);

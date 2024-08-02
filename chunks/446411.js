@@ -28,8 +28,8 @@ var l, r = n(735250),
   w = n(408433),
   I = n(956664),
   E = n(468846),
-  S = n(401419),
-  j = n(981631),
+  j = n(401419),
+  S = n(981631),
   T = n(689938),
   N = n(108558),
   M = n(153521),
@@ -58,12 +58,12 @@ responsive: c = !1,
 renderImageComponent: p,
 renderVideoComponent: b,
 renderLinkComponent: g,
-renderForwardComponent: f = j.VqG,
+renderForwardComponent: f = S.VqG,
 playable: x = !0,
 autoPlay: y = !1,
 autoMute: _,
 volume: w,
-onPlay: S,
+onPlay: j,
 onPause: T,
 onEnded: M,
 onControlsHide: A,
@@ -76,10 +76,10 @@ channelId: H,
 placeholder: R,
 placeholderVersion: B
   } = e, [W, D] = i.useState(y), O = null != d && null == d.proxyURL, G = i.useCallback(() => D(!1), [D]), Z = e => {
-e.preventDefault(), e.stopPropagation(), null == S || S(!1), D(!0), O && (C.S.dispatch(j.CkL.VIDEO_EMBED_PLAYBACK_STARTED), C.S.subscribeOnce(j.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G));
+e.preventDefault(), e.stopPropagation(), null == j || j(!1), D(!0), O && (C.S.dispatch(S.CkL.VIDEO_EMBED_PLAYBACK_STARTED), C.S.subscribeOnce(S.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G));
   };
   i.useEffect(() => () => {
-O && C.S.unsubscribe(j.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G);
+O && C.S.unsubscribe(S.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G);
   }, [
 O,
 G
@@ -116,7 +116,7 @@ return (0, r.jsx)('div', {
     playable: x,
     autoMute: _,
     volume: w,
-    onPlay: S,
+    onPlay: j,
     onPause: T,
     onMute: L,
     onControlsHide: A,
@@ -674,13 +674,13 @@ let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     isVisible: n
   } = this.state;
 switch (t.type) {
-  case j.hBH.GIFV:
+  case S.hBH.GIFV:
     return this.renderVideo({
       gifv: !0,
       hiddenSpoiler: e,
       isVisible: n
     });
-  case j.hBH.VIDEO:
+  case S.hBH.VIDEO:
   default:
     if (null != t.video)
       return this.renderVideo({
@@ -710,9 +710,9 @@ let {
   isVisible: r
 } = this.state, i = this.renderProvider(r), a = this.renderAuthor(r), o = this.renderTitle(r);
 switch (n.type) {
-  case j.hBH.IMAGE:
-  case j.hBH.VIDEO:
-  case j.hBH.GIFV:
+  case S.hBH.IMAGE:
+  case S.hBH.VIDEO:
+  case S.hBH.GIFV:
     break;
   default:
     e = this.renderDescription();
@@ -721,7 +721,7 @@ let s = this.renderFields();
 !l && (t = this.renderMedia(!r));
 let d = this.renderFooter(),
   u = null == t;
-return n.type === j.hBH.RICH && (u = null == n.video), {
+return n.type === S.hBH.RICH && (u = null == n.video), {
   provider: i,
   author: a,
   title: o,
@@ -755,11 +755,11 @@ let {
   maxWidth: a,
   maxHeight: o
 });
-if (!e && (r === j.hBH.VIDEO || d >= 300))
+if (!e && (r === S.hBH.VIDEO || d >= 300))
   return d + 32;
-if (r === j.hBH.RICH && void 0 !== n)
+if (r === S.hBH.RICH && void 0 !== n)
   return 520;
-if (r === j.hBH.GIFV) {
+if (r === S.hBH.GIFV) {
   var u, m, h, c;
   let {
     width: e
@@ -799,7 +799,7 @@ return (0, r.jsx)(s.Clickable, {
 let {
   embed: e
 } = this.props;
-return e.type === j.hBH.IMAGE || e.type === j.hBH.VIDEO || e.type === j.hBH.GIFV || (e.type === j.hBH.RICH || e.type === j.hBH.ARTICLE) && (null != e.video || null != e.image);
+return e.type === S.hBH.IMAGE || e.type === S.hBH.VIDEO || e.type === S.hBH.GIFV || (e.type === S.hBH.RICH || e.type === S.hBH.ARTICLE) && (null != e.video || null != e.image);
   }
   getEmbedColor(e) {
 let {
@@ -822,7 +822,7 @@ let {
 if (!this.usesJustifiedAutoStyle())
   return;
 let o = e ? void 0 : this.getMaxWidth(!1);
-if (void 0 === o && void 0 === n && r !== j.hBH.RICH) {
+if (void 0 === o && void 0 === n && r !== S.hBH.RICH) {
   let e = null != t ? t : l;
   if (void 0 !== e) {
     let {
@@ -848,13 +848,13 @@ let {
   obscureReason: n,
   className: l
 } = this.props;
-return null != t.provider && S.j.includes(t.provider.name) ? (0, r.jsx)(S.Z, {
+return null != t.provider && j.j.includes(t.provider.name) ? (0, r.jsx)(j.Z, {
   embed: t,
   className: l
 }) : (0, c.Z)(t) ? (0, r.jsx)(g.Z, {
   embed: t,
   className: l
-}) : (null === (e = t.provider) || void 0 === e ? void 0 : e.name) === 'Amazon Music' && t.type === j.hBH.RICH ? (0, r.jsx)(p.Z, {
+}) : (null === (e = t.provider) || void 0 === e ? void 0 : e.name) === 'Amazon Music' && t.type === S.hBH.RICH ? (0, r.jsx)(p.Z, {
   embed: t,
   className: l
 }) : this.isInline() ? null != n ? (0, r.jsx)(b.Z, {

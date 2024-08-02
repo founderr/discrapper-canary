@@ -74,8 +74,8 @@ if (this._metrics.length > 0) {
     body: {
       metrics: e,
       client_info: {
-        built_at: '1722553371457',
-        build_number: '315052'
+        built_at: '1722567692126',
+        build_number: '315119'
       }
     },
     retries: 1

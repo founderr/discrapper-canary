@@ -4,8 +4,8 @@ var i, a, s, l, r = n(392711),
   u = n(570140),
   d = n(430824);
 let h = null,
-  m = {};
-class p extends(l = c.ZP.Store) {
+  p = {};
+class m extends(l = c.ZP.Store) {
   initialize() {
 this.waitFor(d.Z);
   }
@@ -36,20 +36,20 @@ let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
 return null != t ? t.id : null;
   }
   getRegions(e) {
-return null != e ? m[e] : h;
+return null != e ? p[e] : h;
   }
 }
-s = 'RegionStore', (a = 'displayName') in(i = p) ? Object.defineProperty(i, a, {
+s = 'RegionStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new p(u.Z, {
+}) : i[a] = s, t.Z = new m(u.Z, {
   LOAD_REGIONS: function(e) {
 let t = o().sortBy(e.regions, e => e.name);
-null != e.guildId ? m[e.guildId] = t : h = t;
+null != e.guildId ? p[e.guildId] = t : h = t;
   },
   GUILD_DELETE: function(e) {
-delete m[e.guild.id];
+delete p[e.guild.id];
   }
 });

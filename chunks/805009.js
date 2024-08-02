@@ -12,8 +12,8 @@ var i, a = n(735250),
   u = n(657305),
   d = n(367907),
   h = n(282256),
-  m = n(925329),
-  p = n(833858),
+  p = n(925329),
+  m = n(833858),
   _ = n(223135),
   f = n(374129),
   E = n(639351),
@@ -60,7 +60,7 @@ return i && null == t ? (0, a.jsx)(o.TooltipContainer, {
   })
 }, 'add-status') : (0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
-  text: (0, p.O8)(t),
+  text: (0, m.O8)(t),
   children: (0, a.jsx)(_.Z, {
     hangStatusActivity: t,
     className: r()(S.hangStatusIcon, n)
@@ -117,7 +117,7 @@ let {
   isGuest: c,
   isOverlay: u,
   guildId: d
-} = this.props, m = (0, a.jsxs)('div', {
+} = this.props, p = (0, a.jsxs)('div', {
   className: r()(s, {
     [S.username]: !0,
     [S.usernameSpeaking]: !l && !o && i
@@ -132,7 +132,7 @@ let {
       ]
     }) : ''
   ]
-}), p = {
+}), m = {
   clan: t.clan,
   userId: t.id,
   contextGuildId: d,
@@ -146,8 +146,8 @@ let {
 };
 return !n || u ? (0, a.jsx)(a.Fragment, {
   children: (0, a.jsx)(h.Z, {
-    ...p,
-    children: m
+    ...m,
+    children: p
   })
 }) : null;
   }
@@ -162,8 +162,8 @@ let {
   collapsed: c,
   video: d,
   isStreaming: h,
-  disabled: m,
-  isWatching: p,
+  disabled: p,
+  isWatching: m,
   iconClassName: _,
   embeddedApplication: I,
   otherClientSessionType: Z,
@@ -179,7 +179,7 @@ let {
   handleHoverIcons: w,
   disconnected: B
 } = this.props;
-if (c || m)
+if (c || p)
   return null;
 let H = [],
   G = (0, a.jsx)(j, {
@@ -237,7 +237,7 @@ d && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
   children: (0, a.jsx)(g.ZP, {
     size: g.ZP.Sizes.SMALL
   })
-}, 'stream')) : p && H.push((0, a.jsx)(o.TooltipContainer, {
+}, 'stream')) : m && H.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
   text: v.Z.Messages.WATCH_STREAM_WATCHING,
   children: (0, a.jsx)(o.EyeIcon, {
@@ -372,7 +372,7 @@ iconClassName: n,
 guildId: i,
 channelId: l,
 userId: u
-  } = e, [h, p] = s.useState(!1), _ = (0, c.O)(e => p(e));
+  } = e, [h, m] = s.useState(!1), _ = (0, c.O)(e => m(e));
   return s.useEffect(() => {
 h && d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
   channel_id: l,
@@ -395,10 +395,10 @@ text: v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
 className: S.iconSpacing,
 children: (0, a.jsx)('div', {
   ref: _,
-  children: (0, a.jsx)(m.Z, {
+  children: (0, a.jsx)(p.Z, {
     className: r()(S.icon, n),
     game: t,
-    size: m.Z.Sizes.XSMALL,
+    size: p.Z.Sizes.XSMALL,
     onMouseEnter: () => {
       d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
         channel_id: l,

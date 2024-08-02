@@ -70,7 +70,7 @@ b = l.useCallback(() => {
   a,
   g
 ]),
-B = {
+j = {
   impression_group: r.ImpressionGroups.GUILD_ADD_FLOW
 };
   return (0, o.jsx)('div', {
@@ -87,7 +87,7 @@ children: (0, o.jsx)(i.ModalRoot, {
         (0, o.jsx)(i.Slide, {
           id: m._m.GUILD_TEMPLATES,
           impressionName: r.ImpressionNames.GUILD_ADD_LANDING,
-          impressionProperties: B,
+          impressionProperties: j,
           children: (0, o.jsx)(E.Z, {
             isNewUser: !1,
             onJoin: C ? Z : void 0,
@@ -98,7 +98,7 @@ children: (0, o.jsx)(i.ModalRoot, {
         (0, o.jsx)(i.Slide, {
           id: m._m.CREATION_INTENT,
           impressionName: r.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
-          impressionProperties: B,
+          impressionProperties: j,
           children: (0, o.jsx)(d.Z, {
             onClose: f,
             onBack: P,
@@ -108,7 +108,7 @@ children: (0, o.jsx)(i.ModalRoot, {
         (0, o.jsx)(i.Slide, {
           id: m._m.CUSTOMIZE_GUILD,
           impressionName: r.ImpressionNames.GUILD_ADD_CUSTOMIZE,
-          impressionProperties: B,
+          impressionProperties: j,
           children: (0, o.jsx)(I.Z, {
             guildTemplate: U,
             onGuildCreated: k,
@@ -121,7 +121,7 @@ children: (0, o.jsx)(i.ModalRoot, {
         (0, o.jsx)(i.Slide, {
           id: m._m.CHANNEL_PROMPT,
           impressionName: r.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
-          impressionProperties: B,
+          impressionProperties: j,
           children: (0, o.jsx)(_.Z, {
             createdGuildId: g,
             onClose: f,
@@ -132,7 +132,7 @@ children: (0, o.jsx)(i.ModalRoot, {
         (0, o.jsx)(i.Slide, {
           id: m._m.JOIN_GUILD,
           impressionName: r.ImpressionNames.GUILD_ADD_JOIN,
-          impressionProperties: B,
+          impressionProperties: j,
           children: (0, o.jsx)(N.Z, {
             onBack: P,
             onClose: f,

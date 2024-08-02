@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(481060),
   d = n(410030),
   h = n(271383),
-  m = n(430824),
-  p = n(594174),
+  p = n(430824),
+  m = n(594174),
   _ = n(153124),
   f = n(709054),
   E = n(931240),
@@ -126,8 +126,8 @@ T
 O = a.useCallback(() => {
   j(!0);
 }, []),
-y = (0, c.e7)([m.Z], () => m.Z.getGuild(n)),
-D = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
+y = (0, c.e7)([p.Z], () => p.Z.getGuild(n)),
+D = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
 k = (0, c.e7)([h.ZP], () => null != D ? h.ZP.getMember(n, D.id) : null),
 U = (0, d.ZP)(),
 w = (0, C.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [

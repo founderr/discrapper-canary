@@ -32,8 +32,8 @@ navId: t,
 itemCount: n,
 focusedIndex: d = 0,
 onSelect: h,
-setFocus: m,
-getNewFocusIndex: p,
+setFocus: p,
+getNewFocusIndex: m,
 maintainFocusPosition: _ = !0,
 includeSetSizes: f = !0,
 focusOnMount: E = !0,
@@ -61,8 +61,8 @@ function(e) {
     itemCount: n,
     focusedIndex: d,
     onSelect: h,
-    setFocus: m = u,
-    getNewFocusIndex: p,
+    setFocus: p = u,
+    getNewFocusIndex: m,
     dispatch: _,
     maintainFocusPosition: f,
     includeSetSizes: E,
@@ -85,8 +85,8 @@ function(e) {
   }));
   i.useEffect(() => () => A.clean(), [A]);
   let M = i.useCallback((e, t) => {
-      v.current && m(e, t);
-    }, [m]),
+      v.current && p(e, t);
+    }, [p]),
     [b, R] = i.useState(!0);
   i.useEffect(() => {
     if (b && !g) {
@@ -97,7 +97,7 @@ function(e) {
   }, [d]);
   let j = i.useCallback(function() {
       let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        n = null != p ? p(d) : d;
+        n = null != m ? m(d) : d;
       n !== d && _({
         type: a.G.SET_FOCUSED_INDEX,
         index: n
@@ -105,7 +105,7 @@ function(e) {
     }, [
       I,
       d,
-      p,
+      m,
       _,
       t,
       M
@@ -251,8 +251,8 @@ function(e) {
   focusedIndex: v,
   dispatch: S,
   onSelect: h,
-  setFocus: m,
-  getNewFocusIndex: p,
+  setFocus: p,
+  getNewFocusIndex: m,
   maintainFocusPosition: _,
   includeSetSizes: f,
   focusOnMount: E,

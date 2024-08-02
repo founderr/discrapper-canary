@@ -14,8 +14,8 @@ var a = n(120356),
   u = n(906732),
   d = n(471445),
   h = n(484459),
-  m = n(103575),
-  p = n(271383),
+  p = n(103575),
+  m = n(271383),
   _ = n(594174),
   f = n(51144),
   E = n(967128),
@@ -30,7 +30,7 @@ userId: d,
 channel: E
   } = e, {
 analyticsLocations: g
-  } = (0, u.ZP)(c.Z.USERNAME), C = (0, l.e7)([_.default], () => _.default.getUser(d)), x = (0, l.e7)([p.ZP], () => null != d ? p.ZP.getMember(E.guild_id, d) : null);
+  } = (0, u.ZP)(c.Z.USERNAME), C = (0, l.e7)([_.default], () => _.default.getUser(d)), x = (0, l.e7)([m.ZP], () => null != d ? m.ZP.getMember(E.guild_id, d) : null);
 
   function T(e) {
 if (null == C)
@@ -62,7 +62,7 @@ children: (0, i.jsx)(r.Popout, {
     guildId: E.guild_id,
     channelId: E.id
   }),
-  renderPopout: e => (0, i.jsx)(m.Z, {
+  renderPopout: e => (0, i.jsx)(p.Z, {
     location: 'ThreadEmptyMessage',
     userId: C.id,
     guildId: E.guild_id,

@@ -8,8 +8,8 @@ var i, a = n(392711),
   u = n(797316),
   d = n(158776),
   h = n(885110),
-  m = n(594174),
-  p = n(823379),
+  p = n(594174),
+  m = n(823379),
   _ = n(700785),
   f = n(709054),
   E = n(51144),
@@ -63,7 +63,7 @@ return !1;
   }
   addUser(e, t, n, i, a) {
 this.allUserIds.add(e);
-let s = m.default.getUser(e);
+let s = p.default.getUser(e);
 if (null == s || '' === s.username)
   return;
 !(t in this.sections) && (this.sections[t] = {
@@ -128,8 +128,8 @@ return [
   calculateNewState(e, t) {
 var n, i;
 let a = c.ZP.getMember(this.guildId, e),
-  s = m.default.getUser(e),
-  l = m.default.getCurrentUser(),
+  s = p.default.getUser(e),
+  l = p.default.getCurrentUser(),
   r = (null == s ? void 0 : s.id) === (null == l ? void 0 : l.id) ? h.Z.getStatus() : d.Z.getStatus(e, this.guildId),
   o = null != s && null != t && _.BT({
     permission: g.Plq.VIEW_CHANNEL,
@@ -137,10 +137,10 @@ let a = c.ZP.getMember(this.guildId, e),
     context: t
   }),
   u = r !== g.Skl.OFFLINE && r !== g.Skl.INVISIBLE && r !== g.Skl.UNKNOWN ? null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : 'online' : 'offline',
-  p = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : E.ZP.getName(s);
+  m = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : E.ZP.getName(s);
 return [
   u,
-  null == p ? void 0 : p.toLowerCase(),
+  null == m ? void 0 : m.toLowerCase(),
   o
 ];
   }
@@ -172,7 +172,7 @@ I[e].guildId === t && (I[e].rebuild(), n = !0);
 }
 class S extends(i = l.ZP.Store) {
   initialize() {
-this.waitFor(o.Z, c.ZP, u.Z, d.Z, h.Z, m.default), this.syncWith([u.Z], () => {
+this.waitFor(o.Z, c.ZP, u.Z, d.Z, h.Z, p.default), this.syncWith([u.Z], () => {
   let e = u.Z.getSubscribedThreadIds(),
     t = !1;
   for (let n in I)
@@ -180,7 +180,7 @@ this.waitFor(o.Z, c.ZP, u.Z, d.Z, h.Z, m.default), this.syncWith([u.Z], () => {
   return t;
 }), this.syncWith([h.Z], () => {
   var e;
-  return N(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+  return N(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
 });
   }
   getMemberListVersion(e) {
@@ -269,7 +269,7 @@ let {
 } = e, n = s()(t).map(e => {
   var t;
   return null === (t = e.user) || void 0 === t ? void 0 : t.id;
-}).filter(p.lm).uniq().value(), i = !1;
+}).filter(m.lm).uniq().value(), i = !1;
 for (let e in I)
   I[e].updateMultipleUserIds(n) && (i = !0);
 return i;

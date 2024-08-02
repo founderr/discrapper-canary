@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(393238),
   d = n(607070),
   h = n(44315),
-  m = n(314897),
-  p = n(111583),
+  p = n(314897),
+  m = n(111583),
   _ = n(889901),
   f = n(64078),
   E = n(351780),
@@ -35,10 +35,10 @@ a.useEffect(() => {
   }, 2000);
   return () => clearTimeout(e);
 }, [l]);
-let m = null != l ? '100%' : '200%',
-  p = (0, c.useSpring)({
+let p = null != l ? '100%' : '200%',
+  m = (0, c.useSpring)({
     opacity: u ? 1 : 0,
-    translateY: u ? '0' : m,
+    translateY: u ? '0' : p,
     pointerEvents: 'none',
     width: n,
     config: s ? r.config.stiff : r.config.slow
@@ -46,7 +46,7 @@ let m = null != l ? '100%' : '200%',
 return (0, i.jsx)(i.Fragment, {
   children: null != l && (0, i.jsx)(r.animated.div, {
     className: T.messageComboScore,
-    style: p,
+    style: m,
     children: (0, i.jsx)(c.Text, {
       className: T.comboScore,
       variant: 'text-sm/bold',
@@ -134,7 +134,7 @@ return (0, i.jsxs)(i.Fragment, {
 t.Z = a.memo(function(e) {
   let {
 channelId: t
-  } = e, n = (0, o.e7)([m.default], () => m.default.getId()), s = (0, o.e7)([p.Z], () => p.Z.isTyping(t, n), [
+  } = e, n = (0, o.e7)([p.default], () => p.default.getId()), s = (0, o.e7)([m.Z], () => m.Z.isTyping(t, n), [
 t,
 n
   ]), l = (0, o.e7)([E.Z], () => E.Z.isEnabled()), d = (0, o.e7)([g.ZP], () => g.ZP.isComboing(n, t), [

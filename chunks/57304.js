@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(731290),
   d = n(306680),
   h = n(594174),
-  m = n(585483),
-  p = n(665149),
+  p = n(585483),
+  m = n(665149),
   _ = n(981631),
   f = n(689938);
 t.Z = function(e) {
@@ -29,8 +29,8 @@ return null == e || t.isNSFW() && (!e.nsfwAllowed || !u.Z.didAgree(t.getGuildId(
   function N(e) {
 !(null == e ? void 0 : e.shiftKey) && I.dispatch(_.CkL.POPOUT_CLOSE);
   }
-  return (a.useEffect(() => (m.S.subscribe(_.CkL.TOGGLE_CHANNEL_PINS, T), () => {
-m.S.unsubscribe(_.CkL.TOGGLE_CHANNEL_PINS, T);
+  return (a.useEffect(() => (p.S.subscribe(_.CkL.TOGGLE_CHANNEL_PINS, T), () => {
+p.S.unsubscribe(_.CkL.TOGGLE_CHANNEL_PINS, T);
   }), [T]), x) ? null : (0, i.jsx)(l.Popout, {
 shouldShow: E,
 animation: l.Popout.Animation.NONE,
@@ -50,7 +50,7 @@ children: (e, t) => {
   let {
     isShown: a
   } = t;
-  return (0, i.jsx)(p.JO, {
+  return (0, i.jsx)(m.JO, {
     ...e,
     onClick: T,
     tooltip: a ? null : f.Z.Messages.PINNED_MESSAGES,

@@ -12,8 +12,8 @@ t.Z = e => {
 searchQuery: n,
 setSearchQuery: d,
 mostRecentQuery: h,
-handleClearSearch: m,
-handleSearchKeyPress: p,
+handleClearSearch: p,
+handleSearchKeyPress: m,
 handleCreateOrAddGuild: _,
 searchResults: f,
 searchFetching: E
@@ -75,7 +75,7 @@ children: (0, i.jsxs)(a.ScrollerAuto, {
           className: c.headerTitleWrapper,
           children: [
             (0, i.jsx)(a.Clickable, {
-              onClick: m,
+              onClick: p,
               className: c.arrow,
               children: (0, i.jsx)(s.Z, {
                 direction: s.Z.Directions.LEFT
@@ -98,8 +98,8 @@ children: (0, i.jsxs)(a.ScrollerAuto, {
           label: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
           placeholder: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
           onChange: d,
-          onClear: m,
-          onKeyPress: p,
+          onClear: p,
+          onKeyPress: m,
           cta: null != n && n.length > 0 ? r.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
         })
       ]

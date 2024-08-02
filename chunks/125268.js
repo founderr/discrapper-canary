@@ -15,7 +15,7 @@ return h;
 return E;
   },
   ZZ: function() {
-return m;
+return p;
   },
   cV: function() {
 return u;
@@ -24,7 +24,7 @@ return u;
 return _;
   },
   gr: function() {
-return p;
+return m;
   },
   oW: function() {
 return o;
@@ -83,7 +83,7 @@ backoff: new i.Z()
   });
 }
 
-function m(e, t) {
+function p(e, t) {
   t.state = l.f.STOP, s.Z.dispatch({
 type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
 emojiHose: t,
@@ -92,7 +92,7 @@ streamerId: e
   });
 }
 
-function p(e, t, n) {
+function m(e, t, n) {
   s.Z.dispatch({
 type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
 emojiHose: e,

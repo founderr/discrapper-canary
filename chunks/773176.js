@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(704215),
   d = n(481060),
   h = n(596454),
-  m = n(607070),
-  p = n(110630),
+  p = n(607070),
+  m = n(110630),
   _ = n(706140),
   f = n(543241),
   E = n(689789),
@@ -206,7 +206,7 @@ let Y = (0, H.a4)(n),
     isGuest: w,
     isActiveChannelOrUnarchivableThread: h
   }),
-  $ = t.type === Q.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(Q.oNc.NEWS) && (W || x) && (0, p.Z)(n),
+  $ = t.type === Q.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(Q.oNc.NEWS) && (W || x) && (0, m.Z)(n),
   ee = t.getGuildId(),
   et = null != ee && (n.type === Q.uaV.USER_JOIN || n.type === Q.uaV.GUILD_INVITE_REMINDER) && k.Z.canWithPartialContext(Q.Plq.MANAGE_GUILD, {
     guildId: ee
@@ -238,7 +238,7 @@ let Y = (0, H.a4)(n),
     A.Z.isMessageBookmarked(n.id)
   ]),
   eo = (0, X.Z)(),
-  ec = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled);
+  ec = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled);
 return {
   channel: t,
   message: n,
@@ -278,14 +278,14 @@ return {
 q,
 er,
 n
-  ]), em = a.useCallback(() => {
+  ]), ep = a.useCallback(() => {
 er({
   emojiPicker: !ee
 });
   }, [
 ee,
 er
-  ]), ep = (0, R.$R)(t), e_ = n.hasFlag(Q.iLy.CROSSPOSTED), [ef, eE] = (0, _.c)(S ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), eg = ef === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [eC, eI] = a.useState(!1), ex = a.useCallback(() => {
+  ]), em = (0, R.$R)(t), e_ = n.hasFlag(Q.iLy.CROSSPOSTED), [ef, eE] = (0, _.c)(S ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), eg = ef === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [eC, eI] = a.useState(!1), ex = a.useCallback(() => {
 eI(!0);
   }, []), eT = a.useCallback(() => {
 eI(!1);
@@ -329,7 +329,7 @@ children: [
         onClick: en ? Y.l9 : Y.W1,
         ...eS
       }, 'mark-reminder') : null,
-      ep ? (0, i.jsx)(W.s, {
+      em ? (0, i.jsx)(W.s, {
         label: $.Z.Messages.MARK_UNREAD,
         icon: d.ChatMarkUnreadIcon,
         onClick: Y.B8,
@@ -367,7 +367,7 @@ children: [
         ...eS
       }) : null,
       (0, i.jsx)(K.Z, {
-        togglePopout: em,
+        togglePopout: ep,
         renderEmojiPicker: eo,
         shouldShow: ee,
         isFocused: ed,

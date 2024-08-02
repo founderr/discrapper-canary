@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(481060),
   d = n(367907),
   h = n(499254),
-  m = n(424602),
-  p = n(541099),
+  p = n(424602),
+  m = n(541099),
   _ = n(827498),
   f = n(663924),
   E = n(998698),
@@ -28,12 +28,12 @@ var i = n(735250),
 let b = a.forwardRef(function(e, t) {
   let {
 type: n
-  } = e, [s, r] = a.useState(!1), m = (0, o.e7)([p.Z], () => p.Z.shouldShowPopup()), f = a.useCallback(() => {
-(0, d.yw)(v.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, g.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
+  } = e, [s, r] = a.useState(!1), p = (0, o.e7)([m.Z], () => m.Z.shouldShowPopup()), f = a.useCallback(() => {
+(0, d.yw)(v.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.y(_.ti.DISMISSED) : ((0, g.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
   dismissAction: Z.L.TAKE_ACTION
 }), h._(_._b.TEXT, n));
   }, [
-m,
+p,
 n
   ]), E = () => {
 r(!0);
@@ -65,7 +65,7 @@ children: (0, i.jsx)(u.Button, {
   },
   innerClassName: M.buttonContents,
   children: (0, i.jsx)(u.AppsIcon, {
-    className: l()(s || m ? M.iconActive : M.iconInactive)
+    className: l()(s || p ? M.iconActive : M.iconInactive)
   })
 })
   });
@@ -110,13 +110,13 @@ var e;
 return {
   activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? E.Z.getActiveCommand(t.id) : null
 };
-  }), u = m.T.useExperiment({
+  }), u = p.T.useExperiment({
 location: 'chat_input'
   }, {
 autoTrackExposure: !0
-  }).enabled, d = (0, o.e7)([p.Z], () => {
-let e = p.Z.activeViewType();
-return null != e && e === n && p.Z.shouldShowPopup();
+  }).enabled, d = (0, o.e7)([m.Z], () => {
+let e = m.Z.activeViewType();
+return null != e && e === n && m.Z.shouldShowPopup();
   }, [n]);
   return u && null == c && !l ? (0, i.jsxs)('div', {
 className: M.channelAppLauncher,

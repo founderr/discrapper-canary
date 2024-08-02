@@ -15,8 +15,8 @@ var i, a = n(735250),
   u = n(481060),
   d = n(475179),
   h = n(239091),
-  m = n(287734),
-  p = n(872810),
+  p = n(287734),
+  m = n(872810),
   _ = n(888651),
   f = n(100527),
   E = n(258609),
@@ -187,14 +187,14 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     channelId: t.id,
     guildId: t.guild_id
   };
-  Z.default.getId() !== e.id && m.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, C.V9)(a))) : (0, p.iV)(a), null == i || i(e.id);
+  Z.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, C.V9)(a))) : (0, m.iV)(a), null == i || i(e.id);
 }), D(this, 'handleJoinVoice', () => {
   let {
     user: e,
     channel: t,
     hidePreview: n
   } = this.props;
-  M.Z.can(o.$e(j.Plq.CONNECT, j.Plq.VIEW_CHANNEL), t) && (m.default.selectVoiceChannel(t.id), null == n || n(e.id));
+  M.Z.can(o.$e(j.Plq.CONNECT, j.Plq.VIEW_CHANNEL), t) && (p.default.selectVoiceChannel(t.id), null == n || n(e.id));
 }), D(this, 'handleUserContextMenu', e => {
   let {
     channel: t,
@@ -269,8 +269,8 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     localVideoDisabled: c,
     speaking: d,
     disconnected: h,
-    user: m,
-    deaf: p,
+    user: p,
+    deaf: m,
     priority: _,
     collapsed: f,
     isStreaming: E,
@@ -290,7 +290,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     userPopoutOpen: P,
     isHoveringHangStatus: D
   } = this.state, k = L.al.has(null != n ? n : ''), U = {
-    user: m,
+    user: p,
     speaking: d,
     disconnected: h,
     mute: l,
@@ -300,7 +300,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     isGuest: C,
     video: x,
     priority: _,
-    deaf: p,
+    deaf: m,
     nick: I,
     collapsed: f,
     overlap: f,

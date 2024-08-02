@@ -40,24 +40,24 @@ null != r && (null === (s = t.current) || void 0 === s || s.scrollIntoViewNode({
   padding: 4 * o.kQ,
   callback: () => null == r ? void 0 : r.focus()
 }));
-  }, [n.keyboardModeEnabled]), m = i.useCallback(() => {
+  }, [n.keyboardModeEnabled]), p = i.useCallback(() => {
 !n.hasMoreAfter && l.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS);
-  }, [n.hasMoreAfter]), p = (0, a.ZP)({
+  }, [n.hasMoreAfter]), m = (0, a.ZP)({
 id: r.W,
 preserveFocusPosition: !1,
 setFocus: h,
 isEnabled: n.keyboardModeEnabled && !n.isEditing,
 scrollToStart: d,
 scrollToEnd: u,
-onNavigateNextAtEnd: m
+onNavigateNextAtEnd: p
   }), _ = i.useCallback(e => {
 let {
   atEnd: t = !1
 } = e;
-t ? p.focusLastVisibleItem() : p.focusFirstVisibleItem();
-  }, [p]);
+t ? m.focusLastVisibleItem() : m.focusFirstVisibleItem();
+  }, [m]);
   return (0, s.yp)({
 event: c.CkL.FOCUS_MESSAGES,
 handler: _
-  }), p;
+  }), m;
 }

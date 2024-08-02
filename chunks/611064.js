@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(146282),
   d = n(703180),
   h = n(809017),
-  m = n(981631),
-  p = n(689938),
+  p = n(981631),
+  m = n(689938),
   _ = n(544165),
   f = n(849787);
 
@@ -43,7 +43,7 @@ x = a.useCallback(e => {
 className: f.membersGroup,
 children: [
   (0, i.jsx)(l.HiddenVisually, {
-    children: p.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+    children: m.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
       title: h,
       count: C
     })
@@ -51,7 +51,7 @@ children: [
   (0, i.jsxs)(l.Clickable, {
     onClick: e => {
       if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
-        return I ? (0, c.lY)() : C > 3 ? E() : (0, m.dG4)();
+        return I ? (0, c.lY)() : C > 3 ? E() : (0, p.dG4)();
     },
     onContextMenu: x,
     tag: 'span',

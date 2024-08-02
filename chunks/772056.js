@@ -11,7 +11,7 @@ var i, a, s = n(735250),
   u = n(566898),
   d = n(259580),
   h = n(760822),
-  m = n(603707);
+  p = n(603707);
 (a = i || (i = {}))[a.MutualFriendsList = 0] = 'MutualFriendsList', a[a.MutualGuildList = 1] = 'MutualGuildList';
 t.Z = e => {
   let {
@@ -20,7 +20,7 @@ children: n,
 itemType: i = 1,
 isLoadingHeader: a,
 isLoadingContents: r,
-loadingContentsCount: p = 0,
+loadingContentsCount: m = 0,
 className: _,
 onExpand: f,
 onHover: E,
@@ -69,11 +69,11 @@ children: [
       [h.isCollapsed]: C
     }),
     children: r ? Array.from({
-      length: p
+      length: m
     }).map((e, t) => (0, s.jsxs)('div', {
       className: o()({
-        [m.mutualFriendItem]: 0 === i,
-        [m.mutualGuildItem]: 1 === i
+        [p.mutualFriendItem]: 0 === i,
+        [p.mutualGuildItem]: 1 === i
       }),
       children: [
         (0, s.jsx)(u.ZT, {

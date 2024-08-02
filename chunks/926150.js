@@ -14,8 +14,8 @@ var a = n(442837),
   u = n(304704),
   d = n(27144),
   h = n(741308),
-  m = n(588822),
-  p = n(940730),
+  p = n(588822),
+  m = n(940730),
   _ = n(483424),
   f = n(681837),
   E = n(91433),
@@ -105,14 +105,14 @@ children: [
       !k && (null == b ? void 0 : b.bio) != null && (null == b ? void 0 : b.bio) !== '' && (0, i.jsx)(C.Z, {
         heading: A.Z.Messages.USER_POPOUT_ABOUT_ME,
         headingColor: 'header-primary',
-        children: (0, i.jsx)(m.Z, {
+        children: (0, i.jsx)(p.Z, {
           userBio: b.bio,
           animateOnHover: !0,
           isHovering: j,
           userId: t.id
         })
       }),
-      (null == U ? void 0 : U.popularApplicationCommandIds) != null && (0, i.jsx)(p.Z, {
+      (null == U ? void 0 : U.popularApplicationCommandIds) != null && (0, i.jsx)(m.Z, {
         applicationId: U.id,
         commandIds: U.popularApplicationCommandIds,
         channel: R

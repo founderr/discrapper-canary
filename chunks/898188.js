@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(607070),
   d = n(933557),
   h = n(471445),
-  m = n(592125),
-  p = n(271383),
+  p = n(592125),
+  m = n(271383),
   _ = n(526120),
   f = n(734893),
   E = n(655359),
@@ -26,7 +26,7 @@ var i = n(735250),
 function T(e) {
   let {
 action: t
-  } = e, n = (0, o.e7)([m.Z], () => m.Z.getChannel(t.channelId)), a = (0, d.ZP)(n, !0);
+  } = e, n = (0, o.e7)([p.Z], () => p.Z.getChannel(t.channelId)), a = (0, d.ZP)(n, !0);
   return null == n ? (0, i.jsx)(c.Text, {
 variant: 'text-xxs/normal',
 color: 'header-secondary',
@@ -48,7 +48,7 @@ function N(e) {
 channelId: n,
 emojiId: a,
 emojiName: s
-  } = e, l = (0, o.e7)([m.Z], () => m.Z.getChannel(n));
+  } = e, l = (0, o.e7)([p.Z], () => p.Z.getChannel(n));
   if (null == l)
 return null;
   let r = null !== (t = (0, h.KS)(l)) && void 0 !== t ? t : c.TextIcon;
@@ -66,12 +66,12 @@ function v(e) {
   var t, n, s, d;
   let {
 guildId: h,
-channel: m,
-className: p
+channel: p,
+className: m
   } = e, {
 channelAction: g,
 completed: C
-  } = (0, E.P3)(h, m), v = (0, E.K_)(h, null == g ? void 0 : g.channelId), S = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), Z = (null == g ? void 0 : g.actionType) === f.oi.VIEW, A = (0, c.useToken)(c.tokens.colors.WHITE), [M, b] = a.useState(!1), [R] = a.useState(new r.Z.Value(0)), [j] = a.useState(new r.Z.Value(0));
+  } = (0, E.P3)(h, p), v = (0, E.K_)(h, null == g ? void 0 : g.channelId), S = (0, o.e7)([u.Z], () => u.Z.useReducedMotion), Z = (null == g ? void 0 : g.actionType) === f.oi.VIEW, A = (0, c.useToken)(c.tokens.colors.WHITE), [M, b] = a.useState(!1), [R] = a.useState(new r.Z.Value(0)), [j] = a.useState(new r.Z.Value(0));
   a.useEffect(() => {
 C ? r.Z.timing(R, {
   toValue: 0,
@@ -109,7 +109,7 @@ h,
 v
   ]);
   return null == g || Z && !M ? null : (0, i.jsx)('div', {
-className: l()(x.container, p),
+className: l()(x.container, m),
 children: M && null != v ? (0, i.jsx)(r.Z.div, {
   style: {
     marginBottom: j.interpolate({
@@ -210,9 +210,9 @@ function S(e) {
 guildId: t,
 channel: n,
 className: a
-  } = e, s = (0, g.g)(t), l = (0, o.e7)([p.ZP], () => {
+  } = e, s = (0, g.g)(t), l = (0, o.e7)([m.ZP], () => {
 var e;
-return (null === (e = p.ZP.getSelfMember(t)) || void 0 === e ? void 0 : e.isPending) === !0;
+return (null === (e = m.ZP.getSelfMember(t)) || void 0 === e ? void 0 : e.isPending) === !0;
   });
   return (0, E.PE)(t) || l || !s ? null : (0, i.jsx)(v, {
 guildId: t,

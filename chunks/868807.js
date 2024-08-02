@@ -1,6 +1,6 @@
 n.d(t, {
   a: function() {
-return p;
+return m;
   }
 }), n(47120);
 var i = n(392711),
@@ -13,9 +13,9 @@ var i = n(392711),
   u = n(748902),
   d = n(981631);
 let h = new Set(),
-  m = null;
+  p = null;
 
-function p(e) {
+function m(e) {
   let {
 id: t
   } = e, {
@@ -41,7 +41,7 @@ if (null == n.message && null != e) {
 return n;
   }, [t]), l = (0, s.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
   return !n && null == i && l && function(e) {
-h.add(e), null == m && (m = setTimeout(_, 0));
+h.add(e), null == p && (p = setTimeout(_, 0));
   }(t), {
 loaded: n,
 error: a,
@@ -53,7 +53,7 @@ async function _() {
 for (; !a().isEmpty(h);)
   await f();
   } finally {
-m = null;
+p = null;
   }
 }
 async function f() {

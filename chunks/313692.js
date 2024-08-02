@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(963374),
   d = n(735020),
   h = n(786761),
-  m = n(937889),
-  p = n(619753),
+  p = n(937889),
+  m = n(619753),
   _ = n(433355),
   f = n(271383),
   E = n(594174),
@@ -96,7 +96,7 @@ B = (0, o.e7)([d.Z], () => {
     return null != n && (i = i.merge({
       attachments: n.attachments,
       embeds: n.embeds
-    })), i.isSearchHit ? i.set('customRenderedContent', (0, m.ZP)(i, {
+    })), i.isSearchHit ? i.set('customRenderedContent', (0, p.ZP)(i, {
       postProcessor: t,
       allowHeading: !0,
       allowList: !0
@@ -142,7 +142,7 @@ children: [
     className: N.innerContainer,
     ref: M,
     onScroll: k,
-    children: (0, i.jsx)(p.Z, {
+    children: (0, i.jsx)(m.Z, {
       searchResults: B,
       search: H,
       searchId: s,

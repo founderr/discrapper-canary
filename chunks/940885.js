@@ -14,8 +14,8 @@ var a = n(410030),
   u = n(483517),
   d = n(502762),
   h = n(171368),
-  m = n(944546),
-  p = n(470900),
+  p = n(944546),
+  m = n(470900),
   _ = n(772056),
   f = n(689938),
   E = n(271234);
@@ -55,7 +55,7 @@ children: [
         guild: n,
         nick: a
       } = e;
-      return (0, i.jsx)(p.D, {
+      return (0, i.jsx)(m.D, {
         user: t,
         guild: n,
         nick: a,
@@ -85,7 +85,7 @@ children: [
         user: a,
         status: s
       } = e;
-      return (0, i.jsx)(m.T, {
+      return (0, i.jsx)(p.T, {
         user: a,
         status: s,
         onSelect: () => {

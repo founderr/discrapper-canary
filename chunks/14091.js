@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(481060),
   d = n(447543),
   h = n(603263),
-  m = n(367907),
-  p = n(210887),
+  p = n(367907),
+  m = n(210887),
   _ = n(695346),
   f = n(768119),
   E = n(944486),
@@ -57,7 +57,7 @@ super(...e), t = this, Z(this, 'autoAnalytics', function() {
     s = 0;
   null != t.props.searchResults && o()(t.props.searchResults).flatten().filter(e => e.isSearchHit).forEach(e => {
     null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && s++), null != e.embeds && e.embeds.length > 0 && a++, null != e.attachments && e.attachments.length > 0 && i++;
-  }), m.ZP.trackWithMetadata(N.rMx.SEARCH_RESULT_VIEWED, {
+  }), p.ZP.trackWithMetadata(N.rMx.SEARCH_RESULT_VIEWED, {
     search_type: t.props.searchType,
     search_id: t.props.searchAnalyticsId,
     prev_search_id: e !== t.props.searchAnalyticsId ? e : null,
@@ -194,7 +194,7 @@ super(...e), Z(this, 'state', {
   } = this.props, {
     searchMode: i
   } = this.state;
-  e !== i && !n && (m.ZP.trackWithMetadata(N.rMx.SEARCH_RESULT_SORT_CHANGED, {
+  e !== i && !n && (p.ZP.trackWithMetadata(N.rMx.SEARCH_RESULT_SORT_CHANGED, {
     search_id: f.Z.getAnalyticsId(t),
     new_sort_type: e
   }), h.Nz(t, e), this.setState({
@@ -301,10 +301,10 @@ search: n,
 ...(0, I.Z)(t),
 renderEmbeds: _.NA.useSetting(),
 developerMode: _.Sb.useSetting(),
-...(0, c.cj)([p.Z], () => {
+...(0, c.cj)([m.Z], () => {
   let {
     theme: e
-  } = p.Z;
+  } = m.Z;
   return {
     theme: e
   };

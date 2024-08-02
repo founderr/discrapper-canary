@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(481060),
   d = n(605436),
   h = n(79712),
-  m = n(285173),
-  p = n(434404),
+  p = n(285173),
+  m = n(434404),
   _ = n(422559),
   f = n(271383),
   E = n(430824),
@@ -39,7 +39,7 @@ categoryTitle: x,
 userId: S
   } = e, A = (0, c.e7)([E.Z], () => E.Z.getRoles(C.id)), M = N.Plq[o], b = null !== (s = null === (t = I[M.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, _.wt)(M), R = null !== (r = null === (n = I[M.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : '', j = T._o.has(M), L = T.Qn.includes(o), P = f.length, O = (0, c.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_ROLES, C), [C]), y = a.useCallback(async e => {
 if (!!O)
-  await p.Z.open(C.id, N.pNK.ROLES), await p.Z.selectRole(e);
+  await m.Z.open(C.id, N.pNK.ROLES), await m.Z.selectRole(e);
   }, [
 O,
 C.id
@@ -154,7 +154,7 @@ children: [
         [Z.editable]: O && !(0, d.pM)(C.id, e)
       }),
       onClick: () => y(e),
-      children: (0, i.jsx)(m.Z, {
+      children: (0, i.jsx)(p.Z, {
         role: A[e],
         guildId: C.id,
         className: Z.roleChiplet
@@ -176,15 +176,15 @@ guildId: n,
 location: s,
 className: r,
 onNavigate: d
-  } = e, h = (0, c.e7)([C.default], () => C.default.getUser(t), [t]), m = (0, c.e7)([E.Z], () => E.Z.getGuild(n), [n]), p = (0, c.e7)([f.ZP], () => f.ZP.getMember(n, t), [
+  } = e, h = (0, c.e7)([C.default], () => C.default.getUser(t), [t]), p = (0, c.e7)([E.Z], () => E.Z.getGuild(n), [n]), m = (0, c.e7)([f.ZP], () => f.ZP.getMember(n, t), [
 n,
 t
-  ]), g = (0, T.B2)(t, n, T.pd), b = Object.keys(g).length, R = a.useMemo(() => null != m ? I.Z.getGuildPermissionSpecMap(m) : null, [m]), j = a.useMemo(() => null != m ? I.Z.generateGuildPermissionSpec(m) : null, [m]), [L, P] = a.useState(''), [O, y] = a.useState(''), D = a.useCallback(o()(y, 300), []), k = a.useCallback(e => {
+  ]), g = (0, T.B2)(t, n, T.pd), b = Object.keys(g).length, R = a.useMemo(() => null != p ? I.Z.getGuildPermissionSpecMap(p) : null, [p]), j = a.useMemo(() => null != p ? I.Z.generateGuildPermissionSpec(p) : null, [p]), [L, P] = a.useState(''), [O, y] = a.useState(''), D = a.useCallback(o()(y, 300), []), k = a.useCallback(e => {
 P(e), D(e);
   }, [D]), U = a.useCallback(() => {
 P(''), y('');
   }, []), w = a.useMemo(() => {
-if (null == m || null == R || null == p)
+if (null == p || null == R || null == m)
   return null;
 if (0 === b)
   return (0, i.jsx)(u.Text, {
@@ -207,18 +207,18 @@ return null == j || j.forEach(n => {
           i = n.title,
           a = T._o.has(s),
           r = T.Qn.includes(l),
-          m = a ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : r ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
-          p = M(O, e),
+          p = a ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : r ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
+          m = M(O, e),
           f = M(O, t),
           E = M(O, i),
-          g = null != m && M(O, m);
-        if (!p && !f && !E && !g)
+          g = null != p && M(O, p);
+        if (!m && !f && !E && !g)
           return;
       }
       e.push((0, i.jsx)(A, {
         permission: l,
         roleIds: r,
-        guild: m,
+        guild: p,
         specMap: R,
         categoryTitle: n.title,
         userId: t
@@ -227,16 +227,16 @@ return null == j || j.forEach(n => {
   });
 }), e;
   }, [
-m,
-R,
 p,
+R,
+m,
 b,
 j,
 g,
 O,
 t
   ]);
-  return null == h || null == p ? null : (0, i.jsxs)('div', {
+  return null == h || null == m ? null : (0, i.jsxs)('div', {
 className: l()(S.container, r),
 children: [
   (0, i.jsx)(x.Z, {

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(40851),
   d = n(607070),
   h = n(451576),
-  m = n(358221),
-  p = n(605236),
+  p = n(358221),
+  m = n(605236),
   _ = n(243778),
   f = n(590293),
   E = n(970731),
@@ -89,15 +89,15 @@ let {
 } = this.props;
 if (t)
   return null;
-let m = c.isManaged(),
-  p = '',
+let p = c.isManaged(),
+  m = '',
   f = !1;
-s ? (p = m ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, f = !0) : o ? (p = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : p = a ? m ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : m ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
+s ? (m = p ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, f = !0) : o ? (m = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : m = a ? p ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : p ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
 let g = (0, i.jsx)(b.ZP.Icon, {
   icon: r.PhoneCallIcon,
   onClick: this.handleVoiceClick,
   disabled: f,
-  tooltip: p,
+  tooltip: m,
   tooltipColor: e
 });
 return (0, i.jsx)(_.Z, {
@@ -186,7 +186,7 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
     callActive: n,
     canShowActivityGdmTooltip: i
   } = this.props;
-  if (i && (0, p.EW)(l.z.ACTIVITY_GDM_CALL_TOOLTIP, {
+  if (i && (0, m.EW)(l.z.ACTIVITY_GDM_CALL_TOOLTIP, {
       dismissAction: j.L.AUTO
     }), t);
   else if (n)
@@ -209,8 +209,8 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
 function k(e) {
   let {
 channel: t
-  } = e, n = (0, f.Z)(), r = (0, s.e7)([m.Z], () => m.Z.getMode(t.id)), o = (0, s.e7)([S.Z], () => S.Z.isInChannel(t.id)), c = (0, s.e7)([d.Z], () => d.Z.useReducedMotion), {
-callActive: p,
+  } = e, n = (0, f.Z)(), r = (0, s.e7)([p.Z], () => p.Z.getMode(t.id)), o = (0, s.e7)([S.Z], () => S.Z.isInChannel(t.id)), c = (0, s.e7)([d.Z], () => d.Z.useReducedMotion), {
+callActive: m,
 callUnavailable: _
   } = (0, s.cj)([I.Z], () => ({
 callActive: I.Z.isCallActive(t.id),
@@ -233,7 +233,7 @@ return () => clearTimeout(e);
 channel: t,
 mode: r,
 inCall: o,
-callActive: p,
+callActive: m,
 callUnavailable: _,
 notFriend: g,
 isBlocked: C,

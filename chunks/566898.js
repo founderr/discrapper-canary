@@ -18,7 +18,7 @@ return h;
 return f;
   },
   pk: function() {
-return p;
+return m;
   }
 });
 var i = n(735250);
@@ -60,14 +60,14 @@ style: {
   });
 }
 
-function m(e) {
+function p(e) {
   let t, {
   groupStart: n = !1,
   compact: a = !1,
   attachmentSpecs: l,
   usernameWidth: u,
-  usernameOpacity: m,
-  className: p,
+  usernameOpacity: p,
+  className: m,
   style: _
 } = e,
 f = a ? 50 : r().random(40, 50);
@@ -78,7 +78,7 @@ children: [
     className: c.header,
     children: (0, i.jsx)(h, {
       width: u,
-      opacity: m,
+      opacity: p,
       className: c.__invalid_username
     })
   })
@@ -96,13 +96,13 @@ children: [
     className: c.header,
     children: (0, i.jsx)(h, {
       width: u,
-      opacity: m
+      opacity: p
     })
   })
 ]
   })), (0, i.jsxs)('div', {
 'aria-hidden': !0,
-className: s()(p, {
+className: s()(m, {
   [c.wrapper]: !0,
   [c.compact]: a,
   [c.cozy]: !a
@@ -135,7 +135,7 @@ children: [
 ]
   });
 }
-let p = 44,
+let m = 44,
   _ = 22,
   f = 26,
   E = 26,
@@ -150,7 +150,7 @@ attachmentSpecs: s,
 className: l
   } = e, o = null != s ? s.last ? t - 1 : r().random(0, t - 1) : -1, c = r().random(80, 120), d = r().random(0.1, 0.2);
   return (0, i.jsx)(i.Fragment, {
-children: Array(t).fill(null).map((e, t) => (0, i.jsx)(m, {
+children: Array(t).fill(null).map((e, t) => (0, i.jsx)(p, {
   compact: a,
   className: l,
   usernameWidth: c,

@@ -5,8 +5,8 @@ var i, a, s, l, r = n(442837),
   u = n(594174),
   d = n(176354),
   h = n(292793),
-  m = n(88315),
-  p = n(813900);
+  p = n(88315),
+  m = n(813900);
 let _ = {},
   f = {},
   E = {},
@@ -18,7 +18,7 @@ function I(e) {
 let t = u.default.getUser(e);
 if (null == t)
   return;
-let n = t.getAvatarURL(null, p.Ks),
+let n = t.getAvatarURL(null, m.Ks),
   i = new Image();
 i.src = n, f[e] = i;
   }
@@ -68,7 +68,7 @@ else {
     id: t,
     userId: i,
     points: n
-  }) : (0, m.P7)(e) && e.points.push(...n);
+  }) : (0, p.P7)(e) && e.points.push(...n);
 }
 I(i);
   },
@@ -98,7 +98,7 @@ if (null == E[o]) {
     id: a.emojiId,
     name: null !== (i = null != e ? e : a.emojiName) && void 0 !== i ? i : '',
     animated: !1
-  }, p.qh);
+  }, m.qh);
 }
 I(l);
   },

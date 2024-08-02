@@ -107,13 +107,13 @@ M = a.useCallback(e => {
     availableSlots: E[n]
   });
 }, [E]),
-C = a.useCallback(e => (0, l.jsx)('div', {
+j = a.useCallback(e => (0, l.jsx)('div', {
   className: s()({
     [S.disabledOption]: e.disabled
   }),
   children: e.label
 }), []),
-j = a.useCallback(e => {
+C = a.useCallback(e => {
   !(E[e] <= 0) && i(e);
 }, [
   E,
@@ -125,13 +125,13 @@ I = (() => {
 })();
   return (0, l.jsx)(u.SearchableSelect, {
 className: t,
-onChange: j,
+onChange: C,
 value: I,
 multi: !1,
 options: A,
 renderOptionPrefix: b,
 renderOptionSuffix: M,
-renderOptionLabel: C,
+renderOptionLabel: j,
 placeholder: 0 === A.length ? O.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_NONE_AVAILABLE : O.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_PLACEHOLDER
   });
 }

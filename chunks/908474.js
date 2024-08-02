@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 });
 var i = n(735250),
@@ -13,14 +13,14 @@ var i = n(735250),
   u = n(893966),
   d = n(776767),
   h = n(689938),
-  m = n(749348);
+  p = n(749348);
 
-function p(e) {
+function m(e) {
   let {
 member: t
-  } = e, n = t.userId, p = t.guildId, _ = (0, s.e7)([u.Z], () => u.Z.getEnhancedMember(p, n), [
+  } = e, n = t.userId, m = t.guildId, _ = (0, s.e7)([u.Z], () => u.Z.getEnhancedMember(m, n), [
 n,
-p
+m
   ]), f = (null != _ ? _ : t).unusualDMActivityUntil, E = a.useCallback(e => {
 if (null == e)
   return null;
@@ -33,7 +33,7 @@ f
   ]), C = a.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), I = a.useMemo(() => null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]);
   return null != f || C ? (0, i.jsx)(l.FormItem, {
 title: h.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
-titleClassName: m.infoTitle,
+titleClassName: p.infoTitle,
 children: (0, i.jsxs)(d.WM, {
   children: [
     null != f && (0, i.jsx)(d._2, {

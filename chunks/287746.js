@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(481060),
   d = n(430742),
   h = n(904245),
-  m = n(144144),
-  p = n(166459),
+  p = n(144144),
+  m = n(166459),
   _ = n(966390),
   f = n(738619),
   E = n(410575),
@@ -63,8 +63,8 @@ var i = n(735250),
   eu = n(271383),
   ed = n(375954),
   eh = n(496675),
-  em = n(944486),
-  ep = n(117530),
+  ep = n(944486),
+  em = n(117530),
   e_ = n(594174),
   ef = n(482207),
   eE = n(626135),
@@ -182,8 +182,8 @@ let {
   chatInputType: c,
   placeholder: d,
   accessibilityLabel: h,
-  shakeIntensity: m,
-  poggermodeEnabled: p
+  shakeIntensity: p,
+  poggermodeEnabled: m
 } = this.props, {
   contentWarningProps: _
 } = this.state, f = (0, i.jsx)(D.Z, {
@@ -226,9 +226,9 @@ return (0, i.jsx)(u.Popout, {
       ..._
     });
   },
-  children: () => p ? (0, i.jsx)(u.Shaker, {
-    isShaking: m > 0,
-    intensity: m,
+  children: () => m ? (0, i.jsx)(u.Shaker, {
+    isShaking: p > 0,
+    intensity: p,
     className: eP.shaker,
     children: f
   }) : f
@@ -268,7 +268,7 @@ super(...e), t = this, eO(this, 'isFirstChange', !0), eO(this, 'editorRef', null
       if (a || s)
         return;
       if (e.preventDefault(), t)
-        ep.Z.getUploadCount(i.id, eo.d.ChannelMessage) > 0 ? eC.S.dispatchToLastSubscribed(ej.CkL.FOCUS_ATTACHMENT_AREA) : eC.S.dispatchToLastSubscribed(ej.CkL.FOCUS_MESSAGES, {
+        em.Z.getUploadCount(i.id, eo.d.ChannelMessage) > 0 ? eC.S.dispatchToLastSubscribed(ej.CkL.FOCUS_ATTACHMENT_AREA) : eC.S.dispatchToLastSubscribed(ej.CkL.FOCUS_MESSAGES, {
           atEnd: !0
         });
       else {
@@ -285,8 +285,8 @@ super(...e), t = this, eO(this, 'isFirstChange', !0), eO(this, 'editorRef', null
         (0, C.rf)();
         return;
       }
-      if (ep.Z.getUploadCount(i.id, eo.d.ChannelMessage) > 0) {
-        p.Z.clearAll(i.id, eo.d.ChannelMessage);
+      if (em.Z.getUploadCount(i.id, eo.d.ChannelMessage) > 0) {
+        m.Z.clearAll(i.id, eo.d.ChannelMessage);
         return;
       }
   }
@@ -315,7 +315,7 @@ super(...e), t = this, eO(this, 'isFirstChange', !0), eO(this, 'editorRef', null
   d.Z.changeDraft(a, t, eo.d.ChannelMessage);
   let s = '' !== t && n !== this.state.richValue,
     l = s && !eD.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
-  this.isFirstChange = !1, l && this.state.textValue.length < t.length && this.handleIncrementCombo(), l ? m.Z.startTyping(a) : '' === t && m.Z.stopTyping(a), s && i && (0, C.rf)(), this.setState({
+  this.isFirstChange = !1, l && this.state.textValue.length < t.length && this.handleIncrementCombo(), l ? p.Z.startTyping(a) : '' === t && p.Z.stopTyping(a), s && i && (0, C.rf)(), this.setState({
     textValue: t,
     richValue: n
   });
@@ -349,11 +349,11 @@ super(...e), t = this, eO(this, 'isFirstChange', !0), eO(this, 'editorRef', null
         shouldRefocus: !0
       });
     if (A.Z.getCommandOrigin(o.id) === M.bB.APPLICATION_LAUNCHER) {
-      var m;
+      var p;
       let {
         location: e,
         sectionName: t
-      } = null !== (m = (0, eA._U)(a)) && void 0 !== m ? m : {}, n = T.Z.lastShownEntrypoint();
+      } = null !== (p = (0, eA._U)(a)) && void 0 !== p ? p : {}, n = T.Z.lastShownEntrypoint();
       if (!await (0, j.L)({
           applicationId: a.applicationId,
           userIndexState: v.ZP.getUserState(),
@@ -408,11 +408,11 @@ super(...e), t = this, eO(this, 'isFirstChange', !0), eO(this, 'editorRef', null
         shouldClear: !1,
         shouldRefocus: !1
       };
-    let m = (0, Y.g)(t, {
+    let p = (0, Y.g)(t, {
       channel: o,
       isEdit: !1
     });
-    null != m && (null != m.content && (t = m.content), null != m.tts && (d = m.tts));
+    null != p && (null != p.content && (t = p.content), null != p.tts && (d = p.tts));
     let f = K.ZP.parse(o, t);
     f.tts = f.tts || d;
     let E = h.Z.getSendMessageOptionsForReply(c);
@@ -437,7 +437,7 @@ super(...e), t = this, eO(this, 'isFirstChange', !0), eO(this, 'editorRef', null
           ...E,
           stickerIds: i
         }
-      }), p.Z.clearAll(o.id, eo.d.ChannelMessage);
+      }), m.Z.clearAll(o.id, eo.d.ChannelMessage);
     } else
       null != i && i.length > 0 ? '' !== t ? h.Z.sendMessage(o.id, f, void 0, {
         ...E,
@@ -500,8 +500,8 @@ let {
   chatInputType: c,
   placeholder: d,
   accessibilityLabel: h,
-  showQuarantinedUserBanner: m,
-  filterAfterTimestamp: p,
+  showQuarantinedUserBanner: p,
+  filterAfterTimestamp: m,
   communicationDisabledUntil: _,
   shakeIntensity: g,
   poggermodeEnabled: C,
@@ -588,8 +588,8 @@ return (0, i.jsx)(E.Z, {
                 (0, i.jsx)(q.Z, {
                   channel: n,
                   forceCozy: I,
-                  filterAfterTimestamp: p,
-                  showingQuarantineBanner: m
+                  filterAfterTimestamp: m,
+                  showingQuarantineBanner: p
                 }),
                 null == n.guild_id || v ? null : (0, i.jsx)(z.Z, {
                   guildId: n.guild_id,
@@ -597,7 +597,7 @@ return (0, i.jsx)(E.Z, {
                 }),
                 I ? null : null !== (e = this.renderMessageBanner({
                   channel: n,
-                  showQuarantinedUserBanner: m,
+                  showQuarantinedUserBanner: p,
                   guild: a,
                   communicationDisabledUntil: _,
                   showAutomodUserProfileChatBlocker: x
@@ -692,7 +692,7 @@ super(...e), eO(this, 'inputFormRef', a.createRef()), eO(this, 'state', {
     switch (e.which) {
       case ej.yXg.ARROW_LEFT:
         n === L.I.SIDEBAR && eC.S.dispatch(ej.CkL.FOCUS_CHANNEL_TEXT_AREA, {
-          channelId: em.Z.getChannelId()
+          channelId: ep.Z.getChannelId()
         });
         return;
       case ej.yXg.ARROW_RIGHT:
@@ -734,9 +734,9 @@ filterAfterTimestamp: s
   } = e, {
 placeholder: l,
 accessibilityLabel: r
-  } = (0, eS.Z)(t), o = (0, et.S)(e_.default.getCurrentUser(), t), [d] = (0, V.AB)(null == n ? void 0 : n.id), h = (0, B.Ux)(null == n ? void 0 : n.id), m = (0, c.e7)([e_.default], () => e_.default.getCurrentUser()), p = (0, c.e7)([eu.ZP], () => {
+  } = (0, eS.Z)(t), o = (0, et.S)(e_.default.getCurrentUser(), t), [d] = (0, V.AB)(null == n ? void 0 : n.id), h = (0, B.Ux)(null == n ? void 0 : n.id), p = (0, c.e7)([e_.default], () => e_.default.getCurrentUser()), m = (0, c.e7)([eu.ZP], () => {
 var e, t, i;
-return null != m && null !== (i = null === (e = eu.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : ej.lds, null == m ? void 0 : m.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
+return null != p && null !== (i = null === (e = eu.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : ej.lds, null == p ? void 0 : p.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
   }), _ = (0, c.e7)([Q.Z], () => Q.Z.isEnabled()), f = (0, ee.Z)(t.id), E = (0, W.Z)(t.id);
   return (0, i.jsx)(ew, {
 channel: t,
@@ -754,6 +754,6 @@ communicationDisabledUntil: d,
 shakeIntensity: f,
 poggermodeEnabled: _,
 isSelectedResourceChannel: E,
-showAutomodUserProfileChatBlocker: h && !p
+showAutomodUserProfileChatBlocker: h && !m
   });
 });

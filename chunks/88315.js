@@ -1,9 +1,9 @@
 n.d(t, {
   P7: function() {
-return p;
+return m;
   },
   RR: function() {
-return m;
+return p;
   },
   UN: function() {
 return u;
@@ -50,7 +50,7 @@ function h(e, t) {
   return Math.round(e * t * window.devicePixelRatio);
 }
 
-function m(e, t, n) {
+function p(e, t, n) {
   return {
 x: h(e.x, t),
 y: h(e.y, n),
@@ -58,7 +58,7 @@ deltaTime: e.deltaTime
   };
 }
 
-function p(e) {
+function m(e) {
   return e.type === o.W.LINE;
 }
 
@@ -67,14 +67,14 @@ function _(e, t, n, i) {
   let u = r.default.getUser(e),
 d = null == u ? void 0 : u.getAvatarURL(null, c.Ks),
 h = null != d ? null === (o = l.SR.getState().palette[d]) || void 0 === o ? void 0 : o[0] : null,
-m = null != h ? '#'.concat(a()({
+p = null != h ? '#'.concat(a()({
   r: h[0],
   g: h[1],
   b: h[2]
 }).toHex()) : i,
-p = (0, s.Bd)((0, s._i)(m)) > 0.5 ? n : t;
+m = (0, s.Bd)((0, s._i)(p)) > 0.5 ? n : t;
   return {
-fillColor: m,
-outlineColor: p
+fillColor: p,
+outlineColor: m
   };
 }

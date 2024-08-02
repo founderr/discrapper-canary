@@ -17,8 +17,8 @@ function h(e) {
   let {
 entry: t,
 onSelect: h,
-closePopout: m,
-hideEditButton: p = !1
+closePopout: p,
+hideEditButton: m = !1
   } = e, {
 isEntryAdmin: _,
 canEdit: f,
@@ -26,7 +26,7 @@ canRemove: E
   } = (0, u.Z)(t), g = (0, r.Z)({
 id: t.guildId,
 label: d.Z.Messages.COPY_ID_GUILD,
-onSuccess: m
+onSuccess: p
   });
   a.useEffect(() => {
 !f && !E && null == g && (0, l.Zy)();
@@ -36,7 +36,7 @@ c.kx(t.channelId, t.guildId);
   };
 
   function I() {
-(0, l.Zy)(), null == m || m();
+(0, l.Zy)(), null == p || p();
   }
   return (0, i.jsxs)(s.Menu, {
 navId: 'guild-entry-context',
@@ -46,7 +46,7 @@ onSelect: h,
 children: [
   (0, i.jsxs)(s.MenuGroup, {
     children: [
-      f && !p ? (0, i.jsx)(s.MenuItem, {
+      f && !m ? (0, i.jsx)(s.MenuItem, {
         id: 'update-entry',
         label: d.Z.Messages.HUB_ENTRY_UPDATE,
         action: function() {

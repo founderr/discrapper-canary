@@ -13,8 +13,8 @@ var i = n(470079),
   u = n(40851),
   d = n(607070),
   h = n(703656),
-  m = n(479313),
-  p = n(796974),
+  p = n(479313),
+  m = n(796974),
   _ = n(709054),
   f = n(534469),
   E = n(173033),
@@ -543,7 +543,7 @@ this.acking = !1, this.updateStoreDimensionsDebounced.cancel(), this._automaticA
   }
   constructor(e) {
 var t, n = this;
-I(this, 'props', void 0), I(this, 'ref', i.createRef()), I(this, 'automaticAnchor', null), I(this, 'messageFetchAnchor', null), I(this, 'focusAnchor', null), I(this, 'loading', void 0), I(this, 'jumping', !1), I(this, 'pinned', void 0), I(this, 'dragging', !1), I(this, 'isAtBottom', !1), I(this, 'prevScrollTop', null), I(this, 'anchorTimeout', null), I(this, 'initialScrollTop', null), I(this, 'acking', !1), I(this, 'scrollCounter', 0), I(this, 'offsetHeightCache', 0), I(this, 'scrollHeightCache', 0), I(this, 'scrollTopCache', -1), I(this, '_bottomAnchor', null), I(this, '_automaticAnchorCallbacks', []), I(this, '_scrollCompleteCallbacks', []), I(this, 'updateVisibleMessagesDebounced', s().debounce(m.JR, 300)), I(this, 'handleScroll', e => {
+I(this, 'props', void 0), I(this, 'ref', i.createRef()), I(this, 'automaticAnchor', null), I(this, 'messageFetchAnchor', null), I(this, 'focusAnchor', null), I(this, 'loading', void 0), I(this, 'jumping', !1), I(this, 'pinned', void 0), I(this, 'dragging', !1), I(this, 'isAtBottom', !1), I(this, 'prevScrollTop', null), I(this, 'anchorTimeout', null), I(this, 'initialScrollTop', null), I(this, 'acking', !1), I(this, 'scrollCounter', 0), I(this, 'offsetHeightCache', 0), I(this, 'scrollHeightCache', 0), I(this, 'scrollTopCache', -1), I(this, '_bottomAnchor', null), I(this, '_automaticAnchorCallbacks', []), I(this, '_scrollCompleteCallbacks', []), I(this, 'updateVisibleMessagesDebounced', s().debounce(p.JR, 300)), I(this, 'handleScroll', e => {
   var t;
   if (!this.isInitialized())
     return;
@@ -597,7 +597,7 @@ I(this, 'props', void 0), I(this, 'ref', i.createRef()), I(this, 'automaticAncho
     truncate: !0
   });
 }), I(this, 'updateStoreDimensionsDebounced', s().debounce(this.updateStoreDimensions, 200)), this.props = e, this.loading = e.messages.loadingMore;
-let a = p.Z.getChannelDimensions(e.channel.id);
+let a = m.Z.getChannelDimensions(e.channel.id);
 null != e.messages.jumpTargetId ? this.pinned = !1 : (this.initialScrollTop = null !== (t = null == a ? void 0 : a.scrollTop) && void 0 !== t ? t : null, this.pinned = null == a);
   }
 }
@@ -615,7 +615,7 @@ handleScrollToBottom: c,
 handleScrollFromBottom: d
   } = e, {
 windowId: h
-  } = i.useContext(u.ZP), [m] = i.useState(() => new N({
+  } = i.useContext(u.ZP), [p] = i.useState(() => new N({
 messages: t,
 channel: n,
 compact: a,
@@ -627,7 +627,7 @@ windowId: h,
 handleScrollToBottom: c,
 handleScrollFromBottom: d
   }));
-  return m.getSnapshotBeforeUpdate(l), i.useLayoutEffect(() => m.mergePropsAndUpdate({
+  return p.getSnapshotBeforeUpdate(l), i.useLayoutEffect(() => p.mergePropsAndUpdate({
 messages: t,
 channel: n,
 compact: a,
@@ -638,5 +638,5 @@ canLoadMore: o,
 windowId: h,
 handleScrollToBottom: c,
 handleScrollFromBottom: d
-  })), i.useLayoutEffect(() => () => m.cleanup(), [m]), m;
+  })), i.useLayoutEffect(() => () => p.cleanup(), [p]), p;
 }

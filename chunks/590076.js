@@ -13,16 +13,16 @@ var i = n(735250),
   u = n(822183),
   d = n(364125),
   h = n(610947),
-  m = n(345392);
+  p = n(345392);
 
-function p(e) {
+function m(e) {
   let {
 focused: t,
 channelId: n,
 streamerId: s,
 stream: u
-  } = e, p = a.useRef(null), _ = (0, r.e7)([c.default], () => c.default.getCurrentUser());
-  l()(null != _, 'user cannot be null'), (0, h.Z)(p, _, s, n);
+  } = e, m = a.useRef(null), _ = (0, r.e7)([c.default], () => c.default.getCurrentUser());
+  l()(null != _, 'user cannot be null'), (0, h.Z)(m, _, s, n);
   let {
 handleClick: f,
 handleMouseDown: E,
@@ -35,17 +35,17 @@ channelId: n,
 streamerId: s,
 stream: u,
 focused: t,
-canvas: p.current
+canvas: m.current
   });
   return (0, i.jsx)(o.Z, {
 children: (0, i.jsx)('canvas', {
-  ref: p,
+  ref: m,
   onClick: f,
   onMouseDown: E,
   onMouseEnter: g,
   onMouseMove: C,
   onMouseUp: I,
-  className: m.sharedCanvas
+  className: p.sharedCanvas
 })
   });
 }
@@ -59,7 +59,7 @@ location: 'd0de1c_1'
   }, {
 autoTrackExposure: !0
   });
-  return !t || e.hasScreenMessage ? null : (0, i.jsx)(p, {
+  return !t || e.hasScreenMessage ? null : (0, i.jsx)(m, {
 ...e
   });
 }

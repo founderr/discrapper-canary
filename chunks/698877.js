@@ -17,8 +17,8 @@ function o(e) {
   centerButton: u,
   onMouseEnter: d,
   onMouseLeave: h,
-  premiumGlow: m,
-  buttonRef: p,
+  premiumGlow: p,
+  buttonRef: m,
   ..._
 } = e,
 f = u ? l.d : l.Z;
@@ -32,7 +32,7 @@ play: C
 o,
 C
   ]), (0, i.jsx)(f, {
-buttonRef: p,
+buttonRef: m,
 label: t,
 disabled: !n,
 iconComponent: E,
@@ -43,7 +43,7 @@ onMouseEnter: e => {
 onMouseLeave: e => {
   null == h || h(e), g.onMouseLeave();
 },
-premiumGlow: m,
+premiumGlow: p,
 ..._
   });
 }

@@ -14,8 +14,8 @@ var a = n(512722),
   u = n(431368),
   d = n(167675),
   h = n(418469),
-  m = n(673539),
-  p = n(218035),
+  p = n(673539),
+  m = n(218035),
   _ = n(775666),
   f = n(423589),
   E = n(592125),
@@ -32,7 +32,7 @@ channelId: t,
 closePopout: n,
 appContext: a,
 onSelect: v
-  } = e, S = (0, l.e7)([c.Z], () => c.Z.getSelectedParticipant(t)), Z = (null == S ? void 0 : S.type) === T.fO.STREAM ? S.stream : null, A = (0, m.Z)(t);
+  } = e, S = (0, l.e7)([c.Z], () => c.Z.getSelectedParticipant(t)), Z = (null == S ? void 0 : S.type) === T.fO.STREAM ? S.stream : null, A = (0, p.Z)(t);
   return (0, i.jsxs)(r.Menu, {
 navId: 'stage-channel-call-overflow-popout',
 onClose: n,
@@ -60,7 +60,7 @@ children: [
     s()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
     let n = (0, f.Mn)('StageChannelCallOverflowMenu'),
       i = (0, _.ZP)(t),
-      a = (0, p.Z)(t);
+      a = (0, m.Z)(t);
     return n ? i : a;
   }(t),
   (0, d.Z)(),

@@ -8,8 +8,8 @@ var i = n(735250),
   u = n(285952),
   d = n(585483),
   h = n(340295),
-  m = n(171277),
-  p = n(677845),
+  p = n(171277),
+  m = n(677845),
   _ = n(430371),
   f = n(236564),
   E = n(981631),
@@ -49,7 +49,7 @@ n,
 r
   ]);
   if ((null == y ? void 0 : y.channelId) === v.id)
-return (0, i.jsx)(m.Z, {
+return (0, i.jsx)(p.Z, {
   height: j
 });
   if ((null == v ? void 0 : v.isGuildVocal()) && !A)
@@ -75,7 +75,7 @@ return 0 === n.length ? (0, i.jsx)(f.Z, {
   className: C.videoGridWrapper,
   justify: u.Z.Justify.CENTER,
   align: u.Z.Align.CENTER,
-  children: (0, i.jsx)(p.Z, {
+  children: (0, i.jsx)(m.Z, {
     channel: v,
     className: C.videoGrid,
     participants: D,

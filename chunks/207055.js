@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(317381),
   d = n(812206),
   h = n(835473),
-  m = n(362721),
-  p = n(574176),
+  p = n(362721),
+  m = n(574176),
   _ = n(106301),
   f = n(512384),
   E = n(470956),
@@ -80,10 +80,10 @@ l.id,
 M
   ]), {
 enableHangStatus: Q
-  } = p.n.useExperiment({
+  } = m.n.useExperiment({
 guildId: l.guild_id,
 location: 'VoiceUsers'
-  }), J = (0, m.Z)(l, !0, s), $ = (0, r.e7)([_.Z], () => O ? _.Z.getHangStatusActivity() : null, [O]), ee = (0, r.e7)([N.Z], () => N.Z.findActivity(M, e => e.type === L.IIU.HANG_STATUS), [M]), et = (0, E.Eu)(l.id, M);
+  }), J = (0, p.Z)(l, !0, s), $ = (0, r.e7)([_.Z], () => O ? _.Z.getHangStatusActivity() : null, [O]), ee = (0, r.e7)([N.Z], () => N.Z.findActivity(M, e => e.type === L.IIU.HANG_STATUS), [M]), et = (0, E.Eu)(l.id, M);
   return (0, i.jsx)(f.Z, {
 shakeLocation: P.oZ.VOICE_USER,
 isShaking: w,
@@ -121,8 +121,8 @@ channel: s,
 voiceStates: c,
 collapsed: u,
 collapsedMax: d = 6,
-tabIndex: m,
-location: p,
+tabIndex: p,
+location: m,
 numAudience: _,
 withGuildIcon: f = !1,
 className: g,
@@ -179,8 +179,8 @@ let e = (u && b.length > d + 1 ? b.slice(0, d) : b).map(e => {
     hidePreview: U,
     previewIsOpen: S,
     shouldShowPreview: x === a.id,
-    tabIndex: m,
-    location: p
+    tabIndex: p,
+    location: m
   }, a.id);
 });
 return null != _ && _ > 0 ? e.push((0, i.jsx)(j.ul, {

@@ -19,8 +19,8 @@ var i = n(735250),
   u = n(933557),
   d = n(471445),
   h = n(266076),
-  m = n(565138),
-  p = n(703656),
+  p = n(565138),
+  m = n(703656),
   _ = n(699516),
   f = n(914010),
   E = n(594174),
@@ -40,8 +40,8 @@ channelName: n,
 parentChannel: s,
 guild: r,
 inSidebar: c = !1,
-handleClick: m,
-handleContextMenu: p,
+handleClick: p,
+handleContextMenu: m,
 handleParentClick: f,
 handleParentContextMenu: g,
 renderFollowButton: I
@@ -106,8 +106,8 @@ case N.d4z.DM:
   return (0, i.jsx)(T.Z, {
     level: M,
     channel: t,
-    handleClick: m,
-    handleContextMenu: p
+    handleClick: p,
+    handleContextMenu: m
   });
 case N.d4z.GROUP_DM:
   if (t.isManaged())
@@ -141,8 +141,8 @@ case N.d4z.GUILD_MEDIA:
       b(Z, t.type === N.d4z.GUILD_ANNOUNCEMENT ? v.Z.Messages.NEWS_CHANNEL : v.Z.Messages.TEXT_CHANNEL),
       (0, i.jsx)(x.Z.Title, {
         level: M,
-        onContextMenu: p,
-        onClick: m,
+        onContextMenu: m,
+        onClick: p,
         children: R
       }),
       null != I ? I() : null
@@ -154,8 +154,8 @@ case N.d4z.GUILD_VOICE:
       b(Z, v.Z.Messages.VOICE_CHANNEL),
       (0, i.jsx)(x.Z.Title, {
         level: M,
-        onContextMenu: p,
-        onClick: m,
+        onContextMenu: m,
+        onClick: p,
         children: R
       })
     ]
@@ -166,8 +166,8 @@ case N.d4z.GUILD_STAGE_VOICE:
       b(Z, v.Z.Messages.STAGE_CHANNEL),
       (0, i.jsx)(x.Z.Title, {
         level: M,
-        onContextMenu: p,
-        onClick: m,
+        onContextMenu: m,
+        onClick: p,
         children: R
       })
     ]
@@ -199,8 +199,8 @@ case N.d4z.PRIVATE_THREAD:
       b(L ? null : Z, v.Z.Messages.THREAD),
       (0, i.jsx)(x.Z.Title, {
         level: M,
-        onContextMenu: p,
-        onClick: m,
+        onContextMenu: m,
+        onClick: p,
         className: l()({
           [S.cursorPointer]: c,
           [S.forumPostTitle]: L
@@ -222,8 +222,8 @@ case N.d4z.GUILD_DIRECTORY:
       }) : null,
       (0, i.jsxs)(x.Z.Title, {
         level: M,
-        onContextMenu: p,
-        onClick: m,
+        onContextMenu: m,
+        onClick: p,
         children: [
           null != A ? (0, i.jsxs)(o.HiddenVisually, {
             children: [
@@ -304,15 +304,15 @@ children: [
   'left' === a && (0, i.jsx)(x.Z.Caret, {
     direction: 'left'
   }),
-  (0, i.jsx)(m.Z, {
+  (0, i.jsx)(p.Z, {
     guild: t,
-    size: m.Z.Sizes.SMALLER,
+    size: p.Z.Sizes.SMALLER,
     className: S.guildBreadcrumbIcon,
     active: !0
   }),
   (0, i.jsx)(x.Z.Title, {
     onClick: () => {
-      (0, p.XU)(t.id, n.id);
+      (0, m.XU)(t.id, n.id);
     },
     className: l()(S.parentChannelName, S.cursorPointer),
     children: t.name

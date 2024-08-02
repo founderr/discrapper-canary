@@ -18,17 +18,17 @@ centerButton: c = !1,
 awaitingRemote: u,
 onMouseEnter: d,
 onMouseLeave: h,
-...m
-  } = e, p = t || n || o, _ = c ? r.d : r.Z, f = (0, l.Z)(t, n, o, u), {
+...p
+  } = e, m = t || n || o, _ = c ? r.d : r.Z, f = (0, l.Z)(t, n, o, u), {
 Component: E,
 play: g,
 events: C
-  } = (0, s.O)(p ? 'unmute' : 'mute');
+  } = (0, s.O)(m ? 'unmute' : 'mute');
   return a.useEffect(() => () => g(), [
 g,
-p
+m
   ]), (0, i.jsx)(_, {
-isActive: !p,
+isActive: !m,
 iconComponent: E,
 label: f,
 onMouseEnter: e => {
@@ -37,6 +37,6 @@ onMouseEnter: e => {
 onMouseLeave: e => {
   null == h || h(e), C.onMouseLeave();
 },
-...m
+...p
   });
 }

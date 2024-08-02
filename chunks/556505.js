@@ -16,9 +16,9 @@ name: t,
 labelType: n,
 collapsed: c = !1,
 showTooltip: u = !1
-  } = e, d = n === l.ww.NEW ? r.Z.Messages.NEW : r.Z.Messages.UPDATED, h = n === l.ww.NEW ? o.activityNewBadge : o.activityUpdatedBadge, [m, p] = a.useState(c ? '' : d);
+  } = e, d = n === l.ww.NEW ? r.Z.Messages.NEW : r.Z.Messages.UPDATED, h = n === l.ww.NEW ? o.activityNewBadge : o.activityUpdatedBadge, [p, m] = a.useState(c ? '' : d);
   if (a.useEffect(() => {
-  c ? p('') : n === l.ww.NEW ? p(r.Z.Messages.NEW) : n === l.ww.UPDATED && p(r.Z.Messages.UPDATED);
+  c ? m('') : n === l.ww.NEW ? m(r.Z.Messages.NEW) : n === l.ww.UPDATED && m(r.Z.Messages.UPDATED);
 }, [
   c,
   n
@@ -28,7 +28,7 @@ return null;
 className: h,
 disableColor: !0,
 text: (0, i.jsx)('span', {
-  children: m
+  children: p
 })
   });
   if (!u)

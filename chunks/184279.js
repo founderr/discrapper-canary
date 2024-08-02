@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 });
 var i = n(735250);
@@ -14,7 +14,7 @@ var a = n(481060),
   u = n(689938),
   d = n(942939),
   h = n(191986);
-let m = () => (0, i.jsx)('svg', {
+let p = () => (0, i.jsx)('svg', {
   width: '46',
   height: '34',
   viewBox: '0 0 46 34',
@@ -25,11 +25,11 @@ d: 'M0 33.4637C16.1697 28.954 21.1764 9.59155 19.2146 0L45.681 0.000148089C45.68
   })
 });
 
-function p(e) {
+function m(e) {
   var t;
   let {
 channel: n
-  } = e, p = null !== (t = (0, l.ZP)(n)) && void 0 !== t ? t : '';
+  } = e, m = null !== (t = (0, l.ZP)(n)) && void 0 !== t ? t : '';
   return (0, i.jsxs)('div', {
 id: (0, o.p)(n.id, n.id),
 className: d.headerContainer,
@@ -42,19 +42,19 @@ children: [
   (0, i.jsxs)('div', {
     className: d.chatBubbleContainer,
     children: [
-      (0, i.jsx)(m, {}),
+      (0, i.jsx)(p, {}),
       (0, i.jsxs)('div', {
         className: d.chatBubble,
         children: [
           (0, i.jsx)(a.Avatar, {
-            'aria-label': p,
+            'aria-label': m,
             size: a.AvatarSizes.SIZE_80,
             src: (0, s.x)(n, 80, !1)
           }),
           (0, i.jsxs)(c.Ot, {
             className: d.emptyMessageHeader,
             children: [
-              p,
+              m,
               (0, i.jsx)(r.Z, {
                 className: d.flowerStar,
                 size: 24,

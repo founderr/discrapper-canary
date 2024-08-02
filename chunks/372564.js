@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(822951),
   d = n(933557),
   h = n(454585),
-  m = n(984370),
-  p = n(981631),
+  p = n(984370),
+  m = n(981631),
   _ = n(689938),
   f = n(523649);
 
@@ -63,7 +63,7 @@ let {
 } = this.props;
 return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0, i.jsxs)(a.Fragment, {
   children: [
-    (0, i.jsx)(m.Z.Divider, {}),
+    (0, i.jsx)(p.Z.Divider, {}),
     (0, i.jsxs)('div', {
       className: l()(f.topic, f.expandable),
       onMouseDown: this.onMouseDown,
@@ -105,7 +105,7 @@ super(...e), E(this, '_mouseDown', !1), E(this, '_mouseUp', !1), E(this, 'handle
 }), E(this, 'onMouseMove', () => {
   this._mouseDown && (this._mouseDown = !1);
 }), E(this, 'onMouseUp', e => {
-  this._mouseDown && e.button !== p.AeJ.SECONDARY && this.handleOpenTopic(e), this._mouseUp = !0, this._mouseDown = !1;
+  this._mouseDown && e.button !== m.AeJ.SECONDARY && this.handleOpenTopic(e), this._mouseUp = !0, this._mouseDown = !1;
 }), E(this, 'handleContextMenu', e => {
   let {
     channel: t,

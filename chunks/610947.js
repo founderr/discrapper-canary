@@ -13,8 +13,8 @@ var i = n(470079),
   u = n(673125),
   d = n(292793),
   h = n(88315),
-  m = n(262433),
-  p = n(400321),
+  p = n(262433),
+  m = n(400321),
   _ = n(813900);
 let f = 1000 / 60;
 
@@ -68,7 +68,7 @@ N = i.useCallback(t => {
         } = e;
         switch (t.type) {
           case d.W.LINE:
-            return (0, p.Z)({
+            return (0, m.Z)({
               line: t,
               context: n,
               canvasWidth: i,
@@ -80,7 +80,7 @@ N = i.useCallback(t => {
               deadDrawables: u
             });
           case d.W.EMOJI_HOSE:
-            return (0, m.Z)({
+            return (0, p.Z)({
               emojiHose: t,
               context: n,
               canvasWidth: i,
@@ -141,7 +141,7 @@ n
   ]);
   let v = i.useCallback(() => {
 let t = u.Z.getDrawables(n),
-  i = m.U.getState().particles,
+  i = p.U.getState().particles,
   a = t.length > 0 || Object.keys(i).length > 0;
 a && null == T.current._ref && (null == T.current._ref ? (N(n), T.current.start(f, () => N(n))) : !a && null != T.current._ref && (T.current.stop(), (0, h.UN)(e)));
   }, [

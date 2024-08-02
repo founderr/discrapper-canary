@@ -16,8 +16,8 @@ var i = n(735250),
   u = n(872810),
   d = n(763520),
   h = n(710845),
-  m = n(590293),
-  p = n(863908),
+  p = n(590293),
+  m = n(863908),
   _ = n(871118),
   f = n(517525),
   E = n(590076),
@@ -81,14 +81,14 @@ fit: f,
 inPopout: S,
 width: P,
 focused: O
-  } = e, H = T.Z.getVideoComponent(), G = (0, r.e7)([I.default], () => I.default.getId()), V = (0, m.Z)(), {
+  } = e, H = T.Z.getVideoComponent(), G = (0, r.e7)([I.default], () => I.default.getId()), V = (0, p.Z)(), {
 stream: F,
 user: W,
 streamId: z
   } = t, Y = (0, r.e7)([x.Z], () => x.Z.getChannel(F.channelId)), K = (0, r.e7)([C.Z], () => C.Z.getActiveStreamForUser(W.id, F.guildId), [
 W.id,
 F.guildId
-  ]), q = (0, r.e7)([C.Z], () => C.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([N.Z], () => N.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === G, J = Q && !X && !S, $ = null != K ? (0, p.Z)(K, W, W.id === G, J) : null, ee = P < 195;
+  ]), q = (0, r.e7)([C.Z], () => C.Z.getAllActiveStreams().length > 0), X = (0, r.e7)([N.Z], () => N.Z.isFocused()), Q = (null == K ? void 0 : K.ownerId) === G, J = Q && !X && !S, $ = null != K ? (0, m.Z)(K, W, W.id === G, J) : null, ee = P < 195;
   if (a.useEffect(() => {
   !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !Q && ((0, u.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
 }, []), a.useEffect(() => {

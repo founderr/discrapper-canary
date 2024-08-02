@@ -17,8 +17,8 @@ var a = n(120356),
   u = n(410030),
   d = n(44315),
   h = n(565138),
-  m = n(769654),
-  p = n(51144),
+  p = n(769654),
+  m = n(51144),
   _ = n(162267),
   f = n(228168),
   E = n(981631),
@@ -33,7 +33,7 @@ user: t,
 guild: a,
 nick: c,
 theme: u,
-onSelect: m
+onSelect: p
   } = e, _ = t.hasAvatarForGuild(a.id);
   return (0, i.jsxs)(r.Clickable, {
 focusProps: {
@@ -42,7 +42,7 @@ focusProps: {
   }
 },
 className: C.listRow,
-onClick: m,
+onClick: p,
 onContextMenu: e => {
   (0, o.jW)(e, async () => {
     let {
@@ -110,7 +110,7 @@ children: [
             className: I.guildAvatar,
             'aria-hidden': !0
           }),
-          null != c ? c : p.ZP.getName(t)
+          null != c ? c : m.ZP.getName(t)
         ]
       }) : null
     ]
@@ -126,7 +126,7 @@ onClose: n
   } = e, {
 mutualGuilds: a
   } = (0, _.Z)(t.id), s = (0, u.ZP)(), l = e => {
-(0, m.X)(e), n(), (0, c.xf)();
+(0, p.X)(e), n(), (0, c.xf)();
   };
   return (0, i.jsx)(r.ScrollerThin, {
 className: C.listScroller,

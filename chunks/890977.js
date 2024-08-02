@@ -11,8 +11,8 @@ var i, a, s = n(735250),
   u = n.n(c),
   d = n(442837),
   h = n(607070),
-  m = n(484334),
-  p = n(158877),
+  p = n(484334),
+  m = n(158877),
   _ = n(650431);
 
 function f(e) {
@@ -41,7 +41,7 @@ function E(e) {
 className: t
   } = e;
   return (0, s.jsx)('div', {
-ref: f(i || (i = n.t(m, 2))),
+ref: f(i || (i = n.t(p, 2))),
 className: o()(_.glow, t)
   });
 }
@@ -51,7 +51,7 @@ function g(e) {
 className: t
   } = e;
   return (0, s.jsx)('div', {
-ref: f(a || (a = n.t(p, 2))),
+ref: f(a || (a = n.t(m, 2))),
 className: o()(_.trinkets, t)
   });
 }

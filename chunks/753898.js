@@ -19,13 +19,13 @@ function h(e) {
   let {
 channel: n,
 children: h,
-user: m
-  } = e, p = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), _ = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : '', {
+user: p
+  } = e, m = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), _ = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : '', {
 avatarDecorationSrc: f,
 eventHandlers: E,
 isAnimating: g
   } = (0, u.Z)({
-user: m,
+user: p,
 size: s.AvatarSizes.SIZE_80,
 animateOnHover: !0
   });
@@ -34,7 +34,7 @@ channelId: n.id,
 ...E,
 children: [
   (() => {
-    let e = !p && g;
+    let e = !m && g;
     return n.isMultiUserDM() ? (0, i.jsx)(c.Z, {
       channel: n,
       size: s.AvatarSizes.SIZE_80,

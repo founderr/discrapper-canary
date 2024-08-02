@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(906732),
   d = n(680295),
   h = n(785717),
-  m = n(318661),
-  p = n(78675),
+  p = n(318661),
+  m = n(78675),
   _ = n(113557),
   f = n(169979),
   E = n(215105),
@@ -39,7 +39,7 @@ currentUser: n,
 channel: j
   } = e, L = __OVERLAY__, {
 analyticsLocations: P
-  } = (0, u.ZP)(c.Z.PROFILE_PANEL), O = (0, m.ZP)(t.id), y = (0, o.ZP)(), D = a.useRef(null), k = (0, r.Z)(D), [U, w] = a.useState(), [B, H] = a.useState(), G = (e, t) => {
+  } = (0, u.ZP)(c.Z.PROFILE_PANEL), O = (0, p.ZP)(t.id), y = (0, o.ZP)(), D = a.useRef(null), k = (0, r.Z)(D), [U, w] = a.useState(), [B, H] = a.useState(), G = (e, t) => {
 w(e), H(t);
   }, V = e => {
 (0, v.openUserProfileModal)({
@@ -101,7 +101,7 @@ children: (0, i.jsx)(h.Mt, {
             children: () => (0, i.jsxs)('header', {
               className: R.header,
               children: [
-                (0, i.jsx)(p.Z, {
+                (0, i.jsx)(m.Z, {
                   user: t,
                   displayProfile: O,
                   profileType: b.y0.PANEL,

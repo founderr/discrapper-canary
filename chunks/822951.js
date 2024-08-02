@@ -34,11 +34,11 @@ return null != t && (e = (0, a.jsx)(o.ModalFooter, {
   renderModal: t => {
     let {
       onClose: h,
-      ...m
+      ...p
     } = t;
     return (0, a.jsxs)(o.ModalRoot, {
       className: u.modal,
-      ...m,
+      ...p,
       children: [
         (0, a.jsxs)(o.ModalHeader, {
           align: c.Z.Justify.BETWEEN,

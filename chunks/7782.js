@@ -8,8 +8,8 @@ var i = n(735250),
   u = n(486622),
   d = n(922409),
   h = n(86203),
-  m = n(6025),
-  p = n(621853),
+  p = n(6025),
+  m = n(621853),
   _ = n(171368),
   f = n(433355),
   E = n(699516),
@@ -26,7 +26,7 @@ let A = e => {
 let {
   userId: t,
   channelId: n
-} = e, s = (0, l.e7)([p.Z], () => p.Z.getMutualGuilds(t), [t]), o = a.useMemo(() => null != s ? s.slice(0, 3).map((e, t) => {
+} = e, s = (0, l.e7)([m.Z], () => m.Z.getMutualGuilds(t), [t]), o = a.useMemo(() => null != s ? s.slice(0, 3).map((e, t) => {
   let {
     guild: n
   } = e, a = null != n ? I.ZP.getGuildIconURL({
@@ -204,14 +204,14 @@ let {
 } = e, s = a.useCallback(() => {
   (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
 }, []), l = a.useCallback(() => {
-  m.Z.closeChannelSidebar(f.uZ);
+  p.Z.closeChannelSidebar(f.uZ);
 }, []), o = a.useCallback(() => {
-  m.Z.closeChannelSidebar(f.uZ);
+  p.Z.closeChannelSidebar(f.uZ);
 }, []), {
   acceptMessageRequest: c,
   rejectMessageRequest: d,
   isAcceptLoading: h,
-  isRejectLoading: p,
+  isRejectLoading: m,
   isOptimisticAccepted: _,
   isOptimisticRejected: E
 } = (0, u.m)({
@@ -219,7 +219,7 @@ let {
   onError: s,
   onAcceptSuccess: o,
   onRejectSuccess: l
-}), C = h || p || _ || E;
+}), C = h || m || _ || E;
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)(r.Button, {
@@ -236,7 +236,7 @@ return (0, i.jsxs)(i.Fragment, {
       onClick: () => d(t),
       color: r.Button.Colors.PRIMARY,
       disabled: C,
-      submitting: p,
+      submitting: m,
       children: S.Z.Messages.MESSAGE_REQUEST_IGNORE
     })
   ]
@@ -249,8 +249,8 @@ channel: n,
 showingBanner: a
   } = e, {
 channelId: r
-  } = (0, d._)(), o = (0, l.e7)([c.Z], () => null != r && c.Z.isSpam(r), [r]), u = (0, l.e7)([E.Z], () => E.Z.getRelationshipType(t), [t]), m = n.id === r;
-  return t === N.fL ? null : o || m ? (0, i.jsxs)('div', {
+  } = (0, d._)(), o = (0, l.e7)([c.Z], () => null != r && c.Z.isSpam(r), [r]), u = (0, l.e7)([E.Z], () => E.Z.getRelationshipType(t), [t]), p = n.id === r;
+  return t === N.fL ? null : o || p ? (0, i.jsxs)('div', {
 className: Z.mobileContainer,
 children: [
   (0, i.jsx)('div', {
@@ -273,7 +273,7 @@ children: [
     ]
   })
 ]
-  }) : !0 === s.tq || m ? (0, i.jsxs)('div', {
+  }) : !0 === s.tq || p ? (0, i.jsxs)('div', {
 className: Z.mobileContainer,
 children: [
   (0, i.jsx)('div', {
