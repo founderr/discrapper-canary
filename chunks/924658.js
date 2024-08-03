@@ -169,6 +169,7 @@ e.exports = Object.freeze({
   FOR_LATER_TAB_REMINDERS: 'Reminders ({count, number})',
   FOR_LATER_EMPTY: 'You have nothing saved!',
   FOR_LATER_DIRECT_MESSAGE_WITH: 'Direct message with !!{username}!!',
+  FOR_LATER_MESSAGE_DELETED: 'A message you saved was deleted.',
   MESSAGE_REMINDERS_EMPTY: 'You have no Reminders!',
   MESSAGE_REMINDERS_EMPTY_TIP: 'You can mark any message as a Reminder to have it appear here.',
   MESSAGE_REMINDERS_HEADER: 'Message Reminders',

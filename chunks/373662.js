@@ -24,22 +24,20 @@ tooltipText: s,
 tooltipColor: _,
 icon: E,
 iconProps: I,
-channel: m,
-message: T,
-onClick: h,
-onTooltipShow: N,
-onTooltipHide: C,
-key: f,
-disabled: p,
-dangerous: g,
-separator: S,
-sparkle: A,
-showNewBadge: R,
-buttonClassName: O,
-children: x,
-...M
+onClick: m,
+onTooltipShow: T,
+onTooltipHide: h,
+key: N,
+disabled: C,
+dangerous: f,
+separator: p,
+sparkle: g,
+showNewBadge: S,
+buttonClassName: A,
+children: R,
+...O
   } = e, {
-canShowReactionsOnMessageHover: v
+canShowReactionsOnMessageHover: x
   } = u.Z.useExperiment({
 location: 'HoverBar'
   }, {
@@ -49,8 +47,8 @@ autoTrackExposure: !0
 text: null != s ? s : t,
 color: null != _ ? _ : l.TooltipColors.PRIMARY,
 'aria-label': t,
-onTooltipShow: N,
-onTooltipHide: C,
+onTooltipShow: T,
+onTooltipHide: h,
 hideOnClick: !0,
 tooltipClassName: d.tooltip,
 children: e => {
@@ -62,39 +60,39 @@ children: e => {
   return (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsxs)(c.zx, {
-        className: a()(v ? d.hoverBarButton : null, O),
+        className: a()(x ? d.hoverBarButton : null, A),
         onMouseEnter: s,
         onMouseLeave: u,
         onClick: e => {
-          null == _ || _(), h(m, T, e);
+          null == _ || _(), m(e);
         },
         'aria-label': null != n ? n : t,
-        disabled: p,
-        dangerous: g,
-        ...M,
+        disabled: C,
+        dangerous: f,
+        ...O,
         children: [
           null != E ? (0, i.jsx)(E, {
             className: d.icon,
             color: 'currentColor',
             ...I
           }) : null,
-          null != x ? (0, i.jsx)('div', {
+          null != R ? (0, i.jsx)('div', {
             className: a()(d.icon, d.buttonContent),
-            children: x
+            children: R
           }) : null,
-          A && (0, i.jsx)(l.LottieSparkle, {}),
-          R && (0, i.jsx)(l.TextBadge, {
+          g && (0, i.jsx)(l.LottieSparkle, {}),
+          S && (0, i.jsx)(l.TextBadge, {
             text: r.Z.Messages.NEW,
             color: o.Z.BG_BRAND,
             className: d.newBadge
           })
         ]
       }),
-      S && (0, i.jsx)(c.Z0, {})
+      p && (0, i.jsx)(c.Z0, {})
     ]
   });
 }
-  }, f);
+  }, N);
 }
 
 function E(e) {

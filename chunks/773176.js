@@ -128,8 +128,6 @@ children: r.map(e => {
       message: n,
       location: N.TW.MESSAGE_HOVER_BAR
     }),
-    channel: t,
-    message: n,
     buttonClassName: et.reactionSuggestion,
     children: (0, i.jsx)(h.Z, {
       emojiId: e.id,
@@ -297,10 +295,7 @@ canShowReactionsOnMessageHover: ev
 location: 'ExpandingButtons'
   }, {
 autoTrackExposure: !0
-  }), eS = {
-channel: t,
-message: n
-  };
+  });
   return (0, i.jsxs)(i.Fragment, {
 children: [
   P ? (0, i.jsxs)(i.Fragment, {
@@ -308,120 +303,106 @@ children: [
       s && ec ? (0, i.jsx)(W.s, {
         label: $.Z.Messages.COPY_ID_MESSAGE,
         icon: d.IdIcon,
-        onClick: Y.F4,
-        ...eS
+        onClick: e => (0, Y.F4)(t, n, e)
       }, 'copy-id') : null,
       s && !eu ? (0, i.jsx)(W.s, {
         label: $.Z.Messages.COPY_LINK,
         icon: d.LinkIcon,
-        onClick: Y.fB,
-        ...eS
+        onClick: () => (0, Y.fB)(t, n)
       }, 'copy-link') : null,
       I ? (0, i.jsx)(W.s, {
         label: $.Z.Messages.CONFIGURE,
         icon: d.CircleQuestionIcon,
-        onClick: Y.zW,
-        ...eS
+        onClick: () => (0, Y.zW)(t)
       }, 'configure') : null,
       et ? (0, i.jsx)(W.s, {
         label: en ? $.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : $.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
         icon: en ? (0, d.makeIconCompat)(U.Z) : d.ListBulletsIcon,
-        onClick: en ? Y.l9 : Y.W1,
-        ...eS
+        onClick: () => en ? (0, Y.l9)(t, n) : (0, Y.W1)(t, n)
       }, 'mark-reminder') : null,
       em ? (0, i.jsx)(W.s, {
         label: $.Z.Messages.MARK_UNREAD,
         icon: d.ChatMarkUnreadIcon,
-        onClick: Y.B8,
-        ...eS
+        onClick: () => (0, Y.B8)(t, n)
       }, 'mark-unread') : null,
       es ? (0, i.jsx)(W.s, {
         label: el ? $.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK : $.Z.Messages.MESSAGE_BOOKMARKS_BOOKMARK,
         icon: d.InboxIcon,
-        onClick: el ? Y.eM : Y.dF,
-        ...eS
+        onClick: () => el ? (0, Y.eM)(t, n) : (0, Y.dF)(t, n)
       }, 'bookmark') : null,
       l ? (0, i.jsx)(W.s, {
         label: n.pinned ? $.Z.Messages.UNPIN_MESSAGE : $.Z.Messages.PIN_MESSAGE,
         icon: d.PinIcon,
-        onClick: Y.rY,
-        ...eS
+        onClick: e => (0, Y.rY)(t, n, e)
       }, 'pin') : null,
       N && S ? (0, i.jsx)(W.s, {
         label: $.Z.Messages.CREATE_THREAD,
         icon: d.ThreadIcon,
-        onClick: Y.gK,
-        ...eS
+        onClick: () => (0, Y.gK)(t, n)
       }, 'thread') : null,
       x && h ? (0, i.jsx)(W.s, {
         label: $.Z.Messages.MESSAGE_ACTION_REPLY,
         icon: d.ArrowAngleLeftUpIcon,
-        onClick: Y.HH,
-        ...eS
+        onClick: e => (0, Y.HH)(t, n, e)
       }, 'reply-self') : null
     ]
   }) : null,
   E && !eu ? (0, i.jsxs)(i.Fragment, {
     children: [
       ev && !P ? (0, i.jsx)(ea, {
-        ...eS
+        channel: t,
+        message: n
       }) : null,
       (0, i.jsx)(K.Z, {
         togglePopout: ep,
         renderEmojiPicker: eo,
         shouldShow: ee,
         isFocused: ed,
-        ...eS
+        channel: t,
+        message: n
       })
     ]
   }) : null,
   x && !h ? (0, i.jsx)(W.s, {
     label: $.Z.Messages.MESSAGE_ACTION_REPLY,
     icon: d.ArrowAngleLeftUpIcon,
-    onClick: Y.HH,
-    ...eS
+    onClick: e => (0, Y.HH)(t, n, e)
   }, 'reply-other') : null,
   h ? (0, i.jsx)(W.s, {
     label: $.Z.Messages.EDIT,
     icon: d.PencilIcon,
-    onClick: Y.Hd,
-    ...eS
+    onClick: () => (0, Y.Hd)(t, n)
   }, 'edit') : null,
   S ? (0, i.jsx)(W.s, {
     label: $.Z.Messages.MESSAGE_ACTION_FORWARD,
     icon: d.ChatArrowRightIcon,
-    onClick: eN,
+    onClick: () => eN(t, n),
     onTooltipShow: ex,
     onTooltipHide: eT,
-    showNewBadge: !eC && eg,
-    ...eS
+    showNewBadge: !eC && eg
   }, 'forward') : null,
   N && !S ? (0, i.jsx)(W.s, {
     label: $.Z.Messages.CREATE_THREAD,
     icon: d.ThreadIcon,
-    onClick: Y.gK,
-    ...eS
+    onClick: () => (0, Y.gK)(t, n)
   }, 'thread') : null,
   !N && v ? (0, i.jsx)(W.s, {
     label: $.Z.Messages.VIEW_THREAD,
     icon: d.ThreadIcon,
-    onClick: Y.qe,
-    ...eS
+    onClick: () => (0, Y.qe)(t, n)
   }, 'view-thread') : null,
   f ? (0, i.jsx)(W.s, {
     label: e_ ? $.Z.Messages.NEWS_CHANNEL_PUBLISHED : $.Z.Messages.NEWS_CHANNEL_PUBLISH,
     icon: d.AnnouncementsIcon,
-    onClick: Y.Xl,
-    disabled: e_,
-    ...eS
+    onClick: () => (0, Y.Xl)(t, n),
+    disabled: e_
   }, 'publish') : null,
   r && (eu || P) ? (0, i.jsx)(W.s, {
     label: $.Z.Messages.DELETE,
     icon: d.TrashIcon,
-    onClick: Y.$Z,
+    onClick: e => (0, Y.$Z)(t, n, e),
     dangerous: !0,
-    separator: !P,
-    ...eS
+    separator: !P
   }, 'delete') : null,
   P && r ? null : (0, i.jsx)(d.Popout, {
     renderPopout: e => {
@@ -454,7 +435,6 @@ children: [
         icon: d.MoreHorizontalIcon,
         selected: s,
         onClick: eh,
-        ...eS,
         ...a
       }, 'more');
     }
@@ -473,16 +453,12 @@ children: [
   !a && s && (0, i.jsx)(W.s, {
     label: $.Z.Messages.RETRY,
     icon: d.RetryIcon,
-    channel: t,
-    message: n,
-    onClick: Y.mG
+    onClick: () => (0, Y.mG)(t, n)
   }, 'retry'),
   (0, i.jsx)(W.s, {
     label: $.Z.Messages.DELETE,
     icon: d.TrashIcon,
-    channel: t,
-    message: n,
-    onClick: Y.$Z
+    onClick: e => (0, Y.$Z)(t, n, e)
   }, 'delete-usent')
 ]
   });

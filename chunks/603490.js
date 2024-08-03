@@ -33,9 +33,7 @@ align: a.tq ? 'center' : 'top',
 children: () => (0, i.jsx)(l.s, {
   label: r.Z.Messages.ADD_REACTION,
   icon: s.ReactionIcon,
-  onClick: o,
-  channel: t,
-  message: n
+  onClick: o
 }, 'add-reaction')
   });
 }
