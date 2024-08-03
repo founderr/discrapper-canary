@@ -327,7 +327,7 @@ children: [
       }, 'mark-unread') : null,
       es ? (0, i.jsx)(W.s, {
         label: el ? $.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK : $.Z.Messages.MESSAGE_BOOKMARKS_BOOKMARK,
-        icon: d.InboxIcon,
+        icon: el ? d.BookmarkIcon : d.BookmarkOutlineIcon,
         onClick: () => el ? (0, Y.eM)(t, n) : (0, Y.dF)(t, n)
       }, 'bookmark') : null,
       l ? (0, i.jsx)(W.s, {

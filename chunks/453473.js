@@ -73,7 +73,7 @@ children: (0, i.jsxs)('div', {
         (0, i.jsxs)('div', {
           className: x.headerTitle,
           children: [
-            (0, i.jsx)(d.TagIcon, {
+            (0, i.jsx)(d.BookmarkIcon, {
               size: 'md',
               color: 'currentColor',
               className: x.headerTitleIcon

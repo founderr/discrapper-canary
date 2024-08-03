@@ -23,7 +23,7 @@ autoTrackExposure: !1
   return n ? (0, i.jsx)(l.MenuItem, {
 id: 'mark-bookmark',
 label: t ? u.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK : u.Z.Messages.MESSAGE_BOOKMARKS_BOOKMARK,
-icon: l.InboxIcon,
+icon: l.BookmarkIcon,
 action: () => t ? (0, o.h)({
   channelId: e.channel_id,
   messageId: e.id

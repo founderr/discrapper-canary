@@ -26,7 +26,7 @@ children: (e, t, n) => (0, i.jsx)('div', {
     ...n,
     className: o,
     onClick: e,
-    icon: s.TagIcon,
+    icon: s.BookmarkIcon,
     'aria-label': l.Z.Messages.FOR_LATER,
     tooltip: t ? null : l.Z.Messages.FOR_LATER,
     selected: t
