@@ -6,8 +6,8 @@ var i = n(934951),
   u = n(311163),
   o = n(272423),
   s = n(378788),
-  d = n(700615),
-  h = n(905423),
+  h = n(700615),
+  d = n(905423),
   c = n(703656),
   g = n(981631);
 
@@ -25,7 +25,7 @@ this.cleanup(), this.unlistenHistory = (0, c.s1)().listen(this.handleRouteChange
 let {
   pathname: e
 } = (0, c.s1)().location;
-h.Z.getState().resetPath(e), this.unlistenKeyboardChange = h.Z.subscribe(this.handleKeybindRouteChange), l.Z.addChangeListener(this.handleConnectionChange);
+d.Z.getState().resetPath(e), this.unlistenKeyboardChange = d.Z.subscribe(this.handleKeybindRouteChange), l.Z.addChangeListener(this.handleConnectionChange);
   }
   convertRouteToNavigation(e, t) {
 var n;
@@ -34,12 +34,12 @@ let {
 } = e, l = (0, a.D)();
 if (null == l || !l.isReady())
   return;
-let h = e.navigationReplace,
+let d = e.navigationReplace,
   c = null !== (n = e.useScreen) && void 0 !== n && n;
 if (i === g.Z5c.NOTIFICATIONS) {
   (0, o.vp)({
     screen: 'notifications',
-    resetRoot: h
+    resetRoot: d
   });
   return;
 }
@@ -53,11 +53,11 @@ if (i.startsWith('/channels/')) {
       voiceChannelId: n,
       voiceMessageId: i
     } = t.params;
-    !(0, d.ur)() && (0, o.k4)({
+    !(0, h.ur)() && (0, o.k4)({
       channelId: n,
       guildId: e,
       messageId: i,
-      replaceChannelAndFixRoot: h,
+      replaceChannelAndFixRoot: d,
       useScreen: c
     });
     return;
@@ -70,32 +70,45 @@ if (i.startsWith('/channels/')) {
       channelId: t,
       guildId: i,
       messageId: r
-    } = n.params, [a, d] = (0, u.Z)(l.getCurrentRoute());
-    if (a === i && d === t)
+    } = n.params, [a, h] = (0, u.Z)(l.getCurrentRoute());
+    if (a === i && h === t)
       return;
-    (0, s.z)() ? (!1 !== h && (0, o.vp)({
-      screen: 'guilds',
-      guildId: i,
-      channelId: t,
-      resetRoot: h
-    }), null != t && (!0 !== h || e.openChannel) && (0, o.k4)({
-      channelId: t,
-      guildId: i,
-      messageId: r,
-      replaceChannelAndFixRoot: void 0,
-      useScreen: c
-    })) : null == t || !1 !== h ? (0, o.vp)({
-      screen: 'guilds',
-      guildId: i,
-      channelId: t,
-      resetRoot: h
-    }) : null != i && (0, o.k4)({
-      channelId: t,
-      guildId: i,
-      messageId: r,
-      replaceChannelAndFixRoot: h,
-      useScreen: c
-    });
+    if ((0, s.z)()) {
+      if (!0 === d && e.openChannel && null != t) {
+        (0, o.k4)({
+          channelId: t,
+          guildId: i,
+          messageId: r,
+          replaceChannelAndFixRoot: d,
+          useScreen: c,
+          openChannel: !0
+        });
+        return;
+      }!1 !== d && (0, o.vp)({
+        screen: 'guilds',
+        guildId: i,
+        channelId: t,
+        resetRoot: d
+      }), null != t && !0 !== d && (0, o.k4)({
+        channelId: t,
+        guildId: i,
+        messageId: r,
+        replaceChannelAndFixRoot: void 0,
+        useScreen: c
+      });
+    } else
+      null == t || !1 !== d ? (0, o.vp)({
+        screen: 'guilds',
+        guildId: i,
+        channelId: t,
+        resetRoot: d
+      }) : null != i && (0, o.k4)({
+        channelId: t,
+        guildId: i,
+        messageId: r,
+        replaceChannelAndFixRoot: d,
+        useScreen: c
+      });
   }
   return;
 }
@@ -119,7 +132,7 @@ if (i.startsWith('/account-standing')) {
 }
 (0, o.vp)({
   screen: 'messages',
-  resetRoot: h
+  resetRoot: d
 });
   }
   executeRouteRewrites(e, t) {
@@ -171,7 +184,7 @@ f(this, 'unlistenHistory', void 0), f(this, 'unlistenKeyboardChange', void 0), f
 }), f(this, 'handleRouteChange', (e, t) => {
   if (this.executeRouteRewrites(e, t))
     return;
-  let n = h.Z.getState();
+  let n = d.Z.getState();
   for (let i of (n.basePath !== e.pathname && n.resetPath(e.pathname), this.listeners))
     try {
       i(e, t);
@@ -186,7 +199,7 @@ f(this, 'unlistenHistory', void 0), f(this, 'unlistenKeyboardChange', void 0), f
   null != t ? (clearTimeout(this.timer), this.timer = setTimeout(this.flushRoute, 200)) : null == t && clearTimeout(this.timer);
 }), f(this, 'flushRoute', () => {
   clearTimeout(this.timer);
-  let e = h.Z.getState();
+  let e = d.Z.getState();
   null != e.path && (0, c.uL)(e.path);
 });
   }
