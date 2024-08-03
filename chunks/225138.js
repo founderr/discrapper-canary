@@ -1,6 +1,6 @@
 t.r(n), t.d(n, {
   default: function() {
-return k;
+return w;
   },
   useMessageMenu: function() {
 return F;
@@ -43,9 +43,9 @@ var a = t(374470),
   G = t(627938),
   U = t(512303),
   y = t(481300),
-  w = t(689938);
+  k = t(689938);
 
-function k(e) {
+function w(e) {
   var n, t;
   let i, l, o, s, {
   channel: u,
@@ -83,7 +83,7 @@ onHeightUpdate: m,
 onSelect: I,
 onClose: r.Zy,
 navId: 'message',
-ariaLabel: w.Z.Messages.MESSAGE_ACTIONS_MENU_LABEL,
+ariaLabel: k.Z.Messages.MESSAGE_ACTIONS_MENU_LABEL,
 shouldHideMediaOptions: M
   });
 }
@@ -94,22 +94,22 @@ message: n,
 channel: t,
 mediaItem: a,
 textSelection: r,
-favoriteableType: k,
+favoriteableType: w,
 favoriteableId: F,
 favoriteableName: K,
 itemHref: V,
 itemSrc: H,
 itemSafeSrc: X,
 itemTextContent: z,
-canReport: Y,
-onHeightUpdate: B,
+canReport: B,
+onHeightUpdate: Y,
 onSelect: W,
 onClose: q,
 navId: J,
 ariaLabel: $,
 shouldHideMediaOptions: Q = !1
   } = e, ee = (0, u.Z)(r), en = (0, E.Z)(r), et = (0, N.Z)(n, t), ei = (0, _.Z)(n, t), ea = (0, A.Z)(n, t), el = (0, h.Z)(n, t), er = (0, T.Z)({
-type: k,
+type: w,
 id: F,
 name: K
   }), eo = (0, L.Z)(n, t), es = (0, R.Z)(n, t), eu = (0, p.Z)(n), ed = (0, f.Z)(n, t), ec = (0, Z.Z)(n, t), eE = (0, C.Z)(n, t), eM = (0, b.Z)(n, t), eI = (0, v.Z)(n, t), em = (0, P.Z)(n), e_ = (0, D.Z)(n, t), eg = (0, c.Z)(null != V ? V : H, z, n, {
@@ -118,14 +118,14 @@ shouldHideMediaOptions: Q
 shouldHideMediaOptions: Q
   }), eZ = (0, y.Z)(n, a), eS = (0, s.Z)({
 id: n.id,
-label: w.Z.Messages.COPY_ID_MESSAGE,
+label: k.Z.Messages.COPY_ID_MESSAGE,
 shiftId: ''.concat(n.channel_id, '-').concat(n.id)
   }), ev = (0, j.Z)(n, t), eA = (0, O.Z)(n, t), eT = (0, G.Z)(n, t), eO = (0, m.Z)(r, t.getGuildId()), eR = (0, x.Z)(n), eh = (0, g.Z)(n), eN = (0, S.Z)(n), ep = (0, I.Z)({
 commandType: o.yU.MESSAGE,
 commandTargetId: n.id,
 channel: t,
 guildId: void 0,
-onHeightUpdate: B
+onHeightUpdate: Y
   }), ex = (0, U.Z)(n), eC = (0, M.Z)(n);
   return (0, i.jsxs)(l.Menu, {
 navId: J,
@@ -164,7 +164,7 @@ children: [
       eE,
       ex,
       eI,
-      Y && em
+      B && em
     ]
   }),
   null != eO && (0, i.jsx)(l.MenuGroup, {
