@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(338545),
   o = n(143927),
   c = n(442837),
@@ -84,16 +84,16 @@ function M(e) {
   let {
 selectedGuildId: t,
 setSelectedGuildId: n,
-eligibleGuilds: a,
+eligibleGuilds: s,
 onButtonClick: l,
 buttonText: c,
 hasCompletedUpsell: u
-  } = e, _ = (0, C.GN)(e => e.started, o.Z), h = s.useMemo(() => a.map(e => ({
+  } = e, _ = (0, C.GN)(e => e.started, o.Z), h = a.useMemo(() => s.map(e => ({
 value: e.id,
 label: e.name
-  })), [a]), E = s.useCallback(() => {
+  })), [s]), E = a.useCallback(() => {
 (0, C.fH)(C.v0.DISCOVERY);
-  }, []), I = a.length > 1;
+  }, []), I = s.length > 1;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   u ? (0, i.jsxs)(i.Fragment, {
@@ -179,31 +179,31 @@ children: [
 ]
   });
 }
-t.Z = s.memo(function(e) {
+t.Z = a.memo(function(e) {
   let {
 eligibleGuilds: t,
 eligibleGuildsIncludingConverted: n
-  } = e, a = 0 === t.length, [r, o] = s.useState(() => {
+  } = e, s = 0 === t.length, [r, o] = a.useState(() => {
 var e, i;
-let s = new Set(m.ZP.getGuildIds());
+let a = new Set(m.ZP.getGuildIds());
 for (let e of t)
-  if (s.has(e.id))
+  if (a.has(e.id))
     return e.id;
-return a ? null === (e = n[0]) || void 0 === e ? void 0 : e.id : null === (i = t[0]) || void 0 === i ? void 0 : i.id;
+return s ? null === (e = n[0]) || void 0 === e ? void 0 : e.id : null === (i = t[0]) || void 0 === i ? void 0 : i.id;
   });
-  s.useEffect(() => {
-!a && (0, I.TE)({
+  a.useEffect(() => {
+!s && (0, I.TE)({
   guildId: r,
   location: h.Z.CLAN_DISCOVERY
 });
   }, [
-a,
+s,
 r
   ]);
   let C = (0, c.e7)([T.Z], () => T.Z.getGuild(r)),
 O = (0, c.e7)([m.ZP], () => null != r ? m.ZP.getStateForGuild(r).progress : null),
-R = s.useCallback(() => {
-  !a && ((0, I._9)({
+R = a.useCallback(() => {
+  !s && ((0, I._9)({
     guildId: r,
     location: h.Z.CLAN_DISCOVERY
   }), (0, S.q4)(e => {
@@ -218,7 +218,7 @@ R = s.useCallback(() => {
     layerKey: v.Pv
   }));
 }, [
-  a,
+  s,
   r
 ]),
 P = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
@@ -226,7 +226,7 @@ D = (0, N.L)({
   guild: C
 }),
 y = (0, A.n)(),
-[j, U] = s.useState(!0),
+[j, U] = a.useState(!0),
 G = (0, d.useSpring)({
   from: {
     opacity: 0
@@ -315,11 +315,11 @@ F = (0, d.useSpring)({
   delay: 250,
   onRest: () => U(!1)
 }, 'animate-always'),
-Y = s.useMemo(() => null == O ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [O]),
-W = s.useCallback(async () => {
+Y = a.useMemo(() => null == O ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [O]),
+W = a.useCallback(async () => {
   await (0, E.Zx)(r), u.Z.transitionToGuildSync('936317138904440892');
 }, [r]),
-z = s.useCallback(e => (0, i.jsx)(d.Clickable, {
+z = a.useCallback(e => (0, i.jsx)(d.Clickable, {
   tag: 'span',
   className: L.joinWFSLink,
   onClick: W,
@@ -410,10 +410,10 @@ children: [
       eligibleGuilds: t,
       onButtonClick: R,
       buttonText: Y,
-      hasCompletedUpsell: a
+      hasCompletedUpsell: s
     })
   }),
-  a ? (0, i.jsx)('div', {
+  s ? (0, i.jsx)('div', {
     className: L.joinWFSContainer,
     children: (0, i.jsx)('div', {
       className: L.joinWFS,

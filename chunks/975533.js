@@ -1,6 +1,6 @@
 var i = n(570140),
-  s = n(846027),
-  a = n(13245),
+  a = n(846027),
+  s = n(13245),
   r = n(287734),
   l = n(872810),
   o = n(223245),
@@ -53,7 +53,7 @@ isPressed: !1
   [A.kg4.PUSH_TO_MUTE]: {
 onTrigger(e) {
   if (!(p.Z.getMode() !== A.pM4.VOICE_ACTIVITY || p.Z.isSelfDeaf()))
-    Z[A.kg4.PUSH_TO_MUTE].isPressed = e, s.Z.setTemporarySelfMute(e);
+    Z[A.kg4.PUSH_TO_MUTE].isPressed = e, a.Z.setTemporarySelfMute(e);
 },
 keyEvents: {
   keyup: !0,
@@ -62,7 +62,7 @@ keyEvents: {
 isPressed: !1
   },
   [A.kg4.TOGGLE_MUTE]: {
-onTrigger: () => s.Z.toggleSelfMute({
+onTrigger: () => a.Z.toggleSelfMute({
   usedKeybind: !0
 }),
 keyEvents: {
@@ -72,7 +72,7 @@ keyEvents: {
   },
   [A.kg4.TOGGLE_DEAFEN]: {
 onTrigger() {
-  s.Z.toggleSelfDeaf();
+  a.Z.toggleSelfDeaf();
 },
 keyEvents: {
   keyup: !0,
@@ -82,7 +82,7 @@ keyEvents: {
   [A.kg4.TOGGLE_VOICE_MODE]: {
 onTrigger() {
   let e = p.Z.getMode() === A.pM4.PUSH_TO_TALK ? A.pM4.VOICE_ACTIVITY : A.pM4.PUSH_TO_TALK;
-  s.Z.setMode(e);
+  a.Z.setMode(e);
 },
 keyEvents: {
   keyup: !0,
@@ -92,7 +92,7 @@ keyEvents: {
   [A.kg4.TOGGLE_OVERLAY]: {
 onTrigger() {
   let e = S.Z.enabled;
-  a.Z.setEnabled(!e, S.Z.legacyEnabled);
+  s.Z.setEnabled(!e, S.Z.legacyEnabled);
 },
 keyEvents: {
   keyup: !0,
@@ -103,7 +103,7 @@ keyEvents: {
 onTrigger(e) {
   let t = (0, N.Z)();
   if (null != t)
-    e ? a.Z.setUILocked(!f.Z.isUILocked(t), t) : a.Z.setInputLocked(!S.Z.isInputLocked(t), t);
+    e ? s.Z.setUILocked(!f.Z.isUILocked(t), t) : s.Z.setInputLocked(!S.Z.isInputLocked(t), t);
 },
 keyEvents: {
   keyup: !0,
@@ -114,7 +114,7 @@ keyEvents: {
 onTrigger() {
   let e = S.Z.getFocusedPID(),
     t = null != e;
-  null != e && t && f.Z.isPinned(A.Odu.TEXT) && S.Z.isReady(e) && S.Z.isInputLocked(e) && a.Z.activateRegion(A.O0n.TEXT_WIDGET);
+  null != e && t && f.Z.isPinned(A.Odu.TEXT) && S.Z.isReady(e) && S.Z.isInputLocked(e) && s.Z.activateRegion(A.O0n.TEXT_WIDGET);
 },
 keyEvents: {
   keyup: !0,

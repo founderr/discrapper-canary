@@ -7,8 +7,8 @@ return c;
   }
 });
 var i = n(570140),
-  s = n(605236),
-  a = n(626135),
+  a = n(605236),
+  s = n(626135),
   r = n(445507),
   l = n(981631),
   o = n(921944);
@@ -20,14 +20,14 @@ dismissibleContent: n,
 data: c,
 completed: d
   } = e;
-  null != c.selectedOptionKey && (!(0, s.un)(n) && a.default.track(l.rMx.SIGNUP_COMPLETED, {
+  null != c.selectedOptionKey && (!(0, a.un)(n) && s.default.track(l.rMx.SIGNUP_COMPLETED, {
 target_key: t,
 selected_option_key: c.selectedOptionKey,
 email: c.email,
 guild_id: c.guildId,
 metadata: (0, r.mU)(c),
 completed: d
-  }), (0, s.EW)(n, {
+  }), (0, a.EW)(n, {
 dismissAction: o.L.PRIMARY,
 forceTrack: !0
   }), i.Z.dispatch({
@@ -39,7 +39,7 @@ selectedOptionKey: c.selectedOptionKey
 }
 
 function d(e, t) {
-  (0, s.EW)(t, {
+  (0, a.EW)(t, {
 dismissAction: o.L.DISMISS,
 forceTrack: !0
   }), i.Z.dispatch({

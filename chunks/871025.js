@@ -5,8 +5,8 @@ return r;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(689938);
+var a = n(481060),
+  s = n(689938);
 
 function r(e) {
   let {
@@ -15,22 +15,22 @@ selectedTab: n,
 onTabSelect: r,
 onClose: l
   } = e;
-  return (0, i.jsx)(s.Menu, {
+  return (0, i.jsx)(a.Menu, {
 navId: 'global-discovery-tabs-overflow-menu',
-'aria-label': a.Z.Messages.GLOBAL_DISCOVERY_MORE_MENU_A11Y,
+'aria-label': s.Z.Messages.GLOBAL_DISCOVERY_MORE_MENU_A11Y,
 hideScroller: !0,
 onClose: l,
 onSelect: l,
-children: (0, i.jsx)(s.MenuGroup, {
+children: (0, i.jsx)(a.MenuGroup, {
   children: t.map(e => {
     let {
       id: t,
-      label: a
+      label: s
     } = e;
-    return (0, i.jsx)(s.MenuItem, {
+    return (0, i.jsx)(a.MenuItem, {
       id: t,
-      label: a,
-      icon: t === n ? s.CircleCheckIcon : void 0,
+      label: s,
+      icon: t === n ? a.CircleCheckIcon : void 0,
       action: () => r(t)
     }, t);
   })

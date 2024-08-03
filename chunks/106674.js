@@ -4,8 +4,8 @@ return O;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(692547),
   l = n(481060),
   o = n(287734),
@@ -61,8 +61,8 @@ userId: r,
 applicationId: d,
 channelId: O,
 streamKey: R
-  } = n, [x, b] = s.useState(!1), P = (0, a.e7)([p.default], () => p.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, C.Z)(), j = (0, a.e7)([I.Z], () => I.Z.getPreviewURL(null, O, r)), U = (0, a.e7)([g.Z], () => g.Z.getVoiceChannelId()), G = (0, f.ZP)(), k = (0, S.Z)(O);
-  if (s.useEffect(() => {
+  } = n, [x, b] = a.useState(!1), P = (0, s.e7)([p.default], () => p.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, C.Z)(), j = (0, s.e7)([I.Z], () => I.Z.getPreviewURL(null, O, r)), U = (0, s.e7)([g.Z], () => g.Z.getVoiceChannelId()), G = (0, f.ZP)(), k = (0, S.Z)(O);
+  if (a.useEffect(() => {
   x && U === O && b(!1);
 }, [
   U,
@@ -77,11 +77,11 @@ disabled: H
   } = function(e, t) {
 let n = m.default.getId(),
   i = t.some(e => e.id === n) || e === n,
-  s = t.length >= N.keq;
+  a = t.length >= N.keq;
 return {
-  buttonColor: s ? l.ButtonColors.RED : l.ButtonColors.GREEN,
-  buttonCTA: s ? v.Z.Messages.BROADCAST_FULL : i ? v.Z.Messages.VIEW_BROADCAST : v.Z.Messages.JOIN_BROADCAST,
-  disabled: s
+  buttonColor: a ? l.ButtonColors.RED : l.ButtonColors.GREEN,
+  buttonCTA: a ? v.Z.Messages.BROADCAST_FULL : i ? v.Z.Messages.VIEW_BROADCAST : v.Z.Messages.JOIN_BROADCAST,
+  disabled: a
 };
   }(r, k);
   return (0, i.jsxs)('div', {

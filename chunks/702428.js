@@ -5,8 +5,8 @@ return _;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(44315),
+var a = n(481060),
+  s = n(44315),
   r = n(360048),
   l = n(709158),
   o = n(46140),
@@ -18,9 +18,9 @@ function _(e) {
   let {
 isSelected: t,
 onClick: n
-  } = e, _ = (0, l.Z)(o.dr.QUEST_HOME_DESKTOP), h = (0, a.Sl)(c.Ilk.WHITE);
+  } = e, _ = (0, l.Z)(o.dr.QUEST_HOME_DESKTOP), h = (0, s.Sl)(c.Ilk.WHITE);
   return _ ? (0, i.jsx)(r.Z, {
-avatar: (0, i.jsx)(s.QuestsIcon, {
+avatar: (0, i.jsx)(a.QuestsIcon, {
   color: t ? h.hex : void 0
 }),
 name: d.Z.Messages.QUESTS,

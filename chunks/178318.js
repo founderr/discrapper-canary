@@ -1,6 +1,6 @@
-let i, s;
+let i, a;
 n(47120), n(610138), n(216116), n(78328), n(815648), n(653041), n(411104);
-var a = n(836560),
+var s = n(836560),
   r = n(392711),
   l = n.n(r),
   o = n(729594),
@@ -43,36 +43,36 @@ function v(e) {
 function Z() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
 t = e > 0 ? void 0 : () => {
-  if (!v(s.listening))
+  if (!v(a.listening))
     return;
-  let e = s.address().port;
+  let e = a.address().port;
   N.info('Starting on '.concat(e)), c.Z.dispatch({
     type: 'RPC_SERVER_READY',
     port: e
   });
 };
-  s.listen(p.V6Z + e % p.frH, '127.0.0.1', t);
+  a.listen(p.V6Z + e % p.frH, '127.0.0.1', t);
 }
 
 function L(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
-s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-a = null != v(e.headers).origin ? {
+a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+s = null != v(e.headers).origin ? {
   'Access-Control-Allow-Origin': v(e.headers).origin,
   'Access-Control-Allow-Credentials': 'true',
   'Access-Control-Allow-Methods': 'POST, GET, PUT, PATCH, DELETE',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization'
 } : {};
   n = n ? JSON.stringify(n) : '', i = 200 === i && 0 === n.length ? 204 : i, t.setHeader('Content-Length', T.byteLength(n).toString()), t.setHeader('Content-Type', 'application/json'), t.writeHead(i, {
-...s,
-...a
+...a,
+...s
   }), t.end(n);
 }
 
 function O(e, t, n, i) {
-  let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+  let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
   L(e, t, {
-code: s,
+code: a,
 message: i
   }, n);
 }
@@ -115,29 +115,29 @@ if (super('http', n, i), S(this, '_sendCallback', void 0), S(this, '_closeCallba
 this._sendCallback = e, this._closeCallback = t;
   }
 }
-class b extends a.EventEmitter {
+class b extends s.EventEmitter {
   handleRequest(e, t) {
-let [n, i] = v(e.url).split('?'), s = v(e.method);
-if ('/rpc' === n && 'OPTIONS' === s) {
+let [n, i] = v(e.url).split('?'), a = v(e.method);
+if ('/rpc' === n && 'OPTIONS' === a) {
   L(e, t, {
     body: ''
   });
   return;
 }
-let a = 'POST' === s;
-if ('/rpc' === n && ('GET' === s || a)) {
+let s = 'POST' === a;
+if ('/rpc' === n && ('GET' === a || s)) {
   let n = new URLSearchParams(i),
-    s = a ? v(e.headers)['content-type'].split('/')[1] : 'json',
+    a = s ? v(e.headers)['content-type'].split('/')[1] : 'json',
     l = function() {
       var e;
       let {
         protocol: i,
-        host: s
+        host: a
       } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
-      i === location.protocol && s === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', C), t.writeHead(301), t.end();
+      i === location.protocol && a === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', C), t.writeHead(301), t.end();
     },
-    c = new x(a ? L.bind(null, e, t) : l, a ? O.bind(null, e, t, 400) : l, Number(n.get('v')), s);
-  if (a)
+    c = new x(s ? L.bind(null, e, t) : l, s ? O.bind(null, e, t, 400) : l, Number(n.get('v')), a);
+  if (s)
     (0, m.em)(c, v(e.headers).origin, n.get('client_id')).then(() => {
       let n = '';
       e.on('data', e => n += e), e.on('error', () => O(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(c, n));
@@ -159,17 +159,17 @@ O(e, t, 404, 'Not Found');
   handleConnection(e) {
 var t, n;
 let i;
-let s = new URLSearchParams(v(e.upgradeReq).url.split('?')[1]),
-  a = null !== (t = v(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
+let a = new URLSearchParams(v(e.upgradeReq).url.split('?')[1]),
+  s = null !== (t = v(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
 try {
-  i = new R(e, Number(s.get('v')), null !== (n = s.get('encoding')) && void 0 !== n ? n : 'json');
+  i = new R(e, Number(a.get('v')), null !== (n = a.get('encoding')) && void 0 !== n ? n : 'json');
 } catch (t) {
   e.close(t.code, t.message);
   return;
 }
 N.info('Socket Opened: '.concat(i.id)), e.on('error', e => N.error('WS Error: '.concat(e.message))), e.on('close', (e, t) => {
   N.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)), l().remove(A, e => e === i), this.emit('disconnect', i);
-}), (0, m.em)(i, a, s.get('client_id')).then(() => {
+}), (0, m.em)(i, s, a.get('client_id')).then(() => {
   A.push(i), e.on('message', e => this.handleMessage(i, e)), this.emit('connect', i);
 }).catch(e => {
   let {
@@ -198,12 +198,12 @@ try {
 var e;
 super();
 let t = 0;
-(s = f.http.createServer()).on('error', e => {
+(a = f.http.createServer()).on('error', e => {
   N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => Z(++t), 1000);
-}), s.on('request', this.handleRequest.bind(this)), Z(t);
+}), a.on('request', this.handleRequest.bind(this)), Z(t);
 let n = {
-  instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
-  server: s
+  instanceId: null !== (e = a.instanceId) && void 0 !== e ? e : 0,
+  server: a
 };
 new f.ws.Server(n).on('connection', e => this.handleConnection(e));
   }

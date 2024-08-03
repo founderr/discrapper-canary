@@ -4,9 +4,9 @@ return d;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(497505),
   o = n(415104),
   c = n(456727);
@@ -15,12 +15,12 @@ function d(e) {
   var t;
   let {
 quests: n,
-selectedQuestId: a
+selectedQuestId: s
   } = e;
-  s.useEffect(() => {
+  a.useEffect(() => {
 for (let e of n)
-  if (e.id === a) {
-    let e = document.getElementById('quest-tile-'.concat(a));
+  if (e.id === s) {
+    let e = document.getElementById('quest-tile-'.concat(s));
     null == e || e.scrollIntoView({
       behavior: 'smooth',
       block: 'center'
@@ -29,11 +29,11 @@ for (let e of n)
   }
   }, [
 n,
-a
+s
   ]);
-  let d = null != a,
-[u, _] = s.useState(window.innerWidth);
-  s.useEffect(() => {
+  let d = null != s,
+[u, _] = a.useState(window.innerWidth);
+  a.useEffect(() => {
 let e = () => {
   _(window.innerWidth);
 };
@@ -52,10 +52,10 @@ children: n.map((e, t) => {
     contentPosition: t,
     rowIndex: n,
     className: r()(c.questTile, {
-      [c.selected]: d && e.id === a,
-      [c.unselected]: d && e.id !== a
+      [c.selected]: d && e.id === s,
+      [c.unselected]: d && e.id !== s
     })
   }, e.id);
 })
-  }, null != a ? a : '');
+  }, null != s ? s : '');
 }

@@ -1,5 +1,5 @@
 n(47120);
-var i, s, a = n(735250),
+var i, a, s = n(735250),
   r = n(470079),
   l = n(338545),
   o = n(143927),
@@ -17,7 +17,7 @@ var i, s, a = n(735250),
   S = n(895068),
   f = n(921944),
   C = n(540736);
-(s = i || (i = {})).TOP_PICKS = 'top_picks', s.OTHER_GUILDS = 'other_guilds';
+(a = i || (i = {})).TOP_PICKS = 'top_picks', a.OTHER_GUILDS = 'other_guilds';
 let N = {
 mass: 1,
 tension: 600,
@@ -26,7 +26,7 @@ friction: 60
   A = r.memo(function(e) {
 let {
   width: t
-} = e, n = (0, p.GN)(e => e.mode, o.Z), [i, s] = r.useState(!0), u = (0, d.useSpring)({
+} = e, n = (0, p.GN)(e => e.mode, o.Z), [i, a] = r.useState(!0), u = (0, d.useSpring)({
   from: {
     opacity: 0
   },
@@ -35,7 +35,7 @@ let {
   },
   config: N,
   delay: 500,
-  onRest: () => s(!1)
+  onRest: () => a(!1)
 }), I = (0, p.GN)(e => e.userUpsellScreen, o.Z), A = (0, p.GN)(e => e.started, o.Z), {
   guilds: v
 } = (0, _.C3)({
@@ -72,18 +72,18 @@ switch (r.useEffect(() => {
     I
   ]), n) {
   case p.v0.ADMIN_UPSELL:
-    return (0, a.jsx)(T.$, {});
+    return (0, s.jsx)(T.$, {});
   case p.v0.GET_STARTED:
-    return (0, a.jsx)(T.J, {});
+    return (0, s.jsx)(T.J, {});
   case p.v0.DISCOVERY:
   case p.v0.GAMES:
   case p.v0.PLAYSTYLE:
   case p.v0.TRAITS:
   case p.v0.SAVED_GUILDS:
-    return (0, a.jsxs)('div', {
+    return (0, s.jsxs)('div', {
       className: C.discoveryContainer,
       children: [
-        (0, a.jsx)(l.animated.div, {
+        (0, s.jsx)(l.animated.div, {
           className: C.toolbar,
           style: {
             opacity: u.opacity,
@@ -96,9 +96,9 @@ switch (r.useEffect(() => {
             ]).to(e => 'translateY('.concat(e, 'px)')),
             borderBottom: '1px solid var(--bg-mod-strong)'
           },
-          children: (0, a.jsx)(g.Z, {})
+          children: (0, s.jsx)(g.Z, {})
         }),
-        (0, a.jsx)(l.animated.div, {
+        (0, s.jsx)(l.animated.div, {
           className: C.content,
           style: {
             opacity: u.opacity,
@@ -110,15 +110,15 @@ switch (r.useEffect(() => {
               0
             ]).to(e => 'translateY('.concat(e, 'px)'))
           },
-          children: (0, a.jsx)(S.ZP, {
+          children: (0, s.jsx)(S.ZP, {
             width: t,
             isAnimating: i,
             variant: (0, S.s)(n)
           })
         }),
-        (0, a.jsx)('div', {
+        (0, s.jsx)('div', {
           className: C.selectors,
-          children: (0, a.jsx)(m.Z, {
+          children: (0, s.jsx)(m.Z, {
             mode: n
           })
         })
@@ -133,17 +133,17 @@ loading: e
 ref: t,
 width: n
   } = (0, u.Z)();
-  return (0, a.jsxs)('main', {
+  return (0, s.jsxs)('main', {
 className: C.container,
 ref: t,
 children: [
-  (0, a.jsx)('div', {
+  (0, s.jsx)('div', {
     className: C.dragRegion
   }),
-  e ? (0, a.jsx)('div', {
+  e ? (0, s.jsx)('div', {
     className: C.loading,
-    children: (0, a.jsx)(d.Spinner, {})
-  }) : (0, a.jsx)(A, {
+    children: (0, s.jsx)(d.Spinner, {})
+  }) : (0, s.jsx)(A, {
     width: null != n ? n : 0
   })
 ]

@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(325432),
   o = n(570928),
@@ -23,7 +23,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class T extends s.PureComponent {
+class T extends a.PureComponent {
   renderDiskUsageCircle() {
 let {
   metadata: e
@@ -37,8 +37,8 @@ return null != e && null != e.availableKB && null != e.totalKB ? (0, i.jsx)(d.Z,
 let e, t;
 let {
   path: n,
-  label: s,
-  editingPath: a,
+  label: a,
+  editingPath: s,
   isDefault: l,
   metadata: d
 } = this.props;
@@ -61,7 +61,7 @@ return null != d && (e = null != d.availableKB ? (0, _.BU)(d.availableKB, {
             (0, i.jsx)(r.Heading, {
               className: m.rowTitle,
               variant: 'heading-md/semibold',
-              children: null != s ? s : c.Z.getLabelFromPath(n)
+              children: null != a ? a : c.Z.getLabelFromPath(n)
             }),
             l ? (0, i.jsx)('span', {
               className: m.defaultIndicator,
@@ -85,7 +85,7 @@ return null != d && (e = null != d.availableKB ? (0, _.BU)(d.availableKB, {
     }),
     (0, i.jsx)(r.Button, {
       size: r.Button.Sizes.SMALL,
-      disabled: null != a,
+      disabled: null != s,
       color: r.Button.Colors.PRIMARY,
       onClick: this.handleStartEditing,
       children: I.Z.Messages.EDIT
@@ -99,7 +99,7 @@ let {
   hasGamesInstalledInPath: t
 } = this.props, {
   label: n,
-  isDefault: s
+  isDefault: a
 } = this.state;
 return (0, i.jsx)(r.Card, {
   editable: !0,
@@ -127,7 +127,7 @@ return (0, i.jsx)(r.Card, {
           }),
           (0, i.jsx)(r.Checkbox, {
             type: r.Checkbox.Types.INVERTED,
-            value: null != s ? s : this.props.isDefault,
+            value: null != a ? a : this.props.isDefault,
             disabled: this.props.isDefault,
             className: m.defaultLocationCheckbox,
             onChange: this.handleToggleDefault,
@@ -157,7 +157,7 @@ return (0, i.jsx)(r.Card, {
                     children: I.Z.Messages.CANCEL
                   }),
                   (0, i.jsx)(r.Button, {
-                    disabled: e === this.props.path && n === this.props.label && s === this.props.isDefault,
+                    disabled: e === this.props.path && n === this.props.label && a === this.props.isDefault,
                     size: r.Button.Sizes.SMALL,
                     color: r.Button.Colors.GREEN,
                     onClick: this.handleSaveChanges,
@@ -229,7 +229,7 @@ super(...e), p(this, 'state', {
 });
   }
 }
-class S extends s.PureComponent {
+class S extends a.PureComponent {
   componentDidMount() {
 (0, l.ec)(this.props.installationPaths.map(e => {
   let {
@@ -244,7 +244,7 @@ let {
   installationPathsMetadata: t,
   defaultInstallationPath: n
 } = this.props, {
-  editingPath: s
+  editingPath: a
 } = this.state;
 return (0, i.jsxs)(r.FormSection, {
   className: m.wrapper,
@@ -252,18 +252,18 @@ return (0, i.jsxs)(r.FormSection, {
   children: [
     e.map(e => {
       let {
-        path: a,
+        path: s,
         label: r
       } = e;
       return (0, i.jsx)(T, {
-        path: a,
+        path: s,
         label: r,
-        metadata: t[a],
-        isDefault: n === a,
-        editingPath: s,
-        hasGamesInstalledInPath: c.Z.hasGamesInstalledInPath(a),
+        metadata: t[s],
+        isDefault: n === s,
+        editingPath: a,
+        hasGamesInstalledInPath: c.Z.hasGamesInstalledInPath(s),
         onToggleEditing: this.handleToggleEditing
-      }, a);
+      }, s);
     }),
     (0, i.jsx)('div', {
       className: m.buttonRowWrapper,
@@ -292,7 +292,7 @@ super(...e), p(this, 'state', {
 });
   }
 }
-t.Z = a.ZP.connectStores([c.Z], () => ({
+t.Z = s.ZP.connectStores([c.Z], () => ({
   installationPaths: c.Z.installationPaths,
   installationPathsMetadata: c.Z.installationPathsMetadata,
   defaultInstallationPath: c.Z.defaultInstallationPath

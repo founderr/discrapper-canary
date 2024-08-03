@@ -1,4 +1,4 @@
-var i, s, a = n(735250);
+var i, a, s = n(735250);
 n(470079);
 var r = n(756647),
   l = n(481060),
@@ -30,7 +30,7 @@ p.default.track(A.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
   link_type: t
 });
 }
-(i = s || (s = {})).SETTINGS = 'settings', i.CHANGELOG = 'changelog', i.LIBRARY = 'library', i.STORE = 'store', i.INVITE = 'invite', i.CHANNEL = 'channel', i.GUILD_SETTINGS = 'guild_settings', i.QUEST_HOME = 'quest_home', t.Z = {
+(i = a || (a = {})).SETTINGS = 'settings', i.CHANGELOG = 'changelog', i.LIBRARY = 'library', i.STORE = 'store', i.INVITE = 'invite', i.CHANNEL = 'channel', i.GUILD_SETTINGS = 'guild_settings', i.QUEST_HOME = 'quest_home', t.Z = {
   [A.Etm.INVITE_BROWSER]: {
 scope: N.cE,
 async handler(e) {
@@ -80,7 +80,7 @@ async handler(e) {
       n.e('10778'),
       n.e('38266')
     ]).then(n.bind(n, 766775));
-    return t => (0, a.jsx)(e, {
+    return t => (0, s.jsx)(e, {
       ...t,
       guildTemplate: i
     });
@@ -102,7 +102,7 @@ handler(e) {
     o.Z.wait(() => {
       _.Z.resolveGiftCode(t, !0, !0).then(i => {
         let {
-          giftCode: s
+          giftCode: a
         } = i;
         f.ZP.focus(), p.default.track(A.rMx.OPEN_MODAL, {
           type: 'gift_accept',
@@ -114,12 +114,12 @@ handler(e) {
             n.e('92446'),
             n.e('51966')
           ]).then(n.bind(n, 409858));
-          return n => (0, a.jsx)(e, {
+          return n => (0, s.jsx)(e, {
             code: t,
             ...n
           });
         }), e({
-          giftCode: s
+          giftCode: a
         });
       }).catch(() => i(new C.Z({
         errorCode: A.lTL.INVALID_GIFT_CODE
@@ -193,14 +193,14 @@ handler: async e => {
       providerType: t,
       code: n,
       openid_params: i,
-      state: s
+      state: a
     }
   } = e;
   try {
     return await u.Z.callback(t, {
       code: n,
       openid_params: i,
-      state: s
+      state: a
     });
   } catch (e) {
     throw T.S.dispatch(A.CkL.CONNECTIONS_CALLBACK_ERROR), e;
@@ -233,11 +233,11 @@ handler(e) {
       state: t,
       path: n,
       query: i,
-      payment_source_type: s
+      payment_source_type: a
     }
   } = e;
   return (0, c.rt)({
-    paymentSourceType: s,
+    paymentSourceType: a,
     state: t,
     path: n,
     query: i

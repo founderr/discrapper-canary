@@ -1,18 +1,18 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(77878),
+  a = n(470079),
+  s = n(77878),
   r = n(378720),
   l = n(285952),
   o = n(981631),
   c = n(689938),
   d = n(963087);
-class u extends s.PureComponent {
+class u extends a.PureComponent {
   renderContentRatingImage() {
 let {
   contentRating: e,
   contentRatingAgency: t
 } = this.props.sku;
-return null == e || null == t ? null : (0, i.jsx)(a.Z, {
+return null == e || null == t ? null : (0, i.jsx)(s.Z, {
   className: d.rating,
   agency: t,
   rating: e.rating
@@ -28,7 +28,7 @@ let {
 } = this.props;
 if (null == e || null == t)
   return null;
-let s = {
+let a = {
     [o.aIt.ESRB]: {
       1: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ALCOHOL_REFERENCE,
       2: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ANIMATED_BLOOD,
@@ -84,7 +84,7 @@ let s = {
       7: c.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_DISCRIMINATION
     }
   },
-  a = e.descriptors.map(e => s[t][e]).join(', ');
+  s = e.descriptors.map(e => a[t][e]).join(', ');
 return (0, i.jsxs)('div', {
   className: n,
   children: [
@@ -97,7 +97,7 @@ return (0, i.jsxs)('div', {
         this.renderContentRatingImage(),
         (0, i.jsx)('div', {
           className: d.__invalid_info,
-          children: a
+          children: s
         })
       ]
     })

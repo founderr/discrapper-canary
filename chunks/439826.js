@@ -4,9 +4,9 @@ return C;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(338545),
   o = n(186325),
   c = n(780384),
@@ -26,16 +26,16 @@ var i = n(735250),
 function C(e) {
   var t, n;
   let {
-quest: a,
+quest: s,
 isHovering: C,
 errorHints: N,
 onCtxMenuClose: A,
 onCtxMenuOpen: v,
 onCtxMenuSelect: Z
-  } = e, L = (0, m.j8)(a), O = (0, _.ZP)(), R = (0, c.wj)(O) ? T.BRd.DARK : T.BRd.LIGHT, x = R === T.BRd.DARK, b = s.useMemo(() => (0, m.nP)(a.config.assets.hero), [a]), P = s.useContext(o.S).reducedMotion.enabled, M = (0, m.Mi)(a, I.jn.GIFT_INVENTORY_FOR_YOU), D = (0, E.tP)(a), y = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, j = (null === (n = a.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, U = s.useRef(C), G = s.useRef(null), k = (0, E.B6)(a.config.expiresAt, {
+  } = e, L = (0, m.j8)(s), O = (0, _.ZP)(), R = (0, c.wj)(O) ? T.BRd.DARK : T.BRd.LIGHT, x = R === T.BRd.DARK, b = a.useMemo(() => (0, m.nP)(s.config.assets.hero), [s]), P = a.useContext(o.S).reducedMotion.enabled, M = (0, m.Mi)(s, I.jn.GIFT_INVENTORY_FOR_YOU), D = (0, E.tP)(s), y = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, j = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, U = a.useRef(C), G = a.useRef(null), k = (0, E.B6)(s.config.expiresAt, {
 month: 'numeric',
 day: 'numeric'
-  }), w = (0, E.z)(a), {
+  }), w = (0, E.z)(s), {
 ref: B,
 height: H = 0
   } = (0, u.Z)([N]), V = !j && !w && N.length > 0, F = (0, l.useSpring)({
@@ -46,7 +46,7 @@ config: {
   friction: 25
 }
   });
-  return s.useEffect(() => {
+  return a.useEffect(() => {
 if (b && null != G.current)
   return U.current !== C && (C ? G.current.play() : (G.current.pause(), G.current.currentTime = 0)), U.current = C, () => {
     var e;
@@ -78,7 +78,7 @@ children: [
       id: 'QuestTileBanner',
       children: e => (0, i.jsx)('img', {
         ref: e,
-        alt: ''.concat(a.config.messages.questName),
+        alt: ''.concat(s.config.messages.questName),
         className: f.heroAsset,
         src: L
       })
@@ -113,7 +113,7 @@ children: [
                 onClose: A,
                 onSelect: Z,
                 questContent: I.jn.QUEST_HOME_DESKTOP,
-                quest: a,
+                quest: s,
                 hideLearnMore: !0,
                 shouldShowDisclosure: !0,
                 showShareLink: !0,
@@ -135,8 +135,8 @@ children: [
             children: e => (0, i.jsx)('img', {
               ref: e,
               className: f.partnerBranding,
-              alt: a.config.messages.gameTitle,
-              src: (0, m.Gs)(a, R)
+              alt: s.config.messages.gameTitle,
+              src: (0, m.Gs)(s, R)
             })
           }),
           (0, i.jsxs)('div', {
@@ -146,7 +146,7 @@ children: [
                 variant: 'text-sm/medium',
                 color: 'text-muted',
                 children: S.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({
-                  brandName: a.config.messages.gamePublisher
+                  brandName: s.config.messages.gamePublisher
                 })
               }),
               D || y ? null : (0, i.jsx)(d.Text, {

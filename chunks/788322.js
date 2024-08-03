@@ -4,9 +4,9 @@ return Z;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(481060),
   o = n(239091),
   c = n(906732),
@@ -32,7 +32,7 @@ let Z = () => (0, i.jsx)('div', {
 t.Z = e => {
   var t;
   let {
-guild: a,
+guild: s,
 theme: Z,
 onView: L,
 onTagClick: O
@@ -45,7 +45,7 @@ description: M,
 presenceCount: D,
 memberCount: y,
 keywords: j
-  } = a, [U, G] = s.useState(!1), [k, w] = s.useState(!1), {
+  } = s, [U, G] = a.useState(!1), [k, w] = a.useState(!1), {
 analyticsLocations: B
   } = (0, c.ZP)(), H = I.ZP.getGuildDiscoverySplashURL({
 id: R,
@@ -82,13 +82,13 @@ if (!t.includes('Menu')) {
   }
   w(!0);
   try {
-    null != L && await L(a.id);
+    null != L && await L(s.id);
   } finally {
     w(!1);
   }
 }
   };
-  s.useEffect(() => p.w.trackExposure({
+  a.useEffect(() => p.w.trackExposure({
 location: '4302e4_1'
   }));
   let {
@@ -120,7 +120,7 @@ children: [
             } = await Promise.resolve().then(n.bind(n, 455839));
             return t => (0, i.jsx)(e, {
               ...t,
-              guild: a
+              guild: s
             });
           });
         },
@@ -161,7 +161,7 @@ children: [
                     children: [
                       (0, i.jsx)('div', {
                         children: (0, i.jsx)(d.Z, {
-                          guild: a,
+                          guild: s,
                           className: N.guildBadge,
                           size: 16
                         })
@@ -181,9 +181,9 @@ children: [
                 children: M
               }),
               W && null != j && null != O && (0, i.jsx)(T.F, {
-                guildId: a.id,
+                guildId: s.id,
                 discoveryTagStyle: T.B.ALT,
-                onTagClick: e => O(e, a.id),
+                onTagClick: e => O(e, s.id),
                 tags: j,
                 section: m.P1.SEARCH
               }),
@@ -224,7 +224,7 @@ children: [
           z ? (0, i.jsx)('div', {
             className: N.actionButtons,
             children: (0, i.jsx)(S.Z, {
-              guild: a
+              guild: s
             })
           }) : null
         ]

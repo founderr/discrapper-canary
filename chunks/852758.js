@@ -10,8 +10,8 @@ return Z;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(990547),
+  a = n(470079),
+  s = n(990547),
   r = n(442837),
   l = n(544891),
   o = n(481060),
@@ -43,10 +43,10 @@ m.Z
   ], () => ({
 action: g.Z.getAction(),
 theme: m.Z.theme
-  })), Z = S.Z.getVerificationTypes(e), [L, O] = s.useState(0), R = (0, _.Z)(Z);
+  })), Z = S.Z.getVerificationTypes(e), [L, O] = a.useState(0), R = (0, _.Z)(Z);
   (0, E.Z)({
-type: a.ImpressionTypes.MODAL,
-name: a.ImpressionNames.USER_ACTION_REQUIRED,
+type: s.ImpressionTypes.MODAL,
+name: s.ImpressionNames.USER_ACTION_REQUIRED,
 properties: {
   verification_type: Z[0],
   verification_types: Z
@@ -82,9 +82,9 @@ b = () => {
     Layer: T.ZP
   });
 };
-  return s.useEffect(() => (h.Z.disable(), () => {
+  return a.useEffect(() => (h.Z.disable(), () => {
 h.Z.enable();
-  }), []), s.useEffect(() => {
+  }), []), a.useEffect(() => {
 (null == R ? void 0 : R[0]) === f.PUi.PHONE && (null == Z ? void 0 : Z[0]) === f.PUi.EMAIL && (0, o.openModalLazy)(async () => {
   let {
     default: e

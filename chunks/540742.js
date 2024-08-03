@@ -4,12 +4,12 @@ return r;
   }
 });
 var i = n(652874),
-  s = n(49898),
-  a = n(731455);
+  a = n(49898),
+  s = n(731455);
 let r = (0, i.Z)(() => ({
   isSearchVisible: !1,
-  selectedTab: s.vf.GAMING,
+  selectedTab: a.vf.GAMING,
   searchQuery: '',
   searchResultsQuery: '',
-  searchCategoryId: a.Hk
+  searchCategoryId: s.Hk
 }));

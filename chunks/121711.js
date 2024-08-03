@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(990547),
+  a = n(470079),
+  s = n(990547),
   r = n(442837),
   l = n(780384),
   o = n(481060),
@@ -45,18 +45,18 @@ for (let t of U)
     break;
   }
   }
-  s.useEffect(() => {
+  a.useEffect(() => {
 j && !t && ((0, p.dL)(Z.Z5c.FRIENDS), c.Z.open(Z.oAB.INVENTORY));
   }, [
 j,
 t
-  ]), s.useEffect(() => {
+  ]), a.useEffect(() => {
 (0, u.h)({
-  name: a.ImpressionNames.QUEST_HOME,
-  type: a.ImpressionTypes.VIEW
+  name: s.ImpressionNames.QUEST_HOME,
+  type: s.ImpressionTypes.VIEW
 });
   }, []);
-  let B = s.useCallback(() => {
+  let B = a.useCallback(() => {
 window.open(T.Z.getArticleURL(Z.BhN.QUESTS_LEARN_MORE));
   }, []);
   return ((0, _.Tt)({

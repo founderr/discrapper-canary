@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(748780),
   o = n(91192),
   c = n(481060),
@@ -12,7 +12,7 @@ var i = n(735250),
 t.Z = function(e) {
   let {
 index: t,
-children: a,
+children: s,
 user: h,
 channel: E,
 onClick: I,
@@ -20,7 +20,7 @@ isFocused: m,
 isActive: g,
 onOtherHover: p,
 className: T
-  } = e, [S, f] = s.useState(!1), [C, N] = s.useState(!1), A = () => {
+  } = e, [S, f] = a.useState(!1), [C, N] = a.useState(!1), A = () => {
 f(!0), m && !g && !C && (null == p || p());
   }, v = () => {
 f(!1);
@@ -65,7 +65,7 @@ children: e => (0, i.jsx)(c.FocusRing, {
       opacity: 1
     },
     ...e,
-    children: a(S || g || C)
+    children: s(S || g || C)
   })
 })
   });

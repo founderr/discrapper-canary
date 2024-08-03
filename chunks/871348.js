@@ -4,8 +4,8 @@ return f;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(338545),
+  a = n(470079),
+  s = n(338545),
   r = n(143927),
   l = n(481060),
   o = n(393238),
@@ -28,7 +28,7 @@ guilds: n
   } = (0, c.C3)({
 location: 'ClanDiscoveryAdminContainer',
 includeConverted: !0
-  }), a = s.useMemo(() => n.filter(e => !(0, d.EJ)(e)), [n]);
+  }), s = a.useMemo(() => n.filter(e => !(0, d.EJ)(e)), [n]);
   return (0, i.jsx)('section', {
 className: p.guilds,
 children: (0, i.jsxs)(l.AdvancedScrollerNone, {
@@ -45,7 +45,7 @@ children: (0, i.jsxs)(l.AdvancedScrollerNone, {
         (0, i.jsx)('div', {
           className: p.backgroundImageContent,
           children: (0, i.jsx)(E.Z, {
-            eligibleGuilds: a,
+            eligibleGuilds: s,
             eligibleGuildsIncludingConverted: n
           })
         })
@@ -65,7 +65,7 @@ onScroll: t
   } = e, {
 ref: n,
 width: c
-  } = (0, o.Z)(), d = (0, h.GN)(e => e.mode, r.Z), [u, E] = s.useState(!0), m = (0, l.useSpring)({
+  } = (0, o.Z)(), d = (0, h.GN)(e => e.mode, r.Z), [u, E] = a.useState(!0), m = (0, l.useSpring)({
 from: {
   opacity: 0
 },
@@ -84,7 +84,7 @@ onRest: () => E(!1)
 ref: n,
 className: p.guilds,
 children: [
-  (0, i.jsx)(a.animated.div, {
+  (0, i.jsx)(s.animated.div, {
     className: p.list,
     style: {
       opacity: m.opacity
@@ -112,7 +112,7 @@ onScroll: t
   } = e, {
 loading: n
   } = (0, u.LE)(), {
-enableClanCreation: s
+enableClanCreation: a
   } = (0, c.C3)({
 location: 'GuildsTab',
 includeConverted: !0
@@ -123,7 +123,7 @@ children: (0, i.jsx)('div', {
   className: p.loading,
   children: (0, i.jsx)(l.Spinner, {})
 })
-  }) : s ? (0, i.jsx)(T, {
+  }) : a ? (0, i.jsx)(T, {
 onScroll: t
   }) : (0, i.jsx)(S, {
 onScroll: t

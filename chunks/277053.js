@@ -1,6 +1,6 @@
-let i, s;
+let i, a;
 n(47120);
-var a, r, l, o, c = n(392711),
+var s, r, l, o, c = n(392711),
   d = n.n(c),
   u = n(442837),
   _ = n(433517),
@@ -33,9 +33,9 @@ function x() {
   if (A = I.Z.getChannel(), v = I.Z.getCategory(), null == A)
 return !1;
   let e = A.getGuildId();
-  N = C = R(A), null == C[Z] && (Z = e), s = null != v, i = E.o4(A, v), L = null, f = !1, S = g.QZA.CLOSED, T.clear();
+  N = C = R(A), null == C[Z] && (Z = e), a = null != v, i = E.o4(A, v), L = null, f = !1, S = g.QZA.CLOSED, T.clear();
 }
-class b extends(a = u.ZP.Store) {
+class b extends(s = u.ZP.Store) {
   initialize() {
 this.waitFor(I.Z, m.Z);
   }
@@ -61,7 +61,7 @@ return Z;
 return S;
   }
   get isLockable() {
-return s;
+return a;
   }
   get locked() {
 return i;
@@ -95,17 +95,17 @@ x();
 let {
   id: t,
   allow: n,
-  deny: s
-} = e, a = null == C ? void 0 : C[t];
-if (null == a || null == A)
+  deny: a
+} = e, s = null == C ? void 0 : C[t];
+if (null == s || null == A)
   return !1;
-a = {
-  ...a,
+s = {
+  ...s,
   allow: n,
-  deny: s
+  deny: a
 }, C = {
   ...C,
-  [t]: a
+  [t]: s
 }, T.add(t), S = g.QZA.OPEN, f = !d().isEqual(C, N), i = E.o4(A, v);
   },
   CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {

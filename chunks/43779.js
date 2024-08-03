@@ -4,9 +4,9 @@ return S;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(442837),
   o = n(481060),
   c = n(393238),
@@ -22,7 +22,7 @@ var i = n(735250),
 let T = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 
 function S(e) {
-  var t, n, a;
+  var t, n, s;
   let {
 quest: S,
 questContent: f,
@@ -30,15 +30,15 @@ isHovering: C,
 contentPosition: N,
 rowIndex: A,
 onReceiveErrorHints: v
-  } = e, Z = _.r.build(S.config).defaultReward.messages.name, L = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, [O, R] = s.useState(!1), x = s.useRef(null);
+  } = e, Z = _.r.build(S.config).defaultReward.messages.name, L = (null === (t = S.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, [O, R] = a.useState(!1), x = a.useRef(null);
   (0, c.P)(x, e => {
 let {
   height: t
 } = e;
 null != t && t > 20 && R(!0);
   }, [R]);
-  let b = s.useRef(null),
-[P, M] = s.useState(!1);
+  let b = a.useRef(null),
+[P, M] = a.useState(!1);
   (0, c.P)(b, e => {
 let {
   height: t,
@@ -47,25 +47,25 @@ let {
 null != t && null != n && n - t > 1 && M(!0);
   }, [M]);
   let D = (null === (n = S.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-y = (null === (a = S.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
+y = (null === (s = S.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
 {
   completedRatio: j
 } = (0, u.I)(S),
 U = (0, u.Bd)(S),
-G = s.useCallback(() => (0, i.jsx)(o.Text, {
+G = a.useCallback(() => (0, i.jsx)(o.Text, {
   variant: 'text-md/semibold',
   color: 'text-brand',
   tag: 'span',
   className: p.header,
   children: Z
 }), [Z]),
-k = s.useMemo(() => y ? G() : g.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+k = a.useMemo(() => y ? G() : g.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
   rewardHook: G
 }), [
   y,
   G
 ]),
-w = s.useMemo(() => {
+w = a.useMemo(() => {
   let e = !C && O,
     t = !C && !O;
   if (null != U)

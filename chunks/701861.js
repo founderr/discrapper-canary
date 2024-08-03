@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(392711),
-  r = n.n(a),
+  a = n(470079),
+  s = n(392711),
+  r = n.n(s),
   l = n(442837),
   o = n(481060),
   c = n(493683),
@@ -34,18 +34,18 @@ function v(e) {
   let {
 user: t,
 onSelect: n
-  } = e, s = () => {
+  } = e, a = () => {
 u.Z.removeFriend(t.id, {
   location: 'Friends'
 });
-  }, a = (0, l.e7)([E.Z], () => E.Z.supports(f.AN.VIDEO));
+  }, s = (0, l.e7)([E.Z], () => E.Z.supports(f.AN.VIDEO));
   return (0, i.jsxs)(o.Menu, {
 navId: 'friend-row',
 'aria-label': C.Z.Messages.USER_ACTIONS_MENU_LABEL,
 onClose: d.Zy,
 onSelect: n,
 children: [
-  a ? (0, i.jsx)(o.MenuItem, {
+  s ? (0, i.jsx)(o.MenuItem, {
     id: 'start-video-call',
     label: C.Z.Messages.START_VIDEO_CALL,
     action: function() {
@@ -69,7 +69,7 @@ children: [
         }),
         confirmText: C.Z.Messages.REMOVE_FRIEND,
         cancelText: C.Z.Messages.CANCEL,
-        onConfirm: s,
+        onConfirm: a,
         ...e,
         children: (0, i.jsx)(o.Text, {
           variant: 'text-md/normal',
@@ -84,7 +84,7 @@ children: [
 ]
   });
 }
-class Z extends s.PureComponent {
+class Z extends a.PureComponent {
   componentWillLeave(e) {
 null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
   }
@@ -96,8 +96,8 @@ let {
   user: e,
   isFocused: t,
   activities: n,
-  applicationStream: s,
-  status: a,
+  applicationStream: a,
+  status: s,
   isMobile: r
 } = this.props, {
   isActiveRow: l
@@ -114,13 +114,13 @@ return (0, i.jsx)(g.Z, {
     children: [
       (0, i.jsx)(T.Z, {
         user: e,
-        status: a,
+        status: s,
         isMobile: r,
         subText: (0, i.jsx)(p.Z, {
           hovered: t,
           activities: n,
-          applicationStream: s,
-          status: a,
+          applicationStream: a,
+          status: s,
           user: e
         }),
         hovered: t,
@@ -148,7 +148,7 @@ return (0, i.jsx)(g.Z, {
 });
   }
   constructor(...e) {
-super(...e), A(this, 'peopleListItemRef', s.createRef()), A(this, 'state', {
+super(...e), A(this, 'peopleListItemRef', a.createRef()), A(this, 'state', {
   isActiveRow: !1
 }), A(this, 'handleOpenPrivateChannel', e => {
   let {

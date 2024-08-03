@@ -1,9 +1,9 @@
 n.d(t, {
   J: function() {
-return s;
+return a;
   },
   d: function() {
-return a;
+return s;
   }
 });
 let i = (0, n(818083).B)({
@@ -29,9 +29,9 @@ treatments: [{
   }
 ]
   }),
-  s = e => i.useExperiment({
+  a = e => i.useExperiment({
 location: e
   }).serverMarketingEnabled,
-  a = e => i.getCurrentConfig({
+  s = e => i.getCurrentConfig({
 location: e
   }).serverMarketingEnabled;

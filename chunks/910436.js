@@ -5,8 +5,8 @@ return S;
 }), n(653041), n(47120);
 var i = n(735250);
 n(470079);
-var s = n(287734),
-  a = n(872810),
+var a = n(287734),
+  s = n(872810),
   r = n(122810),
   l = n(841784),
   o = n(503438),
@@ -36,15 +36,15 @@ guildContext: Z
   } = t, L = [], O = e => {
 var t, n;
 let {
-  length: s
+  length: a
 } = L;
-if (0 === s) {
+if (0 === a) {
   L.push(e);
   return;
 }
-let a = L[s - 1],
+let s = L[a - 1],
   r = ''.concat(null !== (t = null == e ? void 0 : e.key) && void 0 !== t ? t : ''),
-  l = ''.concat(null !== (n = null == a ? void 0 : a.key) && void 0 !== n ? n : '').startsWith('game') && r.startsWith('rich-presence');
+  l = ''.concat(null !== (n = null == s ? void 0 : s.key) && void 0 !== n ? n : '').startsWith('game') && r.startsWith('rich-presence');
 L.push((0, i.jsx)(m.Z.Separator, {
   inset: l
 }, 'sep-'.concat(r))), L.push(e);
@@ -55,30 +55,30 @@ L.push((0, i.jsx)(m.Z.Separator, {
 of(C.length > 0 && C.forEach(e => {
   let {
     members: t,
-    channel: s,
-    guild: a
+    channel: a,
+    guild: s
   } = e;
   O((0, i.jsx)(m.Z.VoiceSection, {
-    guild: a,
-    channel: s,
+    guild: s,
+    channel: a,
     members: t,
     partySize: function(e, t) {
       let n;
       let i = e.length,
-        s = 0;
+        a = 0;
       !1;
-      n = i + s;
+      n = i + a;
       return {
         knownSize: i,
-        unknownSize: s,
+        unknownSize: a,
         totalSize: n
       };
     }(t),
     onChannelContextMenu: n,
     onGuildClick: () => {
-      (0, h.X)(a.id);
+      (0, h.X)(s.id);
     }
-  }, 'voice-'.concat(s.id)));
+  }, 'voice-'.concat(a.id)));
 }), t.currentActivities))
 if (null != e) {
   let t = I.ct(e);
@@ -99,11 +99,11 @@ O((0, i.jsx)(m.Z.ApplicationStreamingSection, {
   activity: r,
   applicationStream: t,
   onPreviewClick: () => {
-    s.default.selectVoiceChannel(t.channelId), (0, a.iV)(t);
+    a.default.selectVoiceChannel(t.channelId), (0, s.iV)(t);
   }
 }, 'application-stream-'.concat(t.ownerId)));
   }), N.forEach((e, t) => {
-var n, s, a, h, I, g, f, v, L;
+var n, a, s, h, I, g, f, v, L;
 let {
   activity: R,
   game: x,
@@ -122,10 +122,10 @@ if (N.length > 1 && R.type === T.IIU.PLAYING && !(0, r.Z)(R) && null != x)
       totalSize: b.length
     },
     members: b
-  }, 'game-'.concat(null !== (n = R.session_id) && void 0 !== n ? n : t, '-').concat(null !== (s = R.application_id) && void 0 !== s ? s : t)));
+  }, 'game-'.concat(null !== (n = R.session_id) && void 0 !== n ? n : t, '-').concat(null !== (a = R.application_id) && void 0 !== a ? a : t)));
 else if ((0, l.Z)(R)) {
   let e = new Set(b.map(e => e.id)),
-    t = null === (a = C.find(e => null != e)) || void 0 === a ? void 0 : a.channel;
+    t = null === (s = C.find(e => null != e)) || void 0 === s ? void 0 : s.channel;
   null != t && O((0, i.jsx)(m.Z.EmbeddedActivitySection, {
     activity: R,
     participants: e,

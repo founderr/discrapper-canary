@@ -1,6 +1,6 @@
 var i = n(735250),
-  s = n(470079),
-  a = n(948789),
+  a = n(470079),
+  s = n(948789),
   r = n(481060),
   l = n(442837),
   o = n(212093),
@@ -48,9 +48,9 @@ isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
 ...e,
 icon: Z(e.categoryId)
   })), R = e => {
-(0, o.uY)(e, !0), u.Z.closeSidebar(), t && (0, o.AQ)(), (0, _.OG)() && e !== f.Gj.Quests && (0, a.uL)(C.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === f.Gj.Quests && (0, a.uL)(C.Z5c.QUEST_HOME);
+(0, o.uY)(e, !0), u.Z.closeSidebar(), t && (0, o.AQ)(), (0, _.OG)() && e !== f.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === f.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
   };
-  return s.useEffect(() => {
+  return a.useEffect(() => {
 (0, g.le)(!1, !0);
   }, [e]), (0, i.jsxs)(r.Scroller, {
 children: [

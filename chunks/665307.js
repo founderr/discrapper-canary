@@ -3,8 +3,8 @@ n.d(t, {
 return G;
   }
 }), n(411104), n(47120);
-var i, s = n(735250),
-  a = n(470079),
+var i, a = n(735250),
+  s = n(470079),
   r = n(120356),
   l = n.n(r),
   o = n(266067),
@@ -50,11 +50,11 @@ let {
   flag: t,
   icon: n,
   item: i,
-  tooltip: a
+  tooltip: s
 } = e, r = i.libraryApplication.hasFlag(t);
-return (0, s.jsx)(_.Tooltip, {
-  text: a,
-  children: e => (0, s.jsx)(n, {
+return (0, a.jsx)(_.Tooltip, {
+  text: s,
+  children: e => (0, a.jsx)(n, {
     className: l()(R.settingIcon, {
       [R.hidden]: !r
     }),
@@ -68,24 +68,24 @@ return (0, s.jsx)(_.Tooltip, {
   sort: !0,
   cellClassName: R.nameCell,
   bodyCellClassName: R.nameBodyCell,
-  render: e => (0, s.jsxs)(f.Z, {
+  render: e => (0, a.jsxs)(f.Z, {
     align: f.Z.Align.CENTER,
     children: [
-      (0, s.jsx)(g.Z, {
+      (0, a.jsx)(g.Z, {
         game: e.application,
         size: g.Z.Sizes.SMALL,
         className: R.gameIcon
       }),
-      (0, s.jsxs)('div', {
+      (0, a.jsxs)('div', {
         className: R.nameCellInfo,
         children: [
-          (0, s.jsx)('div', {
+          (0, a.jsx)('div', {
             className: R.nameCellText,
             children: e.libraryApplication.getBranchedName(e.application)
           }),
-          e.libraryApplication.hasFlag(L.eHb.PREMIUM) ? (0, s.jsx)(_.Tooltip, {
+          e.libraryApplication.hasFlag(L.eHb.PREMIUM) ? (0, a.jsx)(_.Tooltip, {
             text: O.Z.Messages.PREMIUM_GAME,
-            children: e => (0, s.jsx)(_.NitroWheelIcon, {
+            children: e => (0, a.jsx)(_.NitroWheelIcon, {
               size: 'md',
               color: 'currentColor',
               className: R.nitroIcon,
@@ -105,7 +105,7 @@ return (0, s.jsx)(_.Tooltip, {
   bodyCellClassName: R.textCell,
   render(e) {
     let t = e.libraryApplication.getDistributor();
-    return (0, s.jsx)(f.Z, {
+    return (0, a.jsx)(f.Z, {
       align: f.Z.Align.CENTER,
       children: null != t ? L.EOG[t] : O.Z.Messages.GAME_LIBRARY_NOT_APPLICABLE
     });
@@ -119,10 +119,10 @@ return (0, s.jsx)(_.Tooltip, {
   bodyCellClassName: R.textCell,
   render(e) {
     let t;
-    return t = e.isRunning ? O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? O.Z.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, s.jsx)(p.ZP, {
+    return t = e.isRunning ? O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? O.Z.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, a.jsx)(p.ZP, {
       end: e.lastPlayed,
       location: p.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
-    }) : O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, s.jsx)(f.Z, {
+    }) : O.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, a.jsx)(f.Z, {
       align: f.Z.Align.CENTER,
       className: l()({
         [R.lastPlayedCellNew]: e.isNew
@@ -140,24 +140,24 @@ return (0, s.jsx)(_.Tooltip, {
     if (null == t)
       throw Error('No cell props defined.');
     let o = e.key === t.activeRowKey;
-    return (0, s.jsxs)(a.Fragment, {
+    return (0, a.jsxs)(s.Fragment, {
       children: [
-        (0, s.jsxs)('div', {
+        (0, a.jsxs)('div', {
           className: R.settingIcons,
           children: [
-            (0, s.jsx)(D, {
+            (0, a.jsx)(D, {
               flag: L.eHb.PRIVATE,
               item: e,
               icon: _.EyeSlashIcon,
               tooltip: O.Z.Messages.GAME_LIBRARY_PRIVATE_TOOLTIP
             }),
-            (0, s.jsx)(D, {
+            (0, a.jsx)(D, {
               flag: L.eHb.OVERLAY_DISABLED,
               item: e,
               icon: _.ScreenSlashIcon,
               tooltip: O.Z.Messages.GAME_LIBRARY_OVERLAY_DISABLED_TOOLTIP
             }),
-            (0, s.jsx)(Z.Z, {
+            (0, a.jsx)(Z.Z, {
               className: l()(R.settingIcon, {
                 [R.hidden]: !e.supportsCloudSync
               }),
@@ -165,7 +165,7 @@ return (0, s.jsx)(_.Tooltip, {
             })
           ]
         }),
-        (0, A.Je)(e.libraryApplication) ? (0, s.jsx)(m.Z, {
+        (0, A.Je)(e.libraryApplication) ? (0, a.jsx)(m.Z, {
           analyticsListSort: (i = t.sortKey, r = t.sortDirection, ''.concat(M[i], ' ').concat(r === L.sHY.ASCENDING ? 'ASC' : 'DESC')),
           analyticsListIndex: n,
           source: L.Sbl.APPLICATION_LIBRARY,
@@ -176,7 +176,7 @@ return (0, s.jsx)(_.Tooltip, {
           hideProgress: null != e.defaultAction,
           onDropdownOpen: () => null != t && t.setActiveRowKey(e),
           onDropdownClose: () => null != t && t.clearActiveRowKey()
-        }) : (0, s.jsx)('div', {
+        }) : (0, a.jsx)('div', {
           children: 'deprecated!'
         })
       ]
@@ -189,13 +189,13 @@ let {
   item: t,
   activeRowKey: n,
   highlightedApplicationKey: i,
-  onMouseEnter: a,
+  onMouseEnter: s,
   onMouseLeave: r,
   onContextMenu: o,
   setRef: c,
   ...d
 } = e, u = t.key === n, _ = t.key === i;
-return (0, s.jsx)('div', {
+return (0, a.jsx)('div', {
   className: l()({
     [R.rowWrapperActive]: u && !_,
     [R.rowWrapperGlow]: _,
@@ -203,15 +203,15 @@ return (0, s.jsx)('div', {
     [R.rowWrapperDim]: !u && !t.isLaunchable
   }),
   ref: e => c(e, t.key),
-  onMouseEnter: () => a(t),
+  onMouseEnter: () => s(t),
   onMouseLeave: r,
   onContextMenu: e => o(e, t),
-  children: (0, s.jsx)('div', {
+  children: (0, a.jsx)('div', {
     ...d
   })
 });
   };
-class U extends(i = a.PureComponent) {
+class U extends(i = s.PureComponent) {
   componentDidMount() {
 let {
   fetched: e
@@ -299,24 +299,24 @@ let {
 } = this.props, i = t.length > 0;
 return i ? null : (e = '' !== n ? O.Z.Messages.APPLICATION_LIBRARY_EMPTY_SEARCH_DESCRIPTION.format({
   query: n
-}) : O.Z.Messages.APPLICATION_LIBRARY_EMPTY_STATE_DESCRIPTION_NO_IMPORT, (0, s.jsxs)('div', {
+}) : O.Z.Messages.APPLICATION_LIBRARY_EMPTY_STATE_DESCRIPTION_NO_IMPORT, (0, a.jsxs)('div', {
   className: i ? R.emptyStateSmall : R.emptyStateLarge,
   children: [
-    (0, s.jsx)('div', {
+    (0, a.jsx)('div', {
       className: R.emptyWumpus
     }),
-    (0, s.jsx)(f.Z, {
+    (0, a.jsx)(f.Z, {
       grow: 0,
       shrink: i ? 1 : 0,
       direction: f.Z.Direction.VERTICAL,
-      children: (0, s.jsxs)('div', {
+      children: (0, a.jsxs)('div', {
         className: R.emptyStateText,
         children: [
-          (0, s.jsx)('div', {
+          (0, a.jsx)('div', {
             className: R.emptyStateHeader,
             children: O.Z.Messages.APPLICATION_LIBRARY_EMPTY_STATE_HEADER
           }),
-          (0, s.jsx)('div', {
+          (0, a.jsx)('div', {
             className: R.emptyStateDescription,
             children: e
           })
@@ -337,9 +337,9 @@ let {
   overflowMenuRowKey: l,
   highlightedApplicationKey: o
 } = this.state;
-return (0, s.jsxs)(a.Fragment, {
+return (0, a.jsxs)(s.Fragment, {
   children: [
-    n.length > 0 ? (0, s.jsx)(C.Z, {
+    n.length > 0 ? (0, a.jsx)(C.Z, {
       columns: y,
       data: n,
       sortData: !1,
@@ -402,7 +402,7 @@ super(...e), x(this, '_didUnmount', !1), x(this, '_rowRefs', {}), x(this, 'state
     let {
       default: e
     } = await n.e('98335').then(n.bind(n, 485292));
-    return n => (0, s.jsx)(e, {
+    return n => (0, a.jsx)(e, {
       ...n,
       applicationId: t.libraryApplication.id,
       branchId: t.libraryApplication.branchId,
@@ -416,7 +416,7 @@ super(...e), x(this, '_didUnmount', !1), x(this, '_rowRefs', {}), x(this, 'state
 }
 
 function G(e) {
-  let t = a.useContext(N.AnalyticsContext),
+  let t = s.useContext(N.AnalyticsContext),
 n = (0, o.TH)(),
 {
   applicationViewItems: i,
@@ -438,7 +438,7 @@ n = (0, o.TH)(),
   activeRowKey: S.Z.activeRowKey,
   isNavigatingByKeyboard: S.Z.isNavigatingByKeyboard
 }));
-  return (0, s.jsx)(U, {
+  return (0, a.jsx)(U, {
 ...e,
 analyticsContext: t,
 location: n,

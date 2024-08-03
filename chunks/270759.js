@@ -1,8 +1,8 @@
 n(610138), n(216116), n(78328), n(815648), n(47120), n(757143);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(266067),
   o = n(873546),
   c = n(442837),
@@ -41,20 +41,20 @@ children: [
 t.Z = function(e) {
   let {
 initialSection: t
-  } = e, n = (0, l.TH)(), a = (0, l.k6)();
-  s.useEffect(() => {
+  } = e, n = (0, l.TH)(), s = (0, l.k6)();
+  a.useEffect(() => {
 'true' === new URLSearchParams(n.search).get('confirm-age') && u.Z.dispatch({
   type: 'AGE_GATE_MODAL_OPEN',
   source: L.L0.DEEP_LINK_PROMPT
 }).then(() => {
-  a.replace(Z.Z5c.ME);
+  s.replace(Z.Z5c.ME);
 });
   }, [
-a,
+s,
 n
-  ]), s.useEffect(() => {
+  ]), a.useEffect(() => {
 _.Y(Z.Z5c.FRIENDS), (0, T.e)('friends');
-  }, []), s.useEffect(() => {
+  }, []), a.useEffect(() => {
 null != t && h.Z.setInitialSection(t);
   }, [t]);
   let g = (0, c.e7)([S.Z], () => S.Z.theme),

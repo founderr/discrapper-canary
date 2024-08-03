@@ -5,8 +5,8 @@ return m;
 }), n(47120);
 var i = n(735250);
 n(470079);
-var s = n(512722),
-  a = n.n(s),
+var a = n(512722),
+  s = n.n(a),
   r = n(841784),
   l = n(503438),
   o = n(802856),
@@ -21,7 +21,7 @@ var s = n(512722),
 function m(e) {
   let {
 party: t,
-onUserContextMenu: s
+onUserContextMenu: a
   } = e, {
 priorityMembers: m,
 guildContext: g
@@ -34,18 +34,18 @@ let {
     user: t
   } = e;
   return t.id;
-})), s = n.filter(e => !i.has(e.id)), a = d.ZP.getName(t[0].user), r = null != t[1] ? d.ZP.getName(t[1].user) : null != s[0] ? d.ZP.getName(s[0]) : null;
+})), a = n.filter(e => !i.has(e.id)), s = d.ZP.getName(t[0].user), r = null != t[1] ? d.ZP.getName(t[1].user) : null != a[0] ? d.ZP.getName(a[0]) : null;
 switch (n.length) {
   case 1:
-    return a;
+    return s;
   case 2:
     return I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN_ONLY.format({
-      user1: a,
+      user1: s,
       user2: r
     });
   default:
     return I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN.format({
-      user1: a,
+      user1: s,
       user2: r,
       extras: n.length - 2
     });
@@ -56,11 +56,11 @@ icon: f
   } = function(e) {
 var t;
 let {
-  priorityMembers: s,
+  priorityMembers: a,
   partiedMembers: d,
   voiceChannels: m,
   currentActivities: g
-} = e, p = s.length, T = d.length - p, S = g[0], f = null == S ? void 0 : S.activity, C = null == S ? void 0 : S.startedPlayingTime, N = {
+} = e, p = a.length, T = d.length - p, S = g[0], f = null == S ? void 0 : S.activity, C = null == S ? void 0 : S.startedPlayingTime, N = {
   name: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ''
 };
 if ((0, r.Z)(f) && null != f)
@@ -111,8 +111,8 @@ if (p + T === 1 && null != S) {
           }) : null
       };
     case E.IIU.LISTENING:
-      let s;
-      return s = (0, l.Z)(f) ? (0, i.jsx)(_.Z.Header.Icon, {
+      let a;
+      return a = (0, l.Z)(f) ? (0, i.jsx)(_.Z.Header.Icon, {
         src: _.Z.Header.Icon.Src.SPOTIFY
       }) : null != e.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
         src: e.getIconURL(h.Z)
@@ -122,7 +122,7 @@ if (p + T === 1 && null != S) {
         subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
           name: f.name
         }),
-        icon: s
+        icon: a
       };
     case E.IIU.WATCHING:
       return {
@@ -172,11 +172,11 @@ if (0 === g.length) {
   let {
     activity: t,
     game: n,
-    startedPlayingTime: s
+    startedPlayingTime: a
   } = e;
-  return a()(null != t, 'Activity was null somehow'), {
+  return s()(null != t, 'Activity was null somehow'), {
     subtitle: (0, i.jsx)(c.ZP, {
-      start: s,
+      start: a,
       location: c.ZP.Locations.ACTIVITY_FEED_NEW,
       messageProps: N
     }),
@@ -198,6 +198,6 @@ guildId: null == g ? void 0 : g.id,
 title: T,
 subtitle: S,
 icon: f,
-onContextMenu: e => s(e, p.user)
+onContextMenu: e => a(e, p.user)
   });
 }

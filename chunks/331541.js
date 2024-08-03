@@ -4,9 +4,9 @@ return er;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(722770),
   o = n(873546),
   c = n(442837),
@@ -83,19 +83,19 @@ label: () => ee.Z.Messages.DURATION_FOREVER
   }
 ];
 
-function es(e, t, n, s) {
-  let a = (0, i.jsx)(i.Fragment, {
-children: ei.map(s => {
+function ea(e, t, n, a) {
+  let s = (0, i.jsx)(i.Fragment, {
+children: ei.map(a => {
   let {
-    duration: a,
+    duration: s,
     label: r
-  } = s;
+  } = a;
   return (0, i.jsx)(d.MenuItem, {
-    id: ''.concat(e, '-').concat(a),
+    id: ''.concat(e, '-').concat(s),
     label: r(),
-    action: () => (0, q.Z)(e, t, n, a),
+    action: () => (0, q.Z)(e, t, n, s),
     dontCloseOnAction: !0
-  }, a);
+  }, s);
 })
   });
   return (0, i.jsx)(d.MenuItem, {
@@ -120,20 +120,20 @@ label: t => {
         className: et.status,
         children: (0, K.u5)(e)
       }),
-      null != s && (0, i.jsx)('div', {
+      null != a && (0, i.jsx)('div', {
         className: et.description,
-        children: s
+        children: a
       })
     ]
   });
 },
 action: () => (0, q.Z)(e, t, n),
 dontCloseOnAction: !0,
-children: e !== J.Skl.ONLINE ? a : void 0
+children: e !== J.Skl.ONLINE ? s : void 0
   });
 }
 
-function ea(e, t, n, s) {
+function es(e, t, n, a) {
   return (0, i.jsx)(d.MenuItem, {
 id: e,
 keepItemStyles: !0,
@@ -154,9 +154,9 @@ render: t => {
         className: et.status,
         children: (0, K.u5)(e)
       }),
-      null != s && (0, i.jsx)('div', {
+      null != a && (0, i.jsx)('div', {
         className: et.description,
-        children: s
+        children: a
       })
     ]
   });
@@ -170,7 +170,7 @@ function er(e) {
   let {
 currentUser: t,
 onClose: n,
-setPopoutRef: a
+setPopoutRef: s
   } = e, W = __OVERLAY__, q = (0, O.ZP)(t.id), er = (0, u.O)(), {
 analyticsLocations: el
   } = (0, I.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT), eo = (0, A.Q1)({
@@ -180,16 +180,16 @@ userId: t.id
 let n = T.Y.useExperiment({
     location: 'account popout'
   }).expiringStatus,
-  s = V.Cr.useSetting(),
-  a = (0, S.p)(),
+  a = V.Cr.useSetting(),
+  s = (0, S.p)(),
   r = f.e.useExperiment({
     location: 'account popout'
-  }).allowQuietMode || a,
+  }).allowQuietMode || s,
   o = V.fv.useSetting(),
   c = e === J.Skl.DND,
   u = t => {
-    let n = null != s && '0' !== s ? ee.Z.Messages.STATUS_UNTIL.format({
-      endTime: new Date(Number(s)).toLocaleString(ee.Z.getLocale(), {
+    let n = null != a && '0' !== a ? ee.Z.Messages.STATUS_UNTIL.format({
+      endTime: new Date(Number(a)).toLocaleString(ee.Z.getLocale(), {
         month: 'numeric',
         day: 'numeric',
         hour: 'numeric',
@@ -211,11 +211,11 @@ let n = T.Y.useExperiment({
     children: ei.map(t => {
       let {
         duration: n,
-        label: s
+        label: a
       } = t;
       return (0, i.jsx)(d.MenuItem, {
         id: ''.concat(e, '-').concat(n),
-        label: s(),
+        label: a(),
         action: () => {
           (0, S.oW)(!0, n);
         },
@@ -225,13 +225,13 @@ let n = T.Y.useExperiment({
   });
 return (0, i.jsxs)(i.Fragment, {
   children: [
-    ea(J.Skl.ONLINE, e, t),
+    es(J.Skl.ONLINE, e, t),
     (0, i.jsx)(d.MenuSeparator, {}, 'menu-separator-statuses'),
-    n ? es(J.Skl.IDLE, e, t, u(J.Skl.IDLE)) : ea(J.Skl.IDLE, e, t, u(J.Skl.IDLE)),
-    n ? es(J.Skl.DND, e, t, u(J.Skl.DND)) : ea(J.Skl.DND, e, t, u(J.Skl.DND)),
-    n ? es(J.Skl.INVISIBLE, e, t, u(J.Skl.INVISIBLE)) : ea(J.Skl.INVISIBLE, e, t, u(J.Skl.INVISIBLE)),
+    n ? ea(J.Skl.IDLE, e, t, u(J.Skl.IDLE)) : es(J.Skl.IDLE, e, t, u(J.Skl.IDLE)),
+    n ? ea(J.Skl.DND, e, t, u(J.Skl.DND)) : es(J.Skl.DND, e, t, u(J.Skl.DND)),
+    n ? ea(J.Skl.INVISIBLE, e, t, u(J.Skl.INVISIBLE)) : es(J.Skl.INVISIBLE, e, t, u(J.Skl.INVISIBLE)),
     (0, i.jsx)(d.MenuSeparator, {}, 'menu-separator-statuses'),
-    r || a ? (0, i.jsx)(d.MenuItem, {
+    r || s ? (0, i.jsx)(d.MenuItem, {
       id: 'quiet-mode',
       'aria-label': 'focus mode',
       className: et.expiringStatusMenuItem,
@@ -250,14 +250,14 @@ return (0, i.jsxs)(i.Fragment, {
             children: [
               ee.Z.Messages.FOCUS_MODE_TITLE,
               (0, i.jsx)(d.TextBadge, {
-                text: a ? ee.Z.Messages.FOCUS_MODE_BADGE_ON : c ? ee.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : ee.Z.Messages.FOCUS_MODE_BADGE_OFF,
-                color: a ? l.Z.BRAND_500 : c ? l.Z.RED_400 : l.Z.PRIMARY_500
+                text: s ? ee.Z.Messages.FOCUS_MODE_BADGE_ON : c ? ee.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : ee.Z.Messages.FOCUS_MODE_BADGE_OFF,
+                color: s ? l.Z.BRAND_500 : c ? l.Z.RED_400 : l.Z.PRIMARY_500
               })
             ]
           }),
           (0, i.jsx)('div', {
             className: et.description,
-            children: a && null != o && '0' !== o ? ee.Z.Messages.STATUS_UNTIL.format({
+            children: s && null != o && '0' !== o ? ee.Z.Messages.STATUS_UNTIL.format({
               endTime: new Date(Number(o)).toLocaleString(ee.Z.getLocale(), {
                 month: 'numeric',
                 day: 'numeric',
@@ -269,7 +269,7 @@ return (0, i.jsxs)(i.Fragment, {
         ]
       }),
       action: () => {
-        (0, S.oW)(!a);
+        (0, S.oW)(!s);
       },
       dontCloseOnAction: !0,
       children: _
@@ -279,11 +279,11 @@ return (0, i.jsxs)(i.Fragment, {
   }(ed, er), {
 ref: e_
   } = (0, _.Z)(), eh = (0, h.Z)(e_);
-  s.useEffect(() => {
-null == a || a(e_.current);
+  a.useEffect(() => {
+null == s || s(e_.current);
   }, [
 e_,
-a
+s
   ]);
   let eE = e => {
   null == n || n(), (0, w.openUserProfileModal)({

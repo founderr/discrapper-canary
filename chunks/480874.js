@@ -4,9 +4,9 @@ return Z;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(91192),
   o = n(286379),
   c = n(481060),
@@ -28,16 +28,16 @@ var i = n(735250),
   v = n(553437);
 
 function Z() {
-  let e = s.useRef(null),
+  let e = a.useRef(null),
 t = (0, p.Z)(),
 n = (0, T.w)(),
-a = (0, I.V)(),
+s = (0, I.V)(),
 Z = (0, d.N)(),
 L = (0, u.Z)('message-requests-spam-list'),
 {
   channelId: O
 } = (0, g._)(),
-R = s.useCallback(() => {
+R = a.useCallback(() => {
   (0, c.showToast)((0, c.createToast)(A.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE));
 }, []),
 {
@@ -45,24 +45,24 @@ R = s.useCallback(() => {
 } = (0, m.m)({
   onError: R
 }),
-b = s.useCallback(() => {
+b = a.useCallback(() => {
   x(t.map(e => e.channel.id));
 }, [
   t,
   x
 ]);
-  s.useEffect(() => {
+  a.useEffect(() => {
 E.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, {
   num_spam_message_requests: n
 }), _.Z.increment({
   name: o.V.SPAM_MESSAGE_REQUEST_VIEW
 });
   }, []);
-  let P = s.useCallback(e => {
-  var n, s;
+  let P = a.useCallback(e => {
+  var n, a;
   let {
     row: l
-  } = e, o = t[l], c = null === (s = t[l + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
+  } = e, o = t[l], c = null === (a = t[l + 1]) || void 0 === a ? void 0 : null === (n = a.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
   return (0, i.jsx)(f.Z, {
     index: l,
     className: r()({
@@ -71,14 +71,14 @@ E.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, {
     }),
     channel: o.channel,
     user: o.user,
-    hasSingleMessageRequest: a
+    hasSingleMessageRequest: s
   }, d);
 }, [
   t,
-  a,
+  s,
   O
 ]),
-M = s.useCallback(() => (0, i.jsxs)(h.Z, {
+M = a.useCallback(() => (0, i.jsxs)(h.Z, {
   className: v.sectionTitle,
   children: [
     A.Z.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
@@ -117,17 +117,17 @@ navigator: L,
 children: (0, i.jsx)(l.SJ, {
   children: n => {
     let {
-      ref: s,
-      role: a,
+      ref: a,
+      role: s,
       ...r
     } = n;
     return (0, i.jsx)(c.List, {
       className: v.list,
-      innerRole: a,
+      innerRole: s,
       innerAriaLabel: A.Z.Messages.MESSAGE_REQUESTS,
       ref: t => {
         var n;
-        e.current = t, s.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null;
+        e.current = t, a.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null;
       },
       paddingTop: 24,
       paddingBottom: 24,

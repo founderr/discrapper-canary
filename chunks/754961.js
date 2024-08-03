@@ -7,9 +7,9 @@ return I;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(338545),
   o = n(481060),
   c = n(603368),
@@ -21,12 +21,12 @@ function h(e) {
   let {
 index: t,
 onClick: n,
-name: a,
+name: s,
 isActive: d,
 animate: h,
 fillBackgroundColor: E,
 hasError: I
-  } = e, m = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY), g = s.useMemo(() => (0, c.j1)(E, m.hex()), [
+  } = e, m = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY), g = a.useMemo(() => (0, c.j1)(E, m.hex()), [
 E,
 m
   ]), p = null != g, T = (0, o.useSpring)({
@@ -51,8 +51,8 @@ children: [
   });
   return (0, i.jsx)(o.Tooltip, {
 color: I ? o.Tooltip.Colors.GREY : o.Tooltip.Colors.BRAND,
-text: I ? S : a,
-'aria-label': I ? u.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : a,
+text: I ? S : s,
+'aria-label': I ? u.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : s,
 shouldShow: null != n,
 tooltipStyle: g,
 tooltipClassName: r()(_.progressStepTooltip, {
@@ -93,8 +93,8 @@ function E(e) {
   let {
 steps: t,
 currentStepIndex: n,
-furthestStepIndex: s,
-onStepClick: a,
+furthestStepIndex: a,
+onStepClick: s,
 stepFillColor: o,
 animationStyle: c,
 className: d
@@ -110,7 +110,7 @@ children: t.map(e => {
   } = e;
   return (0, i.jsx)(h, {
     name: r,
-    onClick: t <= s ? () => a(t) : void 0,
+    onClick: t <= a ? () => s(t) : void 0,
     isActive: t <= n,
     hasError: l,
     index: t,
@@ -125,8 +125,8 @@ function I(e) {
   let {
 className: t,
 isBackDisabled: n,
-isNextDisabled: s,
-onNextClick: a,
+isNextDisabled: a,
+onNextClick: s,
 onBackClick: c,
 nextButtonBackgroundColor: h,
 nextButtonClassName: E,
@@ -151,8 +151,8 @@ children: [
       color: o.Button.Colors.BRAND,
       look: o.Button.Looks.FILLED,
       size: o.Button.Sizes.MEDIUM,
-      onClick: a,
-      disabled: s,
+      onClick: s,
+      disabled: a,
       children: u.Z.Messages.NEXT
     })
   })

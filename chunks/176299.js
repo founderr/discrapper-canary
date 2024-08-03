@@ -4,9 +4,9 @@ return eU;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(266067),
   o = n(990547),
   c = n(608787),
@@ -58,8 +58,8 @@ var i = n(735250),
   et = n(709054),
   en = n(792125),
   ei = n(374005),
-  es = n(409292),
-  ea = n(316173),
+  ea = n(409292),
+  es = n(316173),
   er = n(256638),
   el = n(663701),
   eo = n(425369),
@@ -133,13 +133,13 @@ let {
   let e = J.Z.getChannelId();
   return q.Z.getChannel(e);
 }), {
-  guildId: s,
-  channelId: a,
+  guildId: a,
+  channelId: s,
   messageId: r
-} = t.params, l = (0, u.e7)([X.Z], () => X.Z.getGuild(s)), o = (0, u.e7)([Q.ZP], () => null == s ? null : Q.ZP.getSelfMember(s)), c = (0, u.e7)([G.Z], () => {
-  if (null == s)
+} = t.params, l = (0, u.e7)([X.Z], () => X.Z.getGuild(a)), o = (0, u.e7)([Q.ZP], () => null == a ? null : Q.ZP.getSelfMember(a)), c = (0, u.e7)([G.Z], () => {
+  if (null == a)
     return;
-  let e = G.Z.getData(s);
+  let e = G.Z.getData(a);
   if ((null == e ? void 0 : e.type) === k.z.SERVER_SHOP)
     switch (e.initialTab) {
       case 'role_subscriptions':
@@ -149,76 +149,76 @@ let {
       default:
         return;
     }
-}), d = (0, N.C4)(s, 'channel_renderer');
-if (null != s && null != a && (0, eu.AB)(a))
-  switch (a) {
+}), d = (0, N.C4)(a, 'channel_renderer');
+if (null != a && null != s && (0, eu.AB)(s))
+  switch (s) {
     case eu.oC.ROLE_SUBSCRIPTIONS:
       return d ? (0, i.jsx)(eI, {
-        guildId: s,
+        guildId: a,
         initialTab: A.y.GUILD_ROLE_SUBSCRIPTIONS
       }) : (0, i.jsx)(D.Z, {
-        guildId: s
+        guildId: a
       });
     case eu.oC.GUILD_SHOP:
       return (0, i.jsx)(eI, {
-        guildId: s,
+        guildId: a,
         productId: r,
         initialTab: c
       });
     case eu.oC.MEMBER_APPLICATIONS:
       return (0, i.jsx)(em, {
-        guildId: s
+        guildId: a
       });
     case eu.oC.GUILD_HOME:
       return (0, i.jsx)(eg, {
-        guildId: s
+        guildId: a
       });
     case eu.oC.CHANNEL_BROWSER:
       return (0, i.jsx)(eT, {
-        guildId: s,
+        guildId: a,
         selectedSection: e_.l7.BROWSE
       });
     case eu.oC.GUILD_ONBOARDING:
       return (0, i.jsx)(eS, {
-        guildId: s
+        guildId: a
       });
     case eu.oC.CUSTOMIZE_COMMUNITY:
       return (0, i.jsx)(eT, {
-        guildId: s,
+        guildId: a,
         selectedSection: e_.l7.CUSTOMIZE
       });
     case eu.oC.MEMBER_SAFETY:
       return (0, i.jsx)(ep, {
-        guildId: s
+        guildId: a
       });
     default:
-      (0, ee.vE)(a);
+      (0, ee.vE)(s);
   }
 if ((0, P.p3)(l, o))
   return (0, i.jsx)(M.Z, {
-    guildId: s,
-    channelId: a
+    guildId: a,
+    channelId: s
   });
 if ((null == n ? void 0 : n.type) === ed.d4z.GUILD_STORE) {
   let e = et.default.cast(t.params.messageId);
-  return (0, i.jsx)(es.Z, {
+  return (0, i.jsx)(ea.Z, {
     channel: n,
     inputSkuId: e
   }, n.id);
 }
 return (0, i.jsx)(S.Z, {});
   },
-  eC = s.memo(function() {
+  eC = a.memo(function() {
 let {
   guildId: e,
   channelId: t
-} = (0, W.Z)(), n = (0, u.e7)([J.Z], () => null != t ? t : J.Z.getChannelId(e)), s = (0, L.Y$)('sidebar');
+} = (0, W.Z)(), n = (0, u.e7)([J.Z], () => null != t ? t : J.Z.getChannelId(e)), a = (0, L.Y$)('sidebar');
 if (function() {
     return window.location.pathname.startsWith(ed.Z5c.GLOBAL_DISCOVERY);
   }() || function() {
     return window.location.pathname.startsWith(ed.Z5c.GUILD_DISCOVERY) || (0, Y.OG)();
   }())
-  return s ? (0, i.jsx)(R._, {}) : (0, i.jsx)(Z.Z, {});
+  return a ? (0, i.jsx)(R._, {}) : (0, i.jsx)(Z.Z, {});
 return null != e ? (0, i.jsx)(y.Z, {
   selectedChannelId: n,
   guildId: e
@@ -320,19 +320,19 @@ function ej(e) {
   let {
 hasNotice: t,
 sidebarTheme: n,
-hideSidebar: s
+hideSidebar: a
   } = e;
   (0, E.t)(!0);
-  let a = 'app view user trigger debugging';
+  let s = 'app view user trigger debugging';
   h.R6.useExperiment({
-location: a
+location: s
   }, {
 autoTrackExposure: !1
   }), h.R6.trackExposure({
-location: a
+location: s
   });
   let l = (0, u.e7)([T.Z], () => T.Z.isFullscreenInContext());
-  return s ? null : (0, i.jsxs)('div', {
+  return a ? null : (0, i.jsxs)('div', {
 className: r()(eh.sidebar, (0, en.Q)(n), {
   [eh.hasNotice]: t,
   [eh.fullWidth]: d.tq,
@@ -341,7 +341,7 @@ className: r()(eh.sidebar, (0, en.Q)(n), {
 children: [
   (0, i.jsx)(eC, {}),
   (0, i.jsx)(ei.b, {}),
-  (0, i.jsx)(ea.Z, {})
+  (0, i.jsx)(es.Z, {})
 ]
   });
 }
@@ -350,15 +350,15 @@ function eU() {
   var e;
   let t = (0, u.e7)([$.Z], () => $.Z.hasNotice()),
 n = (0, u.e7)([K.Z], () => K.Z.darkSidebar ? ed.BRd.DARK : void 0),
-a = function() {
-  let [e, t] = s.useState(() => window.location.pathname.startsWith(ed.Z5c.GUILD_MEMBER_VERIFICATION('')));
-  return s.useEffect(() => z.Z.addRouteChangeListener(e => {
+s = function() {
+  let [e, t] = a.useState(() => window.location.pathname.startsWith(ed.Z5c.GUILD_MEMBER_VERIFICATION('')));
+  return a.useEffect(() => z.Z.addRouteChangeListener(e => {
     t(e.pathname.startsWith(ed.Z5c.GUILD_MEMBER_VERIFICATION('')));
   }), []), e;
 }(),
 r = function() {
-  let [e, t] = s.useState(() => window.location.pathname.startsWith(ed.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')));
-  return s.useEffect(() => z.Z.addRouteChangeListener(e => {
+  let [e, t] = a.useState(() => window.location.pathname.startsWith(ed.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')));
+  return a.useEffect(() => z.Z.addRouteChangeListener(e => {
     t(e.pathname.startsWith(ed.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')));
   }), []), e;
 }(),
@@ -378,7 +378,7 @@ E = (0, l.$B)([
   ed.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')
 ]),
 m = (null == E ? void 0 : null === (e = E.params) || void 0 === e ? void 0 : e.channelId) === eu.oC.GUILD_ONBOARDING,
-g = s.useCallback(() => B.Z.openSidebar(), []);
+g = a.useCallback(() => B.Z.openSidebar(), []);
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsxs)('div', {
   className: eh.container,
@@ -400,7 +400,7 @@ children: (0, i.jsxs)('div', {
               (0, i.jsx)(ej, {
                 hasNotice: t,
                 sidebarTheme: n,
-                hideSidebar: a || r || c || _ || m || !h
+                hideSidebar: s || r || c || _ || m || !h
               }),
               (0, i.jsx)(I.Z.Provider, {
                 value: g,

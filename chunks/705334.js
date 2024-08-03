@@ -4,9 +4,9 @@ return m;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(143927),
   o = n(731965),
   c = n(481060),
@@ -19,7 +19,7 @@ var i = n(735250),
 function I(e) {
   let {
 tab: t
-  } = e, n = (0, d.d)(e => e.selectedPage === t, l.Z), a = s.useMemo(() => function(e) {
+  } = e, n = (0, d.d)(e => e.selectedPage === t, l.Z), s = a.useMemo(() => function(e) {
 switch (e) {
   case _.F$.SERVERS:
     return (0, i.jsx)(c.ServerIcon, {
@@ -30,7 +30,7 @@ switch (e) {
       color: 'currentColor'
     });
 }
-  }(t), [t]), h = s.useMemo(() => (0, u.sm)(t), [t]), I = s.useCallback(() => {
+  }(t), [t]), h = a.useMemo(() => (0, u.sm)(t), [t]), I = a.useCallback(() => {
 (0, o.j)(() => d.d.setState({
   selectedPage: t
 }));
@@ -43,7 +43,7 @@ className: r()(E.navItem, {
 children: [
   (0, i.jsx)('div', {
     className: E.navItemIcon,
-    children: a
+    children: s
   }),
   (0, i.jsx)(c.Text, {
     variant: 'text-md/normal',

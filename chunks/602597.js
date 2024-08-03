@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(442837),
-  a = n(481060),
+var a = n(442837),
+  s = n(481060),
   r = n(749210),
   l = n(225784),
   o = n(210887),
@@ -11,7 +11,7 @@ var s = n(442837),
 t.Z = e => {
   let {
 guilds: t
-  } = e, n = (0, s.e7)([o.Z], () => o.Z.theme), _ = t.map(e => (0, i.jsx)(l.Z, {
+  } = e, n = (0, a.e7)([o.Z], () => o.Z.theme), _ = t.map(e => (0, i.jsx)(l.Z, {
 className: u.__invalid_guildCard,
 onView: () => r.Z.transitionToGuildSync(e.id),
 guild: {
@@ -27,7 +27,7 @@ theme: n
 className: u.guildListSection,
 children: t.length > 0 ? (0, i.jsxs)('div', {
   children: [
-    (0, i.jsx)(a.Heading, {
+    (0, i.jsx)(s.Heading, {
       className: u.__invalid_title,
       variant: 'heading-lg/semibold',
       children: d.Z.Messages.YOUR_HUB

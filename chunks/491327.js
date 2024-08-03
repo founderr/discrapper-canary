@@ -1,7 +1,7 @@
 n(47120);
 var i = n(392711),
-  s = n.n(i),
-  a = n(243814),
+  a = n.n(i),
+  s = n(243814),
   r = n(447543),
   l = n(287734),
   o = n(703656),
@@ -22,8 +22,8 @@ t.Z = {
   [f.Etm.GET_CHANNEL]: {
 scope: {
   [S.Gp.ANY]: [
-    a.x.RPC,
-    a.x.GUILDS
+    s.x.RPC,
+    s.x.GUILDS
   ]
 },
 handler(e) {
@@ -39,7 +39,7 @@ handler(e) {
     }, 'Invalid channel id: '.concat(t));
   if (i.isPrivate()) {
     let e = n.authorization.scopes;
-    if (!e.includes(a.x.RPC) && !e.includes(a.x.DM_CHANNELS_READ))
+    if (!e.includes(s.x.RPC) && !e.includes(s.x.DM_CHANNELS_READ))
       throw new m.Z({
         errorCode: f.lTL.INVALID_PERMISSIONS
       }, 'Invalid scope');
@@ -48,13 +48,13 @@ handler(e) {
 }
   },
   [f.Etm.GET_CHANNELS]: {
-scope: a.x.RPC,
+scope: s.x.RPC,
 handler(e) {
   let {
     args: {
       guild_id: t
     }
-  } = e, n = s().values(d.Z.loadAllGuildAndPrivateChannelsFromDisk());
+  } = e, n = a().values(d.Z.loadAllGuildAndPrivateChannelsFromDisk());
   if (t) {
     let e = u.Z.getGuild(t);
     if (null == e)
@@ -85,7 +85,7 @@ handler(e) {
 }
   },
   [f.Etm.GET_CHANNEL_PERMISSIONS]: {
-scope: a.x.GUILDS_MEMBERS_READ,
+scope: s.x.GUILDS_MEMBERS_READ,
 handler(e) {
   let t = (0, T.Z)();
   if (null == t)
@@ -98,7 +98,7 @@ handler(e) {
 }
   },
   [f.Etm.SELECT_VOICE_CHANNEL]: {
-scope: a.x.RPC,
+scope: s.x.RPC,
 validation: e => (0, p.Z)(e).required().keys({
   channel_id: e.string().allow(null),
   timeout: e.number().min(0).max(60),
@@ -111,19 +111,19 @@ handler(e) {
     socket: n,
     args: {
       channel_id: i,
-      timeout: s = 0,
-      force: a = !1,
+      timeout: a = 0,
+      force: s = !1,
       navigate: r = !1
     }
   } = e;
   if (!i)
     return l.default.selectVoiceChannel(null), null;
   let p = h.Z.getVoiceChannelId();
-  if (null != p && p !== i && !1 === a)
+  if (null != p && p !== i && !1 === s)
     throw new m.Z({
       errorCode: f.lTL.SELECT_VOICE_FORCE_REQUIRED
     }, 'User is already joined to a voice channel.');
-  return t.storeWait(n, () => d.Z.getChannel(i), s).catch(() => {
+  return t.storeWait(n, () => d.Z.getChannel(i), a).catch(() => {
     throw new m.Z({
       errorCode: f.lTL.SELECT_CHANNEL_TIMED_OUT
     }, 'Request to select voice channel timed out.');
@@ -159,8 +159,8 @@ handler(e) {
   [f.Etm.GET_SELECTED_VOICE_CHANNEL]: {
 scope: {
   [S.Gp.ANY]: [
-    a.x.RPC,
-    a.x.RPC_VOICE_READ
+    s.x.RPC,
+    s.x.RPC_VOICE_READ
   ]
 },
 handler(e) {
@@ -171,7 +171,7 @@ handler(e) {
 }
   },
   [f.Etm.SELECT_TEXT_CHANNEL]: {
-scope: a.x.RPC,
+scope: s.x.RPC,
 validation: e => (0, p.Z)(e).required().keys({
   channel_id: e.string().allow(null),
   timeout: e.number().min(0).max(60)
@@ -182,10 +182,10 @@ handler(e) {
     socket: n,
     args: {
       channel_id: i,
-      timeout: s = 0
+      timeout: a = 0
     }
   } = e;
-  return i ? t.storeWait(n, () => d.Z.getChannel(i), s).catch(() => {
+  return i ? t.storeWait(n, () => d.Z.getChannel(i), a).catch(() => {
     throw new m.Z({
       errorCode: f.lTL.SELECT_CHANNEL_TIMED_OUT
     }, 'Request to select text channel timed out.');
@@ -213,7 +213,7 @@ handler(e) {
 }
   },
   [f.Etm.CREATE_CHANNEL_INVITE]: {
-scope: a.x.RPC,
+scope: s.x.RPC,
 handler(e) {
   let {
     args: {

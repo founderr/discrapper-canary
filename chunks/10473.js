@@ -1,5 +1,5 @@
-var i, s = n(108131),
-  a = n.n(s),
+var i, a = n(108131),
+  s = n.n(a),
   r = n(442837),
   l = n(570140),
   o = n(70956),
@@ -22,7 +22,7 @@ status: 'unloaded'
   I = {};
 class m extends(i = r.ZP.Store) {
   getSearchResult(e) {
-let t = I[a().v3(JSON.stringify(e))];
+let t = I[s().v3(JSON.stringify(e))];
 return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? E : t;
   }
   getSavedGuildsResult(e) {

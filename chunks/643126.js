@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(512722),
   o = n.n(l),
   c = n(481060),
@@ -31,7 +31,7 @@ let N = {
   HOST: 5,
   LISTENER: 4
 };
-class A extends s.PureComponent {
+class A extends a.PureComponent {
   isHost() {
 let {
   currentUser: e,
@@ -103,10 +103,10 @@ super(...e), C(this, 'renderPartyMember', (e, t) => {
   if (null == e)
     return null;
   let {
-    host: a,
+    host: s,
     onUserContextMenu: l
   } = this.props;
-  return n = (null == a ? void 0 : a.id) === e.id ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, i.jsx)(c.Popout, {
+  return n = (null == s ? void 0 : s.id) === e.id ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, i.jsx)(c.Popout, {
     preload: () => (0, u.W)(e.id, e.getAvatarURL(void 0, 80)),
     renderPopout: t => (o()(null != e, ''), (0, i.jsx)(_.Z, {
       ...t,
@@ -116,15 +116,15 @@ super(...e), C(this, 'renderPartyMember', (e, t) => {
     })),
     position: 'top',
     align: 'center',
-    children: a => (0, i.jsx)(c.Tooltip, {
+    children: s => (0, i.jsx)(c.Tooltip, {
       text: n,
       children: n => {
         let {
           onMouseEnter: i,
           onMouseLeave: o
         } = n;
-        return (0, s.createElement)(c.Avatar, {
-          ...a,
+        return (0, a.createElement)(c.Avatar, {
+          ...s,
           key: e.id,
           src: e.getAvatarURL(void 0, 24),
           size: c.AvatarSizes.SIZE_24,
@@ -139,15 +139,15 @@ super(...e), C(this, 'renderPartyMember', (e, t) => {
   }, e.id);
 }), C(this, 'renderPartyMemberOverflow', (e, t, n) => {
   let {
-    renderOverflowPopout: s
+    renderOverflowPopout: a
   } = this.props;
   return (0, i.jsx)(c.Popout, {
-    renderPopout: s,
+    renderPopout: a,
     children: n => (0, i.jsx)(c.Tooltip, {
       text: S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
-      children: s => (0, i.jsx)('div', {
+      children: a => (0, i.jsx)('div', {
         className: r()(f.overflow, t),
-        ...s,
+        ...a,
         ...n,
         children: e
       })

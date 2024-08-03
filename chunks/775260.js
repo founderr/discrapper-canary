@@ -4,8 +4,8 @@ return u;
   }
 }), n(733860);
 var i = n(470079),
-  s = n(143927),
-  a = n(731965),
+  a = n(143927),
+  s = n(731965),
   r = n(963202),
   l = n(169559),
   o = n(836768),
@@ -21,7 +21,7 @@ function u() {
   includeConverted: !0,
   autoTrackExposure: !0
 }),
-n = (0, o.d)(e => e.selectedServerTab, s.Z),
+n = (0, o.d)(e => e.selectedServerTab, a.Z),
 u = i.useMemo(() => {
   let n = [
     d.vf.GAMING,
@@ -43,7 +43,7 @@ u = i.useMemo(() => {
 tabs: u,
 selectedTab: n,
 onSelectTab: i.useCallback(e => {
-  (0, a.j)(() => o.d.setState({
+  (0, s.j)(() => o.d.setState({
     selectedServerTab: e
   }));
 }, [])

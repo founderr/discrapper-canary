@@ -1,6 +1,6 @@
 n(47120), n(653041), n(733860), n(724458);
-var i, s = n(876215),
-  a = n(442837),
+var i, a = n(876215),
+  s = n(442837),
   r = n(570140),
   l = n(146282),
   o = n(561308),
@@ -56,9 +56,9 @@ let Z = [],
 function q(e) {
   var t, n;
   let i = new Set(e.map(e => e.id)),
-a = null !== (n = null === (t = l.Z.getFeed(A.YN.GLOBAL_FEED)) || void 0 === t ? void 0 : t.entries) && void 0 !== n ? n : [];
-  return a.sort((e, t) => e.rank - t.rank), a.forEach((t, n) => {
-if (i.has(t.content.id) || t.content.content_type !== s.s.PLAYED_GAME && t.content.content_type !== s.s.CUSTOM_STATUS && t.content.content_type !== s.s.TOP_GAME || (0, o.n2)(t.content))
+s = null !== (n = null === (t = l.Z.getFeed(A.YN.GLOBAL_FEED)) || void 0 === t ? void 0 : t.entries) && void 0 !== n ? n : [];
+  return s.sort((e, t) => e.rank - t.rank), s.forEach((t, n) => {
+if (i.has(t.content.id) || t.content.content_type !== a.s.PLAYED_GAME && t.content.content_type !== a.s.CUSTOM_STATUS && t.content.content_type !== a.s.TOP_GAME || (0, o.n2)(t.content))
   return;
 null == M[t.content.id] && (M[t.content.id] = {
   id: t.content.id,
@@ -66,7 +66,7 @@ null == M[t.content.id] && (M[t.content.id] = {
   score: 50,
   activity: t.content
 });
-let a = {
+let s = {
   id: t.content.id,
   type: S.Rr.ACTIVITY,
   score: 50,
@@ -75,7 +75,7 @@ let a = {
     content_id: t.content.id
   }
 };
-P[a.id] = a, (n + 1) * 5 < e.length ? e.splice((n + 1) * 5, 0, a) : e.push(a);
+P[s.id] = s, (n + 1) * 5 < e.length ? e.splice((n + 1) * 5, 0, s) : e.push(s);
   }), e;
 }
 
@@ -106,8 +106,8 @@ function X(e) {
 n = [],
 i = [];
   return e.forEach(e => {
-let s = null != f.Z.getReadTimestamp(e.id);
-e.type === S.Rr.MESSAGE ? s = s || !(0, C.$U)(e.data.channel_id, e.data.message_id) : e.type === S.Rr.SUMMARY && (s = s || !(0, C.$U)(e.data.channel_id, e.data.summary_id)), s ? t.push(e) : e.type === S.Rr.MESSAGE && e.data.has_mention ? i.push(e) : n.push(e);
+let a = null != f.Z.getReadTimestamp(e.id);
+e.type === S.Rr.MESSAGE ? a = a || !(0, C.$U)(e.data.channel_id, e.data.message_id) : e.type === S.Rr.SUMMARY && (a = a || !(0, C.$U)(e.data.channel_id, e.data.summary_id)), a ? t.push(e) : e.type === S.Rr.MESSAGE && e.data.has_mention ? i.push(e) : n.push(e);
   }), [
 [
   ...i,
@@ -120,9 +120,9 @@ t.sort((e, t) => (0, C.Rm)(e.id, t.id))
 function J(e, t) {
   let n = [],
 i = new Set(Z.map(e => e.id));
-  for (let s of e) {
-if (!i.has(s.id) && null == f.Z.getReadTimestamp(s.id) && (s.type !== S.Rr.MESSAGE || !!(0, C.$U)(s.data.channel_id, s.data.message_id) && s.data.channel_id !== t) && (s.type !== S.Rr.SUMMARY || !!(0, C.$U)(s.data.channel_id, s.data.summary_id) && s.data.channel_id !== t))
-  n.push(s);
+  for (let a of e) {
+if (!i.has(a.id) && null == f.Z.getReadTimestamp(a.id) && (a.type !== S.Rr.MESSAGE || !!(0, C.$U)(a.data.channel_id, a.data.message_id) && a.data.channel_id !== t) && (a.type !== S.Rr.SUMMARY || !!(0, C.$U)(a.data.channel_id, a.data.summary_id) && a.data.channel_id !== t))
+  n.push(a);
   }
   return n;
 }
@@ -142,25 +142,25 @@ function et(e) {
 type: t,
 messageId: n,
 userId: i,
-emoji: s,
-reactionType: a
+emoji: a,
+reactionType: s
   } = e, r = M[n];
   if (null == r || r.type !== S.Rr.MESSAGE)
 return !1;
   let l = u.default.getId() === i;
-  'MESSAGE_REACTION_ADD' === t ? r.message = r.message.addReaction(s, l, e.colors, a) : r.message = r.message.removeReaction(s, l, a);
+  'MESSAGE_REACTION_ADD' === t ? r.message = r.message.addReaction(a, l, e.colors, s) : r.message = r.message.removeReaction(a, l, s);
 }
 
 function en(e) {
   let {
 channelId: t
   } = e, n = [], i = [];
-  W.forEach((e, s) => {
-s > K && (e.type === S.Rr.MESSAGE || e.type === S.Rr.SUMMARY) && e.data.channel_id === t ? n.push(e) : i.push(e);
+  W.forEach((e, a) => {
+a > K && (e.type === S.Rr.MESSAGE || e.type === S.Rr.SUMMARY) && e.data.channel_id === t ? n.push(e) : i.push(e);
   });
-  let s = B,
-[a, r] = X(O);
-  if (B = (R = J(a, t)).length >= S.Lb, 0 === n.length && s === B)
+  let a = B,
+[s, r] = X(O);
+  if (B = (R = J(s, t)).length >= S.Lb, 0 === n.length && a === B)
 return !1;
   if (0 !== n.length)
 W = i, z = [
@@ -168,13 +168,13 @@ W = i, z = [
   ...n
 ];
 }
-class ei extends(i = a.ZP.PersistedStore) {
+class ei extends(i = s.ZP.PersistedStore) {
   initialize(e) {
 if (this.waitFor(h.Z, _.Z, E.ZP, c.Z, m.ZP, u.default, f.Z, l.Z), null != e) {
-  var t, n, i, s, a;
+  var t, n, i, a, s;
   Z = null !== (t = e.dehydratedItems) && void 0 !== t ? t : [], b = null !== (n = e.locallyAddedItems) && void 0 !== n ? n : {}, e.dehydratedItems.forEach(e => {
     P[e.id] = e;
-  }), y = null !== (i = e.customGuildScores) && void 0 !== i ? i : {}, j = null !== (s = e.customChannelScoresByGuild) && void 0 !== s ? s : {}, Y = null !== (a = e.numOpens) && void 0 !== a ? a : 0;
+  }), y = null !== (i = e.customGuildScores) && void 0 !== i ? i : {}, j = null !== (a = e.customChannelScoresByGuild) && void 0 !== a ? a : {}, Y = null !== (s = e.numOpens) && void 0 !== s ? s : 0;
 }
   }
   getVersion() {
@@ -277,13 +277,13 @@ return !1;
 var t, n;
 let {
   message: i,
-  guildId: s,
-  channelId: a
+  guildId: a,
+  channelId: s
 } = e;
-if (!(0, C.rK)('GravityStore-handleMessageCreate') || null == s || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === u.default.getId() || I.Z.isBlocked(null === (n = i.author) || void 0 === n ? void 0 : n.id) || s in y && y[s] < 0 || null != j[s] && a in j[s] && null != j[s][a] && j[s][a] < 0)
+if (!(0, C.rK)('GravityStore-handleMessageCreate') || null == a || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === u.default.getId() || I.Z.isBlocked(null === (n = i.author) || void 0 === n ? void 0 : n.id) || a in y && y[a] < 0 || null != j[a] && s in j[a] && null != j[a][s] && j[a][s] < 0)
   return !1;
-let r = _.Z.getChannel(a);
-if (null == r || r.type !== N.d4z.GUILD_ANNOUNCEMENT || m.ZP.isChannelMuted(s, a))
+let r = _.Z.getChannel(s);
+if (null == r || r.type !== N.d4z.GUILD_ANNOUNCEMENT || m.ZP.isChannelMuted(a, s))
   return !1;
 let l = h.Z.getMessage(i.channel_id, i.id);
 null == l && (l = (0, d.e5)(i));
@@ -296,16 +296,16 @@ let c = {
   score: Date.now(),
   data: {
     channel_id: i.channel_id,
-    guild_id: s,
+    guild_id: a,
     message_id: i.id,
     channel_type: N.d4z.GUILD_ANNOUNCEMENT,
     has_mention: o
   }
 };
-o && (null == U[a] && (U[a] = 0), U[a]++, G.add(s)), null == (O = 0 === O.length ? [...Z] : [...O]).find(e => e.id === i.id) && (O = [
+o && (null == U[s] && (U[s] = 0), U[s]++, G.add(a)), null == (O = 0 === O.length ? [...Z] : [...O]).find(e => e.id === i.id) && (O = [
   c,
   ...O
-], b[i.id] = c), (0, C.$U)(a, i.id) && (R = [
+], b[i.id] = c), (0, C.$U)(s, i.id) && (R = [
   c,
   ...R
 ]), R.length >= S.Lb && k > 0 && (B = !0), P[i.id] = c, M[i.id] = {
@@ -333,17 +333,17 @@ O = t.filter(e => S.zd.has(e.type)), ! function() {
   load_time_millis: Date.now() - i,
   feed_item_ids: O.map(e => e.id)
 };
-let [s, a] = X(O);
-if (R = J(s), 0 === k)
-  s.length > 0 && !H && (B = !0, w = !0), Q({
-    newUnread: s,
-    newRead: a
+let [a, s] = X(O);
+if (R = J(a), 0 === k)
+  a.length > 0 && !H && (B = !0, w = !0), Q({
+    newUnread: a,
+    newRead: s
   });
 else {
   let e = R.length > S.Lb;
   B = e, e && (0, C.em)([
-    ...s,
-    ...a
+    ...a,
+    ...s
   ], 0, S.xy);
 }
   },
@@ -352,8 +352,8 @@ let {
   messageItems: t,
   summaryItems: n,
   activityItems: i,
-  requestMessageItems: s,
-  requestSummaryItems: a,
+  requestMessageItems: a,
+  requestSummaryItems: s,
   requestActivityItems: r,
   startingIndex: l,
   endingIndex: o
@@ -364,7 +364,7 @@ M = {
 let c = t.reduce((e, t) => (e[t.message.id] = t, e), {}),
   u = n.reduce((e, t) => (e[t.id] = t, e), {}),
   _ = i.reduce((e, t) => (e[t.id] = t, e), {});
-s.forEach(e => {
+a.forEach(e => {
   let t = c[e.message_id];
   if (null == t) {
     D[e.message_id] = !0;
@@ -382,7 +382,7 @@ s.forEach(e => {
     ...n,
     message: (0, d.e5)(t.message)
   };
-}), a.forEach(e => {
+}), s.forEach(e => {
   let t = u[e.summary_id];
   if (null == t) {
     D[e.summary_id] = !0;
@@ -479,8 +479,8 @@ let {
 } = e, i = M[t];
 if (null == i || i.type !== S.Rr.MESSAGE)
   return !1;
-let s = u.default.getId();
-i.message = i.message.addReactionBatch(n, s);
+let a = u.default.getId();
+i.message = i.message.addReactionBatch(n, a);
   },
   MESSAGE_REACTION_REMOVE: et,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {

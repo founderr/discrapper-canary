@@ -1,6 +1,6 @@
 let i;
-var s = n(570140),
-  a = n(519938),
+var a = n(570140),
+  s = n(519938),
   r = n(317770),
   l = n(317381),
   o = n(928518),
@@ -21,7 +21,7 @@ function S() {
   let t = i;
   if (null == t || !h.Z.isOpen(t))
 return !1;
-  s.Z.wait(() => a.xv(t)), null === (e = E.Z.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), i = null;
+  a.Z.wait(() => s.xv(t)), null === (e = E.Z.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), i = null;
 }
 
 function f() {
@@ -41,14 +41,14 @@ let n = c.Z.getAllActiveStreams().length > 0,
   });
 if (!(i || n))
   return !0;
-let s = u.Z.hasLayers();
-return !(s && u.Z.getLayers().includes(p.S9g.RTC_DEBUG)) && (!!s || e === t || !1);
+let a = u.Z.hasLayers();
+return !(a && u.Z.getLayers().includes(p.S9g.RTC_DEBUG)) && (!!a || e === t || !1);
   }() ? S() : (!t && S(), null != e && function(e) {
 var t;
 let n = d.Z.getChannel(e);
 if (null == n || h.Z.isOpen(e))
   return !1;
-s.Z.wait(() => a.bA(n.id, p.NYg.VIDEO, {
+a.Z.wait(() => s.bA(n.id, p.NYg.VIDEO, {
   channel: n
 })), null === (t = E.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), i = e;
   }(e));
