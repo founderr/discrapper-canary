@@ -616,7 +616,7 @@ e.exports = Object.freeze({
   ICYMI_EVERYONE_WAS_MENTIONED: 'Everyone was mentioned.',
   ICYMI_CHANNEL_SETTINGS: 'Channel Preferences',
   ICYMI_CHANNEL_SETTINGS_DESCRIPTION: 'How much content would you like to see from !!{channelName}!!?',
-  ICYMI_CHANNEL_MUTE_WARNING: 'Muting this channel means its content won\'t be shown until you unmute.',
+  ICYMI_CHANNEL_MUTE_WARNING: 'Turning this off means no content from this channel will be shown.',
   ICYMI_SEE_CHANNEL_CONTENT: 'See content from !!{channelName}!!',
   ICYMI_CUSTOM_SCORING_MORE: 'See More!',
   ICYMI_CUSTOM_SCORING_LESS: 'See Less',
