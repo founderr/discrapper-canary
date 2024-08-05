@@ -1,5 +1,8 @@
 n.d(t, {
   Z: function() {
+return d;
+  },
+  n: function() {
 return c;
   }
 });
@@ -16,44 +19,46 @@ function c(e) {
   let {
 user: t,
 activity: n,
-entry: c
-  } = e, {
-applicationId: d,
-sourceUserId: _
-  } = function(e) {
-let {
-  user: t,
-  activity: n,
-  entry: r
-} = e;
-if (null != r) {
-  var i;
-  return {
-    applicationId: (0, a.dX)(r) ? null === (i = r.extra) || void 0 === i ? void 0 : i.application_id : void 0,
-    sourceUserId: r.author_id
+entry: r
+  } = e;
+  if (null != r) {
+var i;
+return {
+  applicationId: (0, a.dX)(r) ? null === (i = r.extra) || void 0 === i ? void 0 : i.application_id : void 0,
+  sourceUserId: r.author_id
+};
+  }
+  return null != n ? {
+applicationId: n.type === l.IIU.PLAYING && null != n.application_id ? n.application_id : void 0,
+sourceUserId: t.id
+  } : {
+applicationId: void 0,
+sourceUserId: void 0
   };
 }
-return null != n ? {
-  applicationId: n.type === l.IIU.PLAYING && null != n.application_id ? n.application_id : void 0,
-  sourceUserId: t.id
-} : {
-  applicationId: void 0,
-  sourceUserId: void 0
-};
-  }({
+
+function d(e) {
+  let {
+user: t,
 activity: n,
-entry: c,
+entry: a
+  } = e, {
+applicationId: l,
+sourceUserId: d
+  } = c({
+activity: n,
+entry: a,
 user: t
-  }), E = (0, o.Z)({
+  }), _ = (0, o.Z)({
 location: 'UserProfileActivityContextMenu',
 source: s.m1.UserProfileCardContextMenu,
 trackEntryPointImpression: !0,
-applicationId: d,
-sourceUserId: _
+applicationId: l,
+sourceUserId: d
   });
-  return null == E ? null : (0, r.jsx)(i.MenuItem, {
+  return null == _ ? null : (0, r.jsx)(i.MenuItem, {
 id: 'game-profile',
 label: u.Z.Messages.VIEW_GAME_PROFILE,
-action: E
+action: _
   });
 }

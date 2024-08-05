@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return F;
+return H;
   }
 }), n(627341);
 var r = n(735250);
@@ -19,296 +19,304 @@ var i = n(120356),
   h = n(100527),
   p = n(906732),
   m = n(314091),
-  I = n(810568),
-  T = n(168524),
-  g = n(833858),
-  S = n(223135),
-  A = n(769654),
-  N = n(914010),
-  v = n(502762),
-  O = n(652853),
-  R = n(979038),
-  C = n(448980),
-  y = n(194811),
-  D = n(60241),
-  L = n(373826),
-  b = n(315324),
-  M = n(582123),
-  P = n(290274),
-  U = n(228168),
-  w = n(981631),
-  x = n(701488),
-  G = n(689938),
-  k = n(692184);
+  I = n(180335),
+  T = n(810568),
+  g = n(168524),
+  S = n(833858),
+  A = n(223135),
+  N = n(769654),
+  v = n(914010),
+  O = n(502762),
+  R = n(652853),
+  C = n(979038),
+  y = n(448980),
+  D = n(194811),
+  L = n(60241),
+  b = n(373826),
+  M = n(315324),
+  P = n(582123),
+  U = n(290274),
+  w = n(553375),
+  x = n(228168),
+  G = n(981631),
+  k = n(701488),
+  B = n(689938),
+  F = n(692184);
 let {
-  getAssetImage: B
+  getAssetImage: V
 } = n(81063);
 
-function F(e) {
-  var t;
+function H(e) {
   let {
-user: n,
-currentUser: i,
-activity: F,
-application: V,
-guild: H,
-channel: Z,
-className: Y,
-onAction: j,
-onClose: W
+user: t,
+currentUser: n,
+activity: i,
+application: H,
+guild: Z,
+channel: Y,
+className: j,
+onAction: W,
+onClose: K
   } = e, {
-analyticsLocations: K
-  } = (0, p.ZP)(h.Z.USER_PROFILE_LIVE_ACTIVITY_CARD), z = (0, o.e7)([N.Z], () => N.Z.getGuildId()), {
-profileType: q
-  } = (0, O.z)(), Q = {
-[k.fullSize]: q === U.y0.FULL_SIZE
-  }, X = (0, T.Z)({
+analyticsLocations: z
+  } = (0, p.ZP)(h.Z.USER_PROFILE_LIVE_ACTIVITY_CARD), q = (0, o.e7)([v.Z], () => v.Z.getGuildId()), {
+profileType: Q
+  } = (0, R.z)(), X = {
+[F.fullSize]: Q === x.y0.FULL_SIZE
+  }, $ = (0, I.Bq)({
+activity: i,
+user: t
+  }), J = (0, g.Z)({
 location: 'UserProfileActivityCard',
-applicationId: null !== (t = null == V ? void 0 : V.id) && void 0 !== t ? t : F.application_id,
-source: I.m1.UserProfile,
-sourceUserId: n.id,
-trackEntryPointImpression: !0
-  }), $ = (0, s.EQ)(F.type).with(w.IIU.PLAYING, () => G.Z.Messages.USER_ACTIVITY_PLAYING).with(w.IIU.STREAMING, () => G.Z.Messages.USER_ACTIVITY_STREAMING).with(w.IIU.LISTENING, () => G.Z.Messages.USER_ACTIVITY_LISTENING_TO).with(w.IIU.WATCHING, () => G.Z.Messages.USER_ACTIVITY_WATCHING).with(w.IIU.HANG_STATUS, () => G.Z.Messages.USER_ACTIVITY_CURRENTLY).with(w.IIU.COMPETING, () => G.Z.Messages.USER_ACTIVITY_PLAYING).otherwise(() => null), J = () => {
-var e, t, n, i;
-if (F.type === w.IIU.HANG_STATUS)
+source: T.m1.UserProfile,
+trackEntryPointImpression: !0,
+...(0, w.n)({
+  user: t,
+  activity: i,
+  entry: $
+})
+  }), ee = (0, s.EQ)(i.type).with(G.IIU.PLAYING, () => B.Z.Messages.USER_ACTIVITY_PLAYING).with(G.IIU.STREAMING, () => B.Z.Messages.USER_ACTIVITY_STREAMING).with(G.IIU.LISTENING, () => B.Z.Messages.USER_ACTIVITY_LISTENING_TO).with(G.IIU.WATCHING, () => B.Z.Messages.USER_ACTIVITY_WATCHING).with(G.IIU.HANG_STATUS, () => B.Z.Messages.USER_ACTIVITY_CURRENTLY).with(G.IIU.COMPETING, () => B.Z.Messages.USER_ACTIVITY_PLAYING).otherwise(() => null), et = () => {
+var e, t, n, a;
+if (i.type === G.IIU.HANG_STATUS)
   return (0, r.jsx)('div', {
-    className: k.hangStatusIconBackground,
-    children: (0, r.jsx)(S.Z, {
-      hangStatusActivity: F,
-      className: k.hangStatusIcon
+    className: F.hangStatusIconBackground,
+    children: (0, r.jsx)(A.Z, {
+      hangStatusActivity: i,
+      className: F.hangStatusIcon
     })
   });
-let a = null === (e = F.assets) || void 0 === e ? void 0 : e.large_image,
-  s = null === (t = F.assets) || void 0 === t ? void 0 : t.small_image,
-  o = null === (n = F.assets) || void 0 === n ? void 0 : n.large_text,
-  l = null === (i = F.assets) || void 0 === i ? void 0 : i.small_text;
-if (null == a && null == s && (0, E.Z)(F)) {
-  let e = u.Z.get(w.ABu.XBOX).icon.customPNG;
-  return (0, r.jsx)(D.ZP, {
+let s = null === (e = i.assets) || void 0 === e ? void 0 : e.large_image,
+  o = null === (t = i.assets) || void 0 === t ? void 0 : t.small_image,
+  l = null === (n = i.assets) || void 0 === n ? void 0 : n.large_text,
+  c = null === (a = i.assets) || void 0 === a ? void 0 : a.small_text;
+if (null == s && null == o && (0, E.Z)(i)) {
+  let e = u.Z.get(G.ABu.XBOX).icon.customPNG;
+  return (0, r.jsx)(L.ZP, {
     image: {
       src: e,
-      alt: G.Z.Messages.XBOX
+      alt: B.Z.Messages.XBOX
     },
-    onClick: X
+    onClick: J
   });
 }
-if (null == a && null == s && (0, _.Z)(F)) {
-  let e = u.Z.get(w.ABu.PLAYSTATION).icon.customPNG;
-  return (0, r.jsx)(D.ZP, {
+if (null == s && null == o && (0, _.Z)(i)) {
+  let e = u.Z.get(G.ABu.PLAYSTATION).icon.customPNG;
+  return (0, r.jsx)(L.ZP, {
     image: {
       src: e,
-      alt: G.Z.Messages.PLAYSTATION
+      alt: B.Z.Messages.PLAYSTATION
     },
-    onClick: X
+    onClick: J
   });
 }
-return null == a && null != V ? (0, r.jsx)(D.ZP, {
+return null == s && null != H ? (0, r.jsx)(L.ZP, {
   image: {
-    src: V.getIconURL(D.WQ),
-    alt: G.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
-      applicationName: V.name
+    src: H.getIconURL(L.WQ),
+    alt: B.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
+      applicationName: H.name
     })
   },
-  onClick: X
-}) : null == a && null != s ? (0, r.jsx)(D.ZP, {
+  onClick: J
+}) : null == s && null != o ? (0, r.jsx)(L.ZP, {
   image: {
-    src: B(F.application_id, s, D.WQ),
+    src: V(i.application_id, o, L.WQ),
+    text: c
+  },
+  onClick: J
+}) : null != o && (0, d.Z)(i) ? (0, r.jsx)(L.ZP, {
+  image: {
+    src: V(i.application_id, s, L.WQ),
     text: l
-  },
-  onClick: X
-}) : null != s && (0, d.Z)(F) ? (0, r.jsx)(D.ZP, {
-  image: {
-    src: B(F.application_id, a, D.WQ),
-    text: o
   },
   richImage: {
-    src: B(F.application_id, s, D.Bp),
+    src: V(i.application_id, o, L.Bp),
+    text: c
+  },
+  onClick: J
+}) : (0, r.jsx)(L.ZP, {
+  image: {
+    src: V(i.application_id, s, L.WQ),
     text: l
   },
-  onClick: X
-}) : (0, r.jsx)(D.ZP, {
-  image: {
-    src: B(F.application_id, a, D.WQ),
-    text: o
-  },
-  onClick: X
+  onClick: J
 });
-  }, ee = () => {
+  }, en = () => {
 var e;
-return F.type === w.IIU.HANG_STATUS ? (0, r.jsx)(L.Z, {
+return i.type === G.IIU.HANG_STATUS ? (0, r.jsx)(b.Z, {
   variant: 'heading-sm/semibold',
-  text: (0, g.O8)(F)
-}) : (0, f.Z)(F) && null != Z ? (0, r.jsxs)('div', {
-  className: k.voiceChannelInfo,
+  text: (0, S.O8)(i)
+}) : (0, f.Z)(i) && null != Y ? (0, r.jsxs)('div', {
+  className: F.voiceChannelInfo,
   children: [
     (0, r.jsx)(l.VoiceNormalIcon, {
       size: 'xxs',
       color: l.tokens.colors.TEXT_NORMAL
     }),
-    (0, r.jsx)(L.Z, {
+    (0, r.jsx)(b.Z, {
       variant: 'heading-sm/semibold',
-      text: Z.name
+      text: Y.name
     })
   ]
-}) : (0, d.Z)(F) ? (0, r.jsx)(L.Z, {
+}) : (0, d.Z)(i) ? (0, r.jsx)(b.Z, {
   variant: 'heading-sm/semibold',
-  text: F.name
-}) : (0, r.jsx)(L.Z, {
+  text: i.name
+}) : (0, r.jsx)(b.Z, {
   variant: 'heading-sm/semibold',
-  text: null !== (e = F.details) && void 0 !== e ? e : F.name
+  text: null !== (e = i.details) && void 0 !== e ? e : i.name
 });
-  }, et = () => F.type === w.IIU.HANG_STATUS ? null : (0, f.Z)(F) && null != H ? (0, r.jsx)(L.Z, {
+  }, er = () => i.type === G.IIU.HANG_STATUS ? null : (0, f.Z)(i) && null != Z ? (0, r.jsx)(b.Z, {
 variant: 'text-xs/normal',
-text: G.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({
-  guildName: H.name
+text: B.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({
+  guildName: Z.name
 }),
-onClick: H.id === z ? void 0 : () => {
-  (0, A.X)(H.id), null == W || W();
+onClick: Z.id === q ? void 0 : () => {
+  (0, N.X)(Z.id), null == K || K();
 }
-  }) : (0, d.Z)(F) ? (0, r.jsx)(L.Z, {
+  }) : (0, d.Z)(i) ? (0, r.jsx)(b.Z, {
 variant: 'text-xs/normal',
-text: F.details
-  }) : (0, r.jsx)(L.Z, {
-text: F.state,
+text: i.details
+  }) : (0, r.jsx)(b.Z, {
+text: i.state,
 variant: 'text-xs/normal'
-  }), en = () => {
+  }), ei = () => {
 var e;
-return F.type === w.IIU.WATCHING ? null : (0, d.Z)(F) ? er() : (0, r.jsx)(L.Z, {
-  text: null === (e = F.assets) || void 0 === e ? void 0 : e.large_text,
+return i.type === G.IIU.WATCHING ? null : (0, d.Z)(i) ? ea() : (0, r.jsx)(b.Z, {
+  text: null === (e = i.assets) || void 0 === e ? void 0 : e.large_text,
   variant: 'text-xs/normal'
 });
-  }, er = () => {
-var e, t, n, i;
-return (null === (e = F.party) || void 0 === e ? void 0 : e.size) == null && F.application_id === x.Zc ? (0, r.jsxs)('div', {
-  className: k.gameState,
+  }, ea = () => {
+var e, t, n, a;
+return (null === (e = i.party) || void 0 === e ? void 0 : e.size) == null && i.application_id === k.Zc ? (0, r.jsxs)('div', {
+  className: F.gameState,
   children: [
-    (0, r.jsx)(L.Z, {
+    (0, r.jsx)(b.Z, {
       variant: 'text-xs/normal',
-      text: F.state
+      text: i.state
     }),
-    (0, r.jsx)(L.Z, {
+    (0, r.jsx)(b.Z, {
       variant: 'text-xs/normal',
-      text: G.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
+      text: B.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
         count: '0',
-        max: null !== (i = null == V ? void 0 : V.getMaxParticipants()) && void 0 !== i ? i : 0
+        max: null !== (a = null == H ? void 0 : H.getMaxParticipants()) && void 0 !== a ? a : 0
       })
     })
   ]
-}) : (0, c.Z)(F) && (null === (t = F.party) || void 0 === t ? void 0 : t.size) != null && (null === (n = F.party) || void 0 === n ? void 0 : n.size.length) >= 2 ? (0, r.jsxs)('div', {
-  className: k.gameState,
+}) : (0, c.Z)(i) && (null === (t = i.party) || void 0 === t ? void 0 : t.size) != null && (null === (n = i.party) || void 0 === n ? void 0 : n.size.length) >= 2 ? (0, r.jsxs)('div', {
+  className: F.gameState,
   children: [
-    (0, r.jsx)(L.Z, {
+    (0, r.jsx)(b.Z, {
       variant: 'text-xs/normal',
-      text: F.state
+      text: i.state
     }),
-    (0, r.jsx)(L.Z, {
+    (0, r.jsx)(b.Z, {
       variant: 'text-xs/normal',
-      text: G.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
-        count: F.party.size[0],
-        max: F.party.size[1]
+      text: B.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
+        count: i.party.size[0],
+        max: i.party.size[1]
       })
     })
   ]
-}) : null == F.party ? (0, r.jsx)(L.Z, {
+}) : null == i.party ? (0, r.jsx)(b.Z, {
   variant: 'text-xs/normal',
-  text: F.state
+  text: i.state
 }) : null;
-  }, ei = () => null == X ? (0, r.jsxs)('div', {
-className: k.details,
+  }, es = () => null == J ? (0, r.jsxs)('div', {
+className: F.details,
 children: [
   (0, r.jsxs)('div', {
     children: [
-      ee(),
-      et(),
-      en()
+      en(),
+      er(),
+      ei()
     ]
   }),
-  (0, r.jsx)(C.Z, {
-    user: n,
-    activity: F,
-    className: k.badges
+  (0, r.jsx)(y.Z, {
+    user: t,
+    activity: i,
+    className: F.badges
   })
 ]
   }) : (0, r.jsxs)('div', {
-className: k.details,
+className: F.details,
 children: [
   (0, r.jsxs)(l.Clickable, {
-    className: k.clickable,
+    className: F.clickable,
     onClick: () => {
-      X(), null == W || W();
+      J(), null == K || K();
     },
     children: [
-      ee(),
-      et(),
-      en()
+      en(),
+      er(),
+      ei()
     ]
   }),
-  (0, r.jsx)(C.Z, {
-    user: n,
-    activity: F,
-    className: k.badges
+  (0, r.jsx)(y.Z, {
+    user: t,
+    activity: i,
+    className: F.badges
   })
 ]
-  }), ea = () => null == H || null == Z ? null : (0, r.jsxs)(r.Fragment, {
+  }), eo = () => null == Z || null == Y ? null : (0, r.jsxs)(r.Fragment, {
 children: [
   (0, r.jsx)('div', {
-    className: k.voiceChannelDivider
+    className: F.voiceChannelDivider
   }),
-  (0, r.jsx)(b.Z, {
-    user: n,
-    guild: H,
-    channel: Z,
-    onClose: W
+  (0, r.jsx)(M.Z, {
+    user: t,
+    guild: Z,
+    channel: Y,
+    onClose: K
   })
 ]
-  }), es = () => n.id === i.id ? null : (0, r.jsx)('div', {
-className: a()(k.actions, Q),
-children: (0, r.jsx)(R.Z, {
-  activity: F,
-  user: n,
-  currentUser: i,
-  onAction: j,
-  onClose: W
+  }), el = () => t.id === n.id ? null : (0, r.jsx)('div', {
+className: a()(F.actions, X),
+children: (0, r.jsx)(C.Z, {
+  activity: i,
+  user: t,
+  currentUser: n,
+  onAction: W,
+  onClose: K
 })
   });
   return (0, r.jsx)(p.Gt, {
-value: K,
-children: (0, r.jsx)(M.Z, {
-  user: n,
-  onClose: W,
+value: z,
+children: (0, r.jsx)(P.Z, {
+  user: t,
+  onClose: K,
   children: e => {
     let {
-      onAutoDismiss: t
+      onAutoDismiss: n
     } = e;
-    return (0, r.jsxs)(v.Z.Overlay, {
-      className: a()(k.card, Y),
+    return (0, r.jsxs)(O.Z.Overlay, {
+      className: a()(F.card, j),
       children: [
-        (0, r.jsx)(y.Z, {
-          text: $,
-          platform: (0, m.ZH)(F),
-          tags: (0, r.jsx)(P.Z, {
+        (0, r.jsx)(D.Z, {
+          text: ee,
+          platform: (0, m.ZH)(i),
+          tags: (0, r.jsx)(U.Z, {
             display: 'live',
-            user: n,
-            activity: F,
-            onClose: W,
-            onRequestOpen: t
+            user: t,
+            activity: i,
+            entry: $,
+            onClose: K,
+            onRequestOpen: n
           })
         }),
         (0, r.jsxs)('div', {
-          className: k.body,
+          className: F.body,
           children: [
             (0, r.jsxs)('div', {
-              className: a()(k.content, Q),
+              className: a()(F.content, X),
               children: [
-                J(),
-                ei(),
-                q === U.y0.FULL_SIZE && es()
+                et(),
+                es(),
+                Q === x.y0.FULL_SIZE && el()
               ]
             }),
-            ea()
+            eo()
           ]
         }),
-        q !== U.y0.FULL_SIZE && es()
+        Q !== x.y0.FULL_SIZE && el()
       ]
     });
   }
