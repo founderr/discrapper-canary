@@ -39,8 +39,8 @@ collapsedHeight: M,
 isExpanded: P,
 isExpansionAnimationComplete: Z,
 expansionSpring: Q,
-onCtxMenuOpen: w,
-onCtxMenuClose: L,
+onCtxMenuOpen: L,
+onCtxMenuClose: w,
 onCtxMenuSelect: W,
 overlayRef: D,
 quest: V,
@@ -137,8 +137,8 @@ children: [
               })
             }),
             (0, s.jsx)(T.r, {
-              onOpen: w,
-              onClose: L,
+              onOpen: L,
+              onClose: w,
               onSelect: W,
               questContent: f.jn.QUEST_BAR_V2,
               quest: V,
@@ -168,6 +168,7 @@ children: [
           isExpanded: P
         }),
         (0, s.jsx)(R.Z, {
+          contentLocation: 'expanded',
           quest: V,
           progressBarRef: G,
           isExpanded: !0,
