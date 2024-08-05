@@ -10,10 +10,10 @@ var i = n(120356),
   s = n(442837),
   o = n(481060),
   l = n(607070),
-  u = n(907040),
-  c = n(314897),
-  d = n(699516),
-  _ = n(404975),
+  u = n(951394),
+  c = n(907040),
+  d = n(314897),
+  _ = n(699516),
   E = n(823379),
   f = n(51144),
   h = n(785717),
@@ -57,28 +57,28 @@ user: t,
 channel: n,
 sourceType: i,
 sourceDetails: E,
-isVisible: I,
-isExpandable: N,
-onReply: v
+isVisible: N,
+isExpandable: v,
+onReply: O
   } = e, {
-trackUserProfileAction: O
-  } = (0, h.KZ)(), R = (0, s.e7)([c.default], () => c.default.getId() === t.id), C = (0, p.Z)(t.id), [y, D] = (0, s.Wu)([l.Z], () => [
+trackUserProfileAction: R
+  } = (0, h.KZ)(), C = (0, s.e7)([d.default], () => d.default.getId() === t.id), y = (0, p.Z)(t.id), [D, L] = (0, s.Wu)([l.Z], () => [
 l.Z.useReducedMotion,
 l.Z.keyboardModeEnabled
   ]);
-  if (t.bot || R || !C)
+  if (t.bot || C || !y)
 return null;
-  let L = !N || y || D ? 0 : 300,
-b = async e => {
+  let b = !v || D || L ? 0 : 300,
+M = async e => {
   var n;
   if (null == e)
     return;
-  O({
+  R({
     action: 'PRESS_REACT'
   });
   let r = A({
     emoji: e,
-    username: null !== (n = d.Z.getNickname(t.id)) && void 0 !== n ? n : f.ZP.getName(t),
+    username: null !== (n = _.Z.getNickname(t.id)) && void 0 !== n ? n : f.ZP.getName(t),
     sourceType: i,
     sourceDetails: E
   });
@@ -89,27 +89,29 @@ b = async e => {
     openChannel: !1
   });
 };
-  return (0, r.jsxs)(_.ZP, {
+  return (0, r.jsxs)(u.ZP, {
 className: a()(S.popover, {
-  [S.visible]: I,
-  [S.expandable]: N
+  [S.visible]: N,
+  [S.expandable]: v,
+  [S.statusPopover]: i === I.N9.STATUS,
+  [S.avatarPopover]: i === I.N9.AVATAR
 }),
 children: [
   (0, r.jsx)(o.TooltipContainer, {
     text: g.Z.Messages.USER_PROFILE_SEND_REACTION,
-    shouldShow: I,
-    delay: L,
+    shouldShow: N,
+    delay: b,
     'aria-label': !1,
     children: (0, r.jsx)(o.Popout, {
       renderPopout: e => {
         let {
           closePopout: t
         } = e;
-        return (0, r.jsx)(u.Z, {
+        return (0, r.jsx)(c.Z, {
           guildId: null == n ? void 0 : n.guild_id,
           closePopout: t,
           onSelectEmoji: (e, n) => {
-            b(e), n && t();
+            M(e), n && t();
           },
           pickerIntention: T.Hz.PROFILE,
           channel: n
@@ -118,7 +120,7 @@ children: [
       position: 'left',
       animation: o.Popout.Animation.NONE,
       align: 'top',
-      children: e => (0, r.jsx)(_.zx, {
+      children: e => (0, r.jsx)(u.zx, {
         ...e,
         className: a()(S.button, S.left),
         'aria-label': g.Z.Messages.USER_PROFILE_SEND_REACTION,
@@ -131,11 +133,11 @@ children: [
   }),
   (0, r.jsx)(o.TooltipContainer, {
     text: g.Z.Messages.USER_PROFILE_REPLY,
-    shouldShow: I,
-    delay: L,
+    shouldShow: N,
+    delay: b,
     'aria-label': !1,
-    children: (0, r.jsx)(_.zx, {
-      onClick: () => null == v ? void 0 : v(i, E),
+    children: (0, r.jsx)(u.zx, {
+      onClick: () => null == O ? void 0 : O(i, E),
       className: a()(S.button, S.right),
       'aria-label': g.Z.Messages.USER_PROFILE_REPLY,
       children: (0, r.jsx)(o.ArrowAngleLeftUpIcon, {
