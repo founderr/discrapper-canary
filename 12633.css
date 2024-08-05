@@ -41239,6 +41239,18 @@ img.thumbnail_c64476 {
     padding-left: .5rem
 }
 
+.right_ea4310 {
+    transform: rotate(90deg)
+}
+
+.down_ea4310 {
+    transform: rotate(180deg)
+}
+
+.left_ea4310 {
+    transform: rotate(270deg)
+}
+
 .draggableContainer_ca37d0 {
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, .5)
 }
@@ -41318,7 +41330,7 @@ img.thumbnail_c64476 {
 
 .footerButtonContainer_ca37d0 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: var(--spacing-8)
 }
 
@@ -41332,9 +41344,12 @@ img.thumbnail_c64476 {
     pointer-events: all
 }
 
+.footerButtonBack_ca37d0 {
+    height: 100%
+}
+
 .footerButton_ca37d0 {
-    pointer-events: all;
-    flex: 1
+    pointer-events: all
 }
 
 html,
