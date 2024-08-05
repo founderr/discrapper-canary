@@ -25,9 +25,9 @@ h = i.useCallback(i => {
   n,
   e
 ]),
-p = i.useCallback((i, r, d) => {
+m = i.useCallback((i, r, d) => {
   a.current = (0, l.Z)();
-  let p = {
+  let m = {
     ...i,
     id: a.current,
     x: r,
@@ -36,15 +36,15 @@ p = i.useCallback((i, r, d) => {
     state: c.f.START,
     lastUpdatedAt: Date.now()
   };
-  (0, o.BR)(t, n, p), (0, o.gr)(p, e, n), s.current.start(u.FO, () => h(p));
+  (0, o.BR)(t, n, m), (0, o.gr)(m, e, n), s.current.start(u.FO, () => h(m));
 }, [
   e,
   t,
   n,
   h
 ]),
-m = i.useCallback((i, l, r) => {
-  let p = {
+p = i.useCallback((i, l, r) => {
+  let m = {
     ...i,
     id: a.current,
     x: l,
@@ -53,7 +53,7 @@ m = i.useCallback((i, l, r) => {
     state: c.f.START,
     lastUpdatedAt: Date.now()
   };
-  d(t, n, p), (0, o.gr)(p, e, n), s.current.start(u.FO, () => h(p));
+  d(t, n, m), (0, o.gr)(m, e, n), s.current.start(u.FO, () => h(m));
 }, [
   e,
   t,
@@ -75,16 +75,16 @@ _ = i.useCallback((i, l, r) => {
   n,
   e
 ]),
-f = i.useCallback((e, t, n) => m(e, t, n), [m]);
+f = i.useCallback((e, t, n) => p(e, t, n), [p]);
   return i.useMemo(() => ({
-handleMouseDown: p,
-handleMouseMove: m,
+handleMouseDown: m,
+handleMouseMove: p,
 handleMouseUp: _,
 handleMouseEnter: f
   }), [
-p,
-f,
 m,
+f,
+p,
 _
   ]);
 }

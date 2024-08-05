@@ -14,8 +14,8 @@ t.Z = e => {
 user: t,
 displayProfile: n,
 channel: h,
-animateAssets: p,
-forceShowPremiumBadge: m
+animateAssets: m,
+forceShowPremiumBadge: p
   } = e, _ = t.isNonUserBot(), [f, E] = (0, a.Wu)([l.Z], () => [
 _ ? null : l.Z.getStatus(t.id),
 l.Z.isMobileOnline(t.id)
@@ -27,8 +27,8 @@ children: [
     displayProfile: n,
     profileType: u.y0.PANEL,
     showPremiumBadgeUpsell: !0,
-    isHovering: m,
-    animateOnHover: !p
+    isHovering: p,
+    animateOnHover: !m
   }),
   (0, i.jsx)(c.tZ, {
     user: t,
@@ -39,7 +39,7 @@ children: [
     disableUserProfileLink: !0,
     hasBanner: (null == n ? void 0 : n.banner) != null,
     profileType: u.y0.PANEL,
-    animateOnHover: !p
+    animateOnHover: !m
   }),
   (0, i.jsx)('div', {
     className: d.badgelistGroup,
@@ -53,7 +53,7 @@ children: [
     profileEffectId: g,
     maxLoops: 0,
     resetOnHover: !0,
-    isHovering: m,
+    isHovering: p,
     urlQueryString: 'dm-view',
     noBorderRadius: !0
   })

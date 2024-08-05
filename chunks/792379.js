@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(580552),
   d = n(680295),
   h = n(5192),
-  p = n(785717),
-  m = n(318661),
+  m = n(785717),
+  p = n(318661),
   _ = n(78675),
   f = n(741308),
   E = n(588822),
@@ -39,7 +39,7 @@ user: t,
 channel: n
   } = e, L = __OVERLAY__ || !(0, u.Z)(t.id), {
 analyticsLocations: P
-  } = (0, c.ZP)(o.Z.PROFILE_PANEL), O = (0, m.ZP)(t.id), y = (0, r.ZP)(), D = a.useRef(null), k = (0, l.Z)(D), U = e => {
+  } = (0, c.ZP)(o.Z.PROFILE_PANEL), O = (0, p.ZP)(t.id), y = (0, r.ZP)(), D = a.useRef(null), k = (0, l.Z)(D), U = e => {
 (0, Z.openUserProfileModal)({
   sourceAnalyticsLocations: P,
   userId: t.id,
@@ -49,7 +49,7 @@ analyticsLocations: P
   };
   return (0, i.jsx)(c.Gt, {
 value: P,
-children: (0, i.jsx)(p.Mt, {
+children: (0, i.jsx)(m.Mt, {
   layout: 'SIMPLIFIED_DM_PANEL',
   userId: t.id,
   channelId: n.id,

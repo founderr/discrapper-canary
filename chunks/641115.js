@@ -19,8 +19,8 @@ var l = t(735250),
   g = t(436774),
   C = t(1163),
   h = t(594174),
-  N = t(74538),
-  Z = t(451467),
+  Z = t(74538),
+  N = t(451467),
   I = t(122186),
   x = t(37113),
   f = t(981631),
@@ -132,18 +132,18 @@ captureDeviceSelected: P
   } = e, D = (0, u.e7)([h.default], () => {
 let e = h.default.getCurrentUser();
 return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
-  }), G = N.ZP.canStreamQuality(N.U2.MID, D), {
+  }), G = Z.ZP.canStreamQuality(Z.U2.MID, D), {
 location: U
   } = (0, E.O)(), b = (0, _.Zq)({
 autoTrackExposure: !1
-  }), w = (0, N.I5)(D, R.p9.TIER_1);
+  }), w = (0, Z.I5)(D, R.p9.TIER_1);
   C.Z.useExperiment({
 location: 'Go Live Modal'
   }, {
 autoTrackExposure: !0,
 disable: w
   });
-  let k = (0, N.So)(c.q.STREAM_HIGH_QUALITY),
+  let k = (0, Z.So)(c.q.STREAM_HIGH_QUALITY),
 B = !G && !b || k,
 [V, y] = s.useState(!1),
 W = P ? x.z8 : x.WC,
@@ -155,7 +155,7 @@ F = (0, l.jsx)(d.ButtonGroup, {
   buttons: W.map(e => O({
     type: e,
     selected: e.value === a,
-    needsPremium: !(0, Z.Z)(t, e.value, r, D, j),
+    needsPremium: !(0, N.Z)(t, e.value, r, D, j),
     needsDemo: k && e.value !== x.LY.RESOLUTION_720,
     analyticsLocation: H,
     onClick: () => i(e.value),
@@ -167,7 +167,7 @@ z = (0, l.jsx)(d.ButtonGroup, {
   buttons: x.k0.map(e => O({
     type: e,
     selected: e.value === r,
-    needsPremium: !(0, Z.Z)(t, a, e.value, D, j),
+    needsPremium: !(0, N.Z)(t, a, e.value, D, j),
     needsDemo: k && e.value === x.ws.FPS_60,
     analyticsLocation: H,
     onClick: () => g(e.value),

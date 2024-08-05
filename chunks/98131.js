@@ -15,8 +15,8 @@ var l = t(735250),
   g = t(435064),
   C = t(894694),
   h = t(39604),
-  N = t(981631),
-  Z = t(921944),
+  Z = t(981631),
+  N = t(921944),
   I = t(689938),
   x = t(251146),
   f = t(1871);
@@ -33,7 +33,7 @@ n && (0, u.EW)(o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
 });
   }, [n]);
   let L = (e, n) => {
-e.stopPropagation(), e.preventDefault(), null == n || n(), T(Z.L.UNKNOWN);
+e.stopPropagation(), e.preventDefault(), null == n || n(), T(N.L.UNKNOWN);
   };
   return (0, l.jsx)(c.Popout, {
 shouldShow: v,
@@ -63,7 +63,7 @@ renderPopout: e => {
           color: 'always-white',
           className: x.warningText,
           children: I.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
-            url: _.Z.getArticleURL(N.BhN.CLIPS)
+            url: _.Z.getArticleURL(Z.BhN.CLIPS)
           })
         }) : null
       ]
@@ -88,7 +88,7 @@ n.Z = function(e) {
   let {
 isAnimationDone: n,
 guildId: t
-  } = e, s = (0, i.e7)([g.Z], () => g.Z.getSettings().clipsEnabled), a = (0, i.e7)([E.Z], () => E.Z.getKeybindForAction(N.kg4.SAVE_CLIP));
+  } = e, s = (0, i.e7)([g.Z], () => g.Z.getSettings().clipsEnabled), a = (0, i.e7)([E.Z], () => E.Z.getKeybindForAction(Z.kg4.SAVE_CLIP));
   r()(null != a, 'Clips keybind should be set');
   let o = S.BB(a.shortcut, !0);
   return (0, l.jsx)(c.FormItem, {

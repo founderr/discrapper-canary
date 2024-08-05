@@ -14,8 +14,8 @@ onClick: a,
 className: s,
 collapsed: d,
 speakers: h,
-channel: p,
-isStreamLive: m
+channel: m,
+isStreamLive: p
   } = e;
   return (0, i.jsxs)(r.Clickable, {
 onClick: a,
@@ -44,13 +44,13 @@ children: [
       n
     ]
   }),
-  d && null != p && null != h && h.length > 0 && (0, i.jsxs)(i.Fragment, {
+  d && null != m && null != h && h.length > 0 && (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsx)(c.Z, {
-        channel: p,
+        channel: m,
         speakers: h
       }),
-      m && (0, i.jsx)(o.ZP, {})
+      p && (0, i.jsx)(o.ZP, {})
     ]
   }),
   (0, i.jsx)(r.ChevronSmallDownIcon, {

@@ -22,7 +22,7 @@ function h(e, t) {
   version: o.Z.getMemberListVersion(e),
   members: o.Z.getMemberListSections(e)
 })),
-p = i.useMemo(() => {
+m = i.useMemo(() => {
   if (null == t)
     return d;
   let e = s()(n).values().filter(e => e.hoist).sortBy(e => e.position).reverse().map(e => e.id).value();
@@ -41,5 +41,5 @@ p = i.useMemo(() => {
   h,
   a
 ]);
-  return null != h ? p : d;
+  return null != h ? m : d;
 }

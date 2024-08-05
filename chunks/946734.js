@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(100527),
   d = n(906732),
   h = n(111028),
-  p = n(150039),
-  m = n(171368),
+  m = n(150039),
+  p = n(171368),
   _ = n(271383),
   f = n(430824),
   E = n(594174),
@@ -98,7 +98,7 @@ S(this, 'userId', void 0), S(this, 'user', void 0), S(this, 'channelId', void 0)
     })
   })
 }, 'more-avatars')), S(this, 'handleClick', () => {
-  (0, m.openUserProfileModal)({
+  (0, p.openUserProfileModal)({
     userId: this.userId,
     channelId: this.channelId,
     sourceAnalyticsLocations: this.analyticsLocations,
@@ -114,8 +114,8 @@ S(this, 'userId', void 0), S(this, 'user', void 0), S(this, 'channelId', void 0)
 function A(e) {
   let {
 channel: t
-  } = e, n = t.getRecipientId(), s = (0, p.gc)(n), l = Array(s.length).fill(null), {
-analyticsLocations: m
+  } = e, n = t.getRecipientId(), s = (0, m.gc)(n), l = Array(s.length).fill(null), {
+analyticsLocations: p
   } = (0, d.ZP)(u.Z.AKA), _ = function(e) {
 let {
   userId: t,
@@ -135,13 +135,13 @@ return l.updateData({
 }), l;
   }({
 userId: n,
-analyticsLocations: m,
+analyticsLocations: p,
 channelId: t.id
   });
   return 0 === _.getNicknameGuildPairs().length && 0 === s.length ? (0, i.jsx)('div', {
 className: v.spacer
   }) : (0, i.jsxs)(d.Gt, {
-value: m,
+value: p,
 children: [
   (0, i.jsx)(I.iz, {}),
   (0, i.jsx)(o.TextBadge, {

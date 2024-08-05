@@ -31,15 +31,15 @@ function h(e) {
 className: n,
 children: s,
 keyExtractor: h,
-paddingTop: p = 0,
-paddingBottom: m = 0
+paddingTop: m = 0,
+paddingBottom: p = 0
   } = e, [_, f] = a.useState({
 width: 0,
 height: 0
   }), {
 width: E,
 height: g
-  } = _, C = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = E - 16, x = g - (p + m), {
+  } = _, C = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = E - 16, x = g - (m + p), {
 tileStyle: T,
 tileWidth: N,
 rows: v,
@@ -92,9 +92,9 @@ x
 fade: !0,
 className: n,
 listPadding: [
-  p + b,
+  m + b,
   0,
-  m + b - 8,
+  p + b - 8,
   8
 ],
 renderRow: function(e) {

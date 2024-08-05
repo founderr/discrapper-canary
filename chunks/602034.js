@@ -16,8 +16,8 @@ var i = n(735250),
   u = n(680287),
   d = n(470623),
   h = n(957730),
-  p = n(48854),
-  m = n(703558),
+  m = n(48854),
+  p = n(703558),
   _ = n(403182),
   f = n(928477),
   E = n(981631),
@@ -36,7 +36,7 @@ useDefaultThreadName: o
 c.Z.uploadFiles({
   channelId: e.id,
   uploads: t,
-  draftType: m.d.FirstThreadMessage,
+  draftType: p.d.FirstThreadMessage,
   options: {
     stickerIds: i
   },
@@ -80,7 +80,7 @@ upload: function(e, a, s) {
     let h = new u.Z(e);
     h.on('error', (e, a, s) => {
       if (a === E.evJ.EXPLICIT_CONTENT) {
-        let e = (0, p.r)();
+        let e = (0, m.r)();
         null != s && null != s.attachments && s.attachments.length > 0 && (r.Z.dispatch({
           type: 'MESSAGE_EXPLICIT_CONTENT_FP_CREATE',
           messageId: e,

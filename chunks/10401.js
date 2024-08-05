@@ -5,8 +5,8 @@ var i, a, s, l, r = n(873546),
   u = n(38618),
   d = n(268967),
   h = n(188785);
-let p = {},
-  m = {},
+let m = {},
+  p = {},
   _ = !0,
   f = {},
   E = !1;
@@ -18,10 +18,10 @@ function g() {
 function C() {
   if (f = {}, !_)
 for (let [e, t] of Object.entries(d.Z)) {
-  let n = !1 !== p[e];
+  let n = !1 !== m[e];
   if (f[e] = n, n && null != t.prerequisites)
     for (let n of t.prerequisites)
-      !1 !== p[n] && (f[e] = !1);
+      !1 !== m[n] && (f[e] = !1);
 }
 }
 class I extends(i = o.ZP.Store) {
@@ -39,7 +39,7 @@ return !(!E || _ || h.a || (t = e, r.tq && [
 return !_;
   }
   getIndicators() {
-return m;
+return p;
   }
   getData() {
 return d.Z;
@@ -59,29 +59,29 @@ l = 'TutorialIndicatorStore', (s = 'displayName') in(a = I) ? Object.definePrope
 let {
   tutorial: t
 } = e;
-E = !0, _ = !0, p = {}, null != t && (_ = t.indicators_suppressed, t.indicators_confirmed.forEach(e => p[e] = !1)), C();
+E = !0, _ = !0, m = {}, null != t && (_ = t.indicators_suppressed, t.indicators_confirmed.forEach(e => m[e] = !1)), C();
   },
   CONNECTION_CLOSED: function() {
 E = !1;
   },
   TUTORIAL_INDICATOR_DISMISS: function(e) {
-p = {
-  ...p,
-  [e.tutorialId]: !1
-}, m = {
-  ...m
-}, delete m[e.tutorialId], C();
-  },
-  TUTORIAL_INDICATOR_SHOW: function(e) {
 m = {
   ...m,
+  [e.tutorialId]: !1
+}, p = {
+  ...p
+}, delete p[e.tutorialId], C();
+  },
+  TUTORIAL_INDICATOR_SHOW: function(e) {
+p = {
+  ...p,
   [e.tutorialId]: e.renderData
 };
   },
   TUTORIAL_INDICATOR_HIDE: function(e) {
-m = {
-  ...m
-}, delete m[e.tutorialId];
+p = {
+  ...p
+}, delete p[e.tutorialId];
   },
   TUTORIAL_INDICATOR_SUPPRESS_ALL: function() {
 _ = !0;

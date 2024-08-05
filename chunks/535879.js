@@ -17,12 +17,12 @@ value: t,
 labelText: n,
 onChange: c,
 onShowUpsell: u
-  } = e, d = (0, a.e7)([s.default], () => s.default.getCurrentUser()), h = l.ZP.canUseFancyVoiceChannelReactions(d), p = '';
-  return p = h ? t ? o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_ENABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_DISABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_UPSELL, (0, i.jsx)(r.Z, {
+  } = e, d = (0, a.e7)([s.default], () => s.default.getCurrentUser()), h = l.ZP.canUseFancyVoiceChannelReactions(d), m = '';
+  return m = h ? t ? o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_ENABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_DISABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_UPSELL, (0, i.jsx)(r.Z, {
 checked: t,
 onChange: c,
 labelText: n,
-tooltipText: p,
+tooltipText: m,
 iconAltText: o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TADA_ALT,
 canToggle: h,
 onClick: h ? () => {} : u

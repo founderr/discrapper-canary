@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(100527),
   d = n(906732),
   h = n(574176),
-  p = n(769654),
-  m = n(199902),
+  m = n(769654),
+  p = n(199902),
   _ = n(314897),
   f = n(592125),
   E = n(496675),
@@ -75,11 +75,11 @@ isMobile: eo,
 status: ec,
 hangStatusActivity: eu
   } = (0, r.cj)([
-m.Z,
+p.Z,
 g.Z,
 E.Z
   ], () => {
-let e = null != m.Z.getAnyStreamForUser(n.id);
+let e = null != p.Z.getAnyStreamForUser(n.id);
 return {
   activity: g.Z.findActivity(n.id, t => {
     let {
@@ -103,13 +103,13 @@ return {
     return t === K.IIU.HANG_STATUS;
   }) : null
 };
-  }), ed = null != es || null != eu || er, eh = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), ep = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
-mutualFriends: em,
+  }), ed = null != es || null != eu || er, eh = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), em = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
+mutualFriends: ep,
 isFetching: e_
   } = (0, M.Z)(n.id, !n.bot), {
 mutualGuilds: ef,
 isFetching: eE
-  } = (0, b.Z)(n.id, !n.bot), eg = !n.bot && null != em && em.length > 0, eC = !n.bot && null != ef && ef.length > 0, eI = (0, F.J)({
+  } = (0, b.Z)(n.id, !n.bot), eg = !n.bot && null != ep && ep.length > 0, eC = !n.bot && null != ef && ef.length > 0, eI = (0, F.J)({
 popoutUser: n,
 source: D.m.PROFILE_PANEL
   }), ex = (0, c.ZP)();
@@ -141,10 +141,10 @@ ec
     guild: t,
     nick: a,
     theme: ex,
-    onSelect: () => (0, p.X)(t.id)
+    onSelect: () => (0, m.X)(t.id)
   }, t.id);
 }),
-eN = null == em ? void 0 : em.map(e => {
+eN = null == ep ? void 0 : ep.map(e => {
   let {
     key: t,
     user: n,
@@ -224,7 +224,7 @@ children: (0, i.jsx)(N.Mt, {
                 (0, i.jsx)(k.Z, {}),
                 (0, i.jsx)(w.Z, {
                   bio: null == en ? void 0 : en.bio,
-                  hidePersonalInformation: ep,
+                  hidePersonalInformation: em,
                   animateOnHover: !0,
                   isHovering: Q,
                   userId: n.id
@@ -289,10 +289,10 @@ children: (0, i.jsx)(N.Mt, {
                     [X.mutualFriendsDivider]: eC
                   }),
                   header: q.Z.Messages.MUTUAL_FRIENDS_COUNT.format({
-                    count: em.length
+                    count: ep.length
                   }),
                   isLoadingHeader: e_,
-                  loadingContentsCount: em.length,
+                  loadingContentsCount: ep.length,
                   itemType: W.R.MutualFriendsList,
                   onExpand: () => {
                     (0, v.pQ)({

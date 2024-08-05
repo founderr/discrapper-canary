@@ -22,8 +22,8 @@ var l = t(735250),
   g = t(594190),
   C = t(569984),
   h = t(918701),
-  N = t(977156),
-  Z = t(28798),
+  Z = t(977156),
+  N = t(28798),
   I = t(131951),
   x = t(449224),
   f = t(358085),
@@ -123,7 +123,7 @@ enableGoLiveCaptureCard: a
   } = R.Z.useExperiment({
 location: 'GoLive_Source_Select'
   }), i = I.Z.supports(M.AN.GO_LIVE_HARDWARE), [u, E] = s.useState(null), [x, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [k, B] = s.useState(!1), V = s.useRef(null), y = s.useRef(new d.Xp()), W = (0, c.e7)([g.ZP], () => g.ZP.getRunningGames()), H = function(e, n, t) {
-let l = (0, N.Zy)({
+let l = (0, Z.Zy)({
   location: p.dr.STREAM_SOURCE_SELECT
 });
 return s.useMemo(() => {
@@ -269,7 +269,7 @@ children: [
     className: j.sourceScroller,
     onScroll: J,
     children: [
-      b === o.vA.WINDOW && null != H && (0, l.jsx)(Z.Z, {
+      b === o.vA.WINDOW && null != H && (0, l.jsx)(N.Z, {
         quest: H.quest
       }),
       (0, l.jsx)(S.Z, {

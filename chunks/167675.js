@@ -16,19 +16,19 @@ var a = n(442837),
 
 function h(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Yn.DEFAULT,
-[n, h, p] = (0, r.Z)(e, t),
-m = (0, a.e7)([l.ZP], () => l.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+[n, h, m] = (0, r.Z)(e, t),
+p = (0, a.e7)([l.ZP], () => l.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
   return n ? (0, i.jsx)(s.MenuCheckboxItem, {
 id: 'self-video-hide',
 label: d.Z.Messages.SHOW_SELF_VIDEO,
 checked: !h,
 action: () => {
-  if (m || h)
-    return p(!h);
+  if (p || h)
+    return m(!h);
   (0, s.openModal)(e => (0, i.jsx)(o.Z, {
     ...e,
     type: c.K.VIDEO,
-    onConfirm: () => p(!h)
+    onConfirm: () => m(!h)
   }));
 }
   }) : null;

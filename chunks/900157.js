@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(561472),
   d = n(367907),
   h = n(731429),
-  p = n(188471),
-  m = n(933557),
+  m = n(188471),
+  p = n(933557),
   _ = n(287746),
   f = n(541716),
   E = n(665149),
@@ -35,7 +35,7 @@ function b(e) {
 channelId: t,
 baseChannelId: s,
 channelViewSource: b = 'Split View'
-  } = e, R = (0, r.e7)([I.Z], () => I.Z.getChannel(t)), j = (0, r.e7)([T.Z], () => T.Z.getGuild(null == R ? void 0 : R.getGuildId())), L = (0, m.ZP)(R);
+  } = e, R = (0, r.e7)([I.Z], () => I.Z.getChannel(t)), j = (0, r.e7)([T.Z], () => T.Z.getGuild(null == R ? void 0 : R.getGuildId())), L = (0, p.ZP)(R);
   (function(e) {
 let t = (0, r.e7)([N.Z], () => null != e && !l().isEmpty(N.Z.getVoiceStatesForChannel(e.id)));
 a.useEffect(() => {
@@ -60,7 +60,7 @@ a.useEffect(() => {
     ...e,
     ...(0, d.$H)(R.id),
     channel_view: b
-  }), (0, p.a)(Z.rMx.CHANNEL_OPENED_CLICKSTREAM, {
+  }), (0, m.a)(Z.rMx.CHANNEL_OPENED_CLICKSTREAM, {
     channelId: R.id
   });
 }, [

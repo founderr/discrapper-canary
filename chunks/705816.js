@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(318661),
   d = n(502762),
   h = n(475413),
-  p = n(228168),
-  m = n(689938),
+  m = n(228168),
+  p = n(689938),
   _ = n(833802),
   f = n(321975);
 
@@ -40,7 +40,7 @@ children: (0, i.jsx)(c.Mt, {
     ref: N,
     user: t,
     displayProfile: x,
-    profileType: p.y0.PANEL,
+    profileType: m.y0.PANEL,
     themeOverride: T,
     className: _.container,
     children: (0, i.jsx)(s.u2, {
@@ -56,7 +56,7 @@ children: (0, i.jsx)(c.Mt, {
           (0, i.jsx)(h.tG, {
             className: _.centeredButton,
             action: 'VIEW_BLOCKED_PROFILE',
-            text: m.Z.Messages.VIEW_PROFILE,
+            text: p.Z.Messages.VIEW_PROFILE,
             autoFocus: !0,
             fullWidth: !1,
             onClick: () => {

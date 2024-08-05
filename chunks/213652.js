@@ -13,15 +13,15 @@ var i = n(735250),
   u = n(871499),
   d = n(199902),
   h = n(314897),
-  p = n(358221),
-  m = n(354459),
+  m = n(358221),
+  p = n(354459),
   _ = n(689938),
   f = n(906570);
 
 function E(e) {
   let {
 channel: t
-  } = e, n = (0, s.e7)([p.Z], () => p.Z.getSelectedParticipant(t.id)), E = (null == n ? void 0 : n.type) === m.fO.STREAM, g = (0, s.e7)([d.Z], () => E ? d.Z.getActiveStreamForStreamKey(n.id) : null), {
+  } = e, n = (0, s.e7)([m.Z], () => m.Z.getSelectedParticipant(t.id)), E = (null == n ? void 0 : n.type) === p.fO.STREAM, g = (0, s.e7)([d.Z], () => E ? d.Z.getActiveStreamForStreamKey(n.id) : null), {
 ignoreSenderPreference: C
   } = c.Z.useExperiment({
 location: 'ActionBarClipsButton'

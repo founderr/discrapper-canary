@@ -18,15 +18,15 @@ user: t,
 channelId: n,
 streamerId: d,
 stream: h,
-focused: p,
-canvas: m
+focused: m,
+canvas: p
   } = e, _ = i.useRef(!1), f = (0, a.e7)([s.Z], () => s.Z.getDrawMode()), E = (0, o.Z)((0, c.Z)(t.id, n, d), h), g = (0, o.Z)((0, u.Z)(t.id, n, d), h), C = i.useCallback((e, t, n) => {
-if (null == m)
+if (null == p)
   return;
 let {
   x: i,
   y: a
-} = (0, r.hn)(m, n);
+} = (0, r.hn)(p, n);
 switch (t.type) {
   case l.W.LINE:
     return E[e](t, i, a);
@@ -34,30 +34,30 @@ switch (t.type) {
     return g[e](t, i, a);
 }
   }, [
-m,
+p,
 E,
 g
   ]), I = i.useCallback(e => {
-if (!!p && null != f)
+if (!!m && null != f)
   e.stopPropagation(), _.current = !0, C('handleMouseDown', f, e);
   }, [
 C,
 f,
-p
+m
   ]), x = i.useCallback(e => {
-if (!!p && null != f)
+if (!!m && null != f)
   e.stopPropagation(), _.current && C('handleMouseMove', f, e);
   }, [
 C,
 f,
-p
+m
   ]), T = i.useCallback(e => {
-if (!!p && null != f)
+if (!!m && null != f)
   e.stopPropagation(), _.current = !1, C('handleMouseUp', f, e);
   }, [
 C,
 f,
-p
+m
   ]), N = i.useCallback(e => {
 if (!!_.current && null != f)
   C('handleMouseEnter', f, e);
@@ -76,10 +76,10 @@ C,
 f
   ]), {
 handleClick: i.useCallback(e => {
-  p && null != f && e.stopPropagation();
+  m && null != f && e.stopPropagation();
 }, [
   f,
-  p
+  m
 ]),
 handleMouseDown: I,
 handleMouseEnter: N,

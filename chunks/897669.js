@@ -18,10 +18,10 @@ function h(e) {
   let {
 guildEvent: t,
 recurrenceId: n
-  } = e, h = (0, r.ZP)(t, n), p = (0, l.Z)(n, t.id);
+  } = e, h = (0, r.ZP)(t, n), m = (0, l.Z)(n, t.id);
   if (null == t)
 return null;
-  let m = (null == t ? void 0 : t.scheduled_start_time) != null ? (0, o.lh)(p, h.startTime, new Date(null == t ? void 0 : t.scheduled_start_time)) : null;
+  let p = (null == t ? void 0 : t.scheduled_start_time) != null ? (0, o.lh)(m, h.startTime, new Date(null == t ? void 0 : t.scheduled_start_time)) : null;
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(s.ZP.Divider, {
@@ -29,7 +29,7 @@ children: [
   }),
   (0, i.jsx)(c.z, {
     startTime: h.startTime.toISOString(),
-    status: null != m ? m : t.status,
+    status: null != p ? p : t.status,
     liveText: u.Z.Messages.LIVE_EVENT,
     className: d.eventSchedule,
     textVariant: 'text-lg/semibold',

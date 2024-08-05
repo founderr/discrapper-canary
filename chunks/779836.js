@@ -14,8 +14,8 @@ var a = n(120356),
   u = n(446183),
   d = n(677281),
   h = n(765104),
-  p = n(477291),
-  m = n(531578),
+  m = n(477291),
+  p = n(531578),
   _ = n(959517),
   f = n(689938),
   E = n(534689);
@@ -25,7 +25,7 @@ function g(e) {
 summary: t,
 channel: n
   } = e, a = (0, r.e7)([h.Z], () => h.Z.summaryFeedback(t)), s = (e, i) => {
-e.stopPropagation(), (0, p.Z)({
+e.stopPropagation(), (0, m.Z)({
   summary: t,
   channel: n,
   rating: i
@@ -62,7 +62,7 @@ children: c((e, t) => t ? (0, i.jsx)('div', {
         children: f.Z.Messages.SUMMARY_FEEDBACK
       }),
       (0, i.jsx)(o.Clickable, {
-        onClick: e => s(e, m.aZ.GOOD),
+        onClick: e => s(e, p.aZ.GOOD),
         children: (0, i.jsx)(d.Z, {
           className: E.thumbIcon,
           width: 12,
@@ -70,7 +70,7 @@ children: c((e, t) => t ? (0, i.jsx)('div', {
         })
       }),
       (0, i.jsx)(o.Clickable, {
-        onClick: e => s(e, m.aZ.BAD),
+        onClick: e => s(e, p.aZ.BAD),
         children: (0, i.jsx)(u.Z, {
           className: E.thumbIcon,
           width: 12,
@@ -90,10 +90,10 @@ function C(e) {
   channel: u,
   index: d
 } = e,
-p = (0, r.e7)([h.Z], () => h.Z.selectedSummary(u.id));
-  if (null == p)
+m = (0, r.e7)([h.Z], () => h.Z.selectedSummary(u.id));
+  if (null == m)
 return null;
-  let m = null != l.unreadId,
+  let p = null != l.unreadId,
 f = null != l.content;
   return a = f ? (0, i.jsxs)(i.Fragment, {
 children: [
@@ -107,7 +107,7 @@ children: [
   }) : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(g, {
-    summary: p,
+    summary: m,
     channel: u
   }),
   (0, i.jsx)(o.TopicsIcon, {
@@ -119,8 +119,8 @@ children: [
   }), (0, i.jsx)(c.Z, {
 className: s()(E.summaryDivider, f ? E.summaryDividerStart : E.summaryDividerEnd),
 contentClassName: f ? E.summaryStartContent : E.summaryEndContent,
-isUnread: m,
-id: m ? _.j1 : void 0,
+isUnread: p,
+id: p ? _.j1 : void 0,
 children: a
   }, 'divider-'.concat(null !== (n = null !== (t = l.contentKey) && void 0 !== t ? t : l.unreadId) && void 0 !== n ? n : d));
 }

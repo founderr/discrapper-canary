@@ -14,8 +14,8 @@ var a = n(512722),
   u = n(689938),
   d = n(755943),
   h = n(480032),
-  p = n(699352);
-let m = null;
+  m = n(699352);
+let p = null;
 
 function _(e) {
   let {
@@ -24,12 +24,12 @@ onAccept: n,
 popoutPosition: a,
 gameConsoleAccounts: l
   } = e;
-  s()(l.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == m || null == l.find(e => e.type === m)) && (m = r().shuffle(l)[0].type);
+  s()(l.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == p || null == l.find(e => e.type === p)) && (p = r().shuffle(l)[0].type);
   let _ = null,
 f = null;
-  switch (m) {
+  switch (p) {
 case c.ABu.XBOX:
-  _ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX, f = p;
+  _ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX, f = m;
   break;
 case c.ABu.PLAYSTATION:
 case c.ABu.PLAYSTATION_STAGING:

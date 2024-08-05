@@ -17,13 +17,13 @@ channel: c,
 compact: u = !1,
 interactionUsernameProfile: d,
 interactionAvatarProfile: h,
-interactionData: p,
-setPopout: m
-  } = e, _ = (0, s.e7)([l.Z], () => l.Z.isBlockedForMessage(n), [n]), f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), E = (0, o.Nk)(n.interaction, c, d, m), g = (0, o.NU)(h, m), C = (0, o.Xn)(p, m), I = a.useCallback(() => m({
+interactionData: m,
+setPopout: p
+  } = e, _ = (0, s.e7)([l.Z], () => l.Z.isBlockedForMessage(n), [n]), f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), E = (0, o.Nk)(n.interaction, c, d, p), g = (0, o.NU)(h, p), C = (0, o.Xn)(m, p), I = a.useCallback(() => p({
 interactionUsernameProfile: !1,
 interactionAvatarProfile: !1,
 interactionData: !1
-  }), [m]);
+  }), [p]);
   return (0, i.jsx)(r.Z, {
 message: n,
 channel: c,
@@ -31,7 +31,7 @@ compact: u,
 isInteractionUserBlocked: _,
 showAvatarPopout: h,
 showUsernamePopout: d,
-showDataPopout: p,
+showDataPopout: m,
 onClickAvatar: g,
 onClickUsername: E,
 onClickCommand: C,

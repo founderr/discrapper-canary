@@ -39,15 +39,15 @@ h = (0, a.e7)([
   let d = (null == u ? void 0 : u.joinedAt) != null ? new Date(u.joinedAt) : null,
     h = null != d && Date.now() - d.getTime() > 259200000,
     {
-      identityGuildId: p,
-      identityEnabled: m
+      identityGuildId: m,
+      identityEnabled: p
     } = s.clan;
-  return null != p && null == m ? e === p : null == p && null == m ? h : (p !== e || !1 !== m) && null != p && !1 === m && h;
+  return null != m && null == p ? e === m : null == m && null == p ? h : (m !== e || !1 !== p) && null != m && !1 === p && h;
 }(e, [
   o.default,
   r.Z,
   l.ZP
 ]), [e]),
-p = (0, s.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : d.lds);
-  return n && h && !p;
+m = (0, s.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : d.lds);
+  return n && h && !m;
 }

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(596454),
   d = n(607070),
   h = n(70956),
-  p = n(456631),
-  m = n(219040);
+  m = n(456631),
+  p = n(219040);
 let _ = 6 * h.Z.Millis.SECOND,
   f = 2 * h.Z.Millis.SECOND,
   E = 2 * h.Z.Millis.SECOND,
@@ -48,8 +48,8 @@ onRest: (e, t) => {
   });
   return (a.useEffect(() => {
 let e;
-return Date.now() - C >= E ? (0, p.H)(t) : e = setTimeout(() => {
-  T(!1), N && (0, p.H)(t);
+return Date.now() - C >= E ? (0, m.H)(t) : e = setTimeout(() => {
+  T(!1), N && (0, m.H)(t);
 }, N ? f : _), () => {
   null != e && clearTimeout(e);
 };
@@ -63,12 +63,12 @@ let {
   rotate: a
 } = e;
 return t && (0, i.jsx)(r.animated.div, {
-  className: m.voiceChannelEffectEmojiContainer,
+  className: p.voiceChannelEffectEmojiContainer,
   style: {
     transform: a.to(g)
   },
   children: (0, i.jsx)(u.Z, {
-    className: l()(m.voiceChannelEffectEmoji),
+    className: l()(p.voiceChannelEffectEmoji),
     emojiId: h.id,
     emojiName: h.name,
     animated: null !== (n = h.animated) && void 0 !== n && n

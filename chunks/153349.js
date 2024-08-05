@@ -11,8 +11,8 @@ var i, a, s = n(735250),
   u = n.n(c),
   d = n(442837),
   h = n(481060),
-  p = n(239091),
-  m = n(99690),
+  m = n(239091),
+  p = n(99690),
   _ = n(58540),
   f = n(665149),
   E = n(484459),
@@ -92,7 +92,7 @@ function L() {
   (0, T.DT)(t, i.user.id, !0);
 }
 let P = e => {
-  (0, p.jW)(e, async () => {
+  (0, m.jW)(e, async () => {
     let {
       default: e
     } = await Promise.all([
@@ -134,7 +134,7 @@ return (0, s.jsxs)('div', {
           onContextMenu: P,
           ...e,
           children: [
-            (0, s.jsx)(m.Z, {
+            (0, s.jsx)(p.Z, {
               size: h.AvatarSizes.SIZE_40,
               className: R.participantAvatar,
               user: i.user,

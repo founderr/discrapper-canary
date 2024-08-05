@@ -14,8 +14,8 @@ var a = n(442837),
   u = n(322937),
   d = n(134049),
   h = n(893732),
-  p = n(590433),
-  m = n(689938),
+  m = n(590433),
+  p = n(689938),
   _ = n(243483);
 
 function f(e) {
@@ -38,9 +38,9 @@ children: [
       color: 'currentColor',
       className: _.bannerIcon
     }),
-    bannerHeader: m.Z.Messages.GUILD_COMMUNICATION_DISABLED_NOTICE_HEADER,
-    bannerSubtext: m.Z.Messages.GUILD_COMMUNICATION_DISABLED_CHAT_NOTICE_DESCRIPTION.format({
-      link: p.cu
+    bannerHeader: p.Z.Messages.GUILD_COMMUNICATION_DISABLED_NOTICE_HEADER,
+    bannerSubtext: p.Z.Messages.GUILD_COMMUNICATION_DISABLED_CHAT_NOTICE_DESCRIPTION.format({
+      link: m.cu
     }),
     containerStyles: _.bannerContainer,
     headerStyles: _.bannerHeader,

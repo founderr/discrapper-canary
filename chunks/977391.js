@@ -28,12 +28,12 @@ throw Error('generateMessageSpecs: too many attachments relative to messageGroup
   let u = s / o.yqN.FONT_SIZE_DEFAULT,
 d = t ? r.iv : r.pk,
 h = t ? r.Pb : r.XX,
-p = 0,
-m = Array(n).fill(null).map(() => {
+m = 0,
+p = Array(n).fill(null).map(() => {
   let e = l().random(1, i);
-  return p += c * u + d * u + (e - 1) * h * u, e;
+  return m += c * u + d * u + (e - 1) * h * u, e;
 }),
-_ = m.map((e, t) => t),
+_ = p.map((e, t) => t),
 f = [];
   for (; f.length < a;) {
 let e = {
@@ -43,12 +43,12 @@ let e = {
 f.push([
   _.splice(l().random(0, _.length - 1), 1)[0],
   e
-]), p += e.height + r.M9 * u;
+]), m += e.height + r.M9 * u;
   }
   return {
-messages: m,
+messages: p,
 attachmentSpecs: f,
-totalHeight: p,
+totalHeight: m,
 groupSpacing: c
   };
 }

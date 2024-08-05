@@ -18,8 +18,8 @@ senderId: c,
 warningType: u,
 header: d,
 description: h,
-onDismiss: p,
-buttons: m
+onDismiss: m,
+buttons: p
   } = e;
   a.useEffect(() => {
 l.Z.increment({
@@ -27,7 +27,7 @@ l.Z.increment({
 });
   }, []);
   let _ = a.useCallback(() => {
-null == p || p(), (0, o.qc)({
+null == m || m(), (0, o.qc)({
   channelId: t,
   warningId: n,
   senderId: c,
@@ -35,14 +35,14 @@ null == p || p(), (0, o.qc)({
   cta: o.NM.USER_BANNER_DISMISS
 });
   }, [
-p,
+m,
 t,
 n,
 c,
 u
   ]);
   return (0, i.jsx)(r.W, {
-buttons: m,
+buttons: p,
 description: h,
 header: d,
 onDismiss: _

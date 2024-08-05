@@ -12,15 +12,15 @@ var i, a, s = n(735250),
   d = n(153066),
   h = n(431452);
 (a = i || (i = {})).CONTAIN = 'contain', a.COVER = 'cover';
-let p = l.memo(function(e) {
+let m = l.memo(function(e) {
   let {
 streamId: t,
 onResize: n,
 wrapperClassName: i,
 videoComponent: a,
 className: r,
-fit: p = 'contain',
-mirror: m = !1,
+fit: m = 'contain',
+mirror: p = !1,
 paused: _ = !1,
 streamPreviewURL: f,
 videoSpinnerContext: E,
@@ -43,8 +43,8 @@ I(!1);
 className: o()(h.wrapper, i),
 children: [
   null != t && (0, s.jsx)(a, {
-    className: o()(h.video, (0, d.l)(h, 'video', p), {
-      [h.mirror]: m
+    className: o()(h.video, (0, d.l)(h, 'video', m), {
+      [h.mirror]: p
     }, r),
     streamId: t,
     onResize: n,
@@ -76,4 +76,4 @@ children: [
 ]
   });
 });
-t.Z = p;
+t.Z = m;

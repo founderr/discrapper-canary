@@ -15,7 +15,7 @@ return u;
 return c;
   },
   gX: function() {
-return p;
+return m;
   }
 }), n(47120);
 var i = n(512722),
@@ -51,14 +51,14 @@ function u(e) {
 
 function d(e) {
   var t;
-  return (t = e.filter(e => e.featurableInDirectory && p(e)), l().orderBy(t, [e => e.createdAt], ['desc'])).slice(0, c);
+  return (t = e.filter(e => e.featurableInDirectory && m(e)), l().orderBy(t, [e => e.createdAt], ['desc'])).slice(0, c);
 }
 
 function h(e) {
   return u(e);
 }
 
-function p(e) {
+function m(e) {
   var t;
   return (null !== (t = e.approximateMemberCount) && void 0 !== t ? t : 0) >= 5;
 }

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(566620),
   d = n(403404),
   h = n(906732),
-  p = n(605236),
-  m = n(706140),
+  m = n(605236),
+  p = n(706140),
   _ = n(243778),
   f = n(488131),
   E = n(375954),
@@ -52,9 +52,9 @@ function j() {
   let e = (0, l.e7)([E.Z], () => E.Z.hasCurrentUserSentMessageSinceAppStart()),
 t = [];
   e && t.push(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
-  let [n] = (0, m.c)(t);
+  let [n] = (0, p.c)(t);
   return a.useEffect(() => () => {
-n === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
+n === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, m.EW)(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
   dismissAction: S.L.TAKE_ACTION
 });
   }, [n]), (0, i.jsx)(_.Z, {
@@ -76,7 +76,7 @@ function L(e) {
 channel: t,
 options: l,
 onFileUpload: c,
-onClose: m,
+onClose: p,
 onSelect: _,
 draftType: E,
 editorTextContent: L,
@@ -109,7 +109,7 @@ O();
   }
 
   function w() {
-(0, p.EW)(r.z.POLLS_CHAT_INPUT_COACHMARK, {
+(0, m.EW)(r.z.POLLS_CHAT_INPUT_COACHMARK, {
   dismissAction: S.L.TAKE_ACTION
 }), (0, o.openModalLazy)(async () => {
   let {
@@ -160,7 +160,7 @@ null != a && (i = a[1], n = a[2], e = a[3], i += a[4]), (0, x.d)([(0, I.dp)(new 
   return (0, i.jsx)(o.Menu, {
 onSelect: _,
 navId: 'channel-attach',
-onClose: m,
+onClose: p,
 'aria-label': A.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
 className: M.menu,
 children: l.map(function(e) {

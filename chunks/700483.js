@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(40851),
   d = n(358221),
   h = n(659580),
-  p = n(793865),
-  m = n(575175),
+  m = n(793865),
+  p = n(575175),
   _ = n(258609),
   f = n(74299),
   E = n(924301),
@@ -137,8 +137,8 @@ onSelect: n
   } = e, a = (0, u.bp)(), {
 canManageGuildEvent: s
   } = (0, I.XJ)(t), c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]), d = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)), h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), {
-suppress: p
-  } = (0, v.Z)(t), m = j.default.getId(), [_] = (0, X.Z)(t), f = H.ZP.isModerator(m, t.id), g = (0, w.B)(t.id), C = s(d);
+suppress: m
+  } = (0, v.Z)(t), p = j.default.getId(), [_] = (0, X.Z)(t), f = H.ZP.isModerator(p, t.id), g = (0, w.B)(t.id), C = s(d);
   return h ? (f || C) && null != c ? (0, i.jsx)(o.Popout, {
 renderPopout: e => {
   let {
@@ -185,7 +185,7 @@ children: (e, n) => {
     popoutOpen: l
   });
 }
-  }) : p && !g || _ ? (0, i.jsx)(o.Button, {
+  }) : m && !g || _ ? (0, i.jsx)(o.Button, {
 size: o.Button.Sizes.MEDIUM,
 color: o.Button.Colors.RED,
 className: l()($.buttonSpacing, $.buttonWithTextButton),
@@ -327,7 +327,7 @@ children: [
         closePopout: t
       } = e;
       return (0, i.jsx)(A.Z, {
-        children: (0, i.jsx)(p.Z, {
+        children: (0, i.jsx)(m.Z, {
           onClose: t
         })
       });
@@ -407,7 +407,7 @@ children: [
             serverMute: s,
             suppress: n,
             popoutOpen: r,
-            onClick: () => (0, m.Z)(s, n),
+            onClick: () => (0, p.Z)(s, n),
             awaitingRemote: u
           });
         }

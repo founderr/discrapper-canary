@@ -9,15 +9,15 @@ var i = n(735250),
   u = n(276618),
   d = n(367408),
   h = n(473092),
-  p = n(819640),
-  m = n(665149),
+  m = n(819640),
+  p = n(665149),
   _ = n(134612),
   f = n(689938),
   E = n(939844);
 t.Z = a.memo(function(e) {
   let {
 channel: t
-  } = e, g = (0, c.h)(t.id), C = (0, u.o)(t.id), I = (0, d.M)(t.id), x = (0, l.f9)(), T = (0, s.e7)([p.Z], () => p.Z.hasLayers()), N = a.useCallback(() => C ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
+  } = e, g = (0, c.h)(t.id), C = (0, u.o)(t.id), I = (0, d.M)(t.id), x = (0, l.f9)(), T = (0, s.e7)([m.Z], () => m.Z.hasLayers()), N = a.useCallback(() => C ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
 C,
 I
   ]), v = a.useMemo(() => (C || null != I) && !x && !T, [
@@ -106,7 +106,7 @@ color: r.TooltipColors.BRAND,
 position: 'bottom',
 tooltipClassName: E.tooltip,
 tooltipContentClassName: E.tooltipContent,
-children: () => (0, i.jsx)(m.ZP.Icon, {
+children: () => (0, i.jsx)(p.ZP.Icon, {
   icon: r.ShieldIcon,
   onClick: A,
   tooltip: f.Z.Messages.SAFETY_TOOLS_BUTTON_LABEL,

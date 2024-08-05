@@ -8,8 +8,8 @@ var i = n(735250),
   u = n(496675),
   d = n(981631),
   h = n(689938),
-  p = n(404110);
-let m = () => n.e('26176').then(n.t.bind(n, 737848, 19)).then(e => {
+  m = n(404110);
+let p = () => n.e('26176').then(n.t.bind(n, 737848, 19)).then(e => {
   let {
 default: t
   } = e;
@@ -21,15 +21,15 @@ channel: t,
 isLastItem: n
   } = e, a = (0, s.e7)([r.Z], () => r.Z.useReducedMotion), _ = (0, s.e7)([u.Z], () => u.Z.can(d.Plq.SEND_MESSAGES_IN_THREADS, t)), f = (0, o.Gu)(t), E = (0, s.e7)([c.default], () => c.default.getId());
   return n ? _ && !f && t.ownerId !== E ? (0, i.jsxs)('div', {
-className: p.box,
+className: m.box,
 children: [
   (0, i.jsx)(l.LottieAnimation, {
-    importData: m,
+    importData: p,
     shouldAnimate: !a,
-    className: p.animation
+    className: m.animation
   }),
   (0, i.jsxs)('div', {
-    className: p.textContainer,
+    className: m.textContainer,
     children: [
       (0, i.jsx)(l.Heading, {
         variant: 'heading-md/semibold',
@@ -44,6 +44,6 @@ children: [
   })
 ]
   }) : null : (0, i.jsx)('div', {
-className: p.divider
+className: m.divider
   });
 });

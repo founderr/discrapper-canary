@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(628238),
   d = n(499401),
   h = n(693912),
-  p = n(869765),
-  m = n(699516),
+  m = n(869765),
+  p = n(699516),
   _ = n(352736),
   f = n(937889),
   E = n(739566),
@@ -33,7 +33,7 @@ compact: S = !1,
 referencedUsernameProfile: Z,
 referencedAvatarProfile: A,
 setPopout: M
-  } = e, b = N.state === p.Y.LOADED ? N.message : void 0, R = (0, E.Uj)(b), j = (0, c.p)(), L = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
+  } = e, b = N.state === m.Y.LOADED ? N.message : void 0, R = (0, E.Uj)(b), j = (0, c.p)(), L = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), P = a.useMemo(() => {
 if (null == b)
   return null;
 let e = (0, r.Z)(b);
@@ -93,7 +93,7 @@ R,
 v,
 L,
 j
-  ]), O = (0, s.e7)([m.Z], () => null != b && m.Z.isBlockedForMessage(b), [b]), y = (0, I.wq)(null == b ? void 0 : b.author.id, v.id), D = (0, I.$3)(n, b, O), k = (0, I.Wl)(b, v, Z, M), U = (0, I.rY)(A, M), w = a.useCallback(() => M({
+  ]), O = (0, s.e7)([p.Z], () => null != b && p.Z.isBlockedForMessage(b), [b]), y = (0, I.wq)(null == b ? void 0 : b.author.id, v.id), D = (0, I.$3)(n, b, O), k = (0, I.Wl)(b, v, Z, M), U = (0, I.rY)(A, M), w = a.useCallback(() => M({
 referencedUsernameProfile: !1,
 referencedAvatarProfile: !1
   }), [M]), B = (0, E.Uj)(n);

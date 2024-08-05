@@ -9,9 +9,9 @@ var i = n(735250),
   u = n(600164),
   d = n(903223),
   h = n(689938),
-  p = n(303450);
+  m = n(303450);
 
-function m(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -26,7 +26,7 @@ autoInvert: !1
   f = e => {
 let {
   region: t,
-  className: n = p.regionSelectName
+  className: n = m.regionSelectName
 } = e, a = t.name.replace(/ \(VIP\)$/, '');
 return (0, i.jsx)('div', {
   className: n,
@@ -47,10 +47,10 @@ return (0, i.jsxs)(u.Z, {
   children: [
     (0, i.jsx)(f, {
       region: e,
-      className: p.regionSelectName
+      className: m.regionSelectName
     }),
     t ? (0, i.jsx)('i', {
-      className: p.check
+      className: m.check
     }) : null
   ]
 });
@@ -83,14 +83,14 @@ return (0, i.jsx)(o.QuickSelect, {
   onChange: this.handleChangeVoiceRegion,
   renderOption: this.renderOption,
   popoutProps: _,
-  popoutClassName: p.regionSelectPopout
+  popoutClassName: m.regionSelectPopout
 });
   }
   constructor(...e) {
-super(...e), m(this, 'renderOption', (e, t) => (0, i.jsx)(E, {
+super(...e), p(this, 'renderOption', (e, t) => (0, i.jsx)(E, {
   region: e.value,
   selected: t
-}, e.value.id)), m(this, 'getSelectedRegion', () => {
+}, e.value.id)), p(this, 'getSelectedRegion', () => {
   var e;
   let {
     regions: t,
@@ -111,7 +111,7 @@ super(...e), m(this, 'renderOption', (e, t) => (0, i.jsx)(E, {
     deprecated: !1,
     hidden: !1
   };
-}), m(this, 'handleChangeVoiceRegion', e => {
+}), p(this, 'handleChangeVoiceRegion', e => {
   let {
     value: t
   } = e, {

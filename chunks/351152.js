@@ -20,8 +20,8 @@ var s = t(120356),
   g = t(382182),
   C = t(148381),
   h = t(689938),
-  N = t(1871),
-  Z = t(700369);
+  Z = t(1871),
+  N = t(700369);
 
 function I(e) {
   let {
@@ -39,21 +39,21 @@ return (0, g.JL)(n, m.Z, E.Z);
   }));
   return null != s && a ? (0, l.jsxs)(c.Clickable, {
 onClick: () => t(n),
-className: Z.guildRow,
+className: N.guildRow,
 children: [
   (0, l.jsx)(u.Z, {
     guild: s,
     size: u.Z.Sizes.SMALL,
-    className: Z.guildIcon
+    className: N.guildIcon
   }),
   (0, l.jsx)(c.Text, {
     variant: 'text-md/normal',
-    className: Z.guildName,
+    className: N.guildName,
     children: s.toString()
   }),
   (0, l.jsx)(S.Z, {
     direction: S.Z.Directions.RIGHT,
-    className: Z.guildArrow
+    className: N.guildArrow
   })
 ]
   }) : null;
@@ -65,7 +65,7 @@ onSelectGuild: n
   } = e, t = (0, o.e7)([_.ZP], () => _.ZP.getGuildFolders());
   return (0, l.jsx)(C.Z, {
 title: h.Z.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
-scrollerClassName: a()(Z.guildScroller, N.marginBottom),
+scrollerClassName: a()(N.guildScroller, Z.marginBottom),
 children: i().flatMap(t, e => {
   let {
     guildIds: t

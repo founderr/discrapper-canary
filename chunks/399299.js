@@ -19,8 +19,8 @@ var l = t(735250),
   g = t(594190),
   C = t(925329),
   h = t(565138),
-  N = t(695346),
-  Z = t(494620),
+  Z = t(695346),
+  N = t(494620),
   I = t(592125),
   x = t(650774),
   f = t(430824),
@@ -159,8 +159,8 @@ guildId: n
   } = e, t = (0, i.e7)([x.Z], () => {
 var e;
 return null !== (e = x.Z.getMemberCount(n)) && void 0 !== e ? e : 0;
-  }), a = N.eo.useSetting(), c = s.useCallback((e, n) => {
-N.eo.updateSetting(n), L.default.track(y.rMx.NOTIFY_STREAM_SETTING_UPDATE, {
+  }), a = Z.eo.useSetting(), c = s.useCallback((e, n) => {
+Z.eo.updateSetting(n), L.default.track(y.rMx.NOTIFY_STREAM_SETTING_UPDATE, {
   value: n
 });
   }, []);
@@ -212,7 +212,7 @@ selectedGuildId: S,
 targetGuildPremiumTier: g,
 selectSource: C,
 selectGuild: h,
-sound: N,
+sound: Z,
 onClose: x,
 onChangeSelectedFPS: f,
 onChangeSelectedResolution: v,
@@ -256,7 +256,7 @@ children: [
         text: el
       }) : null,
       null != n && null == el ? (0, l.jsx)(X, {
-        enabled: N,
+        enabled: Z,
         onChange: B,
         screen: n.id.startsWith('screen')
       }) : null
@@ -284,8 +284,8 @@ children: [
       helpCenterLink: M.Z.getArticleURL(y.BhN.NVIDIA_DRIVER_ISSUES)
     })
   }) : null,
-  eo && (0, l.jsx)(Z.Z, {
-    look: Z.z.WARNING,
+  eo && (0, l.jsx)(N.Z, {
+    look: N.z.WARNING,
     className: F.hardwareWarning,
     children: H.Z.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
       onClick: () => {

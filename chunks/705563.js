@@ -14,8 +14,8 @@ var a = n(442837),
   u = n(496675),
   d = n(709054),
   h = n(826581),
-  p = n(246364),
-  m = n(360328),
+  m = n(246364),
+  p = n(360328),
   _ = n(981631),
   f = n(689938),
   E = n(593269);
@@ -47,8 +47,8 @@ return {
 approveRequest: Z,
 rejectRequest: A,
 submitting: M
-  } = (0, m.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId);
-  return null != I && I.applicationStatus === p.wB.SUBMITTED && x ? (0, i.jsxs)('div', {
+  } = (0, p.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId);
+  return null != I && I.applicationStatus === m.wB.SUBMITTED && x ? (0, i.jsxs)('div', {
 className: E.buttons,
 children: [
   (0, i.jsx)(s.Tooltip, {
@@ -68,7 +68,7 @@ children: [
     color: s.Button.Colors.RED,
     onClick: A,
     size: s.ButtonSizes.SMALL,
-    disabled: M || I.applicationStatus !== p.wB.SUBMITTED,
+    disabled: M || I.applicationStatus !== m.wB.SUBMITTED,
     children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
   }),
   n && (0, i.jsx)(s.Button, {
