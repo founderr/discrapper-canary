@@ -19,20 +19,22 @@ t = (0, E.I)(m),
 n = (0, s.e7)([d.Z], () => d.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
 g = (0, u.J)(m),
 p = i.useMemo(() => {
-  if ((0, c.Fc)(e)) {
-    if (g) {
-      if (g && null != n)
-        return [n.dismissibleContent];
-    } else {
-      if (t === h.LM.ROBERT)
-        return [r.z.COLLECTIBLES_SHOP_ROBERT_MARKETING];
-      if (t === h.LM.DARK_FANTASY)
-        return [r.z.COLLECTIBLES_SHOP_DARK_FANTASY_MARKETING];
-      else if (t === h.LM.TIDE)
-        return [r.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
-    }
+  if (!(0, c.Fc)(e))
+    return [];
+  if (g)
+    return null != n ? [n.dismissibleContent] : [];
+  switch (t) {
+    case h.LM.TIDE:
+      return [r.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
+    case h.LM.DARK_FANTASY:
+      return [r.z.COLLECTIBLES_SHOP_DARK_FANTASY_MARKETING];
+    case h.LM.ROBERT:
+      return [r.z.COLLECTIBLES_SHOP_ROBERT_MARKETING];
+    case h.LM.STORM:
+      return [r.z.COLLECTIBLES_SHOP_STORM_MARKETING];
+    default:
+      return [];
   }
-  return [];
 }, [
   e,
   g,

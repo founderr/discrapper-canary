@@ -67,7 +67,8 @@ d.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
   }, [t]), (0, n.jsxs)('div', {
 ref: s,
 className: r()(N.container, {
-  [N.robertContainer]: i === E.C5.ROBERT
+  [N.robertContainer]: i === E.C5.ROBERT,
+  [N.stormContainer]: i === E.C5.STORM
 }),
 style: {
   backgroundImage: 'url('.concat(null !== (e = null == C ? void 0 : C.backgroundSrc) && void 0 !== e ? e : m, ')')

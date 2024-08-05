@@ -45,35 +45,29 @@ let {
   onMouseEnter: r,
   onMouseLeave: o,
   children: c,
-  backgroundStyle: u,
-  ...E
-} = e, h = (0, l.JA)('shop'), g = I.Z.HOME_PAGE_SHOP_TAB, {
-  analyticsLocations: p
-} = (0, m.ZP)(g), T = a.useCallback(() => (0, f.mK)({
+  ...u
+} = e, E = (0, l.JA)('shop'), h = I.Z.HOME_PAGE_SHOP_TAB, {
+  analyticsLocations: g
+} = (0, m.ZP)(h), p = a.useCallback(() => (0, f.mK)({
   openInLayer: !1,
-  analyticsSource: g,
-  analyticsLocations: p
+  analyticsSource: h,
+  analyticsLocations: g
 }), [
-  g,
-  p
-]), S = a.useMemo(() => ({
-  background: u
-}), [u]);
-return (0, i.jsx)('div', {
-  style: S,
-  children: (0, i.jsx)(_.Qj, {
-    selected: t,
-    route: A.Z5c.COLLECTIBLES_SHOP,
-    icon: null != s ? s : d.ShopIcon,
-    text: v.Z.Messages.COLLECTIBLES_SHOP,
-    locationState: n,
-    ...h,
-    ...E,
-    onMouseEnter: r,
-    onMouseLeave: o,
-    onClick: T,
-    children: c
-  })
+  h,
+  g
+]);
+return (0, i.jsx)(_.Qj, {
+  selected: t,
+  route: A.Z5c.COLLECTIBLES_SHOP,
+  icon: null != s ? s : d.ShopIcon,
+  text: v.Z.Messages.COLLECTIBLES_SHOP,
+  locationState: n,
+  ...E,
+  ...u,
+  onMouseEnter: r,
+  onMouseLeave: o,
+  onClick: p,
+  children: c
 });
   },
   R = e => {
@@ -153,7 +147,6 @@ return (0, i.jsx)(d.Tooltip, {
   'aria-label': 'string' == typeof H ? H : v.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
   children: e => (0, i.jsxs)(O, {
     className: null != b.entryPointClassName ? (0, S.l)(Z, b.entryPointClassName) : void 0,
-    backgroundStyle: N,
     selected: A,
     locationState: R,
     icon: b.entryPointIcon,
@@ -161,11 +154,17 @@ return (0, i.jsx)(d.Tooltip, {
     onMouseEnter: () => w(e.onMouseEnter),
     onMouseLeave: () => B(e.onMouseLeave),
     children: [
-      null != C && (0, i.jsx)('img', {
-        src: C,
-        className: Z.marketingButtonBackgroundImage,
-        alt: '',
-        'aria-hidden': !0
+      (0, i.jsx)('div', {
+        className: Z.marketingButtonBackground,
+        style: {
+          background: N
+        },
+        children: null != C && (0, i.jsx)('img', {
+          src: C,
+          className: Z.marketingButtonBackgroundImage,
+          alt: '',
+          'aria-hidden': !0
+        })
       }),
       null != G && !P && (0, i.jsx)('img', {
         src: (0, c.wj)(U) ? G.srcDark : G.srcLight,
