@@ -38,27 +38,43 @@ kind: 'user',
 id: '2024-07_message_forwarding_iterations',
 label: 'Message forwarding iterations',
 defaultConfig: {
+  canForwardMessages: !1,
+  hasInlineForwardButton: !1,
   hasOneTapSendButton: !1,
-  hasMessageInput: !1
+  hasMessageInput: !1,
+  hasPreview: !1
 },
 treatments: [{
     id: 1,
+    label: 'T2 only (inline forward button)',
+    config: {
+      canForwardMessages: !0,
+      hasInlineForwardButton: !0,
+      hasOneTapSendButton: !1,
+      hasMessageInput: !1,
+      hasPreview: !1
+    }
+  },
+  {
+    id: 2,
     label: 'T2 + One tap send + preview',
     config: {
       canForwardMessages: !0,
       hasInlineForwardButton: !0,
       hasOneTapSendButton: !0,
-      hasMessageInput: !1
+      hasMessageInput: !1,
+      hasPreview: !0
     }
   },
   {
-    id: 2,
+    id: 3,
     label: 'T2 + Context message + preview',
     config: {
       canForwardMessages: !0,
       hasInlineForwardButton: !0,
       hasOneTapSendButton: !1,
-      hasMessageInput: !0
+      hasMessageInput: !0,
+      hasPreview: !0
     }
   }
 ]
