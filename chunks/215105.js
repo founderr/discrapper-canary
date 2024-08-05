@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return O;
   }
 }), n(47120);
 var r = n(735250),
@@ -52,9 +52,21 @@ switch (r) {
   default:
     (0, f.vE)(r);
 }
+  },
+  v = e => {
+switch (e) {
+  case T.N9.ACTIVITY:
+    return g.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
+  case T.N9.AVATAR:
+    return g.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
+  case T.N9.STATUS:
+    return g.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
+  default:
+    (0, f.vE)(e);
+}
   };
 
-function v(e) {
+function O(e) {
   let {
 user: t,
 guildId: n,
@@ -62,7 +74,7 @@ channelId: a,
 profileType: o,
 sourceType: _,
 sourceDetails: f,
-onReply: v,
+onReply: g,
 setPopoutRef: O,
 modalKey: R
   } = e, {
@@ -105,8 +117,8 @@ children: (0, r.jsx)('div', {
     innerClassName: S.inner,
     editorClassName: S.editor,
     type: u.I.USER_PROFILE_REPLY,
-    placeholder: g.Z.Messages.QUICK_DM_USER.format({
-      name: h.ZP.getName(n, a, t)
+    placeholder: v(_).format({
+      username: h.ZP.getName(n, a, t)
     }),
     channel: A,
     textValue: y,
@@ -125,7 +137,7 @@ children: (0, r.jsx)('div', {
         M.current = !1;
         return;
       }
-      null !== P.current && (M.current = !1, null == v || v(null));
+      null !== P.current && (M.current = !1, null == g || g(null));
     },
     onSubmit: async e => {
       let {
@@ -134,7 +146,7 @@ children: (0, r.jsx)('div', {
       try {
         return C({
           action: 'SEND_STATUS_REPLY'
-        }), await U(t.trim()), null == v || v(null), {
+        }), await U(t.trim()), null == g || g(null), {
           shouldClear: !0,
           shouldRefocus: !1
         };
