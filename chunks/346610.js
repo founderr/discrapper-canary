@@ -38,8 +38,6 @@ kind: 'user',
 id: '2024-07_message_forwarding_iterations',
 label: 'Message forwarding iterations',
 defaultConfig: {
-  canForwardMessages: !1,
-  hasInlineForwardButton: !1,
   hasOneTapSendButton: !1,
   hasMessageInput: !1,
   hasPreview: !1
