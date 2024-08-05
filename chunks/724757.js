@@ -5,11 +5,11 @@ return r;
 });
 var l = n(470079),
   a = n(924826),
-  i = n(442837),
-  s = n(607070);
+  s = n(442837),
+  i = n(607070);
 
 function r(e, t, n) {
-  let r = (0, i.e7)([s.Z], () => s.Z.keyboardModeEnabled),
+  let r = (0, s.e7)([i.Z], () => i.Z.keyboardModeEnabled),
 o = l.useCallback(e => {
   let n = document.querySelector(e),
     l = t.current;
@@ -18,7 +18,7 @@ o = l.useCallback(e => {
     padding: 80
   }));
 }, [t]),
-u = l.useCallback(() => new Promise(e => {
+c = l.useCallback(() => new Promise(e => {
   let n = t.current;
   if (null == n)
     return e();
@@ -27,7 +27,7 @@ u = l.useCallback(() => new Promise(e => {
     callback: () => requestAnimationFrame(() => e())
   });
 }), [t]),
-c = l.useCallback(() => new Promise(e => {
+u = l.useCallback(() => new Promise(e => {
   let n = t.current;
   if (null == n)
     return e();
@@ -40,8 +40,8 @@ c = l.useCallback(() => new Promise(e => {
 id: e,
 isEnabled: r,
 setFocus: o,
-scrollToStart: u,
-scrollToEnd: c,
+scrollToStart: c,
+scrollToEnd: u,
 orientation: null == n ? void 0 : n.orientation
   });
 }

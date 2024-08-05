@@ -3,7 +3,7 @@ n.d(t, {
 return a;
   },
   o: function() {
-return i;
+return s;
   }
 });
 var l = n(212819);
@@ -14,6 +14,6 @@ let a = Array.from([
   l.h8.GROUP_DM
 ]);
 
-function i(e) {
+function s(e) {
   return a.includes(e.type);
 }
