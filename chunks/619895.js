@@ -21,7 +21,6 @@ let d = {
   imageOption: 'image'
 },
 '1181475143340539995': {
-  overrideCommandName: 'dance',
   imageOption: 'image',
   additionalOptions: [{
       motion_prompt: [{
