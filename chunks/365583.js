@@ -1,6 +1,9 @@
 n.d(t, {
-  Z: function() {
+  C: function() {
 return h;
+  },
+  Z: function() {
+return p;
   }
 }), n(627341);
 var r = n(735250);
@@ -19,9 +22,29 @@ var i = n(278074),
 
 function h(e) {
   let {
+settingsSection: t,
+settingsSubsection: n
+  } = (0, i.EQ)(e).when(u.dX, () => ({
+settingsSection: d.oAB.GAMES,
+settingsSubsection: E.Z.ACTIVITY_PRIVACY
+  })).when(u.r5, () => ({
+settingsSection: d.oAB.CONNECTIONS,
+settingsSubsection: null
+  })).when(u.kx, () => ({
+settingsSection: d.oAB.CONNECTIONS,
+settingsSubsection: null
+  })).otherwise(() => ({
+settingsSection: null,
+settingsSubsection: null
+  }));
+  return null == t ? null : () => o.Z.open(t, n);
+}
+
+function p(e) {
+  let {
 user: t,
 activity: n,
-entry: h,
+entry: u,
 onClose: p
   } = e;
   if (!(0, a.e7)([c.default], () => {
@@ -34,25 +57,7 @@ let {
   activity: t,
   entry: n
 } = e;
-return null != n ? function(e) {
-  let {
-    settingsSection: t,
-    settingsSubsection: n
-  } = (0, i.EQ)(e).when(u.dX, () => ({
-    settingsSection: d.oAB.GAMES,
-    settingsSubsection: E.Z.ACTIVITY_PRIVACY
-  })).when(u.r5, () => ({
-    settingsSection: d.oAB.CONNECTIONS,
-    settingsSubsection: null
-  })).when(u.kx, () => ({
-    settingsSection: d.oAB.CONNECTIONS,
-    settingsSubsection: null
-  })).otherwise(() => ({
-    settingsSection: null,
-    settingsSubsection: null
-  }));
-  return null == t ? null : () => o.Z.open(t, n);
-}(n) : null != t ? function(e) {
+return null != n ? h(n) : null != t ? function(e) {
   let {
     settingsSection: t,
     settingsSubsection: n
@@ -78,7 +83,7 @@ return null != n ? function(e) {
 }(t) : null;
   }({
 activity: n,
-entry: h
+entry: u
   });
   return null == m ? null : (0, r.jsx)(s.MenuItem, {
 id: 'manage-privacy',

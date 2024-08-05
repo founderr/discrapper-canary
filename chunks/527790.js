@@ -309,47 +309,48 @@ function w(e) {
 user: t,
 entry: n,
 className: i,
-onClose: a
+onClose: a,
+hideContextMenu: o = !1
   } = e, {
-analyticsLocations: o
+analyticsLocations: d
   } = (0, u.ZP)(l.Z.USER_PROFILE_RECENT_ACTIVITY_CARD), {
-profileType: d
+profileType: _
   } = (0, S.z)();
   return (0, r.jsx)(u.Gt, {
-value: o,
+value: d,
 children: (0, r.jsx)(O.Z, {
   user: t,
   onClose: a,
   children: e => {
     let {
-      onAutoDismiss: o
-    } = e, l = e => (0, r.jsx)(A.Z, {
-      text: d === C.y0.FULL_SIZE ? null : e,
-      tags: (0, r.jsx)(R.Z, {
+      onAutoDismiss: l
+    } = e, u = e => (0, r.jsx)(A.Z, {
+      text: _ === C.y0.FULL_SIZE ? null : e,
+      tags: o ? null : (0, r.jsx)(R.Z, {
         display: 'recent',
         entry: n,
         user: t,
         onClose: a,
-        onRequestOpen: o
+        onRequestOpen: l
       })
     });
     return (0, c.dX)(n) ? (0, r.jsx)(b, {
-      header: l(y.Z.Messages.USER_ACTIVITY_RECENTLY_PLAYED),
+      header: u(y.Z.Messages.USER_ACTIVITY_RECENTLY_PLAYED),
       user: t,
       entry: n,
       className: i
     }) : (0, c.r5)(n) ? (0, r.jsx)(M, {
-      header: l(y.Z.Messages.USER_ACTIVITY_RECENTLY_WATCHED),
+      header: u(y.Z.Messages.USER_ACTIVITY_RECENTLY_WATCHED),
       user: t,
       entry: n,
       className: i
     }) : (0, c.kx)(n) ? (0, r.jsx)(P, {
-      header: l(y.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
+      header: u(y.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
       user: t,
       entry: n,
       className: i
     }) : n.content_type === s.s.TOP_ARTIST ? (0, r.jsx)(U, {
-      header: l(y.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
+      header: u(y.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
       user: t,
       entry: n,
       className: i
