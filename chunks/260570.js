@@ -70,11 +70,11 @@ J,
 ee,
 et
   ]);
-  let [ed, e_] = (0, o.useSpring)(() => ({
+  let [ed, e_] = (0, c.useSpring)(() => ({
 maxHeight: ''.concat(et, 'px'),
 config: {
   clamp: !0,
-  duration: k ? 0 : 150
+  duration: 150
 }
   }));
   if (i.useEffect(() => () => B.stop(), [B]), !en && !er)
