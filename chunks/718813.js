@@ -12,12 +12,12 @@ var i, a = n(735250),
   d = n(215569),
   u = n(481060),
   _ = n(37234),
-  E = n(134616),
-  h = n(714338),
+  h = n(134616),
+  E = n(714338),
   I = n(663993),
-  m = n(210887),
-  g = n(819640),
-  p = n(725568),
+  m = n(84615),
+  g = n(210887),
+  p = n(819640),
   T = n(585483),
   S = n(792125),
   f = n(981631),
@@ -35,7 +35,7 @@ let A = (0, I.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
   n.e('19503'),
-  n.e('15972'),
+  n.e('52249'),
   n.e('13682'),
   n.e('15685'),
   n.e('47006'),
@@ -43,7 +43,7 @@ createPromise: () => Promise.all([
   n.e('94915'),
   n.e('33053'),
   n.e('8016'),
-  n.e('50654'),
+  n.e('37581'),
   n.e('76540'),
   n.e('68136'),
   n.e('87624'),
@@ -53,8 +53,8 @@ createPromise: () => Promise.all([
   n.e('30419'),
   n.e('18824'),
   n.e('52619'),
-  n.e('83760'),
-  n.e('59579')
+  n.e('22290'),
+  n.e('62520')
 ]).then(n.bind(n, 989804)),
 webpackId: 989804,
 name: 'UserSettings'
@@ -63,7 +63,7 @@ name: 'UserSettings'
 createPromise: () => Promise.all([
   n.e('33053'),
   n.e('7654'),
-  n.e('71700'),
+  n.e('25519'),
   n.e('75116')
 ]).then(n.bind(n, 869779)),
 webpackId: 869779,
@@ -72,7 +72,7 @@ name: 'ChannelSettings'
   Z = (0, I.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
-  n.e('15972'),
+  n.e('52249'),
   n.e('13682'),
   n.e('15685'),
   n.e('47006'),
@@ -80,7 +80,7 @@ createPromise: () => Promise.all([
   n.e('94915'),
   n.e('87624'),
   n.e('43331'),
-  n.e('97006')
+  n.e('82702')
 ]).then(n.bind(n, 838819)),
 webpackId: 838819,
 name: 'CollectiblesShop'
@@ -89,13 +89,13 @@ name: 'CollectiblesShop'
 createPromise: () => Promise.all([
   n.e('96427'),
   n.e('33053'),
-  n.e('50654'),
+  n.e('37581'),
   n.e('7654'),
   n.e('44156'),
-  n.e('71700'),
+  n.e('25519'),
   n.e('85552'),
   n.e('58227'),
-  n.e('10926')
+  n.e('1607')
 ]).then(n.bind(n, 994763)),
 webpackId: 994763,
 name: 'GuildSettings'
@@ -114,7 +114,7 @@ tension: 100
   };
 
 function P() {
-  return s.useEffect(() => (h.Z.enable(), h.Z.enableTemp(E.u), () => h.Z.disableTemp()), []), null;
+  return s.useEffect(() => (E.Z.enable(), E.Z.enableTemp(h.u), () => E.Z.disableTemp()), []), null;
 }
 class M extends(i = s.PureComponent) {
   static getDerivedStateFromProps(e, t) {
@@ -312,9 +312,9 @@ return (0, a.jsxs)(a.Fragment, {
 }
 
 function y(e) {
-  let t = (0, c.e7)([m.Z], () => m.Z.darkSidebar) ? f.BRd.DARK : void 0,
-n = (0, c.e7)([g.Z], () => g.Z.getLayers()),
-i = (0, p.QP)(e => e.fullScreenLayers.length > 0);
+  let t = (0, c.e7)([g.Z], () => g.Z.darkSidebar) ? f.BRd.DARK : void 0,
+n = (0, c.e7)([p.Z], () => p.Z.getLayers()),
+i = (0, m.QP)(e => e.fullScreenLayers.length > 0);
   return (0, a.jsx)(D, {
 ...e,
 sidebarTheme: t,

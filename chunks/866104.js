@@ -14,13 +14,13 @@ var i = n(735250),
   o = n(481060),
   c = n(131388),
   u = n(357352),
-  d = n(565138),
-  _ = n(353254),
-  E = n(695346),
-  I = n(271383),
-  m = n(594174),
-  T = n(671533),
-  h = n(810090),
+  d = n(70097),
+  _ = n(565138),
+  E = n(353254),
+  I = n(695346),
+  m = n(271383),
+  T = n(594174),
+  h = n(671533),
   N = n(51144),
   C = n(506071),
   f = n(696014),
@@ -47,8 +47,8 @@ children: [
     size: 4,
     horizontal: !0
   }),
-  (0, i.jsx)(T.Z, {
-    direction: T.Z.Directions.RIGHT,
+  (0, i.jsx)(h.Z, {
+    direction: h.Z.Directions.RIGHT,
     className: R.showMoreArrow
   })
 ]
@@ -59,7 +59,7 @@ function x(e) {
   let {
 coverImageAsset: t,
 isPreview: n = !1
-  } = e, s = E.QK.useSetting(), a = (0, C.n)() && s, [r, l] = (0, _.Z)(t, a), o = a ? (0, i.jsx)(h.Z, {
+  } = e, s = I.QK.useSetting(), a = (0, C.n)() && s, [r, l] = (0, E.Z)(t, a), o = a ? (0, i.jsx)(d.Z, {
 autoPlay: !0,
 loop: !0,
 className: R.coverImage,
@@ -85,20 +85,20 @@ children: null == l || n ? o : (0, i.jsx)('img', {
 function M(e) {
   var t, n, a;
   let {
-guild: _,
+guild: d,
 subscriptionsSettings: E
-  } = e, T = _.id;
+  } = e, I = d.id;
   let {
 nickname: h,
 nickcolor: C
-  } = (a = T, (0, l.cj)([
-I.ZP,
-m.default
+  } = (a = I, (0, l.cj)([
+m.ZP,
+T.default
   ], () => {
 var e, t;
-let n = m.default.getCurrentUser();
+let n = T.default.getCurrentUser();
 r()(null != n, 'user cannot be null');
-let i = I.ZP.getMember(a, n.id);
+let i = m.ZP.getMember(a, n.id);
 return {
   nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : N.ZP.getName(n),
   nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
@@ -126,7 +126,7 @@ children: [
       }),
       (0, i.jsx)(O, {
         onClick: () => (0, S.Z)({
-          guildId: T
+          guildId: I
         })
       })
     ]
@@ -144,10 +144,10 @@ children: [
     className: R.infoContainer,
     children: [
       (0, i.jsx)('div', {
-        children: (0, i.jsx)(d.Z, {
-          guild: _,
-          size: d.Z.Sizes.LARGER,
-          iconSrc: null == _.icon || j ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
+        children: (0, i.jsx)(_.Z, {
+          guild: d,
+          size: _.Z.Sizes.LARGER,
+          iconSrc: null == d.icon || j ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
         })
       }),
       (0, i.jsx)(o.Spacer, {
@@ -165,7 +165,7 @@ children: [
               color: 'header-primary',
               lineClamp: 2,
               children: j ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TITLE : A.Z.Messages.GUILD_STORE_HERO_TITLE.format({
-                guildName: _.name
+                guildName: d.name
               })
             })
           }),

@@ -40,41 +40,41 @@ var i, s = n(735250),
   P = n(394779),
   D = n(294734),
   b = n(426275),
-  j = n(715903),
-  U = n(71619),
-  y = n(637618),
-  B = n(225890),
-  k = n(364097),
-  G = n(495129),
-  F = n(939170),
-  w = n(954654),
-  V = n(41776),
-  H = n(628238),
-  Y = n(454585),
-  W = n(768494),
-  K = n(124347),
-  z = n(976853),
-  Q = n(346013),
-  q = n(977683),
-  X = n(128435),
-  J = n(98278),
-  $ = n(614825),
-  ee = n(265299),
-  et = n(699833),
-  en = n(344997),
-  ei = n(378233),
-  es = n(374425),
-  ea = n(665906),
-  er = n(432147),
-  el = n(695346),
-  eo = n(314897),
-  ec = n(271383),
-  eu = n(607744),
-  ed = n(496675),
-  e_ = n(594174),
-  eE = n(941797),
-  eI = n(52824),
-  em = n(592256),
+  j = n(947849),
+  U = n(715903),
+  y = n(71619),
+  B = n(637618),
+  k = n(225890),
+  G = n(364097),
+  F = n(495129),
+  w = n(939170),
+  V = n(954654),
+  H = n(41776),
+  Y = n(628238),
+  W = n(454585),
+  K = n(768494),
+  z = n(124347),
+  Q = n(976853),
+  q = n(346013),
+  X = n(780088),
+  J = n(977683),
+  $ = n(128435),
+  ee = n(98278),
+  et = n(614825),
+  en = n(265299),
+  ei = n(699833),
+  es = n(344997),
+  ea = n(378233),
+  er = n(374425),
+  el = n(665906),
+  eo = n(432147),
+  ec = n(695346),
+  eu = n(314897),
+  ed = n(271383),
+  e_ = n(607744),
+  eE = n(496675),
+  eI = n(594174),
+  em = n(52824),
   eT = n(626135),
   eh = n(70956),
   eN = n(408433),
@@ -131,7 +131,7 @@ children: [
     variant: 'text-xs/normal',
     color: 'text-muted',
     children: eY.Z.Messages.LARGE_FILE_UPLOAD_POWERED_BY_NITRO.format({
-      onClick: () => (0, J.z)()
+      onClick: () => (0, ee.z)()
     })
   })
 ]
@@ -170,7 +170,7 @@ let {
   width: i,
   height: a
 } = e;
-return null != i && null != a && K.u.test(n) ? (0, s.jsx)(eZ.Z, {
+return null != i && null != a && z.u.test(n) ? (0, s.jsx)(eZ.Z, {
   width: i,
   height: a,
   src: n,
@@ -244,11 +244,11 @@ return 0 === e.codedLinks.length ? null : e.codedLinks.map(t => {
       getAcceptInviteContext: this.getAcceptInviteContext
     }, i) : null;
   if (n === S.g.TEMPLATE)
-    return (0, s.jsx)(k.Z, {
+    return (0, s.jsx)(G.Z, {
       code: i
     }, i);
   if (n === S.g.EVENT)
-    return (0, s.jsx)(B.Z, {
+    return (0, s.jsx)(k.Z, {
       code: i
     }, i);
   else if (n === S.g.CHANNEL_LINK)
@@ -267,7 +267,7 @@ return 0 === e.codedLinks.length ? null : e.codedLinks.map(t => {
       message: e
     }, i);
   else if (n === S.g.GUILD_PRODUCT)
-    return (0, s.jsx)(y.Z, {
+    return (0, s.jsx)(B.Z, {
       code: i
     }, i);
   else if (n === S.g.SERVER_SHOP)
@@ -275,7 +275,7 @@ return 0 === e.codedLinks.length ? null : e.codedLinks.map(t => {
       guildId: i
     }, i);
   else if (n === S.g.QUESTS_EMBED)
-    return (0, s.jsx)(ee.Z, {
+    return (0, s.jsx)(en.Z, {
       questId: i
     }, i);
   else if (n === S.g.APP_DIRECTORY_STOREFRONT)
@@ -301,7 +301,7 @@ let {
   type: a,
   content: r,
   giftInfo: l
-} = e, o = e_.default.getCurrentUser();
+} = e, o = eI.default.getCurrentUser();
 return null != o && t.length > 0 ? t.map(e => (0, s.jsx)('div', {
   className: eK.giftCodeContainer,
   children: (0, s.jsx)(I.Z, {
@@ -324,7 +324,7 @@ let {
 } = this.props;
 return n !== o.u.PREMIUM_REFERRAL || null == t ? null : (0, s.jsx)('div', {
   className: eK.referralContainer,
-  children: (0, s.jsx)($.Z, {
+  children: (0, s.jsx)(et.Z, {
     userTrialOfferId: t,
     canRenderReferralEmbed: null != i && i
   })
@@ -373,7 +373,7 @@ let {
   inlineAttachmentMedia: u,
   onMediaItemContextMenu: d,
   shouldHideMediaOptions: _
-} = this.props, E = l.map(t => (0, em.j9)(t, (0, P.s)(e, {
+} = this.props, E = l.map(t => (0, X.j9)(t, (0, P.s)(e, {
   type: 'attachment',
   attachmentId: t.id
 }), _, a)).filter(ef.lm), I = {
@@ -381,13 +381,13 @@ let {
   guild_id: i.guild_id,
   channel_id: i.id,
   channel_type: i.type
-}, m = E.length > 1 ? (0, em.Cx)(E, I) : {}, T = (0, eC.yE)(n, eV.iLy.IS_VOICE_MESSAGE);
+}, m = E.length > 1 ? (0, X.Cx)(E, I) : {}, T = (0, eC.yE)(n, eV.iLy.IS_VOICE_MESSAGE);
 
 function h(e, t) {
   return (0, eS.dn)(e.originalItem, t);
 }
 let N = l.map(t => {
-    let n = (0, W.VY)(t),
+    let n = (0, K.VY)(t),
       s = {
         message: e,
         item: (0, eG.OB)(t, u),
@@ -418,7 +418,7 @@ let N = l.map(t => {
         },
         gifFavoriteButton: e0(n)
       },
-      a = (0, eI.q)({
+      a = (0, em.q)({
         proxyURL: t.proxy_url,
         url: t.url
       });
@@ -440,7 +440,7 @@ let {
   renderEmbeds: t
 } = this.props;
 return 0 !== e.embeds.length && t ? e.embeds.map((t, n) => {
-  if (ew.b.has(t.type) || (0, eN.l3)(t) || (0, F.b)(t))
+  if (ew.b.has(t.type) || (0, eN.l3)(t) || (0, w.b)(t))
     return null;
   let i = {
     renderImageComponent: ey.Yi,
@@ -482,7 +482,7 @@ return (0, s.jsx)(ej.F, {
   },
   shouldHideMediaOptions: i,
   shouldRedactExplicitContent: n,
-  children: (0, s.jsx)(w.ZP, {
+  children: (0, s.jsx)(V.ZP, {
     message: e
   })
 });
@@ -514,12 +514,12 @@ return (0, eC.yE)(e.flags, eV.iLy.EPHEMERAL) ? (0, s.jsx)(eL.Z, {
 }) : null;
   }
   renderStickersAccessories(e) {
-let t = (0, ei.cv)(e),
+let t = (0, ea.cv)(e),
   {
     channel: n,
     isInteracting: i
   } = this.props;
-return 0 === t.length ? null : t.map(e => (0, s.jsx)(es.Z, {
+return 0 === t.length ? null : t.map(e => (0, s.jsx)(er.Z, {
   channel: n,
   isInteracting: i,
   renderableSticker: e
@@ -527,7 +527,7 @@ return 0 === t.length ? null : t.map(e => (0, s.jsx)(es.Z, {
   }
   renderThreadAccessories(e) {
 if (e.hasFlag(eV.iLy.HAS_THREAD) && !1 !== this.props.renderThreadAccessory)
-  return (0, s.jsx)(er.Z, {
+  return (0, s.jsx)(eo.Z, {
     message: e,
     compact: this.props.compact
   });
@@ -631,25 +631,25 @@ return null == t || null == n || (null == i ? void 0 : i.type) !== T.B8.APPLICAT
 });
   }
   renderMediaPostEmbeds(e) {
-return e.embeds.flatMap(t => t.type !== eV.hBH.POST_PREVIEW || null == t.url ? [] : (0, s.jsx)(Q.Z, {
+return e.embeds.flatMap(t => t.type !== eV.hBH.POST_PREVIEW || null == t.url ? [] : (0, s.jsx)(q.Z, {
   embedUrl: t.url,
   message: e,
   channel: this.props.channel
 }, t.id));
   }
   renderSafetyPolicyNotice(e) {
-return 1 === e.embeds.length && e.embeds[0].type === eV.hBH.SAFETY_POLICY_NOTICE ? (0, s.jsx)(et.i, {
+return 1 === e.embeds.length && e.embeds[0].type === eV.hBH.SAFETY_POLICY_NOTICE ? (0, s.jsx)(ei.i, {
   message: e
 }) : null;
   }
   renderSafetySystemNotification(e) {
-return 1 === e.embeds.length && e.embeds[0].type === eV.hBH.SAFETY_SYSTEM_NOTIFICATION ? (0, s.jsx)(en.g, {
+return 1 === e.embeds.length && e.embeds[0].type === eV.hBH.SAFETY_SYSTEM_NOTIFICATION ? (0, s.jsx)(es.g, {
   embed: e.embeds[0]
 }) : null;
   }
   renderVoiceChannelInvite(e, t) {
 if (1 === e.embeds.length && e.embeds[0].type === eV.hBH.VOICE_CHANNEL)
-  return (0, s.jsx)(G.H, {
+  return (0, s.jsx)(F.H, {
     message: e,
     channel: t
   });
@@ -667,7 +667,7 @@ return 0 === t.length && 0 === n.length ? null : (0, s.jsx)(M.Z, {
   }
   renderPoll(e, t) {
 if (null != t)
-  return (0, s.jsx)(X.Z, {
+  return (0, s.jsx)($.Z, {
     message: e,
     poll: t,
     className: eK.pollContainer
@@ -749,7 +749,7 @@ super(...e), eQ(this, 'state', {
   } = this.props, _ = (0, eS.BP)(e, a, i, c, u);
   if (e.type === eV.hBH.GIFT)
     return null;
-  let E = (0, s.jsx)(eE.h.Provider, {
+  let E = (0, s.jsx)(j.h.Provider, {
     value: e$(e.url, e.image, e.video),
     children: (0, s.jsx)(g.ZP, {
       className: eK.embedWrapper,
@@ -778,9 +778,9 @@ super(...e), eQ(this, 'state', {
       })
     ]
   }) : E;
-}), eQ(this, 'renderEmbedTitle', (e, t) => e.type === eV.hBH.RICH ? Y.Z.parseEmbedTitle(t, !0, {
+}), eQ(this, 'renderEmbedTitle', (e, t) => e.type === eV.hBH.RICH ? W.Z.parseEmbedTitle(t, !0, {
   channelId: this.props.channel.id
-}) : t), eQ(this, 'renderEmbedDescription', (e, t, n) => e.type === eV.hBH.RICH ? Y.Z.parse(t, !0, {
+}) : t), eQ(this, 'renderEmbedDescription', (e, t, n) => e.type === eV.hBH.RICH ? W.Z.parse(t, !0, {
   channelId: this.props.channel.id,
   allowLinks: !0,
   allowEmojiLinks: !0,
@@ -812,23 +812,23 @@ channel: n,
 message: i,
 renderSuppressEmbeds: a,
 isMessageSnapshot: r
-  } = e, l = (0, c.e7)([eo.default], () => eo.default.getId()), o = el.x4.useSetting(), u = el.RS.useSetting(), d = el.NA.useSetting() && !(0, eO.Z)(e.message), _ = el.nc.useSetting(), E = el.QK.useSetting(), I = (0, c.e7)([eu.Z], () => null == n.guild_id || eu.Z.canChatInGuild(n.guild_id), [n]), m = (0, c.e7)([V.Z], () => null != n.guild_id && V.Z.isLurking(n.guild_id), [n]), T = (0, c.e7)([ec.ZP], () => ec.ZP.isCurrentUserGuest(n.guild_id), [n]), h = (0, c.e7)([
-ec.ZP,
-e_.default
+  } = e, l = (0, c.e7)([eu.default], () => eu.default.getId()), o = ec.x4.useSetting(), u = ec.RS.useSetting(), d = ec.NA.useSetting() && !(0, eO.Z)(e.message), _ = ec.nc.useSetting(), E = ec.QK.useSetting(), I = (0, c.e7)([e_.Z], () => null == n.guild_id || e_.Z.canChatInGuild(n.guild_id), [n]), m = (0, c.e7)([H.Z], () => null != n.guild_id && H.Z.isLurking(n.guild_id), [n]), T = (0, c.e7)([ed.ZP], () => ed.ZP.isCurrentUserGuest(n.guild_id), [n]), h = (0, c.e7)([
+ed.ZP,
+eI.default
   ], () => {
 var e, t;
-let i = e_.default.getCurrentUser();
-return null !== (t = null != n.guild_id && null != i ? null === (e = ec.ZP.getMember(n.guild_id, i.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t;
+let i = eI.default.getCurrentUser();
+return null !== (t = null != n.guild_id && null != i ? null === (e = ed.ZP.getMember(n.guild_id, i.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t;
   }), {
 canAddNewReactions: N,
 canManageMessages: C
-  } = (0, c.cj)([ed.Z], () => ({
-canAddNewReactions: I && ed.Z.can(eV.Plq.ADD_REACTIONS, n),
-canManageMessages: ed.Z.can(eV.Plq.MANAGE_MESSAGES, n)
+  } = (0, c.cj)([eE.Z], () => ({
+canAddNewReactions: I && eE.Z.can(eV.Plq.ADD_REACTIONS, n),
+canManageMessages: eE.Z.can(eV.Plq.MANAGE_MESSAGES, n)
   }), [
 I,
 n
-  ]), f = (0, j.ux)(n.guild_id), [, p] = (0, U.AB)(n.guild_id), g = (0, ea.$R)(n), S = (l === i.author.id || C) && i.author.id !== eV.LAt && !1 !== a && !(0, eC.yE)(i.flags, eV.iLy.EPHEMERAL) && g && 1 === (0, eR.Z)(i), A = l === i.author.id && g && !r, R = i.author.id === l, M = i.isFirstMessageInForumPost(n), v = (0, ex.Z)({
+  ]), f = (0, U.ux)(n.guild_id), [, p] = (0, y.AB)(n.guild_id), g = (0, el.$R)(n), S = (l === i.author.id || C) && i.author.id !== eV.LAt && !1 !== a && !(0, eC.yE)(i.flags, eV.iLy.EPHEMERAL) && g && 1 === (0, eR.Z)(i), A = l === i.author.id && g && !r, R = i.author.id === l, M = i.isFirstMessageInForumPost(n), v = (0, ex.Z)({
 channel: n,
 canChat: I,
 renderReactions: _,
@@ -838,7 +838,7 @@ isGuest: T,
 communicationDisabled: p,
 isActiveChannelOrUnarchivableThread: g,
 isAutomodQuarantined: f
-  }), P = (0, H.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), D = (0, z.Z)(null == n ? void 0 : n.id), b = (0, q.Z)(i), y = (0, O.V)(n.id, i.author.id), B = (0, x.r)(i.id), {
+  }), P = (0, Y.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), D = (0, Q.Z)(null == n ? void 0 : n.id), b = (0, J.Z)(i), j = (0, O.V)(n.id, i.author.id), B = (0, x.r)(i.id), {
 hasInlineForwardButton: k
   } = (0, L.yk)({
 location: 'MessageAccessories'
@@ -862,7 +862,7 @@ poll: b,
 showListsAndHeaders: P,
 showMaskedLinks: P,
 shouldHideMediaOptions: D,
-shouldRedactExplicitContent: y,
+shouldRedactExplicitContent: j,
 shouldRenderCtaButton: B,
 hasInlineForwardButton: G
   });
@@ -882,7 +882,7 @@ renderThreadAccessory: l = !1,
 disableReactionCreates: o = !0,
 disableReactionUpdates: c = !0,
 ...u
-  } = e, d = el.x4.useSetting(), _ = el.RS.useSetting(), E = el.NA.useSetting(), I = el.QK.useSetting(), m = (0, H.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, z.Z)(null == i ? void 0 : i.id), h = (0, O.V)(i.id, n.author.id), N = (0, x.r)(n.id), C = (0, q.Z)(n);
+  } = e, d = ec.x4.useSetting(), _ = ec.RS.useSetting(), E = ec.NA.useSetting(), I = ec.QK.useSetting(), m = (0, Y.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, Q.Z)(null == i ? void 0 : i.id), h = (0, O.V)(i.id, n.author.id), N = (0, x.r)(n.id), C = (0, J.Z)(n);
   return (0, s.jsx)(e1, {
 ...u,
 message: n,

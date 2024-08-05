@@ -19,14 +19,14 @@ var i = n(735250),
   d = n(37234),
   u = n(809206),
   _ = n(110924),
-  E = n(714338),
-  h = n(213609),
-  I = n(144114),
-  m = n(210887),
-  g = n(23434),
-  p = n(610001),
-  T = n(78415),
-  S = n(1964),
+  h = n(714338),
+  E = n(213609),
+  I = n(429142),
+  m = n(144114),
+  g = n(210887),
+  p = n(23434),
+  T = n(1964),
+  S = n(762756),
   f = n(981631),
   C = n(815660),
   N = n(689938);
@@ -38,13 +38,13 @@ function Z() {
 action: e,
 theme: t
   } = (0, r.cj)([
-g.Z,
-m.Z
+p.Z,
+g.Z
   ], () => ({
-action: g.Z.getAction(),
-theme: m.Z.theme
-  })), Z = S.Z.getVerificationTypes(e), [L, O] = a.useState(0), R = (0, _.Z)(Z);
-  (0, h.Z)({
+action: p.Z.getAction(),
+theme: g.Z.theme
+  })), Z = T.Z.getVerificationTypes(e), [L, O] = a.useState(0), R = (0, _.Z)(Z);
+  (0, E.Z)({
 type: s.ImpressionTypes.MODAL,
 name: s.ImpressionNames.USER_ACTION_REQUIRED,
 properties: {
@@ -62,7 +62,7 @@ properties: {
     });
   }, {
     modalKey: A,
-    Layer: T.ZP
+    Layer: I.ZP
   });
 },
 b = () => {
@@ -74,16 +74,16 @@ b = () => {
       n.e('87931')
     ]).then(n.bind(n, 607018));
     return t => (0, i.jsx)(e, {
-      reason: I.L.USER_ACTION_REQUIRED,
+      reason: m.L.USER_ACTION_REQUIRED,
       ...t
     });
   }, {
     modalKey: C.M,
-    Layer: T.ZP
+    Layer: I.ZP
   });
 };
-  return a.useEffect(() => (E.Z.disable(), () => {
-E.Z.enable();
+  return a.useEffect(() => (h.Z.disable(), () => {
+h.Z.enable();
   }), []), a.useEffect(() => {
 (null == R ? void 0 : R[0]) === f.PUi.PHONE && (null == Z ? void 0 : Z[0]) === f.PUi.EMAIL && (0, o.openModalLazy)(async () => {
   let {
@@ -97,13 +97,13 @@ E.Z.enable();
   });
 }, {
   modalKey: v,
-  Layer: T.ZP,
+  Layer: I.ZP,
   onCloseCallback: x
 });
   }, [
 Z,
 R
-  ]), (0, i.jsx)(p.Z, {
+  ]), (0, i.jsx)(S.Z, {
 types: Z,
 captchaKey: L,
 onCaptchaVerify: e => {
@@ -139,7 +139,7 @@ onLogout: () => {
       })
     });
   }, {
-    Layer: T.ZP
+    Layer: I.ZP
   });
 }
   });

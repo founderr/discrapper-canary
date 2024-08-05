@@ -13,19 +13,19 @@ var i = n(735250),
   I = n(112724),
   m = n(607070),
   T = n(884697),
-  h = n(479446),
-  N = n(930114),
-  C = n(981632),
-  f = n(703656),
-  p = n(314897),
-  g = n(82142),
-  S = n(283595),
-  A = n(594174),
-  R = n(509545),
-  O = n(55563),
-  x = n(285952),
-  M = n(199480),
-  v = n(70613),
+  h = n(600164),
+  N = n(479446),
+  C = n(930114),
+  f = n(981632),
+  p = n(108989),
+  g = n(703656),
+  S = n(314897),
+  A = n(82142),
+  R = n(283595),
+  O = n(594174),
+  x = n(509545),
+  M = n(55563),
+  v = n(199480),
   L = n(626135),
   Z = n(669079),
   P = n(74538),
@@ -117,10 +117,10 @@ return {
 let {
   libraryApplication: t
 } = this.props;
-return (0, i.jsxs)(x.Z, {
-  justify: x.Z.Justify.BETWEEN,
+return (0, i.jsxs)(h.Z, {
+  justify: h.Z.Justify.BETWEEN,
   children: [
-    (0, i.jsxs)(x.Z, {
+    (0, i.jsxs)(h.Z, {
       children: [
         this.renderButton(e),
         null == t || e.isSubscription ? null : (0, i.jsx)(F, {
@@ -129,11 +129,11 @@ return (0, i.jsxs)(x.Z, {
         })
       ]
     }),
-    (0, i.jsxs)(x.Z, {
-      align: x.Z.Align.END,
-      justify: x.Z.Justify.END,
+    (0, i.jsxs)(h.Z, {
+      align: h.Z.Align.END,
+      justify: h.Z.Justify.END,
       className: k.metadata,
-      direction: x.Z.Direction.VERTICAL,
+      direction: h.Z.Direction.VERTICAL,
       children: [
         e.hasMultipleCopies ? (0, i.jsx)('div', {
           children: this.renderGiftCodeCopiesLeft(e)
@@ -310,7 +310,7 @@ super(...e), G(this, 'handleViewLibrary', e => {
   let {
     libraryApplication: t
   } = this.props;
-  e.preventDefault(), null != t && t.isHidden() ? (0, f.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, f.uL)(U.Z5c.APPLICATION_LIBRARY, {
+  e.preventDefault(), null != t && t.isHidden() ? (0, g.uL)(U.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, g.uL)(U.Z5c.APPLICATION_LIBRARY, {
     state: {
       applicationId: null != t ? t.id : void 0
     }
@@ -333,7 +333,7 @@ super(...e), G(this, 'handleViewLibrary', e => {
     }
   });
   let r = s !== U.uaV.CUSTOM_GIFT ? void 0 : i;
-  (0, N.V)({
+  (0, C.V)({
     processedCode: n,
     channelContext: t,
     customGiftMessage: r,
@@ -371,15 +371,15 @@ super(...e), G(this, 'handleViewLibrary', e => {
   return (0, i.jsxs)('div', {
     className: a,
     children: [
-      !t && y.eZ.includes(e.giftStyle) && (0, i.jsx)(v.Z, {
+      !t && y.eZ.includes(e.giftStyle) && (0, i.jsx)(p.Z, {
         className: k.snow,
         wind: 5
       }),
-      s && (0, i.jsx)(M.Z, {
+      s && (0, i.jsx)(v.Z, {
         className: k.headerIcon
       }),
-      null != e.giftStyle && (0, i.jsx)(C.Z, {
-        defaultAnimationState: e.redeemed ? h.S.LOOP : h.S.IDLE,
+      null != e.giftStyle && (0, i.jsx)(f.Z, {
+        defaultAnimationState: e.redeemed ? N.S.LOOP : N.S.IDLE,
         giftStyle: e.giftStyle,
         className: l
       })
@@ -390,28 +390,28 @@ super(...e), G(this, 'handleViewLibrary', e => {
 }
 let H = (0, I.Z)((0, E.Z)(V));
 t.Z = c.ZP.connectStores([
-  g.Z,
-  O.Z,
-  A.default,
-  S.Z,
+  A.Z,
+  M.Z,
+  O.default,
   R.Z,
-  p.default,
+  x.Z,
+  S.default,
   m.Z
 ], e => {
   let {
 code: t,
 author: n,
 currentUser: i
-  } = e, s = g.Z.get(t), a = null != s ? O.Z.get(s.skuId) : null, r = null != s && null != s.userId ? A.default.getUser(s.userId) : null, l = m.Z.useReducedMotion;
+  } = e, s = A.Z.get(t), a = null != s ? M.Z.get(s.skuId) : null, r = null != s && null != s.userId ? O.default.getUser(s.userId) : null, l = m.Z.useReducedMotion;
   return {
 sku: a,
 giftCode: s,
 gifter: r,
 currentUser: i,
 subscriptionPlan: null != s && null != s.subscriptionPlanId ? (0, D.oE)(s.subscriptionPlanId) : null,
-isSelfGift: null != s ? p.default.getId() === s.userId : p.default.getId() === n.id,
-resolved: g.Z.getIsResolved(t),
-libraryApplication: null != a && (null == s ? void 0 : s.entitlementBranches) != null ? Z.z2(s.entitlementBranches, a, S.Z) : null,
+isSelfGift: null != s ? S.default.getId() === s.userId : S.default.getId() === n.id,
+resolved: A.Z.getIsResolved(t),
+libraryApplication: null != a && (null == s ? void 0 : s.entitlementBranches) != null ? Z.z2(s.entitlementBranches, a, R.Z) : null,
 useReducedMotion: l
   };
 })(H);

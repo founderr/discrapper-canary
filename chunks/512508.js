@@ -20,18 +20,18 @@ var n, a, o, s, i, r, C = l(735250),
   M = l(461745),
   x = l(933557),
   b = l(471445),
-  T = l(518738),
-  L = l(439170),
-  g = l(592125),
-  I = l(430824),
-  p = l(699516),
-  H = l(594174),
-  f = l(153124),
-  N = l(176278),
+  T = l(91218),
+  L = l(313201),
+  g = l(518738),
+  I = l(439170),
+  p = l(592125),
+  H = l(430824),
+  f = l(699516),
+  N = l(594174),
   A = l(689938),
   R = l(380666);
-let S = (0, f.hQ)(),
-  Z = (0, f.hQ)(),
+let S = (0, L.hQ)(),
+  Z = (0, L.hQ)(),
   j = 'text-sm/medium';
 
 function v(e) {
@@ -43,7 +43,7 @@ function D(e) {
 }
 
 function O(e) {
-  let t = ''.concat(e.name.includes(L.CR) ? '' : '@').concat(e.name);
+  let t = ''.concat(e.name.includes(I.CR) ? '' : '@').concat(e.name);
   return {
 tag: {
   type: M.Fj.ROLE,
@@ -59,7 +59,7 @@ row: {
 }
 
 function B(e) {
-  let t = (0, x.F6)(e, H.default, p.Z);
+  let t = (0, x.F6)(e, N.default, f.Z);
   return {
 tag: {
   type: M.Fj.CHANNEL,
@@ -83,11 +83,11 @@ className: a
   } = e, {
 id: o,
 name: s
-  } = l.record, i = (0, T.p9)({
+  } = l.record, i = (0, g.p9)({
 guildId: n,
 roleId: o,
 size: 16
-  }), r = (0, E.e7)([I.Z], () => I.Z.getRole(n, o)), c = s.includes(L.CR) ? '' : '@', d = (0, h.useToken)(h.tokens.unsafe_rawColors.PRIMARY_300).hsl(), m = null !== (t = null == r ? void 0 : r.colorString) && void 0 !== t ? t : d;
+  }), r = (0, E.e7)([H.Z], () => H.Z.getRole(n, o)), c = s.includes(I.CR) ? '' : '@', d = (0, h.useToken)(h.tokens.unsafe_rawColors.PRIMARY_300).hsl(), m = null !== (t = null == r ? void 0 : r.colorString) && void 0 !== t ? t : d;
   return (0, C.jsxs)('div', {
 className: u()(R.rowLabel, R.roleTagContainer, a),
 children: [
@@ -97,7 +97,7 @@ children: [
     background: !1,
     tooltip: !1
   }),
-  null != i ? (0, C.jsx)(N.Z, {
+  null != i ? (0, C.jsx)(T.Z, {
     className: R.roleTagIcon,
     ...i,
     enableTooltip: !1
@@ -158,12 +158,12 @@ onChange: s,
 placeholder: i,
 helperText: r,
 className: d
-  } = e, m = (0, E.e7)([I.Z], () => I.Z.getRoles(t)), x = c.useMemo(() => function(e, t, l) {
+  } = e, m = (0, E.e7)([H.Z], () => H.Z.getRoles(t)), x = c.useMemo(() => function(e, t, l) {
 if (null == e)
   return {};
 let n = {};
 return e.forEach(e => {
-  let t = g.Z.getChannel(e);
+  let t = p.Z.getChannel(e);
   null != t && (n[e] = B(t));
 }), t.forEach(e => {
   e in l && (n[e] = O(l[e]));
@@ -172,7 +172,7 @@ return e.forEach(e => {
 a,
 o,
 m
-  ]), b = c.useMemo(() => Object.keys(x), [x]), [T, L] = c.useState(''), [p, H] = c.useState(!1), [f, N] = c.useState(!1), [j, V] = c.useState(!1), U = c.useRef(null), {
+  ]), b = c.useMemo(() => Object.keys(x), [x]), [T, L] = c.useState(''), [g, I] = c.useState(!1), [f, N] = c.useState(!1), [j, V] = c.useState(!1), U = c.useRef(null), {
 sections: k,
 sectionCounts: F
   } = c.useMemo(() => {
@@ -204,21 +204,21 @@ let t = Object.values(e),
   }).map(e => e.row.record.id);
 s(new Set(l), new Set(n));
   }, [s]), P = () => {
-H(!1), N(!1);
+I(!1), N(!1);
   };
   c.useEffect(() => {
 let e = setTimeout(() => {
-  V(p || f);
+  V(g || f);
 }, 32);
 return () => {
   clearTimeout(e);
 };
   }, [
-p,
+g,
 f
   ]);
   let Y = (e, t, l) => {
-  l.stopPropagation(), l.preventDefault(), 2 === t ? H(e) : (1 === t || H(e), N(e));
+  l.stopPropagation(), l.preventDefault(), 2 === t ? I(e) : (1 === t || I(e), N(e));
 },
 G = c.useCallback(e => {
   let t = {

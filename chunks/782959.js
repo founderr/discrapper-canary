@@ -1,25 +1,25 @@
 n.d(t, {
   Z: function() {
-return E;
+return h;
   }
 });
 var i = n(735250);
 n(470079);
 var a = n(481060),
   s = n(367907),
-  r = n(970731),
-  l = n(810090),
+  r = n(70097),
+  l = n(970731),
   o = n(626135),
   c = n(63063),
   d = n(981631),
   u = n(689938),
   _ = n(603517);
 
-function E(e) {
+function h(e) {
   let {
 guildId: t,
-markAsDismissed: E
-  } = e, h = (0, i.jsxs)(i.Fragment, {
+markAsDismissed: h
+  } = e, E = (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(a.Text, {
     color: 'always-white',
@@ -36,10 +36,10 @@ children: [
   })
 ]
   });
-  return (0, i.jsx)(r.ZP, {
+  return (0, i.jsx)(l.ZP, {
 header: u.Z.Messages.MEDIA_CHANNEL_UPSELL_TITLE,
-content: h,
-asset: (0, i.jsx)(l.Z, {
+content: E,
+asset: (0, i.jsx)(r.Z, {
   className: _.video,
   src: 'https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4',
   autoPlay: !0,
@@ -64,6 +64,6 @@ onClick: () => {
   });
 },
 secondaryButtonCTA: u.Z.Messages.DISMISS,
-markAsDismissed: E
+markAsDismissed: h
   });
 }

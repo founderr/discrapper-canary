@@ -103,7 +103,7 @@ let T = (0, C.IC)(96),
   left: () => n(960088),
   right: () => n(402313),
   leftOverflow: () => n(757631),
-  rightOverflow: () => n(17142),
+  rightOverflow: () => n(991329),
   leftLogo: () => n(237457),
   rightLogo: () => n(958609)
 }

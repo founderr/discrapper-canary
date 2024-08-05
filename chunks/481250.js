@@ -13,10 +13,10 @@ var a = n(120356),
   o = n(481060),
   s = n(304680),
   l = n(763520),
-  c = n(131951),
-  d = n(226961),
-  u = n(285952),
-  m = n(40300),
+  c = n(600164),
+  d = n(352978),
+  u = n(131951),
+  m = n(226961),
   p = n(513547),
   h = n(65154),
   g = n(634040),
@@ -30,11 +30,11 @@ let C = {
 function y(e) {
   let t = [],
 n = 0;
-  for (e.length % 2 != 0 && e.push((0, r.jsx)(u.Z, {
+  for (e.length % 2 != 0 && e.push((0, r.jsx)(c.Z, {
   basis: '50%',
   grow: 0
 }, n++)); e.length > 0;)
-t.push((0, r.jsx)(u.Z, {
+t.push((0, r.jsx)(c.Z, {
   basis: '50%',
   grow: 0,
   children: e.splice(0, 2)
@@ -55,7 +55,7 @@ for (let e of Object.keys(D).sort((e, t) => {
       r = R[t];
     if (n !== r)
       return void 0 === n ? 1 : void 0 === r ? -1 : n - r;
-    return d.Pz[e] !== d.Pz[t] ? d.Pz[e] ? 1 : -1 : e > t ? 1 : -1;
+    return m.Pz[e] !== m.Pz[t] ? m.Pz[e] ? 1 : -1 : e > t ? 1 : -1;
   })) {
   let t = D[e];
   if (!p.al[e] && void 0 !== t)
@@ -74,9 +74,9 @@ return (0, r.jsxs)(o.FormSection, {
       let o = a.get(t, n, e.ssrc);
       return null != o ? (0, r.jsx)('div', {
         className: i()(g.videoWrapper, f.marginBottom40),
-        children: (0, r.jsx)(m.Z, {
+        children: (0, r.jsx)(d.Z, {
           streamId: o,
-          videoComponent: c.Z.getMediaEngine().Video,
+          videoComponent: u.Z.getMediaEngine().Video,
           paused: !1,
           videoSpinnerContext: l.m.REPLAY_VIDEO_STREAM,
           userId: n
@@ -84,9 +84,9 @@ return (0, r.jsxs)(o.FormSection, {
       }) : null;
     }(D, n, a, S),
     y(Z),
-    'video' === D.type && v === e.length - 1 && null != n && null != a && null != S && (b = a, E = t, (0, r.jsx)(u.Z, {
+    'video' === D.type && v === e.length - 1 && null != n && null != a && null != S && (b = a, E = t, (0, r.jsx)(c.Z, {
       className: f.marginBottom20,
-      children: (0, r.jsxs)(u.Z.Child, {
+      children: (0, r.jsxs)(c.Z.Child, {
         basis: '100%',
         children: [
           (0, r.jsx)(o.FormTitle, {
@@ -95,7 +95,7 @@ return (0, r.jsxs)(o.FormSection, {
             children: 'Simulcast Override'
           }),
           (0, r.jsx)(o.SingleSelect, {
-            value: d.ZP.getSimulcastDebugOverride(b, E),
+            value: m.ZP.getSimulcastDebugOverride(b, E),
             onChange: e => {
               s.MS(b, E, e);
             },

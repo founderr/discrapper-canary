@@ -9,14 +9,14 @@ var i = n(735250),
   d = n(481060),
   u = n(749210),
   _ = n(607070),
-  E = n(100527),
-  h = n(931240),
+  h = n(100527),
+  E = n(931240),
   I = n(970606),
   m = n(650461),
   g = n(353093),
   p = n(603839),
-  T = n(430824),
-  S = n(725568),
+  T = n(84615),
+  S = n(430824),
   f = n(231467),
   C = n(207796),
   N = n(273254),
@@ -88,10 +88,10 @@ eligibleGuilds: s,
 onButtonClick: l,
 buttonText: c,
 hasCompletedUpsell: u
-  } = e, _ = (0, C.GN)(e => e.started, o.Z), E = a.useMemo(() => s.map(e => ({
+  } = e, _ = (0, C.GN)(e => e.started, o.Z), h = a.useMemo(() => s.map(e => ({
 value: e.id,
 label: e.name
-  })), [s]), h = a.useCallback(() => {
+  })), [s]), E = a.useCallback(() => {
 (0, C.fH)(C.v0.DISCOVERY);
   }, []), I = s.length > 1;
   return (0, i.jsxs)(i.Fragment, {
@@ -146,7 +146,7 @@ children: [
       I && (0, i.jsx)(d.SearchableSelect, {
         className: L.upsellSelect,
         value: t,
-        options: E,
+        options: h,
         onChange: n
       }),
       !u && (0, i.jsx)(d.Button, {
@@ -170,7 +170,7 @@ children: [
     children: (0, i.jsx)('div', {
       className: L.upsellBackButton,
       children: (0, i.jsx)(d.Clickable, {
-        onClick: h,
+        onClick: E,
         'aria-label': Z.Z.Messages.BACK,
         children: (0, i.jsx)(d.ArrowLargeLeftIcon, {})
       })
@@ -194,19 +194,19 @@ return s ? null === (e = n[0]) || void 0 === e ? void 0 : e.id : null === (i = t
   a.useEffect(() => {
 !s && (0, I.TE)({
   guildId: r,
-  location: E.Z.CLAN_DISCOVERY
+  location: h.Z.CLAN_DISCOVERY
 });
   }, [
 s,
 r
   ]);
-  let C = (0, c.e7)([T.Z], () => T.Z.getGuild(r)),
+  let C = (0, c.e7)([S.Z], () => S.Z.getGuild(r)),
 O = (0, c.e7)([m.ZP], () => null != r ? m.ZP.getStateForGuild(r).progress : null),
 R = a.useCallback(() => {
   !s && ((0, I._9)({
     guildId: r,
-    location: E.Z.CLAN_DISCOVERY
-  }), (0, S.q4)(e => {
+    location: h.Z.CLAN_DISCOVERY
+  }), (0, T.q4)(e => {
     let {
       closeLayer: t
     } = e;
@@ -317,7 +317,7 @@ F = (0, d.useSpring)({
 }, 'animate-always'),
 Y = a.useMemo(() => null == O ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP, [O]),
 W = a.useCallback(async () => {
-  await (0, h.Zx)(r), u.Z.transitionToGuildSync('936317138904440892');
+  await (0, E.Zx)(r), u.Z.transitionToGuildSync('936317138904440892');
 }, [r]),
 z = a.useCallback(e => (0, i.jsx)(d.Clickable, {
   tag: 'span',

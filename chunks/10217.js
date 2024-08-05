@@ -11,12 +11,12 @@ var a, l, s = n(735250),
   C = n(481060),
   g = n(100527),
   h = n(906732),
-  v = n(318374),
-  x = n(717680),
-  f = n(594174),
-  E = n(863840),
-  L = n(962399),
-  S = n(810090),
+  v = n(70097),
+  x = n(237617),
+  f = n(318374),
+  E = n(717680),
+  L = n(594174),
+  S = n(962399),
   I = n(626135),
   N = n(823379),
   Z = n(709054),
@@ -79,7 +79,7 @@ children: [
       !l && (0, s.jsxs)('div', {
         className: b.clipDurationBadge,
         children: [
-          o ? (0, s.jsx)(L.Z, {
+          o ? (0, s.jsx)(S.Z, {
             className: b.clipDurationEditIcon
           }) : null,
           (0, s.jsx)(C.Text, {
@@ -163,7 +163,7 @@ videoRef: n
   return 0 === t.length ? (0, s.jsx)(C.Spinner, {
 type: C.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
 className: b.clipThumb
-  }) : null != a ? (0, s.jsx)(S.Z, {
+  }) : null != a ? (0, s.jsx)(v.Z, {
 preload: 'metadata',
 muted: !0,
 poster: t.thumbnail,
@@ -188,7 +188,7 @@ onDelete: o,
 onEdit: r,
 onShare: c,
 onBlur: d
-  } = e, u = (0, x.Z)(), m = i.useCallback(e => {
+  } = e, u = (0, E.Z)(), m = i.useCallback(e => {
 e.stopPropagation(), e.shiftKey ? (l(), (0, M.sS)(t.filepath)) : o(t, l), I.default.track(T.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
   type: 'delete'
 });
@@ -241,7 +241,7 @@ children: [
       className: b.button,
       size: C.Button.Sizes.NONE,
       look: C.Button.Looks.FILLED,
-      children: (0, s.jsx)(L.Z, {
+      children: (0, s.jsx)(S.Z, {
         className: b.miniIcon
       })
     })
@@ -284,11 +284,11 @@ exporting: o,
 actionsDisabled: c,
 isNew: d,
 onDelete: p,
-onEdit: x,
-onShare: L
-  } = e, S = (0, u.Wu)([f.default], () => l.users.map(e => f.default.getUser(e)).filter(N.lm)), {
+onEdit: v,
+onShare: E
+  } = e, S = (0, u.Wu)([L.default], () => l.users.map(e => L.default.getUser(e)).filter(N.lm)), {
 analyticsLocations: M
-  } = (0, h.ZP)(g.Z.CLIPS_GALLERY_ITEM), [_, A] = i.useState(!1), R = i.useRef(null), B = (0, E.Z)(null !== (a = null === (t = l.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), D = i.useRef(new m.sW(500, () => {
+  } = (0, h.ZP)(g.Z.CLIPS_GALLERY_ITEM), [_, A] = i.useState(!1), R = i.useRef(null), B = (0, x.Z)(null !== (a = null === (t = l.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), D = i.useRef(new m.sW(500, () => {
 var e;
 let t = R.current;
 null != t && t.paused && (t.currentTime = B.current, null === (e = R.current) || void 0 === e || e.play());
@@ -316,7 +316,7 @@ children: (0, s.jsxs)(C.ClickableContainer, {
   'aria-disabled': c,
   'aria-label': j.Z.Messages.EDIT,
   onClick: c ? void 0 : () => {
-    x(l), I.default.track(T.rMx.CLIP_GALLERY_CARD_CLICKED);
+    v(l), I.default.track(T.rMx.CLIP_GALLERY_CARD_CLICKED);
   },
   className: r()(b.clipItem, {
     [b.disabled]: c
@@ -354,7 +354,7 @@ children: (0, s.jsxs)(C.ClickableContainer, {
         (0, s.jsxs)('div', {
           className: b.usersAndDelete,
           children: [
-            (0, s.jsx)(v.Z, {
+            (0, s.jsx)(f.Z, {
               maxUsers: 4,
               users: S,
               onFocus: e => {
@@ -371,8 +371,8 @@ children: (0, s.jsxs)(C.ClickableContainer, {
               exporting: o,
               onBeforeDelete: H,
               onDelete: p,
-              onEdit: x,
-              onShare: L,
+              onEdit: v,
+              onShare: E,
               onBlur: e => {
                 var t;
                 (null === (t = e.relatedTarget) || void 0 === t ? void 0 : t.parentElement) !== e.currentTarget.parentElement && V();

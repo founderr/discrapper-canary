@@ -7,8 +7,8 @@ var s = n(735250),
   c = n(950104),
   d = n(780384),
   u = n(481060),
-  p = n(703656),
-  m = n(810090),
+  p = n(70097),
+  m = n(703656),
   x = n(358085),
   g = n(617136),
   f = n(272008),
@@ -48,7 +48,7 @@ useReducedMotion: H
 (0, f.AH)(V.id, {
   questContent: h.jn.QUEST_BAR,
   questContentCTA: J
-}), F.features.has(y.S7.START_QUEST_CTA) && (0, p.uL)(I.Z5c.ACTIVITY_DETAILS(O.In), void 0);
+}), F.features.has(y.S7.START_QUEST_CTA) && (0, m.uL)(I.Z5c.ACTIVITY_DETAILS(O.In), void 0);
   }, [
 V,
 J,
@@ -273,7 +273,7 @@ children: [
           },
           children: K ? (0, s.jsx)(B.Fl, {
             id: 'QuestBarContentExpanded_heroAnimated',
-            children: e => (0, s.jsx)(m.Z, {
+            children: e => (0, s.jsx)(p.Z, {
               ref: e,
               autoPlay: !H,
               loop: !0,

@@ -9,8 +9,8 @@ var a = n(735250),
   s = n(481060),
   r = n(100527),
   o = n(906732),
-  c = n(592125),
-  d = n(810090),
+  c = n(70097),
+  d = n(592125),
   u = n(566620),
   g = n(146936),
   v = n(678173),
@@ -32,7 +32,7 @@ function N(e) {
   let {
 applicationId: n,
 guildId: l,
-channelId: c,
+channelId: d,
 onActivityLaunch: g
   } = e, {
 analyticsLocations: m
@@ -64,7 +64,7 @@ children: (0, a.jsx)('div', {
         children: (0, a.jsx)(b, {
           activityItem: I,
           onLaunch: g,
-          channelId: c
+          channelId: d
         })
       }),
       (0, a.jsxs)('div', {
@@ -74,7 +74,7 @@ children: (0, a.jsx)('div', {
             children: [
               null != _ ? (0, a.jsx)('div', {
                 className: j.heroVideoContainer,
-                children: (0, a.jsx)(d.Z, {
+                children: (0, a.jsx)(c.Z, {
                   loop: !0,
                   autoPlay: !0,
                   muted: !0,
@@ -172,11 +172,11 @@ children: (0, a.jsx)('div', {
 function b(e) {
   var t, r;
   let {
-activityItem: d,
+activityItem: c,
 onLaunch: u,
 channelId: v
   } = e, x = (0, f.Z)({
-applicationId: d.application.id,
+applicationId: c.application.id,
 size: 2048
   }), {
 analyticsLocations: E
@@ -185,11 +185,11 @@ allowGdmActivityChannelSuggestion: !0
   })) && void 0 !== t ? t : void 0), [A, Z] = i.useState(null !== (r = (0, p.d)({
 guildId: b,
 allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== r ? r : void 0), y = (0, l.e7)([c.Z], () => c.Z.getChannel(A), [A]), D = (0, m.W)(), L = (0, p.F)(b), O = i.useCallback(() => {
+  })) && void 0 !== r ? r : void 0), y = (0, l.e7)([d.Z], () => d.Z.getChannel(A), [A]), D = (0, m.W)(), L = (0, p.F)(b), O = i.useCallback(() => {
 var e;
 if (null != A)
   (0, g.Z)({
-    targetApplicationId: null == d ? void 0 : null === (e = d.application) || void 0 === e ? void 0 : e.id,
+    targetApplicationId: null == c ? void 0 : null === (e = c.application) || void 0 === e ? void 0 : e.id,
     currentEmbeddedApplication: N,
     channelId: A,
     guildId: b,
@@ -197,7 +197,7 @@ if (null != A)
     analyticsLocations: E
   }).then(u);
   }, [
-d,
+c,
 E,
 N,
 u,
@@ -212,20 +212,20 @@ b
     n.e('91249')
   ]).then(n.bind(n, 827940));
   return t => (0, a.jsx)(e, {
-    activityItem: d,
+    activityItem: c,
     ...t,
     analyticsLocations: E
   });
 });
   }, [
-d,
+c,
 E
   ]), V = null == y || null != y.guild_id && !(null != b && null != A && D.some(e => e.value === b) && L.some(e => e.value.channel.id === A)) && !0;
   return (0, a.jsxs)('div', {
 className: j.launcherInnerContainer,
 children: [
   (0, a.jsx)(_.Z, {
-    applicationName: d.application.name,
+    applicationName: c.application.name,
     imageBackground: x,
     imageClassName: j.launchImage,
     imageNotFoundClassName: j.brokenLaunchImage

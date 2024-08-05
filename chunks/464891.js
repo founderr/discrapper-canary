@@ -19,19 +19,19 @@ var r = n(735250),
   c = n(100527),
   d = n(906732),
   _ = n(366030),
-  E = n(71619),
-  f = n(340797),
-  h = n(98278),
-  p = n(869765),
-  m = n(243317),
-  I = n(621853),
-  T = n(484459),
-  g = n(204197),
-  S = n(740492),
-  A = n(430824),
-  N = n(496675),
-  v = n(594174),
-  O = n(176278),
+  E = n(91218),
+  f = n(71619),
+  h = n(340797),
+  p = n(98278),
+  m = n(869765),
+  I = n(243317),
+  T = n(621853),
+  g = n(484459),
+  S = n(204197),
+  A = n(740492),
+  N = n(430824),
+  v = n(496675),
+  O = n(594174),
   R = n(768581),
   C = n(585483),
   y = n(630388),
@@ -183,16 +183,16 @@ children: [
   });
 }
 let Z = e => {
-  !e && (0, h.z)();
+  !e && (0, p.z)();
 };
 
 function Y(e) {
   let {
 currentUserIsPremium: t,
 author: n
-  } = e, i = (0, l.e7)([I.Z], () => {
+  } = e, i = (0, l.e7)([T.Z], () => {
 var e;
-return null === (e = I.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince;
+return null === (e = T.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince;
   });
   return (0, r.jsx)(u.Tooltip, {
 tooltipClassName: k.nitroAuthorBadgeTootip,
@@ -200,7 +200,7 @@ shouldShow: null != i,
 text: G.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({
   date: i
 }),
-onTooltipShow: () => (0, T.Z)(n.id),
+onTooltipShow: () => (0, g.Z)(n.id),
 children: e => (0, r.jsx)(u.Clickable, {
   className: k.nitroAuthorBadgeContainer,
   onClick: () => Z(t),
@@ -222,17 +222,17 @@ function j(e) {
 message: t,
 repliedMessage: n,
 compact: a = !1,
-renderPopout: h,
-showTimestampOnHover: I,
+renderPopout: p,
+showTimestampOnHover: T,
 roleIcon: P,
 subscribeToGroupId: B,
 hideTimestamp: Z,
 className: j,
 channel: W
-  } = e, K = i.useMemo(() => null != h ? e => h(e, t) : void 0, [
-h,
+  } = e, K = i.useMemo(() => null != p ? e => p(e, t) : void 0, [
+p,
 t
-  ]), [, z] = (0, E.ZP)(t.author.id, e.guildId), q = (0, l.e7)([A.Z], () => A.Z.getGuild(e.guildId), [e.guildId]), Q = null != t.author && null != q && N.Z.canManageUser(x.Plq.MODERATE_MEMBERS, t.author, q), X = z && Q, $ = function(e) {
+  ]), [, z] = (0, f.ZP)(t.author.id, e.guildId), q = (0, l.e7)([N.Z], () => N.Z.getGuild(e.guildId), [e.guildId]), Q = null != t.author && null != q && v.Z.canManageUser(x.Plq.MODERATE_MEMBERS, t.author, q), X = z && Q, $ = function(e) {
 var t, n;
 let {
   props: a,
@@ -245,27 +245,27 @@ let {
   author: p,
   compact: m = !1,
   subscribeToGroupId: I,
-  animate: A = !0,
+  animate: T = !0,
   onContextMenu: N,
   onClickAvatar: v,
   onPopoutRequestClose: O,
   showAvatarPopout: y
 } = a, [D, L] = i.useState(!1), {
   analyticsLocations: b
-} = (0, d.ZP)(c.Z.AVATAR), M = (0, l.e7)([S.ZP], () => {
+} = (0, d.ZP)(c.Z.AVATAR), M = (0, l.e7)([A.ZP], () => {
   var e;
-  return null !== (e = a.displayCompactAvatars) && void 0 !== e ? e : S.ZP.displayCompactAvatars;
+  return null !== (e = a.displayCompactAvatars) && void 0 !== e ? e : A.ZP.displayCompactAvatars;
 }), P = null != h.messageReference && null != h.webhookId && h.hasFlag(x.iLy.IS_CROSSPOST), U = h.author, {
   id: w
 } = U, G = m ? 32 : 80, {
   avatarSrc: k,
   avatarDecorationSrc: B,
   eventHandlers: V
-} = (0, g.Z)({
+} = (0, S.Z)({
   user: U,
   guildId: s,
   size: G,
-  animateOnHover: null != I ? !D : !A,
+  animateOnHover: null != I ? !D : !T,
   showPending: !0
 }), H = h.isInteractionPlaceholder(), Z = i.useMemo(() => {
   var e, t;
@@ -293,7 +293,7 @@ return (i.useEffect(() => {
   value: b,
   children: (0, r.jsx)(u.Popout, {
     preload: P ? void 0 : function() {
-      return (0, T.W)(h.author.id, null != p.guildMemberAvatar && null != s ? R.ZP.getGuildMemberAvatarURLSimple({
+      return (0, g.W)(h.author.id, null != p.guildMemberAvatar && null != s ? R.ZP.getGuildMemberAvatarURLSimple({
         guildId: s,
         userId: h.author.id,
         avatar: p.guildMemberAvatar,
@@ -340,9 +340,9 @@ props: e,
 guildId: e.guildId,
 handleRenderPopout: K,
 showCommunicationDisabledStyles: X
-  }), J = (0, l.e7)([S.ZP], () => {
+  }), J = (0, l.e7)([A.ZP], () => {
 var t;
-return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : S.ZP.displayCompactAvatars;
+return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : A.ZP.displayCompactAvatars;
   }), ee = (!a || J) && null != P && null != q ? (0, r.jsx)(u.Popout, {
 animation: u.Popout.Animation.TRANSLATE,
 align: 'center',
@@ -357,13 +357,13 @@ children: e => {
   let {
     onClick: t
   } = e;
-  return (0, r.jsx)(O.Z, {
+  return (0, r.jsx)(E.Z, {
     ...P,
     className: k.roleIcon,
     onClick: t
   });
 }
-  }, 'role-icon-children') : (!a || J) && null != P ? (0, r.jsx)(O.Z, {
+  }, 'role-icon-children') : (!a || J) && null != P ? (0, r.jsx)(E.Z, {
 ...P,
 className: k.roleIcon
   }, 'role-icon-children') : null, et = (0, w.x)({
@@ -372,11 +372,11 @@ channel: W,
 user: null == t ? void 0 : t.author,
 compact: a,
 isRepliedMessage: !1
-  }), en = [], er = v.default.getCurrentUser(), ei = D.ZP.isPremium(t.author), ea = D.ZP.isPremium(er), es = null == W ? void 0 : W.isPrivate();
+  }), en = [], er = O.default.getCurrentUser(), ei = D.ZP.isPremium(t.author), ea = D.ZP.isPremium(er), es = null == W ? void 0 : W.isPrivate();
   (0, L.R)(null != P, 'Message Username') && ei && !a && !es && en.push((0, r.jsx)(Y, {
 currentUserIsPremium: ea,
 author: t.author
-  }, 'nitro-author')), null != ee && en.push(ee), null != q && en.push((0, r.jsx)(f.Z, {
+  }, 'nitro-author')), null != ee && en.push(ee), null != q && en.push((0, r.jsx)(h.Z, {
 guild: q,
 message: t
   }, 'new-member')), null != W && null != q && en.push((0, r.jsx)(_.Z, {
@@ -386,14 +386,14 @@ userId: t.author.id,
 messageId: t.id
   }, 'connections'));
   let eo = [];
-  (0, y.yE)(t.flags, x.iLy.SUPPRESS_NOTIFICATIONS) && eo.push((0, r.jsx)(m.Z, {}, 'suppress-notifications'));
+  (0, y.yE)(t.flags, x.iLy.SUPPRESS_NOTIFICATIONS) && eo.push((0, r.jsx)(I.Z, {}, 'suppress-notifications'));
   let el = {};
   el[b.a.SYSTEM_TAG] = et, el[b.a.BADGES] = en;
   let eu = V(e, K, el),
 ec = (0, M.XX)(t, B),
 ed = (0, M.Dv)(t),
 e_ = Z ? ''.concat(ec) : ''.concat(ec, ' ').concat(ed),
-eE = (null == n ? void 0 : n.state) === p.Y.LOADED ? (0, M.Gq)(t) : void 0;
+eE = (null == n ? void 0 : n.state) === m.Y.LOADED ? (0, M.Gq)(t) : void 0;
   return (0, r.jsx)(H, {
 message: t,
 avatar: $,
@@ -425,7 +425,7 @@ usernameClassName: s()(k.headerText, {
 }),
 compact: a,
 showTimestamp: !0 !== Z,
-showTimestampOnHover: I,
+showTimestampOnHover: T,
 ariaLabelledBy: e_,
 ariaDescribedBy: eE,
 className: j,

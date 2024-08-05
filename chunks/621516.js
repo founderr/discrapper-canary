@@ -8,13 +8,13 @@ var a = n(735250),
   d = n(481060),
   u = n(410030),
   m = n(607070),
-  h = n(961675),
-  _ = n(883429),
-  g = n(432771),
-  x = n(406074),
-  C = n(434404),
-  f = n(430824),
-  p = n(810090),
+  h = n(70097),
+  _ = n(961675),
+  g = n(883429),
+  x = n(432771),
+  C = n(406074),
+  f = n(434404),
+  p = n(430824),
   T = n(63063),
   I = n(595433),
   E = n(981631),
@@ -84,7 +84,7 @@ children: [
   (0, a.jsx)(d.Spacer, {
     size: 10
   }),
-  (0, a.jsx)(p.Z, {
+  (0, a.jsx)(h.Z, {
     className: b.video,
     src: s,
     autoPlay: !0,
@@ -141,20 +141,20 @@ t.Z = e => {
   var t, n;
   let {
 channel: r
-  } = e, p = (0, u.ZP)(), O = (0, c.wj)(p), Z = (0, o.e7)([f.Z], () => f.Z.getGuild(r.guild_id)), L = (0, o.e7)([m.Z], () => m.Z.useReducedMotion), P = (0, o.e7)([h.Z], () => h.Z.hasHidden(r.id)), w = (0, x.C)({
+  } = e, h = (0, u.ZP)(), O = (0, c.wj)(h), Z = (0, o.e7)([p.Z], () => p.Z.getGuild(r.guild_id)), L = (0, o.e7)([m.Z], () => m.Z.useReducedMotion), P = (0, o.e7)([_.Z], () => _.Z.hasHidden(r.id)), w = (0, C.C)({
 guildId: r.guild_id,
 channelId: r.id
   }), {
 transitions: y,
 setVisible: D
   } = (0, I.H)(), F = s.useCallback(() => {
-D(!1), _.Z.hideAdminOnboarding(r.id, !0);
+D(!1), g.Z.hideAdminOnboarding(r.id, !0);
   }, [
 r,
 D
   ]);
   s.useEffect(() => {
-!(0, g.c)(r.id) && D(!P);
+!(0, x.c)(r.id) && D(!P);
   }, [
 r,
 D,
@@ -173,7 +173,7 @@ k = s.useMemo(() => [
   N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG
 ], []),
 H = () => {
-  C.Z.open(r.guild_id, E.pNK.ROLE_SUBSCRIPTIONS);
+  f.Z.open(r.guild_id, E.pNK.ROLE_SUBSCRIPTIONS);
 },
 B = null !== (t = null == Z ? void 0 : Z.hasFeature(E.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HAS_TIERS_CTA : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_NO_TIERS_CTA,
 G = null !== (n = (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE)) || (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== n && n,

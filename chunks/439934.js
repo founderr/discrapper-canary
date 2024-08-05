@@ -12,11 +12,11 @@ var a = n(735250),
   c = n(239091),
   d = n(434650),
   u = n(213459),
-  g = n(695346),
-  v = n(594174),
-  m = n(695103),
-  p = n(880448),
-  x = n(810090),
+  g = n(70097),
+  v = n(695346),
+  m = n(594174),
+  p = n(695103),
+  x = n(880448),
   I = n(823379),
   f = n(5192),
   _ = n(624138),
@@ -58,11 +58,11 @@ application: n,
 channel: i,
 guildId: l,
 large: s = !1
-  } = e, c = (0, r.Wu)([v.default], () => {
+  } = e, c = (0, r.Wu)([m.default], () => {
 var e;
 return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : []).map(e => {
   let [t] = e;
-  return v.default.getUser(t);
+  return m.default.getUser(t);
 }).filter(I.lm);
   }), d = f.ZP.getName(l, null == i ? void 0 : i.id, null == c ? void 0 : c[0]);
   if (d = (0, _.aF)(d, 15), null == t || 0 === c.length) {
@@ -103,7 +103,7 @@ function O(e) {
   let {
 activityItem: n,
 channel: l,
-guildId: v,
+guildId: m,
 locationObject: I,
 onActivityItemVisible: f,
 onActivityItemSelected: _,
@@ -119,15 +119,15 @@ staffReleasePhase: P
   } = (0, T.ZP)({
 activityItem: n,
 channel: l,
-guildId: v,
+guildId: m,
 locationObject: I,
 onActivityItemVisible: f,
 onActivityItemSelected: _,
 embeddedActivitiesManager: N.Z
   }), F = (0, r.e7)([
 h.Z,
-m.Z
-  ], () => h.Z.inDevModeForApplication(n.application.id) || m.Z.inTestModeForApplication(n.application.id), [n.application.id]), {
+p.Z
+  ], () => h.Z.inDevModeForApplication(n.application.id) || p.Z.inTestModeForApplication(n.application.id), [n.application.id]), {
 application: Y
   } = n, w = i.useCallback(e => e && (null == f ? void 0 : f({
 applicationId: n.application.id
@@ -140,7 +140,7 @@ G && q(!0);
   }, [G]);
   let J = () => W(!0),
 K = () => W(!1),
-X = g.Sb.useSetting(),
+X = v.Sb.useSetting(),
 $ = i.useCallback(() => {
   null == k || k(), u.ZP.maybeQueryForInstallLessApps(Y.id, null == l ? void 0 : l.id);
 }, [
@@ -184,7 +184,7 @@ children: [
           [Z.videoFadeOut]: !G
         }),
         onAnimationEnd: () => G ? null : q(!1),
-        children: (0, a.jsx)(x.Z, {
+        children: (0, a.jsx)(g.Z, {
           className: Z.activityVideo,
           src: B,
           loop: !0,
@@ -211,7 +211,7 @@ children: [
         children: e => (0, a.jsx)('div', {
           className: Z.devShelfBadge,
           ...e,
-          children: (0, a.jsx)(p.Z, {
+          children: (0, a.jsx)(x.Z, {
             className: Z.devShelfIcon
           })
         })
@@ -253,7 +253,7 @@ children: [
         activity: null == R ? void 0 : R.embeddedActivity,
         application: Y,
         channel: l,
-        guildId: v,
+        guildId: m,
         large: b
       }),
       (0, a.jsx)('div', {

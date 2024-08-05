@@ -14,16 +14,16 @@ var i, l, r, a = n(735250),
   C = n(453542),
   I = n(762914),
   E = n(702321),
-  N = n(518311),
-  x = n(355298),
-  S = n(869404),
-  v = n(333984),
-  Z = n(210887),
-  T = n(592125),
-  L = n(158776),
-  A = n(55589),
-  b = n(153124),
-  M = n(151827),
+  N = n(82295),
+  x = n(313201),
+  S = n(518311),
+  v = n(355298),
+  Z = n(869404),
+  T = n(333984),
+  L = n(210887),
+  A = n(592125),
+  b = n(158776),
+  M = n(55589),
   R = n(515753),
   O = n(981631),
   y = n(689938),
@@ -311,7 +311,7 @@ super(...e), j(this, 'state', {
     c = n.some(e => (0, E.Z)(e)),
     u = {
       num_users_visible: a.length,
-      num_users_visible_with_mobile_indicator: o.filter(e => null != e && L.Z.isMobileOnline(e)).length
+      num_users_visible_with_mobile_indicator: o.filter(e => null != e && b.Z.isMobileOnline(e)).length
     };
   this.hasReportedAnalytics = !0, g.ZP.trackWithMetadata(O.rMx.DM_LIST_VIEWED, {
     ...u,
@@ -366,14 +366,14 @@ super(...e), j(this, 'state', {
   } = e, {
     showDMHeader: n
   } = this.props;
-  return 0 !== t && n ? (0, a.jsxs)(M.Z, {
+  return 0 !== t && n ? (0, a.jsxs)(N.Z, {
     className: P.privateChannelsHeaderContainer,
     children: [
       (0, a.jsx)('span', {
         className: P.headerText,
         children: y.Z.Messages.DIRECT_MESSAGES
       }),
-      (0, a.jsx)(N.Z, {
+      (0, a.jsx)(S.Z, {
         tooltip: y.Z.Messages.CREATE_DM,
         tooltipPosition: 'top',
         popoutAlign: 'left',
@@ -400,25 +400,25 @@ version: t,
 theme: n,
 children: i,
 showDMHeader: l
-  } = e, r = s.Children.count(i), o = T.Z.getMutablePrivateChannels(), c = (0, S.k1)(o), p = (0, h.Wu)([
-A.Z,
-x.Z,
-v.Z
+  } = e, r = s.Children.count(i), o = A.Z.getMutablePrivateChannels(), c = (0, Z.k1)(o), p = (0, h.Wu)([
+M.Z,
+v.Z,
+T.Z
   ], () => {
-let e = A.Z.getPrivateChannelIds(),
-  t = (0, S.tU)(e, [
-    x.Z,
-    v.Z
+let e = M.Z.getPrivateChannelIds(),
+  t = (0, Z.tU)(e, [
+    v.Z,
+    T.Z
   ]);
 return (0, I.Ce)(t);
   }, []), _ = (0, h.cj)([
 m.Z,
-Z.Z,
-T.Z
+L.Z,
+A.Z
   ], () => ({
-theme: Z.Z.darkSidebar ? O.BRd.DARK : n,
+theme: L.Z.darkSidebar ? O.BRd.DARK : n,
 keyboardModeEnabled: m.Z.keyboardModeEnabled,
-version: null != t ? ''.concat(t, ':').concat(T.Z.getPrivateChannelsVersion()) : T.Z.getPrivateChannelsVersion()
+version: null != t ? ''.concat(t, ':').concat(A.Z.getPrivateChannelsVersion()) : A.Z.getPrivateChannelsVersion()
   })), f = s.useRef(null), g = s.useCallback(e => {
 let t = f.current,
   n = document.querySelector(e);
@@ -449,7 +449,7 @@ t.scrollToBottom({
     requestAnimationFrame(() => setTimeout(e, 100));
   }
 });
-  }), []), N = (0, b.Dt)(), L = (0, d.ZP)({
+  }), []), N = (0, x.Dt)(), S = (0, d.ZP)({
 id: 'private-channels-'.concat(N),
 isEnabled: _.keyboardModeEnabled,
 scrollToStart: C,
@@ -458,7 +458,7 @@ defaultFocused: (r + (l ? 1 : 0)).toString(),
 setFocus: g
   });
   return (0, a.jsx)(u.bG, {
-navigator: L,
+navigator: S,
 children: (0, a.jsx)(U, {
   channels: c,
   privateChannelIds: p,

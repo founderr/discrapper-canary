@@ -22,12 +22,12 @@ var i = n(735250),
   u = n(211739),
   d = n(239091),
   h = n(146773),
-  p = n(680089),
-  _ = n(430824),
-  f = n(496675),
-  m = n(9156),
-  g = n(514342),
-  C = n(151827),
+  p = n(82295),
+  _ = n(111028),
+  f = n(680089),
+  m = n(430824),
+  g = n(496675),
+  C = n(9156),
   I = n(203818),
   E = n(438144),
   N = n(981631),
@@ -48,9 +48,9 @@ let Z = l.memo(function(e) {
   hideIcon: L,
   children: A
 } = e,
-b = (0, o.e7)([m.ZP], () => m.ZP.isChannelMuted(r.getGuildId(), r.id)),
-M = (0, o.e7)([p.Z], () => p.Z.isCollapsed(r.id)),
-R = (0, o.e7)([f.Z], () => f.Z.can(N.Plq.MANAGE_CHANNELS, r));
+b = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
+M = (0, o.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
+R = (0, o.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_CHANNELS, r));
   t = null != T ? Z > T ? S.containerDragAfter : S.containerDragBefore : S.containerDefault;
   let O = l.useCallback(() => {
   M ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
@@ -60,7 +60,7 @@ R = (0, o.e7)([f.Z], () => f.Z.can(N.Plq.MANAGE_CHANNELS, r));
 ]),
 y = l.useCallback(e => {
   if ('null' !== r.id) {
-    let t = _.Z.getGuild(r.getGuildId());
+    let t = m.Z.getGuild(r.getGuildId());
     null != t && (0, d.jW)(e, async () => {
       let {
         default: e
@@ -137,9 +137,9 @@ k = (0, i.jsxs)('li', {
                 color: 'currentColor',
                 className: S.icon
               }),
-              (0, i.jsx)(C.Z, {
+              (0, i.jsx)(p.Z, {
                 className: S.name,
-                children: (0, i.jsx)(g.Z, {
+                children: (0, i.jsx)(_.Z, {
                   children: r.name
                 })
               })
@@ -203,9 +203,9 @@ return (0, i.jsx)('li', {
     children: [
       (0, i.jsx)('div', {
         className: S.mainContent,
-        children: (0, i.jsx)(C.Z, {
+        children: (0, i.jsx)(p.Z, {
           className: S.name,
-          children: (0, i.jsx)(g.Z, {
+          children: (0, i.jsx)(_.Z, {
             children: t
           })
         })
@@ -275,9 +275,9 @@ return l || null == n || n.record.type === N.d4z.GUILD_CATEGORY ? l ? (0, i.jsx)
   className: a()(S.containerDefault),
   children: (0, i.jsx)('div', {
     className: a()(S.iconVisibility, S.wrapperStatic),
-    children: (0, i.jsx)(C.Z, {
+    children: (0, i.jsx)(p.Z, {
       className: S.name,
-      children: (0, i.jsx)(g.Z, {
+      children: (0, i.jsx)(_.Z, {
         children: x.Z.Messages.VOICE_CHANNELS_CATEGORY_HEADER
       })
     })
@@ -296,9 +296,9 @@ return (0, i.jsx)('li', {
   className: a()(S.containerDefault),
   children: (0, i.jsx)('div', {
     className: a()(S.iconVisibility, S.wrapperStatic),
-    children: (0, i.jsx)(C.Z, {
+    children: (0, i.jsx)(p.Z, {
       className: S.name,
-      children: (0, i.jsx)(g.Z, {
+      children: (0, i.jsx)(_.Z, {
         children: t.name
       })
     })
