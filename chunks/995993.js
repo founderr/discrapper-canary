@@ -1,6 +1,6 @@
 n.d(t, {
   m: function() {
-return v;
+return Z;
   }
 });
 var i = n(735250),
@@ -25,11 +25,11 @@ var i = n(735250),
   x = n(689938),
   S = n(676656);
 
-function v(e) {
+function Z(e) {
   let {
 guild: t,
-selected: v
-  } = e, Z = (0, h.Z)(t), T = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX), L = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter(e => p.Z.shouldIndicateNewChannel(t.id, e))), A = (0, r.e7)([f.ZP], () => f.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)), b = L.length > g.Cb, M = (0, r.e7)([
+selected: Z
+  } = e, v = (0, h.Z)(t), T = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX), L = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter(e => p.Z.shouldIndicateNewChannel(t.id, e))), A = (0, r.e7)([f.ZP], () => f.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)), b = L.length > g.Cb, M = (0, r.e7)([
 d.Z,
 f.ZP
   ], () => {
@@ -40,10 +40,10 @@ if (null == n)
 let i = m.default.extractTimestamp(n);
 return null != e && e > i;
   }), R = l.useCallback(() => {
-(0, _.uL)(I.Z5c.CHANNEL(t.id, Z ? E.oC.CUSTOMIZE_COMMUNITY : E.oC.CHANNEL_BROWSER));
+(0, _.uL)(I.Z5c.CHANNEL(t.id, v ? E.oC.CUSTOMIZE_COMMUNITY : E.oC.CHANNEL_BROWSER));
   }, [
 t.id,
-Z
+v
   ]), O = l.useCallback(e => {
 (0, c.jW)(e, async () => {
   let {
@@ -55,7 +55,7 @@ Z
   });
 });
   }, [t]), y = null;
-  return (!T || A || b) && !v && !M && (y = (0, i.jsx)(o.TextBadge, {
+  return (!T || A || b) && !Z && !M && (y = (0, i.jsx)(o.TextBadge, {
 color: s.Z.colors.BADGE_BRAND_BG.css,
 text: x.Z.Messages.NEW,
 className: S.newChannel
@@ -66,8 +66,8 @@ renderIcon: e => (0, i.jsx)(o.ChannelListMagnifyingGlassIcon, {
   color: 'currentColor',
   className: e
 }),
-text: Z ? x.Z.Messages.CHANNELS_AND_ROLES : x.Z.Messages.CHANNEL_BROWSER_TITLE,
-selected: v,
+text: v ? x.Z.Messages.CHANNELS_AND_ROLES : x.Z.Messages.CHANNEL_BROWSER_TITLE,
+selected: Z,
 onClick: R,
 onContextMenu: O,
 trailing: y

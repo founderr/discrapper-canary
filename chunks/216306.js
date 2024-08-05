@@ -71,13 +71,13 @@ T
 
 function Z(e) {
   let _ = e.getSections();
-  if (_[D.zm] > 0)
-switch (e.getCommunitySection().getRow(0)) {
-  case o.f.GUILD_HOME:
+  if (_[D.wZ] > 0)
+switch (e.getGuildActionSection().getRow(0)) {
+  case o.z.GUILD_HOME:
     return u.oC.GUILD_HOME;
-  case o.f.GUILD_ROLE_SUBSCRIPTIONS:
+  case o.z.GUILD_ROLE_SUBSCRIPTIONS:
     return u.oC.ROLE_SUBSCRIPTIONS;
-  case o.f.GUILD_MEMBER_APPLICATIONS:
+  case o.z.GUILD_MEMBER_APPLICATIONS:
     return u.oC.MEMBER_APPLICATIONS;
 }
   for (let s = D.wd; s < e.voiceChannelsSectionNumber; s++)
