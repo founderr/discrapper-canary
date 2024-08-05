@@ -211,6 +211,7 @@ children: (0, r.jsx)(y.Z, {
               (0, r.jsx)(L.Z, {
                 display: 'live',
                 user: t,
+                onClose: F,
                 onRequestOpen: n
               })
             ]

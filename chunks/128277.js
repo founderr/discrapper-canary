@@ -127,6 +127,7 @@ children: (0, r.jsx)(g.Z, {
             display: 'live',
             user: t,
             activity: a,
+            onClose: P,
             onRequestOpen: o
           })
         }),

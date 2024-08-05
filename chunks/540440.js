@@ -15,20 +15,21 @@ var r = n(735250),
 
 function _(e) {
   let {
-entry: t,
-user: n,
-isRecent: _ = !1
-  } = e, E = (0, s.e7)([c.default], () => c.default.getCurrentUser()), f = n.id === (null == E ? void 0 : E.id), [h, p] = i.useState(!1);
-  if (!f || !_ || null == t)
+user: t,
+entry: n,
+display: _,
+onClose: E
+  } = e, f = (0, s.e7)([c.default], () => c.default.getCurrentUser()), h = t.id === (null == f ? void 0 : f.id), [p, m] = i.useState(!1);
+  if (!h || 'live' === _ || null == n)
 return null;
-  let m = async () => {
-p(!0), await (0, l.CV)(t, n.id), p(!1);
-  }, I = (0, a.EQ)(t).when(u.dX, () => d.Z.Messages.USER_ACTIVITY_CLEAR_GAME_HISTORY).when(u.r5, () => d.Z.Messages.USER_ACTIVITY_CLEAR_WATCH_HISTORY).when(u.kx, () => d.Z.Messages.USER_ACTIVITY_CLEAR_LISTENING_HISTORY).otherwise(() => null);
+  let I = async () => {
+m(!0), await (0, l.CV)(n, t.id), m(!1), null == E || E();
+  }, T = (0, a.EQ)(n).when(u.dX, () => d.Z.Messages.USER_ACTIVITY_CLEAR_GAME_HISTORY).when(u.r5, () => d.Z.Messages.USER_ACTIVITY_CLEAR_WATCH_HISTORY).when(u.kx, () => d.Z.Messages.USER_ACTIVITY_CLEAR_LISTENING_HISTORY).otherwise(() => null);
   return (0, r.jsx)(o.MenuItem, {
-disabled: h,
+disabled: p,
 id: 'delete-entry-history',
-label: I,
-action: m,
+label: T,
+action: I,
 color: 'danger'
   });
 }

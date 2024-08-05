@@ -282,6 +282,7 @@ children: (0, r.jsx)(M.Z, {
             display: 'live',
             user: n,
             activity: F,
+            onClose: W,
             onRequestOpen: t
           })
         }),

@@ -303,33 +303,34 @@ children: (0, r.jsx)(O.Z, {
   onClose: a,
   children: e => {
     let {
-      onAutoDismiss: a
-    } = e, o = e => (0, r.jsx)(A.Z, {
+      onAutoDismiss: o
+    } = e, l = e => (0, r.jsx)(A.Z, {
       text: d === C.y0.FULL_SIZE ? null : e,
       tags: (0, r.jsx)(R.Z, {
         display: 'recent',
         entry: n,
         user: t,
-        onRequestOpen: a
+        onClose: a,
+        onRequestOpen: o
       })
     });
     return (0, c.dX)(n) ? (0, r.jsx)(b, {
-      header: o(y.Z.Messages.USER_ACTIVITY_RECENTLY_PLAYED),
+      header: l(y.Z.Messages.USER_ACTIVITY_RECENTLY_PLAYED),
       user: t,
       entry: n,
       className: i
     }) : (0, c.r5)(n) ? (0, r.jsx)(M, {
-      header: o(y.Z.Messages.USER_ACTIVITY_RECENTLY_WATCHED),
+      header: l(y.Z.Messages.USER_ACTIVITY_RECENTLY_WATCHED),
       user: t,
       entry: n,
       className: i
     }) : (0, c.kx)(n) ? (0, r.jsx)(P, {
-      header: o(y.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
+      header: l(y.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
       user: t,
       entry: n,
       className: i
     }) : n.content_type === s.s.TOP_ARTIST ? (0, r.jsx)(U, {
-      header: o(y.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
+      header: l(y.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
       user: t,
       entry: n,
       className: i
