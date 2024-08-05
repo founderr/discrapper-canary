@@ -28,29 +28,29 @@ var i = n(735250),
   T = n(752305),
   N = n(974251),
   O = n(893718),
-  A = n(552062),
-  y = n(957730),
-  R = n(400023),
-  M = n(623292),
-  b = n(807092),
-  L = n(592125),
-  P = n(703558),
-  D = n(731290),
-  w = n(430824),
-  j = n(375954),
-  k = n(944486),
-  V = n(914010),
-  B = n(594174),
-  U = n(556296),
-  z = n(237997),
-  G = n(278297),
-  W = n(547881),
-  Y = n(585483),
-  F = n(838440),
-  H = n(13140),
-  K = n(519591),
-  X = n(906037),
-  Q = n(786906),
+  A = n(249458),
+  y = n(552062),
+  R = n(957730),
+  M = n(400023),
+  b = n(623292),
+  L = n(807092),
+  P = n(592125),
+  D = n(703558),
+  w = n(731290),
+  j = n(430824),
+  k = n(375954),
+  V = n(944486),
+  B = n(914010),
+  U = n(594174),
+  z = n(556296),
+  G = n(237997),
+  W = n(585483),
+  Y = n(838440),
+  F = n(13140),
+  H = n(519591),
+  K = n(906037),
+  X = n(786906),
+  Q = n(518084),
   J = n(987650),
   q = n(981631),
   $ = n(689938),
@@ -72,7 +72,7 @@ e.channel.id !== this.props.channel.id && this.draftDidChange(this.props), (this
 });
   }
   componentWillUnmount() {
-P.Z.removeChangeListener(this.draftDidChange), Y.S.unsubscribe(q.CkL.TEXTAREA_FOCUS, this.focusInput), Y.S.unsubscribe(q.CkL.TEXTAREA_BLUR, this.blurInput);
+D.Z.removeChangeListener(this.draftDidChange), W.S.unsubscribe(q.CkL.TEXTAREA_FOCUS, this.focusInput), W.S.unsubscribe(q.CkL.TEXTAREA_BLUR, this.blurInput);
   }
   render() {
 let {
@@ -137,14 +137,14 @@ super(e), t = this, et(this, 'draftDidChange', function() {
     {
       textValue: n
     } = t.state,
-    i = P.Z.getDraft(e.channel.id, P.d.ChannelMessage);
+    i = D.Z.getDraft(e.channel.id, D.d.ChannelMessage);
   n !== i && '' === i && t.setState((0, T.eK)(i));
 }), et(this, 'handleTextareaKeyDown', e => {
   if (e.which === q.yXg.ARROW_UP && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey && 0 === this.state.textValue.length) {
     e.preventDefault();
     let {
       channel: t
-    } = this.props, n = j.Z.getLastEditableMessage(t.id);
+    } = this.props, n = k.Z.getLastEditableMessage(t.id);
     null != n && p.Z.startEditMessage(t.id, n.id, n.content);
   }
 }), et(this, 'handleTextareaChange', (e, t, n) => {
@@ -153,7 +153,7 @@ super(e), t = this, et(this, 'draftDidChange', function() {
       id: i
     }
   } = this.props;
-  h.Z.changeDraft(i, this.state.textValue, P.d.ChannelMessage), '' !== t ? _.Z.startTyping(i) : _.Z.stopTyping(i), this.setState({
+  h.Z.changeDraft(i, this.state.textValue, D.d.ChannelMessage), '' !== t ? _.Z.startTyping(i) : _.Z.stopTyping(i), this.setState({
     textValue: t,
     richValue: n
   });
@@ -168,7 +168,7 @@ super(e), t = this, et(this, 'draftDidChange', function() {
   return 0 === t.length ? Promise.resolve({
     shouldClear: !1,
     shouldRefocus: !0
-  }) : (0, F.v)({
+  }) : (0, Y.v)({
     openWarningPopout: e => this.setState({
       contentWarningProps: e
     }),
@@ -181,7 +181,7 @@ super(e), t = this, et(this, 'draftDidChange', function() {
       failureReason: o
     } = e;
     if (!a)
-      return o === q.zYc.SLOWMODE_COOLDOWN ? (Y.S.dispatch(q.CkL.EMPHASIZE_SLOWMODE_COOLDOWN), {
+      return o === q.zYc.SLOWMODE_COOLDOWN ? (W.S.dispatch(q.CkL.EMPHASIZE_SLOWMODE_COOLDOWN), {
         shouldClear: !1,
         shouldRefocus: !0
       }) : {
@@ -189,7 +189,7 @@ super(e), t = this, et(this, 'draftDidChange', function() {
         shouldRefocus: !1
       };
     let r = p.Z.getSendMessageOptionsForReply(i);
-    return (p.Z.sendMessage(n.id, y.ZP.parse(n, t), !0, r), this.setState((0, T.H2)()), (0, M.A6)(n.id), s) ? (f.Z.deactivateAllRegions(), {
+    return (p.Z.sendMessage(n.id, R.ZP.parse(n, t), !0, r), this.setState((0, T.H2)()), (0, b.A6)(n.id), s) ? (f.Z.deactivateAllRegions(), {
       shouldClear: !1,
       shouldRefocus: !1
     }) : {
@@ -208,17 +208,17 @@ super(e), t = this, et(this, 'draftDidChange', function() {
 }), et(this, 'renderAttachButton', (e, t) => (0, i.jsx)(N.Z, {
   className: t,
   channel: this.props.channel,
-  draftType: P.d.ChannelMessage,
+  draftType: D.d.ChannelMessage,
   editorTextContent: this.state.textValue,
   setValue: e => this.handleTextareaChange(null, e, (0, T.JM)(e)),
   canOnlyUseTextCommands: e
-})), P.Z.addChangeListener(this.draftDidChange);
-let n = P.Z.getDraft(e.channel.id, P.d.ChannelMessage);
+})), D.Z.addChangeListener(this.draftDidChange);
+let n = D.Z.getDraft(e.channel.id, D.d.ChannelMessage);
 this.state = {
   ...(0, T.eK)(n),
   focused: !1,
   contentWarningProps: null
-}, Y.S.subscribe(q.CkL.TEXTAREA_FOCUS, this.focusInput), Y.S.subscribe(q.CkL.TEXTAREA_BLUR, this.blurInput);
+}, W.S.subscribe(q.CkL.TEXTAREA_FOCUS, this.focusInput), W.S.subscribe(q.CkL.TEXTAREA_BLUR, this.blurInput);
   }
 }
 class es extends s.PureComponent {
@@ -227,7 +227,7 @@ let {
   channel: t,
   activated: n
 } = this.props;
-if ((0, X.CR)(e, this.props, this.shouldDisplay), null != t)
+if ((0, K.CR)(e, this.props, this.shouldDisplay), null != t)
   n && !e.activated && f.Z.track(q.rMx.OVERLAY_UNLOCKED, {
     channel_id: t.id,
     channel_type: t.type,
@@ -235,7 +235,7 @@ if ((0, X.CR)(e, this.props, this.shouldDisplay), null != t)
   });
   }
   componentDidMount() {
-(0, X.m3)(this.props, this.shouldDisplay());
+(0, K.m3)(this.props, this.shouldDisplay());
   }
   getOpacity() {
 let e;
@@ -245,7 +245,7 @@ let {
   opacity: i,
   isPreviewingInGame: s
 } = this.props;
-return e = t && !n || s ? i / 100 : n || !t ? Math.min(1, (i + 25) / 100) : W.wB;
+return e = t && !n || s ? i / 100 : n || !t ? Math.min(1, (i + 25) / 100) : Q.wB;
   }
   renderContent() {
 let e;
@@ -269,14 +269,14 @@ let _ = l || h,
   Z = !_ || c;
 return e = m && null != r ? (0, i.jsx)(E.Z, {
   guild: r
-}) : (0, i.jsx)(R.Z, {
+}) : (0, i.jsx)(M.Z, {
   channel: t,
   className: ee.messages,
   forceCompact: u,
   showNewMessagesBar: !_,
   scrollerClassName: u ? ee.scroller : void 0,
   showingQuarantineBanner: !1
-}, t.id), (0, i.jsx)(G.G.Provider, {
+}, t.id), (0, i.jsx)(A.G.Provider, {
   value: {
     disableInteractions: u && l && !c,
     disableAnimations: u && _ && !c
@@ -287,7 +287,7 @@ return e = m && null != r ? (0, i.jsx)(E.Z, {
         channel: t,
         guild: r
       }),
-      (0, i.jsx)(W.ZP.Background, {
+      (0, i.jsx)(Q.ZP.Background, {
         opacityOverride: l || h ? null : en,
         children: (0, i.jsx)('div', {
           className: o()(ee.messagesContainer, {
@@ -298,7 +298,7 @@ return e = m && null != r ? (0, i.jsx)(E.Z, {
         })
       }),
       m ? null : (0, i.jsx)('div', {
-        children: Z ? (0, i.jsx)(W.ZP.Background, {
+        children: Z ? (0, i.jsx)(Q.ZP.Background, {
           opacityOverride: l || h ? null : en,
           children: (0, i.jsxs)('div', {
             className: ee.footerContent,
@@ -320,7 +320,7 @@ return e = m && null != r ? (0, i.jsx)(E.Z, {
           })
         }) : (0, i.jsx)('div', {
           className: ee.activateContainer,
-          children: (0, i.jsx)(W.ZP.Background, {
+          children: (0, i.jsx)(Q.ZP.Background, {
             opacityOverride: J.wF.LOWER,
             children: (0, i.jsx)('div', {
               className: o()(ee.activateKeybind, ee.__invalid_mediumBackgroundOpacity),
@@ -351,8 +351,8 @@ let c = t && !s || a,
   d = n && (c || s),
   u = n && s,
   h = n && c && !s,
-  p = (0, K.Z)(r);
-return (0, i.jsx)(W.ZP, {
+  p = (0, H.Z)(r);
+return (0, i.jsx)(Q.ZP, {
   className: o()(p, {
     [ee.widgetWrapper]: !n,
     [ee.widgetWrapperPinned]: n,
@@ -389,7 +389,7 @@ if (null == t || !this.shouldDisplay())
   return null;
 let r = (0, i.jsxs)(s.Fragment, {
   children: [
-    (0, i.jsx)(Q.Z, {
+    (0, i.jsx)(X.Z, {
       draggableClassName: ee.draggableStartArea,
       className: ee.headerDefault,
       channel: t,
@@ -446,12 +446,12 @@ super(...e), et(this, 'handlePin', () => {
   let {
     dragStart: t
   } = this.props;
-  t(A.B.MOVE, e.clientX, e.clientY);
+  t(y.B.MOVE, e.clientX, e.clientY);
 }), et(this, 'resizeDragStart', e => {
   let {
     dragStart: t
   } = this.props;
-  t(A.B.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
+  t(y.B.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
 });
   }
 }
@@ -460,11 +460,11 @@ function ea(e) {
   let {
 contained: t = !1,
 ...n
-  } = e, s = (0, c.e7)([V.Z], () => V.Z.getGuildId()), a = (0, c.e7)([k.Z], () => k.Z.getChannelId(s)), o = (0, c.e7)([L.Z], () => L.Z.getChannel(a)), r = (0, c.e7)([U.Z], () => U.Z.getOverlayChatKeybind()), l = null != r ? (0, H.BB)(r.shortcut, !0) : ']', [d, u, h] = (0, c.Wu)([z.Z], () => [
-z.Z.getTextWidgetOpacity(),
-z.Z.getActiveRegions(),
-!t && z.Z.isPreviewingInGame()
-  ]), p = (0, c.e7)([w.Z], () => w.Z.getGuild(s)), f = (0, c.e7)([D.Z], () => null != s && D.Z.didAgree(s)), _ = null != o && o.isPrivate() ? o.getRecipientId() : null, g = (0, c.e7)([b.Z], () => null != a ? b.Z.getPendingReply(a) : void 0), m = (0, c.e7)([B.default], () => null != _ ? B.default.getUser(_) : null), {
+  } = e, s = (0, c.e7)([B.Z], () => B.Z.getGuildId()), a = (0, c.e7)([V.Z], () => V.Z.getChannelId(s)), o = (0, c.e7)([P.Z], () => P.Z.getChannel(a)), r = (0, c.e7)([z.Z], () => z.Z.getOverlayChatKeybind()), l = null != r ? (0, F.BB)(r.shortcut, !0) : ']', [d, u, h] = (0, c.Wu)([G.Z], () => [
+G.Z.getTextWidgetOpacity(),
+G.Z.getActiveRegions(),
+!t && G.Z.isPreviewingInGame()
+  ]), p = (0, c.e7)([j.Z], () => j.Z.getGuild(s)), f = (0, c.e7)([w.Z], () => null != s && w.Z.didAgree(s)), _ = null != o && o.isPrivate() ? o.getRecipientId() : null, g = (0, c.e7)([L.Z], () => null != a ? L.Z.getPendingReply(a) : void 0), m = (0, c.e7)([U.default], () => null != _ ? U.default.getUser(_) : null), {
 placeholder: E
   } = (0, Z.Z)(o);
   return null != o && null != p && q.TPd.GUILD_THREADS_ONLY.has(o.type) ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(es, {

@@ -17,9 +17,9 @@ var s = n(735250),
   E = n(481060),
   T = n(852860),
   m = n(393238),
-  N = n(345861),
-  S = n(208567),
-  h = n(153124),
+  N = n(313201),
+  S = n(345861),
+  h = n(208567),
   g = n(73346),
   C = n(624138),
   x = n(584825),
@@ -115,7 +115,7 @@ updateSubscriptionsSettings: w
 imageCTA: k,
 imageAriaLabel: H,
 setFilename: V
-  } = (0, R.Z)(null == l ? void 0 : l.cover_image_asset), Y = (0, h.Dt)(), W = (0, h.Dt)(), z = (0, h.Dt)();
+  } = (0, R.Z)(null == l ? void 0 : l.cover_image_asset), Y = (0, N.Dt)(), W = (0, N.Dt)(), z = (0, N.Dt)();
 
   function K(e, t) {
 o()(null != e, 'Null value not allowed'), null != t && V(t.name), b(e);
@@ -229,7 +229,7 @@ children: [
         disabled: Q,
         children: M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_DESCRIPTION
       }),
-      (0, s.jsx)(S.Z, {
+      (0, s.jsx)(h.Z, {
         image: j,
         hint: k,
         showIcon: !0,
@@ -246,7 +246,7 @@ children: [
       (0, s.jsx)(E.Spacer, {
         size: 16
       }),
-      (0, s.jsx)(N.Z, {
+      (0, s.jsx)(S.Z, {
         onChange: K,
         buttonCTA: k,
         'aria-label': H,

@@ -330,9 +330,9 @@ return (0, s.jsx)(u, {});
 sourceInviteCode: i,
 joinSourceType: R,
 integrationType: C
-  } = L, d = null != R ? c[R] : null, P = null !== (E = null == d ? void 0 : d.hasTooltip) && void 0 !== E && E;
+  } = L, d = null != R ? c[R] : null, f = null !== (E = null == d ? void 0 : d.hasTooltip) && void 0 !== E && E;
   return (R === M.gq.INVITE || R === M.gq.VANITY_URL || R === M.gq.MANUAL_MEMBER_VERIFICATION && null != i) && O ? (0, s.jsx)(o, {}) : (0, s.jsx)(g, {
-hasTooltip: P && !t,
+hasTooltip: f && !t,
 inviterUser: null != U ? U : null,
 guildId: n,
 joinSourceType: R,

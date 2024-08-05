@@ -8,16 +8,16 @@ var o = l(735250),
   d = l(410575),
   u = l(933557),
   c = l(471445),
-  m = l(318766),
-  _ = l(907040),
-  C = l(273039),
-  E = l(339085),
-  h = l(592125),
-  j = l(984933),
-  x = l(699516),
-  N = l(594174),
-  I = l(285952),
-  v = l(153124),
+  m = l(600164),
+  _ = l(313201),
+  C = l(318766),
+  E = l(907040),
+  h = l(273039),
+  j = l(339085),
+  x = l(592125),
+  N = l(984933),
+  I = l(699516),
+  v = l(594174),
   S = l(700785),
   L = l(995532),
   p = l(514698),
@@ -34,10 +34,10 @@ welcomeChannel: P,
 transitionState: O,
 onSave: k,
 onClose: D
-  } = e, A = (0, v.Dt)(), [G, U] = t.useState(null != P ? P.channel_id : null), [b, W] = t.useState(null != P ? P.description : ''), [H, R] = t.useState(null != P ? {
+  } = e, A = (0, _.Dt)(), [G, U] = t.useState(null != P ? P.channel_id : null), [b, W] = t.useState(null != P ? P.description : ''), [H, R] = t.useState(null != P ? {
 id: P.emoji_id,
 name: P.emoji_name
-  } : null), [K, F] = t.useState(!1), y = (0, i.e7)([E.Z], () => (null == H ? void 0 : H.id) != null ? E.Z.getUsableCustomEmojiById(H.id) : null), z = (0, i.e7)([j.ZP], () => j.ZP.getChannels(B)[j.sH], [B]), w = (0, i.e7)([L.Z], () => L.Z.get(B)), J = null !== (l = null == w ? void 0 : null === (n = w.welcome_channels) || void 0 === n ? void 0 : n.map(e => e.channel_id)) && void 0 !== l ? l : [], [V, Y] = t.useState(!1);
+  } : null), [K, F] = t.useState(!1), y = (0, i.e7)([j.Z], () => (null == H ? void 0 : H.id) != null ? j.Z.getUsableCustomEmojiById(H.id) : null), z = (0, i.e7)([N.ZP], () => N.ZP.getChannels(B)[N.sH], [B]), w = (0, i.e7)([L.Z], () => L.Z.get(B)), J = null !== (l = null == w ? void 0 : null === (n = w.welcome_channels) || void 0 === n ? void 0 : n.map(e => e.channel_id)) && void 0 !== l ? l : [], [V, Y] = t.useState(!1);
   t.useEffect(() => {
 !s.K.get(T.S) && setTimeout(() => Y(!0), 300);
   }, []);
@@ -48,7 +48,7 @@ let {
 } = e;
 S.Uu(f.Plq.VIEW_CHANNEL, n) && ((null == P ? void 0 : P.channel_id) === n.id || !J.includes(n.id)) && q.push({
   value: n.id,
-  label: (0, u.F6)(n, N.default, x.Z)
+  label: (0, u.F6)(n, v.default, I.Z)
 });
   });
   let Q = () => {
@@ -103,7 +103,7 @@ children: (0, o.jsxs)(a.ModalRoot, {
                 if (null === e)
                   return null;
                 let l = e.value,
-                  t = h.Z.getChannel(l),
+                  t = x.Z.getChannel(l),
                   i = null !== (n = (0, c.KS)(t)) && void 0 !== n ? n : a.TextIcon;
                 return (0, o.jsx)(i, {
                   className: Z.channelTitleIcon,
@@ -156,15 +156,15 @@ children: (0, o.jsxs)(a.ModalRoot, {
                   })
                 ]
               }),
-              (0, o.jsx)(C.Z, {
+              (0, o.jsx)(h.Z, {
                 hasSetEmoji: null != H,
                 onClick: $,
                 children: (0, o.jsx)(a.Popout, {
                   renderPopout: e => {
                     let {
                       closePopout: n
-                    } = e, l = j.ZP.getDefaultChannel(B);
-                    return (0, o.jsx)(_.Z, {
+                    } = e, l = N.ZP.getDefaultChannel(B);
+                    return (0, o.jsx)(E.Z, {
                       guildId: B,
                       closePopout: n,
                       onSelectEmoji: (e, l) => {
@@ -188,7 +188,7 @@ children: (0, o.jsxs)(a.ModalRoot, {
                       position: 'left',
                       text: V ? M.Z.Messages.WELCOME_CHANNEL_EMOJI_PICKER_TOOLTIP : null,
                       forceOpen: V,
-                      children: (0, o.jsx)(m.Z, {
+                      children: (0, o.jsx)(C.Z, {
                         ...e,
                         onClick: n => {
                           var l;
@@ -215,11 +215,11 @@ children: (0, o.jsxs)(a.ModalRoot, {
     }),
     (0, o.jsxs)(a.ModalFooter, {
       className: Z.footer,
-      justify: I.Z.Justify.BETWEEN,
+      justify: m.Z.Justify.BETWEEN,
       children: [
-        (0, o.jsxs)(I.Z, {
+        (0, o.jsxs)(m.Z, {
           grow: 0,
-          align: I.Z.Align.CENTER,
+          align: m.Z.Align.CENTER,
           children: [
             (0, o.jsx)(a.Button, {
               onClick: Q,

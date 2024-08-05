@@ -18,16 +18,16 @@ var n = s(735250),
   I = s(607070),
   S = s(627845),
   N = s(514361),
-  C = s(605236),
-  m = s(786761),
-  A = s(3148),
-  g = s(739566),
-  h = s(753206),
-  O = s(311476),
-  p = s(921801),
-  R = s(594174),
-  x = s(285952),
-  M = s(153124),
+  C = s(600164),
+  m = s(313201),
+  A = s(605236),
+  g = s(786761),
+  h = s(3148),
+  O = s(739566),
+  p = s(753206),
+  R = s(311476),
+  x = s(921801),
+  M = s(594174),
   f = s(358085),
   D = s(210887),
   P = s(740492),
@@ -54,47 +54,47 @@ let Y = {
 COZY: 'cozy',
 COMPACT: 'compact'
   },
-  w = (0, M.hQ)(),
-  k = (0, M.hQ)(),
-  H = (0, M.hQ)(),
+  w = (0, m.hQ)(),
+  k = (0, m.hQ)(),
+  H = (0, m.hQ)(),
   W = '1337',
   K = e => {
 let t = 0;
 return [
-  (0, m.e5)({
-    ...(0, A.ZP)({
+  (0, g.e5)({
+    ...(0, h.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
     }),
     state: j.yb.SENT,
     id: ''.concat(t++)
   }),
-  (0, m.e5)({
-    ...(0, A.ZP)({
+  (0, g.e5)({
+    ...(0, h.ZP)({
       channelId: W,
       content: (0, c.wj)(e) ? G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
     }),
     state: j.yb.SENT,
     id: ''.concat(t++)
   }),
-  (0, m.e5)({
-    ...(0, A.ZP)({
+  (0, g.e5)({
+    ...(0, h.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
     }),
     state: j.yb.SENT,
     id: ''.concat(t++)
   }),
-  (0, m.e5)({
-    ...(0, A.ZP)({
+  (0, g.e5)({
+    ...(0, h.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
     }),
     state: j.yb.SENT,
     id: ''.concat(t++)
   }),
-  (0, m.e5)({
-    ...(0, A.ZP)({
+  (0, g.e5)({
+    ...(0, h.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
     }),
@@ -107,7 +107,7 @@ return [
 let e = (0, o.e7)([N.Z], () => N.Z.isPreview),
   {
     enabled: t
-  } = O.Z.useExperiment({
+  } = R.Z.useExperiment({
     location: 'GradientSelectorsTitle'
   }, {
     autoTrackExposure: !1,
@@ -164,8 +164,8 @@ return (0, n.jsxs)(d.FormItem, {
       className: y.marginBottom8,
       children: G.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
     }),
-    (0, n.jsx)(x.Z, {
-      align: x.Z.Align.CENTER,
+    (0, n.jsx)(C.Z, {
+      align: C.Z.Align.CENTER,
       children: (0, n.jsx)(d.Slider, {
         className: r()(y.marginTop20, y.marginBottom4),
         initialValue: this.props.fontSize,
@@ -223,8 +223,8 @@ return (0, n.jsx)(d.FocusBlock, {
     className: r()(F.preview, y.marginBottom40, e ? F.compactPreview : void 0, 'group-spacing-'.concat(null != s ? s : e ? U.c8 : U.pq)),
     outline: !0,
     'aria-hidden': !0,
-    children: i.map((t, s) => (0, n.jsx)(h.Z, {
-      author: (0, g.ZH)(t),
+    children: i.map((t, s) => (0, n.jsx)(p.Z, {
+      author: (0, O.ZH)(t),
       message: t,
       compact: e,
       isGroupStart: s % 2 == 0,
@@ -264,7 +264,7 @@ return t ? (0, n.jsx)(d.FormItem, {
   title: (0, n.jsx)(z, {}),
   children: [
     (0, n.jsx)(b.i, {}),
-    (0, n.jsx)(p.F, {
+    (0, n.jsx)(x.F, {
       setting: v.s6.APPEARANCE_ICON,
       children: (0, n.jsx)(Z.c, {})
     }),
@@ -326,18 +326,18 @@ return (0, n.jsxs)(d.FormSection, {
   tag: d.FormTitleTags.H1,
   title: G.Z.Messages.APPEARANCE,
   children: [
-    (0, n.jsxs)(p.F, {
+    (0, n.jsxs)(x.F, {
       setting: v.s6.APPEARANCE_THEME,
       children: [
         this.renderPreview(),
         this.renderTheme()
       ]
     }),
-    (0, n.jsx)(p.F, {
+    (0, n.jsx)(x.F, {
       setting: v.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
       children: this.renderDisplayMode()
     }),
-    (0, n.jsx)(p.F, {
+    (0, n.jsx)(x.F, {
       setting: v.s6.APPEARANCE_SCALING_SPACING,
       children: this.renderScalingAndSpacing()
     }),
@@ -394,7 +394,7 @@ super(...e), V(this, 'darkMessages', K(j.BRd.DARK)), V(this, 'lightMessages', K(
   }
 }
 let X = e => {
-  !(0, C.un)(e) && (0, C.EW)(e, {
+  !(0, A.un)(e) && (0, A.EW)(e, {
 dismissAction: B.L.AUTO,
 forceTrack: !0
   });
@@ -412,7 +412,7 @@ X(l.z.CLIENT_THEMES_SETTINGS_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(l.z
 D.Z,
 P.ZP,
 I.Z,
-R.default,
+M.default,
 N.Z
   ], () => {
 var e, t;
@@ -425,7 +425,7 @@ return {
   zoom: I.Z.zoom,
   messageGroupSpacing: I.Z.messageGroupSpacing,
   displayCompactAvatars: P.ZP.displayCompactAvatars,
-  isStaff: null !== (t = null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
+  isStaff: null !== (t = null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
   gradientPreset: N.Z.gradientPreset
 };
   });

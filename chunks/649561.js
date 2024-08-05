@@ -15,12 +15,12 @@ var i = n(735250),
   g = n(593481),
   m = n(703656),
   E = n(254761),
-  Z = n(547881),
-  I = n(70956),
-  S = n(960048),
-  C = n(792125),
-  v = n(145597),
-  x = n(692546),
+  Z = n(70956),
+  I = n(960048),
+  S = n(792125),
+  C = n(145597),
+  v = n(692546),
+  x = n(518084),
   T = n(987650),
   N = n(981631),
   O = n(689938),
@@ -34,11 +34,11 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let R = 10 * I.Z.Millis.SECOND;
+let R = 10 * Z.Z.Millis.SECOND;
 
 function M() {
-  let e = (0, v.QF)(),
-t = (0, v.Ht)();
+  let e = (0, C.QF)(),
+t = (0, C.Ht)();
   (0, f.lW)({
 type: N.BmY.DISPATCH,
 pid: e,
@@ -71,10 +71,10 @@ let {
 } = this.state, {
   notificationTimer: s
 } = this;
-return null == s ? null : (0, i.jsx)(x.Z, {
+return null == s ? null : (0, i.jsx)(v.Z, {
   observe: !1,
   children: (0, i.jsxs)(h.Clickable, {
-    className: o()((0, C.Q)(N.BRd.DARK), A.container),
+    className: o()((0, S.Q)(N.BRd.DARK), A.container),
     onClick: e => e.stopPropagation(),
     children: [
       (0, i.jsx)(g.ZP, {
@@ -91,13 +91,13 @@ return null == s ? null : (0, i.jsx)(x.Z, {
         onConfirmClick: this.handleReload,
         onDismissClick: this.hideNotification
       }),
-      n && null != e ? (0, i.jsxs)(Z.ZP, {
+      n && null != e ? (0, i.jsxs)(x.ZP, {
         className: A.stackTrace,
         children: [
-          (0, i.jsx)(Z.ZP.Bar, {
+          (0, i.jsx)(x.ZP.Bar, {
             children: 'Error Details'
           }),
-          (0, i.jsx)(Z.ZP.Content, {
+          (0, i.jsx)(x.ZP.Content, {
             className: A.stackTraceCode,
             children: (0, i.jsx)('code', {
               className: A.code,
@@ -158,11 +158,11 @@ this.setState({
   error: e,
   info: t
 });
-let i = (0, v.QF)(),
-  s = (0, v.Ht)();
+let i = (0, C.QF)(),
+  s = (0, C.Ht)();
 (0, f.lW)({
   type: N.BmY.DISPATCH,
-  pid: (0, v.QF)(),
+  pid: (0, C.QF)(),
   token: s,
   payloads: [{
       type: 'OVERLAY_CRASHED',
@@ -175,7 +175,7 @@ let i = (0, v.QF)(),
     }
   ]
 }), setImmediate(() => window.addEventListener('click', M));
-let a = S.Z.captureCrash(e, {
+let a = I.Z.captureCrash(e, {
   extra: t
 });
 p.Z.track(N.rMx.APP_CRASHED, {

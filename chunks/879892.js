@@ -67,13 +67,13 @@ let e;
   let {
     default: t
   } = await Promise.all([
-    n.e('15972'),
+    n.e('52249'),
     n.e('29549'),
     n.e('15685'),
     n.e('8016'),
     n.e('22646'),
     n.e('30419'),
-    n.e('67441')
+    n.e('35001')
   ]).then(n.bind(n, 760558));
   return n => {
     let {

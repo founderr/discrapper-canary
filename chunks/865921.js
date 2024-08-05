@@ -1,65 +1,65 @@
 t.d(n, {
   v: function() {
-return f;
+return h;
   }
 }), t(47120);
-var a = t(735250),
-  s = t(470079),
-  i = t(512722),
-  l = t.n(i),
-  r = t(89057),
-  o = t(987209),
-  d = t(598),
-  u = t(409813),
-  c = t(456251),
-  E = t(981631);
+var r = t(735250),
+  a = t(470079),
+  o = t(512722),
+  i = t.n(o),
+  s = t(89057),
+  l = t(987209),
+  c = t(598),
+  d = t(409813),
+  u = t(456251),
+  f = t(981631);
 
-function f(e) {
+function h(e) {
   let {
 handleStepChange: n,
 handleClose: t
   } = e, {
-blockedPayments: i,
-hasFetchedSkus: f,
-paymentSources: h,
-hasFetchedPaymentSources: m,
-application: v,
-skusById: C,
-selectedSkuId: p
-  } = (0, d.usePaymentContext)(), {
-isGift: x
-  } = (0, o.wD)(), [I, T] = s.useState(!0);
-  return (s.useEffect(() => {
-let e = null != v;
-if (!!f && !!m && !!e)
-  T(!1);
+blockedPayments: o,
+hasFetchedSkus: h,
+paymentSources: p,
+hasFetchedPaymentSources: g,
+application: b,
+skusById: x,
+selectedSkuId: m
+  } = (0, c.usePaymentContext)(), {
+isGift: _
+  } = (0, l.wD)(), [v, C] = a.useState(!0);
+  return (a.useEffect(() => {
+let e = null != b;
+if (!!h && !!g && !!e)
+  C(!1);
   }, [
-f,
-m,
-v
-  ]), s.useEffect(() => {
-if (I || i)
-  return;
-l()(null != p, 'Expected selectedSkuId');
-let e = C[p];
-if (x && (null == e ? void 0 : e.productLine) === E.POd.COLLECTIBLES) {
-  n(u.h8.GIFT_CUSTOMIZATION);
-  return;
-}
-if (0 === Object.keys(h).length) {
-  n(u.h8.ADD_PAYMENT_STEPS);
-  return;
-}
-n(u.h8.REVIEW);
-  }, [
-I,
-i,
-n,
 h,
+g,
+b
+  ]), a.useEffect(() => {
+if (v || o)
+  return;
+i()(null != m, 'Expected selectedSkuId');
+let e = x[m];
+if (_ && (null == e ? void 0 : e.productLine) === f.POd.COLLECTIBLES) {
+  n(d.h8.GIFT_CUSTOMIZATION);
+  return;
+}
+if (0 === Object.keys(p).length) {
+  n(d.h8.ADD_PAYMENT_STEPS);
+  return;
+}
+n(d.h8.REVIEW);
+  }, [
+v,
+o,
+n,
+p,
+_,
 x,
-C,
-p
-  ]), I) ? (0, a.jsx)(c.Z, {}) : i ? (0, a.jsx)(r.Vq, {
+m
+  ]), v) ? (0, r.jsx)(u.Z, {}) : o ? (0, r.jsx)(s.Vq, {
 onClose: t
   }) : null;
 }

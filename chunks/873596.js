@@ -7,10 +7,10 @@ var i = n(735250),
   l = n(470079),
   r = n(442837),
   a = n(481060),
-  s = n(19780),
-  o = n(979651),
-  c = n(362446),
-  u = n(153124),
+  s = n(313201),
+  o = n(19780),
+  c = n(979651),
+  u = n(362446),
   d = n(571826),
   h = n(441894),
   p = n(160038),
@@ -24,13 +24,13 @@ function C(e) {
 lobbyId: t,
 connectionTypeText: n,
 closePopout: l
-  } = e, a = (0, r.cj)([c.Z], () => ({
-connectionState: c.Z.getConnectionState(t),
-hostname: c.Z.getHostname(t),
-averagePing: c.Z.getAveragePing(t),
-lastPing: c.Z.getLastPing(t),
-pings: c.Z.getPings(),
-outboundLossRate: c.Z.getOutboundLossRate(t)
+  } = e, a = (0, r.cj)([u.Z], () => ({
+connectionState: u.Z.getConnectionState(t),
+hostname: u.Z.getHostname(t),
+averagePing: u.Z.getAveragePing(t),
+lastPing: u.Z.getLastPing(t),
+pings: u.Z.getPings(),
+outboundLossRate: u.Z.getOutboundLossRate(t)
   }));
   return (0, i.jsx)(p.Z, {
 ...a,
@@ -43,13 +43,13 @@ function I(e) {
   let {
 closePopout: t,
 connectionTypeText: n
-  } = e, l = (0, r.cj)([s.Z], () => ({
-connectionState: s.Z.getState(),
-hostname: s.Z.getHostname(),
-averagePing: s.Z.getAveragePing(),
-lastPing: s.Z.getLastPing(),
-outboundLossRate: s.Z.getOutboundLossRate(),
-pings: s.Z.getPings()
+  } = e, l = (0, r.cj)([o.Z], () => ({
+connectionState: o.Z.getState(),
+hostname: o.Z.getHostname(),
+averagePing: o.Z.getAveragePing(),
+lastPing: o.Z.getLastPing(),
+outboundLossRate: o.Z.getOutboundLossRate(),
+pings: o.Z.getPings()
   }));
   return (0, i.jsx)(p.Z, {
 ...l,
@@ -79,9 +79,9 @@ connectionTypeText: a
 }
 
 function N(e) {
-  let t = (0, r.e7)([o.Z], () => o.Z.hasVideo(e.channelId)),
-[n, s] = l.useState(f.tu.RTC_DEBUG_PANEL),
-c = (0, u.Dt)(),
+  let t = (0, r.e7)([c.Z], () => c.Z.hasVideo(e.channelId)),
+[n, o] = l.useState(f.tu.RTC_DEBUG_PANEL),
+u = (0, s.Dt)(),
 h = l.useMemo(() => {
   switch (n) {
     case f.tu.RTC_DEBUG_PANEL:
@@ -119,7 +119,7 @@ children: [
     selectedItem: n,
     type: 'top',
     look: 'brand',
-    onItemSelect: s,
+    onItemSelect: o,
     children: [
       (0, i.jsx)(a.TabBar.Item, {
         id: f.tu.RTC_DEBUG_PANEL,
@@ -135,7 +135,7 @@ children: [
   }),
   (0, i.jsx)(a.TabBar.Panel, {
     id: n,
-    'aria-labelledby': c,
+    'aria-labelledby': u,
     children: h
   })
 ]

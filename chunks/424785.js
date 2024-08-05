@@ -14,26 +14,26 @@ var l = n(120356),
   u = n(146773),
   d = n(888651),
   h = n(201895),
-  p = n(305325),
-  _ = n(281956),
-  f = n(66999),
-  m = n(506936),
-  g = n(359110),
-  C = n(922482),
-  I = n(431328),
-  E = n(501655),
-  N = n(427679),
-  x = n(71275),
-  S = n(201469),
-  v = n(680089),
-  Z = n(592125),
-  T = n(430824),
-  L = n(607744),
-  A = n(496675),
-  b = n(306680),
-  M = n(9156),
-  R = n(979651),
-  O = n(514342),
+  p = n(111028),
+  _ = n(305325),
+  f = n(281956),
+  m = n(66999),
+  g = n(506936),
+  C = n(359110),
+  I = n(922482),
+  E = n(431328),
+  N = n(501655),
+  x = n(427679),
+  S = n(71275),
+  v = n(201469),
+  Z = n(680089),
+  T = n(592125),
+  L = n(430824),
+  A = n(607744),
+  b = n(496675),
+  M = n(306680),
+  R = n(9156),
+  O = n(979651),
   y = n(934415),
   P = n(98597),
   j = n(648501),
@@ -65,7 +65,7 @@ return null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0;
 let {
   channel: e
 } = this.props;
-return (0, y.rY)(e, R.Z, T.Z);
+return (0, y.rY)(e, O.Z, L.Z);
   }
   getModeClass() {
 let {
@@ -201,19 +201,19 @@ super(...e), V(this, 'state', {
     connected: n,
     unverifiedAccount: i
   } = this.props, l = e.getGuildId();
-  null != l && (0, _.n)(l) && (0, p.hk)(l), i && this.setState({
+  null != l && (0, f.n)(l) && (0, _.hk)(l), i && this.setState({
     shouldShowGuildVerificationPopout: !0
-  }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, C.Cq)(e), !__OVERLAY__ && (0, g.Kh)(e.id);
+  }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, I.Cq)(e), !__OVERLAY__ && (0, C.Kh)(e.id);
 }), V(this, 'handleClickChat', () => {
   let {
     channel: e,
     locked: t
   } = this.props;
-  !__OVERLAY__ && !t && (0, g.Kh)(e.id);
+  !__OVERLAY__ && !t && (0, C.Kh)(e.id);
 }), V(this, 'handleContextMenu', e => {
   let {
     channel: t
-  } = this.props, l = T.Z.getGuild(t.getGuildId());
+  } = this.props, l = L.Z.getGuild(t.getGuildId());
   if (null != l)
     (0, c.jW)(e, async () => {
       let {
@@ -236,8 +236,8 @@ super(...e), V(this, 'state', {
     shouldShowGuildVerificationPopout: t
   } = this.state;
   if (t)
-    return (0, i.jsx)(m.Z, {
-      type: m.R.VOICE,
+    return (0, i.jsx)(g.Z, {
+      type: g.R.VOICE,
       guildId: e.guild_id,
       closePopout: this.closeGuildVerificationPopout
     });
@@ -284,7 +284,7 @@ super(...e), V(this, 'state', {
 }), V(this, 'renderSubtitle', () => {
   var e;
   let t = null === (e = this.props.stageInstance) || void 0 === e ? void 0 : e.topic;
-  return null == t ? null : (0, i.jsx)(O.Z, {
+  return null == t ? null : (0, i.jsx)(p.Z, {
     children: t
   });
 });
@@ -300,47 +300,47 @@ disableSorting: l,
 isFavoriteCategory: r,
 collapsed: s,
 voiceStates: o
-  } = e, c = (0, a.cj)([b.ZP], () => ({
-unread: b.ZP.hasUnread(n.id),
-mentionCount: b.ZP.getMentionCount(n.id)
-  })), u = (0, a.e7)([M.ZP], () => M.ZP.resolveUnreadSetting(n)), d = (0, a.cj)([
-Z.Z,
-L.Z,
-A.Z
+  } = e, c = (0, a.cj)([M.ZP], () => ({
+unread: M.ZP.hasUnread(n.id),
+mentionCount: M.ZP.getMentionCount(n.id)
+  })), u = (0, a.e7)([R.ZP], () => R.ZP.resolveUnreadSetting(n)), d = (0, a.cj)([
+T.Z,
+A.Z,
+b.Z
   ], () => {
-let e = Z.Z.getChannel(n.parent_id),
-  i = L.Z.getCheck(n.guild_id);
+let e = T.Z.getChannel(n.parent_id),
+  i = A.Z.getCheck(n.guild_id);
 return {
-  canManageChannel: null != t && A.Z.can(G.Plq.MANAGE_CHANNELS, n),
-  canReorderChannel: !0 !== l && (t.id === w._ || (null != e ? A.Z.can(G.Plq.MANAGE_CHANNELS, e) : A.Z.can(G.Plq.MANAGE_CHANNELS, t))),
-  canMoveMembers: A.Z.can(G.Plq.MOVE_MEMBERS, n),
-  locked: !A.Z.can(G.Plq.CONNECT, n),
-  bypassLimit: A.Z.can(G.Plq.MOVE_MEMBERS, n),
+  canManageChannel: null != t && b.Z.can(G.Plq.MANAGE_CHANNELS, n),
+  canReorderChannel: !0 !== l && (t.id === w._ || (null != e ? b.Z.can(G.Plq.MANAGE_CHANNELS, e) : b.Z.can(G.Plq.MANAGE_CHANNELS, t))),
+  canMoveMembers: b.Z.can(G.Plq.MOVE_MEMBERS, n),
+  locked: !b.Z.can(G.Plq.CONNECT, n),
+  bypassLimit: b.Z.can(G.Plq.MOVE_MEMBERS, n),
   unverifiedAccount: !i.canChat
 };
-  }), h = (0, a.e7)([v.Z], () => v.Z.isCollapsed(n.parent_id)), p = (0, S.ZP)(n.id), _ = (0, a.e7)([N.Z], () => N.Z.getStageInstanceByChannel(n.id), [n.id]), m = (0, I.Rk)(n.id, E.pV.AUDIENCE), {
+  }), h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)), p = (0, v.ZP)(n.id), _ = (0, a.e7)([x.Z], () => x.Z.getStageInstanceByChannel(n.id), [n.id]), f = (0, E.Rk)(n.id, N.pV.AUDIENCE), {
 isSubscriptionGated: g,
 needSubscriptionToAccess: C
-  } = (0, f.Z)(n.id), T = (0, a.e7)([M.ZP], () => M.ZP.isFavorite(t.id, n.id)), R = (0, x.xJ)(n.id), O = (0, j.Z)({
+  } = (0, m.Z)(n.id), I = (0, a.e7)([R.ZP], () => R.ZP.isFavorite(t.id, n.id)), L = (0, S.xJ)(n.id), O = (0, j.Z)({
 channel: n,
 isChannelSelected: !1,
 isChannelCollapsed: s,
 voiceStates: o,
 isSubscriptionGated: g,
 needSubscriptionToAccess: C,
-enableConnectedUserLimit: R || n.userLimit > 0 && n.userLimit < G.xGv
+enableConnectedUserLimit: L || n.userLimit > 0 && n.userLimit < G.xGv
   }), y = e.connected && null == O;
   return (0, i.jsx)(W, {
 categoryCollapsed: h,
 connectAction: p,
-numAudience: m,
+numAudience: f,
 stageInstance: _,
 isSubscriptionGated: g,
 needSubscriptionToAccess: C,
 ...c,
 ...d,
 ...e,
-isFavoriteSuggestion: r && !T,
+isFavoriteSuggestion: r && !I,
 forceShowButtons: y,
 channelInfo: O,
 resolvedUnreadSetting: u

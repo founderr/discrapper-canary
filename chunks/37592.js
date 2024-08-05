@@ -2,9 +2,9 @@ t(47120);
 var s = t(735250),
   n = t(470079),
   l = t(481060),
-  r = t(710845),
-  o = t(219929),
-  i = t(285952),
+  r = t(600164),
+  o = t(710845),
+  i = t(219929),
   c = t(358085),
   u = t(622999),
   d = t(981631),
@@ -18,7 +18,7 @@ configurable: !0,
 writable: !0
   }) : e[a] = t, e;
 }
-let N = new r.Z('PaymentRequest');
+let N = new o.Z('PaymentRequest');
 class m extends n.Component {
   componentDidMount() {
 (0, u.d2)().then(e => {
@@ -42,18 +42,18 @@ if (!1 === e)
   });
 let a = (0, c.isAndroidChrome)(),
   t = a ? E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY : E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
-  n = a ? o.ZP.Types.G_PAY : o.ZP.Types.PAYMENT_REQUEST,
+  n = a ? i.ZP.Types.G_PAY : i.ZP.Types.PAYMENT_REQUEST,
   {
-    className: r,
+    className: o,
     iconClassName: u
   } = this.props;
 return (0, s.jsx)(l.Button, {
   onClick: this.handleOnClick,
-  className: r,
-  children: (0, s.jsxs)(i.Z, {
-    align: i.Z.Align.CENTER,
+  className: o,
+  children: (0, s.jsxs)(r.Z, {
+    align: r.Z.Align.CENTER,
     children: [
-      (0, s.jsx)(o.ZP, {
+      (0, s.jsx)(i.ZP, {
         className: u,
         type: n
       }),

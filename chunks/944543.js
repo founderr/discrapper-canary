@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(442837),
   o = n(481060),
   c = n(771340),
-  u = n(903223),
-  d = n(285952),
+  u = n(600164),
+  d = n(903223),
   h = n(689938),
   p = n(303450);
 
@@ -39,8 +39,8 @@ let {
   region: e,
   selected: t
 } = this.props;
-return (0, i.jsxs)(d.Z, {
-  align: d.Z.Align.CENTER,
+return (0, i.jsxs)(u.Z, {
+  align: u.Z.Align.CENTER,
   className: l()({
     selected: t
   }),
@@ -121,6 +121,6 @@ super(...e), m(this, 'renderOption', (e, t) => (0, i.jsx)(E, {
 });
   }
 }
-t.Z = r.ZP.connectStores([u.Z], () => ({
-  regions: u.Z.getRegions(null)
+t.Z = r.ZP.connectStores([d.Z], () => ({
+  regions: d.Z.getRegions(null)
 }))(g);

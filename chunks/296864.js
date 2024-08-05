@@ -9,12 +9,12 @@ var l = i(735250),
   s = i.n(t),
   r = i(442837),
   c = i(481060),
-  o = i(41776),
-  u = i(889161),
-  d = i(513449),
-  h = i(592125),
-  v = i(430824),
-  C = i(153124),
+  o = i(313201),
+  u = i(41776),
+  d = i(889161),
+  h = i(513449),
+  v = i(592125),
+  C = i(430824),
   m = i(305298),
   x = i(405613),
   N = i(460838),
@@ -29,12 +29,12 @@ transitionState: i,
 event: t,
 onSuccess: T,
 onClose: I
-  } = e, j = (0, C.Dt)(), {
+  } = e, j = (0, o.Dt)(), {
 guild_id: p,
 privacy_level: A
-  } = t, k = (0, r.e7)([h.Z], () => h.Z.getChannel(t.channel_id), [t]), S = (0, r.e7)([v.Z], () => v.Z.getGuild(p), [p]), {
+  } = t, k = (0, r.e7)([v.Z], () => v.Z.getChannel(t.channel_id), [t]), S = (0, r.e7)([C.Z], () => C.Z.getGuild(p), [p]), {
 canManageGuildEvent: f
-  } = (0, u.XJ)(null != k ? k : S), Z = f(t), L = (0, r.e7)([o.Z], () => o.Z.isLurking(p), [p]), y = t.entity_type === E.WX.STAGE_INSTANCE, [w, R] = a.useState(y), [b, {
+  } = (0, d.XJ)(null != k ? k : S), Z = f(t), L = (0, r.e7)([u.Z], () => u.Z.isLurking(p), [p]), y = t.entity_type === E.WX.STAGE_INSTANCE, [w, R] = a.useState(y), [b, {
 loading: M,
 error: G
   }] = (0, m.Z)();
@@ -42,7 +42,7 @@ error: G
 return null;
   let P = A === E.j8.PUBLIC ? g.Z.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : g.Z.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
 O = () => {
-  null == T || T(), I(), (0, d.Ku)(!1);
+  null == T || T(), I(), (0, h.Ku)(!1);
 },
 V = async () => {
   await b(t, w, {

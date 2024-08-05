@@ -9,8 +9,8 @@ var a = n(948789),
   d = n(285865),
   u = n(918701),
   _ = n(702428),
-  E = n(709158),
-  h = n(683301),
+  h = n(709158),
+  E = n(683301),
   I = n(150192),
   m = n(889010),
   g = n(488905),
@@ -40,10 +40,10 @@ switch (e) {
 let {
   currentCategoryId: e,
   isViewingSearchResults: t
-} = (0, s.cj)([h.ZP], () => ({
-  currentCategoryId: h.ZP.getCurrentCategoryId(),
-  isViewingSearchResults: h.ZP.getMostRecentQuery().length > 0
-})), n = (0, E.Z)(f.dr.QUEST_HOME_DESKTOP), o = (0, s.e7)([I.Z], () => I.Z.getDiscoveryCategories(), [], I.j), p = null == o ? void 0 : o.map(e => ({
+} = (0, s.cj)([E.ZP], () => ({
+  currentCategoryId: E.ZP.getCurrentCategoryId(),
+  isViewingSearchResults: E.ZP.getMostRecentQuery().length > 0
+})), n = (0, h.Z)(f.dr.QUEST_HOME_DESKTOP), o = (0, s.e7)([I.Z], () => I.Z.getDiscoveryCategories(), [], I.j), p = null == o ? void 0 : o.map(e => ({
   ...e,
   icon: A(e.categoryId)
 })), v = e => {

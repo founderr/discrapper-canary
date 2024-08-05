@@ -6,19 +6,19 @@ var t = a(735250),
   r = a(481060),
   o = a(231239),
   c = a(881052),
-  d = a(592125),
-  N = a(153124),
+  d = a(313201),
+  N = a(592125),
   u = a(888592),
   _ = a(981631),
   m = a(689938),
   E = a(801919);
-let I = (0, N.hQ)();
+let I = (0, d.hQ)();
 s.Z = e => {
   let {
 setStep: s,
 setGuildsInfo: a,
 email: l,
-setEmail: N,
+setEmail: d,
 setGuildId: x,
 invite: h,
 onClose: C,
@@ -26,8 +26,8 @@ isNUXFlow: T
   } = e, [g, O] = n.useState(null), [v, L] = n.useState(!1), S = async e => {
 e.preventDefault(), O(null), L(!0);
 try {
-  var t, n, i, r, N;
-  let e = null !== (N = null !== (r = null == h ? void 0 : null === (t = h.guild) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null === (n = d.Z.getChannel(null == h ? void 0 : null === (i = h.channel) || void 0 === i ? void 0 : i.id)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== N ? N : void 0;
+  var t, n, i, r, d;
+  let e = null !== (d = null !== (r = null == h ? void 0 : null === (t = h.guild) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null === (n = N.Z.getChannel(null == h ? void 0 : null === (i = h.channel) || void 0 === i ? void 0 : i.id)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== d ? d : void 0;
   e === u.fQ && (e = void 0);
   let c = await o.Z.sendVerificationEmail(l, !0, e),
     _ = c.guilds_info;
@@ -82,7 +82,7 @@ children: [
           (0, t.jsx)(r.TextInput, {
             placeholder: m.Z.Messages.HUB_EMAIL_CONNECTION_CONTENT_INPUT_PLACEHOLDER,
             onChange: e => {
-              N(e);
+              d(e);
             },
             error: null == g ? void 0 : g.getAnyErrorMessage(),
             'aria-labelledby': I

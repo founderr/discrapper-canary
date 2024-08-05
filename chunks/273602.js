@@ -10,13 +10,13 @@ var i = l(735250),
   o = l(904245),
   r = l(166459),
   d = l(680287),
-  u = l(163268),
-  c = l(813197),
-  _ = l(592125),
-  m = l(703558),
-  f = l(430824),
-  h = l(375954),
-  g = l(153124),
+  u = l(313201),
+  c = l(163268),
+  _ = l(813197),
+  m = l(592125),
+  f = l(703558),
+  h = l(430824),
+  g = l(375954),
   E = l(403182),
   A = l(709054),
   p = l(127654),
@@ -37,9 +37,9 @@ attachments: C,
 sendMessage: L,
 transitionState: j,
 onClose: P
-  } = e, Z = (0, g.Dt)(), D = (0, s.e7)([_.Z], () => _.Z.getChannel(l), [l]), S = (0, s.e7)([f.Z], () => f.Z.getGuild(null == D ? void 0 : D.getGuildId()), [D]), N = (0, s.e7)([_.Z], () => _.Z.getChannel(null == D ? void 0 : D.parent_id), [D]), U = null === (t = C[0]) || void 0 === t ? void 0 : t.item, [y, z] = n.useState(null);
+  } = e, Z = (0, u.Dt)(), D = (0, s.e7)([m.Z], () => m.Z.getChannel(l), [l]), S = (0, s.e7)([h.Z], () => h.Z.getGuild(null == D ? void 0 : D.getGuildId()), [D]), N = (0, s.e7)([m.Z], () => m.Z.getChannel(null == D ? void 0 : D.parent_id), [D]), U = null === (t = C[0]) || void 0 === t ? void 0 : t.item, [y, z] = n.useState(null);
   n.useEffect(() => {
-null != U && (0, c.Fq)(U.file, (e, t) => z(e), R.dG);
+null != U && (0, _.Fq)(U.file, (e, t) => z(e), R.dG);
   }, [U]);
   let G = null != U && null != y ? {
   src: y,
@@ -74,12 +74,12 @@ F = n.useCallback(() => {
       let o = (0, E.dg)(n.id);
       e.currentSize > o && (a.cancel(), i(!1), s(), (0, p.G)(t, (0, M.KZ)(l)));
     }), a.on('error', (e, l, n) => {
-      i(!1), l === O.evJ.EXPLICIT_CONTENT && (s(), o.Z.sendExplicitMediaClydeError(t.id, null == n ? void 0 : n.attachments, u.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), r.Z.clearAll(t.id, m.d.ChannelMessage));
+      i(!1), l === O.evJ.EXPLICIT_CONTENT && (s(), o.Z.sendExplicitMediaClydeError(t.id, null == n ? void 0 : n.attachments, c.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), r.Z.clearAll(t.id, f.d.ChannelMessage));
     }), a.on('complete', () => {
-      i(!1), s(), r.Z.clearAll(t.id, m.d.ChannelMessage);
+      i(!1), s(), r.Z.clearAll(t.id, f.d.ChannelMessage);
     });
-    let c = h.Z.getMessages(t.id).get(A.default.castChannelIdAsMessageId(t.id)),
-      _ = null != c ? c.attachments : [];
+    let u = g.Z.getMessages(t.id).get(A.default.castChannelIdAsMessageId(t.id)),
+      _ = null != u ? u.attachments : [];
     a.uploadFiles(l, {
       attachments: [..._]
     }, {

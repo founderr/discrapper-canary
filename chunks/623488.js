@@ -8,9 +8,9 @@ t(470079);
 var n = t(120356),
   r = t.n(n),
   s = t(481060),
-  o = t(240657),
-  l = t(765400),
-  i = t(153124),
+  o = t(313201),
+  l = t(240657),
+  i = t(765400),
   d = t(916001),
   c = t(689938),
   u = t(690326);
@@ -45,7 +45,7 @@ children: [
   }),
   t && (0, a.jsx)('div', {
     className: u.draftBadge,
-    children: (0, a.jsx)(l.v, {})
+    children: (0, a.jsx)(i.v, {})
   })
 ]
   });
@@ -86,7 +86,7 @@ function T(e) {
 imageUrl: A,
 name: t,
 description: n,
-formattedPrice: l,
+formattedPrice: i,
 role: T,
 ctaComponent: p,
 shouldShowFullDescriptionButton: h = !0,
@@ -102,7 +102,7 @@ cardHeight: D,
 thumbnailHeight: O = 187,
 descriptionTextVariant: x = 'text-sm/normal',
 isDraft: R = !1
-  } = e, L = (0, i.hQ)(), b = (0, a.jsxs)(a.Fragment, {
+  } = e, L = (0, o.hQ)(), b = (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsx)(C, {
     showDraftBadge: R,
@@ -130,7 +130,7 @@ children: [
             children: t
           }),
           (0, a.jsx)(s.FocusBlock, {
-            children: (0, a.jsx)(o.Z, {
+            children: (0, a.jsx)(l.Z, {
               variant: x,
               color: 'text-muted',
               lineClamp: E,
@@ -163,7 +163,7 @@ children: [
         variant: 'text-md/medium',
         color: 'interactive-active',
         className: u.__invalid_productPrice,
-        children: null != l ? l : c.Z.Messages.GUILD_PRODUCT_CARD_EMPTY_PRICE
+        children: null != i ? i : c.Z.Messages.GUILD_PRODUCT_CARD_EMPTY_PRICE
       }),
       (0, a.jsx)(s.Text, {
         variant: 'text-xxs/normal',

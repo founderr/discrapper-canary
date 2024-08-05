@@ -13,12 +13,12 @@ var t = n(735250),
   u = n(166459),
   d = n(596454),
   _ = n(273031),
-  m = n(907040),
-  E = n(906411),
-  A = n(592125),
-  f = n(703558),
-  C = n(117530),
-  L = n(153124),
+  m = n(313201),
+  E = n(907040),
+  A = n(906411),
+  f = n(592125),
+  C = n(703558),
+  L = n(117530),
   h = n(358085),
   R = n(79390),
   I = n(885001),
@@ -54,7 +54,7 @@ className: l
   }) : null != s ? (0, t.jsx)(d.Z, {
 className: o,
 emojiId: s.id,
-emojiName: s.type === E.B.UNICODE ? s.optionallyDiverseSequence : s.name,
+emojiName: s.type === A.B.UNICODE ? s.optionallyDiverseSequence : s.name,
 animated: s.animated
   }) : (0, t.jsx)(t.Fragment, {
 children: i
@@ -102,10 +102,10 @@ buttonImage: l,
 layout: u,
 onEmojiSelect: d,
 onEmojiRemove: _,
-answerIndex: E,
-shouldShowEmojiPicker: f,
+answerIndex: m,
+shouldShowEmojiPicker: A,
 toggleEmojiPicker: C
-  } = e, L = (0, i.e7)([A.Z], () => A.Z.getChannel(a)), {
+  } = e, L = (0, i.e7)([f.Z], () => f.Z.getChannel(a)), {
 emoji: h,
 isLoadingMedia: I,
 hasUpload: p,
@@ -116,22 +116,22 @@ channelId: a,
 localCreationAnswerId: n,
 image: l
   }), M = u === o.C.DEFAULT, w = p || null != h, S = r.useCallback(() => {
-_(E);
+_(m);
   }, [
 _,
-E
+m
   ]), b = r.useMemo(() => p ? T.Z.Messages.CREATE_POLL_EDIT_IMAGE_ARIA.format({
 imageName: (0, R.fw)(D),
-answerNumber: E + 1
+answerNumber: m + 1
   }) : null != h ? T.Z.Messages.CREATE_POLL_EDIT_EMOJI_ARIA.format({
 emojiName: h.name,
-answerNumber: E + 1
+answerNumber: m + 1
   }) : T.Z.Messages.CREATE_POLL_ADD_EMOJI_ARIA.format({
-answerNumber: E + 1
+answerNumber: m + 1
   }), [
 p,
 h,
-E,
+m,
 D
   ]), k = r.useCallback(e => {
 let {
@@ -139,20 +139,20 @@ let {
 } = e;
 return (0, t.jsx)('div', {
   className: N.emojiPicker,
-  children: (0, t.jsx)(m.Z, {
+  children: (0, t.jsx)(E.Z, {
     channel: L,
     pickerIntention: O.Hz.POLLS,
     closePopout: a,
     onNavigateAway: a,
     onSelectEmoji: (e, n) => {
-      null != e && d(e, E), n && a();
+      null != e && d(e, m), n && a();
     }
   })
 });
   }, [
 L,
 d,
-E
+m
   ]), Z = r.useCallback(e => {
 let {
   closePopout: a
@@ -185,7 +185,7 @@ fallback: (0, t.jsx)(c.ReactionIcon, {
   });
   return (0, t.jsx)(c.Popout, {
 renderPopout: k,
-shouldShow: f,
+shouldShow: A,
 onRequestClose: C,
 animation: c.Popout.Animation.NONE,
 position: 'bottom',
@@ -210,7 +210,7 @@ children: e => {
       return (0, t.jsxs)(c.Clickable, {
         ...o,
         className: B,
-        onClick: w && !f ? r : C,
+        onClick: w && !A ? r : C,
         'aria-label': b,
         'aria-controls': null != a ? a : l,
         'aria-expanded': n || s,
@@ -270,9 +270,9 @@ a.Z = r.forwardRef(function(e, a) {
   let {
 channelId: l,
 answer: d,
-index: m,
-layout: E,
-isLastAnswer: A,
+index: E,
+layout: A,
+isLastAnswer: f,
 onAnswerTextChange: x,
 onEmojiSelect: O,
 onEmojiRemove: g,
@@ -284,9 +284,9 @@ answerTextInputRefs: b,
 error: k,
 inputRef: Z,
 deleteButtonRef: y
-  } = e, B = (0, L.Dt)(), U = (0, L.Dt)(), W = null != k && k.length > 0, H = (0, i.e7)([C.Z], () => C.Z.getUpload(l, d.localCreationAnswerId, f.d.Poll)), [Y, F] = r.useState(!1), G = () => {
+  } = e, B = (0, m.Dt)(), U = (0, m.Dt)(), W = null != k && k.length > 0, H = (0, i.e7)([L.Z], () => L.Z.getUpload(l, d.localCreationAnswerId, C.d.Poll)), [Y, F] = r.useState(!1), G = () => {
 function e(e) {
-  u.Z.update(l, d.localCreationAnswerId, f.d.Poll, {
+  u.Z.update(l, d.localCreationAnswerId, C.d.Poll, {
     description: e
   });
 }
@@ -309,7 +309,7 @@ let a = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
 switch (e.key.toLowerCase()) {
   case 'enter':
     var t;
-    A && (e.preventDefault(), ((0, R.cS)(d, E) || 'macos' !== (0, h.getOS)() ? a : n) ? (e.stopPropagation(), S()) : w()), null === (t = b.current[m + 1]) || void 0 === t || t.focus();
+    f && (e.preventDefault(), ((0, R.cS)(d, A) || 'macos' !== (0, h.getOS)() ? a : n) ? (e.stopPropagation(), S()) : w()), null === (t = b.current[E + 1]) || void 0 === t || t.focus();
     break;
   case 'e':
     ('macos' === (0, h.getOS)() ? n : a) && (e.preventDefault(), e.stopPropagation(), z());
@@ -318,24 +318,24 @@ switch (e.key.toLowerCase()) {
 w,
 d,
 b,
-m,
-A,
 E,
+f,
+A,
 S,
 z
   ]), V = (0, t.jsx)(D, {
 channelId: l,
 buttonImage: d.image,
-layout: E,
+layout: A,
 onEmojiSelect: O,
 onEmojiRemove: g,
 localCreationAnswerId: d.localCreationAnswerId,
-answerIndex: m,
+answerIndex: E,
 shouldShowEmojiPicker: Y,
 toggleEmojiPicker: z
   }), J = null != H && null != H.description && H.description.length > 0;
   return (0, t.jsx)(t.Fragment, {
-children: E === o.C.DEFAULT ? (0, t.jsxs)('div', {
+children: A === o.C.DEFAULT ? (0, t.jsxs)('div', {
   className: s()(N.answerRow, {
     [N.hasDeleteButton]: v
   }),
@@ -349,7 +349,7 @@ children: E === o.C.DEFAULT ? (0, t.jsxs)('div', {
         V,
         (0, t.jsx)(c.TextInput, {
           'aria-label': T.Z.Messages.CREATE_POLL_ANSWER_INPUT_LABEL.format({
-            answerNumber: m + 1
+            answerNumber: E + 1
           }),
           placeholder: T.Z.Messages.CREATE_POLL_ANSWER_PLACEHOLDER,
           value: d.text,
@@ -357,7 +357,7 @@ children: E === o.C.DEFAULT ? (0, t.jsxs)('div', {
           inputClassName: N.defaultTextInput,
           onChange: e => x({
             text: e,
-            index: m,
+            index: E,
             localCreationAnswerId: d.localCreationAnswerId
           }),
           onKeyDown: K,
@@ -374,10 +374,10 @@ children: E === o.C.DEFAULT ? (0, t.jsxs)('div', {
       ]
     }),
     v && (0, t.jsx)(c.Clickable, {
-      onClick: () => j(m),
+      onClick: () => j(E),
       className: N.removeAnswerButtonDefault,
       'aria-label': T.Z.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format({
-        answerNumber: m + 1
+        answerNumber: E + 1
       }),
       ref: y,
       children: (0, t.jsx)(c.TrashIcon, {
@@ -434,9 +434,9 @@ children: E === o.C.DEFAULT ? (0, t.jsxs)('div', {
         null != H ? (0, t.jsx)(_.Z, {
           tooltip: T.Z.Messages.CREATE_POLL_EDIT_IMAGE_DESCRIPTION,
           'aria-label': J ? T.Z.Messages.CREATE_POLL_EDIT_ALT_ARIA_LABEL.format({
-            answerNumber: m + 1
+            answerNumber: E + 1
           }) : T.Z.Messages.CREATE_POLL_ADD_ALT_ARIA_LABEL.format({
-            answerNumber: m + 1
+            answerNumber: E + 1
           }),
           onClick: G,
           children: (0, t.jsx)(I.N, {
@@ -446,9 +446,9 @@ children: E === o.C.DEFAULT ? (0, t.jsxs)('div', {
         (0, t.jsx)(_.Z, {
           tooltip: T.Z.Messages.CREATE_POLL_REMOVE_ANSWER,
           'aria-label': T.Z.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format({
-            answerNumber: m + 1
+            answerNumber: E + 1
           }),
-          onClick: () => j(m),
+          onClick: () => j(E),
           dangerous: !0,
           children: (0, t.jsx)(c.TrashIcon, {
             size: 'md',

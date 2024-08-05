@@ -5,9 +5,9 @@ return l;
 });
 var i = n(735250);
 n(470079);
-var s = n(547881),
-  a = n(382790),
-  o = n(430036),
+var s = n(382790),
+  a = n(430036),
+  o = n(518084),
   r = n(374337);
 
 function l(e) {
@@ -17,15 +17,15 @@ dragging: n,
 pinned: l,
 locked: c
   } = e;
-  return (0, i.jsxs)(s.ZP, {
+  return (0, i.jsxs)(o.ZP, {
 className: r.wrapper,
 children: [
-  (0, i.jsx)(a.Z, {
+  (0, i.jsx)(s.Z, {
     contained: !0,
     dragStart: t,
     locked: c
   }),
-  (0, i.jsx)(o.Z, {
+  (0, i.jsx)(a.Z, {
     dragStart: t,
     locked: c,
     pinned: l,

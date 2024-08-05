@@ -8,12 +8,12 @@ var o = n(735250),
   d = n(570140),
   c = n(816814),
   E = n(23645),
-  u = n(454585),
-  _ = n(144114),
-  h = n(607018),
-  p = n(325067),
-  f = n(594174),
-  R = n(285952),
+  u = n(600164),
+  _ = n(454585),
+  h = n(144114),
+  p = n(607018),
+  f = n(325067),
+  R = n(594174),
   I = n(279837),
   N = n(981631),
   M = n(815660),
@@ -35,8 +35,8 @@ text: n,
 children: r,
 ...s
   } = e;
-  return (0, o.jsxs)(R.Z, {
-direction: R.Z.Direction.VERTICAL,
+  return (0, o.jsxs)(u.Z, {
+direction: u.Z.Direction.VERTICAL,
 ...s,
 children: [
   (0, o.jsx)(l.FormTitle, {
@@ -48,7 +48,7 @@ children: [
     className: S.sectionBody,
     children: n
   }) : null,
-  (0, o.jsx)(R.Z.Child, {
+  (0, o.jsx)(u.Z.Child, {
     wrap: !0,
     children: r
   })
@@ -127,14 +127,14 @@ return (0, o.jsx)(C, {
 return (0, o.jsxs)(l.ModalHeader, {
   separator: !1,
   children: [
-    (0, o.jsxs)(R.Z.Child, {
+    (0, o.jsxs)(u.Z.Child, {
       grow: 1,
       shrink: 1,
       children: [
         (0, o.jsx)(l.Heading, {
           variant: 'heading-lg/semibold',
           className: S.header,
-          children: u.Z.parse(A.Z.Messages.TWO_FA_SUCCESS_HEADER)
+          children: _.Z.parse(A.Z.Messages.TWO_FA_SUCCESS_HEADER)
         }),
         (0, o.jsx)(l.Text, {
           variant: 'text-xs/normal',
@@ -143,7 +143,7 @@ return (0, o.jsxs)(l.ModalHeader, {
         })
       ]
     }),
-    (0, o.jsx)(R.Z.Child, {
+    (0, o.jsx)(u.Z.Child, {
       grow: 0,
       children: (0, o.jsx)(l.ModalCloseButton, {
         onClick: this.handleCloseModal
@@ -228,8 +228,8 @@ return (0, o.jsxs)(l.ModalRoot, {
   }
   openPhoneVerificationModal() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-(0, l.openModal)(t => (0, o.jsx)(h.default, {
-  reason: _.L.MFA_PHONE_UPDATE,
+(0, l.openModal)(t => (0, o.jsx)(p.default, {
+  reason: h.L.MFA_PHONE_UPDATE,
   ...t,
   ...e
 }), {
@@ -278,13 +278,13 @@ super(...e), O(this, 'state', {
   }
 }
 t.default = i.ZP.connectStores([
-  f.default,
-  p.Z
+  R.default,
+  f.Z
 ], () => {
-  let e = f.default.getCurrentUser();
+  let e = R.default.getCurrentUser();
   return a()(null != e, 'MFAEnableSuccess: currentUser cannot be undefined'), {
 currentUser: e,
-backupCodes: p.Z.getBackupCodes(),
-hasSeenBackupPrompt: p.Z.hasSeenBackupPrompt
+backupCodes: f.Z.getBackupCodes(),
+hasSeenBackupPrompt: f.Z.hasSeenBackupPrompt
   };
 })(F);

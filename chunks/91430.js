@@ -27,11 +27,11 @@ var n = s(735250),
   I = s(100527),
   S = s(906732),
   N = s(17894),
-  C = s(925329),
-  m = s(963249),
-  A = s(301766),
-  g = s(594174),
-  h = s(285952),
+  C = s(600164),
+  m = s(925329),
+  A = s(963249),
+  g = s(301766),
+  h = s(594174),
   O = s(626135),
   p = s(63063),
   R = s(74538),
@@ -53,8 +53,8 @@ function B(e) {
   fromStandaloneBillingPage: i = !0,
   className: o
 } = e,
-c = (0, _.e7)([g.default], () => {
-  let e = g.default.getCurrentUser();
+c = (0, _.e7)([h.default], () => {
+  let e = h.default.getCurrentUser();
   return l()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e;
 });
   if (0 === (0, R.uV)(s.additionalPlans))
@@ -200,7 +200,7 @@ children: [
     children: v.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT.format({
       daysPastDue: t,
       paymentModalRedirect: () => {
-        (0, m.Z)({
+        (0, A.Z)({
           initialPlanId: s.planIdFromItems,
           openInvoiceId: i,
           analyticsLocations: r
@@ -252,12 +252,12 @@ children: [
   (0, n.jsx)(u.Card, {
     className: j.noItemsCard,
     type: u.Card.Types.CUSTOM,
-    children: (0, n.jsxs)(h.Z, {
-      align: h.Z.Align.CENTER,
+    children: (0, n.jsxs)(C.Z, {
+      align: C.Z.Align.CENTER,
       children: [
-        (0, n.jsx)(C.Z, {
+        (0, n.jsx)(m.Z, {
           game: null,
-          size: C.Z.Sizes.SMALL,
+          size: m.Z.Sizes.SMALL,
           className: j.noItemsIcon
         }),
         (0, n.jsx)('span', {
@@ -420,14 +420,14 @@ renewal: !0,
 applyEntitlements: !0,
 analyticsLocations: T,
 analyticsLocation: E
-  }), h = (0, _.e7)([g.default], () => {
+  }), A = (0, _.e7)([h.default], () => {
 var e;
-return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
-  }), O = d()(a.currentPeriodEnd), p = null != a.paymentSourceId, R = null !== (t = null == m ? void 0 : m.total) && void 0 !== t ? t : 0, x = null == r ? void 0 : r.invalid, D = !p && R > 0 && (7 >= O.diff(d()(), 'days') || a.status === Z.O0b.PAST_DUE) && !h && !a.isPurchasedExternally, P = x && a.status === Z.O0b.PAST_DUE && !h && !a.isPurchasedExternally, L = (0, f.U)(), B = !h && L, y = (null == a ? void 0 : a.status) === Z.O0b.PAST_DUE ? d()().diff(d()(a.currentPeriodStart), 'days') : 0, [V] = (0, M.Ox)({
+return null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
+  }), O = d()(a.currentPeriodEnd), p = null != a.paymentSourceId, R = null !== (t = null == m ? void 0 : m.total) && void 0 !== t ? t : 0, x = null == r ? void 0 : r.invalid, D = !p && R > 0 && (7 >= O.diff(d()(), 'days') || a.status === Z.O0b.PAST_DUE) && !A && !a.isPurchasedExternally, P = x && a.status === Z.O0b.PAST_DUE && !A && !a.isPurchasedExternally, L = (0, f.U)(), B = !A && L, y = (null == a ? void 0 : a.status) === Z.O0b.PAST_DUE ? d()().diff(d()(a.currentPeriodStart), 'days') : 0, [V] = (0, M.Ox)({
 subscriptionId: a.id,
 preventFetch: !B
   });
-  return null == C || null == m ? (0, n.jsx)(u.Spinner, {}) : (null != a.renewalMutations && (a.renewalMutations.planId !== a.planId && !(0, A.Q0)(a.renewalMutations.planId) || a.hasExternalPlanChange) && (s = (0, n.jsx)(b.Z, {
+  return null == C || null == m ? (0, n.jsx)(u.Spinner, {}) : (null != a.renewalMutations && (a.renewalMutations.planId !== a.planId && !(0, g.Q0)(a.renewalMutations.planId) || a.hasExternalPlanChange) && (s = (0, n.jsx)(b.Z, {
 subscription: a,
 renewalMutations: a.renewalMutations,
 className: j.renewalMutationNotice,

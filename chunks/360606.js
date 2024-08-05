@@ -12,8 +12,8 @@ var s, l, o, r, d = t(392711),
 let h = [],
   g = [],
   p = null,
-  C = null,
   f = null,
+  C = null,
   x = !1,
   O = !1,
   S = T.QZA.CLOSED,
@@ -39,18 +39,18 @@ let e = E.Z.getProps().integrations;
 null == e && (O = !0), h = null != e ? e : [];
   } else
 h = [];
-  if (g = null != i && _.Z.can(T.Plq.MANAGE_WEBHOOKS, i) ? N.Z.getWebhooksForGuild(i.id) : [], !e && null != C) {
-let e = L(C.id);
-null != e && (C = e);
-  }
-  if (null != f) {
-let e = j(f.id);
+  if (g = null != i && _.Z.can(T.Plq.MANAGE_WEBHOOKS, i) ? N.Z.getWebhooksForGuild(i.id) : [], !e && null != f) {
+let e = L(f.id);
 null != e && (f = e);
+  }
+  if (null != C) {
+let e = j(C.id);
+null != e && (C = e);
   }
   p = null, S = T.QZA.OPEN, A = {}, R = !1;
 }
 let M = c().debounce(() => {
-  R && (null != C ? c().isEqual(C, L(C.id)) && (R = !1) : null != f && c().isEqual(f, j(f.id)) && (R = !1), !R && P.emitChange());
+  R && (null != f ? c().isEqual(f, L(f.id)) && (R = !1) : null != C && c().isEqual(C, j(C.id)) && (R = !1), !R && P.emitChange());
 }, 500);
 
 function L(e) {
@@ -90,10 +90,10 @@ return g;
 return p;
   }
   get editedIntegration() {
-return C;
+return f;
   }
   get editedWebhook() {
-return f;
+return C;
   }
   get formState() {
 return S;
@@ -153,7 +153,7 @@ a = n, b = t;
 let {
   commandId: n
 } = e;
-p = n, C = null, f = null, A = {}, R = !0;
+p = n, f = null, C = null, A = {}, R = !0;
   },
   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: function(e) {
 let {
@@ -169,22 +169,12 @@ let {
 } = e, t = L(n);
 if (null == t)
   return !1;
-C = t, p = null, f = null, A = {}, R = !1;
+f = t, p = null, C = null, A = {}, R = !1;
   },
   INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: function() {
-C = null, A = {}, R = !1;
+f = null, A = {}, R = !1;
   },
   INTEGRATION_SETTINGS_UPDATE_INTEGRATION: function(e) {
-let {
-  settings: n
-} = e;
-if (null == C)
-  return !1;
-C = {
-  ...C
-}, null != n.enableEmoticons && C.enable_emoticons !== n.enableEmoticons && (C.enable_emoticons = n.enableEmoticons, R = !0), null != n.expireBehavior && C.expire_behavior !== n.expireBehavior && (C.expire_behavior = n.expireBehavior, R = !0), null != n.expireGracePeriod && C.expire_grace_period !== n.expireGracePeriod && (C.expire_grace_period = n.expireGracePeriod, R = !0), R && M();
-  },
-  INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
 let {
   settings: n
 } = e;
@@ -192,7 +182,17 @@ if (null == f)
   return !1;
 f = {
   ...f
-}, null != n.name && f.name !== n.name && (f.name = n.name, R = !0), void 0 !== n.avatar && f.avatar !== n.avatar && (f.avatar = n.avatar, R = !0), null != n.channelId && f.channel_id !== n.channelId && (f.channel_id = n.channelId, R = !0), R && M();
+}, null != n.enableEmoticons && f.enable_emoticons !== n.enableEmoticons && (f.enable_emoticons = n.enableEmoticons, R = !0), null != n.expireBehavior && f.expire_behavior !== n.expireBehavior && (f.expire_behavior = n.expireBehavior, R = !0), null != n.expireGracePeriod && f.expire_grace_period !== n.expireGracePeriod && (f.expire_grace_period = n.expireGracePeriod, R = !0), R && M();
+  },
+  INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
+let {
+  settings: n
+} = e;
+if (null == C)
+  return !1;
+C = {
+  ...C
+}, null != n.name && C.name !== n.name && (C.name = n.name, R = !0), void 0 !== n.avatar && C.avatar !== n.avatar && (C.avatar = n.avatar, R = !0), null != n.channelId && C.channel_id !== n.channelId && (C.channel_id = n.channelId, R = !0), R && M();
   },
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
 let {
@@ -200,13 +200,13 @@ let {
 } = e, t = j(n);
 if (null == t)
   return !1;
-f = t, p = null, C = null, A = {}, R = !1;
+C = t, p = null, f = null, A = {}, R = !1;
   },
   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
-f = null, A = {}, R = !1;
+C = null, A = {}, R = !1;
   },
   GUILD_SETTINGS_CLOSE: function() {
-i = null, h = [], g = [], p = null, C = null, f = null, S = T.QZA.CLOSED, R = !1;
+i = null, h = [], g = [], p = null, f = null, C = null, S = T.QZA.CLOSED, R = !1;
   },
   GUILD_SETTINGS_LOADED_INTEGRATIONS: function(e) {
 let {
@@ -224,7 +224,7 @@ for (let e of (O = !1, t))
         return !0;
     })) {
     var a, s;
-    h.push(e), e.type === (null == C ? void 0 : C.type) && (null === (a = e.account) || void 0 === a ? void 0 : a.id) === (null === (s = C.account) || void 0 === s ? void 0 : s.id) && (C = e);
+    h.push(e), e.type === (null == f ? void 0 : f.type) && (null === (a = e.account) || void 0 === a ? void 0 : a.id) === (null === (s = f.account) || void 0 === s ? void 0 : s.id) && (f = e);
   }
 for (let e = h.length - 1; e >= 0; e--) {
   let n = h[e],
@@ -240,9 +240,9 @@ for (let e = h.length - 1; e >= 0; e--) {
       ...n,
       ...i
     };
-    (null == C ? void 0 : C.id) === t.id && (!1 === t.enabled ? C = null : !R && (C = t)), h[e] = t;
+    (null == f ? void 0 : f.id) === t.id && (!1 === t.enabled ? f = null : !R && (f = t)), h[e] = t;
   } else
-    (null == C ? void 0 : C.id) === n.id && (C = null), h.splice(e, 1);
+    (null == f ? void 0 : f.id) === n.id && (f = null), h.splice(e, 1);
 }
 h = [...h], M();
   },
@@ -271,9 +271,9 @@ for (let e = g.length - 1; e >= 0; e--) {
       ...n,
       ...i
     };
-    g[e] = t, !R && (null == f ? void 0 : f.id) === t.id && (f = t);
+    g[e] = t, !R && (null == C ? void 0 : C.id) === t.id && (C = t);
   } else
-    (null == f ? void 0 : f.id) === n.id && (f = null), g.splice(e, 1);
+    (null == C ? void 0 : C.id) === n.id && (C = null), g.splice(e, 1);
 }
 for (let e of a)
   null == g.find(n => {

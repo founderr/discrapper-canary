@@ -4,14 +4,14 @@ var i = n(735250),
   r = n.n(s),
   l = n(442837),
   o = n(481060),
-  c = n(905405),
-  d = n(255269),
-  u = n(937889),
-  _ = n(267128),
+  c = n(95398),
+  d = n(905405),
+  u = n(255269),
+  _ = n(937889),
+  h = n(267128),
   E = n(695346),
-  h = n(496675),
-  I = n(699516),
-  m = n(68588),
+  I = n(496675),
+  m = n(699516),
   g = n(868807),
   p = n(981631),
   T = n(217702),
@@ -25,9 +25,9 @@ channel: t
 loaded: n,
 error: s,
 message: N
-  } = (0, g.a)(t), A = (0, c.p)(), v = (0, l.e7)([I.Z], () => null != N && I.Z.isBlockedForMessage(N), [N]), Z = (0, l.e7)([h.Z], () => h.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = E.cC.useSetting(), {
+  } = (0, g.a)(t), A = (0, d.p)(), v = (0, l.e7)([m.Z], () => null != N && m.Z.isBlockedForMessage(N), [N]), Z = (0, l.e7)([I.Z], () => I.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = E.cC.useSetting(), {
 content: O
-  } = a.useMemo(() => (null == N ? void 0 : N.content) != null && '' !== N.content ? (0, u.ZP)(N, {
+  } = a.useMemo(() => (null == N ? void 0 : N.content) != null && '' !== N.content ? (0, _.ZP)(N, {
 formatInline: !0,
 noStyleAndInteraction: !0,
 shouldFilterKeywords: A
@@ -56,7 +56,7 @@ else if (null != N) {
   let {
     contentPlaceholder: e,
     renderedContent: t
-  } = (0, _.f)(N, O, v, r()(f.messageContent, C.inlineFormat), {
+  } = (0, h.f)(N, O, v, r()(f.messageContent, C.inlineFormat), {
     leadingIconClass: f.messageContentIcon,
     trailingIconClass: f.messageContentIcon,
     iconSize: T.WW
@@ -82,8 +82,8 @@ else if (null != N) {
   });
   } else
 R = null;
-  return (0, i.jsx)(m.a.Provider, {
-value: (0, d.Z)(L, Z),
+  return (0, i.jsx)(c.a.Provider, {
+value: (0, u.Z)(L, Z),
 children: (0, i.jsx)(o.FocusBlock, {
   className: f.messageFocusBlock,
   children: R

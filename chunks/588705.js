@@ -8,15 +8,15 @@ var t = n(735250),
   l = n(442837),
   r = n(481060),
   i = n(388905),
-  u = n(925329),
-  o = n(372769),
-  c = n(726745),
-  m = n(973616),
-  d = n(131704),
-  I = n(601964),
-  N = n(598077),
-  _ = n(594174),
-  E = n(806519),
+  u = n(686546),
+  o = n(925329),
+  c = n(372769),
+  m = n(726745),
+  d = n(973616),
+  I = n(131704),
+  N = n(601964),
+  _ = n(598077),
+  E = n(594174),
   p = n(51144),
   x = n(981631),
   T = n(888592),
@@ -47,7 +47,7 @@ let {
   compact: l
 } = e;
 if (null != a)
-  return (0, t.jsx)(u.Z, {
+  return (0, t.jsx)(o.Z, {
     className: A.appIcon,
     game: a,
     size: A.appIconSize
@@ -59,8 +59,8 @@ if (null != n)
     className: l ? A.compactAvatar : A.avatar
   });
 if (null != s)
-  return (0, t.jsx)(E.ZP, {
-    mask: E.ZP.Masks.SQUIRCLE,
+  return (0, t.jsx)(u.ZP, {
+    mask: u.ZP.Masks.SQUIRCLE,
     width: 64,
     height: 64,
     className: A.guildIcon,
@@ -76,7 +76,7 @@ else
 s.Z = e => {
   var s;
   let n, a, u, {
-  invite: E,
+  invite: o,
   disableUser: S = !1,
   error: f,
   flatActivityCount: v = !1,
@@ -86,27 +86,27 @@ s.Z = e => {
   currentUser: R,
   multiAccounts: O
 } = (0, l.cj)([
-  c.Z,
-  _.default
+  m.Z,
+  E.default
 ], () => ({
-  currentUser: _.default.getCurrentUser(),
-  multiAccounts: c.Z.getUsers()
+  currentUser: E.default.getCurrentUser(),
+  multiAccounts: m.Z.getUsers()
 }));
-  if (null == E)
+  if (null == o)
 return null;
-  let D = null != E.guild ? new I.ZP(E.guild) : null,
-L = null != E.channel ? (0, d.jD)(E.channel) : null,
-Z = null != E.target_application ? new m.Z(E.target_application) : null,
-C = S || null == E.inviter ? null : new N.Z(E.inviter),
-b = !(null != E.approximate_member_count && E.approximate_member_count > 100 || null != D && D.hasFeature(x.oNc.COMMUNITY)) && null != C,
+  let D = null != o.guild ? new N.ZP(o.guild) : null,
+L = null != o.channel ? (0, I.jD)(o.channel) : null,
+Z = null != o.target_application ? new d.Z(o.target_application) : null,
+C = S || null == o.inviter ? null : new _.Z(o.inviter),
+b = !(null != o.approximate_member_count && o.approximate_member_count > 100 || null != D && D.hasFeature(x.oNc.COMMUNITY)) && null != C,
 V = null,
 B = !1;
   if (null != D)
 V = null == C ? j.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : j.Z.Messages.AUTH_MESSAGE_INVITED_BY.format({
   username: p.ZP.getFormattedName(C)
-}), E.target_type === g.Iq.STREAM && null != E.target_user && (V = j.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
-  username: p.ZP.getFormattedName(E.target_user)
-})), E.target_type === g.Iq.EMBEDDED_APPLICATION && null != E.target_application && (V = null != C ? j.Z.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
+}), o.target_type === g.Iq.STREAM && null != o.target_user && (V = j.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
+  username: p.ZP.getFormattedName(o.target_user)
+})), o.target_type === g.Iq.EMBEDDED_APPLICATION && null != o.target_application && (V = null != C ? j.Z.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
   username: p.ZP.getFormattedName(C)
 }) : j.Z.Messages.AUTH_MESSAGE_INVITED_TO_PLAY), b && null == Z && (n = (0, t.jsx)(i.Vj, {
   className: A.icon,
@@ -185,7 +185,7 @@ children: [
       (0, t.jsxs)(i.Dx, {
         className: A.title,
         children: [
-          null != D ? (0, t.jsx)(o.Z, {
+          null != D ? (0, t.jsx)(c.Z, {
             guild: D,
             className: A.guildBadge,
             tooltipPosition: 'left'
@@ -197,10 +197,10 @@ children: [
     ]
   }),
   u,
-  null != Z || B || (null == E ? void 0 : null === (s = E.guild) || void 0 === s ? void 0 : s.id) === T.fQ ? null : (0, t.jsx)(i.EJ, {
+  null != Z || B || (null == o ? void 0 : null === (s = o.guild) || void 0 === s ? void 0 : s.id) === T.fQ ? null : (0, t.jsx)(i.EJ, {
     className: A.activityCount,
-    online: E.approximate_presence_count,
-    total: E.approximate_member_count,
+    online: o.approximate_presence_count,
+    total: o.approximate_member_count,
     flat: v
   }),
   O.length > 1 ? (0, t.jsx)(i.jQ, {

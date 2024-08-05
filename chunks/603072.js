@@ -11,19 +11,19 @@ var l = t(735250),
   o = t(704215),
   c = t(692547),
   d = t(481060),
-  u = t(252618),
-  h = t(605236),
-  m = t(473403),
-  _ = t(984370),
-  f = t(216306),
-  C = t(104155),
-  p = t(22082),
-  x = t(703656),
-  g = t(433355),
-  N = t(592125),
-  I = t(430824),
-  b = t(944486),
-  E = t(514342),
+  u = t(111028),
+  h = t(252618),
+  m = t(605236),
+  _ = t(473403),
+  f = t(984370),
+  C = t(216306),
+  p = t(104155),
+  x = t(22082),
+  g = t(703656),
+  N = t(433355),
+  I = t(592125),
+  b = t(430824),
+  E = t(944486),
   Z = t(31445),
   v = t(59350),
   T = t(290511),
@@ -39,7 +39,7 @@ guild: n,
 previousChannel: t
   } = e, i = (0, Z.Z)(n);
   a.useEffect(() => {
-(0, h.EW)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX, {
+(0, m.EW)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX, {
   dismissAction: S.L.DISMISS
 });
   });
@@ -49,9 +49,9 @@ previousChannel: t
   guildName: n.name
 }),
 s = i ? R.Z.Messages.CHANNELS_AND_ROLES : R.Z.Messages.CHANNEL_BROWSER_TITLE;
-  return (0, u.Tt)({
+  return (0, h.Tt)({
 location: r
-  }), (0, l.jsxs)(_.Z, {
+  }), (0, l.jsxs)(f.Z, {
 className: A.header,
 innerClassname: A.innerHeader,
 hideSearch: !0,
@@ -63,7 +63,7 @@ toolbar: null != t ? (0, l.jsx)(d.Button, {
   look: d.Button.Looks.OUTLINED,
   color: d.Button.Colors.PRIMARY,
   onClick: () => {
-    null != t && (0, x.XU)(n.id, t.id);
+    null != t && (0, g.XU)(n.id, t.id);
   },
   children: (0, l.jsx)(d.Text, {
     className: A.returnButtonText,
@@ -72,12 +72,12 @@ toolbar: null != t ? (0, l.jsx)(d.Button, {
     children: R.Z.Messages.RETURN_TO_CHANNEL.format({
       channelNameHook: () => null == t ? null : (0, l.jsxs)(a.Fragment, {
         children: [
-          (0, l.jsx)(m._, {
+          (0, l.jsx)(_._, {
             className: A.returnIcon,
             guild: n,
             channel: t
           }),
-          (0, l.jsx)(E.Z, {
+          (0, l.jsx)(u.Z, {
             children: (0, l.jsx)(d.Text, {
               variant: 'text-xs/medium',
               color: 'none',
@@ -90,11 +90,11 @@ toolbar: null != t ? (0, l.jsx)(d.Button, {
   })
 }) : [],
 children: [
-  (0, l.jsx)(_.Z.Icon, {
+  (0, l.jsx)(f.Z.Icon, {
     icon: d.ChannelListMagnifyingGlassIcon,
     'aria-hidden': !0
   }),
-  (0, l.jsx)(_.Z.Title, {
+  (0, l.jsx)(f.Z.Title, {
     children: s
   })
 ]
@@ -105,26 +105,26 @@ function L(e) {
   let {
 guildId: n,
 selectedSection: t
-  } = e, i = (0, s.e7)([I.Z], () => I.Z.getGuild(n)), o = (0, Z.Z)(i), [u, h] = a.useState(null != t ? t : T.l7.CUSTOMIZE);
+  } = e, i = (0, s.e7)([b.Z], () => b.Z.getGuild(n)), o = (0, Z.Z)(i), [u, h] = a.useState(null != t ? t : T.l7.CUSTOMIZE);
   a.useEffect(() => {
 null != t && h(t);
   }, [t]);
-  let m = (0, s.e7)([b.Z], () => b.Z.getLastSelectedChannelId(n)),
-_ = (0, s.e7)([g.ZP], () => g.ZP.getCurrentSidebarChannelId(j.oC.CHANNEL_BROWSER)),
-x = null != _ && u === T.l7.BROWSE,
-E = (0, s.e7)([N.Z], () => N.Z.getChannel(m)),
-S = (0, s.e7)([p.Z], () => p.Z.getNewChannelIds(n).size > 0),
-L = (0, f.fU)(n);
+  let m = (0, s.e7)([E.Z], () => E.Z.getLastSelectedChannelId(n)),
+_ = (0, s.e7)([N.ZP], () => N.ZP.getCurrentSidebarChannelId(j.oC.CHANNEL_BROWSER)),
+f = null != _ && u === T.l7.BROWSE,
+g = (0, s.e7)([I.Z], () => I.Z.getChannel(m)),
+S = (0, s.e7)([x.Z], () => x.Z.getNewChannelIds(n).size > 0),
+L = (0, C.fU)(n);
   return null == i ? null : (0, l.jsxs)(l.Fragment, {
 children: [
   (0, l.jsxs)('div', {
     className: r()(O.chat, {
-      [O.threadSidebarOpen]: x
+      [O.threadSidebarOpen]: f
     }),
     children: [
       (0, l.jsx)(B, {
         guild: i,
-        previousChannel: E
+        previousChannel: g
       }),
       (0, l.jsxs)('div', {
         className: r()(O.content, A.container),
@@ -167,7 +167,7 @@ children: [
                 });
               case T.l7.BROWSE:
               default:
-                return (0, l.jsx)(C.Z, {
+                return (0, l.jsx)(p.Z, {
                   guildId: n
                 });
             }
@@ -176,7 +176,7 @@ children: [
       })
     ]
   }),
-  x && (0, l.jsx)(C.I, {
+  f && (0, l.jsx)(p.I, {
     channelId: _
   })
 ]

@@ -6,8 +6,8 @@ return l;
 var n = t(735250);
 t(470079);
 var s = t(481060),
-  o = t(468706),
-  r = t(153124),
+  o = t(313201),
+  r = t(468706),
   i = t(689938),
   d = t(338407);
 
@@ -17,7 +17,7 @@ channelId: a,
 messageId: t,
 onClose: l,
 transitionState: c
-  } = e, _ = (0, r.Dt)();
+  } = e, _ = (0, o.Dt)();
   return (0, n.jsx)(s.ModalRoot, {
 transitionState: c,
 'aria-labelledby': _,
@@ -53,7 +53,7 @@ children: (0, n.jsxs)(s.ModalContent, {
           color: 'header-secondary',
           children: i.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE.format({
             handleFalsePositiveHook: () => {
-              l(), (0, o.e)(a, t);
+              l(), (0, r.e)(a, t);
             }
           })
         })

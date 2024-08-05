@@ -17,9 +17,9 @@ var a = n(735250),
   m = n(565384),
   p = n(906732),
   x = n(835473),
-  I = n(592125),
-  f = n(451478),
-  _ = n(285952),
+  I = n(600164),
+  f = n(592125),
+  _ = n(451478),
   h = n(626135),
   C = n(585483),
   T = n(624138),
@@ -46,13 +46,13 @@ guildId: n,
 locationObject: l,
 onClose: c,
 initialSelectedApplicationId: g,
-initialSlide: f = A.ag.DIRECTORY,
+initialSlide: _ = A.ag.DIRECTORY,
 enableSelectedTextChannelInvite: T,
 analyticsLocations: B,
 ...R
   } = e, k = (0, o.e7)([E.Z], () => E.Z.getIsEnabled(), []), {
 analyticsLocations: P
-  } = (0, p.ZP)(B), [F, Y] = i.useState(f), w = (0, u.Z)(F), [U, G] = i.useState(null), [W, z] = i.useState(g), [q, J] = i.useState(void 0), [K] = (0, x.Z)(null == W ? [] : [W]), X = i.useRef(null), $ = i.useMemo(() => ({
+  } = (0, p.ZP)(B), [F, Y] = i.useState(_), w = (0, u.Z)(F), [U, G] = i.useState(null), [W, z] = i.useState(g), [q, J] = i.useState(void 0), [K] = (0, x.Z)(null == W ? [] : [W]), X = i.useRef(null), $ = i.useMemo(() => ({
 application_id: W,
 source_section: l.section,
 impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW
@@ -129,7 +129,7 @@ let e = {
     guild_id: n,
     location: (0, m.k$)(),
     ...(0, v.hH)(n),
-    ...(0, v.v_)(I.Z.getChannel(null == t ? void 0 : t.id)),
+    ...(0, v.v_)(f.Z.getChannel(null == t ? void 0 : t.id)),
     ...$,
     ...e
   };
@@ -157,7 +157,7 @@ children: (0, a.jsxs)(d.ModalRoot, {
     }),
     (0, a.jsxs)(d.ModalHeader, {
       separator: !1,
-      justify: _.Z.Justify.BETWEEN,
+      justify: I.Z.Justify.BETWEEN,
       className: s()(D.modalHeader),
       children: [
         (0, a.jsxs)('div', {
@@ -321,7 +321,7 @@ let H = e => {
   let {
 children: t,
 slide: n
-  } = e, l = (0, o.e7)([E.Z], () => E.Z.getIsEnabled(), []), r = i.useContext(g.ZP), c = (0, o.e7)([f.Z], () => f.Z.windowSize(r.windowId).height, [r.windowId]);
+  } = e, l = (0, o.e7)([E.Z], () => E.Z.getIsEnabled(), []), r = i.useContext(g.ZP), c = (0, o.e7)([_.Z], () => _.Z.windowSize(r.windowId).height, [r.windowId]);
   return (0, a.jsx)('div', {
 className: s()(D.slideContentOuterContainerSquished, {
   [D.slideContentOuterContainerSquishedWithDev]: n === A.ag.DIRECTORY && l,

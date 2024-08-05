@@ -5,8 +5,8 @@ var i, a, s, r, l = n(442837),
   d = n(650774),
   u = n(430824),
   _ = n(496675),
-  E = n(135899),
-  h = n(981631);
+  h = n(135899),
+  E = n(981631);
 let I = 'publicUpsellChannelNoticeGuilds',
   m = new Set();
 class g extends(i = l.ZP.Store) {
@@ -16,13 +16,13 @@ this.waitFor(_.Z, u.Z, d.Z), this.syncWith([
   _.Z,
   u.Z,
   d.Z
-], h.dG4), m = (e = new Set(o.K.get(I)), e);
+], E.dG4), m = (e = new Set(o.K.get(I)), e);
   }
   isVisible(e) {
 if (null == e)
   return;
 let t = d.Z.getMemberCount(e.id);
-return !m.has(e.id) && null != t && t >= E.U3 && _.Z.can(h.Plq.ADMINISTRATOR, e) && !e.hasFeature(h.oNc.COMMUNITY);
+return !m.has(e.id) && null != t && t >= h.U3 && _.Z.can(E.Plq.ADMINISTRATOR, e) && !e.hasFeature(E.oNc.COMMUNITY);
   }
 }
 r = 'EnablePublicGuildUpsellNoticeStore', (s = 'displayName') in(a = g) ? Object.defineProperty(a, s, {

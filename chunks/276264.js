@@ -13,15 +13,15 @@ var r = n(735250),
   c = n(385499),
   d = n(693728),
   _ = n(979264),
-  E = n(33934),
-  f = n(736144),
-  h = n(113434),
-  p = n(918701),
-  m = n(553393),
-  I = n(204197),
-  T = n(594174),
-  g = n(709586),
-  S = n(360048),
+  E = n(554300),
+  f = n(33934),
+  h = n(736144),
+  p = n(113434),
+  m = n(918701),
+  I = n(553393),
+  T = n(204197),
+  g = n(594174),
+  S = n(709586),
   A = n(624138),
   N = n(51144),
   v = n(788307),
@@ -66,11 +66,11 @@ onFocus: Q,
 id: et,
 tabIndex: en,
 itemProps: er
-  } = e, ei = null == U ? void 0 : U.id, ea = N.ZP.useName(U), es = (null === (t = T.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === ei, eo = i.useRef(null), [el, eu] = i.useState(!1), [ec, ed] = i.useState(null), {
+  } = e, ei = null == U ? void 0 : U.id, ea = N.ZP.useName(U), es = (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === ei, eo = i.useRef(null), [el, eu] = i.useState(!1), [ec, ed] = i.useState(null), {
 avatarDecorationSrc: e_,
 avatarSrc: eE,
 eventHandlers: ef
-  } = (0, I.Z)({
+  } = (0, T.Z)({
 user: U,
 size: l.AvatarSizes.SIZE_32,
 animateOnHover: !(n || el),
@@ -82,8 +82,8 @@ tagUserId: ei
   i.useEffect(() => {
 n && em(!1);
   }, [n]);
-  let eI = (0, h.Fr)(x),
-eT = null != eI && !es && n && !ep && (0, p.dl)(eI),
+  let eI = (0, p.Fr)(x),
+eT = null != eI && !es && n && !ep && (0, m.dl)(eI),
 eg = () => {
   eu(!0);
 },
@@ -95,7 +95,7 @@ eA = e => {
 },
 eN = () => {
   let e = null != x ? x.find(e => e.type === O.IIU.CUSTOM_STATUS) : null,
-    t = null != e && null != U && (0, E.Z)(e, U, H);
+    t = null != e && null != U && (0, f.Z)(e, U, H);
   return (0, r.jsx)(v.Z, {
     className: D.activity,
     textClassName: D.activityText,
@@ -106,7 +106,7 @@ eN = () => {
     hideEmoji: !t,
     hideTooltip: !0,
     user: U,
-    hasQuest: null != eI && (0, p.dl)(eI)
+    hasQuest: null != eI && (0, m.dl)(eI)
   });
 },
 ev = () => null != A && A && null == b ? (0, r.jsx)(l.Tooltip, {
@@ -125,7 +125,7 @@ eO = () => null == V ? null : (0, r.jsx)(l.Tooltip, {
   children: e => (0, r.jsx)(l.Clickable, {
     onClick: q,
     tabIndex: -1,
-    children: (0, r.jsx)(g.Z, {
+    children: (0, r.jsx)(S.Z, {
       ...e,
       className: D.premiumIcon
     })
@@ -163,7 +163,7 @@ ey = (e, t) => {
         avatarDecoration: e_,
         typingIndicatorRef: eA
       }),
-      (0, r.jsx)(f.Z, {
+      (0, r.jsx)(h.Z, {
         confettiSpawnRef: ec,
         shouldFire: M && null != w && e.id !== w.id,
         confettiLocation: C.Hn.MEMBER_USER
@@ -194,7 +194,7 @@ eL = k === O.Skl.OFFLINE;
 avatarSize: l.AvatarSizes.SIZE_32,
 className: D.placeholder
   }) : (0, r.jsx)(l.Popout, {
-renderPopout: e => (0, r.jsx)(m.Z, {
+renderPopout: e => (0, r.jsx)(I.Z, {
   quest: eI,
   memberListItemRef: eo,
   applicationStream: G,
@@ -207,7 +207,7 @@ nudgeAlignIntoViewport: !1,
 useRawTargetDimensions: !0,
 animation: l.Popout.Animation.NONE,
 spacing: -3,
-children: () => (0, r.jsx)(S.Z, {
+children: () => (0, r.jsx)(E.Z, {
   ref: eo,
   selected: n,
   className: s()(D.member, Y, {

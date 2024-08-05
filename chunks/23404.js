@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(210887),
   u = n(617136),
   _ = n(272008),
-  E = n(113434),
-  h = n(569984),
+  h = n(113434),
+  E = n(569984),
   I = n(497505),
   m = n(918701),
   g = n(585500),
@@ -30,7 +30,7 @@ function R(e) {
   var t;
   let {
 quest: n
-  } = e, a = (0, E.B6)(n.config.expiresAt), s = (0, E.B6)(p.r.build(n.config).rewardsExpireAt), r = (0, l.e7)([d.Z], () => d.Z.getState().theme), u = (0, o.w)(r) ? Z.BRd.DARK : Z.BRd.LIGHT, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+  } = e, a = (0, h.B6)(n.config.expiresAt), s = (0, h.B6)(p.r.build(n.config).rewardsExpireAt), r = (0, l.e7)([d.Z], () => d.Z.getState().theme), u = (0, o.w)(r) ? Z.BRd.DARK : Z.BRd.LIGHT, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, i.jsxs)('div', {
 className: O.heading,
 children: [
@@ -67,7 +67,7 @@ t.Z = function(e) {
   var t, n, s;
   let {
 quest: o
-  } = e, d = (0, l.e7)([h.Z], () => h.Z.isEnrolling(o.id), [o]), [p, Z] = a.useState(!1), x = a.useCallback(() => Z(!0), []), b = a.useCallback(() => Z(!1), []), P = a.useCallback(e => {
+  } = e, d = (0, l.e7)([E.Z], () => E.Z.isEnrolling(o.id), [o]), [p, Z] = a.useState(!1), x = a.useCallback(() => Z(!0), []), b = a.useCallback(() => Z(!1), []), P = a.useCallback(e => {
 e.stopPropagation();
   }, []), M = a.useCallback(() => {
 (0, _.AH)(o.id, {
@@ -89,7 +89,7 @@ null != o && ((0, u._3)({
   }, [o]), j = (0, C.hf)({
 quest: o,
 location: I.jn.ACTIVITY_PANEL
-  }), U = (0, E.tP)(o), G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, w = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null, B = (null == o ? void 0 : o.userStatus) == null || (0, m.zE)(o.userStatus, I.jn.ACTIVITY_PANEL), H = (0, E.Rf)(o), V = (0, g.D)({
+  }), U = (0, h.tP)(o), G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, w = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null, B = (null == o ? void 0 : o.userStatus) == null || (0, m.zE)(o.userStatus, I.jn.ACTIVITY_PANEL), H = (0, h.Rf)(o), V = (0, g.D)({
 quest: o,
 taskDetails: H,
 location: v.dr.ACTIVITY_PANEL,

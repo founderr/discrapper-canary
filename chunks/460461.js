@@ -15,11 +15,11 @@ var s = n(735250),
   _ = n(150192),
   I = n(688465),
   E = n(970061),
-  T = n(134432),
-  m = n(813197),
-  N = n(208567),
-  S = n(496675),
-  h = n(987134),
+  T = n(285888),
+  m = n(134432),
+  N = n(813197),
+  S = n(208567),
+  h = n(496675),
   g = n(768581),
   C = n(63063),
   x = n(434404),
@@ -80,8 +80,8 @@ a.useEffect(() => {
 ]);
 let {
   canManageGuild: j
-} = (0, i.cj)([S.Z], () => ({
-  canManageGuild: S.Z.can(L.Plq.MANAGE_GUILD, n)
+} = (0, i.cj)([h.Z], () => ({
+  canManageGuild: h.Z.can(L.Plq.MANAGE_GUILD, n)
 })), Z = (0, i.e7)([p.Z], () => p.Z.isGuildMetadataLoaded()), b = (0, i.e7)([p.Z], () => null != n ? p.Z.getMetadata() : null), U = (0, i.e7)([p.Z], () => null != n && (null == b ? void 0 : b.isPublished) ? p.Z.getSlug() : null), [G, P] = a.useState([!0]), [B, y] = a.useState(!0), [F, w] = a.useState([!1]), [k, H] = a.useState(['']), V = e => {
   let t = Object.entries(O.zo).filter(e => !k.includes(e[1].presentation)).map(e => ({
     label: e[1].presentation,
@@ -324,7 +324,7 @@ return (0, s.jsx)('div', {
                               })
                             ]
                           }),
-                          (0, s.jsx)(h.Z, {
+                          (0, s.jsx)(T.Z, {
                             value: b.primaryCategoryId === O.o3 ? null : null == b ? void 0 : b.primaryCategoryId,
                             placeholder: A.Z.Messages.SELECT,
                             options: er,
@@ -382,7 +382,7 @@ return (0, s.jsx)('div', {
                                     color: l.Button.Colors.PRIMARY,
                                     children: [
                                       A.Z.Messages.UPLOAD_BACKGROUND,
-                                      (0, s.jsx)(m.ZP, {
+                                      (0, s.jsx)(N.ZP, {
                                         disabled: !j,
                                         onChange: K
                                       })
@@ -390,12 +390,12 @@ return (0, s.jsx)('div', {
                                   })
                                 ]
                               }),
-                              (0, s.jsx)(N.Z, {
+                              (0, s.jsx)(S.Z, {
                                 image: n.discoverySplash,
                                 makeURL: e => g.ZP.getGuildDiscoverySplashURL({
                                   id: n.id,
                                   splash: e,
-                                  size: 512 * (0, T.x_)()
+                                  size: 512 * (0, m.x_)()
                                 }),
                                 disabled: !j,
                                 onChange: K,

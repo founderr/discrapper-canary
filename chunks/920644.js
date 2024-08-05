@@ -1,31 +1,31 @@
 n.d(t, {
   Z: function() {
-return h;
+return E;
   }
 });
 var i = n(735250);
 n(470079);
 var a = n(990547),
   s = n(481060),
-  r = n(703656),
-  l = n(153124),
+  r = n(313201),
+  l = n(703656),
   o = n(63063),
   c = n(758119),
   d = n(981631),
   u = n(689938),
   _ = n(100102);
 
-function E() {
-  (0, c.qV)(), (0, r.uL)(d.Z5c.LOGIN);
+function h() {
+  (0, c.qV)(), (0, l.uL)(d.Z5c.LOGIN);
 }
 
-function h(e) {
+function E(e) {
   let {
 underageMessage: t,
-transitionState: r
-  } = e, c = (0, l.Dt)();
+transitionState: l
+  } = e, c = (0, r.Dt)();
   return (0, i.jsxs)(s.ModalRoot, {
-transitionState: r,
+transitionState: l,
 size: s.ModalSize.SMALL,
 'aria-labelledby': c,
 impression: {
@@ -74,7 +74,7 @@ children: [
     children: (0, i.jsx)(s.Button, {
       size: s.ButtonSizes.SMALL,
       fullWidth: !0,
-      onClick: E,
+      onClick: h,
       children: u.Z.Messages.AGE_GATE_UNDERAGE_BACK_TO_LOGIN
     })
   })

@@ -9,12 +9,12 @@ var s = n(735250),
   l = n.n(o),
   r = n(481060),
   i = n(110924),
-  E = n(572539),
-  u = n(111810),
-  c = n(285952),
-  d = n(153124),
-  _ = n(863840),
-  b = n(154921),
+  E = n(600164),
+  u = n(112831),
+  c = n(313201),
+  d = n(237617),
+  _ = n(572539),
+  b = n(111810),
   I = n(63063),
   C = n(957115),
   f = n(531578),
@@ -45,7 +45,7 @@ onSubmit: D,
 onClose: h,
 canDismissForever: S = !0,
 showHelpdeskLink: Z = !0
-  } = e, p = (0, i.Z)(o), [B, M] = a.useState(!1), [R, O] = a.useState(null), [j, g] = a.useState(l().shuffle(o)), [U, v] = a.useState(''), V = (0, d.Dt)(), F = (0, _.Z)(B), G = (0, _.Z)(R), k = (0, _.Z)(D), K = (0, _.Z)(U), y = null != R && L.includes(R);
+  } = e, p = (0, i.Z)(o), [B, M] = a.useState(!1), [R, O] = a.useState(null), [j, g] = a.useState(l().shuffle(o)), [U, v] = a.useState(''), V = (0, c.Dt)(), F = (0, d.Z)(B), G = (0, d.Z)(R), k = (0, d.Z)(D), K = (0, d.Z)(U), y = null != R && L.includes(R);
   return a.useEffect(() => {
 !l().isEqual(p, o) && g((0, C.B)(o, T));
   }, [
@@ -63,16 +63,16 @@ transitionState: I,
 className: A.__invalid_modalRoot,
 'aria-labelledby': V,
 children: [
-  (0, s.jsx)(u.Z, {}),
+  (0, s.jsx)(b.Z, {}),
   (0, s.jsxs)(r.ModalHeader, {
     separator: !1,
     className: A.headerContainer,
     children: [
-      (0, s.jsx)(b.Z, {
+      (0, s.jsx)(u.Z, {
         id: V,
         className: A.header,
-        color: b.Z.Colors.CUSTOM,
-        size: b.Z.Sizes.SIZE_24,
+        color: u.Z.Colors.CUSTOM,
+        size: u.Z.Sizes.SIZE_24,
         children: t
       }),
       (0, s.jsx)(r.Text, {
@@ -92,7 +92,7 @@ children: [
     children: [
       y ? null : (0, s.jsx)(r.FormItem, {
         className: A.problemInfo,
-        children: (0, s.jsx)(E.Z, {
+        children: (0, s.jsx)(_.Z, {
           options: j,
           onClick: function(e) {
             let {
@@ -118,7 +118,7 @@ children: [
   }),
   S || y ? (0, s.jsx)(r.ModalFooter, {
     className: A.footer,
-    direction: c.Z.Direction.HORIZONTAL,
+    direction: E.Z.Direction.HORIZONTAL,
     children: y ? (0, s.jsxs)(s.Fragment, {
       children: [
         (0, s.jsx)(r.Button, {

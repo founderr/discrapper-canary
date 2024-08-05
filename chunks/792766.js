@@ -8,12 +8,12 @@ var i = n(735250),
   s = n(120356),
   l = n.n(s),
   a = n(481060),
-  o = n(565138),
-  u = n(601964),
-  d = n(598077),
-  c = n(727218),
-  _ = n(154921),
-  E = n(806519),
+  o = n(528144),
+  u = n(112831),
+  d = n(686546),
+  c = n(565138),
+  _ = n(601964),
+  E = n(598077),
   h = n(689938),
   p = n(248188);
 let f = e => {
@@ -22,7 +22,7 @@ let {
   speaker: n,
   guildId: r,
   isEmbed: s
-} = e, l = new d.Z(n.user);
+} = e, l = new E.Z(n.user);
 return (0, i.jsxs)('div', {
   className: p.speaker,
   children: [
@@ -32,9 +32,9 @@ return (0, i.jsxs)('div', {
       'aria-label': ''.concat(n.nick, '-avatar'),
       className: s ? null : p.avatar
     }),
-    (0, i.jsx)(_.Z, {
-      size: s ? _.Z.Sizes.SIZE_12 : _.Z.Sizes.SIZE_14,
-      color: _.Z.Colors.HEADER_SECONDARY,
+    (0, i.jsx)(u.Z, {
+      size: s ? u.Z.Sizes.SIZE_12 : u.Z.Sizes.SIZE_14,
+      color: u.Z.Colors.HEADER_SECONDARY,
       className: p.username,
       children: null !== (t = n.nick) && void 0 !== t ? t : l.username
     })
@@ -48,14 +48,14 @@ let {
 } = e;
 if (null == t)
   return null;
-let r = new u.ZP(t),
+let r = new _.ZP(t),
   {
     name: s,
     description: l
   } = r;
 return (0, i.jsxs)('div', {
   children: [
-    (0, i.jsx)(c.Z, {
+    (0, i.jsx)(o.Z, {
       muted: !0,
       uppercase: !0,
       className: p.alignStart,
@@ -64,13 +64,13 @@ return (0, i.jsxs)('div', {
     (0, i.jsxs)('div', {
       className: p.guild,
       children: [
-        (0, i.jsx)(E.ZP, {
-          mask: E.ZP.Masks.SQUIRCLE,
+        (0, i.jsx)(d.ZP, {
+          mask: d.ZP.Masks.SQUIRCLE,
           width: 40,
           height: 40,
-          children: (0, i.jsx)(o.Z, {
+          children: (0, i.jsx)(c.Z, {
             guild: r,
-            size: o.Z.Sizes.MEDIUM,
+            size: c.Z.Sizes.MEDIUM,
             active: !0
           })
         }),
@@ -113,10 +113,10 @@ t.Z = e => {
   let {
 stageInstance: n,
 guild: s,
-isCard: d = !1,
+isCard: E = !1,
 isEmbed: S = !1,
 onClick: m
-  } = e, I = r.useMemo(() => null == s ? null : s instanceof u.ZP ? s : new u.ZP(s), [s]);
+  } = e, I = r.useMemo(() => null == s ? null : s instanceof _.ZP ? s : new _.ZP(s), [s]);
   if (null == n || null == I)
 return null;
   let {
@@ -170,13 +170,13 @@ children: [
       [p.embed]: S
     }),
     children: [
-      (0, i.jsx)(E.ZP, {
-        mask: E.ZP.Masks.SQUIRCLE,
+      (0, i.jsx)(d.ZP, {
+        mask: d.ZP.Masks.SQUIRCLE,
         width: 20,
         height: 20,
-        children: (0, i.jsx)(o.Z, {
+        children: (0, i.jsx)(c.Z, {
           guild: I,
-          size: o.Z.Sizes.MINI,
+          size: c.Z.Sizes.MINI,
           active: !0
         })
       }),
@@ -188,8 +188,8 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(c.Z, {
-    size: d || S ? c.Z.Sizes.SIZE_16 : c.Z.Sizes.SIZE_20,
+  (0, i.jsx)(o.Z, {
+    size: E || S ? o.Z.Sizes.SIZE_16 : o.Z.Sizes.SIZE_20,
     className: l()(p.header, {
       [p.embed]: S
     }),
@@ -222,9 +222,9 @@ children: [
                   className: p.listeners
                 })
               }),
-              (0, i.jsxs)(_.Z, {
-                size: S ? _.Z.Sizes.SIZE_12 : _.Z.Sizes.SIZE_14,
-                color: _.Z.Colors.HEADER_SECONDARY,
+              (0, i.jsxs)(u.Z, {
+                size: S ? u.Z.Sizes.SIZE_12 : u.Z.Sizes.SIZE_14,
+                color: u.Z.Colors.HEADER_SECONDARY,
                 children: [
                   '+',
                   h.Z.Messages.STAGE_INVITE_SPEAKER_COUNT.format({

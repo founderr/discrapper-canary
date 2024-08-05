@@ -3,8 +3,8 @@ n(470079);
 var a = n(120356),
   s = n.n(a),
   r = n(44315),
-  l = n(285952),
-  o = n(441996),
+  l = n(600164),
+  o = n(120998),
   c = n(353042),
   d = n(689938),
   u = n(359483);
@@ -14,10 +14,10 @@ t.Z = function(e) {
 title: n,
 className: a,
 color: _,
-animate: E,
-gradientStopColor: h,
+animate: h,
+gradientStopColor: E,
 getHistoricalTotalBytes: I
-  } = e, m = (0, r.Sl)(_).hex, g = null === (t = (0, r.Sl)(h)) || void 0 === t ? void 0 : t.hex;
+  } = e, m = (0, r.Sl)(_).hex, g = null === (t = (0, r.Sl)(E)) || void 0 === t ? void 0 : t.hex;
   return (0, i.jsx)(c.Z, {
 getHistoricalTotalBytes: I,
 children: (e, t, r) => {
@@ -55,7 +55,7 @@ children: (e, t, r) => {
             color: m,
             gradientStopColor: g,
             numUpdatesToShow: r,
-            animate: E,
+            animate: h,
             pixelWidth: 600,
             pixelHeight: 48,
             lineWidth: 4

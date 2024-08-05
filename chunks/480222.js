@@ -25,7 +25,7 @@ let e = e => {
 };
 return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
   }, [_]);
-  let E = (0, r.useSpring)({
+  let h = (0, r.useSpring)({
 from: {
   opacity: 0
 },
@@ -49,8 +49,8 @@ children: [
   }),
   (0, i.jsx)(s.animated.div, {
     style: {
-      opacity: E.opacity,
-      transform: E.opacity.to([
+      opacity: h.opacity,
+      transform: h.opacity.to([
         0,
         1
       ], [

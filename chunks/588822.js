@@ -10,8 +10,8 @@ var r = n(735250),
   o = n(481060),
   l = n(40966),
   u = n(580552),
-  c = n(240991),
-  d = n(278297),
+  c = n(249458),
+  d = n(240991),
   _ = n(153521);
 
 function E(e) {
@@ -24,7 +24,7 @@ lineClamp: f = 6,
 setLineClamp: h = !0,
 textColor: p,
 userId: m
-  } = e, I = i.useMemo(() => (0, u.Z)(m) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, c.YP)(t), [
+  } = e, I = i.useMemo(() => (0, u.Z)(m) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.YP)(t), [
 m,
 t
   ]);
@@ -34,7 +34,7 @@ children: (0, r.jsx)(o.Text, {
   variant: 'text-sm/normal',
   lineClamp: h ? f : void 0,
   color: void 0 !== p ? p : void 0,
-  children: (0, r.jsx)(d.G.Provider, {
+  children: (0, r.jsx)(c.G.Provider, {
     value: {
       disableAnimations: a && !E,
       disableInteractions: !1

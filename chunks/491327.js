@@ -9,8 +9,8 @@ var i = n(392711),
   d = n(592125),
   u = n(430824),
   _ = n(496675),
-  E = n(944486),
-  h = n(979651),
+  h = n(944486),
+  E = n(979651),
   I = n(934415),
   m = n(996106),
   g = n(914946),
@@ -118,7 +118,7 @@ handler(e) {
   } = e;
   if (!i)
     return l.default.selectVoiceChannel(null), null;
-  let p = E.Z.getVoiceChannelId();
+  let p = h.Z.getVoiceChannelId();
   if (null != p && p !== i && !1 === s)
     throw new m.Z({
       errorCode: f.lTL.SELECT_VOICE_FORCE_REQUIRED
@@ -143,7 +143,7 @@ handler(e) {
   }).then(e => {
     let [t, n] = e;
     if (n.guild_id) {
-      if ((0, I.rY)(t, h.Z, u.Z))
+      if ((0, I.rY)(t, E.Z, u.Z))
         throw new m.Z({
           errorCode: f.lTL.INVALID_CHANNEL
         }, 'Channel is full');
@@ -166,7 +166,7 @@ scope: {
 handler(e) {
   let {
     socket: t
-  } = e, n = E.Z.getVoiceChannelId(), i = null != n ? d.Z.getChannel(n) : null;
+  } = e, n = h.Z.getVoiceChannelId(), i = null != n ? d.Z.getChannel(n) : null;
   return null != i ? (0, g.T5)(i, (0, g.zM)(i, t.application.id, t.authorization.scopes)) : null;
 }
   },

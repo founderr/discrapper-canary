@@ -3,8 +3,8 @@ a(470079);
 var r = a(120356),
   i = a.n(r),
   n = a(481060),
-  l = a(450474),
-  o = a(987134),
+  l = a(285888),
+  o = a(450474),
   c = a(296386),
   d = a(150192),
   E = a(731455),
@@ -60,7 +60,7 @@ children: [
         className: _.description,
         children: S.Z.Messages.SERVER_DISCOVERY_CATEGORY_INPUT_SUBLABEL
       }),
-      (0, t.jsx)(o.Z, {
+      (0, t.jsx)(l.Z, {
         value: a.primaryCategoryId === E.o3 ? null : a.primaryCategoryId,
         placeholder: S.Z.Messages.SELECT,
         searchable: !0,
@@ -85,10 +85,10 @@ children: [
         className: _.description,
         children: S.Z.Messages.SERVER_DISCOVERY_SUBCATEGORY_INPUT_SUBLABEL
       }),
-      (0, t.jsx)(l.Z, {
+      (0, t.jsx)(o.Z, {
         guild: s,
         guildMetadata: a,
-        menuPlacement: o.Z.MenuPlacements.TOP
+        menuPlacement: l.Z.MenuPlacements.TOP
       })
     ]
   })

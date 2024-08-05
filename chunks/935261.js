@@ -14,17 +14,17 @@ var a = n(120356),
   d = n(639351),
   u = n(565473),
   _ = n(927923),
-  E = n(689938),
-  h = n(127563);
+  h = n(689938),
+  E = n(127563);
 
 function I(e) {
   let {
 platform: t
   } = e;
   return t === _.YE.XBOX ? (0, i.jsx)(d.Z, {
-className: h.icon
+className: E.icon
   }) : t === _.YE.PLAYSTATION ? (0, i.jsx)(c.Z, {
-className: h.icon
+className: E.icon
   }) : null;
 }
 
@@ -39,9 +39,9 @@ return null === (e = o.Z.getSessionById(null !== (n = null == t ? void 0 : t.ses
   if (null == d || !_.al.has(d))
 return null;
   let m = null != n,
-g = m ? d === _.YE.XBOX ? E.Z.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.Z.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === _.YE.XBOX ? E.Z.Messages.XBOX_REMOTE_CONNECTED.format() : E.Z.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
+g = m ? d === _.YE.XBOX ? h.Z.Messages.XBOX_TRANSFERRING_ELLIPSIS : h.Z.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === _.YE.XBOX ? h.Z.Messages.XBOX_REMOTE_CONNECTED.format() : h.Z.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
   return (0, i.jsxs)('div', {
-className: s()(h.root, m ? h.connecting : h.connected),
+className: s()(E.root, m ? E.connecting : E.connected),
 children: [
   (0, i.jsx)(I, {
     platform: d

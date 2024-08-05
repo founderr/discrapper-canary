@@ -12,11 +12,11 @@ var n = a(735250),
   _ = a(481060),
   l = a(493683),
   i = a(881052),
-  d = a(565138),
-  T = a(984933),
-  M = a(430824),
-  L = a(285952),
-  r = a(153124),
+  d = a(600164),
+  T = a(313201),
+  M = a(565138),
+  L = a(984933),
+  r = a(430824),
   o = a(689938),
   C = a(966610);
 
@@ -27,7 +27,7 @@ hasFooter: a = !0,
 onClose: A,
 onChannelPromptCompleted: I,
 isSlideReady: c
-  } = e, [N, G] = E.useState(''), [u, U] = E.useState(null), [m, O] = E.useState(!1), D = (0, r.Dt)(), p = (0, t.e7)([M.Z], () => M.Z.getGuild(s), [s]), g = E.useRef(null);
+  } = e, [N, G] = E.useState(''), [u, U] = E.useState(null), [m, O] = E.useState(!1), D = (0, T.Dt)(), p = (0, t.e7)([r.Z], () => r.Z.getGuild(s), [s]), g = E.useRef(null);
   E.useEffect(() => {
 var e;
 c && (null === (e = g.current) || void 0 === e || e.focus());
@@ -36,7 +36,7 @@ c && (null === (e = g.current) || void 0 === e || e.focus());
   if (e.preventDefault(), null == p)
     return;
   O(!0), U(null);
-  let s = T.ZP.getDefaultChannel(p.id);
+  let s = L.ZP.getDefaultChannel(p.id);
   try {
     let e = o.Z.Messages.NUF_CHANNEL_PROMPT_CHANNEL_TOPIC_TEMPLATE.format({
       topic: N
@@ -74,10 +74,10 @@ content: (0, n.jsxs)(n.Fragment, {
   children: [
     (0, n.jsxs)(_.ModalHeader, {
       className: C.header,
-      direction: L.Z.Direction.VERTICAL,
+      direction: d.Z.Direction.VERTICAL,
       separator: !1,
       children: [
-        null != p && (0, n.jsx)(d.Z, {
+        null != p && (0, n.jsx)(M.Z, {
           guild: p
         }),
         (0, n.jsx)(_.Text, {

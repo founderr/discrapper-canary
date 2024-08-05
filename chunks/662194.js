@@ -106,7 +106,7 @@ handler(e) {
       qos: d,
       silence_warning: u,
       deaf: _,
-      mute: E
+      mute: h
     }
   } = e;
   if (t && (null != t.device_id && a.Z.setInputDevice(t.device_id), null != t.volume && a.Z.setInputVolume(t.volume)), n && (null != n.device_id && a.Z.setOutputDevice(n.device_id), null != n.volume && a.Z.setOutputVolume(n.volume)), i) {
@@ -121,9 +121,9 @@ handler(e) {
     let e = s.Z.isSelfDeaf();
     (e && !_ || !e && _) && a.Z.toggleSelfDeaf();
   }
-  if (null != E) {
+  if (null != h) {
     let e = s.Z.isSelfMute();
-    (e && !E || !e && E) && a.Z.toggleSelfMute();
+    (e && !h || !e && h) && a.Z.toggleSelfMute();
   }
   return (0, c._X)();
 }

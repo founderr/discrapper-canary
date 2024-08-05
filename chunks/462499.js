@@ -10,12 +10,12 @@ var a = l(735250),
   t = l(399606),
   i = l(481060),
   d = l(471445),
-  u = l(734893),
-  c = l(208567),
-  h = l(592125),
-  m = l(984933),
-  I = l(430824),
-  _ = l(153124),
+  u = l(313201),
+  c = l(734893),
+  h = l(208567),
+  m = l(592125),
+  I = l(984933),
+  _ = l(430824),
   x = l(768581),
   p = l(969632),
   N = l(580357),
@@ -42,10 +42,10 @@ guildId: S,
 onSave: f,
 onDelete: b,
 onIconUpload: j
-  } = e, G = (0, _.Dt)(), [O, L] = s.useState(null !== (n = null == R ? void 0 : R.title) && void 0 !== n ? n : ''), [T, B] = s.useState(null !== (l = null == R ? void 0 : R.description) && void 0 !== l ? l : ''), [D, U] = s.useState(function(e) {
+  } = e, G = (0, u.Dt)(), [O, L] = s.useState(null !== (n = null == R ? void 0 : R.title) && void 0 !== n ? n : ''), [T, B] = s.useState(null !== (l = null == R ? void 0 : R.description) && void 0 !== l ? l : ''), [D, U] = s.useState(function(e) {
 if (null == e)
   return null;
-let n = h.Z.getChannel(e.channelId);
+let n = m.Z.getChannel(e.channelId);
 return null == n ? null : {
   value: n.id,
   label: n.name
@@ -56,7 +56,7 @@ return null === (e = p.Z.getResourceChannel(null == R ? void 0 : R.channelId)) |
   }), k = (0, t.Wu)([p.Z], () => {
 var e, n;
 return (null !== (n = null === (e = p.Z.getSettings()) || void 0 === e ? void 0 : e.resourceChannels) && void 0 !== n ? n : []).map(e => e.channelId);
-  }), A = O.length < u.n || null == D, M = s.useCallback(() => {
+  }), A = O.length < c.n || null == D, M = s.useCallback(() => {
 null != D && !(O.length <= 0) && (f(E(D, O, T, Z)), C());
   }, [
 f,
@@ -72,7 +72,7 @@ b,
 C
   ]), P = s.useCallback(e => {
 U(e);
-  }, [U]), y = s.useCallback(e => Promise.resolve(m.ZP.getSelectableChannels(S).filter(n => (0, u.k3)(n.channel) && !k.includes(n.channel.id) && r()(e, n.channel.name)).map(e => ({
+  }, [U]), y = s.useCallback(e => Promise.resolve(I.ZP.getSelectableChannels(S).filter(n => (0, c.k3)(n.channel) && !k.includes(n.channel.id) && r()(e, n.channel.name)).map(e => ({
 value: e.channel.id,
 label: e.channel.name
   }))), [
@@ -81,8 +81,8 @@ k
   ]), z = s.useCallback(e => {
 if (null == e || null == S)
   return null;
-let n = h.Z.getChannel(e.value),
-  l = I.Z.getGuild(S);
+let n = m.Z.getChannel(e.value),
+  l = _.Z.getGuild(S);
 if (null == n || null == l)
   return null;
 let s = (0, d.KS)(n, l);
@@ -171,7 +171,7 @@ children: [
             value: O,
             onChange: L,
             placeholder: g.Z.Messages.GUILD_SETTINGS_ONBOARDING_RESOURCE_TITLE_PLACEHOLDER,
-            maxLength: u.am
+            maxLength: c.am
           })
         ]
       }),
@@ -190,7 +190,7 @@ children: [
             value: T,
             onChange: B,
             placeholder: g.Z.Messages.GUILD_SETTINGS_ONBOARDING_RESOURCE_DESCRIPTION_PLACEHOLDER,
-            maxLength: u.Vu
+            maxLength: c.Vu
           })
         ]
       }),
@@ -215,7 +215,7 @@ children: [
             ]
           }),
           (0, a.jsx)('div', {
-            children: (0, a.jsx)(c.Z, {
+            children: (0, a.jsx)(h.Z, {
               className: v.uploader,
               imageClassName: v.uploadImage,
               image: Z,

@@ -20,13 +20,13 @@ var a, n, r = t(735250),
   p = t(852860),
   h = t(607070),
   m = t(725803),
-  I = t(76535),
-  U = t(215388),
-  f = t(674180),
-  v = t(884858),
-  q = t(695346),
-  E = t(430824),
-  N = t(153124),
+  I = t(313201),
+  U = t(76535),
+  f = t(215388),
+  v = t(674180),
+  q = t(884858),
+  E = t(695346),
+  N = t(430824),
   D = t(937615),
   O = t(73346),
   x = t(506071),
@@ -47,9 +47,9 @@ var a, n, r = t(735250),
   W = t(674563),
   X = t(689938),
   z = t(935917);
-let Q = (0, N.hQ)(),
-  k = (0, N.hQ)(),
-  H = (0, N.hQ)();
+let Q = (0, I.hQ)(),
+  k = (0, I.hQ)(),
+  H = (0, I.hQ)();
 
 function y(e) {
   let {
@@ -58,7 +58,7 @@ onChange: t,
 value: a,
 disabled: n,
 warning: s
-  } = e, o = (0, N.Dt)(), i = n ? 'text-muted' : 'text-normal';
+  } = e, o = (0, I.Dt)(), i = n ? 'text-muted' : 'text-normal';
   return (0, r.jsxs)('label', {
 className: l()(z.benefitToggleContainer, {
   [z.disabled]: n
@@ -110,7 +110,7 @@ selectedPriceTier: t,
 setPriceTier: a
   } = e, {
 priceTiers: n
-  } = (0, I.R)(A, K.RG5.GUILD_PRODUCTS), o = s.useMemo(() => (null != n ? n : null != t ? [t] : []).map(e => ({
+  } = (0, U.R)(A, K.RG5.GUILD_PRODUCTS), o = s.useMemo(() => (null != n ? n : null != t ? [t] : []).map(e => ({
 value: e,
 label: (0, D.T4)(e, K.pKx.USD)
   })), [
@@ -129,15 +129,15 @@ filter: Y,
 }
 
 function J(e) {
-  var A, a, n, o, l, i, I, v;
+  var A, a, n, o, l, i, I, U;
   let {
-guildId: N,
+guildId: q,
 productId: Y,
 transitionState: J,
 onClose: ee
   } = e, [eA, et] = s.useState(Y), ea = (0, u.e7)([L.Z], () => null == eA ? null : L.Z.getGuildProduct(eA), [eA]), en = (null == ea ? void 0 : ea.published) === !0, {
 application: er
-  } = (0, m.Z)(N, W.wW.GUILD_ROLE_SUBSCRIPTIONS), es = P.M['0'], eo = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), el = q.QK.useSetting(), ei = (0, x.n)(), ed = s.useCallback(() => {
+  } = (0, m.Z)(q, W.wW.GUILD_ROLE_SUBSCRIPTIONS), es = P.M['0'], eo = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), el = E.QK.useSetting(), ei = (0, x.n)(), ed = s.useCallback(() => {
 var e;
 return (null == ea ? void 0 : null === (e = ea.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? es.data : (0, O._W)(ea.image_asset.application_id, ea.image_asset, 600, ei && el ? void 0 : 'webp');
   }, [
@@ -147,7 +147,7 @@ ei,
 el
   ]), {
 shouldRestrictUpdatingCreatorMonetizationSettings: ec
-  } = (0, f.gX)(N);
+  } = (0, v.gX)(q);
   s.useEffect(() => {
 ec && (ee(), (0, Z.B)(X.Z.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_TITLE, X.Z.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY));
   }, [
@@ -160,10 +160,10 @@ saveError: eL,
 saveProductWithAttachments: eb,
 hasUnsavedAttachmentChanges: eP,
 cancelUnusedUploads: eV
-  } = (0, R.P)(), e_ = (null == ea ? void 0 : ea.attachments) != null && (null == ea ? void 0 : ea.attachments.length) > 0, eS = null != eL ? eL : eE, eZ = null != eR && 'published' in eR, ej = null != eR && !eZ, eF = null !== (I = null == ea ? void 0 : ea.role_id) && void 0 !== I ? I : null, [eM, eG] = s.useState(), eB = null != eM || null != eF, eK = (0, u.e7)([E.Z], () => null != eF && null !== eM ? E.Z.getRole(N, eF) : null != eM ? eM : void 0, [
+  } = (0, R.P)(), e_ = (null == ea ? void 0 : ea.attachments) != null && (null == ea ? void 0 : ea.attachments.length) > 0, eS = null != eL ? eL : eE, eZ = null != eR && 'published' in eR, ej = null != eR && !eZ, eF = null !== (I = null == ea ? void 0 : ea.role_id) && void 0 !== I ? I : null, [eM, eG] = s.useState(), eB = null != eM || null != eF, eK = (0, u.e7)([N.Z], () => null != eF && null !== eM ? N.Z.getRole(q, eF) : null != eM ? eM : void 0, [
 eM,
 eF,
-N
+q
   ]), eW = '';
   eB && eO ? eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE : eB ? eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE : eO && (eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE);
   let eX = () => {
@@ -240,12 +240,12 @@ e$ = s.useCallback(() => {
 ]);
   s.useEffect(() => {
 (0, g.updateModal)(B.Yz, e => (0, r.jsx)($, {
-  guildId: N,
+  guildId: q,
   productId: eA,
   ...e
 }), e$);
   }, [
-N,
+q,
 e$,
 eA
   ]);
@@ -259,7 +259,7 @@ let t = await eb(e);
 if (eq(!1), null != t) {
   if (null != e.name && eC(t.name), null != e.description && eT(t.description), null != eM) {
     let e = t.role_id;
-    d()(null != e, 'Cannot update role without role ID'), await T.Z.updateRole(N, e, eM);
+    d()(null != e, 'Cannot update role without role ID'), await T.Z.updateRole(q, e, eM);
   }
   eG(void 0), et(t.id), 'published' in e && !0 === e.published && ee();
 }
@@ -267,11 +267,11 @@ if (eq(!1), null != t) {
   s.useEffect(() => {
 if (null != eS) {
   var e;
-  (0, j.V)(eS, N, null == er ? void 0 : null === (e = er.team) || void 0 === e ? void 0 : e.id);
+  (0, j.V)(eS, q, null == er ? void 0 : null === (e = er.team) || void 0 === e ? void 0 : e.id);
 }
   }, [
 eS,
-N,
+q,
 er
   ]), s.useEffect(() => {
 eH && eQ(void 0);
@@ -342,7 +342,7 @@ children: [
               tag: 'label',
               error: null == eS ? void 0 : eS.getFirstFieldErrorMessage('description'),
               htmlFor: H,
-              children: (0, r.jsx)(U.Z, {
+              children: (0, r.jsx)(f.Z, {
                 id: H,
                 className: z.descriptionArea,
                 value: eg,
@@ -359,7 +359,7 @@ children: [
               tag: 'label',
               error: null == eS ? void 0 : eS.getFirstFieldErrorMessage('price_tier'),
               children: (0, r.jsx)(w, {
-                guildId: N,
+                guildId: q,
                 selectedPriceTier: ep,
                 setPriceTier: eh
               })
@@ -407,10 +407,10 @@ children: [
               })
             }) : null,
             eB ? (0, r.jsx)(G.ZP, {
-              error: null !== (v = null == eS ? void 0 : eS.getFirstFieldErrorMessage(b.NB)) && void 0 !== v ? v : void 0,
+              error: null !== (U = null == eS ? void 0 : eS.getFirstFieldErrorMessage(b.NB)) && void 0 !== U ? U : void 0,
               newRoleParams: eM,
               setNewRoleParams: eG,
-              guildId: N,
+              guildId: q,
               listingRoleId: eF,
               productId: eA
             }) : null
@@ -557,7 +557,7 @@ function $(e) {
   return (0, r.jsx)(R.W, {
 guildId: e.guildId,
 editSkuId: null !== (A = e.productId) && void 0 !== A ? A : void 0,
-onFileSizeError: () => (0, v.Z)(B.ve),
+onFileSizeError: () => (0, q.Z)(B.ve),
 children: (0, r.jsx)(J, {
   ...e
 })

@@ -15,12 +15,12 @@ var i = n(735250),
   c = n(481060),
   u = n(596454),
   d = n(727637),
-  h = n(543241),
-  p = n(318766),
-  m = n(907040),
-  _ = n(633302),
-  f = n(806966),
-  E = n(153124),
+  h = n(313201),
+  p = n(543241),
+  m = n(318766),
+  _ = n(907040),
+  f = n(633302),
+  E = n(806966),
   g = n(176354),
   C = n(823379),
   I = n(354459),
@@ -29,12 +29,12 @@ var i = n(735250),
   N = n(419477);
 let v = x.Hz.CHAT,
   S = [
-_.ZP.getByName('thumbsup'),
-_.ZP.getByName('eyes'),
-_.ZP.getByName('laughing'),
-_.ZP.getByName('watermelon'),
-_.ZP.getByName('fork_and_knife'),
-_.ZP.getByName('yum')
+f.ZP.getByName('thumbsup'),
+f.ZP.getByName('eyes'),
+f.ZP.getByName('laughing'),
+f.ZP.getByName('watermelon'),
+f.ZP.getByName('fork_and_knife'),
+f.ZP.getByName('yum')
   ].filter(C.lm);
 
 function Z(e) {
@@ -43,7 +43,7 @@ emoji: t,
 isDisabled: n = !1,
 onClick: s,
 className: r
-  } = e, h = a.useRef(null), m = (0, d.Z)(h);
+  } = e, h = a.useRef(null), p = (0, d.Z)(h);
   return (0, i.jsx)('span', {
 ref: h,
 children: (0, i.jsx)(c.Button, {
@@ -54,12 +54,12 @@ children: (0, i.jsx)(c.Button, {
     enabled: !n
   },
   children: (0, i.jsx)(c.Spring, {
-    config: p.u,
+    config: m.u,
     from: {
       value: 0
     },
     to: {
-      value: m ? 1 : 0
+      value: p ? 1 : 0
     },
     children: e => {
       let {
@@ -125,11 +125,11 @@ closePopout: s,
 onFocus: o,
 onSelectEmoji: u,
 onSelectDisabledEmoji: d,
-onExpandedToggle: p,
-emojiSearchProps: _,
+onExpandedToggle: m,
+emojiSearchProps: f,
 recentlyUsedEmojis: C,
 analyticsOverride: M
-  } = e, b = (0, E.Dt)(), [R, j] = a.useState(!1), L = (0, h.wC)(t.guild_id), P = (0, r.uniqBy)([
+  } = e, b = (0, h.Dt)(), [R, j] = a.useState(!1), L = (0, p.wC)(t.guild_id), P = (0, r.uniqBy)([
 ...L,
 ...S
   ], 'name').filter(e => !g.ZP.isEmojiFilteredOrLocked({
@@ -139,7 +139,7 @@ intention: v
   })).slice(0, I.e5);
   null != C && C.length > 0 && P.splice(P.length - 1, 1, C[0]);
   let O = e => {
-  j(e), null == p || p(e);
+  j(e), null == m || m(e);
 },
 y = (e, t) => {
   if (null == e && t) {
@@ -147,7 +147,7 @@ y = (e, t) => {
     return;
   }
   null != e && u(e);
-  O(!t), t && f.kJ.setSearchPlaceholder(null);
+  O(!t), t && E.kJ.setSearchPlaceholder(null);
 };
   return (0, i.jsxs)(c.Dialog, {
 'aria-labelledby': b,
@@ -164,7 +164,7 @@ children: [
   (0, i.jsxs)('div', {
     className: N.container,
     children: [
-      (0, i.jsx)(m.Z, {
+      (0, i.jsx)(_.Z, {
         analyticsOverride: M,
         channel: t,
         className: l()(N.animatedPicker, {
@@ -179,9 +179,9 @@ children: [
         wrapper: 'div',
         pickerIntention: v,
         searchProps: {
-          ..._,
+          ...f,
           accessory: (0, i.jsx)(A, {
-            otherAccessories: null == _ ? void 0 : _.accessory,
+            otherAccessories: null == f ? void 0 : f.accessory,
             isEmojiPickerExpanded: R,
             onSetExpanded: O,
             onFocus: o

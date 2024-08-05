@@ -4,9 +4,9 @@ var s = t(735250),
   d = t(442837),
   r = t(481060),
   n = t(367907),
-  l = t(434404),
-  i = t(650774),
-  C = t(153124),
+  l = t(313201),
+  i = t(434404),
+  C = t(650774),
   c = t(816817),
   _ = t(981631),
   E = t(689938),
@@ -16,15 +16,15 @@ a.default = e => {
 transitionState: a,
 onClose: t,
 guild: m
-  } = e, h = (0, C.Dt)();
+  } = e, h = (0, l.Dt)();
   o.useEffect(() => {
 n.ZP.trackWithMetadata(_.rMx.OPEN_MODAL, {
   type: _.jXE.DISCOVERY_SETUP_SUCCESS_MODAL
 });
   }, []);
-  let [S, p] = (0, d.Wu)([i.Z], () => [
-i.Z.getOnlineCount(m.id),
-i.Z.getMemberCount(m.id)
+  let [S, p] = (0, d.Wu)([C.Z], () => [
+C.Z.getOnlineCount(m.id),
+C.Z.getMemberCount(m.id)
   ], [m.id]);
   return (0, s.jsxs)(r.ModalRoot, {
 transitionState: a,
@@ -53,7 +53,7 @@ children: [
         className: u.subheader,
         children: E.Z.Messages.SERVER_DISCOVERY_SETUP_CONFIRMATION_PAGE_SUBHEADING.format({
           onServerSettingsClick: () => {
-            t(), l.Z.setSection(_.pNK.DISCOVERY), n.ZP.trackWithMetadata(_.rMx.SETTINGS_PANE_VIEWED, {
+            t(), i.Z.setSection(_.pNK.DISCOVERY), n.ZP.trackWithMetadata(_.rMx.SETTINGS_PANE_VIEWED, {
               settings_type: 'guild',
               origin_pane: 'DISCOVERY',
               destination_pane: 'DISCOVERY'

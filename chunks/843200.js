@@ -6,8 +6,8 @@ var n = s(735250),
   l = s.n(o),
   c = s(442837),
   d = s(481060),
-  _ = s(594174),
-  E = s(285952),
+  _ = s(600164),
+  E = s(594174),
   u = s(418632),
   T = s(689938),
   I = s(619735);
@@ -21,7 +21,7 @@ let {
 return e ? null != s ? s : T.Z.Messages.NOTICE_UNVERIFIED_ACCOUNT : null != t ? t : T.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT;
   }
   renderPrimaryAction() {
-return this.props.isClaimed ? this.props.hasEmail ? (0, n.jsx)(E.Z.Child, {
+return this.props.isClaimed ? this.props.hasEmail ? (0, n.jsx)(_.Z.Child, {
   grow: 0,
   shrink: 0,
   children: (0, n.jsx)(u.Z, {})
@@ -30,7 +30,7 @@ return this.props.isClaimed ? this.props.hasEmail ? (0, n.jsx)(E.Z.Child, {
   color: d.Button.Colors.BRAND,
   onClick: this.openChangeEmailModal,
   children: T.Z.Messages.ADD_EMAIL_SHORT
-}) : (0, n.jsx)(E.Z.Child, {
+}) : (0, n.jsx)(_.Z.Child, {
   grow: 0,
   shrink: 0,
   children: (0, n.jsx)(d.Button, {
@@ -42,7 +42,7 @@ return this.props.isClaimed ? this.props.hasEmail ? (0, n.jsx)(E.Z.Child, {
 });
   }
   renderSecondaryAction() {
-return this.props.isClaimed && this.props.hasEmail ? (0, n.jsx)(E.Z.Child, {
+return this.props.isClaimed && this.props.hasEmail ? (0, n.jsx)(_.Z.Child, {
   grow: 0,
   shrink: 0,
   children: (0, n.jsx)(d.Button, {
@@ -84,22 +84,22 @@ let {
 } = this.props;
 return t && s ? null : (0, n.jsx)(d.Card, {
   className: r()(I.wrapper, e),
-  children: (0, n.jsxs)(E.Z, {
-    align: E.Z.Align.CENTER,
+  children: (0, n.jsxs)(_.Z, {
+    align: _.Z.Align.CENTER,
     children: [
-      (0, n.jsx)(E.Z.Child, {
+      (0, n.jsx)(_.Z.Child, {
         className: I.image,
         grow: 0,
         shrink: 0
       }),
-      (0, n.jsxs)(E.Z.Child, {
+      (0, n.jsxs)(_.Z.Child, {
         children: [
           (0, n.jsx)(d.Text, {
             variant: 'text-sm/normal',
             children: this.renderNotice()
           }),
-          (0, n.jsxs)(E.Z, {
-            justify: E.Z.Justify.CENTER,
+          (0, n.jsxs)(_.Z, {
+            justify: _.Z.Justify.CENTER,
             className: I.content,
             children: [
               this.renderPrimaryAction(),
@@ -113,8 +113,8 @@ return t && s ? null : (0, n.jsx)(d.Card, {
 });
   }
 }
-t.Z = c.ZP.connectStores([_.default], () => {
-  let e = _.default.getCurrentUser();
+t.Z = c.ZP.connectStores([E.default], () => {
+  let e = E.default.getCurrentUser();
   return l()(null != e, 'EmailNotice: currentUser cannot be undefined'), {
 isClaimed: e.isClaimed(),
 isVerified: e.verified,

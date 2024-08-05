@@ -10,7 +10,7 @@ var i = n(735250),
   u = n(617015),
   _ = n(234187);
 
-function E(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -18,7 +18,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class h extends a.PureComponent {
+class E extends a.PureComponent {
   componentWillLeave(e) {
 l.Z.parallel([
   l.Z.timing(this.state.opacity, {
@@ -53,7 +53,7 @@ let {
   children: s,
   user: d,
   onClick: u,
-  isActive: E
+  isActive: h
 } = this.props;
 return (0, i.jsx)(o.mh, {
   id: d.id,
@@ -64,7 +64,7 @@ return (0, i.jsx)(o.mh, {
     },
     children: (0, i.jsx)(l.Z.div, {
       className: r()(_.peopleListItem, {
-        [_.active]: E || a
+        [_.active]: h || a
       }),
       onContextMenu: e => this.handleContextMenu(e, d),
       onMouseEnter: this.handleMouseEnter,
@@ -75,18 +75,18 @@ return (0, i.jsx)(o.mh, {
         opacity: t
       },
       ...o,
-      children: s(n || E || a)
+      children: s(n || h || a)
     })
   })
 });
   }
   constructor(...e) {
-super(...e), E(this, 'state', {
+super(...e), h(this, 'state', {
   height: new l.Z.Value(u.NV),
   opacity: new l.Z.Value(1),
   hovered: !1,
   isContextMenuActive: !1
-}), E(this, 'handleMouseEnter', () => {
+}), h(this, 'handleMouseEnter', () => {
   let {
     isFocused: e,
     isActive: t,
@@ -97,11 +97,11 @@ super(...e), E(this, 'state', {
   this.setState({
     hovered: e
   }), e && !t && !i && (null == n || n());
-}), E(this, 'handleMouseLeave', () => {
+}), h(this, 'handleMouseLeave', () => {
   this.setState({
     hovered: !1
   });
-}), E(this, 'handleContextMenu', (e, t) => {
+}), h(this, 'handleContextMenu', (e, t) => {
   this.setState({
     isContextMenuActive: !0
   }), (0, d.jW)(e, async () => {
@@ -126,4 +126,4 @@ super(...e), E(this, 'state', {
 });
   }
 }
-t.Z = h;
+t.Z = E;

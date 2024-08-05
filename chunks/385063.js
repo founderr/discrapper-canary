@@ -5,8 +5,8 @@ return o;
 });
 var i = n(735250);
 n(470079);
-var s = n(702346),
-  a = n(739566),
+var s = n(739566),
+  a = n(834129),
   r = n(689938),
   l = n(984056);
 
@@ -16,8 +16,8 @@ message: t,
 usernameHook: o,
 compact: c,
 isForumPost: u
-  } = e, d = (0, a.ZP)(t), _ = o(d);
-  return (0, i.jsx)(s.Z, {
+  } = e, d = (0, s.ZP)(t), _ = o(d);
+  return (0, i.jsx)(a.Z, {
 compact: c,
 className: l.channelNameChange,
 icon: n(819373),

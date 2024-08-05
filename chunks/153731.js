@@ -12,13 +12,13 @@ var r = n(735250),
   c = n(304680),
   d = n(503089),
   u = n(493544),
-  m = n(210887),
-  p = n(592125),
-  h = n(271383),
-  g = n(19780),
-  f = n(226961),
-  C = n(594174),
-  y = n(285952),
+  m = n(600164),
+  p = n(210887),
+  h = n(592125),
+  g = n(271383),
+  f = n(19780),
+  C = n(226961),
+  y = n(594174),
   R = n(51144),
   S = n(189648),
   D = n(775194),
@@ -30,11 +30,11 @@ var r = n(735250),
   P = n(65154),
   T = n(689938),
   x = n(634040);
-let _ = (e, t, n) => (0, r.jsx)(y.Z, {
-align: y.Z.Align.CENTER,
-children: (0, r.jsx)(y.Z.Child, {
-  children: (0, r.jsxs)(y.Z, {
-    align: y.Z.Align.CENTER,
+let _ = (e, t, n) => (0, r.jsx)(m.Z, {
+align: m.Z.Align.CENTER,
+children: (0, r.jsx)(m.Z.Child, {
+  children: (0, r.jsxs)(m.Z, {
+    align: m.Z.Align.CENTER,
     children: [
       (0, r.jsx)(l.Avatar, {
         size: l.AvatarSizes.SIZE_24,
@@ -50,11 +50,11 @@ children: (0, r.jsx)(y.Z.Child, {
   })
 })
   }),
-  N = e => (0, r.jsx)(y.Z, {
-align: y.Z.Align.CENTER,
-children: (0, r.jsx)(y.Z.Child, {
-  children: (0, r.jsx)(y.Z, {
-    align: y.Z.Align.CENTER,
+  N = e => (0, r.jsx)(m.Z, {
+align: m.Z.Align.CENTER,
+children: (0, r.jsx)(m.Z.Child, {
+  children: (0, r.jsx)(m.Z, {
+    align: m.Z.Align.CENTER,
     children: (0, r.jsx)('span', {
       className: x.username,
       children: e
@@ -81,7 +81,7 @@ label: T.Z.Messages.RTC_DEBUG_CONTEXT.format({
   context: e
 })
   }), null != s && i.push({
-section: (0, f.J$)(e, F._s_.TRANSPORT, n),
+section: (0, C.J$)(e, F._s_.TRANSPORT, n),
 label: T.Z.Messages.RTC_DEBUG_TRANSPORT,
 element: Z.Z,
 elementProps: {
@@ -89,7 +89,7 @@ elementProps: {
   index: n
 }
   }), null != d && i.push({
-section: (0, f.J$)(e, F._s_.OUTBOUND, n),
+section: (0, C.J$)(e, F._s_.OUTBOUND, n),
 label: T.Z.Messages.RTC_DEBUG_RTP_OUTBOUND,
 element: b.Z,
 elementProps: {
@@ -97,7 +97,7 @@ elementProps: {
   index: n
 }
   }), null != m && i.push({
-section: (0, f.J$)(e, F._s_.CAMERA, n),
+section: (0, C.J$)(e, F._s_.CAMERA, n),
 label: T.Z.Messages.RTC_DEBUG_CAMERA,
 element: S.Z,
 elementProps: {
@@ -109,9 +109,9 @@ elementProps: {
 section: u.ID.HEADER,
 label: T.Z.Messages.RTC_DEBUG_RTP_INBOUND
   }), Object.keys(l).forEach(t => {
-let o = C.default.getUser(t),
-  s = h.ZP.getNick(a, t),
-  l = (0, f.J$)(e, t, n);
+let o = y.default.getUser(t),
+  s = g.ZP.getNick(a, t),
+  l = (0, C.J$)(e, t, n);
 i.push({
   section: l,
   label: null != o ? _(o, s, a) : N(null != s ? s : t),
@@ -134,13 +134,13 @@ function j() {
   let {
 defaultStats: n,
 streamStats: i
-  } = (0, s.e7)([f.ZP], () => ({
-defaultStats: f.ZP.getAllStats(P.Yn.DEFAULT),
-streamStats: f.ZP.getAllStats(P.Yn.STREAM)
+  } = (0, s.e7)([C.ZP], () => ({
+defaultStats: C.ZP.getAllStats(P.Yn.DEFAULT),
+streamStats: C.ZP.getAllStats(P.Yn.STREAM)
   }), [], s.pF), o = (0, s.e7)([
-g.Z,
-p.Z
-  ], () => p.Z.getChannel(g.Z.getChannelId())), h = null === (e = n.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, C = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, y = (0, s.e7)([m.Z], () => m.Z.theme), R = (0, s.e7)([m.Z], () => m.Z.darkSidebar ? F.BRd.DARK : void 0), S = (0, s.e7)([f.ZP], () => f.ZP.getSection()), v = (0, s.e7)([f.ZP], () => f.ZP.getVideoStreams()), b = function(e) {
+f.Z,
+h.Z
+  ], () => h.Z.getChannel(f.Z.getChannelId())), m = null === (e = n.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, g = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, y = (0, s.e7)([p.Z], () => p.Z.theme), R = (0, s.e7)([p.Z], () => p.Z.darkSidebar ? F.BRd.DARK : void 0), S = (0, s.e7)([C.ZP], () => C.ZP.getSection()), v = (0, s.e7)([C.ZP], () => C.ZP.getVideoStreams()), b = function(e) {
 let {
   defaultStats: t,
   streamStats: n,
@@ -196,10 +196,10 @@ return [
 defaultStats: n,
 streamStats: i,
 videoStreams: v,
-screenshare: h,
-clips: C,
+screenshare: m,
+clips: g,
 channel: o,
-connectionState: (0, s.e7)([g.Z], () => g.Z.getState())
+connectionState: (0, s.e7)([f.Z], () => f.Z.getState())
   });
   return a.useEffect(() => () => {
 c.xv();

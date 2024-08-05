@@ -165,7 +165,7 @@ return (0, i.jsx)(o.Clickable, {
       } = await Promise.all([
         n.e('46097'),
         n.e('18831'),
-        n.e('34723')
+        n.e('39067')
       ]).then(n.bind(n, 41164));
       return t => (0, i.jsx)(e, {
         classificationId: s,

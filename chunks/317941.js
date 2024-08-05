@@ -9,14 +9,14 @@ var n = s(735250),
   d = s(533307),
   _ = s(189907),
   E = s(812206),
-  u = s(925329),
-  T = s(981632),
-  I = s(314897),
-  S = s(82142),
-  N = s(246946),
-  C = s(509545),
-  m = s(55563),
-  A = s(285952),
+  u = s(600164),
+  T = s(925329),
+  I = s(981632),
+  S = s(314897),
+  N = s(82142),
+  C = s(246946),
+  m = s(509545),
+  A = s(55563),
   g = s(259580),
   h = s(572004),
   O = s(669079),
@@ -57,8 +57,8 @@ let {
 } = this.props, {
   copyMode: s
 } = this.state;
-return (0, n.jsxs)(A.Z, {
-  direction: A.Z.Direction.VERTICAL,
+return (0, n.jsxs)(u.Z, {
+  direction: u.Z.Direction.VERTICAL,
   className: M.giftCodeRow,
   children: [
     (0, n.jsx)(c.CopyInput, {
@@ -143,9 +143,9 @@ return e = a === R.m8 ? x.Z.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE
 });
   }
   renderGenerateGiftCodeRow() {
-return (0, n.jsxs)(A.Z, {
-  justify: A.Z.Justify.BETWEEN,
-  align: A.Z.Align.CENTER,
+return (0, n.jsxs)(u.Z, {
+  justify: u.Z.Justify.BETWEEN,
+  align: u.Z.Align.CENTER,
   className: M.generateCodeRow,
   children: [
     (0, n.jsx)('div', {
@@ -193,16 +193,16 @@ return (0, n.jsxs)(_.Z, {
         children: (0, n.jsxs)('div', {
           className: M.cardHeader,
           children: [
-            (0, n.jsxs)(A.Z, {
-              align: A.Z.Align.CENTER,
+            (0, n.jsxs)(u.Z, {
+              align: u.Z.Align.CENTER,
               children: [
-                null != d ? (0, n.jsx)(T.Z, {
+                null != d ? (0, n.jsx)(I.Z, {
                   giftStyle: d,
                   className: M.seasonalGiftBox,
                   shouldAnimate: this.state.isHovered
-                }) : (0, n.jsx)(u.Z, {
+                }) : (0, n.jsx)(T.Z, {
                   game: t,
-                  size: u.Z.Sizes.MEDIUM,
+                  size: T.Z.Sizes.MEDIUM,
                   skuId: r.id
                 }),
                 (0, n.jsxs)('div', {
@@ -275,26 +275,26 @@ super(...e), f(this, '_loadedAt', null), f(this, 'state', {
   }
 }
 t.Z = o.ZP.connectStores([
-  m.Z,
-  N.Z,
-  S.Z,
-  E.Z,
+  A.Z,
   C.Z,
-  I.default
+  N.Z,
+  E.Z,
+  m.Z,
+  S.default
 ], e => {
   let {
 skuId: t,
 subscriptionPlanId: s,
 giftStyle: n
-  } = e, a = m.Z.get(t);
+  } = e, a = A.Z.get(t);
   if (null == a)
 throw Error('SKU was unavailable while rendering gift.');
-  let i = S.Z.getForGifterSKUAndPlan(I.default.getId(), t, s).filter(e => !e.isClaimed).filter(e => e.giftStyle === n);
+  let i = N.Z.getForGifterSKUAndPlan(S.default.getId(), t, s).filter(e => !e.isClaimed).filter(e => e.giftStyle === n);
   return {
 sku: a,
-hideCodes: N.Z.enabled,
-isFetching: S.Z.getUserGiftCodesFetchingForSKUAndPlan(t, s),
-loadedAt: S.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, s),
+hideCodes: C.Z.enabled,
+isFetching: N.Z.getUserGiftCodesFetchingForSKUAndPlan(t, s),
+loadedAt: N.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, s),
 application: E.Z.getApplication(a.applicationId),
 subscriptionPlan: null != s ? (0, p.oE)(s) : null,
 giftCodes: i

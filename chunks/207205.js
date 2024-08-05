@@ -12,7 +12,7 @@ return i;
 return I;
   },
   jv: function() {
-return h;
+return E;
   },
   mV: function() {
 return T;
@@ -35,9 +35,9 @@ var o = n(306680),
 n(109911);
 var u = n(265164),
   _ = n(761080),
-  E = n(584925);
+  h = n(584925);
 
-function h(e) {
+function E(e) {
   return e < -1.5 ? 4 : e < 0 ? 3 : e > 0 ? 2 : 1;
 }
 async function I(e, t, n) {
@@ -144,8 +144,8 @@ score_components: e.score_components
 }
 
 function S(e, t, n) {
-  let i = E.Z.getReadTimestamp(e);
+  let i = h.Z.getReadTimestamp(e);
   null == i && (i = null == n ? void 0 : n[e]);
-  let a = E.Z.getReadTimestamp(t);
+  let a = h.Z.getReadTimestamp(t);
   return (null == a && (a = null == n ? void 0 : n[t]), null == i && null == a) ? 0 : null == i ? -1 : null == a ? 1 : a - i;
 }

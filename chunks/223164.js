@@ -8,8 +8,8 @@ var s = n(735250),
   o = n(120356),
   r = n.n(o),
   d = n(481060),
-  c = n(454585),
-  i = n(153124),
+  c = n(313201),
+  i = n(454585),
   l = n(585483),
   h = n(981631),
   u = n(689938),
@@ -22,7 +22,7 @@ channel: a,
 isFromComposer: n,
 transitionState: o,
 onClose: _
-  } = e, I = (0, i.Dt)();
+  } = e, I = (0, c.Dt)();
   return t.useEffect(() => () => {
 n && l.S.dispatch(h.CkL.FOCUS_COMPOSER_TITLE);
   }, [n]), (0, s.jsxs)(d.ModalRoot, {
@@ -54,7 +54,7 @@ children: [
       variant: 'text-sm/normal',
       color: 'header-secondary',
       children: (0, s.jsx)('div', {
-        children: c.Z.parseForumPostGuidelines(a.topic, !0, {
+        children: i.Z.parseForumPostGuidelines(a.topic, !0, {
           channelId: a.id,
           allowHeading: !0,
           allowList: !0

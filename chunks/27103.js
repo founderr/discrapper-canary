@@ -9,10 +9,10 @@ var s = n(120356),
   a = n.n(s),
   r = n(481060),
   l = n(385499),
-  o = n(702346),
-  c = n(739566),
-  u = n(464891),
-  d = n(83561),
+  o = n(739566),
+  c = n(464891),
+  u = n(83561),
+  d = n(834129),
   _ = n(674563),
   E = n(689938),
   I = n(713389);
@@ -22,21 +22,21 @@ function m(e) {
 message: t,
 compact: n,
 usernameHook: s
-  } = e, m = (0, c.ZP)(t), T = s(m), {
+  } = e, m = (0, o.ZP)(t), T = s(m), {
 avatarSrc: h,
 eventHandlers: {
   onMouseEnter: N,
   onMouseLeave: C
 }
-  } = (0, d.m)(!0);
+  } = (0, u.m)(!0);
   return (0, i.jsx)('div', {
 onMouseEnter: N,
 onMouseLeave: C,
-children: (0, i.jsx)(o.Z, {
+children: (0, i.jsx)(d.Z, {
   className: a()(I.mainContainer, {
     [I.compact]: n
   }),
-  iconNode: n ? null : (0, i.jsx)(d.S, {
+  iconNode: n ? null : (0, i.jsx)(u.S, {
     src: h
   }),
   iconContainerClassName: I.iconContainer,
@@ -46,7 +46,7 @@ children: (0, i.jsx)(o.Z, {
       [I.compact]: n
     }),
     children: [
-      (0, i.jsx)(u.nD, {
+      (0, i.jsx)(c.nD, {
         message: t,
         messageClassname: I.spanCorrection,
         className: a()(I.usernameContainer, I.spanCorrection, {

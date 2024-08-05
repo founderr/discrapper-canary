@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return h;
+return E;
   }
 });
 var i = n(735250);
@@ -10,23 +10,23 @@ var a = n(120356),
   r = n(481060),
   l = n(409700),
   o = n(230711),
-  c = n(446753),
+  c = n(630186),
   d = n(981631),
   u = n(921944),
   _ = n(689938),
-  E = n(901270);
+  h = n(901270);
 
-function h(e) {
+function E(e) {
   let {
 className: t,
 markAsDismissed: n
   } = e;
   return (0, i.jsxs)(c.Z, {
-className: s()(E.card, t),
+className: s()(h.card, t),
 children: [
   (0, i.jsx)(r.Heading, {
     variant: 'heading-md/semibold',
-    className: E.header,
+    className: h.header,
     children: _.Z.Messages.NOW_PLAYING_GDPR_HEADER
   }),
   (0, i.jsx)(r.Text, {
@@ -36,7 +36,7 @@ children: [
     })
   }),
   (0, i.jsxs)('div', {
-    className: E.buttonContainer,
+    className: h.buttonContainer,
     children: [
       (0, i.jsx)(r.Button, {
         size: r.Button.Sizes.SMALL,

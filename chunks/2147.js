@@ -26,25 +26,25 @@ var n = s(735250),
   S = s(541716),
   x = s(752305),
   f = s(893718),
-  C = s(907040),
-  I = s(633302),
-  M = s(109434),
-  R = s(162389),
-  Z = s(946458),
-  v = s(968437),
-  O = s(665906),
-  A = s(456077),
-  L = s(747212),
-  j = s(210887),
-  b = s(131704),
-  D = s(314897),
-  y = s(388610),
-  w = s(430824),
-  P = s(496675),
-  F = s(903223),
-  B = s(594174),
-  U = s(285952),
-  H = s(153124),
+  C = s(600164),
+  I = s(313201),
+  M = s(907040),
+  R = s(633302),
+  Z = s(109434),
+  v = s(162389),
+  O = s(946458),
+  A = s(968437),
+  L = s(665906),
+  j = s(456077),
+  b = s(747212),
+  D = s(210887),
+  y = s(131704),
+  w = s(314897),
+  P = s(388610),
+  F = s(430824),
+  B = s(496675),
+  U = s(903223),
+  H = s(594174),
   G = s(934415),
   k = s(70956),
   V = s(630388),
@@ -69,27 +69,27 @@ configurable: !0,
 writable: !0
   }) : e[t] = s, e;
 }
-let el = (0, H.hQ)(),
-  ea = (0, H.hQ)(),
-  ei = (0, H.hQ)(),
-  er = (0, H.hQ)(),
-  eo = (0, H.hQ)(),
-  ed = (0, H.hQ)(),
-  ec = (0, H.hQ)(),
-  eu = (0, H.hQ)(),
-  eh = (0, H.hQ)(),
-  em = (0, H.hQ)(),
-  eg = (0, H.hQ)(),
-  eE = (0, b.kt)({
+let el = (0, I.hQ)(),
+  ea = (0, I.hQ)(),
+  ei = (0, I.hQ)(),
+  er = (0, I.hQ)(),
+  eo = (0, I.hQ)(),
+  ed = (0, I.hQ)(),
+  ec = (0, I.hQ)(),
+  eu = (0, I.hQ)(),
+  eh = (0, I.hQ)(),
+  em = (0, I.hQ)(),
+  eg = (0, I.hQ)(),
+  eE = (0, y.kt)({
 id: '1',
 type: q.d4z.DM
   }),
   eT = 'AUTOMATIC_RTC_REGION',
-  ep = d.ZP.connectStores([y.Z], () => {
+  ep = d.ZP.connectStores([P.Z], () => {
 let {
   channel: e,
   submitting: t
-} = y.Z.getProps();
+} = P.Z.getProps();
 return {
   channel: e,
   submitting: t,
@@ -119,7 +119,7 @@ return {
       defaultSortOrder: N,
       defaultForumLayout: _
     } = e;
-    e.isThread() && (t = (0, A.Z)(t, !0)), (0, m.wk)(e.id, {
+    e.isThread() && (t = (0, j.Z)(t, !0)), (0, m.wk)(e.id, {
       name: t,
       type: s,
       topic: n,
@@ -223,15 +223,15 @@ let {
   isThreadModerator: _,
   canManageThread: x,
   guild: C,
-  isForumPost: M,
-  isOwner: O,
-  showAdvancedSlowModeSetting: A
-} = this.props, j = b.Ec.has(e.type), D = e.isForumLikeChannel(), y = D && (null === (s = e.availableTags) || void 0 === s ? void 0 : s.every(e => e.moderated)), w = (null === (l = B.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) === !0, P = b.TK.has(e.type) ? (0, n.jsxs)('div', {
+  isForumPost: I,
+  isOwner: M,
+  showAdvancedSlowModeSetting: Z
+} = this.props, L = y.Ec.has(e.type), j = e.isForumLikeChannel(), D = j && (null === (s = e.availableTags) || void 0 === s ? void 0 : s.every(e => e.moderated)), w = (null === (l = H.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) === !0, P = y.TK.has(e.type) ? (0, n.jsxs)('div', {
   children: [
     (0, n.jsx)(h.FormItem, {
-      title: D ? ee.Z.Messages.FORM_LABEL_CHANNEL_GUIDELINES : ee.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
+      title: j ? ee.Z.Messages.FORM_LABEL_CHANNEL_GUIDELINES : ee.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
       className: es.marginTop20,
-      children: D ? (0, n.jsx)(f.Z, {
+      children: j ? (0, n.jsx)(f.Z, {
         innerClassName: et.forumGuidelines,
         characterCountClassName: et.forumGuidelinesCharacterCount,
         maxCharacterCount: X.Z7,
@@ -257,7 +257,7 @@ let {
       }) : (0, n.jsx)(h.TextArea, {
         autoFocus: this.props.subsection === q.ZfP.TOPIC,
         placeholder: ee.Z.Messages.CHANNEL_TOPIC_EMPTY,
-        value: I.ZP.translateSurrogatesToInlineEmoji(e.topic),
+        value: R.ZP.translateSurrogatesToInlineEmoji(e.topic),
         onChange: this.handleChangeTopic,
         error: this.getError('topic'),
         maxLength: X.$x,
@@ -269,14 +269,14 @@ let {
       className: i()(es.marginTop40, es.marginBottom40)
     })
   ]
-}) : null, F = D && w ? (0, n.jsxs)('div', {
+}) : null, F = j && w ? (0, n.jsxs)('div', {
   children: [
     (0, n.jsx)(h.FormItem, {
       title: ee.Z.Messages.FORM_LABEL_CHANNEL_TEMPLATE,
       className: es.marginTop20,
       children: (0, n.jsx)(h.TextArea, {
         placeholder: ee.Z.Messages.FORM_PLACEHOLDER_CHANNEL_TEMPLATE,
-        value: I.ZP.translateSurrogatesToInlineEmoji(null !== (a = e.template) && void 0 !== a ? a : ''),
+        value: R.ZP.translateSurrogatesToInlineEmoji(null !== (a = e.template) && void 0 !== a ? a : ''),
         onChange: this.handleChangeTemplate,
         error: this.getError('template'),
         maxLength: $.Vb,
@@ -288,7 +288,7 @@ let {
       className: i()(es.marginTop40, es.marginBottom40)
     })
   ]
-}) : null, U = e.isForumLikeChannel() ? (0, n.jsxs)('div', {
+}) : null, B = e.isForumLikeChannel() ? (0, n.jsxs)('div', {
   children: [
     (0, n.jsxs)(h.FormItem, {
       children: [
@@ -303,13 +303,13 @@ let {
           className: et.description,
           children: ee.Z.Messages.FORM_HELP_FORUM_TAGS
         }),
-        (0, n.jsx)(R.Z, {
+        (0, n.jsx)(v.Z, {
           channel: e
         })
       ]
     }),
     (0, n.jsx)(h.Checkbox, {
-      disabled: !p || y,
+      disabled: !p || D,
       value: e.hasFlag(X.zZ.REQUIRE_TAG),
       type: h.Checkbox.Types.INVERTED,
       onChange: (e, t) => this.handleRequireTagChanged(t),
@@ -322,7 +322,7 @@ let {
       className: i()(es.marginTop40, es.marginBottom40)
     })
   ]
-}) : null, H = e.isForumLikeChannel() ? (0, n.jsxs)('div', {
+}) : null, U = e.isForumLikeChannel() ? (0, n.jsxs)('div', {
   children: [
     (0, n.jsxs)('div', {
       className: et.twoColumnSettings,
@@ -371,7 +371,7 @@ let {
             })
           ]
         }),
-        (0, n.jsx)(Z.Z, {
+        (0, n.jsx)(O.Z, {
           reactionEmoji: e.defaultReactionEmoji
         })
       ]
@@ -451,7 +451,7 @@ let {
       className: i()(es.marginTop40, es.marginBottom40)
     })
   ]
-}) : null, V = j ? _ : p, z = b.X_.has(e.type) ? (0, n.jsxs)('div', {
+}) : null, V = L ? _ : p, z = y.X_.has(e.type) ? (0, n.jsxs)('div', {
   children: [
     (0, n.jsxs)(h.FormItem, {
       children: [
@@ -460,11 +460,11 @@ let {
           className: es.marginBottom8,
           children: ee.Z.Messages.FORM_LABEL_SLOWMODE
         }),
-        D ? (0, n.jsx)(h.FormTitle, {
+        j ? (0, n.jsx)(h.FormTitle, {
           className: es.marginTop20,
           children: ee.Z.Messages.FORUM_SETTING_SLOW_MODE_POSTS
         }) : null,
-        !0 === A ? (0, n.jsx)(eN, {
+        !0 === Z ? (0, n.jsx)(eN, {
           channel: e,
           onChange: this.handleChangeSlowmode
         }) : (0, n.jsx)(h.Slider, {
@@ -482,9 +482,9 @@ let {
         (0, n.jsx)(h.FormText, {
           id: eo,
           type: h.FormText.Types.DESCRIPTION,
-          children: D ? ee.Z.Messages.FORM_HELP_SLOWMODE_FORUM : j ? ee.Z.Messages.FORM_HELP_SLOWMODE_THREAD : ee.Z.Messages.FORM_HELP_SLOWMODE
+          children: j ? ee.Z.Messages.FORM_HELP_SLOWMODE_FORUM : L ? ee.Z.Messages.FORM_HELP_SLOWMODE_THREAD : ee.Z.Messages.FORM_HELP_SLOWMODE
         }),
-        D ? (0, n.jsxs)(n.Fragment, {
+        j ? (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)(h.FormTitle, {
               className: es.marginTop20,
@@ -514,12 +514,12 @@ let {
       className: i()(es.marginTop40, es.marginBottom40)
     })
   ]
-}) : null, K = j && null != e.threadMetadata ? (0, n.jsxs)('div', {
+}) : null, K = L && null != e.threadMetadata ? (0, n.jsxs)('div', {
   children: [
     (0, n.jsx)(h.FormItem, {
       children: (0, n.jsx)(E.Z, {
         page: q.ZY5.CHANNEL_SETTINGS,
-        children: (0, n.jsx)(L.Z, {
+        children: (0, n.jsx)(b.Z, {
           autoArchiveDuration: null !== (m = e.threadMetadata.autoArchiveDuration) && void 0 !== m ? m : J.AX,
           guild: C,
           channel: e,
@@ -531,7 +531,7 @@ let {
     (0, n.jsx)(h.FormText, {
       className: es.marginTop8,
       type: h.FormText.Types.DESCRIPTION,
-      children: M ? ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION_FORUM_POST : ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION
+      children: I ? ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION_FORUM_POST : ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION
     })
   ]
 }) : null, en = e.type === q.d4z.PRIVATE_THREAD && null != e.threadMetadata ? (0, n.jsx)('div', {
@@ -543,7 +543,7 @@ let {
     disabled: !x,
     children: ee.Z.Messages.THREAD_INVITABLE_TOGGLE_LABEL
   })
-}) : null, ed = b.ov.has(e.type) ? (0, n.jsx)('div', {
+}) : null, ed = y.ov.has(e.type) ? (0, n.jsx)('div', {
   children: (0, n.jsx)(h.FormSwitch, {
     note: ee.Z.Messages.FORM_HELP_NSFW,
     onChange: this.handleNSFWChange,
@@ -552,7 +552,7 @@ let {
     disabled: !p,
     children: ee.Z.Messages.FORM_LABEL_NSFW_CHANNEL
   })
-}) : null, ec = b.Y0.has(e.type) && null != C && C.hasFeature(q.oNc.NEWS) && e.id !== (null == C ? void 0 : C.rulesChannelId) && e.id !== (null == C ? void 0 : C.publicUpdatesChannelId) ? (0, n.jsx)('div', {
+}) : null, ec = y.Y0.has(e.type) && null != C && C.hasFeature(q.oNc.NEWS) && e.id !== (null == C ? void 0 : C.rulesChannelId) && e.id !== (null == C ? void 0 : C.publicUpdatesChannelId) ? (0, n.jsx)('div', {
   children: (0, n.jsx)(h.FormSwitch, {
     note: ee.Z.Messages.FORM_HELP_NEWS.format({
       documentationLink: W.Z.getArticleURL(q.BhN.ANNOUNCEMENT_CHANNELS)
@@ -563,15 +563,15 @@ let {
     disabled: !p,
     children: ee.Z.Messages.FORM_LABEL_NEWS_CHANNEL
   })
-}) : null, eu = b.uC.has(e.type) ? (0, n.jsxs)('div', {
+}) : null, eu = y.uC.has(e.type) ? (0, n.jsxs)('div', {
   children: [
     (0, n.jsx)(h.FormDivider, {
       className: i()(es.marginTop40, es.marginBottom40)
     }),
     (0, n.jsx)(E.Z, {
       page: q.ZY5.CHANNEL_SETTINGS,
-      children: (0, n.jsx)(L.Z, {
-        autoArchiveDuration: (0, v.WD)(e, null),
+      children: (0, n.jsx)(b.Z, {
+        autoArchiveDuration: (0, A.WD)(e, null),
         guild: C,
         channel: e,
         onChange: this.handleChangeDefaultAutoArchiveDuration,
@@ -617,7 +617,7 @@ let {
     })
   ]
 }) : null;
-return e.type === q.d4z.GUILD_CATEGORY ? (T = ee.Z.Messages.CATEGORY_NAME, g = 'category-name') : e.isForumPost() ? (T = ee.Z.Messages.FORUM_POST_TITLE, g = 'post-title') : j ? (T = ee.Z.Messages.THREAD_NAME, g = 'thread-name') : (T = ee.Z.Messages.FORM_LABEL_CHANNEL_NAME, g = 'channel-name'), (0, n.jsxs)('div', {
+return e.type === q.d4z.GUILD_CATEGORY ? (T = ee.Z.Messages.CATEGORY_NAME, g = 'category-name') : e.isForumPost() ? (T = ee.Z.Messages.FORUM_POST_TITLE, g = 'post-title') : L ? (T = ee.Z.Messages.THREAD_NAME, g = 'thread-name') : (T = ee.Z.Messages.FORM_LABEL_CHANNEL_NAME, g = 'channel-name'), (0, n.jsxs)('div', {
   children: [
     (0, n.jsx)(h.FormItem, {
       title: T,
@@ -628,7 +628,7 @@ return e.type === q.d4z.GUILD_CATEGORY ? (T = ee.Z.Messages.CATEGORY_NAME, g = '
         error: this.getError('name'),
         name: g,
         autoFocus: !0,
-        disabled: O ? !N : !p,
+        disabled: M ? !N : !p,
         maxLength: q.HN8
       })
     }),
@@ -637,8 +637,8 @@ return e.type === q.d4z.GUILD_CATEGORY ? (T = ee.Z.Messages.CATEGORY_NAME, g = '
     }),
     P,
     F,
+    B,
     U,
-    H,
     z,
     K,
     G,
@@ -663,8 +663,8 @@ if (!this.showVoiceSettings())
   return null;
 let l = (0, G.g7)(t, e),
   a = this.getError('bitrate');
-return (0, n.jsxs)(U.Z, {
-  direction: U.Z.Direction.VERTICAL,
+return (0, n.jsxs)(C.Z, {
+  direction: C.Z.Direction.VERTICAL,
   className: es.marginBottom40,
   children: [
     (0, n.jsx)(h.FormTitle, {
@@ -711,7 +711,7 @@ return (0, n.jsxs)(U.Z, {
 let {
   channel: e
 } = this.props;
-return null != e && null != e.guild_id && b.vg.has(e.type) && (e.isGuildVocal() || O.tM.getCurrentConfig({
+return null != e && null != e.guild_id && y.vg.has(e.type) && (e.isGuildVocal() || L.tM.getCurrentConfig({
   guildId: e.guild_id,
   location: '9b50bd_1'
 }).enabled);
@@ -732,8 +732,8 @@ let l = [{
     name: ee.Z.Messages.VIDEO_QUALITY_MODE_FULL
   }
 ];
-return (0, n.jsxs)(U.Z, {
-  direction: U.Z.Direction.VERTICAL,
+return (0, n.jsxs)(C.Z, {
+  direction: C.Z.Direction.VERTICAL,
   className: es.marginBottom40,
   children: [
     (0, n.jsx)(h.FormItem, {
@@ -770,8 +770,8 @@ if (!this.showVoiceSettings())
   return null;
 let s = this.getError('user_limit'),
   l = e.isGuildStageVoice() ? q.xGv : q.$pe;
-return (0, n.jsxs)(U.Z, {
-  direction: U.Z.Direction.VERTICAL,
+return (0, n.jsxs)(C.Z, {
+  direction: C.Z.Direction.VERTICAL,
   className: es.marginBottom40,
   children: [
     (0, n.jsx)(h.FormTitle, {
@@ -828,8 +828,8 @@ null != s && (i = s.filter(e => !e.deprecated && !e.hidden).map(e => ({
   value: eT
 });
 let r = null !== (t = e.rtcRegion) && void 0 !== t ? t : eT;
-return (0, n.jsxs)(U.Z, {
-  direction: U.Z.Direction.VERTICAL,
+return (0, n.jsxs)(C.Z, {
+  direction: C.Z.Direction.VERTICAL,
   children: [
     (0, n.jsx)(h.FormTitle, {
       children: ee.Z.Messages.FORM_LABEL_REGION_OVERRIDE
@@ -852,8 +852,8 @@ let t;
 let {
   theme: l
 } = this.props;
-return t = e.type === q.d4z.GUILD_CATEGORY ? (0, u.wj)(l) ? s(309095) : s(925442) : (0, u.wj)(l) ? s(316491) : s(301358), (0, n.jsx)(U.Z, {
-  justify: U.Z.Justify.CENTER,
+return t = e.type === q.d4z.GUILD_CATEGORY ? (0, u.wj)(l) ? s(309095) : s(925442) : (0, u.wj)(l) ? s(316491) : s(301358), (0, n.jsx)(C.Z, {
+  justify: C.Z.Justify.CENTER,
   className: es.marginTop60,
   children: (0, n.jsx)('img', {
     alt: '',
@@ -902,7 +902,7 @@ super(e), en(this, 'renderEmojiPicker', e => {
   } = e, {
     channel: s
   } = this.props;
-  return (0, n.jsx)(C.Z, {
+  return (0, n.jsx)(M.Z, {
     guildId: null == s ? void 0 : s.guild_id,
     closePopout: t,
     onSelectEmoji: (e, s) => {
@@ -926,7 +926,7 @@ super(e), en(this, 'renderEmojiPicker', e => {
     channel: t
   } = this.props;
   if (null != t)
-    t.isThread() ? e = (0, A.Z)(e, !1) : q.TPd.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, G.Nj)(e)), (0, m.pW)({
+    t.isThread() ? e = (0, j.Z)(e, !1) : q.TPd.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, G.Nj)(e)), (0, m.pW)({
       name: e
     });
 }), en(this, 'handleBlurName', () => {
@@ -935,14 +935,14 @@ super(e), en(this, 'renderEmojiPicker', e => {
     channelName: t
   } = this.props;
   if ((null == e ? void 0 : e.isThread()) && null != t) {
-    let e = (0, A.Z)(t, !0);
+    let e = (0, j.Z)(t, !0);
     e !== t && (0, m.pW)({
       name: e
     });
   }
 }), en(this, 'handleChangeTopic', e => {
   (0, m.pW)({
-    topic: I.ZP.translateInlineEmojiToSurrogates(e)
+    topic: R.ZP.translateInlineEmojiToSurrogates(e)
   });
 }), en(this, 'handleChangeRichTopic', (e, t, s) => {
   this.setState({
@@ -951,7 +951,7 @@ super(e), en(this, 'renderEmojiPicker', e => {
   }), this.handleChangeTopic(t);
 }), en(this, 'handleChangeTemplate', e => {
   (0, m.pW)({
-    template: I.ZP.translateInlineEmojiToSurrogates(e)
+    template: R.ZP.translateInlineEmojiToSurrogates(e)
   });
 }), en(this, 'handleChangeDefaultReactionEmoji', e => {
   let t = null == e ? null : (null == e ? void 0 : e.id) != null ? {
@@ -1072,16 +1072,16 @@ errors: e,
 channel: t,
 submitting: s,
 subsection: a
-  } = (0, d.cj)([y.Z], () => y.Z.getProps()), i = (0, d.e7)([F.Z], () => {
+  } = (0, d.cj)([P.Z], () => P.Z.getProps()), i = (0, d.e7)([U.Z], () => {
 var e;
-return F.Z.getRegions(null !== (e = null == t ? void 0 : t.getGuildId()) && void 0 !== e ? e : null);
-  }), r = (0, d.e7)([j.Z], () => j.Z.theme), o = (0, d.e7)([w.Z], () => w.Z.getGuild(null == t ? void 0 : t.getGuildId())), c = (0, O.C7)(t), u = (0, O.Xb)(t), {
+return U.Z.getRegions(null !== (e = null == t ? void 0 : t.getGuildId()) && void 0 !== e ? e : null);
+  }), r = (0, d.e7)([D.Z], () => D.Z.theme), o = (0, d.e7)([F.Z], () => F.Z.getGuild(null == t ? void 0 : t.getGuildId())), c = (0, L.C7)(t), u = (0, L.Xb)(t), {
 canManageChannels: h,
 canSendMessages: m
-  } = (0, d.cj)([P.Z], () => ({
-canManageChannels: P.Z.can(q.Plq.MANAGE_CHANNELS, t),
-canSendMessages: P.Z.can(q.Plq.SEND_MESSAGES, t)
-  })), g = (0, _.ZP)(t), E = D.default.getId(), T = (0, M.v)(), S = null == t ? void 0 : t.id, x = (0, N.ts)(t, !1, !0), f = p.Z.useExperiment({
+  } = (0, d.cj)([B.Z], () => ({
+canManageChannels: B.Z.can(q.Plq.MANAGE_CHANNELS, t),
+canSendMessages: B.Z.can(q.Plq.SEND_MESSAGES, t)
+  })), g = (0, _.ZP)(t), E = w.default.getId(), T = (0, Z.v)(), S = null == t ? void 0 : t.id, x = (0, N.ts)(t, !1, !0), f = p.Z.useExperiment({
 guildId: null == t ? void 0 : t.guild_id,
 location: 'ChannelSettingsOverview'
   }).enabled, C = l.useCallback(e => {

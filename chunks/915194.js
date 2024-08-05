@@ -4,8 +4,8 @@ e(470079);
 var i = e(442837),
   a = e(481060),
   s = e(812206),
-  r = e(922156),
-  d = e(285952),
+  r = e(600164),
+  d = e(922156),
   t = e(63063),
   c = e(689938),
   u = e(630969);
@@ -17,10 +17,10 @@ transitionState: e
 error: p,
 applicationName: h
   } = (0, i.cj)([
-r.Z,
+d.Z,
 s.Z
   ], () => {
-let l = r.Z.getLastError(),
+let l = d.Z.getLastError(),
   n = null;
 if (null != l && null != l.applicationId) {
   let e = s.Z.getApplication(l.applicationId);
@@ -37,17 +37,17 @@ size: a.ModalSize.SMALL,
 'aria-label': c.Z.Messages.DISPATCH_ERROR_MODAL_HEADER,
 children: [
   (0, o.jsxs)(a.ModalHeader, {
-    justify: d.Z.Justify.BETWEEN,
+    justify: r.Z.Justify.BETWEEN,
     separator: !1,
     children: [
-      (0, o.jsx)(d.Z.Child, {
+      (0, o.jsx)(r.Z.Child, {
         grow: 1,
         children: (0, o.jsx)(a.Heading, {
           variant: 'heading-lg/semibold',
           children: c.Z.Messages.DISPATCH_ERROR_MODAL_HEADER
         })
       }),
-      (0, o.jsx)(d.Z.Child, {
+      (0, o.jsx)(r.Z.Child, {
         grow: 0,
         children: (0, o.jsx)(a.ModalCloseButton, {
           onClick: n

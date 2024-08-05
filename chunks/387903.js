@@ -14,19 +14,19 @@ var r, i, a, s = n(735250),
   f = n(438139),
   h = n(410030),
   p = n(726542),
-  m = n(925329),
-  I = n(810568),
-  T = n(168524),
-  g = n(565138),
-  S = n(833858),
-  A = n(223135),
-  N = n(707409),
-  v = n(769654),
-  O = n(750154),
-  R = n(285952),
-  C = n(514342),
-  y = n(936195),
-  D = n(806519),
+  m = n(600164),
+  I = n(686546),
+  T = n(111028),
+  g = n(925329),
+  S = n(810568),
+  A = n(168524),
+  N = n(565138),
+  v = n(833858),
+  O = n(223135),
+  R = n(707409),
+  C = n(769654),
+  y = n(424678),
+  D = n(750154),
   L = n(768581),
   b = n(630388),
   M = n(153066),
@@ -204,7 +204,7 @@ return (null == l ? void 0 : l.type) === V.IIU.HANG_STATUS && (t = H.Z.Messages.
       className: u()((0, M.l)(Z, 'headerText', e ? 'EmptyBody' : 'Normal')),
       variant: i ? 'text-xs/semibold' : 'eyebrow',
       color: 'ProfileV2' === o ? 'header-primary' : void 0,
-      children: (0, s.jsx)(C.Z, {
+      children: (0, s.jsx)(T.Z, {
         children: t
       })
     }),
@@ -228,7 +228,7 @@ let i, a;
 if (e.type === V.IIU.HANG_STATUS)
   return (0, s.jsx)('div', {
     className: Z.assets,
-    children: (0, s.jsx)(A.Z, {
+    children: (0, s.jsx)(O.Z, {
       hangStatusActivity: e,
       className: u()(Z.assetsHangStatus, this.getTypeClass('assetsSmallImage', 'WithoutLargeImage'))
     })
@@ -260,12 +260,12 @@ if (_)
     onClick: this.handleOpenSpotifyAlbum,
     children: f
   });
-else if ((0, O.dS)(e)) {
-  let t = (0, O.rq)(e);
+else if ((0, D.dS)(e)) {
+  let t = (0, D.rq)(e);
   if (null == t)
     return null;
-  f = (0, s.jsx)(D.ZP, {
-    mask: D.ZP.Masks.SQUIRCLE,
+  f = (0, s.jsx)(I.ZP, {
+    mask: I.ZP.Masks.SQUIRCLE,
     width: F.Si.SMALL,
     height: F.Si.SMALL,
     children: (0, s.jsx)('img', {
@@ -303,7 +303,7 @@ return (this.isStreamerOnTypeActivityFeed() && null != e.url && '' !== e.url && 
       children: f
     })
   ]
-})), !(0, O.dS)(e) && null != c.small_image && (a = (0, s.jsx)(E.Tooltip, {
+})), !(0, D.dS)(e) && null != c.small_image && (a = (0, s.jsx)(E.Tooltip, {
   text: '' !== c.small_text ? c.small_text : null,
   position: 'top',
   children: e => {
@@ -351,7 +351,7 @@ let {
 } = this.props;
 return null != e.assets || (0, U.Z)(e) || e.type !== V.IIU.PLAYING || 'ActivityFeed' === n || t.bot ? null : null == r && null != i ? (0, s.jsx)('div', {
   className: u()(Z.gameIcon, Z.screenshareIcon)
-}) : (0, s.jsx)(m.Z, {
+}) : (0, s.jsx)(g.Z, {
   className: Z.gameIcon,
   game: r
 });
@@ -373,14 +373,14 @@ if (a === V.IIU.CUSTOM_STATUS)
 let o = (0, w.Z)(e),
   l = e.name,
   c = l;
-if (a === V.IIU.HANG_STATUS ? c = (0, S.O8)(e) : o && null != n ? c = (0, s.jsx)('span', {
+if (a === V.IIU.HANG_STATUS ? c = (0, v.O8)(e) : o && null != n ? c = (0, s.jsx)('span', {
     className: Z.activityName,
     children: c
   }) : !o && (l = i, c = i, (0, x.Z)(e) && null != e.sync_id && null != i ? c = (0, s.jsx)(E.Anchor, {
     className: Z.bodyLink,
     onClick: this.handleOpenSpotifyTrack,
     children: i
-  }) : (0, O.dS)(e) && (c = e.name)), null == c)
+  }) : (0, D.dS)(e) && (c = e.name)), null == c)
   return null;
 let d = null != z({
   activity: e
@@ -406,7 +406,7 @@ else if (e.type === V.IIU.HANG_STATUS)
   a = null != i ? H.Z.Messages.HANG_STATUS_LOCATION.format({
     guildName: i.name
   }) : null, t = null != i ? () => {
-    (0, v.X)(i.id);
+    (0, C.X)(i.id);
   } : void 0;
 else if (!(0, w.Z)(e)) {
   if (o = a = r, (0, x.Z)(e) && null != r)
@@ -419,7 +419,7 @@ else if (!(0, w.Z)(e)) {
         onOpenSpotifyArtist: this.handleOpenSpotifyArtist
       }, n)
     });
-  else if ((0, O.dS)(e)) {
+  else if ((0, D.dS)(e)) {
     var l;
     a = null === (l = e.assets) || void 0 === l ? void 0 : l.small_text;
   }
@@ -451,9 +451,9 @@ return n && null != t ? null == r ? (0, s.jsx)('div', {
 }) : (0, s.jsxs)('div', {
   className: u()((0, k.Z)(e) || (0, x.Z)(e) ? Z.detailsWrap : Z.details, Z.guildDetails),
   children: [
-    (0, s.jsx)(g.Z, {
+    (0, s.jsx)(N.Z, {
       guild: t,
-      size: g.Z.Sizes.SMOL,
+      size: N.Z.Sizes.SMOL,
       className: Z.guildIcon
     }),
     (0, s.jsx)(E.ChevronSmallRightIcon, {
@@ -487,9 +487,9 @@ let {
 } = e;
 return null == n ? null : (0, U.Z)(e) ? (0, s.jsx)(K, {
   timestamps: n
-}) : (0, s.jsx)(N.ZP, {
+}) : (0, s.jsx)(R.ZP, {
   start: n.start,
-  location: N.ZP.Locations.USER_ACTIVITY,
+  location: R.ZP.Locations.USER_ACTIVITY,
   className: Z.playTime,
   isApplicationStreaming: null != t
 });
@@ -528,10 +528,10 @@ return (!(0, w.Z)(e) && (c = u = null == l ? void 0 : l.large_text, (0, x.Z)(e) 
     onClick: this.handleOpenSpotifyAlbum,
     children: c
   }, n) : c
-}))), null != u && 0 !== u.length && e.type !== V.IIU.CUSTOM_STATUS || (0, O.dS)(e)) ? ((null == o ? void 0 : o.size) == null && [F.Zc].includes(null !== (n = e.application_id) && void 0 !== n ? n : '') ? i = H.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
+}))), null != u && 0 !== u.length && e.type !== V.IIU.CUSTOM_STATUS || (0, D.dS)(e)) ? ((null == o ? void 0 : o.size) == null && [F.Zc].includes(null !== (n = e.application_id) && void 0 !== n ? n : '') ? i = H.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
   count: '0',
   max: null !== (r = null == t ? void 0 : t.getMaxParticipants()) && void 0 !== r ? r : 0
-}) : (0, O.dS)(e) && (null == o ? void 0 : o.size) != null ? i = H.Z.Messages.USER_ACTIVITY_STAGE_STATE_SIZE.format({
+}) : (0, D.dS)(e) && (null == o ? void 0 : o.size) != null ? i = H.Z.Messages.USER_ACTIVITY_STAGE_STATE_SIZE.format({
   numSpeakers: o.size[0],
   numListeners: o.size[1] - o.size[0]
 }) : (null == o ? void 0 : o.size) != null && o.size.length >= 2 && (i = H.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
@@ -572,33 +572,33 @@ let d = 'UserPopout' === t || 'UserPopoutV2' === t || 'BiteSizePopout' === t,
   h = 'StreamPreview' === t,
   p = !1;
 (0, G.Z)(c) ? (e = this.renderXboxImage(), p = !0) : null == (e = this.renderImage(c)) && (p = null != (e = this.renderGameImage(c)));
-let m = this.renderName(c),
-  I = this.renderDetails(c),
-  T = this.renderState(c, i),
-  g = this.renderTimePlayed(c),
-  S = this.renderChannelDetails(c),
-  A = null != n ? n() : null,
-  N = this.renderTimeBar(c),
-  v = ![
+let I = this.renderName(c),
+  T = this.renderDetails(c),
+  g = this.renderState(c, i),
+  S = this.renderTimePlayed(c),
+  A = this.renderChannelDetails(c),
+  N = null != n ? n() : null,
+  v = this.renderTimeBar(c),
+  O = ![
     e,
-    m,
     I,
     T,
     g,
-    N,
-    A
+    S,
+    v,
+    N
   ].some(e => null != e);
 return (0, s.jsxs)('div', {
   className: u()(this.getTypeClass('activity'), r),
   children: [
-    this.renderHeader(v),
+    this.renderHeader(O),
     (0, s.jsx)('div', {
       className: u()(p ? Z.bodyAlignCenter : Z.bodyNormal, a && !d && !h && Z.wrap),
       children: (0, s.jsxs)('div', {
         className: Z.activityDetails,
         children: [
           e,
-          this.isStreamerOnTypeActivityFeed() ? null : (0, s.jsxs)(R.Z.Child, {
+          this.isStreamerOnTypeActivityFeed() ? null : (0, s.jsxs)(m.Z.Child, {
             className: u()((0, M.l)(Z, 'content', p ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
             children: [
               (0, s.jsxs)(E.Clickable, {
@@ -607,26 +607,26 @@ return (0, s.jsxs)('div', {
                   l(), null == o || o();
                 } : void 0,
                 children: [
-                  m,
                   I,
                   T,
-                  g
+                  g,
+                  S
                 ]
               }),
-              S,
-              d || h ? null : N,
-              f ? A : null
+              A,
+              d || h ? null : v,
+              f ? N : null
             ]
           }),
           _ ? (0, s.jsx)('div', {
             className: Z.actions,
-            children: A
+            children: N
           }) : null
         ]
       })
     }),
-    d ? N : null,
-    d || h ? A : null,
+    d ? v : null,
+    d || h ? N : null,
     (0, s.jsx)(q, {
       activity: c
     })
@@ -660,10 +660,10 @@ super(...e), Y(this, 'handleOpenSpotifyTrack', () => {
 Y(Q, 'Types', r);
 let X = e => {
   var t, n, r;
-  let i = (0, T.Z)({
+  let i = (0, A.Z)({
 location: 'UserActivity',
 applicationId: null !== (r = null === (t = e.application) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null === (n = e.activity) || void 0 === n ? void 0 : n.application_id,
-source: I.m1.UserProfile,
+source: S.m1.UserProfile,
 sourceUserId: e.user.id,
 trackEntryPointImpression: !0
   });

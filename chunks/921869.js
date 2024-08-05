@@ -7,8 +7,8 @@ var n = t(735250);
 t(470079);
 var r = t(442837),
   s = t(481060),
-  o = t(553795),
-  l = t(285952),
+  o = t(600164),
+  l = t(553795),
   c = t(689938),
   i = t(191364);
 
@@ -23,14 +23,14 @@ headerReconnect: N,
 body: h,
 learnMoreLink: m,
 valueProps: C
-  } = e, j = (0, r.e7)([o.Z], () => {
-let e = o.Z.getAccount(null, a);
+  } = e, j = (0, r.e7)([l.Z], () => {
+let e = l.Z.getAccount(null, a);
 return (null == e ? void 0 : e.twoWayLink) === !1;
   });
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(s.ModalHeader, {
-    direction: l.Z.Direction.VERTICAL,
+    direction: o.Z.Direction.VERTICAL,
     className: i.header,
     separator: !1,
     children: [

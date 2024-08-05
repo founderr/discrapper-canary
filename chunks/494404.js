@@ -21,15 +21,15 @@ var i = n(735250),
   _ = n(668781),
   E = n(904245),
   I = n(724757),
-  m = n(294218),
-  T = n(703656),
-  h = n(210887),
-  N = n(592125),
-  C = n(375954),
-  f = n(496675),
-  p = n(933429),
-  g = n(451478),
-  S = n(387204),
+  m = n(951844),
+  T = n(294218),
+  h = n(703656),
+  N = n(210887),
+  C = n(592125),
+  f = n(375954),
+  p = n(496675),
+  g = n(933429),
+  S = n(451478),
   A = n(626135),
   R = n(585483),
   O = n(981631),
@@ -153,12 +153,12 @@ super(...e), v(this, 'handleClickJump', e => {
 });
   }
 }
-let b = u.ZP.connectStores([f.Z], e => {
+let b = u.ZP.connectStores([p.Z], e => {
   let {
 channel: t
   } = e;
   return {
-canManageMessages: null != t && f.Z.can(O.Plq.MANAGE_MESSAGES, t)
+canManageMessages: null != t && p.Z.can(O.Plq.MANAGE_MESSAGES, t)
   };
 })(D);
 
@@ -170,13 +170,13 @@ hasMore: a,
 loading: l,
 loadMore: _,
 renderHeader: E,
-renderEmptyState: m,
-renderItem: T,
-getProTip: N,
-scrollerClassName: C,
-className: f,
+renderEmptyState: T,
+renderItem: h,
+getProTip: C,
+scrollerClassName: f,
+className: p,
 listName: v
-  } = e, Z = s.useRef(null), P = (0, I.Z)(v, Z), D = (0, u.e7)([p.Z], () => p.Z.hasNotice()), b = (0, u.e7)([g.Z], () => g.Z.windowSize());
+  } = e, Z = s.useRef(null), P = (0, I.Z)(v, Z), D = (0, u.e7)([g.Z], () => g.Z.hasNotice()), b = (0, u.e7)([S.Z], () => S.Z.windowSize());
   s.useEffect(() => {
 A.default.track(O.rMx.OPEN_POPOUT, {
   type: t
@@ -214,9 +214,9 @@ y = !0;
 className: r()(M.emptyPlaceholder, M.loadingPlaceholder),
 children: (0, i.jsx)(d.Spinner, {})
   }, 'spinner')] : 0 === n.length ? U.push((0, i.jsx)(s.Fragment, {
-children: m(h.Z.theme)
+children: T(N.Z.theme)
   }, 'empty-state')) : (y = !1, U = [], o().each(n, e => {
-U.push(...T(e));
+U.push(...h(e));
   }));
   let B = null;
   null != n && n.length > 0 && null != _ && (B = l ? (0, i.jsx)('div', {
@@ -233,12 +233,12 @@ children: (0, i.jsx)(d.Button, {
 })
   }) : (0, i.jsx)('div', {
 className: M.scrollingFooterWrap,
-children: m(h.Z.theme)
+children: T(N.Z.theme)
   }));
-  let k = null == N ? void 0 : N(),
+  let k = null == C ? void 0 : C(),
 G = y && null != k ? (0, i.jsx)('div', {
   className: M.footer,
-  children: (0, i.jsx)(S.Z, {
+  children: (0, i.jsx)(m.Z, {
     style: {
       width: '100%',
       paddingTop: 10,
@@ -253,7 +253,7 @@ F = {
   D && (F.maxHeight -= 40);
   let w = null != _ && a;
   return (0, i.jsx)('div', {
-className: r()(f, M.messagesPopoutWrap),
+className: r()(p, M.messagesPopoutWrap),
 style: F,
 onClick: L,
 onDoubleClick: L,
@@ -262,7 +262,7 @@ children: (0, i.jsxs)(d.HeadingLevel, {
   component: E(),
   children: [
     (0, i.jsxs)(d.AdvancedScroller, {
-      className: r()(M.messagesPopout, C),
+      className: r()(M.messagesPopout, f),
       onScroll: w ? j : void 0,
       ref: Z,
       children: [
@@ -302,16 +302,16 @@ loading: o,
 loadMore: c,
 onJump: d,
 canCloseAllMessages: I = !1,
-renderHeader: h,
-renderEmptyState: f,
+renderHeader: m,
+renderEmptyState: N,
 renderMessage: p,
 getProTip: g,
 scrollerClassName: S,
 className: A,
 onCloseMessage: R,
 listName: v
-  } = e, L = (0, u.e7)([C.Z], () => {
-let e = null != a ? C.Z.getMessages(a.id) : null;
+  } = e, L = (0, u.e7)([f.Z], () => {
+let e = null != a ? f.Z.getMessages(a.id) : null;
 return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
   });
 
@@ -331,8 +331,8 @@ if (s)
     confirmText: x.Z.Messages.OKAY
   });
 else if (!L) {
-  let e = N.Z.getChannel(r);
-  null != e && (E.Z.trackJump(r, i, t), (0, T.uL)(O.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
+  let e = C.Z.getChannel(r);
+  null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(O.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
 }
   }
   s.useEffect(() => {
@@ -354,8 +354,8 @@ scrollerClassName: S,
 items: P,
 loading: o,
 analyticsName: t,
-renderEmptyState: f,
-renderHeader: h,
+renderEmptyState: N,
+renderHeader: m,
 hasMore: l,
 loadMore: c,
 getProTip: g,
@@ -372,7 +372,7 @@ renderItem: function(e) {
   return null == n ? [] : (s.push((0, i.jsxs)('div', {
     className: M.messageGroupWrapper,
     children: [
-      (0, i.jsx)(m.Z, {
+      (0, i.jsx)(T.Z, {
         className: M.messageGroupCozy,
         message: t,
         channel: n

@@ -16,8 +16,8 @@ var l = t(735250),
   d = t(541716),
   c = t(752305),
   E = t(893718),
-  _ = t(19780),
-  N = t(285952),
+  _ = t(600164),
+  N = t(19780),
   f = t(626135),
   S = t(981631),
   T = t(689938),
@@ -29,7 +29,7 @@ function g(e) {
 channel: n,
 transitionState: t,
 onClose: g
-  } = e, A = (0, u.e7)([s.Z], () => s.Z.getChannelStatus(n)), C = (0, u.e7)([_.Z], () => _.Z.getMediaSessionId()), [O, h] = i.useState(null != A ? A : ''), [v, M] = i.useState(!1), [L, m] = i.useState(null), U = O.length > 500;
+  } = e, A = (0, u.e7)([s.Z], () => s.Z.getChannelStatus(n)), C = (0, u.e7)([N.Z], () => N.Z.getMediaSessionId()), [O, h] = i.useState(null != A ? A : ''), [v, M] = i.useState(!1), [L, m] = i.useState(null), U = O.length > 500;
   i.useEffect(() => {
 f.default.track(S.rMx.OPEN_MODAL, {
   type: 'Voice Channel Topic Modal',
@@ -70,7 +70,7 @@ children: (0, l.jsxs)(a.ModalRoot, {
     (0, l.jsxs)(a.ModalContent, {
       children: [
         (0, l.jsxs)(a.ModalHeader, {
-          direction: N.Z.Direction.VERTICAL,
+          direction: _.Z.Direction.VERTICAL,
           className: Z.modalHeader,
           separator: !1,
           children: [
@@ -128,8 +128,8 @@ children: (0, l.jsxs)(a.ModalRoot, {
       ]
     }),
     (0, l.jsxs)(a.ModalFooter, {
-      justify: N.Z.Justify.BETWEEN,
-      direction: N.Z.Direction.HORIZONTAL,
+      justify: _.Z.Justify.BETWEEN,
+      direction: _.Z.Direction.HORIZONTAL,
       children: [
         (0, l.jsx)(a.Button, {
           color: a.Button.Colors.PRIMARY,

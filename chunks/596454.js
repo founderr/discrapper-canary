@@ -10,10 +10,10 @@ var r, i = n(735250),
   l = n(699581),
   u = n(374470),
   c = n(442837),
-  d = n(134432),
-  _ = n(695346),
-  E = n(237997),
-  f = n(278297),
+  d = n(249458),
+  _ = n(134432),
+  E = n(695346),
+  f = n(237997),
   h = n(768581),
   p = n(176354),
   m = n(506071),
@@ -106,7 +106,7 @@ super(...e), T(this, 'state', {
   hover: !1
 }), T(this, 'key', void 0), T(this, 'cancelLoadImage', void 0), T(this, 'onError', () => {
   let e = this.getSrc();
-  null != e && (this.cancelLoadImage = (0, d.po)(e, e => {
+  null != e && (this.cancelLoadImage = (0, _.po)(e, e => {
     !e && (this.key = Date.now(), this.forceUpdate());
   }));
 }), T(this, 'onMouseEnter', e => {
@@ -206,7 +206,7 @@ render() {
       allowAnimatedEmoji: a,
       ...s
     } = this.props;
-  return (0, i.jsx)(f.G.Consumer, {
+  return (0, i.jsx)(d.G.Consumer, {
     children: t => (0, i.jsx)(e, {
       ...s,
       autoplay: r || !1,
@@ -218,12 +218,12 @@ render() {
 }(g);
 
 function A(e) {
-  let t = _.Yk.useSetting(),
+  let t = E.Yk.useSetting(),
 n = {
   autoplay: null == e.autoplay ? t : e.autoplay,
   allowAnimatedEmoji: t
 },
-r = __OVERLAY__ ? (0, c.e7)([E.Z], () => E.Z.isInstanceFocused()) : (0, m.n)();
+r = __OVERLAY__ ? (0, c.e7)([f.Z], () => f.Z.isInstanceFocused()) : (0, m.n)();
   return (0, i.jsx)(S, {
 ...e,
 ...n,

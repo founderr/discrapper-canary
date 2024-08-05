@@ -13,9 +13,9 @@ var a = s(735250),
   i = s(481060),
   r = s(749210),
   c = s(820160),
-  d = s(594174),
-  u = s(285952),
-  m = s(153124),
+  d = s(600164),
+  u = s(313201),
+  m = s(594174),
   C = s(892880),
   _ = s(458879),
   x = s(981631),
@@ -33,7 +33,7 @@ onGuildCreated: T,
 isSlideReady: h,
 hasFooter: g = !0,
 isCommunity: N = !1
-  } = e, [B, M] = n.useState(C.Z.getGuildNameSuggestion()), [Z, p] = n.useState(null), [b, j] = n.useState(!1), [S, U] = n.useState(null), R = !!(null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()), [A, D] = n.useState(R), H = (0, m.Dt)(), O = n.useRef(null);
+  } = e, [B, M] = n.useState(C.Z.getGuildNameSuggestion()), [Z, p] = n.useState(null), [b, j] = n.useState(!1), [S, U] = n.useState(null), R = !!(null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()), [A, D] = n.useState(R), H = (0, u.Dt)(), O = n.useRef(null);
   n.useEffect(() => {
 var e;
 h && (null === (e = O.current) || void 0 === e || e.focus());
@@ -84,7 +84,7 @@ G = (0, a.jsxs)(a.Fragment, {
 content: (0, a.jsxs)(a.Fragment, {
   children: [
     (0, a.jsxs)(i.ModalHeader, {
-      direction: u.Z.Direction.VERTICAL,
+      direction: d.Z.Direction.VERTICAL,
       className: I.header,
       separator: !1,
       children: [
@@ -166,7 +166,7 @@ content: (0, a.jsxs)(a.Fragment, {
       ]
     }),
     g && (0, a.jsx)(i.ModalFooter, {
-      justify: u.Z.Justify.BETWEEN,
+      justify: d.Z.Justify.BETWEEN,
       children: G
     })
   ]

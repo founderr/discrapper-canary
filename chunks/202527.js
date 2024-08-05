@@ -1,9 +1,9 @@
-t.d(a, {
+n.d(t, {
   b: function() {
 return s;
   }
 });
-let s = (0, t(818083).B)({
+let s = (0, n(818083).B)({
   kind: 'user',
   id: '2024-04_game_settings_merge',
   label: 'Game Settings Merge',

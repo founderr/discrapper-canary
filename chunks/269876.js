@@ -13,27 +13,27 @@ var n = s(735250),
   d = s(692547),
   _ = s(481060),
   E = s(846027),
-  u = s(131951),
-  T = s(153124),
+  u = s(313201),
+  T = s(131951),
   I = s(65154),
   S = s(689938),
   N = s(414976),
   C = s(483085),
   m = s(549856);
-let A = (0, T.hQ)();
+let A = (0, u.hQ)();
 
 function g() {
   let [e, t] = a.useState(-100), [s, i] = a.useState(!1), {
 threshold: g,
 autoThreshold: h
-  } = (0, o.cj)([u.Z], () => u.Z.getModeOptions()), {
+  } = (0, o.cj)([T.Z], () => T.Z.getModeOptions()), {
 inputMode: O,
 automaticVADSupported: p,
 isEnabled: R
-  } = (0, o.cj)([u.Z], () => ({
-inputMode: u.Z.getMode(),
-automaticVADSupported: u.Z.supports(I.AN.AUTOMATIC_VAD),
-isEnabled: u.Z.isEnabled()
+  } = (0, o.cj)([T.Z], () => ({
+inputMode: T.Z.getMode(),
+automaticVADSupported: T.Z.supports(I.AN.AUTOMATIC_VAD),
+isEnabled: T.Z.isEnabled()
   }));
 
   function x(e, s) {
@@ -49,9 +49,9 @@ E.Z.setMode(O, {
   a.useEffect(() => {
 let e = new c.V7();
 return e.start(1000, () => {
-  u.Z.getMediaEngine().on(l.aB.VoiceActivity, x), e.stop();
+  T.Z.getMediaEngine().on(l.aB.VoiceActivity, x), e.stop();
 }), () => {
-  u.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, x), e.stop();
+  T.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, x), e.stop();
 };
   }, []);
   let f = (0, n.jsx)('section', {
@@ -111,7 +111,7 @@ children: [
   }),
   (0, n.jsxs)('div', {
     children: [
-      p && (0, n.jsx)(T.FG, {
+      p && (0, n.jsx)(u.FG, {
         children: e => (0, n.jsxs)('div', {
           className: r()(C.horizontal, m.marginBottom4),
           children: [

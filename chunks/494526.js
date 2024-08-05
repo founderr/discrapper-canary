@@ -14,9 +14,9 @@ var s, r, i, a, l = n(735250),
   g = n(99690),
   p = n(937154),
   I = n(388905),
-  m = n(710845),
-  f = n(314897),
-  N = n(277390),
+  m = n(198993),
+  f = n(710845),
+  N = n(314897),
   T = n(585483),
   x = n(358085),
   A = n(172517),
@@ -29,7 +29,7 @@ var s, r, i, a, l = n(735250),
   b = n(549856);
 (i = s || (s = {}))[i.INITIALIZING = 0] = 'INITIALIZING', i[i.PENDING_REMOTE_INIT = 1] = 'PENDING_REMOTE_INIT', i[i.PENDING_FINISH = 2] = 'PENDING_FINISH', i[i.PENDING_TICKET = 3] = 'PENDING_TICKET', i[i.PENDING_LOGIN = 4] = 'PENDING_LOGIN', i[i.FINISH = 5] = 'FINISH', (a = r || (r = {}))[a.QR_CODE = 0] = 'QR_CODE', a[a.CONFIRM = 1] = 'CONFIRM';
 let D = n(515695),
-  L = new m.Z('LoginQRSocket');
+  L = new f.Z('LoginQRSocket');
 
 function M(e) {
   let {
@@ -44,7 +44,7 @@ n && h.AccessibilityAnnouncer.announce(R.Z.Messages.LOGIN_WITH_QR_LOADING_FINISH
 className: O.qrCodeContainer,
 children: '' !== t && n ? (0, l.jsxs)(l.Fragment, {
   children: [
-    (0, l.jsx)(N.ZP, {
+    (0, l.jsx)(m.ZP, {
       className: O.qrCode,
       size: 160,
       text: t
@@ -172,7 +172,7 @@ function y(e) {
   let {
 authTokenCallback: t,
 conditionalMediationAbortController: n
-  } = e, s = (0, d.e7)([f.default], () => f.default.getIsPasswordlessActive()), {
+  } = e, s = (0, d.e7)([N.default], () => N.default.getIsPasswordlessActive()), {
 state: r,
 rsaKeyPair: i,
 cancel: a,

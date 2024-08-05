@@ -21,13 +21,13 @@ var i = n(735250),
   N = n(906732),
   C = n(835473),
   f = n(471445),
-  p = n(955415),
-  g = n(601964),
-  S = n(592125),
-  A = n(430824),
-  R = n(496675),
-  O = n(594174),
-  x = n(514342),
+  p = n(111028),
+  g = n(955415),
+  S = n(601964),
+  A = n(592125),
+  R = n(430824),
+  O = n(496675),
+  x = n(594174),
   M = n(624138),
   v = n(358595),
   L = n(981631),
@@ -102,7 +102,7 @@ return (0, i.jsxs)('div', {
       size: 'xs',
       color: 'currentColor'
     }) : null,
-    (0, i.jsx)(x.Z, {
+    (0, i.jsx)(p.Z, {
       children: (0, i.jsx)(d.Text, {
         variant: 'text-xs/normal',
         children: P.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
@@ -119,7 +119,7 @@ className: r()(D.channel, {
   [D.stacked]: s,
   [D.ended]: a
 }),
-children: (0, i.jsx)(x.Z, {
+children: (0, i.jsx)(p.Z, {
   children: (0, i.jsx)(d.Text, {
     variant: 'text-xs/normal',
     children: P.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
@@ -137,7 +137,7 @@ function k(e) {
   getAcceptInviteContext: f
 } = e,
 {
-  approximate_member_count: x,
+  approximate_member_count: p,
   approximate_presence_count: M,
   target_type: k,
   target_application: G
@@ -161,7 +161,7 @@ F,
 V,
 Y
   ]);
-  let W = (0, c.e7)([A.Z], () => null != u.guild ? A.Z.getGuild(u.guild.id) : null, [u]),
+  let W = (0, c.e7)([R.Z], () => null != u.guild ? R.Z.getGuild(u.guild.id) : null, [u]),
 K = (0, C.Z)([G.id])[0],
 z = (0, c.e7)([E.ZP], () => {
   var e;
@@ -176,8 +176,8 @@ Q = (0, c.e7)([E.ZP], () => {
     return G.id === t;
   });
 }),
-q = S.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
-X = (0, c.e7)([R.Z], () => null != q && R.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
+q = A.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
+X = (0, c.e7)([O.Z], () => null != q && O.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
 {
   analyticsLocations: J
 } = (0, N.ZP)(h.Z.INVITE_EMBED),
@@ -190,13 +190,13 @@ ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.
   q,
   G.id
 ]),
-et = (0, c.Wu)([O.default], () => ee.map(e => O.default.getUser(e)), [ee]),
+et = (0, c.Wu)([x.default], () => ee.map(e => x.default.getUser(e)), [ee]),
 en = u.state === L.r2o.ACCEPTING,
 ei = null != W;
   if (null == W) {
 if (null == u.guild)
   return (0, i.jsx)(v.Z, {});
-W = new g.ZP(u.guild);
+W = new S.ZP(u.guild);
   }
   let es = ei && !X || ei && z,
 ea = () => {
@@ -228,7 +228,7 @@ children: [
       })
     })
   }),
-  (0, i.jsxs)(p.Z, {
+  (0, i.jsxs)(g.Z, {
     className: r()(D.content, {
       [D.large]: w,
       [D.stacked]: H
@@ -275,7 +275,7 @@ children: [
             ]
           }) : null,
           ei ? null : (0, i.jsx)(y, {
-            members: x,
+            members: p,
             membersOnline: M,
             isLarge: w,
             isStacked: H

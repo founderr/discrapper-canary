@@ -6,9 +6,9 @@ var s = n(735250),
   l = n(780384),
   o = n(481060),
   c = n(410030),
-  d = n(372769),
-  u = n(134432),
-  _ = n(806519),
+  d = n(686546),
+  u = n(372769),
+  _ = n(134432),
   I = n(768581),
   E = n(624138),
   T = n(689938),
@@ -48,7 +48,7 @@ name: D
   } = i, v = null != i.discoverySplash && /^data:/.test(i.discoverySplash) ? i.discoverySplash : I.ZP.getGuildDiscoverySplashURL({
 id: i.id,
 splash: i.discoverySplash,
-size: 240 * (0, u.x_)()
+size: 240 * (0, _.x_)()
   }), j = (0, l.wj)(O) ? N : S, Z = null !== (t = I.ZP.getGuildIconURL({
 id: i.id,
 icon: i.icon,
@@ -95,14 +95,14 @@ children: [
       }),
       (0, s.jsx)('div', {
         className: m.guildIcon,
-        children: (0, s.jsx)(_.ZP, {
-          mask: _.ZP.Masks.SQUIRCLE,
+        children: (0, s.jsx)(d.ZP, {
+          mask: d.ZP.Masks.SQUIRCLE,
           width: 48,
           height: 48,
           children: (0, s.jsx)('div', {
             className: m.iconMask,
-            children: (0, s.jsx)(_.ZP, {
-              mask: _.ZP.Masks.SQUIRCLE,
+            children: (0, s.jsx)(d.ZP, {
+              mask: d.ZP.Masks.SQUIRCLE,
               width: 40,
               height: 40,
               children: null != P ? P : null
@@ -118,7 +118,7 @@ children: [
       (0, s.jsxs)('div', {
         className: m.title,
         children: [
-          (0, s.jsx)(d.Z, {
+          (0, s.jsx)(u.Z, {
             className: m.verifiedIcon,
             guild: i,
             tooltipColor: o.Tooltip.Colors.PRIMARY

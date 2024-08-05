@@ -9,8 +9,8 @@ return m;
 var i = t(735250);
 t(470079);
 var o = t(481060),
-  l = t(777036),
-  a = t(154921),
+  l = t(112831),
+  a = t(777036),
   r = t(970184),
   s = t(471073),
   u = t(293979),
@@ -48,9 +48,9 @@ children: (0, i.jsxs)(o.ModalRoot, {
           'aria-label': I,
           className: p.applicationIcon
         }),
-        (0, i.jsx)(a.Z, {
-          color: a.Z.Colors.HEADER_PRIMARY,
-          size: a.Z.Sizes.SIZE_24,
+        (0, i.jsx)(l.Z, {
+          color: l.Z.Colors.HEADER_PRIMARY,
+          size: l.Z.Sizes.SIZE_24,
           children: n
         }),
         (0, i.jsx)(o.ModalCloseButton, {
@@ -61,13 +61,13 @@ children: (0, i.jsxs)(o.ModalRoot, {
     }),
     (0, i.jsxs)(o.ModalContent, {
       children: [
-        null != C && '' !== C ? (0, i.jsx)(l.Z, {
-          messageType: l.Q.ERROR,
+        null != C && '' !== C ? (0, i.jsx)(a.Z, {
+          messageType: a.Q.ERROR,
           className: p.submissionWarning,
           children: C
         }) : null,
-        (0, i.jsx)(l.Z, {
-          messageType: l.Q.WARNING,
+        (0, i.jsx)(a.Z, {
+          messageType: a.Q.WARNING,
           className: p.submissionWarning,
           children: c.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({
             applicationName: I

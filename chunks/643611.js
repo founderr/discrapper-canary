@@ -8,11 +8,11 @@ var _ = t(735250),
   l = t(442837),
   s = t(481060),
   r = t(933557),
-  A = t(592125),
-  O = t(984933),
-  o = t(699516),
-  N = t(594174),
-  i = t(153124),
+  A = t(313201),
+  O = t(592125),
+  o = t(984933),
+  N = t(699516),
+  i = t(594174),
   I = t(556012),
   c = t(689938),
   u = t(135104);
@@ -21,7 +21,7 @@ let E = e => {
 guildId: n,
 channel: t,
 onSelectChannel: a
-  } = e, A = (0, l.Wu)([O.ZP], () => O.ZP.getChannels(n)[O.sH].filter(e => {
+  } = e, A = (0, l.Wu)([o.ZP], () => o.ZP.getChannels(n)[o.sH].filter(e => {
 let {
   channel: n
 } = e;
@@ -39,7 +39,7 @@ children: (0, _.jsx)(s.SearchableSelect, {
   value: null == t ? void 0 : t.id,
   options: A.map(e => ({
     value: e.id,
-    label: (0, r.F6)(e, N.default, o.Z, !0)
+    label: (0, r.F6)(e, i.default, N.Z, !0)
   })),
   onChange: e => {
     let n = A.find(n => n.id === e);
@@ -55,11 +55,11 @@ function C(e) {
 action: n,
 triggerType: t,
 guildId: r,
-isEdit: O,
-onEditChannel: o,
-onClose: N,
+isEdit: o,
+onEditChannel: N,
+onClose: i,
 transitionState: C
-  } = e, S = (0, i.Dt)(), [L, M] = a.useState(n.metadata.channelId), [T, d] = a.useState(null), U = (0, l.e7)([A.Z], () => A.Z.getChannel(L), [L]), D = (0, I.c)(n.type, n, t);
+  } = e, S = (0, A.Dt)(), [L, M] = a.useState(n.metadata.channelId), [T, d] = a.useState(null), U = (0, l.e7)([O.Z], () => O.Z.getChannel(L), [L]), D = (0, I.c)(n.type, n, t);
   if (null == D)
 return null;
   let {
@@ -112,15 +112,15 @@ children: [
             d(c.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_MODAL_ERROR_NO_CHANNEL);
             return;
           }
-          o(L);
+          N(L);
         },
         color: s.Button.Colors.BRAND,
         size: s.Button.Sizes.SMALL,
-        children: O ? c.Z.Messages.EDIT : c.Z.Messages.SAVE
+        children: o ? c.Z.Messages.EDIT : c.Z.Messages.SAVE
       }),
       (0, _.jsx)(s.Button, {
         onClick: () => {
-          N();
+          i();
         },
         color: s.Button.Colors.TRANSPARENT,
         look: s.Button.Looks.LINK,

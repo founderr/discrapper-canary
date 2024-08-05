@@ -18,10 +18,10 @@ var i = n(120356),
   a = n.n(i),
   s = n(442837),
   o = n(481060),
-  l = n(271383),
-  u = n(430824),
-  c = n(594174),
-  d = n(806519),
+  l = n(686546),
+  u = n(271383),
+  c = n(430824),
+  d = n(594174),
   _ = n(5192),
   E = n(192918),
   f = n(687694),
@@ -83,11 +83,11 @@ children: t.map((e, i) => {
   return i === t.length - 1 ? (0, r.jsx)('div', {
     className: h.facePileItem,
     children: a
-  }, e.id) : (0, r.jsx)(d.ZP, {
+  }, e.id) : (0, r.jsx)(l.ZP, {
     width: 16,
     height: 16,
     className: h.facePileItem,
-    mask: d.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
+    mask: l.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
     children: a
   }, e.id);
 })
@@ -100,12 +100,12 @@ guildId: t,
 channelId: n,
 entry: i,
 maxAvatars: a = 3
-  } = e, d = i.author_id, f = (0, s.e7)([c.default], () => c.default.getUser(d)), {
+  } = e, l = i.author_id, f = (0, s.e7)([d.default], () => d.default.getUser(l)), {
 displayParticipants: p,
 numOtherParticipants: m
-  } = (0, E.Z)(i, a), T = (0, s.e7)([l.ZP], () => l.ZP.getMember(t, d)), g = (0, s.e7)([u.Z], () => {
+  } = (0, E.Z)(i, a), T = (0, s.e7)([u.ZP], () => u.ZP.getMember(t, l)), g = (0, s.e7)([c.Z], () => {
 var e;
-return (null == T ? void 0 : T.colorRoleId) != null ? null === (e = u.Z.getRole(t, T.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
+return (null == T ? void 0 : T.colorRoleId) != null ? null === (e = c.Z.getRole(t, T.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
   }, [
 t,
 T

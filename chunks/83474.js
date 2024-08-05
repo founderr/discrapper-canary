@@ -18,12 +18,12 @@ var l = t(735250),
   u = t(780384),
   c = t(481060),
   o = t(410030),
-  h = t(372769),
-  _ = t(134432),
-  m = t(703656),
-  E = t(314897),
-  g = t(271383),
-  N = t(806519),
+  h = t(686546),
+  _ = t(372769),
+  m = t(134432),
+  E = t(703656),
+  g = t(314897),
+  N = t(271383),
   T = t(768581),
   f = t(900849),
   I = t(249842),
@@ -122,12 +122,12 @@ description: v,
 presenceCount: j,
 memberCount: M,
 emojis: b
-  } = i, C = (0, r.e7)([E.default], () => E.default.getId()), R = (0, r.e7)([g.ZP], () => g.ZP.isMember(S, C), [
+  } = i, C = (0, r.e7)([g.default], () => g.default.getId()), R = (0, r.e7)([N.ZP], () => N.ZP.isMember(S, C), [
 S,
 C
   ]), [U, D] = s.useState(!1), Z = e => {
 if (e.stopPropagation(), R)
-  (0, m.XU)(S, u, o);
+  (0, E.XU)(S, u, o);
 else {
   let e = {
     page: P.ZY5.GUILD_CHANNEL,
@@ -140,7 +140,7 @@ D(!0);
   }, L = T.ZP.getGuildDiscoverySplashURL({
 id: S,
 splash: p,
-size: 250 * (0, _.x_)()
+size: 250 * (0, m.x_)()
   }), y = null !== (n = T.ZP.getGuildIconURL({
 id: S,
 icon: O,
@@ -166,14 +166,14 @@ children: [
         }),
         children: (0, l.jsx)(c.Clickable, {
           onClick: Z,
-          children: (0, l.jsx)(N.ZP, {
-            mask: N.ZP.Masks.SQUIRCLE,
+          children: (0, l.jsx)(h.ZP, {
+            mask: h.ZP.Masks.SQUIRCLE,
             width: 88,
             height: 88,
             children: (0, l.jsx)('div', {
               className: A.iconMask,
-              children: (0, l.jsx)(N.ZP, {
-                mask: N.ZP.Masks.SQUIRCLE,
+              children: (0, l.jsx)(h.ZP, {
+                mask: h.ZP.Masks.SQUIRCLE,
                 width: 80,
                 height: 80,
                 children: (0, l.jsx)('img', {
@@ -189,7 +189,7 @@ children: [
       null != I ? (0, l.jsxs)('div', {
         className: A.guildNameWrapper,
         children: [
-          (0, l.jsx)(h.Z, {
+          (0, l.jsx)(_.Z, {
             className: A.badge,
             guild: i,
             tooltipPosition: 'top',

@@ -18,15 +18,15 @@ var r, i, a = n(735250),
   f = n(607070),
   h = n(100527),
   p = n(906732),
-  m = n(540059),
-  I = n(98278),
-  T = n(639119),
-  g = n(311476),
-  S = n(165583),
-  A = n(587446),
-  N = n(210887),
-  v = n(740492),
-  O = n(153124),
+  m = n(313201),
+  I = n(540059),
+  T = n(98278),
+  g = n(639119),
+  S = n(311476),
+  A = n(165583),
+  N = n(587446),
+  v = n(210887),
+  O = n(740492),
   R = n(626135),
   C = n(238302),
   y = n(514361),
@@ -65,7 +65,7 @@ let {
   isCoachmark: r
 } = e, {
   enabled: i
-} = g.Z.useExperiment({
+} = S.Z.useExperiment({
   location: 'GradientSelectorsTitle'
 }, {
   autoTrackExposure: !1,
@@ -93,7 +93,7 @@ return (0, a.jsxs)('div', {
       variant: 'text-md/medium',
       children: s
     }),
-    (!i || 'EDITOR' === t) && (0, a.jsx)(A.Z, {
+    (!i || 'EDITOR' === t) && (0, a.jsx)(N.Z, {
       className: G.premiumIcon
     })
   ]
@@ -105,9 +105,9 @@ let {
   type: r,
   isPreview: i,
   isCoachmark: s
-} = e, o = (null === (n = (0, T.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === M.Si.TIER_2, {
+} = e, o = (null === (n = (0, g.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === M.Si.TIER_2, {
   enabled: l
-} = g.Z.useExperiment({
+} = S.Z.useExperiment({
   location: 'GradientSelectorsTitle'
 }, {
   autoTrackExposure: !1,
@@ -123,7 +123,7 @@ let c = (0, u.EQ)({
   type: 'EDITOR',
   isPreview: !0
 }, () => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-  onPremiumClick: I.z
+  onPremiumClick: T.z
 })).with({
   type: 'EDITOR',
   isCoachmark: !0
@@ -133,7 +133,7 @@ let c = (0, u.EQ)({
 }, () => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
   isPreview: !0
 }, () => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
-  onPremiumClick: I.z
+  onPremiumClick: T.z
 })).otherwise(() => x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
 return l ? (0, a.jsxs)('div', {
   className: G.description,
@@ -147,7 +147,7 @@ return l ? (0, a.jsxs)('div', {
       variant: 'text-sm/normal',
       children: x.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
         onClick: () => {
-          (0, I.$)();
+          (0, T.$)();
         }
       })
     })
@@ -166,13 +166,13 @@ let {
 } = s.useContext(B), [o, l] = (0, c.Wu)([y.Z], () => [
   y.Z.isPreview,
   y.Z.isCoachmark
-]), u = (null === (n = (0, T.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === M.Si.TIER_2;
+]), u = (null === (n = (0, g.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === M.Si.TIER_2;
 return (0, a.jsx)(a.Fragment, {
-  children: 'EDITOR' === i && o && u ? (0, a.jsx)(S.ZP, {
+  children: 'EDITOR' === i && o && u ? (0, a.jsx)(A.ZP, {
     type: M.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
     subscriptionTier: M.Si.TIER_2,
     children: x.Z.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-      onPremiumClick: I.z
+      onPremiumClick: T.z
     })
   }) : (0, a.jsxs)('div', {
     className: G.header,
@@ -211,7 +211,7 @@ let {
     y.Z.isPreview,
     null === (e = y.Z.gradientPreset) || void 0 === e ? void 0 : e.id
   ];
-}), [m, I] = s.useState(!1), [T, S] = s.useState(-1), A = (0, c.e7)([f.Z], () => f.Z.useReducedMotion);
+}), [m, I] = s.useState(!1), [T, g] = s.useState(-1), A = (0, c.e7)([f.Z], () => f.Z.useReducedMotion);
 s.useEffect(() => {
   (T === L.XV.length - 2 && 'EDITOR' === r || u === d.Us.EASTER_EGG) && I(!0);
 }, [
@@ -221,7 +221,7 @@ s.useEffect(() => {
 ]);
 let {
   enabled: N
-} = g.Z.useExperiment({
+} = S.Z.useExperiment({
   location: 'useGradientSelectors'
 }, {
   autoTrackExposure: !1
@@ -255,10 +255,10 @@ let {
       useSystemTheme: l ? P.K.OFF : void 0
     }, i), null != t) {
     if (m && I(!1), t <= T || 0 === t) {
-      S(0);
+      g(0);
       return;
     }
-    S(e => e + 1);
+    g(e => e + 1);
   }
 };
 return (0, a.jsxs)(a.Fragment, {
@@ -316,13 +316,13 @@ let {
 } = s.useContext(B), {
   analyticsLocations: r
 } = (0, p.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR), [i, o, l] = (0, c.Wu)([
-  N.Z,
-  v.ZP,
+  v.Z,
+  O.ZP,
   y.Z
 ], () => [
-  N.Z.theme,
+  v.Z.theme,
   null == y.Z.gradientPreset,
-  v.ZP.useSystemTheme === P.K.ON
+  O.ZP.useSystemTheme === P.K.ON
 ]), u = e => {
   (0, C.xs)(), F({
     isPersisted: !0,
@@ -331,7 +331,7 @@ let {
   }), (0, E.ZI)({
     theme: e
   }, n);
-}, d = (0, m.Q)('appearance_settings');
+}, d = (0, I.Q)('appearance_settings');
 return (0, a.jsxs)(a.Fragment, {
   children: [
     t && (0, a.jsx)(D.bD, {
@@ -375,7 +375,7 @@ return (0, a.jsxs)(a.Fragment, {
 let {
   type: t,
   children: n
-} = e, r = (0, O.Dt)(), i = (0, _.useRadioGroup)({
+} = e, r = (0, m.Dt)(), i = (0, _.useRadioGroup)({
   orientation: 'horizontal',
   labelledBy: r
 }), o = s.useMemo(() => ({

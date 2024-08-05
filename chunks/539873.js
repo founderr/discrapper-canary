@@ -11,11 +11,11 @@ var r = n(735250),
   l = n(481060),
   u = n(570140),
   c = n(100527),
-  d = n(98278),
-  _ = n(311476),
-  E = n(587446),
-  f = n(996073),
-  h = n(153124),
+  d = n(313201),
+  _ = n(98278),
+  E = n(311476),
+  f = n(587446),
+  h = n(996073),
   p = n(327943),
   m = n(997945),
   I = n(401460),
@@ -36,14 +36,14 @@ p.Z.getCurrentDesktopIcon(),
 p.Z.isUpsellPreview
   ]), {
 enabled: y
-  } = _.Z.getCurrentConfig({
+  } = E.Z.getCurrentConfig({
 location: 'UserSettingsAppearanceInAppIcon'
   }, {
 autoTrackExposure: C,
 disable: !C
   }), D = i.useRef(null);
-  (0, f.Z)(D, S.h1.CUSTOM_APP_ICONS);
-  let L = (0, h.Dt)(),
+  (0, h.Z)(D, S.h1.CUSTOM_APP_ICONS);
+  let L = (0, d.Dt)(),
 b = (0, l.useRadioGroup)({
   orientation: 'horizontal',
   labelledBy: L
@@ -91,7 +91,7 @@ children: (0, r.jsx)('div', {
                     variant: 'text-md/medium',
                     children: A.Z.Messages.APP_ICON_SETTINGS_TITLE
                   }),
-                  !y && (0, r.jsx)(E.Z, {
+                  !y && (0, r.jsx)(f.Z, {
                     className: N.premiumIcon
                   })
                 ]
@@ -108,7 +108,7 @@ children: (0, r.jsx)('div', {
                     variant: 'text-sm/normal',
                     children: A.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({
                       onClick: () => {
-                        (0, d.$)();
+                        (0, _.$)();
                       }
                     })
                   })

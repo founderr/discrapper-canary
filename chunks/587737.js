@@ -5,8 +5,8 @@ return l;
 });
 var i = n(735250);
 n(470079);
-var s = n(702346),
-  a = n(739566),
+var s = n(739566),
+  a = n(834129),
   r = n(689938);
 
 function l(e) {
@@ -17,13 +17,13 @@ targetUser: o,
 actorUsernameHook: c,
 targetUsernameHook: u,
 compact: d
-  } = e, _ = (0, a.ZP)(t), E = (0, a.Sw)(o, l), I = c(_), m = u(null != E ? E : void 0), T = r.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
+  } = e, _ = (0, s.ZP)(t), E = (0, s.Sw)(o, l), I = c(_), m = u(null != E ? E : void 0), T = r.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
 actorName: _.nick,
 actorHook: I,
 targetName: null == E ? void 0 : E.nick,
 targetHook: m
   });
-  return (0, i.jsx)(s.Z, {
+  return (0, i.jsx)(a.Z, {
 icon: n(570111),
 timestamp: t.timestamp,
 compact: d,

@@ -13,19 +13,19 @@ var n = s(735250),
   T = s(497321),
   I = s(279837),
   S = s(952306),
-  N = s(690221),
-  C = s(346585),
-  m = s(347649),
-  A = s(332473),
-  g = s(303172),
-  h = s(921801),
-  O = s(777036),
-  p = s(484459),
-  R = s(430824),
-  x = s(325067),
-  M = s(246946),
-  f = s(594174),
-  D = s(285952),
+  N = s(600164),
+  C = s(690221),
+  m = s(346585),
+  A = s(347649),
+  g = s(332473),
+  h = s(303172),
+  O = s(921801),
+  p = s(777036),
+  R = s(484459),
+  x = s(430824),
+  M = s(325067),
+  f = s(246946),
+  D = s(594174),
   P = s(709054),
   L = s(706454),
   b = s(210887),
@@ -45,7 +45,7 @@ class k extends a.PureComponent {
 let {
   currentUser: e
 } = this.props;
-(0, p.Z)(e.id, e.getAvatarURL(void 0, 80));
+(0, R.Z)(e.id, e.getAvatarURL(void 0, 80));
   }
   componentWillUnmount() {
 E.Z.clearBackupCodes(), (0, u.Zy)();
@@ -111,18 +111,18 @@ if (!e.verified) {
 }
   }
   renderPomeloWarning() {
-return this.props.shouldRenderPomeloWarning ? (0, n.jsxs)(O.Z, {
+return this.props.shouldRenderPomeloWarning ? (0, n.jsxs)(p.Z, {
   className: Y.accountWarningBodyText,
-  messageType: O.Q.WARNING,
+  messageType: p.Q.WARNING,
   children: [
     this.props.forceMigrationExperiment ? V.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({
-      date: (0, C.IE)(this.props.locale)
+      date: (0, m.IE)(this.props.locale)
     }) : V.Z.Messages.POMELO_ACTION_NEEDED.format(),
     ' ',
     '',
-    (0, n.jsx)(N.Z, {
+    (0, n.jsx)(C.Z, {
       className: Y.noticeTextButton,
-      onClick: () => (0, g.Z)(y.Kq.USER_SETTINGS),
+      onClick: () => (0, h.Z)(y.Kq.USER_SETTINGS),
       children: V.Z.Messages.GET_STARTED
     })
   ]
@@ -164,7 +164,7 @@ return (0, n.jsxs)(_.FormSection, {
         ]
       })
     }) : null,
-    (0, n.jsx)(h.F, {
+    (0, n.jsx)(O.F, {
       setting: G.s6.ACCOUNT_CHANGE_PASSWORD,
       children: (0, n.jsx)('div', {
         children: (0, n.jsx)(_.Button, {
@@ -178,19 +178,19 @@ return (0, n.jsxs)(_.FormSection, {
         })
       })
     }),
-    (0, n.jsx)(h.F, {
+    (0, n.jsx)(O.F, {
       setting: G.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-      children: (0, n.jsxs)(D.Z, {
-        align: D.Z.Align.STRETCH,
+      children: (0, n.jsxs)(N.Z, {
+        align: N.Z.Align.STRETCH,
         children: [
-          (0, n.jsx)(D.Z.Child, {
+          (0, n.jsx)(N.Z.Child, {
             wrap: !0,
             children: (0, n.jsx)(v.Z, {
               backupCodes: e
             })
           }),
-          t.mfaEnabled ? null : (0, n.jsx)(D.Z, {
-            align: D.Z.Align.CENTER,
+          t.mfaEnabled ? null : (0, n.jsx)(N.Z, {
+            align: N.Z.Align.CENTER,
             basis: '323px',
             grow: 0,
             children: (0, n.jsx)('img', {
@@ -281,15 +281,15 @@ return (0, n.jsx)(j.Z, {
 return this.props.hide ? (0, n.jsx)(T.Z, {}) : (0, n.jsxs)('div', {
   children: [
     this.renderConfirmModals(),
-    (0, n.jsx)(h.F, {
+    (0, n.jsx)(O.F, {
       setting: G.s6.ACCOUNT_PROFILE,
       children: this.renderAccountSettings()
     }),
-    (0, n.jsx)(h.F, {
+    (0, n.jsx)(O.F, {
       setting: G.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
       children: this.renderSecuritySettings()
     }),
-    (0, n.jsx)(h.F, {
+    (0, n.jsx)(O.F, {
       setting: G.s6.ACCOUNT_REMOVAL,
       children: this.renderAccountRemovalSettings()
     })
@@ -312,7 +312,7 @@ let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
   {
     currentUser: t
   } = this.props,
-  s = R.Z.getGuilds();
+  s = x.Z.getGuilds();
 if (P.default.keys(s).filter(e => s[e].ownerId === t.id).length > 0) {
   this.setState({
     shouldRenderOwnedGuildsModal: !0
@@ -339,15 +339,15 @@ super(e), this.state = {
   }
 }
 t.Z = () => {
-  let e = (0, c.e7)([f.default], () => {
-  let e = f.default.getCurrentUser();
+  let e = (0, c.e7)([D.default], () => {
+  let e = D.default.getCurrentUser();
   return l()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
 }),
-t = (0, c.e7)([x.Z], () => x.Z.getBackupCodes()),
-s = (0, c.e7)([M.Z], () => M.Z.hidePersonalInformation),
+t = (0, c.e7)([M.Z], () => M.Z.getBackupCodes()),
+s = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
 a = (0, c.e7)([b.Z], () => b.Z.theme),
-i = (0, A.b)(),
-r = (0, m.CC)(),
+i = (0, g.b)(),
+r = (0, A.CC)(),
 o = (0, c.e7)([L.default], () => L.default.locale);
   return (0, n.jsx)(k, {
 theme: a,

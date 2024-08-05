@@ -7,8 +7,8 @@ var t, n, l = o(735250),
   a = o(470079),
   i = o(544891),
   r = o(481060),
-  c = o(777036),
-  d = o(285952),
+  c = o(600164),
+  d = o(777036),
   I = o(572004),
   N = o(472305),
   u = o(981631),
@@ -60,7 +60,7 @@ transitionState: o,
 className: O.__invalid_modal,
 children: [
   (0, l.jsxs)(r.ModalHeader, {
-    direction: d.Z.Direction.VERTICAL,
+    direction: c.Z.Direction.VERTICAL,
     className: O.header,
     separator: !1,
     children: [
@@ -172,8 +172,8 @@ children: [
                   })
                 ]
               }),
-              (0, l.jsx)(c.Z, {
-                messageType: c.Q.INFO,
+              (0, l.jsx)(d.Z, {
+                messageType: d.Q.INFO,
                 className: O.text,
                 children: _.Z.Messages.DOMAIN_VERIFICATION_DNS_WARNING
               }),
@@ -187,7 +187,7 @@ children: [
           }),
           (0, l.jsxs)(r.ModalFooter, {
             className: O.footer,
-            direction: d.Z.Direction.HORIZONTAL,
+            direction: c.Z.Direction.HORIZONTAL,
             children: [
               (0, l.jsx)(r.Button, {
                 look: r.Button.Looks.LINK,
@@ -254,7 +254,7 @@ children: [
           }),
           (0, l.jsxs)(r.ModalFooter, {
             className: O.footer,
-            direction: d.Z.Direction.HORIZONTAL,
+            direction: c.Z.Direction.HORIZONTAL,
             children: [
               (0, l.jsx)(r.Button, {
                 look: r.Button.Looks.LINK,

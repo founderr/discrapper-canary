@@ -1,15 +1,15 @@
 n.r(t), n.d(t, {
   default: function() {
-return _;
+return l;
   }
 });
-var i = n(735250),
-  a = n(470079),
-  s = n(266067),
+var a = n(735250),
+  c = n(470079),
+  i = n(266067),
   r = n(608787),
-  l = n(765717),
+  s = n(765717),
   o = n(981631);
-let c = a.lazy(() => (0, r.wE)({
+let p = c.lazy(() => (0, r.wE)({
 createPromise: () => Promise.all([
   n.e('29549'),
   n.e('6380'),
@@ -21,11 +21,11 @@ createPromise: () => Promise.all([
   n.e('26124'),
   n.e('89131'),
   n.e('11256'),
-  n.e('77065')
+  n.e('19520')
 ]).then(n.bind(n, 753450)),
 webpackId: 753450
   })),
-  d = a.lazy(() => (0, r.wE)({
+  I = c.lazy(() => (0, r.wE)({
 createPromise: () => Promise.all([
   n.e('6380'),
   n.e('65840'),
@@ -35,7 +35,7 @@ createPromise: () => Promise.all([
 ]).then(n.bind(n, 74438)),
 webpackId: 74438
   })),
-  u = a.lazy(() => (0, r.wE)({
+  d = c.lazy(() => (0, r.wE)({
 createPromise: () => Promise.all([
   n.e('6380'),
   n.e('65840'),
@@ -46,21 +46,21 @@ createPromise: () => Promise.all([
 webpackId: 675869
   }));
 
-function _() {
-  return (0, i.jsxs)(s.rs, {
+function l() {
+  return (0, a.jsxs)(i.rs, {
 children: [
-  (0, i.jsx)(l.Z, {
+  (0, a.jsx)(s.Z, {
     path: o.Z5c.APPLICATION_DIRECTORY,
     exact: !0,
+    component: I
+  }),
+  (0, a.jsx)(s.Z, {
+    path: o.Z5c.APPLICATION_DIRECTORY_SEARCH,
     component: d
   }),
-  (0, i.jsx)(l.Z, {
-    path: o.Z5c.APPLICATION_DIRECTORY_SEARCH,
-    component: u
-  }),
-  (0, i.jsx)(l.Z, {
+  (0, a.jsx)(s.Z, {
     path: o.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', ':section?'),
-    component: c
+    component: p
   })
 ]
   });

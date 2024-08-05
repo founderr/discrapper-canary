@@ -9,9 +9,9 @@ var n = s(735250),
   r = s(442837),
   o = s(481060),
   l = s(239091),
-  c = s(202858),
-  d = s(153124),
-  _ = s(360048),
+  c = s(554300),
+  d = s(313201),
+  _ = s(202858),
   E = s(287880),
   u = s(358085),
   T = s(960048),
@@ -28,11 +28,11 @@ function h(e) {
 transitionState: t,
 onClose: r,
 ticket: l,
-challenge: _
+challenge: c
   } = e, E = (0, d.Dt)(), [N, h] = a.useState(''), [O, p] = a.useState(!0), [R, x] = a.useState(C.x.INIT), [M, f] = a.useState(''), [D, P] = a.useState(null), L = async () => {
 let e;
 x(C.x.REGISTER);
-let t = u.isPlatformEmbedded && I.ZP.supportsFeature(m.eRX.WEBAUTHN) ? I.ZP.webAuthnRegister(_) : i.Ue(JSON.parse(_)).then(e => JSON.stringify(e));
+let t = u.isPlatformEmbedded && I.ZP.supportsFeature(m.eRX.WEBAUTHN) ? I.ZP.webAuthnRegister(c) : i.Ue(JSON.parse(c)).then(e => JSON.stringify(e));
 try {
   e = await t;
 } catch (e) {
@@ -137,7 +137,7 @@ children: [
         children: (0, n.jsxs)('form', {
           onSubmit: e => {
             e.preventDefault(), (0, S.Sr)(N, l, M).then(async () => {
-              await (0, c.Yn)(!1);
+              await (0, _.Yn)(!1);
             }).then(() => r()).catch(() => {
               P(A.Z.Messages.ERROR_OCCURRED_TRY_AGAIN), x(C.x.INIT);
             });
@@ -260,7 +260,7 @@ children: [
   }),
   e.length > 0 && (0, n.jsx)('div', {
     className: g.credentialList,
-    children: e.map(e => (0, n.jsx)(_.Z, {
+    children: e.map(e => (0, n.jsx)(c.Z, {
       avatar: null,
       name: e.name,
       className: g.credentialItem,

@@ -11,8 +11,8 @@ var i = n(735250),
   o = n(481060),
   c = n(362721),
   u = n(12498),
-  d = n(454585),
-  h = n(514342),
+  d = n(111028),
+  h = n(454585),
   p = n(626135),
   _ = n(981631),
   f = n(689938),
@@ -50,8 +50,8 @@ return (0, i.jsx)(o.Clickable, {
   children: (0, i.jsx)(o.Text, {
     variant: 'text-xs/medium',
     className: a()(m.statusText, g.markup),
-    children: (0, i.jsx)(h.Z, {
-      children: d.Z.parseVoiceChannelStatus(x, !0, {
+    children: (0, i.jsx)(d.Z, {
+      children: h.Z.parseVoiceChannelStatus(x, !0, {
         channelId: t.id
       })
     })
@@ -77,7 +77,7 @@ return (0, i.jsxs)(o.Clickable, {
   ]
 });
   if (T)
-return (0, i.jsx)(h.Z, {
+return (0, i.jsx)(d.Z, {
   children: C
 });
   return null;

@@ -1,50 +1,50 @@
 t.d(n, {
   hi: function() {
-return c;
+return u;
   },
   kH: function() {
-return E;
+return h;
   },
   rz: function() {
-return I;
+return m;
   }
 }), t(789020), t(47120), t(653041), t(524437);
-var a = t(549817);
+var l = t(549817);
 t(581883);
-var l = t(984933),
+var a = t(984933),
   i = t(271383),
-  s = t(9156),
-  o = t(630388),
-  r = t(152376),
-  d = t(398758),
-  u = t(372897);
+  r = t(9156),
+  s = t(630388),
+  o = t(152376),
+  c = t(398758),
+  d = t(372897);
 
-function c(e) {
+function u(e) {
   var n, t;
-  let a = (0, d.r1)(e),
-l = null !== (t = null === (n = i.ZP.getSelfMember(e)) || void 0 === n ? void 0 : n.flags) && void 0 !== t ? t : 0,
-r = (0, o.yE)(l, u.q.COMPLETED_ONBOARDING),
-c = s.ZP.getOptedInChannels(e).size > 0;
-  return !a && !r && !c;
+  let l = (0, c.r1)(e),
+a = null !== (t = null === (n = i.ZP.getSelfMember(e)) || void 0 === n ? void 0 : n.flags) && void 0 !== t ? t : 0,
+o = (0, s.yE)(a, d.q.COMPLETED_ONBOARDING),
+u = r.ZP.getOptedInChannels(e).size > 0;
+  return !l && !o && !u;
 }
 
-function E(e) {
-  if (c(e)) {
-I(e);
+function h(e) {
+  if (u(e)) {
+m(e);
 return;
   } {
-let n = (0, d.r1)(e);
-(0, r.QG)(e, !n);
+let n = (0, c.r1)(e);
+(0, o.QG)(e, !n);
   }
 }
 
-function I(e) {
+function m(e) {
   let {
 include: n = new Set(),
 exclude: t = new Set()
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, i = l.ZP.getChannels(e), s = [
-...i[l.sH],
-...i[l.Zb]
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, i = a.ZP.getChannels(e), r = [
+...i[a.sH],
+...i[a.Zb]
   ].filter(e => {
 let {
   channel: n
@@ -56,5 +56,5 @@ let {
 } = e;
 return n.id;
   });
-  n.forEach(e => s.push(e)), a.Z.onboardExistingMember(e, new Set(s));
+  n.forEach(e => r.push(e)), l.Z.onboardExistingMember(e, new Set(r));
 }

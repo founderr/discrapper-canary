@@ -19,9 +19,9 @@ guilds: n,
 onScroll: d,
 onGuildCardClick: u,
 onGuildCardSeen: _
-  } = e, E = (0, s.ZP)(), h = (0, l.Mf)(t), I = (0, l.a$)(t), m = (0, l.QW)(t), g = (0, l.lg)(t);
+  } = e, h = (0, s.ZP)(), E = (0, l.Mf)(t), I = (0, l.a$)(t), m = (0, l.QW)(t), g = (0, l.lg)(t);
   return (0, i.jsxs)(o.Z, {
-title: h,
+title: E,
 description: I,
 onScroll: d,
 children: [
@@ -36,7 +36,7 @@ children: [
     children: n.map((e, t) => (0, i.jsx)(r.Z, {
       guild: e,
       onView: e => u(e, t, g),
-      theme: E,
+      theme: h,
       onGuildCardSeen: e => _(e, g)
     }, e.id))
   })

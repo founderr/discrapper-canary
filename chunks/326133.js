@@ -10,10 +10,10 @@ var r = n(735250),
   d = n(317381),
   _ = n(588468),
   E = n(30465),
-  f = n(430824),
-  h = n(153124),
-  p = n(153850),
-  m = n(482207),
+  f = n(313201),
+  h = n(314910),
+  p = n(549006),
+  m = n(430824),
   I = n(436896),
   T = n(590921),
   g = n(606992),
@@ -27,13 +27,13 @@ channel: C,
 type: y,
 editorHeight: D,
 onVisibilityChange: L
-  } = e, b = (0, h.Dt)(), M = (0, l.e7)([f.Z], () => {
+  } = e, b = (0, f.Dt)(), M = (0, l.e7)([m.Z], () => {
 var e;
-return null !== (e = f.Z.getGuild(C.guild_id)) && void 0 !== e ? e : null;
+return null !== (e = m.Z.getGuild(C.guild_id)) && void 0 !== e ? e : null;
   }, [C.guild_id]), P = i.useRef(), [U, w, x] = (0, S.Z)({
 ...e,
 guild: M
-  }, t, P), G = (null === (n = y.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? m.ZP : p.ZP, k = (0, _.DJ)(U.selectedIndex);
+  }, t, P), G = (null === (n = y.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? p.ZP : h.ZP, k = (0, _.DJ)(U.selectedIndex);
   (0, E.KR)(b, U.isVisible, k), I.Z.trackExposure({
 location: '6e9811_1'
   });

@@ -11,12 +11,12 @@ var r = n(735250),
   l = n(481060),
   u = n(100527),
   c = n(906732),
-  d = n(104494),
-  _ = n(639119),
-  E = n(165583),
-  f = n(592125),
-  h = n(944486),
-  p = n(672752),
+  d = n(436774),
+  _ = n(104494),
+  E = n(639119),
+  f = n(165583),
+  h = n(592125),
+  p = n(944486),
   m = n(626135),
   I = n(981631),
   T = n(474936),
@@ -42,14 +42,14 @@ className: n,
 iconOnly: a,
 remaining: N
   } = e, v = (0, o.e7)([
-h.Z,
-f.Z
+p.Z,
+h.Z
   ], () => {
-let e = f.Z.getChannel(h.Z.getChannelId());
+let e = h.Z.getChannel(p.Z.getChannelId());
 return (null == e ? void 0 : e.isPrivate()) ? I.ZY5.DM_CHANNEL : I.ZY5.GUILD_CHANNEL;
   }), {
 analyticsLocations: O
-  } = (0, c.ZP)(u.Z.PREMIUM_UPSELL), R = (0, d.Ng)(), C = (0, _.N)(), y = (0, d.Wp)(R, T.Si.TIER_2), D = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2;
+  } = (0, c.ZP)(u.Z.PREMIUM_UPSELL), R = (0, _.Ng)(), C = (0, E.N)(), y = (0, _.Wp)(R, T.Si.TIER_2), D = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2;
   return (i.useEffect(() => {
 m.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
   type: 'longer messages inline',
@@ -62,7 +62,7 @@ m.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
   }, [
 v,
 O
-  ]), (D || y) && N < 0) ? (0, r.jsx)(E.ZP, {
+  ]), (D || y) && N < 0) ? (0, r.jsx)(f.ZP, {
 type: T.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
 subscriptionTier: T.Si.TIER_2,
 context: N,
@@ -90,7 +90,7 @@ children: [
   (0, r.jsx)(l.NitroWheelIcon, {
     size: 'md',
     className: S.premium,
-    color: p.JX.PREMIUM_TIER_2
+    color: d.JX.PREMIUM_TIER_2
   }),
   (0, r.jsx)(l.Text, {
     className: S.text,

@@ -19,21 +19,21 @@ var s, r = n(735250),
   I = n(743142),
   m = n(388905),
   f = n(379760),
-  N = n(100159),
-  T = n(473855),
-  x = n(124860),
-  A = n(86779),
-  C = n(726745),
-  v = n(913583),
-  Z = n(144114),
-  S = n(541692),
-  R = n(952802),
-  O = n(108427),
-  b = n(365007),
-  D = n(314897),
-  L = n(117240),
-  M = n(896797),
-  P = n(285952),
+  N = n(600164),
+  T = n(100159),
+  x = n(473855),
+  A = n(124860),
+  C = n(86779),
+  v = n(726745),
+  Z = n(913583),
+  S = n(144114),
+  R = n(541692),
+  O = n(952802),
+  b = n(108427),
+  D = n(365007),
+  L = n(314897),
+  M = n(117240),
+  P = n(896797),
   j = n(626135),
   y = n(585483),
   G = n(358085),
@@ -83,11 +83,11 @@ e && !t ? (0, g.is)() : t && this.loginOrSSO(t, r, !0), j.default.track(w.rMx.LO
   location: null != s ? 'Invite Login Page' : 'Non-Invite Login Page',
   login_source: this.loginSource,
   authenticated: t,
-  ...null != n ? (0, N.Z)(n, !1, !1) : {}
+  ...null != n ? (0, T.Z)(n, !1, !1) : {}
 }, {
   flush: !0
 }), null == p.Z && null != window.PublicKeyCredential && null != PublicKeyCredential.isConditionalMediationAvailable && PublicKeyCredential.isConditionalMediationAvailable().then(e => {
-  e && (0, b.us)().then(e => {
+  e && (0, D.us)().then(e => {
     let {
       challenge: t,
       ticket: n
@@ -104,7 +104,7 @@ e && !t ? (0, g.is)() : t && this.loginOrSSO(t, r, !0), j.default.track(w.rMx.LO
         throw e;
     });
   }).catch(() => {});
-}), E.Z.getLocationMetadata(), (0, O.e)('login');
+}), E.Z.getLocationMetadata(), (0, b.e)('login');
   }
   componentDidUpdate(e) {
 let {
@@ -172,7 +172,7 @@ else {
   let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + w.ANM.SSO,
     t = {
       ...r,
-      token: D.default.getToken()
+      token: L.default.getToken()
     };
   window.location = ''.concat(e, '?').concat((0, c.stringify)(t));
 }
@@ -291,7 +291,7 @@ return (0, r.jsxs)(m.ZP, {
     (0, r.jsxs)(m.gO, {
       className: K.marginTop20,
       children: [
-        (0, r.jsx)(R.Z, {
+        (0, r.jsx)(O.Z, {
           className: K.marginBottom20,
           alpha2: t.alpha2,
           countryCode: t.code.split(' ')[0],
@@ -372,9 +372,9 @@ return n = null == s || h ? null != i ? (0, r.jsx)(B.Z, {
   ]
 }) : (0, r.jsx)(U.Z, {
   invite: s
-}), (0, r.jsxs)(P.Z, {
-  direction: P.Z.Direction.HORIZONTAL,
-  align: P.Z.Align.CENTER,
+}), (0, r.jsxs)(N.Z, {
+  direction: N.Z.Direction.HORIZONTAL,
+  align: N.Z.Align.CENTER,
   children: [
     (0, r.jsxs)('div', {
       className: z.mainLoginContainer,
@@ -409,7 +409,7 @@ return n = null == s || h ? null != i ? (0, r.jsx)(B.Z, {
           children: (0, r.jsxs)(m.gO, {
             className: K.marginTop20,
             children: [
-              (0, r.jsx)(R.Z, {
+              (0, r.jsx)(O.Z, {
                 alpha2: l.alpha2,
                 countryCode: l.code.split(' ')[0],
                 className: K.marginBottom20,
@@ -502,7 +502,7 @@ return (0, r.jsxs)('div', {
       expanded: !0,
       children: this.renderDefaultForm(!0)
     }),
-    t && (0, r.jsx)(A.Z, {})
+    t && (0, r.jsx)(C.Z, {})
   ]
 });
   }
@@ -512,7 +512,7 @@ return (0, r.jsx)(k.Z, {
   tag: 'form',
   className: o()(this.props.authBoxClassName, z.horizontalAuthBox),
   children: () => [
-    (0, r.jsx)(T.Z, {
+    (0, r.jsx)(x.Z, {
       guildTemplate: e
     }, 'template'),
     this.renderDefaultForm(!1)
@@ -528,7 +528,7 @@ return (0, r.jsx)(m.ZP, {
   style: {
     padding: 0
   },
-  children: (0, r.jsx)(x.Cd, {
+  children: (0, r.jsx)(A.Cd, {
     mfaFinish: this.handleTokenSubmitMFA,
     mfaChallenge: e,
     onEarlyClose: () => {
@@ -581,7 +581,7 @@ return (0, r.jsx)(m.ZP, {
 });
   }
   renderChooseAccount() {
-return (0, r.jsx)(v.Z, {
+return (0, r.jsx)(Z.Z, {
   onDismiss: () => {
     this.setState(e => ({
       ...e,
@@ -686,7 +686,7 @@ super(e), W(this, 'loginRef', void 0), W(this, 'passwordRef', void 0), W(this, '
   try {
     let {
       token: r
-    } = await Z.Z.verifyPhone(s, e, !1);
+    } = await S.Z.verifyPhone(s, e, !1);
     await E.Z.authorizeIPAddress(r), E.Z.login({
       login: s,
       password: t,
@@ -709,7 +709,7 @@ super(e), W(this, 'loginRef', void 0), W(this, 'passwordRef', void 0), W(this, '
   try {
     let {
       token: n
-    } = await Z.Z.verifyPhone(this.getFullLogin(), e, !1);
+    } = await S.Z.verifyPhone(this.getFullLogin(), e, !1);
     t(w.Z5c.RESET, {
       search: (0, c.stringify)({
         token: n,
@@ -753,7 +753,7 @@ super(e), W(this, 'loginRef', void 0), W(this, 'passwordRef', void 0), W(this, '
     }));
   } catch {}
 }), W(this, 'handleResendCode', () => {
-  Z.Z.resendCode(this.getFullLogin());
+  S.Z.resendCode(this.getFullLogin());
 }), W(this, 'handleReset', e => {
   null != e && e.preventDefault(), E.Z.loginReset(), this.setState({
     password: '',
@@ -806,24 +806,24 @@ W(q, 'defaultProps', {
 });
 t.Z = function(e) {
   let t = (0, d.cj)([
-L.Z,
 M.Z,
-D.default,
-C.Z,
-S.Z
+P.Z,
+L.default,
+v.Z,
+R.Z
   ], () => ({
-authenticated: D.default.isAuthenticated(),
-handoffAvailable: L.Z.isHandoffAvailable(),
-user: L.Z.user,
-loginStatus: D.default.getLoginStatus(),
-mfaTicket: D.default.getMFATicket(),
-mfaSMS: D.default.getMFASMS(),
-mfaMethods: D.default.getMFAMethods(),
-maskedPhone: D.default.getMaskedPhone(),
-errors: D.default.getErrors(),
-defaultRoute: M.Z.defaultRoute,
-country: S.Z.getCountryCode(),
-hasLoggedInAccounts: C.Z.getHasLoggedInAccounts()
+authenticated: L.default.isAuthenticated(),
+handoffAvailable: M.Z.isHandoffAvailable(),
+user: M.Z.user,
+loginStatus: L.default.getLoginStatus(),
+mfaTicket: L.default.getMFATicket(),
+mfaSMS: L.default.getMFASMS(),
+mfaMethods: L.default.getMFAMethods(),
+maskedPhone: L.default.getMaskedPhone(),
+errors: L.default.getErrors(),
+defaultRoute: P.Z.defaultRoute,
+country: R.Z.getCountryCode(),
+hasLoggedInAccounts: v.Z.getHasLoggedInAccounts()
   }));
   return (0, r.jsx)(q, {
 ...e,

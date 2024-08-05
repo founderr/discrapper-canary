@@ -6,8 +6,8 @@ return C;
 var a = s(735250),
   n = s(470079),
   l = s(481060),
-  o = s(109983),
-  i = s(285952),
+  o = s(600164),
+  i = s(109983),
   r = s(120298),
   c = s(486527),
   d = s(689938),
@@ -18,16 +18,16 @@ function m(e) {
 guildTemplate: t,
 onClick: s,
 autoFocus: l
-  } = e, i = n.useCallback(() => {
+  } = e, o = n.useCallback(() => {
 s(t);
   }, [
 t,
 s
   ]);
-  return (0, a.jsx)(o.Z, {
+  return (0, a.jsx)(i.Z, {
 icon: r.M[t.id],
 message: t.label,
-onClick: i,
+onClick: o,
 autoFocus: l
   });
 }
@@ -37,12 +37,12 @@ function C(e) {
 onClose: t,
 onBack: s,
 onChooseTemplate: n,
-directoryGuildName: o
+directoryGuildName: i
   } = e, r = (0, c.Pp)();
   return (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsxs)(l.ModalHeader, {
-    direction: i.Z.Direction.VERTICAL,
+    direction: o.Z.Direction.VERTICAL,
     className: u.header,
     separator: !1,
     children: [
@@ -50,7 +50,7 @@ children: [
         className: u.title,
         variant: 'heading-xl/semibold',
         children: d.Z.Messages.HUB_CREATE_OR_ADD_GUILD_TITLE.format({
-          guildName: o
+          guildName: i
         })
       }),
       (0, a.jsx)(l.Text, {

@@ -13,9 +13,9 @@ var a = n(735250),
   m = n(476326),
   u = n(273031),
   d = n(898463),
-  _ = n(210887),
-  h = n(154921),
-  p = n(404975),
+  _ = n(112831),
+  h = n(951394),
+  p = n(210887),
   v = n(768581),
   I = n(358085),
   R = n(223356),
@@ -111,7 +111,7 @@ if (F.length > 0) {
   });
 }
   }, [F]);
-  let ev = (0, o.e7)([_.Z], () => _.Z.theme),
+  let ev = (0, o.e7)([p.Z], () => p.Z.theme),
 eI = (0, s.wj)(ev) ? g : E;
   return (0, a.jsx)(l.ModalRoot, {
 className: T.modalRoot,
@@ -126,10 +126,10 @@ children: (0, a.jsx)(l.ModalContent, {
       forceLevel: 1,
       component: (0, a.jsx)('div', {
         className: T.sidebarContainer,
-        children: (0, a.jsx)(h.Z, {
+        children: (0, a.jsx)(_.Z, {
           strong: !0,
-          color: h.Z.Colors.HEADER_PRIMARY,
-          size: h.Z.Sizes.SIZE_24,
+          color: _.Z.Colors.HEADER_PRIMARY,
+          size: _.Z.Sizes.SIZE_24,
           children: (0, a.jsx)(l.H, {
             children: f.Z.Messages.BUG_REPORT_TITLE
           })
@@ -369,7 +369,7 @@ children: (0, a.jsx)(l.ModalContent, {
                             }),
                             (0, a.jsx)('div', {
                               className: T.toolBar,
-                              children: (0, a.jsx)(p.ZP, {
+                              children: (0, a.jsx)(h.ZP, {
                                 children: (0, a.jsx)(u.Z, {
                                   tooltip: f.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
                                   onClick: () => eh(e.id),

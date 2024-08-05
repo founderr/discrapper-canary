@@ -8,8 +8,8 @@ var r = n(735250),
   a = n(120356),
   s = n.n(a),
   o = n(442837),
-  l = n(451478),
-  u = n(806519),
+  l = n(686546),
+  u = n(451478),
   c = n(768581),
   d = n(624138),
   _ = n(584526);
@@ -22,7 +22,7 @@ guildIcon: i,
 iconSize: a,
 className: E,
 animate: f
-  } = e, h = (0, o.e7)([l.Z], () => l.Z.isFocused()), p = c.ZP.getGuildIconURL({
+  } = e, h = (0, o.e7)([u.Z], () => u.Z.isFocused()), p = c.ZP.getGuildIconURL({
 id: t,
 icon: i,
 size: a,
@@ -30,8 +30,8 @@ canAnimate: f && h
   });
   if (null == p) {
 let e = (0, d.Zg)(n);
-return (0, r.jsx)(u.ZP, {
-  mask: u.ZP.Masks.CLAN_ICON,
+return (0, r.jsx)(l.ZP, {
+  mask: l.ZP.Masks.CLAN_ICON,
   width: a,
   height: a,
   className: E,
@@ -41,8 +41,8 @@ return (0, r.jsx)(u.ZP, {
   })
 });
   }
-  return (0, r.jsx)(u.ZP, {
-mask: u.ZP.Masks.CLAN_ICON,
+  return (0, r.jsx)(l.ZP, {
+mask: l.ZP.Masks.CLAN_ICON,
 width: a,
 height: a,
 className: E,

@@ -9,19 +9,19 @@ var n = t(735250),
   o = t.n(s),
   l = t(481060),
   c = t(457330),
-  i = t(710845),
-  d = t(69580),
-  u = t(285952),
+  i = t(600164),
+  d = t(710845),
+  u = t(69580),
   x = t(689938),
   N = t(191364);
-let h = new i.Z('TwoWayLinkDiscordConsentWeb');
+let h = new d.Z('TwoWayLinkDiscordConsentWeb');
 
 function m(e) {
   let {
 platformType: a,
 clientId: t,
 scopes: s,
-authToken: i,
+authToken: d,
 onContinue: m,
 onError: C,
 onClose: j,
@@ -33,7 +33,7 @@ let t, n, {
   {
     callbackCode: s,
     callbackState: o
-  } = i;
+  } = d;
 try {
   t = await c.Z.completeTwoWayLink(a, r, s, o);
 } catch (e) {
@@ -43,7 +43,7 @@ try {
 null != t ? m() : C(n);
   }, [
 a,
-i,
+d,
 m,
 C
   ]), {
@@ -51,7 +51,7 @@ header: T,
 body: O,
 appDetails: b,
 sendAuthorize: g
-  } = (0, d.useOAuth2AuthorizeForm)({
+  } = (0, u.useOAuth2AuthorizeForm)({
 clientId: t,
 scopes: s,
 responseType: 'code',
@@ -72,7 +72,7 @@ children: [
   (0, n.jsxs)(l.Scroller, {
     children: [
       (0, n.jsx)(l.ModalHeader, {
-        direction: u.Z.Direction.VERTICAL,
+        direction: i.Z.Direction.VERTICAL,
         className: N.header,
         separator: !1,
         children: (0, n.jsx)(l.Text, {

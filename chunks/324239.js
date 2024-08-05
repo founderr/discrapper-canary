@@ -10,8 +10,8 @@ var o = n(735250),
   a = n(481060),
   i = n(893776),
   c = n(809206),
-  u = n(390885),
-  d = n(285952),
+  u = n(600164),
+  d = n(390885),
   m = n(626135),
   f = n(361207),
   _ = n(792125),
@@ -28,7 +28,7 @@ claimRequired: l,
 onSuccess: m,
 onClose: f
   } = e, [A, S] = s.useState(), [T, I] = s.useState(''), [x, M] = s.useState(''), [E, O] = s.useState(!1);
-  s.useEffect(() => u.Z.flowStep(g.MK.ANY, g.mx.CLAIM_ACCOUNT), []);
+  s.useEffect(() => d.Z.flowStep(g.MK.ANY, g.mx.CLAIM_ACCOUNT), []);
   let h = async e => {
 e.preventDefault(), O(!0), S(''), M('');
 try {
@@ -46,7 +46,7 @@ className: r()(N.modalLight, (0, _.Q)(p.BRd.LIGHT)),
 children: [
   (0, o.jsxs)(a.ModalHeader, {
     className: N.formHeader,
-    direction: d.Z.Direction.VERTICAL,
+    direction: u.Z.Direction.VERTICAL,
     separator: !1,
     children: [
       (0, o.jsx)('div', {
@@ -136,7 +136,7 @@ window.open((0, f.t3)(), '_blank'), m.default.track(p.rMx.DOWNLOAD_APP, {
   qr_code: !1
 });
   }
-  return s.useEffect(() => u.Z.flowStep(g.MK.ANY, g.mx.CLAIM_ACCOUNT_SUCCESS), []), (0, o.jsxs)('div', {
+  return s.useEffect(() => d.Z.flowStep(g.MK.ANY, g.mx.CLAIM_ACCOUNT_SUCCESS), []), (0, o.jsxs)('div', {
 className: r()(N.modalLight, (0, _.Q)(p.BRd.LIGHT)),
 children: [
   (0, o.jsxs)(a.ModalContent, {
@@ -164,14 +164,14 @@ children: [
     ]
   }),
   n ? (0, o.jsx)(a.ModalFooter, {
-    direction: d.Z.Direction.VERTICAL,
+    direction: u.Z.Direction.VERTICAL,
     children: (0, o.jsx)(a.Button, {
       size: a.Button.Sizes.LARGE,
       onClick: l,
       children: C.Z.Messages.OKAY
     })
   }) : (0, o.jsx)(a.ModalFooter, {
-    direction: d.Z.Direction.VERTICAL,
+    direction: u.Z.Direction.VERTICAL,
     children: (0, o.jsx)(a.Button, {
       color: a.Button.Colors.BRAND,
       size: a.Button.Sizes.LARGE,

@@ -12,18 +12,18 @@ var n = t(735250),
   i = t(570140),
   d = t(275759),
   u = t(202120),
-  x = t(710845),
-  N = t(285952),
+  x = t(600164),
+  N = t(710845),
   h = t(689938),
   m = t(191364);
-let C = new x.Z('TwoWayLink');
+let C = new N.Z('TwoWayLink');
 
 function j(e) {
   let {
 platformType: a,
 isWaitingForConnection: t,
 onWaitingForConnection: s,
-expectedCallbackState: x,
+expectedCallbackState: N,
 onAuthToken: j,
 onError: E,
 onClose: v,
@@ -55,7 +55,7 @@ let {
   callbackCode: t,
   callbackState: n
 } = e;
-if (n !== x) {
+if (n !== N) {
   C.warn(''.concat(a, ' link: received mismatching callback state!'));
   return;
 }
@@ -65,7 +65,7 @@ j({
 });
   }, [
 a,
-x,
+N,
 j
   ]);
   return r.useEffect(() => (i.Z.subscribe('USER_CONNECTIONS_LINK_CALLBACK', g), () => {
@@ -73,7 +73,7 @@ i.Z.unsubscribe('USER_CONNECTIONS_LINK_CALLBACK', g);
   }), [g]), (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(c.ModalHeader, {
-    direction: N.Z.Direction.VERTICAL,
+    direction: x.Z.Direction.VERTICAL,
     className: m.header,
     separator: !1,
     children: [

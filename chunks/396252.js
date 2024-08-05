@@ -11,10 +11,10 @@ var s = n(120356),
   l = n(481060),
   o = n(385499),
   c = n(430824),
-  u = n(702346),
-  d = n(739566),
-  _ = n(464891),
-  E = n(83561),
+  u = n(739566),
+  d = n(464891),
+  _ = n(83561),
+  E = n(834129),
   I = n(674563),
   m = n(689938),
   T = n(713389);
@@ -26,21 +26,21 @@ message: n,
 compact: s,
 usernameHook: h,
 channel: N
-  } = e, C = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), f = (0, d.ZP)(n), p = h(f), {
+  } = e, C = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), f = (0, u.ZP)(n), p = h(f), {
 avatarSrc: g,
 eventHandlers: {
   onMouseEnter: S,
   onMouseLeave: A
 }
-  } = (0, E.m)(!0);
+  } = (0, _.m)(!0);
   return (0, i.jsx)('div', {
 onMouseEnter: S,
 onMouseLeave: A,
-children: (0, i.jsx)(u.Z, {
+children: (0, i.jsx)(E.Z, {
   className: a()(T.mainContainer, {
     [T.compact]: s
   }),
-  iconNode: s ? null : (0, i.jsx)(E.S, {
+  iconNode: s ? null : (0, i.jsx)(_.S, {
     src: g
   }),
   iconContainerClassName: T.iconContainer,
@@ -50,7 +50,7 @@ children: (0, i.jsx)(u.Z, {
       [T.compact]: s
     }),
     children: [
-      (0, i.jsx)(_.nD, {
+      (0, i.jsx)(d.nD, {
         message: n,
         messageClassname: T.spanCorrection,
         className: a()(T.usernameContainer, T.spanCorrection, {

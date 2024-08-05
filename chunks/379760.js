@@ -6,8 +6,8 @@ return d;
 var n = s(735250);
 s(470079);
 var r = s(481060),
-  i = s(7557),
-  a = s(285952),
+  i = s(600164),
+  a = s(7557),
   o = s(388905),
   l = s(689938),
   c = s(857555),
@@ -21,8 +21,8 @@ error: d,
 onSubmit: h,
 onCancel: p
   } = e;
-  return (0, n.jsxs)(a.Z, {
-direction: a.Z.Direction.VERTICAL,
+  return (0, n.jsxs)(i.Z, {
+direction: i.Z.Direction.VERTICAL,
 children: [
   (0, n.jsx)(o.Dx, {
     className: u.marginBottom8,
@@ -34,7 +34,7 @@ children: [
   }),
   (0, n.jsxs)('div', {
     children: [
-      (0, n.jsx)(i.Z, {
+      (0, n.jsx)(a.Z, {
         inputClassName: c.codeInput,
         onSubmit: h
       }),

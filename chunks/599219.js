@@ -11,13 +11,13 @@ var s = n(735250),
   i = n(442837),
   c = n(481060),
   d = n(393238),
-  u = n(215292),
-  _ = n(382086),
-  f = n(996453),
-  p = n(446706),
-  m = n(594174),
-  h = n(285952),
-  E = n(153124),
+  u = n(600164),
+  _ = n(313201),
+  f = n(215292),
+  p = n(382086),
+  m = n(996453),
+  h = n(446706),
+  E = n(594174),
   N = n(626135),
   T = n(792125),
   x = n(179645),
@@ -35,7 +35,7 @@ var s = n(735250),
 
 function j(e) {
   let t;
-  let n = (0, E.Dt)(),
+  let n = (0, _.Dt)(),
 {
   onSlideChange: o,
   ...j
@@ -44,7 +44,7 @@ function j(e) {
   onClose: F
 } = j,
 [y, D] = a.useState(!1),
-Z = (0, i.e7)([m.default], () => m.default.getCurrentUser()),
+Z = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
 L = null != Z && null == Z.nsfwAllowed,
 [k, B] = a.useState(L ? g.F.AGE_GATE : g.F.CHOOSE_TEMPLATE),
 [U, w] = a.useState(null);
@@ -66,7 +66,7 @@ B
   ]), {
 content: X,
 footer: q
-  } = (0, _.v)({
+  } = (0, p.v)({
 hasFooter: !1,
 onBack: () => {
   Y(null), B(g.F.CHOOSE_TEMPLATE);
@@ -77,7 +77,7 @@ onCreationIntentChosen: e => {
   }), {
 content: Q,
 footer: $
-  } = (0, f.G)({
+  } = (0, m.G)({
 guildTemplate: V,
 titleClassName: R.customizeGuildTitle,
 hasFooter: !1,
@@ -92,7 +92,7 @@ isCommunity: z
   }), {
 content: ee,
 footer: et
-  } = (0, u.F)({
+  } = (0, f.F)({
 createdGuildId: P,
 hasFooter: !1,
 onChannelPromptCompleted: () => {
@@ -182,7 +182,7 @@ children: [
               impressionProperties: er,
               children: (0, s.jsx)('div', {
                 className: r()(R.container, R.shortFooter),
-                children: (0, s.jsx)(p.Z, {
+                children: (0, s.jsx)(h.Z, {
                   className: R.templates,
                   onChooseTemplate: K,
                   isNewUser: !0
@@ -233,7 +233,7 @@ children: [
         className: R.closeButton
       }) : null,
       k === g.F.CHOOSE_TEMPLATE ? (0, s.jsx)(c.ModalFooter, {
-        justify: h.Z.Justify.BETWEEN,
+        justify: u.Z.Justify.BETWEEN,
         className: r()(R.footer, R.join),
         children: (0, s.jsx)(c.Anchor, {
           className: R.joinCTA,
@@ -252,7 +252,7 @@ children: [
         })
       }) : null,
       null != t ? (0, s.jsx)(c.ModalFooter, {
-        justify: h.Z.Justify.BETWEEN,
+        justify: u.Z.Justify.BETWEEN,
         className: R.footer,
         children: t
       }) : null

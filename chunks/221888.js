@@ -14,9 +14,9 @@ var r = n(735250),
   d = n(481060),
   _ = n(239091),
   E = n(410575),
-  f = n(199902),
-  h = n(594174),
-  p = n(321148),
+  f = n(751688),
+  h = n(199902),
+  p = n(594174),
   m = n(823379),
   I = n(5192),
   T = n(354459),
@@ -60,7 +60,7 @@ children: (0, r.jsxs)(d.Scroller, {
       children: u
     }),
     (0, r.jsx)('div', {
-      children: t.map(e => (0, r.jsx)(p.Z, {
+      children: t.map(e => (0, r.jsx)(f.Z, {
         guildId: null != i ? i : void 0,
         className: s()(A.memberListItem, {
           [A.popoutDisabled]: n
@@ -115,19 +115,19 @@ function C(e) {
 channelId: t,
 guildId: a,
 participant: o,
-className: p,
+className: f,
 compact: I = !1,
 disableInteraction: S = !1,
 maxVisibleUsers: N = 3
   } = e, [C, y] = i.useState(!1), D = i.useRef(new c.sW(150, () => y(!1))), L = (0, u.Wu)([
-f.Z,
-h.default
+h.Z,
+p.default
   ], () => {
 if (o.type === T.fO.STREAM) {
-  let e = f.Z.getViewerIds(o.id);
-  return e.length > 0 ? e.map(e => h.default.getUser(e)).filter(m.lm) : R;
+  let e = h.Z.getViewerIds(o.id);
+  return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(m.lm) : R;
 }
-return o.type === T.fO.ACTIVITY ? o.participants.length > 0 ? Array.from(o.participants).map(e => h.default.getUser(e.userId)).filter(m.lm) : R : R;
+return o.type === T.fO.ACTIVITY ? o.participants.length > 0 ? Array.from(o.participants).map(e => p.default.getUser(e.userId)).filter(m.lm) : R : R;
   }, [o]), b = i.useCallback(() => {
 D.current.cancel(), y(!0);
   }, []), M = i.useCallback(() => {
@@ -160,7 +160,7 @@ return (0, r.jsx)(O, {
   users: L,
   guildId: a,
   channelId: t,
-  className: p,
+  className: f,
   participantType: o.type
 });
   let U = l()(L).take(N).map(e => (0, r.jsx)(d.Avatar, {
@@ -192,7 +192,7 @@ children: (0, r.jsx)('div', {
     shouldShow: C,
     position: 'top',
     children: () => (0, r.jsx)('div', {
-      className: s()(A.viewers, p),
+      className: s()(A.viewers, f),
       children: U
     })
   })

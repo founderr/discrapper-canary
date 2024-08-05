@@ -92,15 +92,15 @@ var i = n(735250),
   ew = n(914010),
   eB = n(594174),
   eH = n(979651),
-  eG = n(368666),
-  eV = n(74538),
-  eF = n(792125),
-  eW = n(933557),
-  ez = n(287746),
-  eY = n(325708),
-  eK = n(335615),
-  eq = n(992744),
-  eX = n(923029),
+  eG = n(74538),
+  eV = n(792125),
+  eF = n(933557),
+  eW = n(287746),
+  ez = n(325708),
+  eY = n(335615),
+  eK = n(992744),
+  eq = n(923029),
+  eX = n(194082),
   eQ = n(176505),
   eJ = n(981631),
   e$ = n(918559),
@@ -272,7 +272,7 @@ if (e.isForumLikeChannel()) {
     sidebarState: t
   }, e.id);
 }
-return (0, i.jsx)(ez.Z, {
+return (0, i.jsx)(eW.Z, {
   channel: e,
   guild: n,
   chatInputType: R.I.NORMAL
@@ -308,12 +308,12 @@ else if (l === eJ.ULH.MEMBERS)
     case eJ.d4z.GUILD_TEXT:
       var u;
       let d = !0 === eJ.TPd.GUILD_THREADS_ONLY.has(t.type) ? t.id : null !== (u = t.guild_id) && void 0 !== u ? u : t.id;
-      return (0, i.jsx)(eK.Z, {
+      return (0, i.jsx)(eY.Z, {
         channel: t
       }, 'channel-members-'.concat(d));
     case eJ.d4z.ANNOUNCEMENT_THREAD:
       if (null != n)
-        return (0, i.jsx)(eK.Z, {
+        return (0, i.jsx)(eY.Z, {
           channel: n
         }, 'channel-members-'.concat(n.id));
       break;
@@ -427,8 +427,8 @@ if (null == e)
   return null;
 let c = (null == t ? void 0 : t.type) != null && eJ.TPd.GUILD_THREADS_ONLY.has(t.type) ? 528 : 450,
   u = o - eJ.PrS - c;
-return (0, i.jsx)(eY.Z, {
-  sidebarType: (null == t ? void 0 : t.type) != null && eJ.TPd.GUILD_THREADS_ONLY.has(t.type) ? eY.y.PostSidebar : eY.y.ThreadSidebar,
+return (0, i.jsx)(ez.Z, {
+  sidebarType: (null == t ? void 0 : t.type) != null && eJ.TPd.GUILD_THREADS_ONLY.has(t.type) ? ez.y.PostSidebar : ez.y.ThreadSidebar,
   maxWidth: u,
   onWidthChange: this.handleThreadSidebarResize,
   children: e
@@ -450,9 +450,9 @@ let {
   isThreadSidebarFloating: h
 } = this.state, p = this.shouldRenderCall();
 if (a)
-  return (0, i.jsx)(eq.Z, {});
+  return (0, i.jsx)(eK.Z, {});
 if (null == e)
-  return (0, i.jsx)(eX.Z, {
+  return (0, i.jsx)(eq.Z, {
     channelId: this.props.channelId
   });
 let m = r === eJ.ULH.SIDEBAR_CHAT,
@@ -569,7 +569,7 @@ super(...e), e5(this, 'state', {
     premiumIndicatorEnabled: t
   } = this.props;
   return (null == e ? void 0 : e.type) !== e0.fO.STREAM ? null : (0, i.jsx)(U.Z, {
-    size: eG.ZP.Sizes.LARGE,
+    size: eX.ZP.Sizes.LARGE,
     participant: e,
     showQuality: !0,
     premiumIndicator: t
@@ -754,7 +754,7 @@ super(...e), e5(this, 'state', {
         showDivider: h && !(0, ep.X)(),
         toolbar: this.renderHeaderToolbar(),
         mobileToolbar: this.renderMobileToolbar(),
-        className: l()(e3.title, u && r ? (0, eF.Q)(eJ.BRd.DARK) : null),
+        className: l()(e3.title, u && r ? (0, eV.Q)(eJ.BRd.DARK) : null),
         transparent: r || c,
         'aria-label': e4.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
         children: [
@@ -825,7 +825,7 @@ channelSidebarState: eR.ZP.getSidebarState(r)
   }), [
 r,
 c
-  ]), W = null == C ? void 0 : C.id, z = (0, p.e7)([eR.ZP], () => eR.ZP.getGuildSidebarState(W), [W]), Y = (0, p.e7)([ew.Z], () => ew.Z.getGuildId()) === eJ.I_8, K = (0, eV.So)(h.q.STREAM_HIGH_QUALITY), q = (0, ec.o)(U, w), X = (0, eo.lL)('Channel', !0, w, q), Q = (0, eW.ZP)(c), J = (0, eW.ZP)(c, !0), $ = null != c && o === c.id, ee = null != c && c.isGuildStageVoice();
+  ]), W = null == C ? void 0 : C.id, z = (0, p.e7)([eR.ZP], () => eR.ZP.getGuildSidebarState(W), [W]), Y = (0, p.e7)([ew.Z], () => ew.Z.getGuildId()) === eJ.I_8, K = (0, eG.So)(h.q.STREAM_HIGH_QUALITY), q = (0, ec.o)(U, w), X = (0, eo.lL)('Channel', !0, w, q), Q = (0, eF.ZP)(c), J = (0, eF.ZP)(c, !0), $ = null != c && o === c.id, ee = null != c && c.isGuildStageVoice();
   a.useEffect(() => {
 var e, t, n;
 let i = (0, ed.s1)();

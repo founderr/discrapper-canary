@@ -9,10 +9,10 @@ var r, i, a = n(735250),
   l = n.n(o),
   u = n(338545),
   c = n(481060),
-  d = n(540059),
-  _ = n(855981),
-  E = n(55543),
-  f = n(806519),
+  d = n(686546),
+  _ = n(540059),
+  E = n(855981),
+  f = n(55543),
   h = n(459283);
 (r = i || (i = {}))[r.UPDATE = 0] = 'UPDATE', r[r.NEW = 1] = 'NEW';
 let p = {
@@ -60,7 +60,7 @@ notification: R,
 'aria-expanded': y,
 'aria-haspopup': D,
 'aria-controls': L
-  } = e, b = (0, d.Q)('ChannelTextAreaButton'), M = (0, c.useTransition)(null != m, {
+  } = e, b = (0, _.Q)('ChannelTextAreaButton'), M = (0, c.useTransition)(null != m, {
 ...p,
 keys: e => e ? 'children' : 'icon'
   }), P = e => {
@@ -70,9 +70,9 @@ let {
 return null != R ? (0, a.jsxs)('div', {
   className: h.buttonContent,
   children: [
-    (0, a.jsx)(f.ZP, {
+    (0, a.jsx)(d.ZP, {
       className: h.iconMask,
-      mask: f.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
+      mask: d.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
       width: b ? 20 : 24,
       height: b ? 20 : 24,
       children: t
@@ -135,10 +135,10 @@ children: [
   O && (0, a.jsxs)('div', {
     className: h.sparkleContainer,
     children: [
-      (0, a.jsx)(E.Z, {
+      (0, a.jsx)(f.Z, {
         className: h.sparkleStar
       }),
-      (0, a.jsx)(_.Z, {
+      (0, a.jsx)(E.Z, {
         className: h.sparklePlus
       })
     ]

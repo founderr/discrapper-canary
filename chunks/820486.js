@@ -12,9 +12,9 @@ var i, a = n(392711),
   d = n(358085),
   u = n(131951),
   _ = n(981631),
-  E = n(65154);
+  h = n(65154);
 
-function h(e, t, n) {
+function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -82,14 +82,14 @@ return T;
 return C;
   }
 }
-h(Z, 'displayName', 'ConnectedDeviceStore'), h(Z, 'persistKey', 'ConnectedDeviceStore'), t.Z = new Z(l.Z, {
+E(Z, 'displayName', 'ConnectedDeviceStore'), E(Z, 'persistKey', 'ConnectedDeviceStore'), t.Z = new Z(l.Z, {
   MEDIA_ENGINE_DEVICES: function(e) {
 let {
   inputDevices: t,
   outputDevices: n
 } = e, i = {};
 f.justChanged = !1, t.forEach(e => {
-  if (i[A(e)] = e.id, e.id === E.w5) {
+  if (i[A(e)] = e.id, e.id === h.w5) {
     var t;
     let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
     n !== f.id && (f.justChanged = !0), f.id = n;
@@ -97,7 +97,7 @@ f.justChanged = !1, t.forEach(e => {
 });
 let a = {};
 if (C.justChanged = !1, n.forEach(e => {
-    if (a[A(e)] = e.id, e.id === E.w5) {
+    if (a[A(e)] = e.id, e.id === h.w5) {
       var t;
       let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
       n !== C.id && (C.justChanged = !0), C.id = n;

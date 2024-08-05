@@ -12,11 +12,11 @@ var a = i(735250),
   m = i(726542),
   v = i(884338),
   p = i(367907),
-  h = i(598077),
-  N = i(314897),
-  R = i(271383),
-  _ = i(430824),
-  x = i(153124),
+  h = i(313201),
+  N = i(598077),
+  R = i(314897),
+  _ = i(271383),
+  x = i(430824),
   C = i(626135),
   b = i(63063),
   j = i(134433),
@@ -30,7 +30,7 @@ l.default = function(e) {
 guildId: l,
 transitionState: o,
 onClose: O
-  } = e, A = (0, t.e7)([_.Z], () => _.Z.getRoles(l)), S = (0, t.e7)([N.default], () => N.default.getId()), L = (0, t.e7)([R.ZP], () => R.ZP.getMember(l, S)), [M, y] = r.useState([]), T = (0, f.ZP)(), D = (0, x.Dt)();
+  } = e, A = (0, t.e7)([x.Z], () => x.Z.getRoles(l)), S = (0, t.e7)([R.default], () => R.default.getId()), L = (0, t.e7)([_.ZP], () => _.ZP.getMember(l, S)), [M, y] = r.useState([]), T = (0, f.ZP)(), D = (0, h.Dt)();
   if (r.useEffect(() => {
   if (0 !== M.length)
     C.default.track(k.rMx.PASSPORT_ENTRY_VIEWED, {
@@ -106,7 +106,7 @@ children: [
                   var o;
                   let r = null === (o = i.applications) || void 0 === o ? void 0 : o[e.application_id];
                   t = (null == r ? void 0 : r.bot) != null ? (0, a.jsx)('img', {
-                    src: new h.Z(r.bot).getAvatarURL(l, 24),
+                    src: new N.Z(r.bot).getAvatarURL(l, 24),
                     alt: '',
                     className: n()(E.botAvatar, I.avatar)
                   }) : null;

@@ -10,11 +10,11 @@ var r, i = n(735250),
   l = n(512722),
   u = n.n(l),
   c = n(481060),
-  d = n(484459),
-  _ = n(103575),
-  E = n(598077),
-  f = n(594174),
-  h = n(806519),
+  d = n(686546),
+  _ = n(484459),
+  E = n(103575),
+  f = n(598077),
+  h = n(594174),
   p = n(426563),
   m = n(734046);
 
@@ -34,7 +34,7 @@ let T = {
 };
 
 function g(e, t) {
-  let n = e instanceof E.Z ? e : null != e ? e.user : null;
+  let n = e instanceof f.Z ? e : null != e ? e.user : null;
   return null != n ? n.id : 'user-'.concat(t);
 }
 class S extends(r = a.PureComponent) {
@@ -53,11 +53,11 @@ for (; u < o && u < e.length;) {
   s.push(t ? (0, i.jsx)('div', {
     className: m.avatarContainer,
     children: o
-  }, g(null !== (c = e[u]) && void 0 !== c ? c : null, u)) : (0, i.jsx)(h.ZP, {
+  }, g(null !== (c = e[u]) && void 0 !== c ? c : null, u)) : (0, i.jsx)(d.ZP, {
     className: m.avatarContainerMasked,
     height: r,
     width: r,
-    mask: h.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
+    mask: d.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
     children: o
   }, g(e[u], u))), u++;
 }
@@ -109,18 +109,18 @@ let {
   useFallbackUserForPopout: s
 } = this.props, {
   popoutUserId: l
-} = this.state, E = n.find(e => null != e && e.id === l), h = s && null == f.default.getUser(l);
+} = this.state, d = n.find(e => null != e && e.id === l), f = s && null == h.default.getUser(l);
 return (0, i.jsx)(c.Popout, {
   position: 'right',
-  preload: null == E ? void 0 : () => (0, d.W)(E.id, E.getAvatarURL(r, 80), {
+  preload: null == d ? void 0 : () => (0, _.W)(d.id, d.getAvatarURL(r, 80), {
     guildId: r
   }),
   shouldShow: !0 === a && null != l,
   fixed: !0,
-  renderPopout: e => (u()(null != l, 'UserSummaryItem.render - renderPopout: popoutUserId cannot be null'), (0, i.jsx)(_.Z, {
+  renderPopout: e => (u()(null != l, 'UserSummaryItem.render - renderPopout: popoutUserId cannot be null'), (0, i.jsx)(E.Z, {
     ...this.props,
     location: 'UserSummaryItem',
-    user: h && null != E ? E : void 0,
+    user: f && null != d ? d : void 0,
     ...e,
     userId: l,
     guildId: this.props.guildId

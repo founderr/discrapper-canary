@@ -8,9 +8,9 @@ var t = a(735250),
   c = a(481060),
   d = a(231239),
   N = a(881052),
-  u = a(565138),
-  _ = a(601964),
-  m = a(806519),
+  u = a(686546),
+  _ = a(565138),
+  m = a(601964),
   E = a(768581),
   I = a(888592),
   x = a(689938),
@@ -32,15 +32,15 @@ size: 40
 className: h.clickableGuildInfoRow,
 onClick: n,
 children: [
-  (0, t.jsx)(m.ZP, {
-    mask: m.ZP.Masks.AVATAR_DEFAULT,
+  (0, t.jsx)(u.ZP, {
+    mask: u.ZP.Masks.AVATAR_DEFAULT,
     width: 40,
     height: 40,
-    children: (0, t.jsx)(u.Z, {
+    children: (0, t.jsx)(_.Z, {
       className: h.guildIcon,
       iconSrc: i,
-      guild: new _.ZP(a),
-      size: u.Z.Sizes.MEDIUM
+      guild: new m.ZP(a),
+      size: _.Z.Sizes.MEDIUM
     })
   }),
   (0, t.jsx)(c.Text, {

@@ -30,9 +30,9 @@ var s = n(735250),
   a = n.n(i),
   l = n(481060),
   o = n(388905),
-  c = n(925329),
-  u = n(372769),
-  d = n(154921),
+  c = n(112831),
+  u = n(925329),
+  d = n(372769),
   _ = n(768581),
   h = n(51144),
   E = n(245335),
@@ -75,7 +75,7 @@ let {
   application: r
 } = e;
 if (null != r)
-  return (0, s.jsx)(c.Z, {
+  return (0, s.jsx)(u.Z, {
     className: m.appIcon,
     game: r,
     size: m.appIconSize
@@ -154,7 +154,7 @@ function D(e) {
   let t, n, r, {
 user: i,
 guild: a,
-channel: c,
+channel: u,
 application: _,
 showBigUserIcon: E
   } = e;
@@ -176,23 +176,23 @@ E && null == _ && (t = (0, s.jsx)(o.Vj, {
           guild: a,
           size: o.Vj.Sizes.SMALL
         }),
-        (0, s.jsx)(d.Z, {
+        (0, s.jsx)(c.Z, {
           className: m.appGuildName,
-          color: d.Z.Colors.CUSTOM,
+          color: c.Z.Colors.CUSTOM,
           tag: 'span',
-          size: d.Z.Sizes.SIZE_24,
+          size: c.Z.Sizes.SIZE_24,
           children: a.name
         })
       ]
     })
   ]
 }));
-  else if (null != c) {
+  else if (null != u) {
 if (null == i)
   throw Error('no inviter in group DM invite');
 let e = h.ZP.getFormattedName(i);
-null != c.name && '' !== c.name ? (n = c.name, null != c.icon && (t = (0, s.jsx)(o.MC, {
-  channel: c,
+null != u.name && '' !== u.name ? (n = u.name, null != u.icon && (t = (0, s.jsx)(o.MC, {
+  channel: u,
   size: l.AvatarSizes.SIZE_32
 }))) : n = e;
   } else if (null != i) {
@@ -211,7 +211,7 @@ children: [
   (0, s.jsxs)(o.Dx, {
     className: m.title,
     children: [
-      null != a ? (0, s.jsx)(u.Z, {
+      null != a ? (0, s.jsx)(d.Z, {
         guild: a,
         className: m.guildBadge,
         tooltipPosition: 'left'

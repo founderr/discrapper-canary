@@ -3,13 +3,13 @@ var i = n(735250),
   s = n(120356),
   r = n.n(s),
   l = n(442837),
-  o = n(649974),
-  c = n(246946),
-  d = n(594174),
-  u = n(525395),
-  _ = n(55563),
+  o = n(107769),
+  c = n(649974),
+  d = n(246946),
+  u = n(594174),
+  _ = n(525395),
+  h = n(55563),
   E = n(551428),
-  h = n(912739),
   I = n(73346),
   m = n(733789),
   g = n(4962),
@@ -31,7 +31,7 @@ return 0 === e.length && 0 === t.length ? null : (0, i.jsx)('div', {
       }, e.type)),
       t.map(e => (0, i.jsx)('div', {
         className: T.unit,
-        children: (0, i.jsx)(h.Z, {
+        children: (0, i.jsx)(o.Z, {
           reason: e
         })
       }, e.type))
@@ -76,19 +76,19 @@ return (0, i.jsxs)('div', {
   }
 }
 t.Z = l.ZP.connectStores([
-  _.Z,
-  d.default,
+  h.Z,
+  u.default,
   E.Z,
-  o.Z,
-  u.Z,
-  c.Z
+  c.Z,
+  _.Z,
+  d.Z
 ], e => {
   let {
 sku: t
   } = e;
   return {
-socialReasons: (0, I.Gg)(t.id, _.Z, d.default, o.Z, u.Z),
-nonSocialReasons: (0, I.Ww)(t.id, _.Z, E.Z),
-hidePersonalInformation: c.Z.hidePersonalInformation
+socialReasons: (0, I.Gg)(t.id, h.Z, u.default, c.Z, _.Z),
+nonSocialReasons: (0, I.Ww)(t.id, h.Z, E.Z),
+hidePersonalInformation: d.Z.hidePersonalInformation
   };
 })(S);

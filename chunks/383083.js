@@ -87,23 +87,23 @@ t.encode = function(e) {
 i = 0,
 a = 0,
 o = 0;
-  for (var l = new n(8 * (s = Math.floor((t = e).length / 5), t.length % 5 == 0 ? s : s + 1)); r < e.length;) {
-var c = e[r];
-a > 3 ? (o = (o = c & 255 >> a) << (a = (a + 5) % 8) | (r + 1 < e.length ? e[r + 1] : 0) >> 8 - a, r++) : (o = c >> 8 - (a + 5) & 31, 0 == (a = (a + 5) % 8) && r++), l[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567'.charCodeAt(o), i++;
+  for (var c = new n(8 * (s = Math.floor((t = e).length / 5), t.length % 5 == 0 ? s : s + 1)); r < e.length;) {
+var l = e[r];
+a > 3 ? (o = (o = l & 255 >> a) << (a = (a + 5) % 8) | (r + 1 < e.length ? e[r + 1] : 0) >> 8 - a, r++) : (o = l >> 8 - (a + 5) & 31, 0 == (a = (a + 5) % 8) && r++), c[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567'.charCodeAt(o), i++;
   }
-  for (r = i; r < l.length; r++)
-l[r] = 61;
-  return l;
+  for (r = i; r < c.length; r++)
+c[r] = 61;
+  return c;
 }, t.decode = function(e) {
   var t, s = 0,
 i = 0,
 a = 0;
   !n.isBuffer(e) && (e = new n(e));
-  for (var o = new n(Math.ceil(5 * e.length / 8)), l = 0; l < e.length && 61 != e[l]; l++) {
+  for (var o = new n(Math.ceil(5 * e.length / 8)), c = 0; c < e.length && 61 != e[c]; c++) {
 ;
-var c = e[l] - 48;
-if (c < r.length)
-  i = r[c], s <= 3 ? 0 == (s = (s + 5) % 8) ? (t |= i, o[a] = t, a++, t = 0) : t |= 255 & i << 8 - s : (t |= 255 & i >>> (s = (s + 5) % 8), o[a] = t, a++, t = 255 & i << 8 - s);
+var l = e[c] - 48;
+if (l < r.length)
+  i = r[l], s <= 3 ? 0 == (s = (s + 5) % 8) ? (t |= i, o[a] = t, a++, t = 0) : t |= 255 & i << 8 - s : (t |= 255 & i >>> (s = (s + 5) % 8), o[a] = t, a++, t = 255 & i << 8 - s);
 else
   throw Error('Invalid input - it is not base32 encoded string');
   }

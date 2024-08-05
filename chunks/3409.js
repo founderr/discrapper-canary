@@ -851,7 +851,7 @@ case f.h8.AWAITING_AUTHENTICATION:
 default:
   throw Error('Unexpected step: '.concat(eP));
   }
-  let e5 = (0, s.jsx)(c.Sequencer, {
+  let e7 = (0, s.jsx)(c.Sequencer, {
   className: Q.sequencer,
   staticClassName: Q.sequencerStatic,
   animatedNodeClassName: Q.sequencerAnimatedNode,
@@ -861,7 +861,7 @@ default:
   sideMargin: 20,
   children: a
 }),
-e7 = eP === f.h8.PAYMENT_TYPE && 0 === p.length ? null : t;
+e6 = eP === f.h8.PAYMENT_TYPE && 0 === p.length ? null : t;
   return H ? (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)(L.Z, {
@@ -872,10 +872,10 @@ children: [
     isEligibleForTrial: j
   }),
   (0, s.jsx)(O.C3, {
-    children: e5
+    children: e7
   }),
   (0, s.jsx)(O.O3, {
-    children: e7
+    children: e6
   })
 ]
   }) : (0, s.jsx)(B.Z, {
@@ -884,8 +884,8 @@ currentStep: null != v ? v : eP,
 paymentError: N.paymentError,
 header: x,
 hideBreadcrumbs: U,
-body: e5,
-footer: e7
+body: e7,
+footer: e6
   });
 }
 

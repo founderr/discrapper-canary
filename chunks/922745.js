@@ -14,11 +14,11 @@ var i = n(120356),
   o = n(692547),
   l = n(215569),
   u = n(481060),
-  c = n(312956),
-  d = n(19780),
-  _ = n(285952),
-  E = n(470441),
-  f = n(727218),
+  c = n(600164),
+  d = n(528144),
+  _ = n(312956),
+  E = n(501967),
+  f = n(19780),
   h = n(540028),
   p = n(507675),
   m = n(273716),
@@ -32,12 +32,12 @@ onJumpToChannel: n,
 onHide: i,
 idle: a,
 preventIdleComponent: l
-  } = e, _ = (0, s.e7)([d.Z], () => d.Z.getChannelId()), E = null != _ ? (0, r.jsx)(h.Z, {
-voiceChannelId: _,
+  } = e, c = (0, s.e7)([f.Z], () => f.Z.getChannelId()), E = null != c ? (0, r.jsx)(h.Z, {
+voiceChannelId: c,
 idle: a
   }) : null, {
 enabled: p
-  } = c.Z.useExperiment({
+  } = _.Z.useExperiment({
 location: 'PictureInPicturePlayer'
   });
   return (0, r.jsxs)(l, {
@@ -55,9 +55,9 @@ children: [
         width: 20,
         height: 20
       }),
-      (0, r.jsx)(f.Z, {
+      (0, r.jsx)(d.Z, {
         className: T.headerText,
-        size: f.Z.Sizes.SIZE_16,
+        size: d.Z.Sizes.SIZE_16,
         color: o.Z.unsafe_rawColors.WHITE_500.css,
         children: t
       })
@@ -80,8 +80,8 @@ onJumpToChannel: i,
 onHide: s,
 backgroundKey: o,
 onActive: u,
-onForceIdle: c,
-renderBottomLeftControls: d,
+onForceIdle: d,
+renderBottomLeftControls: _,
 renderBottomRightControls: f,
 screenMessage: h,
 hideControls: m = !1,
@@ -92,7 +92,7 @@ innerClassName: S,
   return (0, r.jsxs)('div', {
 onMouseMove: u,
 onMouseDown: u,
-onMouseLeave: c,
+onMouseLeave: d,
 className: a()(T.pictureInPictureVideo, {
   [T.idle]: n
 }, I),
@@ -123,20 +123,20 @@ children: [
       (0, r.jsxs)('div', {
         className: T.bottomControls,
         children: [
-          (0, r.jsx)(_.Z, {
+          (0, r.jsx)(c.Z, {
             grow: 0,
             shrink: 1,
             basis: '50%',
-            align: _.Z.Align.CENTER,
+            align: c.Z.Align.CENTER,
             className: T.bottomLeftControls,
-            children: null == d ? void 0 : d()
+            children: null == _ ? void 0 : _()
           }),
-          (0, r.jsx)(_.Z, {
+          (0, r.jsx)(c.Z, {
             grow: 0,
             shrink: 1,
-            justify: _.Z.Justify.END,
+            justify: c.Z.Justify.END,
             basis: '50%',
-            align: _.Z.Align.CENTER,
+            align: c.Z.Align.CENTER,
             children: null == f ? void 0 : f()
           })
         ]

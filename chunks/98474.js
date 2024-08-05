@@ -11,8 +11,8 @@ var i = n(735250),
   r = n(481060),
   c = n(596454),
   u = n(745510),
-  d = n(912893),
-  h = n(153850),
+  d = n(314910),
+  h = n(912893),
   m = n(768581),
   p = n(176354),
   g = n(675654),
@@ -70,7 +70,7 @@ config: {
   easing: l.Z.Easing.in(l.Z.Easing.ease)
 },
 onRest: () => {
-  (0, d.G)(t, n.name, n.id);
+  (0, h.G)(t, n.name, n.id);
 },
 onChange: e => {
   let {
@@ -103,7 +103,7 @@ children: [
     spriteWidth: g.Ko,
     spriteHeight: g.Ko
   }),
-  (0, i.jsx)(h.ZP, {
+  (0, i.jsx)(d.ZP, {
     children: (0, i.jsx)(a.animated.div, {
       style: {
         ...M

@@ -12,10 +12,10 @@ var i = n(735250),
   r = n(239091),
   l = n(739566),
   o = n(942951),
-  c = n(484459),
-  u = n(103575),
-  d = n(594174),
-  _ = n(702346),
+  c = n(834129),
+  u = n(484459),
+  d = n(103575),
+  _ = n(594174),
   E = n(768581),
   I = n(91047),
   m = n(628566),
@@ -24,14 +24,14 @@ var i = n(735250),
 
 function N(e, t) {
   return s.useCallback(s => (l, o) => {
-var _;
+var c;
 let T = E.ZP.getApplicationIconURL({
     id: s.id,
     icon: s.icon,
     bot: s.bot,
     botIconFirst: !0
   }),
-  h = d.default.getUser(null === (_ = s.bot) || void 0 === _ ? void 0 : _.id),
+  h = _.default.getUser(null === (c = s.bot) || void 0 === c ? void 0 : c.id),
   N = m.Z.getIntegration(e.id, s.id),
   C = e.isPrivate() && null != N ? t => {
     (0, r.jW)(t, async () => {
@@ -50,11 +50,11 @@ let T = E.ZP.getApplicationIconURL({
   } = s;
 return null == f ? l : (0, i.jsx)(a.Popout, {
   position: 'right',
-  preload: () => (0, c.W)(f.id, T, {
+  preload: () => (0, u.W)(f.id, T, {
     guildId: e.guild_id,
     channelId: e.id
   }),
-  renderPopout: n => (0, i.jsx)(u.Z, {
+  renderPopout: n => (0, i.jsx)(d.Z, {
     ...n,
     location: 'PrivateChannelIntegrationSystemMessage',
     userId: f.id,
@@ -79,21 +79,21 @@ function C(e) {
 message: t,
 channel: s,
 compact: a
-  } = e, r = (0, l.ZP)(t), c = t.application, u = (0, o.l)({
+  } = e, r = (0, l.ZP)(t), u = t.application, d = (0, o.l)({
 user: t.author,
 channelId: s.id,
 guildId: s.guild_id,
 messageId: t.id
-  }), d = N(s, t);
-  return (0, i.jsx)(_.Z, {
+  }), _ = N(s, t);
+  return (0, i.jsx)(c.Z, {
 icon: n(570111),
 timestamp: t.timestamp,
 compact: a,
 children: (0, T.DS)({
-  application: c,
+  application: u,
   username: r.nick,
-  usernameHook: u(r),
-  applicationNameHook: null != c ? d(c) : h.dG4
+  usernameHook: d(r),
+  applicationNameHook: null != u ? _(u) : h.dG4
 })
   });
 }
@@ -103,21 +103,21 @@ function f(e) {
 message: t,
 channel: s,
 compact: a
-  } = e, r = (0, l.ZP)(t), c = t.application, u = (0, o.l)({
+  } = e, r = (0, l.ZP)(t), u = t.application, d = (0, o.l)({
 user: t.author,
 channelId: s.id,
 guildId: s.guild_id,
 messageId: t.id
-  }), d = N(s, t);
-  return (0, i.jsx)(_.Z, {
+  }), _ = N(s, t);
+  return (0, i.jsx)(c.Z, {
 icon: n(474019),
 timestamp: t.timestamp,
 compact: a,
 children: (0, T.nh)({
-  application: c,
+  application: u,
   username: r.nick,
-  usernameHook: u(r),
-  applicationNameHook: null != c ? d(c) : h.dG4
+  usernameHook: d(r),
+  applicationNameHook: null != u ? _(u) : h.dG4
 })
   });
 }

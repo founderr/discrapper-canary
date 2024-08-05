@@ -14,9 +14,9 @@ var i = n(735250),
   d = n(442837),
   h = n(481060),
   p = n(260300),
-  m = n(819640),
-  _ = n(451478),
-  f = n(486458),
+  m = n(997638),
+  _ = n(819640),
+  f = n(451478),
   E = n(21825),
   g = n(232495),
   C = n(10401),
@@ -99,13 +99,13 @@ let {
   isLongText: c,
   highPriority: u,
   spacing: d,
-  arrowAlignment: p = f.cy.TOP,
-  popoutPosition: m
+  arrowAlignment: p = m.cy.TOP,
+  popoutPosition: _
 } = s, {
-  offsetX: _,
+  offsetX: f,
   offsetY: g
 } = this.state, C = {
-  left: null != _ ? a.x + _ : void 0,
+  left: null != f ? a.x + f : void 0,
   top: null != g ? a.y + g : void 0
 }, x = e => {
   let t = n && !e;
@@ -133,8 +133,8 @@ let {
     [I.highPriority]: u
   };
 }, N = this.getTutorialPopoutText();
-return (0, i.jsx)(f.ZP, {
-  position: m,
+return (0, i.jsx)(m.ZP, {
+  position: _,
   renderMedia: r,
   textAlign: o,
   spacing: d,
@@ -186,13 +186,13 @@ windowFocused: n,
 shouldShowAny: a
   } = (0, d.cj)([
 C.Z,
-_.Z,
-m.Z
+f.Z,
+_.Z
   ], () => ({
 indicators: C.Z.getIndicators(),
 tutorialData: C.Z.getData(),
-shouldShowAny: C.Z.shouldShowAnyIndicators() && !m.Z.hasLayers(),
-windowFocused: _.Z.isFocused()
+shouldShowAny: C.Z.shouldShowAnyIndicators() && !_.Z.hasLayers(),
+windowFocused: f.Z.isFocused()
   }));
   return a ? (0, i.jsx)(i.Fragment, {
 children: Object.entries(e).map(e => {

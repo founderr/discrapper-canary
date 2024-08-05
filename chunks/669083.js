@@ -8,11 +8,11 @@ var i, s, a = n(735250),
   r = n(442837),
   l = n(481060),
   c = n(13245),
-  d = n(906467),
-  u = n(556296),
-  h = n(237997),
-  p = n(285952),
-  f = n(739563),
+  d = n(600164),
+  u = n(212632),
+  h = n(906467),
+  p = n(556296),
+  f = n(237997),
   _ = n(998502),
   g = n(13140),
   m = n(658785),
@@ -63,16 +63,16 @@ let v = () => [{
   ];
 
 function N() {
-  let e = h.Z.getNotificationPositionMode(),
+  let e = f.Z.getNotificationPositionMode(),
 t = e !== E._vf.DISABLED,
-n = u.Z.getOverlayKeybind(),
-i = u.Z.getOverlayChatKeybind();
+n = p.Z.getOverlayKeybind(),
+i = p.Z.getOverlayChatKeybind();
   c.Z.track(E.rMx.OVERLAY_SETTINGS_UPDATED, {
 enabled: !0,
 notifications_enabled: t,
 notifications_position: t ? e : null,
-text_notifications_mode: h.Z.getTextChatNotificationMode(),
-text_opacity_slider: h.Z.getTextWidgetOpacity(),
+text_notifications_mode: f.Z.getTextChatNotificationMode(),
+text_opacity_slider: f.Z.getTextWidgetOpacity(),
 hotkey: null != n ? (0, g.BB)(n.shortcut) : null,
 text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null
   });
@@ -107,13 +107,13 @@ let {
 c.Z.setDisplayUserMode(t);
   }
   renderHeader() {
-return (0, a.jsxs)(p.Z, {
-  direction: p.Z.Direction.VERTICAL,
+return (0, a.jsxs)(d.Z, {
+  direction: d.Z.Direction.VERTICAL,
   grow: 0,
   shrink: 0,
   className: I.header,
   children: [
-    (0, a.jsxs)(p.Z, {
+    (0, a.jsxs)(d.Z, {
       children: [
         (0, a.jsx)(l.FormTitle, {
           className: I.headerTitle,
@@ -133,7 +133,7 @@ return (0, a.jsxs)(p.Z, {
   renderTabBar() {
 let {
   selectedSection: e
-} = this.state, t = d.Z.isDeveloper ? (0, a.jsx)(l.TabBar.Item, {
+} = this.state, t = h.Z.isDeveloper ? (0, a.jsx)(l.TabBar.Item, {
   id: 'DEVELOPER',
   className: I.tabBarItem,
   children: 'Developer'
@@ -190,7 +190,7 @@ return (0, a.jsxs)(o.Fragment, {
     (0, a.jsx)(l.FormItem, {
       title: Z.Z.Messages.FORM_LABEL_NOTIFICATION_POSITION,
       className: S.marginBottom20,
-      children: (0, a.jsx)(f.Z, {
+      children: (0, a.jsx)(u.Z, {
         position: t,
         onChange: this.handleChangeNotificationPositionMode
       })
@@ -326,13 +326,13 @@ displayUserMode: s,
 notificationPositionMode: o,
 textChatNotificationMode: l,
 shouldShowKeybindIndicators: c
-  } = (0, r.cj)([h.Z], () => ({
-avatarSizeMode: h.Z.getAvatarSizeMode(),
-displayNameMode: h.Z.getDisplayNameMode(),
-displayUserMode: h.Z.getDisplayUserMode(),
-notificationPositionMode: h.Z.getNotificationPositionMode(),
-textChatNotificationMode: h.Z.getTextChatNotificationMode(),
-shouldShowKeybindIndicators: h.Z.showKeybindIndicators
+  } = (0, r.cj)([f.Z], () => ({
+avatarSizeMode: f.Z.getAvatarSizeMode(),
+displayNameMode: f.Z.getDisplayNameMode(),
+displayUserMode: f.Z.getDisplayUserMode(),
+notificationPositionMode: f.Z.getNotificationPositionMode(),
+textChatNotificationMode: f.Z.getTextChatNotificationMode(),
+shouldShowKeybindIndicators: f.Z.showKeybindIndicators
   })), {
 showKeybindIndicators: d
   } = m.Z.useExperiment({

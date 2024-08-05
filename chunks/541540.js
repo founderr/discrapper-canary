@@ -8,9 +8,9 @@ var n = s(735250),
   i = s(442837),
   r = s(481060),
   o = s(533307),
-  l = s(930114),
-  c = s(246946),
-  d = s(285952),
+  l = s(600164),
+  c = s(930114),
+  d = s(246946),
   _ = s(626135),
   E = s(669079),
   u = s(981631),
@@ -55,7 +55,7 @@ return (0, n.jsxs)(r.FormSection, {
     }),
     (0, n.jsx)('form', {
       onSubmit: this.handleSubmit,
-      children: (0, n.jsxs)(d.Z, {
+      children: (0, n.jsxs)(l.Z, {
         children: [
           (0, n.jsx)(r.TextInput, {
             type: e ? 'password' : 'text',
@@ -125,7 +125,7 @@ super(...e), S(this, 'state', {
         ...this.analyticsLocation,
         object: u.qAy.BUTTON_CTA
       }
-    }), (0, l.V)({
+    }), (0, c.V)({
       processedCode: s
     }), this.setState({
       codeInput: ''
@@ -145,7 +145,7 @@ super(...e), S(this, 'state', {
 
 function C() {
   let e = a.useContext(_.AnalyticsContext),
-t = (0, i.e7)([c.Z], () => c.Z.enabled);
+t = (0, i.e7)([d.Z], () => d.Z.enabled);
   return (0, n.jsx)(N, {
 analyticsContext: e,
 obscureInput: t

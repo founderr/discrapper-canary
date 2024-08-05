@@ -21,8 +21,8 @@ var n, a, i = s(735250),
   N = s(100527),
   C = s(906732),
   m = s(211242),
-  A = s(509545),
-  g = s(285952),
+  A = s(600164),
+  g = s(509545),
   h = s(626135),
   O = s(122289),
   p = s(63063),
@@ -84,7 +84,7 @@ setStep: a,
 onClose: o,
 whatYouLoseExperienceEnabled: l,
 analyticsLocation: c
-  } = e, d = (0, m.Q)(), [_, E] = r.useState(!1), [I, N] = r.useState(!1), A = (0, S.ZP)(), {
+  } = e, d = (0, m.Q)(), [_, E] = r.useState(!1), [I, N] = r.useState(!1), g = (0, S.ZP)(), {
 analyticsLocations: h
   } = (0, C.ZP)(), O = null;
   switch (s.status) {
@@ -153,7 +153,7 @@ M = x ? (0, i.jsx)(T.Button, {
 }),
 f = (0, i.jsx)(T.Button, {
   look: T.Button.Looks.LINK,
-  color: (0, u.ap)(A) ? T.Button.Colors.PRIMARY : T.Button.Colors.WHITE,
+  color: (0, u.ap)(g) ? T.Button.Colors.PRIMARY : T.Button.Colors.WHITE,
   onClick: o,
   children: l ? Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK : Y.Z.Messages.CANCEL
 });
@@ -193,7 +193,7 @@ children: [
     ]
   }),
   (0, i.jsxs)(T.ModalFooter, {
-    justify: g.Z.Justify.START,
+    justify: A.Z.Justify.START,
     children: [
       M,
       f
@@ -215,7 +215,7 @@ items: (0, R.Ue)(null !== (s = null === (t = n.renewalMutations) || void 0 === t
 renewal: !0,
 analyticsLocations: a,
 analyticsLocation: N.Z.CANCEL_INVOICE_PREVIEW
-  }), o = (0, E.e7)([A.Z], () => A.Z.get(n.planId));
+  }), o = (0, E.e7)([g.Z], () => g.Z.get(n.planId));
   if (null == r || null == o)
 return (0, i.jsx)(T.Spinner, {
   className: w.loading
@@ -289,8 +289,8 @@ children: [
     ]
   }),
   (0, i.jsxs)(T.ModalFooter, {
-    align: g.Z.Align.CENTER,
-    justify: g.Z.Justify.BETWEEN,
+    align: A.Z.Align.CENTER,
+    justify: A.Z.Justify.BETWEEN,
     children: [
       (0, i.jsx)(T.Button, {
         color: T.Button.Colors.RED,

@@ -16,8 +16,8 @@ var i = n(735250),
   d = n(481060),
   u = n(393238),
   _ = n(410030),
-  E = n(963202),
-  h = n(353093),
+  h = n(963202),
+  E = n(353093),
   I = n(702646),
   m = n(207796),
   g = n(497189),
@@ -43,15 +43,15 @@ n = (0, m.GN)(e => e.userUpsellScreen, o.Z),
 s = (0, m.GN)(e => e.setUserUpsellScreen, o.Z),
 {
   ref: c,
-  width: E
+  width: h
 } = (0, u.Z)(),
-[h, g] = a.useState(0),
+[E, g] = a.useState(0),
 S = (0, d.useSpring)({
   from: {
     scrollHeight: 0
   },
   to: {
-    scrollHeight: h
+    scrollHeight: E
   }
 }),
 C = (0, _.ZP)(),
@@ -82,7 +82,7 @@ case m.o2.USER_UPSELL:
       (0, i.jsx)('div', {
         className: N.toolbar,
         style: {
-          width: E
+          width: h
         },
         children: (0, i.jsx)(I.Z, {})
       }),
@@ -113,7 +113,7 @@ case m.o2.USER_UPSELL:
             className: r()(N.backgroundImageContent, N.userUpsell),
             children: (0, i.jsx)(T.ZP, {
               onScroll: Z,
-              width: null != E ? E : 0,
+              width: null != h ? h : 0,
               isAnimating: !1,
               variant: (0, T.s)(t, T.Bj.UPSELL)
             })
@@ -147,11 +147,11 @@ function Z() {
   let e = (0, m.GN)(e => e.game, o.Z),
 {
   guilds: t
-} = (0, E.C3)({
+} = (0, h.C3)({
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !0
 }),
-n = a.useMemo(() => t.filter(e => !(0, h.EJ)(e)), [t]),
+n = a.useMemo(() => t.filter(e => !(0, E.EJ)(e)), [t]),
 s = (0, _.ZP)(),
 l = a.useMemo(() => A(e, s), [
   e,

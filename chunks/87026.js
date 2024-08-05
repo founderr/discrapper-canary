@@ -10,17 +10,17 @@ var a = t(735250),
   _ = t(481060),
   E = t(785697),
   N = t(933557),
-  I = t(434404),
-  T = t(764260),
-  M = t(999382),
-  m = t(416162),
-  x = t(422559),
-  u = t(210887),
-  L = t(984933),
-  O = t(430824),
-  C = t(699516),
-  h = t(594174),
-  A = t(153124),
+  I = t(313201),
+  T = t(434404),
+  M = t(764260),
+  m = t(999382),
+  x = t(416162),
+  u = t(422559),
+  L = t(210887),
+  O = t(984933),
+  C = t(430824),
+  h = t(699516),
+  A = t(594174),
   p = t(626135),
   S = t(63063),
   f = t(700785),
@@ -45,7 +45,7 @@ let {
   disableVerificationLevel: n,
   headerId: o,
   theme: c
-} = e, E = (0, r.e7)([O.Z], () => O.Z.getGuild(s.id), [s.id]), N = null != E && E.verificationLevel > b.sFg.NONE, I = (null == E ? void 0 : E.explicitContentFilter) === b.lxg.ALL_MEMBERS, T = (0, d.wj)(c) ? Z : F;
+} = e, E = (0, r.e7)([C.Z], () => C.Z.getGuild(s.id), [s.id]), N = null != E && E.verificationLevel > b.sFg.NONE, I = (null == E ? void 0 : E.explicitContentFilter) === b.lxg.ALL_MEMBERS, T = (0, d.wj)(c) ? Z : F;
 return (0, a.jsxs)('div', {
   className: j.container,
   children: [
@@ -348,7 +348,7 @@ return l.useEffect(() => {
 function w(e) {
   let {
 guild: s
-  } = e, t = (0, r.e7)([O.Z], () => O.Z.getRole(s.id, s.getEveryoneRoleId()));
+  } = e, t = (0, r.e7)([C.Z], () => C.Z.getRole(s.id, s.getEveryoneRoleId()));
   if (null == t)
 return null;
   let {
@@ -457,7 +457,7 @@ switch (e.toString()) {
   case b.Plq.MANAGE_GUILD_EXPRESSIONS.toString():
     return D.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MANAGE_EMOJI;
   default:
-    return (0, x.wt)(e);
+    return (0, u.wt)(e);
 }
   }, {
 enabledPermissions: l,
@@ -622,7 +622,7 @@ p.default.track(b.rMx.OPEN_MODAL, {
   }, []);
   let {
 guild: n
-  } = (0, r.cj)([M.Z], () => M.Z.getProps()), c = (0, r.e7)([u.Z], () => u.Z.theme), [d, _] = l.useState(!1), [x, S] = l.useState(!v.$X.some(e => f.oz(e, n))), [g, R] = l.useState(v.b4), [U, B] = l.useState(v.b4), [P] = l.useState(null == n ? void 0 : n.defaultMessageNotifications), [Z] = l.useState(null == n ? void 0 : n.verificationLevel), [F] = l.useState(null == n ? void 0 : n.explicitContentFilter), [w] = l.useState(x), H = (0, r.e7)([O.Z], () => null != n ? O.Z.getRole(n.id, n.getEveryoneRoleId()) : void 0), V = (0, r.e7)([L.ZP], () => null != n ? L.ZP.getChannels(n.id) : null), q = (0, A.Dt)(), {
+  } = (0, r.cj)([m.Z], () => m.Z.getProps()), c = (0, r.e7)([L.Z], () => L.Z.theme), [d, _] = l.useState(!1), [u, S] = l.useState(!v.$X.some(e => f.oz(e, n))), [g, R] = l.useState(v.b4), [U, B] = l.useState(v.b4), [P] = l.useState(null == n ? void 0 : n.defaultMessageNotifications), [Z] = l.useState(null == n ? void 0 : n.verificationLevel), [F] = l.useState(null == n ? void 0 : n.explicitContentFilter), [w] = l.useState(u), H = (0, r.e7)([C.Z], () => null != n ? C.Z.getRole(n.id, n.getEveryoneRoleId()) : void 0), V = (0, r.e7)([O.ZP], () => null != n ? O.ZP.getChannels(n.id) : null), q = (0, I.Dt)(), {
 enabled: W
   } = (0, E.D2)(null !== (s = null == n ? void 0 : n.id) && void 0 !== s ? s : b.lds);
   if (null == n)
@@ -631,13 +631,13 @@ return null;
 value: v.b4,
 label: D.Z.Messages.ENABLE_PUBLIC_MODAL_CREATE_CHANNEL
   }];
-  V[L.sH].forEach(e => {
+  V[O.sH].forEach(e => {
 let {
   channel: s
 } = e;
 s.type === b.d4z.GUILD_TEXT && X.push({
   value: s.id,
-  label: (0, N.F6)(s, h.default, C.Z, !0)
+  label: (0, N.F6)(s, A.default, h.Z, !0)
 });
   });
   let Q = Z !== b.sFg.NONE,
@@ -648,16 +648,16 @@ J = async () => {
     return;
   let e = new Set(n.features);
   e.add(b.oNc.COMMUNITY);
-  let s = x ? o.Od(H.permissions, v.mu) : H.permissions,
+  let s = u ? o.Od(H.permissions, v.mu) : H.permissions,
     t = {
       ...H,
       permissions: s
     };
-  s !== H.permissions && await (0, T.Gf)(n.id, [t]), I.Z.updateGuild({
+  s !== H.permissions && await (0, M.Gf)(n.id, [t]), T.Z.updateGuild({
     features: e,
     rulesChannelId: g,
     publicUpdatesChannelId: U
-  }), await I.Z.saveGuild(n.id, {
+  }), await T.Z.saveGuild(n.id, {
     features: e,
     rulesChannelId: g,
     verificationLevel: n.verificationLevel,
@@ -673,23 +673,23 @@ J = async () => {
   disableContentFilter: K,
   onAcceptVerificationLevel: (e, s) => {
     if (!s) {
-      I.Z.updateGuild({
+      T.Z.updateGuild({
         verificationLevel: Z
       });
       return;
     }
-    s && I.Z.updateGuild({
+    s && T.Z.updateGuild({
       verificationLevel: b.sFg.LOW
     });
   },
   onAcceptContentFilter: (e, s) => {
     if (!s) {
-      I.Z.updateGuild({
+      T.Z.updateGuild({
         explicitContentFilter: F
       });
       return;
     }
-    I.Z.updateGuild({
+    T.Z.updateGuild({
       explicitContentFilter: b.lxg.ALL_MEMBERS
     });
   },
@@ -713,14 +713,14 @@ J = async () => {
   policyAccepted: d,
   onAcceptPolicy: (e, s) => {
     if (s) {
-      _(!0), !$ && I.Z.updateGuild({
+      _(!0), !$ && T.Z.updateGuild({
         defaultMessageNotifications: b.bL.ONLY_MENTIONS
-      }), !x && null != H && S(!0);
+      }), !u && null != H && S(!0);
       return;
     }
-    _(!1), $ && I.Z.updateGuild({
+    _(!1), $ && T.Z.updateGuild({
       defaultMessageNotifications: P
-    }), x && null != H && S(!1);
+    }), u && null != H && S(!1);
   },
   headerId: q,
   theme: c
@@ -729,7 +729,7 @@ J = async () => {
   disableDefaultNotifications: $,
   disableEveryoneRolePermissions: w,
   policyAccepted: d,
-  everyoneRolePermissionsAccepted: x,
+  everyoneRolePermissionsAccepted: u,
   onAcceptPolicy: (e, s) => {
     if (s) {
       _(!0);
@@ -739,12 +739,12 @@ J = async () => {
   },
   onAcceptDefaultNotifications: (e, s) => {
     if (!s) {
-      I.Z.updateGuild({
+      T.Z.updateGuild({
         defaultMessageNotifications: P
       });
       return;
     }
-    I.Z.updateGuild({
+    T.Z.updateGuild({
       defaultMessageNotifications: b.bL.ONLY_MENTIONS
     });
   },
@@ -774,7 +774,7 @@ J = async () => {
     overviewTitle: D.Z.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_TITLE
   }
 ];
-  return (0, a.jsx)(m.Z, {
+  return (0, a.jsx)(x.Z, {
 stepData: el,
 title: D.Z.Messages.ENABLE_COMMUNITY_MODAL_TITLE,
 transitionState: t,

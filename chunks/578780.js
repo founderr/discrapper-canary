@@ -17,11 +17,11 @@ var a = t(100527),
   h = t(710094),
   p = t(865921),
   g = t(853872),
-  x = t(806984),
-  m = t(464797),
-  _ = t(946211),
-  v = t(231338);
-let b = [{
+  b = t(806984),
+  x = t(464797),
+  m = t(946211),
+  _ = t(231338);
+let v = [{
 key: null,
 renderStep: e => (0, r.jsx)(p.v, {
   ...e
@@ -54,7 +54,7 @@ renderStep: e => (0, r.jsx)(h.l, {
   },
   {
 key: l.h8.CONFIRM,
-renderStep: e => (0, r.jsx)(x.Z, {
+renderStep: e => (0, r.jsx)(b.Z, {
   ...e
 })
   }
@@ -69,21 +69,21 @@ applicationId: l,
   } = e, {
 analyticsLocations: u
   } = (0, o.ZP)(t, a.Z.GUILD_PRODUCT_PAYMENT_MODAL);
-  return (0, r.jsx)(m.R, {
+  return (0, r.jsx)(x.R, {
 ...n,
 children: (0, r.jsx)(o.Gt, {
   value: u,
   children: (0, r.jsx)(s.PaymentContextProvider, {
-    stepConfigs: b,
+    stepConfigs: v,
     applicationId: l,
     skuIDs: [d.skuId],
     activeSubscription: null,
-    purchaseType: v.GZ.ONE_TIME,
+    purchaseType: _.GZ.ONE_TIME,
     children: (0, r.jsx)(i.KB, {
       children: (0, r.jsx)(c.PaymentModal, {
         initialPlanId: null,
         analyticsLocations: u,
-        renderHeader: _.L,
+        renderHeader: m.L,
         ...d
       })
     })

@@ -12,12 +12,12 @@ var i = n(735250),
   c = n(884338),
   u = n(100527),
   d = n(906732),
-  h = n(150039),
-  p = n(171368),
-  m = n(271383),
-  _ = n(430824),
-  f = n(594174),
-  E = n(514342),
+  h = n(111028),
+  p = n(150039),
+  m = n(171368),
+  _ = n(271383),
+  f = n(430824),
+  E = n(594174),
   g = n(251625),
   C = n(823379),
   I = n(665149),
@@ -75,13 +75,13 @@ analyticsLocations: a
   }) {
 S(this, 'userId', void 0), S(this, 'user', void 0), S(this, 'channelId', void 0), S(this, 'analyticsLocations', void 0), S(this, 'generateNicknameGuildPairs', (0, g.oH)(e => {
   var t;
-  return l()(m.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId)).toPairs().map(e => {
+  return l()(_.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId)).toPairs().map(e => {
     let [t, n] = e;
     return [
       t,
       n.map(e => {
         var t;
-        return null === (t = _.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
+        return null === (t = f.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
       }).filter(C.lm)
     ];
   }).value();
@@ -98,7 +98,7 @@ S(this, 'userId', void 0), S(this, 'user', void 0), S(this, 'channelId', void 0)
     })
   })
 }, 'more-avatars')), S(this, 'handleClick', () => {
-  (0, p.openUserProfileModal)({
+  (0, m.openUserProfileModal)({
     userId: this.userId,
     channelId: this.channelId,
     sourceAnalyticsLocations: this.analyticsLocations,
@@ -114,14 +114,14 @@ S(this, 'userId', void 0), S(this, 'user', void 0), S(this, 'channelId', void 0)
 function A(e) {
   let {
 channel: t
-  } = e, n = t.getRecipientId(), s = (0, h.gc)(n), l = Array(s.length).fill(null), {
-analyticsLocations: p
-  } = (0, d.ZP)(u.Z.AKA), m = function(e) {
+  } = e, n = t.getRecipientId(), s = (0, p.gc)(n), l = Array(s.length).fill(null), {
+analyticsLocations: m
+  } = (0, d.ZP)(u.Z.AKA), _ = function(e) {
 let {
   userId: t,
   channelId: n,
   analyticsLocations: i
-} = e, s = (0, r.e7)([f.default], () => f.default.getUser(t), [t]), [l] = a.useState(() => new Z({
+} = e, s = (0, r.e7)([E.default], () => E.default.getUser(t), [t]), [l] = a.useState(() => new Z({
   user: s,
   userId: t,
   channelId: n,
@@ -135,13 +135,13 @@ return l.updateData({
 }), l;
   }({
 userId: n,
-analyticsLocations: p,
+analyticsLocations: m,
 channelId: t.id
   });
-  return 0 === m.getNicknameGuildPairs().length && 0 === s.length ? (0, i.jsx)('div', {
+  return 0 === _.getNicknameGuildPairs().length && 0 === s.length ? (0, i.jsx)('div', {
 className: v.spacer
   }) : (0, i.jsxs)(d.Gt, {
-value: p,
+value: m,
 children: [
   (0, i.jsx)(I.iz, {}),
   (0, i.jsx)(o.TextBadge, {
@@ -155,29 +155,29 @@ children: [
     showUserPopout: !1,
     renderUser: (e, t, n) => {
       var a;
-      let l = m.user,
+      let l = _.user,
         r = s[n];
       return null == r || null == l ? null : (0, i.jsx)(o.TooltipContainer, {
-        text: null === (a = _.Z.getGuild(r)) || void 0 === a ? void 0 : a.name,
+        text: null === (a = f.Z.getGuild(r)) || void 0 === a ? void 0 : a.name,
         position: 'bottom',
         children: (0, i.jsx)('img', {
           alt: '',
           className: v.avatar,
-          onClick: m.handleClick,
+          onClick: _.handleClick,
           src: l.getAvatarURL(r, 16),
           'aria-hidden': !0
         })
       }, r[1]);
     },
-    renderMoreUsers: m.renderMoreAvatars,
+    renderMoreUsers: _.renderMoreAvatars,
     guildId: void 0,
     max: 3,
     className: v.avatars
   }) : null,
-  m.getNicknameGuildPairs().length > 0 ? (0, i.jsx)(E.Z, {
+  _.getNicknameGuildPairs().length > 0 ? (0, i.jsx)(h.Z, {
     position: 'bottom',
     className: v.nicknames,
-    children: m.renderNicknamePairs()
+    children: _.renderNicknamePairs()
   }) : null
 ]
   });

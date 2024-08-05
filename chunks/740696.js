@@ -7,9 +7,9 @@ var t = s(735250),
   n = s(470079),
   r = s(442837),
   o = s(481060),
-  _ = s(430824),
-  i = s(496675),
-  c = s(153124),
+  _ = s(313201),
+  i = s(430824),
+  c = s(496675),
   l = s(228392),
   d = s(941848),
   M = s(710352),
@@ -37,7 +37,7 @@ guildId: a,
 shouldUpsellCreation: u,
 transitionState: O,
 onClose: L
-  } = e, x = (0, r.e7)([_.Z], () => _.Z.getGuild(a), [a]), h = (0, r.e7)([i.Z], () => i.Z.can(E.Plq.MANAGE_CHANNELS, x)), R = S(), [A, N] = n.useState(0), U = (0, c.Dt)();
+  } = e, x = (0, r.e7)([i.Z], () => i.Z.getGuild(a), [a]), h = (0, r.e7)([c.Z], () => c.Z.can(E.Plq.MANAGE_CHANNELS, x)), R = S(), [A, N] = n.useState(0), U = (0, _.Dt)();
   return (0, t.jsxs)(o.ModalRoot, {
 transitionState: O,
 'aria-labelledby': U,

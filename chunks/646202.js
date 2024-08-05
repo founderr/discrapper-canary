@@ -13,8 +13,8 @@ var a, l, n = s(735250),
   m = s(481060),
   x = s(442837),
   h = s(607070),
-  p = s(594174),
-  C = s(153124),
+  p = s(313201),
+  C = s(594174),
   N = s(626135),
   j = s(792125),
   v = s(547280),
@@ -351,7 +351,7 @@ data: l
 state: c
   }, o] = (0, m.useSpring)(() => ({
 state: 0
-  }), 'respect-motion-settings', []), C = (0, x.e7)([p.default], () => p.default.getCurrentUser()), N = c.to({
+  }), 'respect-motion-settings', []), p = (0, x.e7)([C.default], () => C.default.getCurrentUser()), N = c.to({
 range: [
   0,
   1
@@ -396,7 +396,7 @@ o({
 o,
 i
   ]);
-  return null == C ? null : (0, n.jsxs)(n.Fragment, {
+  return null == p ? null : (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(u.animated.div, {
     className: y.header,
@@ -450,7 +450,7 @@ children: [
             let a = d().v3(''.concat(e.key).concat(t));
             return a - d().v3(''.concat(s.key).concat(t));
           }), s;
-        }(t.options, C.id).map(e => (0, n.jsx)(b, {
+        }(t.options, p.id).map(e => (0, n.jsx)(b, {
           option: e,
           selectedOption: s,
           setSelectedOption: T
@@ -481,7 +481,7 @@ target: t,
 guildId: s,
 transitionState: a,
 onClose: l
-  } = e, i = (0, C.Dt)(), o = r.useRef({
+  } = e, i = (0, p.Dt)(), o = r.useRef({
 guildId: s
   }), [d, u] = r.useState(null), h = (0, x.e7)([T.Z], () => T.Z.hasCompletedTarget(t.key)) ? 1 : 0;
   r.useEffect(() => {
@@ -504,7 +504,7 @@ t.dismissibleContent,
 o,
 s
   ]);
-  let p = r.useCallback(e => {
+  let C = r.useCallback(e => {
   null != o.current && (o.current.selectedOptionKey = e.key, u(e));
 }, [
   u,
@@ -517,7 +517,7 @@ case 0:
   k = (0, n.jsx)(P, {
     target: t,
     selectedOption: d,
-    handleSetSelectedOption: p,
+    handleSetSelectedOption: C,
     data: o
   });
   break;

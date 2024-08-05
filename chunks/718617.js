@@ -11,8 +11,8 @@ var i = n(735250),
   o = n(481060),
   c = n(110924),
   u = n(714338),
-  d = n(433355),
-  h = n(863840),
+  d = n(237617),
+  h = n(433355),
   p = n(189432),
   m = n(727381),
   _ = n(313692),
@@ -39,9 +39,9 @@ guildId: x,
 onClose: T,
 analyticsLocation: N,
 className: v
-  } = e, S = (0, l.e7)([d.ZP], () => d.ZP.getGuildSidebarState(x), [x]), Z = null !== (t = null == S ? void 0 : S.details.modViewPanel) && void 0 !== t ? t : E.k.INFO, A = (0, c.Z)(I);
+  } = e, S = (0, l.e7)([h.ZP], () => h.ZP.getGuildSidebarState(x), [x]), Z = null !== (t = null == S ? void 0 : S.details.modViewPanel) && void 0 !== t ? t : E.k.INFO, A = (0, c.Z)(I);
   let M = null == (n = Z) ? null : n === E.k.INFO ? 'backwards' : 'forwards',
-b = (0, h.Z)(M),
+b = (0, d.Z)(M),
 {
   reducedMotion: R
 } = a.useContext(r.S),

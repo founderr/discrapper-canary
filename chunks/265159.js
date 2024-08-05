@@ -1,19 +1,19 @@
-s.d(t, {
+n.d(t, {
   Z: function() {
-return r;
+return l;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(981631);
+var r = n(735250);
+n(470079);
+var s = n(481060),
+  i = n(981631);
 
-function r() {
-  (0, a.openModalLazy)(async () => {
+function l() {
+  (0, s.openModalLazy)(async () => {
 let {
   default: e
-} = await s.e('38047').then(s.bind(s, 975863));
-return t => (0, n.jsx)(e, {
+} = await n.e('38047').then(n.bind(n, 975863));
+return t => (0, r.jsx)(e, {
   ...t,
   source: {
     page: i.ZY5.USER_SETTINGS,

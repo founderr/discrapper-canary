@@ -4,8 +4,8 @@ var i, a, s, r, l = n(442837),
   d = n(814443),
   u = n(158776),
   _ = n(594174),
-  E = n(981631);
-let h = !1,
+  h = n(981631);
+let E = !1,
   I = {},
   m = {};
 
@@ -35,7 +35,7 @@ activities: n
   } = e;
   if (null == t)
 return !1;
-  let i = n.filter(e => e.type !== E.IIU.CUSTOM_STATUS);
+  let i = n.filter(e => e.type !== h.IIU.CUSTOM_STATUS);
   if (0 === i.length)
 return p(t.id);
   let a = !1;
@@ -72,7 +72,7 @@ return p(t.id);
 
 function S() {
   let e = !1;
-  if (!d.Z.needsRefresh() && !h) {
+  if (!d.Z.needsRefresh() && !E) {
 let t;
 I = {}, m = {}, t = !1, u.Z.getUserIds().forEach(e => {
   let n = _.default.getUser(e);
@@ -82,7 +82,7 @@ I = {}, m = {}, t = !1, u.Z.getUserIds().forEach(e => {
   }) || t);
 }), e = t;
   }
-  return h = !d.Z.needsRefresh(), e;
+  return E = !d.Z.needsRefresh(), e;
 }
 class f extends(r = l.ZP.Store) {
   initialize() {

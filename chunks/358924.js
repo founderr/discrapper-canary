@@ -7,8 +7,8 @@ var i, a, s = n(735250),
   d = n(692547),
   u = n(481060),
   _ = n(438139),
-  E = n(2052),
-  h = n(726542),
+  h = n(2052),
+  E = n(726542),
   I = n(638880),
   m = n(655922),
   g = n(122810),
@@ -21,19 +21,19 @@ var i, a, s = n(735250),
   A = n(906732),
   v = n(812206),
   Z = n(933557),
-  L = n(925329),
-  O = n(382182),
-  R = n(871118),
-  x = n(707409),
-  b = n(849171),
-  P = n(314897),
-  M = n(592125),
-  D = n(594174),
-  y = n(368874),
-  j = n(446753),
-  U = n(395361),
-  G = n(639351),
-  k = n(368666),
+  L = n(194082),
+  O = n(264165),
+  R = n(630186),
+  x = n(925329),
+  b = n(382182),
+  P = n(871118),
+  M = n(707409),
+  D = n(849171),
+  y = n(314897),
+  j = n(592125),
+  U = n(594174),
+  G = n(395361),
+  k = n(639351),
   w = n(81063),
   B = n(823379),
   H = n(51144),
@@ -98,10 +98,10 @@ renderTimePlayed() {
   } = t;
   return null == n || !(0, p.Z)(t) || (0, T.Z)(t) ? null : Q(e = (0, g.Z)(t) ? (0, s.jsx)(X, {
     timestamps: n
-  }) : (0, s.jsx)(x.ZP, {
+  }) : (0, s.jsx)(M.ZP, {
     start: n.start,
     end: n.end,
-    location: x.ZP.Locations.USER_ACTIVITY,
+    location: M.ZP.Locations.USER_ACTIVITY,
     className: W.__invalid_playTime
   }));
 }
@@ -171,13 +171,13 @@ onContextMenu: a
   } = e;
   switch (n) {
 case 'XBOX':
-  t = (0, s.jsx)(G.Z, {
+  t = (0, s.jsx)(k.Z, {
     className: W.headerIcon,
     color: d.Z.unsafe_rawColors.PRIMARY_300.css
   });
   break;
 case 'SPOTIFY':
-  t = (0, s.jsx)(U.Z, {
+  t = (0, s.jsx)(G.Z, {
     className: W.headerIcon,
     color: d.Z.unsafe_rawColors.SPOTIFY.css
   });
@@ -255,7 +255,7 @@ className: n,
 ...i
   } = e;
   return (0, s.jsx)(u.FocusRing, {
-children: (0, s.jsx)(j.Z, {
+children: (0, s.jsx)(R.Z, {
   className: o()(n, W.wrapper),
   padded: !0,
   ...i,
@@ -267,7 +267,7 @@ en.Header = et, en.Body = e => {
   let {
 children: t
   } = e;
-  return (0, s.jsx)(j.Z, {
+  return (0, s.jsx)(R.Z, {
 inset: !0,
 padded: !1,
 className: W.body,
@@ -292,11 +292,11 @@ onGuildClick: l,
 partySize: c,
 members: d,
 onChannelContextMenu: _
-  } = e, E = r.useRef(null), h = (0, Z.ZP)(a, !0);
+  } = e, h = r.useRef(null), E = (0, Z.ZP)(a, !0);
   return (0, s.jsx)(J, {
 children: (0, s.jsxs)('div', {
   className: W.voiceSection,
-  ref: E,
+  ref: h,
   onContextMenu: e => _(e, a),
   children: [
     (0, s.jsx)(u.Clickable, {
@@ -334,13 +334,13 @@ children: (0, s.jsxs)('div', {
     (0, s.jsx)(u.Clickable, {
       onClick: l,
       focusProps: {
-        ringTarget: E
+        ringTarget: h
       },
       children: (0, s.jsxs)('div', {
         className: W.voiceSectionDetails,
         children: [
           q(i.toString(), W.voiceSectionText),
-          Q(h, W.voiceSectionText)
+          Q(E, W.voiceSectionText)
         ]
       })
     }),
@@ -391,7 +391,7 @@ title: t
 children: (0, s.jsxs)('div', {
   className: W.xboxSection,
   children: [
-    (0, s.jsx)(G.Z, {
+    (0, s.jsx)(k.Z, {
       className: W.xboxSectionIcon
     }),
     (0, s.jsxs)('div', {
@@ -435,7 +435,7 @@ children: (0, s.jsxs)('div', {
             [W.largeImageMask]: null != n.small_image
           })
         }),
-        u ? null : (0, s.jsx)(U.Z, {
+        u ? null : (0, s.jsx)(G.Z, {
           className: W.smallImage,
           color: d.Z.unsafe_rawColors.SPOTIFY.css
         })
@@ -466,11 +466,11 @@ children: (0, s.jsxs)('div', {
   name: c,
   details: d,
   assets: _,
-  application_id: E
+  application_id: h
 } = i;
   if (null != _ && (0, S.Z)(i)) {
 var I;
-t = (0, s.jsx)(y.Z, {
+t = (0, s.jsx)(O.Z, {
   className: W.twitchSectionPreviewWrapper,
   aspectRatio: 16 / 9,
   children: (0, s.jsxs)(u.Clickable, {
@@ -480,7 +480,7 @@ t = (0, s.jsx)(y.Z, {
     children: [
       (0, s.jsx)('img', {
         alt: null !== (I = _.large_text) && void 0 !== I ? I : '',
-        src: r(E, _.large_image, [
+        src: r(h, _.large_image, [
           900,
           500
         ]),
@@ -505,7 +505,7 @@ children: [
     children: [
       (0, s.jsx)('img', {
         alt: '',
-        src: h.Z.get(F.ABu.TWITCH).icon.lightSVG,
+        src: E.Z.get(F.ABu.TWITCH).icon.lightSVG,
         className: W.twitchSectionIcon
       }),
       (0, s.jsxs)('div', {
@@ -533,11 +533,11 @@ user: a,
 applicationStream: r,
 onPreviewClick: l,
 guildId: o
-  } = e, d = (0, c.e7)([M.Z], () => M.Z.getChannel(r.channelId)), [_, E] = (0, O.wq)(d), h = (0, s.jsxs)(u.Clickable, {
+  } = e, d = (0, c.e7)([j.Z], () => j.Z.getChannel(r.channelId)), [_, h] = (0, b.wq)(d), E = (0, s.jsxs)(u.Clickable, {
 onClick: _ ? l : void 0,
 className: W.applicationStreamingPreviewWrapper,
 children: [
-  (0, s.jsx)(R.Z, {
+  (0, s.jsx)(P.Z, {
     stream: r,
     className: W.applicationStreamingPreviewSize
   }),
@@ -545,7 +545,7 @@ children: [
     className: W.applicationStreamingHoverWrapper,
     children: (0, s.jsx)('div', {
       className: W.applicationStreamingHoverText,
-      children: (0, O.P9)(E)
+      children: (0, b.P9)(h)
     })
   })
 ]
@@ -567,12 +567,12 @@ children: [
           Q(I)
         ]
       }),
-      (0, s.jsx)(k.ZP, {
-        size: k.ZP.Sizes.SMALL
+      (0, s.jsx)(L.ZP, {
+        size: L.ZP.Sizes.SMALL
       })
     ]
   }),
-  h
+  E
 ]
   });
 }, en.EmbeddedActivitySection = e => {
@@ -589,11 +589,11 @@ if (null != _)
     return d(t);
   });
   }, [_]);
-  let h = (0, c.Wu)([
-  D.default,
-  P.default
-], () => Array.from(a).map(e => P.default.getId() === e ? null : D.default.getUser(e)).filter(B.lm)),
-m = (0, E.O)(),
+  let E = (0, c.Wu)([
+  U.default,
+  y.default
+], () => Array.from(a).map(e => y.default.getId() === e ? null : U.default.getUser(e)).filter(B.lm)),
+m = (0, h.O)(),
 {
   analyticsLocations: g
 } = (0, A.ZP)();
@@ -611,9 +611,9 @@ children: [
   (0, s.jsxs)('div', {
     className: W.embeddedActivityTopRow,
     children: [
-      (0, s.jsx)(L.Z, {
+      (0, s.jsx)(x.Z, {
         game: p,
-        size: L.Z.Sizes.XSMALL,
+        size: x.Z.Sizes.XSMALL,
         className: W.embeddedActivityIcon
       }),
       (0, s.jsx)('div', {
@@ -646,8 +646,8 @@ children: [
       (0, s.jsxs)('div', {
         className: W.embeddedActivityImageOverlay,
         children: [
-          (0, s.jsx)(b.OV, {
-            users: h,
+          (0, s.jsx)(D.OV, {
+            users: E,
             guildId: i,
             channelId: n.id
           }),

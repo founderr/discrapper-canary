@@ -20,16 +20,16 @@ var i, a = n(735250),
   T = n(168551),
   N = n(597952),
   v = n(628123),
-  S = n(151851),
-  Z = n(587061),
-  A = n(392358),
-  M = n(892254),
-  b = n(706454),
-  R = n(210887),
-  j = n(740492),
-  L = n(451478),
-  P = n(153850),
-  O = n(806519),
+  S = n(686546),
+  Z = n(151851),
+  A = n(587061),
+  M = n(392358),
+  b = n(314910),
+  R = n(892254),
+  j = n(706454),
+  L = n(210887),
+  P = n(740492),
+  O = n(451478),
   y = n(358085),
   D = n(792125),
   k = n(998502),
@@ -139,7 +139,7 @@ let {
   guestWindow: C,
   clientThemesClassName: I,
   contentClassName: x
-} = this.props, T = (0, y.getPlatform)(), Z = r()(h, {
+} = this.props, T = (0, y.getPlatform)(), A = r()(h, {
   'mouse-mode': o,
   'reduce-motion': d,
   'full-motion': !d,
@@ -148,29 +148,29 @@ let {
   'low-saturation': f <= 0.4
 });
 return (0, a.jsx)(u.VK, {
-  children: (0, a.jsx)(M.Z, {
+  children: (0, a.jsx)(R.Z, {
     children: (0, a.jsx)(p.ThemeContextProvider, {
       theme: e,
       children: (0, a.jsx)(p.RedesignIconContextProvider, {
         children: (0, a.jsx)('div', {
           'data-popout-root': !0,
           ref: this.rootRef,
-          className: r()((0, D.Q)(e), (0, N.Z)(), Z, I),
+          className: r()((0, D.Q)(e), (0, N.Z)(), A, I),
           children: (0, a.jsx)(p.FocusRingScope, {
             containerRef: this.rootRef,
             children: (0, a.jsx)(E.Z, {
               children: (0, a.jsxs)(v.Z, {
                 children: [
-                  (0, a.jsx)(O.Co, {}),
+                  (0, a.jsx)(S.Co, {}),
                   (0, a.jsx)(_.Wu, {
                     appContext: B.IlC.POPOUT,
                     renderWindow: C,
-                    children: (0, a.jsxs)(P.yP, {
+                    children: (0, a.jsxs)(b.yP, {
                       children: [
                         (0, a.jsxs)('div', {
                           className: G.popout,
                           children: [
-                            g && null != T ? (0, a.jsx)(S.Z, {
+                            g && null != T ? (0, a.jsx)(Z.Z, {
                               focused: n,
                               type: T,
                               windowKey: l,
@@ -184,7 +184,7 @@ return (0, a.jsx)(u.VK, {
                         }),
                         (0, a.jsx)(p.Modals, {}),
                         (0, a.jsx)(m.Z, {}),
-                        (0, a.jsx)(P.Un, {})
+                        (0, a.jsx)(b.Un, {})
                       ]
                     })
                   })
@@ -200,7 +200,7 @@ return (0, a.jsx)(u.VK, {
   }
   constructor(...e) {
 super(...e), V(this, 'rootRef', s.createRef()), V(this, '_cleanupWindowActionCreators', void 0), V(this, 'warnPopoutClose', e => {
-  if (this.props.connectedToEmbeddedActivity && !j.ZP.disableEmbeddedActivityPopOutAlert) {
+  if (this.props.connectedToEmbeddedActivity && !P.ZP.disableEmbeddedActivityPopOutAlert) {
     if (e.returnValue = H.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, !!y.isPlatformEmbedded)
       (0, C.Z)(() => {
         w.Z.unmountWindow(this.props.windowKey), y.isPlatformEmbedded && k.ZP.close(this.props.windowKey);
@@ -226,16 +226,16 @@ guestWindow: w.Z.getWindow(e.windowKey),
 focused: w.Z.getWindowFocused(e.windowKey)
   }));
   c()(null != n, 'Missing guestWindow reference');
-  let s = (0, h.e7)([L.Z], () => L.Z.isFocused()),
+  let s = (0, h.e7)([O.Z], () => O.Z.isFocused()),
 {
   locale: l,
   theme: r
 } = (0, h.cj)([
-  R.Z,
-  b.default
+  L.Z,
+  j.default
 ], () => ({
-  locale: b.default.locale,
-  theme: R.Z.theme
+  locale: j.default.locale,
+  theme: L.Z.theme
 })),
 o = (0, h.e7)([f.Z], () => f.Z.useForcedColors ? 'yes' : 'no'),
 {
@@ -256,18 +256,18 @@ o = (0, h.e7)([f.Z], () => f.Z.useForcedColors ? 'yes' : 'no'),
   useForcedColors: f.Z.useForcedColors
 })),
 v = (0, h.e7)([g.ZP], () => null != e.channelId && null !== g.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
-  (0, Z.Z)(n, !1);
-  let S = (0, A.Z)(n, i),
+  (0, A.Z)(n, !1);
+  let S = (0, M.Z)(n, i),
 {
-  analyticsLocations: M
+  analyticsLocations: Z
 } = (0, x.ZP)(I.Z.POPOUT_WINDOW),
 {
-  clientThemesClassName: j,
-  clientThemesCSS: P
+  clientThemesClassName: b,
+  clientThemesCSS: R
 } = (0, T.ZP)();
   return null == n ? null : (0, a.jsx)(p.DnDProvider, {
 children: (0, a.jsx)(x.Gt, {
-  value: M,
+  value: Z,
   children: (0, a.jsx)(F, {
     ref: t,
     ...e,
@@ -286,8 +286,8 @@ children: (0, a.jsx)(x.Gt, {
     connectedToEmbeddedActivity: v,
     fontScaleClass: _,
     saturation: E,
-    clientThemesClassName: j,
-    clientThemesCSS: P
+    clientThemesClassName: b,
+    clientThemesCSS: R
   })
 })
   });

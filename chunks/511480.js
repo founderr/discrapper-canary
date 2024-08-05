@@ -21,15 +21,15 @@ var s = n(735250),
   S = n(816817),
   h = n(339085),
   g = n(231053),
-  C = n(134432),
-  x = n(813197),
-  p = n(208567),
-  R = n(183023),
-  f = n(984933),
-  L = n(496675),
-  O = n(699516),
-  A = n(594174),
-  M = n(987134),
+  C = n(285888),
+  x = n(134432),
+  p = n(813197),
+  R = n(208567),
+  f = n(183023),
+  L = n(984933),
+  O = n(496675),
+  A = n(699516),
+  M = n(594174),
   D = n(768581),
   v = n(900849),
   j = n(434404),
@@ -183,7 +183,7 @@ if (null != e)
                 color: l.Button.Colors.PRIMARY,
                 children: [
                   F.Z.Messages.UPLOAD_BACKGROUND,
-                  (0, s.jsx)(x.ZP, {
+                  (0, s.jsx)(p.ZP, {
                     disabled: !n,
                     onChange: this.handleSplashChange
                   })
@@ -193,12 +193,12 @@ if (null != e)
           }),
           (0, s.jsx)('div', {
             className: w.imageUploaderWrapper,
-            children: (0, s.jsx)(p.Z, {
+            children: (0, s.jsx)(R.Z, {
               image: e.discoverySplash,
               makeURL: t => D.ZP.getGuildDiscoverySplashURL({
                 id: e.id,
                 splash: t,
-                size: 512 * (0, C.x_)()
+                size: 512 * (0, x.x_)()
               }),
               disabled: !n,
               onChange: this.handleSplashChange,
@@ -271,7 +271,7 @@ return (0, s.jsxs)(l.FormSection, {
         })
       ]
     }),
-    null != d && d.isDiscoverable() && (0, s.jsx)(R.UA, {
+    null != d && d.isDiscoverable() && (0, s.jsx)(f.UA, {
       sourceType: g.w6.GUILD,
       expressionSourceApplication: null,
       expressionSourceGuild: d,
@@ -342,7 +342,7 @@ if (null != i)
           })
         ]
       }),
-      (0, s.jsx)(M.Z, {
+      (0, s.jsx)(C.Z, {
         value: t.primaryCategoryId === y.o3 ? null : t.primaryCategoryId,
         placeholder: F.Z.Messages.SELECT,
         options: n,
@@ -551,26 +551,26 @@ super(...e), k(this, 'state', {
 }
 t.Z = r.ZP.connectStores([
   Z.Z,
-  L.Z,
+  O.Z,
   I.ZP,
-  f.ZP,
+  L.ZP,
   N.Z,
-  A.default,
-  O.Z
+  M.default,
+  A.Z
 ], () => {
   let {
 guild: e,
 errors: t,
 submitting: n,
 guildMetadata: s
-  } = Z.Z.getProps(), a = L.Z.can(B.Plq.MANAGE_GUILD, e), i = L.Z.can(B.Plq.ADMINISTRATOR, e), r = null != e ? I.ZP.getDiscoveryChecklist(e.id) : null, l = null != e ? f.ZP.getChannels(e.id) : null, o = [];
-  null != l && l[f.sH].forEach(e => {
+  } = Z.Z.getProps(), a = O.Z.can(B.Plq.MANAGE_GUILD, e), i = O.Z.can(B.Plq.ADMINISTRATOR, e), r = null != e ? I.ZP.getDiscoveryChecklist(e.id) : null, l = null != e ? L.ZP.getChannels(e.id) : null, o = [];
+  null != l && l[L.sH].forEach(e => {
 let {
   channel: t
 } = e;
 t.type === B.d4z.GUILD_TEXT && o.push({
   value: t.id,
-  label: (0, d.F6)(t, A.default, O.Z, !0)
+  label: (0, d.F6)(t, M.default, A.Z, !0)
 });
   });
   let c = N.Z.getPrimaryCategories().map(e => {

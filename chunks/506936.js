@@ -9,10 +9,10 @@ var a = n(442837),
   s = n(481060),
   o = n(893776),
   c = n(391650),
-  u = n(144114),
-  d = n(607744),
-  h = n(594174),
-  p = n(153124),
+  u = n(313201),
+  d = n(144114),
+  h = n(607744),
+  p = n(594174),
   _ = n(981631),
   f = n(815660),
   m = n(689938),
@@ -23,13 +23,13 @@ t.Z = e => {
 type: t,
 guildId: i,
 closePopout: l
-  } = e, C = (0, p.Dt)(), {
+  } = e, C = (0, u.Dt)(), {
 notClaimed: I,
 notEmailVerified: E,
 notPhoneVerified: N,
 newAccount: x,
 newMember: S
-  } = (0, a.e7)([d.Z], () => d.Z.getCheck(i), [i]), v = 0 === t ? m.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null, Z = null, T = null;
+  } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]), v = 0 === t ? m.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null, Z = null, T = null;
   return (0 === t && (I ? (Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED, T = m.Z.Messages.CLAIM_ACCOUNT) : N ? (Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED, T = m.Z.Messages.VERIFY_PHONE) : E ? (Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED, T = m.Z.Messages.RESEND_VERIFICATION_EMAIL) : S ? (Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({
 min: _.YeM.MEMBER_AGE
   }), T = m.Z.Messages.OKAY) : x && (Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({
@@ -69,7 +69,7 @@ children: [
                   n.e('52443')
                 ]).then(n.bind(n, 607018));
                 return t => (0, r.jsx)(e, {
-                  reason: u.L.GUILD_PHONE_REQUIRED,
+                  reason: d.L.GUILD_PHONE_REQUIRED,
                   ...t
                 });
               }, {
@@ -84,7 +84,7 @@ children: [
                   children: (0, r.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     children: m.Z.Messages.VERIFICATION_EMAIL_BODY.format({
-                      email: null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.email
+                      email: null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.email
                     })
                   })
                 });

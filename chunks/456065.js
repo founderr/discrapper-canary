@@ -6,17 +6,17 @@ var i, a, s, r, l = n(442837),
   u = n(981631);
 let _ = !1;
 
-function E(e) {
+function h(e) {
   let t = d.Z.getGuild(e);
   return !!(null != t && t.hasFeature(u.oNc.HUB)) && (_ = !0, !0);
 }
 
-function h() {
+function E() {
   return !0;
 }
 class I extends(i = l.ZP.Store) {
   initialize() {
-this.waitFor(d.Z, c.Z), this.syncWith([c.Z], h);
+this.waitFor(d.Z, c.Z), this.syncWith([c.Z], E);
   }
   channelNoticePredicate(e) {
 return !!e.hasFeature(u.oNc.LINKED_TO_HUB) && !_ && !0;
@@ -30,7 +30,7 @@ r = 'HubLinkNoticeStore', (s = 'displayName') in(a = I) ? Object.defineProperty(
 }) : a[s] = r, t.Z = new I(o.Z, {
   CONNECTION_OPEN: function(e) {
 for (let t of e.guilds)
-  if (E(t.id))
+  if (h(t.id))
     return !0;
 return !1;
   },
@@ -38,6 +38,6 @@ return !1;
 let {
   guild: t
 } = e;
-return E(t.id);
+return h(t.id);
   }
 });

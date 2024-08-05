@@ -18,13 +18,13 @@ var i = n(735250),
   _ = n(933557),
   f = n(605436),
   E = n(185413),
-  g = n(434404),
-  C = n(454585),
-  I = n(430824),
-  x = n(496675),
-  T = n(594174),
-  N = n(183156),
-  v = n(52736),
+  g = n(42311),
+  C = n(626786),
+  I = n(434404),
+  x = n(454585),
+  T = n(430824),
+  N = n(496675),
+  v = n(594174),
   S = n(700785),
   Z = n(51144),
   A = n(396769),
@@ -37,12 +37,12 @@ var i = n(735250),
 function P(e) {
   let {
 channel: t
-  } = e, [n, s] = a.useState(!1), r = (0, _.ZP)(t, !0), P = t.guild_id, O = (0, d.e7)([I.Z], () => null != P ? I.Z.getRoles(P) : void 0), y = (0, d.e7)([
-T.default,
-I.Z
+  } = e, [n, s] = a.useState(!1), r = (0, _.ZP)(t, !0), P = t.guild_id, O = (0, d.e7)([T.Z], () => null != P ? T.Z.getRoles(P) : void 0), y = (0, d.e7)([
+v.default,
+T.Z
   ], () => {
 var e;
-return T.default.getUser(null === (e = I.Z.getGuild(P)) || void 0 === e ? void 0 : e.ownerId);
+return v.default.getUser(null === (e = T.Z.getGuild(P)) || void 0 === e ? void 0 : e.ownerId);
   }), D = a.useMemo(() => null != P ? o()(O).sortBy(e => -e.position).filter(e => !(0, f.pM)(P, e.id)).value() : [], [
 P,
 O
@@ -60,12 +60,12 @@ return c.e$(n, R.Plq.ADMINISTRATOR) || c.e$(n, R.Plq.VIEW_CHANNEL);
 t,
 P,
 D
-  ]), U = (0, d.Wu)([T.default], () => {
+  ]), U = (0, d.Wu)([v.default], () => {
 let e = {};
 for (let n of (null != y && (e[y.id] = y), Object.values(t.permissionOverwrites))) {
   if (n.type !== m.BN.MEMBER || null != e[n.id])
     continue;
-  let t = T.default.getUser(n.id);
+  let t = v.default.getUser(n.id);
   null != t && (e[t.id] = t);
 }
 return o()(e).filter(e => {
@@ -82,7 +82,7 @@ return o()(e).filter(e => {
   }, [
 t,
 y
-  ]), w = x.Z.can(R.Plq.MANAGE_CHANNELS, t) || x.Z.can(R.Plq.MANAGE_ROLES, t);
+  ]), w = N.Z.can(R.Plq.MANAGE_CHANNELS, t) || N.Z.can(R.Plq.MANAGE_ROLES, t);
 
   function B() {
 p.ZP.open(t.id);
@@ -103,7 +103,7 @@ children: [
   (0, i.jsx)(M.jz, {
     children: j.Z.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
       channelName: r,
-      topicHook: () => C.Z.parseTopic(t.topic, !0, {
+      topicHook: () => x.Z.parseTopic(t.topic, !0, {
         channelId: t.id
       })
     })
@@ -170,7 +170,7 @@ children: [
         var a, s;
         let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, u.Rf)(R.p6O),
           o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
-        return w ? (0, i.jsx)(N.Z, {
+        return w ? (0, i.jsx)(g.Z, {
           className: l()(L.role, {
             [L.last]: n === k.length - 1
           }),
@@ -179,9 +179,9 @@ children: [
           disabled: !w,
           verified: o,
           onClick: () => {
-            g.Z.open(t.guild_id, R.pNK.MEMBERS), g.Z.selectRole(e.id);
+            I.Z.open(t.guild_id, R.pNK.MEMBERS), I.Z.selectRole(e.id);
           }
-        }, e.id) : (0, i.jsx)(v.Z, {
+        }, e.id) : (0, i.jsx)(C.Z, {
           className: l()(L.role, {
             [L.last]: n === k.length - 1
           }),

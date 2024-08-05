@@ -8,9 +8,9 @@ var o = n(735250),
   l = n(442837),
   a = n(481060),
   i = n(933557),
-  r = n(592125),
-  c = n(285952),
-  d = n(153124),
+  r = n(600164),
+  c = n(313201),
+  d = n(592125),
   u = n(853856),
   h = n(117984),
   x = n(689938),
@@ -24,7 +24,7 @@ transitionState: p,
 heading: C,
 formTitle: N,
 allowReset: f = !1
-  } = e, j = (0, d.Dt)(), k = (0, l.e7)([r.Z], () => r.Z.getChannel(t)), E = (0, i.ZP)(k), I = u.Z.getNickname(t), [M, b] = s.useState(null != I ? I : '');
+  } = e, j = (0, c.Dt)(), k = (0, l.e7)([d.Z], () => d.Z.getChannel(t)), E = (0, i.ZP)(k), I = u.Z.getNickname(t), [M, b] = s.useState(null != I ? I : '');
   return (0, o.jsx)('form', {
 onSubmit: function(e) {
   e.preventDefault(), (0, h.UT)(t, M), n();
@@ -35,7 +35,7 @@ children: (0, o.jsxs)(a.ModalRoot, {
   children: [
     (0, o.jsxs)(a.ModalHeader, {
       separator: !0,
-      justify: c.Z.Justify.BETWEEN,
+      justify: r.Z.Justify.BETWEEN,
       children: [
         (0, o.jsx)(a.Heading, {
           id: j,

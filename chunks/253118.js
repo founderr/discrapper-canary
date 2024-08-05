@@ -7,8 +7,8 @@ var i = n(735250);
 n(470079);
 var s = n(481060),
   a = n(904245),
-  r = n(702346),
-  l = n(739566),
+  r = n(739566),
+  l = n(834129),
   o = n(689938);
 
 function c(e) {
@@ -17,7 +17,7 @@ message: t,
 usernameHook: c,
 onClickPins: u,
 compact: d
-  } = e, _ = (0, l.ZP)(t), E = _.nick, I = c(_), m = () => {
+  } = e, _ = (0, r.ZP)(t), E = _.nick, I = c(_), m = () => {
 if (null == t.messageReference)
   return;
 let {
@@ -37,7 +37,7 @@ iconNode: (0, i.jsx)(s.PinIcon, {
   } : {
 icon: n(879066)
   };
-  return (0, i.jsx)(r.Z, {
+  return (0, i.jsx)(l.Z, {
 ...T,
 timestamp: t.timestamp,
 compact: d,

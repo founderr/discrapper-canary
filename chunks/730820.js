@@ -14,14 +14,14 @@ var n = s(735250),
   _ = s(23645),
   E = s(712364),
   u = s(279837),
-  T = s(144114),
-  I = s(921801),
-  S = s(607018),
-  N = s(778764),
-  C = s(314897),
-  m = s(325067),
-  A = s(594174),
-  g = s(285952),
+  T = s(600164),
+  I = s(144114),
+  S = s(921801),
+  N = s(607018),
+  C = s(778764),
+  m = s(314897),
+  A = s(325067),
+  g = s(594174),
   h = s(572004),
   O = s(287880),
   p = s(714565),
@@ -103,7 +103,7 @@ if (r || o) {
   });
 }
 if (o)
-  e = (0, n.jsx)(g.Z, {
+  e = (0, n.jsx)(T.Z, {
     className: r ? '' : L.marginTop8,
     children: (0, n.jsx)(l.Button, {
       color: l.Button.Colors.RED,
@@ -116,7 +116,7 @@ if (o)
   });
 else {
   let t = (0, p.c)(a);
-  e = (0, n.jsxs)(g.Z, {
+  e = (0, n.jsxs)(T.Z, {
     className: r ? '' : L.marginTop8,
     children: [
       (0, n.jsx)(l.Button, {
@@ -136,7 +136,7 @@ else {
     ]
   });
 }
-return (0, n.jsx)(I.F, {
+return (0, n.jsx)(S.F, {
   setting: x.s6.ACCOUNT_SMS_BACKUP,
   children: (0, n.jsxs)(l.FormSection, {
     className: L.marginTop40,
@@ -156,7 +156,7 @@ return (0, n.jsx)(I.F, {
 let e;
 let {
   backupCodes: t
-} = this.props, s = (0, n.jsx)(I.F, {
+} = this.props, s = (0, n.jsx)(S.F, {
   setting: x.s6.ACCOUNT_VIEW_BACKUP_CODES,
   children: (0, n.jsx)(l.Button, {
     onClick: this.sendMFABackupCodesVerificationKeyEmail,
@@ -185,15 +185,15 @@ if (t.length > 0) {
         className: L.marginBottom20,
         children: D.Z.Messages.TWO_FA_BACKUP_CODES_BODY.format()
       }),
-      (0, n.jsxs)(g.Z, {
+      (0, n.jsxs)(T.Z, {
         children: [
-          (0, n.jsx)(g.Z.Child, {
+          (0, n.jsx)(T.Z.Child, {
             children: (0, n.jsx)('ul', {
               className: P.checkboxGroup,
               children: a(t.slice(0, t.length / 2))
             })
           }),
-          (0, n.jsx)(g.Z.Child, {
+          (0, n.jsx)(T.Z.Child, {
             children: (0, n.jsx)('ul', {
               className: P.checkboxGroup,
               children: a(t.slice(t.length / 2))
@@ -225,19 +225,19 @@ return (0, n.jsxs)(l.FormSection, {
       className: L.marginBottom20,
       children: D.Z.Messages.TWO_FA_DESCRIPTION
     }),
-    (0, n.jsxs)(g.Z, {
-      justify: g.Z.Justify.START,
+    (0, n.jsxs)(T.Z, {
+      justify: T.Z.Justify.START,
       className: L.marginBottom20,
       children: [
-        (0, n.jsx)(g.Z.Child, {
+        (0, n.jsx)(T.Z.Child, {
           wrap: !0,
           grow: 0,
           children: s
         }),
-        (0, n.jsxs)(g.Z.Child, {
+        (0, n.jsxs)(T.Z.Child, {
           wrap: !0,
           children: [
-            (0, n.jsx)(I.F, {
+            (0, n.jsx)(S.F, {
               setting: x.s6.ACCOUNT_REMOVE_2FA,
               children: (0, n.jsx)(l.Button, {
                 onClick: this.handleDisableMFA,
@@ -247,7 +247,7 @@ return (0, n.jsxs)(l.FormSection, {
                 children: D.Z.Messages.TWO_FA_REMOVE
               })
             }),
-            (0, n.jsx)(I.F, {
+            (0, n.jsx)(S.F, {
               setting: x.s6.ACCOUNT_ENABLE_2FA,
               children: (0, n.jsx)(l.Button, {
                 onClick: R.ZP.enableMFA,
@@ -261,9 +261,9 @@ return (0, n.jsxs)(l.FormSection, {
     }),
     e,
     this.renderMFASMS(),
-    (0, n.jsx)(I.F, {
+    (0, n.jsx)(S.F, {
       setting: x.s6.ACCOUNT_SECURITY_KEYS,
-      children: (0, n.jsx)(N.Z, {})
+      children: (0, n.jsx)(C.Z, {})
     })
   ]
 });
@@ -284,7 +284,7 @@ return (0, n.jsxs)(l.FormSection, {
         children: D.Z.Messages.TWO_FA_ENABLE
       })
     }),
-    (0, n.jsx)(N.Z, {})
+    (0, n.jsx)(C.Z, {})
   ]
 });
   }
@@ -308,8 +308,8 @@ return O.uZ ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisa
   }
   openPhoneVerificationModal() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-(0, l.openModal)(t => (0, n.jsx)(S.default, {
-  reason: T.L.USER_SETTINGS_UPDATE,
+(0, l.openModal)(t => (0, n.jsx)(N.default, {
+  reason: I.L.USER_SETTINGS_UPDATE,
   ...t,
   ...e
 }), {
@@ -332,7 +332,7 @@ super(...e), b(this, 'state', {
     onConfirm: () => c.Z.disable()
   });
 }), b(this, 'generateBackupCodes', async () => {
-  let e = m.Z.getVerificationKey();
+  let e = A.Z.getVerificationKey();
   await c.Z.confirmViewBackupCodes(e, !0);
 }), b(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
   (0, l.openModal)(e => (0, n.jsx)(u.default, {
@@ -396,14 +396,14 @@ super(...e), b(this, 'state', {
 }
 
 function j(e) {
-  let t = (0, o.e7)([A.default], () => A.default.getCurrentUser());
+  let t = (0, o.e7)([g.default], () => g.default.getCurrentUser());
   r()(null != t, 'TwoFactorAuth: currentUser cannot be undefined');
   let s = (0, o.cj)([
-m.Z,
-C.default
+A.Z,
+m.default
   ], () => ({
-togglingSMS: m.Z.togglingSMS,
-hasTOTPEnabled: C.default.hasTOTPEnabled()
+togglingSMS: A.Z.togglingSMS,
+hasTOTPEnabled: m.default.hasTOTPEnabled()
   }));
   return (0, n.jsx)(v, {
 currentUser: t,

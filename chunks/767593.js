@@ -6,15 +6,15 @@ var o = t(735250),
   s = t(442837),
   l = t(607070),
   c = t(963202),
-  u = t(863249),
-  d = t(944163),
-  m = t(246364),
-  f = t(983736),
-  p = t(937111),
-  h = t(200305),
-  _ = t(271383),
-  x = t(594174),
-  b = t(153124),
+  u = t(313201),
+  d = t(863249),
+  m = t(944163),
+  f = t(246364),
+  p = t(983736),
+  h = t(937111),
+  _ = t(200305),
+  x = t(271383),
+  b = t(594174),
   C = t(231467),
   I = t(981631),
   N = t(308083),
@@ -165,7 +165,7 @@ children: [
     color: 'header-secondary',
     children: E.Z.Messages.CLAN_DISCOVERY_PROFILE_SUBTITLE
   }),
-  (0, o.jsx)(h.Y, {
+  (0, o.jsx)(_.Y, {
     guildId: n,
     formState: t,
     updateFormState: r
@@ -174,33 +174,33 @@ children: [
   });
 }
 n.default = function(e) {
-  var n, t, h, R;
+  var n, t, _, R;
   let {
 clan: y,
 prioritizedGameIds: F,
 transitionState: B,
 onClose: S
-  } = e, A = (0, b.Dt)(), M = (0, s.e7)([d.Z], () => d.Z.get(y.id)), [O, P] = r.useState(null !== (h = null == M ? void 0 : M.formFields) && void 0 !== h ? h : []), k = (0, s.e7)([x.default], () => x.default.getCurrentUser()), q = (0, s.e7)([_.ZP], () => _.ZP.isMember(y.id, null == k ? void 0 : k.id), [
+  } = e, A = (0, u.Dt)(), M = (0, s.e7)([m.Z], () => m.Z.get(y.id)), [O, P] = r.useState(null !== (_ = null == M ? void 0 : M.formFields) && void 0 !== _ ? _ : []), k = (0, s.e7)([b.default], () => b.default.getCurrentUser()), q = (0, s.e7)([x.ZP], () => x.ZP.isMember(y.id, null == k ? void 0 : k.id), [
 y,
 k
-  ]), L = (0, s.e7)([p.Z], () => {
+  ]), L = (0, s.e7)([h.Z], () => {
 var e;
-return (null === (e = p.Z.getRequest(y.id)) || void 0 === e ? void 0 : e.applicationStatus) === m.wB.SUBMITTED;
+return (null === (e = h.Z.getRequest(y.id)) || void 0 === e ? void 0 : e.applicationStatus) === f.wB.SUBMITTED;
   }), D = null == k ? void 0 : k.verified, Z = null == k ? void 0 : k.isPhoneVerified(), [w, H] = r.useState(''), {
 enableApplication: V
   } = (0, c.Fg)('discovery');
   r.useEffect(() => {
-u.Z.fetchVerificationForm(y.id);
+d.Z.fetchVerificationForm(y.id);
   }, [y.id]), r.useEffect(() => {
 null != M && P(M.formFields);
   }, [M]);
   let Y = r.useCallback(async e => {
-  await u.Z.submitVerificationForm(y.id, e);
+  await d.Z.submitVerificationForm(y.id, e);
 }, [y.id]),
 U = r.useCallback(async () => {
   try {
     await Y({
-      ...null != M ? M : d.t,
+      ...null != M ? M : m.t,
       formFields: O
     }), S();
   } catch (e) {
@@ -212,7 +212,7 @@ U = r.useCallback(async () => {
   M,
   O
 ]),
-z = !((null == M ? void 0 : null === (n = M.guild) || void 0 === n ? void 0 : n.verification_level) === I.sFg.VERY_HIGH ? Z : D || Z) || O.some(e => !(0, f.OA)(e)),
+z = !((null == M ? void 0 : null === (n = M.guild) || void 0 === n ? void 0 : n.verification_level) === I.sFg.VERY_HIGH ? Z : D || Z) || O.some(e => !(0, p.OA)(e)),
 G = (null !== (R = null == M ? void 0 : null === (t = M.guild) || void 0 === t ? void 0 : t.approximate_member_count) && void 0 !== R ? R : 0) >= N.Du,
 K = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
 Q = (0, i.useSpring)({

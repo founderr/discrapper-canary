@@ -11,9 +11,9 @@ var n = s(735250),
   l = s(780384),
   c = s(481060),
   d = s(846027),
-  _ = s(921801),
-  E = s(131951),
-  u = s(285952),
+  _ = s(600164),
+  E = s(921801),
+  u = s(131951),
   T = s(210887),
   I = s(996073),
   S = s(526761),
@@ -26,10 +26,10 @@ let A = s(651714),
 function h() {
   let {
 experimentalEncoders: e
-  } = (0, o.cj)([E.Z], () => ({
-experimentalEncoders: E.Z.getExperimentalEncoders()
+  } = (0, o.cj)([u.Z], () => ({
+experimentalEncoders: u.Z.getExperimentalEncoders()
   }));
-  return (0, n.jsx)(_.F, {
+  return (0, n.jsx)(E.F, {
 setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
 children: (0, n.jsx)(c.FormSwitch, {
   className: r()(m.marginTop8, m.marginBottom20),
@@ -46,14 +46,14 @@ function O() {
 {
   openH264: t,
   hardwareEncoding: s
-} = (0, o.cj)([E.Z], () => ({
-  openH264: E.Z.getOpenH264(),
-  hardwareEncoding: E.Z.getHardwareEncoding()
+} = (0, o.cj)([u.Z], () => ({
+  openH264: u.Z.getOpenH264(),
+  hardwareEncoding: u.Z.getHardwareEncoding()
 })),
 i = a.useRef(null);
   return (0, I.Z)(i, S.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, n.jsxs)(n.Fragment, {
 children: [
-  (0, n.jsx)(_.F, {
+  (0, n.jsx)(E.F, {
     setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_AUDIO,
     children: (0, n.jsx)(c.FormSection, {
       className: m.marginBottom20,
@@ -66,18 +66,18 @@ children: [
           width: 70,
           height: 40
         },
-        align: u.Z.Align.CENTER,
+        align: _.Z.Align.CENTER,
         body: C.Z.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
       })
     })
   }),
-  (0, n.jsx)(_.F, {
+  (0, n.jsx)(E.F, {
     setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
     children: (0, n.jsxs)(c.FormSection, {
       className: m.marginBottom20,
       title: C.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
       children: [
-        (0, n.jsx)(_.F, {
+        (0, n.jsx)(E.F, {
           setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
           children: (0, n.jsx)(c.FormSwitch, {
             className: r()(m.marginTop8, m.marginBottom20),
@@ -93,7 +93,7 @@ children: [
           },
           ref: i
         }),
-        (0, n.jsx)(_.F, {
+        (0, n.jsx)(E.F, {
           setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
           children: (0, n.jsx)(c.FormSwitch, {
             className: r()(m.marginTop8, m.marginBottom20),

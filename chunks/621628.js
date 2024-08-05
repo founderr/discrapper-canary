@@ -11,10 +11,10 @@ var n = s(735250),
   l = s(704215),
   c = s(433517),
   d = s(481060),
-  _ = s(675478),
-  E = s(581883),
-  u = s(285952),
-  T = s(154921),
+  _ = s(600164),
+  E = s(112831),
+  u = s(675478),
+  T = s(581883),
   I = s(915486),
   S = s(883904),
   N = s(68985),
@@ -32,10 +32,10 @@ onChange: a
 children: (0, n.jsx)(d.FormSwitch, {
   value: i,
   onChange: function() {
-    a(s), i ? (0, _.w9)(l.z[s]) : (0, _.nm)(l.z[s]);
+    a(s), i ? (0, u.w9)(l.z[s]) : (0, u.nm)(l.z[s]);
   },
   children: (0, n.jsx)(d.FormText, {
-    size: T.Z.Sizes.SIZE_16,
+    size: E.Z.Sizes.SIZE_16,
     className: A.marginTop4,
     children: ''.concat(s.toLowerCase(), ' (').concat(l.z[s], ')')
   })
@@ -68,10 +68,10 @@ function O() {
   dailyCapReached: N.Z.hasUserHitDCCap(),
   dailyCapOverridden: N.Z.dailyCapOverridden
 })),
-[T, I] = a.useState(''),
-g = null !== (e = (0, o.e7)([E.Z], () => {
+[E, I] = a.useState(''),
+g = null !== (e = (0, o.e7)([T.Z], () => {
   var e;
-  return null === (e = E.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
+  return null === (e = T.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
 })) && void 0 !== e ? e : new Uint8Array(),
 [O, p] = function(e, t) {
   let [s, n] = a.useState(() => {
@@ -97,8 +97,8 @@ R = e => {
   });
 },
 x = t.map(e => l.z[e]),
-M = O.filter(e => e.toLowerCase().includes(T.toLowerCase())).filter(e => !x.includes(e)),
-f = Object.keys(l.z).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
+M = O.filter(e => e.toLowerCase().includes(E.toLowerCase())).filter(e => !x.includes(e)),
+f = Object.keys(l.z).filter(e => !x.includes(e)).filter(e => !O.includes(e)).filter(e => e.toLowerCase().includes(E.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(d.FormSection, {
@@ -141,7 +141,7 @@ children: [
       (0, n.jsx)(d.SearchBar, {
         className: A.marginBottom20,
         size: d.SearchBar.Sizes.LARGE,
-        query: T,
+        query: E,
         onChange: I,
         onClear: () => I('')
       }),
@@ -149,11 +149,11 @@ children: [
         className: m.buttonsContainer,
         children: [
           (0, n.jsx)(d.Button, {
-            onClick: _.sr,
+            onClick: u.sr,
             children: 'Clear All Dismissed Contents'
           }),
           (0, n.jsx)(d.Button, {
-            onClick: _.bE,
+            onClick: u.bE,
             children: 'Check All Dismissed Contents'
           })
         ]
@@ -189,7 +189,7 @@ children: [
           })
         ]
       }) : null,
-      (0, n.jsx)(u.Z, {
+      (0, n.jsx)(_.Z, {
         className: r()(A.marginBottom20, A.marginTop20),
         children: (0, n.jsx)(d.FormTitle, {
           children: 'Available Dismissible Contents'

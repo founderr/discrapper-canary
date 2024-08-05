@@ -12,9 +12,9 @@ var i = n(735250),
   c = n(503438),
   u = n(39628),
   d = n(884338),
-  h = n(594174),
-  p = n(936195),
-  _ = n(727218),
+  h = n(528144),
+  p = n(424678),
+  _ = n(594174),
   f = n(81063),
   m = n(768581),
   g = n(823379),
@@ -96,7 +96,7 @@ a = r, s = (0, i.jsx)(o.Clickable, {
   children: r
 });
   }
-  return (0, i.jsx)(_.Z, {
+  return (0, i.jsx)(h.Z, {
 title: a,
 className: I.header,
 children: s
@@ -163,12 +163,12 @@ embeddedApp: n,
 user: r,
 channel: a,
 sortedVoiceStates: u,
-onOpenSpotifyTrack: p,
-onOpenSpotifyArtist: _,
+onOpenSpotifyTrack: h,
+onOpenSpotifyArtist: p,
 onOpenSpotifyAlbum: f
   } = e, m = [];
   null != n ? m = Array.from(n.embeddedActivity.userIds) : (0, c.Z)(t) && null != u && (m = u.map(e => e.user.id));
-  let T = (0, s.Wu)([h.default], () => m.map(e => h.default.getUser(e)).filter(g.lm)),
+  let T = (0, s.Wu)([_.default], () => m.map(e => _.default.getUser(e)).filter(g.lm)),
 L = null != n || (0, c.Z)(t),
 A = l.useMemo(() => {
   let e = new Map();
@@ -198,12 +198,12 @@ children: [
           (0, i.jsx)(x, {
             activity: t,
             embeddedApp: n,
-            onOpenSpotifyTrack: p
+            onOpenSpotifyTrack: h
           }),
           (0, i.jsx)(S, {
             activity: t,
             user: r,
-            onOpenSpotifyArtist: _
+            onOpenSpotifyArtist: p
           }),
           (0, i.jsx)(v, {
             activity: t

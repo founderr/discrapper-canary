@@ -8,8 +8,8 @@ var i = n(735250),
   d = n(547280),
   u = n(678513),
   _ = n(981631),
-  E = n(689938),
-  h = n(713671);
+  h = n(689938),
+  E = n(713671);
 let I = (0, c.Q)(_.BRd.DARK);
 t.Z = function(e) {
   let {
@@ -40,15 +40,15 @@ return null;
   return (0, i.jsx)(l.ThemeContextProvider, {
 theme: _.BRd.DARK,
 children: (0, i.jsx)('div', {
-  className: r()(h.container, I),
+  className: r()(E.container, I),
   children: (0, i.jsxs)('div', {
-    className: h.card,
+    className: E.card,
     style: {
       background: g
     },
     children: [
       (0, i.jsxs)('div', {
-        className: h.eyebrow,
+        className: E.eyebrow,
         children: [
           (0, i.jsx)(l.EnvelopeIcon, {
             size: 'xxs',
@@ -57,7 +57,7 @@ children: (0, i.jsx)('div', {
           (0, i.jsx)(l.Text, {
             variant: 'text-xs/semibold',
             color: 'none',
-            children: E.Z.Messages.SIGNUP_NOTICE_EYEBROW
+            children: h.Z.Messages.SIGNUP_NOTICE_EYEBROW
           })
         ]
       }),
@@ -66,17 +66,17 @@ children: (0, i.jsx)('div', {
         children: s.noticeHeader
       }),
       (0, i.jsx)(l.Button, {
-        className: h.button,
+        className: E.button,
         color: 'none',
         onClick: c,
         children: (0, i.jsx)(l.Text, {
           variant: 'text-sm/medium',
           color: 'none',
-          children: E.Z.Messages.SIGNUP_NOTICE_CTA
+          children: h.Z.Messages.SIGNUP_NOTICE_CTA
         })
       }),
       (0, i.jsx)('div', {
-        className: h.dismiss,
+        className: E.dismiss,
         children: (0, i.jsx)(l.Clickable, {
           onClick: m,
           children: (0, i.jsx)(l.CloseSmallIcon, {

@@ -4,19 +4,19 @@ var i = n(735250),
   s = n(120356),
   r = n.n(s),
   l = n(481060),
-  o = n(378720),
-  c = n(285952),
+  o = n(770146),
+  c = n(600164),
   d = n(424218),
   u = n(823379),
   _ = n(358085),
-  E = n(843445),
-  h = n(981631),
+  h = n(843445),
+  E = n(981631),
   I = n(689938),
   m = n(601416);
 let g = {
-  [h.TaA.WINDOWS]: _.PlatformTypes.WINDOWS,
-  [h.TaA.MACOS]: _.PlatformTypes.OSX,
-  [h.TaA.LINUX]: _.PlatformTypes.LINUX
+  [E.TaA.WINDOWS]: _.PlatformTypes.WINDOWS,
+  [E.TaA.MACOS]: _.PlatformTypes.OSX,
+  [E.TaA.LINUX]: _.PlatformTypes.LINUX
 };
 class p extends a.PureComponent {
   render() {
@@ -25,7 +25,7 @@ let {
   children: t,
   pageSize: n,
   onClick: a
-} = this.props, s = n === E.b.LARGE;
+} = this.props, s = n === h.b.LARGE;
 return (0, i.jsx)(l.Button, {
   size: s ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
   fullWidth: !s,
@@ -110,11 +110,11 @@ return 1 === a.length ? null : (0, i.jsxs)(c.Z, {
       pageSize: e,
       children: function(e) {
         switch (e) {
-          case h.TaA.WINDOWS:
+          case E.TaA.WINDOWS:
             return I.Z.Messages.WINDOWS;
-          case h.TaA.MACOS:
+          case E.TaA.MACOS:
             return I.Z.Messages.MACOS;
-          case h.TaA.LINUX:
+          case E.TaA.LINUX:
             return I.Z.Messages.LINUX;
         }
       }(t)

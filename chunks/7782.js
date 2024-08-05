@@ -4,17 +4,17 @@ var i = n(735250),
   l = n(442837),
   r = n(481060),
   o = n(194359),
-  c = n(333984),
-  u = n(486622),
-  d = n(922409),
-  h = n(86203),
-  p = n(6025),
-  m = n(621853),
-  _ = n(171368),
-  f = n(433355),
-  E = n(699516),
-  g = n(594174),
-  C = n(806519),
+  c = n(686546),
+  u = n(333984),
+  d = n(486622),
+  h = n(922409),
+  p = n(86203),
+  m = n(6025),
+  _ = n(621853),
+  f = n(171368),
+  E = n(433355),
+  g = n(699516),
+  C = n(594174),
   I = n(768581),
   x = n(525541),
   T = n(981631),
@@ -26,7 +26,7 @@ let A = e => {
 let {
   userId: t,
   channelId: n
-} = e, s = (0, l.e7)([m.Z], () => m.Z.getMutualGuilds(t), [t]), o = a.useMemo(() => null != s ? s.slice(0, 3).map((e, t) => {
+} = e, s = (0, l.e7)([_.Z], () => _.Z.getMutualGuilds(t), [t]), o = a.useMemo(() => null != s ? s.slice(0, 3).map((e, t) => {
   let {
     guild: n
   } = e, a = null != n ? I.ZP.getGuildIconURL({
@@ -42,9 +42,9 @@ let {
       alt: '',
       className: Z.avatar
     }, t);
-  return l ? r : (0, i.jsx)(C.ZP, {
+  return l ? r : (0, i.jsx)(c.ZP, {
     className: Z.avatarMask,
-    mask: C.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
+    mask: c.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
     width: 24,
     height: 24,
     children: r
@@ -62,7 +62,7 @@ return null == s || 0 === s.length ? (0, i.jsx)(r.Text, {
     }),
     (0, i.jsx)(r.Clickable, {
       onClick: () => {
-        (0, _.openUserProfileModal)({
+        (0, f.openUserProfileModal)({
           userId: t,
           channelId: n,
           section: v.oh.MUTUAL_GUILDS,
@@ -88,7 +88,7 @@ let {
   relationshipType: n,
   userId: a,
   showingBanner: s
-} = e, l = null === (t = g.default.getUser(a)) || void 0 === t ? void 0 : t.bot, c = () => {
+} = e, l = null === (t = C.default.getUser(a)) || void 0 === t ? void 0 : t.bot, c = () => {
   o.Z.addRelationship({
     userId: a,
     context: {
@@ -204,39 +204,39 @@ let {
 } = e, s = a.useCallback(() => {
   (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
 }, []), l = a.useCallback(() => {
-  p.Z.closeChannelSidebar(f.uZ);
+  m.Z.closeChannelSidebar(E.uZ);
 }, []), o = a.useCallback(() => {
-  p.Z.closeChannelSidebar(f.uZ);
+  m.Z.closeChannelSidebar(E.uZ);
 }, []), {
   acceptMessageRequest: c,
-  rejectMessageRequest: d,
+  rejectMessageRequest: u,
   isAcceptLoading: h,
-  isRejectLoading: m,
+  isRejectLoading: p,
   isOptimisticAccepted: _,
-  isOptimisticRejected: E
-} = (0, u.m)({
-  user: g.default.getUser(n),
+  isOptimisticRejected: f
+} = (0, d.m)({
+  user: C.default.getUser(n),
   onError: s,
   onAcceptSuccess: o,
   onRejectSuccess: l
-}), C = h || m || _ || E;
+}), g = h || p || _ || f;
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)(r.Button, {
       className: Z.action,
       size: r.Button.Sizes.TINY,
       onClick: () => c(t),
-      disabled: C,
+      disabled: g,
       submitting: h,
       children: S.Z.Messages.MESSAGE_REQUEST_ACCEPT
     }),
     (0, i.jsx)(r.Button, {
       className: Z.action,
       size: r.Button.Sizes.TINY,
-      onClick: () => d(t),
+      onClick: () => u(t),
       color: r.Button.Colors.PRIMARY,
-      disabled: C,
-      submitting: m,
+      disabled: g,
+      submitting: p,
       children: S.Z.Messages.MESSAGE_REQUEST_IGNORE
     })
   ]
@@ -249,8 +249,8 @@ channel: n,
 showingBanner: a
   } = e, {
 channelId: r
-  } = (0, d._)(), o = (0, l.e7)([c.Z], () => null != r && c.Z.isSpam(r), [r]), u = (0, l.e7)([E.Z], () => E.Z.getRelationshipType(t), [t]), p = n.id === r;
-  return t === N.fL ? null : o || p ? (0, i.jsxs)('div', {
+  } = (0, h._)(), o = (0, l.e7)([u.Z], () => null != r && u.Z.isSpam(r), [r]), c = (0, l.e7)([g.Z], () => g.Z.getRelationshipType(t), [t]), d = n.id === r;
+  return t === N.fL ? null : o || d ? (0, i.jsxs)('div', {
 className: Z.mobileContainer,
 children: [
   (0, i.jsx)('div', {
@@ -267,13 +267,13 @@ children: [
         channelId: n.id,
         otherUserId: t
       }),
-      (0, i.jsx)(h.Z, {
+      (0, i.jsx)(p.Z, {
         channel: n
       })
     ]
   })
 ]
-  }) : !0 === s.tq || p ? (0, i.jsxs)('div', {
+  }) : !0 === s.tq || d ? (0, i.jsxs)('div', {
 className: Z.mobileContainer,
 children: [
   (0, i.jsx)('div', {
@@ -287,7 +287,7 @@ children: [
     className: Z.mobileButtons,
     children: [
       (0, i.jsx)(M, {
-        relationshipType: u,
+        relationshipType: c,
         userId: t,
         showingBanner: a
       }),
@@ -310,7 +310,7 @@ children: [
     className: Z.divider
   }),
   (0, i.jsx)(M, {
-    relationshipType: u,
+    relationshipType: c,
     userId: t,
     showingBanner: a
   }),

@@ -12,8 +12,8 @@ var i = n(735250),
   c = n(372123),
   d = n(224706),
   u = n(812206),
-  p = n(293245),
-  h = n(285952),
+  p = n(600164),
+  h = n(293245),
   C = n(626135),
   f = n(981631),
   A = n(689938),
@@ -65,8 +65,8 @@ return (0, i.jsxs)(s.Fragment, {
   children: [
     (0, i.jsxs)(r.ModalContent, {
       children: [
-        (0, i.jsx)(h.Z, {
-          justify: h.Z.Justify.CENTER,
+        (0, i.jsx)(p.Z, {
+          justify: p.Z.Justify.CENTER,
           children: (0, i.jsx)('div', {
             className: O.errorArt
           })
@@ -80,8 +80,8 @@ return (0, i.jsxs)(s.Fragment, {
       ]
     }),
     (0, i.jsx)(r.ModalFooter, {
-      children: (0, i.jsxs)(h.Z, {
-        justify: h.Z.Justify.BETWEEN,
+      children: (0, i.jsxs)(p.Z, {
+        justify: p.Z.Justify.BETWEEN,
         children: [
           (0, i.jsx)(r.Button, {
             className: O.linkButton,
@@ -91,9 +91,9 @@ return (0, i.jsxs)(s.Fragment, {
             onClick: this.onClose,
             children: A.Z.Messages.CANCEL
           }),
-          (0, i.jsxs)(h.Z, {
-            direction: h.Z.Direction.HORIZONTAL,
-            justify: h.Z.Justify.END,
+          (0, i.jsxs)(p.Z, {
+            direction: p.Z.Direction.HORIZONTAL,
+            justify: p.Z.Justify.END,
             children: [
               (0, i.jsx)(r.Button, {
                 look: r.Button.Looks.LINK,
@@ -131,9 +131,9 @@ return (0, i.jsxs)(r.ModalContent, {
       })
     }),
     this.renderConflictButton(A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_CHOICE_DOWNLOAD, e.remote.timestamp, O.conflictDownloadArt, this.handleChooseDownload),
-    (0, i.jsxs)(h.Z, {
+    (0, i.jsxs)(p.Z, {
       className: O.choiceWrapper,
-      align: h.Z.Align.CENTER,
+      align: p.Z.Align.CENTER,
       children: [
         (0, i.jsx)('div', {
           className: O.choiceLine
@@ -209,7 +209,7 @@ super(...t), e = this, _(this, 'onClose', () => {
   }
 }
 let L = l.ZP.connectStores([
-  p.Z,
+  h.Z,
   u.Z
 ], t => {
   let {
@@ -217,7 +217,7 @@ libraryApplication: e,
 branchId: n
   } = t;
   return {
-cloudSyncState: p.Z.getState(e.id, n),
+cloudSyncState: h.Z.getState(e.id, n),
 application: u.Z.getApplication(e.id)
   };
 })(T);

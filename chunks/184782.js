@@ -5,17 +5,17 @@ var a = n(735250),
   o = n(481060),
   t = n(596454),
   c = n(471445),
-  r = n(339085),
-  d = n(633302),
-  u = n(565138),
-  m = n(372769),
-  h = n(703656),
-  j = n(592125),
-  x = n(430824),
-  E = n(496675),
-  _ = n(153124),
-  p = n(259580),
-  N = n(806519),
+  r = n(686546),
+  d = n(313201),
+  u = n(339085),
+  m = n(633302),
+  h = n(565138),
+  j = n(372769),
+  x = n(703656),
+  E = n(592125),
+  _ = n(430824),
+  p = n(496675),
+  N = n(259580),
   C = n(626135),
   g = n(524329),
   Z = n(995532),
@@ -29,18 +29,18 @@ let M = e => {
   let {
 channelData: n,
 onClose: i,
-trackOptionClick: u
-  } = e, m = (0, s.e7)([j.Z], () => j.Z.getChannel(n.channel_id)), x = (0, s.e7)([E.Z], () => null != m && E.Z.can(I.Pl.VIEW_CHANNEL, m)), _ = (0, s.e7)([r.Z], () => null != n.emoji_id ? r.Z.getCustomEmojiById(n.emoji_id) : null, [n.emoji_id]), N = null != n.emoji_name ? d.ZP.getByName(d.ZP.convertSurrogateToName(n.emoji_name, !1)) : null, C = null !== (l = (0, c.KS)(m)) && void 0 !== l ? l : o.TextIcon;
-  return null != m && x ? (0, a.jsxs)(o.Clickable, {
+trackOptionClick: r
+  } = e, d = (0, s.e7)([E.Z], () => E.Z.getChannel(n.channel_id)), h = (0, s.e7)([p.Z], () => null != d && p.Z.can(I.Pl.VIEW_CHANNEL, d)), j = (0, s.e7)([u.Z], () => null != n.emoji_id ? u.Z.getCustomEmojiById(n.emoji_id) : null, [n.emoji_id]), _ = null != n.emoji_name ? m.ZP.getByName(m.ZP.convertSurrogateToName(n.emoji_name, !1)) : null, C = null !== (l = (0, c.KS)(d)) && void 0 !== l ? l : o.TextIcon;
+  return null != d && h ? (0, a.jsxs)(o.Clickable, {
 className: v.optionContainer,
 onClick: () => {
-  u(), i(), (0, h.XU)(m.guild_id, m.id);
+  r(), i(), (0, x.XU)(d.guild_id, d.id);
 },
 children: [
-  null != _ || null != N ? (0, a.jsx)(t.Z, {
-    emojiName: null != n.emoji_id ? null == _ ? void 0 : _.name : n.emoji_name,
-    animated: null != _ && _.animated,
-    emojiId: null == _ ? void 0 : _.id,
+  null != j || null != _ ? (0, a.jsx)(t.Z, {
+    emojiName: null != n.emoji_id ? null == j ? void 0 : j.name : n.emoji_name,
+    animated: null != j && j.animated,
+    emojiId: null == j ? void 0 : j.id,
     autoplay: !0,
     className: v.optionEmoji
   }) : (0, a.jsx)(C, {
@@ -64,14 +64,14 @@ children: [
             color: 'currentColor'
           }),
           (0, a.jsx)('span', {
-            children: m.name
+            children: d.name
           })
         ]
       })
     ]
   }),
-  (0, a.jsx)(p.Z, {
-    direction: p.Z.Directions.RIGHT,
+  (0, a.jsx)(N.Z, {
+    direction: N.Z.Directions.RIGHT,
     className: v.optionArrow
   })
 ]
@@ -83,66 +83,66 @@ l.default = e => {
 onClose: n,
 transitionState: t,
 guildId: c,
-isPreview: r
-  } = e, d = (0, s.e7)([x.Z], () => x.Z.getGuild(c)), {
-welcomeScreen: h,
-fetching: j,
-hasError: E
+isPreview: u
+  } = e, m = (0, s.e7)([_.Z], () => _.Z.getGuild(c)), {
+welcomeScreen: x,
+fetching: E,
+hasError: p
   } = (0, s.cj)([Z.Z], () => ({
 welcomeScreen: Z.Z.get(c),
 fetching: Z.Z.isFetching(),
 hasError: Z.Z.hasError()
-  })), p = (0, _.Dt)();
+  })), N = (0, d.Dt)();
   i.useEffect(() => {
-null == h && (0, g.RM)(c);
+null == x && (0, g.RM)(c);
   }, [
 c,
-h
+x
   ]), i.useEffect(() => {
-!1 === j && !0 === E && null == h && n();
+!1 === E && !0 === p && null == x && n();
   }, [
-j,
 E,
+p,
 n,
-h
+x
   ]), i.useEffect(() => {
-h === Z.a && !1 === j && n();
+x === Z.a && !1 === E && n();
   }, [
 n,
-h,
-j
+x,
+E
   ]), i.useEffect(() => {
-!0 !== r && C.default.track(f.rMx.OPEN_MODAL, {
+!0 !== u && C.default.track(f.rMx.OPEN_MODAL, {
   type: k._,
   guild_id: c
 });
   }, [
 c,
-r
+u
   ]);
   let I = i.useCallback(e => {
 var l;
-if (null == h || !0 === r)
+if (null == x || !0 === u)
   return;
 let n = [],
   a = [],
   i = !1;
-null === (l = h.welcome_channels) || void 0 === l || l.forEach(e => {
+null === (l = x.welcome_channels) || void 0 === l || l.forEach(e => {
   n.push(e.description), a.push(e.channel_id), null != e.emoji_id && (i = !0);
 }), C.default.track(f.rMx.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
   index: e,
   guild_id: c,
   options: n,
   options_channel_ids: a,
-  guild_description: h.description,
+  guild_description: x.description,
   has_custom_emojis: i
 });
   }, [
 c,
-r,
-h
+u,
+x
   ]);
-  return null == d ? null : null == h ? (0, a.jsx)(o.ModalRoot, {
+  return null == m ? null : null == x ? (0, a.jsx)(o.ModalRoot, {
 transitionState: t,
 className: v.main,
 'aria-label': S.Z.Messages.LOADING,
@@ -152,20 +152,20 @@ children: (0, a.jsx)(o.Spinner, {
   }) : (0, a.jsxs)(o.ModalRoot, {
 transitionState: t,
 className: v.main,
-'aria-labelledby': p,
+'aria-labelledby': N,
 children: [
   (0, a.jsx)(o.ModalCloseButton, {
     onClick: n,
     className: v.close
   }),
-  (0, a.jsx)(N.ZP, {
-    mask: N.ZP.Masks.SQUIRCLE,
+  (0, a.jsx)(r.ZP, {
+    mask: r.ZP.Masks.SQUIRCLE,
     width: 64,
     height: 64,
     className: v.guildIcon,
-    children: (0, a.jsx)(u.Z, {
-      size: u.Z.Sizes.LARGER,
-      guild: d,
+    children: (0, a.jsx)(h.Z, {
+      size: h.Z.Sizes.LARGER,
+      guild: m,
       active: !0,
       animate: !0,
       tabIndex: -1
@@ -174,13 +174,13 @@ children: [
   (0, a.jsx)(o.Heading, {
     variant: 'heading-xl/semibold',
     className: v.header,
-    id: p,
+    id: N,
     children: S.Z.Messages.WELCOME_SCREEN_TITLE.format({
-      guildName: d.name,
+      guildName: m.name,
       guildNameHook: (e, l) => (0, a.jsxs)('span', {
         children: [
-          (0, a.jsx)(m.Z, {
-            guild: d,
+          (0, a.jsx)(j.Z, {
+            guild: m,
             className: v.headerGuildBadge,
             flowerStarClassName: v.flowerStar,
             tooltipColor: o.Tooltip.Colors.PRIMARY
@@ -193,11 +193,11 @@ children: [
       }, l)
     })
   }),
-  null != h.description ? (0, a.jsx)(o.Text, {
+  null != x.description ? (0, a.jsx)(o.Text, {
     variant: 'text-sm/normal',
     color: 'header-secondary',
     className: v.guildDescription,
-    children: h.description
+    children: x.description
   }) : null,
   (0, a.jsx)(o.FormTitle, {
     className: v.choiceHeader,
@@ -205,7 +205,7 @@ children: [
   }),
   (0, a.jsx)('div', {
     className: v.options,
-    children: null === (l = h.welcome_channels) || void 0 === l ? void 0 : l.map((e, l) => (0, a.jsx)(M, {
+    children: null === (l = x.welcome_channels) || void 0 === l ? void 0 : l.map((e, l) => (0, a.jsx)(M, {
       channelData: e,
       trackOptionClick: () => I(l),
       onClose: n

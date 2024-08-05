@@ -9,16 +9,16 @@ var i = n(735250),
   d = n(481060),
   u = n(570140),
   _ = n(150063),
-  E = n(758059),
-  h = n(252618),
-  I = n(5254),
-  m = n(984370),
-  g = n(518311),
-  p = n(199104),
-  T = n(108427),
-  S = n(210887),
-  f = n(974042),
-  C = n(153124),
+  h = n(758059),
+  E = n(252618),
+  I = n(313201),
+  m = n(5254),
+  g = n(984370),
+  p = n(518311),
+  T = n(199104),
+  S = n(108427),
+  f = n(210887),
+  C = n(974042),
   N = n(792125),
   A = n(666286),
   v = n(596957),
@@ -31,10 +31,10 @@ function x() {
   return (0, i.jsxs)('div', {
 className: R.inviteToolbar,
 children: [
-  (0, i.jsx)(g.Z, {
+  (0, i.jsx)(p.Z, {
     tooltip: O.Z.Messages.NEW_GROUP_DM
   }),
-  (0, i.jsx)(m.Z.Divider, {})
+  (0, i.jsx)(g.Z.Divider, {})
 ]
   });
 }
@@ -53,47 +53,47 @@ initialSection: t
 s,
 n
   ]), a.useEffect(() => {
-_.Y(Z.Z5c.FRIENDS), (0, T.e)('friends');
+_.Y(Z.Z5c.FRIENDS), (0, S.e)('friends');
   }, []), a.useEffect(() => {
-null != t && E.Z.setInitialSection(t);
+null != t && h.Z.setInitialSection(t);
   }, [t]);
-  let g = (0, c.e7)([S.Z], () => S.Z.theme),
+  let p = (0, c.e7)([f.Z], () => f.Z.theme),
 {
   section: b,
   pendingCount: P
-} = (0, c.cj)([f.ZP], () => f.ZP.getState()),
-M = (0, c.cj)([I.Z], () => I.Z.getSuggestionCount()),
-D = (0, C.Dt)(),
-y = (0, C.Dt)();
+} = (0, c.cj)([C.ZP], () => C.ZP.getState()),
+M = (0, c.cj)([m.Z], () => m.Z.getSuggestionCount()),
+D = (0, I.Dt)(),
+y = (0, I.Dt)();
   return (0, i.jsxs)('main', {
 className: R.container,
 'aria-label': O.Z.Messages.FRIENDS,
 children: [
-  (0, i.jsx)(h.yY, {
+  (0, i.jsx)(E.yY, {
     location: O.Z.Messages.FRIENDS
   }),
-  (0, i.jsxs)(m.Z, {
-    className: (0, N.Q)(g),
+  (0, i.jsxs)(g.Z, {
+    className: (0, N.Q)(p),
     toolbar: (0, i.jsx)(x, {}),
     scrollable: o.tq,
     role: 'navigation',
     'aria-labelledby': D,
     children: [
-      (0, i.jsx)(m.Z.Icon, {
+      (0, i.jsx)(g.Z.Icon, {
         icon: d.FriendsIcon,
         'aria-hidden': !0
       }),
-      (0, i.jsx)(m.Z.Title, {
+      (0, i.jsx)(g.Z.Title, {
         id: D,
         children: O.Z.Messages.FRIENDS
       }),
-      (0, i.jsx)(m.Z.Divider, {}),
+      (0, i.jsx)(g.Z.Divider, {}),
       (0, i.jsxs)(d.TabBar, {
         'aria-label': O.Z.Messages.FRIENDS,
         selectedItem: b,
         type: 'top-pill',
         onItemSelect: e => {
-          E.Z.setSection(e);
+          h.Z.setSection(e);
         },
         className: R.tabBar,
         children: [
@@ -168,7 +168,7 @@ children: [
       }),
       (0, i.jsx)('div', {
         className: R.nowPlayingColumn,
-        children: (0, i.jsx)(p.Z, {})
+        children: (0, i.jsx)(T.Z, {})
       })
     ]
   })

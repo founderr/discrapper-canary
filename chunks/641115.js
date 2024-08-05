@@ -15,10 +15,10 @@ var l = t(735250),
   m = t(410575),
   E = t(2052),
   _ = t(924557),
-  S = t(1163),
-  g = t(594174),
-  C = t(285952),
-  h = t(672752),
+  S = t(600164),
+  g = t(436774),
+  C = t(1163),
+  h = t(594174),
   N = t(74538),
   Z = t(451467),
   I = t(122186),
@@ -53,7 +53,7 @@ className: v.toolTipTextContainer,
 children: [
   (0, l.jsx)(d.NitroWheelIcon, {
     size: 'md',
-    color: h.JX.PREMIUM_TIER_2,
+    color: g.JX.PREMIUM_TIER_2,
     className: r()(v.premiumIcon)
   }),
   (0, l.jsx)(d.Text, {
@@ -125,19 +125,19 @@ selectedPreset: t,
 selectedResolution: a,
 selectedFPS: r,
 onResolutionChange: i,
-onFPSChange: h,
+onFPSChange: g,
 onPresetChange: M,
 targetGuildPremiumTier: j,
 captureDeviceSelected: P
-  } = e, D = (0, u.e7)([g.default], () => {
-let e = g.default.getCurrentUser();
+  } = e, D = (0, u.e7)([h.default], () => {
+let e = h.default.getCurrentUser();
 return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
   }), G = N.ZP.canStreamQuality(N.U2.MID, D), {
 location: U
   } = (0, E.O)(), b = (0, _.Zq)({
 autoTrackExposure: !1
   }), w = (0, N.I5)(D, R.p9.TIER_1);
-  S.Z.useExperiment({
+  C.Z.useExperiment({
 location: 'Go Live Modal'
   }, {
 autoTrackExposure: !0,
@@ -170,7 +170,7 @@ z = (0, l.jsx)(d.ButtonGroup, {
     needsPremium: !(0, Z.Z)(t, a, e.value, D, j),
     needsDemo: k && e.value === x.ws.FPS_60,
     analyticsLocation: H,
-    onClick: () => h(e.value),
+    onClick: () => g(e.value),
     onClose: n,
     setIsHovering: y
   }))
@@ -190,7 +190,7 @@ K = [{
 ],
 Y = t === x.tI.PRESET_DOCUMENTS ? (0, l.jsxs)(l.Fragment, {
   children: [
-    (0, l.jsx)(C.Z, {
+    (0, l.jsx)(S.Z, {
       children: (0, l.jsx)(d.FormItem, {
         title: A.Z.Messages.STREAM_RESOLUTION,
         titleClassName: T.formItemTitleSlim,
@@ -211,7 +211,7 @@ Y = t === x.tI.PRESET_DOCUMENTS ? (0, l.jsxs)(l.Fragment, {
   ]
 }) : (0, l.jsxs)(l.Fragment, {
   children: [
-    (0, l.jsxs)(C.Z, {
+    (0, l.jsxs)(S.Z, {
       children: [
         (0, l.jsx)(d.FormItem, {
           title: A.Z.Messages.STREAM_RESOLUTION,

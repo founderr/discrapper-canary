@@ -16,11 +16,11 @@ var a = s(512722),
   E = s(825209),
   u = s(887278),
   T = s(630699),
-  I = s(658785),
-  S = s(556296),
-  N = s(808506),
-  C = s(237997),
-  m = s(739563),
+  I = s(212632),
+  S = s(658785),
+  N = s(556296),
+  C = s(808506),
+  m = s(237997),
   A = s(626135);
 s(63063);
 var g = s(13140),
@@ -31,19 +31,19 @@ let R = x(null);
 
 function x(e) {
   var t;
-  let s = C.Z.getNotificationPositionMode(),
+  let s = m.Z.getNotificationPositionMode(),
 n = s !== h._vf.DISABLED,
-a = S.Z.getOverlayKeybind(),
-i = S.Z.getOverlayChatKeybind();
+a = N.Z.getOverlayKeybind(),
+i = N.Z.getOverlayChatKeybind();
   return {
-enabled: N.Z.enabled,
+enabled: C.Z.enabled,
 notifications_enabled: n,
 notifications_position: n ? s : null,
-text_notifications_mode: C.Z.getTextChatNotificationMode(),
+text_notifications_mode: m.Z.getTextChatNotificationMode(),
 hotkey: null != a ? (0, g.BB)(a.shortcut) : null,
 text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null,
-text_opacity_slider: C.Z.getTextWidgetOpacity(),
-old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : N.Z.enabled
+text_opacity_slider: m.Z.getTextWidgetOpacity(),
+old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : C.Z.enabled
   };
 }
 
@@ -66,9 +66,9 @@ showHeader: s = !0
   } = e, {
 enabled: a,
 legacyEnabled: r
-  } = (0, l.cj)([N.Z], () => ({
-enabled: N.Z.enabled,
-legacyEnabled: N.Z.legacyEnabled
+  } = (0, l.cj)([C.Z], () => ({
+enabled: C.Z.enabled,
+legacyEnabled: C.Z.legacyEnabled
   })), {
 avatarSizeMode: g,
 displayNameMode: f,
@@ -76,16 +76,16 @@ displayUserMode: D,
 notificationPositionMode: P,
 textChatNotificationMode: L,
 shouldShowKeybindIndicators: b
-  } = (0, l.cj)([C.Z], () => ({
-avatarSizeMode: C.Z.getAvatarSizeMode(),
-displayNameMode: C.Z.getDisplayNameMode(),
-displayUserMode: C.Z.getDisplayUserMode(),
-notificationPositionMode: C.Z.getNotificationPositionMode(),
-textChatNotificationMode: C.Z.getTextChatNotificationMode(),
-shouldShowKeybindIndicators: C.Z.showKeybindIndicators
-  })), Z = (0, l.e7)([S.Z], () => S.Z.getOverlayKeybind()), {
+  } = (0, l.cj)([m.Z], () => ({
+avatarSizeMode: m.Z.getAvatarSizeMode(),
+displayNameMode: m.Z.getDisplayNameMode(),
+displayUserMode: m.Z.getDisplayUserMode(),
+notificationPositionMode: m.Z.getNotificationPositionMode(),
+textChatNotificationMode: m.Z.getTextChatNotificationMode(),
+shouldShowKeybindIndicators: m.Z.showKeybindIndicators
+  })), Z = (0, l.e7)([N.Z], () => N.Z.getOverlayKeybind()), {
 showKeybindIndicators: v
-  } = I.Z.useExperiment({
+  } = S.Z.useExperiment({
 location: 'overlay_user_settings'
   }), j = (0, u.$1)();
 
@@ -252,7 +252,7 @@ children: [
         title: O.Z.Messages.FORM_LABEL_NOTIFICATION_POSITION,
         children: (0, n.jsx)('div', {
           className: p.notificationSettings,
-          children: (0, n.jsx)(m.Z, {
+          children: (0, n.jsx)(I.Z, {
             position: P,
             onChange: (e, t) => _.Z.setNotificationPositionMode(t)
           })

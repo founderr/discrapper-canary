@@ -28,23 +28,23 @@ var i, a = n(735250),
   Z = n(762914),
   A = n(43267),
   M = n(933557),
-  b = n(366980),
-  R = n(703656),
-  j = n(93127),
-  L = n(60349),
-  P = n(814443),
-  O = n(428598),
-  y = n(131704),
-  D = n(592125),
-  k = n(341165),
-  U = n(544610),
-  w = n(19780),
-  B = n(306680),
-  H = n(699516),
-  G = n(246946),
-  V = n(594174),
-  F = n(285952),
-  W = n(153124),
+  b = n(600164),
+  R = n(313201),
+  j = n(366980),
+  L = n(703656),
+  P = n(93127),
+  O = n(60349),
+  y = n(814443),
+  D = n(428598),
+  k = n(131704),
+  U = n(592125),
+  w = n(341165),
+  B = n(544610),
+  H = n(19780),
+  G = n(306680),
+  V = n(699516),
+  F = n(246946),
+  W = n(594174),
   z = n(626135),
   Y = n(572004),
   K = n(585483),
@@ -68,18 +68,18 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let er = (0, W.hQ)(),
-  eo = (0, W.hQ)();
+let er = (0, R.hQ)(),
+  eo = (0, R.hQ)();
 
 function ec(e) {
   let {
 className: t,
 children: n
   } = e;
-  return (0, a.jsxs)(F.Z, {
-align: F.Z.Align.CENTER,
-justify: F.Z.Justify.CENTER,
-direction: F.Z.Direction.VERTICAL,
+  return (0, a.jsxs)(b.Z, {
+align: b.Z.Align.CENTER,
+justify: b.Z.Justify.CENTER,
+direction: b.Z.Direction.VERTICAL,
 className: r()(ei.errorState, t),
 children: [
   (0, a.jsx)('div', {
@@ -94,13 +94,13 @@ var t;
 let {
   channel: n,
   onClose: i
-} = e, s = null !== (t = (0, M.ZP)(n)) && void 0 !== t ? t : '', l = (0, p.e7)([B.ZP], () => {
+} = e, s = null !== (t = (0, M.ZP)(n)) && void 0 !== t ? t : '', l = (0, p.e7)([G.ZP], () => {
   var e;
-  return null !== (e = B.ZP.lastMessageId(n.id)) && void 0 !== e ? e : n.id;
+  return null !== (e = G.ZP.lastMessageId(n.id)) && void 0 !== e ? e : n.id;
 });
 return (0, a.jsx)(m.Clickable, {
   onClick: () => {
-    (0, R.XU)(et.ME, n.id), i();
+    (0, L.XU)(et.ME, n.id), i();
   },
   children: (0, a.jsxs)('div', {
     className: ei.confirmChannelItemContainer,
@@ -127,7 +127,7 @@ let {
   onConfirm: t,
   channelIds: n,
   ...i
-} = e, s = (0, p.Wu)([D.Z], () => Array.from(n).map(D.Z.getChannel), [n]);
+} = e, s = (0, p.Wu)([U.Z], () => Array.from(n).map(U.Z.getChannel), [n]);
 return (0, a.jsxs)(m.ConfirmModal, {
   header: en.Z.Messages.GROUP_DM_INVITE_CONFIRM,
   confirmText: en.Z.Messages.GROUP_DM_INVITE_CONFIRM_BUTTON,
@@ -194,7 +194,7 @@ if (null == e || !e.isDM())
 let t = e.getRecipientId();
 if (null == t)
   throw Error('no recipient in DM');
-return !H.Z.isFriend(t);
+return !V.Z.isFriend(t);
   }
   createInvite() {
 let {
@@ -222,7 +222,7 @@ return null != e && e.recipients.length + 1 >= this.getMaxParticipants();
   getMaxParticipants() {
 let {
   channel: e
-} = this.props, t = V.default.getCurrentUser();
+} = this.props, t = W.default.getCurrentUser();
 return null != t && t.isStaff() ? et.p3w : null != e && e.isBroadcastChannel() ? et.keq : null != e && e.userLimit > 0 ? e.userLimit : et.pAY;
   }
   getRemaining() {
@@ -293,9 +293,9 @@ if (!n || this.isNotFriends())
   return null;
 let o = [];
 return l.forEach(e => {
-  let t = V.default.getUser(e);
+  let t = W.default.getUser(e);
   null != t && o.push(Q.ZP.getName(t));
-}), (0, a.jsxs)(F.Z, {
+}), (0, a.jsxs)(b.Z, {
   className: r()(ei.searchBar, es.marginTop20),
   children: [
     (0, a.jsx)(N.ZP, {
@@ -328,8 +328,8 @@ return l.forEach(e => {
 let e = null != this.scrollerRef.current && this.state.separator,
   t = this.isNotFriends() ? en.Z.Messages.GROUP_DM_ADD_FRIENDS : en.Z.Messages.GROUP_DM_HEADER;
 return (0, a.jsxs)(m.ModalHeader, {
-  direction: F.Z.Direction.VERTICAL,
-  align: F.Z.Align.STRETCH,
+  direction: b.Z.Direction.VERTICAL,
+  align: b.Z.Align.STRETCH,
   className: ei.__invalid_header,
   separator: e,
   children: [
@@ -354,9 +354,9 @@ if (this.isNotFriends()) {
   let t = null != e ? e.getRecipientId() : null;
   if (null == t)
     throw Error('no recipient in DM');
-  let n = V.default.getUser(t),
+  let n = W.default.getUser(t),
     i = null != n ? n.username : '',
-    s = null != n && H.Z.getRelationshipType(n.id) === et.OGo.PENDING_OUTGOING;
+    s = null != n && V.Z.getRelationshipType(n.id) === et.OGo.PENDING_OUTGOING;
   return (0, a.jsxs)(ec, {
     className: ei.notFriends,
     children: [
@@ -440,7 +440,7 @@ let {
 } = this.state;
 if (null == e || !e.isMultiUserDM() || this.isPartyFull())
   return null;
-let l = null != t ? (0, b.Z)(t.code) : '';
+let l = null != t ? (0, j.Z)(t.code) : '';
 return (0, a.jsxs)(s.Fragment, {
   children: [
     (0, a.jsx)(m.FormTitle, {
@@ -448,12 +448,12 @@ return (0, a.jsxs)(s.Fragment, {
       className: es.marginBottom8,
       children: en.Z.Messages.GROUP_DM_INVITE_LINK_TITLE
     }),
-    (0, a.jsxs)(F.Z, {
+    (0, a.jsxs)(b.Z, {
       className: r()(ea.input, {
         [ea.success]: i
       }),
-      justify: F.Z.Justify.BETWEEN,
-      align: F.Z.Align.CENTER,
+      justify: b.Z.Justify.BETWEEN,
+      align: b.Z.Align.CENTER,
       children: [
         l.length > 0 ? (0, a.jsx)(m.TextInput, {
           className: ei.copyInput,
@@ -467,7 +467,7 @@ return (0, a.jsxs)(s.Fragment, {
           className: ei.copyInput,
           name: 'invite',
           value: l,
-          placeholder: (0, b.Z)(en.Z.Messages.GROUP_DM_INVITE_LINK_EXAMPLE),
+          placeholder: (0, j.Z)(en.Z.Messages.GROUP_DM_INVITE_LINK_EXAMPLE),
           editable: !1,
           inputClassName: ei.input,
           spellCheck: 'false',
@@ -513,8 +513,8 @@ if (null != n)
       (0, a.jsx)('div', {
         className: ei.footerSeparator
       }),
-      (0, a.jsx)(F.Z, {
-        direction: F.Z.Direction.VERTICAL,
+      (0, a.jsx)(b.Z, {
+        direction: b.Z.Direction.VERTICAL,
         className: ei.footer,
         children: n
       })
@@ -549,23 +549,23 @@ this.props.onClose(), x.Z.sendRequest({
 return {
   affinities: e.map(e => {
     var t, n, i;
-    let a = L.Z.getCurrentConfig({
+    let a = O.Z.getCurrentConfig({
       location: 'desktop_dm_list'
     }, {
       autoTrackExposure: !1
     });
     if (a.useV1) {
-      let n = P.Z.getUserAffinity(e);
+      let n = y.Z.getUserAffinity(e);
       return null !== (t = null == n ? void 0 : n.affinity) && void 0 !== t ? t : -1;
     }
     if (a.useV2Dm) {
-      let t = O.Z.getUserAffinity(e);
+      let t = D.Z.getUserAffinity(e);
       return null !== (n = null == t ? void 0 : t.dmProbability) && void 0 !== n ? n : -1;
     }
     if (!a.useV2Communication)
       return -1;
     else {
-      let t = O.Z.getUserAffinity(e);
+      let t = D.Z.getUserAffinity(e);
       return null !== (i = null == t ? void 0 : t.communicationProbability) && void 0 !== i ? i : -1;
     }
   })
@@ -678,7 +678,7 @@ super(...e), el(this, 'state', {
   } = this.props;
   t.has(e) ? I.Z.removeUser(e) : (I.Z.addUser(e), n.length > 0 && I.Z.clear(null == i ? void 0 : i.id)), this.forceFocus();
 }), el(this, 'handleAddFriendNavigation', () => {
-  (0, R.uL)(et.Z5c.FRIENDS), g.Z.setSection(et.pJs.ADD_FRIEND), this.props.onClose();
+  (0, L.uL)(et.Z5c.FRIENDS), g.Z.setSection(et.pJs.ADD_FRIEND), this.props.onClose();
 }), el(this, 'handleScroll', () => {
   let e = this.scrollerRef.current;
   null != e && this.setState({
@@ -703,7 +703,7 @@ super(...e), el(this, 'state', {
 }), el(this, 'pushToExistingDM', (e, t) => {
   let n = this._searchCounter,
     i = (0, S.v_)(e),
-    a = w.Z.getChannelId() === e.id;
+    a = H.Z.getChannelId() === e.id;
   E.Z.addRecipients(e.id, t, et.Sbl.ADD_FRIENDS_TO_DM).then(n => {
     if (!!a) {
       if (e.isDM() && n !== e.id) {
@@ -773,20 +773,20 @@ function ep(e) {
 channel: t,
 ...n
   } = e;
-  L.Z.useExperiment({
+  O.Z.useExperiment({
 location: 'desktop_dm_list'
   });
   let i = (0, p.cj)([
-U.Z,
-k.Z,
-G.Z
+B.Z,
+w.Z,
+F.Z
   ], () => {
 let e;
-return null != t && null != (e = k.Z.getInvite(t.id)) && e.isExpired() && (e = null), {
-  ...U.Z.getState(),
+return null != t && null != (e = w.Z.getInvite(t.id)) && e.isExpired() && (e = null), {
+  ...B.Z.getState(),
   invite: e,
-  hideDiscriminator: G.Z.hidePersonalInformation,
-  hideInstantInvites: G.Z.hideInstantInvites
+  hideDiscriminator: F.Z.hidePersonalInformation,
+  hideInstantInvites: F.Z.hideInstantInvites
 };
   });
   return (0, a.jsx)(eh, {
@@ -817,13 +817,13 @@ _
 useV1: f,
 useV2Dm: E,
 useV2Communication: g
-  } = L.Z.useExperiment({
+  } = O.Z.useExperiment({
 location: 'desktop_dm_list'
   }, {
 autoTrackExposure: !1
   });
   return (s.useEffect(() => {
-f && (0, j.W)(), E && (0, j._)(), g && (0, j._)();
+f && (0, P.W)(), E && (0, P._)(), g && (0, P._)();
   }, [
 f,
 E,
@@ -853,7 +853,7 @@ children: e => (0, a.jsx)($.ZP.Icon, {
 
 function e_(e) {
   let t = ef(e);
-  return new Set(c()(D.Z.getMutablePrivateChannels()).values().filter(e => (0, y.bc)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value());
+  return new Set(c()(U.Z.getMutablePrivateChannels()).values().filter(e => (0, k.bc)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value());
 }
 
 function ef(e) {

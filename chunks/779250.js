@@ -11,11 +11,11 @@ var s, a, t = l(735250),
   c = l(447543),
   u = l(607070),
   E = l(745510),
-  _ = l(433775),
-  I = l(984933),
-  x = l(430824),
-  N = l(47309),
-  m = l(153124),
+  _ = l(96698),
+  I = l(313201),
+  x = l(433775),
+  N = l(984933),
+  m = l(430824),
   T = l(971130),
   h = l(981888),
   g = l(924301),
@@ -111,25 +111,25 @@ guildEvent: l,
 guildEventId: a,
 editBroadcastInfoData: c,
 isEdit: E,
-formErrors: _,
-transitionState: I,
-loading: x,
+formErrors: x,
+transitionState: N,
+loading: m,
 error: T,
 onChange: h,
 onSave: v,
 onClose: S,
 createdEvent: C
-  } = e, L = (0, m.Dt)(), A = i.useRef(l), Z = !(0, r.isEqual)(A.current, l), p = i.useMemo(() => [{
+  } = e, L = (0, I.Dt)(), A = i.useRef(l), Z = !(0, r.isEqual)(A.current, l), p = i.useMemo(() => [{
   slideId: 0,
   label: O.Z.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_1,
-  valid: null == _.entity,
-  userErrorMessage: _.entity
+  valid: null == x.entity,
+  userErrorMessage: x.entity
 },
 {
   slideId: 1,
   label: O.Z.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_2,
-  valid: null == _.schedule && null == _.topic && (!E || Z),
-  userErrorMessage: _.schedule
+  valid: null == x.schedule && null == x.topic && (!E || Z),
+  userErrorMessage: x.schedule
 },
 {
   slideId: 2,
@@ -137,7 +137,7 @@ createdEvent: C
   valid: !0
 }
   ], [
-_,
+x,
 E,
 Z
   ]), V = Object.keys(s).length, G = (0, g.xt)(l), y = e => Math.max(0, Math.min(e, V - 1)), [b, P] = i.useState(G ? 1 : 0), [k, z] = i.useState(!1), H = i.useMemo(() => p.slice(0, b + 1).map(e => e.valid).every(Boolean), [
@@ -166,7 +166,7 @@ K = () => {
 Q = O.Z.Messages.NEXT;
   return 2 === F && (Q = E ? O.Z.Messages.SAVE_EVENT : O.Z.Messages.SCHEDULE_EVENT), (0, t.jsx)(t.Fragment, {
 children: (0, t.jsxs)(d.ModalRoot, {
-  transitionState: I,
+  transitionState: N,
   'aria-labelledby': L,
   size: d.ModalSize.DYNAMIC,
   children: [
@@ -177,7 +177,7 @@ children: (0, t.jsxs)(d.ModalRoot, {
       className: U.content,
       scrollerRef: X,
       children: [
-        !w && (0, t.jsx)(N.Z, {
+        !w && (0, t.jsx)(_.Z, {
           steps: p.map(e => e.label),
           stepIndex: b,
           onClick: e => {
@@ -196,7 +196,7 @@ children: (0, t.jsxs)(d.ModalRoot, {
               children: (0, t.jsx)(j.Z, {
                 guildId: n,
                 guildEvent: l,
-                validationErrorMessage: _.entity,
+                validationErrorMessage: x.entity,
                 isSlideReady: k,
                 onChange: h
               })
@@ -210,7 +210,7 @@ children: (0, t.jsxs)(d.ModalRoot, {
                 editBroadcastInfoData: c,
                 onChange: h,
                 error: T,
-                validationErrorMessage: _.schedule,
+                validationErrorMessage: x.schedule,
                 isSlideReady: k
               })
             }),
@@ -249,7 +249,7 @@ children: (0, t.jsxs)(d.ModalRoot, {
               onClick: q,
               disabled: !H,
               className: U.button,
-              submitting: x,
+              submitting: m,
               children: Q
             })
           ]
@@ -274,15 +274,15 @@ guildId: n,
 guildScheduledEventId: s,
 transitionState: a,
 onClose: r
-  } = e, u = (0, o.e7)([x.Z], () => x.Z.getGuild(n)), E = (0, o.e7)([g.ZP], () => g.ZP.getGuildScheduledEvent(s), [s]), N = (0, o.e7)([I.ZP], () => I.ZP.getDefaultChannel(n), [n]), m = (0, L.j$)(E, N), [T, f] = i.useState(m), [j] = i.useState((0, L.Ql)(E)), [M, D] = i.useState(null), R = e => {
+  } = e, u = (0, o.e7)([m.Z], () => m.Z.getGuild(n)), E = (0, o.e7)([g.ZP], () => g.ZP.getGuildScheduledEvent(s), [s]), _ = (0, o.e7)([N.ZP], () => N.ZP.getDefaultChannel(n), [n]), I = (0, L.j$)(E, _), [T, f] = i.useState(I), [j] = i.useState((0, L.Ql)(E)), [M, D] = i.useState(null), R = e => {
 var n;
 let l = (0, S.so)(e),
-  s = null !== (n = e.channel_id) && void 0 !== n ? n : null == N ? void 0 : N.id;
+  s = null !== (n = e.channel_id) && void 0 !== n ? n : null == _ ? void 0 : _.id;
 null != s && c.Z.createInvite(s, {
   max_age: y.value,
   max_uses: b.value
 }, G.t4x.GUILD_EVENTS), l ? D(e) : r();
-  }, U = (0, _.Z)(u, null == E ? void 0 : E.id, T), [B, {
+  }, U = (0, x.Z)(u, null == E ? void 0 : E.id, T), [B, {
 loading: k,
 error: z
   }] = (0, h.Z)(async () => {

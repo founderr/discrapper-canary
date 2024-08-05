@@ -5,11 +5,11 @@ var i = n(735250),
   r = n.n(a),
   l = n(692547),
   o = n(481060),
-  c = n(484459),
-  u = n(598077),
-  d = n(285952),
-  _ = n(936195),
-  E = n(409216),
+  c = n(600164),
+  u = n(424678),
+  d = n(484459),
+  _ = n(237583),
+  E = n(598077),
   I = n(63063),
   m = n(153066),
   T = n(51144),
@@ -39,7 +39,7 @@ let {
 return (0, i.jsx)(o.Popout, {
   renderPopout: this.renderUserPopout,
   position: 'left',
-  preload: () => (0, c.W)(e.user.id, e.user.getAvatarURL(n, 80), {
+  preload: () => (0, d.W)(e.user.id, e.user.getAvatarURL(n, 80), {
     guildId: n
   }),
   children: s => {
@@ -176,7 +176,7 @@ let {
   isInBrowser: a,
   name: r,
   activity: l
-} = this.props, [c, u] = this.getPartySize();
+} = this.props, [c, d] = this.getPartySize();
 if (this.isDeadInvite())
   switch (e) {
     case f.mFx.LISTEN:
@@ -204,7 +204,7 @@ if (this.isActionType(f.mFx.LISTEN) || this.isActionType(f.mFx.WATCH))
       className: S.state,
       children: g.Z.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
         artists: l.state,
-        artistsHook: (e, t) => null != l.state ? (0, i.jsx)(_.Z, {
+        artistsHook: (e, t) => null != l.state ? (0, i.jsx)(u.Z, {
           artists: l.state,
           linkClassName: S.textLink,
           canOpen: null != l.sync_id,
@@ -214,9 +214,9 @@ if (this.isActionType(f.mFx.LISTEN) || this.isActionType(f.mFx.WATCH))
     }, 'state')
   ] : this.isActionType(f.mFx.LISTEN) ? g.Z.Messages.USER_ACTIVITY_LISTEN_ALONG : g.Z.Messages.USER_ACTIVITY_WATCH_ALONG;
 return this.isActionType(f.mFx.JOIN_REQUEST) ? this.isPartyFull() ? g.Z.Messages.INVITE_EMBED_FULL_GROUP : g.Z.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({
-  number: u - c
+  number: d - c
 }) : this.isInParty() ? g.Z.Messages.INVITE_EMBED_IN_GROUP : t || n || s ? this.isPartyFull() ? g.Z.Messages.INVITE_EMBED_FULL_GROUP : this.hasPartySize() ? g.Z.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({
-  number: u - c
+  number: d - c
 }) : g.Z.Messages.JOIN : g.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({
   name: r
 });
@@ -292,15 +292,15 @@ let o = [...t],
   c = Math.min(a, 6);
 for (; o.length < c;)
   o.push({
-    user: new u.Z({
+    user: new E.Z({
       discriminator: '0005'
     }),
     unknownUser: !0
   });
-let d = Math.min(r, 106);
-for (; o.length < d;)
+let u = Math.min(r, 106);
+for (; o.length < u;)
   o.push(null);
-return (0, i.jsx)(E.Z, {
+return (0, i.jsx)(_.Z, {
   guildId: s,
   className: S.partyMembers,
   users: o,
@@ -315,15 +315,15 @@ let {
   coverImage: t,
   name: n,
   activity: s
-} = this.props, a = this.isActionType(f.mFx.JOIN) || this.isActionType(f.mFx.JOIN_REQUEST), c = this.isDeadInvite(), u = null;
-null == t || null == s || a ? !a && c && (u = (0, i.jsx)('div', {
+} = this.props, a = this.isActionType(f.mFx.JOIN) || this.isActionType(f.mFx.JOIN_REQUEST), u = this.isDeadInvite(), d = null;
+null == t || null == s || a ? !a && u && (d = (0, i.jsx)('div', {
   className: S.artworkSpotifySessionEnded
-})) : u = (0, i.jsx)('img', {
+})) : d = (0, i.jsx)('img', {
   alt: '',
   src: t,
   className: (0, m.l)(S, 'artwork', this.getActionableMode())
 });
-let _ = null != s && null != u && null != s.assets && null != s.assets.large_text && '' !== s.assets.large_text && !c && (0, C.Z)(s) ? s.assets.large_text : null,
+let _ = null != s && null != d && null != s.assets && null != s.assets.large_text && '' !== s.assets.large_text && !u && (0, C.Z)(s) ? s.assets.large_text : null,
   E = null != _ ? (0, i.jsx)(o.Tooltip, {
     text: _,
     children: e => {
@@ -335,41 +335,41 @@ let _ = null != s && null != u && null != s.assets && null != s.assets.large_tex
         onClick: this.handleOpenSpotifyAlbum,
         onMouseEnter: t,
         onMouseLeave: n,
-        children: u
+        children: d
       });
     }
-  }) : u;
+  }) : d;
 return (0, i.jsxs)('div', {
   className: r()(S.invite, e),
   children: [
     (0, i.jsx)('div', {
       className: S.coverImageWrapper,
       children: (0, i.jsx)('div', {
-        className: r()((0, m.l)(S, 'coverImage', this.getActionableMode()), null != u ? S.blurred : null),
+        className: r()((0, m.l)(S, 'coverImage', this.getActionableMode()), null != d ? S.blurred : null),
         style: {
           backgroundImage: null != t ? 'url(\''.concat(t, '\')') : void 0
         }
       })
     }),
-    (0, i.jsxs)(d.Z, {
+    (0, i.jsxs)(c.Z, {
       className: S.fullHeight,
       children: [
-        (0, i.jsxs)(d.Z, {
-          direction: d.Z.Direction.VERTICAL,
+        (0, i.jsxs)(c.Z, {
+          direction: c.Z.Direction.VERTICAL,
           children: [
             (0, i.jsx)('div', {
               className: S.header,
               children: this.renderHeaderText()
             }),
-            (0, i.jsx)(d.Z.Child, {
+            (0, i.jsx)(c.Z.Child, {
               className: S.partyStatus,
               children: this.renderPartyStatus()
             }),
-            (0, i.jsxs)(d.Z, {
-              align: d.Z.Align.END,
+            (0, i.jsxs)(c.Z, {
+              align: c.Z.Align.END,
               children: [
-                (0, i.jsxs)(d.Z, {
-                  align: d.Z.Align.CENTER,
+                (0, i.jsxs)(c.Z, {
+                  align: c.Z.Align.CENTER,
                   className: S.actionAndParty,
                   basis: 0,
                   style: {
@@ -380,7 +380,7 @@ return (0, i.jsxs)('div', {
                     this.renderParty()
                   ]
                 }),
-                null == u && a ? (0, i.jsx)('div', {
+                null == d && a ? (0, i.jsx)('div', {
                   className: S.name,
                   children: n
                 }) : null

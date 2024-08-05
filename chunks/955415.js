@@ -7,11 +7,11 @@ var s = l(735250),
   r = l(43267),
   u = l(933557),
   c = l(471445),
-  d = l(925329),
-  m = l(565138),
-  N = l(134432),
-  v = l(695346),
-  C = l(285952),
+  d = l(600164),
+  m = l(925329),
+  N = l(565138),
+  v = l(134432),
+  C = l(695346),
   p = l(768581),
   h = l(153066),
   E = l(689938),
@@ -62,25 +62,25 @@ let {
   guild: t,
   channel: a,
   onClick: c,
-  expired: N = !1,
-  user: C,
+  expired: d = !1,
+  user: v,
   className: p
-} = e, E = null !== (n = (0, u.ZP)(a)) && void 0 !== n ? n : '', I = v.QK.useSetting();
-if (N)
+} = e, E = null !== (n = (0, u.ZP)(a)) && void 0 !== n ? n : '', I = C.QK.useSetting();
+if (d)
   return (0, s.jsx)('div', {
     className: g.guildIconExpired
   });
 let x = null == t || null != t.icon,
   j = i()((0, h.l)(g, 'guildIcon', x ? 'Image' : '', null != c ? 'Joined' : ''), p);
 if (null != l)
-  return (0, s.jsx)(d.Z, {
+  return (0, s.jsx)(m.Z, {
     game: l,
     onClick: c,
     size: g.applicationIcon,
     className: j
   });
 if (null != t)
-  return (0, s.jsx)(m.Z, {
+  return (0, s.jsx)(N.Z, {
     onClick: c,
     active: !0,
     guild: t,
@@ -95,10 +95,10 @@ if (null != a)
     className: j,
     'aria-label': E
   });
-else if (null != C)
+else if (null != v)
   return (0, s.jsx)(o.Avatar, {
     onClick: c,
-    src: C.getAvatarURL(null, 56),
+    src: v.getAvatarURL(null, 56),
     size: o.AvatarSizes.SIZE_56,
     className: j,
     'aria-label': E
@@ -116,10 +116,10 @@ let {
   className: (0, h.l)(g, 'inviteDestination', t ? 'Expired' : null != l ? 'Joined' : ''),
   children: n
 });
-return (0, s.jsxs)(C.Z, {
+return (0, s.jsxs)(d.Z, {
   className: g.guildInfo,
-  direction: C.Z.Direction.VERTICAL,
-  justify: C.Z.Justify.CENTER,
+  direction: d.Z.Direction.VERTICAL,
+  justify: d.Z.Justify.CENTER,
   children: [
     null == l ? i : (0, s.jsx)(o.Clickable, {
       onClick: l,
@@ -231,7 +231,7 @@ let {
 } = e, [l, a] = t.useState(!1), o = p.ZP.getGuildSplashURL({
   id: n.id,
   splash: n.splash,
-  size: 400 * (0, N.x_)()
+  size: 400 * (0, v.x_)()
 });
 return null == o ? null : (0, s.jsx)('div', {
   className: g.inviteSplash,

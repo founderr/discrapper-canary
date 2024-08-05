@@ -8,10 +8,10 @@ var n = t(735250),
   s = t(512722),
   a = t.n(s),
   d = t(481060),
-  u = t(560067),
-  r = t(434404),
-  o = t(430824),
-  c = t(153124),
+  u = t(313201),
+  r = t(560067),
+  o = t(434404),
+  c = t(430824),
   I = t(313741),
   S = t(526079),
   C = t(689938),
@@ -44,7 +44,7 @@ onClose: t,
 feature: s,
 section: S,
 subsection: C
-  } = e, p = (0, c.Dt)(), {
+  } = e, p = (0, u.Dt)(), {
 canCreateGuild: G,
 createGuildCta: T,
 createGuildDescription: g,
@@ -56,15 +56,15 @@ isGuildSupported: N
 var e;
 O(!0);
 let i = await new Promise(e => {
-  u.Z.openCreateGuildModal({
+  r.Z.openCreateGuildModal({
     onSuccess: e
   });
 });
 await (e = i, new Promise(i => {
-  o.Z.addChangeListener(function t() {
-    null != o.Z.getGuild(e) && (o.Z.removeChangeListener(t), i());
+  c.Z.addChangeListener(function t() {
+    null != c.Z.getGuild(e) && (c.Z.removeChangeListener(t), i());
   });
-})), r.Z.open(i, S, void 0, C), null == t || t();
+})), o.Z.open(i, S, void 0, C), null == t || t();
   };
   return (0, n.jsxs)(d.ModalRoot, {
 transitionState: i,
@@ -107,7 +107,7 @@ children: [
           }),
           (0, n.jsx)(d.Button, {
             onClick: () => {
-              a()(null != m, 'Guild ID must not be null on click'), r.Z.open(m, S, void 0, C), null == t || t();
+              a()(null != m, 'Guild ID must not be null on click'), o.Z.open(m, S, void 0, C), null == t || t();
             },
             disabled: null == m,
             children: R

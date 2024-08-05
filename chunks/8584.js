@@ -17,8 +17,8 @@ var s, a, i = n(735250),
   d = n.n(c),
   u = n(442837),
   _ = n(481060),
-  I = n(766434),
-  E = n(151011),
+  I = n(167533),
+  E = n(766434),
   T = n(937615),
   m = n(289393),
   N = n(264451),
@@ -294,7 +294,7 @@ return (0, i.jsxs)(i.Fragment, {
       payoutStatus: n,
       ppgDeferralReasons: s,
       periodEndDate: a
-    } = (0, I.j0)(e);
+    } = (0, E.j0)(e);
     return (0, i.jsx)(A, {
       children: f(t, n, s, a)
     });
@@ -307,7 +307,7 @@ payoutsByPeriod: t
   } = e, [n, s] = r.useState(new Set());
   return (0, i.jsx)('div', {
 className: R.tableContainer,
-children: (0, i.jsx)(E.Z, {
+children: (0, i.jsx)(I.Z, {
   columns: b,
   data: t,
   className: R.table,

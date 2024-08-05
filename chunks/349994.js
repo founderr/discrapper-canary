@@ -6,8 +6,8 @@ return x;
 var a = n(735250),
   s = n(470079),
   o = n(481060),
-  l = n(332664),
-  r = n(153124),
+  l = n(313201),
+  r = n(332664),
   i = n(429506),
   c = n(981631),
   d = n(531578),
@@ -26,7 +26,7 @@ classNameSelected: m.selected
 ];
 
 function x(e) {
-  let [t, d] = s.useState(null), x = (0, r.Dt)();
+  let [t, d] = s.useState(null), x = (0, l.Dt)();
   return (0, a.jsxs)(o.ModalRoot, {
 transitionState: e.transitionState,
 'aria-labelledby': x,
@@ -50,7 +50,7 @@ children: [
   }),
   (0, a.jsx)(o.ModalContent, {
     className: m.modalBody,
-    children: (0, a.jsx)(l.L, {
+    children: (0, a.jsx)(r.L, {
       ratingConfigs: b,
       className: m.ratingsSelector,
       selectedRating: t,

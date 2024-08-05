@@ -14,9 +14,9 @@ var s, a, o = n(735250),
   p = n(442837),
   m = n(481060),
   x = n(391650),
-  g = n(314897),
-  O = n(594174),
-  h = n(153124),
+  g = n(313201),
+  O = n(314897),
+  h = n(594174),
   v = n(626135),
   _ = n(361207),
   N = n(792125),
@@ -156,7 +156,7 @@ function L(e) {
 source: t,
 onClose: n,
 transitionState: s
-  } = e, a = (0, p.e7)([O.default], () => O.default.getCurrentUser()), l = (0, p.e7)([g.default], () => g.default.getFingerprint()), c = null == a || a.isClaimed(), [_, N] = r.useState(function() {
+  } = e, a = (0, p.e7)([h.default], () => h.default.getCurrentUser()), l = (0, p.e7)([O.default], () => O.default.getFingerprint()), c = null == a || a.isClaimed(), [_, N] = r.useState(function() {
 var e;
 switch (null === (e = d().os) || void 0 === e ? void 0 : e.family) {
   case 'OS X':
@@ -201,7 +201,7 @@ v.default.track(w.rMx.OPEN_MODAL, {
   }
 });
   }, [t]);
-  let T = (0, h.Dt)();
+  let T = (0, g.Dt)();
   return (0, o.jsx)(m.ModalRoot, {
 className: i()(A.downloadApps, M),
 transitionState: s,

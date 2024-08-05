@@ -13,15 +13,15 @@ var s = n(735250),
   l = n(442837),
   o = n(481060),
   c = n(852860),
-  d = n(977258),
-  u = n(45966),
-  _ = n(473403),
-  I = n(454585),
-  E = n(323502),
-  T = n(958832),
-  m = n(324067),
-  N = n(984933),
-  S = n(514342),
+  d = n(111028),
+  u = n(977258),
+  _ = n(45966),
+  I = n(473403),
+  E = n(454585),
+  T = n(323502),
+  m = n(958832),
+  N = n(324067),
+  S = n(984933),
   h = n(259580),
   g = n(999382),
   C = n(743475),
@@ -39,9 +39,9 @@ var s = n(735250),
 function j(e) {
   let {
 guild: t
-  } = e, i = (0, l.e7)([u.Z], () => u.Z.getEnabled(t.id)), r = (0, l.e7)([T.Z], () => T.Z.hasFetched(t.id)), c = (0, f.Z)(t), m = (0, l.e7)([x.Z], () => x.Z.editedDefaultChannelIds), N = c.filter(e => !m.has(e.id)), [h, g] = a.useState(!1);
+  } = e, i = (0, l.e7)([_.Z], () => _.Z.getEnabled(t.id)), r = (0, l.e7)([m.Z], () => m.Z.hasFetched(t.id)), c = (0, f.Z)(t), N = (0, l.e7)([x.Z], () => x.Z.editedDefaultChannelIds), S = c.filter(e => !N.has(e.id)), [h, g] = a.useState(!1);
   a.useEffect(() => {
-!r && !i && (0, E.S)(t.id);
+!r && !i && (0, T.S)(t.id);
   }, [
 t.id,
 r,
@@ -59,7 +59,7 @@ i
   });
 });
   };
-  return h || 0 === N.length ? null : (0, s.jsxs)('div', {
+  return h || 0 === S.length ? null : (0, s.jsxs)('div', {
 className: v.recommendations,
 children: [
   (0, s.jsx)(o.Text, {
@@ -96,7 +96,7 @@ children: [
   }),
   (0, s.jsx)('div', {
     className: v.recommendedChannels,
-    children: N.map((e, n) => (0, s.jsxs)(s.Fragment, {
+    children: S.map((e, n) => (0, s.jsxs)(s.Fragment, {
       children: [
         (0, s.jsxs)('div', {
           className: v.channelRow,
@@ -107,11 +107,11 @@ children: [
                 (0, s.jsxs)('div', {
                   className: v.channelName,
                   children: [
-                    (0, s.jsx)(_._, {
+                    (0, s.jsx)(I._, {
                       channel: e,
                       guild: t
                     }),
-                    (0, s.jsx)(S.Z, {
+                    (0, s.jsx)(d.Z, {
                       className: v.__invalid_name,
                       children: (0, s.jsx)(o.Text, {
                         className: v.__invalid_channelText,
@@ -123,18 +123,18 @@ children: [
                     })
                   ]
                 }),
-                null != e.topic && e.topic.length > 0 ? (0, s.jsx)(S.Z, {
+                null != e.topic && e.topic.length > 0 ? (0, s.jsx)(d.Z, {
                   children: (0, s.jsx)(o.Text, {
                     className: v.topic,
                     variant: 'text-xs/normal',
-                    children: I.Z.parseTopic(e.topic, !0, {
+                    children: E.Z.parseTopic(e.topic, !0, {
                       channelId: e.id
                     })
                   })
                 }, 'topic') : null
               ]
             }),
-            (0, d.s)(t.id, e.id) ? (0, s.jsx)(o.Button, {
+            (0, u.s)(t.id, e.id) ? (0, s.jsx)(o.Button, {
               color: o.Button.Colors.BRAND,
               size: o.Button.Sizes.SMALL,
               className: v.addChannelCTA,
@@ -159,7 +159,7 @@ children: [
             })
           ]
         }),
-        n < N.length - 1 ? (0, s.jsx)('div', {
+        n < S.length - 1 ? (0, s.jsx)('div', {
           className: v.separator
         }) : null
       ]
@@ -175,19 +175,19 @@ children: [
 function Z(e) {
   let {
 saveOnClose: t = !1
-  } = e, n = (0, l.e7)([g.Z], () => g.Z.getGuild()), i = (0, l.e7)([u.Z], () => u.Z.isLoading()), c = (0, l.e7)([N.ZP], () => N.ZP.getChannels(null == n ? void 0 : n.id)), d = (0, l.e7)([m.Z], () => m.Z.getCategories(null == n ? void 0 : n.id)), _ = (0, l.e7)([R.Z], () => R.Z.advancedMode), I = a.useRef(null), [E, T] = a.useState(!1);
+  } = e, n = (0, l.e7)([g.Z], () => g.Z.getGuild()), i = (0, l.e7)([_.Z], () => _.Z.isLoading()), c = (0, l.e7)([S.ZP], () => S.ZP.getChannels(null == n ? void 0 : n.id)), d = (0, l.e7)([N.Z], () => N.Z.getCategories(null == n ? void 0 : n.id)), u = (0, l.e7)([R.Z], () => R.Z.advancedMode), I = a.useRef(null), [E, T] = a.useState(!1);
   return (a.useEffect(() => {
 if (t)
   return () => {
     null != n && (0, C.DO)(n).then(() => {
-      _ && (0, p.rS)(n, {
+      u && (0, p.rS)(n, {
         ignoreDefaultPrompt: !0
       }).catch(() => {});
     }).catch(() => {});
   };
   }, [
 t,
-_
+u
   ]), null == n) ? null : i ? (0, s.jsx)(o.Spinner, {}) : (0, s.jsxs)('div', {
 className: v.columns,
 children: [
@@ -231,7 +231,7 @@ children: [
           })
         ]
       }),
-      _ && (0, s.jsxs)(s.Fragment, {
+      u && (0, s.jsxs)(s.Fragment, {
         children: [
           (0, s.jsx)('div', {
             className: v.largeSeparator

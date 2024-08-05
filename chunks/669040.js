@@ -12,20 +12,20 @@ var r = n(735250),
   E = n(788911),
   f = n(2052),
   h = n(906732),
-  p = n(806966),
-  m = n(28546),
-  I = n(691251),
-  T = n(98528),
-  g = n(551058),
-  S = n(536442),
-  A = n(104494),
-  N = n(639119),
-  v = n(53691),
-  O = n(75145),
-  R = n(631771),
-  C = n(695346),
-  y = n(594174),
-  D = n(695464),
+  p = n(218867),
+  m = n(806966),
+  I = n(28546),
+  T = n(691251),
+  g = n(98528),
+  S = n(551058),
+  A = n(536442),
+  N = n(104494),
+  v = n(639119),
+  O = n(53691),
+  R = n(75145),
+  C = n(631771),
+  y = n(695346),
+  D = n(594174),
   L = n(626135),
   b = n(111361),
   M = n(74538),
@@ -59,12 +59,12 @@ let {
   searchQuery: _,
   sectionDescriptors: E,
   setCollapsedSections: h,
-  getEmojiItemProps: m,
-  getEmojiRowProps: T,
-  isScrolling: A,
+  getEmojiItemProps: p,
+  getEmojiRowProps: I,
+  isScrolling: g,
   isUsingKeyboardNavigation: N,
   allowAnimatedEmoji: v,
-  channelGuildId: R,
+  channelGuildId: O,
   messageId: C,
   isBurstReaction: y,
   listHeaderClassName: D,
@@ -100,9 +100,9 @@ let {
     visibleRowIndex: n
   } = e, r = e.type === G.ld.EMOJI ? e.emoji.allNamesString : e.name;
   H.current !== F.xAR && window.cancelAnimationFrame(H.current), H.current = window.requestAnimationFrame(() => {
-    p.kJ.setInspectedExpressionPosition(t, n, I.u.MOUSE_EVENT), p.kJ.setSearchPlaceholder(r), H.current = F.xAR;
+    m.kJ.setInspectedExpressionPosition(t, n, T.u.MOUSE_EVENT), m.kJ.setSearchPlaceholder(r), H.current = F.xAR;
   });
-}, []), et = (0, c.e7)([S.qc], () => S.qc.hasHotspot(S.v6.FAVORITE_EMOJI_TOOLTIP), []), en = i.useMemo(() => l().memoize((e, t) => {
+}, []), et = (0, c.e7)([A.qc], () => A.qc.hasHotspot(A.v6.FAVORITE_EMOJI_TOOLTIP), []), en = i.useMemo(() => l().memoize((e, t) => {
   let n = a[e],
     i = E[t.sectionIndex];
   return (0, r.jsx)(k.Z, {
@@ -111,14 +111,14 @@ let {
     surrogateCodePoint: Z,
     onInspect: ee,
     onSelect: u,
-    getEmojiItemProps: m,
-    getEmojiRowProps: T,
-    isScrolling: A,
+    getEmojiItemProps: p,
+    getEmojiRowProps: I,
+    isScrolling: g,
     isUsingKeyboardNavigation: N,
     rowIndex: e,
     allowAnimatedEmoji: v,
     showEmojiFavoriteTooltip: et,
-    channelGuildId: R,
+    channelGuildId: O,
     category: i.sectionId,
     selectedItemClassName: Y.__invalid_selectedItem,
     messageId: C,
@@ -132,13 +132,13 @@ let {
   Z,
   ee,
   u,
-  m,
-  T,
-  A,
+  p,
+  I,
+  g,
   N,
   v,
   et,
-  R,
+  O,
   C,
   y
 ]);
@@ -174,7 +174,7 @@ let er = i.useMemo(() => l().memoize(e => {
       _ = n.isNitroLocked,
       f = _ && !d,
       h = _ && d;
-    return (0, r.jsx)(g.Z, {
+    return (0, r.jsx)(S.Z, {
       className: s()(Y.header, D, {
         [Y.inactiveNitroHeader]: f,
         [Y.activeNitroHeader]: h
@@ -210,7 +210,7 @@ let er = i.useMemo(() => l().memoize(e => {
     $,
     X
   ]),
-  ea = i.useCallback(e => $(e) ? (0, r.jsx)(O.Z, {
+  ea = i.useCallback(e => $(e) ? (0, r.jsx)(R.Z, {
     glowOpacity: M
   }) : X(e) ? (0, r.jsx)('div', {
     className: Y.nitroBottomDivider
@@ -259,23 +259,23 @@ let {
   setUpsellConfigs: l,
   sectionDescriptors: d,
   rowCountBySection: _,
-  collapsedSections: I,
-  setCollapsedSections: g,
-  getEmojiItemProps: S,
-  getEmojiRowProps: O,
+  collapsedSections: T,
+  setCollapsedSections: S,
+  getEmojiItemProps: A,
+  getEmojiRowProps: R,
   rowCount: P,
   isUsingKeyboardNavigation: U,
   channelGuildId: w,
   messageId: x,
   isBurstReaction: k,
   listHeaderClassName: B
-} = e, V = i.useRef(!1), j = p.kJ.useStore(e => e.activeCategoryIndex), W = (0, m.Iu)(e => e.searchQuery), K = C.Yk.useSetting(), z = (0, c.e7)([y.default], () => y.default.getCurrentUser()), q = (0, b.I5)(z), {
+} = e, V = i.useRef(!1), j = m.kJ.useStore(e => e.activeCategoryIndex), W = (0, I.Iu)(e => e.searchQuery), K = y.Yk.useSetting(), z = (0, c.e7)([D.default], () => D.default.getCurrentUser()), q = (0, b.I5)(z), {
   location: Q
 } = (0, f.O)(), {
   analyticsLocations: X
-} = (0, h.ZP)(), [ee, et] = i.useState(0), [en, er] = i.useState(!1), [ei, ea] = i.useState(0), es = (0, N.N)(), eo = (0, A.Ng)(), el = en && !q && !u.tq && !(null != es || null != eo), {
+} = (0, h.ZP)(), [ee, et] = i.useState(0), [en, er] = i.useState(!1), [ei, ea] = i.useState(0), es = (0, v.N)(), eo = (0, N.Ng)(), el = en && !q && !u.tq && !(null != es || null != eo), {
   enabled: eu
-} = R.Gi.useExperiment({
+} = C.Gi.useExperiment({
   location: 'Premium Emoji Roadblock'
 }, {
   autoTrackExposure: el,
@@ -290,16 +290,16 @@ let {
   sectionHeaderHeight: ep,
   sectionFooterHeight: em
 } = J({
-  collapsedSections: I,
+  collapsedSections: T,
   diversitySurrogate: t,
   emojiGrid: n,
   emojiSize: s,
   onEmojiSelect: o,
   searchQuery: W,
   sectionDescriptors: d,
-  setCollapsedSections: g,
-  getEmojiItemProps: S,
-  getEmojiRowProps: O,
+  setCollapsedSections: S,
+  getEmojiItemProps: A,
+  getEmojiRowProps: R,
   isScrolling: V,
   isUsingKeyboardNavigation: U,
   allowAnimatedEmoji: K,
@@ -309,24 +309,24 @@ let {
   listHeaderClassName: B,
   activeSectionIndex: ee,
   upsellGlowOpacity: ei
-}), eI = (0, T.Uf)({
+}), eI = (0, g.Uf)({
   listRef: a,
   searchQuery: W,
   nitroLockedSectionStates: d,
   setShowUpsell: er,
   setUpsellGlowOpacity: ea
-}), eT = (0, T.Qs)({
+}), eT = (0, g.Qs)({
   activeCategoryIndex: j,
   isScrolling: V,
   listRef: a,
   onActiveCategoryIndexChange: e => {
-    et(e), '' === W && p.kJ.setActiveCategoryIndex(e);
+    et(e), '' === W && m.kJ.setActiveCategoryIndex(e);
   },
   scrollOffset: 0,
   searchQuery: W,
   disableForSearch: !1
 });
-(0, T.Xs)({
+(0, g.Xs)({
   searchQuery: W,
   activeCategoryIndex: j,
   listRef: a
@@ -353,7 +353,7 @@ return i.useEffect(() => {
 }, [W]), (0, r.jsxs)('div', {
   className: Y.listWrapper,
   children: [
-    eS ? (0, r.jsx)(D.Z, {
+    eS ? (0, r.jsx)(p.Z, {
       role: 'none presentation',
       className: Y.list,
       listPadding: ec,
@@ -374,7 +374,7 @@ return i.useEffect(() => {
       message: Z.Z.Messages.NO_EMOJI_SEARCH_RESULTS,
       className: Y.noSearchResultsContainer
     }),
-    q || u.tq ? null : (0, r.jsx)(v.p, {
+    q || u.tq ? null : (0, r.jsx)(O.p, {
       showUpsell: en,
       upsellText: function() {
         if (!eu)

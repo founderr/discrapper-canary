@@ -18,10 +18,10 @@ var i = n(735250),
   _ = n(695346),
   f = n(768119),
   E = n(944486),
-  g = n(693580),
-  C = n(585483),
-  I = n(251285),
-  x = n(406326),
+  g = n(585483),
+  C = n(251285),
+  I = n(406326),
+  x = n(994463),
   T = n(619753),
   N = n(981631),
   v = n(689938),
@@ -90,10 +90,10 @@ children: (0, i.jsx)('div', {
 };
 class b extends a.PureComponent {
   componentDidMount() {
-C.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+g.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
   }
   componentWillUnmount() {
-C.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+g.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
   }
   componentDidUpdate(e) {
 let {
@@ -217,7 +217,7 @@ super(...e), Z(this, 'state', {
     isHistoricalIndexing: a,
     documentsIndexed: s
   } = this.props.search;
-  return (0, i.jsx)(x.Z, {
+  return (0, i.jsx)(I.Z, {
     searchMode: e,
     searchByMode: this.searchByMode,
     totalResults: t,
@@ -229,7 +229,7 @@ super(...e), Z(this, 'state', {
   let e = f.Z.getSearchType(this.props.searchId) === N.aib.GUILD ? v.Z.Messages.SEARCH_GUILD_STILL_INDEXING : v.Z.Messages.SEARCH_DM_STILL_INDEXING;
   return (0, i.jsxs)(M, {
     children: [
-      (0, i.jsx)(g.Z, {}),
+      (0, i.jsx)(x.Z, {}),
       (0, i.jsx)('div', {
         className: (S.emptyResultsText, S.stillIndexing),
         children: e
@@ -298,7 +298,7 @@ search: n,
   searchAnalyticsId: f.Z.getAnalyticsId(t),
   searchType: f.Z.getSearchType()
 }), [t]),
-...(0, I.Z)(t),
+...(0, C.Z)(t),
 renderEmbeds: _.NA.useSetting(),
 developerMode: _.Sb.useSetting(),
 ...(0, c.cj)([m.Z], () => {

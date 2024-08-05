@@ -9,10 +9,10 @@ var o = n(735250),
   a = n(481060),
   l = n(100527),
   s = n(906732),
-  c = n(411477),
-  d = n(197115),
-  u = n(594174),
-  _ = n(154921),
+  c = n(112831),
+  d = n(411477),
+  u = n(197115),
+  _ = n(594174),
   g = n(626135),
   E = n(74538),
   f = n(981631),
@@ -25,7 +25,7 @@ function p(e) {
   let {
 analyticsSection: i,
 type: n
-  } = e, p = (0, r.e7)([u.default], () => u.default.getCurrentUser()), R = E.ZP.canUseAnimatedAvatar(p), m = E.ZP.canUsePremiumProfileCustomization(p), x = n === T.pC.BANNER && m || n === T.pC.AVATAR && R, {
+  } = e, p = (0, r.e7)([_.default], () => _.default.getCurrentUser()), R = E.ZP.canUseAnimatedAvatar(p), m = E.ZP.canUsePremiumProfileCustomization(p), x = n === T.pC.BANNER && m || n === T.pC.AVATAR && R, {
 sourceAnalyticsLocations: B
   } = (0, s.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
   if (t.useEffect(() => {
@@ -39,7 +39,7 @@ sourceAnalyticsLocations: B
   B
 ]), x)
 return null;
-  let b = (0, o.jsx)(d.Z, {
+  let b = (0, o.jsx)(u.Z, {
 className: h.__invalid_getNitroLink,
 size: a.Button.Sizes.SMALL,
 look: a.Button.Looks.LINK,
@@ -53,12 +53,12 @@ premiumModalAnalyticsLocation: {
 },
 disableShine: !0
   });
-  return (0, o.jsx)(c.Z, {
+  return (0, o.jsx)(d.Z, {
 reducedRightPadding: !0,
 className: h.nitroPreviewUpsell,
 text: I.Z.Messages.PREMIUM_PREVIEW.format(),
-textSize: _.Z.Sizes.SIZE_14,
-textColor: _.Z.Colors.HEADER_PRIMARY,
+textSize: c.Z.Sizes.SIZE_14,
+textColor: c.Z.Colors.HEADER_PRIMARY,
 button: b
   });
 }

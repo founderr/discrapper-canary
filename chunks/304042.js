@@ -14,16 +14,16 @@ var i = n(120356),
   c = n(110924),
   d = n(100527),
   _ = n(906732),
-  E = n(318374),
-  f = n(382182),
-  h = n(769654),
-  p = n(543882),
-  m = n(592125),
-  I = n(430824),
-  T = n(496675),
-  g = n(914010),
-  S = n(938475),
-  A = n(368666),
+  E = n(194082),
+  f = n(318374),
+  h = n(382182),
+  p = n(769654),
+  m = n(543882),
+  I = n(592125),
+  T = n(430824),
+  g = n(496675),
+  S = n(914010),
+  A = n(938475),
   N = n(502762),
   v = n(652853),
   O = n(194811),
@@ -56,23 +56,23 @@ theme: Z
   } = (0, v.z)(), Y = {
 [w.fullSize]: H === b.y0.FULL_SIZE,
 [U.fullSize]: H === b.y0.FULL_SIZE
-  }, j = (0, s.e7)([g.Z], () => g.Z.getGuildId()), W = (0, s.e7)([I.Z], () => I.Z.getGuild(null == i ? void 0 : i.guildId)), K = (0, s.e7)([m.Z], () => m.Z.getChannel(null == i ? void 0 : i.channelId)), z = (0, s.Wu)([S.ZP], () => null != K ? S.ZP.getVoiceStatesForChannel(K).map(e => {
+  }, j = (0, s.e7)([S.Z], () => S.Z.getGuildId()), W = (0, s.e7)([T.Z], () => T.Z.getGuild(null == i ? void 0 : i.guildId)), K = (0, s.e7)([I.Z], () => I.Z.getChannel(null == i ? void 0 : i.channelId)), z = (0, s.Wu)([A.ZP], () => null != K ? A.ZP.getVoiceStatesForChannel(K).map(e => {
 let {
   user: t
 } = e;
 return t;
-  }) : []), [q, Q] = (0, f.wq)(K), {
+  }) : []), [q, Q] = (0, h.wq)(K), {
 url: X,
 isLoading: $,
 canSeePreview: J
   } = (0, s.cj)([
-T.Z,
-p.Z
+g.Z,
+m.Z
   ], () => {
-let e = null != K && T.Z.canBasicChannel(M.S7T.CONNECT, K);
+let e = null != K && g.Z.canBasicChannel(M.S7T.CONNECT, K);
 return e ? {
-  url: p.Z.getPreviewURL(i.guildId, i.channelId, i.ownerId),
-  isLoading: p.Z.getIsPreviewLoading(i.guildId, i.channelId, i.ownerId),
+  url: m.Z.getPreviewURL(i.guildId, i.channelId, i.ownerId),
+  isLoading: m.Z.getIsPreviewLoading(i.guildId, i.channelId, i.ownerId),
   canSeePreview: e
 } : {
   url: null,
@@ -148,12 +148,12 @@ er = () => H !== b.y0.FULL_SIZE ? null : (0, r.jsxs)('div', {
             guildName: W.name
           }),
           onClick: W.id === j ? void 0 : () => {
-            (0, h.X)(W.id), null == F || F();
+            (0, p.X)(W.id), null == F || F();
           }
         })
       ]
     }),
-    (0, r.jsx)(E.Z, {
+    (0, r.jsx)(f.Z, {
       users: z,
       guildId: W.id,
       channelId: K.id,
@@ -205,8 +205,8 @@ children: (0, r.jsx)(y.Z, {
           text: P.Z.Messages.USER_ACTIVITY_STREAMING,
           tags: (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(A.ZP, {
-                size: A.OH.SMALL
+              (0, r.jsx)(E.ZP, {
+                size: E.OH.SMALL
               }),
               (0, r.jsx)(L.Z, {
                 display: 'live',

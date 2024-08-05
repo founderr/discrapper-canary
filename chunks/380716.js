@@ -11,13 +11,13 @@ var a = n(735250),
   r = n(481060),
   u = n(596454),
   d = n(471445),
-  c = n(907040),
-  I = n(734893),
-  m = n(813197),
-  _ = n(592125),
-  N = n(984933),
-  h = n(430824),
-  v = n(153124),
+  c = n(313201),
+  I = n(907040),
+  m = n(734893),
+  _ = n(813197),
+  N = n(592125),
+  h = n(984933),
+  v = n(430824),
   p = n(768581),
   T = n(823379),
   x = n(700785),
@@ -30,9 +30,9 @@ var a = n(735250),
 
 function S(e, l) {
   switch (e) {
-case I.oi.VIEW:
+case m.oi.VIEW:
   return x.Uu(O.Plq.VIEW_CHANNEL, l);
-case I.oi.CHAT:
+case m.oi.CHAT:
   if (O.TPd.GUILD_THREADS_ONLY.has(l.type))
     return x.Uu(O.Plq.SEND_MESSAGES_IN_THREADS, l) || x.Uu(O.Plq.SEND_MESSAGES, l);
   return x.Uu(O.Plq.SEND_MESSAGES, l);
@@ -54,14 +54,14 @@ icon: []
 
 function M(e) {
   let l = f(),
-n = _.Z.getChannel(e.channelId);
-  return (null == e.title || e.title.length < I.Wz) && l.title.push(A.Z.Messages.NEW_MEMBER_ACTION_VALIDATION_ERROR_TITLE_REQUIRED.format({
-minLength: I.Wz
+n = N.Z.getChannel(e.channelId);
+  return (null == e.title || e.title.length < m.Wz) && l.title.push(A.Z.Messages.NEW_MEMBER_ACTION_VALIDATION_ERROR_TITLE_REQUIRED.format({
+minLength: m.Wz
   })), null != e.actionType && null != n && !S(e.actionType, n) && l.actionType.push(function(e) {
 switch (e) {
-  case I.oi.VIEW:
+  case m.oi.VIEW:
     return A.Z.Messages.NEW_MEMBER_ACTION_VALIDATION_ERROR_TYPE_VIEW_INVALID_FOR_CHANNEL;
-  case I.oi.CHAT:
+  case m.oi.CHAT:
     return A.Z.Messages.NEW_MEMBER_ACTION_VALIDATION_ERROR_TYPE_CHAT_INVALID_FOR_CHANNEL;
   default:
     (0, T.vE)(e);
@@ -78,20 +78,20 @@ guildId: B,
 action: U,
 onSave: k,
 onDelete: P
-  } = e, y = (0, v.Dt)(), [H] = o.useState(function(e) {
+  } = e, y = (0, c.Dt)(), [H] = o.useState(function(e) {
 if (null == e)
   return null;
-let l = _.Z.getChannel(e.channelId);
+let l = N.Z.getChannel(e.channelId);
 return null == l ? null : {
   value: e.channelId,
   label: l.name
 };
-  }(U)), [V, w] = o.useState(H), z = (0, s.e7)([_.Z], () => _.Z.getChannel(null == V ? void 0 : V.value)), W = (null == z ? void 0 : z.isMediaChannel()) === !0, F = o.useMemo(() => [{
-  value: I.oi.VIEW,
+  }(U)), [V, w] = o.useState(H), z = (0, s.e7)([N.Z], () => N.Z.getChannel(null == V ? void 0 : V.value)), W = (null == z ? void 0 : z.isMediaChannel()) === !0, F = o.useMemo(() => [{
+  value: m.oi.VIEW,
   name: A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_VIEW
 },
 {
-  value: I.oi.CHAT,
+  value: m.oi.CHAT,
   name: (null == z ? void 0 : z.type) === O.d4z.GUILD_FORUM ? W ? A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_TALK_IN_MEDIA_CHANNEL : A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_TALK_IN_FORUM : A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_TALK
 }
   ], [
@@ -176,7 +176,7 @@ Y,
 V,
 q,
 ee
-  ]), eI = o.useCallback(e => Promise.resolve(N.ZP.getSelectableChannels(B).filter(l => !X.has(l.channel.id) && (0, I.kb)(l.channel) && i()(e, l.channel.name)).map(e => ({
+  ]), eI = o.useCallback(e => Promise.resolve(h.ZP.getSelectableChannels(B).filter(l => !X.has(l.channel.id) && (0, m.kb)(l.channel) && i()(e, l.channel.name)).map(e => ({
 value: e.channel.id,
 label: e.channel.name
   }))), [
@@ -185,8 +185,8 @@ X
   ]), em = o.useCallback(e => {
 if (null == e || null == B)
   return null;
-let l = _.Z.getChannel(e.value),
-  n = h.Z.getGuild(B);
+let l = N.Z.getChannel(e.value),
+  n = v.Z.getGuild(B);
 if (null == l || null == n)
   return null;
 let o = (0, d.KS)(l, n);
@@ -295,7 +295,7 @@ children: [
             error: (null !== (T = null == q ? void 0 : q.length) && void 0 !== T ? T : 0) > 0 ? K.title.join(', ') : null,
             onChange: eu,
             placeholder: A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_TITLE_PLACEHOLDER,
-            maxLength: I.Z3
+            maxLength: m.Z3
           })
         ]
       }),
@@ -354,7 +354,7 @@ children: [
                 let l = e.closePopout,
                   n = (0, a.jsxs)(a.Fragment, {
                     children: [
-                      (0, a.jsx)(m.ZP, {
+                      (0, a.jsx)(_.ZP, {
                         onChange: e => {
                           eh(e), l();
                         },
@@ -373,7 +373,7 @@ children: [
                       let {
                         closePopout: n
                       } = e;
-                      return (0, a.jsx)(c.Z, {
+                      return (0, a.jsx)(I.Z, {
                         closePopout: () => {
                           n(), l();
                         },

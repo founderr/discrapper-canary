@@ -7,16 +7,16 @@ var i = n(735250),
   o = n(481060),
   c = n(749210),
   u = n(367907),
-  d = n(231053),
-  _ = n(697568),
-  E = n(183023),
-  I = n(524444),
-  m = n(98278),
-  T = n(197115),
-  h = n(430824),
-  N = n(594174),
-  C = n(285952),
-  f = n(514342),
+  d = n(600164),
+  _ = n(111028),
+  E = n(231053),
+  I = n(697568),
+  m = n(183023),
+  T = n(524444),
+  h = n(98278),
+  N = n(197115),
+  C = n(430824),
+  f = n(594174),
   p = n(626135),
   g = n(74538),
   S = n(453070),
@@ -49,7 +49,7 @@ function j(e) {
   p.default.track(M.rMx.PREMIUM_PROMOTION_OPENED, {
 location_page: null != e.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
 location_section: M.jXE.STICKER_POPOUT
-  }), (0, m.z)();
+  }), (0, h.z)();
 }
 
 function U(e) {
@@ -57,22 +57,22 @@ function U(e) {
 sticker: t,
 description: n
   } = e;
-  return (0, i.jsxs)(C.Z, {
+  return (0, i.jsxs)(d.Z, {
 children: [
   (0, i.jsx)(O.ZP, {
     sticker: t,
     size: 48,
     isInteracting: !0
   }),
-  (0, i.jsxs)(C.Z, {
-    direction: C.Z.Direction.VERTICAL,
-    justify: C.Z.Justify.CENTER,
+  (0, i.jsxs)(d.Z, {
+    direction: d.Z.Direction.VERTICAL,
+    justify: d.Z.Justify.CENTER,
     className: P.truncatingText,
     children: [
       (0, i.jsx)(o.Text, {
         className: P.__invalid_emojiName,
         variant: 'text-md/semibold',
-        children: (0, i.jsx)(f.Z, {
+        children: (0, i.jsx)(_.Z, {
           children: t.name
         })
       }),
@@ -100,7 +100,7 @@ let {
   stickerPack: c
 });
 (0, S.Pq)(n.pack_id);
-let m = (0, S.Sd)(a);
+let I = (0, S.Sd)(a);
 return (s.useEffect(() => {
   r();
 }, [d]), s.useEffect(() => {
@@ -110,9 +110,9 @@ return (s.useEffect(() => {
     sticker_pack_id: n.pack_id,
     ...(0, u.v_)(a)
   });
-}, [n.pack_id]), d || null == c) ? (0, i.jsx)(I.SE, {
+}, [n.pack_id]), d || null == c) ? (0, i.jsx)(T.SE, {
   className: Z.popoutLoader
-}) : (0, i.jsxs)(I.W_, {
+}) : (0, i.jsxs)(T.W_, {
   className: Z.popoutContent,
   children: [
     (0, i.jsx)(o.Heading, {
@@ -139,7 +139,7 @@ return (s.useEffect(() => {
         onClick: () => {
           _ && (0, x.m)({
             stickerPack: c,
-            stickerPickerCategories: m
+            stickerPickerCategories: I
           }), t();
         },
         children: L.Z.Messages.STICKER_VIEW_MORE_STICKERS
@@ -152,14 +152,14 @@ return (s.useEffect(() => {
 let t, {
     sticker: n,
     channel: a,
-    closePopout: m,
-    refreshPositionKey: f
+    closePopout: _,
+    refreshPositionKey: h
   } = e,
   [S, A] = s.useState(null),
   [R, x] = s.useState(!1),
-  D = N.default.getCurrentUser(),
+  D = f.default.getCurrentUser(),
   b = g.ZP.canUseCustomStickersEverywhere(D),
-  y = (0, l.e7)([h.Z], () => h.Z.getGuild(n.guild_id)),
+  y = (0, l.e7)([C.Z], () => C.Z.getGuild(n.guild_id)),
   B = null != y,
   [k, G] = s.useState(!1),
   [F, w] = s.useState(null),
@@ -175,7 +175,7 @@ let t, {
   });
 s.useEffect(() => {
   (async () => {
-    (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, _.Z)(n.id)), x(!0);
+    (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, I.Z)(n.id)), x(!0);
   })();
 }, [
   n.id,
@@ -187,12 +187,12 @@ let Y = n.guild_id === a.getGuildId(),
   z = 'Custom Sticker Popout';
 b ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (Y ? t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : W ? (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
   openPremiumSettings: () => {
-    j(a), m();
+    j(a), _();
   }
 }), z = 'Custom Sticker Popout (Soft Upsell)');
 let Q = !K && !B && W && b;
 return (s.useEffect(() => {
-  f();
+  h();
 }, [
   R,
   S
@@ -201,14 +201,14 @@ return (s.useEffect(() => {
     type: z,
     ...H
   });
-}, []), R) ? (0, i.jsxs)(I.W_, {
+}, []), R) ? (0, i.jsxs)(T.W_, {
   className: P.popoutContent,
   children: [
     (() => {
       let e = async () => {
         if (null == S || B)
           return;
-        m();
+        _();
         let e = S.id;
         try {
           await c.Z.joinGuild(e), c.Z.transitionToGuildSync(e);
@@ -221,13 +221,13 @@ return (s.useEffect(() => {
             description: t,
             sticker: n
           }),
-          K && (0, i.jsx)(T.Z, {
+          K && (0, i.jsx)(N.Z, {
             className: P.ctaButton,
             subscriptionTier: v.Si.TIER_2,
             size: o.Button.Sizes.SMALL,
             fullWidth: !0,
             buttonText: L.Z.Messages.EMOJI_POPOUT_PREMIUM_CTA,
-            onSubscribeModalClose: t => t ? e() : m(),
+            onSubscribeModalClose: t => t ? e() : _(),
             postSuccessGuild: B || null == S ? void 0 : S,
             premiumModalAnalyticsLocation: V
           }),
@@ -246,7 +246,7 @@ return (s.useEffect(() => {
       if (!W && !B)
         return;
       let t = (null !== (e = null == S ? void 0 : S.stickers) && void 0 !== e ? e : []).slice(0, 13).filter(e => e.id !== n.id).slice(0, 12),
-        s = null != S ? d.JO.createFromDiscoverableGuild(S) : d.JO.createFromGuildRecord(y);
+        s = null != S ? E.JO.createFromDiscoverableGuild(S) : E.JO.createFromGuildRecord(y);
       return (0, i.jsxs)('div', {
         className: P.guildSection,
         children: [
@@ -254,7 +254,7 @@ return (s.useEffect(() => {
             className: P.guildTitle,
             children: B ? L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
           }),
-          (0, i.jsx)(E.Oe, {
+          (0, i.jsx)(m.Oe, {
             expressionSourceGuild: s,
             hasJoinedExpressionSourceGuild: B,
             isDisplayingJoinGuildButtonInPopout: Q
@@ -263,10 +263,10 @@ return (s.useEffect(() => {
             children: [
               (0, i.jsx)(o.Clickable, {
                 onClick: () => {
-                  f(), G(!k);
+                  h(), G(!k);
                 },
                 className: P.showMoreEmojis,
-                children: (0, i.jsxs)(C.Z, {
+                children: (0, i.jsxs)(d.Z, {
                   children: [
                     (0, i.jsx)(o.Text, {
                       className: P.__invalid_showMoreEmojisLabel,
@@ -284,14 +284,14 @@ return (s.useEffect(() => {
                   ]
                 })
               }),
-              k && (0, i.jsx)(C.Z, {
-                wrap: C.Z.Wrap.WRAP,
-                align: C.Z.Align.START,
-                justify: C.Z.Justify.START,
+              k && (0, i.jsx)(d.Z, {
+                wrap: d.Z.Wrap.WRAP,
+                align: d.Z.Align.START,
+                justify: d.Z.Justify.START,
                 className: P.otherEmojisContainer,
                 children: t.map(e => (0, i.jsx)(o.Tooltip, {
                   text: e.name,
-                  ...I.b_,
+                  ...T.b_,
                   children: t => {
                     let {
                       onMouseEnter: n,
@@ -327,7 +327,7 @@ return (s.useEffect(() => {
       });
     })()
   ]
-}) : (0, i.jsx)(I.SE, {
+}) : (0, i.jsx)(T.SE, {
   className: Z.popoutLoader
 });
   };
@@ -338,7 +338,7 @@ channel: t,
 closePopout: n,
 sticker: s
   } = e;
-  return (0, i.jsx)(I.W_, {
+  return (0, i.jsx)(T.W_, {
 className: Z.popoutContent,
 children: (0, i.jsx)(U, {
   sticker: s,
@@ -372,7 +372,7 @@ return (0, i.jsx)(B, {
   refreshPositionKey: a
 });
   if (!l)
-return (0, i.jsx)(I.SE, {});
+return (0, i.jsx)(T.SE, {});
   else if (l && null == r)
 return (0, i.jsx)(k, {
   channel: n,

@@ -15,13 +15,13 @@ var a = s(735250),
   m = s(442837),
   _ = s(481060),
   E = s(809206),
-  p = s(219496),
-  x = s(575681),
-  b = s(807369),
-  h = s(180529),
-  I = s(25990),
-  N = s(594174),
-  R = s(154921),
+  p = s(112831),
+  x = s(219496),
+  b = s(575681),
+  h = s(807369),
+  I = s(180529),
+  N = s(25990),
+  R = s(594174),
   S = s(74538),
   f = s(981631),
   M = s(689938),
@@ -33,14 +33,14 @@ usernameStatus: t,
 showHint: s
   } = e;
   return (0, d.EQ)(t).with({
-type: p.K.ERROR,
+type: x.K.ERROR,
 message: d.P.select()
   }, e => (0, a.jsx)(_.Text, {
 variant: 'text-sm/normal',
 color: 'text-danger',
 children: e
   })).with({
-type: p.K.AVAILABLE,
+type: x.K.AVAILABLE,
 message: d.P.select()
   }, e => (0, a.jsx)(_.Text, {
 variant: 'text-sm/normal',
@@ -58,10 +58,10 @@ function T(e) {
   let {
 transitionState: s,
 onClose: l
-  } = e, o = (0, m.e7)([N.default], () => {
-let e = N.default.getCurrentUser();
+  } = e, o = (0, m.e7)([R.default], () => {
+let e = R.default.getCurrentUser();
 return r()(null != e, 'ChangeUsernameModal: currentUser cannot be undefined'), e;
-  }), u = n.useMemo(() => S.ZP.canEditDiscriminator(o) && !o.isPomelo(), [o]), [d, T] = n.useState(!1), [A, L] = n.useState(o.username), [j, B] = n.useState(o.discriminator), [U, P] = n.useState(''), [Z, w] = n.useState(!1), O = (0, m.e7)([I.Z], () => I.Z.getErrors()), k = (0, x.n)(), F = o.isPomelo() && k, D = (0, b.a)(A, F, !1, o.username), G = n.useRef(null), y = n.useMemo(() => {
+  }), u = n.useMemo(() => S.ZP.canEditDiscriminator(o) && !o.isPomelo(), [o]), [d, T] = n.useState(!1), [A, L] = n.useState(o.username), [j, B] = n.useState(o.discriminator), [U, P] = n.useState(''), [Z, w] = n.useState(!1), O = (0, m.e7)([N.Z], () => N.Z.getErrors()), k = (0, b.n)(), F = o.isPomelo() && k, D = (0, h.a)(A, F, !1, o.username), G = n.useRef(null), y = n.useMemo(() => {
 var e, t, s;
 return null !== (s = null == O ? void 0 : null === (e = O.username) || void 0 === e ? void 0 : e[0]) && void 0 !== s ? s : null == O ? void 0 : null === (t = O.discriminator) || void 0 === t ? void 0 : t[0];
   }, [O]);
@@ -89,9 +89,9 @@ children: [
     separator: !1,
     className: C.header,
     children: [
-      (0, a.jsx)(R.Z, {
-        color: R.Z.Colors.HEADER_PRIMARY,
-        size: R.Z.Sizes.SIZE_24,
+      (0, a.jsx)(p.Z, {
+        color: p.Z.Colors.HEADER_PRIMARY,
+        size: p.Z.Sizes.SIZE_24,
         className: C.title,
         children: M.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_USERNAME_TITLE_DESKTOP
       }),
@@ -158,8 +158,8 @@ children: [
             className: C.discriminatorChangeWarning,
             children: M.Z.Messages.PREMIUM_CHANGE_DISCRIMINATOR_WARNING
           }) : null,
-          F ? (0, a.jsx)(h.Z, {
-            show: (null == D ? void 0 : D.type) === p.K.ERROR || d,
+          F ? (0, a.jsx)(I.Z, {
+            show: (null == D ? void 0 : D.type) === x.K.ERROR || d,
             top: 8,
             bottom: 4,
             children: (0, a.jsx)(v, {

@@ -13,7 +13,7 @@ onReapply: c,
 confirmText: d,
 onWithdrawApplication: u,
 rejectionReason: _ = null,
-guild: E = null
+guild: h = null
   } = e;
   return (0, i.jsxs)('div', {
 className: l.confirmation,
@@ -21,9 +21,9 @@ children: [
   (0, i.jsxs)('div', {
     className: l.confirmationContent,
     children: [
-      null !== E ? (0, i.jsx)(s.Z, {
+      null !== h ? (0, i.jsx)(s.Z, {
         size: s.Z.Sizes.LARGER,
-        guild: E,
+        guild: h,
         className: l.guildIcon
       }) : (0, i.jsx)('img', {
         alt: r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_ICON,
@@ -34,8 +34,8 @@ children: [
         id: t,
         variant: 'heading-xl/semibold',
         className: l.header,
-        children: (null == E ? void 0 : E.name) != null ? r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE_WITH_GUILD_NAME.format({
-          guildName: E.name
+        children: (null == h ? void 0 : h.name) != null ? r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE_WITH_GUILD_NAME.format({
+          guildName: h.name
         }) : r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE
       }),
       null != _ && '' !== _ ? (0, i.jsx)(i.Fragment, {

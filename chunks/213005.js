@@ -1,43 +1,43 @@
-s.d(t, {
+n.d(t, {
   Z: function() {
-return d;
+return u;
   }
-}), s(47120), s(653041);
-var n = s(836560),
-  a = s(358085),
-  i = s(998502),
-  r = s(13140),
-  o = s(981631);
-let l = [],
-  c = (e, t, s) => {
-let n = (0, a.isWindows)() ? 0 : 1;
-if (e !== o.MoX.MOUSE_BUTTON || s !== n)
-  l.forEach(n => n._handleEvent(e, t, s));
+}), n(47120), n(653041);
+var s = n(836560),
+  i = n(358085),
+  r = n(998502),
+  o = n(13140),
+  l = n(981631);
+let a = [],
+  d = (e, t, n) => {
+let s = (0, i.isWindows)() ? 0 : 1;
+if (e !== l.MoX.MOUSE_BUTTON || n !== s)
+  a.forEach(s => s._handleEvent(e, t, n));
   };
-class d extends n.EventEmitter {
+class u extends s.EventEmitter {
   destroy() {
-this.removeAllListeners(), 0 === (l = l.filter(e => e !== this)).length && i.ZP.setOnInputEventCallback(null);
+this.removeAllListeners(), 0 === (a = a.filter(e => e !== this)).length && r.ZP.setOnInputEventCallback(null);
   }
   toString() {
-return (0, r.BB)(this.combo);
+return (0, o.BB)(this.combo);
   }
-  _handleEvent(e, t, s) {
+  _handleEvent(e, t, n) {
 0 === t ? this.combo = this.combo.filter(t => {
-  let [n, a] = t;
-  return !(n === e && a === s);
+  let [s, i] = t;
+  return !(s === e && i === n);
 }) : (this.combo.push([
   e,
-  s,
-  (0, r.dU)()
+  n,
+  (0, o.dU)()
 ]), this.emit('change', this));
   }
   constructor() {
-var e, t, s;
-super(), e = this, s = [], (t = 'combo') in e ? Object.defineProperty(e, t, {
-  value: s,
+var e, t, n;
+super(), e = this, n = [], (t = 'combo') in e ? Object.defineProperty(e, t, {
+  value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : e[t] = s, l.push(this), 1 === l.length && i.ZP.setOnInputEventCallback(c);
+}) : e[t] = n, a.push(this), 1 === a.length && r.ZP.setOnInputEventCallback(d);
   }
 }

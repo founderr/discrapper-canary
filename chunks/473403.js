@@ -17,14 +17,14 @@ var I = t(442837),
   _ = t(43267),
   o = t(933557),
   E = t(471445),
-  N = t(727429),
-  d = t(810123),
-  T = t(690221),
-  S = t(430824),
-  c = t(158776),
-  O = t(111583),
-  f = t(594174),
-  M = t(514342),
+  N = t(111028),
+  d = t(727429),
+  T = t(810123),
+  S = t(690221),
+  c = t(430824),
+  O = t(158776),
+  f = t(111583),
+  M = t(594174),
   m = t(998502),
   U = t(981631),
   P = t(490897),
@@ -57,15 +57,15 @@ size: a.AvatarSizes.SIZE_20
 function V(e) {
   let {
 channel: n
-  } = e, t = (0, I.e7)([f.default], () => f.default.getUser(null == n ? void 0 : n.recipients[0])), s = (0, I.e7)([O.Z], () => !(null == t || null == n || n.isMultiUserDM()) && null != O.Z.getTypingUsers(null == n ? void 0 : n.id)[null == t ? void 0 : t.id]), {
+  } = e, t = (0, I.e7)([M.default], () => M.default.getUser(null == n ? void 0 : n.recipients[0])), s = (0, I.e7)([f.Z], () => !(null == t || null == n || n.isMultiUserDM()) && null != f.Z.getTypingUsers(null == n ? void 0 : n.id)[null == t ? void 0 : t.id]), {
 status: u,
 isMobile: i
-  } = (0, I.cj)([c.Z], () => null == t || null == n || n.isMultiUserDM() ? {
+  } = (0, I.cj)([O.Z], () => null == t || null == n || n.isMultiUserDM() ? {
 status: null,
 isMobile: !1
   } : {
-status: c.Z.getStatus(t.id),
-isMobile: c.Z.isMobileOnline(t.id)
+status: O.Z.getStatus(t.id),
+isMobile: O.Z.isMobileOnline(t.id)
   });
   return (0, l.jsx)(A, {
 size: a.AvatarSizes.SIZE_20,
@@ -84,10 +84,10 @@ channel: t,
 locked: s,
 hasActiveThreads: u,
 withGuildIcon: r
-  } = e, _ = (0, I.e7)([S.Z], () => S.Z.getGuild(t.guild_id), [t.guild_id]), o = t.type === U.d4z.DM || t.type === U.d4z.GROUP_DM, N = null;
+  } = e, _ = (0, I.e7)([c.Z], () => c.Z.getGuild(t.guild_id), [t.guild_id]), o = t.type === U.d4z.DM || t.type === U.d4z.GROUP_DM, N = null;
   if (r && null != _ && !o)
-N = (0, l.jsx)(d.Z, {
-  size: d.E.SMALL_32,
+N = (0, l.jsx)(T.Z, {
+  size: T.E.SMALL_32,
   className: g.iconContainerWithGuildIcon,
   iconClassName: g.iconWithGuildIcon,
   channel: t,
@@ -124,15 +124,15 @@ N = (0, l.jsx)(e, {
   className: i()(g.icon, n)
 });
   }
-  let T = r ? null == _ ? void 0 : _.name : (0, E.bT)(t, _, s, u),
-c = r && null != _ ? ''.concat(_.name, ' - ').concat(T, ' icon') : ''.concat(T, ' icon');
+  let d = r ? null == _ ? void 0 : _.name : (0, E.bT)(t, _, s, u),
+S = r && null != _ ? ''.concat(_.name, ' - ').concat(d, ' icon') : ''.concat(d, ' icon');
   return (0, l.jsx)(a.Tooltip, {
-text: T,
+text: d,
 delay: 500,
 children: e => (0, l.jsx)('div', {
   ...e,
   role: 'img',
-  'aria-label': c,
+  'aria-label': S,
   className: i()(g.iconContainer),
   children: N
 })
@@ -147,11 +147,11 @@ name: u,
 muted: I,
 selected: _,
 connected: E,
-unread: d,
-locked: S,
-hasActiveThreads: c,
-onClick: O,
-onMouseDown: f,
+unread: T,
+locked: c,
+hasActiveThreads: O,
+onClick: f,
+onMouseDown: M,
 onMouseUp: m,
 onContextMenu: A,
 connectDragPreview: R,
@@ -176,18 +176,18 @@ withGuildIcon: Y
   } = e, w = k === P.i.ALL_MESSAGES || null != X && X > 0, {
 role: q,
 ...B
-  } = (0, r.JA)(t.id), K = s.useRef(null), W = s.useRef(null), J = (0, N.Z)(t), Q = U.Z5c.CHANNEL(J, t.id), $ = (0, o.ZP)(t), ee = t.isGuildVocal(), en = (0, l.jsx)('div', {
+  } = (0, r.JA)(t.id), K = s.useRef(null), W = s.useRef(null), J = (0, d.Z)(t), Q = U.Z5c.CHANNEL(J, t.id), $ = (0, o.ZP)(t), ee = t.isGuildVocal(), en = (0, l.jsx)('div', {
 className: i()({
   [g.favoritesSuggestion]: F
 }),
 ref: W,
-children: (0, l.jsxs)(T.Z, {
+children: (0, l.jsxs)(S.Z, {
   role: ee && !E ? 'button' : 'link',
   href: ee ? void 0 : Q,
   target: '_blank',
   ref: K,
   className: g.link,
-  onClick: () => null == O ? void 0 : O(t),
+  onClick: () => null == f ? void 0 : f(t),
   ...B,
   'aria-label': G,
   focusProps: {
@@ -201,11 +201,11 @@ children: (0, l.jsxs)(T.Z, {
           className: v,
           channel: t,
           guild: b,
-          hasActiveThreads: c,
-          locked: S,
+          hasActiveThreads: O,
+          locked: c,
           withGuildIcon: Y
         }),
-        (0, l.jsx)(M.Z, {
+        (0, l.jsx)(N.Z, {
           className: i()(g.name),
           'aria-hidden': !0,
           children: null == u ? $ : u
@@ -240,16 +240,16 @@ offset: {
   right: 4
 },
 children: (0, l.jsxs)('div', {
-  className: i()(V, null != O || null != m || null != f || z ? g.wrapper : g.notInteractive, (() => {
+  className: i()(V, null != f || null != m || null != M || z ? g.wrapper : g.notInteractive, (() => {
     if (_)
       return D.SELECTED;
     if (E)
       return D.CONNECTED;
-    if (S)
+    if (c)
       return D.LOCKED;
     if (I)
       return D.MUTED;
-    if (d)
+    if (T)
       return w ? D.UNREAD_IMPORTANT : D.UNREAD_LESS_IMPORTANT;
     return null;
   })(), function(e) {
@@ -271,12 +271,12 @@ children: (0, l.jsxs)('div', {
     }
   }(null != j ? j : L)),
   onMouseUp: e => null == m ? void 0 : m(e, t),
-  onMouseDown: e => null == f ? void 0 : f(e, t),
+  onMouseDown: e => null == M ? void 0 : M(e, t),
   onContextMenu: e => null == A ? void 0 : A(e, t),
   onMouseEnter: y,
   onMouseLeave: x,
   children: [
-    I || !d ? null : (0, l.jsx)('div', {
+    I || !T ? null : (0, l.jsx)('div', {
       className: i()(g.unread, w ? g.unreadImportant : void 0)
     }),
     null !== (n = null == R ? void 0 : R(en)) && void 0 !== n ? n : en

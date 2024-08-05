@@ -12,14 +12,14 @@ var t, l, i = n(735250),
   c = n(893776),
   I = n(809206),
   E = n(607070),
-  M = n(339085),
-  m = n(565138),
-  _ = n(601964),
-  N = n(650774),
-  x = n(271383),
-  R = n(430824),
-  f = n(594174),
-  g = n(285952),
+  M = n(600164),
+  m = n(339085),
+  _ = n(565138),
+  N = n(601964),
+  x = n(650774),
+  R = n(271383),
+  f = n(430824),
+  g = n(594174),
   h = n(626135),
   C = n(768581),
   T = n(863249),
@@ -220,13 +220,13 @@ onClose: r,
 onComplete: c,
 inviteCode: j,
 isPreview: V = !1
-  } = e, S = (0, F.rb)(e => e.hasUnsubmittedChanges), b = (0, d.e7)([R.Z], () => R.Z.getGuild(l)), P = (0, d.e7)([v.Z], () => v.Z.get(l)), D = null == P ? void 0 : P.formFields.some(e => e.field_type !== A.QJ.TERMS), k = (0, d.e7)([f.default], () => f.default.getCurrentUser()), G = !(null == k ? void 0 : k.isClaimed()), H = null == k ? void 0 : k.verified, Y = null == k ? void 0 : k.isPhoneVerified(), z = (0, d.e7)([M.Z], () => M.Z.getGuildEmoji(l)), {
+  } = e, S = (0, F.rb)(e => e.hasUnsubmittedChanges), b = (0, d.e7)([f.Z], () => f.Z.getGuild(l)), P = (0, d.e7)([v.Z], () => v.Z.get(l)), D = null == P ? void 0 : P.formFields.some(e => e.field_type !== A.QJ.TERMS), k = (0, d.e7)([g.default], () => g.default.getCurrentUser()), G = !(null == k ? void 0 : k.isClaimed()), H = null == k ? void 0 : k.verified, Y = null == k ? void 0 : k.isPhoneVerified(), z = (0, d.e7)([m.Z], () => m.Z.getGuildEmoji(l)), {
 storeMemberCount: J,
 storeOnlineCount: Q
-  } = (0, d.cj)([N.Z], () => ({
-storeMemberCount: N.Z.getMemberCount(l),
-storeOnlineCount: N.Z.getOnlineCount(l)
-  })), [q, W] = a.useState(null !== (s = null == P ? void 0 : P.formFields) && void 0 !== s ? s : []), [X, K] = a.useState(!1), [$, ee] = a.useState(null), [es, en] = a.useState(G ? 0 : 2), [et, el] = a.useState(''), [ei, ea] = a.useState(''), [er, eo] = a.useState(null), [ed, eu] = a.useState(null), ec = null == P ? void 0 : P.guild, eI = a.useMemo(() => null != b ? b : null != ec ? new _.ZP(ec) : null, [
+  } = (0, d.cj)([x.Z], () => ({
+storeMemberCount: x.Z.getMemberCount(l),
+storeOnlineCount: x.Z.getOnlineCount(l)
+  })), [q, W] = a.useState(null !== (s = null == P ? void 0 : P.formFields) && void 0 !== s ? s : []), [X, K] = a.useState(!1), [$, ee] = a.useState(null), [es, en] = a.useState(G ? 0 : 2), [et, el] = a.useState(''), [ei, ea] = a.useState(''), [er, eo] = a.useState(null), [ed, eu] = a.useState(null), ec = null == P ? void 0 : P.guild, eI = a.useMemo(() => null != b ? b : null != ec ? new N.ZP(ec) : null, [
 b,
 ec
   ]), eE = null !== (n = null == eI ? void 0 : eI.hasFeature(L.oNc.CLAN)) && void 0 !== n && n, {
@@ -300,7 +300,7 @@ try {
 }
   }, eh = async () => {
 K(!0), ee(null);
-let e = null != k ? x.ZP.getMember(l, k.id) : null;
+let e = null != k ? R.ZP.getMember(l, k.id) : null;
 if (null != e && !e.isPending) {
   null == r || r(!0);
   return;
@@ -320,15 +320,15 @@ try {
   };
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsxs)(g.Z, {
-    direction: g.Z.Direction.VERTICAL,
-    justify: g.Z.Justify.BETWEEN,
+  (0, i.jsxs)(M.Z, {
+    direction: M.Z.Direction.VERTICAL,
+    justify: M.Z.Justify.BETWEEN,
     className: B.guildSidebar,
     shrink: 0,
     children: [
       (0, i.jsxs)('div', {
         children: [
-          (0, i.jsx)(m.Z, {
+          (0, i.jsx)(_.Z, {
             guild: eI,
             active: !0,
             className: o()(B.guildIcon, {
@@ -391,8 +391,8 @@ children: [
       }),
       (0, i.jsxs)('div', {
         children: [
-          null != ex && (0, i.jsxs)(g.Z, {
-            align: g.Z.Align.CENTER,
+          null != ex && (0, i.jsxs)(M.Z, {
+            align: M.Z.Align.CENTER,
             className: B.onlineCount,
             children: [
               (0, i.jsx)('div', {
@@ -406,8 +406,8 @@ children: [
               })
             ]
           }),
-          null != eN && (0, i.jsxs)(g.Z, {
-            align: g.Z.Align.CENTER,
+          null != eN && (0, i.jsxs)(M.Z, {
+            align: M.Z.Align.CENTER,
             children: [
               (0, i.jsx)('div', {
                 className: B.dotMembers

@@ -11,15 +11,15 @@ var n = t(735250),
   d = t(481060),
   s = t(218613),
   c = t(911969),
-  u = t(456269),
-  _ = t(408987),
-  b = t(312146),
-  p = t(60222),
-  E = t(131704),
-  m = t(324067),
-  h = t(430824),
-  N = t(285952),
-  C = t(153124),
+  u = t(600164),
+  _ = t(313201),
+  b = t(456269),
+  p = t(408987),
+  E = t(312146),
+  m = t(60222),
+  h = t(131704),
+  N = t(324067),
+  C = t(430824),
   I = t(259580),
   x = t(934415),
   L = t(700785),
@@ -36,7 +36,7 @@ guildId: f,
 transitionState: B,
 onSubmit: R,
 onClose: S
-  } = e, D = (0, C.Dt)(), j = (0, C.Dt)(), H = (0, C.Dt)(), Z = (0, C.Dt)(), [y, O] = o.useState(T.Sc2), [k, w] = o.useState(T.d4z.GUILD_TEXT), [P, G] = o.useState(''), [F, U] = o.useState(!1), W = (0, i.e7)([h.Z], () => h.Z.getGuild(f), [f]), V = (0, p.m)(f), Y = (0, u.W3)(f), z = (0, b.Ui)(W), X = o.useMemo(() => function(e) {
+  } = e, D = (0, _.Dt)(), j = (0, _.Dt)(), H = (0, _.Dt)(), Z = (0, _.Dt)(), [y, O] = o.useState(T.Sc2), [k, w] = o.useState(T.d4z.GUILD_TEXT), [P, G] = o.useState(''), [F, U] = o.useState(!1), W = (0, i.e7)([C.Z], () => C.Z.getGuild(f), [f]), V = (0, m.m)(f), Y = (0, b.W3)(f), z = (0, E.Ui)(W), X = o.useMemo(() => function(e) {
 let {
   canCreateStageChannel: a,
   canCreateForumChannel: t,
@@ -118,7 +118,7 @@ canCreateMediaChannel: z
 V,
 Y,
 z
-  ]), q = (0, i.e7)([m.Z], () => m.Z.getCategories(f)._categories, [f]), K = o.useMemo(() => q.map(e => {
+  ]), q = (0, i.e7)([N.Z], () => N.Z.getCategories(f)._categories, [f]), K = o.useMemo(() => q.map(e => {
 let {
   channel: a
 } = e;
@@ -159,7 +159,7 @@ onSubmit: function(e) {
       }
     }
   }).then(e => {
-    _.Z.checkGuildTemplateDirty(f), R(e.body.id), S();
+    p.Z.checkGuildTemplateDirty(f), R(e.body.id), S();
   }, e => {}).finally(() => {
     U(!1);
   });
@@ -222,7 +222,7 @@ children: (0, n.jsxs)(d.ModalRoot, {
           children: (0, n.jsx)(d.TextInput, {
             value: P,
             onChange: function(e) {
-              (0, E.zi)(k) && (e = (0, x.Nj)(e)), G(e);
+              (0, h.zi)(k) && (e = (0, x.Nj)(e)), G(e);
             },
             maxLength: T.HN8,
             placeholder: A.Z.Messages.CHANNEL_NAME_PLACEHOLDER,
@@ -240,7 +240,7 @@ children: (0, n.jsxs)(d.ModalRoot, {
       ]
     }),
     (0, n.jsxs)(d.ModalFooter, {
-      justify: N.Z.Justify.BETWEEN,
+      justify: u.Z.Justify.BETWEEN,
       children: [
         (0, n.jsx)(d.Button, {
           type: 'submit',

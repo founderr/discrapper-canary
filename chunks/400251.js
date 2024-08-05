@@ -11,14 +11,14 @@ var i = n(735250),
   o = n(481060),
   c = n(239091),
   u = n(749210),
-  d = n(565138),
-  h = n(372769),
-  p = n(134432),
-  m = n(769654),
-  _ = n(601964),
-  f = n(430824),
-  E = n(806519),
-  g = n(404975),
+  d = n(686546),
+  h = n(951394),
+  p = n(565138),
+  m = n(372769),
+  _ = n(134432),
+  f = n(769654),
+  E = n(601964),
+  g = n(430824),
   C = n(768581),
   I = n(683818),
   x = n(16853),
@@ -58,7 +58,7 @@ canEdit: c
 className: l()(v.actionButtonsContainer, {
   [v.forceButtonsShow]: s
 }),
-children: (0, i.jsxs)(g.ZP, {
+children: (0, i.jsxs)(h.ZP, {
   children: [
     c ? (0, i.jsx)(o.Tooltip, {
       text: N.Z.Messages.HUB_ENTRY_UPDATE,
@@ -68,7 +68,7 @@ children: (0, i.jsxs)(g.ZP, {
           onClick: a,
           ...s
         } = e;
-        return (0, i.jsx)(g.zx, {
+        return (0, i.jsx)(h.zx, {
           ...s,
           onClick: () => {
             null == a || a(), (0, o.openModalLazy)(async () => {
@@ -108,7 +108,7 @@ children: (0, i.jsxs)(g.ZP, {
               onClick: a,
               ...s
             } = e;
-            return (0, i.jsx)(g.zx, {
+            return (0, i.jsx)(h.zx, {
               ...n,
               ...s,
               onClick: e => {
@@ -133,19 +133,19 @@ t.Z = e => {
   var t;
   let {
 entry: s
-  } = e, [l, g] = a.useState(!1), I = null != (0, r.e7)([f.Z], () => f.Z.getGuild(s.guildId)), x = async () => {
-g(!0);
+  } = e, [l, h] = a.useState(!1), I = null != (0, r.e7)([g.Z], () => g.Z.getGuild(s.guildId)), x = async () => {
+h(!0);
 try {
-  I ? (0, m.X)(s.guildId) : await u.Z.joinGuild(s.guildId, {
+  I ? (0, f.X)(s.guildId) : await u.Z.joinGuild(s.guildId, {
     source: T.vtS.DIRECTORY_ENTRY
   });
 } finally {
-  g(!1);
+  h(!1);
 }
   }, S = C.ZP.getGuildSplashURL({
 id: s.guildId,
 splash: s.splash,
-size: 300 * (0, p.x_)()
+size: 300 * (0, _.x_)()
   }), Z = null !== (t = C.ZP.getGuildIconURL({
 id: s.guildId,
 icon: s.icon,
@@ -178,17 +178,17 @@ children: [
       }),
       (0, i.jsx)('div', {
         className: v.guildIcon,
-        children: (0, i.jsx)(E.ZP, {
-          mask: E.ZP.Masks.SQUIRCLE,
+        children: (0, i.jsx)(d.ZP, {
+          mask: d.ZP.Masks.SQUIRCLE,
           width: 48,
           height: 48,
           children: (0, i.jsx)('div', {
             className: v.iconMask,
-            children: (0, i.jsx)(d.Z, {
+            children: (0, i.jsx)(p.Z, {
               className: v.icon,
               iconSrc: Z,
-              guild: new _.ZP(s),
-              size: d.Z.Sizes.MEDIUM,
+              guild: new E.ZP(s),
+              size: p.Z.Sizes.MEDIUM,
               active: !0
             })
           })
@@ -202,7 +202,7 @@ children: [
       (0, i.jsxs)('div', {
         className: v.title,
         children: [
-          (0, i.jsx)(h.Z, {
+          (0, i.jsx)(m.Z, {
             className: v.guildBadge,
             guild: s,
             tooltipColor: o.Tooltip.Colors.PRIMARY

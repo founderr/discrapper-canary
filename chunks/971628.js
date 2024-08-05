@@ -13,17 +13,17 @@ var n = a(735250),
   i = a(91192),
   o = a(481060),
   c = a(385499),
-  d = a(565138),
-  u = a(631969),
-  m = a(285952),
-  h = a(153124),
+  d = a(600164),
+  u = a(313201),
+  m = a(565138),
+  h = a(631969),
   S = a(605436),
   x = a(537383),
   T = a(71080),
   g = a(689938),
   f = a(116255);
-let v = (0, h.hQ)(),
-  _ = (0, h.hQ)();
+let v = (0, u.hQ)(),
+  _ = (0, u.hQ)();
 
 function b(e) {
   return ''.concat(e.rowType, ':').concat(e.id);
@@ -44,8 +44,8 @@ children: a,
 rowLabel: l,
 checked: s,
 onSelect: c,
-disabled: d,
-showCheckbox: u,
+disabled: u,
+showCheckbox: m,
 selected: h,
 onMouseEnter: S,
 'aria-posinset': x,
@@ -58,24 +58,24 @@ className: r()(f.addMemberRow, {
   [f.selectedRow]: h
 }),
 onClick: e => {
-  !d && (e.preventDefault(), c());
+  !u && (e.preventDefault(), c());
 },
 onMouseEnter: S,
 role: 'option',
-'aria-disabled': d,
+'aria-disabled': u,
 'aria-selected': s,
 'aria-setsize': T,
 'aria-posinset': x,
-children: (0, n.jsxs)(m.Z, {
-  justify: m.Z.Justify.BETWEEN,
-  align: m.Z.Align.CENTER,
+children: (0, n.jsxs)(d.Z, {
+  justify: d.Z.Justify.BETWEEN,
+  align: d.Z.Align.CENTER,
   children: [
-    u ? (0, n.jsx)(o.Checkbox, {
+    m ? (0, n.jsx)(o.Checkbox, {
       displayOnly: !0,
       size: 18,
       value: s,
       type: o.Checkbox.Types.INVERTED,
-      disabled: d,
+      disabled: u,
       children: (0, n.jsx)('div', {
         className: f.checkboxLabel,
         children: a
@@ -97,7 +97,7 @@ listClassName: t,
 pendingAdditions: a,
 query: s,
 onQueryChange: i,
-onClickRow: h,
+onClickRow: u,
 onRemovePendingAddition: R,
 roles: p = [],
 members: I = [],
@@ -138,18 +138,18 @@ W = l.useCallback((e, t) => {
     return;
   i('');
   let a = (e === T.m$.ROLES ? p : [])[t];
-  a.rowType !== T.aC.EMPTY_STATE && h(a);
+  a.rowType !== T.aC.EMPTY_STATE && u(a);
 }, [
   p,
-  h,
+  u,
   i
 ]),
 q = l.useCallback(e => {
   var t;
   if (null != e && e.rowType !== T.aC.EMPTY_STATE)
-    h(e), i(''), null === (t = G.current) || void 0 === t || t.focus();
+    u(e), i(''), null === (t = G.current) || void 0 === t || t.focus();
 }, [
-  h,
+  u,
   i
 ]),
 V = l.useMemo(() => Object.keys(a), [a]),
@@ -211,21 +211,21 @@ children: [
           section: s,
           row: i
         } = e,
-        u = null,
-        m = !1,
+        d = null,
+        u = !1,
         h = !1,
         x = !1,
         g = null != y && Object.keys(a).length >= y;
       switch (s) {
         case T.m$.ROLES:
-          m = (l = b(u = p[i])) in a || u.disabled, h = u.disabled || g, x = H === T.m$.ROLES && $ === i, t = (0, n.jsxs)('div', {
+          u = (l = b(d = p[i])) in a || d.disabled, h = d.disabled || g, x = H === T.m$.ROLES && $ === i, t = (0, n.jsxs)('div', {
             className: f.rowBody,
             children: [
               (0, n.jsx)('div', {
                 className: r()(f.rowHeight, f.alignCenter),
                 children: (0, n.jsx)(o.ShieldUserIcon, {
                   size: 'custom',
-                  color: u.colorString,
+                  color: d.colorString,
                   height: 20
                 })
               }),
@@ -235,10 +235,10 @@ children: [
                   (0, n.jsx)(o.Text, {
                     variant: 'text-sm/medium',
                     className: f.__invalid_rowTitle,
-                    color: u.rowType === T.aC.EMPTY_STATE ? 'text-muted' : 'text-normal',
-                    children: u.name
+                    color: d.rowType === T.aC.EMPTY_STATE ? 'text-muted' : 'text-normal',
+                    children: d.name
                   }),
-                  u.disabled && null != N ? (0, n.jsx)(o.Text, {
+                  d.disabled && null != N ? (0, n.jsx)(o.Text, {
                     color: 'header-secondary',
                     variant: 'text-xs/normal',
                     children: N
@@ -249,38 +249,38 @@ children: [
           });
           break;
         case T.m$.MEMBERS:
-          m = (l = b(u = I[i])) in a || u.disabled, h = u.disabled || g, x = H === T.m$.MEMBERS && $ === i, t = (0, n.jsxs)('div', {
+          u = (l = b(d = I[i])) in a || d.disabled, h = d.disabled || g, x = H === T.m$.MEMBERS && $ === i, t = (0, n.jsxs)('div', {
             className: f.rowBody,
             children: [
               (0, n.jsx)(o.Avatar, {
-                src: u.avatarURL,
+                src: d.avatarURL,
                 size: o.AvatarSizes.SIZE_24,
                 'aria-label': ''
               }),
               (0, n.jsx)(o.Text, {
                 className: f.rowLabel,
                 variant: 'text-sm/normal',
-                children: u.name
+                children: d.name
               }),
-              null != u.nickname ? (0, n.jsx)(o.Text, {
+              null != d.nickname ? (0, n.jsx)(o.Text, {
                 color: 'text-muted',
                 className: f.rowLabelSubText,
                 variant: 'text-sm/normal',
                 'aria-hidden': !0,
-                children: u.username
+                children: d.username
               }) : null,
-              u.bot && (0, n.jsx)(c.Z, {
-                verified: u.verifiedBot
+              d.bot && (0, n.jsx)(c.Z, {
+                verified: d.verifiedBot
               })
             ]
           });
           break;
         case T.m$.USERS:
-          m = (l = b(u = M[i])) in a || u.disabled, h = u.disabled || g, x = H === T.m$.USERS && $ === i, t = (0, n.jsxs)('div', {
+          u = (l = b(d = M[i])) in a || d.disabled, h = d.disabled || g, x = H === T.m$.USERS && $ === i, t = (0, n.jsxs)('div', {
             className: f.rowBody,
             children: [
               (0, n.jsx)(o.Avatar, {
-                src: u.avatarURL,
+                src: d.avatarURL,
                 size: o.AvatarSizes.SIZE_24,
                 'aria-label': ''
               }),
@@ -289,9 +289,9 @@ children: [
                 children: [
                   (0, n.jsx)(o.Text, {
                     variant: 'text-sm/normal',
-                    children: u.name
+                    children: d.name
                   }),
-                  u.disabled && null != N ? (0, n.jsx)(o.Text, {
+                  d.disabled && null != N ? (0, n.jsx)(o.Text, {
                     color: 'header-secondary',
                     variant: 'text-xs/normal',
                     children: N
@@ -302,32 +302,32 @@ children: [
           });
           break;
         case T.m$.GUILDS:
-          m = (l = b(u = A[i])) in a || u.disabled, h = u.disabled || g, x = H === T.m$.GUILDS && $ === i, t = (0, n.jsxs)('div', {
+          u = (l = b(d = A[i])) in a || d.disabled, h = d.disabled || g, x = H === T.m$.GUILDS && $ === i, t = (0, n.jsxs)('div', {
             className: f.rowBody,
             children: [
-              (0, n.jsx)(d.Z, {
-                guild: u.guild,
+              (0, n.jsx)(m.Z, {
+                guild: d.guild,
                 active: !0,
-                size: d.Z.Sizes.SMALLER
+                size: m.Z.Sizes.SMALLER
               }),
               (0, n.jsx)('div', {
                 className: f.rowLabel,
                 children: (0, n.jsx)(o.Text, {
                   variant: 'text-sm/medium',
                   color: 'text-normal',
-                  children: u.name
+                  children: d.name
                 })
               })
             ]
           });
       }
-      return null == u ? null : (0, n.jsx)(C, {
+      return null == d ? null : (0, n.jsx)(C, {
         id: 'user-row-'.concat(i),
-        rowLabel: O ? null : S.zB(u.rowType),
-        checked: m,
+        rowLabel: O ? null : S.zB(d.rowType),
+        checked: u,
         disabled: h,
-        onSelect: () => q(u),
-        showCheckbox: u.rowType !== T.aC.EMPTY_STATE,
+        onSelect: () => q(d),
+        showCheckbox: d.rowType !== T.aC.EMPTY_STATE,
         onMouseEnter: () => Q(s, i, !1),
         selected: x,
         'aria-posinset': i + 1,
@@ -358,13 +358,13 @@ children: [
     innerId: _,
     innerAriaMultiselectable: !0,
     innerAriaOrientation: 'vertical'
-  }) : (0, n.jsxs)(m.Z, {
+  }) : (0, n.jsxs)(d.Z, {
     className: t,
-    align: m.Z.Align.CENTER,
-    justify: m.Z.Justify.CENTER,
-    direction: m.Z.Direction.VERTICAL,
+    align: d.Z.Align.CENTER,
+    justify: d.Z.Justify.CENTER,
+    direction: d.Z.Direction.VERTICAL,
     children: [
-      (0, n.jsx)(u.Z, {
+      (0, n.jsx)(h.Z, {
         className: f.noResultIcon
       }),
       (0, n.jsx)(o.Text, {

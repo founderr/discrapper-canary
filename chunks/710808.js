@@ -10,11 +10,11 @@ var n = s(735250),
   o = s(846027),
   l = s(304680),
   c = s(579806),
-  d = s(729345),
-  _ = s(921801),
-  E = s(131951),
-  u = s(226961),
-  T = s(285952),
+  d = s(600164),
+  _ = s(729345),
+  E = s(921801),
+  u = s(131951),
+  T = s(226961),
   I = s(12647),
   S = s(726985),
   N = s(981631),
@@ -46,20 +46,20 @@ function O() {
   let [e, t] = a.useState(!1), {
 debugLogging: s,
 aecDumpEnabled: c
-  } = (0, i.cj)([E.Z], () => ({
-aecDumpSupported: E.Z.isAecDumpSupported(),
-debugLogging: E.Z.getDebugLogging(),
-aecDumpEnabled: E.Z.getAecDump(),
-supportsConnectionReplay: E.Z.supports(C.AN.CONNECTION_REPLAY)
-  })), O = (0, i.e7)([u.ZP], () => u.ZP.shouldRecordNextConnection());
+  } = (0, i.cj)([u.Z], () => ({
+aecDumpSupported: u.Z.isAecDumpSupported(),
+debugLogging: u.Z.getDebugLogging(),
+aecDumpEnabled: u.Z.getAecDump(),
+supportsConnectionReplay: u.Z.supports(C.AN.CONNECTION_REPLAY)
+  })), O = (0, i.e7)([T.ZP], () => T.ZP.shouldRecordNextConnection());
   async function p() {
 t(!0);
 try {
-  await E.Z.getMediaEngine().writeAudioDebugState(), await I.Z.submitLiveCrashReport({
+  await u.Z.getMediaEngine().writeAudioDebugState(), await I.Z.submitLiveCrashReport({
     message: {
       message: 'User Live Dump'
     }
-  }), await (0, d.E)(N.GU0.RTC), ! function() {
+  }), await (0, _.E)(N.GU0.RTC), ! function() {
     let e = m.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
       t = m.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
     (0, r.openModal)(s => (0, n.jsx)(r.ConfirmModal, {
@@ -94,7 +94,7 @@ try {
 className: A.marginBottom40,
 title: m.Z.Messages.FORM_LABEL_DEBUG,
 children: [
-  (0, n.jsx)(_.F, {
+  (0, n.jsx)(E.F, {
     setting: S.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
     children: (0, n.jsx)(r.FormSwitch, {
       value: c,
@@ -103,7 +103,7 @@ children: [
       children: m.Z.Messages.FORM_CHECKBOX_AEC_DUMP
     })
   }),
-  (0, n.jsxs)(_.F, {
+  (0, n.jsxs)(E.F, {
     setting: S.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
     children: [
       (0, n.jsx)(r.FormSwitch, {
@@ -114,9 +114,9 @@ children: [
         children: m.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG
       }),
       (0, n.jsx)(r.FormItem, {
-        children: (0, n.jsx)(T.Z, {
+        children: (0, n.jsx)(d.Z, {
           className: A.marginBottom20,
-          children: (0, n.jsx)(T.Z.Child, {
+          children: (0, n.jsx)(d.Z.Child, {
             grow: 0,
             shrink: 0,
             children: (0, n.jsx)(r.Button, {
@@ -132,7 +132,7 @@ children: [
       })
     ]
   }),
-  (0, n.jsxs)(_.F, {
+  (0, n.jsxs)(E.F, {
     setting: S.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
     children: [
       (0, n.jsx)(r.FormSwitch, {
@@ -143,9 +143,9 @@ children: [
         children: m.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING
       }),
       (0, n.jsx)(r.FormItem, {
-        children: (0, n.jsxs)(T.Z, {
+        children: (0, n.jsxs)(d.Z, {
           children: [
-            (0, n.jsx)(T.Z.Child, {
+            (0, n.jsx)(d.Z.Child, {
               grow: 0,
               shrink: 0,
               children: (0, n.jsx)(r.Button, {
@@ -155,7 +155,7 @@ children: [
                 children: m.Z.Messages.UPLOAD
               })
             }),
-            (0, n.jsx)(T.Z.Child, {
+            (0, n.jsx)(d.Z.Child, {
               grow: 0,
               shrink: 0,
               children: (0, n.jsx)(r.Button, {

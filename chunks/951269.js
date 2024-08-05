@@ -6,8 +6,8 @@ return u;
 var o = s(735250);
 s(470079);
 var a = s(481060),
-  n = s(153124),
-  l = s(154921),
+  n = s(112831),
+  l = s(313201),
   i = s(689938),
   c = s(778286),
   r = s(462991);
@@ -17,7 +17,7 @@ function u(e) {
 onClose: t,
 transitionState: s,
 kind: u
-  } = e, d = (0, n.Dt)();
+  } = e, d = (0, l.Dt)();
   return (0, o.jsxs)(a.ModalRoot, {
 transitionState: s,
 'aria-labelledby': d,
@@ -35,11 +35,11 @@ children: [
         src: r,
         alt: ''
       }),
-      (0, o.jsx)(l.Z, {
+      (0, o.jsx)(n.Z, {
         className: c.title,
         id: d,
-        size: l.Z.Sizes.SIZE_24,
-        color: l.Z.Colors.HEADER_PRIMARY,
+        size: n.Z.Sizes.SIZE_24,
+        color: n.Z.Colors.HEADER_PRIMARY,
         children: i.Z.Messages.INACCESSIBLE_CHANNEL_LINK_TITLE
       }),
       (0, o.jsx)(a.Text, {

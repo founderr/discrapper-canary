@@ -17,10 +17,10 @@ var n = s(735250),
   C = s(566620),
   m = s(317381),
   A = s(979200),
-  g = s(713938),
-  h = s(881998),
-  O = s(246946),
-  p = s(285952),
+  g = s(600164),
+  h = s(713938),
+  O = s(881998),
+  p = s(246946),
   R = s(768581),
   x = s(49012),
   M = s(210887),
@@ -126,7 +126,7 @@ return (0, n.jsx)(u.Card, {
           id: s.id,
           icon: s.icon
         }),
-        t = null != e ? (0, n.jsx)(p.Z.Child, {
+        t = null != e ? (0, n.jsx)(g.Z.Child, {
           className: b.appAvatar,
           grow: 0,
           children: (0, n.jsx)('img', {
@@ -134,14 +134,14 @@ return (0, n.jsx)(u.Card, {
             alt: ''
           })
         }) : null;
-      return (0, n.jsxs)(p.Z, {
+      return (0, n.jsxs)(g.Z, {
         className: r()(b.__invalid_header, Z.marginBottom20),
         children: [
-          (0, n.jsxs)(p.Z, {
+          (0, n.jsxs)(g.Z, {
             className: b.headerInfo,
             children: [
               t,
-              (0, n.jsx)(p.Z.Child, {
+              (0, n.jsx)(g.Z.Child, {
                 children: (0, n.jsx)(u.Heading, {
                   variant: 'text-sm/semibold',
                   children: s.name
@@ -149,7 +149,7 @@ return (0, n.jsx)(u.Card, {
               })
             ]
           }),
-          (0, n.jsx)(p.Z.Child, {
+          (0, n.jsx)(g.Z.Child, {
             wrap: !0,
             grow: 0,
             children: (0, n.jsx)(u.Button, {
@@ -223,7 +223,7 @@ return (0, n.jsx)(u.Card, {
       (() => {
         let e = [];
         for (let s of t)
-          e.push((0, g.jW)(s, t)), s === c.x.APPLICATIONS_COMMANDS && e.push(L.Z.Messages.SCOPE_DM_YOU);
+          e.push((0, h.jW)(s, t)), s === c.x.APPLICATIONS_COMMANDS && e.push(L.Z.Messages.SCOPE_DM_YOU);
         if (e.length > 0 || null != i && i.length > 0)
           return (0, n.jsx)(u.FormItem, {
             faded: !0,
@@ -268,8 +268,8 @@ return (0, n.jsx)(u.Card, {
 });
   };
 t.Z = () => {
-  let e = (0, d.e7)([O.Z], () => O.Z.hidePersonalInformation),
-t = (0, d.e7)([h.Z], () => h.Z.getApps()),
+  let e = (0, d.e7)([p.Z], () => p.Z.hidePersonalInformation),
+t = (0, d.e7)([O.Z], () => O.Z.getApps()),
 i = (0, d.e7)([m.ZP], () => m.ZP.getSelfEmbeddedActivities());
   a.useEffect(() => {
 T.Z.fetch();

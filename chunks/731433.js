@@ -18,10 +18,10 @@ var s = a(990547),
   _ = a(204418),
   u = a(1585),
   m = a(223143),
-  v = a(300284),
-  I = a(158776),
-  x = a(594174),
-  M = a(153124),
+  v = a(313201),
+  I = a(300284),
+  x = a(158776),
+  M = a(594174),
   p = a(741245),
   A = a(474936),
   C = a(689938),
@@ -32,7 +32,7 @@ function D(e) {
   let {
 user: t,
 deco: a
-  } = e, s = (0, r.e7)([I.Z], () => I.Z.getStatus(t.id));
+  } = e, s = (0, r.e7)([x.Z], () => x.Z.getStatus(t.id));
   return (0, o.jsxs)('div', {
 className: f.avatarBackground,
 children: [
@@ -61,13 +61,13 @@ function E(e) {
   let {
 transitionState: a,
 onClose: _
-  } = e, I = (0, M.Dt)(), {
+  } = e, x = (0, v.Dt)(), {
 theme: E
-  } = (0, n.useThemeContext)(), N = (0, r.e7)([x.default], () => x.default.getCurrentUser()), {
+  } = (0, n.useThemeContext)(), N = (0, r.e7)([M.default], () => M.default.getCurrentUser()), {
 purchases: O
   } = (0, m.c)(), R = null === (t = O.get(T)) || void 0 === t ? void 0 : t.items, h = void 0 !== R ? R[0] : void 0, {
 analyticsLocations: j
-  } = (0, c.ZP)(d.Z.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL), y = (0, v.Z)({
+  } = (0, c.ZP)(d.Z.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL), y = (0, I.Z)({
 analyticsLocations: j
   });
   return (0, l.Z)({
@@ -78,7 +78,7 @@ properties: {
 }
   }), (0, o.jsxs)(n.ModalRoot, {
 transitionState: a,
-'aria-labelledby': I,
+'aria-labelledby': x,
 className: f.container,
 children: [
   void 0 !== N && (0, o.jsx)(D, {

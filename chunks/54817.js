@@ -9,10 +9,10 @@ var s = n(120356),
   a = n.n(s),
   r = n(481060),
   l = n(385499),
-  o = n(702346),
-  c = n(739566),
-  u = n(464891),
-  d = n(83561),
+  o = n(739566),
+  c = n(464891),
+  u = n(83561),
+  d = n(834129),
   _ = n(981631),
   E = n(674563),
   I = n(689938),
@@ -23,13 +23,13 @@ function T(e) {
 message: t,
 compact: n,
 usernameHook: s
-  } = e, T = (0, c.ZP)(t), h = s(T), {
+  } = e, T = (0, o.ZP)(t), h = s(T), {
 avatarSrc: N,
 eventHandlers: {
   onMouseEnter: C,
   onMouseLeave: f
 }
-  } = (0, d.m)(!0), p = '' !== t.content ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
+  } = (0, u.m)(!0), p = '' !== t.content ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
 hour: 'numeric',
 minute: '2-digit',
 month: '2-digit',
@@ -39,11 +39,11 @@ year: 'numeric'
   return (0, i.jsx)('div', {
 onMouseEnter: C,
 onMouseLeave: f,
-children: (0, i.jsx)(o.Z, {
+children: (0, i.jsx)(d.Z, {
   className: a()(m.mainContainer, {
     [m.compact]: n
   }),
-  iconNode: n ? null : (0, i.jsx)(d.S, {
+  iconNode: n ? null : (0, i.jsx)(u.S, {
     src: N
   }),
   iconContainerClassName: m.iconContainer,
@@ -53,7 +53,7 @@ children: (0, i.jsx)(o.Z, {
       [m.compact]: n
     }),
     children: [
-      (0, i.jsx)(u.nD, {
+      (0, i.jsx)(c.nD, {
         message: t,
         messageClassname: m.spanCorrection,
         className: a()(m.usernameContainer, m.spanCorrection, {

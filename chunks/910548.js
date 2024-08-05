@@ -14,13 +14,13 @@ var i, s, a, r, l = n(735250),
   m = n(481060),
   T = n(230711),
   h = n(745510),
-  N = n(64078),
-  C = n(29270),
-  f = n(709586),
-  p = n(482207),
-  g = n(702346),
-  S = n(267642),
-  A = n(739566),
+  N = n(549006),
+  C = n(64078),
+  f = n(29270),
+  p = n(709586),
+  g = n(267642),
+  S = n(739566),
+  A = n(834129),
   R = n(981631),
   O = n(689938),
   x = n(845379);
@@ -326,7 +326,7 @@ c = function(e) {
   }
   return null;
 }(n),
-u = (0, C.Z)(n),
+u = (0, f.Z)(n),
 {
   createMultipleConfettiAt: d,
   addClickListener: _
@@ -336,7 +336,7 @@ M = o.useRef(null),
 {
   reducedMotion: v
 } = o.useContext(m.AccessibilityPreferencesContext),
-L = (0, A.ZH)(n),
+L = (0, S.ZH)(n),
 Z = L.nick,
 P = a(L);
   t = null == c || null == s ? u > 1 ? O.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
@@ -351,12 +351,12 @@ username: Z,
 usernameHook: P,
 numSubscriptions: u,
 guildName: s.name,
-newTierName: (0, S.nW)(c)
+newTierName: (0, g.nW)(c)
   }) : O.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
 username: Z,
 usernameHook: P,
 guildName: s.name,
-newTierName: (0, S.nW)(c)
+newTierName: (0, g.nW)(c)
   });
   let b = o.useCallback(() => {
   if (!v.enabled)
@@ -377,7 +377,7 @@ j = o.useCallback(() => {
   I(!1);
 }, []),
 U = o.useCallback(() => {
-  (0, N.AI)({
+  (0, C.AI)({
     settingsVisible: !0
   }), T.Z.open(R.oAB.POGGERMODE), I(!1);
 }, []),
@@ -389,12 +389,12 @@ y = o.useCallback((e, t) => {
 className: x.iconWrapper,
 innerRef: M,
 onClick: r,
-children: (0, l.jsx)(f.Z, {
+children: (0, l.jsx)(p.Z, {
   className: x.icon,
   onMouseEnter: b
 })
   });
-  return (0, l.jsxs)(g.Z, {
+  return (0, l.jsxs)(A.Z, {
 iconNode: B,
 timestamp: n.timestamp,
 compact: i,
@@ -404,7 +404,7 @@ children: [
     className: x.message,
     children: t
   }),
-  E ? (0, l.jsx)(p.ZP, {
+  E ? (0, l.jsx)(N.ZP, {
     children: (0, l.jsx)('div', {
       className: x.cannonWrapper,
       children: (0, l.jsx)(k, {

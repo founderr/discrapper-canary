@@ -9,11 +9,11 @@ var s = n(735250),
   r = n.n(t),
   o = n(399606),
   u = n(481060),
-  i = n(734893),
-  d = n(271383),
-  c = n(430824),
-  _ = n(594174),
-  m = n(153124),
+  i = n(313201),
+  d = n(734893),
+  c = n(271383),
+  _ = n(430824),
+  m = n(594174),
   E = n(700785),
   I = n(580357),
   g = n(981631),
@@ -28,13 +28,13 @@ onClose: x,
 guildId: S,
 welcomeMessage: p,
 onSave: T
-  } = e, v = (0, m.Dt)(), [N, O] = a.useState({
+  } = e, v = (0, i.Dt)(), [N, O] = a.useState({
 ...p
-  }), A = (0, o.e7)([c.Z], () => c.Z.getGuild(S)), b = a.useCallback(e => {
+  }), A = (0, o.e7)([_.Z], () => _.Z.getGuild(S)), b = a.useCallback(e => {
 let l = {};
-return Promise.resolve(d.ZP.getMembers(S).filter(n => {
+return Promise.resolve(c.ZP.getMembers(S).filter(n => {
   var s, a, t;
-  let o = _.default.getUser(n.userId);
+  let o = m.default.getUser(n.userId);
   if (null != o && (l[n.userId] = o), null == A || null == o || (a = A, t = o, !(a.isOwner(t) || E.BT({
       permission: g.Plq.ADMINISTRATOR,
       context: a,
@@ -64,10 +64,10 @@ A
   ]), L = a.useCallback(e => {
 if (null == S || null == e)
   return null;
-let l = d.ZP.getMember(S, e.value);
+let l = c.ZP.getMember(S, e.value);
 if (null == l)
   return null;
-let n = _.default.getUser(l.userId);
+let n = m.default.getUser(l.userId);
 if (null == n)
   return null;
 let a = n.getAvatarURL(S, 20);
@@ -94,15 +94,15 @@ T(null), x();
   }, [
 T,
 x
-  ]), B = null !== (l = N.authorIds[0]) && void 0 !== l ? l : '', j = (0, o.e7)([d.ZP], () => null != S ? d.ZP.getMember(S, B) : null), Z = (0, o.e7)([_.default], () => null != j ? _.default.getUser(j.userId) : null), k = null !== (t = null !== (n = null == j ? void 0 : j.nick) && void 0 !== n ? n : null == Z ? void 0 : Z.username) && void 0 !== t ? t : '', D = function(e) {
+  ]), B = null !== (l = N.authorIds[0]) && void 0 !== l ? l : '', j = (0, o.e7)([c.ZP], () => null != S ? c.ZP.getMember(S, B) : null), Z = (0, o.e7)([m.default], () => null != j ? m.default.getUser(j.userId) : null), k = null !== (t = null !== (n = null == j ? void 0 : j.nick) && void 0 !== n ? n : null == Z ? void 0 : Z.username) && void 0 !== t ? t : '', D = function(e) {
 if (null == e.message || 0 === e.message.length)
   return null;
 if (null == e.authorIds || 0 === e.authorIds.length)
-  return e.message.length < i.ZR ? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_AUTHOR_AND_MESSAGE.format({
-    minLength: i.ZR
+  return e.message.length < d.ZR ? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_AUTHOR_AND_MESSAGE.format({
+    minLength: d.ZR
   }) : h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_AUTHOR;
-return e.message.length < i.ZR ? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_MESSAGE.format({
-  minLength: i.ZR
+return e.message.length < d.ZR ? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_MESSAGE.format({
+  minLength: d.ZR
 }) : null;
   }(N);
   return (0, s.jsxs)(u.ModalRoot, {
@@ -165,7 +165,7 @@ children: [
             placeholder: h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_PLACEHOLDER,
             value: N.message,
             onChange: G,
-            maxLength: i.W4
+            maxLength: d.W4
           }),
           null != D ? (0, s.jsx)(u.Text, {
             variant: 'text-xs/normal',

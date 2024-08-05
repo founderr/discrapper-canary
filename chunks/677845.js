@@ -16,10 +16,10 @@ var i = n(735250),
   p = n(358221),
   m = n(381586),
   _ = n(159300),
-  f = n(470956),
-  E = n(430824),
-  g = n(496675),
-  C = n(199052),
+  f = n(800329),
+  E = n(470956),
+  g = n(430824),
+  C = n(496675),
   I = n(434488),
   x = n(27457),
   T = n(251564),
@@ -38,9 +38,9 @@ className: b,
 inCall: R,
 totalNumberOfParticipants: j,
 paused: L = !1
-  } = e, P = (0, c.bp)() === v.IlC.POPOUT, O = (0, r.e7)([E.Z], () => E.Z.getGuild(M.guild_id), [M.guild_id]), {
+  } = e, P = (0, c.bp)() === v.IlC.POPOUT, O = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]), {
 dismissedActivityEntryPointTileChannel: y
-  } = (0, T.d)(), D = (0, r.e7)([p.Z], () => p.Z.getUserParticipantCount(M.id), [M]), k = (0, f.bt)(M.id, t), U = a.useCallback(() => {
+  } = (0, T.d)(), D = (0, r.e7)([p.Z], () => p.Z.getUserParticipantCount(M.id), [M]), k = (0, E.bt)(M.id, t), U = a.useCallback(() => {
 (0, l.j)(() => {
   T.d.setState({
     dismissedActivityEntryPointTileChannel: M.id
@@ -57,7 +57,7 @@ null != y && M.id !== y && (0, l.j)(() => {
 M.id,
 y
   ]);
-  let w = (0, r.e7)([g.Z], () => M.isPrivate() || (0, _.b)(g.Z, O, M), [
+  let w = (0, r.e7)([C.Z], () => M.isPrivate() || (0, _.b)(C.Z, O, M), [
   O,
   M
 ]),
@@ -114,7 +114,7 @@ userParticipantCount: D
 var t, n;
 return null !== (n = null === (t = k[e]) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : 'empty-tile';
   }, [k]);
-  return (0, i.jsx)(C.Z, {
+  return (0, i.jsx)(f.Z, {
 className: b,
 keyExtractor: Y,
 paddingTop: 64,

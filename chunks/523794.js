@@ -6,10 +6,10 @@ return M;
 var o = s(735250);
 s(470079);
 var i = s(481060),
-  a = s(623624),
-  n = s(430824),
-  l = s(496675),
-  d = s(285952),
+  a = s(600164),
+  n = s(623624),
+  l = s(430824),
+  d = s(496675),
   r = s(626135),
   u = s(565799),
   c = s(501655),
@@ -26,12 +26,12 @@ function M(t) {
   transitionState: I,
   onClose: B
 } = t,
-g = n.Z.getGuild(M.guild_id),
+g = l.Z.getGuild(M.guild_id),
 h = null !== (e = null == g ? void 0 : g.maxStageVideoChannelUsers) && void 0 !== e ? e : 0,
 O = !!(null == g ? void 0 : g.isCommunity()),
 C = E.Z.Messages.STAGE_FULL_TITLE,
 f = O ? h < T.TU7 : (null == g ? void 0 : g.premiumTier) !== T.Eu4.TIER_3 && h <= T.eez,
-m = l.Z.can(_.yP, M);
+m = d.Z.can(_.yP, M);
   s = O && (null == g ? void 0 : g.premiumTier) === T.Eu4.TIER_3 ? h <= T.TU7 ? E.Z.Messages.STAGE_FULL_BOOST_MORE_BODY : E.Z.Messages.STAGE_FULL_MAX_BODY : f ? E.Z.Messages.STAGE_FULL_BODY : E.Z.Messages.STAGE_FULL_MAX_BODY;
   let x = () => {
   B(), r.default.track(T.rMx.BOOSTING_UPSELL_CLICKED, {
@@ -54,7 +54,7 @@ transitionState: I,
 'aria-label': C,
 children: [
   (0, o.jsxs)(i.ModalHeader, {
-    justify: d.Z.Justify.END,
+    justify: a.Z.Justify.END,
     separator: !1,
     className: L.header,
     children: [
@@ -93,7 +93,7 @@ children: [
         }),
         (0, o.jsx)(i.ShinyButton, {
           onClick: () => {
-            B(), (0, a.f)({
+            B(), (0, n.f)({
               guildId: M.guild_id,
               location: {
                 section: T.jXE.STAGE_VIDEO_LIMIT

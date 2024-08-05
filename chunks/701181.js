@@ -6,8 +6,8 @@ return c;
 var i = n(735250);
 n(470079);
 var s = n(481060),
-  a = n(702346),
-  r = n(739566),
+  a = n(739566),
+  r = n(834129),
   l = n(689938),
   o = n(118496);
 
@@ -16,11 +16,11 @@ function c(e) {
 message: t,
 compact: n,
 usernameHook: c
-  } = e, u = (0, r.ZP)(t), d = c(u), _ = l.Z.Messages.SYSTEM_MESSAGE_STAGE_SPEAKER_HOOK.format({
+  } = e, u = (0, a.ZP)(t), d = c(u), _ = l.Z.Messages.SYSTEM_MESSAGE_STAGE_SPEAKER_HOOK.format({
 username: u.nick,
 usernameHook: d
   });
-  return (0, i.jsx)(a.Z, {
+  return (0, i.jsx)(r.Z, {
 className: o.stageSystemMessage,
 iconNode: (0, i.jsx)(s.MicrophoneArrowRightIcon, {
   size: 'md',

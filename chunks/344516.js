@@ -11,10 +11,10 @@ var s = n(735250),
   a = n(481060),
   d = n(846027),
   u = n(825209),
-  c = n(382577),
-  h = n(131951),
-  m = n(285952),
-  p = n(153124),
+  c = n(600164),
+  h = n(313201),
+  m = n(382577),
+  p = n(131951),
   g = n(36703),
   _ = n(981631),
   b = n(65154),
@@ -30,9 +30,9 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let T = (0, p.hQ)(),
-  O = (0, p.hQ)(),
-  M = (0, p.hQ)();
+let T = (0, h.hQ)(),
+  O = (0, h.hQ)(),
+  M = (0, h.hQ)();
 class x extends i.PureComponent {
   handleValueRender(e) {
 return ''.concat((-((100 - e) * 1)).toFixed(0), 'dB');
@@ -41,8 +41,8 @@ return ''.concat((-((100 - e) * 1)).toFixed(0), 'dB');
 let {
   autoThreshold: e
 } = this.props;
-return (0, s.jsx)(p.FG, {
-  children: t => (0, s.jsxs)(m.Z, {
+return (0, s.jsx)(h.FG, {
+  children: t => (0, s.jsxs)(c.Z, {
     className: R.marginBottom4,
     children: [
       (0, s.jsx)(a.FormTitle, {
@@ -100,22 +100,22 @@ super(...e), f(this, 'handleAutoThresholdChange', e => {
 });
   }
 }
-let I = l.ZP.connectStores([h.Z], e => {
+let I = l.ZP.connectStores([p.Z], e => {
   let {
 mediaEngineContext: t
   } = e;
   return {
-inputVolume: h.Z.getInputVolume(),
-outputVolume: h.Z.getOutputVolume(),
-inputDeviceId: h.Z.getInputDeviceId(),
-inputDevices: h.Z.getInputDevices(),
-outputDevices: h.Z.getOutputDevices(),
-outputDeviceId: h.Z.getOutputDeviceId(),
-inputMode: h.Z.getMode(t),
-shortcut: h.Z.getModeOptions(t).shortcut,
-vadThreshold: h.Z.getModeOptions(t).threshold,
-vadAutoThreshold: h.Z.getModeOptions(t).autoThreshold,
-delay: h.Z.getModeOptions(t).delay
+inputVolume: p.Z.getInputVolume(),
+outputVolume: p.Z.getOutputVolume(),
+inputDeviceId: p.Z.getInputDeviceId(),
+inputDevices: p.Z.getInputDevices(),
+outputDevices: p.Z.getOutputDevices(),
+outputDeviceId: p.Z.getOutputDeviceId(),
+inputMode: p.Z.getMode(t),
+shortcut: p.Z.getModeOptions(t).shortcut,
+vadThreshold: p.Z.getModeOptions(t).threshold,
+vadAutoThreshold: p.Z.getModeOptions(t).autoThreshold,
+delay: p.Z.getModeOptions(t).delay
   };
 })(e => {
   let t, {
@@ -276,7 +276,7 @@ children: [
 
 function D(e) {
   var t;
-  return (0, c.Z)(() => {
+  return (0, m.Z)(() => {
 null != _.e3s && e.onClose();
   }), (0, s.jsxs)(a.ModalRoot, {
 transitionState: e.transitionState,
@@ -284,7 +284,7 @@ transitionState: e.transitionState,
 children: [
   (0, s.jsxs)(a.ModalHeader, {
     children: [
-      (0, s.jsxs)(m.Z.Child, {
+      (0, s.jsxs)(c.Z.Child, {
         children: [
           (0, s.jsx)(a.FormTitle, {
             tag: 'h1',
@@ -298,7 +298,7 @@ children: [
           })
         ]
       }),
-      (0, s.jsx)(m.Z.Child, {
+      (0, s.jsx)(c.Z.Child, {
         grow: 0,
         children: (0, s.jsx)(a.ModalCloseButton, {
           onClick: e.onClose

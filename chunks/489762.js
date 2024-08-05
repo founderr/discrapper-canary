@@ -9,16 +9,16 @@ var r = n(735250),
   c = n(2052),
   d = n(100527),
   _ = n(906732),
-  E = n(880949),
-  f = n(806966),
-  h = n(28546),
-  p = n(691251),
-  m = n(98528),
-  I = n(551058),
-  T = n(695346),
-  g = n(430824),
-  S = n(594174),
-  A = n(695464),
+  E = n(218867),
+  f = n(880949),
+  h = n(806966),
+  p = n(28546),
+  m = n(691251),
+  I = n(98528),
+  T = n(551058),
+  g = n(695346),
+  S = n(430824),
+  A = n(594174),
   N = n(626135),
   v = n(624138),
   O = n(191177),
@@ -100,13 +100,13 @@ let {
   currentUser: r
 } = e, a = (0, c.O)(), {
   analyticsLocations: s
-} = (0, _.ZP)(), o = (0, h.Iu)(e => e.searchQuery), l = i.useCallback(e => {
+} = (0, _.ZP)(), o = (0, p.Iu)(e => e.searchQuery), l = i.useCallback(e => {
   let {
     visibleRowIndex: t,
     columnIndex: n,
     gridSectionIndex: r
   } = e;
-  f.ZN.setActiveCategoryIndex(r), f.ZN.setInspectedExpressionPosition(n, t, p.u.MOUSE_EVENT), e.type === y.al.STICKER && f.ZN.setSearchPlaceholder(e.sticker.name);
+  h.ZN.setActiveCategoryIndex(r), h.ZN.setInspectedExpressionPosition(n, t, m.u.MOUSE_EVENT), e.type === y.al.STICKER && h.ZN.setSearchPlaceholder(e.sticker.name);
 }, []);
 return {
   handleStickerInspect: l,
@@ -157,14 +157,14 @@ let {
   getStickerRowProps: u,
   gutterWidth: d,
   inspectedStickerPosition: _,
-  isScrolling: f,
+  isScrolling: E,
   isUsingKeyboardNavigation: h,
   stickersGrid: p,
   stickersCategories: m,
-  filteredStickers: A,
+  filteredStickers: I,
   ownedStickerPacks: v,
   channel: O
-} = e, R = (0, c.O)(), M = (0, s.e7)([S.default], () => S.default.getCurrentUser()), {
+} = e, R = (0, c.O)(), M = (0, s.e7)([A.default], () => A.default.getCurrentUser()), {
   handleStickerInspect: U,
   handleSelect: B
 } = es({
@@ -172,7 +172,7 @@ let {
   channel: O,
   currentUser: M
 }), [H, Z] = i.useState(!1), Y = i.useCallback(e => {
-  T._O.updateSetting(Array.from(e));
+  g._O.updateSetting(Array.from(e));
 }, []), j = i.useCallback(e => {
   let t = p[e];
   return null != t ? (0, r.jsx)(P.Z, {
@@ -180,7 +180,7 @@ let {
     getStickerRowProps: u,
     gutterWidth: d,
     inspectedStickerPosition: _,
-    isScrolling: f,
+    isScrolling: E,
     isUsingKeyboardNavigation: h,
     onInspect: U,
     onSelect: B,
@@ -200,7 +200,7 @@ let {
   u,
   d,
   _,
-  f,
+  E,
   h,
   U,
   B,
@@ -226,11 +226,11 @@ let {
   Y
 ]), $ = i.useCallback(e => {
   let n = m[e];
-  if (null != A) {
+  if (null != I) {
     let {
       sendable: t,
       sendableWithPremium: n
-    } = A;
+    } = I;
     if (0 === e && t.length > 0)
       return null;
     let i = t.length > 0 && n.length > 0;
@@ -240,7 +240,7 @@ let {
           className: k.divider,
           children: (0, r.jsx)(l.FormDivider, {})
         }) : null,
-        (0, r.jsx)(I.Z, {
+        (0, r.jsx)(T.Z, {
           className: k.packHeader,
           'aria-label': G.Z.Messages.STICKERS_YOU_MIGHT_LIKE_A11Y,
           children: G.Z.Messages.STICKERS_YOU_MIGHT_LIKE
@@ -250,7 +250,7 @@ let {
   }
   switch (n.type) {
     case y.Ih.FAVORITE:
-      return (0, r.jsx)(I.Z, {
+      return (0, r.jsx)(T.Z, {
         className: k.packHeader,
         'aria-label': G.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
           categoryName: n.name
@@ -266,7 +266,7 @@ let {
         children: n.name
       }, 'header-'.concat(n.id));
     case y.Ih.RECENT:
-      return (0, r.jsx)(I.Z, {
+      return (0, r.jsx)(T.Z, {
         className: k.packHeader,
         'aria-label': G.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
           categoryName: n.name
@@ -283,15 +283,15 @@ let {
       }, 'header-'.concat(n.id));
     case y.Ih.GUILD:
     case y.Ih.EMPTY_GUILD_UPSELL: {
-      let e = g.Z.getGuild(n.id);
+      let e = S.Z.getGuild(n.id);
       if (null == e)
         return null;
-      return (0, r.jsx)(I.Z, {
+      return (0, r.jsx)(T.Z, {
         className: k.packHeader,
         'aria-label': G.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
           categoryName: e.name
         }),
-        icon: (0, r.jsx)(E.Z, {
+        icon: (0, r.jsx)(f.Z, {
           guild: e,
           height: 16,
           width: 16
@@ -305,7 +305,7 @@ let {
       let e = C.Z.getStickerPack(n.id);
       if (null == e)
         return null;
-      return (0, r.jsx)(I.Z, {
+      return (0, r.jsx)(T.Z, {
         className: k.packHeader,
         'aria-label': G.Z.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
           categoryName: e.name
@@ -325,20 +325,20 @@ let {
   t,
   m,
   X,
-  A
+  I
 ]), J = i.useCallback(e => {
-  if (null != A) {
+  if (null != I) {
     let {
       sendable: t,
       sendableWithPremium: n
-    } = A;
+    } = I;
     return 0 === e && t.length > 0 ? 0 : z + (t.length > 0 && n.length > 0 ? K : 0);
   }
   return z;
-}, [A]), ee = i.useCallback(e => {
+}, [I]), ee = i.useCallback(e => {
   let n = m[e],
     i = t.has(n.id);
-  return n.type !== y.Ih.EMPTY_GUILD_UPSELL || null != A || i ? null : (0, r.jsx)(b.Z, {
+  return n.type !== y.Ih.EMPTY_GUILD_UPSELL || null != I || i ? null : (0, r.jsx)(b.Z, {
     className: k.emptyGuildUpsell,
     guildId: n.id,
     channel: O,
@@ -348,7 +348,7 @@ let {
 }, [
   m,
   t,
-  A,
+  I,
   O,
   H
 ]);
@@ -374,21 +374,21 @@ let {
   gridWidth: o,
   filteredStickers: l,
   getStickerItemProps: c,
-  getStickerRowProps: E,
-  gutterWidth: p,
-  isUsingKeyboardNavigation: I,
-  onSelectSticker: T,
-  rowCount: g,
-  rowCountBySection: S,
+  getStickerRowProps: f,
+  gutterWidth: m,
+  isUsingKeyboardNavigation: T,
+  onSelectSticker: g,
+  rowCount: S,
+  rowCountBySection: A,
   stickersCategories: N,
   stickersGrid: v,
   channel: O
-} = e, R = i.useRef(!1), y = i.useRef(null), [D, L] = f.ZN.useStore(e => [
+} = e, R = i.useRef(!1), y = i.useRef(null), [D, L] = h.ZN.useStore(e => [
   e.activeCategoryIndex,
   e.inspectedExpressionPosition
 ], a.Z), {
   analyticsLocations: b
-} = (0, _.ZP)(d.Z.STICKER_PICKER), P = (0, h.Iu)(e => e.searchQuery), U = (0, s.e7)([C.Z], () => C.Z.getPremiumPacks()), {
+} = (0, _.ZP)(d.Z.STICKER_PICKER), P = (0, p.Iu)(e => e.searchQuery), U = (0, s.e7)([C.Z], () => C.Z.getPremiumPacks()), {
   renderRow: w,
   renderSection: x,
   renderSectionFooter: V,
@@ -401,24 +401,24 @@ let {
   stickersCategories: N,
   stickersGrid: v,
   isScrolling: R,
-  isUsingKeyboardNavigation: I,
-  onSelectSticker: T,
+  isUsingKeyboardNavigation: T,
+  onSelectSticker: g,
   getStickerItemProps: c,
-  getStickerRowProps: E,
-  gutterWidth: p,
+  getStickerRowProps: f,
+  gutterWidth: m,
   inspectedStickerPosition: L,
   filteredStickers: l,
   ownedStickerPacks: i.useMemo(() => new Set(U.map(e => e.id)), [U]),
   channel: O
-}), j = (0, m.Qs)({
+}), j = (0, I.Qs)({
   activeCategoryIndex: D,
   isScrolling: R,
   listRef: y,
-  onActiveCategoryIndexChange: f.ZN.setActiveCategoryIndex,
+  onActiveCategoryIndexChange: h.ZN.setActiveCategoryIndex,
   scrollOffset: 20,
   searchQuery: P
 });
-return (0, m.Xs)({
+return (0, I.Xs)({
   searchQuery: P,
   activeCategoryIndex: D,
   listRef: y
@@ -474,9 +474,9 @@ return (0, m.Xs)({
         className: k.__invalid_noSearchResultsContainer,
         noResultsImageURL: B,
         suggestions: (0, r.jsx)(ea, {
-          onSuggestionClick: e => (0, h.ql)(e, !0)
+          onSuggestionClick: e => (0, p.ql)(e, !0)
         })
-      }) : (0, r.jsx)(A.Z, {
+      }) : (0, r.jsx)(E.Z, {
         role: 'none presentation',
         listPadding: null != l ? en : et,
         onScroll: j,
@@ -484,8 +484,8 @@ return (0, m.Xs)({
         renderSection: null == l ? x : void 0,
         renderSectionHeader: Z,
         renderSectionFooter: V,
-        rowCount: g,
-        rowCountBySection: S,
+        rowCount: S,
+        rowCountBySection: A,
         rowHeight: o > F ? J : ee,
         sectionHeaderHeight: Y,
         sectionFooterHeight: H,

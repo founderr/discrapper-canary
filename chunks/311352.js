@@ -5,9 +5,9 @@ var l = n(399606),
   a = n(481060),
   s = n(239091),
   o = n(765585),
-  c = n(819640),
-  u = n(556296),
-  d = n(976401),
+  c = n(870569),
+  u = n(819640),
+  d = n(556296),
   h = n(13140),
   p = n(924557),
   _ = n(435064),
@@ -88,7 +88,7 @@ children: () => n
   });
 };
 t.Z = () => {
-  let e = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
+  let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
 t = (0, p.Go)(),
 {
   clipsEnabled: n,
@@ -97,13 +97,13 @@ t = (0, p.Go)(),
   clipsEnabled: _.Z.getSettings().clipsEnabled,
   isAtMaxSavingClipsOperations: _.Z.getIsAtMaxSaveClipOperations()
 })),
-s = (0, l.e7)([u.Z], () => u.Z.getKeybindForAction(m.kg4.SAVE_CLIP));
+s = (0, l.e7)([d.Z], () => d.Z.getKeybindForAction(m.kg4.SAVE_CLIP));
   if (!(t && n) || null == s || e)
 return null;
   let o = h.BB(s.shortcut, !0);
   return (0, i.jsx)(N, {
 keybindString: o,
-children: (0, i.jsx)(d.Z, {
+children: (0, i.jsx)(c.Z, {
   disabled: r,
   tooltipText: null != s ? g.Z.Messages.CLIPS_SAVE_CLIP_TOOLTIP.format({
     hotkey: h.BB(null == s ? void 0 : s.shortcut, !0)

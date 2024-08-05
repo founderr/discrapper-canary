@@ -10,10 +10,10 @@ var s = a(735250),
   n = a(470079),
   o = a(481060),
   d = a(782568),
-  l = a(53365),
-  r = a(377176),
-  _ = a(577275),
-  c = a(153124),
+  l = a(313201),
+  r = a(53365),
+  _ = a(377176),
+  c = a(577275),
   E = a(981631),
   O = a(829857),
   i = a(689938),
@@ -57,9 +57,9 @@ guildId: t,
 requireTeamSetup: a,
 onClose: A,
 transitionState: u
-  } = e, h = (0, c.Dt)(), [M, x] = n.useState(), [I, m] = n.useState(!1), {
+  } = e, h = (0, l.Dt)(), [M, x] = n.useState(), [I, m] = n.useState(!1), {
 teams: R
-  } = (0, _.Z)(), f = R.filter(e => e.payout_account_status === O.C.ACTIVE), C = n.useMemo(() => f.map(e => ({
+  } = (0, c.Z)(), f = R.filter(e => e.payout_account_status === O.C.ACTIVE), C = n.useMemo(() => f.map(e => ({
 label: e.name,
 value: e.id
   })), [f]), p = n.useCallback(() => {
@@ -96,7 +96,7 @@ children: [
         children: (0, s.jsx)(o.Text, {
           variant: 'text-md/normal',
           color: 'header-secondary',
-          children: (0, r.f)()
+          children: (0, _.f)()
         })
       })
     ]
@@ -111,7 +111,7 @@ children: [
       }) : (0, s.jsx)(o.Button, {
         disabled: !I || a && null == M,
         onClick: () => {
-          A(), (0, l.df)(t, M);
+          A(), (0, r.df)(t, M);
         },
         children: i.Z.Messages.SUBMIT
       })

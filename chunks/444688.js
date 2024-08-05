@@ -3,16 +3,16 @@ var n = s(735250);
 s(470079);
 var i = s(442837),
   o = s(481060),
-  a = s(418632),
-  r = s(594174),
-  l = s(285952),
+  a = s(600164),
+  r = s(418632),
+  l = s(594174),
   c = s(689938),
   d = s(96771);
 
 function u(e) {
   let {
 onClose: t
-  } = e, l = (0, i.e7)([r.default], () => r.default.getCurrentUser());
+  } = e, a = (0, i.e7)([l.default], () => l.default.getCurrentUser());
 
   function d() {
 null == t || t();
@@ -31,7 +31,7 @@ d(), (0, o.openModalLazy)(async () => {
   });
 });
   }
-  return (null == l ? void 0 : l.email) == null ? (0, n.jsx)(o.Button, {
+  return (null == a ? void 0 : a.email) == null ? (0, n.jsx)(o.Button, {
 onClick: u,
 color: o.Button.Colors.BRAND,
 look: o.Button.Looks.FILLED,
@@ -44,7 +44,7 @@ children: [
     look: o.Button.Looks.LINK,
     children: c.Z.Messages.CHANGE_EMAIL_SHORT
   }),
-  (0, n.jsx)(a.Z, {
+  (0, n.jsx)(r.Z, {
     color: o.Button.Colors.BRAND,
     onClick: d
   })
@@ -78,8 +78,8 @@ children: [
     ]
   }),
   (0, n.jsx)(o.ModalFooter, {
-    children: (0, n.jsx)(l.Z, {
-      justify: l.Z.Justify.END,
+    children: (0, n.jsx)(a.Z, {
+      justify: a.Z.Justify.END,
       children: (0, n.jsx)(u, {
         onClose: t
       })

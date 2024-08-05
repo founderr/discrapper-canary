@@ -17,18 +17,18 @@ var r = n(735250),
   d = n(2052),
   _ = n(100527),
   E = n(906732),
-  f = n(880949),
-  h = n(806966),
-  p = n(28546),
-  m = n(468954),
-  I = n(53691),
-  T = n(75145),
-  g = n(631771),
-  S = n(609218),
-  A = n(695346),
-  N = n(594174),
-  v = n(979651),
-  O = n(153124),
+  f = n(313201),
+  h = n(880949),
+  p = n(806966),
+  m = n(28546),
+  I = n(468954),
+  T = n(53691),
+  g = n(75145),
+  S = n(631771),
+  A = n(609218),
+  N = n(695346),
+  v = n(594174),
+  O = n(979651),
   R = n(259580),
   C = n(626135),
   y = n(74538),
@@ -56,7 +56,7 @@ let K = [
 8,
 0
   ],
-  z = 32 + T.K;
+  z = 32 + g.K;
 
 function q(e, t, n) {
   return null == n && e.type === b.bg.GUILD && !t || e.type === b.bg.GUILD && e.guild.id !== n && !t;
@@ -73,7 +73,7 @@ showNitroDivider: u
   } = e;
   return (0, r.jsxs)(r.Fragment, {
 children: [
-  u && (0, r.jsx)(T.Z, {
+  u && (0, r.jsx)(g.Z, {
     colorOpacity: 0.35,
     glowOpacity: 0.35
   }),
@@ -111,7 +111,7 @@ children: [
                   className: W.headerIcon
                 });
               case b.bg.GUILD:
-                return (0, r.jsx)(f.Z, {
+                return (0, r.jsx)(h.Z, {
                   guild: t.guild,
                   height: 16,
                   width: 16
@@ -184,13 +184,13 @@ getItemProps: d,
 onSelectItem: _,
 onItemMouseEnter: E,
 buttonOverlay: f,
-isNitroLocked: p,
+isNitroLocked: h,
 shouldShowUpsell: m
-  } = e, I = h.Wq.useStore(e => e.inspectedExpressionPosition);
+  } = e, I = p.Wq.useStore(e => e.inspectedExpressionPosition);
   return (0, r.jsx)('ul', {
 ...c,
 className: s()(W.soundRow, {
-  [W.soundRowNitroLocked]: p,
+  [W.soundRowNitroLocked]: h,
   [W.lastSoundRow]: o
 }),
 children: t.map((e, t) => {
@@ -209,7 +209,7 @@ children: t.map((e, t) => {
         onSelectItem: () => _(e),
         enableSecondaryActions: !0,
         buttonOverlay: f,
-        inNitroLockedSection: p,
+        inNitroLockedSection: h,
         showLockForDisabledSound: m
       });
     case b.vB.ADD_SOUND:
@@ -230,8 +230,8 @@ guildId: t,
 channel: a,
 containerWidth: s,
 onClose: c,
-onSelect: f,
-suppressPlaySound: T = !1,
+onSelect: h,
+suppressPlaySound: g = !1,
 shouldShowUpsell: R = !0,
 gridNotice: G,
 soundButtonOverlay: k,
@@ -249,23 +249,23 @@ location: ea
   } = (0, d.O)(), es = i.useMemo(() => ({
 ...ea,
 section: Z.jXE.SOUNDBOARD_SOUND_PICKER
-  }), [ea]), [eo, el] = i.useState(null), eu = (0, o.e7)([N.default], () => N.default.getCurrentUser()), ec = (0, y.I5)(eu, Y.p9.TIER_2), ed = (0, o.e7)([v.Z], () => {
+  }), [ea]), [eo, el] = i.useState(null), eu = (0, o.e7)([v.default], () => v.default.getCurrentUser()), ec = (0, y.I5)(eu, Y.p9.TIER_2), ed = (0, o.e7)([O.Z], () => {
 var e;
-return v.Z.getVoiceState(t, null !== (e = null == eu ? void 0 : eu.id) && void 0 !== e ? e : Z.lds);
-  }), e_ = (null == ed ? void 0 : ed.selfDeaf) || (null == ed ? void 0 : ed.mute) || (null == ed ? void 0 : ed.suppress), eE = (0, p.Iu)(e => e.searchQuery), ef = null != eE && '' !== eE, eh = (0, O.Dt)(), {
+return O.Z.getVoiceState(t, null !== (e = null == eu ? void 0 : eu.id) && void 0 !== e ? e : Z.lds);
+  }), e_ = (null == ed ? void 0 : ed.selfDeaf) || (null == ed ? void 0 : ed.mute) || (null == ed ? void 0 : ed.suppress), eE = (0, m.Iu)(e => e.searchQuery), ef = null != eE && '' !== eE, eh = (0, f.Dt)(), {
 categories: ep
   } = (0, x.ZP)(a, void 0, et), [em, eI] = i.useState([]), [eT, eg] = i.useState(!1), eS = (0, x.FS)(ep, em, eE).filter(e => e.items.length > 0), eA = eS.some(e => !!(0, y._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked), eN = !ec && R && eA, {
 enableInlineUpsell: ev,
 enableRoadblock: eO,
 enableRoadblockWithSocialProof: eR
-  } = g.Qs.useExperiment({
+  } = S.Qs.useExperiment({
 location: 'Soundboard Picker'
   }, {
 autoTrackExposure: eN
-  }), eC = eN && ev, ey = A.T4.useSetting(), eD = i.useMemo(() => new Set(ey), [ey]), eL = null == a, eb = y.ZP.canUseCustomCallSounds(eu), eM = i.useCallback(e => {
-eD.has(e) ? eD.delete(e) : eD.add(e), A.T4.updateSetting(Array.from(eD));
+  }), eC = eN && ev, ey = N.T4.useSetting(), eD = i.useMemo(() => new Set(ey), [ey]), eL = null == a, eb = y.ZP.canUseCustomCallSounds(eu), eM = i.useCallback(e => {
+eD.has(e) ? eD.delete(e) : eD.add(e), N.T4.updateSetting(Array.from(eD));
   }, [eD]), eP = i.useCallback((e, t) => {
-if (!T && (0, M.Nq)(eu, e, a, !1)) {
+if (!g && (0, M.Nq)(eu, e, a, !1)) {
   var n;
   (0, M.GN)(e, null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : Z.lds, t), ef && C.default.track(Z.rMx.SEARCH_RESULT_SELECTED, {
     search_type: Z.aib.SOUNDBOARD,
@@ -279,7 +279,7 @@ if (!T && (0, M.Nq)(eu, e, a, !1)) {
   R && el(e);
 }
   }, [
-T,
+g,
 eu,
 a,
 R,
@@ -288,14 +288,14 @@ eE
   ]), eU = i.useCallback(e => {
 switch (e.item.type) {
   case b.vB.SOUND:
-    return null == f || f(e.item.sound), eP(e.item.sound, er);
+    return null == h || h(e.item.sound), eP(e.item.sound, er);
   case b.vB.ADD_SOUND:
     return (0, H.Z)(e.item.guild.id);
 }
   }, [
 er,
 eP,
-f
+h
   ]), ew = i.useCallback((e, n, i, s, o) => {
 let l = eS[i.sectionIndex],
   u = R && q(l.categoryInfo, ec, t),
@@ -308,7 +308,7 @@ return (0, r.jsx)($, {
   gridRowProps: n,
   getItemProps: s,
   onItemMouseEnter: o,
-  suppressPlaySound: T,
+  suppressPlaySound: g,
   onSelectItem: eU,
   soundButtonProps: {
     channel: a,
@@ -324,7 +324,7 @@ return (0, r.jsx)($, {
 eU,
 a,
 e_,
-T,
+g,
 er,
 eL,
 eb,
@@ -428,7 +428,7 @@ return j.Z.Messages.PREMIUM_UPSELL_MOBILE_FEATURE_SOUNDBOARD_POPUP_LABEL_V2.form
   nitroTierName: e,
   onClick: ej
 });
-  }, []), eK = i.useCallback(() => eC ? (0, r.jsx)(I.p, {
+  }, []), eK = i.useCallback(() => eC ? (0, r.jsx)(T.p, {
 showUpsell: eT,
 upsellText: eW(),
 ctaText: j.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
@@ -456,8 +456,8 @@ null != en.current && en.current.pause(), en.current = n, n.currentTime = 0, n.v
   }, [en]);
   return (0, r.jsxs)(r.Fragment, {
 children: [
-  null != eo ? eO ? (0, r.jsx)(S.Z, {
-    containerContext: S.p.NONE,
+  null != eo ? eO ? (0, r.jsx)(A.Z, {
+    containerContext: A.p.NONE,
     image: {
       url: 'https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_dark.png',
       width: 220,
@@ -485,11 +485,11 @@ children: [
     sound: eo,
     channel: a
   }) : void 0,
-  (0, r.jsx)(m.Z, {
+  (0, r.jsx)(I.Z, {
     categories: eS,
     collapsedCategories: eD,
     containerWidth: s,
-    store: h.Wq,
+    store: p.Wq,
     onSelectItem: eU,
     onSearchExpressions: eV,
     hasSearchResults: em.length > 0,

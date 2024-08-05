@@ -23,11 +23,11 @@ var t = a(735250),
   p = a(798769),
   g = a(317269),
   A = a(474936),
-  P = a(981631),
-  S = a(689938),
-  h = a(752320);
+  b = a(981631),
+  P = a(689938),
+  S = a(752320);
 n.default = e => {
-  var n, a, b, U;
+  var n, a, h, U;
   let {
 daysLeft: B,
 premiumType: Z,
@@ -54,18 +54,18 @@ paymentSourceId: null == G ? void 0 : G.paymentSourceId,
 currency: j.currency,
 analyticsLocations: (0, u.ZP)(c.Z.PREMIUM_UNCANCEL_MODAL),
 analyticsLocation: c.Z.PREMIUM_UNCANCEL_MODAL
-  }), K = (0, r.e7)([T.Z], () => (0, O.oE)(v), [v]), X = (0, r.e7)([T.Z], () => T.Z.isFetchingForSKU(k)), z = null == w ? void 0 : null === (U = w.invoiceItems) || void 0 === U ? void 0 : null === (b = U.find(e => e.subscriptionPlanId === v)) || void 0 === b ? void 0 : null === (a = b.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === I.eW.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount, Q = null != K ? (0, E.aS)(K.id, !1, !1, j) : null, V = null != Q && null != z ? (0, R.T4)(Q.amount - (null != z ? z : 0), Q.currency) : null, {
+  }), K = (0, r.e7)([T.Z], () => (0, O.oE)(v), [v]), X = (0, r.e7)([T.Z], () => T.Z.isFetchingForSKU(k)), z = null == w ? void 0 : null === (U = w.invoiceItems) || void 0 === U ? void 0 : null === (h = U.find(e => e.subscriptionPlanId === v)) || void 0 === h ? void 0 : null === (a = h.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === I.eW.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount, Q = null != K ? (0, E.aS)(K.id, !1, !1, j) : null, V = null != Q && null != z ? (0, R.T4)(Q.amount - (null != z ? z : 0), Q.currency) : null, {
 intervalType: q,
 intervalCount: J
   } = E.ZP.getInterval(v), $ = Z === A.p9.TIER_1, ee = null != Q ? (0, R.T4)(Q.amount, Q.currency) : null;
   return o.useEffect(() => {
-C.default.track(P.rMx.OPEN_MODAL, {
+C.default.track(b.rMx.OPEN_MODAL, {
   type: 'Premium Uncancel Winback',
   source: x
 });
   }, [x]), (0, t.jsx)(_.ModalRoot, {
 ...F,
-className: h.modal,
+className: S.modal,
 children: W ? (0, t.jsxs)(t.Fragment, {
   children: [
     (0, t.jsx)(p.Z, {
@@ -80,12 +80,12 @@ children: W ? (0, t.jsxs)(t.Fragment, {
   ]
 }) : (0, t.jsx)(m.Z, {
   premiumType: Z,
-  titleText: $ ? S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE_TIER_1.format({
+  titleText: $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE_TIER_1.format({
     daysLeft: B
-  }) : S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE.format({
+  }) : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE.format({
     daysLeft: B
   }),
-  subtitleText: $ ? S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE_TIER_1.format() : S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE.format(),
+  subtitleText: $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE_TIER_1.format() : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE.format(),
   footer: (0, t.jsxs)('div', {
     children: [
       null !== ee ? (0, t.jsx)(_.Text, {
@@ -93,27 +93,27 @@ children: W ? (0, t.jsxs)(t.Fragment, {
         children: function(e) {
           switch (q) {
             case A.rV.YEAR:
-              return $ ? S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1.format({
+              return $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1.format({
                 price: e
-              }) : S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY.format({
+              }) : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY.format({
                 price: e
               });
             case A.rV.MONTH:
               if (null != V)
-                return S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER.format({
+                return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER.format({
                   discountPrice: V,
                   defaultPrice: e
                 });
               if ($)
-                return S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MONTHLY_TIER_1.format({
+                return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MONTHLY_TIER_1.format({
                   price: e
                 });
               if (1 === J)
-                return S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MONTHLY.format({
+                return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MONTHLY.format({
                   price: e
                 });
               else
-                return S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MULTI_MONTH.format({
+                return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MULTI_MONTH.format({
                   price: e,
                   intervalCount: J
                 });
@@ -125,27 +125,27 @@ children: W ? (0, t.jsxs)(t.Fragment, {
         type: _.SpinnerTypes.SPINNING_CIRCLE
       }),
       (0, t.jsxs)('div', {
-        className: h.footer,
+        className: S.footer,
         children: [
           (0, t.jsx)(_.Button, {
             disabled: X,
             onClick: () => {
               if (null != G) {
                 let e = (0, M.tD)(v, G.currency, null == y ? void 0 : y.id);
-                null != y && y.id === G.paymentSourceId && e ? (s.O5(G, Y, P.Sbl.UNCANCEL_WINBACK_MODAL), D(!0)) : (F.onClose(), (0, f.Z)({
+                null != y && y.id === G.paymentSourceId && e ? (s.O5(G, Y, b.Sbl.UNCANCEL_WINBACK_MODAL), D(!0)) : (F.onClose(), (0, f.Z)({
                   initialPlanId: v,
                   analyticsLocations: Y,
-                  analyticsLocation: P.Sbl.UNCANCEL_WINBACK_MODAL
+                  analyticsLocation: b.Sbl.UNCANCEL_WINBACK_MODAL
                 }));
               }
             },
-            children: S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO
+            children: P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO
           }),
           (0, t.jsx)(_.Button, {
             look: _.Button.Looks.LINK,
             color: (0, i.wj)(H) ? _.Button.Colors.WHITE : _.Button.Colors.PRIMARY,
             onClick: F.onClose,
-            children: S.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL
+            children: P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL
           })
         ]
       })

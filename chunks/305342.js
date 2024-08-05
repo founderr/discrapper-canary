@@ -10,9 +10,9 @@ var i = n(735250),
   l = n(442837),
   o = n(481060),
   c = n(131388),
-  u = n(160404),
-  d = n(351402),
-  _ = n(153124),
+  u = n(313201),
+  d = n(160404),
+  _ = n(351402),
   E = n(768581),
   I = n(817460),
   m = n(584825),
@@ -37,9 +37,9 @@ let {
   benefits: t,
   header: n,
   guildId: a
-} = e, [r, l] = s.useState(!1), c = r ? t : t.slice(0, 5), u = t.length > 5, d = t.length - 5, E = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION_WITH_ITEMS.format({
-  numTruncated: d
-}), m = (0, _.Dt)();
+} = e, [r, l] = s.useState(!1), c = r ? t : t.slice(0, 5), d = t.length > 5, _ = t.length - 5, E = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION_WITH_ITEMS.format({
+  numTruncated: _
+}), m = (0, u.Dt)();
 return 0 === t.length ? null : (0, i.jsxs)('div', {
   className: Z.benefitsSection,
   children: [
@@ -63,7 +63,7 @@ return 0 === t.length ? null : (0, i.jsxs)('div', {
         }, (0, I.ab)(e))
       }, t))
     }),
-    u && (0, i.jsx)(j, {
+    d && (0, i.jsx)(j, {
       isViewAll: r,
       onToggle: () => l(e => !e),
       showMoreText: E
@@ -200,20 +200,20 @@ t.Z = e => {
   let {
 listingId: n,
 guildId: a,
-groupListingId: _,
+groupListingId: u,
 analyticsLocation: E
   } = e, C = (0, m.jO)(n), {
 openModal: f,
 canOpenModal: p,
 cannotOpenReason: S,
 isCheckingTrialEligibility: A
-  } = (0, x.Z)(C, a, _, E), P = (0, l.e7)([d.Z], () => d.Z.isSyncing), {
+  } = (0, x.Z)(C, a, u, E), P = (0, l.e7)([_.Z], () => _.Z.isSyncing), {
 activeSubscription: D,
 activeSubscriptionListing: U
-  } = (0, h.Z)(_), y = (null == U ? void 0 : U.id) === n, B = (null == D ? void 0 : D.status) === v.O0b.CANCELED, [k, G] = s.useState(!1), [F, w] = s.useState(!1), V = s.useCallback(e => {
+  } = (0, h.Z)(u), y = (null == U ? void 0 : U.id) === n, B = (null == D ? void 0 : D.status) === v.O0b.CANCELED, [k, G] = s.useState(!1), [F, w] = s.useState(!1), V = s.useCallback(e => {
 let t = !1;
 null != e && (t = e.scrollHeight - e.clientHeight > 1), w(t);
-  }, []), [H] = T._T(n), [Y] = T.PK(n), [W] = T.TT(n), [K] = T.F2(n), z = (0, N.Z)(a, n), Q = null != W && null == D && z, q = (0, c.Z)(M.iP), [X, J] = s.useState(!1), $ = X || !q, ee = (0, l.e7)([u.Z], () => u.Z.isViewingServerShop(a)), et = (null == C ? void 0 : C.published) === !0, en = (null == C ? void 0 : C.soft_deleted) === !0, ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  }, []), [H] = T._T(n), [Y] = T.PK(n), [W] = T.TT(n), [K] = T.F2(n), z = (0, N.Z)(a, n), Q = null != W && null == D && z, q = (0, c.Z)(M.iP), [X, J] = s.useState(!1), $ = X || !q, ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(a)), et = (null == C ? void 0 : C.published) === !0, en = (null == C ? void 0 : C.soft_deleted) === !0, ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
   return (et || ee) && !en ? (0, i.jsxs)('article', {
 className: Z.container,
 'aria-label': H,

@@ -11,10 +11,10 @@ var i = n(735250),
   o = n(481060),
   c = n(952164),
   u = n(768419),
-  d = n(239470),
-  h = n(894344),
-  p = n(314897),
-  m = n(936195),
+  d = n(424678),
+  h = n(239470),
+  p = n(894344),
+  m = n(314897),
   _ = n(908841),
   f = n(5192),
   E = n(561308),
@@ -116,8 +116,8 @@ function j(e) {
 } = (0, C.Z)(w),
 F = (0, l.e7)([
   u.Z,
-  p.default
-], () => (null == D ? void 0 : D.type) === v.IIU.LISTENING && null != H ? (0, d.Z)(u.Z, p.default, H, D) : void 0, [
+  m.default
+], () => (null == D ? void 0 : D.type) === v.IIU.LISTENING && null != H ? (0, h.Z)(u.Z, m.default, H, D) : void 0, [
   D,
   H
 ], r.Z),
@@ -169,7 +169,7 @@ A = () => {
 }, T = () => {
   (0, c.aG)(D);
 };
-z = (0, i.jsx)(m.Z, {
+z = (0, i.jsx)(d.Z, {
   artists: U,
   canOpen: null != D.sync_id,
   linkClassName: M.popoutTextSecondary,
@@ -178,7 +178,7 @@ z = (0, i.jsx)(m.Z, {
   }
 }), (null == F ? void 0 : F.syncDisabled) === !1 && Y.push((0, i.jsx)(x.Ll, {
   onClick: () => {
-    (0, h.Z)(F, S.kG.USER_ACTIVITY_SYNC), y();
+    (0, p.Z)(F, S.kG.USER_ACTIVITY_SYNC), y();
   },
   IconComponent: o.UserPlayIcon,
   children: Z.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG

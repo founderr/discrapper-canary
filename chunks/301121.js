@@ -20,27 +20,27 @@ var n, a, i = s(735250),
   m = s(809206),
   A = s(230711),
   g = s(241420),
-  h = s(651530),
-  O = s(163268),
-  p = s(294602),
-  R = s(778825),
-  x = s(856768),
-  M = s(592204),
-  f = s(712950),
-  D = s(880257),
-  P = s(16703),
-  L = s(977059),
-  b = s(236289),
-  Z = s(518560),
-  v = s(237292),
-  j = s(604849),
-  B = s(278828),
-  U = s(921801),
-  G = s(480294),
-  F = s(430824),
-  y = s(663389),
-  V = s(594174),
-  Y = s(285952),
+  h = s(600164),
+  O = s(651530),
+  p = s(163268),
+  R = s(294602),
+  x = s(778825),
+  M = s(856768),
+  f = s(592204),
+  D = s(712950),
+  P = s(880257),
+  L = s(16703),
+  b = s(977059),
+  Z = s(236289),
+  v = s(518560),
+  j = s(237292),
+  B = s(604849),
+  U = s(278828),
+  G = s(921801),
+  F = s(480294),
+  y = s(430824),
+  V = s(663389),
+  Y = s(594174),
   w = s(626135),
   k = s(63063),
   H = s(78451),
@@ -72,8 +72,8 @@ writable: !0
 }
 
 function ed() {
-  let e = (0, u.e7)([R.Z], () => R.Z.getGuild()),
-t = (0, P.Z)(),
+  let e = (0, u.e7)([x.Z], () => x.Z.getGuild()),
+t = (0, L.Z)(),
 s = null != e ? e : t;
   r.useEffect(() => {
 w.default.track(ea.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
@@ -93,7 +93,7 @@ null != e && S.Z.dispatch({
 tag: I.FormTitleTags.H1,
 title: er.Z.Messages.PRIVACY_AND_SAFETY,
 children: [
-  (0, i.jsx)(x.Z, {
+  (0, i.jsx)(M.Z, {
     className: eo.guildSelector,
     guildId: s.id,
     onChange: n
@@ -108,13 +108,13 @@ children: [
 
 function e_() {
   var e;
-  let t = null === (e = (0, D.Z)()) || void 0 === e || e,
-s = (0, v.y0)({
+  let t = null === (e = (0, P.Z)()) || void 0 === e || e,
+s = (0, j.y0)({
   location: 'user_settings_web'
 }),
-n = (0, j.c)(),
+n = (0, B.c)(),
 a = (0, Q.a)(es.to.DM_SAFETY_ALERTS);
-  return t || !s ? null : (0, i.jsxs)(U.F, {
+  return t || !s ? null : (0, i.jsxs)(G.F, {
 setting: en.s6.PRIVACY_SAFETY_ALERTS,
 children: [
   (0, i.jsx)(I.FormSection, {
@@ -133,7 +133,7 @@ children: [
           note: er.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({
             learnMoreLink: k.Z.getArticleURL(ea.BhN.SAFETY_ALERTS)
           }),
-          onChange: B.Q,
+          onChange: U.Q,
           hideBorder: !0,
           children: er.Z.Messages.SAFETY_ALERTS_SETTING_TITLE
         }),
@@ -187,7 +187,7 @@ children: [
                 z.mX.updateSetting(e), eE(e, !1);
               },
               onCancel: () => {
-                z.mX.updateSetting(e), z.zA.updateSetting(e ? W.default.keys(F.Z.getGuilds()) : []), eE(e, !0);
+                z.mX.updateSetting(e), z.zA.updateSetting(e ? W.default.keys(y.Z.getGuilds()) : []), eE(e, !0);
               }
             });
           },
@@ -210,12 +210,12 @@ children: [
 
 function eT() {
   var e;
-  let t = null === (e = (0, D.Z)()) || void 0 === e || e,
+  let t = null === (e = (0, P.Z)()) || void 0 === e || e,
 {
   explicitContentGuilds: s,
   explicitContentFriendDm: n,
   explicitContentNonFriendDm: a
-} = (0, p.B)(),
+} = (0, R.B)(),
 r = (0, Q.a)(es.to.DM_SAFETY_ALERTS),
 o = [{
     value: T.Q4.BLUR,
@@ -260,7 +260,7 @@ children: [
         children: (0, i.jsx)(I.SingleSelect, {
           options: o,
           value: n,
-          onChange: e => (0, O.zj)({
+          onChange: e => (0, p.zj)({
             explicitContentFriendDm: e
           })
         })
@@ -272,7 +272,7 @@ children: [
         children: (0, i.jsx)(I.SingleSelect, {
           options: o,
           value: a,
-          onChange: e => (0, O.zj)({
+          onChange: e => (0, p.zj)({
             explicitContentNonFriendDm: e
           })
         })
@@ -284,7 +284,7 @@ children: [
         children: (0, i.jsx)(I.SingleSelect, {
           options: l,
           value: s,
-          onChange: e => (0, O.zj)({
+          onChange: e => (0, p.zj)({
             explicitContentGuilds: e
           })
         })
@@ -443,7 +443,7 @@ eS({
     z.iG.updateSetting(e), this.trackDefaultDmsUpdated(e, !1);
   },
   onCancel: () => {
-    z.iG.updateSetting(e), z.h2.updateSetting(e ? W.default.keys(F.Z.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0);
+    z.iG.updateSetting(e), z.h2.updateSetting(e ? W.default.keys(y.Z.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0);
   }
 });
   }
@@ -464,7 +464,7 @@ eS({
     z.mX.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1);
   },
   onCancel: () => {
-    z.mX.updateSetting(e), z.zA.updateSetting(e ? W.default.keys(F.Z.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0);
+    z.mX.updateSetting(e), z.zA.updateSetting(e ? W.default.keys(y.Z.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0);
   }
 });
   }
@@ -513,11 +513,11 @@ return this.props.mediaRedactionIsEnabled ? (0, i.jsxs)(i.Fragment, {
       tag: I.FormTitleTags.H3,
       className: el.marginBottom20,
       children: [
-        (0, i.jsx)(U.F, {
+        (0, i.jsx)(G.F, {
           setting: en.s6.PRIVACY_SENSITIVE_MEDIA,
           children: (0, i.jsx)(eT, {})
         }),
-        (0, i.jsxs)(U.F, {
+        (0, i.jsxs)(G.F, {
           setting: en.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER,
           children: [
             (0, i.jsxs)(I.FormItem, {
@@ -604,7 +604,7 @@ return (0, i.jsxs)(I.FormSection, {
       className: el.marginBottom8,
       children: er.Z.Messages.USER_KEYWORD_FILTERS_TITLE
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_KEYWORD_FILTER,
       children: (0, i.jsx)(I.FormSwitch, {
         value: this.props.keywordFilter,
@@ -638,7 +638,7 @@ return (0, i.jsxs)(I.FormSection, {
       className: el.marginBottom8,
       children: er.Z.Messages.USER_DM_SETTINGS
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_DMS,
       children: (0, i.jsx)(I.FormSwitch, {
         value: !n,
@@ -647,7 +647,7 @@ return (0, i.jsxs)(I.FormSection, {
         children: er.Z.Messages.NEW_GUILDS_DM_ALLOWED
       })
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS,
       children: (0, i.jsx)(I.FormSwitch, {
         value: !!a && e,
@@ -657,11 +657,11 @@ return (0, i.jsxs)(I.FormSection, {
         children: er.Z.Messages.NSFW_GUILDS_TOGGLE_HEADER
       })
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_MESSAGE_REQUESTS,
       children: (0, i.jsx)(eu, {})
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS,
       children: (0, i.jsx)(I.FormSwitch, {
         value: !!a && s,
@@ -688,7 +688,7 @@ return (0, i.jsxs)(I.FormSection, {
       className: el.marginBottom8,
       children: er.Z.Messages.DATA_PRIVACY_CONTROLS
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_DATA_IMPROVE_DISCORD,
       children: (0, i.jsx)(I.FormSwitch, {
         value: e,
@@ -699,7 +699,7 @@ return (0, i.jsxs)(I.FormSection, {
         children: er.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE
       })
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_DATA_PERSONALIZE,
       children: (0, i.jsx)(I.FormSwitch, {
         value: t,
@@ -710,7 +710,7 @@ return (0, i.jsxs)(I.FormSection, {
         children: er.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE
       })
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_DATA_QUESTS,
       children: (0, i.jsx)(I.FormSwitch, {
         value: !s,
@@ -723,7 +723,7 @@ return (0, i.jsxs)(I.FormSection, {
         })
       })
     }),
-    (0, i.jsxs)(U.F, {
+    (0, i.jsxs)(G.F, {
       setting: en.s6.PRIVACY_DATA_BASIC_SERVICE,
       children: [
         (0, i.jsx)(I.FormTitle, {
@@ -745,7 +745,7 @@ return (0, i.jsxs)(I.FormSection, {
         })
       ]
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_DATA_REQUEST,
       children: this.renderHarvestRequest()
     })
@@ -786,7 +786,7 @@ return a && null != n && (e = (0, i.jsx)(I.Card, {
       date: E()(n.created_at).add(ea.eBq, 'days').format('MMMM Do YYYY')
     })
   })
-}), o = null), null != o && (o = (0, i.jsx)(Y.Z, {
+}), o = null), null != o && (o = (0, i.jsx)(h.Z, {
   children: o
 })), (0, i.jsxs)(r.Fragment, {
   children: [
@@ -870,23 +870,23 @@ return (0, i.jsxs)(I.FormSection, {
   title: er.Z.Messages.PRIVACY_AND_SAFETY,
   children: [
     this.renderDMSafety(),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_KEYWORD_FILTER,
       children: this.renderKeywordFiltering()
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS,
       children: this.renderServerPrivacy()
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_DATA_PRIVACY,
       children: e ? this.renderDataPrivacy() : null
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_TERMS_POLICY,
       children: this.renderPrivacyAndTermsNote()
     }),
-    (0, i.jsx)(U.F, {
+    (0, i.jsx)(G.F, {
       setting: en.s6.PRIVACY_STAFF_ONLY,
       children: this.renderStaffOnlySettings()
     })
@@ -912,7 +912,7 @@ return (0, i.jsx)(q.Z, {
     },
     {
       title: er.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
-      component: (0, i.jsx)(Z.Z, {}),
+      component: (0, i.jsx)(v.Z, {}),
       setting: en.s6.PRIVACY_ACCOUNT_STANDING
     },
     {
@@ -999,30 +999,30 @@ this.state = {
 }
 
 function em() {
-  let e = (0, u.e7)([V.default], () => {
-  let e = V.default.getCurrentUser();
+  let e = (0, u.e7)([Y.default], () => {
+  let e = Y.default.getCurrentUser();
   return d()(null != e, 'ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined'), e;
 }),
-t = (0, u.cj)([G.Z], () => ({
-  fetchedConsents: G.Z.fetchedConsents,
-  usageStatistics: G.Z.hasConsented(ea.pjP.USAGE_STATISTICS),
-  personalization: G.Z.hasConsented(ea.pjP.PERSONALIZATION)
+t = (0, u.cj)([F.Z], () => ({
+  fetchedConsents: F.Z.fetchedConsents,
+  usageStatistics: F.Z.hasConsented(ea.pjP.USAGE_STATISTICS),
+  personalization: F.Z.hasConsented(ea.pjP.PERSONALIZATION)
 })),
-s = (0, u.e7)([b.Z], () => b.Z.getFetchError()),
-n = (0, u.e7)([y.Z], () => y.Z.getSubsection()),
-a = (0, h.yh)(),
-r = (0, M.Xo)({
+s = (0, u.e7)([Z.Z], () => Z.Z.getFetchError()),
+n = (0, u.e7)([V.Z], () => V.Z.getSubsection()),
+a = (0, O.yh)(),
+r = (0, f.Xo)({
   location: 'web_user_privacy_and_safety_settings'
 }),
 {
   hasSearchResults: o,
   searchResults: l
 } = (0, $.E)(),
-c = (0, f.p)(),
-_ = (0, D.Z)(),
+c = (0, D.p)(),
+_ = (0, P.Z)(),
 {
   enabled: E
-} = L.c.useExperiment({
+} = b.c.useExperiment({
   location: 'PrivacySafetySettings'
 });
   return (0, i.jsx)(eC, {

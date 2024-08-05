@@ -51,7 +51,7 @@ p = e => {
   var n;
   return e.managed && (null === (n = e.tags) || void 0 === n ? void 0 : n.bot_id) != null;
 },
-C = i.useMemo(() => {
+f = i.useMemo(() => {
   let i = [];
   for (let a of h) {
     if (p(a))
@@ -71,12 +71,12 @@ C = i.useMemo(() => {
   n,
   t
 ]),
-[f, x] = i.useState(''),
+[C, x] = i.useState(''),
 O = i.useMemo(() => {
   let n = function(e) {
       return e.startsWith('@') ? e.substr(1) : e;
-    }(f),
-    t = f.startsWith('@') ? C.filter(n => n.id === e) : C,
+    }(C),
+    t = C.startsWith('@') ? f.filter(n => n.id === e) : f,
     i = (0, m.B)(g, E, n);
   return {
     members: i,
@@ -85,11 +85,11 @@ O = i.useMemo(() => {
 }, [
   e,
   g,
-  f,
-  C
+  C,
+  f
 ]);
   return {
-query: f,
+query: C,
 results: O,
 setQuery: x,
 unfilteredCount: O.members.length + O.roles.length

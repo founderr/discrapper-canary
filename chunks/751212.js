@@ -19,21 +19,21 @@ var n, i, l = t(735250),
   _ = t(740504),
   T = t(933557),
   x = t(471445),
-  I = t(423589),
-  O = t(74888),
-  C = t(444899),
-  M = t(11352),
-  p = t(610617),
-  v = t(777861),
-  L = t(131704),
-  j = t(592125),
-  Z = t(324067),
-  A = t(650774),
-  R = t(430824),
-  f = t(699516),
-  b = t(9156),
-  U = t(594174),
-  G = t(285952),
+  I = t(600164),
+  O = t(423589),
+  C = t(74888),
+  M = t(444899),
+  p = t(11352),
+  v = t(610617),
+  L = t(777861),
+  j = t(131704),
+  Z = t(592125),
+  A = t(324067),
+  R = t(650774),
+  f = t(430824),
+  b = t(699516),
+  U = t(9156),
+  G = t(594174),
   P = t(823379),
   F = t(63063),
   D = t(621600),
@@ -57,7 +57,7 @@ let {
   overrides: t,
   channelOverridesProp: n
 } = s;
-return e.channelOverrides !== n ? (t = new Set(t), (0, I.OD)(e.channelOverrides).forEach(e => t.add(e)), {
+return e.channelOverrides !== n ? (t = new Set(t), (0, O.OD)(e.channelOverrides).forEach(e => t.add(e)), {
   overrides: t,
   channelOverridesProp: e.channelOverrides
 }) : null;
@@ -84,7 +84,7 @@ if (this.props.channelOverrides !== e.channelOverrides) {
   let {
     overrides: e
   } = this.state;
-  e = new Set(e), (0, I.OD)(this.props.channelOverrides).forEach(s => e.add(s)), this.setState({
+  e = new Set(e), (0, O.OD)(this.props.channelOverrides).forEach(s => e.add(s)), this.setState({
     overrides: e
   });
 }
@@ -108,7 +108,7 @@ let {
 } = this.props;
 return null == e ? null : (0, l.jsxs)(E.ModalHeader, {
   children: [
-    (0, l.jsxs)(G.Z.Child, {
+    (0, l.jsxs)(I.Z.Child, {
       children: [
         (0, l.jsx)(E.Heading, {
           variant: 'heading-lg/semibold',
@@ -121,7 +121,7 @@ return null == e ? null : (0, l.jsxs)(E.ModalHeader, {
         })
       ]
     }),
-    (0, l.jsx)(G.Z.Child, {
+    (0, l.jsx)(I.Z.Child, {
       grow: 0,
       children: (0, l.jsx)(E.ModalCloseButton, {
         onClick: this.props.onClose
@@ -157,12 +157,12 @@ return null == n ? null : (0, l.jsxs)(E.FormItem, {
         name: n.name
       })
     }),
-    s ? (0, l.jsxs)(G.Z, {
+    s ? (0, l.jsxs)(I.Z, {
       className: H.spacing,
-      align: G.Z.Align.CENTER,
+      align: I.Z.Align.CENTER,
       children: [
-        (0, l.jsxs)(G.Z, {
-          direction: G.Z.Direction.VERTICAL,
+        (0, l.jsxs)(I.Z, {
+          direction: I.Z.Direction.VERTICAL,
           className: H.__invalid_muteUntilTextWrapper,
           children: [
             (0, l.jsx)(E.FormTitle, {
@@ -170,7 +170,7 @@ return null == n ? null : (0, l.jsxs)(E.FormItem, {
               className: H.muteUntilTitle,
               children: w.Z.Messages.MUTE_UNTIL
             }),
-            (0, l.jsx)(v.Z, {
+            (0, l.jsx)(L.Z, {
               className: H.muteUntilText,
               muteConfig: t
             })
@@ -178,7 +178,7 @@ return null == n ? null : (0, l.jsxs)(E.FormItem, {
         }),
         (0, l.jsx)(E.SingleSelect, {
           className: H.muteTimeSelector,
-          options: (0, I.W9)(),
+          options: (0, O.W9)(),
           value: i,
           onChange: this.handleSelectMuteTime
         })
@@ -298,7 +298,7 @@ let {
 if (!!e)
   return (0, l.jsxs)(l.Fragment, {
     children: [
-      (0, l.jsx)(p.Z, {
+      (0, l.jsx)(v.Z, {
         guildId: s,
         onClose: t
       }),
@@ -323,7 +323,7 @@ let {
   } = e;
   return {
     value: s.id,
-    label: (0, T.F6)(s, U.default, f.Z)
+    label: (0, T.F6)(s, G.default, b.Z)
   };
 }).value();
 return (0, l.jsxs)(E.FormItem, {
@@ -362,7 +362,7 @@ let {
   if (!r.has(o.id) || null != i[o.id] && 0 === i[o.id].length)
     return null;
   let d = e[o.id];
-  return (0, l.jsx)(C.f, {
+  return (0, l.jsx)(M.f, {
     ref: e => {
       this._channelRefs[o.id] = e;
     },
@@ -385,7 +385,7 @@ return (0 === r.size || 0 === o.length) && o.push((0, l.jsx)('div', {
 }, 'placeholder')), (0, l.jsxs)('div', {
   className: H.overrideList,
   children: [
-    (0, l.jsxs)(G.Z, {
+    (0, l.jsxs)(I.Z, {
       children: [
         (0, l.jsx)(E.Heading, {
           variant: 'eyebrow',
@@ -449,7 +449,7 @@ return (0, l.jsxs)(E.ModalRoot, {
   }
   constructor(...e) {
 super(...e), y(this, '_scroller', null), y(this, '_channelRefs', {}), y(this, 'state', {
-  overrides: new Set((0, I.OD)(this.props.channelOverrides)),
+  overrides: new Set((0, O.OD)(this.props.channelOverrides)),
   channelOverridesProp: this.props.channelOverrides,
   lastSelected: null
 }), y(this, 'setScrollerRef', e => {
@@ -481,10 +481,10 @@ super(...e), y(this, '_scroller', null), y(this, '_channelRefs', {}), y(this, 's
     overrides: s
   });
 }), y(this, 'renderOptionLabel', e => {
-  let s = j.Z.getChannel(e.value);
+  let s = Z.Z.getChannel(e.value);
   if (null == s)
     return e.label;
-  let t = j.Z.getChannel(s.parent_id),
+  let t = Z.Z.getChannel(s.parent_id),
     n = null != t ? t.name : null;
   return (0, l.jsx)(E.IconSelectOption, {
     icon: (0, x.KS)(s),
@@ -500,36 +500,36 @@ function V(e) {
 guildId: s,
 ...t
   } = e, n = (0, N.cj)([
-Z.Z,
-R.Z,
 A.Z,
-b.ZP
+f.Z,
+R.Z,
+U.ZP
   ], () => {
-let e = Z.Z.getCategories(s);
+let e = A.Z.getCategories(s);
 return {
   guildId: s,
   categories: e,
-  guild: R.Z.getGuild(s),
-  memberCount: A.Z.getMemberCount(s),
-  suppressEveryone: b.ZP.isSuppressEveryoneEnabled(s),
-  suppressRoles: b.ZP.isSuppressRolesEnabled(s),
-  muteEvents: b.ZP.isMuteScheduledEventsEnabled(s),
-  mobilePush: b.ZP.isMobilePushEnabled(s),
-  muted: b.ZP.isMuted(s),
-  muteConfig: b.ZP.getMuteConfig(s),
-  messageNotifications: b.ZP.getMessageNotifications(s),
-  channelOverrides: b.ZP.getChannelOverrides(s),
+  guild: f.Z.getGuild(s),
+  memberCount: R.Z.getMemberCount(s),
+  suppressEveryone: U.ZP.isSuppressEveryoneEnabled(s),
+  suppressRoles: U.ZP.isSuppressRolesEnabled(s),
+  muteEvents: U.ZP.isMuteScheduledEventsEnabled(s),
+  mobilePush: U.ZP.isMobilePushEnabled(s),
+  muted: U.ZP.isMuted(s),
+  muteConfig: U.ZP.getMuteConfig(s),
+  messageNotifications: U.ZP.getMessageNotifications(s),
+  channelOverrides: U.ZP.getChannelOverrides(s),
   channels: (0, _.Z)(e._categories, e, e => {
     let {
       channel: {
         type: s
       }
     } = e;
-    return (0, L.r8)(s) || s === k.d4z.GUILD_CATEGORY;
+    return (0, j.r8)(s) || s === k.d4z.GUILD_CATEGORY;
   }),
-  notifyHighlights: b.ZP.getNotifyHighlights(s)
+  notifyHighlights: U.ZP.getNotifyHighlights(s)
 };
-  }), i = M.Y.useExperiment({
+  }), i = p.Y.useExperiment({
 location: 'connected_notification_settings'
   }, {
 autoTrackExposure: !0
@@ -543,7 +543,7 @@ checkboxColor: a
 }
 
 function z(e) {
-  let s = (0, I.Mn)('NotificationSettingsModal') ? O.Z : V;
+  let s = (0, O.Mn)('NotificationSettingsModal') ? C.Z : V;
   return (0, l.jsx)(s, {
 ...e
   });

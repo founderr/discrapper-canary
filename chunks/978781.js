@@ -22,8 +22,8 @@ var r, i, a = n(735250),
   I = n(514361),
   T = n(572397),
   g = n(705262),
-  S = n(197115),
-  A = n(672752),
+  S = n(436774),
+  A = n(197115),
   N = n(727939),
   v = n(981631),
   O = n(921944),
@@ -109,7 +109,7 @@ children: [
       (0, a.jsx)(u.NitroWheelIcon, {
         className: y.footerNitro,
         size: 'xs',
-        color: A.JX.PREMIUM_TIER_2
+        color: S.JX.PREMIUM_TIER_2
       }),
       (0, a.jsx)(u.Text, {
         className: y.footerText,
@@ -129,7 +129,7 @@ children: [
         onClick: d,
         children: E
       }),
-      r && (0, a.jsx)(S.Z, {
+      r && (0, a.jsx)(A.Z, {
         className: y.footerButton,
         subscriptionTier: R.Si.TIER_2,
         showGradient: !0,

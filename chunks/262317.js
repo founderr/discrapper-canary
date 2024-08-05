@@ -28,11 +28,11 @@ var i, a = n(735250),
   N = n(224184),
   v = n(484459),
   S = n(103575),
-  Z = n(314897),
-  A = n(430824),
-  M = n(496675),
-  b = n(979651),
-  R = n(805009),
+  Z = n(597998),
+  A = n(314897),
+  M = n(430824),
+  b = n(496675),
+  R = n(979651),
   j = n(981631),
   L = n(927923),
   P = n(70722),
@@ -99,7 +99,7 @@ let {
   channel: e,
   isStreaming: t
 } = this.props;
-return t && (0, I.p9)(e, b.Z, A.Z, M.Z, E.Z)[0];
+return t && (0, I.p9)(e, R.Z, M.Z, b.Z, E.Z)[0];
   }
   render() {
 let {
@@ -187,14 +187,14 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     channelId: t.id,
     guildId: t.guild_id
   };
-  Z.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, C.V9)(a))) : (0, m.iV)(a), null == i || i(e.id);
+  A.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, C.V9)(a))) : (0, m.iV)(a), null == i || i(e.id);
 }), D(this, 'handleJoinVoice', () => {
   let {
     user: e,
     channel: t,
     hidePreview: n
   } = this.props;
-  M.Z.can(o.$e(j.Plq.CONNECT, j.Plq.VIEW_CHANNEL), t) && (p.default.selectVoiceChannel(t.id), null == n || n(e.id));
+  b.Z.can(o.$e(j.Plq.CONNECT, j.Plq.VIEW_CHANNEL), t) && (p.default.selectVoiceChannel(t.id), null == n || n(e.id));
 }), D(this, 'handleUserContextMenu', e => {
   let {
     channel: t,
@@ -281,10 +281,10 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     serverDeaf: N,
     tabIndex: v,
     embeddedApplication: S,
-    channel: Z,
-    hangStatusActivity: A,
-    showHangStatus: M,
-    isSelf: b,
+    channel: A,
+    hangStatusActivity: M,
+    showHangStatus: b,
+    isSelf: R,
     application: j
   } = this.props, {
     userPopoutOpen: P,
@@ -318,12 +318,12 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     onClick: k ? void 0 : this.handleClickUser,
     onDoubleClick: this.handleWatchStream,
     onContextMenu: this.handleUserContextMenu,
-    guildId: Z.guild_id,
-    hangStatusActivity: A,
-    showHangStatus: M,
-    isSelf: b,
+    guildId: A.guild_id,
+    hangStatusActivity: M,
+    showHangStatus: b,
+    isSelf: R,
     application: j,
-    channelId: Z.id
+    channelId: A.id
   };
   if (t) {
     var w;
@@ -335,7 +335,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
           onContextMenu: n,
           ...i
         } = e;
-        return (0, a.jsx)(R.Z, {
+        return (0, a.jsx)(Z.Z, {
           ...U,
           ...i
         });
@@ -344,11 +344,11 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
   }
   return (0, a.jsx)(u.Popout, {
     position: 'right',
-    renderPopout: M && D || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
+    renderPopout: b && D || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
     shouldShow: s && !P,
     onRequestClose: this.handleHidePreview,
     spacing: 0,
-    children: () => (0, a.jsx)(R.Z, {
+    children: () => (0, a.jsx)(Z.Z, {
       ...U,
       onMouseDown: e.onMouseDown,
       onKeyDown: e.onKeyDown,

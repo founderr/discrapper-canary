@@ -50,16 +50,16 @@ p = (0, r.e7)([T.Z], () => {
   let n = T.Z.getCommand(t);
   return null !== (e = null == n ? void 0 : n.permissions) && void 0 !== e ? e : {};
 }, [t]),
-C = (0, r.e7)([T.Z], () => {
+f = (0, r.e7)([T.Z], () => {
   var e;
   return null == t ? T.Z.getEditedApplication() : null === (e = T.Z.getEditedCommand()) || void 0 === e ? void 0 : e.permissions;
 }, [t]),
-f = null != t ? t : n,
+C = null != t ? t : n,
 x = null != t ? p : l,
-O = i.useMemo(() => null != C ? C : {
+O = i.useMemo(() => null != f ? f : {
   ...null != x ? x : {}
 }, [
-  C,
+  f,
   x
 ]),
 S = i.useMemo(() => Object.keys(O).length, [O]),
@@ -68,12 +68,12 @@ A = i.useMemo(() => null == x || null == O ? null : !o().isEqual(x, O), [
   O
 ]);
   return i.useEffect(() => {
-if (f === n)
-  A ? d.Z.startEditingCommandPermissions(f) : d.Z.stopEditingCommandPermissions(f);
+if (C === n)
+  A ? d.Z.startEditingCommandPermissions(C) : d.Z.stopEditingCommandPermissions(C);
   }, [
 n,
 A,
-f
+C
   ]), {
 originalApplicationPermissions: l,
 originalCommandPermissions: p,
@@ -107,14 +107,14 @@ editedTargetPermissions: function(e, n) {
       e.id,
       e
     ])), [d]),
-    C = (0, r.cj)([m.Z], () => Object.fromEntries(T.map(n => m.Z.getRole(e, n)).filter(E.lm).map(e => [
+    f = (0, r.cj)([m.Z], () => Object.fromEntries(T.map(n => m.Z.getRole(e, n)).filter(E.lm).map(e => [
       e.id,
       e
     ])), [
       T,
       e
     ]),
-    f = (0, r.cj)([N.default], () => Object.fromEntries(h.map(N.default.getUser).filter(E.lm).map(e => [
+    C = (0, r.cj)([N.default], () => Object.fromEntries(h.map(N.default.getUser).filter(E.lm).map(e => [
       e.id,
       e
     ])), [h]);
@@ -131,10 +131,10 @@ editedTargetPermissions: function(e, n) {
         n = e || _.Z.can(g.Plq.VIEW_CHANNEL, t), d = !0;
       } else if (r.type === c.Kw.ROLE) {
         let i = r.id === e,
-          s = C[r.id];
+          s = f[r.id];
         n = i || null != s, d = o || i || _.Z.isRoleHigher(t, a, s);
       } else if (r.type === c.Kw.USER) {
-        let e = f[r.id];
+        let e = C[r.id];
         n = null != e, d = null != e && (o || _.Z.canManageUser(g.Plq.USE_APPLICATION_COMMANDS, e, t));
       }
       s[l] = {
@@ -150,8 +150,8 @@ editedTargetPermissions: function(e, n) {
     a,
     o,
     n,
-    C,
-    f
+    f,
+    C
   ]);
 }(e, O),
 hasChanges: A,

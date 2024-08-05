@@ -15,9 +15,9 @@ var r = n(735250),
   u = n(481060),
   c = n(393238),
   d = n(699682),
-  _ = n(906732),
-  E = n(812663),
-  f = n(863840);
+  _ = n(793903),
+  E = n(906732),
+  f = n(237617);
 let h = {
   mass: 1,
   tension: 300,
@@ -48,7 +48,7 @@ fadeInOut: S = !1,
 ...A
   } = e, N = {}, {
 analyticsLocations: v
-  } = (0, _.ZP)();
+  } = (0, E.ZP)();
   i.Children.forEach(A.children, (e, t) => {
 N[e.props.id] = {
   children: e.props.children,
@@ -63,7 +63,7 @@ R = (0, d.Z)(A.activeSlide);
 {
   reducedMotion: y
 } = i.useContext(l.S),
-D = i.useContext(E.Z),
+D = i.useContext(_.Z),
 L = N[O].impressionName,
 b = {
   ...N[O].impressionProperties,

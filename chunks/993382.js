@@ -4,10 +4,10 @@ var t = a(735250),
   i = a(442837),
   n = a(481060),
   l = a(367907),
-  o = a(434404),
-  c = a(999382),
-  d = a(416162),
-  E = a(153124),
+  o = a(313201),
+  c = a(434404),
+  d = a(999382),
+  E = a(416162),
   S = a(296386),
   _ = a(919947),
   m = a(506491),
@@ -26,7 +26,7 @@ onClose: T
   } = e, {
 guild: N,
 guildMetadata: v
-  } = (0, i.cj)([c.Z], () => c.Z.getProps()), O = (0, E.Dt)(), [D, f] = r.useState(!1), [b, j] = r.useState(0), [A, V] = r.useState(!1);
+  } = (0, i.cj)([d.Z], () => d.Z.getProps()), O = (0, o.Dt)(), [D, f] = r.useState(!1), [b, j] = r.useState(0), [A, V] = r.useState(!1);
   if (r.useEffect(() => {
   l.ZP.trackWithMetadata(h.rMx.OPEN_MODAL, {
     type: h.jXE.DISCOVERY_SETUP_SUCCESS_MODAL
@@ -62,7 +62,7 @@ k = async () => {
   if (0 === b) {
     f(!0);
     try {
-      await o.Z.saveGuild(N.id, {
+      await c.Z.saveGuild(N.id, {
         description: N.description
       }, {
         isForDiscovery: !0,
@@ -110,7 +110,7 @@ k = async () => {
     overviewTitle: I.Z.Messages.SERVER_DISCOVERY_AGREE_TO_RULES
   }
 ];
-  return (0, t.jsx)(d.Z, {
+  return (0, t.jsx)(E.Z, {
 stepData: Y,
 title: I.Z.Messages.SERVER_DISCOVERY_SETUP_SIDEBAR_HEADLINE,
 transitionState: s,
@@ -123,7 +123,7 @@ onPrevPressed: () => {
 forceStep: b,
 onComplete: () => {
   let e = N.features;
-  !N.hasFeature(h.oNc.DISCOVERABLE) && e.add(h.oNc.DISCOVERABLE), o.Z.saveGuild(N.id, {
+  !N.hasFeature(h.oNc.DISCOVERABLE) && e.add(h.oNc.DISCOVERABLE), c.Z.saveGuild(N.id, {
     features: e,
     description: N.description
   }), (0, n.openModalLazy)(async () => {

@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(607070),
   u = n(113434),
   _ = n(566078),
-  E = n(472144),
-  h = n(644646),
+  h = n(472144),
+  E = n(644646),
   I = n(69439),
   m = n(46140),
   g = n(689938),
@@ -107,13 +107,13 @@ children: [
             autoplay: !1,
             shouldAnimate: !B
           }),
-          (0, i.jsx)(E.Z, {
+          (0, i.jsx)(h.Z, {
             quest: S,
             size: 76,
             percentComplete: j,
             children: (0, i.jsx)('div', {
               className: p.circularRewardTileWrapper,
-              children: (0, i.jsx)(h.Z, {
+              children: (0, i.jsx)(E.Z, {
                 quest: S,
                 questContent: f,
                 className: p.circularQuestRewardTileAsset,
@@ -122,7 +122,7 @@ children: [
             })
           })
         ]
-      }) : (0, i.jsx)(h.Z, {
+      }) : (0, i.jsx)(E.Z, {
         quest: S,
         autoplay: C,
         questContent: f,

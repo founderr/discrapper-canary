@@ -7,12 +7,12 @@ var i = t(735250),
   o = t(332148),
   u = t(904245),
   d = t(933557),
-  c = t(372900),
-  E = t(726521),
-  f = t(294218),
-  g = t(699516),
-  m = t(594174),
-  M = t(387204),
+  c = t(951844),
+  E = t(372900),
+  f = t(726521),
+  g = t(294218),
+  m = t(699516),
+  M = t(594174),
   _ = t(630388),
   h = t(970257),
   I = t(981631),
@@ -38,7 +38,7 @@ let {
   showContextMenuHint: a,
   ...o
 } = this.props, u = s.type === I.d4z.GUILD_ANNOUNCEMENT && (0, _.yE)(l.flags, I.iLy.CROSSPOSTED);
-return a && (e = (0, i.jsx)(M.Z, {
+return a && (e = (0, i.jsx)(c.Z, {
   className: Z.spacingTop,
   children: N.Z.Messages.DELETE_MESSAGE_CONTEXT_MENU_HINT.format()
 })), (0, h.vc)(l) && (n = (0, i.jsx)(r.FormSwitch, {
@@ -47,7 +47,7 @@ return a && (e = (0, i.jsx)(M.Z, {
   hideBorder: !0,
   className: Z.spacingTop,
   children: N.Z.Messages.DELETE_MESSAGE_REPORT
-})), (0, i.jsx)(c.Z.Provider, {
+})), (0, i.jsx)(E.Z.Provider, {
   value: s.guild_id,
   children: (0, i.jsxs)(r.ConfirmModal, {
     header: u ? N.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER : N.Z.Messages.DELETE_MESSAGE_TITLE,
@@ -63,7 +63,7 @@ return a && (e = (0, i.jsx)(M.Z, {
       }),
       (0, i.jsx)('div', {
         className: Z.message,
-        children: (0, i.jsx)(f.Z, {
+        children: (0, i.jsx)(g.Z, {
           channel: s,
           message: l,
           disableInteraction: !0
@@ -85,7 +85,7 @@ super(...e), A(this, 'state', {
     channel: n,
     message: t
   } = this.props;
-  e ? (0, E.ak)(t, 'message_delete_alert', () => u.Z.deleteMessage(n.id, t.id)) : u.Z.deleteMessage(n.id, t.id);
+  e ? (0, f.ak)(t, 'message_delete_alert', () => u.Z.deleteMessage(n.id, t.id)) : u.Z.deleteMessage(n.id, t.id);
 }), A(this, 'handleToggleReport', e => {
   this.setState({
     report: e
@@ -97,10 +97,10 @@ n.Z = {
   confirmPin: function(e, n) {
 (0, r.openModal)(t => {
   let s;
-  let l = (0, d.F6)(e, m.default, g.Z);
+  let l = (0, d.F6)(e, M.default, m.Z);
   return s = e.isPrivate() ? N.Z.Messages.PIN_MESSAGE_BODY_PRIVATE_CHANNEL : N.Z.Messages.PIN_MESSAGE_BODY.format({
     channelName: l
-  }), (0, i.jsx)(c.Z.Provider, {
+  }), (0, i.jsx)(E.Z.Provider, {
     value: e.guild_id,
     children: (0, i.jsxs)(r.ConfirmModal, {
       header: N.Z.Messages.PIN_MESSAGE_TITLE,
@@ -117,7 +117,7 @@ n.Z = {
         }),
         (0, i.jsx)('div', {
           className: Z.message,
-          children: (0, i.jsx)(f.Z, {
+          children: (0, i.jsx)(g.Z, {
             channel: e,
             message: n,
             animateAvatar: !1,
@@ -130,7 +130,7 @@ n.Z = {
 });
   },
   confirmUnpin: function(e, n) {
-(0, r.openModal)(t => (0, i.jsx)(c.Z.Provider, {
+(0, r.openModal)(t => (0, i.jsx)(E.Z.Provider, {
   value: e.guild_id,
   children: (0, i.jsxs)(r.ConfirmModal, {
     header: N.Z.Messages.UNPIN_MESSAGE_TITLE,
@@ -146,13 +146,13 @@ n.Z = {
       }),
       (0, i.jsx)('div', {
         className: a()(Z.message, Z.spacing),
-        children: (0, i.jsx)(f.Z, {
+        children: (0, i.jsx)(g.Z, {
           channel: e,
           message: n,
           disableInteraction: !0
         })
       }),
-      (0, i.jsx)(M.Z, {
+      (0, i.jsx)(c.Z, {
         children: N.Z.Messages.UNPIN_MESSAGE_CONTEXT_MENU_HINT.format()
       })
     ]

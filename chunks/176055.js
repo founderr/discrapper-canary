@@ -9,14 +9,14 @@ var i = n(735250),
   d = n(749210),
   u = n(558381),
   _ = n(666743),
-  E = n(565138),
-  h = n(41776),
-  I = n(703656),
-  m = n(769654),
-  g = n(601964),
-  p = n(430824),
-  T = n(378720),
-  S = n(285952),
+  h = n(770146),
+  E = n(600164),
+  I = n(565138),
+  m = n(41776),
+  g = n(703656),
+  p = n(769654),
+  T = n(601964),
+  S = n(430824),
   f = n(843445),
   C = n(981631),
   N = n(689938),
@@ -36,9 +36,9 @@ let {
   approximateMemberCount: e,
   approximatePresenceCount: t
 } = this.props.guild;
-return null == e || null == t ? null : (0, i.jsxs)(S.Z, {
+return null == e || null == t ? null : (0, i.jsxs)(E.Z, {
   className: A.memberInfo,
-  align: S.Z.Align.CENTER,
+  align: E.Z.Align.CENTER,
   children: [
     (0, i.jsx)('div', {
       className: A.dotOnline
@@ -73,13 +73,13 @@ let {
 } = this.props;
 if (t && n)
   return null;
-let d = new g.ZP(e),
+let d = new T.ZP(e),
   u = N.Z.Messages.LURKER_MODE_VIEW_GUILD,
   _ = this.handleJoinOrView,
-  h = c.Button.Looks.FILLED,
-  I = c.Button.Colors.PRIMARY;
-return s ? n ? (h = c.Button.Looks.OUTLINED, I = A.buttonColorInGuild, u = (0, i.jsxs)(S.Z, {
-  align: S.Z.Align.CENTER,
+  m = c.Button.Looks.FILLED,
+  g = c.Button.Colors.PRIMARY;
+return s ? n ? (m = c.Button.Looks.OUTLINED, g = A.buttonColorInGuild, u = (0, i.jsxs)(E.Z, {
+  align: E.Z.Align.CENTER,
   children: [
     (0, i.jsx)('div', {
       children: N.Z.Messages.JOINED_GUILD
@@ -93,7 +93,7 @@ return s ? n ? (h = c.Button.Looks.OUTLINED, I = A.buttonColorInGuild, u = (0, i
 })) : a && t && (u = N.Z.Messages.JOIN_GUILD) : (u = N.Z.Messages._LOGIN, _ = this.handleLogin), (0, i.jsxs)('div', {
   className: r()(l, o === f.b.SMALL ? A.inviteSmall : A.inviteLarge),
   children: [
-    (0, i.jsx)(T.Z, {
+    (0, i.jsx)(h.Z, {
       children: N.Z.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
     }),
     (0, i.jsxs)('div', {
@@ -102,10 +102,10 @@ return s ? n ? (h = c.Button.Looks.OUTLINED, I = A.buttonColorInGuild, u = (0, i
         (0, i.jsxs)('div', {
           className: A.info,
           children: [
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(I.Z, {
               guild: d,
               active: !0,
-              size: E.Z.Sizes.LARGE,
+              size: I.Z.Sizes.LARGE,
               className: A.guildIcon
             }),
             (0, i.jsxs)('div', {
@@ -124,8 +124,8 @@ return s ? n ? (h = c.Button.Looks.OUTLINED, I = A.buttonColorInGuild, u = (0, i
           size: c.Button.Sizes.SMALL,
           className: A.actionButton,
           fullWidth: !0,
-          color: I,
-          look: h,
+          color: g,
+          look: m,
           onClick: _,
           children: u
         })
@@ -141,7 +141,7 @@ super(...e), v(this, 'handleJoinOrView', async () => {
     skuId: t,
     isInGuild: n,
     isLurking: i
-  } = this.props, a = () => (0, m.X)(e.id);
+  } = this.props, a = () => (0, p.X)(e.id);
   if (i)
     (0, u.Oj)(t).then(a);
   else if (n)
@@ -157,21 +157,21 @@ super(...e), v(this, 'handleJoinOrView', async () => {
   let e = {
     redirect_to: C.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId)
   };
-  (0, I.uL)(C.Z5c.LOGIN, {
+  (0, g.uL)(C.Z5c.LOGIN, {
     search: (0, l.stringify)(e)
   });
 });
   }
 }
 t.Z = (0, _.Z)(o.ZP.connectStores([
-  p.Z,
-  h.Z
+  S.Z,
+  m.Z
 ], e => {
   let {
 guild: t
-  } = e, n = h.Z.isLurking(t.id);
+  } = e, n = m.Z.isLurking(t.id);
   return {
-isInGuild: null != p.Z.getGuild(t.id) && !n,
+isInGuild: null != S.Z.getGuild(t.id) && !n,
 isLurking: n
   };
 })(Z));

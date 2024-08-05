@@ -8,10 +8,10 @@ return m;
 });
 var i = n(735250),
   l = n(470079),
-  r = n(362658),
-  a = n(216306),
-  s = n(557494),
-  o = n(486458),
+  r = n(997638),
+  a = n(362658),
+  s = n(216306),
+  o = n(557494),
   c = n(540126),
   u = n(301342),
   d = n(327530),
@@ -67,13 +67,13 @@ selectedChannelId: g,
 disableManageChannels: C
   } = e, {
 isFavoritesPerk: I
-  } = (0, r.z)('ChannelListSection'), E = l.useCallback(() => {
+  } = (0, a.z)('ChannelListSection'), E = l.useCallback(() => {
 let e = f.getCategoryFromSection(f.recentsSectionNumber);
 if (null == e)
   return;
 let t = null,
   i = e.getShownChannelAndThreadIds();
-null != g && i.includes(g) && (t = (0, a.KY)(f)), (0, a.Uo)(n.id, i, t);
+null != g && i.includes(g) && (t = (0, s.KY)(f)), (0, s.Uo)(n.id, i, t);
   }, [
 n.id,
 g,
@@ -130,9 +130,9 @@ case c.wF: {
     channel: e.record,
     position: e.position,
     disableManageChannels: C,
-    children: (0, i.jsx)(s.Z, {
+    children: (0, i.jsx)(o.Z, {
       inlineSpecs: d.MF,
-      arrowAlignment: o.cy.TOP,
+      arrowAlignment: r.cy.TOP,
       tutorialId: 'organize-by-topic',
       position: 'right'
     })

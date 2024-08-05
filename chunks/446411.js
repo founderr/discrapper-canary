@@ -11,24 +11,24 @@ var l, r = n(735250),
   a = n(120356),
   o = n.n(a),
   s = n(481060),
-  d = n(44824),
-  u = n(124347),
-  m = n(283756),
-  h = n(169525),
-  c = n(785992),
-  p = n(156054),
-  b = n(68588),
-  g = n(268642),
-  f = n(941797),
-  x = n(278297),
+  d = n(95398),
+  u = n(947849),
+  m = n(624195),
+  h = n(44824),
+  c = n(124347),
+  p = n(283756),
+  b = n(169525),
+  g = n(780088),
+  f = n(785992),
+  x = n(400266),
   v = n(52824),
-  y = n(592256),
-  C = n(585483),
-  _ = n(55935),
-  w = n(408433),
-  I = n(956664),
-  E = n(468846),
-  j = n(401419),
+  y = n(585483),
+  C = n(55935),
+  _ = n(408433),
+  w = n(956664),
+  I = n(468846),
+  E = n(401419),
+  j = n(249458),
   S = n(981631),
   T = n(689938),
   N = n(108558),
@@ -53,16 +53,16 @@ maxHeight: a,
 thumbnail: s,
 video: d,
 provider: u,
-allowFullScreen: h = !0,
-responsive: c = !1,
-renderImageComponent: p,
+allowFullScreen: m = !0,
+responsive: h = !1,
+renderImageComponent: c,
 renderVideoComponent: b,
 renderLinkComponent: g,
 renderForwardComponent: f = S.VqG,
 playable: x = !0,
-autoPlay: y = !1,
+autoPlay: C = !1,
 autoMute: _,
-volume: w,
+volume: E,
 onPlay: j,
 onPause: T,
 onEnded: M,
@@ -75,11 +75,11 @@ messageId: P,
 channelId: H,
 placeholder: R,
 placeholderVersion: B
-  } = e, [W, D] = i.useState(y), O = null != d && null == d.proxyURL, G = i.useCallback(() => D(!1), [D]), Z = e => {
-e.preventDefault(), e.stopPropagation(), null == j || j(!1), D(!0), O && (C.S.dispatch(S.CkL.VIDEO_EMBED_PLAYBACK_STARTED), C.S.subscribeOnce(S.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G));
+  } = e, [W, D] = i.useState(C), O = null != d && null == d.proxyURL, G = i.useCallback(() => D(!1), [D]), Z = e => {
+e.preventDefault(), e.stopPropagation(), null == j || j(!1), D(!0), O && (y.S.dispatch(S.CkL.VIDEO_EMBED_PLAYBACK_STARTED), y.S.subscribeOnce(S.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G));
   };
   i.useEffect(() => () => {
-O && C.S.unsubscribe(S.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G);
+O && y.S.unsubscribe(S.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G);
   }, [
 O,
 G
@@ -89,7 +89,7 @@ width: U,
 height: q
   } = s;
   null != d && (U = d.width, q = d.height);
-  let z = (0, I.Tj)({
+  let z = (0, w.Tj)({
 width: U,
 height: q,
 maxWidth: l,
@@ -107,15 +107,15 @@ return (0, r.jsx)('div', {
     placeholderVersion: B,
     width: U,
     height: q,
-    responsive: c,
-    autoPlay: y,
+    responsive: h,
+    autoPlay: C,
     onEnded: M,
     naturalWidth: d.width,
     naturalHeight: d.height,
     onVolumeChange: F,
     playable: x,
     autoMute: _,
-    volume: w,
+    volume: E,
     onPlay: j,
     onPause: T,
     onMute: L,
@@ -131,18 +131,18 @@ let i = !0 === _ || 'function' == typeof _ && _(),
     width: U,
     height: q
   },
-  m = {
+  c = {
     width: U,
     height: q
   };
-if (c) {
+if (h) {
   let t = 0 !== U ? q / U : 1;
   s = {
     maxWidth: l,
     maxHeight: a,
     width: void 0,
     height: void 0
-  }, m = {
+  }, c = {
     paddingBottom: ''.concat(100 * t, '%'),
     maxWidth: U
   }, e = {
@@ -158,14 +158,14 @@ return (0, r.jsx)('div', {
   style: s,
   children: (0, r.jsx)('div', {
     className: o()(N.embedVideo, n),
-    style: m,
-    children: (0, r.jsx)(E.ZP, {
+    style: c,
+    children: (0, r.jsx)(I.ZP, {
       provider: u,
       src: d.url,
       style: e,
       width: U,
       height: q,
-      allowFullScreen: h,
+      allowFullScreen: m,
       autoMute: i
     })
   })
@@ -173,20 +173,20 @@ return (0, r.jsx)('div', {
   }
   return (0, r.jsxs)('div', {
 className: o()(N.embedVideo, t),
-style: c ? {
+style: h ? {
   maxWidth: U
 } : {
   width: U,
   height: q
 },
 children: [
-  p({
+  c({
     src: K,
     width: U,
     height: q,
     maxWidth: U,
     maxHeight: q,
-    responsive: c,
+    responsive: h,
     containerClassName: N.embedVideoImageComponent,
     imageClassName: N.embedVideoImageComponentInner,
     placeholder: R,
@@ -198,7 +198,7 @@ children: [
     className: N.embedVideoActions,
     children: (0, r.jsx)('div', {
       className: N.centerContent,
-      children: x ? (0, r.jsx)(m.Z, {
+      children: x ? (0, r.jsx)(p.Z, {
         onPlay: null != d ? Z : null,
         externalURL: V,
         renderLinkComponent: g,
@@ -219,9 +219,9 @@ autoPlay: l,
 maxWidth: i,
 maxHeight: a,
 thumbnail: s,
-video: u,
-renderImageComponent: m,
-renderForwardComponent: h,
+video: d,
+renderImageComponent: u,
+renderForwardComponent: m,
 responsive: c,
 alt: p,
 disableAltTextDisplay: b = !1,
@@ -230,23 +230,23 @@ hiddenSpoilers: f,
 placeholder: x,
 placeholderVersion: y
   } = e;
-  return (0, r.jsx)(d.Z, {
+  return (0, r.jsx)(h.Z, {
 className: o()(N.embedVideo, t),
 original: n,
 poster: (0, v.q)(s),
-src: (0, v.q)(u),
+src: (0, v.q)(d),
 alt: p,
 width: s.width,
 height: s.height,
-naturalHeight: u.height,
-naturalWidth: u.width,
+naturalHeight: d.height,
+naturalWidth: d.width,
 maxWidth: i,
 maxHeight: a,
 responsive: c,
 autoPlay: l,
 playable: g,
-renderImageComponent: m,
-renderForwardComponent: h,
+renderImageComponent: u,
+renderForwardComponent: m,
 hiddenSpoilers: f,
 disableAltTextDisplay: b,
 placeholder: x,
@@ -365,7 +365,7 @@ let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     renderForwardComponent: a,
     autoPlayGif: o
   } = this.props;
-return null == t ? null : (0, r.jsx)(x.G.Consumer, {
+return null == t ? null : (0, r.jsx)(j.G.Consumer, {
   children: r => {
     let {
       disableAnimations: s
@@ -493,19 +493,19 @@ let {
   autoPlayGif: m,
   renderForwardComponent: h
 } = this.props, {
-  maxMediaWidth: c,
-  maxMediaHeight: p
+  maxMediaWidth: p,
+  maxMediaHeight: b
 } = this.state;
 if (null == n)
   return null;
-let b = (0, v.q)(n),
-  g = null == a ? {} : (0, y.Cx)(a.map(e => (0, y.nP)(e, h))),
-  C = u.Z.isAnimated({
+let f = (0, v.q)(n),
+  x = null == a ? {} : (0, g.Cx)(a.map(e => (0, g.nP)(e, h))),
+  y = c.Z.isAnimated({
     src: (0, v.q)(n),
     original: n.url,
     animated: !1
   }),
-  _ = {
+  C = {
     containerClassName: o()(d, {
       [N.embedMedia]: !l,
       [N.embedImage]: !l,
@@ -519,8 +519,8 @@ let b = (0, v.q)(n),
     limitResponsiveWidth: !l,
     width: n.width,
     height: n.height,
-    maxWidth: c,
-    maxHeight: p,
+    maxWidth: p,
+    maxHeight: b,
     original: n.url,
     shouldLink: t,
     disableAltTextDisplay: !0,
@@ -529,16 +529,16 @@ let b = (0, v.q)(n),
     placeholderVersion: n.placeholderVersion,
     renderForwardComponent: h
   };
-return b in g && (_.onClick = g[b]), (0, r.jsx)(f.h.Consumer, {
-  children: t => (0, r.jsx)(x.G.Consumer, {
+return f in x && (C.onClick = x[f]), (0, r.jsx)(u.h.Consumer, {
+  children: t => (0, r.jsx)(j.G.Consumer, {
     children: n => {
       let {
         disableAnimations: l
       } = n;
       return s({
-        ..._,
+        ...C,
         autoPlay: m && !l && !e,
-        renderAccessory: C ? t : null
+        renderAccessory: y ? t : null
       });
     }
   }, n.url)
@@ -567,12 +567,12 @@ let {
   obscureReason: g
 } = this.props, {
   maxMediaWidth: f,
-  maxMediaHeight: v
+  maxMediaHeight: x
 } = this.state;
 if (null == l || null == i)
   return null;
 if (e)
-  return null == a ? null : (0, r.jsx)(x.G.Consumer, {
+  return null == a ? null : (0, r.jsx)(j.G.Consumer, {
     children: e => {
       let {
         disableAnimations: o
@@ -583,7 +583,7 @@ if (e)
         thumbnail: i,
         video: a,
         maxWidth: f,
-        maxHeight: v,
+        maxHeight: x,
         responsive: !0,
         autoPlay: !n && c && !o && t,
         renderImageComponent: d,
@@ -604,7 +604,7 @@ return (0, r.jsx)(F, {
   video: a,
   provider: null == o ? void 0 : o.name,
   maxWidth: f,
-  maxHeight: v,
+  maxHeight: x,
   responsive: !0,
   renderImageComponent: d,
   renderVideoComponent: s,
@@ -650,7 +650,7 @@ if (null != e) {
             className: N.embedFooterSeparator,
             children: '\u2022'
           }) : null,
-          null != t ? (0, _.Y4)(t) : null
+          null != t ? (0, C.Y4)(t) : null
         ]
       })
     ]
@@ -661,7 +661,7 @@ if (null != t)
     className: o()(N.embedFooter, N.embedMargin),
     children: (0, r.jsx)('span', {
       className: N.embedFooterText,
-      children: (0, _.Y4)(t)
+      children: (0, C.Y4)(t)
     })
   });
   }
@@ -749,7 +749,7 @@ if (null == s)
   return;
 let {
   width: d
-} = (0, I.Tj)({
+} = (0, w.Tj)({
   width: s.width,
   height: s.height,
   maxWidth: a,
@@ -763,7 +763,7 @@ if (r === S.hBH.GIFV) {
   var u, m, h, c;
   let {
     width: e
-  } = (0, I.Tj)({
+  } = (0, w.Tj)({
     width: Math.max(null !== (u = null == i ? void 0 : i.width) && void 0 !== u ? u : 0, null !== (m = null == l ? void 0 : l.width) && void 0 !== m ? m : 0),
     height: Math.max(null !== (h = null == i ? void 0 : i.height) && void 0 !== h ? h : 0, null !== (c = null == l ? void 0 : l.height) && void 0 !== c ? c : 0),
     maxWidth: a,
@@ -777,7 +777,7 @@ let {
   hideMedia: e,
   embed: t
 } = this.props;
-return !e && (0, w.dY)(t);
+return !e && (0, _.dY)(t);
   }
   renderSuppressButton(e) {
 return (0, r.jsx)(s.Clickable, {
@@ -827,7 +827,7 @@ if (void 0 === o && void 0 === n && r !== S.hBH.RICH) {
   if (void 0 !== e) {
     let {
       width: t
-    } = (0, I.Tj)({
+    } = (0, w.Tj)({
       width: e.width,
       height: e.height,
       maxWidth: i,
@@ -848,17 +848,17 @@ let {
   obscureReason: n,
   className: l
 } = this.props;
-return null != t.provider && j.j.includes(t.provider.name) ? (0, r.jsx)(j.Z, {
+return null != t.provider && E.j.includes(t.provider.name) ? (0, r.jsx)(E.Z, {
   embed: t,
   className: l
-}) : (0, c.Z)(t) ? (0, r.jsx)(g.Z, {
+}) : (0, f.Z)(t) ? (0, r.jsx)(x.Z, {
   embed: t,
   className: l
-}) : (null === (e = t.provider) || void 0 === e ? void 0 : e.name) === 'Amazon Music' && t.type === S.hBH.RICH ? (0, r.jsx)(p.Z, {
+}) : (null === (e = t.provider) || void 0 === e ? void 0 : e.name) === 'Amazon Music' && t.type === S.hBH.RICH ? (0, r.jsx)(m.Z, {
   embed: t,
   className: l
-}) : this.isInline() ? null != n ? (0, r.jsx)(b.Z, {
-  type: b.Z.Types.ATTACHMENT,
+}) : this.isInline() ? null != n ? (0, r.jsx)(d.Z, {
+  type: d.Z.Types.ATTACHMENT,
   reason: n,
   onReveal: this.onReveal,
   onToggleObscurity: this.onToggleObscurity,
@@ -868,8 +868,8 @@ return null != t.provider && j.j.includes(t.provider.name) ? (0, r.jsx)(j.Z, {
     [N.obscureVideoSpacing]: this.state.isVisible && this.state.videoControlsShown
   }),
   children: this.renderInlineMediaEmbed
-}) : this.renderInlineMediaEmbed() : null != n ? (0, r.jsx)(b.Z, {
-  type: b.Z.Types.EMBED,
+}) : this.renderInlineMediaEmbed() : null != n ? (0, r.jsx)(d.Z, {
+  type: d.Z.Types.EMBED,
   onReveal: this.onReveal,
   onToggleObscurity: this.onToggleObscurity,
   reason: n,
@@ -883,7 +883,7 @@ var t;
 super(...e), t = this, k(this, 'state', {
   isVisible: null == this.props.obscureReason,
   videoControlsShown: !1,
-  ...(0, w.vP)(this.props.embed)
+  ...(0, _.vP)(this.props.embed)
 }), k(this, 'onReveal', () => {
   this.setState({
     isVisible: !0
@@ -902,10 +902,10 @@ super(...e), t = this, k(this, 'state', {
   return (0, r.jsx)('div', {
     'aria-hidden': e,
     className: o()(N.inlineMediaEmbed, l, {
-      [N.spoilerAttachment]: n === h.wk.SPOILER,
+      [N.spoilerAttachment]: n === b.wk.SPOILER,
       [N.hiddenExplicitAttachment]: null != n && [
-        h.wk.EXPLICIT_CONTENT,
-        h.wk.POTENTIAL_EXPLICIT_CONTENT
+        b.wk.EXPLICIT_CONTENT,
+        b.wk.POTENTIAL_EXPLICIT_CONTENT
       ].includes(n),
       [N.isHidden]: e,
       [N.justifyAuto]: t.usesJustifiedAutoStyle(),
@@ -929,17 +929,17 @@ super(...e), t = this, k(this, 'state', {
       title: d,
       description: u,
       fields: m,
-      thumbnail: c,
-      media: p,
-      footer: b
+      thumbnail: h,
+      media: c,
+      footer: p
     } = t.renderAll();
   return (0, r.jsx)('article', {
     className: o()(n, A.embedFlexGrow, N.embedFull, M.markup, {
       [N.isHidden]: e,
-      [N.spoilerEmbed]: i === h.wk.SPOILER,
+      [N.spoilerEmbed]: i === b.wk.SPOILER,
       [N.hiddenExplicitEmbed]: null != i && [
-        h.wk.EXPLICIT_CONTENT,
-        h.wk.POTENTIAL_EXPLICIT_CONTENT
+        b.wk.EXPLICIT_CONTENT,
+        b.wk.POTENTIAL_EXPLICIT_CONTENT
       ].includes(i),
       [N.justifyAuto]: t.usesJustifiedAutoStyle()
     }),
@@ -953,7 +953,7 @@ super(...e), t = this, k(this, 'state', {
       children: (0, r.jsxs)('div', {
         className: o()({
           [N.grid]: !0,
-          [N.hasThumbnail]: null != c
+          [N.hasThumbnail]: null != h
         }),
         children: [
           null != l ? t.renderSuppressButton(l) : null,
@@ -962,9 +962,9 @@ super(...e), t = this, k(this, 'state', {
           d,
           u,
           m,
-          p,
           c,
-          b
+          h,
+          p
         ]
       })
     })

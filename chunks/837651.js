@@ -3,10 +3,10 @@ var n = s(735250),
   r = s(470079),
   i = s(481060),
   a = s(816814),
-  o = s(200483),
-  l = s(594174),
-  c = s(285952),
-  d = s(277390),
+  o = s(600164),
+  c = s(198993),
+  l = s(200483),
+  d = s(594174),
   u = s(287880),
   h = s(689938),
   f = s(174950);
@@ -26,20 +26,20 @@ label: s,
 text: r,
 children: a
   } = e;
-  return (0, n.jsxs)(c.Z, {
+  return (0, n.jsxs)(o.Z, {
 className: f.spacing,
 children: [
-  (0, n.jsx)(c.Z, {
+  (0, n.jsx)(o.Z, {
     grow: 0,
     shrink: 0,
     basis: '156px',
-    justify: c.Z.Justify.CENTER,
+    justify: o.Z.Justify.CENTER,
     className: f.image,
     children: t
   }),
-  (0, n.jsx)(c.Z, {
-    direction: c.Z.Direction.VERTICAL,
-    justify: c.Z.Justify.CENTER,
+  (0, n.jsx)(o.Z, {
+    direction: o.Z.Direction.VERTICAL,
+    justify: o.Z.Justify.CENTER,
     children: (0, n.jsxs)('div', {
       children: [
         (0, n.jsx)(i.FormTitle, {
@@ -66,16 +66,16 @@ let {
   onClose: r
 } = this.props, {
   totpSecret: a,
-  code: o,
+  code: l,
   isVerifying: g
-} = this.state, m = null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email, x = (0, u.U0)(null != m ? m : '', a), _ = (0, n.jsx)('form', {
+} = this.state, m = null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.email, x = (0, u.U0)(null != m ? m : '', a), _ = (0, n.jsx)('form', {
   onSubmit: this.handleActivate,
-  children: (0, n.jsxs)(c.Z, {
+  children: (0, n.jsxs)(o.Z, {
     className: f.inputContainer,
-    align: c.Z.Align.START,
+    align: o.Z.Align.START,
     children: [
       (0, n.jsx)(i.TextInput, {
-        value: o,
+        value: l,
         className: f.input,
         placeholder: '000 000',
         maxLength: 7,
@@ -84,7 +84,7 @@ let {
         error: this.state.error,
         autoFocus: !0
       }),
-      (0, n.jsx)(c.Z.Child, {
+      (0, n.jsx)(o.Z.Child, {
         grow: 0,
         shrink: 0,
         children: (0, n.jsx)(i.Button, {
@@ -104,7 +104,7 @@ return (0, n.jsxs)(i.ModalRoot, {
     (0, n.jsxs)(i.ModalHeader, {
       separator: !1,
       children: [
-        (0, n.jsxs)(c.Z.Child, {
+        (0, n.jsxs)(o.Z.Child, {
           grow: 1,
           shrink: 1,
           children: [
@@ -119,7 +119,7 @@ return (0, n.jsxs)(i.ModalRoot, {
             })
           ]
         }),
-        (0, n.jsx)(c.Z.Child, {
+        (0, n.jsx)(o.Z.Child, {
           grow: 0,
           children: (0, n.jsx)(i.ModalCloseButton, {
             onClick: r
@@ -146,7 +146,7 @@ return (0, n.jsxs)(i.ModalRoot, {
           className: f.divider
         }),
         (0, n.jsx)(p, {
-          image: (0, n.jsx)(d.ZP, {
+          image: (0, n.jsx)(c.ZP, {
             text: x
           }),
           label: h.Z.Messages.TWO_FA_QR_LABEL,
@@ -210,7 +210,7 @@ super(...e), g(this, 'state', {
     password: t,
     code: r,
     secret: (0, u.Qe)(n),
-    ...(0, o.j)() && {
+    ...(0, l.j)() && {
       emailToken: s
     }
   }).then(this.handleActivateSuccess, e => this.setState({

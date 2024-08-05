@@ -9,7 +9,7 @@ var i = n(496929),
   d = n(334288),
   u = n(186901),
   _ = n(981631);
-async function E(e, t) {
+async function h(e, t) {
   let n = t.filter(e => e.type === _.epS.SUBSCRIPTION_GROUP),
 i = await Promise.all(n.map(async t => await (0, l.rx)(e, t.id))),
 a = [];
@@ -44,7 +44,7 @@ n.forEach(e => {
 }), i.filter(e => (null == e ? void 0 : e.price) != null).forEach(e => a.push(e));
   }), a;
 }
-async function h(e) {
+async function E(e) {
   let {
 socket: t
   } = e;
@@ -56,7 +56,7 @@ throw new c.Z({
 }, 'No application.');
   if (o.Z.inTestModeForApplication(n) || r.Z.inDevModeForApplication(n)) {
 let e = await a.uE(n, !1),
-  t = await E(n, e);
+  t = await h(n, e);
 return [
   ...e.filter(e => null != e.price),
   ...t
@@ -66,7 +66,7 @@ return [
 l = i.filter(e => e.sku.type !== _.epS.SUBSCRIPTION_GROUP).map(e => e.sku).filter(e => null != e.price);
   return [
 ...l,
-...await E(n, i.map(e => e.sku))
+...await h(n, i.map(e => e.sku))
   ];
 }
 
@@ -88,7 +88,7 @@ t.Z = {
   u.wE,
   u.lH
 ],
-handler: h
+handler: E
   },
   [_.Etm.GET_ENTITLEMENTS]: {
 [u.Gp.ANY]: [
@@ -103,7 +103,7 @@ handler: I
   u.lH
 ],
 handler: async e => ({
-  skus: await h(e)
+  skus: await E(e)
 })
   },
   [_.Etm.GET_ENTITLEMENTS_EMBEDDED]: {

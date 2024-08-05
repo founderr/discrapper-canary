@@ -13,22 +13,22 @@ var i = t(735250),
   c = t(668781),
   u = t(139387),
   I = t(308063),
-  m = t(208567),
-  _ = t(598077),
-  N = t(285952),
+  m = t(600164),
+  _ = t(208567),
+  N = t(598077),
   E = t(259580),
   T = t(768581),
   h = t(572004),
   g = t(709054),
   p = t(51144),
-  C = t(486199),
-  f = t(981631),
+  f = t(486199),
+  C = t(981631),
   x = t(689938),
   O = t(127443);
 let S = e => {
   if (null == e)
 return null;
-  let n = new _.Z(e);
+  let n = new N.Z(e);
   return p.ZP.getUserTag(n);
 };
 
@@ -36,7 +36,7 @@ function A(e, n) {
   return null != n && /^data:/.test(n) ? n : (0, T.ov)({
 id: e.id,
 avatar: n,
-discriminator: f.fo$
+discriminator: C.fo$
   });
 }
 
@@ -45,7 +45,7 @@ function R(e) {
 id: n,
 webhook: t,
 editedWebhook: s,
-channelOptions: _,
+channelOptions: N,
 isExpanded: T,
 isNew: p,
 errors: R,
@@ -54,7 +54,7 @@ onToggleExpand: b
   a.useEffect(() => () => M.stop(), [M]);
   let L = a.useMemo(() => A(t, t.avatar), [t]),
 j = a.useCallback(() => {
-  let e = ''.concat((0, o.K0)(!1)).concat(f.ANM.WEBHOOK_INTEGRATION(t.id, t.token));
+  let e = ''.concat((0, o.K0)(!1)).concat(C.ANM.WEBHOOK_INTEGRATION(t.id, t.token));
   (0, h.JG)(e);
 }, [t]),
 D = a.useCallback(() => {
@@ -111,16 +111,16 @@ children: [
   (0, i.jsx)(d.FormDivider, {
     className: O.topDivider
   }),
-  (0, i.jsxs)(N.Z, {
+  (0, i.jsxs)(m.Z, {
     children: [
-      (0, i.jsx)(N.Z.Child, {
+      (0, i.jsx)(m.Z.Child, {
         shrink: 1,
         grow: 0,
-        children: (0, i.jsxs)(N.Z, {
+        children: (0, i.jsxs)(m.Z, {
           className: O.avatarWrapper,
-          direction: N.Z.Direction.VERTICAL,
+          direction: m.Z.Direction.VERTICAL,
           children: [
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(_.Z, {
               image: s.avatar,
               onChange: e => {
                 u.Z.updateWebhook({
@@ -139,12 +139,12 @@ children: [
           ]
         })
       }),
-      (0, i.jsxs)(N.Z, {
-        direction: N.Z.Direction.VERTICAL,
+      (0, i.jsxs)(m.Z, {
+        direction: m.Z.Direction.VERTICAL,
         children: [
-          (0, i.jsxs)(N.Z, {
+          (0, i.jsxs)(m.Z, {
             children: [
-              (0, i.jsx)(N.Z.Child, {
+              (0, i.jsx)(m.Z.Child, {
                 basis: '50%',
                 children: (0, i.jsx)(d.FormItem, {
                   title: x.Z.Messages.WEBHOOK_FORM_NAME,
@@ -160,13 +160,13 @@ children: [
                   })
                 })
               }),
-              (0, i.jsx)(N.Z.Child, {
+              (0, i.jsx)(m.Z.Child, {
                 basis: '50%',
                 children: (0, i.jsx)(d.FormItem, {
                   title: x.Z.Messages.CHANNEL,
                   children: (0, i.jsx)(d.SearchableSelect, {
                     value: s.channel_id,
-                    options: _,
+                    options: N,
                     onChange: e => {
                       u.Z.updateWebhook({
                         channelId: e
@@ -181,7 +181,7 @@ children: [
           (0, i.jsx)(d.FormDivider, {
             className: O.bottomDivider
           }),
-          (0, i.jsxs)(N.Z, {
+          (0, i.jsxs)(m.Z, {
             children: [
               (0, i.jsx)(d.Tooltip, {
                 text: x.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL,
@@ -230,17 +230,17 @@ children: [
 editable: !0,
 id: n,
 className: l()(O.card, p ? O.pulse : null),
-children: (0, i.jsxs)(N.Z, {
-  direction: N.Z.Direction.VERTICAL,
+children: (0, i.jsxs)(m.Z, {
+  direction: m.Z.Direction.VERTICAL,
   children: [
     (0, i.jsx)(d.Clickable, {
       className: O.header,
       'aria-expanded': T,
       onClick: b,
-      children: (0, i.jsxs)(N.Z, {
-        align: N.Z.Align.CENTER,
+      children: (0, i.jsxs)(m.Z, {
+        align: m.Z.Align.CENTER,
         children: [
-          (0, i.jsx)(C.Z, {
+          (0, i.jsx)(f.Z, {
             name: t.name,
             imageSrc: L,
             details: P

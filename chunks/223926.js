@@ -3,8 +3,8 @@ var n, t, o = s(735250),
   l = s(470079),
   i = s(442837),
   R = s(481060),
-  E = s(496675),
-  r = s(153124),
+  E = s(313201),
+  r = s(496675),
   A = s(5192),
   _ = s(693546),
   u = s(863249),
@@ -20,7 +20,7 @@ guildJoinRequest: n,
 user: t,
 transitionState: c,
 onClose: N
-  } = e, O = (0, r.Dt)(), [I, h] = l.useState(null), [T, p] = l.useState(''), L = (0, i.e7)([E.Z], () => E.Z.canManageUser(d.Plq.BAN_MEMBERS, t, a)), [m, g] = l.useState(!1), x = l.useCallback(() => {
+  } = e, O = (0, E.Dt)(), [I, h] = l.useState(null), [T, p] = l.useState(''), L = (0, i.e7)([r.Z], () => r.Z.canManageUser(d.Plq.BAN_MEMBERS, t, a)), [m, g] = l.useState(!1), x = l.useCallback(() => {
 var e;
 u.Z.reportApplication({
   guild: a,

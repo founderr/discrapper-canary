@@ -11,9 +11,9 @@ var r = t(442837),
   o = t(128854),
   s = t(884182),
   c = t(546432),
-  u = t(592125),
-  d = t(52824),
-  m = t(592256),
+  u = t(780088),
+  d = t(592125),
+  m = t(52824),
   f = t(823379),
   _ = t(970184),
   p = t(981631);
@@ -21,7 +21,7 @@ var r = t(442837),
 function v(e) {
   let {
 message: n
-  } = (0, _.CJ)(), t = (0, r.e7)([u.Z], () => u.Z.getChannel(null == n ? void 0 : n.channel_id)), {
+  } = (0, _.CJ)(), t = (0, r.e7)([d.Z], () => d.Z.getChannel(null == n ? void 0 : n.channel_id)), {
 shouldHideMediaOptions: v,
 shouldRedactExplicitContent: C,
 gifAutoPlay: h,
@@ -30,14 +30,14 @@ getOnMediaItemContextMenu: I
   } = (0, o.c)();
   if (null == n || null == t)
 return null;
-  let E = e.items.map(e => (0, m.j0)(e.media, p.VqG, v, C)).filter(f.lm),
+  let E = e.items.map(e => (0, u.j0)(e.media, p.VqG, v, C)).filter(f.lm),
 T = {
   source: 'Media Mosaic',
   guild_id: t.guild_id,
   channel_id: t.id,
   channel_type: t.type
 },
-N = E.length > 1 ? (0, m.Cx)(E, T) : {};
+N = E.length > 1 ? (0, u.Cx)(E, T) : {};
 
   function g(e, n) {
 let t = e.originalItem;
@@ -72,7 +72,7 @@ let t = e.media,
     canRemoveItem: !1,
     onRemoveItem: p.dG4
   },
-  i = (0, d.q)({
+  i = (0, m.q)({
     proxyURL: t.proxyUrl,
     url: t.url
   });

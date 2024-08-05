@@ -15,12 +15,12 @@ var s = n(735250),
   r = n(481060),
   i = n(741361),
   o = n(461745),
-  c = n(131704),
-  d = n(592125),
-  u = n(271383),
-  m = n(430824),
-  h = n(285952),
-  x = n(153124),
+  c = n(600164),
+  d = n(313201),
+  u = n(131704),
+  m = n(592125),
+  h = n(271383),
+  x = n(430824),
   E = n(626135),
   S = n(934415),
   R = n(892880),
@@ -31,7 +31,7 @@ var s = n(735250),
   f = n(981631),
   A = n(689938),
   L = n(116255);
-let y = (0, x.hQ)();
+let y = (0, d.hQ)();
 
 function j(e, t) {
   return t ? e.slice(1) : e;
@@ -44,19 +44,19 @@ function p(e) {
   permission: i,
   pendingAdditions: c,
   setPendingAdditions: d,
-  isStageChannel: h = null != r && r.isGuildStageVoice(),
-  description: x
+  isStageChannel: u = null != r && r.isGuildStageVoice(),
+  description: m
 } = e,
 [E, S] = l.useState(!1),
 [f, L] = l.useState(''),
-y = (0, a.e7)([m.Z], () => m.Z.getRoles(n.id));
+y = (0, a.e7)([x.Z], () => x.Z.getRoles(n.id));
 
   function p(e) {
 let t = j(f.trim(), E);
 return RegExp(''.concat(T.Z.escape(t)), 'i').test(e);
   }
-  let v = (0, a.Wu)([u.ZP], () => u.ZP.getMemberIds(n.id));
-  E ? t = [] : h ? t = M.Wx(n, y, r, i, p) : 0 === (t = M.ik(n, y, r, i, p)).length && '' === f.trim() && !M.RD(n, y) && (t = M.aq());
+  let v = (0, a.Wu)([h.ZP], () => h.ZP.getMemberIds(n.id));
+  E ? t = [] : u ? t = M.Wx(n, y, r, i, p) : 0 === (t = M.ik(n, y, r, i, p)).length && '' === f.trim() && !M.RD(n, y) && (t = M.aq());
   let C = M.iI(v, r, n, i, p),
 {
   placeholderText: w,
@@ -119,8 +119,8 @@ members: C,
 placeholderText: w,
 hintText: Z,
 renderEmptyText: _,
-isStageChannel: h,
-description: x
+isStageChannel: u,
+description: m
   });
 }
 
@@ -176,16 +176,16 @@ function v(e) {
 transitionState: t,
 onClose: n,
 channelId: o,
-newChannel: u,
-inSettings: x
-  } = e, [R, T] = l.useState(!1), [M, g] = l.useState({}), j = (0, a.e7)([d.Z], () => d.Z.getChannel(o), [o]), N = (0, a.e7)([m.Z], () => m.Z.getGuild(null == j ? void 0 : j.getGuildId()));
+newChannel: d,
+inSettings: h
+  } = e, [R, T] = l.useState(!1), [M, g] = l.useState({}), j = (0, a.e7)([m.Z], () => m.Z.getChannel(o), [o]), N = (0, a.e7)([x.Z], () => x.Z.getGuild(null == j ? void 0 : j.getGuildId()));
   if (l.useEffect(() => {
   E.default.track(f.rMx.OPEN_MODAL, {
     type: 'Grant Channel Access'
   });
 }, []), null == j || null == N)
 return null;
-  let v = u && 0 === Object.keys(M).length;
+  let v = d && 0 === Object.keys(M).length;
   async function C() {
 if (null == j || 0 === Object.keys(M).length) {
   n();
@@ -202,12 +202,12 @@ try {
       } = t;
       null != n.id && '' !== n.id && (n.rowType === b.aC.ROLE ? s.push((0, S.rX)(n.id, e.type)) : n.rowType === b.aC.MEMBER && s.push((0, S.jZ)(n.id, e.type)));
     }), (0, i.hw)(e.id, s, n);
-  }(j, M, x), n(), T(!1);
+  }(j, M, h), n(), T(!1);
 } catch (e) {
   T(!1);
 }
   }
-  let w = (0, c.zi)(j.type) ? r.TextLockIcon : r.VoiceLockIcon;
+  let w = (0, u.zi)(j.type) ? r.TextLockIcon : r.VoiceLockIcon;
   return (0, s.jsxs)(r.ModalRoot, {
 transitionState: t,
 size: r.ModalSize.SMALL,
@@ -216,8 +216,8 @@ className: L.modalRoot,
 children: [
   (0, s.jsxs)(r.ModalHeader, {
     separator: !1,
-    direction: h.Z.Direction.VERTICAL,
-    align: h.Z.Align.CENTER,
+    direction: c.Z.Direction.VERTICAL,
+    align: c.Z.Align.CENTER,
     className: L.header,
     children: [
       (0, s.jsx)(r.Heading, {

@@ -11,11 +11,11 @@ var a = n(442837),
   l = n(410575),
   o = n(100527),
   c = n(906732),
-  d = n(243778),
-  u = n(352455),
-  _ = n(480294),
-  E = n(153124),
-  h = n(791359),
+  d = n(313201),
+  u = n(243778),
+  _ = n(352455),
+  h = n(480294),
+  E = n(791359),
   I = n(981631),
   m = n(689938),
   g = n(955430);
@@ -23,7 +23,7 @@ var a = n(442837),
 function p() {
   let {
 analyticsLocations: e
-  } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN), t = (0, a.e7)([_.Z], () => _.Z.hasConsented(I.pjP.PERSONALIZATION)) ? [] : [s.z.NOW_PLAYING_CONSENT_CARD], n = (0, E.Dt)();
+  } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN), t = (0, a.e7)([h.Z], () => h.Z.hasConsented(I.pjP.PERSONALIZATION)) ? [] : [s.z.NOW_PLAYING_CONSENT_CARD], n = (0, d.Dt)();
   return (0, i.jsx)(c.Gt, {
 value: e,
 children: (0, i.jsx)(l.Z, {
@@ -40,7 +40,7 @@ children: (0, i.jsx)(l.Z, {
           id: n,
           children: m.Z.Messages.GAME_FEED_CURRENT_HEADER_TITLE
         }),
-        (0, i.jsx)(d.Z, {
+        (0, i.jsx)(u.Z, {
           contentTypes: t,
           children: e => {
             let {
@@ -48,13 +48,13 @@ children: (0, i.jsx)(l.Z, {
               markAsDismissed: n
             } = e;
             if (t === s.z.NOW_PLAYING_CONSENT_CARD)
-              return (0, i.jsx)(u.Z, {
+              return (0, i.jsx)(_.Z, {
                 className: g.__invalid_consentCard,
                 markAsDismissed: n
               });
           }
         }),
-        (0, i.jsx)(h.Z, {})
+        (0, i.jsx)(E.Z, {})
       ]
     })
   })

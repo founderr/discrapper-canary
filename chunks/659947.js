@@ -9,12 +9,12 @@ var n = s(735250),
   r = s(481060),
   o = s(660216),
   l = s(40908),
-  c = s(592125),
-  d = s(984933),
-  _ = s(430824),
-  E = s(914010),
-  u = s(285952),
-  T = s(107828),
+  c = s(600164),
+  d = s(415795),
+  _ = s(592125),
+  E = s(984933),
+  u = s(430824),
+  T = s(914010),
   I = s(727785),
   S = s(689938),
   N = s(183500);
@@ -69,11 +69,11 @@ function R(e) {
 keybind: i
   } = e, l = a.useRef(i);
   a.useEffect(() => void(l.current = i));
-  let [c, d] = a.useState(null !== (s = null === (t = i.params) || void 0 === t ? void 0 : t.channelId) && void 0 !== s ? s : void 0), _ = a.useCallback(() => {
+  let [d, _] = a.useState(null !== (s = null === (t = i.params) || void 0 === t ? void 0 : t.channelId) && void 0 !== s ? s : void 0), E = a.useCallback(() => {
 (0, r.openModalLazy)(async () => e => (0, n.jsx)(x, {
   ...e,
   onSelect: e => {
-    d(e), o.Z.setKeybind({
+    _(e), o.Z.setKeybind({
       ...l.current,
       params: {
         channelId: e
@@ -85,20 +85,20 @@ keybind: i
   return (0, n.jsx)(r.FormSection, {
 title: S.Z.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
 className: N.channelIdSection,
-children: (0, n.jsxs)(u.Z, {
-  align: u.Z.Align.STRETCH,
+children: (0, n.jsxs)(c.Z, {
+  align: c.Z.Align.STRETCH,
   children: [
     (0, n.jsx)('div', {
       className: N.selectedVoiceChannel,
       children: (0, n.jsx)(M, {
-        channelId: c
+        channelId: d
       })
     }),
-    (0, n.jsx)(u.Z.Child, {
+    (0, n.jsx)(c.Z.Child, {
       grow: 0,
       shrink: 0,
       children: (0, n.jsx)(r.Button, {
-        onClick: _,
+        onClick: E,
         children: S.Z.Messages.USER_SETTINGS_KEYBINDS_SELECT_VOICE_CHANNEL
       })
     })
@@ -112,7 +112,7 @@ function x(e) {
 transitionState: t,
 onClose: s,
 onSelect: o
-  } = e, u = a.useId(), C = a.useRef(null), {
+  } = e, c = a.useId(), C = a.useRef(null), {
 mouseFocusEnabled: g,
 enableMouseFocus: R,
 disableMouseFocus: x
@@ -140,16 +140,16 @@ autocompleterBeforeCreateSearchContext: A
   }), P = function(e) {
 let t = '' !== e,
   s = (0, i.Wu)([
-    d.ZP,
-    c.Z,
-    E.Z
+    E.ZP,
+    _.Z,
+    T.Z
   ], () => {
-    let e = E.Z.getGuildId();
+    let e = T.Z.getGuildId();
     if (t || null == e)
       return [];
     let s = [];
-    for (let t of d.ZP.getVocalChannelIds(e)) {
-      let e = c.Z.getChannel(t);
+    for (let t of E.ZP.getVocalChannelIds(e)) {
+      let e = _.Z.getChannel(t);
       null != e && s.push(e);
     }
     return s;
@@ -225,7 +225,7 @@ children: (0, n.jsxs)(r.ModalRoot, {
         },
         placeholder: S.Z.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
         role: 'combobox',
-        'aria-controls': u,
+        'aria-controls': c,
         'aria-expanded': Z > 0,
         'aria-activedescendant': Z > 0 && null != v ? v : void 0,
         'aria-autocomplete': 'list',
@@ -234,7 +234,7 @@ children: (0, n.jsxs)(r.ModalRoot, {
     }),
     0 === Z && '' !== M && (0, n.jsx)(p, {}),
     (Z > 0 || '' === M) && (0, n.jsx)(r.ListThin, {
-      innerId: u,
+      innerId: c,
       innerRole: 'listbox',
       'aria-label': S.Z.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
       ref: C,
@@ -251,9 +251,9 @@ children: (0, n.jsxs)(r.ModalRoot, {
         })();
         if (null == a)
           return null;
-        let i = null != a.parent_id ? c.Z.getChannel(a.parent_id) : void 0,
-          r = _.Z.getGuild(a.guild_id);
-        return (0, n.jsx)(T.$W, {
+        let i = null != a.parent_id ? _.Z.getChannel(a.parent_id) : void 0,
+          r = u.Z.getGuild(a.guild_id);
+        return (0, n.jsx)(d.$W, {
           id: a.id,
           channel: a,
           category: i,
@@ -290,14 +290,14 @@ channel: s,
 category: a,
 guild: o
   } = (0, i.cj)([
-c.Z,
-_.Z
+_.Z,
+u.Z
   ], () => {
-let e = null != t ? c.Z.getChannel(t) : void 0;
+let e = null != t ? _.Z.getChannel(t) : void 0;
 return null != e ? {
   channel: e,
-  category: null != e.parent_id ? c.Z.getChannel(e.parent_id) : void 0,
-  guild: null != e.guild_id ? _.Z.getGuild(e.guild_id) : void 0
+  category: null != e.parent_id ? _.Z.getChannel(e.parent_id) : void 0,
+  guild: null != e.guild_id ? u.Z.getGuild(e.guild_id) : void 0
 } : {
   channel: void 0,
   category: void 0,
@@ -309,7 +309,7 @@ variant: 'text-md/medium',
 color: 'text-muted',
 className: N.noVoiceChannelSelected,
 children: S.Z.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
-  }) : (0, n.jsx)(T.$W, {
+  }) : (0, n.jsx)(d.$W, {
 channel: s,
 id: s.id,
 category: a,

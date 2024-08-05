@@ -21,8 +21,8 @@ var i = t(735250),
   h = t(905753),
   g = t(937427),
   p = t(643886),
-  C = t(869157),
-  f = t(454092),
+  f = t(869157),
+  C = t(454092),
   x = t(289465),
   O = t(981631),
   S = t(689079),
@@ -95,10 +95,10 @@ let i = null;
 if (0 !== n.length) {
   let e = b[n[0]];
   if (e.type === c.Kw.USER)
-    t = f.s.REMOVE_SELF;
+    t = C.s.REMOVE_SELF;
   else {
     let n = e.id;
-    if (t = f.s.REMOVE_ROLE, (0, I.pM)(g, n))
+    if (t = C.s.REMOVE_ROLE, (0, I.pM)(g, n))
       i = '@everyone';
     else {
       let e = N.Z.getRole(g, n);
@@ -107,14 +107,14 @@ if (0 !== n.length) {
   }
 } else {
   let n = Object.values(e)[0].id;
-  if (t = f.s.DENY_ROLE, (0, I.pM)(g, n))
+  if (t = C.s.DENY_ROLE, (0, I.pM)(g, n))
     i = '@everyone';
   else {
     let e = N.Z.getRole(g, n);
     i = null != e ? e.name : 'role';
   }
 }
-(0, f._)(t, i);
+(0, C._)(t, i);
   }, [
 g,
 b
@@ -257,7 +257,7 @@ children: [
       title: e.title,
       children: (0, i.jsx)('div', {
         className: p ? void 0 : R.listContainer,
-        children: (0, i.jsx)(C.Z, {
+        children: (0, i.jsx)(f.Z, {
           guildId: g,
           commandId: s,
           noneSelectedText: e.noneSelectedText,

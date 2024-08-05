@@ -7,9 +7,9 @@ var o = n(735250);
 n(470079);
 var s = n(481060),
   a = n(230711),
-  i = n(695346),
-  l = n(285952),
-  r = n(153124),
+  i = n(600164),
+  l = n(313201),
+  r = n(695346),
   d = n(626135),
   c = n(981631),
   A = n(526761),
@@ -21,7 +21,7 @@ function T(t) {
   let {
 onClose: e,
 transitionState: n
-  } = t, T = (0, r.Dt)();
+  } = t, T = (0, l.Dt)();
 
   function N() {
 e(), a.Z.open(c.oAB.ACCESSIBILITY, null, {
@@ -38,9 +38,9 @@ children: [
     alt: ''
   }),
   (0, o.jsx)(s.ModalContent, {
-    children: (0, o.jsxs)(l.Z, {
-      direction: l.Z.Direction.VERTICAL,
-      justify: l.Z.Justify.CENTER,
+    children: (0, o.jsxs)(i.Z, {
+      direction: i.Z.Direction.VERTICAL,
+      justify: i.Z.Justify.CENTER,
       children: [
         (0, o.jsx)(s.Heading, {
           id: T,
@@ -69,7 +69,7 @@ children: [
           d.default.track(c.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
             enabled: !1,
             location: 'LegacyChatInputExplanationModal'
-          }), i.dN.updateSetting(!1), e();
+          }), r.dN.updateSetting(!1), e();
         },
         children: _.Z.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_EXPLANATION_MODAL_BUTTON_CTA
       }),

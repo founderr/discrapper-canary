@@ -17,13 +17,13 @@ var r = n(735250),
   I = n(367907),
   T = n(907040),
   g = n(455708),
-  S = n(315744),
-  A = n(603074),
-  N = n(453070),
-  v = n(926491),
-  O = n(457040),
-  R = n(740492),
-  C = n(153850),
+  S = n(314910),
+  A = n(315744),
+  N = n(603074),
+  v = n(453070),
+  O = n(926491),
+  R = n(457040),
+  C = n(740492),
   y = n(585483),
   D = n(5967),
   L = n(28546),
@@ -68,7 +68,7 @@ let {
   positionContainerRef: t,
   drawerRef: n,
   orientation: r
-} = e, a = (0, d.e7)([R.ZP], () => R.ZP.expressionPickerWidth), [s, o] = i.useState(window.innerWidth), [u, c] = i.useState(null != a ? a : b._j.MIN), _ = i.useMemo(() => {
+} = e, a = (0, d.e7)([C.ZP], () => C.ZP.expressionPickerWidth), [s, o] = i.useState(window.innerWidth), [u, c] = i.useState(null != a ? a : b._j.MIN), _ = i.useMemo(() => {
   switch (u) {
     case b._j.MIN:
       return b.Om;
@@ -118,7 +118,7 @@ t.Z = i.memo(function(e) {
 positionTargetRef: o,
 hideGifFavorites: l,
 includeCreateEmojiButton: f,
-onSelectGIF: R,
+onSelectGIF: C,
 onSelectEmoji: V,
 onSelectSticker: H,
 onSelectSound: Z,
@@ -136,10 +136,10 @@ handleDrawerResizeHandleMouseDown: en
 positionContainerRef: X,
 drawerRef: ee,
 orientation: 'left' === K ? p.y.HORIZONTAL_RIGHT : p.y.HORIZONTAL_LEFT
-  }), er = (0, L.Iu)(e => e.activeView), ei = (0, N.fQ)(Y), {
+  }), er = (0, L.Iu)(e => e.activeView), ei = (0, v.fQ)(Y), {
 renderWindow: ea,
 windowDispatch: es
-  } = i.useContext(m.ZP), eo = (0, d.e7)([v.Z], () => !v.Z.hasLoadedStickerPacks), el = (0, S.P)('expression_picker'), eu = null != Q, ec = (0, _.Jw)(null != Q ? Q : ''), ed = i.useCallback(e => {
+  } = i.useContext(m.ZP), eo = (0, d.e7)([O.Z], () => !O.Z.hasLoadedStickerPacks), el = (0, A.P)('expression_picker'), eu = null != Q, ec = (0, _.Jw)(null != Q ? Q : ''), ed = i.useCallback(e => {
 var t;
 if (!eu && (0, _.$s)() || eu && !(ec && q))
   return;
@@ -194,14 +194,14 @@ if (null != ee.current && !$.current) {
   }), $.current = !0);
 }
   });
-  let eE = (null === (t = j.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.tq && null != R,
+  let eE = (null === (t = j.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.tq && null != C,
 ef = (null === (n = j.stickers) || void 0 === n ? void 0 : n.allowSending) && null != H,
 eh = !(null === (a = j.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (eE || ef),
 ep = 'left' === K ? 'right' : 'left',
 em = null != z ? z : 'left' === K ? G.positionLayerDefaultAlignLeft : G.positionLayerDefaultAlignRight;
   return (0, r.jsx)(h.Z, {
 section: M.jXE.EXPRESSION_PICKER,
-children: (0, r.jsx)(C.W5, {
+children: (0, r.jsx)(S.W5, {
   className: s()(G.positionLayer, em),
   targetRef: o,
   position: W,
@@ -283,7 +283,7 @@ children: (0, r.jsx)(C.W5, {
                   ]
                 })
               }) : null,
-              er === b.X1.STICKER && ef ? (0, r.jsx)(O.Z, {
+              er === b.X1.STICKER && ef ? (0, r.jsx)(R.Z, {
                 isLoading: eo,
                 channel: Y,
                 containerWidth: et,
@@ -294,7 +294,7 @@ children: (0, r.jsx)(C.W5, {
                 }
               }) : null,
               er === b.X1.GIF && eE ? (0, r.jsx)(g.Z, {
-                onSelectGIF: R,
+                onSelectGIF: C,
                 hideFavorites: l,
                 persistSearch: !0
               }) : null,
@@ -315,7 +315,7 @@ children: (0, r.jsx)(C.W5, {
               }) : null,
               er === b.X1.SOUNDBOARD ? (0, r.jsx)('div', {
                 className: G.soundboardContainer,
-                children: (0, r.jsx)(A.Z, {
+                children: (0, r.jsx)(N.Z, {
                   guildId: Y.guild_id,
                   channel: Y,
                   containerWidth: et,

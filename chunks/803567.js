@@ -11,12 +11,12 @@ var r = s(120356),
   c = s(780384),
   d = s(481060),
   _ = s(846027),
-  E = s(111672),
-  u = s(921801),
-  T = s(463395),
-  I = s(131951),
-  S = s(285952),
-  N = s(153124),
+  E = s(600164),
+  u = s(313201),
+  T = s(111672),
+  I = s(921801),
+  S = s(463395),
+  N = s(131951),
   C = s(626135),
   m = s(63063),
   A = s(210887),
@@ -26,7 +26,7 @@ var r = s(120356),
   p = s(549856);
 let R = s(775322),
   x = s(853453),
-  M = (0, N.hQ)();
+  M = (0, u.hQ)();
 (a = n || (n = {}))[a.NONE = 0] = 'NONE', a[a.STANDARD = 1] = 'STANDARD', a[a.KRISP = 2] = 'KRISP';
 let f = {
   page: h.ZY5.USER_SETTINGS,
@@ -52,11 +52,11 @@ function P() {
   noiseSuppression: s,
   noiseSuppressionSupported: n,
   noiseCancellationSupported: a
-} = (0, l.cj)([I.Z], () => ({
-  noiseCancellation: I.Z.getNoiseCancellation(),
-  noiseSuppression: I.Z.getNoiseSuppression(),
-  noiseSuppressionSupported: I.Z.isNoiseSuppressionSupported(),
-  noiseCancellationSupported: I.Z.isNoiseCancellationSupported()
+} = (0, l.cj)([N.Z], () => ({
+  noiseCancellation: N.Z.getNoiseCancellation(),
+  noiseSuppression: N.Z.getNoiseSuppression(),
+  noiseSuppressionSupported: N.Z.isNoiseSuppressionSupported(),
+  noiseCancellationSupported: N.Z.isNoiseCancellationSupported()
 }));
   if (!n && !a)
 return null;
@@ -99,7 +99,7 @@ children: [
       width: 70,
       height: 40
     },
-    align: S.Z.Align.CENTER,
+    align: E.Z.Align.CENTER,
     body: (0, i.jsx)(d.Anchor, {
       href: m.Z.getArticleURL(h.BhN.NOISE_SUPPRESSION),
       onClick: D,
@@ -120,25 +120,25 @@ automaticGainControl: n,
 vadAutoThreshold: a,
 vadUseKrisp: r,
 sidechainCompression: c
-  } = (0, l.cj)([I.Z], () => ({
-inputMode: I.Z.getMode(),
-inputDeviceId: I.Z.getInputDeviceId(),
-echoCancellation: I.Z.getEchoCancellation(),
-automaticGainControl: I.Z.getAutomaticGainControl(),
-vadAutoThreshold: I.Z.getModeOptions().autoThreshold,
-vadUseKrisp: I.Z.getModeOptions().vadUseKrisp,
-sidechainCompression: I.Z.getSidechainCompression()
+  } = (0, l.cj)([N.Z], () => ({
+inputMode: N.Z.getMode(),
+inputDeviceId: N.Z.getInputDeviceId(),
+echoCancellation: N.Z.getEchoCancellation(),
+automaticGainControl: N.Z.getAutomaticGainControl(),
+vadAutoThreshold: N.Z.getModeOptions().autoThreshold,
+vadUseKrisp: N.Z.getModeOptions().vadUseKrisp,
+sidechainCompression: N.Z.getSidechainCompression()
   })), {
-hasEchoCancellation: S,
-hasNoiseSuppression: N,
+hasEchoCancellation: E,
+hasNoiseSuppression: u,
 hasAutomaticGainControl: C
-  } = (0, l.cj)([T.Z], () => ({
-hasEchoCancellation: T.Z.hasEchoCancellation(t),
-hasNoiseSuppression: T.Z.hasNoiseSuppression(t),
-hasAutomaticGainControl: T.Z.hasAutomaticGainControl(t)
-  }), [t]), m = S || N || C, A = e === h.pM4.VOICE_ACTIVITY && a, {
+  } = (0, l.cj)([S.Z], () => ({
+hasEchoCancellation: S.Z.hasEchoCancellation(t),
+hasNoiseSuppression: S.Z.hasNoiseSuppression(t),
+hasAutomaticGainControl: S.Z.hasAutomaticGainControl(t)
+  }), [t]), m = E || u || C, A = e === h.pM4.VOICE_ACTIVITY && a, {
 enableSidechainCompression: R
-  } = E.Z.getCurrentConfig({
+  } = T.Z.getCurrentConfig({
 location: 'UserSettingsVoiceProcessing'
   });
   return (0, i.jsxs)(d.FormSection, {
@@ -150,7 +150,7 @@ children: [
     type: d.FormText.Types.DESCRIPTION,
     children: O.Z.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
   }),
-  (0, i.jsx)(u.F, {
+  (0, i.jsx)(I.F, {
     setting: g.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
     children: (0, i.jsx)(d.FormSwitch, {
       className: o()(p.marginTop8, p.marginBottom20),
@@ -159,11 +159,11 @@ children: [
         page: h.ZY5.USER_SETTINGS,
         section: h.jXE.SETTINGS_VOICE_AND_VIDEO
       }),
-      disabled: S,
+      disabled: E,
       children: O.Z.Messages.ECHO_CANCELLATION
     })
   }),
-  R && (0, i.jsx)(u.F, {
+  R && (0, i.jsx)(I.F, {
     setting: g.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
     children: (0, i.jsx)(d.FormSwitch, {
       className: o()(p.marginTop8, p.marginBottom20),
@@ -173,11 +173,11 @@ children: [
       children: O.Z.Messages.SIDECHAIN_COMPRESSION
     })
   }),
-  (0, i.jsx)(u.F, {
+  (0, i.jsx)(I.F, {
     setting: g.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
     children: (0, i.jsx)(P, {})
   }),
-  (0, i.jsx)(u.F, {
+  (0, i.jsx)(I.F, {
     setting: g.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
     children: (0, i.jsx)(d.FormSwitch, {
       value: r,
@@ -189,7 +189,7 @@ children: [
       children: O.Z.Messages.ADVANCED_VOICE_ACTIVITY
     })
   }),
-  (0, i.jsx)(u.F, {
+  (0, i.jsx)(I.F, {
     setting: g.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
     children: (0, i.jsx)(d.FormSwitch, {
       className: '',

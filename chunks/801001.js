@@ -11,10 +11,10 @@ var s = t(735250),
   r = t(481060),
   d = t(706371),
   c = t(563115),
-  u = t(661824),
-  m = t(984933),
-  N = t(430824),
-  _ = t(153124),
+  u = t(313201),
+  m = t(661824),
+  N = t(984933),
+  _ = t(430824),
   O = t(823379),
   h = t(402148),
   I = t(570961),
@@ -29,12 +29,12 @@ function M(e) {
 transitionState: n,
 onClose: t,
 onSave: i,
-onDelete: N,
+onDelete: _,
 option: O,
 guild: h,
 prompt: M,
 index: T
-  } = e, g = (0, _.Dt)(), p = (0, a.e7)([m.ZP], () => m.ZP.getDefaultChannel(h.id)), [B, A] = o.useState(() => {
+  } = e, g = (0, u.Dt)(), p = (0, a.e7)([N.ZP], () => N.ZP.getDefaultChannel(h.id)), [B, A] = o.useState(() => {
 var e;
 return null !== (e = null == O ? void 0 : O.emoji) && void 0 !== e ? e : null;
   }), [C, L] = o.useState(() => {
@@ -101,7 +101,7 @@ children: [
         onChange: e => f(e),
         maxLength: x.NO
       }),
-      (0, s.jsx)(u.Z, {
+      (0, s.jsx)(m.Z, {
         className: R.divider
       }),
       (0, s.jsx)(r.Heading, {
@@ -133,7 +133,7 @@ children: [
         guild: h,
         roleIds: H
       }),
-      (0, s.jsx)(u.Z, {
+      (0, s.jsx)(m.Z, {
         className: R.divider
       }),
       (0, s.jsxs)('div', {
@@ -173,7 +173,7 @@ children: [
             look: r.Button.Looks.LINK,
             color: r.Button.Colors.RED,
             onClick: () => {
-              N(), t();
+              _(), t();
             },
             children: j.Z.Messages.REMOVE
           })
@@ -222,7 +222,7 @@ function P(e) {
   let {
 guild: n,
 roleIds: t
-  } = e, o = (0, a.e7)([N.Z], () => N.Z.getRoles(n.id)), i = Array.from(t).map(e => o[e]).filter(O.lm).find(h.F);
+  } = e, o = (0, a.e7)([_.Z], () => _.Z.getRoles(n.id)), i = Array.from(t).map(e => o[e]).filter(O.lm).find(h.F);
   return null == i ? null : (0, s.jsx)('div', {
 className: R.notice,
 children: (0, s.jsxs)('div', {

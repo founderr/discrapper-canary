@@ -7,13 +7,13 @@ var i = n(735250),
   c = n(481060),
   u = n(493683),
   d = n(239091),
-  h = n(569471),
-  p = n(488131),
-  _ = n(592125),
-  f = n(306680),
-  m = n(979651),
-  g = n(938475),
-  C = n(514342),
+  h = n(111028),
+  p = n(569471),
+  _ = n(488131),
+  f = n(592125),
+  m = n(306680),
+  g = n(979651),
+  C = n(938475),
   I = n(714794),
   E = n(135724),
   N = n(25601),
@@ -53,21 +53,21 @@ isSelectedChannel: r,
 isSelectedVoice: A,
 isLast: M,
 withGuildIcon: R
-  } = e, O = (0, o.e7)([g.ZP], () => g.ZP.getVoiceStatesForChannel(t), [t]), y = (0, o.e7)([m.Z], () => m.Z.hasVideo(t.id)), {
+  } = e, O = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]), y = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)), {
 unread: P,
 mentionCount: j
-  } = (0, o.cj)([f.ZP], () => ({
-unread: f.ZP.hasUnread(t.id),
-mentionCount: f.ZP.getMentionCount(t.id)
-  })), D = (0, o.e7)([h.Z], () => h.Z.isMuted(t.id)), U = l.useCallback(e => {
-(0, p.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
+  } = (0, o.cj)([m.ZP], () => ({
+unread: m.ZP.hasUnread(t.id),
+mentionCount: m.ZP.getMentionCount(t.id)
+  })), D = (0, o.e7)([p.Z], () => p.Z.isMuted(t.id)), U = l.useCallback(e => {
+(0, _.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
   }, [t]), G = l.useCallback(() => {
 u.Z.preload(t.guild_id, t.id);
   }, [
 t.guild_id,
 t.id
   ]), w = l.useCallback(e => {
-let l = _.Z.getChannel(t.id);
+let l = f.Z.getChannel(t.id);
 null != l && (0, d.jW)(e, async () => {
   let {
     default: e
@@ -136,7 +136,7 @@ children: [
           children: (0, i.jsxs)('div', {
             className: a()(L.linkTop, L.__invalid_threadMainContent),
             children: [
-              (0, i.jsx)(C.Z, {
+              (0, i.jsx)(h.Z, {
                 className: L.name,
                 'aria-hidden': !0,
                 children: t.name

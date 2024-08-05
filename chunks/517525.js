@@ -11,9 +11,9 @@ var i = n(735250),
   h = n(481060),
   p = n(2052),
   m = n(906732),
-  _ = n(484459),
-  f = n(594174),
-  E = n(368666),
+  _ = n(194082),
+  f = n(484459),
+  E = n(594174),
   g = n(626135),
   C = n(74538),
   I = n(557457),
@@ -54,7 +54,7 @@ let t, s, {
     participant: r,
     isUpsellEnabled: o,
     shape: d,
-    size: _,
+    size: f,
     didTrackUpsellViewed: Z,
     setDidTrackUpsellViewed: A,
     className: M,
@@ -79,7 +79,7 @@ let P = t || s,
   {
     location: O
   } = (0, p.O)(),
-  y = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
+  y = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
   D = o && !C.ZP.isPremium(y, N.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
   k = a.useCallback(() => {
     D && P && (0, h.openModalLazy)(async () => {
@@ -119,7 +119,7 @@ let U = (0, i.jsx)(h.Tooltip, {
   children: e => (0, i.jsxs)(h.Clickable, {
     ...e,
     onClick: k,
-    className: l()(S.qualityIndicator, _, E.eE[d], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, {
+    className: l()(S.qualityIndicator, f, _.eE[d], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, {
       [S.clickable]: D && P
     }),
     children: [
@@ -156,19 +156,19 @@ size: o,
 className: c,
 premiumIndicator: u
   } = e, [d, p] = a.useState(!1), m = (0, I.Wc)(t), {
-reducedMotion: f
+reducedMotion: E
   } = a.useContext(h.AccessibilityPreferencesContext), g = n && null != m;
   a.useEffect(() => {
-(0, _.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
+(0, f.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
   dispatchWait: !0
 });
   }, [t]);
   let C = (0, h.useTransition)(g, {
   enter: {
-    from: f.enabled ? b : A,
-    to: f.enabled ? R : M
+    from: E.enabled ? b : A,
+    to: E.enabled ? R : M
   },
-  leave: f.enabled ? b : A,
+  leave: E.enabled ? b : A,
   config: P
 }, 'animate-always'),
 x = (0, h.useSpring)({
@@ -200,8 +200,8 @@ return (0, i.jsxs)('div', {
     (0, i.jsx)(r.animated.div, {
       style: x,
       className: S.liveIndicator,
-      children: (0, i.jsx)(E.ZP, {
-        look: E.jZ.RED,
+      children: (0, i.jsx)(_.ZP, {
+        look: _.jZ.RED,
         size: o,
         shape: g ? h.BadgeShapes.ROUND_RIGHT : h.BadgeShapes.ROUND
       })

@@ -3,25 +3,25 @@ var n = s(735250),
   a = s(470079),
   i = s(442837),
   r = s(481060),
-  o = s(993413),
-  l = s(594174),
-  c = s(153124),
+  o = s(313201),
+  l = s(993413),
+  c = s(594174),
   d = s(931240),
   _ = s(353093),
   E = s(369077),
   u = s(981631),
   T = s(689938),
   I = s(715970);
-let S = (0, c.hQ)();
+let S = (0, o.hQ)();
 t.Z = a.memo(function(e) {
   let {
 availableClans: t
   } = e, s = a.useMemo(() => new Map(t.map(e => [
 e.id,
 e
-  ])), [t]), c = (0, i.e7)([l.default], () => {
+  ])), [t]), o = (0, i.e7)([c.default], () => {
 var e;
-return (0, _.vh)(null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId;
+return (0, _.vh)(null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId;
   }), N = a.useMemo(() => t.reduce((e, t) => {
 var s;
 return (null === (s = t.clan) || void 0 === s ? void 0 : s.tag) != null && e.push({
@@ -49,8 +49,8 @@ let t = e[0];
 return null == t ? null : (0, n.jsx)(n.Fragment, {
   children: C(t)
 });
-  }, [C]), A = a.useCallback(e => (0, d.nE)(e, !0, u.Sbl.USER_SETTINGS), []), g = a.useCallback(e => e === c, [c]), h = a.useCallback(e => e, []), O = a.useCallback(() => (0, d.nE)(null, !1), []);
-  return (0, n.jsxs)(o.Z, {
+  }, [C]), A = a.useCallback(e => (0, d.nE)(e, !0, u.Sbl.USER_SETTINGS), []), g = a.useCallback(e => e === o, [o]), h = a.useCallback(e => e, []), O = a.useCallback(() => (0, d.nE)(null, !1), []);
+  return (0, n.jsxs)(l.Z, {
 title: T.Z.Messages.CLANS,
 titleId: S,
 children: [
@@ -69,7 +69,7 @@ children: [
     renderOptionLabel: C,
     serialize: h,
     clear: O,
-    clearable: null != c
+    clearable: null != o
   })
 ]
   });

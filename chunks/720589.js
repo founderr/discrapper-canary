@@ -9,15 +9,15 @@ var l = n(735250),
   c = n(528963),
   h = n(933557),
   u = n(471445),
-  g = n(565138),
-  m = n(592125),
-  M = n(984933),
-  p = n(430824),
-  _ = n(496675),
-  O = n(699516),
-  x = n(944486),
-  L = n(594174),
-  b = n(153124),
+  g = n(313201),
+  m = n(565138),
+  M = n(592125),
+  p = n(984933),
+  _ = n(430824),
+  O = n(496675),
+  x = n(699516),
+  L = n(944486),
+  b = n(594174),
   C = n(626135),
   N = n(709054),
   F = n(981631),
@@ -45,7 +45,7 @@ let t = e.find(e => {
     let {
       channel: t
     } = e;
-    return 'general' === (0, h.F6)(t, L.default, O.Z);
+    return 'general' === (0, h.F6)(t, b.default, x.Z);
   }),
   n = null != t ? t : e[0];
 return null != n ? n.channel.id : null;
@@ -99,11 +99,11 @@ let {
   } = e;
   return {
     value: t.id,
-    label: (0, h.F6)(t, L.default, O.Z),
+    label: (0, h.F6)(t, b.default, x.Z),
     channel: t,
     category: n
   };
-}), c = 0 === i.length, m = c ? Z.Z.Messages.FOLLOW_MODAL_HINT_NO_PERMS : Z.Z.Messages.FOLLOW_MODAL_HINT;
+}), c = 0 === i.length, g = c ? Z.Z.Messages.FOLLOW_MODAL_HINT_NO_PERMS : Z.Z.Messages.FOLLOW_MODAL_HINT;
 return (0, l.jsxs)(a.Fragment, {
   children: [
     (0, l.jsx)(o.FormItem, {
@@ -120,9 +120,9 @@ return (0, l.jsxs)(a.Fragment, {
           let {
             guild: t
           } = e;
-          return (0, l.jsx)(g.Z, {
+          return (0, l.jsx)(m.Z, {
             guild: t,
-            size: g.Z.Sizes.MINI
+            size: m.Z.Sizes.MINI
           });
         }(e)
       })
@@ -153,7 +153,7 @@ return (0, l.jsxs)(a.Fragment, {
       variant: 'text-sm/normal',
       color: c || null != r ? 'text-danger' : 'text-muted',
       className: f.bottomMargin,
-      children: null != r ? r : m
+      children: null != r ? r : g
     })
   ]
 });
@@ -199,9 +199,9 @@ let {
 return (0, l.jsxs)(o.ModalHeader, {
   className: f.header,
   children: [
-    (0, l.jsx)(g.Z, {
+    (0, l.jsx)(m.Z, {
       guild: t,
-      size: g.Z.Sizes.LARGE
+      size: m.Z.Sizes.LARGE
     }),
     (0, l.jsx)('div', {
       className: f.channelContainer,
@@ -310,22 +310,22 @@ this.state = {
   channels: null != s && null != t[s] ? t[s].channels : [],
   errorMessage: null,
   submitting: !1,
-  headerId: (0, b.hQ)('modal')
+  headerId: (0, g.hQ)('modal')
 };
   }
 }
 t.default = i.ZP.connectStores([
-  p.Z,
-  m.Z,
-  M.ZP,
   _.Z,
-  x.Z
+  M.Z,
+  p.ZP,
+  O.Z,
+  L.Z
 ], e => {
   let {
 channel: t
-  } = e, n = p.Z.getGuild(t.guild_id), l = Object.values(p.Z.getGuilds()).reduce((e, t) => {
-let n = M.ZP.getChannels(t.id).SELECTABLE.map(e => e.channel).filter(e => e.type === F.d4z.GUILD_TEXT && _.Z.can(F.Plq.MANAGE_WEBHOOKS, e)).map(e => {
-  let t = m.Z.getChannel(e.parent_id);
+  } = e, n = _.Z.getGuild(t.guild_id), l = Object.values(_.Z.getGuilds()).reduce((e, t) => {
+let n = p.ZP.getChannels(t.id).SELECTABLE.map(e => e.channel).filter(e => e.type === F.d4z.GUILD_TEXT && O.Z.can(F.Plq.MANAGE_WEBHOOKS, e)).map(e => {
+  let t = M.Z.getChannel(e.parent_id);
   return {
     channel: e,
     category: null != t ? t.name : null
@@ -335,7 +335,7 @@ return n.length > 0 && (e[t.id] = {
   guild: t,
   channels: n
 }), e;
-  }, {}), a = x.Z.getLastChannelFollowingDestination();
+  }, {}), a = L.Z.getLastChannelFollowingDestination();
   return {
 guildToFollow: n,
 channelNameToFollow: t.name,

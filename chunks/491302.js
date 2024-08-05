@@ -9,7 +9,7 @@ var i = t(735250),
   l = t(668781),
   o = t(139387),
   r = t(308063),
-  d = t(285952),
+  d = t(600164),
   c = t(259580),
   u = t(768581),
   I = t(486199),
@@ -32,7 +32,7 @@ return e = n, null != (t = n.avatar) && /^data:/.test(t) ? t : (0, u.ov)({
   avatar: t,
   discriminator: m.fo$
 });
-  }, [n]), C = a.useCallback(() => {
+  }, [n]), f = a.useCallback(() => {
 (0, s.openModal)(e => (0, i.jsx)(s.ConfirmModal, {
   ...e,
   header: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE_TITLE.format({
@@ -57,11 +57,11 @@ return e = n, null != (t = n.avatar) && /^data:/.test(t) ? t : (0, u.ov)({
 n.guild_id,
 n.id,
 n.name
-  ]), f = [];
-  null != n.source_channel && null != n.source_guild && (f.push({
+  ]), C = [];
+  null != n.source_channel && null != n.source_guild && (C.push({
 icon: s.AnnouncementsIcon,
 text: n.source_channel.name
-  }), f.push({
+  }), C.push({
 text: (0, i.jsx)('span', {
   className: N.guildSource,
   children: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_GUILD_SOURCE.format({
@@ -123,7 +123,7 @@ children: [
         }),
         (0, i.jsx)(d.Z, {
           children: (0, i.jsx)(s.Button, {
-            onClick: C,
+            onClick: f,
             size: s.Button.Sizes.SMALL,
             color: s.Button.Colors.RED,
             look: s.Button.Looks.LINK,
@@ -152,7 +152,7 @@ children: (0, i.jsxs)(d.Z, {
             name: n.name,
             imageSrc: p,
             detailsClassName: N.__invalid_description,
-            details: f
+            details: C
           }),
           (0, i.jsx)(c.Z, {
             className: N.expandIcon,

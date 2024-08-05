@@ -11,11 +11,11 @@ var s = n(735250),
   _ = n(179360),
   I = n(129861),
   E = n(999382),
-  T = n(899667),
-  m = n(271383),
-  N = n(594174),
-  S = n(575000),
-  h = n(409216),
+  T = n(733683),
+  m = n(237583),
+  N = n(899667),
+  S = n(271383),
+  h = n(594174),
   g = n(267642),
   C = n(624138),
   x = n(981631),
@@ -63,7 +63,7 @@ if (null == t || null == n)
 let i = {
     numRequired: 0,
     y: 0,
-    key: S.x
+    key: T.x
   },
   r = (0, g.vn)(n),
   l = e.map(e => {
@@ -75,7 +75,7 @@ let i = {
       key: e.tier
     };
   });
-return (0, s.jsx)(S.Z, {
+return (0, s.jsx)(T.Z, {
   className: a > 0 ? R.progressWithSubscriptions : R.progress,
   progress: a,
   tiers: [
@@ -113,7 +113,7 @@ return (0, s.jsxs)('div', {
   ref: this.defaultTierRef,
   className: R.subscribers,
   children: [
-    (0, s.jsx)(h.Z, {
+    (0, s.jsx)(m.Z, {
       guildId: null != n ? n : void 0,
       users: e,
       renderUser: this.renderSubscriber,
@@ -248,16 +248,16 @@ super(...e), f(this, 'tierRefs', {}), f(this, 'defaultTierRef', a.createRef()), 
 }
 let A = c.ZP.connectStores([
   E.Z,
-  N.default,
-  T.Z,
-  m.ZP
+  h.default,
+  N.Z,
+  S.ZP
 ], () => {
   let e = E.Z.getGuildId(),
-t = null != e ? T.Z.getAppliedGuildBoostsForGuild(e) : null,
+t = null != e ? N.Z.getAppliedGuildBoostsForGuild(e) : null,
 n = o()(null != t ? t : []).uniqBy(e => e.userId),
 s = n.map(t => ({
-  user: N.default.getUser(t.userId),
-  nick: m.ZP.getNick(e, t.userId)
+  user: h.default.getUser(t.userId),
+  nick: S.ZP.getNick(e, t.userId)
 })).filter(e => null != e.user).value();
   return {
 guildId: e,

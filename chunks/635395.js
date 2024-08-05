@@ -7,8 +7,8 @@ var i, a, s = n(470079),
   d = n(131951),
   u = n(292959),
   _ = n(19780),
-  E = n(699516),
-  h = n(606304),
+  h = n(699516),
+  E = n(606304),
   I = n(358085),
   m = n(998502),
   g = n(981631);
@@ -52,18 +52,18 @@ I.isPlatformEmbedded && (m.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => l.Z.toggleSelf
 }), S = r.ZP.connectStores([
   _.Z,
   d.Z,
-  h.Z,
-  c.default,
   E.Z,
+  c.default,
+  h.Z,
   u.Z
 ], () => {
   let e = c.default.getTotalMentionCount(),
 t = c.default.hasAnyUnread(),
-n = E.Z.getPendingCount(),
+n = h.Z.getPendingCount(),
 i = u.Z.getDisableUnreadBadge();
   return {
 connected: _.Z.isConnected(),
-speaking: h.Z.isCurrentUserSpeaking(),
+speaking: E.Z.isCurrentUserSpeaking(),
 muted: d.Z.isSelfMute() || d.Z.isSelfMutedTemporarily(),
 deafened: d.Z.isSelfDeaf(),
 unread: !i && !!(t || e + n > 0)

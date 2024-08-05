@@ -14,12 +14,12 @@ var n = t(735250),
   x = t(700582),
   I = t(367907),
   g = t(346486),
-  v = t(210887),
-  T = t(758449),
-  b = t(598077),
-  N = t(592125),
-  Z = t(246946),
-  E = t(285952),
+  v = t(600164),
+  T = t(210887),
+  b = t(758449),
+  N = t(598077),
+  Z = t(592125),
+  E = t(246946),
   _ = t(626135),
   f = t(981631),
   C = t(689938),
@@ -41,12 +41,12 @@ let {
   invite: e,
   hideDiscriminator: s,
   hideInviteCode: t
-} = this.props, r = new b.Z(e.inviter);
-return (0, n.jsxs)(E.Z, {
+} = this.props, r = new N.Z(e.inviter);
+return (0, n.jsxs)(v.Z, {
   className: a()(j.row, S.card),
   children: [
-    (0, n.jsxs)(E.Z, {
-      align: E.Z.Align.CENTER,
+    (0, n.jsxs)(v.Z, {
+      align: v.Z.Align.CENTER,
       className: j.userColumn,
       children: [
         (0, n.jsx)(x.Z, {
@@ -62,8 +62,8 @@ return (0, n.jsxs)(E.Z, {
         })
       ]
     }),
-    (0, n.jsx)(E.Z, {
-      align: E.Z.Align.CENTER,
+    (0, n.jsx)(v.Z, {
+      align: v.Z.Align.CENTER,
       grow: 0,
       shrink: 0,
       basis: 100,
@@ -74,12 +74,12 @@ return (0, n.jsxs)(E.Z, {
         children: t ? '...' : e.code
       })
     }),
-    (0, n.jsxs)(E.Z, {
+    (0, n.jsxs)(v.Z, {
       basis: 100,
       grow: 0,
       shrink: 0,
-      align: E.Z.Align.CENTER,
-      justify: E.Z.Justify.END,
+      align: v.Z.Align.CENTER,
+      justify: v.Z.Justify.END,
       className: j.boostZIndex,
       children: [
         (0, n.jsx)(h.Text, {
@@ -119,7 +119,7 @@ d.tn.get({
   retries: 3,
   oldFormErrors: !0
 }).then(e => {
-  let s = e.body.map(e => new T.Z({
+  let s = e.body.map(e => new b.Z({
     ...e,
     maxUses: e.max_uses,
     maxAge: e.max_age,
@@ -130,7 +130,7 @@ d.tn.get({
     invites: s
   });
 }), _.default.track(f.rMx.OPEN_MODAL, {
-  ...(0, I.v_)(N.Z.getChannel(e)),
+  ...(0, I.v_)(Z.Z.getChannel(e)),
   type: 'Group DM Invites',
   source: 'Group DM Menu'
 });
@@ -172,15 +172,15 @@ return (0, n.jsxs)(h.EmptyState, {
 });
   }
   renderHeader() {
-return (0, n.jsxs)(E.Z, {
+return (0, n.jsxs)(v.Z, {
   children: [
-    (0, n.jsx)(E.Z.Child, {
+    (0, n.jsx)(v.Z.Child, {
       wrap: !0,
       children: (0, n.jsx)(h.FormTitle, {
         children: C.Z.Messages.INSTANT_INVITE_INVITER
       })
     }),
-    (0, n.jsx)(E.Z.Child, {
+    (0, n.jsx)(v.Z.Child, {
       wrap: !0,
       grow: 0,
       shrink: 0,
@@ -189,7 +189,7 @@ return (0, n.jsxs)(E.Z, {
         children: C.Z.Messages.INSTANT_INVITE_INVITE_CODE
       })
     }),
-    (0, n.jsx)(E.Z.Child, {
+    (0, n.jsx)(v.Z.Child, {
       wrap: !0,
       grow: 0,
       shrink: 0,
@@ -224,8 +224,8 @@ return (0, n.jsxs)(h.ModalRoot, {
   size: h.ModalSize.MEDIUM,
   children: [
     (0, n.jsxs)(h.ModalHeader, {
-      direction: E.Z.Direction.VERTICAL,
-      align: E.Z.Align.START,
+      direction: v.Z.Direction.VERTICAL,
+      align: v.Z.Align.START,
       separator: !1,
       children: [
         (0, n.jsx)(h.FormTitle, {
@@ -267,10 +267,10 @@ super(...e), M(this, 'state', {
   }
 }
 s.default = c.ZP.connectStores([
-  Z.Z,
-  v.Z
+  E.Z,
+  T.Z
 ], () => ({
-  hideDiscriminators: Z.Z.hidePersonalInformation,
-  hideInviteCodes: Z.Z.hideInstantInvites,
-  theme: v.Z.theme
+  hideDiscriminators: E.Z.hidePersonalInformation,
+  hideInviteCodes: E.Z.hideInstantInvites,
+  theme: T.Z.theme
 }))(R);

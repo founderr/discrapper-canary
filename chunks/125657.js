@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return C;
+return f;
   }
 }), t(653041), t(47120);
 var i = t(735250),
@@ -12,24 +12,24 @@ var i = t(735250),
   d = t(412899),
   c = t(995648),
   u = t(385499),
-  I = t(422559),
-  m = t(598077),
-  _ = t(271383),
-  N = t(430824),
-  E = t(285952),
+  I = t(600164),
+  m = t(422559),
+  _ = t(598077),
+  N = t(271383),
+  E = t(430824),
   T = t(823379),
   h = t(700785),
   g = t(689938),
   p = t(988837);
 
-function C(e) {
+function f(e) {
   var n;
   let {
 guild: t,
-applicationIntegration: C
-  } = e, f = (0, l.e7)([N.Z], () => N.Z.getRoles(t.id)), {
+applicationIntegration: f
+  } = e, C = (0, l.e7)([E.Z], () => E.Z.getRoles(t.id)), {
 application: x
-  } = C, O = null != x.bot ? new m.Z(x.bot) : null, S = (0, l.e7)([_.ZP], () => null != O ? _.ZP.getMember(t.id, O.id) : null, [
+  } = f, O = null != x.bot ? new _.Z(x.bot) : null, S = (0, l.e7)([N.ZP], () => null != O ? N.ZP.getMember(t.id, O.id) : null, [
 O,
 t
   ]), A = null == O ? void 0 : O.id;
@@ -42,25 +42,25 @@ A
   ]);
   let R = a.useMemo(() => {
 var e, n, i;
-let a = f[t.getEveryoneRoleId()],
-  l = null !== (n = null == S ? void 0 : null === (e = S.roles) || void 0 === e ? void 0 : e.map(e => f[e]).filter(T.lm)) && void 0 !== n ? n : [],
+let a = C[t.getEveryoneRoleId()],
+  l = null !== (n = null == S ? void 0 : null === (e = S.roles) || void 0 === e ? void 0 : e.map(e => C[e]).filter(T.lm)) && void 0 !== n ? n : [],
   o = null !== (i = null == a ? void 0 : a.permissions) && void 0 !== i ? i : h.Hn;
 for (let e of l)
   o = s.IH(o, e.permissions);
 return o;
   }, [
 t,
-f,
+C,
 S
   ]);
   return null == O ? null : (0, i.jsx)(o.Card, {
 editable: !0,
 className: p.card,
-children: (0, i.jsxs)(E.Z, {
-  direction: E.Z.Direction.VERTICAL,
+children: (0, i.jsxs)(I.Z, {
+  direction: I.Z.Direction.VERTICAL,
   children: [
-    (0, i.jsxs)(E.Z, {
-      align: E.Z.Align.CENTER,
+    (0, i.jsxs)(I.Z, {
+      align: I.Z.Align.CENTER,
       children: [
         (0, i.jsx)('img', {
           alt: '',
@@ -83,7 +83,7 @@ children: (0, i.jsxs)(E.Z, {
     function(e, n, t, a) {
       let l = [],
         r = [];
-      for (let e of I.VY)
+      for (let e of m.VY)
         s.e$(a, e) ? l.push(e) : r.push(e);
       return (0, i.jsxs)(i.Fragment, {
         children: [

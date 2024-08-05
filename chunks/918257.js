@@ -8,18 +8,18 @@ s(470079);
 var a = s(120356),
   i = s.n(a),
   r = s(481060),
-  o = s(208049),
-  l = s(242291),
-  c = s(153124),
+  o = s(313201),
+  l = s(208049),
+  c = s(242291),
   d = s(63063),
   _ = s(36703),
   E = s(981631),
   u = s(689938),
   T = s(712244);
-let I = (0, c.hQ)();
+let I = (0, o.hQ)();
 
 function S() {
-  let e = (0, l.pI)();
+  let e = (0, c.pI)();
   return (0, n.jsxs)('div', {
 className: i()(T.soundboardRow),
 children: [
@@ -54,7 +54,7 @@ children: [
         maxValue: 100,
         onValueRender: e => ''.concat(e.toFixed(0), '%'),
         asValueChanges: function(t) {
-          e = (0, _.A)(t), (0, o.xz)(e);
+          e = (0, _.A)(t), (0, l.xz)(e);
         },
         'aria-labelledby': I
       })

@@ -9,11 +9,11 @@ var l = n(442837),
   r = n(481060),
   a = n(287734),
   s = n(770471),
-  o = n(592125),
-  c = n(306680),
-  u = n(944486),
-  d = n(594174),
-  h = n(153124),
+  o = n(313201),
+  c = n(592125),
+  u = n(306680),
+  d = n(944486),
+  h = n(594174),
   p = n(436088),
   _ = n(51144),
   f = n(603592),
@@ -22,16 +22,16 @@ var l = n(442837),
 
 function C() {
   var e;
-  let t = (0, h.Dt)(),
+  let t = (0, o.Dt)(),
 [n, C] = (0, l.Wu)([
-  u.Z,
-  o.Z
+  d.Z,
+  c.Z
 ], () => [
-  o.Z.getChannel(u.Z.getVoiceChannelId()),
-  u.Z.getCurrentlySelectedChannelId(null)
+  c.Z.getChannel(d.Z.getVoiceChannelId()),
+  d.Z.getCurrentlySelectedChannelId(null)
 ]),
-I = (0, l.e7)([c.ZP], () => null != n ? c.ZP.getMentionCount(n.id) : 0),
-E = (0, l.e7)([d.default], () => d.default.getUser(null == n ? void 0 : n.ownerId)),
+I = (0, l.e7)([u.ZP], () => null != n ? u.ZP.getMentionCount(n.id) : 0),
+E = (0, l.e7)([h.default], () => h.default.getUser(null == n ? void 0 : n.ownerId)),
 N = null !== (e = _.ZP.getGlobalName(E)) && void 0 !== e ? e : _.ZP.getUserTag(E),
 {
   canViewBroadcasts: x

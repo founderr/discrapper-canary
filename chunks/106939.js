@@ -20,14 +20,14 @@ var s = n(735250),
   T = n(100527),
   I = n(906732),
   R = n(252618),
-  C = n(605236),
-  g = n(984370),
-  p = n(797614),
-  A = n(108427),
-  m = n(210887),
-  N = n(695346),
-  f = n(594174),
-  h = n(153124),
+  C = n(313201),
+  g = n(605236),
+  p = n(984370),
+  A = n(797614),
+  m = n(108427),
+  N = n(210887),
+  f = n(695346),
+  h = n(594174),
   S = n(626135),
   M = n(792125),
   x = n(280570),
@@ -99,23 +99,23 @@ function W(e) {
 theme: t,
 section: n,
 handleItemSelect: a
-  } = e, r = (0, h.Dt)(), o = (0, L.gU)();
-  return (0, s.jsxs)(g.Z, {
+  } = e, r = (0, C.Dt)(), o = (0, L.gU)();
+  return (0, s.jsxs)(p.Z, {
 className: i()((0, M.Q)(t), H.sidebarTabBar),
 scrollable: l.tq,
 role: 'navigation',
 'aria-labelledby': r,
 toolbar: !0,
 children: [
-  (0, s.jsx)(g.Z.Icon, {
+  (0, s.jsx)(p.Z.Icon, {
     icon: _.GroupIcon,
     'aria-hidden': !0
   }),
-  (0, s.jsx)(g.Z.Title, {
+  (0, s.jsx)(p.Z.Title, {
     id: r,
     children: k.Z.Messages.FAMILY_CENTER_TITLE
   }),
-  (0, s.jsx)(g.Z.Divider, {}),
+  (0, s.jsx)(p.Z.Divider, {}),
   (0, s.jsxs)(_.TabBar, {
     'aria-label': k.Z.Messages.FAMILY_CENTER_TITLE,
     selectedItem: n,
@@ -149,36 +149,36 @@ children: [
 function K() {
   let e = (0, v.Z)(),
 t = (0, L.M8)(),
-n = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
+n = (0, g.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
 r = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()),
 l = (0, P.M)(),
 {
   selectedTab: u,
   handleTabChange: T
 } = (0, O.Z)(),
-I = (0, h.Dt)(),
-g = f.default.getCurrentUser(),
-m = null != e,
-N = r && null != g && !m;
+I = (0, C.Dt)(),
+p = h.default.getCurrentUser(),
+N = null != e,
+f = r && null != p && !N;
   return (a.useEffect(() => {
-(0, A.e)('family-center'), x.ZP.initialPageLoad(), !n && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+(0, m.e)('family-center'), x.ZP.initialPageLoad(), !n && (0, g.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
   dismissAction: y.L.AUTO,
   forceTrack: !0
 });
   }, []), a.useEffect(() => {
-r && m && (S.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
+r && N && (S.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
   is_considered_adult: e,
   num_of_accepted_links: t,
   selected_teen_id: l,
   initial_page: j.QH[u],
   source: j._6[j.Mu.SIDENAV]
-}), p.Z.increment({
+}), A.Z.increment({
   name: o.V.FAMILY_CENTER_VIEW
 }));
   }, [
 r,
-m
-  ]), N) ? ((0, E.mN)(G.L0.FAMILY_CENTER), null) : (0, s.jsxs)('main', {
+N
+  ]), f) ? ((0, E.mN)(G.L0.FAMILY_CENTER), null) : (0, s.jsxs)('main', {
 className: i()(H.container),
 'aria-label': k.Z.Messages.FAMILY_CENTER_TITLE,
 children: [
@@ -206,12 +206,12 @@ children: [
 function Y() {
   let {
 analyticsLocations: e
-  } = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, v.Z)(), n = (0, L.M8)(), r = (0, C.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), g = (0, P.M)(), M = (0, c.e7)([m.Z], () => m.Z.theme), {
+  } = (0, I.ZP)(T.Z.FAMILY_CENTER), t = (0, v.Z)(), n = (0, L.M8)(), r = (0, g.wE)(d.z.FAMILY_CENTER_NEW_BADGE), l = (0, c.e7)([b.Z], () => b.Z.getIsInitialized()), p = (0, P.M)(), M = (0, c.e7)([N.Z], () => N.Z.theme), {
 selectedTab: Z,
 handleTabChange: D
-  } = (0, O.Z)(), B = (0, h.Dt)(), w = f.default.getCurrentUser(), V = null != t, K = l && null != w && !V;
+  } = (0, O.Z)(), B = (0, C.Dt)(), w = h.default.getCurrentUser(), V = null != t, K = l && null != w && !V;
   if (a.useEffect(() => {
-  u.Y(U.Z5c.FAMILY_CENTER), (0, A.e)('family-center'), !b.Z.isLoading() && b.Z.canRefetch() && x.ZP.initialPageLoad(), !r && (0, C.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+  u.Y(U.Z5c.FAMILY_CENTER), (0, m.e)('family-center'), !b.Z.isLoading() && b.Z.canRefetch() && x.ZP.initialPageLoad(), !r && (0, g.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
     dismissAction: y.L.AUTO,
     forceTrack: !0
   });
@@ -219,18 +219,18 @@ handleTabChange: D
   l && V && (S.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
     is_considered_adult: t,
     num_of_accepted_links: n,
-    selected_teen_id: g,
+    selected_teen_id: p,
     initial_page: j.QH[Z],
     source: j._6[j.Mu.SIDENAV]
-  }), p.Z.increment({
+  }), A.Z.increment({
     name: o.V.FAMILY_CENTER_VIEW
   }));
 }, [
   l,
   V
 ]), a.useEffect(() => {
-  let e = N.Ex.getSetting();
-  l && t && void 0 === e && N.Ex.updateSetting(!0);
+  let e = f.Ex.getSetting();
+  l && t && void 0 === e && f.Ex.updateSetting(!0);
 }, [
   l,
   t

@@ -12,8 +12,8 @@ var i = n(735250),
   c = n(692547),
   u = n(481060),
   d = n(492162),
-  h = n(451478),
-  p = n(409216),
+  h = n(237583),
+  p = n(451478),
   _ = n(934415),
   f = n(968847),
   m = n(689938),
@@ -28,7 +28,7 @@ function I(e) {
   let {
 guildChannels: n,
 jumpToVoiceChannels: r
-  } = e, s = n.getCategoryFromSection(n.voiceChannelsSectionNumber), o = (0, d.Z)(n.id), h = l.useCallback(e => {
+  } = e, s = n.getCategoryFromSection(n.voiceChannelsSectionNumber), o = (0, d.Z)(n.id), p = l.useCallback(e => {
 e.preventDefault(), e.stopPropagation(), r();
   }, [r]), f = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [], C = (0, _.c4)({
 channels: f,
@@ -38,7 +38,7 @@ voiceStates: o
   });
   return (0, i.jsxs)(u.Clickable, {
 className: a()(g.bar),
-onClick: h,
+onClick: p,
 children: [
   (0, i.jsx)(u.VoiceNormalIcon, {
     size: 'custom',
@@ -55,7 +55,7 @@ children: [
       count: C.length
     })
   }),
-  (0, i.jsx)(p.Z, {
+  (0, i.jsx)(h.Z, {
     guildId: n.id,
     className: g.voiceChannelsUsers,
     users: C.slice(0, 4),
@@ -75,13 +75,13 @@ guildChannelsVersion: r,
 jumpToVoiceChannels: c,
 jumpToChannel: d
   } = e, {
-bottomBar: p,
+bottomBar: h,
 topBar: _
-  } = (0, o.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)), E = (0, o.e7)([h.Z], () => h.Z.isFocused()), {
+  } = (0, o.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)), E = (0, o.e7)([p.Z], () => p.Z.isFocused()), {
 mode: N,
 mentionCount: x,
 targetChannelId: S
-  } = 'bottom' === t ? p : _, v = N === f.x.HIDDEN, Z = (0, u.useSpring)({
+  } = 'bottom' === t ? h : _, v = N === f.x.HIDDEN, Z = (0, u.useSpring)({
 to: {
   transform: v ? 'bottom' === t ? 'translateY(180%)' : 'translateY(-180%)' : 'translateY(0%)'
 },

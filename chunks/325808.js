@@ -12,9 +12,9 @@ var a = s(120356),
   l = s(846027),
   c = s(230711),
   d = s(825209),
-  _ = s(131951),
-  E = s(285952),
-  u = s(153124),
+  _ = s(600164),
+  E = s(313201),
+  u = s(131951),
   T = s(358085),
   I = s(962100),
   S = s(981631),
@@ -22,7 +22,7 @@ var a = s(120356),
   C = s(790158),
   m = s(549856);
 let A = !T.isPlatformEmbedded,
-  g = (0, u.hQ)();
+  g = (0, E.hQ)();
 
 function h(e) {
   let {
@@ -53,8 +53,8 @@ function p(e) {
 } = e,
 {
   shortcut: a,
-  delay: u
-} = (0, r.cj)([_.Z], () => _.Z.getModeOptions());
+  delay: E
+} = (0, r.cj)([u.Z], () => u.Z.getModeOptions());
   return t = T.isPlatformEmbedded || s !== S.pM4.PUSH_TO_TALK ? (0, n.jsx)(o.FormText, {
 type: o.FormText.Types.DESCRIPTION,
 className: i()(C.pttToolsMessage, m.marginBottom8),
@@ -70,9 +70,9 @@ children: N.Z.Messages.PTT_LIMITED_WARNING.format({
   }), (0, n.jsxs)('div', {
 className: C.pttTools,
 children: [
-  (0, n.jsxs)(E.Z, {
+  (0, n.jsxs)(_.Z, {
     children: [
-      (0, n.jsx)(E.Z.Child, {
+      (0, n.jsx)(_.Z.Child, {
         basis: '50%',
         children: (0, n.jsx)(o.FormItem, {
           title: N.Z.Messages.FORM_LABEL_SHORTCUT,
@@ -84,7 +84,7 @@ children: [
           })
         })
       }),
-      (0, n.jsx)(E.Z.Child, {
+      (0, n.jsx)(_.Z.Child, {
         basis: '50%',
         children: (0, n.jsxs)(o.FormItem, {
           children: [
@@ -95,7 +95,7 @@ children: [
               children: N.Z.Messages.INPUT_MODE_PTT_RELEASE_DELAY
             }),
             (0, n.jsx)(o.Slider, {
-              initialValue: u,
+              initialValue: E,
               onValueChange: e => l.Z.setMode(s, {
                 delay: e
               }),
@@ -114,7 +114,7 @@ children: [
 }
 
 function R() {
-  let e = (0, r.e7)([_.Z], () => _.Z.getMode()),
+  let e = (0, r.e7)([u.Z], () => u.Z.getMode()),
 t = [{
     value: S.pM4.VOICE_ACTIVITY,
     name: N.Z.Messages.INPUT_MODE_VAD

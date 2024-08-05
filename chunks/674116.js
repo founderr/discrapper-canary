@@ -11,10 +11,10 @@ var n = s(735250),
   l = s(481060),
   c = s(846027),
   d = s(230711),
-  _ = s(921801),
-  E = s(131951),
-  u = s(663389),
-  T = s(153124),
+  _ = s(313201),
+  E = s(921801),
+  u = s(131951),
+  T = s(663389),
   I = s(63063),
   S = s(894939),
   N = s(321499),
@@ -33,7 +33,7 @@ var n = s(735250),
   P = s(65154),
   L = s(689938),
   b = s(549856);
-let Z = (0, T.hQ)(),
+let Z = (0, _.hQ)(),
   v = ''.concat(I.Z.getArticleURL(D.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 
 function j(e, t, s) {
@@ -56,24 +56,24 @@ inputMode: e,
 qosEnabled: t,
 attenuation: s,
 attenuateWhileSpeakingSelf: i,
-attenuateWhileSpeakingOthers: T,
+attenuateWhileSpeakingOthers: _,
 audioSubsystem: I,
 silenceWarning: D,
 legacyAudioSubsystemSupported: B,
 experimentalAudioSubsystemSupported: U
-  } = (0, o.cj)([E.Z], () => ({
-inputMode: E.Z.getMode(),
-qosEnabled: E.Z.getQoS(),
-attenuation: E.Z.getAttenuation(),
-attenuateWhileSpeakingSelf: E.Z.getAttenuateWhileSpeakingSelf(),
-attenuateWhileSpeakingOthers: E.Z.getAttenuateWhileSpeakingOthers(),
-audioSubsystem: E.Z.getAudioSubsystem(),
-silenceWarning: E.Z.getEnableSilenceWarning(),
-legacyAudioSubsystemSupported: E.Z.supports(P.AN.LEGACY_AUDIO_SUBSYSTEM),
-experimentalAudioSubsystemSupported: E.Z.supports(P.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM),
-qosSupported: E.Z.supports(P.AN.QOS),
-attenuationSupported: E.Z.supports(P.AN.ATTENUATION)
-  })), G = (0, o.e7)([u.Z], () => u.Z.getSubsection()), F = a.createRef();
+  } = (0, o.cj)([u.Z], () => ({
+inputMode: u.Z.getMode(),
+qosEnabled: u.Z.getQoS(),
+attenuation: u.Z.getAttenuation(),
+attenuateWhileSpeakingSelf: u.Z.getAttenuateWhileSpeakingSelf(),
+attenuateWhileSpeakingOthers: u.Z.getAttenuateWhileSpeakingOthers(),
+audioSubsystem: u.Z.getAudioSubsystem(),
+silenceWarning: u.Z.getEnableSilenceWarning(),
+legacyAudioSubsystemSupported: u.Z.supports(P.AN.LEGACY_AUDIO_SUBSYSTEM),
+experimentalAudioSubsystemSupported: u.Z.supports(P.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM),
+qosSupported: u.Z.supports(P.AN.QOS),
+attenuationSupported: u.Z.supports(P.AN.ATTENUATION)
+  })), G = (0, o.e7)([T.Z], () => T.Z.getSubsection()), F = a.createRef();
   return a.useEffect(() => {
 if (G === M.GA) {
   var e;
@@ -86,15 +86,15 @@ G
 tag: l.FormTitleTags.H1,
 title: L.Z.Messages.VOICE_SETTINGS,
 children: [
-  (0, n.jsx)(_.F, {
+  (0, n.jsx)(E.F, {
     setting: f.s6.VOICE_AND_VIDEO_DEVICES,
     children: (0, n.jsx)(m.Z, {})
   }),
-  (0, n.jsx)(_.F, {
+  (0, n.jsx)(E.F, {
     setting: f.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
     children: (0, n.jsx)(x.Z, {})
   }),
-  (0, n.jsxs)(_.F, {
+  (0, n.jsxs)(E.F, {
     setting: f.s6.VOICE_AND_VIDEO_MIC_TEST,
     children: [
       (0, n.jsx)(g.Z, {}),
@@ -110,11 +110,11 @@ children: [
       })
     ]
   }),
-  (0, n.jsx)(_.F, {
+  (0, n.jsx)(E.F, {
     setting: f.s6.VOICE_AND_VIDEO_INPUT_MODE,
     children: (0, n.jsx)(A.Z, {})
   }),
-  (0, n.jsxs)(_.F, {
+  (0, n.jsxs)(E.F, {
     setting: f.s6.VOICE_AND_VIDEO_SENSITIVITY,
     children: [
       e === P.pM.VOICE_ACTIVITY && (0, n.jsx)(R.Z, {}),
@@ -123,7 +123,7 @@ children: [
       })
     ]
   }),
-  (0, n.jsx)(_.F, {
+  (0, n.jsx)(E.F, {
     setting: f.s6.VOICE_AND_VIDEO_SOUNDBOARD,
     children: (0, n.jsx)('div', {
       style: {
@@ -132,15 +132,15 @@ children: [
       ref: F
     })
   }),
-  (0, n.jsx)(_.F, {
+  (0, n.jsx)(E.F, {
     setting: f.s6.VOICE_AND_VIDEO_SOUNDS,
     children: (0, n.jsx)(S.Z, {})
   }),
-  (0, n.jsx)(_.F, {
+  (0, n.jsx)(E.F, {
     setting: f.s6.VOICE_AND_VIDEO_VIDEO,
     children: (0, n.jsx)(O.Z, {})
   }),
-  (0, n.jsx)(_.F, {
+  (0, n.jsx)(E.F, {
     setting: f.s6.VOICE_AND_VIDEO_ADVANCED,
     children: (0, n.jsxs)(l.HeadingLevel, {
       component: (0, n.jsx)(l.FormTitle, {
@@ -150,11 +150,11 @@ children: [
       }),
       children: [
         (0, n.jsx)(N.Z, {}),
-        (0, n.jsx)(_.F, {
+        (0, n.jsx)(E.F, {
           setting: f.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
           children: (0, n.jsx)(p.Z, {})
         }),
-        (0, n.jsx)(_.F, {
+        (0, n.jsx)(E.F, {
           setting: f.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
           children: (0, n.jsx)(l.FormSection, {
             className: b.marginBottom20,
@@ -167,7 +167,7 @@ children: [
             })
           })
         }),
-        (0, n.jsx)(_.F, {
+        (0, n.jsx)(E.F, {
           setting: f.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
           children: (0, n.jsxs)(l.FormSection, {
             className: b.marginBottom20,
@@ -181,7 +181,7 @@ children: [
               (0, n.jsx)(l.Slider, {
                 initialValue: s,
                 onValueChange: e => {
-                  c.Z.setAttenuation(e, i, T);
+                  c.Z.setAttenuation(e, i, _);
                 },
                 'aria-labelledby': Z
               }),
@@ -195,18 +195,18 @@ children: [
               }),
               (0, n.jsx)(l.FormSwitch, {
                 value: i,
-                onChange: e => c.Z.setAttenuation(s, e, T),
+                onChange: e => c.Z.setAttenuation(s, e, _),
                 children: L.Z.Messages.ATTENUATE_WHILE_SPEAKING_SELF
               }),
               (0, n.jsx)(l.FormSwitch, {
-                value: T,
+                value: _,
                 onChange: e => c.Z.setAttenuation(s, i, e),
                 children: L.Z.Messages.ATTENUATE_WHILE_SPEAKING_OTHERS
               })
             ]
           })
         }),
-        (0, n.jsx)(_.F, {
+        (0, n.jsx)(E.F, {
           setting: f.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
           children: (0, n.jsxs)(l.FormSection, {
             className: b.marginBottom20,
@@ -238,7 +238,7 @@ children: [
             ]
           })
         }),
-        (0, n.jsxs)(_.F, {
+        (0, n.jsxs)(E.F, {
           setting: f.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
           children: [
             (0, n.jsx)(h.Z, {}),
@@ -253,11 +253,11 @@ children: [
             })
           ]
         }),
-        (0, n.jsx)(_.F, {
+        (0, n.jsx)(E.F, {
           setting: f.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
           children: (0, n.jsx)(C.Z, {})
         }),
-        (0, n.jsx)(_.F, {
+        (0, n.jsx)(E.F, {
           setting: f.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
           children: (0, n.jsx)(l.FormItem, {
             children: (0, n.jsx)(l.Button, {

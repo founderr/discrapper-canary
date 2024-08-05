@@ -17,8 +17,8 @@ var s = n(735250),
   E = n(607070),
   T = n(605436),
   m = n(134433),
-  N = n(496675),
-  S = n(442313),
+  N = n(325476),
+  S = n(496675),
   h = n(671533),
   g = n(946724),
   C = n(970129),
@@ -140,7 +140,7 @@ guild: t,
 currentRoleId: n,
 setCurrentRoleId: i,
 setSelectedSection: l
-  } = e, o = (0, d.e7)([g.Z], () => g.Z.roles), c = (0, d.e7)([N.Z], () => N.Z.getHighestRole(t)), _ = (0, d.e7)([E.Z], () => E.Z.roleStyle), [T, m] = a.useState(o.length), {
+  } = e, o = (0, d.e7)([g.Z], () => g.Z.roles), c = (0, d.e7)([S.Z], () => S.Z.getHighestRole(t)), _ = (0, d.e7)([E.Z], () => E.Z.roleStyle), [T, m] = a.useState(o.length), {
 scrolledToTop: C,
 handleScroll: f
   } = (0, p.V)(), {
@@ -168,7 +168,7 @@ n
   let b = () => {
 I.Z.createRole(t.id), l(R.ZI.DISPLAY);
   };
-  return (0, s.jsx)(S.ZP.Sidebar, {
+  return (0, s.jsx)(N.ZP.Sidebar, {
 className: O.sidebar,
 children: (0, s.jsxs)('div', {
   className: O.container,

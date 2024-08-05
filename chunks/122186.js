@@ -9,8 +9,8 @@ var s = t(120356),
   a = t.n(s),
   r = t(848246),
   i = t(481060),
-  o = t(197115),
-  c = t(672752),
+  o = t(436774),
+  c = t(197115),
   u = t(74538),
   d = t(981631),
   m = t(474936),
@@ -38,7 +38,7 @@ children: [
     children: [
       (0, l.jsx)(i.NitroWheelIcon, {
         size: 'md',
-        color: c.JX.PREMIUM_TIER_2
+        color: o.JX.PREMIUM_TIER_2
       }),
       (0, l.jsx)(i.Text, {
         variant: 'text-sm/medium',
@@ -65,7 +65,7 @@ children: [
   }),
   (0, l.jsx)('div', {
     className: _.enhancedCTAs,
-    children: (0, l.jsx)(o.Z, {
+    children: (0, l.jsx)(c.Z, {
       className: a()(_.enhancedCTA, _.ctaGradientBackground),
       iconClassName: _.premiumIcon,
       subscriptionTier: m.Si.TIER_2,

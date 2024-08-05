@@ -9,13 +9,13 @@ var i = n(735250),
   d = n(480222),
   u = n(207796),
   _ = n(689938);
-let E = {
+let h = {
 mass: 1,
 tension: 280,
 friction: 20,
 clamp: !0
   },
-  h = {
+  E = {
 [u.v0.PLAYSTYLE]: function() {
   let [e, t] = a.useState(u.GN.getState().selectedPlaystyle), n = a.useCallback(() => {
     null != e && u.GN.getState().setSelectedPlaystyle(e);
@@ -67,7 +67,7 @@ item: t,
 state: n,
 cleanUp: l
   } = e, o = a.useMemo(() => {
-let e = h[t];
+let e = E[t];
 return null == e ? null : (0, i.jsx)(e, {});
   }, [t]), c = (0, r.useSpring)({
 from: {
@@ -76,7 +76,7 @@ from: {
 to: {
   opacity: n === r.TransitionStates.YEETED ? 0 : 1
 },
-config: E,
+config: h,
 onRest: () => {
   n === r.TransitionStates.YEETED && l();
 }
@@ -101,7 +101,7 @@ cleanUp: a
 t.Z = a.memo(function(e) {
   let {
 mode: t
-  } = e, n = a.useMemo(() => null != h[t] ? [t] : [], [t]);
+  } = e, n = a.useMemo(() => null != E[t] ? [t] : [], [t]);
   return (0, i.jsx)(r.TransitionGroup, {
 items: n,
 renderItem: g,

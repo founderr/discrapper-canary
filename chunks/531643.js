@@ -15,8 +15,8 @@ var i = n(120356),
   a = n.n(i),
   s = n(952265),
   o = n(466377),
-  l = n(355314),
-  u = n(153124),
+  l = n(313201),
+  u = n(355314),
   c = n(310752),
   d = n(731994),
   _ = n(950419);
@@ -30,8 +30,8 @@ transitionState: s,
 icons: E,
 fileSize: f,
 onClose: h
-  } = e, p = (0, u.Dt)(), m = null != E ? E : d.J6;
-  return i ? (0, r.jsx)(l.Z, {
+  } = e, p = (0, l.Dt)(), m = null != E ? E : d.J6;
+  return i ? (0, r.jsx)(u.Z, {
 transitionState: s,
 onClose: h,
 fileSize: f

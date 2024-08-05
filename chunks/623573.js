@@ -19,13 +19,13 @@ var n, a, r = s(735250),
   m = s(355467),
   S = s(873115),
   C = s(976255),
-  g = s(598),
-  _ = s(409813),
-  A = s(3409),
-  f = s(351402),
-  P = s(975060),
-  E = s(505649),
-  N = s(285952),
+  g = s(600164),
+  _ = s(598),
+  A = s(409813),
+  f = s(3409),
+  P = s(351402),
+  E = s(975060),
+  N = s(505649),
   B = s(358085),
   M = s(622999),
   T = s(462566),
@@ -176,8 +176,8 @@ return null == e || null != U(e) ? null : (0, r.jsx)(c.FormErrorBlock, {
   renderFooter() {
 let e = this.stepData;
 return null == e.renderNextButton ? null : (0, r.jsx)(c.ModalFooter, {
-  children: (0, r.jsxs)(N.Z, {
-    justify: N.Z.Justify.BETWEEN,
+  children: (0, r.jsxs)(g.Z, {
+    justify: g.Z.Justify.BETWEEN,
     children: [
       (0, r.jsx)(c.Button, {
         onClick: this.handleBackClick,
@@ -231,14 +231,14 @@ return (0, r.jsx)(l.Elements, {
       onSubmit: this.preventDefault,
       children: [
         (0, r.jsxs)(c.ModalHeader, {
-          direction: N.Z.Direction.VERTICAL,
-          align: N.Z.Align.STRETCH,
+          direction: g.Z.Direction.VERTICAL,
+          align: g.Z.Align.STRETCH,
           separator: !1,
           children: [
-            (0, r.jsxs)(N.Z, {
+            (0, r.jsxs)(g.Z, {
               className: j.modalTitle,
-              justify: N.Z.Justify.BETWEEN,
-              align: N.Z.Align.CENTER,
+              justify: g.Z.Justify.BETWEEN,
+              align: g.Z.Align.CENTER,
               children: [
                 (0, r.jsx)(c.FormTitle, {
                   tag: c.FormTitleTags.H4,
@@ -643,21 +643,21 @@ super(...e), D(this, 'state', {
   }
 }
 let q = u.ZP.connectStores([
+  E.Z,
   P.Z,
-  f.Z,
-  E.Z
+  N.Z
 ], () => ({
-  braintreeEmail: P.Z.braintreeEmail,
-  braintreeNonce: P.Z.braintreeNonce,
-  stripePaymentMethod: P.Z.stripePaymentMethod,
-  creditCardInfo: P.Z.getCreditCardInfo(),
-  isCreditCardInfoValid: P.Z.isCardInfoValid,
-  billingAddressInfo: P.Z.getBillingAddressInfo(),
-  isBillingAddressInfoValid: P.Z.isBillingAddressInfoValid,
-  error: P.Z.error,
-  popupCallbackCalled: P.Z.popupCallbackCalled,
-  submitting: f.Z.isBusy,
-  isAuthenticating: E.Z.isAwaitingAuthentication
+  braintreeEmail: E.Z.braintreeEmail,
+  braintreeNonce: E.Z.braintreeNonce,
+  stripePaymentMethod: E.Z.stripePaymentMethod,
+  creditCardInfo: E.Z.getCreditCardInfo(),
+  isCreditCardInfoValid: E.Z.isCardInfoValid,
+  billingAddressInfo: E.Z.getBillingAddressInfo(),
+  isBillingAddressInfoValid: E.Z.isBillingAddressInfoValid,
+  error: E.Z.error,
+  popupCallbackCalled: E.Z.popupCallbackCalled,
+  submitting: P.Z.isBusy,
+  isAuthenticating: N.Z.isAwaitingAuthentication
 }))(z);
 
 function W(e) {
@@ -666,8 +666,8 @@ transitionState: t,
 analyticsLocation: s,
 onClose: n,
 onAddPaymentSource: a,
-initialStep: i = _.h8.PAYMENT_TYPE
-  } = e, l = (0, A.fL)(), o = (0, A.vP)({
+initialStep: i = A.h8.PAYMENT_TYPE
+  } = e, l = (0, f.fL)(), o = (0, f.vP)({
 paymentModalArgs: l,
 initialStep: i,
 prependSteps: [],
@@ -710,7 +710,7 @@ children: (0, r.jsx)('form', {
 }
 
 function V(e) {
-  return (0, r.jsx)(g.PaymentContextProvider, {
+  return (0, r.jsx)(_.PaymentContextProvider, {
 activeSubscription: null,
 stepConfigs: [],
 skuIDs: [],

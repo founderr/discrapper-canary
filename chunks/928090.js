@@ -10,9 +10,9 @@ var r = a(735250),
   o = a(37234),
   l = a(700582),
   c = a(213609),
-  d = a(434404),
-  _ = a(706454),
-  R = a(285952),
+  d = a(600164),
+  _ = a(434404),
+  R = a(706454),
   E = a(768581),
   u = a(5192),
   m = a(51144),
@@ -21,14 +21,14 @@ var r = a(735250),
   f = a(689938),
   I = a(725393);
 let S = function() {
-  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.default.locale;
+  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : R.default.locale;
   return 'https://'.concat(N.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000168511');
 };
 
 function x(e) {
   let {
 guild: s,
-toUser: _,
+toUser: R,
 fromUser: x,
 onClose: A,
 transitionState: h
@@ -36,15 +36,15 @@ transitionState: h
 ticketUrl: S()
   }) : null, g = s.hasFeature(N.oNc.CREATOR_MONETIZABLE) || s.hasFeature(N.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
   async function C(e) {
-await d.Z.transferOwnership(s.id, _.id, T.X.EMAIL, e);
+await _.Z.transferOwnership(s.id, R.id, T.X.EMAIL, e);
   }
   async function P() {
-await d.Z.sendTransferOwnershipPincode(s.id, !0);
+await _.Z.sendTransferOwnershipPincode(s.id, !0);
   }
   async function Z(e) {
   e.preventDefault(), A();
   try {
-    x.mfaEnabled || null == x.email ? (await d.Z.transferOwnership(s.id, _.id, x.mfaEnabled ? T.X.MFA : null), (0, o.xf)()) : (await d.Z.sendTransferOwnershipPincode(s.id), (0, i.openModalLazy)(async () => {
+    x.mfaEnabled || null == x.email ? (await _.Z.transferOwnership(s.id, R.id, x.mfaEnabled ? T.X.MFA : null), (0, o.xf)()) : (await _.Z.sendTransferOwnershipPincode(s.id), (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await a.e('94566').then(a.bind(a, 965072));
@@ -78,8 +78,8 @@ await d.Z.sendTransferOwnershipPincode(s.id, !0);
   type: n.ImpressionTypes.MODAL,
   name: n.ImpressionNames.GUILD_TRANSFER_OWNERSHIP
 });
-  let L = u.ZP.getNickname(s.id, void 0, _),
-j = _.hasAvatarForGuild(s.id),
+  let L = u.ZP.getNickname(s.id, void 0, R),
+j = R.hasAvatarForGuild(s.id),
 v = () => (0, r.jsxs)('span', {
   className: I.guildTransfer,
   children: [
@@ -120,7 +120,7 @@ children: (0, r.jsxs)('form', {
           className: I.subHeader,
           children: null != L || j ? f.Z.Messages.TRANSFER_OWNERSHIP_TO_USER_WITH_AKA_V2.format({
             GuildHook: v,
-            user: (0, m.W5)(_),
+            user: (0, m.W5)(R),
             AKAHook: function() {
               return (0, r.jsxs)('span', {
                 className: I.akaTransfer,
@@ -131,7 +131,7 @@ children: (0, r.jsxs)('form', {
                     className: I.akaBadge
                   }),
                   j ? (0, r.jsx)(i.Avatar, {
-                    src: _.getAvatarURL(s.id, 16, !0),
+                    src: R.getAvatarURL(s.id, 16, !0),
                     size: i.AvatarSizes.SIZE_16,
                     className: I.miniAvatar,
                     'aria-hidden': !0
@@ -139,19 +139,19 @@ children: (0, r.jsxs)('form', {
                   (0, r.jsx)(i.Text, {
                     className: I.nickname,
                     variant: 'text-sm/normal',
-                    children: null != L ? L : m.ZP.getName(_)
+                    children: null != L ? L : m.ZP.getName(R)
                   })
                 ]
               });
             }
           }) : f.Z.Messages.TRANSFER_OWNERSHIP_TO_USER_V2.format({
             GuildHook: v,
-            user: (0, m.W5)(_)
+            user: (0, m.W5)(R)
           })
         }),
-        (0, r.jsxs)(R.Z, {
+        (0, r.jsxs)(d.Z, {
           className: I.fromToWrapper,
-          justify: R.Z.Justify.CENTER,
+          justify: d.Z.Justify.CENTER,
           children: [
             (0, r.jsx)('div', {
               className: I.from,
@@ -163,7 +163,7 @@ children: (0, r.jsxs)('form', {
             (0, r.jsx)('div', {
               className: I.to,
               children: (0, r.jsx)(l.Z, {
-                user: _,
+                user: R,
                 size: i.AvatarSizes.SIZE_80
               })
             })
@@ -187,7 +187,7 @@ children: (0, r.jsxs)('form', {
           children: (0, r.jsx)(i.FormText, {
             type: i.FormText.Types.DESCRIPTION,
             children: f.Z.Messages.TRANSFER_OWNERSHIP_ACKNOWLEDGE.format({
-              username: (0, m.W5)(_)
+              username: (0, m.W5)(R)
             })
           })
         }),

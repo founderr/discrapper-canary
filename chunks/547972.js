@@ -1,32 +1,32 @@
-t.d(a, {
+n.d(t, {
   Z: function() {
-return d;
+return l;
   }
 });
-var s = t(230711),
-  n = t(202527),
-  o = t(332325),
-  r = t(981631);
+var s = n(230711),
+  a = n(202527),
+  r = n(332325),
+  i = n(981631);
 
-function d(e) {
-  let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+function l(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
 {
-  shouldMergeGameSettings: t
-} = n.b.getCurrentConfig({
+  shouldMergeGameSettings: n
+} = a.b.getCurrentConfig({
   location: 'navigator'
 }, {
   autoTrackExposure: !1
 });
-  t ? s.Z.open(r.oAB.GAMES, e, a) : s.Z.open(function(e) {
+  n ? s.Z.open(i.oAB.GAMES, e, t) : s.Z.open(function(e) {
 switch (e) {
-  case o.Z.MY_GAMES:
-    return r.oAB.REGISTERED_GAMES;
-  case o.Z.CLIPS:
-    return r.oAB.CLIPS;
-  case o.Z.OVERLAY:
-    return r.oAB.OVERLAY;
-  case o.Z.ACTIVITY_PRIVACY:
-    return r.oAB.ACTIVITY_PRIVACY;
+  case r.Z.MY_GAMES:
+    return i.oAB.REGISTERED_GAMES;
+  case r.Z.CLIPS:
+    return i.oAB.CLIPS;
+  case r.Z.OVERLAY:
+    return i.oAB.OVERLAY;
+  case r.Z.ACTIVITY_PRIVACY:
+    return i.oAB.ACTIVITY_PRIVACY;
 }
-  }(e), null, a);
+  }(e), null, t);
 }

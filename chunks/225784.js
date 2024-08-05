@@ -6,10 +6,10 @@ var i, a = n(735250),
   o = n(622535),
   c = n(481060),
   d = n(239091),
-  u = n(372769),
-  _ = n(134432),
+  u = n(686546),
+  _ = n(372769),
+  h = n(134432),
   E = n(695346),
-  h = n(806519),
   I = n(768581),
   m = n(900849),
   g = n(556017),
@@ -63,7 +63,7 @@ let {
 } = t, b = null === (e = t.features) || void 0 === e ? void 0 : e.has(f.oNc.HUB), P = I.ZP.getGuildDiscoverySplashURL({
   id: t.id,
   splash: t.discoverySplash,
-  size: 300 * (0, _.x_)()
+  size: 300 * (0, h.x_)()
 }), M = null != P ? P : this.getDefaultSplashURL(i, b), D = I.ZP.getGuildIconURL({
   id: t.id,
   icon: t.icon,
@@ -139,14 +139,14 @@ return (0, a.jsx)(o.$, {
                 }) : null,
                 (0, a.jsx)('div', {
                   className: N.guildIcon,
-                  children: (0, a.jsx)(h.ZP, {
-                    mask: h.ZP.Masks.SQUIRCLE,
+                  children: (0, a.jsx)(u.ZP, {
+                    mask: u.ZP.Masks.SQUIRCLE,
                     width: 48,
                     height: 48,
                     children: (0, a.jsx)('div', {
                       className: N.iconMask,
-                      children: (0, a.jsx)(h.ZP, {
-                        mask: h.ZP.Masks.SQUIRCLE,
+                      children: (0, a.jsx)(u.ZP, {
+                        mask: u.ZP.Masks.SQUIRCLE,
                         width: 40,
                         height: 40,
                         children: (0, a.jsx)('img', {
@@ -166,7 +166,7 @@ return (0, a.jsx)(o.$, {
                 (0, a.jsxs)('div', {
                   className: N.title,
                   children: [
-                    (0, a.jsx)(u.Z, {
+                    (0, a.jsx)(_.Z, {
                       className: N.guildBadge,
                       guild: t,
                       tooltipColor: c.Tooltip.Colors.PRIMARY

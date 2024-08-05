@@ -19,12 +19,12 @@ var n = s(735250),
   S = s(612226),
   N = s(714338),
   C = s(924557),
-  m = s(74299),
-  A = s(777036),
-  g = s(131951),
-  h = s(556296),
-  O = s(808506),
-  p = s(285952),
+  m = s(600164),
+  A = s(74299),
+  g = s(777036),
+  h = s(131951),
+  O = s(556296),
+  p = s(808506),
   R = s(63063),
   x = s(358085),
   M = s(13140),
@@ -95,8 +95,8 @@ let {
   managed: e,
   enabled: t
 } = this.props.keybind;
-return (0, n.jsxs)(p.Z, {
-  direction: p.Z.Direction.VERTICAL,
+return (0, n.jsxs)(m.Z, {
+  direction: m.Z.Direction.VERTICAL,
   className: r()(Z.keybindGroup, v.card),
   children: [
     !e && (0, n.jsx)(u.Z, {
@@ -105,10 +105,10 @@ return (0, n.jsxs)(p.Z, {
       onClick: this.handleDeleteKeybind,
       look: u.Z.Looks.FILLED
     }),
-    (0, n.jsxs)(p.Z, {
+    (0, n.jsxs)(m.Z, {
       className: j.marginBottom8,
       children: [
-        (0, n.jsx)(p.Z.Child, {
+        (0, n.jsx)(m.Z.Child, {
           basis: '45%',
           children: (0, n.jsx)(_.FormItem, {
             title: b.Z.Messages.USER_SETTINGS_KEYBINDS_ACTION,
@@ -121,7 +121,7 @@ return (0, n.jsxs)(p.Z, {
             })
           })
         }),
-        (0, n.jsx)(p.Z.Child, {
+        (0, n.jsx)(m.Z.Child, {
           basis: '45%',
           children: (0, n.jsx)(_.FormItem, {
             title: b.Z.Messages.USER_SETTINGS_KEYBINDS_KEYBIND,
@@ -132,7 +132,7 @@ return (0, n.jsxs)(p.Z, {
             })
           })
         }),
-        (0, n.jsx)(p.Z.Child, {
+        (0, n.jsx)(m.Z.Child, {
           grow: 0,
           shrink: 0,
           children: (0, n.jsx)(_.FormItem, {
@@ -151,7 +151,7 @@ return (0, n.jsxs)(p.Z, {
         })
       ]
     }),
-    (0, n.jsx)(p.Z.Child, {
+    (0, n.jsx)(m.Z.Child, {
       children: this.renderMessage()
     }),
     this.renderExtraSettings()
@@ -324,18 +324,18 @@ return (0, n.jsxs)(n.Fragment, {
       title: b.Z.Messages.KEYBINDS,
       children: x.isPlatformEmbedded ? (0, n.jsxs)(n.Fragment, {
         children: [
-          (0, n.jsxs)(p.Z, {
-            justify: p.Z.Justify.BETWEEN,
+          (0, n.jsxs)(m.Z, {
+            justify: m.Z.Justify.BETWEEN,
             className: j.marginBottom20,
             children: [
-              (0, n.jsx)(p.Z.Child, {
+              (0, n.jsx)(m.Z.Child, {
                 grow: 0,
-                children: (0, n.jsx)(A.Z, {
-                  messageType: A.Q.WARNING,
+                children: (0, n.jsx)(g.Z, {
+                  messageType: g.Q.WARNING,
                   children: b.Z.Messages.ADD_KEYBIND_WARNING
                 })
               }),
-              (0, n.jsx)(p.Z.Child, {
+              (0, n.jsx)(m.Z.Child, {
                 wrap: !0,
                 grow: 0,
                 children: (0, n.jsx)(_.Button, {
@@ -354,8 +354,8 @@ return (0, n.jsxs)(n.Fragment, {
             ]
           })
         ]
-      }) : (0, n.jsx)(A.Z, {
-        messageType: A.Q.INFO,
+      }) : (0, n.jsx)(g.Z, {
+        messageType: g.Q.INFO,
         textVariant: 'text-lg/medium',
         className: Z.browserNotice,
         children: b.Z.Messages.KEYBIND_IN_BROSWER_NOTICE.format({
@@ -447,9 +447,9 @@ super(...e), B(this, 'handleAddKeybind', () => {
 }
 
 function Y() {
-  let e = (0, c.e7)([h.Z], () => h.Z.getState()),
-t = (0, c.e7)([g.Z], () => (0, m.Z)(g.Z)),
-s = (0, c.e7)([O.Z], () => O.Z.isSupported()),
+  let e = (0, c.e7)([O.Z], () => O.Z.getState()),
+t = (0, c.e7)([h.Z], () => (0, A.Z)(h.Z)),
+s = (0, c.e7)([p.Z], () => p.Z.isSupported()),
 a = (0, C.Go)();
   return (0, n.jsx)(V, {
 keybinds: e,

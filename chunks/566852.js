@@ -3,8 +3,8 @@ var n = s(735250),
   l = s(470079),
   o = s(481060),
   a = s(923928),
-  i = s(594190),
-  r = s(285952),
+  i = s(600164),
+  r = s(594190),
   d = s(626135),
   u = s(981631),
   h = s(689938),
@@ -22,7 +22,7 @@ class S extends l.Component {
   componentDidMount() {
 let {
   pid: e
-} = this.props, t = null != e ? i.ZP.getGameForPID(e) : null;
+} = this.props, t = null != e ? r.ZP.getGameForPID(e) : null;
 d.default.track(u.rMx.OPEN_MODAL, {
   type: 'Elevated Permissions Sound',
   application_id: null != t ? t.id : null,
@@ -36,7 +36,7 @@ return (0, n.jsxs)(o.ModalRoot, {
   'aria-label': h.Z.Messages.ELEVATED_PERMISSIONS_SOUND_TITLE,
   children: [
     (0, n.jsxs)(o.ModalHeader, {
-      justify: r.Z.Justify.BETWEEN,
+      justify: i.Z.Justify.BETWEEN,
       separator: !1,
       children: [
         (0, n.jsx)(o.Heading, {

@@ -12,11 +12,11 @@ var a = n(735250),
   d = n(129861),
   c = n(700582),
   u = n(410030),
-  m = n(566006),
-  f = n(222677),
-  b = n(592125),
-  v = n(594174),
-  _ = n(514342),
+  m = n(111028),
+  f = n(566006),
+  b = n(222677),
+  v = n(592125),
+  _ = n(594174),
   h = n(768581),
   x = n(176354),
   p = n(5192),
@@ -28,7 +28,7 @@ var a = n(735250),
   M = n(689938),
   E = n(484977),
   N = n(144452);
-let C = m.O.VOTE;
+let C = f.O.VOTE;
 
 function O() {
   let e = (0, u.ZP)();
@@ -101,12 +101,12 @@ children: t.answers.map(e => {
       numVotes: i,
       option: c
     }),
-    m = s === l;
+    f = s === l;
   return (0, a.jsxs)(o.TabBar.Item, {
     id: l,
     className: r()({
-      [E.voteDefault]: !m,
-      [E.voteSelected]: m
+      [E.voteDefault]: !f,
+      [E.voteSelected]: f
     }),
     'aria-label': u,
     selectedItem: s,
@@ -122,7 +122,7 @@ children: t.answers.map(e => {
         variant: 'text-sm/semibold',
         color: 'text-secondary',
         lineClamp: 1,
-        children: (0, a.jsx)(_.Z, {
+        children: (0, a.jsx)(m.Z, {
           position: 'left',
           'aria-hidden': !0,
           children: c
@@ -148,7 +148,7 @@ function I(e) {
   let {
 user: t,
 channel: n
-  } = e, s = (0, i.e7)([v.default], () => v.default.getUser(t.id), [t]), l = p.ZP.useName(n.guild_id, n.id, t);
+  } = e, s = (0, i.e7)([_.default], () => _.default.getUser(t.id), [t]), l = p.ZP.useName(n.guild_id, n.id, t);
   return (0, a.jsxs)('div', {
 className: E.voterDefault,
 onContextMenu: e => (0, j.Pv)(e, t, n),
@@ -196,10 +196,10 @@ hasMore: i
 channelId: l.id,
 messageId: t.id,
 reaction: n
-  }), d = s.useRef(null), c = s.useRef(null), [u, m] = s.useState(!1), b = s.useCallback(async () => {
+  }), d = s.useRef(null), c = s.useRef(null), [u, m] = s.useState(!1), f = s.useCallback(async () => {
 let e = c.current;
 m(!0);
-let a = await f.U0({
+let a = await b.U0({
   channelId: l.id,
   messageId: t.id,
   emoji: n.emoji,
@@ -214,7 +214,7 @@ t.id,
 n.emoji
   ]);
   s.useEffect(() => {
-b();
+f();
   }, []);
   let v = s.useCallback(() => {
   let {
@@ -223,12 +223,12 @@ b();
   if (null == e)
     return;
   let t = e.getScrollerState();
-  t.scrollTop + t.offsetHeight >= t.scrollHeight - 44 && i && !u && b();
+  t.scrollTop + t.offsetHeight >= t.scrollHeight - 44 && i && !u && f();
 }, [
   d,
   i,
   u,
-  b
+  f
 ]),
 _ = s.useCallback((e, t) => {
   if (1 === e)
@@ -291,13 +291,13 @@ message: n,
 initialAnswerId: l,
 onClose: r,
 transitionState: d
-  } = e, c = (0, i.e7)([b.Z], () => b.Z.getChannel(n.getChannelId())), [u, m] = s.useState(l), f = s.useMemo(() => {
+  } = e, c = (0, i.e7)([v.Z], () => v.Z.getChannel(n.getChannelId())), [u, m] = s.useState(l), f = s.useMemo(() => {
 if (null != n.reactions)
   return (0, T.ef)(n.reactions, u);
   }, [
 n.reactions,
 u
-  ]), v = s.useMemo(() => (0, g.cZ)(n.reactions), [n.reactions]), _ = s.useMemo(() => function(e) {
+  ]), b = s.useMemo(() => (0, g.cZ)(n.reactions), [n.reactions]), _ = s.useMemo(() => function(e) {
 let t = {};
 for (let s of e) {
   var n, a;
@@ -341,7 +341,7 @@ children: [
             variant: 'text-md/medium',
             color: 'text-normal',
             children: M.Z.Messages.POLL_VOTES_COUNT.format({
-              count: v.toLocaleString()
+              count: b.toLocaleString()
             })
           })
         ]

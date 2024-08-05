@@ -11,14 +11,14 @@ var t = s(735250),
   r = s(442837),
   u = s(780384),
   d = s(481060),
-  c = s(339085),
-  I = s(349709),
-  m = s(763610),
-  _ = s(197712),
-  E = s(210887),
-  f = s(430824),
-  g = s(594174),
-  L = s(285952),
+  c = s(600164),
+  I = s(339085),
+  m = s(349709),
+  _ = s(763610),
+  E = s(197712),
+  f = s(210887),
+  g = s(430824),
+  L = s(594174),
   T = s(626135),
   v = s(424218),
   D = s(63063),
@@ -115,21 +115,21 @@ async function b(e) {
   let l = await (0, x.fD)(e),
 s = new Image();
   s.src = l, await s.decode();
-  let t = (0, _.Ae)(s, 320, 320);
+  let t = (0, E.Ae)(s, 320, 320);
   return (0, x.Bo)(t, e.name, e.type);
 }
 
 function B(e) {
-  var l, s, i, _, S, Z, P, B;
+  var l, s, i, E, S, Z, P, B;
   let {
 transitionState: G,
 onClose: y,
 guildId: w,
 sticker: F
-  } = e, z = (0, r.e7)([E.Z], () => E.Z.theme), H = (0, r.e7)([c.Z], () => (null == F ? void 0 : F.tags) != null ? c.Z.getCustomEmojiById(F.tags) : null), V = null !== (s = null === (l = g.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) && void 0 !== s && s ? j.OC : j.Ht, [W, q] = n.useState(null), [Y, J] = n.useState(null !== (i = null == F ? void 0 : F.name) && void 0 !== i ? i : ''), [X, Q] = n.useState({
+  } = e, z = (0, r.e7)([f.Z], () => f.Z.theme), H = (0, r.e7)([I.Z], () => (null == F ? void 0 : F.tags) != null ? I.Z.getCustomEmojiById(F.tags) : null), V = null !== (s = null === (l = L.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) && void 0 !== s && s ? j.OC : j.Ht, [W, q] = n.useState(null), [Y, J] = n.useState(null !== (i = null == F ? void 0 : F.name) && void 0 !== i ? i : ''), [X, Q] = n.useState({
 file: null,
-filename: null !== (_ = (0, R._V)(F)) && void 0 !== _ ? _ : ''
-  }), [$, ee] = n.useState(null == H ? void 0 : H.id), [el, es] = n.useState(null !== (S = null == H ? void 0 : H.name) && void 0 !== S ? S : null == F ? void 0 : F.tags), [et, en] = n.useState(null !== (Z = null == F ? void 0 : F.description) && void 0 !== Z ? Z : ''), [ei, ea] = n.useState(!1), [eo, er] = n.useState(null), eu = (0, r.e7)([f.Z], () => f.Z.getGuild(w)), ed = (null == eu ? void 0 : eu.hasFeature(h.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(h.oNc.VERIFIED)), ec = null != F, eI = ec || (null == X ? void 0 : X.file) != null, em = 0 === et.length || et.length >= 2 && et.length <= 100, e_ = !ei && (null == eo ? void 0 : eo.isBlocking) !== !0 && Y.length >= 2 && (null != $ || null != el || (null == F ? void 0 : F.tags) != null && (null == F ? void 0 : F.tags) !== '') && eI && em, eE = async e => {
+filename: null !== (E = (0, R._V)(F)) && void 0 !== E ? E : ''
+  }), [$, ee] = n.useState(null == H ? void 0 : H.id), [el, es] = n.useState(null !== (S = null == H ? void 0 : H.name) && void 0 !== S ? S : null == F ? void 0 : F.tags), [et, en] = n.useState(null !== (Z = null == F ? void 0 : F.description) && void 0 !== Z ? Z : ''), [ei, ea] = n.useState(!1), [eo, er] = n.useState(null), eu = (0, r.e7)([g.Z], () => g.Z.getGuild(w)), ed = (null == eu ? void 0 : eu.hasFeature(h.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(h.oNc.VERIFIED)), ec = null != F, eI = ec || (null == X ? void 0 : X.file) != null, em = 0 === et.length || et.length >= 2 && et.length <= 100, e_ = !ei && (null == eo ? void 0 : eo.isBlocking) !== !0 && Y.length >= 2 && (null != $ || null != el || (null == F ? void 0 : F.tags) != null && (null == F ? void 0 : F.tags) !== '') && eI && em, eE = async e => {
 var l;
 if (null == e)
   return;
@@ -249,7 +249,7 @@ children: [
         className: U.modalContent,
         children: [
           (0, t.jsxs)(d.ModalHeader, {
-            direction: L.Z.Direction.VERTICAL,
+            direction: c.Z.Direction.VERTICAL,
             separator: !1,
             className: U.modalHeader,
             children: [
@@ -285,7 +285,7 @@ children: [
                 children: ec ? (0, t.jsx)(d.TextInput, {
                   disabled: !0,
                   value: null !== (P = null == X ? void 0 : X.filename) && void 0 !== P ? P : ''
-                }) : (0, t.jsx)(m.Z, {
+                }) : (0, t.jsx)(_.Z, {
                   buttonText: N.Z.Messages.GUILD_STICKER_UPLOAD_FILE_BUTTON,
                   filters: M,
                   filename: null !== (B = null == X ? void 0 : X.filename) && void 0 !== B ? B : '',
@@ -293,7 +293,7 @@ children: [
                   onFileSelect: eE
                 })
               }),
-              (0, t.jsx)(I.Z, {
+              (0, t.jsx)(m.Z, {
                 className: U.formItemRowChild,
                 guildId: w,
                 emojiId: $,

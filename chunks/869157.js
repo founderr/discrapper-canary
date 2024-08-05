@@ -21,8 +21,8 @@ var i = t(735250),
   h = t(314897),
   g = t(430824),
   p = t(594174),
-  C = t(626135),
-  f = t(5192),
+  f = t(626135),
+  C = t(5192),
   x = t(709054),
   O = t(360606),
   S = t(905753),
@@ -44,7 +44,7 @@ hasAccessToMutatePermissions: N
   } = e, T = (0, d.e7)([g.Z], () => g.Z.getGuild(s));
   l()(null != T, '');
   let h = (0, d.e7)([g.Z], () => g.Z.getRoles(s)),
-[C, R] = a.useState(new Set()),
+[f, R] = a.useState(new Set()),
 b = a.useMemo(() => {
   var e;
   let n = (0, _.bD)(s);
@@ -62,8 +62,8 @@ b = a.useMemo(() => {
           let a = p.default.getUser(e.id),
             s = p.default.getUser(n.id);
           if (null != a && null != s) {
-            let e = f.ZP.getName(t, void 0, a),
-              n = f.ZP.getName(t, void 0, s);
+            let e = C.ZP.getName(t, void 0, a),
+              n = C.ZP.getName(t, void 0, s);
             return null == e ? void 0 : e.localeCompare(n);
           }
           return x.default.compare(e.id, n.id);
@@ -110,7 +110,7 @@ v = a.useCallback((e, n, i) => {
   I
 ]);
   a.useEffect(() => {
-let e = Object.values(I).filter(e => e.type === m.Kw.USER && !e.canRead && !C.has(e.id)).map(e => e.id);
+let e = Object.values(I).filter(e => e.type === m.Kw.USER && !e.canRead && !f.has(e.id)).map(e => e.id);
 if (0 !== e.length)
   u.Z.requestMembersById(s, e, !1), R(n => new Set([
     ...n,
@@ -119,7 +119,7 @@ if (0 !== e.length)
   }, [
 s,
 I,
-C,
+f,
 R
   ]);
   let L = (0, d.e7)([S.Z], () => S.Z.getApplicationId()),
@@ -159,18 +159,18 @@ function j(e) {
   overwrite: E,
   integration: g,
   canShowMigrationTooltip: p,
-  hasAccessToMutatePermissions: f
+  hasAccessToMutatePermissions: C
 } = e,
 x = E.id === o.id || E.id === (0, _.bD)(o.id),
 O = null == g ? void 0 : null === (t = g.application) || void 0 === t ? void 0 : null === (n = t.bot) || void 0 === n ? void 0 : n.username,
-S = !E.canWrite || !f,
+S = !E.canWrite || !C,
 A = h.default.getId();
-  f ? !E.canWrite && (E.type === m.Kw.USER ? l = E.id === A ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER : E.type === m.Kw.ROLE && (l = v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : l = null != r ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION;
+  C ? !E.canWrite && (E.type === m.Kw.USER ? l = E.id === A ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER : E.type === m.Kw.ROLE && (l = v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : l = null != r ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION;
   let L = p && null != g && E.id === o.id && void 0 !== O && !E.permission;
   a.useEffect(() => {
 if (L) {
   var e;
-  C.default.track(Z.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
+  f.default.track(Z.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
     ...(0, I.hH)(o.id),
     application_id: null == g ? void 0 : null === (e = g.application) || void 0 === e ? void 0 : e.id,
     location: 'toggle'
@@ -239,7 +239,7 @@ children: [
       (0, i.jsx)(D, {
         commandId: r,
         isSentinel: x,
-        isDisabled: !f,
+        isDisabled: !C,
         onRemove: u
       }),
       P

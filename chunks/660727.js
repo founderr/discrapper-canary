@@ -5,11 +5,11 @@ var n, t, l = o(735250),
   r = o.n(s),
   d = o(77866),
   c = o(481060),
-  u = o(907040),
-  p = o(906411),
-  v = o(813197),
-  f = o(984933),
-  I = o(153124),
+  u = o(313201),
+  p = o(907040),
+  v = o(906411),
+  f = o(813197),
+  I = o(984933),
   _ = o(768581),
   b = o(956664),
   m = o(185923),
@@ -46,7 +46,7 @@ onUploadIcon: o,
 onSelectUnicodeEmoji: n,
 onClose: t,
 transitionState: s
-  } = e, _ = (0, I.Dt)(), b = f.ZP.getDefaultChannel(a), [B, C] = i.useState('tab-id-role-icon-file-upload'), [E, L] = i.useState(!1), g = (0, d.Z)(x);
+  } = e, _ = (0, u.Dt)(), b = I.ZP.getDefaultChannel(a), [B, C] = i.useState('tab-id-role-icon-file-upload'), [E, L] = i.useState(!1), g = (0, d.Z)(x);
   return i.useEffect(() => {
 L(!1);
   }, [B]), (0, l.jsx)(c.ModalRoot, {
@@ -134,7 +134,7 @@ children: (0, l.jsxs)('div', {
             size: c.Button.Sizes.SMALL,
             children: [
               N.Z.Messages.ROLE_ICON_UPLOAD_BROWSE_FILES,
-              (0, l.jsx)(v.ZP, {
+              (0, l.jsx)(f.ZP, {
                 onChange: e => {
                   L(!1), o(e), t();
                 },
@@ -156,12 +156,12 @@ children: (0, l.jsxs)('div', {
         ]
       })
     }) : null,
-    'tab-id-role-icon-emoji' === B ? (0, l.jsx)(u.Z, {
+    'tab-id-role-icon-emoji' === B ? (0, l.jsx)(p.Z, {
       hasTabWrapper: !0,
       closePopout: () => t(),
       onSelectEmoji: async e => {
         if ((null == e ? void 0 : e.id) != null)
-          (null == e ? void 0 : e.type) === p.B.GUILD && o(await h(e));
+          (null == e ? void 0 : e.type) === v.B.GUILD && o(await h(e));
         else if ((null == e ? void 0 : e.surrogates) != null) {
           var a, l;
           n(null !== (l = null === (a = e.defaultDiversityChild) || void 0 === a ? void 0 : a.surrogates) && void 0 !== l ? l : e.surrogates);

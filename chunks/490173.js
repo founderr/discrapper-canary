@@ -12,9 +12,9 @@ var r = n(735250),
   u = n(239091),
   c = n(40851),
   d = n(213609),
-  _ = n(210887),
-  E = n(574254),
-  f = n(153850),
+  _ = n(314910),
+  E = n(210887),
+  f = n(574254),
   h = n(585483),
   p = n(981631);
 
@@ -32,8 +32,8 @@ children: t,
 close: n,
 onUnmount: o,
 target: u,
-rect: _,
-position: E,
+rect: E,
+position: f,
 align: h,
 impressionName: m,
 impressionProperties: I
@@ -75,12 +75,12 @@ N = i.useCallback(() => {
 v = i.useCallback(() => {
   A.dispatch(p.CkL.POPOUT_HIDE);
 }, [A]);
-  return (0, r.jsx)(f.W5, {
+  return (0, r.jsx)(_.W5, {
 onMount: N,
 onUnmount: v,
 targetRef: g,
-overrideTargetRect: _,
-position: null != E ? E : 'right',
+overrideTargetRect: E,
+position: null != f ? f : 'right',
 align: null != h ? h : 'top',
 autoInvert: !0,
 ref: T,
@@ -180,11 +180,11 @@ function g() {
 contextMenu: e,
 version: t,
 isOpen: n
-  } = (0, o.cj)([E.Z], () => ({
-contextMenu: E.Z.getContextMenu(),
-version: E.Z.version,
-isOpen: E.Z.isOpen()
-  })), a = (0, o.e7)([_.Z], () => _.Z.theme), {
+  } = (0, o.cj)([f.Z], () => ({
+contextMenu: f.Z.getContextMenu(),
+version: f.Z.version,
+isOpen: f.Z.isOpen()
+  })), a = (0, o.e7)([E.Z], () => E.Z.theme), {
 appContext: s,
 renderWindow: l
   } = i.useContext(c.ZP);

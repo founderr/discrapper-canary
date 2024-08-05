@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(410030),
   u = n(355932),
   _ = n(871025),
-  E = n(689938),
-  h = n(278560);
+  h = n(689938),
+  E = n(278560);
 
 function I(e) {
   let {
@@ -48,15 +48,15 @@ children: (e, t) => {
     ...e,
     id: 'more',
     color: 'text-muted',
-    className: r()(h.tab, h.more, {
-      [h.selected]: I
+    className: r()(E.tab, E.more, {
+      [E.selected]: I
     }),
-    'aria-label': E.Z.Messages.MORE,
+    'aria-label': h.Z.Messages.MORE,
     children: [
       (0, i.jsx)(o.Text, {
         variant: 'text-md/medium',
         color: m,
-        children: E.Z.Messages.MORE
+        children: h.Z.Messages.MORE
       }),
       n ? (0, i.jsx)(o.ChevronSmallUpIcon, {
         size: 'sm',
@@ -75,7 +75,7 @@ t.Z = a.forwardRef(function(e, t) {
 className: n,
 selectedTab: s,
 tabs: _,
-onTabSelect: E,
+onTabSelect: h,
 onAvailableWidthChange: m
   } = e, g = (0, d.ZP)(), p = (0, l.wj)(g), [T, S] = a.useState(0), {
 lastVisibleIndex: f,
@@ -108,11 +108,11 @@ getBoundingClientRect: () => {
   return null === (e = L.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
 }
   })), (0, i.jsxs)('div', {
-className: r()(h.container, n),
+className: r()(E.container, n),
 ref: L,
 children: [
   (0, i.jsxs)('div', {
-    className: h.measurements,
+    className: E.measurements,
     children: [
       _.map((e, t) => (0, i.jsx)(u.AJ, {
         index: t,
@@ -120,7 +120,7 @@ children: [
         children: (0, i.jsx)(o.TabBar.Item, {
           id: e.id,
           'aria-label': e.label,
-          className: h.tab,
+          className: E.tab,
           children: (0, i.jsx)(o.Text, {
             variant: 'text-md/medium',
             children: e.label
@@ -131,7 +131,7 @@ children: [
         ref: N,
         children: (0, i.jsx)(I, {
           tabs: Z,
-          onTabSelect: E,
+          onTabSelect: h,
           selectedTab: s
         })
       })
@@ -140,8 +140,8 @@ children: [
   (0, i.jsxs)(o.TabBar, {
     type: 'top',
     selectedItem: s,
-    onItemSelect: E,
-    className: h.tabs,
+    onItemSelect: h,
+    className: E.tabs,
     children: [
       v.map(e => {
         let t = s === e.id;
@@ -149,8 +149,8 @@ children: [
           id: e.id,
           color: 'text-muted',
           'aria-label': e.label,
-          className: r()(h.tab, {
-            [h.selected]: t
+          className: r()(E.tab, {
+            [E.selected]: t
           }),
           children: (0, i.jsx)(o.Text, {
             variant: 'text-md/medium',
@@ -161,7 +161,7 @@ children: [
       }),
       0 !== Z.length ? (0, i.jsx)(I, {
         tabs: Z,
-        onTabSelect: E,
+        onTabSelect: h,
         selectedTab: s
       }) : null
     ]

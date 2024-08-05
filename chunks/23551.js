@@ -1,54 +1,54 @@
-var n = s(735250);
-s(470079);
-var a = s(120356),
-  i = s.n(a),
-  r = s(780384),
-  o = s(481060),
-  l = s(410030),
-  c = s(726542),
-  d = s(122021),
-  _ = s(231757),
-  E = s(626135),
-  u = s(981631),
-  T = s(772322);
-t.Z = e => {
+var t = a(735250);
+a(470079);
+var i = a(120356),
+  l = a.n(i),
+  c = a(780384),
+  o = a(481060),
+  r = a(410030),
+  s = a(726542),
+  p = a(122021),
+  d = a(231757),
+  u = a(626135),
+  m = a(981631),
+  N = a(772322);
+e.Z = n => {
   let {
-disabled: t = !1,
-type: s,
-className: a,
-innerClassName: I,
-onConnect: S
-  } = e, N = (0, l.ZP)(), C = c.Z.get((0, d.rR)(s));
-  return (0, n.jsx)(o.Tooltip, {
+disabled: e = !1,
+type: a,
+className: i,
+innerClassName: f,
+onConnect: x
+  } = n, h = (0, r.ZP)(), C = s.Z.get((0, p.rR)(a));
+  return (0, t.jsx)(o.Tooltip, {
 text: C.name,
-children: e => {
+children: n => {
   let {
-    onMouseEnter: l,
-    onMouseLeave: d
-  } = e;
-  return (0, n.jsx)('div', {
-    className: i()(T.wrapper, a),
-    children: (0, n.jsx)(o.FocusRing, {
-      children: (0, n.jsx)('button', {
-        onMouseEnter: l,
-        onMouseLeave: d,
-        className: i()(T.inner, I),
+    onMouseEnter: r,
+    onMouseLeave: p
+  } = n;
+  return (0, t.jsx)('div', {
+    className: l()(N.wrapper, i),
+    children: (0, t.jsx)(o.FocusRing, {
+      children: (0, t.jsx)('button', {
+        onMouseEnter: r,
+        onMouseLeave: p,
+        className: l()(N.inner, f),
         type: 'button',
-        disabled: t,
+        disabled: e,
         style: {
-          backgroundImage: 'url(\''.concat((0, r.wj)(N) ? C.icon.darkSVG : C.icon.lightSVG, '\')')
+          backgroundImage: 'url(\''.concat((0, c.wj)(h) ? C.icon.darkSVG : C.icon.lightSVG, '\')')
         },
-        onClick: null != S ? S : () => function(e) {
-          let t = c.Z.get(e);
-          (0, _.Z)({
-            platformType: t.type,
+        onClick: null != x ? x : () => function(n) {
+          let e = s.Z.get(n);
+          (0, d.Z)({
+            platformType: e.type,
             location: 'Friends List'
-          }), E.default.track(u.rMx.ACCOUNT_LINK_STEP, {
+          }), u.default.track(m.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',
-            platform_type: t.type
+            platform_type: e.type
           });
-        }(s),
+        }(a),
         'aria-label': C.name
       })
     })

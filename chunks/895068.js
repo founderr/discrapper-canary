@@ -15,8 +15,8 @@ var i, a, s, r, l = n(735250),
   d = n(481060),
   u = n(110924),
   _ = n(970606),
-  E = n(17845),
-  h = n(945124),
+  h = n(17845),
+  E = n(945124),
   I = n(231467),
   m = n(931515),
   g = n(702646),
@@ -164,7 +164,7 @@ D = o.useCallback((e, t, n, i) => {
   let o = s[t];
   return (0, l.jsx)(I.ZP, {
     clan: o,
-    affinity: null !== (a = o.affininty) && void 0 !== a ? a : (0, h.y)(o, L),
+    affinity: null !== (a = o.affininty) && void 0 !== a ? a : (0, E.y)(o, L),
     traitsToHighlight: O,
     className: A.card,
     style: n,
@@ -188,7 +188,7 @@ y = o.useCallback((e, t) => {
     case 'upsell':
       return (0, l.jsx)(T.Z, {});
     case 'hero':
-      return (0, l.jsx)(E.Z, {
+      return (0, l.jsx)(h.Z, {
         title: N.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
         description: N.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
         backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/guilds-hero-background.png',

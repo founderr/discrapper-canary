@@ -8,8 +8,8 @@ n(470079);
 var s = n(442837),
   a = n(481060),
   r = n(592125),
-  l = n(702346),
-  o = n(739566),
+  l = n(739566),
+  o = n(834129),
   c = n(689938),
   u = n(9406);
 
@@ -22,7 +22,7 @@ usernameHook: _,
 onClickThread: E,
 onClickViewThreads: I,
 onContextMenuThread: m
-  } = e, T = (0, o.ZP)(n), h = _(T), N = (0, s.e7)([r.Z], () => {
+  } = e, T = (0, l.ZP)(n), h = _(T), N = (0, s.e7)([r.Z], () => {
 var e;
 return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
   }), C = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
@@ -35,7 +35,7 @@ threadOnClick: {
 },
 viewThreadsOnClick: I
   });
-  return (0, i.jsx)(l.Z, {
+  return (0, i.jsx)(o.Z, {
 iconNode: (0, i.jsx)(a.ThreadIcon, {
   size: 'md',
   color: 'currentColor',

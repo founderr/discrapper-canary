@@ -8,8 +8,8 @@ var n, a, r, o, s = i(735250),
   _ = i(846519),
   p = i(481060),
   m = i(570140),
-  g = i(768762),
-  f = i(206895),
+  g = i(578361),
+  f = i(768762),
   C = i(259580),
   x = i(585483),
   I = i(981631),
@@ -60,9 +60,9 @@ return (0, s.jsxs)('div', {
       children: 'caret' === o ? (0, s.jsx)(C.Z, {
         className: N.arrow,
         direction: C.Z.Directions.LEFT
-      }) : (0, s.jsx)(g.Z, {
+      }) : (0, s.jsx)(f.Z, {
         className: N.arrow,
-        direction: g.Z.Directions.LEFT
+        direction: f.Z.Directions.LEFT
       })
     }),
     (0, s.jsx)('div', {
@@ -85,9 +85,9 @@ return (0, s.jsxs)('div', {
       children: 'caret' === o ? (0, s.jsx)(C.Z, {
         className: N.arrow,
         direction: C.Z.Directions.RIGHT
-      }) : (0, s.jsx)(g.Z, {
+      }) : (0, s.jsx)(f.Z, {
         className: N.arrow,
-        direction: g.Z.Directions.RIGHT
+        direction: f.Z.Directions.RIGHT
       })
     })
   ]
@@ -155,7 +155,7 @@ let {
   onChangeItem: n
 } = this.props;
 null == n || n(e[i], this.state.visibleIndex, i);
-let a = t > 0 ? f.n.LEFT : f.n.RIGHT;
+let a = t > 0 ? g.n.LEFT : g.n.RIGHT;
 return this.setState({
   visibleIndex: i,
   direction: a
@@ -177,7 +177,7 @@ let {
   themedPagination: _,
   includeHitboxPadding: p,
   style: m,
-  aspectRatio: g,
+  aspectRatio: f,
   children: C
 } = this.props, {
   visibleIndex: x
@@ -193,9 +193,9 @@ return (0, s.jsxs)('div', {
       children: [
         (0, s.jsx)('div', {
           style: {
-            aspectRatio: g
+            aspectRatio: f
           },
-          children: (0, s.jsx)(f.Z, {
+          children: (0, s.jsx)(g.Z, {
             className: d()(N.carousel, n),
             step: x,
             direction: this.getCurrentDirection(),
@@ -267,7 +267,7 @@ super(e), v(this, 'timer', new _.Xp()), v(this, 'handleWindowFocusChange', e => 
   return null == a ? void 0 : a(n[t], e, t, i);
 }), this.state = {
   visibleIndex: !0 === e.randomize ? h().random(0, e.items.length - 1) : 0,
-  direction: f.n.LEFT,
+  direction: g.n.LEFT,
   paused: !1
 };
   }

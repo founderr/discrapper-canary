@@ -7,8 +7,8 @@ var i = n(735250);
 n(470079);
 var s = n(481060),
   a = n(430824),
-  r = n(702346),
-  l = n(646504),
+  r = n(646504),
+  l = n(834129),
   o = n(981631),
   c = n(689938),
   u = n(180090);
@@ -35,7 +35,7 @@ I = () => {
       channel: E,
       source: o.t4x.INVITE_SYSTEM_MESSAGE
     });
-  }), (0, l.w)());
+  }), (0, r.w)());
 },
 m = (e, t) => (0, i.jsx)(s.Anchor, {
   className: u.inviteLink,
@@ -67,7 +67,7 @@ children: [
     children: c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_BUTTON
   })
 ]
-  }), (0, i.jsx)(r.Z, {
+  }), (0, i.jsx)(l.Z, {
 className: d ? u.compact : u.inviteContent,
 iconNode: d ? null : (0, i.jsx)('img', {
   alt: '',

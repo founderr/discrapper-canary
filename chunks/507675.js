@@ -5,8 +5,8 @@ return o;
 });
 var r = n(735250);
 n(470079);
-var i = n(112560),
-  a = n(285952),
+var i = n(600164),
+  a = n(112560),
   s = n(902658);
 
 function o(e) {
@@ -16,13 +16,13 @@ supportingText: n,
 children: o,
 size: l
   } = e;
-  return (0, r.jsxs)(a.Z, {
+  return (0, r.jsxs)(i.Z, {
 className: s.root,
-justify: a.Z.Justify.CENTER,
-align: a.Z.Align.CENTER,
-direction: a.Z.Direction.VERTICAL,
+justify: i.Z.Justify.CENTER,
+align: i.Z.Align.CENTER,
+direction: i.Z.Direction.VERTICAL,
 children: [
-  (0, r.jsx)(i.Z, {
+  (0, r.jsx)(a.Z, {
     header: t,
     description: n,
     size: l

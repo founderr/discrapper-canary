@@ -13,16 +13,16 @@ var i = t(735250),
   c = t(481060),
   u = t(139387),
   I = t(726542),
-  m = t(339085),
-  _ = t(434404),
-  N = t(598077),
-  E = t(430824),
-  T = t(246946),
-  h = t(285952),
+  m = t(600164),
+  _ = t(339085),
+  N = t(434404),
+  E = t(598077),
+  T = t(430824),
+  h = t(246946),
   g = t(259580),
   p = t(531087),
-  C = t(768581),
-  f = t(709054),
+  f = t(768581),
+  C = t(709054),
   x = t(486199),
   O = t(981631),
   S = t(689938),
@@ -39,9 +39,9 @@ function b(e) {
   onDisable: v,
   onEnable: M
 } = e,
-L = (0, d.e7)([E.Z], () => E.Z.getRoles(t.id)),
+L = (0, d.e7)([T.Z], () => T.Z.getRoles(t.id)),
 [j, D] = a.useState(!1),
-P = (0, d.e7)([T.Z], () => T.Z.hidePersonalInformation),
+P = (0, d.e7)([h.Z], () => h.Z.hidePersonalInformation),
 B = a.useCallback(() => {
   D(!0), M(s);
 }, [
@@ -68,13 +68,13 @@ y = a.useCallback(() => {
   v
 ]),
 G = a.useCallback(() => {
-  _.Z.syncIntegration(t.id, s.id);
+  N.Z.syncIntegration(t.id, s.id);
 }, [
   t.id,
   s.id
 ]),
 k = a.useCallback(() => {
-  null != s.role_id && (_.Z.setSection(O.pNK.ROLES), _.Z.selectRole(s.role_id));
+  null != s.role_id && (N.Z.setSection(O.pNK.ROLES), N.Z.selectRole(s.role_id));
 }, [s.role_id]),
 {
   serviceName: U,
@@ -143,7 +143,7 @@ k = a.useCallback(() => {
   s.user
 ]),
 Y = a.useMemo(() => {
-  let e = m.Z.getGuildEmoji(t.id),
+  let e = _.Z.getGuildEmoji(t.id),
     n = Object.values(L).filter(e => null != e.tags && e.tags.integration_id === s.id).map(e => e.id);
   return s.enable_emoticons ? e.sort((e, n) => e.name.localeCompare(n.name)).filter(e => null != s.role_id && (null == e ? void 0 : e.roles.some(e => n.includes(e)))) : [];
 }, [
@@ -162,10 +162,10 @@ Y = a.useMemo(() => {
 n = [{
   icon: c.ClockIcon,
   text: P ? S.Z.Messages.INTEGRATION_ADDED_DATE.format({
-    timestamp: f.default.extractTimestamp(s.id)
+    timestamp: C.default.extractTimestamp(s.id)
   }) : S.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
-    user: null != s.user ? new N.Z(s.user).tag : null,
-    timestamp: f.default.extractTimestamp(s.id)
+    user: null != s.user ? new E.Z(s.user).tag : null,
+    timestamp: C.default.extractTimestamp(s.id)
   })
 }];
   else {
@@ -178,16 +178,16 @@ n = [{
   })
 }];
   }
-  let z = (0, i.jsxs)(h.Z, {
+  let z = (0, i.jsxs)(m.Z, {
   className: A.header,
-  align: h.Z.Align.CENTER,
+  align: m.Z.Align.CENTER,
   children: [
     (0, i.jsx)(x.Z, {
       name: ''.concat(s.name),
       detailsClassName: A.description,
       details: n
     }),
-    s.enabled ? (0, i.jsx)(h.Z.Child, {
+    s.enabled ? (0, i.jsx)(m.Z.Child, {
       shrink: 0,
       grow: 0,
       children: (0, i.jsx)(g.Z, {
@@ -195,7 +195,7 @@ n = [{
         expanded: b && !j,
         'aria-hidden': !0
       })
-    }) : (0, i.jsx)(h.Z.Child, {
+    }) : (0, i.jsx)(m.Z.Child, {
       shrink: 0,
       grow: 0,
       children: (0, i.jsx)(c.Button, {
@@ -214,9 +214,9 @@ n = [{
   ]
 }),
 q = null;
-  return b && !j && null != o && (q = (0, i.jsxs)(h.Z, {
+  return b && !j && null != o && (q = (0, i.jsxs)(m.Z, {
 className: A.body,
-direction: h.Z.Direction.VERTICAL,
+direction: m.Z.Direction.VERTICAL,
 children: [
   (0, i.jsx)(c.FormDivider, {
     className: A.topDivider
@@ -230,9 +230,9 @@ children: [
       roleLink: l,
       onSync: o
     } = e;
-    return (0, i.jsxs)(h.Z, {
+    return (0, i.jsxs)(m.Z, {
       children: [
-        (0, i.jsxs)(h.Z.Child, {
+        (0, i.jsxs)(m.Z.Child, {
           basis: '50%',
           children: [
             (0, i.jsx)(c.FormTitle, {
@@ -247,18 +247,18 @@ children: [
             })
           ]
         }),
-        (0, i.jsxs)(h.Z.Child, {
+        (0, i.jsxs)(m.Z.Child, {
           basis: '50%',
           children: [
             (0, i.jsx)(c.FormTitle, {
               className: R.marginBottom8,
               children: t
             }),
-            (0, i.jsxs)(h.Z, {
-              justify: h.Z.Justify.BETWEEN,
+            (0, i.jsxs)(m.Z, {
+              justify: m.Z.Justify.BETWEEN,
               children: [
-                (0, i.jsxs)(h.Z, {
-                  direction: h.Z.Direction.VERTICAL,
+                (0, i.jsxs)(m.Z, {
+                  direction: m.Z.Direction.VERTICAL,
                   children: [
                     (0, i.jsx)(c.Text, {
                       color: 'header-primary',
@@ -309,9 +309,9 @@ children: [
       onBehaviorChange: a,
       onGracePeriodChange: s
     } = e;
-    return (0, i.jsxs)(h.Z, {
+    return (0, i.jsxs)(m.Z, {
       children: [
-        (0, i.jsxs)(h.Z.Child, {
+        (0, i.jsxs)(m.Z.Child, {
           basis: '50%',
           children: [
             (0, i.jsx)(c.FormTitle, {
@@ -335,7 +335,7 @@ children: [
             })
           ]
         }),
-        (0, i.jsxs)(h.Z.Child, {
+        (0, i.jsxs)(m.Z.Child, {
           basis: '50%',
           children: [
             (0, i.jsx)(c.FormTitle, {
@@ -385,8 +385,8 @@ children: [
       emojis: t,
       onToggle: a
     } = e;
-    return (0, i.jsxs)(h.Z, {
-      direction: h.Z.Direction.VERTICAL,
+    return (0, i.jsxs)(m.Z, {
+      direction: m.Z.Direction.VERTICAL,
       children: [
         (0, i.jsx)(c.Checkbox, {
           type: c.Checkbox.Types.INVERTED,
@@ -403,8 +403,8 @@ children: [
             children: S.Z.Messages.ENABLE_TWITCH_EMOJI_SYNC
           })
         }),
-        (0, i.jsx)(h.Z, {
-          wrap: h.Z.Wrap.WRAP,
+        (0, i.jsx)(m.Z, {
+          wrap: m.Z.Wrap.WRAP,
           className: A.__invalid_twitchEmojis,
           children: t.map((e, n) => (0, i.jsx)(c.Tooltip, {
             text: e.name,
@@ -414,7 +414,7 @@ children: [
               }),
               draggable: !1,
               className: l()(A.emoji, 'emoji', 'jumboable'),
-              src: C.ZP.getEmojiURL({
+              src: f.ZP.getEmojiURL({
                 id: e.id,
                 animated: e.animated,
                 size: 28
@@ -437,7 +437,7 @@ children: [
   (0, i.jsx)(c.FormDivider, {
     className: A.bottomDivider
   }),
-  (0, i.jsx)(h.Z, {
+  (0, i.jsx)(m.Z, {
     children: (0, i.jsx)(c.Button, {
       className: A.disableButton,
       size: c.Button.Sizes.SMALL,
@@ -451,8 +451,8 @@ children: [
   })), (0, i.jsx)(c.Card, {
 editable: !0,
 className: A.card,
-children: (0, i.jsxs)(h.Z, {
-  direction: h.Z.Direction.VERTICAL,
+children: (0, i.jsxs)(m.Z, {
+  direction: m.Z.Direction.VERTICAL,
   children: [
     s.enabled ? (0, i.jsx)(c.Clickable, {
       className: A.expandableHeader,

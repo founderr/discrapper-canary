@@ -9,10 +9,10 @@ var i = n(735250),
   r = n.n(a),
   l = n(442837),
   o = n(481060),
-  c = n(623292),
-  u = n(926491),
-  d = n(419922),
-  _ = n(702346),
+  c = n(834129),
+  u = n(623292),
+  d = n(926491),
+  _ = n(419922),
   E = n(626135),
   I = n(585483),
   m = n(115610),
@@ -25,7 +25,7 @@ function C(e) {
 message: t,
 channel: a,
 compact: C
-  } = e, f = (0, l.Wu)([u.Z], () => Array.from(u.Z.getAllGuildStickers().values()).flat()).slice(0, 20), [p, g] = s.useState(null);
+  } = e, f = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20), [p, g] = s.useState(null);
   return (s.useEffect(() => {
 let e = setInterval(() => {
   f.length > 0 && g(f[Math.floor(Math.random() * f.length)]);
@@ -33,7 +33,7 @@ let e = setInterval(() => {
 return () => clearInterval(e);
   }, [f]), null == a.guild_id) ? null : (0, i.jsxs)('div', {
 children: [
-  (0, i.jsx)(_.Z, {
+  (0, i.jsx)(c.Z, {
     className: r()(N.mainContainer, {
       [N.compact]: C
     }),
@@ -64,7 +64,7 @@ children: [
               channel_id: a.id,
               guild_id: a.guild_id,
               action_type: 'upload_file'
-            }), I.S.dispatch(T.CkL.UPLOAD_FILE), (0, c.fE)({
+            }), I.S.dispatch(T.CkL.UPLOAD_FILE), (0, u.fE)({
               message: t,
               channel: a,
               shouldMention: !0
@@ -88,7 +88,7 @@ children: [
               action_type: 'sticker'
             }), (0, m.O)(t.id, a);
           },
-          children: null != p ? (0, i.jsx)(d.ZP, {
+          children: null != p ? (0, i.jsx)(_.ZP, {
             size: 32,
             sticker: p
           }) : (0, i.jsx)(o.ReactionIcon, {

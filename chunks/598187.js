@@ -29,10 +29,10 @@ var i = n(735250),
   O = n(592125),
   x = n(271383),
   M = n(594174),
-  v = n(702346),
-  L = n(464891),
-  Z = n(348238),
-  P = n(83561),
+  v = n(464891),
+  L = n(348238),
+  Z = n(83561),
+  P = n(834129),
   D = n(981631),
   b = n(674563),
   j = n(689938),
@@ -246,13 +246,13 @@ resolvedReason: g
   } = (0, f.FL)(a), S = (0, _.e7)([O.Z], () => O.Z.getChannel(a.channel_id), [a.channel_id]), A = null !== (t = null == S ? void 0 : S.guild_id) && void 0 !== t ? t : null, {
 incidentData: R,
 shouldShowIncidentActions: x
-  } = (0, h.mI)(A), M = (0, Z.sR)(a.author.id, a.channel_id), v = s.useCallback(() => {
+  } = (0, h.mI)(A), M = (0, L.sR)(a.author.id, a.channel_id), v = s.useCallback(() => {
 let e = null == S ? void 0 : S.guild_id;
 null != e && (0, p.kW)(a.id, e);
   }, [
 a.id,
 S
-  ]), L = T === d.$.DM_RAID, P = L ? I.CircleExclamationPointIcon : I.ChatAlertIcon;
+  ]), Z = T === d.$.DM_RAID, P = Z ? I.CircleExclamationPointIcon : I.ChatAlertIcon;
   return (0, i.jsx)(H, {
 compact: r,
 header: (0, i.jsxs)(s.Fragment, {
@@ -264,7 +264,7 @@ header: (0, i.jsxs)(s.Fragment, {
     (0, i.jsx)(I.Text, {
       variant: 'text-md/semibold',
       color: 'text-danger',
-      children: L ? j.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : j.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
+      children: Z ? j.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : j.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
     })
   ]
 }),
@@ -523,17 +523,17 @@ eventHandlers: {
   onMouseEnter: o,
   onMouseLeave: c
 }
-  } = (0, P.m)(!0), {
+  } = (0, Z.m)(!0), {
 notificationType: d
   } = (0, f.FL)(s), _ = null == d || d === u.p.RAID;
   return (0, i.jsx)('div', {
 onMouseEnter: o,
 onMouseLeave: c,
-children: (0, i.jsx)(v.Z, {
+children: (0, i.jsx)(P.Z, {
   className: r()(U.mainContainer, {
     [U.compact]: n
   }),
-  iconNode: n ? null : (0, i.jsx)(P.S, {
+  iconNode: n ? null : (0, i.jsx)(Z.S, {
     src: l
   }),
   iconContainerClassName: U.iconContainer,
@@ -543,7 +543,7 @@ children: (0, i.jsx)(v.Z, {
       [U.compact]: n
     }),
     children: [
-      (0, i.jsx)(L.nD, {
+      (0, i.jsx)(v.nD, {
         message: s,
         messageClassname: U.spanCorrection,
         className: r()(U.usernameContainer, U.spanCorrection, {

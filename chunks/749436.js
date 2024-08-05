@@ -12,8 +12,8 @@ var i, a = n(735250),
   d = n(442837),
   u = n(481060),
   _ = n(212093),
-  E = n(683301),
-  h = n(626135),
+  h = n(683301),
+  E = n(626135),
   I = n(585483),
   m = n(900849),
   g = n(878727),
@@ -67,7 +67,7 @@ let {
   query: a,
   isHandlingTagSearch: s
 } = this.state, r = this.context;
-if (null == E.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), a.length > 0) {
+if (null == h.ZP.getSearchIndex() && _.Ue(), I.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), I.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), a.length > 0) {
   let l = n !== S.Hk ? n : null;
   v({
     loadId: e,
@@ -92,18 +92,18 @@ let {
   searchId: o,
   query: c,
   isHandlingTagSearch: d
-} = this.state, u = this.context, _ = e.isFetchingSearch && !i, E = s !== S.Hk ? s : null;
+} = this.state, u = this.context, _ = e.isFetchingSearch && !i, h = s !== S.Hk ? s : null;
 (l || d) && _ && (v({
   loadId: n,
   searchId: o,
   query: c,
   guildResults: a.guilds,
   analyticsContext: u,
-  categoryId: E,
+  categoryId: h,
   isTagSearch: d
 }), this.setState({
   isHandlingTagSearch: !1
-})), !t.isSearching && l && m.tI(n, E, u), e.mostRecentQuery !== r && this.setState({
+})), !t.isSearching && l && m.tI(n, h, u), e.mostRecentQuery !== r && this.setState({
   query: r,
   searchId: (0, p.P)(),
   isHandlingTagSearch: !0
@@ -290,11 +290,11 @@ super(e), A(this, '_searchRef', s.createRef()), A(this, 'canSearch', e => e.trim
 
 function O(e) {
   let t = (0, d.e7)([T.Z], () => T.Z.getDiscoveryCategories(), [], T.j),
-n = (0, d.e7)([E.ZP], () => E.ZP.getTopCategoryCounts(e.mostRecentQuery));
+n = (0, d.e7)([h.ZP], () => h.ZP.getTopCategoryCounts(e.mostRecentQuery));
   return (0, a.jsx)(L, {
 ...e,
 categories: t,
 countsByCategory: n
   });
 }
-A(L, 'contextType', void 0), L.contextType = h.AnalyticsContext;
+A(L, 'contextType', void 0), L.contextType = E.AnalyticsContext;

@@ -1,128 +1,128 @@
-s.r(t), s.d(t, {
+t.r(s), t.d(s, {
   default: function() {
-return T;
+return E;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(442837),
-  r = s(481060),
-  o = s(809206),
-  l = s(25990),
-  c = s(154921),
-  d = s(155433),
-  _ = s(981631),
-  E = s(689938),
-  u = s(440478);
+}), t(47120);
+var o = t(735250),
+  n = t(470079),
+  l = t(442837),
+  a = t(481060),
+  r = t(809206),
+  i = t(112831),
+  u = t(25990),
+  d = t(155433),
+  c = t(981631),
+  _ = t(689938),
+  S = t(440478);
 
-function T(e) {
-  var t, s, T, I;
+function E(e) {
+  var s, t, E, R;
   let {
-transitionState: S,
-onSuccess: N,
-onClose: C,
-requirementsUpdated: m,
-noSkip: A = !1
-  } = e, [g, h] = a.useState(''), [O, p] = a.useState(''), [R, x] = a.useState(''), [M, f] = a.useState(null), [D, P] = a.useState(null), L = (0, i.e7)([l.Z], () => l.Z.getErrors()), b = (0, i.e7)([l.Z], () => l.Z.getFormState()), Z = a.useRef(null);
-  async function v(e) {
-e.preventDefault(), (0, o.b9)();
-let t = !1;
-if ('' === O ? (f(E.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : f(null), O !== R ? (P(E.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : P(null), t)
+transitionState: M,
+onSuccess: T,
+onClose: A,
+requirementsUpdated: h,
+noSkip: m = !1
+  } = e, [v, C] = n.useState(''), [N, p] = n.useState(''), [P, x] = n.useState(''), [I, Z] = n.useState(null), [f, D] = n.useState(null), O = (0, l.e7)([u.Z], () => u.Z.getErrors()), w = (0, l.e7)([u.Z], () => u.Z.getFormState()), b = n.useRef(null);
+  async function g(e) {
+e.preventDefault(), (0, r.b9)();
+let s = !1;
+if ('' === N ? (Z(_.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), s = !0) : Z(null), N !== P ? (D(_.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), s = !0) : D(null), s)
   return;
-let s = await (0, o.Mn)({
-  password: g,
-  newPassword: O
+let t = await (0, r.Mn)({
+  password: v,
+  newPassword: N
 });
-if (null == s ? void 0 : s.ok)
-  N();
+if (null == t ? void 0 : t.ok)
+  T();
 else {
-  var n;
-  (null == s ? void 0 : null === (n = s.body) || void 0 === n ? void 0 : n.username) != null && (0, d.P)();
+  var o;
+  (null == t ? void 0 : null === (o = t.body) || void 0 === o ? void 0 : o.username) != null && (0, d.P)();
 }
   }
-  return a.useEffect(() => {
-if (S === r.ModalTransitionState.ENTERED) {
+  return n.useEffect(() => {
+if (M === a.ModalTransitionState.ENTERED) {
   var e;
-  null === (e = Z.current) || void 0 === e || e.focus();
+  null === (e = b.current) || void 0 === e || e.focus();
 }
-  }, [S]), (0, n.jsxs)(r.ModalRoot, {
-transitionState: S,
+  }, [M]), (0, o.jsxs)(a.ModalRoot, {
+transitionState: M,
 children: [
-  (0, n.jsxs)(r.ModalHeader, {
+  (0, o.jsxs)(a.ModalHeader, {
     separator: !1,
-    className: u.header,
+    className: S.header,
     children: [
-      (0, n.jsx)(c.Z, {
-        color: c.Z.Colors.HEADER_PRIMARY,
-        size: c.Z.Sizes.SIZE_24,
-        className: u.title,
-        children: E.Z.Messages.UPDATE_PASSWORD
+      (0, o.jsx)(i.Z, {
+        color: i.Z.Colors.HEADER_PRIMARY,
+        size: i.Z.Sizes.SIZE_24,
+        className: S.title,
+        children: _.Z.Messages.UPDATE_PASSWORD
       }),
-      (0, n.jsx)(r.Text, {
+      (0, o.jsx)(a.Text, {
         color: 'header-secondary',
         variant: 'text-md/normal',
-        className: u.subtitle,
-        children: m ? E.Z.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : E.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
+        className: S.subtitle,
+        children: h ? _.Z.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
       }),
-      !0 !== A && (0, n.jsx)(r.ModalCloseButton, {
-        onClick: C,
-        className: u.modalCloseButton
+      !0 !== m && (0, o.jsx)(a.ModalCloseButton, {
+        onClick: A,
+        className: S.modalCloseButton
       })
     ]
   }),
-  (0, n.jsxs)('form', {
-    onSubmit: v,
+  (0, o.jsxs)('form', {
+    onSubmit: g,
     children: [
-      (0, n.jsxs)(r.ModalContent, {
-        className: u.content,
+      (0, o.jsxs)(a.ModalContent, {
+        className: S.content,
         children: [
-          (0, n.jsx)(r.FormItem, {
-            title: E.Z.Messages.FORM_LABEL_CURRENT_PASSWORD,
-            error: null == L ? void 0 : null === (t = L.password) || void 0 === t ? void 0 : t[0],
-            children: (0, n.jsx)(r.TextInput, {
+          (0, o.jsx)(a.FormItem, {
+            title: _.Z.Messages.FORM_LABEL_CURRENT_PASSWORD,
+            error: null == O ? void 0 : null === (s = O.password) || void 0 === s ? void 0 : s[0],
+            children: (0, o.jsx)(a.TextInput, {
               type: 'password',
-              value: g,
-              onChange: h,
-              inputRef: Z
+              value: v,
+              onChange: C,
+              inputRef: b
             })
           }),
-          (0, n.jsx)(r.FormItem, {
-            className: u.newPassword,
-            title: E.Z.Messages.FORM_LABEL_NEW_PASSWORD,
-            error: null !== (I = null !== (T = null == L ? void 0 : null === (s = L.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== T ? T : M) && void 0 !== I ? I : void 0,
-            children: (0, n.jsx)(r.TextInput, {
+          (0, o.jsx)(a.FormItem, {
+            className: S.newPassword,
+            title: _.Z.Messages.FORM_LABEL_NEW_PASSWORD,
+            error: null !== (R = null !== (E = null == O ? void 0 : null === (t = O.new_password) || void 0 === t ? void 0 : t[0]) && void 0 !== E ? E : I) && void 0 !== R ? R : void 0,
+            children: (0, o.jsx)(a.TextInput, {
               type: 'password',
-              value: O,
+              value: N,
               onChange: p
             })
           }),
-          (0, n.jsx)(r.FormItem, {
-            className: u.newPassword,
-            title: E.Z.Messages.FORM_LABEL_CONFIRM_NEW_PASSWORD,
-            error: null != D ? D : void 0,
-            children: (0, n.jsx)(r.TextInput, {
+          (0, o.jsx)(a.FormItem, {
+            className: S.newPassword,
+            title: _.Z.Messages.FORM_LABEL_CONFIRM_NEW_PASSWORD,
+            error: null != f ? f : void 0,
+            children: (0, o.jsx)(a.TextInput, {
               type: 'password',
-              value: R,
+              value: P,
               onChange: x
             })
           })
         ]
       }),
-      (0, n.jsxs)(r.ModalFooter, {
+      (0, o.jsxs)(a.ModalFooter, {
         children: [
-          (0, n.jsx)(r.Button, {
+          (0, o.jsx)(a.Button, {
             type: 'submit',
-            color: r.Button.Colors.BRAND,
-            size: r.Button.Sizes.MEDIUM,
-            submitting: b === _.QZA.SUBMITTING,
-            children: E.Z.Messages.DONE
+            color: a.Button.Colors.BRAND,
+            size: a.Button.Sizes.MEDIUM,
+            submitting: w === c.QZA.SUBMITTING,
+            children: _.Z.Messages.DONE
           }),
-          !0 !== A && (0, n.jsx)(r.Button, {
-            className: u.cancel,
-            look: r.Button.Looks.LINK,
-            color: r.Button.Colors.PRIMARY,
-            onClick: C,
-            children: E.Z.Messages.CANCEL
+          !0 !== m && (0, o.jsx)(a.Button, {
+            className: S.cancel,
+            look: a.Button.Looks.LINK,
+            color: a.Button.Colors.PRIMARY,
+            onClick: A,
+            children: _.Z.Messages.CANCEL
           })
         ]
       })

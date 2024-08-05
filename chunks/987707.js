@@ -35,8 +35,8 @@ U.Plq.DEAFEN_MEMBERS
   g = [],
   d = !0,
   Z = !1,
-  P = !1,
-  f = !0,
+  f = !1,
+  P = !0,
   H = !1,
   h = null,
   p = U.rsA.ALL,
@@ -144,10 +144,10 @@ return d;
 return Z;
   }
   get isLoadingNextPage() {
-return P;
+return f;
   }
   get hasOlderLogs() {
-return f;
+return P;
   }
   get hasError() {
 return H;
@@ -182,7 +182,7 @@ Z = !0;
   },
   AUDIT_LOG_FETCH_SUCCESS: function(e) {
 var _;
-v = 0, d = !1, Z = !1, f = !0, H = !1, M = V(e.logs), i = e.integrations, u = e.webhooks, o = e.guildScheduledEvents, c = null !== (_ = e.automodRules) && void 0 !== _ ? _ : [], C = e.threads, g = e.applicationCommands, e.logs.length < U.Rg9 && (f = !1);
+v = 0, d = !1, Z = !1, P = !0, H = !1, M = V(e.logs), i = e.integrations, u = e.webhooks, o = e.guildScheduledEvents, c = null !== (_ = e.automodRules) && void 0 !== _ ? _ : [], C = e.threads, g = e.applicationCommands, e.logs.length < U.Rg9 && (P = !1);
   },
   AUDIT_LOG_FETCH_FAIL: function() {
 Z = !1, H = !0, M = [];
@@ -191,7 +191,7 @@ Z = !1, H = !0, M = [];
 let {
   isGroupedFetch: _
 } = e;
-P = !0, _ && v++;
+f = !0, _ && v++;
   },
   AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function(e) {
 let {
@@ -203,7 +203,7 @@ let {
   threads: n,
   applicationCommands: A
 } = e;
-if (P = !1, i = E, u = s, o = T, c = I, C = n, g = A, (0 === _.length || _.length < U.Rg9) && (f = !1), _.length > 0) {
+if (f = !1, i = E, u = s, o = T, c = I, C = n, g = A, (0 === _.length || _.length < U.Rg9) && (P = !1), _.length > 0) {
   let e = V(_);
   M = [
     ...M,
@@ -212,7 +212,7 @@ if (P = !1, i = E, u = s, o = T, c = I, C = n, g = A, (0 === _.length || _.lengt
 }
   },
   AUDIT_LOG_FETCH_NEXT_PAGE_FAIL: function() {
-P = !1;
+f = !1;
   },
   AUDIT_LOG_FILTER_BY_ACTION: function(e) {
 let {

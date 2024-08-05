@@ -10,9 +10,9 @@ var s = n(735250),
   l = n(544891),
   o = n(536285),
   c = n(388905),
-  u = n(703656),
-  d = n(314897),
-  p = n(285952),
+  u = n(600164),
+  d = n(703656),
+  p = n(314897),
   m = n(981631),
   x = n(689938),
   h = n(693641),
@@ -44,7 +44,7 @@ let {
   stage: e,
   key: t
 } = this.state;
-e === b.DONE ? _() : d.default.isAuthenticated() ? l.tn.post({
+e === b.DONE ? _() : p.default.isAuthenticated() ? l.tn.post({
   url: m.ANM.HANDOFF,
   body: {
     key: t
@@ -55,7 +55,7 @@ e === b.DONE ? _() : d.default.isAuthenticated() ? l.tn.post({
   handoff(e) {
 o.default.requestRedirect(m.Etm.BROWSER_HANDOFF, {
   handoffToken: e,
-  fingerprint: d.default.getFingerprint()
+  fingerprint: p.default.getFingerprint()
 }).then(this.done, this.failed);
   }
   renderDone() {
@@ -132,9 +132,9 @@ switch (t) {
   default:
     e = this.renderHandoff();
 }
-return (0, s.jsx)(p.Z, {
-  justify: p.Z.Justify.CENTER,
-  align: p.Z.Align.CENTER,
+return (0, s.jsx)(u.Z, {
+  justify: u.Z.Justify.CENTER,
+  align: u.Z.Align.CENTER,
   className: h.wrapper,
   children: e
 });
@@ -150,7 +150,7 @@ super(e), f(this, 'done', () => {
     stage: b.FAILED
   }), _();
 }), f(this, 'handleOpenApp', () => {
-  (0, u.uL)(m.Z5c.ME);
+  (0, d.uL)(m.Z5c.ME);
 });
 let {
   search: n

@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(212476),
   u = n(611928),
   _ = n(680180),
-  E = n(791734),
-  h = n(341789),
+  h = n(791734),
+  E = n(341789),
   I = n(591433),
   m = n(282773),
   g = n(143021),
@@ -114,7 +114,7 @@ children: [
         icon: y ? s.ArrowLargeLeftIcon : s.ServerIcon,
         onClick: y ? M : void 0
       }),
-      (0, i.jsx)(E.Z, {
+      (0, i.jsx)(h.Z, {
         className: x,
         tabs: j,
         selectedTab: n,
@@ -128,7 +128,7 @@ children: [
     loadId: e.current,
     onGuildCardClick: k,
     onGuildCardSeen: G
-  }) : (0, i.jsx)(h.Z, {
+  }) : (0, i.jsx)(E.Z, {
     loadId: e.current,
     selectedTab: n,
     onScroll: N,

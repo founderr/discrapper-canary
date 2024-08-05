@@ -37,7 +37,7 @@ let _ = [
 'balls',
 'cum'
   ],
-  E = e => {
+  h = e => {
 let {
   text: t,
   onClick: n,
@@ -57,7 +57,7 @@ return (0, i.jsx)('li', {
   })
 });
   },
-  h = e => {
+  E = e => {
 let {
   tags: t,
   onTagClick: n,
@@ -79,7 +79,7 @@ return a.useEffect(() => {
 ]), (0, i.jsx)(l.Dialog, {
   className: u.overflowTagsPopout,
   children: (0, i.jsx)('ul', {
-    children: t.map(e => (0, i.jsx)(E, {
+    children: t.map(e => (0, i.jsx)(h, {
       onClick: () => n(e),
       className: u.tagAlt,
       text: e
@@ -93,13 +93,13 @@ let {
   count: n
 } = e;
 return (0, i.jsx)(l.Popout, {
-  renderPopout: () => (0, i.jsx)(h, {
+  renderPopout: () => (0, i.jsx)(E, {
     ...e
   }),
   position: 'right',
   align: 'top',
   closeOnScroll: !0,
-  children: e => (0, i.jsx)(E, {
+  children: e => (0, i.jsx)(h, {
     className: t,
     ...e,
     text: '+'.concat(n)
@@ -119,7 +119,7 @@ let {
   discoveryTagStyle: l = m.DEFAULT,
   hideOverflow: c = !1,
   guildId: d,
-  section: h
+  section: E
 } = e, {
   ref: g,
   width: p
@@ -145,7 +145,7 @@ return a.useLayoutEffect(() => {
     [u.invisible]: null == T
   }),
   children: [
-    f.map((e, t) => (0, i.jsx)(E, {
+    f.map((e, t) => (0, i.jsx)(h, {
       className: l,
       onClick: () => n(e),
       hide: null != T && t >= T,
@@ -157,7 +157,7 @@ return a.useLayoutEffect(() => {
       tags: f.slice(T),
       count: f.length - T,
       guildId: d,
-      section: h
+      section: E
     })
   ]
 });

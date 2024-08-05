@@ -12,8 +12,8 @@ var i = n(120356),
   a = n.n(i),
   s = n(481060),
   o = n(131388),
-  l = n(259580),
-  u = n(806519),
+  l = n(686546),
+  u = n(259580),
   c = n(618158),
   d = n(362267),
   _ = n(689938),
@@ -132,11 +132,11 @@ className: a()(A ? i : null, E.staticButton, E.centerButton, h[S])
   return A ? N : (0, r.jsxs)('div', {
 className: a()(i, E.contextMenuContainer),
 children: [
-  (0, r.jsx)(u.ZP, {
+  (0, r.jsx)(l.ZP, {
     className: a()(E.buttonMask, {
       [E.buttonPremiumGlow]: T
     }),
-    mask: null == m ? null : u.QS.CHANNEL_CALL_CONTROL_BUTTON,
+    mask: null == m ? null : l.QS.CHANNEL_CALL_CONTROL_BUTTON,
     width: 56,
     height: 56,
     children: N
@@ -149,7 +149,7 @@ children: [
       className: a()(E.contextMenuNub, h[S], {
         [E.active]: I
       }),
-      children: (0, r.jsx)(l.Z, {
+      children: (0, r.jsx)(u.Z, {
         className: a()(E.contextMenuCaret, {
           [E.open]: I
         })

@@ -15,11 +15,11 @@ var i = n(735250),
   T = n(857595),
   h = n(607070),
   N = n(367907),
-  C = n(592125),
-  f = n(984933),
-  p = n(768119),
-  g = n(944486),
-  S = n(153124),
+  C = n(313201),
+  f = n(592125),
+  p = n(984933),
+  g = n(768119),
+  S = n(944486),
   A = n(585483),
   R = n(72006),
   O = n(405656),
@@ -39,7 +39,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 n(270799);
-let b = (0, S.hQ)(),
+let b = (0, C.hQ)(),
   j = c()(_.yC, 500);
 class U extends s.PureComponent {
   componentDidMount() {
@@ -227,13 +227,13 @@ super(e), D(this, 'state', {
     this.focusEditor();
     return;
   }
-  let n = g.Z.getChannelId(),
-    i = C.Z.getChannel(n);
-  if ((null == i ? void 0 : i.isThread()) && (i = C.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate()) {
+  let n = S.Z.getChannelId(),
+    i = f.Z.getChannel(n);
+  if ((null == i ? void 0 : i.isThread()) && (i = f.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate()) {
     this.focusEditor();
     return;
   }
-  let s = f.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
+  let s = p.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
     a = null != s ? s.name : i.name;
   Promise.resolve().then(() => {
     let {
@@ -384,20 +384,20 @@ super(e), D(this, 'state', {
 }
 t.Z = u.ZP.connectStores([
   h.Z,
-  p.Z
+  g.Z
 ], () => {
   var e;
-  let t = p.Z.getCurrentSearchId(),
-n = p.Z.getSearchType(),
-i = null != t && p.Z.isSearching(t),
-s = null != t && null !== (e = p.Z.getEditorState(t)) && void 0 !== e ? e : R.nR(x.Jl(m.ZP)),
+  let t = g.Z.getCurrentSearchId(),
+n = g.Z.getSearchType(),
+i = null != t && g.Z.isSearching(t),
+s = null != t && null !== (e = g.Z.getEditorState(t)) && void 0 !== e ? e : R.nR(x.Jl(m.ZP)),
 a = h.Z.keyboardModeEnabled;
   return {
 searchId: t,
 searchType: n,
 isSearching: i,
 editorState: s,
-hasResults: p.Z.hasResults(t),
+hasResults: g.Z.hasResults(t),
 keyboardModeEnabled: a
   };
 })(U);

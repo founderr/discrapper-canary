@@ -12,8 +12,8 @@ var s = t(735250),
   r = t(544891),
   o = t(481060),
   i = t(355467),
-  c = t(311821),
-  u = t(285952),
+  c = t(600164),
+  u = t(311821),
   d = t(591759),
   E = t(987209),
   A = t(598),
@@ -93,14 +93,14 @@ let {
 } = e;
 return (0, s.jsx)('div', {
   children: (0, s.jsxs)(o.ModalFooter, {
-    justify: u.Z.Justify.BETWEEN,
-    align: u.Z.Align.CENTER,
+    justify: c.Z.Justify.BETWEEN,
+    align: c.Z.Align.CENTER,
     children: [
-      (0, s.jsx)(c.y, {
+      (0, s.jsx)(u.y, {
         onClick: a,
         children: h.Z.Messages.PAYMENT_WAITING_FOR_BROWSER_CHECKOUT_MODAL_NEXT_BUTTON
       }),
-      (0, s.jsx)(c.Z, {
+      (0, s.jsx)(u.Z, {
         onClick: t
       })
     ]

@@ -10,11 +10,11 @@ var n = t(735250),
   r = t(225433),
   o = t(933557),
   d = t(471445),
-  c = t(592125),
-  u = t(324067),
-  h = t(699516),
-  N = t(594174),
-  S = t(285952),
+  c = t(600164),
+  u = t(592125),
+  h = t(324067),
+  N = t(699516),
+  S = t(594174),
   E = t(621600),
   m = t(981631),
   g = t(689938),
@@ -75,18 +75,18 @@ let e, s;
 let {
   channel: t
 } = this.props;
-null != t.parent_id && (e = c.Z.getChannel(t.parent_id));
+null != t.parent_id && (e = u.Z.getChannel(t.parent_id));
 let i = (0, d.KS)(t);
 if (t.type === m.d4z.GUILD_CATEGORY && null != t.guild_id && '' !== t.guild_id) {
-  let e = u.Z.getCategories(t.guild_id);
+  let e = h.Z.getCategories(t.guild_id);
   s = g.Z.Messages.NUM_CHANNELS.format({
     num: null != e[t.id] ? e[t.id].length : 0
   });
 } else
   s = null != e ? g.Z.Messages.IN_CATEGORY.format({
-    categoryName: (0, o.F6)(e, N.default, h.Z)
+    categoryName: (0, o.F6)(e, S.default, N.Z)
   }) : g.Z.Messages.NO_CATEGORY;
-return (0, n.jsxs)(S.Z, {
+return (0, n.jsxs)(c.Z, {
   grow: 1,
   className: _.nameContainer,
   children: [
@@ -99,7 +99,7 @@ return (0, n.jsxs)(S.Z, {
         (0, n.jsx)(l.Text, {
           variant: 'text-md/semibold',
           className: _.channelName,
-          children: (0, o.F6)(t, N.default, h.Z)
+          children: (0, o.F6)(t, S.default, N.Z)
         }),
         (0, n.jsx)(l.Text, {
           variant: 'text-xs/normal',
@@ -116,35 +116,35 @@ let {
   muted: e,
   guildMuted: s
 } = this.props;
-return (0, n.jsxs)(S.Z, {
+return (0, n.jsxs)(c.Z, {
   grow: 0,
   shrink: 0,
   className: _.checkboxGroup,
-  justify: S.Z.Justify.AROUND,
-  align: S.Z.Align.CENTER,
+  justify: c.Z.Justify.AROUND,
+  align: c.Z.Align.CENTER,
   children: [
-    (0, n.jsx)(S.Z.Child, {
+    (0, n.jsx)(c.Z.Child, {
       wrap: !0,
       grow: 0,
       shrink: 0,
       className: s ? _.checkboxContainerMuted : _.checkboxContainer,
       children: this.renderMessageNotificationsRadioOption(m.bL.ALL_MESSAGES)
     }),
-    (0, n.jsx)(S.Z.Child, {
+    (0, n.jsx)(c.Z.Child, {
       wrap: !0,
       grow: 0,
       shrink: 0,
       className: s ? _.checkboxContainerMuted : _.checkboxContainer,
       children: this.renderMessageNotificationsRadioOption(m.bL.ONLY_MENTIONS)
     }),
-    (0, n.jsx)(S.Z.Child, {
+    (0, n.jsx)(c.Z.Child, {
       wrap: !0,
       grow: 0,
       shrink: 0,
       className: s ? _.checkboxContainerMuted : _.checkboxContainer,
       children: this.renderMessageNotificationsRadioOption(m.bL.NO_MESSAGES)
     }),
-    (0, n.jsx)(S.Z.Child, {
+    (0, n.jsx)(c.Z.Child, {
       wrap: !0,
       grow: 0,
       shrink: 0,

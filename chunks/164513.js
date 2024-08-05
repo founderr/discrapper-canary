@@ -7,9 +7,9 @@ var t = n(735250);
 n(470079);
 var i = n(481060),
   r = n(906732),
-  l = n(522489),
-  a = n(570711),
-  o = n(285952),
+  l = n(600164),
+  a = n(522489),
+  o = n(570711),
   C = n(669079),
   d = n(987209),
   u = n(598),
@@ -29,7 +29,7 @@ giftRecipient: L
 analyticsLocations: h
   } = (0, r.ZP)(), f = !__BILLING_STANDALONE__ && (0, C.MY)(L, !1) === C.xr.CUSTOM_STYLE, {
 enabled: I
-  } = l.m.useExperiment({
+  } = a.m.useExperiment({
 location: 'GiftPurchaseConfirmationFooter'
   }, {
 autoTrackExposure: f,
@@ -37,8 +37,8 @@ disable: !f
   });
   return I ? (0, t.jsx)(c.O3, {
 children: (0, t.jsx)(i.ModalFooter, {
-  align: o.Z.Align.CENTER,
-  children: (0, t.jsx)(a.Z, {
+  align: l.Z.Align.CENTER,
+  children: (0, t.jsx)(o.Z, {
     repeatPurchase: !0,
     initialPlanId: null == n ? void 0 : n.id,
     subscriptionTier: null == n ? void 0 : n.skuId,

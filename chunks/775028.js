@@ -12,17 +12,17 @@ var l = t(735250),
   c = t(692547),
   d = t(481060),
   u = t(239091),
-  h = t(605236),
-  m = t(66999),
-  _ = t(549631),
-  f = t(473403),
-  C = t(454585),
-  p = t(22082),
-  x = t(703656),
-  g = t(6025),
-  N = t(922482),
-  I = t(601070),
-  b = t(514342),
+  h = t(111028),
+  m = t(605236),
+  _ = t(66999),
+  f = t(549631),
+  C = t(473403),
+  p = t(454585),
+  x = t(22082),
+  g = t(703656),
+  N = t(6025),
+  I = t(922482),
+  b = t(601070),
   E = t(216306),
   Z = t(163),
   v = t(753540),
@@ -115,12 +115,12 @@ let {
   category: a,
   guild: i,
   isFirstChannel: o,
-  isLastChannel: h,
+  isLastChannel: m,
   onChannelClick: Z,
   tooltipDirection: T = 'right'
 } = e, {
   isSubscriptionGated: L
-} = (0, m.Z)(n.id), P = (0, v.Mf)(i.id, n.id, a.id), y = (0, v.t4)(i.id, n.id, a.id), k = (0, v.EH)(i.id, a.id), H = (0, s.e7)([I.Z], () => I.Z.getActiveThreadCount(i.id, n.id)), D = (0, s.e7)([p.Z], () => p.Z.shouldIndicateNewChannel(i.id, n.id)), U = e => {
+} = (0, _.Z)(n.id), P = (0, v.Mf)(i.id, n.id, a.id), y = (0, v.t4)(i.id, n.id, a.id), k = (0, v.EH)(i.id, a.id), H = (0, s.e7)([b.Z], () => b.Z.getActiveThreadCount(i.id, n.id)), D = (0, s.e7)([x.Z], () => x.Z.shouldIndicateNewChannel(i.id, n.id)), U = e => {
   if (!y)
     return e.stopPropagation(), Z(i.id, n.id, a.id), !0;
 }, W = e => {
@@ -163,11 +163,11 @@ let {
     variant: 'text-xs/normal',
     className: A.channelSubtitle,
     children: (0, E.qw)(e.id)
-  }, 'active')), null != e.topic && e.topic.length > 0 && t.push((0, l.jsx)(b.Z, {
+  }, 'active')), null != e.topic && e.topic.length > 0 && t.push((0, l.jsx)(h.Z, {
     children: (0, l.jsx)(d.Text, {
       className: A.topic,
       variant: 'text-xs/normal',
-      children: C.Z.parseTopic(e.topic, !0, {
+      children: p.Z.parseTopic(e.topic, !0, {
         channelId: e.id
       })
     })
@@ -177,7 +177,7 @@ let {
       index: n
     }, 'subtitle-separator-'.concat(n))
   ])].flat(2).slice(0, -1);
-}(n, H), F = e => (e.stopPropagation(), O.has(n.type) || e.shiftKey) ? ((0, x.XU)(i.id, n.id), !0) : n.isGuildStageVoice() || n.isGuildVoice() ? ((0, N.Cq)(n), !0) : (g.Z.openChannelAsSidebar({
+}(n, H), F = e => (e.stopPropagation(), O.has(n.type) || e.shiftKey) ? ((0, g.XU)(i.id, n.id), !0) : n.isGuildStageVoice() || n.isGuildVoice() ? ((0, I.Cq)(n), !0) : (N.Z.openChannelAsSidebar({
   guildId: n.guild_id,
   channelId: n.id,
   baseChannelId: S.oC.CHANNEL_BROWSER
@@ -194,7 +194,7 @@ return (0, l.jsxs)(l.Fragment, {
       children: e => (0, l.jsxs)(d.Clickable, {
         className: r()(A.channelRow, {
           [A.firstChannel]: o,
-          [A.lastChannel]: h,
+          [A.lastChannel]: m,
           [A.disabled]: y
         }),
         ...e,
@@ -207,11 +207,11 @@ return (0, l.jsxs)(l.Fragment, {
               (0, l.jsxs)('div', {
                 className: A.channelName,
                 children: [
-                  (0, l.jsx)(f._, {
+                  (0, l.jsx)(C._, {
                     channel: n,
                     guild: i
                   }),
-                  (0, l.jsx)(b.Z, {
+                  (0, l.jsx)(h.Z, {
                     className: A.__invalid_name,
                     children: (0, l.jsx)(d.Text, {
                       className: A.channelText,
@@ -221,7 +221,7 @@ return (0, l.jsxs)(l.Fragment, {
                       children: n.name
                     })
                   }),
-                  L ? (0, l.jsx)(_.Z, {
+                  L ? (0, l.jsx)(f.Z, {
                     color: q,
                     className: A.premiumIcon
                   }) : null,
@@ -262,7 +262,7 @@ return (0, l.jsxs)(l.Fragment, {
         ]
       })
     }),
-    !h && (0, l.jsx)(M, {})
+    !m && (0, l.jsx)(M, {})
   ]
 });
   });
@@ -276,13 +276,13 @@ innerClassName: s,
 hasSidebar: c
   } = e, {
 onChannelClick: u
-  } = (0, Z.Z)(t.id), m = (0, h.wE)(o.z.CHANNEL_BROWSER_NUX) ? 0 : -1, _ = a.useCallback(e => {
+  } = (0, Z.Z)(t.id), h = (0, m.wE)(o.z.CHANNEL_BROWSER_NUX) ? 0 : -1, _ = a.useCallback(e => {
 let {
   section: a
 } = e;
-if (0 === a && -1 === m)
+if (0 === a && -1 === h)
   return null;
-let i = n._categories[a + m];
+let i = n._categories[a + h];
 return (0, l.jsx)(L, {
   channel: i.channel,
   guild: t,
@@ -291,18 +291,18 @@ return (0, l.jsx)(L, {
   }, [
 n,
 t,
-m,
+h,
 u
   ]), f = a.useCallback(e => {
 let {
   section: a,
   row: i
 } = e;
-if (0 === a && -1 === m)
+if (0 === a && -1 === h)
   return (0, l.jsx)(T.Z, {
     guild: t
   });
-let r = n._categories[a + m],
+let r = n._categories[a + h],
   s = n[r.channel.id][i];
 return null == s ? null : (0, l.jsx)(P, {
   category: r.channel,
@@ -316,7 +316,7 @@ return null == s ? null : (0, l.jsx)(P, {
   }, [
 n,
 t,
-m,
+h,
 c,
 u
   ]), C = (0, T.q)(t.id), p = (0, E.tn)(t.id, n, 64, C);

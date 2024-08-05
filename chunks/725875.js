@@ -43,7 +43,7 @@ return Object.values(e).sort((e, n) => e.channel.name.localeCompare(n.channel.na
   }, [
 t,
 n
-  ]), C = a.useCallback(e => {
+  ]), f = a.useCallback(e => {
 h() && (e === (null == E ? void 0 : E.id) ? l.Z.stopEditingWebhook() : l.Z.startEditingWebhook(e));
   }, [
 h,
@@ -108,7 +108,7 @@ children: p.map(e => {
     lastCreatedWebhookId: N,
     editedWebhook: E,
     errors: T,
-    toggleWebhookExpand: C
+    toggleWebhookExpand: f
   });
 })
   });

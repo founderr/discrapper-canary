@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(943094),
   u = n(749210),
   _ = n(287734),
-  E = n(401430),
-  h = n(230711),
+  h = n(401430),
+  E = n(230711),
   I = n(607070),
   m = n(627845),
   g = n(185666),
@@ -63,8 +63,8 @@ var i = n(735250),
   ed = n(489977),
   eu = n(329557),
   e_ = n(304445),
-  eE = n(893607),
-  eh = n(703656),
+  eh = n(893607),
+  eE = n(703656),
   eI = n(298969),
   em = n(719256),
   eg = n(6025),
@@ -114,7 +114,7 @@ writable: !0
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(455173), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073), n(628566);
 let e$ = !1;
 (0, C.DL)(), l.ZP.initialize(), eI.Z.loadServer(), eW.isPlatformEmbedded && (ez.ZP.on('USER_SETTINGS_OPEN', () => {
-  !eU.Z.getLayers().includes(eq.S9g.USER_SETTINGS) && h.Z.open(eq.oAB.ACCOUNT);
+  !eU.Z.getLayers().includes(eq.S9g.USER_SETTINGS) && E.Z.open(eq.oAB.ACCOUNT);
 }), ez.ZP.on('LAUNCH_APPLICATION', (e, t) => {
   let n = eG.Z.getActiveLibraryApplication(t);
   eK.playApplication(t, n, {
@@ -259,7 +259,7 @@ render: function(e) {
           break;
         }
         case 'test-mode':
-          eB.Z.whenInitialized(() => E.Wt(n));
+          eB.Z.whenInitialized(() => h.Wt(n));
           break;
         case 'uninstall': {
           let e = eG.Z.getActiveLibraryApplication(n);
@@ -309,7 +309,7 @@ render: function(e) {
   let {
     location: t
   } = e, n = (0, eR.default)(t.pathname);
-  return null != n && (0, H.h)(() => h.Z.open(n.section, n.subsection, {
+  return null != n && (0, H.h)(() => E.Z.open(n.section, n.subsection, {
     openWithoutBackstack: !1,
     impressionSource: n.source
   })), (0, i.jsx)(r.l_, {
@@ -348,7 +348,7 @@ isSessionRequired: !0
   {
 path: [eq.Z5c.APPLICATION_LIBRARY_INVENTORY],
 render: function() {
-  return (0, H.h)(() => h.Z.open(eq.oAB.INVENTORY)), (0, i.jsx)(r.l_, {
+  return (0, H.h)(() => E.Z.open(eq.oAB.INVENTORY)), (0, i.jsx)(r.l_, {
     to: ey.Z.defaultRoute
   });
 },
@@ -470,9 +470,9 @@ pathname: i
 return;
   let {
 location: a
-  } = (0, eh.s1)();
+  } = (0, eE.s1)();
   if (a.pathname === i)
-null == eD.Z.getChannel(t) ? (0, eh.dL)(eq.Z5c.CHANNEL(n)) : (0, eh.dL)(i);
+null == eD.Z.getChannel(t) ? (0, eE.dL)(eq.Z5c.CHANNEL(n)) : (0, eE.dL)(i);
 }
 class e6 extends a.PureComponent {
   componentDidMount() {
@@ -526,9 +526,9 @@ let {
     channelId: a,
     messageId: l,
     threadId: o
-  } = e5(n), c = (0, eE.S)(i), d = (0, eE.c)(a), E = (0, eE.c)(o), h = ew.Z.getGuildId(), I = h !== i;
+  } = e5(n), c = (0, eh.S)(i), d = (0, eh.c)(a), h = (0, eh.c)(o), E = ew.Z.getGuildId(), I = E !== i;
   if (c && I && u.Z.selectGuild(i), c && d) {
-    let n = ek.Z.getChannelId(h),
+    let n = ek.Z.getChannelId(E),
       r = n !== a;
     if (!e$ || I || r || null != l) {
       e$ = !0, _.default.selectChannel({
@@ -541,12 +541,12 @@ let {
       } = (0, s.parse)(t);
       null != e && eC.ZP.setSelectedSummary(a, e);
     }
-    if (null != o && E) {
+    if (null != o && h) {
       let e = eM.ZP.getCurrentSidebarChannelId(n) !== o,
         t = null != eM.ZP.getGuildSidebarState(i);
       if (null != a && null != o && e) {
         if (t)
-          (0, eh.dL)(eq.Z5c.CHANNEL(i, o, l));
+          (0, eE.dL)(eq.Z5c.CHANNEL(i, o, l));
         else {
           let e = {
             type: ep.Ff.THREAD
@@ -565,7 +565,7 @@ let {
     if (a === eQ.oC.ROLE_SUBSCRIPTIONS)
       $.Z.closeSidebar();
     else if (I && c) {
-      let t = null == h && i === eq.ME,
+      let t = null == E && i === eq.ME,
         n = e === eq.Z5c.GUILD_DISCOVERY;
       t || n ? $.Z.closeSidebar() : $.Z.openSidebar();
     } else
@@ -576,7 +576,7 @@ let {
         var t;
         return (null === (t = (0, r.LX)(m, e)) || void 0 === t ? void 0 : t.isExact) === !0;
       }))
-      (0, eh.dL)(ey.Z.fallbackRoute);
+      (0, eE.dL)(ey.Z.fallbackRoute);
   }
 }(t, n);
   }
@@ -592,8 +592,8 @@ let {
   guildId: i,
   channelId: a,
   threadId: s
-} = e5(n), r = (0, eE.S)(i) && i !== eq.ME && i !== eq.I_8;
-if (null != a && (0, eE.c)(a) && !(0, eQ.AB)(a) && r) {
+} = e5(n), r = (0, eh.S)(i) && i !== eq.ME && i !== eq.I_8;
+if (null != a && (0, eh.c)(a) && !(0, eQ.AB)(a) && r) {
   let n = eD.Z.getChannel(a);
   if (null == n)
     eN.Z.loadThread(a).then(() => e9({
@@ -607,7 +607,7 @@ if (null != a && (0, eE.c)(a) && !(0, eQ.AB)(a) && r) {
       state: e.state
     };
   if (null != s) {
-    if (!((0, eE.c)(s) && !(0, eQ.AB)(a)))
+    if (!((0, eh.c)(s) && !(0, eQ.AB)(a)))
       return null;
     let n = eD.Z.getChannel(s);
     if (null == n)

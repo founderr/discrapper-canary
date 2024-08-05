@@ -21,8 +21,8 @@ writable: !0
   }) : e[t] = n, e;
 }
 let _ = 10 * l.Z.Millis.SECOND,
-  E = new Map(),
-  h = new Set(),
+  h = new Map(),
+  E = new Set(),
   I = (e, t, n) => {
 n([
   c.Z.CLOSE,
@@ -67,19 +67,19 @@ super(), c = this, u(this, 'validateSocketClient', void 0), u(this, 'logger', vo
   var n, i;
   let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   c.emit('disconnect', e, a ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : 'Unknown');
-  let [s] = null !== (i = Array.from(E.entries()).find(t => {
+  let [s] = null !== (i = Array.from(h.entries()).find(t => {
     let [n, i] = t;
     return i === e;
   })) && void 0 !== i ? i : [
     null,
     null
   ];
-  null != s && E.delete(s);
+  null != s && h.delete(s);
 }), u(this, 'handleIFrameMount', e => {
   let {
     id: t
   } = e;
-  h.add(t), this.handshakeFailureTimeoutId = setTimeout(() => {
+  E.add(t), this.handshakeFailureTimeoutId = setTimeout(() => {
     Array.from(a.ZP.getSelfEmbeddedActivities().entries()).forEach(e => {
       let [t, n] = e;
       s.default.track(d.rMx.ACTIVITY_HANDSHAKE_TIMED_OUT, {
@@ -95,8 +95,8 @@ super(), c = this, u(this, 'validateSocketClient', void 0), u(this, 'logger', vo
   let {
     id: n
   } = e;
-  h.delete(n);
-  let [i, a] = null !== (t = Array.from(E.entries()).find(e => {
+  E.delete(n);
+  let [i, a] = null !== (t = Array.from(h.entries()).find(e => {
     let [t, i] = e;
     return i.frameId === n;
   })) && void 0 !== t ? t : [
@@ -106,9 +106,9 @@ super(), c = this, u(this, 'validateSocketClient', void 0), u(this, 'logger', vo
   null != a && null != i && (this.disconnectSocket(a, {
     code: d.$VG.CLOSE_NORMAL,
     message: 'iFrame gone'
-  }, !0), E.delete(i));
+  }, !0), h.delete(i));
 }), u(this, 'handleMessage', (e, t, n) => {
-  let i = E.get(t);
+  let i = h.get(t);
   try {
     this.routeEvent(i, t, e, n);
   } catch (e) {
@@ -154,7 +154,7 @@ super(), c = this, u(this, 'validateSocketClient', void 0), u(this, 'logger', vo
     }, e.message);
   }
   let r = t.frame_id;
-  if (!h.has(r))
+  if (!E.has(r))
     throw this.logger.error('Unrecognized frame ID '.concat(r)), new o.Z({
       closeCode: d.$VG.CLOSE_UNSUPPORTED
     }, 'Unrecognized frame ID '.concat(r));
@@ -174,11 +174,11 @@ super(), c = this, u(this, 'validateSocketClient', void 0), u(this, 'logger', vo
   }
   this.logger.info('Socket Opened: '.concat(a.id));
   try {
-    if (await this.validateSocketClient(a, e, t.client_id), !h.has(r))
+    if (await this.validateSocketClient(a, e, t.client_id), !E.has(r))
       throw this.logger.error('Frame ID '.concat(r, ' no longer exists')), new o.Z({
         closeCode: d.$VG.CLOSE_UNSUPPORTED
       }, 'Unrecognized frame ID '.concat(r));
-    E.set(e, a), h.delete(r), this.emit('connect', a), this.logger.info('Socket Validated: '.concat(a.id));
+    h.set(e, a), E.delete(r), this.emit('connect', a), this.logger.info('Socket Validated: '.concat(a.id));
   } catch (e) {
     throw this.logger.info('Socket Closed: '.concat(a.id, ', ').concat(e.message)), e;
   }

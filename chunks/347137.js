@@ -5,13 +5,13 @@ var i = n(735250),
   l = n(442837),
   o = n(212093),
   c = n(570938),
-  d = n(677277),
-  u = n(285865),
-  _ = n(918701),
+  d = n(554300),
+  u = n(677277),
+  _ = n(285865),
+  h = n(918701),
   E = n(702428),
-  h = n(709158),
-  I = n(683301),
-  m = n(360048),
+  I = n(709158),
+  m = n(683301),
   g = n(296386),
   p = n(150192),
   T = n(889010),
@@ -41,14 +41,14 @@ t.Z = function() {
   let {
 currentCategoryId: e,
 isViewingSearchResults: t
-  } = (0, l.cj)([I.ZP], () => ({
-currentCategoryId: I.ZP.getCurrentCategoryId(),
-isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
-  })), n = (0, h.Z)(N.dr.QUEST_HOME_DESKTOP), L = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), O = null == L ? void 0 : L.map(e => ({
+  } = (0, l.cj)([m.ZP], () => ({
+currentCategoryId: m.ZP.getCurrentCategoryId(),
+isViewingSearchResults: m.ZP.getMostRecentQuery().length > 0
+  })), n = (0, I.Z)(N.dr.QUEST_HOME_DESKTOP), L = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), O = null == L ? void 0 : L.map(e => ({
 ...e,
 icon: Z(e.categoryId)
   })), R = e => {
-(0, o.uY)(e, !0), u.Z.closeSidebar(), t && (0, o.AQ)(), (0, _.OG)() && e !== f.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY), !(0, _.OG)() && e === f.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
+(0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, h.OG)() && e !== f.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY), !(0, h.OG)() && e === f.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
   };
   return a.useEffect(() => {
 (0, g.le)(!1, !0);
@@ -57,7 +57,7 @@ children: [
   (0, i.jsx)(S.V, {
     text: A.Z.Messages.DISCOVER
   }),
-  (0, i.jsx)(m.Z, {
+  (0, i.jsx)(d.Z, {
     avatar: (0, i.jsx)(c.Z, {}),
     name: A.Z.Messages.CLANS,
     focusProps: {
@@ -80,7 +80,7 @@ children: [
     currentCategoryId: e,
     shouldDisplaySelectedCategory: !t
   }),
-  (0, i.jsx)(d.Z, {
+  (0, i.jsx)(u.Z, {
     handleCategorySelect: R,
     currentCategoryId: e,
     shouldDisplaySelectedCategory: !t

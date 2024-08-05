@@ -5,9 +5,9 @@ var i, s = n(735250),
   l = n.n(r),
   o = n(86357),
   c = n(54936),
-  u = n(351465),
-  d = n(592771),
-  _ = n(305177),
+  u = n(491598),
+  d = n(351465),
+  _ = n(669021),
   E = n(73346),
   I = n(568836),
   m = n(345898),
@@ -96,11 +96,11 @@ super(...e), N(this, 'renderActions', () => {
         splashClassName: h.splashVideo,
         splashPlaceholderClassName: h.splashPlaceholder
       }),
-      r.exclusive ? (0, s.jsx)(u.Z, {
+      r.exclusive ? (0, s.jsx)(d.Z, {
         className: l()(h.exclusiveRegular, {
           [h.exclusivePlaying]: e
         })
-      }) : r.isTheGameAwardsWinner ? (0, s.jsx)(d.Z, {
+      }) : r.isTheGameAwardsWinner ? (0, s.jsx)(u.Z, {
         className: l()(h.exclusiveRegular, {
           [h.exclusivePlaying]: e
         })

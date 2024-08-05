@@ -8,17 +8,17 @@ var i = t(735250),
   d = t(139387),
   c = t(503089),
   u = t(231757),
-  I = t(106976),
-  m = t(488915),
-  _ = t(984933),
-  N = t(496675),
-  E = t(285952),
+  I = t(600164),
+  m = t(106976),
+  _ = t(488915),
+  N = t(984933),
+  E = t(496675),
   T = t(585483),
   h = t(63063),
   g = t(919196),
   p = t(731072),
-  C = t(494118),
-  f = t(351644),
+  f = t(494118),
+  C = t(351644),
   x = t(720764),
   O = t(981631),
   S = t(689938),
@@ -57,7 +57,7 @@ isFetching: j,
 refToScroller: D,
 errors: P,
 hasChanges: B
-  } = e, y = (0, o.e7)([_.ZP], () => null != s ? _.ZP.getDefaultChannel(s.id) : null), G = (0, o.cj)([_.ZP], () => _.ZP.getChannels(null == s ? void 0 : s.id)), k = (0, o.cj)([N.Z], () => l().keyBy(G.SELECTABLE.map(e => e.channel).filter(e => N.Z.can(O.Plq.MANAGE_WEBHOOKS, e)), 'id')), U = (0, o.cj)([N.Z], () => l().keyBy(G.VOCAL.map(e => e.channel).filter(e => e.isGuildVocal() && N.Z.can(O.Plq.MANAGE_WEBHOOKS, e)), 'id')), H = null != b ? b : y, w = n === O.b4C.APPLICATION ? t : null, [W, F] = a.useState(c.$x), V = a.useCallback(() => B() ? (T.S.dispatch(O.CkL.SHAKE_APP, {
+  } = e, y = (0, o.e7)([N.ZP], () => null != s ? N.ZP.getDefaultChannel(s.id) : null), G = (0, o.cj)([N.ZP], () => N.ZP.getChannels(null == s ? void 0 : s.id)), k = (0, o.cj)([E.Z], () => l().keyBy(G.SELECTABLE.map(e => e.channel).filter(e => E.Z.can(O.Plq.MANAGE_WEBHOOKS, e)), 'id')), U = (0, o.cj)([E.Z], () => l().keyBy(G.VOCAL.map(e => e.channel).filter(e => e.isGuildVocal() && E.Z.can(O.Plq.MANAGE_WEBHOOKS, e)), 'id')), H = null != b ? b : y, w = n === O.b4C.APPLICATION ? t : null, [W, F] = a.useState(c.$x), V = a.useCallback(() => B() ? (T.S.dispatch(O.CkL.SHAKE_APP, {
 duration: 300,
 intensity: W
   }), F(Math.min(W + c.d7, c.w6)), T.S.dispatch(O.CkL.EMPHASIZE_NOTICE), !1) : (F(c.$x), !0), [
@@ -126,7 +126,7 @@ n,
 j
   ]), a.useEffect(() => {
 if ((null == s ? void 0 : s.id) != null)
-  m.Z.getEntitlementsForGuildFetchState(s.id) === m.M.NOT_FETCHED && I.i1(s.id);
+  _.Z.getEntitlementsForGuildFetchState(s.id) === _.M.NOT_FETCHED && m.i1(s.id);
   }, [null == s ? void 0 : s.id]);
   let Q = null;
   switch (n) {
@@ -178,7 +178,7 @@ case O.b4C.APPLICATION:
   }));
   break;
 case O.b4C.CHANNEL_FOLLOWING:
-  Q = (0, i.jsx)(C.Z, {
+  Q = (0, i.jsx)(f.Z, {
     followedChannelWebhooks: X,
     editedWebhook: L,
     selectableWebhookChannels: k,
@@ -202,7 +202,7 @@ case O.b4C.WEBHOOKS:
   });
   break;
 default:
-  Q = (0, i.jsx)(f.Z, {
+  Q = (0, i.jsx)(C.Z, {
     guild: s,
     channel: b,
     applicationIntegrations: Y,
@@ -233,8 +233,8 @@ default:
   }
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(E.Z, {
-    align: E.Z.Align.CENTER,
+  (0, i.jsx)(I.Z, {
+    align: I.Z.Align.CENTER,
     className: A.breadcrumbs,
     children: n === O.b4C.OVERVIEW ? (0, i.jsx)(r.FormTitle, {
       tag: 'h1',

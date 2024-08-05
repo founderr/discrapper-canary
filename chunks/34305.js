@@ -5,12 +5,12 @@ var i = n(735250),
   r = n(481060),
   l = n(325432),
   o = n(570928),
-  c = n(391690),
-  d = n(714759),
-  u = n(285952),
+  c = n(600164),
+  d = n(579022),
+  u = n(391690),
   _ = n(424218),
-  E = n(358085),
-  h = n(998502),
+  h = n(358085),
+  E = n(998502),
   I = n(689938),
   m = n(489927),
   g = n(549856);
@@ -46,22 +46,22 @@ return null != d && (e = null != d.availableKB ? (0, _.BU)(d.availableKB, {
   useKibibytes: !0
 }) : null, t = null != d.totalKB ? (0, _.BU)(d.totalKB, {
   useKibibytes: !0
-}) : null), (0, i.jsxs)(u.Z, {
+}) : null), (0, i.jsxs)(c.Z, {
   className: m.installationPath,
-  align: u.Z.Align.CENTER,
+  align: c.Z.Align.CENTER,
   children: [
     this.renderDiskUsageCircle(),
-    (0, i.jsxs)(u.Z, {
-      direction: u.Z.Direction.VERTICAL,
+    (0, i.jsxs)(c.Z, {
+      direction: c.Z.Direction.VERTICAL,
       className: m.__invalid_descriptionWrapper,
       children: [
-        (0, i.jsxs)(u.Z, {
-          align: u.Z.Align.CENTER,
+        (0, i.jsxs)(c.Z, {
+          align: c.Z.Align.CENTER,
           children: [
             (0, i.jsx)(r.Heading, {
               className: m.rowTitle,
               variant: 'heading-md/semibold',
-              children: null != a ? a : c.Z.getLabelFromPath(n)
+              children: null != a ? a : u.Z.getLabelFromPath(n)
             }),
             l ? (0, i.jsx)('span', {
               className: m.defaultIndicator,
@@ -104,16 +104,16 @@ let {
 return (0, i.jsx)(r.Card, {
   editable: !0,
   className: m.installationPathEditing,
-  children: (0, i.jsxs)(u.Z, {
+  children: (0, i.jsxs)(c.Z, {
     children: [
       this.renderDiskUsageCircle(),
-      (0, i.jsxs)(u.Z.Child, {
+      (0, i.jsxs)(c.Z.Child, {
         children: [
           (0, i.jsx)(r.FormItem, {
             title: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_NAME,
             children: (0, i.jsx)(r.TextInput, {
               value: n,
-              placeholder: c.Z.getLabelFromPath(e),
+              placeholder: u.Z.getLabelFromPath(e),
               onChange: this.handleLabelChange
             })
           }),
@@ -136,7 +136,7 @@ return (0, i.jsx)(r.Card, {
           (0, i.jsx)(r.FormDivider, {
             className: m.separator
           }),
-          (0, i.jsxs)(u.Z, {
+          (0, i.jsxs)(c.Z, {
             children: [
               (0, i.jsx)(r.Button, {
                 disabled: t || this.props.isDefault,
@@ -146,8 +146,8 @@ return (0, i.jsx)(r.Card, {
                 onClick: this.handleRemoveLocation,
                 children: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE
               }),
-              (0, i.jsxs)(u.Z, {
-                justify: u.Z.Justify.END,
+              (0, i.jsxs)(c.Z, {
+                justify: c.Z.Justify.END,
                 children: [
                   (0, i.jsx)(r.Button, {
                     size: r.Button.Sizes.SMALL,
@@ -261,14 +261,14 @@ return (0, i.jsxs)(r.FormSection, {
         metadata: t[s],
         isDefault: n === s,
         editingPath: a,
-        hasGamesInstalledInPath: c.Z.hasGamesInstalledInPath(s),
+        hasGamesInstalledInPath: u.Z.hasGamesInstalledInPath(s),
         onToggleEditing: this.handleToggleEditing
       }, s);
     }),
     (0, i.jsx)('div', {
       className: m.buttonRowWrapper,
       children: (0, i.jsx)(r.Button, {
-        disabled: !E.isPlatformEmbedded,
+        disabled: !h.isPlatformEmbedded,
         onClick: this.handleAddInstallationLocation,
         size: r.Button.Sizes.SMALL,
         children: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD
@@ -281,7 +281,7 @@ return (0, i.jsxs)(r.FormSection, {
 super(...e), p(this, 'state', {
   editingPath: null
 }), p(this, 'handleAddInstallationLocation', () => {
-  h.ZP.showOpenDialog(['openDirectory']).then(e => {
+  E.ZP.showOpenDialog(['openDirectory']).then(e => {
     if (null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0])
       (0, l.RY)(e[0]);
   });
@@ -292,8 +292,8 @@ super(...e), p(this, 'state', {
 });
   }
 }
-t.Z = s.ZP.connectStores([c.Z], () => ({
-  installationPaths: c.Z.installationPaths,
-  installationPathsMetadata: c.Z.installationPathsMetadata,
-  defaultInstallationPath: c.Z.defaultInstallationPath
+t.Z = s.ZP.connectStores([u.Z], () => ({
+  installationPaths: u.Z.installationPaths,
+  installationPathsMetadata: u.Z.installationPathsMetadata,
+  defaultInstallationPath: u.Z.defaultInstallationPath
 }))(S);

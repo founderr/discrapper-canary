@@ -2,8 +2,8 @@ a.r(t);
 var s = a(735250);
 a(470079);
 var n = a(481060),
-  o = a(430824),
-  l = a(153124),
+  o = a(313201),
+  l = a(430824),
   d = a(614812),
   c = a(689938),
   r = a(181526);
@@ -11,9 +11,9 @@ t.default = e => {
   let {
 onClose: t,
 guildId: a
-  } = e, i = (0, l.Dt)(), u = c.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_FALLBACK.format({
+  } = e, i = (0, o.Dt)(), u = c.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_FALLBACK.format({
 helpdeskArticle: d.z
-  }), _ = o.Z.getGuild(a);
+  }), _ = l.Z.getGuild(a);
   return null != _ && (u = c.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION.format({
 guildName: _.name,
 helpdeskArticle: d.z

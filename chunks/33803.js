@@ -23,18 +23,18 @@ var i = n(735250),
   f = n(103575),
   p = n(496675),
   g = n(594174),
-  S = n(702346),
-  A = n(5192),
-  R = n(51144),
-  O = n(937889),
-  x = n(739566),
-  M = n(779125),
-  v = n(890410),
-  L = n(464891),
-  Z = n(507418),
-  P = n(348238),
-  D = n(38267),
-  b = n(83561),
+  S = n(5192),
+  A = n(51144),
+  R = n(937889),
+  O = n(739566),
+  x = n(779125),
+  M = n(890410),
+  v = n(464891),
+  L = n(507418),
+  Z = n(348238),
+  P = n(38267),
+  D = n(83561),
+  b = n(834129),
   j = n(959517),
   U = n(981631),
   y = n(674563),
@@ -47,10 +47,10 @@ function F(e, t) {
 popouts: n,
 selected: i,
 setPopout: a
-  } = (0, D.Z)(e.id, j.d$), {
+  } = (0, P.Z)(e.id, j.d$), {
 usernameProfile: r,
 avatarProfile: l
-  } = n, o = (0, P.wq)(e.author.id, t.id), c = (0, P.RN)(e.author.id, t.id, e.id), u = (0, P.XO)(e, t, r, a), d = (0, P.R9)(l, a);
+  } = n, o = (0, Z.wq)(e.author.id, t.id), c = (0, Z.RN)(e.author.id, t.id, e.id), u = (0, Z.XO)(e, t, r, a), d = (0, Z.R9)(l, a);
   return {
 selected: i,
 onContextMenu: o,
@@ -62,7 +62,7 @@ onPopoutRequestClose: s.useCallback(() => a({
   avatarProfile: !1,
   referencedUsernameProfile: !1
 }), [a]),
-renderPopout: Z.Z,
+renderPopout: L.Z,
 showAvatarPopout: l,
 showUsernamePopout: r
   };
@@ -149,7 +149,7 @@ if (null == s)
   return Y(e, {});
 let a = function(e, t, n) {
   var i;
-  let s = null !== (i = A.ZP.getNickname(n, null, t)) && void 0 !== i ? i : R.ZP.getUserTag(t),
+  let s = null !== (i = S.ZP.getNickname(n, null, t)) && void 0 !== i ? i : A.ZP.getUserTag(t),
     a = o()(e.ts),
     r = ''.concat(s, ' ').concat(a.fromNow());
   try {
@@ -208,8 +208,8 @@ let z = s.memo(function(e) {
 } = e,
 o = F(n, s),
 c = w(s, n.author),
-u = (0, x.ZP)(n),
-d = (0, L.CF)({
+u = (0, O.ZP)(n),
+d = (0, v.CF)({
   message: n,
   channel: s,
   author: u,
@@ -221,8 +221,8 @@ E = g.default.getUser(l),
 I = F(n, s),
 m = w(s, E);
   if (null != E) {
-let e = (0, x.ij)(E, s),
-  i = (0, L.CF)({
+let e = (0, O.ij)(E, s),
+  i = (0, v.CF)({
     message: n,
     channel: s,
     author: e,
@@ -239,7 +239,7 @@ tag: 'span',
 className: G.spanCorrection,
 children: (0, T.Mq)(n, a, () => (0, i.jsx)('div', {
   className: G.channelNameContainer,
-  children: (0, i.jsx)(M.Z, {
+  children: (0, i.jsx)(x.Z, {
     channel: a,
     className: G.channelName,
     openChatWithoutConnecting: !0
@@ -260,14 +260,14 @@ eventHandlers: {
   onMouseEnter: f,
   onMouseLeave: g
 }
-  } = (0, b.m)(!0), {
-onFocus: A,
-...R
+  } = (0, D.m)(!0), {
+onFocus: S,
+...A
   } = (0, c.JA)(null != t ? t : ''), {
-isFocused: x,
-handleFocus: M,
-handleBlur: Z
-  } = (0, P.bb)(A), D = (0, d.e7)([E.Z], () => E.Z.keyboardModeEnabled), j = (0, d.e7)([p.Z], () => p.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]), {
+isFocused: O,
+handleFocus: x,
+handleBlur: L
+  } = (0, Z.bb)(S), P = (0, d.e7)([E.Z], () => E.Z.keyboardModeEnabled), j = (0, d.e7)([p.Z], () => p.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]), {
 ruleName: w,
 embedChannel: Y,
 decisionId: W,
@@ -280,7 +280,7 @@ decisionReason: ee,
 alertActionsExecution: et,
 quarantineType: en,
 interactionUserId: ei
-  } = (0, T.ZP)(a), es = s.useMemo(() => (0, O.k$)(X, Q, l.id), [
+  } = (0, T.ZP)(a), es = s.useMemo(() => (0, R.k$)(X, Q, l.id), [
 X,
 Q,
 l
@@ -309,11 +309,11 @@ a.id
   return (0, i.jsx)('div', {
 onMouseEnter: f,
 onMouseLeave: g,
-children: (0, i.jsx)(S.Z, {
+children: (0, i.jsx)(b.Z, {
   className: r()(G.mainContainer, {
     [G.compact]: n
   }),
-  iconNode: n ? null : (0, i.jsx)(b.S, {
+  iconNode: n ? null : (0, i.jsx)(D.S, {
     src: o
   }),
   iconContainerClassName: G.iconContainer,
@@ -323,7 +323,7 @@ children: (0, i.jsx)(S.Z, {
       [G.compact]: n
     }),
     children: [
-      (0, i.jsx)(L.nD, {
+      (0, i.jsx)(v.nD, {
         message: a,
         messageClassname: G.spanCorrection,
         className: r()(G.usernameContainer, G.spanCorrection, {
@@ -359,8 +359,8 @@ children: (0, i.jsx)(S.Z, {
         className: r()(G.messageContent, {
           [G.compact]: n
         }),
-        children: (0, i.jsx)(v.Z, {
-          ...R,
+        children: (0, i.jsx)(M.Z, {
+          ...A,
           message: a,
           channel: Y,
           content: es,
@@ -369,7 +369,7 @@ children: (0, i.jsx)(S.Z, {
           hideTimestamp: !0,
           className: r()(G.embedCard, {
             [G.compact]: n,
-            [G.selected]: ea || D && x,
+            [G.selected]: ea || P && O,
             [G.isClickable]: null != J && null != Y
           }),
           childrenAccessories: (0, i.jsxs)(i.Fragment, {
@@ -446,8 +446,8 @@ children: (0, i.jsx)(S.Z, {
           }),
           popoutProps: er,
           zalgo: !0,
-          onFocus: M,
-          onBlur: Z,
+          onFocus: x,
+          onBlur: L,
           onClick: eo
         })
       }),

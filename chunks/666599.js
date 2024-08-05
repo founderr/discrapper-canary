@@ -4,8 +4,8 @@ s(470079);
 var n = s(338545),
   l = s(692547),
   t = s(481060),
-  i = s(153124),
-  c = s(154921),
+  i = s(112831),
+  c = s(313201),
   o = s(731455),
   d = s(689938),
   _ = s(81632);
@@ -13,7 +13,7 @@ let I = e => {
   let {
 currentNumber: a,
 thresholdNumber: s,
-currentLabel: i,
+currentLabel: c,
 isPercent: o = !1
   } = e, I = null != s ? Math.floor(a / s * 100) : 0, T = d.Z.Messages.NUMBERS_ONLY.format({
 count: a
@@ -63,8 +63,8 @@ children: [
       (0, r.jsxs)('div', {
         className: _.__invalid_current,
         children: [
-          (0, r.jsx)(c.Z, {
-            color: I < 33 ? c.Z.Colors.ERROR : c.Z.Colors.STATUS_YELLOW,
+          (0, r.jsx)(i.Z, {
+            color: I < 33 ? i.Z.Colors.ERROR : i.Z.Colors.STATUS_YELLOW,
             className: _.bold,
             children: o ? ''.concat(T, '%') : T
           }),
@@ -73,7 +73,7 @@ children: [
             variant: 'text-xs/normal',
             color: 'header-secondary',
             children: [
-              i,
+              c,
               (0, r.jsx)('sup', {
                 'aria-hidden': !0,
                 children: '1'
@@ -106,10 +106,10 @@ children: [
 a.default = e => {
   let a, s, n, {
   guildChecklist: l,
-  transitionState: c,
+  transitionState: i,
   onClose: T
 } = e,
-m = (0, i.Dt)(),
+m = (0, c.Dt)(),
 {
   retentionHealthy: S,
   engagementHealthy: E,
@@ -180,7 +180,7 @@ a = (0, r.jsxs)('div', {
 });
   }
   return (0, r.jsxs)(t.ModalRoot, {
-transitionState: c,
+transitionState: i,
 size: t.ModalSize.MEDIUM,
 className: _.__invalid_modal,
 'aria-labelledby': m,

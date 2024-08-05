@@ -12,8 +12,8 @@ var a = n(120356),
   o = n(481060),
   c = n(129861),
   u = n(700582),
-  d = n(158776),
-  h = n(285952),
+  d = n(600164),
+  h = n(158776),
   p = n(51144),
   m = n(404037);
 
@@ -29,7 +29,7 @@ onClick: g,
 onMouseEnter: C,
 'aria-setsize': I,
 'aria-posinset': x
-  } = e, T = (0, r.e7)([d.Z], () => d.Z.getStatus(t.id)), N = (0, l.JA)(String(t.id));
+  } = e, T = (0, r.e7)([h.Z], () => h.Z.getStatus(t.id)), N = (0, l.JA)(String(t.id));
   return (0, i.jsx)(o.Clickable, {
 id: 'user-row-'.concat(n),
 className: m.friendWrapper,
@@ -44,8 +44,8 @@ role: 'option',
 'aria-selected': E,
 'aria-setsize': I,
 'aria-posinset': x,
-children: (0, i.jsxs)(h.Z, {
-  align: h.Z.Align.CENTER,
+children: (0, i.jsxs)(d.Z, {
+  align: d.Z.Align.CENTER,
   className: s()(m.friend, {
     [m.friendSelected]: f
   }),
@@ -55,9 +55,9 @@ children: (0, i.jsxs)(h.Z, {
       status: T,
       className: m.avatar
     }),
-    (0, i.jsxs)(h.Z, {
+    (0, i.jsxs)(d.Z, {
       className: m.match,
-      align: h.Z.Align.BASELINE,
+      align: d.Z.Align.BASELINE,
       children: [
         (0, i.jsx)(o.Text, {
           tag: 'strong',

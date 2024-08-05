@@ -1,213 +1,213 @@
-s.d(t, {
+n.d(t, {
   J6: function() {
-return L;
+return F;
   },
   LO: function() {
-return p;
+return y;
   },
   TQ: function() {
-return O;
-  },
-  ZU: function() {
-return R;
-  },
-  Zn: function() {
-return x;
-  },
-  bo: function() {
 return M;
   },
+  ZU: function() {
+return Z;
+  },
+  Zn: function() {
+return p;
+  },
+  bo: function() {
+return N;
+  },
   kK: function() {
-return f;
+return m;
   },
   om: function() {
-return v;
+return x;
   },
   uX: function() {
-return j;
+return V;
   }
-}), s(518263), s(970173), s(520712), s(268111), s(941497), s(32026), s(480839), s(744285), s(492257), s(873817);
-var n = s(250683),
-  a = s(512722),
-  i = s.n(a),
-  r = s(913527),
-  o = s.n(r),
-  l = s(544891),
-  c = s(253135),
-  d = s(314897),
-  _ = s(131951),
-  E = s(594174),
-  u = s(70956),
-  T = s(960048),
-  I = s(51144),
-  S = s(718629),
-  N = s(615830),
-  C = s(352954),
-  m = s(571826),
-  A = s(760373),
-  g = s(981631),
-  h = s(689938);
+}), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
+var r = n(250683),
+  i = n(512722),
+  a = n.n(i),
+  s = n(913527),
+  o = n.n(s),
+  E = n(544891),
+  u = n(253135),
+  c = n(314897),
+  l = n(131951),
+  d = n(594174),
+  _ = n(70956),
+  f = n(960048),
+  I = n(51144),
+  S = n(718629),
+  R = n(615830),
+  h = n(352954),
+  C = n(571826),
+  A = n(760373),
+  T = n(981631),
+  g = n(689938);
 
-function O(e, t, s, n, a) {
-  s ? S.Z.createVerifiedKey(e, t) : S.Z.createSecureFramesTransientKey(e, t), (0, m.M1)({
-channelId: n,
+function M(e, t, n, r, i) {
+  n ? S.Z.createVerifiedKey(e, t) : S.Z.createSecureFramesTransientKey(e, t), (0, C.M1)({
+channelId: r,
 userId: e,
-analyticsLocation: a
+analyticsLocation: i
   });
 }
 
-function p(e, t, s) {
-  if (s) {
-let s = (0, c.MK)(new Uint8Array(t));
-S.Z.deleteVerifiedKey(e, s);
+function y(e, t, n) {
+  if (n) {
+let n = (0, u.MK)(new Uint8Array(t));
+S.Z.deleteVerifiedKey(e, n);
   } else
 S.Z.deleteSecureFramesTransientKey(e);
 }
 
-function R(e, t) {
-  C.Z.openSecureFramesUpdateConfirmation({
-title: h.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE,
-subtitle: h.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE,
+function Z(e, t) {
+  h.Z.openSecureFramesUpdateConfirmation({
+title: g.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE,
+subtitle: g.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE,
 onConfirm: () => {
-  S.Z.deleteVerifiedKey(e, t), (0, m.Pn)();
+  S.Z.deleteVerifiedKey(e, t), (0, C.Pn)();
 }
   });
 }
 
-function x(e) {
-  let t = E.default.getUser(e),
-s = I.ZP.getName(t);
-  C.Z.openSecureFramesUpdateConfirmation({
-title: h.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE.format({
-  username: s
+function p(e) {
+  let t = d.default.getUser(e),
+n = I.ZP.getName(t);
+  h.Z.openSecureFramesUpdateConfirmation({
+title: g.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE.format({
+  username: n
 }),
-subtitle: h.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE,
+subtitle: g.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE,
 onConfirm: () => {
-  S.Z.deleteAllUserVerifiedKeys(e), (0, m.DF)();
+  S.Z.deleteAllUserVerifiedKeys(e), (0, C.DF)();
 }
   });
 }
 
-function M(e) {
+function N(e) {
   let t = o()(e),
-s = o()().diff(t, 's');
-  if (s > 12 * u.Z.Seconds.DAYS_30) {
-let e = Math.round(s / (12 * u.Z.Seconds.DAYS_30));
-return h.Z.Messages.E2EE_USER_VERIFIED_YEARS_AGO.format({
+n = o()().diff(t, 's');
+  if (n > 12 * _.Z.Seconds.DAYS_30) {
+let e = Math.round(n / (12 * _.Z.Seconds.DAYS_30));
+return g.Z.Messages.E2EE_USER_VERIFIED_YEARS_AGO.format({
   count: e
 });
   }
-  if (s > u.Z.Seconds.DAYS_30) {
-let e = Math.round(s / u.Z.Seconds.DAYS_30);
-return h.Z.Messages.E2EE_USER_VERIFIED_MONTHS_AGO.format({
+  if (n > _.Z.Seconds.DAYS_30) {
+let e = Math.round(n / _.Z.Seconds.DAYS_30);
+return g.Z.Messages.E2EE_USER_VERIFIED_MONTHS_AGO.format({
   count: e
 });
   }
-  if (s > 7 * u.Z.Seconds.DAY) {
-let e = Math.round(s / (7 * u.Z.Seconds.DAY));
-return h.Z.Messages.E2EE_USER_VERIFIED_WEEKS_AGO.format({
+  if (n > 7 * _.Z.Seconds.DAY) {
+let e = Math.round(n / (7 * _.Z.Seconds.DAY));
+return g.Z.Messages.E2EE_USER_VERIFIED_WEEKS_AGO.format({
   count: e
 });
-  } else if (s > u.Z.Seconds.DAY) {
-let e = Math.round(s / u.Z.Seconds.DAY);
-return h.Z.Messages.E2EE_USER_VERIFIED_DAYS_AGO.format({
+  } else if (n > _.Z.Seconds.DAY) {
+let e = Math.round(n / _.Z.Seconds.DAY);
+return g.Z.Messages.E2EE_USER_VERIFIED_DAYS_AGO.format({
   count: e
 });
-  } else if (s > u.Z.Seconds.HOUR) {
-let e = Math.round(s / u.Z.Seconds.HOUR);
-return h.Z.Messages.E2EE_USER_VERIFIED_HOURS_AGO.format({
+  } else if (n > _.Z.Seconds.HOUR) {
+let e = Math.round(n / _.Z.Seconds.HOUR);
+return g.Z.Messages.E2EE_USER_VERIFIED_HOURS_AGO.format({
   count: e
 });
   } else {
-if (!(s > u.Z.Seconds.MINUTE))
-  return h.Z.Messages.E2EE_USER_VERIFIED_SECONDS_AGO.format({
-    count: s
+if (!(n > _.Z.Seconds.MINUTE))
+  return g.Z.Messages.E2EE_USER_VERIFIED_SECONDS_AGO.format({
+    count: n
   });
-let e = Math.round(s / u.Z.Seconds.MINUTE);
-return h.Z.Messages.E2EE_USER_VERIFIED_MINUTES_AGO.format({
+let e = Math.round(n / _.Z.Seconds.MINUTE);
+return g.Z.Messages.E2EE_USER_VERIFIED_MINUTES_AGO.format({
   count: e
 });
   }
 }
 
-function f(e) {
+function m(e) {
   let {
 isCurrentUserPersistent: t,
-isOtherUserPersistent: s,
-otherUserNickname: n
+isOtherUserPersistent: n,
+otherUserNickname: r
   } = e;
-  if (t && s)
-return h.Z.Messages.E2EE_PERSISTENT_VERIFICATION_DESC.format({
+  if (t && n)
+return g.Z.Messages.E2EE_PERSISTENT_VERIFICATION_DESC.format({
   helpArticle: A.l4
 });
   if (t)
-return h.Z.Messages.E2EE_OTHER_USER_TRANSIENT_VERIFICATION_DESC.format({
-  username: n,
+return g.Z.Messages.E2EE_OTHER_USER_TRANSIENT_VERIFICATION_DESC.format({
+  username: r,
   helpArticle: A.l4
 });
-  if (s)
-return h.Z.Messages.E2EE_CURRENT_USER_TRANSIENT_VERIFICATION_DESC.format({
+  if (n)
+return g.Z.Messages.E2EE_CURRENT_USER_TRANSIENT_VERIFICATION_DESC.format({
   helpArticle: A.l4
 });
   else
-return h.Z.Messages.E2EE_TRANSIENT_VERIFICATION_DESC.format({
+return g.Z.Messages.E2EE_TRANSIENT_VERIFICATION_DESC.format({
   helpArticle: A.l4
 });
 }
-async function D(e) {
-  let t = d.default.getStaticAuthSessionId();
-  return i()(null != t, '[getCurrentUserPublicKey] session id should not be null'), await _.Z.getMLSSigningKey(t, e);
+async function U(e) {
+  let t = c.default.getStaticAuthSessionId();
+  return a()(null != t, '[getCurrentUserPublicKey] session id should not be null'), await l.Z.getMLSSigningKey(t, e);
 }
 
-function P(e) {
-  let t = n.fromByteArray(new Uint8Array(e));
+function D(e) {
+  let t = r.fromByteArray(new Uint8Array(e));
   return 'data:application/octet-stream;base64,'.concat(t);
 }
-async function L(e, t, s) {
+async function F(e, t, n) {
   try {
-return (await l.tn.post({
-  url: g.ANM.VOICE_MATCH_PUBLIC_KEY(e),
+return (await E.tn.post({
+  url: T.ANM.VOICE_MATCH_PUBLIC_KEY(e),
   body: {
-    public_key: P(t),
-    key_version: s
+    public_key: D(t),
+    key_version: n
   }
 })).body.is_match;
   } catch (e) {
-throw T.Z.captureException(e), e;
+throw f.Z.captureException(e), e;
   }
 }
-async function b(e) {
+async function L(e) {
   let {
 key: t,
-signature: s
-  } = await D(e);
+signature: n
+  } = await U(e);
   try {
-await l.tn.put({
-  url: g.ANM.VOICE_PUBLIC_KEYS(),
+await E.tn.put({
+  url: T.ANM.VOICE_PUBLIC_KEYS(),
   body: {
-    public_key: P(t),
-    signature: P(s),
+    public_key: D(t),
+    signature: D(n),
     key_version: e
   }
 }), S.Z.addCurrentUserUploadedKeyVersionCached(e);
   } catch (e) {
-throw T.Z.captureException(e), e;
+throw f.Z.captureException(e), e;
   }
 }
 
-function Z(e) {
-  return N.Z.getUploadedKeyVersionsCached().includes(e);
+function b(e) {
+  return R.Z.getUploadedKeyVersionsCached().includes(e);
 }
-async function v(e) {
-  !Z(e) && await b(e);
+async function x(e) {
+  !b(e) && await L(e);
 }
-async function j(e) {
-  if (!Z(e))
-return await b(e), !0;
-  let t = d.default.getId(),
+async function V(e) {
+  if (!b(e))
+return await L(e), !0;
+  let t = c.default.getId(),
 {
-  key: s
-} = await D(e),
-n = await L(t, s, e);
-  return !n && (0, m.KA)(e), n;
+  key: n
+} = await U(e),
+r = await F(t, n, e);
+  return !r && (0, C.KA)(e), r;
 }

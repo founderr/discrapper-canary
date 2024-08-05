@@ -8,8 +8,8 @@ var r = n(735250),
   c = n(998698),
   d = n(895924),
   _ = n(588468),
-  E = n(718745),
-  f = n(285952),
+  E = n(600164),
+  f = n(718745),
   h = n(590921),
   p = n(665692),
   m = n(981631),
@@ -34,7 +34,7 @@ query: t.trim()
 let A = {
   stores: [
 c.Z,
-E.Z
+f.Z
   ],
   matches(e, t, n, r, i) {
 var a;
@@ -49,7 +49,7 @@ if (null == a)
   return g;
 let u = s().findKey(m.nkL, e => e.command === a);
 i && null != u && o.length > 0 && l.Z.search(u, o);
-let c = E.Z.getResults(u, o);
+let c = f.Z.getResults(u, o);
 return null == c ? g : {
   results: {
     command: a,
@@ -69,7 +69,7 @@ let {
   query: l,
   options: u,
   onHover: d,
-  onClick: E
+  onClick: f
 } = e, {
   command: p,
   query: g
@@ -89,7 +89,7 @@ if (null != t) {
         var i, s, o;
         return e = !0, (0, r.jsx)(_.ZP.GIFIntegration, {
           className: T.horizontalAutocomplete,
-          onClick: E,
+          onClick: f,
           onHover: d,
           selected: a === n,
           index: n,
@@ -110,7 +110,7 @@ if (null != t) {
       (0, r.jsx)(_.ZP.Title, {
         title: l
       }),
-      e ? (0, r.jsx)(f.Z, {
+      e ? (0, r.jsx)(E.Z, {
         className: T.horizontalAutocompletes,
         children: n
       }) : n

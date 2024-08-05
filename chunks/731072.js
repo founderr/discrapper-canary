@@ -34,7 +34,7 @@ T() && (e.id === (null == t ? void 0 : t.id) && l.Z.stopEditingIntegration(), r.
 T,
 t,
 I.id
-  ]), C = a.useCallback(e => {
+  ]), f = a.useCallback(e => {
 T() && (e === (null == t ? void 0 : t.id) ? l.Z.stopEditingIntegration() : l.Z.startEditingIntegration(e));
   }, [
 T,
@@ -60,7 +60,7 @@ children: [
     isExpanded: (null == t ? void 0 : t.id) === e.id,
     onEnable: g,
     onDisable: p,
-    onToggleExpand: () => C(e.id)
+    onToggleExpand: () => f(e.id)
   }, e.id)),
   (0, i.jsx)(s.Text, {
     className: u.helpText,

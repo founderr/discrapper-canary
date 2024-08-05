@@ -16,16 +16,16 @@ var n = s(735250),
   u = s(857595),
   T = s(607070),
   I = s(627845),
-  S = s(786761),
-  N = s(3148),
-  C = s(739566),
-  m = s(753206),
-  A = s(440849),
-  g = s(921801),
-  h = s(196051),
-  O = s(441729),
-  p = s(285952),
-  R = s(153124),
+  S = s(600164),
+  N = s(313201),
+  C = s(786761),
+  m = s(3148),
+  A = s(739566),
+  g = s(753206),
+  h = s(440849),
+  O = s(921801),
+  p = s(196051),
+  R = s(441729),
   x = s(626135),
   M = s(63063),
   f = s(695346),
@@ -40,14 +40,14 @@ var n = s(735250),
   U = s(412809),
   G = s(549856),
   F = s(328756);
-let y = (0, R.hQ)(),
-  V = (0, R.hQ)(),
-  Y = (0, R.hQ)(),
+let y = (0, N.hQ)(),
+  V = (0, N.hQ)(),
+  Y = (0, N.hQ)(),
   w = l().debounce(e => {
 (0, u.o2)(e);
   }, 250),
   k = l().debounce(e => {
-(0, h.Ct)(e);
+(0, p.Ct)(e);
   }, 250);
 
 function H(e) {
@@ -59,49 +59,49 @@ children: [
     className: G.marginBottom20,
     children: (0, n.jsx)(W, {})
   }),
-  (0, n.jsxs)(g.F, {
+  (0, n.jsxs)(O.F, {
     setting: b.s6.ACCESSIBILITY_SATURATION,
     children: [
       (0, n.jsx)(K, {}),
       (0, n.jsx)(d.FormDivider, {})
     ]
   }),
-  (0, n.jsx)(g.F, {
+  (0, n.jsx)(O.F, {
     setting: b.s6.ACCESSIBILITY_LINK_DECORATIONS,
     children: (0, n.jsx)(z, {})
   }),
-  (0, n.jsx)(g.F, {
+  (0, n.jsx)(O.F, {
     setting: b.s6.ACCESSIBILITY_ROLE_STYLE,
     children: (0, n.jsx)(Q, {})
   }),
-  (0, n.jsx)(g.F, {
+  (0, n.jsx)(O.F, {
     setting: b.s6.ACCESSIBILITY_TAGS,
     children: (0, n.jsx)(X, {})
   }),
-  (0, n.jsx)(g.F, {
+  (0, n.jsx)(O.F, {
     setting: b.s6.ACCESSIBILITY_SYNC_PROFILE_THEME,
     children: (0, n.jsx)(q, {})
   }),
-  (0, I.b)() ? (0, n.jsxs)(g.F, {
+  (0, I.b)() ? (0, n.jsxs)(O.F, {
     setting: b.s6.ACCESSIBILITY_CONTRAST,
     children: [
       (0, n.jsx)(J, {}),
       ' '
     ]
   }) : null,
-  (0, n.jsx)(g.F, {
+  (0, n.jsx)(O.F, {
     setting: b.s6.ACCESSIBILITY_REDUCED_MOTION,
     children: (0, n.jsx)($, {})
   }),
-  (0, n.jsx)(g.F, {
+  (0, n.jsx)(O.F, {
     setting: b.s6.ACCESSIBILITY_STICKERS,
     children: (0, n.jsx)(ee, {})
   }),
-  (0, n.jsx)(g.F, {
+  (0, n.jsx)(O.F, {
     setting: b.s6.ACCESSIBILITY_MESSAGES,
     children: (0, n.jsx)(et, {})
   }),
-  (0, n.jsxs)(g.F, {
+  (0, n.jsxs)(O.F, {
     setting: b.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
     children: [
       (0, n.jsx)(es, {}),
@@ -124,8 +124,8 @@ children: [
 function W() {
   let e = f.jU.useSetting(),
 [t] = a.useState(() => {
-  let e = (0, S.e5)({
-    ...(0, N.ZP)({
+  let e = (0, C.e5)({
+    ...(0, m.ZP)({
       channelId: '1337',
       content: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_LINK_PREVIEW_MESSAGE.format({
         previewLink: 'https://discord.com/accessibility'
@@ -166,10 +166,10 @@ children: (0, n.jsxs)(d.Card, {
     }),
     (0, n.jsx)('div', {
       className: U.previewMessage,
-      children: (0, n.jsx)(m.Z, {
+      children: (0, n.jsx)(g.Z, {
         compact: e,
         author: {
-          ...(0, C.ZH)(t),
+          ...(0, A.ZH)(t),
           colorString: '#DD80F4'
         },
         message: t
@@ -405,14 +405,14 @@ children: [
   (0, n.jsx)(d.FormSwitch, {
     className: G.marginBottom40,
     value: e,
-    note: null != l ? (0, A.Z)(l) : void 0,
+    note: null != l ? (0, h.Z)(l) : void 0,
     onChange: f.QK.updateSetting,
     children: B.Z.Messages.GIF_AUTO_PLAY_LABEL
   }),
   (0, n.jsx)(d.FormSwitch, {
     className: r()(G.marginTop8, G.marginBottom20),
     value: t,
-    note: null != _ ? (0, A.Z)(_) : void 0,
+    note: null != _ ? (0, h.Z)(_) : void 0,
     onChange: f.Yk.updateSetting,
     children: B.Z.Messages.ANIMATE_EMOJI
   })
@@ -433,7 +433,7 @@ children: [
   (0, n.jsx)(d.FormText, {
     type: d.FormText.Types.DESCRIPTION,
     className: G.marginBottom8,
-    children: null != t ? (0, A.Z)(t) : B.Z.Messages.STICKERS_AUTO_PLAY_HELP
+    children: null != t ? (0, h.Z)(t) : B.Z.Messages.STICKERS_AUTO_PLAY_HELP
   }),
   (0, n.jsx)(d.RadioGroup, {
     options: [{
@@ -494,7 +494,7 @@ children: [
 
 function es() {
   let e = f.OW.useSetting(),
-t = (0, c.e7)([O.Z], () => O.Z.speechRate),
+t = (0, c.e7)([R.Z], () => R.Z.speechRate),
 [s, i] = a.useState(!1);
   return E.Zh ? (0, n.jsxs)(n.Fragment, {
 children: [
@@ -526,13 +526,13 @@ children: [
           color: d.ButtonColors.BRAND,
           onClick: () => {
             if (s) {
-              (0, h.NB)(), i(!1);
+              (0, p.NB)(), i(!1);
               return;
             }
-            (0, h.cP)(B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => i(!0), () => i(!1)), i(!0);
+            (0, p.cP)(B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_TEST, !0, void 0, () => i(!0), () => i(!1)), i(!0);
           },
-          children: (0, n.jsxs)(p.Z, {
-            align: p.Z.Align.CENTER,
+          children: (0, n.jsxs)(S.Z, {
+            align: S.Z.Align.CENTER,
             children: [
               s ? (0, n.jsx)(d.PauseIcon, {
                 size: 'md',

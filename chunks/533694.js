@@ -10,8 +10,8 @@ var s = n(399606),
   r = n(607070),
   l = n(739566),
   o = n(942951),
-  c = n(703656),
-  u = n(702346),
+  c = n(834129),
+  u = n(703656),
   d = n(331372),
   _ = n(981631),
   E = n(689938),
@@ -74,12 +74,12 @@ usernameHook: h,
 productName: null !== (a = null === (s = d.purchaseNotification) || void 0 === s ? void 0 : null === (t = s.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== a ? a : '',
 handleProductListingClick: () => {
   var e, t, n;
-  (0, c.uL)(_.Z5c.GUILD_PRODUCT(r.guild_id, null !== (n = null === (t = d.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ''));
+  (0, u.uL)(_.Z5c.GUILD_PRODUCT(r.guild_id, null !== (n = null === (t = d.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ''));
 }
   });
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(u.Z, {
+  (0, i.jsx)(c.Z, {
     icon: n(570111),
     timestamp: d.timestamp,
     compact: I,

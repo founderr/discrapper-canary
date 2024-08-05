@@ -9,13 +9,13 @@ var s = n(735250),
   d = n(481060),
   u = n(100527),
   _ = n(933557),
-  I = n(484459),
-  E = n(103575),
-  T = n(387667),
-  m = n(699516),
-  N = n(594174),
-  S = n(259580),
-  h = n(154921),
+  I = n(112831),
+  E = n(484459),
+  T = n(103575),
+  m = n(387667),
+  N = n(699516),
+  S = n(594174),
+  h = n(259580),
   g = n(934415),
   C = n(51144),
   x = n(884737),
@@ -35,10 +35,10 @@ let {
   guildId: a
 } = this.props;
 return (0, s.jsx)(d.Popout, {
-  preload: () => (0, I.W)(e.id, e.getAvatarURL(a, 80), {
+  preload: () => (0, E.W)(e.id, e.getAvatarURL(a, 80), {
     guildId: a
   }),
-  renderPopout: t => (0, s.jsx)(E.Z, {
+  renderPopout: t => (0, s.jsx)(T.Z, {
     ...t,
     location: 'GuildSettingsAuditLogEntry',
     userId: e.id,
@@ -87,11 +87,11 @@ return (e.actionType !== p.vB8.DELETE || e.action === p.rsA.MEMBER_BAN_ADD || e.
   getActionTypeColor(e) {
 switch (e) {
   case p.vB8.CREATE:
-    return h.Z.Colors.STATUS_GREEN;
+    return I.Z.Colors.STATUS_GREEN;
   case p.vB8.DELETE:
-    return h.Z.Colors.STATUS_RED;
+    return I.Z.Colors.STATUS_RED;
   default:
-    return h.Z.Colors.STATUS_YELLOW;
+    return I.Z.Colors.STATUS_YELLOW;
 }
   }
   getRowAccentColor() {
@@ -136,7 +136,7 @@ return null != c ? (0, s.jsx)(d.Text, {
       children: n
     }, i),
     count: o.count,
-    channel: o.channel ? 'string' == typeof o.channel ? o.channel : (0, _.F6)(o.channel, N.default, m.Z, !0) : null,
+    channel: o.channel ? 'string' == typeof o.channel ? o.channel : (0, _.F6)(o.channel, S.default, N.Z, !0) : null,
     channelHook: (e, t) => (0, s.jsx)('span', {
       onContextMenu: i,
       children: e
@@ -332,7 +332,7 @@ return e.replaceAll('_', ' ').toLocaleLowerCase();
   renderActionTag() {
 let {
   log: e
-} = this.props, t = (0, T.p5)(e.action);
+} = this.props, t = (0, m.p5)(e.action);
 if (null != t)
   return (0, s.jsx)('div', {
     className: R.tag,
@@ -355,8 +355,8 @@ let {
 if (null == o)
   return null;
 let _ = this.hasChangesToRender(),
-  T = R.headerDefault;
-a ? T = R.headerExpanded : _ && (T = R.headerClickable);
+  I = R.headerDefault;
+a ? I = R.headerExpanded : _ && (I = R.headerClickable);
 let m = t.timestampStart.calendar(),
   N = t.timestampEnd.calendar();
 e = m === N ? (0, s.jsx)(d.Text, {
@@ -368,23 +368,23 @@ e = m === N ? (0, s.jsx)(d.Text, {
   variant: 'text-xs/normal',
   children: '\u2022 '.concat(m, '\u2014').concat(N)
 });
-let h = _ ? i : p.dG4;
+let S = _ ? i : p.dG4;
 return (0, s.jsx)(c.mh, {
   id: t.id,
   children: i => (0, s.jsxs)('div', {
     className: r()(this.getRowAccentColor(), R.auditLog, n),
     children: [
       (0, s.jsxs)(d.Clickable, {
-        className: T,
+        className: I,
         'aria-expanded': a,
-        onClick: h,
+        onClick: S,
         ...i,
         children: [
           (0, s.jsx)(d.Popout, {
-            preload: () => (0, I.W)(t.userId, o.getAvatarURL(l, 80), {
+            preload: () => (0, E.W)(t.userId, o.getAvatarURL(l, 80), {
               guildId: l
             }),
-            renderPopout: e => (0, s.jsx)(E.Z, {
+            renderPopout: e => (0, s.jsx)(T.Z, {
               ...e,
               location: 'GuildSettingsAuditLogEntry',
               userId: t.userId,
@@ -417,7 +417,7 @@ return (0, s.jsx)(c.mh, {
               })
             ]
           }),
-          _ ? (0, s.jsx)(S.Z, {
+          _ ? (0, s.jsx)(h.Z, {
             className: R.expand,
             foreground: R.expandForeground,
             expanded: a,

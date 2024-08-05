@@ -8,13 +8,13 @@ var i = n(735250),
   s = n(442837),
   r = n(481060),
   l = n(58642),
-  o = n(695346),
-  c = n(490983),
-  d = n(285952),
+  o = n(600164),
+  c = n(695346),
+  d = n(490983),
   u = n(626135),
   _ = n(630388),
-  E = n(804739),
-  h = n(957657),
+  h = n(804739),
+  E = n(957657),
   I = n(34305),
   m = n(981631),
   g = n(689938),
@@ -32,8 +32,8 @@ let t = e.libraryApplication.getDistributor();
 return (0, i.jsxs)('div', {
   className: p.hiddenLibraryApplication,
   children: [
-    (0, i.jsxs)(d.Z, {
-      direction: d.Z.Direction.VERTICAL,
+    (0, i.jsxs)(o.Z, {
+      direction: o.Z.Direction.VERTICAL,
       className: p.hiddenLibraryApplicationContent,
       children: [
         (0, i.jsx)('div', {
@@ -71,10 +71,10 @@ children: [
 }
 class S extends a.PureComponent {
   handleToggleShortcutDesktop(e) {
-o.Xc.updateSetting(e);
+c.Xc.updateSetting(e);
   }
   handleToggleShortcutStartMenu(e) {
-o.Pe.updateSetting(e);
+c.Pe.updateSetting(e);
   }
   trackRestoreApplication(e, t) {
 u.default.track(m.rMx.APPLICATION_SETTINGS_UPDATED, {
@@ -91,7 +91,7 @@ let {
 return (0, i.jsxs)('div', {
   className: p.body,
   children: [
-    (0, E.Q)() ? (0, i.jsxs)(a.Fragment, {
+    (0, h.Q)() ? (0, i.jsxs)(a.Fragment, {
       children: [
         (0, i.jsx)(r.FormSwitch, {
           value: t,
@@ -118,7 +118,7 @@ return (0, i.jsxs)('div', {
   render() {
 return (0, i.jsxs)(i.Fragment, {
   children: [
-    (0, i.jsx)(h.Z, {
+    (0, i.jsx)(E.Z, {
       currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS
     }),
     (0, i.jsx)(r.ScrollerAuto, {
@@ -144,9 +144,9 @@ super(...e), t = this, n = 'handleRestoreHiddenLibraryApplication', i = e => {
 
 function f() {
   let e = {
-installShortcutDesktop: o.Xc.useSetting(),
-installShortcutStartMenu: o.Pe.useSetting(),
-hiddenLibraryApplicationViewItems: (0, s.e7)([c.Z], () => c.Z.hiddenLibraryApplicationViewItems)
+installShortcutDesktop: c.Xc.useSetting(),
+installShortcutStartMenu: c.Pe.useSetting(),
+hiddenLibraryApplicationViewItems: (0, s.e7)([d.Z], () => d.Z.hiddenLibraryApplicationViewItems)
   };
   return (0, i.jsx)(S, {
 ...e

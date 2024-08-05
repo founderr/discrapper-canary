@@ -8,9 +8,9 @@ s(470079);
 var a = s(442837),
   i = s(481060),
   r = s(607070),
-  o = s(122890),
-  l = s(285952),
-  c = s(300395),
+  o = s(600164),
+  l = s(122890),
+  c = s(110818),
   d = s(546590);
 
 function _(e) {
@@ -18,7 +18,7 @@ function _(e) {
 purchaseState: t,
 currentStep: s,
 onClose: _
-  } = e, [E, u] = (0, o.z)({
+  } = e, [E, u] = (0, l.z)({
 purchaseState: t,
 currentStep: s,
 initialScene: c.fe.Scenes.ENTRY,
@@ -27,7 +27,7 @@ errorScene: c.fe.Scenes.ERROR,
 successScene: c.fe.Scenes.SUCCESS
   }), T = (0, a.e7)([r.Z], () => r.Z.useReducedMotion);
   return (0, n.jsxs)(i.ModalHeader, {
-align: l.Z.Align.START,
+align: o.Z.Align.START,
 className: d.header,
 separator: !1,
 children: [

@@ -5,8 +5,8 @@ return u;
 });
 var i = n(735250),
   s = n(470079),
-  a = n(598077),
-  r = n(806519),
+  a = n(686546),
+  r = n(598077),
   l = n(865112),
   o = n(934914);
 let c = e => {
@@ -35,7 +35,7 @@ if (null != t.icon_name)
     src: l.VH[(0, l.RB)(t.icon_name)]
   });
 else if (null != t.other_user) {
-  let e = t.other_user instanceof a.Z ? t.other_user : new a.Z(t.other_user);
+  let e = t.other_user instanceof r.Z ? t.other_user : new r.Z(t.other_user);
   n = (0, i.jsx)('img', {
     alt: '',
     className: o.image,
@@ -54,8 +54,8 @@ let u = (0, l.Vi)(t.type);
 return (0, i.jsxs)('div', {
   className: o.container,
   children: [
-    (0, i.jsx)(r.ZP, {
-      mask: null == u ? r.QS.AVATAR_DEFAULT : r.QS.AVATAR_STATUS_ROUND_16,
+    (0, i.jsx)(a.ZP, {
+      mask: null == u ? a.QS.AVATAR_DEFAULT : a.QS.AVATAR_STATUS_ROUND_16,
       width: 40,
       height: 40,
       rightOverhang: 3,

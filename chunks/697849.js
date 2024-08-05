@@ -5,10 +5,10 @@ var i = t(735250),
   r = t(481060),
   o = t(100527),
   c = t(906732),
-  s = t(724912),
-  d = t(41776),
-  u = t(592125),
-  _ = t(153124),
+  s = t(313201),
+  d = t(724912),
+  u = t(41776),
+  _ = t(592125),
   g = t(626135),
   v = t(981888),
   h = t(897285),
@@ -40,21 +40,21 @@ onActionTaken: r,
 isHub: o,
 isMember: c,
 recurrenceId: s
-  } = e, u = (0, f.xt)(n), _ = (0, l.e7)([f.ZP], () => f.ZP.isInterestedInEventRecurrence(n.id, s), [
+  } = e, d = (0, f.xt)(n), _ = (0, l.e7)([f.ZP], () => f.ZP.isInterestedInEventRecurrence(n.id, s), [
 s,
 n
-  ]), g = (0, I.ZP)(n), v = (0, l.e7)([d.Z], () => d.Z.isLurking(t.id), [t.id]), h = (0, x.T)(null == a ? void 0 : a.id, n.id), m = (0, D.Z)({
+  ]), g = (0, I.ZP)(n), v = (0, l.e7)([u.Z], () => u.Z.isLurking(t.id), [t.id]), h = (0, x.T)(null == a ? void 0 : a.id, n.id), m = (0, D.Z)({
 guild: t,
 channel: a,
 guildScheduledEvent: n,
-isActive: u,
+isActive: d,
 recurrenceId: s,
 onActionTaken: r
   }), {
 entity_type: p
   } = n;
   return o ? (0, i.jsx)(Z.Z, {
-isActive: u,
+isActive: d,
 isUserLurking: v,
 rsvped: _,
 isMember: c,
@@ -64,7 +64,7 @@ isChannelPublic: h,
 canInvite: g,
 ...m
   }) : (0, i.jsx)(N.ZP, {
-isActive: u,
+isActive: d,
 isUserLurking: v,
 rsvped: _,
 isChannelPublic: h,
@@ -77,7 +77,7 @@ n.default = e => {
   let {
 guildScheduledEventId: n,
 parentGuildId: t,
-transitionState: d,
+transitionState: u,
 initialRecurrenceId: I,
 onClose: x
   } = e, {
@@ -85,7 +85,7 @@ analyticsLocations: N
   } = (0, c.ZP)(o.Z.GUILD_EVENT_MODAL), [Z, D] = a.useState(I), B = (0, l.e7)([f.ZP], () => f.ZP.getGuildScheduledEvent(n), [n]), P = null == B ? void 0 : B.id, w = null == B ? void 0 : B.guild_id, {
 guild: A,
 isMember: G
-  } = (0, m.Z)(w, P), O = (0, s.Z)(t), U = null == B ? void 0 : B.channel_id, V = (0, l.e7)([u.Z], () => u.Z.getChannel(U), [U]), F = (0, _.Dt)(), [H, z] = a.useState(k.fL.EVENT_INFO), W = (0, E.Z)(P, Z), X = (0, p.Z)(w, P, Z), [J, {
+  } = (0, m.Z)(w, P), O = (0, d.Z)(t), U = null == B ? void 0 : B.channel_id, V = (0, l.e7)([_.Z], () => _.Z.getChannel(U), [U]), F = (0, s.Dt)(), [H, z] = a.useState(k.fL.EVENT_INFO), W = (0, E.Z)(P, Z), X = (0, p.Z)(w, P, Z), [J, {
 loading: Y,
 error: K
   }] = (0, v.Z)(() => h.Z.getGuildEventUsers(null == B ? void 0 : B.id, Z, w));
@@ -118,7 +118,7 @@ en = null != Z ? Z : (0, b.DK)(B);
 value: N,
 children: (0, i.jsxs)(r.ModalRoot, {
   size: r.ModalSize.MEDIUM,
-  transitionState: d,
+  transitionState: u,
   'aria-labelledby': F,
   className: y.root,
   children: [

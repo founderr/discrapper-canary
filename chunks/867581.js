@@ -11,9 +11,9 @@ var a = n(735250),
   c = n(481060),
   u = n(447543),
   _ = n(881052),
-  d = n(703656),
-  I = n(285952),
-  E = n(153124),
+  d = n(600164),
+  I = n(313201),
+  E = n(703656),
   N = n(782605),
   m = n(981631),
   T = n(689938),
@@ -21,7 +21,7 @@ var a = n(735250),
   f = n(216019),
   S = n(286359);
 let C = 'hTKzmak',
-  L = (0, E.hQ)();
+  L = (0, I.hQ)();
 let A = (o = window.GLOBAL_ENV.INVITE_HOST, l = '', null == o && (o = location.host, l = m.Z5c.INVITE('')), ''.concat(location.protocol, '//').concat(o).concat(l, '/')),
   D = [
 C,
@@ -35,7 +35,7 @@ let {
 return (0, a.jsxs)(c.Clickable, {
   className: p.rowContainer,
   onClick: () => {
-    t(), (0, d.uL)(m.Z5c.GUILD_DISCOVERY);
+    t(), (0, E.uL)(m.Z5c.GUILD_DISCOVERY);
   },
   children: [
     (0, a.jsx)('img', {
@@ -73,7 +73,7 @@ function O(e) {
 onBack: t,
 onClose: n,
 isSlideReady: o
-  } = e, [l, r] = s.useState(''), [d, E] = s.useState(!1), [m, f] = s.useState(null), S = s.useRef(null);
+  } = e, [l, r] = s.useState(''), [I, E] = s.useState(!1), [m, f] = s.useState(null), S = s.useRef(null);
   s.useEffect(() => {
 var e;
 o && (null === (e = S.current) || void 0 === e || e.focus());
@@ -120,7 +120,7 @@ u.Z.resolveInvite(a, 'Join Guild', {
 children: [
   (0, a.jsxs)(c.ModalHeader, {
     className: p.header,
-    direction: I.Z.Direction.VERTICAL,
+    direction: d.Z.Direction.VERTICAL,
     separator: !1,
     children: [
       (0, a.jsx)(c.Heading, {
@@ -189,7 +189,7 @@ children: [
     children: [
       (0, a.jsx)(c.Button, {
         color: c.Button.Colors.BRAND,
-        submitting: d,
+        submitting: I,
         onClick: O,
         children: T.Z.Messages.NUF_JOIN_SERVER_BUTTON
       }),

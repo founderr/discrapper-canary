@@ -4,15 +4,15 @@ var i = n(735250),
   a = n(442837),
   o = n(481060),
   r = n(13245),
-  l = n(237997),
-  c = n(153124),
+  l = n(313201),
+  c = n(237997),
   d = n(766032),
   u = n(987650),
   h = n(981631),
   p = n(689938),
   f = n(765861);
 let _ = Object.values(u.wF).map(e => 100 * e),
-  g = (0, c.hQ)();
+  g = (0, l.hQ)();
 class m extends s.PureComponent {
   handleUpdateBackgroundOpacity(e) {
 r.Z.setTextWidgetOpacity((0, d.Z)(e / 100)), r.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, {
@@ -63,6 +63,6 @@ super(...e), t = this, n = 'initialValue', i = 100 * this.props.opacity, n in t 
 }) : t[n] = i;
   }
 }
-t.Z = a.ZP.connectStores([l.Z], () => ({
-  opacity: l.Z.getTextWidgetOpacity()
+t.Z = a.ZP.connectStores([c.Z], () => ({
+  opacity: c.Z.getTextWidgetOpacity()
 }))(m);

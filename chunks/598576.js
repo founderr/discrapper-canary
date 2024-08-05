@@ -24,11 +24,11 @@ analyticsLocation: x
   } = e, {
 slide: p,
 gotoNext: O,
-gotoError: g,
-handleWaitingForConnection: f,
+gotoError: f,
+handleWaitingForConnection: g,
 handleAuthToken: N,
 expectedCallbackState: h,
-callbackData: A
+callbackData: b
   } = (0, r.k)(x, _.ABu.XBOX);
   return (0, t.jsx)(s.ModalRoot, {
 className: C.modal,
@@ -49,9 +49,9 @@ children: (0, t.jsxs)(s.Slides, {
       id: u.O.PRE_CONNECT,
       children: (0, t.jsx)(l.Z, {
         isWaitingForConnection: !1,
-        onWaitingForConnection: f,
+        onWaitingForConnection: g,
         onAuthToken: N,
-        onError: g,
+        onError: f,
         onClose: o
       })
     }),
@@ -61,16 +61,16 @@ children: (0, t.jsxs)(s.Slides, {
         isWaitingForConnection: !0,
         expectedCallbackState: h,
         onAuthToken: N,
-        onError: g,
+        onError: f,
         onClose: o
       })
     }),
     (0, t.jsx)(s.Slide, {
       id: u.O.DISCORD_CONSENT,
       children: (0, t.jsx)(i.Z, {
-        authToken: A,
+        authToken: b,
         onContinue: O,
-        onError: g,
+        onError: f,
         onClose: o
       })
     }),

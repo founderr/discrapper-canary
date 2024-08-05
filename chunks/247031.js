@@ -14,10 +14,10 @@ var s = n(735250),
   u = n(749210),
   _ = n(493544),
   I = n(479531),
-  E = n(210887),
-  T = n(246946),
-  m = n(594174),
-  N = n(154921),
+  E = n(112831),
+  T = n(210887),
+  m = n(246946),
+  N = n(594174),
   S = n(251625),
   h = n(226951),
   g = n(51144),
@@ -49,14 +49,14 @@ user: i,
 ban: r,
 hideDiscriminator: l,
 onClose: o
-  } = e, [d, _] = a.useState(!1), [E, T] = a.useState(null);
-  async function m() {
+  } = e, [d, _] = a.useState(!1), [T, m] = a.useState(null);
+  async function N() {
 if (null != n) {
-  T(null), _(!0);
+  m(null), _(!0);
   try {
     await u.Z.unbanUser(n.id, i.id), o();
   } catch (e) {
-    T(new I.Z(e)), _(!1);
+    m(new I.Z(e)), _(!1);
   }
 }
   }
@@ -68,16 +68,16 @@ children: [
     className: M.header,
     separator: !1,
     children: [
-      (0, s.jsx)(N.Z, {
-        size: N.Z.Sizes.SIZE_24,
+      (0, s.jsx)(E.Z, {
+        size: E.Z.Sizes.SIZE_24,
         className: M.userUsername,
         children: g.ZP.getUserTag(i, {
           mode: 'username',
           identifiable: l ? 'never' : 'always'
         })
       }),
-      l || i.isPomelo() ? null : (0, s.jsxs)(N.Z, {
-        size: N.Z.Sizes.SIZE_24,
+      l || i.isPomelo() ? null : (0, s.jsxs)(E.Z, {
+        size: E.Z.Sizes.SIZE_24,
         className: M.userDiscrim,
         children: [
           '#',
@@ -98,11 +98,11 @@ children: [
         variant: 'text-sm/normal',
         children: null != r.reason && '' !== r.reason ? r.reason : A.Z.Messages.NO_BAN_REASON
       }),
-      null != E ? (0, s.jsx)(c.Text, {
+      null != T ? (0, s.jsx)(c.Text, {
         className: M.error,
         color: 'text-danger',
         variant: 'text-sm/normal',
-        children: E.getAnyErrorMessage()
+        children: T.getAnyErrorMessage()
       }) : null
     ]
   }),
@@ -110,7 +110,7 @@ children: [
     className: M.footer,
     children: [
       (0, s.jsx)(c.Button, {
-        onClick: m,
+        onClick: N,
         look: c.Button.Looks.LINK,
         color: c.Button.Colors.RED,
         submitting: d,
@@ -232,7 +232,7 @@ super(...e), v(this, 'getSortedBans', (0, S.oH)((e, t) => {
   let n = this.makeFilter(t),
     s = [];
   for (let t of e.keys()) {
-    let e = m.default.getUser(t);
+    let e = N.default.getUser(t);
     null != e && n(e) && s.push(e);
   }
   return s.sort((e, t) => e.username.localeCompare(t.username));
@@ -350,8 +350,8 @@ super(...e), v(this, 'getSortedBans', (0, S.oH)((e, t) => {
 }
 let U = o.ZP.connectStores([
   p.Z,
-  E.Z,
-  T.Z
+  T.Z,
+  m.Z
 ], () => {
   let {
 bans: e,
@@ -362,8 +362,8 @@ searchQuery: n
 searchQuery: null != n ? n : '',
 bans: e,
 guild: t,
-theme: E.Z.theme,
-streamerMode: T.Z.hidePersonalInformation
+theme: T.Z.theme,
+streamerMode: m.Z.hidePersonalInformation
   };
 })(b);
 

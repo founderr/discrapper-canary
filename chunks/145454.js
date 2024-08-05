@@ -6,8 +6,8 @@ var n = s(735250),
   a = s(772848),
   r = s(990547),
   h = s(481060),
-  d = s(7557),
-  u = s(285952),
+  d = s(600164),
+  u = s(7557),
   c = s(200357),
   p = s(689938),
   m = s(858790),
@@ -66,12 +66,12 @@ return e = null != i && '' !== i ? (0, n.jsx)('div', {
       children: p.Z.Messages.ENTER_PHONE_DESCRIPTION_NOTE.format()
     })
   ]
-}), t = g ? (0, n.jsxs)(u.Z, {
+}), t = g ? (0, n.jsxs)(d.Z, {
   className: m.field,
-  direction: u.Z.Direction.VERTICAL,
-  align: u.Z.Align.CENTER,
+  direction: d.Z.Direction.VERTICAL,
+  align: d.Z.Align.CENTER,
   children: [
-    (0, n.jsx)(d.Z, {
+    (0, n.jsx)(u.Z, {
       onSubmit: this.handleVerifyPhone
     }),
     (0, n.jsx)(h.Button, {

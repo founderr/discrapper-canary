@@ -15,18 +15,18 @@ var l, s, a = t(735250),
   _ = t(872810),
   S = t(410575),
   g = t(812206),
-  C = t(594190),
-  h = t(998594),
-  N = t(751571),
-  Z = t(361291),
-  I = t(592125),
-  x = t(430824),
-  f = t(131951),
-  R = t(944486),
-  A = t(594174),
-  T = t(449224),
-  v = t(285952),
-  L = t(153124),
+  C = t(600164),
+  h = t(313201),
+  N = t(594190),
+  Z = t(998594),
+  I = t(751571),
+  x = t(361291),
+  f = t(592125),
+  R = t(430824),
+  A = t(131951),
+  T = t(944486),
+  v = t(594174),
+  L = t(449224),
   p = t(626135),
   M = t(358085),
   O = t(998502),
@@ -59,35 +59,35 @@ preset: ee,
 resolution: en,
 fps: et,
 soundshareEnabled: el
-  } = (0, u.cj)([Z.Z], () => Z.Z.getState()), es = (0, u.e7)([
-R.Z,
-I.Z
-  ], () => I.Z.getChannel(R.Z.getVoiceChannelId())), ea = (0, u.e7)([
-C.ZP,
-T.Z
-  ], () => (0, M.isWindows)() ? (0, G.Z)(C.ZP, T.Z) : null), er = (0, u.e7)([A.default], () => {
-let e = A.default.getCurrentUser();
+  } = (0, u.cj)([x.Z], () => x.Z.getState()), es = (0, u.e7)([
+T.Z,
+f.Z
+  ], () => f.Z.getChannel(T.Z.getVoiceChannelId())), ea = (0, u.e7)([
+N.ZP,
+L.Z
+  ], () => (0, M.isWindows)() ? (0, G.Z)(N.ZP, L.Z) : null), er = (0, u.e7)([v.default], () => {
+let e = v.default.getCurrentUser();
 return o()(null != e, 'GoLiveModal: user cannot be undefined'), e;
-  }), ei = null !== (n = null == es ? void 0 : es.getGuildId()) && void 0 !== n ? n : Q, eo = (0, u.e7)([x.Z], () => {
+  }), ei = null !== (n = null == es ? void 0 : es.getGuildId()) && void 0 !== n ? n : Q, eo = (0, u.e7)([R.Z], () => {
 var e;
-return null != ei ? null === (e = x.Z.getGuild(ei)) || void 0 === e ? void 0 : e.premiumTier : null;
+return null != ei ? null === (e = R.Z.getGuild(ei)) || void 0 === e ? void 0 : e.premiumTier : null;
   }), [ec, eu] = null !== (l = (0, P.Z)(ee, er, eo)) && void 0 !== l ? l : [
 B.LY.RESOLUTION_720,
 B.ws.FPS_30
   ], ed = (0, u.e7)([D.ZP], () => D.ZP.supported()), {
 lastPickerAction: em,
 lastPickerError: eE
-  } = (0, u.e7)([D.ZP], () => D.ZP.getPickerState()), e_ = h.Z.useExperiment({
+  } = (0, u.e7)([D.ZP], () => D.ZP.getPickerState()), e_ = Z.Z.useExperiment({
 location: 'GoLiveModal'
   }, {
 disable: !ed,
 autoTrackExposure: !0
   }).enableSystemPicker;
   (0, D.UB)(), ee !== B.tI.PRESET_CUSTOM && (en = ec, et = eu), !(0, j.Z)(ee, en, et, er, eo) && (en = ec, et = eu);
-  let eS = (0, L.Dt)();
+  let eS = (0, h.Dt)();
   let [eg, eC] = r.useState((F = Y, z = J, K = e_, F ? 0 : K ? 1 : z ? 2 : 3)), [eh, eN] = r.useState(null), [eZ, eI] = r.useState(!1), [ex, ef] = r.useState(null), [eR, eA] = r.useState(null), [eT, ev] = r.useState(null), [eL, ep] = r.useState(ee), [eM, eO] = r.useState(en), [ej, eP] = r.useState(et), [eD, eG] = r.useState(el), [eU, eb] = r.useState(null != Q ? Q : null), ew = null !== (s = null == es ? void 0 : es.id) && void 0 !== s ? s : ex;
   r.useEffect(() => {
-let e = (0, M.isWindows)() ? (0, G.Z)(C.ZP, T.Z) : null,
+let e = (0, M.isWindows)() ? (0, G.Z)(N.ZP, L.Z) : null,
   n = (null == e ? void 0 : e.id) != null ? g.Z.getApplication(e.id) : null;
 p.default.track(V.rMx.OPEN_MODAL, {
   type: 'Go Live Modal',
@@ -104,7 +104,7 @@ p.default.track(V.rMx.OPEN_MODAL, {
   o()(null != ea || null != eR, 'got nothing to stream');
   let t = null !== (e = null == es ? void 0 : es.id) && void 0 !== e ? e : ex;
   o()(null != t, 'Received null target channel ID');
-  let l = I.Z.getChannel(t),
+  let l = f.Z.getChannel(t),
     s = null !== (n = null == l ? void 0 : l.getGuildId()) && void 0 !== n ? n : Q;
   null == es && E.default.selectVoiceChannel(t);
   let a = eL,
@@ -116,7 +116,7 @@ p.default.track(V.rMx.OPEN_MODAL, {
     frameRate: i,
     soundshareEnabled: eD
   });
-  let c = (0, k.Z)(ea, eR, C.ZP.getRunningGames()),
+  let c = (0, k.Z)(ea, eR, N.ZP.getRunningGames()),
     u = !(0, M.isWindows)() || null == c || (null == eR ? void 0 : eR.id.startsWith('camera:')) || null == c ? null : c.pid;
   (0, _.WH)(s, t, {
     pid: u,
@@ -125,7 +125,7 @@ p.default.track(V.rMx.OPEN_MODAL, {
     audioSourceId: eT,
     sound: eD
   }), (async () => {
-    !await N.Z.hasPermission(y.Eu.SCREEN_RECORDING, {
+    !await I.Z.hasPermission(y.Eu.SCREEN_RECORDING, {
       showAuthorizationError: !1
     }) && m.Z.show({
       title: W.Z.Messages.WARNING_SCREEN_RECORDING_PERMISSION_TITLE,
@@ -155,10 +155,10 @@ eL
   async function eV(e) {
 if (e.preventDefault(), 2 === eg)
   return eC(3);
-let n = (0, k.Z)(ea, eR, C.ZP.getRunningGames()),
+let n = (0, k.Z)(ea, eR, N.ZP.getRunningGames()),
   l = O.ZP.supportsFeature(V.eRX.ELEVATED_HOOK) && (null == n ? void 0 : n.elevated);
 if ((0, M.isMac)() && null != eR) {
-  let e = await f.Z.getMediaEngine().getDesktopSources(),
+  let e = await A.Z.getMediaEngine().getDesktopSources(),
     n = eR.id;
   if (n.startsWith('screen') && e.length > 0 && !e.some(e => e.includes(n))) {
     var s, r;
@@ -232,9 +232,9 @@ eY = function(e) {
 eJ = (0, a.jsx)(d.ModalHeader, {
   className: H.modalHeader,
   separator: !1,
-  children: (0, a.jsxs)(v.Z, {
-    direction: v.Z.Direction.VERTICAL,
-    align: v.Z.Align.CENTER,
+  children: (0, a.jsxs)(C.Z, {
+    direction: C.Z.Direction.VERTICAL,
+    align: C.Z.Align.CENTER,
     className: H.header,
     children: [
       (0, a.jsx)(d.Heading, {
@@ -356,7 +356,7 @@ e$ = r.useCallback(() => {
   eX
 ]),
 e0 = (0, a.jsxs)(d.ModalFooter, {
-  justify: null == eX ? v.Z.Justify.START : v.Z.Justify.BETWEEN,
+  justify: null == eX ? C.Z.Justify.START : C.Z.Justify.BETWEEN,
   children: [
     (0, a.jsx)(d.Button, {
       type: 'submit',

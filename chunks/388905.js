@@ -48,10 +48,10 @@ var i = t(120356),
   a = t.n(i),
   r = t(481060),
   s = t(43267),
-  o = t(565138),
-  u = t(285952),
-  c = t(153124),
-  d = t(838949),
+  o = t(905656),
+  u = t(600164),
+  c = t(313201),
+  d = t(565138),
   p = t(361207),
   m = t(63063),
   h = t(792125),
@@ -133,7 +133,7 @@ let {
   animate: i = !1,
   className: a
 } = e;
-return (0, l.jsx)(o.Z, {
+return (0, l.jsx)(d.Z, {
   active: !0,
   guild: n,
   size: t,
@@ -141,7 +141,7 @@ return (0, l.jsx)(o.Z, {
   className: a
 });
   };
-T.Sizes = o.Z.Sizes;
+T.Sizes = d.Z.Sizes;
 let S = e => {
   let {
 className: n,
@@ -242,7 +242,7 @@ return (0, l.jsx)(u.Z, {
   direction: u.Z.Direction.VERTICAL,
   align: u.Z.Align.CENTER,
   className: n,
-  children: (0, l.jsx)(d.Z, {
+  children: (0, l.jsx)(o.Z, {
     className: _.spinnerVideo
   })
 });

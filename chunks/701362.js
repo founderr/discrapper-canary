@@ -12,14 +12,14 @@ var i = n(735250),
   c = n(717881),
   u = n(58540),
   d = n(850827),
-  h = n(258609),
-  p = n(199902),
-  m = n(314897),
-  _ = n(430824),
-  f = n(496675),
-  E = n(158776),
-  g = n(979651),
-  C = n(387204),
+  h = n(951844),
+  p = n(258609),
+  m = n(199902),
+  _ = n(314897),
+  f = n(430824),
+  E = n(496675),
+  g = n(158776),
+  C = n(979651),
   I = n(626135),
   x = n(382182),
   T = n(687516),
@@ -111,8 +111,8 @@ return null == n ? null : (0, i.jsx)('div', {
             className: A.activityActions,
             color: A.watchButton
           }),
-          (0, i.jsx)(C.Z, {
-            type: C.Z.Types.INLINE,
+          (0, i.jsx)(h.Z, {
+            type: h.Z.Types.INLINE,
             className: A.protip,
             children: __OVERLAY__ ? Z.Z.Messages.WATCH_STREAM_IN_APP : Z.Z.Messages.WATCH_STREAM_TIP
           })
@@ -130,11 +130,11 @@ user: t,
 channel: n,
 ...s
   } = e, [l, o] = (0, r.Wu)([
-g.Z,
-_.Z,
+C.Z,
 f.Z,
-h.Z
-  ], () => (0, x.p9)(n, g.Z, _.Z, f.Z, h.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), d = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), C = (0, r.e7)([m.default], () => m.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([E.Z], () => (0, T.Um)(c, E.Z)), v = a.useMemo(() => ({
+E.Z,
+p.Z
+  ], () => (0, x.p9)(n, C.Z, f.Z, E.Z, p.Z)), c = (0, r.e7)([m.Z], () => m.Z.getStreamForUser(t.id, n.getGuildId())), d = (0, r.e7)([m.Z], () => m.Z.getActiveStreamForApplicationStream(c)), h = (0, r.e7)([_.default], () => _.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([g.Z], () => (0, T.Um)(c, g.Z)), v = a.useMemo(() => ({
 [n.guild_id]: [t.id]
   }), [
 n.guild_id,
@@ -148,7 +148,7 @@ user: t,
 streamApplication: I,
 stream: c,
 activeStream: d,
-currentUserId: C,
+currentUserId: h,
 activity: N
   });
 }

@@ -14,20 +14,20 @@ var i = n(735250),
   d = n(906732),
   h = n(388905),
   p = n(792766),
-  _ = n(451603),
-  f = n(885714),
-  m = n(973616),
-  g = n(594174),
-  C = n(285952),
-  I = n(672752),
-  E = n(153124),
+  _ = n(600164),
+  f = n(436774),
+  m = n(313201),
+  g = n(451603),
+  C = n(885714),
+  I = n(973616),
+  E = n(594174),
   N = n(855981),
   x = n(55543),
   S = n(626135),
   v = n(768581),
   Z = n(358085),
   T = n(998502),
-  L = n(480902),
+  L = n(379164),
   A = n(590965),
   b = n(981631),
   M = n(474936),
@@ -49,7 +49,7 @@ S.default.track(b.rMx.PREMIUM_UPSELL_VIEWED, {
   location_stack: t
 });
   }, [t]), (0, i.jsxs)(o.Clickable, {
-onClick: () => (0, f.Z)({
+onClick: () => (0, C.Z)({
   analyticsSource: {
     page: b.Sbl.EXTERNAL_INVITE_LINK_MODAL
   },
@@ -64,7 +64,7 @@ children: [
   (0, i.jsx)(o.NitroWheelIcon, {
     size: 'md',
     className: O.experimentUpsellIcon,
-    color: I.JX.PREMIUM_TIER_2
+    color: f.JX.PREMIUM_TIER_2
   }),
   (0, i.jsx)('span', {
     className: O.experimentUpsellText,
@@ -106,7 +106,7 @@ children: [
 function D(e) {
   let {
 transitionState: t
-  } = e, n = (0, E.Dt)(), {
+  } = e, n = (0, m.Dt)(), {
 analyticsLocations: l
   } = (0, d.ZP)(u.Z.INVITE_MODAL);
   return (0, i.jsx)(d.Gt, {
@@ -147,19 +147,19 @@ function U(e) {
   let t, n, {
 transitionState: r
   } = e;
-  (0, s.e7)([g.default], () => {
+  (0, s.e7)([E.default], () => {
 var e;
-return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
+return null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
   });
   let {
 invite: f,
-error: I,
+error: C,
 submitting: N
   } = (0, s.cj)([A.Z], () => A.Z.getProps());
   l.useEffect(() => {
 !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
   }, []);
-  let x = (0, E.Dt)(),
+  let x = (0, m.Dt)(),
 {
   analyticsLocations: S
 } = (0, d.ZP)(u.Z.INVITE_MODAL);
@@ -182,7 +182,7 @@ inviter: G,
 target_application: w
   } = f, k = null != j, B = null != f.stage_instance, H = null == f.guild && null == f.channel && null != f.inviter;
   if (null != w)
-t = null == j ? void 0 : j.name, n = m.Z.createFromServer(w).getCoverImageURL(1024);
+t = null == j ? void 0 : j.name, n = I.Z.createFromServer(w).getCoverImageURL(1024);
   else if (null != j)
 t = j.name, n = v.ZP.getGuildSplashURL({
   id: j.id,
@@ -190,7 +190,7 @@ t = j.name, n = v.ZP.getGuildSplashURL({
 });
   else if ((null == (t = U.name) || '' === t) && null != G && (t = G.username), null == t)
 throw Error('no name for group DM invite');
-  let V = (0, _.yU)(),
+  let V = (0, g.yU)(),
 F = B ? R.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : R.Z.Messages.INVITE_MODAL_BUTTON.format({
   guildName: t
 });
@@ -206,10 +206,10 @@ children: (0, i.jsxs)(o.ModalRoot, {
       className: O.contentWrapper,
       children: (0, i.jsx)(o.Scroller, {
         className: O.scroller,
-        children: (0, i.jsxs)(C.Z, {
+        children: (0, i.jsxs)(_.Z, {
           className: O.inviteContent,
-          direction: C.Z.Direction.VERTICAL,
-          justify: C.Z.Justify.BETWEEN,
+          direction: _.Z.Direction.VERTICAL,
+          justify: _.Z.Justify.BETWEEN,
           children: [
             (0, i.jsx)('div', {
               id: x,
@@ -217,7 +217,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
               children: (0, i.jsx)(c.Z, {
                 invite: f,
                 disableUser: k,
-                error: I
+                error: C
               })
             }),
             B && null != j ? (0, i.jsx)('div', {
@@ -268,8 +268,8 @@ children: (0, i.jsxs)(o.ModalRoot, {
                     })
                   ]
                 }),
-                (0, i.jsx)(C.Z, {
-                  justify: C.Z.Justify.CENTER,
+                (0, i.jsx)(_.Z, {
+                  justify: _.Z.Justify.CENTER,
                   className: y.marginTop8,
                   children: (0, i.jsx)(h.zx, {
                     look: h.zx.Looks.LINK,

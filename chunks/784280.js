@@ -10,9 +10,9 @@ var t = o(735250),
   i = o(881052),
   l = o(607070),
   d = o(745510),
-  c = o(781792),
-  u = o(430824),
-  f = o(285952),
+  c = o(600164),
+  u = o(781792),
+  f = o(430824),
   m = o(645792),
   _ = o(981631),
   h = o(689938),
@@ -21,7 +21,7 @@ var t = o(735250),
 function b(e) {
   let {
 guildId: a
-  } = e, o = (0, r.e7)([u.Z], () => u.Z.getGuild(a)), [b, A] = n.useState(null), [g, H] = n.useState(''), {
+  } = e, o = (0, r.e7)([f.Z], () => f.Z.getGuild(a)), [b, A] = n.useState(null), [g, H] = n.useState(''), {
 createMultipleConfettiAt: M
   } = n.useContext(d.h), x = (0, r.e7)([l.Z], () => l.Z.useReducedMotion, []), C = async a => {
 let {
@@ -30,7 +30,7 @@ let {
 } = e;
 a.preventDefault(), A(null);
 try {
-  await (0, c.e)(t, {
+  await (0, u.e)(t, {
     nick: g
   }), null == o || o();
 } catch (e) {
@@ -38,7 +38,7 @@ try {
 }
   }, {
 transitionState: R
-  } = e, N = Object.values(u.Z.getGuilds()).filter(e => e.id !== a && e.hasFeature(_.oNc.HUB)).length > 0, L = !x && !N && (null == o ? void 0 : o.hasFeature(_.oNc.HUB)) && (0, m.b)();
+  } = e, N = Object.values(f.Z.getGuilds()).filter(e => e.id !== a && e.hasFeature(_.oNc.HUB)).length > 0, L = !x && !N && (null == o ? void 0 : o.hasFeature(_.oNc.HUB)) && (0, m.b)();
   return n.useEffect(() => {
 if (L) {
   let e = window.innerWidth / 2;
@@ -57,7 +57,7 @@ children: [
   (0, t.jsxs)(s.ModalHeader, {
     separator: !1,
     className: E.formHeaderContainer,
-    direction: f.Z.Direction.VERTICAL,
+    direction: c.Z.Direction.VERTICAL,
     children: [
       (0, t.jsx)('div', {
         className: E.formImage
@@ -96,7 +96,7 @@ children: [
       }),
       (0, t.jsx)(s.ModalFooter, {
         className: E.formFooter,
-        direction: f.Z.Direction.VERTICAL,
+        direction: c.Z.Direction.VERTICAL,
         children: (0, t.jsx)(s.Button, {
           type: 'submit',
           size: s.Button.Sizes.LARGE,
