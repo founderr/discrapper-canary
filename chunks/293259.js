@@ -17,9 +17,9 @@ var n = i(735250),
   f = i(785717),
   m = i(621853),
   E = i(204197),
-  v = i(735336),
-  S = i(520978),
-  x = i(184325),
+  x = i(735336),
+  v = i(520978),
+  S = i(184325),
   Z = i(652853),
   h = i(225714),
   p = i(228168),
@@ -36,9 +36,9 @@ user: _,
 guildId: A,
 channelId: R,
 friendToken: M,
-className: U,
-isStreaming: L,
-hasProfileEffect: O,
+className: O,
+isStreaming: U,
+hasProfileEffect: L,
 onClose: P
   } = e, b = (0, t.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, t.e7)([m.Z], () => m.Z.getUserProfile(_.id)), B = (0, t.e7)([c.default], () => c.default.getId() === _.id), {
 theme: G
@@ -56,14 +56,14 @@ _,
 R
   ]);
   return (0, n.jsxs)('header', {
-className: U,
+className: O,
 children: [
-  (0, n.jsx)(v.Z, {
+  (0, n.jsx)(x.Z, {
     displayProfile: s,
     onClose: P,
     user: _,
     profileType: p.y0.MODAL,
-    hasProfileEffect: O
+    hasProfileEffect: L
   }),
   (0, n.jsxs)('div', {
     className: N.header,
@@ -75,7 +75,7 @@ children: [
           avatarDecoration: V,
           size: j,
           className: N.avatar,
-          status: H ? T.Sk.UNKNOWN : L ? T.Sk.STREAMING : D,
+          status: H ? T.Sk.UNKNOWN : U ? T.Sk.STREAMING : D,
           statusBackdropColor: (0, a.getStatusBackdropColor)(G),
           isMobile: y,
           statusTooltip: !0,
@@ -96,19 +96,19 @@ children: [
               className: N.warningCircleIcon,
               color: o.Z.unsafe_rawColors.YELLOW_300.css
             })
-          }) : (0, n.jsx)(x.Z, {
+          }) : (0, n.jsx)(S.Z, {
             user: _,
             className: N.badgeList,
             guildId: A,
-            size: x.V.SIZE_24,
+            size: S.V.SIZE_24,
             shrinkAtCount: 8,
-            shrinkToSize: x.V.SIZE_18,
+            shrinkToSize: S.V.SIZE_18,
             onBadgeClick: P
           }),
           (0, n.jsxs)('div', {
             className: N.relationshipButtons,
             children: [
-              (null == F ? void 0 : F.application) != null && (0, n.jsx)(S.Z, {
+              (null == F ? void 0 : F.application) != null && (0, n.jsx)(v.Z, {
                 className: N.applicationInstallButton,
                 application: F.application
               }),

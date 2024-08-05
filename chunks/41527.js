@@ -18,9 +18,9 @@ var l = i(481060),
   f = i(681837),
   m = i(502762),
   E = i(530),
-  v = i(645410),
-  S = i(437758),
-  x = i(357836),
+  x = i(645410),
+  v = i(437758),
+  S = i(357836),
   Z = i(544989),
   h = i(934861),
   p = i(616140),
@@ -37,9 +37,9 @@ user: s,
 currentUser: i,
 guildId: R,
 channelId: M,
-messageId: U,
-roleId: L,
-initialSection: O,
+messageId: O,
+roleId: U,
+initialSection: L,
 initialSubsection: P,
 transitionState: b,
 onClose: y,
@@ -57,8 +57,8 @@ children: (0, n.jsx)(r.Mt, {
   userId: s.id,
   guildId: F,
   channelId: M,
-  messageId: U,
-  roleId: L,
+  messageId: O,
+  roleId: U,
   showGuildProfile: !0,
   children: (0, n.jsx)(l.ModalRoot, {
     transitionState: b,
@@ -72,7 +72,7 @@ children: (0, n.jsx)(r.Mt, {
       children: [
         (0, n.jsx)(Z.Z, {
           profileType: g.y0.FULL_SIZE,
-          children: (0, n.jsx)(S.Z, {
+          children: (0, n.jsx)(v.Z, {
             user: s,
             guildId: F
           })
@@ -108,11 +108,11 @@ children: (0, n.jsx)(r.Mt, {
                       onClose: y,
                       tooltipContainerClassName: C.messageIconButton
                     }),
-                    (0, n.jsx)(x.Z, {
+                    (0, n.jsx)(S.Z, {
                       user: s,
                       guildId: F
                     }),
-                    (0, n.jsx)(v.Z, {
+                    (0, n.jsx)(x.Z, {
                       user: s
                     })
                   ]
@@ -152,7 +152,7 @@ children: (0, n.jsx)(r.Mt, {
                 currentUser: i,
                 displayProfile: B,
                 items: w,
-                initialSection: null != O ? O : g.oh.BOT_INFO,
+                initialSection: null != L ? L : g.oh.BOT_INFO,
                 initialSubsection: P,
                 onClose: y
               })

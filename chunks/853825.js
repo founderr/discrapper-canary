@@ -17,9 +17,9 @@ var n = i(735250),
   f = i(741308),
   m = i(588822),
   E = i(899007),
-  v = i(900927),
-  S = i(678738),
-  x = i(502762),
+  x = i(900927),
+  v = i(678738),
+  S = i(502762),
   Z = i(530),
   h = i(679332),
   p = i(544989),
@@ -36,9 +36,9 @@ user: s,
 guildId: i,
 channelId: R,
 messageId: M,
-roleId: U,
-transitionState: L,
-onClose: O,
+roleId: O,
+transitionState: U,
+onClose: L,
 sourceAnalyticsLocations: P = []
   } = e, {
 analyticsLocations: b
@@ -54,15 +54,15 @@ children: (0, n.jsx)(u.Mt, {
   guildId: y,
   channelId: R,
   messageId: M,
-  roleId: U,
+  roleId: O,
   showGuildProfile: !0,
   children: (0, n.jsxs)(t.ModalRoot, {
-    transitionState: L,
+    transitionState: U,
     className: j.root,
     hideShadow: !0,
     'aria-label': N.Z.Messages.USER_PROFILE_MODAL,
     children: [
-      (0, n.jsxs)(x.Z, {
+      (0, n.jsxs)(S.Z, {
         user: s,
         displayProfile: D,
         profileType: T.y0.FULL_SIZE,
@@ -106,10 +106,10 @@ children: (0, n.jsx)(u.Mt, {
                 tags: (0, n.jsx)(f.Z, {
                   displayProfile: D,
                   profileType: T.y0.FULL_SIZE,
-                  onClose: O
+                  onClose: L
                 })
               }),
-              (0, n.jsx)(x.Z.Overlay, {
+              (0, n.jsx)(S.Z.Overlay, {
                 className: j.overlay,
                 children: (0, n.jsxs)('div', {
                   className: A.container,
@@ -138,9 +138,9 @@ children: (0, n.jsx)(u.Mt, {
                           userBio: null == D ? void 0 : D.bio,
                           setLineClamp: !1
                         }),
-                        (0, n.jsx)(S.Z, {
+                        (0, n.jsx)(v.Z, {
                           heading: N.Z.Messages.BOT_PROFILE_CREATED_ON,
-                          children: (0, n.jsx)(v.Z, {
+                          children: (0, n.jsx)(x.Z, {
                             userId: s.id,
                             guildId: y,
                             tooltipDelay: T.vB

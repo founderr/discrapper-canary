@@ -17,9 +17,9 @@ var n = i(735250),
   f = i(944546),
   m = i(470900),
   E = i(988246),
-  v = i(970041),
-  S = i(715388),
-  x = i(879828),
+  x = i(970041),
+  v = i(715388),
+  S = i(879828),
   Z = i(834534),
   h = i(228168),
   p = i(47460);
@@ -41,7 +41,7 @@ pastActivityEnabled: c
   } = (0, I.z)({
 location: 'SimplifiedUserProfileModalTabs'
   });
-  return s === h.oh.ACTIVITY && (d || c) ? (0, n.jsx)(x.Z, {
+  return s === h.oh.ACTIVITY && (d || c) ? (0, n.jsx)(S.Z, {
 user: l,
 currentUser: t,
 onClose: a
@@ -56,9 +56,9 @@ onClose: a
   }) : s === h.oh.MUTUAL_GUILDS ? (0, n.jsx)(m.Z, {
 user: l,
 onClose: a
-  }) : s === h.oh.BOT_DATA_ACCESS ? (0, n.jsx)(v.Z, {
+  }) : s === h.oh.BOT_DATA_ACCESS ? (0, n.jsx)(x.Z, {
 user: l
-  }) : s === h.oh.BOT_INFO ? (0, n.jsx)(S.Z, {
+  }) : s === h.oh.BOT_INFO ? (0, n.jsx)(v.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
@@ -81,10 +81,10 @@ currentUser: I,
 displayProfile: _,
 items: f,
 initialSection: m = h.oh.USER_INFO,
-initialSubsection: v,
-onClose: S
+initialSubsection: x,
+onClose: v
   } = e, {
-trackUserProfileAction: x
+trackUserProfileAction: S
   } = (0, c.KZ)(), Z = (0, t.e7)([d.Z], () => d.Z.hidePersonalInformation), [{
 section: g,
 subsection: N
@@ -95,9 +95,9 @@ section: null !== (r = null === (s = f.find(e => {
   } = e;
   return s === m;
 })) || void 0 === s ? void 0 : s.section) && void 0 !== r ? r : null === (i = f[0]) || void 0 === i ? void 0 : i.section,
-subsection: v
+subsection: x
   }), C = l.useCallback(e => {
-x({
+S({
   action: 'PRESS_SECTION',
   section: e
 }), j({
@@ -105,7 +105,7 @@ x({
   subsection: void 0
 });
   }, [
-x,
+S,
 j
   ]);
   return Z ? (0, n.jsx)('div', {
@@ -142,7 +142,7 @@ children: [
     user: u,
     currentUser: I,
     displayProfile: _,
-    onClose: S
+    onClose: v
   })
 ]
   });

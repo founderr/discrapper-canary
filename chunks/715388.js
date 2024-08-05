@@ -18,9 +18,9 @@ var l = i(442837),
   f = i(900927),
   m = i(678738),
   E = i(351707),
-  v = i(228168),
-  S = i(689938),
-  x = i(247321);
+  x = i(228168),
+  v = i(689938),
+  S = i(247321);
 
 function Z(e) {
   var s;
@@ -41,7 +41,7 @@ d.Z
   ], () => a.Z.getChannel(d.Z.getChannelId()));
   return (0, n.jsxs)(t.ScrollerThin, {
 fade: !0,
-className: x.scroller,
+className: S.scroller,
 children: [
   (null == h ? void 0 : h.bio) != null && (null == h ? void 0 : h.bio) !== '' && (0, n.jsx)(I.Z, {
     userBio: h.bio,
@@ -58,23 +58,23 @@ children: [
     user: i,
     currentUser: Z,
     guild: N,
-    scrollIntoView: p === v.Tb.ROLES
+    scrollIntoView: p === x.Tb.ROLES
   }),
   (0, n.jsx)(m.Z, {
-    heading: S.Z.Messages.BOT_PROFILE_CREATED_ON,
+    heading: v.Z.Messages.BOT_PROFILE_CREATED_ON,
     children: (0, n.jsx)(f.Z, {
       userId: i.id,
       guildId: null == h ? void 0 : h.guildId,
-      tooltipDelay: v.vB
+      tooltipDelay: x.vB
     })
   }),
   (0, n.jsx)(m.Z, {
-    heading: S.Z.Messages.NOTE,
-    scrollIntoView: p === v.Tb.NOTE,
+    heading: v.Z.Messages.NOTE,
+    scrollIntoView: p === x.Tb.NOTE,
     children: (0, n.jsx)(o.Z, {
       userId: i.id,
-      className: x.note,
-      autoFocus: p === v.Tb.NOTE,
+      className: S.note,
+      autoFocus: p === x.Tb.NOTE,
       onUpdate: () => g({
         action: 'SET_NOTE'
       })

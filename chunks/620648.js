@@ -17,9 +17,9 @@ var n = i(735250),
   f = i(648067),
   m = i(588822),
   E = i(900927),
-  v = i(652853),
-  S = i(335191),
-  x = i(988246),
+  x = i(652853),
+  v = i(335191),
+  S = i(988246),
   Z = i(689938),
   h = i(678108);
 
@@ -34,13 +34,13 @@ scrollToConnections: g = !1
 trackUserProfileAction: N
   } = (0, _.KZ)(), j = (0, t.e7)([I.Z], () => I.Z.hidePersonalInformation), {
 theme: C
-  } = (0, v.z)(), A = (0, t.e7)([u.default], () => u.default.locale), R = (0, d.Z)('user_profile'), M = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, r.Z)(i.id), U = (0, f.Z)(i.id), L = l.useRef(null);
+  } = (0, x.z)(), A = (0, t.e7)([u.default], () => u.default.locale), R = (0, d.Z)('user_profile'), M = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, r.Z)(i.id), O = (0, f.Z)(i.id), U = l.useRef(null);
   return (l.useLayoutEffect(() => {
 if (g) {
   var e;
-  null == L || null === (e = L.current) || void 0 === e || e.scrollIntoView();
+  null == U || null === (e = U.current) || void 0 === e || e.scrollIntoView();
 }
-  }, [g]), j) ? (0, n.jsx)(x.Z, {}) : (0, n.jsxs)(o.ScrollerThin, {
+  }, [g]), j) ? (0, n.jsx)(S.Z, {}) : (0, n.jsxs)(o.ScrollerThin, {
 fade: !0,
 className: h.infoScroller,
 children: [
@@ -102,9 +102,9 @@ children: [
       })
     ]
   }),
-  (0, n.jsx)(S.OA, {
-    ref: L,
-    connectedAccounts: U,
+  (0, n.jsx)(v.OA, {
+    ref: U,
+    connectedAccounts: O,
     theme: C,
     locale: A,
     className: h.userInfoSection,

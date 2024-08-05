@@ -22,8 +22,8 @@ product: t,
 isPurchased: n,
 isHighlighted: r,
 user: C,
-forCollectedModal: m,
-profileEffectClassName: v
+forCollectedModal: v,
+profileEffectClassName: m
   } = e, {
 firstProfileEffect: E,
 firstAvatarDecoration: h
@@ -32,12 +32,12 @@ firstAvatarDecoration: h
 className: f.container,
 children: [
   null != E ? (0, a.jsx)('div', {
-    className: s()(f.profileEffectShopPreview, v),
+    className: s()(f.profileEffectShopPreview, m),
     children: (0, a.jsx)(c.Z, {
       isHovering: r,
       profileEffectId: E.id,
       isPurchased: n,
-      forCollectedModal: m,
+      forCollectedModal: v,
       removeSetHeight: !0
     })
   }) : null,

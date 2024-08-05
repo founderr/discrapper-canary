@@ -23,28 +23,28 @@ user: i,
 relationshipType: f,
 friendToken: m,
 persistentCallCtaEnabled: E = !1,
-activeInviteToCallCtaEnabled: v = !1,
-onClose: S
+activeInviteToCallCtaEnabled: x = !1,
+onClose: v
   } = e, {
-newestAnalyticsLocation: x
+newestAnalyticsLocation: S
   } = (0, o.ZP)();
   if (s || f === u.OGo.BLOCKED)
 return null;
   let Z = E ? (0, n.jsx)(r.Z, {
   user: i,
-  onClose: S
+  onClose: v
 }) : null,
 h = (0, n.jsx)(d.Z, {
   user: i,
-  onClose: S
+  onClose: v
 });
-  if (f === u.OGo.FRIEND && v && null != h)
+  if (f === u.OGo.FRIEND && x && null != h)
 return (0, n.jsxs)('div', {
   className: _.multipleButtons,
   children: [
     (0, n.jsx)(c.v, {
       userId: i.id,
-      onClose: S
+      onClose: v
     }),
     h
   ]
@@ -56,12 +56,12 @@ return (0, n.jsxs)('div', {
     Z,
     (0, n.jsx)(c.c, {
       userId: i.id,
-      onClose: S
+      onClose: v
     })
   ]
 });
   if (f === u.OGo.PENDING_OUTGOING || f === u.OGo.PENDING_INCOMING)
-return v && null != h ? (0, n.jsxs)('div', {
+return x && null != h ? (0, n.jsxs)('div', {
   className: _.multipleButtons,
   children: [
     (0, n.jsx)(a.ef, {
@@ -71,7 +71,7 @@ return v && null != h ? (0, n.jsxs)('div', {
     }),
     (0, n.jsx)(c.v, {
       userId: i.id,
-      onClose: S
+      onClose: v
     }),
     h
   ]
@@ -86,11 +86,11 @@ return v && null != h ? (0, n.jsxs)('div', {
     Z,
     (0, n.jsx)(c.c, {
       userId: i.id,
-      onClose: S
+      onClose: v
     })
   ]
 });
-  return v && null != h ? (0, n.jsxs)('div', {
+  return x && null != h ? (0, n.jsxs)('div', {
 className: _.multipleButtons,
 children: [
   (0, n.jsx)(a.ef, {
@@ -101,7 +101,7 @@ children: [
       t.Z.addRelationship({
         userId: i.id,
         context: {
-          location: x
+          location: S
         },
         friendToken: m
       });
@@ -109,7 +109,7 @@ children: [
   }),
   (0, n.jsx)(c.v, {
     userId: i.id,
-    onClose: S
+    onClose: v
   }),
   h
 ]
@@ -119,7 +119,7 @@ children: [
   Z,
   (0, n.jsx)(c.v, {
     userId: i.id,
-    onClose: S
+    onClose: v
   }),
   (0, n.jsx)(a.tG, {
     action: 'SEND_FRIEND_REQUEST',
@@ -130,7 +130,7 @@ children: [
       t.Z.addRelationship({
         userId: i.id,
         context: {
-          location: x
+          location: S
         },
         friendToken: m
       });

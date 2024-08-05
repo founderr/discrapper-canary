@@ -23,21 +23,21 @@ let {
   isHighlighted: r = !1,
   isPurchased: d = !1,
   avatarSize: C = i.AvatarSizes.SIZE_152,
-  avatarPlaceholderSrc: m
-} = e, v = (0, l.y9)(C), E = (0, u.c)('AvatarDecorationPreview'), {
+  avatarPlaceholderSrc: v
+} = e, m = (0, l.y9)(C), E = (0, u.c)('AvatarDecorationPreview'), {
   avatarDecorationSrc: h,
   eventHandlers: b,
   avatarPlaceholderSrc: y
 } = (0, c.Z)({
   user: n,
   avatarDecorationOverride: (null == t ? void 0 : t.type) === o.Z.AVATAR_DECORATION ? t : void 0,
-  size: v,
+  size: m,
   onlyAnimateOnHover: !r
 });
 return (0, a.jsx)(p, {
   ...b,
   avatarDecoration: h,
-  src: E && r ? null == n ? void 0 : n.getAvatarURL(void 0, 152, !0) : null != m ? m : y,
+  src: E && r ? null == n ? void 0 : n.getAvatarURL(void 0, 152, !0) : null != v ? v : y,
   imageClassName: E && r ? g.fadeInAvatarImg : void 0,
   className: s()(g.avatar, {
     [g.avatarPurchased]: d

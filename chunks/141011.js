@@ -16,8 +16,8 @@ size: n = f.yV,
 addGradient: s = !1,
 className: p,
 style: C,
-children: m,
-blur: v = !1
+children: v,
+blur: m = !1
   } = e, E = (0, i.e7)([c.Z], () => c.Z.saturation), h = r.useMemo(() => {
 if (null == t)
   return C;
@@ -25,7 +25,7 @@ let e = (0, u.uV)(t, {
     size: n,
     format: 'jpg'
   }),
-  a = v ? {
+  a = m ? {
     filter: 'blur(2px)',
     transform: 'scale(1.02)'
   } : {};
@@ -52,12 +52,12 @@ t,
 n,
 E,
 C,
-v,
+m,
 s
   ]);
   return (0, a.jsx)('div', {
 className: o()(g.banner, p),
 style: h,
-children: m
+children: v
   });
 };

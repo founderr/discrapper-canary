@@ -38,7 +38,7 @@ day: 'numeric'
   }), w = (0, E.z)(s), {
 ref: B,
 height: H = 0
-  } = (0, u.Z)([N]), V = !j && !w && N.length > 0, F = (0, l.useSpring)({
+  } = (0, u.Z)([N]), V = !j && !w && N.length > 0, F = (0, d.useSpring)({
 opacity: V ? 1 : 0,
 height: V ? H : 0,
 config: {

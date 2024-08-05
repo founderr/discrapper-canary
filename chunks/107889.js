@@ -17,9 +17,9 @@ var n = i(735250),
   f = i(5192),
   m = i(785717),
   E = i(481046),
-  v = i(910128),
-  S = i(318661),
-  x = i(78675),
+  x = i(910128),
+  v = i(318661),
+  S = i(78675),
   Z = i(113557),
   h = i(169979),
   p = i(502762),
@@ -31,9 +31,9 @@ var n = i(735250),
   A = i(900687),
   R = i(806926),
   M = i(228168),
-  U = i(981631),
-  L = i(689938),
-  O = i(505451);
+  O = i(981631),
+  U = i(689938),
+  L = i(505451);
 
 function P(e) {
   let {
@@ -50,7 +50,7 @@ transitionState: w,
 onClose: k,
 showGuildProfile: Y = !0,
 sourceAnalyticsLocations: V = []
-  } = e, H = P === U.ME ? void 0 : P, {
+  } = e, H = P === O.ME ? void 0 : P, {
 analyticsLocations: W
   } = (0, c.ZP)([
 ...V,
@@ -70,11 +70,11 @@ location: 'SimplifiedUserProfileModalHeader'
   }), {
 persistentCallCtaEnabled: q,
 activeInviteToCallCtaEnabled: J
-  } = (0, v.l)({
+  } = (0, x.l)({
 location: 'SimplifiedUserProfileModalHeader'
   }), [Q, X] = l.useState(), $ = e => {
 X(e);
-  }, ee = (0, S.ZP)(s.id, Y ? H : void 0), es = (0, S.ZP)(s.id, H), ei = (0, t.e7)([_.Z], () => _.Z.getRelationshipType(s.id)), en = l.useMemo(() => null != H ? {
+  }, ee = (0, v.ZP)(s.id, Y ? H : void 0), es = (0, v.ZP)(s.id, H), ei = (0, t.e7)([_.Z], () => _.Z.getRelationshipType(s.id)), en = l.useMemo(() => null != H ? {
 [H]: [s.id]
   } : {}, [
 H,
@@ -85,8 +85,8 @@ s.id
 et = (0, a.Z)(el),
 eo = () => (null == es ? void 0 : es.guildId) == null ? null : (null == ee ? void 0 : ee.guildId) != null ? (0, n.jsx)(o.MenuItem, {
   id: 'view-main-profile',
-  label: L.Z.Messages.VIEW_MAIN_PROFILE,
-  subtext: L.Z.Messages.AKA_DISPLAY_NAME.format({
+  label: U.Z.Messages.VIEW_MAIN_PROFILE,
+  subtext: U.Z.Messages.AKA_DISPLAY_NAME.format({
     displayName: f.ZP.getName(void 0, void 0, s)
   }),
   action: () => {
@@ -106,8 +106,8 @@ eo = () => (null == es ? void 0 : es.guildId) == null ? null : (null == ee ? voi
   }
 }) : (0, n.jsx)(o.MenuItem, {
   id: 'view-server-profile',
-  label: L.Z.Messages.VIEW_SERVER_PROFILE,
-  subtext: L.Z.Messages.AKA_DISPLAY_NAME.format({
+  label: U.Z.Messages.VIEW_SERVER_PROFILE,
+  subtext: U.Z.Messages.AKA_DISPLAY_NAME.format({
     displayName: f.ZP.getName(H, b, s)
   }),
   action: () => {
@@ -138,9 +138,9 @@ children: (0, n.jsx)(m.Mt, {
   showGuildProfile: Y,
   children: (0, n.jsxs)(o.ModalRoot, {
     transitionState: w,
-    className: O.root,
+    className: L.root,
     hideShadow: !0,
-    'aria-label': L.Z.Messages.USER_PROFILE_MODAL,
+    'aria-label': U.Z.Messages.USER_PROFILE_MODAL,
     children: [
       (0, n.jsxs)(p.Z, {
         user: s,
@@ -171,14 +171,14 @@ children: (0, n.jsx)(m.Mt, {
           }),
           (0, n.jsxs)('header', {
             children: [
-              (0, n.jsx)(x.Z, {
+              (0, n.jsx)(S.Z, {
                 user: s,
                 displayProfile: ee,
                 profileType: M.y0.FULL_SIZE,
                 hasProfileEffect: (null == ee ? void 0 : ee.profileEffectId) != null
               }),
               (0, n.jsxs)('div', {
-                className: O.headerInner,
+                className: L.headerInner,
                 children: [
                   (0, n.jsx)(Z.Z, {
                     location: 'SimplifiedUserProfileModal',

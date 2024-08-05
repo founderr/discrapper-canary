@@ -18,7 +18,7 @@ onError: u
   } = e, [f, g] = a.useState(!1), {
 firstAvatarDecoration: p,
 firstProfileEffect: C
-  } = (0, l.R)(t), m = (0, i.x6)(t) ? c.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION : t.type === r.Z.AVATAR_DECORATION ? c.Z.Messages.COLLECTIBLES_AVATAR_DECO_UPDATED_NOTIFICATION : c.Z.Messages.COLLECTIBLES_PFX_UPDATED_NOTIFICATION;
+  } = (0, l.R)(t), v = (0, i.x6)(t) ? c.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION : t.type === r.Z.AVATAR_DECORATION ? c.Z.Messages.COLLECTIBLES_AVATAR_DECO_UPDATED_NOTIFICATION : c.Z.Messages.COLLECTIBLES_PFX_UPDATED_NOTIFICATION;
   return {
 handleUseNow: a.useCallback(async () => {
   g(!0);
@@ -38,7 +38,7 @@ handleUseNow: a.useCallback(async () => {
         popToast: r,
         showToast: s
       } = await Promise.resolve().then(n.bind(n, 481060));
-      r(), s(a(m, t.MESSAGE, {
+      r(), s(a(v, t.MESSAGE, {
         duration: 6000,
         position: e.TOP
       }));
@@ -53,7 +53,7 @@ handleUseNow: a.useCallback(async () => {
   p,
   C,
   d,
-  m,
+  v,
   u
 ]),
 isApplying: f
