@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(355298),
   u = n(333984),
   _ = n(26373),
-  h = n(486622),
-  E = n(718538),
+  E = n(486622),
+  h = n(718538),
   I = n(359110),
   m = n(6025),
   g = n(433355),
@@ -28,7 +28,7 @@ function N(e) {
   let {
 channel: t,
 baseChannelId: n
-  } = e, N = (0, p.ZP)(t), A = (0, _.K)(), v = (0, _.V)(), Z = (0, s.e7)([d.Z], () => d.Z.isMessageRequest(t.id)), L = (0, s.e7)([u.Z], () => u.Z.isSpam(t.id)), O = (0, E.V)(t.id, t.getRecipientId()), R = a.useCallback(() => {
+  } = e, N = (0, p.ZP)(t), A = (0, _.K)(), v = (0, _.V)(), Z = (0, s.e7)([d.Z], () => d.Z.isMessageRequest(t.id)), L = (0, s.e7)([u.Z], () => u.Z.isSpam(t.id)), O = (0, h.V)(t.id, t.getRecipientId()), R = a.useCallback(() => {
 m.Z.closeChannelSidebar(g.uZ), Z && A && (0, I.Kh)(t.id), L && v && (0, I.Kh)(t.id);
   }, [
 t.id,
@@ -40,7 +40,7 @@ A
 (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
   }, []), {
 markAsNotSpam: b
-  } = (0, h.m)({
+  } = (0, E.m)({
 onAcceptSuccess: R,
 onError: x
   });

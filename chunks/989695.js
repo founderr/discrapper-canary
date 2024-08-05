@@ -7,7 +7,7 @@ var i, a, s, r, l = n(442837),
 function _() {
   return !0;
 }
-class h extends(r = l.ZP.Store) {
+class E extends(r = l.ZP.Store) {
   initialize() {
 this.waitFor(u.Z), this.syncWith([u.Z], _);
   }
@@ -15,9 +15,9 @@ this.waitFor(u.Z), this.syncWith([u.Z], _);
 return (0, d.S)(e.id, o.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE);
   }
 }
-s = 'GuildOnboardingUpsellNoticeStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
+s = 'GuildOnboardingUpsellNoticeStore', (a = 'displayName') in(i = E) ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new h(c.Z);
+}) : i[a] = s, t.Z = new E(c.Z);

@@ -16,11 +16,11 @@ var i = n(470079),
   d = n(251625),
   u = n(900849),
   _ = n(540742),
-  h = n(731455);
-let E = [],
+  E = n(731455);
+let h = [],
   I = (0, d.oH)(() => {
 var e;
-let t = h.dU,
+let t = E.dU,
   n = c.default.locale;
 return null !== (e = t.find(e => e.code === n)) && void 0 !== e ? e : t[0];
   });
@@ -41,10 +41,10 @@ searchCategoryId: r
   } = _.B.getState(), {
 guilds: c,
 total: d,
-loading: h,
-initialized: E
+loading: E,
+initialized: h
   } = o.Z.getResults(i, r);
-  if (h || E && c.length >= d)
+  if (E || h && c.length >= d)
 return;
   (0, s.j)(() => _.B.setState({
 searchResultsQuery: a
@@ -78,7 +78,7 @@ return t;
 guilds: l,
 loading: c
   } = (0, r.e7)([o.Z], () => null == n ? {
-guilds: E,
+guilds: h,
 loading: !0
   } : o.Z.getResults(n, s)), d = i.useCallback(() => m({
 loadId: t,
@@ -126,7 +126,7 @@ l.Ue();
     searchQuery: e
   }));
 }, []),
-h = i.useCallback(() => {
+E = i.useCallback(() => {
   r(), (0, s.j)(() => _.B.setState({
     searchResultsQuery: '',
     searchQuery: '',
@@ -136,7 +136,7 @@ h = i.useCallback(() => {
   t,
   r
 ]),
-E = i.useCallback(() => m({
+h = i.useCallback(() => m({
   loadId: t,
   categoryId: n
 }), [
@@ -146,13 +146,13 @@ E = i.useCallback(() => m({
   return i.useMemo(() => ({
 searchQuery: c,
 onSearchTextChange: d,
-onClearSearch: h,
-onSearchSubmit: E,
+onClearSearch: E,
+onSearchSubmit: h,
 isSearchVisible: o
   }), [
 o,
-h,
 E,
+h,
 d,
 c
   ]);

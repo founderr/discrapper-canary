@@ -8,8 +8,8 @@ var i = n(735250),
   d = n(677277),
   u = n(285865),
   _ = n(918701),
-  h = n(702428),
-  E = n(709158),
+  E = n(702428),
+  h = n(709158),
   I = n(683301),
   m = n(360048),
   g = n(296386),
@@ -44,7 +44,7 @@ isViewingSearchResults: t
   } = (0, l.cj)([I.ZP], () => ({
 currentCategoryId: I.ZP.getCurrentCategoryId(),
 isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
-  })), n = (0, E.Z)(N.dr.QUEST_HOME_DESKTOP), L = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), O = null == L ? void 0 : L.map(e => ({
+  })), n = (0, h.Z)(N.dr.QUEST_HOME_DESKTOP), L = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), O = null == L ? void 0 : L.map(e => ({
 ...e,
 icon: Z(e.categoryId)
   })), R = e => {
@@ -85,7 +85,7 @@ children: [
     currentCategoryId: e,
     shouldDisplaySelectedCategory: !t
   }),
-  n && (0, i.jsx)(h.Z, {
+  n && (0, i.jsx)(E.Z, {
     onClick: () => R(f.Gj.Quests),
     isSelected: e === f.Gj.Quests
   })

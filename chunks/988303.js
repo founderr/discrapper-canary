@@ -3,12 +3,12 @@ n.d(t, {
 return o;
   },
   u: function() {
-return a;
+return r;
   }
 });
-var s, o, r = n(818083);
+var s, o, a = n(818083);
 (s = o || (o = {}))[s.V1 = 0] = 'V1', s[s.V2 = 1] = 'V2';
-let a = (0, r.B)({
+let r = (0, a.B)({
   id: '2024-05_quest_bar',
   kind: 'user',
   label: 'Quest Bar',

@@ -5,8 +5,8 @@ return C;
 }), n(47120), n(724458);
 var s = n(735250),
   o = n(470079),
-  r = n(120356),
-  a = n.n(r),
+  a = n(120356),
+  r = n.n(a),
   l = n(392711),
   i = n.n(l),
   c = n(442837),
@@ -69,7 +69,7 @@ function C(e) {
   var t;
   let {
 animationClassName: n,
-className: r,
+className: a,
 quest: l,
 useReducedMotion: i
   } = e, g = (0, c.e7)([u.Z], () => u.Z.isFocused()), C = o.useRef(null), [_, h] = o.useState(!1), E = o.useMemo(() => {
@@ -106,13 +106,13 @@ style: {
   backgroundImage: 'linear-gradient(90deg, '.concat(l.config.colors.primary, ', ').concat(l.config.colors.secondary, ')')
 }
   }) : (0, s.jsx)('div', {
-className: a()(m.lottieAnimationBackgroundWrapper, r),
+className: r()(m.lottieAnimationBackgroundWrapper, a),
 children: (0, s.jsx)(d.LottieAnimation, {
   ref: C,
   onComplete: v,
   importData: () => E,
   shouldAnimate: !_ && T,
-  className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
+  className: r()(m.lottieAnimation, m.lottieAnimationBackground, n),
   loop: 0,
   rendererSettings: {
     preserveAspectRatio: 'none'

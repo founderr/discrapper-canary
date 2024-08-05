@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(481060),
   u = n(239091),
   _ = n(100527),
-  h = n(906732),
-  E = n(706140),
+  E = n(906732),
+  h = n(706140),
   I = n(294629),
   m = n(131951),
   g = n(459273),
@@ -38,9 +38,9 @@ mute: O,
 suppress: R
   } = (0, I.Z)(t), x = (0, l.e7)([m.Z], () => m.Z.isDeaf()), b = O || R || x, [P, M] = a.useState(!1), D = t.getGuildId(), y = (0, p.sR)({
 isSoundboardButtonDisabled: b
-  }), [j, U] = (0, E.c)(y), {
+  }), [j, U] = (0, h.c)(y), {
 analyticsLocations: G
-  } = (0, h.ZP)(_.Z.SOUNDBOARD_BUTTON);
+  } = (0, E.ZP)(_.Z.SOUNDBOARD_BUTTON);
 
   function k(e) {
 null != D && (0, u.jW)(e, async () => {
@@ -123,7 +123,7 @@ P
   return (0, g.yp)({
 event: f.CkL.TOGGLE_SOUNDBOARD,
 handler: Y
-  }), (0, i.jsx)(h.Gt, {
+  }), (0, i.jsx)(E.Gt, {
 value: G,
 children: (0, i.jsx)(d.Tooltip, {
   text: function() {

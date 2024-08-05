@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(481060),
   u = n(2052),
   _ = n(393238),
-  h = n(727637),
-  E = n(100527),
+  E = n(727637),
+  h = n(100527),
   I = n(906732),
   m = n(676035),
   g = n(521868),
@@ -173,7 +173,7 @@ onClose: n,
 setPopoutRef: s
   } = e, W = __OVERLAY__, q = (0, O.ZP)(t.id), er = (0, u.O)(), {
 analyticsLocations: el
-  } = (0, I.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT), eo = (0, A.Q1)({
+  } = (0, I.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT), eo = (0, A.Q1)({
 layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
 userId: t.id
   }), ec = (0, m.a)(), ed = (0, c.e7)([F.Z], () => F.Z.getStatus(t.id)), eu = function(e, t) {
@@ -278,14 +278,14 @@ return (0, i.jsxs)(i.Fragment, {
 });
   }(ed, er), {
 ref: e_
-  } = (0, _.Z)(), eh = (0, h.Z)(e_);
+  } = (0, _.Z)(), eE = (0, E.Z)(e_);
   a.useEffect(() => {
 null == s || s(e_.current);
   }, [
 e_,
 s
   ]);
-  let eE = e => {
+  let eh = e => {
   null == n || n(), (0, w.openUserProfileModal)({
     sourceAnalyticsLocations: el,
     userId: t.id,
@@ -360,7 +360,7 @@ children: (0, i.jsx)(A.Mt, {
               user: t,
               displayProfile: q,
               profileType: $.y0.BITE_SIZE,
-              onOpenProfile: W ? void 0 : eE
+              onOpenProfile: W ? void 0 : eh
             }),
             (0, i.jsx)(M.Z, {
               user: t,
@@ -372,7 +372,7 @@ children: (0, i.jsx)(A.Mt, {
         }),
         (null == q ? void 0 : q.profileEffectId) != null && (0, i.jsx)(N.Z, {
           profileEffectId: null == q ? void 0 : q.profileEffectId,
-          isHovering: eh
+          isHovering: eE
         }),
         (0, i.jsxs)(d.Scroller, {
           className: et.body,
@@ -382,7 +382,7 @@ children: (0, i.jsx)(A.Mt, {
               className: et.username,
               profileType: $.y0.BITE_SIZE,
               nickname: z.ZP.getName(null, null, t),
-              onOpenProfile: eE,
+              onOpenProfile: eh,
               pronouns: null == q ? void 0 : q.pronouns,
               tags: (0, i.jsx)(x.Z, {
                 displayProfile: q,
@@ -396,7 +396,7 @@ children: (0, i.jsx)(A.Mt, {
                   }),
                   (0, i.jsx)(P.Z, {
                     user: t,
-                    isHovering: eh
+                    isHovering: eE
                   })
                 ]
               })

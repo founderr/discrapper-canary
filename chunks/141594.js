@@ -9,13 +9,13 @@ var i = n(470079),
   d = n(874703),
   u = n(105622),
   _ = n(599960),
-  h = n(683167),
-  E = n(302800),
+  E = n(683167),
+  h = n(302800),
   I = n(921944);
 let m = 'useCollectiblesShopTabNewBadge';
 t.Z = () => {
   let e = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
-t = (0, h.I)(m),
+t = (0, E.I)(m),
 n = (0, s.e7)([d.Z], () => d.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
 g = (0, u.J)(m),
 p = i.useMemo(() => {
@@ -24,11 +24,11 @@ p = i.useMemo(() => {
       if (g && null != n)
         return [n.dismissibleContent];
     } else {
-      if (t === E.LM.ROBERT)
+      if (t === h.LM.ROBERT)
         return [r.z.COLLECTIBLES_SHOP_ROBERT_MARKETING];
-      if (t === E.LM.DARK_FANTASY)
+      if (t === h.LM.DARK_FANTASY)
         return [r.z.COLLECTIBLES_SHOP_DARK_FANTASY_MARKETING];
-      else if (t === E.LM.TIDE)
+      else if (t === h.LM.TIDE)
         return [r.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
     }
   }
@@ -47,7 +47,7 @@ if (g) {
   if (null != n) {
     var N, A, v, Z, L, O;
     C = {
-      type: E.k2.COACHTIP,
+      type: h.k2.COACHTIP,
       title: () => n.title,
       body: () => n.body,
       imageSrc: n.avatar,
@@ -63,8 +63,8 @@ if (g) {
     });
   }
 } else
-  f === E.k2.COACHTIP ? C = E.fY[T] : f === E.k2.COACHTIP_HEADLINE_ONLY ? C = E.zM[T] : f === E.k2.BADGE && (C = {
-    type: E.k2.BADGE
+  f === h.k2.COACHTIP ? C = h.fY[T] : f === h.k2.COACHTIP_HEADLINE_ONLY ? C = h.zM[T] : f === h.k2.BADGE && (C = {
+    type: h.k2.BADGE
   });
   }
   return {

@@ -1,7 +1,7 @@
 var s = n(735250),
   o = n(470079),
-  r = n(569379),
-  a = n(448288);
+  a = n(569379),
+  r = n(448288);
 t.Z = o.forwardRef((e, t) => {
   let {
 quest: n,
@@ -10,7 +10,7 @@ size: l = 42,
 strokeWidth: i = 3,
 glowBlur: c = 0.4,
 children: d
-  } = e, u = (0, r.EK)(n, o > 0), p = l / 2, m = l / 2 - i / 2, x = 2 * Math.PI * m, g = x - o * x, f = {
+  } = e, u = (0, a.EK)(n, o > 0), p = l / 2, m = l / 2 - i / 2, x = 2 * Math.PI * m, g = x - o * x, f = {
 strokeDasharray: ''.concat(x, ' ').concat(x),
 strokeDashoffset: g
   }, C = {
@@ -20,16 +20,16 @@ strokeDashoffset: -o * x
 boxShadow: '0 0 30px 0px '.concat(u.glow)
   };
   return (0, s.jsxs)('div', {
-className: a.outer,
+className: r.outer,
 ref: t,
 children: [
   (0, s.jsx)('div', {
-    className: a.inner,
+    className: r.inner,
     style: _,
     children: d
   }),
   (0, s.jsxs)('svg', {
-    className: a.progressBar,
+    className: r.progressBar,
     height: l,
     width: l,
     children: [
@@ -80,7 +80,7 @@ children: [
         ]
       }),
       (0, s.jsx)('circle', {
-        className: a.progress,
+        className: r.progress,
         strokeWidth: i,
         fill: 'transparent',
         r: m,
@@ -90,7 +90,7 @@ children: [
         style: C
       }),
       (0, s.jsx)('circle', {
-        className: a.progress,
+        className: r.progress,
         strokeWidth: i,
         fill: 'transparent',
         r: m,

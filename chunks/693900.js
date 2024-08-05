@@ -8,8 +8,8 @@ return p;
 }), n(47120);
 var s = n(735250),
   o = n(470079),
-  r = n(338545),
-  a = n(442837),
+  a = n(338545),
+  r = n(442837),
   l = n(481060),
   i = n(393238),
   c = n(110924),
@@ -40,7 +40,7 @@ children: n
   } = e, {
 springConfig: p,
 isExpanded: m
-  } = o.useContext(u), x = (0, a.e7)([d.Z], () => d.Z.useReducedMotion), {
+  } = o.useContext(u), x = (0, r.e7)([d.Z], () => d.Z.useReducedMotion), {
 ref: g,
 height: f = null
   } = (0, i.Z)(), C = null !== (t = (0, c.Z)(f)) && void 0 !== t ? t : null, [{
@@ -62,7 +62,7 @@ h,
 m,
 x,
 C
-  ]), (0, s.jsx)(r.animated.div, {
+  ]), (0, s.jsx)(a.animated.div, {
 style: {
   height: null === C ? 'auto' : _,
   overflow: 'hidden'

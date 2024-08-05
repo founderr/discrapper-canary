@@ -8,8 +8,8 @@ var i, a = n(735250),
   d = n(239091),
   u = n(372769),
   _ = n(134432),
-  h = n(695346),
-  E = n(806519),
+  E = n(695346),
+  h = n(806519),
   I = n(768581),
   m = n(900849),
   g = n(556017),
@@ -88,7 +88,7 @@ let {
 g.N.trackExposure({
   location: 'de1ef6_4'
 });
-let U = h.Sb.getSetting();
+let U = E.Sb.getSetting();
 return (0, a.jsx)(o.$, {
   active: !A,
   onChange: this.setIsVisible,
@@ -139,14 +139,14 @@ return (0, a.jsx)(o.$, {
                 }) : null,
                 (0, a.jsx)('div', {
                   className: N.guildIcon,
-                  children: (0, a.jsx)(E.ZP, {
-                    mask: E.ZP.Masks.SQUIRCLE,
+                  children: (0, a.jsx)(h.ZP, {
+                    mask: h.ZP.Masks.SQUIRCLE,
                     width: 48,
                     height: 48,
                     children: (0, a.jsx)('div', {
                       className: N.iconMask,
-                      children: (0, a.jsx)(E.ZP, {
-                        mask: E.ZP.Masks.SQUIRCLE,
+                      children: (0, a.jsx)(h.ZP, {
+                        mask: h.ZP.Masks.SQUIRCLE,
                         width: 40,
                         height: 40,
                         children: (0, a.jsx)('img', {

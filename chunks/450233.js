@@ -7,8 +7,8 @@ var i, a, s, r, l, o, c = n(735250),
   d = n(470079),
   u = n(442837),
   _ = n(570140),
-  h = n(16084),
-  E = n(855775),
+  E = n(16084),
+  h = n(855775),
   I = n(689938);
 (i = l || (l = {})).SHORT = 'SHORT', i.LONG = 'LONG';
 class m extends(o = d.PureComponent) {
@@ -28,7 +28,7 @@ switch (t) {
 }
   }
   componentWillUnmount() {
-null != this.props.purchaseError && _.Z.wait(() => h.pB());
+null != this.props.purchaseError && _.Z.wait(() => E.pB());
   }
   render() {
 let {
@@ -49,6 +49,6 @@ r = {
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = u.ZP.connectStores([E.Z], () => ({
-  purchaseError: E.Z.error
+}) : a[s] = r, t.Z = u.ZP.connectStores([h.Z], () => ({
+  purchaseError: h.Z.error
 }))(m);

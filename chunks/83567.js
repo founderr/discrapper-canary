@@ -9,12 +9,12 @@ var i = n(570140),
   d = n(914946),
   u = n(452426),
   _ = n(186901),
-  h = n(981631),
-  E = n(701488),
+  E = n(981631),
+  h = n(701488),
   I = n(231338);
 let m = new Set([
-  E.Fu,
-  E.JT
+  h.Fu,
+  h.JT
 ]);
 t.Z = {
   [I.Et.GET_PROVIDER_ACCESS_TOKEN]: {
@@ -35,12 +35,12 @@ handler: e => {
   } = e;
   (0, d.bu)(t.transport);
   let _ = (0, d._f)(t.application),
-    E = s.Z.get(n);
-  if (null == E)
+    h = s.Z.get(n);
+  if (null == h)
     throw new c.Z({
       errorCode: I.lT.INVALID_PROVIDER
     }, 'Platform not found for provider "'.concat(n, '"'));
-  if (n === h.ABu.AMAZON_MUSIC) {
+  if (n === E.ABu.AMAZON_MUSIC) {
     if (!m.has(_))
       throw new c.Z({
         errorCode: I.lT.UNAUTHORIZED_FOR_APPLICATION
@@ -54,9 +54,9 @@ handler: e => {
     if (null == s) {
       function d(t) {
         var n;
-        if (null == E)
+        if (null == h)
           return;
-        let i = (null !== (n = t.accounts) && void 0 !== n ? n : []).find(e => e.type === E.type);
+        let i = (null !== (n = t.accounts) && void 0 !== n ? n : []).find(e => e.type === h.type);
         null != i && (e({
           access_token: i.access_token
         }), m());
@@ -69,16 +69,16 @@ handler: e => {
       }
 
       function m() {
-        i.Z.unsubscribe('USER_CONNECTIONS_UPDATE', d), o.S.unsubscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, _);
+        i.Z.unsubscribe('USER_CONNECTIONS_UPDATE', d), o.S.unsubscribe(E.CkL.CONNECTIONS_CALLBACK_ERROR, _);
       }
-      i.Z.subscribe('USER_CONNECTIONS_UPDATE', d), o.S.subscribe(h.CkL.CONNECTIONS_CALLBACK_ERROR, _), (0, r.Z)({
-        platformType: E.type,
-        location: h.Sbl.ACTIVITY_RPC,
+      i.Z.subscribe('USER_CONNECTIONS_UPDATE', d), o.S.subscribe(E.CkL.CONNECTIONS_CALLBACK_ERROR, _), (0, r.Z)({
+        platformType: h.type,
+        location: E.Sbl.ACTIVITY_RPC,
         successRedirect: u
       });
     } else
       try {
-        let t = await a.Z.refreshAccessToken(E.type, s.id);
+        let t = await a.Z.refreshAccessToken(h.type, s.id);
         if (null == t)
           throw new c.Z({
             errorCode: I.lT.OAUTH2_ERROR
@@ -113,7 +113,7 @@ handler: async e => {
     throw new c.Z({
       errorCode: I.lT.INVALID_PROVIDER
     }, 'Platform not found for provider "'.concat(n, '"'));
-  if (n === h.ABu.AMAZON_MUSIC) {
+  if (n === E.ABu.AMAZON_MUSIC) {
     if (!m.has(i))
       throw new c.Z({
         errorCode: I.lT.UNAUTHORIZED_FOR_APPLICATION

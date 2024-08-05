@@ -18,17 +18,17 @@ guildId: t,
 signed: n,
 setSigned: u,
 sidebarWidth: _,
-windowWidth: h,
-transition: E,
+windowWidth: E,
+transition: h,
 brandPrimaryColor: I
-  } = e, m = a.useMemo(() => (h - _) / 2, [
+  } = e, m = a.useMemo(() => (E - _) / 2, [
 _,
-h
+E
   ]);
   return (0, i.jsxs)('div', {
 className: d.sidebarContent,
 children: [
-  E((e, t) => t && (0, i.jsx)(s.animated.div, {
+  h((e, t) => t && (0, i.jsx)(s.animated.div, {
     className: d.sidebarLeftDecorationContainer,
     style: {
       opacity: e.opacity,

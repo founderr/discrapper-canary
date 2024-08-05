@@ -6,7 +6,7 @@ return I;
 return _;
   },
   en: function() {
-return A;
+return u;
   }
 }), a(757143), a(47120);
 var n = a(913527),
@@ -179,7 +179,7 @@ Object.keys(c).forEach(e => {
 a = c[e];
   E[s] = a, o[a] = s;
 });
-let u = [
+let d = [
   [
 'YYYY-MM-DD',
 'MMMM DD, Y'
@@ -202,7 +202,7 @@ let u = [
   ]
 ];
 
-function A(e) {
+function u(e) {
   let {
 preorderReleaseAt: s,
 preorderApproximateReleaseDate: a
@@ -211,8 +211,8 @@ preorderApproximateReleaseDate: a
 return s.format('MMMM DD');
   if (null == a)
 return null;
-  for (let e = 0; e < u.length; e++) {
-let [s, n] = u[e], r = l()(a, s, !0);
+  for (let e = 0; e < d.length; e++) {
+let [s, n] = d[e], r = l()(a, s, !0);
 if (r.isValid())
   return r.format(n);
   }

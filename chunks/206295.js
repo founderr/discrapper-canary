@@ -1,6 +1,6 @@
 a.d(s, {
   w: function() {
-return A;
+return u;
   }
 }), a(47120);
 var n = a(470079),
@@ -13,7 +13,7 @@ var n = a(470079),
   c = a(607070),
   _ = a(220082),
   I = a(981631);
-let u = (e, s) => {
+let d = (e, s) => {
 let a = c.Z.desaturateUserColors ? c.Z.saturation : 1,
   n = _.SR.getState().palette[e],
   l = null == n ? void 0 : n.map(e => {
@@ -37,16 +37,16 @@ return null != l ? l : [
   s
 ];
   },
-  A = e => {
+  u = e => {
 var s, n, l, t, i, E;
 let _;
 _ = a(481060).tokens;
-let A = c.Z.saturation,
-  [d, O] = u(e, null !== (E = null == _ ? void 0 : null === (i = _.colors) || void 0 === i ? void 0 : null === (t = i.BACKGROUND_FLOATING) || void 0 === t ? void 0 : null === (l = t.resolve) || void 0 === l ? void 0 : null === (n = l.call(t, {
+let u = c.Z.saturation,
+  [A, O] = d(e, null !== (E = null == _ ? void 0 : null === (i = _.colors) || void 0 === i ? void 0 : null === (t = i.BACKGROUND_FLOATING) || void 0 === t ? void 0 : null === (l = t.resolve) || void 0 === l ? void 0 : null === (n = l.call(t, {
     theme: I.BRd.DARK,
-    saturation: A
+    saturation: u
   })) || void 0 === n ? void 0 : null === (s = n.hex) || void 0 === s ? void 0 : s.call(n)) && void 0 !== E ? E : '#000'),
-  N = (0, o._i)(d),
+  N = (0, o._i)(A),
   R = (0, o._i)(O);
 for (let e = 1; e < 8 && !((0, o.Bd)(N) >= 0.725); e++) {
   ;
@@ -63,14 +63,14 @@ return {
 };
   };
 s.Z = e => {
-  var s, l, t, i, u, A;
-  let d;
-  d = a(481060).tokens;
+  var s, l, t, i, d, u;
+  let A;
+  A = a(481060).tokens;
   let O = (0, E.e7)([c.Z], () => c.Z.saturation),
-[N, R] = (0, _.Cf)(e, null !== (A = null == d ? void 0 : null === (u = d.colors) || void 0 === u ? void 0 : null === (i = u.BACKGROUND_FLOATING) || void 0 === i ? void 0 : null === (t = i.resolve) || void 0 === t ? void 0 : null === (l = t.call(i, {
+[N, R] = (0, _.Cf)(e, null !== (u = null == A ? void 0 : null === (d = A.colors) || void 0 === d ? void 0 : null === (i = d.BACKGROUND_FLOATING) || void 0 === i ? void 0 : null === (t = i.resolve) || void 0 === t ? void 0 : null === (l = t.call(i, {
   theme: I.BRd.DARK,
   saturation: O
-})) || void 0 === l ? void 0 : null === (s = l.hex) || void 0 === s ? void 0 : s.call(l)) && void 0 !== A ? A : '#000');
+})) || void 0 === l ? void 0 : null === (s = l.hex) || void 0 === s ? void 0 : s.call(l)) && void 0 !== u ? u : '#000');
   return n.useMemo(() => {
 let e = (0, o._i)(N),
   s = (0, o._i)(R);

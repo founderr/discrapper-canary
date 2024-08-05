@@ -10,8 +10,8 @@ var i, a, s, r, l, o, c = n(470079),
   d = n(442837),
   u = n(570140),
   _ = n(872810),
-  h = n(998594),
-  E = n(592125),
+  E = n(998594),
+  h = n(592125),
   I = n(430824),
   m = n(131951),
   g = n(496675),
@@ -28,7 +28,7 @@ function A() {
 }
 
 function v() {
-  return A() && h.Z.getCurrentConfig({
+  return A() && E.Z.getCurrentConfig({
 location: 'NativeScreenSharePickerStore_enabled'
   }, {
 autoTrackExposure: !1
@@ -50,7 +50,7 @@ function O(e) {
   if (v()) {
 var t, n;
 Z();
-let i = E.Z.getChannel(e),
+let i = h.Z.getChannel(e),
   a = null != i && (0, S.Z)(m.Z) && (0, T.JL)(i, I.Z, g.Z, !1);
 null === (n = m.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, a);
   }
@@ -64,10 +64,10 @@ class x extends(o = d.ZP.Store) {
 this.syncWith([
   m.Z,
   p.Z,
-  E.Z,
+  h.Z,
   I.Z,
   g.Z
-], R), h.Z.subscribe({
+], R), E.Z.subscribe({
   location: 'NativeScreenSharePickerStore_initialize'
 }, R);
   }
@@ -104,7 +104,7 @@ let {
 if (N = {
     lastPickerAction: 1
   }, 0 === C && !t) {
-  let e = E.Z.getChannel(p.Z.getVoiceChannelId());
+  let e = h.Z.getChannel(p.Z.getVoiceChannelId());
   null != e && (0, S.Z)(m.Z) && (0, T.JL)(e, I.Z, g.Z, !1) && (0, _.WH)(e.getGuildId(), e.id, {
     sourceId: 'prepicked:0'
   });

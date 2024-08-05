@@ -8,8 +8,8 @@ var i, a = n(735250),
   d = n(1964),
   u = n(63063),
   _ = n(285952),
-  h = n(672705),
-  E = n(981631),
+  E = n(672705),
+  h = n(981631),
   I = n(689938),
   m = n(777458),
   g = n(549856);
@@ -22,7 +22,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let T = u.Z.getArticleURL(E.BhN.VERIFICATION_FAQ);
+let T = u.Z.getArticleURL(h.BhN.VERIFICATION_FAQ);
 class S extends(i = s.PureComponent) {
   renderFields() {
 let {
@@ -32,7 +32,7 @@ let {
   onCaptchaVerify: i
 } = this.props;
 return (0, a.jsx)(a.Fragment, {
-  children: e.map(e => e === E.PUi.CAPTCHA ? (0, a.jsx)(h.Z, {
+  children: e.map(e => e === h.PUi.CAPTCHA ? (0, a.jsx)(E.Z, {
     onVerify: i,
     theme: n
   }, t) : (0, a.jsx)(c.Button, {
@@ -116,7 +116,7 @@ super(...e), p(this, 'handleClick', e => {
   }
 }
 p(S, 'defaultProps', {
-  types: [E.PUi.CAPTCHA],
-  onCaptchaVerify: E.dG4,
-  onLogout: E.dG4
+  types: [h.PUi.CAPTCHA],
+  onCaptchaVerify: h.dG4,
+  onLogout: h.dG4
 }), t.Z = S;

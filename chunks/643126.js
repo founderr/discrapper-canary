@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(100527),
   u = n(484459),
   _ = n(103575),
-  h = n(285952),
-  E = n(409216),
+  E = n(285952),
+  h = n(409216),
   I = n(63063),
   m = n(976401),
   g = n(333454),
@@ -77,10 +77,10 @@ return (0, i.jsxs)('div', {
   className: f.listeningAlong,
   children: [
     this.renderTitle(),
-    (0, i.jsx)(h.Z, {
-      justify: h.Z.Justify.END,
+    (0, i.jsx)(E.Z, {
+      justify: E.Z.Justify.END,
       className: f.party,
-      children: (0, i.jsx)(E.Z, {
+      children: (0, i.jsx)(h.Z, {
         users: this.props.party,
         max: this.isHost() ? N.HOST : N.LISTENER,
         renderUser: this.renderPartyMember,

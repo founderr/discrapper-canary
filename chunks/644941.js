@@ -171,7 +171,7 @@ let {
 }, [
   et,
   i
-]), eE = ei.length > 3, [eo, ec] = l.useState(!1);
+]), eE = ei.length > 7, [eo, ec] = l.useState(!1);
 l.useEffect(() => {
   var e, s;
   return (0, f.IS)({
@@ -398,7 +398,7 @@ return (0, n.jsx)(A.ModalRoot, {
                   }),
                   (0, n.jsx)('div', {
                     className: t()(B.column, B.gapNone),
-                    children: null == ei ? void 0 : ei.slice(0, eE && !eo ? 2 : void 0).map(e => (0, n.jsx)(Z.Z, {
+                    children: null == ei ? void 0 : ei.slice(0, eE && !eo ? 6 : void 0).map(e => (0, n.jsx)(Z.Z, {
                       entry: e,
                       viewId: ea,
                       onClose: H

@@ -8,9 +8,9 @@ var r = n(120356),
   d = n(700582),
   u = n(451478),
   _ = n(689938),
-  h = n(390826);
+  E = n(390826);
 (a = i || (i = {}))[a.STAFF_NOTES = 1] = 'STAFF_NOTES';
-let E = o.ZP.connectStores([u.Z], () => ({
+let h = o.ZP.connectStores([u.Z], () => ({
 animate: u.Z.isFocused()
   }))(e => {
 let {
@@ -19,7 +19,7 @@ let {
   animate: i
 } = e;
 return (0, s.jsxs)('div', {
-  className: l()(h.staffReviewHeader, n),
+  className: l()(E.staffReviewHeader, n),
   children: [
     (0, s.jsx)(d.Z, {
       size: c.AvatarSizes.SIZE_32,
@@ -27,14 +27,14 @@ return (0, s.jsxs)('div', {
       animate: i
     }),
     (0, s.jsxs)('div', {
-      className: h.headerText,
+      className: E.headerText,
       children: [
         (0, s.jsx)('div', {
-          className: h.label,
+          className: E.label,
           children: _.Z.Messages.APPLICATION_STORE_STAFF_PICK
         }),
         (0, s.jsx)('div', {
-          className: h.username,
+          className: E.username,
           children: t.username
         })
       ]
@@ -57,12 +57,12 @@ if (1 === t.type) {
   return null == e ? null : (0, s.jsxs)('div', {
     className: n,
     children: [
-      (0, s.jsx)(E, {
+      (0, s.jsx)(h, {
         user: e,
-        className: h.header
+        className: E.header
       }),
       (0, s.jsx)('div', {
-        className: h.notes,
+        className: E.notes,
         children: i
       })
     ]
