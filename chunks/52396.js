@@ -1,9 +1,9 @@
 t.d(n, {
   B: function() {
-return p;
+return C;
   },
   r: function() {
-return C;
+return h;
   }
 }), t(411104);
 var l = t(735250),
@@ -12,15 +12,16 @@ var l = t(735250),
   a = t.n(i),
   o = t(876215),
   s = t(775379),
-  c = t(214597),
-  u = t(498187),
-  d = t(482417),
-  m = t(301419),
-  f = t(397035);
-let _ = r.createContext(void 0);
+  c = t(879046),
+  u = t(214597),
+  d = t(498187),
+  m = t(482417),
+  f = t(301419),
+  _ = t(397035);
+let p = r.createContext(void 0);
 
-function p() {
-  let e = r.useContext(_);
+function C() {
+  let e = r.useContext(p);
   return a()(null != e, 'useEntryDataContext must be used within a EntryDataContextProvider'), e;
 }
 
@@ -29,7 +30,7 @@ function v(e) {
 entry: n,
 ...t
   } = e, r = {
-baseEntryData: (0, c.Z)({
+baseEntryData: (0, u.Z)({
   entry: n,
   channel: t.channel
 }),
@@ -37,27 +38,32 @@ baseEntryData: (0, c.Z)({
   };
   switch (n.content_type) {
 case o.s.TOP_ARTIST:
-  return (0, l.jsx)(h, {
-    entry: n,
-    ...r
-  });
-case o.s.TOP_GAME:
   return (0, l.jsx)(x, {
     entry: n,
     ...r
   });
-case o.s.PLAYED_GAME:
+case o.s.TOP_GAME:
   return (0, l.jsx)(I, {
     entry: n,
     ...r
   });
+case o.s.PLAYED_GAME:
+  return (0, l.jsx)(T, {
+    entry: n,
+    ...r
+  });
 case o.s.WATCHED_MEDIA:
-  return (0, l.jsx)(E, {
+  return (0, l.jsx)(N, {
     entry: n,
     ...r
   });
 case o.s.LISTENED_SESSION:
-  return (0, l.jsx)(T, {
+  return (0, l.jsx)(g, {
+    entry: n,
+    ...r
+  });
+case o.s.LAUNCHED_ACTIVITY:
+  return (0, l.jsx)(E, {
     entry: n,
     ...r
   });
@@ -66,7 +72,7 @@ default:
   }
 }
 
-function C(e) {
+function h(e) {
   let {
 errorFallback: n,
 ...t
@@ -79,16 +85,16 @@ children: (0, l.jsx)(v, {
   });
 }
 
-function h(e) {
+function E(e) {
   let {
 entry: n,
 children: t,
 ...r
-  } = e, i = (0, m.Z)({
+  } = e, i = (0, c.Z)({
 entry: n,
 ...r
   });
-  return (0, l.jsx)(_.Provider, {
+  return (0, l.jsx)(p.Provider, {
 value: {
   parsedEntry: i,
   ...r
@@ -102,11 +108,11 @@ function x(e) {
 entry: n,
 children: t,
 ...r
-  } = e, i = (0, u.Z)({
+  } = e, i = (0, f.Z)({
 entry: n,
 ...r
   });
-  return (0, l.jsx)(_.Provider, {
+  return (0, l.jsx)(p.Provider, {
 value: {
   parsedEntry: i,
   ...r
@@ -120,29 +126,11 @@ function I(e) {
 entry: n,
 children: t,
 ...r
-  } = e, i = (0, u.Z)({
+  } = e, i = (0, d.Z)({
 entry: n,
 ...r
   });
-  return (0, l.jsx)(_.Provider, {
-value: {
-  parsedEntry: i,
-  ...r
-},
-children: t
-  });
-}
-
-function E(e) {
-  let {
-entry: n,
-children: t,
-...r
-  } = e, i = (0, f.Z)({
-entry: n,
-...r
-  });
-  return (0, l.jsx)(_.Provider, {
+  return (0, l.jsx)(p.Provider, {
 value: {
   parsedEntry: i,
   ...r
@@ -160,7 +148,43 @@ children: t,
 entry: n,
 ...r
   });
-  return (0, l.jsx)(_.Provider, {
+  return (0, l.jsx)(p.Provider, {
+value: {
+  parsedEntry: i,
+  ...r
+},
+children: t
+  });
+}
+
+function N(e) {
+  let {
+entry: n,
+children: t,
+...r
+  } = e, i = (0, _.Z)({
+entry: n,
+...r
+  });
+  return (0, l.jsx)(p.Provider, {
+value: {
+  parsedEntry: i,
+  ...r
+},
+children: t
+  });
+}
+
+function g(e) {
+  let {
+entry: n,
+children: t,
+...r
+  } = e, i = (0, m.Z)({
+entry: n,
+...r
+  });
+  return (0, l.jsx)(p.Provider, {
 value: {
   parsedEntry: i,
   ...r

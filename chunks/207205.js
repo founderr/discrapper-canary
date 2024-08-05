@@ -132,6 +132,7 @@ activity: {
   participants: [],
   content_type: r.s.CUSTOM_STATUS,
   extra: {
+    type: 'custom_status_extra',
     status: null !== (t = e.data.text) && void 0 !== t ? t : '',
     emoji_id: e.data.emoji_id,
     emoji_name: e.data.emoji_name,
