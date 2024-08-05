@@ -9,9 +9,9 @@ var n = a(735250),
   c = a(481060),
   _ = a(493683),
   I = a(220779),
-  u = a(142550),
-  A = a(201133),
-  d = a(693824),
+  d = a(142550),
+  u = a(201133),
+  A = a(693824),
   O = a(919394),
   N = a(91140),
   R = a(297781),
@@ -25,7 +25,7 @@ var n = a(735250),
   G = a(689938),
   C = a(340672),
   f = a(421377);
-let v = e => {
+let h = e => {
   let {
 entry: s,
 setGeneratedImage: a,
@@ -36,8 +36,8 @@ nickName: r
   let e = await _.Z.getOrEnsurePrivateChannel(s.author_id),
     n = m.Z.getChannel(e);
   E()(null != n, 'DM channel cannot be null');
-  let l = await (0, O.QC)(s, n, d.kH.Base64),
-    r = await (0, O.QC)(s, n, d.kH.CloudUpload);
+  let l = await (0, O.QC)(s, n, A.kH.Base64),
+    r = await (0, O.QC)(s, n, A.kH.CloudUpload);
   o(l), a(r);
 })();
   }, [
@@ -66,12 +66,12 @@ entry: s,
 viewId: a,
 style: r = {},
 onClose: i
-  } = e, d = (0, o.e7)([
+  } = e, A = (0, o.e7)([
 L.Z,
 m.Z
-  ], () => m.Z.getChannel(L.Z.getChannelId())), O = (0, o.e7)([P.default], () => P.default.getUser(s.author_id)), h = l.useMemo(() => M.ZP.getName(null == d ? void 0 : d.guild_id, null == d ? void 0 : d.id, O), [
+  ], () => m.Z.getChannel(L.Z.getChannelId())), O = (0, o.e7)([P.default], () => P.default.getUser(s.author_id)), v = l.useMemo(() => M.ZP.getName(null == A ? void 0 : A.guild_id, null == A ? void 0 : A.id, O), [
 O,
-d
+A
   ]), [x, p] = l.useState();
   return null == O ? null : (0, n.jsxs)('div', {
 className: C.profileEntryCard,
@@ -83,21 +83,21 @@ children: [
     children: [
       (0, n.jsx)(S.D, {
         user: O,
-        channel: d
+        channel: A
       }),
       (0, n.jsx)('div', {
         className: t()(C.playerInfo),
         children: (0, n.jsxs)('div', {
-          className: t()(f.column, f.gapNone),
+          className: t()(f.column, f.gapXs),
           children: [
             (0, n.jsxs)(c.Text, {
-              variant: 'text-sm/bold',
-              color: 'text-normal',
+              variant: 'text-md/medium',
+              color: 'text-primary',
               lineClamp: 1,
               children: [
-                h.slice(0, 18),
+                v.slice(0, 18),
                 ' ',
-                h.length > 18 ? '...' : ''
+                v.length > 18 ? '...' : ''
               ]
             }),
             (0, n.jsx)(R.Gk, {
@@ -121,13 +121,13 @@ children: [
           interactionType: n,
           reply: l
         } = e;
-        if (n === u.L.ReplyBegin && (0, g.UE)({
+        if (n === d.L.ReplyBegin && (0, g.UE)({
             action: g.as.ClickMessageUser,
             applicationId: s.extra.application_id,
             gameName: s.extra.game_name,
             recipientUserId: s.author_id,
             viewId: a
-          }), n === u.L.ReplySubmit) {
+          }), n === d.L.ReplySubmit) {
           (0, g.UE)({
             action: g.as.SendMessageUser,
             applicationId: s.extra.application_id,
@@ -137,7 +137,7 @@ children: [
           });
           let e = await _.Z.getOrEnsurePrivateChannel(s.author_id),
             n = m.Z.getChannel(e);
-          E()(null != n, 'GameProfile ReactReply - DM channel cannot be null'), E()(null != x, 'GameProfile ReactReply - Reaction Image cannot be null'), (0, A.B)({
+          E()(null != n, 'GameProfile ReactReply - DM channel cannot be null'), E()(null != x, 'GameProfile ReactReply - Reaction Image cannot be null'), (0, u.B)({
             file: x,
             channel: n,
             altText: '',
@@ -146,14 +146,14 @@ children: [
         }
       },
       popoutProps: {
-        popoutBody: (0, n.jsx)(v, {
+        popoutBody: (0, n.jsx)(h, {
           entry: s,
           setGeneratedImage: p,
-          nickName: h
+          nickName: v
         }),
         replyHeaderText: '',
         replyPlaceholder: G.Z.Messages.QUICK_DM_USER.format({
-          name: h
+          name: v
         })
       }
     })

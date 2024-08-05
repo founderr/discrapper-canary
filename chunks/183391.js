@@ -9,9 +9,9 @@ var n = a(735250),
   c = a(652898),
   _ = a(93093),
   I = a(768581),
-  u = a(810568),
-  A = a(981631),
-  d = a(689938),
+  d = a(810568),
+  u = a(981631),
+  A = a(689938),
   O = a(421377);
 let N = [
 i.p.OFFICIAL,
@@ -39,9 +39,10 @@ let c = I.ZP.getGuildIconURL({
 return (0, n.jsxs)('div', {
   className: t()(O.column),
   children: [
-    (0, n.jsx)(E.Text, {
+    (0, n.jsx)(E.Heading, {
       variant: 'text-xs/semibold',
-      children: d.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
+      color: 'header-secondary',
+      children: A.Z.Messages.GAME_PROFILE_OFFICIAL_GUILD
     }),
     (0, n.jsxs)('div', {
       className: t()(O.row, O.gapMd),
@@ -49,7 +50,7 @@ return (0, n.jsxs)('div', {
         (0, n.jsx)('img', {
           className: O.icon,
           src: c,
-          alt: d.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({
+          alt: A.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({
             guildName: r.name
           })
         }),
@@ -62,7 +63,7 @@ return (0, n.jsxs)('div', {
             }),
             null != l && (0, n.jsx)(E.Text, {
               variant: 'text-xxs/normal',
-              children: d.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+              children: A.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                 count: l
               })
             })
@@ -73,14 +74,14 @@ return (0, n.jsxs)('div', {
     (0, n.jsx)(E.Button, {
       color: E.ButtonColors.PRIMARY,
       onClick: () => {
-        a(u.as.JoinOfficialServer), o.Z.dispatch({
+        a(d.as.JoinOfficialServer), o.Z.dispatch({
           type: 'INVITE_MODAL_OPEN',
           invite: s,
           code: s.code,
-          context: A.IlC.APP
+          context: u.IlC.APP
         });
       },
-      children: i ? d.Z.Messages.JOINED_GUILD : d.Z.Messages.JOIN_GUILD
+      children: i ? A.Z.Messages.JOINED_GUILD : A.Z.Messages.JOIN_GUILD
     })
   ]
 });
@@ -122,9 +123,10 @@ children: [
   (0, n.jsxs)('div', {
     className: t()(O.column, O.gapSm),
     children: [
-      (0, n.jsx)(E.Text, {
+      (0, n.jsx)(E.Heading, {
         variant: 'text-xs/semibold',
-        children: d.Z.Messages.GAME_PROFILE_LINKS
+        color: 'header-secondary',
+        children: A.Z.Messages.GAME_PROFILE_LINKS
       }),
       (0, n.jsx)('div', {
         className: O.row,
@@ -138,17 +140,17 @@ children: [
             case i.p.OFFICIAL:
               o = (0, n.jsx)(E.GlobeEarthIcon, {
                 colorClass: O.linkIcon
-              }), l = u.as.WebsiteLink, s = d.Z.Messages.GAME_PROFILE_LINK_OFFICIAL;
+              }), l = d.as.WebsiteLink, s = A.Z.Messages.GAME_PROFILE_LINK_OFFICIAL;
               break;
             case i.p.TWITTER:
               o = (0, n.jsx)(E.XNeutralIcon, {
                 colorClass: O.linkIcon
-              }), l = u.as.XLink, s = d.Z.Messages.GAME_PROFILE_LINK_TWITTER;
+              }), l = d.as.XLink, s = A.Z.Messages.GAME_PROFILE_LINK_TWITTER;
               break;
             case i.p.YOUTUBE:
-              l = u.as.YouTubeLink, o = (0, n.jsx)(E.YouTubeIcon, {
+              l = d.as.YouTubeLink, o = (0, n.jsx)(E.YouTubeIcon, {
                 colorClass: O.linkIcon
-              }), s = d.Z.Messages.GAME_PROFILE_LINK_YOUTUBE;
+              }), s = A.Z.Messages.GAME_PROFILE_LINK_YOUTUBE;
           }
           return null != o ? (0, n.jsx)(E.Anchor, {
             className: O.linkAnchor,
