@@ -85,7 +85,8 @@ en
   ]), e_ = a.useCallback(() => {
 (0, E.dA)({
   questId: I.id,
-  event: S.rMx.QUEST_HOVER
+  event: S.rMx.QUEST_HOVER,
+  properties: (0, E.mH)(R.jn.QUEST_BAR)
 }), V.current = !0, eo({
   withDelay: !0
 });
