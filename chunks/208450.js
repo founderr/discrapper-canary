@@ -235,9 +235,14 @@ super(e), D(this, 'state', {
   }
   let s = f.ZP.getTextChannelNameDisambiguations(i.getGuildId())[i.id],
     a = null != s ? s.name : i.name;
-  this.handleSetSearchQuery({
-    query: m.ZP[L.dCx.FILTER_IN].key + '#'.concat(a, ' '),
-    replace: !0
+  Promise.resolve().then(() => {
+    let {
+      _editorRef: e
+    } = this;
+    null == e || e.focus(), this.handleSetSearchQuery({
+      query: m.ZP[L.dCx.FILTER_IN].key + '#'.concat(a, ' '),
+      replace: !0
+    });
   });
 }), D(this, 'focusEditor', () => {
   let {
@@ -245,8 +250,10 @@ super(e), D(this, 'state', {
   } = this;
   null != e && Promise.resolve().then(() => e.focus());
 }), D(this, 'blurEditor', () => {
-  var e;
-  null === (e = this._editorRef) || void 0 === e || e.blur();
+  let {
+    _editorRef: e
+  } = this;
+  null != e && Promise.resolve().then(() => e.blur());
 }), D(this, 'setEditorRef', e => {
   this._editorRef = e;
 }), D(this, 'onFocus', () => {
