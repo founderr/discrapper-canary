@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(183126),
   u = n(209613),
   _ = n(82295),
-  h = n(797614),
-  E = n(626135),
+  E = n(797614),
+  h = n(626135),
   I = n(26373),
   m = n(486622),
   g = n(922409),
@@ -52,9 +52,9 @@ b = a.useCallback(() => {
   x
 ]);
   a.useEffect(() => {
-E.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, {
+h.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, {
   num_spam_message_requests: n
-}), h.Z.increment({
+}), E.Z.increment({
   name: o.V.SPAM_MESSAGE_REQUEST_VIEW
 });
   }, []);

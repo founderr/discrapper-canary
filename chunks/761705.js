@@ -3,23 +3,23 @@ n.d(e, {
 return N;
   }
 }), n(47120), n(653041);
-var a, o = n(735250),
-  r = n(470079),
-  i = n(120356),
-  s = n.n(i),
+var a, i = n(735250),
+  o = n(470079),
+  r = n(120356),
+  s = n.n(r),
   l = n(299608),
   c = n.n(l),
   u = n(748780),
   d = n(215569),
-  p = n(376641),
-  h = n(714338),
+  h = n(376641),
+  p = n(714338),
   g = n(134432),
-  f = n(44488),
-  m = n(585483),
-  C = n(981631),
-  _ = n(903463);
+  m = n(44488),
+  C = n(585483),
+  f = n(981631),
+  b = n(903463);
 
-function b(t, e, n) {
+function v(t, e, n) {
   return e in t ? Object.defineProperty(t, e, {
 value: n,
 enumerable: !0,
@@ -27,15 +27,15 @@ configurable: !0,
 writable: !0
   }) : t[e] = n, t;
 }
-let v = {
+let x = {
   friction: 10,
   tension: 100
 };
 
-function x(t, e) {
+function L(t, e) {
   return (t % e + e) % e;
 }
-class L extends r.Component {
+class _ extends o.Component {
   componentWillEnter(t) {
 let {
   directionHistory: e
@@ -51,7 +51,7 @@ n.setValue(e[e.length - 1]), a.setValue(0), t(), u.Z.parallel([
   }),
   u.Z.spring(n, {
     toValue: 0,
-    ...v
+    ...x
   })
 ]).start();
   }
@@ -70,7 +70,7 @@ u.Z.parallel([
   }),
   u.Z.spring(a, {
     toValue: -1 * e[e.length - 1],
-    ...v
+    ...x
   })
 ]).start(t);
   }
@@ -101,26 +101,26 @@ let {
 } = this.props, {
   className: e
 } = this.props;
-return (0, o.jsx)(u.Z.img, {
+return (0, i.jsx)(u.Z.img, {
   src: t.src,
   alt: '',
-  className: s()(_.slide, e),
+  className: s()(b.slide, e),
   style: this.getStyle()
 });
   }
   constructor(...t) {
-super(...t), b(this, 'state', {
+super(...t), v(this, 'state', {
   translate: new u.Z.Value(0),
   opacity: new u.Z.Value(1)
 });
   }
 }
-class N extends(a = r.Component) {
+class N extends(a = o.Component) {
   componentDidMount() {
-this.preloadNextImages(), h.Z.disable(), h.Z.enableTemp(p.P), m.S.subscribe(C.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), m.S.subscribe(C.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+this.preloadNextImages(), p.Z.disable(), p.Z.enableTemp(h.P), C.S.subscribe(f.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), C.S.subscribe(f.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
   }
   componentWillUnmount() {
-h.Z.disableTemp(), m.S.unsubscribe(C.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), m.S.unsubscribe(C.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+p.Z.disableTemp(), C.S.unsubscribe(f.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), C.S.unsubscribe(f.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
   }
   preloadNextImages() {
 var t, e;
@@ -129,9 +129,9 @@ let {
 } = this.state, {
   items: a
 } = this.props;
-let o = ((n + 1) % (t = a.length) + t) % t;
-let r = ((n - 1) % (e = a.length) + e) % e;
-this.preloadImage(a[o]), this.preloadImage(a[r]);
+let i = ((n + 1) % (t = a.length) + t) % t;
+let o = ((n - 1) % (e = a.length) + e) % e;
+this.preloadImage(a[i]), this.preloadImage(a[o]);
   }
   preloadImage(t) {
 (0, g.po)(t.src);
@@ -145,12 +145,12 @@ n !== e.currentIndex && this.preloadNextImages();
   navigateTo(t) {
 var e, n, a;
 let {
-  directionHistory: o,
-  currentIndex: r
+  directionHistory: i,
+  currentIndex: o
 } = this.state;
-o.push(t - r), t = (t % (a = this.props.items.length) + a) % a, this.setState({
+i.push(t - o), t = (t % (a = this.props.items.length) + a) % a, this.setState({
   currentIndex: t,
-  directionHistory: o
+  directionHistory: i
 }), null === (e = (n = this.props).onIndexChange) || void 0 === e || e.call(n, t);
   }
   render() {
@@ -161,45 +161,45 @@ let {
   currentIndex: n,
   directionHistory: a
 } = this.state, {
-  modalCarouselItemClassName: r
-} = this.props, i = this.props.items[n], l = this.props.items;
-return (0, o.jsxs)(d.W, {
+  modalCarouselItemClassName: o
+} = this.props, r = this.props.items[n], l = this.props.items;
+return (0, i.jsxs)(d.W, {
   component: 'div',
-  className: s()(_.wrapper, e),
+  className: s()(b.wrapper, e),
   children: [
-    l.length > 1 ? (0, o.jsx)(f.am, {
-      className: _.navPrev,
+    l.length > 1 ? (0, i.jsx)(m.am, {
+      className: b.navPrev,
       onClick: this.gotoPrev
     }) : null,
-    null !== (t = i.component) && void 0 !== t ? t : (0, o.jsx)(L, {
-      item: i,
+    null !== (t = r.component) && void 0 !== t ? t : (0, i.jsx)(_, {
+      item: r,
       directionHistory: a,
-      className: r
-    }, i.src),
-    l.length > 1 ? (0, o.jsx)(f.Pz, {
-      className: _.navNext,
+      className: o
+    }, r.src),
+    l.length > 1 ? (0, i.jsx)(m.Pz, {
+      className: b.navNext,
       onClick: this.gotoNext
     }) : null
   ]
 });
   }
   constructor(t) {
-super(t), b(this, 'gotoNext', () => {
+super(t), v(this, 'gotoNext', () => {
   let {
     currentIndex: t
   } = this.state;
   this.navigateTo(t + 1);
-}), b(this, 'gotoPrev', () => {
+}), v(this, 'gotoPrev', () => {
   let {
     currentIndex: t
   } = this.state;
   this.navigateTo(t - 1);
-}), b(this, 'gotoNextThrottled', c()(this.gotoNext, 300)), b(this, 'gotoPrevThrottled', c()(this.gotoPrev, 300)), this.state = {
+}), v(this, 'gotoNextThrottled', c()(this.gotoNext, 300)), v(this, 'gotoPrevThrottled', c()(this.gotoPrev, 300)), this.state = {
   currentIndex: t.startWith,
   directionHistory: []
 };
   }
 }
-b(N, 'defaultProps', {
+v(N, 'defaultProps', {
   startWith: 0
 });

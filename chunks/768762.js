@@ -1,39 +1,39 @@
-var a, o, r, i, s = n(735250),
+var r, i, a, s, o = n(735250),
   l = n(470079),
-  c = n(120356),
-  u = n.n(c),
+  u = n(120356),
+  c = n.n(u),
   d = n(481060),
-  p = n(780516);
-let h = {
+  _ = n(780516);
+let E = {
 UP: 'up',
 RIGHT: 'right',
 DOWN: 'down',
 LEFT: 'left'
   },
-  g = {
-[h.UP]: p.up,
-[h.RIGHT]: p.right,
-[h.DOWN]: p.down,
-[h.LEFT]: p.left
+  f = {
+[E.UP]: _.up,
+[E.RIGHT]: _.right,
+[E.DOWN]: _.down,
+[E.LEFT]: _.left
   };
-class f extends(i = l.PureComponent) {
+class h extends(s = l.PureComponent) {
   render() {
 let {
-  direction: t,
-  className: e
+  direction: e,
+  className: t
 } = this.props;
-return (0, s.jsx)(d.ArrowSmallUpIcon, {
+return (0, o.jsx)(d.ArrowSmallUpIcon, {
   size: 'md',
   color: 'currentColor',
-  className: u()(p.__invalid_arrow, e, {
-    [g[t]]: !0
+  className: c()(_.__invalid_arrow, t, {
+    [f[e]]: !0
   })
 });
   }
 }
-a = f, o = 'Directions', r = h, o in a ? Object.defineProperty(a, o, {
-  value: r,
+r = h, i = 'Directions', a = E, i in r ? Object.defineProperty(r, i, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = r, e.Z = f;
+}) : r[i] = a, t.Z = h;

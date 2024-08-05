@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(410030),
   u = n(213609),
   _ = n(252618),
-  h = n(353926),
-  E = n(212476),
+  E = n(353926),
+  h = n(212476),
   I = n(374939),
   m = n(611928),
   g = n(791734),
@@ -33,7 +33,7 @@ onSelectTab: b
   } = (0, A.z)(), {
 onScroll: P,
 scrollPosition: M
-  } = (0, E.c)(), D = (0, d.ZP)(), y = (0, l.wj)(D), j = (0, r.e7)([h.Z], () => h.Z.hasLoadedExperiments), {
+  } = (0, h.c)(), D = (0, d.ZP)(), y = (0, l.wj)(D), j = (0, r.e7)([E.Z], () => E.Z.hasLoadedExperiments), {
 quests: U,
 isFetchingCurrentQuests: G
   } = (0, S.bA)(x), k = (0, N.Z)(), w = null;

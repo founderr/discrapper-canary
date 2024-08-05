@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(524331),
   u = n(768419),
   _ = n(831506),
-  h = n(699516),
-  E = n(594174),
+  E = n(699516),
+  h = n(594174),
   I = n(823379),
   m = n(824138),
   g = n(689938);
@@ -75,20 +75,20 @@ super(...e), p(this, 'handleUserContextMenu', (e, t) => {
 }
 t.Z = l.ZP.connectStores([
   u.Z,
-  E.default,
-  h.Z,
+  h.default,
+  E.Z,
   _.Z
 ], () => {
   let e, t;
   let n = u.Z.getSyncingWith(),
 i = u.Z.getActivity(),
-a = E.default.getCurrentUser(),
+a = h.default.getCurrentUser(),
 s = [];
-  if (null != n ? (e = E.default.getUser(n.userId), t = n.partyId) : null != i && null != i.party && null != i.party.id && (e = a, t = i.party.id), null != t) {
+  if (null != n ? (e = h.default.getUser(n.userId), t = n.partyId) : null != i && null != i.party && null != i.party.id && (e = a, t = i.party.id), null != t) {
 var l;
-s = r()(Array.from(null !== (l = _.Z.getParty(t)) && void 0 !== l ? l : [])).map(e => E.default.getUser(e)).filter(I.lm).orderBy([
+s = r()(Array.from(null !== (l = _.Z.getParty(t)) && void 0 !== l ? l : [])).map(e => h.default.getUser(e)).filter(I.lm).orderBy([
   t => null == e || e.id === t.id,
-  e => h.Z.isFriend(e.id)
+  e => E.Z.isFriend(e.id)
 ], [
   'desc',
   'desc'

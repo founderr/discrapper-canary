@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(100527),
   u = n(600164),
   _ = n(484459),
-  h = n(103575),
-  E = n(237583),
+  E = n(103575),
+  h = n(237583),
   I = n(63063),
   m = n(870569),
   g = n(345243),
@@ -80,7 +80,7 @@ return (0, i.jsxs)('div', {
     (0, i.jsx)(u.Z, {
       justify: u.Z.Justify.END,
       className: f.party,
-      children: (0, i.jsx)(E.Z, {
+      children: (0, i.jsx)(h.Z, {
         users: this.props.party,
         max: this.isHost() ? N.HOST : N.LISTENER,
         renderUser: this.renderPartyMember,
@@ -108,7 +108,7 @@ super(...e), C(this, 'renderPartyMember', (e, t) => {
   } = this.props;
   return n = (null == s ? void 0 : s.id) === e.id ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, i.jsx)(c.Popout, {
     preload: () => (0, _.W)(e.id, e.getAvatarURL(void 0, 80)),
-    renderPopout: t => (o()(null != e, ''), (0, i.jsx)(h.Z, {
+    renderPopout: t => (o()(null != e, ''), (0, i.jsx)(E.Z, {
       ...t,
       location: 'ListeningAlong',
       userId: e.id,

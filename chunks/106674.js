@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(884338),
   u = n(367907),
   _ = n(835473),
-  h = n(925329),
-  E = n(871118),
+  E = n(925329),
+  h = n(871118),
   I = n(543882),
   m = n(314897),
   g = n(944486),
@@ -144,16 +144,16 @@ children: [
       })
     ]
   }),
-  null != j ? (0, i.jsx)(E.Z, {
+  null != j ? (0, i.jsx)(h.Z, {
     className: Z.stream,
     stream: {
       streamType: A.lo.CALL,
       ownerId: r,
       channelId: O
     }
-  }) : (0, i.jsx)(h.Z, {
+  }) : (0, i.jsx)(E.Z, {
     game: M,
-    size: h.Z.Sizes.LARGE,
+    size: E.Z.Sizes.LARGE,
     className: Z.gameIcon
   })
 ]

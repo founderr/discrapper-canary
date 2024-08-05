@@ -26,7 +26,7 @@ let _ = {
   Colors: o.Z.Colors,
   Looks: o.Z.Looks
 };
-class h extends a.PureComponent {
+class E extends a.PureComponent {
   render() {
 let {
   storeListings: e,
@@ -78,4 +78,4 @@ skuId: t
 storeListings: c.Z.getUnpublishedForSKU(t),
 primaryStoreListing: c.Z.getForSKU(t)
   };
-})(h);
+})(E);

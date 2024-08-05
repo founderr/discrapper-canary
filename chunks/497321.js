@@ -1,8 +1,8 @@
 t(47120);
-var n, r = t(735250),
-  a = t(470079),
-  o = t(120356),
-  i = t.n(o),
+var n, a = t(735250),
+  o = t(470079),
+  r = t(120356),
+  i = t.n(r),
   c = t(481060),
   l = t(37234),
   u = t(230711),
@@ -18,15 +18,15 @@ configurable: !0,
 writable: !0
   }) : e[s] = t, e;
 }
-class x extends(n = a.Component) {
+class x extends(n = o.Component) {
   render() {
-return (0, r.jsxs)('div', {
+return (0, a.jsxs)('div', {
   className: p.streamerModeEnabled,
   children: [
-    (0, r.jsx)('div', {
+    (0, a.jsx)('div', {
       className: p.streamerModeEnabledImage
     }),
-    (0, r.jsx)(c.Clickable, {
+    (0, a.jsx)(c.Clickable, {
       className: i()(p.streamerModeEnabledBtn, {
         [p.disabled]: this.props.disableButton
       }),

@@ -41,11 +41,11 @@ return window.addEventListener('resize', e), () => {
   window.removeEventListener('resize', e);
 };
   }, []);
-  let h = (t = u) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
+  let E = (t = u) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
   return (0, i.jsx)('div', {
 className: c.container,
 children: n.map((e, t) => {
-  let n = Math.floor(t / h);
+  let n = Math.floor(t / E);
   return (0, i.jsx)(o.Z, {
     quest: e,
     questContent: l.jn.QUEST_HOME_DESKTOP,

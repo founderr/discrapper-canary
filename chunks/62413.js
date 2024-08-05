@@ -1,6 +1,6 @@
 i.d(t, {
   Z: function() {
-return C;
+return f;
   }
 }), i(411104);
 var n = i(735250),
@@ -17,9 +17,9 @@ var n = i(735250),
   p = i(185156),
   m = i(87528),
   g = i(57348),
-  f = i(18620);
+  C = i(18620);
 
-function C() {
+function f() {
   let e = (0, l.e7)([c.default], () => c.default.appDirectoryIncludesInactiveCollections),
 t = (0, l.e7)([u.Z], () => u.Z.getFetchState({
   includesInactive: e
@@ -57,7 +57,7 @@ children: null == i ? void 0 : i.map((e, t) => {
   }
   return (0, n.jsx)('div', {
     className: o()({
-      [f.topMargin]: r
+      [C.topMargin]: r
     }),
     children: a
   }, e.id);

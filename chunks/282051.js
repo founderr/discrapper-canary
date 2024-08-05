@@ -27,7 +27,7 @@ null == d || d();
   t,
   u
 ]),
-h = a.useCallback(() => {
+E = a.useCallback(() => {
   null == n || n(), null == u || u(l.L.SECONDARY);
 }, [
   n,
@@ -62,7 +62,7 @@ children: [
         fullWidth: !0,
         size: s.Button.Sizes.SMALL,
         look: s.Button.Looks.BLANK,
-        onClick: h,
+        onClick: E,
         children: o.Z.Messages.NO_THANKS
       })
     ]

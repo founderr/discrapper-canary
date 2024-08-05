@@ -6,10 +6,10 @@ return n;
 return en;
   }
 }), t(47120);
-var n, r, a = t(735250);
+var n, a, o = t(735250);
 t(470079);
-var o = t(120356),
-  i = t.n(o),
+var r = t(120356),
+  i = t.n(r),
   c = t(442837),
   l = t(246946),
   u = t(91802),
@@ -23,20 +23,20 @@ var o = t(120356),
   _ = t(434336),
   h = t(128955),
   S = t(803353),
-  T = t(479388),
-  C = t(179581),
-  E = t(13174),
-  A = t(580248),
-  I = t(966294),
-  L = t(302143),
+  C = t(479388),
+  T = t(179581),
+  A = t(13174),
+  E = t(580248),
+  L = t(966294),
+  I = t(302143),
   m = t(146121),
   B = t(705500),
   M = t(402127),
-  U = t(153652),
-  j = t(485487),
-  P = t(200985),
-  N = t(270930),
-  O = t(46514),
+  j = t(153652),
+  U = t(485487),
+  N = t(200985),
+  O = t(270930),
+  P = t(46514),
   R = t(750876),
   w = t(993855),
   D = t(701497),
@@ -50,15 +50,15 @@ var o = t(120356),
   V = t(541764),
   W = t(191706),
   X = t(67528),
-  z = t(332150),
-  K = t(581902),
+  K = t(332150),
+  z = t(581902),
   J = t(167219),
   Q = t(704381),
   $ = t(591417),
   q = t(929883),
   ee = t(261137),
   es = t(958700);
-(r = n || (n = {}))[r.PrivateMessages = 0] = 'PrivateMessages', r[r.SettingsMenu = 1] = 'SettingsMenu';
+(a = n || (n = {}))[a.PrivateMessages = 0] = 'PrivateMessages', a[a.SettingsMenu = 1] = 'SettingsMenu';
 let et = new Map([
   [
 'PE',
@@ -94,7 +94,7 @@ ee
   ],
   [
 'ID',
-j
+U
   ],
   [
 'MY',
@@ -114,11 +114,11 @@ v
   ],
   [
 'CZ',
-C
+T
   ],
   [
 'HU',
-U
+j
   ],
   [
 'RO',
@@ -130,19 +130,19 @@ Q
   ],
   [
 'CY',
-T
+C
   ],
   [
 'EE',
-A
+E
   ],
   [
 'IS',
-N
+O
   ],
   [
 'IE',
-P
+N
   ],
   [
 'LV',
@@ -178,11 +178,11 @@ B
   ],
   [
 'FI',
-L
+I
   ],
   [
 'PT',
-K
+z
   ],
   [
 'NO',
@@ -206,15 +206,15 @@ m
   ],
   [
 'DE',
-E
+A
   ],
   [
 'ES',
-I
+L
   ],
   [
 'IT',
-O
+P
   ],
   [
 'NL',
@@ -222,7 +222,7 @@ Y
   ],
   [
 'PL',
-z
+K
   ],
   [
 'HR',
@@ -234,12 +234,12 @@ function en(e) {
   let {
 entryPoint: s,
 className: t
-  } = e, r = (0, c.e7)([l.Z], () => l.Z.hidePersonalInformation), o = (0, u.n)(), g = null == o ? void 0 : o.countryCode;
-  if ((0, d.U)(f.jXE.SETTINGS_PREMIUM, g), null == g || !et.has(g) || r)
+  } = e, a = (0, c.e7)([l.Z], () => l.Z.hidePersonalInformation), r = (0, u.n)(), g = null == r ? void 0 : r.countryCode;
+  if ((0, d.U)(f.jXE.SETTINGS_PREMIUM, g), null == g || !et.has(g) || a)
 return null;
   let x = et.get(g),
 b = 'badgeIcon' + n[s];
-  return (0, a.jsx)('img', {
+  return (0, o.jsx)('img', {
 className: i()(t, p[b]),
 'aria-hidden': !0,
 alt: 'Wumpus holding a country-specific flag',

@@ -24,9 +24,9 @@ subheader: _,
 children: p,
 animatesOnHover: m,
 ...g
-  } = e, f = null != a, C = (0, n.jsxs)(n.Fragment, {
+  } = e, C = null != a, f = (0, n.jsxs)(n.Fragment, {
 children: [
-  f && (0, n.jsx)('div', {
+  C && (0, n.jsx)('div', {
     className: l.imageContainer,
     children: (0, n.jsx)('img', {
       alt: '',
@@ -71,7 +71,7 @@ children: [
   })
 ]
   }), x = r()(t, l.container, {
-[l.hasImage]: f
+[l.hasImage]: C
   });
   return null != i ? (0, n.jsx)(o.ClickableContainer, {
 tag: 'article',
@@ -85,10 +85,10 @@ className: r()(x, l.clickable, {
 focusProps: {
   offset: 4
 },
-children: C
+children: f
   }) : (0, n.jsx)('article', {
 className: x,
 ...g,
-children: C
+children: f
   });
 }

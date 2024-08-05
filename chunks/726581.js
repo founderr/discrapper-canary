@@ -8,8 +8,8 @@ var i = n(735250),
   d = n(246946),
   u = n(594174),
   _ = n(525395),
-  h = n(55563),
-  E = n(551428),
+  E = n(55563),
+  h = n(551428),
   I = n(73346),
   m = n(733789),
   g = n(4962),
@@ -76,9 +76,9 @@ return (0, i.jsxs)('div', {
   }
 }
 t.Z = l.ZP.connectStores([
-  h.Z,
-  u.default,
   E.Z,
+  u.default,
+  h.Z,
   c.Z,
   _.Z,
   d.Z
@@ -87,8 +87,8 @@ t.Z = l.ZP.connectStores([
 sku: t
   } = e;
   return {
-socialReasons: (0, I.Gg)(t.id, h.Z, u.default, c.Z, _.Z),
-nonSocialReasons: (0, I.Ww)(t.id, h.Z, E.Z),
+socialReasons: (0, I.Gg)(t.id, E.Z, u.default, c.Z, _.Z),
+nonSocialReasons: (0, I.Ww)(t.id, E.Z, h.Z),
 hidePersonalInformation: d.Z.hidePersonalInformation
   };
 })(S);

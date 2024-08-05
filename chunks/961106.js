@@ -1,6 +1,6 @@
 i.d(t, {
   Z: function() {
-return C;
+return f;
   }
 }), i(47120), i(610138), i(216116), i(78328), i(815648);
 var n = i(735250),
@@ -17,16 +17,16 @@ var n = i(735250),
   p = i(147890),
   m = i(981631),
   g = i(689938),
-  f = i(659044);
+  C = i(659044);
 
-function C(e) {
+function f(e) {
   let {
 className: t
-  } = e, i = (0, _.useApplicationDirectoryHistory)(e => e.guildId), r = (0, s.e7)([u.Z], () => u.Z.getCategories()), C = a.useMemo(() => [
+  } = e, i = (0, _.useApplicationDirectoryHistory)(e => e.guildId), r = (0, s.e7)([u.Z], () => u.Z.getCategories()), f = a.useMemo(() => [
 (0, h.KQ)(),
 ...r
   ], [r]), x = (0, _.getCurrentView)(), I = e => {
-let t = C.find(t => t.id === e);
+let t = f.find(t => t.id === e);
 c.default.track(m.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
   category: t.name,
   category_id: t.id,
@@ -37,8 +37,8 @@ c.default.track(m.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
 });
   };
   return (0, n.jsx)('nav', {
-className: o()(f.container, t),
-children: C.map(e => {
+className: o()(C.container, t),
+children: f.map(e => {
   let t = e.id,
     i = e.name,
     a = (0, h.tu)(e),
@@ -46,14 +46,14 @@ children: C.map(e => {
   return r.set('category_id', t.toString()), (0, n.jsx)(d.Z, {
     href: ''.concat(m.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(r),
     children: (0, n.jsxs)(l.Clickable, {
-      className: f.category,
+      className: C.category,
       'aria-label': g.Z.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({
         categoryName: i
       }),
       onClick: () => I(t),
       children: [
         (0, n.jsx)(a, {
-          className: f.icon,
+          className: C.icon,
           size: 'md',
           color: 'currentColor'
         }),

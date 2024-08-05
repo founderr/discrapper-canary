@@ -14,8 +14,8 @@ var a = n(442837),
   d = n(1585),
   u = n(125988),
   _ = n(43267),
-  h = n(522289),
-  E = n(699516),
+  E = n(522289),
+  h = n(699516),
   I = n(51144),
   m = n(998502),
   g = n(620924),
@@ -35,7 +35,7 @@ return null == n || 0 === n.length ? (0, i.jsx)(s.Text, {
 }) : (0, i.jsxs)('div', {
   className: f.mutualGuildsContainer,
   children: [
-    (0, i.jsx)(h.Z, {
+    (0, i.jsx)(E.Z, {
       guilds: n,
       maxGuilds: 3,
       size: c.Vj.Sizes.SMOL,
@@ -59,8 +59,8 @@ function A(e) {
   let {
 channel: n,
 otherUser: c,
-active: h
-  } = e, m = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), p = (0, a.e7)([E.Z], () => null == c ? null : E.Z.getNickname(c.id)), A = !m && h, v = (0, g.c)(n), {
+active: E
+  } = e, m = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), p = (0, a.e7)([h.Z], () => null == c ? null : h.Z.getNickname(c.id)), A = !m && E, v = (0, g.c)(n), {
 avatarDecorationSrc: Z
   } = (0, u.Z)({
 user: c,
@@ -102,7 +102,7 @@ children: [
         hoverText: (0, i.jsx)(T.Z, {
           channel: n
         }),
-        forceHover: h,
+        forceHover: E,
         children: (0, i.jsx)(C, {
           userId: c.id
         })

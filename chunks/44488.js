@@ -1,15 +1,15 @@
 n.d(e, {
   Pz: function() {
-return f;
+return m;
   },
   am: function() {
 return g;
   }
 }), n(47120);
-var a, o = n(735250),
-  r = n(470079),
-  i = n(120356),
-  s = n.n(i),
+var a, i = n(735250),
+  o = n(470079),
+  r = n(120356),
+  s = n.n(r),
   l = n(481060),
   c = n(768762),
   u = n(828523);
@@ -22,11 +22,11 @@ configurable: !0,
 writable: !0
   }) : t[e] = n, t;
 }
-let p = {
+let h = {
   CENTER: u.alignCenter,
   LEFT: u.alignLeft
 };
-class h extends(a = r.PureComponent) {
+class p extends(a = o.PureComponent) {
   componentDidUpdate(t) {
 let {
   selectedIndex: e
@@ -39,13 +39,13 @@ let {
   items: e,
   vertical: n,
   paginationContainerClass: a,
-  align: i
+  align: r
 } = this.props, c = n ? u.verticalPaginationItemContainer : u.horizontalPaginationItemContainer;
-return (0, o.jsx)(l.AdvancedScrollerAuto, {
+return (0, i.jsx)(l.AdvancedScrollerAuto, {
   orientation: n ? 'vertical' : 'horizontal',
-  className: s()(c, a, i),
+  className: s()(c, a, r),
   ref: this.handleSetScrollerRef,
-  children: e.map((e, n) => r.cloneElement(t(e, n), {
+  children: e.map((e, n) => o.cloneElement(t(e, n), {
     onClick: () => this.handlePageClick(n),
     key: n,
     ref: t => {
@@ -76,26 +76,26 @@ super(...t), d(this, '_scrollerRef', null), d(this, '_paginationItemRefs', []), 
 });
   }
 }
-d(h, 'Align', p), d(h, 'defaultProps', {
+d(p, 'Align', h), d(p, 'defaultProps', {
   scrollToPadding: {
 top: 0,
 left: 0,
 bottom: 0,
 right: 0
   },
-  align: p.CENTER
+  align: h.CENTER
 });
-class g extends r.PureComponent {
+class g extends o.PureComponent {
   render() {
 let {
   className: t
 } = this.props;
-return (0, o.jsx)(l.Button, {
+return (0, i.jsx)(l.Button, {
   look: l.Button.Looks.BLANK,
   size: l.Button.Sizes.NONE,
   className: s()(u.prevButtonContainer, t),
   onClick: this.handlePrevClick,
-  children: (0, o.jsx)(c.Z, {
+  children: (0, i.jsx)(c.Z, {
     className: u.arrow,
     direction: c.Z.Directions.LEFT
   })
@@ -111,17 +111,17 @@ super(...t), d(this, 'handlePrevClick', t => {
 });
   }
 }
-class f extends r.PureComponent {
+class m extends o.PureComponent {
   render() {
 let {
   className: t
 } = this.props;
-return (0, o.jsx)(l.Button, {
+return (0, i.jsx)(l.Button, {
   look: l.Button.Looks.BLANK,
   size: l.Button.Sizes.NONE,
   className: s()(u.nextButtonContainer, t),
   onClick: this.handleNextClick,
-  children: (0, o.jsx)(c.Z, {
+  children: (0, i.jsx)(c.Z, {
     className: u.arrow,
     direction: c.Z.Directions.RIGHT
   })
@@ -137,4 +137,4 @@ super(...t), d(this, 'handleNextClick', t => {
 });
   }
 }
-e.ZP = 12633 == n.j ? h : null;
+e.ZP = 12633 == n.j ? p : null;

@@ -18,20 +18,20 @@ application: _,
 onClick: p,
 imageSrc: m,
 className: g,
-animatesOnHover: f
-  } = e, C = (0, l.Z)({
+animatesOnHover: C
+  } = e, f = (0, l.Z)({
 application: _
-  }), x = null === (t = _.categories) || void 0 === t ? void 0 : t[0], I = (null !== (u = null === (i = _.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== u ? u : 0) > 0 || C.length > 0, b = a.useCallback(() => {
+  }), x = null === (t = _.categories) || void 0 === t ? void 0 : t[0], I = (null !== (u = null === (i = _.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== u ? u : 0) > 0 || f.length > 0, b = a.useCallback(() => {
 p({
-  mutualGuilds: C
+  mutualGuilds: f
 });
   }, [
 p,
-C
+f
   ]), N = (0, n.jsx)(o.Z, {
 application: _,
 textVariant: 'text-xs/normal',
-mutualGuilds: C,
+mutualGuilds: f,
 mutualGuildShownMax: 3,
 guildIconSize: o.x.SMALL,
 compact: !0
@@ -61,7 +61,7 @@ subheader: (0, n.jsxs)('div', {
     })
   ]
 }),
-animatesOnHover: f,
+animatesOnHover: C,
 children: null != _.description && (0, n.jsx)('div', {
   className: c.__invalid_children,
   children: (0, n.jsx)(r.Text, {

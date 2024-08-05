@@ -14,36 +14,36 @@ var i = n(481060),
 
 function c(e) {
   let {
-activity: t,
-entry: n,
-user: c
+user: t,
+activity: n,
+entry: c
   } = e, {
 applicationId: d,
 sourceUserId: _
   } = function(e) {
 let {
-  activity: t,
-  entry: n,
-  user: r
+  user: t,
+  activity: n,
+  entry: r
 } = e;
-if (null != n) {
+if (null != r) {
   var i;
   return {
-    applicationId: (0, a.dX)(n) ? null === (i = n.extra) || void 0 === i ? void 0 : i.application_id : void 0,
-    sourceUserId: n.author_id
+    applicationId: (0, a.dX)(r) ? null === (i = r.extra) || void 0 === i ? void 0 : i.application_id : void 0,
+    sourceUserId: r.author_id
   };
 }
-return null != t ? {
-  applicationId: t.type === l.IIU.PLAYING && null != t.application_id ? t.application_id : void 0,
-  sourceUserId: r.id
+return null != n ? {
+  applicationId: n.type === l.IIU.PLAYING && null != n.application_id ? n.application_id : void 0,
+  sourceUserId: t.id
 } : {
   applicationId: void 0,
   sourceUserId: void 0
 };
   }({
-activity: t,
-entry: n,
-user: c
+activity: n,
+entry: c,
+user: t
   }), E = (0, o.Z)({
 location: 'UserProfileActivityContextMenu',
 source: s.m1.UserProfileCardContextMenu,

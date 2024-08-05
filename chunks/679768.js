@@ -1,11 +1,11 @@
 t.d(s, {
   Z: function() {
-return r;
+return a;
   }
 });
 var n = t(735250);
 
-function r(e) {
+function a(e) {
   return (0, n.jsxs)('svg', {
 width: '14',
 height: '14',

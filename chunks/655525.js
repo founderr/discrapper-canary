@@ -1,17 +1,17 @@
 t.d(s, {
   Z: function() {
-return o;
+return r;
   }
 });
 var n = t(735250);
 t(470079);
-var r = t(248042),
-  a = t(227140);
+var a = t(248042),
+  o = t(227140);
 
-function o() {
-  let e = (0, r.Vi)(),
-s = (0, r.W1)();
-  return e ? (0, n.jsx)(a.Z, {
+function r() {
+  let e = (0, a.Vi)(),
+s = (0, a.W1)();
+  return e ? (0, n.jsx)(o.Z, {
 copy: s
   }) : null;
 }

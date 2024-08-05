@@ -12,7 +12,7 @@ t.Z = function(e) {
 statusSections: t,
 renderRow: n,
 searchQuery: _
-  } = e, h = e => 0 === t[e].length ? 0 : d.De + 16, E = e => {
+  } = e, E = e => 0 === t[e].length ? 0 : d.De + 16, h = e => {
 let {
   section: i,
   row: a
@@ -63,8 +63,8 @@ children: (0, i.jsx)(r.SJ, {
         var t;
         m.current = e, n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
       },
-      sectionHeight: h,
-      renderRow: E,
+      sectionHeight: E,
+      renderRow: h,
       rowHeight: d.NV,
       sections: t.map(e => '' !== _ && 0 === e.length ? e.length + 1 : e.length),
       className: u.peopleList,
