@@ -17896,5 +17896,7 @@ e.exports = Object.freeze({
   USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_BODY: 'You blocked **{username}**.\nDo you want to view this profile?',
   USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_NOTIFIED: 'They won\'t be notified',
   USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED: 'They will still be blocked',
-  USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_BUTTON: 'Yes, Proceed'
+  USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_BUTTON: 'Yes, Proceed',
+  CHANNEL_LINKED_LOBBY_CHANNEL_HEADER: 'Syncing with **!!{applicationName}!!** \u2022 [Learn more]({helpdeskArticle})',
+  CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_UNKNOWN_APPLICATION: 'Syncing with an application \u2022 [Learn more]({helpdeskArticle})'
 });
