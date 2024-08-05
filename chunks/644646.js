@@ -32,7 +32,13 @@ n.id,
 e
   ]), N = i.useRef(null), v = i.useRef(a);
   i.useEffect(() => {
-S && !T && null != N.current && (a && !v.current ? N.current.play() : !a && v.current && (N.current.currentTime = 0, N.current.pause()), v.current = a);
+if (null != N.current) {
+  if (!S || T) {
+    N.current.currentTime = 0, N.current.pause();
+    return;
+  }
+  a && !v.current ? N.current.play() : !a && v.current && (N.current.currentTime = 0, N.current.pause()), v.current = a;
+}
   }, [
 a,
 S,
