@@ -69,8 +69,11 @@ children: [
     children: (0, r.jsxs)('div', {
       className: a()(D.content, _),
       children: [
-        (0, r.jsx)(N.Z, {
-          src: E
+        (0, r.jsx)(N.ZP, {
+          image: {
+            src: E,
+            alt: h
+          }
         }),
         (0, r.jsxs)('div', {
           className: D.details,
@@ -101,8 +104,12 @@ children: [
     children: (0, r.jsxs)('div', {
       className: a()(D.content, _),
       children: [
-        (0, r.jsx)(N.Z, {
-          src: E
+        (0, r.jsx)(N.ZP, {
+          image: {
+            src: E,
+            alt: h
+          },
+          onClick: A
         }),
         (0, r.jsxs)('div', {
           className: D.details,
@@ -150,8 +157,11 @@ children: [
     children: (0, r.jsxs)('div', {
       className: a()(D.content, o),
       children: [
-        (0, r.jsx)(N.Z, {
-          src: e => L(t.extra.application_id, t.extra.media_assets_large_image, e)
+        (0, r.jsx)(N.ZP, {
+          image: {
+            src: L(t.extra.application_id, t.extra.media_assets_large_image, N.WQ),
+            alt: t.extra.media_title
+          }
         }),
         (0, r.jsxs)('div', {
           className: D.details,
@@ -195,7 +205,10 @@ profileType: u
   } = (0, S.z)(), c = {
 [D.fullSize]: u === C.y0.FULL_SIZE
   }, d = null === (t = s.extra.entries[0]) || void 0 === t ? void 0 : t.media;
-  return null == d ? null : (0, r.jsxs)(g.Z.Overlay, {
+  if (null == d)
+return null;
+  let E = null !== (i = null === (n = d.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : d.title;
+  return (0, r.jsxs)(g.Z.Overlay, {
 className: a()(D.card, l),
 children: [
   o,
@@ -204,8 +217,11 @@ children: [
     children: (0, r.jsxs)('div', {
       className: a()(D.content, c),
       children: [
-        (0, r.jsx)(N.Z, {
-          src: d.image_url
+        (0, r.jsx)(N.ZP, {
+          image: {
+            src: d.image_url,
+            alt: E
+          }
         }),
         (0, r.jsxs)('div', {
           className: D.details,
@@ -213,7 +229,7 @@ children: [
             (0, r.jsx)('div', {
               children: (0, r.jsx)(v.Z, {
                 variant: 'heading-sm/semibold',
-                text: null !== (i = null === (n = d.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : d.title
+                text: E
               })
             }),
             (0, r.jsx)(p.Gk, {
@@ -251,8 +267,11 @@ children: [
     children: (0, r.jsxs)('div', {
       className: a()(D.content, o),
       children: [
-        (0, r.jsx)(N.Z, {
-          src: t.extra.media.image_url
+        (0, r.jsx)(N.ZP, {
+          image: {
+            src: t.extra.media.image_url,
+            alt: t.extra.media.title
+          }
         }),
         (0, r.jsxs)('div', {
           className: D.details,

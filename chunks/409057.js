@@ -84,46 +84,54 @@ let a = null === (e = F.assets) || void 0 === e ? void 0 : e.large_image,
   l = null === (i = F.assets) || void 0 === i ? void 0 : i.small_text;
 if (null == a && null == s && (0, E.Z)(F)) {
   let e = u.Z.get(w.ABu.XBOX).icon.customPNG;
-  return (0, r.jsx)(D.Z, {
-    src: e,
-    alt: G.Z.Messages.XBOX
+  return (0, r.jsx)(D.ZP, {
+    image: {
+      src: e,
+      alt: G.Z.Messages.XBOX
+    },
+    onClick: X
   });
 }
 if (null == a && null == s && (0, _.Z)(F)) {
   let e = u.Z.get(w.ABu.PLAYSTATION).icon.customPNG;
-  return (0, r.jsx)(D.Z, {
-    src: e,
-    alt: G.Z.Messages.PLAYSTATION
+  return (0, r.jsx)(D.ZP, {
+    image: {
+      src: e,
+      alt: G.Z.Messages.PLAYSTATION
+    },
+    onClick: X
   });
 }
-return null == a && null != V ? (0, r.jsx)(D.Z, {
-  src: e => V.getIconURL(e),
-  alt: G.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
-    applicationName: V.name
-  })
-}) : null == a && null != s ? (0, r.jsx)(D.Z, {
-  src: e => B(F.application_id, s, e),
-  alt: l,
-  tooltipText: l
-}) : null != s && (0, d.Z)(F) ? (0, r.jsxs)('div', {
-  className: k.imagePosition,
-  children: [
-    (0, r.jsx)(D.Z, {
-      src: e => B(F.application_id, a, e),
-      alt: o,
-      tooltipText: o
-    }),
-    (0, r.jsx)(D.Z, {
-      src: e => B(F.application_id, s, e),
-      size: 'small',
-      alt: l,
-      tooltipText: l
+return null == a && null != V ? (0, r.jsx)(D.ZP, {
+  image: {
+    src: V.getIconURL(D.WQ),
+    alt: G.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
+      applicationName: V.name
     })
-  ]
-}) : (0, r.jsx)(D.Z, {
-  src: e => B(F.application_id, a, e),
-  alt: o,
-  tooltipText: o
+  },
+  onClick: X
+}) : null == a && null != s ? (0, r.jsx)(D.ZP, {
+  image: {
+    src: B(F.application_id, s, D.WQ),
+    text: l
+  },
+  onClick: X
+}) : null != s && (0, d.Z)(F) ? (0, r.jsx)(D.ZP, {
+  image: {
+    src: B(F.application_id, a, D.WQ),
+    text: o
+  },
+  richImage: {
+    src: B(F.application_id, s, D.Bp),
+    text: l
+  },
+  onClick: X
+}) : (0, r.jsx)(D.ZP, {
+  image: {
+    src: B(F.application_id, a, D.WQ),
+    text: o
+  },
+  onClick: X
 });
   }, ee = () => {
 var e;

@@ -137,13 +137,11 @@ children: (0, r.jsx)(g.Z, {
             (0, r.jsxs)('div', {
               className: s()(C.content, x),
               children: [
-                (0, r.jsx)(m.Z, {
-                  src: e => {
-                    var t;
-                    return y(a.application_id, null === (t = a.assets) || void 0 === t ? void 0 : t.large_image, e);
+                (0, r.jsx)(m.ZP, {
+                  image: {
+                    src: y(a.application_id, null === (n = a.assets) || void 0 === n ? void 0 : n.large_image, m.WQ),
+                    text: null === (i = a.assets) || void 0 === i ? void 0 : i.large_text
                   },
-                  alt: null === (n = a.assets) || void 0 === n ? void 0 : n.large_text,
-                  tooltipText: null === (i = a.assets) || void 0 === i ? void 0 : i.large_text,
                   onClick: () => (0, _.Z5)(a, t.id)
                 }),
                 (0, r.jsxs)('div', {
