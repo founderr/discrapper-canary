@@ -20,7 +20,9 @@ var i = n(735250),
   g = n(363844);
 
 function C() {
-  let e = (0, u.Sv)('discovery_button'),
+  let e = (0, u.a)({
+  location: 'discovery_button'
+}),
 t = window.location.pathname.startsWith(_.Z5c.GUILD_DISCOVERY),
 n = h.ZP.getCurrentCategoryId() === f.Gj.Clans;
   if (e) {
