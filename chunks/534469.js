@@ -301,7 +301,7 @@ ew = (0, D.Z)({
   channel: q
 }),
 {
-  canShowReactionsOnMessageHover: eB
+  canShowReactionsWithVisualOnMessageHover: eB
 } = R.Z.useExperiment({
   location: 'ChatMessage'
 }, {
@@ -344,7 +344,7 @@ eV = (0, i.jsx)(d.FocusRing, {
         [K.replying]: (null == eP ? void 0 : eP.message.id) === g.id,
         [K.interactionSending]: g.isCommandType() && g.state === z.yb.SENDING,
         [K.automodMessage]: eH,
-        [K.reactionsOnMessage]: eB
+        [K.reactionsOnMessageHover]: eB && !eN
       }),
       zalgo: !ex,
       childrenRepliedMessage: et ? void 0 : (0, V.Z)(e, eu, eo, en, er),

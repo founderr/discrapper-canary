@@ -60,7 +60,9 @@ children: e => {
   return (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsxs)(c.zx, {
-        className: a()(x ? d.hoverBarButton : null, A),
+        className: a()(A, {
+          [d.hoverBarButton]: x
+        }),
         onMouseEnter: s,
         onMouseLeave: u,
         onClick: e => {
