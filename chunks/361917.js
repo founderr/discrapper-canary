@@ -208,7 +208,7 @@ onEmptyState: l
   } = e, {
 frecentApps: o,
 loading: r
-  } = (0, R.f)(n, !0), s = a.useMemo(() => {
+  } = (0, R.f)(n), s = a.useMemo(() => {
 let e = [];
 for (let n of o)
   null != n.application && e.push({
