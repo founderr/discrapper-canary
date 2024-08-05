@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(705348),
   u = n(243778),
   _ = n(360453),
-  E = n(377743),
-  h = n(834743),
+  h = n(377743),
+  E = n(834743),
   I = n(862099),
   m = n(704631),
   g = n(819792),
@@ -52,7 +52,7 @@ let {
   store: i
 } = e;
 if (t === x.vID.CLAN_ADMIN_UPSELL)
-  return T;
+  return !n.hasFeature(x.oNc.CLAN) && T;
 return null == i ? void 0 : i.channelNoticePredicate(n, _);
   }).map(e => e.dismissibleContentType));
   return (0, i.jsx)(u.Z, {
@@ -77,7 +77,7 @@ children: e => {
           markAsDismissed: s
         });
       case r.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
-        return (0, i.jsx)(h.Z, {
+        return (0, i.jsx)(E.Z, {
           guild: n,
           markAsDismissed: s
         });
@@ -87,7 +87,7 @@ children: e => {
           markAsDismissed: s
         });
       case r.z.CHANNEL_NOTICE_GUILD_BANNER:
-        return (0, i.jsx)(E.Z, {
+        return (0, i.jsx)(h.Z, {
           guild: n,
           markAsDismissed: s
         });
