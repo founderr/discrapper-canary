@@ -34,8 +34,8 @@ var n = a(735250),
   K = a(206583),
   j = a(689938),
   B = a(421377);
-let F = 'GameProfileModal',
-  U = e => {
+let U = 'GameProfileModal',
+  F = e => {
 let {
   game: s,
   onClose: a,
@@ -118,12 +118,18 @@ let l = (a = a.filter(e => y.includes(e))).map(e => {
       return null;
   }
 });
-return (0, n.jsx)('div', {
+return (0, n.jsxs)('div', {
   className: t()(B.row, B.gapSm),
   style: {
     alignItems: 'center'
   },
-  children: l
+  children: [
+    (0, n.jsx)(A.Text, {
+      variant: 'text-sm/normal',
+      children: ' \xB7 '
+    }),
+    l
+  ]
 });
   },
   k = e => e.filter(p.z6).slice(0, 5),
@@ -142,7 +148,7 @@ let {
   height: W
 } = (0, M.b)(), [z, V] = l.useState(() => {
   var e;
-  return null === (e = u.K.get(F)) || void 0 === e ? void 0 : e[i];
+  return null === (e = u.K.get(U)) || void 0 === e ? void 0 : e[i];
 }), X = (0, d.e7)([g.default], () => g.default.locale), [J, q] = l.useState(!0), [$, ee] = l.useState(!1), es = l.useRef(null), ea = l.useMemo(() => (0, f.fP)(), []);
 l.useEffect(() => {
   let e = es.current;
@@ -356,8 +362,8 @@ return (0, n.jsx)(A.ModalRoot, {
                     color: z ? A.Button.Colors.PRIMARY : A.Button.Colors.BRAND,
                     onClick: () => {
                       var e;
-                      let s = null !== (e = u.K.get(F)) && void 0 !== e ? e : {};
-                      s[i] = !s[i], u.K.set(F, s), eO(s[i] ? f.as.FollowGame : f.as.UnfollowGame), s[i] && (0, A.openModalLazy)(async () => {
+                      let s = null !== (e = u.K.get(U)) && void 0 !== e ? e : {};
+                      s[i] = !s[i], u.K.set(U, s), eO(s[i] ? f.as.FollowGame : f.as.UnfollowGame), s[i] && (0, A.openModalLazy)(async () => {
                         let {
                           default: e
                         } = await a.e('86564').then(a.bind(a, 641758));
@@ -482,7 +488,7 @@ return (0, n.jsx)(A.ModalRoot, {
                   (0, n.jsx)('div', {
                     className: B.row,
                     style: {},
-                    children: el.map(e => (0, n.jsx)(U, {
+                    children: el.map(e => (0, n.jsx)(F, {
                       game: e,
                       onClose: b,
                       trackClick: eO
@@ -544,16 +550,8 @@ return (0, n.jsx)(A.ModalRoot, {
                               variant: 'text-sm/normal',
                               children: eM.join(', ')
                             }),
-                            eg.length > 0 && (0, n.jsxs)(n.Fragment, {
-                              children: [
-                                (0, n.jsx)(A.Text, {
-                                  variant: 'text-sm/normal',
-                                  children: ' \xB7 '
-                                }),
-                                (0, n.jsx)(Q, {
-                                  platforms: eg
-                                })
-                              ]
+                            eg.length > 0 && (0, n.jsx)(Q, {
+                              platforms: eg
                             })
                           ]
                         })

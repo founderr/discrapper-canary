@@ -63,6 +63,9 @@ children: (0, i.jsx)(h.Mt, {
     themeOverride: y,
     className: R.container,
     children: [
+      null != U && (0, i.jsx)('div', {
+        className: R.backdrop
+      }),
       (0, i.jsxs)(s.u2, {
         children: [
           (0, i.jsxs)(x.Z, {
@@ -113,6 +116,7 @@ children: (0, i.jsx)(h.Mt, {
                   displayProfile: O,
                   channelId: j.id,
                   profileType: b.y0.PANEL,
+                  isReplySource: U === b.N9.AVATAR || U === b.N9.STATUS,
                   onOpenProfile: L ? void 0 : V,
                   onReply: G
                 }),
@@ -121,6 +125,7 @@ children: (0, i.jsx)(h.Mt, {
                   user: t,
                   channelId: j.id,
                   profileType: b.y0.PANEL,
+                  isReplySource: U === b.N9.STATUS,
                   onReply: G
                 }),
                 (0, i.jsx)(C.Z, {

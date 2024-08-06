@@ -160,6 +160,9 @@ children: (0, r.jsx)(h.Mt, {
             children: () => (0, r.jsxs)('header', {
               className: M.header,
               children: [
+                null != Q && (0, r.jsx)('div', {
+                  className: M.backdrop
+                }),
                 (0, r.jsx)(I.Z, {
                   user: t,
                   displayProfile: z,
@@ -175,6 +178,7 @@ children: (0, r.jsx)(h.Mt, {
                   channelId: U,
                   profileType: L.y0.BITE_SIZE,
                   onOpenProfile: B ? void 0 : et,
+                  isReplySource: Q === L.N9.AVATAR || Q === L.N9.STATUS,
                   onReply: ee
                 }),
                 (0, r.jsx)(g.Z, {
@@ -184,6 +188,7 @@ children: (0, r.jsx)(h.Mt, {
                   channelId: U,
                   profileType: L.y0.BITE_SIZE,
                   editEnabled: W,
+                  isReplySource: Q === L.N9.STATUS,
                   onReply: ee,
                   onClose: G
                 })

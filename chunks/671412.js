@@ -37,24 +37,25 @@ channelId: p,
 profileType: C,
 animateOnHover: y,
 onOpenProfile: D,
-showReplyPopout: L = !1,
-onReply: b
+isReplySource: L,
+onReply: b,
+showReplyPopout: M = !1
   } = e, {
-theme: M
+theme: P
   } = (0, S.z)(), {
-analyticsLocations: P
+analyticsLocations: U
   } = (0, d.ZP)(c.Z.AVATAR), {
-trackUserProfileAction: U
-  } = (0, m.KZ)(), w = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2), x = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
+trackUserProfileAction: w
+  } = (0, m.KZ)(), x = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2), G = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
 t,
 p
-  ]), [G, k] = i.useState(!1), B = () => {
-k(!0);
-  }, F = () => {
-k(!1);
+  ]), [k, B] = i.useState(!1), F = () => {
+B(!0);
+  }, V = () => {
+B(!1);
   }, {
-status: V,
-isMobileOnline: H
+status: H,
+isMobileOnline: Z
   } = (0, o.cj)([
 E.Z,
 f.Z
@@ -70,50 +71,51 @@ return {
   status: (0, u.Z)(n) ? N.Skl.STREAMING : f.Z.getStatus(t.id),
   isMobileOnline: f.Z.isMobileOnline(t.id)
 };
-  }), Z = C === A.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, Y = s()(O.avatar, {
+  }), Y = C === A.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, j = s()(O.avatar, {
+[O.hoisted]: L,
 [O.biteSize]: C === A.y0.BITE_SIZE,
 [O.fullSize]: C === A.y0.FULL_SIZE,
 [O.panel]: C === A.y0.PANEL
   }), {
-avatarDecorationSrc: j,
-avatarSrc: W,
-eventHandlers: K
+avatarDecorationSrc: W,
+avatarSrc: K,
+eventHandlers: z
   } = (0, I.Z)({
 user: t,
 guildId: a,
-size: Z,
+size: Y,
 animateOnHover: y
-  }), z = (0, r.jsx)(R, {
-src: W,
-avatarDecoration: j,
-size: Z,
+  }), q = (0, r.jsx)(R, {
+src: K,
+avatarDecoration: W,
+size: Y,
 'aria-label': t.username,
 imageClassName: null != D ? O.overlay : void 0,
-status: x ? N.Skl.UNKNOWN : V,
-statusBackdropColor: w && !x ? (0, l.getStatusBackdropColor)(M) : void 0,
-isMobile: H,
+status: G ? N.Skl.UNKNOWN : H,
+statusBackdropColor: x && !G ? (0, l.getStatusBackdropColor)(P) : void 0,
+isMobile: Z,
 statusTooltip: !0,
 statusTooltipDelay: A.vB
-  }), q = () => null == D ? (0, r.jsx)('div', {
-...K,
-children: z
+  }), Q = () => null == D ? (0, r.jsx)('div', {
+...z,
+children: q
   }) : (0, r.jsx)(l.Clickable, {
-...K,
+...z,
 onClick: () => {
-  U({
+  w({
     action: 'PRESS_VIEW_PROFILE',
-    analyticsLocations: P
+    analyticsLocations: U
   }), null == D || D();
 },
 className: O.clickable,
-children: z
+children: q
   });
   return (0, r.jsxs)('div', {
-className: Y,
-onFocus: B,
-onBlur: F,
-onMouseOver: B,
-onMouseLeave: F,
+className: j,
+onFocus: F,
+onBlur: V,
+onMouseOver: F,
+onMouseLeave: V,
 children: [
   (0, r.jsx)(l.Popout, {
     renderPopout: e => {
@@ -133,13 +135,13 @@ children: [
     animationPosition: 'top',
     position: 'bottom',
     align: 'center',
-    shouldShow: L,
-    children: () => q()
+    shouldShow: M,
+    children: () => Q()
   }),
   (0, r.jsx)(T.Z, {
     user: t,
     sourceType: A.N9.AVATAR,
-    isVisible: G,
+    isVisible: k,
     isExpandable: !1,
     onReply: b
   })
