@@ -325,7 +325,7 @@ children: [
                   return (0, s.jsx)(g.Z, {
                     title: M.Z.Messages.CLAN_SETUP_GAMES_TITLE,
                     description: M.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-                    handleUpdate: k,
+                    onUpdateGames: k,
                     gameApplicationIds: null !== (e = U.gameApplicationIds) && void 0 !== e ? e : new Set(),
                     error: G.gameApplicationIds
                   });
@@ -333,7 +333,7 @@ children: [
                   return (0, s.jsx)(p.Z, {
                     title: M.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
                     description: M.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
-                    handleUpdate: H,
+                    onUpdatePlaystyle: H,
                     playstyle: U.playstyle,
                     error: G.playstyle
                   });
@@ -342,7 +342,7 @@ children: [
                     guildId: t,
                     title: M.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
                     description: M.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
-                    handleUpdate: V,
+                    onUpdateTraits: V,
                     progress: U
                   });
                 case L.Wy.INTERESTS:

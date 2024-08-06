@@ -56,7 +56,7 @@ let {
 return (0, i.jsx)(u.Z, {
   title: T.Z.Messages.CLAN_SETUP_GAMES_TITLE,
   description: T.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-  handleUpdate: e => l({
+  onUpdateGames: e => l({
     gameApplicationIds: e
   }),
   gameApplicationIds: n.gameApplicationIds,
@@ -74,7 +74,7 @@ let {
 return (0, i.jsx)(h.Z, {
   title: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
   description: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
-  handleUpdate: e => s({
+  onUpdatePlaystyle: e => s({
     playstyle: e
   }),
   playstyle: n.playstyle,
@@ -92,7 +92,7 @@ return (0, i.jsx)(g.Z, {
   guildId: t,
   title: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
   description: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
-  handleUpdate: e => a({
+  onUpdateTraits: e => a({
     interests: e
   }),
   progress: n

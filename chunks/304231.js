@@ -27,7 +27,7 @@ n = a.useCallback(e => I.GN.getState().setSelectedGames(Array.from(e)), []);
   return (0, i.jsx)(d.Z, {
 title: m.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
 description: m.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
-handleUpdate: n,
+onUpdateGames: n,
 gameApplicationIds: t
   });
 }
@@ -38,7 +38,7 @@ t = a.useCallback(e => I.GN.getState().setSelectedPlaystyle(e), []);
   return (0, i.jsx)(u.Z, {
 title: m.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
 description: m.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
-handleUpdate: t,
+onUpdatePlaystyle: t,
 playstyle: e
   });
 }
@@ -50,8 +50,8 @@ n = a.useCallback(e => I.GN.getState().setSelectedTraits([...e]), []);
   return (0, i.jsx)(h.Z, {
 title: m.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
 description: m.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
-handleUpdate: n,
-interests: t,
+onUpdateTraits: n,
+traits: t,
 hidePreview: !0
   });
 }

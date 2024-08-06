@@ -258,7 +258,7 @@ r = (0, i.jsxs)('div', {
     I.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
     t.length > 0 ? (0, i.jsx)(o.NumberBadge, {
       count: t.length,
-      color: _.Z.ICON_MUTED
+      color: _.Z.BG_MOD_SUBTLE
     }) : null
   ]
 });
@@ -272,7 +272,49 @@ autoWidth: !0
   });
 }
 
-function N(e) {
+function N() {
+  let e = (0, E.GN)(e => e.mode, l.Z),
+{
+  selectedGames: t,
+  selectedPlaystyle: n,
+  selectedTraits: s
+} = (0, E.GN)(e => ({
+  selectedGames: e.selectedGames,
+  selectedPlaystyle: e.selectedPlaystyle,
+  selectedTraits: e.selectedTraits
+})),
+r = t.length + (null != n ? 1 : 0) + s.length,
+c = a.useCallback(() => {
+  if (e === E.v0.PREFERENCES) {
+    (0, E.fH)(E.v0.DISCOVERY);
+    return;
+  }
+  (0, E.fH)(E.v0.PREFERENCES);
+}, [e]),
+d = (0, i.jsxs)('div', {
+  className: m.savedInnerContainer,
+  children: [
+    I.Z.Messages.CLAN_DISCOVERY_PREFERENCES,
+    r > 0 ? (0, i.jsx)(o.NumberBadge, {
+      count: r,
+      color: _.Z.BG_MOD_SUBTLE
+    }) : null
+  ]
+});
+  return (0, i.jsx)(g, {
+icon: (0, i.jsx)(o.FiltersHorizontalIcon, {
+  className: m.filterPillIcon,
+  color: 'currentColor'
+}),
+text: d,
+onClick: c,
+isActive: r > 0,
+ariaLabel: I.Z.Messages.CLAN_DISCOVERY_PREFERENCES,
+autoWidth: !0
+  });
+}
+
+function A(e) {
   let {
 title: t
   } = e;
@@ -295,7 +337,7 @@ children: [
   });
 }
 
-function A(e) {
+function v(e) {
   let {
 className: t
   } = e;
@@ -304,7 +346,7 @@ className: r()(m.toolbar, t),
 children: [
   (0, i.jsx)('div', {
     className: m.addClan,
-    children: (0, i.jsx)(N, {
+    children: (0, i.jsx)(A, {
       title: I.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS
     })
   }),
@@ -314,11 +356,40 @@ children: [
 ]
   });
 }
+
+function Z(e) {
+  let {
+className: t
+  } = e;
+  return (0, E.GN)(e => e.mode, l.Z) === E.v0.SAVED_GUILDS ? (0, i.jsx)(v, {
+className: t
+  }) : (0, i.jsxs)('div', {
+className: r()(m.toolbar, t),
+children: [
+  (0, i.jsx)('div', {
+    className: m.addClan,
+    children: (0, i.jsx)(f, {})
+  }),
+  (0, i.jsx)('div', {
+    className: m.preferences
+  }),
+  (0, i.jsxs)('div', {
+    className: m.actions,
+    children: [
+      (0, i.jsx)(N, {}),
+      (0, i.jsx)(C, {})
+    ]
+  })
+]
+  });
+}
 t.Z = function(e) {
   let {
 className: t
-  } = e, n = (0, E.GN)(e => e.mode, l.Z), a = (0, c.iN)('discovery_toolbar');
-  return n === E.v0.SAVED_GUILDS ? (0, i.jsx)(A, {
+  } = e, n = (0, E.GN)(e => e.mode, l.Z);
+  return (0, c.iN)('discovery_toolbar') ? (0, i.jsx)(Z, {
+className: t
+  }) : n === E.v0.SAVED_GUILDS ? (0, i.jsx)(v, {
 className: t
   }) : (0, i.jsxs)('div', {
 className: r()(m.toolbar, t),
@@ -336,8 +407,7 @@ children: [
     ]
   }),
   (0, i.jsx)('div', {
-    className: m.actions,
-    children: a && (0, i.jsx)(C, {})
+    className: m.actions
   })
 ]
   });

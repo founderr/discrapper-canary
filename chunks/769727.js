@@ -79,6 +79,7 @@ switch (r.useEffect(() => {
   case p.v0.GAMES:
   case p.v0.PLAYSTYLE:
   case p.v0.TRAITS:
+  case p.v0.PREFERENCES:
   case p.v0.SAVED_GUILDS:
     return (0, s.jsxs)('div', {
       className: C.discoveryContainer,
