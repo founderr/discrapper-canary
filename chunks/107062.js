@@ -150,7 +150,7 @@ $ = [
       });
     },
     IconComponent: l.ActivitiesIcon,
-    children: 'View Activity'
+    children: Z.Z.Messages.CONTENT_INVENTORY_VIEW_ACTIVITY
   })
 ].filter(_.lm);
   return (0, i.jsxs)(T.yR, {
