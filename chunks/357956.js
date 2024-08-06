@@ -1,16 +1,16 @@
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(774078),
-  r = s(55935),
-  o = s(689938);
-t.Z = function(e) {
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(774078),
+  r = t(55935),
+  o = t(689938);
+s.Z = function(e) {
   let {
-className: t,
-cooldown: s
-  } = e, l = (0, i.Z)(s);
+className: s,
+cooldown: t
+  } = e, l = (0, i.Z)(t);
   return (0, n.jsx)(a.Text, {
-className: t,
+className: s,
 variant: 'text-sm/medium',
 color: 'text-muted',
 children: (0, r.QX)(l, {

@@ -1,11 +1,11 @@
-var n = s(735250),
-  a = s(680295);
-t.Z = e => {
+var n = t(735250),
+  a = t(680295);
+s.Z = e => {
   let {
-config: t
+config: s
   } = e;
   return (0, n.jsx)(a.n, {
-profileEffectConfig: t,
+profileEffectConfig: s,
 profileEffectId: 'debug'
   });
 };

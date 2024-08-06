@@ -1,31 +1,31 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
-return I;
+return T;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(410575),
-  i = s(100527),
-  r = s(89057),
-  o = s(347475),
-  l = s(97926),
-  c = s(921801),
-  d = s(541540),
-  _ = s(206339),
-  E = s(726985),
-  u = s(981631),
-  T = s(175948);
+var n = t(735250);
+t(470079);
+var a = t(410575),
+  i = t(100527),
+  r = t(89057),
+  o = t(347475),
+  l = t(97926),
+  c = t(921801),
+  d = t(541540),
+  _ = t(206339),
+  E = t(726985),
+  u = t(981631),
+  I = t(175948);
 
-function I() {
+function T() {
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsx)(c.F, {
     setting: E.s6.GIFT_NITRO,
     children: (0, n.jsx)(o.Z, {
       location: i.Z.USER_SETTINGS_GIFT_INVENTORY,
-      className: T.giftNitro,
-      imageClassName: T.giftNitroImage,
+      className: I.giftNitro,
+      imageClassName: I.giftNitroImage,
       textContainerOverrideStyles: {
         padding: '32px',
         width: '360px'

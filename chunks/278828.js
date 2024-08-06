@@ -1,12 +1,12 @@
-s.d(t, {
+t.d(s, {
   Q: function() {
 return i;
   }
 });
-var n = s(381499),
-  a = s(675478);
-let i = e => a.hW.updateAsync('privacy', t => {
-  t.inappropriateConversationWarnings = n.D5.create({
+var n = t(381499),
+  a = t(675478);
+let i = e => a.hW.updateAsync('privacy', s => {
+  s.inappropriateConversationWarnings = n.D5.create({
 value: e
   });
 }, a.fy.INFREQUENT_USER_ACTION);

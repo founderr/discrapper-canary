@@ -1,18 +1,18 @@
-s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(481060),
-  r = s(763610),
-  o = s(452693);
-t.Z = function(e) {
-  var t, s;
+t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(481060),
+  r = t(763610),
+  o = t(452693);
+s.Z = function(e) {
+  var s, t;
   let {
 assetKey: l,
 filters: c,
 initialValue: d,
 onFileChange: _,
 title: E
-  } = e, [u, T] = a.useState(null), [I, S] = a.useState(!1);
+  } = e, [u, I] = a.useState(null), [T, S] = a.useState(!1);
   return (0, n.jsxs)(i.FormItem, {
 children: [
   (0, n.jsx)(i.FormTitle, {
@@ -32,7 +32,7 @@ children: [
     })
   }),
   (0, n.jsx)(r.Z, {
-    filename: null !== (s = null !== (t = null == u ? void 0 : u.name) && void 0 !== t ? t : d) && void 0 !== s ? s : '',
+    filename: null !== (t = null !== (s = null == u ? void 0 : u.name) && void 0 !== s ? s : d) && void 0 !== t ? t : '',
     filters: [{
       name: E,
       extensions: c
@@ -40,15 +40,15 @@ children: [
     buttonText: 'Browse',
     placeholder: 'Select an asset',
     onFileSelect: function(e) {
-      if (T(null != e ? e : null), null == e)
+      if (I(null != e ? e : null), null == e)
         return;
       S(!0);
-      let t = new FileReader();
-      t.onload = function() {
-        'string' == typeof t.result && (_(l, t.result), S(!1));
-      }, t.onerror = function(e) {
+      let s = new FileReader();
+      s.onload = function() {
+        'string' == typeof s.result && (_(l, s.result), S(!1));
+      }, s.onerror = function(e) {
         console.error(e);
-      }, t.readAsDataURL(e);
+      }, s.readAsDataURL(e);
     }
   })
 ]

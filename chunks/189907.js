@@ -1,29 +1,29 @@
-var n, a = s(735250),
-  i = s(470079),
-  r = s(120356),
-  o = s.n(r),
-  l = s(600164),
-  c = s(406817);
+var n, a = t(735250),
+  i = t(470079),
+  r = t(120356),
+  o = t.n(r),
+  l = t(600164),
+  c = t(406817);
 
-function d(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-value: s,
+function d(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = s, e;
+  }) : e[s] = t, e;
 }
 class _ extends(n = i.PureComponent) {
   render() {
 let {
   children: e,
-  className: t,
-  onMouseEnter: s,
+  className: s,
+  onMouseEnter: t,
   onMouseLeave: n
 } = this.props;
 return (0, a.jsx)('div', {
-  className: o()(c.card, t),
-  onMouseEnter: s,
+  className: o()(c.card, s),
+  onMouseEnter: t,
   onMouseLeave: n,
   children: e
 });
@@ -31,12 +31,12 @@ return (0, a.jsx)('div', {
 }
 d(_, 'Header', e => {
   let {
-children: t,
-className: s,
+children: s,
+className: t,
 splashArtURL: n
   } = e;
   return (0, a.jsxs)(l.Z, {
-className: o()(c.header, s),
+className: o()(c.header, t),
 align: l.Z.Align.CENTER,
 children: [
   (0, a.jsx)('div', {
@@ -45,16 +45,16 @@ children: [
       backgroundImage: 'url('.concat(n, ')')
     } : void 0
   }),
-  t
+  s
 ]
   });
 }), d(_, 'Body', e => {
   let {
-children: t,
-className: s
+children: s,
+className: t
   } = e;
   return (0, a.jsx)('div', {
-className: o()(c.body, s),
-children: t
+className: o()(c.body, t),
+children: s
   });
-}), t.Z = _;
+}), s.Z = _;

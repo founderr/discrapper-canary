@@ -1,63 +1,63 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return C;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(120356),
-  i = s.n(a),
-  r = s(498607),
-  o = s.n(r),
-  l = s(692547),
-  c = s(481060),
-  d = s(220082),
-  _ = s(318661),
-  E = s(721987),
-  u = s(74538),
-  T = s(193528),
-  I = s(993413),
-  S = s(689938),
-  N = s(436989);
+var n = t(735250);
+t(470079);
+var a = t(120356),
+  i = t.n(a),
+  r = t(498607),
+  o = t.n(r),
+  l = t(692547),
+  c = t(481060),
+  d = t(220082),
+  _ = t(318661),
+  E = t(721987),
+  u = t(74538),
+  I = t(193528),
+  T = t(993413),
+  S = t(689938),
+  N = t(436989);
 
 function C(e) {
   let {
-user: t,
-pendingAvatar: s,
+user: s,
+pendingAvatar: t,
 pendingColors: a,
 onThemeColorsChange: r,
 preventDisabled: C,
 guildId: m,
 className: A,
 showPremiumIcon: g = !0,
-showResetThemeButton: h = !1,
-forcedDivider: O
-  } = e, p = (0, _.ZP)(t.id, m), {
+showResetThemeButton: O = !1,
+forcedDivider: h
+  } = e, p = (0, _.ZP)(s.id, m), {
 primaryColor: R,
 secondaryColor: x
   } = (0, E.Z)({
-user: t,
+user: s,
 displayProfile: p,
 pendingThemeColors: a,
 isPreview: !0
-  }), M = u.ZP.canUsePremiumProfileCustomization(t), f = null != s ? s : t.getAvatarURL(m, 80), D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(), P = (0, d.Cf)(f, D, !1);
+  }), M = u.ZP.canUsePremiumProfileCustomization(s), f = null != t ? t : s.getAvatarURL(m, 80), D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(), P = (0, d.Cf)(f, D, !1);
   if (null == R || null == x)
 return null;
   let L = e => {
 r(o()(e, null == p ? void 0 : p.themeColors) ? void 0 : e);
   };
-  return (0, n.jsx)(I.Z, {
+  return (0, n.jsx)(T.Z, {
 title: S.Z.Messages.USER_SETTINGS_PROFILE_THEME,
 disabled: !M && !C,
 className: i()(N.__invalid_profileThemesSection, A),
 showPremiumIcon: g,
-forcedDivider: O,
+forcedDivider: h,
 children: (0, n.jsxs)('div', {
   className: N.sectionContainer,
   children: [
     (0, n.jsx)('div', {
       className: N.sparkleContainer,
-      children: (0, n.jsx)(T.Z, {
+      children: (0, n.jsx)(I.Z, {
         onChange: e => L([
           e,
           x
@@ -76,7 +76,7 @@ children: (0, n.jsxs)('div', {
     }),
     (0, n.jsx)('div', {
       className: N.sparkleContainer,
-      children: (0, n.jsx)(T.Z, {
+      children: (0, n.jsx)(I.Z, {
         onChange: e => L([
           R,
           e
@@ -93,7 +93,7 @@ children: (0, n.jsxs)('div', {
         })
       })
     }),
-    h && null != m && (0, n.jsx)(c.Button, {
+    O && null != m && (0, n.jsx)(c.Button, {
       className: N.resetButton,
       color: c.Button.Colors.PRIMARY,
       look: c.Button.Looks.LINK,

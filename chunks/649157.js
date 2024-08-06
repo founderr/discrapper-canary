@@ -1,22 +1,22 @@
-s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(442837),
-  r = s(481060),
-  o = s(153867),
-  l = s(706454),
-  c = s(689938),
-  d = s(21105),
-  _ = s(444675);
-t.Z = i.ZP.connectStores([l.default], () => ({
+t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(442837),
+  r = t(481060),
+  o = t(153867),
+  l = t(706454),
+  c = t(689938),
+  d = t(21105),
+  _ = t(444675);
+s.Z = i.ZP.connectStores([l.default], () => ({
   currentLocale: l.default.locale
 }))(function(e) {
-  let [t, i] = a.useState(e.currentLocale), [l] = a.useState(() => c.Z.getAvailableLocales().map(e => {
-let t;
+  let [s, i] = a.useState(e.currentLocale), [l] = a.useState(() => c.Z.getAvailableLocales().map(e => {
+let s;
 try {
-  t = s(621287)('./'.concat(e.value, '.png'));
+  s = t(621287)('./'.concat(e.value, '.png'));
 } catch (e) {
-  t = s(1474);
+  s = t(1474);
 }
 return {
   ...e,
@@ -36,7 +36,7 @@ return {
         'aria-hidden': !0,
         children: (0, n.jsx)('img', {
           alt: '',
-          src: t,
+          src: s,
           className: d.flagImage
         })
       })
@@ -45,9 +45,9 @@ return {
 };
   })), E = a.useCallback(e => {
 let {
-  value: t
+  value: s
 } = e;
-i(t), _.nextTick(() => o.ZP.updateLocale(t));
+i(s), _.nextTick(() => o.ZP.updateLocale(s));
   }, []);
   return (0, n.jsx)(r.FormSection, {
 tag: r.FormTitleTags.H1,
@@ -58,7 +58,7 @@ children: (0, n.jsx)(r.FormSection, {
     children: (0, n.jsx)(r.RadioGroup, {
       onChange: E,
       options: l,
-      value: t
+      value: s
     })
   })
 })

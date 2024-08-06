@@ -1,46 +1,46 @@
-s(47120), s(642549), s(518263), s(970173), s(520712), s(268111), s(941497), s(32026), s(480839), s(744285), s(492257), s(873817), s(315314), s(610138), s(216116), s(78328), s(815648);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(979554),
-  l = s(442837),
-  c = s(481060),
-  d = s(53281),
-  _ = s(921813),
-  E = s(594174),
-  u = s(572004),
-  T = s(451593),
-  I = s(477146),
-  S = s(329156),
-  N = s(757613),
-  C = s(346537),
-  m = s(830318);
+t(47120), t(642549), t(518263), t(970173), t(520712), t(268111), t(941497), t(32026), t(480839), t(744285), t(492257), t(873817), t(315314), t(610138), t(216116), t(78328), t(815648);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(979554),
+  l = t(442837),
+  c = t(481060),
+  d = t(53281),
+  _ = t(921813),
+  E = t(594174),
+  u = t(572004),
+  I = t(451593),
+  T = t(477146),
+  S = t(329156),
+  N = t(757613),
+  C = t(346537),
+  m = t(830318);
 let A = e => {
-  let [t, s] = e.split(','), n = atob(s), a = t.split(';')[0], i = new ArrayBuffer(n.length), r = new Uint8Array(i);
+  let [s, t] = e.split(','), n = atob(t), a = s.split(';')[0], i = new ArrayBuffer(n.length), r = new Uint8Array(i);
   for (let e = 0; e < n.length; e++)
 r[e] = n.charCodeAt(e);
   return new Blob([i], {
 type: a
   });
 };
-t.Z = e => {
+s.Z = e => {
   let {
-effect: t,
-back: s
+effect: s,
+back: t
   } = e, {
 upsertConfig: i
-  } = (0, T.E)(), g = (0, l.e7)([E.default], () => E.default.getCurrentUser()), [h, O] = a.useState(!0), p = a.useRef(null), [R, x] = a.useState(!1), [M, f] = a.useState(!1), [D, P] = a.useState(!1), [L, b] = a.useState([]), [Z, v] = a.useState(t.name);
+  } = (0, I.E)(), g = (0, l.e7)([E.default], () => E.default.getCurrentUser()), [O, h] = a.useState(!0), p = a.useRef(null), [R, x] = a.useState(!1), [M, f] = a.useState(!1), [D, P] = a.useState(!1), [L, b] = a.useState([]), [Z, v] = a.useState(s.name);
   return (a.useEffect(() => {
-let e = t.config.effects;
+let e = s.config.effects;
 e.length > 0 && b([...e].map(e => {
-  let t = A(e.base64),
-    s = URL.createObjectURL(t);
-  return e.src = s, e;
+  let s = A(e.base64),
+    t = URL.createObjectURL(s);
+  return e.src = t, e;
 }));
-  }, [t]), a.useEffect(() => {
+  }, [s]), a.useEffect(() => {
 i({
-  id: t.id,
+  id: s.id,
   name: Z,
   config: {
     effects: L
@@ -55,7 +55,7 @@ children: [
   (0, n.jsx)('div', {
     className: r()(N.row, N.end),
     children: (0, n.jsx)(c.Button, {
-      onClick: s,
+      onClick: t,
       children: 'Back'
     })
   }),
@@ -70,14 +70,14 @@ children: [
             alt: '',
             width: 450
           }),
-          h && (0, n.jsx)(S.Z, {
+          O && (0, n.jsx)(S.Z, {
             config: {
               type: o.Z.PROFILE_EFFECT,
               title: 'debug',
               description: 'debug',
               accessibilityLabel: 'debug',
               reducedMotionSrc: '',
-              effects: D ? (0, I.Tp)(L) : L,
+              effects: D ? (0, T.Tp)(L) : L,
               animationType: 0
             },
             profileEffectId: 'debug'
@@ -173,20 +173,20 @@ children: [
                   (0, n.jsx)(d.Z, {
                     ref: p,
                     onChange: e => {
-                      let t = e.currentTarget.files;
-                      if (null == t)
+                      let s = e.currentTarget.files;
+                      if (null == s)
                         return;
-                      let s = t[0],
+                      let t = s[0],
                         n = new FileReader();
                       n.onload = async e => {
                         if (null == e.target || 'string' != typeof e.target.result)
                           return;
-                        let t = await (0, I.Xv)(URL.createObjectURL(s), e.target.result, s, L.length);
+                        let s = await (0, T.Xv)(URL.createObjectURL(t), e.target.result, t, L.length);
                         b(e => [
                           ...e,
-                          t
+                          s
                         ]);
-                      }, n.readAsDataURL(s);
+                      }, n.readAsDataURL(t);
                     },
                     multiple: !1
                   })
@@ -212,14 +212,14 @@ children: [
               (0, n.jsx)(c.Button, {
                 color: c.ButtonColors.BRAND,
                 onClick: () => {
-                  O(!1), setTimeout(() => O(!0), 100);
+                  h(!1), setTimeout(() => h(!0), 100);
                 },
                 children: 'Replay Animation'
               }),
               (0, n.jsx)(c.Button, {
                 color: c.ButtonColors.BRAND,
                 onClick: () => {
-                  (0, u.JG)((0, I.HV)(L, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                  (0, u.JG)((0, T.HV)(L, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                 },
                 children: 'Export'
               })
@@ -242,7 +242,7 @@ children: [
                   description: 'debug',
                   accessibilityLabel: 'debug',
                   reducedMotionSrc: '',
-                  effects: D ? (0, I.Tp)(L) : L,
+                  effects: D ? (0, T.Tp)(L) : L,
                   animationType: 0
                 },
                 profileEffectId: 'debug'
@@ -255,7 +255,7 @@ children: [
   }),
   (0, n.jsx)('div', {
     className: r()(N.grid, N.layers),
-    children: L.map((e, t) => (0, n.jsxs)('div', {
+    children: L.map((e, s) => (0, n.jsxs)('div', {
       className: N.layerForm,
       children: [
         (0, n.jsx)(c.Heading, {
@@ -282,10 +282,10 @@ children: [
                   value: e.start,
                   className: N.input,
                   onChange: e => {
-                    b(s => {
-                      let n = [...s],
-                        a = s[t];
-                      return a.start = +e.target.value, n[t] = a, n;
+                    b(t => {
+                      let n = [...t],
+                        a = t[s];
+                      return a.start = +e.target.value, n[s] = a, n;
                     });
                   },
                   contentEditable: !0
@@ -304,10 +304,10 @@ children: [
                   value: e.duration,
                   className: N.input,
                   onChange: e => {
-                    b(s => {
-                      let n = [...s],
-                        a = s[t];
-                      return a.duration = +e.target.value, n[t] = a, n;
+                    b(t => {
+                      let n = [...t],
+                        a = t[s];
+                      return a.duration = +e.target.value, n[s] = a, n;
                     });
                   },
                   contentEditable: !0
@@ -331,10 +331,10 @@ children: [
                   checked: e.loop,
                   className: N.checkBox,
                   onChange: e => {
-                    b(s => {
-                      let n = [...s],
-                        a = s[t];
-                      return a.loop = e.target.checked, n[t] = a, n;
+                    b(t => {
+                      let n = [...t],
+                        a = t[s];
+                      return a.loop = e.target.checked, n[s] = a, n;
                     });
                   }
                 })
@@ -353,10 +353,10 @@ children: [
                     value: e.loopDelay,
                     className: N.input,
                     onChange: e => {
-                      b(s => {
-                        let n = [...s],
-                          a = s[t];
-                        return a.loopDelay = +e.target.value, n[t] = a, n;
+                      b(t => {
+                        let n = [...t],
+                          a = t[s];
+                        return a.loopDelay = +e.target.value, n[s] = a, n;
                       });
                     },
                     contentEditable: !0
@@ -372,13 +372,13 @@ children: [
             color: c.ButtonColors.RED,
             look: c.ButtonLooks.LINK,
             onClick: () => {
-              b(t => t.filter(t => t !== e));
+              b(s => s.filter(s => s !== e));
             },
             children: 'Remove Layer'
           })
         })
       ]
-    }, t))
+    }, s))
   })
 ]
   });

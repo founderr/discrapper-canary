@@ -1,61 +1,61 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return R;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(120356),
-  i = s.n(a),
-  r = s(442837),
-  o = s(481060),
-  l = s(846027),
-  c = s(230711),
-  d = s(825209),
-  _ = s(600164),
-  E = s(313201),
-  u = s(131951),
-  T = s(358085),
-  I = s(962100),
-  S = s(981631),
-  N = s(689938),
-  C = s(790158),
-  m = s(549856);
-let A = !T.isPlatformEmbedded,
+var n = t(735250);
+t(470079);
+var a = t(120356),
+  i = t.n(a),
+  r = t(442837),
+  o = t(481060),
+  l = t(846027),
+  c = t(230711),
+  d = t(825209),
+  _ = t(600164),
+  E = t(313201),
+  u = t(131951),
+  I = t(358085),
+  T = t(962100),
+  S = t(981631),
+  N = t(689938),
+  C = t(790158),
+  m = t(549856);
+let A = !I.isPlatformEmbedded,
   g = (0, E.hQ)();
 
-function h(e) {
+function O(e) {
   let {
-value: t
+value: s
   } = e;
-  t === S.pM4.PUSH_TO_TALK && A && (0, o.openModalLazy)(async () => {
+  s === S.pM4.PUSH_TO_TALK && A && (0, o.openModalLazy)(async () => {
 let {
   default: e
-} = await Promise.resolve().then(s.bind(s, 468026));
-return t => (0, n.jsx)(e, {
+} = await Promise.resolve().then(t.bind(t, 468026));
+return s => (0, n.jsx)(e, {
   title: N.Z.Messages.PTT_LIMITED_TITLE,
   confirmText: N.Z.Messages.DOWNLOAD,
   cancelText: N.Z.Messages.OKAY,
-  onConfirm: () => (0, I.y)('PTT Limited Modal'),
+  onConfirm: () => (0, T.y)('PTT Limited Modal'),
   body: N.Z.Messages.PTT_LIMITED_BODY,
-  ...t
+  ...s
 });
-  }), l.Z.setMode(t);
+  }), l.Z.setMode(s);
 }
 
-function O(e) {
+function h(e) {
   return e >= 1000 ? (e /= 1000, ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), ' ms');
 }
 
 function p(e) {
-  let t, {
-  inputMode: s
+  let s, {
+  inputMode: t
 } = e,
 {
   shortcut: a,
   delay: E
 } = (0, r.cj)([u.Z], () => u.Z.getModeOptions());
-  return t = T.isPlatformEmbedded || s !== S.pM4.PUSH_TO_TALK ? (0, n.jsx)(o.FormText, {
+  return s = I.isPlatformEmbedded || t !== S.pM4.PUSH_TO_TALK ? (0, n.jsx)(o.FormText, {
 type: o.FormText.Types.DESCRIPTION,
 className: i()(C.pttToolsMessage, m.marginBottom8),
 children: N.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
@@ -65,7 +65,7 @@ children: N.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
 type: o.FormText.Types.DESCRIPTION,
 className: i()(C.pttToolsMessage, C.pttToolsWarning, m.marginBottom8),
 children: N.Z.Messages.PTT_LIMITED_WARNING.format({
-  onDownloadClick: () => (0, I.y)('Help Text PTT')
+  onDownloadClick: () => (0, T.y)('Help Text PTT')
 })
   }), (0, n.jsxs)('div', {
 className: C.pttTools,
@@ -78,7 +78,7 @@ children: [
           title: N.Z.Messages.FORM_LABEL_SHORTCUT,
           children: (0, n.jsx)(d.Z, {
             defaultValue: a,
-            onChange: e => l.Z.setMode(s, {
+            onChange: e => l.Z.setMode(t, {
               shortcut: e
             })
           })
@@ -96,10 +96,10 @@ children: [
             }),
             (0, n.jsx)(o.Slider, {
               initialValue: E,
-              onValueChange: e => l.Z.setMode(s, {
+              onValueChange: e => l.Z.setMode(t, {
                 delay: e
               }),
-              onValueRender: O,
+              onValueRender: h,
               maxValue: S.qhL,
               'aria-labelledby': g
             })
@@ -108,14 +108,14 @@ children: [
       })
     ]
   }),
-  t
+  s
 ]
   });
 }
 
 function R() {
   let e = (0, r.e7)([u.Z], () => u.Z.getMode()),
-t = [{
+s = [{
     value: S.pM4.VOICE_ACTIVITY,
     name: N.Z.Messages.INPUT_MODE_VAD
   },
@@ -130,8 +130,8 @@ children: [
     title: N.Z.Messages.FORM_LABEL_INPUT_MODE,
     className: m.marginBottom20,
     children: (0, n.jsx)(o.RadioGroup, {
-      onChange: h,
-      options: t,
+      onChange: O,
+      options: s,
       value: e
     })
   }),

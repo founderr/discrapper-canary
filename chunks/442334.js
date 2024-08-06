@@ -1,4 +1,4 @@
-s.d(t, {
+t.d(s, {
   O: function() {
 return c;
   },
@@ -6,17 +6,17 @@ return c;
 return d;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(481060),
-  l = s(249866);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(481060),
+  l = t(249866);
 
 function c(e) {
   let {
-title: t,
-note: s,
+title: s,
+note: t,
 children: a,
 className: i,
 id: c
@@ -32,12 +32,12 @@ children: [
         variant: 'text-md/medium',
         className: l.inputItemTitle,
         id: c,
-        children: t
+        children: s
       }),
-      null != s && (0, n.jsx)(o.FormText, {
+      null != t && (0, n.jsx)(o.FormText, {
         className: l.__invalid_note,
         type: o.FormText.Types.DESCRIPTION,
-        children: s
+        children: t
       })
     ]
   }),
@@ -48,8 +48,8 @@ children: [
 
 function d(e) {
   let {
-options: t,
-value: s,
+options: s,
+value: t,
 select: i,
 selectClassName: d,
 ..._
@@ -60,8 +60,8 @@ id: E,
 children: (0, n.jsx)(o.Select, {
   'aria-labelledby': E,
   className: r()(l.selectControl, d),
-  options: t,
-  isSelected: e => e === s,
+  options: s,
+  isSelected: e => e === t,
   select: i,
   serialize: e => String(e)
 })

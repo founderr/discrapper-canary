@@ -1,57 +1,57 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return j;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(512722),
-  r = s.n(i),
-  o = s(442837),
-  l = s(481060),
-  c = s(816814),
-  d = s(240872),
-  _ = s(23645),
-  E = s(712364),
-  u = s(279837),
-  T = s(600164),
-  I = s(144114),
-  S = s(921801),
-  N = s(607018),
-  C = s(778764),
-  m = s(314897),
-  A = s(325067),
-  g = s(594174),
-  h = s(572004),
-  O = s(287880),
-  p = s(714565),
-  R = s(202858),
-  x = s(726985),
-  M = s(981631),
-  f = s(815660),
-  D = s(689938),
-  P = s(363210),
-  L = s(549856);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(512722),
+  r = t.n(i),
+  o = t(442837),
+  l = t(481060),
+  c = t(816814),
+  d = t(240872),
+  _ = t(23645),
+  E = t(712364),
+  u = t(279837),
+  I = t(600164),
+  T = t(144114),
+  S = t(921801),
+  N = t(607018),
+  C = t(778764),
+  m = t(314897),
+  A = t(325067),
+  g = t(594174),
+  O = t(572004),
+  h = t(287880),
+  p = t(714565),
+  R = t(202858),
+  x = t(726985),
+  M = t(981631),
+  f = t(815660),
+  D = t(689938),
+  P = t(363210),
+  L = t(549856);
 
-function b(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-value: s,
+function b(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = s, e;
+  }) : e[s] = t, e;
 }
 
 function Z(e) {
   let {
 code: {
-  code: t,
-  consumed: s
+  code: s,
+  consumed: t
 }
-  } = e, i = ''.concat(t.substr(0, 4), '-').concat(t.substr(4)), r = a.useRef(null), o = a.useCallback(e => {
-if ('c' === e.key && e.metaKey && h.wS) {
-  var t;
-  e.preventDefault(), e.stopPropagation(), (0, h.JG)(i), null == r || null === (t = r.current) || void 0 === t || t.focus();
+  } = e, i = ''.concat(s.substr(0, 4), '-').concat(s.substr(4)), r = a.useRef(null), o = a.useCallback(e => {
+if ('c' === e.key && e.metaKey && O.wS) {
+  var s;
+  e.preventDefault(), e.stopPropagation(), (0, O.JG)(i), null == r || null === (s = r.current) || void 0 === s || s.focus();
 }
   }, [i]);
   return (0, n.jsx)('li', {
@@ -64,7 +64,7 @@ children: (0, n.jsx)(l.Clickable, {
     displayOnly: !0,
     readOnly: !0,
     className: P.codeCheckbox,
-    value: s,
+    value: t,
     children: (0, n.jsx)('span', {
       className: P.code,
       children: i
@@ -78,16 +78,16 @@ class v extends a.PureComponent {
 return null == e ? '' : ''.concat('*'.repeat(e.length - 4)).concat(e.slice(-4));
   }
   renderMFASMS() {
-let e, t;
+let e, s;
 let {
-  revealed: s
+  revealed: t
 } = this.state, {
   currentUser: a,
   togglingSMS: i
 } = this.props, r = null != a.phone, o = a.hasFlag(M.xW$.MFA_SMS);
 if (r || o) {
-  let e = s ? a.phone : this.maskPhoneNumber(a.phone);
-  t = (0, n.jsxs)(l.FormText, {
+  let e = t ? a.phone : this.maskPhoneNumber(a.phone);
+  s = (0, n.jsxs)(l.FormText, {
     type: l.FormText.Types.DESCRIPTION,
     className: L.marginBottom8,
     children: [
@@ -97,13 +97,13 @@ if (r || o) {
       (0, n.jsx)(l.Anchor, {
         onClick: this.togglePhoneNumberVisibility,
         className: P.phoneRevealer,
-        children: s ? D.Z.Messages.MFA_SMS_PHONE_NUMBER_HIDE : D.Z.Messages.MFA_SMS_PHONE_NUMBER_REVEAL
+        children: t ? D.Z.Messages.MFA_SMS_PHONE_NUMBER_HIDE : D.Z.Messages.MFA_SMS_PHONE_NUMBER_REVEAL
       })
     ]
   });
 }
 if (o)
-  e = (0, n.jsx)(T.Z, {
+  e = (0, n.jsx)(I.Z, {
     className: r ? '' : L.marginTop8,
     children: (0, n.jsx)(l.Button, {
       color: l.Button.Colors.RED,
@@ -115,16 +115,16 @@ if (o)
     })
   });
 else {
-  let t = (0, p.c)(a);
-  e = (0, n.jsxs)(T.Z, {
+  let s = (0, p.c)(a);
+  e = (0, n.jsxs)(I.Z, {
     className: r ? '' : L.marginTop8,
     children: [
       (0, n.jsx)(l.Button, {
         onClick: this.handleEnableSMS,
         size: l.Button.Sizes.SMALL,
         submitting: i,
-        disabled: null != t,
-        children: null != t ? t : D.Z.Messages.MFA_SMS_ENABLE
+        disabled: null != s,
+        children: null != s ? s : D.Z.Messages.MFA_SMS_ENABLE
       }),
       r ? (0, n.jsx)(l.Button, {
         onClick: this.handleChangePhoneNumber,
@@ -146,7 +146,7 @@ return (0, n.jsx)(S.F, {
         type: l.FormText.Types.DESCRIPTION,
         children: D.Z.Messages.MFA_SMS_AUTH_SALES_PITCH
       }),
-      t,
+      s,
       e
     ]
   })
@@ -155,8 +155,8 @@ return (0, n.jsx)(S.F, {
   renderEnabled() {
 let e;
 let {
-  backupCodes: t
-} = this.props, s = (0, n.jsx)(S.F, {
+  backupCodes: s
+} = this.props, t = (0, n.jsx)(S.F, {
   setting: x.s6.ACCOUNT_VIEW_BACKUP_CODES,
   children: (0, n.jsx)(l.Button, {
     onClick: this.sendMFABackupCodesVerificationKeyEmail,
@@ -164,8 +164,8 @@ let {
     children: D.Z.Messages.TWO_FA_VIEW_BACKUP_CODES
   })
 });
-if (t.length > 0) {
-  s = (0, n.jsx)(_.Z, {
+if (s.length > 0) {
+  t = (0, n.jsx)(_.Z, {
     fileContents: this.getDownloadFileContents,
     contentType: 'text/plain',
     fileName: 'discord_backup_codes.txt',
@@ -185,18 +185,18 @@ if (t.length > 0) {
         className: L.marginBottom20,
         children: D.Z.Messages.TWO_FA_BACKUP_CODES_BODY.format()
       }),
-      (0, n.jsxs)(T.Z, {
+      (0, n.jsxs)(I.Z, {
         children: [
-          (0, n.jsx)(T.Z.Child, {
+          (0, n.jsx)(I.Z.Child, {
             children: (0, n.jsx)('ul', {
               className: P.checkboxGroup,
-              children: a(t.slice(0, t.length / 2))
+              children: a(s.slice(0, s.length / 2))
             })
           }),
-          (0, n.jsx)(T.Z.Child, {
+          (0, n.jsx)(I.Z.Child, {
             children: (0, n.jsx)('ul', {
               className: P.checkboxGroup,
-              children: a(t.slice(t.length / 2))
+              children: a(s.slice(s.length / 2))
             })
           })
         ]
@@ -225,16 +225,16 @@ return (0, n.jsxs)(l.FormSection, {
       className: L.marginBottom20,
       children: D.Z.Messages.TWO_FA_DESCRIPTION
     }),
-    (0, n.jsxs)(T.Z, {
-      justify: T.Z.Justify.START,
+    (0, n.jsxs)(I.Z, {
+      justify: I.Z.Justify.START,
       className: L.marginBottom20,
       children: [
-        (0, n.jsx)(T.Z.Child, {
+        (0, n.jsx)(I.Z.Child, {
           wrap: !0,
           grow: 0,
-          children: s
+          children: t
         }),
-        (0, n.jsxs)(T.Z.Child, {
+        (0, n.jsxs)(I.Z.Child, {
           wrap: !0,
           children: [
             (0, n.jsx)(S.F, {
@@ -292,7 +292,7 @@ return (0, n.jsxs)(l.FormSection, {
 let {
   currentUser: e
 } = this.props;
-return O.uZ ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, n.jsx)(l.FormSection, {
+return h.uZ ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, n.jsx)(l.FormSection, {
   title: D.Z.Messages.TWO_FA,
   children: (0, n.jsx)(l.FormText, {
     type: l.FormText.Types.DESCRIPTION,
@@ -308,9 +308,9 @@ return O.uZ ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisa
   }
   openPhoneVerificationModal() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-(0, l.openModal)(t => (0, n.jsx)(N.default, {
-  reason: I.L.USER_SETTINGS_UPDATE,
-  ...t,
+(0, l.openModal)(s => (0, n.jsx)(N.default, {
+  reason: T.L.USER_SETTINGS_UPDATE,
+  ...s,
   ...e
 }), {
   modalKey: f.M
@@ -344,9 +344,9 @@ super(...e), b(this, 'state', {
     actionText: D.Z.Messages.TWO_FA_BACKUP_CODES_NEXT_ACTION
   }));
 }), b(this, 'viewBackupCodes', e => {
-  (0, l.openModal)(t => (0, n.jsx)(E.Z, {
-    ...t,
-    handleSubmit: e => c.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
+  (0, l.openModal)(s => (0, n.jsx)(E.Z, {
+    ...s,
+    handleSubmit: e => c.Z.confirmViewBackupCodes(e, !1).then(() => s.onClose()),
     maxLength: 8,
     title: D.Z.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_LABEL,
     label: D.Z.Messages.TWO_FA_CONFIRM_VIEW_BACKUP_CODES_INPUT_LABEL,
@@ -360,21 +360,21 @@ super(...e), b(this, 'state', {
 }), b(this, 'getDownloadFileContents', () => {
   let e = this.props.backupCodes.map(e => {
       let {
-        consumed: t,
-        code: s
+        consumed: s,
+        code: t
       } = e;
-      return '* '.concat(s.substr(0, 4), '-').concat(s.substr(4), ' ').concat(t ? '(used)' : '');
+      return '* '.concat(t.substr(0, 4), '-').concat(t.substr(4), ' ').concat(s ? '(used)' : '');
     }).join('\r\n'),
-    t = D.Z.Messages.TWO_FA_DISCORD_BACKUP_CODES.format({
+    s = D.Z.Messages.TWO_FA_DISCORD_BACKUP_CODES.format({
       email: this.props.currentUser.email
     });
-  return ''.concat(t, '\r\n\r\n').concat(e);
+  return ''.concat(s, '\r\n\r\n').concat(e);
 }), b(this, 'handleChangePhoneNumber', () => {
   this.openPhoneVerificationModal();
 }), b(this, 'handleEnableSMS', () => {
   let {
     currentUser: e
-  } = this.props, t = () => {
+  } = this.props, s = () => {
     (0, l.openModal)(e => (0, n.jsx)(u.default, {
       ...e,
       handleSubmit: c.Z.enableSMS,
@@ -382,8 +382,8 @@ super(...e), b(this, 'state', {
     }));
   };
   null == e.phone ? this.openPhoneVerificationModal({
-    onAddedPhone: t
-  }) : t();
+    onAddedPhone: s
+  }) : s();
 }), b(this, 'handleDisableSMS', () => {
   (0, l.openModal)(e => (0, n.jsx)(u.default, {
     ...e,
@@ -396,9 +396,9 @@ super(...e), b(this, 'state', {
 }
 
 function j(e) {
-  let t = (0, o.e7)([g.default], () => g.default.getCurrentUser());
-  r()(null != t, 'TwoFactorAuth: currentUser cannot be undefined');
-  let s = (0, o.cj)([
+  let s = (0, o.e7)([g.default], () => g.default.getCurrentUser());
+  r()(null != s, 'TwoFactorAuth: currentUser cannot be undefined');
+  let t = (0, o.cj)([
 A.Z,
 m.default
   ], () => ({
@@ -406,8 +406,8 @@ togglingSMS: A.Z.togglingSMS,
 hasTOTPEnabled: m.default.hasTOTPEnabled()
   }));
   return (0, n.jsx)(v, {
-currentUser: t,
-...s,
+currentUser: s,
+...t,
 ...e
   });
 }

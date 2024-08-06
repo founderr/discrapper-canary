@@ -1,24 +1,24 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return i;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(325767);
+var n = t(735250);
+t(470079);
+var a = t(325767);
 
 function i(e) {
   let {
-width: t = 106,
-height: s = 43,
+width: s = 106,
+height: t = 43,
 color: i = 'currentColor',
 foreground: r,
 ...o
   } = e;
   return (0, n.jsx)('svg', {
 ...(0, a.Z)(o),
-width: t,
-height: s,
+width: s,
+height: t,
 viewBox: '0 0 106 43',
 children: (0, n.jsxs)('g', {
   fill: i,

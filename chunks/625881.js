@@ -1,30 +1,30 @@
-s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(544891),
-  l = s(780384),
-  c = s(481060),
-  d = s(410030),
-  _ = s(63063),
-  E = s(74538),
-  u = s(937615),
-  T = s(230916),
-  I = s(798769),
-  S = s(474936),
-  N = s(981631),
-  C = s(689938),
-  m = s(508388),
-  A = s(982404),
-  g = s(299156);
-t.Z = function(e) {
+t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(544891),
+  l = t(780384),
+  c = t(481060),
+  d = t(410030),
+  _ = t(63063),
+  E = t(74538),
+  u = t(937615),
+  I = t(230916),
+  T = t(798769),
+  S = t(474936),
+  N = t(981631),
+  C = t(689938),
+  m = t(508388),
+  A = t(982404),
+  g = t(299156);
+s.Z = function(e) {
   let {
-premiumSubscription: t,
-premiumType: s,
+premiumSubscription: s,
+premiumType: t,
 onClose: i,
-onConfirm: h,
-userDiscountOffer: O
+onConfirm: O,
+userDiscountOffer: h
   } = e, [p, R] = a.useState(!1), [x, M] = a.useState(!1), f = async e => {
 try {
   M(!0), R(!1), await o.tn.post({
@@ -32,16 +32,16 @@ try {
     body: {
       user_discount_offer_id: e
     }
-  }), h();
+  }), O();
 } catch (e) {
   R(!0);
 }
 M(!1);
-  }, D = (0, d.ZP)(), P = (0, l.wj)(D) ? A : g, L = (0, T._)(t, S.Xh.PREMIUM_MONTH_TIER_2, O), b = (0, E.aS)(S.Xh.PREMIUM_MONTH_TIER_2), Z = (0, u.T4)(b.amount, b.currency);
-  return null == O ? null : (0, n.jsxs)(n.Fragment, {
+  }, D = (0, d.ZP)(), P = (0, l.wj)(D) ? A : g, L = (0, I._)(s, S.Xh.PREMIUM_MONTH_TIER_2, h), b = (0, E.aS)(S.Xh.PREMIUM_MONTH_TIER_2), Z = (0, u.T4)(b.amount, b.currency);
+  return null == h ? null : (0, n.jsxs)(n.Fragment, {
 children: [
-  (0, n.jsx)(I.Z, {
-    premiumType: s,
+  (0, n.jsx)(T.Z, {
+    premiumType: t,
     onClose: i
   }),
   (0, n.jsx)(c.ModalContent, {
@@ -52,7 +52,7 @@ children: [
         (0, n.jsx)(c.Heading, {
           variant: 'heading-xl/bold',
           children: C.Z.Messages.CHURN_DISCOUNT_CONFIRM_HEADER.format({
-            percent: O.discount.amount
+            percent: h.discount.amount
           })
         }),
         (0, n.jsxs)('div', {
@@ -66,8 +66,8 @@ children: [
             (0, n.jsx)(c.Text, {
               variant: 'text-sm/medium',
               children: C.Z.Messages.CHURN_DISCOUNT_CONFIRM_DESCRIPTION.format({
-                percent: O.discount.amount,
-                numMonths: O.discount.user_usage_limit,
+                percent: h.discount.amount,
+                numMonths: h.discount.user_usage_limit,
                 price: Z
               })
             })
@@ -80,8 +80,8 @@ children: [
             className: m.confirmDiscountLegaleseText,
             children: C.Z.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
               discountedPrice: L,
-              billingPeriod: (0, E.JP)(O.discount.user_usage_limit_interval),
-              numMonths: O.discount.user_usage_limit,
+              billingPeriod: (0, E.JP)(h.discount.user_usage_limit_interval),
+              numMonths: h.discount.user_usage_limit,
               fullPrice: Z,
               helpdeskArticle: _.Z.getArticleURL(N.BhN.PAID_TERMS)
             })
@@ -109,7 +109,7 @@ children: [
             (0, n.jsx)(c.Button, {
               size: c.ButtonSizes.SMALL,
               submitting: x,
-              onClick: () => f(O.id),
+              onClick: () => f(h.id),
               children: C.Z.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
             })
           ]

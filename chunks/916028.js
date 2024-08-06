@@ -1,12 +1,12 @@
-s(47120);
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(113434);
-t.Z = function(e) {
+t(47120);
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(113434);
+s.Z = function(e) {
   let {
-onSelect: t,
-quest: s
+onSelect: s,
+quest: t
   } = e, {
 quests: r
   } = (0, i.J2)({
@@ -30,8 +30,8 @@ children: [
     children: (0, n.jsx)(a.Select, {
       'aria-label': 'Prefill Quest',
       options: o,
-      isSelected: e => (null == e ? void 0 : e.id) === (null == s ? void 0 : s.id),
-      select: t,
+      isSelected: e => (null == e ? void 0 : e.id) === (null == t ? void 0 : t.id),
+      select: s,
       serialize: String
     })
   })

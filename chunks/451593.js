@@ -1,11 +1,11 @@
-s.d(t, {
+t.d(s, {
   E: function() {
 return d;
   }
 });
-var n, a = s(652874),
-  i = s(731965),
-  r = s(433517);
+var n, a = t(652874),
+  i = t(731965),
+  r = t(433517);
 let o = '__DEBUG_PROFILE_EFFECTS_STORE',
   l = {
 profileEffects: null !== (n = r.K.get(o)) && void 0 !== n ? n : {}
@@ -15,20 +15,20 @@ r.K.set(o, e.profileEffects);
   },
   d = (0, a.Z)(e => ({
 ...l,
-upsertConfig: t => (0, i.j)(() => {
+upsertConfig: s => (0, i.j)(() => {
   e(e => {
-    let s = {
+    let t = {
       ...e
     };
-    return s.profileEffects[t.id] = t, c(s), s;
+    return t.profileEffects[s.id] = s, c(t), t;
   });
 }),
-deleteConfig: t => (0, i.j)(() => {
+deleteConfig: s => (0, i.j)(() => {
   e(e => {
-    let s = {
+    let t = {
       ...e
     };
-    return delete s.profileEffects[t], c(s), s;
+    return delete t.profileEffects[s], c(t), t;
   });
 })
   }));

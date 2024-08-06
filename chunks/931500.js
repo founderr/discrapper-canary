@@ -1,21 +1,21 @@
-s.d(t, {
+t.d(s, {
   _: function() {
 return l;
   }
-}), s(47120);
-var n = s(470079),
-  a = s(392711),
-  i = s.n(a),
-  r = s(442837),
-  o = s(651941);
+}), t(47120);
+var n = t(470079),
+  a = t(392711),
+  i = t.n(a),
+  r = t(442837),
+  o = t(651941);
 
 function l(e) {
-  let t = (0, r.e7)([o.Z], () => o.Z.getUserVerifiedKeys(e));
-  return n.useMemo(() => i()(t).entries().map(e => {
-let [t, s] = e;
+  let s = (0, r.e7)([o.Z], () => o.Z.getUserVerifiedKeys(e));
+  return n.useMemo(() => i()(s).entries().map(e => {
+let [s, t] = e;
 return {
-  verifiedKey: t,
-  timestamp: s
+  verifiedKey: s,
+  timestamp: t
 };
-  }).sortBy(e => -1 * e.timestamp).value(), [t]);
+  }).sortBy(e => -1 * e.timestamp).value(), [s]);
 }

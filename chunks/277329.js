@@ -1,40 +1,40 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return N;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(442837),
-  i = s(481060),
-  r = s(230711),
-  o = s(574755),
-  l = s(663389),
-  c = s(309739),
-  d = s(293389),
-  _ = s(327885),
-  E = s(326528),
-  u = s(332325),
-  T = s(981631),
-  I = s(689938),
-  S = s(774792);
+var n = t(735250);
+t(470079);
+var a = t(442837),
+  i = t(481060),
+  r = t(230711),
+  o = t(574755),
+  l = t(663389),
+  c = t(309739),
+  d = t(293389),
+  _ = t(327885),
+  E = t(326528),
+  u = t(332325),
+  I = t(981631),
+  T = t(689938),
+  S = t(774792);
 
 function N() {
   let e = (0, E.b)(),
-t = (0, a.e7)([l.Z], () => l.Z.getSubsection()),
-s = null != t && e.some(e => e.id === t) ? t : e[0].id;
+s = (0, a.e7)([l.Z], () => l.Z.getSubsection()),
+t = null != s && e.some(e => e.id === s) ? s : e[0].id;
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsx)(i.Heading, {
     className: S.heading,
     variant: 'heading-xl/semibold',
-    children: I.Z.Messages.GAMES
+    children: T.Z.Messages.GAMES
   }),
   (0, n.jsx)(i.TabBar, {
     className: S.tabBar,
-    selectedItem: s,
+    selectedItem: t,
     onItemSelect: e => {
-      r.Z.setSection(T.oAB.GAMES, e);
+      r.Z.setSection(I.oAB.GAMES, e);
     },
     orientation: 'horizontal',
     type: 'top',
@@ -56,7 +56,7 @@ children: [
     }, e.id))
   }),
   (() => {
-    switch (s) {
+    switch (t) {
       case u.Z.CLIPS:
         return (0, n.jsx)(o.Z, {
           className: S.body,

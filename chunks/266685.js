@@ -30,11 +30,11 @@ var s = n(735250),
   O = n(701488),
   U = n(689938),
   M = n(47067);
-let q = o.forwardRef(function(e, t) {
+let k = o.forwardRef(function(e, t) {
   var n, a;
   let {
 children: S,
-className: q,
+className: k,
 collapsedHeight: P,
 expansionSpring: Z,
 isExpanded: Q,
@@ -79,7 +79,7 @@ return {
 };
   }, [V.config.colors.primary]);
   return (0, s.jsxs)(l.animated.div, {
-className: r()(q, M.contentExpanded, {
+className: r()(k, M.contentExpanded, {
   [M.contentInteractable]: ed
 }),
 style: {
@@ -191,7 +191,7 @@ children: [
         (0, s.jsx)(N.Z, {
           quest: V
         }),
-        !em && !er && !X && es && (0, s.jsx)(k, {
+        !em && !er && !X && es && (0, s.jsx)(q, {
           onClick: ed ? en : void 0
         })
       ]
@@ -303,7 +303,7 @@ children: [
   });
 });
 
-function k(e) {
+function q(e) {
   let {
 style: t,
 onClick: n
@@ -321,4 +321,4 @@ size: u.Button.Sizes.NONE,
 children: U.Z.Messages.QUESTS_GET_THIS_GAME
   }) : null;
 }
-t.Z = q;
+t.Z = k;

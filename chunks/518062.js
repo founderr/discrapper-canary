@@ -1,31 +1,31 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return _;
   }
-}), s(47120);
-var n = s(735250);
-s(470079);
-var a = s(442837),
-  i = s(481060),
-  r = s(607070),
-  o = s(600164),
-  l = s(122890),
-  c = s(110818),
-  d = s(546590);
+}), t(47120);
+var n = t(735250);
+t(470079);
+var a = t(442837),
+  i = t(481060),
+  r = t(607070),
+  o = t(600164),
+  l = t(122890),
+  c = t(110818),
+  d = t(546590);
 
 function _(e) {
   let {
-purchaseState: t,
-currentStep: s,
+purchaseState: s,
+currentStep: t,
 onClose: _
   } = e, [E, u] = (0, l.z)({
-purchaseState: t,
-currentStep: s,
+purchaseState: s,
+currentStep: t,
 initialScene: c.fe.Scenes.ENTRY,
 purchaseScene: c.fe.Scenes.STARS,
 errorScene: c.fe.Scenes.ERROR,
 successScene: c.fe.Scenes.SUCCESS
-  }), T = (0, a.e7)([r.Z], () => r.Z.useReducedMotion);
+  }), I = (0, a.e7)([r.Z], () => r.Z.useReducedMotion);
   return (0, n.jsxs)(i.ModalHeader, {
 align: o.Z.Align.START,
 className: d.header,
@@ -36,7 +36,7 @@ children: [
     nextScene: E,
     onScenePlay: e => u(c.fe.getNextScene(e)),
     pauseWhileUnfocused: !1,
-    pause: T
+    pause: I
   }),
   (0, n.jsx)('div', {
     className: d.headerTitle

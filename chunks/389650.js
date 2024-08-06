@@ -1,56 +1,56 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return Y;
   }
-}), s(47120), s(653041);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(392711),
-  l = s.n(o),
-  c = s(442837),
-  d = s(692547),
-  _ = s(481060),
-  E = s(660216),
-  u = s(225433),
-  T = s(825209),
-  I = s(721383),
-  S = s(612226),
-  N = s(714338),
-  C = s(924557),
-  m = s(600164),
-  A = s(74299),
-  g = s(777036),
-  h = s(131951),
-  O = s(556296),
-  p = s(808506),
-  R = s(63063),
-  x = s(358085),
-  M = s(13140),
-  f = s(210887),
-  D = s(659947),
-  P = s(981631),
-  L = s(420212),
-  b = s(689938),
-  Z = s(104995),
-  v = s(735194),
-  j = s(549856);
+}), t(47120), t(653041);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(392711),
+  l = t.n(o),
+  c = t(442837),
+  d = t(692547),
+  _ = t(481060),
+  E = t(660216),
+  u = t(225433),
+  I = t(825209),
+  T = t(721383),
+  S = t(612226),
+  N = t(714338),
+  C = t(924557),
+  m = t(600164),
+  A = t(74299),
+  g = t(777036),
+  O = t(131951),
+  h = t(556296),
+  p = t(808506),
+  R = t(63063),
+  x = t(358085),
+  M = t(13140),
+  f = t(210887),
+  D = t(659947),
+  P = t(981631),
+  L = t(420212),
+  b = t(689938),
+  Z = t(104995),
+  v = t(735194),
+  j = t(549856);
 
-function B(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-value: s,
+function B(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = s, e;
+  }) : e[s] = t, e;
 }
 
 function U(e) {
   let {
-children: t
+children: s
   } = e;
-  return t([
+  return s([
 S.Q2.MESSAGE,
 S.Q2.NAVIGATION,
 S.Q2.DND,
@@ -67,15 +67,15 @@ class y extends a.PureComponent {
   renderMessage() {
 let {
   keybind: e
-} = this.props, t = M.BB(e.shortcut);
-return N.Z.hasBind(t) ? (0, n.jsx)(_.FormText, {
+} = this.props, s = M.BB(e.shortcut);
+return N.Z.hasBind(s) ? (0, n.jsx)(_.FormText, {
   className: Z.keybindMessage,
   type: _.FormTextTypes.DESCRIPTION,
   style: {
     color: d.Z.unsafe_rawColors.RED_400.css
   },
   children: b.Z.Messages.KEYBIND_CONFLICT
-}) : L.Sp.has(t) ? (0, n.jsx)(_.FormText, {
+}) : L.Sp.has(s) ? (0, n.jsx)(_.FormText, {
   className: Z.keybindMessage,
   type: _.FormTextTypes.DESCRIPTION,
   style: {
@@ -93,7 +93,7 @@ return N.Z.hasBind(t) ? (0, n.jsx)(_.FormText, {
   render() {
 let {
   managed: e,
-  enabled: t
+  enabled: s
 } = this.props.keybind;
 return (0, n.jsxs)(m.Z, {
   direction: m.Z.Direction.VERTICAL,
@@ -126,7 +126,7 @@ return (0, n.jsxs)(m.Z, {
           children: (0, n.jsx)(_.FormItem, {
             title: b.Z.Messages.USER_SETTINGS_KEYBINDS_KEYBIND,
             className: Z.item,
-            children: (0, n.jsx)(T.Z, {
+            children: (0, n.jsx)(I.Z, {
               defaultValue: this.props.keybind.shortcut,
               onChange: this.handleShortcutChange
             })
@@ -142,7 +142,7 @@ return (0, n.jsxs)(m.Z, {
               children: e => (0, n.jsx)('div', {
                 ...e,
                 children: (0, n.jsx)(_.Switch, {
-                  checked: t,
+                  checked: s,
                   onChange: this.handleEnableDisable
                 })
               })
@@ -201,8 +201,8 @@ E.Z.enableAll(!0);
   get keybindActionTypes() {
 let {
   overlaySupported: e,
-  canGoLive: t,
-  allowSoundboard: s,
+  canGoLive: s,
+  allowSoundboard: t,
   enableClips: n
 } = this.props, a = [{
     value: P.kg4.UNASSIGNED,
@@ -246,7 +246,7 @@ return e && (a.push({
 }), a.push({
   value: P.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
   label: b.Z.Messages.KEYBIND_ACTIVATE_OVERLAY_CHAT
-})), t && (0, x.isWindows)() && a.push({
+})), s && (0, x.isWindows)() && a.push({
   value: P.kg4.TOGGLE_GO_LIVE_STREAMING,
   label: b.Z.Messages.KEYBIND_TOGGLE_GO_LIVE_STREAMING
 }), (0, x.isDesktop)() && (a.push({
@@ -261,7 +261,7 @@ return e && (a.push({
 }, {
   value: P.kg4.DISCONNECT_FROM_VOICE_CHANNEL,
   label: b.Z.Messages.USER_SETTINGS_KEYBINDS_VOICE_CHANNEL_DISCONNECT_LABEL
-}), s && a.push({
+}), t && a.push({
   value: P.kg4.SOUNDBOARD,
   label: b.Z.Messages.KEYBIND_SOUNDBOARD
 }, {
@@ -275,8 +275,8 @@ return e && (a.push({
   get keybindDescriptions() {
 let {
   overlaySupported: e,
-  canGoLive: t,
-  enableClips: s
+  canGoLive: s,
+  enableClips: t
 } = this.props, n = {
   [P.kg4.UNASSIGNED]: b.Z.Messages.KEYBIND_DESCRIPTION_UNASSIGNED,
   [P.kg4.PUSH_TO_MUTE]: b.Z.Messages.KEYBIND_DESCRIPTION_PUSH_TO_MUTE,
@@ -287,7 +287,7 @@ let {
   [P.kg4.TOGGLE_VOICE_MODE]: b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_VOICE_MODE,
   [P.kg4.TOGGLE_STREAMER_MODE]: b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_STREAMER_MODE
 };
-return e && (n[P.kg4.TOGGLE_OVERLAY] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY, n[P.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK), t && (0, x.isWindows)() && (n[P.kg4.TOGGLE_GO_LIVE_STREAMING] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, x.isDesktop)() && (n[P.kg4.NAVIGATE_BACK] = b.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK, n[P.kg4.NAVIGATE_FORWARD] = b.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD, n[P.kg4.SOUNDBOARD] = (0, x.isWindows)() ? b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD, n[P.kg4.SOUNDBOARD_HOLD] = (0, x.isWindows)() ? b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD, s && (n[P.kg4.SAVE_CLIP] = b.Z.Messages.CLIPS_KEYBIND_DESCRIPTION)), n;
+return e && (n[P.kg4.TOGGLE_OVERLAY] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY, n[P.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK), s && (0, x.isWindows)() && (n[P.kg4.TOGGLE_GO_LIVE_STREAMING] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, x.isDesktop)() && (n[P.kg4.NAVIGATE_BACK] = b.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK, n[P.kg4.NAVIGATE_FORWARD] = b.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD, n[P.kg4.SOUNDBOARD] = (0, x.isWindows)() ? b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD, n[P.kg4.SOUNDBOARD_HOLD] = (0, x.isWindows)() ? b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD, t && (n[P.kg4.SAVE_CLIP] = b.Z.Messages.CLIPS_KEYBIND_DESCRIPTION)), n;
   }
   renderKeybinds(e) {
 return e.map(e => (0, n.jsx)('div', {
@@ -304,8 +304,8 @@ if (0 === e.length)
   return (0, n.jsx)(F, {
     className: j.marginTop60,
     children: (0, n.jsx)(_.EmptyStateImage, {
-      darkSrc: s(572279),
-      lightSrc: s(871803),
+      darkSrc: t(572279),
+      lightSrc: t(871803),
       width: 320,
       height: 170
     })
@@ -313,10 +313,10 @@ if (0 === e.length)
   }
   render() {
 let e = this.props.enableClips,
-  t = l()(this.props.keybinds).reject(e => e.managed && ![
+  s = l()(this.props.keybinds).reject(e => e.managed && ![
     P.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
     P.kg4.SAVE_CLIP
-  ].includes(e.action)).reject(t => !e && t.action === P.kg4.SAVE_CLIP).reject(e => !this.props.allowSoundboard && (e.action === P.kg4.SOUNDBOARD || e.action === P.kg4.SOUNDBOARD_HOLD)).sortBy(e => e.id).sortBy(e => !0 === e.managed ? -1 : 0).value();
+  ].includes(e.action)).reject(s => !e && s.action === P.kg4.SAVE_CLIP).reject(e => !this.props.allowSoundboard && (e.action === P.kg4.SOUNDBOARD || e.action === P.kg4.SOUNDBOARD_HOLD)).sortBy(e => e.id).sortBy(e => !0 === e.managed ? -1 : 0).value();
 return (0, n.jsxs)(n.Fragment, {
   children: [
     (0, n.jsx)(_.FormSection, {
@@ -349,8 +349,8 @@ return (0, n.jsxs)(n.Fragment, {
           (0, n.jsx)(_.FormDivider, {}),
           (0, n.jsxs)(_.FormSection, {
             children: [
-              this.renderKeybinds(t),
-              this.renderEmpty(t)
+              this.renderKeybinds(s),
+              this.renderEmpty(s)
             ]
           })
         ]
@@ -379,7 +379,7 @@ return (0, n.jsxs)(n.Fragment, {
             (0, n.jsx)('div', {
               className: Z.defaultKeybindShortcutGroup,
               children: (0, n.jsx)(_.KeyCombo, {
-                shortcut: I._.binds['0'],
+                shortcut: T._.binds['0'],
                 className: Z.__invalid_defaultKeybindShortcut
               })
             })
@@ -388,8 +388,8 @@ return (0, n.jsxs)(n.Fragment, {
         (0, n.jsx)(_.FormDivider, {}),
         (0, n.jsx)(U, {
           children: e => (0, n.jsx)(n.Fragment, {
-            children: e.map((e, t) => {
-              let s = (0, S.UD)(e),
+            children: e.map((e, s) => {
+              let t = (0, S.UD)(e),
                 i = (0, S.U6)(e),
                 o = G[e];
               return (0, n.jsxs)('div', {
@@ -400,7 +400,7 @@ return (0, n.jsxs)(n.Fragment, {
                     className: r()(Z.defaultKeybindGroupHeader, {
                       [Z.defaultKeybindGroupWithDescription]: null != i
                     }),
-                    children: s
+                    children: t
                   }),
                   null != i && (0, n.jsx)(_.Text, {
                     color: 'header-secondary',
@@ -430,7 +430,7 @@ return (0, n.jsxs)(n.Fragment, {
                     ]
                   }, e.description))
                 ]
-              }, t);
+              }, s);
             })
           })
         })
@@ -447,14 +447,14 @@ super(...e), B(this, 'handleAddKeybind', () => {
 }
 
 function Y() {
-  let e = (0, c.e7)([O.Z], () => O.Z.getState()),
-t = (0, c.e7)([h.Z], () => (0, A.Z)(h.Z)),
-s = (0, c.e7)([p.Z], () => p.Z.isSupported()),
+  let e = (0, c.e7)([h.Z], () => h.Z.getState()),
+s = (0, c.e7)([O.Z], () => (0, A.Z)(O.Z)),
+t = (0, c.e7)([p.Z], () => p.Z.isSupported()),
 a = (0, C.Go)();
   return (0, n.jsx)(V, {
 keybinds: e,
-canGoLive: t,
-overlaySupported: s,
+canGoLive: s,
+overlaySupported: t,
 allowSoundboard: (0, x.isWindows)(),
 enableClips: a
   });

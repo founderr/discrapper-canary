@@ -30,12 +30,12 @@ var s = n(735250),
   O = n(743294),
   U = n(689938),
   M = n(689065);
-let q = o.forwardRef(function(e, t) {
+let k = o.forwardRef(function(e, t) {
   var n;
   let {
 children: a,
-className: q,
-collapsedHeight: k,
+className: k,
+collapsedHeight: q,
 isExpanded: P,
 isExpansionAnimationComplete: Z,
 expansionSpring: Q,
@@ -72,7 +72,7 @@ useV2Variants: J === _.P.V2 || (0, y.a)(V)
   });
   return (0, s.jsxs)(l.animated.div, {
 'aria-hidden': !ee,
-className: r()(q, M.contentExpanded, {
+className: r()(k, M.contentExpanded, {
   [M.contentInteractable]: ee,
   [M.contentExpandedAccepted]: $
 }),
@@ -95,7 +95,7 @@ style: {
       ],
       output: [
         0,
-        k
+        q
       ]
     })
   ], (e, t) => 'translateY(calc('.concat(e, '% + ').concat(t, 'px))'))
@@ -329,4 +329,4 @@ children: [
 ]
   });
 });
-t.Z = q;
+t.Z = k;

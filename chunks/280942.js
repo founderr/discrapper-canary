@@ -1,29 +1,29 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return d;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(230711),
-  r = s(267642),
-  o = s(981631),
-  l = s(689938),
-  c = s(707817);
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(230711),
+  r = t(267642),
+  o = t(981631),
+  l = t(689938),
+  c = t(707817);
 
 function d(e) {
   let {
-guildBoostSlot: t,
+guildBoostSlot: s,
 onClose: d,
 hasCancelableGuildBoostSlot: _,
 premiumSubscription: E,
 onSelect: u
-  } = e, T = {
+  } = e, I = {
 transfer: {
-  label: null != t.premiumGuildSubscription ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SELECT_SERVER_BUTTON,
-  subtext: t.isOnCooldown() ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON_DISABLED_TOOLTIP : null,
-  disabled: t.isOnCooldown()
+  label: null != s.premiumGuildSubscription ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SELECT_SERVER_BUTTON,
+  subtext: s.isOnCooldown() ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON_DISABLED_TOOLTIP : null,
+  disabled: s.isOnCooldown()
 },
 cancel: {
   label: l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SLOT_CANCEL_BUTTON,
@@ -38,11 +38,11 @@ uncancel: {
   };
   switch (E.status) {
 case o.O0b.PAST_DUE:
-  T.cancel.disabled = !0, T.cancel.subtext = l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_PAST_DUE_TOOLTIP, T.uncancel.disabled = !0;
+  I.cancel.disabled = !0, I.cancel.subtext = l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_PAST_DUE_TOOLTIP, I.uncancel.disabled = !0;
   break;
 case o.O0b.PAUSE_PENDING:
 case o.O0b.PAUSED:
-  T.transfer.disabled = !0, T.transfer.subtext = l.Z.Messages.GUILD_BOOSTING_TRANSFER_DISABLED_FOR_PAUSED_SUBSCRIPTION, T.cancel.disabled = !0, T.cancel.subtext = l.Z.Messages.GUILD_BOOSTING_CANCEL_DISABLED_FOR_PAUSED_SUBSCRIPTION, T.uncancel.disabled = !0;
+  I.transfer.disabled = !0, I.transfer.subtext = l.Z.Messages.GUILD_BOOSTING_TRANSFER_DISABLED_FOR_PAUSED_SUBSCRIPTION, I.cancel.disabled = !0, I.cancel.subtext = l.Z.Messages.GUILD_BOOSTING_CANCEL_DISABLED_FOR_PAUSED_SUBSCRIPTION, I.uncancel.disabled = !0;
   }
   return (0, n.jsxs)(a.Menu, {
 onSelect: u,
@@ -53,54 +53,54 @@ onClose: d,
 children: [
   (0, n.jsx)(a.MenuItem, {
     id: 'apply',
-    label: T.transfer.label,
-    subtext: T.transfer.subtext,
+    label: I.transfer.label,
+    subtext: I.transfer.subtext,
     action: function() {
       (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.resolve().then(s.bind(s, 760558));
-        return s => (0, n.jsx)(e, {
-          ...s,
-          guildBoostSlots: [t],
+        } = await Promise.resolve().then(t.bind(t, 760558));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          guildBoostSlots: [s],
           locationSection: o.jXE.SETTINGS_PREMIUM
         });
       });
     },
-    disabled: T.transfer.disabled
+    disabled: I.transfer.disabled
   }),
-  (0, r.tl)(t) ? (0, n.jsx)(a.MenuItem, {
+  (0, r.tl)(s) ? (0, n.jsx)(a.MenuItem, {
     id: 'uncancel',
-    label: T.uncancel.label,
-    subtext: T.uncancel.subtext,
+    label: I.uncancel.label,
+    subtext: I.uncancel.subtext,
     action: function() {
       (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.resolve().then(s.bind(s, 450468));
-        return s => (0, n.jsx)(e, {
-          ...s,
-          guildBoostSlotId: t.id
+        } = await Promise.resolve().then(t.bind(t, 450468));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          guildBoostSlotId: s.id
         });
       });
     },
-    disabled: T.uncancel.disabled
+    disabled: I.uncancel.disabled
   }) : (0, n.jsx)(a.MenuItem, {
     id: 'cancel',
-    label: T.cancel.label,
-    subtext: T.cancel.subtext,
+    label: I.cancel.label,
+    subtext: I.cancel.subtext,
     action: function() {
       (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.resolve().then(s.bind(s, 401786));
-        return s => (0, n.jsx)(e, {
-          ...s,
-          guildBoostSlot: t
+        } = await Promise.resolve().then(t.bind(t, 401786));
+        return t => (0, n.jsx)(e, {
+          ...t,
+          guildBoostSlot: s
         });
       });
     },
-    disabled: T.cancel.disabled,
+    disabled: I.cancel.disabled,
     color: 'danger'
   }),
   E.isPausedOrPausePending ? (0, n.jsx)(a.MenuItem, {

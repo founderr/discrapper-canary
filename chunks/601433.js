@@ -1,9 +1,9 @@
-s.d(t, {
+t.d(s, {
   D: function() {
 return a;
   }
 });
-let n = (0, s(818083).B)({
+let n = (0, t(818083).B)({
   kind: 'user',
   id: '2023-03_text_playground_settings_pane',
   label: 'Text Playground',

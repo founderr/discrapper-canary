@@ -1,29 +1,29 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return C;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(120356),
-  i = s.n(a),
-  r = s(442837),
-  o = s(481060),
-  l = s(223245),
-  c = s(230711),
-  d = s(921801),
-  _ = s(246946),
-  E = s(358085),
-  u = s(726985),
-  T = s(981631),
-  I = s(689938),
-  S = s(824868),
-  N = s(549856);
+var n = t(735250);
+t(470079);
+var a = t(120356),
+  i = t.n(a),
+  r = t(442837),
+  o = t(481060),
+  l = t(223245),
+  c = t(230711),
+  d = t(921801),
+  _ = t(246946),
+  E = t(358085),
+  u = t(726985),
+  I = t(981631),
+  T = t(689938),
+  S = t(824868),
+  N = t(549856);
 
 function C() {
   let {
 enabled: e,
-autoToggle: t,
+autoToggle: s,
 hideInstantInvites: a,
 hidePersonalInformation: C,
 disableSounds: m,
@@ -31,15 +31,15 @@ disableNotifications: A,
 enableContentProtection: g
   } = (0, r.cj)([_.Z], () => ({
 ..._.Z.getSettings()
-  })), h = (e, t) => {
+  })), O = (e, s) => {
 l.Z.update({
-  [e]: t
+  [e]: s
 });
   };
   return (0, n.jsxs)(o.FormSection, {
 className: S.container,
 tag: o.FormTitleTags.H1,
-title: I.Z.Messages.STREAMER_MODE,
+title: T.Z.Messages.STREAMER_MODE,
 children: [
   (0, n.jsx)(d.F, {
     setting: u.s6.STREAMER_MODE_INTEGRATIONS,
@@ -48,14 +48,14 @@ children: [
       iconClassName: S.noticeIcon,
       type: o.FormNoticeTypes.PRIMARY,
       imageData: {
-        src: s(560264),
+        src: t(560264),
         width: 184,
         height: 110,
         position: o.FormNoticeImagePositions.RIGHT
       },
-      title: I.Z.Messages.USER_SETTINGS_STREAMER_NOTICE_TITLE,
-      body: I.Z.Messages.USER_SETTINGS_STREAMER_NOTICE_BODY.format({
-        streamkitURL: T.EYA.STREAMKIT
+      title: T.Z.Messages.USER_SETTINGS_STREAMER_NOTICE_TITLE,
+      body: T.Z.Messages.USER_SETTINGS_STREAMER_NOTICE_BODY.format({
+        streamkitURL: I.EYA.STREAMKIT
       })
     })
   }),
@@ -64,21 +64,21 @@ children: [
     children: [
       (0, n.jsx)(o.FormSwitch, {
         value: e,
-        onChange: e => h('enabled', e),
-        note: I.Z.Messages.ENABLE_STREAMER_MODE_DESCRIPTION.format({
+        onChange: e => O('enabled', e),
+        note: T.Z.Messages.ENABLE_STREAMER_MODE_DESCRIPTION.format({
           onClick: () => {
-            c.Z.setSection(T.oAB.KEYBINDS);
+            c.Z.setSection(I.oAB.KEYBINDS);
           }
         }),
-        children: I.Z.Messages.ENABLE_STREAMER_MODE_LABEL
+        children: T.Z.Messages.ENABLE_STREAMER_MODE_LABEL
       }),
       (() => {
         if (E.isPlatformEmbedded)
           return (0, n.jsx)(o.FormSwitch, {
-            value: t,
-            onChange: e => h('autoToggle', e),
-            note: I.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_DESCRIPTION,
-            children: I.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
+            value: s,
+            onChange: e => O('autoToggle', e),
+            note: T.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_DESCRIPTION,
+            children: T.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
           });
       })()
     ]
@@ -87,51 +87,51 @@ children: [
     children: [
       (0, n.jsx)(o.FormTitle, {
         className: i()(N.marginTop40, N.marginBottom8, S.sectionLabel),
-        children: I.Z.Messages.OPTIONS
+        children: T.Z.Messages.OPTIONS
       }),
       (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
         children: (0, n.jsx)(o.FormSwitch, {
           value: C,
-          onChange: e => h('hidePersonalInformation', e),
-          note: I.Z.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
-          children: I.Z.Messages.HIDE_PERSONAL_INFORMATION_LABEL
+          onChange: e => O('hidePersonalInformation', e),
+          note: T.Z.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
+          children: T.Z.Messages.HIDE_PERSONAL_INFORMATION_LABEL
         })
       }),
       (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
         children: (0, n.jsx)(o.FormSwitch, {
           value: a,
-          onChange: e => h('hideInstantInvites', e),
-          note: I.Z.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
-          children: I.Z.Messages.HIDE_INSTANT_INVITES_LABEL
+          onChange: e => O('hideInstantInvites', e),
+          note: T.Z.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
+          children: T.Z.Messages.HIDE_INSTANT_INVITES_LABEL
         })
       }),
       (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_DISABLE_SOUNDS,
         children: (0, n.jsx)(o.FormSwitch, {
           value: m,
-          onChange: e => h('disableSounds', e),
-          note: I.Z.Messages.DISABLE_SOUNDS_DESCRIPTION,
-          children: I.Z.Messages.DISABLE_SOUNDS_LABEL
+          onChange: e => O('disableSounds', e),
+          note: T.Z.Messages.DISABLE_SOUNDS_DESCRIPTION,
+          children: T.Z.Messages.DISABLE_SOUNDS_LABEL
         })
       }),
       (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
         children: (0, n.jsx)(o.FormSwitch, {
           value: A,
-          onChange: e => h('disableNotifications', e),
-          note: I.Z.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
-          children: I.Z.Messages.DISABLE_NOTIFICATIONS_LABEL
+          onChange: e => O('disableNotifications', e),
+          note: T.Z.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
+          children: T.Z.Messages.DISABLE_NOTIFICATIONS_LABEL
         })
       }),
       (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
         children: (0, n.jsx)(o.FormSwitch, {
           value: g,
-          onChange: e => h('enableContentProtection', e),
-          note: I.Z.Messages.HIDE_WINDOW_FROM_STREAM_DESCRIPTION,
-          children: I.Z.Messages.HIDE_WINDOW_FROM_STREAM_LABEL
+          onChange: e => O('enableContentProtection', e),
+          note: T.Z.Messages.HIDE_WINDOW_FROM_STREAM_DESCRIPTION,
+          children: T.Z.Messages.HIDE_WINDOW_FROM_STREAM_LABEL
         })
       })
     ]

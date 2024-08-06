@@ -1,44 +1,44 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
-return h;
+return O;
   }
-}), s(47120);
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(787740),
-  r = s(134598),
-  o = s(921801),
-  l = s(430824),
-  c = s(63063),
-  d = s(358085),
-  _ = s(709054),
-  E = s(695346),
-  u = s(726985),
-  T = s(981631),
-  I = s(689938),
-  S = s(69258),
-  N = s(549856);
+}), t(47120);
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(787740),
+  r = t(134598),
+  o = t(921801),
+  l = t(430824),
+  c = t(63063),
+  d = t(358085),
+  _ = t(709054),
+  E = t(695346),
+  u = t(726985),
+  I = t(981631),
+  T = t(689938),
+  S = t(69258),
+  N = t(549856);
 
 function C() {
   let e = E.G6.useSetting(),
-t = E.Wz.useSetting(),
-s = d.isPlatformEmbedded ? I.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : I.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
+s = E.Wz.useSetting(),
+t = d.isPlatformEmbedded ? T.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : T.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
 i = e => {
   E.Wz.updateSetting(e), ! function(e) {
-    let t = () => {
+    let s = () => {
       E.SE.updateSetting(e ? _.default.keys(l.Z.getGuilds()) : []);
     };
     (0, a.openModal)(e => (0, n.jsx)(a.ConfirmModal, {
-      header: I.Z.Messages.USER_DM_SETTINGS_TITLE,
-      confirmText: I.Z.Messages.NO_TEXT,
-      cancelText: I.Z.Messages.YES_TEXT,
-      onCancel: t,
+      header: T.Z.Messages.USER_DM_SETTINGS_TITLE,
+      confirmText: T.Z.Messages.NO_TEXT,
+      cancelText: T.Z.Messages.YES_TEXT,
+      onCancel: s,
       confirmButtonColor: a.Button.Colors.BRAND,
       ...e,
       children: (0, n.jsx)(a.Text, {
         variant: 'text-md/normal',
-        children: I.Z.Messages.ACTIVITY_RESTRICTION_MODAL_DESC
+        children: T.Z.Messages.ACTIVITY_RESTRICTION_MODAL_DESC
       })
     }));
   }(e);
@@ -51,21 +51,21 @@ children: (0, n.jsxs)(a.FormSection, {
     (0, n.jsx)(a.FormTitle, {
       tag: a.FormTitleTags.H5,
       className: N.marginBottom8,
-      children: I.Z.Messages.ACTIVITY_STATUS
+      children: T.Z.Messages.ACTIVITY_STATUS
     }),
     (0, n.jsx)(a.FormSwitch, {
       value: e,
       onChange: e => E.G6.updateSetting(e),
-      note: s,
-      children: I.Z.Messages.SHOW_CURRENT_ACTIVITY
+      note: t,
+      children: T.Z.Messages.SHOW_CURRENT_ACTIVITY
     }),
     (0, n.jsx)(a.FormSwitch, {
-      value: !t,
-      note: I.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({
-        helpdeskArticle: c.Z.getArticleURL(T.BhN.ACTIVITY_STATUS_SETTINGS)
+      value: !s,
+      note: T.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({
+        helpdeskArticle: c.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS)
       }),
       onChange: e => i(!e),
-      children: I.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT
+      children: T.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT
     })
   ]
 })
@@ -74,7 +74,7 @@ children: (0, n.jsxs)(a.FormSection, {
 
 function m() {
   let e = E.cP.useSetting(),
-t = E.Ou.useSetting();
+s = E.Ou.useSetting();
   return (0, n.jsx)(o.F, {
 setting: u.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
 children: (0, n.jsxs)(a.FormSection, {
@@ -83,19 +83,19 @@ children: (0, n.jsxs)(a.FormSection, {
     (0, n.jsx)(a.FormTitle, {
       tag: a.FormTitleTags.H5,
       className: N.marginBottom8,
-      children: I.Z.Messages.ACTIVITY_PARTY_PRIVACY
+      children: T.Z.Messages.ACTIVITY_PARTY_PRIVACY
     }),
     (0, n.jsx)(a.FormSwitch, {
       value: e,
-      note: I.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP,
+      note: T.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP,
       onChange: e => E.cP.updateSetting(e),
-      children: I.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS
+      children: T.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS
     }),
     (0, n.jsx)(a.FormSwitch, {
-      value: t,
-      note: I.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP,
+      value: s,
+      note: T.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP,
       onChange: e => E.Ou.updateSetting(e),
-      children: I.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL
+      children: T.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL
     })
   ]
 })
@@ -112,7 +112,7 @@ children: (0, n.jsxs)(a.FormSection, {
       tag: a.FormTitleTags.H5,
       className: N.marginBottom8,
       children: [
-        I.Z.Messages.BROADCASTING_SETTINGS,
+        T.Z.Messages.BROADCASTING_SETTINGS,
         (0, n.jsx)(i.Z, {
           className: S.betaTag
         })
@@ -121,13 +121,13 @@ children: (0, n.jsxs)(a.FormSection, {
     (0, n.jsx)(a.FormText, {
       type: a.FormText.Types.DESCRIPTION,
       className: N.marginBottom20,
-      children: I.Z.Messages.BROADCASTING_SETTINGS_DESCRIPTION
+      children: T.Z.Messages.BROADCASTING_SETTINGS_DESCRIPTION
     }),
     (0, n.jsx)(a.FormItem, {
       children: (0, n.jsx)(a.Button, {
         onClick: () => (0, r.X)(),
         size: a.ButtonSizes.SMALL,
-        children: I.Z.Messages.BROADCASTING_SETTINGS_CTA
+        children: T.Z.Messages.BROADCASTING_SETTINGS_CTA
       })
     })
   ]
@@ -142,24 +142,24 @@ children: (0, n.jsx)(a.FormSection, {
   className: N.marginBottom40,
   children: (0, n.jsx)(a.FormNotice, {
     type: a.FormNotice.Types.PRIMARY,
-    body: I.Z.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
-      termsLink: T.EYA.TERMS,
-      privacyLink: T.EYA.PRIVACY
+    body: T.Z.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
+      termsLink: I.EYA.TERMS,
+      privacyLink: I.EYA.PRIVACY
     })
   })
 })
   });
 }
 
-function h(e) {
+function O(e) {
   let {
-className: t,
-showHeader: s = !0
+className: s,
+showHeader: t = !0
   } = e;
   return (0, n.jsxs)(a.FormSection, {
-className: t,
+className: s,
 tag: a.FormTitleTags.H1,
-title: s ? I.Z.Messages.ACTIVITY_PRIVACY : null,
+title: t ? T.Z.Messages.ACTIVITY_PRIVACY : null,
 children: [
   (0, n.jsx)(C, {}),
   (0, n.jsx)(m, {}),

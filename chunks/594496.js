@@ -1,38 +1,38 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return D;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(512722),
-  i = s.n(a),
-  r = s(442837),
-  o = s(481060),
-  l = s(295474),
-  c = s(150039),
-  d = s(126631),
-  _ = s(433411),
-  E = s(532432),
-  u = s(134795),
-  T = s(513901),
-  I = s(451392),
-  S = s(906364),
-  N = s(621853),
-  C = s(271383),
-  m = s(594174),
-  A = s(74538),
-  g = s(51144),
-  h = s(18438),
-  O = s(778825),
-  p = s(52597),
-  R = s(430131),
-  x = s(133484),
-  M = s(689938),
-  f = s(109254);
+var n = t(735250);
+t(470079);
+var a = t(512722),
+  i = t.n(a),
+  r = t(442837),
+  o = t(481060),
+  l = t(295474),
+  c = t(150039),
+  d = t(126631),
+  _ = t(433411),
+  E = t(532432),
+  u = t(134795),
+  I = t(513901),
+  T = t(451392),
+  S = t(906364),
+  N = t(621853),
+  C = t(271383),
+  m = t(594174),
+  A = t(74538),
+  g = t(51144),
+  O = t(18438),
+  h = t(778825),
+  p = t(52597),
+  R = t(430131),
+  x = t(133484),
+  M = t(689938),
+  f = t(109254);
 
 function D(e) {
-  var t, s, a, D;
+  var s, t, a, D;
   let {
 guild: P
   } = e, L = (0, r.e7)([m.default], () => {
@@ -47,38 +47,38 @@ pendingPronouns: B,
 pendingThemeColors: U,
 errors: G,
 guild: F
-  } = (0, r.cj)([O.Z], () => {
+  } = (0, r.cj)([h.Z], () => {
 let {
   pendingAvatar: e,
-  pendingNickname: t,
-  pendingBio: s,
+  pendingNickname: s,
+  pendingBio: t,
   pendingPronouns: n,
   pendingBanner: a,
   pendingThemeColors: i
-} = O.Z.getAllPending();
+} = h.Z.getAllPending();
 return {
   pendingAvatar: e,
-  pendingNickname: t,
+  pendingNickname: s,
   pendingBanner: a,
-  pendingBio: s,
+  pendingBio: t,
   pendingPronouns: n,
   pendingThemeColors: i,
-  errors: O.Z.getErrors(),
-  guild: O.Z.getGuild()
+  errors: h.Z.getErrors(),
+  guild: h.Z.getGuild()
 };
   }), y = null != P ? P : F;
   i()(null != y, 'guild should not be null');
   let V = (0, l.gS)(y.id),
 Y = (0, r.e7)([C.ZP], () => null == y.id ? null : C.ZP.getMember(y.id, L.id)),
 w = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(L.id, y.id)),
-k = A.ZP.canUsePremiumProfileCustomization(L),
-H = (0, c.gd)(b, null == Y ? void 0 : Y.avatar),
+H = A.ZP.canUsePremiumProfileCustomization(L),
+k = (0, c.gd)(b, null == Y ? void 0 : Y.avatar),
 W = (0, c.f$)(v, null == w ? void 0 : w.banner),
 K = (0, p.p)(U, null == w ? void 0 : w.themeColors),
-z = null !== (t = null == w ? void 0 : w.bio) && void 0 !== t ? t : '',
-Q = null !== (s = null == w ? void 0 : w.pronouns) && void 0 !== s ? s : '',
-X = (e, t, s) => {
-  s(null != e ? e : null != t ? null : void 0);
+z = null !== (s = null == w ? void 0 : w.bio) && void 0 !== s ? s : '',
+Q = null !== (t = null == w ? void 0 : w.pronouns) && void 0 !== t ? t : '',
+X = (e, s, t) => {
+  t(null != e ? e : null != s ? null : void 0);
 };
   return (0, n.jsxs)('div', {
 className: f.sectionsContainer,
@@ -101,7 +101,7 @@ children: [
   }, 'pronouns'),
   (0, n.jsxs)(x.Z, {
     user: L,
-    showOverlay: !k,
+    showOverlay: !H,
     children: [
       (0, n.jsx)(E.Z, {
         sectionTitle: (0, n.jsxs)(n.Fragment, {
@@ -118,11 +118,11 @@ children: [
             })
           ]
         }),
-        showRemoveAvatarButton: H,
-        onAvatarChange: e => X(e, null == Y ? void 0 : Y.avatar, h.I5),
+        showRemoveAvatarButton: k,
+        onAvatarChange: e => X(e, null == Y ? void 0 : Y.avatar, O.I5),
         errors: null == G ? void 0 : G.avatar,
         guildId: y.id,
-        disabled: !k
+        disabled: !H
       }, 'avatar'),
       (0, n.jsx)(_.Z, {
         sectionTitle: (0, n.jsxs)(n.Fragment, {
@@ -142,7 +142,7 @@ children: [
         user: L,
         guild: y
       }, 'decoration'),
-      (0, n.jsx)(T.Z, {
+      (0, n.jsx)(I.Z, {
         sectionTitle: (0, n.jsxs)(n.Fragment, {
           children: [
             M.Z.Messages.USER_SETTINGS_PROFILE_EFFECT,
@@ -163,11 +163,11 @@ children: [
       (0, n.jsx)(u.Z, {
         showRemoveBannerButton: W,
         errors: null == G ? void 0 : G.banner,
-        onBannerChange: e => X(e, null == w ? void 0 : w.banner, h.g_),
+        onBannerChange: e => X(e, null == w ? void 0 : w.banner, O.g_),
         guildId: null == y ? void 0 : y.id,
-        disabled: !k
+        disabled: !H
       }, 'banner'),
-      (0, n.jsx)(I.Z, {
+      (0, n.jsx)(T.Z, {
         user: L,
         pendingAvatar: b,
         pendingColors: U,
@@ -197,7 +197,7 @@ children: [
         errors: null !== (D = null == G ? void 0 : G.bio) && void 0 !== D ? D : null == V ? void 0 : V.bio,
         pendingBio: j,
         currentBio: z,
-        disabled: !k
+        disabled: !H
       }, 'about')
     ]
   })

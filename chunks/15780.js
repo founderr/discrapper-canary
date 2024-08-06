@@ -1,23 +1,23 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
-return T;
+return I;
   }
 });
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(481060),
-  l = s(630388),
-  c = s(88658),
-  d = s(695346),
-  _ = s(981631),
-  E = s(689938),
-  u = s(549856);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(481060),
+  l = t(630388),
+  c = t(88658),
+  d = t(695346),
+  _ = t(981631),
+  E = t(689938),
+  u = t(549856);
 
-function T() {
+function I() {
   let e = d.xq.useSetting(),
-t = a.useMemo(() => (0, c.bL)(e), [e]);
+s = a.useMemo(() => (0, c.bL)(e), [e]);
   return (0, n.jsx)(o.FormSection, {
 tag: o.FormTitleTags.H1,
 title: E.Z.Messages.FRIEND_REQUESTS,
@@ -27,18 +27,18 @@ children: (0, n.jsxs)(o.FormSection, {
   children: [
     (0, n.jsx)(o.FormSwitch, {
       className: r()(u.marginTop8, u.marginBottom20),
-      value: t.all,
+      value: s.all,
       onChange: e => d.xq.updateSetting(e ? _.HGf : _.HGf & ~_.SOq.NO_RELATION),
       children: E.Z.Messages.FRIEND_PERMITTED_SOURCE_ALL
     }),
     (0, n.jsx)(o.FormSwitch, {
-      value: t.all || t.mutualFriends,
-      onChange: t => d.xq.updateSetting(t ? l.pj(e, _.SOq.MUTUAL_FRIENDS) : l.M1(e, _.SOq.MUTUAL_FRIENDS, _.SOq.NO_RELATION)),
+      value: s.all || s.mutualFriends,
+      onChange: s => d.xq.updateSetting(s ? l.pj(e, _.SOq.MUTUAL_FRIENDS) : l.M1(e, _.SOq.MUTUAL_FRIENDS, _.SOq.NO_RELATION)),
       children: E.Z.Messages.FRIEND_PERMITTED_SOURCE_MUTUAL_FRIENDS
     }),
     (0, n.jsx)(o.FormSwitch, {
-      value: t.all || t.mutualGuilds,
-      onChange: t => d.xq.updateSetting(t ? l.pj(e, _.SOq.MUTUAL_GUILDS) : l.M1(e, _.SOq.MUTUAL_GUILDS, _.SOq.NO_RELATION)),
+      value: s.all || s.mutualGuilds,
+      onChange: s => d.xq.updateSetting(s ? l.pj(e, _.SOq.MUTUAL_GUILDS) : l.M1(e, _.SOq.MUTUAL_GUILDS, _.SOq.NO_RELATION)),
       children: E.Z.Messages.FRIEND_PERMITTED_SOURCE_MUTUAL_GUILDS
     })
   ]

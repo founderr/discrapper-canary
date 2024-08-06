@@ -29,12 +29,12 @@ startCompletionAnimation: v
   } = (0, x.GX)(), N = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, j = o.useRef(!1), A = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([m.Z], () => m.Z.hasLayers()), R = (0, u.Z)(b), [y, I] = o.useState(null), [O, U] = o.useState(null), M = o.useRef(new l.qA({
 gravity: 0,
 wind: 0
-  })), q = (0, l.uR)(y, O), k = o.useCallback(() => {
+  })), k = (0, l.uR)(y, O), q = o.useCallback(() => {
 if (A)
   return;
 let e = E.current,
   t = B.current;
-if (null != t && null != e && q.isReady) {
+if (null != t && null != e && k.isReady) {
   var n, s, o, a;
   let {
     x: r,
@@ -43,7 +43,7 @@ if (null != t && null != e && q.isReady) {
     x: i,
     y: c
   } = t.getBoundingClientRect();
-  q.createMultipleConfetti((n = r - i, s = l - c, o = e.clientHeight, a = e.clientWidth, {
+  k.createMultipleConfetti((n = r - i, s = l - c, o = e.clientHeight, a = e.clientWidth, {
     ...g.We,
     position: {
       type: 'static-random',
@@ -86,36 +86,36 @@ if (null != t && null != e && q.isReady) {
   }, [
 E,
 B,
-q,
+k,
 A
   ]), P = (0, u.Z)(S);
   return (o.useEffect(() => {
-N && S && !P && (v(), k());
+N && S && !P && (v(), q());
   }, [
 S,
 N,
 v,
-k,
+q,
 P
   ]), o.useEffect(() => {
 N && !b && R && setTimeout(() => {
-  v(), k();
+  v(), q();
 }, 200);
   }, [
 N,
 R,
 b,
 v,
-k
+q
   ]), o.useEffect(() => {
-if (!!q.isReady)
-  !j.current && N && (v(), k()), j.current = N;
+if (!!k.isReady)
+  !j.current && N && (v(), q()), j.current = N;
   }, [
 N,
 j,
-k,
+q,
 v,
-q
+k
   ]), A) ? null : (0, s.jsxs)('div', {
 className: f.wrapper,
 'aria-hidden': 'true',

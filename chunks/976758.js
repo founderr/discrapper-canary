@@ -1,26 +1,26 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
-return I;
+return T;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(442837),
-  i = s(481060),
-  r = s(846027),
-  o = s(600164),
-  l = s(313201),
-  c = s(131951),
-  d = s(36703),
-  _ = s(689938),
-  E = s(549856);
+var n = t(735250);
+t(470079);
+var a = t(442837),
+  i = t(481060),
+  r = t(846027),
+  o = t(600164),
+  l = t(313201),
+  c = t(131951),
+  d = t(36703),
+  _ = t(689938),
+  E = t(549856);
 let u = (0, l.hQ)(),
-  T = (0, l.hQ)();
+  I = (0, l.hQ)();
 
-function I() {
+function T() {
   let {
 inputVolume: e,
-outputVolume: t
+outputVolume: s
   } = (0, a.cj)([c.Z], () => ({
 inputVolume: c.Z.getInputVolume(),
 outputVolume: c.Z.getOutputVolume()
@@ -48,17 +48,17 @@ children: [
     basis: '50%',
     children: [
       (0, n.jsx)(i.FormTitle, {
-        id: T,
+        id: I,
         tag: i.FormTitleTags.H5,
         className: E.marginBottom4,
         children: _.Z.Messages.FORM_LABEL_OUTPUT_VOLUME
       }),
       (0, n.jsx)(i.Slider, {
-        initialValue: (0, d.P)(t),
+        initialValue: (0, d.P)(s),
         maxValue: 200,
         onValueRender: e => ''.concat(e.toFixed(0), '%'),
         asValueChanges: e => r.Z.setOutputVolume((0, d.A)(e)),
-        'aria-labelledby': T
+        'aria-labelledby': I
       })
     ]
   })

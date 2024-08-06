@@ -1,10 +1,10 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return i;
   }
 });
-var n = s(735250);
-let a = s(470079).createContext(!1);
+var n = t(735250);
+let a = t(470079).createContext(!1);
 
 function i(e) {
   return (0, n.jsx)(a.Provider, {

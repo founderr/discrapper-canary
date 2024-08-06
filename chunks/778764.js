@@ -1,48 +1,48 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return p;
   }
-}), s(47120), s(773603);
-var n = s(735250),
-  a = s(470079),
-  i = s(849055),
-  r = s(442837),
-  o = s(481060),
-  l = s(239091),
-  c = s(554300),
-  d = s(313201),
-  _ = s(202858),
-  E = s(287880),
-  u = s(358085),
-  T = s(960048),
-  I = s(998502),
-  S = s(365007),
-  N = s(15980),
-  C = s(755733),
-  m = s(981631),
-  A = s(689938),
-  g = s(553687);
+}), t(47120), t(773603);
+var n = t(735250),
+  a = t(470079),
+  i = t(849055),
+  r = t(442837),
+  o = t(481060),
+  l = t(239091),
+  c = t(554300),
+  d = t(313201),
+  _ = t(202858),
+  E = t(287880),
+  u = t(358085),
+  I = t(960048),
+  T = t(998502),
+  S = t(365007),
+  N = t(15980),
+  C = t(755733),
+  m = t(981631),
+  A = t(689938),
+  g = t(553687);
 
-function h(e) {
+function O(e) {
   let {
-transitionState: t,
+transitionState: s,
 onClose: r,
 ticket: l,
 challenge: c
-  } = e, E = (0, d.Dt)(), [N, h] = a.useState(''), [O, p] = a.useState(!0), [R, x] = a.useState(C.x.INIT), [M, f] = a.useState(''), [D, P] = a.useState(null), L = async () => {
+  } = e, E = (0, d.Dt)(), [N, O] = a.useState(''), [h, p] = a.useState(!0), [R, x] = a.useState(C.x.INIT), [M, f] = a.useState(''), [D, P] = a.useState(null), L = async () => {
 let e;
 x(C.x.REGISTER);
-let t = u.isPlatformEmbedded && I.ZP.supportsFeature(m.eRX.WEBAUTHN) ? I.ZP.webAuthnRegister(c) : i.Ue(JSON.parse(c)).then(e => JSON.stringify(e));
+let s = u.isPlatformEmbedded && T.ZP.supportsFeature(m.eRX.WEBAUTHN) ? T.ZP.webAuthnRegister(c) : i.Ue(JSON.parse(c)).then(e => JSON.stringify(e));
 try {
-  e = await t;
+  e = await s;
 } catch (e) {
-  T.Z.captureException(e), P(A.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(C.x.INIT);
+  I.Z.captureException(e), P(A.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(C.x.INIT);
   return;
 }
 f(e), x(C.x.NAME);
   };
   return (0, n.jsxs)(o.ModalRoot, {
-transitionState: t,
+transitionState: s,
 'aria-labelledby': E,
 children: [
   (0, n.jsxs)(o.ModalHeader, {
@@ -78,7 +78,7 @@ children: [
                 className: g.icon,
                 children: (0, n.jsx)('img', {
                   alt: '',
-                  src: s(773072)
+                  src: t(773072)
                 })
               }),
               (0, n.jsx)('div', {
@@ -114,7 +114,7 @@ children: [
                 className: g.icon,
                 children: (0, n.jsx)('img', {
                   alt: '',
-                  src: s(773072)
+                  src: t(773072)
                 })
               }),
               (0, n.jsx)('div', {
@@ -150,7 +150,7 @@ children: [
                   className: g.icon,
                   children: (0, n.jsx)('img', {
                     alt: '',
-                    src: s(637163)
+                    src: t(637163)
                   })
                 }),
                 (0, n.jsxs)('div', {
@@ -163,7 +163,7 @@ children: [
                       className: g.input,
                       value: N,
                       onChange: e => {
-                        h(e), p(0 === e.length);
+                        O(e), p(0 === e.length);
                       },
                       autoFocus: !0,
                       minLength: 1
@@ -177,7 +177,7 @@ children: [
               children: [
                 (0, n.jsx)(o.Button, {
                   type: 'submit',
-                  disabled: O,
+                  disabled: h,
                   children: A.Z.Messages.TWO_FA_WEBAUTHN_REGISTER_FINISH
                 }),
                 (0, n.jsx)(o.Button, {
@@ -199,16 +199,16 @@ children: [
   });
 }
 
-function O(e) {
+function h(e) {
   let {
-onSelect: t,
+onSelect: s,
 credential: a
   } = e;
   return (0, n.jsxs)(o.Menu, {
 navId: 'webauthn-credential-actions',
 onClose: l.Zy,
 'aria-label': A.Z.Messages.TWO_FA_WEBAUTHN_CREDENTIAL_OPTIONS,
-onSelect: t,
+onSelect: s,
 children: [
   (0, n.jsx)(o.MenuItem, {
     id: 'webauthn-edit-credential-'.concat(a.id),
@@ -217,10 +217,10 @@ children: [
       (0, o.openModalLazy)(async () => {
         let {
           default: e
-        } = await s.e('804').then(s.bind(s, 89616));
-        return t => (0, n.jsx)(e, {
+        } = await t.e('804').then(t.bind(t, 89616));
+        return s => (0, n.jsx)(e, {
           credential: a,
-          ...t
+          ...s
         });
       });
     }
@@ -240,15 +240,15 @@ children: [
 function p() {
   let {
 credentials: e,
-hasFetchedCredentials: t
+hasFetchedCredentials: s
   } = (0, r.cj)([N.Z], () => ({
 hasFetchedCredentials: N.Z.hasFetchedCredentials(),
 credentials: N.Z.getCredentials()
   }));
   a.useEffect(() => {
-!t && (0, S.hL)();
-  }, [t]);
-  let [s, i] = a.useState(!1);
+!s && (0, S.hL)();
+  }, [s]);
+  let [t, i] = a.useState(!1);
   return (0, n.jsxs)(o.FormSection, {
 title: A.Z.Messages.TWO_FA_WEBAUTHN_TITLE,
 className: g.settings,
@@ -264,9 +264,9 @@ children: [
       avatar: null,
       name: e.name,
       className: g.credentialItem,
-      onContextMenu: t => {
-        (0, l.vq)(t, t => (0, n.jsx)(O, {
-          ...t,
+      onContextMenu: s => {
+        (0, l.vq)(s, s => (0, n.jsx)(h, {
+          ...s,
           credential: e
         }));
       },
@@ -274,9 +274,9 @@ children: [
         look: o.Button.Looks.BLANK,
         color: o.Button.Colors.TRANSPARENT,
         size: o.Button.Sizes.ICON,
-        onClick: t => {
-          (0, l.vq)(t, t => (0, n.jsx)(O, {
-            ...t,
+        onClick: s => {
+          (0, l.vq)(s, s => (0, n.jsx)(h, {
+            ...s,
             credential: e
           }));
         },
@@ -297,21 +297,21 @@ children: [
       onClick: () => {
         i(!0), (0, S.L$)().then(e => {
           let {
-            ticket: t,
-            challenge: s
+            ticket: s,
+            challenge: t
           } = e;
-          (0, o.openModal)(e => (0, n.jsx)(h, {
+          (0, o.openModal)(e => (0, n.jsx)(O, {
             ...e,
-            ticket: t,
-            challenge: s
+            ticket: s,
+            challenge: t
           }));
         }).catch(e => {
-          e.message !== A.Z.Messages.MFA_V2_CANCELED && T.Z.captureException(e);
+          e.message !== A.Z.Messages.MFA_V2_CANCELED && I.Z.captureException(e);
         }).finally(() => {
           i(!1);
         });
       },
-      submitting: s,
+      submitting: t,
       disabled: !E.Ae,
       size: o.Button.Sizes.SMALL,
       children: A.Z.Messages.TWO_FA_WEBAUTHN_REGISTER

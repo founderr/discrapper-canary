@@ -1,17 +1,17 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return l;
   }
 });
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(993413),
-  r = s(981631),
-  o = s(689938);
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(993413),
+  r = t(981631),
+  o = t(689938);
 
 function l(e) {
-  var t, s;
+  var s, t;
   return (0, n.jsx)(i.Z, {
 errors: e.errors,
 disabled: e.disabled,
@@ -21,7 +21,7 @@ children: (0, n.jsx)('div', {
     placeholder: e.placeholder,
     maxLength: r.JuI,
     onChange: e.onGlobalNameChange,
-    value: null !== (s = null !== (t = e.pendingGlobalName) && void 0 !== t ? t : e.currentGlobalName) && void 0 !== s ? s : ''
+    value: null !== (t = null !== (s = e.pendingGlobalName) && void 0 !== s ? s : e.currentGlobalName) && void 0 !== t ? t : ''
   })
 })
   });

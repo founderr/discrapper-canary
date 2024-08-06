@@ -1,12 +1,12 @@
-s.d(t, {
+t.d(s, {
   c: function() {
 return o;
   }
 });
-var n = s(570140),
-  a = s(626135),
-  i = s(474873),
-  r = s(981631);
+var n = t(570140),
+  a = t(626135),
+  i = t(474873),
+  r = t(981631);
 
 function o(e) {
   a.default.track(r.rMx.SOUNDPACK_UPDATED, {

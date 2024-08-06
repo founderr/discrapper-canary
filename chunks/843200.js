@@ -1,24 +1,24 @@
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(512722),
-  l = s.n(o),
-  c = s(442837),
-  d = s(481060),
-  _ = s(600164),
-  E = s(594174),
-  u = s(418632),
-  T = s(689938),
-  I = s(619735);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(512722),
+  l = t.n(o),
+  c = t(442837),
+  d = t(481060),
+  _ = t(600164),
+  E = t(594174),
+  u = t(418632),
+  I = t(689938),
+  T = t(619735);
 class S extends a.Component {
   renderNotice() {
 let {
   isClaimed: e,
-  unclaimedNotice: t,
-  unverifiedNotice: s
+  unclaimedNotice: s,
+  unverifiedNotice: t
 } = this.props;
-return e ? null != s ? s : T.Z.Messages.NOTICE_UNVERIFIED_ACCOUNT : null != t ? t : T.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT;
+return e ? null != t ? t : I.Z.Messages.NOTICE_UNVERIFIED_ACCOUNT : null != s ? s : I.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT;
   }
   renderPrimaryAction() {
 return this.props.isClaimed ? this.props.hasEmail ? (0, n.jsx)(_.Z.Child, {
@@ -29,7 +29,7 @@ return this.props.isClaimed ? this.props.hasEmail ? (0, n.jsx)(_.Z.Child, {
   size: d.Button.Sizes.MEDIUM,
   color: d.Button.Colors.BRAND,
   onClick: this.openChangeEmailModal,
-  children: T.Z.Messages.ADD_EMAIL_SHORT
+  children: I.Z.Messages.ADD_EMAIL_SHORT
 }) : (0, n.jsx)(_.Z.Child, {
   grow: 0,
   shrink: 0,
@@ -37,7 +37,7 @@ return this.props.isClaimed ? this.props.hasEmail ? (0, n.jsx)(_.Z.Child, {
     size: d.Button.Sizes.MEDIUM,
     color: d.Button.Colors.BRAND,
     onClick: this.openClaimAccountModal,
-    children: T.Z.Messages.CLAIM_ACCOUNT
+    children: I.Z.Messages.CLAIM_ACCOUNT
   })
 });
   }
@@ -49,7 +49,7 @@ return this.props.isClaimed && this.props.hasEmail ? (0, n.jsx)(_.Z.Child, {
     color: d.Button.Colors.PRIMARY,
     look: d.Button.Looks.LINK,
     onClick: this.openChangeEmailModal,
-    children: T.Z.Messages.CHANGE_EMAIL_SHORT
+    children: I.Z.Messages.CHANGE_EMAIL_SHORT
   })
 }) : null;
   }
@@ -57,9 +57,9 @@ return this.props.isClaimed && this.props.hasEmail ? (0, n.jsx)(_.Z.Child, {
 (0, d.openModalLazy)(async () => {
   let {
     default: e
-  } = await s.e('1677').then(s.bind(s, 324239));
-  return t => (0, n.jsx)(e, {
-    ...t
+  } = await t.e('1677').then(t.bind(t, 324239));
+  return s => (0, n.jsx)(e, {
+    ...s
   });
 });
   }
@@ -68,27 +68,27 @@ return this.props.isClaimed && this.props.hasEmail ? (0, n.jsx)(_.Z.Child, {
   let {
     default: e
   } = await Promise.all([
-    s.e('9343'),
-    s.e('45863')
-  ]).then(s.bind(s, 642298));
-  return t => (0, n.jsx)(e, {
-    ...t
+    t.e('9343'),
+    t.e('45863')
+  ]).then(t.bind(t, 642298));
+  return s => (0, n.jsx)(e, {
+    ...s
   });
 });
   }
   render() {
 let {
   className: e,
-  isClaimed: t,
-  isVerified: s
+  isClaimed: s,
+  isVerified: t
 } = this.props;
-return t && s ? null : (0, n.jsx)(d.Card, {
-  className: r()(I.wrapper, e),
+return s && t ? null : (0, n.jsx)(d.Card, {
+  className: r()(T.wrapper, e),
   children: (0, n.jsxs)(_.Z, {
     align: _.Z.Align.CENTER,
     children: [
       (0, n.jsx)(_.Z.Child, {
-        className: I.image,
+        className: T.image,
         grow: 0,
         shrink: 0
       }),
@@ -100,7 +100,7 @@ return t && s ? null : (0, n.jsx)(d.Card, {
           }),
           (0, n.jsxs)(_.Z, {
             justify: _.Z.Justify.CENTER,
-            className: I.content,
+            className: T.content,
             children: [
               this.renderPrimaryAction(),
               this.renderSecondaryAction()
@@ -113,7 +113,7 @@ return t && s ? null : (0, n.jsx)(d.Card, {
 });
   }
 }
-t.Z = c.ZP.connectStores([E.default], () => {
+s.Z = c.ZP.connectStores([E.default], () => {
   let e = E.default.getCurrentUser();
   return l()(null != e, 'EmailNotice: currentUser cannot be undefined'), {
 isClaimed: e.isClaimed(),

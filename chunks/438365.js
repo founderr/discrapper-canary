@@ -1,17 +1,17 @@
-s.d(t, {
+t.d(s, {
   r: function() {
 return c;
   }
 });
-var n = s(470079),
-  a = s(442837),
-  i = s(430824),
-  r = s(594174),
-  o = s(645896),
-  l = s(353093);
+var n = t(470079),
+  a = t(442837),
+  i = t(430824),
+  r = t(594174),
+  o = t(645896),
+  l = t(353093);
 
 function c(e) {
-  var t, s;
+  var s, t;
   let {
 userId: c
   } = e, d = (0, a.e7)([r.default], () => {
@@ -25,14 +25,14 @@ guildId: u
   n.useEffect(() => {
 (0, o._S)(u);
   }, [u]);
-  let T = (0, o.Cc)(null == d ? void 0 : d.identityGuildId),
-I = (0, a.e7)([i.Z], () => i.Z.getGuild(null == d ? void 0 : d.identityGuildId));
+  let I = (0, o.Cc)(null == d ? void 0 : d.identityGuildId),
+T = (0, a.e7)([i.Z], () => i.Z.getGuild(null == d ? void 0 : d.identityGuildId));
   return {
 userClanTag: _,
 userClanBadge: E,
 guildId: u,
-guildName: null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : null == T ? void 0 : T.name,
-guildIcon: null !== (s = null == I ? void 0 : I.icon) && void 0 !== s ? s : null == T ? void 0 : T.icon,
-clan: T
+guildName: null !== (s = null == T ? void 0 : T.name) && void 0 !== s ? s : null == I ? void 0 : I.name,
+guildIcon: null !== (t = null == T ? void 0 : T.icon) && void 0 !== t ? t : null == I ? void 0 : I.icon,
+clan: I
   };
 }

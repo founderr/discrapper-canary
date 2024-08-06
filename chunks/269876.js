@@ -1,57 +1,57 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return g;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(442837),
-  l = s(46973),
-  c = s(846519),
-  d = s(692547),
-  _ = s(481060),
-  E = s(846027),
-  u = s(313201),
-  T = s(131951),
-  I = s(65154),
-  S = s(689938),
-  N = s(414976),
-  C = s(483085),
-  m = s(549856);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(46973),
+  c = t(846519),
+  d = t(692547),
+  _ = t(481060),
+  E = t(846027),
+  u = t(313201),
+  I = t(131951),
+  T = t(65154),
+  S = t(689938),
+  N = t(414976),
+  C = t(483085),
+  m = t(549856);
 let A = (0, u.hQ)();
 
 function g() {
-  let [e, t] = a.useState(-100), [s, i] = a.useState(!1), {
+  let [e, s] = a.useState(-100), [t, i] = a.useState(!1), {
 threshold: g,
-autoThreshold: h
-  } = (0, o.cj)([T.Z], () => T.Z.getModeOptions()), {
-inputMode: O,
+autoThreshold: O
+  } = (0, o.cj)([I.Z], () => I.Z.getModeOptions()), {
+inputMode: h,
 automaticVADSupported: p,
 isEnabled: R
-  } = (0, o.cj)([T.Z], () => ({
-inputMode: T.Z.getMode(),
-automaticVADSupported: T.Z.supports(I.AN.AUTOMATIC_VAD),
-isEnabled: T.Z.isEnabled()
+  } = (0, o.cj)([I.Z], () => ({
+inputMode: I.Z.getMode(),
+automaticVADSupported: I.Z.supports(T.AN.AUTOMATIC_VAD),
+isEnabled: I.Z.isEnabled()
   }));
 
-  function x(e, s) {
-t(e), i((s & I.Dg.VOICE) === I.Dg.VOICE);
+  function x(e, t) {
+s(e), i((t & T.Dg.VOICE) === T.Dg.VOICE);
   }
 
-  function M(e, t) {
-E.Z.setMode(O, {
+  function M(e, s) {
+E.Z.setMode(h, {
   threshold: e,
-  autoThreshold: t
+  autoThreshold: s
 });
   }
   a.useEffect(() => {
 let e = new c.V7();
 return e.start(1000, () => {
-  T.Z.getMediaEngine().on(l.aB.VoiceActivity, x), e.stop();
+  I.Z.getMediaEngine().on(l.aB.VoiceActivity, x), e.stop();
 }), () => {
-  T.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, x), e.stop();
+  I.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, x), e.stop();
 };
   }, []);
   let f = (0, n.jsx)('section', {
@@ -59,7 +59,7 @@ className: r()(N.inputSensitivityToggle, N.manual),
 children: (0, n.jsx)(_.Slider, {
   initialValue: g + 100,
   onValueRender: e => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-  onValueChange: e => M(-((100 - e) * 1), h),
+  onValueChange: e => M(-((100 - e) * 1), O),
   barStyles: {
     background: d.Z.unsafe_rawColors.GREEN_360.css
   },
@@ -83,14 +83,14 @@ children: (0, n.jsx)(_.Slider, {
   })
 })
   });
-  return h && (f = (0, n.jsxs)('section', {
+  return O && (f = (0, n.jsxs)('section', {
 className: N.inputSensitivityToggle,
 children: [
   (0, n.jsx)('div', {
     className: N.inputSensitivitySlider,
     children: (0, n.jsx)('div', {
       className: r()(N.inputSensitivityBar, N.sliderBar, {
-        [N.speaking]: s
+        [N.speaking]: t
       })
     })
   }),
@@ -125,7 +125,7 @@ children: [
             }),
             (0, n.jsx)(_.Switch, {
               id: e,
-              checked: h,
+              checked: O,
               onChange: e => M(g, e)
             })
           ]

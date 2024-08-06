@@ -1,119 +1,119 @@
-s.d(t, {
+t.d(s, {
   Z: function() {
 return q;
   }
-}), s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(442837),
-  l = s(704215),
-  c = s(780384),
-  d = s(481060),
-  _ = s(153867),
-  E = s(230711),
-  u = s(714338),
-  T = s(857595),
-  I = s(607070),
-  S = s(627845),
-  N = s(514361),
-  C = s(600164),
-  m = s(313201),
-  A = s(605236),
-  g = s(786761),
-  h = s(3148),
-  O = s(739566),
-  p = s(753206),
-  R = s(311476),
-  x = s(921801),
-  M = s(594174),
-  f = s(358085),
-  D = s(210887),
-  P = s(740492),
-  L = s(695346),
-  b = s(329013),
-  Z = s(333859),
-  v = s(726985),
-  j = s(981631),
-  B = s(921944),
-  U = s(959517),
-  G = s(689938),
-  F = s(704803),
-  y = s(549856);
+}), t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(442837),
+  l = t(704215),
+  c = t(780384),
+  d = t(481060),
+  _ = t(153867),
+  E = t(230711),
+  u = t(714338),
+  I = t(857595),
+  T = t(607070),
+  S = t(627845),
+  N = t(514361),
+  C = t(600164),
+  m = t(313201),
+  A = t(605236),
+  g = t(786761),
+  O = t(3148),
+  h = t(739566),
+  p = t(753206),
+  R = t(311476),
+  x = t(921801),
+  M = t(594174),
+  f = t(358085),
+  D = t(210887),
+  P = t(740492),
+  L = t(695346),
+  b = t(329013),
+  Z = t(333859),
+  v = t(726985),
+  j = t(981631),
+  B = t(921944),
+  U = t(959517),
+  G = t(689938),
+  F = t(704803),
+  y = t(549856);
 
-function V(e, t, s) {
-  return t in e ? Object.defineProperty(e, t, {
-value: s,
+function V(e, s, t) {
+  return s in e ? Object.defineProperty(e, s, {
+value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = s, e;
+  }) : e[s] = t, e;
 }
 let Y = {
 COZY: 'cozy',
 COMPACT: 'compact'
   },
   w = (0, m.hQ)(),
-  k = (0, m.hQ)(),
   H = (0, m.hQ)(),
+  k = (0, m.hQ)(),
   W = '1337',
   K = e => {
-let t = 0;
+let s = 0;
 return [
   (0, g.e5)({
-    ...(0, h.ZP)({
+    ...(0, O.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
     }),
     state: j.yb.SENT,
-    id: ''.concat(t++)
+    id: ''.concat(s++)
   }),
   (0, g.e5)({
-    ...(0, h.ZP)({
+    ...(0, O.ZP)({
       channelId: W,
       content: (0, c.wj)(e) ? G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
     }),
     state: j.yb.SENT,
-    id: ''.concat(t++)
+    id: ''.concat(s++)
   }),
   (0, g.e5)({
-    ...(0, h.ZP)({
+    ...(0, O.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
     }),
     state: j.yb.SENT,
-    id: ''.concat(t++)
+    id: ''.concat(s++)
   }),
   (0, g.e5)({
-    ...(0, h.ZP)({
+    ...(0, O.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
     }),
     state: j.yb.SENT,
-    id: ''.concat(t++)
+    id: ''.concat(s++)
   }),
   (0, g.e5)({
-    ...(0, h.ZP)({
+    ...(0, O.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
     }),
     state: j.yb.SENT,
-    id: ''.concat(t)
+    id: ''.concat(s)
   })
 ];
   },
   z = () => {
 let e = (0, o.e7)([N.Z], () => N.Z.isPreview),
   {
-    enabled: t
+    enabled: s
   } = R.Z.useExperiment({
     location: 'GradientSelectorsTitle'
   }, {
     autoTrackExposure: !1,
     disable: !e
   });
-return t ? null : (0, n.jsxs)('div', {
+return s ? null : (0, n.jsxs)('div', {
   className: F.themeTitle,
   children: [
     (0, n.jsx)('div', {
@@ -159,7 +159,7 @@ return (0, n.jsxs)(d.FormItem, {
   className: y.marginTop20,
   children: [
     (0, n.jsx)(d.FormTitle, {
-      id: k,
+      id: H,
       tag: d.FormTitleTags.H5,
       className: y.marginBottom8,
       children: G.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
@@ -176,7 +176,7 @@ return (0, n.jsxs)(d.FormItem, {
         onValueRender: this.handleSliderRenderPX,
         onMarkerRender: this.handleSliderRenderPX,
         getAriaValueText: this.handleSliderValueText,
-        'aria-labelledby': k
+        'aria-labelledby': H
       })
     })
   ]
@@ -185,20 +185,20 @@ return (0, n.jsxs)(d.FormItem, {
   renderMessageGroupSpacingSlider() {
 let {
   messageDisplayCompact: e,
-  messageGroupSpacing: t
+  messageGroupSpacing: s
 } = this.props;
 return (0, n.jsxs)(d.FormItem, {
   className: y.marginTop20,
   children: [
     (0, n.jsx)(d.FormTitle, {
-      id: H,
+      id: k,
       tag: d.FormTitleTags.H5,
       className: y.marginBottom8,
       children: G.Z.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
     }),
     (0, n.jsx)(d.Slider, {
       className: r()(y.marginTop20, y.marginBottom4),
-      initialValue: t,
+      initialValue: s,
       defaultValue: e ? U.c8 : U.pq,
       markers: U.fP,
       stickToMarkers: !0,
@@ -206,7 +206,7 @@ return (0, n.jsxs)(d.FormItem, {
       onValueRender: this.handleSliderRenderPX,
       onMarkerRender: this.handleSliderRenderPX,
       getAriaValueText: this.handleSliderValueText,
-      'aria-labelledby': H
+      'aria-labelledby': k
     })
   ]
 });
@@ -214,34 +214,34 @@ return (0, n.jsxs)(d.FormItem, {
   renderPreview() {
 let {
   messageDisplayCompact: e,
-  theme: t,
-  messageGroupSpacing: s,
+  theme: s,
+  messageGroupSpacing: t,
   hideSimpleEmbedContent: a
-} = this.props, i = (0, c.wj)(t) ? this.darkMessages : this.lightMessages;
+} = this.props, i = (0, c.wj)(s) ? this.darkMessages : this.lightMessages;
 return (0, n.jsx)(d.FocusBlock, {
   children: (0, n.jsx)(d.Card, {
-    className: r()(F.preview, y.marginBottom40, e ? F.compactPreview : void 0, 'group-spacing-'.concat(null != s ? s : e ? U.c8 : U.pq)),
+    className: r()(F.preview, y.marginBottom40, e ? F.compactPreview : void 0, 'group-spacing-'.concat(null != t ? t : e ? U.c8 : U.pq)),
     outline: !0,
     'aria-hidden': !0,
-    children: i.map((t, s) => (0, n.jsx)(p.Z, {
-      author: (0, O.ZH)(t),
-      message: t,
+    children: i.map((s, t) => (0, n.jsx)(p.Z, {
+      author: (0, h.ZH)(s),
+      message: s,
       compact: e,
-      isGroupStart: s % 2 == 0,
-      className: 0 === s ? F.firstMessage : void 0,
+      isGroupStart: t % 2 == 0,
+      className: 0 === t ? F.firstMessage : void 0,
       hideSimpleEmbedContent: a
-    }, t.id))
+    }, s.id))
   })
 });
   }
   renderTheme() {
 let {
   theme: e,
-  useForcedColors: t,
-  darkSidebar: s,
+  useForcedColors: s,
+  darkSidebar: t,
   gradientPreset: a
 } = this.props;
-return t ? (0, n.jsx)(d.FormItem, {
+return s ? (0, n.jsx)(d.FormItem, {
   className: r()(y.marginTop8, y.marginBottom40),
   title: (0, n.jsx)('div', {
     className: F.themeTitle,
@@ -269,8 +269,8 @@ return t ? (0, n.jsx)(d.FormItem, {
       children: (0, n.jsx)(Z.c, {})
     }),
     (0, n.jsx)(d.FormSwitch, {
-      value: s && (0, c.ap)(e) && !t,
-      disabled: e !== j.BRd.LIGHT || t || null != a,
+      value: t && (0, c.ap)(e) && !s,
+      disabled: e !== j.BRd.LIGHT || s || null != a,
       onChange: this.handleDarkSidebarChecked,
       className: y.marginTop20,
       children: G.Z.Messages.ACCESSIBILITY_DARK_SIDEBAR
@@ -307,7 +307,7 @@ return (0, n.jsxs)(d.FormItem, {
 });
   }
   handleDarkSidebarChecked() {
-(0, T.lq)();
+(0, I.lq)();
   }
   renderScalingAndSpacing() {
 return (0, n.jsxs)(n.Fragment, {
@@ -365,7 +365,7 @@ return G.Z.Messages.PIXEL_VALUE_A11Y_TEXT.format({
 });
   }
   handleFontSizeChange(e) {
-(0, T.oL)(e);
+(0, I.oL)(e);
   }
   handleMessageSpacingChange(e) {
 switch (e) {
@@ -374,11 +374,11 @@ switch (e) {
   case 8:
   case 16:
   case 24:
-    (0, T.ZZ)(e);
+    (0, I.ZZ)(e);
 }
   }
   handleZoomChange(e) {
-(0, T.cq)(e);
+(0, I.cq)(e);
   }
   constructor(...e) {
 super(...e), V(this, 'darkMessages', K(j.BRd.DARK)), V(this, 'lightMessages', K(j.BRd.LIGHT)), V(this, 'handleDisplayCompactAvatarsChanged', e => {
@@ -387,9 +387,9 @@ super(...e), V(this, 'darkMessages', K(j.BRd.DARK)), V(this, 'lightMessages', K(
   });
 }), V(this, 'handleMessageDisplayModeChange', e => {
   let {
-    value: t
+    value: s
   } = e;
-  L.jU.updateSetting(t === Y.COMPACT), (0, T.ZZ)();
+  L.jU.updateSetting(s === Y.COMPACT), (0, I.ZZ)();
 });
   }
 }
@@ -402,8 +402,8 @@ forceTrack: !0
 
 function q() {
   let e = L.jU.useSetting(),
-t = L.RS.useSetting(),
-s = L.NA.useSetting(),
+s = L.RS.useSetting(),
+t = L.NA.useSetting(),
 i = L.L1.useSetting();
   a.useEffect(() => {
 X(l.z.CLIENT_THEMES_SETTINGS_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
@@ -411,27 +411,27 @@ X(l.z.CLIENT_THEMES_SETTINGS_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(l.z
   let r = (0, o.cj)([
 D.Z,
 P.ZP,
-I.Z,
+T.Z,
 M.default,
 N.Z
   ], () => {
-var e, t;
+var e, s;
 return {
   theme: D.Z.theme,
-  useForcedColors: I.Z.useForcedColors,
+  useForcedColors: T.Z.useForcedColors,
   useSystemTheme: P.ZP.useSystemTheme,
   darkSidebar: D.Z.darkSidebar,
-  fontSize: I.Z.fontSize,
-  zoom: I.Z.zoom,
-  messageGroupSpacing: I.Z.messageGroupSpacing,
+  fontSize: T.Z.fontSize,
+  zoom: T.Z.zoom,
+  messageGroupSpacing: T.Z.messageGroupSpacing,
   displayCompactAvatars: P.ZP.displayCompactAvatars,
-  isStaff: null !== (t = null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
+  isStaff: null !== (s = null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== s && s,
   gradientPreset: N.Z.gradientPreset
 };
   });
   return (0, n.jsx)(Q, {
 messageDisplayCompact: e,
-hideSimpleEmbedContent: t && s,
+hideSimpleEmbedContent: s && t,
 clientTheme: i,
 ...r
   });

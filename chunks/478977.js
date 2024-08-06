@@ -1,12 +1,12 @@
-var n = s(735250);
-s(470079);
-var a = s(866442),
-  i = s(481060),
-  r = s(452693);
-t.Z = function(e) {
+var n = t(735250);
+t(470079);
+var a = t(866442),
+  i = t(481060),
+  r = t(452693);
+s.Z = function(e) {
   let {
-colorKey: t,
-value: s,
+colorKey: s,
+value: t,
 onChange: o,
 title: l
   } = e;
@@ -19,8 +19,8 @@ children: [
   (0, n.jsx)(i.Popout, {
     renderPopout: e => (0, n.jsx)(i.CustomColorPicker, {
       ...e,
-      value: s,
-      onChange: e => o(t, (0, a.Rf)(e))
+      value: t,
+      onChange: e => o(s, (0, a.Rf)(e))
     }),
     children: e => (0, n.jsx)(i.Clickable, {
       ...e,
@@ -28,7 +28,7 @@ children: [
       'aria-label': 'Select a color',
       className: r.swatchContainer,
       style: {
-        backgroundColor: s
+        backgroundColor: t
       },
       children: (0, n.jsx)(i.EyeDropperIcon, {
         size: 'xs',

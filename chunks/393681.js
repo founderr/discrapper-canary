@@ -1,46 +1,46 @@
-s(47120);
-var n = s(735250),
-  a = s(470079),
-  i = s(120356),
-  r = s.n(i),
-  o = s(512722),
-  l = s.n(o),
-  c = s(442837),
-  d = s(780384),
-  _ = s(481060),
-  E = s(816814),
-  u = s(809206),
-  T = s(497321),
-  I = s(279837),
-  S = s(952306),
-  N = s(600164),
-  C = s(690221),
-  m = s(346585),
-  A = s(347649),
-  g = s(332473),
-  h = s(303172),
-  O = s(921801),
-  p = s(777036),
-  R = s(484459),
-  x = s(430824),
-  M = s(325067),
-  f = s(246946),
-  D = s(594174),
-  P = s(709054),
-  L = s(706454),
-  b = s(210887),
-  Z = s(418632),
-  v = s(730820),
-  j = s(888256),
-  B = s(2719),
-  U = s(194530),
-  G = s(726985),
-  F = s(981631),
-  y = s(801461),
-  V = s(689938),
-  Y = s(363210),
-  w = s(549856);
-class k extends a.PureComponent {
+t(47120);
+var n = t(735250),
+  a = t(470079),
+  i = t(120356),
+  r = t.n(i),
+  o = t(512722),
+  l = t.n(o),
+  c = t(442837),
+  d = t(780384),
+  _ = t(481060),
+  E = t(816814),
+  u = t(809206),
+  I = t(497321),
+  T = t(279837),
+  S = t(952306),
+  N = t(600164),
+  C = t(690221),
+  m = t(346585),
+  A = t(347649),
+  g = t(332473),
+  O = t(303172),
+  h = t(921801),
+  p = t(777036),
+  R = t(484459),
+  x = t(430824),
+  M = t(325067),
+  f = t(246946),
+  D = t(594174),
+  P = t(709054),
+  L = t(706454),
+  b = t(210887),
+  Z = t(418632),
+  v = t(730820),
+  j = t(888256),
+  B = t(2719),
+  U = t(194530),
+  G = t(726985),
+  F = t(981631),
+  y = t(801461),
+  V = t(689938),
+  Y = t(363210),
+  w = t(549856);
+class H extends a.PureComponent {
   componentDidMount() {
 let {
   currentUser: e
@@ -74,7 +74,7 @@ if (!e.isClaimed()) {
     type: _.FormNotice.Types.DANGER,
     className: w.marginBottom20,
     imageData: {
-      src: s(418558),
+      src: t(418558),
       width: 60,
       height: 60
     },
@@ -101,7 +101,7 @@ if (!e.verified) {
     type: _.FormNotice.Types.PRIMARY,
     className: w.marginBottom20,
     imageData: {
-      src: s(449125),
+      src: t(449125),
       width: 60,
       height: 60
     },
@@ -122,7 +122,7 @@ return this.props.shouldRenderPomeloWarning ? (0, n.jsxs)(p.Z, {
     '',
     (0, n.jsx)(C.Z, {
       className: Y.noticeTextButton,
-      onClick: () => (0, h.Z)(y.Kq.USER_SETTINGS),
+      onClick: () => (0, O.Z)(y.Kq.USER_SETTINGS),
       children: V.Z.Messages.GET_STARTED
     })
   ]
@@ -143,28 +143,28 @@ return (0, n.jsxs)(_.FormSection, {
   renderSecuritySettings() {
 let {
   backupCodes: e,
-  currentUser: t,
+  currentUser: s,
   theme: a
-} = this.props, i = (0, d.wj)(a) ? s(555702) : s(610802);
+} = this.props, i = (0, d.wj)(a) ? t(555702) : t(610802);
 return (0, n.jsxs)(_.FormSection, {
   className: r()(Y.userSettingsSecurity, w.marginTop40),
   title: V.Z.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION,
   tag: 'h1',
   children: [
-    t.mfaEnabled ? (0, n.jsx)(_.FormSection, {
+    s.mfaEnabled ? (0, n.jsx)(_.FormSection, {
       children: (0, n.jsxs)(_.FormTitle, {
         className: r()(Y.isEnabled, w.marginBottom20),
         children: [
           (0, n.jsx)('img', {
             alt: '',
             className: r()(Y.lockIcon),
-            src: s(511391)
+            src: t(511391)
           }),
           V.Z.Messages.TWO_FA_ENABLED
         ]
       })
     }) : null,
-    (0, n.jsx)(O.F, {
+    (0, n.jsx)(h.F, {
       setting: G.s6.ACCOUNT_CHANGE_PASSWORD,
       children: (0, n.jsx)('div', {
         children: (0, n.jsx)(_.Button, {
@@ -178,7 +178,7 @@ return (0, n.jsxs)(_.FormSection, {
         })
       })
     }),
-    (0, n.jsx)(O.F, {
+    (0, n.jsx)(h.F, {
       setting: G.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
       children: (0, n.jsxs)(N.Z, {
         align: N.Z.Align.STRETCH,
@@ -189,7 +189,7 @@ return (0, n.jsxs)(_.FormSection, {
               backupCodes: e
             })
           }),
-          t.mfaEnabled ? null : (0, n.jsx)(N.Z, {
+          s.mfaEnabled ? null : (0, n.jsx)(N.Z, {
             align: N.Z.Align.CENTER,
             basis: '323px',
             grow: 0,
@@ -208,8 +208,8 @@ return (0, n.jsxs)(_.FormSection, {
   renderConfirmModals() {
 let {
   shouldRenderOwnedGuildsModal: e,
-  shouldRenderDeleteAccountConfirmModal: t,
-  shouldRenderDisableAccountErrorModal: s,
+  shouldRenderDeleteAccountConfirmModal: s,
+  shouldRenderDisableAccountErrorModal: t,
   disableAccountErrorMessage: a
 } = this.state;
 if (e) {
@@ -229,7 +229,7 @@ if (e) {
     })
   });
 }
-if (t) {
+if (s) {
   let e = () => this.setState({
     shouldRenderDeleteAccountConfirmModal: !1
   });
@@ -246,7 +246,7 @@ if (t) {
     })
   });
 }
-if (s) {
+if (t) {
   let e = () => this.setState({
     shouldRenderDisableAccountErrorModal: !1,
     disableAccountErrorMessage: null
@@ -278,18 +278,18 @@ return (0, n.jsx)(j.Z, {
 });
   }
   render() {
-return this.props.hide ? (0, n.jsx)(T.Z, {}) : (0, n.jsxs)('div', {
+return this.props.hide ? (0, n.jsx)(I.Z, {}) : (0, n.jsxs)('div', {
   children: [
     this.renderConfirmModals(),
-    (0, n.jsx)(O.F, {
+    (0, n.jsx)(h.F, {
       setting: G.s6.ACCOUNT_PROFILE,
       children: this.renderAccountSettings()
     }),
-    (0, n.jsx)(O.F, {
+    (0, n.jsx)(h.F, {
       setting: G.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
       children: this.renderSecuritySettings()
     }),
-    (0, n.jsx)(O.F, {
+    (0, n.jsx)(h.F, {
       setting: G.s6.ACCOUNT_REMOVAL,
       children: this.renderAccountRemovalSettings()
     })
@@ -304,24 +304,24 @@ this.setState({
   disableAccountErrorMessage: e.body.message
 });
   }
-  handleSubmitDisableAccount(e, t) {
-return (0, u.ss)(e, t).then(F.dG4, this.handleDisableAccountError);
+  handleSubmitDisableAccount(e, s) {
+return (0, u.ss)(e, s).then(F.dG4, this.handleDisableAccountError);
   }
   handleDisableAccount() {
 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
   {
-    currentUser: t
+    currentUser: s
   } = this.props,
-  s = x.Z.getGuilds();
-if (P.default.keys(s).filter(e => s[e].ownerId === t.id).length > 0) {
+  t = x.Z.getGuilds();
+if (P.default.keys(t).filter(e => t[e].ownerId === s.id).length > 0) {
   this.setState({
     shouldRenderOwnedGuildsModal: !0
   });
   return;
 }
-t.isClaimed() ? (0, _.openModal)(t => (0, n.jsx)(I.default, {
-  ...t,
-  handleSubmit: t => this.handleSubmitDisableAccount(t, e),
+s.isClaimed() ? (0, _.openModal)(s => (0, n.jsx)(T.default, {
+  ...s,
+  handleSubmit: s => this.handleSubmitDisableAccount(s, e),
   title: e ? V.Z.Messages.DELETE_ACCOUNT : V.Z.Messages.DISABLE_ACCOUNT,
   actionText: e ? V.Z.Messages.DELETE_ACCOUNT : V.Z.Messages.DISABLE_ACCOUNT,
   children: e ? V.Z.Messages.DELETE_ACCOUNT_BODY : V.Z.Messages.DISABLE_ACCOUNT_BODY
@@ -338,22 +338,22 @@ super(e), this.state = {
 };
   }
 }
-t.Z = () => {
+s.Z = () => {
   let e = (0, c.e7)([D.default], () => {
   let e = D.default.getCurrentUser();
   return l()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
 }),
-t = (0, c.e7)([M.Z], () => M.Z.getBackupCodes()),
-s = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
+s = (0, c.e7)([M.Z], () => M.Z.getBackupCodes()),
+t = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
 a = (0, c.e7)([b.Z], () => b.Z.theme),
 i = (0, g.b)(),
 r = (0, A.CC)(),
 o = (0, c.e7)([L.default], () => L.default.locale);
-  return (0, n.jsx)(k, {
+  return (0, n.jsx)(H, {
 theme: a,
 currentUser: e,
-backupCodes: t,
-hide: s,
+backupCodes: s,
+hide: t,
 shouldRenderPomeloWarning: i,
 forceMigrationExperiment: r,
 locale: o

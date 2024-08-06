@@ -1,25 +1,25 @@
-var n = s(735250);
-s(470079);
-var a = s(481060),
-  i = s(230711),
-  r = s(528084),
-  o = s(117552);
-t.Z = e => {
+var n = t(735250);
+t(470079);
+var a = t(481060),
+  i = t(230711),
+  r = t(528084),
+  o = t(117552);
+s.Z = e => {
   let {
-tabs: t,
-settingsSection: s,
+tabs: s,
+settingsSection: t,
 parentSetting: l
   } = e, {
 viewableTabs: c,
 selectedTab: d
-  } = (0, r.a)(t, l);
+  } = (0, r.a)(s, l);
   return (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsx)(a.TabBar, {
     className: o.tabBar,
     selectedItem: d.setting,
     onItemSelect: e => {
-      i.Z.setSection(s, e);
+      i.Z.setSection(t, e);
     },
     orientation: 'horizontal',
     type: 'top',
@@ -36,8 +36,8 @@ children: [
     'aria-labelledby': d.title,
     className: o.tabBarPanel,
     children: (e => {
-      let t = e.component;
-      return 'function' == typeof t ? (0, n.jsx)(t, {}) : t;
+      let s = e.component;
+      return 'function' == typeof s ? (0, n.jsx)(s, {}) : s;
     })(d)
   })
 ]
