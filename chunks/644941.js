@@ -55,7 +55,7 @@ return (0, n.jsx)(A.Tooltip, {
       ...e,
       className: B.clickable,
       onClick: async () => {
-        l(f.as.ClickSimilarGame, s.applicationId), (0, A.openModalLazy)(() => Promise.resolve(e => (0, n.jsx)(H, {
+        l(f.as.ClickSimilarGame, s.applicationId), (0, A.openModalLazy)(() => Promise.resolve(e => (0, n.jsx)(b, {
           applicationId: s.applicationId,
           source: f.m1.SimilarGames,
           ...e
@@ -127,20 +127,20 @@ return (0, n.jsx)('div', {
 });
   },
   k = e => e.filter(p.z6).slice(0, 5),
-  H = e => {
+  b = e => {
 var s, r;
 let {
   applicationId: i,
   source: o,
   sourceUserId: _,
   transitionState: y,
-  onClose: H
+  onClose: b
 } = e, {
-  clientThemesClassName: b
+  clientThemesClassName: H
 } = (0, R.ZP)(), {
   width: Y,
   height: W
-} = (0, M.b)(), [V, z] = l.useState(() => {
+} = (0, M.b)(), [z, V] = l.useState(() => {
   var e;
   return null === (e = u.K.get(F)) || void 0 === e ? void 0 : e[i];
 }), X = (0, d.e7)([g.default], () => g.default.locale), [J, q] = l.useState(!0), [$, ee] = l.useState(!1), es = l.useRef(null), ea = l.useMemo(() => (0, f.fP)(), []);
@@ -219,7 +219,7 @@ let e_ = N.Z.getApplication(i),
   ed = l.useMemo(() => null == eI ? void 0 : eI.genres.map(G.P3).join(', '), [eI]),
   eu = l.useMemo(() => {
     if (null == eI)
-      return 0;
+      return '';
     let {
       artwork: e,
       screenshots: s
@@ -282,7 +282,7 @@ let eR = null !== (s = eI.name) && void 0 !== s ? s : null == e_ ? void 0 : e_.n
 return (0, n.jsx)(A.ModalRoot, {
   transitionState: y,
   size: A.ModalSize.DYNAMIC,
-  className: t()(b, B.gameProfileModal),
+  className: t()(H, B.gameProfileModal),
   children: (0, n.jsxs)(A.ScrollerNone, {
     className: B.scrollable,
     children: [
@@ -349,23 +349,33 @@ return (0, n.jsx)(A.ModalRoot, {
               }),
               (0, n.jsx)('div', {
                 children: (0, n.jsx)(A.Tooltip, {
-                  text: V ? j.Z.Messages.GAME_PROFILE_UNFOLLOW_TOOLTIP : j.Z.Messages.GAME_PROFILE_FOLLOW_TOOLTIP,
+                  text: z ? j.Z.Messages.GAME_PROFILE_UNFOLLOW_TOOLTIP : j.Z.Messages.GAME_PROFILE_FOLLOW_TOOLTIP,
                   children: e => (0, n.jsxs)(A.Button, {
                     ...e,
                     innerClassName: B.followButton,
-                    color: V ? A.Button.Colors.PRIMARY : A.Button.Colors.BRAND,
+                    color: z ? A.Button.Colors.PRIMARY : A.Button.Colors.BRAND,
                     onClick: () => {
                       var e;
                       let s = null !== (e = u.K.get(F)) && void 0 !== e ? e : {};
-                      s[i] = !s[i], u.K.set(F, s), eO(s[i] ? f.as.FollowGame : f.as.UnfollowGame), z(s[i]);
+                      s[i] = !s[i], u.K.set(F, s), eO(s[i] ? f.as.FollowGame : f.as.UnfollowGame), s[i] && (0, A.openModalLazy)(async () => {
+                        let {
+                          default: e
+                        } = await a.e('86564').then(a.bind(a, 641758));
+                        return s => (0, n.jsx)(e, {
+                          ...s,
+                          applicationId: i,
+                          background: eu,
+                          viewId: ea
+                        });
+                      }), V(s[i]);
                     },
                     children: [
-                      V ? (0, n.jsx)(A.BellSlashIcon, {
+                      z ? (0, n.jsx)(A.BellSlashIcon, {
                         color: 'white'
                       }) : (0, n.jsx)(A.BellIcon, {
                         color: 'white'
                       }),
-                      V ? j.Z.Messages.GAME_PROFILE_UNFOLLOW_GAME : j.Z.Messages.FOLLOW
+                      z ? j.Z.Messages.GAME_PROFILE_UNFOLLOW_GAME : j.Z.Messages.FOLLOW
                     ]
                   })
                 })
@@ -401,7 +411,7 @@ return (0, n.jsx)(A.ModalRoot, {
                     children: null == ei ? void 0 : ei.slice(0, eE && !eo ? 6 : void 0).map(e => (0, n.jsx)(Z.Z, {
                       entry: e,
                       viewId: ea,
-                      onClose: H
+                      onClose: b
                     }, e.id))
                   })
                 ]
@@ -474,7 +484,7 @@ return (0, n.jsx)(A.ModalRoot, {
                     style: {},
                     children: el.map(e => (0, n.jsx)(U, {
                       game: e,
-                      onClose: H,
+                      onClose: b,
                       trackClick: eO
                     }, null == e ? void 0 : e.applicationId))
                   })
@@ -560,4 +570,4 @@ return (0, n.jsx)(A.ModalRoot, {
   })
 });
   };
-s.default = H;
+s.default = b;
