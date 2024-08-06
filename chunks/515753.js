@@ -41,12 +41,12 @@ var i = n(735250),
   j = n(9156),
   D = n(594174),
   U = n(709054),
-  w = n(998502),
-  G = n(788307),
+  G = n(998502),
+  w = n(788307),
   k = n(981631),
   B = n(689938),
   H = n(17147);
-let V = w.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
+let V = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
   F = {
 offset: {
   top: 2,
@@ -150,7 +150,7 @@ isTyping: O,
 status: P,
 isMobile: D,
 'aria-posinset': U,
-'aria-setsize': w
+'aria-setsize': G
   } = e, [Y, K] = l.useState(!1), q = l.useRef(null), Q = l.useRef(null), {
 avatarSrc: J,
 avatarDecorationSrc: X,
@@ -243,7 +243,7 @@ return t.isSystemDM() ? (0, i.jsx)('div', {
   children: B.Z.Messages.MEMBERS_HEADER.format({
     members: t.recipients.length + 1
   })
-}) : null != L && L.length > 0 ? (0, i.jsx)(G.Z, {
+}) : null != L && L.length > 0 ? (0, i.jsx)(w.Z, {
   ...e,
   activities: L,
   applicationStream: R,
@@ -313,7 +313,7 @@ children: e => {
     onMouseLeave: er,
     onMouseDown: es,
     onContextMenu: eu,
-    'aria-setsize': w,
+    'aria-setsize': G,
     'aria-posinset': U,
     children: (0, i.jsxs)(p.Interactive, {
       className: a()(H.interactive, {

@@ -9,10 +9,10 @@ return l;
 return _;
   },
   df: function() {
-return C;
+return f;
   },
   hY: function() {
-return f;
+return C;
   },
   oL: function() {
 return g;
@@ -74,7 +74,7 @@ r.Z.dispatch({
 });
   } catch (e) {}
 }
-async function C(e, n) {
+async function f(e, n) {
   let t = (await a.tn.post({
 url: s.ANM.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
 body: {
@@ -87,7 +87,7 @@ application: t.application
   }), t;
 }
 
-function f(e) {
+function C(e) {
   return a.tn.post({
 url: s.ANM.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e)
   });

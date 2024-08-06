@@ -178,17 +178,17 @@ null != f && L.Z.acceptInvite(f);
   let {
 guild: j,
 channel: U,
-inviter: w,
-target_application: G
+inviter: G,
+target_application: w
   } = f, k = null != j, B = null != f.stage_instance, H = null == f.guild && null == f.channel && null != f.inviter;
-  if (null != G)
-t = null == j ? void 0 : j.name, n = I.Z.createFromServer(G).getCoverImageURL(1024);
+  if (null != w)
+t = null == j ? void 0 : j.name, n = I.Z.createFromServer(w).getCoverImageURL(1024);
   else if (null != j)
 t = j.name, n = Z.ZP.getGuildSplashURL({
   id: j.id,
   splash: j.splash
 });
-  else if ((null == (t = U.name) || '' === t) && null != w && (t = w.username), null == t)
+  else if ((null == (t = U.name) || '' === t) && null != G && (t = G.username), null == t)
 throw Error('no name for group DM invite');
   let V = (0, g.yU)(),
 F = B ? R.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : R.Z.Messages.INVITE_MODAL_BUTTON.format({
@@ -231,7 +231,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
             (0, i.jsxs)('div', {
               children: [
                 V ? (0, i.jsx)(P, {}) : null,
-                null == G ? (0, i.jsx)(o.Tooltip, {
+                null == w ? (0, i.jsx)(o.Tooltip, {
                   text: V ? R.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                   position: 'bottom',
                   children: e => {

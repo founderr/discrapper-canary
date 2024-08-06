@@ -17,9 +17,9 @@ var n = i(735250),
   f = i(741308),
   m = i(588822),
   E = i(899007),
-  x = i(900927),
-  v = i(678738),
-  S = i(502762),
+  S = i(900927),
+  x = i(678738),
+  v = i(502762),
   Z = i(530),
   h = i(679332),
   p = i(544989),
@@ -27,34 +27,34 @@ var n = i(735250),
   g = i(981631),
   N = i(689938),
   j = i(505451),
-  C = i(247321),
-  A = i(47460);
+  A = i(247321),
+  C = i(47460);
 
 function R(e) {
   let {
 user: s,
 guildId: i,
 channelId: R,
-messageId: M,
-roleId: O,
+messageId: O,
+roleId: M,
 transitionState: U,
 onClose: L,
-sourceAnalyticsLocations: P = []
+sourceAnalyticsLocations: b = []
   } = e, {
-analyticsLocations: b
+analyticsLocations: P
   } = (0, r.ZP)([
-...P,
+...b,
 a.Z.SIMPLIFIED_PROFILE_MODAL
   ]), y = i === g.ME ? void 0 : i, D = (0, I.ZP)(s.id, y), F = l.createRef(), B = (0, o.Z)(F);
   return (0, n.jsx)(r.Gt, {
-value: b,
+value: P,
 children: (0, n.jsx)(u.Mt, {
   layout: 'SIMPLIFIED_MODAL',
   userId: s.id,
   guildId: y,
   channelId: R,
-  messageId: M,
-  roleId: O,
+  messageId: O,
+  roleId: M,
   showGuildProfile: !0,
   children: (0, n.jsxs)(t.ModalRoot, {
     transitionState: U,
@@ -62,7 +62,7 @@ children: (0, n.jsx)(u.Mt, {
     hideShadow: !0,
     'aria-label': N.Z.Messages.USER_PROFILE_MODAL,
     children: [
-      (0, n.jsxs)(S.Z, {
+      (0, n.jsxs)(v.Z, {
         user: s,
         displayProfile: D,
         profileType: T.y0.FULL_SIZE,
@@ -109,18 +109,18 @@ children: (0, n.jsx)(u.Mt, {
                   onClose: L
                 })
               }),
-              (0, n.jsx)(S.Z.Overlay, {
+              (0, n.jsx)(v.Z.Overlay, {
                 className: j.overlay,
                 children: (0, n.jsxs)('div', {
-                  className: A.container,
+                  className: C.container,
                   children: [
                     (0, n.jsx)(t.TabBar, {
-                      className: A.tabBar,
+                      className: C.tabBar,
                       type: 'top',
                       selectedItem: T.oh.BOT_INFO,
                       onItemSelect: g.dG4,
                       children: (0, n.jsx)(t.TabBar.Item, {
-                        className: A.tabBarItem,
+                        className: C.tabBarItem,
                         id: T.oh.BOT_INFO,
                         'aria-label': N.Z.Messages.USER_PROFILE_ABOUT_ME,
                         children: (0, n.jsx)(t.Text, {
@@ -131,16 +131,16 @@ children: (0, n.jsx)(u.Mt, {
                     }),
                     (0, n.jsxs)(t.ScrollerThin, {
                       fade: !0,
-                      className: C.scroller,
+                      className: A.scroller,
                       children: [
                         (0, n.jsx)(m.Z, {
                           userId: s.id,
                           userBio: null == D ? void 0 : D.bio,
                           setLineClamp: !1
                         }),
-                        (0, n.jsx)(v.Z, {
+                        (0, n.jsx)(x.Z, {
                           heading: N.Z.Messages.BOT_PROFILE_CREATED_ON,
-                          children: (0, n.jsx)(x.Z, {
+                          children: (0, n.jsx)(S.Z, {
                             userId: s.id,
                             guildId: y,
                             tooltipDelay: T.vB

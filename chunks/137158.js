@@ -15,7 +15,7 @@ var a = t(735250),
   m = t(689938),
   _ = t(672060);
 
-function C(e) {
+function f(e) {
   let {
 title: n,
 children: t,
@@ -66,7 +66,7 @@ children: [
 ]
   });
 }
-let f = 'FORM_FIELD';
+let C = 'FORM_FIELD';
 
 function h(e) {
   let {
@@ -77,7 +77,7 @@ onDrop: m
   } = e, h = (0, o.debounce)(async (e, n, t) => {
 await m(e, n, t);
   }), x = r.useRef(null), [, g] = (0, l.c)({
-type: f,
+type: C,
 item: {
   index: n,
   field: t
@@ -86,7 +86,7 @@ end: (e, n) => {
   null != e && !n.didDrop() && h(e.field, null, !0);
 }
   }), [, p] = (0, c.L)({
-accept: f,
+accept: C,
 hover: (e, t) => {
   var a;
   let {
@@ -122,7 +122,7 @@ children: [
       color: d.Z.unsafe_rawColors.PRIMARY_400.css
     })
   }),
-  (0, a.jsx)(C, {
+  (0, a.jsx)(f, {
     ...e
   })
 ]
@@ -137,7 +137,7 @@ children: [
     className: _.spacingContainer,
     children: e.isDragEnabled ? (0, a.jsx)(h, {
       ...e
-    }) : (0, a.jsx)(C, {
+    }) : (0, a.jsx)(f, {
       ...e
     })
   }),

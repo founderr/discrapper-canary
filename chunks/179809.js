@@ -46,8 +46,8 @@ onDragStart: P,
 onDragEnd: j,
 onExpandCollapse: D,
 onContextMenu: U,
-renderChildNode: w,
-folderIconContent: G
+renderChildNode: G,
+folderIconContent: w
   } = e, {
 id: k,
 name: B,
@@ -127,7 +127,7 @@ children: [
         onHoverChange: F,
         onKeyDown: J,
         treeItemProps: $,
-        folderIconContent: G
+        folderIconContent: w
       })
     })
   }),
@@ -160,7 +160,7 @@ children: [
       },
       className: S.__invalid_expandedGuilds,
       role: 'group',
-      children: H.map(w)
+      children: H.map(G)
     }, l);
   }),
   O && u ? (0, i.jsx)(C.Zu, {

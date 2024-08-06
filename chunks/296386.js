@@ -1,6 +1,6 @@
 t.d(n, {
   J9: function() {
-return C;
+return f;
   },
   K0: function() {
 return E;
@@ -18,7 +18,7 @@ return m;
 return p;
   },
   W1: function() {
-return f;
+return C;
   },
   aC: function() {
 return d;
@@ -83,7 +83,7 @@ let {
 } = (await a.tn.get({
   url: l.ANM.GUILD_DISCOVERY_METADATA(e),
   oldFormErrors: !0
-})).body, C = {
+})).body, f = {
   primaryCategoryId: n,
   secondaryCategoryIds: t,
   keywords: i,
@@ -98,8 +98,8 @@ let {
 return r.Z.dispatch({
   type: 'GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER',
   guildId: e,
-  metadata: C
-}), C;
+  metadata: f
+}), f;
   } catch (e) {
 r.Z.dispatch({
   type: 'GUILD_DISCOVERY_METADATA_FETCH_FAIL'
@@ -139,7 +139,7 @@ keywords: n
   });
 }
 
-function C(e, n) {
+function f(e, n) {
   r.Z.dispatch({
 type: 'GUILD_UPDATE_DISCOVERY_METADATA',
 guildId: e,
@@ -147,7 +147,7 @@ emojiDiscoverabilityEnabled: n
   });
 }
 
-function f(e, n) {
+function C(e, n) {
   r.Z.dispatch({
 type: 'GUILD_UPDATE_DISCOVERY_METADATA',
 guildId: e,
@@ -194,8 +194,8 @@ about: _
   try {
 let {
   primary_category_id: e,
-  category_ids: C,
-  keywords: f,
+  category_ids: f,
+  keywords: C,
   emoji_discoverability_enabled: h,
   partner_actioned_timestamp: x,
   partner_application_timestamp: g,
@@ -223,8 +223,8 @@ r.Z.dispatch({
   guildId: n,
   metadata: {
     primaryCategoryId: e,
-    secondaryCategoryIds: C,
-    keywords: f,
+    secondaryCategoryIds: f,
+    keywords: C,
     emojiDiscoverabilityEnabled: h,
     partnerActionedTimestamp: x,
     partnerApplicationTimestamp: g,

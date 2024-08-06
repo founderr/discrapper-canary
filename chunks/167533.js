@@ -40,7 +40,7 @@ let {
   headerClassName: s,
   sortedHeaderCellClassName: u,
   stickyHeader: _
-} = this.props, C = e.map(e => {
+} = this.props, f = e.map(e => {
   let s = null != e.renderHeader ? e.renderHeader(e, n) : e.key,
     m = t === c.sHY.ASCENDING ? l.ChevronSmallUpIcon : l.ChevronSmallDownIcon;
   return (0, r.jsx)(l.Clickable, {
@@ -63,7 +63,7 @@ return (0, r.jsx)(m, {
   className: o()(s, d.row, {
     [d.stickyHeader]: _
   }),
-  children: C
+  children: f
 });
   }
   renderBody() {
@@ -78,8 +78,8 @@ let {
   cellProps: u,
   rowProps: m,
   rowComponent: _,
-  cellComponent: C
-} = this.props, f = n;
+  cellComponent: f
+} = this.props, C = n;
 if (t) {
   let t = null != a ? e.find(e => {
       let {
@@ -90,10 +90,10 @@ if (t) {
     i = [...n],
     s = null != t && t.sort,
     o = null != t && null != a && this.isSortable(t) ? i.sort('function' == typeof s ? (e, n) => s(e, n, r) : this.getDefaultSort(a)) : i;
-  f = null != t && r === c.sHY.DESCENDING ? o.reverse() : o;
+  C = null != t && r === c.sHY.DESCENDING ? o.reverse() : o;
 }
-return f.map((n, t) => {
-  let a = e.map(e => (0, i.createElement)(C, {
+return C.map((n, t) => {
+  let a = e.map(e => (0, i.createElement)(f, {
     ...u,
     key: e.key,
     item: n,

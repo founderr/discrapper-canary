@@ -130,16 +130,16 @@ children: O,
 headerClassName: y,
 communityInfoVisible: P,
 hasSubheader: j
-  } = e, D = b.hasFeature(m.oNc.ANIMATED_BANNER), U = (0, d.Z)(b), w = !U && b.hasCommunityInfoSubheader(), G = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), F = l.useRef(), W = h.QK.getSetting();
+  } = e, D = b.hasFeature(m.oNc.ANIMATED_BANNER), U = (0, d.Z)(b), G = !U && b.hasCommunityInfoSubheader(), w = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), F = l.useRef(), W = h.QK.getSetting();
   l.useEffect(() => {
-if (G && n && !H.current && W)
+if (w && n && !H.current && W)
   return B(!0), F.current = setTimeout(() => {
     B(!1);
   }, 5000), () => {
     clearTimeout(F.current);
   };
   }, [
-G,
+w,
 n,
 W
   ]), l.useEffect(() => {
@@ -164,7 +164,7 @@ children: [
       [I.hasBanner]: z(),
       [I.bannerVisible]: n,
       [(0, _.Q)(m.BRd.DARK)]: n,
-      [I.communityInfoVisible]: !U && P || j && w
+      [I.communityInfoVisible]: !U && P || j && G
     }),
     onMouseDown: v,
     onContextMenu: Z,
@@ -209,7 +209,7 @@ children: [
               })
             ]
           }),
-          w && (0, i.jsx)(N, {
+          G && (0, i.jsx)(N, {
             guild: b,
             controller: r,
             hasBanner: null != M,
@@ -225,7 +225,7 @@ children: [
       }) : null
     ]
   }),
-  G && z() ? (0, i.jsx)('div', {
+  w && z() ? (0, i.jsx)('div', {
     className: I.animatedBannerHoverLayer,
     onMouseEnter: () => {
       B(!0), clearTimeout(F.current);

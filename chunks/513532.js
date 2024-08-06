@@ -15,14 +15,14 @@ n.Z = e => {
 guildId: n,
 error: t,
 inSettings: _ = !1
-  } = e, C = (0, r.e7)([l.Z], () => l.Z.getGuild(n)), f = (0, r.e7)([
+  } = e, f = (0, r.e7)([l.Z], () => l.Z.getGuild(n)), C = (0, r.e7)([
 c.Z,
 d.ZP
   ], () => {
 var e, t;
 return _ ? c.Z.getState().settings.verificationForm : null === (t = d.ZP.getStateForGuild(n)) || void 0 === t ? void 0 : null === (e = t.progress) || void 0 === e ? void 0 : e.verificationForm;
   });
-  return null == C ? null : (0, a.jsxs)('div', {
+  return null == f ? null : (0, a.jsxs)('div', {
 className: m.slideContent,
 children: [
   (0, a.jsx)(i.Heading, {
@@ -46,10 +46,10 @@ children: [
         children: t
       }),
       (0, a.jsx)(o.Z, {
-        guild: C,
+        guild: f,
         isClanContext: !0,
         onFieldsSave: (e, n) => (s.Z.updateVerificationFormFieldsLocal(e, [...n]), Promise.resolve()),
-        verificationForm: f
+        verificationForm: C
       })
     ]
   })

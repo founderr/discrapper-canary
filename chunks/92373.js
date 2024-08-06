@@ -14,8 +14,8 @@ applicationId: n,
 imageContainerClassName: t,
 onClick: i,
 selected: _,
-locked: C = !1,
-otherGamesCount: f = 0
+locked: f = !1,
+otherGamesCount: C = 0
   } = e, h = (0, o.useToken)(o.tokens.colors.WHITE), {
 isFetching: x,
 coverImageUrl: g
@@ -58,18 +58,18 @@ children: [
           color: 'currentColor',
           secondaryColor: h.hex(),
           className: s()(m.selectedGameCheck, {
-            [m.selectedGameCheckLocked]: C
+            [m.selectedGameCheckLocked]: f
           })
         })
       }),
       E,
-      f > 0 && (0, a.jsx)('div', {
+      C > 0 && (0, a.jsx)('div', {
         className: m.remainingGame,
         children: (0, a.jsx)(o.Text, {
           variant: 'text-xs/normal',
           color: 'always-white',
           children: u.Z.Messages.COUNT_REMAINING.format({
-            count: f
+            count: C
           })
         })
       })
@@ -81,7 +81,7 @@ children: [
     color: 'header-primary',
     children: [
       p,
-      C && (0, a.jsx)(o.LockIcon, {
+      f && (0, a.jsx)(o.LockIcon, {
         size: 'xxs'
       })
     ]

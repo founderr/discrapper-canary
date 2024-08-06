@@ -15,9 +15,9 @@ onDrop: d,
 onEdit: u,
 onRemove: m,
 canRemove: _,
-actionsLocation: C
+actionsLocation: f
   } = e, {
-label: f
+label: C
   } = n;
   return (0, a.jsx)(o.Z, {
 field: n,
@@ -27,9 +27,9 @@ isDropHovered: c,
 onDrop: d,
 onEdit: u,
 onRemove: m,
-title: f,
+title: C,
 canRemove: _,
-actionsLocation: C,
+actionsLocation: f,
 children: (0, a.jsx)(s.BO, {
   field: n,
   value: void 0,

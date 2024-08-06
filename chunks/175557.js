@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return C;
+return f;
   }
 });
 var a = t(735250);
@@ -16,7 +16,7 @@ var r = t(108930),
   m = t(995414),
   _ = t(308083);
 
-function C(e) {
+function f(e) {
   let {
 banner: n,
 ...t

@@ -17,9 +17,9 @@ var n = i(735250),
   f = i(700785),
   m = i(785717),
   E = i(256226),
-  x = i(678738),
-  v = i(314172),
-  S = i(981631),
+  S = i(678738),
+  x = i(314172),
+  v = i(981631),
   Z = i(689938),
   h = i(700763);
 
@@ -34,11 +34,11 @@ highestRole: u,
 canManageRoles: I,
 onAddRole: _,
 onRemoveRole: m
-  } = e, x = I && null != d, p = l.useMemo(() => 'roles-'.concat((0, t.Z)()), []), T = (0, o.ZP)({
+  } = e, S = I && null != d, p = l.useMemo(() => 'roles-'.concat((0, t.Z)()), []), T = (0, o.ZP)({
 id: p,
 isEnabled: !0,
-scrollToStart: S.Cyb,
-scrollToEnd: S.Cyb,
+scrollToStart: v.Cyb,
+scrollToEnd: v.Cyb,
 wrap: !0
   }), g = c.length, N = 0 === g ? Z.Z.Messages.ROLE_LIST_EMPTY : Z.Z.Messages.ROLES_LIST.format({
 numRoles: g
@@ -67,7 +67,7 @@ children: (0, n.jsx)(a.SJ, {
       ...i,
       children: [
         j,
-        x && (0, n.jsx)(v.Z, {
+        S && (0, n.jsx)(x.Z, {
           guild: r,
           guildMember: d,
           numRoles: g,
@@ -89,16 +89,16 @@ guild: t,
 scrollIntoView: o
   } = e, {
 trackUserProfileAction: a
-  } = (0, m.KZ)(), E = (0, r.e7)([u.ZP], () => u.ZP.getMember(t.id, s.id)), v = (0, r.e7)([I.Z], () => I.Z.getRoles(t.id)), h = null == E ? void 0 : E.roles, T = l.useMemo(() => null == h || 0 === h.length ? [] : Object.values(v).filter(e => h.includes(e.id)).sort((e, s) => {
+  } = (0, m.KZ)(), E = (0, r.e7)([u.ZP], () => u.ZP.getMember(t.id, s.id)), x = (0, r.e7)([I.Z], () => I.Z.getRoles(t.id)), h = null == E ? void 0 : E.roles, T = l.useMemo(() => null == h || 0 === h.length ? [] : Object.values(x).filter(e => h.includes(e.id)).sort((e, s) => {
 var i, n;
 let l = (null === (i = e.tags) || void 0 === i ? void 0 : i.guild_connections) !== null,
   t = (null === (n = s.tags) || void 0 === n ? void 0 : n.guild_connections) !== null;
 return l && !t ? 1 : !l && t ? -1 : 0;
   }), [
-v,
+x,
 h
   ]), g = f.e9(t, i.id), [N] = (0, r.Wu)([_.Z], () => [
-_.Z.can(S.Plq.MANAGE_ROLES, t),
+_.Z.can(v.Plq.MANAGE_ROLES, t),
 null != t ? _.Z.getGuildVersion(t.id) : null
   ]), j = l.useCallback(e => {
 var i, n;
@@ -112,7 +112,7 @@ h,
 t.id,
 s.id,
 a
-  ]), C = l.useCallback(e => {
+  ]), A = l.useCallback(e => {
 a({
   action: 'ADD_ROLE'
 });
@@ -123,8 +123,8 @@ h,
 t.id,
 s.id,
 a
-  ]), A = N && null != E;
-  return 0 !== T.length || A ? (0, n.jsx)(x.Z, {
+  ]), C = N && null != E;
+  return 0 !== T.length || C ? (0, n.jsx)(S.Z, {
 heading: Z.Z.Messages.ROLES,
 scrollIntoView: o,
 children: (0, n.jsx)(p, {
@@ -135,7 +135,7 @@ children: (0, n.jsx)(p, {
   roles: T,
   highestRole: g,
   canManageRoles: N,
-  onAddRole: C,
+  onAddRole: A,
   onRemoveRole: j
 })
   }) : null;

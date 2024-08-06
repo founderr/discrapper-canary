@@ -38,13 +38,13 @@ n.Z = function(e) {
   let {
 addFormField: n,
 showManualApprovalWarning: i,
-guild: C,
-showHeader: f
+guild: f,
+showHeader: C
   } = e, h = r.useCallback(e => {
-(0, d.Md)(e, n, C);
+(0, d.Md)(e, n, f);
   }, [
 n,
-C
+f
   ]), x = r.useCallback(e => {
 i ? (0, o.openModalLazy)(async () => {
   let {
@@ -62,7 +62,7 @@ h
   return (0, a.jsxs)('div', {
 className: s()(m.spacingContainer, m.backgroundContainer),
 children: [
-  f && (0, a.jsx)('div', {
+  C && (0, a.jsx)('div', {
     className: m.containerTopHat,
     children: (0, a.jsx)(o.Text, {
       className: m.containerTopHatText,

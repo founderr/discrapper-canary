@@ -17,9 +17,9 @@ var n = i(735250),
   f = i(470900),
   m = i(988246),
   E = i(970041),
-  x = i(715388),
-  v = i(879828),
-  S = i(834534),
+  S = i(715388),
+  x = i(879828),
+  v = i(834534),
   Z = i(228168),
   h = i(47460);
 
@@ -36,7 +36,7 @@ newActivityCardsEnabled: d
   } = (0, u.z)({
 location: 'SimplifiedUserProfileModalTabs'
   });
-  return s === Z.oh.ACTIVITY && d ? (0, n.jsx)(v.Z, {
+  return s === Z.oh.ACTIVITY && d ? (0, n.jsx)(x.Z, {
 user: l,
 currentUser: t,
 onClose: a
@@ -53,13 +53,13 @@ user: l,
 onClose: a
   }) : s === Z.oh.BOT_DATA_ACCESS ? (0, n.jsx)(E.Z, {
 user: l
-  }) : s === Z.oh.BOT_INFO ? (0, n.jsx)(x.Z, {
+  }) : s === Z.oh.BOT_INFO ? (0, n.jsx)(S.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
 subsection: i,
 onClose: a
-  }) : (0, n.jsx)(S.Z, {
+  }) : (0, n.jsx)(v.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
@@ -76,10 +76,10 @@ currentUser: I,
 displayProfile: _,
 items: f,
 initialSection: E = Z.oh.USER_INFO,
-initialSubsection: x,
-onClose: v
+initialSubsection: S,
+onClose: x
   } = e, {
-trackUserProfileAction: S
+trackUserProfileAction: v
   } = (0, c.KZ)(), T = (0, t.e7)([d.Z], () => d.Z.hidePersonalInformation), [{
 section: g,
 subsection: N
@@ -90,9 +90,9 @@ section: null !== (r = null === (s = f.find(e => {
   } = e;
   return s === E;
 })) || void 0 === s ? void 0 : s.section) && void 0 !== r ? r : null === (i = f[0]) || void 0 === i ? void 0 : i.section,
-subsection: x
-  }), C = l.useCallback(e => {
-S({
+subsection: S
+  }), A = l.useCallback(e => {
+v({
   action: 'PRESS_SECTION',
   section: e
 }), j({
@@ -100,7 +100,7 @@ S({
   subsection: void 0
 });
   }, [
-S,
+v,
 j
   ]);
   return T ? (0, n.jsx)('div', {
@@ -113,7 +113,7 @@ children: [
     className: h.tabBar,
     type: 'top',
     selectedItem: g,
-    onItemSelect: C,
+    onItemSelect: A,
     children: f.map(e => {
       let {
         section: s,
@@ -137,7 +137,7 @@ children: [
     user: u,
     currentUser: I,
     displayProfile: _,
-    onClose: v
+    onClose: x
   })
 ]
   });

@@ -95,7 +95,7 @@ U = {
   },
   config: O
 },
-[w, G] = (0, d.useSpring)(() => U),
+[G, w] = (0, d.useSpring)(() => U),
 k = () => {
   (0, _.yw)(v.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
     location: {
@@ -149,7 +149,7 @@ children: (0, i.jsx)(d.Tooltip, {
     onClick: k,
     onMouseEnter: () => {
       var t;
-      null === (t = e.onMouseEnter) || void 0 === t || t.call(e), G(U);
+      null === (t = e.onMouseEnter) || void 0 === t || t.call(e), w(U);
     },
     className: a()(L.container, {
       [L.containerWithMargin]: n
@@ -201,7 +201,7 @@ children: (0, i.jsx)(d.Tooltip, {
         children: [
           (0, i.jsx)(s.animated.div, {
             className: L.progressBar,
-            style: w
+            style: G
           }),
           M ? (0, i.jsx)('span', {
             'aria-label': T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_TADA_ICON_ALT_TEXT,

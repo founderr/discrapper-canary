@@ -1,6 +1,6 @@
 t.d(n, {
   Md: function() {
-return C;
+return f;
   },
   a0: function() {
 return _;
@@ -23,7 +23,7 @@ function _(e) {
 dropHoveredIndex: n,
 formField: u,
 guild: _,
-index: C,
+index: f,
 isDragEnabled: h,
 submittedGuildJoinRequestsCount: x,
 removeFormField: g,
@@ -32,18 +32,18 @@ updateFormFieldOrder: T,
 canRemove: E,
 actionsLocation: I
   } = e, b = async () => {
-await g(C);
+await g(f);
   }, N = async e => {
-await p(C, e);
+await p(f, e);
   }, v = async (e, n, t) => {
 await T(e, n, t);
-  }, y = (0, r.uniqueId)(), S = n === C, A = {
+  }, y = (0, r.uniqueId)(), S = n === f, A = {
 key: y,
-index: C,
+index: f,
 isDragEnabled: h,
 isDropHovered: S,
 onEdit: () => {
-  0 === x ? f(u, N, _) : (0, i.openModalLazy)(async () => {
+  0 === x ? C(u, N, _) : (0, i.openModalLazy)(async () => {
     let {
       default: e
     } = await t.e('74673').then(t.bind(t, 394045));
@@ -51,7 +51,7 @@ onEdit: () => {
       ...n,
       guildId: _.id,
       submittedGuildJoinRequestsCount: x,
-      onConfirm: () => f(u, N, _)
+      onConfirm: () => C(u, N, _)
     });
   });
 },
@@ -88,7 +88,7 @@ default:
   }
 }
 
-function C(e, n, r) {
+function f(e, n, r) {
   let o = {
 onCloseRequest: u.dG4
   };
@@ -141,7 +141,7 @@ case s.QJ.MULTIPLE_CHOICE:
   }
 }
 
-function f(e, n, r) {
+function C(e, n, r) {
   let o = {
 onCloseRequest: u.dG4
   };

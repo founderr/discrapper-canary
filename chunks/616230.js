@@ -14,8 +14,8 @@ var a = t(735250),
   u = t(944163),
   m = t(246364),
   _ = t(571728),
-  C = t(755340),
-  f = t(449226),
+  f = t(755340),
+  C = t(449226),
   h = t(689938),
   x = t(941377),
   g = t(301660);
@@ -28,7 +28,7 @@ emptyFormFields: s,
 hasTermsField: o
   } = e, c = n.hasVerificationGate(), [u, m] = r.useState(c), _ = e => {
 e.preventDefault(), e.stopPropagation();
-  }, C = async e => {
+  }, f = async e => {
 try {
   m(e), await d.Z.enableVerificationForm(n.id, e);
 } catch {
@@ -44,13 +44,13 @@ e && s ? (0, l.openModalLazy)(async () => {
     header: h.Z.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
     cancelText: h.Z.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
     confirmText: h.Z.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
-    onConfirm: () => C(e),
+    onConfirm: () => f(e),
     children: (0, a.jsx)(l.Text, {
       variant: 'text-md/normal',
       children: h.Z.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
     })
   });
-}) : C(e);
+}) : f(e);
   }, T = () => {
 (0, l.openModalLazy)(async () => {
   let {
@@ -122,7 +122,7 @@ children: [
             })
           })
         }),
-        (0, a.jsx)(f.Z, {
+        (0, a.jsx)(C.Z, {
           checked: u,
           onChange: () => p(!u)
         })
@@ -146,11 +146,11 @@ function I(e) {
   var n, t, i;
   let {
 guild: l,
-isClanContext: f = !1,
+isClanContext: C = !1,
 onFieldsSave: h,
 onDescriptionSave: I,
 verificationForm: b
-  } = e, [N, v] = r.useState(f), y = r.useRef(!1), S = r.useCallback(() => {
+  } = e, [N, v] = r.useState(C), y = r.useRef(!1), S = r.useCallback(() => {
 y.current = !0;
   }, []), A = null !== (n = (0, _.A)({
 guildId: l.id
@@ -159,7 +159,7 @@ guildId: l.id
 d.Z.fetchVerificationForm(l.id);
   }, [l.id]);
   let R = null != M,
-L = !f;
+L = !C;
   return (0, a.jsx)(c.Z, {
 renderHeader: L ? (0, a.jsx)(p, {
   guild: l,
@@ -169,20 +169,20 @@ renderHeader: L ? (0, a.jsx)(p, {
 }) : null,
 isExpanded: N,
 onExpand: () => v(!N),
-disableAnimation: f,
+disableAnimation: C,
 disableBackground: !L,
 children: (0, a.jsx)('div', {
   className: s()(x.itemBodyContainer, {
     [x.noPadding]: !L,
     [g.rulesScreeningItemsNoBorder]: !L
   }),
-  children: R && (0, a.jsx)(C.Z, {
+  children: R && (0, a.jsx)(f.Z, {
     guild: l,
     submittedGuildJoinRequestsCount: A,
     formFields: j,
     onFormFieldUpdate: S,
     hideVerificationLevelField: !0,
-    isClanContext: f,
+    isClanContext: C,
     onFieldsSave: null != h ? h : T,
     onDescriptionSave: null != I ? I : E,
     formDescription: null !== (i = null == M ? void 0 : M.description) && void 0 !== i ? i : ''

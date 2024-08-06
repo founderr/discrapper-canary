@@ -67,8 +67,8 @@ guildNode: P,
 setRef: j,
 onDragStart: D,
 onDragEnd: U,
-route: w,
-guild: G,
+route: G,
+guild: w,
 animatable: k,
 selected: B = !1,
 unread: H = !1,
@@ -115,8 +115,8 @@ es = !K && er,
 [eh] = l.useState(() => new u.sW(70, () => ed(!0)));
   l.useEffect(() => () => eh.cancel(), [eh]);
   let ep = l.useCallback(() => {
-  if (null != w) {
-    (0, m.uL)(w, {
+  if (null != G) {
+    (0, m.uL)(G, {
       state: R
     });
     return;
@@ -126,25 +126,25 @@ es = !K && er,
   });
 }, [
   J,
-  w
+  G
 ]),
 e_ = l.useCallback(() => {
-  if (null != w || null == G || F || !q)
+  if (null != G || null == w || F || !q)
     return;
-  let e = (0, f.V)(G.id);
+  let e = (0, f.V)(w.id);
   if (null != e)
-    h.Z.preload(G.id, e);
+    h.Z.preload(w.id, e);
 }, [
-  w,
   G,
+  w,
   F,
   q
 ]),
 ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(J)),
 em = l.useCallback(e => {
-  null != G && !ef && z(e, G);
+  null != w && !ef && z(e, w);
 }, [
-  G,
+  w,
   z,
   ef
 ]),
@@ -167,10 +167,10 @@ eI = l.useCallback(e => {
   J,
   j
 ]);
-  if (null == G)
+  if (null == w)
 return null;
   let eE = eu || eo ? (0, i.jsx)(x.Z, {
-  guild: G,
+  guild: w,
   show: eu,
   active: B,
   onAnimationStart: function() {
@@ -181,10 +181,10 @@ return null;
   }
 }) : (0, i.jsx)(d.NavItem, {
   ariaLabel: b.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
-    guildName: G.toString(),
+    guildName: w.toString(),
     mentions: W
   }),
-  name: G.toString(),
+  name: w.toString(),
   onClick: ep,
   onMouseEnter: function() {
     K || ea(!0);
@@ -195,7 +195,7 @@ return null;
   onMouseDown: e_,
   onContextMenu: em,
   onKeyDown: eg,
-  icon: G.getIconURL(96, es && k),
+  icon: w.getIconURL(96, es && k),
   selected: B || es,
   ...el,
   role: 'treeitem'
@@ -204,7 +204,7 @@ eN = en ? (0, i.jsx)(S.OG, {
   children: (0, i.jsx)(v.Z, {})
 }) : (0, i.jsx)('div', {
   ref: Y ? ei : void 0,
-  'data-dnd-name': G.toString(),
+  'data-dnd-name': w.toString(),
   className: a()(M.blobContainer, {
     [M.sorting]: K,
     [M.wobble]: eu,
@@ -228,13 +228,13 @@ children: [
     className: M.pill
   }),
   (0, i.jsx)(Z.Z, {
-    guild: G,
+    guild: w,
     disabled: K,
     isDragging: en,
     children: eN
   }),
   Y ? (0, i.jsx)(S.ZP, {
-    name: G.name,
+    name: w.name,
     targetNode: P,
     onDragOverChanged: eC
   }) : null

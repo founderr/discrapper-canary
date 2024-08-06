@@ -18,9 +18,9 @@ var l = i(481060),
   f = i(681837),
   m = i(502762),
   E = i(530),
-  x = i(645410),
-  v = i(437758),
-  S = i(357836),
+  S = i(645410),
+  x = i(437758),
+  v = i(357836),
   Z = i(544989),
   h = i(934861),
   p = i(616140),
@@ -28,20 +28,20 @@ var l = i(481060),
   g = i(228168),
   N = i(981631),
   j = i(689938),
-  C = i(984904),
-  A = i(505451);
+  A = i(984904),
+  C = i(505451);
 
 function R(e) {
   let {
 user: s,
 currentUser: i,
 guildId: R,
-channelId: M,
-messageId: O,
+channelId: O,
+messageId: M,
 roleId: U,
 initialSection: L,
-initialSubsection: P,
-transitionState: b,
+initialSubsection: b,
+transitionState: P,
 onClose: y,
 sourceAnalyticsLocations: D = []
   } = e, F = R === N.ME ? void 0 : R, B = (0, d.ZP)(s.id, F), {
@@ -56,13 +56,13 @@ children: (0, n.jsx)(r.Mt, {
   layout: 'SIMPLIFIED_MODAL',
   userId: s.id,
   guildId: F,
-  channelId: M,
-  messageId: O,
+  channelId: O,
+  messageId: M,
   roleId: U,
   showGuildProfile: !0,
   children: (0, n.jsx)(l.ModalRoot, {
-    transitionState: b,
-    className: A.root,
+    transitionState: P,
+    className: C.root,
     hideShadow: !0,
     'aria-label': j.Z.Messages.USER_PROFILE_MODAL,
     children: (0, n.jsxs)(m.Z, {
@@ -72,7 +72,7 @@ children: (0, n.jsx)(r.Mt, {
       children: [
         (0, n.jsx)(Z.Z, {
           profileType: g.y0.FULL_SIZE,
-          children: (0, n.jsx)(v.Z, {
+          children: (0, n.jsx)(x.Z, {
             user: s,
             guildId: F
           })
@@ -86,33 +86,33 @@ children: (0, n.jsx)(r.Mt, {
               hasProfileEffect: (null == B ? void 0 : B.profileEffectId) != null
             }),
             (0, n.jsxs)('div', {
-              className: A.headerInner,
+              className: C.headerInner,
               children: [
                 (0, n.jsx)(I.Z, {
                   user: s,
                   displayProfile: B,
                   guildId: F,
-                  channelId: M,
+                  channelId: O,
                   profileType: g.y0.FULL_SIZE
                 }),
                 (0, n.jsxs)('div', {
-                  className: C.buttons,
+                  className: A.buttons,
                   children: [
                     (0, n.jsx)(h.c, {
                       userId: s.id,
                       onClose: y,
-                      className: C.messageTextButton
+                      className: A.messageTextButton
                     }),
                     (0, n.jsx)(h.v, {
                       userId: s.id,
                       onClose: y,
-                      tooltipContainerClassName: C.messageIconButton
+                      tooltipContainerClassName: A.messageIconButton
                     }),
-                    (0, n.jsx)(S.Z, {
+                    (0, n.jsx)(v.Z, {
                       user: s,
                       guildId: F
                     }),
-                    (0, n.jsx)(x.Z, {
+                    (0, n.jsx)(S.Z, {
                       user: s
                     })
                   ]
@@ -120,7 +120,7 @@ children: (0, n.jsx)(r.Mt, {
                 (0, n.jsx)(_.Z, {
                   user: s,
                   profileType: g.y0.FULL_SIZE,
-                  hasEntered: b === l.ModalTransitionState.ENTERED,
+                  hasEntered: P === l.ModalTransitionState.ENTERED,
                   onClose: y
                 })
               ]
@@ -128,12 +128,12 @@ children: (0, n.jsx)(r.Mt, {
           ]
         }),
         (0, n.jsxs)('div', {
-          className: A.body,
+          className: C.body,
           children: [
             (0, n.jsx)(E.Z, {
               user: s,
               profileType: g.y0.FULL_SIZE,
-              nickname: a.ZP.getName(F, M, s),
+              nickname: a.ZP.getName(F, O, s),
               pronouns: null == B ? void 0 : B.pronouns,
               nicknameVariant: 'heading-xl/bold',
               nicknameIcons: (0, n.jsx)(f.Z, {
@@ -146,14 +146,14 @@ children: (0, n.jsx)(r.Mt, {
               })
             }),
             (0, n.jsx)(m.Z.Overlay, {
-              className: A.overlay,
+              className: C.overlay,
               children: (0, n.jsx)(p.Z, {
                 user: s,
                 currentUser: i,
                 displayProfile: B,
                 items: w,
                 initialSection: null != L ? L : g.oh.BOT_INFO,
-                initialSubsection: P,
+                initialSubsection: b,
                 onClose: y
               })
             })

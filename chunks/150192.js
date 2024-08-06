@@ -1,6 +1,6 @@
 t.d(n, {
   j: function() {
-return C;
+return f;
   }
 }), t(653041), t(47120);
 var a, r, i, s, o = t(392711),
@@ -11,7 +11,7 @@ var a, r, i, s, o = t(392711),
   m = t(731455),
   _ = t(689938);
 
-function C(e, n) {
+function f(e, n) {
   return l().isEqual(e.map(e => [
 e.categoryId,
 e.name
@@ -20,7 +20,7 @@ e.categoryId,
 e.name
   ]));
 }
-let f = null,
+let C = null,
   h = [],
   x = [],
   g = {};
@@ -50,7 +50,7 @@ return [{
 return x;
   }
   getFetchedLocale() {
-return f;
+return C;
   }
   getCategoryName(e) {
 return e === m.Hk ? _.Z.Messages.HOME : g[e];
@@ -100,6 +100,6 @@ if (t.sort((e, n) => e.name < n.name ? -1 : 1).forEach(e => {
     name: t
   }), g[e] = t;
 }
-f = a, h = r, x = i;
+C = a, h = r, x = i;
   }
 });

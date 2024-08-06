@@ -14,12 +14,12 @@ n.Z = e => {
 guildId: u,
 handleUpdate: m,
 progress: _,
-errors: C
+errors: f
   } = e, {
-wildcardDescriptors: f,
+wildcardDescriptors: C,
 description: h
   } = _, x = (e, n) => {
-let t = [...f];
+let t = [...C];
 t[n] = e, m({
   wildcardDescriptors: t
 });
@@ -38,11 +38,11 @@ children: [
     className: d.subtitle,
     children: c.Z.Messages.CLAN_SETUP_DESCRIPTION_SUBTITLE
   }),
-  (null == C ? void 0 : C.description) != null && (0, a.jsx)(s.Text, {
+  (null == f ? void 0 : f.description) != null && (0, a.jsx)(s.Text, {
     variant: 'text-sm/normal',
     color: 'status-danger',
     className: d.errorText,
-    children: C.description
+    children: f.description
   }),
   (0, a.jsxs)('div', {
     className: d.content,
@@ -77,32 +77,32 @@ children: [
             className: d.title,
             children: c.Z.Messages.CLAN_SETUP_WILDCARDS_SUBTITLE
           }),
-          (null == C ? void 0 : C.wildcardDescriptors) != null && (0, a.jsx)(s.Text, {
+          (null == f ? void 0 : f.wildcardDescriptors) != null && (0, a.jsx)(s.Text, {
             variant: 'text-sm/normal',
             color: 'status-danger',
             className: d.errorText,
-            children: C.wildcardDescriptors
+            children: f.wildcardDescriptors
           }),
           (0, a.jsxs)('div', {
             className: d.wildcardRow,
             children: [
               (0, a.jsx)(s.TextInput, {
                 inputClassName: i()(d.input, d.wildcardInput),
-                value: null !== (n = f[0]) && void 0 !== n ? n : '',
+                value: null !== (n = C[0]) && void 0 !== n ? n : '',
                 onChange: e => x(e, 0),
                 maxLength: l.TY,
                 placeholder: l.LK['0']
               }),
               (0, a.jsx)(s.TextInput, {
                 inputClassName: i()(d.input, d.wildcardInput),
-                value: null !== (t = f[1]) && void 0 !== t ? t : '',
+                value: null !== (t = C[1]) && void 0 !== t ? t : '',
                 onChange: e => x(e, 1),
                 maxLength: l.TY,
                 placeholder: l.LK['1']
               }),
               (0, a.jsx)(s.TextInput, {
                 inputClassName: i()(d.input, d.wildcardInput),
-                value: null !== (r = f[2]) && void 0 !== r ? r : '',
+                value: null !== (r = C[2]) && void 0 !== r ? r : '',
                 onChange: e => x(e, 2),
                 maxLength: l.TY,
                 placeholder: l.LK['2']

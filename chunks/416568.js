@@ -34,8 +34,8 @@ var i = n(735250),
   j = n(709054),
   D = n(792125),
   U = n(727258),
-  w = n(605951),
-  G = n(474109),
+  G = n(605951),
+  w = n(474109),
   k = n(741616),
   B = n(187835),
   H = n(162050),
@@ -251,9 +251,9 @@ eO.scrollTo({
   animate: !1
 });
   }, [eO]);
-  (0, w.Z)(eO.scrollToGuild);
-  let ew = o.getRoots(),
-eG = (0, Z.Z)(),
+  (0, G.Z)(eO.scrollToGuild);
+  let eG = o.getRoots(),
+ew = (0, Z.Z)(),
 ek = (0, b.U)(),
 eB = el.map(e => (0, i.jsx)(F.Z, {
   id: e.id,
@@ -274,7 +274,7 @@ children: (0, i.jsx)('nav', {
     role: 'tree',
     className: ei.tree,
     children: [
-      (0, i.jsx)(G.Z, {
+      (0, i.jsx)(w.Z, {
         ref: eh,
         isVisible: eO.isItemVisible,
         onJumpTo: eO.handleJumpToGuild,
@@ -290,7 +290,7 @@ children: (0, i.jsx)('nav', {
         onScroll: eO.handleScroll,
         children: [
           (0, i.jsx)(Y.u, {}),
-          eG ? (0, i.jsx)(v.Z, {}) : null,
+          ew ? (0, i.jsx)(v.Z, {}) : null,
           (0, i.jsx)(H.Z, {}),
           (0, i.jsx)(K.Z, {
             isOnHubVerificationRoute: eD
@@ -306,7 +306,7 @@ children: (0, i.jsx)('nav', {
           (0, i.jsx)(q.Z, {}),
           (0, i.jsx)('div', {
             'aria-label': en.Z.Messages.SERVERS,
-            children: ew.map(function e(t) {
+            children: eG.map(function e(t) {
               switch (t.type) {
                 case U.eD.FOLDER:
                   return (0, i.jsx)(J.Z, {
@@ -335,7 +335,7 @@ children: (0, i.jsx)('nav', {
           eB,
           n ? null : (0, i.jsx)(V.Z, {
             disableTooltip: h.length > 0,
-            lastTargetNode: ew[ew.length - 1]
+            lastTargetNode: eG[eG.length - 1]
           }),
           n || eN ? null : (0, i.jsx)(W.Z, {
             ref: eO.guildDiscoveryRef,
@@ -374,7 +374,7 @@ children: (0, i.jsx)('nav', {
           }
         })
       }),
-      (0, i.jsx)(G.Z, {
+      (0, i.jsx)(w.Z, {
         reverse: !0,
         ref: ep,
         isVisible: eO.isItemVisible,

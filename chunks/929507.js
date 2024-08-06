@@ -10,8 +10,8 @@ var a = t(470079),
   u = t(70956),
   m = t(997787),
   _ = t(981631);
-let C = 1 * u.Z.Millis.DAY,
-  f = new Map();
+let f = 1 * u.Z.Millis.DAY,
+  C = new Map();
 n.Z = {
   useShouldShowChannelNotice(e) {
 let n = (0, r.e7)([
@@ -25,9 +25,9 @@ a.useEffect(() => {
   n && ! function(e) {
     var n;
     let t = Date.now(),
-      a = null !== (n = f.get(e)) && void 0 !== n ? n : 0;
-    if (!(t < a + C))
-      f.set(e, t), i.tn.post({
+      a = null !== (n = C.get(e)) && void 0 !== n ? n : 0;
+    if (!(t < a + f))
+      C.set(e, t), i.tn.post({
         url: _.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e)
       }).then(n => {
         var t, a;
@@ -37,7 +37,7 @@ a.useEffect(() => {
           integrationIdsWithAppCommands: null !== (a = null === (t = n.body) || void 0 === t ? void 0 : t.integration_ids_with_app_commands) && void 0 !== a ? a : []
         });
       }, () => {
-        f.set(e, a);
+        C.set(e, a);
       });
   }(e);
 }, [

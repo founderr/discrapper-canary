@@ -6,28 +6,28 @@ var a, r, i, s, o = t(392711),
   u = t(442837),
   m = t(570140),
   _ = t(944163),
-  C = t(116175),
-  f = t(308083);
+  f = t(116175),
+  C = t(308083);
 let h = () => ({
 gameApplicationIds: new Set(),
-playstyle: f.zv.NONE,
+playstyle: C.zv.NONE,
 interests: new Set(),
 description: '',
 wildcardDescriptors: [
-  f.U6,
-  f.U6,
-  f.U6
+  C.U6,
+  C.U6,
+  C.U6
 ],
 tag: '',
 verificationForm: {
   ..._.t
 },
-badgeKind: C.ZD.SWORD,
-badgePrimaryColor: C.sg['0'].primary,
-badgeSecondaryColor: C.sg['0'].secondary,
-banner: f.qC.NIGHT_SKY,
-brandPrimaryColor: f.ym['0'].primary,
-brandSecondaryColor: f.ym['0'].secondary
+badgeKind: f.ZD.SWORD,
+badgePrimaryColor: f.sg['0'].primary,
+badgeSecondaryColor: f.sg['0'].secondary,
+banner: C.qC.NIGHT_SKY,
+brandPrimaryColor: C.ym['0'].primary,
+brandSecondaryColor: C.ym['0'].secondary
   }),
   x = h(),
   g = d()(x),

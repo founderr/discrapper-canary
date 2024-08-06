@@ -24,8 +24,8 @@ t
   ]);
   return (0, r.jsxs)(o.Clickable, {
 className: s()(l.trait, {
-  [l.selected]: d,
   [l.selectable]: null != h && !d,
+  [l.selected]: d,
   [l.clickable]: null != h
 }, c),
 onMouseEnter: _,

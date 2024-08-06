@@ -107,8 +107,8 @@ let {
   location: p
 } = T.m, D = (0, _.l)(e, S, n, a, !0, {
   location: p
-}, E), f = e.getScope();
-return s && u ? f.setPropagationContext(N) : f.setPropagationContext({
+}, E), L = e.getScope();
+return s && u ? L.setPropagationContext(N) : L.setPropagationContext({
   traceId: D.traceId,
   spanId: D.spanId,
   parentSpanId: D.parentSpanId,

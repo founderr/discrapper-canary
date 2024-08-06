@@ -12,7 +12,7 @@ n.Z = function(e) {
 guildId: n,
 onSave: t,
 formDescription: u
-  } = e, [m, _] = r.useState(null), [C, f] = r.useState(u), h = r.useRef(!1), x = r.useRef(!1);
+  } = e, [m, _] = r.useState(null), [f, C] = r.useState(u), h = r.useRef(!1), x = r.useRef(!1);
   r.useEffect(() => () => {
 x.current = !0;
   }, []);
@@ -20,7 +20,7 @@ x.current = !0;
 if (!h.current) {
   _(null);
   try {
-    await t(n, C);
+    await t(n, f);
   } catch (e) {
     if (x.current)
       return;
@@ -32,7 +32,7 @@ if (!h.current) {
   }
 }
   }, [
-C,
+f,
 n,
 t
   ]);
@@ -42,10 +42,10 @@ children: [
   (0, a.jsx)(i.TextArea, {
     className: d.fieldBackground,
     maxLength: l.Us,
-    value: null != C ? C : '',
+    value: null != f ? f : '',
     placeholder: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
     onChange: e => {
-      f(e);
+      C(e);
     },
     onBlur: g,
     autosize: !0

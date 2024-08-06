@@ -39,8 +39,8 @@ var l = n(120356),
   j = n(9156),
   D = n(979651),
   U = n(934415),
-  w = n(98597),
-  G = n(648501),
+  G = n(98597),
+  w = n(648501),
   k = n(473403),
   B = n(830993),
   H = n(653577),
@@ -58,7 +58,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class q extends w.ZP {
+class q extends G.ZP {
   componentWillUnmount() {
 this.activitiesHideTimeout.stop();
   }
@@ -431,7 +431,7 @@ guildId: n.guild_id,
 location: 'VoiceChannel'
   }, {
 autoTrackExposure: !1
-  }), R = (0, G.Z)({
+  }), R = (0, w.Z)({
 channel: n,
 isChannelSelected: s,
 isChannelCollapsed: o,

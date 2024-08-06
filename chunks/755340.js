@@ -10,8 +10,8 @@ var a = t(735250),
   u = t(297619),
   m = t(456935),
   _ = t(446945),
-  C = t(700833),
-  f = t(592286),
+  f = t(700833),
+  C = t(592286),
   h = t(689938);
 n.Z = function(e) {
   let {
@@ -29,7 +29,7 @@ onDescriptionSave: I
 M = r.useMemo(() => y.filter(l.kT), [y]),
 j = r.useMemo(() => y.filter(l._C), [y]),
 R = j.length,
-L = r.useMemo(() => y.length === f.nx, [y]),
+L = r.useMemo(() => y.length === C.nx, [y]),
 O = r.useMemo(() => y.some(o.J), [y]),
 Z = r.useMemo(() => y.some(e => !(0, o.J)(e)), [y]),
 k = R > 0,
@@ -122,7 +122,7 @@ H = (0, a.jsxs)(a.Fragment, {
       addFormField: F,
       guild: n
     }),
-    M.map(e => (0, C.a0)({
+    M.map(e => (0, f.a0)({
       dropHoveredIndex: N,
       formField: e,
       guild: n,
@@ -146,7 +146,7 @@ children: [
     guild: n,
     showHeader: !p
   }),
-  j.map(e => (0, C.a0)({
+  j.map(e => (0, f.a0)({
     dropHoveredIndex: N,
     formField: e,
     guild: n,

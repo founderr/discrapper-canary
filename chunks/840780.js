@@ -34,8 +34,8 @@ var i = n(735250),
   j = n(858064),
   D = n(594190),
   U = n(925329),
-  w = n(810568),
-  G = n(168524),
+  G = n(810568),
+  w = n(168524),
   k = n(569545),
   B = n(382182),
   H = n(74299),
@@ -522,10 +522,10 @@ function ev(e) {
   let {
 name: t,
 applicationId: n
-  } = e, l = (0, G.Z)({
+  } = e, l = (0, w.Z)({
 location: 'ActivityPanelGameCard',
 applicationId: n,
-source: w.m1.RtcPanel,
+source: G.m1.RtcPanel,
 trackEntryPointImpression: !0
   });
   return (0, i.jsx)(h.Clickable, {

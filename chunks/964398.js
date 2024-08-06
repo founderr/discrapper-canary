@@ -139,7 +139,7 @@ L.current = t, E(p * e + t);
 L.current = null, E(null);
   }, [E]), U = l.useCallback(e => {
 D(), T.current = e;
-  }, [D]), w = l.useCallback((e, t, n) => {
+  }, [D]), G = l.useCallback((e, t, n) => {
 if (T.current) {
   R({
     x: 0,
@@ -159,7 +159,7 @@ R({
   x: s / 2,
   y: (r ? Math.max(i.y, -a.y) : Math.min(i.y, a.y)) / 2
 });
-  }, []), G = l.useCallback(e => {
+  }, []), w = l.useCallback(e => {
 if (null != L.current)
   e.preventDefault(), e.stopPropagation(), null == N || N(p * A + L.current);
   }, [
@@ -178,7 +178,7 @@ let i = Z.current.getBoundingClientRect(),
     x: e.clientX,
     y: e.clientY
   };
-if (w(a, r, Math.max(t, n)), T.current) {
+if (G(a, r, Math.max(t, n)), T.current) {
   null != I && D();
   return;
 }
@@ -196,7 +196,7 @@ for (let e = 0; e < v.current[A].length; e++) {
 D();
   }, 16), [
 I,
-w,
+G,
 D,
 j,
 A,
@@ -244,7 +244,7 @@ P
 className: u.chatWheelMouseInput,
 onMouseMove: k,
 onWheel: B,
-onClick: G,
+onClick: w,
 children: (0, i.jsxs)('div', {
   ref: Z,
   className: u.chatWheel,

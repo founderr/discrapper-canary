@@ -13,11 +13,11 @@ let s = 'no_payment_source',
   T = null,
   I = null,
   d = null,
-  C = {},
-  R = null,
+  R = {},
+  C = null,
   N = !1,
-  M = null,
-  P = !1,
+  P = null,
+  M = !1,
   f = !1,
   U = !1,
   L = !1,
@@ -25,11 +25,11 @@ let s = 'no_payment_source',
   h = new Set();
 
 function p(e) {
-  null != r && null != R ? r(R) : null != i && i(e), r = null, i = null;
+  null != r && null != C ? r(C) : null != i && i(e), r = null, i = null;
 }
 class m extends(u = a.ZP.Store) {
   getPricesForSku(e) {
-return C[e];
+return R[e];
   }
   isOpen() {
 let e = __OVERLAY__ ? S.IlC.OVERLAY : S.IlC.APP;
@@ -39,10 +39,10 @@ return O === e && U;
 return N;
   }
   get forceConfirmationStepOnMount() {
-return P;
+return M;
   }
   get error() {
-return M;
+return P;
   }
   get skuId() {
 return A;
@@ -76,7 +76,7 @@ E = 'SKUPaymentModalStore', (o = 'displayName') in(l = m) ? Object.definePropert
   writable: !0
 }) : l[o] = E, t.Z = new m(_.Z, {
   SKU_PURCHASE_MODAL_OPEN: function(e) {
-p(), A = e.skuId, T = e.applicationId, f = e.isIAP, I = e.analyticsLocation, O = e.context, L = e.isGift, U = !0, P = !1, r = e.resolve, i = e.reject, M = null, R = null, d = e.promotionId;
+p(), A = e.skuId, T = e.applicationId, f = e.isIAP, I = e.analyticsLocation, O = e.context, L = e.isGift, U = !0, M = !1, r = e.resolve, i = e.reject, P = null, C = null, d = e.promotionId;
   },
   SKU_PURCHASE_MODAL_CLOSE: function(e) {
 let {
@@ -96,10 +96,10 @@ let {
   paymentSourceId: n,
   price: r
 } = e;
-C = {
-  ...C,
+R = {
+  ...R,
   [t]: {
-    ...C[t],
+    ...R[t],
     [null != n ? n : s]: r
   }
 }, h.delete(t);
@@ -118,19 +118,19 @@ let {
   entitlements: t,
   giftCode: n
 } = e;
-N = !1, R = t, c = n;
+N = !1, C = t, c = n;
   },
   SKU_PURCHASE_FAIL: function(e) {
 let {
   error: t
 } = e;
-N = !1, M = t;
+N = !1, P = t;
   },
   SKU_PURCHASE_SHOW_CONFIRMATION_STEP: function() {
-P = !0;
+M = !0;
   },
   SKU_PURCHASE_CLEAR_ERROR: function() {
-M = null;
+P = null;
   },
   SKU_PURCHASE_UPDATE_IS_GIFT: function(e) {
 L = e.isGift;

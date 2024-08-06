@@ -1,6 +1,6 @@
 i.d(s, {
   Z: function() {
-return A;
+return C;
   }
 });
 var n = i(735250),
@@ -17,9 +17,9 @@ var n = i(735250),
   f = i(785717),
   m = i(621853),
   E = i(204197),
-  x = i(735336),
-  v = i(520978),
-  S = i(184325),
+  S = i(735336),
+  x = i(520978),
+  v = i(184325),
   Z = i(652853),
   h = i(225714),
   p = i(228168),
@@ -27,27 +27,27 @@ var n = i(735250),
   g = i(689938),
   N = i(520067);
 let j = a.AvatarSizes.SIZE_120,
-  C = _.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+  A = _.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
-function A(e) {
+function C(e) {
   let {
 displayProfile: s,
 user: _,
-guildId: A,
+guildId: C,
 channelId: R,
-friendToken: M,
-className: O,
+friendToken: O,
+className: M,
 isStreaming: U,
 hasProfileEffect: L,
-onClose: P
-  } = e, b = (0, t.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, t.e7)([m.Z], () => m.Z.getUserProfile(_.id)), B = (0, t.e7)([c.default], () => c.default.getId() === _.id), {
+onClose: b
+  } = e, P = (0, t.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, t.e7)([m.Z], () => m.Z.getUserProfile(_.id)), B = (0, t.e7)([c.default], () => c.default.getId() === _.id), {
 theme: G
   } = (0, Z.z)(), {
 trackUserProfileAction: w
   } = (0, f.KZ)(), {
 avatarSrc: k,
-eventHandlers: Y,
-avatarDecorationSrc: V
+eventHandlers: V,
+avatarDecorationSrc: Y
   } = (0, E.Z)({
 user: _,
 size: j
@@ -56,11 +56,11 @@ _,
 R
   ]);
   return (0, n.jsxs)('header', {
-className: O,
+className: M,
 children: [
-  (0, n.jsx)(x.Z, {
+  (0, n.jsx)(S.Z, {
     displayProfile: s,
-    onClose: P,
+    onClose: b,
     user: _,
     profileType: p.y0.MODAL,
     hasProfileEffect: L
@@ -69,10 +69,10 @@ children: [
     className: N.header,
     children: [
       (0, n.jsx)('div', {
-        ...Y,
-        children: (0, n.jsx)(C, {
+        ...V,
+        children: (0, n.jsx)(A, {
           src: k,
-          avatarDecoration: V,
+          avatarDecoration: Y,
           size: j,
           className: N.avatar,
           status: H ? T.Sk.UNKNOWN : U ? T.Sk.STREAMING : D,
@@ -96,28 +96,28 @@ children: [
               className: N.warningCircleIcon,
               color: o.Z.unsafe_rawColors.YELLOW_300.css
             })
-          }) : (0, n.jsx)(S.Z, {
+          }) : (0, n.jsx)(v.Z, {
             user: _,
             className: N.badgeList,
-            guildId: A,
-            size: S.V.SIZE_24,
+            guildId: C,
+            size: v.V.SIZE_24,
             shrinkAtCount: 8,
-            shrinkToSize: S.V.SIZE_18,
-            onBadgeClick: P
+            shrinkToSize: v.V.SIZE_18,
+            onBadgeClick: b
           }),
           (0, n.jsxs)('div', {
             className: N.relationshipButtons,
             children: [
-              (null == F ? void 0 : F.application) != null && (0, n.jsx)(v.Z, {
+              (null == F ? void 0 : F.application) != null && (0, n.jsx)(x.Z, {
                 className: N.applicationInstallButton,
                 application: F.application
               }),
               (0, n.jsx)(h.Z, {
                 user: _,
                 isCurrentUser: B,
-                relationshipType: b,
-                friendToken: M,
-                onClose: P
+                relationshipType: P,
+                friendToken: O,
+                onClose: b
               }),
               B || _.isNonUserBot() ? null : (0, n.jsx)(a.Clickable, {
                 focusProps: {
@@ -136,10 +136,10 @@ children: [
                       ...s,
                       user: _,
                       isCurrentUser: B,
-                      guildId: A,
-                      relationshipType: b,
+                      guildId: C,
+                      relationshipType: P,
                       trackUserProfileAction: w,
-                      onClose: P
+                      onClose: b
                     });
                   });
                 },

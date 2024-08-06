@@ -9,11 +9,11 @@ let _ = '',
   T = null,
   I = '',
   d = '',
-  C = '',
   R = '',
+  C = '',
   N = '',
-  M = '',
   P = '',
+  M = '',
   f = '',
   U = !1,
   L = null,
@@ -22,11 +22,11 @@ let _ = '',
   p = null;
 
 function m() {
-  A = null, _ = '', S = null, s = '', c = !1, T = null, I = 'US', d = '', C = '', R = '', N = '', M = '', P = '', f = '', U = !1, L = null, O = null, h = null, p = null;
+  A = null, _ = '', S = null, s = '', c = !1, T = null, I = 'US', d = '', R = '', C = '', N = '', P = '', M = '', f = '', U = !1, L = null, O = null, h = null, p = null;
 }
 
 function Z(e) {
-  d = e.name, I = e.country, R = e.line1, N = e.line2, M = e.city, P = e.postalCode, f = e.state, C = e.email;
+  d = e.name, I = e.country, C = e.line1, N = e.line2, P = e.city, M = e.postalCode, f = e.state, R = e.email;
 }
 
 function G() {
@@ -75,12 +75,12 @@ return c;
   getBillingAddressInfo() {
 return {
   name: d,
-  email: C,
+  email: R,
   country: I,
-  line1: R,
+  line1: C,
   line2: N,
-  city: M,
-  postalCode: P,
+  city: P,
+  postalCode: M,
   state: f
 };
   }
@@ -123,7 +123,7 @@ let {
   info: t,
   isValid: n
 } = e;
-null != t.name && '' !== t.name && (d = t.name), I = t.country, d = t.name, R = t.line1, N = t.line2, M = t.city, P = t.postalCode, f = t.state, C = t.email, U = n;
+null != t.name && '' !== t.name && (d = t.name), I = t.country, d = t.name, C = t.line1, N = t.line2, P = t.city, M = t.postalCode, f = t.state, R = t.email, U = n;
   },
   BRAINTREE_TOKENIZE_PAYPAL_START: function() {
 _ = '', S = null;

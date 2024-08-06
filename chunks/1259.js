@@ -36,24 +36,24 @@ t = (0, r.e7)([l.Z], () => l.Z.can(d.Plq.ADMINISTRATOR, n)),
 i = null == n ? void 0 : n.hasFeature(d.oNc.COMMUNITY),
 [m] = (0, r.Wu)([s.Z], () => [s.Z.getMemberCount(e)], [e]),
 _ = (null != m ? m : 0) >= c.WZ && (null != m ? m : 0) < c.TN,
-C = t && i && _;
+f = t && i && _;
   a.useEffect(() => {
-C && u.trackExposure({
+f && u.trackExposure({
   guildId: e,
   location: '747eb3_1'
 });
   }, [
 e,
-C
+f
   ]);
   let {
-enableLowerMemberCountReq: f
+enableLowerMemberCountReq: C
   } = u.useExperiment({
 guildId: e,
 location: '747eb3_2'
   }, {
 autoTrackExposure: !1,
-disable: !C
+disable: !f
   });
-  return f;
+  return C;
 }

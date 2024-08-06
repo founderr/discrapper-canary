@@ -1,6 +1,6 @@
 i.d(s, {
   Z: function() {
-return S;
+return v;
   }
 });
 var n = i(735250),
@@ -17,15 +17,15 @@ var n = i(735250),
   f = i(785717),
   m = i(221292),
   E = i(981631),
-  x = i(501649),
-  v = i(735393);
+  S = i(501649),
+  x = i(735393);
 
-function S(e) {
+function v(e) {
   let {
 user: s,
 type: i,
 showActions: t,
-onClose: S
+onClose: v
   } = e, Z = (0, a.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(s.id)), h = (0, a.e7)([_.Z], () => _.Z.getActivities(s.id)), p = l.useMemo(() => h.filter(e => e.type !== E.IIU.CUSTOM_STATUS), [h]), T = l.useMemo(() => Z ? p.find(e => e.type === E.IIU.PLAYING) : null, [
 p,
 Z
@@ -36,8 +36,8 @@ p
 analyticsLocations: N,
 newestAnalyticsLocation: j
   } = (0, u.ZP)(), {
-trackUserProfileAction: C,
-...A
+trackUserProfileAction: A,
+...C
   } = (0, f.KZ)(), R = {
 location: {
   page: E.ZY5.USER_PROFILE,
@@ -45,22 +45,22 @@ location: {
 }
   };
   return (0, n.jsxs)(r.ScrollerThin, {
-className: v.listScroller,
+className: x.listScroller,
 fade: !0,
 children: [
   Z ? (0, n.jsx)(d.Z, {
     type: i,
     user: s,
     source: j,
-    className: x.userProfileActivity,
+    className: S.userProfileActivity,
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
     activity: T,
-    actionColor: x.actionColor,
+    actionColor: S.actionColor,
     analyticsParams: R,
     showActions: t,
-    onClose: S,
+    onClose: v,
     onAction: () => {
-      C({
+      A({
         action: 'JOIN_ACTIVITY'
       }), (0, m.Ac)({
         activityType: E.IIU.STREAMING,
@@ -69,7 +69,7 @@ children: [
         activitySessionId: null == T ? void 0 : T.session_id,
         applicationId: null == T ? void 0 : T.application_id,
         analyticsLocations: N,
-        ...A
+        ...C
       });
     }
   }) : null,
@@ -79,14 +79,14 @@ children: [
     user: s,
     useStoreStream: !1,
     source: j,
-    className: o()(x.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && x.simplifiedProfileActivity),
+    className: o()(S.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
-    actionColor: x.actionColor,
+    actionColor: S.actionColor,
     analyticsParams: R,
     showActions: t,
-    onClose: S,
+    onClose: v,
     onAction: () => {
-      C({
+      A({
         action: 'JOIN_ACTIVITY'
       }), (0, m.Ac)({
         activityType: e.type,
@@ -95,7 +95,7 @@ children: [
         activitySessionId: e.session_id,
         applicationId: e.application_id,
         analyticsLocations: N,
-        ...A
+        ...C
       });
     }
   }, ''.concat(e.application_id, '-').concat(e.session_id, '-').concat(e.name)))
