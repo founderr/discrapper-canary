@@ -1,45 +1,72 @@
 i.r(s), i.d(s, {
   default: function() {
-return _;
+return S;
   }
-});
-var n = i(735250);
-i(470079);
-var l = i(512722),
-  t = i.n(l),
-  o = i(442837),
-  a = i(594174),
-  r = i(380738),
-  d = i(910364),
-  c = i(853825),
-  u = i(41527),
-  I = i(107889);
+}), i(47120);
+var n = i(735250),
+  l = i(470079),
+  t = i(512722),
+  o = i.n(t),
+  a = i(442837),
+  r = i(100527),
+  d = i(699516),
+  c = i(594174),
+  u = i(453956),
+  I = i(380738),
+  _ = i(787018),
+  f = i(910364),
+  E = i(853825),
+  m = i(41527),
+  x = i(107889);
+let v = [
+  r.Z.BITE_SIZE_PROFILE_POPOUT,
+  r.Z.PROFILE_POPOUT,
+  r.Z.PROFILE_PANEL
+];
 
-function _(e) {
+function S(e) {
   let {
 location: s,
 user: i,
-...l
+...t
   } = e, {
-botProfilesEnabled: _
-  } = (0, r.J)({
+botProfilesEnabled: r
+  } = (0, I.J)({
 location: s
-  }), f = (0, o.e7)([a.default], () => a.default.getCurrentUser());
-  return (t()(null != f, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined'), _ && i.isNonUserBot()) ? (0, n.jsx)(c.Z, {
-...l,
+  }), S = (0, a.e7)([c.default], () => c.default.getCurrentUser());
+  o()(null != S, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined');
+  let Z = (0, a.e7)([d.Z], () => d.Z.isBlocked(i.id)),
+[h, p] = l.useState(Z),
+T = (0, u.sS)({
+  location: s
+});
+  l.useEffect(() => {
+p(Z);
+  }, [Z]);
+  let g = !v.some(e => {
+var s;
+return (null !== (s = t.sourceAnalyticsLocations) && void 0 !== s ? s : []).includes(e);
+  });
+  return h && T && g ? (0, n.jsx)(_.Z, {
 user: i,
-currentUser: f
-  }) : _ && i.bot ? (0, n.jsx)(u.Z, {
-...l,
+currentUser: S,
+onViewBlockedProfileClick: () => p(!1),
+...t
+  }) : r && i.isNonUserBot() ? (0, n.jsx)(E.Z, {
+...t,
 user: i,
-currentUser: f
-  }) : i.bot ? (0, n.jsx)(d.Z, {
-...l,
+currentUser: S
+  }) : r && i.bot ? (0, n.jsx)(m.Z, {
+...t,
 user: i,
-currentUser: f
-  }) : (0, n.jsx)(I.Z, {
-...l,
+currentUser: S
+  }) : i.bot ? (0, n.jsx)(f.Z, {
+...t,
 user: i,
-currentUser: f
+currentUser: S
+  }) : (0, n.jsx)(x.Z, {
+...t,
+user: i,
+currentUser: S
   });
 }
