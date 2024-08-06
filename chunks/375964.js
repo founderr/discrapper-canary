@@ -17945,5 +17945,7 @@ e.exports = Object.freeze({
   USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED: 'They will still be blocked',
   USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_BUTTON: 'Yes, Proceed',
   CHANNEL_LINKED_LOBBY_CHANNEL_HEADER: 'Syncing with **!!{applicationName}!!** \u2022 [Learn more]({helpdeskArticle})',
-  CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_UNKNOWN_APPLICATION: 'Syncing with an application \u2022 [Learn more]({helpdeskArticle})'
+  CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_UNKNOWN_APPLICATION: 'Syncing with an application \u2022 [Learn more]({helpdeskArticle})',
+  CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_COACHMARK_TITLE: 'Syncing with games',
+  CHANNEL_LINKED_LOBBY_CHANNEL_HEADER_COACHMARK_DESCRIPTION: 'This channel is syncing to a game that uses Discord to power its chat. [Learn more]({helpdeskArticle})'
 });
