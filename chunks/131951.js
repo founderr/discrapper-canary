@@ -128,7 +128,8 @@ openH264: !0,
 h265Enabled: !0,
 vadThrehsoldMigrated: !1,
 aecDumpEnabled: !1,
-sidechainCompression: !1
+sidechainCompression: !1,
+sidechainCompressionSettingVersion: 0
   };
 }
 let eO = (0, m.Mt)((0, m.jj)()),
@@ -1182,7 +1183,12 @@ return t.reduce((e, t) => i === t.sessionId ? (eU = t.mute || t.suppress, eG = t
 i = e.sessionId, eU = !1, eG = !1, Y.Z.subscribe({
   location: 'handleConnectionOpen'
 }, e => {
-  !e.enableSidechainCompression && e7().sidechainCompression && tI(!1);
+  let t = e7();
+  !e.sidechainAvailable && t.sidechainCompression ? (tl({
+    sidechainCompressionSettingVersion: 0
+  }), tI(!1)) : e.sidechainAvailable && t.sidechainCompressionSettingVersion < 1 && (tl({
+    sidechainCompressionSettingVersion: 1
+  }), tI(e.sidechainEnabled));
 }), tE();
   },
   CONNECTION_CLOSED: function() {

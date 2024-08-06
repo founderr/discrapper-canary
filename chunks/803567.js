@@ -137,7 +137,7 @@ hasEchoCancellation: S.Z.hasEchoCancellation(s),
 hasNoiseSuppression: S.Z.hasNoiseSuppression(s),
 hasAutomaticGainControl: S.Z.hasAutomaticGainControl(s)
   }), [s]), m = E || u || C, A = e === O.pM4.VOICE_ACTIVITY && a, {
-enableSidechainCompression: R
+sidechainAvailable: R
   } = I.Z.getCurrentConfig({
 location: 'UserSettingsVoiceProcessing'
   });
