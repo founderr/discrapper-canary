@@ -247,9 +247,6 @@ return 5 === Y;
   hasOpened() {
 return H;
   }
-  hasEverOpened() {
-return Y > 0;
-  }
   getState() {
 return {
   dehydratedItems: Z,
