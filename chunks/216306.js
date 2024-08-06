@@ -70,7 +70,7 @@ T
 }
 
 function Z(e) {
-  let _ = e.getSections();
+  let _ = e.getSections(!1);
   if (_[D.wZ] > 0)
 switch (e.getGuildActionSection().getRow(0)) {
   case o.z.GUILD_HOME:

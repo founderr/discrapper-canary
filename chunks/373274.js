@@ -40,8 +40,8 @@ var i, l = n(735250),
   j = n(734307),
   D = n(854444),
   U = n(688265),
-  w = n(761091),
-  G = n(301342),
+  G = n(761091),
+  w = n(301342),
   k = n(471995),
   B = n(906817),
   H = n(429122),
@@ -241,7 +241,7 @@ return null != n ? o = r ? er.hl : er.Q0 : t.hasCommunityInfoSubheader() && !i &
     onScroll: this.handleListScroll,
     onResize: this.handleResize,
     onContentResize: this.handleResize,
-    sections: e.getSections(),
+    sections: e.getSections(!0),
     innerAriaLabel: eo.Z.Messages.CHANNELS,
     innerTag: 'ul',
     getAnchorId: this.getAnchorId,
@@ -687,7 +687,7 @@ super(...e), eu(this, '_list', null), eu(this, 'unreadTopRef', r.createRef()), e
     case ea.d4z.GUILD_CATEGORY:
       if (t !== u.voiceChannelsSectionNumber)
         return null;
-      return (0, l.jsx)(G.kw, {
+      return (0, l.jsx)(w.kw, {
         channel: Z
       }, 'readonly-'.concat(Z.id));
     case ea.d4z.PUBLIC_THREAD:
@@ -844,7 +844,7 @@ withGuildIcon: n
 }
 
 function e_(e) {
-  let t = (0, w.Z)(e.guild),
+  let t = (0, G.Z)(e.guild),
 n = (0, U.Z)(e.guild),
 i = s().uniq(n.concat(t)),
 r = (0, u.cj)([j.Z], () => j.Z.getGuild(e.guildId, i)),

@@ -147,7 +147,7 @@ return [
 ];
   }
   getSections() {
-let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
 return (null == this.sections && (this.sections = this.getRows().map(e => e.length)), e) ? [...this.sections] : this.sections;
   }
   getRows() {
