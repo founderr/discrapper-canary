@@ -15,11 +15,11 @@ var n = i(735250),
   I = i(318661),
   _ = i(78675),
   f = i(741308),
-  m = i(588822),
-  E = i(899007),
-  S = i(900927),
-  x = i(678738),
-  v = i(502762),
+  E = i(588822),
+  m = i(899007),
+  x = i(900927),
+  v = i(678738),
+  S = i(502762),
   Z = i(530),
   h = i(679332),
   p = i(544989),
@@ -27,8 +27,8 @@ var n = i(735250),
   g = i(981631),
   N = i(689938),
   j = i(505451),
-  A = i(247321),
-  C = i(47460);
+  C = i(247321),
+  A = i(47460);
 
 function R(e) {
   let {
@@ -36,33 +36,33 @@ user: s,
 guildId: i,
 channelId: R,
 messageId: O,
-roleId: M,
-transitionState: U,
-onClose: L,
-sourceAnalyticsLocations: b = []
+roleId: L,
+transitionState: M,
+onClose: U,
+sourceAnalyticsLocations: P = []
   } = e, {
-analyticsLocations: P
+analyticsLocations: b
   } = (0, r.ZP)([
-...b,
+...P,
 a.Z.SIMPLIFIED_PROFILE_MODAL
   ]), y = i === g.ME ? void 0 : i, D = (0, I.ZP)(s.id, y), F = l.createRef(), B = (0, o.Z)(F);
   return (0, n.jsx)(r.Gt, {
-value: P,
+value: b,
 children: (0, n.jsx)(u.Mt, {
   layout: 'SIMPLIFIED_MODAL',
   userId: s.id,
   guildId: y,
   channelId: R,
   messageId: O,
-  roleId: M,
+  roleId: L,
   showGuildProfile: !0,
   children: (0, n.jsxs)(t.ModalRoot, {
-    transitionState: U,
+    transitionState: M,
     className: j.root,
     hideShadow: !0,
     'aria-label': N.Z.Messages.USER_PROFILE_MODAL,
     children: [
-      (0, n.jsxs)(v.Z, {
+      (0, n.jsxs)(S.Z, {
         user: s,
         displayProfile: D,
         profileType: T.y0.FULL_SIZE,
@@ -84,7 +84,7 @@ children: (0, n.jsx)(u.Mt, {
               }),
               (0, n.jsx)('div', {
                 className: j.headerInner,
-                children: (0, n.jsx)(E.Z, {
+                children: (0, n.jsx)(m.Z, {
                   user: s,
                   displayProfile: D,
                   guildId: y,
@@ -106,21 +106,21 @@ children: (0, n.jsx)(u.Mt, {
                 tags: (0, n.jsx)(f.Z, {
                   displayProfile: D,
                   profileType: T.y0.FULL_SIZE,
-                  onClose: L
+                  onClose: U
                 })
               }),
-              (0, n.jsx)(v.Z.Overlay, {
+              (0, n.jsx)(S.Z.Overlay, {
                 className: j.overlay,
                 children: (0, n.jsxs)('div', {
-                  className: C.container,
+                  className: A.container,
                   children: [
                     (0, n.jsx)(t.TabBar, {
-                      className: C.tabBar,
+                      className: A.tabBar,
                       type: 'top',
                       selectedItem: T.oh.BOT_INFO,
                       onItemSelect: g.dG4,
                       children: (0, n.jsx)(t.TabBar.Item, {
-                        className: C.tabBarItem,
+                        className: A.tabBarItem,
                         id: T.oh.BOT_INFO,
                         'aria-label': N.Z.Messages.USER_PROFILE_ABOUT_ME,
                         children: (0, n.jsx)(t.Text, {
@@ -131,16 +131,16 @@ children: (0, n.jsx)(u.Mt, {
                     }),
                     (0, n.jsxs)(t.ScrollerThin, {
                       fade: !0,
-                      className: A.scroller,
+                      className: C.scroller,
                       children: [
-                        (0, n.jsx)(m.Z, {
+                        (0, n.jsx)(E.Z, {
                           userId: s.id,
                           userBio: null == D ? void 0 : D.bio,
                           setLineClamp: !1
                         }),
-                        (0, n.jsx)(x.Z, {
+                        (0, n.jsx)(v.Z, {
                           heading: N.Z.Messages.BOT_PROFILE_CREATED_ON,
-                          children: (0, n.jsx)(S.Z, {
+                          children: (0, n.jsx)(x.Z, {
                             userId: s.id,
                             guildId: y,
                             tooltipDelay: T.vB

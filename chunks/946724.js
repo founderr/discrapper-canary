@@ -83,7 +83,7 @@ u().isEqual(B(t), function(e) {
     return n === e;
   });
 }(t)) && (p.delete(t), e = !0);
-  }), 0 === p.size && (f = !1), M && u().isEqual(v, j) && (e = !0, M = !1), e && w.emitChange();
+  }), 0 === p.size && (f = !1), M && u().isEqual(v, j) && (e = !0, M = !1), e && k.emitChange();
 }, 500);
 
 function P(e, t) {
@@ -184,7 +184,7 @@ c = 'GuildSettingsRolesStore', (o = 'displayName') in(l = F) ? Object.defineProp
   configurable: !0,
   writable: !0
 }) : l[o] = c;
-let w = new F(T.Z, __OVERLAY__ ? {} : {
+let k = new F(T.Z, __OVERLAY__ ? {} : {
   GUILD_SETTINGS_ROLES_INIT: () => U(),
   GUILD_SETTINGS_INIT: b,
   GUILD_SETTINGS_SET_SECTION: b,
@@ -336,4 +336,4 @@ R = x.QZA.OPEN, i = t;
 U(!1);
   }
 });
-t.Z = w;
+t.Z = k;

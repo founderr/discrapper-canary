@@ -68,7 +68,7 @@ let {
     enabled: x,
     ...(0, S.hH)(i.id)
   }));
-}, w = R.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(B), k = null != Z && Z === (null == c ? void 0 : c.store_page_trailer_url), {
+}, k = R.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(B), w = null != Z && Z === (null == c ? void 0 : c.store_page_trailer_url), {
   shouldRestrictUpdatingCreatorMonetizationSettings: H
 } = (0, h.gX)(i.id), V = H || !U;
 return (0, s.jsxs)('div', {
@@ -99,13 +99,13 @@ return (0, s.jsxs)('div', {
       disabled: H,
       children: [
         (0, s.jsx)(T.Z, {
-          value: w,
+          value: k,
           className: r()({
             [L.disabled]: H
           })
         }),
         (0, s.jsx)(E.Button, {
-          onClick: () => (0, N.Z)(w),
+          onClick: () => (0, N.Z)(k),
           className: L.openPageButton,
           disabled: H,
           children: f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_GO_TO_PAGE
@@ -170,9 +170,9 @@ return (0, s.jsxs)('div', {
           className: L.trailerInputWrapper,
           inputClassName: r()(L.trailerInput, {
             [L.error]: !U,
-            [L.trailerInputWithCheckmark]: k || !U
+            [L.trailerInputWithCheckmark]: w || !U
           }),
-          prefixElement: U && k && (0, s.jsx)(E.CircleCheckIcon, {
+          prefixElement: U && w && (0, s.jsx)(E.CircleCheckIcon, {
             size: 'md',
             color: _.Z.unsafe_rawColors.BRAND_500.css,
             secondaryColor: _.Z.unsafe_rawColors.WHITE_500.css,

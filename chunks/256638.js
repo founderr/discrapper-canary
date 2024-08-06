@@ -29,8 +29,8 @@ var i = n(735250),
   S = n(726542),
   A = n(100527),
   R = n(906732),
-  O = n(812206),
-  x = n(391650),
+  x = n(812206),
+  O = n(391650),
   M = n(600164),
   v = n(605236),
   L = n(749277),
@@ -173,13 +173,13 @@ case eu.kVF.GUILD_RAID_NOTIFICATION:
   });
 case eu.kVF.WIN32_DEPRECATED_MESSAGE:
   let {
-    dismissUntil: eO
+    dismissUntil: ex
   } = ec.metadata;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.WARNING,
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
-        onClick: () => eN(eO),
+        onClick: () => eN(ex),
         noticeType: eu.kVF.WIN32_DEPRECATED_MESSAGE
       }),
       eI.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
@@ -189,13 +189,13 @@ case eu.kVF.WIN32_DEPRECATED_MESSAGE:
   });
 case eu.kVF.WIN7_8_DEPRECATED_MESSAGE:
   let {
-    dismissUntil: ex
+    dismissUntil: eO
   } = ec.metadata;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.WARNING,
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
-        onClick: () => eN(ex),
+        onClick: () => eN(eO),
         noticeType: eu.kVF.WIN7_8_DEPRECATED_MESSAGE
       }),
       eI.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
@@ -328,7 +328,7 @@ case eu.kVF.UNCLAIMED_ACCOUNT:
       eI.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT,
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: eu.kVF.UNCLAIMED_ACCOUNT,
-        onClick: () => eg && null != A ? (0, U.hk)(A) : x.j(),
+        onClick: () => eg && null != A ? (0, U.hk)(A) : O.j(),
         children: eI.Z.Messages.CLAIM_ACCOUNT
       })
     ]
@@ -347,7 +347,7 @@ case eu.kVF.UNVERIFIED_ACCOUNT:
               email: null == I ? void 0 : I.email
             }),
             secondaryConfirmText: eI.Z.Messages.CHANGE_EMAIL,
-            onConfirmSecondary: x.j
+            onConfirmSecondary: O.j
           });
         },
         children: eI.Z.Messages.RESEND_EMAIL_SHORT
@@ -437,7 +437,7 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
   let {
     skuId: eP,
       applicationId: eD
-  } = ec.metadata, eb = en.Z.get(eP), ej = O.Z.getApplication(eD);
+  } = ec.metadata, eb = en.Z.get(eP), ej = x.Z.getApplication(eD);
   if (null == eb || null == ej)
     return null;
   let eU = {
@@ -486,7 +486,7 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
   let {
     skuId: e,
     applicationId: t
-  } = ec.metadata, n = en.Z.get(e), s = O.Z.getApplication(t);
+  } = ec.metadata, n = en.Z.get(e), s = x.Z.getApplication(t);
   if (null == n || null == s)
     return null;
   return (0, i.jsxs)(c.Notice, {

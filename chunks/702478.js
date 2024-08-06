@@ -60,7 +60,7 @@ return t || e === f.evJ.NOT_ENOUGH_GUILD_MEMBERS ? (0, s.jsx)(u.FormErrorBlock, 
 });
   };
 
-function w(e) {
+function k(e) {
   h.default.track(f.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, {
 guild_id: e
   });
@@ -79,12 +79,12 @@ window.open(f.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, s, t));
 window.open(t);
   });
 }
-let k = () => {
+let w = () => {
   let [e, t] = a.useState(!1), n = (0, l.e7)([R.Z], () => R.Z.getGuildId());
   return (0, s.jsx)(u.Button, {
 className: M.developerPortalCta,
 onClick: () => {
-  t(!0), w(n).then(() => {
+  t(!0), k(n).then(() => {
     t(!1);
   });
 },
@@ -303,7 +303,7 @@ children: [
               variant: 'text-sm/normal',
               children: A.Z.Messages.ACCESS_RATE_ACTION_SUCCESS.format({
                 insightsHook: (e, n) => (0, s.jsx)(T.Z, {
-                  onClick: () => w(t),
+                  onClick: () => k(t),
                   className: M.link,
                   children: e
                 }, n)
@@ -396,7 +396,7 @@ children: [
         variant: 'text-sm/normal',
         children: A.Z.Messages.GUILD_ANALYTICS_DEVELOPERS_CTA
       }),
-      (0, s.jsx)(k, {})
+      (0, s.jsx)(w, {})
     ]
   }),
   d

@@ -56,7 +56,7 @@ onDragReset: D
   }), B = (0, l.cj)([N.Z], () => {
 var e;
 return null !== (e = N.Z.errors[S]) && void 0 !== e ? e : x;
-  }), [y, F] = a.useState(!1), [w, k] = a.useState(!1), H = null !== (t = B.options) && void 0 !== t ? t : B.optionErrors.filter(E.lm)[0], V = B.config, Y = v && i.options.length >= h.fY, W = (0, u.kl)(n.id, Array.from(j), [i]).length - j.size, z = a.useRef(null);
+  }), [y, F] = a.useState(!1), [k, w] = a.useState(!1), H = null !== (t = B.options) && void 0 !== t ? t : B.optionErrors.filter(E.lm)[0], V = B.config, Y = v && i.options.length >= h.fY, W = (0, u.kl)(n.id, Array.from(j), [i]).length - j.size, z = a.useRef(null);
   return (a.useLayoutEffect(() => {
 setTimeout(() => {
   if (0 === S && !d) {
@@ -67,13 +67,13 @@ setTimeout(() => {
   }, [d]), y) ? (0, s.jsx)(o.FocusRing, {
 children: (0, s.jsxs)('div', {
   tabIndex: 0,
-  onFocus: () => k(!0),
-  onBlur: () => k(!1),
-  onMouseLeave: () => k(!1),
+  onFocus: () => w(!0),
+  onBlur: () => w(!1),
+  onMouseLeave: () => w(!1),
   className: r()(C.container, {
     [C.dropIndicatorBefore]: null != U && S < U,
     [C.dropIndicatorAfter]: null != U && S > U,
-    [C.containerFocused]: w
+    [C.containerFocused]: k
   }),
   ref: e => b(G(e)),
   children: [
@@ -126,12 +126,12 @@ children: (0, s.jsxs)('div', {
   }) : (0, s.jsx)(o.FocusRing, {
 children: (0, s.jsxs)('div', {
   tabIndex: 0,
-  onFocus: () => k(!0),
-  onBlur: () => k(!1),
+  onFocus: () => w(!0),
+  onBlur: () => w(!1),
   className: r()(C.container, {
     [C.dropIndicatorBefore]: null != U && S < U,
     [C.dropIndicatorAfter]: null != U && S > U,
-    [C.containerFocused]: w
+    [C.containerFocused]: k
   }),
   ref: e => b(G(e)),
   children: [

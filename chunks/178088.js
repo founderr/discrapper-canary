@@ -31,8 +31,8 @@ function R(e) {
 onOpen: t,
 onClose: n,
 children: R,
-badgeState: O,
-popoutPosition: x,
+badgeState: x,
+popoutPosition: O,
 popoutAlign: M
   } = e, {
 analyticsLocations: v
@@ -113,7 +113,7 @@ location: 'RecentsPopout'
 value: v,
 children: (0, i.jsx)(o.Popout, {
   animation: o.Popout.Animation.NONE,
-  position: x,
+  position: O,
   align: M,
   autoInvert: !1,
   shouldShow: L,
@@ -123,16 +123,16 @@ children: (0, i.jsx)(o.Popout, {
       'aria-label': A.Z.Messages.INBOX,
       children: P === l.X.FOR_YOU ? (0, i.jsx)(h.Z, {
         setTab: D,
-        badgeState: O,
+        badgeState: x,
         closePopout: U
       }) : P === l.X.MENTIONS ? (0, i.jsx)(f.Z, {
         setTab: D,
         onJump: w,
-        badgeState: O,
+        badgeState: x,
         closePopout: U
       }) : F && P === l.X.GAME_INVITES ? (0, i.jsx)(g.Z, {
         setTab: D,
-        badgeState: O,
+        badgeState: x,
         closePopout: U
       }) : G && P === l.X.BOOKMARKS ? (0, i.jsx)(N.Z, {
         setTab: D,
@@ -146,7 +146,7 @@ children: (0, i.jsx)(o.Popout, {
         fallback: (0, i.jsx)(p.h, {
           setTab: D,
           closePopout: U,
-          badgeState: O
+          badgeState: x
         }),
         children: (0, i.jsx)(p.Z, {
           setTab: D,
@@ -154,7 +154,7 @@ children: (0, i.jsx)(o.Popout, {
           showTutorial: b,
           setSeenTutorial: j,
           closePopout: U,
-          badgeState: O
+          badgeState: x
         })
       })
     });

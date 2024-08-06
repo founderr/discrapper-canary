@@ -19,8 +19,8 @@ var s = l(735250),
   _ = l(626135),
   I = l(572004),
   x = l(630388),
-  N = l(971130),
-  m = l(530436),
+  m = l(971130),
+  N = l(530436),
   T = l(245335),
   h = l(981631),
   g = l(689938),
@@ -37,10 +37,10 @@ let {
   hideValue: t,
   onCopy: r,
   disabled: o
-} = e, [u, E] = a.useState(!1), [_, x] = a.useState(!1), N = a.useMemo(() => new d.sW(1000, () => x(!1)), [x]);
+} = e, [u, E] = a.useState(!1), [_, x] = a.useState(!1), m = a.useMemo(() => new d.sW(1000, () => x(!1)), [x]);
 return a.useEffect(() => () => {
-  N.cancel();
-}, [N]), (0, s.jsxs)('div', {
+  m.cancel();
+}, [m]), (0, s.jsxs)('div', {
   className: i()(S.input, C.__invalid_flexJustifyBetween, C.flexCenter, {
     [S.success]: _,
     [S.focused]: u
@@ -65,7 +65,7 @@ return a.useEffect(() => () => {
       color: _ ? c.Button.Colors.GREEN : c.Button.Colors.BRAND,
       className: v.copyButton,
       onClick: () => {
-        x(!0), N.delay(), r(n);
+        x(!0), m.delay(), r(n);
       },
       disabled: o,
       children: _ ? g.Z.Messages.INVITE_COPIED : g.Z.Messages.COPY
@@ -136,7 +136,7 @@ return (0, s.jsxs)(s.Fragment, {
       variant: 'text-xs/normal',
       className: i()(L.marginTop8, v.footerText),
       children: [
-        (0, N.Vg)(G, O),
+        (0, m.Vg)(G, O),
         ' ',
         t ? (0, s.jsx)(c.Anchor, {
           onClick: () => j(T.RV.SETTINGS),
@@ -156,7 +156,7 @@ return (0, s.jsxs)(s.Fragment, {
         })
       ]
     }) : null,
-    null != U ? (0, s.jsx)(m.W, {
+    null != U ? (0, s.jsx)(N.W, {
       guild: n,
       error: U,
       onClose: o

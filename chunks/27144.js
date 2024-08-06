@@ -31,7 +31,7 @@ treatments: [{
     }
   },
   {
-    id: 2,
+    id: 3,
     label: 'New activity cards enabled',
     config: {
       pastActivityEnabled: !1,

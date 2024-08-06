@@ -1,4 +1,4 @@
-i.d(n, {
+n.d(i, {
   C: function() {
 return a;
   },
@@ -6,15 +6,15 @@ return a;
 return s;
   }
 });
-var t = i(981631),
-  o = i(486324);
+var t = n(981631),
+  o = n(486324);
 
-function a(e, n) {
+function a(e, i) {
   let {
-isGIF: i
-  } = n;
+isGIF: n
+  } = i;
   if (e === o.pC.GUILD_BANNER)
-return i ? t.oNc.ANIMATED_BANNER : t.oNc.BANNER;
+return n ? t.oNc.ANIMATED_BANNER : t.oNc.BANNER;
 }
 
 function s(e) {

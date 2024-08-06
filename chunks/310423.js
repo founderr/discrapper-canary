@@ -38,7 +38,7 @@ children: (0, i.jsx)(o.Text, {
   });
 }
 t.Z = s.memo(function(e) {
-  var t, n, a, r, O, x;
+  var t, n, a, r, x, O;
   let M, {
   channel: v,
   messageId: L,
@@ -69,26 +69,26 @@ let e = [],
     e.name,
     e
   ]));
-for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
+for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
   e = e.concat(function e(t) {
     var n, a, r, l, u, d, _;
     let g, {
-        option: O,
-        channel: x,
+        option: x,
+        channel: O,
         guild: M,
         messageId: v,
         parentOptionKey: L,
         commandOptionSpec: Z,
         sourceAnalyticsLocations: P
       } = t,
-      D = null != L ? L + ' ' + O.name : O.name;
-    if (O.type === c.jw.SUB_COMMAND || O.type === c.jw.SUB_COMMAND_GROUP) {
+      D = null != L ? L + ' ' + x.name : x.name;
+    if (x.type === c.jw.SUB_COMMAND || x.type === c.jw.SUB_COMMAND_GROUP) {
       let t = [(0, i.jsxs)(s.Fragment, {
           children: [
             ' ',
             (0, i.jsx)(o.Text, {
               ...S,
-              children: null !== (a = null == Z ? void 0 : Z.name_localized) && void 0 !== a ? a : O.name
+              children: null !== (a = null == Z ? void 0 : Z.name_localized) && void 0 !== a ? a : x.name
             })
           ]
         }, D)],
@@ -96,10 +96,10 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           e.name,
           e
         ]));
-      for (let n of null !== (l = O.options) && void 0 !== l ? l : [])
+      for (let n of null !== (l = x.options) && void 0 !== l ? l : [])
         t = t.concat(e({
           option: n,
-          channel: x,
+          channel: O,
           guild: M,
           messageId: v,
           parentOptionKey: D,
@@ -108,20 +108,20 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
         }));
       return t;
     }
-    let b = O.value;
-    if (null != O.value)
-      switch (O.type) {
+    let b = x.value;
+    if (null != x.value)
+      switch (x.type) {
         case c.jw.USER: {
-          let e = O.value.toString(),
+          let e = x.value.toString(),
             t = h.default.getUser(e);
           if (null != t) {
-            let e = (0, N.ij)(t, x);
+            let e = (0, N.ij)(t, O);
             g = (0, i.jsxs)(E.Z, {
               ...A,
               onClick: () => (0, I.openUserProfileModal)({
                 userId: t.id,
-                guildId: x.guild_id,
-                channelId: x.id,
+                guildId: O.guild_id,
+                channelId: O.id,
                 messageId: v,
                 sourceAnalyticsLocations: P,
                 analyticsLocation: {
@@ -137,7 +137,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           break;
         }
         case c.jw.CHANNEL: {
-          let e = O.value.toString(),
+          let e = x.value.toString(),
             t = m.Z.getChannel(e);
           null != t && (g = (0, i.jsxs)(E.Z, {
             ...A,
@@ -149,7 +149,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           break;
         }
         case c.jw.ROLE: {
-          let e = O.value.toString(),
+          let e = x.value.toString(),
             t = null != M ? T.Z.getRole(M.id, e) : void 0;
           null != t && (g = (0, i.jsxs)(E.Z, {
             ...A,
@@ -161,7 +161,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           break;
         }
         case c.jw.MENTIONABLE: {
-          let e = O.value.toString(),
+          let e = x.value.toString(),
             t = null != M ? T.Z.getRole(M.id, e) : void 0;
           if (null != t)
             g = (0, i.jsxs)(E.Z, {
@@ -173,12 +173,12 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           else {
             let t = h.default.getUser(e);
             if (null != t) {
-              let e = (0, N.ij)(t, x);
+              let e = (0, N.ij)(t, O);
               g = (0, i.jsxs)(E.Z, {
                 ...A,
                 onClick: () => (0, I.openUserProfileModal)({
                   userId: t.id,
-                  guildId: x.guild_id,
+                  guildId: O.guild_id,
                   analyticsLocation: {
                     section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE
                   }
@@ -196,7 +196,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           g = R(p.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
           break;
         default: {
-          let e = null == Z ? void 0 : null === (u = Z.choices) || void 0 === u ? void 0 : u.find(e => e.value === O.value);
+          let e = null == Z ? void 0 : null === (u = Z.choices) || void 0 === u ? void 0 : u.find(e => e.value === x.value);
           null != e && (b = null !== (d = e.name_localized) && void 0 !== d ? d : e.name);
         }
       }
@@ -206,7 +206,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           ...S,
           children: [
             ' ',
-            null !== (_ = null == Z ? void 0 : Z.name_localized) && void 0 !== _ ? _ : O.name,
+            null !== (_ = null == Z ? void 0 : Z.name_localized) && void 0 !== _ ? _ : x.name,
             ': '
           ]
         }),
@@ -228,7 +228,7 @@ M = (0, i.jsxs)(i.Fragment, {
       ...S,
       children: [
         '/',
-        null !== (x = null === (a = Z.application_command) || void 0 === a ? void 0 : a.name_localized) && void 0 !== x ? x : Z.name
+        null !== (O = null === (a = Z.application_command) || void 0 === a ? void 0 : a.name_localized) && void 0 !== O ? O : Z.name
       ]
     }),
     e

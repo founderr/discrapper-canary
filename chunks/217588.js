@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(453070),
   A = n(926491),
   R = n(378233),
-  O = n(419922),
-  x = n(688179),
+  x = n(419922),
+  O = n(688179),
   M = n(981631),
   v = n(474936),
   L = n(689938),
@@ -59,7 +59,7 @@ description: n
   } = e;
   return (0, i.jsxs)(d.Z, {
 children: [
-  (0, i.jsx)(O.ZP, {
+  (0, i.jsx)(x.ZP, {
     sticker: t,
     size: 48,
     isInteracting: !0
@@ -125,7 +125,7 @@ return (s.useEffect(() => {
     }),
     (0, i.jsx)('ul', {
       className: Z.stickersList,
-      children: E.map(e => (0, i.jsx)(O.ZP, {
+      children: E.map(e => (0, i.jsx)(x.ZP, {
         isInteracting: !0,
         size: 80,
         sticker: e
@@ -137,7 +137,7 @@ return (s.useEffect(() => {
         color: o.Button.Colors.PRIMARY,
         size: o.Button.Sizes.SMALL,
         onClick: () => {
-          _ && (0, x.m)({
+          _ && (0, O.m)({
             stickerPack: c,
             stickerPickerCategories: I
           }), t();
@@ -156,7 +156,7 @@ let t, {
     refreshPositionKey: h
   } = e,
   [S, A] = s.useState(null),
-  [R, x] = s.useState(!1),
+  [R, O] = s.useState(!1),
   D = f.default.getCurrentUser(),
   b = g.ZP.canUseCustomStickersEverywhere(D),
   y = (0, l.e7)([C.Z], () => C.Z.getGuild(n.guild_id)),
@@ -175,7 +175,7 @@ let t, {
   });
 s.useEffect(() => {
   (async () => {
-    (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, I.Z)(n.id)), x(!0);
+    (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, I.Z)(n.id)), O(!0);
   })();
 }, [
   n.id,
@@ -309,7 +309,7 @@ return (s.useEffect(() => {
                         null == s || s(), w(null);
                       },
                       ...a,
-                      children: (0, i.jsx)(O.ZP, {
+                      children: (0, i.jsx)(x.ZP, {
                         size: 32,
                         enlargeOnInteraction: !0,
                         enlargeWithName: !1,

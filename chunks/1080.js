@@ -375,13 +375,13 @@ B.currentPage
   let F = a.useCallback(e => {
   _.Z.fetchGuildBansBatch(p, 1000, e);
 }, [p]),
-w = a.useMemo(() => o().chunk(M, B.pageSize), [
+k = a.useMemo(() => o().chunk(M, B.pageSize), [
   B.pageSize,
   M
 ]),
-k = a.useCallback(e => {
+w = a.useCallback(e => {
   var t, n, s;
-  if (null === (t = f.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > M.length && b && !I && (H.current = null !== (s = null === (n = M[M.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== s ? s : null, F(H.current)), null != w[e - 1] || !!b)
+  if (null === (t = f.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > M.length && b && !I && (H.current = null !== (s = null === (n = M[M.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== s ? s : null, F(H.current)), null != k[e - 1] || !!b)
     y(t => ({
       ...t,
       currentPage: e
@@ -390,7 +390,7 @@ k = a.useCallback(e => {
   B.pageSize,
   M,
   b,
-  w,
+  k,
   F,
   I
 ]),
@@ -400,9 +400,9 @@ F(H.current);
   }, [F]);
   let V = a.useMemo(() => {
 var e;
-return null !== (e = w[B.currentPage - 1]) && void 0 !== e ? e : [];
+return null !== (e = k[B.currentPage - 1]) && void 0 !== e ? e : [];
   }, [
-w,
+k,
 B.currentPage
   ]);
   return null == i ? null : (0, s.jsxs)('div', {
@@ -449,7 +449,7 @@ children: [
       totalCount: M.length + (b ? B.pageSize : 0),
       pageSize: B.pageSize,
       currentPage: B.currentPage,
-      onPageChange: k,
+      onPageChange: w,
       maxVisiblePages: 9
     })
   })

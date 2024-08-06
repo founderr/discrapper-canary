@@ -21,8 +21,8 @@ var i, s = n(735250),
   S = n(598077),
   A = n(757266),
   R = n(831506),
-  O = n(271383),
-  x = n(283595),
+  x = n(271383),
+  O = n(283595),
   M = n(293273),
   v = n(594174),
   L = n(181106),
@@ -249,13 +249,13 @@ B(G, 'defaultProps', {
   C.Z,
   R.Z,
   M.Z,
-  x.Z,
+  O.Z,
   h.Z,
   Z.Z,
   A.Z,
   L.Z,
   v.default,
-  O.ZP
+  x.ZP
 ], e => {
   let {
 activity: t,
@@ -269,7 +269,7 @@ id: l
   } = null != i ? i : {}, o = null != t && null != t.party && t.party.id === s ? R.Z.getParty(t.party.id) : null, c = null != l ? M.Z.getApplicationActivity(l) : M.Z.findActivity(e => e.type === U.IIU.LISTENING), u = !1;
   null != l && (u = L.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
   let d = Array.from(null != o ? o : []).map(e => {
-  let t = null != r ? O.ZP.getMember(r, e) : null,
+  let t = null != r ? x.ZP.getMember(r, e) : null,
     n = null != t ? t.nick : null,
     i = v.default.getUser(e),
     s = null == i;
@@ -292,7 +292,7 @@ myPartyId: null != c && null != c.party ? c.party.id : null,
 isLaunching: u,
 isSyncable: _ && !I,
 isLaunchable: null != l && (0, b.t)({
-  LibraryApplicationStore: x.Z,
+  LibraryApplicationStore: O.Z,
   LaunchableGameStore: h.Z,
   DispatchApplicationStore: Z.Z,
   ConnectedAppsStore: A.Z,

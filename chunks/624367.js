@@ -27,8 +27,8 @@ var s = n(613828),
   S = n(147865),
   A = n(778569),
   R = n(513202),
-  O = n(884338),
-  x = n(403404),
+  x = n(884338),
+  O = n(403404),
   M = n(701488),
   v = n(981631),
   L = n(689938),
@@ -83,7 +83,7 @@ if (G) {
     }) : t();
   }
 } else
-  (0, x.Z)({
+  (0, O.Z)({
     guildId: k,
     locationObject: U.location,
     openInPopout: q,
@@ -131,7 +131,7 @@ children: (0, i.jsxs)('div', {
           children: [
             z.length > 0 ? (0, i.jsx)('div', {
               className: Z.avatars,
-              children: (0, i.jsx)(O.Z, {
+              children: (0, i.jsx)(x.Z, {
                 guildId: k,
                 users: z,
                 max: 4

@@ -1,6 +1,6 @@
 i.d(s, {
   Z: function() {
-return m;
+return E;
   }
 });
 var n = i(735250);
@@ -17,28 +17,28 @@ var l = i(120356),
   _ = i(689938),
   f = i(988546);
 
-function m(e) {
+function E(e) {
   let {
 user: s,
 displayProfile: i
-  } = e, l = (0, o.e7)([c.Z], () => c.Z.findActivity(s.id, e => e.type === I.IIU.CUSTOM_STATUS)), m = u.ZP.getName(s);
+  } = e, l = (0, o.e7)([c.Z], () => c.Z.findActivity(s.id, e => e.type === I.IIU.CUSTOM_STATUS)), E = u.ZP.getName(s);
   return (0, n.jsxs)('div', {
 className: f.container,
 children: [
-  null == m && (0, n.jsx)(r.Z, {
+  null == E && (0, n.jsx)(r.Z, {
     user: s,
     className: f.nameTag,
     usernameClass: f.username,
     discriminatorClass: f.discriminator
   }),
-  null != m && (0, n.jsxs)('div', {
+  null != E && (0, n.jsxs)('div', {
     children: [
       (0, n.jsx)(a.Text, {
         variant: 'text-lg/semibold',
         style: {
           marginRight: '12px'
         },
-        children: m
+        children: E
       }),
       (0, n.jsx)(r.Z, {
         user: s,

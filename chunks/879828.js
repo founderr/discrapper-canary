@@ -15,11 +15,11 @@ var n = i(735250),
   I = i(678738),
   _ = i(151545),
   f = i(527790),
-  m = i(304042),
-  E = i(981631),
-  S = i(921944),
-  x = i(689938),
-  v = i(122606);
+  E = i(304042),
+  m = i(981631),
+  x = i(921944),
+  v = i(689938),
+  S = i(122606);
 
 function Z(e) {
   let {
@@ -35,23 +35,23 @@ trackUserProfileAction: p,
 live: g,
 recent: N,
 stream: j
-  } = (0, u.Z)(s.id), A = s.id === i.id, C = (0, r.wE)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+  } = (0, u.Z)(s.id), C = s.id === i.id, A = (0, r.wE)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
   return l.useEffect(() => {
-if (!!A && !C)
+if (!!C && !A)
   (0, r.EW)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
-    dismissAction: S.L.AUTO_DISMISS,
+    dismissAction: x.L.AUTO_DISMISS,
     forceTrack: !0
   });
   }, [
-A,
-C
+C,
+A
   ]), (0, n.jsxs)(o.ScrollerThin, {
-className: v.scroller,
+className: S.scroller,
 fade: !0,
 children: [
   (0, n.jsxs)(I.Z, {
     children: [
-      null != j && (0, n.jsx)(m.Z, {
+      null != j && (0, n.jsx)(E.Z, {
         user: s,
         currentUser: i,
         stream: j,
@@ -60,7 +60,7 @@ children: [
           p({
             action: 'JOIN_ACTIVITY'
           }), (0, c.Ac)({
-            activityType: E.IIU.STREAMING,
+            activityType: m.IIU.STREAMING,
             analyticsLocations: h,
             ...T
           });
@@ -89,11 +89,11 @@ children: [
   }),
   (0, n.jsx)(I.Z, {
     heading: (0, n.jsxs)('div', {
-      className: v.heading,
+      className: S.heading,
       children: [
-        x.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+        v.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
         (0, n.jsx)(o.Tooltip, {
-          text: x.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_INFORMATION_TOOLTIP,
+          text: v.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_INFORMATION_TOOLTIP,
           children: e => (0, n.jsx)(o.CircleInformationIcon, {
             ...e,
             size: 'xxs',

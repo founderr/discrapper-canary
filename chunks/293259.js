@@ -1,6 +1,6 @@
 i.d(s, {
   Z: function() {
-return C;
+return A;
   }
 });
 var n = i(735250),
@@ -15,11 +15,11 @@ var n = i(735250),
   I = i(699516),
   _ = i(998502),
   f = i(785717),
-  m = i(621853),
-  E = i(204197),
-  S = i(735336),
-  x = i(520978),
-  v = i(184325),
+  E = i(621853),
+  m = i(204197),
+  x = i(735336),
+  v = i(520978),
+  S = i(184325),
   Z = i(652853),
   h = i(225714),
   p = i(228168),
@@ -27,20 +27,20 @@ var n = i(735250),
   g = i(689938),
   N = i(520067);
 let j = a.AvatarSizes.SIZE_120,
-  A = _.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+  C = _.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
-function C(e) {
+function A(e) {
   let {
 displayProfile: s,
 user: _,
-guildId: C,
+guildId: A,
 channelId: R,
 friendToken: O,
-className: M,
-isStreaming: U,
-hasProfileEffect: L,
-onClose: b
-  } = e, P = (0, t.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, t.e7)([m.Z], () => m.Z.getUserProfile(_.id)), B = (0, t.e7)([c.default], () => c.default.getId() === _.id), {
+className: L,
+isStreaming: M,
+hasProfileEffect: U,
+onClose: P
+  } = e, b = (0, t.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, t.e7)([E.Z], () => E.Z.getUserProfile(_.id)), B = (0, t.e7)([c.default], () => c.default.getId() === _.id), {
 theme: G
   } = (0, Z.z)(), {
 trackUserProfileAction: w
@@ -48,34 +48,34 @@ trackUserProfileAction: w
 avatarSrc: k,
 eventHandlers: V,
 avatarDecorationSrc: Y
-  } = (0, E.Z)({
+  } = (0, m.Z)({
 user: _,
 size: j
-  }), H = l.useMemo(() => (0, d.W)(_, R), [
+  }), W = l.useMemo(() => (0, d.W)(_, R), [
 _,
 R
   ]);
   return (0, n.jsxs)('header', {
-className: M,
+className: L,
 children: [
-  (0, n.jsx)(S.Z, {
+  (0, n.jsx)(x.Z, {
     displayProfile: s,
-    onClose: b,
+    onClose: P,
     user: _,
     profileType: p.y0.MODAL,
-    hasProfileEffect: L
+    hasProfileEffect: U
   }),
   (0, n.jsxs)('div', {
     className: N.header,
     children: [
       (0, n.jsx)('div', {
         ...V,
-        children: (0, n.jsx)(A, {
+        children: (0, n.jsx)(C, {
           src: k,
           avatarDecoration: Y,
           size: j,
           className: N.avatar,
-          status: H ? T.Sk.UNKNOWN : U ? T.Sk.STREAMING : D,
+          status: W ? T.Sk.UNKNOWN : M ? T.Sk.STREAMING : D,
           statusBackdropColor: (0, a.getStatusBackdropColor)(G),
           isMobile: y,
           statusTooltip: !0,
@@ -96,28 +96,28 @@ children: [
               className: N.warningCircleIcon,
               color: o.Z.unsafe_rawColors.YELLOW_300.css
             })
-          }) : (0, n.jsx)(v.Z, {
+          }) : (0, n.jsx)(S.Z, {
             user: _,
             className: N.badgeList,
-            guildId: C,
-            size: v.V.SIZE_24,
+            guildId: A,
+            size: S.V.SIZE_24,
             shrinkAtCount: 8,
-            shrinkToSize: v.V.SIZE_18,
-            onBadgeClick: b
+            shrinkToSize: S.V.SIZE_18,
+            onBadgeClick: P
           }),
           (0, n.jsxs)('div', {
             className: N.relationshipButtons,
             children: [
-              (null == F ? void 0 : F.application) != null && (0, n.jsx)(x.Z, {
+              (null == F ? void 0 : F.application) != null && (0, n.jsx)(v.Z, {
                 className: N.applicationInstallButton,
                 application: F.application
               }),
               (0, n.jsx)(h.Z, {
                 user: _,
                 isCurrentUser: B,
-                relationshipType: P,
+                relationshipType: b,
                 friendToken: O,
-                onClose: b
+                onClose: P
               }),
               B || _.isNonUserBot() ? null : (0, n.jsx)(a.Clickable, {
                 focusProps: {
@@ -136,10 +136,10 @@ children: [
                       ...s,
                       user: _,
                       isCurrentUser: B,
-                      guildId: C,
-                      relationshipType: P,
+                      guildId: A,
+                      relationshipType: b,
                       trackUserProfileAction: w,
-                      onClose: b
+                      onClose: P
                     });
                   });
                 },

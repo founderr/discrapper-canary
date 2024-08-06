@@ -47,13 +47,13 @@ g && null != e && t.push(e);
   (null == S || '' === S) && (S = t.length > 0 ? t.filter(d.lm).map(e => e.username).join(', ') : I.Z.Messages.UNNAMED);
   let A = g ? h : N,
 R = I.Z.Messages.JOIN_GUILD,
-O = l.Z.Button.Colors.GREEN;
-  g && (R = I.Z.Messages.JOINED_GUILD, O = l.Z.Button.Colors.PRIMARY);
-  let x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
-  return C && (x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(l.Z, {
+x = l.Z.Button.Colors.GREEN;
+  g && (R = I.Z.Messages.JOINED_GUILD, x = l.Z.Button.Colors.PRIMARY);
+  let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+  return C && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, i.jsxs)(l.Z, {
 children: [
   (0, i.jsx)(l.Z.Header, {
-    text: x
+    text: O
   }),
   (0, i.jsxs)(l.Z.Body, {
     children: [
@@ -77,7 +77,7 @@ children: [
         onClick: A,
         submitting: f,
         isDisabled: g,
-        color: O,
+        color: x,
         children: R
       })
     ]

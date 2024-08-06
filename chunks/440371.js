@@ -23,8 +23,8 @@ timeSelected: E = !0,
 schedule: _,
 recurrenceRule: I,
 showEndDate: x = !1,
-requireEndDate: N = !1,
-disableStartDateTime: m = !1
+requireEndDate: m = !1,
+disableStartDateTime: N = !1
   } = e;
   if (null == _)
 return null;
@@ -40,14 +40,14 @@ l({
   endDate: e
 });
   };
-  return x && (T = null != _.endDate || N ? (0, s.jsxs)(s.Fragment, {
+  return x && (T = null != _.endDate || m ? (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsxs)('div', {
     className: c.doubleInput,
     children: [
       (0, s.jsx)(i.FormItem, {
         title: d.Z.Messages.CREATE_EVENT_END_DATE_LABEL,
-        required: N,
+        required: m,
         children: (0, s.jsx)(i.DateInput, {
           value: _.endDate,
           onSelect: C,
@@ -57,7 +57,7 @@ children: [
       }),
       (0, s.jsx)(i.FormItem, {
         title: d.Z.Messages.CREATE_EVENT_END_TIME_LABEL,
-        required: N,
+        required: m,
         children: (0, s.jsx)(i.TimeInput, {
           value: _.endDate,
           onChange: C
@@ -65,7 +65,7 @@ children: [
       })
     ]
   }),
-  N ? null : (0, s.jsx)(i.Button, {
+  m ? null : (0, s.jsx)(i.Button, {
     onClick: () => {
       C(void 0);
     },
@@ -130,7 +130,7 @@ children: [
           },
           minDate: g,
           maxDate: v,
-          disabled: m
+          disabled: N
         })
       }),
       (0, s.jsx)(i.FormItem, {
@@ -146,7 +146,7 @@ children: [
               });
           },
           hideValue: !E,
-          disabled: m
+          disabled: N
         })
       })
     ]

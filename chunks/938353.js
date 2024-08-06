@@ -31,8 +31,8 @@ var i, s = n(735250),
   S = n(960904),
   A = n(161314),
   R = n(163268),
-  O = n(25610),
-  x = n(703751),
+  x = n(25610),
+  O = n(703751),
   M = n(761538),
   v = n(674611),
   L = n(346610),
@@ -85,8 +85,8 @@ var i, s = n(735250),
   eS = n(169525),
   eA = n(161010),
   eR = n(461157),
-  eO = n(901461),
-  ex = n(432376),
+  ex = n(901461),
+  eO = n(432376),
   eM = n(384203),
   ev = n(633957),
   eL = n(530472),
@@ -687,8 +687,8 @@ let {
 } = this.props, {
   showSuppressModal: a,
   showRemoveAttachmentModal: r
-} = this.state, o = this.renderCodedLinks(t), c = this.renderGiftCodes(t), u = this.renderReferralTrial(t), d = this.renderAttachments(t), _ = this.renderCtaButton(), E = this.renderSocialProofingFileSizeNitroUpsell(t), I = this.renderEmbeds(t), m = this.renderActivityInvite(t), T = this.renderReactions(t), h = this.renderPublishBump(t), N = this.renderEphemeralAccessories(t), C = this.renderStickersAccessories(t), f = this.renderThreadAccessories(t), p = this.renderComponentAccessories(t), g = this.renderThreadRoleMentionWarning(t), S = this.renderEmbeddedApplicationInstanceEmbed(t), A = this.renderInteractionPremiumUpsell(t), R = this.renderMediaPostEmbeds(t), O = this.renderSafetyPolicyNotice(t), x = this.renderSafetySystemNotification(t), M = this.renderVoiceChannelInvite(t, n), v = this.renderMediaObscureNotice(t), L = this.renderPoll(t, i), Z = this.renderForwardedMessage(t);
-return null == o && null == d && null == I && null == m && null == T && null == c && null == u && null == h && null == N && null == C && null == f && null == p && null == S && null == g && null == R && null == O && null != A && null == L && null == M && null == Z ? null : (0, s.jsxs)('div', {
+} = this.state, o = this.renderCodedLinks(t), c = this.renderGiftCodes(t), u = this.renderReferralTrial(t), d = this.renderAttachments(t), _ = this.renderCtaButton(), E = this.renderSocialProofingFileSizeNitroUpsell(t), I = this.renderEmbeds(t), m = this.renderActivityInvite(t), T = this.renderReactions(t), h = this.renderPublishBump(t), N = this.renderEphemeralAccessories(t), C = this.renderStickersAccessories(t), f = this.renderThreadAccessories(t), p = this.renderComponentAccessories(t), g = this.renderThreadRoleMentionWarning(t), S = this.renderEmbeddedApplicationInstanceEmbed(t), A = this.renderInteractionPremiumUpsell(t), R = this.renderMediaPostEmbeds(t), x = this.renderSafetyPolicyNotice(t), O = this.renderSafetySystemNotification(t), M = this.renderVoiceChannelInvite(t, n), v = this.renderMediaObscureNotice(t), L = this.renderPoll(t, i), Z = this.renderForwardedMessage(t);
+return null == o && null == d && null == I && null == m && null == T && null == c && null == u && null == h && null == N && null == C && null == f && null == p && null == S && null == g && null == R && null == x && null != A && null == L && null == M && null == Z ? null : (0, s.jsxs)('div', {
   id: (0, eb.bX)(t),
   className: l()(e, eK.container),
   children: [
@@ -715,8 +715,8 @@ return null == o && null == d && null == I && null == m && null == T && null == 
     a && this.renderSuppressConfirmModal(),
     r && this.renderRemoveAttachmentConfirmModal(),
     f,
-    O,
     x,
+    O,
     M
   ]
 });
@@ -812,7 +812,7 @@ channel: n,
 message: i,
 renderSuppressEmbeds: a,
 isMessageSnapshot: r
-  } = e, l = (0, c.e7)([eu.default], () => eu.default.getId()), o = ec.x4.useSetting(), u = ec.RS.useSetting(), d = ec.NA.useSetting() && !(0, eO.Z)(e.message), _ = ec.nc.useSetting(), E = ec.QK.useSetting(), I = (0, c.e7)([e_.Z], () => null == n.guild_id || e_.Z.canChatInGuild(n.guild_id), [n]), m = (0, c.e7)([H.Z], () => null != n.guild_id && H.Z.isLurking(n.guild_id), [n]), T = (0, c.e7)([ed.ZP], () => ed.ZP.isCurrentUserGuest(n.guild_id), [n]), h = (0, c.e7)([
+  } = e, l = (0, c.e7)([eu.default], () => eu.default.getId()), o = ec.x4.useSetting(), u = ec.RS.useSetting(), d = ec.NA.useSetting() && !(0, ex.Z)(e.message), _ = ec.nc.useSetting(), E = ec.QK.useSetting(), I = (0, c.e7)([e_.Z], () => null == n.guild_id || e_.Z.canChatInGuild(n.guild_id), [n]), m = (0, c.e7)([H.Z], () => null != n.guild_id && H.Z.isLurking(n.guild_id), [n]), T = (0, c.e7)([ed.ZP], () => ed.ZP.isCurrentUserGuest(n.guild_id), [n]), h = (0, c.e7)([
 ed.ZP,
 eI.default
   ], () => {
@@ -828,7 +828,7 @@ canManageMessages: eE.Z.can(eV.Plq.MANAGE_MESSAGES, n)
   }), [
 I,
 n
-  ]), f = (0, U.ux)(n.guild_id), [, p] = (0, y.AB)(n.guild_id), g = (0, el.$R)(n), S = (l === i.author.id || C) && i.author.id !== eV.LAt && !1 !== a && !(0, eC.yE)(i.flags, eV.iLy.EPHEMERAL) && g && 1 === (0, eR.Z)(i), A = l === i.author.id && g && !r, R = i.author.id === l, M = i.isFirstMessageInForumPost(n), v = (0, ex.Z)({
+  ]), f = (0, U.ux)(n.guild_id), [, p] = (0, y.AB)(n.guild_id), g = (0, el.$R)(n), S = (l === i.author.id || C) && i.author.id !== eV.LAt && !1 !== a && !(0, eC.yE)(i.flags, eV.iLy.EPHEMERAL) && g && 1 === (0, eR.Z)(i), A = l === i.author.id && g && !r, R = i.author.id === l, M = i.isFirstMessageInForumPost(n), v = (0, eO.Z)({
 channel: n,
 canChat: I,
 renderReactions: _,
@@ -838,7 +838,7 @@ isGuest: T,
 communicationDisabled: p,
 isActiveChannelOrUnarchivableThread: g,
 isAutomodQuarantined: f
-  }), P = (0, Y.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), D = (0, Q.Z)(null == n ? void 0 : n.id), b = (0, J.Z)(i), j = (0, O.V)(n.id, i.author.id), B = (0, x.r)(i.id), {
+  }), P = (0, Y.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), D = (0, Q.Z)(null == n ? void 0 : n.id), b = (0, J.Z)(i), j = (0, x.V)(n.id, i.author.id), B = (0, O.r)(i.id), {
 hasInlineForwardButton: k
   } = (0, L.yk)({
 location: 'MessageAccessories'
@@ -882,7 +882,7 @@ renderThreadAccessory: l = !1,
 disableReactionCreates: o = !0,
 disableReactionUpdates: c = !0,
 ...u
-  } = e, d = ec.x4.useSetting(), _ = ec.RS.useSetting(), E = ec.NA.useSetting(), I = ec.QK.useSetting(), m = (0, Y.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, Q.Z)(null == i ? void 0 : i.id), h = (0, O.V)(i.id, n.author.id), N = (0, x.r)(n.id), C = (0, J.Z)(n);
+  } = e, d = ec.x4.useSetting(), _ = ec.RS.useSetting(), E = ec.NA.useSetting(), I = ec.QK.useSetting(), m = (0, Y.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, Q.Z)(null == i ? void 0 : i.id), h = (0, x.V)(i.id, n.author.id), N = (0, O.r)(n.id), C = (0, J.Z)(n);
   return (0, s.jsx)(e1, {
 ...u,
 message: n,

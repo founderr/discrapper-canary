@@ -36,8 +36,8 @@ p = t.hasFlag(h.iLy.IS_CROSSPOST),
   guild: S,
   parentChannel: A,
   user: R,
-  selectedGuildId: O,
-  canAccess: x
+  selectedGuildId: x,
+  canAccess: O
 } = (0, s.cj)([
   m.Z,
   u.Z,
@@ -67,8 +67,8 @@ M = i.useMemo(() => {
     guild: S,
     parentChannel: A,
     user: R,
-    selectedGuildId: O,
-    canAccess: x
+    selectedGuildId: x,
+    canAccess: O
   });
   return null == e ? null : {
     ...e,
@@ -79,8 +79,8 @@ M = i.useMemo(() => {
   S,
   A,
   R,
-  O,
-  x
+  x,
+  O
 ]);
   return i.useEffect(() => {
 if ((null == N ? void 0 : N.threadId) != null) {

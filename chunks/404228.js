@@ -118,10 +118,10 @@ return {
 expandedId: null,
 lastExpandedId: null,
 actionFilterQuery: ''
-  }), B = C._$(Z, i), y = !1, F = a.useRef(null), w = (0, E.Z)(G), k = (0, E.Z)(B), H = () => {
+  }), B = C._$(Z, i), y = !1, F = a.useRef(null), k = (0, E.Z)(G), w = (0, E.Z)(B), H = () => {
 var e;
 return (null === (e = F.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1;
-  }, V = !D && (null == B ? void 0 : B.length) !== (null == k ? void 0 : k.length) && null != F && H(), Y = () => {
+  }, V = !D && (null == B ? void 0 : B.length) !== (null == w ? void 0 : w.length) && null != F && H(), Y = () => {
 let n = {
   expanded: null,
   lastExpanded: null
@@ -146,7 +146,7 @@ null == n || y ? null != n && (y = !1) : (e = null, t = null, P(e => ({
 })), W = Y());
   });
   a.useEffect(() => {
-G.expandedId !== (null == w ? void 0 : w.expandedId) && K();
+G.expandedId !== (null == k ? void 0 : k.expandedId) && K();
   }, []);
   let K = () => {
   let e = F.current;

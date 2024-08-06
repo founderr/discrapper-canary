@@ -26,9 +26,9 @@ var i = n(735250),
   S = n(474936),
   A = n(689938),
   R = n(716862),
-  O = n(372178);
+  x = n(372178);
 
-function x(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -55,7 +55,7 @@ let E = h.default.getCurrentUser(),
 !I && c && (m = (0, i.jsx)(_.X, {
   tooltipText: A.Z.Messages.ADD_BURST_REACTION
 }));
-let T = a ? O : R;
+let T = a ? x : R;
 return (0, i.jsx)(u.Popout, {
   shouldShow: l,
   onRequestClose: this.handleReactionPickerToggle,
@@ -102,9 +102,9 @@ return (0, i.jsx)(u.Popout, {
 });
   }
   constructor(...e) {
-super(...e), x(this, 'state', {
+super(...e), O(this, 'state', {
   isReactionPickerActive: !1
-}), x(this, 'onAddReaction', (e, t) => {
+}), O(this, 'onAddReaction', (e, t) => {
   if (null == e)
     return;
   let {
@@ -115,11 +115,11 @@ super(...e), x(this, 'state', {
   (0, I.rU)(n.id, i.id, (0, m.g1)(e), s ? I.TW.FORUM_TOOLBAR : I.TW.MESSAGE_INLINE_BUTTON, {
     burst: t
   });
-}), x(this, 'handleReactionPickerToggle', () => {
+}), O(this, 'handleReactionPickerToggle', () => {
   this.setState(e => ({
     isReactionPickerActive: !e.isReactionPickerActive
   }));
-}), x(this, 'handleAddReactionClick', e => {
+}), O(this, 'handleAddReactionClick', e => {
   let {
     type: t,
     channel: n
@@ -134,7 +134,7 @@ super(...e), x(this, 'state', {
       object: p.qAy.INLINE_REACTION_PICKER_UPSELL
     }
   }), this.handleReactionPickerToggle();
-}), x(this, 'renderReactionPopout', e => {
+}), O(this, 'renderReactionPopout', e => {
   let {
     closePopout: t
   } = e, {

@@ -15,11 +15,11 @@ var n = i(735250),
   I = i(246946),
   _ = i(785717),
   f = i(648067),
-  m = i(588822),
-  E = i(900927),
-  S = i(652853),
-  x = i(335191),
-  v = i(988246),
+  E = i(588822),
+  m = i(900927),
+  x = i(652853),
+  v = i(335191),
+  S = i(988246),
   Z = i(689938),
   h = i(678108);
 
@@ -33,14 +33,14 @@ scrollToConnections: g = !1
   } = e, {
 trackUserProfileAction: N
   } = (0, _.KZ)(), j = (0, t.e7)([I.Z], () => I.Z.hidePersonalInformation), {
-theme: A
-  } = (0, S.z)(), C = (0, t.e7)([u.default], () => u.default.locale), R = (0, d.Z)('user_profile'), O = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, r.Z)(i.id), M = (0, f.Z)(i.id), U = l.useRef(null);
+theme: C
+  } = (0, x.z)(), A = (0, t.e7)([u.default], () => u.default.locale), R = (0, d.Z)('user_profile'), O = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, r.Z)(i.id), L = (0, f.Z)(i.id), M = l.useRef(null);
   return (l.useLayoutEffect(() => {
 if (g) {
   var e;
-  null == U || null === (e = U.current) || void 0 === e || e.scrollIntoView();
+  null == M || null === (e = M.current) || void 0 === e || e.scrollIntoView();
 }
-  }, [g]), j) ? (0, n.jsx)(v.Z, {}) : (0, n.jsxs)(o.ScrollerThin, {
+  }, [g]), j) ? (0, n.jsx)(S.Z, {}) : (0, n.jsxs)(o.ScrollerThin, {
 fade: !0,
 className: h.infoScroller,
 children: [
@@ -54,7 +54,7 @@ children: [
             className: h.userInfoSectionHeader,
             children: Z.Z.Messages.USER_PROFILE_ABOUT_ME
           }),
-          (0, n.jsx)(m.Z, {
+          (0, n.jsx)(E.Z, {
             className: h.userInfoText,
             userBio: null !== (s = null == p ? void 0 : p.bio) && void 0 !== s ? s : '',
             userId: i.id
@@ -68,7 +68,7 @@ children: [
             className: h.userInfoSectionHeader,
             children: Z.Z.Messages.USER_PROFILE_MEMBER_SINCE
           }),
-          (0, n.jsx)(E.Z, {
+          (0, n.jsx)(m.Z, {
             userId: i.id,
             textClassName: h.userInfoText
           })
@@ -102,11 +102,11 @@ children: [
       })
     ]
   }),
-  (0, n.jsx)(x.OA, {
-    ref: U,
-    connectedAccounts: M,
-    theme: A,
-    locale: C,
+  (0, n.jsx)(v.OA, {
+    ref: M,
+    connectedAccounts: L,
+    theme: C,
+    locale: A,
     className: h.userInfoSection,
     userId: i.id
   })

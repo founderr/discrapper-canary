@@ -191,10 +191,10 @@ renderTier: e => {
     B = P || Z.length > 0,
     y = L - h,
     F = n(872732),
-    w = j - Z.length,
-    k = P ? Math.min(5 - (Z.length + 0) % 5, w) : 0,
+    k = j - Z.length,
+    w = P ? Math.min(5 - (Z.length + 0) % 5, k) : 0,
     H = [];
-  for (let e = 0; e < k; e++)
+  for (let e = 0; e < w; e++)
     H.push((0, s.jsx)(A, {}, 'placeholder-'.concat(e)));
   let V = G === I + 1 && G > O,
     Y = P || V || I > O;

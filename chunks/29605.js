@@ -3,7 +3,7 @@ n.d(t, {
 return H;
   },
   L3: function() {
-return k;
+return w;
   }
 }), n(47120);
 var s = n(735250),
@@ -152,7 +152,7 @@ return (0, s.jsxs)('div', {
   ]
 });
   },
-  w = e => {
+  k = e => {
 let {
   isLoading: t,
   staticEmojis: a,
@@ -180,7 +180,7 @@ return t ? (0, s.jsx)(I.Spinner, {
   ]
 }) : (0, s.jsxs)('div', {
   children: [
-    (0, s.jsx)(k, {
+    (0, s.jsx)(w, {
       title: U.Z.Messages.EMOJI,
       maxSlots: l.getMaxEmojiSlots(),
       emojiCount: a.length
@@ -189,7 +189,7 @@ return t ? (0, s.jsx)(I.Spinner, {
       emojis: a,
       guild: l
     }),
-    (0, s.jsx)(k, {
+    (0, s.jsx)(w, {
       title: U.Z.Messages.ANIMATED_EMOJI,
       maxSlots: l.getMaxEmojiSlots(),
       emojiCount: i.length
@@ -201,7 +201,7 @@ return t ? (0, s.jsx)(I.Spinner, {
   ]
 });
   },
-  k = e => {
+  w = e => {
 let {
   title: t,
   maxSlots: n,
@@ -336,7 +336,7 @@ return [
   }, [
 E,
 e.id
-  ]), F = e.getMaxEmojiSlots(), k = Math.max(F - P.length, F - y.length), H = (n, s, a) => (0, g.G)({
+  ]), F = e.getMaxEmojiSlots(), w = Math.max(F - P.length, F - y.length), H = (n, s, a) => (0, g.G)({
 data: n,
 file: s,
 image: a,
@@ -364,7 +364,7 @@ M.current = await (0, I.openModalLazy)(async () => {
   return (0, s.jsxs)('div', {
 className: G.emojiSettings,
 children: [
-  0 === k ? null : (0, s.jsx)(N.Z, {
+  0 === w ? null : (0, s.jsx)(N.Z, {
     className: G.emojiUploadContainer,
     onDrop: z
   }),
@@ -442,15 +442,15 @@ children: [
                 upload_id: t
               });
             },
-            disabled: O || 0 === k || !l,
+            disabled: O || 0 === w || !l,
             submitting: O,
             focusProps: {
               within: !0
             },
             children: [
               U.Z.Messages.UPLOAD_EMOJI,
-              k > 0 ? (0, s.jsx)(p.Z, {
-                disabled: O || 0 === k || !l,
+              w > 0 ? (0, s.jsx)(p.Z, {
+                disabled: O || 0 === w || !l,
                 tabIndex: 0,
                 onChange: H,
                 setLoading: A,
@@ -460,7 +460,7 @@ children: [
           })
         ]
       }),
-      (0, s.jsx)(w, {
+      (0, s.jsx)(k, {
         isLoading: null == E,
         staticEmojis: P,
         animatedEmojis: y,

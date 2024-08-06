@@ -23,10 +23,10 @@ enabled: n,
 imageClassName: l,
 iconWrapperClassName: a,
 ...u
-  } = e, x = (0, o.ZP)(), N = (0, i.wj)(x) ? _ : I, m = {
+  } = e, x = (0, o.ZP)(), m = (0, i.wj)(x) ? _ : I, N = {
 height: 18,
 width: 18,
-color: (0, d.Lq)(N)
+color: (0, d.Lq)(m)
   };
   return (0, s.jsx)(c.Z, {
 className: t()({
@@ -38,10 +38,10 @@ imageClassName: t()(l, E.avatarUploaderInnerSquare, {
 }),
 icon: null != u.image && '' !== u.image ? (0, s.jsx)(r.PencilIcon, {
   size: 'custom',
-  ...m
+  ...N
 }) : (0, s.jsx)(r.ImagePlusIcon, {
   size: 'custom',
-  ...m
+  ...N
 }),
 iconClassName: t()(E.avatarUploadIcon, E.hideDefaultIcon),
 iconWrapperClassName: a,

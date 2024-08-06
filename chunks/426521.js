@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(148789),
   A = n(11825),
   R = n(981631),
-  O = n(689938),
-  x = n(273270),
+  x = n(689938),
+  O = n(273270),
   M = n(756688),
   v = n(886765);
 
@@ -41,14 +41,14 @@ return (0, i.jsx)('div', {});
   let u = null !== (s = E.default.getUser(null === (n = l.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== s ? s : new _.Z(l.other_user),
 d = c.Z.parse(o);
   return (0, i.jsxs)('div', {
-className: x.messagePreviewContainer,
+className: O.messagePreviewContainer,
 children: [
   (0, i.jsx)(r.Z, {
     user: u,
     size: a.AvatarSizes.SIZE_24
   }),
   (0, i.jsx)(a.Text, {
-    className: x.messagePreviewText,
+    className: O.messagePreviewText,
     variant: 'text-sm/normal',
     lineClamp: 2,
     children: d
@@ -67,7 +67,7 @@ item: {
 return null;
   let n = c.Z.parse(t);
   return (0, i.jsx)('div', {
-className: x.calloutContainer,
+className: O.calloutContainer,
 children: (0, i.jsx)(a.Text, {
   variant: 'text-sm/normal',
   lineClamp: 2,
@@ -79,17 +79,17 @@ children: (0, i.jsx)(a.Text, {
 function P(e) {
   let {
 item: t
-  } = e, n = v, s = O.Z.Messages.NOTIFICATION_CENTER_TODO;
-  return t.completed && (n = M, s = O.Z.Messages.NOTIFICATION_CENTER_DONE), (0, i.jsxs)('div', {
-className: x.lifecycleContainer,
+  } = e, n = v, s = x.Z.Messages.NOTIFICATION_CENTER_TODO;
+  return t.completed && (n = M, s = x.Z.Messages.NOTIFICATION_CENTER_DONE), (0, i.jsxs)('div', {
+className: O.lifecycleContainer,
 children: [
   (0, i.jsx)('img', {
-    className: x.checkbox,
+    className: O.checkbox,
     alt: '',
     src: n
   }),
   (0, i.jsx)(a.Text, {
-    className: x.lifecycleText,
+    className: O.lifecycleText,
     variant: 'text-xs/bold',
     color: 'header-secondary',
     children: s
@@ -104,7 +104,7 @@ let {
   ackedBeforeId: d
 } = e, {
   analyticsLocations: _
-} = (0, l.ZP)(), E = (0, p.I)(r, d), O = s.useCallback(async () => {
+} = (0, l.ZP)(), E = (0, p.I)(r, d), x = s.useCallback(async () => {
   if (!E && (0, h.wt)(r), null != r.item_enum && r.item_enum === N.AM.FIND_FRIENDS) {
     (0, a.openModalLazy)(async () => {
       let {
@@ -158,24 +158,24 @@ r.type === N.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (M = (0, i.j
 let v = null != r.local_id,
   D = (0, f.Z)(r);
 return (0, i.jsxs)('div', {
-  className: x.row,
+  className: O.row,
   children: [
     (0, i.jsxs)(a.ClickableContainer, {
-      className: x.rowContent,
+      className: O.rowContent,
       focusProps: {
         offset: 4
       },
       'aria-label': D,
-      onClick: O,
+      onClick: x,
       children: [
         E ? null : (0, i.jsx)('div', {
-          className: x.unread
+          className: O.unread
         }),
         (0, i.jsx)(g.U, {
           item: r
         }),
         (0, i.jsxs)('div', {
-          className: x.body,
+          className: O.body,
           children: [
             'lifecycle_item' === r.type && null != r.item_enum && (0, i.jsx)(P, {
               item: r

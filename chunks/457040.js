@@ -127,7 +127,7 @@ let ea = (0, R.Sd)(u),
             default: t
           } = await Promise.all([
             n.e('93626'),
-            n.e('10831')
+            n.e('28075')
           ]).then(n.bind(n, 136735));
           return n => (0, r.jsx)(t, {
             guildId: e.guild_id,

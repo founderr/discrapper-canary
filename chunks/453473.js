@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(962796),
   A = n(767893),
   R = n(981631),
-  O = n(689938),
-  x = n(144754);
+  x = n(689938),
+  O = n(144754);
 let M = {
 offset: {
   left: 4,
@@ -64,23 +64,23 @@ return s === u.Pr.ALL ? [
   return s.useEffect(() => () => {
 (0, S.Mf)();
   }, []), (0, i.jsx)(d.Dialog, {
-'aria-label': O.Z.Messages.FOR_LATER,
+'aria-label': x.Z.Messages.FOR_LATER,
 children: (0, i.jsxs)('div', {
-  className: x.popoutContainer,
+  className: O.popoutContainer,
   children: [
     (0, i.jsxs)('div', {
       children: [
         (0, i.jsxs)('div', {
-          className: x.headerTitle,
+          className: O.headerTitle,
           children: [
             (0, i.jsx)(d.BookmarkIcon, {
               size: 'md',
               color: 'currentColor',
-              className: x.headerTitleIcon
+              className: O.headerTitleIcon
             }),
             (0, i.jsx)(d.Heading, {
               variant: 'heading-lg/semibold',
-              children: O.Z.Messages.FOR_LATER
+              children: x.Z.Messages.FOR_LATER
             })
           ]
         }),
@@ -90,22 +90,22 @@ children: (0, i.jsxs)('div', {
             look: 'brand',
             selectedItem: n,
             onItemSelect: v,
-            className: x.tabBar,
+            className: O.tabBar,
             children: [
               (0, i.jsx)(d.TabBar.Item, {
                 id: u.Pr.ALL,
-                className: x.tabBarItem,
-                children: O.Z.Messages.FOR_LATER_TAB_ALL
+                className: O.tabBarItem,
+                children: x.Z.Messages.FOR_LATER_TAB_ALL
               }),
               (0, i.jsx)(d.TabBar.Item, {
                 id: u.Pr.BOOKMARKS,
-                className: x.tabBarItem,
-                children: O.Z.Messages.MESSAGE_BOOKMARKS_HEADER
+                className: O.tabBarItem,
+                children: x.Z.Messages.MESSAGE_BOOKMARKS_HEADER
               }),
               (0, i.jsx)(d.TabBar.Item, {
                 id: u.Pr.REMINDERS,
-                className: x.tabBarItem,
-                children: O.Z.Messages.FOR_LATER_TAB_REMINDERS.format({
+                className: O.tabBarItem,
+                children: x.Z.Messages.FOR_LATER_TAB_REMINDERS.format({
                   count: r
                 })
               })
@@ -182,7 +182,7 @@ children: (0, i.jsx)(l.SJ, {
         var t;
         a.current = e, s.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
       },
-      className: x.messagesScroller,
+      className: O.messagesScroller,
       ...r,
       children: t.map(e => (0, i.jsx)(D, {
         savedMessage: e,
@@ -206,10 +206,10 @@ t,
 a
   ]);
   return null == a || null == t.message ? (0, i.jsxs)('div', {
-className: r()(x.messageContainer, x.deletedMessage),
+className: r()(O.messageContainer, O.deletedMessage),
 children: [
   (0, i.jsx)('div', {
-    className: x.deleteIcon,
+    className: O.deleteIcon,
     children: (0, i.jsx)(d.TrashIcon, {
       size: 'xs'
     })
@@ -217,12 +217,12 @@ children: [
   (0, i.jsx)(d.Text, {
     variant: 'text-md/normal',
     color: 'text-secondary',
-    children: O.Z.Messages.FOR_LATER_MESSAGE_DELETED
+    children: x.Z.Messages.FOR_LATER_MESSAGE_DELETED
   }),
   (0, i.jsx)(I.Z, {
-    className: x.hoverBar,
+    className: O.hoverBar,
     children: (0, i.jsx)(I.s, {
-      label: t.saveData.type === o.J.REMINDER ? O.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : O.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
+      label: t.saveData.type === o.J.REMINDER ? x.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : x.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
       icon: d.TrashIcon,
       dangerous: !0,
       onClick: () => t.saveData.type === o.J.REMINDER ? (0, S.bn)(t.saveData) : (0, g.h)(t.saveData)
@@ -230,7 +230,7 @@ children: [
   })
 ]
   }) : (0, i.jsxs)('div', {
-className: x.messageContainer,
+className: O.messageContainer,
 children: [
   (0, i.jsx)(A.Z, {
     channel: a,
@@ -239,14 +239,14 @@ children: [
   (0, i.jsx)(E.Z, {
     message: t.message,
     channel: a,
-    className: r()(x.message, t.complete ? x.disabledMessage : null),
+    className: r()(O.message, t.complete ? O.disabledMessage : null),
     compact: h.jU.getSetting(),
     animateAvatar: !1,
     focusProps: M,
     trackAnnouncementViews: !0
   }, t.message.id),
   (0, i.jsx)(I.Z, {
-    className: x.hoverBar,
+    className: O.hoverBar,
     children: (0, i.jsx)(b, {
       savedMessage: t,
       jumpToMessage: l
@@ -264,7 +264,7 @@ jumpToMessage: n
   return t.saveData.type === o.J.REMINDER ? (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(I.s, {
-    label: O.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
+    label: x.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
     onClick: () => (0, S.Y_)(t.saveData.messageId, !t.complete),
     children: (0, i.jsx)(d.Checkbox, {
       type: d.Checkbox.Types.INVERTED,
@@ -273,12 +273,12 @@ children: [
     })
   }, 'mark-complete'),
   (0, i.jsx)(I.s, {
-    label: O.Z.Messages.MESSAGE_REMINDERS_EDIT,
+    label: x.Z.Messages.MESSAGE_REMINDERS_EDIT,
     icon: d.ClockIcon,
     onClick: () => null
   }, 'edit-reminder'),
   (0, i.jsx)(I.s, {
-    label: O.Z.Messages.JUMP_TO_MESSAGE,
+    label: x.Z.Messages.JUMP_TO_MESSAGE,
     icon: d.ArrowLargeRightIcon,
     onClick: e => n(e)
   }, 'jump-to-message')
@@ -286,17 +286,17 @@ children: [
   }) : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(I.s, {
-    label: O.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
+    label: x.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
     icon: d.ClockIcon,
     onClick: () => null
   }, 'add-reminder'),
   (0, i.jsx)(I.s, {
-    label: O.Z.Messages.JUMP_TO_MESSAGE,
+    label: x.Z.Messages.JUMP_TO_MESSAGE,
     icon: d.ArrowLargeRightIcon,
     onClick: e => n(e)
   }, 'jump-to-message'),
   (0, i.jsx)(I.s, {
-    label: O.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
+    label: x.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
     icon: d.TrashIcon,
     dangerous: !0,
     onClick: () => (0, g.h)(t.saveData)
@@ -308,7 +308,7 @@ children: [
 function j() {
   return (0, i.jsx)(m.Z, {
 Icon: d.DoubleCheckmarkLargeIcon,
-header: O.Z.Messages.FOR_LATER_EMPTY,
-tip: O.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
+header: x.Z.Messages.FOR_LATER_EMPTY,
+tip: x.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
   });
 }

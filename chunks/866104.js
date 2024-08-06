@@ -3,7 +3,7 @@ n.d(t, {
 return M;
   },
   Z: function() {
-return x;
+return O;
   }
 }), n(47120);
 var i = n(735250),
@@ -30,7 +30,7 @@ var i = n(735250),
   A = n(689938),
   R = n(55686);
 
-function O(e) {
+function x(e) {
   let {
 onClick: t
   } = e;
@@ -55,7 +55,7 @@ children: [
   });
 }
 
-function x(e) {
+function O(e) {
   let {
 coverImageAsset: t,
 isPreview: n = !1
@@ -124,7 +124,7 @@ children: [
       (0, i.jsx)(o.Spacer, {
         size: 4
       }),
-      (0, i.jsx)(O, {
+      (0, i.jsx)(x, {
         onClick: () => (0, S.Z)({
           guildId: I
         })
@@ -199,7 +199,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(x, {
+  (0, i.jsx)(O, {
     coverImageAsset: null == E ? void 0 : E.cover_image_asset,
     isPreview: j
   })

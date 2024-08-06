@@ -29,8 +29,8 @@ var i = n(735250),
   S = n(381961),
   A = n(970321),
   R = n(680005),
-  O = n(981631),
-  x = n(272242),
+  x = n(981631),
+  O = n(272242),
   M = n(689938),
   v = n(244623);
 let L = D(function(e) {
@@ -105,13 +105,13 @@ return (0, i.jsx)(P, {
     appName: _.name
   }),
   description: D,
-  link: ''.concat(location.protocol, '//').concat(location.host).concat(O.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, x.ApplicationDirectoryProfileSections.STORE)),
+  link: ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, O.ApplicationDirectoryProfileSections.STORE)),
   onLinkCopy: () => {
     (0, g.X)(t, g.B.STORE_EMBED);
   },
   iconSrc: R,
   onIconClick: () => {
-    b(), C.default.track(O.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+    b(), C.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
       application_id: t,
       area: 'app_icon'
     });
@@ -119,7 +119,7 @@ return (0, i.jsx)(P, {
   children: (0, i.jsx)(E.Z, {
     size: r.ButtonSizes.MEDIUM,
     onClick: () => {
-      b(), C.default.track(O.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+      b(), C.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
         application_id: t,
         area: 'open_store_button'
       });
@@ -175,7 +175,7 @@ let {
 } = (0, u.F5)(null == S ? void 0 : S.id, j);
 if ((0, u.FE)(null == S ? void 0 : S.id, null == S ? void 0 : S.primarySkuId), !y || null == S || null == f)
   return null;
-let k = f.type === O.epS.SUBSCRIPTION,
+let k = f.type === x.epS.SUBSCRIPTION,
   G = null != B && (0, _.KW)(B.sku_flags),
   F = () => {
     (0, r.openModalLazy)(async () => {
@@ -242,7 +242,7 @@ let k = f.type === O.epS.SUBSCRIPTION,
   }) : null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.trim();
 '' === V && (V = void 0);
 let H = () => {
-  C.default.track(O.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+  C.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
     application_id: S.id,
     sku_id: f.id,
     area: 'purchase_button'
@@ -252,13 +252,13 @@ return (0, i.jsx)(P, {
   appName: S.name,
   title: f.name,
   description: V,
-  link: ''.concat(location.protocol, '//').concat(location.host).concat(O.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(S.id, x.ApplicationDirectoryProfileSections.STORE)),
+  link: ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(S.id, O.ApplicationDirectoryProfileSections.STORE)),
   onLinkCopy: () => {
     (0, g.X)(S.id, g.B.SKU_EMBED, d);
   },
   iconSrc: U,
   onIconClick: () => {
-    F(), C.default.track(O.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+    F(), C.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
       application_id: S.id,
       sku_id: f.id,
       area: 'app_icon'
@@ -270,7 +270,7 @@ return (0, i.jsx)(P, {
       (0, i.jsx)(r.Button, {
         color: r.ButtonColors.CUSTOM,
         onClick: () => {
-          w(), C.default.track(O.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+          w(), C.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
             application_id: S.id,
             sku_id: f.id,
             area: 'view_details'

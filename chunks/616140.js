@@ -15,11 +15,11 @@ var n = i(735250),
   I = i(100849),
   _ = i(944546),
   f = i(470900),
-  m = i(988246),
-  E = i(970041),
-  S = i(715388),
-  x = i(879828),
-  v = i(834534),
+  E = i(988246),
+  m = i(970041),
+  x = i(715388),
+  v = i(879828),
+  S = i(834534),
   Z = i(228168),
   h = i(47460);
 
@@ -36,7 +36,7 @@ newActivityCardsEnabled: d
   } = (0, u.z)({
 location: 'SimplifiedUserProfileModalTabs'
   });
-  return s === Z.oh.ACTIVITY && d ? (0, n.jsx)(x.Z, {
+  return s === Z.oh.ACTIVITY && d ? (0, n.jsx)(v.Z, {
 user: l,
 currentUser: t,
 onClose: a
@@ -51,15 +51,15 @@ onClose: a
   }) : s === Z.oh.MUTUAL_GUILDS ? (0, n.jsx)(f.Z, {
 user: l,
 onClose: a
-  }) : s === Z.oh.BOT_DATA_ACCESS ? (0, n.jsx)(E.Z, {
+  }) : s === Z.oh.BOT_DATA_ACCESS ? (0, n.jsx)(m.Z, {
 user: l
-  }) : s === Z.oh.BOT_INFO ? (0, n.jsx)(S.Z, {
+  }) : s === Z.oh.BOT_INFO ? (0, n.jsx)(x.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
 subsection: i,
 onClose: a
-  }) : (0, n.jsx)(v.Z, {
+  }) : (0, n.jsx)(S.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
@@ -75,11 +75,11 @@ user: u,
 currentUser: I,
 displayProfile: _,
 items: f,
-initialSection: E = Z.oh.USER_INFO,
-initialSubsection: S,
-onClose: x
+initialSection: m = Z.oh.USER_INFO,
+initialSubsection: x,
+onClose: v
   } = e, {
-trackUserProfileAction: v
+trackUserProfileAction: S
   } = (0, c.KZ)(), T = (0, t.e7)([d.Z], () => d.Z.hidePersonalInformation), [{
 section: g,
 subsection: N
@@ -88,11 +88,11 @@ section: null !== (r = null === (s = f.find(e => {
   let {
     section: s
   } = e;
-  return s === E;
+  return s === m;
 })) || void 0 === s ? void 0 : s.section) && void 0 !== r ? r : null === (i = f[0]) || void 0 === i ? void 0 : i.section,
-subsection: S
-  }), A = l.useCallback(e => {
-v({
+subsection: x
+  }), C = l.useCallback(e => {
+S({
   action: 'PRESS_SECTION',
   section: e
 }), j({
@@ -100,12 +100,12 @@ v({
   subsection: void 0
 });
   }, [
-v,
+S,
 j
   ]);
   return T ? (0, n.jsx)('div', {
 className: h.container,
-children: (0, n.jsx)(m.Z, {})
+children: (0, n.jsx)(E.Z, {})
   }) : (0, n.jsxs)('div', {
 className: h.container,
 children: [
@@ -113,7 +113,7 @@ children: [
     className: h.tabBar,
     type: 'top',
     selectedItem: g,
-    onItemSelect: A,
+    onItemSelect: C,
     children: f.map(e => {
       let {
         section: s,
@@ -137,7 +137,7 @@ children: [
     user: u,
     currentUser: I,
     displayProfile: _,
-    onClose: x
+    onClose: v
   })
 ]
   });

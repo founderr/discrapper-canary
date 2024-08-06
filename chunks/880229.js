@@ -3,7 +3,7 @@ n.d(t, {
 return W;
   },
   K: function() {
-return w;
+return k;
   }
 }), n(47120), n(390547);
 var s, a, i = n(735250),
@@ -168,7 +168,7 @@ children: [
   }) : null;
 }
 
-function w(e) {
+function k(e) {
   let {
 transitionState: t,
 fromSubscriptionListing: n,
@@ -256,7 +256,7 @@ children: (0, i.jsxs)(T.ModalRoot, {
   });
 }
 
-function k(e) {
+function w(e) {
   var t;
   let {
 guildId: n,
@@ -342,7 +342,7 @@ l
   ]);
   return o.length > 0 ? (0, i.jsx)('div', {
 className: b.list,
-children: o.map(e => (0, i.jsx)(k, {
+children: o.map(e => (0, i.jsx)(w, {
   guildId: t.id,
   role: e.role,
   channelCount: e.channelCount,

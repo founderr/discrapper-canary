@@ -36,12 +36,12 @@ channel: n
   delete N[n.id];
 }
 
-function S() {
+function p() {
   o().forEach(N, e => {
 e.messages = e.messages.map(e => e.set('blocked', h.Z.isBlockedForMessage(e)));
   });
 }
-class p extends(i = u.ZP.Store) {
+class S extends(i = u.ZP.Store) {
   initialize() {
 this.waitFor(g.Z, M.Z, m.ZP, _.Z, I.default, f.default);
   }
@@ -53,12 +53,12 @@ return null !== (n = N[e]) && void 0 !== n ? n : void 0;
 return null != N[e] && N[e].loaded;
   }
 }
-a = 'ChannelPinsStore', (l = 'displayName') in(s = p) ? Object.defineProperty(s, l, {
+a = 'ChannelPinsStore', (l = 'displayName') in(s = S) ? Object.defineProperty(s, l, {
   value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[l] = a, n.Z = new p(d.Z, {
+}) : s[l] = a, n.Z = new S(d.Z, {
   CONNECTION_OPEN: function() {
 N = {};
   },
@@ -145,8 +145,8 @@ delete N[n];
   },
   CHANNEL_DELETE: A,
   THREAD_DELETE: A,
-  RELATIONSHIP_ADD: S,
-  RELATIONSHIP_REMOVE: S,
+  RELATIONSHIP_ADD: p,
+  RELATIONSHIP_REMOVE: p,
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
 let {
   messageId: n,

@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(981631),
   A = n(689938),
   R = n(645962),
-  O = n(699723);
-let x = {
+  x = n(699723);
+let O = {
   offset: {
 left: 4,
 right: -12
@@ -98,7 +98,7 @@ duration: o().duration(l.dueAt.getTime() - Date.now(), 'millisecond').humanize()
   })) : (t = 'text-danger', g = A.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
 duration: o().duration(Date.now() - l.dueAt.getTime(), 'millisecond').humanize()
   }))), null == u || null == m) ? null : (0, i.jsxs)('div', {
-className: O.container,
+className: x.container,
 children: [
   (0, i.jsx)(f.Z, {
     channel: m,
@@ -156,21 +156,21 @@ children: [
     })
   }),
   (0, i.jsxs)('div', {
-    className: r()(O.messageContainer, R.unloadedMessage, {
+    className: r()(x.messageContainer, R.unloadedMessage, {
       [R.disabledMessage]: a
     }),
     children: [
       (0, i.jsx)(C.Z, {
-        className: O.jumpMessageButton,
+        className: x.jumpMessageButton,
         onJump: p
       }),
       (0, i.jsx)(E.Z, {
         message: u,
         channel: m,
-        className: O.message,
+        className: x.message,
         compact: h.jU.getSetting(),
         animateAvatar: !1,
-        focusProps: x,
+        focusProps: O,
         trackAnnouncementViews: !0
       }, u.id)
     ]

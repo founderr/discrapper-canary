@@ -3,7 +3,7 @@ n.d(t, {
 return V;
   },
   fp: function() {
-return w;
+return k;
   },
   k0: function() {
 return F;
@@ -355,7 +355,7 @@ children: [
 ]
   });
 }
-async function w(e, t) {
+async function k(e, t) {
   if (e.hasFeature(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t)
 return;
   let n = e.features;
@@ -364,11 +364,11 @@ features: n
   });
 }
 
-function k(e) {
+function w(e) {
   let {
 guild: t
   } = e, n = (0, o.e7)([p.Z], () => null != t && p.Z.can(U.Plq.MANAGE_GUILD, t), [t]), i = t.hasFeature(U.oNc.COMMUNITY), r = (0, g.n2)(t.id), [l, d] = a.useState(t.hasFeature(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), u = a.useCallback(async e => {
-d(e), await w(t, e);
+d(e), await k(t, e);
   }, [t]);
   return i || !r ? null : (0, s.jsxs)(s.Fragment, {
 children: [
@@ -498,7 +498,7 @@ title: G.Z.Messages.SAFETY_SETUP,
 tag: c.FormTitleTags.H1,
 titleClassName: P.headerContainer,
 children: [
-  (0, s.jsx)(k, {
+  (0, s.jsx)(w, {
     guild: t
   }),
   (0, s.jsx)(y, {

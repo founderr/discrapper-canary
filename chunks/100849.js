@@ -1,6 +1,6 @@
 i.d(s, {
   Z: function() {
-return v;
+return S;
   }
 });
 var n = i(735250),
@@ -15,18 +15,18 @@ var n = i(735250),
   I = i(199902),
   _ = i(158776),
   f = i(785717),
-  m = i(221292),
-  E = i(981631),
-  S = i(501649),
-  x = i(735393);
+  E = i(221292),
+  m = i(981631),
+  x = i(501649),
+  v = i(735393);
 
-function v(e) {
+function S(e) {
   let {
 user: s,
 type: i,
 showActions: t,
-onClose: v
-  } = e, Z = (0, a.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(s.id)), h = (0, a.e7)([_.Z], () => _.Z.getActivities(s.id)), p = l.useMemo(() => h.filter(e => e.type !== E.IIU.CUSTOM_STATUS), [h]), T = l.useMemo(() => Z ? p.find(e => e.type === E.IIU.PLAYING) : null, [
+onClose: S
+  } = e, Z = (0, a.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(s.id)), h = (0, a.e7)([_.Z], () => _.Z.getActivities(s.id)), p = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), T = l.useMemo(() => Z ? p.find(e => e.type === m.IIU.PLAYING) : null, [
 p,
 Z
   ]), g = l.useMemo(() => p.filter(e => e !== T), [
@@ -36,40 +36,40 @@ p
 analyticsLocations: N,
 newestAnalyticsLocation: j
   } = (0, u.ZP)(), {
-trackUserProfileAction: A,
-...C
+trackUserProfileAction: C,
+...A
   } = (0, f.KZ)(), R = {
 location: {
-  page: E.ZY5.USER_PROFILE,
-  section: E.jXE.PROFILE_MODAL
+  page: m.ZY5.USER_PROFILE,
+  section: m.jXE.PROFILE_MODAL
 }
   };
   return (0, n.jsxs)(r.ScrollerThin, {
-className: x.listScroller,
+className: v.listScroller,
 fade: !0,
 children: [
   Z ? (0, n.jsx)(d.Z, {
     type: i,
     user: s,
     source: j,
-    className: S.userProfileActivity,
+    className: x.userProfileActivity,
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
     activity: T,
-    actionColor: S.actionColor,
+    actionColor: x.actionColor,
     analyticsParams: R,
     showActions: t,
-    onClose: v,
+    onClose: S,
     onAction: () => {
-      A({
+      C({
         action: 'JOIN_ACTIVITY'
-      }), (0, m.Ac)({
-        activityType: E.IIU.STREAMING,
+      }), (0, E.Ac)({
+        activityType: m.IIU.STREAMING,
         activityName: null == T ? void 0 : T.name,
         activityPlatform: null == T ? void 0 : T.platform,
         activitySessionId: null == T ? void 0 : T.session_id,
         applicationId: null == T ? void 0 : T.application_id,
         analyticsLocations: N,
-        ...C
+        ...A
       });
     }
   }) : null,
@@ -79,23 +79,23 @@ children: [
     user: s,
     useStoreStream: !1,
     source: j,
-    className: o()(S.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
+    className: o()(x.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && x.simplifiedProfileActivity),
     showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
-    actionColor: S.actionColor,
+    actionColor: x.actionColor,
     analyticsParams: R,
     showActions: t,
-    onClose: v,
+    onClose: S,
     onAction: () => {
-      A({
+      C({
         action: 'JOIN_ACTIVITY'
-      }), (0, m.Ac)({
+      }), (0, E.Ac)({
         activityType: e.type,
         activityName: e.name,
         activityPlatform: e.platform,
         activitySessionId: e.session_id,
         applicationId: e.application_id,
         analyticsLocations: N,
-        ...C
+        ...A
       });
     }
   }, ''.concat(e.application_id, '-').concat(e.session_id, '-').concat(e.name)))

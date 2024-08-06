@@ -27,7 +27,7 @@ configurable: !0,
 writable: !0
   }) : e[n] = t, e;
 }
-class S extends s.PureComponent {
+class p extends s.PureComponent {
   render() {
 let e, n;
 let {
@@ -161,7 +161,7 @@ n.Z = {
   },
   confirmDelete: function(e, n) {
 let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-(0, r.openModal)(s => (0, i.jsx)(S, {
+(0, r.openModal)(s => (0, i.jsx)(p, {
   channel: e,
   message: n,
   showContextMenuHint: t,

@@ -40,7 +40,7 @@ children: (0, s.jsx)(t.Text, {
   tag: 'span',
   children: e
 })
-  }), []), N = l.code !== o.evJ.TOO_MANY_INVITES ? l.getAnyErrorMessage() : r.Z.can(o.Plq.MANAGE_GUILD, n) ? d.Z.Messages.TOO_MANY_INVITES_ERROR.format({
+  }), []), m = l.code !== o.evJ.TOO_MANY_INVITES ? l.getAnyErrorMessage() : r.Z.can(o.Plq.MANAGE_GUILD, n) ? d.Z.Messages.TOO_MANY_INVITES_ERROR.format({
 inviteListHook: I,
 inviteHelpHook: x
   }) : d.Z.Messages.TOO_MANY_INVITES_ERROR_MEMBER;
@@ -48,6 +48,6 @@ inviteHelpHook: x
 className: c.errorMessage,
 variant: 'text-xs/normal',
 color: 'text-danger',
-children: N
+children: m
   });
 }

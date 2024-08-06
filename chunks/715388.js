@@ -16,11 +16,11 @@ var l = i(442837),
   I = i(588822),
   _ = i(940730),
   f = i(900927),
-  m = i(678738),
-  E = i(351707),
-  S = i(228168),
-  x = i(689938),
-  v = i(247321);
+  E = i(678738),
+  m = i(351707),
+  x = i(228168),
+  v = i(689938),
+  S = i(247321);
 
 function Z(e) {
   var s;
@@ -35,46 +35,46 @@ trackUserProfileAction: g
   } = (0, c.KZ)(), N = (0, l.e7)([r.Z], () => (null == h ? void 0 : h.guildId) != null ? r.Z.getGuild(h.guildId) : null), j = (0, l.e7)([u.Z], () => {
 var e;
 return null === (e = u.Z.getUserProfile(i.id)) || void 0 === e ? void 0 : e.application;
-  }), A = (0, l.e7)([
+  }), C = (0, l.e7)([
 a.Z,
 d.Z
   ], () => a.Z.getChannel(d.Z.getChannelId()));
   return (0, n.jsxs)(t.ScrollerThin, {
 fade: !0,
-className: v.scroller,
+className: S.scroller,
 children: [
   (null == h ? void 0 : h.bio) != null && (null == h ? void 0 : h.bio) !== '' && (0, n.jsx)(I.Z, {
     userBio: h.bio,
     setLineClamp: !1
   }),
-  (null == j ? void 0 : j.popularApplicationCommandIds) != null && null != A && (0, n.jsx)(_.Z, {
+  (null == j ? void 0 : j.popularApplicationCommandIds) != null && null != C && (0, n.jsx)(_.Z, {
     applicationId: j.id,
     commandIds: j.popularApplicationCommandIds,
-    channel: A,
+    channel: C,
     guildId: null !== (s = null == h ? void 0 : h.guildId) && void 0 !== s ? s : void 0,
     onClick: T
   }),
-  null != N && (0, n.jsx)(E.Z, {
+  null != N && (0, n.jsx)(m.Z, {
     user: i,
     currentUser: Z,
     guild: N,
-    scrollIntoView: p === S.Tb.ROLES
+    scrollIntoView: p === x.Tb.ROLES
   }),
-  (0, n.jsx)(m.Z, {
-    heading: x.Z.Messages.BOT_PROFILE_CREATED_ON,
+  (0, n.jsx)(E.Z, {
+    heading: v.Z.Messages.BOT_PROFILE_CREATED_ON,
     children: (0, n.jsx)(f.Z, {
       userId: i.id,
       guildId: null == h ? void 0 : h.guildId,
-      tooltipDelay: S.vB
+      tooltipDelay: x.vB
     })
   }),
-  (0, n.jsx)(m.Z, {
-    heading: x.Z.Messages.NOTE,
-    scrollIntoView: p === S.Tb.NOTE,
+  (0, n.jsx)(E.Z, {
+    heading: v.Z.Messages.NOTE,
+    scrollIntoView: p === x.Tb.NOTE,
     children: (0, n.jsx)(o.Z, {
       userId: i.id,
-      className: v.note,
-      autoFocus: p === S.Tb.NOTE,
+      className: S.note,
+      autoFocus: p === x.Tb.NOTE,
       onUpdate: () => g({
         action: 'SET_NOTE'
       })

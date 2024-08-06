@@ -15,17 +15,17 @@ let c = {
 };
 
 function u(e, n, l) {
-  let [u, E] = s.useState(c), [_, I] = s.useState(!1), x = s.useRef(!1), N = null == e ? void 0 : e.id, m = null == e ? void 0 : e.hasFeature(d.oNc.HAS_DIRECTORY_ENTRY);
+  let [u, E] = s.useState(c), [_, I] = s.useState(!1), x = s.useRef(!1), m = null == e ? void 0 : e.id, N = null == e ? void 0 : e.hasFeature(d.oNc.HAS_DIRECTORY_ENTRY);
   s.useEffect(() => {
-if (!m) {
+if (!N) {
   E(c);
   return;
 }
-if (!x.current && null != N)
+if (!x.current && null != m)
   (async () => {
     x.current = !0;
     try {
-      let e = await (0, r.X)(N, o.C2.GUILD_SCHEDULED_EVENT, n);
+      let e = await (0, r.X)(m, o.C2.GUILD_SCHEDULED_EVENT, n);
       E(e);
     } catch (e) {
       E(c);
@@ -33,8 +33,8 @@ if (!x.current && null != N)
     x.current = !1;
   })();
   }, [
-N,
 m,
+N,
 n
   ]), s.useEffect(() => {
 var e;

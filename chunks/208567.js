@@ -15,9 +15,9 @@ var s, a = l(735250),
   _ = l(813197),
   I = l(981631),
   x = l(689938),
-  N = l(130207);
+  m = l(130207);
 
-function m(e, n, l) {
+function N(e, n, l) {
   return n in e ? Object.defineProperty(e, n, {
 value: l,
 enumerable: !0,
@@ -32,7 +32,7 @@ className: n,
 icon: l = null
   } = e;
   return (0, a.jsx)('div', {
-className: r()(N.imageUploaderIcon, n, (0, E.Q)(I.BRd.LIGHT)),
+className: r()(m.imageUploaderIcon, n, (0, E.Q)(I.BRd.LIGHT)),
 children: l
   });
 }
@@ -48,7 +48,7 @@ let {
   hint: o,
   name: d,
   makeURL: E,
-  disabled: m,
+  disabled: N,
   onChange: h,
   showIcon: g,
   showIconDisabled: v,
@@ -68,13 +68,13 @@ let {
 if (null != (n = null != i && /^data:/.test(i) ? i : E(i)) ? l = 'url("'.concat(n, '")') : null != d && (s = (0, a.jsx)(c.Heading, {
     variant: 'heading-xxl/normal',
     color: 'always-white',
-    className: N.imageUploaderAcronym,
+    className: m.imageUploaderAcronym,
     children: (0, u.Zg)(d)
-  })), m)
+  })), N)
   return (0, a.jsx)('div', {
-    className: r()(N.imageUploader, N.disabled, S),
+    className: r()(m.imageUploader, m.disabled, S),
     children: (0, a.jsxs)('div', {
-      className: r()(N.imageUploaderInner, C),
+      className: r()(m.imageUploaderInner, C),
       style: {
         ...j,
         backgroundImage: l
@@ -82,33 +82,33 @@ if (null != (n = null != i && /^data:/.test(i) ? i : E(i)) ? l = 'url("'.concat(
       children: [
         s,
         v && (0, a.jsx)('div', {
-          className: r()(N.imageUploaderIcon, N.imageUploaderIconDisabled, L),
+          className: r()(m.imageUploaderIcon, m.imageUploaderIconDisabled, L),
           children: Z
         })
       ]
     })
   });
 null != i ? t = (0, a.jsx)(c.Anchor, {
-  className: N.removeButton,
+  className: m.removeButton,
   onClick: this.handleRemove,
   children: x.Z.Messages.REMOVE
 }) : !f && (t = (0, a.jsx)('small', {
-  className: N.sizeInfo,
+  className: m.sizeInfo,
   children: x.Z.Messages.MINIMUM_SIZE.format({
     size: I.IXf
   })
 }));
 let G = null !== (e = null != V ? V : o) && void 0 !== e ? e : x.Z.Messages.CHANGE_AVATAR;
 return (0, a.jsxs)('div', {
-  className: r()(N.imageUploader, S),
+  className: r()(m.imageUploader, S),
   children: [
     (0, a.jsx)(c.FocusRing, {
       within: !0,
       children: (0, a.jsxs)('div', {
-        className: g ? r()(N.imageUploaderIconWrapper, A) : void 0,
+        className: g ? r()(m.imageUploaderIconWrapper, A) : void 0,
         children: [
           (0, a.jsxs)('div', {
-            className: r()(N.imageUploaderInner, C),
+            className: r()(m.imageUploaderInner, C),
             style: {
               ...j,
               backgroundImage: l
@@ -119,13 +119,13 @@ return (0, a.jsxs)('div', {
                 children: s
               }),
               null != p ? (0, a.jsx)(c.Clickable, {
-                className: N.imageUploaderFileInput,
+                className: m.imageUploaderFileInput,
                 'aria-label': G,
                 onClick: p
               }) : (0, a.jsx)(_.ZP, {
                 ref: this.inputRef,
                 onChange: h,
-                className: N.imageUploaderFileInput,
+                className: m.imageUploaderFileInput,
                 'aria-label': G,
                 tabIndex: 0,
                 maxFileSizeBytes: D,
@@ -134,7 +134,7 @@ return (0, a.jsxs)('div', {
             ]
           }),
           null != o && (0, a.jsx)('div', {
-            className: N.imageUploaderHint,
+            className: m.imageUploaderHint,
             'aria-hidden': 'true',
             children: o
           }),
@@ -150,12 +150,12 @@ return (0, a.jsxs)('div', {
 });
   }
   constructor(...e) {
-super(...e), m(this, 'inputRef', t.createRef()), m(this, 'handleRemove', () => {
+super(...e), N(this, 'inputRef', t.createRef()), N(this, 'handleRemove', () => {
   this.props.onChange(null);
 });
   }
 }
-m(h, 'defaultProps', {
+N(h, 'defaultProps', {
   name: '',
   makeURL: e => e,
   disabled: !1,

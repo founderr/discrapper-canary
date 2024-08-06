@@ -14,8 +14,8 @@ var s, a, t = l(735250),
   _ = l(96698),
   I = l(313201),
   x = l(433775),
-  N = l(984933),
-  m = l(430824),
+  m = l(984933),
+  N = l(430824),
   T = l(971130),
   h = l(981888),
   g = l(924301),
@@ -112,8 +112,8 @@ guildEventId: a,
 editBroadcastInfoData: c,
 isEdit: E,
 formErrors: x,
-transitionState: N,
-loading: m,
+transitionState: m,
+loading: N,
 error: T,
 onChange: h,
 onSave: v,
@@ -166,7 +166,7 @@ K = () => {
 Q = O.Z.Messages.NEXT;
   return 2 === F && (Q = E ? O.Z.Messages.SAVE_EVENT : O.Z.Messages.SCHEDULE_EVENT), (0, t.jsx)(t.Fragment, {
 children: (0, t.jsxs)(d.ModalRoot, {
-  transitionState: N,
+  transitionState: m,
   'aria-labelledby': L,
   size: d.ModalSize.DYNAMIC,
   children: [
@@ -249,7 +249,7 @@ children: (0, t.jsxs)(d.ModalRoot, {
               onClick: q,
               disabled: !H,
               className: U.button,
-              submitting: m,
+              submitting: N,
               children: Q
             })
           ]
@@ -274,7 +274,7 @@ guildId: n,
 guildScheduledEventId: s,
 transitionState: a,
 onClose: r
-  } = e, u = (0, o.e7)([m.Z], () => m.Z.getGuild(n)), E = (0, o.e7)([g.ZP], () => g.ZP.getGuildScheduledEvent(s), [s]), _ = (0, o.e7)([N.ZP], () => N.ZP.getDefaultChannel(n), [n]), I = (0, L.j$)(E, _), [T, f] = i.useState(I), [j] = i.useState((0, L.Ql)(E)), [M, D] = i.useState(null), R = e => {
+  } = e, u = (0, o.e7)([N.Z], () => N.Z.getGuild(n)), E = (0, o.e7)([g.ZP], () => g.ZP.getGuildScheduledEvent(s), [s]), _ = (0, o.e7)([m.ZP], () => m.ZP.getDefaultChannel(n), [n]), I = (0, L.j$)(E, _), [T, f] = i.useState(I), [j] = i.useState((0, L.Ql)(E)), [M, D] = i.useState(null), R = e => {
 var n;
 let l = (0, S.so)(e),
   s = null !== (n = e.channel_id) && void 0 !== n ? n : null == _ ? void 0 : _.id;

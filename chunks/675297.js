@@ -32,8 +32,8 @@ lineClamp: g = 1,
 cardWidth: S,
 cardHeight: A,
 thumbnailHeight: R,
-descriptionTextVariant: O = 'text-sm/normal',
-showOpaqueBackground: x = !1
+descriptionTextVariant: x = 'text-sm/normal',
+showOpaqueBackground: O = !1
   } = e, M = (0, s.e7)([o.Z], () => o.Z.getGuild(n), [n]), v = (0, s.e7)([o.Z], () => {
 var e;
 return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : N.lds);
@@ -87,13 +87,13 @@ shouldShowFullDescriptionButton: f,
 onShowFullDescription: j,
 onTapCard: j,
 actionMenu: U,
-showOpaqueBackground: x,
+showOpaqueBackground: O,
 hideRoleTag: p,
 lineClamp: g,
 cardWidth: S,
 cardHeight: A,
 thumbnailHeight: R,
-descriptionTextVariant: O,
+descriptionTextVariant: x,
 isDraft: !t.published
   }, t.id);
 }

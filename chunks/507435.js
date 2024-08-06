@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return O;
+return x;
   }
 });
 var i, s, a = n(735250),
@@ -191,7 +191,7 @@ children: [
   });
 }
 
-function O(e) {
+function x(e) {
   var t;
   let {
 message: n,

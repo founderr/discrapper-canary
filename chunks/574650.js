@@ -28,15 +28,15 @@ S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == f ? void 0 : f.id
 return null;
   let A = null !== (t = null == p ? void 0 : p.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
 R = null,
-O = null,
 x = null,
+O = null,
 M = [
   N.notice,
   C.notice
 ];
   switch (A) {
 case E.wB.SUBMITTED:
-  R = h.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, O = h.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, x = () => {
+  R = h.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, x = h.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, O = () => {
     (0, o.openModal)(e => (0, i.jsx)(o.ConfirmModal, {
       header: h.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
       confirmText: h.Z.Messages.CONFIRM,
@@ -52,7 +52,7 @@ case E.wB.SUBMITTED:
   };
   break;
 case E.wB.REJECTED:
-  R = h.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, O = h.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE, x = () => {
+  R = h.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, x = h.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE, O = () => {
     (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -65,7 +65,7 @@ case E.wB.REJECTED:
   }, M.push(N.error);
   break;
 default:
-  R = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, O = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA, x = () => {
+  R = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, x = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA, O = () => {
     (0, _.hk)(f.id);
   };
   }
@@ -82,8 +82,8 @@ children: [
     look: o.Button.Looks.OUTLINED,
     color: o.Button.Colors.WHITE,
     size: o.Button.Sizes.NONE,
-    onClick: x,
-    children: O
+    onClick: O,
+    children: x
   })
 ]
   });

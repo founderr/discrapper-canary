@@ -16,8 +16,8 @@ var s = l(735250),
   _ = l(699516),
   I = l(594174),
   x = l(924301),
-  N = l(518756),
-  m = l(545165),
+  m = l(518756),
+  N = l(545165),
   T = l(77810),
   h = l(274311),
   g = l(230900),
@@ -49,7 +49,7 @@ let {
   onSelectChannel: t,
   disabled: i,
   entityType: r
-} = e, c = l === C.d4z.GUILD_STAGE_VOICE, u = (0, h.Q)(a, r), E = (0, m.sR)(n, l);
+} = e, c = l === C.d4z.GUILD_STAGE_VOICE, u = (0, h.Q)(a, r), E = (0, N.sR)(n, l);
 return (0, s.jsxs)(o.FormItem, {
   title: c ? L.Z.Messages.START_STAGE_MODAL_SET_TOPIC_SELECT_LABEL : L.Z.Messages.GUILD_EVENT_LOCATION_VOICE_FIELD_LABEL,
   className: A.options,
@@ -142,8 +142,8 @@ i,
 d
   ]);
   let I = D(t),
-N = R(t),
-m = (0, g.xV)(l),
+m = R(t),
+N = (0, g.xV)(l),
 T = (0, g.xC)(d),
 h = (0, x.xt)(l);
   return null == d || d === S.WX.NONE ? null : Z(d) ? (0, s.jsx)(o.FormItem, {
@@ -155,13 +155,13 @@ children: (0, s.jsx)(o.TextInput, {
   onChange: I,
   placeholder: L.Z.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_PLACEHOLDER,
   maxLength: S.gG,
-  value: null != m ? m : '',
+  value: null != N ? N : '',
   inputRef: _
 })
   }) : null == T ? null : (0, s.jsx)(j, {
 guildId: n,
 channelType: T,
-onSelectChannel: N,
+onSelectChannel: m,
 channel: E,
 entityType: d,
 disabled: h
@@ -173,7 +173,7 @@ function G(e) {
 guildId: n,
 guildEvent: l,
 onChange: t
-  } = e, i = (0, r.e7)([u.Z], () => u.Z.getGuild(n), [n]), d = (0, N.Z)(n, void 0), c = (0, N.Z)(n, C.d4z.GUILD_VOICE), E = (0, N.Z)(n, C.d4z.GUILD_STAGE_VOICE), _ = (0, m.sR)(n, C.d4z.GUILD_VOICE), I = (0, T.q)(i), h = null == i ? void 0 : i.hasFeature(C.oNc.COMMUNITY), g = (0, x.xt)(l), v = p(t, l), Z = a.useMemo(() => {
+  } = e, i = (0, r.e7)([u.Z], () => u.Z.getGuild(n), [n]), d = (0, m.Z)(n, void 0), c = (0, m.Z)(n, C.d4z.GUILD_VOICE), E = (0, m.Z)(n, C.d4z.GUILD_STAGE_VOICE), _ = (0, N.sR)(n, C.d4z.GUILD_VOICE), I = (0, T.q)(i), h = null == i ? void 0 : i.hasFeature(C.oNc.COMMUNITY), g = (0, x.xt)(l), v = p(t, l), Z = a.useMemo(() => {
 let e = [{
     name: L.Z.Messages.VOICE_CHANNEL,
     value: S.WX.VOICE,
@@ -224,7 +224,7 @@ onChange: i,
 isSlideReady: d = !1
   } = e, {
 entityType: c
-  } = a, _ = (0, r.e7)([u.Z], () => u.Z.getGuild(n), [n]), I = (0, T.q)(_), x = (0, r.e7)([E.Z], () => E.Z.can(C.Plq.MANAGE_CHANNELS, _)), N = null == _ ? void 0 : _.hasFeature(C.oNc.COMMUNITY), m = p(i, a), h = N && !Z(c) && 0 === I.length && x && null != c;
+  } = a, _ = (0, r.e7)([u.Z], () => u.Z.getGuild(n), [n]), I = (0, T.q)(_), x = (0, r.e7)([E.Z], () => E.Z.can(C.Plq.MANAGE_CHANNELS, _)), m = null == _ ? void 0 : _.hasFeature(C.oNc.COMMUNITY), N = p(i, a), h = m && !Z(c) && 0 === I.length && x && null != c;
   return (0, s.jsxs)('div', {
 className: A.container,
 children: [
@@ -252,7 +252,7 @@ children: [
   }),
   h ? (0, s.jsx)(v.Z, {
     onClick: () => {
-      m({
+      N({
         value: S.WX.STAGE_INSTANCE,
         name: L.Z.Messages.STAGE_CHANNEL
       }), (0, o.openModalLazy)(async () => {

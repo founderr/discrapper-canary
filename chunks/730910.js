@@ -57,8 +57,8 @@ hasErrors: f.Z.hasErrors()
   })), y = (0, o.e7)([f.Z], () => {
 let e = (0, L.lg)(S);
 return null != e && !f.Z.isEducationUpsellDismissed(e);
-  }), F = (0, I.ZP)(), w = a.useRef(null), [{
-spring: k
+  }), F = (0, I.ZP)(), k = a.useRef(null), [{
+spring: w
   }, H] = (0, _.useSpring)(() => ({
 spring: 0
   }), 'animate-always');
@@ -80,7 +80,7 @@ return N.S.subscribe(j.CkL.EMPHASIZE_NOTICE, e), () => {
   let V = (0, _.useToken)(c.Z.colors.BACKGROUND_FLOATING).hex(),
 Y = (0, _.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
 W = (0, u.wj)(F) ? V : Y,
-z = k.to({
+z = w.to({
   range: [
     0,
     1
@@ -90,7 +90,7 @@ z = k.to({
     (0, _.useToken)(c.Z.colors.TEXT_NORMAL).hex()
   ]
 }),
-K = k.to({
+K = w.to({
   range: [
     0,
     1
@@ -197,7 +197,7 @@ children: (0, s.jsx)(_.SlideIn, {
     },
     children: (0, s.jsxs)('div', {
       className: b.flexContainer,
-      ref: w,
+      ref: k,
       children: [
         y ? (0, s.jsxs)('div', {
           className: b.educationUpsellRoot,
@@ -219,7 +219,7 @@ children: (0, s.jsx)(_.SlideIn, {
           ]
         }) : null,
         (0, s.jsx)(_.FocusRingScope, {
-          containerRef: w,
+          containerRef: k,
           children: (0, s.jsxs)('div', {
             className: b.actions,
             children: [

@@ -53,7 +53,7 @@ let i, {
   {
     homeSettingsEnabled: F
   } = (0, C.kZ)(l),
-  [, w] = (0, c.c)({
+  [, k] = (0, c.c)({
     type: G,
     item: {
       channel: o,
@@ -63,7 +63,7 @@ let i, {
       null != e && !t.didDrop() && h(e.channel, null, !0);
     }
   }),
-  [, k] = (0, d.L)({
+  [, w] = (0, d.L)({
     accept: G,
     hover: e => {
       h(e.channel, x, !1);
@@ -72,11 +72,11 @@ let i, {
       h(e.channel, x, !0);
     }
   });
-return a.useLayoutEffect(() => (w(k(A)), () => {
-  w(null), k(null);
+return a.useLayoutEffect(() => (k(w(A)), () => {
+  k(null), w(null);
 }), [
-  w,
-  k
+  k,
+  w
 ]), i = P ? null != v || null != o.emoji_name ? (0, s.jsx)(E.Z, {
   emojiId: null == v ? void 0 : v.id,
   emojiName: null != v ? v.name : o.emoji_name,
@@ -189,12 +189,12 @@ if (null != i)
   !o()(e, c.channels) && ((0, p.Es)(i.id, {
     channels: e
   }), N(!0));
-  }, w = e => {
+  }, k = e => {
 if (null != i)
   e !== c.enabled && ((0, p.Es)(i.id, {
     enabled: e
   }), f(!d), N(!0));
-  }, k = e => {
+  }, w = e => {
 if (null == e)
   return;
 let t = [
@@ -210,7 +210,7 @@ null == t ? n.splice(e, 1) : n[e] = t, (0, p.VP)({
   channels: n
 }), F(n), 0 === n.length && G && ((0, p.VP)({
   enabled: !1
-}), w(!1));
+}), k(!1));
   }, V = (e, t, n) => {
 if (null == M)
   return;
@@ -227,7 +227,7 @@ let {
 return t => (0, s.jsx)(e, {
   ...t,
   guildId: i.id,
-  onSave: k
+  onSave: w
 });
   }, {
 onCloseRequest: () => Z.Vq
@@ -301,7 +301,7 @@ children: [
       });
     },
     onToggle: G || (null == M ? void 0 : M.length) !== 0 ? () => {
-      w(!G);
+      k(!G);
     } : void 0,
     animateStatus: S,
     firstLine: G ? b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED : b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PROGRESS_WILL_SAVE,
@@ -392,7 +392,7 @@ children: [
               return t => (0, s.jsx)(e, {
                 ...t,
                 guildId: i.id,
-                onSave: k
+                onSave: w
               });
             }, {
               onCloseRequest: () => Z.Vq

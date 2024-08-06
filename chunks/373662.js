@@ -35,9 +35,9 @@ sparkle: g,
 showNewBadge: S,
 buttonClassName: A,
 children: R,
-...O
+...x
   } = e, {
-canShowReactionsOnMessageHover: x
+canShowReactionsOnMessageHover: O
   } = u.Z.useExperiment({
 location: 'HoverBar'
   }, {
@@ -61,7 +61,7 @@ children: e => {
     children: [
       (0, i.jsxs)(c.zx, {
         className: a()(A, {
-          [d.hoverBarButton]: x
+          [d.hoverBarButton]: O
         }),
         onMouseEnter: s,
         onMouseLeave: u,
@@ -71,7 +71,7 @@ children: e => {
         'aria-label': null != n ? n : t,
         disabled: C,
         dangerous: f,
-        ...O,
+        ...x,
         children: [
           null != E ? (0, i.jsx)(E, {
             className: d.icon,

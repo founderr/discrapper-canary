@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(5881),
   A = n(566078),
   R = n(602667),
-  O = n(340100),
-  x = n(611855),
+  x = n(340100),
+  O = n(611855),
   M = n(644646),
   v = n(670638),
   L = n(667105),
@@ -170,7 +170,7 @@ children: () => {
         className: y.rewardTileWrapper,
         children: [
           eN,
-          (0, i.jsx)(x.Z, {
+          (0, i.jsx)(O.Z, {
             bgOpacity: 0.32,
             className: y.promotedTag
           })
@@ -265,7 +265,7 @@ children: () => {
                   })
                 ]
               }),
-              ed && !e_ && ee && (0, i.jsx)(O.Z, {
+              ed && !e_ && ee && (0, i.jsx)(x.Z, {
                 color: c.tokens.colors.BG_BRAND,
                 quest: q
               }),

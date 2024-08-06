@@ -26,7 +26,7 @@ var i, s = n(735250),
   A = n(689938),
   R = n(91612);
 
-function O(e, t, n) {
+function x(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -34,7 +34,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class x extends(i = a.Component) {
+class O extends(i = a.Component) {
   get analyticsLocation() {
 let {
   analyticsContext: {
@@ -92,22 +92,22 @@ return e.productLine === S.POd.COLLECTIBLES ? (0, s.jsx)(u.Z, {
 });
   }
   constructor(...e) {
-super(...e), O(this, 'state', {
+super(...e), x(this, 'state', {
   playing: !1,
   muted: !0
-}), O(this, 'handleToggleMute', () => {
+}), x(this, 'handleToggleMute', () => {
   this.setState({
     muted: !this.state.muted
   });
-}), O(this, 'handleMouseEnter', () => {
+}), x(this, 'handleMouseEnter', () => {
   this.setState({
     playing: !0
   });
-}), O(this, 'handleMouseLeave', () => {
+}), x(this, 'handleMouseLeave', () => {
   this.setState({
     playing: !1
   });
-}), O(this, 'getStoreListingLocation', () => {
+}), x(this, 'getStoreListingLocation', () => {
   let {
     sku: e
   } = this.props;
@@ -117,12 +117,12 @@ super(...e), O(this, 'state', {
     slug: e.slug,
     analyticsSource: this.analyticsLocation
   });
-}), O(this, 'handleActionButtonClick', e => e.preventDefault()), O(this, 'handleBuyButtonClick', e => e.preventDefault()), O(this, 'handleLinkClick', e => {
+}), x(this, 'handleActionButtonClick', e => e.preventDefault()), x(this, 'handleBuyButtonClick', e => e.preventDefault()), x(this, 'handleLinkClick', e => {
   let {
     onEmbedClick: t
   } = this.props;
   null != t && t(e);
-}), O(this, 'renderApplicationTile', (e, t) => {
+}), x(this, 'renderApplicationTile', (e, t) => {
   let {
     inLibrary: n,
     width: i,
@@ -147,7 +147,7 @@ super(...e), O(this, 'state', {
     isHorizontal: u,
     isEmbed: !0
   });
-}), O(this, 'renderActions', e => {
+}), x(this, 'renderActions', e => {
   let {
     inLibrary: t,
     application: n,
@@ -185,7 +185,7 @@ super(...e), O(this, 'state', {
 });
   }
 }
-O(x, 'defaultProps', {
+x(O, 'defaultProps', {
   renderFallback: S.dG4
 });
 let M = [
@@ -208,6 +208,6 @@ storeListing: null != n ? p.Z.getForSKU(n.id) : null,
 libraryApplication: null != n ? N.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   };
 }
-let L = (0, T.Z)((0, m.Z)(x));
+let L = (0, T.Z)((0, m.Z)(O));
 t.Z = l.ZP.connectStores(M, v)(L);
-let Z = (0, m.Z)(l.ZP.connectStores(M, v)(x));
+let Z = (0, m.Z)(l.ZP.connectStores(M, v)(O));
