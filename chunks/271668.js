@@ -59,7 +59,7 @@ filteredSectionId: W,
 scrollDown: K,
 filterSection: z
   } = g.wi(n, {
-commandType: c.yU.CHAT,
+commandTypes: [c.yU.CHAT],
 builtIns: a ? S.D.ONLY_TEXT : S.D.ALLOW,
 applicationCommands: !a
   }, {

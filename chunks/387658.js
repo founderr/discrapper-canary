@@ -260,7 +260,7 @@ commandsByActiveSection: c,
 sectionDescriptors: u,
 loading: m
   } = C.wi(t, {
-commandType: d.yU.CHAT
+commandTypes: [d.yU.CHAT]
   }, {
 placeholderCount: 0,
 limit: b.tn,

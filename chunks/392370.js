@@ -105,7 +105,7 @@ let {
   onlyWithCommands: t,
   includeBuiltIn: i,
   allowFetch: a = !0
-} = e, l = (0, p.Hs)(n, c.yU.CHAT).hasBaseAccessPermissions, o = (0, m.em)(n, l, a), r = (0, m.PL)(l, a), s = [], u = new Set();
+} = e, l = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions, o = (0, m.em)(n, l, a), r = (0, m.PL)(l, a), s = [], u = new Set();
 if (null != o.result)
   for (let e of Object.values(o.result.sections)) {
     let n = e.descriptor.application;
@@ -133,7 +133,7 @@ if (!r)
 return (0, A.N)(f, {
   limit: a,
   filterPredicates: [function(e) {
-    let n = (0, p.k)(e, c.yU.CHAT),
+    let n = (0, p.k)(e, [c.yU.CHAT]),
       t = {};
     return i => {
       let {
@@ -300,11 +300,11 @@ if (s && C) {
 return (0, A.N)(i, {
   limit: o,
   filterPredicates: [function(e) {
-    let n = [
-      (0, p.k)(e, c.yU.CHAT),
-      (0, p.k)(e, c.yU.PRIMARY_ENTRY_POINT)
-    ];
-    return t => n.some(n => {
+    let n = (0, p.k)(e, [
+      c.yU.CHAT,
+      c.yU.PRIMARY_ENTRY_POINT
+    ]);
+    return t => {
       let {
         context: i,
         userId: a,
@@ -323,7 +323,7 @@ return (0, A.N)(i, {
         isGuildInstalled: c,
         isUserInstalled: u
       }) === _.mF.ALLOWED);
-    });
+    };
   }(n)],
   bucketPredicates: [
     function(e) {

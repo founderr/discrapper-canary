@@ -339,7 +339,7 @@ onEmptyState: l
 commandsByActiveSection: s,
 loading: c
   } = x.wi(t, {
-commandType: d.yU.CHAT
+commandTypes: [d.yU.CHAT]
   }, {
 placeholderCount: 0,
 limit: B.tn,
@@ -442,7 +442,7 @@ a.useEffect(() => {
 let {
   sectionDescriptors: l
 } = x.wi(n, {
-  commandType: d.yU.CHAT
+  commandTypes: [d.yU.CHAT]
 }, {
   placeholderCount: 0,
   limit: B.tn,

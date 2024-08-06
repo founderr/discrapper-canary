@@ -14,7 +14,10 @@ var i = t(470079),
 t(445392);
 var d = t(689079);
 let m = {
-commandType: r.yU.CHAT
+commandTypes: [
+  r.yU.CHAT,
+  r.yU.PRIMARY_ENTRY_POINT
+]
   },
   p = {
 placeholderCount: 0,
