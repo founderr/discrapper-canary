@@ -23,10 +23,23 @@ n && s.clearReactSent();
   }, [
 s,
 n
+  ]), u = r.useCallback(() => {
+n && s.notifyReplySent();
+  }, [
+s,
+n
+  ]), c = r.useCallback(() => {
+n && s.clearReplySent();
+  }, [
+s,
+n
   ]);
   return {
 reactSent: s.reactSent,
 notifyReactSent: o,
-clearReactSent: l
+clearReactSent: l,
+replySent: s.replySent,
+notifyReplySent: u,
+clearReplySent: c
   };
 }

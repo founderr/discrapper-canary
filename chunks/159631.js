@@ -16,6 +16,9 @@ var i = n(735250),
   p = n(275024);
 
 function _() {
+  let {
+reactSent: e
+  } = (0, o.e)();
   return (0, i.jsx)('div', {
 className: a()(h.row, h.rowGuildName),
 children: (0, i.jsxs)(s.Text, {
@@ -26,7 +29,7 @@ children: (0, i.jsxs)(s.Text, {
       color: 'currentColor',
       size: 'sm'
     }),
-    u.Z.Messages.USER_PROFILE_REACTION_SENT
+    e ? u.Z.Messages.USER_PROFILE_REACTION_SENT : u.Z.Messages.USER_PROFILE_REPLY_SENT
   ]
 })
   });
@@ -38,7 +41,9 @@ children: n
   } = e, r = function() {
 let {
   reactSent: e,
-  clearReactSent: t
+  clearReactSent: t,
+  replySent: n,
+  clearReplySent: i
 } = (0, o.e)();
 return l.useEffect(() => {
   if (e) {
@@ -52,7 +57,19 @@ return l.useEffect(() => {
 }, [
   e,
   t
-]), e;
+]), l.useEffect(() => {
+  if (n) {
+    let e = setTimeout(() => {
+      i();
+    }, 1500);
+    return () => {
+      i(), clearTimeout(e);
+    };
+  }
+}, [
+  n,
+  i
+]), e || n;
   }();
   return (0, i.jsx)(s.Tooltip, {
 forceOpen: r,

@@ -10,5 +10,12 @@ reactSent: !0
   }),
   clearReactSent: () => e({
 reactSent: !1
+  }),
+  replySent: !1,
+  notifyReplySent: () => e({
+replySent: !0
+  }),
+  clearReplySent: () => e({
+replySent: !1
   })
 }));
