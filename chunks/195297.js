@@ -43,7 +43,10 @@ let t = (0, E.Q)(i),
 r(), (0, l.openModalLazy)(async () => {
   let {
     default: e
-  } = await n.e('75409').then(n.bind(n, 850085));
+  } = await Promise.all([
+    n.e('48017'),
+    n.e('81085')
+  ]).then(n.bind(n, 850085));
   return i => (0, o.jsx)(e, {
     imgURI: t,
     file: new File([s], 'tenor.gif', {

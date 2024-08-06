@@ -44,8 +44,8 @@ var s = n(735250),
   B = n(208567),
   y = n(592125),
   F = n(324067),
-  w = n(650774),
-  k = n(496675),
+  k = n(650774),
+  w = n(496675),
   H = n(699516),
   V = n(594174),
   Y = n(709586),
@@ -860,7 +860,10 @@ super(...e), el(this, '_imageInputRef', a.createRef()), el(this, '_displaySectio
   (0, E.openModalLazy)(async () => {
     let {
       default: a
-    } = await n.e('22872').then(n.bind(n, 850085));
+    } = await Promise.all([
+      n.e('48017'),
+      n.e('47636')
+    ]).then(n.bind(n, 850085));
     return n => (0, s.jsx)(a, {
       onCrop: this.handleIconChange,
       imgURI: e,
@@ -889,7 +892,10 @@ super(...e), el(this, '_imageInputRef', a.createRef()), el(this, '_displaySectio
   (0, E.openModalLazy)(async () => {
     let {
       default: a
-    } = await n.e('22872').then(n.bind(n, 850085));
+    } = await Promise.all([
+      n.e('48017'),
+      n.e('47636')
+    ]).then(n.bind(n, 850085));
     return n => (0, s.jsx)(a, {
       imgURI: e,
       file: t,
@@ -1020,11 +1026,11 @@ _ = a.useMemo(() => (0, C.Z)(d._categories, d), [d]),
 {
   canManageGuild: I,
   isGuildAdmin: E
-} = (0, u.cj)([k.Z], () => ({
-  canManageGuild: k.Z.can($.Plq.MANAGE_GUILD, t),
-  isGuildAdmin: k.Z.can($.Plq.ADMINISTRATOR, t)
+} = (0, u.cj)([w.Z], () => ({
+  canManageGuild: w.Z.can($.Plq.MANAGE_GUILD, t),
+  isGuildAdmin: w.Z.can($.Plq.ADMINISTRATOR, t)
 })),
-T = (0, u.e7)([w.Z], () => w.Z.getMemberCount(null == t ? void 0 : t.id)),
+T = (0, u.e7)([k.Z], () => k.Z.getMemberCount(null == t ? void 0 : t.id)),
 m = (0, L.E)(t),
 h = (0, u.e7)([V.default], () => V.default.getCurrentUser());
   o()(null != h, 'GuildSettingsOverview: currentUser cannot be undefined');
