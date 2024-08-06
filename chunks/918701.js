@@ -12,6 +12,9 @@ return en;
   Bz: function() {
 return ek;
   },
+  C1: function() {
+return eW;
+  },
   C9: function() {
 return ej;
   },
@@ -796,4 +799,20 @@ function eY(e) {
 
 function ej(e) {
   return eY(e) === C.ABu.XBOX ? D.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_XBOX : D.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_PSN;
+}
+
+function eW(e) {
+  var t, n, r, i;
+  let {
+quest: a,
+rewardCode: s,
+selectedPlatformType: o,
+sharedQuestFields: l
+  } = e, u = em({
+quest: a
+  }), c = null != o ? o : null == s ? void 0 : s.platform, d = u ? eN({
+quest: a,
+idx: null !== (r = null == s ? void 0 : s.tier) && void 0 !== r ? r : null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedTier
+  }) : null, _ = null !== (i = null == d ? void 0 : null === (n = d.messages) || void 0 === n ? void 0 : n.redemptionInstructionsByPlatform) && void 0 !== i ? i : l.defaultRewardRedemptionInstructionsByPlatform;
+  return null != c ? _[c] : void 0;
 }
