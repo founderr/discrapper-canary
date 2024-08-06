@@ -173,10 +173,7 @@ return P().then(e => {
 };
   }, []);
   let z = s.useCallback(e => {
-  if (null !== e) {
-    var n;
-    V.current = e, B((n = !e.isScrolledToTop(), n));
-  }
+  null !== e && (V.current = e, B(!e.isScrolledToTop()));
 }, []),
 K = function(e) {
   switch (e) {
