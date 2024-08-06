@@ -1,29 +1,46 @@
 t.r(s), t.d(s, {
   ANSWERS_DISPLAY_DATA: function() {
-return A;
+return d;
   },
   AnswerKey: function() {
-return n;
-  },
-  DEFAULT_SURVEY: function() {
-return M;
+return a;
   },
   default: function() {
-return d;
+return S;
   }
 }), t(47120), t(390547);
-var n, a, _ = t(735250),
+var a, n, _ = t(735250),
   o = t(470079),
   C = t(120356),
   E = t.n(C),
   r = t(481060),
-  c = t(471731),
-  l = t(626135),
+  l = t(471731),
+  c = t(626135),
   i = t(981631),
   N = t(689938),
   I = t(992378);
-(a = n || (n = {})).WHEN_FRIENDS_PLAY = 'WHEN_FRIENDS_PLAY', a.ACHIEVEMENTS = 'ACHIEVEMENTS', a.NEWS = 'NEWS', a.NONE_OF_BENEFITS = 'NONE_OF_BENEFITS', a.NONE_OF_GAME_TYPES = 'NONE_OF_GAME_TYPES', a.GAMES_I_PLAY_NOW = 'GAMES_I_PLAY_NOW', a.GAMES_I_WANT_TO_PLAY = 'GAMES_I_WANT_TO_PLAY', a.GAMES_FRIENDS_PLAY = 'GAMES_FRIENDS_PLAY', a.FOLLOW_DEV = 'FOLLOW_DEV', a.GENRES = 'GENRES';
-let A = {
+(n = a || (a = {})).WHEN_FRIENDS_PLAY = 'WHEN_FRIENDS_PLAY', n.ACHIEVEMENTS = 'ACHIEVEMENTS', n.NEWS = 'NEWS', n.NONE_OF_BENEFITS = 'NONE_OF_BENEFITS', n.NONE_OF_GAME_TYPES = 'NONE_OF_GAME_TYPES', n.GAMES_I_PLAY_NOW = 'GAMES_I_PLAY_NOW', n.GAMES_I_WANT_TO_PLAY = 'GAMES_I_WANT_TO_PLAY', n.GAMES_FRIENDS_PLAY = 'GAMES_FRIENDS_PLAY', n.FOLLOW_DEV = 'FOLLOW_DEV', n.GENRES = 'GENRES';
+let M = {
+getTitle: () => N.Z.Messages.GAME_PROFILE_QUESTION_BENEFITS,
+answers: {
+  WHEN_FRIENDS_PLAY: !1,
+  ACHIEVEMENTS: !1,
+  NEWS: !1,
+  NONE_OF_BENEFITS: !1
+}
+  },
+  A = {
+getTitle: () => N.Z.Messages.GAME_PROFILE_QUESTION_GAME_TYPES,
+answers: {
+  GAMES_I_PLAY_NOW: !1,
+  GAMES_I_WANT_TO_PLAY: !1,
+  GAMES_FRIENDS_PLAY: !1,
+  FOLLOW_DEV: !1,
+  GENRES: !1,
+  NONE_OF_GAME_TYPES: !1
+}
+  },
+  d = {
 WHEN_FRIENDS_PLAY: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_Q1_WHEN_FRIENDS_PLAY,
   Icon: r.GameControllerIcon
@@ -64,59 +81,41 @@ GENRES: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_Q2_GENRES,
   Icon: r.ModerationIcon
 }
-  },
-  M = [{
-  getTitle: () => N.Z.Messages.GAME_PROFILE_QUESTION_BENEFITS,
-  answers: {
-    WHEN_FRIENDS_PLAY: !1,
-    ACHIEVEMENTS: !1,
-    NEWS: !1,
-    NONE_OF_BENEFITS: !1
-  }
-},
-{
-  getTitle: () => N.Z.Messages.GAME_PROFILE_QUESTION_GAME_TYPES,
-  answers: {
-    GAMES_I_PLAY_NOW: !1,
-    GAMES_I_WANT_TO_PLAY: !1,
-    GAMES_FRIENDS_PLAY: !1,
-    FOLLOW_DEV: !1,
-    GENRES: !1,
-    NONE_OF_GAME_TYPES: !1
-  }
-}
-  ];
+  };
 
-function d(e) {
+function S(e) {
   let {
 transitionState: s,
 applicationId: t,
-viewId: n,
-background: a,
+viewId: a,
+background: n,
 onClose: C
-  } = e, d = (0, r.useToken)(r.tokens.colors.BORDER_STRONG).hex(), [S, O] = o.useState(!1), [h, T] = o.useState(M), [L, u] = o.useState(0), x = L === h.length - 1, g = Object.values(h[L].answers).filter(e => e).length > 0, R = Object.entries(h[L].answers).map(e => {
+  } = e, S = (0, r.useToken)(r.tokens.colors.BORDER_STRONG).hex(), [O, h] = o.useState(!1), [T, L] = o.useState([
+M,
+A
+  ]), [x, g] = o.useState(0), u = x === T.length - 1, R = Object.values(T[x].answers).filter(e => e).length > 0, m = Object.entries(T[x].answers).map(e => {
 let [s, t] = e;
 return {
   key: s,
   isChecked: t,
-  text: A[s].getTitle(),
-  Icon: A[s].Icon
+  text: d[s].getTitle(),
+  Icon: d[s].Icon
 };
   });
 
   function F() {
-l.default.track(i.rMx.GAME_PROFILE_FOLLOW_SURVEY, {
+c.default.track(i.rMx.GAME_PROFILE_FOLLOW_SURVEY, {
   application_id: t,
-  question_no: L,
-  notify_on_launch: S,
-  affirmative_answers: h.flatMap(e => Object.entries(e.answers).filter(e => {
+  question_no: x,
+  notify_on_launch: O,
+  affirmative_answers: T.flatMap(e => Object.entries(e.answers).filter(e => {
     let [s, t] = e;
     return t;
   }).map(e => {
     let [s] = e;
     return s;
   })),
-  view_id: n
+  view_id: a
 });
   }
   return (0, _.jsxs)(r.ModalRoot, {
@@ -125,7 +124,7 @@ className: I.modalRoot,
 size: r.ModalSize.LARGE,
 children: [
   (0, _.jsx)('img', {
-    src: a,
+    src: n,
     className: I.backgroundImage,
     alt: ''
   }),
@@ -139,11 +138,11 @@ children: [
       (0, _.jsxs)('div', {
         className: I.intro,
         children: [
-          (0, _.jsx)(c.Z, {
+          (0, _.jsx)(l.Z, {
             width: 84,
             height: 16
           }),
-          0 === L && (0, _.jsx)(r.Text, {
+          0 === x && (0, _.jsx)(r.Text, {
             variant: 'text-sm/normal',
             color: 'text-muted',
             children: N.Z.Messages.GAME_PROFILE_SURVEY_INTRO
@@ -157,45 +156,48 @@ children: [
             variant: 'eyebrow',
             color: 'header-muted',
             children: N.Z.Messages.GAME_PROFILE_SURVEY_PROGRESS.format({
-              step: L + 1,
-              total: h.length
+              step: x + 1,
+              total: T.length
             })
           }),
           (0, _.jsx)(r.Heading, {
             className: I.question,
             variant: 'heading-lg/medium',
             color: 'header-primary',
-            children: h[L].getTitle()
+            children: T[x].getTitle()
           }),
           (0, _.jsx)('div', {
             className: E()(I.answers, {
-              [I.gridFour]: R.length % 4 == 0
+              [I.gridFour]: m.length % 4 == 0
             }),
-            children: R.map(e => {
+            children: m.map(e => {
               let {
                 key: s,
                 text: t,
-                isChecked: n,
-                Icon: a
+                isChecked: a,
+                Icon: n
               } = e;
               return (0, _.jsxs)(r.Checkbox, {
                 className: E()(I.answerLabel, {
-                  [I.checked]: n
+                  [I.checked]: a
                 }),
                 reverse: !0,
                 type: r.Checkbox.Types.INVERTED,
                 shape: r.Checkbox.Shapes.SMALL_BOX,
-                checkboxColor: d,
-                value: n,
+                checkboxColor: S,
+                value: a,
                 onChange: (e, t) => function(e, s, t) {
-                  let n = [...h];
-                  n[e].answers = {
-                    ...n[e].answers,
-                    [s]: t
-                  }, T(n);
-                }(L, s, t),
+                  let a = [...T];
+                  a[e] = {
+                    ...a[e],
+                    answers: {
+                      ...a[e].answers,
+                      [s]: t
+                    }
+                  }, L(a);
+                }(x, s, t),
                 children: [
-                  (0, _.jsx)(a, {
+                  (0, _.jsx)(n, {
                     color: r.tokens.colors.INTERACTIVE_ACTIVE,
                     className: I.answerIcon
                   }),
@@ -217,21 +219,21 @@ children: [
                 className: I.selectAll,
                 children: N.Z.Messages.GAME_PROFILE_SURVEY_SELECT_ALL
               }),
-              !x && g && (0, _.jsx)(r.Button, {
+              !u && R && (0, _.jsx)(r.Button, {
                 onClick: function() {
-                  F(), u(1);
+                  F(), g(1);
                 },
                 children: N.Z.Messages.NEXT
               }),
-              x && (0, _.jsxs)(_.Fragment, {
+              u && (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsx)(r.Checkbox, {
                     className: I.notify,
                     type: r.Checkbox.Types.INVERTED,
                     shape: r.Checkbox.Shapes.ROUND,
                     checkboxColor: 'var(--border-strong)',
-                    value: S,
-                    onChange: (e, s) => O(s),
+                    value: O,
+                    onChange: (e, s) => h(s),
                     children: (0, _.jsx)(r.Text, {
                       variant: 'text-xs/normal',
                       color: 'text-primary',
@@ -242,7 +244,7 @@ children: [
                     onClick: function() {
                       F(), C();
                     },
-                    disabled: !g,
+                    disabled: !R,
                     children: N.Z.Messages.SUBMIT
                   })
                 ]
