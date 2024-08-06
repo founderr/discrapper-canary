@@ -20,8 +20,8 @@ var s = n(735250),
   m = n(792258),
   N = n(657825),
   f = n(198952),
-  h = n(329242),
-  S = n(895328),
+  S = n(329242),
+  h = n(895328),
   M = n(292352),
   x = n(981631),
   b = n(689938),
@@ -51,7 +51,7 @@ children: (0, s.jsx)(o.CircleInformationIcon, {
   });
 }
 
-function v(e) {
+function L(e) {
   let {
 displayType: t
   } = e, n = a.useCallback(() => {
@@ -63,14 +63,14 @@ isMoreLoading: T
 onError: n
   }), C = M.tx.get(t), [p, A] = a.useState(M.iB), f = (0, E.Xi)({
 location: 'family_center_activity_section_web'
-  }), h = a.useCallback(() => {
+  }), S = a.useCallback(() => {
 A(e => e + M.iB), _(t);
   }, [
 t,
 _
   ]);
   i()(C, 'No text for action type');
-  let S = C.sectionHeader(c),
+  let h = C.sectionHeader(c),
 x = a.useCallback(e => {
   let {
     row: t
@@ -92,7 +92,7 @@ P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
       className: O.sectionHeader,
       variant: 'eyebrow',
       color: 'header-secondary',
-      children: S
+      children: h
     }),
     void 0 !== C.sectionDescription ? (0, s.jsx)(o.Text, {
       className: O.sectionDescription,
@@ -102,14 +102,14 @@ P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
     }) : null
   ]
 }), [
-  S,
+  h,
   C,
   r,
   f
 ]);
   if (0 === l.length)
 return null;
-  let v = l.slice(0, p);
+  let L = l.slice(0, p);
   return (0, s.jsxs)('div', {
 className: O.actionSection,
 children: [
@@ -117,15 +117,15 @@ children: [
   (0, s.jsx)('div', {
     className: O.actions,
     style: {
-      maxHeight: 65 * v.length
+      maxHeight: 65 * L.length
     },
-    children: v.map((e, t) => x({
+    children: L.map((e, t) => x({
       row: t
     }))
   }),
-  v.length !== c ? (0, s.jsx)(o.Clickable, {
+  L.length !== c ? (0, s.jsx)(o.Clickable, {
     className: O.loadMoreBar,
-    onClick: h,
+    onClick: S,
     role: 'button',
     children: T ? (0, s.jsx)(o.Spinner, {
       type: o.Spinner.Type.PULSING_ELLIPSIS,
@@ -134,14 +134,14 @@ children: [
       className: O.loadMore,
       variant: 'text-sm/bold',
       children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-        pageSize: Math.min(c - v.length, M.iB)
+        pageSize: Math.min(c - L.length, M.iB)
       })
     })
   }) : null
 ]
   });
 }
-let L = () => {
+let v = () => {
 let e = (0, g.Z)(),
   t = (0, p.mq)(M.ne.ACTIVE),
   n = (0, T.o)(b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
@@ -182,7 +182,7 @@ return void 0 === r ? null : (0, s.jsxs)('div', {
     (0, s.jsxs)('div', {
       className: O.headerText,
       children: [
-        (0, s.jsx)(h.Z, {
+        (0, s.jsx)(S.Z, {
           user: r
         }),
         void 0 !== n ? (0, s.jsx)(o.Text, {
@@ -245,7 +245,7 @@ children: [
   (0, s.jsxs)('div', {
     className: O.connectedCounter,
     children: [
-      (0, s.jsx)(L, {}),
+      (0, s.jsx)(v, {}),
       (0, s.jsx)(P, {})
     ]
   }),
@@ -275,10 +275,10 @@ children: [
             className: O.activityOverview,
             children: a ? n.map(e => {
               let [t] = e;
-              return (0, s.jsx)(v, {
+              return (0, s.jsx)(L, {
                 displayType: t
               }, ''.concat(t, '-list'));
-            }) : (0, s.jsx)(S.Z, {
+            }) : (0, s.jsx)(h.Z, {
               className: O.emptyActivity,
               text: null != i ? i : ''
             })

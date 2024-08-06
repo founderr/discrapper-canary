@@ -24,15 +24,15 @@ onClose: E,
 className: N,
 inlineArt: x = !1,
 isPremiumFeature: S = !1,
-shouldUseHorizontalButtons: v = !1,
-showGIFTag: Z = !1,
+shouldUseHorizontalButtons: Z = !1,
+showGIFTag: v = !1,
 dismissibleContent: T,
 position: L = 'top',
 align: A = 'center',
 art: b,
 isPremiumEarlyAccess: M = !1,
 maxWidth: R = 280
-  } = e, O = v ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX, [y, P] = l.useState(!1), {
+  } = e, O = Z ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX, [y, P] = l.useState(!1), {
 ref: j,
 width: D
   } = (0, o.Z)();
@@ -65,7 +65,7 @@ children: (0, i.jsxs)('div', {
     (0, i.jsxs)('div', {
       className: a()(_, x ? p.artInline : p.artAbsolute),
       children: [
-        Z && (0, i.jsx)(u.Z, {
+        v && (0, i.jsx)(u.Z, {
           className: p.gifTag
         }),
         b
@@ -112,7 +112,7 @@ children: (0, i.jsxs)('div', {
     }),
     (0, i.jsx)('div', {
       ref: j,
-      className: y || !v ? p.buttonContainerVertical : p.buttonContainerHorizontal,
+      className: y || !Z ? p.buttonContainerVertical : p.buttonContainerHorizontal,
       children: null != I ? (0, i.jsxs)(i.Fragment, {
         children: [
           (0, i.jsx)(s.Button, {

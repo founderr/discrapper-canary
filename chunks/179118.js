@@ -6,9 +6,9 @@ return P;
 var s = n(735250),
   r = n(470079),
   a = n(120356),
-  o = n.n(a),
-  i = n(392711),
-  c = n.n(i),
+  i = n.n(a),
+  o = n(392711),
+  c = n.n(o),
   l = n(442837),
   d = n(481060),
   u = n(37234),
@@ -18,14 +18,14 @@ var s = n(735250),
   C = n(479446),
   _ = n(522489),
   m = n(93127),
-  b = n(814443),
-  h = n(590783),
+  h = n(814443),
+  b = n(590783),
   x = n(699516),
   E = n(246946),
   I = n(594174),
   v = n(572004),
-  L = n(669079),
-  S = n(74538),
+  S = n(669079),
+  L = n(74538),
   T = n(51144),
   N = n(981631),
   O = n(474936),
@@ -37,22 +37,22 @@ function P(e) {
 giftCode: t,
 application: n,
 sku: a,
-subscriptionPlan: i,
+subscriptionPlan: o,
 selectedGiftStyle: c,
 onClose: u,
 hasSentMessage: f,
 giftRecipient: C,
 giftMessageError: m,
-isSendingMessage: b
-  } = e, [x, I] = r.useState(d.CopyInput.Modes.DEFAULT), P = (0, l.e7)([E.Z], () => E.Z.enabled), B = f || null != c && null != C, R = (null == a ? void 0 : a.productLine) === N.POd.COLLECTIBLES, Z = () => null != i ? i.skuId : null != a ? a.id : null, M = () => {
+isSendingMessage: h
+  } = e, [x, I] = r.useState(d.CopyInput.Modes.DEFAULT), P = (0, l.e7)([E.Z], () => E.Z.enabled), R = f || null != c && null != C, A = (null == a ? void 0 : a.productLine) === N.POd.COLLECTIBLES, Z = () => null != o ? o.skuId : null != a ? a.id : null, M = () => {
 let e;
 let t = null != c && O.V4.includes(c);
-return null != m ? k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == i ? null : (e = i.interval === O.rV.MONTH ? B ? t ? k.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : B ? t ? k.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
-  skuName: (0, S.aq)(i.id),
-  intervalCount: i.intervalCount
+return null != m ? k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == o ? null : (e = o.interval === O.rV.MONTH ? R ? t ? k.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : R ? t ? k.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
+  skuName: (0, L.aq)(o.id),
+  intervalCount: o.intervalCount
 });
   }, y = (e, t) => {
-null != a && (0, L.dM)(new h.Z({
+null != a && (0, S.dM)(new b.Z({
   code: t,
   maxUses: 1
 }), a);
@@ -86,7 +86,7 @@ return (0, s.jsxs)('div', {
     }),
     null != t && (0, s.jsx)(d.CopyInput, {
       hideMessage: P ? k.Z.Messages.GIFT_INVENTORY_HIDDEN : null,
-      value: (0, L.Nz)(t),
+      value: (0, S.Nz)(t),
       mode: x,
       text: e,
       onCopy: e => y(e, t),
@@ -102,7 +102,7 @@ return (0, s.jsxs)('div', {
   ]
 });
   };
-  return b ? (0, s.jsxs)('div', {
+  return h ? (0, s.jsxs)('div', {
 className: j.confirmation,
 children: [
   null != n ? (0, s.jsx)(g.Z, {
@@ -126,13 +126,13 @@ children: [
   }) : null,
   (0, s.jsx)(d.Heading, {
     variant: 'heading-lg/semibold',
-    className: o()({
-      [j.header]: null == c && !R,
-      [j.headerCustomGifting]: null != c && !R
+    className: i()({
+      [j.header]: null == c && !A,
+      [j.headerCustomGifting]: null != c && !A
     }),
     children: null != C || f && null == m ? k.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != m ? k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : k.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
   }),
-  f && null != C && null == m || B ? (0, s.jsxs)(s.Fragment, {
+  f && null != C && null == m || R ? (0, s.jsxs)(s.Fragment, {
     children: [
       (0, s.jsx)(p.Z, {
         user: C,
@@ -157,14 +157,14 @@ children: [
       })
     ]
   }) : (() => {
-    let e = (0, L.MY)(C, R),
+    let e = (0, S.MY)(C, A),
       {
         removeGiftRecipientUI: n
       } = _.m.getCurrentConfig({
         location: 'GiftPurchaseConfirmation'
       }, {
         autoTrackExposure: !1,
-        disable: __BILLING_STANDALONE__ || e !== L.xr.CUSTOM_STYLE
+        disable: __BILLING_STANDALONE__ || e !== S.xr.CUSTOM_STYLE
       });
     return (0, s.jsxs)(s.Fragment, {
       children: [
@@ -172,7 +172,7 @@ children: [
           className: j.blurb,
           children: M()
         }),
-        !n && null == m && (0, s.jsx)(A, {
+        !n && null == m && (0, s.jsx)(B, {
           giftCode: t,
           onClose: u
         }),
@@ -186,7 +186,7 @@ children: [
 ]
   });
 }
-let A = e => {
+let B = e => {
   let {
 giftCode: t,
 onClose: n
@@ -194,19 +194,19 @@ onClose: n
   r.useEffect(() => {
 f.Z.fetchRelationships(), (0, m.W)();
   }, []);
-  let [a, o] = r.useState(), [i, g] = r.useState(!1), [_, h] = r.useState(!1), {
+  let [a, i] = r.useState(), [o, g] = r.useState(!1), [_, b] = r.useState(!1), {
 userAffinities: E,
 isLoading: v
-  } = (0, l.cj)([b.Z], () => ({
-userAffinities: b.Z.getUserAffinitiesUserIds(),
-isLoading: b.Z.getFetching()
-  })), L = Array.from(E.values()), S = (0, l.e7)([x.Z], () => x.Z.getFriendIDs()), N = c().difference(S, L), O = [
-...L,
+  } = (0, l.cj)([h.Z], () => ({
+userAffinities: h.Z.getUserAffinitiesUserIds(),
+isLoading: h.Z.getFetching()
+  })), S = Array.from(E.values()), L = (0, l.e7)([x.Z], () => x.Z.getFriendIDs()), N = c().difference(L, S), O = [
+...S,
 ...N
   ], P = (0, l.e7)([I.default], () => I.default.filter(e => O.includes(e.id) && !e.bot), [O]);
   if (null == P || 0 === P.length)
 return null;
-  let A = c().sortBy(P, e => O.indexOf(e.id));
+  let B = c().sortBy(P, e => O.indexOf(e.id));
   return (0, s.jsxs)('div', {
 className: j.giftRecipientSection,
 children: [
@@ -219,7 +219,7 @@ children: [
       (0, s.jsx)(d.SearchableSelect, {
         placeholder: k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SELECT_PLACEHOLDER,
         wrapperClassName: j.giftRecipientInputWrapper,
-        className: i ? j.giftRecipientInputError : void 0,
+        className: o ? j.giftRecipientInputError : void 0,
         renderOptionPrefix: e => (null == e ? void 0 : e.value) == null ? null : (0, s.jsx)(p.Z, {
           user: e.value,
           size: d.AvatarSizes.SIZE_20
@@ -229,9 +229,9 @@ children: [
         }) : null,
         value: a,
         onChange: e => {
-          o(e), g(!1);
+          i(e), g(!1);
         },
-        options: A.map(e => ({
+        options: B.map(e => ({
           value: e,
           label: ''.concat(T.ZP.getUserTag(e))
         }))
@@ -241,10 +241,10 @@ children: [
         submitting: _,
         className: j.sendToRecipientButton,
         onClick: () => {
-          h(!0), (0, C.Y)(a, t).then(() => {
+          b(!0), (0, C.Y)(a, t).then(() => {
             n(), (0, u.Ou)();
           }).catch(() => {
-            g(!0), h(!1);
+            g(!0), b(!1);
           });
         },
         children: k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_SEND_NOW_BUTTON
@@ -252,8 +252,8 @@ children: [
     ]
   }),
   (0, s.jsx)('div', {
-    className: i ? j.subtextError : j.subtext,
-    children: i ? k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_ERROR_SENDING_LINK : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SUBTEXT
+    className: o ? j.subtextError : j.subtext,
+    children: o ? k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_ERROR_SENDING_LINK : k.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SUBTEXT
   })
 ]
   });

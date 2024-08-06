@@ -19,7 +19,7 @@ entry: t
   return (0, r.jsx)(r.Fragment, {
 children: [
   o.U9,
-  o.gj,
+  o.wO,
   o.f,
   o.n8,
   o.v1,

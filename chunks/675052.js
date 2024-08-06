@@ -6,10 +6,10 @@ return c;
 var s = n(470079),
   r = n(399606),
   a = n(1870),
-  o = n(215023);
-let i = e => {
+  i = n(215023);
+let o = e => {
 let t = new Map();
-return o.N.forEach((e, n) => {
+return i.N.forEach((e, n) => {
   t.set(e, n);
 }), e.sort((e, n) => {
   var s, r;
@@ -28,11 +28,11 @@ let t = (0, r.e7)([a.Z], () => a.Z.purchases),
       r = new Map();
     for (let a of e.values())
       a.products.forEach(e => {
-        o.N.includes(e.skuId) && !r.has(e.skuId) && (t.get(e.skuId) ? n.push(e) : s.push(e), r.set(e.skuId, a));
+        i.N.includes(e.skuId) && !r.has(e.skuId) && (t.get(e.skuId) ? n.push(e) : s.push(e), r.set(e.skuId, a));
       });
-    let a = i(n);
+    let a = o(n);
     return {
-      sortedPopularPickProducts: i(s).concat(a).slice(0, 12),
+      sortedPopularPickProducts: o(s).concat(a).slice(0, 12),
       popularProductToCategoryMap: r
     };
   }, [

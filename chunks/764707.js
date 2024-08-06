@@ -3,11 +3,11 @@ var a = n(979590),
   r = n.n(a),
   s = n(399606),
   o = n(607070),
-  i = n(168631);
-let l = (e, t) => {
+  l = n(168631);
+let i = (e, t) => {
 let n = e.toRgb(),
   a = t.toRgb(),
-  [s, o, l] = (0, i.J2)([
+  [s, o, i] = (0, l.J2)([
     n.r,
     n.g,
     n.b
@@ -19,7 +19,7 @@ let n = e.toRgb(),
 return r()({
   r: s,
   g: o,
-  b: l
+  b: i
 });
   },
   c = (e, t) => 0 === t.length ? void 0 : 1 === t.length ? {
@@ -30,8 +30,8 @@ label: t[0].isLight() ? e.dark : e.light
   } : {
 primary: t[0],
 secondary: t[1],
-border: l(t[0], t[1]).setAlpha(0.4),
-label: l(t[0], t[1]).isLight() ? e.dark : e.light
+border: i(t[0], t[1]).setAlpha(0.4),
+label: i(t[0], t[1]).isLight() ? e.dark : e.light
   },
   d = (e, t) => 0 === t.length ? void 0 : 1 === t.length ? {
 primary: t[0],
@@ -40,7 +40,7 @@ text: t[0].isLight() ? e.dark : e.light
   } : {
 primary: t[0],
 secondary: t[1],
-text: l(t[0], t[1]).isLight() ? e.dark : e.light
+text: i(t[0], t[1]).isLight() ? e.dark : e.light
   },
   u = (e, t) => {
 let {

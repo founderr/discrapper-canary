@@ -128,18 +128,18 @@ onItemSelect: E,
 onItemAction: N,
 interactive: x = !0,
 children: S
-  } = e, v = l.useRef(null), Z = l.useRef([]), T = l.useRef(!1), L = l.useRef(null), [A, b] = l.useState(0), [M, R] = l.useState({
+  } = e, Z = l.useRef(null), v = l.useRef([]), T = l.useRef(!1), L = l.useRef(null), [A, b] = l.useState(0), [M, R] = l.useState({
 x: 0,
 y: 0
   }), O = Math.abs(M.x) + Math.abs(M.y) > 0, y = l.useMemo(() => a().chunk(S, p), [S]), P = l.useCallback((e, t) => {
-null == Z.current[A] ? Z.current[A] = [] : Z.current[A][t] = e;
+null == v.current[A] ? v.current[A] = [] : v.current[A][t] = e;
   }, [A]), j = l.useCallback((e, t) => {
 L.current = t, E(p * e + t);
   }, [E]), D = l.useCallback(() => {
 L.current = null, E(null);
   }, [E]), U = l.useCallback(e => {
 D(), T.current = e;
-  }, [D]), G = l.useCallback((e, t, n) => {
+  }, [D]), w = l.useCallback((e, t, n) => {
 if (T.current) {
   R({
     x: 0,
@@ -159,16 +159,16 @@ R({
   x: s / 2,
   y: (r ? Math.max(i.y, -a.y) : Math.min(i.y, a.y)) / 2
 });
-  }, []), w = l.useCallback(e => {
+  }, []), G = l.useCallback(e => {
 if (null != L.current)
   e.preventDefault(), e.stopPropagation(), null == N || N(p * A + L.current);
   }, [
 N,
 A
   ]), k = l.useMemo(() => (0, r.throttle)(e => {
-if (null == v.current)
+if (null == Z.current)
   return;
-let i = v.current.getBoundingClientRect(),
+let i = Z.current.getBoundingClientRect(),
   l = i.left + i.width / 2,
   r = {
     x: l,
@@ -178,13 +178,13 @@ let i = v.current.getBoundingClientRect(),
     x: e.clientX,
     y: e.clientY
   };
-if (G(a, r, Math.max(t, n)), T.current) {
+if (w(a, r, Math.max(t, n)), T.current) {
   null != I && D();
   return;
 }
 let s = (0, o.ld)(r, a, Math.max(t, n));
-for (let e = 0; e < Z.current[A].length; e++) {
-  let t = Z.current[A][e];
+for (let e = 0; e < v.current[A].length; e++) {
+  let t = v.current[A][e];
   if (null == t)
     continue;
   let n = t.getBoundingClientRect();
@@ -196,7 +196,7 @@ for (let e = 0; e < Z.current[A].length; e++) {
 D();
   }, 16), [
 I,
-G,
+w,
 D,
 j,
 A,
@@ -244,9 +244,9 @@ P
 className: u.chatWheelMouseInput,
 onMouseMove: k,
 onWheel: B,
-onClick: w,
+onClick: G,
 children: (0, i.jsxs)('div', {
-  ref: v,
+  ref: Z,
   className: u.chatWheel,
   style: {
     width: t,

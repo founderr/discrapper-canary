@@ -3,7 +3,7 @@ n.d(t, {
 return W;
   },
   Qj: function() {
-return z;
+return Y;
   }
 }), n(47120);
 var i = n(735250),
@@ -27,8 +27,8 @@ var i = n(735250),
   N = n(43267),
   x = n(933557),
   S = n(979264),
-  v = n(163889),
-  Z = n(111028),
+  Z = n(163889),
+  v = n(111028),
   T = n(853856),
   L = n(93687),
   A = n(785232),
@@ -41,12 +41,12 @@ var i = n(735250),
   j = n(9156),
   D = n(594174),
   U = n(709054),
-  G = n(998502),
-  w = n(788307),
+  w = n(998502),
+  G = n(788307),
   k = n(981631),
   B = n(689938),
   H = n(17147);
-let V = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
+let V = w.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
   F = {
 offset: {
   top: 2,
@@ -71,12 +71,12 @@ children: (0, i.jsx)(p.CloseSmallIcon, {
   className: H.closeIcon
 })
   }),
-  Y = () => (0, i.jsx)(p.StarIcon, {
+  z = () => (0, i.jsx)(p.StarIcon, {
 size: 'xs',
 color: 'currentColor',
 className: H.favoriteIcon
   });
-class z extends l.Component {
+class Y extends l.Component {
   render() {
 let {
   route: e,
@@ -94,7 +94,7 @@ let {
   'aria-setsize': g,
   ...I
 } = this.props;
-return (0, i.jsx)(v.Z, {
+return (0, i.jsx)(Z.Z, {
   className: a()(H.channel, {
     [H.fullWidth]: d.tq
   }, _),
@@ -150,15 +150,15 @@ isTyping: O,
 status: P,
 isMobile: D,
 'aria-posinset': U,
-'aria-setsize': G
-  } = e, [z, K] = l.useState(!1), q = l.useRef(null), Q = l.useRef(null), {
+'aria-setsize': w
+  } = e, [Y, K] = l.useState(!1), q = l.useRef(null), Q = l.useRef(null), {
 avatarSrc: J,
 avatarDecorationSrc: X,
 eventHandlers: $
   } = (0, M.Z)({
 user: d,
 size: p.AvatarSizes.SIZE_32,
-animateOnHover: !(s || z)
+animateOnHover: !(s || Y)
   }), ee = (0, h.e7)([j.ZP], () => j.ZP.isChannelMuted(t.getGuildId(), t.id)), et = (0, h.e7)([y.ZP], () => y.ZP.getMentionCount(t.id) > 0), en = (0, x.ZP)(t), ei = (0, h.e7)([T.Z], () => T.Z.isFavorite(t.id)), el = () => {
 K(!0);
   }, er = () => {
@@ -243,11 +243,11 @@ return t.isSystemDM() ? (0, i.jsx)('div', {
   children: B.Z.Messages.MEMBERS_HEADER.format({
     members: t.recipients.length + 1
   })
-}) : null != L && L.length > 0 ? (0, i.jsx)(w.Z, {
+}) : null != L && L.length > 0 ? (0, i.jsx)(G.Z, {
   ...e,
   activities: L,
   applicationStream: R,
-  animate: z,
+  animate: Y,
   hideTooltip: !0,
   user: d
 }) : null;
@@ -300,7 +300,7 @@ children: e => {
     role: n,
     ...l
   } = e;
-  return (0, i.jsx)(v.Z, {
+  return (0, i.jsx)(Z.Z, {
     className: H.channel,
     role: n,
     focusProps: {
@@ -313,7 +313,7 @@ children: e => {
     onMouseLeave: er,
     onMouseDown: es,
     onContextMenu: eu,
-    'aria-setsize': G,
+    'aria-setsize': w,
     'aria-posinset': U,
     children: (0, i.jsxs)(p.Interactive, {
       className: a()(H.interactive, {
@@ -340,7 +340,7 @@ children: e => {
             highlighted: et,
             muted: null != ee && ee,
             subText: eh(),
-            name: (0, i.jsx)(Z.Z, {
+            name: (0, i.jsx)(v.Z, {
               tooltipClassName: H.overflowTooltip,
               children: eg
             }),
@@ -351,7 +351,7 @@ children: e => {
             }) : null
           })
         }),
-        ei ? (0, i.jsx)(Y, {}) : null,
+        ei ? (0, i.jsx)(z, {}) : null,
         (0, i.jsx)(W, {
           'aria-label': e_ ? B.Z.Messages.LEAVE_GROUP_DM : B.Z.Messages.CLOSE_DM,
           onClick: e_ ? ed : ea,

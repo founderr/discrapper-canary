@@ -1,70 +1,70 @@
 let r;
-t(47120);
-var i, o = t(442837),
-  l = t(570140),
-  u = t(699516),
-  a = t(496232);
+n(47120);
+var i, s = n(442837),
+  I = n(570140),
+  u = n(699516),
+  a = n(496232);
 
-function s(e, n, t) {
-  return n in e ? Object.defineProperty(e, n, {
-value: t,
+function _(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+value: n,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[n] = t, e;
+  }) : e[t] = n, e;
 }
-let c = !1,
-  d = Object.freeze({
+let l = !1,
+  o = Object.freeze({
 userAffinities: [],
 lastFetched: 0
   }),
-  _ = {
-...d
+  E = {
+...o
   };
 
-function f() {
-  r = new Map(_.userAffinities.filter(e => !u.Z.isBlocked(e.otherUserId)).map(e => [
+function S() {
+  r = new Map(E.userAffinities.filter(e => !u.Z.isBlocked(e.otherUserId)).map(e => [
 e.otherUserId,
 e
   ]));
 }
-class E extends(i = o.ZP.PersistedStore) {
+class N extends(i = s.ZP.PersistedStore) {
   initialize(e) {
-this.waitFor(u.Z), null != e && (_.userAffinities = e.userAffinities, _.lastFetched = e.lastFetched, f()), this.syncWith([u.Z], f);
+this.waitFor(u.Z), null != e && (E.userAffinities = e.userAffinities, E.lastFetched = e.lastFetched, S()), this.syncWith([u.Z], S);
   }
   shouldFetch() {
-if (!c)
-  return Date.now() - _.lastFetched > a.K;
+if (!l)
+  return Date.now() - E.lastFetched > a.K;
   }
   isFetching() {
-return c;
+return l;
   }
   getUserAffinities() {
-return _.userAffinities;
+return E.userAffinities;
   }
   getUserAffinity(e) {
 return r.get(e);
   }
   getState() {
-return _;
+return E;
   }
 }
-s(E, 'displayName', 'UserAffinitiesStoreV2'), s(E, 'persistKey', 'UserAffinitiesStoreV2'), n.Z = new E(l.Z, {
+_(N, 'displayName', 'UserAffinitiesStoreV2'), _(N, 'persistKey', 'UserAffinitiesStoreV2'), t.Z = new N(I.Z, {
   LOAD_USER_AFFINITIES_V2: function() {
-c = !0;
+l = !0;
   },
   LOAD_USER_AFFINITIES_V2_SUCCESS: function(e) {
 let {
-  affineUsers: n
+  affineUsers: t
 } = e;
-_.lastFetched = Date.now(), c = !1, _.userAffinities = n, f();
+E.lastFetched = Date.now(), l = !1, E.userAffinities = t, S();
   },
   LOAD_USER_AFFINITIES_V2_FAILURE: function() {
-c = !1;
+l = !1;
   },
   LOGOUT: function() {
-_ = {
-  ...d
-}, r = new Map(), c = !1;
+E = {
+  ...o
+}, r = new Map(), l = !1;
   }
 });

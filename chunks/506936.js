@@ -29,12 +29,12 @@ notEmailVerified: E,
 notPhoneVerified: N,
 newAccount: x,
 newMember: S
-  } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]), v = 0 === t ? m.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null, Z = null, T = null;
-  return (0 === t && (I ? (Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED, T = m.Z.Messages.CLAIM_ACCOUNT) : N ? (Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED, T = m.Z.Messages.VERIFY_PHONE) : E ? (Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED, T = m.Z.Messages.RESEND_VERIFICATION_EMAIL) : S ? (Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({
+  } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]), Z = 0 === t ? m.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null, v = null, T = null;
+  return (0 === t && (I ? (v = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED, T = m.Z.Messages.CLAIM_ACCOUNT) : N ? (v = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED, T = m.Z.Messages.VERIFY_PHONE) : E ? (v = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED, T = m.Z.Messages.RESEND_VERIFICATION_EMAIL) : S ? (v = m.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({
 min: _.YeM.MEMBER_AGE
-  }), T = m.Z.Messages.OKAY) : x && (Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({
+  }), T = m.Z.Messages.OKAY) : x && (v = m.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({
 min: _.YeM.ACCOUNT_AGE
-  }), T = m.Z.Messages.OKAY)), null == v || null == Z) ? null : (0, r.jsxs)(s.Dialog, {
+  }), T = m.Z.Messages.OKAY)), null == Z || null == v) ? null : (0, r.jsxs)(s.Dialog, {
 className: g.container,
 'aria-labelledby': C,
 children: [
@@ -49,12 +49,12 @@ children: [
       (0, r.jsx)(s.Heading, {
         variant: 'heading-md/semibold',
         id: C,
-        children: v
+        children: Z
       }),
       (0, r.jsx)(s.Text, {
         color: 'header-secondary',
         variant: 'text-sm/normal',
-        children: Z
+        children: v
       }),
       (0, r.jsxs)('div', {
         className: g.buttonContainer,

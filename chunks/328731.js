@@ -23,11 +23,11 @@ className: r
   } = e, {
 displayParticipants: _,
 participant1: p,
-participant2: v,
-numOtherParticipants: C
+participant2: C,
+numOtherParticipants: v
   } = (0, u.Z)(n, 3), h = [
 p,
-v
+C
   ];
   return (0, l.jsxs)('div', {
 className: i()(f.container, r),
@@ -54,7 +54,7 @@ children: [
     children: m.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS.format({
       user1: c.ZP.getName(t.guild_id, t.id, h[0]),
       user2: c.ZP.getName(t.guild_id, t.id, h[1]),
-      countOthers: C,
+      countOthers: v,
       nameHook: (e, n) => (0, l.jsx)(d.Z, {
         tag: 'span',
         onClick: () => (0, s.openUserProfileModal)({

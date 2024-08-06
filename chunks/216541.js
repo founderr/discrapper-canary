@@ -8,8 +8,8 @@ n(470079);
 var r = n(120356),
   s = n.n(r),
   o = n(780384),
-  i = n(481060),
-  l = n(410030),
+  l = n(481060),
+  i = n(410030),
   c = n(876917),
   d = n(328456),
   u = n(616066),
@@ -27,7 +27,7 @@ profileEffectClassName: m
   } = e, {
 firstProfileEffect: E,
 firstAvatarDecoration: h
-  } = (0, d.R)(t), b = (0, l.ZP)(), y = (0, o.ap)(b);
+  } = (0, d.R)(t), b = (0, i.ZP)(), y = (0, o.ap)(b);
   return (0, a.jsxs)('div', {
 className: f.container,
 children: [
@@ -46,7 +46,7 @@ children: [
     children: (0, a.jsx)(u.R, {
       item: h,
       user: C,
-      avatarSize: i.AvatarSizes.SIZE_120,
+      avatarSize: l.AvatarSizes.SIZE_120,
       isPurchased: n,
       isHighlighted: r,
       avatarPlaceholderSrc: y ? p : g

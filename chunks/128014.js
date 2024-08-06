@@ -7,6 +7,6 @@ var r = n(960048);
 
 function i() {
   var e;
-  let t = parseInt((e = '315733', '315733'));
-  return Number.isNaN(t) && (r.Z.captureMessage('Trying to open a changelog for an invalid build number '.concat('315733')), t = 0), t;
+  let t = parseInt((e = '315878', '315878'));
+  return Number.isNaN(t) && (r.Z.captureMessage('Trying to open a changelog for an invalid build number '.concat('315878')), t = 0), t;
 }

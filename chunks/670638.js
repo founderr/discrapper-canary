@@ -1,6 +1,6 @@
 n.d(t, {
   r: function() {
-return b;
+return f;
   }
 });
 var s = n(735250),
@@ -21,12 +21,12 @@ var s = n(735250),
   _ = n(231338),
   q = n(689938);
 
-function f(e) {
+function b(e) {
   var t;
   let n = (0, i.e7)([E.Z], () => E.Z.questDeliveryOverride, []),
 u = (0, m.GN)(e.questContent),
-f = (0, m.zK)(e.quest, T.S7.IN_HOUSE_CONSOLE_QUEST),
-b = (0, x.Z)(T.dr.QUEST_CONTEXT_MENU),
+b = (0, m.zK)(e.quest, T.S7.IN_HOUSE_CONSOLE_QUEST),
+f = (0, x.Z)(T.dr.QUEST_CONTEXT_MENU),
 {
   handleComplete: M,
   handleResetDismissibilityClick: h,
@@ -65,7 +65,7 @@ onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : _.d
 children: [
   (0, s.jsxs)(a.MenuGroup, {
     children: [
-      !1 === f && (0, s.jsx)(a.MenuItem, {
+      !1 === b && (0, s.jsx)(a.MenuItem, {
         id: 'play-game',
         label: q.Z.Messages.QUESTS_GET_THIS_GAME,
         action: I,
@@ -115,7 +115,7 @@ children: [
             questContentCTA: c.jZ.CONTEXT_MENU_HIDE_CONTENT
           }), (0, m.GN)(e.questContent) && (0, d.gl)(e.quest.id, e.questContent);
         },
-        subtext: b ? q.Z.Messages.QUESTS_FIND_THIS_IN_DISCOVERY_QUEST_HOME : q.Z.Messages.QUESTS_FIND_QUEST
+        subtext: f ? q.Z.Messages.QUESTS_FIND_THIS_IN_DISCOVERY_QUEST_HOME : q.Z.Messages.QUESTS_FIND_QUEST
       })
     ]
   }, 'minor-actions'),
@@ -170,7 +170,7 @@ children: [
   });
 }
 
-function b(e) {
+function f(e) {
   let {
 children: t,
 onOpen: n,
@@ -201,14 +201,14 @@ renderPopout: e => {
     closePopout: t
   } = e;
   return r ? (0, s.jsx)(u.Z, {
-    children: (0, s.jsx)(f, {
+    children: (0, s.jsx)(b, {
       ...E,
       quest: l,
       questContent: d,
       questContentPosition: C,
       onClose: t
     })
-  }) : (0, s.jsx)(f, {
+  }) : (0, s.jsx)(b, {
     ...E,
     quest: l,
     questContent: d,

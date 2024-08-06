@@ -20,15 +20,15 @@ var s = n(735250),
   m = n(230916),
   N = n(248042),
   f = n(823188),
-  h = n(21023),
-  S = n(318747),
+  S = n(21023),
+  h = n(318747),
   M = n(409100),
   x = n(474936),
   b = n(689938),
   O = n(471587),
   P = n(102655),
-  v = n(768236),
-  L = n(314907),
+  L = n(768236),
+  v = n(314907),
   Z = n(826701);
 let D = () => {
 let e = (0, N.W1)();
@@ -51,7 +51,7 @@ let t, {
     premiumType: n
   } = e,
   a = (0, _.ZP)();
-t = n === x.p9.TIER_0 ? (0, o.wj)(a) ? P : v : (0, o.wj)(a) ? L : Z;
+t = n === x.p9.TIER_0 ? (0, o.wj)(a) ? P : L : (0, o.wj)(a) ? v : Z;
 let r = (0, C.Px)(n);
 return (0, s.jsx)('img', {
   src: t,
@@ -133,8 +133,8 @@ t.Z = e => {
   let n, {
   className: r,
   hideCTAs: P = !1,
-  headingOverride: v,
-  hidePill: L = !1,
+  headingOverride: L,
+  hidePill: v = !1,
   selectedPlanColumnClassName: Z,
   selectedPlanTier: y = x.p9.TIER_2
 } = e,
@@ -164,7 +164,7 @@ $ = (0, m.A)(x.Xh.PREMIUM_MONTH_TIER_2),
 ee = ''.concat($, '/').concat((0, C.eP)(x.rV.MONTH)),
 et = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
 en = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
-es = (0, h.n)(et, en, X, ee),
+es = (0, S.n)(et, en, X, ee),
 ea = (0, N.Vi)();
   if (!H || !w)
 return null;
@@ -205,7 +205,7 @@ column1: (0, s.jsxs)(s.Fragment, {
       subscriptionTier: x.Si.TIER_0,
       showIcon: !1
     }),
-    q === x.p9.TIER_2 || null != Q ? null : (0, s.jsx)(S.Z, {
+    q === x.p9.TIER_2 || null != Q ? null : (0, s.jsx)(h.Z, {
       className: O.button,
       subscriptionTier: x.Si.TIER_0
     })
@@ -226,7 +226,7 @@ column2: (0, s.jsxs)(s.Fragment, {
       showIcon: !1,
       isEligibleForBogoPromotion: ea
     }),
-    q === x.p9.TIER_0 || null != Q ? null : (0, s.jsx)(S.Z, {
+    q === x.p9.TIER_0 || null != Q ? null : (0, s.jsx)(h.Z, {
       className: O.button,
       subscriptionTier: x.Si.TIER_2
     })
@@ -235,7 +235,7 @@ column2: (0, s.jsxs)(s.Fragment, {
 withBottomBorder: !1,
 withBottomBorderRadius: !0,
 buttonsRow: null == Q
-  }), n = L ? null : null != Q || null != q ? (0, s.jsx)(f.Cy, {
+  }), n = v ? null : null != Q || null != q ? (0, s.jsx)(f.Cy, {
 text: null != Q ? b.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
 className: O.freeTrialPillWithSparkles,
 colorOptions: Q === x.Si.TIER_0 ? W ? f.VE.PREMIUM_TIER_0_GRADIENT_FILL : f.VE.PREMIUM_TIER_0_WHITE_FILL : W ? Y ? f.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : f.VE.PREMIUM_TIER_2_WHITE_FILL
@@ -250,7 +250,7 @@ children: (0, s.jsxs)('div', {
     (0, s.jsx)(c.Heading, {
       className: i()(O.titleText, O.__invalid_textColor),
       variant: 'heading-xxl/extrabold',
-      children: null != v ? v : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+      children: null != L ? L : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
     }),
     (0, s.jsxs)('div', {
       className: O.tableWrapper,

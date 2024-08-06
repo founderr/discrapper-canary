@@ -4,8 +4,8 @@ return u;
   }
 }), n(47120), n(653041);
 var s, r, a = n(470079),
-  o = n(952639),
-  i = n.n(o),
+  i = n(952639),
+  o = n.n(i),
   c = n(399606),
   l = n(1870),
   d = n(724994);
@@ -25,7 +25,7 @@ for (let n of e.values()) {
   } = (0, d.U)(l.Z, n);
   t[s ? 1 : e ? 2 : 0].push(n);
 }
-return i()(t);
+return o()(t);
   }, [
 t,
 e

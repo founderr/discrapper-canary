@@ -2,8 +2,8 @@ n(47120);
 var s = n(735250),
   r = n(470079),
   a = n(120356),
-  o = n.n(a),
-  i = n(338545),
+  i = n.n(a),
+  o = n(338545),
   c = n(442837),
   l = n(481060),
   d = n(100527),
@@ -19,8 +19,8 @@ t.Z = e => {
 className: t,
 products: n,
 user: a,
-productToCategoryMap: b
-  } = e, [h, x] = r.useState(0), E = n.length, {
+productToCategoryMap: h
+  } = e, [b, x] = r.useState(0), E = n.length, {
 analyticsLocations: I
   } = (0, c.cj)([p.Z], () => p.Z.getAnalytics()), {
 analyticsLocations: v
@@ -28,15 +28,15 @@ analyticsLocations: v
 ...I,
 d.Z.COLLECTIBLES_SHOP_POPULAR_PICKS_CAROUSEL
   ]), {
-trackPagination: L
-  } = (0, C.X)('collectibles_shop_popular_picks_carousel', v), S = r.useCallback(e => ({
-x: (e - h) * 100
-  }), [h]), [T, N] = (0, l.useSprings)(n.length, S);
+trackPagination: S
+  } = (0, C.X)('collectibles_shop_popular_picks_carousel', v), L = r.useCallback(e => ({
+x: (e - b) * 100
+  }), [b]), [T, N] = (0, l.useSprings)(n.length, L);
   return (r.useEffect(() => {
-N(S);
+N(L);
   }, [
 N,
-S
+L
   ]), null == a || 0 === n.length) ? null : (0, s.jsx)('div', {
 className: t,
 children: (0, s.jsxs)('div', {
@@ -45,14 +45,14 @@ children: (0, s.jsxs)('div', {
     (0, s.jsx)(l.Button, {
       look: l.Button.Looks.FILLED,
       color: l.Button.Colors.PRIMARY,
-      className: o()(m.caretButton, m.leftCaret),
+      className: i()(m.caretButton, m.leftCaret),
       onClick: () => {
         x(e => {
           let t = e - 4;
-          return L(t / 4, h / 4), t;
+          return S(t / 4, b / 4), t;
         });
       },
-      disabled: h - 4 < 0,
+      disabled: b - 4 < 0,
       'aria-label': _.Z.Messages.PAGINATION_PREVIOUS,
       children: (0, s.jsx)(f.Z, {
         direction: f.Z.Directions.LEFT
@@ -63,16 +63,16 @@ children: (0, s.jsxs)('div', {
       children: T.map((e, t) => {
         let {
           x: r
-        } = e, o = b.get(n[t].skuId);
-        if (null != o)
-          return (0, s.jsx)(i.animated.div, {
+        } = e, i = h.get(n[t].skuId);
+        if (null != i)
+          return (0, s.jsx)(o.animated.div, {
             className: m.card,
             style: {
               transform: null == r ? void 0 : r.to(e => 'translate3d('.concat(e, '%,0,0)'))
             },
             children: (0, s.jsx)(g.Z, {
               product: n[t],
-              category: o,
+              category: i,
               user: a,
               isPopularPicksRow: !0
             }, ''.concat(n[t].name, '_').concat(t, '_perks_card'))
@@ -82,14 +82,14 @@ children: (0, s.jsxs)('div', {
     (0, s.jsx)(l.Button, {
       look: l.Button.Looks.FILLED,
       color: l.Button.Colors.PRIMARY,
-      className: o()(m.caretButton, m.rightCaret),
+      className: i()(m.caretButton, m.rightCaret),
       onClick: () => {
         x(e => {
           let t = e + 4;
-          return L(t / 4, h / 4), t;
+          return S(t / 4, b / 4), t;
         });
       },
-      disabled: h + 4 >= E,
+      disabled: b + 4 >= E,
       'aria-label': _.Z.Messages.PAGINATION_NEXT,
       children: (0, s.jsx)(f.Z, {
         direction: f.Z.Directions.RIGHT

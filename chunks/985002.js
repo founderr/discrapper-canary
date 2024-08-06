@@ -13,8 +13,8 @@ function o(e) {
   let {
 onError: t,
 onSuccess: n
-  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [g, p] = s.useState(!1), [A, m] = s.useState(!1), [N, f] = s.useState(!1), h = o || d || u || T || g || N, S = s.useCallback(async e => {
-if (!h) {
+  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [g, p] = s.useState(!1), [A, m] = s.useState(!1), [N, f] = s.useState(!1), S = o || d || u || T || g || N, h = s.useCallback(async e => {
+if (!S) {
   c(!0);
   try {
     await (0, r.Yw)(e.id, l.ne.ACTIVE), null == n || n();
@@ -26,11 +26,11 @@ if (!h) {
   }
 }
   }, [
-h,
+S,
 t,
 n
   ]), M = s.useCallback(async e => {
-if (!h) {
+if (!S) {
   _(!0);
   try {
     await (0, r.Yw)(e.id, l.ne.DECLINED), null == n || n();
@@ -42,11 +42,11 @@ if (!h) {
   }
 }
   }, [
-h,
+S,
 t,
 n
   ]), x = s.useCallback(async e => {
-if (!h) {
+if (!S) {
   E(!0);
   try {
     await (0, r.Yw)(e.id, l.ne.INACTIVE), null == n || n();
@@ -58,11 +58,11 @@ if (!h) {
   }
 }
   }, [
-h,
+S,
 t,
 n
   ]), b = s.useCallback(async e => {
-if (!h) {
+if (!S) {
   I(!0);
   try {
     await (0, r.fc)(e.id), null == n || n();
@@ -74,7 +74,7 @@ if (!h) {
   }
 }
   }, [
-h,
+S,
 t,
 n
   ]), O = s.useCallback(async () => {
@@ -109,7 +109,7 @@ if (!A) {
 A,
 t,
 n
-  ]), v = s.useCallback(async (e, s) => {
+  ]), L = s.useCallback(async (e, s) => {
 if (!g) {
   p(!0);
   try {
@@ -127,13 +127,13 @@ t,
 n
   ]);
   return {
-acceptLinkRequest: S,
+acceptLinkRequest: h,
 declineLinkRequest: M,
 disconnectLinkRequest: x,
 cancelLinkRequest: b,
 selectTeenUser: P,
 getLinkCode: O,
-requestLink: v,
+requestLink: L,
 loadMore: s.useCallback(async e => {
   let n = i.Z.getActionsForDisplayType(e),
     s = n[n.length - 1],

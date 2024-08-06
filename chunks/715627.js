@@ -28,9 +28,9 @@ let {
   onAnimationEnd: A
 } = e, [m, N] = a.useState(null), {
   confettiCanvas: f
-} = a.useContext(i.h), h = (0, r.uR)(null != C ? C : f, m), [S, M] = a.useState(!1);
+} = a.useContext(i.h), S = (0, r.uR)(null != C ? C : f, m), [h, M] = a.useState(!1);
 a.useEffect(() => {
-  S && (null == A || A());
+  h && (null == A || A());
 });
 let x = a.useMemo(() => {
   if (null != d)
@@ -44,7 +44,7 @@ return a.useEffect(() => {
     return;
   let e = Array(null != _ ? _ : 4).fill(0);
   return e = e.map((n, s) => setTimeout(() => {
-    h.createMultipleConfetti(function(e, t, n, s, a) {
+    S.createMultipleConfetti(function(e, t, n, s, a) {
       let r = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
         i = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0.001,
         d = c(e.width, 100, n),
@@ -97,7 +97,7 @@ return a.useEffect(() => {
       clearTimeout(t);
   };
 }, [
-  h,
+  S,
   t,
   _,
   u,

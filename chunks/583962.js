@@ -27,8 +27,8 @@ var i = n(735250),
   N = n(667815),
   x = n(531572),
   S = n(26323),
-  v = n(30513),
-  Z = n(981631),
+  Z = n(30513),
+  v = n(981631),
   T = n(689938),
   L = n(962095);
 let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
@@ -36,7 +36,7 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
 let {
   guild: t,
   onSelect: n
-} = e, [r, a] = l.useState(t.premiumProgressBarEnabled), [s, o] = l.useState(!1), u = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t)), p = async () => {
+} = e, [r, a] = l.useState(t.premiumProgressBarEnabled), [s, o] = l.useState(!1), u = (0, c.e7)([g.Z], () => g.Z.can(v.Plq.MANAGE_GUILD, t)), p = async () => {
   if (!!u)
     o(!0), await m.Z.saveGuild(t.id, {
       premiumProgressBarEnabled: !r
@@ -74,7 +74,7 @@ id: m
   } = t, E = (0, I.rF)(u, m), A = (0, I.FZ)(E, t.id), M = null == A, R = null != A ? A : E, y = (0, c.e7)([x.Z], () => {
 var e;
 return null !== (e = x.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
-  }), P = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t));
+  }), P = (0, c.e7)([g.Z], () => g.Z.can(v.Plq.MANAGE_GUILD, t));
   l.useEffect(() => {
 y !== u && (0, N.v)(m, u);
   }, [
@@ -95,23 +95,23 @@ U = {
   },
   config: O
 },
-[G, w] = (0, d.useSpring)(() => U),
+[w, G] = (0, d.useSpring)(() => U),
 k = () => {
-  (0, _.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+  (0, _.yw)(v.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
     location: {
-      section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR
+      section: v.jXE.PREMIUM_GUILD_PROGRESS_BAR
     },
     guild_id: m,
     location_stack: r
   }), (0, S.Z)({
     analyticsLocations: r,
     analyticsSourceLocation: {
-      page: Z.ZY5.GUILD_CHANNEL,
-      section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR,
-      object: Z.qAy.TOOLTIP
+      page: v.ZY5.GUILD_CHANNEL,
+      section: v.jXE.PREMIUM_GUILD_PROGRESS_BAR,
+      object: v.qAy.TOOLTIP
     },
     guild: t,
-    perks: (0, v.VF)(),
+    perks: (0, Z.VF)(),
     perkIntro: T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_PROGRESS_BAR_HEADER
   });
 },
@@ -149,7 +149,7 @@ children: (0, i.jsx)(d.Tooltip, {
     onClick: k,
     onMouseEnter: () => {
       var t;
-      null === (t = e.onMouseEnter) || void 0 === t || t.call(e), w(U);
+      null === (t = e.onMouseEnter) || void 0 === t || t.call(e), G(U);
     },
     className: a()(L.container, {
       [L.containerWithMargin]: n
@@ -201,7 +201,7 @@ children: (0, i.jsx)(d.Tooltip, {
         children: [
           (0, i.jsx)(s.animated.div, {
             className: L.progressBar,
-            style: G
+            style: w
           }),
           M ? (0, i.jsx)('span', {
             'aria-label': T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_TADA_ICON_ALT_TEXT,

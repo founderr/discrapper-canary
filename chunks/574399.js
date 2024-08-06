@@ -1,6 +1,6 @@
 t.d(n, {
   I: function() {
-return E;
+return I;
   }
 });
 var l = t(735250),
@@ -16,25 +16,25 @@ var l = t(735250),
   f = t(509545),
   _ = t(55563),
   p = t(551428),
-  v = t(937615),
-  C = t(147496),
+  C = t(937615),
+  v = t(147496),
   h = t(519896),
-  x = t(981631),
-  I = t(689938);
+  E = t(981631),
+  x = t(689938);
 
-function E(e) {
+function I(e) {
   r.useEffect(() => {
 if (null != e)
   (0, o.jU)(e), (0, c.GZ)(e), (0, s.km)(e);
   }, [e]);
   let n = (0, i.e7)([_.Z], () => null != e ? _.Z.get(e) : void 0, [e]),
 t = (0, i.e7)([f.Z], () => null != e ? f.Z.getForSKU(e) : void 0, [e]),
-E = r.useMemo(() => null != t ? t.map(e => e.id)[0] : void 0, [t]),
+I = r.useMemo(() => null != t ? t.map(e => e.id)[0] : void 0, [t]),
 T = (0, i.e7)([p.Z], () => null != e ? p.Z.getForSKU(e) : void 0, [e]);
   r.useEffect(() => {
-if (null != E)
-  (0, u.vY)(E);
-  }, [E]);
+if (null != I)
+  (0, u.vY)(I);
+  }, [I]);
   let N = null == n ? void 0 : n.applicationId,
 g = (0, i.e7)([d.Z], () => null != N ? d.Z.getSubscriptionGroupListingForApplication(N) : null, [N]),
 S = r.useCallback(() => {
@@ -60,7 +60,7 @@ S = r.useCallback(() => {
   null == g ? void 0 : g.id,
   null == g ? void 0 : g.sku_flags
 ]),
-b = r.useCallback(() => {
+O = r.useCallback(() => {
   if (null == n)
     return null;
   (0, a.openModal)(e => {
@@ -68,7 +68,7 @@ b = r.useCallback(() => {
       onClose: t,
       transitionState: r
     } = e;
-    return (0, l.jsx)(C.ItemDetailsModal, {
+    return (0, l.jsx)(v.ItemDetailsModal, {
       appId: n.applicationId,
       skuId: n.id,
       onClose: t,
@@ -76,38 +76,38 @@ b = r.useCallback(() => {
     });
   });
 }, [n]);
-  if (null != n && null != T && (null == n || n.type !== x.epS.SUBSCRIPTION || null != g)) {
+  if (null != n && null != T && (null == n || n.type !== E.epS.SUBSCRIPTION || null != g)) {
 if (null == e || null != n && !n.available)
   return {
     disabled: !0,
-    label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+    label: x.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
   };
-if (n.type === x.epS.SUBSCRIPTION) {
+if (n.type === E.epS.SUBSCRIPTION) {
   if (null == t || 0 === t.length)
     return {
       disabled: !0,
-      label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+      label: x.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
     };
   let e = t[0];
   return {
     disabled: !1,
-    label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
+    label: x.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
       skuName: n.name,
-      price: (0, v.T4)(e.price, e.currency)
+      price: (0, C.T4)(e.price, e.currency)
     }),
     onClick: S
   };
 }
 return null == n.price ? {
   disabled: !0,
-  label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+  label: x.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
 } : {
   disabled: !1,
-  label: I.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
+  label: x.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
     skuName: n.name,
-    price: (0, v.T4)(n.price.amount, n.price.currency)
+    price: (0, C.T4)(n.price.amount, n.price.currency)
   }),
-  onClick: b
+  onClick: O
 };
   }
 }

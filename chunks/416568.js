@@ -20,8 +20,8 @@ var i = n(735250),
   N = n(358221),
   x = n(963202),
   S = n(353093),
-  v = n(706590),
-  Z = n(940777),
+  Z = n(706590),
+  v = n(940777),
   T = n(831565),
   L = n(41776),
   A = n(905423),
@@ -34,16 +34,16 @@ var i = n(735250),
   j = n(709054),
   D = n(792125),
   U = n(727258),
-  G = n(605951),
-  w = n(474109),
+  w = n(605951),
+  G = n(474109),
   k = n(741616),
   B = n(187835),
   H = n(162050),
   V = n(118122),
   F = n(193154),
   W = n(602147),
-  Y = n(773182),
-  z = n(222059),
+  z = n(773182),
+  Y = n(222059),
   K = n(751277),
   q = n(65721),
   Q = n(843343),
@@ -185,15 +185,15 @@ location: 'guilds_bar',
 includeConverted: !0
   }), eE = (0, T.v)({
 location: 'GuildsBar'
-  }), eN = em || eC.length > 0 || eE, ex = l.useMemo(() => eC.filter(e => !(0, S.EJ)(e)), [eC]).length > 0, eS = l.useMemo(() => ex ? Y.OO : em ? Y.KF : void 0, [
+  }), eN = em || eC.length > 0 || eE, ex = l.useMemo(() => eC.filter(e => !(0, S.EJ)(e)), [eC]).length > 0, eS = l.useMemo(() => ex ? z.OO : em ? z.KF : void 0, [
 em,
 ex
-  ]), ev = l.useMemo(() => ex ? eI : em ? eg : void 0, [
+  ]), eZ = l.useMemo(() => ex ? eI : em ? eg : void 0, [
 eI,
 em,
 ex,
 eg
-  ]), eZ = null != eS, eT = !eZ, {
+  ]), ev = null != eS, eT = !ev, {
 ref: eL,
 ...eA
   } = (0, d.OP)(), eb = (0, m.useFocusJumpSection)(), [eM, eR] = l.useState(!1), eO = l.useMemo(() => new ec(o, eR, () => {
@@ -251,9 +251,9 @@ eO.scrollTo({
   animate: !1
 });
   }, [eO]);
-  (0, G.Z)(eO.scrollToGuild);
-  let eG = o.getRoots(),
-ew = (0, v.Z)(),
+  (0, w.Z)(eO.scrollToGuild);
+  let ew = o.getRoots(),
+eG = (0, Z.Z)(),
 ek = (0, b.U)(),
 eB = el.map(e => (0, i.jsx)(F.Z, {
   id: e.id,
@@ -274,7 +274,7 @@ children: (0, i.jsx)('nav', {
     role: 'tree',
     className: ei.tree,
     children: [
-      (0, i.jsx)(w.Z, {
+      (0, i.jsx)(G.Z, {
         ref: eh,
         isVisible: eO.isItemVisible,
         onJumpTo: eO.handleJumpToGuild,
@@ -289,8 +289,8 @@ children: (0, i.jsx)('nav', {
         ref: eO.scrollerRef,
         onScroll: eO.handleScroll,
         children: [
-          (0, i.jsx)(z.u, {}),
-          ew ? (0, i.jsx)(Z.Z, {}) : null,
+          (0, i.jsx)(Y.u, {}),
+          eG ? (0, i.jsx)(v.Z, {}) : null,
           (0, i.jsx)(H.Z, {}),
           (0, i.jsx)(K.Z, {
             isOnHubVerificationRoute: eD
@@ -306,7 +306,7 @@ children: (0, i.jsx)('nav', {
           (0, i.jsx)(q.Z, {}),
           (0, i.jsx)('div', {
             'aria-label': en.Z.Messages.SERVERS,
-            children: eG.map(function e(t) {
+            children: ew.map(function e(t) {
               switch (t.type) {
                 case U.eD.FOLDER:
                   return (0, i.jsx)(J.Z, {
@@ -335,7 +335,7 @@ children: (0, i.jsx)('nav', {
           eB,
           n ? null : (0, i.jsx)(V.Z, {
             disableTooltip: h.length > 0,
-            lastTargetNode: eG[eG.length - 1]
+            lastTargetNode: ew[ew.length - 1]
           }),
           n || eN ? null : (0, i.jsx)(W.Z, {
             ref: eO.guildDiscoveryRef,
@@ -350,17 +350,17 @@ children: (0, i.jsx)('nav', {
           })
         ]
       }),
-      n || null == eS ? !n && eN ? (0, i.jsx)(Y.LW, {
+      n || null == eS ? !n && eN ? (0, i.jsx)(z.LW, {
         hideGradient: e_,
         children: (0, i.jsx)(W.Z, {
           ref: eO.guildDiscoveryRef,
           selected: ej,
           className: ei.fixedDiscoveryIcon
         })
-      }) : null : (0, i.jsx)(Y.LW, {
+      }) : null : (0, i.jsx)(z.LW, {
         hideGradient: e_,
         children: (0, i.jsx)(eS, {
-          defaultGameId: ev,
+          defaultGameId: eZ,
           children: e => {
             let {
               onClick: t
@@ -374,13 +374,13 @@ children: (0, i.jsx)('nav', {
           }
         })
       }),
-      (0, i.jsx)(w.Z, {
+      (0, i.jsx)(G.Z, {
         reverse: !0,
         ref: ep,
         isVisible: eO.isItemVisible,
         onJumpTo: eO.handleJumpToGuild,
         className: a()(ei.unreadMentionsIndicatorBottom, {
-          [ei.unreadMentionsFixedFooter]: !n && eZ
+          [ei.unreadMentionsFixedFooter]: !n && ev
         }),
         barClassName: ei.unreadMentionsBar
       })

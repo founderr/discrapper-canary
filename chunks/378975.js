@@ -53,7 +53,7 @@ children: [
   });
 }
 
-function v(e) {
+function C(e) {
   let {
 emoji: n,
 label: t
@@ -79,7 +79,7 @@ children: (0, l.jsxs)('div', {
   });
 }
 
-function C(e) {
+function v(e) {
   let {
 options: n
   } = e;
@@ -115,57 +115,57 @@ id: i,
 placeholder: a,
 maxValues: s,
 minValues: h,
-disabled: x
-  } = e, I = r.useMemo(() => t.filter(e => e.default).map(e => e.value), [t]), {
-state: E,
+disabled: E
+  } = e, x = r.useMemo(() => t.filter(e => e.default).map(e => e.value), [t]), {
+state: I,
 executeStateUpdate: T,
 visualState: N,
 isDisabled: g,
 error: S
   } = (0, d.Ee)(e, {
 type: n,
-values: I
-  }), b = s > 1, O = N === m.gH.LOADING, [j, M] = r.useState(!1), [Z, y] = r.useState(() => new Set(t.filter(e => e.default).map(e => e.value))), [L, R] = r.useState(Z), A = r.useMemo(() => t.some(e => null != e.emoji), [t]);
+values: x
+  }), O = s > 1, b = N === m.gH.LOADING, [M, L] = r.useState(!1), [Z, y] = r.useState(() => new Set(t.filter(e => e.default).map(e => e.value))), [j, A] = r.useState(Z), R = r.useMemo(() => t.some(e => null != e.emoji), [t]);
   r.useEffect(() => {
-if ((null == E ? void 0 : E.type) === c.re.STRING_SELECT) {
-  let e = new Set(E.values);
-  y(e), R(e);
+if ((null == I ? void 0 : I.type) === c.re.STRING_SELECT) {
+  let e = new Set(I.values);
+  y(e), A(e);
 } else {
-  let e = new Set(I);
-  y(e), R(e);
+  let e = new Set(x);
+  y(e), A(e);
 }
   }, [
 i,
-I,
-E
+x,
+I
   ]);
-  let B = r.useCallback(() => {
-if (L !== Z)
+  let P = r.useCallback(() => {
+if (j !== Z)
   T({
     type: c.re.STRING_SELECT,
     values: Array.from(Z)
-  }) && R(Z);
+  }) && A(Z);
   }, [
 Z,
-L,
-R,
+j,
+A,
 T
   ]);
   r.useEffect(() => {
-if (!(j || Z.size === L.size && Array.from(L).every(e => Z.has(e))))
-  B();
+if (!(M || Z.size === j.size && Array.from(j).every(e => Z.has(e))))
+  P();
   }, [
-j,
+M,
 Z,
-L,
-B
+j,
+P
   ]);
-  let P = o.singleSelect;
-  b ? P = o.multiSelect : 0 === h && (P = o.toggleSelect);
-  let k = (0, o.useVariableSelect)({
+  let U = o.singleSelect;
+  O ? U = o.multiSelect : 0 === h && (U = o.toggleSelect);
+  let B = (0, o.useVariableSelect)({
 value: Z,
 onChange: e => y(e),
-onSelectInteraction: P
+onSelectInteraction: U
   });
   return (0, l.jsxs)(r.Fragment, {
 children: [
@@ -173,31 +173,31 @@ children: [
     className: _.container,
     children: [
       (0, l.jsx)(o.Select, {
-        isDisabled: x || g,
+        isDisabled: E || g,
         className: _.select,
         options: t.map(e => ({
           ...e,
-          disabled: b && !Z.has(e.value) && Z.size === s
+          disabled: O && !Z.has(e.value) && Z.size === s
         })),
         placeholder: null != a ? a : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
-        onClose: () => M(!1),
-        onOpen: () => M(!0),
+        onClose: () => L(!1),
+        onOpen: () => L(!0),
         maxVisibleItems: 5,
-        closeOnSelect: !b,
+        closeOnSelect: !O,
         optionClassName: _.selectOption,
         renderOptionLabel: e => (0, l.jsx)(p, {
           ...e,
-          isDisabled: b && !Z.has(e.value) && Z.size === s,
-          isOffset: A
+          isDisabled: O && !Z.has(e.value) && Z.size === s,
+          isOffset: R
         }),
-        renderOptionValue: e => b ? (0, l.jsx)(C, {
+        renderOptionValue: e => O ? (0, l.jsx)(v, {
           options: e
-        }) : (0, l.jsx)(v, {
+        }) : (0, l.jsx)(C, {
           ...e[0]
         }),
-        ...k
+        ...B
       }),
-      O ? (0, l.jsx)('div', {
+      b ? (0, l.jsx)('div', {
         className: _.__invalid_loading,
         children: (0, l.jsx)(o.Dots, {
           dotRadius: 3.5,

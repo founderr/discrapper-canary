@@ -14,5 +14,5 @@ n = null != e && t && l.Z.can(a.Plq.KICK_MEMBERS, e);
   if (!e.hasFeature(a.oNc.CLAN))
 return [];
   let s = [];
-  return n && s.push(r.f.GUILD_MEMBER_APPLICATIONS), s;
+  return n && s.push(r.z.GUILD_MEMBER_APPLICATIONS), s;
 }

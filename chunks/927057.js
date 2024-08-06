@@ -19,9 +19,9 @@ function _(e) {
   var n;
   let {
 channelTypes: t
-  } = e, _ = (0, c.CJ)(), p = null == _ ? void 0 : null === (n = _.message) || void 0 === n ? void 0 : n.getChannelId(), v = o.Z.getChannel(p), C = s.Z.getGuild(null == v ? void 0 : v.getGuildId()), h = r.useMemo(() => (0, u.tx)(e.defaultValues, null == C ? void 0 : C.id, t), [
+  } = e, _ = (0, c.CJ)(), p = null == _ ? void 0 : null === (n = _.message) || void 0 === n ? void 0 : n.getChannelId(), C = o.Z.getChannel(p), v = s.Z.getGuild(null == C ? void 0 : C.getGuildId()), h = r.useMemo(() => (0, u.tx)(e.defaultValues, null == v ? void 0 : v.id, t), [
 e.defaultValues,
-C,
+v,
 t
   ]);
   return (0, l.jsx)(d.ZP, {

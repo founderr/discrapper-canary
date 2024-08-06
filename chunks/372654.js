@@ -3,7 +3,7 @@ n.d(t, {
 return o;
   },
   nH: function() {
-return i;
+return l;
   },
   vK: function() {
 return d;
@@ -16,7 +16,7 @@ var a = n(180650),
   r = n(921948);
 let s = 1060,
   o = e => e * (0, r.Z)(),
-  i = function(e) {
+  l = function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
   {
     primary: n,
@@ -24,7 +24,7 @@ let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
   } = e;
 return 'linear-gradient('.concat(t, 'deg, ').concat(n.toHslString(), ', ').concat(a.toHslString(), ')');
   },
-  l = [
+  i = [
 n(241371),
 n(448509)
   ],
@@ -60,5 +60,5 @@ n(448509)
   },
   d = e => {
 var t;
-return null == e ? l : null !== (t = c[e]) && void 0 !== t ? t : l;
+return null == e ? i : null !== (t = c[e]) && void 0 !== t ? t : i;
   };

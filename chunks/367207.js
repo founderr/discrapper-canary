@@ -21,8 +21,8 @@ var l = n(392711),
   N = n(30684),
   x = n(6242),
   S = n(757692),
-  v = n(114064),
-  Z = n(684259),
+  Z = n(114064),
+  v = n(684259),
   T = n(937579),
   L = n(485731),
   A = n(1163),
@@ -108,9 +108,9 @@ let {
 if (!n || e.state !== O.hes.DISCONNECTED || e.willReconnect)
   return;
 let i = p.Z.getChannel(e.channelId);
-if (null == i || !(null === (t = v.Z.getPerksDemos()) || void 0 === t ? void 0 : t[r.q.STREAM_HIGH_QUALITY]))
+if (null == i || !(null === (t = Z.Z.getPerksDemos()) || void 0 === t ? void 0 : t[r.q.STREAM_HIGH_QUALITY]))
   return;
-let l = v.Z.getActivated()[r.q.STREAM_HIGH_QUALITY];
+let l = Z.Z.getActivated()[r.q.STREAM_HIGH_QUALITY];
 if (l && s.Z.dispatch({
     type: 'PREMIUM_PERKS_DEMO_COMPLETE',
     perkType: r.q.STREAM_HIGH_QUALITY
@@ -135,7 +135,7 @@ super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiu
     location: 'PremiumManager'
   });
 }), D(this, '_trackSkyLoadExposure', () => {
-  Z.Z.trackExposure({
+  v.Z.trackExposure({
     location: 'PremiumManager'
   });
 }), D(this, '_handlePremiumPaymentModalOpen', e => {

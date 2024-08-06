@@ -20,8 +20,8 @@ var s = n(735250),
   m = n(981631),
   N = n(689938),
   f = n(141253),
-  h = n(691766);
-let S = e => {
+  S = n(691766);
+let h = e => {
 let {
   userRecord: t,
   placement: n
@@ -80,7 +80,7 @@ let {
 return (0, s.jsxs)('div', {
   className: f.userAvatarProgressBarContainer,
   children: [
-    (0, s.jsx)(S, {
+    (0, s.jsx)(h, {
       userRecord: a,
       placement: 1
     }),
@@ -88,7 +88,7 @@ return (0, s.jsxs)('div', {
       numSentReferrals: n,
       placement: 1
     }),
-    (0, s.jsx)(S, {
+    (0, s.jsx)(h, {
       userRecord: r,
       placement: 2
     }),
@@ -96,7 +96,7 @@ return (0, s.jsxs)('div', {
       numSentReferrals: n,
       placement: 2
     }),
-    (0, s.jsx)(S, {
+    (0, s.jsx)(h, {
       userRecord: i,
       placement: 3
     })
@@ -115,7 +115,7 @@ helpdeskArticle: s
 t.Z = e => {
   let {
 isInSettings: t = !1
-  } = e, r = (0, l.Wu)([C.Z], () => C.Z.getSentUserIds()), u = (0, l.Wu)([T.default], () => r.map(e => T.default.getUser(e)).filter(e => null != e)), S = a.useMemo(() => u.map(e => new E.Z(e)), [u]), {
+  } = e, r = (0, l.Wu)([C.Z], () => C.Z.getSentUserIds()), u = (0, l.Wu)([T.default], () => r.map(e => T.default.getUser(e)).filter(e => null != e)), h = a.useMemo(() => u.map(e => new E.Z(e)), [u]), {
 subscriberHomeVariant: M
   } = g.g.useExperiment({
 location: 'ReferralProgramProgressBar'
@@ -128,9 +128,9 @@ r.forEach(e => {
 });
   }, [r]);
   let P = r.length,
-v = 3 === P,
-L = R.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM),
-Z = v ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : N.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
+L = 3 === P,
+v = R.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM),
+Z = L ? N.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : N.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
 {
   analyticsLocations: D
 } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
@@ -166,11 +166,11 @@ children: [
         children: Z
       }),
       (0, s.jsx)(x, {
-        userRecords: S
+        userRecords: h
       }),
       (0, s.jsx)(o.Text, {
         variant: t ? 'text-sm/normal' : 'text-lg/medium',
-        children: b(v, P > 0, r.length, L)
+        children: b(L, P > 0, r.length, v)
       }),
       (0, s.jsxs)('div', {
         className: i()(f.expandedProgressBarButtonContainer, {
@@ -209,11 +209,11 @@ children: [
               className: f.expandedProgressBarSelectFriendsCTAInner,
               children: [
                 (0, s.jsx)('img', {
-                  src: h,
+                  src: S,
                   alt: '',
                   className: f.expandedProgressBarSelectFriendsIcon
                 }),
-                v ? N.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : N.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
+                L ? N.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : N.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
               ]
             })
           })

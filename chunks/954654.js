@@ -1,9 +1,9 @@
 t.d(n, {
   ZP: function() {
-return I;
+return x;
   },
   xX: function() {
-return x;
+return E;
   }
 });
 var l = t(735250);
@@ -20,17 +20,17 @@ var r = t(120356),
   f = t(12067),
   _ = t(676149),
   p = t(861529),
-  v = t(770009),
-  C = t(889515),
+  C = t(770009),
+  v = t(889515),
   h = t(800062);
 
-function x(e) {
+function E(e) {
   return e.map((e, n) => function(e, n) {
 switch (e.type) {
   case a.re.ACTION_ROW:
-    return (0, l.jsx)(C.Z, {
+    return (0, l.jsx)(v.Z, {
       ...e,
-      renderComponents: x
+      renderComponents: E
     }, n);
   case a.re.BUTTON:
     return (0, l.jsx)(s.Z, {
@@ -67,14 +67,14 @@ switch (e.type) {
       ...e
     }, n);
   case a.re.CONTENT_INVENTORY_ENTRY:
-    return (0, l.jsx)(v.Z, {
+    return (0, l.jsx)(C.Z, {
       ...e
     }, n);
 }
   }(e, n.toString()));
 }
 
-function I(e) {
+function x(e) {
   let {
 message: n
   } = e, {
@@ -89,7 +89,7 @@ className: i()([
 ]),
 children: (0, l.jsx)(o.Il, {
   message: n,
-  children: x(t)
+  children: E(t)
 })
   });
 }

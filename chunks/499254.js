@@ -1,23 +1,23 @@
-n.d(t, {
+t.d(n, {
   _: function() {
-return s;
+return r;
   },
   y: function() {
-return a;
+return i;
   }
 });
-var i = n(570140);
+var l = t(570140);
 
-function s(e, t) {
-  i.Z.dispatch({
+function r(e, n) {
+  l.Z.dispatch({
 type: 'APP_LAUNCHER_SHOW',
 entrypoint: e,
-activeViewType: t
+activeViewType: n
   });
 }
 
-function a(e) {
-  i.Z.dispatch({
+function i(e) {
+  l.Z.dispatch({
 type: 'APP_LAUNCHER_DISMISS',
 closeReason: e
   });

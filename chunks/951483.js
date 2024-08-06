@@ -3,10 +3,10 @@ n.d(t, {
 return S;
   },
   Xq: function() {
-return v;
+return Z;
   },
   Zg: function() {
-return Z;
+return v;
   }
 }), n(411104);
 var i = n(186070),
@@ -69,11 +69,11 @@ let S = {
 [E.EkH.CALL_START]: i.FI,
 [E.EkH.QUICKSWITCHER_SHOW]: c.$
   },
-  v = {
+  Z = {
 [E.EkH.QUICKSWITCHER_SHOW]: c.$
   };
 
-function Z() {
+function v() {
   return [{
   description: N.Z.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,
   binds: x(E.EkH.SERVER_PREV, E.EkH.SERVER_NEXT)

@@ -30,8 +30,8 @@ var i = n(399606),
   b = n(75077),
   O = n(474936),
   P = n(981631),
-  v = n(526761),
-  L = n(332325),
+  L = n(526761),
+  v = n(332325),
   Z = n(689938),
   D = n(660372),
   B = n(926433),
@@ -75,10 +75,10 @@ flipped: eE
   } = (0, f.as)(), eT = (0, S.nY)({
 showAnimations: !0
   }), eI = null != eT ? eT.initialPercentage : void 0, eR = null != eT ? eT.percentage : void 0, eC = (0, u.Z)(R.Z), eg = (0, h.Z)(), ep = (0, E.Z)({
-scrollPosition: v.Y_.TRY_IT_OUT,
+scrollPosition: L.Y_.TRY_IT_OUT,
 analyticsLocations: e
   }), eA = () => {
-o.Z.open(P.oAB.VOICE, v.GA, {
+o.Z.open(P.oAB.VOICE, L.GA, {
   openWithoutBackstack: !0,
   analyticsLocations: e
 });
@@ -86,7 +86,7 @@ o.Z.open(P.oAB.VOICE, v.GA, {
 (0, T.uL)(P.Z5c.COLLECTIBLES_SHOP);
   }, eN = () => {
 o.Z.open(P.oAB.APPEARANCE, null, {
-  scrollPosition: v.h1.CUSTOM_APP_ICONS
+  scrollPosition: L.h1.CUSTOM_APP_ICONS
 });
   }, ef = {
 avatarDecorations: ed ? {
@@ -132,7 +132,7 @@ clips: ed ? {
   descriptionCta: eC ? Z.Z.Messages.TAKE_ME_THERE : Z.Z.Messages.LEARN_MORE,
   pillText: Z.Z.Messages.EARLY_ACCESS,
   onCtaClick: eC ? () => {
-    (0, I.Z)(L.Z.CLIPS, {
+    (0, I.Z)(v.Z.CLIPS, {
       openWithoutBackstack: !0,
       analyticsLocations: e
     });

@@ -41,7 +41,7 @@ N = null !== (e = _.ZP.getGlobalName(E)) && void 0 !== e ? e : _.ZP.getUserTag(E
   autoTrackExposure: !1
 }),
 S = null == n ? void 0 : n.isBroadcastChannel(),
-v = S && C === (null == n ? void 0 : n.id);
+Z = S && C === (null == n ? void 0 : n.id);
   return S && x ? (0, i.jsx)(f.Z, {
 id: t,
 onClick: () => {
@@ -51,7 +51,7 @@ icon: p.Z,
 tooltip: null != N ? g.Z.Messages.BROADCASTING_CHANNEL_NAME.format({
   name: N
 }) : void 0,
-selected: v,
+selected: Z,
 upperBadge: (0, i.jsx)(r.Avatar, {
   size: r.AvatarSizes.SIZE_16,
   src: null == E ? void 0 : E.getAvatarURL(null, 16),

@@ -16,8 +16,8 @@ var i, l, r, a, s = n(392711),
   N = n(656063),
   x = n(761282),
   S = n(814443),
-  v = n(789407),
-  Z = n(974543),
+  Z = n(789407),
+  v = n(974543),
   T = n(250889),
   L = n(199902),
   A = n(592125),
@@ -30,27 +30,27 @@ var i, l, r, a, s = n(392711),
   j = n(699516),
   D = n(594174),
   U = n(979651),
-  G = n(823379),
-  w = n(981631);
+  w = n(823379),
+  G = n(981631);
 let k = !1,
   B = !1,
   H = [],
   V = [],
   F = {},
   W = {},
-  Y = new Set(),
-  z = new Set();
+  z = new Set(),
+  Y = new Set();
 
 function K() {
   let e = j.Z.getFriendIDs();
-  return b.Z.hasConsented(w.pjP.PERSONALIZATION) ? new Set([
+  return b.Z.hasConsented(G.pjP.PERSONALIZATION) ? new Set([
 ...S.Z.getUserAffinitiesUserIds(),
 ...e
   ]) : new Set(e);
 }
 
 function q(e) {
-  return P.Z.findActivity(e, e => e.type !== w.IIU.CUSTOM_STATUS);
+  return P.Z.findActivity(e, e => e.type !== G.IIU.CUSTOM_STATUS);
 }
 
 function Q(e) {
@@ -65,26 +65,26 @@ function Q(e) {
 function J(e) {
   return null == W[e] && (W = {
 ...W,
-[e]: new Z.Z({
+[e]: new v.Z({
   url: e
 })
   }), W[e];
 }
 
 function X(e) {
-  !z.has(e) && Y.add(e);
+  !Y.has(e) && z.add(e);
 }
 
 function $(e) {
   if ((0, _.Z)(e))
-return v.r9;
+return Z.r9;
   let t = null != e.application_id ? C.Z.getApplication(e.application_id) : null;
   return null != t ? t : (0, f.Z)(e) ? Q(e.name) : (0, m.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && X(e.application_id), t);
 }
 
 function ee(e) {
   let t = U.Z.getVoiceStateForUser(e);
-  return (null == t ? void 0 : t.channelId) != null && y.Z.canWithPartialContext(w.Plq.VIEW_CHANNEL, {
+  return (null == t ? void 0 : t.channelId) != null && y.Z.canWithPartialContext(G.Plq.VIEW_CHANNEL, {
 channelId: t.channelId
   }) ? t.channelId : null;
 }
@@ -104,14 +104,14 @@ E = !1,
 S = [],
 b = new Set(),
 j = !1,
-w = [];
+G = [];
   for (let e of t) {
 let n = L.Z.getAnyStreamForUser(e.id),
   i = A.Z.getChannel(null == n ? void 0 : n.channelId);
 if ((null == i ? void 0 : i.isNSFW()) && (!f || !R.Z.didAgree(null == i ? void 0 : i.getGuildId())))
   continue;
 let s = q(e.id);
-if (null != n && w.push({
+if (null != n && G.push({
     stream: n,
     streamUser: e,
     activity: s
@@ -120,14 +120,14 @@ if (null != n && w.push({
 let c = (0, N.Z)(s);
 if (null == c)
   continue;
-j = c === v.XB;
+j = c === Z.XB;
 let u = function(e) {
     let t = C.Z.getApplication(e);
     return null != t ? t : 'string' != typeof e ? (new I.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), {
       tags: {
         source: 'ACTIVITIES'
       }
-    }), null) : e === v.XB ? v.r9 : e.startsWith(T.H) ? Q(e.slice(T.H.length)) : e.startsWith(Z._) ? J(e.slice(Z._.length)) : (X(e), null);
+    }), null) : e === Z.XB ? Z.r9 : e.startsWith(T.H) ? Q(e.slice(T.H.length)) : e.startsWith(v._) ? J(e.slice(v._.length)) : (X(e), null);
   }(c),
   m = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
 if ((0, p.Z)(s)) {
@@ -184,7 +184,7 @@ else {
       userId: t
     } = e;
     return D.default.getUser(t);
-  }).filter(G.lm).orderBy([et], ['desc']).value();
+  }).filter(w.lm).orderBy([et], ['desc']).value();
   e.filter(e => !m.includes(e.id)).forEach(e => t.push(e)), k ? !V.has(l) && (u = null) : (u = r, k = !0), V.add(l), H.add(n), B.push({
     channel: i,
     guild: r,
@@ -213,7 +213,7 @@ currentActivities: (s = S, c = e => {
   'desc',
   'asc'
 ])).value(),
-applicationStreams: w
+applicationStreams: G
   };
 }
 
@@ -225,7 +225,7 @@ let el = o().throttle(() => {
 var e;
 if (!ei())
   return;
-Y.clear(), V = (H = function(e) {
+z.clear(), V = (H = function(e) {
   let t = K(),
     n = en.bind(null, t);
   return o()(e).mapValues(n);
@@ -252,12 +252,12 @@ Y.clear(), V = (H = function(e) {
   'asc',
   'asc'
 ]).value().filter(e => e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0)).map(e => ({
-  type: w.GOo.USER,
+  type: G.GOo.USER,
   party: e
 })), ! function() {
-  if (Y.size > 0) {
-    let e = Array.from(Y);
-    g.Z.fetchApplications(e), e.forEach(e => z.add(e)), Y.clear();
+  if (z.size > 0) {
+    let e = Array.from(z);
+    g.Z.fetchApplications(e), e.forEach(e => Y.add(e)), z.clear();
   }
 }(), B = !0;
   }(), es.emitChange();
@@ -301,7 +301,7 @@ a = 'NowPlayingViewStore', (r = 'displayName') in(l = ea) ? Object.definePropert
 }) : l[r] = a;
 let es = new ea(u.Z, {
   LOGOUT: function() {
-k = !1, H = [], V = [], Y.clear();
+k = !1, H = [], V = [], z.clear();
   },
   NOW_PLAYING_MOUNTED: function() {
 k = !0, el();

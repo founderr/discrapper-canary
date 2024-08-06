@@ -25,8 +25,8 @@ var l = n(442837),
   N = n(135724),
   x = n(25601),
   S = n(981631),
-  v = n(490897),
-  Z = n(689938),
+  Z = n(490897),
+  v = n(689938),
   T = n(676656);
 
 function L(e) {
@@ -43,9 +43,9 @@ needSubscriptionToAccess: y,
 isNewChannel: P,
 muted: j,
 resolvedUnreadSetting: D
-  } = e, U = (0, l.e7)([_.ZP], () => _.ZP.getMentionCount(n.id)), G = (0, s.ZP)(n), w = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)), k = (0, l.e7)([f.Z], () => f.Z.hasVideo(n.id)), B = (0, u.PK)(n.id) && n.isGuildStageVoice(), H = (0, I.ZP)({
+  } = e, U = (0, l.e7)([_.ZP], () => _.ZP.getMentionCount(n.id)), w = (0, s.ZP)(n), G = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)), k = (0, l.e7)([f.Z], () => f.Z.hasVideo(n.id)), B = (0, u.PK)(n.id) && n.isGuildStageVoice(), H = (0, I.ZP)({
 channel: n,
-locked: w,
+locked: G,
 video: k || B,
 selected: L
   }), V = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)), F = (0, o.n2)(n.guild_id, n.id), W = (0, l.e7)([h.Z], () => {
@@ -62,15 +62,15 @@ return (0, i.jsx)(c.Z, {
 });
   if (P)
 return (0, i.jsx)(a.TextBadge, {
-  text: Z.Z.Messages.NEW,
+  text: v.Z.Messages.NEW,
   color: r.Z.unsafe_rawColors.BRAND_260.css,
   className: T.newChannel
 });
-  if (!j && D === v.i.ALL_MESSAGES && n.isForumLikeChannel() && null != V && V > 0)
+  if (!j && D === Z.i.ALL_MESSAGES && n.isForumLikeChannel() && null != V && V > 0)
 return (0, i.jsx)(a.Text, {
   variant: 'text-xs/semibold',
   color: 'text-brand',
-  children: Z.Z.Messages.CHANNEL_NEW_POSTS_LABEL.format({
+  children: v.Z.Messages.CHANNEL_NEW_POSTS_LABEL.format({
     count: (0, a.getBadgeCountString)(V)
   })
 });
@@ -80,16 +80,16 @@ return (0, i.jsx)(a.Text, {
   color: 'text-muted',
   children: (0, a.getBadgeCountString)(F)
 });
-  let Y = null !== (t = null == b ? void 0 : b.length) && void 0 !== t ? t : 0;
+  let z = null !== (t = null == b ? void 0 : b.length) && void 0 !== t ? t : 0;
   return null != M && M && H ? (0, i.jsx)(N.Z, {
-userCount: Y,
+userCount: z,
 video: k || B,
 channel: n
   }) : A && (0, m.a)(b) && W ? (0, i.jsx)(a.TextBadge, {
-text: Z.Z.Messages.LIVE,
+text: v.Z.Messages.LIVE,
 color: r.Z.unsafe_rawColors.RED_400.css
-  }) : null != R && R && (0, g.u)(G) ? (0, i.jsx)(E.Z, {
-embeddedApps: G,
+  }) : null != R && R && (0, g.u)(w) ? (0, i.jsx)(E.Z, {
+embeddedApps: w,
 muted: j
   }) : null;
 }

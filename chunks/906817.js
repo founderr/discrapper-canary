@@ -20,7 +20,7 @@ var i = n(735250),
   _ = n(222625);
 
 function f(e, t, n) {
-  if (e === c.zm)
+  if (e === c.wZ)
 return d.$k;
   if (e === c.wd)
 return t.hasFeature(h.oNc.HUB) ? 0 : d.$k;
@@ -39,7 +39,7 @@ return null == l || l.record.type === h.d4z.GUILD_CATEGORY ? d.QP : 16 + d.QP;
 
 function m(e, t) {
   switch (e) {
-case c.zm:
+case c.wZ:
   return 'hoisted-spacer';
 case c.wd:
   return 'uncategorized-spacer';
@@ -81,7 +81,7 @@ f,
 m
   ]);
   switch (t) {
-case c.zm:
+case c.wZ:
   return (0, i.jsx)('div', {
     style: {
       height: d.$k

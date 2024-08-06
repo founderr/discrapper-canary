@@ -118,8 +118,8 @@ bannerVisible: n,
 controller: r,
 className: s,
 onClick: S,
-onContextMenu: v,
-onMouseDown: Z,
+onContextMenu: Z,
+onMouseDown: v,
 disableBannerAnimation: T,
 'aria-expanded': L,
 'aria-controls': A,
@@ -130,29 +130,29 @@ children: O,
 headerClassName: y,
 communityInfoVisible: P,
 hasSubheader: j
-  } = e, D = b.hasFeature(m.oNc.ANIMATED_BANNER), U = (0, d.Z)(b), G = !U && b.hasCommunityInfoSubheader(), w = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), F = l.useRef(), W = h.QK.getSetting();
+  } = e, D = b.hasFeature(m.oNc.ANIMATED_BANNER), U = (0, d.Z)(b), w = !U && b.hasCommunityInfoSubheader(), G = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), F = l.useRef(), W = h.QK.getSetting();
   l.useEffect(() => {
-if (w && n && !H.current && W)
+if (G && n && !H.current && W)
   return B(!0), F.current = setTimeout(() => {
     B(!1);
   }, 5000), () => {
     clearTimeout(F.current);
   };
   }, [
-w,
+G,
 n,
 W
   ]), l.useEffect(() => {
 H.current = n;
   }, [n]);
-  let Y = () => {
+  let z = () => {
   let {
     renderBanner: t,
     guildBanner: n
   } = e;
   return null != n && !t;
 },
-z = (0, u.Q)('GuildHeader');
+Y = (0, u.Q)('GuildHeader');
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {
@@ -161,16 +161,16 @@ children: [
       [I.container]: !0,
       [I.clickable]: null != S,
       [I.selected]: null != S && L,
-      [I.hasBanner]: Y(),
+      [I.hasBanner]: z(),
       [I.bannerVisible]: n,
       [(0, _.Q)(m.BRd.DARK)]: n,
-      [I.communityInfoVisible]: !U && P || j && G
+      [I.communityInfoVisible]: !U && P || j && w
     }),
-    onMouseDown: Z,
-    onContextMenu: v,
+    onMouseDown: v,
+    onContextMenu: Z,
     onClick: S,
     children: [
-      z ? null : (0, i.jsxs)('header', {
+      Y ? null : (0, i.jsxs)('header', {
         className: a()(I.header, y, {
           [I.themedHeaderMobile]: o.tq
         }),
@@ -198,7 +198,7 @@ children: [
                   offset: 4
                 },
                 onClick: S,
-                onContextMenu: v,
+                onContextMenu: Z,
                 'aria-label': C.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({
                   guildName: null !== (t = null == b ? void 0 : b.toString()) && void 0 !== t ? t : ''
                 })
@@ -209,7 +209,7 @@ children: [
               })
             ]
           }),
-          G && (0, i.jsx)(N, {
+          w && (0, i.jsx)(N, {
             guild: b,
             controller: r,
             hasBanner: null != M,
@@ -225,7 +225,7 @@ children: [
       }) : null
     ]
   }),
-  w && Y() ? (0, i.jsx)('div', {
+  G && z() ? (0, i.jsx)('div', {
     className: I.animatedBannerHoverLayer,
     onMouseEnter: () => {
       B(!0), clearTimeout(F.current);

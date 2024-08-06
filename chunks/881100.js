@@ -24,15 +24,15 @@ var s = n(399606),
   m = n(548629),
   N = n(507084),
   f = n(680313),
-  h = n(926433),
-  S = n(302036),
+  S = n(926433),
+  h = n(302036),
   M = n(994554),
   x = n(1549),
   b = n(13327),
   O = n(59137),
   P = n(405991),
-  v = n(24615),
-  L = n(193943),
+  L = n(24615),
+  v = n(193943),
   Z = n(334347),
   D = n(943734),
   B = n(603076),
@@ -67,13 +67,13 @@ return {
     title: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
     className: t.clientThemesCard,
-    imageSource: v,
+    imageSource: L,
     imageClassName: t.clientThemesImage
   },
   customAppIcons: {
     title: T.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-    imageSource: L,
+    imageSource: v,
     imageClassName: t.customAppIconImage
   },
   emoji: {
@@ -128,7 +128,7 @@ return {
   soundboard: {
     title: T.Z.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
     description: T.Z.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-    imageSource: k(n, h, S),
+    imageSource: k(n, S, h),
     imageClassName: t.soundboardImage
   },
   stickers: {

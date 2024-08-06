@@ -15,7 +15,7 @@ let c = [
   a.EE,
   a.Af,
   a.U9,
-  a.gj,
+  a.wO,
   a.f,
   a.n8,
   a.v1,

@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return v;
+return C;
   }
 });
 var l = t(735250);
@@ -18,32 +18,32 @@ var r = t(120356),
   _ = t(231338),
   p = t(909707);
 
-function v(e) {
+function C(e) {
   let {
 entry: n,
 channel: t,
 title: r,
-subtitle: v,
-thumbnailUrl: C,
+subtitle: C,
+thumbnailUrl: v,
 onClickTitle: h,
-onClickSubtitle: x,
-onClickThumbnail: I,
-providerIconProps: E,
+onClickSubtitle: E,
+onClickThumbnail: x,
+providerIconProps: I,
 style: T = {}
   } = e, {
 primaryColor: N,
 secondaryColor: g
-  } = (0, u.Z)(C);
-  return null != C && (T.background = 'linear-gradient(45deg, '.concat(N, ', ').concat(g, ')')), (0, l.jsxs)('div', {
+  } = (0, u.Z)(v);
+  return null != v && (T.background = 'linear-gradient(45deg, '.concat(N, ', ').concat(g, ')')), (0, l.jsxs)('div', {
 'data-disable-adaptive-theme': !0,
 className: i()(p.container, (0, f.Q)(_.BR.DARK)),
 style: T,
 children: [
   (0, l.jsx)(a.Clickable, {
-    onClick: I,
-    className: i()(p.thumbnailContainer, null != I && p.clickable),
+    onClick: x,
+    className: i()(p.thumbnailContainer, null != x && p.clickable),
     children: (0, l.jsx)(m.f, {
-      src: C,
+      src: v,
       constrain: 'width',
       size: 64
     })
@@ -68,18 +68,18 @@ children: [
           children: r
         })
       }),
-      null != v ? (0, l.jsxs)(l.Fragment, {
+      null != C ? (0, l.jsxs)(l.Fragment, {
         children: [
           (0, l.jsx)(a.Spacer, {
             size: 2
           }),
           (0, l.jsx)(o.Z, {
-            onClick: x,
+            onClick: E,
             children: (0, l.jsx)(a.Text, {
               variant: 'text-sm/normal',
               className: i()(p.textSecondary, p.truncatedText),
               lineClamp: 1,
-              children: v
+              children: C
             })
           })
         ]
@@ -93,8 +93,8 @@ children: [
   }),
   (0, l.jsx)('div', {
     className: p.headerIcons,
-    children: null != E ? (0, l.jsx)(c.Z, {
-      ...E
+    children: null != I ? (0, l.jsx)(c.Z, {
+      ...I
     }) : null
   })
 ]

@@ -16,21 +16,21 @@ var a = n(735250),
   d = n(481060),
   u = n(100527),
   g = n(906732),
-  v = n(703656),
-  m = n(430824),
+  m = n(703656),
+  v = n(430824),
   p = n(594174),
-  x = n(115130),
+  f = n(115130),
   I = n(566620),
-  f = n(520599),
+  x = n(520599),
   _ = n(127255),
   h = n(880308),
   C = n(451576),
   T = n(439934),
   E = n(701488),
   S = n(981631),
-  j = n(689938),
-  N = n(216200),
-  b = n(932463);
+  b = n(689938),
+  j = n(216200),
+  N = n(932463);
 let M = (0, r.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
   A = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
   Z = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
@@ -46,20 +46,20 @@ scrollerRef: y
   } = e, [D, L] = i.useState(0), O = (0, _.Z)({
 guildId: n,
 enableFilter: !0
-  }), B = (0, o.e7)([p.default], () => p.default.getCurrentUser()), V = (0, o.e7)([m.Z], () => m.Z.getGuild(n), [n]), {
+  }), B = (0, o.e7)([p.default], () => p.default.getCurrentUser()), V = (0, o.e7)([v.Z], () => v.Z.getGuild(n), [n]), {
 analyticsLocations: R
   } = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY), k = (0, C.Z)(null == t ? void 0 : t.id), {
-enableAmazonMusicShelfPoster: H
-  } = f.p.useExperiment({
+enableAmazonMusicShelfPoster: P
+  } = x.p.useExperiment({
 location: 'ActivitiesShelf'
   }, {
 autoTrackExposure: !0
   }), {
-isDeveloperActivityShelfEnabled: P,
+isDeveloperActivityShelfEnabled: H,
 filter: F
-  } = (0, o.cj)([x.Z], () => ({
-filter: x.Z.getFilter(),
-isDeveloperActivityShelfEnabled: x.Z.getIsEnabled()
+  } = (0, o.cj)([f.Z], () => ({
+filter: f.Z.getFilter(),
+isDeveloperActivityShelfEnabled: f.Z.getIsEnabled()
   }));
   if (i.useEffect(() => {
   let e = y.current;
@@ -83,23 +83,23 @@ isDeveloperActivityShelfEnabled: x.Z.getIsEnabled()
   k
 ]), (0, h.g)(), null == V && !k || null == B)
 return null;
-  let Y = O.length > 0;
+  let U = O.length > 0;
 
-  function w(e) {
+  function Y(e) {
 r();
   }
   return (0, a.jsx)(g.Gt, {
 value: R,
 children: (0, a.jsxs)('div', {
-  className: N.scrollContainer,
+  className: j.scrollContainer,
   children: [
-    Y ? (0, a.jsx)('div', {
-      className: N.scrollBackgroundContainer,
+    U ? (0, a.jsx)('div', {
+      className: j.scrollBackgroundContainer,
       style: {
         top: -D
       },
       children: (0, a.jsx)('div', {
-        className: s()(N.scrollTierBackground),
+        className: s()(j.scrollTierBackground),
         style: {
           height: (e => {
             let t = 1 === e.length;
@@ -110,41 +110,41 @@ children: (0, a.jsxs)('div', {
     }) : null,
     (0, a.jsxs)(d.Scroller, {
       ref: y,
-      className: N.scroller,
+      className: j.scroller,
       children: [
         function() {
-          if (H) {
-            let e = j.Z.Messages.EMBEDDED_ACTIVITIES_AMAZON_MUSIC_PROMO_BANNER_ALT;
+          if (P) {
+            let e = b.Z.Messages.EMBEDDED_ACTIVITIES_AMAZON_MUSIC_PROMO_BANNER_ALT;
             return (0, a.jsxs)(d.Clickable, {
-              className: N.posterClickable,
+              className: j.posterClickable,
               'aria-label': e,
               onClick: () => {
                 var e;
-                e = E.Fu, r(), (0, v.uL)(S.Z5c.ACTIVITY_DETAILS(E.Fu), {
+                e = E.Fu, r(), (0, m.uL)(S.Z5c.ACTIVITY_DETAILS(E.Fu), {
                   sourceLocationStack: R
                 });
               },
               children: [
                 (0, a.jsx)('div', {
-                  className: N.poster,
+                  className: j.poster,
                   children: (0, a.jsx)('img', {
-                    className: N.posterBackground,
-                    src: b,
+                    className: j.posterBackground,
+                    src: N,
                     alt: e
                   })
                 }),
                 (0, a.jsx)('div', {
-                  className: N.posterDivider
+                  className: j.posterDivider
                 })
               ]
             });
           }
           return null;
         }(),
-        Y ? (0, a.jsx)('div', {
-          className: N.scrollSection,
+        U ? (0, a.jsx)('div', {
+          className: j.scrollSection,
           children: (0, a.jsx)('div', {
-            className: s()(N.shelf),
+            className: s()(j.shelf),
             children: O.map(e => (0, a.jsx)(T.Z, {
               large: 1 === O.length,
               activityItem: e,
@@ -158,14 +158,14 @@ children: (0, a.jsxs)('div', {
               }
             }, 'activity-shelf-item-'.concat(e.application.id)))
           })
-        }) : P && F.length > 0 ? (0, a.jsx)(d.Text, {
+        }) : H && F.length > 0 ? (0, a.jsx)(d.Text, {
           variant: 'text-md/normal',
-          className: N.filterError,
-          children: j.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({
+          className: j.filterError,
+          children: b.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({
             filter: F
           })
         }) : (0, a.jsx)('div', {
-          className: N.spinnerContainer,
+          className: j.spinnerContainer,
           children: (0, a.jsx)(d.Spinner, {})
         })
       ]
@@ -178,7 +178,7 @@ children: (0, a.jsxs)('div', {
 function D() {
   return (0, a.jsx)(d.Text, {
 variant: 'text-sm/normal',
-children: j.Z.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({
+children: b.Z.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({
   surveyURL: E.Es
 })
   });

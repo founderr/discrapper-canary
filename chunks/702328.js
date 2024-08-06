@@ -20,15 +20,15 @@ var s = n(735250),
   m = n(8647),
   N = n(568126),
   f = n(605289),
-  h = n(248042),
-  S = n(823188),
+  S = n(248042),
+  h = n(823188),
   M = n(135785),
   x = n(498765),
   b = n(635921),
   O = n(177839),
   P = n(794484),
-  v = n(392521),
-  L = n(349803),
+  L = n(392521),
+  v = n(349803),
   Z = n(179984),
   D = n(409100),
   B = n(391110),
@@ -78,13 +78,13 @@ return t ? (0, s.jsxs)('div', {
         previousComponent: B.MQ.MARKETING
       }) : void 0
     }),
-    n ? (0, s.jsx)(v.ZP, {
+    n ? (0, s.jsx)(L.ZP, {
       className: k.pdSparklesTop,
-      variant: v.u0.TOP
+      variant: L.u0.TOP
     }) : null,
-    n ? (0, s.jsx)(v.ZP, {
+    n ? (0, s.jsx)(L.ZP, {
       className: k.pdSparklesBottom,
-      variant: v.u0.BOTTOM
+      variant: L.u0.BOTTOM
     }) : null
   ]
 }) : null;
@@ -100,7 +100,7 @@ E.X.trigger();
   }, []);
   let x = a.useRef(null),
 [O, P] = a.useState(!1),
-[v, U] = a.useState(!1),
+[L, U] = a.useState(!1),
 [Y, z] = a.useState(!1),
 [Q, q] = a.useState(!1),
 J = (0, l.e7)([T.ZP], () => T.ZP.getPremiumTypeSubscription()),
@@ -114,7 +114,7 @@ er = (0, p.Ng)(),
 ei = (0, A.N)(),
 el = null == ei ? void 0 : null === (t = ei.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
 eo = (0, C.Nx)(),
-ec = (0, h.Vi)(),
+ec = (0, S.Vi)(),
 {
   analyticsLocations: ed
 } = (0, u.ZP)(_.Z.PREMIUM_MARKETING),
@@ -137,7 +137,7 @@ q(!0);
     onChange: e => U(e),
     threshold: 0.1,
     active: !0,
-    children: (0, s.jsx)(S.ZP, {
+    children: (0, s.jsx)(h.ZP, {
       showWumpus: !0,
       tier0CTAButton: el === G.Si.TIER_2 || ec || null != er ? (0, s.jsx)(D.Z, {
         forceInverted: !0,
@@ -261,8 +261,8 @@ eE = (0, s.jsxs)('div', {
     (0, s.jsx)('div', {
       className: n ? k.footerSpacingFullscreen : k.footerSpacing
     }),
-    (0, s.jsx)(L.Z, {
-      isVisible: !O && !v && Q,
+    (0, s.jsx)(v.Z, {
+      isVisible: !O && !L && Q,
       isFullscreen: n,
       subscriptionTier: ee
     }),

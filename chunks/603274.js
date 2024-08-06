@@ -25,9 +25,9 @@ var l = n(120356),
   N = n(981631),
   x = n(689938),
   S = n(452670),
-  v = n(275024);
+  Z = n(275024);
 
-function Z(e, t) {
+function v(e, t) {
   return 0 === t.length ? null : (0, i.jsxs)('div', {
 className: S.row,
 children: [
@@ -59,7 +59,7 @@ x = (0, o.Wu)([g.ZP], () => s().flatMap(r, e => g.ZP.getVoiceStatesForChannel(e)
   } = e;
   return t;
 })), [r]),
-v = (0, o.Wu)([h.Z], () => s().flatMap(a, e => h.Z.getMutableParticipants(e, p.pV.SPEAKER).filter(e => e.type === p.Ui.VOICE).map(e => {
+Z = (0, o.Wu)([h.Z], () => s().flatMap(a, e => h.Z.getMutableParticipants(e, p.pV.SPEAKER).filter(e => e.type === p.Ui.VOICE).map(e => {
   let {
     user: t
   } = e;
@@ -83,8 +83,8 @@ A = (0, o.Wu)([u.ZP], () => {
 }, [l]),
 b = (0, o.Wu)([m.default], () => A.map(e => m.default.getUser(e)), [A]),
 M = (0, o.Wu)([m.default], () => L.map(e => m.default.getUser(e)), [L]),
-R = Z(c.VoiceNormalIcon, x.filter(e => !L.includes(e.id) && !A.includes(e.id)));
-  let O = (e = v, t = T, 0 === e.length ? null : (0, i.jsxs)('div', {
+R = v(c.VoiceNormalIcon, x.filter(e => !L.includes(e.id) && !A.includes(e.id)));
+  let O = (e = Z, t = T, 0 === e.length ? null : (0, i.jsxs)('div', {
   className: S.row,
   children: [
     (0, i.jsx)(c.StageIcon, {
@@ -114,8 +114,8 @@ R = Z(c.VoiceNormalIcon, x.filter(e => !L.includes(e.id) && !A.includes(e.id)));
     })
   ]
 })),
-y = Z(c.ScreenArrowIcon, M.filter(e => null != e && !A.includes(e.id))),
-P = Z(c.ActivitiesIcon, b);
+y = v(c.ScreenArrowIcon, M.filter(e => null != e && !A.includes(e.id))),
+P = v(c.ActivitiesIcon, b);
   return (0, i.jsxs)(i.Fragment, {
 children: [
   O,
@@ -153,7 +153,7 @@ spacing: 20,
 position: 'right',
 text: (0, i.jsx)(L, {}),
 'aria-label': t,
-tooltipClassName: v.listItemTooltip,
+tooltipClassName: Z.listItemTooltip,
 onTooltipShow: n,
 children: e => (0, i.jsx)('div', {
   ...e,

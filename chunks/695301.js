@@ -17,12 +17,12 @@ t.Z = l.memo(function(e) {
 guildNode: t,
 lowerBadge: n
   } = e, g = t.id, C = (0, r.e7)([h.Z], () => h.Z.getGuild(g)), I = (0, s.E)(g), E = (0, r.e7)([p.Z], () => p.Z.isFocused()), N = (0, r.e7)([u.Z], () => u.Z.isUnavailable(g)), x = (0, c.Z)(e => e.guildId), S = (0, _.Z)(g), {
-badge: v,
-unread: Z
+badge: Z,
+unread: v
   } = (0, r.cj)([d.default], () => ({
 badge: d.default.getMentionCount(g),
 unread: d.default.hasUnread(g)
-  })), T = (0, o.Ij)(C) && 0 === v, L = l.useMemo(() => null != n ? n : T ? (0, i.jsx)('div', {
+  })), T = (0, o.Ij)(C) && 0 === Z, L = l.useMemo(() => null != n ? n : T ? (0, i.jsx)('div', {
 className: m.pauseBackground,
 children: (0, i.jsx)(a.PauseIcon, {
   size: 'custom',
@@ -41,9 +41,9 @@ guild: C,
 unavailable: N,
 animatable: E,
 selected: x === g,
-badge: v,
+badge: Z,
 lowerBadge: L,
-unread: Z,
+unread: v,
 mediaState: S,
 guildJoinRequestStatus: I
   });

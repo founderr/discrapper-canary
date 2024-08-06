@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return x;
+return E;
   }
 });
 var l = t(735250);
@@ -17,8 +17,8 @@ var r = t(120356),
   f = t(49012),
   _ = t(970184),
   p = t(280501),
-  v = t(689938),
-  C = t(433562);
+  C = t(689938),
+  v = t(433562);
 
 function h(e) {
   let {
@@ -28,38 +28,38 @@ onSelect: t
   return m.wS && null != n ? (0, l.jsx)(o.Menu, {
 navId: 'component-button',
 onClose: s.Zy,
-'aria-label': v.Z.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_NAME,
+'aria-label': C.Z.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_NAME,
 onSelect: t,
 children: (0, l.jsx)(o.MenuGroup, {
   children: (0, l.jsx)(o.MenuItem, {
     id: 'copy',
-    label: v.Z.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_COPY,
+    label: C.Z.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_COPY,
     action: () => (0, m.JG)(n)
   })
 })
   }) : null;
 }
 
-function x(e) {
+function E(e) {
   let n;
   let {
 label: t,
 style: r,
 disabled: m,
-emoji: v,
-url: x,
-skuId: I
+emoji: C,
+url: E,
+skuId: x
   } = e, {
-executeStateUpdate: E,
+executeStateUpdate: I,
 visualState: T,
 isDisabled: N
-  } = (0, _.Ee)(e), g = (0, d.I)(I), S = null != I && r === u.ZJ.PREMIUM, b = S && (null == g ? void 0 : g.disabled), O = S ? null == g ? void 0 : g.label : t, j = null != v, M = null != O && O.length > 0, Z = r === u.ZJ.LINK && null != x && x.length > 0, y = T === p.gH.LOADING || S && null == g;
+  } = (0, _.Ee)(e), g = (0, d.I)(x), S = null != x && r === u.ZJ.PREMIUM, O = S && (null == g ? void 0 : g.disabled), b = S ? null == g ? void 0 : g.label : t, M = null != C, L = null != b && b.length > 0, Z = r === u.ZJ.LINK && null != E && E.length > 0, y = T === p.gH.LOADING || S && null == g;
   return n = Z ? () => {
 (0, f.q)({
-  href: null != x ? x : '',
+  href: null != E ? E : '',
   shouldConfirm: !0
 });
-  } : S ? null != g && !1 === g.disabled ? g.onClick : a.noop : () => E(), (0, l.jsxs)(o.Button, {
+  } : S ? null != g && !1 === g.disabled ? g.onClick : a.noop : () => I(), (0, l.jsxs)(o.Button, {
 color: function(e) {
   switch (e) {
     case u.ZJ.PRIMARY:
@@ -74,52 +74,52 @@ color: function(e) {
   }
 }(r),
 size: o.Button.Sizes.SMALL,
-disabled: m || T === p.gH.DISABLED || N || b,
+disabled: m || T === p.gH.DISABLED || N || O,
 onClick: n,
 onContextMenu: e => {
   Z && (0, s.vq)(e, e => (0, l.jsx)(h, {
     ...e,
-    url: x
+    url: E
   }));
 },
 role: Z ? 'link' : 'button',
 children: [
   (0, l.jsxs)('div', {
-    className: i()(C.content, {
-      [C.hidden]: y,
-      [C.premium]: S
+    className: i()(v.content, {
+      [v.hidden]: y,
+      [v.premium]: S
     }),
     'aria-hidden': y,
     children: [
       S ? (0, l.jsx)('div', {
-        className: C.shopIcon,
+        className: v.shopIcon,
         children: (0, l.jsx)(o.ShopIcon, {
           size: 'xs',
           color: 'white'
         })
       }) : null,
-      j ? (0, l.jsx)(c.Z, {
+      M ? (0, l.jsx)(c.Z, {
         className: i()({
-          [C.textEmoji]: M
+          [v.textEmoji]: L
         }),
-        src: v.src,
-        emojiId: v.id,
-        emojiName: v.name,
-        animated: v.animated
+        src: C.src,
+        emojiId: C.id,
+        emojiName: C.name,
+        animated: C.animated
       }) : null,
-      M ? (0, l.jsx)('div', {
-        className: C.label,
-        children: O
+      L ? (0, l.jsx)('div', {
+        className: v.label,
+        children: b
       }) : null,
       Z ? (0, l.jsx)(o.WindowLaunchIcon, {
         size: 'xs',
         color: 'currentColor',
-        className: C.launchIcon
+        className: v.launchIcon
       }) : null
     ]
   }),
   y ? (0, l.jsx)('div', {
-    className: C.loading,
+    className: v.loading,
     children: (0, l.jsx)(o.Dots, {
       dotRadius: 3.5,
       themed: !0

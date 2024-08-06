@@ -24,21 +24,21 @@ p = (0, i.getAssetImage)(t.extra.application_id, t.extra.media_assets_large_imag
   u.Si.LARGE,
   u.Si.LARGE
 ]),
-v = t.extra.media_subtitle,
-C = (0, s.kr)(t) && !(0, s.n2)(t) ? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
+C = t.extra.media_subtitle,
+v = (0, s.kr)(t) && !(0, s.n2)(t) ? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
 h = {
   type: c.kG.CRUNCHYROLL,
   'aria-label': d.Z.Messages.CRUNCHYROLL
 },
-x = l.useMemo(() => {
+E = l.useMemo(() => {
   if (null == t.extra.url)
     return;
   let e = o.Z.safeParseWithQuery(t.extra.url);
   if (null != e && null != e.protocol && null != e.hostname)
     return e;
 }, [t.extra.url]);
-  return null != x && (n = () => (0, a.q)({
-href: o.Z.format(x),
+  return null != E && (n = () => (0, a.q)({
+href: o.Z.format(E),
 trusted: !0
   })), {
 ...m,
@@ -46,8 +46,8 @@ thumbnailUrl: null != p ? p : _,
 title: t.extra.media_title,
 onClickTitle: n,
 onClickThumbnail: n,
-subtitle: v,
-userDescription: C,
+subtitle: C,
+userDescription: v,
 providerIconProps: h
   };
 }

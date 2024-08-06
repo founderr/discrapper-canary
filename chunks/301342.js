@@ -34,16 +34,16 @@ var i = n(735250),
   x = n(689938),
   S = n(182018);
 
-function v(e) {
+function Z(e) {
   e.stopPropagation();
 }
-let Z = l.memo(function(e) {
+let v = l.memo(function(e) {
   let t, {
   channel: r,
   connectChannelDragSource: h,
   connectChannelDropTarget: I,
   disableManageChannels: E,
-  position: Z,
+  position: v,
   sortingPosition: T,
   hideIcon: L,
   children: A
@@ -51,7 +51,7 @@ let Z = l.memo(function(e) {
 b = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
 M = (0, o.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
 R = (0, o.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_CHANNELS, r));
-  t = null != T ? Z > T ? S.containerDragAfter : S.containerDragBefore : S.containerDefault;
+  t = null != T ? v > T ? S.containerDragAfter : S.containerDragBefore : S.containerDefault;
   let O = l.useCallback(() => {
   M ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
 }, [
@@ -96,21 +96,21 @@ P = l.useCallback(() => {
   tabIndex: D,
   ...U
 } = (0, s.JA)(r.id),
-G = l.useRef(null),
 w = l.useRef(null),
+G = l.useRef(null),
 k = (0, i.jsxs)('li', {
   className: t,
   'data-dnd-name': r.name,
   children: [
     (0, i.jsx)(c.FocusRing, {
-      focusTarget: G,
-      ringTarget: w,
+      focusTarget: w,
+      ringTarget: G,
       offset: {
         left: 4,
         right: 4
       },
       children: (0, i.jsxs)('div', {
-        ref: w,
+        ref: G,
         className: a()(S.iconVisibility, S.wrapper, {
           [S.collapsed]: M,
           [S.muted]: b,
@@ -119,7 +119,7 @@ k = (0, i.jsxs)('li', {
         onContextMenu: y,
         children: [
           (0, i.jsxs)(c.Clickable, {
-            innerRef: G,
+            innerRef: w,
             className: S.mainContent,
             tabIndex: D,
             ...U,
@@ -146,7 +146,7 @@ k = (0, i.jsxs)('li', {
             ]
           }),
           (0, i.jsx)('div', {
-            onClick: v,
+            onClick: Z,
             className: S.children,
             children: R && !E ? (0, i.jsx)(c.Tooltip, {
               text: x.Z.Messages.CREATE_CHANNEL,
@@ -189,7 +189,7 @@ k = (0, i.jsxs)('li', {
 });
   return null != I && null != h ? I(h(k)) : k;
 });
-t.ZP = (0, h.B)(Z);
+t.ZP = (0, h.B)(v);
 let T = l.memo(function(e) {
 let {
   name: t,

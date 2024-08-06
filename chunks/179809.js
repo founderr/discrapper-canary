@@ -24,8 +24,8 @@ var i = n(735250),
   N = n(662146),
   x = n(689938),
   S = n(524343),
-  v = n(690310);
-let Z = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+  Z = n(690310);
+let v = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
   T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
   L = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 
@@ -46,13 +46,13 @@ onDragStart: P,
 onDragEnd: j,
 onExpandCollapse: D,
 onContextMenu: U,
-renderChildNode: G,
-folderIconContent: w
+renderChildNode: w,
+folderIconContent: G
   } = e, {
 id: k,
 name: B,
 children: H
-  } = t, [V, F] = l.useState(!1), [W, Y] = l.useState(!1), z = V || W;
+  } = t, [V, F] = l.useState(!1), [W, z] = l.useState(!1), Y = V || W;
   l.useEffect(() => {
 y && F(!1);
   }, [y]);
@@ -71,7 +71,7 @@ collect: e => ({
   dragging: e.isDragging()
 })
   }), Q = l.useCallback(e => {
-Y(e);
+z(e);
   }, []), J = l.useCallback(e => {
 ('ArrowRight' === e.key && !u || 'ArrowLeft' === e.key && u) && D();
   }, [
@@ -88,7 +88,7 @@ leave: {
   height: 0
 },
 config: {
-  duration: Z
+  duration: v
 }
   }), ei = l.useCallback(e => null == n ? void 0 : n(k, e), [
 n,
@@ -100,7 +100,7 @@ children: [
     hovered: V,
     selected: r,
     unread: b,
-    className: v.pill
+    className: Z.pill
   }),
   (0, i.jsx)(N.Z, {
     text: X,
@@ -110,7 +110,7 @@ children: [
     children: (0, i.jsx)('div', {
       ref: O ? q : void 0,
       className: a()({
-        [v.wobble]: !K && W && !u
+        [Z.wobble]: !K && W && !u
       }),
       'data-dnd-name': X,
       children: K ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(g.Z, {
@@ -127,7 +127,7 @@ children: [
         onHoverChange: F,
         onKeyDown: J,
         treeItemProps: $,
-        folderIconContent: w
+        folderIconContent: G
       })
     })
   }),
@@ -145,7 +145,7 @@ children: [
   !K && (0, i.jsx)('span', {
     className: a()(S.expandedFolderBackground, {
       [S.collapsed]: !u,
-      [S.hover]: z
+      [S.hover]: Y
     })
   }),
   el,
@@ -160,7 +160,7 @@ children: [
       },
       className: S.__invalid_expandedGuilds,
       role: 'group',
-      children: H.map(G)
+      children: H.map(w)
     }, l);
   }),
   O && u ? (0, i.jsx)(C.Zu, {

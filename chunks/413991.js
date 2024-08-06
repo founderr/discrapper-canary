@@ -21,30 +21,30 @@ placeholder: m,
 minLength: f,
 maxLength: _,
 required: p,
-value: v
-  } = e, [C, h] = r.useState(null != v ? v : ''), {
-state: x,
-executeStateUpdate: I,
-error: E
-  } = (0, o.Ee)(e, null != v ? {
+value: C
+  } = e, [v, h] = r.useState(null != C ? C : ''), {
+state: E,
+executeStateUpdate: x,
+error: I
+  } = (0, o.Ee)(e, null != C ? {
 type: t,
-value: v
+value: C
   } : void 0), T = (0, s.hz)(e.id);
   r.useEffect(() => {
-(null == x ? void 0 : x.type) === t && h(x.value);
+(null == E ? void 0 : E.type) === t && h(E.value);
   }, [
 t,
-x
+E
   ]);
   let N = {
 name: d,
-value: C,
+value: v,
 placeholder: m,
 minLength: f,
 maxLength: _,
 required: p,
 onChange: e => {
-  h(e), I({
+  h(e), x({
     type: t,
     value: e
   });
@@ -66,7 +66,7 @@ case a.FO.PARAGRAPH:
 title: d,
 required: p,
 className: c.formItem,
-error: E,
+error: I,
 children: n
   });
 }

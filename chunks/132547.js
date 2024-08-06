@@ -29,7 +29,7 @@ _.X.trigger();
 {
   analyticsLocations: r
 } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-[h, S] = a.useState(!1);
+[S, h] = a.useState(!1);
   (0, E.FM)();
   let M = (0, C.b)('SubscriberNitroHome');
   return (0, s.jsxs)(s.Fragment, {
@@ -76,9 +76,9 @@ children: [
           }),
           (0, s.jsx)(l.$, {
             onChange: e => {
-              e && !h && (u.default.track(m.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+              e && !S && (u.default.track(m.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                 location_stack: r
-              }), S(!0));
+              }), h(!0));
             },
             children: (0, s.jsx)('div', {
               className: N.bottomOfPageVisibilitySensor

@@ -1,56 +1,56 @@
-I.r(t), I.d(t, {
+n.r(t), n.d(t, {
   INVITE_OPTIONS_100_TIMES: function() {
-return N;
-  },
-  INVITE_OPTIONS_10_TIMES: function() {
-return i;
-  },
-  INVITE_OPTIONS_12_HOURS: function() {
-return l;
-  },
-  INVITE_OPTIONS_1_DAY: function() {
-return f;
-  },
-  INVITE_OPTIONS_1_HOUR: function() {
 return o;
   },
-  INVITE_OPTIONS_25_TIMES: function() {
+  INVITE_OPTIONS_10_TIMES: function() {
 return a;
   },
+  INVITE_OPTIONS_12_HOURS: function() {
+return f;
+  },
+  INVITE_OPTIONS_1_DAY: function() {
+return T;
+  },
+  INVITE_OPTIONS_1_HOUR: function() {
+return N;
+  },
+  INVITE_OPTIONS_25_TIMES: function() {
+return _;
+  },
   INVITE_OPTIONS_30_MINUTES: function() {
-return O;
+return S;
   },
   INVITE_OPTIONS_50_TIMES: function() {
-return E;
+return l;
   },
   INVITE_OPTIONS_5_TIMES: function() {
 return u;
   },
   INVITE_OPTIONS_6_HOURS: function() {
-return T;
+return O;
   },
   INVITE_OPTIONS_7_DAYS: function() {
 return c;
   },
   INVITE_OPTIONS_FOREVER: function() {
-return P;
+return d;
   },
   INVITE_OPTIONS_ONCE: function() {
-return s;
+return I;
   },
   INVITE_OPTIONS_UNLIMITED: function() {
-return r;
+return s;
   },
   MAX_AGE_OPTIONS: function() {
 return m;
   },
   MAX_USES_OPTIONS: function() {
-return S;
+return E;
   }
 });
-var n = I(689938);
+var r = n(689938);
 
-function _(e, t) {
+function i(e, t) {
   return {
 value: e,
 get label() {
@@ -58,61 +58,61 @@ get label() {
 }
   };
 }
-let r = _(0, () => n.Z.Messages.MAX_USES.format({
+let s = i(0, () => r.Z.Messages.MAX_USES.format({
 maxUses: 0
   })),
-  s = _(1, () => n.Z.Messages.MAX_USES.format({
+  I = i(1, () => r.Z.Messages.MAX_USES.format({
 maxUses: 1
   })),
-  u = _(5, () => n.Z.Messages.MAX_USES.format({
+  u = i(5, () => r.Z.Messages.MAX_USES.format({
 maxUses: 5
   })),
-  i = _(10, () => n.Z.Messages.MAX_USES.format({
+  a = i(10, () => r.Z.Messages.MAX_USES.format({
 maxUses: 10
   })),
-  a = _(25, () => n.Z.Messages.MAX_USES.format({
+  _ = i(25, () => r.Z.Messages.MAX_USES.format({
 maxUses: 25
   })),
-  E = _(50, () => n.Z.Messages.MAX_USES.format({
+  l = i(50, () => r.Z.Messages.MAX_USES.format({
 maxUses: 50
   })),
-  N = _(100, () => n.Z.Messages.MAX_USES.format({
+  o = i(100, () => r.Z.Messages.MAX_USES.format({
 maxUses: 100
   })),
-  S = [
-r,
+  E = [
 s,
+I,
 u,
-i,
 a,
-E,
-N
+_,
+l,
+o
   ],
-  O = _(1800, () => n.Z.Messages.DURATION_MINUTES.format({
+  S = i(1800, () => r.Z.Messages.DURATION_MINUTES.format({
 minutes: 30
   })),
-  o = _(3600, () => n.Z.Messages.DURATION_HOURS.format({
+  N = i(3600, () => r.Z.Messages.DURATION_HOURS.format({
 hours: 1
   })),
-  T = _(21600, () => n.Z.Messages.DURATION_HOURS.format({
+  O = i(21600, () => r.Z.Messages.DURATION_HOURS.format({
 hours: 6
   })),
-  l = _(43200, () => n.Z.Messages.DURATION_HOURS.format({
+  f = i(43200, () => r.Z.Messages.DURATION_HOURS.format({
 hours: 12
   })),
-  f = _(86400, () => n.Z.Messages.DURATION_DAYS.format({
+  T = i(86400, () => r.Z.Messages.DURATION_DAYS.format({
 days: 1
   })),
-  c = _(604800, () => n.Z.Messages.DURATION_DAYS.format({
+  c = i(604800, () => r.Z.Messages.DURATION_DAYS.format({
 days: 7
   })),
-  P = _(0, () => n.Z.Messages.MAX_AGE_NEVER),
+  d = i(0, () => r.Z.Messages.MAX_AGE_NEVER),
   m = [
+S,
+N,
 O,
-o,
-T,
-l,
 f,
+T,
 c,
-P
+d
   ];

@@ -8,23 +8,23 @@ n(470079);
 var r = n(120356),
   s = n.n(r),
   o = n(979554),
-  i = n(481060),
-  l = n(1585),
+  l = n(481060),
+  i = n(1585),
   c = n(125988),
   d = n(998502),
   u = n(266386),
   f = n(689938),
   g = n(949727);
-let p = d.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
+let p = d.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar,
   C = e => {
 let {
   item: t,
   user: n,
   isHighlighted: r = !1,
   isPurchased: d = !1,
-  avatarSize: C = i.AvatarSizes.SIZE_152,
+  avatarSize: C = l.AvatarSizes.SIZE_152,
   avatarPlaceholderSrc: v
-} = e, m = (0, l.y9)(C), E = (0, u.c)('AvatarDecorationPreview'), {
+} = e, m = (0, i.y9)(C), E = (0, u.c)('AvatarDecorationPreview'), {
   avatarDecorationSrc: h,
   eventHandlers: b,
   avatarPlaceholderSrc: y

@@ -24,8 +24,8 @@ var i = n(735250),
   N = n(699516),
   x = n(944486),
   S = n(594174),
-  v = n(295226),
-  Z = n(774343),
+  Z = n(295226),
+  v = n(774343),
   T = n(417363),
   L = n(941128),
   A = n(436088),
@@ -38,8 +38,8 @@ var i = n(735250),
   j = n(674552),
   D = n(981631),
   U = n(474936),
-  G = n(871465),
-  w = n(689938),
+  w = n(871465),
+  G = n(689938),
   k = n(297627);
 let B = {
   origin: {
@@ -61,7 +61,7 @@ user: n,
 badge: h,
 link: _,
 showProgressBadge: f
-  } = e, I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen), [N, x] = l.useState(!1), [S, v] = l.useState(!1), [Z, T] = l.useState(null), [L, b] = l.useState(0), [R, U] = l.useState(!1), {
+  } = e, I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen), [N, x] = l.useState(!1), [S, Z] = l.useState(!1), [v, T] = l.useState(null), [L, b] = l.useState(0), [R, U] = l.useState(!1), {
 canViewBroadcasts: H
   } = p.Z.useExperiment({
 location: 'home_button_no_track'
@@ -70,13 +70,13 @@ autoTrackExposure: !1
   }), V = (0, g.Z)(), F = V.length > 0 && H;
   (0, m.P)();
   let W = (0, r.Ie)('home'),
-Y = () => {
-  T(null), b(0), clearTimeout(Z);
+z = () => {
+  T(null), b(0), clearTimeout(v);
 };
   if (null == n)
 return null;
-  let z = w.Z.Messages.DIRECT_MESSAGES;
-  S && (z = s.K.get(D.wli) ? w.Z.Messages.DISCODO_ENABLED : w.Z.Messages.DISCODO_DISABLED), V.length > 0 && p.Z.trackExposure({
+  let Y = G.Z.Messages.DIRECT_MESSAGES;
+  S && (Y = s.K.get(D.wli) ? G.Z.Messages.DISCODO_ENABLED : G.Z.Messages.DISCODO_DISABLED), V.length > 0 && p.Z.trackExposure({
 location: 'home_button'
   });
   let K = null;
@@ -99,16 +99,16 @@ Q = (0, i.jsx)(o.BlobMask, {
     onMouseEnter: () => x(!0),
     onMouseLeave: () => x(!1),
     onClick: () => {
-      if (!__OVERLAY__ && (null != Z && clearTimeout(Z), T(setTimeout(Y, 500)), b(L + 1), 15 === L)) {
-        Y();
+      if (!__OVERLAY__ && (null != v && clearTimeout(v), T(setTimeout(z, 500)), b(L + 1), 15 === L)) {
+        z();
         let e = !s.K.get(D.wli);
-        s.K.set(D.wli, e), e && s.K.set(G.O5, !0), e ? (0, M.GN)('discodo') : (0, M.GN)('user_leave'), v(!0), setTimeout(() => {
-          v(!1);
+        s.K.set(D.wli, e), e && s.K.set(w.O5, !0), e ? (0, M.GN)('discodo') : (0, M.GN)('user_leave'), Z(!0), setTimeout(() => {
+          Z(!1);
         }, 1000);
       }
     },
     selected: q,
-    ariaLabel: w.Z.Messages.DIRECT_MESSAGES,
+    ariaLabel: G.Z.Messages.DIRECT_MESSAGES,
     ...W,
     to: {
       pathname: _,
@@ -164,7 +164,7 @@ children: (0, i.jsx)(E.Z, {
       null != J ? J : (0, i.jsx)(P.Z, {
         color: o.Tooltip.Colors.PRIMARY,
         hideOnClick: !0,
-        text: z,
+        text: Y,
         selected: t,
         children: Q
       })
@@ -194,9 +194,9 @@ s = Object.keys(U.nG),
 {
   unviewedTrialCount: o,
   unviewedDiscountCount: u
-} = (0, a.cj)([v.Z], () => ({
-  unviewedTrialCount: v.Z.getUnacknowledgedOffers(s).length,
-  unviewedDiscountCount: v.Z.getUnacknowledgedDiscountOffers().length
+} = (0, a.cj)([Z.Z], () => ({
+  unviewedTrialCount: Z.Z.getUnacknowledgedOffers(s).length,
+  unviewedDiscountCount: Z.Z.getUnacknowledgedDiscountOffers().length
 })),
 d = o + u,
 p = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
@@ -206,7 +206,7 @@ C = g === d && d > 0 && r + m === 0;
   l.useEffect(() => {
 n.length > 0 && (0, h.E7)();
   }, [n]), (0, f.Z)();
-  let E = Z.Z.getHomeLink();
+  let E = v.Z.getHomeLink();
   return C && (E = D.Z5c.APPLICATION_STORE), (0, i.jsx)(H, {
 selected: e,
 user: p,

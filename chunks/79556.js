@@ -25,8 +25,8 @@ var l = n(120356),
   N = n(306680),
   x = n(9156),
   S = n(594174),
-  v = n(109446),
-  Z = n(98597),
+  Z = n(109446),
+  v = n(98597),
   T = n(648501),
   L = n(473403),
   A = n(304471),
@@ -42,7 +42,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class y extends Z.ZP {
+class y extends v.ZP {
   componentWillUnmount() {
 this.resetTextChannelPopoutTimers();
   }
@@ -79,21 +79,21 @@ let {
   embeddedApps: N,
   resolvedUnreadSetting: x,
   withGuildIcon: S,
-  enableActivities: v
-} = this.props, Z = v && null != N && N.length > 0, T = (0, _.D)(I), A = (0, i.jsx)('li', {
+  enableActivities: Z
+} = this.props, v = Z && null != N && N.length > 0, T = (0, _.D)(I), A = (0, i.jsx)('li', {
   className: r()(this.getClassName(), {
     [R.disabled]: this.isDisabled(),
     [R.selected]: n
   }),
   'data-dnd-name': e.name,
-  onMouseEnter: c || Z ? this.handleMouseEnter : void 0,
-  onMouseLeave: c || Z ? this.handleMouseLeave : void 0,
+  onMouseEnter: c || v ? this.handleMouseEnter : void 0,
+  onMouseLeave: c || v ? this.handleMouseLeave : void 0,
   children: (0, i.jsx)(s.Popout, {
     position: 'right',
     renderPopout: this.renderPopout,
     spacing: 0,
     onRequestClose: this.handleClosePopout,
-    shouldShow: c && this.state.shouldShowThreadsPopout || Z && this.state.shouldShowActivities,
+    shouldShow: c && this.state.shouldShowThreadsPopout || v && this.state.shouldShowActivities,
     children: () => (0, i.jsxs)(L.Z, {
       className: R.iconVisibility,
       channel: e,
@@ -178,7 +178,7 @@ super(...e), O(this, 'state', {
   return null != l && l.length > 0 && r && !n ? (0, i.jsx)(A.Z, {
     onAction: this.handleActivitiesPopoutClose,
     channel: t
-  }) : (0, i.jsx)(v.Z, {
+  }) : (0, i.jsx)(Z.Z, {
     ...e,
     channel: this.props.channel
   });
@@ -266,8 +266,8 @@ return {
   canManageChannel: E.Z.can(b.Plq.MANAGE_CHANNELS, t),
   canReorderChannel: !0 !== l && (n.id === M._ || (null != e ? E.Z.can(b.Plq.MANAGE_CHANNELS, e) : E.Z.can(b.Plq.MANAGE_CHANNELS, n)))
 };
-  }), v = (0, a.e7)([m.Z], () => m.Z.shouldIndicateNewChannel(n.id, t.id)), {
-needSubscriptionToAccess: Z,
+  }), Z = (0, a.e7)([m.Z], () => m.Z.shouldIndicateNewChannel(n.id, t.id)), {
+needSubscriptionToAccess: v,
 isSubscriptionGated: L
   } = (0, f.Z)(t.id), A = (0, a.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)), R = (0, a.e7)([S.default], () => {
 let e = S.default.getCurrentUser();
@@ -277,8 +277,8 @@ channel: t,
 isChannelCollapsed: !1,
 isChannelSelected: o,
 isSubscriptionGated: L,
-needSubscriptionToAccess: Z,
-isNewChannel: v,
+needSubscriptionToAccess: v,
+isNewChannel: Z,
 muted: s,
 enableActivities: O,
 resolvedUnreadSetting: _
@@ -290,8 +290,8 @@ resolvedUnreadSetting: _
 hasActiveThreads: c,
 hasMoreActiveThreads: u,
 isSubscriptionGated: L,
-needSubscriptionToAccess: Z,
-isNewChannel: v && e.canBeNewChannel,
+needSubscriptionToAccess: v,
+isNewChannel: Z && e.canBeNewChannel,
 isFavoriteSuggestion: r && !A,
 canShowThreadPreviewForUser: R,
 channelInfo: y,

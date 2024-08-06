@@ -1,20 +1,20 @@
 n.d(t, {
   T: function() {
-return o;
+return i;
   },
   v: function() {
-return i;
+return o;
   }
 });
 var s = n(735250);
 n(470079);
 var r = n(481060);
 let a = 'collectibles shop product details modal',
-  o = e => {
+  i = e => {
 let {
   product: t,
-  category: o,
-  analyticsSource: i,
+  category: i,
+  analyticsSource: o,
   analyticsLocations: c,
   returnRef: l
 } = e;
@@ -25,8 +25,8 @@ let {
   return n => (0, s.jsx)(e, {
     ...n,
     product: t,
-    category: o,
-    analyticsSource: i,
+    category: i,
+    analyticsSource: o,
     analyticsLocations: c,
     returnRef: l
   });
@@ -34,6 +34,6 @@ let {
   modalKey: a
 });
   },
-  i = () => {
+  o = () => {
 (0, r.closeModal)(a);
   };

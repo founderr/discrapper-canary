@@ -17,9 +17,9 @@ var l, r, i = t(735250),
   f = t(280501),
   _ = t(689938),
   p = t(780836),
-  v = t(184298);
+  C = t(184298);
 
-function C(e) {
+function v(e) {
   let {
 icon: n,
 iconSize: t
@@ -43,13 +43,13 @@ renderOptionLabel: r,
 defaultValues: o
   } = e, {
 type: h,
-placeholder: x,
-maxValues: I,
-disabled: E
-  } = n, [T, N] = a.useState(!1), [g, S] = a.useState(!1), [b, O] = a.useState(new Map(null == o ? void 0 : o.map(e => [
+placeholder: E,
+maxValues: x,
+disabled: I
+  } = n, [T, N] = a.useState(!1), [g, S] = a.useState(!1), [O, b] = a.useState(new Map(null == o ? void 0 : o.map(e => [
 e.value,
 e
-  ]))), [j, M] = a.useState(new Set(b.keys())), [Z, y] = a.useState(() => (null != o ? o : []).map(e => e.value)), [L, R] = a.useState(0);
+  ]))), [M, L] = a.useState(new Set(O.keys())), [Z, y] = a.useState(() => (null != o ? o : []).map(e => e.value)), [j, A] = a.useState(0);
   a.useEffect(() => {
 let e = (null != o ? o : []).map(e => e.value);
 if (e.every(e => Z.includes(e)) && Z.every(n => e.includes(n)))
@@ -59,58 +59,58 @@ let n = new Map(null == o ? void 0 : o.map(e => [
   e.value,
   e
 ]));
-O(n), M(new Set(n.keys())), R(e => e + 1);
+b(n), L(new Set(n.keys())), A(e => e + 1);
   }, [
 o,
 Z
   ]);
   let {
-state: A,
-executeStateUpdate: B,
-visualState: P,
-isDisabled: k,
-error: U
+state: R,
+executeStateUpdate: P,
+visualState: U,
+isDisabled: B,
+error: k
   } = (0, m.Ee)(n, {
 type: h,
-selectedOptions: Array.from(b.values())
-  }), w = P === f.gH.LOADING;
+selectedOptions: Array.from(O.values())
+  }), w = U === f.gH.LOADING;
   a.useEffect(() => {
-if ((null == A ? void 0 : A.type) === u.re.USER_SELECT || (null == A ? void 0 : A.type) === u.re.ROLE_SELECT || (null == A ? void 0 : A.type) === u.re.MENTIONABLE_SELECT || (null == A ? void 0 : A.type) === u.re.CHANNEL_SELECT) {
-  let e = new Map(A.selectedOptions.map(e => [
+if ((null == R ? void 0 : R.type) === u.re.USER_SELECT || (null == R ? void 0 : R.type) === u.re.ROLE_SELECT || (null == R ? void 0 : R.type) === u.re.MENTIONABLE_SELECT || (null == R ? void 0 : R.type) === u.re.CHANNEL_SELECT) {
+  let e = new Map(R.selectedOptions.map(e => [
     e.value,
     e
   ]));
-  O(e), M(new Set(e.keys()));
+  b(e), L(new Set(e.keys()));
 }
-  }, [A]);
+  }, [R]);
   let G = a.useCallback(() => {
-B({
+P({
   type: h,
-  selectedOptions: Array.from(b.values())
-}) && M(new Set(b.keys()));
+  selectedOptions: Array.from(O.values())
+}) && L(new Set(O.keys()));
   }, [
-B,
+P,
 h,
-b
+O
   ]);
   a.useEffect(() => {
-if (!(T || g || b.size === j.size && Array.from(b.keys()).every(e => j.has(e))))
+if (!(T || g || O.size === M.size && Array.from(O.keys()).every(e => M.has(e))))
   G();
   }, [
 T,
 g,
-j,
-b,
+M,
+O,
 G
   ]);
-  let D = 0 === b.size || T,
+  let D = 0 === O.size || T,
 H = {
-  isDisabled: E || k,
+  isDisabled: I || B,
   wrapperClassName: p.select,
   options: e => new Promise(n => {
     n(t(e));
   }),
-  placeholder: D ? null != x ? x : _.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
+  placeholder: D ? null != E ? E : _.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
   onClose: () => N(!1),
   onOpen: () => N(!0),
   onBlur: () => S(!1),
@@ -120,7 +120,7 @@ H = {
     let {
       inPill: t
     } = n, r = t ? 16 : 24, a = l(e, r);
-    return null != a ? (0, i.jsx)(C, {
+    return null != a ? (0, i.jsx)(v, {
       icon: a,
       iconSize: r
     }) : null;
@@ -132,28 +132,28 @@ children: [
   (0, i.jsxs)('div', {
     className: p.container,
     children: [
-      I > 1 ? (0, i.jsx)(c.SearchableSelect, {
+      x > 1 ? (0, i.jsx)(c.SearchableSelect, {
         className: p.badges,
-        value: Array.from(b.values()),
+        value: Array.from(O.values()),
         onChange: e => {
-          !T && S(!0), O(new Map(e.map(e => [
+          !T && S(!0), b(new Map(e.map(e => [
             e.value,
             e
           ])));
         },
         multi: !0,
         inputClassNames: s()({
-          [p.soloInput]: 0 === b.size,
-          [p.inlineInput]: b.size > 0,
+          [p.soloInput]: 0 === O.size,
+          [p.inlineInput]: O.size > 0,
           [p.hidden]: !D
         }),
         closeOnSelect: !1,
         centerCaret: !0,
         ...H
-      }, L) : (0, i.jsx)(c.SearchableSelect, {
+      }, j) : (0, i.jsx)(c.SearchableSelect, {
         className: (p.badges, p.singleSelect),
-        value: [...b.values()][0],
-        onChange: e => O(null != e ? new Map([
+        value: [...O.values()][0],
+        onChange: e => b(null != e ? new Map([
           [
             e.value,
             e
@@ -162,7 +162,7 @@ children: [
         clearable: !0,
         centerCaret: !0,
         ...H
-      }, L),
+      }, j),
       w ? (0, i.jsx)('div', {
         className: p.loading,
         children: (0, i.jsx)(c.Dots, {
@@ -172,9 +172,9 @@ children: [
       }) : null
     ]
   }),
-  null != U ? (0, i.jsx)(d.st, {
-    ...(0, d.c4)(U),
-    className: v.error
+  null != k ? (0, i.jsx)(d.st, {
+    ...(0, d.c4)(k),
+    className: C.error
   }) : null
 ]
   });

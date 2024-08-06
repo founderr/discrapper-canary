@@ -53,9 +53,9 @@ p = null != u ? u : m.Wyy,
 _ = h.map(e => e.id),
 [f, g] = l.useState(!1),
 [x, S] = l.useState(c),
-v = c ? 0 : -E,
-Z = (0, d.useSpring)({
-  transform: 'translate3d(0, '.concat(v, 'px, 0)'),
+Z = c ? 0 : -E,
+v = (0, d.useSpring)({
+  transform: 'translate3d(0, '.concat(Z, 'px, 0)'),
   config: {
     duration: I
   },
@@ -66,7 +66,7 @@ Z = (0, d.useSpring)({
     g(!1), S(c);
   }
 }, 'animate-always'),
-T = f ? Z : void 0;
+T = f ? v : void 0;
   return (f || x) && (t = (0, i.jsx)(s.animated.div, {
 style: T,
 className: C.expandedFolderIconWrapper,
@@ -116,13 +116,13 @@ treeItemProps: {
   onFocus: N,
   ...S
 }
-  } = e, [v, Z] = l.useState(!1), T = l.useCallback(() => {
-s || Z(!0), null == I || I(!0);
+  } = e, [Z, v] = l.useState(!1), T = l.useCallback(() => {
+s || v(!0), null == I || I(!0);
   }, [
 s,
 I
   ]), L = l.useCallback(() => {
-s || Z(!1), null == I || I(!1);
+s || v(!1), null == I || I(!1);
   }, [
 s,
 I
@@ -136,7 +136,7 @@ lowerBadgeSize: {
 },
 children: (0, i.jsx)(d.Clickable, {
   className: a()(C.folder, {
-    [C.hover]: v
+    [C.hover]: Z
   }),
   onClick: _,
   onContextMenu: m,
@@ -160,7 +160,7 @@ children: (0, i.jsx)(d.Clickable, {
     children: p
   }) : (0, i.jsx)(x, {
     folderNode: t,
-    hovered: v,
+    hovered: Z,
     expanded: r
   })
 })

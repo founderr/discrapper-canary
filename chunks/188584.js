@@ -1,11 +1,11 @@
 i.d(t, {
   k: function() {
-return l;
+return a;
   }
 });
 var n = i(470079),
   s = i(328456);
-let l = e => {
+let a = e => {
   let {
 firstProfileEffect: t,
 firstAvatarDecoration: i
