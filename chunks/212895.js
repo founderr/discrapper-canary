@@ -25,9 +25,13 @@ var r = n(470079),
 
 function E(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [..._.YQ];
-  return null == e || u.Z.hasPaymentSourceForSKUIds(e, t) ? Promise.resolve() : new Promise(e => {
+  return null == e || u.Z.hasPaymentSourceForSKUIds(e, t) ? Promise.resolve() : new Promise((e, n) => {
 s.Z.wait(async () => {
-  await (0, o.Gn)(t), e();
+  try {
+    await (0, o.Gn)(t), e();
+  } catch (e) {
+    n(e);
+  }
 });
   });
 }
@@ -60,7 +64,12 @@ loaded: !1
   }), c = (0, l.V)(a);
   r.useEffect(() => {
 (async () => {
-  await E(n, a);
+  try {
+    await E(n, a);
+  } catch (e) {
+    if (10027 !== e.code)
+      throw e;
+  }
   let e = [];
   null != t && null != u.Z.get(t) && (e = f(t, n, i)), e.length > 0 ? o({
     paymentSourceId: n,
