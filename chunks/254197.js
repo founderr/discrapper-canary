@@ -1,7 +1,7 @@
 var s = n(735250),
   o = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  r = n(120356),
+  a = n.n(r),
   l = n(338545),
   i = n(754700),
   c = n(442837),
@@ -24,16 +24,16 @@ var s = n(735250),
   A = n(164495),
   B = n(759853),
   b = n(205511),
-  R = n(95985),
-  y = n(658590),
-  I = n(46140),
-  O = n(743294),
-  U = n(689938),
-  M = n(689065);
+  y = n(95985),
+  R = n(658590),
+  O = n(46140),
+  I = n(743294),
+  M = n(689938),
+  U = n(689065);
 let k = o.forwardRef(function(e, t) {
   var n;
   let {
-children: a,
+children: r,
 className: k,
 collapsedHeight: q,
 isExpanded: P,
@@ -54,7 +54,7 @@ taskDetails: z
   }, [V]), {
 primaryVariant: J
   } = _.u.useExperiment({
-location: I.dr.QUESTS_BAR
+location: O.dr.QUESTS_BAR
   }, {
 autoTrackExposure: !1
   }), $ = (null === (n = V.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, ee = P && Z, {
@@ -63,18 +63,18 @@ isProgressingOnConsole: en
   } = o.useMemo(() => ({
 questSupportsConsole: (0, C.$J)(V),
 isProgressingOnConsole: (0, C.Bz)(V)
-  }), [V]), es = (0, x.pe)(V), eo = z.percentComplete > 0, ea = !en && !i.T.CONSOLE.has(z.taskType) && (es || i.T.DESKTOP.has(z.taskType)), er = (0, C.ph)(V), el = (0, h.D)({
+  }), [V]), es = (0, x.pe)(V), eo = z.percentComplete > 0, er = !en && !i.T.CONSOLE.has(z.taskType) && (es || i.T.DESKTOP.has(z.taskType)), ea = (0, C.ph)(V), el = (0, h.D)({
 quest: V,
-location: I.dr.QUESTS_BAR,
+location: O.dr.QUESTS_BAR,
 questContent: f.jn.QUEST_BAR_V2,
 taskDetails: z,
-useV2Variants: J === _.P.V2 || (0, y.a)(V)
+useV2Variants: J === _.P.V2 || (0, R.a)(V)
   });
   return (0, s.jsxs)(l.animated.div, {
 'aria-hidden': !ee,
-className: r()(k, M.contentExpanded, {
-  [M.contentInteractable]: ee,
-  [M.contentExpandedAccepted]: $
+className: a()(k, U.contentExpanded, {
+  [U.contentInteractable]: ee,
+  [U.contentExpandedAccepted]: $
 }),
 style: {
   transform: (0, l.to)([
@@ -102,9 +102,9 @@ style: {
 },
 children: [
   $ && (0, s.jsx)(l.animated.div, {
-    className: r()(M.postEnrollmentBackground, M.postEnrollmentBackgroundCollapsed),
+    className: a()(U.postEnrollmentBackground, U.postEnrollmentBackgroundCollapsed),
     style: {
-      backgroundImage: 'linear-gradient(90deg, '.concat(O.aY, ', ').concat(O.v6, ')'),
+      backgroundImage: 'linear-gradient(90deg, '.concat(I.aY, ', ').concat(I.v6, ')'),
       opacity: Q.to({
         range: [
           0,
@@ -117,22 +117,22 @@ children: [
       })
     }
   }),
-  a,
+  r,
   (0, s.jsx)(l.animated.div, {
     style: {
       opacity: 1
     },
     children: $ ? (0, s.jsxs)('div', {
-      className: M.questAcceptedContent,
+      className: U.questAcceptedContent,
       ref: t,
       children: [
         (0, s.jsxs)('div', {
-          className: M.questAcceptedHeader,
+          className: U.questAcceptedHeader,
           children: [
             (0, s.jsx)(d.Text, {
               variant: 'text-xxs/medium',
-              className: r()(M.flex, M.headerText),
-              children: U.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+              className: a()(U.flex, U.headerText),
+              children: M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                 expirationDate: Y
               })
             }),
@@ -146,19 +146,19 @@ children: [
               showShareLink: !0,
               children: e => (0, s.jsx)(d.Clickable, {
                 ...e,
-                className: M.submenuWrapper,
-                'aria-label': U.Z.Messages.ACTIONS,
+                className: U.submenuWrapper,
+                'aria-label': M.Z.Messages.ACTIONS,
                 children: (0, s.jsx)(d.MoreHorizontalIcon, {
                   size: 'md',
                   color: 'currentColor',
-                  className: r()(M.submenuIcon, M.interactiveNormal)
+                  className: a()(U.submenuIcon, U.interactiveNormal)
                 })
               })
             })
           ]
         }),
         (0, s.jsx)('div', {
-          className: M.divider
+          className: U.divider
         }),
         (0, s.jsx)(B.Z, {
           expansionSpring: Q,
@@ -167,7 +167,7 @@ children: [
           quest: V,
           isExpanded: P
         }),
-        (0, s.jsx)(R.Z, {
+        (0, s.jsx)(y.Z, {
           contentLocation: 'expanded',
           quest: V,
           progressBarRef: G,
@@ -180,7 +180,7 @@ children: [
           }
         }),
         (0, s.jsx)(N.n, {
-          children: et && !ea && (0, s.jsx)(b.Z, {
+          children: et && !er && (0, s.jsx)(b.Z, {
             quest: V,
             taskDetails: z
           })
@@ -196,53 +196,53 @@ children: [
       ]
     }) : (0, s.jsx)('div', {
       children: (0, s.jsxs)('div', {
-        className: M.questPromoContent,
+        className: U.questPromoContent,
         ref: t,
         children: [
           (0, s.jsxs)('div', {
-            className: M.details,
+            className: U.details,
             children: [
               (0, s.jsx)(E.Z, {
-                className: M.rewardTile,
+                className: U.rewardTile,
                 learnMoreStyle: 'text',
                 quest: V,
                 questContent: f.jn.QUEST_BAR_V2,
-                location: I.dr.QUESTS_BAR
+                location: O.dr.QUESTS_BAR
               }),
               (0, s.jsx)(d.Heading, {
-                className: M.title,
+                className: U.title,
                 variant: 'heading-md/medium',
-                children: U.Z.Messages.QUESTS_TITLE.format({
+                children: M.Z.Messages.QUESTS_TITLE.format({
                   questName: V.config.messages.questName
                 })
               }),
               (0, s.jsx)(d.Text, {
-                className: M.description,
+                className: U.description,
                 variant: 'text-xs/normal',
                 children: el
               })
             ]
           }),
           (0, s.jsx)(d.Button, {
-            className: M.cta,
+            className: U.cta,
             color: d.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: ee ? X : void 0,
             size: d.Button.Sizes.SMALL,
             submitting: F,
-            children: U.Z.Messages.QUESTS_ACCEPT_QUEST
+            children: M.Z.Messages.QUESTS_ACCEPT_QUEST
           })
         ]
       })
     })
   }),
   $ ? (0, s.jsx)('div', {
-    className: r()(M.postEnrollmentBackground, M.postEnrollmentBackgroundExpanded),
+    className: a()(U.postEnrollmentBackground, U.postEnrollmentBackgroundExpanded),
     style: {
-      backgroundImage: 'linear-gradient(90deg, '.concat(O.aY, ', ').concat(O.v6, ')')
+      backgroundImage: 'linear-gradient(90deg, '.concat(I.aY, ', ').concat(I.v6, ')')
     }
   }) : (0, s.jsxs)(l.animated.div, {
-    className: M.heroAssetWrapper,
+    className: U.heroAssetWrapper,
     style: {
       backdropFilter: Q.to([
         0,
@@ -261,7 +261,7 @@ children: [
     },
     children: [
       (0, s.jsx)(l.animated.div, {
-        className: M.heroAssetDarken,
+        className: U.heroAssetDarken,
         style: {
           opacity: Q.to([
             0,
@@ -273,7 +273,7 @@ children: [
         }
       }),
       (0, s.jsx)(l.animated.div, {
-        className: M.heroAssetTint,
+        className: U.heroAssetTint,
         style: {
           backgroundColor: V.config.colors.primary,
           opacity: Q.to([
@@ -293,11 +293,11 @@ children: [
           loop: !0,
           muted: !0,
           playsInline: !0,
-          className: M.heroAsset,
+          className: U.heroAsset,
           controls: !1,
           children: (0, s.jsx)('source', {
-            src: er,
-            type: (0, C.mN)(er)
+            src: ea,
+            type: (0, C.mN)(ea)
           })
         })
       }) : (0, s.jsx)(S.Fl, {
@@ -305,12 +305,12 @@ children: [
         children: e => (0, s.jsx)('img', {
           ref: e,
           alt: '',
-          className: M.heroAsset,
-          src: er
+          className: U.heroAsset,
+          src: ea
         })
       }),
       (0, s.jsx)(l.animated.div, {
-        className: M.legibilityGradient,
+        className: U.legibilityGradient,
         style: {
           opacity: Q.to({
             range: [

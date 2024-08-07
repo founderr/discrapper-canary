@@ -1,7 +1,7 @@
 var s = n(735250),
   o = n(470079),
-  a = n(113434),
-  r = n(308069),
+  r = n(113434),
+  a = n(308069),
   l = n(613087),
   i = n(457153),
   c = n(254197),
@@ -20,7 +20,7 @@ onCtxMenuSelection: C,
 quest: _,
 useReducedMotion: h,
 collapsedHeight: E
-  } = e, S = o.useRef(null), T = o.useRef(null), v = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = (0, a.Rf)(_);
+  } = e, S = o.useRef(null), T = o.useRef(null), v = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = (0, r.Rf)(_);
   return (0, s.jsxs)(l.p, {
 expandedContentRef: n,
 collapsedContentRef: S,
@@ -56,7 +56,7 @@ children: [
           expansionSpring: p,
           isExpanded: m
         }),
-        !v && (0, s.jsx)(r.Z, {
+        !v && (0, s.jsx)(a.Z, {
           quest: _,
           expansionSpring: p,
           useReducedMotion: h,

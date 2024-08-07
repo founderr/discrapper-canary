@@ -1,7 +1,7 @@
 var s = n(735250),
   o = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  r = n(120356),
+  a = n.n(r),
   l = n(959078),
   i = n(442837),
   c = n(481060),
@@ -27,7 +27,7 @@ isComplete: n,
 hasNextStep: o
   } = e;
   return (0, s.jsxs)('li', {
-className: r()(v.stepWrapper, {
+className: a()(v.stepWrapper, {
   [v.stepWrapperComplete]: n
 }, {
   [v.stepWrapperWithNextStep]: o
@@ -69,7 +69,7 @@ function A(e) {
   let {
 quest: t,
 useReducedMotion: n
-  } = e, a = (0, m.n)(), i = (0, _.k3)(t.id, g.jn.QUEST_BAR_V2), d = (0, _.g2)({
+  } = e, r = (0, m.n)(), i = (0, _.k3)(t.id, g.jn.QUEST_BAR_V2), d = (0, _.g2)({
 useReducedMotion: n
   }), {
 errorHints: h,
@@ -92,19 +92,19 @@ renderBody: b
 let e = h.length > 0,
   n = () => (0, s.jsx)(s.Fragment, {
     children: h.map((e, n) => {
-      if (e.type === l.K.EXPIRED_CREDENTIAL && a) {
+      if (e.type === l.K.EXPIRED_CREDENTIAL && r) {
         let o = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-          a = (0, f.C9)(e),
-          r = (0, f._j)(e),
-          l = r === S.ABu.XBOX;
+          r = (0, f.C9)(e),
+          a = (0, f._j)(e),
+          l = a === S.ABu.XBOX;
         return (0, s.jsx)(j, {
-          children: a.format({
+          children: r.format({
             account_name: null == o ? void 0 : o.name,
             onClick: () => {
               (0, f.fY)({
                 quest: t,
                 showInline: l,
-                platformType: r
+                platformType: a
               }, {
                 content: g.jn.QUEST_BAR,
                 ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE
@@ -147,7 +147,7 @@ return {
   }, [
 t,
 h,
-a
+r
   ]);
   return (0, s.jsxs)('div', {
 className: v.microphoneUnit,
@@ -167,7 +167,7 @@ children: [
         children: B
       }),
       (0, s.jsx)(c.Clickable, {
-        className: r()(v.microphoneUnitRefreshIconWrapper, {
+        className: a()(v.microphoneUnitRefreshIconWrapper, {
           [v.disabled]: N
         }),
         onClick: () => A(),
@@ -176,7 +176,7 @@ children: [
     ]
   }),
   (0, s.jsxs)('div', {
-    className: r()({
+    className: a()({
       [v.opacity_50]: N
     }),
     children: [
@@ -204,25 +204,25 @@ t.Z = function(e) {
   let {
 quest: t,
 taskDetails: n
-  } = e, a = (0, i.e7)([d.Z], () => d.Z.useReducedMotion), r = (0, x.z6)(), {
+  } = e, r = (0, i.e7)([d.Z], () => d.Z.useReducedMotion), a = (0, x.z6)(), {
 steps: l,
 hasConnectedAccounts: u,
 isProgressingQuestForLaunchedGame: p,
 isQuestComplete: m
   } = o.useMemo(() => {
 var e;
-let o = r.xboxAndPlaystationAccounts.length > 0,
-  a = o && (0, f.Bz)(t),
+let o = a.xboxAndPlaystationAccounts.length > 0,
+  r = o && (0, f.Bz)(t),
   l = (0, f.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST),
   i = C.r.build(t.config).application.name,
   c = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
 return {
   steps: [{
       renderContent: () => (0, s.jsx)(h.Q, {
-        ...r,
+        ...a,
         quest: t
       }),
-      isComplete: o || a || c
+      isComplete: o || r || c
     },
     {
       renderContent: () => (0, s.jsx)(B, {
@@ -230,7 +230,7 @@ return {
           gameTitle: i
         })
       }),
-      isComplete: a || c
+      isComplete: r || c
     },
     {
       renderContent: () => (0, s.jsx)(B, {
@@ -242,11 +242,11 @@ return {
     }
   ],
   hasConnectedAccounts: o,
-  isProgressingQuestForLaunchedGame: a,
+  isProgressingQuestForLaunchedGame: r,
   isQuestComplete: c
 };
   }, [
-r,
+a,
 t,
 n
   ]);
@@ -272,7 +272,7 @@ children: [
         }, t))
       }),
       u && !p && !m && (0, s.jsx)(A, {
-        useReducedMotion: a,
+        useReducedMotion: r,
         quest: t
       })
     ]

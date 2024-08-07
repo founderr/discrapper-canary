@@ -1,14 +1,14 @@
 var s = n(735250),
   o = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  r = n(120356),
+  a = n.n(r),
   l = n(338545),
   i = n(95985),
   c = n(985444);
 let d = o.forwardRef(function(e, t) {
   var n;
   let {
-className: a,
+className: r,
 expansionSpring: d,
 isExpanded: u,
 isExpansionAnimationComplete: p,
@@ -18,7 +18,7 @@ taskDetails: x
   return (0, s.jsx)(l.animated.div, {
 ref: t,
 'aria-hidden': u && p,
-className: r()(a, c.contentCollapsed, {
+className: a()(r, c.contentCollapsed, {
   [c.contentCollapsedExpanded]: u,
   [c.contentCollapsedAccepted]: f
 }),

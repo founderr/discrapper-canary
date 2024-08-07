@@ -1,8 +1,8 @@
 n(47120);
 var s = n(735250),
   o = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  r = n(120356),
+  a = n.n(r),
   l = n(887024),
   i = n(699581),
   c = n(338545),
@@ -19,31 +19,31 @@ t.Z = e => {
   var t;
   let {
 expansionSpring: n,
-overlayRef: a,
+overlayRef: r,
 quest: h,
 progressBarRef: E,
 isExpanded: S
   } = e, {
 completionSpring: T,
 startCompletionAnimation: v
-  } = (0, x.GX)(), N = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, j = o.useRef(!1), A = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([m.Z], () => m.Z.hasLayers()), R = (0, u.Z)(b), [y, I] = o.useState(null), [O, U] = o.useState(null), M = o.useRef(new l.qA({
+  } = (0, x.GX)(), N = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, j = o.useRef(!1), A = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([m.Z], () => m.Z.hasLayers()), y = (0, u.Z)(b), [R, O] = o.useState(null), [I, M] = o.useState(null), U = o.useRef(new l.qA({
 gravity: 0,
 wind: 0
-  })), k = (0, l.uR)(y, O), q = o.useCallback(() => {
+  })), k = (0, l.uR)(R, I), q = o.useCallback(() => {
 if (A)
   return;
 let e = E.current,
   t = B.current;
 if (null != t && null != e && k.isReady) {
-  var n, s, o, a;
+  var n, s, o, r;
   let {
-    x: r,
+    x: a,
     y: l
   } = e.getBoundingClientRect(), {
     x: i,
     y: c
   } = t.getBoundingClientRect();
-  k.createMultipleConfetti((n = r - i, s = l - c, o = e.clientHeight, a = e.clientWidth, {
+  k.createMultipleConfetti((n = a - i, s = l - c, o = e.clientHeight, r = e.clientWidth, {
     ...g.We,
     position: {
       type: 'static-random',
@@ -53,7 +53,7 @@ if (null != t && null != e && k.isReady) {
       },
       maxValue: {
         x: n + o,
-        y: s + a
+        y: s + r
       }
     },
     velocity: {
@@ -98,12 +98,12 @@ v,
 q,
 P
   ]), o.useEffect(() => {
-N && !b && R && setTimeout(() => {
+N && !b && y && setTimeout(() => {
   v(), q();
 }, 200);
   }, [
 N,
-R,
+y,
 b,
 v,
 q
@@ -128,7 +128,7 @@ children: [
     }
   }),
   (0, s.jsx)(c.animated.div, {
-    className: r()(f.borders, f.bordersTopLeft),
+    className: a()(f.borders, f.bordersTopLeft),
     style: {
       opacity: T
     }
@@ -149,23 +149,23 @@ children: [
     },
     children: [
       (0, s.jsx)(l.O_, {
-        ref: I,
+        ref: O,
         className: f.confetti,
-        environment: M.current
+        environment: U.current
       }),
       (0, s.jsx)(l.Ji, {
-        ref: U,
+        ref: M,
         sprites: [C],
         colors: _,
         spriteWidth: g.Ko,
         spriteHeight: g.Ko
       }),
-      null != a.current && (0, i.createPortal)((0, s.jsx)(c.animated.div, {
-        className: r()(f.borders, f.bordersBottom),
+      null != r.current && (0, i.createPortal)((0, s.jsx)(c.animated.div, {
+        className: a()(f.borders, f.bordersBottom),
         style: {
           opacity: T
         }
-      }), a.current)
+      }), r.current)
     ]
   })
 ]

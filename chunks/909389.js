@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var o = n(35148),
-  a = n(266685),
-  r = n(432237);
+  r = n(266685),
+  a = n(432237);
 t.Z = function(e) {
   let {
 collapsedHeight: t,
@@ -16,9 +16,9 @@ onCtxMenuSelection: p,
 quest: m,
 useReducedMotion: x
   } = e;
-  return (0, s.jsx)(a.Z, {
+  return (0, s.jsx)(r.Z, {
 expansionSpring: l,
-className: r.content,
+className: a.content,
 collapsedHeight: t,
 onCtxMenuOpen: d,
 onCtxMenuClose: u,
@@ -29,7 +29,7 @@ quest: m,
 useReducedMotion: x,
 ref: n,
 children: (0, s.jsx)(o.Z, {
-  className: r.content,
+  className: a.content,
   expansionSpring: l,
   isExpanded: i,
   isExpansionAnimationComplete: c,

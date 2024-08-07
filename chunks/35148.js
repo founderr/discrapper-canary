@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var o = n(120356),
-  a = n.n(o),
-  r = n(338545),
+  r = n.n(o),
+  a = n(338545),
   l = n(481060),
   i = n(113434),
   c = n(497505),
@@ -25,9 +25,9 @@ useReducedMotion: E
   } = e, S = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {
 percentComplete: T
   } = (0, i.Rf)(h), v = (0, i.Jf)(h), N = null != v ? v.completedRatio > 0 : T > 0;
-  return (0, s.jsxs)(r.animated.div, {
+  return (0, s.jsxs)(a.animated.div, {
 'aria-hidden': C && _,
-className: a()(n, f.contentCollapsed, {
+className: r()(n, f.contentCollapsed, {
   [f.contentCollapsedExpanded]: C,
   [f.contentCollapsedAccepted]: S
 }),

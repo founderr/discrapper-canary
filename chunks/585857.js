@@ -6,8 +6,8 @@ return T;
 var s = n(735250);
 n(470079);
 var o = n(120356),
-  a = n.n(o),
-  r = n(533627),
+  r = n.n(o),
+  a = n(533627),
   l = n(432594),
   i = n(481060),
   c = n(230711),
@@ -37,11 +37,11 @@ onClick: () => {
     platformType: o
   });
 },
-children: o === g.ABu.PLAYSTATION ? (0, s.jsx)(r.K, {
-  colorClass: a()(C.connectConsoleButton, n ? C.playstationButtonConnected : C.connectConsoleButtonUnconnected),
+children: o === g.ABu.PLAYSTATION ? (0, s.jsx)(a.K, {
+  colorClass: r()(C.connectConsoleButton, n ? C.playstationButtonConnected : C.connectConsoleButtonUnconnected),
   size: 'sm'
 }) : (0, s.jsx)(l.a, {
-  colorClass: a()(C.connectConsoleButton, n ? C.xboxButtonConnected : C.connectConsoleButtonUnconnected),
+  colorClass: r()(C.connectConsoleButton, n ? C.xboxButtonConnected : C.connectConsoleButtonUnconnected),
   size: 'sm'
 })
   });
@@ -75,8 +75,8 @@ function E(e) {
 quest: t,
 xboxAccounts: n,
 playstationAccounts: o,
-xboxAndPlaystationAccounts: r
-  } = e, l = r.slice(0, 2), c = r.length > 0, d = n.length > 0, u = o.length > 0;
+xboxAndPlaystationAccounts: a
+  } = e, l = a.slice(0, 2), c = a.length > 0, d = n.length > 0, u = o.length > 0;
   return (0, s.jsxs)('div', {
 className: C.inlineConsoleConnectionDetails,
 children: [
@@ -112,7 +112,7 @@ children: [
     className: C.inlineConsoleConnectionDetailsLower,
     children: [
       l.map((e, t) => (0, s.jsxs)('div', {
-        className: a()(C.inlineConsoleConnectionDetailsLowerItem, t > 0 ? C.marginTop4px : void 0),
+        className: r()(C.inlineConsoleConnectionDetailsLowerItem, t > 0 ? C.marginTop4px : void 0),
         children: [
           (0, s.jsx)(i.Text, {
             color: 'header-secondary',
@@ -126,7 +126,7 @@ children: [
           })
         ]
       }, t)),
-      r.length > 2 && (0, s.jsx)(h, {
+      a.length > 2 && (0, s.jsx)(h, {
         text: f.Z.Messages.QUESTS_VIEW_MORE_ACCOUNTS,
         quest: t
       })

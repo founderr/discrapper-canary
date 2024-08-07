@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var o = n(481060),
-  a = n(497505),
-  r = n(644646),
+  r = n(497505),
+  a = n(644646),
   l = n(613087),
   i = n(472144),
   c = n(569379),
@@ -31,10 +31,10 @@ children: [
       percentComplete: g,
       size: 42,
       strokeWidth: 3,
-      children: (0, s.jsx)(r.Z, {
+      children: (0, s.jsx)(a.Z, {
         className: u.questProgressRewardTile,
         quest: n,
-        questContent: a.jn.QUEST_BAR_V2,
+        questContent: r.jn.QUEST_BAR_V2,
         autoplay: !1,
         location: d.dr.QUESTS_BAR
       })
