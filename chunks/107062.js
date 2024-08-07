@@ -75,7 +75,16 @@ participant2: F,
 numOtherParticipants: W
   } = (0, E.Z)(f, 3), z = (0, r.O)(), {
 analyticsLocations: Y
-  } = (0, h.ZP)(), K = p.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), q = a.useCallback(e => {
+  } = (0, h.ZP)(), K = p.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), q = () => {
+(0, d.Z)({
+  guildId: n.guild_id,
+  locationObject: z.location,
+  openInPopout: K,
+  initialSelectedApplicationId: f.extra.application_id,
+  initialSlide: S.ag.SELECT_CHANNEL,
+  analyticsLocations: Y
+});
+  }, X = a.useCallback(e => {
 if (null == L || null == n || null == O)
   return;
 let t = W > 0 ? b({
@@ -114,21 +123,24 @@ O
   ]);
   if (null == O)
 return null;
-  let X = (0, i.jsx)(x.PZ, {
+  let Q = (0, i.jsx)(x.PZ, {
   location: x.Gt.POPOUT,
   entry: f
 }),
-Q = (0, i.jsx)(T.wG, {
+J = (0, i.jsx)(T.wG, {
   thumbnailSrc: null !== (t = null != U ? U : k) && void 0 !== t ? t : L,
   thumbnailTitle: P,
   channel: n,
   userDescription: (0, g.kr)(f) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
   title: f.extra.activity_name,
   subtitle: y,
-  badges: X,
-  entry: f
+  badges: Q,
+  entry: f,
+  onClickTitle: q,
+  onClickSubtitle: q,
+  onClickThumbnail: q
 }),
-J = (0, o.Z)(D, v.xjy.JOIN) || (0, c.Z)(D) ? (0, i.jsx)(u.Z, {
+$ = (0, o.Z)(D, v.xjy.JOIN) || (0, c.Z)(D) ? (0, i.jsx)(u.Z, {
   activity: D,
   user: O,
   ButtonComponent: e => (0, i.jsx)(T.Ll, {
@@ -136,36 +148,27 @@ J = (0, o.Z)(D, v.xjy.JOIN) || (0, c.Z)(D) ? (0, i.jsx)(u.Z, {
     ...e
   })
 }) : null,
-$ = [
-  J,
+ee = [
+  $,
   (0, i.jsx)(T.Ll, {
-    onClick: () => {
-      (0, d.Z)({
-        guildId: n.guild_id,
-        locationObject: z.location,
-        openInPopout: K,
-        initialSelectedApplicationId: f.extra.application_id,
-        initialSlide: S.ag.SELECT_CHANNEL,
-        analyticsLocations: Y
-      });
-    },
+    onClick: q,
     IconComponent: l.ActivitiesIcon,
     children: Z.Z.Messages.CONTENT_INVENTORY_VIEW_ACTIVITY
   })
 ].filter(_.lm);
   return (0, i.jsxs)(T.yR, {
 children: [
-  Q,
+  J,
   (0, i.jsx)(T.St, {
     children: (0, i.jsx)(T.WT, {
       closePopout: j,
       user: O,
       channel: n,
-      generateReactionImage: q,
+      generateReactionImage: X,
       reactionImageAltText: A(f, O),
       entry: f,
       requestId: R,
-      buttons: $
+      buttons: ee
     })
   })
 ]

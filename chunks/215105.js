@@ -106,7 +106,8 @@ await (0, T.Z)({
   userId: t.id,
   content: r,
   location: 'UserProfileReplyPopout',
-  openChannel: !1
+  openChannel: !1,
+  whenReady: !1
 }), D();
   };
   return (0, r.jsx)(l.V, {

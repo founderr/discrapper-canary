@@ -89,7 +89,8 @@ U = async e => {
     userId: t.id,
     content: r,
     location: 'UserProfileReactReplyBar',
-    openChannel: !1
+    openChannel: !1,
+    whenReady: !1
   }), y();
 };
   return (0, r.jsxs)(u.ZP, {
