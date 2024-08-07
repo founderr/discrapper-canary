@@ -19,7 +19,9 @@ label: t,
 ...n
   } = e, {
 analyticsLocations: d
-  } = (0, s.ZP)(), _ = (0, o.KZ)(), E = (0, a.Aq)();
+  } = (0, s.ZP)(), {
+context: _
+  } = (0, o.KZ)(), E = (0, a.Aq)();
   return (0, r.jsx)(i.MenuItem, {
 id: 'user-profile',
 label: null != t ? t : c.Z.Messages.PROFILE,

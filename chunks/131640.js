@@ -99,24 +99,23 @@ p
   ]), {
 analyticsLocations: Z
   } = (0, d.ZP)(), {
-trackUserProfileAction: Y,
-messageId: j,
-roleId: W
-  } = (0, S.KZ)(), K = g || t.isClyde(), {
-avatarDecorationSrc: z,
-avatarSrc: q,
-eventHandlers: Q
+context: Y,
+trackUserProfileAction: j
+  } = (0, S.KZ)(), W = g || t.isClyde(), {
+avatarDecorationSrc: K,
+avatarSrc: z,
+eventHandlers: q
   } = (0, N.Z)({
 user: t,
 guildId: E,
 size: U,
 animateOnHover: v
-  }), X = (0, r.jsx)('div', {
+  }), Q = (0, r.jsx)('div', {
 className: P.avatarHoverTarget,
-...Q,
+...q,
 children: (0, r.jsx)(G, {
-  src: null != a ? a : q,
-  avatarDecoration: z,
+  src: null != a ? a : z,
+  avatarDecoration: K,
   size: U,
   'aria-label': t.username,
   status: H ? L.Skl.UNKNOWN : u,
@@ -125,7 +124,7 @@ children: (0, r.jsx)(G, {
   statusTooltip: !0,
   statusTooltipDelay: x
 })
-  }), $ = (0, o.EQ)(A).with(D.y0.POPOUT, () => (0, O.zW)({
+  }), X = (0, o.EQ)(A).with(D.y0.POPOUT, () => (0, O.zW)({
 premiumUserWithBanner: P.avatarPositionPremiumBanner,
 premiumUserWithoutBanner: P.avatarPositionPremiumNoBanner,
 default: P.avatarPositionNormal
@@ -137,27 +136,24 @@ hasProfileEffect: R
   return (0, r.jsx)(r.Fragment, {
 children: (0, r.jsxs)(c.Clickable, {
   className: s()({
-    [P.clickable]: !K,
+    [P.clickable]: !W,
     [P.avatarWrapperNonUserBot]: F,
     [P.avatarWrapperNormal]: !F
-  }, $),
-  onClick: F || K ? void 0 : function() {
-    Y({
+  }, X),
+  onClick: F || W ? void 0 : function() {
+    j({
       action: 'PRESS_VIEW_PROFILE'
     }), (0, y.openUserProfileModal)({
+      ...Y,
       userId: t.id,
-      guildId: E,
-      channelId: p,
-      messageId: j,
-      roleId: W,
       sourceAnalyticsLocations: Z,
       analyticsLocation: B.location
     }), null == m || m();
   },
   children: [
-    X,
-    !K && function() {
-      let e = null != z,
+    Q,
+    !W && function() {
+      let e = null != K,
         t = e ? w : (0, c.getAvatarSize)(U);
       return (0, r.jsx)(f.ZP, {
         mask: null == u || u === L.Skl.UNKNOWN || H ? f.ZP.Masks.AVATAR_DEFAULT : (0, o.EQ)([

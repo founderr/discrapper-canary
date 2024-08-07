@@ -17,9 +17,9 @@ var n = i(735250),
   f = i(527790),
   E = i(304042),
   m = i(981631),
-  x = i(921944),
-  v = i(689938),
-  S = i(122606);
+  v = i(921944),
+  S = i(689938),
+  x = i(122606);
 
 function Z(e) {
   let {
@@ -27,10 +27,10 @@ user: s,
 currentUser: i,
 onClose: Z
   } = e, {
-analyticsLocations: h
+analyticsLocations: p
   } = (0, a.ZP)(), {
-trackUserProfileAction: p,
-...T
+context: h,
+trackUserProfileAction: T
   } = (0, d.KZ)(), {
 live: g,
 recent: N,
@@ -39,14 +39,14 @@ stream: j
   return l.useEffect(() => {
 if (!!C && !A)
   (0, r.EW)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
-    dismissAction: x.L.AUTO_DISMISS,
+    dismissAction: v.L.AUTO_DISMISS,
     forceTrack: !0
   });
   }, [
 C,
 A
   ]), (0, n.jsxs)(o.ScrollerThin, {
-className: S.scroller,
+className: x.scroller,
 fade: !0,
 children: [
   (0, n.jsxs)(I.Z, {
@@ -57,12 +57,12 @@ children: [
         stream: j,
         onClose: Z,
         onAction: () => {
-          p({
+          T({
             action: 'JOIN_ACTIVITY'
           }), (0, c.Ac)({
             activityType: m.IIU.STREAMING,
-            analyticsLocations: h,
-            ...T
+            analyticsLocations: p,
+            ...h
           });
         }
       }),
@@ -72,7 +72,7 @@ children: [
         activity: e,
         onClose: Z,
         onAction: () => {
-          p({
+          T({
             action: 'JOIN_ACTIVITY'
           }), (0, c.Ac)({
             activityType: e.type,
@@ -80,8 +80,8 @@ children: [
             activityPlatform: e.platform,
             activitySessionId: e.session_id,
             applicationId: e.application_id,
-            analyticsLocations: h,
-            ...T
+            analyticsLocations: p,
+            ...h
           });
         }
       }, 'live-'.concat(l)))
@@ -89,11 +89,11 @@ children: [
   }),
   (0, n.jsx)(I.Z, {
     heading: (0, n.jsxs)('div', {
-      className: S.heading,
+      className: x.heading,
       children: [
-        v.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+        S.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
         (0, n.jsx)(o.Tooltip, {
-          text: v.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_INFORMATION_TOOLTIP,
+          text: S.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_INFORMATION_TOOLTIP,
           children: e => (0, n.jsx)(o.CircleInformationIcon, {
             ...e,
             size: 'xxs',

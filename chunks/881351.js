@@ -37,7 +37,9 @@ channelId: a
   }), v = (0, g.Z)(n.id), x = (0, f.Z)({
 user: n
   }), U = (0, M.Z)({
-user: n
+user: n,
+guildId: t,
+channelId: a
   }), D = (0, E.Z)({
 user: n
   }), b = (0, T.Z)(n.id), L = (0, m.Z)(n.id), h = (0, A.Z)(n.id, d), R = (0, N.Z)({

@@ -18,12 +18,12 @@ var l = i(481060),
   f = i(681837),
   E = i(502762),
   m = i(530),
-  x = i(645410),
-  v = i(437758),
-  S = i(357836),
+  v = i(645410),
+  S = i(437758),
+  x = i(357836),
   Z = i(544989),
-  h = i(934861),
-  p = i(616140),
+  p = i(934861),
+  h = i(616140),
   T = i(29530),
   g = i(228168),
   N = i(981631),
@@ -39,80 +39,83 @@ guildId: R,
 channelId: O,
 messageId: L,
 roleId: M,
-initialSection: U,
+sessionId: U,
+initialSection: b,
 initialSubsection: P,
-transitionState: b,
-onClose: y,
-sourceAnalyticsLocations: D = []
-  } = e, F = R === N.ME ? void 0 : R, B = (0, d.ZP)(s.id, F), {
-analyticsLocations: G
+transitionState: y,
+onClose: D,
+sourceAnalyticsLocations: F = []
+  } = e, B = R === N.ME ? void 0 : R, G = (0, d.ZP)(s.id, B), {
+analyticsLocations: w
   } = (0, o.ZP)([
-...D,
+...F,
 t.Z.SIMPLIFIED_PROFILE_MODAL
-  ]), w = (0, T.Z)(s);
+  ]), k = (0, r.ZB)({
+layout: 'SIMPLIFIED_MODAL',
+userId: s.id,
+sourceSessionId: U,
+guildId: B,
+channelId: O,
+messageId: L,
+roleId: M
+  }), V = (0, T.Z)(s);
   return (0, n.jsx)(o.Gt, {
-value: G,
+value: w,
 children: (0, n.jsx)(r.Mt, {
-  layout: 'SIMPLIFIED_MODAL',
-  userId: s.id,
-  guildId: F,
-  channelId: O,
-  messageId: L,
-  roleId: M,
-  showGuildProfile: !0,
+  value: k,
   children: (0, n.jsx)(l.ModalRoot, {
-    transitionState: b,
+    transitionState: y,
     className: A.root,
     hideShadow: !0,
     'aria-label': j.Z.Messages.USER_PROFILE_MODAL,
     children: (0, n.jsxs)(E.Z, {
       user: s,
-      displayProfile: B,
+      displayProfile: G,
       profileType: g.y0.FULL_SIZE,
       children: [
         (0, n.jsx)(Z.Z, {
           profileType: g.y0.FULL_SIZE,
-          children: (0, n.jsx)(v.Z, {
+          children: (0, n.jsx)(S.Z, {
             user: s,
-            guildId: F
+            guildId: B
           })
         }),
         (0, n.jsxs)('header', {
           children: [
             (0, n.jsx)(c.Z, {
               user: s,
-              displayProfile: B,
+              displayProfile: G,
               profileType: g.y0.FULL_SIZE,
-              hasProfileEffect: (null == B ? void 0 : B.profileEffectId) != null
+              hasProfileEffect: (null == G ? void 0 : G.profileEffectId) != null
             }),
             (0, n.jsxs)('div', {
               className: A.headerInner,
               children: [
                 (0, n.jsx)(I.Z, {
                   user: s,
-                  displayProfile: B,
-                  guildId: F,
+                  displayProfile: G,
+                  guildId: B,
                   channelId: O,
                   profileType: g.y0.FULL_SIZE
                 }),
                 (0, n.jsxs)('div', {
                   className: C.buttons,
                   children: [
-                    (0, n.jsx)(h.c, {
+                    (0, n.jsx)(p.c, {
                       userId: s.id,
-                      onClose: y,
+                      onClose: D,
                       className: C.messageTextButton
                     }),
-                    (0, n.jsx)(h.v, {
+                    (0, n.jsx)(p.v, {
                       userId: s.id,
-                      onClose: y,
+                      onClose: D,
                       tooltipContainerClassName: C.messageIconButton
                     }),
-                    (0, n.jsx)(S.Z, {
-                      user: s,
-                      guildId: F
-                    }),
                     (0, n.jsx)(x.Z, {
+                      user: s,
+                      guildId: B
+                    }),
+                    (0, n.jsx)(v.Z, {
                       user: s
                     })
                   ]
@@ -120,8 +123,8 @@ children: (0, n.jsx)(r.Mt, {
                 (0, n.jsx)(_.Z, {
                   user: s,
                   profileType: g.y0.FULL_SIZE,
-                  hasEntered: b === l.ModalTransitionState.ENTERED,
-                  onClose: y
+                  hasEntered: y === l.ModalTransitionState.ENTERED,
+                  onClose: D
                 })
               ]
             })
@@ -133,28 +136,28 @@ children: (0, n.jsx)(r.Mt, {
             (0, n.jsx)(m.Z, {
               user: s,
               profileType: g.y0.FULL_SIZE,
-              nickname: a.ZP.getName(F, O, s),
-              pronouns: null == B ? void 0 : B.pronouns,
+              nickname: a.ZP.getName(B, O, s),
+              pronouns: null == G ? void 0 : G.pronouns,
               nicknameVariant: 'heading-xl/bold',
               nicknameIcons: (0, n.jsx)(f.Z, {
                 userId: s.id
               }),
               tags: (0, n.jsx)(u.Z, {
-                displayProfile: B,
+                displayProfile: G,
                 profileType: g.y0.FULL_SIZE,
-                onClose: y
+                onClose: D
               })
             }),
             (0, n.jsx)(E.Z.Overlay, {
               className: A.overlay,
-              children: (0, n.jsx)(p.Z, {
+              children: (0, n.jsx)(h.Z, {
                 user: s,
                 currentUser: i,
-                displayProfile: B,
-                items: w,
-                initialSection: null != U ? U : g.oh.BOT_INFO,
+                displayProfile: G,
+                items: V,
+                initialSection: null != b ? b : g.oh.BOT_INFO,
                 initialSubsection: P,
-                onClose: y
+                onClose: D
               })
             })
           ]

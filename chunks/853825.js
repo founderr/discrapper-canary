@@ -17,12 +17,12 @@ var n = i(735250),
   f = i(741308),
   E = i(588822),
   m = i(899007),
-  x = i(900927),
-  v = i(678738),
-  S = i(502762),
+  v = i(900927),
+  S = i(678738),
+  x = i(502762),
   Z = i(530),
-  h = i(679332),
-  p = i(544989),
+  p = i(679332),
+  h = i(544989),
   T = i(228168),
   g = i(981631),
   N = i(689938),
@@ -37,40 +37,43 @@ guildId: i,
 channelId: R,
 messageId: O,
 roleId: L,
-transitionState: M,
-onClose: U,
+sessionId: M,
+transitionState: U,
+onClose: b,
 sourceAnalyticsLocations: P = []
-  } = e, {
-analyticsLocations: b
+  } = e, y = i === g.ME ? void 0 : i, D = (0, I.ZP)(s.id, y), {
+analyticsLocations: F
   } = (0, r.ZP)([
 ...P,
 a.Z.SIMPLIFIED_PROFILE_MODAL
-  ]), y = i === g.ME ? void 0 : i, D = (0, I.ZP)(s.id, y), F = l.createRef(), B = (0, o.Z)(F);
+  ]), B = (0, u.ZB)({
+layout: 'SIMPLIFIED_MODAL',
+userId: s.id,
+sourceSessionId: M,
+guildId: y,
+channelId: R,
+messageId: O,
+roleId: L
+  }), G = l.createRef(), w = (0, o.Z)(G);
   return (0, n.jsx)(r.Gt, {
-value: b,
+value: F,
 children: (0, n.jsx)(u.Mt, {
-  layout: 'SIMPLIFIED_MODAL',
-  userId: s.id,
-  guildId: y,
-  channelId: R,
-  messageId: O,
-  roleId: L,
-  showGuildProfile: !0,
+  value: B,
   children: (0, n.jsxs)(t.ModalRoot, {
-    transitionState: M,
+    transitionState: U,
     className: j.root,
     hideShadow: !0,
     'aria-label': N.Z.Messages.USER_PROFILE_MODAL,
     children: [
-      (0, n.jsxs)(S.Z, {
+      (0, n.jsxs)(x.Z, {
         user: s,
         displayProfile: D,
         profileType: T.y0.FULL_SIZE,
-        ref: F,
+        ref: G,
         children: [
-          (0, n.jsx)(p.Z, {
+          (0, n.jsx)(h.Z, {
             profileType: T.y0.FULL_SIZE,
-            children: (0, n.jsx)(h.Z, {
+            children: (0, n.jsx)(p.Z, {
               user: s
             })
           }),
@@ -106,10 +109,10 @@ children: (0, n.jsx)(u.Mt, {
                 tags: (0, n.jsx)(f.Z, {
                   displayProfile: D,
                   profileType: T.y0.FULL_SIZE,
-                  onClose: U
+                  onClose: b
                 })
               }),
-              (0, n.jsx)(S.Z.Overlay, {
+              (0, n.jsx)(x.Z.Overlay, {
                 className: j.overlay,
                 children: (0, n.jsxs)('div', {
                   className: A.container,
@@ -138,9 +141,9 @@ children: (0, n.jsx)(u.Mt, {
                           userBio: null == D ? void 0 : D.bio,
                           setLineClamp: !1
                         }),
-                        (0, n.jsx)(v.Z, {
+                        (0, n.jsx)(S.Z, {
                           heading: N.Z.Messages.BOT_PROFILE_CREATED_ON,
-                          children: (0, n.jsx)(x.Z, {
+                          children: (0, n.jsx)(v.Z, {
                             userId: s.id,
                             guildId: y,
                             tooltipDelay: T.vB
@@ -157,7 +160,7 @@ children: (0, n.jsx)(u.Mt, {
       }),
       (null == D ? void 0 : D.profileEffectId) != null && (0, n.jsx)(d.Z, {
         profileEffectId: null == D ? void 0 : D.profileEffectId,
-        isHovering: B
+        isHovering: w
       })
     ]
   })
