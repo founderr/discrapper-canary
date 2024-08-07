@@ -573,9 +573,6 @@ let {
 } = e;
 r && C.set(t, n);
   },
-  CONNECTION_INTERRUPTED: function(e) {
-e.code === g.$VG.CLOSE_ABNORMAL && (r = void 0, v.clear(), y = !1, x = T.Ez.DISCONNECTED);
-  },
   CHANNEL_CALL_POPOUT_WINDOW_OPEN: function(e) {
 let {
   channel: t
