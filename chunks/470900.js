@@ -17,8 +17,8 @@ var a = n(120356),
   u = n(410030),
   d = n(44315),
   h = n(565138),
-  m = n(769654),
-  p = n(51144),
+  p = n(769654),
+  m = n(51144),
   _ = n(162267),
   f = n(228168),
   E = n(981631),
@@ -33,7 +33,7 @@ user: t,
 guild: a,
 nick: c,
 theme: u,
-onSelect: m
+onSelect: p
   } = e, _ = t.hasAvatarForGuild(a.id);
   return (0, i.jsxs)(r.Clickable, {
 focusProps: {
@@ -42,39 +42,26 @@ focusProps: {
   }
 },
 className: C.listRow,
-onClick: m,
+onClick: p,
 onContextMenu: e => {
   (0, o.jW)(e, async () => {
     let {
       default: e
     } = await Promise.all([
       n.e('96427'),
-      n.e('23755'),
-      n.e('89350'),
-      n.e('11751'),
-      n.e('29549'),
       n.e('33053'),
-      n.e('31605'),
       n.e('37581'),
-      n.e('65840'),
       n.e('7654'),
-      n.e('90508'),
       n.e('18146'),
       n.e('44156'),
-      n.e('59743'),
       n.e('25519'),
       n.e('85552'),
-      n.e('79960'),
       n.e('58227'),
-      n.e('1187'),
       n.e('1607'),
       n.e('22036'),
-      n.e('92557'),
-      n.e('64679'),
       n.e('36826'),
-      n.e('13946'),
       n.e('33213'),
-      n.e('56845')
+      n.e('24273')
     ]).then(n.bind(n, 545135));
     return t => (0, i.jsx)(e, {
       ...t,
@@ -110,7 +97,7 @@ children: [
             className: I.guildAvatar,
             'aria-hidden': !0
           }),
-          null != c ? c : p.ZP.getName(t)
+          null != c ? c : m.ZP.getName(t)
         ]
       }) : null
     ]
@@ -126,7 +113,7 @@ onClose: n
   } = e, {
 mutualGuilds: a
   } = (0, _.Z)(t.id), s = (0, u.ZP)(), l = e => {
-(0, m.X)(e), n(), (0, c.xf)();
+(0, p.X)(e), n(), (0, c.xf)();
   };
   return (0, i.jsx)(r.ScrollerThin, {
 className: C.listScroller,

@@ -45,52 +45,51 @@ trackUserProfileAction: L
 t,
 h
   ]), {
-live: P,
-stream: U
-  } = (0, I.Z)(t.id), [w] = P, {
-status: x,
-isMobileOnline: G
+live: P
+  } = (0, I.Z)(t.id), [U] = P, {
+status: w,
+isMobileOnline: x
   } = (0, o.cj)([E.Z], () => ({
-status: null != U || (0, u.Z)(w) ? S.Skl.STREAMING : E.Z.getStatus(t.id),
+status: (0, u.Z)(U) ? S.Skl.STREAMING : E.Z.getStatus(t.id),
 isMobileOnline: E.Z.isMobileOnline(t.id)
-  })), k = O === g.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, B = s()(N.avatar, {
+  })), G = O === g.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, k = s()(N.avatar, {
 [N.biteSize]: O === g.y0.BITE_SIZE,
 [N.fullSize]: O === g.y0.FULL_SIZE,
 [N.panel]: O === g.y0.PANEL
   }), {
-avatarDecorationSrc: F,
-avatarSrc: V,
-eventHandlers: H
+avatarDecorationSrc: B,
+avatarSrc: F,
+eventHandlers: V
   } = (0, m.Z)({
 user: t,
 guildId: a,
-size: k,
+size: G,
 animateOnHover: R
-  }), Z = (0, r.jsx)(v, {
-src: V,
-avatarDecoration: F,
-size: k,
+  }), H = (0, r.jsx)(v, {
+src: F,
+avatarDecoration: B,
+size: G,
 'aria-label': t.username,
 imageClassName: null != C ? N.overlay : void 0,
-status: M ? S.Skl.UNKNOWN : x,
+status: M ? S.Skl.UNKNOWN : w,
 statusBackdropColor: b && !M ? (0, l.getStatusBackdropColor)(y) : void 0,
-isMobile: G,
+isMobile: x,
 statusTooltip: !0,
 statusTooltipDelay: g.vB
   });
   return null == C ? (0, r.jsx)('div', {
-...H,
-className: B,
-children: Z
+...V,
+className: k,
+children: H
   }) : (0, r.jsx)(l.Clickable, {
-...H,
-className: s()(B, N.clickable),
+...V,
+className: s()(k, N.clickable),
 onClick: () => {
   L({
     action: 'PRESS_VIEW_PROFILE',
     analyticsLocations: D
   }), null == C || C();
 },
-children: Z
+children: H
   });
 }

@@ -35,11 +35,11 @@ let {
   default: e
 } = await Promise.all([
   t.e('79695'),
-  t.e('59743'),
   t.e('70474'),
+  t.e('53917'),
   t.e('22036'),
   t.e('56826'),
-  t.e('8894')
+  t.e('23982')
 ]).then(t.bind(t, 131404));
 return t => (0, r.jsx)(e, {
   ...t,

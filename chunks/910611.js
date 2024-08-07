@@ -1,12 +1,12 @@
 n.d(t, {
   TS: function() {
-return R;
+return P;
   },
   ud: function() {
-return Z;
+return b;
   },
   v0: function() {
-return M;
+return j;
   }
 });
 var i = n(735250),
@@ -15,72 +15,106 @@ var i = n(735250),
   l = n.n(s),
   r = n(442837),
   o = n(481060),
-  c = n(385499),
-  u = n(933557),
-  d = n(471445),
-  h = n(266076),
+  c = n(835473),
+  u = n(385499),
+  d = n(933557),
+  h = n(471445),
+  p = n(266076),
   m = n(565138),
-  p = n(703656),
-  _ = n(699516),
-  f = n(914010),
-  E = n(594174),
-  g = n(946734),
-  C = n(99843),
-  I = n(372564),
-  x = n(984370),
-  T = n(217314),
-  N = n(981631),
-  v = n(689938),
-  S = n(489919);
+  _ = n(703656),
+  f = n(699516),
+  E = n(914010),
+  g = n(594174),
+  C = n(768581),
+  I = n(946734),
+  x = n(99843),
+  T = n(372564),
+  N = n(984370),
+  v = n(217314),
+  S = n(981631),
+  Z = n(689938),
+  A = n(489919);
 
-function Z(e) {
+function M(e) {
+  var t;
+  let {
+channel: n
+  } = e, a = (0, c.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
+  if (null == a)
+return null;
+  let s = C.ZP.getApplicationIconURL({
+id: a.id,
+icon: a.icon,
+size: 14
+  });
+  return (0, i.jsx)(o.Tooltip, {
+text: Z.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_TOPIC_TOOLTIP,
+children: e => (0, i.jsxs)(o.Text, {
+  ...e,
+  className: A.linkedLobby,
+  variant: 'text-sm/normal',
+  color: 'header-primary',
+  children: [
+    '\u2022',
+    (0, i.jsx)('img', {
+      alt: '',
+      src: s,
+      className: A.linkedLobbyApplicationIcon
+    }),
+    a.name
+  ]
+})
+  });
+}
+
+function b(e) {
   let {
 channel: t,
 channelName: n,
 parentChannel: s,
 guild: r,
 inSidebar: c = !1,
-handleClick: m,
-handleContextMenu: p,
-handleParentClick: f,
-handleParentContextMenu: g,
-renderFollowButton: I
-  } = e, Z = (0, d.KS)(t, r), {
-prefix: A,
-level: M
+handleClick: u,
+handleContextMenu: m,
+handleParentClick: _,
+handleParentContextMenu: E,
+renderFollowButton: C
+  } = e, I = (0, h.KS)(t, r), {
+prefix: T,
+level: b
   } = function(e, t) {
 var n, i;
 switch (e) {
-  case N.d4z.DM:
+  case S.d4z.DM:
     return {
-      prefix: v.Z.Messages.DIRECT_MESSAGE,
+      prefix: Z.Z.Messages.DIRECT_MESSAGE,
         level: 1
     };
-  case N.d4z.GROUP_DM:
+  case S.d4z.GROUP_DM:
     return {
-      prefix: v.Z.Messages.GROUP_DM,
+      prefix: Z.Z.Messages.GROUP_DM,
         level: 1
     };
-  case N.d4z.GUILD_DIRECTORY:
+  case S.d4z.GUILD_DIRECTORY:
     return {
       prefix: null !== (n = null == t ? void 0 : t.name) && void 0 !== n ? n : '',
         level: 1
     };
-  case N.d4z.GUILD_ANNOUNCEMENT:
-  case N.d4z.GUILD_TEXT:
-  case N.d4z.GUILD_FORUM:
-  case N.d4z.GUILD_MEDIA:
-  case N.d4z.GUILD_STAGE_VOICE:
-  case N.d4z.GUILD_VOICE:
+  case S.d4z.GUILD_ANNOUNCEMENT:
+  case S.d4z.GUILD_TEXT:
+  case S.d4z.GUILD_FORUM:
+  case S.d4z.GUILD_MEDIA:
+  case S.d4z.GUILD_STAGE_VOICE:
+  case S.d4z.GUILD_VOICE:
     return {
       prefix: null !== (i = null == t ? void 0 : t.name) && void 0 !== i ? i : '',
         level: 1
     };
-  case N.d4z.ANNOUNCEMENT_THREAD:
-  case N.d4z.PUBLIC_THREAD:
-  case N.d4z.PRIVATE_THREAD:
+  case S.d4z.ANNOUNCEMENT_THREAD:
+  case S.d4z.PUBLIC_THREAD:
+  case S.d4z.PRIVATE_THREAD:
     return {
-      prefix: v.Z.Messages.THREAD,
+      prefix: Z.Z.Messages.THREAD,
         level: 2
     };
   default:
@@ -91,9 +125,9 @@ switch (e) {
 }
   }(t.type, r), R = (0, i.jsxs)(i.Fragment, {
 children: [
-  null != A ? (0, i.jsxs)(o.HiddenVisually, {
+  null != T ? (0, i.jsxs)(o.HiddenVisually, {
     children: [
-      A,
+      T,
       ':'
     ]
   }) : null,
@@ -102,137 +136,140 @@ children: [
 ]
   });
   switch (t.type) {
-case N.d4z.DM:
-  return (0, i.jsx)(T.Z, {
-    level: M,
+case S.d4z.DM:
+  return (0, i.jsx)(v.Z, {
+    level: b,
     channel: t,
-    handleClick: m,
-    handleContextMenu: p
+    handleClick: u,
+    handleContextMenu: m
   });
-case N.d4z.GROUP_DM:
+case S.d4z.GROUP_DM:
   if (t.isManaged())
     return R;
   return (0, i.jsxs)(a.Fragment, {
     children: [
       (0, i.jsx)(o.HiddenVisually, {
-        children: v.Z.Messages.GROUP_DM
+        children: Z.Z.Messages.GROUP_DM
       }),
       (0, i.jsx)('div', {
-        children: (0, i.jsx)(h.Z, {
+        children: (0, i.jsx)(p.Z, {
           'aria-hidden': !0,
           channel: t,
           size: o.AvatarSizes.SIZE_24,
           facepileSizeOverride: o.AvatarSizes.SIZE_32,
           experimentLocation: 'header_bar',
-          className: S.avatar
+          className: A.avatar
         })
       }),
-      (0, i.jsx)(C.Z, {
+      (0, i.jsx)(x.Z, {
         channel: t
       }, 'channel-'.concat(t.id))
     ]
   });
-case N.d4z.GUILD_ANNOUNCEMENT:
-case N.d4z.GUILD_TEXT:
-case N.d4z.GUILD_FORUM:
-case N.d4z.GUILD_MEDIA:
+case S.d4z.GUILD_ANNOUNCEMENT:
+case S.d4z.GUILD_TEXT:
+case S.d4z.GUILD_FORUM:
+case S.d4z.GUILD_MEDIA:
   return (0, i.jsxs)(a.Fragment, {
     children: [
-      b(Z, t.type === N.d4z.GUILD_ANNOUNCEMENT ? v.Z.Messages.NEWS_CHANNEL : v.Z.Messages.TEXT_CHANNEL),
-      (0, i.jsx)(x.Z.Title, {
-        level: M,
-        onContextMenu: p,
-        onClick: m,
+      L(I, t.type === S.d4z.GUILD_ANNOUNCEMENT ? Z.Z.Messages.NEWS_CHANNEL : Z.Z.Messages.TEXT_CHANNEL),
+      (0, i.jsx)(N.Z.Title, {
+        level: b,
+        onContextMenu: m,
+        onClick: u,
         children: R
       }),
-      null != I ? I() : null
+      null != t.linkedLobby ? (0, i.jsx)(M, {
+        channel: t
+      }) : null,
+      null != C ? C() : null
     ]
   });
-case N.d4z.GUILD_VOICE:
+case S.d4z.GUILD_VOICE:
   return (0, i.jsxs)(a.Fragment, {
     children: [
-      b(Z, v.Z.Messages.VOICE_CHANNEL),
-      (0, i.jsx)(x.Z.Title, {
-        level: M,
-        onContextMenu: p,
-        onClick: m,
+      L(I, Z.Z.Messages.VOICE_CHANNEL),
+      (0, i.jsx)(N.Z.Title, {
+        level: b,
+        onContextMenu: m,
+        onClick: u,
         children: R
       })
     ]
   });
-case N.d4z.GUILD_STAGE_VOICE:
+case S.d4z.GUILD_STAGE_VOICE:
   return (0, i.jsxs)(a.Fragment, {
     children: [
-      b(Z, v.Z.Messages.STAGE_CHANNEL),
-      (0, i.jsx)(x.Z.Title, {
-        level: M,
-        onContextMenu: p,
-        onClick: m,
+      L(I, Z.Z.Messages.STAGE_CHANNEL),
+      (0, i.jsx)(N.Z.Title, {
+        level: b,
+        onContextMenu: m,
+        onClick: u,
         children: R
       })
     ]
   });
-case N.d4z.ANNOUNCEMENT_THREAD:
-case N.d4z.PUBLIC_THREAD:
-case N.d4z.PRIVATE_THREAD:
+case S.d4z.ANNOUNCEMENT_THREAD:
+case S.d4z.PUBLIC_THREAD:
+case S.d4z.PRIVATE_THREAD:
   let j = null;
   if (!c && null != s) {
-    let e = (0, d.KS)(s, r);
+    let e = (0, h.KS)(s, r);
     j = (0, i.jsxs)(a.Fragment, {
       children: [
-        b(e, v.Z.Messages.TEXT_CHANNEL),
-        (0, i.jsx)(x.Z.Title, {
-          level: M,
-          onContextMenu: g,
-          onClick: f,
-          className: l()(S.parentChannelName, S.cursorPointer),
-          children: (0, u.F6)(s, E.default, _.Z)
+        L(e, Z.Z.Messages.TEXT_CHANNEL),
+        (0, i.jsx)(N.Z.Title, {
+          level: b,
+          onContextMenu: E,
+          onClick: _,
+          className: l()(A.parentChannelName, A.cursorPointer),
+          children: (0, d.F6)(s, g.default, f.Z)
         }),
-        (0, i.jsx)(x.Z.Caret, {})
+        (0, i.jsx)(N.Z.Caret, {})
       ]
     });
   }
-  let L = (null == s ? void 0 : s.type) != null && N.TPd.GUILD_THREADS_ONLY.has(s.type);
+  let P = (null == s ? void 0 : s.type) != null && S.TPd.GUILD_THREADS_ONLY.has(s.type);
   return (0, i.jsxs)(a.Fragment, {
     children: [
       j,
-      b(L ? null : Z, v.Z.Messages.THREAD),
-      (0, i.jsx)(x.Z.Title, {
-        level: M,
-        onContextMenu: p,
-        onClick: m,
+      L(P ? null : I, Z.Z.Messages.THREAD),
+      (0, i.jsx)(N.Z.Title, {
+        level: b,
+        onContextMenu: m,
+        onClick: u,
         className: l()({
-          [S.cursorPointer]: c,
-          [S.forumPostTitle]: L
+          [A.cursorPointer]: c,
+          [A.forumPostTitle]: P
         }),
         children: R
       })
     ]
   });
-case N.d4z.GUILD_DIRECTORY:
-  let P = (null == r ? void 0 : r.hasFeature(N.oNc.HUB)) ? v.Z.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
+case S.d4z.GUILD_DIRECTORY:
+  let O = (null == r ? void 0 : r.hasFeature(S.oNc.HUB)) ? Z.Z.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
     guildName: n
   }) : n;
   return (0, i.jsxs)(a.Fragment, {
     children: [
-      null !== Z ? (0, i.jsx)(x.Z.Icon, {
-        iconClassName: S.__invalid_icon,
-        icon: Z,
+      null !== I ? (0, i.jsx)(N.Z.Icon, {
+        iconClassName: A.__invalid_icon,
+        icon: I,
         'aria-hidden': !0
       }) : null,
-      (0, i.jsxs)(x.Z.Title, {
-        level: M,
-        onContextMenu: p,
-        onClick: m,
+      (0, i.jsxs)(N.Z.Title, {
+        level: b,
+        onContextMenu: m,
+        onClick: u,
         children: [
-          null != A ? (0, i.jsxs)(o.HiddenVisually, {
+          null != T ? (0, i.jsxs)(o.HiddenVisually, {
             children: [
-              A,
+              T,
               ':'
             ]
           }) : null,
           ' ',
-          P
+          O
         ]
       })
     ]
@@ -241,34 +278,34 @@ default:
   return null;
   }
 }
-let A = e => {
+let R = e => {
   let {
 channel: t
-  } = e, n = (0, r.e7)([E.default], () => E.default.getCurrentUser()), a = (0, r.e7)([E.default], () => E.default.getUser(t.getRecipientId()));
-  return t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == a ? void 0 : a.isStaff()) ? (0, i.jsx)(c.Z, {
-type: c.Z.Types.STAFF_ONLY_DM
+  } = e, n = (0, r.e7)([g.default], () => g.default.getCurrentUser()), a = (0, r.e7)([g.default], () => g.default.getUser(t.getRecipientId()));
+  return t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == a ? void 0 : a.isStaff()) ? (0, i.jsx)(u.Z, {
+type: u.Z.Types.STAFF_ONLY_DM
   }) : null;
 };
 
-function M(e, t) {
+function j(e, t) {
   switch (e.type) {
-case N.d4z.DM:
+case S.d4z.DM:
   return (0, i.jsxs)(i.Fragment, {
     children: [
-      (0, i.jsx)(A, {
+      (0, i.jsx)(R, {
         channel: e
       }),
-      (0, i.jsx)(g.Z, {
+      (0, i.jsx)(I.Z, {
         channel: e
       }, e.id)
     ]
   });
-case N.d4z.GUILD_ANNOUNCEMENT:
-case N.d4z.GUILD_TEXT:
-case N.d4z.GUILD_VOICE:
-case N.d4z.GUILD_STAGE_VOICE:
-case N.d4z.GROUP_DM:
-  return null != t ? (0, i.jsx)(I.Z, {
+case S.d4z.GUILD_ANNOUNCEMENT:
+case S.d4z.GUILD_TEXT:
+case S.d4z.GUILD_VOICE:
+case S.d4z.GUILD_STAGE_VOICE:
+case S.d4z.GROUP_DM:
+  return null != t ? (0, i.jsx)(T.Z, {
     channel: e,
     guild: t
   }, e.id) : null;
@@ -277,11 +314,11 @@ default:
   }
 }
 
-function b(e, t) {
+function L(e, t) {
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  null !== e && (0, i.jsx)(x.Z.Icon, {
-    iconClassName: S.__invalid_icon,
+  null !== e && (0, i.jsx)(N.Z.Icon, {
+    iconClassName: A.__invalid_icon,
     icon: e,
     'aria-hidden': !0
   }),
@@ -292,32 +329,32 @@ children: [
   });
 }
 
-function R(e) {
+function P(e) {
   let {
 guild: t,
 channel: n,
 caretPosition: a = 'left'
   } = e;
-  return (0, r.e7)([f.Z], () => f.Z.getGuildId()) !== N.I_8 || null == t ? null : (0, i.jsxs)('div', {
-className: S.guildBreadcrumbContainer,
+  return (0, r.e7)([E.Z], () => E.Z.getGuildId()) !== S.I_8 || null == t ? null : (0, i.jsxs)('div', {
+className: A.guildBreadcrumbContainer,
 children: [
-  'left' === a && (0, i.jsx)(x.Z.Caret, {
+  'left' === a && (0, i.jsx)(N.Z.Caret, {
     direction: 'left'
   }),
   (0, i.jsx)(m.Z, {
     guild: t,
     size: m.Z.Sizes.SMALLER,
-    className: S.guildBreadcrumbIcon,
+    className: A.guildBreadcrumbIcon,
     active: !0
   }),
-  (0, i.jsx)(x.Z.Title, {
+  (0, i.jsx)(N.Z.Title, {
     onClick: () => {
-      (0, p.XU)(t.id, n.id);
+      (0, _.XU)(t.id, n.id);
     },
-    className: l()(S.parentChannelName, S.cursorPointer),
+    className: l()(A.parentChannelName, A.cursorPointer),
     children: t.name
   }),
-  'right' === a && (0, i.jsx)(x.Z.Caret, {
+  'right' === a && (0, i.jsx)(N.Z.Caret, {
     direction: 'right'
   })
 ]
