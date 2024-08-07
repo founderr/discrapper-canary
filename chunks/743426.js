@@ -214,48 +214,50 @@ this.eachConnection(n => {
 }, t);
   }
   setClipsSource(e) {
-if (null == (0, d.zS)().setClipsSource || null == (0, d.zS)().setOnClipsRecordingEvent || null == (0, d.zS)().applyClipsSettings)
+var t;
+let n = (0, d.zS)();
+if (null == n.setClipsSource || null == n.setOnClipsRecordingEvent || null == n.applyClipsSettings)
   return;
 if (null == e) {
-  (0, d.zS)().setClipsSource({
+  n.setClipsSource({
     id: '',
     soundshareId: 0
   });
   return;
 }
 let {
-  frameRate: t,
-  resolution: n
+  frameRate: r,
+  resolution: i
 } = e.quality, {
-  id: r,
-  soundshareId: i,
-  useLoopback: a,
-  useVideoHook: s,
-  useGraphicsCapture: l,
-  useQuartzCapturer: u,
-  allowScreenCaptureKit: c,
-  hdrCaptureMode: _
+  id: a,
+  soundshareId: s,
+  useLoopback: l,
+  useVideoHook: u,
+  useGraphicsCapture: c,
+  useQuartzCapturer: _,
+  allowScreenCaptureKit: E,
+  hdrCaptureMode: h
 } = e.desktopDescription;
-(0, d.zS)().setOnClipsRecordingEvent(t => {
-  this.logger.info('Clips recording event: '.concat(f.Pf[t], ' received for stream ').concat(r, ' and sound ').concat(i, '.')), t === f.Pf.GoLiveEnded ? this.emit(o.aB.ClipsRecordingRestartNeeded) : t === f.Pf.Error ? this.emit(o.aB.ClipsInitFailure, 'Failed to set clips source in media engine', e.applicationName) : (t === f.Pf.Ended || t === f.Pf.StoppedByGoLive) && this.emit(o.aB.ClipsRecordingEnded, r, i);
-}), (0, d.zS)().applyClipsSettings({
-  useVideoHook: s,
-  useGraphicsCapture: l,
-  useQuartzCapturer: u,
-  allowScreenCaptureKit: c,
-  hdrCaptureMode: _,
-  soundshareLoopback: a,
-  frameRate: t,
-  width: n <= 480 ? n / 3 * 4 : n / 9 * 16,
-  height: n
+n.setOnClipsRecordingEvent(t => {
+  this.logger.info('Clips recording event: '.concat(f.Pf[t], ' received for stream ').concat(a, ' and sound ').concat(s, '.')), t === f.Pf.GoLiveEnded ? this.emit(o.aB.ClipsRecordingRestartNeeded) : t === f.Pf.Error ? this.emit(o.aB.ClipsInitFailure, 'Failed to set clips source in media engine', e.applicationName) : (t === f.Pf.Ended || t === f.Pf.StoppedByGoLive) && this.emit(o.aB.ClipsRecordingEnded, a, s);
+}), null === (t = n.applyClipsSettings) || void 0 === t || t.call(n, {
+  useVideoHook: u,
+  useGraphicsCapture: c,
+  useQuartzCapturer: _,
+  allowScreenCaptureKit: E,
+  hdrCaptureMode: h,
+  soundshareLoopback: l,
+  frameRate: r,
+  width: i <= 480 ? i / 3 * 4 : i / 9 * 16,
+  height: i
 });
-let [E, h] = null != r ? r.split(':') : [
+let [p, m] = null != a ? a.split(':') : [
   '',
   ''
 ];
-(0, d.zS)().setClipsSource({
-  id: h,
-  soundshareId: null != i ? i : 0
+n.setClipsSource({
+  id: m,
+  soundshareId: null != s ? s : 0
 });
   }
   setClipsQualitySettings(e, t, n) {
@@ -453,18 +455,21 @@ null === (t = (n = (0, d.zS)()).stopLocalAudioRecording) || void 0 === t || t.ca
 }), this.listenerCount(o.aB.VoiceActivity) > 0 && null != (0, d.zS)().setEmitVADLevel2 && (0, d.zS)().setEmitVADLevel2(!0);
   }
   setHasFullbandPerformance(e) {
-null != (0, d.zS)().setHasFullbandPerformance && (0, d.zS)().setHasFullbandPerformance(e);
+var t, n;
+null === (t = (n = (0, d.zS)()).setHasFullbandPerformance) || void 0 === t || t.call(n, e);
   }
   getSupportedSecureFramesProtocolVersion() {
 var e;
 return null !== (e = (0, d.zS)().SupportedSecureFramesProtocolVersion) && void 0 !== e ? e : 0;
   }
   getSupportedBandwidthEstimationExperiments(e) {
-null != (0, d.zS)().getSupportedBandwidthEstimationExperiments && (0, d.zS)().getSupportedBandwidthEstimationExperiments(e);
+var t, n;
+null === (t = (n = (0, d.zS)()).getSupportedBandwidthEstimationExperiments) || void 0 === t || t.call(n, e);
   }
   getMLSSigningKey(e, t) {
 return new Promise((n, r) => {
-  null != (0, d.zS)().getMLSSigningKey ? (0, d.zS)().getMLSSigningKey(e, t, (e, t) => n({
+  let i = (0, d.zS)();
+  null != i.getMLSSigningKey ? i.getMLSSigningKey(e, t, (e, t) => n({
     key: e,
     signature: t
   })) : r(Error('NOT_IMPLEMENTED'));
