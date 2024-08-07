@@ -94,7 +94,7 @@ var n;
 if (null == e)
   return;
 y({
-  action: 'PRESS_REPLY'
+  action: _ === g.N9.STATUS ? 'SEND_REPLY_CUSTOM_STATUS' : 'SEND_REPLY_AVATAR'
 });
 let r = v({
   input: e,
@@ -148,9 +148,7 @@ children: (0, r.jsx)('div', {
         value: t
       } = e;
       try {
-        return y({
-          action: 'SEND_STATUS_REPLY'
-        }), await x(t.trim()), null == S || S(null), {
+        return await x(t.trim()), null == S || S(null), {
           shouldClear: !0,
           shouldRefocus: !1
         };

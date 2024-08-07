@@ -77,7 +77,7 @@ U = async e => {
   if (null == e)
     return;
   C({
-    action: 'PRESS_REACT'
+    action: i === T.N9.STATUS ? 'SEND_REACT_CUSTOM_STATUS' : 'SEND_REACT_AVATAR'
   });
   let r = N({
     emoji: e,
@@ -125,6 +125,11 @@ children: [
       align: 'top',
       children: e => (0, r.jsx)(u.zx, {
         ...e,
+        onClick: t => {
+          C({
+            action: i === T.N9.STATUS ? 'PRESS_REACT_CUSTOM_STATUS' : 'PRESS_REACT_AVATAR'
+          }), e.onClick(t);
+        },
         className: a()(A.button, A.left),
         'aria-label': S.Z.Messages.USER_PROFILE_SEND_REACTION,
         children: (0, r.jsx)(o.ReactionIcon, {
@@ -140,7 +145,11 @@ children: [
     delay: P,
     'aria-label': !1,
     children: (0, r.jsx)(u.zx, {
-      onClick: () => null == R ? void 0 : R(i, E),
+      onClick: () => {
+        C({
+          action: i === T.N9.STATUS ? 'PRESS_REPLY_CUSTOM_STATUS' : 'PRESS_REPLY_AVATAR'
+        }), null == R || R(i, E);
+      },
       className: a()(A.button, A.right),
       'aria-label': S.Z.Messages.USER_PROFILE_REPLY,
       children: (0, r.jsx)(o.ArrowAngleLeftUpIcon, {
