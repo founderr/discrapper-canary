@@ -333,7 +333,7 @@ children: [
             renewalInvoicePreview: m,
             className: j.detailsBlock
           }),
-          s.isPurchasedExternally || (null == a ? void 0 : a.id) === s.paymentSourceId ? (0, n.jsxs)('div', {
+          (0, n.jsxs)('div', {
             className: r()(j.detailsBlock, {
               [j.redBorder]: l
             }),
@@ -354,7 +354,7 @@ children: [
                 dropdownClassName: j.paymentDropdown
               })
             ]
-          }) : null
+          })
         ]
       })
     })
