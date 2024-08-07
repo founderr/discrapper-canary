@@ -1,24 +1,52 @@
 n.d(t, {
-  dX: function() {
+  Cb: function() {
 return i;
   },
-  kx: function() {
+  KF: function() {
+return l;
+  },
+  Q0: function() {
 return a;
   },
-  r5: function() {
+  dU: function() {
+return o;
+  },
+  dX: function() {
 return s;
+  },
+  kq: function() {
+return u;
+  },
+  y0: function() {
+return c;
   }
 });
 var r = n(876215);
 
 function i(e) {
-  return e.content_type === r.s.PLAYED_GAME || e.content_type === r.s.TOP_GAME;
+  return (null == e ? void 0 : e.content_type) === r.s.PLAYED_GAME;
 }
 
 function a(e) {
-  return e.content_type === r.s.LISTENED_SESSION;
+  return (null == e ? void 0 : e.content_type) === r.s.TOP_GAME;
 }
 
 function s(e) {
-  return e.content_type === r.s.WATCHED_MEDIA;
+  return i(e) || a(e);
+}
+
+function o(e) {
+  return (null == e ? void 0 : e.content_type) === r.s.LISTENED_SESSION;
+}
+
+function l(e) {
+  return (null == e ? void 0 : e.content_type) === r.s.TOP_ARTIST;
+}
+
+function u(e) {
+  return o(e) || l(e);
+}
+
+function c(e) {
+  return (null == e ? void 0 : e.content_type) === r.s.WATCHED_MEDIA;
 }

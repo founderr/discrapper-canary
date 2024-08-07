@@ -21,14 +21,10 @@ user: t,
 activity: n,
 entry: r
   } = e;
-  if (null != r) {
-var i;
-return {
-  applicationId: (0, a.dX)(r) ? null === (i = r.extra) || void 0 === i ? void 0 : i.application_id : void 0,
-  sourceUserId: r.author_id
-};
-  }
-  return null != n ? {
+  return null != r ? {
+applicationId: (0, a.dX)(r) ? r.extra.application_id : void 0,
+sourceUserId: r.author_id
+  } : null != n ? {
 applicationId: n.type === l.IIU.PLAYING && null != n.application_id ? n.application_id : void 0,
 sourceUserId: t.id
   } : {

@@ -17,13 +17,13 @@ var n = i(735250),
   f = i(470900),
   E = i(988246),
   m = i(970041),
-  x = i(715388),
-  v = i(879828),
-  S = i(834534),
+  v = i(715388),
+  S = i(879828),
+  x = i(834534),
   Z = i(228168),
-  h = i(47460);
+  p = i(47460);
 
-function p(e) {
+function h(e) {
   let {
 section: s,
 subsection: i,
@@ -36,7 +36,7 @@ newActivityCardsEnabled: d
   } = (0, u.z)({
 location: 'SimplifiedUserProfileModalTabs'
   });
-  return s === Z.oh.ACTIVITY && d ? (0, n.jsx)(v.Z, {
+  return s === Z.oh.ACTIVITY && d ? (0, n.jsx)(S.Z, {
 user: l,
 currentUser: t,
 onClose: a
@@ -53,13 +53,13 @@ user: l,
 onClose: a
   }) : s === Z.oh.BOT_DATA_ACCESS ? (0, n.jsx)(m.Z, {
 user: l
-  }) : s === Z.oh.BOT_INFO ? (0, n.jsx)(x.Z, {
+  }) : s === Z.oh.BOT_INFO ? (0, n.jsx)(v.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
 subsection: i,
 onClose: a
-  }) : (0, n.jsx)(S.Z, {
+  }) : (0, n.jsx)(x.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
@@ -76,10 +76,10 @@ currentUser: I,
 displayProfile: _,
 items: f,
 initialSection: m = Z.oh.USER_INFO,
-initialSubsection: x,
-onClose: v
+initialSubsection: v,
+onClose: S
   } = e, {
-trackUserProfileAction: S
+trackUserProfileAction: x
   } = (0, c.KZ)(), T = (0, t.e7)([d.Z], () => d.Z.hidePersonalInformation), [{
 section: g,
 subsection: N
@@ -90,9 +90,20 @@ section: null !== (r = null === (s = f.find(e => {
   } = e;
   return s === m;
 })) || void 0 === s ? void 0 : s.section) && void 0 !== r ? r : null === (i = f[0]) || void 0 === i ? void 0 : i.section,
-subsection: x
-  }), C = l.useCallback(e => {
-S({
+subsection: v
+  });
+  l.useEffect(() => {
+if (null == f.find(e => e.section === g))
+  j({
+    section: f[0].section,
+    subsection: void 0
+  });
+  }, [
+f,
+g
+  ]);
+  let C = l.useCallback(e => {
+x({
   action: 'PRESS_SECTION',
   section: e
 }), j({
@@ -100,17 +111,17 @@ S({
   subsection: void 0
 });
   }, [
-S,
+x,
 j
   ]);
   return T ? (0, n.jsx)('div', {
-className: h.container,
+className: p.container,
 children: (0, n.jsx)(E.Z, {})
   }) : (0, n.jsxs)('div', {
-className: h.container,
+className: p.container,
 children: [
   (0, n.jsx)(o.n, {
-    className: h.tabBar,
+    className: p.tabBar,
     type: 'top',
     selectedItem: g,
     onItemSelect: C,
@@ -120,7 +131,7 @@ children: [
         text: i
       } = e;
       return (0, n.jsx)(o.n.Item, {
-        className: h.tabBarItem,
+        className: p.tabBarItem,
         id: s,
         'aria-label': i,
         children: (0, n.jsx)(a.Text, {
@@ -130,14 +141,14 @@ children: [
       }, s);
     })
   }),
-  (0, n.jsx)(p, {
+  (0, n.jsx)(h, {
     items: f,
     section: g,
     subsection: N,
     user: u,
     currentUser: I,
     displayProfile: _,
-    onClose: v
+    onClose: S
   })
 ]
   });
