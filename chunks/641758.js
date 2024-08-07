@@ -1,6 +1,6 @@
 t.r(s), t.d(s, {
   ANSWERS_DISPLAY_DATA: function() {
-return d;
+return h;
   },
   AnswerKey: function() {
 return a;
@@ -9,14 +9,15 @@ return a;
 return S;
   }
 }), t(47120), t(390547);
-var a, n, _ = t(735250),
-  o = t(470079),
-  C = t(120356),
-  E = t.n(C),
-  r = t(481060),
+var a, n, o = t(735250),
+  _ = t(470079),
+  r = t(120356),
+  E = t.n(r),
+  C = t(481060),
   l = t(471731),
   c = t(626135),
-  i = t(981631),
+  i = t(124030),
+  d = t(981631),
   N = t(689938),
   I = t(992378);
 (n = a || (a = {})).WHEN_FRIENDS_PLAY = 'WHEN_FRIENDS_PLAY', n.ACHIEVEMENTS = 'ACHIEVEMENTS', n.NEWS = 'NEWS', n.NONE_OF_BENEFITS = 'NONE_OF_BENEFITS', n.NONE_OF_GAME_TYPES = 'NONE_OF_GAME_TYPES', n.GAMES_I_PLAY_NOW = 'GAMES_I_PLAY_NOW', n.GAMES_I_WANT_TO_PLAY = 'GAMES_I_WANT_TO_PLAY', n.GAMES_FRIENDS_PLAY = 'GAMES_FRIENDS_PLAY', n.FOLLOW_DEV = 'FOLLOW_DEV', n.GENRES = 'GENRES';
@@ -40,46 +41,46 @@ answers: {
   NONE_OF_GAME_TYPES: !1
 }
   },
-  d = {
+  h = {
 WHEN_FRIENDS_PLAY: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_Q1_WHEN_FRIENDS_PLAY,
-  Icon: r.GameControllerIcon
+  Icon: C.GameControllerIcon
 },
 ACHIEVEMENTS: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_Q1_ACHIEVEMENTS,
-  Icon: r.ChatIcon
+  Icon: C.ChatIcon
 },
 NEWS: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_Q1_NEWS,
-  Icon: r.AnnouncementsIcon
+  Icon: C.AnnouncementsIcon
 },
 NONE_OF_BENEFITS: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_NONE,
-  Icon: r.DenyIcon
+  Icon: C.DenyIcon
 },
 NONE_OF_GAME_TYPES: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_NONE,
-  Icon: r.DenyIcon
+  Icon: C.DenyIcon
 },
 GAMES_I_PLAY_NOW: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_Q2_GAMES_I_PLAY_NOW,
-  Icon: r.GameControllerIcon
+  Icon: C.GameControllerIcon
 },
 GAMES_I_WANT_TO_PLAY: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_Q2_GAMES_I_WANT_TO_PLAY,
-  Icon: r.CalendarIcon
+  Icon: C.CalendarIcon
 },
 GAMES_FRIENDS_PLAY: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_Q2_GAMES_FRIENDS_PLAY,
-  Icon: r.FriendsIcon
+  Icon: C.FriendsIcon
 },
 FOLLOW_DEV: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_Q2_FOLLOW_DEV,
-  Icon: r.AnnouncementsIcon
+  Icon: C.AnnouncementsIcon
 },
 GENRES: {
   getTitle: () => N.Z.Messages.GAME_PROFILE_Q2_GENRES,
-  Icon: r.ModerationIcon
+  Icon: C.ModerationIcon
 }
   };
 
@@ -89,26 +90,33 @@ transitionState: s,
 applicationId: t,
 viewId: a,
 background: n,
-onClose: C
-  } = e, S = (0, r.useToken)(r.tokens.colors.BORDER_STRONG).hex(), [O, h] = o.useState(!1), [T, L] = o.useState([
+onClose: r
+  } = e, S = (0, C.useToken)(C.tokens.colors.BORDER_STRONG).hex(), [O, u] = _.useState(!1), [g, x] = _.useState([
 M,
 A
-  ]), [x, g] = o.useState(0), u = x === T.length - 1, R = Object.values(T[x].answers).filter(e => e).length > 0, m = Object.entries(T[x].answers).map(e => {
+  ]), [T, L] = _.useState(0), m = T === g.length - 1, R = Object.values(g[T].answers).filter(e => e).length > 0, [F, G] = _.useState(!1), P = Object.entries(g[T].answers).filter(e => {
+let [s, t] = e;
+return t;
+  }).map(e => {
+let [s] = e;
+return s;
+  }), j = P.some(e => e.startsWith('NONE')), Y = !j && P.length > 0, Z = Object.entries(g[T].answers).map(e => {
 let [s, t] = e;
 return {
   key: s,
   isChecked: t,
-  text: d[s].getTitle(),
-  Icon: d[s].Icon
+  text: h[s].getTitle(),
+  Icon: h[s].Icon,
+  disabled: s.startsWith('NONE') ? Y : j
 };
   });
 
-  function F() {
-c.default.track(i.rMx.GAME_PROFILE_FOLLOW_SURVEY, {
+  function p() {
+c.default.track(d.rMx.GAME_PROFILE_FOLLOW_SURVEY, {
   application_id: t,
-  question_no: x,
+  question_no: T,
   notify_on_launch: O,
-  affirmative_answers: T.flatMap(e => Object.entries(e.answers).filter(e => {
+  affirmative_answers: g.flatMap(e => Object.entries(e.answers).filter(e => {
     let [s, t] = e;
     return t;
   }).map(e => {
@@ -118,90 +126,111 @@ c.default.track(i.rMx.GAME_PROFILE_FOLLOW_SURVEY, {
   view_id: a
 });
   }
-  return (0, _.jsxs)(r.ModalRoot, {
+  return (0, o.jsxs)(C.ModalRoot, {
 transitionState: s,
 className: I.modalRoot,
-size: r.ModalSize.LARGE,
+size: C.ModalSize.LARGE,
 children: [
-  (0, _.jsx)('img', {
+  (0, o.jsx)('img', {
     src: n,
     className: I.backgroundImage,
     alt: ''
   }),
-  (0, _.jsxs)(r.Scroller, {
+  (0, o.jsx)('div', {
+    className: I.background
+  }),
+  (0, o.jsx)(C.ModalCloseButton, {
+    onClick: r,
+    className: I.closeIcon
+  }),
+  F && (0, o.jsxs)('div', {
+    className: I.thankYou,
+    children: [
+      (0, o.jsx)(C.Heading, {
+        variant: 'heading-md/bold',
+        color: 'header-primary',
+        children: N.Z.Messages.GAME_PROFILE_SURVEY_TY
+      }),
+      (0, o.jsx)(C.Text, {
+        variant: 'text-sm/normal',
+        color: 'text-muted',
+        children: N.Z.Messages.GAME_PROFILE_SURVEY_TY_MORE
+      })
+    ]
+  }),
+  !F && (0, o.jsxs)(C.Scroller, {
     className: I.modalContent,
     children: [
-      (0, _.jsx)(r.ModalCloseButton, {
-        onClick: C,
-        className: I.closeIcon
-      }),
-      (0, _.jsxs)('div', {
+      (0, o.jsxs)('div', {
         className: I.intro,
         children: [
-          (0, _.jsx)(l.Z, {
+          (0, o.jsx)(l.Z, {
             width: 84,
             height: 16
           }),
-          0 === x && (0, _.jsx)(r.Text, {
+          0 === T && (0, o.jsx)(C.Text, {
             variant: 'text-sm/normal',
             color: 'text-muted',
             children: N.Z.Messages.GAME_PROFILE_SURVEY_INTRO
           })
         ]
       }),
-      (0, _.jsxs)('div', {
+      (0, o.jsxs)('div', {
         className: I.bottomHalf,
         children: [
-          (0, _.jsx)(r.Text, {
+          (0, o.jsx)(C.Text, {
             variant: 'eyebrow',
             color: 'header-muted',
             children: N.Z.Messages.GAME_PROFILE_SURVEY_PROGRESS.format({
-              step: x + 1,
-              total: T.length
+              step: T + 1,
+              total: g.length
             })
           }),
-          (0, _.jsx)(r.Heading, {
+          (0, o.jsx)(C.Heading, {
             className: I.question,
             variant: 'heading-lg/medium',
             color: 'header-primary',
-            children: T[x].getTitle()
+            children: g[T].getTitle()
           }),
-          (0, _.jsx)('div', {
+          (0, o.jsx)('div', {
             className: E()(I.answers, {
-              [I.gridFour]: m.length % 4 == 0
+              [I.gridFour]: Z.length % 4 == 0
             }),
-            children: m.map(e => {
+            children: Z.map(e => {
               let {
                 key: s,
                 text: t,
                 isChecked: a,
-                Icon: n
+                Icon: n,
+                disabled: _
               } = e;
-              return (0, _.jsxs)(r.Checkbox, {
+              return (0, o.jsxs)(C.Checkbox, {
                 className: E()(I.answerLabel, {
-                  [I.checked]: a
+                  [I.checked]: a,
+                  [I.disabled]: _
                 }),
                 reverse: !0,
-                type: r.Checkbox.Types.INVERTED,
-                shape: r.Checkbox.Shapes.SMALL_BOX,
+                disabled: _,
+                type: C.Checkbox.Types.INVERTED,
+                shape: C.Checkbox.Shapes.SMALL_BOX,
                 checkboxColor: S,
                 value: a,
                 onChange: (e, t) => function(e, s, t) {
-                  let a = [...T];
+                  let a = [...g];
                   a[e] = {
                     ...a[e],
                     answers: {
                       ...a[e].answers,
                       [s]: t
                     }
-                  }, L(a);
-                }(x, s, t),
+                  }, x(a), (0, i.A)();
+                }(T, s, t),
                 children: [
-                  (0, _.jsx)(n, {
-                    color: r.tokens.colors.INTERACTIVE_ACTIVE,
+                  (0, o.jsx)(n, {
+                    color: C.tokens.colors.INTERACTIVE_ACTIVE,
                     className: I.answerIcon
                   }),
-                  (0, _.jsx)(r.Heading, {
+                  (0, o.jsx)(C.Heading, {
                     variant: 'heading-md/medium',
                     className: I.answerText,
                     children: t
@@ -210,39 +239,39 @@ children: [
               }, s);
             })
           }),
-          (0, _.jsxs)('div', {
+          (0, o.jsxs)('div', {
             className: I.footer,
             children: [
-              (0, _.jsx)(r.Text, {
+              (0, o.jsx)(C.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
                 className: I.selectAll,
                 children: N.Z.Messages.GAME_PROFILE_SURVEY_SELECT_ALL
               }),
-              !u && R && (0, _.jsx)(r.Button, {
+              !m && R && (0, o.jsx)(C.Button, {
                 onClick: function() {
-                  F(), g(1);
+                  p(), L(1);
                 },
                 children: N.Z.Messages.NEXT
               }),
-              u && (0, _.jsxs)(_.Fragment, {
+              m && (0, o.jsxs)(o.Fragment, {
                 children: [
-                  (0, _.jsx)(r.Checkbox, {
+                  (0, o.jsx)(C.Checkbox, {
                     className: I.notify,
-                    type: r.Checkbox.Types.INVERTED,
-                    shape: r.Checkbox.Shapes.ROUND,
+                    type: C.Checkbox.Types.INVERTED,
+                    shape: C.Checkbox.Shapes.ROUND,
                     checkboxColor: 'var(--border-strong)',
                     value: O,
-                    onChange: (e, s) => h(s),
-                    children: (0, _.jsx)(r.Text, {
+                    onChange: (e, s) => u(s),
+                    children: (0, o.jsx)(C.Text, {
                       variant: 'text-xs/normal',
                       color: 'text-primary',
                       children: N.Z.Messages.GAME_PROFILE_SURVEY_NOTIFY_ME
                     })
                   }),
-                  (0, _.jsx)(r.Button, {
+                  (0, o.jsx)(C.Button, {
                     onClick: function() {
-                      F(), C();
+                      p(), G(!0);
                     },
                     disabled: !R,
                     children: N.Z.Messages.SUBMIT
