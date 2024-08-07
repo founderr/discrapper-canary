@@ -1,9 +1,9 @@
 n.d(t, {
   C: function() {
-return h;
+return p;
   },
   Z: function() {
-return p;
+return m;
   }
 }), n(627341);
 var r = n(735250);
@@ -14,82 +14,55 @@ var i = n(278074),
   o = n(230711),
   l = n(503438),
   u = n(26033),
-  c = n(594174),
-  d = n(981631),
-  _ = n(728151),
-  E = n(332325),
-  f = n(689938);
-
-function h(e) {
-  let {
-settingsSection: t,
-settingsSubsection: n
-  } = (0, i.EQ)(e).when(u.dX, () => ({
-settingsSection: d.oAB.GAMES,
-settingsSubsection: E.Z.ACTIVITY_PRIVACY
-  })).when(u.r5, () => ({
-settingsSection: d.oAB.CONNECTIONS,
-settingsSubsection: null
-  })).when(u.kx, () => ({
-settingsSection: d.oAB.CONNECTIONS,
-settingsSubsection: null
-  })).otherwise(() => ({
-settingsSection: null,
-settingsSubsection: null
-  }));
-  return null == t ? null : () => o.Z.open(t, n);
-}
+  c = n(547972),
+  d = n(594174),
+  _ = n(981631),
+  E = n(728151),
+  f = n(332325),
+  h = n(689938);
 
 function p(e) {
+  return (0, i.EQ)(e).when(u.dX, () => () => (0, c.Z)(f.Z.ACTIVITY_PRIVACY)).when(u.r5, () => () => o.Z.open(_.oAB.CONNECTIONS, null)).when(u.kx, () => () => o.Z.open(_.oAB.CONNECTIONS, null)).otherwise(() => () => (0, c.Z)(f.Z.ACTIVITY_PRIVACY));
+}
+
+function m(e) {
   let {
 user: t,
 activity: n,
 entry: u,
-onClose: p
+onClose: m
   } = e;
-  if (!(0, a.e7)([c.default], () => {
+  if (!(0, a.e7)([d.default], () => {
   var e;
-  return (null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
+  return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
 }))
 return null;
-  let m = function(e) {
+  let I = function(e) {
 let {
   activity: t,
   entry: n
 } = e;
-return null != n ? h(n) : null != t ? function(e) {
-  let {
-    settingsSection: t,
-    settingsSubsection: n
-  } = (0, i.EQ)(e).with({
-    type: d.IIU.PLAYING
-  }, () => ({
-    settingsSection: d.oAB.GAMES,
-    settingsSubsection: E.Z.ACTIVITY_PRIVACY
-  })).with({
-    type: d.IIU.WATCHING,
-    application_id: _.sp
-  }, () => ({
-    settingsSection: d.oAB.CONNECTIONS,
-    settingsSubsection: null
-  })).when(l.Z, () => ({
-    settingsSection: d.oAB.CONNECTIONS,
-    settingsSubsection: null
-  })).otherwise(() => ({
-    settingsSection: null,
-    settingsSubsection: null
-  }));
-  return null == t ? null : () => o.Z.open(t, n);
-}(t) : null;
+if (null != n)
+  return p(n);
+if (null != t) {
+  var r;
+  return r = t, (0, i.EQ)(r).with({
+    type: _.IIU.PLAYING
+  }, () => () => (0, c.Z)(f.Z.ACTIVITY_PRIVACY)).with({
+    type: _.IIU.WATCHING,
+    application_id: E.sp
+  }, () => () => o.Z.open(_.oAB.CONNECTIONS, null)).when(l.Z, () => () => o.Z.open(_.oAB.CONNECTIONS, null)).otherwise(() => () => (0, c.Z)(f.Z.ACTIVITY_PRIVACY));
+}
+return null;
   }({
 activity: n,
 entry: u
   });
-  return null == m ? null : (0, r.jsx)(s.MenuItem, {
+  return null == I ? null : (0, r.jsx)(s.MenuItem, {
 id: 'manage-privacy',
-label: f.Z.Messages.USER_ACTIVITY_MANAGE_PRIVACY,
+label: h.Z.Messages.USER_ACTIVITY_MANAGE_PRIVACY,
 action: () => {
-  m(), null == p || p();
+  I(), null == m || m();
 }
   });
 }
