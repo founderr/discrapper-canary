@@ -9,8 +9,8 @@ var i = n(735250),
   l = n.n(a),
   s = n(442837),
   r = n(481060),
-  d = n(166459),
-  u = n(476326),
+  u = n(166459),
+  d = n(476326),
   c = n(827498),
   m = n(213459),
   p = n(895924),
@@ -38,18 +38,18 @@ showMenu: n,
 className: o,
 channelId: a,
 imageUrl: l,
-mimeType: d
-  } = e, u = (0, s.e7)([_.Z], () => _.Z.getChannel(a));
-  return null == u ? null : (0, i.jsx)(r.Popout, {
+mimeType: u
+  } = e, d = (0, s.e7)([_.Z], () => _.Z.getChannel(a));
+  return null == d ? null : (0, i.jsx)(r.Popout, {
 renderPopout: e => {
   let {
     closePopout: t
   } = e;
   return (0, i.jsx)(b, {
     onClose: t,
-    channel: u,
+    channel: d,
     imageUrl: l,
-    mimeType: d
+    mimeType: u
   });
 },
 position: 'right',
@@ -97,6 +97,12 @@ imageRecCommandContexts: P
 channelId: a.id
   }), b = (0, m.PL)(!0, !0), S = (0, m.LD)(a.guild_id, !0), R = j === T.M.FETCHING;
   o.useEffect(() => {
+(j === T.M.ERROR || j === T.M.FETCHED && 0 === P.length) && n();
+  }, [
+j,
+P.length,
+n
+  ]), o.useEffect(() => {
 var e, t;
 if (!R && 0 !== P.length)
   M.default.track(v.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
@@ -119,13 +125,13 @@ R
     })), {
       type: i
     });
-  d.Z.setFile({
+  u.Z.setFile({
     channelId: a.id,
     id: e,
     file: {
       id: e,
       file: o,
-      platform: u.ow.WEB
+      platform: d.ow.WEB
     },
     draftType: C.d.SlashCommand
   });
