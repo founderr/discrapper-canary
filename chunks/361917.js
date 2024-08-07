@@ -71,7 +71,9 @@ isScrollCloseToBottom: s
   guildId: n.getGuildId(),
   force: !0
 });
-  }, [n]);
+  }, [n]), a.useEffect(() => {
+t === R._b.VOICE && p.ux();
+  }, [t]);
   let M = l.length > 0;
   return (0, i.jsxs)('div', {
 className: D.container,
