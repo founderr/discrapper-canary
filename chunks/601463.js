@@ -56,12 +56,6 @@ children: [
           variant: 'text-md/normal',
           color: 'text-muted',
           children: c.Z.Messages.CLAN_SETUP_SIGN_SUBTITLE
-        }),
-        (0, i.jsx)(r.Text, {
-          variant: 'text-xs/normal',
-          color: 'text-muted',
-          className: d.disclaimerFooter,
-          children: c.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_DISCLAIMER.format()
         })
       ]
     })
@@ -71,11 +65,13 @@ children: [
     children: (0, i.jsx)(o.Z, {
       guildId: t,
       canSignCharter: null != u,
-      onSignCharter: () => null == u ? void 0 : u(!n),
+      signed: n,
+      onSignCharter: e => null == u ? void 0 : u(e),
       signHintPosition: l.p.RIGHT,
       primaryColor: I,
       className: d.charterScroll,
-      fullHeight: !0
+      fullHeight: !0,
+      showDisclaimer: !0
     })
   })
 ]

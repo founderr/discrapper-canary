@@ -17,7 +17,6 @@ e.exports = {
   sidebarLeftDecorationContainer: 'sidebarLeftDecorationContainer_e37740',
   sidebarLeftDecoration: 'sidebarLeftDecoration_e37740',
   header: 'header_e37740',
-  disclaimerFooter: 'disclaimerFooter_e37740',
   errorLink: 'errorLink_e37740',
   tooltip: 'tooltip_e37740',
   tooltipContents: 'tooltipContents_e37740',
