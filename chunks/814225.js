@@ -6,7 +6,7 @@ return I;
 return _;
   },
   en: function() {
-return u;
+return d;
   }
 }), a(757143), a(47120);
 var n = a(913527),
@@ -16,8 +16,8 @@ if (12633 == a.j)
 a(358085), a(73346);
 var t = a(981631),
   i = a(689938);
-let E = {},
-  o = {},
+let o = {},
+  E = {},
   c = Object.freeze({
 ALL: -1,
 ...t.EKQ
@@ -177,9 +177,9 @@ default:
 Object.keys(c).forEach(e => {
   let s = e.toLowerCase().replace(/_/g, '-'),
 a = c[e];
-  E[s] = a, o[a] = s;
+  o[s] = a, E[a] = s;
 });
-let d = [
+let u = [
   [
 'YYYY-MM-DD',
 'MMMM DD, Y'
@@ -202,7 +202,7 @@ let d = [
   ]
 ];
 
-function u(e) {
+function d(e) {
   let {
 preorderReleaseAt: s,
 preorderApproximateReleaseDate: a
@@ -211,8 +211,8 @@ preorderApproximateReleaseDate: a
 return s.format('MMMM DD');
   if (null == a)
 return null;
-  for (let e = 0; e < d.length; e++) {
-let [s, n] = d[e], r = l()(a, s, !0);
+  for (let e = 0; e < u.length; e++) {
+let [s, n] = u[e], r = l()(a, s, !0);
 if (r.isValid())
   return r.format(n);
   }

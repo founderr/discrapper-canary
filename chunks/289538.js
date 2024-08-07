@@ -8,8 +8,8 @@ var n = a(735250),
   r = a(481060),
   t = a(484459),
   i = a(103575),
-  E = a(5192),
-  o = a(689938),
+  o = a(5192),
+  E = a(689938),
   c = a(342948);
 
 function _(e) {
@@ -22,7 +22,7 @@ avatar: I
   } = l.useMemo(() => {
 let e = null == s ? void 0 : s.getAvatarURL(null == a ? void 0 : a.guild_id, 48, !1);
 return {
-  nick: E.ZP.getName(null == a ? void 0 : a.guild_id, null == a ? void 0 : a.id, s),
+  nick: o.ZP.getName(null == a ? void 0 : a.guild_id, null == a ? void 0 : a.id, s),
   avatar: e
 };
   }, [
@@ -39,7 +39,7 @@ renderPopout: e => (0, n.jsx)(i.Z, {
 children: e => (0, n.jsx)('img', {
   className: c.avatar,
   src: I,
-  alt: o.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({
+  alt: E.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({
     userName: _
   }),
   ...e

@@ -1,6 +1,6 @@
 n.d(e, {
   QC: function() {
-return x;
+return R;
   },
   SO: function() {
 return C;
@@ -22,11 +22,11 @@ var a = n(512722),
   h = n(709054),
   g = n(561308),
   Z = n(206295),
-  m = n(737583),
+  T = n(737583),
   N = n(438226),
-  T = n(169040),
+  m = n(169040),
   I = n(689938);
-let v = (t, e) => ({
+let A = (t, e) => ({
 AvatarImage1: t[0],
 ...null != t[1] && {
   AvatarImage2: t[1]
@@ -38,41 +38,41 @@ AvatarImage1: t[0],
   ApplicationImage: e
 }
   }),
-  A = (t, e) => {
+  p = (t, e) => {
 let n = [{
-    iconPath: T.NM,
+    iconPath: m.NM,
     text: e
   }],
   a = h.default.extractTimestamp(t.extra.application_id);
 if (7 >= u()().diff(u()(a), 'days') && n.push({
-    iconPath: T.As,
+    iconPath: m.As,
     text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
   }), (0, g.Ol)(t) && n.push({
-    iconPath: T.fO,
+    iconPath: m.fO,
     text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
   }), (0, g.q_)(t)) {
   let e = (0, g.vU)(t);
   n.push({
-    iconPath: T.t1,
+    iconPath: m.t1,
     text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
       days: e
     })
   });
 }
 (0, g.ig)(t) === i.o.GLOBAL && n.push({
-  iconPath: T.Op,
+  iconPath: m.Op,
   text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
 });
 let r = (0, g.dw)(t);
 if (null != r && n.push({
-    iconPath: T.Z,
+    iconPath: m.Z,
     text: (0, g.GE)(r)
   }), (0, g.V5)(t)) {
   let {
     text: e
   } = (0, g.zo)(t);
   null != e && n.push({
-    iconPath: T.Md,
+    iconPath: m.Md,
     text: e
   });
 }
@@ -83,14 +83,14 @@ if ((0, g.Jd)(t)) {
       hours: Math.round(e / M.Z.Seconds.HOUR)
     });
     return [{
-      iconPath: T.eF,
+      iconPath: m.eF,
       text: ''.concat(I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, ' \u2014 ').concat(t)
     }];
   }
 }
 return n;
   },
-  p = (t, e) => {
+  v = (t, e) => {
 let {
   timestamp: n,
   colors: a,
@@ -102,30 +102,30 @@ let {
   stop: e
 }));
 t.setSize({
-  w: T.nx,
-  h: T.bg
+  w: m.nx,
+  h: m.bg
 }, 4), t.drawRoundedGradientRect(i, {
   x: 0,
-  y: T.bg
+  y: m.bg
 }, {
-  x: T.nx,
+  x: m.nx,
   y: 0
 }, {
   x: 0,
   y: 0,
-  h: T.bg,
-  w: T.nx
+  h: m.bg,
+  w: m.nx
 }, 8), t.setColor('white'), t.drawRoundedImage('ApplicationImage', {
-  x: T.sB,
-  y: T.sB
+  x: m.sB,
+  y: m.sB
 }, {
-  w: T.Pu,
-  h: T.Pu
+  w: m.Pu,
+  h: m.Pu
 }, 8) === E.vP.Failure && t.drawPath(c.Cv, {
-  x: T.sB,
-  y: T.sB
+  x: m.sB,
+  y: m.sB
 }, !0, 2 + 2 / 3);
-(0, m.l)({
+(0, T.l)({
   canvas: t,
   avatarSrcs: [
     'AvatarImage1',
@@ -133,27 +133,27 @@ t.setSize({
     'AvatarImage3'
   ].slice(0, u),
   position: {
-    x: T.Iq,
-    y: T.sB
+    x: m.Iq,
+    y: m.sB
   },
-  avatarImageSize: T.$S
+  avatarImageSize: m.$S
 }), t.setColor('white'), t.setFont({
   size: 16,
-  family: T.I8,
-  weight: T.Ue,
+  family: m.I8,
+  weight: m.Ue,
   truncate: E.GX.Wrap
 }), t.drawText(r, {
-  x: T.Iq,
+  x: m.Iq,
   y: 64,
   h: 32,
-  w: T.kC
+  w: m.kC
 }, !0);
-let o = A(l, n);
-(0, m.J)({
+let o = p(l, n);
+(0, T.J)({
   canvas: t,
   badges: o,
-  startPosition: T.Iq,
-  maxWidth: T.kC
+  startPosition: m.Iq,
+  maxWidth: m.kC
 });
   },
   C = async t => {
@@ -165,10 +165,10 @@ let {
   timestamp: l,
   colors: u,
   channelId: i
-} = t, o = n.extra.game_name, c = v(a, e);
+} = t, o = n.extra.game_name, c = A(a, e);
 return await (0, _.f)({
   assetsToLoad: c,
-  drawImage: t => p(t, {
+  drawImage: t => v(t, {
     timestamp: l,
     colors: u,
     description: r,
@@ -184,21 +184,21 @@ return await (0, _.f)({
   }
 });
   };
-async function x(t, e, n) {
+async function R(t, e, n) {
   let a = t.extra.game_name,
 l = o.Z.getApplication(t.extra.application_id),
 u = null == l ? void 0 : l.getIconURL(128),
 i = d.default.getUser(t.author_id);
   r()(null != i, 'Author must not be null'), await (0, s.vM)(null != u ? u : '');
   let c = [null == i ? void 0 : i.getAvatarURL(e.guild_id, 128)],
-M = v(c, u),
+M = A(c, u),
 h = f.default.locale,
-m = (0, g.yh)(t, h),
+T = (0, g.yh)(t, h),
 {
-  primaryColor: T,
+  primaryColor: m,
   secondaryColor: I
 } = (0, Z.w)(null != u ? u : ''),
-A = (0, N.HV)(t, e, i),
+p = (0, N.HV)(t, e, i),
 C = {
   format: n,
   quality: 1,
@@ -206,18 +206,18 @@ C = {
   fileType: 'png'
 };
   if (n === E.kH.CloudUpload) {
-var x;
-C.channelId = null !== (x = e.id) && void 0 !== x ? x : '';
+var R;
+C.channelId = null !== (R = e.id) && void 0 !== R ? R : '';
   }
   return await (0, _.f)({
 assetsToLoad: M,
-drawImage: e => p(e, {
-  timestamp: m,
+drawImage: e => v(e, {
+  timestamp: T,
   colors: [
-    T,
+    m,
     I
   ],
-  description: A,
+  description: p,
   entry: t,
   numAvatars: c.length
 }),

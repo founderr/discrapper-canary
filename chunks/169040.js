@@ -6,16 +6,16 @@ return Z;
 return f;
   },
   I8: function() {
-return p;
+return v;
   },
   Iq: function() {
-return m;
+return T;
   },
   Md: function() {
 return o;
   },
   NC: function() {
-return A;
+return p;
   },
   NM: function() {
 return a;
@@ -24,7 +24,7 @@ return a;
 return _;
   },
   PW: function() {
-return v;
+return A;
   },
   Pu: function() {
 return g;
@@ -42,7 +42,7 @@ return M;
 return c;
   },
   f0: function() {
-return T;
+return m;
   },
   fO: function() {
 return r;
@@ -88,13 +88,13 @@ let a = 'M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
   h = 12,
   g = 96,
   Z = 32,
-  m = 120,
+  T = 120,
   N = 260,
-  T = 88,
+  m = 88,
   I = 99,
-  v = 12,
-  A = 18,
-  p = [
+  A = 12,
+  p = 18,
+  v = [
 'gg sans',
 'sans-serif'
   ],

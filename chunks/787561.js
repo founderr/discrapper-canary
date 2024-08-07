@@ -350,7 +350,7 @@ return (0, s.jsxs)(d.FormSection, {
             value: t.publicUpdatesChannelId,
             options: N,
             onChange: Z,
-            isDisabled: !i
+            isDisabled: !n
           })
         })
       ]
