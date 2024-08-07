@@ -128,7 +128,7 @@ body: {
 
 function m(e) {
   let t = e.name;
-  if (!Object.values(s.B).includes(t))
+  if (!Object.values(s.BM).includes(t))
 throw Error('Invalid report type '.concat(e.name));
   return t;
 }
@@ -249,7 +249,7 @@ return {
   user_id: t.record.id,
   guild_id: t.contextualGuildId
 };
-  else if (t.name === s.B.USER)
+  else if (t.name === s.BM.USER)
 return {
   ...u,
   ...l,
@@ -258,7 +258,7 @@ return {
   guild_id: t.contextualGuildId,
   email_token: r
 };
-  else if (t.name === s.B.MESSAGE)
+  else if (t.name === s.BM.MESSAGE)
 return {
   ...u,
   ...l,

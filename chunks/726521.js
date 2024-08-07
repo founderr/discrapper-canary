@@ -136,21 +136,21 @@ contextualGuildId: t
 
 function g(e, t) {
   let n = new s.Z({});
-  v(l.B.USER, {
+  v(l.BM.USER, {
 reported_user_id: n.id
   }), (0, c.m)({
-name: l.B.USER,
+name: l.BM.USER,
 record: n
   }, {}, t, void 0, !1, !1, e);
 }
 
 function S(e, t) {
   let n = new a.ZP({});
-  v(l.B.MESSAGE, {
+  v(l.BM.MESSAGE, {
 message_id: void 0,
 channel_id: void 0
   }), (0, c.m)({
-name: l.B.MESSAGE,
+name: l.BM.MESSAGE,
 record: n
   }, {}, t, void 0, !1, !1, e);
 }
