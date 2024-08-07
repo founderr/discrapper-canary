@@ -1,37 +1,72 @@
 var s = n(735250),
   o = n(470079),
-  a = n(569379),
-  r = n(448288);
+  r = n(120356),
+  a = n.n(r),
+  l = n(338545),
+  i = n(481060),
+  c = n(569379),
+  d = n(689938),
+  u = n(448288);
 t.Z = o.forwardRef((e, t) => {
   let {
 quest: n,
 percentComplete: o,
-size: l = 42,
-strokeWidth: i = 3,
-glowBlur: c = 0.4,
-children: d
-  } = e, u = (0, a.EK)(n, o > 0), p = l / 2, m = l / 2 - i / 2, x = 2 * Math.PI * m, g = x - o * x, f = {
-strokeDasharray: ''.concat(x, ' ').concat(x),
-strokeDashoffset: g
-  }, C = {
-strokeDasharray: ''.concat(x, ' ').concat(x),
-strokeDashoffset: -o * x
-  }, _ = {
-boxShadow: '0 0 30px 0px '.concat(u.glow)
-  };
+size: r = 42,
+strokeWidth: p = 3,
+glowBlur: m = 0.4,
+showProgressText: x = !1,
+children: g
+  } = e, f = (0, c.EK)(n, o > 0), C = r / 2, _ = r / 2 - p / 2, h = 2 * Math.PI * _, E = h - o * h, S = {
+strokeDasharray: ''.concat(h, ' ').concat(h),
+strokeDashoffset: E
+  }, T = {
+strokeDasharray: ''.concat(h, ' ').concat(h),
+strokeDashoffset: -o * h
+  }, v = {
+boxShadow: '0 0 30px 0px '.concat(f.glow)
+  }, {
+progressTextAnimation: N
+  } = (0, i.useSpring)({
+progressTextAnimation: x && 1 !== o ? 1 : 0,
+config: {
+  tension: 300,
+  friction: 25
+}
+  }), j = Math.floor(100 * o);
   return (0, s.jsxs)('div', {
-className: r.outer,
+className: u.outer,
 ref: t,
 children: [
-  (0, s.jsx)('div', {
-    className: r.inner,
-    style: _,
-    children: d
+  (0, s.jsxs)('div', {
+    className: u.inner,
+    style: v,
+    children: [
+      g,
+      (0, s.jsxs)(l.animated.div, {
+        style: {
+          opacity: N
+        },
+        className: a()(u.coverContent, u.progressTextWrapper),
+        children: [
+          (0, s.jsx)('div', {
+            className: a()(u.coverContent, u.progressTextOverlay)
+          }),
+          (0, s.jsx)(i.Text, {
+            variant: 'text-lg/medium',
+            color: 'text-primary',
+            className: u.progressText,
+            children: d.Z.Messages.QUESTS_PROGRESS.format({
+              percent: j.toString()
+            })
+          })
+        ]
+      })
+    ]
   }),
   (0, s.jsxs)('svg', {
-    className: r.progressBar,
-    height: l,
-    width: l,
+    className: u.progressBar,
+    height: r,
+    width: r,
     children: [
       (0, s.jsxs)('defs', {
         children: [
@@ -40,7 +75,7 @@ children: [
             children: [
               (0, s.jsx)('feGaussianBlur', {
                 result: 'coloredBlur',
-                stdDeviation: c
+                stdDeviation: m
               }),
               (0, s.jsxs)('feMerge', {
                 children: [
@@ -69,35 +104,35 @@ children: [
             children: [
               (0, s.jsx)('stop', {
                 offset: '0%',
-                stopColor: u.backgroundTop
+                stopColor: f.backgroundTop
               }),
               (0, s.jsx)('stop', {
                 offset: '100%',
-                stopColor: u.backgroundBottom
+                stopColor: f.backgroundBottom
               })
             ]
           })
         ]
       }),
       (0, s.jsx)('circle', {
-        className: r.progress,
-        strokeWidth: i,
+        className: u.progress,
+        strokeWidth: p,
         fill: 'transparent',
-        r: m,
-        cx: p,
-        cy: p,
+        r: _,
+        cx: C,
+        cy: C,
         stroke: 'url(#linear)',
-        style: C
+        style: T
       }),
       (0, s.jsx)('circle', {
-        className: r.progress,
-        strokeWidth: i,
+        className: u.progress,
+        strokeWidth: p,
         fill: 'transparent',
-        r: m,
-        cx: p,
-        cy: p,
-        stroke: u.foreground,
-        style: f
+        r: _,
+        cx: C,
+        cy: C,
+        stroke: f.foreground,
+        style: S
       })
     ]
   })

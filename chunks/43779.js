@@ -111,6 +111,7 @@ children: [
             quest: S,
             size: 76,
             percentComplete: j,
+            showProgressText: C,
             children: (0, i.jsx)('div', {
               className: p.circularRewardTileWrapper,
               children: (0, i.jsx)(h.Z, {
