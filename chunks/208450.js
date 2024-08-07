@@ -15,15 +15,15 @@ var i = n(735250),
   T = n(857595),
   h = n(607070),
   N = n(367907),
-  C = n(313201),
-  f = n(592125),
+  f = n(313201),
+  C = n(592125),
   p = n(984933),
   g = n(768119),
   S = n(944486),
   A = n(585483),
   R = n(72006),
-  x = n(405656),
-  O = n(181389),
+  O = n(405656),
+  x = n(181389),
   M = n(854709),
   v = n(778177),
   L = n(981631),
@@ -39,7 +39,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 n(270799);
-let b = (0, C.hQ)(),
+let b = (0, f.hQ)(),
   j = c()(_.yC, 500);
 class U extends s.PureComponent {
   componentDidMount() {
@@ -52,8 +52,8 @@ let {
   searchId: n
 } = this.props;
 if (t !== e.editorState) {
-  let e = x.kG(R.Sq(t)),
-    i = O.g9(e, t);
+  let e = O.kG(R.Sq(t)),
+    i = x.g9(e, t);
   _.u$(n, e, i), null != this._editorRef && R.iE(this._editorRef.editor);
 }
   }
@@ -61,7 +61,7 @@ if (t !== e.editorState) {
 A.S.unsubscribe(L.CkL.PERFORM_SEARCH, this.search), A.S.unsubscribe(L.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), A.S.unsubscribe(L.CkL.FOCUS_SEARCH, this.handleFocusSearch);
   }
   tokenize(e) {
-let t = x.kG(R.Sq(e)).filter(e => e.type !== I.ZP.NON_TOKEN_TYPE);
+let t = O.kG(R.Sq(e)).filter(e => e.type !== I.ZP.NON_TOKEN_TYPE);
 return R.lv(t, e, m.ZP);
   }
   clearSearch() {
@@ -199,10 +199,10 @@ super(e), D(this, 'state', {
     i = R.Sq(e);
   }
   if (null != t && !n) {
-    let e = x.kG(i),
-      n = x.$G(e);
+    let e = O.kG(i),
+      n = O.$G(e);
     for (let t = 0; t < e.length; t++)
-      !x.Fr(e[t], e[t + 1]) && (i = i.substring(0, e[t].start) + i.substring(e[t].end));
+      !O.Fr(e[t], e[t + 1]) && (i = i.substring(0, e[t].start) + i.substring(e[t].end));
     if (0 === e.length || 0 === Object.keys(n).length)
       return !1;
     j(t, n, i, !!s), d.AccessibilityAnnouncer.announce(Z.Z.Messages.SEARCH_STARTED_A11Y_ANNOUNCE), this.onBlur();
@@ -228,8 +228,8 @@ super(e), D(this, 'state', {
     return;
   }
   let n = S.Z.getChannelId(),
-    i = f.Z.getChannel(n);
-  if ((null == i ? void 0 : i.isThread()) && (i = f.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate()) {
+    i = C.Z.getChannel(n);
+  if ((null == i ? void 0 : i.isThread()) && (i = C.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate()) {
     this.focusEditor();
     return;
   }
@@ -379,7 +379,7 @@ super(e), D(this, 'state', {
     return this.setEditorState(e), !0;
   }
   return R.q0(e);
-}), x.WU();
+}), O.WU();
   }
 }
 t.Z = u.ZP.connectStores([
@@ -390,7 +390,7 @@ t.Z = u.ZP.connectStores([
   let t = g.Z.getCurrentSearchId(),
 n = g.Z.getSearchType(),
 i = null != t && g.Z.isSearching(t),
-s = null != t && null !== (e = g.Z.getEditorState(t)) && void 0 !== e ? e : R.nR(O.Jl(m.ZP)),
+s = null != t && null !== (e = g.Z.getEditorState(t)) && void 0 !== e ? e : R.nR(x.Jl(m.ZP)),
 a = h.Z.keyboardModeEnabled;
   return {
 searchId: t,

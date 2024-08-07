@@ -14,8 +14,8 @@ var i, a, s, l, r, o = n(735250),
   u = n(120356),
   d = n.n(u),
   h = n(780384),
-  m = n(481060),
-  p = n(626135),
+  p = n(481060),
+  m = n(626135),
   _ = n(792125),
   f = n(600164),
   E = n(981631),
@@ -36,12 +36,12 @@ class x extends c.PureComponent {
 let {
   uniqueId: e
 } = this.props;
-p.default.track(E.rMx.SHOW_TUTORIAL, {
+m.default.track(E.rMx.SHOW_TUTORIAL, {
   tutorial: e
 });
   }
   componentWillUnmount() {
-p.default.track(E.rMx.CLOSE_TUTORIAL, {
+m.default.track(E.rMx.CLOSE_TUTORIAL, {
   tutorial: this.props.uniqueId,
   acknowledged: this.state.confirmed
 });
@@ -57,7 +57,7 @@ let {
   forceTheme: l,
   onClickSkipAll: r
 } = this.props, c = 'left' === t || n, u = 'center' === t || !c;
-return (0, o.jsxs)(m.Dialog, {
+return (0, o.jsxs)(p.Dialog, {
   className: d()(C.popoutRoot, s),
   children: [
     null != e && (0, o.jsx)(f.Z, {
@@ -65,7 +65,7 @@ return (0, o.jsxs)(m.Dialog, {
       justify: c ? f.Z.Justify.START : f.Z.Justify.CENTER,
       children: e()
     }),
-    (0, o.jsx)(m.H, {
+    (0, o.jsx)(p.H, {
       className: d()({
         [C.titleCenter]: u,
         [C.titleLeft]: c
@@ -83,16 +83,16 @@ return (0, o.jsxs)(m.Dialog, {
       className: C.buttonContainer,
       justify: c ? f.Z.Justify.BETWEEN : f.Z.Justify.CENTER,
       children: [
-        (0, o.jsx)(m.Button, {
-          size: m.ButtonSizes.SMALL,
+        (0, o.jsx)(p.Button, {
+          size: p.ButtonSizes.SMALL,
           onClick: this.handleDismiss,
           children: g.Z.Messages.TUTORIAL_CLOSE
         }),
-        (0, o.jsx)(m.Button, {
-          size: m.ButtonSizes.SMALL,
-          look: m.Button.Looks.BLANK,
+        (0, o.jsx)(p.Button, {
+          size: p.ButtonSizes.SMALL,
+          look: p.Button.Looks.BLANK,
           onClick: r,
-          color: (0, h.ap)(l) ? m.Button.Colors.PRIMARY : m.Button.Colors.WHITE,
+          color: (0, h.ap)(l) ? p.Button.Colors.PRIMARY : p.Button.Colors.WHITE,
           className: c ? C.buttonSkipLeftAlign : C.buttonSkipCenterAlign,
           children: g.Z.Messages.SKIP_ALL_TIPS
         })
@@ -129,7 +129,7 @@ let {
   forceTheme: u,
   ...d
 } = this.props, h = 'top' === d.position || 'bottom' === d.position ? 'center' : 'top';
-return (0, o.jsx)(m.Popout, {
+return (0, o.jsx)(p.Popout, {
   ...d,
   align: h,
   spacing: null != c ? c : 0,
@@ -146,7 +146,7 @@ super(...e), I(this, 'onClickComplete', e => {
     onSkipAll: t,
     uniqueId: n
   } = this.props;
-  e(), t(), p.default.track(E.rMx.DISMISS_ALL_TUTORIALS, {
+  e(), t(), m.default.track(E.rMx.DISMISS_ALL_TUTORIALS, {
     tutorial: n
   });
 }), I(this, 'renderPopoutContent', e => {

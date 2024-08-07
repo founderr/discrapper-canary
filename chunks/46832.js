@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 }), n(47120);
 var i = n(836560),
@@ -23,13 +23,13 @@ writable: !0
 let _ = 10 * l.Z.Millis.SECOND,
   E = new Map(),
   h = new Set(),
-  I = (e, t, n) => {
+  m = (e, t, n) => {
 n([
   c.Z.CLOSE,
   t
 ], e);
   };
-class m extends i.EventEmitter {
+class I extends i.EventEmitter {
   routeEvent(e, t, n, i) {
 if (!Array.isArray(n)) {
   console.warn('[PostMessageTransport] Protocol error: event data should be an Array!');
@@ -117,7 +117,7 @@ super(), c = this, u(this, 'validateSocketClient', void 0), u(this, 'logger', vo
     null != i ? this.disconnectSocket(i, {
       code: e.code,
       message: e.message
-    }, !0) : I(t, {
+    }, !0) : m(t, {
       code: e.code,
       message: e.message
     }, n);
@@ -166,7 +166,7 @@ super(), c = this, u(this, 'validateSocketClient', void 0), u(this, 'logger', vo
       frameId: r,
       version: Number(t.v),
       logger: this.logger,
-      postClose: I,
+      postClose: m,
       encoding: null !== (l = t.encoding) && void 0 !== l ? l : 'json'
     });
   } catch (e) {

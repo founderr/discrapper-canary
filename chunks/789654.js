@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return I;
+return E;
   }
 }), t(47120), t(724458), t(757143), t(390547), t(653041);
 var a = t(735250),
@@ -40,12 +40,12 @@ return e;
   }, e;
 }
 
-function j() {
+function C() {
   let e = v([
 '\n      export const rawPalette = {\n        ',
 '\n      } as const;\n    '
   ]);
-  return j = function() {
+  return C = function() {
 return e;
   }, e;
 }
@@ -54,9 +54,9 @@ let w = {
 ...m.J,
 ...g.c
   },
-  C = {
-...Z(b.K),
-...Z(m.J)
+  j = {
+...I(b.K),
+...I(m.J)
   },
   N = [
 '100',
@@ -101,7 +101,7 @@ function T(e) {
   return 'name' in e;
 }
 
-function Z(e) {
+function I(e) {
   let r = {};
   return Object.keys(e).forEach(t => {
 let a = e[t];
@@ -119,7 +119,7 @@ r[t] = {
   }), r;
 }
 
-function E(e, r) {
+function Z(e, r) {
   let [t, a] = n.useState(() => {
 let t = h.K.get(e);
 return null != t ? t : r;
@@ -135,13 +135,13 @@ a
   ];
 }
 
-function I() {
+function E() {
   let e = (0, y.Fg)(),
 [{
   rawPalette: r,
   semanticTokens: t
 }, i, l, s, h, m] = function(e, r) {
-  let [t, a] = E(''.concat(e, '-states'), [r]), [i, o] = E(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
+  let [t, a] = Z(''.concat(e, '-states'), [r]), [i, o] = Z(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
     a([
       e,
       ...t
@@ -172,19 +172,19 @@ function I() {
   ];
 }('color-override-03-03-23', {
   rawPalette: p.b,
-  semanticTokens: C
+  semanticTokens: j
 }),
 [g, b] = n.useState(''),
 [v, w] = n.useState({}),
 [S, T] = n.useState({}),
-Z = n.useMemo(() => Object.keys(r).reduce((e, r) => [
+I = n.useMemo(() => Object.keys(r).reduce((e, r) => [
   ...e,
   {
     value: r,
     label: r
   }
 ], []), [r]),
-I = n.useCallback((e, a, n, o) => {
+E = n.useCallback((e, a, n, o) => {
   let l = d().cloneDeep(t);
   l[e][a] = {
     color: n,
@@ -238,7 +238,7 @@ R = n.useMemo(() => {
   v,
   S
 ]),
-O = n.useCallback(e => {
+B = n.useCallback(e => {
   let r = '',
     t = '',
     a = !1;
@@ -273,8 +273,8 @@ O = n.useCallback(e => {
     return ''.concat(a ? '\n' : '').concat(u);
   }).join(',\n'));
 }, []),
-B = n.useCallback(e => c()(j(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
-A = n.useCallback(e => {
+O = n.useCallback(e => c()(C(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
+P = n.useCallback(e => {
   let r = {};
   Object.keys(e).forEach(t => {
     Object.keys(e[t]).map(a => {
@@ -336,7 +336,7 @@ children: [
             size: f.Button.Sizes.MIN,
             onClick: () => {
               navigator.clipboard.readText().then(e => {
-                A(JSON.parse(e));
+                P(JSON.parse(e));
               });
             },
             children: 'Import'
@@ -344,7 +344,7 @@ children: [
           (0, a.jsx)(f.Button, {
             size: f.Button.Sizes.MIN,
             onClick: () => {
-              navigator.clipboard.writeText(B(r));
+              navigator.clipboard.writeText(O(r));
             },
             children: 'Export'
           })
@@ -363,7 +363,7 @@ children: [
           (0, a.jsx)(f.Button, {
             size: f.Button.Sizes.MIN,
             onClick: () => {
-              navigator.clipboard.writeText(O(t));
+              navigator.clipboard.writeText(B(t));
             },
             children: 'Export'
           })
@@ -381,7 +381,7 @@ children: [
           onClick: () => {
             i({
               rawPalette: p.b,
-              semanticTokens: C
+              semanticTokens: j
             });
           },
           children: 'Reset all'
@@ -418,9 +418,9 @@ children: [
         margin: 8,
         alignItems: 'center'
       },
-      children: Object.keys(C).filter(e => '' === g || e.toLowerCase().includes(g)).map(r => {
+      children: Object.keys(j).filter(e => '' === g || e.toLowerCase().includes(g)).map(r => {
         var i;
-        let o = C[r][e],
+        let o = j[r][e],
           l = null == t[r] ? {
             ...o
           } : t[r][e],
@@ -455,9 +455,9 @@ children: [
             }),
             (0, a.jsx)(f.SearchableSelect, {
               value: l.color,
-              options: Z,
+              options: I,
               onChange: t => {
-                I(r, e, t, l.opacity);
+                E(r, e, t, l.opacity);
               },
               renderOptionPrefix: r => null == r ? null : (0, a.jsx)('div', {
                 style: {
@@ -477,7 +477,7 @@ children: [
               },
               value: null === (i = l.opacity) || void 0 === i ? void 0 : i.toString(),
               onChange: t => {
-                '' !== t && I(r, e, l.color, parseFloat(t));
+                '' !== t && E(r, e, l.color, parseFloat(t));
               }
             }),
             (0, a.jsx)(f.Clickable, {
@@ -487,7 +487,7 @@ children: [
               },
               onClick: () => {
                 var t;
-                c && I(r, e, o.color, null !== (t = o.opacity) && void 0 !== t ? t : 1);
+                c && E(r, e, o.color, null !== (t = o.opacity) && void 0 !== t ? t : 1);
               },
               children: (0, a.jsx)(f.CloseSmallIcon, {
                 size: 'xs',

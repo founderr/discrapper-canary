@@ -5,10 +5,10 @@ return u;
 });
 var s = n(454585),
   a = n(551452),
-  l = n(532901);
-let r = {
+  r = n(532901);
+let l = {
 ...s.Z.guildEventRules.link,
-react: (0, l.Z)({
+react: (0, r.Z)({
   enableBuildOverrides: !1,
   mustConfirmExternalLink: !0
 }).react
@@ -23,6 +23,6 @@ react: (0, a.Z)({
   },
   u = s.Z.reactParserFor({
 ...s.Z.guildEventRules,
-link: r,
+link: l,
 channelMention: i
   });

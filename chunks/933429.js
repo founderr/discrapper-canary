@@ -15,15 +15,15 @@ var i, s, a, r, l = n(913527),
   T = n(812206),
   h = n(223892),
   N = n(674525),
-  C = n(605236),
-  f = n(524347),
+  f = n(605236),
+  C = n(524347),
   p = n(853197),
   g = n(353926),
   S = n(594190),
   A = n(38618),
   R = n(569545),
-  x = n(615365),
-  O = n(528011),
+  O = n(615365),
+  x = n(528011),
   M = n(487419),
   v = n(715903),
   L = n(223606),
@@ -69,15 +69,15 @@ var i, s, a, r, l = n(913527),
   eT = n(979651),
   eh = n(351402),
   eN = n(853872),
-  eC = n(78839),
-  ef = n(295226),
+  ef = n(78839),
+  eC = n(295226),
   ep = n(580130),
   eg = n(695103),
   eS = n(358085),
   eA = n(74538),
   eR = n(922156),
-  ex = n(436181),
-  eO = n(941128),
+  eO = n(436181),
+  ex = n(941128),
   eM = n(981631),
   ev = n(188785),
   eL = n(702512),
@@ -172,7 +172,7 @@ let {
 return t ? null : ej[e];
   }(e);
   if (null != t)
-return (0, C.un)(t);
+return (0, f.un)(t);
   let n = eU[e];
   if (null != n) {
 let t = function(e) {
@@ -265,7 +265,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
   ],
   eW = {
 [eM.kVF.GUILD_RAID_NOTIFICATION]: {
-  predicate: () => (0, O.g)().show && !eV(eM.kVF.GUILD_RAID_NOTIFICATION),
+  predicate: () => (0, x.g)().show && !eV(eM.kVF.GUILD_RAID_NOTIFICATION),
   metadata: () => ({
     dismissUntil: o()().add(3, 'hours').toDate()
   })
@@ -357,8 +357,8 @@ eM.kVF.SCHEDULED_MAINTENANCE
   })
 },
 [eM.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS]: {
-  predicate: () => null != ex.Z.getLastProgress(),
-  metadata: () => ex.Z.getLastProgress()
+  predicate: () => null != eO.Z.getLastProgress(),
+  metadata: () => eO.Z.getLastProgress()
 },
 [eM.kVF.SPOTIFY_AUTO_PAUSED]: {
   predicate: () => W.Z.wasAutoPaused()
@@ -390,7 +390,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
   predicate: () => (0, G.tq)()
 },
 [eM.kVF.CORRUPT_INSTALLATION]: {
-  predicate: () => eS.isPlatformEmbedded && (!u.Z.supported() || eO.Z.isCorruptInstallation())
+  predicate: () => eS.isPlatformEmbedded && (!u.Z.supported() || ex.Z.isCorruptInstallation())
 },
 [eM.kVF.VIDEO_UNSUPPORTED_BROWSER]: {
   predicate: e => {
@@ -440,7 +440,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
     let {
       selectedGuildId: t
     } = e;
-    return null != t && x.Z.getCurrentConfig({
+    return null != t && O.Z.getCurrentConfig({
       location: 'notice_store'
     }).showSurvey && !eV(eM.kVF.SERVER_USAGE_SURVEY);
   },
@@ -508,10 +508,10 @@ eM.kVF.SCHEDULED_MAINTENANCE
   predicate: () => ee.Z.isSuggestedAccountType(eM.ABu.PLAYSTATION) && null == ee.Z.getAccount(null, eM.ABu.PLAYSTATION) && !eV(eM.kVF.CONNECT_PLAYSTATION)
 },
 [eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: {
-  predicate: () => ef.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_2]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
+  predicate: () => eC.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_2]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
 },
 [eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: {
-  predicate: () => ef.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_0]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING)
+  predicate: () => eC.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_0]).length > 0 && !eV(eM.kVF.PREMIUM_TIER_0_TRIAL_ENDING)
 },
 [eM.kVF.PREMIUM_UNCANCEL]: {
   predicate: e => {
@@ -660,15 +660,15 @@ eM.kVF.SCHEDULED_MAINTENANCE
   }
 },
 [eM.kVF.DROPS_GO_LIVE_BANNER]: {
-  predicate: () => !eV(eM.kVF.DROPS_GO_LIVE_BANNER) && (0, C.un)(d.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, C.un)(d.z.QUEST_2_COMPLETION_TOOLTIP) && (0, p.Tn)(eL.X2.FORTNITE),
+  predicate: () => !eV(eM.kVF.DROPS_GO_LIVE_BANNER) && (0, f.un)(d.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(d.z.QUEST_2_COMPLETION_TOOLTIP) && (0, p.Tn)(eL.X2.FORTNITE),
   metadata: () => ({
     partnerGame: eL.X2.FORTNITE
   })
 },
 [eM.kVF.DROPS_PROGRESS_INTERRUPTION]: {
-  predicate: () => f.Z.isCurrentQuestInterrupted && null != f.Z.currentDropQuestGameTitle,
+  predicate: () => C.Z.isCurrentQuestInterrupted && null != C.Z.currentDropQuestGameTitle,
   metadata: () => ({
-    gameTitle: f.Z.currentDropQuestGameTitle,
+    gameTitle: C.Z.currentDropQuestGameTitle,
     reloadCallback: () => window.location.reload(!0)
   })
 },
@@ -676,7 +676,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
   predicate: () => (0, j.e)() && !eV(eM.kVF.POMELO_ELIGIBLE) && !(0, b.ov)()
 },
 [eM.kVF.DROPS_ENDED_INCOMPLETE]: {
-  predicate: () => !eV(eM.kVF.DROPS_ENDED_INCOMPLETE) && (0, C.un)(d.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, C.un)(d.z.QUEST_2_COMPLETION_TOOLTIP) && (0, p.FL)(eL.X2.FORTNITE),
+  predicate: () => !eV(eM.kVF.DROPS_ENDED_INCOMPLETE) && (0, f.un)(d.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(d.z.QUEST_2_COMPLETION_TOOLTIP) && (0, p.FL)(eL.X2.FORTNITE),
   metadata: () => ({
     partnerGame: eL.X2.FORTNITE
   })
@@ -760,7 +760,7 @@ return !1;
   let e = em.default.getCurrentUser();
   if (null == e)
 return !1;
-  let t = eC.ZP.getPremiumSubscription(),
+  let t = ef.ZP.getPremiumSubscription(),
 n = eh.Z.isLocalizedPromoEnabled,
 i = eu.Z.getGuildId(),
 s = ec.Z.getVoiceChannelId(),
@@ -804,14 +804,14 @@ this.syncWith([
   et.Z,
   eu.Z,
   F.Z,
-  ef.Z,
+  eC.Z,
   X.Z,
   ee.Z,
   z.Z,
   M.Z,
   H.Z,
   Q.Z
-], eK), this.waitFor(em.default, ed.Z, ei.Z, en.ZP, eo.Z, es.Z, e_.Z, g.Z, eu.Z, eI.Z, W.Z, S.ZP, el.Z, eR.Z, ex.Z, eg.Z, ea.Z, eC.ZP, eO.Z, et.Z, eN.Z, er.Z, F.Z, ep.Z, ef.Z, ee.Z, D.Z, f.Z, N.Z, V.Z, H.Z, Q.Z);
+], eK), this.waitFor(em.default, ed.Z, ei.Z, en.ZP, eo.Z, es.Z, e_.Z, g.Z, eu.Z, eI.Z, W.Z, S.ZP, el.Z, eR.Z, eO.Z, eg.Z, ea.Z, ef.ZP, ex.Z, et.Z, eN.Z, er.Z, F.Z, ep.Z, eC.Z, ee.Z, D.Z, C.Z, N.Z, V.Z, H.Z, Q.Z);
   }
   hasNotice() {
 return null != eG && null != eG.type;

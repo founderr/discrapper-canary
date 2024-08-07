@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(410030),
   E = n(70097),
   h = n(113434),
-  I = n(497505),
-  m = n(918701),
+  m = n(497505),
+  I = n(918701),
   g = n(78826),
   p = n(670638),
   T = n(981631),
@@ -32,7 +32,7 @@ errorHints: N,
 onCtxMenuClose: A,
 onCtxMenuOpen: v,
 onCtxMenuSelect: Z
-  } = e, L = (0, m.j8)(s), O = (0, _.ZP)(), R = (0, c.wj)(O) ? T.BRd.DARK : T.BRd.LIGHT, x = R === T.BRd.DARK, b = a.useMemo(() => (0, m.nP)(s.config.assets.hero), [s]), P = a.useContext(o.S).reducedMotion.enabled, M = (0, m.Mi)(s, I.jn.GIFT_INVENTORY_FOR_YOU), D = (0, h.tP)(s), y = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, j = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, U = a.useRef(C), G = a.useRef(null), k = (0, h.B6)(s.config.expiresAt, {
+  } = e, L = (0, I.j8)(s), O = (0, _.ZP)(), R = (0, c.wj)(O) ? T.BRd.DARK : T.BRd.LIGHT, x = R === T.BRd.DARK, b = a.useMemo(() => (0, I.nP)(s.config.assets.hero), [s]), P = a.useContext(o.S).reducedMotion.enabled, M = (0, I.Mi)(s, m.jn.GIFT_INVENTORY_FOR_YOU), D = (0, h.tP)(s), y = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, j = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, U = a.useRef(C), G = a.useRef(null), k = (0, h.B6)(s.config.expiresAt, {
 month: 'numeric',
 day: 'numeric'
   }), w = (0, h.z)(s), {
@@ -71,7 +71,7 @@ children: [
         controls: !1,
         children: (0, i.jsx)('source', {
           src: L,
-          type: (0, m.mN)(L)
+          type: (0, I.mN)(L)
         })
       }))
     }) : (0, i.jsx)(g.Fl, {
@@ -112,7 +112,7 @@ children: [
                 onOpen: v,
                 onClose: A,
                 onSelect: Z,
-                questContent: I.jn.QUEST_HOME_DESKTOP,
+                questContent: m.jn.QUEST_HOME_DESKTOP,
                 quest: s,
                 hideLearnMore: !0,
                 shouldShowDisclosure: !0,
@@ -136,7 +136,7 @@ children: [
               ref: e,
               className: f.partnerBranding,
               alt: s.config.messages.gameTitle,
-              src: (0, m.Gs)(s, R)
+              src: (0, I.Gs)(s, R)
             })
           }),
           (0, i.jsxs)('div', {

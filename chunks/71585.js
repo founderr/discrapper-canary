@@ -18,9 +18,9 @@ itemImpressions: []
   u = new Set(),
   d = 0,
   h = !1,
-  m = !1;
+  p = !1;
 
-function p() {
+function m() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   if (!e && Date.now() < d)
 return;
@@ -35,7 +35,7 @@ else
   break;
   }
   t > 0 && (o.itemImpressions = o.itemImpressions.slice(t));
-  let i = m ? 1000 : 57600000,
+  let i = p ? 1000 : 57600000,
 a = new Set(),
 s = new Set(),
 l = Date.now() - i,
@@ -55,10 +55,10 @@ o = {
 return o;
   }
   getImpressionCappedItemIds() {
-return p(), c;
+return m(), c;
   }
   getDebugFastImpressionCappingEnabled() {
-return m;
+return p;
   }
   reset() {
 o = r();
@@ -69,7 +69,7 @@ l(_, 'displayName', 'ContentInventoryPersistedStore'), l(_, 'persistKey', 'Conte
 let {
   itemIds: t
 } = e;
-!h && p();
+!h && m();
 let n = Date.now(),
   i = !1;
 for (let e of t)
@@ -77,15 +77,15 @@ for (let e of t)
     e,
     n
   ]), i = !0);
-return p(i), i;
+return m(i), i;
   },
   CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: function() {
-o.itemImpressions = [], p(!0);
+o.itemImpressions = [], m(!0);
   },
   CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: function() {
 return console.log('Item impressions:', o.itemImpressions), !1;
   },
   CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: function() {
-m = !m;
+p = !p;
   }
 });

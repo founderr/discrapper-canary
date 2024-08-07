@@ -1,6 +1,6 @@
 n.d(t, {
   B: function() {
-return m;
+return I;
   },
   F: function() {
 return g;
@@ -87,7 +87,7 @@ return a.useEffect(() => {
   })
 });
   },
-  I = e => {
+  m = e => {
 let {
   className: t,
   count: n
@@ -106,7 +106,7 @@ return (0, i.jsx)(l.Popout, {
   })
 });
   },
-  m = {
+  I = {
 DEFAULT: u.tagDefault,
 LIGHT: u.tagLight,
 ALT: u.tagAlt
@@ -116,7 +116,7 @@ let {
   tags: t,
   onTagClick: n,
   className: s,
-  discoveryTagStyle: l = m.DEFAULT,
+  discoveryTagStyle: l = I.DEFAULT,
   hideOverflow: c = !1,
   guildId: d,
   section: h
@@ -151,7 +151,7 @@ return a.useLayoutEffect(() => {
       hide: null != T && t >= T,
       text: e
     }, e)),
-    !c && null != T && T < f.length && (0, i.jsx)(I, {
+    !c && null != T && T < f.length && (0, i.jsx)(m, {
       className: l,
       onTagClick: n,
       tags: f.slice(T),

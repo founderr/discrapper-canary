@@ -21,8 +21,8 @@ quest: t,
 className: n,
 questContent: s,
 contentPosition: h,
-rowIndex: I
-  } = e, [m, g] = a.useState(!1), [p, T] = a.useState([]), S = a.useCallback(() => {
+rowIndex: m
+  } = e, [I, g] = a.useState(!1), [p, T] = a.useState([]), S = a.useCallback(() => {
 g(!0), (0, l.dA)({
   questId: t.id,
   event: _.rMx.QUEST_HOVER,
@@ -39,7 +39,7 @@ g(!1);
 questOrQuests: t,
 questContent: s,
 questContentPosition: h,
-questContentRowIndex: I,
+questContentRowIndex: m,
 trackGuildAndChannelMetadata: s === o.jn.QUESTS_EMBED,
 children: e => (0, i.jsxs)('div', {
   id: 'quest-tile-'.concat(t.id),
@@ -52,15 +52,15 @@ children: e => (0, i.jsxs)('div', {
   children: [
     (0, i.jsx)(d.Z, {
       quest: t,
-      isHovering: m,
+      isHovering: I,
       errorHints: p
     }),
     (0, i.jsx)(u.Z, {
       quest: t,
       questContent: s,
-      isHovering: m,
+      isHovering: I,
       contentPosition: h,
-      rowIndex: I,
+      rowIndex: m,
       onReceiveErrorHints: T
     })
   ]

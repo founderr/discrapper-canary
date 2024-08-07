@@ -62,8 +62,8 @@ var i, a = n(729594),
   _ = n(739566),
   E = n(695346),
   h = n(131704),
-  I = n(598077),
-  m = n(592125),
+  m = n(598077),
+  I = n(592125),
   g = n(430824),
   p = n(131951),
   T = n(375954),
@@ -137,8 +137,8 @@ function k(e) {
   let t = u.Z.parseToAST(e.content, !0, {
   channelId: e.channel_id
 }).map(y),
-n = m.Z.getChannel(e.channel_id),
-i = null != e.author ? (0, _.ij)(new I.Z(e.author), n) : void 0;
+n = I.Z.getChannel(e.channel_id),
+i = null != e.author ? (0, _.ij)(new m.Z(e.author), n) : void 0;
   return {
 id: e.id,
 blocked: e.blocked,

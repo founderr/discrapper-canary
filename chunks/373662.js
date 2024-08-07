@@ -28,16 +28,16 @@ onClick: m,
 onTooltipShow: T,
 onTooltipHide: h,
 key: N,
-disabled: C,
-dangerous: f,
+disabled: f,
+dangerous: C,
 separator: p,
 sparkle: g,
 showNewBadge: S,
 buttonClassName: A,
 children: R,
-...x
+...O
   } = e, {
-canShowReactionsOnMessageHover: O
+canShowReactionsOnMessageHover: x
   } = u.Z.useExperiment({
 location: 'HoverBar'
   }, {
@@ -61,7 +61,7 @@ children: e => {
     children: [
       (0, i.jsxs)(c.zx, {
         className: a()(A, {
-          [d.hoverBarButton]: O
+          [d.hoverBarButton]: x
         }),
         onMouseEnter: s,
         onMouseLeave: u,
@@ -69,9 +69,9 @@ children: e => {
           null == _ || _(), m(e);
         },
         'aria-label': null != n ? n : t,
-        disabled: C,
-        dangerous: f,
-        ...x,
+        disabled: f,
+        dangerous: C,
+        ...O,
         children: [
           null != E ? (0, i.jsx)(E, {
             className: d.icon,

@@ -1,8 +1,8 @@
 n(47120), n(411104);
 var s, r, i = n(735250),
   a = n(470079),
-  l = n(120356),
-  o = n.n(l),
+  o = n(120356),
+  l = n.n(o),
   c = n(442837),
   u = n(570140),
   d = n(893776),
@@ -108,14 +108,14 @@ return (0, i.jsxs)(g.ZP, {
       className: D.marginBottom8
     }),
     (0, i.jsx)(g.Dx, {
-      className: o()(D.marginTop8, D.marginBottom8),
+      className: l()(D.marginTop8, D.marginBottom8),
       children: b.Z.Messages.GIFT_CODE_AUTH_INVALID_TITLE
     }),
     (0, i.jsx)(g.DK, {
       children: b.Z.Messages.GIFT_CODE_AUTH_INVALID_BODY
     }),
     (0, i.jsx)(g.zx, {
-      className: o()(D.marginTop40, D.marginBottom8),
+      className: l()(D.marginTop40, D.marginBottom8),
       onClick: () => t(e),
       children: b.Z.Messages.CONTINUE_TO_WEBAPP
     }),
@@ -217,8 +217,8 @@ let {
   giftCode: s,
   isResolved: r,
   isAccepting: a,
-  transitionTo: l,
-  location: o
+  transitionTo: o,
+  location: l
 } = this.props, {
   fetchingUser: c,
   continueOnWeb: u
@@ -239,13 +239,13 @@ if (r) {
   return 'login' === this.getMode() ? (0, i.jsx)(S.Z, {
     giftCodeSKU: t,
     giftCode: s,
-    transitionTo: l,
-    location: o
+    transitionTo: o,
+    location: l
   }) : (0, i.jsx)(R.Z, {
     giftCodeSKU: t,
     giftCode: s,
-    transitionTo: l,
-    location: o
+    transitionTo: o,
+    location: l
   });
 }
 return null;

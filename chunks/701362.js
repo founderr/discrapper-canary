@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(58540),
   d = n(850827),
   h = n(951844),
-  m = n(258609),
-  p = n(199902),
+  p = n(258609),
+  m = n(199902),
   _ = n(314897),
   f = n(430824),
   E = n(496675),
@@ -133,8 +133,8 @@ channel: n,
 C.Z,
 f.Z,
 E.Z,
-m.Z
-  ], () => (0, x.p9)(n, C.Z, f.Z, E.Z, m.Z)), c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())), d = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)), h = (0, r.e7)([_.default], () => _.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([g.Z], () => (0, T.Um)(c, g.Z)), v = a.useMemo(() => ({
+p.Z
+  ], () => (0, x.p9)(n, C.Z, f.Z, E.Z, p.Z)), c = (0, r.e7)([m.Z], () => m.Z.getStreamForUser(t.id, n.getGuildId())), d = (0, r.e7)([m.Z], () => m.Z.getActiveStreamForApplicationStream(c)), h = (0, r.e7)([_.default], () => _.default.getId()), I = (0, T.Cf)(c), N = (0, r.e7)([g.Z], () => (0, T.Um)(c, g.Z)), v = a.useMemo(() => ({
 [n.guild_id]: [t.id]
   }), [
 n.guild_id,

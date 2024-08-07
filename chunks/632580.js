@@ -25,8 +25,8 @@ setPurchaseError: f,
 hasRedirectURL: E,
 setHasRedirectURL: x,
 isGift: N,
-baseAnalyticsData: S,
-analyticsLocation: T,
+baseAnalyticsData: T,
+analyticsLocation: S,
 analyticsLocations: h,
 flowStartTime: b,
 subscriptionPlan: g,
@@ -51,7 +51,7 @@ invoicePreview: U
   try {
 let e, t, i;
 if (d.default.track(m.rMx.PAYMENT_FLOW_COMPLETED, {
-    ...S,
+    ...T,
     subtotal: null == U ? void 0 : U.subtotal,
     tax: null == U ? void 0 : U.tax,
     expected_amount: null == U ? void 0 : U.total,
@@ -85,14 +85,14 @@ else if (a()(null != g, 'Missing subscriptionPlan'), N) {
   e = m.Uk1.has(C.type) ? await (0, s.G)(O, y, C, A.currency) : await (0, s.Mg)(O, {
     paymentSource: C,
     currency: A.currency
-  }, h, T, G);
+  }, h, S, G);
 else if (null != O) {
   let n = (0, _.al)(O, g.id, 1, new Set(P)),
     t = {
       paymentSource: C,
       currency: A.currency
     };
-  O.status === m.O0b.PAUSED ? t.status = m.O0b.ACTIVE : t.items = n, e = await (0, s.Mg)(O, t, h, T, G);
+  O.status === m.O0b.PAUSED ? t.status = m.O0b.ACTIVE : t.items = n, e = await (0, s.Mg)(O, t, h, S, G);
 } else
   e = await (0, o.Ld)({
     planId: g.id,
@@ -110,7 +110,7 @@ if (e.redirectConfirmation) {
 n(p.A.COMPLETED), 'subscription' in e ? t = null != e.subscription ? u.Z.createFromServer(e.subscription) : null : 'entitlements' in e && (i = null != e.entitlements ? e.entitlements : void 0), R(t, i);
   } catch (e) {
 n(p.A.FAIL), f(e), d.default.track(m.rMx.PAYMENT_FLOW_FAILED, {
-  ...S,
+  ...T,
   payment_error_code: null == e ? void 0 : e.code,
   payment_source_id: null == C ? void 0 : C.id,
   payment_source_type: null == C ? void 0 : C.type,

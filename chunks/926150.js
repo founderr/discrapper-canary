@@ -14,8 +14,8 @@ var a = n(442837),
   u = n(27144),
   d = n(741308),
   h = n(588822),
-  m = n(940730),
-  p = n(483424),
+  p = n(940730),
+  m = n(483424),
   _ = n(681837),
   f = n(91433),
   E = n(900927),
@@ -85,7 +85,7 @@ children: [
   P && (0, i.jsx)(x.Z, {
     user: t
   }),
-  L ? (0, i.jsx)(p.Z, {
+  L ? (0, i.jsx)(m.Z, {
     user: t,
     currentUser: n,
     className: A.activity
@@ -107,7 +107,7 @@ children: [
           userId: t.id
         })
       }),
-      (null == D ? void 0 : D.popularApplicationCommandIds) != null && (0, i.jsx)(m.Z, {
+      (null == D ? void 0 : D.popularApplicationCommandIds) != null && (0, i.jsx)(p.Z, {
         applicationId: D.id,
         commandIds: D.popularApplicationCommandIds,
         channel: b

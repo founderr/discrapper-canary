@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return Z;
+return I;
   }
 }), t(47120);
 var a = t(735250),
@@ -23,7 +23,7 @@ var a = t(735250),
   k = t(621060),
   v = t(689938),
   _ = t(813064),
-  j = t(979756);
+  C = t(979756);
 let w = [{
 key: 'event',
 cellClassName: _.eventColumn,
@@ -46,7 +46,7 @@ render(e) {
   }
 ];
 
-function C(e) {
+function j(e) {
   let {
 children: r
   } = e;
@@ -91,7 +91,7 @@ render: e => {
   return (0, a.jsxs)(a.Fragment, {
     children: [
       (0, a.jsxs)(h.ZP, {
-        className: o()(j.headerBar, _.subPanelHeaderBar),
+        className: o()(C.headerBar, _.subPanelHeaderBar),
         children: [
           (0, a.jsx)(h.ZP.Icon, {
             icon: d.AnalyticsIcon,
@@ -127,7 +127,7 @@ render: e => {
           })
         ]
       }),
-      (0, a.jsx)(C, {
+      (0, a.jsx)(j, {
         children: Object.entries(t).map(e => {
           let [r, t] = e;
           return (0, a.jsx)(N, {
@@ -175,7 +175,7 @@ networkActions: {
 }
   };
 
-function Z() {
+function I() {
   let e = n.useRef(null),
 r = (0, s.e7)([p.Z], () => p.Z.loggedEvents),
 [t, i] = n.useState(Object.keys(T)),
@@ -195,7 +195,7 @@ h = l.find(e => e.key === c),
 }, []);
   return (0, a.jsxs)('div', {
 ref: e,
-className: o()(j.panel, _.panel),
+className: o()(C.panel, _.panel),
 children: [
   (0, a.jsxs)('div', {
     className: _.toolbar,

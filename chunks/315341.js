@@ -12,7 +12,7 @@ var i = n(442837),
   E = n(981631),
   h = n(71509);
 
-function I(e, t) {
+function m(e, t) {
   let n = !1;
   return null == e.userContent && (e.userContent = {
 dismissedContents: new Uint8Array(),
@@ -21,8 +21,8 @@ recurringDismissibleContentStates: {}
   }), null == e.userContent.dismissedContents && (e.userContent.dismissedContents = new Uint8Array()), !(0, u.jl)(e.userContent.dismissedContents, t) && (e.userContent.dismissedContents = (0, u.GV)(e.userContent.dismissedContents, t), n = !0), n;
 }
 
-function m(e, t, n) {
-  return !!c.qc.hasHiddenHotspot(t) && I(e, n);
+function I(e, t, n) {
+  return !!c.qc.hasHiddenHotspot(t) && m(e, n);
 }
 let g = [{
 version: 2,
@@ -70,7 +70,7 @@ cleanup() {}
 version: 4,
 run(e) {
   let t = !1;
-  return (!0 === l.K.get('HAS_SEEN_HUB_UPSELL') || c.qc.hasHiddenHotspot(c.v6.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) && (t = I(e, a.z.HUB_WAITLIST_UPSELL)), t;
+  return (!0 === l.K.get('HAS_SEEN_HUB_UPSELL') || c.qc.hasHiddenHotspot(c.v6.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) && (t = m(e, a.z.HUB_WAITLIST_UPSELL)), t;
 },
 cleanup() {
   l.K.remove('HAS_SEEN_HUB_UPSELL');
@@ -115,26 +115,26 @@ cleanup() {}
   },
   {
 version: 7,
-run: e => m(e, c.v6.APPLICATION_COMMAND_TOOLTIP, a.z.APPLICATION_COMMAND_TOOLTIP),
+run: e => I(e, c.v6.APPLICATION_COMMAND_TOOLTIP, a.z.APPLICATION_COMMAND_TOOLTIP),
 cleanup() {}
   },
   {
 version: 8,
-run: e => m(e, c.v6.CHANNEL_BANNER_MEMBER_LIST_NOTICE, a.z.CHANNELINFO_CHANNELBANNER_NOTICE),
+run: e => I(e, c.v6.CHANNEL_BANNER_MEMBER_LIST_NOTICE, a.z.CHANNELINFO_CHANNELBANNER_NOTICE),
 cleanup() {}
   },
   {
 version: 9,
-run: e => (c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && l.K.set(h.Ip, 'true'), m(e, c.v6.MULTI_ACCOUNT_TOOLTIP, a.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
+run: e => (c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && l.K.set(h.Ip, 'true'), I(e, c.v6.MULTI_ACCOUNT_TOOLTIP, a.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
 cleanup() {}
   },
   {
 version: 10,
 run(e) {
   var t;
-  let n = m(e, c.v6.HUB_LINK_CHANNEL_NOTICE, a.z.CHANNEL_NOTICE_HUBLINK),
+  let n = I(e, c.v6.HUB_LINK_CHANNEL_NOTICE, a.z.CHANNEL_NOTICE_HUBLINK),
     i = null !== (t = l.K.get('channelNotices')) && void 0 !== t ? t : {};
-  return !1 === i[E.vID.INVITE] && I(e, a.z.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === i[E.vID.QUICKSWITCHER] && I(e, a.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === i[E.vID.GUILD_BOOSTING] && I(e, a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n;
+  return !1 === i[E.vID.INVITE] && m(e, a.z.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === i[E.vID.QUICKSWITCHER] && m(e, a.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === i[E.vID.GUILD_BOOSTING] && m(e, a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n;
 },
 cleanup() {
   l.K.remove('channelNotices');
@@ -144,7 +144,7 @@ cleanup() {
 version: 11,
 run(e) {
   let t = !1;
-  return m(e, c.v6.GUILD_EVENT_UPSELL, a.z.GUILD_HEADER_EVENT_UPSELL) && (t = !0), m(e, c.v6.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP, a.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS) && (t = !0), m(e, c.v6.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, a.z.GUILD_HEADER_ANIMATED_GUILD_BANNER) && (t = !0), t;
+  return I(e, c.v6.GUILD_EVENT_UPSELL, a.z.GUILD_HEADER_EVENT_UPSELL) && (t = !0), I(e, c.v6.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP, a.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS) && (t = !0), I(e, c.v6.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, a.z.GUILD_HEADER_ANIMATED_GUILD_BANNER) && (t = !0), t;
 },
 cleanup() {}
   },
@@ -152,7 +152,7 @@ cleanup() {}
 version: 12,
 run(e) {
   let t = !1;
-  return l.K.get('hideNag') && I(e, a.z.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), l.K.get('hideConnectSpotify') && I(e, a.z.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), l.K.get('hideConnectPlayStation') && I(e, a.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), l.K.get('hideMFASMSNotice') && I(e, a.z.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t;
+  return l.K.get('hideNag') && m(e, a.z.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), l.K.get('hideConnectSpotify') && m(e, a.z.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), l.K.get('hideConnectPlayStation') && m(e, a.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), l.K.get('hideMFASMSNotice') && m(e, a.z.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t;
 },
 cleanup() {
   l.K.remove('hideNag'), l.K.remove('hideConnectSpotify'), l.K.remove('hideConnectPlayStation'), l.K.remove('hideMFASMSNotice');
@@ -162,7 +162,7 @@ cleanup() {
 version: 13,
 run(e) {
   let t = !1;
-  return l.K.get('hidePremiumPromo') && I(e, a.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), l.K.get('hidePremiumTier2TrialEnding') && I(e, a.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), l.K.get('hidePremiumReactivateNotice') && I(e, a.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), m(e, c.v6.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, a.z.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t;
+  return l.K.get('hidePremiumPromo') && m(e, a.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), l.K.get('hidePremiumTier2TrialEnding') && m(e, a.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), l.K.get('hidePremiumReactivateNotice') && m(e, a.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), I(e, c.v6.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, a.z.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t;
 },
 cleanup() {
   l.K.remove('hidePremiumPromo'), l.K.remove('hidePremiumTier2TrialEnding'), l.K.remove('hidePremiumReactivateNotice');
@@ -170,12 +170,12 @@ cleanup() {
   },
   {
 version: 14,
-run: e => m(e, c.v6.ACTIVITY_BEB_TUTORIAL, a.z.ACTIVITIES_TUTORIAL_COACH_MARK),
+run: e => I(e, c.v6.ACTIVITY_BEB_TUTORIAL, a.z.ACTIVITIES_TUTORIAL_COACH_MARK),
 cleanup() {}
   },
   {
 version: 15,
-run: e => m(e, c.v6.NOW_PLAYING_CONSENT_CARD, a.z.NOW_PLAYING_CONSENT_CARD),
+run: e => I(e, c.v6.NOW_PLAYING_CONSENT_CARD, a.z.NOW_PLAYING_CONSENT_CARD),
 cleanup() {}
   },
   {
@@ -212,7 +212,7 @@ cleanup() {
 version: 18,
 run(e) {
   let t = !1;
-  return m(e, c.v6.GUILD_DELETE_FEEDBACK, a.z.GUILD_DELETE_FEEDBACK) && (t = !0), m(e, c.v6.GUILD_LEAVE_FEEDBACK, a.z.GUILD_LEAVE_FEEDBACK) && (t = !0), t;
+  return I(e, c.v6.GUILD_DELETE_FEEDBACK, a.z.GUILD_DELETE_FEEDBACK) && (t = !0), I(e, c.v6.GUILD_LEAVE_FEEDBACK, a.z.GUILD_LEAVE_FEEDBACK) && (t = !0), t;
 },
 cleanup() {}
   },
@@ -221,7 +221,7 @@ version: 19,
 run(e) {
   var t;
   let n = !1;
-  return null !== (t = l.K.get('forumHelperCardStorageKey')) && void 0 !== t && t && (n = I(e, a.z.FORUM_CHANNEL_HELPER_CARD)), n;
+  return null !== (t = l.K.get('forumHelperCardStorageKey')) && void 0 !== t && t && (n = m(e, a.z.FORUM_CHANNEL_HELPER_CARD)), n;
 },
 cleanup() {
   l.K.remove('forumHelperCardStorageKey');

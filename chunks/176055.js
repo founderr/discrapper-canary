@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(666743),
   E = n(770146),
   h = n(600164),
-  I = n(565138),
-  m = n(41776),
+  m = n(565138),
+  I = n(41776),
   g = n(703656),
   p = n(769654),
   T = n(601964),
@@ -76,9 +76,9 @@ if (t && n)
 let d = new T.ZP(e),
   u = N.Z.Messages.LURKER_MODE_VIEW_GUILD,
   _ = this.handleJoinOrView,
-  m = c.Button.Looks.FILLED,
+  I = c.Button.Looks.FILLED,
   g = c.Button.Colors.PRIMARY;
-return s ? n ? (m = c.Button.Looks.OUTLINED, g = A.buttonColorInGuild, u = (0, i.jsxs)(h.Z, {
+return s ? n ? (I = c.Button.Looks.OUTLINED, g = A.buttonColorInGuild, u = (0, i.jsxs)(h.Z, {
   align: h.Z.Align.CENTER,
   children: [
     (0, i.jsx)('div', {
@@ -102,10 +102,10 @@ return s ? n ? (m = c.Button.Looks.OUTLINED, g = A.buttonColorInGuild, u = (0, i
         (0, i.jsxs)('div', {
           className: A.info,
           children: [
-            (0, i.jsx)(I.Z, {
+            (0, i.jsx)(m.Z, {
               guild: d,
               active: !0,
-              size: I.Z.Sizes.LARGE,
+              size: m.Z.Sizes.LARGE,
               className: A.guildIcon
             }),
             (0, i.jsxs)('div', {
@@ -125,7 +125,7 @@ return s ? n ? (m = c.Button.Looks.OUTLINED, g = A.buttonColorInGuild, u = (0, i
           className: A.actionButton,
           fullWidth: !0,
           color: g,
-          look: m,
+          look: I,
           onClick: _,
           children: u
         })
@@ -165,11 +165,11 @@ super(...e), v(this, 'handleJoinOrView', async () => {
 }
 t.Z = (0, _.Z)(o.ZP.connectStores([
   S.Z,
-  m.Z
+  I.Z
 ], e => {
   let {
 guild: t
-  } = e, n = m.Z.isLurking(t.id);
+  } = e, n = I.Z.isLurking(t.id);
   return {
 isInGuild: null != S.Z.getGuild(t.id) && !n,
 isLurking: n

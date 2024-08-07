@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(569984),
   E = n(918701),
   h = n(93127),
-  I = n(814443),
-  m = n(594174),
+  m = n(814443),
+  I = n(594174),
   g = n(801077),
   p = n(626135),
   T = n(70956),
@@ -49,21 +49,21 @@ let {
   applicationStreams: _,
   currentActivities: E,
   voiceChannels: h
-} = t, I = u.length, m = _.length, g = E.length, T = h.length > 0, S = a.useCallback(() => {
+} = t, m = u.length, I = _.length, g = E.length, T = h.length > 0, S = a.useCallback(() => {
   let e = E.filter(e => {
     var t, n;
     return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
   }).map(e => e.game.name);
   p.default.track(Z.rMx.NOW_PLAYING_CARD_HOVERED, {
-    num_users: I,
-    num_streams: m,
+    num_users: m,
+    num_streams: I,
     num_activities: g,
     in_voice_channel: T,
     games_detected: e
   });
 }, [
-  I,
   m,
+  I,
   g,
   T,
   E
@@ -111,14 +111,14 @@ fetching: s,
 currentUser: r
   } = (0, c.cj)([
 g.Z,
-I.Z,
-m.default
+m.Z,
+I.default
   ], () => ({
 nowPlayingCards: g.Z.nowPlayingCards,
 loaded: g.Z.loaded,
-needsRefresh: I.Z.needsRefresh(),
-fetching: I.Z.getFetching(),
-currentUser: m.default.getCurrentUser()
+needsRefresh: m.Z.needsRefresh(),
+fetching: m.Z.getFetching(),
+currentUser: I.default.getCurrentUser()
   })), l = (0, c.e7)([_.Z], () => _.Z.quests);
   a.useEffect(() => (u.Z.wait(() => S.L()), () => u.Z.wait(() => S.v())), [null == r ? void 0 : r.id]), a.useEffect(() => {
 n && !s && P();

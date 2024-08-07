@@ -13,13 +13,13 @@ var i = n(735250),
   u = n(410030),
   d = n(231338),
   h = n(493796);
-let m = {
+let p = {
 mass: 1,
 tension: 400,
 friction: 60,
 clamp: !0
   },
-  p = {
+  m = {
 mass: 1,
 tension: 600,
 friction: 60,
@@ -184,7 +184,7 @@ from: {
 to: {
   height: T
 },
-config: m,
+config: p,
 delay: s ? 0 : 800,
 onRest: () => E(!0)
   }), v = (0, o.useSpring)({
@@ -194,7 +194,7 @@ from: {
 to: {
   opacity: 1
 },
-config: p,
+config: m,
 delay: 1000
   }), S = (0, u.Fg)(), Z = S === d.BR.LIGHT ? '#FFFFFF' : '#1C1D23', A = S === d.BR.LIGHT ? '#EBEDEF' : '#26272F', M = S === d.BR.LIGHT ? '#CCCCCC' : '#1A1A1E';
   return (0, i.jsx)('div', {

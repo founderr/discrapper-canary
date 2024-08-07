@@ -16,8 +16,8 @@ var a = n(442837),
   _ = n(43267),
   E = n(522289),
   h = n(699516),
-  I = n(51144),
-  m = n(998502),
+  m = n(51144),
+  I = n(998502),
   g = n(620924),
   p = n(332712),
   T = n(81471),
@@ -52,7 +52,7 @@ return null == n || 0 === n.length ? (0, i.jsx)(s.Text, {
   ]
 });
   },
-  N = m.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+  N = I.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 
 function A(e) {
   var t;
@@ -60,7 +60,7 @@ function A(e) {
 channel: n,
 otherUser: c,
 active: E
-  } = e, m = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), p = (0, a.e7)([h.Z], () => null == c ? null : h.Z.getNickname(c.id)), A = !m && E, v = (0, g.c)(n), {
+  } = e, I = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), p = (0, a.e7)([h.Z], () => null == c ? null : h.Z.getNickname(c.id)), A = !I && E, v = (0, g.c)(n), {
 avatarDecorationSrc: Z
   } = (0, u.Z)({
 user: c,
@@ -88,7 +88,7 @@ children: [
             showAccountIdentifier: !0,
             className: f.tagContainer,
             usernameClass: f.username,
-            discriminatorClass: null != I.ZP.getGlobalName(c) ? f.globalName : f.discriminator
+            discriminatorClass: null != m.ZP.getGlobalName(c) ? f.globalName : f.discriminator
           }),
           (0, i.jsx)(s.Text, {
             className: f.timestampWithPreview,

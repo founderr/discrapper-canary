@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 });
 var i = n(735250),
@@ -15,13 +15,13 @@ var i = n(735250),
   _ = n(170245),
   E = n(981631),
   h = n(689938),
-  I = n(812155);
+  m = n(812155);
 
-function m(e) {
+function I(e) {
   let {
 user: t,
 key: n,
-isFocused: m
+isFocused: I
   } = e, g = a.useContext(c.AnalyticsContext), {
 analyticsLocations: p
   } = (0, l.ZP)(), T = e => {
@@ -30,7 +30,7 @@ e.stopPropagation(), r.Z.unblockUser(t.id, {
 });
   };
   return (0, i.jsx)(u.Z, {
-isFocused: m,
+isFocused: I,
 onClick: () => (0, o.openUserProfileModal)({
   userId: t.id,
   sourceAnalyticsLocations: p,
@@ -38,7 +38,7 @@ onClick: () => (0, o.openUserProfileModal)({
 }),
 user: t,
 children: e => (0, i.jsxs)('div', {
-  className: I.listItemContents,
+  className: m.listItemContents,
   children: [
     (0, i.jsx)(_.Z, {
       user: t,

@@ -11,13 +11,13 @@ var a = n(266067),
   _ = n(600164),
   E = n(984370),
   h = n(299657),
-  I = n(594174),
-  m = n(981631),
+  m = n(594174),
+  I = n(981631),
   g = n(474936),
   p = n(689938),
   T = n(314974);
-let S = s.ZP.connectStores([I.default], () => ({
-  user: I.default.getCurrentUser()
+let S = s.ZP.connectStores([m.default], () => ({
+  user: m.default.getCurrentUser()
 }))((0, c.Z)((0, o.Z)(e => {
   let {
 analyticsLocations: t
@@ -29,7 +29,7 @@ user: s
 className: T.homeWrapperNormal,
 children: [
   (0, i.jsx)(l.Z, {
-    section: m.jXE.NAVIGATION,
+    section: I.jXE.NAVIGATION,
     children: (0, i.jsxs)(E.Z, {
       isAuthenticated: n,
       className: T.headerBar,
@@ -58,7 +58,7 @@ children: [
   })
 ]
   }) : (0, i.jsx)(a.l_, {
-to: m.Z5c.LOGIN
+to: I.Z5c.LOGIN
   });
 })));
 t.Z = S;

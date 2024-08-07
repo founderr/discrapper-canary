@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(900849),
   E = n(374939),
   h = n(731455),
-  I = n(689938),
-  m = n(511862);
+  m = n(689938),
+  I = n(511862);
 
 function g(e) {
   let {
@@ -31,16 +31,16 @@ _.Zt({
   categoryId: h.U
 });
   }, [t]), (0, i.jsx)(E.Z, {
-title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
-description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
+title: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
+description: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
 onScroll: n,
 children: (0, i.jsx)('div', {
-  className: m.content,
+  className: I.content,
   children: g.length > 0 ? (0, i.jsxs)('div', {
     children: [
       (0, i.jsx)(r.Heading, {
         variant: 'heading-lg/semibold',
-        children: I.Z.Messages.YOUR_HUB
+        children: m.Z.Messages.YOUR_HUB
       }),
       g.map(e => (0, i.jsx)(o.Z, {
         onView: () => l.Z.transitionToGuildSync(e.id),

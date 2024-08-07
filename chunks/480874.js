@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(82295),
   E = n(797614),
   h = n(626135),
-  I = n(26373),
-  m = n(486622),
+  m = n(26373),
+  I = n(486622),
   g = n(922409),
   p = n(727813),
   T = n(355350),
@@ -31,7 +31,7 @@ function Z() {
   let e = a.useRef(null),
 t = (0, p.Z)(),
 n = (0, T.w)(),
-s = (0, I.V)(),
+s = (0, m.V)(),
 Z = (0, d.N)(),
 L = (0, u.Z)('message-requests-spam-list'),
 {
@@ -42,7 +42,7 @@ R = a.useCallback(() => {
 }, []),
 {
   rejectAll: x
-} = (0, m.m)({
+} = (0, I.m)({
   onError: R
 }),
 b = a.useCallback(() => {

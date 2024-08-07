@@ -13,8 +13,8 @@ var i, a, s = n(735250),
   _ = n(232567),
   E = n(100527),
   h = n(471445),
-  I = n(15274),
-  m = n(924301),
+  m = n(15274),
+  I = n(924301),
   g = n(504160),
   p = n(151864),
   T = n(725436),
@@ -83,7 +83,7 @@ let {
   isEventNoticeHidden: d,
   isStageNoticeHidden: _,
   isStudyRoomNotice: E
-} = e, I = null != n && null != i && !_, p = null != t ? (0, N.DK)(t) : null;
+} = e, m = null != n && null != i && !_, p = null != t ? (0, N.DK)(t) : null;
 if (E && null != i) {
   let e = (0, h.KS)(i);
   return {
@@ -102,7 +102,7 @@ if (E && null != i) {
   };
 }
 if (null == t || d) {
-  if (I) {
+  if (m) {
     let e = U.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON;
     return (null == r ? void 0 : r.speaker) ? e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
       noticeType: 0,
@@ -142,7 +142,7 @@ if (null == t || d) {
     };
   }
 } else {
-  if (t.entity_type === j.WX.STAGE_INSTANCE && I) {
+  if (t.entity_type === j.WX.STAGE_INSTANCE && m) {
     let e = U.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON;
     return (null == r ? void 0 : r.speaker) ? e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
       noticeType: 0,
@@ -187,7 +187,7 @@ if (null == t || d) {
       return {
         noticeType: null
       };
-    let n = m.ZP.getUserCount(t.id, p);
+    let n = I.ZP.getUserCount(t.id, p);
     return {
       noticeType: 1,
       title: t.name,
@@ -226,7 +226,7 @@ if (null == t || d) {
     };
   } else if (t.entity_type === j.WX.VOICE && null != i) {
     let e = (0, h.KS)(i),
-      n = m.ZP.getUserCount(t.id, p);
+      n = I.ZP.getUserCount(t.id, p);
     return {
       noticeType: 2,
       title: t.name,
@@ -372,7 +372,7 @@ children: [
       else {
         if (null == a)
           return;
-        (0, I.bO)({
+        (0, m.bO)({
           eventId: a.id
         });
       }

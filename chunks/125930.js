@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(358085),
   E = n(843445),
   h = n(981631),
-  I = n(689938),
-  m = n(601416);
+  m = n(689938),
+  I = n(601416);
 let g = {
   [h.TaA.WINDOWS]: _.PlatformTypes.WINDOWS,
   [h.TaA.MACOS]: _.PlatformTypes.OSX,
@@ -29,12 +29,12 @@ let {
 return (0, i.jsx)(l.Button, {
   size: s ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
   fullWidth: !s,
-  color: e ? m.tabSelectedColor : m.tabNotSelectedColor,
+  color: e ? I.tabSelectedColor : I.tabNotSelectedColor,
   className: r()({
-    [m.tabPageLarge]: s,
-    [m.tabPageSmall]: !s,
-    [m.tabSelected]: e,
-    [m.tabNotSelected]: !e
+    [I.tabPageLarge]: s,
+    [I.tabPageSmall]: !s,
+    [I.tabSelected]: e,
+    [I.tabNotSelected]: !e
   }),
   onClick: a,
   children: t
@@ -42,41 +42,41 @@ return (0, i.jsx)(l.Button, {
   }
 }
 let T = e => [{
-key: I.Z.Messages.APPLICATION_STORE_SPECS_OS,
+key: m.Z.Messages.APPLICATION_STORE_SPECS_OS,
 value: e.operating_system_version
   },
   {
-key: I.Z.Messages.APPLICATION_STORE_SPECS_CPU,
+key: m.Z.Messages.APPLICATION_STORE_SPECS_CPU,
 value: e.cpu
   },
   {
-key: I.Z.Messages.APPLICATION_STORE_SPECS_MEMORY,
-value: null != e.ram ? I.Z.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({
+key: m.Z.Messages.APPLICATION_STORE_SPECS_MEMORY,
+value: null != e.ram ? m.Z.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({
   size: (0, d.BU)(1000 * e.ram, {
     showDecimalForGB: !1
   })
 }) : null
   },
   {
-key: I.Z.Messages.APPLICATION_STORE_SPECS_VIDEO,
+key: m.Z.Messages.APPLICATION_STORE_SPECS_VIDEO,
 value: e.gpu
   },
   {
-key: I.Z.Messages.APPLICATION_STORE_SPECS_STORAGE,
+key: m.Z.Messages.APPLICATION_STORE_SPECS_STORAGE,
 value: null != e.disk ? (0, d.BU)(1000 * e.disk, {
   showDecimalForGB: !1
 }) : null
   },
   {
-key: I.Z.Messages.APPLICATION_STORE_SPECS_SOUND,
+key: m.Z.Messages.APPLICATION_STORE_SPECS_SOUND,
 value: e.sound_card
   },
   {
-key: I.Z.Messages.APPLICATION_STORE_SPECS_NETWORK,
+key: m.Z.Messages.APPLICATION_STORE_SPECS_NETWORK,
 value: e.network
   },
   {
-key: I.Z.Messages.APPLICATION_STORE_SPECS_NOTES,
+key: m.Z.Messages.APPLICATION_STORE_SPECS_NOTES,
 value: e.notes
   }
 ];
@@ -99,10 +99,10 @@ let {
   selectedOperatingSystem: n
 } = this.state, a = Object.keys(t);
 return 1 === a.length ? null : (0, i.jsxs)(c.Z, {
-  className: m.tabs,
+  className: I.tabs,
   children: [
     (0, i.jsx)('div', {
-      className: m.separator
+      className: I.separator
     }),
     a.map(t => (0, i.jsx)(p, {
       active: t === n,
@@ -111,11 +111,11 @@ return 1 === a.length ? null : (0, i.jsxs)(c.Z, {
       children: function(e) {
         switch (e) {
           case h.TaA.WINDOWS:
-            return I.Z.Messages.WINDOWS;
+            return m.Z.Messages.WINDOWS;
           case h.TaA.MACOS:
-            return I.Z.Messages.MACOS;
+            return m.Z.Messages.MACOS;
           case h.TaA.LINUX:
-            return I.Z.Messages.LINUX;
+            return m.Z.Messages.LINUX;
         }
       }(t)
     }, t))
@@ -128,10 +128,10 @@ if (null == e)
 let n = T(e).map((e, t) => {
   let n = null != e.value ? e.value.trim() : null;
   return null == n || 0 === n.length ? null : (0, i.jsxs)('div', {
-    className: m.requirement,
+    className: I.requirement,
     children: [
       (0, i.jsxs)('span', {
-        className: m.requirementKey,
+        className: I.requirementKey,
         children: [
           e.key,
           ':'
@@ -142,7 +142,7 @@ let n = T(e).map((e, t) => {
   }, t);
 }).filter(u.lm);
 return (0, i.jsxs)('div', {
-  className: m.requirements,
+  className: I.requirements,
   children: [
     (0, i.jsx)(o.Z, {
       tag: 'h4',
@@ -158,10 +158,10 @@ let {
   recommended: t
 } = this.props.systemRequirements[this.state.selectedOperatingSystem];
 return (0, i.jsxs)('div', {
-  className: m.requirementsContainer,
+  className: I.requirementsContainer,
   children: [
-    this.renderRequirementsSection(e, I.Z.Messages.APPLICATION_STORE_SPECS_MINIMUM),
-    this.renderRequirementsSection(t, I.Z.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)
+    this.renderRequirementsSection(e, m.Z.Messages.APPLICATION_STORE_SPECS_MINIMUM),
+    this.renderRequirementsSection(t, m.Z.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)
   ]
 });
   }
@@ -170,7 +170,7 @@ return (0, i.jsxs)('div', {
   className: this.props.className,
   children: [
     (0, i.jsx)(o.Z, {
-      children: I.Z.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS
+      children: m.Z.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS
     }),
     this.renderTabs(),
     this.renderBody()

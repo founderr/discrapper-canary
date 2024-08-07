@@ -10,8 +10,8 @@ var i = n(735250),
   _ = n(937889),
   E = n(267128),
   h = n(695346),
-  I = n(496675),
-  m = n(699516),
+  m = n(496675),
+  I = n(699516),
   g = n(868807),
   p = n(981631),
   T = n(217702),
@@ -25,7 +25,7 @@ channel: t
 loaded: n,
 error: s,
 message: N
-  } = (0, g.a)(t), A = (0, d.p)(), v = (0, l.e7)([m.Z], () => null != N && m.Z.isBlockedForMessage(N), [N]), Z = (0, l.e7)([I.Z], () => I.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = h.cC.useSetting(), {
+  } = (0, g.a)(t), A = (0, d.p)(), v = (0, l.e7)([I.Z], () => null != N && I.Z.isBlockedForMessage(N), [N]), Z = (0, l.e7)([m.Z], () => m.Z.can(p.Plq.MANAGE_MESSAGES, t)), L = h.cC.useSetting(), {
 content: O
   } = a.useMemo(() => (null == N ? void 0 : N.content) != null && '' !== N.content ? (0, _.ZP)(N, {
 formatInline: !0,

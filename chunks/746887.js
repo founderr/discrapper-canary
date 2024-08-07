@@ -6,14 +6,14 @@ return a;
 var i = t(211739),
   l = t(680089),
   o = t(984933),
-  r = t(914010),
-  E = t(981631);
+  E = t(914010),
+  r = t(981631);
 let a = {
   binds: ['mod+shift+a'],
   comboKeysBindGlobal: !0,
   action() {
-let e = r.Z.getGuildId();
-return null != e && (o.ZP.getChannels(e)[E.d4z.GUILD_CATEGORY].some(e => {
+let e = E.Z.getGuildId();
+return null != e && (o.ZP.getChannels(e)[r.d4z.GUILD_CATEGORY].some(e => {
   let {
     channel: n
   } = e;

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var i = n(735250),
@@ -16,13 +16,13 @@ var i = n(735250),
   E = n(647086),
   h = n(135899);
 
-function I(e) {
+function m(e) {
   var t;
-  let I = (0, l.SE)(e),
-m = h.$X.some(t => (null == e ? void 0 : e.id) !== E._ && c.oz(t, e)),
+  let m = (0, l.SE)(e),
+I = h.$X.some(t => (null == e ? void 0 : e.id) !== E._ && c.oz(t, e)),
 g = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES,
 p = (0, d.FT)(s.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds),
-T = I && (m || g) && !p,
+T = m && (I || g) && !p,
 S = a.useCallback(() => {
   var t;
   (0, d.Qd)(s.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, _.L.DISMISS);
@@ -37,7 +37,7 @@ if (T && !f.current) {
     } = await n.e('54597').then(n.bind(n, 29022));
     return n => (0, i.jsx)(t, {
       guild: e,
-      canEveryoneModerate: m,
+      canEveryoneModerate: I,
       isDefaultNotificationsAllMessages: g,
       ...n
     });
@@ -49,7 +49,7 @@ if (T && !f.current) {
   }), f.current = !0;
 }
   }, [
-m,
+I,
 e,
 S,
 g,

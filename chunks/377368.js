@@ -12,8 +12,8 @@ var a = n(481060),
   _ = n(131468),
   E = n(208049),
   h = n(763296),
-  I = n(641015),
-  m = n(22382),
+  m = n(641015),
+  I = n(22382),
   g = n(747071),
   p = n(49230),
   T = n(981631),
@@ -51,7 +51,7 @@ super(...e), t = this, f(this, 'playingSoundsWeb', new Map()), f(this, '_stopAnd
     try {
       let a = {
         soundKey: ''.concat(i, '-').concat(e),
-        soundURL: (0, m.Z)(e),
+        soundURL: (0, I.Z)(e),
         soundVolume: (0, g.Z)(n),
         reportSoundStartedPlaying: () => (0, E.xR)(e, i)
       };
@@ -66,7 +66,7 @@ super(...e), t = this, f(this, 'playingSoundsWeb', new Map()), f(this, '_stopAnd
     return;
   let s = o.Z.getChannel(t),
     c = u.Z.getKeybindForAction(T.kg4.SOUNDBOARD_HOLD);
-  null != s && (0, I.Z)(s) && null != c && l.Z.hasHotspot(r.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, a.openModalLazy)(async () => {
+  null != s && (0, m.Z)(s) && null != c && l.Z.hasHotspot(r.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, a.openModalLazy)(async () => {
     let {
       default: t
     } = await n.e('69208').then(n.bind(n, 490166));

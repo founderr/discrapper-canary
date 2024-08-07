@@ -20,8 +20,8 @@ var s = n(120356),
   T = n(358085),
   h = n(998502),
   N = n(665149),
-  C = n(300986),
-  f = n(314451),
+  f = n(300986),
+  C = n(314451),
   p = n(35583),
   g = n(981631),
   S = n(176505),
@@ -34,7 +34,7 @@ let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).
   }
 }
 
-function x(e) {
+function O(e) {
   let {
 children: t,
 className: n,
@@ -46,8 +46,8 @@ toolbar: T,
 mobileToolbar: h,
 'aria-label': g,
 'aria-labelledby': S,
-scrollable: x,
-role: O,
+scrollable: O,
+role: x,
 hideSearch: M,
 showDivider: v
   } = e, L = (0, l.e7)([m.default], () => m.default.getCurrentUser()), Z = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1, {
@@ -77,7 +77,7 @@ toolbar: function() {
       }),
       (0, i.jsx)(d.Z, {}),
       P ? (0, i.jsx)(E.Z, {}) : null,
-      Z ? (0, i.jsx)(f.Z, {}) : (0, i.jsx)(C.Z, {})
+      Z ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(f.Z, {})
     ]
   });
 }(),
@@ -85,13 +85,13 @@ transparent: c,
 onDoubleClick: R,
 'aria-label': g,
 'aria-labelledby': S,
-role: O,
-scrollable: x,
+role: x,
+scrollable: O,
 children: t
   });
 }
 
-function O(e) {
+function x(e) {
   let {
 children: t,
 className: n,
@@ -120,10 +120,10 @@ analyticsLocations: s
   });
   return (0, i.jsx)(c.Gt, {
 value: s,
-children: t ? (0, i.jsx)(x, {
+children: t ? (0, i.jsx)(O, {
   ...n,
   className: r
-}) : (0, i.jsx)(O, {
+}) : (0, i.jsx)(x, {
   ...n,
   className: r
 })

@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(486622),
   E = n(376191),
   h = n(86203),
-  I = n(689938),
-  m = n(679638);
+  m = n(689938),
+  I = n(679638);
 
 function g(e) {
   let {
@@ -24,7 +24,7 @@ active: t,
 user: n,
 channel: g
   } = e, p = (0, u.V)(), T = a.useCallback(() => {
-(0, r.showToast)((0, r.createToast)(I.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE)), l.Z.increment({
+(0, r.showToast)((0, r.createToast)(m.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE)), l.Z.increment({
   name: s.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW
 });
   }, []), S = a.useCallback(() => {
@@ -46,7 +46,7 @@ onRejectSuccess: S,
 onError: T
   }), Z = N || A, L = Z || v;
   return (0, i.jsxs)('div', {
-className: m.container,
+className: I.container,
 children: [
   (0, i.jsx)(E.Z, {
     otherUser: n,
@@ -54,10 +54,10 @@ children: [
     active: t
   }),
   (0, i.jsxs)('div', {
-    className: m.actions,
+    className: I.actions,
     children: [
       (0, i.jsx)(r.Button, {
-        className: m.button,
+        className: I.button,
         color: r.ButtonColors.PRIMARY,
         size: r.Button.Sizes.SMALL,
         onClick: e => {
@@ -65,10 +65,10 @@ children: [
         },
         disabled: L,
         submitting: Z,
-        children: I.Z.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
+        children: m.Z.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
       }),
       (0, i.jsx)(h.Z, {
-        className: m.button,
+        className: I.button,
         channel: g,
         buttonSize: r.Button.Sizes.SMALL
       })

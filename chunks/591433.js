@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(626135),
   E = n(900849),
   h = n(143021),
-  I = n(393596),
-  m = n(689938),
+  m = n(393596),
+  I = n(689938),
   g = n(856059);
 let p = 52,
   T = {
@@ -79,7 +79,7 @@ b = a.useCallback(e => {
       return (0, i.jsx)(l.X, {
         variant: 'heading-xl/semibold',
         className: g.heading,
-        children: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
+        children: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
           query: N
         })
       });
@@ -172,7 +172,7 @@ children: (0, i.jsx)(o.MasonryList, {
     },
     children: (0, i.jsx)('div', {
       className: g.sidebarContent,
-      children: (0, i.jsx)(I.Z, {
+      children: (0, i.jsx)(m.Z, {
         loadId: t
       })
     })

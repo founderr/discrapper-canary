@@ -1,22 +1,22 @@
-i.d(s, {
+s.d(n, {
   Z: function() {
-return o;
+return t;
   }
 });
-var n = i(735250);
-i(470079);
-var l = i(689938),
-  t = i(735393);
+var i = s(735250);
+s(470079);
+var l = s(689938),
+  o = s(735393);
 
-function o() {
-  return (0, n.jsxs)('div', {
-className: t.empty,
+function t() {
+  return (0, i.jsxs)('div', {
+className: o.empty,
 children: [
-  (0, n.jsx)('div', {
-    className: t.emptyIconStreamerMode
+  (0, i.jsx)('div', {
+    className: o.emptyIconStreamerMode
   }),
-  (0, n.jsx)('div', {
-    className: t.emptyText,
+  (0, i.jsx)('div', {
+    className: o.emptyText,
     children: l.Z.Messages.STREAMER_MODE_ENABLED
   })
 ]

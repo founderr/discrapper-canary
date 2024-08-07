@@ -19,16 +19,16 @@ var i = n(735250),
   T = n(906732),
   h = n(103575),
   N = n(768581),
-  C = n(55935),
-  f = n(739566),
+  f = n(55935),
+  C = n(739566),
   p = n(421399),
   g = n(310423),
   S = n(223021),
   A = n(981631),
   R = n(689938),
-  x = n(475525);
+  O = n(475525);
 
-function O(e) {
+function x(e) {
   let {
 width: t = 6,
 height: n = 10,
@@ -79,7 +79,7 @@ interactionData: a.interactionData
 l,
 a.id,
 a.interactionData
-  ]), L = (0, f.Sw)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, l), Z = s.useMemo(() => e.compact ? (0, S.Z)((0, C.vc)(u()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(l.id, !0), D = a.interaction;
+  ]), L = (0, C.Sw)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, l), Z = s.useMemo(() => e.compact ? (0, S.Z)((0, f.vc)(u()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(l.id, !0), D = a.interaction;
   if (null == D || null == L)
 return null;
   let b = () => {
@@ -96,14 +96,14 @@ let t = function(e, t) {
     } = e;
     if (a && null == s.activityInstance || o)
       return (0, i.jsx)('div', {
-        className: x.replyBadge,
-        children: (0, i.jsx)(O, {
-          className: x.commandIcon
+        className: O.replyBadge,
+        children: (0, i.jsx)(x, {
+          className: O.commandIcon
         })
       });
     if (null != s.interaction) {
       var I, m, T;
-      let e = (0, f.ij)(s.interaction.user, l);
+      let e = (0, C.ij)(s.interaction.user, l);
       n = null !== (T = N.ZP.getGuildMemberAvatarURL({
         avatar: null !== (I = e.guildMemberAvatar) && void 0 !== I ? I : void 0,
         userId: s.interaction.user.id,
@@ -126,8 +126,8 @@ let t = function(e, t) {
         onContextMenu: l,
         onMouseDown: o,
         className: r()({
-          [x.executedCommandAvatar]: !0,
-          [x.clickable]: null != a
+          [O.executedCommandAvatar]: !0,
+          [O.clickable]: null != a
         })
       });
     }({
@@ -199,7 +199,7 @@ n = P ? R.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
     tag: 'span',
     onClick: e,
     children: (0, i.jsx)('div', {
-      className: r()(x.commandName, x.clickable),
+      className: r()(O.commandName, O.clickable),
       children: R.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
     })
   })
@@ -235,20 +235,20 @@ n = R.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
             tag: 'span',
             onClick: a,
             children: (0, i.jsxs)('div', {
-              className: r()(x.appLauncherOnboardingCommandName, x.clickable),
+              className: r()(O.appLauncherOnboardingCommandName, O.clickable),
               children: [
                 (0, i.jsx)(d.AppsIcon, {
                   size: 'custom',
                   color: 'currentColor',
                   height: 10,
                   width: 10,
-                  className: x.appsIcon
+                  className: O.appsIcon
                 }),
                 o
               ]
             })
           }) : (0, i.jsx)('div', {
-            className: x.commandName,
+            className: O.commandName,
             children: o
           });
         }
@@ -262,7 +262,7 @@ n = R.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
   return (0, i.jsx)(T.Gt, {
 value: c,
 children: (0, i.jsx)('div', {
-  className: r()(x.repliedMessage, x.executedCommand, Z),
+  className: r()(O.repliedMessage, O.executedCommand, Z),
   'aria-hidden': !e.compact,
   children: n
 })

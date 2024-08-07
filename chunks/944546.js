@@ -17,8 +17,8 @@ var a = n(442837),
   u = n(785717),
   d = n(726059),
   h = n(171368),
-  m = n(981631),
-  p = n(689938),
+  p = n(981631),
+  m = n(689938),
   _ = n(735393);
 let f = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_40);
 
@@ -38,7 +38,7 @@ onContextMenu: e => {
     } = await Promise.all([
       n.e('79695'),
       n.e('69220'),
-      n.e('91605')
+      n.e('86541')
     ]).then(n.bind(n, 881351));
     return n => (0, i.jsx)(e, {
       ...n,
@@ -80,7 +80,7 @@ n(), (0, h.openUserProfileModal)({
   userId: e,
   sourceAnalyticsLocations: l,
   analyticsLocation: {
-    section: m.jXE.USER_PROFILE_MUTUAL_FRIENDS
+    section: p.jXE.USER_PROFILE_MUTUAL_FRIENDS
   }
 });
   };
@@ -98,7 +98,7 @@ children: null == a ? (0, i.jsx)('div', {
     }),
     (0, i.jsx)('div', {
       className: _.emptyText,
-      children: p.Z.Messages.NO_MUTUAL_FRIENDS
+      children: m.Z.Messages.NO_MUTUAL_FRIENDS
     })
   ]
 }) : a.map(e => {

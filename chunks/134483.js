@@ -15,15 +15,15 @@ var i = n(735250),
   T = n(594174),
   h = n(617136),
   N = n(272008),
-  C = n(113434),
-  f = n(569984),
+  f = n(113434),
+  C = n(569984),
   p = n(497505),
   g = n(918701),
   S = n(5881),
   A = n(566078),
   R = n(602667),
-  x = n(340100),
-  O = n(611855),
+  O = n(340100),
+  x = n(611855),
   M = n(644646),
   v = n(670638),
   L = n(667105),
@@ -46,7 +46,7 @@ quest: q
   } = (0, l.cj)([
 m.Z,
 u.Z,
-f.Z
+C.Z
   ], () => {
 var e, t, n, i;
 let s = u.Z.getParticipants(B),
@@ -71,7 +71,7 @@ let s = u.Z.getParticipants(B),
       }
     }
     return null;
-  }(s, f.Z.quests, m.Z);
+  }(s, C.Z.quests, m.Z);
 return {
   isCurrentUserStreamingQuestApplication: null != a && null != W && (e = s, t = a, n = W, i = m.Z, e.some(e => {
     if (e.type !== j.fO.STREAM || e.user.id !== n.id)
@@ -100,10 +100,10 @@ return !!(null != t && (0, g.$J)(q) && (0, g._D)(t, q)) || !1;
 q,
 J,
 W
-  ]), ee = !0 === G || Q || $, et = (0, l.e7)([f.Z], () => null != q && f.Z.isEnrolling(q.id), [q]), en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
+  ]), ee = !0 === G || Q || $, et = (0, l.e7)([C.Z], () => null != q && C.Z.isEnrolling(q.id), [q]), en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
 B,
 W
-  ]), ei = (0, C.B6)(null == q ? void 0 : q.config.expiresAt), es = (0, C.B6)(null == X ? void 0 : X.rewardsExpireAt), ea = s.useCallback(() => {
+  ]), ei = (0, f.B6)(null == q ? void 0 : q.config.expiresAt), es = (0, f.B6)(null == X ? void 0 : X.rewardsExpireAt), ea = s.useCallback(() => {
 null != q && (0, N.AH)(q.id, {
   questContent: p.jn.QUEST_LIVE_STREAM,
   questContentCTA: h.jZ.ACCEPT_QUEST
@@ -126,7 +126,7 @@ location: p.jn.QUEST_LIVE_STREAM
   }), ec = s.useMemo(() => (0, S.T)({
 quest: q,
 location: D.dr.QUEST_CHANNEL_CALL_HEADER
-  }), [q]), eu = (0, C.tP)(q);
+  }), [q]), eu = (0, f.tP)(q);
   if (null == q || !(0, g.dl)(q))
 return null;
   let ed = (null === (t = q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
@@ -170,7 +170,7 @@ children: () => {
         className: y.rewardTileWrapper,
         children: [
           eN,
-          (0, i.jsx)(O.Z, {
+          (0, i.jsx)(x.Z, {
             bgOpacity: 0.32,
             className: y.promotedTag
           })
@@ -265,7 +265,7 @@ children: () => {
                   })
                 ]
               }),
-              ed && !e_ && ee && (0, i.jsx)(x.Z, {
+              ed && !e_ && ee && (0, i.jsx)(O.Z, {
                 color: c.tokens.colors.BG_BRAND,
                 quest: q
               }),

@@ -11,21 +11,21 @@ var i, s, a, r, l = n(392711),
   T = n(814082),
   h = n(23750),
   N = n(314897),
-  C = n(592125),
-  f = n(375954),
+  f = n(592125),
+  C = n(375954),
   p = n(306680),
   g = n(699516),
   S = n(914010),
   A = n(9156),
   R = n(594174),
-  x = n(981631);
-let O = 'recentMentionFilterSettings',
+  O = n(981631);
+let x = 'recentMentionFilterSettings',
   M = [],
   v = {},
   L = !1,
   Z = !0,
-  P = u.K.get(O, {
-guildFilter: x.NgX.ALL_SERVERS,
+  P = u.K.get(x, {
+guildFilter: O.NgX.ALL_SERVERS,
 everyoneFilter: !0,
 roleFilter: !0
   }),
@@ -37,17 +37,17 @@ roleFilter: !0
 function y(e) {
   if (e instanceof h.ZP)
 return e;
-  let t = f.Z.getMessage(e.channel_id, e.id);
+  let t = C.Z.getMessage(e.channel_id, e.id);
   return null != t ? t : (0, E.e5)(e);
 }
 
 function B(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-  if ((0, m.Z)(e) && !x.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type))
+  if ((0, m.Z)(e) && !O.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type))
 return null;
   null == t && (t = e.channel_id);
-  let n = C.Z.getChannel(t);
-  if (null == n || n.type === x.d4z.DM || P.guildFilter === x.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())
+  let n = f.Z.getChannel(t);
+  if (null == n || n.type === O.d4z.DM || P.guildFilter === O.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())
 return null;
   let i = N.default.getId();
   if (g.Z.isBlockedForMessage(e) || (0, T.Z)(e, i))
@@ -94,9 +94,9 @@ function F(e) {
 'guildFilter',
 'roleFilter',
 'everyoneFilter'
-  ]), P), u.K.set(O, P);
+  ]), P), u.K.set(x, P);
   let n = (e, n) => t[e] !== P[e] && P[e] === n,
-i = n('guildFilter', x.NgX.THIS_SERVER) || n('everyoneFilter', !1) || n('roleFilter', !1);
+i = n('guildFilter', O.NgX.THIS_SERVER) || n('everyoneFilter', !1) || n('roleFilter', !1);
   v = {};
   let s = [];
   i && M.forEach(e => {
@@ -121,7 +121,7 @@ channel: t
 }
 class Y extends(i = c.ZP.Store) {
   initialize() {
-this.waitFor(R.default, C.Z, f.Z, p.ZP);
+this.waitFor(R.default, f.Z, C.Z, p.ZP);
   }
   isOpen() {
 return j;
@@ -167,8 +167,8 @@ r = 'RecentMentionsStore', (a = 'displayName') in(s = Y) ? Object.defineProperty
 let {
   guildId: t
 } = e;
-L = !0, null == t && P.guildFilter === x.NgX.THIS_SERVER && F({
-  guildFilter: x.NgX.ALL_SERVERS
+L = !0, null == t && P.guildFilter === O.NgX.THIS_SERVER && F({
+  guildFilter: O.NgX.ALL_SERVERS
 });
   },
   LOAD_RECENT_MENTIONS_SUCCESS: function(e) {
@@ -198,7 +198,7 @@ let n = M.length;
 n > (M = M.slice(0, t)).length && (Z = !0);
   },
   CHANNEL_SELECT: function() {
-if (P.guildFilter !== x.NgX.THIS_SERVER)
+if (P.guildFilter !== O.NgX.THIS_SERVER)
   return !1;
 D = !1;
   },
@@ -208,7 +208,7 @@ let {
   guild: t
 } = e;
 M = o().filter(M, e => {
-  let n = C.Z.getChannel(e.channel_id);
+  let n = f.Z.getChannel(e.channel_id);
   return null != n && n.getGuildId() !== t.id || (delete v[e.id], !1);
 });
   },

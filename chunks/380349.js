@@ -26,22 +26,22 @@ t
   ]);
   if (null == h || null == e || null == t)
 return null;
-  let I = h.isCurrentUser || h.notPlayable || h.playingSameTrack,
-m = h.isCurrentUser || h.syncingWithUser || h.syncingWithParty;
+  let m = h.isCurrentUser || h.notPlayable || h.playingSameTrack,
+I = h.isCurrentUser || h.syncingWithUser || h.syncingWithParty;
   return [
 (0, i.jsx)(s.MenuItem, {
   id: 'spotify-play-'.concat(e.session_id),
   action: () => (0, u.Z)(h, _.kG.USER_ACTIVITY_PLAY, n),
   label: E.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
-  subtext: I ? (0, o.Z)(h, _.kG.USER_ACTIVITY_PLAY) : void 0,
-  disabled: I
+  subtext: m ? (0, o.Z)(h, _.kG.USER_ACTIVITY_PLAY) : void 0,
+  disabled: m
 }, 'spotify-play-'.concat(e.session_id)),
 h.canPlaySpotify ? (0, i.jsx)(s.MenuItem, {
   id: 'spotify-sync-'.concat(e.session_id),
   action: () => (0, d.Z)(h, _.kG.USER_ACTIVITY_SYNC, n),
   label: E.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG,
-  subtext: m ? (0, o.Z)(h, _.kG.USER_ACTIVITY_SYNC) : void 0,
-  disabled: m
+  subtext: I ? (0, o.Z)(h, _.kG.USER_ACTIVITY_SYNC) : void 0,
+  disabled: I
 }, 'spotify-sync-'.concat(e.session_id)) : null
   ];
 }

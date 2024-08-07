@@ -7,8 +7,8 @@ var i, a, s = n(735250),
   u = n(565799),
   d = n(431328),
   h = n(501655),
-  m = n(27931),
-  p = n(260979),
+  p = n(27931),
+  m = n(260979),
   _ = n(766015),
   f = n(401139),
   E = n(12779),
@@ -51,7 +51,7 @@ chatOpen: c.Z.getChatOpen(i.id)
 [h.pV.SPEAKER]: y,
 [h.pV.AUDIENCE]: O,
 [h.pV.SELECTED]: 1
-  }, k = (0, m.Dx)(i.id), [U, w] = (0, m.aP)(i.id, D, k), B = [
+  }, k = (0, p.Dx)(i.id), [U, w] = (0, p.aP)(i.id, D, k), B = [
 Math.max(null !== (t = U[0]) && void 0 !== t ? t : 1, 1),
 Math.max(null !== (n = U[1]) && void 0 !== n ? n : 1, 1),
 U[2]
@@ -121,7 +121,7 @@ renderRow: e => {
     case 2:
       if (Y)
         return null;
-      return (0, s.jsx)(p.Z, {
+      return (0, s.jsx)(m.Z, {
         channel: i,
         participants: a,
         maxTiles: O

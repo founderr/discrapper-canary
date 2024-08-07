@@ -1,6 +1,6 @@
 l.d(n, {
   Z: function() {
-return I;
+return m;
   }
 });
 var t = l(735250);
@@ -20,7 +20,7 @@ var r = l(866442),
   f = l(689938),
   g = l(646263);
 
-function m(e, n) {
+function I(e, n) {
   var l, i;
   return (0, t.jsxs)('div', {
 className: g.roleRow,
@@ -41,11 +41,11 @@ children: [
   });
 }
 
-function I(e, n) {
+function m(e, n) {
   let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
 g = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n)),
-I = (0, i.e7)([Z.Z], () => Z.Z.getRoles(n)),
+m = (0, i.e7)([Z.Z], () => Z.Z.getRoles(n)),
 R = (0, i.e7)([s.Z], () => s.Z.roleStyle),
 N = (0, d.sE)(n, {
   location: r,
@@ -73,13 +73,13 @@ N = (0, d.sE)(n, {
   if (__OVERLAY__ || null == A || null == g || !C)
 return null;
   let T = E.Z.getHighestRole(g),
-v = Object.values(I).filter(e => !(0, u.pM)(g.id, e.id)),
+v = Object.values(m).filter(e => !(0, u.pM)(g.id, e.id)),
 x = O ? v.map(l => {
   let r = l.managed || !E.Z.isRoleHigher(g, T, l),
     i = -1 !== A.indexOf(l.id);
   return r && !i ? null : (0, t.jsx)(a.MenuCheckboxItem, {
     id: l.id,
-    label: () => m(l, R),
+    label: () => I(l, R),
     disabled: r,
     action: () => {
       var t;
@@ -89,7 +89,7 @@ x = O ? v.map(l => {
   }, l.id);
 }) : v.filter(e => -1 !== A.indexOf(e.id)).map(e => (0, u.pM)(g.id, e.id) ? null : (0, t.jsx)(a.MenuItem, {
   id: e.id,
-  label: () => m(e, R)
+  label: () => I(e, R)
 }, e.id));
   return 0 === x.filter(M.lm).length ? null : l ? x : (0, t.jsx)(a.MenuItem, {
 id: 'roles',

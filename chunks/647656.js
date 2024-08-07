@@ -11,7 +11,7 @@ var i = n(392711),
   _ = n(452426),
   E = n(186901),
   h = n(981631);
-let I = ['349134787773988865'];
+let m = ['349134787773988865'];
 t.Z = {
   [h.Etm.SET_ACTIVITY]: {
 scope: {
@@ -66,7 +66,7 @@ handler(e) {
       pid: s,
       activity: _
     },
-    isSocketConnected: m
+    isSocketConnected: I
   } = e;
   if (![
       E.He.IPC,
@@ -101,7 +101,7 @@ handler(e) {
   } = _;
   if (null == A && (_.type = h.IIU.PLAYING), null != f) {
     let e = a().values(f).filter(e => !!e);
-    if (null != S && a().intersection(e, [S.id]).length > 0 && !I.includes(i.application.id))
+    if (null != S && a().intersection(e, [S.id]).length > 0 && !m.includes(i.application.id))
       throw new d.Z({
         errorCode: h.lTL.INVALID_ACTIVITY_SECRET
       }, 'secrets cannot match the party id');
@@ -132,7 +132,7 @@ handler(e) {
   return n.then(e => {
     var t, n;
     let [a, o] = e;
-    if (null != T && (null != a ? T.large_image = a : delete T.large_image, null != o ? T.small_image = o : delete T.small_image), !m())
+    if (null != T && (null != a ? T.large_image = a : delete T.large_image, null != o ? T.small_image = o : delete T.small_image), !I())
       return;
     r.Z.dispatch({
       type: 'LOCAL_ACTIVITY_UPDATE',

@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(424218),
   E = n(358085),
   h = n(998502),
-  I = n(689938),
-  m = n(489927),
+  m = n(689938),
+  I = n(489927),
   g = n(549856);
 
 function p(e, t, n) {
@@ -47,37 +47,37 @@ return null != d && (e = null != d.availableKB ? (0, _.BU)(d.availableKB, {
 }) : null, t = null != d.totalKB ? (0, _.BU)(d.totalKB, {
   useKibibytes: !0
 }) : null), (0, i.jsxs)(c.Z, {
-  className: m.installationPath,
+  className: I.installationPath,
   align: c.Z.Align.CENTER,
   children: [
     this.renderDiskUsageCircle(),
     (0, i.jsxs)(c.Z, {
       direction: c.Z.Direction.VERTICAL,
-      className: m.__invalid_descriptionWrapper,
+      className: I.__invalid_descriptionWrapper,
       children: [
         (0, i.jsxs)(c.Z, {
           align: c.Z.Align.CENTER,
           children: [
             (0, i.jsx)(r.Heading, {
-              className: m.rowTitle,
+              className: I.rowTitle,
               variant: 'heading-md/semibold',
               children: null != a ? a : u.Z.getLabelFromPath(n)
             }),
             l ? (0, i.jsx)('span', {
-              className: m.defaultIndicator,
-              children: I.Z.Messages.DEFAULT
+              className: I.defaultIndicator,
+              children: m.Z.Messages.DEFAULT
             }) : null
           ]
         }),
         null != d && null != e && null != t ? (0, i.jsx)(o.Z, {
-          className: m.rowBody,
-          hoverText: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_SPACE.format({
+          className: I.rowBody,
+          hoverText: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_SPACE.format({
             available: e,
             total: t
           }),
           children: n
         }) : (0, i.jsx)(r.Text, {
-          className: m.rowBody,
+          className: I.rowBody,
           variant: 'text-xs/normal',
           children: n
         })
@@ -88,7 +88,7 @@ return null != d && (e = null != d.availableKB ? (0, _.BU)(d.availableKB, {
       disabled: null != s,
       color: r.Button.Colors.PRIMARY,
       onClick: this.handleStartEditing,
-      children: I.Z.Messages.EDIT
+      children: m.Z.Messages.EDIT
     })
   ]
 });
@@ -103,14 +103,14 @@ let {
 } = this.state;
 return (0, i.jsx)(r.Card, {
   editable: !0,
-  className: m.installationPathEditing,
+  className: I.installationPathEditing,
   children: (0, i.jsxs)(c.Z, {
     children: [
       this.renderDiskUsageCircle(),
       (0, i.jsxs)(c.Z.Child, {
         children: [
           (0, i.jsx)(r.FormItem, {
-            title: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_NAME,
+            title: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_NAME,
             children: (0, i.jsx)(r.TextInput, {
               value: n,
               placeholder: u.Z.getLabelFromPath(e),
@@ -118,7 +118,7 @@ return (0, i.jsx)(r.Card, {
             })
           }),
           (0, i.jsx)(r.FormItem, {
-            title: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION,
+            title: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION,
             className: g.marginTop20,
             children: (0, i.jsx)(r.TextInput, {
               disabled: !0,
@@ -129,12 +129,12 @@ return (0, i.jsx)(r.Card, {
             type: r.Checkbox.Types.INVERTED,
             value: null != a ? a : this.props.isDefault,
             disabled: this.props.isDefault,
-            className: m.defaultLocationCheckbox,
+            className: I.defaultLocationCheckbox,
             onChange: this.handleToggleDefault,
-            children: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_MAKE_DEFAULT
+            children: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_MAKE_DEFAULT
           }),
           (0, i.jsx)(r.FormDivider, {
-            className: m.separator
+            className: I.separator
           }),
           (0, i.jsxs)(c.Z, {
             children: [
@@ -144,7 +144,7 @@ return (0, i.jsx)(r.Card, {
                 color: r.Button.Colors.RED,
                 look: r.Button.Looks.OUTLINED,
                 onClick: this.handleRemoveLocation,
-                children: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE
+                children: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE
               }),
               (0, i.jsxs)(c.Z, {
                 justify: c.Z.Justify.END,
@@ -154,14 +154,14 @@ return (0, i.jsx)(r.Card, {
                     color: r.Button.Colors.PRIMARY,
                     look: r.Button.Looks.LINK,
                     onClick: this.handleStopEditing,
-                    children: I.Z.Messages.CANCEL
+                    children: m.Z.Messages.CANCEL
                   }),
                   (0, i.jsx)(r.Button, {
                     disabled: e === this.props.path && n === this.props.label && a === this.props.isDefault,
                     size: r.Button.Sizes.SMALL,
                     color: r.Button.Colors.GREEN,
                     onClick: this.handleSaveChanges,
-                    children: I.Z.Messages.SAVE
+                    children: m.Z.Messages.SAVE
                   })
                 ]
               })
@@ -202,15 +202,15 @@ super(...e), p(this, 'state', {
 }), p(this, 'handleRemoveLocation', () => {
   (0, r.openModal)(e => (0, i.jsx)(r.ConfirmModal, {
     ...e,
-    header: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
-    confirmText: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
-    cancelText: I.Z.Messages.CANCEL,
+    header: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
+    confirmText: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
+    cancelText: m.Z.Messages.CANCEL,
     onConfirm: () => {
       this.handleStopEditing(), (0, l.iD)(this.props.path);
     },
     children: (0, i.jsx)(r.Text, {
       variant: 'text-md/normal',
-      children: I.Z.Messages.USER_SETTINGS_GAMES_REMOVE_LOCATION_BODY
+      children: m.Z.Messages.USER_SETTINGS_GAMES_REMOVE_LOCATION_BODY
     })
   }));
 }), p(this, 'handleSaveChanges', () => {
@@ -247,8 +247,8 @@ let {
   editingPath: a
 } = this.state;
 return (0, i.jsxs)(r.FormSection, {
-  className: m.wrapper,
-  title: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATIONS,
+  className: I.wrapper,
+  title: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATIONS,
   children: [
     e.map(e => {
       let {
@@ -266,12 +266,12 @@ return (0, i.jsxs)(r.FormSection, {
       }, s);
     }),
     (0, i.jsx)('div', {
-      className: m.buttonRowWrapper,
+      className: I.buttonRowWrapper,
       children: (0, i.jsx)(r.Button, {
         disabled: !E.isPlatformEmbedded,
         onClick: this.handleAddInstallationLocation,
         size: r.Button.Sizes.SMALL,
-        children: I.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD
+        children: m.Z.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD
       })
     })
   ]

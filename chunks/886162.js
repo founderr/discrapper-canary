@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 }), n(47120);
 var i = n(735250),
@@ -16,18 +16,18 @@ var i = n(735250),
   E = n(689938),
   h = n(980096);
 
-function I(e) {
+function m(e) {
   let {
 transitionState: t
-  } = e, I = (0, r.e7)([u.Z], () => u.Z.getAction()), [m, g] = a.useState(!1), p = (0, d.Dt)();
+  } = e, m = (0, r.e7)([u.Z], () => u.Z.getAction()), [I, g] = a.useState(!1), p = (0, d.Dt)();
   async function T() {
-return g(!0), I === _.c2C.AGREEMENTS && g(await (0, o.Lr)()), null;
+return g(!0), m === _.c2C.AGREEMENTS && g(await (0, o.Lr)()), null;
   }
   return (0, c.Z)({
 type: s.ImpressionTypes.VIEW,
 name: s.ImpressionNames.USER_AGREEMENTS,
 properties: {
-  required_action: I
+  required_action: m
 }
   }, {}, []), (0, i.jsxs)(l.ModalRoot, {
 'aria-labelledby': p,
@@ -47,7 +47,7 @@ children: [
     children: [
       (0, i.jsx)(l.Text, {
         variant: 'text-md/normal',
-        children: I === _.c2C.AGREEMENTS ? E.Z.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
+        children: m === _.c2C.AGREEMENTS ? E.Z.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
       }),
       (0, i.jsxs)('div', {
         className: h.container,
@@ -93,7 +93,7 @@ children: [
   }),
   (0, i.jsx)(l.ModalFooter, {
     children: (0, i.jsx)(l.Button, {
-      submitting: m,
+      submitting: I,
       onClick: T,
       color: l.Button.Colors.GREEN,
       children: E.Z.Messages.AGREE

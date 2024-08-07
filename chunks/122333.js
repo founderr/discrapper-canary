@@ -12,8 +12,8 @@ var s = n(481060),
   _ = n(390885),
   E = n(524329),
   h = n(995532),
-  I = n(486472),
-  m = n(430824),
+  m = n(486472),
+  I = n(430824),
   g = n(914010),
   p = n(594174),
   T = n(823379),
@@ -54,10 +54,10 @@ switch (r) {
 let l = !1,
   O = g.Z.getGuildId();
 if (r === N.M5.INVITE_UNCLAIMED) {
-  let e = m.Z.getGuild(O);
+  let e = I.Z.getGuild(O);
   (null == e ? void 0 : e.hasVerificationGate()) && (l = !0, (0, E.RM)(e.id));
 }
-let R = () => 0 === I.Z.totalGuilds && !S.isPlatformEmbedded,
+let R = () => 0 === m.Z.totalGuilds && !S.isPlatformEmbedded,
   x = o.b();
 e = [{
     key: 'Unified NUF Modal',

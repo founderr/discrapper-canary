@@ -28,7 +28,7 @@ let h = [
   8
 ]
   ],
-  I = [
+  m = [
 [
   1696,
   30
@@ -49,7 +49,7 @@ let h = [
 t.Z = e => {
   let t, {
 title: n,
-subtitle: m,
+subtitle: I,
 guildsData: g,
 analyticsContext: p,
 theme: T,
@@ -64,7 +64,7 @@ showMoreCards: Z = !1
   a.useEffect(() => {
 r.Z.wait(() => f());
   }, [N]);
-  let L = (0, u.Z)(Z ? I : h),
+  let L = (0, u.Z)(Z ? m : h),
 {
   analyticsLocations: O
 } = (0, l.ZP)();
@@ -116,11 +116,11 @@ children: (0, i.jsxs)(s.HeadingLevel, {
     children: n
   }),
   children: [
-    null != m && (0, i.jsx)(s.Text, {
+    null != I && (0, i.jsx)(s.Text, {
       className: E.subtitle,
       variant: 'text-sm/normal',
       color: 'header-secondary',
-      children: m
+      children: I
     }),
     (0, i.jsx)('div', {
       className: E.guildList,

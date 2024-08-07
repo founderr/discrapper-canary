@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(831506),
   E = n(699516),
   h = n(594174),
-  I = n(823379),
-  m = n(824138),
+  m = n(823379),
+  I = n(824138),
   g = n(689938);
 
 function p(e, t, n) {
@@ -36,7 +36,7 @@ let {
   host: t,
   party: n
 } = this.props;
-return this.hasParty(n) && null != e ? (0, i.jsx)(m.Z, {
+return this.hasParty(n) && null != e ? (0, i.jsx)(I.Z, {
   currentUser: e,
   host: t,
   party: n,
@@ -86,7 +86,7 @@ a = h.default.getCurrentUser(),
 s = [];
   if (null != n ? (e = h.default.getUser(n.userId), t = n.partyId) : null != i && null != i.party && null != i.party.id && (e = a, t = i.party.id), null != t) {
 var l;
-s = r()(Array.from(null !== (l = _.Z.getParty(t)) && void 0 !== l ? l : [])).map(e => h.default.getUser(e)).filter(I.lm).orderBy([
+s = r()(Array.from(null !== (l = _.Z.getParty(t)) && void 0 !== l ? l : [])).map(e => h.default.getUser(e)).filter(m.lm).orderBy([
   t => null == e || e.id === t.id,
   e => E.Z.isFriend(e.id)
 ], [

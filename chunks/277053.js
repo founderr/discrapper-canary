@@ -6,8 +6,8 @@ var s, r, l, o, c = n(392711),
   _ = n(433517),
   E = n(570140),
   h = n(700785),
-  I = n(388610),
-  m = n(592125),
+  m = n(388610),
+  I = n(592125),
   g = n(981631),
   p = n(71080);
 let T = new Set(),
@@ -30,14 +30,14 @@ n = {
 }
 
 function x() {
-  if (A = I.Z.getChannel(), v = I.Z.getCategory(), null == A)
+  if (A = m.Z.getChannel(), v = m.Z.getCategory(), null == A)
 return !1;
   let e = A.getGuildId();
   N = C = R(A), null == C[Z] && (Z = e), a = null != v, i = h.o4(A, v), L = null, f = !1, S = g.QZA.CLOSED, T.clear();
 }
 class b extends(s = u.ZP.Store) {
   initialize() {
-this.waitFor(I.Z, m.Z);
+this.waitFor(m.Z, I.Z);
   }
   hasChanges() {
 return f;
@@ -132,9 +132,9 @@ if (null == A)
 let n = !1;
 for (let e of t)
   !1 !== function(e) {
-    if (null == A || A.id !== e || null == (A = m.Z.getChannel(e)))
+    if (null == A || A.id !== e || null == (A = I.Z.getChannel(e)))
       return !1;
-    v = I.Z.getCategory();
+    v = m.Z.getCategory();
     let t = A.getGuildId();
     if (null == t)
       return !1;

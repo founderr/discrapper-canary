@@ -11,8 +11,8 @@ var a = n(481060),
   _ = n(305342),
   E = n(726324),
   h = n(981631),
-  I = n(689938),
-  m = n(952366);
+  m = n(689938),
+  I = n(952366);
 t.Z = e => {
   var t, n;
   let {
@@ -32,7 +32,7 @@ editStateIds: C
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)(E.Z, {
-    title: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
+    title: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
       serverName: g.toString()
     }),
     description: null != f ? f : null,
@@ -40,7 +40,7 @@ children: [
     guild: g,
     children: [
       null != p ? (0, i.jsx)(c.Z, {
-        className: m.pendingPlanChangeNotice,
+        className: I.pendingPlanChangeNotice,
         groupListingId: p.id,
         subscription: T
       }) : null,

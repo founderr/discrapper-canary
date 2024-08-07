@@ -15,8 +15,8 @@ var i = n(735250),
   T = n(259580),
   h = n(617379),
   N = n(324081),
-  C = n(305248),
-  f = n(520116),
+  f = n(305248),
+  C = n(520116),
   p = n(981631),
   g = n(689938),
   S = n(540895);
@@ -103,19 +103,19 @@ children: (0, i.jsx)(c.HeadingLevel, {
       (0, i.jsx)(h.Z, {
         channel: l
       }),
-      (0, i.jsx)(x, {
+      (0, i.jsx)(O, {
         ...e
       }),
-      'nsfw' === t.type ? null : (0, i.jsx)(O, {
+      'nsfw' === t.type ? null : (0, i.jsx)(x, {
         ...e
       })
     ]
   }),
-  children: t.collapsed ? null : 'messages' === t.type ? (0, i.jsx)(f.Z, {
+  children: t.collapsed ? null : 'messages' === t.type ? (0, i.jsx)(C.Z, {
     channel: t,
     channelRecord: l,
     gotoChannel: E
-  }) : 'forum' === t.type ? (0, i.jsx)(C.Z, {
+  }) : 'forum' === t.type ? (0, i.jsx)(f.Z, {
     channel: t,
     channelRecord: l,
     deleteChannel: a
@@ -124,7 +124,7 @@ children: (0, i.jsx)(c.HeadingLevel, {
   });
 });
 
-function x(e) {
+function O(e) {
   let {
 channel: t,
 markChannelRead: n,
@@ -153,7 +153,7 @@ onClick: function() {
   });
 }
 
-function O(e) {
+function x(e) {
   let {
 channel: t,
 toggle: n,

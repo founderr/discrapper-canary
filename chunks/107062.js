@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(429589),
   d = n(403404),
   h = n(906732),
-  m = n(522474),
-  p = n(706454),
+  p = n(522474),
+  m = n(706454),
   _ = n(823379),
   f = n(5192),
   E = n(192918),
@@ -68,14 +68,14 @@ richIcon: U
   } = (0, N.n)(f), {
 primaryColor: w,
 secondaryColor: B
-  } = (0, I.Z)(L), H = (0, s.e7)([p.default], () => p.default.locale), {
+  } = (0, I.Z)(L), H = (0, s.e7)([m.default], () => m.default.locale), {
 displayParticipants: G,
 participant1: V,
 participant2: F,
 numOtherParticipants: W
   } = (0, E.Z)(f, 3), z = (0, r.O)(), {
 analyticsLocations: Y
-  } = (0, h.ZP)(), K = m.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), q = a.useCallback(e => {
+  } = (0, h.ZP)(), K = p.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), q = a.useCallback(e => {
 if (null == L || null == n || null == O)
   return;
 let t = W > 0 ? b({

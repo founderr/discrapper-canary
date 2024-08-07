@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(693546),
   E = n(863249),
   h = n(944163),
-  I = n(246364),
-  m = n(937111),
+  m = n(246364),
+  I = n(937111),
   g = n(523924),
   p = n(390500),
   T = n(200305),
@@ -26,12 +26,12 @@ t.Z = e => {
   let {
 guildId: v,
 inviteCode: Z
-  } = e, [L, O] = a.useState(f.hO.INITIAL), R = (0, s.e7)([h.Z], () => h.Z.get(v)), x = (0, s.e7)([m.Z], () => m.Z.getRequest(v)), b = (0, s.e7)([c.Z], () => c.Z.getGuild(v)), {
+  } = e, [L, O] = a.useState(f.hO.INITIAL), R = (0, s.e7)([h.Z], () => h.Z.get(v)), x = (0, s.e7)([I.Z], () => I.Z.getRequest(v)), b = (0, s.e7)([c.Z], () => c.Z.getGuild(v)), {
 hasFetchedRequestToJoinGuilds: P,
 guildPreviewDisabled: M
-  } = (0, s.cj)([m.Z], () => ({
-hasFetchedRequestToJoinGuilds: m.Z.hasFetchedRequestToJoinGuilds,
-guildPreviewDisabled: m.Z.getJoinRequestGuild(v)
+  } = (0, s.cj)([I.Z], () => ({
+hasFetchedRequestToJoinGuilds: I.Z.hasFetchedRequestToJoinGuilds,
+guildPreviewDisabled: I.Z.getJoinRequestGuild(v)
   }));
   a.useEffect(() => {
 null != b && (0, o.uL)(S.Z5c.CHANNEL(v));
@@ -88,12 +88,12 @@ children: (0, i.jsxs)(l.Z, {
       className: N.contentWrapper,
       children: (() => {
         switch (null == x ? void 0 : x.applicationStatus) {
-          case I.wB.SUBMITTED:
+          case m.wB.SUBMITTED:
             return (0, i.jsx)(p.Z, {
               onWithdrawApplication: U,
               guild: M
             });
-          case I.wB.REJECTED:
+          case m.wB.REJECTED:
             return (0, i.jsx)(g.Z, {
               reapplyText: C.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
               onReapply: j,

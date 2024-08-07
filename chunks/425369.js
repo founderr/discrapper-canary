@@ -11,7 +11,7 @@ var i = n(735250),
   E = n(689938),
   h = n(136853);
 
-function I() {
+function m() {
   return (0, i.jsxs)(s.rs, {
 children: [
   (0, i.jsx)(l.Z, {
@@ -53,7 +53,7 @@ children: [
   (0, i.jsx)(o.yY, {
     location: E.Z.Messages.LIBRARY
   }),
-  (0, i.jsx)(I, {})
+  (0, i.jsx)(m, {})
 ]
   });
 });

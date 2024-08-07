@@ -16,8 +16,8 @@ var i, a, s = n(470079),
   _ = n(929507),
   E = n(270144),
   h = n(400271),
-  I = n(678513),
-  m = n(899667),
+  m = n(678513),
+  I = n(899667),
   g = n(496675),
   p = n(541566),
   T = n(192513),
@@ -31,9 +31,9 @@ function A(e) {
   let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : N.lds,
 {
   lastFetchedAt: i
-} = (0, r.cj)([m.Z], () => ({
-  appliedGuildBoosts: m.Z.getAppliedGuildBoostsForGuild(n),
-  lastFetchedAt: m.Z.getLastFetchedAtForGuild(n)
+} = (0, r.cj)([I.Z], () => ({
+  appliedGuildBoosts: I.Z.getAppliedGuildBoostsForGuild(n),
+  lastFetchedAt: I.Z.getLastFetchedAtForGuild(n)
 })),
 {
   lastDismissedGracePeriod: a,
@@ -60,7 +60,7 @@ j = (0, E.h6)(e),
 G = j.length > 0,
 k = U && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
 w = (0, d.Vm)(n),
-B = (0, r.e7)([I.Z], () => null != I.Z.getActiveGuildSignUp(n));
+B = (0, r.e7)([m.Z], () => null != m.Z.getActiveGuildSignUp(n));
   if (s.useEffect(() => {
   o.Z.getGuildEventsForCurrentUser(n);
 }, [n]), s.useEffect(() => {

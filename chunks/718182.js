@@ -1,5 +1,5 @@
-var s, r, i, a, l = n(735250),
-  o = n(470079),
+var s, r, i, a, o = n(735250),
+  l = n(470079),
   c = n(525654),
   u = n.n(c),
   d = n(442837),
@@ -12,7 +12,7 @@ var s, r, i, a, l = n(735250),
   m = n(689938),
   f = n(549856);
 d.ZP.initialize();
-class N extends(a = o.PureComponent) {
+class N extends(a = l.PureComponent) {
   componentDidMount() {
 let e = (0, h.Z)(this.props.location);
 null != e && _.Z.authorizeIPAddress(e), (0, g.e)('authorize_ip');
@@ -23,24 +23,24 @@ if ('Android' === u().os.family || 'iOS' === u().os.family)
 let {
   transitionTo: e
 } = this.props;
-return (0, l.jsx)(E.zx, {
+return (0, o.jsx)(E.zx, {
   onClick: () => e(I.Z5c.LOGIN),
   children: m.Z.Messages._LOGIN
 });
   }
   renderFailed() {
-return (0, l.jsxs)(E.ZP, {
+return (0, o.jsxs)(E.ZP, {
   children: [
-    (0, l.jsx)('img', {
+    (0, o.jsx)('img', {
       alt: '',
       src: n(211095),
       className: f.marginBottom20
     }),
-    (0, l.jsx)(E.Dx, {
+    (0, o.jsx)(E.Dx, {
       className: f.marginBottom8,
       children: m.Z.Messages.AUTHORIZATION_EXPIRED
     }),
-    (0, l.jsx)(E.DK, {
+    (0, o.jsx)(E.DK, {
       className: f.marginBottom40,
       children: m.Z.Messages._AUTH_EXPIRED_SUGGESTION
     }),
@@ -49,18 +49,18 @@ return (0, l.jsxs)(E.ZP, {
 });
   }
   renderSucceeded() {
-return (0, l.jsxs)(E.ZP, {
+return (0, o.jsxs)(E.ZP, {
   children: [
-    (0, l.jsx)('img', {
+    (0, o.jsx)('img', {
       alt: '',
       src: n(640356),
       className: f.marginBottom20
     }),
-    (0, l.jsx)(E.Dx, {
+    (0, o.jsx)(E.Dx, {
       className: f.marginBottom8,
       children: m.Z.Messages.IP_AUTHORIZATION_SUCCEEDED
     }),
-    (0, l.jsx)(E.DK, {
+    (0, o.jsx)(E.DK, {
       className: f.marginBottom40,
       children: m.Z.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
     }),
@@ -69,10 +69,10 @@ return (0, l.jsxs)(E.ZP, {
 });
   }
   renderDefault() {
-return (0, l.jsxs)(E.ZP, {
+return (0, o.jsxs)(E.ZP, {
   children: [
-    (0, l.jsx)(E.Hh, {}),
-    (0, l.jsx)(E.Dx, {
+    (0, o.jsx)(E.Hh, {}),
+    (0, o.jsx)(E.Dx, {
       children: m.Z.Messages.AUTHORIZING
     })
   ]

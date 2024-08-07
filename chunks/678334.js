@@ -20,8 +20,8 @@ var i = t(735250),
   E = t(882712),
   x = t(855775),
   N = t(626135),
-  S = t(669079),
-  T = t(74538),
+  T = t(669079),
+  S = t(74538),
   h = t(987209),
   b = t(598),
   g = t(632580),
@@ -74,8 +74,8 @@ customGiftMessage: eo,
 emojiConfetti: ec,
 soundEffect: eu,
 giftRecipient: ed
-  } = (0, h.wD)(), e_ = (0, S.MY)(ed), ep = {};
-  ep.gift_style = el, e_ === S.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != ed, 'Gift recipient must be set at purchase review step for these gift options.'), ep.recipient_id = ed.id, ep.custom_message = eo, ep.emoji_id = null == ec ? void 0 : ec.id, ep.emoji_name = (null == ec ? void 0 : ec.id) == null ? null == ec ? void 0 : ec.surrogates : void 0, ep.sound_id = null == eu ? void 0 : eu.soundId);
+  } = (0, h.wD)(), e_ = (0, T.MY)(ed), ep = {};
+  ep.gift_style = el, e_ === T.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != ed, 'Gift recipient must be set at purchase review step for these gift options.'), ep.recipient_id = ed.id, ep.custom_message = eo, ep.emoji_id = null == ec ? void 0 : ec.id, ep.emoji_name = (null == ec ? void 0 : ec.id) == null ? null == ec ? void 0 : ec.surrogates : void 0, ep.sound_id = null == eu ? void 0 : eu.soundId);
   let em = null == V ? void 0 : V.id,
 eI = (0, v.sE)(G, z.paymentSourceId, em),
 ef = (0, l.e7)([f.Z], () => f.Z.popupCallbackCalled),
@@ -83,12 +83,12 @@ ef = (0, l.e7)([f.Z], () => f.Z.popupCallbackCalled),
   analyticsLocations: eE
 } = (0, u.ZP)(),
 ex = null != Q ? $[Q] : null,
-[eN, eS] = a.useState(eI),
-[eT, eh] = a.useState(!1),
+[eN, eT] = a.useState(eI),
+[eS, eh] = a.useState(!1),
 {
   hasEntitlements: eb
 } = (0, m.H)(em, es),
-eg = (0, T.Ap)(z.paymentSourceId),
+eg = (0, S.Ap)(z.paymentSourceId),
 eP = eb || eI,
 ev = (0, _.U)(),
 eA = null,
@@ -104,9 +104,9 @@ eC = null != e ? e[n] : null;
 await (0, g.H)({
   setPurchaseState: t,
   setHasAcceptedTerms: X,
-  setIsSubmitting: eS,
+  setIsSubmitting: eT,
   setPurchaseError: q,
-  hasRedirectURL: eT,
+  hasRedirectURL: eS,
   setHasRedirectURL: eh,
   isGift: es,
   baseAnalyticsData: D,
@@ -148,7 +148,7 @@ await (0, g.H)({
         duration_ms: Date.now() - w
       });
     } finally {
-      eS(!1), (0, c.K2)();
+      eT(!1), (0, c.K2)();
     }
   else
     k === E.I.SUCCESS && await ey();

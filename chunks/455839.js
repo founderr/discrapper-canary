@@ -1,6 +1,6 @@
 n.r(t), n.d(t, {
   GuildDiscoveryMenuPopout: function() {
-return I;
+return m;
   },
   default: function() {
 return h;
@@ -24,13 +24,13 @@ function h(e) {
 guild: t,
 shiftId: n,
 onSelect: h,
-closePopout: I,
-'aria-label': m
+closePopout: m,
+'aria-label': I
   } = e, g = (0, l.Z)({
 id: t.id,
 label: E.Z.Messages.COPY_ID_GUILD,
 shiftId: n,
-onSuccess: I
+onSuccess: m
   }), p = (0, a.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), T = (0, a.e7)([d.Z], () => d.Z.can(_.Plq.ADMINISTRATOR, p)), {
 canSeeInAppReportingButtons: S
   } = u.N.useExperiment({
@@ -38,12 +38,12 @@ location: '0e35b9_1'
   }, {
 autoTrackExposure: !1
   }), f = () => {
-(0, r.Zy)(), null == I || I();
+(0, r.Zy)(), null == m || m();
   };
   return (0, i.jsxs)(s.Menu, {
 onSelect: h,
 navId: 'guild-discovery-context-menu',
-'aria-label': null != m ? m : E.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
+'aria-label': null != I ? I : E.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
 onClose: r.Zy,
 children: [
   (0, i.jsx)(s.MenuGroup, {
@@ -63,7 +63,7 @@ children: [
 ]
   });
 }
-let I = e => {
+let m = e => {
   let {
 guild: t,
 children: n,

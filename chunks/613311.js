@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(659429),
   E = n(496929),
   h = n(558381),
-  I = n(410575),
-  m = n(224336),
+  m = n(410575),
+  I = n(224336),
   g = n(730749),
   p = n(666743),
   T = n(115130),
@@ -298,7 +298,7 @@ return (0, i.jsxs)(a.Fragment, {
         name: n.name
       })
     }),
-    (0, i.jsx)(m.Z, {}),
+    (0, i.jsx)(I.Z, {}),
     (0, i.jsx)(W.Z, {
       applicationId: e.id,
       blurb: t.summary,
@@ -455,11 +455,11 @@ return r ? (0, i.jsxs)('div', {
       location: e.name
     }),
     this.renderJsonLD(),
-    (0, i.jsx)(I.Z, {
+    (0, i.jsx)(m.Z, {
       section: ea.jXE.NAVIGATION,
       children: this.renderHeader(e, t)
     }),
-    (0, i.jsx)(I.Z, {
+    (0, i.jsx)(m.Z, {
       section: ea.jXE.BODY,
       children: this.renderListing()
     })
@@ -632,7 +632,7 @@ super(...e), eo(this, 'showCopyLinkTextTimeout', new o.V7()), eo(this, '_tracked
     pageSize: n,
     isFocused: a
   } = this.props;
-  return (0, i.jsx)(I.Z, {
+  return (0, i.jsx)(m.Z, {
     section: ea.jXE.HERO,
     children: (0, i.jsx)(q.Z, {
       pageSize: n,

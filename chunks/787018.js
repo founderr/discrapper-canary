@@ -1,83 +1,83 @@
-i.d(s, {
+s.d(n, {
   Z: function() {
-return S;
+return Z;
   }
-}), i(47120);
-var n = i(735250),
-  l = i(470079),
-  t = i(481060),
-  o = i(100527),
-  a = i(906732),
-  r = i(785717),
-  d = i(221292),
-  c = i(318661),
-  u = i(502762),
-  I = i(475413),
-  _ = i(228168),
-  f = i(981631),
-  E = i(689938),
-  m = i(570129),
-  v = i(161068);
+}), s(47120);
+var i = s(735250),
+  l = s(470079),
+  o = s(481060),
+  t = s(100527),
+  r = s(906732),
+  a = s(785717),
+  d = s(221292),
+  c = s(318661),
+  u = s(502762),
+  I = s(475413),
+  _ = s(228168),
+  f = s(981631),
+  E = s(689938),
+  m = s(570129),
+  S = s(161068);
 
-function S(e) {
+function Z(e) {
   let {
-user: s,
-guildId: i,
-channelId: S,
-messageId: x,
-roleId: Z,
-transitionState: p,
-onViewBlockedProfileClick: h,
-showGuildProfile: T = !0,
+user: n,
+guildId: s,
+channelId: Z,
+messageId: v,
+roleId: x,
+transitionState: h,
+onViewBlockedProfileClick: T,
+showGuildProfile: p = !0,
 sourceAnalyticsLocations: g = []
-  } = e, N = i === f.ME ? void 0 : i, {
-analyticsLocations: j
-  } = (0, a.ZP)([
+  } = e, N = s === f.ME ? void 0 : s, {
+analyticsLocations: C
+  } = (0, r.ZP)([
 ...g,
-o.Z.BLOCKED_PROFILE_MODAL
-  ]), C = (0, r.ZB)({
+t.Z.BLOCKED_PROFILE_MODAL
+  ]), j = (0, a.ZB)({
 layout: 'BLOCKED_PROFILE_MODAL',
-userId: s.id,
+userId: n.id,
 guildId: N,
-channelId: S,
-messageId: x,
-roleId: Z,
-showGuildProfile: T
-  }), A = (0, c.ZP)(s.id, T ? N : void 0), R = l.createRef();
-  return (0, n.jsx)(a.Gt, {
-value: j,
-children: (0, n.jsx)(r.Mt, {
-  value: C,
-  children: (0, n.jsx)(t.ModalRoot, {
-    transitionState: p,
+channelId: Z,
+messageId: v,
+roleId: x,
+showGuildProfile: p
+  }), A = (0, c.ZP)(n.id, p ? N : void 0), O = l.createRef();
+  return (0, i.jsx)(r.Gt, {
+value: C,
+children: (0, i.jsx)(a.Mt, {
+  value: j,
+  children: (0, i.jsx)(o.ModalRoot, {
+    transitionState: h,
     className: m.root,
     hideShadow: !0,
     'aria-label': E.Z.Messages.USER_PROFILE_MODAL,
-    children: (0, n.jsx)(u.Z, {
-      user: s,
+    children: (0, i.jsx)(u.Z, {
+      user: n,
       displayProfile: A,
       profileType: _.y0.FULL_SIZE,
-      ref: R,
-      children: (0, n.jsxs)('div', {
+      ref: O,
+      children: (0, i.jsxs)('div', {
         className: m.container,
         children: [
-          (0, n.jsx)('img', {
+          (0, i.jsx)('img', {
             alt: '',
-            src: v,
+            src: S,
             className: m.previewForCollected,
             'aria-hidden': !0
           }),
-          (0, n.jsx)(I.tG, {
+          (0, i.jsx)(I.tG, {
             className: m.centeredButton,
             action: 'VIEW_BLOCKED_PROFILE',
             text: E.Z.Messages.VIEW_PROFILE,
             autoFocus: !0,
             fullWidth: !1,
             onClick: () => {
-              null == h || h(), (0, d.pQ)({
+              null == T || T(), (0, d.pQ)({
                 action: 'VIEW_BLOCKED_PROFILE',
-                analyticsLocations: j,
-                ...C
+                analyticsLocations: C,
+                ...j
               });
             }
           })

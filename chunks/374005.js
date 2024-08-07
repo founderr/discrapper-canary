@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(905423),
   E = n(410575),
   h = n(981631),
-  I = n(689938),
-  m = n(171200);
+  m = n(689938),
+  I = n(171200);
 
 function g(e) {
   let t = (0, _.Z)(e => {
@@ -41,15 +41,15 @@ let {
 e && document.body.style.setProperty('--custom-app-panels-height', ''.concat(n, 'px'));
   }, []), (0, i.jsxs)('section', {
 ref: t,
-className: m.panels,
-'aria-label': I.Z.Messages.ACCOUNT_A11Y_LABEL,
+className: I.panels,
+'aria-label': m.Z.Messages.ACCOUNT_A11Y_LABEL,
 children: [
   (0, i.jsx)(u.Z, {}),
   (0, i.jsx)(c.Z, {}),
   (0, i.jsx)(E.Z, {
     section: h.jXE.ACTIVITY_PANEL,
     children: (0, i.jsx)(g, {
-      className: m.activityPanel
+      className: I.activityPanel
     })
   }),
   (0, i.jsx)(E.Z, {

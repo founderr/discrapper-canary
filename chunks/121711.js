@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(252618),
   E = n(353926),
   h = n(212476),
-  I = n(374939),
-  m = n(611928),
+  m = n(374939),
+  I = n(611928),
   g = n(791734),
   p = n(703656),
   T = n(63063),
@@ -64,15 +64,15 @@ location: L.Z.Messages.QUESTS
   }), t && j) ? (0, i.jsxs)('div', {
 className: O.container,
 children: [
-  (0, i.jsxs)(m.ZP, {
+  (0, i.jsxs)(I.ZP, {
     children: [
       (0, i.jsx)('div', {
         className: O.dragRegion
       }),
-      (0, i.jsx)(m.z6, {
+      (0, i.jsx)(I.z6, {
         scrollPosition: M
       }),
-      (0, i.jsx)(m.aV, {
+      (0, i.jsx)(I.aV, {
         icon: o.QuestsIcon
       }),
       (0, i.jsx)(g.Z, {
@@ -82,7 +82,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(I.Z, {
+  (0, i.jsx)(m.Z, {
     title: L.Z.Messages.QUESTS_HOME_HERO_TITLE,
     description: L.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
     backgroundImageUrl: k,

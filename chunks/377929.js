@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(109764),
   d = n(323597),
   h = n(438536),
-  m = n(251746),
-  p = n(193987),
+  p = n(251746),
+  m = n(193987),
   _ = n(933793),
   f = n(13736),
   E = n(732393),
@@ -69,10 +69,10 @@ function Z(e) {
 channel: t,
 closePopout: n,
 onSelect: a
-  } = e, s = (0, c.Z)(t), I = (0, p.Z)(t), S = (0, E.Z)(t.id), Z = (0, f.Z)(t), A = (0, C.Z)({
+  } = e, s = (0, c.Z)(t), I = (0, m.Z)(t), S = (0, E.Z)(t.id), Z = (0, f.Z)(t), A = (0, C.Z)({
 id: t.id,
 label: v.Z.Messages.COPY_ID_THREAD
-  }), M = (0, u.Z)(t), b = (0, d.Z)(t), R = (0, h.Z)(t, 'Toolbar Overflow'), j = (0, _.Z)(t), L = (0, m.Z)(t), P = (0, g.Z)(t), O = x.vF.useSetting(), y = (0, r.e7)([T.Z], () => !l().isEmpty(T.Z.getVoiceStatesForChannel(t.id)));
+  }), M = (0, u.Z)(t), b = (0, d.Z)(t), R = (0, h.Z)(t, 'Toolbar Overflow'), j = (0, _.Z)(t), L = (0, p.Z)(t), P = (0, g.Z)(t), O = x.vF.useSetting(), y = (0, r.e7)([T.Z], () => !l().isEmpty(T.Z.getVoiceStatesForChannel(t.id)));
   return (0, i.jsxs)(o.Menu, {
 navId: 'thread-context',
 onClose: n,

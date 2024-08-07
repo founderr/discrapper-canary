@@ -9,7 +9,7 @@ var i, a, s, r, l = n(442837),
 let h = {
   MAX_MEMBER_COUNT: new Set()
 };
-class I extends(i = l.ZP.Store) {
+class m extends(i = l.ZP.Store) {
   initialize() {
 var e;
 this.waitFor(_.Z, u.Z, d.Z), this.syncWith([
@@ -27,12 +27,12 @@ let n = null !== (t = d.Z.getMemberCount(e.id)) && void 0 !== t ? t : 0,
 return !e.hasFeature(E.oNc.CLAN) && !h[E.vID.MAX_MEMBER_COUNT].has(e.id) && i && e.maxMembers > 0 && e.maxMembers - n <= 10000;
   }
 }
-r = 'MaxMemberCountChannelNoticeStore', (s = 'displayName') in(a = I) ? Object.defineProperty(a, s, {
+r = 'MaxMemberCountChannelNoticeStore', (s = 'displayName') in(a = m) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = new I(c.Z, {
+}) : a[s] = r, t.Z = new m(c.Z, {
   MAX_MEMBER_COUNT_NOTICE_DISMISS: function(e) {
 let t = e.guildId;
 if (!h[E.vID.MAX_MEMBER_COUNT].has(t))

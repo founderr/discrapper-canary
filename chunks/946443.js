@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return x;
+return O;
   },
   h: function() {
 return M;
@@ -22,21 +22,21 @@ var i = n(735250),
   T = n(626135),
   h = n(585483),
   N = n(143316),
-  C = n(240126),
-  f = n(791914),
+  f = n(240126),
+  C = n(791914),
   p = n(147522),
   g = n(809780),
   S = n(981631),
   A = n(689938),
   R = n(418149);
 
-function x(e) {
+function O(e) {
   let {
 setTab: t,
 onJump: n,
 showTutorial: a,
 setSeenTutorial: l,
-closePopout: x,
+closePopout: O,
 badgeState: M
   } = e, v = s.useRef(null), [L, Z] = (0, g.ZP)(v), {
 loadState: P,
@@ -88,9 +88,9 @@ s.useEffect(() => {
 T.default.track(S.rMx.OPEN_POPOUT, {
   type: 'Inbox'
 });
-  }, []), s.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', x), () => {
-E.Z.unsubscribe('CONNECTION_OPEN', x);
-  }), [x]));
+  }, []), s.useEffect(() => (E.Z.subscribe('CONNECTION_OPEN', O), () => {
+E.Z.unsubscribe('CONNECTION_OPEN', O);
+  }), [O]));
   let U = (0, u.e7)([I.Z], () => I.Z.messageGroupSpacing),
 y = (0, m.Z)('unreads', v);
   if (0 === D.length) {
@@ -98,13 +98,13 @@ var B;
 return (0, i.jsxs)('div', {
   className: R.container,
   children: [
-    (0, i.jsx)(f.Z, {
+    (0, i.jsx)(C.Z, {
       tab: d.X.UNREADS,
       setTab: t,
       badgeState: M,
-      closePopout: x
+      closePopout: O
     }),
-    (0, i.jsx)(C.Z, {
+    (0, i.jsx)(f.Z, {
       Icon: _.InboxIcon,
       header: A.Z.Messages.UNREADS_EMPTY_STATE_HEADER,
       tip: (null === (B = o().os) || void 0 === B ? void 0 : B.family) === 'OS X' ? A.Z.Messages.UNREADS_EMPTY_STATE_TIP_MAC : A.Z.Messages.UNREADS_EMPTY_STATE_TIP
@@ -116,11 +116,11 @@ return (0, i.jsxs)('div', {
 className: r()(R.container, 'group-spacing-'.concat(U)),
 'aria-label': A.Z.Messages.UNREADS_TAB_LABEL,
 children: [
-  (0, i.jsx)(f.Z, {
+  (0, i.jsx)(C.Z, {
     tab: d.X.UNREADS,
     setTab: t,
     badgeState: M,
-    closePopout: x,
+    closePopout: O,
     children: (0, i.jsx)(N.Z, {
       type: 'top-header',
       onClick: j
@@ -143,7 +143,7 @@ children: [
           onScroll: P === g.jd.Done ? void 0 : b,
           className: R.scroller,
           children: [
-            a ? (0, i.jsx)(O, {
+            a ? (0, i.jsx)(x, {
               setSeenTutorial: l
             }) : null,
             (0, p.Z)(D, Z, n),
@@ -159,7 +159,7 @@ children: [
   });
 }
 
-function O(e) {
+function x(e) {
   let {
 setSeenTutorial: t
   } = e;
@@ -206,13 +206,13 @@ closePopout: s
   return (0, i.jsxs)('div', {
 className: R.container,
 children: [
-  (0, i.jsx)(f.Z, {
+  (0, i.jsx)(C.Z, {
     tab: d.X.UNREADS,
     setTab: t,
     badgeState: n,
     closePopout: s
   }),
-  (0, i.jsx)(C.Z, {
+  (0, i.jsx)(f.Z, {
     Icon: _.InboxIcon,
     disableStars: !0,
     header: A.Z.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,

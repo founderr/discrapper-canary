@@ -19,15 +19,15 @@ var i = n(735250),
   T = n(884338),
   h = n(100527),
   N = n(906732),
-  C = n(835473),
-  f = n(471445),
+  f = n(835473),
+  C = n(471445),
   p = n(111028),
   g = n(955415),
   S = n(601964),
   A = n(592125),
   R = n(430824),
-  x = n(496675),
-  O = n(594174),
+  O = n(496675),
+  x = n(594174),
   M = n(624138),
   v = n(358595),
   L = n(981631),
@@ -90,7 +90,7 @@ isStacked: s,
 hasEnded: a
   } = e;
   if (null != t && null != n) {
-let e = (0, f.KS)(t, n);
+let e = (0, C.KS)(t, n);
 return (0, i.jsxs)('div', {
   className: r()(D.channel, {
     [D.stacked]: s,
@@ -134,7 +134,7 @@ function k(e) {
   var t, n;
   let a, l, {
   invite: u,
-  getAcceptInviteContext: f
+  getAcceptInviteContext: C
 } = e,
 {
   approximate_member_count: p,
@@ -162,7 +162,7 @@ V,
 Y
   ]);
   let W = (0, c.e7)([R.Z], () => null != u.guild ? R.Z.getGuild(u.guild.id) : null, [u]),
-K = (0, C.Z)([G.id])[0],
+K = (0, f.Z)([G.id])[0],
 z = (0, c.e7)([E.ZP], () => {
   var e;
   return (null == u ? void 0 : u.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
@@ -177,7 +177,7 @@ Q = (0, c.e7)([E.ZP], () => {
   });
 }),
 q = A.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
-X = (0, c.e7)([x.Z], () => null != q && x.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
+X = (0, c.e7)([O.Z], () => null != q && O.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
 {
   analyticsLocations: J
 } = (0, N.ZP)(h.Z.INVITE_EMBED),
@@ -190,7 +190,7 @@ ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.
   q,
   G.id
 ]),
-et = (0, c.Wu)([O.default], () => ee.map(e => O.default.getUser(e)), [ee]),
+et = (0, c.Wu)([x.default], () => ee.map(e => x.default.getUser(e)), [ee]),
 en = u.state === L.r2o.ACCEPTING,
 ei = null != W;
   if (null == W) {
@@ -202,7 +202,7 @@ W = new S.ZP(u.guild);
 ea = () => {
   _.Z.acceptInviteAndTransitionToInviteChannel({
     inviteKey: u.code,
-    context: f('Invite Button Embed'),
+    context: C('Invite Button Embed'),
     analyticsLocations: J
   });
 };

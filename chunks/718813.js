@@ -14,8 +14,8 @@ var i, a = n(735250),
   _ = n(37234),
   E = n(134616),
   h = n(714338),
-  I = n(663993),
-  m = n(84615),
+  m = n(663993),
+  I = n(84615),
   g = n(210887),
   p = n(819640),
   T = n(585483),
@@ -31,12 +31,12 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let A = (0, I.Un)({
+let A = (0, m.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
   n.e('81039'),
   n.e('52249'),
-  n.e('13682'),
+  n.e('54803'),
   n.e('15685'),
   n.e('47006'),
   n.e('32776'),
@@ -59,7 +59,7 @@ createPromise: () => Promise.all([
 webpackId: 989804,
 name: 'UserSettings'
   }),
-  v = (0, I.Un)({
+  v = (0, m.Un)({
 createPromise: () => Promise.all([
   n.e('33053'),
   n.e('7654'),
@@ -69,11 +69,11 @@ createPromise: () => Promise.all([
 webpackId: 869779,
 name: 'ChannelSettings'
   }),
-  Z = (0, I.Un)({
+  Z = (0, m.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
   n.e('52249'),
-  n.e('13682'),
+  n.e('54803'),
   n.e('15685'),
   n.e('47006'),
   n.e('32776'),
@@ -85,7 +85,7 @@ createPromise: () => Promise.all([
 webpackId: 838819,
 name: 'CollectiblesShop'
   }),
-  L = (0, I.Un)({
+  L = (0, m.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
   n.e('33053'),
@@ -314,7 +314,7 @@ return (0, a.jsxs)(a.Fragment, {
 function y(e) {
   let t = (0, c.e7)([g.Z], () => g.Z.darkSidebar) ? f.BRd.DARK : void 0,
 n = (0, c.e7)([p.Z], () => p.Z.getLayers()),
-i = (0, m.QP)(e => e.fullScreenLayers.length > 0);
+i = (0, I.QP)(e => e.fullScreenLayers.length > 0);
   return (0, a.jsx)(D, {
 ...e,
 sidebarTheme: t,

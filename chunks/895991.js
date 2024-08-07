@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(410575),
   E = n(3570),
   h = n(237919),
-  I = n(957657),
-  m = n(665307),
+  m = n(957657),
+  I = n(665307),
   g = n(530151),
   p = n(981631),
   T = n(186901),
@@ -50,7 +50,7 @@ let {
 });
 return (0, i.jsxs)(a.Fragment, {
   children: [
-    (0, i.jsx)(I.Z, {
+    (0, i.jsx)(m.Z, {
       currentRoute: p.Z5c.APPLICATION_LIBRARY,
       renderToolbar: this.renderToolbar
     }),
@@ -62,7 +62,7 @@ return (0, i.jsxs)(a.Fragment, {
         e ? t : null,
         (0, i.jsx)(_.Z, {
           section: p.jXE.LIBRARY_APPLICATION_LIST,
-          children: (0, i.jsx)(m.Z, {
+          children: (0, i.jsx)(I.Z, {
             stickyHeader: !e,
             scrollToRow: this.scrollToRow
           })

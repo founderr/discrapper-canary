@@ -88,7 +88,7 @@ let h = [{
   IconComponent: d.Z
 }
   ],
-  I = e => {
+  m = e => {
 let {
   IconComponent: t,
   text: n,
@@ -116,7 +116,7 @@ return (0, i.jsxs)('div', {
   ]
 });
   };
-class m extends a.PureComponent {
+class I extends a.PureComponent {
   render() {
 let {
   sku: e
@@ -132,7 +132,7 @@ let {
     getText: a,
     getTooltip: s
   } = e;
-  return (0, i.jsx)(I, {
+  return (0, i.jsx)(m, {
     IconComponent: n,
     text: a(),
     tooltip: s()
@@ -149,4 +149,4 @@ return 0 === t.length ? null : (0, i.jsxs)('div', {
 });
   }
 }
-t.Z = m;
+t.Z = I;

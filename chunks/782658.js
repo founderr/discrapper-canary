@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return O;
+return x;
   }
 });
 var i = n(735250),
@@ -19,20 +19,20 @@ var i = n(735250),
   T = n(701190),
   h = n(610699),
   N = n(313876),
-  C = n(778333),
-  f = n(949981),
+  f = n(778333),
+  C = n(949981),
   p = n(680668),
   g = n(143708),
   S = n(358595),
   A = n(563917),
   R = n(135845),
-  x = n(981631);
+  O = n(981631);
 
-function O(e) {
+function x(e) {
   let {
 code: t,
 author: n,
-getAcceptInviteContext: O
+getAcceptInviteContext: x
   } = e, {
 invite: M,
 inviteError: v
@@ -44,7 +44,7 @@ inviteError: T.Z.getInviteError(t)
 null == M && r.Z.resolveInvite(t);
   }, [t]);
   let L = null != M ? M : {
-  state: x.r2o.RESOLVING,
+  state: O.r2o.RESOLVING,
   code: ''
 },
 {
@@ -62,16 +62,16 @@ j = () => {
 U = () => {
   (0, _.yU)() ? (0, E.Z)({
     analyticsSource: {
-      page: x.ZY5.INVITE_EMBED
+      page: O.ZY5.INVITE_EMBED
     },
     analyticsLocation: {
-      page: x.ZY5.INVITE_EMBED,
-      section: x.jXE.GUILD_CAP_UPSELL_MODAL
+      page: O.ZY5.INVITE_EMBED,
+      section: O.jXE.GUILD_CAP_UPSELL_MODAL
     },
     analyticsLocations: Z
   }) : r.Z.acceptInviteAndTransitionToInviteChannel({
     inviteKey: t,
-    context: O('Invite Button Embed')
+    context: x('Invite Button Embed')
   });
 },
 y = (0, i.jsx)(p.Z, {
@@ -83,17 +83,17 @@ y = (0, i.jsx)(p.Z, {
   author: n
 });
   switch (L.state) {
-case x.r2o.RESOLVING:
+case O.r2o.RESOLVING:
   y = (0, i.jsx)(S.Z, {});
   break;
-case x.r2o.EXPIRED:
-case x.r2o.BANNED:
+case O.r2o.EXPIRED:
+case O.r2o.BANNED:
   y = (0, i.jsx)(g.Z, {
-    banned: L.state === x.r2o.BANNED,
+    banned: L.state === O.r2o.BANNED,
     author: n
   });
   break;
-case x.r2o.ERROR:
+case O.r2o.ERROR:
   y = (0, i.jsx)(N.Z, {
     author: n,
     inviteError: v
@@ -102,7 +102,7 @@ case x.r2o.ERROR:
 default:
   switch ((0, d.VR)(L)) {
     case d.wx.GROUP_DM:
-      y = (0, i.jsx)(f.Z, {
+      y = (0, i.jsx)(C.Z, {
         onTransitionToInviteChannel: j,
         onAcceptInstantInvite: U,
         currentUserId: D,
@@ -111,10 +111,10 @@ default:
       });
       break;
     case d.wx.FRIEND:
-      y = (0, i.jsx)(C.Z, {
+      y = (0, i.jsx)(f.Z, {
         invite: L,
         author: n,
-        getAcceptInviteContext: O
+        getAcceptInviteContext: x
       });
       break;
     default:
@@ -151,12 +151,12 @@ default:
       }
       (0, d.P1)(L) && (y = (0, i.jsx)(h.Z, {
         invite: L,
-        getAcceptInviteContext: O
+        getAcceptInviteContext: x
       }));
   }
   }
   return (0, i.jsx)(l.Z, {
-section: x.jXE.INVITE_LINK,
+section: O.jXE.INVITE_LINK,
 children: y
   });
 }

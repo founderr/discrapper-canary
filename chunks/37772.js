@@ -15,15 +15,15 @@ var i = n(735250),
   T = n(592125),
   h = n(699516),
   N = n(630388),
-  C = n(709054),
-  f = n(493892),
+  f = n(709054),
+  C = n(493892),
   p = n(901461),
   g = n(739566),
   S = n(443877),
   A = n(492593),
   R = n(938353),
-  x = n(25015),
-  O = n(689674),
+  O = n(25015),
+  x = n(689674),
   M = n(963550),
   v = n(845080),
   L = n(295790),
@@ -81,13 +81,13 @@ disableReactionCreates: $
   } = (0, S.Z)(a), {
 content: ee,
 hasSpoilerEmbeds: et
-  } = (0, x.Z)(o, {
+  } = (0, O.Z)(o, {
 hideSimpleEmbedContent: z && Q,
 allowList: X,
 allowHeading: X,
 allowLinks: !0,
 previewLinkTarget: !0
-  }), en = (0, g.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(b.iLy.HAS_THREAD) && T.Z.getChannel(C.default.castMessageIdAsChannelId(o.id))), es = o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W, ea = !es && void 0 === s, er = (0, O.Z)({
+  }), en = (0, g.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(b.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))), es = o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W, ea = !es && void 0 === s, er = (0, x.Z)({
 message: o,
 channel: a,
 enabled: ea
@@ -97,7 +97,7 @@ enabled: ea
 message: Y.message,
 channel: W,
 hasThread: !1
-  }) : (h.Z.isBlockedForMessage(o) ? s = j.Z.Messages.BLOCKED_MESSAGE_COUNT : (0, f.DQ)(o) && V && (s = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== s) ? (0, i.jsx)(B, {
+  }) : (h.Z.isBlockedForMessage(o) ? s = j.Z.Messages.BLOCKED_MESSAGE_COUNT : (0, C.DQ)(o) && V && (s = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== s) ? (0, i.jsx)(B, {
 className: U,
 compact: D,
 count: 1,

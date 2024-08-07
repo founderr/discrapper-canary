@@ -11,8 +11,8 @@ var i = n(392711),
   _ = n(430824),
   E = n(131951),
   h = n(19780),
-  I = n(594174),
-  m = n(979651),
+  m = n(594174),
+  I = n(979651),
   g = n(996106),
   p = n(914946),
   T = n(238679),
@@ -38,7 +38,7 @@ socket: i
 throw new g.Z({
   errorCode: v.lTL.INVALID_CHANNEL
 }, 'Invalid channel id: '.concat(n));
-  if (a.isNSFW() && (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0)
+  if (a.isNSFW() && (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0)
 throw new g.Z({
   errorCode: v.lTL.INVALID_CHANNEL
 }, 'Invalid nsfw channel id: '.concat(a.id));
@@ -122,7 +122,7 @@ handler(e) {
     if (null == s)
       return;
     let r = s.getGuildId(),
-      l = Object.values(m.Z.getVoiceStatesForChannel(s.id));
+      l = Object.values(I.Z.getVoiceStatesForChannel(s.id));
     return n && a().differenceBy(l, n, e => {
       let {
         userId: t
@@ -160,7 +160,7 @@ handler(e) {
     if (null == s)
       return;
     let r = s.getGuildId(),
-      l = Object.values(m.Z.getVoiceStatesForChannel(s.id));
+      l = Object.values(I.Z.getVoiceStatesForChannel(s.id));
     return a().differenceBy(n, l, e => {
       let {
         userId: t
@@ -198,7 +198,7 @@ handler(e) {
     if (null == s)
       return;
     let r = s.getGuildId(),
-      l = Object.values(m.Z.getVoiceStatesForChannel(s.id)).map(e => (0, p.aE)(r, s.id, e));
+      l = Object.values(I.Z.getVoiceStatesForChannel(s.id)).map(e => (0, p.aE)(r, s.id, e));
     return a().differenceWith(l, n, a().isEqual).forEach(e => i(e)), l;
   };
 }
@@ -387,7 +387,7 @@ handler: () => e => {
     prevState: t,
     dispatch: n
   } = e, i = {
-    currentUser: I.default.getCurrentUser()
+    currentUser: m.default.getCurrentUser()
   };
   return null != i.currentUser && (null == t || !(0, r.Z)(i, t)) && n((0, N.Z)(i.currentUser)), i;
 }

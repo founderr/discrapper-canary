@@ -7,8 +7,8 @@ var s = n(735250),
   r = n(470079),
   i = n(593473),
   a = n(266067),
-  l = n(442837),
-  o = n(893776),
+  o = n(442837),
+  l = n(893776),
   c = n(899742),
   u = n(743142),
   d = n(703656),
@@ -35,7 +35,7 @@ function p(e) {
 {
   isAuthenticated: n,
   loginStatus: p
-} = (0, l.cj)([_.default], () => ({
+} = (0, o.cj)([_.default], () => ({
   isAuthenticated: _.default.isAuthenticated(),
   loginStatus: _.default.getLoginStatus()
 })),
@@ -65,7 +65,7 @@ if (null != I) {
   } = (0, i.parse)(I.search);
   if (null != e && null != t) {
     let n = null != m ? (0, u.L)(m) : void 0;
-    f ? o.Z.logout(null).finally(() => {
+    f ? l.Z.logout(null).finally(() => {
       T({
         handoffKey: e,
         handoffToken: t,

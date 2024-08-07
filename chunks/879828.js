@@ -1,78 +1,78 @@
-i.d(s, {
+s.d(n, {
   Z: function() {
-return Z;
+return x;
   }
 });
-var n = i(735250),
-  l = i(470079),
-  t = i(704215),
-  o = i(481060),
-  a = i(906732),
-  r = i(605236),
-  d = i(785717),
-  c = i(221292),
-  u = i(929498),
-  I = i(678738),
-  _ = i(151545),
-  f = i(527790),
-  E = i(304042),
-  m = i(981631),
-  v = i(921944),
-  S = i(689938),
-  x = i(122606);
+var i = s(735250),
+  l = s(470079),
+  o = s(704215),
+  t = s(481060),
+  r = s(906732),
+  a = s(605236),
+  d = s(785717),
+  c = s(221292),
+  u = s(929498),
+  I = s(678738),
+  _ = s(151545),
+  f = s(527790),
+  E = s(304042),
+  m = s(981631),
+  S = s(921944),
+  Z = s(689938),
+  v = s(122606);
 
-function Z(e) {
+function x(e) {
   let {
-user: s,
-currentUser: i,
-onClose: Z
+user: n,
+currentUser: s,
+onClose: x
   } = e, {
-analyticsLocations: p
-  } = (0, a.ZP)(), {
-context: h,
-trackUserProfileAction: T
+analyticsLocations: h
+  } = (0, r.ZP)(), {
+context: T,
+trackUserProfileAction: p
   } = (0, d.KZ)(), {
 live: g,
 recent: N,
-stream: j
-  } = (0, u.Z)(s.id), C = s.id === i.id, A = (0, r.wE)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+stream: C
+  } = (0, u.Z)(n.id), j = n.id === s.id, A = (0, a.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
   return l.useEffect(() => {
-if (!!C && !A)
-  (0, r.EW)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
-    dismissAction: v.L.AUTO_DISMISS,
+if (!!j && !A)
+  (0, a.EW)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
+    dismissAction: S.L.AUTO_DISMISS,
     forceTrack: !0
   });
   }, [
-C,
+j,
 A
-  ]), (0, n.jsxs)(o.ScrollerThin, {
-className: x.scroller,
+  ]), (0, i.jsxs)(t.ScrollerThin, {
+className: v.scroller,
 fade: !0,
 children: [
-  (0, n.jsxs)(I.Z, {
+  (0, i.jsxs)(I.Z, {
     children: [
-      null != j && (0, n.jsx)(E.Z, {
-        user: s,
-        currentUser: i,
-        stream: j,
-        onClose: Z,
+      null != C && (0, i.jsx)(E.Z, {
+        user: n,
+        currentUser: s,
+        stream: C,
+        onClose: x,
         onAction: () => {
-          T({
+          p({
             action: 'JOIN_ACTIVITY'
           }), (0, c.Ac)({
             activityType: m.IIU.STREAMING,
-            analyticsLocations: p,
-            ...h
+            analyticsLocations: h,
+            ...T
           });
         }
       }),
-      g.map((e, l) => (0, n.jsx)(_.Z, {
-        user: s,
-        currentUser: i,
+      g.map((e, l) => (0, i.jsx)(_.Z, {
+        user: n,
+        currentUser: s,
         activity: e,
-        onClose: Z,
+        onClose: x,
         onAction: () => {
-          T({
+          p({
             action: 'JOIN_ACTIVITY'
           }), (0, c.Ac)({
             activityType: e.type,
@@ -80,21 +80,21 @@ children: [
             activityPlatform: e.platform,
             activitySessionId: e.session_id,
             applicationId: e.application_id,
-            analyticsLocations: p,
-            ...h
+            analyticsLocations: h,
+            ...T
           });
         }
       }, 'live-'.concat(l)))
     ]
   }),
-  (0, n.jsx)(I.Z, {
-    heading: (0, n.jsxs)('div', {
-      className: x.heading,
+  (0, i.jsx)(I.Z, {
+    heading: (0, i.jsxs)('div', {
+      className: v.heading,
       children: [
-        S.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
-        (0, n.jsx)(o.Tooltip, {
-          text: S.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_INFORMATION_TOOLTIP,
-          children: e => (0, n.jsx)(o.CircleInformationIcon, {
+        Z.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+        (0, i.jsx)(t.Tooltip, {
+          text: Z.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_INFORMATION_TOOLTIP,
+          children: e => (0, i.jsx)(t.CircleInformationIcon, {
             ...e,
             size: 'xxs',
             color: 'currentColor'
@@ -102,10 +102,10 @@ children: [
         })
       ]
     }),
-    children: N.map(e => (0, n.jsx)(f.Z, {
-      user: s,
+    children: N.map(e => (0, i.jsx)(f.Z, {
+      user: n,
       entry: e,
-      onClose: Z
+      onClose: x
     }, e.id))
   })
 ]

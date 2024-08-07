@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(484459),
   E = n(103575),
   h = n(237583),
-  I = n(63063),
-  m = n(870569),
+  m = n(63063),
+  I = n(870569),
   g = n(345243),
   p = n(115530),
   T = n(981631),
@@ -57,17 +57,17 @@ return (0, i.jsxs)('div', {
 let {
   onStopListening: e
 } = this.props;
-return this.isHost() ? null : (0, i.jsx)(m.Z, {
+return this.isHost() ? null : (0, i.jsx)(I.Z, {
   tooltipText: S.Z.Messages.SPOTIFY_LISTEN_ALONG_STOP,
   onClick: e,
   icon: c.CloseSmallIcon
 });
   }
   renderHelpIcon() {
-return this.isHost() ? (0, i.jsx)(m.Z, {
+return this.isHost() ? (0, i.jsx)(I.Z, {
   tooltipText: S.Z.Messages.SPOTIFY_LISTEN_ALONG_INFO,
   onClick: () => {
-    window.open(I.Z.getArticleURL(T.BhN.SPOTIFY_CONNECTION), '_blank');
+    window.open(m.Z.getArticleURL(T.BhN.SPOTIFY_CONNECTION), '_blank');
   },
   icon: c.CircleInformationIcon
 }) : null;

@@ -11,11 +11,11 @@ var i = n(735250),
   _ = n(689938);
 let E = (0, l.makeIconCompat)(c.Z),
   h = (0, l.makeIconCompat)(d.Z),
-  I = new Set([
+  m = new Set([
 u.TzF.PUSHING,
 u.TzF.PULLING
   ]),
-  m = Object.freeze({
+  I = Object.freeze({
 [u.TzF.DONE]: E,
 [u.TzF.PLANNING]: E,
 [u.TzF.PREPARING]: E,
@@ -88,13 +88,13 @@ let {
 } = this.props, a = null == e ? {
   type: u.TzF.DONE
 } : e, s = this.getIsRecentlySynced(), r = {};
-(I.has(a.type) || s) && (r.gradientConfig = {
+(m.has(a.type) || s) && (r.gradientConfig = {
   id: t.id,
   startColor: 'rgba(199, 208, 240, 1)',
   stopColor: 'rgba(114, 137, 218, 1)',
   stop: this.getStop(a, s)
 });
-let o = s ? h : m[a.type];
+let o = s ? h : I[a.type];
 return (0, i.jsx)(l.Tooltip, {
   text: this.getTooltip(a, s),
   children: e => (0, i.jsx)(o, {

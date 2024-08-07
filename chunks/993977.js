@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(630388),
   E = n(804739),
   h = n(957657),
-  I = n(34305),
-  m = n(981631),
+  m = n(34305),
+  I = n(981631),
   g = n(689938),
   p = n(351634);
 
@@ -42,7 +42,7 @@ return (0, i.jsxs)('div', {
         }),
         null != t ? (0, i.jsx)('div', {
           className: p.applicationSubText,
-          children: m.EOG[t]
+          children: I.EOG[t]
         }) : null
       ]
     }),
@@ -77,7 +77,7 @@ c.Xc.updateSetting(e);
 c.Pe.updateSetting(e);
   }
   trackRestoreApplication(e, t) {
-u.default.track(m.rMx.APPLICATION_SETTINGS_UPDATED, {
+u.default.track(I.rMx.APPLICATION_SETTINGS_UPDATED, {
   hidden_enabled: t,
   ...e.getAnalyticsData()
 });
@@ -105,7 +105,7 @@ return (0, i.jsxs)('div', {
           note: g.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
           children: g.Z.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
         }),
-        (0, i.jsx)(I.Z, {})
+        (0, i.jsx)(m.Z, {})
       ]
     }) : null,
     (0, i.jsx)(T, {
@@ -119,7 +119,7 @@ return (0, i.jsxs)('div', {
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)(h.Z, {
-      currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS
+      currentRoute: I.Z5c.APPLICATION_LIBRARY_SETTINGS
     }),
     (0, i.jsx)(r.ScrollerAuto, {
       className: p.scroller,
@@ -131,8 +131,8 @@ return (0, i.jsxs)(i.Fragment, {
   constructor(...e) {
 var t, n, i;
 super(...e), t = this, n = 'handleRestoreHiddenLibraryApplication', i = e => {
-  let t = _.x9(e.getFlags(), m.eHb.HIDDEN);
-  l.h(e.id, e.branchId, t), this.trackRestoreApplication(e, _.yE(t, m.eHb.HIDDEN));
+  let t = _.x9(e.getFlags(), I.eHb.HIDDEN);
+  l.h(e.id, e.branchId, t), this.trackRestoreApplication(e, _.yE(t, I.eHb.HIDDEN));
 }, n in t ? Object.defineProperty(t, n, {
   value: i,
   enumerable: !0,

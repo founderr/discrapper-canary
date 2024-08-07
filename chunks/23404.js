@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(272008),
   E = n(113434),
   h = n(569984),
-  I = n(497505),
-  m = n(918701),
+  m = n(497505),
+  I = n(918701),
   g = n(585500),
   p = n(566078),
   T = n(602667),
@@ -37,7 +37,7 @@ children: [
   (0, i.jsx)('img', {
     className: O.headingGameTile,
     alt: '',
-    src: (0, m.uo)(n, u)
+    src: (0, I.uo)(n, u)
   }),
   (0, i.jsxs)('div', {
     className: O.headingCopy,
@@ -71,33 +71,33 @@ quest: o
 e.stopPropagation();
   }, []), M = a.useCallback(() => {
 (0, _.AH)(o.id, {
-  questContent: I.jn.ACTIVITY_PANEL,
+  questContent: m.jn.ACTIVITY_PANEL,
   questContentCTA: u.jZ.ACCEPT_QUEST
 });
   }, [o]), D = a.useCallback(() => {
 null != o && ((0, u._3)({
   questId: o.id,
-  questContent: I.jn.ACTIVITY_PANEL,
+  questContent: m.jn.ACTIVITY_PANEL,
   questContentCTA: u.jZ.TRACK_PROGRESS
 }), (0, A.navigateToQuestHome)(v.dr.ACTIVITY_PANEL, o.id));
   }, [o]), y = a.useCallback(() => {
 (0, u._3)({
   questId: o.id,
-  questContent: I.jn.ACTIVITY_PANEL,
+  questContent: m.jn.ACTIVITY_PANEL,
   questContentCTA: u.jZ.LEARN_MORE
 }), (0, A.navigateToQuestHome)(v.dr.ACTIVITY_PANEL, o.id);
   }, [o]), j = (0, C.hf)({
 quest: o,
-location: I.jn.ACTIVITY_PANEL
-  }), U = (0, E.tP)(o), G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, w = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null, B = (null == o ? void 0 : o.userStatus) == null || (0, m.zE)(o.userStatus, I.jn.ACTIVITY_PANEL), H = (0, E.Rf)(o), V = (0, g.D)({
+location: m.jn.ACTIVITY_PANEL
+  }), U = (0, E.tP)(o), G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, k = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, w = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null, B = (null == o ? void 0 : o.userStatus) == null || (0, I.zE)(o.userStatus, m.jn.ACTIVITY_PANEL), H = (0, E.Rf)(o), V = (0, g.D)({
 quest: o,
 taskDetails: H,
 location: v.dr.ACTIVITY_PANEL,
-questContent: I.jn.ACTIVITY_PANEL
+questContent: m.jn.ACTIVITY_PANEL
   });
-  return B || U || w || !(0, m.dl)(o) ? null : (0, i.jsx)(T.A, {
+  return B || U || w || !(0, I.dl)(o) ? null : (0, i.jsx)(T.A, {
 questOrQuests: o,
-questContent: I.jn.ACTIVITY_PANEL,
+questContent: m.jn.ACTIVITY_PANEL,
 children: e => {
   var t;
   return (0, i.jsxs)('div', {
@@ -124,7 +124,7 @@ children: e => {
           }),
           (0, i.jsx)(f.r, {
             quest: o,
-            questContent: I.jn.ACTIVITY_PANEL,
+            questContent: m.jn.ACTIVITY_PANEL,
             shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
             showShareLink: !0,
             children: e => (0, i.jsx)(c.Clickable, {
@@ -156,7 +156,7 @@ children: e => {
         autoplay: p,
         className: O.rewardTileWithInstructions,
         quest: o,
-        questContent: I.jn.ACTIVITY_PANEL,
+        questContent: m.jn.ACTIVITY_PANEL,
         location: v.dr.ACTIVITY_PANEL,
         taskDetails: H
       }),

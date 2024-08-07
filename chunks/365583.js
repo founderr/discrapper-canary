@@ -22,7 +22,7 @@ var i = n(278074),
   h = n(689938);
 
 function p(e) {
-  return (0, i.EQ)(e).when(u.dX, () => () => (0, c.Z)(f.Z.ACTIVITY_PRIVACY)).when(u.r5, () => () => o.Z.open(_.oAB.CONNECTIONS, null)).when(u.kx, () => () => o.Z.open(_.oAB.CONNECTIONS, null)).otherwise(() => () => (0, c.Z)(f.Z.ACTIVITY_PRIVACY));
+  return (0, i.EQ)(e).when(u.dX, () => () => (0, c.Z)(f.Z.ACTIVITY_PRIVACY)).when(u.y0, () => () => o.Z.open(_.oAB.CONNECTIONS, null)).when(u.dU, () => () => o.Z.open(_.oAB.CONNECTIONS, null)).otherwise(() => () => (0, c.Z)(f.Z.ACTIVITY_PRIVACY));
 }
 
 function m(e) {

@@ -22,12 +22,12 @@ channel: _,
 user: E,
 hasSingleMessageRequest: h
   } = e, {
-channelId: I
+channelId: m
   } = (0, o._)();
   return (0, i.jsx)(c.Z, {
 index: t,
 className: n,
-isFocused: I === _.id,
+isFocused: m === _.id,
 channel: _,
 user: E,
 onClick: e => {

@@ -14,15 +14,15 @@ var i = n(735250),
   T = n(937111),
   h = n(281956),
   N = n(41776),
-  C = n(738737),
-  f = n(509545),
+  f = n(738737),
+  C = n(509545),
   p = n(63063),
   g = n(817460),
   S = n(584825),
   A = n(697227),
   R = n(934826),
-  x = n(896083),
-  O = n(939872),
+  O = n(896083),
+  x = n(939872),
   M = n(265985),
   v = n(293810),
   L = n(981631),
@@ -37,7 +37,7 @@ U = null == e ? void 0 : e.subscription_plans[0],
 y = null == U ? void 0 : U.id,
 B = (null == e ? void 0 : e.published) === !0,
 k = null == U ? void 0 : U.sku_id,
-G = (0, c.e7)([f.Z], () => null != y ? f.Z.get(y) : null),
+G = (0, c.e7)([C.Z], () => null != y ? C.Z.get(y) : null),
 {
   activeSubscription: F,
   activeSubscriptionPlanFromStore: w
@@ -52,7 +52,7 @@ K = (null == F ? void 0 : F.trialId) != null,
 {
   loading: z,
   getTrialPurchaseEligibility: Q
-} = (0, x.F)(),
+} = (0, O.F)(),
 q = (0, S.oC)(null == e ? void 0 : e.id),
 {
   analyticsLocations: X
@@ -80,7 +80,7 @@ k
     } else
       s = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER;
   }
-  (0, C.Z)({
+  (0, f.Z)({
     activeSubscription: F,
     analyticsSubscriptionType: L.NYc.GUILD,
     trialId: n,
@@ -105,7 +105,7 @@ k
     initialPlanId: U.id,
     skuId: U.sku_id,
     planGroup: H,
-    renderPurchaseConfirmation: (n, s) => $ ? (0, i.jsx)(O.m, {
+    renderPurchaseConfirmation: (n, s) => $ ? (0, i.jsx)(x.m, {
       listing: e,
       onClose: s,
       guildId: t

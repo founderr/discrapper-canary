@@ -100,7 +100,7 @@ n,
 l
   ]);
   if (l.length <= 1 && 0 === h.length) {
-var I, m;
+var m, I;
 return (0, i.jsx)(s.MenuGroup, {
   label: n.length > 1 ? d.Z.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({
     memberCount: n.length
@@ -109,7 +109,7 @@ return (0, i.jsx)(s.MenuGroup, {
     priorityMembers: t,
     otherMembers: _,
     totalMembers: n.length,
-    activity: null !== (m = null === (I = l[0]) || void 0 === I ? void 0 : I.activity) && void 0 !== m ? m : void 0,
+    activity: null !== (I = null === (m = l[0]) || void 0 === m ? void 0 : m.activity) && void 0 !== I ? I : void 0,
     guildId: null == o ? void 0 : o.id,
     sourceAnalyticsLocations: E
   })

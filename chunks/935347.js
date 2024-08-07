@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(205355),
   E = n(607070),
   h = n(38618),
-  I = n(197344),
-  m = n(474873),
+  m = n(197344),
+  I = n(474873),
   g = n(706454),
   p = n(215427),
   T = n(820254),
@@ -280,7 +280,7 @@ super(e), L(this, 'videoRef', null), L(this, '_noProblemsTimeout', null), L(this
   ];
   return g.default.locale.startsWith('en-') && e.push(v.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)];
 }()), L(this, '_eventLoadingText', function() {
-  let e = I.Z.getLoadingTips();
+  let e = m.Z.getLoadingTips();
   if (null != e && e.length > 0)
     return e[o().random(e.length - 1)];
 }()), L(this, 'handleReady', () => {
@@ -310,13 +310,13 @@ this.state = {
 t.Z = c.ZP.connectStores([
   h.Z,
   p.Z,
-  m.Z,
+  I.Z,
   E.Z
 ], () => ({
   isTryingToConnect: h.Z.isTryingToConnect(),
   connected: h.Z.isConnected(),
   incident: p.Z.getIncident(),
-  soundpack: m.Z.getSoundpack(),
+  soundpack: I.Z.getSoundpack(),
   reducedMotion: E.Z.useReducedMotion
 }))(e => {
   let {

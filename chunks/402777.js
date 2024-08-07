@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(906732),
   d = n(680295),
   h = n(785717),
-  m = n(221292),
-  p = n(318661),
+  p = n(221292),
+  m = n(318661),
   _ = n(78675),
   f = n(113557),
   E = n(169979),
@@ -38,7 +38,7 @@ function L(e) {
 user: t,
 currentUser: n,
 channel: L
-  } = e, P = __OVERLAY__, O = (0, p.ZP)(t.id), y = (0, o.ZP)(), {
+  } = e, P = __OVERLAY__, O = (0, m.ZP)(t.id), y = (0, o.ZP)(), {
 analyticsLocations: D
   } = (0, u.ZP)(c.Z.PROFILE_PANEL), k = (0, h.ZB)({
 layout: 'SIMPLIFIED_DM_PANEL',
@@ -161,7 +161,7 @@ children: (0, i.jsx)(h.Mt, {
           look: l.Button.Looks.BLANK,
           color: j.footerButtonColor,
           onClick: () => {
-            W(), (0, m.pQ)({
+            W(), (0, p.pQ)({
               action: 'PRESS_VIEW_PROFILE',
               analyticsLocations: D,
               ...k

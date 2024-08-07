@@ -3,8 +3,8 @@ n(47120);
 var r = n(735250),
   i = n(470079),
   a = n(120356),
-  l = n.n(a),
-  o = n(873546),
+  o = n.n(a),
+  l = n(873546),
   c = n(442837),
   u = n(481060),
   d = n(980591),
@@ -56,8 +56,8 @@ children: t
   switch (function() {
   let [e, t] = i.useState(!1), [n, r] = i.useState(true), a = function() {
     return null;
-  }(), l = (0, c.e7)([g.Z], () => g.Z.hasLoadedExperiments);
-  return ((0, d.Z)(() => {}, 300), void 0 !== s) ? s : !n && l ? (!e && t(!0), A(function(e) {
+  }(), o = (0, c.e7)([g.Z], () => g.Z.hasLoadedExperiments);
+  return ((0, d.Z)(() => {}, 300), void 0 !== s) ? s : !n && o ? (!e && t(!0), A(function(e) {
     return 'default';
   }(a))) : n ? A('default') : 'loading';
 }()) {
@@ -118,7 +118,7 @@ return (0, r.jsx)('div', {
       children: [
         (0, r.jsx)(h.Z, {
           show: !0,
-          className: l()(m.logo)
+          className: o()(m.logo)
         }),
         (0, r.jsx)(E.h, {
           splash: e,
@@ -144,7 +144,7 @@ return (0, r.jsx)(_.Z, {
 let {
   isMobileWidth: e
 } = this.state, t = navigator.userAgent.includes('GameLauncher');
-return e || o.tq || o.Em || t ? this.renderMobile() : this.renderDefault();
+return e || l.tq || l.Em || t ? this.renderMobile() : this.renderDefault();
   }
   constructor(e) {
 var t, n, s;

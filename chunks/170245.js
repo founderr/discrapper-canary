@@ -16,7 +16,7 @@ showAccountIdentifier: u,
 status: _,
 isMobile: E,
 className: h
-  } = e, I = (0, r.e7)([c.Z], () => c.Z.getNickname(t.id));
+  } = e, m = (0, r.e7)([c.Z], () => c.Z.getNickname(t.id));
   return (0, i.jsxs)('div', {
 className: s()(d.userInfo, h, {
   [d.hovered]: n
@@ -34,7 +34,7 @@ children: [
     children: [
       (0, i.jsx)(l.Z, {
         user: t,
-        nick: I,
+        nick: m,
         botClass: d.botTag,
         className: s()(d.discordTag, {
           [d.alignPomelo]: t.isPomelo()

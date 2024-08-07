@@ -5,8 +5,8 @@ var i, a, s, l, r = n(442837),
   u = n(594174),
   d = n(355298),
   h = n(333984);
-let m = {},
-  p = new Set();
+let p = {},
+  m = new Set();
 
 function _(e) {
   return d.Z.isMessageRequest(e) || h.Z.isSpam(e);
@@ -17,7 +17,7 @@ function f(e, t) {
   if (!_(e) || null != t && e !== (null == t ? void 0 : t.channel_id))
 return;
   let i = null == t ? null : (0, c.e5)(t);
-  m[e] = {
+  p[e] = {
 loaded: !0,
 error: n,
 message: i
@@ -28,14 +28,14 @@ class E extends(i = r.ZP.Store) {
 this.waitFor(d.Z, h.Z, u.default);
   }
   shouldLoadMessageRequestPreview(e) {
-return !p.has(e);
+return !m.has(e);
   }
   getMessageRequestPreview(e) {
-return !(e in m) && (m[e] = {
+return !(e in p) && (p[e] = {
   loaded: !1,
   error: !1,
   message: null
-}), m[e];
+}), p[e];
   }
 }
 l = 'MessageRequestPreviewStore', (s = 'displayName') in(a = E) ? Object.defineProperty(a, s, {
@@ -45,26 +45,26 @@ l = 'MessageRequestPreviewStore', (s = 'displayName') in(a = E) ? Object.defineP
   writable: !0
 }) : a[s] = l, t.Z = new E(o.Z, {
   CONNECTION_OPEN: function() {
-m = {}, p.clear();
+p = {}, m.clear();
   },
   CHANNEL_CREATE: function(e) {
 let {
   channel: t
 } = e;
-_(t.id) && p.add(t.id);
+_(t.id) && m.add(t.id);
   },
   CHANNEL_UPDATES: function(e) {
 let {
   channels: t
 } = e;
 for (let e of t)
-  !_(e.id) && (p.delete(e.id), delete m[e.id]);
+  !_(e.id) && (m.delete(e.id), delete p[e.id]);
   },
   CHANNEL_DELETE: function(e) {
 let {
   channel: t
 } = e;
-p.delete(t.id), delete m[t.id];
+m.delete(t.id), delete p[t.id];
   },
   MESSAGE_CREATE: function(e) {
 if (e.isPushNotification)
@@ -75,10 +75,10 @@ f(e.message.channel_id, e.message);
 let t = e.message.channel_id;
 if (null == t)
   return !1;
-let n = m[t];
+let n = p[t];
 if (null == n || null == n.message)
   return !1;
-m[t] = {
+p[t] = {
   ...n,
   message: (0, c.wi)(n.message, e.message)
 };
@@ -86,7 +86,7 @@ m[t] = {
   MESSAGE_DELETE: function(e) {
 if (!_(e.channelId))
   return !1;
-m[e.channelId] = {
+p[e.channelId] = {
   loaded: !0,
   error: !1,
   message: null

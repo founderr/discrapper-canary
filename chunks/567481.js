@@ -12,12 +12,12 @@ var a = n(481060),
   _ = n(996106),
   E = n(914946),
   h = n(452426),
-  I = n(852926),
-  m = n(186901),
+  m = n(852926),
+  I = n(186901),
   g = n(981631);
 t.Z = {
   [g.Etm.SET_OVERLAY_LOCKED]: {
-scope: m.lH,
+scope: I.lH,
 validation: e => (0, h.Z)(e).required().keys({
   locked: e.boolean().required(),
   pid: e.number().min(0).required()
@@ -40,7 +40,7 @@ handler(e) {
 }
   },
   [g.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
-scope: m.lH,
+scope: I.lH,
 validation: e => (0, h.Z)(e).required().keys({
   type: e.number().required().valid([g.mFx.JOIN]),
   pid: e.number().min(0).required()
@@ -64,7 +64,7 @@ handler(e) {
     }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
   let {
     lock: l
-  } = (0, I.s0)(i), o = (0, c.Z)(s, u.Z);
+  } = (0, m.s0)(i), o = (0, c.Z)(s, u.Z);
   return (0, r.h7)(s, o).then(() => {
     if (l(), o)
       throw new _.Z({
@@ -74,7 +74,7 @@ handler(e) {
 }
   },
   [g.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
-scope: m.lH,
+scope: I.lH,
 validation: e => (0, h.Z)(e).required().keys({
   code: e.string().required(),
   pid: e.number().min(0).required()
@@ -103,7 +103,7 @@ handler(e) {
     let {
       context: a,
       lock: r
-    } = (0, I.s0)(n);
+    } = (0, m.s0)(n);
     return new Promise(e => {
       s.Z.dispatch({
         type: 'INVITE_MODAL_OPEN',
@@ -117,7 +117,7 @@ handler(e) {
 }
   },
   [g.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
-scope: m.lH,
+scope: I.lH,
 validation: e => (0, h.Z)(e).required().keys({
   pid: e.number().min(0).required()
 }),
@@ -134,7 +134,7 @@ handler(e) {
     }, 'No application.');
   let {
     lock: l
-  } = (0, I.s0)(t);
+  } = (0, m.s0)(t);
   return new Promise(e => {
     (0, a.openModalLazy)(async () => {
       let {

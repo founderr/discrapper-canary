@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(242291),
   d = n(792165),
   h = n(603074),
-  m = n(294629),
-  p = n(390322),
+  p = n(294629),
+  m = n(390322),
   _ = n(871499),
   f = n(131951),
   E = n(459273),
@@ -29,7 +29,7 @@ themeable: x
   } = e, T = t.getGuildId(), {
 mute: N,
 suppress: v
-  } = (0, m.Z)(t), S = (0, s.e7)([f.Z], () => f.Z.isDeaf()), Z = N || v || S, A = (0, u.sR)({
+  } = (0, p.Z)(t), S = (0, s.e7)([f.Z], () => f.Z.isDeaf()), Z = N || v || S, A = (0, u.sR)({
 isSoundboardButtonDisabled: Z
   }), [M, b] = (0, c.c)(A);
 
@@ -58,7 +58,7 @@ renderPopout: e => {
   let {
     closePopout: n
   } = e;
-  return (0, i.jsx)(p.Z, {
+  return (0, i.jsx)(m.Z, {
     children: (0, i.jsx)(h.Z, {
       guildId: T,
       channel: t,

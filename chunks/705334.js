@@ -1,6 +1,6 @@
 n.d(t, {
   _: function() {
-return m;
+return I;
   }
 });
 var i = n(735250),
@@ -16,7 +16,7 @@ var i = n(735250),
   E = n(689938),
   h = n(876425);
 
-function I(e) {
+function m(e) {
   let {
 tab: t
   } = e, n = (0, d.d)(e => e.selectedPage === t, l.Z), s = a.useMemo(() => function(e) {
@@ -30,13 +30,13 @@ switch (e) {
       color: 'currentColor'
     });
 }
-  }(t), [t]), E = a.useMemo(() => (0, u.sm)(t), [t]), I = a.useCallback(() => {
+  }(t), [t]), E = a.useMemo(() => (0, u.sm)(t), [t]), m = a.useCallback(() => {
 (0, o.j)(() => d.d.setState({
   selectedPage: t
 }));
   }, [t]);
   return (0, i.jsxs)(c.Clickable, {
-onClick: I,
+onClick: m,
 className: r()(h.navItem, {
   [h.selectedNavItem]: n
 }),
@@ -54,7 +54,7 @@ children: [
   });
 }
 
-function m() {
+function I() {
   return (0, i.jsxs)('div', {
 className: h.container,
 children: [
@@ -67,7 +67,7 @@ children: [
   }),
   (0, i.jsx)('nav', {
     className: h.nav,
-    children: _.mc.map(e => (0, i.jsx)(I, {
+    children: _.mc.map(e => (0, i.jsx)(m, {
       tab: e
     }, e))
   })

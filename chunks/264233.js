@@ -23,16 +23,16 @@ function h(e) {
 setTab: t,
 badgeState: a,
 closePopout: h
-  } = e, C = (0, l.Wu)([u.Z], () => u.Z.getInvites()), f = (0, l.e7)([u.Z], () => u.Z.getInviteStatuses()), [p, g] = s.useMemo(() => r().partition(C, e => {
+  } = e, f = (0, l.Wu)([u.Z], () => u.Z.getInvites()), C = (0, l.e7)([u.Z], () => u.Z.getInviteStatuses()), [p, g] = s.useMemo(() => r().partition(f, e => {
 var t;
-return (null === (t = f[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
   }), [
-C,
-f
+f,
+C
   ]);
   return (s.useEffect(() => {
 (0, d.sJ)();
-  }), 0 === C.length) ? (0, i.jsxs)('div', {
+  }), 0 === f.length) ? (0, i.jsxs)('div', {
 className: T.container,
 children: [
   (0, i.jsx)(E.Z, {

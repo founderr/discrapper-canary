@@ -15,13 +15,13 @@ index: t,
 children: s,
 user: E,
 channel: h,
-onClick: I,
-isFocused: m,
+onClick: m,
+isFocused: I,
 isActive: g,
 onOtherHover: p,
 className: T
   } = e, [S, f] = a.useState(!1), [C, N] = a.useState(!1), A = () => {
-f(!0), m && !g && !C && (null == p || p());
+f(!0), I && !g && !C && (null == p || p());
   }, v = () => {
 f(!1);
   }, Z = (e, t) => {
@@ -59,7 +59,7 @@ children: e => (0, i.jsx)(c.FocusRing, {
     onContextMenu: e => Z(e, E),
     onMouseEnter: A,
     onMouseLeave: v,
-    onClick: null != I ? I : void 0,
+    onClick: null != m ? m : void 0,
     style: {
       LIST_ROW_HEIGHT: u.WN,
       opacity: 1

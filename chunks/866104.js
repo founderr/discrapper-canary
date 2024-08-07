@@ -3,7 +3,7 @@ n.d(t, {
 return M;
   },
   Z: function() {
-return O;
+return x;
   }
 }), n(47120);
 var i = n(735250),
@@ -22,15 +22,15 @@ var i = n(735250),
   T = n(594174),
   h = n(671533),
   N = n(51144),
-  C = n(506071),
-  f = n(696014),
+  f = n(506071),
+  C = n(696014),
   p = n(847033),
   g = n(544978),
   S = n(893182),
   A = n(689938),
   R = n(55686);
 
-function x(e) {
+function O(e) {
   let {
 onClick: t
   } = e;
@@ -55,11 +55,11 @@ children: [
   });
 }
 
-function O(e) {
+function x(e) {
   let {
 coverImageAsset: t,
 isPreview: n = !1
-  } = e, s = I.QK.useSetting(), a = (0, C.n)() && s, [r, l] = (0, E.Z)(t, a), o = a ? (0, i.jsx)(d.Z, {
+  } = e, s = I.QK.useSetting(), a = (0, f.n)() && s, [r, l] = (0, E.Z)(t, a), o = a ? (0, i.jsx)(d.Z, {
 autoPlay: !0,
 loop: !0,
 className: R.coverImage,
@@ -90,7 +90,7 @@ subscriptionsSettings: E
   } = e, I = d.id;
   let {
 nickname: h,
-nickcolor: C
+nickcolor: f
   } = (a = I, (0, l.cj)([
 m.ZP,
 T.default
@@ -106,7 +106,7 @@ return {
   }, [a])), {
 isTruncated: M,
 ExpandableTextContainer: v
-  } = (0, f.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = s.useState(1), D = (0, c.Z)('(max-width: 1439px)'), {
+  } = (0, C.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = s.useState(1), D = (0, c.Z)('(max-width: 1439px)'), {
 selectedTab: b,
 isPhantomPreview: j
   } = (0, p.m)(), U = b === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
@@ -124,7 +124,7 @@ children: [
       (0, i.jsx)(o.Spacer, {
         size: 4
       }),
-      (0, i.jsx)(x, {
+      (0, i.jsx)(O, {
         onClick: () => (0, S.Z)({
           guildId: I
         })
@@ -182,7 +182,7 @@ children: [
                   usernameHook: function(e, t) {
                     return (0, i.jsx)('span', {
                       style: {
-                        color: C
+                        color: f
                       },
                       children: e
                     }, t);
@@ -199,7 +199,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(O, {
+  (0, i.jsx)(x, {
     coverImageAsset: null == E ? void 0 : E.cover_image_asset,
     isPreview: j
   })

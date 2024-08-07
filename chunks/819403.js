@@ -23,27 +23,27 @@ function _(e) {
 _ = null == l ? void 0 : l.id,
 f = null == l ? void 0 : l.guild_id,
 g = (0, r.e7)([a.Z], () => a.Z.getGuild(f), [f]),
-m = (0, r.e7)([u.Z], () => null != _ ? u.Z.getVoiceStateForChannel(_, e.id) : null, [
+I = (0, r.e7)([u.Z], () => null != _ ? u.Z.getVoiceStateForChannel(_, e.id) : null, [
   _,
   e.id
 ]),
-I = (null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === e.id,
+m = (null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === e.id,
 R = (0, Z.Z)(),
 N = (0, r.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, _), [
   _,
   e.id
 ]),
 A = (0, o.B)(_);
-  if (null == l || null == g || null == m || N.speaker)
+  if (null == l || null == g || null == I || N.speaker)
 return null;
   let C = () => {
-I ? (0, d.RK)(l, !1) : (0, d._0)(l, e.id);
+m ? (0, d.RK)(l, !1) : (0, d._0)(l, e.id);
   };
   return A ? (0, t.jsx)(i.MenuItem, {
 id: 'invite-speaker',
-label: I ? M.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : M.Z.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
+label: m ? M.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : M.Z.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
 action: C
-  }) : R && I ? (0, t.jsx)(i.MenuItem, {
+  }) : R && m ? (0, t.jsx)(i.MenuItem, {
 id: 'invite-speaker',
 label: M.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER,
 action: C

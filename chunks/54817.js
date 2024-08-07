@@ -26,8 +26,8 @@ usernameHook: s
   } = e, T = (0, o.ZP)(t), h = s(T), {
 avatarSrc: N,
 eventHandlers: {
-  onMouseEnter: C,
-  onMouseLeave: f
+  onMouseEnter: f,
+  onMouseLeave: C
 }
   } = (0, u.m)(!0), p = '' !== t.content ? new Date(t.content).toLocaleString(I.Z.getLocale(), {
 hour: 'numeric',
@@ -37,8 +37,8 @@ day: '2-digit',
 year: 'numeric'
   }) : '';
   return (0, i.jsx)('div', {
-onMouseEnter: C,
-onMouseLeave: f,
+onMouseEnter: f,
+onMouseLeave: C,
 children: (0, i.jsx)(d.Z, {
   className: a()(m.mainContainer, {
     [m.compact]: n

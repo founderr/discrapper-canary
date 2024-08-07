@@ -16,8 +16,8 @@ var i = n(735250),
   u = n(596454),
   d = n(727637),
   h = n(313201),
-  m = n(543241),
-  p = n(318766),
+  p = n(543241),
+  m = n(318766),
   _ = n(907040),
   f = n(633302),
   E = n(806966),
@@ -43,7 +43,7 @@ emoji: t,
 isDisabled: n = !1,
 onClick: s,
 className: r
-  } = e, h = a.useRef(null), m = (0, d.Z)(h);
+  } = e, h = a.useRef(null), p = (0, d.Z)(h);
   return (0, i.jsx)('span', {
 ref: h,
 children: (0, i.jsx)(c.Button, {
@@ -54,12 +54,12 @@ children: (0, i.jsx)(c.Button, {
     enabled: !n
   },
   children: (0, i.jsx)(c.Spring, {
-    config: p.u,
+    config: m.u,
     from: {
       value: 0
     },
     to: {
-      value: m ? 1 : 0
+      value: p ? 1 : 0
     },
     children: e => {
       let {
@@ -125,11 +125,11 @@ closePopout: s,
 onFocus: o,
 onSelectEmoji: u,
 onSelectDisabledEmoji: d,
-onExpandedToggle: p,
+onExpandedToggle: m,
 emojiSearchProps: f,
 recentlyUsedEmojis: C,
 analyticsOverride: M
-  } = e, b = (0, h.Dt)(), [R, j] = a.useState(!1), L = (0, m.wC)(t.guild_id), P = (0, r.uniqBy)([
+  } = e, b = (0, h.Dt)(), [R, j] = a.useState(!1), L = (0, p.wC)(t.guild_id), P = (0, r.uniqBy)([
 ...L,
 ...S
   ], 'name').filter(e => !g.ZP.isEmojiFilteredOrLocked({
@@ -139,7 +139,7 @@ intention: v
   })).slice(0, I.e5);
   null != C && C.length > 0 && P.splice(P.length - 1, 1, C[0]);
   let O = e => {
-  j(e), null == p || p(e);
+  j(e), null == m || m(e);
 },
 y = (e, t) => {
   if (null == e && t) {

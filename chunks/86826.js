@@ -16,10 +16,10 @@ className: a,
 color: _,
 animate: E,
 gradientStopColor: h,
-getHistoricalTotalBytes: I
-  } = e, m = (0, r.Sl)(_).hex, g = null === (t = (0, r.Sl)(h)) || void 0 === t ? void 0 : t.hex;
+getHistoricalTotalBytes: m
+  } = e, I = (0, r.Sl)(_).hex, g = null === (t = (0, r.Sl)(h)) || void 0 === t ? void 0 : t.hex;
   return (0, i.jsx)(c.Z, {
-getHistoricalTotalBytes: I,
+getHistoricalTotalBytes: m,
 children: (e, t, r) => {
   var c;
   return (0, i.jsx)('div', {
@@ -52,7 +52,7 @@ children: (e, t, r) => {
             maxValue: Math.max(Math.max.apply(null, e), 1000),
             className: u.sparkChart,
             updateInterval: t,
-            color: m,
+            color: I,
             gradientStopColor: g,
             numUpdatesToShow: r,
             animate: E,

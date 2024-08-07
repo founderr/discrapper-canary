@@ -18,7 +18,7 @@ function d(e) {
 channel: t,
 guild: d,
 width: h,
-inPopout: m
+inPopout: p
   } = e;
   return (0, i.jsx)(s.Z, {
 className: c.root,
@@ -40,7 +40,7 @@ children: (0, i.jsx)(l.Z, {
       source: r.t4x.CHANNEL_CALL
     });
   }, {
-    contextKey: m ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
+    contextKey: p ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
   }),
   callToAction: o.Z.Messages.INSTANT_INVITE
 })

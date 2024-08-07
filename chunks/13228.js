@@ -45,16 +45,16 @@ let {
   },
   hasTakenDecoupledClip: h,
   clipsSettings: {
-    clipsEnabled: I
+    clipsEnabled: m
   }
 } = c.Z.getState();
 if (null === i)
   return !0;
 if (!(null != e && (0, o.xt)(e)))
   return !1;
-let m = Date.now() - i > u.xx,
+let I = Date.now() - i > u.xx,
   g = s >= u._U,
-  p = I ? u.xd : u.A5;
-return m && g && E < p && !h;
+  p = m ? u.xd : u.A5;
+return I && g && E < p && !h;
   });
 }

@@ -1,6 +1,6 @@
 t.d(n, {
   FI: function() {
-return r;
+return E;
   },
   IL: function() {
 return o;
@@ -16,7 +16,7 @@ action() {
     return i.S.dispatch(l.CkL.CALL_ACCEPT), !1;
 }
   },
-  r = {
+  E = {
 binds: [
   'ctrl+\'',
   'ctrl+shift+\''

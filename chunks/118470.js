@@ -18,26 +18,26 @@ var i = n(735250),
 function h(e) {
   let {
 guild: t
-  } = e, n = (0, d.h6)(t), h = () => (0, c.sB)(t.id), I = a.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), m = (0, s.Wu)([r.Z], () => {
+  } = e, n = (0, d.h6)(t), h = () => (0, c.sB)(t.id), m = a.useMemo(() => new Set(n.map(e => e.applicationId)), [n]), I = (0, s.Wu)([r.Z], () => {
 let e = [];
-for (let t of I) {
+for (let t of m) {
   let n = r.Z.getApplication(t);
   null != n && e.push(n);
 }
 return e;
-  }, [I]);
-  if (0 === m.length)
+  }, [m]);
+  if (0 === I.length)
 return null;
   let g = '';
-  return g = 1 === m.length ? _.Z.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
-a: m[0].name
-  }) : 2 === m.length ? _.Z.Messages.TWO_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
-a: m[0].name,
-b: m[1].name
-  }) : 3 === m.length ? _.Z.Messages.THREE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
-a: m[0].name,
-b: m[1].name,
-c: m[2].name
+  return g = 1 === I.length ? _.Z.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
+a: I[0].name
+  }) : 2 === I.length ? _.Z.Messages.TWO_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
+a: I[0].name,
+b: I[1].name
+  }) : 3 === I.length ? _.Z.Messages.THREE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
+a: I[0].name,
+b: I[1].name,
+c: I[2].name
   }) : _.Z.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT, (0, i.jsx)(l.Z, {
 guild: t,
 onDismissed: h,

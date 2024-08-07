@@ -9,8 +9,8 @@ var i, a, s = n(735250),
   _ = n(438139),
   E = n(2052),
   h = n(726542),
-  I = n(638880),
-  m = n(655922),
+  m = n(638880),
+  I = n(655922),
   g = n(122810),
   p = n(833664),
   T = n(503438),
@@ -469,17 +469,17 @@ children: (0, s.jsxs)('div', {
   application_id: E
 } = i;
   if (null != _ && (0, S.Z)(i)) {
-var I;
+var m;
 t = (0, s.jsx)(O.Z, {
   className: W.twitchSectionPreviewWrapper,
   aspectRatio: 16 / 9,
   children: (0, s.jsxs)(u.Clickable, {
-    href: (0, m.Z)(i),
+    href: (0, I.Z)(i),
     tag: 'a',
     target: '_blank',
     children: [
       (0, s.jsx)('img', {
-        alt: null !== (I = _.large_text) && void 0 !== I ? I : '',
+        alt: null !== (m = _.large_text) && void 0 !== m ? m : '',
         src: r(E, _.large_image, [
           900,
           500
@@ -549,7 +549,7 @@ children: [
     })
   })
 ]
-  }), I = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
+  }), m = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : Y.Z.Messages.SHARING_SCREEN;
   return (0, s.jsxs)(J, {
 children: [
   (0, s.jsxs)('div', {
@@ -564,7 +564,7 @@ children: [
       (0, s.jsxs)('div', {
         children: [
           q(H.ZP.getName(a)),
-          Q(I)
+          Q(m)
         ]
       }),
       (0, s.jsx)(L.ZP, {
@@ -593,7 +593,7 @@ if (null != _)
   U.default,
   y.default
 ], () => Array.from(a).map(e => y.default.getId() === e ? null : U.default.getUser(e)).filter(B.lm)),
-m = (0, E.O)(),
+I = (0, E.O)(),
 {
   analyticsLocations: g
 } = (0, A.ZP)();
@@ -656,11 +656,11 @@ children: [
             children: (0, s.jsx)(u.Button, {
               size: u.Button.Sizes.SMALL,
               onClick: e => {
-                e.stopPropagation(), (0, I.Z)({
+                e.stopPropagation(), (0, m.Z)({
                   applicationId: _,
                   currentEmbeddedApplication: l,
                   activityChannelId: n.id,
-                  locationObject: m.location,
+                  locationObject: I.location,
                   embeddedActivitiesManager: N.Z,
                   analyticsLocations: g
                 });

@@ -19,12 +19,12 @@ interests: c,
 description: d,
 tag: u,
 verificationForm: _
-  } = t, E = i.useMemo(() => null != _ && _.formFields.some(e => !(0, a.J)(e)), [_]), h = i.useMemo(() => Array.from(c).filter(e => !s.WZ.has(e) && !s.gh.has(e)), [c]), I = i.useCallback(() => {
+  } = t, E = i.useMemo(() => null != _ && _.formFields.some(e => !(0, a.J)(e)), [_]), h = i.useMemo(() => Array.from(c).filter(e => !s.WZ.has(e) && !s.gh.has(e)), [c]), m = i.useCallback(() => {
 n(r + 1);
   }, [
 r,
 n
-  ]), m = i.useCallback(() => {
+  ]), I = i.useCallback(() => {
 n(r - 1);
   }, [
 r,
@@ -57,15 +57,15 @@ u.length
   ]), T = 0 === r;
   return i.useMemo(() => ({
 onStepClick: g,
-onNextClick: I,
-onBackClick: m,
+onNextClick: m,
+onBackClick: I,
 isNextDisabled: p,
 isBackDisabled: T
   }), [
 T,
 p,
-m,
 I,
+m,
 g
   ]);
 }

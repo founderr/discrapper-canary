@@ -16,18 +16,18 @@ var a = n(442837),
   _ = n(352455),
   E = n(480294),
   h = n(791359),
-  I = n(981631),
-  m = n(689938),
+  m = n(981631),
+  I = n(689938),
   g = n(955430);
 
 function p() {
   let {
 analyticsLocations: e
-  } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN), t = (0, a.e7)([E.Z], () => E.Z.hasConsented(I.pjP.PERSONALIZATION)) ? [] : [s.z.NOW_PLAYING_CONSENT_CARD], n = (0, d.Dt)();
+  } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN), t = (0, a.e7)([E.Z], () => E.Z.hasConsented(m.pjP.PERSONALIZATION)) ? [] : [s.z.NOW_PLAYING_CONSENT_CARD], n = (0, d.Dt)();
   return (0, i.jsx)(c.Gt, {
 value: e,
 children: (0, i.jsx)(l.Z, {
-  section: I.jXE.ACTIVE_NOW_COLUMN,
+  section: m.jXE.ACTIVE_NOW_COLUMN,
   children: (0, i.jsx)('aside', {
     className: g.container,
     'aria-labelledby': n,
@@ -38,7 +38,7 @@ children: (0, i.jsx)(l.Z, {
           variant: 'heading-lg/semibold',
           className: g.header,
           id: n,
-          children: m.Z.Messages.GAME_FEED_CURRENT_HEADER_TITLE
+          children: I.Z.Messages.GAME_FEED_CURRENT_HEADER_TITLE
         }),
         (0, i.jsx)(u.Z, {
           contentTypes: t,

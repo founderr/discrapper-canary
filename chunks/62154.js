@@ -1,54 +1,54 @@
-i.d(s, {
+s.d(n, {
   Z: function() {
 return u;
   }
 });
-var n = i(735250);
-i(470079);
-var l = i(387903),
-  t = i(100849),
-  o = i(487922),
-  a = i(620648),
-  r = i(944546),
-  d = i(470900),
-  c = i(228168);
+var i = s(735250);
+s(470079);
+var l = s(387903),
+  o = s(100849),
+  t = s(487922),
+  r = s(620648),
+  a = s(944546),
+  d = s(470900),
+  c = s(228168);
 
 function u(e) {
   let {
-displayProfile: s,
-user: i,
+displayProfile: n,
+user: s,
 selectedSection: u,
 autoFocusNote: I,
 onClose: _
   } = e;
   switch (u) {
 case c.oh.ACTIVITY:
-  return (0, n.jsx)(t.Z, {
-    user: i,
+  return (0, i.jsx)(o.Z, {
+    user: s,
     type: l.Y.PROFILE_V2,
     onClose: _
   });
 case c.oh.MUTUAL_GUILDS:
-  return (0, n.jsx)(d.Z, {
-    user: i,
+  return (0, i.jsx)(d.Z, {
+    user: s,
     onClose: _
   });
 case c.oh.MUTUAL_FRIENDS:
-  return (0, n.jsx)(r.Z, {
-    user: i,
+  return (0, i.jsx)(a.Z, {
+    user: s,
     onClose: _
   });
 case c.oh.BOT_DATA_ACCESS:
-  return (0, n.jsx)(o.Z, {
-    user: i
+  return (0, i.jsx)(t.Z, {
+    user: s
   });
 case c.oh.USER_INFO_CONNECTIONS:
 case c.oh.USER_INFO:
 default:
-  return (0, n.jsx)(a.Z, {
-    displayProfile: s,
+  return (0, i.jsx)(r.Z, {
+    displayProfile: n,
     autoFocusNote: I,
-    user: i,
+    user: s,
     scrollToConnections: u === c.oh.USER_INFO_CONNECTIONS
   });
   }

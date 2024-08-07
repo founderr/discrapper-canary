@@ -25,7 +25,7 @@ markAsDismissed: n
     dismissAction: _.L.PRIMARY
   }), (0, l.G)(t.id, s.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE);
 }, [t.id]),
-I = a.useCallback(() => {
+m = a.useCallback(() => {
   c.default.track(u.rMx.UPSELL_CLICKED, {
     type: s.z[s.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
     action: 'dismiss'
@@ -36,7 +36,7 @@ I = a.useCallback(() => {
 ]);
   return (0, i.jsx)(d.Z, {
 guild: t,
-onDismissed: I,
+onDismissed: m,
 onClick: h,
 title: E.Z.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_TITLE,
 message: E.Z.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_MESSAGE,

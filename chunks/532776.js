@@ -1,14 +1,14 @@
-i.d(s, {
+s.d(n, {
   Z: function() {
-return a;
+return r;
   }
 });
-var n = i(470079),
-  l = i(442837),
-  t = i(621853);
-let o = [];
+var i = s(470079),
+  l = s(442837),
+  o = s(621853);
+let t = [];
 
-function a(e) {
-  let s = (0, l.e7)([t.Z], () => t.Z.getUserProfile(e));
-  return (0, n.useMemo)(() => (null == s ? void 0 : s.applicationRoleConnections) == null ? o : s.applicationRoleConnections, [null == s ? void 0 : s.applicationRoleConnections]);
+function r(e) {
+  let n = (0, l.e7)([o.Z], () => o.Z.getUserProfile(e));
+  return (0, i.useMemo)(() => (null == n ? void 0 : n.applicationRoleConnections) == null ? t : n.applicationRoleConnections, [null == n ? void 0 : n.applicationRoleConnections]);
 }

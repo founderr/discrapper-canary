@@ -18,9 +18,9 @@ className: n,
 shouldAnimate: d = !0,
 defaultAnimationState: c,
 idleAnimationState: _
-  } = e, E = (0, s.e7)([a.Z], () => a.Z.useReducedMotion), [h, p] = r.useState(c), f = r.useRef((0, o._)(t, h)), [S, m] = r.useState(null == _), [I, b] = r.useState(!1), [g, C] = r.useState(-1), O = () => {
+  } = e, E = (0, s.e7)([a.Z], () => a.Z.useReducedMotion), [h, p] = r.useState(c), f = r.useRef((0, o._)(t, h)), [S, m] = r.useState(null == _), [I, b] = r.useState(!1), [g, C] = r.useState(-1), A = () => {
 f.current = (0, o._)(t, h), C(e => e + 1);
-  }, A = () => {
+  }, O = () => {
 m(!1), b(!0), C(-1), p(c);
   };
   r.useEffect(() => {
@@ -30,17 +30,17 @@ _,
 c
   ]), r.useEffect(() => {
 if (null != _ && g >= 0) {
-  A();
+  O();
   return;
 }
-O();
+A();
   }, [
 t,
 _
   ]), r.useEffect(() => {
-(!I || null == _) && O();
+(!I || null == _) && A();
   }, [h]), r.useEffect(() => {
-I && (m(null == _), b(!1), O());
+I && (m(null == _), b(!1), A());
   }, [I]);
   if (!u.Cj.hasOwnProperty(t))
 throw Error('Unexpected giftStyle '.concat(t));

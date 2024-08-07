@@ -11,20 +11,20 @@ var i = n(846519),
   _ = n(70956),
   E = n(358085),
   h = n(981631);
-let I = new i.V7(),
-  m = new i.V7();
+let m = new i.V7(),
+  I = new i.V7();
 class g extends r.Z {
   _initialize() {
 a.Z.subscribe('IDLE', this.handleIdleUpdate);
   }
   _terminate() {
-I.stop(), m.stop(), a.Z.unsubscribe('IDLE', this.handleIdleUpdate);
+m.stop(), I.stop(), a.Z.unsubscribe('IDLE', this.handleIdleUpdate);
   }
   handleIdleUpdate() {
 let e = d.Z.getIdleSince();
 if (!E.isPlatformEmbedded)
   return;
-for (let e of (I.stop(), m.stop(), l.Z.getAllActiveStreams()))
+for (let e of (m.stop(), I.stop(), l.Z.getAllActiveStreams()))
   if (e.state !== h.jm8.ENDED)
     return;
 if (null == e)
@@ -32,7 +32,7 @@ if (null == e)
 let t = u.Z.getChannelId();
 if (null == t)
   return;
-m.start(18000000, () => {
+I.start(18000000, () => {
   s.default.selectVoiceChannel(null);
 });
 let n = c.Z.getGuild(u.Z.getGuildId());
@@ -40,7 +40,7 @@ if (null == n || null == n.afkChannelId || n.afkChannelId === t || null == n.afk
   return;
 let i = o.Z.getChannel(t);
 if (null != i)
-  !i.isGuildStageVoice() && I.start(e + n.afkTimeout * _.Z.Millis.SECOND - Date.now(), () => {
+  !i.isGuildStageVoice() && m.start(e + n.afkTimeout * _.Z.Millis.SECOND - Date.now(), () => {
     null != (n = c.Z.getGuild(u.Z.getGuildId())) && null != n.afkChannelId && s.default.selectVoiceChannel(n.afkChannelId);
   });
   }

@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(150063),
   E = n(45114),
   h = n(230711),
-  I = n(112724),
-  m = n(183126),
+  m = n(112724),
+  I = n(183126),
   g = n(607070),
   p = n(209613),
   T = n(325708),
@@ -60,7 +60,7 @@ function ea() {
 t = (0, Y.q)(),
 n = (0, W.Z)(),
 s = (0, H.K)(),
-c = (0, m.N)(),
+c = (0, I.N)(),
 d = n.length > 0 ? null == n ? void 0 : n[0].channel.id : null,
 _ = (0, G.e)({
   location: 'message-request-page-web'
@@ -76,7 +76,7 @@ _
   (0, u.showToast)((0, u.createToast)(et.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE));
 }, []),
 {
-  rejectAll: I
+  rejectAll: m
 } = (0, V.m)({
   onError: h
 }),
@@ -85,10 +85,10 @@ g = (0, p.Z)('message-requests-list'),
   channelId: T
 } = (0, F._)(),
 S = a.useCallback(() => {
-  I(n.map(e => e.channel.id));
+  m(n.map(e => e.channel.id));
 }, [
   n,
-  I
+  m
 ]),
 C = a.useCallback(e => {
   var t, a;
@@ -262,7 +262,7 @@ section: t
   } = e;
   return t === X.pS.SPAM ? (0, i.jsx)(Q.Z, {}) : (0, i.jsx)(ea, {});
 }
-let ec = (0, I.Z)(function(e) {
+let ec = (0, m.Z)(function(e) {
   let {
 width: t
   } = e, n = (0, Y.q)();
@@ -280,16 +280,16 @@ h = (0, c.e7)([M.ZP], () => {
   let e = M.ZP.getSidebarState(M.uZ);
   return null != e && e.type === R.tI.VIEW_MESSAGE_REQUEST ? e : null;
 }),
-I = null == h ? void 0 : h.channelId,
-m = null != h,
-g = (0, w.T)(I),
-p = (0, k.J)(I);
+m = null == h ? void 0 : h.channelId,
+I = null != h,
+g = (0, w.T)(m),
+p = (0, k.J)(m);
   a.useEffect(() => {
-null != I && !g && p && m && ((0, L.Kh)(I), O.Z.closeChannelSidebar(M.uZ));
+null != m && !g && p && I && ((0, L.Kh)(m), O.Z.closeChannelSidebar(M.uZ));
   }, [
-I,
-p,
 m,
+p,
+I,
 g
   ]);
   let [T, S] = a.useState(X.pS.REQUESTS);
@@ -299,8 +299,8 @@ location: et.Z.Messages.MESSAGE_REQUESTS
 children: [
   (0, i.jsxs)('div', {
     className: r()(ei.chat, en.container, {
-      [ei.threadSidebarOpen]: m,
-      [ei.threadSidebarFloating]: m && d
+      [ei.threadSidebarOpen]: I,
+      [ei.threadSidebarFloating]: I && d
     }),
     children: [
       (0, i.jsxs)(v.Z, {
@@ -350,7 +350,7 @@ children: [
       })
     ]
   }),
-  m && (0, i.jsx)(es, {
+  I && (0, i.jsx)(es, {
     pageWidth: t,
     onSidebarResize: (e, t) => {
       E(t);

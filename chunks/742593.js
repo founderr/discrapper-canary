@@ -1,102 +1,102 @@
 n.d(t, {
   HZ: function() {
-return h;
+return x;
   },
   Rf: function() {
-return g;
+return S;
   },
   ZP: function() {
-return f;
+return h;
   }
 });
 var s = n(735250);
 n(470079);
 var a = n(120356),
-  l = n.n(a),
-  r = n(442837),
+  r = n.n(a),
+  l = n(442837),
   i = n(481060),
   u = n(271383),
-  c = n(51144),
-  o = n(894017),
+  o = n(51144),
+  c = n(894017),
   E = n(79874),
   d = n(315416),
   N = n(236373),
-  _ = n(854698),
-  T = n(391174),
-  m = n(95291),
-  D = n(390966),
+  T = n(854698),
+  _ = n(391174),
+  D = n(95291),
+  m = n(390966),
   v = n(689938),
-  x = n(530703);
+  g = n(530703);
 
-function h(e) {
+function x(e) {
   let {
 className: t,
 creator: n,
 guildId: a,
-isNew: T,
-isHub: m = !1,
-guildEvent: h,
-eventPreview: g,
-recurrenceId: f
-  } = e, L = (0, d.Z)(a, h.id, f), S = null != h ? h : g, A = (0, r.e7)([u.ZP], () => u.ZP.getNick(a, null == n ? void 0 : n.id), [
+isNew: _,
+isHub: D = !1,
+guildEvent: x,
+eventPreview: S,
+recurrenceId: h
+  } = e, f = (0, d.Z)(a, x.id, h), I = null != x ? x : S, R = (0, l.e7)([u.ZP], () => u.ZP.getNick(a, null == n ? void 0 : n.id), [
 a,
 n
   ]);
-  f = null == S || null != f ? f : (0, _.DK)(S);
+  h = null == I || null != h ? h : (0, T.DK)(I);
   let {
-startTime: I
-  } = (0, E.ZP)(null != h ? h : g, f), Z = (0, o.Z)(f, h.id), C = (null == S ? void 0 : S.scheduled_start_time) != null ? (0, _.lh)(Z, I, new Date(S.scheduled_start_time)) : null;
-  if (null == S)
+startTime: L
+  } = (0, E.ZP)(null != x ? x : S, h), C = (0, c.Z)(h, x.id), p = (null == I ? void 0 : I.scheduled_start_time) != null ? (0, T.lh)(C, L, new Date(I.scheduled_start_time)) : null;
+  if (null == I)
 return null;
   let {
-entity_type: R,
-status: p,
+entity_type: Z,
+status: A,
 recurrence_rule: j
-  } = S;
+  } = I;
   return (0, s.jsxs)('div', {
-className: l()(x.statusContainer, t),
+className: r()(g.statusContainer, t),
 children: [
-  (0, s.jsx)(D.z, {
-    startTime: I.toISOString(),
-    status: null != C ? C : p,
-    eventType: R,
-    isNew: T,
+  (0, s.jsx)(m.z, {
+    startTime: L.toISOString(),
+    status: null != p ? p : A,
+    eventType: Z,
+    isNew: _,
     recurrenceRule: (0, N.KV)(j),
-    guildEventId: h.id,
-    recurrenceId: f
+    guildEventId: x.id,
+    recurrenceId: h
   }),
   (0, s.jsx)('div', {
-    className: x.spacer
+    className: g.spacer
   }),
-  !m && null != n && (0, s.jsx)(i.Tooltip, {
+  !D && null != n && (0, s.jsx)(i.Tooltip, {
     text: v.Z.Messages.GUILD_EVENT_CREATED_BY.format({
-      username: null != A ? A : c.ZP.getName(n)
+      username: null != R ? R : o.ZP.getName(n)
     }),
     children: e => (0, s.jsx)(i.Avatar, {
       ...e,
       src: n.getAvatarURL(a, 20),
       size: i.AvatarSizes.SIZE_20,
-      'aria-label': null != A ? A : n.username,
-      className: x.creator
+      'aria-label': null != R ? R : n.username,
+      className: g.creator
     })
   }),
   (0, s.jsx)(i.Tooltip, {
     text: v.Z.Messages.GUILD_EVENT_INTERESTED_COUNT.format({
-      count: L
+      count: f
     }),
     children: e => (0, s.jsxs)('div', {
-      className: x.rsvpCount,
+      className: g.rsvpCount,
       ...e,
       children: [
         (0, s.jsx)(i.GroupIcon, {
           size: 'xxs',
           color: 'currentColor',
-          className: x.rsvpIcon
+          className: g.rsvpIcon
         }),
         (0, s.jsx)(i.Text, {
           color: 'header-secondary',
           variant: 'text-sm/normal',
-          children: L
+          children: f
         })
       ]
     })
@@ -105,87 +105,87 @@ children: [
   });
 }
 
-function g(e) {
+function S(e) {
   let {
 headerVariant: t = 'heading-lg/medium',
 descriptionClassName: n,
 name: a,
-description: r,
+description: l,
 truncate: u,
-guildId: c,
-imageSource: o
+guildId: o,
+imageSource: c
   } = e;
   return (0, s.jsxs)('div', {
-className: l()({
-  [x.withThumbnail]: null != o
+className: r()({
+  [g.withThumbnail]: null != c
 }),
 children: [
   (0, s.jsxs)('div', {
-    className: l()({
-      [x.descriptionWithThumbnail]: null != o
+    className: r()({
+      [g.descriptionWithThumbnail]: null != c
     }),
     children: [
       (0, s.jsx)(i.Heading, {
         variant: t,
         selectable: !0,
-        className: x.eventName,
+        className: g.eventName,
         children: a
       }),
-      null != r && (0, s.jsx)(T.Z, {
-        description: r,
-        className: l()(n, x.description),
+      null != l && (0, s.jsx)(_.Z, {
+        description: l,
+        className: r()(n, g.description),
         truncate: u,
-        guildId: c
+        guildId: o
       })
     ]
   }),
-  null != o && (0, s.jsx)('div', {
-    className: x.thumbnailContainer,
-    children: (0, s.jsx)(m.Z, {
-      source: o,
-      className: x.thumbnail
+  null != c && (0, s.jsx)('div', {
+    className: g.thumbnailContainer,
+    children: (0, s.jsx)(D.Z, {
+      source: c,
+      className: g.thumbnail
     })
   })
 ]
   });
 }
 
-function f(e) {
+function h(e) {
   let {
 headerVariant: t,
 descriptionClassName: n,
 creator: a,
-name: l,
-description: r,
+name: r,
+description: l,
 imageSource: i,
 isHub: u = !1,
-truncate: c,
-guildId: o,
+truncate: o,
+guildId: c,
 isNew: E,
 guildEvent: d,
 eventPreview: N,
-recurrenceId: _
+recurrenceId: T
   } = e;
   return (0, s.jsxs)('div', {
-className: x.container,
+className: g.container,
 children: [
-  (0, s.jsx)(h, {
-    className: x.eventInfoStatusContainer,
+  (0, s.jsx)(x, {
+    className: g.eventInfoStatusContainer,
     creator: a,
-    guildId: o,
+    guildId: c,
     isHub: u,
     isNew: E,
     guildEvent: d,
     eventPreview: N,
-    recurrenceId: _
+    recurrenceId: T
   }),
-  (0, s.jsx)(g, {
-    name: l,
-    description: r,
+  (0, s.jsx)(S, {
+    name: r,
+    description: l,
     headerVariant: t,
     descriptionClassName: n,
-    truncate: c,
-    guildId: o,
+    truncate: o,
+    guildId: c,
     imageSource: i
   })
 ]

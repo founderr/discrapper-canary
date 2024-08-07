@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
 return h;
   },
   default: function() {
-return I;
+return m;
   }
 }), n(47120);
 var i = n(735250),
@@ -19,12 +19,12 @@ var i = n(735250),
   E = n(429682);
 let h = 'Activity Encourages Hardware Acceleration';
 
-function I(e) {
+function m(e) {
   var t;
   let {
 applicationId: n,
-...I
-  } = e, [m, g] = a.useState(!1), [p] = (0, l.Z)([n]), T = null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : 'This Activity';
+...m
+  } = e, [I, g] = a.useState(!1), [p] = (0, l.Z)([n]), T = null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : 'This Activity';
   a.useEffect(() => {
 c.default.track(u.rMx.OPEN_MODAL, {
   type: h
@@ -32,17 +32,17 @@ c.default.track(u.rMx.OPEN_MODAL, {
   }, []);
   let S = () => {
 let e = 'temporary';
-m && (e = 'permanent', r.ZP.updatedUnsyncedSettings({
+I && (e = 'permanent', r.ZP.updatedUnsyncedSettings({
   disableActivityHardwareAccelerationPrompt: !0
 })), c.default.track(u.rMx.MODAL_DISMISSED, {
   type: h,
   dismiss_type: e
-}), I.onClose();
+}), m.onClose();
   };
   return (0, i.jsxs)(s.ModalRoot, {
 className: E.root,
 'aria-label': _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE,
-...I,
+...m,
 children: [
   (0, i.jsxs)(s.ModalHeader, {
     separator: !1,
@@ -75,8 +75,8 @@ children: [
       (0, i.jsx)(s.Checkbox, {
         type: s.Checkbox.Types.INVERTED,
         size: 18,
-        value: m,
-        onChange: () => g(!m),
+        value: I,
+        onChange: () => g(!I),
         children: (0, i.jsx)(s.Text, {
           variant: 'text-sm/normal',
           children: _.Z.Messages.DONT_SHOW_AGAIN

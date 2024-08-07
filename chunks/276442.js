@@ -27,8 +27,8 @@ referralTrialOfferId: E,
 onReturn: x,
 continueSession: N = !1
   } = e, {
-contextMetadata: S,
-step: T,
+contextMetadata: T,
+step: S,
 paymentSources: h,
 paymentSourceId: b,
 setPaymentSourceId: g,
@@ -58,8 +58,8 @@ f(Object.values(h).length < 1 && null == t ? d.h8.PLAN_SELECT : d.h8.REVIEW, {
   trackedFromStep: d.h8.PAYMENT_TYPE
 });
   };
-  a()(T, 'Step should be set here');
-  let G = (0, r.Z)(() => Date.now(), [T]);
+  a()(S, 'Step should be set here');
+  let G = (0, r.Z)(() => Date.now(), [S]);
   return (0, l.vP)({
 paymentModalArgs: j,
 initialStep: N && null == O.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
@@ -69,7 +69,7 @@ appendSteps: [
   d.h8.CONFIRM
 ],
 breadcrumpSteps: i,
-currentBreadcrumpStep: T,
+currentBreadcrumpStep: S,
 usePaymentModalStep: !0,
 onReturn: w,
 onComplete: e => {
@@ -89,7 +89,7 @@ onStepChange: e => {
     from_step: t,
     to_step: i,
     step_duration_ms: a - G,
-    flow_duration_ms: a - S.startTime
+    flow_duration_ms: a - T.startTime
   });
 },
 isEligibleForTrial: D,

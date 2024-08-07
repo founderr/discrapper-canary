@@ -30,8 +30,8 @@ lastFetched: null,
 lastSeen: null
   },
   N = h,
-  C = {},
-  f = null,
+  f = {},
+  C = null,
   p = 86400000;
 (a = i || (i = {})).IS_OWNER = 'is_owner', a.IS_ADMIN = 'is_admin', a.IS_COMMUNITY = 'is_community', a.GUILD_SIZE = 'guild_size', a.IS_HUB = 'is_hub', a.IS_VIEWING = 'is_viewing', a.GUILD_PERMISSIONS = 'guild_permissions', a.GUILD_SIZE_ALL = 'guild_size_all';
 let g = new Set(Object.values(i));
@@ -85,7 +85,7 @@ for (let l of Object.values(d.Z.getGuilds())) {
     d = _.Z.can(m.Plq.ADMINISTRATOR, l);
   if (t.includes('is_owner') && !c || t.includes('is_admin') && !d)
     continue;
-  null == (C = null != C ? C : {})[e.key] && (C[e.key] = e);
+  null == (f = null != f ? f : {})[e.key] && (f[e.key] = e);
   let T = E.Z.getGuildId(),
     h = null != T && T === l.id;
   if (!t.includes('is_viewing') || !!h) {
@@ -104,15 +104,15 @@ survey: t
   if (N.lastFetched = Date.now(), null == N.hiddenSurveys && (N.hiddenSurveys = {}), null != t && null == N.hiddenSurveys[t.key]) {
 if (!S(t))
   return;
-f = t;
+C = t;
   }
 }
 
 function R() {
-  if (null != f && (S(f) || (f = null, 0)))
+  if (null != C && (S(C) || (C = null, 0)))
 return !1;
   ! function() {
-let e = Object.values(C = null != C ? C : {})[0];
+let e = Object.values(f = null != f ? f : {})[0];
 if (null != e && S(e)) {
   A({
     type: 'SURVEY_FETCHED',
@@ -120,12 +120,12 @@ if (null != e && S(e)) {
   });
   return;
 }
-if (null == f)
+if (null == C)
   return;
-f = null;
+C = null;
   }();
 }
-class x extends(s = l.ZP.PersistedStore) {
+class O extends(s = l.ZP.PersistedStore) {
   initialize(e) {
 N = null != e ? e : h, this.syncWith([E.Z], R);
   }
@@ -133,7 +133,7 @@ N = null != e ? e : h, this.syncWith([E.Z], R);
 return N;
   }
   getCurrentSurvey() {
-return f;
+return C;
   }
   getSurveyOverride() {
 return N.surveyOverride;
@@ -142,7 +142,7 @@ return N.surveyOverride;
 return N.lastSeen;
   }
 }
-T(x, 'displayName', 'SurveyStore'), T(x, 'persistKey', 'SurveyStore'), T(x, 'migrations', [
+T(O, 'displayName', 'SurveyStore'), T(O, 'persistKey', 'SurveyStore'), T(O, 'migrations', [
   e => {
 let t = {
   ...e
@@ -163,7 +163,7 @@ return {
   hiddenSurveys: null !== (t = e.hiddenSurveys) && void 0 !== t ? t : {}
 };
   }
-]), t.Z = new x(o.Z, {
+]), t.Z = new O(o.Z, {
   CONNECTION_OPEN: function() {
 var e;
 if (!(null != N.lastFetched && Date.now() - (null !== (e = N.lastFetched) && void 0 !== e ? e : 0) < p) || null != N.surveyOverride)
@@ -174,7 +174,7 @@ if (!(null != N.lastFetched && Date.now() - (null !== (e = N.lastFetched) && voi
 let {
   key: t
 } = e;
-N.hiddenSurveys[t] = !0, f = null, C = null != C ? C : {}, delete C[t];
+N.hiddenSurveys[t] = !0, C = null, f = null != f ? f : {}, delete f[t];
   },
   SURVEY_OVERRIDE: function(e) {
 let {

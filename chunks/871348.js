@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(807933),
   E = n(207796),
   h = n(497189),
-  I = n(895068),
-  m = n(490610),
+  m = n(895068),
+  I = n(490610),
   g = n(689938),
   p = n(207462);
 
@@ -51,7 +51,7 @@ children: (0, i.jsxs)(l.AdvancedScrollerNone, {
         })
       ]
     }),
-    (0, i.jsx)(m.Z, {
+    (0, i.jsx)(I.Z, {
       title: g.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE
     })
   ]
@@ -65,7 +65,7 @@ onScroll: t
   } = e, {
 ref: n,
 width: c
-  } = (0, o.Z)(), d = (0, E.GN)(e => e.mode, r.Z), [u, h] = a.useState(!0), m = (0, l.useSpring)({
+  } = (0, o.Z)(), d = (0, E.GN)(e => e.mode, r.Z), [u, h] = a.useState(!0), I = (0, l.useSpring)({
 from: {
   opacity: 0
 },
@@ -87,12 +87,12 @@ children: [
   (0, i.jsx)(s.animated.div, {
     className: p.list,
     style: {
-      opacity: m.opacity
+      opacity: I.opacity
     },
-    children: (0, i.jsx)(I.ZP, {
+    children: (0, i.jsx)(m.ZP, {
       width: null != c ? c : 0,
       isAnimating: u,
-      variant: (0, I.s)(d, I.Bj.GLOBAL_DISCOVERY),
+      variant: (0, m.s)(d, m.Bj.GLOBAL_DISCOVERY),
       onScroll: t
     })
   }),

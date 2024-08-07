@@ -37,7 +37,7 @@ children: [
   });
 }
 
-function I(e) {
+function m(e) {
   let {
 traits: t,
 onUpdateTraits: n
@@ -57,7 +57,7 @@ children: [
   });
 }
 
-function m(e) {
+function I(e) {
   let {
 playstyle: t,
 onUpdatePlaystyle: n
@@ -113,14 +113,14 @@ children: [
   (0, i.jsx)('hr', {
     className: E.divider
   }),
-  (0, i.jsx)(m, {
+  (0, i.jsx)(I, {
     playstyle: a,
     onUpdatePlaystyle: c
   }),
   (0, i.jsx)('hr', {
     className: E.divider
   }),
-  (0, i.jsx)(I, {
+  (0, i.jsx)(m, {
     traits: t,
     onUpdateTraits: s
   })

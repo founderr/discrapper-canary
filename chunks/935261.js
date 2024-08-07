@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 });
 var i = n(735250);
@@ -17,7 +17,7 @@ var a = n(120356),
   E = n(689938),
   h = n(127563);
 
-function I(e) {
+function m(e) {
   let {
 platform: t
   } = e;
@@ -28,7 +28,7 @@ className: h.icon
   }) : null;
 }
 
-function m(e) {
+function I(e) {
   let {
 voiceState: t,
 awaitingRemoteSessionInfo: n
@@ -38,16 +38,16 @@ return null === (e = o.Z.getSessionById(null !== (n = null == t ? void 0 : t.ses
   }), d = null != a ? a : c;
   if (null == d || !_.al.has(d))
 return null;
-  let m = null != n,
-g = m ? d === _.YE.XBOX ? E.Z.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.Z.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === _.YE.XBOX ? E.Z.Messages.XBOX_REMOTE_CONNECTED.format() : E.Z.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
+  let I = null != n,
+g = I ? d === _.YE.XBOX ? E.Z.Messages.XBOX_TRANSFERRING_ELLIPSIS : E.Z.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === _.YE.XBOX ? E.Z.Messages.XBOX_REMOTE_CONNECTED.format() : E.Z.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
   return (0, i.jsxs)('div', {
-className: s()(h.root, m ? h.connecting : h.connected),
+className: s()(h.root, I ? h.connecting : h.connected),
 children: [
-  (0, i.jsx)(I, {
+  (0, i.jsx)(m, {
     platform: d
   }),
   (0, i.jsx)(l.Text, {
-    color: m ? 'header-primary' : 'always-white',
+    color: I ? 'header-primary' : 'always-white',
     variant: 'text-xs/medium',
     children: g
   })

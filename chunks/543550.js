@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(410030),
   E = n(963202),
   h = n(353093),
-  I = n(702646),
-  m = n(207796),
+  m = n(702646),
+  I = n(207796),
   g = n(497189),
   p = n(304231),
   T = n(895068),
@@ -29,18 +29,18 @@ var i = n(735250),
   N = n(813580);
 let A = (e, t) => {
   switch (e) {
-case m.hz.GENSHIN:
+case I.hz.GENSHIN:
   return t === f.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
-case m.hz.VALORANT:
+case I.hz.VALORANT:
   return t === f.BRd.DARK ? N.valorantUpsellBackgroundImageDark : N.valorantUpsellBackgroundImageLight;
   }
 };
 
 function v() {
-  let e = (0, m.GN)(e => e.game, o.Z),
-t = (0, m.GN)(e => e.mode, o.Z),
-n = (0, m.GN)(e => e.userUpsellScreen, o.Z),
-s = (0, m.GN)(e => e.setUserUpsellScreen, o.Z),
+  let e = (0, I.GN)(e => e.game, o.Z),
+t = (0, I.GN)(e => e.mode, o.Z),
+n = (0, I.GN)(e => e.userUpsellScreen, o.Z),
+s = (0, I.GN)(e => e.setUserUpsellScreen, o.Z),
 {
   ref: c,
   width: E
@@ -64,9 +64,9 @@ Z = a.useCallback(e => {
 }, [g]),
 L = a.useMemo(() => {
   switch (e) {
-    case m.hz.GENSHIN:
+    case I.hz.GENSHIN:
       return C === f.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
-    case m.hz.VALORANT:
+    case I.hz.VALORANT:
       return C === f.BRd.DARK ? N.valorantOnboardingBackgroundImageDark : N.valorantOnboardingBackgroundImageLight;
   }
 }, [
@@ -74,7 +74,7 @@ L = a.useMemo(() => {
   C
 ]);
   switch (n) {
-case m.o2.USER_UPSELL:
+case I.o2.USER_UPSELL:
   return (0, i.jsxs)('div', {
     ref: c,
     className: N.container,
@@ -84,7 +84,7 @@ case m.o2.USER_UPSELL:
         style: {
           width: E
         },
-        children: (0, i.jsx)(I.Z, {})
+        children: (0, i.jsx)(m.Z, {})
       }),
       (0, i.jsxs)('div', {
         className: N.upsellContainer,
@@ -122,7 +122,7 @@ case m.o2.USER_UPSELL:
       })
     ]
   });
-case m.o2.USER_ONBOARDING:
+case I.o2.USER_ONBOARDING:
   return (0, i.jsx)('div', {
     className: N.container,
     children: (0, i.jsxs)('div', {
@@ -144,7 +144,7 @@ case m.o2.USER_ONBOARDING:
 }
 
 function Z() {
-  let e = (0, m.GN)(e => e.game, o.Z),
+  let e = (0, I.GN)(e => e.game, o.Z),
 {
   guilds: t
 } = (0, E.C3)({

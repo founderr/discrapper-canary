@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(200876),
   E = n(674180),
   h = n(38618),
-  I = n(984370),
-  m = n(430824),
+  m = n(984370),
+  I = n(430824),
   g = n(351402),
   p = n(730647),
   T = n(772021),
@@ -32,7 +32,7 @@ var i = n(735250),
 function O(e) {
   let {
 guildId: t
-  } = e, n = (0, r.e7)([m.Z], () => m.Z.getGuild(t), [t]), O = (0, r.e7)([h.Z], () => h.Z.isConnected()), R = (0, _.Z)(t), x = (0, T.Z)(t), b = (0, r.e7)([g.Z], () => g.Z.isSubscriptionFetching), P = (0, p.f)(), {
+  } = e, n = (0, r.e7)([I.Z], () => I.Z.getGuild(t), [t]), O = (0, r.e7)([h.Z], () => h.Z.isConnected()), R = (0, _.Z)(t), x = (0, T.Z)(t), b = (0, r.e7)([g.Z], () => g.Z.isSubscriptionFetching), P = (0, p.f)(), {
 shouldHideGuildPurchaseEntryPoints: M,
 restrictionsLoading: D
   } = (0, E.uP)(t), y = null == n || !P || b || D;
@@ -57,15 +57,15 @@ return (0, i.jsx)(C.z, {
   return (0, i.jsxs)('div', {
 className: L.container,
 children: [
-  (0, i.jsxs)(I.Z, {
+  (0, i.jsxs)(m.Z, {
     toolbar: (0, i.jsx)(a.Fragment, {}),
     className: L.headerBar,
     children: [
-      (0, i.jsx)(I.Z.Icon, {
+      (0, i.jsx)(m.Z.Icon, {
         icon: (0, l.makeIconCompat)(S.Z),
         'aria-hidden': !0
       }),
-      (0, i.jsx)(I.Z.Title, {
+      (0, i.jsx)(m.Z.Title, {
         children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
       })
     ]

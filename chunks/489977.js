@@ -21,9 +21,9 @@ if (E) {
   return;
 }
 let h = d.default.getCurrentUser(),
-  I = null != l ? o.I5 : r.I5;
+  m = null != l ? o.I5 : r.I5;
 if (u.ZP.canUseAnimatedAvatar(h) || 'image/gif' !== s.type) {
-  I(t);
+  m(t);
   return;
 }
 if (null != h)
@@ -35,7 +35,7 @@ if (null != h)
       user: h,
       imageSrc: t,
       uploadType: _.pC.AVATAR,
-      onSubscribe: () => I(t),
+      onSubscribe: () => m(t),
       ...n
     });
   });
@@ -70,7 +70,7 @@ if (null != l)
     });
   });
   };
-class I extends l.Z {
+class m extends l.Z {
   _initialize() {
 s.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
   }
@@ -81,4 +81,4 @@ s.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfil
 return e.uploadType === _.pC.AVATAR ? E(e) : e.uploadType === _.pC.BANNER ? h(e) : void 0;
   }
 }
-t.Z = new I();
+t.Z = new m();

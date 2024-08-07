@@ -21,11 +21,11 @@ var i = n(470079),
   _ = n(251625),
   E = n(900849),
   h = n(540742),
-  I = n(731455);
-let m = [],
+  m = n(731455);
+let I = [],
   g = (0, _.oH)(() => {
 var e;
-let t = I.dU,
+let t = m.dU,
   n = d.default.locale;
 return null !== (e = t.find(e => e.code === n)) && void 0 !== e ? e : t[0];
   });
@@ -50,12 +50,12 @@ searchResultsQuery: a,
 isSearchVisible: !0,
 searchCategoryId: n
   }));
-  let I = g();
+  let m = g();
   E.tI(t, n), null == u.ZP.getTopCategoryCounts(a) && l.G7(a, {
 approximate_member_count: E.sq
   }), l.bR(a, {
 categoryId: n,
-preferredLocale: I.code,
+preferredLocale: m.code,
 offset: r.length,
 length: 12,
 filters: {
@@ -81,7 +81,7 @@ return t;
 guilds: l,
 loading: o
   } = (0, r.e7)([c.Z], () => null == n ? {
-guilds: m,
+guilds: I,
 loading: !0
   } : c.Z.getResults(n, s)), d = i.useCallback(() => p({
 loadId: t,
@@ -139,7 +139,7 @@ _ = i.useCallback(() => {
   t,
   r
 ]),
-I = i.useCallback(() => p({
+m = i.useCallback(() => p({
   loadId: t,
   categoryId: n
 }), [
@@ -150,12 +150,12 @@ I = i.useCallback(() => p({
 searchQuery: d,
 onSearchTextChange: u,
 onClearSearch: _,
-onSearchSubmit: I,
+onSearchSubmit: m,
 isSearchVisible: c
   }), [
 c,
 _,
-I,
+m,
 u,
 d
   ]);

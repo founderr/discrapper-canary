@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 });
 var i = n(735250),
@@ -20,16 +20,16 @@ let {
   groupId: l,
   isGroupStart: o,
   usernameProfile: h,
-  avatarProfile: m,
-  setPopout: p,
+  avatarProfile: p,
+  setPopout: m,
   author: _,
   repliedMessage: f,
   roleIcon: E
-} = e, g = (0, u.wq)(t.author.id, n.id), C = (0, u.XO)(t, n, h, p), I = (0, u.R9)(m, p), x = a.useCallback(() => p({
+} = e, g = (0, u.wq)(t.author.id, n.id), C = (0, u.XO)(t, n, h, m), I = (0, u.R9)(p, m), x = a.useCallback(() => m({
   usernameProfile: !1,
   avatarProfile: !1,
   referencedUsernameProfile: !1
-}), [p]);
+}), [m]);
 return (0, i.jsx)(r.ZP, {
   guildId: n.guild_id,
   message: t,
@@ -40,7 +40,7 @@ return (0, i.jsx)(r.ZP, {
   subscribeToGroupId: l,
   showTimestampOnHover: !o && s && t.type !== d.uaV.REPLY,
   renderPopout: c.Z,
-  showAvatarPopout: m,
+  showAvatarPopout: p,
   showUsernamePopout: h,
   onClickAvatar: I,
   onClickUsername: C,
@@ -49,9 +49,9 @@ return (0, i.jsx)(r.ZP, {
   roleIcon: E
 });
   }),
-  m = a.memo(o.Z);
+  p = a.memo(o.Z);
 
-function p(e) {
+function m(e) {
   let {
 messageProps: t,
 setPopout: n,
@@ -62,7 +62,7 @@ repliedMessage: c,
 roleIcon: u
   } = e, {
 message: d,
-compact: p,
+compact: m,
 channel: _,
 groupId: f
   } = t, {
@@ -72,10 +72,10 @@ avatarProfile: g
   if ((0, s.Z)(d))
 return null;
   let C = d.id === f;
-  return C || p || null != r ? (0, i.jsx)(h, {
+  return C || m || null != r ? (0, i.jsx)(h, {
 message: d,
 channel: _,
-compact: p,
+compact: m,
 subscribeToGroupId: f,
 isGroupStart: C,
 groupId: f,
@@ -85,7 +85,7 @@ avatarProfile: g,
 author: o,
 repliedMessage: c,
 roleIcon: u
-  }) : (0, i.jsx)(m, {
+  }) : (0, i.jsx)(p, {
 compact: !0,
 timestamp: d.timestamp,
 isInline: !1,

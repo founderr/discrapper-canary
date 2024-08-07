@@ -19,8 +19,8 @@ channel: n,
 buttonSize: u = a.ButtonSizes.TINY,
 className: d,
 buttonText: h,
-navigateAwayOnReportSuccess: m = !0,
-onReportClick: p,
+navigateAwayOnReportSuccess: p = !0,
+onReportClick: m,
 onReportSubmit: _,
 onMouseEnter: f,
 onMouseLeave: E
@@ -28,7 +28,7 @@ onMouseLeave: E
   if (!g || null == C)
 return null;
   let I = () => {
-null == _ || _(), s.Z.closePrivateChannel(n.id, m);
+null == _ || _(), s.Z.closePrivateChannel(n.id, p);
   };
   return (0, i.jsx)(a.Button, {
 className: d,
@@ -36,7 +36,7 @@ size: u,
 color: a.Button.Colors.RED,
 disabled: null == C,
 onClick: () => {
-  null == p || p(), (0, l.WL)(C, I);
+  null == m || m(), (0, l.WL)(C, I);
 },
 onMouseEnter: f,
 onMouseLeave: E,

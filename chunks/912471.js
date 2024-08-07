@@ -15,8 +15,8 @@ var i = n(433517),
   _ = n(960048),
   E = n(844889),
   h = n(981631);
-let I = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
-  m = null,
+let m = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
+  I = null,
   g = null,
   p = null,
   T = !1;
@@ -26,7 +26,7 @@ return;
   T = !0, (0, E.fr)(!0), _.Z.addBreadcrumb({
 message: 'Start Analytics Heartbeat'
   });
-  let e = await i.K.getAfterRefresh(I).then(E.Hg);
+  let e = await i.K.getAfterRefresh(m).then(E.Hg);
   if (!T)
 return;
   let t = Date.now(),
@@ -36,7 +36,7 @@ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = 
   }), e > t && (n = 0), _.Z.addBreadcrumb({
 message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat')
   }), f(!1), g = setTimeout(() => {
-C(), m = setInterval(() => {
+C(), I = setInterval(() => {
   C();
 }, 15 * d.Z.Millis.MINUTE);
   }, Math.max(n, 0));
@@ -44,7 +44,7 @@ C(), m = setInterval(() => {
 
 function f() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  null != g && (clearTimeout(g), g = null), null != m && (clearInterval(m), m = null), null != p && e && (_.Z.addBreadcrumb({
+  null != g && (clearTimeout(g), g = null), null != I && (clearInterval(I), I = null), null != p && e && (_.Z.addBreadcrumb({
 message: 'Heartbeat correctly scheduled. Clearing 10s check timeout'
   }), clearTimeout(p), p = null);
 }
@@ -78,7 +78,7 @@ o = u.Z.getMemoryUsageElectronRenderer();
 let e = l.ZP.getCurrentGameForAnalytics();
 null != e && (a.client_heartbeat_current_game_id = e.id, a.client_heartbeat_current_game_name = e.name, a.client_heartbeat_current_game_executable = (0, r.N6)(e.exePath), a.client_heartbeat_current_game_distributor = e.distributor);
   }
-  c.default.track(h.rMx.CLIENT_HEARTBEAT, a), i.K.set(I, Date.now().toString()), (0, s.Z)();
+  c.default.track(h.rMx.CLIENT_HEARTBEAT, a), i.K.set(m, Date.now().toString()), (0, s.Z)();
 }
 let N = null,
   A = !0;

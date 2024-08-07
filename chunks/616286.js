@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(358221),
   d = n(306680),
   h = n(944486),
-  m = n(111583),
-  p = n(459273),
+  p = n(111583),
+  m = n(459273),
   _ = n(880831),
   f = n(774168),
   E = n(871499),
@@ -22,7 +22,7 @@ var i = n(735250),
   C = n(689938);
 
 function I(e) {
-  let t = (0, o.e7)([m.Z], () => !(0, r.isEmpty)(m.Z.getTypingUsers(e)), [e]),
+  let t = (0, o.e7)([p.Z], () => !(0, r.isEmpty)(p.Z.getTypingUsers(e)), [e]),
 n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]),
 {
   unreadCount: i,
@@ -65,7 +65,7 @@ function T(e) {
   showingClassName: r,
   onClick: d,
   inPopout: h,
-  showRequestToSpeakSidebar: m,
+  showRequestToSpeakSidebar: p,
   toggleRequestToSpeakSidebar: f,
   ...T
 } = e,
@@ -99,12 +99,12 @@ S = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
   };
 }(n),
 b = a.useCallback(() => {
-  null == d || d(), !S && m && (null == f || f()), c.Z.updateChatOpen(n, !S);
+  null == d || d(), !S && p && (null == f || f()), c.Z.updateChatOpen(n, !S);
 }, [
   n,
   S,
   d,
-  m,
+  p,
   f
 ]),
 R = a.useCallback(e => {
@@ -120,14 +120,14 @@ j = a.useCallback(() => {
   var e;
   null === (e = v.current) || void 0 === e || e.focus();
 }, []);
-  (0, p.yp)({
+  (0, m.yp)({
 event: g.CkL.FOCUS_CHAT_BUTTON,
 handler: N ? null : j
   });
   let [L, P] = a.useState(!1), O = a.useCallback(() => {
 h && P(!0);
   }, [h]);
-  (0, p.yp)({
+  (0, m.yp)({
 event: g.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
 handler: O
   }), a.useEffect(() => {

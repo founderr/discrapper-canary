@@ -25,7 +25,7 @@ return;
   null != s && (s.delete(e), 0 === s.size && delete T[n]);
 }
 
-function C(e, t, n, i) {
+function f(e, t, n, i) {
   let s = n.find(e => null != e.party && e.party.id),
 a = null != s && null != s.party ? s.party.id : null,
 r = h(t, e);
@@ -45,7 +45,7 @@ T[n] = a, a.add(e);
   }(t, e, a);
 }
 
-function f(e) {
+function C(e) {
   let {
 guild: t
   } = e, n = !1;
@@ -55,21 +55,21 @@ guild: t
   activities: s
 }
 of t.presences)
-!1 !== C(t.id, e.id, s, i) && (n = !0);
+!1 !== f(t.id, e.id, s, i) && (n = !0);
   return n;
 }
 
 function p(e, t) {
   let n = !1;
   return t.forEach(t => {
-null != t && C(e, t.user.id, t.activities, t.status) && (n = !0);
+null != t && f(e, t.user.id, t.activities, t.status) && (n = !0);
   }), n;
 }
 
 function g() {
   let e = d.default.getId(),
 t = E.Z.getActivities();
-  return C(I.ME, e, t);
+  return f(I.ME, e, t);
 }
 class S extends(i = c.ZP.Store) {
   initialize() {
@@ -102,9 +102,9 @@ for (let {
     activities: s
   }
   of n)
-  null != e && !1 !== C(I.ME, e.id, s, t) && (i = !0);
+  null != e && !1 !== f(I.ME, e.id, s, t) && (i = !0);
 for (let e of t)
-  !1 !== f({
+  !1 !== C({
     guild: e
   }) && (i = !0);
 return i;
@@ -118,7 +118,7 @@ T = {}, m = {
   ...n
 }, Object.keys(t).forEach(e => T[e] = new Set(t[e]));
   },
-  GUILD_CREATE: f,
+  GUILD_CREATE: C,
   PRESENCES_REPLACE: function(e) {
 let {
   presences: t
@@ -128,7 +128,7 @@ for (let {
     activities: i
   }
   of t)
-  null != e && !1 !== C(I.ME, e.id, i) && (n = !0);
+  null != e && !1 !== f(I.ME, e.id, i) && (n = !0);
 return n;
   },
   PRESENCE_UPDATES: function(e) {
@@ -142,7 +142,7 @@ return t.map(e => {
     status: i,
     activities: s
   } = e;
-  return C(null != t ? t : I.ME, n.id, s, i);
+  return f(null != t ? t : I.ME, n.id, s, i);
 }).some(e => e);
   },
   THREAD_MEMBER_LIST_UPDATE: function(e) {

@@ -12,12 +12,12 @@ var i = n(735250),
   E = n(689938),
   h = n(278560);
 
-function I(e) {
+function m(e) {
   let {
 onTabSelect: t,
 tabs: n,
 selectedTab: s
-  } = e, c = (0, d.ZP)(), u = (0, l.wj)(c), I = a.useMemo(() => null != n.find(e => {
+  } = e, c = (0, d.ZP)(), u = (0, l.wj)(c), m = a.useMemo(() => null != n.find(e => {
 let {
   id: t
 } = e;
@@ -25,7 +25,7 @@ return t === s;
   }), [
 s,
 n
-  ]), m = I ? 'header-primary' : u ? 'text-muted' : 'header-primary', g = I ? o.tokens.colors.HEADER_PRIMARY : u ? o.tokens.colors.TEXT_MUTED : o.tokens.colors.HEADER_PRIMARY;
+  ]), I = m ? 'header-primary' : u ? 'text-muted' : 'header-primary', g = m ? o.tokens.colors.HEADER_PRIMARY : u ? o.tokens.colors.TEXT_MUTED : o.tokens.colors.HEADER_PRIMARY;
   return (0, i.jsx)(o.Popout, {
 renderPopout: e => {
   let {
@@ -49,13 +49,13 @@ children: (e, t) => {
     id: 'more',
     color: 'text-muted',
     className: r()(h.tab, h.more, {
-      [h.selected]: I
+      [h.selected]: m
     }),
     'aria-label': E.Z.Messages.MORE,
     children: [
       (0, i.jsx)(o.Text, {
         variant: 'text-md/medium',
-        color: m,
+        color: I,
         children: E.Z.Messages.MORE
       }),
       n ? (0, i.jsx)(o.ChevronSmallUpIcon, {
@@ -76,7 +76,7 @@ className: n,
 selectedTab: s,
 tabs: _,
 onTabSelect: E,
-onAvailableWidthChange: m
+onAvailableWidthChange: I
   } = e, g = (0, d.ZP)(), p = (0, l.wj)(g), [T, S] = a.useState(0), {
 lastVisibleIndex: f,
 onItemLayout: C,
@@ -100,7 +100,7 @@ if (null == t)
 S(t.width);
 let n = A.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
   i = t.width - n;
-null == m || m(i);
+null == I || I(i);
   });
   return a.useImperativeHandle(t, () => ({
 getBoundingClientRect: () => {
@@ -129,7 +129,7 @@ children: [
       }, e.id)),
       (0, i.jsx)('div', {
         ref: N,
-        children: (0, i.jsx)(I, {
+        children: (0, i.jsx)(m, {
           tabs: Z,
           onTabSelect: E,
           selectedTab: s
@@ -159,7 +159,7 @@ children: [
           })
         }, e.id);
       }),
-      0 !== Z.length ? (0, i.jsx)(I, {
+      0 !== Z.length ? (0, i.jsx)(m, {
         tabs: Z,
         onTabSelect: E,
         selectedTab: s

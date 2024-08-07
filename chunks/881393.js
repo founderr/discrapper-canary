@@ -70,7 +70,7 @@ l = i.filter(e => e.sku.type !== _.epS.SUBSCRIPTION_GROUP).map(e => e.sku).filte
   ];
 }
 
-function I(e) {
+function m(e) {
   let {
 socket: t
   } = e;
@@ -95,7 +95,7 @@ handler: h
   u.wE,
   u.lH
 ],
-handler: I
+handler: m
   },
   [_.Etm.GET_SKUS_EMBEDDED]: {
 [u.Gp.ANY]: [
@@ -112,7 +112,7 @@ handler: async e => ({
   u.lH
 ],
 handler: async e => ({
-  entitlements: await I(e)
+  entitlements: await m(e)
 })
   }
 };

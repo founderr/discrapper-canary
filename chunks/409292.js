@@ -11,9 +11,9 @@ var i = n(735250),
   _ = n(613311),
   E = n(601564),
   h = n(981631),
-  I = n(256964);
+  m = n(256964);
 
-function m(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -30,7 +30,7 @@ return null != this.props.skuId ? (0, i.jsx)(u.Z, {
   page: h.ZY5.CHANNEL_STORE_LISTING,
   root: !0,
   children: (0, i.jsx)('div', {
-    className: I.applicationStore,
+    className: m.applicationStore,
     children: (0, i.jsx)(s.AW, {
       path: '*',
       render: this.renderApplicationListing
@@ -39,13 +39,13 @@ return null != this.props.skuId ? (0, i.jsx)(u.Z, {
 }) : null;
   }
   constructor(...e) {
-super(...e), m(this, 'fetchStoreListing', e => {
+super(...e), I(this, 'fetchStoreListing', e => {
   let {
     channel: t,
     inputSkuId: n
   } = this.props;
   return null != e ? l.Z.fetchChannelStoreListing(t.id, e) : null != n ? l.Z.fetchChannelStoreListing(t.id, n) : l.Z.fetchChannelStoreListing(t.id);
-}), m(this, 'renderApplicationListing', e => {
+}), I(this, 'renderApplicationListing', e => {
   let {
     location: t
   } = e, {

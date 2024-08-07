@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var i = n(735250),
@@ -16,10 +16,10 @@ var i = n(735250),
   E = n(981631),
   h = n(689938);
 
-function I(e) {
+function m(e) {
   let t = a.useContext(_.AnalyticsContext),
 n = e.voiceChannels[0],
-I = (0, s.e7)([d.Z], () => null != n && d.Z.can(E.Plq.CONNECT, n.channel));
+m = (0, s.e7)([d.Z], () => null != n && d.Z.can(E.Plq.CONNECT, n.channel));
   return null == n ? null : [
 (0, i.jsx)(r.MenuItem, {
   id: 'join-voice',
@@ -35,7 +35,7 @@ I = (0, s.e7)([d.Z], () => null != n && d.Z.can(E.Plq.CONNECT, n.channel));
     });
   },
   label: h.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_JOIN_CHANNEL,
-  disabled: !I
+  disabled: !m
 }, 'join-voice'),
 (0, i.jsx)(r.MenuItem, {
   id: 'goto-server',

@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(796918),
   E = n(513532),
   h = n(741595),
-  I = n(974842),
-  m = n(363915),
+  m = n(974842),
+  I = n(363915),
   g = n(359380),
   p = n(308083),
   T = n(689938);
@@ -136,7 +136,7 @@ let {
   errors: a,
   handleClanUpdate: s
 } = S(t);
-return (0, i.jsx)(I.Z, {
+return (0, i.jsx)(m.Z, {
   handleUpdate: s,
   tag: n.tag,
   error: null == a ? void 0 : a.tag,
@@ -196,7 +196,7 @@ guildId: t
 r,
 t
   ]);
-  return (0, i.jsx)(m.Z, {
+  return (0, i.jsx)(I.Z, {
 currentStep: r,
 items: l,
 renderItem: N,

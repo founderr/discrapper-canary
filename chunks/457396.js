@@ -14,8 +14,8 @@ var r = n(91192),
   _ = n(594174),
   E = n(351402),
   h = n(78839),
-  I = n(626135),
-  m = n(74538),
+  m = n(626135),
+  I = n(74538),
   g = n(502087),
   p = n(647265),
   T = n(650032),
@@ -46,7 +46,7 @@ let U = e => {
 } = e,
 w = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
 B = (0, l.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
-H = (0, m.Qo)(w, B),
+H = (0, I.Qo)(w, B),
 V = (0, r.JA)('nitro'),
 F = (0, f.N)(),
 Y = (0, S.Ng)(),
@@ -96,7 +96,7 @@ icon: c.NitroWheelIcon,
 text: D.Z.Messages.PREMIUM,
 locationState: G,
 onClick: () => {
-  I.default.track(P.rMx.NITRO_TAB_VISITED, {
+  m.default.track(P.rMx.NITRO_TAB_VISITED, {
     badge_decorator: i,
     has_premium: H
   });

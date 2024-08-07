@@ -26,7 +26,7 @@ return null;
   let {
 IconComponent: h,
 locationName: f
-  } = v, I = (0, i.jsxs)(i.Fragment, {
+  } = v, m = (0, i.jsxs)(i.Fragment, {
 children: [
   null != h && (0, i.jsx)(h, {
     size: 'custom',
@@ -48,7 +48,7 @@ className: d.row,
 children: null != g ? (0, i.jsx)(l.Clickable, {
   className: _ ? d.externalLocation : d.channelLocation,
   onClick: g,
-  children: I
-}) : I
+  children: m
+}) : m
   });
 }

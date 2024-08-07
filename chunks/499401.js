@@ -1,25 +1,25 @@
-_.d(E, {
+t.d(n, {
   Y: function() {
-return t;
+return _;
   }
 });
-var s = _(689938);
+var E = t(689938);
 
-function t(e) {
+function _(e) {
   let {
-application: E,
-username: _,
-usernameOnClick: t,
-medium: n
+application: n,
+username: t,
+usernameOnClick: _,
+medium: s
   } = e;
-  return null != E ? s.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_MOBILE.astFormat({
-username: _,
-applicationName: E.name,
-usernameOnClick: t,
-medium: n
-  }) : s.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION_MOBILE.astFormat({
-username: _,
-usernameOnClick: t,
-medium: n
+  return null != n ? E.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_MOBILE.astFormat({
+username: t,
+applicationName: n.name,
+usernameOnClick: _,
+medium: s
+  }) : E.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION_MOBILE.astFormat({
+username: t,
+usernameOnClick: _,
+medium: s
   });
 }

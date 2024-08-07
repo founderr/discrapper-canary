@@ -20,8 +20,8 @@ var s = n(120356),
   T = n(324081),
   h = n(240126),
   N = n(791914),
-  C = n(981631),
-  f = n(689938),
+  f = n(981631),
+  C = n(689938),
   p = n(645962),
   g = n(699723);
 let S = {
@@ -44,7 +44,7 @@ children: [
     setTab: t,
     closePopout: n
   }),
-  0 === s.length ? (0, i.jsx)(x, {}) : (0, i.jsx)(o.AdvancedScrollerThin, {
+  0 === s.length ? (0, i.jsx)(O, {}) : (0, i.jsx)(o.AdvancedScrollerThin, {
     children: s.map(e => (0, i.jsx)(R, {
       savedMessage: e
     }, e.saveData.messageId))
@@ -57,7 +57,7 @@ function R(e) {
   let {
 savedMessage: t
   } = e, n = (0, r.e7)([I.Z], () => I.Z.getChannel(t.saveData.channelId)), s = () => {
-(0, u.uL)(C.Z5c.CHANNEL(null == n ? void 0 : n.getGuildId(), t.saveData.channelId, t.saveData.messageId));
+(0, u.uL)(f.Z5c.CHANNEL(null == n ? void 0 : n.getGuildId(), t.saveData.channelId, t.saveData.messageId));
   };
   return (0, i.jsx)('div', {
 className: g.container,
@@ -68,7 +68,7 @@ children: null != n && null != t.message ? (0, i.jsxs)(i.Fragment, {
       gotoChannel: s,
       children: (0, i.jsx)(o.CircleIconButton, {
         className: g.closeButton,
-        tooltip: f.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
+        tooltip: C.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
         color: o.CircleIconButtonColors.TERTIARY,
         icon: (0, i.jsx)(o.CloseSmallIcon, {
           size: 'xs',
@@ -102,10 +102,10 @@ children: null != n && null != t.message ? (0, i.jsxs)(i.Fragment, {
   });
 }
 
-function x() {
+function O() {
   return (0, i.jsx)(h.Z, {
 Icon: o.DoubleCheckmarkLargeIcon,
-header: f.Z.Messages.MESSAGE_BOOKMARKS_EMPTY,
-tip: f.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
+header: C.Z.Messages.MESSAGE_BOOKMARKS_EMPTY,
+tip: C.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
   });
 }

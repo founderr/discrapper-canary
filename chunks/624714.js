@@ -11,9 +11,9 @@ var i = n(544891),
   _ = n(452426),
   E = n(561205),
   h = n(186901),
-  I = n(981631);
+  m = n(981631);
 t.Z = {
-  [I.Etm.SEND_ANALYTICS_EVENT]: {
+  [m.Etm.SEND_ANALYTICS_EVENT]: {
 validation: e => (0, _.Z)(e).required().keys({
   event_name: e.string().required(),
   event_properties: e.object().required()
@@ -33,12 +33,12 @@ handler(e) {
     h = null == _ ? void 0 : _.getGuildId();
   if (null == _)
     throw new d.Z({
-      errorCode: I.lTL.INVALID_COMMAND
+      errorCode: m.lTL.INVALID_COMMAND
     }, 'Invalid channel');
-  let m = r.Z.getApplication(l);
-  if (!(0, c.yE)(null !== (t = null == m ? void 0 : m.flags) && void 0 !== t ? t : 0, I.udG.EMBEDDED_FIRST_PARTY))
+  let I = r.Z.getApplication(l);
+  if (!(0, c.yE)(null !== (t = null == I ? void 0 : I.flags) && void 0 !== t ? t : 0, m.udG.EMBEDDED_FIRST_PARTY))
     throw new d.Z({
-      errorCode: I.lTL.INVALID_COMMAND
+      errorCode: m.lTL.INVALID_COMMAND
     }, 'This application cannot access this API');
   let g = (0, s.U)(l),
     p = {
@@ -53,7 +53,7 @@ handler(e) {
   });
 }
   },
-  [I.Etm.GET_APPLICATION_TICKET]: {
+  [m.Etm.GET_APPLICATION_TICKET]: {
 scope: h.lH,
 handler(e) {
   let {
@@ -61,10 +61,10 @@ handler(e) {
   } = e, n = t.application.id;
   if (null == n)
     throw new d.Z({
-      errorCode: I.lTL.INVALID_COMMAND
+      errorCode: m.lTL.INVALID_COMMAND
     }, 'No application.');
   return i.tn.post({
-    url: I.ANM.APPLICATION_TICKET(n),
+    url: m.ANM.APPLICATION_TICKET(n),
     body: {
       test_mode: l.Z.inTestModeForApplication(n) || a.Z.inDevModeForApplication(n)
     },

@@ -1,8 +1,8 @@
 n(47120);
 var s, r, i = n(735250),
   a = n(470079),
-  l = n(120356),
-  o = n.n(l),
+  o = n(120356),
+  l = n.n(o),
   c = n(536285),
   u = n(857458),
   d = n(388905),
@@ -15,10 +15,10 @@ t.Z = function(e) {
 match: t,
 location: n,
 attemptDeepLink: s
-  } = e, [r, l] = a.useState(0);
+  } = e, [r, o] = a.useState(0);
   a.useEffect(() => {
 c.default.once('connected', () => {
-  l(1);
+  o(1);
 }), c.default.once('disconnected', () => {
   (0, _.uL)((0, u.M)());
 }), c.default.connect();
@@ -30,7 +30,7 @@ return () => clearTimeout(e);
   }, [r]);
   let g = a.useCallback(async (e, t) => {
 try {
-  l(2), await s(e, t), l(3);
+  o(2), await s(e, t), o(3);
 } catch (e) {
   console.error('Error opening deeplink', e);
 }
@@ -54,7 +54,7 @@ case 1:
         children: h.Z.Messages.OPEN_IN_APP
       }),
       (0, i.jsx)(d.zx, {
-        className: o()(E.marginTop8, E.marginCenterHorz),
+        className: l()(E.marginTop8, E.marginCenterHorz),
         color: d.zx.Colors.LINK,
         look: d.zx.Looks.LINK,
         onClick: () => (0, _.uL)((0, u.M)()),

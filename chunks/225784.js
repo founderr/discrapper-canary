@@ -10,8 +10,8 @@ var i, a = n(735250),
   _ = n(372769),
   E = n(134432),
   h = n(695346),
-  I = n(768581),
-  m = n(900849),
+  m = n(768581),
+  I = n(900849),
   g = n(556017),
   p = n(879484),
   T = n(26580),
@@ -60,11 +60,11 @@ let {
   presenceCount: O,
   memberCount: R,
   keywords: x
-} = t, b = null === (e = t.features) || void 0 === e ? void 0 : e.has(f.oNc.HUB), P = I.ZP.getGuildDiscoverySplashURL({
+} = t, b = null === (e = t.features) || void 0 === e ? void 0 : e.has(f.oNc.HUB), P = m.ZP.getGuildDiscoverySplashURL({
   id: t.id,
   splash: t.discoverySplash,
   size: 300 * (0, E.x_)()
-}), M = null != P ? P : this.getDefaultSplashURL(i, b), D = I.ZP.getGuildIconURL({
+}), M = null != P ? P : this.getDefaultSplashURL(i, b), D = m.ZP.getGuildIconURL({
   id: t.id,
   icon: t.icon,
   size: 40
@@ -188,7 +188,7 @@ return (0, a.jsx)(o.$, {
                   tags: x,
                   onTagClick: e => s(e, t.id),
                   guildId: t.id,
-                  section: m.P1.POPULAR
+                  section: I.P1.POPULAR
                 }),
                 (0, a.jsxs)('div', {
                   className: N.memberInfo,

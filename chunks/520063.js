@@ -19,33 +19,33 @@ var t = l(735250),
   f = l(689938);
 
 function g(e, n, g) {
-  let m = r.useMemo(() => ({
+  let I = r.useMemo(() => ({
 [n]: [e.id]
   }), [
 n,
 e.id
   ]);
-  (0, s.$)(m), (0, i.e7)([E.Z], () => E.Z.getGuildVersion(n), [n]);
-  let I = (0, i.e7)([c.Z], () => c.Z.getChannel(g)),
+  (0, s.$)(I), (0, i.e7)([E.Z], () => E.Z.getGuildVersion(n), [n]);
+  let m = (0, i.e7)([c.Z], () => c.Z.getChannel(g)),
 R = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
 N = (0, i.e7)([M.default], () => M.default.getCurrentUser()),
-A = (0, u.Z)(I, 'Context Menu'),
-C = (0, o.Xb)(I);
+A = (0, u.Z)(m, 'Context Menu'),
+C = (0, o.Xb)(m);
   if ((null == N ? void 0 : N.id) === e.id)
 return [A];
-  if (null == R || null == I || null == N)
+  if (null == R || null == m || null == N)
 return [];
-  let O = C || I.ownerId === N.id && I.type === _.d4z.PRIVATE_THREAD;
+  let O = C || m.ownerId === N.id && m.type === _.d4z.PRIVATE_THREAD;
   return [
 O ? (0, t.jsx)(a.MenuItem, {
   id: 'remove',
-  label: I.isForumPost() ? f.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({
+  label: m.isForumPost() ? f.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({
     user: e.username
   }) : f.Z.Messages.REMOVE_USER_FROM_THREAD.format({
     user: e.username
   }),
   color: 'danger',
-  action: () => d.Z.removeMember(I, e.id, 'Context Menu')
+  action: () => d.Z.removeMember(m, e.id, 'Context Menu')
 }) : null,
 E.Z.canManageUser(_.Plq.KICK_MEMBERS, e, R) ? (0, t.jsx)(a.MenuItem, {
   id: 'kick',

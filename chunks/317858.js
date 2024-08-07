@@ -15,15 +15,15 @@ var i = n(470079),
   _ = n(340895),
   E = n(358085),
   h = n(998502),
-  I = n(252618),
-  m = n(981631),
+  m = n(252618),
+  I = n(981631),
   g = n(689938);
 let p = new Set([
 'Blink',
 'Gecko',
 'WebKit'
   ]),
-  T = m.dG4;
+  T = I.dG4;
 if (E.isPlatformEmbedded)
   T = e => h.ZP.setBadge(e);
 else if (p.has(l().layout)) {
@@ -32,7 +32,7 @@ animation: 'none'
   });
   T = t => {
 try {
-  (0, I.PR)(t), e.badge(-1 === t ? '\u2022' : t);
+  (0, m.PR)(t), e.badge(-1 === t ? '\u2022' : t);
 } catch (e) {}
   };
 }
@@ -55,7 +55,7 @@ t = (0, o.e7)([
 if (!e)
   return;
 let t = h.ZP.bounceDock('critical'),
-  n = (0, I.EM)({
+  n = (0, m.EM)({
     messages: [g.Z.Messages.INCOMING_CALL],
     count: 50
   });

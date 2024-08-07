@@ -11,8 +11,8 @@ var i, s, a, r, l = n(392711),
   T = n(594190),
   h = n(594174),
   N = n(580130),
-  C = n(55563),
-  f = n(981631);
+  f = n(55563),
+  C = n(981631);
 let p = 'DetectedOffPlatformPremiumPerksStore',
   g = {},
   S = {},
@@ -32,9 +32,9 @@ if (null == i) {
   !m.Z.isFetchingApplication(n) && !m.Z.didFetchingApplicationFail(n) && I.Z.fetchApplication(n);
   continue;
 }
-let s = C.Z.get(t);
+let s = f.Z.get(t);
 if (null == s) {
-  !C.Z.isFetching(t) && !C.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
+  !f.Z.isFetching(t) && !f.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
   continue;
 }
 N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !s.available ? null != g[t] && (delete g[t], e = !0) : (g[t] = {
@@ -44,21 +44,21 @@ N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrent
   }
   return e;
 }
-class x extends(i = c.ZP.Store) {
+class O extends(i = c.ZP.Store) {
   initialize() {
 var e;
-this.waitFor(T.ZP, C.Z, N.Z), A = null !== (e = u.K.get(p)) && void 0 !== e ? e : A;
+this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = u.K.get(p)) && void 0 !== e ? e : A;
   }
   getDetectedOffPlatformPremiumPerks() {
 return o().values(g);
   }
 }
-r = 'DetectedOffPlatformPremiumPerksStore', (a = 'displayName') in(s = x) ? Object.defineProperty(s, a, {
+r = 'DetectedOffPlatformPremiumPerksStore', (a = 'displayName') in(s = O) ? Object.defineProperty(s, a, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new x(d.Z, {
+}) : s[a] = r, t.Z = new O(d.Z, {
   LOGOUT: function() {
 g = {}, S = {};
   },
@@ -81,12 +81,12 @@ for (let {
     distributor: n
   }
   of T.ZP.getRunningGames())
-  if (null != t && n !== f.GQo.DISCORD)
+  if (null != t && n !== C.GQo.DISCORD)
     for (let {
         skuId: n,
         applicationId: i
       }
-      of f.Lg6) {
+      of C.Lg6) {
       if (!(i !== t || A.includes(n)))
         null == S[n] && (!N.Z.applicationIdsFetched.has(i) && !N.Z.applicationIdsFetching.has(i) && null == N.Z.getForSku(n) && _.yD(i), S[n] = {
           skuId: n,

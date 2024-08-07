@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(692547),
   d = n(481060),
   h = n(239091),
-  m = n(40851),
-  p = n(484459),
+  p = n(40851),
+  m = n(484459),
   _ = n(103575),
   f = n(271383),
   E = n(709586),
@@ -61,13 +61,13 @@ let {
   user: o,
   blocked: c,
   rtsState: u
-} = n, h = u === C.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, m = u === C.xO.REQUESTED_TO_SPEAK || h;
+} = n, h = u === C.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, p = u === C.xO.REQUESTED_TO_SPEAK || h;
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsxs)('div', {
       className: I.avatarContainer,
       children: [
-        m && (0, i.jsx)(d.HandRequestSpeakIcon, {
+        p && (0, i.jsx)(d.HandRequestSpeakIcon, {
           size: 'md',
           color: 'currentColor',
           className: l()(I.icon, {
@@ -104,7 +104,7 @@ channel: s
   } = e, {
 user: r,
 blocked: u
-  } = t, E = s.getGuildId(), g = (0, m.bp)(), C = (0, c.e7)([f.ZP], () => {
+  } = t, E = s.getGuildId(), g = (0, p.bp)(), C = (0, c.e7)([f.ZP], () => {
 var e;
 return null != E && (null === (e = f.ZP.getMember(E, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null;
   }, [
@@ -152,7 +152,7 @@ N = a.useCallback(e => (0, i.jsx)(_.Z, {
   r.id
 ]);
   return (0, i.jsx)(d.Popout, {
-preload: () => (0, p.W)(r, {
+preload: () => (0, m.W)(r, {
   guildId: s.guild_id,
   channelId: s.id
 }),

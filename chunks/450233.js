@@ -9,22 +9,22 @@ var i, a, s, r, l, o, c = n(735250),
   _ = n(570140),
   E = n(16084),
   h = n(855775),
-  I = n(689938);
+  m = n(689938);
 (i = l || (l = {})).SHORT = 'SHORT', i.LONG = 'LONG';
-class m extends(o = d.PureComponent) {
+class I extends(o = d.PureComponent) {
   getText(e, t) {
 if (429 === e.status)
   switch (t) {
     case 'SHORT':
-      return I.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT;
+      return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT;
     case 'LONG':
-      return I.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR;
+      return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR;
   }
 switch (t) {
   case 'SHORT':
-    return I.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR_SHORT;
+    return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR_SHORT;
   case 'LONG':
-    return I.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR;
+    return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR;
 }
   }
   componentWillUnmount() {
@@ -44,11 +44,11 @@ return null == t ? null : (0, c.jsx)('div', {
 }
 r = {
   messageStyle: 'LONG'
-}, (s = 'defaultProps') in(a = m) ? Object.defineProperty(a, s, {
+}, (s = 'defaultProps') in(a = I) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : a[s] = r, t.Z = u.ZP.connectStores([h.Z], () => ({
   purchaseError: h.Z.error
-}))(m);
+}))(I);

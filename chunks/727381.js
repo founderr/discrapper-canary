@@ -14,8 +14,8 @@ var a = n(120356),
   u = n(777288),
   d = n(753042),
   h = n(787469),
-  m = n(477718),
-  p = n(791176),
+  p = n(477718),
+  m = n(791176),
   _ = n(908474),
   f = n(467014),
   E = n(689938),
@@ -74,7 +74,7 @@ children: [
         userId: t,
         guildId: n
       }),
-      (0, i.jsx)(p.Z, {
+      (0, i.jsx)(m.Z, {
         member: x,
         onNavigate: E
       }),
@@ -84,7 +84,7 @@ children: [
       (0, i.jsx)(d.Z, {
         member: x
       }),
-      (0, i.jsx)(m.Z, {
+      (0, i.jsx)(p.Z, {
         member: x
       })
     ]

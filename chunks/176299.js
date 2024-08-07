@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(481060),
   E = n(711237),
   h = n(532835),
-  I = n(290297),
-  m = n(918854),
+  m = n(290297),
+  I = n(918854),
   g = n(279240),
   p = n(765717),
   T = n(358221),
@@ -72,13 +72,13 @@ let eh = () => (0, i.jsx)('div', {
 className: eE.loader,
 children: (0, i.jsx)(_.Spinner, {})
   }),
-  eI = (0, c.Un)({
+  em = (0, c.Un)({
 createPromise: () => n.e('68614').then(n.bind(n, 650788)),
 webpackId: 650788,
 name: 'GuildShopPage',
 renderLoader: eh
   }),
-  em = (0, c.Un)({
+  eI = (0, c.Un)({
 createPromise: () => n.e('44798').then(n.bind(n, 998420)),
 webpackId: 998420,
 name: 'GuildMemberApplicationReview',
@@ -153,20 +153,20 @@ let {
 if (null != a && null != s && (0, eu.AB)(s))
   switch (s) {
     case eu.oC.ROLE_SUBSCRIPTIONS:
-      return d ? (0, i.jsx)(eI, {
+      return d ? (0, i.jsx)(em, {
         guildId: a,
         initialTab: A.y.GUILD_ROLE_SUBSCRIPTIONS
       }) : (0, i.jsx)(D.Z, {
         guildId: a
       });
     case eu.oC.GUILD_SHOP:
-      return (0, i.jsx)(eI, {
+      return (0, i.jsx)(em, {
         guildId: a,
         productId: r,
         initialTab: c
       });
     case eu.oC.MEMBER_APPLICATIONS:
-      return (0, i.jsx)(em, {
+      return (0, i.jsx)(eI, {
         guildId: a
       });
     case eu.oC.GUILD_HOME:
@@ -269,7 +269,7 @@ return function(t) {
   ex = e => (0, i.jsx)(g.Z, {
 ...e
   }),
-  eb = () => (0, i.jsx)(m.Z, {}),
+  eb = () => (0, i.jsx)(I.Z, {}),
   eP = () => (0, i.jsx)(F.Z, {}),
   eM = () => (0, i.jsx)(w.Z, {}),
   eD = () => (0, i.jsx)(V.Z, {}),
@@ -381,7 +381,7 @@ h = (0, l.$B)([
   ed.Z5c.CHANNEL(ed.ME, ':channelId'),
   ed.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')
 ]),
-m = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eu.oC.GUILD_ONBOARDING,
+I = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eu.oC.GUILD_ONBOARDING,
 g = a.useCallback(() => B.Z.openSidebar(), []);
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsxs)('div', {
@@ -404,9 +404,9 @@ children: (0, i.jsxs)('div', {
               (0, i.jsx)(ej, {
                 hasNotice: t,
                 sidebarTheme: n,
-                hideSidebar: s || r || c || _ || m || !E
+                hideSidebar: s || r || c || _ || I || !E
               }),
-              (0, i.jsx)(I.Z.Provider, {
+              (0, i.jsx)(m.Z.Provider, {
                 value: g,
                 children: (0, i.jsxs)(l.rs, {
                   children: [

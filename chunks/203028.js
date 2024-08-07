@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 }), n(47120);
 var i = n(735250);
@@ -16,16 +16,16 @@ var a = n(512722),
   _ = n(358924),
   E = n(817915),
   h = n(981631),
-  I = n(689938);
+  m = n(689938);
 
-function m(e) {
+function I(e) {
   let {
 party: t,
 onUserContextMenu: a
   } = e, {
-priorityMembers: m,
+priorityMembers: I,
 guildContext: g
-  } = t, p = m[0], T = function(e) {
+  } = t, p = I[0], T = function(e) {
 let {
   priorityMembers: t,
   partiedMembers: n
@@ -39,12 +39,12 @@ switch (n.length) {
   case 1:
     return s;
   case 2:
-    return I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN_ONLY.format({
+    return m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN_ONLY.format({
       user1: s,
       user2: r
     });
   default:
-    return I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN.format({
+    return m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_HEADER_TWO_KNOWN.format({
       user1: s,
       user2: r,
       extras: n.length - 2
@@ -58,7 +58,7 @@ var t;
 let {
   priorityMembers: a,
   partiedMembers: d,
-  voiceChannels: m,
+  voiceChannels: I,
   currentActivities: g
 } = e, p = a.length, T = d.length - p, S = g[0], f = null == S ? void 0 : S.activity, C = null == S ? void 0 : S.startedPlayingTime, N = {
   name: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ''
@@ -88,7 +88,7 @@ if (p + T === 1 && null != S) {
     case h.IIU.PLAYING:
       if ((0, o.Z)(f))
         return {
-          subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
+          subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
           icon: (0, i.jsx)(_.Z.Header.Icon, {
             src: _.Z.Header.Icon.Src.XBOX
           })
@@ -105,7 +105,7 @@ if (p + T === 1 && null != S) {
       };
     case h.IIU.STREAMING:
       return {
-        subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH,
+        subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH,
           icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
             src: e.getIconURL(E.Z)
           }) : null
@@ -119,29 +119,29 @@ if (p + T === 1 && null != S) {
       }) : (0, i.jsx)(_.Z.Header.Icon, {
         src: n(211827)
       }), {
-        subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
+        subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({
           name: f.name
         }),
         icon: a
       };
     case h.IIU.WATCHING:
       return {
-        subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING,
+        subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING,
           icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
             src: e.getIconURL(E.Z)
           }) : null
       };
     default:
       return {
-        subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
+        subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
           icon: null
       };
   }
 }
 if (0 === g.length) {
-  if (m.length > 0)
+  if (I.length > 0)
     return {
-      subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
+      subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
       icon: null
     };
   let e = g[0];
@@ -156,7 +156,7 @@ if (0 === g.length) {
     }
     if (null != t && t.type === h.IIU.LISTENING)
       return {
-        subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_SPOTIFY,
+        subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_SPOTIFY,
         icon: (0, i.jsx)(_.Z.Header.Icon, {
           src: _.Z.Header.Icon.Src.SPOTIFY
         })
@@ -186,7 +186,7 @@ if (0 === g.length) {
   };
 }
 return {
-  subtitle: I.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_MULTIPLE_GAMES,
+  subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_MULTIPLE_GAMES,
   icon: (0, i.jsx)(_.Z.Header.Icon, {
     src: _.Z.Header.Icon.Src.MULTIPLE
   })

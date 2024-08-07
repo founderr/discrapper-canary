@@ -19,10 +19,10 @@ let u = [],
   h = {
 status: 'unloaded'
   },
-  I = {};
-class m extends(i = r.ZP.Store) {
+  m = {};
+class I extends(i = r.ZP.Store) {
   getSearchResult(e) {
-let t = I[s().v3(JSON.stringify(e))];
+let t = m[s().v3(JSON.stringify(e))];
 return null == t || t.loadedAt < Date.now() - o.Z.Millis.HOUR ? h : t;
   }
   getSavedGuildsResult(e) {
@@ -38,7 +38,7 @@ return u;
 return E;
   }
 }
-d(m, 'displayName', 'ClanDiscoveryStore'), d(m, 'persistKey', 'ClanDiscoveryStore'), t.Z = new m(l.Z, {
+d(I, 'displayName', 'ClanDiscoveryStore'), d(I, 'persistKey', 'ClanDiscoveryStore'), t.Z = new I(l.Z, {
   FETCH_STATIC_CLAN_LIST_START: function() {
 E = !0;
   },
@@ -49,6 +49,6 @@ u = e.clans, _ = !0, E = !1;
 E = !1;
   },
   FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: function(e) {
-I[e.criteriaHash] = e.searchResult;
+m[e.criteriaHash] = e.searchResult;
   }
 });

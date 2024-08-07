@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(393238),
   d = n(410030),
   h = n(607070),
-  m = n(466794),
-  p = n(602198),
+  p = n(466794),
+  m = n(602198),
   _ = n(546240),
   f = n(952009);
 
@@ -40,18 +40,18 @@ width: P = 0,
 ref: O
   } = (0, u.Z)();
   return (0, i.jsxs)(c.TooltipContainer, {
-text: (0, i.jsx)(m.X, {
+text: (0, i.jsx)(p.X, {
   textColor: 'always-white',
   tooltipText: s
 }),
 position: 'top',
 color: null != I ? I : S ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
 'aria-label': s,
-tooltipClassName: p.tooltip,
-className: p.tooltipContainer,
+tooltipClassName: m.tooltip,
+className: m.tooltipContainer,
 children: [
   (0, i.jsx)('input', {
-    className: p.visuallyHidden,
+    className: m.visuallyHidden,
     checked: t,
     onChange: function() {
       if (E) {
@@ -66,17 +66,17 @@ children: [
   }),
   (0, i.jsxs)('label', {
     htmlFor: T,
-    className: l()(p.label, x, {
-      [p.transition]: A,
-      [p.labelChecked]: t,
-      [p.labelUnchecked]: !t && !E
+    className: l()(m.label, x, {
+      [m.transition]: A,
+      [m.labelChecked]: t,
+      [m.labelUnchecked]: !t && !E
     }),
     style: N ? {
       width: t ? j : j + P
     } : void 0,
     children: [
       t ? (0, i.jsx)(c.Shine, {
-        className: p.shine,
+        className: m.shine,
         shinePaused: Z
       }) : null,
       (0, i.jsx)('img', {
@@ -87,9 +87,9 @@ children: [
       (0, i.jsx)('span', {
         ref: O,
         children: (0, i.jsx)(c.Text, {
-          className: l()(p.burstText, {
-            [p.visuallyHidden]: t && N,
-            [p.burstTextChecked]: t
+          className: l()(m.burstText, {
+            [m.visuallyHidden]: t && N,
+            [m.burstTextChecked]: t
           }),
           variant: 'text-sm/semibold',
           children: n

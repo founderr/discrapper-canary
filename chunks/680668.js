@@ -21,15 +21,15 @@ var s = n(533800),
 
 function h(e) {
   var t, h;
-  let N, C, f, {
+  let N, f, C, {
   onTransitionToInviteChannel: p,
   onAcceptInstantInvite: g,
   guild: S,
   invite: A,
   author: R,
-  currentUserId: x
+  currentUserId: O
 } = e,
-O = x === R.id,
+x = O === R.id,
 {
   channel: M,
   approximate_member_count: v,
@@ -53,13 +53,13 @@ S.premiumTier = e;
   let k = D ? p : g,
 G = (0, _.e)({
   isVoiceChannel: j,
-  isOwnInvite: O,
+  isOwnInvite: x,
   isGuest: y,
   isHubGuild: B,
   isStage: U,
   isStream: !1
 });
-  return C = (0, i.jsxs)('span', {
+  return f = (0, i.jsxs)('span', {
 className: T.infoTitle,
 children: [
   (0, i.jsx)(l.Z.GuildName, {
@@ -74,7 +74,7 @@ children: [
     })
   })
 ]
-  }), y && (f = (0, i.jsx)(a.TooltipContainer, {
+  }), y && (C = (0, i.jsx)(a.TooltipContainer, {
 className: T.tooltipContainer,
 text: m.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
 children: (0, i.jsx)(a.CircleInformationIcon, {
@@ -82,7 +82,7 @@ children: (0, i.jsx)(a.CircleInformationIcon, {
   color: 'currentColor',
   className: T.infoIcon
 })
-  })), j ? (C = (0, i.jsx)(l.Z.Channel, {
+  })), j ? (f = (0, i.jsx)(l.Z.Channel, {
 channel: P
   }), N = (0, i.jsxs)('span', {
 className: T.infoTitle,
@@ -111,7 +111,7 @@ children: [
   }),
   (0, i.jsx)(l.Z.Header, {
     text: G,
-    extra: f
+    extra: C
   }),
   (0, i.jsxs)(l.Z.Body, {
     children: [
@@ -122,7 +122,7 @@ children: [
             guild: S
           }),
           (0, i.jsx)(l.Z.Info, {
-            title: C,
+            title: f,
             onClick: D ? k : null,
             children: N
           })

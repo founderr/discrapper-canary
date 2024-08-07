@@ -47,16 +47,16 @@ super(...e), u(this, 'handleSettingsUpdate', e => {
     return !1;
   let h = d.ZP.getMostRecentMessageCombo(n),
     {
-      combo: I
+      combo: m
     } = null != h ? h : {};
-  if (null == I)
+  if (null == m)
     return !1;
   Object.values(o.hn).forEach(e => {
     if (null != l.Z.getUnlocked(e))
       return;
     let t = (0, o.oX)(e),
       n = null == t ? void 0 : t.checkUnlock;
-    if (null != n && !1 !== n(I))
+    if (null != n && !1 !== n(m))
       (0, r.T)(e);
   });
 });

@@ -10,8 +10,8 @@ var i = n(735250),
   _ = n(607070),
   E = n(317858),
   h = n(635395),
-  I = n(5560),
-  m = n(451478),
+  m = n(5560),
+  I = n(451478),
   g = n(585483),
   p = n(145604),
   T = n(718813),
@@ -24,7 +24,7 @@ t = a.useCallback(t => {
     duration: n,
     intensity: i
   } = t;
-  if (_.Z.useReducedMotion || !m.Z.isFocused())
+  if (_.Z.useReducedMotion || !I.Z.isFocused())
     return;
   let {
     current: a
@@ -44,7 +44,7 @@ children: [
   (0, i.jsx)(h.Z, {}),
   (0, i.jsx)(c.Z, {}),
   (0, i.jsx)(p.Z, {}),
-  (0, i.jsx)(I.Z, {}),
+  (0, i.jsx)(m.Z, {}),
   (0, i.jsx)(l.DnDKeyboardHelpBar, {})
 ]
   });

@@ -294,7 +294,7 @@ super('discord_protos.premium_marketing.v1.Variant1Storage', [{
   }
 }
 let h = new E();
-class I extends o.C {
+class m extends o.C {
   create(e) {
 let t = {
   link: '',
@@ -358,7 +358,7 @@ super('discord_protos.premium_marketing.v1.Subtitle', [{
 ]);
   }
 }
-let m = new I();
+let I = new m();
 class g extends o.C {
   create(e) {
 let t = {
@@ -423,7 +423,7 @@ for (; e.pos < r;) {
       a.body = e.string();
       break;
     case 13:
-      a.heroArtVideoSubtitles.push(m.internalBinaryRead(e, e.uint32(), n));
+      a.heroArtVideoSubtitles.push(I.internalBinaryRead(e, e.uint32(), n));
       break;
     case 14:
       a.storage = h.internalBinaryRead(e, e.uint32(), n, a.storage);
@@ -444,7 +444,7 @@ for (let i = 0; i < e.featureCards.length; i++)
   d.internalBinaryWrite(e.featureCards[i], t.tag(5, s.TD.LengthDelimited).fork(), n).join();
 e.button && _.internalBinaryWrite(e.button, t.tag(6, s.TD.LengthDelimited).fork(), n).join(), '' !== e.dismissKey && t.tag(7, s.TD.LengthDelimited).string(e.dismissKey), '' !== e.heroArtVideoLinkLightTheme && t.tag(8, s.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), '' !== e.heroArtImageLinkDarkTheme && t.tag(9, s.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), '' !== e.heroArtImageLinkLightTheme && t.tag(10, s.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), '' !== e.modalTopPill && t.tag(11, s.TD.LengthDelimited).string(e.modalTopPill), '' !== e.body && t.tag(12, s.TD.LengthDelimited).string(e.body);
 for (let i = 0; i < e.heroArtVideoSubtitles.length; i++)
-  m.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, s.TD.LengthDelimited).fork(), n).join();
+  I.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, s.TD.LengthDelimited).fork(), n).join();
 e.storage && h.internalBinaryWrite(e.storage, t.tag(14, s.TD.LengthDelimited).fork(), n).join();
 let i = n.writeUnknownFields;
 return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t;
@@ -528,7 +528,7 @@ super('discord_protos.premium_marketing.v1.AnnouncementModalVariant1Properties',
     name: 'hero_art_video_subtitles',
     kind: 'message',
     repeat: 1,
-    T: () => m
+    T: () => I
   },
   {
     no: 14,

@@ -1,32 +1,32 @@
-i.d(s, {
+s.d(n, {
   Z: function() {
 return d;
   }
-}), i(789020), i(653041);
-var n = i(735250);
-i(470079);
-var l = i(481060),
-  t = i(860719),
-  o = i(689938),
-  a = i(744224);
+}), s(789020), s(653041);
+var i = s(735250);
+s(470079);
+var l = s(481060),
+  o = s(860719),
+  t = s(689938),
+  r = s(744224);
 
-function r(e) {
+function a(e) {
   let {
-content: s,
-heading: i
+content: n,
+heading: s
   } = e;
-  return (0, n.jsxs)('div', {
-className: a.row,
+  return (0, i.jsxs)('div', {
+className: r.row,
 children: [
-  null != i ? (0, n.jsx)(l.Heading, {
-    className: a.heading,
+  null != s ? (0, i.jsx)(l.Heading, {
+    className: r.heading,
     variant: 'text-sm/normal',
-    children: i
+    children: s
   }) : null,
-  (0, n.jsx)(l.Text, {
+  (0, i.jsx)(l.Text, {
     variant: 'text-sm/normal',
     color: 'header-secondary',
-    children: s
+    children: n
   })
 ]
   });
@@ -34,36 +34,36 @@ children: [
 
 function d(e) {
   let {
-flags: s,
-listScrollerStyle: i
+flags: n,
+listScrollerStyle: s
   } = e, {
 hasMessageContent: d,
 hasGuildPresences: c,
 hasGuildMembers: u
-  } = (0, t.w)({
-flags: s
+  } = (0, o.w)({
+flags: n
   });
-  if (null == s)
+  if (null == n)
 return null;
   let I = [];
-  return d && I.push((0, n.jsx)(r, {
-heading: o.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
-content: o.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
-  })), c && I.push((0, n.jsx)(r, {
-heading: o.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
-content: o.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
-  })), u && I.push((0, n.jsx)(r, {
-heading: o.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
-content: o.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
-  })), I.length > 0 && I.push((0, n.jsx)('div', {
-className: a.divider,
-children: (0, n.jsx)(l.FormDivider, {})
-  })), I.push((0, n.jsx)(r, {
-content: o.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
+  return d && I.push((0, i.jsx)(a, {
+heading: t.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
+content: t.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
+  })), c && I.push((0, i.jsx)(a, {
+heading: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
+content: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
+  })), u && I.push((0, i.jsx)(a, {
+heading: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
+content: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
+  })), I.length > 0 && I.push((0, i.jsx)('div', {
+className: r.divider,
+children: (0, i.jsx)(l.FormDivider, {})
+  })), I.push((0, i.jsx)(a, {
+content: t.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
   helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975'
 })
-  })), (0, n.jsx)(l.ScrollerThin, {
-className: i,
+  })), (0, i.jsx)(l.ScrollerThin, {
+className: s,
 children: I
   });
 }

@@ -7,8 +7,8 @@ var s = n(735250),
   r = n(470079),
   i = n(120356),
   a = n.n(i),
-  l = n(512722),
-  o = n.n(l),
+  o = n(512722),
+  l = n.n(o),
   c = n(442837),
   u = n(388905),
   d = n(362762),
@@ -97,7 +97,7 @@ return (0, s.jsxs)(u.ZP, {
 let {
   guildTemplate: e
 } = this.props;
-return (o()(null != e, 'guild template must not be null'), e.state === S.Rj.RESOLVING) ? (0, s.jsx)(u.ZP, {
+return (l()(null != e, 'guild template must not be null'), e.state === S.Rj.RESOLVING) ? (0, s.jsx)(u.ZP, {
   className: L.authBox,
   children: (0, s.jsx)(p.Z, {
     guildTemplate: e

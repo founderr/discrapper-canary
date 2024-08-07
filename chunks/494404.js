@@ -25,15 +25,15 @@ var i = n(735250),
   T = n(294218),
   h = n(703656),
   N = n(210887),
-  C = n(592125),
-  f = n(375954),
+  f = n(592125),
+  C = n(375954),
   p = n(496675),
   g = n(933429),
   S = n(451478),
   A = n(626135),
   R = n(585483),
-  x = n(981631),
-  O = n(689938),
+  O = n(981631),
+  x = n(689938),
   M = n(928482);
 
 function v(e, t, n) {
@@ -99,7 +99,7 @@ return (0, i.jsxs)(d.Clickable, {
       className: r()(M.__invalid_text, {
         hidden: e
       }),
-      children: O.Z.Messages.JUMP
+      children: x.Z.Messages.JUMP
     }),
     (0, i.jsx)(d.Spinner, {
       type: d.Spinner.Type.PULSING_ELLIPSIS,
@@ -158,7 +158,7 @@ let b = u.ZP.connectStores([p.Z], e => {
 channel: t
   } = e;
   return {
-canManageMessages: null != t && p.Z.can(x.Plq.MANAGE_MESSAGES, t)
+canManageMessages: null != t && p.Z.can(O.Plq.MANAGE_MESSAGES, t)
   };
 })(D);
 
@@ -172,13 +172,13 @@ loadMore: _,
 renderHeader: E,
 renderEmptyState: T,
 renderItem: h,
-getProTip: C,
-scrollerClassName: f,
+getProTip: f,
+scrollerClassName: C,
 className: p,
 listName: v
   } = e, Z = s.useRef(null), P = (0, I.Z)(v, Z), D = (0, u.e7)([g.Z], () => g.Z.hasNotice()), b = (0, u.e7)([S.Z], () => S.Z.windowSize());
   s.useEffect(() => {
-A.default.track(x.rMx.OPEN_POPOUT, {
+A.default.track(O.rMx.OPEN_POPOUT, {
   type: t
 });
   }, [t]), s.useEffect(() => {
@@ -195,8 +195,8 @@ function t() {
     animate: !0
   });
 }
-return R.S.subscribe(x.CkL.SCROLL_PAGE_DOWN, t), R.S.subscribe(x.CkL.SCROLL_PAGE_UP, e), () => {
-  R.S.unsubscribe(x.CkL.SCROLL_PAGE_DOWN, t), R.S.unsubscribe(x.CkL.SCROLL_PAGE_UP, e);
+return R.S.subscribe(O.CkL.SCROLL_PAGE_DOWN, t), R.S.subscribe(O.CkL.SCROLL_PAGE_UP, e), () => {
+  R.S.unsubscribe(O.CkL.SCROLL_PAGE_DOWN, t), R.S.unsubscribe(O.CkL.SCROLL_PAGE_UP, e);
 };
   }, []);
   let j = s.useCallback(() => {
@@ -229,13 +229,13 @@ children: (0, i.jsx)(d.Button, {
   color: d.Button.Colors.PRIMARY,
   size: d.Button.Sizes.MAX,
   onClick: _,
-  children: O.Z.Messages.LOAD_MORE_MESSAGES
+  children: x.Z.Messages.LOAD_MORE_MESSAGES
 })
   }) : (0, i.jsx)('div', {
 className: M.scrollingFooterWrap,
 children: T(N.Z.theme)
   }));
-  let k = null == C ? void 0 : C(),
+  let k = null == f ? void 0 : f(),
 G = y && null != k ? (0, i.jsx)('div', {
   className: M.footer,
   children: (0, i.jsx)(m.Z, {
@@ -262,7 +262,7 @@ children: (0, i.jsxs)(d.HeadingLevel, {
   component: E(),
   children: [
     (0, i.jsxs)(d.AdvancedScroller, {
-      className: r()(M.messagesPopout, f),
+      className: r()(M.messagesPopout, C),
       onScroll: w ? j : void 0,
       ref: Z,
       children: [
@@ -310,8 +310,8 @@ scrollerClassName: S,
 className: A,
 onCloseMessage: R,
 listName: v
-  } = e, L = (0, u.e7)([f.Z], () => {
-let e = null != a ? f.Z.getMessages(a.id) : null;
+  } = e, L = (0, u.e7)([C.Z], () => {
+let e = null != a ? C.Z.getMessages(a.id) : null;
 return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
   });
 
@@ -324,15 +324,15 @@ let {
 } = e;
 if (s)
   _.Z.show({
-    title: O.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
-    body: O.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({
+    title: x.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
+    body: x.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({
       name: a.username
     }),
-    confirmText: O.Z.Messages.OKAY
+    confirmText: x.Z.Messages.OKAY
   });
 else if (!L) {
-  let e = C.Z.getChannel(r);
-  null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(x.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
+  let e = f.Z.getChannel(r);
+  null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(O.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
 }
   }
   s.useEffect(() => {

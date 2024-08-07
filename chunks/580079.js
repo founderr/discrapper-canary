@@ -8,29 +8,29 @@ n(914010);
 var _ = n(709054),
   E = n(176505);
 let h = {},
-  I = {},
   m = {},
+  I = {},
   g = {};
 
 function p(e) {
-  let t = I[e];
+  let t = m[e];
   if (null == t)
 return;
   let n = _.default.fromTimestamp(Date.now() - 900000),
 i = o().findIndex(t, e => _.default.compare(e.id, n) > 0);
   if (-1 === i)
-I[e] = [];
+m[e] = [];
   else {
 let n = Math.max(i, t.length - 26);
-I[e] = o().slice(t, n);
+m[e] = o().slice(t, n);
   }
-  m[e] = Date.now();
+  I[e] = Date.now();
 }
 
 function T(e, t, n, i) {
   h[e].add(t);
-  let a = m[t];
-  (null == a || a + 300000 > Date.now()) && p(t), null == I[t] && (I[t] = []), I[t].push({
+  let a = I[t];
+  (null == a || a + 300000 > Date.now()) && p(t), null == m[t] && (m[t] = []), m[t].push({
 id: n,
 userId: i
   });
@@ -40,7 +40,7 @@ function S(e) {
   let {
 channel: t
   } = e;
-  delete I[t.id], delete m[t.id];
+  delete m[t.id], delete I[t.id];
 }
 class f extends(i = c.ZP.Store) {
   getActiveChannelsFetchStatus(e) {
@@ -50,7 +50,7 @@ return g[e];
 return h[e];
   }
   getChannelMessageData(e) {
-return I[e];
+return m[e];
   }
   shouldFetch(e) {
 var t;
@@ -75,11 +75,11 @@ if (null == i)
   return !1;
 i.forEach(e => {
   var t;
-  p(e), (null === (t = I[e]) || void 0 === t ? void 0 : t.length) === 0 && delete I[e];
+  p(e), (null === (t = m[e]) || void 0 === t ? void 0 : t.length) === 0 && delete m[e];
 });
-let a = o().chain(Array.from(i)).filter(e => e in I).sortBy(e => {
+let a = o().chain(Array.from(i)).filter(e => e in m).sortBy(e => {
   var t, n;
-  return -(null !== (n = null === (t = I[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0);
+  return -(null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0);
 }).value();
 h[n] = new Set(a);
   },

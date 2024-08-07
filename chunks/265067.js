@@ -11,9 +11,9 @@ var i = n(243814),
   _ = n(452426),
   E = n(736045),
   h = n(186901),
-  I = n(231338);
+  m = n(231338);
 t.Z = {
-  [I.Et.GET_SOUNDBOARD_SOUNDS]: {
+  [m.Et.GET_SOUNDBOARD_SOUNDS]: {
 scope: {
   [h.Gp.ANY]: [
     i.x.RPC,
@@ -27,7 +27,7 @@ async handler() {
   return e.forEach(e => e.forEach(e => t.push((0, l.QL)(e)))), t;
 }
   },
-  [I.Et.PLAY_SOUNDBOARD_SOUND]: {
+  [m.Et.PLAY_SOUNDBOARD_SOUND]: {
 scope: {
   [h.Gp.ALL]: [
     i.x.RPC,
@@ -52,18 +52,18 @@ async handler(e) {
     h = null != l && null != i && (0, o.Nq)(i, l, _);
   if (null == _)
     throw new u.Z({
-      errorCode: I.lT.INVALID_CHANNEL
+      errorCode: m.lT.INVALID_CHANNEL
     }, 'Invalid Channel.');
   if (h) {
     if ((0, c.Z)(_))
       null != l && (0, o.GN)(l, _.id, [a.Z.RPC]);
     else
       throw new u.Z({
-        errorCode: I.lT.INVALID_PERMISSIONS
+        errorCode: m.lT.INVALID_PERMISSIONS
       }, 'Invalid Permissions.');
   } else
     throw new u.Z({
-      errorCode: I.lT.INVALID_SOUND
+      errorCode: m.lT.INVALID_SOUND
     }, 'Invalid Sound.');
 }
   }

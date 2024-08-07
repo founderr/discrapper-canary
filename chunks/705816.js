@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(221292),
   d = n(318661),
   h = n(502762),
-  m = n(475413),
-  p = n(228168),
+  p = n(475413),
+  m = n(228168),
   _ = n(689938),
   f = n(833802),
   E = n(321975);
@@ -39,7 +39,7 @@ children: (0, i.jsx)(c.Mt, {
     ref: N,
     user: t,
     displayProfile: C,
-    profileType: p.y0.PANEL,
+    profileType: m.y0.PANEL,
     themeOverride: I,
     className: f.container,
     children: (0, i.jsx)(s.u2, {
@@ -52,7 +52,7 @@ children: (0, i.jsx)(c.Mt, {
             className: f.previewForCollected,
             'aria-hidden': !0
           }),
-          (0, i.jsx)(m.tG, {
+          (0, i.jsx)(p.tG, {
             className: f.centeredButton,
             action: 'VIEW_BLOCKED_PROFILE',
             text: _.Z.Messages.VIEW_PROFILE,

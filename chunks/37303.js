@@ -3,7 +3,7 @@ n.d(t, {
 return N;
   },
   Z: function() {
-return C;
+return f;
   }
 }), n(47120);
 var i = n(735250),
@@ -34,31 +34,31 @@ let e = {
   quest: s,
   ...n
 };
-return (0, i.jsx)(C, {
+return (0, i.jsx)(f, {
   ...e
 });
   }
 }
 
-function C(e) {
+function f(e) {
   let {
 quest: t,
 location: n,
 initiallyExpanded: r,
 contentPosition: c
-  } = e, [N, C] = s.useState(!1), f = s.useCallback(() => C(!0), []), p = s.useCallback(() => C(!1), []), g = (0, o.tP)(t), {
+  } = e, [N, f] = s.useState(!1), C = s.useCallback(() => f(!0), []), p = s.useCallback(() => f(!1), []), g = (0, o.tP)(t), {
 containerRef: S,
 size: A,
 height: R
-  } = (0, m.h)(), x = (0, l.q)({
+  } = (0, m.h)(), O = (0, l.q)({
 location: T.dr.QUESTS_CARD
   }), {
-expansionSpring: O,
+expansionSpring: x,
 isAnimating: M,
 isExpanded: v,
 toggleExpanded: L
   } = (0, m.O)({
-initiallyExpanded: !x || r || (0, _.iM)({
+initiallyExpanded: !O || r || (0, _.iM)({
   location: n,
   quest: t
 })
@@ -71,7 +71,7 @@ trackGuildAndChannelMetadata: n === u.jn.QUESTS_EMBED,
 children: e => (0, i.jsx)(i.Fragment, {
   children: (0, i.jsx)(a.animated.div, {
     style: {
-      maxHeight: n === u.jn.QUESTS_EMBED ? void 0 : O.to({
+      maxHeight: n === u.jn.QUESTS_EMBED ? void 0 : x.to({
         range: [
           0,
           1
@@ -83,8 +83,8 @@ children: e => (0, i.jsx)(i.Fragment, {
       })
     },
     className: h.questsCard,
-    onFocus: f,
-    onMouseEnter: f,
+    onFocus: C,
+    onMouseEnter: C,
     onBlur: p,
     onMouseLeave: p,
     children: (0, i.jsxs)('div', {
@@ -98,10 +98,10 @@ children: e => (0, i.jsx)(i.Fragment, {
           location: n,
           quest: t,
           size: A,
-          expansionSpring: O,
+          expansionSpring: x,
           isAnimating: M,
           isExpanded: v,
-          isInConcurrentQuestExperiment: x,
+          isInConcurrentQuestExperiment: O,
           contentPosition: c,
           toggleExpanded: L
         }),

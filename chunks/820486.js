@@ -22,8 +22,8 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let I = {},
-  m = I,
+let m = {},
+  I = m,
   g = !1,
   p = {},
   T = {},
@@ -58,10 +58,10 @@ type: _.QyF.INPUT_AND_OUTPUT
 }
 class Z extends(i = r.ZP.DeviceSettingsStore) {
   initialize(e) {
-this.waitFor(u.Z, c.Z), m = null != e ? e : I;
+this.waitFor(u.Z, c.Z), I = null != e ? e : m;
   }
   getUserAgnosticState() {
-return m;
+return I;
   }
   get initialized() {
 return g;
@@ -142,7 +142,7 @@ let {
 delete S[t];
   },
   CONNECTED_DEVICE_NEVER_SHOW_MODAL: function() {
-S = {}, m = {
+S = {}, I = {
   neverShowModal: !0
 };
   }

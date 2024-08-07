@@ -10,8 +10,8 @@ var i = n(735250),
   _ = n(285865),
   E = n(918701),
   h = n(702428),
-  I = n(709158),
-  m = n(683301),
+  m = n(709158),
+  I = n(683301),
   g = n(296386),
   p = n(150192),
   T = n(889010),
@@ -41,10 +41,10 @@ t.Z = function() {
   let {
 currentCategoryId: e,
 isViewingSearchResults: t
-  } = (0, l.cj)([m.ZP], () => ({
-currentCategoryId: m.ZP.getCurrentCategoryId(),
-isViewingSearchResults: m.ZP.getMostRecentQuery().length > 0
-  })), n = (0, I.Z)(N.dr.QUEST_HOME_DESKTOP), L = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), O = null == L ? void 0 : L.map(e => ({
+  } = (0, l.cj)([I.ZP], () => ({
+currentCategoryId: I.ZP.getCurrentCategoryId(),
+isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
+  })), n = (0, m.Z)(N.dr.QUEST_HOME_DESKTOP), L = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), O = null == L ? void 0 : L.map(e => ({
 ...e,
 icon: Z(e.categoryId)
   })), R = e => {

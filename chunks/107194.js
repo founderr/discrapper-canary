@@ -1,17 +1,17 @@
-i.d(s, {
+s.d(n, {
   Z: function() {
 return d;
   }
-}), i(653041), i(627341);
-var n = i(278074),
-  l = i(726059),
-  t = i(162267),
-  o = i(929498),
-  a = i(228168),
-  r = i(689938);
+}), s(653041), s(627341);
+var i = s(278074),
+  l = s(726059),
+  o = s(162267),
+  t = s(929498),
+  r = s(228168),
+  a = s(689938);
 
 function d(e) {
-  var s, i;
+  var n, s;
   let {
 user: d,
 currentUser: c
@@ -19,21 +19,21 @@ currentUser: c
 live: u,
 recent: I,
 stream: _
-  } = (0, o.Z)(d.id), f = null === (s = (0, l.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualFriends) || void 0 === s ? void 0 : s.length, E = null === (i = (0, t.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualGuilds) || void 0 === i ? void 0 : i.length, m = [{
-section: a.oh.USER_INFO,
-text: r.Z.Messages.USER_PROFILE_ABOUT_ME
+  } = (0, t.Z)(d.id), f = null === (n = (0, l.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualFriends) || void 0 === n ? void 0 : n.length, E = null === (s = (0, o.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualGuilds) || void 0 === s ? void 0 : s.length, m = [{
+section: r.oh.USER_INFO,
+text: a.Z.Messages.USER_PROFILE_ABOUT_ME
   }];
   return (u.length > 0 || I.length > 0 || null != _) && m.push({
-section: a.oh.ACTIVITY,
-text: r.Z.Messages.USER_PROFILE_ACTIVITY
+section: r.oh.ACTIVITY,
+text: a.Z.Messages.USER_PROFILE_ACTIVITY
   }), d.id !== (null == c ? void 0 : c.id) && (m.push({
-section: a.oh.MUTUAL_FRIENDS,
-text: (0, n.EQ)(f).with(void 0, () => r.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => r.Z.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => r.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
+section: r.oh.MUTUAL_FRIENDS,
+text: (0, i.EQ)(f).with(void 0, () => a.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER).with(0, () => a.Z.Messages.USER_PROFILE_NO_MUTUAL_FRIENDS).otherwise(e => a.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
   count: e
 }))
   }), m.push({
-section: a.oh.MUTUAL_GUILDS,
-text: (0, n.EQ)(E).with(void 0, () => r.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => r.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => r.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
+section: r.oh.MUTUAL_GUILDS,
+text: (0, i.EQ)(E).with(void 0, () => a.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => a.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => a.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
   count: e
 }))
   })), m;

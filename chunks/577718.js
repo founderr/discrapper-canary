@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(26323),
   E = n(433280),
   h = n(34131),
-  I = n(434404),
-  m = n(567458),
+  m = n(434404),
+  I = n(567458),
   g = n(782959),
   p = n(276645),
   T = n(970731),
@@ -32,18 +32,18 @@ var i = n(735250),
 
 function M(e) {
   if (null != e)
-I.Z.open(e.id, C.pNK.OVERVIEW, {
+m.Z.open(e.id, C.pNK.OVERVIEW, {
   section: C.jXE.PREMIUM_GUILD_PROGRESS_BAR
 }, C.KsC.DISPLAY);
 }
 
 function D(e, t) {
-  t && I.Z.open(e.id, C.pNK.DISCOVERY);
+  t && m.Z.open(e.id, C.pNK.DISCOVERY);
 }
 
 function y(e, t) {
   if (null != t)
-(0, f.f2)(t, C.Eu4.TIER_1) ? I.Z.open(t.id, C.pNK.OVERVIEW, {
+(0, f.f2)(t, C.Eu4.TIER_1) ? m.Z.open(t.id, C.pNK.OVERVIEW, {
   section: C.jXE.PREMIUM_GUILD_INVITE_SPLASH
 }, C.KsC.INVITE) : (0, _.Z)({
   analyticsLocations: e,
@@ -193,7 +193,7 @@ children: (() => {
       });
     case s.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
       return (0, i.jsx)(j, {
-        renderPopout: (0, i.jsx)(m.Z, {
+        renderPopout: (0, i.jsx)(I.Z, {
           markAsDismissed: w
         }),
         renderGuildHeaderDropdownButton: l
@@ -223,7 +223,7 @@ children: (() => {
             className: O.fullWidthImage
           }),
           onClick: () => {
-            I.Z.open(a.id, C.pNK.ROLES), I.Z.selectRole(a.getEveryoneRoleId(), Z.Z.Messages.USE_SOUNDBOARD);
+            m.Z.open(a.id, C.pNK.ROLES), m.Z.selectRole(a.getEveryoneRoleId(), Z.Z.Messages.USE_SOUNDBOARD);
           },
           markAsDismissed: w
         }),

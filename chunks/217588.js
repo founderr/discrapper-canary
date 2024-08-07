@@ -15,15 +15,15 @@ var i = n(735250),
   T = n(524444),
   h = n(98278),
   N = n(197115),
-  C = n(430824),
-  f = n(594174),
+  f = n(430824),
+  C = n(594174),
   p = n(626135),
   g = n(74538),
   S = n(453070),
   A = n(926491),
   R = n(378233),
-  x = n(419922),
-  O = n(688179),
+  O = n(419922),
+  x = n(688179),
   M = n(981631),
   v = n(474936),
   L = n(689938),
@@ -59,7 +59,7 @@ description: n
   } = e;
   return (0, i.jsxs)(d.Z, {
 children: [
-  (0, i.jsx)(x.ZP, {
+  (0, i.jsx)(O.ZP, {
     sticker: t,
     size: 48,
     isInteracting: !0
@@ -125,7 +125,7 @@ return (s.useEffect(() => {
     }),
     (0, i.jsx)('ul', {
       className: Z.stickersList,
-      children: E.map(e => (0, i.jsx)(x.ZP, {
+      children: E.map(e => (0, i.jsx)(O.ZP, {
         isInteracting: !0,
         size: 80,
         sticker: e
@@ -137,7 +137,7 @@ return (s.useEffect(() => {
         color: o.Button.Colors.PRIMARY,
         size: o.Button.Sizes.SMALL,
         onClick: () => {
-          _ && (0, O.m)({
+          _ && (0, x.m)({
             stickerPack: c,
             stickerPickerCategories: I
           }), t();
@@ -156,10 +156,10 @@ let t, {
     refreshPositionKey: h
   } = e,
   [S, A] = s.useState(null),
-  [R, O] = s.useState(!1),
-  D = f.default.getCurrentUser(),
+  [R, x] = s.useState(!1),
+  D = C.default.getCurrentUser(),
   b = g.ZP.canUseCustomStickersEverywhere(D),
-  y = (0, l.e7)([C.Z], () => C.Z.getGuild(n.guild_id)),
+  y = (0, l.e7)([f.Z], () => f.Z.getGuild(n.guild_id)),
   B = null != y,
   [k, G] = s.useState(!1),
   [F, w] = s.useState(null),
@@ -175,7 +175,7 @@ let t, {
   });
 s.useEffect(() => {
   (async () => {
-    (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, I.Z)(n.id)), O(!0);
+    (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, I.Z)(n.id)), x(!0);
   })();
 }, [
   n.id,
@@ -309,7 +309,7 @@ return (s.useEffect(() => {
                         null == s || s(), w(null);
                       },
                       ...a,
-                      children: (0, i.jsx)(x.ZP, {
+                      children: (0, i.jsx)(O.ZP, {
                         size: 32,
                         enlargeOnInteraction: !0,
                         enlargeWithName: !1,

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(317381),
   d = n(683921),
   h = n(588580),
-  m = n(374065),
-  p = n(451576),
+  p = n(374065),
+  m = n(451576),
   _ = n(526846),
   f = n(938655),
   E = n(403404),
@@ -30,7 +30,7 @@ var i = n(735250),
 function Z(e) {
   let {
 channel: t
-  } = e, n = (0, s.e7)([u.ZP], () => u.ZP.isLaunchingActivity()), Z = (0, m.KF)(t.id), A = (0, m.g5)(Z), M = Z !== m.jy.CAN_LAUNCH || n, {
+  } = e, n = (0, s.e7)([u.ZP], () => u.ZP.isLaunchingActivity()), Z = (0, p.KF)(t.id), A = (0, p.g5)(Z), M = Z !== p.jy.CAN_LAUNCH || n, {
 isHovered: b,
 setIsHovered: R,
 onMouseEnter: j,
@@ -63,7 +63,7 @@ autoTrackExposure: !0
   U
 ]),
 G = [];
-  return !M && G.push(l.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, p.Z)(t.id) && !M && G.push(l.z.ACTIVITY_GDM_ROCKET_SPARKLE), (0, i.jsx)(I.Z, {
+  return !M && G.push(l.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.Z)(t.id) && !M && G.push(l.z.ACTIVITY_GDM_ROCKET_SPARKLE), (0, i.jsx)(I.Z, {
 contentTypes: G,
 children: e => {
   let {

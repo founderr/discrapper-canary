@@ -22,7 +22,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class C extends(i = a.PureComponent) {
+class f extends(i = a.PureComponent) {
   render() {
 let {
   sku: e,
@@ -110,10 +110,10 @@ super(...e), N(this, 'renderActions', () => {
 });
   }
 }
-N(C, 'defaultProps', {
+N(f, 'defaultProps', {
   showMediaPlaceholder: !1,
   isMouseOver: !1,
   showBuyInline: !1,
   isHorizontal: !1,
   isEmbed: !1
-}), t.Z = C;
+}), t.Z = f;

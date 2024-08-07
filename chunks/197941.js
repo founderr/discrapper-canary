@@ -12,8 +12,8 @@ var a = n(243814),
   _ = n(131951),
   E = n(449224),
   h = n(358085),
-  I = n(452426),
-  m = n(736045),
+  m = n(452426),
+  I = n(736045),
   g = n(186901),
   p = n(981631);
 t.Z = {
@@ -26,7 +26,7 @@ scope: {
 },
 handler() {
   let e = _.Z.isVideoEnabled();
-  if (null != (0, m.Z)())
+  if (null != (0, I.Z)())
     e ? r.Z.setVideoEnabled(!1) : (0, d.Z)(() => r.Z.setVideoEnabled(!0), p.IlC.APP);
 }
   },
@@ -37,7 +37,7 @@ scope: {
     a.x.RPC_SCREENSHARE_WRITE
   ]
 },
-validation: e => (0, I.Z)(e).optional().keys({
+validation: e => (0, m.Z)(e).optional().keys({
   pid: e.number().optional().min(0)
 }),
 handler(e) {
@@ -45,7 +45,7 @@ handler(e) {
     args: {
       pid: t
     }
-  } = e, a = u.Z.getCurrentUserActiveStream(), r = u.Z.getStreamerActiveStreamMetadata(), d = (0, c.Z)(o.ZP, E.Z), _ = (0, m.Z)();
+  } = e, a = u.Z.getCurrentUserActiveStream(), r = u.Z.getStreamerActiveStreamMetadata(), d = (0, c.Z)(o.ZP, E.Z), _ = (0, I.Z)();
   if (null != _)
     null != t && null != r && r.pid !== t && (0, h.isWindows)() ? (0, l.WH)(_.guild_id, _.id, {
       pid: t

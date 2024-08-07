@@ -16,8 +16,8 @@ var i = n(475179),
   u = n(117530),
   d = n(594174),
   h = n(626135),
-  m = n(403182),
-  p = n(74538),
+  p = n(403182),
+  m = n(74538),
   _ = n(979956),
   f = n(981631),
   E = n(959517),
@@ -27,7 +27,7 @@ var i = n(475179),
 function I(e, t) {
   let n = d.default.getCurrentUser(),
 i = e.getGuildId(),
-a = m.dg(i),
+a = p.dg(i),
 s = [],
 r = 0,
 c = 0,
@@ -48,7 +48,7 @@ u += 1, r += e.size, s.push(e.size), e.size > c && (c = e.size), null != e.type 
 }), (0, l.openUploadError)({
   title: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
   help: (0, _.BK)(n, i),
-  showPremiumUpsell: !(0, p.M5)(n, g.p9.TIER_2),
+  showPremiumUpsell: !(0, m.M5)(n, g.p9.TIER_2),
   fileSize: c
 });
 return;
@@ -56,7 +56,7 @@ return;
   (0, l.openUploadError)({
 title: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
 help: C.Z.Messages.UPLOAD_AREA_REQUEST_LIMIT_HELP.format({
-  maxSize: m.Ng(m.OC())
+  maxSize: p.Ng(p.OC())
 })
   });
 }
@@ -65,8 +65,8 @@ function x(e, t, n) {
   let {
 filesMetadata: o,
 requireConfirm: d = !0,
-showLargeMessageDialog: m = !1,
-isThumbnail: p = !1
+showLargeMessageDialog: p = !1,
+isThumbnail: m = !1
   } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   if (e.length < 1)
 return;
@@ -93,13 +93,13 @@ return;
 let i = Array.from(e).map((e, t) => ({
   file: e,
   platform: r.ow.WEB,
-  isThumbnail: p,
+  isThumbnail: m,
   ...null == o ? void 0 : o[t]
 }));
 a.Z.addFiles({
   files: i,
   channelId: t.id,
-  showLargeMessageDialog: m,
+  showLargeMessageDialog: p,
   draftType: n
 });
   } else
@@ -107,7 +107,7 @@ s.Z.instantBatchUpload({
   channelId: t.id,
   files: e,
   draftType: n,
-  isThumbnail: p,
+  isThumbnail: m,
   filesMetadata: o
 });
 }

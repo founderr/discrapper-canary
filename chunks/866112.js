@@ -5,7 +5,7 @@ var i, a, s, l, r = n(442837),
 let u = [],
   d = {},
   h = {};
-class m extends(i = r.ZP.Store) {
+class p extends(i = r.ZP.Store) {
   getSearchState(e) {
 var t;
 return null !== (t = d[e]) && void 0 !== t ? t : {
@@ -23,12 +23,12 @@ let a = null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || vo
 return null == a || Date.now() - a > 120000;
   }
 }
-l = 'GuildDirectorySearchStore', (s = 'displayName') in(a = m) ? Object.defineProperty(a, s, {
+l = 'GuildDirectorySearchStore', (s = 'displayName') in(a = p) ? Object.defineProperty(a, s, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = l, t.Z = new m(o.Z, {
+}) : a[s] = l, t.Z = new p(o.Z, {
   GUILD_DIRECTORY_SEARCH_START: function(e) {
 let {
   channelId: t,

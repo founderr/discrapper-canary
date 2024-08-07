@@ -14,15 +14,15 @@ var i, s = n(735250),
   T = n(431583),
   h = n(592745),
   N = n(952164),
-  C = n(768419),
-  f = n(456432),
+  f = n(768419),
+  C = n(456432),
   p = n(103575),
   g = n(789407),
   S = n(598077),
   A = n(757266),
   R = n(831506),
-  x = n(271383),
-  O = n(283595),
+  O = n(271383),
+  x = n(283595),
   M = n(293273),
   v = n(594174),
   L = n(181106),
@@ -168,7 +168,7 @@ super(...e), B(this, 'state', {
     channelId: t,
     guildId: n
   } = this.props;
-  return (0, s.jsx)(f.Z, {
+  return (0, s.jsx)(C.Z, {
     guildId: null != n ? n : void 0,
     channelId: t,
     source: 'Invite Embed',
@@ -246,16 +246,16 @@ super(...e), B(this, 'state', {
 B(G, 'defaultProps', {
   isPreview: !1
 }), t.Z = r.ZP.connectStores([
-  C.Z,
+  f.Z,
   R.Z,
   M.Z,
-  O.Z,
+  x.Z,
   h.Z,
   Z.Z,
   A.Z,
   L.Z,
   v.default,
-  x.ZP
+  O.ZP
 ], e => {
   let {
 activity: t,
@@ -269,7 +269,7 @@ id: l
   } = null != i ? i : {}, o = null != t && null != t.party && t.party.id === s ? R.Z.getParty(t.party.id) : null, c = null != l ? M.Z.getApplicationActivity(l) : M.Z.findActivity(e => e.type === U.IIU.LISTENING), u = !1;
   null != l && (u = L.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
   let d = Array.from(null != o ? o : []).map(e => {
-  let t = null != r ? x.ZP.getMember(r, e) : null,
+  let t = null != r ? O.ZP.getMember(r, e) : null,
     n = null != t ? t.nick : null,
     i = v.default.getUser(e),
     s = null == i;
@@ -281,8 +281,8 @@ id: l
     nick: n
   };
 }),
-_ = null != t && C.Z.canPlay(t),
-E = C.Z.getSyncingWith(),
+_ = null != t && f.Z.canPlay(t),
+E = f.Z.getSyncingWith(),
 I = null != E && null != a && E.userId === a;
   return {
 analyticsLocations: n,
@@ -292,7 +292,7 @@ myPartyId: null != c && null != c.party ? c.party.id : null,
 isLaunching: u,
 isSyncable: _ && !I,
 isLaunchable: null != l && (0, b.t)({
-  LibraryApplicationStore: O.Z,
+  LibraryApplicationStore: x.Z,
   LaunchableGameStore: h.Z,
   DispatchApplicationStore: Z.Z,
   ConnectedAppsStore: A.Z,

@@ -26,9 +26,9 @@ h = n.map(e => {
   } = e;
   return t.id;
 }),
-I = 1 === _.length && 1 === n.length,
-m = n.length - _.length > 0;
-  return (I || t) && !m && 0 !== h.length ? (0, i.jsx)(s.MenuItem, {
+m = 1 === _.length && 1 === n.length,
+I = n.length - _.length > 0;
+  return (m || t) && !I && 0 !== h.length ? (0, i.jsx)(s.MenuItem, {
 id: 'message',
 action: function() {
   r.Z.openPrivateChannel(h).then(t => l.ZP.trackWithMetadata(d.rMx.ACTIVITY_FEED_DM_VISITED, {

@@ -24,23 +24,23 @@ let t, n, {
     className: T,
     count: h,
     me: N,
-    me_burst: C,
-    burst_count: f,
+    me_burst: f,
+    burst_count: C,
     burst_colors: p,
     readOnly: g,
     isLurking: S,
     isGuest: A,
     isPendingMember: R,
-    type: x
+    type: O
   } = e,
-  O = x === _.O.BURST,
-  M = (0, E.y4)(N, C, x),
-  v = (0, d.v)(O && null != p ? p : []),
+  x = O === _.O.BURST,
+  M = (0, E.y4)(N, f, O),
+  v = (0, d.v)(x && null != p ? p : []),
   L = s ? m : I,
-  Z = O ? f : h,
+  Z = x ? C : h,
   P = (0, u.y)(Z, E.aO),
   D = {};
-if (O && null != v) {
+if (x && null != v) {
   var b;
   let {
     accentColor: e,
@@ -68,7 +68,7 @@ return (0, i.jsxs)('div', {
       emojiId: c.id,
       emojiName: c.name,
       size: 'reaction',
-      animated: O && c.animated
+      animated: x && c.animated
     }),
     (0, i.jsx)('div', {
       className: L.reactionCount,

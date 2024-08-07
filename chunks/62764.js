@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(393238),
   d = n(330726),
   h = n(48929),
-  m = n(333535),
-  p = n(566006),
+  p = n(333535),
+  m = n(566006),
   _ = n(443877),
   f = n(60174),
   E = n(216337),
@@ -113,7 +113,7 @@ children: [
               isGuest: z,
               isPendingMember: Y,
               emoji: q,
-              type: p.O.NORMAL,
+              type: m.O.NORMAL,
               hideCount: !0,
               count: 0,
               me: !1,
@@ -136,7 +136,7 @@ children: [
             forceHideReactionCreates: !0
           }),
           !F && (0, i.jsx)(f.X, {
-            type: p.O.NORMAL,
+            type: m.O.NORMAL,
             message: H,
             channel: B,
             useChatFontScaling: !1,
@@ -198,7 +198,7 @@ children: [
       })
     ]
   }),
-  X && (0, i.jsx)(m.Z, {
+  X && (0, i.jsx)(p.Z, {
     threadId: t
   }),
   (0, i.jsx)(E.Z, {

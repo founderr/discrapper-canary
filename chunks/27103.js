@@ -26,12 +26,12 @@ usernameHook: s
 avatarSrc: h,
 eventHandlers: {
   onMouseEnter: N,
-  onMouseLeave: C
+  onMouseLeave: f
 }
   } = (0, u.m)(!0);
   return (0, i.jsx)('div', {
 onMouseEnter: N,
-onMouseLeave: C,
+onMouseLeave: f,
 children: (0, i.jsx)(d.Z, {
   className: a()(I.mainContainer, {
     [I.compact]: n

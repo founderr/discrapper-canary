@@ -19,8 +19,8 @@ var i = n(735250),
   T = n(674588),
   h = n(264043),
   N = n(132871),
-  C = n(147890),
-  f = n(981631),
+  f = n(147890),
+  C = n(981631),
   p = n(689938),
   g = n(916718);
 
@@ -29,7 +29,7 @@ function S(e) {
   let {
 code: S,
 message: A
-  } = e, [R, x, O] = (0, r.Wu)([h.Z], () => [
+  } = e, [R, O, x] = (0, r.Wu)([h.Z], () => [
 h.Z.getApplication(S),
 h.Z.isInvalidApplication(S),
 h.Z.getApplicationFetchState(S)
@@ -42,7 +42,7 @@ e && P(!0);
   s.useEffect(() => {
 (0, T.gZ)(S);
   }, [S]), s.useEffect(() => {
-Z && O === h.M.FETCHED && I.default.track(f.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+Z && x === h.M.FETCHED && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
   application_id: S,
   device_platform: a.tq ? 'mobile_web' : 'desktop_web',
   sender_user_id: A.author.id,
@@ -56,9 +56,9 @@ null == L ? void 0 : L.id,
 A.channel_id,
 v,
 A.author.id,
-O
+x
   ]), s.useEffect(() => {
-Z && x && I.default.track(f.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+Z && O && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
   device_platform: a.tq ? 'mobile_web' : 'desktop_web',
   sender_user_id: A.author.id,
   guild_id: v,
@@ -67,18 +67,18 @@ Z && x && I.default.track(f.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
   }, [
 Z,
 v,
-x,
+O,
 A.author.id,
 A.channel_id
   ]);
   let j = e => {
-I.default.track(f.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
+I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
   application_id: S,
   device_platform: a.tq ? 'mobile_web' : 'desktop_web',
   clicked_section: e,
   guild_id: v,
   channel_id: A.channel_id
-}), (0, C.goToAppDirectory)({
+}), (0, f.goToAppDirectory)({
   view: N.ApplicationDirectoryViews.APPLICATION,
   guildId: v,
   applicationId: S,
@@ -87,7 +87,7 @@ I.default.track(f.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
   }
 });
   };
-  if (x)
+  if (O)
 return (0, i.jsxs)(c.Z, {
   containerRef: b,
   children: [
@@ -111,7 +111,7 @@ return (0, i.jsxs)(c.Z, {
     })
   ]
 });
-  if (null == R || O === h.M.FETCHING)
+  if (null == R || x === h.M.FETCHING)
 return (0, i.jsxs)(c.Z, {
   containerRef: b,
   children: [

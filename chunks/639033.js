@@ -26,16 +26,16 @@ super(...e), t = this, s = 'handleVoiceStateUpdates', r = e => {
   } = e, r = l.default.getId(), E = null === (t = c.Z.getSession()) || void 0 === t ? void 0 : t.sessionId, h = s.find(e => e.userId === r && e.sessionId === E);
   if (null == h)
     return;
-  let I = h.channelId;
-  if (null == I) {
+  let m = h.channelId;
+  if (null == m) {
     (0, a.hasModalOpen)(_) && (0, a.closeModal)(_);
     return;
   }
-  let m = o.Z.getChannel(I);
-  if (!(null == m ? void 0 : m.isGuildStageVoice()))
+  let I = o.Z.getChannel(m);
+  if (!(null == I ? void 0 : I.isGuildStageVoice()))
     return;
   let g = (0, d.gf)(h) === d.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-  if (null != m && g) {
+  if (null != I && g) {
     if ((0, a.hasModalOpen)(_))
       return;
     (0, a.openModalLazy)(async () => {
@@ -44,7 +44,7 @@ super(...e), t = this, s = 'handleVoiceStateUpdates', r = e => {
       } = await n.e('13878').then(n.bind(n, 113140));
       return t => (0, i.jsx)(e, {
         ...t,
-        channel: m
+        channel: I
       });
     }, {
       modalKey: _,

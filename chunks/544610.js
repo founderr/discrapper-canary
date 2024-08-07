@@ -5,8 +5,8 @@ var a, s, l, r, o = n(392711),
   u = n(442837),
   d = n(570140),
   h = n(279779),
-  m = n(353926),
-  p = n(60349),
+  p = n(353926),
+  m = n(60349),
   _ = n(814443),
   f = n(428598),
   E = n(131704),
@@ -78,7 +78,7 @@ return !1;
 
 function D(e, t) {
   {
-let n = p.Z.getCurrentConfig({
+let n = m.Z.getCurrentConfig({
   location: 'dm_store'
 }, {
   autoTrackExposure: !1
@@ -141,7 +141,7 @@ function H() {
 }
 class G extends(a = u.ZP.Store) {
   initialize() {
-this.waitFor(N.default, I.Z, T.Z, m.Z), this.syncWith([
+this.waitFor(N.default, I.Z, T.Z, p.Z), this.syncWith([
   N.default,
   I.Z
 ], O), this.syncWith([T.Z], y);

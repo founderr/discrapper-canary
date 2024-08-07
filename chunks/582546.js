@@ -42,7 +42,7 @@ return (0, r.jsx)(a.MenuItem, {
 });
   if (I)
 return null;
-  let g = (0, o.kx)(h) ? null === (t = h.extra.entries[0]) || void 0 === t ? void 0 : t.media : h.extra.media;
+  let g = (0, o.dU)(h) ? null === (t = h.extra.entries[0]) || void 0 === t ? void 0 : t.media : h.extra.media;
   return null == g ? null : (0, r.jsx)(a.MenuItem, {
 id: 'play-on-spotify',
 label: f.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,

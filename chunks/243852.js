@@ -6,8 +6,8 @@ var i, a, s, r, l, o = n(442837),
   _ = n(278323),
   E = n(581567),
   h = n(594190),
-  I = n(581883),
-  m = n(70956),
+  m = n(581883),
+  I = n(70956),
   g = n(780570),
   p = n(314897),
   T = n(77498),
@@ -16,8 +16,8 @@ var i, a, s, r, l, o = n(442837),
   C = n(944486),
   N = n(981631);
 let A = 'ActivityTrackingStore',
-  v = 30 * m.Z.Millis.MINUTE,
-  Z = 5 * m.Z.Millis.MINUTE,
+  v = 30 * I.Z.Millis.MINUTE,
+  Z = 5 * I.Z.Millis.MINUTE,
   L = null !== (i = c.K.get(A)) && void 0 !== i ? i : {},
   O = {},
   R = !1;
@@ -84,7 +84,7 @@ x(L[e]);
 }
 class D extends(a = o.ZP.Store) {
   initialize() {
-this.waitFor(h.ZP, I.Z, S.Z), this.syncWith([I.Z], P);
+this.waitFor(h.ZP, m.Z, S.Z), this.syncWith([m.Z], P);
   }
   getActivities() {
 return L;

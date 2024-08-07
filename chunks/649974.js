@@ -6,8 +6,8 @@ var i, a, s, r, l = n(442837),
   _ = n(594174),
   E = n(981631);
 let h = !1,
-  I = {},
-  m = {};
+  m = {},
+  I = {};
 
 function g(e) {
   let t = !1;
@@ -17,15 +17,15 @@ t = !1 !== T(e) || t;
 }
 
 function p(e) {
-  let t = m[e];
+  let t = I[e];
   if (null == t)
 return !1;
   let n = t.gameId;
-  return null != I[n] && (I = {
-...I
-  }, delete I[n][e], 0 === Object.values(I[n]).length && delete I[n]), m = {
+  return null != m[n] && (m = {
 ...m
-  }, delete m[e], !0;
+  }, delete m[n][e], 0 === Object.values(m[n]).length && delete m[n]), I = {
+...I
+  }, delete I[e], !0;
 }
 
 function T(e) {
@@ -45,7 +45,7 @@ return p(t.id);
   let r = (0, c.Z)(e);
   if (null == r)
     return p(t.id);
-  let l = m[t.id];
+  let l = I[t.id];
   null != l && l.gameId !== r && p(t.id);
   let o = null !== (i = null === (n = e.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : Date.now(),
     d = {
@@ -53,14 +53,14 @@ return p(t.id);
       activity: e,
       startedPlaying: o
     };
-  return a = r, s = d, I = {
-    ...I,
+  return a = r, s = d, m = {
+    ...m,
     [a]: {
-      ...I[a],
+      ...m[a],
       [s.userId]: s
     }
-  }, m = {
-    ...m,
+  }, I = {
+    ...I,
     [s.userId]: {
       gameId: a,
       startedPlaying: s.startedPlaying
@@ -74,7 +74,7 @@ function S() {
   let e = !1;
   if (!d.Z.needsRefresh() && !h) {
 let t;
-I = {}, m = {}, t = !1, u.Z.getUserIds().forEach(e => {
+m = {}, I = {}, t = !1, u.Z.getUserIds().forEach(e => {
   let n = _.default.getUser(e);
   null != n && (t = T({
     user: n,
@@ -89,19 +89,19 @@ class f extends(r = l.ZP.Store) {
 this.waitFor(d.Z), this.syncWith([d.Z], S);
   }
   get games() {
-return I;
-  }
-  get usersPlaying() {
 return m;
   }
+  get usersPlaying() {
+return I;
+  }
   get gameIds() {
-return Object.keys(I);
+return Object.keys(m);
   }
   getNowPlaying(e) {
-return I[e];
+return m[e];
   }
   getUserGame(e) {
-return m[e];
+return I[e];
   }
 }
 s = 'NowPlayingStore', (a = 'displayName') in(i = f) ? Object.defineProperty(i, a, {
@@ -111,7 +111,7 @@ s = 'NowPlayingStore', (a = 'displayName') in(i = f) ? Object.defineProperty(i, 
   writable: !0
 }) : i[a] = s, t.Z = new f(o.Z, {
   CONNECTION_OPEN: function() {
-I = {}, m = {};
+m = {}, I = {};
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
 let {
@@ -123,7 +123,7 @@ return t.forEach(e => {
 }), g(n) && (i = !0), i;
   },
   LOGOUT: function() {
-I = {}, m = {};
+m = {}, I = {};
   },
   PRESENCE_UPDATES: function(e) {
 let {

@@ -15,15 +15,15 @@ var i = n(735250),
   T = n(884697),
   h = n(600164),
   N = n(479446),
-  C = n(930114),
-  f = n(981632),
+  f = n(930114),
+  C = n(981632),
   p = n(108989),
   g = n(703656),
   S = n(314897),
   A = n(82142),
   R = n(283595),
-  x = n(594174),
-  O = n(509545),
+  O = n(594174),
+  x = n(509545),
   M = n(55563),
   v = n(199480),
   L = n(626135),
@@ -333,7 +333,7 @@ super(...e), G(this, 'handleViewLibrary', e => {
     }
   });
   let r = s !== U.uaV.CUSTOM_GIFT ? void 0 : i;
-  (0, C.V)({
+  (0, f.V)({
     processedCode: n,
     channelContext: t,
     customGiftMessage: r,
@@ -378,7 +378,7 @@ super(...e), G(this, 'handleViewLibrary', e => {
       s && (0, i.jsx)(v.Z, {
         className: k.headerIcon
       }),
-      null != e.giftStyle && (0, i.jsx)(f.Z, {
+      null != e.giftStyle && (0, i.jsx)(C.Z, {
         defaultAnimationState: e.redeemed ? N.S.LOOP : N.S.IDLE,
         giftStyle: e.giftStyle,
         className: l
@@ -392,9 +392,9 @@ let H = (0, I.Z)((0, E.Z)(V));
 t.Z = c.ZP.connectStores([
   A.Z,
   M.Z,
-  x.default,
+  O.default,
   R.Z,
-  O.Z,
+  x.Z,
   S.default,
   m.Z
 ], e => {
@@ -402,7 +402,7 @@ t.Z = c.ZP.connectStores([
 code: t,
 author: n,
 currentUser: i
-  } = e, s = A.Z.get(t), a = null != s ? M.Z.get(s.skuId) : null, r = null != s && null != s.userId ? x.default.getUser(s.userId) : null, l = m.Z.useReducedMotion;
+  } = e, s = A.Z.get(t), a = null != s ? M.Z.get(s.skuId) : null, r = null != s && null != s.userId ? O.default.getUser(s.userId) : null, l = m.Z.useReducedMotion;
   return {
 sku: a,
 giftCode: s,

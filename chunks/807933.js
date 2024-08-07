@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(359380),
   E = n(480222),
   h = n(207796),
-  I = n(558831),
-  m = n(689938);
+  m = n(558831),
+  I = n(689938);
 let g = {
 mass: 1,
 tension: 280,
@@ -38,8 +38,8 @@ clamp: !0
     onSave: s,
     onReset: l,
     children: (0, i.jsx)(u.Z, {
-      title: m.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
-      description: m.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
+      title: I.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
+      description: I.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
       onUpdatePlaystyle: n,
       playstyle: t
     })
@@ -63,8 +63,8 @@ clamp: !0
     onSave: s,
     onReset: l,
     children: (0, i.jsx)(_.Z, {
-      title: m.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
-      description: m.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
+      title: I.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
+      description: I.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
       onUpdateTraits: n,
       traits: t,
       hidePreview: !0
@@ -89,8 +89,8 @@ clamp: !0
     onSave: s,
     onReset: l,
     children: (0, i.jsx)(d.Z, {
-      title: m.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
-      description: m.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
+      title: I.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
+      description: I.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
       onUpdateGames: n,
       gameApplicationIds: t
     })
@@ -103,7 +103,7 @@ clamp: !0
     [s, l] = a.useState(new Set(e)),
     [c, d] = a.useState(t),
     [u, _] = a.useState(new Set(n)),
-    m = a.useMemo(() => ({
+    I = a.useMemo(() => ({
       games: Array.from(s),
       playstyle: c,
       traits: Array.from(u)
@@ -121,17 +121,17 @@ clamp: !0
       t,
       n
     ]),
-    p = a.useMemo(() => !r()(m, g), [
+    p = a.useMemo(() => !r()(I, g), [
       g,
-      m
+      I
     ]),
     T = a.useCallback(() => {
       var e;
-      h.GN.getState().setSelectedGames(m.games), h.GN.getState().setSelectedPlaystyle(null !== (e = m.playstyle) && void 0 !== e ? e : null), h.GN.getState().setSelectedTraits(m.traits);
+      h.GN.getState().setSelectedGames(I.games), h.GN.getState().setSelectedPlaystyle(null !== (e = I.playstyle) && void 0 !== e ? e : null), h.GN.getState().setSelectedTraits(I.traits);
     }, [
-      m.games,
-      m.playstyle,
-      m.traits
+      I.games,
+      I.playstyle,
+      I.traits
     ]),
     S = a.useCallback(() => {
       l(new Set(g.games)), d(g.playstyle), _(new Set(g.traits));
@@ -144,7 +144,7 @@ clamp: !0
     hasChanges: p,
     onSave: T,
     onReset: S,
-    children: (0, i.jsx)(I.Z, {
+    children: (0, i.jsx)(m.Z, {
       traits: u,
       gameApplicationIds: s,
       playstyle: c,

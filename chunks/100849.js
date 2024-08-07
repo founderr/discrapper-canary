@@ -1,90 +1,90 @@
-i.d(s, {
+s.d(n, {
   Z: function() {
-return x;
+return v;
   }
 });
-var n = i(735250),
-  l = i(470079),
-  t = i(120356),
-  o = i.n(t),
-  a = i(442837),
-  r = i(481060),
-  d = i(717881),
-  c = i(387903),
-  u = i(906732),
-  I = i(199902),
-  _ = i(158776),
-  f = i(785717),
-  E = i(221292),
-  m = i(981631),
-  v = i(501649),
-  S = i(735393);
+var i = s(735250),
+  l = s(470079),
+  o = s(120356),
+  t = s.n(o),
+  r = s(442837),
+  a = s(481060),
+  d = s(717881),
+  c = s(387903),
+  u = s(906732),
+  I = s(199902),
+  _ = s(158776),
+  f = s(785717),
+  E = s(221292),
+  m = s(981631),
+  S = s(501649),
+  Z = s(735393);
 
-function x(e) {
+function v(e) {
   let {
-user: s,
-type: i,
-showActions: t,
-onClose: x
-  } = e, Z = (0, a.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(s.id)), p = (0, a.e7)([_.Z], () => _.Z.getActivities(s.id)), h = l.useMemo(() => p.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [p]), T = l.useMemo(() => Z ? h.find(e => e.type === m.IIU.PLAYING) : null, [
-h,
-Z
-  ]), g = l.useMemo(() => h.filter(e => e !== T), [
+user: n,
+type: s,
+showActions: o,
+onClose: v
+  } = e, x = (0, r.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(n.id)), h = (0, r.e7)([_.Z], () => _.Z.getActivities(n.id)), T = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), p = l.useMemo(() => x ? T.find(e => e.type === m.IIU.PLAYING) : null, [
 T,
-h
+x
+  ]), g = l.useMemo(() => T.filter(e => e !== p), [
+p,
+T
   ]), {
 analyticsLocations: N,
-newestAnalyticsLocation: j
+newestAnalyticsLocation: C
   } = (0, u.ZP)(), {
-context: C,
+context: j,
 trackUserProfileAction: A
-  } = (0, f.KZ)(), R = {
+  } = (0, f.KZ)(), O = {
 location: {
   page: m.ZY5.USER_PROFILE,
   section: m.jXE.PROFILE_MODAL
 }
   };
-  return (0, n.jsxs)(r.ScrollerThin, {
-className: S.listScroller,
+  return (0, i.jsxs)(a.ScrollerThin, {
+className: Z.listScroller,
 fade: !0,
 children: [
-  Z ? (0, n.jsx)(d.Z, {
-    type: i,
-    user: s,
-    source: j,
-    className: v.userProfileActivity,
-    showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
-    activity: T,
-    actionColor: v.actionColor,
-    analyticsParams: R,
-    showActions: t,
-    onClose: x,
+  x ? (0, i.jsx)(d.Z, {
+    type: s,
+    user: n,
+    source: C,
+    className: S.userProfileActivity,
+    showChannelDetails: s === c.Y.SIMPLIFIED_PROFILE,
+    activity: p,
+    actionColor: S.actionColor,
+    analyticsParams: O,
+    showActions: o,
+    onClose: v,
     onAction: () => {
       A({
         action: 'JOIN_ACTIVITY'
       }), (0, E.Ac)({
         activityType: m.IIU.STREAMING,
-        activityName: null == T ? void 0 : T.name,
-        activityPlatform: null == T ? void 0 : T.platform,
-        activitySessionId: null == T ? void 0 : T.session_id,
-        applicationId: null == T ? void 0 : T.application_id,
+        activityName: null == p ? void 0 : p.name,
+        activityPlatform: null == p ? void 0 : p.platform,
+        activitySessionId: null == p ? void 0 : p.session_id,
+        applicationId: null == p ? void 0 : p.application_id,
         analyticsLocations: N,
-        ...C
+        ...j
       });
     }
   }) : null,
-  g.map(e => (0, n.jsx)(d.Z, {
-    type: i,
+  g.map(e => (0, i.jsx)(d.Z, {
+    type: s,
     activity: e,
-    user: s,
+    user: n,
     useStoreStream: !1,
-    source: j,
-    className: o()(v.userProfileActivity, i === c.Y.SIMPLIFIED_PROFILE && v.simplifiedProfileActivity),
-    showChannelDetails: i === c.Y.SIMPLIFIED_PROFILE,
-    actionColor: v.actionColor,
-    analyticsParams: R,
-    showActions: t,
-    onClose: x,
+    source: C,
+    className: t()(S.userProfileActivity, s === c.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
+    showChannelDetails: s === c.Y.SIMPLIFIED_PROFILE,
+    actionColor: S.actionColor,
+    analyticsParams: O,
+    showActions: o,
+    onClose: v,
     onAction: () => {
       A({
         action: 'JOIN_ACTIVITY'
@@ -95,7 +95,7 @@ children: [
         activitySessionId: e.session_id,
         applicationId: e.application_id,
         analyticsLocations: N,
-        ...C
+        ...j
       });
     }
   }, ''.concat(e.application_id, '-').concat(e.session_id, '-').concat(e.name)))

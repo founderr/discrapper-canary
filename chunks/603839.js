@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(889711),
   E = n(931240),
   h = n(970606),
-  I = n(963202),
-  m = n(650461),
+  m = n(963202),
+  I = n(650461),
   g = n(35313),
   p = n(284019),
   T = n(672775),
@@ -36,16 +36,16 @@ function Z(e) {
   let {
 guildId: t,
 onClose: n
-  } = e, s = (0, m.Wg)(), {
+  } = e, s = (0, I.Wg)(), {
 progress: Z,
 errors: L,
 submitting: O
-  } = (0, c.cj)([m.ZP], () => {
+  } = (0, c.cj)([I.ZP], () => {
 var e, n, i, a;
 return {
-  progress: null !== (a = null === (e = m.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== a ? a : s,
-  errors: null === (n = m.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
-  submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
+  progress: null !== (a = null === (e = I.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== a ? a : s,
+  errors: null === (n = I.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
+  submitting: null === (i = I.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
 };
   }), R = a.useMemo(() => (0, C.G)(L), [L]), [x, b] = a.useState(!1), [P, M] = a.useState(window.innerWidth), [D, y] = a.useState(1), [j, U] = a.useState(!0), G = (0, g.f)(), k = (0, d.useSpring)({
 opacity: D,
@@ -117,13 +117,13 @@ W = a.useCallback(() => {
 ]),
 {
   guilds: z
-} = (0, I.C3)({
+} = (0, m.C3)({
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !1
 }),
 {
   enableApplication: K
-} = (0, I.Fg)('ClanDiscoveryAdminContainer'),
+} = (0, m.Fg)('ClanDiscoveryAdminContainer'),
 q = a.useCallback(() => {
   0 === z.filter(e => e.id !== t).length && K ? (0, u.fH)(u.v0.GET_STARTED) : (0, u.fH)(u.v0.ADMIN_UPSELL);
 }, [

@@ -47,7 +47,7 @@ render(e) {
   }
 ];
 
-function j(e) {
+function C(e) {
   let {
 actionLog: r
   } = e, t = n.useMemo(() => r.traces.map(e => ({
@@ -108,14 +108,14 @@ render(e) {
   let {
     actionLog: r
   } = e;
-  return (0, a.jsx)(j, {
+  return (0, a.jsx)(C, {
     actionLog: r
   });
 }
   }
 ];
 
-function C(e) {
+function j(e) {
   let {
 actionLog: r,
 initialHeight: t
@@ -248,7 +248,7 @@ children: [
       onClickRow: e => l(Number.parseInt(e, 10))
     })
   }),
-  null != c && (0, a.jsx)(C, {
+  null != c && (0, a.jsx)(j, {
     actionLog: c,
     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
   })

@@ -17,8 +17,8 @@ var i, a, s, r, l = n(735250),
   _ = n(970606),
   E = n(17845),
   h = n(945124),
-  I = n(231467),
-  m = n(931515),
+  m = n(231467),
+  I = n(931515),
   g = n(702646),
   p = n(207796),
   T = n(526282),
@@ -45,7 +45,7 @@ loaded: s,
 clans: r,
 searchResult: Z,
 searchCriteria: L
-  } = (0, m.Qc)(null, 'saved_guilds' === i), O = (0, p.GN)(e => e.selectedTraits, c.Z), R = (0, u.Z)(Z), x = Math.min(null != t ? t : 1024, 2000), b = o.useMemo(() => {
+  } = (0, I.Qc)(null, 'saved_guilds' === i), O = (0, p.GN)(e => e.selectedTraits, c.Z), R = (0, u.Z)(Z), x = Math.min(null != t ? t : 1024, 2000), b = o.useMemo(() => {
 let e = x / 256,
   t = x / 376,
   n = x / e,
@@ -162,7 +162,7 @@ D = o.useCallback((e, t, n, i) => {
   if ('upsell' === r || 'hero' === r)
     return null;
   let o = s[t];
-  return (0, l.jsx)(I.ZP, {
+  return (0, l.jsx)(m.ZP, {
     clan: o,
     affinity: null !== (a = o.affininty) && void 0 !== a ? a : (0, h.y)(o, L),
     traitsToHighlight: O,

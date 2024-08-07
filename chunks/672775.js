@@ -26,8 +26,8 @@ isBackDisabled: h
 progress: n,
 updateCurrentStep: l
   }), {
-currentStep: I,
-furthestStep: m,
+currentStep: m,
+furthestStep: I,
 brandPrimaryColor: g
   } = n;
   return (0, i.jsxs)('div', {
@@ -37,8 +37,8 @@ children: [
     animationStyle: o,
     className: c,
     steps: t,
-    currentStepIndex: I,
-    furthestStepIndex: m,
+    currentStepIndex: m,
+    furthestStepIndex: I,
     onStepClick: d,
     stepFillColor: g
   }),

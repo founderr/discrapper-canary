@@ -10,8 +10,8 @@ var a = n(570140),
   _ = n(131951),
   E = n(366050),
   h = n(19780),
-  I = n(944486),
-  m = n(914010),
+  m = n(944486),
+  I = n(914010),
   g = n(979651),
   p = n(981631),
   T = n(65154);
@@ -29,7 +29,7 @@ function f() {
 t = i === e;
   return function() {
 let e = h.Z.getChannelId(),
-  t = I.Z.getChannelId();
+  t = m.Z.getChannelId();
 if (!_.Z.supports(T.AN.VIDEO) || o.Z.getWindowOpen(p.KJ3.CHANNEL_CALL_POPOUT))
   return !0;
 let n = c.Z.getAllActiveStreams().length > 0,
@@ -55,10 +55,10 @@ a.Z.wait(() => s.bA(n.id, p.NYg.VIDEO, {
 }
 class C extends r.Z {
   _initialize() {
-I.Z.addChangeListener(f), m.Z.addChangeListener(f), h.Z.addChangeListener(f), g.Z.addChangeListener(f), u.Z.addChangeListener(f), c.Z.addChangeListener(f), o.Z.addChangeListener(f), _.Z.addChangeListener(f), l.ZP.addChangeListener(f);
+m.Z.addChangeListener(f), I.Z.addChangeListener(f), h.Z.addChangeListener(f), g.Z.addChangeListener(f), u.Z.addChangeListener(f), c.Z.addChangeListener(f), o.Z.addChangeListener(f), _.Z.addChangeListener(f), l.ZP.addChangeListener(f);
   }
   _terminate() {
-I.Z.removeChangeListener(f), m.Z.removeChangeListener(f), h.Z.removeChangeListener(f), g.Z.removeChangeListener(f), u.Z.removeChangeListener(f), c.Z.removeChangeListener(f), o.Z.removeChangeListener(f), _.Z.removeChangeListener(f), l.ZP.removeChangeListener(f);
+m.Z.removeChangeListener(f), I.Z.removeChangeListener(f), h.Z.removeChangeListener(f), g.Z.removeChangeListener(f), u.Z.removeChangeListener(f), c.Z.removeChangeListener(f), o.Z.removeChangeListener(f), _.Z.removeChangeListener(f), l.ZP.removeChangeListener(f);
   }
 }
 t.Z = new C();

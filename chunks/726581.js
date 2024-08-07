@@ -10,8 +10,8 @@ var i = n(735250),
   _ = n(525395),
   E = n(55563),
   h = n(551428),
-  I = n(73346),
-  m = n(733789),
+  m = n(73346),
+  I = n(733789),
   g = n(4962),
   p = n(689938),
   T = n(670257);
@@ -24,7 +24,7 @@ return 0 === e.length && 0 === t.length ? null : (0, i.jsx)('div', {
     children: [
       e.map(e => (0, i.jsx)('div', {
         className: T.unit,
-        children: (0, i.jsx)(m.Z, {
+        children: (0, i.jsx)(I.Z, {
           reason: e,
           hidePersonalInformation: n
         })
@@ -87,8 +87,8 @@ t.Z = l.ZP.connectStores([
 sku: t
   } = e;
   return {
-socialReasons: (0, I.Gg)(t.id, E.Z, u.default, c.Z, _.Z),
-nonSocialReasons: (0, I.Ww)(t.id, E.Z, h.Z),
+socialReasons: (0, m.Gg)(t.id, E.Z, u.default, c.Z, _.Z),
+nonSocialReasons: (0, m.Ww)(t.id, E.Z, h.Z),
 hidePersonalInformation: d.Z.hidePersonalInformation
   };
 })(S);

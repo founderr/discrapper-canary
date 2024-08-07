@@ -19,24 +19,24 @@ children: t,
 hasChanges: n,
 onClose: E,
 onSave: h,
-onReset: I
-  } = e, m = a.useCallback(() => {
+onReset: m
+  } = e, I = a.useCallback(() => {
 (0, o.fH)(o.v0.DISCOVERY), null == E || E();
   }, [E]), g = a.useCallback(() => {
-null == h || h(), null == m || m();
+null == h || h(), null == I || I();
   }, [
 h,
-m
+I
   ]), p = a.useCallback(() => {
-null == I || I();
-  }, [I]);
+null == m || m();
+  }, [m]);
   a.useEffect(() => {
 let e = e => {
-  e.key === c.vn.ESCAPE && !n && m();
+  e.key === c.vn.ESCAPE && !n && I();
 };
 return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
   }, [
-m,
+I,
 n
   ]);
   let T = (0, r.useSpring)({
@@ -66,7 +66,7 @@ children: [
     className: u.saveContainer,
     children: (0, i.jsx)(l.Z, {
       className: u.closeButton,
-      closeAction: m,
+      closeAction: I,
       keybind: 'ESC'
     })
   }),

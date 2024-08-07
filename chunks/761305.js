@@ -2,8 +2,8 @@ n(47120);
 var s, r = n(735250),
   i = n(470079),
   a = n(593473),
-  l = n(442837),
-  o = n(544891),
+  o = n(442837),
+  l = n(544891),
   c = n(108427),
   u = n(601964),
   d = n(896797),
@@ -21,12 +21,12 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-l.ZP.initialize();
+o.ZP.initialize();
 class m extends(s = i.PureComponent) {
   componentDidMount() {
 let e = (0, _.Z)(this.props.location),
   t = (0, a.parse)(this.props.location.search);
-o.tn.post({
+l.tn.post({
   url: E.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
   body: {
     token: e,
@@ -133,6 +133,6 @@ super(...e), I(this, 'state', {
 }
 I(m, 'defaultProps', {
   transitionTo: e => n.g.location.assign(e)
-}), t.Z = l.ZP.connectStores([d.Z], () => ({
+}), t.Z = o.ZP.connectStores([d.Z], () => ({
   defaultRoute: d.Z.defaultRoute
 }))(m);

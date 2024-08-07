@@ -20,8 +20,8 @@ var i = t(735250),
   E = t(409813),
   x = t(809144),
   N = t(698708),
-  S = t(614223),
-  T = t(481595),
+  T = t(614223),
+  S = t(481595),
   h = t(51499),
   b = t(678334),
   g = t(614277),
@@ -91,7 +91,7 @@ null != V && null != e_.current && e_.current.scrollIntoView({
   behavior: 'smooth'
 });
   }, [V]);
-  let eS = a.useCallback((e, n) => {
+  let eT = a.useCallback((e, n) => {
   k(e), null != n && es(n), C(E.h8.CONFIRM, {
     fulfillment: {
       subscription: e,
@@ -103,8 +103,8 @@ null != V && null != e_.current && e_.current.scrollIntoView({
   k,
   es
 ]),
-eT = null != H ? Y[H] : null,
-eh = null != X && P.o4.has(X.id) && null != eT && !(0, o.aQ)(eT) ? Error(A.Z.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
+eS = null != H ? Y[H] : null,
+eh = null != X && P.o4.has(X.id) && null != eS && !(0, o.aQ)(eS) ? Error(A.Z.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
 eb = a.useRef(null),
 [eg, eP] = a.useState(null),
 ev = !ec && null != eE && null != q && P.nG[eE.trial_id].skus.includes(q),
@@ -112,7 +112,7 @@ eA = null == ex ? void 0 : null === (n = ex.discount) || void 0 === n ? void 0 :
 eC = !ec && null != ex && null != eA && null != X && eA.includes(X.id),
 eM = ec && (0, m.pO)(ed),
 ey = null == w && null == G && er === v.GZ.SUBSCRIPTION,
-eO = (0, S.Kp)({
+eO = (0, T.Kp)({
   isTrial: ev,
   isGift: ec,
   selectedSkuId: q,
@@ -132,12 +132,12 @@ ej = a.useCallback(() => {
   eR
 ]),
 eZ = !1;
-  return er === v.GZ.ONE_TIME ? r = (0, i.jsx)(T.Z, {
+  return er === v.GZ.ONE_TIME ? r = (0, i.jsx)(S.Z, {
 hasLegalTermsFlash: ep,
 legalTermsNodeRef: eb,
 onPaymentSourceChange: e => Q(null != e ? e.id : null),
 handlePaymentSourceAdd: () => C(E.h8.ADD_PAYMENT_STEPS)
-  }) : (eZ = ec ? null == eo : null != eT && er === v.GZ.SUBSCRIPTION && ev && !eT.canRedeemTrial(), null == U || ec ? (s()(null != X, 'Expected plan to be selected'), r = (0, i.jsx)(d.Z, {
+  }) : (eZ = ec ? null == eo : null != eS && er === v.GZ.SUBSCRIPTION && ev && !eS.canRedeemTrial(), null == U || ec ? (s()(null != X, 'Expected plan to be selected'), r = (0, i.jsx)(d.Z, {
 selectedPlanId: X.id,
 paymentSources: Y,
 onPaymentSourceChange: e => Q(null != e ? e.id : null),
@@ -196,7 +196,7 @@ children: [
       premiumSubscription: null != U ? U : null,
       setPurchaseState: $,
       onBack: ej,
-      onNext: eS,
+      onNext: eT,
       onPurchaseError: e => ee(e),
       legalTermsNodeRef: eb,
       flashLegalTerms: () => em(!0),

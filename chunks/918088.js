@@ -6,7 +6,7 @@ return v;
 return L;
   },
   ef: function() {
-return x;
+return O;
   },
   r8: function() {
 return M;
@@ -28,8 +28,8 @@ var i = n(278074),
   T = n(358085),
   h = n(798628),
   N = n(79390),
-  C = n(839963),
-  f = n(897325),
+  f = n(839963),
+  C = n(897325),
   p = n(57101),
   g = n(562293),
   S = n(981631),
@@ -42,12 +42,12 @@ let R = {
   showResults: !1
 };
 
-function x(e, t) {
+function O(e, t) {
   for (let n of e)
 if (('number' == typeof n.emoji.id ? ''.concat(n.emoji.id) : n.emoji.id) === t)
   return n;
 }
-let O = e => (0, i.EQ)(e).with({
+let x = e => (0, i.EQ)(e).with({
   isExpired: !0,
   isLeader: !0,
   didSelfVote: !0
@@ -92,8 +92,8 @@ m = null == I && E,
 {
   selectedAnswerIds: T,
   submitting: N,
-  editing: C,
-  showResults: f
+  editing: f,
+  showResults: C
 } = null !== (s = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== s ? s : R,
 p = e.reactions,
 A = !0;
@@ -101,11 +101,11 @@ A = !0;
 let t = _.Z.getMessage(e.channel_id, e.id);
 A = !e.isSearchHit && null != t, p = null !== (a = null == t ? void 0 : t.reactions) && void 0 !== a ? a : p;
   }
-  let x = T.size > 0,
-O = p.some(e => !0 === e.me_vote),
-v = !C && O,
-L = v || m || f,
-Z = E && A && (!O || C || L),
+  let O = T.size > 0,
+x = p.some(e => !0 === e.me_vote),
+v = !f && x,
+L = v || m || C,
+Z = E && A && (!x || f || L),
 P = null === (i = u.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
 D = null != P ? d.ZP.getSelfMember(P) : null,
 b = (0, o.EY)(D),
@@ -115,12 +115,12 @@ poll: l,
 canTapAnswers: Z,
 canRemoveVote: v && E && !m,
 canShowVoteCounts: L,
-canSubmitVote: !N && x && !v && E && !b && !j,
+canSubmitVote: !N && O && !v && E && !b && !j,
 expirationLabel: I,
-hasSelectedAnswer: x,
+hasSelectedAnswer: O,
 hasVoted: v,
-hasVoteRecorded: O,
-isEditingVote: C,
+hasVoteRecorded: x,
+isEditingVote: f,
 isExpired: m,
 isInteractive: A,
 isSent: E,
@@ -128,7 +128,7 @@ reactions: p,
 selectedAnswerIds: T,
 submitting: N,
 tapShouldOpenVotersModal: L,
-showResults: f
+showResults: C
   };
 }
 
@@ -148,7 +148,7 @@ return;
 return;
   let S = a.Z.useReducedMotion,
 R = null === (o = u.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
-M = (0, f.E)(g, R),
+M = (0, C.E)(g, R),
 L = h.answers,
 Z = h.layout_type,
 P = v(e, t, {
@@ -176,18 +176,18 @@ showResults: K
 count: z.toLocaleString()
   }), q = Math.max(...L.map(e => {
 var t, n;
-let i = x(V, ''.concat(e.answer_id));
+let i = O(V, ''.concat(e.answer_id));
 return null !== (n = null == i ? void 0 : null === (t = i.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0;
   })), X = L.map(e => {
 var t, n, a;
 let o = ''.concat(e.answer_id),
-  u = x(V, o),
+  u = O(V, o),
   d = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
   _ = 0 === z ? 0 : d / z,
   E = H.has(o),
   T = d >= q && 0 !== d,
   h = k && null !== (a = null == u ? void 0 : u.me_vote) && void 0 !== a && a,
-  N = O({
+  N = x({
     didSelfVote: h,
     hasVoted: k,
     isExpired: F,
@@ -329,13 +329,13 @@ answersInteraction: (0, i.EQ)({
   canSelectMultipleAnswers: en
 }).with({
   tapShouldOpenVotersModal: !0
-}, () => C.Y7.LIST).with({
+}, () => f.Y7.LIST).with({
   canTapAnswers: !1
-}, () => C.Y7.LIST).with({
+}, () => f.Y7.LIST).with({
   canSelectMultipleAnswers: !1
-}, () => C.Y7.RADIO_BUTTONS).with({
+}, () => f.Y7.RADIO_BUTTONS).with({
   canSelectMultipleAnswers: !0
-}, () => C.Y7.CHECKBOXES).exhaustive(),
+}, () => f.Y7.CHECKBOXES).exhaustive(),
 answerTapAccessibilityLabel: W ? $ : void 0,
 layoutType: Z,
 resources: (0, p.Z)({

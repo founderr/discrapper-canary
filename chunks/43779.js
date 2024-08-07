@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(566078),
   E = n(472144),
   h = n(644646),
-  I = n(69439),
-  m = n(46140),
+  m = n(69439),
+  I = n(46140),
   g = n(689938),
   p = n(855892);
 let T = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
@@ -118,7 +118,7 @@ children: [
                 quest: S,
                 questContent: f,
                 className: p.circularQuestRewardTileAsset,
-                location: m.dr.QUEST_HOME_DESKTOP
+                location: I.dr.QUEST_HOME_DESKTOP
               })
             })
           })
@@ -128,7 +128,7 @@ children: [
         autoplay: C,
         questContent: f,
         className: p.questRewardTileAsset,
-        location: m.dr.QUEST_HOME_DESKTOP
+        location: I.dr.QUEST_HOME_DESKTOP
       }),
       (0, i.jsxs)('div', {
         className: p.textContainer,
@@ -150,7 +150,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(I.Z, {
+  (0, i.jsx)(m.Z, {
     quest: S,
     location: f,
     contentPosition: N,

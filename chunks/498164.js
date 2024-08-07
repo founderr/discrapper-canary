@@ -9,8 +9,8 @@ var r = n(756647),
   _ = n(533307),
   E = n(447543),
   h = n(962220),
-  I = n(703656),
-  m = n(314897),
+  m = n(703656),
+  I = n(314897),
   g = n(594174),
   p = n(626135),
   T = n(585483),
@@ -45,12 +45,12 @@ async handler(e) {
     throw new C.Z({
       errorCode: A.lTL.INVALID_INVITE
     }, 'Invalid invite id: '.concat(t));
-  return m.default.isAuthenticated() ? o.Z.dispatch({
+  return I.default.isAuthenticated() ? o.Z.dispatch({
     type: 'INVITE_MODAL_OPEN',
     invite: n,
     code: t,
     context: A.IlC.APP
-  }) : (0, I.dL)(A.Z5c.INVITE(t)), {
+  }) : (0, m.dL)(A.Z5c.INVITE(t)), {
     invite: n,
     code: t
   };
@@ -139,37 +139,37 @@ handler(e) {
   } = e;
   switch (f.ZP.focus(), t) {
     case N.jE.USER_SETTINGS:
-      null != n && ((0, I.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), v(n.fingerprint, 'settings'));
+      null != n && ((0, m.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), v(n.fingerprint, 'settings'));
       break;
     case N.jE.CHANGELOG:
-      null != n && ((0, I.dL)(S.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), v(n.fingerprint, 'changelog'));
+      null != n && ((0, m.dL)(S.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), v(n.fingerprint, 'changelog'));
       break;
     case N.jE.LIBRARY:
-      (0, I.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && v(n.fingerprint, 'library');
+      (0, m.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && v(n.fingerprint, 'library');
       break;
     case N.jE.STORE_HOME:
-      (0, I.dL)(A.Z5c.APPLICATION_STORE), null != n && v(n.fingerprint, 'store');
+      (0, m.dL)(A.Z5c.APPLICATION_STORE), null != n && v(n.fingerprint, 'store');
       break;
     case N.jE.STORE_LISTING:
-      null != n && ((0, I.dL)(A.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), v(n.fingerprint, 'store'));
+      null != n && ((0, m.dL)(A.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), v(n.fingerprint, 'store'));
       break;
     case N.jE.PICK_GUILD_SETTINGS:
-      null != n && ((0, I.dL)({
+      null != n && ((0, m.dL)({
         pathname: A.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
         search: n.search
       }), v(n.fingerprint, 'guild_settings'));
       break;
     case N.jE.CHANNEL:
-      null != n && ((0, I.dL)({
+      null != n && ((0, m.dL)({
         pathname: A.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
         search: n.search
       }), v(n.fingerprint, 'channel'));
       break;
     case N.jE.QUEST_HOME:
-      null != n ? ((0, I.dL)({
+      null != n ? ((0, m.dL)({
         pathname: A.Z5c.QUEST_HOME,
         hash: n.questId
-      }), v(n.fingerprint, 'quest_home')) : (0, I.dL)(A.Z5c.QUEST_HOME);
+      }), v(n.fingerprint, 'quest_home')) : (0, m.dL)(A.Z5c.QUEST_HOME);
   }
 }
   },

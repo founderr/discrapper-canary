@@ -8,8 +8,8 @@ var i = n(735250),
   u = n(749280),
   d = n(481060),
   h = n(367907),
-  m = n(499254),
-  p = n(424602),
+  p = n(499254),
+  m = n(424602),
   _ = n(541099),
   f = n(827498),
   E = n(663924),
@@ -30,7 +30,7 @@ let R = a.forwardRef(function(e, t) {
 type: n,
 animateRef: s
   } = e, r = (0, o.e7)([_.Z], () => _.Z.shouldShowPopup() && _.Z.activeViewType() === n), {
-Component: p,
+Component: m,
 events: E,
 play: g
   } = (0, u.w)();
@@ -40,9 +40,9 @@ animate: () => {
 }
   }), [E]);
   let I = a.useCallback(() => {
-(0, h.yw)(S.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), r ? m.y(f.ti.DISMISSED) : ((0, C.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
+(0, h.yw)(S.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), r ? p.y(f.ti.DISMISSED) : ((0, C.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
   dismissAction: A.L.TAKE_ACTION
-}), m._(f._b.TEXT, n)), g();
+}), p._(f._b.TEXT, n)), g();
   }, [
 r,
 n,
@@ -70,7 +70,7 @@ children: (0, i.jsx)(d.Button, {
   },
   innerClassName: b.buttonContents,
   ...E,
-  children: (0, i.jsx)(p, {
+  children: (0, i.jsx)(m, {
     color: 'currentColor'
   })
 })
@@ -117,7 +117,7 @@ var e;
 return {
   activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? g.Z.getActiveCommand(t.id) : null
 };
-  }), d = p.T.useExperiment({
+  }), d = m.T.useExperiment({
 location: 'chat_input'
   }, {
 autoTrackExposure: !0

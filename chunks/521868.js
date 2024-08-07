@@ -20,7 +20,7 @@ customStatus: t,
 focusedClassName: a,
 analyticsLocations: _,
 trackUserProfileAction: E
-  } = e, h = (0, o.O)(), I = () => {
+  } = e, h = (0, o.O)(), m = () => {
 (0, r.openModalLazy)(async () => {
   let {
     default: e
@@ -66,7 +66,7 @@ action: () => {
   E({
     action: 'PRESS_EDIT_CUSTOM_STATUS',
     analyticsLocations: _
-  }), I();
+  }), m();
 }
   }) : (0, i.jsx)(r.MenuItem, {
 id: 'add-custom-status',
@@ -80,7 +80,7 @@ action: () => {
   E({
     action: 'PRESS_ADD_CUSTOM_STATUS',
     analyticsLocations: _
-  }), I();
+  }), m();
 }
   });
 }

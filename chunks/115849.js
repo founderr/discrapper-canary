@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(657682),
   E = n(981631),
   h = n(420212),
-  I = n(689938),
-  m = n(527915),
+  m = n(689938),
+  I = n(527915),
   g = n(549856);
 let p = {
 canSend: !1,
@@ -87,7 +87,7 @@ onSubmit: t => {
     }
   }).then(() => s({
     type: 'SUCCESS',
-    text: I.Z.Messages.ADD_FRIEND_SUCCESS.format({
+    text: m.Z.Messages.ADD_FRIEND_SUCCESS.format({
       discordTag: n
     })
   }), e => {
@@ -103,24 +103,24 @@ children: [
   (0, i.jsx)(c.FormText, {
     id: S,
     type: c.FormText.Types.DESCRIPTION,
-    children: I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION
+    children: m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION
   }),
   (0, i.jsx)(c.FocusRing, {
     focusTarget: e,
     ringTarget: t,
-    ringClassName: m.ring,
+    ringClassName: I.ring,
     children: (0, i.jsxs)('div', {
       ref: t,
-      className: r()(m.addFriendInputWrapper, {
-        [m.success]: N,
-        [m.error]: A
+      className: r()(I.addFriendInputWrapper, {
+        [I.success]: N,
+        [I.error]: A
       }),
       children: [
         (0, i.jsx)(c.TextInput, {
           id: T,
           inputRef: e,
-          className: m.addFriendInput,
-          inputClassName: m.input,
+          className: I.addFriendInput,
+          inputClassName: I.input,
           onKeyPress: t => {
             let n = t.currentTarget.value;
             if (t.key !== h.mR.Enter) {
@@ -155,13 +155,13 @@ children: [
           'data-form-type': 'other',
           'data-lpignore': !0,
           'data-1p-ignore': !0,
-          placeholder: I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
-          'aria-label': I.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
+          placeholder: m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
+          'aria-label': m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           'aria-invalid': null != A || void 0,
           'aria-describedby': null != A ? f : S
         }),
         null != u && (0, i.jsx)('div', {
-          className: m.addFriendHint,
+          className: I.addFriendHint,
           'aria-hidden': !0,
           children: u
         }),
@@ -169,7 +169,7 @@ children: [
           size: c.Button.Sizes.SMALL,
           disabled: !l,
           type: 'submit',
-          children: I.Z.Messages.ADD_FRIEND_BUTTON
+          children: m.Z.Messages.ADD_FRIEND_BUTTON
         })
       ]
     })

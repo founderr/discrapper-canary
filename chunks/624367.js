@@ -20,36 +20,36 @@ var s = n(613828),
   T = n(594174),
   h = n(630388),
   N = n(823379),
-  C = n(624138),
-  f = n(317381),
+  f = n(624138),
+  C = n(317381),
   p = n(638880),
   g = n(146936),
   S = n(147865),
   A = n(778569),
   R = n(513202),
-  x = n(884338),
-  O = n(403404),
+  O = n(884338),
+  x = n(403404),
   M = n(701488),
   v = n(981631),
   L = n(689938),
   Z = n(615010);
-let P = (0, C.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+let P = (0, f.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 
 function D(e) {
-  var t, n, r, C;
+  var t, n, r, f;
   let {
 applicationId: D,
 message: b
   } = e, {
 analyticsLocations: j
-  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = b.channel_id, B = (0, a.e7)([m.Z], () => m.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, a.e7)([f.ZP], () => f.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === D, [V, H] = (0, _.Z)([
+  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = b.channel_id, B = (0, a.e7)([m.Z], () => m.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, a.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === D, [V, H] = (0, _.Z)([
 D,
 null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ''
-  ]), Y = (0, S.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0), [W] = (0, a.Wu)([f.ZP], () => G ? f.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === D) : [], [
+  ]), Y = (0, S.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0), [W] = (0, a.Wu)([C.ZP], () => G ? C.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === D) : [], [
 D,
 y,
 G
-  ]), K = Array.from(null !== (C = null == W ? void 0 : W.userIds) && void 0 !== C ? C : []), z = (0, a.Wu)([T.default], () => K.map(e => T.default.getUser(e)).filter(N.lm), [K]), Q = (0, A.Z)({
+  ]), K = Array.from(null !== (f = null == W ? void 0 : W.userIds) && void 0 !== f ? f : []), z = (0, a.Wu)([T.default], () => K.map(e => T.default.getUser(e)).filter(N.lm), [K]), Q = (0, A.Z)({
 applicationId: D,
 size: P,
 names: ['embedded_cover']
@@ -83,7 +83,7 @@ if (G) {
     }) : t();
   }
 } else
-  (0, O.Z)({
+  (0, x.Z)({
     guildId: k,
     locationObject: U.location,
     openInPopout: q,
@@ -131,7 +131,7 @@ children: (0, i.jsxs)('div', {
           children: [
             z.length > 0 ? (0, i.jsx)('div', {
               className: Z.avatars,
-              children: (0, i.jsx)(x.Z, {
+              children: (0, i.jsx)(O.Z, {
                 guildId: k,
                 users: z,
                 max: 4

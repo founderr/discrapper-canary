@@ -33,8 +33,8 @@ partnerGame: n
   if (null == h)
 return null;
   let {
-header: I,
-body: m,
+header: m,
+body: I,
 imgSrc: g,
 imgStyle: p
   } = E(h.drop, h.config.streamLengthRequirement), T = () => {
@@ -61,12 +61,12 @@ children: [
   (0, i.jsx)(s.Heading, {
     className: _.title,
     variant: 'heading-md/extrabold',
-    children: I
+    children: m
   }),
   (0, i.jsx)(s.Text, {
     variant: 'text-sm/medium',
     className: _.subTitle,
-    children: m
+    children: I
   }),
   h.config.autoEnrollment ? (0, i.jsx)(s.Button, {
     color: s.Button.Colors.BRAND_INVERTED,

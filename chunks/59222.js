@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(683301),
   E = n(671533),
   h = n(900849),
-  I = n(119317),
-  m = n(749436),
+  m = n(119317),
+  I = n(749436),
   g = n(650394),
   p = n(731455),
   T = n(689938),
@@ -145,7 +145,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(m.Z, {
+  (0, i.jsx)(I.Z, {
     loadId: t,
     searchResults: n,
     mostRecentQuery: s,
@@ -165,7 +165,7 @@ children: [
     }
   }) : (0, i.jsx)('div', {
     className: S.results,
-    children: (0, i.jsx)(I.Z, {
+    children: (0, i.jsx)(m.Z, {
       pageSize: f,
       totalCount: G,
       resetCurrentPage: k,

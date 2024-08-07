@@ -10,7 +10,7 @@ var i = n(735250),
   _ = n(981631),
   E = n(689938),
   h = n(713671);
-let I = (0, c.Q)(_.BRd.DARK);
+let m = (0, c.Q)(_.BRd.DARK);
 t.Z = function(e) {
   let {
 guild: t
@@ -31,7 +31,7 @@ null != s && (0, l.openModalLazy)(async () => {
   }, [
 s,
 t.id
-  ]), m = a.useCallback(() => {
+  ]), I = a.useCallback(() => {
 null != s && (0, d.b)(s.key, s.dismissibleContent);
   }, [s]);
   if (null == s)
@@ -40,7 +40,7 @@ return null;
   return (0, i.jsx)(l.ThemeContextProvider, {
 theme: _.BRd.DARK,
 children: (0, i.jsx)('div', {
-  className: r()(h.container, I),
+  className: r()(h.container, m),
   children: (0, i.jsxs)('div', {
     className: h.card,
     style: {
@@ -78,7 +78,7 @@ children: (0, i.jsx)('div', {
       (0, i.jsx)('div', {
         className: h.dismiss,
         children: (0, i.jsx)(l.Clickable, {
-          onClick: m,
+          onClick: I,
           children: (0, i.jsx)(l.CloseSmallIcon, {
             size: 'xs',
             color: 'currentColor'

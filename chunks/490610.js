@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(931515),
   E = n(207796),
   h = n(777734),
-  I = n(976757),
-  m = n(981631),
+  m = n(976757),
+  I = n(981631),
   g = n(477975);
 t.Z = a.memo(function(e) {
   let {
@@ -31,7 +31,7 @@ return (0, i.jsx)(u.ZP, {
   className: g.card,
   affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.y)(e, f),
   traitsToHighlight: C,
-  source: m.jXE.DISCOVER_SEARCH,
+  source: I.jXE.DISCOVER_SEARCH,
   prioritizedGameIds: N,
   onlyAnimateIconOnHover: !0
 }, e.id);
@@ -39,7 +39,7 @@ return (0, i.jsx)(u.ZP, {
 f,
 C,
 N
-  ]), v = a.useMemo(() => null != S && (0, I.Pw)(S) ? T : [], [
+  ]), v = a.useMemo(() => null != S && (0, m.Pw)(S) ? T : [], [
 T,
 S
   ]), Z = a.useCallback(e => {

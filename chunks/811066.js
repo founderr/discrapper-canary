@@ -12,7 +12,7 @@ writable: !0
 }
 (o = i || (i = {})).THING = 'Thing', o.PERSON = 'Person', o.PRODUCT = 'Product', o.OFFER = 'Offer', o.AGGREGATE_OFFER = 'AggregateOffer', o.RATING = 'Rating', o.AGGREGATE_RATING = 'AggregateRating', o.ORGANIZATION = 'Organization', o.ITEM_PAGE = 'ItemPage', o.UNIT_PRICE_SPECIFICATION = 'UnitPriceSpecification', o.QUANTITATIVE_VALUE = 'QuantitativeValue';
 
-function I(e, t) {
+function m(e, t) {
   return {
 '@type': e,
 ... function e(t) {
@@ -31,12 +31,12 @@ function I(e, t) {
   };
 }
 
-function m(e) {
-  return I('Thing', e);
+function I(e) {
+  return m('Thing', e);
 }
 
 function g(e) {
-  return I('Product', e);
+  return m('Product', e);
 }
 g.Image = function(e) {
   if (null == e)
@@ -46,11 +46,11 @@ return null;
 };
 
 function p(e) {
-  return I('Offer', e);
+  return m('Offer', e);
 }
 
 function T(e) {
-  return I('QuantitativeValue', e);
+  return m('QuantitativeValue', e);
 }
 (c = a || (a = {})).DAMAGED = 'http://schema.org/DamagedCondition', c.NEW = 'http://schema.org/NewCondition', c.REFURBISHED = 'http://schema.org/RefurbishedCondition', c.USED = 'http://schema.org/UsedCondition', (d = s || (s = {})).DISCONTINUED = 'http://schema.org/Discontinued', d.IN_STOCK = 'http://schema.org/InStock', d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly', d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability', d.ONLINE_ONLY = 'http://schema.org/OnlineOnly', d.OUT_OF_STOCK = 'http://schema.org/OutOfStock', d.PREORDER = 'http://schema.org/PreOrder', d.PRESALE = 'http://schema.org/PreSale', d.SOLD_OUT = 'http://schema.org/SoldOut', p.ItemConditions = a, p.ItemAvailability = s, (u = r || (r = {})).YEARLY = 'ANN', u.MONTHLY = 'MON', T.UnitCodes = r;
 class S extends(l = E.Component) {
@@ -68,18 +68,18 @@ return (0, _.jsx)('script', {
 });
   }
 }
-h(S, 'Thing', m), h(S, 'Brand', m), h(S, 'Person', function(e) {
-  return I('Person', e);
+h(S, 'Thing', I), h(S, 'Brand', I), h(S, 'Person', function(e) {
+  return m('Person', e);
 }), h(S, 'Organization', function(e) {
-  return I('Organization', e);
+  return m('Organization', e);
 }), h(S, 'ItemPage', function(e) {
-  return I('ItemPage', e);
+  return m('ItemPage', e);
 }), h(S, 'Product', g), h(S, 'Offer', p), h(S, 'Rating', function(e) {
-  return I('Rating', e);
+  return m('Rating', e);
 }), h(S, 'AggregateRating', function(e) {
-  return I('AggregateRating', e);
+  return m('AggregateRating', e);
 }), h(S, 'AggregateOffer', function(e) {
-  return I('AggregateOffer', e);
+  return m('AggregateOffer', e);
 }), h(S, 'QuantitativeValue', T), h(S, 'UnitPriceSpecification', function(e) {
-  return I('UnitPriceSpecification', e);
+  return m('UnitPriceSpecification', e);
 }), t.Z = S;

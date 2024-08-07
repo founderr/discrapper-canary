@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(904245),
   d = n(902840),
   h = n(607070),
-  m = n(95398),
-  p = n(580747),
+  p = n(95398),
+  m = n(580747),
   _ = n(135938),
   f = n(160404),
   E = n(765104),
@@ -38,8 +38,8 @@ let k = a.memo(function(e) {
   let {
 className: s,
 messageGroupSpacing: d,
-scrollerClassName: m,
-channel: p,
+scrollerClassName: p,
+channel: m,
 messages: _,
 unreadCount: E,
 showNewMessagesBar: g,
@@ -73,7 +73,7 @@ S,
 d
   ]), H = (0, L.ZP)({
 messages: _,
-channel: p,
+channel: m,
 compact: C,
 hasUnreads: T,
 focusId: v,
@@ -87,7 +87,7 @@ isEditing: null != v,
 keyboardModeEnabled: Z,
 hasMoreAfter: _.hasMoreAfter
   });
-  let V = (n = p, (0, o.e7)([f.Z], () => N.Z.can(O.Plq.READ_MESSAGE_HISTORY, n) ? null : f.Z.getViewingRolesTimestamp(n.getGuildId()))),
+  let V = (n = m, (0, o.e7)([f.Z], () => N.Z.can(O.Plq.READ_MESSAGE_HISTORY, n) ? null : f.Z.getViewingRolesTimestamp(n.getGuildId()))),
 {
   channelStreamMarkup: F,
   newMessagesBar: W,
@@ -95,7 +95,7 @@ hasMoreAfter: _.hasMoreAfter
   forumPostActionBar: Y,
   safetyWarningBanner: K
 } = (0, P.Z)({
-  channel: p,
+  channel: m,
   messages: _,
   unreadCount: E,
   showNewMessagesBar: g,
@@ -116,7 +116,7 @@ hasMoreAfter: _.hasMoreAfter
         animate: !h.Z.useReducedMotion
       });
     } else
-      u.Z.jumpToPresent(p.id, O.AQB);
+      u.Z.jumpToPresent(m.id, O.AQB);
   }
 });
   ! function(e) {
@@ -167,7 +167,7 @@ children: [
       (0, i.jsxs)(c.PinToBottomScrollerAuto, {
         ref: J,
         customTheme: !0,
-        className: l()(m, D.scroller),
+        className: l()(p, D.scroller),
         contentClassName: D.scrollerContent,
         onResize: H.handleResize,
         onScroll: H.handleScroll,
@@ -181,7 +181,7 @@ children: [
           (0, i.jsxs)('ol', {
             className: D.scrollerInner,
             'aria-label': y.Z.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
-              channelName: p.name
+              channelName: m.name
             }),
             ...Q,
             children: [
@@ -196,7 +196,7 @@ children: [
                 className: l()({
                   [D.scrollerSpacer]: !b,
                   [D.empty]: 0 === _.length && !_.loadingMore,
-                  [D.emptyForum]: 1 === _.length && !_.loadingMore && p.isForumPost() && (null === (t = _.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(p))
+                  [D.emptyForum]: 1 === _.length && !_.loadingMore && m.isForumPost() && (null === (t = _.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(m))
                 })
               })
             ]
@@ -292,7 +292,7 @@ let i = (0, o.e7)([T.Z], () => T.Z.getMessages(e.id), [e.id]),
   }),
   r = null !== (n = null === (t = Z.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n,
   c = (0, d.ts)(e),
-  u = (0, p.Z)('use_topic_dividers_in_chat'),
+  u = (0, m.Z)('use_topic_dividers_in_chat'),
   h = (0, o.Wu)([E.Z], () => {
     var t;
     return c && u && null !== (t = E.Z.summaries(e.id)) && void 0 !== t ? t : [];
@@ -301,7 +301,7 @@ let i = (0, o.e7)([T.Z], () => T.Z.getMessages(e.id), [e.id]),
     e.id,
     u
   ]),
-  m = (0, o.e7)([E.Z], () => c ? E.Z.selectedSummary(e.id) : null, [
+  p = (0, o.e7)([E.Z], () => c ? E.Z.selectedSummary(e.id) : null, [
     c,
     e.id
   ]),
@@ -311,14 +311,14 @@ let i = (0, o.e7)([T.Z], () => T.Z.getMessages(e.id), [e.id]),
     oldestUnreadMessageId: s,
     treatSpam: l && !r,
     summaries: h,
-    selectedSummary: m
+    selectedSummary: p
   }), [
     i,
     e,
     s,
     l,
     h,
-    m
+    p
   ]);
 return {
   messages: i,
@@ -330,7 +330,7 @@ return {
   })
 };
   }(t);
-  return (0, i.jsx)(m.a.Provider, {
+  return (0, i.jsx)(p.a.Provider, {
 value: (0, M.Z)(P, u),
 children: (0, i.jsx)(k, {
   ...c,

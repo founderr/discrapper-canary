@@ -11,13 +11,13 @@ var i = n(470079),
   _ = n(599960),
   E = n(683167),
   h = n(302800),
-  I = n(921944);
-let m = 'useCollectiblesShopTabNewBadge';
+  m = n(921944);
+let I = 'useCollectiblesShopTabNewBadge';
 t.Z = () => {
   let e = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
-t = (0, E.I)(m),
+t = (0, E.I)(I),
 n = (0, s.e7)([d.Z], () => d.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
-g = (0, u.J)(m),
+g = (0, u.J)(I),
 p = i.useMemo(() => {
   if (!(0, c.Fc)(e))
     return [];
@@ -42,7 +42,7 @@ p = i.useMemo(() => {
   t
 ]),
 [T, S] = (0, l.U)(p, void 0, !0),
-f = (0, _.E)(m),
+f = (0, _.E)(I),
 C = null;
   if (null != T) {
 if (g) {
@@ -72,7 +72,7 @@ if (g) {
   return {
 collectiblesShopTabNewBadgeDisplayOptions: C,
 dismissCollectiblesShopTabNewBadge: () => {
-  null != C && S(I.L.AUTO);
+  null != C && S(m.L.AUTO);
 }
   };
 };

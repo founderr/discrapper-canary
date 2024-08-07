@@ -1,9 +1,9 @@
 t.r(n), t.d(n, {
   VOICE_CHANNEL_STATUS_MODAL_KEY: function() {
-return I;
+return C;
   },
   default: function() {
-return g;
+return S;
   }
 }), t(47120), t(757143);
 var l = t(735250),
@@ -11,58 +11,58 @@ var l = t(735250),
   u = t(399606),
   r = t(343817),
   a = t(481060),
-  o = t(787014),
-  s = t(12498),
+  s = t(787014),
+  o = t(12498),
   d = t(541716),
   c = t(752305),
   E = t(893718),
-  _ = t(600164),
-  N = t(19780),
+  N = t(600164),
+  _ = t(19780),
   f = t(626135),
-  S = t(981631),
-  T = t(689938),
-  Z = t(956582);
-let I = 'VoiceChannelStatusModal';
+  Z = t(981631),
+  I = t(689938),
+  T = t(956582);
+let C = 'VoiceChannelStatusModal';
 
-function g(e) {
+function S(e) {
   let {
 channel: n,
 transitionState: t,
-onClose: g
-  } = e, A = (0, u.e7)([s.Z], () => s.Z.getChannelStatus(n)), C = (0, u.e7)([N.Z], () => N.Z.getMediaSessionId()), [O, h] = i.useState(null != A ? A : ''), [v, M] = i.useState(!1), [L, m] = i.useState(null), U = O.length > 500;
+onClose: S
+  } = e, A = (0, u.e7)([o.Z], () => o.Z.getChannelStatus(n)), g = (0, u.e7)([_.Z], () => _.Z.getMediaSessionId()), [h, O] = i.useState(null != A ? A : ''), [m, L] = i.useState(!1), [M, v] = i.useState(null), P = h.length > 500;
   i.useEffect(() => {
-f.default.track(S.rMx.OPEN_MODAL, {
+f.default.track(Z.rMx.OPEN_MODAL, {
   type: 'Voice Channel Topic Modal',
   guild_id: n.guild_id
 });
   }, [n.guild_id]);
-  let D = e => {
-  m(new r.Hx(e, e.status).getAnyErrorMessage());
+  let p = e => {
+  v(new r.Hx(e, e.status).getAnyErrorMessage());
 },
-P = async e => {
-  O === A && g(), null == e || e.preventDefault(), m(null), M(!0);
-  let t = O.length,
-    l = O.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length;
+D = async e => {
+  h === A && S(), null == e || e.preventDefault(), v(null), L(!0);
+  let t = h.length,
+    l = h.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length;
   try {
-    let e = await o.ZP.updateVoiceChannelStatus(n.id, O);
-    204 === e.status ? (f.default.track(S.rMx.VOICE_CHANNEL_TOPIC_SET, {
+    let e = await s.ZP.updateVoiceChannelStatus(n.id, h);
+    204 === e.status ? (f.default.track(Z.rMx.VOICE_CHANNEL_TOPIC_SET, {
       guild_id: n.guild_id,
       channel_id: n.id,
-      media_session_id: C,
+      media_session_id: g,
       raw_length: t,
       text_length: l
-    }), g()) : D(e);
+    }), S()) : p(e);
   } catch (e) {
-    D(e);
+    p(e);
   }
-  M(!1);
-}, [p, V] = i.useState((0, c.JM)(O)), y = async () => (!U && !v && await P(), Promise.resolve({
+  L(!1);
+}, [V, G] = i.useState((0, c.JM)(h)), y = async () => (!P && !m && await D(), Promise.resolve({
   shouldClear: !1,
   shouldRefocus: !0
 }));
   return (0, l.jsx)('form', {
-onSubmit: P,
-className: Z.form,
+onSubmit: D,
+className: T.form,
 children: (0, l.jsxs)(a.ModalRoot, {
   transitionState: t,
   size: a.ModalSize.SMALL,
@@ -70,78 +70,78 @@ children: (0, l.jsxs)(a.ModalRoot, {
     (0, l.jsxs)(a.ModalContent, {
       children: [
         (0, l.jsxs)(a.ModalHeader, {
-          direction: _.Z.Direction.VERTICAL,
-          className: Z.modalHeader,
+          direction: N.Z.Direction.VERTICAL,
+          className: T.modalHeader,
           separator: !1,
           children: [
             (0, l.jsx)(a.ModalCloseButton, {
-              className: Z.closeButton,
-              onClick: g
+              className: T.closeButton,
+              onClick: S
             }),
             (0, l.jsx)('div', {
-              className: Z.headerImage
+              className: T.headerImage
             }),
             (0, l.jsx)(a.FormTitle, {
               tag: 'h1',
-              className: Z.title,
-              children: T.Z.Messages.VOICE_CHANNEL_STATUS_MODAL_TITLE
+              className: T.title,
+              children: I.Z.Messages.VOICE_CHANNEL_STATUS_MODAL_TITLE
             }),
             (0, l.jsx)(a.Text, {
               color: 'header-secondary',
               variant: 'text-sm/normal',
-              children: T.Z.Messages.VOICE_CHANNEL_STATUS_MODAL_SUBTITLE
+              children: I.Z.Messages.VOICE_CHANNEL_STATUS_MODAL_SUBTITLE
             })
           ]
         }),
         (0, l.jsxs)(a.FormSection, {
-          className: Z.inputSection,
-          title: T.Z.Messages.VOICE_CHANNEL_STATUS,
+          className: T.inputSection,
+          title: I.Z.Messages.VOICE_CHANNEL_STATUS,
           children: [
             (0, l.jsx)(E.Z, {
-              innerClassName: Z.textArea,
-              textValue: O,
-              richValue: p,
-              placeholder: T.Z.Messages.VOICE_CHANNEL_STATUS_MODAL_PREFILL_CHANNEL.format({
+              innerClassName: T.textArea,
+              textValue: h,
+              richValue: V,
+              placeholder: I.Z.Messages.VOICE_CHANNEL_STATUS_MODAL_PREFILL_CHANNEL.format({
                 channelName: n.name
               }),
               focused: !0,
               channel: n,
               onChange: (e, n, t) => {
-                h(n), V(t);
+                O(n), G(t);
               },
               onSubmit: y,
               type: d.I.VOICE_CHANNEL_STATUS,
               canMentionRoles: !1,
               canMentionChannels: !1,
               allowNewLines: !1,
-              parentModalKey: I,
+              parentModalKey: C,
               maxCharacterCount: 500,
               showRemainingCharsAfterCount: 250,
               emojiPickerCloseOnModalOuterClick: !0
             }),
-            null != L ? (0, l.jsx)(a.FormErrorBlock, {
-              className: Z.error,
-              children: L
+            null != M ? (0, l.jsx)(a.FormErrorBlock, {
+              className: T.error,
+              children: M
             }) : null
           ]
         })
       ]
     }),
     (0, l.jsxs)(a.ModalFooter, {
-      justify: _.Z.Justify.BETWEEN,
-      direction: _.Z.Direction.HORIZONTAL,
+      justify: N.Z.Justify.BETWEEN,
+      direction: N.Z.Direction.HORIZONTAL,
       children: [
         (0, l.jsx)(a.Button, {
           color: a.Button.Colors.PRIMARY,
-          onClick: g,
-          children: T.Z.Messages.CANCEL
+          onClick: S,
+          children: I.Z.Messages.CANCEL
         }),
         (0, l.jsx)(a.Button, {
-          onClick: P,
-          submitting: v,
-          className: Z.button,
-          disabled: U,
-          children: T.Z.Messages.VOICE_CHANNEL_STATUS_MODAL_SET_STATUS
+          onClick: D,
+          submitting: m,
+          className: T.button,
+          disabled: P,
+          children: I.Z.Messages.VOICE_CHANNEL_STATUS_MODAL_SET_STATUS
         })
       ]
     })

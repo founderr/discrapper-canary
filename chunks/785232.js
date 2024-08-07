@@ -1,8 +1,8 @@
-var l = n(735250);
+var i = n(735250);
 n(470079);
 var a = n(442837),
   s = n(481060),
-  i = n(289823),
+  l = n(289823),
   r = n(594174);
 t.Z = function(e) {
   let {
@@ -12,7 +12,7 @@ status: o,
 isTyping: c,
 className: u,
 ...d
-  } = e, h = s.AvatarSizeSpecs[n], _ = (0, a.Wu)([r.default], () => t.slice(0, 2).map(e => {
+  } = e, h = s.AvatarSizeSpecs[n], p = (0, a.Wu)([r.default], () => t.slice(0, 2).map(e => {
 let t = r.default.getUser(e);
 if (null != t)
   return t.getAvatarURL(void 0, h.size, !1);
@@ -20,11 +20,11 @@ if (null != t)
 t,
 h.size
   ]);
-  return (0, l.jsx)(i.Z, {
+  return (0, i.jsx)(l.Z, {
 'aria-label': d['aria-label'],
 'aria-hidden': d['aria-hidden'],
-backSrc: _[0],
-frontSrc: _[1],
+backSrc: p[0],
+frontSrc: p[1],
 size: n,
 status: o,
 isTyping: null != c && c,

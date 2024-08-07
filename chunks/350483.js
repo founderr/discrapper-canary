@@ -3,8 +3,8 @@ var i = t(735250);
 t(470079);
 var l = t(392711),
   o = t.n(l),
-  r = t(481060),
-  E = t(718528),
+  E = t(481060),
+  r = t(718528),
   a = t(905423),
   u = t(984933),
   s = t(914010),
@@ -21,7 +21,7 @@ function S(e, n) {
   resourceId: e,
   type: A.W.GUILD_EVENT
 },
-...(t = e, i = n, t === I.ME ? _.Z.getPrivateChannelIds() : (0, E.Z)(t, {
+...(t = e, i = n, t === I.ME ? _.Z.getPrivateChannelIds() : (0, r.Z)(t, {
   withVoiceChannels: i,
   withCurrentVoiceChannel: !0
 }).map(e => e.id))
@@ -29,7 +29,7 @@ function S(e, n) {
 }
 n.Z = o().throttle(function(e, n) {
   var l, o;
-  let E, {
+  let r, {
   channelPredicate: _ = () => !0,
   guildPredicate: A = () => !0,
   guildFeaturePredicate: T = () => !1,
@@ -37,8 +37,8 @@ n.Z = o().throttle(function(e, n) {
   withVoiceChannels: N = !1
 } = n,
 O = null !== (l = a.Z.getState().guildId) && void 0 !== l ? l : I.ME,
-h = a.Z.getState().channelId,
-D = function(e, n) {
+D = a.Z.getState().channelId,
+h = function(e, n) {
   let t = [
       I.ME,
       ...d.ZP.getFlattenedGuildIds()
@@ -46,36 +46,36 @@ D = function(e, n) {
     i = t.indexOf(e);
   return n > 0 ? t.slice(i).concat(t.slice(0, i), e) : (t.splice(i, 0, e), t.slice(i + 1).concat(t.slice(0, i + 1)));
 }(O, e),
-g = e > 0 ? 0 : D.length - 1,
-f = S(O, N),
-R = f.indexOf(h) + e;
+g = e > 0 ? 0 : h.length - 1,
+R = S(O, N),
+f = R.indexOf(D) + e;
   for (; null != O && '' !== O;) {
-if (E = f[R], A(O))
-  for (; null != E && '' !== E;) {
-    if ('string' == typeof E) {
-      if (_(O, E))
-        return (0, C.K)(O, E, !1, L(O, E));
-    } else if ('object' == typeof E && T(E.resourceId, E.type))
-      return O !== s.Z.getGuildId() && (0, C.K)(O, null === (o = u.ZP.getDefaultChannel(O)) || void 0 === o ? void 0 : o.id), (0, r.openModalLazy)(async () => {
+if (r = R[f], A(O))
+  for (; null != r && '' !== r;) {
+    if ('string' == typeof r) {
+      if (_(O, r))
+        return (0, C.K)(O, r, !1, L(O, r));
+    } else if ('object' == typeof r && T(r.resourceId, r.type))
+      return O !== s.Z.getGuildId() && (0, C.K)(O, null === (o = u.ZP.getDefaultChannel(O)) || void 0 === o ? void 0 : o.id), (0, E.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([
-          t.e('18543'),
-          t.e('53115'),
+          t.e('77287'),
+          t.e('14262'),
           t.e('22347'),
           t.e('56236'),
-          t.e('66727')
+          t.e('23638')
         ]).then(t.bind(t, 17671));
         return n => (0, i.jsx)(e, {
           ...n,
           guildId: O
         });
       });
-    R += e, E = f[R];
+    f += e, r = R[f];
   }
-if (g += e, null == (O = D[g]) || '' === O)
+if (g += e, null == (O = h[g]) || '' === O)
   break;
-f = S(O, N), R = e < 0 ? f.length - 1 : 0;
+R = S(O, N), f = e < 0 ? R.length - 1 : 0;
   }
   c.S.dispatch(I.CkL.SHAKE_APP, {
 duration: 200,

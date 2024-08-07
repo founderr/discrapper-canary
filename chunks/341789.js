@@ -15,16 +15,16 @@ var i = n(735250),
   _ = n(871348),
   E = n(705063),
   h = n(49898);
-let I = [];
+let m = [];
 
-function m(e) {
+function I(e) {
   let {
 onScroll: t,
 onGuildCardSeen: n,
 onGuildCardClick: o
   } = e, c = (0, s.Wu)([l.ZP], () => {
 var e, t;
-return null !== (t = null === (e = l.ZP.getDiscoverableGuilds().featured) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : I;
+return null !== (t = null === (e = l.ZP.getDiscoverableGuilds().featured) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : m;
   });
   return a.useEffect(() => {
 (0, r.$z)(0, 30);
@@ -45,7 +45,7 @@ onGuildCardSeen: o,
 onGuildCardClick: c
   } = e, _ = (0, d.lg)(t), E = (0, s.Wu)([l.ZP], () => {
 var e, t;
-return null !== (t = null === (e = l.ZP.getDiscoverableGuilds()[_]) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : I;
+return null !== (t = null === (e = l.ZP.getDiscoverableGuilds()[_]) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : m;
   });
   return a.useEffect(() => {
 (0, r.K5)(_);
@@ -64,7 +64,7 @@ loadId: t,
 selectedTab: n,
 onScroll: r,
 onGuildCardSeen: u,
-onGuildCardClick: I
+onGuildCardClick: m
   } = e, p = (0, d.lg)(n), T = (0, s.e7)([l.ZP], () => l.ZP.isFetching()), S = (0, s.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().featured.guilds), f = (0, s.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().gamesYouPlay.guilds);
   switch (a.useEffect(() => {
   S.length > 0 && !T && c.Zt({
@@ -81,10 +81,10 @@ onGuildCardClick: I
   t
 ]), n) {
 case h.vf.FEATURED:
-  return (0, i.jsx)(m, {
+  return (0, i.jsx)(I, {
     tab: n,
     onScroll: r,
-    onGuildCardClick: I,
+    onGuildCardClick: m,
     onGuildCardSeen: u
   });
 case h.vf.GAMING:
@@ -95,7 +95,7 @@ case h.vf.EDUCATION:
   return (0, i.jsx)(g, {
     tab: n,
     onScroll: r,
-    onGuildCardClick: I,
+    onGuildCardClick: m,
     onGuildCardSeen: u
   });
 case h.vf.HUBS:

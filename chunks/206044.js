@@ -15,15 +15,15 @@ var i = n(735250),
   T = n(572004),
   h = n(617136),
   N = n(113434),
-  C = n(497505),
-  f = n(918701),
+  f = n(497505),
+  C = n(918701),
   p = n(566078),
   g = n(685613),
   S = n(611855),
   A = n(644646),
   R = n(670638),
-  x = n(87894),
-  O = n(46140),
+  O = n(87894),
+  x = n(46140),
   M = n(689938),
   v = n(793443);
 let L = (0, l.animated)(d.ChevronSmallDownIcon),
@@ -47,7 +47,7 @@ let _ = () => {
     questContent: n,
     questContentCTA: h.jZ.COPY_QUEST_URL,
     questContentPosition: a
-  }), (0, T.JG)((0, f.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
+  }), (0, T.JG)((0, C.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
 };
 return (0, i.jsx)(d.Tooltip, {
   forceOpen: l,
@@ -85,7 +85,7 @@ height: G
 ref: F,
 width: w,
 scrollWidth: V
-  } = (0, _.Z)(), H = (0, c.e7)([m.Z], () => m.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = s.useMemo(() => (0, f.nP)(u.config.assets.hero), [u]), K = s.useRef(null), z = (0, x.uq)(I), Q = I === C.jn.QUESTS_EMBED, q = (0, N.t5)(u, O.dr.QUESTS_CARD, I), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(u.config.expiresAt, {
+  } = (0, _.Z)(), H = (0, c.e7)([m.Z], () => m.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = s.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]), K = s.useRef(null), z = (0, O.uq)(I), Q = I === f.jn.QUESTS_EMBED, q = (0, N.t5)(u, x.dr.QUESTS_CARD, I), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(u.config.expiresAt, {
 year: 'numeric',
 month: 'long',
 day: 'numeric'
@@ -107,7 +107,7 @@ W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), K.cu
 n,
 W
   ]);
-  let et = (0, f.j8)(u);
+  let et = (0, C.j8)(u);
   return (0, i.jsxs)('div', {
 className: r()(v.outerContainer, {
   [v.outerContainerGiftInventory]: z,
@@ -142,7 +142,7 @@ children: [
     ref: K,
     children: !Y && W && (0, i.jsx)('source', {
       src: et,
-      type: (0, f.mN)(et)
+      type: (0, C.mN)(et)
     })
   }),
   (0, i.jsxs)('div', {
@@ -160,7 +160,7 @@ children: [
               1
             ],
             output: [
-              x.DJ,
+              O.DJ,
               0
             ]
           }) : void 0
@@ -193,7 +193,7 @@ children: [
                     quest: u,
                     questContent: I,
                     className: v.headerCollapsedRewardTile,
-                    location: O.dr.QUESTS_CARD
+                    location: x.dr.QUESTS_CARD
                   })
                 }),
                 (0, i.jsxs)('div', {
@@ -310,10 +310,10 @@ children: [
               1
             ],
             output: [
-              x.DJ / 2 - x.Z$ / 2,
-              x.jc
+              O.DJ / 2 - O.Z$ / 2,
+              O.jc
             ]
-          }) : x.jc
+          }) : O.jc
         },
         children: [
           (0, i.jsx)(R.r, {
@@ -340,7 +340,7 @@ children: [
               })
             })
           }),
-          U && !(0, x.W_)(I) && (0, i.jsx)(d.Clickable, {
+          U && !(0, O.W_)(I) && (0, i.jsx)(d.Clickable, {
             onClick: ee,
             className: v.iconWrapper,
             'aria-label': j ? M.Z.Messages.COLLAPSE : M.Z.Messages.EXPAND,

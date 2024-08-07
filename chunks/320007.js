@@ -23,8 +23,8 @@ function N(e) {
   let {
 canShowReminder: t = !1,
 className: N
-  } = e, C = (0, E.Z)(u.Z), {
-showClipsHeaderEntrypoint: f
+  } = e, f = (0, E.Z)(u.Z), {
+showClipsHeaderEntrypoint: C
   } = d.NV.useExperiment({
 location: 'ClipsButton'
   }, {
@@ -41,7 +41,7 @@ hasNewClips: _.Z.getNewClipIds().length > 0,
 lastClipsSession: _.Z.getLastClipsSession(),
 remindersEnabled: _.Z.getSettings().remindersEnabled,
 hasAnyClipAnimations: _.Z.hasAnyClipAnimations()
-  })), x = null != S && S.newClipIds.length > 0, O = (0, I.n)(e => e.clipsButtonRef), M = (0, I.n)(e => e.setClipsButtonRef), v = (0, a.e7)([c.Z], () => c.Z.hasLayers()), {
+  })), O = null != S && S.newClipIds.length > 0, x = (0, I.n)(e => e.clipsButtonRef), M = (0, I.n)(e => e.setClipsButtonRef), v = (0, a.e7)([c.Z], () => c.Z.hasLayers()), {
 preventIdle: L,
 allowIdle: Z
   } = (0, o.Y)('animation');
@@ -65,10 +65,10 @@ allowIdle: Z
 R,
 L,
 Z
-  ]), f && C && p) ? (0, i.jsxs)(i.Fragment, {
+  ]), C && f && p) ? (0, i.jsxs)(i.Fragment, {
 children: [
-  null != O && t && A && x && !(0, r.hasAnyModalOpen)() && !v && (0, i.jsx)(m.Z, {
-    clipIconRef: O,
+  null != x && t && A && O && !(0, r.hasAnyModalOpen)() && !v && (0, i.jsx)(m.Z, {
+    clipIconRef: x,
     lastClipsSession: S,
     onOpenClipsGallery: P
   }),

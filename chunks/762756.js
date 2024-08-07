@@ -10,8 +10,8 @@ var i, a = n(735250),
   _ = n(63063),
   E = n(1964),
   h = n(981631),
-  I = n(689938),
-  m = n(71444),
+  m = n(689938),
+  I = n(71444),
   g = n(549856);
 
 function p(e, t, n) {
@@ -44,28 +44,28 @@ return (0, a.jsx)(a.Fragment, {
   }
   render() {
 return (0, a.jsxs)(u.Z, {
-  className: m.verification,
+  className: I.verification,
   align: u.Z.Align.CENTER,
   direction: u.Z.Direction.VERTICAL,
   children: [
     (0, a.jsxs)(u.Z, {
-      className: l()(m.container, {
-        [m.isMobile]: o.tq
+      className: l()(I.container, {
+        [I.isMobile]: o.tq
       }),
       direction: u.Z.Direction.VERTICAL,
       align: u.Z.Align.CENTER,
       justify: u.Z.Justify.CENTER,
       children: [
         (0, a.jsx)('div', {
-          className: m.image
+          className: I.image
         }),
         (0, a.jsx)('div', {
-          className: l()(m.title, g.marginTop20),
-          children: I.Z.Messages.VERIFICATION_TITLE
+          className: l()(I.title, g.marginTop20),
+          children: m.Z.Messages.VERIFICATION_TITLE
         }),
         (0, a.jsx)('div', {
-          className: l()(m.body, g.marginTop4, g.marginBottom20),
-          children: I.Z.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
+          className: l()(I.body, g.marginTop4, g.marginBottom20),
+          children: m.Z.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
             helpCenterURL: T
           })
         }),
@@ -78,26 +78,26 @@ return (0, a.jsxs)(u.Z, {
       ]
     }),
     (0, a.jsx)('div', {
-      className: l()(m.footer, g.marginTop20),
-      children: I.Z.Messages.VERIFICATION_FOOTER
+      className: l()(I.footer, g.marginTop20),
+      children: m.Z.Messages.VERIFICATION_FOOTER
     }),
     (0, a.jsxs)(u.Z, {
       className: l()(g.marginTop4, g.marginBottom20),
       grow: 0,
       children: [
         (0, a.jsx)('div', {
-          className: l()(m.footer, m.footerAction),
-          children: I.Z.Messages.VERIFICATION_FOOTER_SUPPORT.format({
+          className: l()(I.footer, I.footerAction),
+          children: m.Z.Messages.VERIFICATION_FOOTER_SUPPORT.format({
             supportURL: _.Z.getSubmitRequestURL()
           })
         }),
         (0, a.jsx)('div', {
-          className: l()(m.footer, m.footerBullet),
+          className: l()(I.footer, I.footerBullet),
           children: '\u2022'
         }),
         (0, a.jsx)('div', {
-          className: l()(m.footer, m.footerAction),
-          children: I.Z.Messages.VERIFICATION_FOOTER_LOGOUT.format({
+          className: l()(I.footer, I.footerAction),
+          children: m.Z.Messages.VERIFICATION_FOOTER_LOGOUT.format({
             logoutOnClick: this.props.onLogout
           })
         })

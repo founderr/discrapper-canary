@@ -1,6 +1,6 @@
 n.d(t, {
   II: function() {
-return p;
+return m;
   },
   Ow: function() {
 return I;
@@ -23,8 +23,8 @@ var i, a, s = n(470079),
   u = n(110924),
   d = n(840877),
   h = n(952537),
-  m = n(981631);
-let p = -1;
+  p = n(981631);
+let m = -1;
 (a = i || (i = {})).MESSAGES = 'messages', a.LINKS = 'links', a.MEDIA = 'media', a.ALL_COUNTS = 'all_counts';
 
 function _(e, t, n) {
@@ -37,7 +37,7 @@ let f = {
 searchFetcher: null,
 searchTabFetcher: null,
 result: null,
-messageCount: p,
+messageCount: m,
 lastMessage: null
   },
   E = (0, l.Z)(() => new Map()),
@@ -112,10 +112,10 @@ let {
 return s.useEffect(() => {
   if (E !== r) {
     let i = I(e, n, a),
-      s = new d.ZP(t, m.aib.GUILD, i);
+      s = new d.ZP(t, p.aib.GUILD, i);
     g(r, {
       searchFetcher: s,
-      messageCount: p,
+      messageCount: m,
       lastMessage: null
     }), setTimeout(() => {
       s.fetch(e => {
@@ -220,10 +220,10 @@ C({
 });
   }, [C]);
   s.useEffect(() => {
-let e = new d.tJ(t, m.aib.GUILD, f, E);
+let e = new d.tJ(t, p.aib.GUILD, f, E);
 x({
   searchTabFetcher: e,
-  messageCount: p,
+  messageCount: m,
   lastMessage: null
 });
 let n = setTimeout(async () => {
@@ -274,8 +274,8 @@ C
   ]);
   let [N, v] = s.useState({});
   return {
-messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : p,
-linksCount: null !== (a = null == u ? void 0 : u.messageCount) && void 0 !== a ? a : p,
-mediaCount: null !== (l = null == _ ? void 0 : _.messageCount) && void 0 !== l ? l : p
+messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : m,
+linksCount: null !== (a = null == u ? void 0 : u.messageCount) && void 0 !== a ? a : m,
+mediaCount: null !== (l = null == _ ? void 0 : _.messageCount) && void 0 !== l ? l : m
   };
 }

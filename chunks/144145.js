@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(841784),
   E = n(802856),
   h = n(594190),
-  I = n(592745),
-  m = n(553795),
+  m = n(592745),
+  I = n(553795),
   g = n(757266),
   p = n(283595),
   T = n(417363),
@@ -33,7 +33,7 @@ currentActivities: t
   } = e, n = t.length > 1, Z = function(e) {
 let {
   currentActivities: t
-} = e, n = (0, s.e7)([m.Z], () => m.Z.getAccounts().some(e => e.type === d.Z.get(N.ABu.XBOX).type)), a = t.some(e => {
+} = e, n = (0, s.e7)([I.Z], () => I.Z.getAccounts().some(e => e.type === d.Z.get(N.ABu.XBOX).type)), a = t.some(e => {
   let {
     activity: t
   } = e;
@@ -53,7 +53,7 @@ let {
 return (0, s.Wu)([
   h.ZP,
   p.Z,
-  I.Z,
+  m.Z,
   T.Z,
   g.Z
 ], () => t.filter(e => !(0, _.Z)(e.activity)).map(e => {
@@ -67,13 +67,13 @@ return (0, s.Wu)([
     canJoin: null != t && (0, u.Z)(t, N.xjy.JOIN) && t.type === N.IIU.PLAYING,
     canPlay: (0, f.t)({
       LibraryApplicationStore: p.Z,
-      LaunchableGameStore: I.Z,
+      LaunchableGameStore: m.Z,
       DispatchApplicationStore: T.Z,
       ConnectedAppsStore: g.Z,
       applicationId: i.id,
       branchId: null != a ? a.branchId : null
     }),
-    isLaunching: I.Z.launchingGames.has(i.id),
+    isLaunching: m.Z.launchingGames.has(i.id),
     isRunning: h.ZP.getRunningVerifiedApplicationIds().includes(i.id),
     location: n.location
   };

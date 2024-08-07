@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(933793),
   d = n(13736),
   h = n(732393),
-  m = n(214906),
-  p = n(612856),
+  p = n(214906),
+  m = n(612856),
   _ = n(137591),
   f = n(299206),
   E = n(727429),
@@ -69,7 +69,7 @@ function Z(e) {
 channel: t,
 closePopout: n,
 onSelect: a
-  } = e, E = (0, o.Z)(t, 'Sidebar Overflow'), g = (0, u.Z)(t), x = (0, m.Z)(t), T = (0, p.Z)(t), S = (0, l.Z)(t), Z = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, d.Z)(t), b = (0, r.Z)(t), R = (0, f.Z)({
+  } = e, E = (0, o.Z)(t, 'Sidebar Overflow'), g = (0, u.Z)(t), x = (0, p.Z)(t), T = (0, m.Z)(t), S = (0, l.Z)(t), Z = (0, c.Z)(t), A = (0, h.Z)(t.id), M = (0, d.Z)(t), b = (0, r.Z)(t), R = (0, f.Z)({
 id: t.id,
 label: v.Z.Messages.COPY_ID_THREAD
   }), j = (0, _.Z)(t);

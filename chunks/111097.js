@@ -12,7 +12,7 @@ var i = n(72924),
   E = n(474936);
 let h = [a.Z.RPC];
 
-function I(e) {
+function m(e) {
   if (null == e)
 return {
   lock: _.VqG,
@@ -25,7 +25,7 @@ context: t.context
   };
 }
 
-function m(e, t) {
+function I(e, t) {
   let n = {
 subscriptionTier: E.Si.TIER_2,
 analyticsLocations: h,
@@ -67,7 +67,7 @@ handler(e) {
   let {
     lock: l,
     context: d
-  } = I(t.transport !== u.He.POST_MESSAGE ? a : null);
+  } = m(t.transport !== u.He.POST_MESSAGE ? a : null);
   if (null == (0, o.Z)())
     throw new r.Z({
       errorCode: _.lTL.INVALID_CHANNEL
@@ -80,7 +80,7 @@ handler(e) {
       let e = await (0, i.S)({
         applicationId: s,
         skuId: n,
-        openPremiumPaymentModal: () => m(d, E),
+        openPremiumPaymentModal: () => I(d, E),
         analyticsLocations: h,
         analyticsLocationObject: E,
         context: d
@@ -122,8 +122,8 @@ handler(e) {
   let {
     lock: i,
     context: a
-  } = I(t.transport !== u.He.POST_MESSAGE ? n : null);
-  return m(a, {
+  } = m(t.transport !== u.He.POST_MESSAGE ? n : null);
+  return I(a, {
     page: _.ZY5.IN_APP
   }).then(() => {
     i();

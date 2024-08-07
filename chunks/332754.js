@@ -11,8 +11,8 @@ var a = n(481060),
   _ = n(374023),
   E = n(886162),
   h = n(981631),
-  I = n(815660),
-  m = n(231338);
+  m = n(815660),
+  I = n(231338);
 let g = 'AGREEMENTS_MODAL_KEY';
 t.Z = {
   init() {
@@ -28,11 +28,11 @@ if (!_.s.isDisallowPopupsSet() && null != u.default.getCurrentUser())
     ...e
   }), {
     modalKey: g,
-    onCloseRequest: m.Vq
+    onCloseRequest: I.Vq
   }) : null == t && ((0, r.ob)('verification'), (0, a.hasModalOpen)(g) && (0, a.closeModal)(g));
   },
   handleAuthenticationStoreChanged() {
-null == d.default.getId() && ((0, r.ob)('verification'), (0, a.closeModal)(g), (0, a.closeModal)(c.HR), (0, a.closeModal)(c.F0), (0, a.closeModal)(I.M));
+null == d.default.getId() && ((0, r.ob)('verification'), (0, a.closeModal)(g), (0, a.closeModal)(c.HR), (0, a.closeModal)(c.F0), (0, a.closeModal)(m.M));
   },
   handleCurrentUserUpdate(e) {
 let {

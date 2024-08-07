@@ -365,7 +365,7 @@ e0 = a.useCallback(e => (0, t.jsxs)(g.Menu, {
   e$
 ]),
 [e1, e6] = (0, x.Z)(!1, 1000),
-e8 = a.useCallback(() => {
+e5 = a.useCallback(() => {
   if (null != eM)
     G.default.track(ep.rMx.APP_SHARE_BUTTON_CLICKED, {
       source: 'product_page',
@@ -388,7 +388,7 @@ if (E && 'true' === e.searchParams.get(ex)) {
 E,
 eW
   ]);
-  let e5 = a.useCallback(() => {
+  let e8 = a.useCallback(() => {
   null != eM && (E ? eW('product_page') : (G.default.track(ep.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
     application_id: p,
     guild_id: f,
@@ -716,13 +716,13 @@ children: [
                     className: ef.buttons,
                     children: [
                       (0, t.jsx)(g.Button, {
-                        onClick: e8,
+                        onClick: e5,
                         color: g.Button.Colors.PRIMARY,
                         children: e1 ? eI.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : eI.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
                       }),
                       (0, t.jsx)(g.Button, {
                         color: g.Button.Colors.BRAND,
-                        onClick: e5,
+                        onClick: e8,
                         disabled: !eY,
                         children: eI.Z.Messages.APPLICATION_ADD_BUTTON
                       }),

@@ -3,8 +3,8 @@ var s = n(735250),
   r = n(470079),
   i = n(442837),
   a = n(481060),
-  l = n(893776),
-  o = n(232567),
+  o = n(893776),
+  l = n(232567),
   c = n(129293),
   u = n(388905),
   d = n(353926),
@@ -39,11 +39,11 @@ switch (e) {
 }
   };
   return r.useEffect(() => {
-n ? (Z(!0), o.k({
+n ? (Z(!0), l.k({
   withAnalyticsToken: !0
 }).then(() => Z(!1)).catch(() => Z(!1))) : Z(!1);
   }, [n]), r.useEffect(() => {
-!f && !N && l.Z.getExperiments();
+!f && !N && o.Z.getExperiments();
   }, [
 f,
 N

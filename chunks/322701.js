@@ -15,9 +15,9 @@ renderRow: n,
 searchQuery: _,
 sectionFilter: E,
 useReducedMotion: h
-  } = e, I = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled), m = (0, a.ZP)({
+  } = e, m = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled), I = (0, a.ZP)({
 id: 'people',
-isEnabled: I,
+isEnabled: m,
 async scrollToStart() {},
 async scrollToEnd() {}
   }), g = E !== d.pJs.ONLINE && E !== d.pJs.ALL, p = h || '' !== _ || g, T = t.map((e, t) => p ? (0, i.jsx)('div', {
@@ -28,7 +28,7 @@ component: 'div',
 children: e.map(n)
   }, t));
   return (0, i.jsx)(s.bG, {
-navigator: m,
+navigator: I,
 children: (0, i.jsx)(s.SJ, {
   children: e => {
     let {

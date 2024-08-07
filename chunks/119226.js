@@ -22,7 +22,7 @@ var a = t(278074),
   x = t(241822);
 let N = m.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 
-function S(e) {
+function T(e) {
   let {
 avatarDecoration: n
   } = e, {
@@ -46,7 +46,7 @@ children: (0, i.jsx)(N, {
   });
 }
 
-function T(e) {
+function S(e) {
   var n;
   let {
 id: t
@@ -75,11 +75,11 @@ selectedGiftStyle: t
 product: s
   } = (0, c.T)(null == n ? void 0 : n.id), l = null == s ? void 0 : s.items[0], o = (0, a.EQ)(l).with({
 type: r.Z.AVATAR_DECORATION
-  }, e => (0, i.jsx)(S, {
+  }, e => (0, i.jsx)(T, {
 avatarDecoration: e
   })).with({
 type: r.Z.PROFILE_EFFECT
-  }, e => (0, i.jsx)(T, {
+  }, e => (0, i.jsx)(S, {
 id: e.id
   })).otherwise(() => null);
   return null != t && null == o ? (0, i.jsx)('div', {

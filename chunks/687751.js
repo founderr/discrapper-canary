@@ -11,9 +11,9 @@ var a = n(481060),
   _ = n(920644),
   E = n(208381),
   h = n(723359),
-  I = n(981631);
+  m = n(981631);
 
-function m(e, t) {
+function I(e, t) {
   var n;
   if (null == e)
 return;
@@ -32,11 +32,11 @@ let {
   guildId: t,
   channelId: n
 } = e;
-m(t, n);
+I(t, n);
   }
   handleConnectionOpen() {
 let e = c.Z.getGuildId();
-m(e, o.Z.getChannelId());
+I(e, o.Z.getChannelId());
   }
   handleAgeGateModalOpen(e) {
 let {
@@ -55,7 +55,7 @@ let {
   });
 }, {
   modalKey: h.dG,
-  onCloseRequest: I.dG4
+  onCloseRequest: m.dG4
 });
   }
   handleAgeGateSuccess() {

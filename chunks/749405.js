@@ -20,15 +20,15 @@ function h(e) {
 active: t,
 user: n,
 channel: h
-  } = e, I = (0, c.K)(), m = a.useCallback(() => {
+  } = e, m = (0, c.K)(), I = a.useCallback(() => {
 (0, s.showToast)((0, s.createToast)(_.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, s.ToastType.FAILURE));
   }, []), g = a.useCallback(() => {
 l.Z.closeChannelSidebar(o.uZ);
   }, []), p = a.useCallback(() => {
-l.Z.closeChannelSidebar(o.uZ), I && (0, r.Kh)(h.id);
+l.Z.closeChannelSidebar(o.uZ), m && (0, r.Kh)(h.id);
   }, [
 h.id,
-I
+m
   ]), {
 acceptMessageRequest: T,
 rejectMessageRequest: S,
@@ -41,7 +41,7 @@ isOptimisticRejected: v
 user: n,
 onAcceptSuccess: p,
 onRejectSuccess: g,
-onError: m
+onError: I
   }), Z = f || C || N || A || v;
   return (0, i.jsxs)('div', {
 className: E.container,

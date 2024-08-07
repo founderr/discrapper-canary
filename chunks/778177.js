@@ -15,15 +15,15 @@ var i = n(735250),
   T = n(603263),
   h = n(542051),
   N = n(349033),
-  C = n(999650),
-  f = n(933557),
+  f = n(999650),
+  C = n(933557),
   p = n(471445),
   g = n(592125),
   S = n(271383),
   A = n(699516),
   R = n(250758),
-  x = n(944486),
-  O = n(914010),
+  O = n(944486),
+  x = n(914010),
   M = n(246946),
   v = n(594174),
   L = n(585483),
@@ -99,11 +99,11 @@ return (0, i.jsxs)('div', {
       className: y.searchResultChannelIcon
     }) : null,
     (0, i.jsx)('strong', {
-      children: (0, f.F6)(s, v.default, A.Z)
+      children: (0, C.F6)(s, v.default, A.Z)
     }),
     null != r ? (0, i.jsx)('span', {
       className: y.searchResultChannelCategory,
-      children: (0, f.F6)(r, v.default, A.Z)
+      children: (0, C.F6)(r, v.default, A.Z)
     }) : null
   ]
 });
@@ -124,10 +124,10 @@ let t, n, {
   renderResult: h
 } = e;
 if (T) {
-  var N, f;
+  var N, C;
   t = (0, i.jsx)('span', {
     className: y.filter,
-    children: null !== (f = null === (N = C.ZP[o]) || void 0 === N ? void 0 : N.key) && void 0 !== f ? f : 'addme:'
+    children: null !== (C = null === (N = f.ZP[o]) || void 0 === N ? void 0 : N.key) && void 0 !== C ? C : 'addme:'
   });
 }
 return n = null != h ? h(a, o, l) : (0, i.jsx)('strong', {
@@ -358,7 +358,7 @@ return (0, i.jsx)(h.Z, {
   constructor(...e) {
 var t;
 super(...e), t = this, B(this, 'state', {
-  dateHint: (0, C.Pr)(),
+  dateHint: (0, f.Pr)(),
   selectedIndex: -1
 }), B(this, 'handleDateChange', e => {
   this.setSearchQuery(e.format(j.b2L) + ' ', !0);
@@ -417,7 +417,7 @@ super(...e), t = this, B(this, 'state', {
     r = function(e) {
       let t = !0,
         n = e.trim();
-      return u()(C.ZP).forOwn(e => {
+      return u()(f.ZP).forOwn(e => {
         '' !== e.key && null != e.key && n === e.key && (t = !1);
       }), t;
     }(a);
@@ -533,12 +533,12 @@ super(...e), t = this, B(this, 'state', {
 }
 t.ZP = s.forwardRef((e, t) => {
   let [n, s, a] = (0, I.Wu)([
-O.Z,
 x.Z,
+O.Z,
 R.Z
   ], () => {
-let e = O.Z.getGuildId(),
-  t = x.Z.getChannelId(),
+let e = x.Z.getGuildId(),
+  t = O.Z.getChannelId(),
   n = null != e ? e : t;
 o()(null != n, 'SearchPopout.getStateFromStores - invalid searchId');
 let i = R.Z.getState(n),

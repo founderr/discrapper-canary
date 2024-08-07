@@ -23,12 +23,12 @@ return;
 h = (0, o.X)(c.Z.getOutputDevices()[a]);
   if (s().some(o.Z.lastDeviceConnected, e => u.has(e.displayName) || e.displayName === E || e.displayName === h))
 return;
-  let I = s().some(o.Z.lastDeviceConnected, e => l.Z.isCertified(o.Z.inputDevices[e.displayName]) || l.Z.isCertified(o.Z.outputDevices[e.displayName]));
-  if ((t === d.w5 && o.Z.lastInputSystemDevice.justChanged || a === d.w5 && o.Z.lastOutputSystemDevice.justChanged) && !I)
+  let m = s().some(o.Z.lastDeviceConnected, e => l.Z.isCertified(o.Z.inputDevices[e.displayName]) || l.Z.isCertified(o.Z.outputDevices[e.displayName]));
+  if ((t === d.w5 && o.Z.lastInputSystemDevice.justChanged || a === d.w5 && o.Z.lastOutputSystemDevice.justChanged) && !m)
 return;
-  let m = s().first(Object.keys(o.Z.lastDeviceConnected)),
-g = null != m && '' !== m ? o.Z.lastDeviceConnected[m] : null;
-  null != g && (o.Z.initialized && null != m && (l.Z.isCertified(o.Z.inputDevices[m]) ? e = l.Z.getCertifiedDevice(o.Z.inputDevices[m]) : l.Z.isCertified(o.Z.outputDevices[m]) && (e = l.Z.getCertifiedDevice(o.Z.outputDevices[m]))), _ = !0, (0, r.openModalLazy)(async () => {
+  let I = s().first(Object.keys(o.Z.lastDeviceConnected)),
+g = null != I && '' !== I ? o.Z.lastDeviceConnected[I] : null;
+  null != g && (o.Z.initialized && null != I && (l.Z.isCertified(o.Z.inputDevices[I]) ? e = l.Z.getCertifiedDevice(o.Z.inputDevices[I]) : l.Z.isCertified(o.Z.outputDevices[I]) && (e = l.Z.getCertifiedDevice(o.Z.outputDevices[I]))), _ = !0, (0, r.openModalLazy)(async () => {
 let {
   default: t
 } = await n.e('83536').then(n.bind(n, 43991));

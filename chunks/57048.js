@@ -1,60 +1,60 @@
-t.d(n, {
+n.d(t, {
   U: function() {
 return o;
   },
   a: function() {
-return u;
+return c;
   }
 });
-var l = t(199902),
-  i = t(158776),
-  a = t(699516),
-  r = t(626135),
-  s = t(981631);
+var i = n(199902),
+  s = n(158776),
+  a = n(699516),
+  r = n(626135),
+  l = n(981631);
 let o = e => {
 let {
-  displayProfile: n,
-  isMobile: t,
-  loadDurationMs: l,
-  activity: i,
+  displayProfile: t,
+  isMobile: n,
+  loadDurationMs: i,
+  activity: s,
   customStatusActivity: a,
   status: o
 } = e;
-r.default.track(s.rMx.DM_PROFILE_VIEWED, {
-  has_mobile_indicator: t,
-  has_activity: null != i && (null == i ? void 0 : i.type) !== s.IIU.CUSTOM_STATUS,
-  has_game_activity: (null == i ? void 0 : i.type) === s.IIU.PLAYING,
-  load_duration_ms: l,
+r.default.track(l.rMx.DM_PROFILE_VIEWED, {
+  has_mobile_indicator: n,
+  has_activity: null != s && (null == s ? void 0 : s.type) !== l.IIU.CUSTOM_STATUS,
+  has_game_activity: (null == s ? void 0 : s.type) === l.IIU.PLAYING,
+  load_duration_ms: i,
   profile_user_status: o,
   has_custom_status: null != a,
-  has_profile_effect: null != n.profileEffectId,
-  ...c(n)
+  has_profile_effect: null != t.profileEffectId,
+  ...u(t)
 });
   },
-  u = (e, n) => {
-r.default.track(s.rMx.DM_PROFILE_TOGGLED, {
-  is_profile_open: n,
-  ...c(e)
+  c = (e, t) => {
+r.default.track(l.rMx.DM_PROFILE_TOGGLED, {
+  is_profile_open: t,
+  ...u(e)
 });
   },
-  c = e => {
-var n;
+  u = e => {
+var t;
 if (null == e)
   return {};
-let t = e.userId,
-  r = null != l.Z.getAnyStreamForUser(t),
-  o = i.Z.findActivity(t, e => {
+let n = e.userId,
+  r = null != i.Z.getAnyStreamForUser(n),
+  o = s.Z.findActivity(n, e => {
     let {
-      type: n
+      type: t
     } = e;
-    return r ? n === s.IIU.PLAYING : n !== s.IIU.CUSTOM_STATUS;
+    return r ? t === l.IIU.PLAYING : t !== l.IIU.CUSTOM_STATUS;
   }),
-  u = null == o ? void 0 : o.assets,
-  c = a.Z.isFriend(t);
+  c = null == o ? void 0 : o.assets,
+  u = a.Z.isFriend(n);
 return {
-  has_images: !!(null !== (n = null == u ? void 0 : u.large_image) && void 0 !== n ? n : null == u ? void 0 : u.small_image),
-  is_friend: c,
-  viewed_profile_user_id: t,
+  has_images: !!(null !== (t = null == c ? void 0 : c.large_image) && void 0 !== t ? t : null == c ? void 0 : c.small_image),
+  is_friend: u,
+  viewed_profile_user_id: n,
   profile_has_nitro_customization: e.hasPremiumCustomization(),
   profile_has_theme_color_customized: e.hasThemeColors(),
   profile_has_theme_animation: null != e.popoutAnimationParticleType

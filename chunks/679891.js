@@ -19,9 +19,9 @@ writable: !0
 }
 let E = new Set(),
   h = new Set(),
-  I = null;
+  m = null;
 
-function m() {
+function I() {
   for (let e of E)
 a.Z.setDisableLocalVideo(e, d.ZUi.MANUAL_ENABLED, u.Yn.DEFAULT, !1);
   h.clear(), E.clear();
@@ -31,7 +31,7 @@ class g extends s.Z {
 i.Z.subscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), i.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), i.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), i.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), l.Z.addChangeListener(this.handlePopoutChange);
   }
   _terminate() {
-i.Z.unsubscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), i.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), i.Z.unsubscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), i.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), l.Z.removeChangeListener(this.handlePopoutChange), m(), I = null;
+i.Z.unsubscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), i.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), i.Z.unsubscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), i.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), l.Z.removeChangeListener(this.handlePopoutChange), I(), m = null;
   }
   handleIncomingVideo(e) {
 let {
@@ -43,10 +43,10 @@ if (n !== u.Yn.DEFAULT || null == i)
   return;
 let s = null != r.ZP.getVisibleGame(),
   _ = c.Z.isVisible(),
-  I = l.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT),
-  m = o.Z.isLocalVideoDisabled(t, n),
+  m = l.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT),
+  I = o.Z.isLocalVideoDisabled(t, n),
   g = h.has(t);
-s && !_ && !I && !m && !g && (E.add(t), a.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
+s && !_ && !m && !I && !g && (E.add(t), a.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
   }
   handleManualLocalVideoToggle(e) {
 let {
@@ -60,14 +60,14 @@ super(...e), _(this, 'handleWindowVisibilityChange', e => {
   let {
     visible: t
   } = e;
-  t && m();
+  t && I();
 }), _(this, 'handleVoiceChannelSelect', e => {
   let {
     channelId: t
   } = e;
-  t !== I && (m(), I = t);
+  t !== m && (I(), m = t);
 }), _(this, 'handlePopoutChange', () => {
-  l.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT) && m();
+  l.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT) && I();
 });
   }
 }

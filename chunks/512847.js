@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(590415),
   E = n(131704),
   h = n(199902),
-  I = n(314897),
-  m = n(592125),
+  m = n(314897),
+  I = n(592125),
   g = n(430824),
   p = n(131951),
   T = n(292959),
@@ -75,12 +75,12 @@ if (!!s && (!!n || !!e.audioPermissionReady)) {
 
 function x() {
   return O([
-m.Z,
+I.Z,
 S.Z,
 f.Z,
 c.Z
   ], () => {
-let e = m.Z.getChannel(f.Z.getVoiceChannelId()),
+let e = I.Z.getChannel(f.Z.getVoiceChannelId()),
   t = null == e ? void 0 : e.type,
   n = null == e ? void 0 : e.getGuildId(),
   i = S.Z.getWasEverRtcConnected(),
@@ -161,19 +161,19 @@ function y() {
   return O([
 f.Z,
 h.Z,
-I.default,
+m.default,
 N.Z,
-m.Z
+I.Z
   ], () => {
 let e, t;
 let n = f.Z.getVoiceChannelId(),
-  i = I.default.getId();
+  i = m.default.getId();
 let a = [],
   s = null,
   r = 0,
   l = h.Z.getAllActiveStreams();
 if (null != n) {
-  let i = m.Z.getChannel(n);
+  let i = I.Z.getChannel(n);
   null != i && (e = i.type, t = A.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0), a = h.Z.getAllApplicationStreamsForChannel(i.id).map(e => e.ownerId));
 }
 let o = null;
@@ -198,7 +198,7 @@ let {
   currentUserId: o
 } = t;
 if (e.voiceChannelId !== i || null == i || function(e) {
-    let t = m.Z.getChannel(e);
+    let t = I.Z.getChannel(e);
     if (null == t)
       return !1;
     let n = t.getGuildId();
@@ -231,12 +231,12 @@ function j() {
   return O([
 f.Z,
 o.ZP,
-I.default
+m.default
   ], () => {
 let e = f.Z.getVoiceChannelId(),
   t = f.Z.getChannelId(),
   n = o.ZP.getConnectedActivityChannelId(),
-  i = I.default.getId(),
+  i = m.default.getId(),
   a = (0, v.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
   s = (0, v.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
   r = (0, v.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;

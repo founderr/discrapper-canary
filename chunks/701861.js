@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(703656),
   E = n(592125),
   h = n(131951),
-  I = n(51144),
-  m = n(321488),
+  m = n(51144),
+  I = n(321488),
   g = n(417183),
   p = n(825682),
   T = n(170245),
@@ -65,7 +65,7 @@ children: [
     action: () => {
       (0, o.openModal)(e => (0, i.jsx)(o.ConfirmModal, {
         header: C.Z.Messages.REMOVE_FRIEND_TITLE.format({
-          name: I.ZP.getName(t)
+          name: m.ZP.getName(t)
         }),
         confirmText: C.Z.Messages.REMOVE_FRIEND,
         cancelText: C.Z.Messages.CANCEL,
@@ -74,7 +74,7 @@ children: [
         children: (0, i.jsx)(o.Text, {
           variant: 'text-md/normal',
           children: C.Z.Messages.REMOVE_FRIEND_BODY.format({
-            name: I.ZP.getName(t)
+            name: m.ZP.getName(t)
           })
         })
       }));
@@ -129,13 +129,13 @@ return (0, i.jsx)(g.Z, {
       (0, i.jsxs)('div', {
         className: N.actions,
         children: [
-          (0, i.jsx)(m.Z, {
+          (0, i.jsx)(I.Z, {
             icon: o.ChatIcon,
             tooltip: C.Z.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
           }),
-          (0, i.jsx)(m.Z, {
+          (0, i.jsx)(I.Z, {
             icon: o.MoreVerticalIcon,
             tooltip: C.Z.Messages.MORE,
             onClick: this.handleOpenActionsMenu,

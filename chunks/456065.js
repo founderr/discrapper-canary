@@ -14,7 +14,7 @@ function E(e) {
 function h() {
   return !0;
 }
-class I extends(i = l.ZP.Store) {
+class m extends(i = l.ZP.Store) {
   initialize() {
 this.waitFor(d.Z, c.Z), this.syncWith([c.Z], h);
   }
@@ -22,12 +22,12 @@ this.waitFor(d.Z, c.Z), this.syncWith([c.Z], h);
 return !!e.hasFeature(u.oNc.LINKED_TO_HUB) && !_ && !0;
   }
 }
-r = 'HubLinkNoticeStore', (s = 'displayName') in(a = I) ? Object.defineProperty(a, s, {
+r = 'HubLinkNoticeStore', (s = 'displayName') in(a = m) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = new I(o.Z, {
+}) : a[s] = r, t.Z = new m(o.Z, {
   CONNECTION_OPEN: function(e) {
 for (let t of e.guilds)
   if (E(t.id))

@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(176881),
   E = n(318885),
   h = n(358221),
-  I = n(710845),
-  m = n(581567),
+  m = n(710845),
+  I = n(581567),
   g = n(594190),
   p = n(38618),
   T = n(501640),
@@ -148,11 +148,11 @@ if (e.runningGame !== L && null != L && !L.isLauncher) {
           gameId: r,
           exe: _,
           distributor: E
-        } = (0, m.G8)(L);
+        } = (0, I.G8)(L);
       w.default.track(F.rMx.LAUNCH_GAME, {
         game: i,
         game_id: r,
-        verified: null != e && (0, m.vp)(_, null == e ? void 0 : e.executables),
+        verified: null != e && (0, I.vp)(_, null == e ? void 0 : e.executables),
         elevated: L.elevated,
         is_launcher: null !== (t = null == L ? void 0 : L.isLauncher) && void 0 !== t && t,
         game_platform: F.M7m.DESKTOP,
@@ -175,7 +175,7 @@ if (e.runningGame !== L && null != L && !L.isLauncher) {
       }), null != _ && g.ZP.addExecutableTrackedByAnalytics(_);
     }, 10000), null != L.name && null != R && Z.Z.shouldReport(L.name)) {
     let e = L.name;
-    r.Z.identifyGame(R, e).then(e => r.Z.reportUnverifiedGame(e)).catch(e => new I.Z('AutoAnalytics').error('Cannot identify game', e));
+    r.Z.identifyGame(R, e).then(e => r.Z.reportUnverifiedGame(e)).catch(e => new m.Z('AutoAnalytics').error('Cannot identify game', e));
   }
 }
 if ((e.videoEnabled !== T || e.isScreenSharing !== C) && null != a) {
@@ -276,7 +276,7 @@ return null != u && null != c && null !== (t = null === (e = L.ZP.getMember(c, u
   }, [
 u,
 c
-  ]), E = (0, s.e7)([G.ZP], () => G.ZP.getState().section, []), I = (0, s.e7)([U.Z], () => U.Z.getHomeLink(), []), m = (0, s.e7)([p.Z], () => p.Z.isConnected(), []), [S, f] = (0, s.Wu)([R.Z], () => [
+  ]), E = (0, s.e7)([G.ZP], () => G.ZP.getState().section, []), m = (0, s.e7)([U.Z], () => U.Z.getHomeLink(), []), I = (0, s.e7)([p.Z], () => p.Z.isConnected(), []), [S, f] = (0, s.Wu)([R.Z], () => [
 R.Z.isVideoEnabled(),
 R.Z.isScreenSharing()
   ], []), N = (0, s.e7)([D.Z], () => D.Z.getPrimaryActivity(), []), A = (0, s.e7)([g.ZP], () => g.ZP.getCurrentGameForAnalytics(), []), Z = (0, T.Z)(c), x = (0, s.e7)([C.Z], () => C.Z.getMessageRequestsCount(), []), b = {
@@ -284,8 +284,8 @@ selectedChannelId: t,
 isNSFWChannel: r,
 selectedGuildId: c,
 friendsTabSection: E,
-homeLink: I,
-connected: m,
+homeLink: m,
+connected: I,
 videoEnabled: S,
 isScreenSharing: f,
 voiceChannelId: null == l ? void 0 : l.id,

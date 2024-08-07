@@ -16,7 +16,7 @@ var i = n(278074),
   u = n(689938);
 
 function c(e) {
-  return (0, i.EQ)(e).when(o.dX, () => u.Z.Messages.USER_ACTIVITY_CLEAR_GAME_HISTORY).when(o.r5, () => u.Z.Messages.USER_ACTIVITY_CLEAR_WATCH_HISTORY).when(o.kx, () => u.Z.Messages.USER_ACTIVITY_CLEAR_LISTENING_HISTORY).otherwise(() => null);
+  return (0, i.EQ)(e).when(o.dX, () => u.Z.Messages.USER_ACTIVITY_CLEAR_GAME_HISTORY).when(o.y0, () => u.Z.Messages.USER_ACTIVITY_CLEAR_WATCH_HISTORY).when(o.dU, () => u.Z.Messages.USER_ACTIVITY_CLEAR_LISTENING_HISTORY).otherwise(() => null);
 }
 
 function d(e) {

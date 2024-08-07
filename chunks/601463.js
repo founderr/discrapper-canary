@@ -20,8 +20,8 @@ setSigned: u,
 sidebarWidth: _,
 windowWidth: E,
 transition: h,
-brandPrimaryColor: I
-  } = e, m = a.useMemo(() => (E - _) / 2, [
+brandPrimaryColor: m
+  } = e, I = a.useMemo(() => (E - _) / 2, [
 _,
 E
   ]);
@@ -39,12 +39,12 @@ children: [
         40,
         0
       ]).to(e => 'translateY('.concat(e, 'px)')),
-      width: m
+      width: I
     },
     children: (0, i.jsxs)('div', {
       className: d.sidebarLeftDecoration,
       style: {
-        width: m
+        width: I
       },
       children: [
         (0, i.jsx)(r.Heading, {
@@ -68,7 +68,7 @@ children: [
       signed: n,
       onSignCharter: e => null == u ? void 0 : u(e),
       signHintPosition: l.p.RIGHT,
-      primaryColor: I,
+      primaryColor: m,
       className: d.charterScroll,
       fullHeight: !0,
       showDisclaimer: !0

@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(692547),
   d = n(477690),
   h = n(481060),
-  m = n(2052),
-  p = n(906732),
+  p = n(2052),
+  m = n(906732),
   _ = n(194082),
   f = n(484459),
   E = n(594174),
@@ -63,7 +63,7 @@ let t, s, {
   R = (0, I.Wc)(r),
   {
     analyticsLocations: j
-  } = (0, p.ZP)(),
+  } = (0, m.ZP)(),
   L = null != (0, x.Z)(r);
 try {
   t = (0, I.nG)(R);
@@ -78,7 +78,7 @@ try {
 let P = t || s,
   {
     location: O
-  } = (0, m.O)(),
+  } = (0, p.O)(),
   y = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
   D = o && !C.ZP.isPremium(y, N.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
   k = a.useCallback(() => {
@@ -155,9 +155,9 @@ isUpsellEnabled: s = !0,
 size: o,
 className: c,
 premiumIndicator: u
-  } = e, [d, m] = a.useState(!1), p = (0, I.Wc)(t), {
+  } = e, [d, p] = a.useState(!1), m = (0, I.Wc)(t), {
 reducedMotion: E
-  } = a.useContext(h.AccessibilityPreferencesContext), g = n && null != p;
+  } = a.useContext(h.AccessibilityPreferencesContext), g = n && null != m;
   a.useEffect(() => {
 (0, f.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
   dispatchWait: !0
@@ -193,7 +193,7 @@ return (0, i.jsxs)('div', {
         shape: h.BadgeShapes.ROUND_LEFT,
         isUpsellEnabled: s,
         didTrackUpsellViewed: d,
-        setDidTrackUpsellViewed: m,
+        setDidTrackUpsellViewed: p,
         premiumIndicator: u
       })
     }) : null),

@@ -39,7 +39,7 @@ settingsType: t
   c.aj[t].loadIfNecessary();
 }
 
-function I(e) {
+function m(e) {
   let {
 state: t
   } = e;
@@ -49,6 +49,6 @@ null != d.Z.getFullState()[Number(t)].editInfo.timeout && (e.logger.log('Trigger
 }
 t.Z = {
   init() {
-o.Z[u.yP.PRELOADED_USER_SETTINGS] = l.Z, o.Z[u.yP.FRECENCY_AND_FAVORITES_SETTINGS] = r.Z, s.Z.subscribe('CONNECTION_OPEN', _), s.Z.subscribe('USER_SETTINGS_PROTO_ENQUEUE_UPDATE', E), s.Z.subscribe('USER_SETTINGS_PROTO_LOAD_IF_NECESSARY', h), s.Z.subscribe('APP_STATE_UPDATE', I);
+o.Z[u.yP.PRELOADED_USER_SETTINGS] = l.Z, o.Z[u.yP.FRECENCY_AND_FAVORITES_SETTINGS] = r.Z, s.Z.subscribe('CONNECTION_OPEN', _), s.Z.subscribe('USER_SETTINGS_PROTO_ENQUEUE_UPDATE', E), s.Z.subscribe('USER_SETTINGS_PROTO_LOAD_IF_NECESSARY', h), s.Z.subscribe('APP_STATE_UPDATE', m);
   }
 };

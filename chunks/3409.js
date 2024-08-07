@@ -861,7 +861,7 @@ default:
   sideMargin: 20,
   children: a
 }),
-e6 = eP === f.h8.PAYMENT_TYPE && 0 === p.length ? null : t;
+e5 = eP === f.h8.PAYMENT_TYPE && 0 === p.length ? null : t;
   return H ? (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)(L.Z, {
@@ -875,7 +875,7 @@ children: [
     children: e7
   }),
   (0, s.jsx)(O.O3, {
-    children: e6
+    children: e5
   })
 ]
   }) : (0, s.jsx)(B.Z, {
@@ -885,7 +885,7 @@ paymentError: N.paymentError,
 header: x,
 hideBreadcrumbs: U,
 body: e7,
-footer: e6
+footer: e5
   });
 }
 

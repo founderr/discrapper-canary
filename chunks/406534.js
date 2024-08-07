@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(367907),
   d = n(858644),
   h = n(600084),
-  m = n(62764),
-  p = n(79712),
+  p = n(62764),
+  m = n(79712),
   _ = n(736052),
   f = n(359110),
   E = n(359119),
@@ -107,8 +107,8 @@ function et(e) {
 eu = j.default.getCurrentUser(),
 ed = () => es.isInitialized() || d.ready,
 eh = (0, w.$)(r),
-em = d.length > 0 && (null === (t = d.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(r)),
-ep = (0, o.ts)(r),
+ep = d.length > 0 && (null === (t = d.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(r)),
+em = (0, o.ts)(r),
 e_ = (0, s.e7)([v.Z], () => v.Z.shouldShowTopicsBar() && !ec),
 ef = (0, I.P)(r.id, Q.zr),
 eE = (0, g.z)(r.id, Q.zr),
@@ -128,7 +128,7 @@ eC = function(e, t) {
     channel: e
   }) : null;
 }(r, null != ef ? ef : eE),
-eI = r.isForumPost() && !em ? (0, i.jsx)(m.Z, {
+eI = r.isForumPost() && !ep ? (0, i.jsx)(p.Z, {
   postId: r.id
 }) : null,
 ex = (0, _.Z)(r.id);
@@ -152,7 +152,7 @@ ev = ei.map((e, t) => {
     }, 'divider-'.concat(null !== (a = null !== (n = e.contentKey) && void 0 !== n ? n : e.unreadId) && void 0 !== a ? a : t));
   }
   if (e.type === X.ys_.FORUM_POST_ACTION_BAR)
-    return (0, i.jsx)(m.Z, {
+    return (0, i.jsx)(p.Z, {
       parentChannelId: r.parent_id,
       postId: r.id,
       isLastItem: t + 1 === ei.length,
@@ -228,7 +228,7 @@ let e, t;
 let a = b.ZP.getOldestUnreadTimestamp(r.id),
   s = 0 !== a ? a : O.default.extractTimestamp(r.id),
   l = (0, L.KC)(new Date(), new Date(s));
-if (b.ZP.isEstimated(r.id) ? (e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = J.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = l ? J.Z.Messages.NEW_MESSAGES : J.Z.Messages.NEW_MESSAGES_WITH_DATE, t = J.Z.Messages.NEW_MESSAGES_SUMMARIES), ep && (0, o.tW)(r) && eg.includes(K.E.SUMMARIES)) {
+if (b.ZP.isEstimated(r.id) ? (e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = J.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = l ? J.Z.Messages.NEW_MESSAGES : J.Z.Messages.NEW_MESSAGES_WITH_DATE, t = J.Z.Messages.NEW_MESSAGES_SUMMARIES), em && (0, o.tW)(r) && eg.includes(K.E.SUMMARIES)) {
   let a = b.ZP.ackMessageId(r.id),
     l = (0, S.q)(r.id, b.ZP.getOldestUnreadMessageId(r.id));
   if ((0, u.yw)(X.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
@@ -257,7 +257,7 @@ if (b.ZP.isEstimated(r.id) ? (e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.
           t.format({
             count: B
           }),
-          (0, i.jsx)(p.Z, {
+          (0, i.jsx)(m.Z, {
             style: {
               paddingLeft: 8,
               paddingRight: 8
@@ -296,7 +296,7 @@ if (b.ZP.isEstimated(r.id) ? (e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.
             t.format({
               count: B
             }),
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(m.Z, {
               style: {
                 paddingLeft: 8,
                 paddingRight: 8

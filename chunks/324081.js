@@ -20,8 +20,8 @@ var s = n(120356),
   T = n(199902),
   h = n(592125),
   N = n(430824),
-  C = n(158776),
-  f = n(594174),
+  f = n(158776),
+  C = n(594174),
   p = n(689938),
   g = n(444771);
 let S = {
@@ -71,20 +71,20 @@ function R(e) {
 channel: t,
 gotoChannel: n
   } = e;
-  return t.isPrivate() ? (0, i.jsx)(x, {
+  return t.isPrivate() ? (0, i.jsx)(O, {
 channel: t,
 gotoChannel: n
-  }) : (0, i.jsx)(O, {
+  }) : (0, i.jsx)(x, {
 channel: t,
 gotoChannel: n
   });
 }
 
-function x(e) {
+function O(e) {
   let {
 channel: t,
 gotoChannel: n
-  } = e, s = (0, l.e7)([f.default], () => t.isDM() ? f.default.getUser(t.getRecipientId()) : null), a = null == s ? (0, u.x)(t) : s.getAvatarURL(void 0, 40);
+  } = e, s = (0, l.e7)([C.default], () => t.isDM() ? C.default.getUser(t.getRecipientId()) : null), a = null == s ? (0, u.x)(t) : s.getAvatarURL(void 0, 40);
   return (0, i.jsx)(o.Clickable, {
 onClick: n,
 tabIndex: -1,
@@ -97,7 +97,7 @@ children: (0, i.jsx)('img', {
   });
 }
 
-function O(e) {
+function x(e) {
   let {
 channel: t,
 gotoChannel: n
@@ -173,14 +173,14 @@ user: n,
 activities: s,
 applicationStream: a
   } = (0, l.cj)([
-f.default,
-C.Z,
+C.default,
+f.Z,
 T.Z
   ], () => {
-let e = f.default.getUser(t.getRecipientId());
+let e = C.default.getUser(t.getRecipientId());
 return {
   user: e,
-  activities: null != e ? C.Z.getActivities(e.id) : null,
+  activities: null != e ? f.Z.getActivities(e.id) : null,
   applicationStream: null != e ? T.Z.getAnyStreamForUser(e.id) : null
 };
   });

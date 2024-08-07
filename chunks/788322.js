@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(134432),
   E = n(451603),
   h = n(885714),
-  I = n(768581),
-  m = n(900849),
+  m = n(768581),
+  I = n(900849),
   g = n(556017),
   p = n(879484),
   T = n(26580),
@@ -47,7 +47,7 @@ memberCount: y,
 keywords: j
   } = s, [U, G] = a.useState(!1), [k, w] = a.useState(!1), {
 analyticsLocations: B
-  } = (0, c.ZP)(), H = I.ZP.getGuildDiscoverySplashURL({
+  } = (0, c.ZP)(), H = m.ZP.getGuildDiscoverySplashURL({
 id: R,
 splash: x,
 size: 240 * (0, _.x_)()
@@ -58,7 +58,7 @@ switch (e) {
   case f.BRd.LIGHT:
     return v;
 }
-  }(Z), F = null !== (t = I.ZP.getGuildIconURL({
+  }(Z), F = null !== (t = m.ZP.getGuildIconURL({
 id: R,
 icon: b,
 size: 32
@@ -185,7 +185,7 @@ children: [
                 discoveryTagStyle: T.B.ALT,
                 onTagClick: e => O(e, s.id),
                 tags: j,
-                section: m.P1.SEARCH
+                section: I.P1.SEARCH
               }),
               (0, i.jsxs)('div', {
                 className: N.memberInfo,

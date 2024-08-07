@@ -1,6 +1,6 @@
 n.d(t, {
   HU: function() {
-return I;
+return m;
   },
   KW: function() {
 return E;
@@ -59,7 +59,7 @@ handler: () => e => {
 }
   };
 
-function I(e) {
+function m(e) {
   let t = 'EMBEDDED_ACTIVITY_UPDATE',
 n = () => {
   e(_());

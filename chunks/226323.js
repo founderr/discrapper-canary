@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(484459),
   E = n(103575),
   h = n(314897),
-  I = n(131951),
-  m = n(51144),
+  m = n(131951),
+  I = n(51144),
   g = n(524484),
   p = n(689938),
   T = n(372844);
@@ -61,10 +61,10 @@ mute: N,
 deaf: A,
 serverMute: v,
 serverDeaf: Z
-  } = e, L = (0, l.e7)([I.Z], () => I.Z.isLocalMute(h.id)), O = (0, d.Z)({
+  } = e, L = (0, l.e7)([m.Z], () => m.Z.isLocalMute(h.id)), O = (0, d.Z)({
 userId: h.id,
 checkSoundSharing: !0
-  }), R = null !== (t = s.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(s.guild_id, 24), b = null != C ? C : m.ZP.getName(h), {
+  }), R = null !== (t = s.getGuildId()) && void 0 !== t ? t : void 0, x = h.getAvatarURL(s.guild_id, 24), b = null != C ? C : I.ZP.getName(h), {
 icon: P,
 colorize: M,
 getStatus: D
@@ -190,7 +190,7 @@ icon: (0, i.jsx)(u, {
   color: 'currentColor'
 }),
 focusProps: S
-  }), E = (0, l.e7)([h.default], () => h.default.getId(), []), [I, m] = function(e, t) {
+  }), E = (0, l.e7)([h.default], () => h.default.getId(), []), [m, I] = function(e, t) {
 let n = [];
 for (let i of e) {
   if (!(i.user.id === t || n.some(e => e.user.id === i.user.id))) {
@@ -206,7 +206,7 @@ return [
   n,
   !1
 ];
-  }(t, E), g = m && c ? t : I;
+  }(t, E), g = I && c ? t : m;
   return g.length <= 0 ? null : (0, i.jsx)(o.ScrollerThin, {
 className: r()(T.scroller, s),
 fade: !0,
@@ -232,7 +232,7 @@ children: (0, i.jsxs)('div', {
         serverDeaf: s.deaf
       }, t.id) : null;
     }),
-    m ? _ : null
+    I ? _ : null
   ]
 })
   });

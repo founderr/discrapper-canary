@@ -42,7 +42,7 @@ return (0, s.jsxs)('div', {
   ]
 });
   }),
-  I = e => {
+  m = e => {
 let {
   data: t,
   className: n
@@ -70,4 +70,4 @@ if (1 === t.type) {
 }
 throw Error('Unknown type');
   };
-I.Types = i, t.Z = I;
+m.Types = i, t.Z = m;

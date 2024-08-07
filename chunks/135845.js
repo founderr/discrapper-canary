@@ -23,11 +23,11 @@ function h(e) {
   let t, n, s, {
   invite: h,
   currentUserId: N,
-  guild: C,
-  onTransitionToInviteChannel: f,
+  guild: f,
+  onTransitionToInviteChannel: C,
   onAcceptInstantInvite: p
 } = e,
-g = null == C ? void 0 : C.id,
+g = null == f ? void 0 : f.id,
 S = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
 A = (0, r.e7)([u.Z], () => null != h && null != h.target_user ? u.Z.getActiveStreamForUser(h.target_user.id, g) : null, [
   h,
@@ -37,8 +37,8 @@ R = (0, r.e7)([u.Z], () => null != h && null != h.target_user ? u.Z.getStreamFor
   h,
   g
 ]),
-x = null != h && h.target_type === I.Iq.STREAM && null != h.target_user && null != A,
-O = null != h && null != R && null != h.channel && null != h.guild && R.channelId === h.channel.id && R.guildId === h.guild.id;
+O = null != h && h.target_type === I.Iq.STREAM && null != h.target_user && null != A,
+x = null != h && null != R && null != h.channel && null != h.guild && R.channelId === h.channel.id && R.guildId === h.guild.id;
   a()(null != h, 'Invite cannot be null');
   let {
 target_type: M,
@@ -47,23 +47,23 @@ target_user: v
   a()(M === I.Iq.STREAM && null != v, 'invalid streaming invite');
   let L = N === v.id,
 Z = h.state === E.r2o.ACCEPTING,
-P = null != C;
-  if (null == C) {
+P = null != f;
+  if (null == f) {
 if (null == h.guild)
   return (0, i.jsx)(_.Z, {});
-C = new c.ZP(h.guild);
+f = new c.ZP(h.guild);
   }
   let D = null != h.channel ? (0, o.jD)(h.channel) : null,
-b = x ? f : p;
-  P && !O ? s = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({
+b = O ? C : p;
+  P && !x ? s = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({
 name: v.username
-  }) : (t = m.Z.Messages.WATCH, n = l.Z.Button.Colors.GREEN, x && (t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING, n = l.Z.Button.Colors.PRIMARY), s = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({
+  }) : (t = m.Z.Messages.WATCH, n = l.Z.Button.Colors.GREEN, O && (t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING, n = l.Z.Button.Colors.PRIMARY), s = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({
 name: v.username
   }));
-  let j = S === C.id && null != D ? (0, i.jsx)(l.Z.Channel, {
+  let j = S === f.id && null != D ? (0, i.jsx)(l.Z.Channel, {
 channel: D
   }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
-guildName: C.name
+guildName: f.name
   });
   return (0, i.jsxs)(l.Z, {
 children: [
@@ -76,21 +76,21 @@ children: [
         className: T.headerLine,
         children: [
           (0, i.jsx)(l.Z.Icon, {
-            guild: C,
-            onClick: P && O ? b : void 0
+            guild: f,
+            onClick: P && x ? b : void 0
           }),
           (0, i.jsx)(l.Z.Info, {
             title: s,
-            onClick: P && O ? b : void 0,
+            onClick: P && x ? b : void 0,
             children: j
           })
         ]
       }),
-      O ? (0, i.jsx)(l.Z.Button, {
-        disabled: P && !O,
+      x ? (0, i.jsx)(l.Z.Button, {
+        disabled: P && !x,
         onClick: b,
         submitting: Z,
-        isDisabled: x && O,
+        isDisabled: O && x,
         color: n,
         children: t
       }) : null

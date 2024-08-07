@@ -1,6 +1,6 @@
 if (n.d(t, {
 $: function() {
-  return m;
+  return p;
 },
 Q: function() {
   return h;
@@ -37,7 +37,7 @@ isUserOver: t.isOver() && t.canDrop()
   }))(e);
 }
 
-function m(e) {
+function p(e) {
   return (0, a.E)(d, {
 canDrag(e) {
   let {

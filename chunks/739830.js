@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 }), n(47120);
 var i = n(735250),
@@ -13,12 +13,12 @@ var i = n(735250),
   u = n(124368),
   d = n(981631),
   h = n(689938),
-  m = n(836134);
+  p = n(836134);
 
-function p(e) {
+function m(e) {
   let {
 channel: t
-  } = e, n = (0, o.B)(t), [p, _] = a.useState(!1), f = (0, s.useRedesignIconContext)().enabled;
+  } = e, n = (0, o.B)(t), [m, _] = a.useState(!1), f = (0, s.useRedesignIconContext)().enabled;
   a.useEffect(() => {
 let e = () => _(!0);
 return r.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
@@ -27,7 +27,7 @@ return r.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
   }, []);
   let E = h.Z.Messages.NOTIFICATION_SETTINGS;
   return (0, i.jsx)(s.Popout, {
-shouldShow: p,
+shouldShow: m,
 animation: s.Popout.Animation.NONE,
 position: 'bottom',
 align: 'right',
@@ -48,7 +48,7 @@ children: (e, t) => {
     onClick: () => _(e => !e),
     tooltip: a ? null : E,
     icon: n === u.iN.NO_MESSAGES ? s.BellSlashIcon : s.BellIcon,
-    foreground: n !== u.iN.NO_MESSAGES || f ? null : m.strikethrough,
+    foreground: n !== u.iN.NO_MESSAGES || f ? null : p.strikethrough,
     'aria-label': E,
     selected: a
   });

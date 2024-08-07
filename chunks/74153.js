@@ -12,7 +12,7 @@ var i = n(735250),
   E = n(981631),
   h = n(287809);
 
-function I(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -20,7 +20,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class m extends a.PureComponent {
+class I extends a.PureComponent {
   componentDidMount() {
 let {
   sku: e,
@@ -52,7 +52,7 @@ return (0, i.jsx)(r.Breadcrumbs, {
 });
   }
   constructor(...e) {
-super(...e), I(this, 'handleClick', e => {
+super(...e), m(this, 'handleClick', e => {
   let {
     sku: t
   } = this.props;
@@ -65,7 +65,7 @@ super(...e), I(this, 'handleClick', e => {
       }
     }
   });
-}), I(this, 'renderCustomBreadcrumb', (e, t) => (0, i.jsx)(d.Z.Title, {
+}), m(this, 'renderCustomBreadcrumb', (e, t) => (0, i.jsx)(d.Z.Title, {
   className: t ? null : h.breadcrumb,
   muted: !t,
   children: e.label
@@ -84,4 +84,4 @@ primarySkuId: i,
 isFetchingPrimarySku: null != i && _.Z.isFetching(i),
 primarySku: null != i ? _.Z.get(i) : null
   };
-})(m));
+})(I));

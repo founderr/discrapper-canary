@@ -87,7 +87,7 @@ SECTION_NO_RESULTS: {
   })
 }
   }),
-  I = e => {
+  m = e => {
 let {
   theme: t
 } = e, n = u.Z.Messages.FRIENDS_EMPTY_STATE_ALL, i = h.SECTION_ALL;
@@ -108,7 +108,7 @@ return (0, a.jsx)(s.Fragment, {
   })
 });
   };
-class m extends s.PureComponent {
+class I extends s.PureComponent {
   render() {
 let {
   type: e,
@@ -138,7 +138,7 @@ let {
 return e === d.pJs.ADD_FRIEND ? (0, a.jsx)(r.Z.div, {
   className: _.friendsEmpty,
   style: i,
-  children: (0, a.jsx)(I, {
+  children: (0, a.jsx)(m, {
     theme: n
   })
 }) : (0, a.jsx)(r.Z.div, {
@@ -178,4 +178,4 @@ t.Z = l.ZP.connectStores([c.Z], () => ({
   theme: c.Z.theme
 }), {
   forwardRef: !0
-})(m);
+})(I);

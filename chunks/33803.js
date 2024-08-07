@@ -19,15 +19,15 @@ var i = n(735250),
   T = n(825829),
   h = n(226192),
   N = n(36459),
-  C = n(336197),
-  f = n(103575),
+  f = n(336197),
+  C = n(103575),
   p = n(496675),
   g = n(594174),
   S = n(5192),
   A = n(51144),
   R = n(937889),
-  x = n(739566),
-  O = n(779125),
+  O = n(739566),
+  x = n(779125),
   M = n(890410),
   v = n(464891),
   L = n(507418),
@@ -71,7 +71,7 @@ showUsernamePopout: r
 function w(e, t) {
   return s.useMemo(() => {
 if (null != t)
-  return n => (0, i.jsx)(f.Z, {
+  return n => (0, i.jsx)(C.Z, {
     ...n,
     location: 'AutomodFlagToChannel',
     userId: t.id,
@@ -208,7 +208,7 @@ let z = s.memo(function(e) {
 } = e,
 o = F(n, s),
 c = w(s, n.author),
-u = (0, x.ZP)(n),
+u = (0, O.ZP)(n),
 d = (0, v.CF)({
   message: n,
   channel: s,
@@ -221,7 +221,7 @@ E = g.default.getUser(l),
 I = F(n, s),
 m = w(s, E);
   if (null != E) {
-let e = (0, x.ij)(E, s),
+let e = (0, O.ij)(E, s),
   i = (0, v.CF)({
     message: n,
     channel: s,
@@ -239,7 +239,7 @@ tag: 'span',
 className: G.spanCorrection,
 children: (0, T.Mq)(n, a, () => (0, i.jsx)('div', {
   className: G.channelNameContainer,
-  children: (0, i.jsx)(O.Z, {
+  children: (0, i.jsx)(x.Z, {
     channel: a,
     className: G.channelName,
     openChatWithoutConnecting: !0
@@ -257,15 +257,15 @@ channel: l
   } = e, {
 avatarSrc: o,
 eventHandlers: {
-  onMouseEnter: f,
+  onMouseEnter: C,
   onMouseLeave: g
 }
   } = (0, D.m)(!0), {
 onFocus: S,
 ...A
   } = (0, c.JA)(null != t ? t : ''), {
-isFocused: x,
-handleFocus: O,
+isFocused: O,
+handleFocus: x,
 handleBlur: L
   } = (0, Z.bb)(S), P = (0, d.e7)([E.Z], () => E.Z.keyboardModeEnabled), j = (0, d.e7)([p.Z], () => p.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]), {
 ruleName: w,
@@ -296,7 +296,7 @@ W,
 l
   ]), eo = s.useCallback(e => {
 if (null != J && null != Y)
-  e.stopPropagation(), e.preventDefault(), (0, C.Z)(U.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, J));
+  e.stopPropagation(), e.preventDefault(), (0, f.Z)(U.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, J));
   }, [
 Y,
 J
@@ -307,7 +307,7 @@ l,
 a.id
   ]), eu = (0, B.L9)(Number($)), ed = null != ee, e_ = j && null != J && (null == et || !et.actions.hasOwnProperty(m.d.DELETE_USER_MESSAGE));
   return (0, i.jsx)('div', {
-onMouseEnter: f,
+onMouseEnter: C,
 onMouseLeave: g,
 children: (0, i.jsx)(b.Z, {
   className: r()(G.mainContainer, {
@@ -369,7 +369,7 @@ children: (0, i.jsx)(b.Z, {
           hideTimestamp: !0,
           className: r()(G.embedCard, {
             [G.compact]: n,
-            [G.selected]: ea || P && x,
+            [G.selected]: ea || P && O,
             [G.isClickable]: null != J && null != Y
           }),
           childrenAccessories: (0, i.jsxs)(i.Fragment, {
@@ -446,7 +446,7 @@ children: (0, i.jsx)(b.Z, {
           }),
           popoutProps: er,
           zalgo: !0,
-          onFocus: O,
+          onFocus: x,
           onBlur: L,
           onClick: eo
         })

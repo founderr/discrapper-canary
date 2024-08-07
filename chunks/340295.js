@@ -8,14 +8,14 @@ var i = n(735250),
   u = n(27457),
   d = n(354459),
   h = n(689938),
-  m = n(272956);
+  p = n(272956);
 t.Z = function(e) {
   var t, n;
   let {
-participants: p,
+participants: m,
 channel: _,
 hasConnectPermission: f
-  } = e, E = p.filter(d.Io), g = (0, o.J)(_.guild_id), C = a.useCallback(() => {
+  } = e, E = m.filter(d.Io), g = (0, o.J)(_.guild_id), C = a.useCallback(() => {
 g ? (0, r.hk)(_.guild_id, () => l.default.selectVoiceChannel(_.id)) : l.default.selectVoiceChannel(_.id);
   }, [
 _.id,
@@ -23,17 +23,17 @@ _.guild_id,
 g
   ]), I = 4 === E.length ? 2 : 3;
   return (0, i.jsxs)('div', {
-className: m.container,
+className: p.container,
 children: [
   (0, i.jsx)('div', {
-    className: m.tiles,
+    className: p.tiles,
     style: {
       maxWidth: 168 * I
     },
     children: E.slice(0, 5).map(e => (0, i.jsx)(u.ZP, {
       participant: e,
       channel: _,
-      className: m.tile,
+      className: p.tile,
       paused: !0,
       inCall: !0,
       noVideoRender: !0,
@@ -42,12 +42,12 @@ children: [
     }, e.id))
   }),
   (0, i.jsx)(s.Heading, {
-    className: m.channelName,
+    className: p.channelName,
     variant: 'heading-xxl/semibold',
     children: _.name
   }),
   (0, i.jsx)('div', {
-    className: m.participantsRow,
+    className: p.participantsRow,
     children: (0, i.jsx)(s.Text, {
       color: 'header-secondary',
       variant: 'text-sm/normal',
@@ -65,7 +65,7 @@ children: [
   }),
   (0, i.jsx)(s.Button, {
     disabled: !f,
-    className: m.joinButton,
+    className: p.joinButton,
     color: f ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
     onClick: C,
     size: s.Button.Sizes.MEDIUM,

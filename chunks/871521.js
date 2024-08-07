@@ -13,20 +13,20 @@ var i = n(735250),
   u = n(40851),
   d = n(484459),
   h = n(103575),
-  m = n(237583),
-  p = n(768581),
+  p = n(237583),
+  m = n(768581),
   _ = n(121866);
 
 function f(e) {
   let {
 channel: t,
 speaker: s,
-className: m
+className: p
   } = e, f = (0, u.bp)(), {
 reducedMotion: E
   } = a.useContext(r.AccessibilityPreferencesContext), g = (0, c.Z)({
 userId: s.id
-  }), C = null != s.member ? (0, p.CA)(s.member) : null, I = e => {
+  }), C = null != s.member ? (0, m.CA)(s.member) : null, I = e => {
 (0, o.jW)(e, async () => {
   let {
     default: e
@@ -76,7 +76,7 @@ children: e => (0, i.jsx)(r.Tooltip, {
     children: (0, i.jsx)(r.Avatar, {
       src: null != C ? C : s.user.getAvatarURL(t.guild_id, 24),
       size: r.AvatarSizes.SIZE_24,
-      className: l()(_.avatar, m),
+      className: l()(_.avatar, p),
       'aria-label': s.userNick,
       isSpeaking: g && !E.enabled
     })
@@ -90,7 +90,7 @@ function E(e) {
 speakers: t,
 channel: n
   } = e;
-  return (0, i.jsx)(m.Z, {
+  return (0, i.jsx)(p.Z, {
 className: _.summary,
 guildId: n.guild_id,
 users: t,

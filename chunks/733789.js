@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(237583),
   E = n(51144),
   h = n(981631),
-  I = n(689938),
-  m = n(287644);
+  m = n(689938),
+  I = n(287644);
 
 function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -24,47 +24,47 @@ writable: !0
 }
 let p = {
   [h.AzA.NOW_PLAYING]: {
-single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
+single: (e, t) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
   user1: e.username,
   user1Hook: () => t(e)
 }),
-double: (e, t, n) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_DOUBLE.format({
+double: (e, t, n) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_DOUBLE.format({
   user1: e.username,
   user1Hook: () => n(e),
   user2: t.username,
   user2Hook: () => n(t)
 }),
-other: e => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_OTHER.format({
+other: e => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_OTHER.format({
   count: e
 })
   },
   [h.AzA.RECENTLY_PLAYED]: {
-single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_SINGLE.format({
+single: (e, t) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_SINGLE.format({
   user1: e.username,
   user1Hook: () => t(e)
 }),
-double: (e, t, n) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_DOUBLE.format({
+double: (e, t, n) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_DOUBLE.format({
   user1: e.username,
   user1Hook: () => n(e),
   user2: t.username,
   user2Hook: () => n(t)
 }),
-other: e => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_OTHER.format({
+other: e => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_OTHER.format({
   count: e
 })
   },
   [h.AzA.EVER_PLAYED]: {
-single: (e, t) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_SINGLE.format({
+single: (e, t) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_SINGLE.format({
   user1: e.username,
   user1Hook: () => t(e)
 }),
-double: (e, t, n) => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_DOUBLE.format({
+double: (e, t, n) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_DOUBLE.format({
   user1: e.username,
   user1Hook: () => n(e),
   user2: t.username,
   user2Hook: () => n(t)
 }),
-other: e => I.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_OTHER.format({
+other: e => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_OTHER.format({
   count: e
 })
   }
@@ -85,7 +85,7 @@ return (0, i.jsx)(l.Popout, {
   }),
   position: 'right',
   children: t => (0, i.jsx)('span', {
-    className: m.username,
+    className: I.username,
     ...t,
     children: e.username
   })
@@ -100,10 +100,10 @@ let {
   userInfo: a
 } = e;
 return 0 === a.length ? null : (0, i.jsxs)('div', {
-  className: r()(m.recommendationActivity, t),
+  className: r()(I.recommendationActivity, t),
   children: [
     (0, i.jsx)(_.Z, {
-      className: m.players,
+      className: I.players,
       users: a.map(e => {
         let {
           user: t
@@ -115,7 +115,7 @@ return 0 === a.length ? null : (0, i.jsxs)('div', {
       renderMoreUsers: this.renderPlayerOverflow
     }),
     (0, i.jsx)('div', {
-      className: m.description,
+      className: I.description,
       children: this.renderDescription(n, a)
     })
   ]
@@ -123,13 +123,13 @@ return 0 === a.length ? null : (0, i.jsxs)('div', {
   }
   constructor(...e) {
 super(...e), g(this, 'renderUserTooltip', (e, t, n) => (0, i.jsxs)('div', {
-  className: m.tooltip,
+  className: I.tooltip,
   children: [
     (0, i.jsx)('div', {
       children: E.ZP.getUserTag(e)
     }),
     (0, i.jsx)(c.ZP, {
-      className: m.tooltipTimestamp,
+      className: I.tooltipTimestamp,
       start: t,
       end: n,
       location: c.ZP.Locations.ACTIVITY_FEED
@@ -154,8 +154,8 @@ super(...e), g(this, 'renderUserTooltip', (e, t, n) => (0, i.jsxs)('div', {
         decoration: 'never'
       }),
       children: n => (0, i.jsx)(l.Avatar, {
-        className: r()(m.playerAvatar, {
-          [m.avatarMasked]: !a
+        className: r()(I.playerAvatar, {
+          [I.avatarMasked]: !a
         }),
         src: e.getAvatarURL(void 0, 32),
         'aria-label': e.username,
@@ -166,7 +166,7 @@ super(...e), g(this, 'renderUserTooltip', (e, t, n) => (0, i.jsxs)('div', {
     })
   }, e.id);
 }), g(this, 'renderPlayerOverflow', (e, t, n) => (0, i.jsx)('div', {
-  className: m.playerOverflow,
+  className: I.playerOverflow,
   children: e
 }, n));
   }

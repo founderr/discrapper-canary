@@ -11,12 +11,12 @@ var i = n(735250),
   _ = n(650233),
   E = n(981631),
   h = n(898625),
-  I = n(625994);
+  m = n(625994);
 t.Z = e => {
   let {
 guildId: t,
 inviteCode: n
-  } = e, [m, g] = a.useState(h.hO.INITIAL), [p, T] = a.useState(null != n);
+  } = e, [I, g] = a.useState(h.hO.INITIAL), [p, T] = a.useState(null != n);
   a.useEffect(() => {
 null != n && r.Z.resolveInvite(n, 'Hub').finally(() => T(!1));
   }, [n]);
@@ -33,19 +33,19 @@ t
 }, []),
 N = (0, u.gK)();
   return (0, i.jsx)('div', {
-className: I.page,
+className: m.page,
 children: (0, i.jsxs)(l.Z, {
   embedded: !0,
   splash: N,
-  waveState: m,
+  waveState: I,
   showLogo: !1,
   updateWaveState: C,
   children: [
     (0, i.jsx)('div', {
-      className: I.dragRegion
+      className: m.dragRegion
     }),
     (0, i.jsx)('div', {
-      className: I.contentWrapper,
+      className: m.contentWrapper,
       children: !p && (0, i.jsx)(_.HubEmailConnectionModalView, {
         invite: S
       })

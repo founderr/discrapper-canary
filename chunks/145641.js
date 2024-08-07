@@ -21,15 +21,15 @@ if (null == s || null == a)
   return null;
 let r = s[a];
 return null == r ? null : n(r);
-  }, I = (0, l.e7)([c.Z], () => c.Z.keyboardModeEnabled), m = a.useRef(null), g = a.useCallback(() => new Promise(e => {
-let t = m.current;
+  }, m = (0, l.e7)([c.Z], () => c.Z.keyboardModeEnabled), I = a.useRef(null), g = a.useCallback(() => new Promise(e => {
+let t = I.current;
 if (null == t)
   return e();
 t.scrollToTop({
   callback: () => requestAnimationFrame(() => e())
 });
   }), []), p = a.useCallback(() => new Promise(e => {
-let t = m.current;
+let t = I.current;
 if (null == t)
   return e();
 t.scrollToBottom({
@@ -37,7 +37,7 @@ t.scrollToBottom({
 });
   }), []), T = a.useCallback(e => {
 let t = document.querySelector(e),
-  n = m.current;
+  n = I.current;
 null != t && null != n && n.scrollIntoViewNode({
   node: t,
   padding: 8,
@@ -45,7 +45,7 @@ null != t && null != n && n.scrollIntoViewNode({
 });
   }, []), S = (0, s.ZP)({
 id: 'people-list',
-isEnabled: I,
+isEnabled: m,
 scrollToStart: g,
 scrollToEnd: p,
 setFocus: T
@@ -61,7 +61,7 @@ children: (0, i.jsx)(r.SJ, {
     return (0, i.jsx)(o.ListAuto, {
       ref: e => {
         var t;
-        m.current = e, n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
+        I.current = e, n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
       },
       sectionHeight: E,
       renderRow: h,

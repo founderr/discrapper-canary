@@ -16,17 +16,17 @@ var a = n(120356),
   _ = n(435064),
   E = n(39604),
   h = n(356659),
-  I = n(981631),
-  m = n(332325),
+  m = n(981631),
+  I = n(332325),
   g = n(689938),
   p = n(530011);
 
 function T(e) {
-  (0, o.Z)(m.Z.CLIPS), (0, E.UW)(e);
+  (0, o.Z)(I.Z.CLIPS), (0, E.UW)(e);
 }
 
 function S() {
-  let e = (0, r.e7)([c.Z], () => c.Z.getKeybindForAction(I.kg4.SAVE_CLIP));
+  let e = (0, r.e7)([c.Z], () => c.Z.getKeybindForAction(m.kg4.SAVE_CLIP));
   if (null == e)
 return (0, i.jsx)(i.Fragment, {
   children: g.Z.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
@@ -61,7 +61,7 @@ bodyCopy: () => (0, i.jsxs)(i.Fragment, {
 }),
 buttonCopy: () => g.Z.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
 ctaOnClick: () => {
-  window.open(d.Z.getArticleURL(I.BhN.CLIPS), '_blank');
+  window.open(d.Z.getArticleURL(m.BhN.CLIPS), '_blank');
 },
 containerClass: p.container
   },
@@ -101,11 +101,11 @@ clipsError: _.Z.getLastClipsError()
   ctaOnClick: c,
   textColor: d,
   buttonColor: u,
-  buttonLook: I,
-  containerClass: m
+  buttonLook: m,
+  containerClass: I
 } = f[a];
   return (0, i.jsxs)('div', {
-className: m,
+className: I,
 children: [
   (0, i.jsx)(l.Text, {
     color: d,
@@ -127,7 +127,7 @@ children: [
     onClick: c,
     className: p.buttonCTA,
     color: u,
-    look: I,
+    look: m,
     fullWidth: !0,
     size: l.Button.Sizes.SMALL,
     children: o()

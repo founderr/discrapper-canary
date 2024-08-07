@@ -15,31 +15,31 @@ var i = n(735250),
   _ = n(125631),
   E = n(981631),
   h = n(689938),
-  I = n(961517);
+  m = n(961517);
 
-function m(e, t, n) {
+function I(e, t, n) {
   return (0, i.jsxs)('button', {
-className: I.container,
+className: m.container,
 onClick: n,
 children: [
   'function' == typeof e ? (0, i.jsx)('div', {
-    className: I.icon,
+    className: m.icon,
     children: (0, i.jsx)(e, {
-      className: I.__invalid_iconInner,
+      className: m.__invalid_iconInner,
       color: s.tokens.colors.WHITE.css
     })
   }) : (0, i.jsx)('img', {
-    className: I.icon,
+    className: m.icon,
     alt: '',
     src: e
   }),
   (0, i.jsx)(s.Text, {
-    className: I.text,
+    className: m.text,
     variant: 'text-md/medium',
     children: t
   }),
   (0, i.jsx)(_.Z, {
-    className: I.arrow
+    className: m.arrow
   })
 ]
   }, t);
@@ -55,24 +55,24 @@ t = e => {
   return (0, i.jsxs)(a.Fragment, {
 children: [
   (0, i.jsx)('header', {
-    className: I.header,
+    className: m.header,
     children: (0, i.jsx)(s.FormTitle, {
       tag: 'h2',
-      className: I.title,
+      className: m.title,
       children: h.Z.Messages.ADD_FRIEND_MAKE_FRIENDS
     })
   }),
   (0, i.jsxs)('div', {
-    className: I.grid,
+    className: m.grid,
     children: [
-      e.map(e => m(u.ZP.getGuildIconURL({
+      e.map(e => I(u.ZP.getGuildIconURL({
         id: e.id,
         icon: e.icon,
         size: 240
       }), e.name, () => {
         t(e.id);
       })),
-      m(s.CompassIcon, h.Z.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+      I(s.CompassIcon, h.Z.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
         (0, r.AQ)(), d.default.track(E.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, l.uL)(E.Z5c.GUILD_DISCOVERY);
       })
     ]

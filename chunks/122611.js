@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(360453),
   E = n(377743),
   h = n(834743),
-  I = n(862099),
-  m = n(704631),
+  m = n(862099),
+  I = n(704631),
   g = n(819792),
   p = n(919285),
   T = n(118470),
@@ -37,8 +37,8 @@ function M(e) {
   var t;
   let {
 guild: n
-  } = e, [_, I] = a.useState(null !== (t = l.K.get(R.Iv)) && void 0 !== t ? t : 0), g = e => {
-l.K.set(R.Iv, e), I(e);
+  } = e, [_, m] = a.useState(null !== (t = l.K.get(R.Iv)) && void 0 !== t ? t : 0), g = e => {
+l.K.set(R.Iv, e), m(e);
   }, {
 defaultGameId: p,
 enableClanCreation: T
@@ -67,7 +67,7 @@ children: e => {
   }, l = (() => {
     switch (t) {
       case r.z.CHANNEL_NOTICE_HUBLINK:
-        return (0, i.jsx)(m.Z, {
+        return (0, i.jsx)(I.Z, {
           guild: n,
           markAsDismissed: s
         });
@@ -136,7 +136,7 @@ case O.R.MAX_MEMBER_COUNT:
     guild: t
   });
 case O.R.GUILD_LIVE_CHANNEL:
-  return (0, i.jsx)(I.ZP, {
+  return (0, i.jsx)(m.ZP, {
     guild: t
   });
 case O.R.GUILD_MFA_WARNING:

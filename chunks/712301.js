@@ -19,8 +19,8 @@ var r = l(442837),
   _ = l(699516),
   f = l(594174),
   g = l(979651),
-  m = l(934415),
-  I = l(700785),
+  I = l(934415),
+  m = l(700785),
   R = l(981631),
   N = l(689938);
 
@@ -48,11 +48,11 @@ return null;
 let {
   channel: l
 } = n;
-return l.id !== A.id && (C ? M.Z.can(R.Plq.CONNECT, l) && !(0, m.rY)(l, g.Z, E.Z) : M.Z.can(R.Plq.MOVE_MEMBERS, l) && (M.Z.can(R.Plq.CONNECT, l) || I.BT({
+return l.id !== A.id && (C ? M.Z.can(R.Plq.CONNECT, l) && !(0, I.rY)(l, g.Z, E.Z) : M.Z.can(R.Plq.MOVE_MEMBERS, l) && (M.Z.can(R.Plq.CONNECT, l) || m.BT({
   permission: R.Plq.CONNECT,
   user: e,
   context: l
-})) && !(0, m.rY)(l, g.Z, E.Z));
+})) && !(0, I.rY)(l, g.Z, E.Z));
   });
   return 0 === O.length ? null : (0, t.jsx)(i.MenuItem, {
 id: 'voice-move',

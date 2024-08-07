@@ -16,8 +16,8 @@ var a = n(704215),
   _ = n(474936),
   E = n(981631),
   h = n(689938),
-  I = n(745710),
-  m = n(74316);
+  m = n(745710),
+  I = n(74316);
 
 function g(e) {
   var t, n;
@@ -43,7 +43,7 @@ onClose: e => {
   e && N();
 }
   }), L = '' !== g.helpArticleId ? () => (0, i.jsx)(r.Anchor, {
-className: I.termsApplyAnchor,
+className: m.termsApplyAnchor,
 href: d.Z.getArticleURL(g.helpArticleId),
 children: h.Z.Messages.BOGO_TERMS_APPLY
   }) : void 0, O = {
@@ -61,7 +61,7 @@ src: f ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
   let R = f ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
 x = '' !== g.modalTopPill ? () => (0, i.jsx)(u.Cy, {
   text: g.modalTopPill,
-  className: I.modalTopPill,
+  className: m.modalTopPill,
   colorOptions: R
 }) : void 0;
   return {
@@ -82,8 +82,8 @@ changeLogId: C,
 button: () => {
   let e = Date.now();
   return (0, i.jsxs)(r.ShinyButton, {
-    className: I.buttonWide,
-    innerClassName: I.innerButton,
+    className: m.buttonWide,
+    innerClassName: m.innerButton,
     color: r.Button.Colors.GREEN,
     size: r.Button.Sizes.SMALL,
     onClick: () => {
@@ -97,8 +97,8 @@ button: () => {
     children: [
       (0, i.jsx)('img', {
         alt: '',
-        className: I.nitroIconSubHeader,
-        src: m
+        className: m.nitroIconSubHeader,
+        src: I
       }),
       A
     ]

@@ -14,8 +14,8 @@ var i, a = n(735250),
   _ = n(481060),
   E = n(570140),
   h = n(239091),
-  I = n(287259),
-  m = n(785547),
+  m = n(287259),
+  I = n(785547),
   g = n(600164),
   p = n(167533),
   T = n(925329),
@@ -165,7 +165,7 @@ return (0, a.jsx)(_.Tooltip, {
             })
           ]
         }),
-        (0, A.Je)(e.libraryApplication) ? (0, a.jsx)(m.Z, {
+        (0, A.Je)(e.libraryApplication) ? (0, a.jsx)(I.Z, {
           analyticsListSort: (i = t.sortKey, r = t.sortDirection, ''.concat(M[i], ' ').concat(r === L.sHY.ASCENDING ? 'ASC' : 'DESC')),
           analyticsListIndex: n,
           source: L.Sbl.APPLICATION_LIBRARY,
@@ -289,7 +289,7 @@ N.default.track(L.rMx.LIBRARY_VIEWED, {
 });
   }
   handleSort(e, t) {
-I.fS(e, t);
+m.fS(e, t);
   }
   renderImportHelp() {
 let e;
@@ -388,9 +388,9 @@ super(...e), x(this, '_didUnmount', !1), x(this, '_rowRefs', {}), x(this, 'state
     overflowMenuRowKey: null
   });
 }), x(this, 'handleRowMouseEnter', e => {
-  !this.props.isNavigatingByKeyboard && I.wX(e.key);
+  !this.props.isNavigatingByKeyboard && m.wX(e.key);
 }), x(this, 'handleRowMouseLeave', () => {
-  !this.props.isNavigatingByKeyboard && I.wX(null);
+  !this.props.isNavigatingByKeyboard && m.wX(null);
 }), x(this, 'setRowRef', (e, t) => {
   this._rowRefs[t] = e;
 }), x(this, 'handleApplicationContextMenu', (e, t) => {

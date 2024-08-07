@@ -5,8 +5,8 @@ var r, l, o, c, d = n(392711),
   _ = n(442837),
   E = n(570140),
   h = n(308063),
-  I = n(388610),
-  m = n(430824),
+  m = n(388610),
+  I = n(430824),
   g = n(496675),
   p = n(855674),
   T = n(981631);
@@ -19,7 +19,7 @@ let S = [],
   Z = null;
 
 function L() {
-  if (i = null != (a = I.Z.getChannel()) ? m.Z.getGuild(a.guild_id) : null, S = null != a && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, a) ? p.Z.getWebhooksForChannel(i.id, a.id) : [], null != f) {
+  if (i = null != (a = m.Z.getChannel()) ? I.Z.getGuild(a.guild_id) : null, S = null != a && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, a) ? p.Z.getWebhooksForChannel(i.id, a.id) : [], null != f) {
 let e = R(f.id);
 null != e && (f = e);
   }
@@ -39,7 +39,7 @@ return n === e;
 }
 class x extends(r = _.ZP.Store) {
   initialize() {
-this.waitFor(I.Z, m.Z, p.Z, g.Z);
+this.waitFor(m.Z, I.Z, p.Z, g.Z);
   }
   hasChanges() {
 return v;
@@ -88,7 +88,7 @@ let {
 if (t !== T.CoT.INTEGRATIONS)
   return !1;
 if (s = T.b4C.OVERVIEW, null == i) {
-  let e = I.Z.getChannel(),
+  let e = m.Z.getChannel(),
     t = null == e ? void 0 : e.getGuildId();
   null != e && null != t && (h.Z.fetchForChannel(t, e.id), C = !0), L();
 }

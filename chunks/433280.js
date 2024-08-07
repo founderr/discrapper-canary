@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var i = n(735250);
@@ -17,11 +17,11 @@ var a = n(990547),
   E = n(583134),
   h = n(217110);
 
-function I(e) {
+function m(e) {
   let {
 guildId: t,
 markAsDismissed: n
-  } = e, I = (0, s.e7)([
+  } = e, m = (0, s.e7)([
 c.Z,
 d.default
   ], () => {
@@ -34,7 +34,7 @@ type: a.ImpressionTypes.POPOUT,
 name: a.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
 properties: {
   guild_id: t,
-  is_owner: I
+  is_owner: m
 }
   }), (0, i.jsx)('div', {
 className: E.container,

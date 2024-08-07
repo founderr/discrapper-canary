@@ -19,15 +19,15 @@ title: n,
 guild: d,
 description: u,
 children: _
-  } = e, E = r.QK.useSetting(), h = (0, l.n)(), [I, m] = (0, o.Z)(t, h && E);
+  } = e, E = r.QK.useSetting(), h = (0, l.n)(), [m, I] = (0, o.Z)(t, h && E);
   return (0, i.jsxs)('div', {
 className: c.container,
 children: [
   (0, i.jsx)('div', {
-    ref: I,
+    ref: m,
     className: c.coverImageContainer,
-    children: null != m && (0, i.jsx)('img', {
-      src: m,
+    children: null != I && (0, i.jsx)('img', {
+      src: I,
       alt: '',
       className: c.coverImage
     })

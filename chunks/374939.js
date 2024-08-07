@@ -22,7 +22,7 @@ children: u,
 bannerContainerClassName: _,
 bannerImageClassName: E,
 headerTextColor: h,
-descriptionTextColor: I
+descriptionTextColor: m
   } = e;
   return (0, i.jsxs)(r.AdvancedScroller, {
 onScroll: a,
@@ -35,7 +35,7 @@ children: [
     button: d,
     className: _,
     headerTextColor: h,
-    descriptionTextColor: I,
+    descriptionTextColor: m,
     bannerImageClassName: E
   }),
   (0, i.jsx)('section', {

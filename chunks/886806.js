@@ -2,8 +2,8 @@ n(47120);
 var s, r = n(735250),
   i = n(470079),
   a = n(120356),
-  l = n.n(a),
-  o = n(442837),
+  o = n.n(a),
+  l = n(442837),
   c = n(893776),
   u = n(129293),
   d = n(388905),
@@ -24,7 +24,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-o.ZP.initialize();
+l.ZP.initialize();
 class T extends(s = i.PureComponent) {
   componentDidMount() {
 this.handleVerify(), (0, h.e)('verify_email');
@@ -34,7 +34,7 @@ return (0, r.jsxs)(d.ZP, {
   children: [
     (0, r.jsx)(d.Ee, {
       src: n(375673),
-      className: l()(m.image, f.marginBottom20)
+      className: o()(m.image, f.marginBottom20)
     }),
     (0, r.jsx)(d.Dx, {
       className: f.marginBottom8,
@@ -56,7 +56,7 @@ return (0, r.jsxs)(d.ZP, {
   children: [
     (0, r.jsx)(d.Ee, {
       src: n(73962),
-      className: l()(m.image, f.marginBottom20)
+      className: o()(m.image, f.marginBottom20)
     }),
     (0, r.jsx)(d.Dx, {
       className: f.marginBottom40,
@@ -74,7 +74,7 @@ return (0, r.jsxs)(d.ZP, {
   children: [
     (0, r.jsx)(d.Ee, {
       src: n(892235),
-      className: l()(m.image, f.marginBottom20)
+      className: o()(m.image, f.marginBottom20)
     }),
     (0, r.jsx)(d.Dx, {
       className: f.marginBottom8,
@@ -119,7 +119,7 @@ super(...e), N(this, 'handleVerify', () => {
 }
 N(T, 'defaultProps', {
   transitionTo: e => n.g.location.assign(e)
-}), t.Z = o.ZP.connectStores([E.default], () => ({
+}), t.Z = l.ZP.connectStores([E.default], () => ({
   verifyFailed: E.default.didVerifyFail(),
   verifyErrors: E.default.getVerifyErrors(),
   verifySucceeded: E.default.didVerifySucceed(),

@@ -1,8 +1,8 @@
 n(47120);
 var i, o = n(442837),
-  a = n(570140);
+  r = n(570140);
 
-function r(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -10,7 +10,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let c = {
+let l = {
 disable_alpha_voice_panel: 'Disable new Voice Panel UI: Currently the new voice ui is defaulted ON for staff.  It\'s not feature complete so if there\'s something you are missing, or you find a problem, you can disable it here.',
 enable_recently_active: 'Enable recently active channels',
 happening_main_tab: 'Enable Happening tab containing summaries',
@@ -30,43 +30,43 @@ disable_channel_list: 'Disable channel list -- for performance testing. You prob
 show_icymi_debug_scores: 'Show ICYMI debug scores',
 only_channel_screen: 'Down with PanelsView, rely on only ChannelScreen!'
   },
-  l = {};
+  c = {};
 class s extends(i = o.ZP.DeviceSettingsStore) {
   getUserAgnosticState() {
 return {
-  toggleStates: l
+  toggleStates: c
 };
   }
   initialize(e) {
-for (var t in c) {
+for (var t in l) {
   var n, i;
   let o = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
-  l[t] = o;
+  c[t] = o;
 }
   }
   get(e) {
 var t;
-return null !== (t = l[e]) && void 0 !== t && t;
+return null !== (t = c[e]) && void 0 !== t && t;
   }
   set(e, t) {
-return l[e] = t, t;
+return c[e] = t, t;
   }
   all() {
-return l;
+return c;
   }
   allWithDescriptions() {
-return Object.entries(l).map(e => {
+return Object.entries(c).map(e => {
   let [t, n] = e;
   return [
     t,
     n,
-    c[t]
+    l[t]
   ];
 });
   }
 }
-r(s, 'displayName', 'DevToolsDesignTogglesStore'), r(s, 'persistKey', 'DevToolsDesignTogglesStore'), t.Z = new s(a.Z, {
+a(s, 'displayName', 'DevToolsDesignTogglesStore'), a(s, 'persistKey', 'DevToolsDesignTogglesStore'), t.Z = new s(r.Z, {
   DEV_TOOLS_DESIGN_TOGGLE_SET: function(e) {
-l[e.toggle] = e.value;
+c[e.toggle] = e.value;
   }
 });

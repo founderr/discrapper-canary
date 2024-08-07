@@ -12,8 +12,8 @@ var a = n(243814),
   _ = n(40851),
   E = n(566620),
   h = n(596223),
-  I = n(838195),
-  m = n(928518),
+  m = n(838195),
+  I = n(928518),
   g = n(592125),
   p = n(293273),
   T = n(885110),
@@ -185,7 +185,7 @@ handler(e) {
   } = e, {
     channel: a,
     guild: s
-  } = (0, R.T)(), l = m.Z.getWindow(P.KJ3.CHANNEL_CALL_POPOUT);
+  } = (0, R.T)(), l = I.Z.getWindow(P.KJ3.CHANNEL_CALL_POPOUT);
   (null == l ? void 0 : l.closed) && (l = null);
   let o = null != l ? P.IlC.POPOUT : P.IlC.APP;
   (0, A.Pr)({}, null == l ? void 0 : l.document), (0, r.openModalLazy)(async () => {
@@ -296,7 +296,7 @@ handler(e) {
     throw new v.Z({
       errorCode: P.lTL.INVALID_PAYLOAD
     }, 'mediaUrl must be a Discord CDN url');
-  (0, I.Z)({
+  (0, m.Z)({
     applicationId: a,
     channelId: s.id,
     mediaUrl: i

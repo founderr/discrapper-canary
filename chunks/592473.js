@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 }), n(47120);
 var i = n(735250),
@@ -56,7 +56,7 @@ children: [
   });
 }
 
-function m(e) {
+function p(e) {
   let {
 className: t,
 numRequestToSpeak: n
@@ -76,7 +76,7 @@ children: [
   });
 }
 
-function p(e) {
+function m(e) {
   let {
 toggleRequestToSpeakSidebar: t,
 showRequestToSpeakSidebar: n,
@@ -94,7 +94,7 @@ t
 onClick: d,
 label: n ? u.Z.Messages.REQUEST_TO_SPEAK_AREA_CLOSE : u.Z.Messages.REQUEST_TO_SPEAK_AREA_OPEN,
 className: s,
-iconComponent: () => (0, i.jsx)(m, {
+iconComponent: () => (0, i.jsx)(p, {
   numRequestToSpeak: l,
   className: s
 }),

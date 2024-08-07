@@ -11,8 +11,8 @@ var i = n(735250),
   _ = n(481060),
   E = n(570140),
   h = n(239091),
-  I = n(51025),
-  m = n(785547),
+  m = n(51025),
+  I = n(785547),
   g = n(730749),
   p = n(112724),
   T = n(812206),
@@ -319,7 +319,7 @@ let {
 } = this.props;
 return this.renderBody({
   message: y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({
-    remove: () => I.wi(e.applicationId, e.branchId)
+    remove: () => m.wi(e.applicationId, e.branchId)
   }),
   foregroundColor: (0, u.ap)(e.theme) ? D.Ilk.PRIMARY_300 : D.Ilk.PRIMARY_500,
   percent: 100
@@ -491,12 +491,12 @@ super(...e), U(this, 'renderProgressPatchingBody', (e, t) => {
 let q = () => (0, i.jsx)(w, {
 icon: _.PlayIcon,
 tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
-onClick: () => I.v4()
+onClick: () => m.v4()
   }),
   Q = () => (0, i.jsx)(w, {
 icon: _.PauseIcon,
 tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
-onClick: () => I.wO()
+onClick: () => m.wO()
   }),
   X = e => {
 let {
@@ -505,7 +505,7 @@ let {
 return (0, i.jsx)(w, {
   icon: _.ArrowSmallUpIcon,
   tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
-  onClick: () => I.A1(t.applicationId, t.branchId)
+  onClick: () => m.A1(t.applicationId, t.branchId)
 });
   },
   J = e => {
@@ -515,7 +515,7 @@ let {
 return (0, i.jsx)(w, {
   icon: _.CloseSmallIcon,
   tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
-  onClick: () => I.al(t.applicationId, t.branchId)
+  onClick: () => m.al(t.applicationId, t.branchId)
 });
   },
   $ = [{
@@ -551,7 +551,7 @@ return (0, i.jsx)(w, {
   cellClassName: j.actionsCell,
   render(e, t) {
     let n, a;
-    return e.finished ? n = null != e.libraryApplication ? (0, i.jsx)(m.Z, {
+    return e.finished ? n = null != e.libraryApplication ? (0, i.jsx)(I.Z, {
       libraryApplication: e.libraryApplication,
       size: _.Button.Sizes.SMALL,
       className: j.gameActionButton,
@@ -587,7 +587,7 @@ let {
 } = this.props;
 e.forEach(e => {
   e.finished && E.Z.wait(() => {
-    I.wi(e.applicationId, e.branchId);
+    m.wi(e.applicationId, e.branchId);
   });
 }), window.removeEventListener('resize', this.throttledUpdateHeight), this.isUnmounted = !0;
   }

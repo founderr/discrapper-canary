@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(607744),
   d = n(819640),
   h = n(496675),
-  m = n(699516),
-  p = n(594174),
+  p = n(699516),
+  m = n(594174),
   _ = n(585483),
   f = n(127654),
   E = n(205822),
@@ -23,9 +23,9 @@ className: t,
 style: n,
 channel: x,
 draftType: T
-  } = e, [N, v] = a.useState(!0), S = (0, s.e7)([d.Z], () => d.Z.hasLayers()), Z = (0, s.e7)([h.Z], () => null != x && h.Z.can(C.Plq.ATTACH_FILES, x), [x]), A = null != (0, s.e7)([l.Z], () => l.Z.getActiveCommand(x.id)), M = x.getGuildId(), b = T === o.d.FirstThreadMessage, R = (0, s.e7)([p.default], () => {
+  } = e, [N, v] = a.useState(!0), S = (0, s.e7)([d.Z], () => d.Z.hasLayers()), Z = (0, s.e7)([h.Z], () => null != x && h.Z.can(C.Plq.ATTACH_FILES, x), [x]), A = null != (0, s.e7)([l.Z], () => l.Z.getActiveCommand(x.id)), M = x.getGuildId(), b = T === o.d.FirstThreadMessage, R = (0, s.e7)([m.default], () => {
 var e;
-return !0 == !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
+return !0 == !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
   }), j = (0, s.e7)([c.Z], () => c.Z.didAgree(M)) && !R, L = a.useMemo(() => !S && (x.isPrivate() && !x.isManaged() || null != M && (!x.isNSFW() || j) && Z && u.Z.canChatInGuild(M)), [
 Z,
 j,
@@ -33,7 +33,7 @@ x,
 M,
 S
   ]), P = b ? C.TPd.GUILD_THREADS_ONLY.has(x.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD : N ? I.Z.Messages.UPLOAD_TO.format({
-destination: (0, r.F6)(x, p.default, m.Z, !0)
+destination: (0, r.F6)(x, m.default, p.Z, !0)
   }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
   return A || !L ? null : (0, i.jsx)(E.Z, {
 className: t,

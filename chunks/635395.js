@@ -9,20 +9,20 @@ var i, a, s = n(470079),
   _ = n(19780),
   E = n(699516),
   h = n(606304),
-  I = n(358085),
-  m = n(998502),
+  m = n(358085),
+  I = n(998502),
   g = n(981631);
 (a = i || (i = {})).DEFAULT = 'DEFAULT', a.UNREAD = 'UNREAD', a.CONNECTED = 'CONNECTED', a.SPEAKING = 'SPEAKING', a.MUTED = 'MUTED', a.DEAFENED = 'DEAFENED';
-let p = (0, I.isMac)() ? null : 'DEFAULT';
+let p = (0, m.isMac)() ? null : 'DEFAULT';
 class T extends s.PureComponent {
   componentDidMount() {
-m.ZP.setSystemTrayIcon(this.getIcon());
+I.ZP.setSystemTrayIcon(this.getIcon());
   }
   componentDidUpdate() {
-m.ZP.setSystemTrayIcon(this.getIcon());
+I.ZP.setSystemTrayIcon(this.getIcon());
   }
   componentWillUnmount() {
-m.ZP.setSystemTrayIcon(p);
+I.ZP.setSystemTrayIcon(p);
   }
   render() {
 return null;
@@ -37,7 +37,7 @@ super(...e), t = this, n = 'getIcon', i = () => {
     connected: i,
     unread: a
   } = this.props, s = p;
-  return (0, I.isMac)() && !i ? s : (0, I.isLinux)() || !i ? (a && (s = 'UNREAD'), s) : s = e ? 'DEAFENED' : t ? 'MUTED' : n ? 'SPEAKING' : 'CONNECTED';
+  return (0, m.isMac)() && !i ? s : (0, m.isLinux)() || !i ? (a && (s = 'UNREAD'), s) : s = e ? 'DEAFENED' : t ? 'MUTED' : n ? 'SPEAKING' : 'CONNECTED';
 }, n in t ? Object.defineProperty(t, n, {
   value: i,
   enumerable: !0,
@@ -47,7 +47,7 @@ super(...e), t = this, n = 'getIcon', i = () => {
   }
 }
 let S = () => null;
-I.isPlatformEmbedded && (m.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => l.Z.toggleSelfMute()), m.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => l.Z.toggleSelfDeaf()), m.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
+m.isPlatformEmbedded && (I.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => l.Z.toggleSelfMute()), I.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => l.Z.toggleSelfDeaf()), I.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
   o.Z.open(g.oAB.VOICE);
 }), S = r.ZP.connectStores([
   _.Z,

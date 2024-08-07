@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(100527),
   d = n(906732),
   h = n(574176),
-  m = n(769654),
-  p = n(199902),
+  p = n(769654),
+  m = n(199902),
   _ = n(314897),
   f = n(592125),
   E = n(496675),
@@ -79,11 +79,11 @@ isMobile: ec,
 status: eu,
 hangStatusActivity: ed
   } = (0, r.cj)([
-p.Z,
+m.Z,
 g.Z,
 E.Z
   ], () => {
-let e = null != p.Z.getAnyStreamForUser(n.id);
+let e = null != m.Z.getAnyStreamForUser(n.id);
 return {
   activity: g.Z.findActivity(n.id, t => {
     let {
@@ -107,7 +107,7 @@ return {
     return t === K.IIU.HANG_STATUS;
   }) : null
 };
-  }), eh = null != el || null != ed || eo, em = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), ep = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
+  }), eh = null != el || null != ed || eo, ep = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), em = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
 mutualFriends: e_,
 isFetching: ef
   } = (0, M.Z)(n.id, !n.bot), {
@@ -145,7 +145,7 @@ eu
     guild: t,
     nick: a,
     theme: eT,
-    onSelect: () => (0, m.X)(t.id)
+    onSelect: () => (0, p.X)(t.id)
   }, t.id);
 }),
 ev = null == e_ ? void 0 : e_.map(e => {
@@ -215,7 +215,7 @@ children: (0, i.jsx)(N.Mt, {
               children: [
                 (0, i.jsx)(V.Z, {
                   user: n,
-                  nickname: em,
+                  nickname: ep,
                   pronouns: null == ei ? void 0 : ei.pronouns
                 }),
                 (0, i.jsx)(B.Z, {
@@ -225,7 +225,7 @@ children: (0, i.jsx)(N.Mt, {
                 (0, i.jsx)(k.Z, {}),
                 (0, i.jsx)(w.Z, {
                   bio: null == ei ? void 0 : ei.bio,
-                  hidePersonalInformation: ep,
+                  hidePersonalInformation: em,
                   animateOnHover: !0,
                   isHovering: Q,
                   userId: n.id

@@ -1,9 +1,9 @@
 n.r(t), n.d(t, {
   default: function() {
-return m;
+return I;
   },
   extractAnnouncementModalContent: function() {
-return I;
+return m;
   }
 });
 var i = n(735250);
@@ -20,7 +20,7 @@ var a = n(581282),
   E = n(276792),
   h = n(290347);
 
-function I(e) {
+function m(e) {
   let {
 content: t,
 isPreview: n
@@ -28,7 +28,7 @@ isPreview: n
   return 'announcementModalVariant1' !== i.properties.oneofKind ? null : !n && (0 === i.properties.announcementModalVariant1.dismissKey.trim().length || (0, u.un)(Number(i.properties.announcementModalVariant1.dismissKey))) ? null : (n && (i.properties.announcementModalVariant1.dismissKey = ''), i);
 }
 
-function m(e) {
+function I(e) {
   let {
 renderModalProps: t,
 properties: n
@@ -36,14 +36,14 @@ properties: n
 location: a
   } = (0, l.O)(), {
 analyticsLocations: s
-  } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), u = (0, o.ZP)(), I = (0, r.a)(u);
+  } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), u = (0, o.ZP)(), m = (0, r.a)(u);
   if ('announcementModalVariant1' === n.properties.oneofKind) {
 let e = (0, E.N)({
   content: n.properties.announcementModalVariant1,
   renderModalProps: t,
   analyticsLocations: s,
   analyticsLocation: a,
-  isLightTheme: I
+  isLightTheme: m
 });
 return (0, i.jsx)(h.Z, {
   ...e

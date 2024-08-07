@@ -1,6 +1,6 @@
 n.d(t, {
   GC: function() {
-return I;
+return m;
   },
   _X: function() {
 return h;
@@ -59,7 +59,7 @@ t = e.modeOptions.shortcut.map(e => {
   };
 });
   return t;
-}), I = e => (0, o.FJ)(e, e => {
+}), m = e => (0, o.FJ)(e, e => {
   let t = '';
   return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, r.BB)(e.modeOptions.shortcut)), t;
 });

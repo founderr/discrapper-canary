@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(680180),
   E = n(791734),
   h = n(341789),
-  I = n(591433),
-  m = n(282773),
+  m = n(591433),
+  I = n(282773),
   g = n(143021),
   p = n(775260),
   T = n(49898),
@@ -66,7 +66,7 @@ U = a.useRef(new o.Z(v)),
 {
   onGuildCardSeen: G,
   onGuildCardClick: k
-} = (0, m.H)({
+} = (0, I.H)({
   guildDiscoveryCardSeenManager: U.current,
   loadId: e.current
 });
@@ -124,7 +124,7 @@ children: [
       w
     ]
   }),
-  y ? (0, i.jsx)(I.Z, {
+  y ? (0, i.jsx)(m.Z, {
     loadId: e.current,
     onGuildCardClick: k,
     onGuildCardSeen: G

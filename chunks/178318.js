@@ -10,8 +10,8 @@ var s = n(836560),
   _ = n(998502),
   E = n(996106),
   h = n(901077),
-  I = n(76238),
-  m = n(852926),
+  m = n(76238),
+  I = n(852926),
   g = n(186901),
   p = n(981631),
   T = n(413135).Buffer;
@@ -76,7 +76,7 @@ code: a,
 message: i
   }, n);
 }
-class R extends I.Z {
+class R extends m.Z {
   send(e) {
 (u.default.isLoggingOverlayEvents || e.cmd !== p.Etm.OVERLAY && e.evt !== p.zMe.OVERLAY) && N.info('Socket Emit: '.concat(this.id), (0, h.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), {
   binary: !0
@@ -100,7 +100,7 @@ if ('etf' === n && null == i)
 this._socket = e;
   }
 }
-class x extends I.Z {
+class x extends m.Z {
   send(e) {
 (u.default.isLoggingOverlayEvents || e.cmd !== p.Etm.OVERLAY) && N.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
   }
@@ -138,7 +138,7 @@ if ('/rpc' === n && ('GET' === a || s)) {
     },
     c = new x(s ? L.bind(null, e, t) : l, s ? O.bind(null, e, t, 400) : l, Number(n.get('v')), a);
   if (s)
-    (0, m.em)(c, v(e.headers).origin, n.get('client_id')).then(() => {
+    (0, I.em)(c, v(e.headers).origin, n.get('client_id')).then(() => {
       let n = '';
       e.on('data', e => n += e), e.on('error', () => O(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(c, n));
     }).catch(e => {
@@ -169,7 +169,7 @@ try {
 }
 N.info('Socket Opened: '.concat(i.id)), e.on('error', e => N.error('WS Error: '.concat(e.message))), e.on('close', (e, t) => {
   N.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)), l().remove(A, e => e === i), this.emit('disconnect', i);
-}), (0, m.em)(i, s, a.get('client_id')).then(() => {
+}), (0, I.em)(i, s, a.get('client_id')).then(() => {
   A.push(i), e.on('message', e => this.handleMessage(i, e)), this.emit('connect', i);
 }).catch(e => {
   let {

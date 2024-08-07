@@ -18,7 +18,7 @@ selected: a,
 hovered: d
   } = e, {
 iconUrl: h,
-iconTitle: m
+iconTitle: p
   } = (0, o.n)(t);
   return (0, i.jsxs)(l.Zb, {
 selected: a,
@@ -43,7 +43,7 @@ children: [
     ]
   }),
   (0, i.jsx)(r.f, {
-    alt: m,
+    alt: p,
     src: h,
     size: 48,
     className: c.thumbnail

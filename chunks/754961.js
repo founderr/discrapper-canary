@@ -3,7 +3,7 @@ n.d(t, {
 return h;
   },
   i: function() {
-return I;
+return m;
   }
 });
 var i = n(735250),
@@ -25,10 +25,10 @@ name: s,
 isActive: d,
 animate: E,
 fillBackgroundColor: h,
-hasError: I
-  } = e, m = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY), g = a.useMemo(() => (0, c.j1)(h, m.hex()), [
+hasError: m
+  } = e, I = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY), g = a.useMemo(() => (0, c.j1)(h, I.hex()), [
 h,
-m
+I
   ]), p = null != g, T = (0, o.useSpring)({
 transform: d ? 'translateX(0%)' : 'translateX(-100%)',
 config: {
@@ -50,13 +50,13 @@ children: [
 ]
   });
   return (0, i.jsx)(o.Tooltip, {
-color: I ? o.Tooltip.Colors.GREY : o.Tooltip.Colors.BRAND,
-text: I ? S : s,
-'aria-label': I ? u.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : s,
+color: m ? o.Tooltip.Colors.GREY : o.Tooltip.Colors.BRAND,
+text: m ? S : s,
+'aria-label': m ? u.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : s,
 shouldShow: null != n,
 tooltipStyle: g,
 tooltipClassName: r()(_.progressStepTooltip, {
-  [_.progressStepTooltipCustomColors]: !I && null != g
+  [_.progressStepTooltipCustomColors]: !m && null != g
 }),
 children: e => (0, i.jsxs)(o.Clickable, {
   ...e,
@@ -67,7 +67,7 @@ children: e => (0, i.jsxs)(o.Clickable, {
   onClick: n,
   className: _.progressStepWrapper,
   children: [
-    I && (0, i.jsx)(o.WarningIcon, {
+    m && (0, i.jsx)(o.WarningIcon, {
       size: 'xs',
       color: 'currentColor',
       className: _.errorIcon
@@ -121,7 +121,7 @@ children: t.map(e => {
   });
 }
 
-function I(e) {
+function m(e) {
   let {
 className: t,
 isBackDisabled: n,
@@ -130,7 +130,7 @@ onNextClick: s,
 onBackClick: c,
 nextButtonBackgroundColor: E,
 nextButtonClassName: h,
-nextButtonAnimationStyle: I
+nextButtonAnimationStyle: m
   } = e;
   return (0, i.jsxs)('div', {
 className: r()(_.buttonsContainer, t),
@@ -144,7 +144,7 @@ children: [
     children: u.Z.Messages.BACK
   }),
   (0, i.jsx)(l.animated.div, {
-    style: I,
+    style: m,
     children: (0, i.jsx)(d.Z, {
       className: h,
       themeColor: E,

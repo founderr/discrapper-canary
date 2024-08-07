@@ -1,86 +1,86 @@
-i.d(s, {
+s.d(n, {
   Z: function() {
-return b;
+return P;
   }
-}), i(47120);
-var n = i(735250),
-  l = i(470079),
-  t = i(442837),
-  o = i(481060),
-  a = i(410575),
-  r = i(727637),
-  d = i(58540),
-  c = i(420660),
-  u = i(100527),
-  I = i(906732),
-  _ = i(580552),
-  f = i(680295),
-  E = i(199902),
-  m = i(314897),
-  v = i(158776),
-  S = i(594174),
-  x = i(785717),
-  Z = i(221292),
-  p = i(621853),
-  h = i(318661),
-  T = i(726059),
-  g = i(162267),
-  N = i(502762),
-  j = i(62154),
-  C = i(293259),
-  A = i(725954),
-  R = i(228168),
-  O = i(981631),
-  L = i(689938),
-  M = i(376234);
+}), s(47120);
+var i = s(735250),
+  l = s(470079),
+  o = s(442837),
+  t = s(481060),
+  r = s(410575),
+  a = s(727637),
+  d = s(58540),
+  c = s(420660),
+  u = s(100527),
+  I = s(906732),
+  _ = s(580552),
+  f = s(680295),
+  E = s(199902),
+  m = s(314897),
+  S = s(158776),
+  Z = s(594174),
+  v = s(785717),
+  x = s(221292),
+  h = s(621853),
+  T = s(318661),
+  p = s(726059),
+  g = s(162267),
+  N = s(502762),
+  C = s(62154),
+  j = s(293259),
+  A = s(725954),
+  O = s(228168),
+  R = s(981631),
+  L = s(689938),
+  U = s(376234);
 
-function U(e) {
-  var s, i;
+function M(e) {
+  var n, s;
   let {
 user: l,
-isCurrentUser: a,
-section: r,
+isCurrentUser: r,
+section: a,
 setSection: d,
 hasActivity: c
-  } = e, u = (0, t.e7)([p.Z], () => {
-var e, s;
-return (null === (s = p.Z.getUserProfile(l.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null;
-  }), I = null === (s = (0, T.Z)(l.id, !l.bot && !a).mutualFriends) || void 0 === s ? void 0 : s.length, f = null === (i = (0, g.Z)(l.id, !l.bot && !a).mutualGuilds) || void 0 === i ? void 0 : i.length;
-  return (0, n.jsx)('div', {
-className: M.tabBarContainer,
-children: (0, n.jsxs)(o.TabBar, {
-  selectedItem: r,
+  } = e, u = (0, o.e7)([h.Z], () => {
+var e, n;
+return (null === (n = h.Z.getUserProfile(l.id)) || void 0 === n ? void 0 : null === (e = n.application) || void 0 === e ? void 0 : e.id) != null;
+  }), I = null === (n = (0, p.Z)(l.id, !l.bot && !r).mutualFriends) || void 0 === n ? void 0 : n.length, f = null === (s = (0, g.Z)(l.id, !l.bot && !r).mutualGuilds) || void 0 === s ? void 0 : s.length;
+  return (0, i.jsx)('div', {
+className: U.tabBarContainer,
+children: (0, i.jsxs)(t.TabBar, {
+  selectedItem: a,
   type: 'top',
   onItemSelect: d,
-  className: M.tabBar,
+  className: U.tabBar,
   children: [
-    !l.isNonUserBot() || l.isClyde() || (0, _.Z)(l.id) ? (0, n.jsx)(o.TabBar.Item, {
-      className: M.tabBarItem,
-      id: R.oh.USER_INFO,
+    !l.isNonUserBot() || l.isClyde() || (0, _.Z)(l.id) ? (0, i.jsx)(t.TabBar.Item, {
+      className: U.tabBarItem,
+      id: O.oh.USER_INFO,
       children: L.Z.Messages.USER_INFO
     }) : null,
-    !l.bot && c ? (0, n.jsx)(o.TabBar.Item, {
-      className: M.tabBarItem,
-      id: R.oh.ACTIVITY,
+    !l.bot && c ? (0, i.jsx)(t.TabBar.Item, {
+      className: U.tabBarItem,
+      id: O.oh.ACTIVITY,
       children: L.Z.Messages.USER_PROFILE_ACTIVITY
     }) : null,
-    l.bot || a ? null : (0, n.jsx)(o.TabBar.Item, {
-      className: M.tabBarItem,
-      id: R.oh.MUTUAL_FRIENDS,
+    l.bot || r ? null : (0, i.jsx)(t.TabBar.Item, {
+      className: U.tabBarItem,
+      id: O.oh.MUTUAL_FRIENDS,
       children: null == I ? L.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER : L.Z.Messages.MUTUAL_FRIENDS_WITH_END_COUNT.format({
         count: ''.concat(I)
       })
     }),
-    a || l.isClyde() || (0, _.Z)(l.id) ? null : (0, n.jsx)(o.TabBar.Item, {
-      className: M.tabBarItem,
-      id: R.oh.MUTUAL_GUILDS,
+    r || l.isClyde() || (0, _.Z)(l.id) ? null : (0, i.jsx)(t.TabBar.Item, {
+      className: U.tabBarItem,
+      id: O.oh.MUTUAL_GUILDS,
       children: null == f ? L.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER : L.Z.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
         count: ''.concat(f)
       })
     }),
-    l.bot && u ? (0, n.jsx)(o.TabBar.Item, {
-      className: M.tabBarItem,
-      id: R.oh.BOT_DATA_ACCESS,
+    l.bot && u ? (0, i.jsx)(t.TabBar.Item, {
+      className: U.tabBarItem,
+      id: O.oh.BOT_DATA_ACCESS,
       children: L.Z.Messages.BOTS_DATA_ACCESS_TAB
     }) : null
   ]
@@ -88,123 +88,123 @@ children: (0, n.jsxs)(o.TabBar, {
   });
 }
 
-function b(e) {
-  var s, i;
+function P(e) {
+  var n, s;
   let {
-user: p,
-guildId: T,
+user: h,
+guildId: p,
 channelId: g,
-messageId: b,
-roleId: P,
+messageId: P,
+roleId: b,
 sessionId: y,
 friendToken: D,
-initialSection: F = R.oh.USER_INFO,
+initialSection: F = O.oh.USER_INFO,
 initialSubsection: B,
 transitionState: G,
 sourceAnalyticsLocations: w = [],
-onClose: k
-  } = e, V = null !== (s = (0, t.e7)([S.default], () => S.default.getUser(p.id))) && void 0 !== s ? s : p, Y = (0, h.ZP)(null !== (i = V.id) && void 0 !== i ? i : ''), {
-analyticsLocations: W
+onClose: V
+  } = e, k = null !== (n = (0, o.e7)([Z.default], () => Z.default.getUser(h.id))) && void 0 !== n ? n : h, Y = (0, T.ZP)(null !== (s = k.id) && void 0 !== s ? s : ''), {
+analyticsLocations: H
   } = (0, I.ZP)([
 ...w,
 u.Z.PROFILE_MODAL
-  ]), H = (0, x.ZB)({
+  ]), W = (0, v.ZB)({
 layout: 'MODAL',
-userId: V.id,
+userId: k.id,
 sourceSessionId: y,
 showGuildProfile: !1,
-guildId: T,
+guildId: p,
 channelId: g,
-messageId: b,
-roleId: P
+messageId: P,
+roleId: b
   });
   (0, d.$)({
-[T]: [V.id]
+[p]: [k.id]
   });
-  let z = (0, t.e7)([E.Z], () => null != E.Z.getAnyStreamForUser(V.id)),
-K = (0, t.e7)([v.Z], () => v.Z.findActivity(V.id, e => e.type !== O.IIU.CUSTOM_STATUS)),
-[q, Q] = l.useState(!1),
-[J, X] = l.useState(!V.isNonUserBot() || V.isClyde() || (0, _.Z)(V.id) ? F : R.oh.MUTUAL_GUILDS),
-$ = (0, t.e7)([m.default], () => m.default.getId() === V.id),
+  let z = (0, o.e7)([E.Z], () => null != E.Z.getAnyStreamForUser(k.id)),
+K = (0, o.e7)([S.Z], () => S.Z.findActivity(k.id, e => e.type !== R.IIU.CUSTOM_STATUS)),
+[Q, q] = l.useState(!1),
+[J, X] = l.useState(!k.isNonUserBot() || k.isClyde() || (0, _.Z)(k.id) ? F : O.oh.MUTUAL_GUILDS),
+$ = (0, o.e7)([m.default], () => m.default.getId() === k.id),
 ee = null != K || z,
-es = !$ || ee,
-ei = l.createRef(),
-en = (0, r.Z)(ei);
-  !ee && J === R.oh.ACTIVITY && X(R.oh.USER_INFO);
+en = !$ || ee,
+es = l.createRef(),
+ei = (0, a.Z)(es);
+  !ee && J === O.oh.ACTIVITY && X(O.oh.USER_INFO);
   let el = l.useCallback(e => {
-  (0, Z.pQ)({
+  (0, x.pQ)({
     action: 'PRESS_SECTION',
-    analyticsLocations: W,
-    ...H
-  }), Q(!0), X(e);
+    analyticsLocations: H,
+    ...W
+  }), q(!0), X(e);
 }, [
-  H,
-  W
+  W,
+  H
 ]),
-et = null == Y ? void 0 : Y.profileEffectId;
-  return (0, n.jsx)(I.Gt, {
-value: W,
-children: (0, n.jsx)(x.Mt, {
-  value: H,
-  children: (0, n.jsx)(a.Z, {
-    section: O.jXE.PROFILE_MODAL,
-    children: (0, n.jsxs)(o.ModalRoot, {
+eo = null == Y ? void 0 : Y.profileEffectId;
+  return (0, i.jsx)(I.Gt, {
+value: H,
+children: (0, i.jsx)(v.Mt, {
+  value: W,
+  children: (0, i.jsx)(r.Z, {
+    section: R.jXE.PROFILE_MODAL,
+    children: (0, i.jsxs)(t.ModalRoot, {
       transitionState: G,
-      className: M.root,
+      className: U.root,
       hideShadow: !0,
       'aria-label': L.Z.Messages.USER_PROFILE_MODAL,
       children: [
-        (0, n.jsxs)(N.Z, {
-          user: V,
+        (0, i.jsxs)(N.Z, {
+          user: k,
           displayProfile: Y,
-          profileType: R.y0.MODAL,
-          ref: ei,
+          profileType: O.y0.MODAL,
+          ref: es,
           children: [
-            (0, n.jsx)(C.Z, {
-              className: M.topSection,
+            (0, i.jsx)(j.Z, {
+              className: U.topSection,
               displayProfile: Y,
-              user: V,
+              user: k,
               friendToken: D,
-              onClose: k,
+              onClose: V,
               isStreaming: (0, c.Z)(K),
-              guildId: T,
+              guildId: p,
               channelId: g,
-              hasProfileEffect: null != et
+              hasProfileEffect: null != eo
             }),
-            (0, n.jsx)(N.Z.Overlay, {
-              className: M.overlay,
-              children: (0, n.jsxs)('div', {
-                className: M.body,
+            (0, i.jsx)(N.Z.Overlay, {
+              className: U.overlay,
+              children: (0, i.jsxs)('div', {
+                className: U.body,
                 children: [
-                  (0, n.jsx)(A.Z, {
-                    user: V,
+                  (0, i.jsx)(A.Z, {
+                    user: k,
                     displayProfile: Y
                   }),
-                  es ? (0, n.jsx)(U, {
-                    user: V,
-                    section: J === R.oh.USER_INFO_CONNECTIONS ? R.oh.USER_INFO : J,
+                  en ? (0, i.jsx)(M, {
+                    user: k,
+                    section: J === O.oh.USER_INFO_CONNECTIONS ? O.oh.USER_INFO : J,
                     setSection: el,
                     hasActivity: ee,
                     isCurrentUser: $
-                  }) : (0, n.jsx)('div', {
-                    className: M.divider
+                  }) : (0, i.jsx)('div', {
+                    className: U.divider
                   }),
-                  (0, n.jsx)(j.Z, {
+                  (0, i.jsx)(C.Z, {
                     displayProfile: Y,
-                    user: V,
-                    autoFocusNote: B === R.Tb.NOTE && !q,
+                    user: k,
+                    autoFocusNote: B === O.Tb.NOTE && !Q,
                     selectedSection: J,
-                    onClose: k
+                    onClose: V
                   })
                 ]
               })
             })
           ]
         }),
-        null != et && (0, n.jsx)(f.Z, {
-          profileEffectId: et,
+        null != eo && (0, i.jsx)(f.Z, {
+          profileEffectId: eo,
           bannerAdjustment: 0,
-          isHovering: en
+          isHovering: ei
         })
       ]
     })

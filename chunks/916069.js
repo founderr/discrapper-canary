@@ -1,12 +1,12 @@
-t.d(n, {
+s.d(t, {
   Z: function() {
-return r;
+return _;
   }
 });
-var l = t(442837),
-  i = t(914010),
-  u = t(981631);
+var n = s(442837),
+  a = s(914010),
+  i = s(981631);
 
-function r() {
-  return (0, l.e7)([i.Z], () => i.Z.getGuildId()) === u.I_8;
+function _() {
+  return (0, n.e7)([a.Z], () => a.Z.getGuildId()) === i.I_8;
 }

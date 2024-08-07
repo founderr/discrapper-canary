@@ -1,85 +1,85 @@
 n.d(t, {
   z: function() {
-return L;
+return f;
   }
 }), n(47120);
-var s, a, l = n(735250),
-  r = n(470079),
+var s, a, r = n(735250),
+  l = n(470079),
   i = n(120356),
   u = n.n(i),
-  c = n(913527),
-  o = n.n(c),
+  o = n(913527),
+  c = n.n(o),
   E = n(692547),
   d = n(481060),
   N = n(44315),
-  _ = n(894017),
-  T = n(854698),
-  m = n(849464),
-  D = n(765305),
+  T = n(894017),
+  _ = n(854698),
+  D = n(849464),
+  m = n(765305),
   v = n(231338),
-  x = n(689938),
-  h = n(402974);
+  g = n(689938),
+  x = n(402974);
 (a = s || (s = {}))[a.SCHEDULED = 0] = 'SCHEDULED', a[a.STARTING_SOON = 1] = 'STARTING_SOON', a[a.READY = 2] = 'READY', a[a.STARTED = 3] = 'STARTED', a[a.ENDED = 4] = 'ENDED', a[a.CANCELED = 5] = 'CANCELED';
 
-function g() {
-  return (0, l.jsx)(d.TextBadge, {
-className: h.newBadge,
+function S() {
+  return (0, r.jsx)(d.TextBadge, {
+className: x.newBadge,
 color: E.Z.unsafe_rawColors.BRAND_260.css,
-text: (0, l.jsx)(d.Text, {
-  className: h.newBadgeText,
+text: (0, r.jsx)(d.Text, {
+  className: x.newBadgeText,
   variant: 'text-xs/bold',
-  children: x.Z.Messages.NEW
+  children: g.Z.Messages.NEW
 })
   });
 }
 
-function f(e) {
+function h(e) {
   let {
 children: t,
 className: n,
 tooltipText: s
   } = e;
-  return (0, l.jsx)('div', {
-className: u()(h.eventStatusContainer, n),
-children: (0, l.jsx)(d.Tooltip, {
+  return (0, r.jsx)('div', {
+className: u()(x.eventStatusContainer, n),
+children: (0, r.jsx)(d.Tooltip, {
   position: 'right',
   text: s,
   shouldShow: null != s,
-  children: e => (0, l.jsx)('div', {
+  children: e => (0, r.jsx)('div', {
     ...e,
-    className: u()(h.eventStatusContainer, n),
+    className: u()(x.eventStatusContainer, n),
     children: t
   })
 })
   });
 }
 
-function L(e) {
+function f(e) {
   let {
 startTime: t,
 status: n,
 eventType: s,
 className: a,
 endTime: i,
-liveText: c,
+liveText: o,
 textVariant: E = 'text-sm/semibold',
-isNew: L,
-recurrenceRule: S,
-guildEventId: A,
-recurrenceId: I
-  } = e, Z = (0, N.O0)(v.tP.TEXT_BRAND), C = (0, N.O0)(v.tP.TEXT_POSITIVE), R = (0, N.O0)(v.tP.TEXT_DANGER);
-  null == c && (c = s === D.WX.EXTERNAL ? x.Z.Messages.STAGE_CHANNEL_HAPPENING_NOW : x.Z.Messages.STAGE_CHANNEL_LIVE_NOW);
-  let p = (0, _.Z)(I, A),
+isNew: f,
+recurrenceRule: I,
+guildEventId: R,
+recurrenceId: L
+  } = e, C = (0, N.O0)(v.tP.TEXT_BRAND), p = (0, N.O0)(v.tP.TEXT_POSITIVE), Z = (0, N.O0)(v.tP.TEXT_DANGER);
+  null == o && (o = s === m.WX.EXTERNAL ? g.Z.Messages.STAGE_CHANNEL_HAPPENING_NOW : g.Z.Messages.STAGE_CHANNEL_LIVE_NOW);
+  let A = (0, T.Z)(L, R),
 [{
   startDateTimeString: j,
-  endDateTimeString: O,
-  currentOrPastEvent: M,
+  endDateTimeString: M,
+  currentOrPastEvent: O,
   upcomingEvent: U,
-  diffMinutes: w
-}, G] = r.useState((0, T.ub)(t, i));
-  r.useEffect(() => {
-G((0, T.ub)(t, i));
-let e = setInterval(() => G((0, T.ub)(t, i)), 1000);
+  diffMinutes: P
+}, G] = l.useState((0, _.ub)(t, i));
+  l.useEffect(() => {
+G((0, _.ub)(t, i));
+let e = setInterval(() => G((0, _.ub)(t, i)), 1000);
 return () => {
   clearInterval(e);
 };
@@ -87,32 +87,32 @@ return () => {
 t,
 i
   ]);
-  let P = j;
-  null != O && '' !== O && (P = x.Z.Messages.START_DATE_TO_END_DATE.format({
+  let H = j;
+  null != M && '' !== M && (H = g.Z.Messages.START_DATE_TO_END_DATE.format({
 start: j,
-end: O
+end: M
   }));
-  let b = r.useMemo(() => n === D.p1.CANCELED || (null == p ? void 0 : p.is_canceled) ? 5 : n === D.p1.ACTIVE ? 3 : D.$I.has(n) ? 4 : M ? 2 : U ? 1 : 0, [
+  let w = l.useMemo(() => n === m.p1.CANCELED || (null == A ? void 0 : A.is_canceled) ? 5 : n === m.p1.ACTIVE ? 3 : m.$I.has(n) ? 4 : O ? 2 : U ? 1 : 0, [
   n,
-  null == p ? void 0 : p.is_canceled,
-  M,
+  null == A ? void 0 : A.is_canceled,
+  O,
   U
 ]),
-H = function(e, t, n, s, a) {
+b = function(e, t, n, s, a) {
   switch (e) {
     case 1:
-      return a > 0 ? x.Z.Messages.STARTING_IN_MINUTES.format({
+      return a > 0 ? g.Z.Messages.STARTING_IN_MINUTES.format({
         minutes: a
-      }) : x.Z.Messages.STARTING_SOON;
+      }) : g.Z.Messages.STARTING_SOON;
     case 2:
-      return x.Z.Messages.STARTING_SOON;
+      return g.Z.Messages.STARTING_SOON;
     case 3:
-      return null != s && '' !== s ? x.Z.Messages.START_DATE_TO_END_DATE_WITH_COLOR.format({
+      return null != s && '' !== s ? g.Z.Messages.START_DATE_TO_END_DATE_WITH_COLOR.format({
         start: n,
-        startHook: e => (0, l.jsx)(d.Text, {
+        startHook: e => (0, r.jsx)(d.Text, {
           color: 'text-positive',
           variant: 'text-sm/semibold',
-          className: h.liveEventEndTime,
+          className: x.liveEventEndTime,
           children: e
         }),
         end: s
@@ -120,126 +120,126 @@ H = function(e, t, n, s, a) {
     default:
       return t;
   }
-}(b, P, c, O, w),
+}(w, H, o, M, P),
 {
   Icon: V,
-  iconColor: Y,
-  textColor: k,
+  iconColor: k,
+  textColor: Y,
   tooltipText: z
-} = r.useMemo(() => function(e) {
+} = l.useMemo(() => function(e) {
   let t, {
       timeStatus: n,
       textBrand: s,
       textPositive: a,
-      textDanger: l,
-      endDateTimeString: r,
+      textDanger: r,
+      endDateTimeString: l,
       startDateTimeString: i
     } = e,
     u = d.CalendarIcon,
-    c = s,
-    o = 'header-secondary';
+    o = s,
+    c = 'header-secondary';
   switch (n) {
     case 3:
-      c = a, o = null != r ? void 0 : 'text-positive';
+      o = a, c = null != l ? void 0 : 'text-positive';
       break;
     case 4:
       u = d.ClockIcon;
       break;
     case 2:
     case 1:
-      o = 'text-brand', t = i;
+      c = 'text-brand', t = i;
       break;
     case 5:
-      c = l;
+      o = r;
   }
   return {
     Icon: u,
-    iconColor: c.hex,
-    textColor: o,
+    iconColor: o.hex,
+    textColor: c,
     tooltipText: t
   };
 }({
-  timeStatus: b,
-  textBrand: Z,
-  textPositive: C,
-  textDanger: R,
-  endDateTimeString: O,
+  timeStatus: w,
+  textBrand: C,
+  textPositive: p,
+  textDanger: Z,
+  endDateTimeString: M,
   startDateTimeString: j
 }), [
-  b,
-  Z,
+  w,
   C,
-  R,
-  O,
+  p,
+  Z,
+  M,
   j
 ]),
-W = null;
-  if (null != S) {
-let e = (0, T.Ho)(S);
-W = x.Z.Messages.GUILD_SCHEDULED_EVENT_RECURRENCE_RULE.format({
+B = null;
+  if (null != I) {
+let e = (0, _.Ho)(I);
+B = g.Z.Messages.GUILD_SCHEDULED_EVENT_RECURRENCE_RULE.format({
   recurrenceRule: e.toText()
 });
-let n = o()(t);
-W = function(e, t) {
+let n = c()(t);
+B = function(e, t) {
   let n = t.toDate(),
-    s = n.toLocaleString(x.Z.getLocale(), {
+    s = n.toLocaleString(g.Z.getLocale(), {
       weekday: 'long'
     });
   switch (e) {
-    case m.z.WEEKLY:
-      return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY.format({
+    case D.z.WEEKLY:
+      return g.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY.format({
         weekday: s
       });
-    case m.z.BIWEEKLY:
-      return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_BIWEEKLY.format({
+    case D.z.BIWEEKLY:
+      return g.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_BIWEEKLY.format({
         weekday: s
       });
-    case m.z.MONTHLY:
+    case D.z.MONTHLY:
       let a = Math.ceil(n.getDate() / 7);
-      return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_MONTHLY.format({
+      return g.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_MONTHLY.format({
         weekday: s,
         nth: a
       });
-    case m.z.YEARLY:
-      return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_YEARLY.format({
-        date: n.toLocaleString(x.Z.getLocale(), {
+    case D.z.YEARLY:
+      return g.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_YEARLY.format({
+        date: n.toLocaleString(g.Z.getLocale(), {
           month: 'short',
           day: '2-digit'
         })
       });
-    case m.z.WEEKDAY_ONLY:
-      return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKDAYS;
-    case m.z.WEEKEND_ONLY:
-      return x.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKENDS;
+    case D.z.WEEKDAY_ONLY:
+      return g.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKDAYS;
+    case D.z.WEEKEND_ONLY:
+      return g.Z.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKENDS;
     default:
       return null;
   }
-}((0, T.zi)(n, S), n);
+}((0, _.zi)(n, I), n);
   }
-  return (0, l.jsxs)(f, {
+  return (0, r.jsxs)(h, {
 className: u()(a, {
-  [h.isRecurring]: null != W
+  [x.isRecurring]: null != B
 }),
 tooltipText: z,
 children: [
-  L && n === D.p1.SCHEDULED ? (0, l.jsx)(g, {}) : (0, l.jsx)(V, {
-    color: Y,
+  f && n === m.p1.SCHEDULED ? (0, r.jsx)(S, {}) : (0, r.jsx)(V, {
+    color: k,
     size: 'custom',
     width: 20,
     height: 20
   }),
-  (0, l.jsxs)('div', {
-    className: h.eventStatusLabel,
+  (0, r.jsxs)('div', {
+    className: x.eventStatusLabel,
     children: [
-      (0, l.jsx)(d.Text, {
-        color: k,
+      (0, r.jsx)(d.Text, {
+        color: Y,
         variant: E,
-        children: H
+        children: b
       }),
-      null != W && (0, l.jsx)(d.Text, {
+      null != B && (0, r.jsx)(d.Text, {
         color: 'header-secondary',
         variant: 'text-xs/normal',
-        children: W
+        children: B
       })
     ]
   })

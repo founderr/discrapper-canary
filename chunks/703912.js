@@ -15,8 +15,8 @@ var i = n(664751),
   _ = n(489863),
   E = n(166148),
   h = n(307643),
-  I = n(973616),
-  m = n(594174),
+  m = n(973616),
+  I = n(594174),
   g = n(630388),
   p = n(700785),
   T = n(996106),
@@ -51,11 +51,11 @@ throw new T.Z({
   errorCode: f.lTL.OAUTH2_ERROR
 }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
   let y = [];
-  if ('string' == typeof O ? y = O.split(' ').filter(e => e.length > 0) : Array.isArray(O) && (y = O), null == m.default.getCurrentUser())
+  if ('string' == typeof O ? y = O.split(' ').filter(e => e.length > 0) : Array.isArray(O) && (y = O), null == I.default.getCurrentUser())
 throw new T.Z({
   errorCode: f.lTL.OAUTH2_ERROR
 }, 'Client is not logged in');
-  let j = I.Z.createFromServer(await (0, h.UM)(S)),
+  let j = m.Z.createFromServer(await (0, h.UM)(S)),
 U = null != j && (0, g.yE)(j.flags, f.udG.EMBEDDED) && (null === (i = j.integrationTypesConfig) || void 0 === i ? void 0 : i[a.Y.USER_INSTALL]) != null;
   l = null == D ? U ? a.Y.USER_INSTALL : a.Y.GUILD_INSTALL : Number(D);
   try {
@@ -163,7 +163,7 @@ if (e.application.id !== i.id)
   throw new T.Z({
     errorCode: f.lTL.INVALID_CLIENTID
   }, 'Application does not match the connection\'s');
-let l = m.default.getCurrentUser();
+let l = I.default.getCurrentUser();
 if (null == l || !a || l.id !== a.id)
   throw new T.Z({
     errorCode: f.lTL.INVALID_TOKEN

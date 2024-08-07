@@ -11,8 +11,8 @@ var a = n(948789),
   _ = n(702428),
   E = n(709158),
   h = n(683301),
-  I = n(150192),
-  m = n(889010),
+  m = n(150192),
+  I = n(889010),
   g = n(488905),
   p = n(347137),
   T = n(731455),
@@ -43,7 +43,7 @@ let {
 } = (0, s.cj)([h.ZP], () => ({
   currentCategoryId: h.ZP.getCurrentCategoryId(),
   isViewingSearchResults: h.ZP.getMostRecentQuery().length > 0
-})), n = (0, E.Z)(f.dr.QUEST_HOME_DESKTOP), o = (0, s.e7)([I.Z], () => I.Z.getDiscoveryCategories(), [], I.j), p = null == o ? void 0 : o.map(e => ({
+})), n = (0, E.Z)(f.dr.QUEST_HOME_DESKTOP), o = (0, s.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), p = null == o ? void 0 : o.map(e => ({
   ...e,
   icon: A(e.categoryId)
 })), v = e => {
@@ -55,7 +55,7 @@ return (0, i.jsxs)(r.Scroller, {
     (0, i.jsx)(g.V, {
       text: C.Z.Messages.DISCOVER
     }),
-    (0, i.jsx)(m.Z, {
+    (0, i.jsx)(I.Z, {
       categories: p,
       handleCategorySelect: v,
       currentCategoryId: e,

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(46973),
   d = n(481060),
   h = n(846027),
-  m = n(607070),
-  p = n(361291),
+  p = n(607070),
+  m = n(361291),
   _ = n(131951),
   f = n(626135),
   E = n(120522),
@@ -52,9 +52,9 @@ let M = v.LY.RESOLUTION_1440,
 function R(e) {
   let {
 channel: t
-  } = e, n = (0, c.e7)([m.Z], () => m.Z.useReducedMotion), [s, l] = a.useState(!1), {
+  } = e, n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), [s, l] = a.useState(!1), {
 preset: o
-  } = (0, c.cj)([p.Z], () => p.Z.getState()), g = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()), x = a.useCallback(() => {
+  } = (0, c.cj)([m.Z], () => m.Z.getState()), g = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()), x = a.useCallback(() => {
 l(!0), (0, E.S)(r.q.STREAM_HIGH_QUALITY).then(e => {
   if (e) {
     if ((0, I.J1)(!(0, C.mc)(M, b)), f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {

@@ -1,25 +1,25 @@
-t.d(n, {
+n.d(t, {
   K: function() {
 return o;
   },
   z: function() {
-return u;
+return c;
   }
 });
-var l = t(481060),
-  i = t(475179),
-  a = t(925549),
-  r = t(905423),
-  s = t(981631);
+var i = n(481060),
+  s = n(475179),
+  a = n(925549),
+  r = n(905423),
+  l = n(981631);
 
-function o(e, n) {
-  let t = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+function o(e, t) {
+  let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
 o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-  if (!(0, l.hasAnyModalOpen)())
-t && a.Z.channelListScrollTo(e, n), o && null != n && i.Z.updateChatOpen(n, !0), r.Z.getState().updatePath(s.Z5c.CHANNEL(e, n));
+  if (!(0, i.hasAnyModalOpen)())
+n && a.Z.channelListScrollTo(e, t), o && null != t && s.Z.updateChatOpen(t, !0), r.Z.getState().updatePath(l.Z5c.CHANNEL(e, t));
 }
 
-function u(e) {
-  if (!(0, l.hasAnyModalOpen)())
+function c(e) {
+  if (!(0, i.hasAnyModalOpen)())
 r.Z.getState().updatePath(e);
 }

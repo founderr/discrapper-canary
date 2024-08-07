@@ -3,8 +3,8 @@ var s = n(735250),
   r = n(470079),
   i = n(120356),
   a = n.n(i),
-  l = n(442837),
-  o = n(481060),
+  o = n(442837),
+  l = n(481060),
   c = n(144114),
   u = n(742458),
   d = n(541692),
@@ -15,7 +15,7 @@ var s = n(735250),
   p = n(483085),
   I = n(549856);
 t.Z = () => {
-  let [e, t] = r.useState(''), [i, m] = r.useState(''), [f, N] = r.useState(!1), [T, x] = r.useState(!1), [A, C] = r.useState(null), [v, Z] = r.useState(null), S = (0, l.e7)([d.Z], () => d.Z.getCountryCode()), R = S.code.split(' ')[0], O = async () => {
+  let [e, t] = r.useState(''), [i, m] = r.useState(''), [f, N] = r.useState(!1), [T, x] = r.useState(!1), [A, C] = r.useState(null), [v, Z] = r.useState(null), S = (0, o.e7)([d.Z], () => d.Z.getCountryCode()), R = S.code.split(' ')[0], O = async () => {
 try {
   await c.Z.resendCode(e);
 } catch (e) {
@@ -42,7 +42,7 @@ children: [
     className: a()(I.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
     children: [
       g.Z.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED,
-      (0, s.jsx)(o.CircleCheckIcon, {
+      (0, s.jsx)(l.CircleCheckIcon, {
         size: 'md',
         color: 'currentColor',
         className: I.marginLeft8

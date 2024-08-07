@@ -11,7 +11,7 @@ var i = n(413135),
   _ = n(981631);
 let E = o.ZP.requireModule('discord_rpc').RPCIPC,
   h = new l.Z('RPCServer:IPC'),
-  I = {
+  m = {
 HANDSHAKE: 0,
 FRAME: 1,
 CLOSE: 2,
@@ -19,7 +19,7 @@ PING: 3,
 PONG: 4
   };
 
-function m(e, t) {
+function I(e, t) {
   null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : e._didHandshake = t;
 }
 
@@ -33,7 +33,7 @@ function p(e) {
   try {
     S(e);
   } catch (t) {
-    e.end(T(I.CLOSE, {
+    e.end(T(m.CLOSE, {
       code: 1003,
       message: t.message
     })), e.destroy();
@@ -57,7 +57,7 @@ let i = () => {
   }, e => {
     throw i(), e;
   });
-return e.write(T(I.PING, r().uniqueId())), a.then(t, n);
+return e.write(T(m.PING, r().uniqueId())), a.then(t, n);
   });
 }
 
@@ -76,39 +76,39 @@ return;
   let n = i.Buffer.from(t),
 a = n.readInt32LE(0),
 s = n.readInt32LE(4);
-  if (!Object.values(I).includes(a) || s < 0)
+  if (!Object.values(m).includes(a) || s < 0)
 throw Error('protocol error');
   if (null == (t = e.read(s)))
 throw Error('data size does not match what was received');
   let r = JSON.parse((n = i.Buffer.from(t)).toString());
   switch (a) {
-case I.PING:
-  e.emit('ping', r), e.write(T(I.PONG, r));
+case m.PING:
+  e.emit('ping', r), e.write(T(m.PONG, r));
   break;
-case I.PONG:
+case m.PONG:
   e.emit('pong', r);
   break;
-case I.HANDSHAKE:
+case m.HANDSHAKE:
   if (g(e))
     throw Error('already did handshake');
-  m(e, !0), e.emit('handshake', r);
+  I(e, !0), e.emit('handshake', r);
   break;
-case I.FRAME:
+case m.FRAME:
   if (!g(e))
     throw Error('did not handshake');
   e.emit('request', r);
   break;
-case I.CLOSE:
+case m.CLOSE:
   e.end(), e.destroy();
   }
   S(e);
 }
 class f extends d.Z {
   send(e) {
-h.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(T(I.FRAME, e));
+h.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(T(m.FRAME, e));
   }
   close(e, t) {
-this.socket.end(T(I.CLOSE, {
+this.socket.end(T(m.CLOSE, {
   code: e,
   message: t
 })), this.socket.destroy();
@@ -125,11 +125,11 @@ super('ipc', t, n), i = this, s = void 0, (a = 'socket') in i ? Object.definePro
 }
 class C extends a.EventEmitter {
   handleConnection(e) {
-m(e, !1), e.pause(), e.on('readable', () => {
+I(e, !1), e.pause(), e.on('readable', () => {
   try {
     S(e);
   } catch (t) {
-    e.end(T(I.CLOSE, {
+    e.end(T(m.CLOSE, {
       code: _.$VG.CLOSE_UNSUPPORTED,
       message: t.message
     })), e.destroy();
@@ -141,7 +141,7 @@ m(e, !1), e.pause(), e.on('readable', () => {
   try {
     n = new f(e, a, 'json');
   } catch (t) {
-    e.end(T(I.CLOSE, {
+    e.end(T(m.CLOSE, {
       code: t.code,
       message: t.message
     })), e.destroy();

@@ -7,8 +7,8 @@ var i, a, s, r, l = n(392711),
   _ = n(594174),
   E = n(388380);
 let h = {},
-  I = 0,
-  m = !1,
+  m = 0,
+  I = !1,
   g = !1;
 
 function p(e) {
@@ -27,7 +27,7 @@ class T extends(i = c.ZP.Store) {
 this.waitFor(_.default);
   }
   getSuggestionCount() {
-return I;
+return m;
   }
   getSuggestions() {
 return Object.entries(h).map(e => {
@@ -46,25 +46,25 @@ r = 'FriendSuggestionStore', (s = 'displayName') in(a = T) ? Object.defineProper
   writable: !0
 }) : a[s] = r, t.Z = new T(d.Z, {
   CONNECTION_OPEN: function(e) {
-h = {}, (I = e.friendSuggestionCount) > 0 && (g = !0, m || !g || (m = !0, g = !1, E.Z.fetch()));
+h = {}, (m = e.friendSuggestionCount) > 0 && (g = !0, I || !g || (I = !0, g = !1, E.Z.fetch()));
   },
   FRIEND_SUGGESTION_CREATE: function(e) {
 let t = p(e.suggestion);
 if (null != h[t.key])
   return !1;
-I++, h = {
+m++, h = {
   ...h,
   [t.key]: t
 };
   },
   FRIEND_SUGGESTION_DELETE: function(e) {
-I = Math.max(0, --I), delete h[e.suggestedUserId];
+m = Math.max(0, --m), delete h[e.suggestedUserId];
   },
   LOAD_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
 var t;
-m = !1, t = e.suggestions, h = o().chain(t).map(e => p(e)).keyBy(e => e.key).value(), I = o().keys(h).length;
+I = !1, t = e.suggestions, h = o().chain(t).map(e => p(e)).keyBy(e => e.key).value(), m = o().keys(h).length;
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function() {
-m = !1, h = {};
+I = !1, h = {};
   }
 });

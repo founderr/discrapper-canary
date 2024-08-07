@@ -14,13 +14,13 @@ var a = n(442837),
   u = n(689938);
 
 function d(e, t) {
-  let [n, d, h] = (0, r.Z)(e, t), m = (0, a.e7)([l.ZP], () => l.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+  let [n, d, h] = (0, r.Z)(e, t), p = (0, a.e7)([l.ZP], () => l.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
   return n ? (0, i.jsx)(s.MenuCheckboxItem, {
 id: 'self-stream-hide',
 label: u.Z.Messages.SHOW_SELF_STREAM,
 checked: !d,
 action: () => {
-  if (m || d)
+  if (p || d)
     return h(!d);
   (0, s.openModal)(e => (0, i.jsx)(o.Z, {
     ...e,

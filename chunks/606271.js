@@ -15,8 +15,8 @@ var i = n(392711),
   _ = n(131951),
   E = n(158776),
   h = n(19780),
-  I = n(699516),
-  m = n(944486),
+  m = n(699516),
+  I = n(944486),
   g = n(594174),
   p = n(979651),
   T = n(626135),
@@ -109,7 +109,7 @@ if (0 === this.rpcServer.subscriptions.length)
   return;
 let t = 0 !== e.speakingFlags ? v.zMe.SPEAKING_START : v.zMe.SPEAKING_STOP;
 if (e.context === L.Yn.DEFAULT) {
-  let n = m.Z.getVoiceChannelId();
+  let n = I.Z.getVoiceChannelId();
   if (null != n) {
     let i = c.Z.getChannel(n);
     if (null == i)
@@ -316,13 +316,13 @@ if (0 !== this.rpcServer.subscriptions.length)
     } = e;
     if (null != t)
       return;
-    let i = I.Z.getRelationshipType(n);
+    let i = m.Z.getRelationshipType(n);
     i === v.OGo.NONE && o.Z.getUserAffinitiesUserIds().has(n) && (i = v.OGo.IMPLICIT), i !== v.OGo.NONE && this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(i, n));
   });
   }
   handlePresencesReplace() {
 if (0 !== this.rpcServer.subscriptions.length)
-  a().forEach(I.Z.getRelationships(), (e, t) => {
+  a().forEach(m.Z.getRelationships(), (e, t) => {
     this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(e, t));
   });
   }

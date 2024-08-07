@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(835473),
   E = n(925329),
   h = n(871118),
-  I = n(543882),
-  m = n(314897),
+  m = n(543882),
+  I = n(314897),
   g = n(944486),
   p = n(594174),
   T = n(51144),
@@ -61,7 +61,7 @@ userId: r,
 applicationId: d,
 channelId: O,
 streamKey: R
-  } = n, [x, b] = a.useState(!1), P = (0, s.e7)([p.default], () => p.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, C.Z)(), j = (0, s.e7)([I.Z], () => I.Z.getPreviewURL(null, O, r)), U = (0, s.e7)([g.Z], () => g.Z.getVoiceChannelId()), G = (0, f.ZP)(), k = (0, S.Z)(O);
+  } = n, [x, b] = a.useState(!1), P = (0, s.e7)([p.default], () => p.default.getUser(r)), [M] = (0, _.Z)([d]), D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P), y = (0, C.Z)(), j = (0, s.e7)([m.Z], () => m.Z.getPreviewURL(null, O, r)), U = (0, s.e7)([g.Z], () => g.Z.getVoiceChannelId()), G = (0, f.ZP)(), k = (0, S.Z)(O);
   if (a.useEffect(() => {
   x && U === O && b(!1);
 }, [
@@ -75,7 +75,7 @@ buttonColor: w,
 buttonCTA: B,
 disabled: H
   } = function(e, t) {
-let n = m.default.getId(),
+let n = I.default.getId(),
   i = t.some(e => e.id === n) || e === n,
   a = t.length >= N.keq;
 return {

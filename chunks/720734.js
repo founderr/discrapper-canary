@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(789639),
   E = n(481060),
   h = n(355467),
-  I = n(239091),
-  m = n(230711),
+  m = n(239091),
+  I = n(230711),
   g = n(410575),
   p = n(941129),
   T = n(83200),
@@ -69,8 +69,8 @@ var i = n(735250),
   e_ = n(19780),
   eE = n(885110),
   eh = n(246946),
-  eI = n(594174),
-  em = n(78839),
+  em = n(594174),
+  eI = n(78839),
   eg = n(626135),
   ep = n(768581),
   eT = n(572004),
@@ -438,19 +438,19 @@ super(...e), eP(this, 'copiedTimeout', new c.V7()), eP(this, 'copiedDecayTimeout
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eL.oAB.ACCOUNT,
     t = arguments.length > 1 ? arguments[1] : void 0,
     n = arguments.length > 2 ? arguments[2] : void 0;
-  m.Z.open(e, t, n);
+  I.Z.open(e, t, n);
 }), eP(this, 'handleOpenSettingsContextMenu', e => {
   let {
     currentUser: t
   } = this.props;
-  null != t && (0, I.jW)(e, async () => {
+  null != t && (0, m.jW)(e, async () => {
     let {
       default: e
     } = await Promise.all([
       n.e('96427'),
       n.e('81039'),
       n.e('52249'),
-      n.e('13682'),
+      n.e('54803'),
       n.e('15685'),
       n.e('47006'),
       n.e('32776'),
@@ -478,24 +478,24 @@ super(...e), eP(this, 'copiedTimeout', new c.V7()), eP(this, 'copiedDecayTimeout
     });
   });
 }), eP(this, 'handleInputAudioContextMenu', e => {
-  (0, I.jW)(e, async () => {
+  (0, m.jW)(e, async () => {
     let {
       default: e
     } = await Promise.resolve().then(n.bind(n, 659580));
     return () => (0, i.jsx)(e, {
-      onClose: I.Zy,
+      onClose: m.Zy,
       renderInputDevices: !0,
       renderInputModes: !0,
       renderInputVolume: !0
     });
   });
 }), eP(this, 'handleOutputAudioContextMenu', e => {
-  (0, I.jW)(e, async () => {
+  (0, m.jW)(e, async () => {
     let {
       default: e
     } = await Promise.resolve().then(n.bind(n, 659580));
     return () => (0, i.jsx)(e, {
-      onClose: I.Zy,
+      onClose: m.Zy,
       renderOutputDevices: !0,
       renderOutputVolume: !0
     });
@@ -581,7 +581,7 @@ super(...e), eP(this, 'copiedTimeout', new c.V7()), eP(this, 'copiedDecayTimeout
 
 function ej() {
   var e, t;
-  let n = (0, l.e7)([eI.default], () => eI.default.getCurrentUser()),
+  let n = (0, l.e7)([em.default], () => em.default.getCurrentUser()),
 s = (0, U._g)(eR.X2.FORTNITE),
 r = (0, l.e7)([eo.default], () => eo.default.getId()),
 c = (0, M.a)(),
@@ -595,10 +595,10 @@ c = (0, M.a)(),
 _ = (0, f.Z)({
   userId: r
 }),
-I = eC.ZP.useUserTag(n, {
+m = eC.ZP.useUserTag(n, {
   decoration: 'never'
 }),
-m = (0, l.e7)([eh.Z], () => eh.Z.hidePersonalInformation),
+I = (0, l.e7)([eh.Z], () => eh.Z.hidePersonalInformation),
 g = (0, l.e7)([
   e_.Z,
   ec.Z
@@ -619,7 +619,7 @@ R = (0, l.e7)([A.C], () => {
   var e;
   return (0, v.fD)() ? null === (e = A.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null;
 }),
-x = (0, l.e7)([em.ZP], () => em.ZP.getPremiumTypeSubscription()),
+x = (0, l.e7)([eI.ZP], () => eI.ZP.getPremiumTypeSubscription()),
 b = (0, l.e7)([eu.Z], () => eu.Z.getEverSpeakingWhileMuted()),
 P = (0, l.e7)([ed.Z], () => ed.Z.hasLayers()),
 D = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || P || ef.s.isDisallowPopupsSet(),
@@ -649,9 +649,9 @@ ep = function() {
       W.Z.hasFetchedRelevance,
       W.Z.profileThemesRelevanceExceeded
     ]),
-    [i, s] = (0, l.Wu)([em.ZP], () => [
-      em.ZP.hasFetchedMostRecentPremiumTypeSubscription(),
-      em.ZP.getMostRecentPremiumTypeSubscription()
+    [i, s] = (0, l.Wu)([eI.ZP], () => [
+      eI.ZP.hasFetchedMostRecentPremiumTypeSubscription(),
+      eI.ZP.getMostRecentPremiumTypeSubscription()
     ]),
     {
       enabled: r
@@ -692,8 +692,8 @@ eT = {
 currentUser: n,
 customStatusActivity: c,
 dismissibleContents: eT,
-userTag: I,
-hidePrivateData: m,
+userTag: m,
+hidePrivateData: I,
 occluded: D,
 premiumSubscription: x,
 selfDeaf: L,
@@ -754,14 +754,14 @@ tooltipForceOpen: c,
 onMouseEnter: d,
 onMouseLeave: _,
 onClick: h,
-onContextMenu: I
-  } = e, m = t || s || n, {
+onContextMenu: m
+  } = e, I = t || s || n, {
 Component: g,
 play: p,
 events: T
-  } = (0, u.O)(m ? 'unmute' : 'mute'), S = n || s ? E.MicrophoneDenyIcon : g;
+  } = (0, u.O)(I ? 'unmute' : 'mute'), S = n || s ? E.MicrophoneDenyIcon : g;
   return a.useEffect(() => () => p(), [
-m,
+I,
 p
   ]), (0, i.jsx)(eA.Z, {
 tooltipText: l,
@@ -777,14 +777,14 @@ icon: (0, i.jsx)(S, {
   size: 'custom',
   width: 20,
   height: 20,
-  color: m ? E.tokens.colors.STATUS_DANGER : 'currentColor'
+  color: I ? E.tokens.colors.STATUS_DANGER : 'currentColor'
 }),
-iconForeground: m ? eb.strikethrough : null,
+iconForeground: I ? eb.strikethrough : null,
 onClick: h,
-onContextMenu: I,
+onContextMenu: m,
 role: 'switch',
 'aria-label': ex.Z.Messages.MUTE,
-'aria-checked': m,
+'aria-checked': I,
 disabled: r
   });
 }
@@ -801,17 +801,17 @@ Component: u,
 play: _,
 events: {
   onMouseEnter: h,
-  onMouseLeave: I
+  onMouseLeave: m
 }
-  } = (0, d.l)(c ? 'undeafen' : 'deafen'), m = n ? E.HeadphonesDenyIcon : u;
+  } = (0, d.l)(c ? 'undeafen' : 'deafen'), I = n ? E.HeadphonesDenyIcon : u;
   return a.useEffect(() => () => _(), [
 c,
 _
   ]), (0, i.jsx)(eA.Z, {
 tooltipText: (0, Z.Z)(t, n, s),
 onMouseEnter: h,
-onMouseLeave: I,
-icon: (0, i.jsx)(m, {
+onMouseLeave: m,
+icon: (0, i.jsx)(I, {
   size: 'custom',
   width: 20,
   height: 20,
