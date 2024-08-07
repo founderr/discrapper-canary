@@ -1,6 +1,6 @@
 t.d(n, {
   Q2: function() {
-return S;
+return L;
   },
   pe: function() {
 return P;
@@ -9,8 +9,8 @@ return P;
 var i = t(470079),
   a = t(392711),
   l = t.n(a),
-  o = t(373793),
-  r = t(288385),
+  r = t(373793),
+  o = t(288385),
   s = t(442837),
   c = t(911969),
   u = t(127255),
@@ -46,8 +46,8 @@ function P(e) {
 channel: n,
 query: t,
 commandLimit: a,
-applicationLimit: o,
-searchesCommands: r = !0,
+applicationLimit: r,
+searchesCommands: o = !0,
 searchesBots: s = !0,
 searchesActivities: C = !0
   } = e;
@@ -61,11 +61,11 @@ var n, t;
 let {
   channel: a,
   includeBuiltIn: l = !0,
-  allowFetch: o = !0
-} = e, r = (0, m.em)(a, !0, o), s = (0, m.PL)(!0, o);
+  allowFetch: r = !0
+} = e, o = (0, m.em)(a, !0, r), s = (0, m.PL)(!0, r);
 return i.useMemo(() => {
-  var e, n, t, i, o;
-  let c = null !== (t = null === (e = r.result) || void 0 === e ? void 0 : e.sections) && void 0 !== t ? t : {},
+  var e, n, t, i, r;
+  let c = null !== (t = null === (e = o.result) || void 0 === e ? void 0 : e.sections) && void 0 !== t ? t : {},
     u = null !== (i = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {},
     d = [
       ...Object.keys(c),
@@ -76,7 +76,7 @@ return i.useMemo(() => {
     _ = {};
   for (let e of d) {
     let n = (0, m.If)(a, e),
-      t = null !== (o = n.sectionCommands) && void 0 !== o ? o : [];
+      t = null !== (r = n.sectionCommands) && void 0 !== r ? r : [];
     p.push(...t), t.forEach(e => {
       null != n.descriptor && (_[e.id] = n.descriptor);
     });
@@ -84,13 +84,13 @@ return i.useMemo(() => {
   return {
     commands: p,
     commandSectionMap: _,
-    loading: !0 === r.fetchState.fetching || !0 === s.fetchState.fetching
+    loading: !0 === o.fetchState.fetching || !0 === s.fetchState.fetching
   };
 }, [
   a,
   l,
-  r.fetchState.fetching,
-  null === (n = r.result) || void 0 === n ? void 0 : n.sections,
+  o.fetchState.fetching,
+  null === (n = o.result) || void 0 === n ? void 0 : n.sections,
   s.fetchState.fetching,
   null === (t = s.result) || void 0 === t ? void 0 : t.sections
 ]);
@@ -98,37 +98,37 @@ return i.useMemo(() => {
 channel: n,
 includeBuiltIn: !0
   }), {
-apps: S
+apps: L
   } = function(e) {
 let {
   channel: n,
   onlyWithCommands: t,
   includeBuiltIn: i,
   allowFetch: a = !0
-} = e, l = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions, o = (0, m.em)(n, l, a), r = (0, m.PL)(l, a), s = [], u = new Set();
-if (null != o.result)
-  for (let e of Object.values(o.result.sections)) {
+} = e, l = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions, r = (0, m.em)(n, l, a), o = (0, m.PL)(l, a), s = [], u = new Set();
+if (null != r.result)
+  for (let e of Object.values(r.result.sections)) {
     let n = e.descriptor.application;
     null != n && (Object.keys(e.commands).length > 0 || !t) && (s.push(n), u.add(n.id));
   }
-if (null != r.result)
-  for (let e of Object.values(r.result.sections)) {
+if (null != o.result)
+  for (let e of Object.values(o.result.sections)) {
     let n = e.descriptor.application;
     null != n && !u.has(n.id) && (Object.keys(e.commands).length > 0 || !t) && s.push(n);
   }
 return i && s.push(E.Wx), {
   apps: s,
-  loading: (null == o ? void 0 : o.fetchState.fetching) === !0 || (null == r ? void 0 : r.fetchState.fetching) === !0
+  loading: (null == r ? void 0 : r.fetchState.fetching) === !0 || (null == o ? void 0 : o.fetchState.fetching) === !0
 };
   }({
 channel: n,
 onlyWithCommands: !0,
 includeBuiltIn: !0
-  }), L = (0, u.Z)({
+  }), R = (0, u.Z)({
 guildId: n.getGuildId()
-  }), R = i.useMemo(() => {
+  }), S = i.useMemo(() => {
 var e;
-if (!r)
+if (!o)
   return [];
 return (0, A.N)(f, {
   limit: a,
@@ -139,15 +139,15 @@ return (0, A.N)(f, {
       let {
         context: a,
         userId: l,
-        roleIds: o,
-        isImpersonating: r
+        roleIds: r,
+        isImpersonating: o
       } = n;
       if (!(i.applicationId in t)) {
         let {
           descriptor: n,
           isGuildInstalled: s,
           isUserInstalled: c
-        } = (0, m.If)(e, i.applicationId), u = null != a.guild_id ? _.ML(null == n ? void 0 : n.permissions, a.guild_id, l, o, r) : null, d = null != a.guild_id ? _.ZJ(null == n ? void 0 : n.permissions, a, a.guild_id) : null;
+        } = (0, m.If)(e, i.applicationId), u = null != a.guild_id ? _.ML(null == n ? void 0 : n.permissions, a.guild_id, l, r, o) : null, d = null != a.guild_id ? _.ZJ(null == n ? void 0 : n.permissions, a, a.guild_id) : null;
         t[i.applicationId] = {
           descriptor: n,
           applicationAllowedForUser: u,
@@ -237,19 +237,19 @@ return (0, A.N)(f, {
   ]
 });
   }, [
-r,
+o,
 f,
 a,
 n,
 t
   ]), T = i.useMemo(() => {
-if (0 === R.length)
+if (0 === S.length)
   return [];
-let e = new Map(S.map(e => [
+let e = new Map(L.map(e => [
   e.id,
   e
 ]));
-return l().compact(R.map(n => {
+return l().compact(S.map(n => {
   var t;
   let i = e.get(n.applicationId);
   if (null == i)
@@ -262,8 +262,8 @@ return l().compact(R.map(n => {
   };
 }));
   }, [
+L,
 S,
-R,
 h
   ]), b = i.useMemo(() => {
 var e;
@@ -271,13 +271,13 @@ if (!s && !C)
   return [];
 let i = [];
 if (s && C) {
-  let e = new Set(S.map(e => {
+  let e = new Set(L.map(e => {
     let {
       id: n
     } = e;
     return n;
   }));
-  i.push(...S), i.push(...L.filter(n => {
+  i.push(...L), i.push(...R.filter(n => {
     let {
       application: {
         id: t
@@ -291,14 +291,14 @@ if (s && C) {
     return n;
   }));
 } else
-  i = s ? S : L.map(e => {
+  i = s ? L : R.map(e => {
     let {
       application: n
     } = e;
     return n;
   });
 return (0, A.N)(i, {
-  limit: o,
+  limit: r,
   filterPredicates: [function(e) {
     let n = (0, p.k)(e, [
       c.yU.CHAT,
@@ -309,17 +309,17 @@ return (0, A.N)(i, {
         context: i,
         userId: a,
         roleIds: l,
-        isImpersonating: o
+        isImpersonating: r
       } = n, {
-        descriptor: r,
+        descriptor: o,
         sectionCommands: s,
         isGuildInstalled: c,
         isUserInstalled: u
-      } = (0, m.If)(e, t.id), d = null != i.guild_id ? _.ML(null == r ? void 0 : r.permissions, i.guild_id, a, l, o) : null, p = null != i.guild_id ? _.ZJ(null == r ? void 0 : r.permissions, i, i.guild_id) : null;
+      } = (0, m.If)(e, t.id), d = null != i.guild_id ? _.ML(null == o ? void 0 : o.permissions, i.guild_id, a, l, r) : null, p = null != i.guild_id ? _.ZJ(null == o ? void 0 : o.permissions, i, i.guild_id) : null;
       return null == s || !(s.length > 0) || s.some(e => _.Ft(e, n, {
         applicationAllowedForUser: d,
         applicationAllowedForChannel: p,
-        commandBotId: null == r ? void 0 : r.botId,
+        commandBotId: null == o ? void 0 : o.botId,
         isGuildInstalled: c,
         isUserInstalled: u
       }) === _.mF.ALLOWED);
@@ -355,23 +355,23 @@ return (0, A.N)(i, {
   }, [
 s,
 C,
-o,
+r,
 n,
 t,
-S,
-L
-  ]), M = T.length > 0, y = b.length > 0;
+L,
+R
+  ]), M = T.length > 0, j = b.length > 0;
   return {
 commandResults: T,
 hasCommandResults: M,
 applicationResults: b,
-hasApplicationResults: y,
-isEmptyState: !M && !y,
-loading: P && r
+hasApplicationResults: j,
+isEmptyState: !M && !j,
+loading: P && o
   };
 }
 
-function S(e) {
+function L(e) {
   let {
 channel: n,
 query: t,
@@ -391,19 +391,19 @@ return {
     query: t,
     guildId: n.guild_id,
     page: c,
-    integrationType: o.Y.USER_INSTALL,
+    integrationType: r.Y.USER_INSTALL,
     minUserInstallCommandCount: 1,
     excludeAppsWithCustomInstallUrl: !0,
-    source: r.F.APP_LAUNCHER
+    source: o.F.APP_LAUNCHER
   }),
   totalPages: null !== (i = null === (e = f.Z.getSearchResults({
     query: t,
     guildId: n.guild_id,
     page: c,
-    integrationType: o.Y.USER_INSTALL,
+    integrationType: r.Y.USER_INSTALL,
     minUserInstallCommandCount: 1,
     excludeAppsWithCustomInstallUrl: !0,
-    source: r.F.APP_LAUNCHER
+    source: o.F.APP_LAUNCHER
   })) || void 0 === e ? void 0 : e.totalPages) && void 0 !== i ? i : 0
 };
   }, [
@@ -418,10 +418,10 @@ return null !== (l = null === (a = f.Z.getSearchResults({
   query: t,
   guildId: n.guild_id,
   page: i + 1,
-  integrationType: o.Y.USER_INSTALL,
+  integrationType: r.Y.USER_INSTALL,
   minUserInstallCommandCount: 1,
   excludeAppsWithCustomInstallUrl: !0,
-  source: r.F.APP_LAUNCHER
+  source: o.F.APP_LAUNCHER
 })) || void 0 === a ? void 0 : a.results) && void 0 !== l ? l : [];
   }), [
 m,
@@ -447,10 +447,10 @@ C.yC({
   guildId: i,
   options: {
     page: t,
-    integrationType: o.Y.USER_INSTALL,
+    integrationType: r.Y.USER_INSTALL,
     minUserInstallCommandCount: 1,
     excludeAppsWithCustomInstallUrl: !0,
-    source: r.F.APP_LAUNCHER
+    source: o.F.APP_LAUNCHER
   }
 });
   }, []);

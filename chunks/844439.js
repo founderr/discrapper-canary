@@ -1,11 +1,11 @@
 n.d(t, {
   M: function() {
-return r;
+return s;
   }
 });
-var i, o, a, l, r, s, u = n(442837),
-  d = n(570140);
-(i = r || (r = {}))[i.FETCHING = 0] = 'FETCHING', i[i.FETCHED = 1] = 'FETCHED', i[i.ERROR = 2] = 'ERROR';
+var i, o, a, l, s, r, d = n(442837),
+  u = n(570140);
+(i = s || (s = {}))[i.FETCHING = 0] = 'FETCHING', i[i.FETCHED = 1] = 'FETCHED', i[i.ERROR = 2] = 'ERROR';
 let c = {},
   m = {},
   p = {};
@@ -18,8 +18,8 @@ withCommands: i
   } = e;
   return 'location:'.concat(t, ' channelId:').concat('0', ' withCommands:').concat(i);
 }
-let _ = Object.freeze([]);
-class E extends(s = u.ZP.Store) {
+let x = Object.freeze([]);
+class g extends(r = d.ZP.Store) {
   getLastFetchTimeMs(e) {
 let {
   location: t,
@@ -55,15 +55,15 @@ return null !== (t = c[h({
   location: n,
   channelId: i,
   withCommands: o
-})]) && void 0 !== t ? t : _;
+})]) && void 0 !== t ? t : x;
   }
 }
-l = void 0, (a = 'displayName') in(o = E) ? Object.defineProperty(o, a, {
+l = void 0, (a = 'displayName') in(o = g) ? Object.defineProperty(o, a, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.ZP = new E(d.Z, {
+}) : o[a] = l, t.ZP = new g(u.Z, {
   APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function(e) {
 let {
   location: t,

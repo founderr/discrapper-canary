@@ -13,9 +13,9 @@ return W;
   }
 }), t(47120), t(411104);
 var i, a, l = t(735250),
-  o = t(470079),
-  r = t(120356),
-  s = t.n(r),
+  r = t(470079),
+  o = t(120356),
+  s = t.n(o),
   c = t(442837),
   u = t(481060),
   d = t(607070),
@@ -33,22 +33,22 @@ var i, a, l = t(735250),
   I = t(695676),
   g = t(176412),
   P = t(226026),
-  S = t(753972),
-  L = t(981631),
-  R = t(217702),
+  L = t(753972),
+  R = t(981631),
+  S = t(217702),
   T = t(231338),
   b = t(689938),
   M = t(126152),
-  y = t(413097);
+  j = t(413097);
 
-function j(e) {
+function y(e) {
   let {
 application: n,
 look: t = 'large_banner',
 isPartner: i,
 onClick: a,
-bannerImageStyle: o,
-enableVideoBanner: r = !0,
+bannerImageStyle: r,
+enableVideoBanner: o = !0,
 children: s,
 sectionName: c,
 resultsPosition: u,
@@ -69,8 +69,8 @@ children: 'icon' === t ? (0, l.jsx)(Z, {
   application: n,
   look: t,
   isPartner: i,
-  bannerImageStyle: o,
-  enableVideoBanner: r,
+  bannerImageStyle: r,
+  enableVideoBanner: o,
   children: s
 })
   });
@@ -82,7 +82,7 @@ application: n,
 onClick: t,
 children: i,
 sectionName: a,
-resultsPosition: r,
+resultsPosition: o,
 tracksImpression: c,
 disabled: d,
 containerStyle: m,
@@ -90,15 +90,15 @@ look: p
   } = e, {
 name: _,
 description: C
-  } = o.useMemo(() => (0, x.sl)(n, {
-fakeAppIconURL: y
+  } = r.useMemo(() => (0, x.sl)(n, {
+fakeAppIconURL: j
   }), [n]), {
 trackItemImpressionRef: f
   } = (0, P.Z)({
 applicationId: n.id,
 sectionName: a,
-sectionPosition: r
-  }), h = o.useMemo(() => {
+sectionPosition: o
+  }), h = r.useMemo(() => {
 let e = d ? M.containerDisabled : M.container;
 return s()(e, {
   [M.containerBorderRadius]: 'row' !== p,
@@ -134,8 +134,8 @@ application: n
   } = e, {
 name: t,
 iconURL: i
-  } = o.useMemo(() => (0, x.sl)(n, {
-fakeAppIconURL: y
+  } = r.useMemo(() => (0, x.sl)(n, {
+fakeAppIconURL: j
   }), [n]);
   return (0, l.jsx)(u.Tooltip, {
 tooltipContentClassName: M.tooltipContent,
@@ -146,7 +146,7 @@ children: e => {
   } = e;
   return (0, l.jsx)('div', {
     ...n,
-    children: (0, l.jsx)(S.Z, {
+    children: (0, l.jsx)(L.Z, {
       src: i,
       className: M.iconCard,
       'aria-hidden': !0,
@@ -163,17 +163,17 @@ application: n,
 look: t,
 isPartner: i,
 bannerImageStyle: a,
-enableVideoBanner: r,
+enableVideoBanner: o,
 children: c
   } = e, {
 iconURL: d,
 name: m,
 description: p
-  } = o.useMemo(() => (0, x.sl)(n, {
-fakeAppIconURL: y
-  }), [n]), _ = o.useMemo(() => null == p ? null : (0, g.ae)(p), [p]), C = (0, h.ZP)(d, ''), [f, A] = o.useState(!1), E = o.useCallback(() => {
-!0 === r && A(!0);
-  }, [r]), v = o.useCallback(() => A(!1), []);
+  } = r.useMemo(() => (0, x.sl)(n, {
+fakeAppIconURL: j
+  }), [n]), _ = r.useMemo(() => null == p ? null : (0, g.ae)(p), [p]), C = (0, h.ZP)(d, ''), [f, A] = r.useState(!1), E = r.useCallback(() => {
+!0 === o && A(!0);
+  }, [o]), v = r.useCallback(() => A(!1), []);
   return (0, l.jsxs)(l.Fragment, {
 children: [
   (0, l.jsxs)('div', {
@@ -214,7 +214,7 @@ children: [
       [M.appDetailsRowContainer]: 'row' === t
     }),
     children: [
-      (0, l.jsx)(S.Z, {
+      (0, l.jsx)(L.Z, {
         src: d,
         className: s()(M.icon, {
           [M.rowIcon]: 'row' === t
@@ -258,22 +258,22 @@ showVideo: i
 if ((0, x.ye)({
     application: n
   }))
-  return (0, l.jsx)(D, {
+  return (0, l.jsx)(B, {
     application: n,
     showVideo: i
   });
 if (null != n.bot)
-  return (0, l.jsx)(B, {
+  return (0, l.jsx)(k, {
     bot: n.bot,
     fallbackColor: t
   });
   }
-  return (0, l.jsx)(k, {
+  return (0, l.jsx)(D, {
 fallbackColor: t
   });
 }
 
-function D(e) {
+function B(e) {
   let {
 application: n,
 showVideo: t
@@ -281,15 +281,15 @@ showVideo: t
 applicationId: n.id,
 size: 600,
 names: ['embedded_cover']
-  }), a = o.useMemo(() => {
+  }), a = r.useMemo(() => {
 let e = (0, x.yJ)(n);
 return null != e && null != e.activity_preview_video_asset_id ? (0, m.Z)(n.id, e.activity_preview_video_asset_id) : null;
-  }, [n]), [r, c] = o.useState(t);
-  return o.useEffect(() => {
+  }, [n]), [o, c] = r.useState(t);
+  return r.useEffect(() => {
 t && c(!0);
   }, [t]), (0, l.jsxs)(l.Fragment, {
 children: [
-  null != a && r ? (0, l.jsx)('div', {
+  null != a && o ? (0, l.jsx)('div', {
     className: M.activityVideoContainer,
     children: (0, l.jsx)('div', {
       className: s()(M.activityVideo, {
@@ -298,7 +298,7 @@ children: [
       onAnimationEnd: () => t ? null : c(!1),
       children: (0, l.jsx)(A.Z, {
         src: a,
-        mediaLayoutType: R.hV.MOSAIC,
+        mediaLayoutType: S.hV.MOSAIC,
         loop: !0,
         autoPlay: !0,
         muted: !0
@@ -315,7 +315,7 @@ children: [
   });
 }
 
-function B(e) {
+function k(e) {
   let {
 bot: n,
 fallbackColor: t
@@ -325,7 +325,7 @@ banner: n.banner,
 canAnimate: !i,
 size: 600
   });
-  return null == a ? (0, l.jsx)(k, {
+  return null == a ? (0, l.jsx)(D, {
 fallbackColor: t
   }) : (0, l.jsx)('img', {
 src: a,
@@ -334,7 +334,7 @@ className: M.bannerImage
   });
 }
 
-function k(e) {
+function D(e) {
   let {
 fallbackColor: n
   } = e;
@@ -353,17 +353,17 @@ sectionName: t,
 resultsPosition: i,
 query: a,
 installOnDemand: l,
-location: r
+location: o
   } = e, {
 pushHistory: s
   } = (0, I.hH)();
-  return o.useCallback(e => {
-e.stopPropagation(), (0, f.yw)(L.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+  return r.useCallback(e => {
+e.stopPropagation(), (0, f.yw)(R.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
   application_id: n.id,
   section_name: t,
   search_results_position: i,
   source: v.Z.entrypoint(),
-  location: r,
+  location: o,
   query: a
 }), s({
   type: I.gc.APPLICATION,
@@ -374,7 +374,7 @@ e.stopPropagation(), (0, f.yw)(L.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
   }, [
 n,
 l,
-r,
+o,
 s,
 a,
 i,
@@ -384,7 +384,7 @@ t
 
 function V(e) {
   let n = w(e);
-  return (0, l.jsx)(j, {
+  return (0, l.jsx)(y, {
 ...e,
 onClick: n
   });
@@ -396,8 +396,8 @@ channel: n,
 application: t,
 location: i,
 sectionName: a,
-isOneClickCTA: o,
-...r
+isOneClickCTA: r,
+...o
   } = e;
   if (!(0, x.BQ)(t))
 throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
@@ -413,20 +413,20 @@ location: i,
 sectionName: a
   });
   if (c === p.JS.START)
-return o ? (0, l.jsx)(j, {
-  ...r,
+return r ? (0, l.jsx)(y, {
+  ...o,
   sectionName: a,
   application: t,
   onClick: s,
   enableVideoBanner: !0
 }) : (0, l.jsx)(V, {
-  ...r,
+  ...o,
   sectionName: a,
   application: t,
   location: i
 });
-  return (0, l.jsx)(j, {
-...r,
+  return (0, l.jsx)(y, {
+...o,
 sectionName: a,
 application: t,
 onClick: e => {

@@ -37,9 +37,9 @@ var s, a, r, i, l = n(278074),
   C = n(782164),
   g = n(22344),
   p = n(107209),
-  A = n(736088),
-  m = n(692797),
-  N = n(219663),
+  N = n(736088),
+  A = n(692797),
+  m = n(219663),
   f = n(480097),
   S = n(270905),
   h = n(118810),
@@ -75,7 +75,7 @@ let O = {
   type: 2,
   title: () => T.Z.Messages.COLLECTIBLES_ROBERT_COACHTIP_TITLE,
   body: () => T.Z.Messages.COLLECTIBLES_ROBERT_COACHTIP_DESCRIPTION,
-  imageSrc: m,
+  imageSrc: A,
   assetIds: [
     'a_914f20f4984a11b5255f0e42c661fa5b',
     'a_0f7fa66bc185c858f92a7918ea4dd47a',
@@ -83,7 +83,7 @@ let O = {
   ],
   entryPointIcon: E._,
   entryPointBackgroundAssets: {
-    srcDark: N,
+    srcDark: m,
     srcLight: f
   },
   entrypointDecorationAssets: {
@@ -139,7 +139,7 @@ style: {
 }
   })).otherwise(() => null),
   v = {
-imageSrc: A,
+imageSrc: N,
 style: {
   position: 'absolute',
   width: '600px',

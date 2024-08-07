@@ -25,12 +25,12 @@ let {
   customConfettiCanvas: C,
   speedValues: g = o,
   dragCoefficientValue: p = 0.001,
-  onAnimationEnd: A
-} = e, [m, N] = a.useState(null), {
+  onAnimationEnd: N
+} = e, [A, m] = a.useState(null), {
   confettiCanvas: f
-} = a.useContext(i.h), S = (0, r.uR)(null != C ? C : f, m), [h, M] = a.useState(!1);
+} = a.useContext(i.h), S = (0, r.uR)(null != C ? C : f, A), [h, M] = a.useState(!1);
 a.useEffect(() => {
-  h && (null == A || A());
+  h && (null == N || N());
 });
 let x = a.useMemo(() => {
   if (null != d)
@@ -91,7 +91,7 @@ return a.useEffect(() => {
           value: i
         }
       };
-    }(t.getBoundingClientRect(), E, T, I, R, g, p), null != u ? u : 50), s === e.length - 1 && null != A && M(!0);
+    }(t.getBoundingClientRect(), E, T, I, R, g, p), null != u ? u : 50), s === e.length - 1 && null != N && M(!0);
   }, 60 * s)), () => {
     for (let t of e)
       clearTimeout(t);
@@ -107,9 +107,9 @@ return a.useEffect(() => {
   R,
   g,
   p,
-  A
+  N
 ]), (0, s.jsx)(r.Ji, {
-  ref: N,
+  ref: m,
   sprites: null != x ? x : l.CA,
   colors: null != n ? n : l.Br,
   spriteWidth: l.Ko,

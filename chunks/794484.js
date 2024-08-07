@@ -49,9 +49,9 @@ t.Z = e => {
 className: n,
 variant: r = T.R0.PERKS_DISCOVERABILITY,
 noBackground: p = !1,
-leftAlignHeaders: A = !1,
-showAllPerksButton: m,
-headerClassname: N,
+leftAlignHeaders: N = !1,
+showAllPerksButton: A,
+headerClassname: m,
 isFullScreen: f = !0
   } = e, S = a.useRef(null), h = (0, _.yQ)(), M = (0, u.Ag)(h), x = (0, c.ZP)('perks-discoverability');
   (0, u.I2)();
@@ -109,32 +109,32 @@ children: [
   (0, s.jsxs)('div', {
     ref: S,
     className: i()(C.section, {
-      [C.centerAlignSection]: !A,
-      [C.leftAlignSection]: A
+      [C.centerAlignSection]: !N,
+      [C.leftAlignSection]: N
     }, n),
     children: [
       (0, s.jsx)(g, {
-        showAllPerksButton: m,
-        leftAlignHeaders: A,
+        showAllPerksButton: A,
+        leftAlignHeaders: N,
         title: L.title,
-        headerClassname: N
+        headerClassname: m
       }),
       (0, s.jsx)(o.Text, {
         variant: 'text-lg/normal',
         color: 'header-primary',
         className: i()(C.subtitle, {
-          [C.subtitle]: null == m || A,
-          [C.subtitleWithButton]: null != m && !A,
-          [C.fullWidth]: O || A,
+          [C.subtitle]: null == A || N,
+          [C.subtitleWithButton]: null != A && !N,
+          [C.fullWidth]: O || N,
           [C.moreSubtitleMargin]: B,
-          [C.leftAlignSubtitle]: A,
-          [C.centerAlignSubtitle]: !A
+          [C.leftAlignSubtitle]: N,
+          [C.centerAlignSubtitle]: !N
         }),
         children: L.subtitle
       }),
-      !A && null != m && (0, s.jsx)('div', {
+      !N && null != A && (0, s.jsx)('div', {
         className: i()(C.showAllPerksButtonCenter),
-        children: m
+        children: A
       }),
       (0, s.jsx)('div', {
         className: i()({

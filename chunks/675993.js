@@ -6,8 +6,8 @@ return P;
 var i = t(735250),
   a = t(470079),
   l = t(120356),
-  o = t.n(l),
-  r = t(581051),
+  r = t.n(l),
+  o = t(581051),
   s = t(353381),
   c = t(442837),
   u = t(993365),
@@ -31,12 +31,12 @@ function P(e) {
 channel: n,
 application: t,
 videoUrl: l,
-imageCoverUrl: r,
+imageCoverUrl: o,
 sectionName: s
   } = e, u = a.useMemo(() => {
 var e;
 return null !== (e = (0, A.jD)(t)) && void 0 !== e ? e : '';
-  }, [t]), d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled()), p = null != l || null != r, {
+  }, [t]), d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled()), p = null != l || null != o, {
 isSlideReady: f
   } = (0, E.hH)(), [h, N] = a.useState(!1);
   return a.useEffect(() => {
@@ -50,16 +50,16 @@ children: (0, i.jsxs)('div', {
       className: I.videoContainer,
       children: [
         h ? (0, i.jsx)(C.Z, {
-          className: o()(I.videoCover, I.video),
+          className: r()(I.videoCover, I.video),
           loop: !0,
           muted: !0,
           autoPlay: !0,
           src: l,
-          poster: r
+          poster: o
         }) : null,
         (0, i.jsx)('img', {
           className: I.videoCover,
-          src: r,
+          src: o,
           'aria-label': x.Z.Messages.IMAGE
         })
       ]
@@ -67,10 +67,10 @@ children: (0, i.jsxs)('div', {
     (0, i.jsxs)('div', {
       className: p ? I.overviewContainerWithVideo : I.overviewContainerNoVideo,
       children: [
-        (0, i.jsx)(S, {
+        (0, i.jsx)(L, {
           application: t
         }),
-        (0, i.jsx)(L, {
+        (0, i.jsx)(R, {
           application: t
         }),
         u.length > 0 ? (0, i.jsx)(b, {
@@ -95,7 +95,7 @@ children: (0, i.jsxs)('div', {
   });
 }
 
-function S(e) {
+function L(e) {
   var n;
   let {
 application: t
@@ -112,7 +112,7 @@ children: (0, i.jsx)('div', {
   });
 }
 
-function L(e) {
+function R(e) {
   let {
 application: n
   } = e, t = a.useMemo(() => {
@@ -124,7 +124,7 @@ application: n
   }) ? (0, i.jsxs)('div', {
 className: I.tagsContainer,
 children: [
-  (0, i.jsx)(R, {
+  (0, i.jsx)(S, {
     application: n
   }),
   t.map((e, n) => (0, i.jsx)('div', {
@@ -139,7 +139,7 @@ children: [
   }) : null;
 }
 
-function R(e) {
+function S(e) {
   var n;
   let {
 application: t
@@ -193,7 +193,7 @@ function b(e) {
 description: n
   } = e, [t, l] = a.useState(!0);
   a.useLayoutEffect(() => l(!1), []);
-  let o = a.useMemo(() => (0, f.YP)(n), [n]),
+  let r = a.useMemo(() => (0, f.YP)(n), [n]),
 {
   ref: c,
   lineHeight: m,
@@ -254,7 +254,7 @@ children: [
       style: {
         maxHeight: E ? void 0 : _.minHeightOverride
       },
-      children: o
+      children: r
     })
   }),
   null != p && p > 1 ? (0, i.jsxs)(d.Clickable, {
@@ -269,7 +269,7 @@ children: [
       E ? (0, i.jsx)(s.u, {
         size: 'sm',
         color: d.tokens.colors.TEXT_BRAND
-      }) : (0, i.jsx)(r.C, {
+      }) : (0, i.jsx)(o.C, {
         size: 'sm',
         color: d.tokens.colors.TEXT_BRAND
       })

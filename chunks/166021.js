@@ -29,11 +29,11 @@ T
   let p = a.useCallback(e => ({
   x: (e - u) * 100
 }), [u]),
-[A, m] = (0, o.useSprings)(t.length, p);
+[N, A] = (0, o.useSprings)(t.length, p);
   return a.useEffect(() => {
-m(p);
+A(p);
   }, [
-m,
+A,
 p
   ]), (0, s.jsx)('div', {
 className: n,
@@ -55,7 +55,7 @@ children: (0, s.jsxs)('div', {
     }),
     (0, s.jsx)('div', {
       className: d.cardInnerContainer,
-      children: A.map((e, n) => {
+      children: N.map((e, n) => {
         let {
           x: a
         } = e;

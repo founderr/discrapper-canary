@@ -1,12 +1,12 @@
 n.d(t, {
   BS: function() {
-return A;
+return N;
   },
   Op: function() {
 return M;
   },
   gx: function() {
-return N;
+return m;
   },
   k3: function() {
 return g;
@@ -18,7 +18,7 @@ return x;
 return h;
   },
   t2: function() {
-return m;
+return A;
   },
   vZ: function() {
 return p;
@@ -63,7 +63,7 @@ switch (e) {
     return;
 }
   },
-  A = e => {
+  N = e => {
 switch (e) {
   case R.EB.PENDING:
     return C.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
@@ -76,7 +76,7 @@ switch (e) {
 }
   };
 
-function m(e, t) {
+function A(e, t) {
   switch (e) {
 case R.EB.PENDING:
   return null != t ? C.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({
@@ -90,7 +90,7 @@ default:
   return '';
   }
 }
-let N = (e, t, n) => (0, r.wj)(e) ? t : n,
+let m = (e, t, n) => (0, r.wj)(e) ? t : n,
   f = 'getWhatsNewRow',
   S = e => {
 let {

@@ -16,9 +16,9 @@ var a = n(120356),
   C = n(422034),
   g = n(206127),
   p = n(710220),
-  A = n(318747),
-  m = n(409100),
-  N = n(474936),
+  N = n(318747),
+  A = n(409100),
+  m = n(474936),
   f = n(689938),
   S = n(951268);
 let h = e => {
@@ -31,12 +31,12 @@ let {
 !t && (l = (0, s.jsxs)('div', {
   className: S.buttonContainer,
   children: [
-    (0, s.jsx)(m.Z, {
+    (0, s.jsx)(A.Z, {
       forceInverted: !0,
       className: r()(S.button, i),
       subscriptionTier: a
     }),
-    (0, s.jsx)(A.Z, {
+    (0, s.jsx)(N.Z, {
       className: r()(S.button, i),
       forceWhite: !0
     })
@@ -45,7 +45,7 @@ let {
 let o = null;
 return n && (o = (0, s.jsx)('div', {
   className: S.buttonContainer,
-  children: (0, s.jsx)(A.Z, {
+  children: (0, s.jsx)(N.Z, {
     className: r()(S.button, i),
     forceWhite: !0
   })
@@ -102,7 +102,7 @@ className: n,
 buttonClassName: a,
 subscriptionTier: d,
 hideSparkles: g,
-hideSubscribeAndGiftButton: m,
+hideSubscribeAndGiftButton: A,
 entrypoint: b
   } = e, {
 analyticsLocations: O
@@ -112,7 +112,7 @@ enabled: B
 location: 'HeroHeading'
   }, {
 autoTrackExposure: !1
-  }), j = b === N.EZ.ApplicationStoreHome && null != D && B, U = Z.length > 0;
+  }), j = b === m.EZ.ApplicationStoreHome && null != D && B, U = Z.length > 0;
   return (0, s.jsx)(c.Gt, {
 value: O,
 children: (0, s.jsxs)('div', {
@@ -141,11 +141,11 @@ children: (0, s.jsxs)('div', {
         }) : (0, s.jsx)(x, {}),
         v ? (0, s.jsx)('div', {
           className: S.buttonContainer,
-          children: (0, s.jsx)(A.Z, {
+          children: (0, s.jsx)(N.Z, {
             className: r()(S.button, a),
             forceWhite: !0
           })
-        }) : m ? null : (0, s.jsx)(h, {
+        }) : A ? null : (0, s.jsx)(h, {
           subscriptionTier: d,
           inOfferExperience: L,
           inTrial: P,

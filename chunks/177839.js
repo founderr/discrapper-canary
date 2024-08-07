@@ -16,8 +16,8 @@ var s = n(735250),
   C = n(981631),
   g = n(689938),
   p = n(323367);
-let A = e => e ? g.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : g.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE,
-  m = e => {
+let N = e => e ? g.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : g.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE,
+  A = e => {
 let {
   isShowingAll: t,
   onClick: n
@@ -39,7 +39,7 @@ return (0, s.jsxs)(o.Clickable, {
   ]
 });
   },
-  N = e => {
+  m = e => {
 let {
   title: t,
   description: n,
@@ -121,13 +121,13 @@ children: [
   (0, s.jsx)(o.Heading, {
     variant: 'heading-xxl/extrabold',
     className: i()(p.perksTitle),
-    children: A(n)
+    children: N(n)
   }),
   (0, s.jsx)('div', {
     className: i()(p.perkCardContainer, {
       [p.perkCardContainerExpanded]: r
     }),
-    children: S.map(e => null != e && (0, s.jsx)(N, {
+    children: S.map(e => null != e && (0, s.jsx)(m, {
       ...e
     }, e.title))
   }),
@@ -138,7 +138,7 @@ children: [
           [p.sizeGizmo]: !r,
           [p.sizeGizmoExpanded]: r
         }),
-        children: (0, s.jsx)(m, {
+        children: (0, s.jsx)(A, {
           onClick: () => {
             I.default.track(C.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
               location_stack: g,

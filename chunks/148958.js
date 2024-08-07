@@ -6,13 +6,13 @@ return c;
 var i = t(470079),
   a = t(442837),
   l = t(581364),
-  o = t(675478),
-  r = t(709054),
+  r = t(675478),
+  o = t(709054),
   s = t(822245);
 
 function c(e, n) {
   i.useEffect(() => {
-o.DZ.loadIfNecessary();
+r.DZ.loadIfNecessary();
   }, []);
   let t = (0, a.e7)([s.Z], () => s.Z.getApplicationFrecencyWithoutLoadingLatest()),
 c = i.useMemo(() => null == n || 0 === n.length ? e : e.map(e => {
@@ -32,7 +32,7 @@ u = i.useMemo(() => null == n ? void 0 : n.filter(n => !e.some(e => e.id === n.a
 d = i.useMemo(() => {
   var e;
   null == u || u.forEach(e => {
-    let n = r.default.extractTimestamp(e.id);
+    let n = o.default.extractTimestamp(e.id);
     null == t.getEntry(e.application.id) && t.track(e.application.id, n);
   }), t.compute();
   let n = null !== (e = null == u ? void 0 : u.map(e => (0, l.X0)(e.application, !0))) && void 0 !== e ? e : [],
@@ -50,12 +50,12 @@ d = i.useMemo(() => {
   return i.useMemo(() => {
 let e, i;
 null == n || n.forEach(n => {
-  let t = r.default.extractTimestamp(n.id);
+  let t = o.default.extractTimestamp(n.id);
   (null == i || t > i) && (e = n, i = t);
 }), c.forEach(n => {
   var a, l;
-  let o = Math.max(...null !== (l = null === (a = t.getEntry(n.id)) || void 0 === a ? void 0 : a.recentUses) && void 0 !== l ? l : []);
-  (null == i || o > i) && (e = n, i = o);
+  let r = Math.max(...null !== (l = null === (a = t.getEntry(n.id)) || void 0 === a ? void 0 : a.recentUses) && void 0 !== l ? l : []);
+  (null == i || r > i) && (e = n, i = r);
 });
 let a = d.filter(n => {
   var t, i;

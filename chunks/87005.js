@@ -6,8 +6,8 @@ return _;
 var i = t(470079),
   a = t(243814),
   l = t(442837),
-  o = t(384275),
-  r = t(911969),
+  r = t(384275),
+  o = t(911969),
   s = t(10718),
   c = t(148958),
   u = t(881998);
@@ -15,8 +15,8 @@ t(445392);
 var d = t(689079);
 let m = {
 commandTypes: [
-  r.yU.CHAT,
-  r.yU.PRIMARY_ENTRY_POINT
+  o.yU.CHAT,
+  o.yU.PRIMARY_ENTRY_POINT
 ]
   },
   p = {
@@ -34,7 +34,7 @@ loading: t
 loading: t,
 frecentApps: function(e) {
   i.useEffect(() => {
-    o.Z.fetch();
+    r.Z.fetch();
   }, []);
   let n = (0, l.Wu)([u.Z], () => {
       var e, n;

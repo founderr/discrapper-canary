@@ -6,8 +6,8 @@ return I;
 var i = t(735250),
   a = t(470079),
   l = t(442837),
-  o = t(218061),
-  r = t(481060),
+  r = t(218061),
+  o = t(481060),
   s = t(361213),
   c = t(778569),
   u = t(213459),
@@ -31,25 +31,25 @@ channel: t,
 application: s,
 sectionName: c,
 installOnDemand: I
-  } = e, P = (0, l.e7)([m.Z], () => m.Z.entrypoint()), S = null !== (n = (0, d.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, L = (0, _.ye)({
-application: S
-  }) ? g : A.Z, R = a.useRef(null), {
+  } = e, P = (0, l.e7)([m.Z], () => m.Z.entrypoint()), L = null !== (n = (0, d.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, R = (0, _.ye)({
+application: L
+  }) ? g : A.Z, S = a.useRef(null), {
 iconURL: T,
 name: b
-  } = a.useMemo(() => (0, _.sl)(S, {
+  } = a.useMemo(() => (0, _.sl)(L, {
 fakeAppIconURL: x,
 size: 84
-  }), [S]);
+  }), [L]);
   return a.useEffect(() => {
-I ? u.ZP.queryInstallOnDemandApp(S.id, t.id) : u.ZP.maybeQueryForInstallLessApps(S.id, t.id);
+I ? u.ZP.queryInstallOnDemandApp(L.id, t.id) : u.ZP.maybeQueryForInstallLessApps(L.id, t.id);
   }, [
-S.id,
+L.id,
 t.id,
 I
-  ]), (0, i.jsxs)(r.ScrollerNone, {
+  ]), (0, i.jsxs)(o.ScrollerNone, {
 className: v.container,
 fade: !0,
-ref: R,
+ref: S,
 role: 'region',
 'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
   applicationName: b
@@ -58,23 +58,23 @@ children: [
   (0, i.jsx)(h.Z, {
     name: b,
     iconURL: T,
-    scrollerRef: R
+    scrollerRef: S
   }),
   null != T && (0, i.jsx)(C.Z, {
     src: T,
     className: v.appIcon
   }),
-  (0, i.jsx)(o.Z, {
+  (0, i.jsx)(r.Z, {
     size: 54
   }),
-  (0, i.jsx)(L, {
+  (0, i.jsx)(R, {
     channel: t,
-    application: S,
+    application: L,
     sectionName: c
   }),
   P === p._b.TEXT ? (0, i.jsx)(f.Z, {
     channel: t,
-    application: S,
+    application: L,
     sectionName: c,
     installOnDemand: I
   }) : null
@@ -91,12 +91,12 @@ sectionName: a
 applicationId: t.id,
 size: 2048,
 names: ['embedded_cover']
-  }), o = (0, _.yJ)(t), r = null != o && null != o.activity_preview_video_asset_id ? (0, s.Z)(t.id, o.activity_preview_video_asset_id) : null;
+  }), r = (0, _.yJ)(t), o = null != r && null != r.activity_preview_video_asset_id ? (0, s.Z)(t.id, r.activity_preview_video_asset_id) : null;
   return (0, i.jsx)(A.Z, {
 channel: n,
 application: t,
 imageCoverUrl: l.url,
-videoUrl: r,
+videoUrl: o,
 sectionName: a
   });
 }

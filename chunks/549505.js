@@ -1,80 +1,80 @@
-t.r(a), t.d(a, {
+s.r(a), s.d(a, {
   default: function() {
 return _;
   }
 });
-var s = t(735250);
-t(470079);
-var n = t(481060),
-  o = t(547972),
-  r = t(63063),
-  d = t(981631),
-  i = t(332325),
-  l = t(689938),
-  c = t(755546),
-  E = t(83173);
+var t = s(735250);
+s(470079);
+var o = s(481060),
+  d = s(547972),
+  n = s(63063),
+  r = s(981631),
+  l = s(332325),
+  i = s(689938),
+  c = s(755546),
+  N = s(83173);
 
 function _(e) {
   let {
 transitionState: a,
-onClose: t
+onClose: s
   } = e;
-  return (0, s.jsxs)(n.ModalRoot, {
+  return (0, t.jsxs)(o.ModalRoot, {
 transitionState: a,
-size: n.ModalSize.DYNAMIC,
+size: o.ModalSize.DYNAMIC,
 className: c.modalRoot,
 children: [
-  (0, s.jsxs)(n.ModalHeader, {
+  (0, t.jsxs)(o.ModalHeader, {
     separator: !1,
     className: c.modalHeader,
     children: [
-      (0, s.jsx)('div', {
+      (0, t.jsx)('div', {
         className: c.imageFrame,
-        children: (0, s.jsx)('img', {
-          alt: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_ALT,
-          src: E,
+        children: (0, t.jsx)('img', {
+          alt: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_ALT,
+          src: N,
           className: c.heroImage
         })
       }),
-      (0, s.jsx)('div', {
+      (0, t.jsx)('div', {
         className: c.headerWrapper,
-        children: (0, s.jsx)(n.Heading, {
+        children: (0, t.jsx)(o.Heading, {
           variant: 'heading-xl/bold',
-          children: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_HEADER
+          children: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_HEADER
         })
       })
     ]
   }),
-  (0, s.jsxs)(n.ModalContent, {
+  (0, t.jsxs)(o.ModalContent, {
     className: c.modalContent,
     children: [
-      (0, s.jsxs)('div', {
+      (0, t.jsxs)('div', {
         className: c.modalContentFrame,
         children: [
-          (0, s.jsx)(n.Text, {
+          (0, t.jsx)(o.Text, {
             variant: 'text-md/medium',
             color: 'header-secondary',
-            children: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_DESCRIPTION
+            children: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_DESCRIPTION
           }),
-          (0, s.jsx)(N, {})
+          (0, t.jsx)(E, {})
         ]
       }),
-      (0, s.jsxs)('div', {
+      (0, t.jsxs)('div', {
         className: c.modalFooter,
         children: [
-          (0, s.jsx)(n.Button, {
-            onClick: t,
+          (0, t.jsx)(o.Button, {
+            onClick: s,
             className: c.button,
-            children: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT
+            children: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT
           }),
-          (0, s.jsx)(n.Text, {
+          (0, t.jsx)(o.Text, {
             variant: 'text-xs/normal',
             color: 'text-muted',
             className: c.disclosureText,
-            children: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_DISCLOSURE.format({
-              recentActivityURL: r.Z.getArticleURL(d.BhN.MEMBER_LIST_ACTIVITY_FEED),
+            children: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_DISCLOSURE.format({
+              recentActivityURL: n.Z.getArticleURL(r.BhN.MEMBER_LIST_ACTIVITY_FEED),
               handleActivityPrivacyClick: () => {
-                t(), (0, o.Z)(i.Z.ACTIVITY_PRIVACY);
+                s(), (0, d.Z)(l.Z.ACTIVITY_PRIVACY);
               }
             })
           })
@@ -85,43 +85,43 @@ children: [
 ]
   });
 }
-let N = () => {
+let E = () => {
   let e = [{
-  icon: (0, s.jsx)(n.FriendsIcon, {
+  icon: (0, t.jsx)(o.FriendsIcon, {
     className: c.icon
   }),
-  text: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_FRIEND_NOTE
+  text: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_FRIEND_NOTE
 },
 {
-  icon: (0, s.jsx)(n.GameControllerIcon, {
+  icon: (0, t.jsx)(o.GameControllerIcon, {
     className: c.icon
   }),
-  text: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_PLAYED_NOTE
+  text: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_PLAYED_NOTE
 },
 {
-  icon: (0, s.jsx)(n.ChatIcon, {
+  icon: (0, t.jsx)(o.ChatIcon, {
     className: c.icon
   }),
-  text: l.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_REPLY_NOTE
+  text: i.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_REPLY_NOTE
 }
   ];
-  return (0, s.jsx)('div', {
+  return (0, t.jsx)('div', {
 className: c.notes,
 children: e.map((e, a) => {
   let {
-    icon: t,
-    text: o
+    icon: s,
+    text: d
   } = e;
-  return (0, s.jsxs)('div', {
+  return (0, t.jsxs)('div', {
     className: c.badgeNote,
     children: [
-      (0, s.jsx)('div', {
+      (0, t.jsx)('div', {
         className: c.badge,
-        children: t
+        children: s
       }),
-      (0, s.jsx)(n.Text, {
+      (0, t.jsx)(o.Text, {
         variant: 'text-sm/medium',
-        children: o
+        children: d
       })
     ]
   }, 'memberlist-learn-more-note-'.concat(a));

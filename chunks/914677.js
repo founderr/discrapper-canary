@@ -50,11 +50,11 @@ let e = setTimeout(() => {
 }, 200);
 return () => clearTimeout(e);
   }, [t]);
-  let A = (0, i.ZP)(),
-m = (0, r.ap)(A),
-N = _(I),
-f = d(I, m),
-S = u(m, I);
+  let N = (0, i.ZP)(),
+A = (0, r.ap)(N),
+m = _(I),
+f = d(I, A),
+S = u(A, I);
   return (0, s.jsxs)('div', {
 className: o.circleContainer,
 children: [
@@ -69,7 +69,7 @@ children: [
         r: ''.concat(R),
         cx: '50%',
         cy: '50%',
-        stroke: N,
+        stroke: m,
         strokeOpacity: f
       }),
       (0, s.jsx)('circle', {

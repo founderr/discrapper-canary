@@ -6,8 +6,8 @@ return f;
 var i = t(735250),
   a = t(470079),
   l = t(392711),
-  o = t(780384),
-  r = t(481060),
+  r = t(780384),
+  o = t(481060),
   s = t(410030),
   c = t(220082),
   u = t(564334),
@@ -31,7 +31,7 @@ function f(e) {
 name: n,
 iconURL: t,
 scrollerRef: _
-  } = e, f = (0, o.ap)((0, s.ZP)()), h = a.useRef(null), A = a.useRef(null), E = a.useRef(null), N = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(), v = (0, c.ZP)('number' == typeof t ? '' : t, null != N ? N : ''), x = a.useMemo(() => {
+  } = e, f = (0, r.ap)((0, s.ZP)()), h = a.useRef(null), A = a.useRef(null), E = a.useRef(null), N = (0, o.useToken)(o.tokens.colors.BG_BASE_PRIMARY).hex(), v = (0, c.ZP)('number' == typeof t ? '' : t, null != N ? N : ''), x = a.useMemo(() => {
 var e, n;
 let t = (0, l.compact)([
   u.Z.parseHexString(v),
@@ -46,7 +46,7 @@ return null !== (n = null === (e = (0, d.k8)({
 v,
 f
   ]), I = C(h), g = C(A), P = a.useCallback(() => {
-var e, n, t, i, a, o, r, s, c;
+var e, n, t, i, a, r, o, s, c;
 let u = _.current,
   d = h.current,
   m = E.current,
@@ -59,8 +59,8 @@ if (null != u && null != d && null != m && !isNaN(p) && !isNaN(C)) {
     _ = 0 !== u.clientHeight ? u.clientHeight : C + 20,
     h = C - p,
     A = (0, l.clamp)(n - _, h + 1, C + 20);
-  let E = (i = e, (a = h) === (o = A) ? 1 : (0, l.clamp)((i - a) / (o - a), 0, 1));
-  d.style.filter = 'brightness('.concat(1 + ((f ? 1.4 : 0.6) - (r = 1)) * E, ')'), d.style.backgroundColor = 'color-mix(in oklab,'.concat(v, ' ').concat((1 - E) * 100, '%, ').concat(x, ')'), m.style.opacity = ''.concat(0 + (1 - (s = 0)) * E), m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * E, 'px)');
+  let E = (i = e, (a = h) === (r = A) ? 1 : (0, l.clamp)((i - a) / (r - a), 0, 1));
+  d.style.filter = 'brightness('.concat(1 + ((f ? 1.4 : 0.6) - (o = 1)) * E, ')'), d.style.backgroundColor = 'color-mix(in oklab,'.concat(v, ' ').concat((1 - E) * 100, '%, ').concat(x, ')'), m.style.opacity = ''.concat(0 + (1 - (s = 0)) * E), m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * E, 'px)');
 }
   }, [
 x,
@@ -104,7 +104,7 @@ children: [
       }),
       (0, i.jsx)('div', {
         className: p.nameContainer,
-        children: (0, i.jsx)(r.Heading, {
+        children: (0, i.jsx)(o.Heading, {
           ref: E,
           className: p.textApplicationName,
           variant: 'heading-md/extrabold',

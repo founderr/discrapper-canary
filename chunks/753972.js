@@ -6,8 +6,8 @@ return u;
 var i = t(735250),
   a = t(470079),
   l = t(120356),
-  o = t.n(l),
-  r = t(768581),
+  r = t.n(l),
+  o = t(768581),
   s = t(689938),
   c = t(106477);
 
@@ -20,7 +20,7 @@ size: u,
 botIconFirst: d,
 fallbackAvatar: m,
 rendersPlaceholder: p = !1
-  } = e, _ = a.useMemo(() => null != n ? r.ZP.getApplicationIconURL({
+  } = e, _ = a.useMemo(() => null != n ? o.ZP.getApplicationIconURL({
 id: n.id,
 icon: n.icon,
 bot: n.bot,
@@ -36,10 +36,10 @@ m
   ]);
   if (null == _)
 return p ? (0, i.jsx)('div', {
-  className: o()(c.icon, c.placeholder, l)
+  className: r()(c.icon, c.placeholder, l)
 }) : null;
   return (0, i.jsx)('img', {
-className: o()(c.icon, l),
+className: r()(c.icon, l),
 alt: s.Z.Messages.IMAGE,
 src: _,
 'aria-hidden': !0,

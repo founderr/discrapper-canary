@@ -1,26 +1,26 @@
-n.d(t, {
+a.d(t, {
   Z: function() {
 return s;
   }
 });
-var a = n(735250);
-n(470079);
-var l = n(325767);
+var l = a(735250);
+a(470079);
+var n = a(325767);
 
 function s(e) {
   let {
 width: t = 24,
-height: n = 24,
+height: a = 24,
 color: s = 'currentColor',
 foreground: i,
 ...o
   } = e;
-  return (0, a.jsx)('svg', {
-...(0, l.Z)(o),
+  return (0, l.jsx)('svg', {
+...(0, n.Z)(o),
 width: t,
-height: n,
+height: a,
 viewBox: '0 0 18 20',
-children: (0, a.jsx)('path', {
+children: (0, l.jsx)('path', {
   fill: s,
   className: i,
   fillRule: 'evenodd',

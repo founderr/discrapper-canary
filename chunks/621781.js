@@ -3,29 +3,29 @@ t.d(n, {
 return i;
   }
 });
-var a = t(470079),
-  s = t(442837),
+var s = t(470079),
+  a = t(442837),
   u = t(706454),
-  r = t(356659),
-  o = t(689938);
+  l = t(356659),
+  c = t(689938);
 
 function i() {
-  let e = (0, s.e7)([u.default], () => u.default.locale);
-  return a.useMemo(() => [{
-  value: r.OT.SECONDS_30,
-  label: o.Z.Messages.CLIPS_LENGTH_SECONDS.format({
+  let e = (0, a.e7)([u.default], () => u.default.locale);
+  return s.useMemo(() => [{
+  value: l.OT.SECONDS_30,
+  label: c.Z.Messages.CLIPS_LENGTH_SECONDS.format({
     count: 30
   })
 },
 {
-  value: r.OT.MINUTES_1,
-  label: o.Z.Messages.CLIPS_LENGTH_MINUTES.format({
+  value: l.OT.MINUTES_1,
+  label: c.Z.Messages.CLIPS_LENGTH_MINUTES.format({
     count: 1
   })
 },
 {
-  value: r.OT.MINUTES_2,
-  label: o.Z.Messages.CLIPS_LENGTH_MINUTES.format({
+  value: l.OT.MINUTES_2,
+  label: c.Z.Messages.CLIPS_LENGTH_MINUTES.format({
     count: 2
   })
 }

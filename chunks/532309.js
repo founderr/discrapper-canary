@@ -6,8 +6,8 @@ return s;
 var i = t(990547),
   a = t(442837),
   l = t(213609),
-  o = t(541099),
-  r = t(312871);
+  r = t(541099),
+  o = t(312871);
 
 function s(e) {
   let {
@@ -15,9 +15,9 @@ applicationId: n,
 commandId: t,
 searchResultsPosition: s,
 query: c
-  } = e, u = (0, a.e7)([o.Z], () => o.Z.entrypoint());
+  } = e, u = (0, a.e7)([r.Z], () => r.Z.entrypoint());
   return {
-trackSearchResultsItemImpressionRef: (0, r.Z)({
+trackSearchResultsItemImpressionRef: (0, o.Z)({
   onVisible: () => {
     (0, l.h)({
       type: i.ImpressionTypes.VIEW,

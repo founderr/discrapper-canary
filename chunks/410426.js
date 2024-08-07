@@ -1,47 +1,47 @@
-n.d(t, {
+a.d(t, {
   Z: function() {
-return v;
+return x;
   }
 });
-var a = n(735250),
-  l = n(470079),
-  s = n(120356),
-  i = n.n(s),
-  o = n(399606),
-  r = n(481060),
-  c = n(547972),
-  d = n(556296),
-  u = n(13140),
-  m = n(435064),
-  p = n(981631),
-  C = n(332325),
-  g = n(689938),
-  h = n(341858);
+var l = a(735250),
+  n = a(470079),
+  s = a(120356),
+  i = a.n(s),
+  o = a(399606),
+  r = a(481060),
+  c = a(547972),
+  d = a(556296),
+  u = a(13140),
+  m = a(435064),
+  p = a(981631),
+  C = a(332325),
+  v = a(689938),
+  h = a(341858);
 
-function v(e) {
+function x(e) {
   let {
 isEmptyBecauseQuery: t,
-closePopout: n
-  } = e, s = (0, o.e7)([d.Z], () => d.Z.getKeybindForAction(p.kg4.SAVE_CLIP)), v = (0, o.e7)([m.Z], () => m.Z.getSettings().clipsEnabled), x = t ? h.noSearchResultsImage : h.noClipsImage, f = l.useCallback(() => {
-n(), (0, c.Z)(C.Z.CLIPS);
-  }, [n]), E = (() => {
-if (!v)
-  return g.Z.Messages.CLIPS_GALLERY_NO_CLIPS_CLIPS_NOT_ENABLED.format({
-    onClick: f
+closePopout: a
+  } = e, s = (0, o.e7)([d.Z], () => d.Z.getKeybindForAction(p.kg4.SAVE_CLIP)), x = (0, o.e7)([m.Z], () => m.Z.getSettings().clipsEnabled), g = t ? h.noSearchResultsImage : h.noClipsImage, L = n.useCallback(() => {
+a(), (0, c.Z)(C.Z.CLIPS);
+  }, [a]), f = (() => {
+if (!x)
+  return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS_CLIPS_NOT_ENABLED.format({
+    onClick: L
   });
 if (t)
-  return g.Z.Messages.CLIPS_GALLERY_NO_CLIPS_MATCH_QUERY;
+  return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS_MATCH_QUERY;
 if (null == s)
-  return g.Z.Messages.CLIPS_GALLERY_NO_CLIPS_NO_KEYBIND_SET.format({
-    onClick: f
+  return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS_NO_KEYBIND_SET.format({
+    onClick: L
   });
 {
   let e = u.BB(s.shortcut, !0);
-  return g.Z.Messages.CLIPS_GALLERY_NO_CLIPS.format({
+  return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS.format({
     keybind: e,
-    keybindHook: () => (0, a.jsx)('span', {
+    keybindHook: () => (0, l.jsx)('span', {
       className: h.keybindHintKeys,
-      children: (0, a.jsx)(r.KeyCombo, {
+      children: (0, l.jsx)(r.KeyCombo, {
         className: h.keybindShortcut,
         shortcut: e
       })
@@ -49,20 +49,20 @@ if (null == s)
   });
 }
   })();
-  return (0, a.jsx)('div', {
+  return (0, l.jsx)('div', {
 className: h.container,
-children: (0, a.jsxs)('div', {
+children: (0, l.jsxs)('div', {
   className: h.content,
   children: [
-    (0, a.jsx)('div', {
-      className: x
+    (0, l.jsx)('div', {
+      className: g
     }),
-    (0, a.jsx)(r.Text, {
+    (0, l.jsx)(r.Text, {
       variant: 'text-md/medium',
       className: i()(h.noClipsText, {
         [h.noSearchResultsText]: t
       }),
-      children: E
+      children: f
     })
   ]
 })

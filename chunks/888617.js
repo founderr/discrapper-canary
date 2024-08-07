@@ -1,17 +1,17 @@
 t.d(n, {
   Z: function() {
-return o;
+return r;
   }
 });
 var i = t(990547),
   a = t(213609),
   l = t(312871);
 
-function o(e) {
+function r(e) {
   let {
 sectionName: n,
 numItems: t,
-numVisibleItems: o
+numVisibleItems: r
   } = e;
   return {
 trackSectionImpressionRef: (0, l.Z)({
@@ -22,7 +22,7 @@ trackSectionImpressionRef: (0, l.Z)({
       properties: {
         section_name: n,
         num_items: t,
-        num_visible_items: o
+        num_visible_items: r
       }
     });
   },

@@ -19,9 +19,9 @@ t.Z = e => {
   buttonClassName: C,
   perkImage: g,
   isCarousel: p,
-  onCtaClick: A,
-  perkComponent: m,
-  subtitle: N = '',
+  onCtaClick: N,
+  perkComponent: A,
+  subtitle: m = '',
   descriptionCta: f = '',
   cardVariant: S,
   subtitleClassName: h
@@ -52,7 +52,7 @@ children: [
     shouldShowElement: e => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
     cardVariantStyleInfo: M,
     titleClassName: R,
-    subtitle: N,
+    subtitle: m,
     subtitleClassName: h
   }),
   null != g && (0, s.jsx)('img', {
@@ -63,19 +63,19 @@ children: [
       [_.carouselCardImage]: p
     })
   }),
-  null != m && (0, s.jsx)(s.Fragment, {
+  null != A && (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)('div', {
       className: _.cardIllustrationNoHover,
       children: [
         (0, s.jsx)('div', {
           className: _.cardComponent,
-          children: m
+          children: A
         }),
-        0 !== f.length && null != A && (0, s.jsx)(i.Button, {
+        0 !== f.length && null != N && (0, s.jsx)(i.Button, {
           className: C,
           disabled: !b,
           fullWidth: !0,
-          onClick: A,
+          onClick: N,
           children: (0, s.jsxs)('div', {
             className: null == M ? void 0 : null === (t = M.descriptionCta) || void 0 === t ? void 0 : t.className,
             children: [

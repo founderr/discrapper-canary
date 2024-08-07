@@ -16,9 +16,9 @@ var s = n(735250),
   C = n(15640),
   g = n(89057),
   p = n(433811),
-  A = n(246946),
-  m = n(594174),
-  N = n(78839),
+  N = n(246946),
+  A = n(594174),
+  m = n(78839),
   f = n(626135),
   S = n(111361),
   h = n(357355),
@@ -43,12 +43,12 @@ p.X.trigger();
   sourceAnalyticsLocations: r,
   analyticsLocations: B
 } = (0, I.ZP)(T.Z.PREMIUM_MARKETING),
-j = (0, l.e7)([N.ZP], () => N.ZP.hasFetchedSubscriptions()),
-U = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
+j = (0, l.e7)([m.ZP], () => m.ZP.hasFetchedSubscriptions()),
+U = (0, l.e7)([A.default], () => A.default.getCurrentUser()),
 G = (0, O.N)(),
 y = (0, b.Ng)(),
-k = (0, C.V)(),
-[H, w] = a.useState(!0),
+H = (0, C.V)(),
+[k, w] = a.useState(!0),
 F = a.useRef(0),
 V = (0, S.M5)(U, v.p9.TIER_2),
 W = (0, x.n)(),
@@ -73,17 +73,17 @@ n,
 G,
 y
   ]), a.useEffect(() => {
-!H && f.default.track(Z.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+!k && f.default.track(Z.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
   location_stack: r,
   load_duration_ms: F.current
 });
   }, [
 r,
-H
-  ]), (0, l.e7)([A.Z], () => A.Z.enabled)) ? (0, s.jsx)(E.Z, {}) : n ? (0, s.jsx)(g.c8, {}) : t === v.EZ.ApplicationStoreHome && V ? (0, s.jsx)(I.Gt, {
+k
+  ]), (0, l.e7)([N.Z], () => N.Z.enabled)) ? (0, s.jsx)(E.Z, {}) : n ? (0, s.jsx)(g.c8, {}) : t === v.EZ.ApplicationStoreHome && V ? (0, s.jsx)(I.Gt, {
 value: B,
 children: (0, s.jsx)(L.Z, {})
-  }) : j && k && !H ? (0, s.jsx)(I.Gt, {
+  }) : j && H && !k ? (0, s.jsx)(I.Gt, {
 value: B,
 children: (0, s.jsx)(P.Z, {
   entrypoint: t

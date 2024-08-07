@@ -6,8 +6,8 @@ return C;
 var i = t(735250),
   a = t(470079),
   l = t(120356),
-  o = t.n(l),
-  r = t(481060),
+  r = t.n(l),
+  o = t(481060),
   s = t(895924),
   c = t(424602),
   u = t(827498),
@@ -43,16 +43,16 @@ children: [
       (0, i.jsx)(m.Z, {
         className: _.backButton
       }),
-      (0, i.jsx)(r.Heading, {
+      (0, i.jsx)(o.Heading, {
         variant: 'heading-md/medium',
         color: 'header-primary',
         children: l
       })
     ]
   }),
-  (0, i.jsx)(r.Scroller, {
+  (0, i.jsx)(o.Scroller, {
     children: (0, i.jsx)('div', {
-      className: o()({
+      className: r()({
         [_.appGrid]: C !== d.U4.ROW,
         [_.rows]: C === d.U4.ROW
       }),
@@ -60,7 +60,7 @@ children: [
         let {
           application: a,
           isPartner: l,
-          installOnDemand: o
+          installOnDemand: r
         } = e;
         return (0, i.jsx)(E, {
           channel: n,
@@ -70,7 +70,7 @@ children: [
           sectionName: h,
           resultsPosition: t,
           location: s.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
-          installOnDemand: o,
+          installOnDemand: r,
           isOneClickCTA: A
         }, a.id);
       })

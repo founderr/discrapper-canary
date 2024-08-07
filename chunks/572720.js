@@ -1,11 +1,11 @@
-n.d(t, {
+a.d(t, {
   l: function() {
 return s;
   }
 });
-var a = n(470079),
-  l = n(579806);
+var l = a(470079),
+  n = a(579806);
 
 function s(e) {
-  return (0, a.useMemo)(() => null == l.Z.clips.getClipProtocolURLFromPath ? null : l.Z.clips.getClipProtocolURLFromPath(e.filepath), [e.filepath]);
+  return (0, l.useMemo)(() => null == n.Z.clips.getClipProtocolURLFromPath ? null : n.Z.clips.getClipProtocolURLFromPath(e.filepath), [e.filepath]);
 }

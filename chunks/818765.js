@@ -19,23 +19,23 @@ let T = (0, d.uk)('poggermode_applause', r.Z.getSoundpack()),
 if (!I)
   T.loop(), I = !0;
   },
-  A = () => {
+  N = () => {
 T.stop(), I = !1;
   },
-  m = () => {
+  A = () => {
 let e = _.Z.isEnabled(),
   t = _.Z.comboSoundsEnabled;
 return !!e && !!t && null != o.Z.getChannelId() || !1;
   },
-  N = () => {
-if (0 === C.length || !m() || R)
+  m = () => {
+if (0 === C.length || !A() || R)
   return;
 R = !0;
 let [e, t] = C[C.length - 1];
 (0, d.GN)(e, t), g = setTimeout(f, 1000);
   },
   f = () => {
-C.pop(), R = !1, N();
+C.pop(), R = !1, m();
   },
   S = function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
@@ -43,7 +43,7 @@ let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
 C.push([
   e,
   t * (n ? 0.1 : 1)
-]), N();
+]), m();
   };
 class h extends a.Z {
   _initialize() {
@@ -62,14 +62,14 @@ t === E.hes.RTC_CONNECTED ? T.volume = 0.1 : T.volume = 1;
 let {
   userId: t
 } = e;
-i.default.getId() === t && A();
+i.default.getId() === t && N();
   }
   stopAudio() {
-A();
+N();
   }
   startAudio() {
 var e;
-if (!m())
+if (!A())
   return;
 let t = o.Z.getChannelId();
 if (null == t)
@@ -78,10 +78,10 @@ let n = i.default.getId(),
   s = c.Z.isTyping(t, n),
   a = u.ZP.getUserCombo(n, t),
   r = null !== (e = null == a ? void 0 : a.multiplier) && void 0 !== e ? e : 1;
-s && r >= 7 ? p() : A();
+s && r >= 7 ? p() : N();
   }
   playAchievementUnlockSound() {
-if (!!m())
+if (!!A())
   S('poggermode_achievement_unlock');
   }
 }

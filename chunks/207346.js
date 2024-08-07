@@ -1,53 +1,53 @@
-n.d(t, {
+a.d(t, {
   Z: function() {
 return d;
   }
 });
-var a = n(735250);
-n(470079);
-var l = n(481060),
-  s = n(547972),
-  i = n(703288),
-  o = n(332325),
-  r = n(689938),
-  c = n(257877);
+var l = a(735250);
+a(470079);
+var n = a(481060),
+  s = a(547972),
+  i = a(703288),
+  o = a(332325),
+  r = a(689938),
+  c = a(257877);
 
 function d(e) {
   let {
 filterQuery: t,
-setFilterQuery: n,
+setFilterQuery: a,
 onClose: d,
 sortOrder: u,
 setSortOrder: m
   } = e;
-  return (0, a.jsxs)(l.ModalHeader, {
+  return (0, l.jsxs)(n.ModalHeader, {
 className: c.root,
 separator: !1,
 children: [
-  (0, a.jsx)(l.ClipsIcon, {
+  (0, l.jsx)(n.ClipsIcon, {
     size: 'xs',
     color: 'currentColor',
     className: c.icon
   }),
-  (0, a.jsx)(l.Heading, {
+  (0, l.jsx)(n.Heading, {
     className: c.title,
     variant: 'heading-xxl/bold',
     children: r.Z.Messages.CLIPS
   }),
-  (0, a.jsx)('div', {
+  (0, l.jsx)('div', {
     className: c.betaTag,
-    children: (0, a.jsx)(i.Z, {})
+    children: (0, l.jsx)(i.Z, {})
   }),
-  (0, a.jsx)(l.SearchBar, {
+  (0, l.jsx)(n.SearchBar, {
     autoFocus: !0,
-    size: l.SearchBar.Sizes.MEDIUM,
+    size: n.SearchBar.Sizes.MEDIUM,
     placeholder: r.Z.Messages.SEARCH,
     className: c.queryInput,
     query: t,
-    onChange: n,
-    onClear: () => n('')
+    onChange: a,
+    onClear: () => a('')
   }),
-  (0, a.jsx)(l.Select, {
+  (0, l.jsx)(n.Select, {
     placeholder: r.Z.Messages.CLIPS_SORT_PLACEHOLDER,
     className: c.sortInput,
     options: [{
@@ -63,20 +63,20 @@ children: [
     select: m,
     serialize: e => e
   }),
-  (0, a.jsx)(l.Button, {
-    color: l.ButtonColors.TRANSPARENT,
-    size: l.Button.Sizes.NONE,
+  (0, l.jsx)(n.Button, {
+    color: n.ButtonColors.TRANSPARENT,
+    size: n.Button.Sizes.NONE,
     className: c.settingsButton,
-    look: l.Button.Looks.FILLED,
+    look: n.Button.Looks.FILLED,
     onClick: () => {
       (0, s.Z)(o.Z.CLIPS), d();
     },
-    children: (0, a.jsx)(l.SettingsIcon, {
+    children: (0, l.jsx)(n.SettingsIcon, {
       size: 'md',
       color: 'currentColor'
     })
   }),
-  (0, a.jsx)(l.ModalCloseButton, {
+  (0, l.jsx)(n.ModalCloseButton, {
     className: c.button,
     onClick: d
   })

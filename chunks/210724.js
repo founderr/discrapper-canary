@@ -20,9 +20,9 @@ var s = n(735250),
   C = n(918701),
   g = n(977156),
   p = n(5881),
-  A = n(602667),
-  m = n(78826),
-  N = n(693900),
+  N = n(602667),
+  A = n(78826),
+  m = n(693900),
   f = n(617889),
   S = n(46140),
   h = n(981631),
@@ -40,7 +40,7 @@ location: S.dr.QUESTS_BAR
   }), O = (0, o.e7)([_.Z], () => _.Z.useReducedMotion), P = (0, o.e7)([u.Z], () => u.Z.hasLayers()), L = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, v = (0, d.Z)(L), Z = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, D = (0, d.Z)(Z), B = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null, j = null != I.userStatus && (0, C.zE)(I.userStatus, R.jn.QUEST_BAR), U = (0, T.tP)(I), {
 hasError: G,
 isLoading: y
-  } = (0, m.d7)(), k = b && !j && !B && !U && !y, H = a.useRef(k), w = (0, f.B)(I, k && !G), F = a.useRef(-1), V = a.useRef(!1), [W, K] = a.useState(!1), [Y, z] = a.useState(!1), [Q, q] = a.useState(!0), [J, X] = a.useState(!0), [$, ee] = a.useState(w.preEnrollmentExpandedHeight), et = a.useRef(null), en = a.useCallback(e => {
+  } = (0, A.d7)(), H = b && !j && !B && !U && !y, k = a.useRef(H), w = (0, f.B)(I, H && !G), F = a.useRef(-1), V = a.useRef(!1), [W, K] = a.useState(!1), [Y, z] = a.useState(!1), [Q, q] = a.useState(!0), [J, X] = a.useState(!0), [$, ee] = a.useState(w.preEnrollmentExpandedHeight), et = a.useRef(null), en = a.useCallback(e => {
 q(!1), z(e);
   }, []), es = a.useCallback(() => {
 var e, t;
@@ -116,8 +116,8 @@ Z,
 v,
 en
   ]), a.useLayoutEffect(() => {
-k !== H.current && X(!1), H.current = k;
-  }, [k]);
+H !== k.current && X(!1), k.current = H;
+  }, [H]);
   let eE = L ? S.XZ : S.R4,
 [{
   expansionSpring: eT
@@ -150,7 +150,7 @@ from: {
   visibilitySpring: 0
 },
 to: {
-  visibilitySpring: k ? 1 : 0
+  visibilitySpring: H ? 1 : 0
 },
 config: {
   tension: 250,
@@ -192,23 +192,23 @@ G && (0, E.dA)({
 G,
 b,
 I.id
-  ]), b && (k || !J || y) && !G) ? (0, s.jsx)(A.A, {
+  ]), b && (H || !J || y) && !G) ? (0, s.jsx)(N.A, {
 questOrQuests: I,
 questContent: w.trackingCtx.content,
-overrideVisibility: !P && k,
+overrideVisibility: !P && H,
 children: () => {
   let e = w.component;
   return (0, s.jsx)('div', {
     className: M.mask,
     children: (0, s.jsx)(l.animated.div, {
-      'aria-hidden': !k,
+      'aria-hidden': !H,
       onMouseLeave: eu,
       onMouseEnter: e_,
       onFocus: ec,
       onBlur: ed,
       className: i()(M.wrapper, {
-        [M.wrapperInvisible]: !k,
-        [M.wrapperVisible]: k && J
+        [M.wrapperInvisible]: !H,
+        [M.wrapperVisible]: H && J
       }),
       style: {
         color: I.config.colors.secondary,
@@ -232,7 +232,7 @@ children: () => {
           backgroundColor: w.preEnrollmentBackgroundColor,
           backgroundImage: L ? w.postEnrollmentBackgroundImage : void 0
         },
-        children: (0, s.jsx)(N.t, {
+        children: (0, s.jsx)(m.t, {
           springConfig: eE,
           isExpanded: Y,
           children: (0, s.jsx)(e, {
@@ -261,7 +261,7 @@ overrideQuest: t
 var e;
 return null !== (e = null != t ? t : I.Z.questDeliveryOverride) && void 0 !== e ? e : (0, C._)(I.Z.quests, R.jn.QUEST_BAR);
   });
-  return null == n ? null : (0, s.jsx)(m.p, {
+  return null == n ? null : (0, s.jsx)(A.p, {
 source: S.dr.QUESTS_BAR,
 questId: n.id,
 children: (0, s.jsx)(x, {

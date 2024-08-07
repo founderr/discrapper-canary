@@ -16,9 +16,9 @@ var s = n(735250),
   C = n(140465),
   g = n(91802),
   p = n(104494),
-  A = n(639119),
-  m = n(8647),
-  N = n(568126),
+  N = n(639119),
+  A = n(8647),
+  m = n(568126),
   f = n(605289),
   S = n(248042),
   h = n(823188),
@@ -36,8 +36,8 @@ var s = n(735250),
   U = n(781800),
   G = n(474936),
   y = n(981631),
-  k = n(374292),
-  H = n(865215),
+  H = n(374292),
+  k = n(865215),
   w = n(735035),
   F = n(786362);
 let V = e => {
@@ -46,7 +46,7 @@ let {
   selectedPremiumType: n
 } = e;
 return t && null == n || n === G.p9.TIER_2 && t ? null : (0, s.jsx)(O.Z, {
-  className: t ? k.perkCardsContainerSpacingFullscreen : k.perkCardsContainerSpacingSettings
+  className: t ? H.perkCardsContainerSpacingFullscreen : H.perkCardsContainerSpacingSettings
 });
   },
   W = e => {
@@ -65,7 +65,7 @@ let {
   setIsAllPerksVisible: a
 } = e;
 return t ? (0, s.jsxs)('div', {
-  className: i()(k.whatsNewSectionBackground),
+  className: i()(H.whatsNewSectionBackground),
   children: [
     (0, s.jsx)(P.Z, {
       variant: B.R0.WHATS_NEW,
@@ -79,11 +79,11 @@ return t ? (0, s.jsxs)('div', {
       }) : void 0
     }),
     n ? (0, s.jsx)(L.ZP, {
-      className: k.pdSparklesTop,
+      className: H.pdSparklesTop,
       variant: L.u0.TOP
     }) : null,
     n ? (0, s.jsx)(L.ZP, {
-      className: k.pdSparklesBottom,
+      className: H.pdSparklesBottom,
       variant: L.u0.BOTTOM
     }) : null
   ]
@@ -111,7 +111,7 @@ et = (0, g.n)(),
 en = null != et,
 [es, ea] = a.useState(!1),
 er = (0, p.Ng)(),
-ei = (0, A.N)(),
+ei = (0, N.N)(),
 el = null == ei ? void 0 : null === (t = ei.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
 eo = (0, C.Nx)(),
 ec = (0, S.Vi)(),
@@ -130,8 +130,8 @@ q(!0);
   }, []);
   let eu = (0, s.jsx)('div', {
   className: i()({
-    [k.premiumTierCardsContainerSettings]: !n,
-    [k.premiumTierCardsContainerFullscreen]: n
+    [H.premiumTierCardsContainerSettings]: !n,
+    [H.premiumTierCardsContainerFullscreen]: n
   }),
   children: (0, s.jsx)(o.$, {
     onChange: e => U(e),
@@ -143,46 +143,46 @@ q(!0);
         forceInverted: !0,
         showIcon: !1,
         subscriptionTier: G.Si.TIER_0,
-        className: k.marginTopForButtons,
+        className: H.marginTopForButtons,
         look: c.ButtonLooks.OUTLINED,
         color: c.ButtonColors.WHITE,
-        buttonShineClassName: k.buttonShine
+        buttonShineClassName: H.buttonShine
       }) : (0, s.jsx)(D.Z, {
         forceInverted: !0,
         showIcon: !1,
         subscriptionTier: G.Si.TIER_0,
-        className: k.marginTopForButtons,
-        buttonShineClassName: k.buttonShine
+        className: H.marginTopForButtons,
+        buttonShineClassName: H.buttonShine
       }),
       tier2CTAButton: el === G.Si.TIER_0 ? (0, s.jsx)(D.Z, {
         forceInverted: !0,
         showIcon: !1,
         subscriptionTier: G.Si.TIER_2,
-        className: k.marginTopForButtons,
+        className: H.marginTopForButtons,
         look: c.ButtonLooks.OUTLINED,
         color: c.ButtonColors.WHITE,
-        buttonShineClassName: k.buttonShine
+        buttonShineClassName: H.buttonShine
       }) : (0, s.jsx)(D.Z, {
         forceInverted: !0,
         showIcon: !1,
         subscriptionTier: G.Si.TIER_2,
-        className: k.marginTopForButtons,
+        className: H.marginTopForButtons,
         isEligibleForBogoPromotion: ec,
-        buttonShineClassName: k.buttonShine
+        buttonShineClassName: H.buttonShine
       })
     })
   })
 }),
 eE = (0, s.jsxs)('div', {
-  className: i()(k.container, {
-    [k.settingsContainer]: !n
+  className: i()(H.container, {
+    [H.settingsContainer]: !n
   }),
   'data-cy': 'tier-0-marketing-page',
   children: [
     (0, s.jsx)(M.Z, {
       premiumSubscription: J,
-      className: i()(n ? k.fullscreenExistingSubscriberSpacing : k.existingSubscriberSpacing, {
-        [k.zIndex1]: eo
+      className: i()(n ? H.fullscreenExistingSubscriberSpacing : H.existingSubscriberSpacing, {
+        [H.zIndex1]: eo
       }),
       isFullscreen: n
     }),
@@ -201,23 +201,23 @@ eE = (0, s.jsxs)('div', {
         subscriptionTier: ee,
         isFullscreen: n || eo,
         className: i()({
-          [k.fullscreenHero]: n,
-          [k.settingsHeroNoBackground]: !n && eo,
-          [k.trialMarketingMargin]: eo,
-          [k.settingsHeroBogoHeight]: !n && ec,
-          [k.settingsHeroBogoMarginFullscreen]: n && ec,
-          [k.noTopPaddingOverride]: null != J
+          [H.fullscreenHero]: n,
+          [H.settingsHeroNoBackground]: !n && eo,
+          [H.trialMarketingMargin]: eo,
+          [H.settingsHeroBogoHeight]: !n && ec,
+          [H.settingsHeroBogoMarginFullscreen]: n && ec,
+          [H.noTopPaddingOverride]: null != J
         }),
         entrypoint: r
       })
     }),
     (0, s.jsxs)('div', {
-      className: k.promoBannerContainer,
+      className: H.promoBannerContainer,
       children: [
-        (0, s.jsx)(m.Z, {
+        (0, s.jsx)(A.Z, {
           isFullScreen: n
         }),
-        n && en && (0, s.jsx)(N.Z, {
+        n && en && (0, s.jsx)(m.Z, {
           localizedPricingPromo: et
         })
       ]
@@ -232,24 +232,24 @@ eE = (0, s.jsxs)('div', {
       isFullscreen: n
     }),
     (0, s.jsxs)('div', {
-      className: k.planComparisonTableContainer,
+      className: H.planComparisonTableContainer,
       children: [
         (0, s.jsx)(Z.Z, {
-          className: k.planComparisonTable,
+          className: H.planComparisonTable,
           hideCTAs: !0
         }),
         n ? (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(c.Image, {
               src: w,
-              className: k.tableLeftSideDecoration,
+              className: H.tableLeftSideDecoration,
               width: 197,
               height: 486,
               zoomable: !1
             }),
             (0, s.jsx)(c.Image, {
               src: F,
-              className: k.tableRightSideDecoration,
+              className: H.tableRightSideDecoration,
               width: 241,
               height: 552,
               zoomable: !1
@@ -259,7 +259,7 @@ eE = (0, s.jsxs)('div', {
       ]
     }),
     (0, s.jsx)('div', {
-      className: n ? k.footerSpacingFullscreen : k.footerSpacing
+      className: n ? H.footerSpacingFullscreen : H.footerSpacing
     }),
     (0, s.jsx)(v.Z, {
       isVisible: !O && !L && Q,
@@ -273,12 +273,12 @@ eE = (0, s.jsxs)('div', {
         }), z(!0));
       },
       children: (0, s.jsx)('div', {
-        className: k.bottomOfPageVisibilitySensor
+        className: H.bottomOfPageVisibilitySensor
       })
     }),
     (0, s.jsx)(c.Image, {
-      src: H,
-      className: k.bottomIllustration,
+      src: k,
+      className: H.bottomIllustration,
       width: 112,
       height: 85,
       zoomable: !1
@@ -288,7 +288,7 @@ eE = (0, s.jsxs)('div', {
   return n ? (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)(c.AdvancedScrollerAuto, {
-    className: k.scroller,
+    className: H.scroller,
     ref: x,
     children: eE
   }),
