@@ -1,4 +1,4 @@
-i.d(e, {
+i.d(n, {
   j: function() {
 return a;
   }
@@ -8,19 +8,19 @@ var l = i(735250),
   s = i(777207),
   r = i(257574);
 
-function a(n) {
+function a(e) {
   let {
-title: e,
+title: n,
 subtitle: i,
 iconSrc: a,
 backgroundSrc: o,
 animatedBackgroundSrc: d,
 prefersReducedMotion: u = !0
-  } = n, c = t.useMemo(() => {
-let n = null != o ? o : a;
-if (null != n)
+  } = e, c = t.useMemo(() => {
+let e = null != o ? o : a;
+if (null != e)
   return {
-    '--custom-background-url': 'url('.concat(n.toString(), ')')
+    '--custom-background-url': 'url('.concat(e.toString(), ')')
   };
   }, [
 o,
@@ -28,10 +28,10 @@ a
   ]), p = t.useMemo(() => {
 if (null == o)
   return;
-let n = {
+let e = {
   '--custom-background-static': 'url('.concat(o.toString())
 };
-return !u && null != d && (n['--custom-background-animated'] = 'url('.concat(d.toString(), ')')), n;
+return !u && null != d && (e['--custom-background-animated'] = 'url('.concat(d.toString(), ')')), e;
   }, [
 d,
 o,
@@ -59,7 +59,7 @@ children: [
           (0, l.jsx)(s.x, {
             variant: 'heading-xl/bold',
             tag: 'div',
-            children: e
+            children: n
           }),
           null != i && (0, l.jsxs)(s.x, {
             variant: 'text-sm/normal',

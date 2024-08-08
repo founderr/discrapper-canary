@@ -1,4 +1,4 @@
-i.d(e, {
+i.d(n, {
   I: function() {
 return c;
   }
@@ -13,16 +13,16 @@ var t = i(557533),
   d = i(817239),
   u = i(331495);
 
-function c(n) {
+function c(e) {
   let {
-title: e,
+title: n,
 description: i,
 headerImage: t,
 onDetails: c,
 onPurchase: p,
 PurchaseButton: m,
 availabilityLabel: v
-  } = n;
+  } = e;
   return (0, l.jsx)(r.tE, {
 children: (0, l.jsxs)('div', {
   className: s()(d.wrapper, u.hoverCard),
@@ -49,7 +49,7 @@ children: (0, l.jsxs)('div', {
         (0, l.jsx)(o.x, {
           color: 'header-primary',
           variant: 'text-md/semibold',
-          children: e
+          children: n
         }),
         null != i && (0, l.jsx)(o.x, {
           className: d.description,
@@ -68,8 +68,8 @@ children: (0, l.jsxs)('div', {
           children: v
         }),
         (0, l.jsx)(m, {
-          onClick: n => {
-            n.stopPropagation(), null == p || p();
+          onClick: e => {
+            e.stopPropagation(), null == p || p();
           }
         })
       ]
