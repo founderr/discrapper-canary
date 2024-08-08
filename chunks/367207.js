@@ -114,7 +114,7 @@ let l = Z.Z.getActivated()[r.q.STREAM_HIGH_QUALITY];
 if (l && s.Z.dispatch({
     type: 'PREMIUM_PERKS_DEMO_COMPLETE',
     perkType: r.q.STREAM_HIGH_QUALITY
-  }), !!l && !!L.j$.getState().hqStreamingDidEnable)
+  }), !!l && !!L.Z.getState().hqStreamingDidEnable)
   (0, b.Z)(i.guild_id);
   }
   constructor(...e) {
