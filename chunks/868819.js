@@ -68,7 +68,7 @@ t.ZP = i.memo(function(e) {
 message: t,
 className: n,
 component: a
-  } = e, s = (0, o.Z)(), u = (0, l.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
+  } = e, s = (0, o.Z)(), u = (0, l.e7)([d.Z], () => d.Z.getInteraction(t), [t]);
   i.useEffect(() => {
 let e = null;
 if (t.hasFlag(E.iLy.LOADING) && null != u) {
