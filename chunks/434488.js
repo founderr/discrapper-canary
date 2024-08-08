@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(906732),
   f = n(605236),
   E = n(448239),
-  g = n(626135),
-  C = n(792125),
+  C = n(626135),
+  g = n(792125),
   I = n(607187),
   x = n(981631),
   T = n(689938),
@@ -106,7 +106,7 @@ children: (0, i.jsxs)(I.Z, {
     }),
     (0, i.jsx)(c.Clickable, {
       onClick: a,
-      className: l()((0, C.Q)(x.BRd.DARK), N.shelfButtonCloseButton),
+      className: l()((0, g.Q)(x.BRd.DARK), N.shelfButtonCloseButton),
       children: (0, i.jsx)(c.CircleXIcon, {
         size: 'md',
         color: 'currentColor',
@@ -127,7 +127,7 @@ inPopout: l,
 width: r
   } = e;
   a.useEffect(() => {
-g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+C.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
   tile_type: 'activity invite',
   n_participants: 1
 });
@@ -224,7 +224,7 @@ width: o,
 userParticipantCount: u
   } = e;
   a.useEffect(() => {
-g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+C.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
   tile_type: 'activity suggestion',
   n_participants: u
 });
@@ -233,10 +233,10 @@ g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
   guildId: n.id
 }).slice(0, 3),
 {
-  analyticsLocations: C
+  analyticsLocations: g
 } = (0, _.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION);
   return (0, i.jsx)(_.Gt, {
-value: C,
+value: g,
 children: (0, i.jsxs)(I.Z, {
   className: N.root,
   children: [
@@ -264,7 +264,7 @@ children: (0, i.jsxs)(I.Z, {
     (0, i.jsxs)(c.Clickable, {
       className: N.checkboxContainer,
       onClick: function() {
-        g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+        C.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
           tile_type: 'activity suggestion',
           close_type: 'permanent',
           n_participants: u
@@ -281,7 +281,7 @@ children: (0, i.jsxs)(I.Z, {
     (0, i.jsx)(c.Clickable, {
       className: N.closeButtonContainer,
       onClick: function() {
-        g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+        C.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
           tile_type: 'activity suggestion',
           close_type: 'temporary',
           n_participants: u

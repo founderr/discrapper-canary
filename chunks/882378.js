@@ -17,17 +17,17 @@ var i = n(735250),
 t.Z = a.memo(function(e) {
   let {
 channel: t
-  } = e, g = (0, c.h)(t.id), C = (0, u.o)(t.id), I = (0, d.M)(t.id), x = (0, l.f9)(), T = (0, s.e7)([p.Z], () => p.Z.hasLayers()), N = a.useCallback(() => C ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
-C,
+  } = e, C = (0, c.h)(t.id), g = (0, u.o)(t.id), I = (0, d.M)(t.id), x = (0, l.f9)(), T = (0, s.e7)([p.Z], () => p.Z.hasLayers()), N = a.useCallback(() => g ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null, [
+g,
 I
-  ]), v = a.useMemo(() => (C || null != I) && !x && !T, [
-C,
+  ]), v = a.useMemo(() => (g || null != I) && !x && !T, [
+g,
 I,
 x,
 T
   ]), [S, Z] = a.useState(N());
   a.useEffect(() => {
-null != I && null != g && (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
+null != I && null != C && (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
   (0, o.T)(t.id, [I.id]);
 }, 5000), (0, h.KQ)({
   channelId: t.id,
@@ -36,20 +36,20 @@ null != I && null != g && (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPR
   warningType: I.type,
   isNudgeWarning: null != I,
   viewName: h.pb.SAFETY_TOOLS_NUDGE_TOOLTIP
-})), C && (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
+})), g && (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT), setTimeout(() => {
   (0, o.Ot)(t.id);
 }, 5000));
   }, [
 t,
 I,
-g,
-C
+C,
+g
   ]), a.useEffect(() => {
-null != g && (0, h.KQ)({
+null != C && (0, h.KQ)({
   channelId: t.id,
   senderId: t.getRecipientId(),
-  warningId: g.id,
-  warningType: g.type,
+  warningId: C.id,
+  warningType: C.type,
   isNudgeWarning: null != I,
   viewName: h.pb.SAFETY_TOOLS_BUTTON
 });
@@ -57,12 +57,12 @@ null != g && (0, h.KQ)({
 let e = N();
 null != e && Z(e);
   }, [
-C,
+g,
 I,
 N
   ]);
   let A = a.useCallback(() => {
-if (null != I && (0, o.T)(t.id, [I.id]), null != g)
+if (null != I && (0, o.T)(t.id, [I.id]), null != C)
   (0, r.openModalLazy)(async () => {
     let {
       default: e
@@ -78,8 +78,8 @@ if (null != I && (0, o.T)(t.id, [I.id]), null != g)
       return (0, i.jsx)(e, {
         otherUserId: t.getRecipientId(),
         channelId: t.id,
-        warningId: g.id,
-        warningType: g.type,
+        warningId: C.id,
+        warningType: C.type,
         onClose: a,
         transitionState: s
       });
@@ -89,17 +89,17 @@ if (null != I && (0, o.T)(t.id, [I.id]), null != g)
   }), (0, h.qc)({
     channelId: t.id,
     senderId: t.getRecipientId(),
-    warningId: g.id,
-    warningType: g.type,
+    warningId: C.id,
+    warningType: C.type,
     cta: h.NM.USER_SAFETY_TOOLS_BUTTON_CLICK,
     isNudgeWarning: null != I
   });
   }, [
 I,
-g,
+C,
 t
   ]);
-  return null == g ? null : (0, i.jsx)(r.Tooltip, {
+  return null == C ? null : (0, i.jsx)(r.Tooltip, {
 forceOpen: v,
 text: S,
 color: r.TooltipColors.BRAND,

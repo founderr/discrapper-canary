@@ -3,7 +3,7 @@ n.d(t, {
 return E;
   },
   ZP: function() {
-return g;
+return C;
   },
   cF: function() {
 return p;
@@ -68,16 +68,16 @@ return () => {
   1 !== u && (h = a[u], a.splice(u, 1));
   let p = null != h ? e - m - 8 : e,
     E = Math.max(0, Math.min(Math.floor((p - 8) / 132), 12, t.length)),
-    g = Math.min((p - 8) / E - 8, m),
-    C = Math.max(0, E - o.length),
+    C = Math.min((p - 8) / E - 8, m),
+    g = Math.max(0, E - o.length),
     I = o.slice(0, E),
-    x = a.slice(0, C),
-    T = Array(C);
-  if (C > 0) {
+    x = a.slice(0, g),
+    T = Array(g);
+  if (g > 0) {
     let e = [];
     for (let t of x) {
       let n = r.current[t.id];
-      null != n && n < C ? T[n] = t : e.push(t);
+      null != n && n < g ? T[n] = t : e.push(t);
     }
     for (let t = 0; t < T.length; t++) {
       if (null != T[t])
@@ -97,7 +97,7 @@ return () => {
   ];
   return null != h && S.push(h), {
     visibleParticipants: S,
-    participantTileWidth: g
+    participantTileWidth: C
   };
 }, [
   e,
@@ -110,7 +110,7 @@ participantTileWidth: u
   };
 }
 
-function g(e) {
+function C(e) {
   let {
 participants: t,
 participantTileWidth: n,

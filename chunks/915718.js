@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(605236),
   f = n(243778),
   E = n(590293),
-  g = n(970731),
-  C = n(560688),
+  C = n(970731),
+  g = n(560688),
   I = n(173507),
   x = n(523746),
   T = n(819640),
@@ -93,7 +93,7 @@ let p = c.isManaged(),
   _ = '',
   E = !1;
 s ? (_ = p ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, E = !0) : o ? (_ = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, E = !0) : _ = a ? p ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : p ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
-let C = (0, i.jsx)(b.ZP.Icon, {
+let g = (0, i.jsx)(b.ZP.Icon, {
   icon: r.PhoneCallIcon,
   onClick: this.handleVoiceClick,
   disabled: E,
@@ -117,7 +117,7 @@ return (0, i.jsx)(f.Z, {
           let {
             closePopout: t
           } = e;
-          return (0, i.jsx)(g.ZP, {
+          return (0, i.jsx)(C.ZP, {
             header: (0, i.jsxs)('div', {
               children: [
                 (0, i.jsx)(m.Z, {
@@ -156,9 +156,9 @@ return (0, i.jsx)(f.Z, {
             className: O.tooltip
           });
         },
-        children: () => C
+        children: () => g
       });
-    return C;
+    return g;
   }
 });
   }
@@ -201,7 +201,7 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
   } = this.props;
   (0, I.Z)(() => this.handleJoinCall(!0), e);
 }), y(this, 'handleBrowserNotSupported', () => {
-  (0, C.Z)();
+  (0, g.Z)();
 });
   }
 }
@@ -216,8 +216,8 @@ callUnavailable: _
 callActive: x.Z.isCallActive(t.id),
 callUnavailable: x.Z.isCallUnavailable(t.id)
   })), f = t.getRecipientId(), {
-notFriend: g,
-isBlocked: C
+notFriend: C,
+isBlocked: g
   } = (0, s.cj)([v.Z], () => ({
 notFriend: t.type === R.d4z.DM && null != f && !v.Z.isFriend(f),
 isBlocked: t.type === R.d4z.DM && null != f && v.Z.isBlocked(f)
@@ -235,8 +235,8 @@ mode: r,
 inCall: o,
 callActive: m,
 callUnavailable: _,
-notFriend: g,
-isBlocked: C,
+notFriend: C,
+isBlocked: g,
 appContext: N,
 canShowTooltip: j,
 canShowActivityGdmTooltip: M,

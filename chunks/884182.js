@@ -3,10 +3,10 @@ var i = n(735250),
   o = n(470079),
   a = n(120356),
   l = n.n(a),
-  s = n(512722),
-  r = n.n(s),
-  d = n(392711),
-  u = n.n(d),
+  r = n(512722),
+  s = n.n(r),
+  u = n(392711),
+  d = n.n(u),
   c = n(947849),
   m = n(546432),
   p = n(217702),
@@ -22,7 +22,7 @@ function C(e) {
 visualMediaItems: t,
 footer: n
   } = e;
-  null != n && r()(1 === t.length, 'footer only gets applied to single items');
+  null != n && s()(1 === t.length, 'footer only gets applied to single items');
   let o = t.length;
   if (1 === o)
 return (0, i.jsx)(f, {
@@ -173,11 +173,11 @@ maxWidth: n = p.mT,
 maxHeight: o = p.Jj,
 useFullWidth: a = !0,
 isSingleItem: l = !1,
-footer: s
-  } = e, r = t.item.type, d = {
+footer: r
+  } = e, s = t.item.type, u = {
 ...t,
-...'IMAGE' === r && v(t.className),
-...'VIDEO' === r && A(t.className),
+...'IMAGE' === s && v(t.className),
+...'VIDEO' === s && A(t.className),
 mediaLayoutType: p.hV.MOSAIC,
 maxWidth: n,
 maxHeight: o,
@@ -187,8 +187,8 @@ isSingleMosaicItem: l
   return (0, i.jsx)(c.h.Provider, {
 value: t.gifFavoriteButton,
 children: (0, i.jsx)(m.ZP, {
-  ...d,
-  footer: s
+  ...u,
+  footer: r
 })
   });
 }
@@ -199,10 +199,10 @@ inlineForwardButton: n
   } = e, {
 groupableVisualMediaItems: a,
 nonGroupableVisualMediaItems: l,
-nonVisualMediaItems: s
+nonVisualMediaItems: r
   } = function(e) {
 return o.useMemo(() => {
-  let [t, n] = u().partition(e, e => (0, m.R_)(e.item.type)), [i, o] = u().partition(t, e => (0, m.Ld)(e.item.type));
+  let [t, n] = d().partition(e, e => (0, m.R_)(e.item.type)), [i, o] = d().partition(t, e => (0, m.Ld)(e.item.type));
   return {
     groupableVisualMediaItems: i,
     nonGroupableVisualMediaItems: o,
@@ -242,9 +242,9 @@ children: [
       })
     }, e.item.uniqueId);
   }),
-  s.length > 0 && (0, i.jsx)('div', {
+  r.length > 0 && (0, i.jsx)('div', {
     className: h.nonVisualMediaItemContainer,
-    children: s.map(e => (0, i.jsx)('div', {
+    children: r.map(e => (0, i.jsx)('div', {
       className: h.nonVisualMediaItem,
       children: (0, i.jsx)(O, {
         props: e

@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(243778),
   f = n(488131),
   E = n(375954),
-  g = n(626135),
-  C = n(585483),
+  C = n(626135),
+  g = n(585483),
   I = n(403182),
   x = n(127654),
   T = n(752305),
@@ -86,7 +86,7 @@ openClips: O
 analyticsLocations: y
   } = (0, h.ZP)();
   a.useEffect(() => {
-g.default.track(v.rMx.OPEN_POPOUT, {
+C.default.track(v.rMx.OPEN_POPOUT, {
   type: 'Send Attachment',
   channel_id: t.id,
   guild_id: t.guild_id
@@ -101,7 +101,7 @@ t.id
   }
 
   function k() {
-g.default.track(v.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, T.JM)('/'));
+C.default.track(v.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, T.JM)('/'));
   }
 
   function U() {
@@ -125,7 +125,7 @@ O();
   }
 
   function B() {
-g.default.track(v.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+C.default.track(v.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
   channel_type: t.type,
   channel_id: t.id,
   guild_id: t.guild_id
@@ -153,7 +153,7 @@ let e = L,
   a = L.match(R);
 null != a && (i = a[1], n = a[2], e = a[3], i += a[4]), (0, x.d)([(0, I.dp)(new Blob([e], {
   type: 'text/plain'
-}), 'message.'.concat(n))], t, E), C.S.dispatchToLastSubscribed(v.CkL.CLEAR_TEXT), '' !== i && C.S.dispatchToLastSubscribed(v.CkL.INSERT_TEXT, {
+}), 'message.'.concat(n))], t, E), g.S.dispatchToLastSubscribed(v.CkL.CLEAR_TEXT), '' !== i && g.S.dispatchToLastSubscribed(v.CkL.INSERT_TEXT, {
   plainText: i
 });
   }
@@ -216,7 +216,7 @@ children: l.map(function(e) {
         label: a,
         action: () => {
           var n;
-          return n = e.activity, void(g.default.track(v.rMx.OPEN_MODAL, {
+          return n = e.activity, void(C.default.track(v.rMx.OPEN_MODAL, {
             type: 'Send Join Invite',
             application_id: n.application_id,
             location: v.jXE.CHANNEL_TEXT_AREA
@@ -229,7 +229,7 @@ children: l.map(function(e) {
         label: a,
         action: () => {
           var n;
-          return n = e.activity, void(g.default.track(v.rMx.OPEN_MODAL, {
+          return n = e.activity, void(C.default.track(v.rMx.OPEN_MODAL, {
             type: 'Send Listen Invite',
             location: v.jXE.CHANNEL_TEXT_AREA
           }), b(n, t, v.mFx.LISTEN, y));
@@ -241,7 +241,7 @@ children: l.map(function(e) {
         label: a,
         action: () => {
           var n;
-          return n = e.activity, void(g.default.track(v.rMx.OPEN_MODAL, {
+          return n = e.activity, void(C.default.track(v.rMx.OPEN_MODAL, {
             type: 'Send Watch Invite',
             location: v.jXE.CHANNEL_TEXT_AREA
           }), b(n, t, v.mFx.WATCH, y));

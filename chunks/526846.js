@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(906732),
   f = n(703656),
   E = n(210887),
-  g = n(390322),
-  C = n(626135),
+  C = n(390322),
+  g = n(626135),
   I = n(348600),
   x = n(566620),
   T = n(520599),
@@ -67,7 +67,7 @@ let {
   guild_id: Y
 } = n;
 a.useEffect(() => {
-  C.default.track(b.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+  g.default.track(b.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
     channel_id: z,
     guild_id: Y
   });
@@ -120,7 +120,7 @@ let ee = a.useCallback(() => {
     Q
   ]),
   et = a.useCallback(e => {
-    k(), C.default.track(b.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+    k(), g.default.track(b.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
       channel_id: n.id,
       guild_id: n.getGuildId()
     });
@@ -177,7 +177,7 @@ let ee = a.useCallback(() => {
   }) : null;
 return (0, i.jsx)(_.Gt, {
   value: q,
-  children: (0, i.jsx)(g.Z, {
+  children: (0, i.jsx)(C.Z, {
     children: (0, i.jsxs)(u.Dialog, {
       ref: t,
       'aria-labelledby': D,

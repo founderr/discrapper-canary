@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(706140),
   f = n(543241),
   E = n(689789),
-  g = n(346610),
-  C = n(868643),
+  C = n(346610),
+  g = n(868643),
   I = n(223606),
   x = n(188597),
   T = n(41776),
@@ -211,12 +211,12 @@ let Y = (0, H.a4)(n),
   }),
   {
     canForwardMessages: en
-  } = (0, g.yk)({
+  } = (0, C.yk)({
     location: 'useMessageUtilitiesProps'
   }, {
     autoTrackExposure: !1
   }),
-  ei = (0, C.a)(n),
+  ei = (0, g.a)(n),
   {
     showReminders: ea
   } = b.Z.useExperiment({
@@ -283,7 +283,7 @@ er({
   }, [
 ee,
 er
-  ]), em = (0, R.$R)(t), e_ = n.hasFlag(Q.iLy.CROSSPOSTED), [ef, eE] = (0, _.c)(S ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), eg = ef === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [eC, eI] = a.useState(!1), ex = a.useCallback(() => {
+  ]), em = (0, R.$R)(t), e_ = n.hasFlag(Q.iLy.CROSSPOSTED), [ef, eE] = (0, _.c)(S ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), eC = ef === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [eg, eI] = a.useState(!1), ex = a.useCallback(() => {
 eI(!0);
   }, []), eT = a.useCallback(() => {
 eI(!1);
@@ -379,7 +379,7 @@ children: [
     onClick: () => eN(t, n),
     onTooltipShow: ex,
     onTooltipHide: eT,
-    showNewBadge: !eC && eg
+    showNewBadge: !eg && eC
   }, 'forward') : null,
   N && !S ? (0, i.jsx)(W.s, {
     label: $.Z.Messages.CREATE_THREAD,

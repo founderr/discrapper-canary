@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(908841),
   f = n(5192),
   E = n(561308),
-  g = n(256726),
-  C = n(206295),
+  C = n(256726),
+  g = n(206295),
   I = n(551228),
   x = n(591853),
   T = n(371991),
@@ -113,7 +113,7 @@ function j(e) {
 {
   primaryColor: G,
   secondaryColor: V
-} = (0, C.Z)(w),
+} = (0, g.Z)(w),
 F = (0, l.e7)([
   u.Z,
   m.default
@@ -129,7 +129,7 @@ W = a.useCallback(() => {
     n = (0, E.T_)(null != t ? {
       start: t
     } : P, Date.now());
-  return (0, g.CR)({
+  return (0, C.CR)({
     user: H,
     channel: L,
     mediaImageSrc: w,
@@ -142,7 +142,7 @@ W = a.useCallback(() => {
       G,
       V
     ],
-    badges: (0, g.jE)({
+    badges: (0, C.jE)({
       timestamp: n
     })
   });

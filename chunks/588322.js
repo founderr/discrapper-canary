@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(592125),
   f = n(703558),
   E = n(430824),
-  g = n(228392),
-  C = n(689938),
+  C = n(228392),
+  g = n(689938),
   I = n(204260);
 
 function x(e) {
@@ -27,7 +27,7 @@ function x(e) {
 channelId: t
   } = e, x = (0, s.e7)([_.Z], () => _.Z.getChannel(t)), T = (0, s.e7)([_.Z], () => _.Z.getChannel(null == x ? void 0 : x.parent_id)), N = (0, s.e7)([E.Z], () => E.Z.getGuild(null == x ? void 0 : x.getGuildId())), v = (0, o.ZP)(x), S = a.useRef(!1);
   if (a.useEffect(() => {
-  null != x && !S.current && (S.current = !0, (0, g.lN)(x));
+  null != x && !S.current && (S.current = !0, (0, C.lN)(x));
 }, [x]), null == x || null == N)
 return null;
   let Z = (0, i.jsx)(m.Z, {
@@ -41,7 +41,7 @@ children: [
   }),
   (0, i.jsx)(d.ZP, {
     toolbar: Z,
-    'aria-label': C.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
+    'aria-label': g.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
     children: (0, h.ud)({
       channel: x,
       parentChannel: T,

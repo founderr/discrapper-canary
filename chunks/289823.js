@@ -73,7 +73,7 @@ width: n,
 height: n
   });
 }
-let g = {
+let C = {
   [c.AvatarSizes.SIZE_16]: {
 default: u.QS.DIAGONAL_FACEPILE_16,
 typing: u.QS.DIAGONAL_FACEPILE_TYPING_16,
@@ -126,7 +126,7 @@ t.Z = function(e) {
 backSrc: o,
 frontSrc: m,
 size: _,
-isTyping: C,
+isTyping: g,
 status: I,
 style: x,
 className: T,
@@ -140,7 +140,7 @@ frontAvatarSizePx: A,
 backAvatarSizePx: M
   } = a.useMemo(() => {
 var e;
-let t = ''.concat(v, '-').concat(C);
+let t = ''.concat(v, '-').concat(g);
 return null !== (e = p[t]) && void 0 !== e ? e : function(e, t, n) {
   let i = c.AvatarSizeSpecs[e],
     a = i.size / (d.z3 + d.o),
@@ -154,13 +154,13 @@ return null !== (e = p[t]) && void 0 !== e ? e : function(e, t, n) {
       frontAvatarCenter: l + s / 2
     };
   return p[n] = o, o;
-}(_, C, t);
+}(_, g, t);
   }, [
 v,
-C,
+g,
 _
   ]);
-  let b = (t = null != I, n = C, s = _, n ? g[s].typing : t ? g[s].status : g[s].default);
+  let b = (t = null != I, n = g, s = _, n ? C[s].typing : t ? C[s].status : C[s].default);
   return (0, i.jsxs)('div', {
 style: {
   width: v,
@@ -191,7 +191,7 @@ children: [
         children: (0, i.jsx)(E, {
           src: m,
           size: A,
-          isTyping: C,
+          isTyping: g,
           status: I
         })
       })
@@ -200,7 +200,7 @@ children: [
   (0, i.jsx)(f, {
     statusCoords: S,
     status: I,
-    isTyping: C
+    isTyping: g
   })
 ]
   });

@@ -24,13 +24,13 @@ renderOutputDevices: n = !1,
 renderInputDevices: _ = !1,
 renderInputModes: f = !1,
 renderInputVolume: E = !1,
-renderOutputVolume: g = !1,
-onSelect: C
+renderOutputVolume: C = !1,
+onSelect: g
   } = e, I = (0, d.Z)(), x = (0, c.Z)(), T = (0, u.Z)(), N = (0, l.Z)(), v = (0, r.Z)(), S = (0, o.Z)();
   return (0, i.jsx)(s.Z, {
 object: h.qAy.CONTEXT_MENU,
 children: (0, i.jsxs)(a.Menu, {
-  onSelect: C,
+  onSelect: g,
   className: m.menu,
   onClose: t,
   navId: 'audio-device-context',
@@ -51,7 +51,7 @@ children: (0, i.jsxs)(a.Menu, {
     (0, i.jsxs)(a.MenuGroup, {
       children: [
         E ? v : null,
-        g ? S : null,
+        C ? S : null,
         I
       ]
     })

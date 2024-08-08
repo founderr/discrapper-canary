@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(527379),
   f = n(484459),
   E = n(318661),
-  g = n(502762),
-  C = n(271383),
+  C = n(502762),
+  g = n(271383),
   I = n(594174),
   x = n(189357),
   T = n(718617),
@@ -35,7 +35,7 @@ onClose: s,
 className: Z,
 infoPanelClassName: A,
 style: M
-  } = e, b = (0, x.ms)(n), R = (0, r.e7)([I.default], () => I.default.getUser(t), [t]), j = (0, r.e7)([C.ZP], () => C.ZP.getMember(n, t), [
+  } = e, b = (0, x.ms)(n), R = (0, r.e7)([I.default], () => I.default.getUser(t), [t]), j = (0, r.e7)([g.ZP], () => g.ZP.getMember(n, t), [
 n,
 t
   ]), [L, P] = a.useState(null == R || null == j), O = (0, u.Z)(j), y = a.useRef(null), {
@@ -96,7 +96,7 @@ value: D,
 children: (0, i.jsx)('div', {
   className: l()(S.sidebarContainer, Z),
   style: M,
-  children: (0, i.jsx)(g.Z, {
+  children: (0, i.jsx)(C.Z, {
     user: R,
     displayProfile: k,
     profileType: v.y0.MODAL,

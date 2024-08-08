@@ -23,11 +23,11 @@ guildId: m,
 channel: _,
 entry: f,
 onSelect: E
-  } = e, g = (0, u.Z)({
+  } = e, C = (0, u.Z)({
 userId: n.id,
 guildId: m,
 channelId: _.id
-  }), C = (0, r.Z)({
+  }), g = (0, r.Z)({
 id: n.id,
 label: h.Z.Messages.COPY_ID_USER
   }), I = (0, d.dX)(f), x = (0, c.Z)({
@@ -51,7 +51,7 @@ renderPopout: () => (0, i.jsx)(s.Menu, {
     children: [
       (0, i.jsxs)(s.MenuGroup, {
         children: [
-          g,
+          C,
           null != x && (0, i.jsx)(s.MenuItem, {
             id: 'game-profile',
             label: h.Z.Messages.GAME_PROFILE,
@@ -60,7 +60,7 @@ renderPopout: () => (0, i.jsx)(s.Menu, {
         ]
       }),
       (0, i.jsx)(s.MenuGroup, {
-        children: C
+        children: g
       })
     ]
   })

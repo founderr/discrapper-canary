@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(314897),
   f = n(592125),
   E = n(496675),
-  g = n(158776),
-  C = n(246946),
+  C = n(158776),
+  g = n(246946),
   I = n(979651),
   x = n(5192),
   T = n(51144),
@@ -80,40 +80,40 @@ status: eu,
 hangStatusActivity: ed
   } = (0, r.cj)([
 m.Z,
-g.Z,
+C.Z,
 E.Z
   ], () => {
 let e = null != m.Z.getAnyStreamForUser(n.id);
 return {
-  activity: g.Z.findActivity(n.id, t => {
+  activity: C.Z.findActivity(n.id, t => {
     let {
       type: n
     } = t;
     return e ? n === K.IIU.PLAYING : n !== K.IIU.CUSTOM_STATUS && n !== K.IIU.HANG_STATUS;
   }),
-  customStatusActivity: g.Z.findActivity(n.id, e => {
+  customStatusActivity: C.Z.findActivity(n.id, e => {
     let {
       type: t
     } = e;
     return t === K.IIU.CUSTOM_STATUS;
   }),
   isApplicationStreaming: e,
-  isMobile: g.Z.isMobileOnline(n.id),
-  status: en ? null : g.Z.getStatus(n.id),
-  hangStatusActivity: es && null != ea && E.Z.can(K.Plq.CONNECT, ea) ? g.Z.findActivity(n.id, e => {
+  isMobile: C.Z.isMobileOnline(n.id),
+  status: en ? null : C.Z.getStatus(n.id),
+  hangStatusActivity: es && null != ea && E.Z.can(K.Plq.CONNECT, ea) ? C.Z.findActivity(n.id, e => {
     let {
       type: t
     } = e;
     return t === K.IIU.HANG_STATUS;
   }) : null
 };
-  }), eh = null != el || null != ed || eo, ep = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), em = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
+  }), eh = null != el || null != ed || eo, ep = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), em = (0, r.e7)([g.Z], () => g.Z.hidePersonalInformation), {
 mutualFriends: e_,
 isFetching: ef
   } = (0, M.Z)(n.id, !n.bot), {
 mutualGuilds: eE,
-isFetching: eg
-  } = (0, b.Z)(n.id, !n.bot), eC = !n.bot && null != e_ && e_.length > 0, eI = !n.bot && null != eE && eE.length > 0, ex = (0, F.J)({
+isFetching: eC
+  } = (0, b.Z)(n.id, !n.bot), eg = !n.bot && null != e_ && e_.length > 0, eI = !n.bot && null != eE && eE.length > 0, ex = (0, F.J)({
 popoutUser: n,
 source: D.m.PROFILE_PANEL
   }), eT = (0, c.ZP)();
@@ -262,7 +262,7 @@ children: (0, i.jsx)(N.Mt, {
                 }
               })
             }) : null,
-            (eI || eC) && (0, i.jsxs)(R.Z.Overlay, {
+            (eI || eg) && (0, i.jsxs)(R.Z.Overlay, {
               className: X.profilePanelConnections,
               children: [
                 eI ? (0, i.jsx)(W.Z, {
@@ -270,7 +270,7 @@ children: (0, i.jsx)(N.Mt, {
                   header: q.Z.Messages.MUTUAL_GUILDS_COUNT.format({
                     count: eE.length
                   }),
-                  isLoadingHeader: eg,
+                  isLoadingHeader: eC,
                   loadingContentsCount: eE.length,
                   itemType: W.R.MutualGuildList,
                   onExpand: () => {
@@ -283,7 +283,7 @@ children: (0, i.jsx)(N.Mt, {
                   },
                   children: eN
                 }) : null,
-                eC ? (0, i.jsx)(W.Z, {
+                eg ? (0, i.jsx)(W.Z, {
                   className: l()(X.mutualFriendsList, {
                     [X.mutualFriendsDivider]: eI
                   }),

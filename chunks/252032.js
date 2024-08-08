@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(630388),
   f = n(838440),
   E = n(930282),
-  g = n(955384),
-  C = n(981631),
+  C = n(955384),
+  g = n(981631),
   I = n(848509);
 
 function x(e) {
@@ -44,7 +44,7 @@ message: n
 id: o
   } = t, {
 id: c
-  } = n, m = t.getGuildId(), f = (0, s.e7)([h.Z], () => h.Z.getGuild(m), [m]), E = t.type === C.d4z.GUILD_ANNOUNCEMENT, T = null != f && f.hasFeature(C.oNc.NEWS), v = E && T, {
+  } = n, m = t.getGuildId(), f = (0, s.e7)([h.Z], () => h.Z.getGuild(m), [m]), E = t.type === g.d4z.GUILD_ANNOUNCEMENT, T = null != f && f.hasFeature(g.oNc.NEWS), v = E && T, {
 editingMessage: S,
 editingTextValue: Z,
 editingRichValue: A
@@ -55,8 +55,8 @@ editingRichValue: d.Z.getEditingRichValue(o)
   }), [o]), M = (0, s.e7)([u.default], () => u.default.getId()), b = a.useCallback((e, n, i) => {
 let {
   content: a
-} = i, s = p.Z.can(C.Plq.MANAGE_MESSAGES, t), o = null != S && null != S.author ? S.author.id : null;
-return v && (o === M || s) && null != S && (0, _.yE)(S.flags, C.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, a) : l.Z.editMessage(e, n, {
+} = i, s = p.Z.can(g.Plq.MANAGE_MESSAGES, t), o = null != S && null != S.author ? S.author.id : null;
+return v && (o === M || s) && null != S && (0, _.yE)(S.flags, g.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, a) : l.Z.editMessage(e, n, {
   content: a
 }), Promise.resolve();
   }, [
@@ -69,7 +69,7 @@ t
 className: I.channelTextArea,
 key: c
   }), [c]);
-  return null != Z && null != A ? (0, i.jsx)(g.Z, {
+  return null != Z && null != A ? (0, i.jsx)(C.Z, {
 ref: void 0,
 channel: t,
 message: n,
@@ -94,8 +94,8 @@ onChange: r,
 onSubmit: u,
 onKeyDown: d
   } = e, [h, p] = a.useState(!0), _ = a.useCallback(() => p(!0), []), f = a.useCallback(() => p(!1), []);
-  return a.useEffect(() => (m.S.subscribe(C.CkL.TEXTAREA_FOCUS, _), m.S.subscribe(C.CkL.TEXTAREA_BLUR, f), () => {
-m.S.unsubscribe(C.CkL.TEXTAREA_FOCUS, _), m.S.unsubscribe(C.CkL.TEXTAREA_BLUR, f);
+  return a.useEffect(() => (m.S.subscribe(g.CkL.TEXTAREA_FOCUS, _), m.S.subscribe(g.CkL.TEXTAREA_BLUR, f), () => {
+m.S.unsubscribe(g.CkL.TEXTAREA_FOCUS, _), m.S.unsubscribe(g.CkL.TEXTAREA_BLUR, f);
   }), [
 _,
 f

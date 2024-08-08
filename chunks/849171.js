@@ -19,8 +19,8 @@ var i, a, s = n(735250),
   _ = n(527805),
   f = n(716600),
   E = n(952561),
-  g = n(778569),
-  C = n(563218),
+  C = n(778569),
+  g = n(563218),
   I = n(513202),
   x = n(318891),
   T = n(884338),
@@ -76,10 +76,10 @@ participants: l,
 application: r,
 currentEmbeddedApplication: f,
 channel: E,
-width: g
+width: C
   } = e;
-  let C = (i = g) > 400 ? 2 : i > 300 ? 1 : 0;
-  let [x] = (a = g) > 400 ? [
+  let g = (i = C) > 400 ? 2 : i > 300 ? 1 : 0;
+  let [x] = (a = C) > 400 ? [
 u.AvatarSizes.SIZE_56,
 56
   ] : a > 300 ? [
@@ -109,8 +109,8 @@ children: [
   }),
   (0, s.jsx)(u.Text, {
     className: o()(y.subheader, {
-      [y.small]: 0 === C,
-      [y.medium]: 1 === C
+      [y.small]: 0 === g,
+      [y.medium]: 1 === g
     }),
     variant: 'text-sm/normal',
     children: T.length > 1 ? O.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
@@ -122,8 +122,8 @@ children: [
   }),
   (0, s.jsx)(u.Text, {
     className: o()(y.header, {
-      [y.small]: 0 === C,
-      [y.medium]: 1 === C
+      [y.small]: 0 === g,
+      [y.medium]: 1 === g
     }),
     variant: 'text-sm/normal',
     children: r.name
@@ -151,7 +151,7 @@ children: [
           case 0:
             return u.Button.Sizes.SMALL;
         }
-      }(C),
+      }(g),
       className: y.button,
       color: u.Button.Colors.PRIMARY,
       children: O.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
@@ -174,7 +174,7 @@ analyticsLocations: o
 id: u
   } = t, d = (0, f.Z)(), h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u, p = (0, E.Z)(), [m] = (0, A.Z)([u]), {
 url: _
-  } = (0, g.Z)({
+  } = (0, C.Z)({
 applicationId: u,
 names: D,
 size: 1024
@@ -200,7 +200,7 @@ children: (0, s.jsx)('div', {
   className: y.container,
   children: (0, s.jsxs)(s.Fragment, {
     children: [
-      I && (0, s.jsx)(C.Z, {
+      I && (0, s.jsx)(g.Z, {
         className: y.iframe,
         embedId: (0, N.Z)(r.id, u)
       }),

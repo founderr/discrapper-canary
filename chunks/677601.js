@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(239091),
   f = n(287734),
   E = n(872810),
-  g = n(153867),
-  C = n(944543),
+  C = n(153867),
+  g = n(944543),
   I = n(410575),
   x = n(393238),
   T = n(110924),
@@ -68,8 +68,8 @@ var i = n(735250),
   e_ = n(934415),
   ef = n(585483),
   eE = n(358085),
-  eg = n(792125),
-  eC = n(998502),
+  eC = n(792125),
+  eg = n(998502),
   eI = n(228488),
   ex = n(358221),
   eT = n(414910),
@@ -137,7 +137,7 @@ if (null != s && e.mode === eL.WtW.VIDEO && i === eL.WtW.VOICE && (0, eI.rB)(s, 
 e.inCall && !n && this.inPopout && p.Z.wait(() => this.handleClosePopout());
   }
   get nativePopoutSupported() {
-return eE.isPlatformEmbedded && eC.ZP.supportsFeature(eL.eRX.POPOUT_WINDOWS);
+return eE.isPlatformEmbedded && eg.ZP.supportsFeature(eL.eRX.POPOUT_WINDOWS);
   }
   get popoutSupported() {
 return !eE.isPlatformEmbedded || this.nativePopoutSupported;
@@ -225,7 +225,7 @@ let {
   forceShowControls: _,
   awaitingRemoteSessionInfo: f,
   currentChannelActivities: E
-} = this.props, g = m === eL.AEg.MINIMUM, C = g || m === eL.AEg.NORMAL, I = a && l === eL.WtW.VIDEO, x = (null !== (t = null == E ? void 0 : E.length) && void 0 !== t ? t : 0) > 0 && h.isPrivate();
+} = this.props, C = m === eL.AEg.MINIMUM, g = C || m === eL.AEg.NORMAL, I = a && l === eL.WtW.VIDEO, x = (null !== (t = null == E ? void 0 : E.length) && void 0 !== t ? t : 0) > 0 && h.isPrivate();
 return this._lastIdleProps = e, (0, i.jsx)(q.Z, {
   renderHeader: this.renderHeader,
   renderBottomLeft: this.renderBottomLeft,
@@ -236,8 +236,8 @@ return this._lastIdleProps = e, (0, i.jsx)(q.Z, {
   renderVoiceChannelEffects: this.renderVoiceChannelEffects,
   ...e,
   screenMessage: this.screenMessage,
-  disableGradients: g,
-  idle: !_ && a && !g && e.idle,
+  disableGradients: C,
+  idle: !_ && a && !C && e.idle,
   children: a && this.popoutOpen && !this.inPopout ? null : (0, i.jsx)(F.Z, {
     ref: this._contentRef,
     inCall: a,
@@ -254,7 +254,7 @@ return this._lastIdleProps = e, (0, i.jsx)(q.Z, {
     mode: l,
     onSelectParticipant: this.handleSelectParticipant,
     onContextMenuParticipant: this.handleContextMenu,
-    showParticipants: o && (!C || x),
+    showParticipants: o && (!g || x),
     popoutWindow: this.inPopout ? r : null,
     awaitingRemoteSessionInfo: f
   })
@@ -291,7 +291,7 @@ return (0, i.jsxs)('div', {
   children: [
     (0, i.jsx)('div', {
       className: l()(eO.callContainer, {
-        [(0, eg.Q)(eL.BRd.DARK)]: h
+        [(0, eC.Q)(eL.BRd.DARK)]: h
       }),
       ref: e => {
         this._callContainerRef.current = e, this.props.callContainerRef.current = e;
@@ -482,7 +482,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
     channel: n,
     layout: a
   } = this.props;
-  return !this.inPopout && a !== eL.AEg.FULL_SCREEN && null != t && !n.isManaged() && (e = (0, i.jsx)(C.Z, {
+  return !this.inPopout && a !== eL.AEg.FULL_SCREEN && null != t && !n.isManaged() && (e = (0, i.jsx)(g.Z, {
     call: t
   })), (0, i.jsx)(L.Z, {
     justify: L.Z.Justify.END,
@@ -527,7 +527,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
       canChangeLayout: f,
       canInvite: E
     } = this.viewProperties,
-    g = s ? (0, i.jsx)(W.Z, {
+    C = s ? (0, i.jsx)(W.Z, {
       channel: n,
       stream: (null == r ? void 0 : r.type) === ej.fO.STREAM ? (0, k.my)(r.id) : void 0,
       applicationId: (null == r ? void 0 : r.type) === ej.fO.ACTIVITY ? r.id : void 0,
@@ -544,7 +544,7 @@ super(...e), ey(this, '_prevLayout', eL.AEg.MINIMUM), ey(this, '_wrapperRef', a.
     });
   return (0, i.jsxs)(i.Fragment, {
     children: [
-      E && !o ? g : null,
+      E && !o ? C : null,
       f ? (0, i.jsxs)(L.Z, {
         className: eO.iconWrapper,
         align: L.Z.Align.CENTER,
@@ -712,9 +712,9 @@ height: p = 0,
 ref: _
   } = (0, x.Z)(), {
 ref: f
-  } = (0, x.Z)(), E = (0, N.bp)(), C = (0, y.Z)(), M = (0, c.e7)([ed.Z], () => {
+  } = (0, x.Z)(), E = (0, N.bp)(), g = (0, y.Z)(), M = (0, c.e7)([ed.Z], () => {
 var e;
-return (null !== (e = null == C ? void 0 : C.channelId) && void 0 !== e ? e : ed.Z.getVoiceChannelId()) === n.id;
+return (null !== (e = null == g ? void 0 : g.channelId) && void 0 !== e ? e : ed.Z.getVoiceChannelId()) === n.id;
   }), R = (0, T.Z)(M), {
 participants: L,
 filteredParticipants: D,
@@ -753,7 +753,7 @@ popoutWindowAlwaysOnTop: J
 popoutWindow: B.Z.getWindow(eL.KJ3.CHANNEL_CALL_POPOUT),
 popoutWindowAlwaysOnTop: B.Z.getIsAlwaysOnTop(eL.KJ3.CHANNEL_CALL_POPOUT)
   })), $ = (0, c.e7)([ec.Z], () => ec.Z.can(eL.Plq.CONNECT, n)), ee = (0, c.e7)([el.Z], () => el.Z.getToastsEnabled(n.id)), et = (0, c.e7)([O.Z], () => O.Z.getAwaitingRemoteSessionInfo()), en = (0, c.e7)([G.ZP], () => G.ZP.callHeaderHeight), ei = a.useCallback(e => {
-g.ZP.updatedUnsyncedSettings({
+C.ZP.updatedUnsyncedSettings({
   callHeaderHeight: e
 });
   }, []), eh = null !== (t = null == Y ? void 0 : Y.id) && void 0 !== t ? t : null, ep = (0, Z.Z)(eh, n.id), em = (0, c.e7)([v.Z], () => v.Z.getFetchState(), []), e_ = (0, T.Z)(em);
@@ -775,9 +775,9 @@ n.id
 let e = !1,
   t = null;
 return (async () => {
-  M && U === eL.WtW.VIDEO && (t = await eC.ZP.blockDisplaySleep(), e && null != t && eC.ZP.unblockDisplaySleep(t));
+  M && U === eL.WtW.VIDEO && (t = await eg.ZP.blockDisplaySleep(), e && null != t && eg.ZP.unblockDisplaySleep(t));
 })(), () => {
-  null != t ? eC.ZP.unblockDisplaySleep(t) : e = !0;
+  null != t ? eg.ZP.unblockDisplaySleep(t) : e = !0;
 };
   }, [
 M,
@@ -786,7 +786,7 @@ U
 onTransition: void 0
   });
   let eE = (0, eN.Z)(n, !0),
-eg = (0, P.bn)(u.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
+eC = (0, P.bn)(u.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
 {
   analyticsLocations: eI
 } = (0, j.ZP)(b.Z.CHANNEL_CALL),
@@ -836,7 +836,7 @@ children: (0, i.jsx)(I.Z, {
           channelChatRef: f,
           width: r,
           maxHeight: l,
-          forceShowControls: eg,
+          forceShowControls: eC,
           awaitingRemoteSessionInfo: et,
           currentChannelActivities: eT
         }),

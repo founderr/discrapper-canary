@@ -21,8 +21,8 @@ var i = n(735250),
   _ = n(905405),
   f = n(937889),
   E = n(739566),
-  g = n(267128),
-  C = n(378233),
+  C = n(267128),
+  g = n(378233),
   I = n(419922),
   x = n(375954),
   T = n(699516),
@@ -57,11 +57,11 @@ contentPlaceholder: A,
 renderedContent: R,
 trailingIcon: j,
 leadingIcon: L
-  } = (0, g.f)(n, Z, s, b.messageContent, {
+  } = (0, C.f)(n, Z, s, b.messageContent, {
 trailingIconClass: b.messageContentTrailingIcon,
 leadingIconClass: b.messageContentLeadingIcon,
 iconSize: M.WW
-  }), P = (0, C.cv)(n), O = P.length > 0 ? P.map(e => (0, i.jsx)(I.ZP, {
+  }), P = (0, g.cv)(n), O = P.length > 0 ? P.map(e => (0, i.jsx)(I.ZP, {
 className: b.sticker,
 size: 128,
 sticker: e,
@@ -160,7 +160,7 @@ channelId: t,
 isFrozen: s,
 count: 3,
 lingerMs: R
-  }), _ = a.useRef({}), [f, E] = a.useState({}), g = a.useCallback((e, t) => {
+  }), _ = a.useRef({}), [f, E] = a.useState({}), C = a.useCallback((e, t) => {
 null == t ? delete _.current[e] : _.current[e] = t;
   }, []);
   a.useLayoutEffect(() => {
@@ -172,12 +172,12 @@ for (let i of m) {
   e[i.id] = t, t += a + 8;
 }!(0, r.isEqual)(e, f) && E(e);
   }, [m]);
-  let C = m.map(e => ({
+  let g = m.map(e => ({
   message: e,
   height: _.current[e.id],
   y: f[e.id]
 })),
-I = (0, u.useTransition)(C, {
+I = (0, u.useTransition)(g, {
   keys: e => e.message.id,
   from: () => ({
     opacity: 0
@@ -220,7 +220,7 @@ onMouseLeave: () => {
   h(!1);
 },
 children: I((e, t) => (0, i.jsx)(o.animated.div, {
-  ref: e => g(t.message.id, null != e ? e.offsetHeight : null),
+  ref: e => C(t.message.id, null != e ? e.offsetHeight : null),
   className: b.toastWrapper,
   style: e,
   children: (0, i.jsx)(j, {

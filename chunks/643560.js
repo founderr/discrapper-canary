@@ -23,15 +23,15 @@ hideEditButton: m = !1
 isEntryAdmin: _,
 canEdit: f,
 canRemove: E
-  } = (0, u.Z)(t), g = (0, r.Z)({
+  } = (0, u.Z)(t), C = (0, r.Z)({
 id: t.guildId,
 label: d.Z.Messages.COPY_ID_GUILD,
 onSuccess: p
   });
   a.useEffect(() => {
-!f && !E && null == g && (0, l.Zy)();
+!f && !E && null == C && (0, l.Zy)();
   });
-  let C = () => {
+  let g = () => {
 c.kx(t.channelId, t.guildId);
   };
 
@@ -69,7 +69,7 @@ children: [
             header: d.Z.Messages.HUB_ENTRY_REMOVE,
             confirmText: d.Z.Messages.REMOVE,
             cancelText: d.Z.Messages.CANCEL,
-            onConfirm: C,
+            onConfirm: g,
             ...e,
             children: (0, i.jsx)(s.Text, {
               variant: 'text-md/normal',
@@ -95,7 +95,7 @@ children: [
     ]
   }),
   (0, i.jsx)(s.MenuGroup, {
-    children: g
+    children: C
   })
 ]
   });

@@ -23,8 +23,8 @@ applicationId: m,
 stream: _,
 channel: f,
 exitFullScreen: E,
-appContext: g,
-analyticsLocation: C,
+appContext: C,
+analyticsLocation: g,
 guildScheduledEvent: I,
 ...x
   } = e, T = (0, o.bp)(), N = null == f ? void 0 : f.getGuildId(), v = (0, l.e7)([c.Z], () => null != N ? c.Z.getGuild(N) : null, [N]);
@@ -67,9 +67,9 @@ onClick: () => {
     channel: f,
     streamUserId: null == _ ? void 0 : _.ownerId,
     applicationId: m,
-    appContext: null != g ? g : T,
+    appContext: null != C ? C : T,
     exitFullScreen: E,
-    analyticsLocation: C,
+    analyticsLocation: g,
     guildScheduledEvent: I
   });
 },

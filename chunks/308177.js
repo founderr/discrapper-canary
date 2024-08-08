@@ -12,8 +12,8 @@ var i, a, s = n(735250),
   _ = n(766015),
   f = n(401139),
   E = n(12779),
-  g = n(450369),
-  C = n(689938),
+  C = n(450369),
+  g = n(689938),
   I = n(821320);
 let x = 424,
   T = 624,
@@ -21,7 +21,7 @@ let x = 424,
 (a = i || (i = {}))[a.SELECTED = 0] = 'SELECTED', a[a.SPEAKER = 1] = 'SPEAKER', a[a.AUDIENCE = 2] = 'AUDIENCE';
 let v = (e, t) => {
 let n = Math.floor(e / t - 8),
-  i = Math.floor(n / g.Q);
+  i = Math.floor(n / C.Q);
 return {
   speakerTileWidth: n,
   speakerTileHeight: i
@@ -68,7 +68,7 @@ renderSection: e => {
   if (1 === t)
     return 0 === M ? null : (0, s.jsx)(E.Z, {
       participantCount: M,
-      label: C.Z.Messages.SPEAKER_LABEL,
+      label: g.Z.Messages.SPEAKER_LABEL,
       className: I.header,
       onClick: () => z(!W),
       collapsed: W,
@@ -79,7 +79,7 @@ renderSection: e => {
   if (2 === t)
     return 0 === b ? null : (0, s.jsx)(E.Z, {
       participantCount: b,
-      label: C.Z.Messages.AUDIENCE_LABEL,
+      label: g.Z.Messages.AUDIENCE_LABEL,
       className: I.header,
       onClick: () => K(!Y),
       collapsed: Y,
@@ -101,7 +101,7 @@ renderRow: e => {
         return null;
       return (0, s.jsx)('div', {
         className: I.focusedRow,
-        children: (0, s.jsx)(g.Z, {
+        children: (0, s.jsx)(C.Z, {
           channel: i,
           participant: a[0],
           width: V
@@ -130,7 +130,7 @@ renderRow: e => {
       return null;
   }
 },
-rowHeight: e => null == w[e][0] ? 0 : 0 === e ? V / g.Q + 8 : 1 === e ? W ? 0 : G : Y ? 0 : 98,
+rowHeight: e => null == w[e][0] ? 0 : 0 === e ? V / C.Q + 8 : 1 === e ? W ? 0 : G : Y ? 0 : 98,
 renderFooter: e => {
   let {
     section: t

@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(526846),
   f = n(938655),
   E = n(403404),
-  g = n(906732),
-  C = n(424602),
+  C = n(906732),
+  g = n(424602),
   I = n(243778),
   x = n(579185),
   T = n(301076),
@@ -41,8 +41,8 @@ channelId: t.id
 'focus' !== e.type && j();
   }, [j]), k = (0, o.O)(), U = (0, c.bp)() === N.IlC.POPOUT, {
 analyticsLocations: w
-  } = (0, g.ZP)(), B = w.length > 0 ? w[w.length - 1] : 'open-activity-shelf';
-  C.m1.useExperiment({
+  } = (0, C.ZP)(), B = w.length > 0 ? w[w.length - 1] : 'open-activity-shelf';
+  g.m1.useExperiment({
 location: B
   }, {
 autoTrackExposure: !0

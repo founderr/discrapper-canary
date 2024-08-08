@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return g;
+return C;
   }
 });
 var i = n(735250),
@@ -19,12 +19,12 @@ var i = n(735250),
   f = n(833802),
   E = n(321975);
 
-function g(e) {
+function C(e) {
   let {
 user: t,
 channel: n,
-onViewBlockedProfileClick: g
-  } = e, C = (0, d.ZP)(t.id), I = (0, l.ZP)(), {
+onViewBlockedProfileClick: C
+  } = e, g = (0, d.ZP)(t.id), I = (0, l.ZP)(), {
 analyticsLocations: x
   } = (0, o.ZP)(r.Z.BLOCKED_PROFILE_PANEL), T = (0, c.ZB)({
 layout: 'BLOCKED_PROFILE_PANEL',
@@ -38,7 +38,7 @@ children: (0, i.jsx)(c.Mt, {
   children: (0, i.jsx)(h.Z, {
     ref: N,
     user: t,
-    displayProfile: C,
+    displayProfile: g,
     profileType: m.y0.PANEL,
     themeOverride: I,
     className: f.container,
@@ -59,7 +59,7 @@ children: (0, i.jsx)(c.Mt, {
             autoFocus: !0,
             fullWidth: !1,
             onClick: () => {
-              null == g || g(), (0, u.pQ)({
+              null == C || C(), (0, u.pQ)({
                 action: 'VIEW_BLOCKED_PROFILE',
                 analyticsLocations: x,
                 ...T

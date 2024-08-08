@@ -41,11 +41,11 @@ onMouseLeave: f,
 cancelTimers: E
   } = (0, l.Z)(200, 300);
 
-  function g(e) {
+  function C(e) {
 'focus' !== e.type && !d && _();
   }
 
-  function C() {
+  function g() {
 !d && f();
   }
 
@@ -75,7 +75,7 @@ renderPopout: e => (0, i.jsx)(c, {
   isHovered: x,
   onFocus: () => h(!0),
   onMouseEnter: _,
-  onMouseLeave: C,
+  onMouseLeave: g,
   renderPopout: n,
   ...e
 }),
@@ -92,8 +92,8 @@ children: e => {
         return t = e, i = n, void((t.key === r.vn.ENTER || t.key === r.vn.SPACE) && I(() => i(t)));
       },
       className: o.actionBarButton,
-      onMouseEnter: g,
-      onMouseLeave: C,
+      onMouseEnter: C,
+      onMouseLeave: g,
       isActive: x
     })
   });

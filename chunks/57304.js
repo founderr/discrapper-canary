@@ -22,8 +22,8 @@ h.default
   ], () => {
 let e = h.default.getCurrentUser();
 return null == e || t.isNSFW() && (!e.nsfwAllowed || !u.Z.didAgree(t.getGuildId()));
-  }, [t]), [E, g] = a.useState(!1), C = (0, s.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]), I = (0, o.Aq)(), x = (0, c.Dd)(t.id), T = a.useCallback(() => {
-!n && g(e => !e);
+  }, [t]), [E, C] = a.useState(!1), g = (0, s.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]), I = (0, o.Aq)(), x = (0, c.Dd)(t.id), T = a.useCallback(() => {
+!n && C(e => !e);
   }, [n]);
 
   function N(e) {
@@ -38,7 +38,7 @@ position: 'bottom',
 align: 'right',
 autoInvert: !1,
 ignoreModalClicks: !0,
-onRequestClose: () => g(!1),
+onRequestClose: () => C(!1),
 renderPopout: function(e) {
   return (0, i.jsx)(r.Z, {
     ...e,
@@ -57,7 +57,7 @@ children: (e, t) => {
     icon: l.PinIcon,
     'aria-label': f.Z.Messages.PINNED_MESSAGES,
     disabled: n,
-    showBadge: C,
+    showBadge: g,
     selected: a
   });
 }

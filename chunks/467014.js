@@ -23,7 +23,7 @@ guildId: n
 messagesCount: _,
 linksCount: f,
 mediaCount: E
-  } = (0, c.P2)(t, n), g = new Intl.NumberFormat(h.Z.getLocale()).format(_), C = new Intl.NumberFormat(h.Z.getLocale()).format(f), I = new Intl.NumberFormat(h.Z.getLocale()).format(E), x = a.useCallback(async e => {
+  } = (0, c.P2)(t, n), C = new Intl.NumberFormat(h.Z.getLocale()).format(_), g = new Intl.NumberFormat(h.Z.getLocale()).format(f), I = new Intl.NumberFormat(h.Z.getLocale()).format(E), x = a.useCallback(async e => {
 if (null == m)
   return;
 let i = (0, c.Ow)(t, e);
@@ -59,7 +59,7 @@ children: (0, i.jsxs)(u.WM, {
       }) : (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'interactive-normal',
-        children: g
+        children: C
       }),
       onNavigate: _ > 0 ? () => x(c.mw.MESSAGES) : void 0
     }),
@@ -80,7 +80,7 @@ children: (0, i.jsxs)(u.WM, {
       }) : (0, i.jsx)(l.Text, {
         variant: 'text-sm/semibold',
         color: 'interactive-normal',
-        children: C
+        children: g
       }),
       onNavigate: f > 0 ? () => x(c.mw.LINKS) : void 0
     }),

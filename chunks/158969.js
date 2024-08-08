@@ -13,8 +13,8 @@ var i = n(735250),
   _ = n(530472),
   f = n(453687),
   E = n(930282),
-  g = n(318713),
-  C = n(981631),
+  C = n(318713),
+  g = n(981631),
   I = n(689938),
   x = n(543151),
   T = n(475525),
@@ -64,7 +64,7 @@ children: [
         tag: 'span',
         className: x.learnMore,
         children: I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({
-          helpUrl: m.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE)
+          helpUrl: m.Z.getArticleURL(g.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE)
         })
       })
     })
@@ -80,7 +80,7 @@ compact: r,
 message: u,
 children: m,
 content: _,
-onUpdate: C
+onUpdate: g
   } = e, S = null === (t = u.editedTimestamp) || void 0 === t ? void 0 : t.toString(), Z = a.useRef(!1), A = (0, c.e7)([p.Z], () => p.Z.getMessage(u.id), [u.id]), M = a.useCallback(() => {
 (null == A ? void 0 : A.isBlockedEdit) ? (0, h.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
   }, [
@@ -88,9 +88,9 @@ u,
 A
   ]);
   return a.useLayoutEffect(() => {
-Z.current ? null != C && C() : Z.current = !0;
+Z.current ? null != g && g() : Z.current = !0;
   }, [
-C,
+g,
 u.content,
 _,
 S,
@@ -108,7 +108,7 @@ children: [
   (null == A ? void 0 : A.isBlockedEdit) && null != u.timestamp && (0, i.jsxs)(i.Fragment, {
     children: [
       ' ',
-      (0, i.jsx)(g.Z, {
+      (0, i.jsx)(C.Z, {
         timestamp: u.timestamp,
         isEdited: !0,
         isInline: !1,

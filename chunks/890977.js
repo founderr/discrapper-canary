@@ -1,6 +1,6 @@
 n.d(t, {
   b: function() {
-return C;
+return g;
   }
 });
 var i, a, s = n(735250),
@@ -46,7 +46,7 @@ className: o()(_.glow, t)
   });
 }
 
-function g(e) {
+function C(e) {
   let {
 className: t
   } = e;
@@ -55,7 +55,7 @@ ref: f(a || (a = n.t(m, 2))),
 className: o()(_.trinkets, t)
   });
 }
-let C = e => {
+let g = e => {
   let {
 children: t,
 animationContainerClassName: n,
@@ -78,7 +78,7 @@ children: [
     className: _.entrypoint,
     children: t
   }),
-  (0, s.jsx)(g, {
+  (0, s.jsx)(C, {
     className: a
   })
 ]

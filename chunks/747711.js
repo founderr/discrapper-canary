@@ -19,7 +19,7 @@ forceShowPremiumBadge: m
   } = e, _ = t.isNonUserBot(), [f, E] = (0, a.Wu)([l.Z], () => [
 _ ? null : l.Z.getStatus(t.id),
 l.Z.isMobileOnline(t.id)
-  ]), g = null == n ? void 0 : n.profileEffectId;
+  ]), C = null == n ? void 0 : n.profileEffectId;
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(r.Z, {
@@ -49,8 +49,8 @@ children: [
       size: o.V.SIZE_22
     })
   }),
-  null != g && (0, i.jsx)(s.Z, {
-    profileEffectId: g,
+  null != C && (0, i.jsx)(s.Z, {
+    profileEffectId: C,
     maxLoops: 0,
     resetOnHover: !0,
     isHovering: m,

@@ -21,7 +21,7 @@ var a = n(399606),
 function f(e) {
   let {
 member: t
-  } = e, n = (0, a.e7)([c.Z], () => c.Z.getGuild(t.guildId), [t.guildId]), f = (0, r.mh)(t.userId, t.guildId), E = (0, r.mV)(t.userId, t.guildId), g = (0, r.LD)(t.userId), C = (0, r.wi)(t.userId, t.guildId);
+  } = e, n = (0, a.e7)([c.Z], () => c.Z.getGuild(t.guildId), [t.guildId]), f = (0, r.mh)(t.userId, t.guildId), E = (0, r.mV)(t.userId, t.guildId), C = (0, r.LD)(t.userId), g = (0, r.wi)(t.userId, t.guildId);
   return null == n ? null : (0, i.jsx)(s.FormItem, {
 title: m.Z.Messages.ACCOUNT,
 titleClassName: _.infoTitle,
@@ -88,7 +88,7 @@ children: (0, i.jsxs)(h.WM, {
       description: (0, i.jsx)(s.Text, {
         variant: 'text-sm/medium',
         color: 'text-normal',
-        children: g
+        children: C
       })
     }),
     (0, i.jsx)(h._2, {
@@ -106,7 +106,7 @@ children: (0, i.jsxs)(h.WM, {
       description: (0, i.jsx)(s.Text, {
         variant: 'text-sm/medium',
         color: 'text-normal',
-        children: C
+        children: g
       })
     }),
     (0, i.jsx)(h._2, {

@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(541716),
   f = n(752305),
   E = n(893718),
-  g = n(957730),
-  C = n(789407),
+  C = n(957730),
+  g = n(789407),
   I = n(300429),
   x = n(838440),
   T = n(981631),
@@ -79,8 +79,8 @@ let {
   cooldown: p,
   application: m,
   transitionState: f,
-  onClose: g
-} = this.props, C = p > 0, I = C ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
+  onClose: C
+} = this.props, g = p > 0, I = g ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
   seconds: Math.round((p + 1000) / 1000)
 }) : null;
 return (0, i.jsxs)(o.ModalRoot, {
@@ -154,7 +154,7 @@ return (0, i.jsxs)(o.ModalRoot, {
           children: e => (0, i.jsx)('div', {
             ...e,
             children: (0, i.jsx)(o.Button, {
-              disabled: C,
+              disabled: g,
               onClick: this.handleShare,
               children: N.Z.Messages.INVITE_EMBED_SEND_INVITE
             })
@@ -163,7 +163,7 @@ return (0, i.jsxs)(o.ModalRoot, {
         (0, i.jsx)(o.Button, {
           look: o.Button.Looks.LINK,
           color: o.Button.Colors.PRIMARY,
-          onClick: g,
+          onClick: C,
           children: N.Z.Messages.CANCEL
         })
       ]
@@ -223,7 +223,7 @@ super(...e), S(this, 'state', {
       shouldClear: !1,
       shouldRefocus: !0
     });
-  let r = g.ZP.parse(e, s),
+  let r = C.ZP.parse(e, s),
     o = {
       activity: t,
       type: n
@@ -269,6 +269,6 @@ activity: n
   } = e;
   return {
 cooldown: I.Z.getSlowmodeCooldownGuess(t.id),
-application: null != n.application_id ? m.Z.getApplication(n.application_id) : C.r9
+application: null != n.application_id ? m.Z.getApplication(n.application_id) : g.r9
   };
 })(A);

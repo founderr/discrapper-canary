@@ -48,21 +48,21 @@ className: n,
 noText: s = !1
   } = e, o = (0, r.e7)([u.Z], () => u.Z.getBasicChannel(t.channelId)), f = (0, r.e7)([d.Z], () => null != o && d.Z.canBasicChannel(h.S7T.CONNECT, o)), {
 url: E,
-isLoading: g
+isLoading: C
   } = (0, r.cj)([c.Z], () => ({
 url: f ? c.Z.getPreviewURL(t.guildId, t.channelId, t.ownerId) : null,
 isLoading: f && c.Z.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
-  })), C = a.useRef(g ? null : E);
+  })), g = a.useRef(C ? null : E);
   a.useEffect(() => {
-!g && (C.current = E);
+!C && (g.current = E);
   }, [
 E,
-g
+C
   ]);
-  let I = null == E || g ? C.current : E;
+  let I = null == E || C ? g.current : E;
   return null == I ? (0, i.jsx)(_, {
 className: n,
-isLoading: g,
+isLoading: C,
 noText: s,
 previewText: f ? void 0 : p.Z.Messages.STREAM_NO_PERMISSION_CTA
   }) : (0, i.jsx)('div', {

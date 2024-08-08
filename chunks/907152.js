@@ -1,6 +1,6 @@
 n.d(t, {
   C4: function() {
-return g;
+return C;
   }
 }), n(653041), n(627494), n(757143), n(512722);
 var i = n(913527),
@@ -150,7 +150,7 @@ let u = f(s, n);
   maxWidth: p.kC
 });
   },
-  g = async e => {
+  C = async e => {
 let {
   applicationImageSrc: t,
   entry: n,

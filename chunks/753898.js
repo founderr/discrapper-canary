@@ -23,7 +23,7 @@ user: p
   } = e, m = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), _ = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : '', {
 avatarDecorationSrc: f,
 eventHandlers: E,
-isAnimating: g
+isAnimating: C
   } = (0, u.Z)({
 user: p,
 size: s.AvatarSizes.SIZE_80,
@@ -34,7 +34,7 @@ channelId: n.id,
 ...E,
 children: [
   (() => {
-    let e = !m && g;
+    let e = !m && C;
     return n.isMultiUserDM() ? (0, i.jsx)(c.Z, {
       channel: n,
       size: s.AvatarSizes.SIZE_80,
