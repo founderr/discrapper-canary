@@ -1,5 +1,5 @@
-var e = /^(?:0|[1-9]\d*)$/;
-t.exports = function(t, r) {
-  var n = typeof t;
-  return !!(r = null == r ? 9007199254740991 : r) && ('number' == n || 'symbol' != n && e.test(t)) && t > -1 && t % 1 == 0 && t < r;
+var t = /^(?:0|[1-9]\d*)$/;
+e.exports = function(e, r) {
+  var n = typeof e;
+  return !!(r = null == r ? 9007199254740991 : r) && ('number' == n || 'symbol' != n && t.test(e)) && e > -1 && e % 1 == 0 && e < r;
 };

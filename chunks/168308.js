@@ -1,19 +1,19 @@
-t.d(s, {
+n.d(t, {
   Jw: function() {
-return r;
+return s;
   },
   bC: function() {
 return o;
   }
 });
-var n = t(442837),
-  a = t(808506),
-  i = t(358085);
+var r = n(442837),
+  i = n(808506),
+  a = n(358085);
 
-function r() {
-  return i.isPlatformEmbedded;
+function s() {
+  return a.isPlatformEmbedded;
 }
 
 function o() {
-  return (0, n.e7)([a.Z], () => a.Z.isSupported()) || !1;
+  return (0, r.e7)([i.Z], () => i.Z.isSupported()) || !1;
 }

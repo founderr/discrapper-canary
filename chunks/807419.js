@@ -1,8 +1,8 @@
 var n = r(657398),
-  _ = r(706627);
-t.exports = function(t) {
-  if (!_(t))
+  a = r(706627);
+e.exports = function(e) {
+  if (!a(e))
 return !1;
-  var e = n(t);
-  return '[object Function]' == e || '[object GeneratorFunction]' == e || '[object AsyncFunction]' == e || '[object Proxy]' == e;
+  var t = n(e);
+  return '[object Function]' == t || '[object GeneratorFunction]' == t || '[object AsyncFunction]' == t || '[object Proxy]' == t;
 };

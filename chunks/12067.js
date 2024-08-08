@@ -37,9 +37,9 @@ T = {
   channel_id: t.id,
   channel_type: t.type
 },
-N = I.length > 1 ? (0, u.Cx)(I, T) : {};
+g = I.length > 1 ? (0, u.Cx)(I, T) : {};
 
-  function g(e, n) {
+  function N(e, n) {
 let t = e.originalItem;
 return (0, i.lK)(t.media, n, t.spoiler);
   }
@@ -60,7 +60,7 @@ let t = e.media,
     },
     onContextMenu: l,
     autoPlayGif: h,
-    getObscureReason: g,
+    getObscureReason: N,
     renderImageComponent: a.a,
     renderVideoComponent: a.r,
     renderAudioComponent: p.dG4,
@@ -76,7 +76,7 @@ let t = e.media,
     proxyURL: t.proxyUrl,
     url: t.url
   });
-return i in N && (r.onClick = N[i]), r;
+return i in g && (r.onClick = g[i]), r;
   });
   return (0, l.jsx)('div', {
 children: (0, l.jsx)(s.Z, {

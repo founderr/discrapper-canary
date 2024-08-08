@@ -31,10 +31,10 @@ onClickThumbnail: x,
 providerIconProps: I,
 style: T = {}
   } = e, {
-primaryColor: N,
-secondaryColor: g
+primaryColor: g,
+secondaryColor: N
   } = (0, u.Z)(v);
-  return null != v && (T.background = 'linear-gradient(45deg, '.concat(N, ', ').concat(g, ')')), (0, l.jsxs)('div', {
+  return null != v && (T.background = 'linear-gradient(45deg, '.concat(g, ', ').concat(N, ')')), (0, l.jsxs)('div', {
 'data-disable-adaptive-theme': !0,
 className: i()(p.container, (0, f.Q)(_.BR.DARK)),
 style: T,

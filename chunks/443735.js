@@ -1,11 +1,11 @@
 var n = r(475227),
-  _ = r(389109),
-  a = Object.prototype,
-  i = a.hasOwnProperty,
-  o = a.propertyIsEnumerable,
+  a = r(389109),
+  o = Object.prototype,
+  i = o.hasOwnProperty,
+  _ = o.propertyIsEnumerable,
   E = n(function() {
 return arguments;
-  }()) ? n : function(t) {
-return _(t) && i.call(t, 'callee') && !o.call(t, 'callee');
+  }()) ? n : function(e) {
+return a(e) && i.call(e, 'callee') && !_.call(e, 'callee');
   };
-t.exports = E;
+e.exports = E;

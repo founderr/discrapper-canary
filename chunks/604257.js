@@ -1,10 +1,10 @@
-t.exports = function(t) {
-  return function(e, r, n) {
-for (var _ = -1, a = Object(e), i = n(e), o = i.length; o--;) {
-  var E = i[t ? o : ++_];
-  if (!1 === r(a[E], E, a))
+e.exports = function(e) {
+  return function(t, r, n) {
+for (var a = -1, o = Object(t), i = n(t), _ = i.length; _--;) {
+  var E = i[e ? _ : ++a];
+  if (!1 === r(o[E], E, o))
     break;
 }
-return e;
+return t;
   };
 };

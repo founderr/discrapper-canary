@@ -1,6 +1,6 @@
-var e, r, n, _ = t.exports = {};
+var t, r, n, a = e.exports = {};
 
-function a() {
+function o() {
   throw Error('setTimeout has not been defined');
 }
 
@@ -8,29 +8,29 @@ function i() {
   throw Error('clearTimeout has not been defined');
 }
 
-function o(t) {
-  if (e === setTimeout)
-return setTimeout(t, 0);
-  if ((e === a || !e) && setTimeout)
-return e = setTimeout, setTimeout(t, 0);
+function _(e) {
+  if (t === setTimeout)
+return setTimeout(e, 0);
+  if ((t === o || !t) && setTimeout)
+return t = setTimeout, setTimeout(e, 0);
   try {
-return e(t, 0);
+return t(e, 0);
   } catch (r) {
 try {
-  return e.call(null, t, 0);
+  return t.call(null, e, 0);
 } catch (r) {
-  return e.call(this, t, 0);
+  return t.call(this, e, 0);
 }
   }
 }! function() {
   try {
-e = 'function' == typeof setTimeout ? setTimeout : a;
-  } catch (t) {
-e = a;
+t = 'function' == typeof setTimeout ? setTimeout : o;
+  } catch (e) {
+t = o;
   }
   try {
 r = 'function' == typeof clearTimeout ? clearTimeout : i;
-  } catch (t) {
+  } catch (e) {
 r = i;
   }
 }();
@@ -40,57 +40,57 @@ var E = [],
 
 function I() {
   if (!!s && !!n)
-s = !1, n.length ? E = n.concat(E) : c = -1, E.length && R();
+s = !1, n.length ? E = n.concat(E) : c = -1, E.length && u();
 }
 
-function R() {
+function u() {
   if (!s) {
-var t = o(I);
+var e = _(I);
 s = !0;
-for (var e = E.length; e;) {
-  for (n = E, E = []; ++c < e;)
+for (var t = E.length; t;) {
+  for (n = E, E = []; ++c < t;)
     n && n[c].run();
-  c = -1, e = E.length;
+  c = -1, t = E.length;
 }
-n = null, s = !1, ! function(t) {
+n = null, s = !1, ! function(e) {
   if (r === clearTimeout)
-    return clearTimeout(t);
+    return clearTimeout(e);
   if ((r === i || !r) && clearTimeout)
-    return r = clearTimeout, clearTimeout(t);
+    return r = clearTimeout, clearTimeout(e);
   try {
-    r(t);
-  } catch (e) {
+    r(e);
+  } catch (t) {
     try {
-      return r.call(null, t);
-    } catch (e) {
-      return r.call(this, t);
+      return r.call(null, e);
+    } catch (t) {
+      return r.call(this, e);
     }
   }
-}(t);
+}(e);
   }
 }
 
-function T(t, e) {
-  this.fun = t, this.array = e;
+function l(e, t) {
+  this.fun = e, this.array = t;
 }
 
-function u() {}
-_.nextTick = function(t) {
-  var e = Array(arguments.length - 1);
+function R() {}
+a.nextTick = function(e) {
+  var t = Array(arguments.length - 1);
   if (arguments.length > 1)
 for (var r = 1; r < arguments.length; r++)
-  e[r - 1] = arguments[r];
-  E.push(new T(t, e)), 1 === E.length && !s && o(R);
-}, T.prototype.run = function() {
+  t[r - 1] = arguments[r];
+  E.push(new l(e, t)), 1 === E.length && !s && _(u);
+}, l.prototype.run = function() {
   this.fun.apply(null, this.array);
-}, _.title = 'browser', _.browser = !0, _.env = {}, _.argv = [], _.version = '', _.versions = {}, _.on = u, _.addListener = u, _.once = u, _.off = u, _.removeListener = u, _.removeAllListeners = u, _.emit = u, _.prependListener = u, _.prependOnceListener = u, _.listeners = function(t) {
+}, a.title = 'browser', a.browser = !0, a.env = {}, a.argv = [], a.version = '', a.versions = {}, a.on = R, a.addListener = R, a.once = R, a.off = R, a.removeListener = R, a.removeAllListeners = R, a.emit = R, a.prependListener = R, a.prependOnceListener = R, a.listeners = function(e) {
   return [];
-}, _.binding = function(t) {
+}, a.binding = function(e) {
   throw Error('process.binding is not supported');
-}, _.cwd = function() {
+}, a.cwd = function() {
   return '/';
-}, _.chdir = function(t) {
+}, a.chdir = function(e) {
   throw Error('process.chdir is not supported');
-}, _.umask = function() {
+}, a.umask = function() {
   return 0;
 };

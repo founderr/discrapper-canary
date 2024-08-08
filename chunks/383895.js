@@ -12,15 +12,15 @@ var n = a(735250),
   u = a(142550),
   d = a(201133),
   A = a(693824),
-  O = a(919394),
-  N = a(91140),
-  R = a(297781),
+  R = a(919394),
+  O = a(91140),
+  N = a(297781),
   T = a(359110),
   m = a(592125),
   L = a(944486),
-  P = a(594174),
+  g = a(594174),
   M = a(5192),
-  g = a(810568),
+  P = a(810568),
   S = a(289538),
   G = a(689938),
   f = a(340672),
@@ -36,8 +36,8 @@ nickName: r
   let e = await _.Z.getOrEnsurePrivateChannel(s.author_id),
     n = m.Z.getChannel(e);
   o()(null != n, 'DM channel cannot be null');
-  let l = await (0, O.QC)(s, n, A.kH.Base64),
-    r = await (0, O.QC)(s, n, A.kH.CloudUpload);
+  let l = await (0, R.QC)(s, n, A.kH.Base64),
+    r = await (0, R.QC)(s, n, A.kH.CloudUpload);
   E(l), a(r);
 })();
   }, [
@@ -69,11 +69,11 @@ onClose: i
   } = e, A = (0, E.e7)([
 L.Z,
 m.Z
-  ], () => m.Z.getChannel(L.Z.getChannelId())), O = (0, E.e7)([P.default], () => P.default.getUser(s.author_id)), h = l.useMemo(() => M.ZP.getName(null == A ? void 0 : A.guild_id, null == A ? void 0 : A.id, O), [
-O,
+  ], () => m.Z.getChannel(L.Z.getChannelId())), R = (0, E.e7)([g.default], () => g.default.getUser(s.author_id)), h = l.useMemo(() => M.ZP.getName(null == A ? void 0 : A.guild_id, null == A ? void 0 : A.id, R), [
+R,
 A
   ]), [x, p] = l.useState();
-  return null == O ? null : (0, n.jsxs)('div', {
+  return null == R ? null : (0, n.jsxs)('div', {
 className: f.profileEntryCard,
 style: r,
 children: [
@@ -82,7 +82,7 @@ children: [
     style: r,
     children: [
       (0, n.jsx)(S.D, {
-        user: O,
+        user: R,
         channel: A
       }),
       (0, n.jsx)('div', {
@@ -100,9 +100,9 @@ children: [
                 h.length > 18 ? '...' : ''
               ]
             }),
-            (0, n.jsx)(R.Gk, {
-              location: R.Gt.GAME_PROFILE,
-              children: N.W.map((e, a) => (0, n.jsx)(e, {
+            (0, n.jsx)(N.Gk, {
+              location: N.Gt.GAME_PROFILE,
+              children: O.W.map((e, a) => (0, n.jsx)(e, {
                 entry: s
               }, a))
             })
@@ -121,15 +121,15 @@ children: [
           interactionType: n,
           reply: l
         } = e;
-        if (n === u.L.ReplyBegin && (0, g.UE)({
-            action: g.as.ClickMessageUser,
+        if (n === u.L.ReplyBegin && (0, P.UE)({
+            action: P.as.ClickMessageUser,
             applicationId: s.extra.application_id,
             gameName: s.extra.game_name,
             recipientUserId: s.author_id,
             viewId: a
           }), n === u.L.ReplySubmit) {
-          (0, g.UE)({
-            action: g.as.SendMessageUser,
+          (0, P.UE)({
+            action: P.as.SendMessageUser,
             applicationId: s.extra.application_id,
             gameName: s.extra.game_name,
             recipientUserId: s.author_id,

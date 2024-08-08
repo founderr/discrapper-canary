@@ -35,10 +35,10 @@ T = (0, i.e7)([p.Z], () => null != e ? p.Z.getForSKU(e) : void 0, [e]);
 if (null != I)
   (0, u.vY)(I);
   }, [I]);
-  let N = null == n ? void 0 : n.applicationId,
-g = (0, i.e7)([d.Z], () => null != N ? d.Z.getSubscriptionGroupListingForApplication(N) : null, [N]),
+  let g = null == n ? void 0 : n.applicationId,
+N = (0, i.e7)([d.Z], () => null != g ? d.Z.getSubscriptionGroupListingForApplication(g) : null, [g]),
 S = r.useCallback(() => {
-  if ((null == n ? void 0 : n.applicationId) == null || (null == n ? void 0 : n.id) == null || (null == g ? void 0 : g.id) == null || (null == g ? void 0 : g.sku_flags) == null)
+  if ((null == n ? void 0 : n.applicationId) == null || (null == n ? void 0 : n.id) == null || (null == N ? void 0 : N.id) == null || (null == N ? void 0 : N.sku_flags) == null)
     return null;
   (0, a.openModal)(e => {
     let {
@@ -47,8 +47,8 @@ S = r.useCallback(() => {
     } = e;
     return (0, l.jsx)(h.SubscriptionDetailsModal, {
       appId: n.applicationId,
-      groupListingId: g.id,
-      groupListingType: (0, m.KW)(g.sku_flags) ? 'user' : 'guild',
+      groupListingId: N.id,
+      groupListingType: (0, m.KW)(N.sku_flags) ? 'user' : 'guild',
       onClose: t,
       skuId: n.id,
       transitionState: r
@@ -57,10 +57,10 @@ S = r.useCallback(() => {
 }, [
   null == n ? void 0 : n.applicationId,
   null == n ? void 0 : n.id,
-  null == g ? void 0 : g.id,
-  null == g ? void 0 : g.sku_flags
+  null == N ? void 0 : N.id,
+  null == N ? void 0 : N.sku_flags
 ]),
-O = r.useCallback(() => {
+b = r.useCallback(() => {
   if (null == n)
     return null;
   (0, a.openModal)(e => {
@@ -76,7 +76,7 @@ O = r.useCallback(() => {
     });
   });
 }, [n]);
-  if (null != n && null != T && (null == n || n.type !== E.epS.SUBSCRIPTION || null != g)) {
+  if (null != n && null != T && (null == n || n.type !== E.epS.SUBSCRIPTION || null != N)) {
 if (null == e || null != n && !n.available)
   return {
     disabled: !0,
@@ -107,7 +107,7 @@ return null == n.price ? {
     skuName: n.name,
     price: (0, C.T4)(n.price.amount, n.price.currency)
   }),
-  onClick: O
+  onClick: b
 };
   }
 }

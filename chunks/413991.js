@@ -36,7 +36,7 @@ value: C
 t,
 E
   ]);
-  let N = {
+  let g = {
 name: d,
 value: v,
 placeholder: m,
@@ -54,12 +54,12 @@ autoFocus: T
   switch (u) {
 case a.FO.SMALL:
   n = (0, l.jsx)(i.TextInput, {
-    ...N
+    ...g
   });
   break;
 case a.FO.PARAGRAPH:
   n = (0, l.jsx)(i.TextArea, {
-    ...N
+    ...g
   });
   }
   return (0, l.jsx)(i.FormItem, {

@@ -1,6 +1,6 @@
-r.d(e, {
+r.d(t, {
   A: function() {
-return _;
+return a;
   }
 }), r(47120);
 let n = Object.freeze({
@@ -9,7 +9,7 @@ LIGHT: 'light',
 MIDNIGHT: 'midnight',
 DARKER: 'darker'
   }),
-  _ = new Map([
+  a = new Map([
 [
   n.MIDNIGHT,
   n.DARK
@@ -19,4 +19,4 @@ DARKER: 'darker'
   n.DARK
 ]
   ]);
-e.Z = n;
+t.Z = n;

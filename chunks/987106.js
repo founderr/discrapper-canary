@@ -52,14 +52,14 @@ skuId: x
   } = e, {
 executeStateUpdate: I,
 visualState: T,
-isDisabled: N
-  } = (0, _.Ee)(e), g = (0, d.I)(x), S = null != x && r === u.ZJ.PREMIUM, O = S && (null == g ? void 0 : g.disabled), b = S ? null == g ? void 0 : g.label : t, M = null != C, L = null != b && b.length > 0, Z = r === u.ZJ.LINK && null != E && E.length > 0, y = T === p.gH.LOADING || S && null == g;
-  return n = Z ? () => {
+isDisabled: g
+  } = (0, _.Ee)(e), N = (0, d.I)(x), S = null != x && r === u.ZJ.PREMIUM, b = S && (null == N ? void 0 : N.disabled), O = S ? null == N ? void 0 : N.label : t, M = null != C, Z = null != O && O.length > 0, L = r === u.ZJ.LINK && null != E && E.length > 0, y = T === p.gH.LOADING || S && null == N;
+  return n = L ? () => {
 (0, f.q)({
   href: null != E ? E : '',
   shouldConfirm: !0
 });
-  } : S ? null != g && !1 === g.disabled ? g.onClick : a.noop : () => I(), (0, l.jsxs)(o.Button, {
+  } : S ? null != N && !1 === N.disabled ? N.onClick : a.noop : () => I(), (0, l.jsxs)(o.Button, {
 color: function(e) {
   switch (e) {
     case u.ZJ.PRIMARY:
@@ -74,15 +74,15 @@ color: function(e) {
   }
 }(r),
 size: o.Button.Sizes.SMALL,
-disabled: m || T === p.gH.DISABLED || N || O,
+disabled: m || T === p.gH.DISABLED || g || b,
 onClick: n,
 onContextMenu: e => {
-  Z && (0, s.vq)(e, e => (0, l.jsx)(h, {
+  L && (0, s.vq)(e, e => (0, l.jsx)(h, {
     ...e,
     url: E
   }));
 },
-role: Z ? 'link' : 'button',
+role: L ? 'link' : 'button',
 children: [
   (0, l.jsxs)('div', {
     className: i()(v.content, {
@@ -100,18 +100,18 @@ children: [
       }) : null,
       M ? (0, l.jsx)(c.Z, {
         className: i()({
-          [v.textEmoji]: L
+          [v.textEmoji]: Z
         }),
         src: C.src,
         emojiId: C.id,
         emojiName: C.name,
         animated: C.animated
       }) : null,
-      L ? (0, l.jsx)('div', {
+      Z ? (0, l.jsx)('div', {
         className: v.label,
-        children: b
+        children: O
       }) : null,
-      Z ? (0, l.jsx)(o.WindowLaunchIcon, {
+      L ? (0, l.jsx)(o.WindowLaunchIcon, {
         size: 'xs',
         color: 'currentColor',
         className: v.launchIcon

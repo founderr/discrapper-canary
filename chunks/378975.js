@@ -119,13 +119,13 @@ disabled: E
   } = e, x = r.useMemo(() => t.filter(e => e.default).map(e => e.value), [t]), {
 state: I,
 executeStateUpdate: T,
-visualState: N,
-isDisabled: g,
+visualState: g,
+isDisabled: N,
 error: S
   } = (0, d.Ee)(e, {
 type: n,
 values: x
-  }), O = s > 1, b = N === m.gH.LOADING, [M, L] = r.useState(!1), [Z, y] = r.useState(() => new Set(t.filter(e => e.default).map(e => e.value))), [j, A] = r.useState(Z), R = r.useMemo(() => t.some(e => null != e.emoji), [t]);
+  }), b = s > 1, O = g === m.gH.LOADING, [M, Z] = r.useState(!1), [L, y] = r.useState(() => new Set(t.filter(e => e.default).map(e => e.value))), [j, A] = r.useState(L), R = r.useMemo(() => t.some(e => null != e.emoji), [t]);
   r.useEffect(() => {
 if ((null == I ? void 0 : I.type) === c.re.STRING_SELECT) {
   let e = new Set(I.values);
@@ -140,30 +140,30 @@ x,
 I
   ]);
   let P = r.useCallback(() => {
-if (j !== Z)
+if (j !== L)
   T({
     type: c.re.STRING_SELECT,
-    values: Array.from(Z)
-  }) && A(Z);
+    values: Array.from(L)
+  }) && A(L);
   }, [
-Z,
+L,
 j,
 A,
 T
   ]);
   r.useEffect(() => {
-if (!(M || Z.size === j.size && Array.from(j).every(e => Z.has(e))))
+if (!(M || L.size === j.size && Array.from(j).every(e => L.has(e))))
   P();
   }, [
 M,
-Z,
+L,
 j,
 P
   ]);
   let U = o.singleSelect;
-  O ? U = o.multiSelect : 0 === h && (U = o.toggleSelect);
+  b ? U = o.multiSelect : 0 === h && (U = o.toggleSelect);
   let B = (0, o.useVariableSelect)({
-value: Z,
+value: L,
 onChange: e => y(e),
 onSelectInteraction: U
   });
@@ -173,31 +173,31 @@ children: [
     className: _.container,
     children: [
       (0, l.jsx)(o.Select, {
-        isDisabled: E || g,
+        isDisabled: E || N,
         className: _.select,
         options: t.map(e => ({
           ...e,
-          disabled: O && !Z.has(e.value) && Z.size === s
+          disabled: b && !L.has(e.value) && L.size === s
         })),
         placeholder: null != a ? a : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
-        onClose: () => L(!1),
-        onOpen: () => L(!0),
+        onClose: () => Z(!1),
+        onOpen: () => Z(!0),
         maxVisibleItems: 5,
-        closeOnSelect: !O,
+        closeOnSelect: !b,
         optionClassName: _.selectOption,
         renderOptionLabel: e => (0, l.jsx)(p, {
           ...e,
-          isDisabled: O && !Z.has(e.value) && Z.size === s,
+          isDisabled: b && !L.has(e.value) && L.size === s,
           isOffset: R
         }),
-        renderOptionValue: e => O ? (0, l.jsx)(v, {
+        renderOptionValue: e => b ? (0, l.jsx)(v, {
           options: e
         }) : (0, l.jsx)(C, {
           ...e[0]
         }),
         ...B
       }),
-      b ? (0, l.jsx)('div', {
+      O ? (0, l.jsx)('div', {
         className: _.__invalid_loading,
         children: (0, l.jsx)(o.Dots, {
           dotRadius: 3.5,

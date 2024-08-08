@@ -12,15 +12,15 @@ var n = a(735250),
   u = a(442837),
   d = a(433517),
   A = a(481060),
-  O = a(224706),
-  N = a(812206),
-  R = a(168551),
+  R = a(224706),
+  O = a(812206),
+  N = a(168551),
   T = a(485267),
   m = a(26033),
   L = a(561308),
-  P = a(669764),
+  g = a(669764),
   M = a(962250),
-  g = a(706454),
+  P = a(706454),
   S = a(768581),
   G = a(814225),
   f = a(709054),
@@ -30,11 +30,11 @@ var n = a(735250),
   x = a(96856),
   p = a(567409),
   Z = a(774073),
-  D = a(124030),
-  K = a(383895),
+  K = a(124030),
+  D = a(383895),
   j = a(183391),
-  B = a(206583),
-  F = a(689938),
+  F = a(206583),
+  B = a(689938),
   U = a(421377);
 let w = 'GameProfileModal',
   y = e => {
@@ -42,9 +42,9 @@ let {
   game: s,
   onClose: a,
   trackClick: l
-} = e, r = (0, u.e7)([N.Z], () => {
+} = e, r = (0, u.e7)([O.Z], () => {
   var e;
-  return N.Z.getApplication(null !== (e = null == s ? void 0 : s.applicationId) && void 0 !== e ? e : '');
+  return O.Z.getApplication(null !== (e = null == s ? void 0 : s.applicationId) && void 0 !== e ? e : '');
 });
 if (null == s)
   return null;
@@ -57,7 +57,7 @@ return (0, n.jsx)(A.Tooltip, {
       ...e,
       className: U.clickable,
       onClick: async () => {
-        l(C.as.ClickSimilarGame, s.applicationId), (0, A.openModalLazy)(() => Promise.resolve(e => (0, n.jsx)(Y, {
+        l(C.as.ClickSimilarGame, s.applicationId), (0, A.openModalLazy)(() => Promise.resolve(e => (0, n.jsx)(W, {
           applicationId: s.applicationId,
           source: C.m1.SimilarGames,
           ...e
@@ -66,7 +66,7 @@ return (0, n.jsx)(A.Tooltip, {
       children: (0, n.jsx)('img', {
         src: t,
         className: U.similarGames,
-        alt: F.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({
+        alt: B.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({
           game: null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : null == s ? void 0 : s.name
         })
       })
@@ -83,7 +83,7 @@ children: [
   (0, n.jsx)(A.Text, {
     variant: 'text-sm/normal',
     color: 'text-muted',
-    children: F.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+    children: B.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
   })
 ]
   }),
@@ -135,30 +135,30 @@ return (0, n.jsxs)('div', {
 });
   },
   H = e => e.filter(Z.z6).slice(0, 5),
-  Y = e => {
+  W = e => {
 var s, r;
 let {
   applicationId: i,
   source: E,
   sourceUserId: _,
   transitionState: b,
-  onClose: Y
+  onClose: W
 } = e, {
-  clientThemesClassName: W
-} = (0, R.ZP)(), {
-  width: z,
-  height: V
+  clientThemesClassName: Y
+} = (0, N.ZP)(), {
+  width: V,
+  height: z
 } = (0, M.b)(), [X, J] = l.useState(() => {
   var e;
   return null === (e = d.K.get(w)) || void 0 === e ? void 0 : e[i];
-}), q = (0, u.e7)([g.default], () => g.default.locale), [$, ee] = l.useState(!0), [es, ea] = l.useState(!1), en = l.useRef(null), el = l.useMemo(() => (0, C.fP)(), []);
+}), q = (0, u.e7)([P.default], () => P.default.locale), [$, ee] = l.useState(!0), [es, ea] = l.useState(!1), en = l.useRef(null), el = l.useMemo(() => (0, C.fP)(), []);
 l.useEffect(() => {
   let e = en.current;
   null != e && ea(e.scrollHeight - e.clientHeight > 1);
 }, [
   en,
-  z,
-  V
+  V,
+  z
 ]), l.useEffect(() => {
   (0, T.Jn)();
 }, []);
@@ -166,7 +166,7 @@ let er = (0, u.Wu)([h.Z], () => {
     var e;
     return (null !== (e = h.Z.getSimilarGames(i)) && void 0 !== e ? e : []).slice(0, 25);
   }),
-  et = (0, u.Wu)([P.Z], () => er.map(e => P.Z.getGame(e)).filter(Z.W1).slice(0, 5)),
+  et = (0, u.Wu)([g.Z], () => er.map(e => g.Z.getGame(e)).filter(Z.W1).slice(0, 5)),
   ei = l.useRef([]);
 l.useEffect(() => {
   ei.current = er;
@@ -214,7 +214,7 @@ l.useEffect(() => {
   i,
   er
 ]), l.useEffect(() => {
-  O.Z.getDetectableGamesSupplemental([
+  R.Z.getDetectableGamesSupplemental([
     i,
     ...er
   ]);
@@ -222,10 +222,10 @@ l.useEffect(() => {
   i,
   er
 ]);
-let eu = N.Z.getApplication(i),
-  ed = (0, u.e7)([P.Z], () => P.Z.getGame(i)),
+let eu = O.Z.getApplication(i),
+  ed = (0, u.e7)([g.Z], () => g.Z.getGame(i)),
   eA = l.useMemo(() => null == ed ? void 0 : ed.genres.map(G.P3).join(', '), [ed]),
-  eO = l.useMemo(() => {
+  eR = l.useMemo(() => {
     if (null == ed)
       return '';
     let {
@@ -242,7 +242,7 @@ let eu = N.Z.getApplication(i),
     }
     return '';
   }, [ed]),
-  eN = l.useMemo(() => {
+  eO = l.useMemo(() => {
     var e, s;
     let a = (null !== (e = null == ed ? void 0 : ed.artwork) && void 0 !== e ? e : []).map(e => ({
       src: e
@@ -257,7 +257,7 @@ let eu = N.Z.getApplication(i),
     null == ed ? void 0 : ed.artwork,
     null == ed ? void 0 : ed.screenshots
   ]),
-  eR = (e, s) => {
+  eN = (e, s) => {
     (0, C.UE)({
       gameName: null != eL ? eL : '',
       applicationId: i,
@@ -277,28 +277,28 @@ let eu = N.Z.getApplication(i),
 if (o()(em, 'Game Profile was opened when it thinks it shouldn\'t have been.  Make sure to use `useShouldOpenGameProfileModal` before calling `openGameProfileModal`'), null == ed)
   return null;
 let eL = null !== (s = ed.name) && void 0 !== s ? s : null == eu ? void 0 : eu.name,
-  eP = null == eu ? void 0 : eu.getIconURL(160, S.$k ? 'webp' : 'png'),
-  eM = null !== (r = ed.coverImageUrl) && void 0 !== r ? r : eP,
+  eg = null == eu ? void 0 : eu.getIconURL(160, S.$k ? 'webp' : 'png'),
+  eM = null !== (r = ed.coverImageUrl) && void 0 !== r ? r : eg,
   {
-    summary: eg,
+    summary: eP,
     websites: eS,
     publishers: eG,
     platforms: ef
   } = ed,
   eC = f.default.extractTimestamp(i),
-  ev = c()().diff(c()(eC), 'days') <= B.G,
+  ev = c()().diff(c()(eC), 'days') <= F.G,
   eh = eE.some(e => (0, L.ig)(e) === I.o.GLOBAL);
 return (0, n.jsx)(A.ModalRoot, {
   transitionState: b,
   size: A.ModalSize.DYNAMIC,
-  className: t()(W, U.gameProfileModal),
+  className: t()(Y, U.gameProfileModal),
   children: (0, n.jsxs)(A.ScrollerNone, {
     className: U.scrollable,
     children: [
       (0, n.jsx)('div', {
         className: t()(U.gameArtHero),
         style: {
-          backgroundImage: 'url("'.concat(eO, '")')
+          backgroundImage: 'url("'.concat(eR, '")')
         }
       }),
       (0, n.jsxs)('div', {
@@ -309,7 +309,7 @@ return (0, n.jsx)(A.ModalRoot, {
             children: null != eM && (0, n.jsx)('img', {
               className: U.logo,
               src: eM,
-              alt: F.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({
+              alt: B.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({
                 game: eL
               })
             })
@@ -326,10 +326,10 @@ return (0, n.jsx)(A.ModalRoot, {
                   (0, n.jsxs)('div', {
                     className: t()(U.row, U.gapSm),
                     children: [
-                      null != eP && (0, n.jsx)('img', {
-                        src: eP,
+                      null != eg && (0, n.jsx)('img', {
+                        src: eg,
                         height: 16,
-                        alt: F.Z.Messages.GAME_PROFILE_GAME_ICON_ALT.format({
+                        alt: B.Z.Messages.GAME_PROFILE_GAME_ICON_ALT.format({
                           game: eL
                         })
                       }),
@@ -341,7 +341,7 @@ return (0, n.jsx)(A.ModalRoot, {
                       ev && (0, n.jsx)(A.Text, {
                         variant: 'eyebrow',
                         className: U.newBadge,
-                        children: F.Z.Messages.NEW
+                        children: B.Z.Messages.NEW
                       }),
                       eh && (0, n.jsxs)(n.Fragment, {
                         children: [
@@ -358,7 +358,7 @@ return (0, n.jsx)(A.ModalRoot, {
               }),
               (0, n.jsx)('div', {
                 children: eT && (0, n.jsx)(A.Tooltip, {
-                  text: X ? F.Z.Messages.GAME_PROFILE_UNFOLLOW_TOOLTIP : F.Z.Messages.GAME_PROFILE_FOLLOW_TOOLTIP,
+                  text: X ? B.Z.Messages.GAME_PROFILE_UNFOLLOW_TOOLTIP : B.Z.Messages.GAME_PROFILE_FOLLOW_TOOLTIP,
                   children: e => (0, n.jsxs)(A.Button, {
                     ...e,
                     innerClassName: U.followButton,
@@ -366,14 +366,14 @@ return (0, n.jsx)(A.ModalRoot, {
                     onClick: () => {
                       var e;
                       let s = null !== (e = d.K.get(w)) && void 0 !== e ? e : {};
-                      s[i] = !s[i], d.K.set(w, s), eR(s[i] ? C.as.FollowGame : C.as.UnfollowGame), s[i] && (0, D.L)() && (0, A.openModalLazy)(async () => {
+                      s[i] = !s[i], d.K.set(w, s), eN(s[i] ? C.as.FollowGame : C.as.UnfollowGame), s[i] && (0, K.L)() && (0, A.openModalLazy)(async () => {
                         let {
                           default: e
                         } = await a.e('86564').then(a.bind(a, 641758));
                         return s => (0, n.jsx)(e, {
                           ...s,
                           applicationId: i,
-                          background: eO,
+                          background: eR,
                           viewId: el
                         });
                       }), J(s[i]);
@@ -384,7 +384,7 @@ return (0, n.jsx)(A.ModalRoot, {
                       }) : (0, n.jsx)(A.BellIcon, {
                         color: 'white'
                       }),
-                      X ? F.Z.Messages.GAME_PROFILE_UNFOLLOW_GAME : F.Z.Messages.FOLLOW
+                      X ? B.Z.Messages.GAME_PROFILE_UNFOLLOW_GAME : B.Z.Messages.FOLLOW
                     ]
                   })
                 })
@@ -402,7 +402,7 @@ return (0, n.jsx)(A.ModalRoot, {
               (0, n.jsx)(A.Heading, {
                 variant: 'text-md/semibold',
                 color: 'header-primary',
-                children: F.Z.Messages.GAME_PROFILE_FRIENDS_WHO_PLAY_TAB
+                children: B.Z.Messages.GAME_PROFILE_FRIENDS_WHO_PLAY_TAB
               }),
               (0, n.jsxs)('div', {
                 className: t()(U.section, {
@@ -413,14 +413,14 @@ return (0, n.jsx)(A.ModalRoot, {
                     variant: 'text-xs/semibold',
                     color: 'text-primary',
                     className: U.emptyFriendsWhoPlay,
-                    children: F.Z.Messages.GAME_PROFILE_EMPTY_FRIENDS_WHO_PLAY
+                    children: B.Z.Messages.GAME_PROFILE_EMPTY_FRIENDS_WHO_PLAY
                   }),
                   (0, n.jsx)('div', {
                     className: t()(U.column, U.gapNone),
-                    children: null == eE ? void 0 : eE.slice(0, ec && !e_ ? 6 : void 0).map(e => (0, n.jsx)(K.Z, {
+                    children: null == eE ? void 0 : eE.slice(0, ec && !e_ ? 6 : void 0).map(e => (0, n.jsx)(D.Z, {
                       entry: e,
                       viewId: el,
-                      onClose: Y
+                      onClose: W
                     }, e.id))
                   })
                 ]
@@ -432,18 +432,18 @@ return (0, n.jsx)(A.ModalRoot, {
                   (0, n.jsx)(A.Text, {
                     variant: 'text-xs/semibold',
                     color: 'interactive-normal',
-                    children: F.Z.Messages.GAME_PROFILE_SEE_ALL_ENTRIES
+                    children: B.Z.Messages.GAME_PROFILE_SEE_ALL_ENTRIES
                   }),
                   (0, n.jsx)(A.ChevronSmallDownIcon, {
                     size: 'xs'
                   })
                 ]
               }),
-              eN.length > 0 && (0, n.jsxs)(n.Fragment, {
+              eO.length > 0 && (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)(A.Heading, {
                     variant: 'heading-md/bold',
-                    children: F.Z.Messages.GAME_PROFILE_SCREENSHOTS
+                    children: B.Z.Messages.GAME_PROFILE_SCREENSHOTS
                   }),
                   (0, n.jsx)(A.Scroller, {
                     style: {
@@ -451,10 +451,10 @@ return (0, n.jsx)(A.ModalRoot, {
                     },
                     className: t()(U.row, U.imageScroller),
                     orientation: 'horizontal',
-                    children: eN.map((e, s) => (0, n.jsx)(A.Clickable, {
+                    children: eO.map((e, s) => (0, n.jsx)(A.Clickable, {
                       className: U.clickable,
                       onClick: () => {
-                        eR(C.as.ClickImage), (0, A.openModalLazy)(async () => {
+                        eN(C.as.ClickImage), (0, A.openModalLazy)(async () => {
                           let {
                             default: e
                           } = await a.e('99857').then(a.bind(a, 895023));
@@ -465,7 +465,7 @@ return (0, n.jsx)(A.ModalRoot, {
                             return (0, n.jsx)(e, {
                               className: U.mediaModal,
                               ...l,
-                              items: eN,
+                              items: eO,
                               startingIndex: s
                             });
                           };
@@ -474,7 +474,7 @@ return (0, n.jsx)(A.ModalRoot, {
                       children: (0, n.jsx)('img', {
                         src: e.src,
                         className: U.gameArtwork,
-                        alt: F.Z.Messages.GAME_PROFILE_GAME_ARTWORK_ALT.format({
+                        alt: B.Z.Messages.GAME_PROFILE_GAME_ARTWORK_ALT.format({
                           game: eL
                         })
                       })
@@ -486,15 +486,15 @@ return (0, n.jsx)(A.ModalRoot, {
                 children: [
                   (0, n.jsx)(A.Heading, {
                     variant: 'heading-md/bold',
-                    children: F.Z.Messages.GAME_PROFILE_ALSO_PLAYING
+                    children: B.Z.Messages.GAME_PROFILE_ALSO_PLAYING
                   }),
                   (0, n.jsx)('div', {
                     className: U.row,
                     style: {},
                     children: et.map(e => (0, n.jsx)(y, {
                       game: e,
-                      onClose: Y,
-                      trackClick: eR
+                      onClose: W,
+                      trackClick: eN
                     }, null == e ? void 0 : e.applicationId))
                   })
                 ]
@@ -506,35 +506,35 @@ return (0, n.jsx)(A.ModalRoot, {
             children: [
               (0, n.jsx)(A.Heading, {
                 variant: 'heading-md/bold',
-                children: F.Z.Messages.ABOUT
+                children: B.Z.Messages.ABOUT
               }),
               (0, n.jsxs)('div', {
                 className: U.sidebarSections,
                 children: [
-                  null != eg && (0, n.jsxs)('div', {
+                  null != eP && (0, n.jsxs)('div', {
                     className: t()(U.column, U.gapSm),
                     children: [
                       (0, n.jsx)(A.Text, {
                         ref: en,
                         lineClamp: $ ? 8 : void 0,
                         variant: 'text-sm/normal',
-                        children: eg
+                        children: eP
                       }),
                       (es || !$) && (0, n.jsx)(A.Clickable, {
                         className: U.clickable,
                         onClick: () => {
-                          eR($ ? C.as.ShowMore : C.as.ShowLess), ee(!$);
+                          eN($ ? C.as.ShowMore : C.as.ShowLess), ee(!$);
                         },
                         children: (0, n.jsx)(A.Text, {
                           variant: 'text-sm/semibold',
-                          children: $ ? F.Z.Messages.EXPANDABLE_TEXT_SHOW_MORE : F.Z.Messages.EXPANDABLE_TEXT_SHOW_LESS
+                          children: $ ? B.Z.Messages.EXPANDABLE_TEXT_SHOW_MORE : B.Z.Messages.EXPANDABLE_TEXT_SHOW_LESS
                         })
                       })
                     ]
                   }),
                   (0, n.jsx)(j.Z, {
                     websites: eS,
-                    trackClick: eR
+                    trackClick: eN
                   }),
                   (eG.length > 0 || ef.length > 0) && (0, n.jsx)('div', {
                     className: t()(U.column),
@@ -544,7 +544,7 @@ return (0, n.jsx)(A.ModalRoot, {
                         (0, n.jsx)(A.Heading, {
                           variant: 'text-xs/semibold',
                           color: 'header-secondary',
-                          children: F.Z.Messages.GAME_PROFILE_PUBLISHER
+                          children: B.Z.Messages.GAME_PROFILE_PUBLISHER
                         }),
                         (0, n.jsxs)('div', {
                           className: t()(U.row, U.gapMd),
@@ -571,4 +571,4 @@ return (0, n.jsx)(A.ModalRoot, {
   })
 });
   };
-s.default = Y;
+s.default = W;
