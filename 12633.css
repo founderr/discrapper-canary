@@ -826,7 +826,11 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     display: inline;
     width: auto;
     height: auto;
-    padding: 2px 4px
+    padding: 0 4px
+}
+
+.sizeMin_dd4f85 .contents_dd4f85 {
+    display: inline
 }
 
 .sizeMax_dd4f85 {
