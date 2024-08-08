@@ -53,6 +53,8 @@ j = n === I.Su.MEDIUM,
 W = e => {
   let t = ''.concat(e.rowIndex, 'c').concat(e.columnIndex);
   switch (e.type) {
+    case p.ld.EXPAND_EMOJIS:
+    case p.ld.COLLAPSE_EMOJIS:
     case p.ld.CREATE_EMOJI: {
       let {
         visibleRowIndex: n,
@@ -61,28 +63,44 @@ W = e => {
         t.stopPropagation(), !R.current && !C.current && (a(e, {
           isFinalSelection: !0,
           toggleFavorite: !1
-        }), _.Z.open(e.guildId, T.pNK.EMOJI, T.jXE.EMOJI_PICKER_POPOUT));
+        }), e.type === p.ld.CREATE_EMOJI && _.Z.open(e.guildId, T.pNK.EMOJI, T.jXE.EMOJI_PICKER_POPOUT));
       }, d = () => {
         !R.current && !C.current && A(e);
       };
       return function() {
-        var e;
-        let {
-          onMouseEnter: n,
-          onMouseLeave: a
-        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {
-          ref: _,
-          tabIndex: E,
-          onFocus: f,
-          ...h
-        } = null !== (e = v(l, y)) && void 0 !== e ? e : {};
-        return (0, i.createElement)('li', {
-          ...h,
+        var n;
+        let a, _, {
+            onMouseEnter: E,
+            onMouseLeave: f
+          } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          {
+            ref: h,
+            tabIndex: m,
+            onFocus: I,
+            ...T
+          } = null !== (n = v(l, y)) && void 0 !== n ? n : {};
+        return e.type === p.ld.CREATE_EMOJI ? (_ = (0, r.jsx)(o.CirclePlusIcon, {
+          size: 'md',
+          color: 'currentColor',
+          className: S.icon,
+          colorClass: S.icon
+        }), a = g.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE) : (e.type === p.ld.EXPAND_EMOJIS ? _ = (0, r.jsx)(o.ChevronLargeUpIcon, {
+          size: 'md',
+          color: 'currentColor',
+          className: S.icon,
+          colorClass: S.icon
+        }) : _ = (0, r.jsx)(o.ChevronLargeDownIcon, {
+          size: 'md',
+          color: 'currentColor',
+          className: S.icon,
+          colorClass: S.icon
+        }), a = g.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION), (0, i.createElement)('li', {
+          ...T,
           key: t
         }, (0, r.jsx)(o.FocusRing, {
           children: (0, r.jsx)('button', {
-            'aria-label': g.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
-            ref: _,
+            'aria-label': a,
+            ref: h,
             className: s()(S.emojiItem, {
               [S.emojiItemLarge]: Y,
               [S.emojiItemMedium]: j,
@@ -90,18 +108,13 @@ W = e => {
               [null != P ? P : '']: u,
               [S.showPulse]: V === t
             }),
-            onFocus: null != f ? f : d,
+            onFocus: null != I ? I : d,
             onMouseOver: d,
-            onMouseEnter: n,
-            onMouseLeave: a,
+            onMouseEnter: E,
+            onMouseLeave: f,
             onClick: c,
-            tabIndex: E,
-            children: (0, r.jsx)(o.CirclePlusIcon, {
-              size: 'md',
-              color: 'currentColor',
-              className: S.icon,
-              colorClass: S.icon
-            })
+            tabIndex: m,
+            children: _
           })
         }));
       }();
