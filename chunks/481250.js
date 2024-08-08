@@ -1,6 +1,6 @@
 n.d(t, {
   V: function() {
-return S;
+return R;
   },
   a: function() {
 return y;
@@ -41,18 +41,18 @@ t.push((0, r.jsx)(c.Z, {
 }, n++));
   return t;
 }
-let R = {
+let S = {
   ssrc: 1,
   codec: 2
 };
 
-function S(e, t, n, a, S) {
+function R(e, t, n, a, R) {
   return e.map((D, v) => {
 var b, E;
 let Z = [];
 for (let e of Object.keys(D).sort((e, t) => {
-    let n = R[e],
-      r = R[t];
+    let n = S[e],
+      r = S[t];
     if (n !== r)
       return void 0 === n ? 1 : void 0 === r ? -1 : n - r;
     return m.Pz[e] !== m.Pz[t] ? m.Pz[e] ? 1 : -1 : e > t ? 1 : -1;
@@ -70,7 +70,7 @@ return (0, r.jsxs)(o.FormSection, {
   title: D.type,
   titleClassName: g.sectionHeader,
   children: [
-    'video' === D.type && null != n && null != a && null != S && function(e, t, n, a) {
+    'video' === D.type && null != n && null != a && null != R && function(e, t, n, a) {
       let o = a.get(t, n, e.ssrc);
       return null != o ? (0, r.jsx)('div', {
         className: i()(g.videoWrapper, f.marginBottom40),
@@ -82,9 +82,9 @@ return (0, r.jsxs)(o.FormSection, {
           userId: n
         })
       }) : null;
-    }(D, n, a, S),
+    }(D, n, a, R),
     y(Z),
-    'video' === D.type && v === e.length - 1 && null != n && null != a && null != S && (b = a, E = t, (0, r.jsx)(c.Z, {
+    'video' === D.type && v === e.length - 1 && null != n && null != a && null != R && (b = a, E = t, (0, r.jsx)(c.Z, {
       className: f.marginBottom20,
       children: (0, r.jsxs)(c.Z.Child, {
         basis: '100%',

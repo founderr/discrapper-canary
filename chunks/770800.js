@@ -15,8 +15,8 @@ var r = n(735250),
   f = n(5192),
   C = n(476221),
   y = n(481250),
-  R = n(206314),
-  S = n(513547),
+  S = n(206314),
+  R = n(513547),
   D = n(65154),
   v = n(689938),
   b = n(634040),
@@ -39,7 +39,7 @@ let i = {
   },
   s = o().map(i, (e, t) => {
     if ('receiverReports' !== t && (!n || 'localAddress' !== t))
-      return (0, r.jsx)(S.ck, {
+      return (0, r.jsx)(R.ck, {
         label: t,
         value: e
       }, t);
@@ -78,7 +78,7 @@ let i = {
       }),
       i = g.default.getUser(e.id);
     var o, s = f.ZP.getNickname(m.Z.getGuildId(), void 0, i);
-    return null == s && (s = null != i ? i.username : e.id), (0, r.jsx)(R.Z, {
+    return null == s && (s = null != i ? i.username : e.id), (0, r.jsx)(S.Z, {
       label: e.id,
       valueRendered: [
         n,

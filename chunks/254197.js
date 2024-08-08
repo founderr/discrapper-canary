@@ -46,7 +46,7 @@ overlayRef: D,
 quest: V,
 useReducedMotion: H,
 taskDetails: z
-  } = e, G = o.useRef(null), F = (0, c.e7)([g.Z], () => g.Z.isEnrolling(V.id), [V]), Y = (0, x.B6)(V.config.expiresAt), K = o.useMemo(() => (0, C.nP)(V.config.assets.questBarHero), [V]), X = o.useCallback(() => {
+  } = e, G = o.useRef(null), Y = (0, c.e7)([g.Z], () => g.Z.isEnrolling(V.id), [V]), F = (0, x.B6)(V.config.expiresAt), K = o.useMemo(() => (0, C.nP)(V.config.assets.questBarHero), [V]), X = o.useCallback(() => {
 (0, m.AH)(V.id, {
   questContent: f.jn.QUEST_BAR_V2,
   questContentCTA: p.jZ.ACCEPT_QUEST
@@ -133,7 +133,7 @@ children: [
               variant: 'text-xxs/medium',
               className: a()(U.flex, U.headerText),
               children: M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
-                expirationDate: Y
+                expirationDate: F
               })
             }),
             (0, s.jsx)(T.r, {
@@ -229,7 +229,7 @@ children: [
             fullWidth: !0,
             onClick: ee ? X : void 0,
             size: d.Button.Sizes.SMALL,
-            submitting: F,
+            submitting: Y,
             children: M.Z.Messages.QUESTS_ACCEPT_QUEST
           })
         ]

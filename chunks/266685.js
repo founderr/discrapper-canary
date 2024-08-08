@@ -44,15 +44,15 @@ onCtxMenuClose: W,
 onCtxMenuSelect: D,
 quest: V,
 useReducedMotion: H
-  } = e, z = (0, i.e7)([_.Z], () => _.Z.isEnrolling(V.id), [V]), G = (0, C.B6)(V.config.expiresAt), F = v.r.build(V.config), Y = (0, C.B6)(F.rewardsExpireAt), K = o.useMemo(() => (0, E.nP)(V.config.assets.questBarHero), [V]), X = (0, y.tP)(F.application.id), J = F.features.has(R.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST, $ = F.features.has(R.S7.START_QUEST_CTA) ? M.Z.Messages.QUESTS_START_QUEST : M.Z.Messages.QUESTS_ACCEPT_QUEST, ee = o.useCallback(() => {
+  } = e, z = (0, i.e7)([_.Z], () => _.Z.isEnrolling(V.id), [V]), G = (0, C.B6)(V.config.expiresAt), Y = v.r.build(V.config), F = (0, C.B6)(Y.rewardsExpireAt), K = o.useMemo(() => (0, E.nP)(V.config.assets.questBarHero), [V]), X = (0, y.tP)(Y.application.id), J = Y.features.has(R.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST, $ = Y.features.has(R.S7.START_QUEST_CTA) ? M.Z.Messages.QUESTS_START_QUEST : M.Z.Messages.QUESTS_ACCEPT_QUEST, ee = o.useCallback(() => {
 (0, f.AH)(V.id, {
   questContent: h.jn.QUEST_BAR,
   questContentCTA: J
-}), F.features.has(R.S7.START_QUEST_CTA) && (0, m.uL)(O.Z5c.ACTIVITY_DETAILS(I.In), void 0);
+}), Y.features.has(R.S7.START_QUEST_CTA) && (0, m.uL)(O.Z5c.ACTIVITY_DETAILS(I.In), void 0);
   }, [
 V,
 J,
-F.features
+Y.features
   ]), et = (0, y.hf)({
 quest: V,
 location: h.jn.QUEST_BAR
@@ -61,7 +61,7 @@ location: h.jn.QUEST_BAR
   content: h.jn.QUEST_BAR,
   ctaContent: g.jZ.OPEN_GAME_LINK
 });
-  }, [V]), es = F.features.has(R.S7.POST_ENROLLMENT_CTA), eo = (0, C.Rf)(V), er = (0, C.Jf)(V), ea = null != er ? er.progress > 0 : eo.progressSeconds > 0, el = (null === (n = V.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, ei = (null === (r = V.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, ec = o.useMemo(() => (0, E.Xv)(V.config), [V.config]), ed = Q && w, eu = (0, E.ph)(V), ep = (0, T.D)({
+  }, [V]), es = Y.features.has(R.S7.POST_ENROLLMENT_CTA), eo = (0, C.Rf)(V), er = (0, C.Jf)(V), ea = null != er ? er.progress > 0 : eo.progressSeconds > 0, el = (null === (n = V.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, ei = (null === (r = V.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, ec = o.useMemo(() => (0, E.Xv)(V.config), [V.config]), ed = Q && w, eu = (0, E.ph)(V), ep = (0, T.D)({
 quest: V,
 taskDetails: eo,
 location: R.dr.QUESTS_BAR,
@@ -144,7 +144,7 @@ children: [
                       color: 'always-white',
                       variant: 'text-xxs/normal',
                       children: ei ? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
-                        expirationDate: Y
+                        expirationDate: F
                       }) : M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                         expirationDate: G
                       })
