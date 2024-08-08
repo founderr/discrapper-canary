@@ -95,7 +95,7 @@ let b = () => {
       transitionState: n.transitionState,
       onClose: n.onClose,
       appId: t,
-      guildId: S
+      onlySubscribeServerSubForGuildId: S
     });
   });
 };
@@ -189,7 +189,7 @@ let k = C.type === O.epS.SUBSCRIPTION,
         transitionState: t.transitionState,
         onClose: t.onClose,
         appId: S.id,
-        guildId: j
+        onlySubscribeServerSubForGuildId: j
       });
     });
   },

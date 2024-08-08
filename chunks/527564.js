@@ -1,5 +1,5 @@
 i.d(n, {
-  U: function() {
+  M: function() {
 return x;
   }
 });
@@ -47,7 +47,6 @@ children: [
         children: r.map(e => (0, t.jsx)(u.zz, {
           appId: n,
           groupListingId: a.id,
-          guildId: i,
           listing: e,
           groupListingType: (0, I.KW)(a.sku_flags) ? 'user' : 'guild',
           onDetails: () => {
