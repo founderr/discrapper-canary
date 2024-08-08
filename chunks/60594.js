@@ -153,18 +153,19 @@ ep,
 ev
   ]);
   async function eB(e) {
+var n, l, s;
 if (e.preventDefault(), 2 === eS || 1 === eS)
   return eg(3);
-let n = (0, k.Z)(es, ef, Z.ZP.getRunningGames()),
-  l = O.ZP.supportsFeature(V.eRX.ELEVATED_HOOK) && (null == n ? void 0 : n.elevated);
-if ((0, M.isMac)() && null != ef) {
+let r = (0, k.Z)(es, ef, Z.ZP.getRunningGames()),
+  i = O.ZP.supportsFeature(V.eRX.ELEVATED_HOOK) && (null == r ? void 0 : r.elevated);
+if ((0, M.isMac)() && null != ef && (null === (n = ef.id) || void 0 === n ? void 0 : n.startsWith('screen'))) {
   let e = await A.Z.getMediaEngine().getDesktopSources(),
     n = ef.id;
-  if (n.startsWith('screen') && e.length > 0 && !e.some(e => e.includes(n))) {
-    var s, r;
-    s = n, r = e, p.default.track(V.rMx.SCREENSHARE_FAILED, {
-      source_id: s,
-      screens: r.length
+  if (e.length > 0 && !e.some(e => e.includes(n))) {
+    ;
+    l = n, s = e, p.default.track(V.rMx.SCREENSHARE_FAILED, {
+      source_id: l,
+      screens: s.length
     }), (0, d.openModal)(e => (0, a.jsx)(d.ConfirmModal, {
       header: W.Z.Messages.SCREENSHARE_RELAUNCH,
       confirmText: W.Z.Messages.OKAY,
@@ -179,7 +180,7 @@ if ((0, M.isMac)() && null != ef) {
     return;
   }
 }
-l ? ! function() {
+i ? ! function() {
   var e;
   let n = null !== (e = null == es ? void 0 : es.pid) && void 0 !== e ? e : null;
   (0, d.openModalLazy)(async () => {

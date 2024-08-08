@@ -1,50 +1,48 @@
-r.d(t, {
+r.d(e, {
   e: function() {
-return c;
+return E;
   },
   j: function() {
-return u;
+return c;
   }
 }), r(47120);
-var n = r(509068),
-  a = r(804410),
-  o = r(408720),
-  i = r(233517),
-  _ = r(931327),
-  E = r(97145);
-let s = [
+var n = r(846297),
+  _ = r(887117),
+  a = r(138122),
+  i = r(97145);
+let o = [
   'oppobrowser',
   'realmebrowser',
   'heytapbrowser'
 ];
 
-function c() {
-  let e = window;
-  return null != e.jQuery || null != e.$ || null != e.BetterDiscord || null != e.BdApi || null != e.rambox;
+function E() {
+  let t = window;
+  return null != t.jQuery || null != t.$ || null != t.BetterDiscord || null != t.BdApi || null != t.rambox;
 }
-let I = (0, E.f)({
+let s = (0, i.f)({
   maxBudgetMinute: 1,
   maxBudgetHour: 3
 });
 
-function u() {
-  var e;
+function c() {
+  var t;
   n.S1({
 tunnel: '/error-reporting-proxy/web',
 dsn: 'https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984',
 autoSessionTracking: !1,
 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-release: 'discord_web-22e14bf3d1118a49c656be3ce404fab0f5527741',
-beforeSend: function(e, t) {
-  var r, n;
-  return !(null != (r = e).exception && null != r.exception.values && r.exception.values.every(e => null == e.stacktrace || null != e.stacktrace.frames && 1 === e.stacktrace.frames.length) && 'canary' !== window.GLOBAL_ENV.RELEASE_CHANNEL || s.some(e => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)) && !c() && !('Aborted' === (n = e).message || 'cancel captcha' === n.message) && I() ? e : null;
+release: 'discord_web-a2db5a7b3d110444a8bbec384a7350e06b5453f9',
+beforeSend: t => {
+  var e, r;
+  return !(null != (e = t).exception && null != e.exception.values && e.exception.values.every(t => null == t.stacktrace || null != t.stacktrace.frames && 1 === t.stacktrace.frames.length) && 'canary' !== window.GLOBAL_ENV.RELEASE_CHANNEL || o.some(t => window.navigator.appVersion.toLowerCase().indexOf(t) >= 0)) && !E() && !('Aborted' === (r = t).message || 'cancel captcha' === r.message) && s() ? t : null;
 },
 integrations: [
-  a.k({
+  new _.Integrations.GlobalHandlers({
     onerror: !0,
     onunhandledrejection: !0
   }),
-  o.f({
+  new _.Integrations.Breadcrumbs({
     console: !0,
     dom: !0,
     fetch: !0,
@@ -87,11 +85,11 @@ denyUrls: [
   /mobilediscord\.com/,
   /betterdiscord:\/\//
 ]
-  }), i.YA('buildNumber', (e = '316912', '316912'));
-  i.YA('builtAt', String('1723151834550'));
-  let t = window.GLOBAL_ENV.SENTRY_TAGS;
-  if (null != t && 'object' == typeof t)
-for (let e in t)
-  i.YA(e, t[e]);
+  }), a.YA('buildNumber', (t = '316957', '316957'));
+  a.YA('builtAt', String('1723154886468'));
+  let e = window.GLOBAL_ENV.SENTRY_TAGS;
+  if (null != e && 'object' == typeof e)
+for (let t in e)
+  a.YA(t, e[t]);
   return _;
 }
