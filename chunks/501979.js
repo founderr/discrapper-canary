@@ -1,42 +1,42 @@
 var n = r(425561),
-  a = r(393531),
-  o = r(208529);
-e.exports = function(e, t, r, i, _, E) {
+  _ = r(393531),
+  a = r(208529);
+t.exports = function(t, e, r, i, o, E) {
   var s = 1 & r,
-c = e.length,
-I = t.length;
+c = t.length,
+I = e.length;
   if (c != I && !(s && I > c))
 return !1;
-  var u = E.get(e),
-l = E.get(t);
-  if (u && l)
-return u == t && l == e;
-  var R = -1,
-A = !0,
-T = 2 & r ? new n() : void 0;
-  for (E.set(e, t), E.set(t, e); ++R < c;) {
-var d = e[R],
-  N = t[R];
+  var R = E.get(t),
+T = E.get(e);
+  if (R && T)
+return R == e && T == t;
+  var u = -1,
+l = !0,
+A = 2 & r ? new n() : void 0;
+  for (E.set(t, e), E.set(e, t); ++u < c;) {
+var N = t[u],
+  d = e[u];
 if (i)
-  var p = s ? i(N, d, R, t, e, E) : i(d, N, R, e, t, E);
-if (void 0 !== p) {
-  if (p)
+  var O = s ? i(d, N, u, e, t, E) : i(N, d, u, t, e, E);
+if (void 0 !== O) {
+  if (O)
     continue;
-  A = !1;
+  l = !1;
   break;
 }
-if (T) {
-  if (!a(t, function(e, t) {
-      if (!o(T, t) && (d === e || _(d, e, r, i, E)))
-        return T.push(t);
+if (A) {
+  if (!_(e, function(t, e) {
+      if (!a(A, e) && (N === t || o(N, t, r, i, E)))
+        return A.push(e);
     })) {
-    A = !1;
+    l = !1;
     break;
   }
-} else if (!(d === N || _(d, N, r, i, E))) {
-  A = !1;
+} else if (!(N === d || o(N, d, r, i, E))) {
+  l = !1;
   break;
 }
   }
-  return E.delete(e), E.delete(t), A;
+  return E.delete(t), E.delete(e), l;
 };

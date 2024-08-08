@@ -13,11 +13,11 @@ var a = n(735250),
   d = n(434650),
   u = n(213459),
   g = n(70097),
-  m = n(695346),
-  v = n(594174),
+  v = n(695346),
+  m = n(594174),
   p = n(695103),
-  f = n(880448),
-  I = n(823379),
+  I = n(880448),
+  f = n(823379),
   x = n(5192),
   _ = n(624138),
   h = n(115130),
@@ -26,8 +26,8 @@ var a = n(735250),
   E = n(665811),
   S = n(182906),
   b = n(556505),
-  j = n(513202),
-  N = n(884338),
+  N = n(513202),
+  j = n(884338),
   M = n(823531),
   A = n(689938),
   Z = n(93679),
@@ -43,7 +43,7 @@ className: Z.activityTag,
 color: 'interactive-normal',
 variant: 'text-xs/semibold',
 children: [
-  (0, I.lm)(n) ? (0, a.jsx)(n, {
+  (0, f.lm)(n) ? (0, a.jsx)(n, {
     className: Z.icon
   }) : null,
   t
@@ -58,12 +58,12 @@ application: n,
 channel: i,
 guildId: l,
 large: s = !1
-  } = e, c = (0, r.Wu)([v.default], () => {
+  } = e, c = (0, r.Wu)([m.default], () => {
 var e;
 return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : []).map(e => {
   let [t] = e;
-  return v.default.getUser(t);
-}).filter(I.lm);
+  return m.default.getUser(t);
+}).filter(f.lm);
   }), d = x.ZP.getName(l, null == i ? void 0 : i.id, null == c ? void 0 : c[0]);
   if (d = (0, _.aF)(d, 15), null == t || 0 === c.length) {
 var u, g;
@@ -88,8 +88,8 @@ children: [
       username: d
     })
   }),
-  (0, a.jsx)(N.Z, {
-    size: s ? N.u.SIZE_24 : N.u.SIZE_16,
+  (0, a.jsx)(j.Z, {
+    size: s ? j.u.SIZE_24 : j.u.SIZE_16,
     guildId: l,
     users: c,
     max: 6
@@ -103,11 +103,11 @@ function O(e) {
   let {
 activityItem: n,
 channel: l,
-guildId: v,
-locationObject: I,
+guildId: m,
+locationObject: f,
 onActivityItemVisible: x,
 onActivityItemSelected: _,
-large: N = !1
+large: j = !1
   } = e, {
 imageBackground: O,
 videoUrl: B,
@@ -119,11 +119,11 @@ staffReleasePhase: H
   } = (0, T.ZP)({
 activityItem: n,
 channel: l,
-guildId: v,
-locationObject: I,
+guildId: m,
+locationObject: f,
 onActivityItemVisible: x,
 onActivityItemSelected: _,
-embeddedActivitiesManager: j.Z
+embeddedActivitiesManager: N.Z
   }), F = (0, r.e7)([
 h.Z,
 p.Z
@@ -140,7 +140,7 @@ G && q(!0);
   }, [G]);
   let J = () => W(!0),
 K = () => W(!1),
-X = m.Sb.useSetting(),
+X = v.Sb.useSetting(),
 $ = i.useCallback(() => {
   null == k || k(), u.ZP.maybeQueryForInstallLessApps(U.id, null == l ? void 0 : l.id);
 }, [
@@ -157,14 +157,14 @@ onContextMenu: X ? e => {
   }));
 } : void 0,
 className: s()(Z.activityItem, {
-  [Z.large]: !0 === N,
+  [Z.large]: !0 === j,
   [Z.disabled]: V !== T.JS.START
 }),
 children: [
   (0, a.jsxs)('div', {
     ref: w,
     className: s()(Z.activityImageContainer, {
-      [Z.large]: !0 === N
+      [Z.large]: !0 === j
     }),
     onMouseEnter: J,
     onFocus: J,
@@ -175,7 +175,7 @@ children: [
         imageBackground: O,
         applicationName: U.name,
         imageClassName: s()(Z.activityImage, {
-          [Z.large]: !0 === N
+          [Z.large]: !0 === j
         }),
         imageNotFoundClassName: Z.brokenImageIconWrapper
       }),
@@ -211,7 +211,7 @@ children: [
         children: e => (0, a.jsx)('div', {
           className: Z.devShelfBadge,
           ...e,
-          children: (0, a.jsx)(f.Z, {
+          children: (0, a.jsx)(I.Z, {
             className: Z.devShelfIcon
           })
         })
@@ -220,10 +220,10 @@ children: [
   }),
   (0, a.jsxs)('div', {
     className: s()(Z.activityTextContainer, {
-      [Z.large]: N
+      [Z.large]: j
     }),
     children: [
-      N ? (0, a.jsx)(o.Text, {
+      j ? (0, a.jsx)(o.Text, {
         className: Z.activityMaxParticipantsLarge,
         variant: 'text-xs/normal',
         color: 'interactive-normal',
@@ -253,8 +253,8 @@ children: [
         activity: null == R ? void 0 : R.embeddedActivity,
         application: U,
         channel: l,
-        guildId: v,
-        large: N
+        guildId: m,
+        large: j
       }),
       (0, a.jsx)('div', {
         className: Z.activityTagsContainer,

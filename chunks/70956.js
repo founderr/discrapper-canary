@@ -15,7 +15,7 @@ DAY: 86400,
 WEEK: 604800,
 DAYS_30: 2592000
   });
-t.Z = {
+e.Z = {
   Millis: r,
   Seconds: n
 };

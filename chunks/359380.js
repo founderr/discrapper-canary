@@ -24,7 +24,7 @@ n.delete(e), u(n);
   }, [
 u,
 c
-  ]), _ = r.useCallback(e => {
+  ]), f = r.useCallback(e => {
 if (c.size === l.c4)
   return;
 let n = new Set(c);
@@ -51,7 +51,7 @@ children: [
         icon: t,
         text: e,
         selected: n,
-        onClick: n ? m : _
+        onClick: n ? m : f
       }, e);
     })
   })
@@ -65,8 +65,8 @@ guildId: n,
 onUpdateTraits: t,
 progress: s,
 availableTraits: m,
-hidePreview: _ = !1
-  } = e, f = r.useMemo(() => {
+hidePreview: f = !1
+  } = e, _ = r.useMemo(() => {
 let e = [];
 return l.gh.forEach(n => e.push({
   value: n,
@@ -123,7 +123,7 @@ children: [
         className: d.languageSelect,
         children: (0, a.jsx)(i.SearchableSelect, {
           wrapperClassName: d.input,
-          options: f,
+          options: _,
           value: x,
           onChange: g,
           placeholder: c.Z.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
@@ -134,7 +134,7 @@ children: [
   }),
   (0, a.jsx)('div', {
     className: d.fixedWidthSidebar,
-    children: null != s && h.length > 0 && !_ && (0, a.jsx)(o.Z, {
+    children: null != s && h.length > 0 && !f && (0, a.jsx)(o.Z, {
       guildId: n,
       progress: s,
       traitsToHighlight: p,
@@ -154,7 +154,7 @@ onUpdateTraits: s,
 progress: o,
 traits: l,
 optional: u = !1,
-hidePreview: _ = !1
+hidePreview: f = !1
   } = e;
   return (0, a.jsxs)('div', {
 className: d.slideContent,
@@ -181,7 +181,7 @@ children: [
     onUpdateTraits: s,
     progress: o,
     availableTraits: l,
-    hidePreview: _
+    hidePreview: f
   })
 ]
   });

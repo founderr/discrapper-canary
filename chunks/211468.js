@@ -1,31 +1,31 @@
-r.d(t, {
+r.d(e, {
   dO: function() {
-return _;
+return o;
   },
   pq: function() {
-return u;
+return R;
   }
 }), r(47120);
 var n = r(688619),
-  a = r.n(n);
+  _ = r.n(n);
 
-function o(e, t, r) {
-  let [n, a] = e, [o, i] = t, _ = (n + a) / 2;
-  return r === _ ? _ : r < _ ? o + (r - n) / (_ - n) * (_ - o) : _ + (r - _) / (a - _) * (i - _);
+function a(t, e, r) {
+  let [n, _] = t, [a, i] = e, o = (n + _) / 2;
+  return r === o ? o : r < o ? a + (r - n) / (o - n) * (o - a) : o + (r - o) / (_ - o) * (i - o);
 }
 let i = [
   0,
   2
 ];
 
-function _(e, t, r) {
-  let n = a()(e);
-  if ('background' !== t)
+function o(t, e, r) {
+  let n = _()(t);
+  if ('background' !== e)
 return n.set('hsl.s', '*'.concat(r)).hex();
   {
-let e = function(e, t, r) {
-  let [n, a] = e, [o, i] = t;
-  return o + (r - n) / (a - n) * (i - o);
+let t = function(t, e, r) {
+  let [n, _] = t, [a, i] = e;
+  return a + (r - n) / (_ - n) * (i - a);
 }([
   0,
   1
@@ -33,7 +33,7 @@ let e = function(e, t, r) {
   0.25,
   1
 ], r);
-return n.set('hsl.s', '*'.concat(e)).hex();
+return n.set('hsl.s', '*'.concat(t)).hex();
   }
 }
 let E = [
@@ -53,14 +53,14 @@ let E = [
 0.45
   ];
 
-function u(e, t, r, n) {
-  switch (t) {
+function R(t, e, r, n) {
+  switch (e) {
 case 'background':
 case 'border':
-  return a()(e).set('hsl.l', '*'.concat(o(i, 'light' === r ? s : E, n))).hex();
+  return _()(t).set('hsl.l', '*'.concat(a(i, 'light' === r ? s : E, n))).hex();
 case 'text':
-  return a()(e).set('hsl.l', '*'.concat(o(i, 'light' === r ? I : c, n))).hex();
+  return _()(t).set('hsl.l', '*'.concat(a(i, 'light' === r ? I : c, n))).hex();
 default:
-  return e;
+  return t;
   }
 }

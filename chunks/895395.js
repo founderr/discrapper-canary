@@ -16,11 +16,11 @@ var a = n(735250),
   d = n(481060),
   u = n(100527),
   g = n(906732),
-  m = n(703656),
-  v = n(430824),
+  v = n(703656),
+  m = n(430824),
   p = n(594174),
-  f = n(115130),
-  I = n(566620),
+  I = n(115130),
+  f = n(566620),
   x = n(520599),
   _ = n(127255),
   h = n(880308),
@@ -29,8 +29,8 @@ var a = n(735250),
   E = n(701488),
   S = n(981631),
   b = n(689938),
-  j = n(216200),
-  N = n(932463);
+  N = n(216200),
+  j = n(932463);
 let M = (0, r.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
   A = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
   Z = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
@@ -46,7 +46,7 @@ scrollerRef: y
   } = e, [D, L] = i.useState(0), O = (0, _.Z)({
 guildId: n,
 enableFilter: !0
-  }), B = (0, o.e7)([p.default], () => p.default.getCurrentUser()), V = (0, o.e7)([v.Z], () => v.Z.getGuild(n), [n]), {
+  }), B = (0, o.e7)([p.default], () => p.default.getCurrentUser()), V = (0, o.e7)([m.Z], () => m.Z.getGuild(n), [n]), {
 analyticsLocations: R
   } = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY), k = (0, C.Z)(null == t ? void 0 : t.id), {
 enableAmazonMusicShelfPoster: P
@@ -57,9 +57,9 @@ autoTrackExposure: !0
   }), {
 isDeveloperActivityShelfEnabled: H,
 filter: F
-  } = (0, o.cj)([f.Z], () => ({
-filter: f.Z.getFilter(),
-isDeveloperActivityShelfEnabled: f.Z.getIsEnabled()
+  } = (0, o.cj)([I.Z], () => ({
+filter: I.Z.getFilter(),
+isDeveloperActivityShelfEnabled: I.Z.getIsEnabled()
   }));
   if (i.useEffect(() => {
   let e = y.current;
@@ -74,7 +74,7 @@ isDeveloperActivityShelfEnabled: f.Z.getIsEnabled()
     L(null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0);
   }
 }, [y]), i.useEffect(() => {
-  (k || null != n) && (0, I.w1)({
+  (k || null != n) && (0, f.w1)({
     guildId: n,
     force: !0
   });
@@ -91,15 +91,15 @@ r();
   return (0, a.jsx)(g.Gt, {
 value: R,
 children: (0, a.jsxs)('div', {
-  className: j.scrollContainer,
+  className: N.scrollContainer,
   children: [
     U ? (0, a.jsx)('div', {
-      className: j.scrollBackgroundContainer,
+      className: N.scrollBackgroundContainer,
       style: {
         top: -D
       },
       children: (0, a.jsx)('div', {
-        className: s()(j.scrollTierBackground),
+        className: s()(N.scrollTierBackground),
         style: {
           height: (e => {
             let t = 1 === e.length;
@@ -110,31 +110,31 @@ children: (0, a.jsxs)('div', {
     }) : null,
     (0, a.jsxs)(d.Scroller, {
       ref: y,
-      className: j.scroller,
+      className: N.scroller,
       children: [
         function() {
           if (P) {
             let e = b.Z.Messages.EMBEDDED_ACTIVITIES_AMAZON_MUSIC_PROMO_BANNER_ALT;
             return (0, a.jsxs)(d.Clickable, {
-              className: j.posterClickable,
+              className: N.posterClickable,
               'aria-label': e,
               onClick: () => {
                 var e;
-                e = E.Fu, r(), (0, m.uL)(S.Z5c.ACTIVITY_DETAILS(E.Fu), {
+                e = E.Fu, r(), (0, v.uL)(S.Z5c.ACTIVITY_DETAILS(E.Fu), {
                   sourceLocationStack: R
                 });
               },
               children: [
                 (0, a.jsx)('div', {
-                  className: j.poster,
+                  className: N.poster,
                   children: (0, a.jsx)('img', {
-                    className: j.posterBackground,
-                    src: N,
+                    className: N.posterBackground,
+                    src: j,
                     alt: e
                   })
                 }),
                 (0, a.jsx)('div', {
-                  className: j.posterDivider
+                  className: N.posterDivider
                 })
               ]
             });
@@ -142,9 +142,9 @@ children: (0, a.jsxs)('div', {
           return null;
         }(),
         U ? (0, a.jsx)('div', {
-          className: j.scrollSection,
+          className: N.scrollSection,
           children: (0, a.jsx)('div', {
-            className: s()(j.shelf),
+            className: s()(N.shelf),
             children: O.map(e => (0, a.jsx)(T.Z, {
               large: 1 === O.length,
               activityItem: e,
@@ -160,12 +160,12 @@ children: (0, a.jsxs)('div', {
           })
         }) : H && F.length > 0 ? (0, a.jsx)(d.Text, {
           variant: 'text-md/normal',
-          className: j.filterError,
+          className: N.filterError,
           children: b.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({
             filter: F
           })
         }) : (0, a.jsx)('div', {
-          className: j.spinnerContainer,
+          className: N.spinnerContainer,
           children: (0, a.jsx)(d.Spinner, {})
         })
       ]

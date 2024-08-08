@@ -1,7 +1,7 @@
 var n = r(815869),
-  a = Array.prototype.splice;
-e.exports = function(e) {
-  var t = this.__data__,
-r = n(t, e);
-  return !(r < 0) && (r == t.length - 1 ? t.pop() : a.call(t, r, 1), --this.size, !0);
+  _ = Array.prototype.splice;
+t.exports = function(t) {
+  var e = this.__data__,
+r = n(e, t);
+  return !(r < 0) && (r == e.length - 1 ? e.pop() : _.call(e, r, 1), --this.size, !0);
 };

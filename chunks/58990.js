@@ -1,6 +1,6 @@
 var n = r(961499);
-e.exports = function(e, t) {
-  var r = n(this, e),
-a = r.size;
-  return r.set(e, t), this.size += r.size == a ? 0 : 1, this;
+t.exports = function(t, e) {
+  var r = n(this, t),
+_ = r.size;
+  return r.set(t, e), this.size += r.size == _ ? 0 : 1, this;
 };

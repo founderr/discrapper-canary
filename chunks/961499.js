@@ -1,5 +1,5 @@
 var n = r(501889);
-e.exports = function(e, t) {
-  var r = e.__data__;
-  return n(t) ? r['string' == typeof t ? 'string' : 'hash'] : r.map;
+t.exports = function(t, e) {
+  var r = t.__data__;
+  return n(e) ? r['string' == typeof e ? 'string' : 'hash'] : r.map;
 };

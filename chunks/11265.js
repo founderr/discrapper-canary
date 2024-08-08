@@ -14,8 +14,8 @@ renderHeader: n,
 children: t,
 isExpanded: i,
 isStuck: m,
-onExpand: _,
-disableAnimation: f,
+onExpand: f,
+disableAnimation: _,
 disableBackground: C
   } = e, [h, x] = r.useState(!0), [g, p] = r.useState(!1), {
 ref: T,
@@ -35,7 +35,7 @@ onStart: () => {
 onRest: () => {
   p(!0);
 }
-  }, h || f ? 'animate-never' : 'respect-motion-settings');
+  }, h || _ ? 'animate-never' : 'respect-motion-settings');
   return r.useLayoutEffect(() => {
 p(!1), v(i);
   }, [i]), r.useLayoutEffect(() => {
@@ -56,7 +56,7 @@ children: (0, a.jsxs)(o.animated.div, {
   children: [
     (0, a.jsx)(l.Clickable, {
       innerRef: T,
-      onClick: m ? void 0 : _,
+      onClick: m ? void 0 : f,
       className: s()(u.innerHeader, {
         [u.toggled]: i && m
       }),

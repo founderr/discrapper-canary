@@ -1,8 +1,8 @@
 var n = r(196322),
-  a = r(828091);
-e.exports = function(e, t) {
-  t = n(t, e);
-  for (var r = 0, o = t.length; null != e && r < o;)
-e = e[a(t[r++])];
-  return r && r == o ? e : void 0;
+  _ = r(828091);
+t.exports = function(t, e) {
+  e = n(e, t);
+  for (var r = 0, a = e.length; null != t && r < a;)
+t = t[_(e[r++])];
+  return r && r == a ? t : void 0;
 };

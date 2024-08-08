@@ -458,4 +458,4 @@ let r = Object.freeze({
   YELLOW_900: 'hsl(36, calc(var(--saturation-factor, 1) * 83.3%), 4.7%)',
   YOUTUBE: 'hsl(0, calc(var(--saturation-factor, 1) * 72.8%), 46.1%)'
 });
-t.Z = r;
+e.Z = r;

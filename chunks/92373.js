@@ -13,8 +13,8 @@ n.Z = function(e) {
 applicationId: n,
 imageContainerClassName: t,
 onClick: i,
-selected: _,
-locked: f = !1,
+selected: f,
+locked: _ = !1,
 otherGamesCount: C = 0
   } = e, h = (0, o.useToken)(o.tokens.colors.WHITE), {
 isFetching: x,
@@ -51,14 +51,14 @@ children: [
     onClick: T,
     className: s()(t, x ? m.gameImageLoading : void 0, m.gameImageBackground),
     children: [
-      _ && (0, a.jsx)('div', {
+      f && (0, a.jsx)('div', {
         className: m.checkBackground,
         children: (0, a.jsx)(o.CircleCheckIcon, {
           size: 'md',
           color: 'currentColor',
           secondaryColor: h.hex(),
           className: s()(m.selectedGameCheck, {
-            [m.selectedGameCheckLocked]: f
+            [m.selectedGameCheckLocked]: _
           })
         })
       }),
@@ -81,7 +81,7 @@ children: [
     color: 'header-primary',
     children: [
       p,
-      f && (0, a.jsx)(o.LockIcon, {
+      _ && (0, a.jsx)(o.LockIcon, {
         size: 'xxs'
       })
     ]

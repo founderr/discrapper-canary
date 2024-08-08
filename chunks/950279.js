@@ -1,6 +1,6 @@
 t.d(n, {
   p: function() {
-return f;
+return _;
   }
 }), t(47120);
 var a = t(735250),
@@ -13,23 +13,23 @@ var a = t(735250),
   d = t(308083),
   u = t(689938),
   m = t(832116),
-  _ = t(363778);
+  f = t(363778);
 
-function f(e) {
+function _(e) {
   let {
 gameApplicationIds: n,
 preventGameRemoval: t,
 onUpdateGames: i,
-minGames: f = 1,
+minGames: _ = 1,
 error: C
   } = e, {
 options: h,
 matchSorterOptions: x
   } = (0, l.P)(), g = r.useMemo(() => Array.from(n), [n]), p = r.useCallback(e => {
-if (!(e.length < f))
+if (!(e.length < _))
   i(new Set(e));
   }, [
-f,
+_,
 i
   ]);
   return (0, a.jsx)('div', {
@@ -39,7 +39,7 @@ children: (0, a.jsx)(o.FormItem, {
   children: (0, a.jsx)(o.SearchableSelect, {
     multi: !0,
     hidePills: !0,
-    wrapperClassName: s()(_.input, m.input),
+    wrapperClassName: s()(f.input, m.input),
     options: h,
     value: g,
     placeholder: u.Z.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
@@ -56,7 +56,7 @@ children: (0, a.jsx)(o.FormItem, {
         ...r,
         children: (0, a.jsx)(c.Z, {
           applicationId: e.value,
-          imageContainerClassName: n.size > f ? m.clickableGame : void 0,
+          imageContainerClassName: n.size > _ ? m.clickableGame : void 0,
           selected: !0,
           locked: t
         }, e.value)
@@ -76,20 +76,20 @@ minGames: l = 1,
 error: c
   } = e, d = i.size <= l;
   return (0, a.jsxs)('div', {
-className: s()(_.slideContent, m.container),
+className: s()(f.slideContent, m.container),
 children: [
   (0, a.jsx)(o.Heading, {
     variant: 'heading-xxl/medium',
-    className: _.title,
+    className: f.title,
     children: n
   }),
   (0, a.jsx)(o.Text, {
     variant: 'text-md/normal',
     color: 'header-secondary',
-    className: _.subtitle,
+    className: f.subtitle,
     children: t
   }),
-  (0, a.jsx)(f, {
+  (0, a.jsx)(_, {
     minGames: l,
     gameApplicationIds: i,
     preventGameRemoval: d,

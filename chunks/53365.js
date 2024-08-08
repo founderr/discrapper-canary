@@ -6,10 +6,10 @@ return h;
 return l;
   },
   av: function() {
-return _;
+return f;
   },
   df: function() {
-return f;
+return _;
   },
   hY: function() {
 return C;
@@ -60,7 +60,7 @@ async function m(e) {
 url: s.ANM.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e)
   })).body;
 }
-async function _(e) {
+async function f(e) {
   try {
 let n = await a.tn.get({
   url: s.ANM.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
@@ -74,7 +74,7 @@ r.Z.dispatch({
 });
   } catch (e) {}
 }
-async function f(e, n) {
+async function _(e, n) {
   let t = (await a.tn.post({
 url: s.ANM.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
 body: {

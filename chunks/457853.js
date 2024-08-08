@@ -1,16 +1,16 @@
 var n = r(900624),
-  a = r(117973),
-  o = r(302767);
-e.exports = function(e, t) {
+  _ = r(117973),
+  a = r(302767);
+t.exports = function(t, e) {
   var r = this.__data__;
   if (r instanceof n) {
 var i = r.__data__;
-if (!a || i.length < 199)
+if (!_ || i.length < 199)
   return i.push([
-    e,
-    t
+    t,
+    e
   ]), this.size = ++r.size, this;
-r = this.__data__ = new o(i);
+r = this.__data__ = new a(i);
   }
-  return r.set(e, t), this.size = r.size, this;
+  return r.set(t, e), this.size = r.size, this;
 };

@@ -13,8 +13,8 @@ var a = t(735250),
   d = t(863249),
   u = t(944163),
   m = t(246364),
-  _ = t(571728),
-  f = t(755340),
+  f = t(571728),
+  _ = t(755340),
   C = t(449226),
   h = t(689938),
   x = t(941377),
@@ -26,9 +26,9 @@ guild: n,
 isExpanded: i,
 emptyFormFields: s,
 hasTermsField: o
-  } = e, c = n.hasVerificationGate(), [u, m] = r.useState(c), _ = e => {
+  } = e, c = n.hasVerificationGate(), [u, m] = r.useState(c), f = e => {
 e.preventDefault(), e.stopPropagation();
-  }, f = async e => {
+  }, _ = async e => {
 try {
   m(e), await d.Z.enableVerificationForm(n.id, e);
 } catch {
@@ -44,13 +44,13 @@ e && s ? (0, l.openModalLazy)(async () => {
     header: h.Z.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
     cancelText: h.Z.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
     confirmText: h.Z.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
-    onConfirm: () => f(e),
+    onConfirm: () => _(e),
     children: (0, a.jsx)(l.Text, {
       variant: 'text-md/normal',
       children: h.Z.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
     })
   });
-}) : f(e);
+}) : _(e);
   }, T = () => {
 (0, l.openModalLazy)(async () => {
   let {
@@ -106,10 +106,10 @@ children: [
     children: i || u || !s ? (0, a.jsxs)(a.Fragment, {
       children: [
         (0, a.jsx)(l.Clickable, {
-          onMouseDown: _,
-          onMouseUp: _,
+          onMouseDown: f,
+          onMouseUp: f,
           onClick: e => {
-            _(e), T();
+            f(e), T();
           },
           children: (0, a.jsx)(l.Tooltip, {
             tooltipContentClassName: g.__invalid_tooltip,
@@ -152,7 +152,7 @@ onDescriptionSave: I,
 verificationForm: b
   } = e, [N, v] = r.useState(C), y = r.useRef(!1), S = r.useCallback(() => {
 y.current = !0;
-  }, []), A = null !== (n = (0, _.A)({
+  }, []), A = null !== (n = (0, f.A)({
 guildId: l.id
   })) && void 0 !== n ? n : 0, M = (0, o.e7)([u.Z], () => null != b ? b : u.Z.get(l.id)), j = null !== (t = null == M ? void 0 : M.formFields) && void 0 !== t ? t : [];
   r.useEffect(() => {
@@ -176,7 +176,7 @@ children: (0, a.jsx)('div', {
     [x.noPadding]: !L,
     [g.rulesScreeningItemsNoBorder]: !L
   }),
-  children: R && (0, a.jsx)(f.Z, {
+  children: R && (0, a.jsx)(_.Z, {
     guild: l,
     submittedGuildJoinRequestsCount: A,
     formFields: j,

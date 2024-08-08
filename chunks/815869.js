@@ -1,7 +1,7 @@
 var n = r(703284);
-e.exports = function(e, t) {
-  for (var r = e.length; r--;)
-if (n(e[r][0], t))
+t.exports = function(t, e) {
+  for (var r = t.length; r--;)
+if (n(t[r][0], e))
   return r;
   return -1;
 };

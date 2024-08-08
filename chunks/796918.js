@@ -9,8 +9,8 @@ var a = t(735250),
   d = t(314897),
   u = t(353093),
   m = t(214715),
-  _ = t(18100),
-  f = t(308083),
+  f = t(18100),
+  _ = t(308083),
   C = t(689938),
   h = t(293302),
   x = t(363778);
@@ -22,16 +22,16 @@ progress: i,
 error: g
   } = e, {
 interests: p
-  } = i, [T, E] = r.useState(''), [I, b] = r.useState(0), N = (0, c.e7)([d.default], () => d.default.getId()), v = r.useMemo(() => (0, o.chunk)((0, u.XV)(f.i6, N), 9), [N]), y = [
+  } = i, [T, E] = r.useState(''), [I, b] = r.useState(0), N = (0, c.e7)([d.default], () => d.default.getId()), v = r.useMemo(() => (0, o.chunk)((0, u.XV)(_.i6, N), 9), [N]), y = [
 ...v[I],
 ...v[(I + 1) % v.length]
-  ], S = r.useMemo(() => Array.from(p), [p]), A = r.useMemo(() => S.filter(e => !f.WZ.has(e) && !f.gh.has(e)), [S]), M = e => {
+  ], S = r.useMemo(() => Array.from(p), [p]), A = r.useMemo(() => S.filter(e => !_.WZ.has(e) && !_.gh.has(e)), [S]), M = e => {
 let n = new Set(p);
 n.delete(e), t({
   interests: n
 });
   }, j = r.useCallback(e => {
-if (p.size === f.c4)
+if (p.size === _.c4)
   return;
 let n = null != e ? e : T.trim();
 if (0 === n.length)
@@ -98,8 +98,8 @@ children: [
                 onKeyDown: R,
                 onChange: E,
                 placeholder: C.Z.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
-                maxLength: f.Sq,
-                disabled: p.size === f.c4
+                maxLength: _.Sq,
+                disabled: p.size === _.c4
               }),
               T.length > 0 && (0, a.jsx)(l.Clickable, {
                 onClick: () => j(T.trim()),
@@ -160,7 +160,7 @@ children: [
       }),
       (0, a.jsx)('div', {
         className: x.fixedWidthSidebar,
-        children: S.length > 0 && (0, a.jsx)(_.Z, {
+        children: S.length > 0 && (0, a.jsx)(f.Z, {
           guildId: n,
           progress: i,
           traitsToHighlight: A,

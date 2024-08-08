@@ -1,14 +1,14 @@
-e = r.nmd(e);
+t = r.nmd(t);
 var n = r(940151),
-  a = t && !t.nodeType && t,
-  o = a && e && !e.nodeType && e,
-  i = o && o.exports === a && n.process,
-  _ = function() {
+  _ = e && !e.nodeType && e,
+  a = _ && t && !t.nodeType && t,
+  i = a && a.exports === _ && n.process,
+  o = function() {
 try {
-  var e = o && o.require && o.require('util').types;
-  if (e)
-    return e;
+  var t = a && a.require && a.require('util').types;
+  if (t)
+    return t;
   return i && i.binding && i.binding('util');
-} catch (e) {}
+} catch (t) {}
   }();
-e.exports = _;
+t.exports = o;
