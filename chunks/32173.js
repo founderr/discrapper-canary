@@ -19,8 +19,8 @@ var i = n(399606),
   C = n(78839),
   g = n(424218),
   p = n(63063),
-  N = n(380684),
-  A = n(74538),
+  A = n(380684),
+  N = n(74538),
   m = n(860489),
   f = n(494127),
   S = n(314684),
@@ -39,8 +39,8 @@ var i = n(399606),
   U = n(994554),
   G = n(704565),
   y = n(393305),
-  H = n(338879),
-  k = n(609926),
+  k = n(338879),
+  H = n(609926),
   w = n(203302),
   F = n(766491),
   V = n(193943),
@@ -66,9 +66,9 @@ var i = n(399606),
 t.Z = () => {
   let {
 analyticsLocations: e
-  } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD), t = (0, c.ZP)(), n = (0, g.BU)(((0, N.Xv)() ? O.wb : O.Uq) / 1024, {
+  } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD), t = (0, c.ZP)(), n = (0, g.BU)(((0, A.Xv)() ? O.wb : O.Uq) / 1024, {
 useKibibytes: !0
-  }), s = (0, i.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), a = null != s ? A.ZP.getPremiumPlanItem(s) : null, ec = null != a ? A.ZP.getSkuIdForPlan(a.planId) : null, ed = ec === O.Si.TIER_2, e_ = ec === O.Si.TIER_0, {
+  }), s = (0, i.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()), a = null != s ? N.ZP.getPremiumPlanItem(s) : null, ec = null != a ? N.ZP.getSkuIdForPlan(a.planId) : null, ed = ec === O.Si.TIER_2, e_ = ec === O.Si.TIER_0, {
 flipped: eu
   } = (0, f.JP)(), {
 flipped: eE
@@ -77,12 +77,12 @@ showAnimations: !0
   }), eI = null != eT ? eT.initialPercentage : void 0, eR = null != eT ? eT.percentage : void 0, eC = (0, u.Z)(R.Z), eg = (0, h.Z)(), ep = (0, E.Z)({
 scrollPosition: L.Y_.TRY_IT_OUT,
 analyticsLocations: e
-  }), eN = () => {
+  }), eA = () => {
 o.Z.open(P.oAB.VOICE, L.GA, {
   openWithoutBackstack: !0,
   analyticsLocations: e
 });
-  }, eA = () => {
+  }, eN = () => {
 (0, T.uL)(P.Z5c.COLLECTIBLES_SHOP);
   }, em = () => {
 o.Z.open(P.oAB.APPEARANCE, null, {
@@ -95,7 +95,7 @@ avatarDecorations: ed ? {
   subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
   description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
   descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-  onCtaClick: eA,
+  onCtaClick: eN,
   pillText: Z.Z.Messages.EARLY_ACCESS,
   perkImage: w,
   canReveal: eu,
@@ -182,7 +182,7 @@ entranceSounds: ed ? {
   subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
   description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
   descriptionCta: Z.Z.Messages.TAKE_ME_THERE,
-  onCtaClick: eN,
+  onCtaClick: eA,
   perkImage: z
 } : {
   name: 'entranceSounds',
@@ -197,7 +197,7 @@ entranceSoundsSeeAllVariation: ed ? {
   subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
   description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
   descriptionCta: Z.Z.Messages.TAKE_ME_THERE,
-  onCtaClick: eN,
+  onCtaClick: eA,
   perkImage: Q
 } : {
   name: 'entranceSoundsSeeAllVariation',
@@ -212,7 +212,7 @@ profileEffects: ed ? {
   subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
   description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
   descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-  onCtaClick: eA,
+  onCtaClick: eN,
   pillText: Z.Z.Messages.EARLY_ACCESS,
   perkImage: X,
   canReveal: eE,
@@ -263,7 +263,7 @@ serverBoosts: {
       analyticsLocations: e
     });
   },
-  perkImage: H,
+  perkImage: k,
   hideOnNarrowScreen: !0
 },
 specialMemberPricing: ed ? {
@@ -272,7 +272,7 @@ specialMemberPricing: ed ? {
   subtitle: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
   description: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
   descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-  onCtaClick: eA,
+  onCtaClick: eN,
   perkImage: en
 } : {
   name: 'specialMemberPricing',
@@ -288,7 +288,7 @@ specialMemberPricingSeeAllVariant: ed ? {
   subtitle: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
   description: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
   descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-  onCtaClick: eA,
+  onCtaClick: eN,
   perkImage: es
 } : {
   name: 'specialMemberPricingSeeAllVariant',
@@ -304,7 +304,7 @@ specialShopPerks: ed ? {
   subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
   description: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
   descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-  onCtaClick: eA,
+  onCtaClick: eN,
   perkImage: en
 } : {
   name: 'specialShopPerks',
@@ -312,7 +312,7 @@ specialShopPerks: ed ? {
   subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
   description: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
   descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
-  onCtaClick: eA,
+  onCtaClick: eN,
   perkImage: en
 },
 unlimitedSuperReactions: ed ? {
@@ -462,13 +462,13 @@ ef.freeBoost = {
   }
   return (0, m.ZP)('usePerksDiscoverabilityCard') === m.P0.SUMMER_2024 && (ef.shyProject = {
 name: 'shyProject',
-title: Z.Z.Messages.NITRO_HOME_SHY_PROJECT_TITLE,
-subtitle: Z.Z.Messages.NITRO_HOME_SHY_PROJECT_SUBTITLE,
+title: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
+subtitle: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
 description: ed ? Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB : Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
 descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
 pillText: Z.Z.Messages.NITRO_HOME_TAB_NEW.toLocaleUpperCase(),
-onCtaClick: ed ? eA : void 0,
-perkImage: k,
+onCtaClick: ed ? eN : void 0,
+perkImage: H,
 isPremiumGetCta: !ed
   }), ef;
 };

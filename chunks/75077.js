@@ -1,6 +1,6 @@
 n.d(t, {
   BS: function() {
-return N;
+return A;
   },
   Op: function() {
 return M;
@@ -18,7 +18,7 @@ return x;
 return h;
   },
   t2: function() {
-return A;
+return N;
   },
   vZ: function() {
 return p;
@@ -63,7 +63,7 @@ switch (e) {
     return;
 }
   },
-  N = e => {
+  A = e => {
 switch (e) {
   case R.EB.PENDING:
     return C.Z.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
@@ -76,7 +76,7 @@ switch (e) {
 }
   };
 
-function A(e, t) {
+function N(e, t) {
   switch (e) {
 case R.EB.PENDING:
   return null != t ? C.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({
@@ -128,18 +128,18 @@ let {
   location: f
 }, {
   autoTrackExposure: !1
-}), R = b();
+}), R = u && !T && !I, C = b();
 return null != n.freeBoost && !0 === a && o({
   card: n.freeBoost
 }), null != n.shyProject && o({
   card: n.shyProject
-}), s && R ? (0 === t.length && c(), o({
+}), s && C ? (0 === t.length && c(), o({
   card: n.newAppStylesUpdateJune2024
 }), o({
   card: n.serverProfiles
-})) : s && !R && (!u || T || I ? c() : o({
+})) : s && !C && (R || null != n.shyProject ? R && o({
   card: n.referralProgram
-}), o({
+}) : c(), o({
   card: n.newAppStylesUpdateJune2024
 }), o({
   card: n.serverProfiles
