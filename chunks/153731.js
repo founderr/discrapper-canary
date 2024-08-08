@@ -2,7 +2,7 @@ n.d(t, {
   Z: function() {
 return j;
   }
-}), n(653041), n(390547), n(733860), n(47120);
+}), n(653041), n(47120), n(390547), n(733860);
 var r = n(735250),
   a = n(470079),
   i = n(392711),
@@ -19,8 +19,8 @@ var r = n(735250),
   f = n(19780),
   C = n(226961),
   y = n(594174),
-  R = n(51144),
-  S = n(189648),
+  S = n(51144),
+  R = n(189648),
   D = n(775194),
   v = n(499848),
   b = n(724392),
@@ -44,7 +44,7 @@ children: (0, r.jsx)(m.Z.Child, {
       }),
       (0, r.jsx)('span', {
         className: x.username,
-        children: null != t ? t : R.ZP.getName(e)
+        children: null != t ? t : S.ZP.getName(e)
       })
     ]
   })
@@ -75,58 +75,62 @@ rtp: {
 },
 camera: m
   } = t;
-  return i.push({
-section: u.ID.HEADER,
-label: T.Z.Messages.RTC_DEBUG_CONTEXT.format({
-  context: e
-})
-  }), null != s && i.push({
-section: (0, C.J$)(e, F._s_.TRANSPORT, n),
-label: T.Z.Messages.RTC_DEBUG_TRANSPORT,
-element: Z.Z,
-elementProps: {
-  context: e,
-  index: n
-}
-  }), null != d && i.push({
-section: (0, C.J$)(e, F._s_.OUTBOUND, n),
-label: T.Z.Messages.RTC_DEBUG_RTP_OUTBOUND,
-element: b.Z,
-elementProps: {
-  context: e,
-  index: n
-}
-  }), null != m && i.push({
-section: (0, C.J$)(e, F._s_.CAMERA, n),
-label: T.Z.Messages.RTC_DEBUG_CAMERA,
-element: S.Z,
-elementProps: {
-  context: e,
-  index: n,
-  camera: m
-}
-  }), null != l && !o().isEmpty(l) && (i.push({
-section: u.ID.HEADER,
-label: T.Z.Messages.RTC_DEBUG_RTP_INBOUND
-  }), Object.keys(l).forEach(t => {
-let o = y.default.getUser(t),
-  s = g.ZP.getNick(a, t),
-  l = (0, C.J$)(e, t, n);
-i.push({
-  section: l,
-  label: null != o ? _(o, s, a) : N(null != s ? s : t),
-  ariaLabel: null != o ? o.tag : t,
-  onClick: () => {
-    c.zc(l);
-  },
-  element: v.Z,
+  if (i.push({
+  section: u.ID.HEADER,
+  label: T.Z.Messages.RTC_DEBUG_CONTEXT.format({
+    context: e
+  })
+}), null != s && i.push({
+  section: (0, C.J$)(e, F._s_.TRANSPORT, n),
+  label: T.Z.Messages.RTC_DEBUG_TRANSPORT,
+  element: Z.Z,
+  elementProps: {
+    context: e,
+    index: n
+  }
+}), null != d && i.push({
+  section: (0, C.J$)(e, F._s_.OUTBOUND, n),
+  label: T.Z.Messages.RTC_DEBUG_RTP_OUTBOUND,
+  element: b.Z,
+  elementProps: {
+    context: e,
+    index: n
+  }
+}), null != m && i.push({
+  section: (0, C.J$)(e, F._s_.CAMERA, n),
+  label: T.Z.Messages.RTC_DEBUG_CAMERA,
+  element: R.Z,
   elementProps: {
     context: e,
     index: n,
-    videoStreams: r
+    camera: m
   }
-});
-  })), i;
+}), null != l && !o().isEmpty(l)) {
+let t = [];
+Object.keys(l).forEach(i => {
+  let o = y.default.getUser(i),
+    s = g.ZP.getNick(a, i),
+    d = (0, C.J$)(e, i, n);
+  null != l[i] && l[i].length > 0 && t.push({
+    section: d,
+    label: null != o ? _(o, s, a) : N(null != s ? s : i),
+    ariaLabel: null != o ? o.tag : i,
+    onClick: () => {
+      c.zc(d);
+    },
+    element: v.Z,
+    elementProps: {
+      context: e,
+      index: n,
+      videoStreams: r
+    }
+  });
+}), t.length > 0 && (i.push({
+  section: u.ID.HEADER,
+  label: T.Z.Messages.RTC_DEBUG_RTP_INBOUND
+}), i.push(...t));
+  }
+  return i;
 }
 
 function j() {
@@ -140,7 +144,7 @@ streamStats: C.ZP.getAllStats(P.Yn.STREAM)
   }), [], s.pF), o = (0, s.e7)([
 f.Z,
 h.Z
-  ], () => h.Z.getChannel(f.Z.getChannelId())), m = null === (e = n.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, g = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, y = (0, s.e7)([p.Z], () => p.Z.theme), R = (0, s.e7)([p.Z], () => p.Z.darkSidebar ? F.BRd.DARK : void 0), S = (0, s.e7)([C.ZP], () => C.ZP.getSection()), v = (0, s.e7)([C.ZP], () => C.ZP.getVideoStreams()), b = function(e) {
+  ], () => h.Z.getChannel(f.Z.getChannelId())), m = null === (e = n.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, g = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, y = (0, s.e7)([p.Z], () => p.Z.theme), S = (0, s.e7)([p.Z], () => p.Z.darkSidebar ? F.BRd.DARK : void 0), R = (0, s.e7)([C.ZP], () => C.ZP.getSection()), v = (0, s.e7)([C.ZP], () => C.ZP.getVideoStreams()), b = function(e) {
 let {
   defaultStats: t,
   streamStats: n,
@@ -205,8 +209,8 @@ connectionState: (0, s.e7)([f.Z], () => f.Z.getState())
 c.xv();
   }, []), (0, r.jsx)(d.ZP, {
 theme: y,
-sidebarTheme: R,
-section: S,
+sidebarTheme: S,
+section: R,
 onSetSection: c.zc,
 sections: b
   });
