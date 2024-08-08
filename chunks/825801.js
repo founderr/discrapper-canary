@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return O;
   }
 }), n(47120);
 var r = n(735250);
@@ -19,12 +19,13 @@ var i = n(120356),
   h = n(785717),
   p = n(505737),
   m = n(285050),
-  I = n(485216),
-  T = n(228168),
-  g = n(185923),
-  S = n(689938),
-  A = n(328849);
-let N = e => {
+  I = n(448520),
+  T = n(485216),
+  g = n(228168),
+  S = n(185923),
+  A = n(689938),
+  N = n(328849);
+let v = e => {
   let {
 emoji: t,
 username: n,
@@ -32,18 +33,18 @@ sourceType: r,
 sourceDetails: i
   } = e, a = ':'.concat(t.name, ':');
   switch (r) {
-case T.N9.ACTIVITY:
-  let s = S.Z.Messages.USER_PROFILE_REACTED_TO_ACTIVITY.format({
+case g.N9.ACTIVITY:
+  let s = A.Z.Messages.USER_PROFILE_REACTED_TO_ACTIVITY.format({
     username: n
   });
   return '> -# *'.concat(s, '*\n').concat(a);
-case T.N9.AVATAR:
-  let o = S.Z.Messages.USER_PROFILE_REACTED_TO_AVATAR.format({
+case g.N9.AVATAR:
+  let o = A.Z.Messages.USER_PROFILE_REACTED_TO_AVATAR.format({
     username: n
   });
   return '> -# *'.concat(o, '*\n').concat(a);
-case T.N9.STATUS:
-  let l = S.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({
+case g.N9.STATUS:
+  let l = A.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({
     username: n
   });
   return null != i ? '> -# *'.concat(l, '*').concat('\n > '.concat(i), '\n').concat(a) : '> -# *'.concat(l, '*\n').concat(a);
@@ -52,59 +53,63 @@ default:
   }
 };
 
-function v(e) {
+function O(e) {
   let {
 user: t,
 channel: n,
 sourceType: i,
 sourceDetails: E,
-isVisible: v,
-isExpandable: O,
-onReply: R
+isVisible: O,
+isExpandable: R,
+onReply: C
   } = e, {
-trackUserProfileAction: C
+trackUserProfileAction: y
   } = (0, h.KZ)(), {
-notifyReactSent: y
-  } = (0, m.e)(), D = (0, s.e7)([d.default], () => d.default.getId() === t.id), L = (0, p.Z)(t.id), [b, M] = (0, s.Wu)([l.Z], () => [
+notifyReactSent: D
+  } = (0, m.e)(), {
+sendReact: L,
+pressReact: b,
+pressReply: M
+  } = (0, I.D)(i), P = (0, s.e7)([d.default], () => d.default.getId() === t.id), U = (0, p.Z)(t.id), [w, x] = (0, s.Wu)([l.Z], () => [
 l.Z.useReducedMotion,
 l.Z.keyboardModeEnabled
   ]);
-  if (t.bot || D || !L)
+  if (t.bot || P || !U)
 return null;
-  let P = !O || b || M ? 0 : 300,
-U = async e => {
+  let G = !R || w || x ? 0 : 300,
+k = async e => {
   var n;
   if (null == e)
     return;
-  C({
-    action: i === T.N9.STATUS ? 'SEND_REACT_CUSTOM_STATUS' : 'SEND_REACT_AVATAR'
+  y({
+    action: L
   });
-  let r = N({
+  let r = v({
     emoji: e,
     username: null !== (n = _.Z.getNickname(t.id)) && void 0 !== n ? n : f.ZP.getName(t),
     sourceType: i,
     sourceDetails: E
   });
-  await (0, I.Z)({
+  await (0, T.Z)({
     userId: t.id,
     content: r,
     location: 'UserProfileReactReplyBar',
     openChannel: !1,
     whenReady: !1
-  }), y();
+  }), D();
 };
   return (0, r.jsxs)(u.ZP, {
-className: a()(A.popover, {
-  [A.visible]: v,
-  [A.expandable]: O,
-  [A.statusPopover]: i === T.N9.STATUS,
-  [A.avatarPopover]: i === T.N9.AVATAR
+className: a()(N.popover, {
+  [N.visible]: O,
+  [N.expandable]: R,
+  [N.statusPopover]: i === g.N9.STATUS,
+  [N.avatarPopover]: i === g.N9.AVATAR
 }),
 children: [
   (0, r.jsx)(o.TooltipContainer, {
-    text: S.Z.Messages.USER_PROFILE_SEND_REACTION,
-    shouldShow: v,
-    delay: P,
+    text: A.Z.Messages.USER_PROFILE_SEND_REACTION,
+    shouldShow: O,
+    delay: G,
     'aria-label': !1,
     children: (0, r.jsx)(o.Popout, {
       renderPopout: e => {
@@ -115,9 +120,9 @@ children: [
           guildId: null == n ? void 0 : n.guild_id,
           closePopout: t,
           onSelectEmoji: (e, n) => {
-            U(e), n && t();
+            k(e), n && t();
           },
-          pickerIntention: g.Hz.PROFILE,
+          pickerIntention: S.Hz.PROFILE,
           channel: n
         });
       },
@@ -127,35 +132,35 @@ children: [
       children: e => (0, r.jsx)(u.zx, {
         ...e,
         onClick: t => {
-          C({
-            action: i === T.N9.STATUS ? 'PRESS_REACT_CUSTOM_STATUS' : 'PRESS_REACT_AVATAR'
+          y({
+            action: b
           }), e.onClick(t);
         },
-        className: a()(A.button, A.left),
-        'aria-label': S.Z.Messages.USER_PROFILE_SEND_REACTION,
+        className: a()(N.button, N.left),
+        'aria-label': A.Z.Messages.USER_PROFILE_SEND_REACTION,
         children: (0, r.jsx)(o.ReactionIcon, {
           size: 'xs',
-          className: A.icon
+          className: N.icon
         })
       })
     })
   }),
   (0, r.jsx)(o.TooltipContainer, {
-    text: S.Z.Messages.USER_PROFILE_REPLY,
-    shouldShow: v,
-    delay: P,
+    text: A.Z.Messages.USER_PROFILE_REPLY,
+    shouldShow: O,
+    delay: G,
     'aria-label': !1,
     children: (0, r.jsx)(u.zx, {
       onClick: () => {
-        C({
-          action: i === T.N9.STATUS ? 'PRESS_REPLY_CUSTOM_STATUS' : 'PRESS_REPLY_AVATAR'
-        }), null == R || R(i, E);
+        y({
+          action: M
+        }), null == C || C(i, E);
       },
-      className: a()(A.button, A.right),
-      'aria-label': S.Z.Messages.USER_PROFILE_REPLY,
+      className: a()(N.button, N.right),
+      'aria-label': A.Z.Messages.USER_PROFILE_REPLY,
       children: (0, r.jsx)(o.ArrowAngleLeftUpIcon, {
         size: 'xs',
-        className: A.icon
+        className: N.icon
       })
     })
   })
