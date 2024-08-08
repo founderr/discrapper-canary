@@ -1,111 +1,114 @@
 n.d(t, {
   P: function() {
-return Z;
+return b;
   }
 }), n(47120);
 var i = n(735250),
   s = n(470079),
   a = n(120356),
   r = n.n(a),
-  l = n(91192),
-  o = n(873011),
-  c = n(442837),
-  u = n(524437),
-  d = n(481060),
-  _ = n(724757),
-  E = n(294218),
-  I = n(373662),
-  m = n(240126),
-  T = n(703656),
-  h = n(695346),
-  N = n(675478),
-  f = n(581883),
-  C = n(592125),
-  p = n(768943),
-  g = n(43690),
-  S = n(962796),
-  A = n(767893),
-  R = n(981631),
-  O = n(689938),
-  x = n(144754);
-let M = {
+  l = n(512722),
+  o = n.n(l),
+  c = n(91192),
+  u = n(873011),
+  d = n(442837),
+  _ = n(524437),
+  E = n(481060),
+  I = n(239091),
+  m = n(724757),
+  T = n(294218),
+  h = n(373662),
+  N = n(240126),
+  f = n(703656),
+  C = n(695346),
+  p = n(675478),
+  g = n(581883),
+  S = n(592125),
+  A = n(768943),
+  R = n(43690),
+  O = n(962796),
+  x = n(767893),
+  M = n(981631),
+  v = n(689938),
+  L = n(144754);
+let Z = {
 offset: {
   left: 4,
   right: -12
 }
   },
-  v = e => {
-N.hW.updateAsync('forLater', t => {
+  P = e => {
+p.hW.updateAsync('forLater', t => {
   if (t.currentTab === e)
     return !1;
   t.currentTab = e;
-}, N.fy.FREQUENT_USER_ACTION);
+}, p.fy.FREQUENT_USER_ACTION);
   };
 
-function L(e) {
+function D(e) {
   let {
 closePopout: t
-  } = e, n = (0, c.e7)([f.Z], () => {
+  } = e, n = (0, d.e7)([g.Z], () => {
 var e, t;
-return null !== (t = null === (e = f.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : u.Pr.ALL;
-  }), a = (0, c.Wu)([
-p.Z,
-f.Z
+return null !== (t = null === (e = g.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : _.Pr.ALL;
+  }), a = (0, d.Wu)([
+A.Z,
+g.Z
   ], () => {
 var e, t;
-let n = p.Z.getMessageReminders(),
-  i = p.Z.getMessageBookmarks(),
-  s = null !== (t = null === (e = f.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : u.Pr.ALL;
-return s === u.Pr.ALL ? [
+let n = A.Z.getMessageReminders(),
+  i = A.Z.getMessageBookmarks(),
+  s = null !== (t = null === (e = g.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : _.Pr.ALL;
+return s === _.Pr.ALL ? [
   ...n,
   ...i
-] : s === u.Pr.BOOKMARKS ? i : n;
-  }), r = (0, c.e7)([p.Z], () => p.Z.getOverdueMessageReminderCount());
+] : s === _.Pr.BOOKMARKS ? i : n;
+  }), r = (0, d.e7)([A.Z], () => A.Z.getOverdueMessageReminderCount());
   return s.useEffect(() => () => {
-(0, S.Mf)();
-  }, []), (0, i.jsx)(d.Dialog, {
-'aria-label': O.Z.Messages.FOR_LATER,
+(0, O.Mf)();
+  }, []), (0, i.jsx)(E.Dialog, {
+'aria-label': v.Z.Messages.FOR_LATER,
 children: (0, i.jsxs)('div', {
-  className: x.popoutContainer,
+  className: L.popoutContainer,
   children: [
     (0, i.jsxs)('div', {
       children: [
         (0, i.jsxs)('div', {
-          className: x.headerTitle,
+          className: L.headerTitle,
           children: [
-            (0, i.jsx)(d.BookmarkIcon, {
+            (0, i.jsx)(E.BookmarkIcon, {
               size: 'md',
               color: 'currentColor',
-              className: x.headerTitleIcon
+              className: L.headerTitleIcon
             }),
-            (0, i.jsx)(d.Heading, {
+            (0, i.jsx)(E.Heading, {
               variant: 'heading-lg/semibold',
-              children: O.Z.Messages.FOR_LATER
+              children: v.Z.Messages.FOR_LATER
             })
           ]
         }),
         (0, i.jsx)('div', {
-          children: (0, i.jsxs)(d.TabBar, {
+          children: (0, i.jsxs)(E.TabBar, {
             type: 'top',
             look: 'brand',
             selectedItem: n,
-            onItemSelect: v,
-            className: x.tabBar,
+            onItemSelect: P,
+            className: L.tabBar,
             children: [
-              (0, i.jsx)(d.TabBar.Item, {
-                id: u.Pr.ALL,
-                className: x.tabBarItem,
-                children: O.Z.Messages.FOR_LATER_TAB_ALL
+              (0, i.jsx)(E.TabBar.Item, {
+                id: _.Pr.ALL,
+                className: L.tabBarItem,
+                children: v.Z.Messages.FOR_LATER_TAB_ALL
               }),
-              (0, i.jsx)(d.TabBar.Item, {
-                id: u.Pr.BOOKMARKS,
-                className: x.tabBarItem,
-                children: O.Z.Messages.MESSAGE_BOOKMARKS_HEADER
+              (0, i.jsx)(E.TabBar.Item, {
+                id: _.Pr.BOOKMARKS,
+                className: L.tabBarItem,
+                children: v.Z.Messages.FOR_LATER_TAB_SAVED
               }),
-              (0, i.jsx)(d.TabBar.Item, {
-                id: u.Pr.REMINDERS,
-                className: x.tabBarItem,
-                children: O.Z.Messages.FOR_LATER_TAB_REMINDERS.format({
+              (0, i.jsx)(E.TabBar.Item, {
+                id: _.Pr.REMINDERS,
+                className: L.tabBarItem,
+                children: 0 === r ? v.Z.Messages.FOR_LATER_TAB_REMINDERS : v.Z.Messages.FOR_LATER_TAB_REMINDERS_COUNT.format({
                   count: r
                 })
               })
@@ -114,7 +117,7 @@ children: (0, i.jsxs)('div', {
         })
       ]
     }),
-    (0, i.jsx)(P, {
+    (0, i.jsx)(j, {
       savedMessages: a,
       closePopout: t
     })
@@ -123,7 +126,7 @@ children: (0, i.jsxs)('div', {
   });
 }
 
-function Z(e) {
+function b(e) {
   let {
 onOpen: t,
 onClose: n,
@@ -135,22 +138,22 @@ c(!1), o && (null == n || n());
   }, [
 n,
 o
-  ]), _ = s.useCallback(() => {
+  ]), d = s.useCallback(() => {
 c(!o), o ? null == n || n() : null == t || t();
   }, [
 n,
 t,
 o
   ]);
-  return (0, i.jsx)(d.Popout, {
-animation: d.Popout.Animation.NONE,
+  return (0, i.jsx)(E.Popout, {
+animation: E.Popout.Animation.NONE,
 position: r,
 align: l,
 autoInvert: !1,
 shouldShow: o,
 onRequestClose: u,
 renderPopout: function() {
-  return (0, i.jsx)(L, {
+  return (0, i.jsx)(D, {
     closePopout: u
   });
 },
@@ -159,32 +162,32 @@ children: (e, t) => {
   let {
     isShown: n
   } = t;
-  return a(_, n, e);
+  return a(d, n, e);
 }
   });
 }
 
-function P(e) {
+function j(e) {
   let {
 savedMessages: t,
 closePopout: n
-  } = e, a = s.useRef(null), r = (0, _.Z)('for-later', a);
-  return 0 === t.length ? (0, i.jsx)(j, {}) : (0, i.jsx)(l.bG, {
+  } = e, a = s.useRef(null), r = (0, m.Z)('for-later', a);
+  return 0 === t.length ? (0, i.jsx)(B, {}) : (0, i.jsx)(c.bG, {
 navigator: r,
-children: (0, i.jsx)(l.SJ, {
+children: (0, i.jsx)(c.SJ, {
   children: e => {
     let {
       ref: s,
       ...r
     } = e;
-    return (0, i.jsx)(d.AdvancedScrollerThin, {
+    return (0, i.jsx)(E.AdvancedScrollerThin, {
       ref: e => {
         var t;
         a.current = e, s.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
       },
-      className: x.messagesScroller,
+      className: L.messagesScroller,
       ...r,
-      children: t.map(e => (0, i.jsx)(D, {
+      children: t.map(e => (0, i.jsx)(U, {
         savedMessage: e,
         closePopout: n
       }, ''.concat(e.saveData.messageId, '-').concat(e.saveData.type)))
@@ -194,60 +197,61 @@ children: (0, i.jsx)(l.SJ, {
   });
 }
 
-function D(e) {
+function U(e) {
   let {
 savedMessage: t,
 closePopout: n
-  } = e, a = (0, c.e7)([C.Z], () => C.Z.getChannel(t.saveData.channelId)), l = s.useCallback(e => {
-!e.shiftKey && n(), (0, T.uL)(R.Z5c.CHANNEL(null == a ? void 0 : a.getGuildId(), t.saveData.channelId, t.saveData.messageId));
+  } = e, a = (0, d.e7)([S.Z], () => S.Z.getChannel(t.saveData.channelId)), l = s.useCallback(e => {
+!e.shiftKey && n(), (0, f.uL)(M.Z5c.CHANNEL(null == a ? void 0 : a.getGuildId(), t.saveData.channelId, t.saveData.messageId));
   }, [
 n,
 t,
 a
   ]);
   return null == a || null == t.message ? (0, i.jsxs)('div', {
-className: r()(x.messageContainer, x.deletedMessage),
+className: r()(L.messageContainer, L.deletedMessage),
 children: [
   (0, i.jsx)('div', {
-    className: x.deleteIcon,
-    children: (0, i.jsx)(d.TrashIcon, {
-      size: 'xs'
+    className: L.deleteIcon,
+    children: (0, i.jsx)(E.CircleExclamationPointIcon, {
+      size: 'xxs',
+      color: E.tokens.colors.INTERACTIVE_ACTIVE
     })
   }),
-  (0, i.jsx)(d.Text, {
-    variant: 'text-md/normal',
-    color: 'text-secondary',
-    children: O.Z.Messages.FOR_LATER_MESSAGE_DELETED
+  (0, i.jsx)(E.Heading, {
+    variant: 'text-md/semibold',
+    color: 'header-secondary',
+    children: v.Z.Messages.FOR_LATER_MESSAGE_DELETED
   }),
-  (0, i.jsx)(I.Z, {
-    className: x.hoverBar,
-    children: (0, i.jsx)(I.s, {
-      label: t.saveData.type === o.J.REMINDER ? O.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : O.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
-      icon: d.TrashIcon,
+  (0, i.jsx)(h.Z, {
+    className: L.hoverBar,
+    children: (0, i.jsx)(h.s, {
+      label: v.Z.Messages.FOR_LATER_REMOVE,
+      icon: E.TrashIcon,
       dangerous: !0,
-      onClick: () => t.saveData.type === o.J.REMINDER ? (0, S.bn)(t.saveData) : (0, g.h)(t.saveData)
+      onClick: () => t.saveData.type === u.J.REMINDER ? (0, O.bn)(t.saveData) : (0, R.h)(t.saveData)
     }, 'delete')
   })
 ]
   }) : (0, i.jsxs)('div', {
-className: x.messageContainer,
+className: L.messageContainer,
 children: [
-  (0, i.jsx)(A.Z, {
+  (0, i.jsx)(x.Z, {
     channel: a,
     jumpToMessage: l
   }),
-  (0, i.jsx)(E.Z, {
+  (0, i.jsx)(T.Z, {
     message: t.message,
     channel: a,
-    className: r()(x.message, t.complete ? x.disabledMessage : null),
-    compact: h.jU.getSetting(),
+    className: r()(L.message, t.complete ? L.disabledMessage : null),
+    compact: C.jU.getSetting(),
     animateAvatar: !1,
-    focusProps: M,
+    focusProps: Z,
     trackAnnouncementViews: !0
   }, t.message.id),
-  (0, i.jsx)(I.Z, {
-    className: x.hoverBar,
-    children: (0, i.jsx)(b, {
+  (0, i.jsx)(h.Z, {
+    className: L.hoverBar,
+    children: (0, i.jsx)(y, {
       savedMessage: t,
       jumpToMessage: l
     })
@@ -256,59 +260,67 @@ children: [
   });
 }
 
-function b(e) {
+function y(e) {
   let {
 savedMessage: t,
-jumpToMessage: n
+jumpToMessage: s
   } = e;
-  return t.saveData.type === o.J.REMINDER ? (0, i.jsxs)(i.Fragment, {
+  return (o()(null != t.message, 'Saved message must be cached for For Later action buttons'), t.saveData.type === u.J.REMINDER) ? (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(I.s, {
-    label: O.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
-    onClick: () => (0, S.Y_)(t.saveData.messageId, !t.complete),
-    children: (0, i.jsx)(d.Checkbox, {
-      type: d.Checkbox.Types.INVERTED,
+  (0, i.jsx)(h.s, {
+    label: v.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
+    onClick: () => (0, O.Y_)(t.saveData.messageId, !t.complete),
+    children: (0, i.jsx)(E.Checkbox, {
+      type: E.Checkbox.Types.INVERTED,
       value: t.complete,
       size: 20
     })
   }, 'mark-complete'),
-  (0, i.jsx)(I.s, {
-    label: O.Z.Messages.MESSAGE_REMINDERS_EDIT,
-    icon: d.ClockIcon,
+  (0, i.jsx)(h.s, {
+    label: v.Z.Messages.MESSAGE_REMINDERS_EDIT,
+    icon: E.ClockIcon,
     onClick: () => null
   }, 'edit-reminder'),
-  (0, i.jsx)(I.s, {
-    label: O.Z.Messages.JUMP_TO_MESSAGE,
-    icon: d.ArrowLargeRightIcon,
-    onClick: e => n(e)
+  (0, i.jsx)(h.s, {
+    label: v.Z.Messages.JUMP_TO_MESSAGE,
+    icon: E.ArrowLargeRightIcon,
+    onClick: e => s(e)
   }, 'jump-to-message')
 ]
   }) : (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsx)(I.s, {
-    label: O.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
-    icon: d.ClockIcon,
-    onClick: () => null
-  }, 'add-reminder'),
-  (0, i.jsx)(I.s, {
-    label: O.Z.Messages.JUMP_TO_MESSAGE,
-    icon: d.ArrowLargeRightIcon,
-    onClick: e => n(e)
+  (0, i.jsx)(h.s, {
+    label: v.Z.Messages.MESSAGE_REMINDERS_CREATE,
+    icon: E.ClockIcon,
+    onClick: e => (0, I.jW)(e, async () => {
+      let {
+        MessageReminderCreateMenu: e
+      } = await n.e('69818').then(n.bind(n, 898150));
+      return n => (0, i.jsx)(e, {
+        ...n,
+        message: t.message
+      });
+    })
+  }, 'create-reminder'),
+  (0, i.jsx)(h.s, {
+    label: v.Z.Messages.JUMP_TO_MESSAGE,
+    icon: E.ArrowLargeRightIcon,
+    onClick: e => s(e)
   }, 'jump-to-message'),
-  (0, i.jsx)(I.s, {
-    label: O.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
-    icon: d.TrashIcon,
+  (0, i.jsx)(h.s, {
+    label: v.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
+    icon: E.TrashIcon,
     dangerous: !0,
-    onClick: () => (0, g.h)(t.saveData)
-  }, 'delete-bookmark')
+    onClick: () => (0, R.h)(t.saveData)
+  }, 'remove-bookmark')
 ]
   });
 }
 
-function j() {
-  return (0, i.jsx)(m.Z, {
-Icon: d.DoubleCheckmarkLargeIcon,
-header: O.Z.Messages.FOR_LATER_EMPTY,
-tip: O.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
+function B() {
+  return (0, i.jsx)(N.Z, {
+Icon: E.DoubleCheckmarkLargeIcon,
+header: v.Z.Messages.FOR_LATER_EMPTY,
+tip: v.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
   });
 }

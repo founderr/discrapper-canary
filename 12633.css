@@ -43025,12 +43025,6 @@ html.disable-forced-colors * {
         --background-tertiary: color-mix(in oklab,
                 var(--primary-700) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
-        --badge-brand-bg: color-mix(in oklab,
-                var(--brand-260) 100%,
-                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
-        --badge-brand-text: color-mix(in oklab,
-                var(--brand-500) 100%,
-                var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
         --bg-backdrop: color-mix(in oklab,
                 hsl(var(--black-hsl) / 0.7) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.7) var(--theme-base-color-amount, 0%));
@@ -44143,12 +44137,6 @@ html.disable-forced-colors * {
         --background-tertiary: color-mix(in oklab,
                 var(--primary-200) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
-        --badge-brand-bg: color-mix(in oklab,
-                var(--brand-260) 100%,
-                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
-        --badge-brand-text: color-mix(in oklab,
-                var(--brand-500) 100%,
-                var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
         --bg-backdrop: color-mix(in oklab,
                 hsl(var(--black-hsl) / 0.54) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.54) var(--theme-base-color-amount, 0%));
@@ -45257,12 +45245,6 @@ html.disable-forced-colors * {
         --background-tertiary: color-mix(in oklab,
                 var(--plum-19) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
-        --badge-brand-bg: color-mix(in oklab,
-                var(--brand-260) 100%,
-                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
-        --badge-brand-text: color-mix(in oklab,
-                var(--brand-500) 100%,
-                var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
         --bg-backdrop: color-mix(in oklab,
                 hsl(var(--plum-19-hsl) / 0.75) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.75) var(--theme-base-color-amount, 0%));
@@ -46377,12 +46359,6 @@ html.disable-forced-colors * {
         --background-tertiary: color-mix(in oklab,
                 var(--plum-16) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
-        --badge-brand-bg: color-mix(in oklab,
-                var(--brand-260) 100%,
-                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
-        --badge-brand-text: color-mix(in oklab,
-                var(--brand-500) 100%,
-                var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
         --bg-backdrop: color-mix(in oklab,
                 hsl(var(--black-hsl) / 0.7) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.7) var(--theme-base-color-amount, 0%));
