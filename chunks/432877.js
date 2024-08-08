@@ -43,10 +43,6 @@ premium_roadblocks: {
 iar_testing: {
   label: 'Enable staff only test iar menu options',
   category: 3
-},
-iar_skip_api_report_submit: {
-  label: 'Enable to skip calling the API to skip submitting actual IAR reports',
-  category: 3
 }
   },
   c = {};
