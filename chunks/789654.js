@@ -238,7 +238,7 @@ R = n.useMemo(() => {
   v,
   S
 ]),
-B = n.useCallback(e => {
+O = n.useCallback(e => {
   let r = '',
     t = '',
     a = !1;
@@ -273,7 +273,7 @@ B = n.useCallback(e => {
     return ''.concat(a ? '\n' : '').concat(u);
   }).join(',\n'));
 }, []),
-O = n.useCallback(e => c()(C(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
+B = n.useCallback(e => c()(C(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
 P = n.useCallback(e => {
   let r = {};
   Object.keys(e).forEach(t => {
@@ -344,7 +344,7 @@ children: [
           (0, a.jsx)(f.Button, {
             size: f.Button.Sizes.MIN,
             onClick: () => {
-              navigator.clipboard.writeText(O(r));
+              navigator.clipboard.writeText(B(r));
             },
             children: 'Export'
           })
@@ -363,7 +363,7 @@ children: [
           (0, a.jsx)(f.Button, {
             size: f.Button.Sizes.MIN,
             onClick: () => {
-              navigator.clipboard.writeText(B(t));
+              navigator.clipboard.writeText(O(t));
             },
             children: 'Export'
           })

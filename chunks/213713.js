@@ -112,15 +112,15 @@ I = (0, d.e7)([_.Z], () => {
   return (null === (e = _.Z.getFeedState(j.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
 }),
 [Z, R] = n.useState(''),
-B = (0, d.e7)([
+O = (0, d.e7)([
   x.Z,
   g.Z
 ], () => {
   var e, r, t;
   return parseInt(Z) > 0 ? Z : null !== (t = null === (e = x.Z.getGameByName(Z)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = g.Z.getApplicationByName(Z)) || void 0 === r ? void 0 : r.id;
 }, [Z]),
-O = (0, y.Z)({
-  applicationId: B,
+B = (0, y.Z)({
+  applicationId: O,
   location: 'DevToolsContentInventory',
   source: f.m1.DevTools
 }),
@@ -226,10 +226,10 @@ children: (0, a.jsxs)(h.ScrollerThin, {
           placeholder: 'App ID or full name',
           onChange: e => (0 === e.length || e.length >= 18) && R(e),
           onKeyDown: e => {
-            'Enter' === e.key && (Z === e.currentTarget.value ? null == O || O() : R(e.currentTarget.value));
+            'Enter' === e.key && (Z === e.currentTarget.value ? null == B || B() : R(e.currentTarget.value));
           },
-          error: Z.length > 0 && null == O ? 'No game profile for '.concat(null != B ? B : Z + ' - try by id', '.') : void 0,
-          style: null != O ? {
+          error: Z.length > 0 && null == B ? 'No game profile for '.concat(null != O ? O : Z + ' - try by id', '.') : void 0,
+          style: null != B ? {
             border: '1px solid green'
           } : {}
         }),

@@ -106,8 +106,8 @@ let {
   value: r
 } = e;
 return r === Z;
-  })) || void 0 === r ? void 0 : r.label) && void 0 !== t ? t : 'Unknown', B = null != T, O = null != T && new Date(T).getTime() < Date.now(), P = (null == E ? void 0 : E.sku_id) === f.Si.TIER_0, L = async () => {
-w(!0), B ? await C(S, 'trial') : await (0, d.a)(c), h(), w(!1);
+  })) || void 0 === r ? void 0 : r.label) && void 0 !== t ? t : 'Unknown', O = null != T, B = null != T && new Date(T).getTime() < Date.now(), P = (null == E ? void 0 : E.sku_id) === f.Si.TIER_0, L = async () => {
+w(!0), O ? await C(S, 'trial') : await (0, d.a)(c), h(), w(!1);
   };
   n.useEffect(() => {
 if (p) {
@@ -131,7 +131,7 @@ p,
 y
   ]);
   let A = 'Active';
-  return B && (A = 'Acknowledged'), O && (A = 'Expired'), (0, a.jsxs)('div', {
+  return O && (A = 'Acknowledged'), B && (A = 'Expired'), (0, a.jsxs)('div', {
 className: o()(x.card, P ? x.gradientWrapperTier0 : x.gradientWrapperTier2),
 children: [
   (0, a.jsxs)('div', {
@@ -225,8 +225,8 @@ children: [
       (0, a.jsx)(s.Clickable, {
         onClick: L,
         className: o()(x.badge, x.clickable, {
-          [x.acked]: B,
-          [x.expired]: O
+          [x.acked]: O,
+          [x.expired]: B
         }),
         children: (0, a.jsx)(s.Text, {
           variant: 'eyebrow',
@@ -453,7 +453,7 @@ I && (Z(!1), h.Z.forceReset(), (0, d.T)(), w().then(e => {
 null != l && (await v(l, 'trial'), Z(!0));
   }, R = async () => {
 null != g && (await v(g, 'discount'), Z(!0));
-  }, B = async () => {
+  }, O = async () => {
 await j(), Z(!0);
   };
   return (0, a.jsx)(s.ScrollerThin, {
@@ -473,7 +473,7 @@ children: (0, a.jsxs)('div', {
           children: [
             (0, a.jsx)(s.Button, {
               size: s.Button.Sizes.SMALL,
-              onClick: B,
+              onClick: O,
               children: 'Clear all User Offers'
             }),
             (0, a.jsx)(s.Button, {
