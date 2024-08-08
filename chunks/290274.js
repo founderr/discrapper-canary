@@ -57,7 +57,7 @@ children: e => (0, r.jsx)(s.Clickable, {
   ...e,
   className: a()(c.contextMenu, _),
   children: (0, r.jsx)(s.MoreHorizontalIcon, {
-    color: s.tokens.colors.HEADER_PRIMARY,
+    color: s.tokens.colors.INTERACTIVE_NORMAL,
     size: 'xs'
   })
 })
