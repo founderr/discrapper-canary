@@ -55,6 +55,9 @@ renderPopout: e => {
 },
 children: e => (0, r.jsx)(s.Clickable, {
   ...e,
+  onContextMenu: t => {
+    t.preventDefault(), e.onClick(t);
+  },
   className: a()(c.contextMenu, _),
   children: (0, r.jsx)(s.MoreHorizontalIcon, {
     color: s.tokens.colors.INTERACTIVE_NORMAL,
