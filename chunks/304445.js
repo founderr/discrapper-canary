@@ -1,5 +1,5 @@
 n(47120), n(411104);
-var i = n(934951),
+var i = n(572299),
   o = n(266067),
   r = n(38618),
   a = n(777639),
@@ -141,7 +141,7 @@ if (this.routeChangeCount += 1, this.routeChangeCount < 10)
     let o = (0, h.s1)().location.pathname,
       r = n(e, t);
     if (null != r)
-      return (0, i.n_)({
+      return (0, i.n)({
         message: 'RouteManager.handleRouteChange: A route rewrite is replacing the current route',
         data: {
           replacePath: r.path,
