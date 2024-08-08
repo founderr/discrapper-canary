@@ -128,18 +128,18 @@ onItemSelect: E,
 onItemAction: N,
 interactive: x = !0,
 children: S
-  } = e, Z = l.useRef(null), v = l.useRef([]), T = l.useRef(!1), L = l.useRef(null), [A, b] = l.useState(0), [M, R] = l.useState({
+  } = e, v = l.useRef(null), Z = l.useRef([]), T = l.useRef(!1), L = l.useRef(null), [A, b] = l.useState(0), [M, R] = l.useState({
 x: 0,
 y: 0
-  }), O = Math.abs(M.x) + Math.abs(M.y) > 0, y = l.useMemo(() => a().chunk(S, p), [S]), P = l.useCallback((e, t) => {
-null == v.current[A] ? v.current[A] = [] : v.current[A][t] = e;
+  }), O = Math.abs(M.x) + Math.abs(M.y) > 0, P = l.useMemo(() => a().chunk(S, p), [S]), y = l.useCallback((e, t) => {
+null == Z.current[A] ? Z.current[A] = [] : Z.current[A][t] = e;
   }, [A]), j = l.useCallback((e, t) => {
 L.current = t, E(p * e + t);
   }, [E]), D = l.useCallback(() => {
 L.current = null, E(null);
-  }, [E]), U = l.useCallback(e => {
+  }, [E]), w = l.useCallback(e => {
 D(), T.current = e;
-  }, [D]), G = l.useCallback((e, t, n) => {
+  }, [D]), U = l.useCallback((e, t, n) => {
 if (T.current) {
   R({
     x: 0,
@@ -159,16 +159,16 @@ R({
   x: s / 2,
   y: (r ? Math.max(i.y, -a.y) : Math.min(i.y, a.y)) / 2
 });
-  }, []), w = l.useCallback(e => {
+  }, []), G = l.useCallback(e => {
 if (null != L.current)
   e.preventDefault(), e.stopPropagation(), null == N || N(p * A + L.current);
   }, [
 N,
 A
   ]), k = l.useMemo(() => (0, r.throttle)(e => {
-if (null == Z.current)
+if (null == v.current)
   return;
-let i = Z.current.getBoundingClientRect(),
+let i = v.current.getBoundingClientRect(),
   l = i.left + i.width / 2,
   r = {
     x: l,
@@ -178,13 +178,13 @@ let i = Z.current.getBoundingClientRect(),
     x: e.clientX,
     y: e.clientY
   };
-if (G(a, r, Math.max(t, n)), T.current) {
+if (U(a, r, Math.max(t, n)), T.current) {
   null != I && D();
   return;
 }
 let s = (0, o.ld)(r, a, Math.max(t, n));
-for (let e = 0; e < v.current[A].length; e++) {
-  let t = v.current[A][e];
+for (let e = 0; e < Z.current[A].length; e++) {
+  let t = Z.current[A][e];
   if (null == t)
     continue;
   let n = t.getBoundingClientRect();
@@ -196,7 +196,7 @@ for (let e = 0; e < v.current[A].length; e++) {
 D();
   }, 16), [
 I,
-G,
+U,
 D,
 j,
 A,
@@ -206,21 +206,21 @@ t
 if (!x)
   return;
 let t = A + (e.deltaY > 0 ? 1 : -1);
-t >= 0 && t < y.length && (null != L.current && (y[t].length > L.current ? j(t, L.current) : D()), b(t));
+t >= 0 && t < P.length && (null != L.current && (P[t].length > L.current ? j(t, L.current) : D()), b(t));
   }, [
 x,
 A,
-y,
+P,
 j,
 D
-  ]), H = l.useMemo(() => y[A].map((e, l) => {
+  ]), H = l.useMemo(() => P[A].map((e, l) => {
 let r = h[l];
 if (null == r)
   throw Error('Too many items supplied '.concat(S.length, ' expected max of ').concat(h.length));
 let a = _(r.x, t, m),
   s = _(r.y, n, g);
 return (0, i.jsx)('div', {
-  ref: e => P(e, l),
+  ref: e => y(e, l),
   className: u.chatWheelItem,
   style: {
     left: a,
@@ -231,22 +231,22 @@ return (0, i.jsx)('div', {
   children: e
 }, l);
   }), [
-y,
+P,
 A,
 t,
 m,
 n,
 g,
 S.length,
-P
+y
   ]);
   return (0, i.jsx)(s.Clickable, {
 className: u.chatWheelMouseInput,
 onMouseMove: k,
 onWheel: B,
-onClick: w,
+onClick: G,
 children: (0, i.jsxs)('div', {
-  ref: Z,
+  ref: v,
   className: u.chatWheel,
   style: {
     width: t,
@@ -308,8 +308,8 @@ children: (0, i.jsxs)('div', {
             }),
             C && (0, i.jsx)('circle', {
               className: u.chatWheelDeadZone,
-              onMouseEnter: () => U(!0),
-              onMouseLeave: () => U(!1),
+              onMouseEnter: () => w(!0),
+              onMouseLeave: () => w(!1),
               cx: 144,
               cy: 144,
               r: 28.8
@@ -324,8 +324,8 @@ children: (0, i.jsxs)('div', {
         }),
         C && (0, i.jsx)('circle', {
           className: u.chatWheelDeadZone,
-          onMouseEnter: () => U(!0),
-          onMouseLeave: () => U(!1),
+          onMouseEnter: () => w(!0),
+          onMouseLeave: () => w(!1),
           cx: 144,
           cy: 144,
           r: 28.8,
@@ -339,7 +339,7 @@ children: (0, i.jsxs)('div', {
         C && (0, i.jsx)(d, {
           className: u.chatWheelDeadZoneIcon
         }),
-        x && y.length > 1 ? (0, i.jsx)('div', {
+        x && P.length > 1 ? (0, i.jsx)('div', {
           className: u.paginationHint,
           children: c.Z.Messages.CHAT_WHEEL_PAGINATION_HINT
         }) : null

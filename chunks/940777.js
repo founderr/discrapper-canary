@@ -24,8 +24,8 @@ var i = n(735250),
   N = n(979651),
   x = n(709054),
   S = n(853856),
-  Z = n(593214),
-  v = n(919755),
+  v = n(593214),
+  Z = n(919755),
   T = n(110977),
   L = n(603274),
   A = n(981631),
@@ -44,22 +44,22 @@ function O() {
 {
   favoriteAdded: t,
   clearFavoriteAdded: r
-} = (0, Z.up)(),
-[O, y] = l.useState(!1),
+} = (0, v.up)(),
+[O, P] = l.useState(!1),
 {
-  favoriteServerMuted: P,
+  favoriteServerMuted: y,
   favoriteChannels: j
 } = (0, o.cj)([S.Z], () => ({
   favoriteChannels: S.Z.getFavoriteChannels(),
   favoriteServerMuted: S.Z.favoriteServerMuted
 })),
 D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
-U = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
-G = (0, g.Z)(e => e.guildId) === A.I_8,
+w = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
+U = (0, g.Z)(e => e.guildId) === A.I_8,
 {
-  badge: w,
+  badge: G,
   unread: k
-} = (0, v.Z)(j),
+} = (0, Z.Z)(j),
 B = function(e) {
   let t = (0, o.e7)([E.Z], () => E.Z.getVoiceChannelId()),
     n = null != t && null != e[t],
@@ -95,41 +95,41 @@ B = function(e) {
     activity: _
   });
 }(j),
-H = w > 0 ? (0, m.N)(w) : null,
+H = G > 0 ? (0, m.N)(G) : null,
 V = l.useCallback(() => {
   r();
 }, [r]);
   return (0, i.jsxs)(_.H, {
 children: [
   (0, i.jsx)(p.Z, {
-    selected: G,
+    selected: U,
     hovered: O,
-    unread: k && !P,
+    unread: k && !y,
     className: M.pill
   }),
   (0, i.jsx)(L.Z, {
     onShow: V,
     children: (0, i.jsx)(T.S, {
       children: (0, i.jsx)(c.BlobMask, {
-        selected: G || O,
+        selected: U || O,
         upperBadge: B,
         lowerBadge: H,
         children: (0, i.jsx)(c.NavItem, {
           ...e,
           ariaLabel: b.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
             guildName: b.Z.Messages.FAVORITES_GUILD_NAME,
-            mentions: w
+            mentions: G
           }),
           to: {
             pathname: A.Z5c.CHANNEL(A.I_8, D),
             state: R
           },
-          selected: G || O,
-          onMouseEnter: () => y(!0),
-          onMouseLeave: () => y(!1),
+          selected: U || O,
+          onMouseEnter: () => P(!0),
+          onMouseLeave: () => P(!1),
           onMouseDown: function() {
-            if (null != U)
-              u.Z.preload(U.guild_id, U.id);
+            if (null != w)
+              u.Z.preload(w.guild_id, w.id);
           },
           onContextMenu: function(e) {
             (0, d.jW)(e, async () => {

@@ -64,12 +64,12 @@ case u.p.MENTION_RAID:
     compact: n
   });
 case u.p.ACTIVITY_ALERTS_ENABLED:
-  return (0, i.jsx)(F, {
+  return (0, i.jsx)(G, {
     message: t,
     compact: n
   });
 case u.p.INTERACTION_BLOCKED:
-  return (0, i.jsx)(G, {
+  return (0, i.jsx)(F, {
     compact: n
   });
 default:
@@ -106,7 +106,7 @@ content: (0, i.jsx)(I.Text, {
   });
 }
 
-function G(e) {
+function F(e) {
   let {
 compact: t
   } = e;
@@ -133,7 +133,7 @@ content: (0, i.jsx)(I.Text, {
   });
 }
 
-function F(e) {
+function G(e) {
   var t;
   let {
 message: n,

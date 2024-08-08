@@ -44,8 +44,8 @@ var s = n(470079),
   C = n(823379),
   g = n(111361),
   p = n(595878),
-  N = n(944880),
-  A = n(513785),
+  A = n(944880),
+  N = n(513785),
   m = n(106255),
   f = n(474936),
   S = n(735825),
@@ -54,7 +54,7 @@ var s = n(470079),
 function M() {
   let e = function() {
   var e;
-  let t = (0, i.cj)([A.Z], () => A.Z.getState());
+  let t = (0, i.cj)([N.Z], () => N.Z.getState());
   if (null != t)
     return null !== (e = t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== e ? e : t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_3_MONTHS];
 }(),
@@ -225,6 +225,6 @@ function B() {
   let t = M(),
 n = null !== (e = null == t ? void 0 : t.showCard) && void 0 !== e && e;
   s.useEffect(() => {
-n && N.Z.forceRefreshIfOutdated();
+n && A.Z.forceRefreshIfOutdated();
   }, [n]);
 }

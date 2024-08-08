@@ -16,8 +16,8 @@ var i, l, r, a, s = n(392711),
   N = n(656063),
   x = n(761282),
   S = n(814443),
-  Z = n(789407),
-  v = n(974543),
+  v = n(789407),
+  Z = n(974543),
   T = n(250889),
   L = n(199902),
   A = n(592125),
@@ -25,13 +25,13 @@ var i, l, r, a, s = n(392711),
   M = n(831506),
   R = n(731290),
   O = n(430824),
-  y = n(496675),
-  P = n(158776),
+  P = n(496675),
+  y = n(158776),
   j = n(699516),
   D = n(594174),
-  U = n(979651),
-  G = n(823379),
-  w = n(981631);
+  w = n(979651),
+  U = n(823379),
+  G = n(981631);
 let k = !1,
   B = !1,
   H = [],
@@ -43,14 +43,14 @@ let k = !1,
 
 function K() {
   let e = j.Z.getFriendIDs();
-  return b.Z.hasConsented(w.pjP.PERSONALIZATION) ? new Set([
+  return b.Z.hasConsented(G.pjP.PERSONALIZATION) ? new Set([
 ...S.Z.getUserAffinitiesUserIds(),
 ...e
   ]) : new Set(e);
 }
 
 function q(e) {
-  return P.Z.findActivity(e, e => e.type !== w.IIU.CUSTOM_STATUS);
+  return y.Z.findActivity(e, e => e.type !== G.IIU.CUSTOM_STATUS);
 }
 
 function Q(e) {
@@ -65,7 +65,7 @@ function Q(e) {
 function J(e) {
   return null == W[e] && (W = {
 ...W,
-[e]: new v.Z({
+[e]: new Z.Z({
   url: e
 })
   }), W[e];
@@ -77,14 +77,14 @@ function X(e) {
 
 function $(e) {
   if ((0, _.Z)(e))
-return Z.r9;
+return v.r9;
   let t = null != e.application_id ? C.Z.getApplication(e.application_id) : null;
   return null != t ? t : (0, f.Z)(e) ? Q(e.name) : (0, m.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && X(e.application_id), t);
 }
 
 function ee(e) {
-  let t = U.Z.getVoiceStateForUser(e);
-  return (null == t ? void 0 : t.channelId) != null && y.Z.canWithPartialContext(w.Plq.VIEW_CHANNEL, {
+  let t = w.Z.getVoiceStateForUser(e);
+  return (null == t ? void 0 : t.channelId) != null && P.Z.canWithPartialContext(G.Plq.VIEW_CHANNEL, {
 channelId: t.channelId
   }) ? t.channelId : null;
 }
@@ -104,14 +104,14 @@ E = !1,
 S = [],
 b = new Set(),
 j = !1,
-w = [];
+G = [];
   for (let e of t) {
 let n = L.Z.getAnyStreamForUser(e.id),
   i = A.Z.getChannel(null == n ? void 0 : n.channelId);
 if ((null == i ? void 0 : i.isNSFW()) && (!f || !R.Z.didAgree(null == i ? void 0 : i.getGuildId())))
   continue;
 let s = q(e.id);
-if (null != n && w.push({
+if (null != n && G.push({
     stream: n,
     streamUser: e,
     activity: s
@@ -120,14 +120,14 @@ if (null != n && w.push({
 let c = (0, N.Z)(s);
 if (null == c)
   continue;
-j = c === Z.XB;
+j = c === v.XB;
 let u = function(e) {
     let t = C.Z.getApplication(e);
     return null != t ? t : 'string' != typeof e ? (new I.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), {
       tags: {
         source: 'ACTIVITIES'
       }
-    }), null) : e === Z.XB ? Z.r9 : e.startsWith(T.H) ? Q(e.slice(T.H.length)) : e.startsWith(v._) ? J(e.slice(v._.length)) : (X(e), null);
+    }), null) : e === v.XB ? v.r9 : e.startsWith(T.H) ? Q(e.slice(T.H.length)) : e.startsWith(Z._) ? J(e.slice(Z._.length)) : (X(e), null);
   }(c),
   m = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
 if ((0, p.Z)(s)) {
@@ -136,12 +136,12 @@ if ((0, p.Z)(s)) {
       activity: s,
       userId: e.id,
       application: u,
-      channelId: null === (r = U.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
+      channelId: null === (r = w.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
       currentUser: _,
       isActivitiesEnabledForCurrentPlatform: t,
       ChannelStore: A.Z,
-      VoiceStateStore: U.Z,
-      PermissionStore: y.Z,
+      VoiceStateStore: w.Z,
+      PermissionStore: P.Z,
       GuildStore: O.Z
     }) !== h.Fw.CAN_JOIN)
     continue;
@@ -151,20 +151,20 @@ if (!x.JE(s) || null == u || b.has(u.id))
   continue;
 let g = null != s ? $(s) : null;
 (null == g || g.id !== u.id) && (s = null);
-let P = [];
-P = null != s && null != s.party && null != s.party.id ? Array.from(null !== (a = M.Z.getParty(s.party.id)) && void 0 !== a ? a : []).reduce((e, t) => {
+let y = [];
+y = null != s && null != s.party && null != s.party.id ? Array.from(null !== (a = M.Z.getParty(s.party.id)) && void 0 !== a ? a : []).reduce((e, t) => {
   let n = D.default.getUser(t);
   return null != n && e.push(n), e;
 }, []) : t.filter(e => {
   let t = q(e.id),
     n = null != t ? $(t) : null;
   return null != n && n.id === u.id;
-}), (P = o().orderBy(P, [et], ['desc'])).length !== t.length && (E = !0), b.add(u.id), S.push({
+}), (y = o().orderBy(y, [et], ['desc'])).length !== t.length && (E = !0), b.add(u.id), S.push({
   game: u,
   activity: s,
   activityUser: e,
   startedPlayingTime: m,
-  playingMembers: P
+  playingMembers: y
 });
   }
   let k = 1 === g.length,
@@ -179,12 +179,12 @@ let n = ee(e.id),
 if (V.has(l) && H.has(n) || null == i || null == r || i.id === r.afkChannelId)
   null == i && (u = null, k = !0);
 else {
-  let e = o()(U.Z.getVoiceStatesForChannel(i.id)).map(e => {
+  let e = o()(w.Z.getVoiceStatesForChannel(i.id)).map(e => {
     let {
       userId: t
     } = e;
     return D.default.getUser(t);
-  }).filter(G.lm).orderBy([et], ['desc']).value();
+  }).filter(U.lm).orderBy([et], ['desc']).value();
   e.filter(e => !m.includes(e.id)).forEach(e => t.push(e)), k ? !V.has(l) && (u = null) : (u = r, k = !0), V.add(l), H.add(n), B.push({
     channel: i,
     guild: r,
@@ -198,7 +198,7 @@ voiceChannels: B,
 isSpotifyActivity: j,
 priorityMembers: g.map(e => ({
   user: e,
-  status: P.Z.getStatus(e.id)
+  status: y.Z.getStatus(e.id)
 })),
 partiedMembers: t,
 showPlayingMembers: E,
@@ -213,7 +213,7 @@ currentActivities: (s = S, c = e => {
   'desc',
   'asc'
 ])).value(),
-applicationStreams: w
+applicationStreams: G
   };
 }
 
@@ -252,7 +252,7 @@ z.clear(), V = (H = function(e) {
   'asc',
   'asc'
 ]).value().filter(e => e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0)).map(e => ({
-  type: w.GOo.USER,
+  type: G.GOo.USER,
   party: e
 })), ! function() {
   if (z.size > 0) {
@@ -271,9 +271,9 @@ class ea extends(i = c.ZP.Store) {
 this.syncWith([
   D.default,
   C.Z,
-  P.Z,
+  y.Z,
   M.Z,
-  U.Z,
+  w.Z,
   L.Z,
   j.Z,
   b.Z,

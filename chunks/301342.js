@@ -34,16 +34,16 @@ var i = n(735250),
   x = n(689938),
   S = n(182018);
 
-function Z(e) {
+function v(e) {
   e.stopPropagation();
 }
-let v = l.memo(function(e) {
+let Z = l.memo(function(e) {
   let t, {
   channel: r,
   connectChannelDragSource: h,
   connectChannelDropTarget: I,
   disableManageChannels: E,
-  position: v,
+  position: Z,
   sortingPosition: T,
   hideIcon: L,
   children: A
@@ -51,14 +51,14 @@ let v = l.memo(function(e) {
 b = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
 M = (0, o.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
 R = (0, o.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_CHANNELS, r));
-  t = null != T ? v > T ? S.containerDragAfter : S.containerDragBefore : S.containerDefault;
+  t = null != T ? Z > T ? S.containerDragAfter : S.containerDragBefore : S.containerDefault;
   let O = l.useCallback(() => {
   M ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
 }, [
   r.id,
   M
 ]),
-y = l.useCallback(e => {
+P = l.useCallback(e => {
   if ('null' !== r.id) {
     let t = m.Z.getGuild(r.getGuildId());
     null != t && (0, d.jW)(e, async () => {
@@ -73,7 +73,7 @@ y = l.useCallback(e => {
     });
   }
 }, [r]),
-P = l.useCallback(() => {
+y = l.useCallback(() => {
   let e = r.type === N.d4z.GUILD_CATEGORY ? null : r.type,
     t = r.getGuildId();
   null != t && (0, c.openModalLazy)(async () => {
@@ -94,35 +94,35 @@ P = l.useCallback(() => {
 {
   role: j,
   tabIndex: D,
-  ...U
+  ...w
 } = (0, s.JA)(r.id),
+U = l.useRef(null),
 G = l.useRef(null),
-w = l.useRef(null),
 k = (0, i.jsxs)('li', {
   className: t,
   'data-dnd-name': r.name,
   children: [
     (0, i.jsx)(c.FocusRing, {
-      focusTarget: G,
-      ringTarget: w,
+      focusTarget: U,
+      ringTarget: G,
       offset: {
         left: 4,
         right: 4
       },
       children: (0, i.jsxs)('div', {
-        ref: w,
+        ref: G,
         className: a()(S.iconVisibility, S.wrapper, {
           [S.collapsed]: M,
           [S.muted]: b,
           [S.clickable]: !0
         }),
-        onContextMenu: y,
+        onContextMenu: P,
         children: [
           (0, i.jsxs)(c.Clickable, {
-            innerRef: G,
+            innerRef: U,
             className: S.mainContent,
             tabIndex: D,
-            ...U,
+            ...w,
             onClick: O,
             'aria-label': x.Z.Messages.CATEGORY_A11Y_LABEL.format({
               categoryName: r.name
@@ -146,7 +146,7 @@ k = (0, i.jsxs)('li', {
             ]
           }),
           (0, i.jsx)('div', {
-            onClick: Z,
+            onClick: v,
             className: S.children,
             children: R && !E ? (0, i.jsx)(c.Tooltip, {
               text: x.Z.Messages.CREATE_CHANNEL,
@@ -160,7 +160,7 @@ k = (0, i.jsxs)('li', {
                   look: c.Button.Looks.BLANK,
                   size: c.Button.Sizes.NONE,
                   className: a()(S.addButton, S.forceVisible),
-                  onClick: P,
+                  onClick: y,
                   onMouseEnter: t,
                   onMouseLeave: n,
                   tabIndex: D,
@@ -189,7 +189,7 @@ k = (0, i.jsxs)('li', {
 });
   return null != I && null != h ? I(h(k)) : k;
 });
-t.ZP = (0, h.B)(v);
+t.ZP = (0, h.B)(Z);
 let T = l.memo(function(e) {
 let {
   name: t,

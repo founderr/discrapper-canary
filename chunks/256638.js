@@ -43,8 +43,8 @@ var i = n(735250),
   y = n(281956),
   B = n(574650),
   k = n(665302),
-  G = n(434404),
-  F = n(918658),
+  F = n(434404),
+  G = n(918658),
   w = n(859428),
   V = n(963249),
   H = n(774276),
@@ -647,7 +647,7 @@ case eu.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
   let {
     progress: eB,
       total: ek,
-      name: eG
+      name: eF
   } = ec.metadata;
   return (0, i.jsxs)(c.Notice, {
     color: c.NoticeColors.DEFAULT,
@@ -659,8 +659,8 @@ case eu.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
       (0, i.jsxs)(M.Z, {
         justify: M.Z.Justify.CENTER,
         children: [
-          null != eG ? eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
-            name: ''.concat(eG),
+          null != eF ? eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
+            name: ''.concat(eF),
             progress: ''.concat(eB),
             total: ''.concat(ek)
           }) : eI.Z.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
@@ -734,7 +734,7 @@ case eu.kVF.APPLICATION_TEST_MODE:
 case eu.kVF.OUTBOUND_PROMOTION:
   return (0, i.jsx)(Y.Z, {});
 case eu.kVF.VIEWING_ROLES:
-  return (0, i.jsx)(F.Z, {});
+  return (0, i.jsx)(G.Z, {});
 case eu.kVF.PREMIUM_UNCANCEL:
   return (0, i.jsxs)(c.Notice, {
     color: eA === ed.p9.TIER_1 ? c.NoticeColors.PREMIUM_TIER_1 : eA === ed.p9.TIER_0 ? c.NoticeColors.PREMIUM_TIER_0 : c.NoticeColors.PREMIUM_TIER_2,
@@ -787,7 +787,7 @@ case eu.kVF.PREMIUM_UNCANCEL:
   });
 case eu.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
   let {
-    daysPastDue: eF,
+    daysPastDue: eG,
       dismissUntil: ew
   } = ec.metadata;
   return (0, i.jsxs)(c.Notice, {
@@ -800,7 +800,7 @@ case eu.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
         }
       }),
       eI.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
-        daysPastDue: eF
+        daysPastDue: eG
       }),
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: eu.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
@@ -971,7 +971,7 @@ case eu.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION:
         children: eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
       }),
       null != A ? (0, i.jsx)(c.NoticeButton, {
-        onClick: () => G.Z.open(A, eu.pNK.GUILD_AUTOMOD, void 0, eu.KsC.AUTOMOD_MENTION_SPAM),
+        onClick: () => F.Z.open(A, eu.pNK.GUILD_AUTOMOD, void 0, eu.KsC.AUTOMOD_MENTION_SPAM),
         children: eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
       }) : null
     ]

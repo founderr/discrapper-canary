@@ -36,8 +36,8 @@ var i, s, a, r, l = n(913527),
   y = n(616106),
   B = n(995598),
   k = n(774276),
-  G = n(518638),
-  F = n(1844),
+  F = n(518638),
+  G = n(1844),
   w = n(621615),
   V = n(417626),
   H = n(569984),
@@ -137,9 +137,9 @@ buttonText: null,
 callback: void 0,
 metadata: null
   }),
-  eG = null;
+  eF = null;
 
-function eF(e) {
+function eG(e) {
   return eU[e] + '-untilAtLeast';
 }
 
@@ -150,10 +150,10 @@ return;
   let r = eU[e];
   if (null != r && !t && _.K.set(r, !0), ey.has(e) && (eB[e] = !0), null != n && null != r) {
 ;
-i = e, s = n, _.K.set(eF(i), s.format('YYYY-MM-DDTHH:mm:ss.SSSZ'));
+i = e, s = n, _.K.set(eG(i), s.format('YYYY-MM-DDTHH:mm:ss.SSSZ'));
   } else {
 ;
-a = e, _.K.remove(eF(a));
+a = e, _.K.remove(eG(a));
   }
 }
 
@@ -176,7 +176,7 @@ return (0, f.un)(t);
   let n = eU[e];
   if (null != n) {
 let t = function(e) {
-  let t = _.K.get(eF(e));
+  let t = _.K.get(eG(e));
   return null != t ? o()(t) : null;
 }(e);
 if (null != t)
@@ -387,7 +387,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
   }
 },
 [eM.kVF.OUTBOUND_PROMOTION]: {
-  predicate: () => (0, G.tq)()
+  predicate: () => (0, F.tq)()
 },
 [eM.kVF.CORRUPT_INSTALLATION]: {
   predicate: () => eS.isPlatformEmbedded && (!u.Z.supported() || ex.Z.isCorruptInstallation())
@@ -756,7 +756,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
 function eK() {
   if (!A.Z.isConnected())
 return !1;
-  eG = null;
+  eF = null;
   let e = em.default.getCurrentUser();
   if (null == e)
 return !1;
@@ -781,7 +781,7 @@ if (null != eW[o]) {
       premiumSubscription: t,
       selectedGuildId: i
     });
-    eG = {
+    eF = {
       ...ek,
       type: o,
       metadata: n
@@ -790,7 +790,7 @@ if (null != eW[o]) {
   }
 }
   }
-  null != eG && eV(eG.type) && (eG = null);
+  null != eF && eV(eF.type) && (eF = null);
 }
 
 function ez() {
@@ -803,7 +803,7 @@ this.syncWith([
   el.Z,
   et.Z,
   eu.Z,
-  F.Z,
+  G.Z,
   eC.Z,
   X.Z,
   ee.Z,
@@ -811,13 +811,13 @@ this.syncWith([
   M.Z,
   H.Z,
   Q.Z
-], eK), this.waitFor(em.default, ed.Z, ei.Z, en.ZP, eo.Z, es.Z, e_.Z, g.Z, eu.Z, eI.Z, W.Z, S.ZP, el.Z, eR.Z, eO.Z, eg.Z, ea.Z, ef.ZP, ex.Z, et.Z, eN.Z, er.Z, F.Z, ep.Z, eC.Z, ee.Z, D.Z, C.Z, N.Z, V.Z, H.Z, Q.Z);
+], eK), this.waitFor(em.default, ed.Z, ei.Z, en.ZP, eo.Z, es.Z, e_.Z, g.Z, eu.Z, eI.Z, W.Z, S.ZP, el.Z, eR.Z, eO.Z, eg.Z, ea.Z, ef.ZP, ex.Z, et.Z, eN.Z, er.Z, G.Z, ep.Z, eC.Z, ee.Z, D.Z, C.Z, N.Z, V.Z, H.Z, Q.Z);
   }
   hasNotice() {
-return null != eG && null != eG.type;
+return null != eF && null != eF.type;
   }
   getNotice() {
-return null == eI.Z.getAction() ? eG : null;
+return null == eI.Z.getAction() ? eF : null;
   }
   isNoticeDismissed(e) {
 return eV(e);
@@ -896,10 +896,10 @@ return eK();
 return eK();
   },
   NOTICE_SHOW: function(e) {
-eG = e.notice;
+eF = e.notice;
   },
   NOTICE_DISMISS: function(e) {
-return null != eG && (null == e.id || e.id === eG.id) && (ew(eG.type, e.isTemporary, e.untilAtLeast), eK());
+return null != eF && (null == e.id || e.id === eF.id) && (ew(eF.type, e.isTemporary, e.untilAtLeast), eK());
   },
   NOTICE_DISABLE: function(e) {
 let {
@@ -908,7 +908,7 @@ let {
 return ew(t), eK();
   },
   LOGOUT: function() {
-eB = {}, eG = null;
+eB = {}, eF = null;
   },
   SUBSCRIPTION_PLANS_FETCH_SUCCESS: eK,
   AUTO_MODERATION_MENTION_RAID_DETECTION: eK,

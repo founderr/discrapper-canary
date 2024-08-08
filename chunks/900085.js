@@ -23,8 +23,8 @@ var i, l = n(735250),
   N = n(306680),
   x = n(944486),
   S = n(938475),
-  Z = n(585483),
-  v = n(63063),
+  v = n(585483),
+  Z = n(63063),
   T = n(51596),
   L = n(823385),
   A = n(415795),
@@ -33,7 +33,7 @@ var i, l = n(735250),
   R = n(689938),
   O = n(175057);
 
-function y(e, t, n) {
+function P(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -41,7 +41,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let P = 10,
+let y = 10,
   j = () => (0, l.jsxs)('div', {
 className: O.emptyState,
 children: [
@@ -52,7 +52,7 @@ children: [
   (0, l.jsx)('div', {
     className: O.emptyStateCTA,
     children: (0, l.jsx)(u.Anchor, {
-      href: v.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
+      href: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
       children: R.Z.Messages.QUICKSWITCHER_EMPTY_CTA
     })
   })
@@ -70,10 +70,10 @@ return (0, l.jsx)(A.$W, {
 });
   }
 }
-y(D, 'defaultProps', {
+P(D, 'defaultProps', {
   unread: !1
 });
-let U = c.ZP.connectStores([
+let w = c.ZP.connectStores([
 N.ZP,
 C.Z
   ], e => {
@@ -86,7 +86,7 @@ return {
   category: C.Z.getChannel(t.parent_id)
 };
   })(D),
-  G = c.ZP.connectStores([S.ZP], e => {
+  U = c.ZP.connectStores([S.ZP], e => {
 let {
   channel: t
 } = e;
@@ -96,7 +96,7 @@ return {
   voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id]
 };
   })(D),
-  w = c.ZP.connectStores([I.default], e => {
+  G = c.ZP.connectStores([I.default], e => {
 let {
   guild: t
 } = e;
@@ -210,7 +210,7 @@ return 0 === t.length && e.length > 0 ? (0, l.jsx)(j, {}) : 0 === t.length ? nul
   ref: this.scrollerRef,
   sectionHeight: 0,
   rowHeight: 34,
-  paddingBottom: P,
+  paddingBottom: y,
   sections: [t.length],
   className: O.scroller,
   renderRow: this.renderRow,
@@ -218,7 +218,7 @@ return 0 === t.length && e.length > 0 ? (0, l.jsx)(j, {}) : 0 === t.length ? nul
 });
   }
   focusNode(e) {
-Z.S.dispatch(M.CkL.QUICKSWITCHER_RESULT_FOCUS, {
+v.S.dispatch(M.CkL.QUICKSWITCHER_RESULT_FOCUS, {
   node: e
 });
   }
@@ -236,7 +236,7 @@ return (0, l.jsx)(m.Z, {
     textChannelSymbolHook: (e, t) => H(t, _.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
     voiceChannelSymbolHook: (e, t) => H(t, _.xQ.VOICE_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
     guildSymbolHook: (e, t) => H(t, _.xQ.GUILD, R.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
-    helpdeskArticle: v.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
+    helpdeskArticle: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
   })
 });
   }
@@ -271,15 +271,15 @@ return (0, l.jsx)(u.ModalRoot, {
 });
   }
   constructor(...e) {
-super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.createRef()), y(this, '_listId', (0, g.hQ)()), y(this, 'state', {
+super(...e), P(this, 'scrollerRef', r.createRef()), P(this, 'inputRef', r.createRef()), P(this, '_listId', (0, g.hQ)()), P(this, 'state', {
   query: this.props.query,
   mouseFocusDisabled: !0
-}), y(this, 'handleInputChange', () => {
+}), P(this, 'handleInputChange', () => {
   let {
     current: e
   } = this.inputRef;
   null != e && this.search(e.value);
-}), y(this, 'handleMouseMove', () => {
+}), P(this, 'handleMouseMove', () => {
   let {
     mouseFocusDisabled: e
   } = this.state;
@@ -287,12 +287,12 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
     this.setState({
       mouseFocusDisabled: !1
     });
-}), y(this, 'focusResult', e => {
+}), P(this, 'focusResult', e => {
   if (!this.state.mouseFocusDisabled)
     (0, T.tF)(this.props.results.indexOf(e));
-}), y(this, 'selectResult', e => {
+}), P(this, 'selectResult', e => {
   (0, T.Se)(e, this.props.queryMode === _.h8.TEXT_CHANNEL);
-}), y(this, 'handleContextMenu', e => {
+}), P(this, 'handleContextMenu', e => {
   let t = this.props.results[this.props.selectedIndex];
   switch (t.type) {
     case _.h8.GUILD:
@@ -432,7 +432,7 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
         });
       });
   }
-}), y(this, 'handleKeyDown', e => {
+}), P(this, 'handleKeyDown', e => {
   let {
     mouseFocusDisabled: t,
     query: n
@@ -482,7 +482,7 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
       return;
   }
   e.preventDefault(), (0, T.tF)(r);
-}), y(this, 'renderRow', e => {
+}), P(this, 'renderRow', e => {
   let {
     row: t
   } = e, n = this.props.results[t], {
@@ -500,7 +500,7 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
         children: n.record.text
       }, ''.concat(n.type, '-').concat(n.record.id));
     case _.h8.TEXT_CHANNEL:
-      return (0, l.jsx)(U, {
+      return (0, l.jsx)(w, {
         id: this.getRowId(t),
         focused: i >= 0 && t === i,
         onClick: () => this.selectResult(n),
@@ -511,7 +511,7 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
         score: r ? n.score : void 0
       }, ''.concat(n.type, '-').concat(n.record.id));
     case _.h8.VOICE_CHANNEL:
-      return (0, l.jsx)(G, {
+      return (0, l.jsx)(U, {
         id: this.getRowId(t),
         focused: i >= 0 && t === i,
         onClick: () => this.selectResult(n),
@@ -522,7 +522,7 @@ super(...e), y(this, 'scrollerRef', r.createRef()), y(this, 'inputRef', r.create
         score: r ? n.score : void 0
       }, ''.concat(n.type, '-').concat(n.record.id));
     case _.h8.GUILD:
-      return (0, l.jsx)(w, {
+      return (0, l.jsx)(G, {
         id: this.getRowId(t),
         focused: i >= 0 && t === i,
         onClick: () => this.selectResult(n),

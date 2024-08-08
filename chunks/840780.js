@@ -20,8 +20,8 @@ var i = n(735250),
   N = n(317381),
   x = n(620662),
   S = n(835473),
-  Z = n(67212),
-  v = n(757454),
+  v = n(67212),
+  Z = n(757454),
   T = n(552740),
   L = n(933557),
   A = n(194082),
@@ -29,13 +29,13 @@ var i = n(735250),
   M = n(436774),
   R = n(730417),
   O = n(524347),
-  y = n(853197),
-  P = n(616360),
+  P = n(853197),
+  y = n(616360),
   j = n(858064),
   D = n(594190),
-  U = n(925329),
-  G = n(810568),
-  w = n(168524),
+  w = n(925329),
+  U = n(810568),
+  G = n(168524),
   k = n(569545),
   B = n(382182),
   H = n(74299),
@@ -89,7 +89,7 @@ message: t
 children: t
   });
 });
-class eZ extends l.PureComponent {
+class ev extends l.PureComponent {
   componentDidUpdate(e) {
 !e.dropsActivityPanelExperienceBlocked && this.props.dropsActivityPanelExperienceBlocked && this.setState({
   isDropsActivityPanelTooltipOpen: !1
@@ -165,7 +165,7 @@ return (0, i.jsx)(h.Popout, {
         'aria-label': eE.Z.Messages.DROPS_ENABLED,
         tooltipText: n ? null : eE.Z.Messages.DROPS_ENABLED,
         onClick: this.handleClickDropsButton,
-        icon: P.Z
+        icon: y.Z
       })
     ]
   })
@@ -254,7 +254,7 @@ return (0, i.jsxs)('div', {
     (0, i.jsxs)('div', {
       className: eN.gameIconWrapper,
       children: [
-        (0, i.jsx)(U.Z, {
+        (0, i.jsx)(w.Z, {
           className: eN.gameIcon,
           game: n,
           pid: null == l ? void 0 : l.pid
@@ -272,7 +272,7 @@ return (0, i.jsxs)('div', {
       }),
       children: null != r ? (0, i.jsxs)(i.Fragment, {
         children: [
-          (0, i.jsx)(ev, {
+          (0, i.jsx)(eZ, {
             name: r,
             applicationId: null == n ? void 0 : n.id
           }),
@@ -372,10 +372,10 @@ let c = (0, i.jsx)(Y.Z, {
 return (0, i.jsxs)('div', {
   className: eN.gameWrapper,
   children: [
-    (0, i.jsx)(U.Z, {
+    (0, i.jsx)(w.Z, {
       className: eN.gameIcon,
       game: t,
-      size: U.Z.Sizes.SMALL
+      size: w.Z.Sizes.SMALL
     }),
     (0, i.jsxs)('div', {
       className: eN.info,
@@ -429,7 +429,7 @@ super(...e), ex(this, 'modalKey', void 0), ex(this, 'state', {
   null != i && null != n && (null == e ? (0, m.tE)({
     channelId: i.id,
     pid: n.pid
-  }) : (0, Z.v$)((0, k.V9)(e), n.pid));
+  }) : (0, v.v$)((0, k.V9)(e), n.pid));
 }), ex(this, 'handleClickGoLiveButton', () => {
   let {
     guildId: e,
@@ -485,7 +485,7 @@ super(...e), ex(this, 'modalKey', void 0), ex(this, 'state', {
   } = this.props;
   if (null == e)
     return;
-  let i = (0, y.BS)(e);
+  let i = (0, P.BS)(e);
   null != i && (eu.default.track(eg.rMx.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
     user_id: n,
     drops_quest_id: i.dropsQuestId,
@@ -518,14 +518,14 @@ super(...e), ex(this, 'modalKey', void 0), ex(this, 'state', {
   }
 }
 
-function ev(e) {
+function eZ(e) {
   let {
 name: t,
 applicationId: n
-  } = e, l = (0, w.Z)({
+  } = e, l = (0, G.Z)({
 location: 'ActivityPanelGameCard',
 applicationId: n,
-source: G.m1.RtcPanel,
+source: U.m1.RtcPanel,
 trackEntryPointImpression: !0
   });
   return (0, i.jsx)(h.Clickable, {
@@ -555,7 +555,7 @@ J.Z.getStreamerActiveStreamMetadata()
 partnerGame: g,
 dropsActivityPanelExperienceBlocked: C,
 showDropsSparkles: E
-  } = (0, R.c)(eI.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), Z = (0, c.e7)([
+  } = (0, R.c)(eI.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), v = (0, c.e7)([
 et.Z,
 ei.Z,
 ee.ZP
@@ -566,11 +566,11 @@ if (null != a && null != a.id)
   return a.id;
 if (null != x)
   return x.applicationId;
-  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([en.Z], () => (0, H.Z)(en.Z) && (0, ed.isWindows)()), b = (0, c.e7)([el.Z], () => null != r ? el.Z.findActivity(r, e => e.type === eg.IIU.PLAYING) : null), M = null != p && p.ownerId === r && p.state !== eg.jm8.ENDED, y = (0, c.e7)([es.Z], () => es.Z.getBroadcast()), P = (0, v.Z)() && null != a, j = (0, c.e7)([
+  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([en.Z], () => (0, H.Z)(en.Z) && (0, ed.isWindows)()), b = (0, c.e7)([el.Z], () => null != r ? el.Z.findActivity(r, e => e.type === eg.IIU.PLAYING) : null), M = null != p && p.ownerId === r && p.state !== eg.jm8.ENDED, P = (0, c.e7)([es.Z], () => es.Z.getBroadcast()), y = (0, Z.Z)() && null != a, j = (0, c.e7)([
 eo.default,
 er.Z
-  ], () => null != d ? (0, L.F6)(d, eo.default, er.Z) : void 0), U = (0, K.Z)(null == s ? void 0 : s.id, r);
-  return (0, i.jsx)(eZ, {
+  ], () => null != d ? (0, L.F6)(d, eo.default, er.Z) : void 0), w = (0, K.Z)(null == s ? void 0 : s.id, r);
+  return (0, i.jsx)(ev, {
 ...l,
 guildId: n,
 canGoLive: A,
@@ -585,14 +585,14 @@ application: T,
 useReducedMotion: f,
 isStreaming: M,
 channel: d,
-canStream: Z,
+canStream: v,
 dropsTooltipAction: m,
 stream: p,
 streamMetadata: _,
-broadcast: y,
-canStartBroadcast: P,
+broadcast: P,
+canStartBroadcast: y,
 channelName: j,
 guildForConnectedChannel: h,
-streamQualityIndicator: U
+streamQualityIndicator: w
   });
 });

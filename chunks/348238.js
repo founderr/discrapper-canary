@@ -27,7 +27,7 @@ return M;
 return V;
   },
   bb: function() {
-return F;
+return G;
   },
   qo: function() {
 return j;
@@ -39,7 +39,7 @@ return D;
 return B;
   },
   tn: function() {
-return G;
+return F;
   },
   wq: function() {
 return U;
@@ -262,7 +262,7 @@ n
   ]);
 }
 
-function G(e, t, n) {
+function F(e, t, n) {
   let {
 canShowReactionsOnMessageHover: i
   } = S.Z.useExperiment({
@@ -289,7 +289,7 @@ handleMouseLeave: d
   };
 }
 
-function F(e, t) {
+function G(e, t) {
   let [n, i] = s.useState(!1), [a, r] = s.useState(!1), l = s.useCallback(t => {
 var n, s;
 let a = null !== (s = null === (n = (0, T.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;

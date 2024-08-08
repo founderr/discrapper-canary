@@ -51,7 +51,7 @@ let e = (0, u.rF)(A.guild.premium_subscription_count, A.guild.id);
 S.premiumTier = e;
   }
   let k = D ? p : g,
-G = (0, _.e)({
+F = (0, _.e)({
   isVoiceChannel: j,
   isOwnInvite: x,
   isGuest: y,
@@ -110,7 +110,7 @@ children: [
     guild: S
   }),
   (0, i.jsx)(l.Z.Header, {
-    text: G,
+    text: F,
     extra: C
   }),
   (0, i.jsxs)(l.Z.Body, {

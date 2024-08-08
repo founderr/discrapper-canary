@@ -1,585 +1,585 @@
-var e, r;
-e = 0, r = function() {
+var t, n;
+t = 0, n = function() {
 
-  function t(t, e) {
-var r = Object.keys(t);
+  function e(e, t) {
+var n = Object.keys(e);
 if (Object.getOwnPropertySymbols) {
-  var n = Object.getOwnPropertySymbols(t);
-  e && (n = n.filter(function(e) {
-    return Object.getOwnPropertyDescriptor(t, e).enumerable;
-  })), r.push.apply(r, n);
+  var r = Object.getOwnPropertySymbols(e);
+  t && (r = r.filter(function(t) {
+    return Object.getOwnPropertyDescriptor(e, t).enumerable;
+  })), n.push.apply(n, r);
 }
-return r;
+return n;
   }
 
-  function e(e) {
-for (var r = 1; r < arguments.length; r++) {
-  var n = null != arguments[r] ? arguments[r] : {};
-  r % 2 ? t(Object(n), !0).forEach(function(t) {
-    var r, i, a;
-    r = e, i = t, a = n[t], i in r ? Object.defineProperty(r, i, {
+  function t(t) {
+for (var n = 1; n < arguments.length; n++) {
+  var r = null != arguments[n] ? arguments[n] : {};
+  n % 2 ? e(Object(r), !0).forEach(function(e) {
+    var n, i, a;
+    n = t, i = e, a = r[e], i in n ? Object.defineProperty(n, i, {
       value: a,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : r[i] = a;
-  }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : t(Object(n)).forEach(function(t) {
-    Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+    }) : n[i] = a;
+  }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r)) : e(Object(r)).forEach(function(e) {
+    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
   });
 }
-return e;
+return t;
   }
 
-  function r(t, e) {
-if (null == t)
+  function n(e, t) {
+if (null == e)
   return {};
-var r, n, i = function(t, e) {
-  if (null == t)
+var n, r, i = function(e, t) {
+  if (null == e)
     return {};
-  var r, n, i = {},
-    a = Object.keys(t);
-  for (n = 0; n < a.length; n++)
-    r = a[n], e.indexOf(r) >= 0 || (i[r] = t[r]);
+  var n, r, i = {},
+    a = Object.keys(e);
+  for (r = 0; r < a.length; r++)
+    n = a[r], t.indexOf(n) >= 0 || (i[n] = e[n]);
   return i;
-}(t, e);
+}(e, t);
 if (Object.getOwnPropertySymbols) {
-  var a = Object.getOwnPropertySymbols(t);
-  for (n = 0; n < a.length; n++)
-    r = a[n], e.indexOf(r) >= 0 || Object.prototype.propertyIsEnumerable.call(t, r) && (i[r] = t[r]);
+  var a = Object.getOwnPropertySymbols(e);
+  for (r = 0; r < a.length; r++)
+    n = a[r], t.indexOf(n) >= 0 || Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
 }
 return i;
   }
 
-  function n(t, e) {
-return function(t) {
-  if (Array.isArray(t))
-    return t;
-}(t) || function(t, e) {
-  if (Symbol.iterator in Object(t) || '[object Arguments]' === Object.prototype.toString.call(t)) {
-    var r = [],
-      n = !0,
+  function r(e, t) {
+return function(e) {
+  if (Array.isArray(e))
+    return e;
+}(e) || function(e, t) {
+  if (Symbol.iterator in Object(e) || '[object Arguments]' === Object.prototype.toString.call(e)) {
+    var n = [],
+      r = !0,
       i = !1,
       a = void 0;
     try {
-      for (var o, s = t[Symbol.iterator](); !(n = (o = s.next()).done) && (r.push(o.value), !e || r.length !== e); n = !0);
-    } catch (t) {
-      i = !0, a = t;
+      for (var s, o = e[Symbol.iterator](); !(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t); r = !0);
+    } catch (e) {
+      i = !0, a = e;
     } finally {
       try {
-        n || null == s.return || s.return();
+        r || null == o.return || o.return();
       } finally {
         if (i)
           throw a;
       }
     }
-    return r;
+    return n;
   }
-}(t, e) || function() {
+}(e, t) || function() {
   throw TypeError('Invalid attempt to destructure non-iterable instance');
 }();
   }
 
-  function i(t) {
-return function(t) {
-  if (Array.isArray(t)) {
-    for (var e = 0, r = Array(t.length); e < t.length; e++)
-      r[e] = t[e];
-    return r;
+  function i(e) {
+return function(e) {
+  if (Array.isArray(e)) {
+    for (var t = 0, n = Array(e.length); t < e.length; t++)
+      n[t] = e[t];
+    return n;
   }
-}(t) || function(t) {
-  if (Symbol.iterator in Object(t) || '[object Arguments]' === Object.prototype.toString.call(t))
-    return Array.from(t);
-}(t) || function() {
+}(e) || function(e) {
+  if (Symbol.iterator in Object(e) || '[object Arguments]' === Object.prototype.toString.call(e))
+    return Array.from(e);
+}(e) || function() {
   throw TypeError('Invalid attempt to spread non-iterable instance');
 }();
   }
 
   function a() {
-var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
     serializable: !0
   },
-  e = {};
+  t = {};
 return {
-  get: function(r, n) {
+  get: function(n, r) {
     var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
         miss: function() {
           return Promise.resolve();
         }
       },
-      a = JSON.stringify(r);
-    if (a in e)
-      return Promise.resolve(t.serializable ? JSON.parse(e[a]) : e[a]);
-    var o = n(),
-      s = i && i.miss || function() {
+      a = JSON.stringify(n);
+    if (a in t)
+      return Promise.resolve(e.serializable ? JSON.parse(t[a]) : t[a]);
+    var s = r(),
+      o = i && i.miss || function() {
         return Promise.resolve();
       };
-    return o.then(function(t) {
-      return s(t);
+    return s.then(function(e) {
+      return o(e);
     }).then(function() {
-      return o;
+      return s;
     });
   },
-  set: function(r, n) {
-    return e[JSON.stringify(r)] = t.serializable ? JSON.stringify(n) : n, Promise.resolve(n);
+  set: function(n, r) {
+    return t[JSON.stringify(n)] = e.serializable ? JSON.stringify(r) : r, Promise.resolve(r);
   },
-  delete: function(t) {
-    return delete e[JSON.stringify(t)], Promise.resolve();
+  delete: function(e) {
+    return delete t[JSON.stringify(e)], Promise.resolve();
   },
   clear: function() {
-    return e = {}, Promise.resolve();
+    return t = {}, Promise.resolve();
   }
 };
   }
 
-  function o(t, e, r) {
-var n = {
-  'x-algolia-api-key': r,
-  'x-algolia-application-id': e
+  function s(e, t, n) {
+var r = {
+  'x-algolia-api-key': n,
+  'x-algolia-application-id': t
 };
 return {
   headers: function() {
-    return t === l.WithinHeaders ? n : {};
+    return e === d.WithinHeaders ? r : {};
   },
   queryParameters: function() {
-    return t === l.WithinQueryParameters ? n : {};
+    return e === d.WithinQueryParameters ? r : {};
   }
 };
   }
 
-  function s(t) {
-var e = 0;
-return t(function r() {
-  return e++, new Promise(function(n) {
+  function o(e) {
+var t = 0;
+return e(function n() {
+  return t++, new Promise(function(r) {
     setTimeout(function() {
-      n(t(r));
-    }, Math.min(100 * e, 1000));
+      r(e(n));
+    }, Math.min(100 * t, 1000));
   });
 });
   }
 
-  function u(t) {
-var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(t, e) {
+  function l(e) {
+var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(e, t) {
   return Promise.resolve();
 };
-return Object.assign(t, {
-  wait: function(r) {
-    return u(t.then(function(t) {
+return Object.assign(e, {
+  wait: function(n) {
+    return l(e.then(function(e) {
       return Promise.all([
-        e(t, r),
-        t
+        t(e, n),
+        e
       ]);
-    }).then(function(t) {
-      return t[1];
+    }).then(function(e) {
+      return e[1];
     }));
   }
 });
   }
 
-  function c(t, e) {
-return e && Object.keys(e).forEach(function(r) {
-  t[r] = e[r](t);
-}), t;
+  function u(e, t) {
+return t && Object.keys(t).forEach(function(n) {
+  e[n] = t[n](e);
+}), e;
   }
 
-  function h(t) {
-for (var e = arguments.length, r = Array(e > 1 ? e - 1 : 0), n = 1; n < e; n++)
-  r[n - 1] = arguments[n];
+  function c(e) {
+for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++)
+  n[r - 1] = arguments[r];
 var i = 0;
-return t.replace(/%s/g, function() {
-  return encodeURIComponent(r[i++]);
+return e.replace(/%s/g, function() {
+  return encodeURIComponent(n[i++]);
 });
   }
-  var l = {
+  var d = {
 WithinQueryParameters: 0,
 WithinHeaders: 1
   };
 
-  function f(t, e) {
-var r = t || {},
-  n = r.data || {};
-return Object.keys(r).forEach(function(t) {
+  function _(e, t) {
+var n = e || {},
+  r = n.data || {};
+return Object.keys(n).forEach(function(e) {
   -1 === [
     'timeout',
     'headers',
     'queryParameters',
     'data',
     'cacheable'
-  ].indexOf(t) && (n[t] = r[t]);
+  ].indexOf(e) && (r[e] = n[e]);
 }), {
-  data: Object.entries(n).length > 0 ? n : void 0,
-  timeout: r.timeout || e,
-  headers: r.headers || {},
-  queryParameters: r.queryParameters || {},
-  cacheable: r.cacheable
+  data: Object.entries(r).length > 0 ? r : void 0,
+  timeout: n.timeout || t,
+  headers: n.headers || {},
+  queryParameters: n.queryParameters || {},
+  cacheable: n.cacheable
 };
   }
-  var d = {
+  var E = {
 Read: 1,
 Write: 2,
 Any: 3
   };
 
-  function p(t) {
-var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-return e(e({}, t), {}, {
-  status: r,
+  function f(e) {
+var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+return t(t({}, e), {}, {
+  status: n,
   lastUpdate: Date.now()
 });
   }
 
-  function m(t) {
-return 'string' == typeof t ? {
+  function h(e) {
+return 'string' == typeof e ? {
   protocol: 'https',
-  url: t,
-  accept: d.Any
+  url: e,
+  accept: E.Any
 } : {
-  protocol: t.protocol || 'https',
-  url: t.url,
-  accept: t.accept || d.Any
+  protocol: e.protocol || 'https',
+  url: e.url,
+  accept: e.accept || E.Any
 };
   }
-  var g = 'DELETE',
-y = 'POST';
+  var p = 'DELETE',
+m = 'POST';
 
-  function v(t, r, n, a) {
-var o, s, u, c, h, l, f = [],
-  d = function(t, r) {
-    if ('GET' !== t.method && (void 0 !== t.data || void 0 !== r.data))
-      return JSON.stringify(Array.isArray(t.data) ? t.data : e(e({}, t.data), r.data));
-  }(n, a),
-  g = (o = t, s = a, u = e(e({}, o.headers), s.headers), c = {}, Object.keys(u).forEach(function(t) {
-    var e = u[t];
-    c[t.toLowerCase()] = e;
-  }), c),
-  y = n.method,
-  v = 'GET' !== n.method ? {} : e(e({}, n.data), a.data),
-  b = e(e(e({
-    'x-algolia-agent': t.userAgent.value
-  }, t.queryParameters), v), a.queryParameters),
-  w = 0,
-  T = function e(r, i) {
-    var o = r.pop();
-    if (void 0 === o)
+  function I(e, n, r, a) {
+var s, o, l, u, c, d, _ = [],
+  E = function(e, n) {
+    if ('GET' !== e.method && (void 0 !== e.data || void 0 !== n.data))
+      return JSON.stringify(Array.isArray(e.data) ? e.data : t(t({}, e.data), n.data));
+  }(r, a),
+  p = (s = e, o = a, l = t(t({}, s.headers), o.headers), u = {}, Object.keys(l).forEach(function(e) {
+    var t = l[e];
+    u[e.toLowerCase()] = t;
+  }), u),
+  m = r.method,
+  I = 'GET' !== r.method ? {} : t(t({}, r.data), a.data),
+  T = t(t(t({
+    'x-algolia-agent': e.userAgent.value
+  }, e.queryParameters), I), a.queryParameters),
+  N = 0,
+  v = function t(n, i) {
+    var s = n.pop();
+    if (void 0 === s)
       throw {
         name: 'RetryError',
         message: 'Unreachable hosts - your application id may be incorrect. If the error persists, contact support@algolia.com.',
-        transporterStackTrace: P(f)
+        transporterStackTrace: S(_)
       };
-    var s = {
-        data: d,
-        headers: g,
-        method: y,
-        url: function(t, e, r) {
-          var n = _(r),
-            i = ''.concat(t.protocol, '://').concat(t.url, '/').concat('/' === e.charAt(0) ? e.substr(1) : e);
-          return n.length && (i += '?'.concat(n)), i;
-        }(o, n.path, b),
-        connectTimeout: i(w, t.timeouts.connect),
-        responseTimeout: i(w, a.timeout)
+    var o = {
+        data: E,
+        headers: p,
+        method: m,
+        url: function(e, t, n) {
+          var r = g(n),
+            i = ''.concat(e.protocol, '://').concat(e.url, '/').concat('/' === t.charAt(0) ? t.substr(1) : t);
+          return r.length && (i += '?'.concat(r)), i;
+        }(s, r.path, T),
+        connectTimeout: i(N, e.timeouts.connect),
+        responseTimeout: i(N, a.timeout)
       },
-      u = function(t) {
-        var e = {
-          request: s,
-          response: t,
-          host: o,
-          triesLeft: r.length
+      l = function(e) {
+        var t = {
+          request: o,
+          response: e,
+          host: s,
+          triesLeft: n.length
         };
-        return f.push(e), e;
+        return _.push(t), t;
       },
-      c = {
-        onSuccess: function(t) {
-          return function(t) {
+      u = {
+        onSuccess: function(e) {
+          return function(e) {
             try {
-              return JSON.parse(t.content);
-            } catch (r) {
-              var e;
-              throw e = r.message, {
+              return JSON.parse(e.content);
+            } catch (n) {
+              var t;
+              throw t = n.message, {
                 name: 'DeserializationError',
-                message: e,
-                response: t
+                message: t,
+                response: e
               };
             }
-          }(t);
+          }(e);
         },
-        onRetry: function(n) {
-          var a = u(n);
-          return n.isTimedOut && w++, Promise.all([
-            t.logger.info('Retryable failure', x(a)),
-            t.hostsCache.set(o, p(o, n.isTimedOut ? 3 : 2))
+        onRetry: function(r) {
+          var a = l(r);
+          return r.isTimedOut && N++, Promise.all([
+            e.logger.info('Retryable failure', A(a)),
+            e.hostsCache.set(s, f(s, r.isTimedOut ? 3 : 2))
           ]).then(function() {
-            return e(r, i);
+            return t(n, i);
           });
         },
-        onFail: function(t) {
-          throw u(t),
-            function(t, e) {
-              var r = t.content,
-                n = t.status,
-                i = r;
+        onFail: function(e) {
+          throw l(e),
+            function(e, t) {
+              var n = e.content,
+                r = e.status,
+                i = n;
               try {
-                i = JSON.parse(r).message;
-              } catch (t) {}
+                i = JSON.parse(n).message;
+              } catch (e) {}
               return {
                 name: 'ApiError',
                 message: i,
-                status: n,
-                transporterStackTrace: e
+                status: r,
+                transporterStackTrace: t
               };
-            }(t, P(f));
+            }(e, S(_));
         }
       };
-    return t.requester.send(s).then(function(t) {
-      var e, r, n, i, a, o, s;
-      return e = t, r = c, (i = (n = e).status, n.isTimedOut || (o = (a = n).isTimedOut, s = a.status, !o && 0 == ~~s) || 2 != ~~(i / 100) && 4 != ~~(i / 100)) ? r.onRetry(e) : 2 == ~~(e.status / 100) ? r.onSuccess(e) : r.onFail(e);
+    return e.requester.send(o).then(function(e) {
+      var t, n, r, i, a, s, o;
+      return t = e, n = u, (i = (r = t).status, r.isTimedOut || (s = (a = r).isTimedOut, o = a.status, !s && 0 == ~~o) || 2 != ~~(i / 100) && 4 != ~~(i / 100)) ? n.onRetry(t) : 2 == ~~(t.status / 100) ? n.onSuccess(t) : n.onFail(t);
     });
   };
-return (h = t.hostsCache, Promise.all((l = r).map(function(t) {
-  return h.get(t, function() {
-    return Promise.resolve(p(t));
+return (c = e.hostsCache, Promise.all((d = n).map(function(e) {
+  return c.get(e, function() {
+    return Promise.resolve(f(e));
   });
-})).then(function(t) {
-  var e = t.filter(function(t) {
-      var e;
-      return 1 === (e = t).status || Date.now() - e.lastUpdate > 120000;
+})).then(function(e) {
+  var t = e.filter(function(e) {
+      var t;
+      return 1 === (t = e).status || Date.now() - t.lastUpdate > 120000;
     }),
-    r = t.filter(function(t) {
-      var e;
-      return 3 === (e = t).status && Date.now() - e.lastUpdate <= 120000;
+    n = e.filter(function(e) {
+      var t;
+      return 3 === (t = e).status && Date.now() - t.lastUpdate <= 120000;
     }),
-    n = [].concat(i(e), i(r));
+    r = [].concat(i(t), i(n));
   return {
-    getTimeout: function(t, e) {
-      return (0 === r.length && 0 === t ? 1 : r.length + 3 + t) * e;
+    getTimeout: function(e, t) {
+      return (0 === n.length && 0 === e ? 1 : n.length + 3 + e) * t;
     },
-    statelessHosts: n.length > 0 ? n.map(function(t) {
-      return m(t);
-    }) : l
+    statelessHosts: r.length > 0 ? r.map(function(e) {
+      return h(e);
+    }) : d
   };
-})).then(function(t) {
-  return T(i(t.statelessHosts).reverse(), t.getTimeout);
+})).then(function(e) {
+  return v(i(e.statelessHosts).reverse(), e.getTimeout);
 });
   }
 
-  function b(t) {
-var e = t.hostsCache,
-  r = t.logger,
-  i = t.requester,
-  a = t.requestsCache,
-  o = t.responsesCache,
-  s = t.timeouts,
-  u = t.userAgent,
-  c = t.hosts,
-  h = t.queryParameters,
-  l = {
-    hostsCache: e,
-    logger: r,
+  function T(e) {
+var t = e.hostsCache,
+  n = e.logger,
+  i = e.requester,
+  a = e.requestsCache,
+  s = e.responsesCache,
+  o = e.timeouts,
+  l = e.userAgent,
+  u = e.hosts,
+  c = e.queryParameters,
+  d = {
+    hostsCache: t,
+    logger: n,
     requester: i,
     requestsCache: a,
-    responsesCache: o,
-    timeouts: s,
-    userAgent: u,
-    headers: t.headers,
-    queryParameters: h,
-    hosts: c.map(function(t) {
-      return m(t);
+    responsesCache: s,
+    timeouts: o,
+    userAgent: l,
+    headers: e.headers,
+    queryParameters: c,
+    hosts: u.map(function(e) {
+      return h(e);
     }),
-    read: function(t, e) {
-      var r = f(e, l.timeouts.read),
+    read: function(e, t) {
+      var n = _(t, d.timeouts.read),
         i = function() {
-          return v(l, l.hosts.filter(function(t) {
-            return 0 != (t.accept & d.Read);
-          }), t, r);
+          return I(d, d.hosts.filter(function(e) {
+            return 0 != (e.accept & E.Read);
+          }), e, n);
         };
-      if (!0 !== (void 0 !== r.cacheable ? r.cacheable : t.cacheable))
+      if (!0 !== (void 0 !== n.cacheable ? n.cacheable : e.cacheable))
         return i();
       var a = {
-        request: t,
-        mappedRequestOptions: r,
+        request: e,
+        mappedRequestOptions: n,
         transporter: {
-          queryParameters: l.queryParameters,
-          headers: l.headers
+          queryParameters: d.queryParameters,
+          headers: d.headers
         }
       };
-      return l.responsesCache.get(a, function() {
-        return l.requestsCache.get(a, function() {
-          return l.requestsCache.set(a, i()).then(function(t) {
+      return d.responsesCache.get(a, function() {
+        return d.requestsCache.get(a, function() {
+          return d.requestsCache.set(a, i()).then(function(e) {
             return Promise.all([
-              l.requestsCache.delete(a),
-              t
+              d.requestsCache.delete(a),
+              e
             ]);
-          }, function(t) {
+          }, function(e) {
             return Promise.all([
-              l.requestsCache.delete(a),
-              Promise.reject(t)
+              d.requestsCache.delete(a),
+              Promise.reject(e)
             ]);
-          }).then(function(t) {
-            var e = n(t, 2);
-            return e[0], e[1];
+          }).then(function(e) {
+            var t = r(e, 2);
+            return t[0], t[1];
           });
         });
       }, {
-        miss: function(t) {
-          return l.responsesCache.set(a, t);
+        miss: function(e) {
+          return d.responsesCache.set(a, e);
         }
       });
     },
-    write: function(t, e) {
-      return v(l, l.hosts.filter(function(t) {
-        return 0 != (t.accept & d.Write);
-      }), t, f(e, l.timeouts.write));
+    write: function(e, t) {
+      return I(d, d.hosts.filter(function(e) {
+        return 0 != (e.accept & E.Write);
+      }), e, _(t, d.timeouts.write));
     }
   };
-return l;
+return d;
   }
 
-  function _(t) {
-return Object.keys(t).map(function(e) {
-  var r;
-  return h('%s=%s', e, (r = t[e], '[object Object]' === Object.prototype.toString.call(r) || '[object Array]' === Object.prototype.toString.call(r) ? JSON.stringify(t[e]) : t[e]));
+  function g(e) {
+return Object.keys(e).map(function(t) {
+  var n;
+  return c('%s=%s', t, (n = e[t], '[object Object]' === Object.prototype.toString.call(n) || '[object Array]' === Object.prototype.toString.call(n) ? JSON.stringify(e[t]) : e[t]));
 }).join('&');
   }
 
-  function P(t) {
-return t.map(function(t) {
-  return x(t);
+  function S(e) {
+return e.map(function(e) {
+  return A(e);
 });
   }
 
-  function x(t) {
-var r = t.request.headers['x-algolia-api-key'] ? {
+  function A(e) {
+var n = e.request.headers['x-algolia-api-key'] ? {
   'x-algolia-api-key': '*****'
 } : {};
-return e(e({}, t), {}, {
-  request: e(e({}, t.request), {}, {
-    headers: e(e({}, t.request.headers), r)
+return t(t({}, e), {}, {
+  request: t(t({}, e.request), {}, {
+    headers: t(t({}, e.request.headers), n)
   })
 });
   }
-  var w = function(t) {
-  return function(e, r) {
-    return t.transporter.write({
-      method: y,
+  var N = function(e) {
+  return function(t, n) {
+    return e.transporter.write({
+      method: m,
       path: '2/abtests',
-      data: e
-    }, r);
+      data: t
+    }, n);
   };
 },
-T = function(t) {
-  return function(e, r) {
-    return t.transporter.write({
-      method: g,
-      path: h('2/abtests/%s', e)
-    }, r);
+v = function(e) {
+  return function(t, n) {
+    return e.transporter.write({
+      method: p,
+      path: c('2/abtests/%s', t)
+    }, n);
   };
 },
-S = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
+O = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
       method: 'GET',
-      path: h('2/abtests/%s', e)
-    }, r);
+      path: c('2/abtests/%s', t)
+    }, n);
   };
 },
-O = function(t) {
-  return function(e) {
-    return t.transporter.read({
+R = function(e) {
+  return function(t) {
+    return e.transporter.read({
       method: 'GET',
       path: '2/abtests'
-    }, e);
+    }, t);
   };
 },
-I = function(t) {
-  return function(e, r) {
-    return t.transporter.write({
-      method: y,
-      path: h('2/abtests/%s/stop', e)
-    }, r);
+C = function(e) {
+  return function(t, n) {
+    return e.transporter.write({
+      method: m,
+      path: c('2/abtests/%s/stop', t)
+    }, n);
   };
 },
-D = function(t) {
-  return function(e) {
-    return t.transporter.read({
+y = function(e) {
+  return function(t) {
+    return e.transporter.read({
       method: 'GET',
       path: '1/strategies/personalization'
-    }, e);
+    }, t);
   };
 },
-j = function(t) {
-  return function(e, r) {
-    return t.transporter.write({
-      method: y,
+D = function(e) {
+  return function(t, n) {
+    return e.transporter.write({
+      method: m,
       path: '1/strategies/personalization',
-      data: e
-    }, r);
+      data: t
+    }, n);
   };
 };
 
-  function k(t) {
-return function e(r) {
-  return t.request(r).then(function(n) {
-    if (void 0 !== t.batch && t.batch(n.hits), !t.shouldStop(n))
-      return n.cursor ? e({
-        cursor: n.cursor
-      }) : e({
-        page: (r.page || 0) + 1
+  function L(e) {
+return function t(n) {
+  return e.request(n).then(function(r) {
+    if (void 0 !== e.batch && e.batch(r.hits), !e.shouldStop(r))
+      return r.cursor ? t({
+        cursor: r.cursor
+      }) : t({
+        page: (n.page || 0) + 1
       });
   });
 }({});
   }
-  var q = function(t) {
-  return function(n, i) {
+  var b = function(e) {
+  return function(r, i) {
     var a = i || {},
-      o = a.queryParameters,
-      c = r(a, ['queryParameters']),
-      h = e({
-        acl: n
-      }, void 0 !== o ? {
-        queryParameters: o
+      s = a.queryParameters,
+      u = n(a, ['queryParameters']),
+      c = t({
+        acl: r
+      }, void 0 !== s ? {
+        queryParameters: s
       } : {});
-    return u(t.transporter.write({
-      method: y,
+    return l(e.transporter.write({
+      method: m,
       path: '1/keys',
-      data: h
-    }, c), function(e, r) {
-      return s(function(n) {
-        return V(t)(e.key, r).catch(function(t) {
-          if (404 !== t.status)
-            throw t;
-          return n();
+      data: c
+    }, u), function(t, n) {
+      return o(function(r) {
+        return H(e)(t.key, n).catch(function(e) {
+          if (404 !== e.status)
+            throw e;
+          return r();
         });
       });
     });
   };
 },
-E = function(t) {
-  return function(e, r, n) {
-    var i = f(n);
-    return i.queryParameters['X-Algolia-User-ID'] = e, t.transporter.write({
-      method: y,
+M = function(e) {
+  return function(t, n, r) {
+    var i = _(r);
+    return i.queryParameters['X-Algolia-User-ID'] = t, e.transporter.write({
+      method: m,
       path: '1/clusters/mapping',
       data: {
-        cluster: r
+        cluster: n
       }
     }, i);
   };
 },
-R = function(t) {
-  return function(e, r, n) {
-    return t.transporter.write({
-      method: y,
+P = function(e) {
+  return function(t, n, r) {
+    return e.transporter.write({
+      method: m,
       path: '1/clusters/mapping/batch',
       data: {
-        users: e,
-        cluster: r
+        users: t,
+        cluster: n
       }
-    }, n);
+    }, r);
   };
 },
-N = function(t) {
-  return function(e, r) {
-    return u(t.transporter.write({
-      method: y,
-      path: h('/1/dictionaries/%s/batch', e),
+U = function(e) {
+  return function(t, n) {
+    return l(e.transporter.write({
+      method: m,
+      path: c('/1/dictionaries/%s/batch', t),
       data: {
         clearExistingDictionaryEntries: !0,
         requests: {
@@ -587,382 +587,382 @@ N = function(t) {
           body: []
         }
       }
-    }, r), function(e, r) {
-      return td(t)(e.taskID, r);
+    }, n), function(t, n) {
+      return eE(e)(t.taskID, n);
     });
   };
 },
-A = function(t) {
-  return function(e, r, n) {
-    return u(t.transporter.write({
-      method: y,
-      path: h('1/indexes/%s/operation', e),
+w = function(e) {
+  return function(t, n, r) {
+    return l(e.transporter.write({
+      method: m,
+      path: c('1/indexes/%s/operation', t),
       data: {
         operation: 'copy',
-        destination: r
+        destination: n
       }
-    }, n), function(r, n) {
-      return Q(t)(e, {
+    }, r), function(n, r) {
+      return q(e)(t, {
         methods: {
-          waitTask: tZ
+          waitTask: eJ
         }
-      }).waitTask(r.taskID, n);
+      }).waitTask(n.taskID, r);
     });
   };
 },
-C = function(t) {
-  return function(r, n, i) {
-    return A(t)(r, n, e(e({}, i), {}, {
-      scope: [t1.Rules]
+x = function(e) {
+  return function(n, r, i) {
+    return w(e)(n, r, t(t({}, i), {}, {
+      scope: [e1.Rules]
     }));
   };
 },
-G = function(t) {
-  return function(r, n, i) {
-    return A(t)(r, n, e(e({}, i), {}, {
-      scope: [t1.Settings]
+G = function(e) {
+  return function(n, r, i) {
+    return w(e)(n, r, t(t({}, i), {}, {
+      scope: [e1.Settings]
     }));
   };
 },
-U = function(t) {
-  return function(r, n, i) {
-    return A(t)(r, n, e(e({}, i), {}, {
-      scope: [t1.Synonyms]
+k = function(e) {
+  return function(n, r, i) {
+    return w(e)(n, r, t(t({}, i), {}, {
+      scope: [e1.Synonyms]
     }));
   };
 },
-M = function(t) {
-  return function(e, r) {
-    return 'GET' === e.method ? t.transporter.read(e, r) : t.transporter.write(e, r);
+B = function(e) {
+  return function(t, n) {
+    return 'GET' === t.method ? e.transporter.read(t, n) : e.transporter.write(t, n);
   };
 },
-L = function(t) {
-  return function(e, r) {
-    return u(t.transporter.write({
-      method: g,
-      path: h('1/keys/%s', e)
-    }, r), function(r, n) {
-      return s(function(r) {
-        return V(t)(e, n).then(r).catch(function(t) {
-          if (404 !== t.status)
-            throw t;
+F = function(e) {
+  return function(t, n) {
+    return l(e.transporter.write({
+      method: p,
+      path: c('1/keys/%s', t)
+    }, n), function(n, r) {
+      return o(function(n) {
+        return H(e)(t, r).then(n).catch(function(e) {
+          if (404 !== e.status)
+            throw e;
         });
       });
     });
   };
 },
-z = function(t) {
-  return function(e, r, n) {
-    var i = r.map(function(t) {
+V = function(e) {
+  return function(t, n, r) {
+    var i = n.map(function(e) {
       return {
         action: 'deleteEntry',
         body: {
-          objectID: t
+          objectID: e
         }
       };
     });
-    return u(t.transporter.write({
-      method: y,
-      path: h('/1/dictionaries/%s/batch', e),
+    return l(e.transporter.write({
+      method: m,
+      path: c('/1/dictionaries/%s/batch', t),
       data: {
         clearExistingDictionaryEntries: !1,
         requests: i
       }
-    }, n), function(e, r) {
-      return td(t)(e.taskID, r);
+    }, r), function(t, n) {
+      return eE(e)(t.taskID, n);
     });
   };
 },
-V = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
+H = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
       method: 'GET',
-      path: h('1/keys/%s', e)
-    }, r);
+      path: c('1/keys/%s', t)
+    }, n);
   };
 },
-F = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
+Z = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
       method: 'GET',
-      path: h('1/task/%s', e.toString())
-    }, r);
+      path: c('1/task/%s', t.toString())
+    }, n);
   };
 },
-J = function(t) {
-  return function(e) {
-    return t.transporter.read({
+Y = function(e) {
+  return function(t) {
+    return e.transporter.read({
       method: 'GET',
       path: '/1/dictionaries/*/settings'
-    }, e);
+    }, t);
   };
 },
-B = function(t) {
-  return function(e) {
-    return t.transporter.read({
+j = function(e) {
+  return function(t) {
+    return e.transporter.read({
       method: 'GET',
       path: '1/logs'
-    }, e);
+    }, t);
   };
 },
-W = function(t) {
-  return function(e) {
-    return t.transporter.read({
+W = function(e) {
+  return function(t) {
+    return e.transporter.read({
       method: 'GET',
       path: '1/clusters/mapping/top'
-    }, e);
+    }, t);
   };
 },
-H = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
+K = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
       method: 'GET',
-      path: h('1/clusters/mapping/%s', e)
-    }, r);
+      path: c('1/clusters/mapping/%s', t)
+    }, n);
   };
 },
-K = function(t) {
-  return function(e) {
-    var n = e || {},
-      i = n.retrieveMappings,
-      a = r(n, ['retrieveMappings']);
-    return !0 === i && (a.getClusters = !0), t.transporter.read({
+z = function(e) {
+  return function(t) {
+    var r = t || {},
+      i = r.retrieveMappings,
+      a = n(r, ['retrieveMappings']);
+    return !0 === i && (a.getClusters = !0), e.transporter.read({
       method: 'GET',
       path: '1/clusters/mapping/pending'
     }, a);
   };
 },
-Q = function(t) {
-  return function(e) {
-    var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return c({
-      transporter: t.transporter,
-      appId: t.appId,
-      indexName: e
-    }, r.methods);
+q = function(e) {
+  return function(t) {
+    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return u({
+      transporter: e.transporter,
+      appId: e.appId,
+      indexName: t
+    }, n.methods);
   };
 },
-X = function(t) {
-  return function(e) {
-    return t.transporter.read({
+Q = function(e) {
+  return function(t) {
+    return e.transporter.read({
       method: 'GET',
       path: '1/keys'
-    }, e);
+    }, t);
   };
 },
-$ = function(t) {
-  return function(e) {
-    return t.transporter.read({
+X = function(e) {
+  return function(t) {
+    return e.transporter.read({
       method: 'GET',
       path: '1/clusters'
-    }, e);
+    }, t);
   };
 },
-Y = function(t) {
-  return function(e) {
-    return t.transporter.read({
+$ = function(e) {
+  return function(t) {
+    return e.transporter.read({
       method: 'GET',
       path: '1/indexes'
-    }, e);
+    }, t);
   };
 },
-Z = function(t) {
-  return function(e) {
-    return t.transporter.read({
+J = function(e) {
+  return function(t) {
+    return e.transporter.read({
       method: 'GET',
       path: '1/clusters/mapping'
-    }, e);
+    }, t);
   };
 },
-tt = function(t) {
-  return function(e, r, n) {
-    return u(t.transporter.write({
-      method: y,
-      path: h('1/indexes/%s/operation', e),
+ee = function(e) {
+  return function(t, n, r) {
+    return l(e.transporter.write({
+      method: m,
+      path: c('1/indexes/%s/operation', t),
       data: {
         operation: 'move',
-        destination: r
+        destination: n
       }
-    }, n), function(r, n) {
-      return Q(t)(e, {
+    }, r), function(n, r) {
+      return q(e)(t, {
         methods: {
-          waitTask: tZ
+          waitTask: eJ
         }
-      }).waitTask(r.taskID, n);
+      }).waitTask(n.taskID, r);
     });
   };
 },
-te = function(t) {
-  return function(e, r) {
-    return u(t.transporter.write({
-      method: y,
+et = function(e) {
+  return function(t, n) {
+    return l(e.transporter.write({
+      method: m,
       path: '1/indexes/*/batch',
       data: {
-        requests: e
+        requests: t
       }
-    }, r), function(e, r) {
-      return Promise.all(Object.keys(e.taskID).map(function(n) {
-        return Q(t)(n, {
+    }, n), function(t, n) {
+      return Promise.all(Object.keys(t.taskID).map(function(r) {
+        return q(e)(r, {
           methods: {
-            waitTask: tZ
+            waitTask: eJ
           }
-        }).waitTask(e.taskID[n], r);
+        }).waitTask(t.taskID[r], n);
       }));
     });
   };
 },
-tr = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
-      method: y,
+en = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
+      method: m,
       path: '1/indexes/*/objects',
       data: {
-        requests: e
+        requests: t
       }
-    }, r);
+    }, n);
   };
 },
-tn = function(t) {
-  return function(r, n) {
-    var i = r.map(function(t) {
-      return e(e({}, t), {}, {
-        params: _(t.params || {})
+er = function(e) {
+  return function(n, r) {
+    var i = n.map(function(e) {
+      return t(t({}, e), {}, {
+        params: g(e.params || {})
       });
     });
-    return t.transporter.read({
-      method: y,
+    return e.transporter.read({
+      method: m,
       path: '1/indexes/*/queries',
       data: {
         requests: i
       },
       cacheable: !0
-    }, n);
+    }, r);
   };
 },
-ti = function(t) {
-  return function(n, i) {
-    return Promise.all(n.map(function(n) {
-      var a = n.params,
-        o = a.facetName,
-        s = a.facetQuery,
-        u = r(a, [
+ei = function(e) {
+  return function(r, i) {
+    return Promise.all(r.map(function(r) {
+      var a = r.params,
+        s = a.facetName,
+        o = a.facetQuery,
+        l = n(a, [
           'facetName',
           'facetQuery'
         ]);
-      return Q(t)(n.indexName, {
+      return q(e)(r.indexName, {
         methods: {
-          searchForFacetValues: tQ
+          searchForFacetValues: eq
         }
-      }).searchForFacetValues(o, s, e(e({}, i), u));
+      }).searchForFacetValues(s, o, t(t({}, i), l));
     }));
   };
 },
-ta = function(t) {
-  return function(e, r) {
-    var n = f(r);
-    return n.queryParameters['X-Algolia-User-ID'] = e, t.transporter.write({
-      method: g,
+ea = function(e) {
+  return function(t, n) {
+    var r = _(n);
+    return r.queryParameters['X-Algolia-User-ID'] = t, e.transporter.write({
+      method: p,
       path: '1/clusters/mapping'
-    }, n);
+    }, r);
   };
 },
-to = function(t) {
-  return function(e, r, n) {
-    var i = r.map(function(t) {
+es = function(e) {
+  return function(t, n, r) {
+    var i = n.map(function(e) {
       return {
         action: 'addEntry',
-        body: t
+        body: e
       };
     });
-    return u(t.transporter.write({
-      method: y,
-      path: h('/1/dictionaries/%s/batch', e),
+    return l(e.transporter.write({
+      method: m,
+      path: c('/1/dictionaries/%s/batch', t),
       data: {
         clearExistingDictionaryEntries: !0,
         requests: i
       }
-    }, n), function(e, r) {
-      return td(t)(e.taskID, r);
+    }, r), function(t, n) {
+      return eE(e)(t.taskID, n);
     });
   };
 },
-ts = function(t) {
-  return function(e, r) {
-    return u(t.transporter.write({
-      method: y,
-      path: h('1/keys/%s/restore', e)
-    }, r), function(r, n) {
-      return s(function(r) {
-        return V(t)(e, n).catch(function(t) {
-          if (404 !== t.status)
-            throw t;
-          return r();
+eo = function(e) {
+  return function(t, n) {
+    return l(e.transporter.write({
+      method: m,
+      path: c('1/keys/%s/restore', t)
+    }, n), function(n, r) {
+      return o(function(n) {
+        return H(e)(t, r).catch(function(e) {
+          if (404 !== e.status)
+            throw e;
+          return n();
         });
       });
     });
   };
 },
-tu = function(t) {
-  return function(e, r, n) {
-    var i = r.map(function(t) {
+el = function(e) {
+  return function(t, n, r) {
+    var i = n.map(function(e) {
       return {
         action: 'addEntry',
-        body: t
+        body: e
       };
     });
-    return u(t.transporter.write({
-      method: y,
-      path: h('/1/dictionaries/%s/batch', e),
+    return l(e.transporter.write({
+      method: m,
+      path: c('/1/dictionaries/%s/batch', t),
       data: {
         clearExistingDictionaryEntries: !1,
         requests: i
       }
-    }, n), function(e, r) {
-      return td(t)(e.taskID, r);
+    }, r), function(t, n) {
+      return eE(e)(t.taskID, n);
     });
   };
 },
-tc = function(t) {
-  return function(e, r, n) {
-    return t.transporter.read({
-      method: y,
-      path: h('/1/dictionaries/%s/search', e),
+eu = function(e) {
+  return function(t, n, r) {
+    return e.transporter.read({
+      method: m,
+      path: c('/1/dictionaries/%s/search', t),
       data: {
-        query: r
+        query: n
       },
       cacheable: !0
-    }, n);
-  };
-},
-th = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
-      method: y,
-      path: '1/clusters/mapping/search',
-      data: {
-        query: e
-      }
     }, r);
   };
 },
-tl = function(t) {
-  return function(e, r) {
-    return u(t.transporter.write({
+ec = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
+      method: m,
+      path: '1/clusters/mapping/search',
+      data: {
+        query: t
+      }
+    }, n);
+  };
+},
+ed = function(e) {
+  return function(t, n) {
+    return l(e.transporter.write({
       method: 'PUT',
       path: '/1/dictionaries/*/settings',
-      data: e
-    }, r), function(e, r) {
-      return td(t)(e.taskID, r);
+      data: t
+    }, n), function(t, n) {
+      return eE(e)(t.taskID, n);
     });
   };
 },
-tf = function(t) {
-  return function(e, n) {
-    var i = Object.assign({}, n),
-      a = n || {},
-      o = a.queryParameters,
-      c = r(a, ['queryParameters']),
-      l = [
+e_ = function(e) {
+  return function(t, r) {
+    var i = Object.assign({}, r),
+      a = r || {},
+      s = a.queryParameters,
+      u = n(a, ['queryParameters']),
+      d = [
         'acl',
         'indexes',
         'referers',
@@ -972,86 +972,86 @@ tf = function(t) {
         'maxQueriesPerIPPerHour',
         'maxHitsPerQuery'
       ];
-    return u(t.transporter.write({
+    return l(e.transporter.write({
       method: 'PUT',
-      path: h('1/keys/%s', e),
-      data: o ? {
-        queryParameters: o
+      path: c('1/keys/%s', t),
+      data: s ? {
+        queryParameters: s
       } : {}
-    }, c), function(r, n) {
-      return s(function(r) {
-        return V(t)(e, n).then(function(t) {
-          var e;
-          return (e = t, Object.keys(i).filter(function(t) {
-            return -1 !== l.indexOf(t);
-          }).every(function(t) {
-            if (Array.isArray(e[t]) && Array.isArray(i[t])) {
-              var r = e[t];
-              return r.length === i[t].length && r.every(function(e, r) {
-                return e === i[t][r];
+    }, u), function(n, r) {
+      return o(function(n) {
+        return H(e)(t, r).then(function(e) {
+          var t;
+          return (t = e, Object.keys(i).filter(function(e) {
+            return -1 !== d.indexOf(e);
+          }).every(function(e) {
+            if (Array.isArray(t[e]) && Array.isArray(i[e])) {
+              var n = t[e];
+              return n.length === i[e].length && n.every(function(t, n) {
+                return t === i[e][n];
               });
             }
-            return e[t] === i[t];
-          })) ? Promise.resolve() : r();
+            return t[e] === i[e];
+          })) ? Promise.resolve() : n();
         });
       });
     });
   };
 },
-td = function(t) {
-  return function(e, r) {
-    return s(function(n) {
-      return F(t)(e, r).then(function(t) {
-        return 'published' !== t.status ? n() : void 0;
+eE = function(e) {
+  return function(t, n) {
+    return o(function(r) {
+      return Z(e)(t, n).then(function(e) {
+        return 'published' !== e.status ? r() : void 0;
       });
     });
   };
 },
-tp = function(t) {
-  return function(e, r) {
-    return u(t.transporter.write({
-      method: y,
-      path: h('1/indexes/%s/batch', t.indexName),
+ef = function(e) {
+  return function(t, n) {
+    return l(e.transporter.write({
+      method: m,
+      path: c('1/indexes/%s/batch', e.indexName),
       data: {
-        requests: e
+        requests: t
       }
-    }, r), function(e, r) {
-      return tZ(t)(e.taskID, r);
+    }, n), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tm = function(t) {
-  return function(r) {
-    return k(e(e({
-      shouldStop: function(t) {
-        return void 0 === t.cursor;
+eh = function(e) {
+  return function(n) {
+    return L(t(t({
+      shouldStop: function(e) {
+        return void 0 === e.cursor;
+      }
+    }, n), {}, {
+      request: function(t) {
+        return e.transporter.read({
+          method: m,
+          path: c('1/indexes/%s/browse', e.indexName),
+          data: t
+        }, n);
+      }
+    }));
+  };
+},
+ep = function(e) {
+  return function(n) {
+    var r = t({
+      hitsPerPage: 1000
+    }, n);
+    return L(t(t({
+      shouldStop: function(e) {
+        return e.hits.length < r.hitsPerPage;
       }
     }, r), {}, {
-      request: function(e) {
-        return t.transporter.read({
-          method: y,
-          path: h('1/indexes/%s/browse', t.indexName),
-          data: e
-        }, r);
-      }
-    }));
-  };
-},
-tg = function(t) {
-  return function(r) {
-    var n = e({
-      hitsPerPage: 1000
-    }, r);
-    return k(e(e({
-      shouldStop: function(t) {
-        return t.hits.length < n.hitsPerPage;
-      }
-    }, n), {}, {
-      request: function(r) {
-        return tX(t)('', e(e({}, n), r)).then(function(t) {
-          return e(e({}, t), {}, {
-            hits: t.hits.map(function(t) {
-              return delete t._highlightResult, t;
+      request: function(n) {
+        return eQ(e)('', t(t({}, r), n)).then(function(e) {
+          return t(t({}, e), {}, {
+            hits: e.hits.map(function(e) {
+              return delete e._highlightResult, e;
             })
           });
         });
@@ -1059,21 +1059,21 @@ tg = function(t) {
     }));
   };
 },
-ty = function(t) {
-  return function(r) {
-    var n = e({
+em = function(e) {
+  return function(n) {
+    var r = t({
       hitsPerPage: 1000
-    }, r);
-    return k(e(e({
-      shouldStop: function(t) {
-        return t.hits.length < n.hitsPerPage;
+    }, n);
+    return L(t(t({
+      shouldStop: function(e) {
+        return e.hits.length < r.hitsPerPage;
       }
-    }, n), {}, {
-      request: function(r) {
-        return t$(t)('', e(e({}, n), r)).then(function(t) {
-          return e(e({}, t), {}, {
-            hits: t.hits.map(function(t) {
-              return delete t._highlightResult, t;
+    }, r), {}, {
+      request: function(n) {
+        return eX(e)('', t(t({}, r), n)).then(function(e) {
+          return t(t({}, e), {}, {
+            hits: e.hits.map(function(e) {
+              return delete e._highlightResult, e;
             })
           });
         });
@@ -1081,1044 +1081,1044 @@ ty = function(t) {
     }));
   };
 },
-tv = function(t) {
-  return function(e, n, i) {
+eI = function(e) {
+  return function(t, r, i) {
     var a = i || {},
-      o = a.batchSize,
-      s = r(a, ['batchSize']),
-      c = {
+      s = a.batchSize,
+      o = n(a, ['batchSize']),
+      u = {
         taskIDs: [],
         objectIDs: []
       };
-    return u(function r() {
+    return l(function n() {
       var i, a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-        u = [];
-      for (i = a; i < e.length && (u.push(e[i]), u.length !== (o || 1000)); i++);
-      return 0 === u.length ? Promise.resolve(c) : tp(t)(u.map(function(t) {
+        l = [];
+      for (i = a; i < t.length && (l.push(t[i]), l.length !== (s || 1000)); i++);
+      return 0 === l.length ? Promise.resolve(u) : ef(e)(l.map(function(e) {
         return {
-          action: n,
-          body: t
+          action: r,
+          body: e
         };
-      }), s).then(function(t) {
-        return c.objectIDs = c.objectIDs.concat(t.objectIDs), c.taskIDs.push(t.taskID), r(++i);
+      }), o).then(function(e) {
+        return u.objectIDs = u.objectIDs.concat(e.objectIDs), u.taskIDs.push(e.taskID), n(++i);
       });
-    }(), function(e, r) {
-      return Promise.all(e.taskIDs.map(function(e) {
-        return tZ(t)(e, r);
+    }(), function(t, n) {
+      return Promise.all(t.taskIDs.map(function(t) {
+        return eJ(e)(t, n);
       }));
     });
   };
 },
-tb = function(t) {
-  return function(e) {
-    return u(t.transporter.write({
-      method: y,
-      path: h('1/indexes/%s/clear', t.indexName)
-    }, e), function(e, r) {
-      return tZ(t)(e.taskID, r);
+eT = function(e) {
+  return function(t) {
+    return l(e.transporter.write({
+      method: m,
+      path: c('1/indexes/%s/clear', e.indexName)
+    }, t), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-t_ = function(t) {
-  return function(e) {
-    var n = e || {},
-      i = n.forwardToReplicas,
-      a = f(r(n, ['forwardToReplicas']));
-    return i && (a.queryParameters.forwardToReplicas = 1), u(t.transporter.write({
-      method: y,
-      path: h('1/indexes/%s/rules/clear', t.indexName)
-    }, a), function(e, r) {
-      return tZ(t)(e.taskID, r);
+eg = function(e) {
+  return function(t) {
+    var r = t || {},
+      i = r.forwardToReplicas,
+      a = _(n(r, ['forwardToReplicas']));
+    return i && (a.queryParameters.forwardToReplicas = 1), l(e.transporter.write({
+      method: m,
+      path: c('1/indexes/%s/rules/clear', e.indexName)
+    }, a), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tP = function(t) {
-  return function(e) {
-    var n = e || {},
-      i = n.forwardToReplicas,
-      a = f(r(n, ['forwardToReplicas']));
-    return i && (a.queryParameters.forwardToReplicas = 1), u(t.transporter.write({
-      method: y,
-      path: h('1/indexes/%s/synonyms/clear', t.indexName)
-    }, a), function(e, r) {
-      return tZ(t)(e.taskID, r);
+eS = function(e) {
+  return function(t) {
+    var r = t || {},
+      i = r.forwardToReplicas,
+      a = _(n(r, ['forwardToReplicas']));
+    return i && (a.queryParameters.forwardToReplicas = 1), l(e.transporter.write({
+      method: m,
+      path: c('1/indexes/%s/synonyms/clear', e.indexName)
+    }, a), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tx = function(t) {
-  return function(e, r) {
-    return u(t.transporter.write({
-      method: y,
-      path: h('1/indexes/%s/deleteByQuery', t.indexName),
-      data: e
-    }, r), function(e, r) {
-      return tZ(t)(e.taskID, r);
+eA = function(e) {
+  return function(t, n) {
+    return l(e.transporter.write({
+      method: m,
+      path: c('1/indexes/%s/deleteByQuery', e.indexName),
+      data: t
+    }, n), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tw = function(t) {
-  return function(e) {
-    return u(t.transporter.write({
-      method: g,
-      path: h('1/indexes/%s', t.indexName)
-    }, e), function(e, r) {
-      return tZ(t)(e.taskID, r);
+eN = function(e) {
+  return function(t) {
+    return l(e.transporter.write({
+      method: p,
+      path: c('1/indexes/%s', e.indexName)
+    }, t), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tT = function(t) {
-  return function(e, r) {
-    return u(tS(t)([e], r).then(function(t) {
+ev = function(e) {
+  return function(t, n) {
+    return l(eO(e)([t], n).then(function(e) {
       return {
-        taskID: t.taskIDs[0]
+        taskID: e.taskIDs[0]
       };
-    }), function(e, r) {
-      return tZ(t)(e.taskID, r);
+    }), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tS = function(t) {
-  return function(e, r) {
-    var n = e.map(function(t) {
+eO = function(e) {
+  return function(t, n) {
+    var r = t.map(function(e) {
       return {
-        objectID: t
+        objectID: e
       };
     });
-    return tv(t)(n, t0.DeleteObject, r);
+    return eI(e)(r, e0.DeleteObject, n);
   };
 },
-tO = function(t) {
-  return function(e, n) {
-    var i = n || {},
+eR = function(e) {
+  return function(t, r) {
+    var i = r || {},
       a = i.forwardToReplicas,
-      o = f(r(i, ['forwardToReplicas']));
-    return a && (o.queryParameters.forwardToReplicas = 1), u(t.transporter.write({
-      method: g,
-      path: h('1/indexes/%s/rules/%s', t.indexName, e)
-    }, o), function(e, r) {
-      return tZ(t)(e.taskID, r);
+      s = _(n(i, ['forwardToReplicas']));
+    return a && (s.queryParameters.forwardToReplicas = 1), l(e.transporter.write({
+      method: p,
+      path: c('1/indexes/%s/rules/%s', e.indexName, t)
+    }, s), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tI = function(t) {
-  return function(e, n) {
-    var i = n || {},
+eC = function(e) {
+  return function(t, r) {
+    var i = r || {},
       a = i.forwardToReplicas,
-      o = f(r(i, ['forwardToReplicas']));
-    return a && (o.queryParameters.forwardToReplicas = 1), u(t.transporter.write({
-      method: g,
-      path: h('1/indexes/%s/synonyms/%s', t.indexName, e)
-    }, o), function(e, r) {
-      return tZ(t)(e.taskID, r);
+      s = _(n(i, ['forwardToReplicas']));
+    return a && (s.queryParameters.forwardToReplicas = 1), l(e.transporter.write({
+      method: p,
+      path: c('1/indexes/%s/synonyms/%s', e.indexName, t)
+    }, s), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tD = function(t) {
-  return function(e) {
-    return tA(t)(e).then(function() {
+ey = function(e) {
+  return function(t) {
+    return ew(e)(t).then(function() {
       return !0;
-    }).catch(function(t) {
-      if (404 !== t.status)
-        throw t;
+    }).catch(function(e) {
+      if (404 !== e.status)
+        throw e;
       return !1;
     });
   };
 },
-tj = function(t) {
-  return function(e, r, n) {
-    return t.transporter.read({
-      method: y,
-      path: h('1/answers/%s/prediction', t.indexName),
+eD = function(e) {
+  return function(t, n, r) {
+    return e.transporter.read({
+      method: m,
+      path: c('1/answers/%s/prediction', e.indexName),
       data: {
-        query: e,
-        queryLanguages: r
+        query: t,
+        queryLanguages: n
       },
       cacheable: !0
-    }, n);
+    }, r);
   };
 },
-tk = function(t) {
+eL = function(e) {
   return function(i, a) {
-    var o = a || {},
-      s = o.query,
-      u = o.paginate,
-      c = r(o, [
+    var s = a || {},
+      o = s.query,
+      l = s.paginate,
+      u = n(s, [
         'query',
         'paginate'
       ]),
-      h = 0;
-    return function r() {
-      return tK(t)(s || '', e(e({}, c), {}, {
-        page: h
-      })).then(function(t) {
-        for (var e = 0, a = Object.entries(t.hits); e < a.length; e++) {
-          var o = n(a[e], 2),
-            s = o[0],
-            c = o[1];
-          if (i(c))
+      c = 0;
+    return function n() {
+      return ez(e)(o || '', t(t({}, u), {}, {
+        page: c
+      })).then(function(e) {
+        for (var t = 0, a = Object.entries(e.hits); t < a.length; t++) {
+          var s = r(a[t], 2),
+            o = s[0],
+            u = s[1];
+          if (i(u))
             return {
-              object: c,
-              position: parseInt(s, 10),
-              page: h
+              object: u,
+              position: parseInt(o, 10),
+              page: c
             };
         }
-        if (h++, !1 === u || h >= t.nbPages)
+        if (c++, !1 === l || c >= e.nbPages)
           throw {
             name: 'ObjectNotFoundError',
             message: 'Object not found.'
           };
-        return r();
+        return n();
       });
     }();
   };
 },
-tq = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
+eb = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
       method: 'GET',
-      path: h('1/indexes/%s/%s', t.indexName, e)
-    }, r);
+      path: c('1/indexes/%s/%s', e.indexName, t)
+    }, n);
   };
 },
-tE = function() {
-  return function(t, e) {
-    for (var r = 0, i = Object.entries(t.hits); r < i.length; r++) {
-      var a = n(i[r], 2),
-        o = a[0];
-      if (a[1].objectID === e)
-        return parseInt(o, 10);
+eM = function() {
+  return function(e, t) {
+    for (var n = 0, i = Object.entries(e.hits); n < i.length; n++) {
+      var a = r(i[n], 2),
+        s = a[0];
+      if (a[1].objectID === t)
+        return parseInt(s, 10);
     }
     return -1;
   };
 },
-tR = function(t) {
-  return function(n, i) {
+eP = function(e) {
+  return function(r, i) {
     var a = i || {},
-      o = a.attributesToRetrieve,
-      s = r(a, ['attributesToRetrieve']),
-      u = n.map(function(r) {
-        return e({
-          indexName: t.indexName,
-          objectID: r
-        }, o ? {
-          attributesToRetrieve: o
+      s = a.attributesToRetrieve,
+      o = n(a, ['attributesToRetrieve']),
+      l = r.map(function(n) {
+        return t({
+          indexName: e.indexName,
+          objectID: n
+        }, s ? {
+          attributesToRetrieve: s
         } : {});
       });
-    return t.transporter.read({
-      method: y,
+    return e.transporter.read({
+      method: m,
       path: '1/indexes/*/objects',
       data: {
-        requests: u
+        requests: l
       }
-    }, s);
+    }, o);
   };
 },
-tN = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
+eU = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
       method: 'GET',
-      path: h('1/indexes/%s/rules/%s', t.indexName, e)
-    }, r);
+      path: c('1/indexes/%s/rules/%s', e.indexName, t)
+    }, n);
   };
 },
-tA = function(t) {
-  return function(e) {
-    return t.transporter.read({
+ew = function(e) {
+  return function(t) {
+    return e.transporter.read({
       method: 'GET',
-      path: h('1/indexes/%s/settings', t.indexName),
+      path: c('1/indexes/%s/settings', e.indexName),
       data: {
         getVersion: 2
       }
-    }, e);
+    }, t);
   };
 },
-tC = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
+ex = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
       method: 'GET',
-      path: h('1/indexes/%s/synonyms/%s', t.indexName, e)
-    }, r);
+      path: c('1/indexes/%s/synonyms/%s', e.indexName, t)
+    }, n);
   };
 },
-tG = function(t) {
-  return function(e, r) {
-    return u(tU(t)([e], r).then(function(t) {
+eG = function(e) {
+  return function(t, n) {
+    return l(ek(e)([t], n).then(function(e) {
       return {
-        objectID: t.objectIDs[0],
-        taskID: t.taskIDs[0]
+        objectID: e.objectIDs[0],
+        taskID: e.taskIDs[0]
       };
-    }), function(e, r) {
-      return tZ(t)(e.taskID, r);
+    }), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tU = function(t) {
-  return function(e, n) {
-    var i = n || {},
+ek = function(e) {
+  return function(t, r) {
+    var i = r || {},
       a = i.createIfNotExists,
-      o = r(i, ['createIfNotExists']),
-      s = a ? t0.PartialUpdateObject : t0.PartialUpdateObjectNoCreate;
-    return tv(t)(e, s, o);
+      s = n(i, ['createIfNotExists']),
+      o = a ? e0.PartialUpdateObject : e0.PartialUpdateObjectNoCreate;
+    return eI(e)(t, o, s);
   };
 },
-tM = function(t) {
-  return function(a, o) {
-    var s = o || {},
-      c = s.safe,
-      l = s.autoGenerateObjectIDIfNotExist,
-      f = s.batchSize,
-      d = r(s, [
+eB = function(e) {
+  return function(a, s) {
+    var o = s || {},
+      u = o.safe,
+      d = o.autoGenerateObjectIDIfNotExist,
+      _ = o.batchSize,
+      E = n(o, [
         'safe',
         'autoGenerateObjectIDIfNotExist',
         'batchSize'
       ]),
-      p = function(e, r, n, i) {
-        return u(t.transporter.write({
-          method: y,
-          path: h('1/indexes/%s/operation', e),
+      f = function(t, n, r, i) {
+        return l(e.transporter.write({
+          method: m,
+          path: c('1/indexes/%s/operation', t),
           data: {
-            operation: n,
-            destination: r
+            operation: r,
+            destination: n
           }
-        }, i), function(e, r) {
-          return tZ(t)(e.taskID, r);
+        }, i), function(t, n) {
+          return eJ(e)(t.taskID, n);
         });
       },
-      m = Math.random().toString(36).substring(7),
-      g = ''.concat(t.indexName, '_tmp_').concat(m),
-      v = tF({
-        appId: t.appId,
-        transporter: t.transporter,
-        indexName: g
+      h = Math.random().toString(36).substring(7),
+      p = ''.concat(e.indexName, '_tmp_').concat(h),
+      I = eZ({
+        appId: e.appId,
+        transporter: e.transporter,
+        indexName: p
       }),
-      b = [],
-      _ = p(t.indexName, g, 'copy', e(e({}, d), {}, {
+      T = [],
+      g = f(e.indexName, p, 'copy', t(t({}, E), {}, {
         scope: [
           'settings',
           'synonyms',
           'rules'
         ]
       }));
-    return b.push(_), u((c ? _.wait(d) : _).then(function() {
-      var t = v(a, e(e({}, d), {}, {
-        autoGenerateObjectIDIfNotExist: l,
-        batchSize: f
+    return T.push(g), l((u ? g.wait(E) : g).then(function() {
+      var e = I(a, t(t({}, E), {}, {
+        autoGenerateObjectIDIfNotExist: d,
+        batchSize: _
       }));
-      return b.push(t), c ? t.wait(d) : t;
+      return T.push(e), u ? e.wait(E) : e;
     }).then(function() {
-      var e = p(g, t.indexName, 'move', d);
-      return b.push(e), c ? e.wait(d) : e;
+      var t = f(p, e.indexName, 'move', E);
+      return T.push(t), u ? t.wait(E) : t;
     }).then(function() {
-      return Promise.all(b);
-    }).then(function(t) {
-      var e = n(t, 3),
-        r = e[0],
-        a = e[1],
-        o = e[2];
+      return Promise.all(T);
+    }).then(function(e) {
+      var t = r(e, 3),
+        n = t[0],
+        a = t[1],
+        s = t[2];
       return {
         objectIDs: a.objectIDs,
-        taskIDs: [r.taskID].concat(i(a.taskIDs), [o.taskID])
+        taskIDs: [n.taskID].concat(i(a.taskIDs), [s.taskID])
       };
-    }), function(t, e) {
-      return Promise.all(b.map(function(t) {
-        return t.wait(e);
+    }), function(e, t) {
+      return Promise.all(T.map(function(e) {
+        return e.wait(t);
       }));
     });
   };
 },
-tL = function(t) {
-  return function(r, n) {
-    return tB(t)(r, e(e({}, n), {}, {
+eF = function(e) {
+  return function(n, r) {
+    return ej(e)(n, t(t({}, r), {}, {
       clearExistingRules: !0
     }));
   };
 },
-tz = function(t) {
-  return function(r, n) {
-    return tH(t)(r, e(e({}, n), {}, {
+eV = function(e) {
+  return function(n, r) {
+    return eK(e)(n, t(t({}, r), {}, {
       clearExistingSynonyms: !0
     }));
   };
 },
-tV = function(t) {
-  return function(e, r) {
-    return u(tF(t)([e], r).then(function(t) {
+eH = function(e) {
+  return function(t, n) {
+    return l(eZ(e)([t], n).then(function(e) {
       return {
-        objectID: t.objectIDs[0],
-        taskID: t.taskIDs[0]
+        objectID: e.objectIDs[0],
+        taskID: e.taskIDs[0]
       };
-    }), function(e, r) {
-      return tZ(t)(e.taskID, r);
+    }), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tF = function(t) {
-  return function(e, n) {
-    var i = n || {},
+eZ = function(e) {
+  return function(t, r) {
+    var i = r || {},
       a = i.autoGenerateObjectIDIfNotExist,
-      o = r(i, ['autoGenerateObjectIDIfNotExist']),
-      s = a ? t0.AddObject : t0.UpdateObject;
-    if (s === t0.UpdateObject) {
-      var c = !0,
-        h = !1,
-        l = void 0;
+      s = n(i, ['autoGenerateObjectIDIfNotExist']),
+      o = a ? e0.AddObject : e0.UpdateObject;
+    if (o === e0.UpdateObject) {
+      var u = !0,
+        c = !1,
+        d = void 0;
       try {
-        for (var f, d = e[Symbol.iterator](); !(c = (f = d.next()).done); c = !0)
-          if (void 0 === f.value.objectID)
-            return u(Promise.reject({
+        for (var _, E = t[Symbol.iterator](); !(u = (_ = E.next()).done); u = !0)
+          if (void 0 === _.value.objectID)
+            return l(Promise.reject({
               name: 'MissingObjectIDError',
               message: 'All objects must have an unique objectID (like a primary key) to be valid. Algolia is also able to generate objectIDs automatically but *it\'s not recommended*. To do it, use the `{\'autoGenerateObjectIDIfNotExist\': true}` option.'
             }));
-      } catch (t) {
-        h = !0, l = t;
+      } catch (e) {
+        c = !0, d = e;
       } finally {
         try {
-          c || null == d.return || d.return();
+          u || null == E.return || E.return();
         } finally {
-          if (h)
-            throw l;
+          if (c)
+            throw d;
         }
       }
     }
-    return tv(t)(e, s, o);
+    return eI(e)(t, o, s);
   };
 },
-tJ = function(t) {
-  return function(e, r) {
-    return tB(t)([e], r);
+eY = function(e) {
+  return function(t, n) {
+    return ej(e)([t], n);
   };
 },
-tB = function(t) {
-  return function(e, n) {
-    var i = n || {},
+ej = function(e) {
+  return function(t, r) {
+    var i = r || {},
       a = i.forwardToReplicas,
-      o = i.clearExistingRules,
-      s = f(r(i, [
+      s = i.clearExistingRules,
+      o = _(n(i, [
         'forwardToReplicas',
         'clearExistingRules'
       ]));
-    return a && (s.queryParameters.forwardToReplicas = 1), o && (s.queryParameters.clearExistingRules = 1), u(t.transporter.write({
-      method: y,
-      path: h('1/indexes/%s/rules/batch', t.indexName),
-      data: e
-    }, s), function(e, r) {
-      return tZ(t)(e.taskID, r);
+    return a && (o.queryParameters.forwardToReplicas = 1), s && (o.queryParameters.clearExistingRules = 1), l(e.transporter.write({
+      method: m,
+      path: c('1/indexes/%s/rules/batch', e.indexName),
+      data: t
+    }, o), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tW = function(t) {
-  return function(e, r) {
-    return tH(t)([e], r);
+eW = function(e) {
+  return function(t, n) {
+    return eK(e)([t], n);
   };
 },
-tH = function(t) {
-  return function(e, n) {
-    var i = n || {},
+eK = function(e) {
+  return function(t, r) {
+    var i = r || {},
       a = i.forwardToReplicas,
-      o = i.clearExistingSynonyms,
-      s = i.replaceExistingSynonyms,
-      c = f(r(i, [
+      s = i.clearExistingSynonyms,
+      o = i.replaceExistingSynonyms,
+      u = _(n(i, [
         'forwardToReplicas',
         'clearExistingSynonyms',
         'replaceExistingSynonyms'
       ]));
-    return a && (c.queryParameters.forwardToReplicas = 1), (s || o) && (c.queryParameters.replaceExistingSynonyms = 1), u(t.transporter.write({
-      method: y,
-      path: h('1/indexes/%s/synonyms/batch', t.indexName),
-      data: e
-    }, c), function(e, r) {
-      return tZ(t)(e.taskID, r);
+    return a && (u.queryParameters.forwardToReplicas = 1), (o || s) && (u.queryParameters.replaceExistingSynonyms = 1), l(e.transporter.write({
+      method: m,
+      path: c('1/indexes/%s/synonyms/batch', e.indexName),
+      data: t
+    }, u), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tK = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
-      method: y,
-      path: h('1/indexes/%s/query', t.indexName),
+ez = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
+      method: m,
+      path: c('1/indexes/%s/query', e.indexName),
       data: {
-        query: e
-      },
-      cacheable: !0
-    }, r);
-  };
-},
-tQ = function(t) {
-  return function(e, r, n) {
-    return t.transporter.read({
-      method: y,
-      path: h('1/indexes/%s/facets/%s/query', t.indexName, e),
-      data: {
-        facetQuery: r
+        query: t
       },
       cacheable: !0
     }, n);
   };
 },
-tX = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
-      method: y,
-      path: h('1/indexes/%s/rules/search', t.indexName),
+eq = function(e) {
+  return function(t, n, r) {
+    return e.transporter.read({
+      method: m,
+      path: c('1/indexes/%s/facets/%s/query', e.indexName, t),
       data: {
-        query: e
-      }
+        facetQuery: n
+      },
+      cacheable: !0
     }, r);
   };
 },
-t$ = function(t) {
-  return function(e, r) {
-    return t.transporter.read({
-      method: y,
-      path: h('1/indexes/%s/synonyms/search', t.indexName),
+eQ = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
+      method: m,
+      path: c('1/indexes/%s/rules/search', e.indexName),
       data: {
-        query: e
+        query: t
       }
-    }, r);
+    }, n);
   };
 },
-tY = function(t) {
-  return function(e, n) {
-    var i = n || {},
+eX = function(e) {
+  return function(t, n) {
+    return e.transporter.read({
+      method: m,
+      path: c('1/indexes/%s/synonyms/search', e.indexName),
+      data: {
+        query: t
+      }
+    }, n);
+  };
+},
+e$ = function(e) {
+  return function(t, r) {
+    var i = r || {},
       a = i.forwardToReplicas,
-      o = f(r(i, ['forwardToReplicas']));
-    return a && (o.queryParameters.forwardToReplicas = 1), u(t.transporter.write({
+      s = _(n(i, ['forwardToReplicas']));
+    return a && (s.queryParameters.forwardToReplicas = 1), l(e.transporter.write({
       method: 'PUT',
-      path: h('1/indexes/%s/settings', t.indexName),
-      data: e
-    }, o), function(e, r) {
-      return tZ(t)(e.taskID, r);
+      path: c('1/indexes/%s/settings', e.indexName),
+      data: t
+    }, s), function(t, n) {
+      return eJ(e)(t.taskID, n);
     });
   };
 },
-tZ = function(t) {
-  return function(e, r) {
-    return s(function(n) {
+eJ = function(e) {
+  return function(t, n) {
+    return o(function(r) {
       var i;
-      return (i = t, function(t, e) {
+      return (i = e, function(e, t) {
         return i.transporter.read({
           method: 'GET',
-          path: h('1/indexes/%s/task/%s', i.indexName, t.toString())
-        }, e);
-      })(e, r).then(function(t) {
-        return 'published' !== t.status ? n() : void 0;
+          path: c('1/indexes/%s/task/%s', i.indexName, e.toString())
+        }, t);
+      })(t, n).then(function(e) {
+        return 'published' !== e.status ? r() : void 0;
       });
     });
   };
 },
-t0 = {
+e0 = {
   AddObject: 'addObject',
   UpdateObject: 'updateObject',
   PartialUpdateObject: 'partialUpdateObject',
   PartialUpdateObjectNoCreate: 'partialUpdateObjectNoCreate',
   DeleteObject: 'deleteObject'
 },
-t1 = {
+e1 = {
   Settings: 'settings',
   Synonyms: 'synonyms',
   Rules: 'rules'
 },
-t2 = function(t) {
-  return function(r, n) {
-    var i = r.map(function(t) {
-      return e(e({}, t), {}, {
-        threshold: t.threshold || 0
+e2 = function(e) {
+  return function(n, r) {
+    var i = n.map(function(e) {
+      return t(t({}, e), {}, {
+        threshold: e.threshold || 0
       });
     });
-    return t.transporter.read({
-      method: y,
+    return e.transporter.read({
+      method: m,
       path: '1/indexes/*/recommendations',
       data: {
         requests: i
       },
       cacheable: !0
-    }, n);
+    }, r);
   };
 },
-t4 = function(t) {
-  return function(r, n) {
-    return t2(t)(r.map(function(t) {
-      return e(e({}, t), {}, {
+e3 = function(e) {
+  return function(n, r) {
+    return e2(e)(n.map(function(e) {
+      return t(t({}, e), {}, {
         fallbackParameters: {},
         model: 'bought-together'
       });
-    }), n);
+    }), r);
   };
 },
-t3 = function(t) {
-  return function(r, n) {
-    return t2(t)(r.map(function(t) {
-      return e(e({}, t), {}, {
+e4 = function(e) {
+  return function(n, r) {
+    return e2(e)(n.map(function(e) {
+      return t(t({}, e), {}, {
         model: 'related-products'
       });
-    }), n);
+    }), r);
   };
 },
-t8 = function(t) {
-  return function(r, n) {
-    var i = r.map(function(t) {
-      return e(e({}, t), {}, {
+e5 = function(e) {
+  return function(n, r) {
+    var i = n.map(function(e) {
+      return t(t({}, e), {}, {
         model: 'trending-facets',
-        threshold: t.threshold || 0
+        threshold: e.threshold || 0
       });
     });
-    return t.transporter.read({
-      method: y,
+    return e.transporter.read({
+      method: m,
       path: '1/indexes/*/recommendations',
       data: {
         requests: i
       },
       cacheable: !0
-    }, n);
+    }, r);
   };
 },
-t6 = function(t) {
-  return function(r, n) {
-    var i = r.map(function(t) {
-      return e(e({}, t), {}, {
+e6 = function(e) {
+  return function(n, r) {
+    var i = n.map(function(e) {
+      return t(t({}, e), {}, {
         model: 'trending-items',
-        threshold: t.threshold || 0
+        threshold: e.threshold || 0
       });
     });
-    return t.transporter.read({
-      method: y,
+    return e.transporter.read({
+      method: m,
       path: '1/indexes/*/recommendations',
       data: {
         requests: i
       },
       cacheable: !0
-    }, n);
+    }, r);
   };
 },
-t5 = function(t) {
-  return function(r, n) {
-    return t2(t)(r.map(function(t) {
-      return e(e({}, t), {}, {
+e7 = function(e) {
+  return function(n, r) {
+    return e2(e)(n.map(function(e) {
+      return t(t({}, e), {}, {
         model: 'looking-similar'
       });
-    }), n);
+    }), r);
   };
 },
-t7 = function(t) {
-  return function(r, n) {
-    var i = r.map(function(t) {
-      return e(e({}, t), {}, {
+e8 = function(e) {
+  return function(n, r) {
+    var i = n.map(function(e) {
+      return t(t({}, e), {}, {
         model: 'recommended-for-you',
-        threshold: t.threshold || 0
+        threshold: e.threshold || 0
       });
     });
-    return t.transporter.read({
-      method: y,
+    return e.transporter.read({
+      method: m,
       path: '1/indexes/*/recommendations',
       data: {
         requests: i
       },
       cacheable: !0
-    }, n);
+    }, r);
   };
 };
 
-  function t9(t, r, s) {
-var u, h, f, p, m, g, y, v, _, P, x, k, tv = {
-    appId: t,
-    apiKey: r,
+  function e9(e, n, o) {
+var l, c, _, f, h, p, m, I, g, S, A, L, eI = {
+    appId: e,
+    apiKey: n,
     timeouts: {
       connect: 1,
       read: 2,
       write: 30
     },
     requester: {
-      send: function(t) {
-        return new Promise(function(e) {
-          var r = new XMLHttpRequest();
-          r.open(t.method, t.url, !0), Object.keys(t.headers).forEach(function(e) {
-            return r.setRequestHeader(e, t.headers[e]);
+      send: function(e) {
+        return new Promise(function(t) {
+          var n = new XMLHttpRequest();
+          n.open(e.method, e.url, !0), Object.keys(e.headers).forEach(function(t) {
+            return n.setRequestHeader(t, e.headers[t]);
           });
-          var n, i = function(t, n) {
+          var r, i = function(e, r) {
               return setTimeout(function() {
-                r.abort(), e({
+                n.abort(), t({
                   status: 0,
-                  content: n,
+                  content: r,
                   isTimedOut: !0
                 });
-              }, 1000 * t);
+              }, 1000 * e);
             },
-            a = i(t.connectTimeout, 'Connection timeout');
-          r.onreadystatechange = function() {
-            r.readyState > r.OPENED && void 0 === n && (clearTimeout(a), n = i(t.responseTimeout, 'Socket timeout'));
-          }, r.onerror = function() {
-            0 === r.status && (clearTimeout(a), clearTimeout(n), e({
-              content: r.responseText || 'Network request failed',
-              status: r.status,
+            a = i(e.connectTimeout, 'Connection timeout');
+          n.onreadystatechange = function() {
+            n.readyState > n.OPENED && void 0 === r && (clearTimeout(a), r = i(e.responseTimeout, 'Socket timeout'));
+          }, n.onerror = function() {
+            0 === n.status && (clearTimeout(a), clearTimeout(r), t({
+              content: n.responseText || 'Network request failed',
+              status: n.status,
               isTimedOut: !1
             }));
-          }, r.onload = function() {
-            clearTimeout(a), clearTimeout(n), e({
-              content: r.responseText,
-              status: r.status,
+          }, n.onload = function() {
+            clearTimeout(a), clearTimeout(r), t({
+              content: n.responseText,
+              status: n.status,
               isTimedOut: !1
             });
-          }, r.send(t.data);
+          }, n.send(e.data);
         });
       }
     },
     logger: {
-      debug: function(t, e) {
+      debug: function(e, t) {
         return Promise.resolve();
       },
-      info: function(t, e) {
+      info: function(e, t) {
         return Promise.resolve();
       },
-      error: function(t, e) {
-        return console.error(t, e), Promise.resolve();
+      error: function(e, t) {
+        return console.error(e, t), Promise.resolve();
       }
     },
     responsesCache: a(),
     requestsCache: a({
       serializable: !1
     }),
-    hostsCache: function t(e) {
-      var r = i(e.caches),
-        a = r.shift();
+    hostsCache: function e(t) {
+      var n = i(t.caches),
+        a = n.shift();
       return void 0 === a ? {
-        get: function(t, e) {
-          var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+        get: function(e, t) {
+          var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
             miss: function() {
               return Promise.resolve();
             }
           };
-          return e().then(function(t) {
+          return t().then(function(e) {
             return Promise.all([
-              t,
-              r.miss(t)
+              e,
+              n.miss(e)
             ]);
-          }).then(function(t) {
-            return n(t, 1)[0];
+          }).then(function(e) {
+            return r(e, 1)[0];
           });
         },
-        set: function(t, e) {
-          return Promise.resolve(e);
+        set: function(e, t) {
+          return Promise.resolve(t);
         },
-        delete: function(t) {
+        delete: function(e) {
           return Promise.resolve();
         },
         clear: function() {
           return Promise.resolve();
         }
       } : {
-        get: function(e, n) {
+        get: function(t, r) {
           var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
             miss: function() {
               return Promise.resolve();
             }
           };
-          return a.get(e, n, i).catch(function() {
-            return t({
-              caches: r
-            }).get(e, n, i);
+          return a.get(t, r, i).catch(function() {
+            return e({
+              caches: n
+            }).get(t, r, i);
           });
         },
-        set: function(e, n) {
-          return a.set(e, n).catch(function() {
-            return t({
-              caches: r
-            }).set(e, n);
+        set: function(t, r) {
+          return a.set(t, r).catch(function() {
+            return e({
+              caches: n
+            }).set(t, r);
           });
         },
-        delete: function(e) {
-          return a.delete(e).catch(function() {
-            return t({
-              caches: r
-            }).delete(e);
+        delete: function(t) {
+          return a.delete(t).catch(function() {
+            return e({
+              caches: n
+            }).delete(t);
           });
         },
         clear: function() {
           return a.clear().catch(function() {
-            return t({
-              caches: r
+            return e({
+              caches: n
             }).clear();
           });
         }
       };
     }({
       caches: [
-        (u = {
-          key: ''.concat('4.23.3', '-').concat(t)
-        }, f = 'algoliasearch-client-js-'.concat(u.key), p = function() {
-          return void 0 === h && (h = u.localStorage || window.localStorage), h;
+        (l = {
+          key: ''.concat('4.23.3', '-').concat(e)
+        }, _ = 'algoliasearch-client-js-'.concat(l.key), f = function() {
+          return void 0 === c && (c = l.localStorage || window.localStorage), c;
+        }, h = function() {
+          return JSON.parse(f().getItem(_) || '{}');
+        }, p = function(e) {
+          f().setItem(_, JSON.stringify(e));
         }, m = function() {
-          return JSON.parse(p().getItem(f) || '{}');
-        }, g = function(t) {
-          p().setItem(f, JSON.stringify(t));
-        }, y = function() {
-          var t = u.timeToLive ? 1000 * u.timeToLive : null,
-            e = Object.fromEntries(Object.entries(m()).filter(function(t) {
-              return void 0 !== n(t, 2)[1].timestamp;
+          var e = l.timeToLive ? 1000 * l.timeToLive : null,
+            t = Object.fromEntries(Object.entries(h()).filter(function(e) {
+              return void 0 !== r(e, 2)[1].timestamp;
             }));
-          g(e), t && g(Object.fromEntries(Object.entries(e).filter(function(e) {
-            var r = n(e, 2)[1],
+          p(t), e && p(Object.fromEntries(Object.entries(t).filter(function(t) {
+            var n = r(t, 2)[1],
               i = new Date().getTime();
-            return !(r.timestamp + t < i);
+            return !(n.timestamp + e < i);
           })));
         }, {
-          get: function(t, e) {
-            var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+          get: function(e, t) {
+            var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
               miss: function() {
                 return Promise.resolve();
               }
             };
             return Promise.resolve().then(function() {
-              y();
-              var e = JSON.stringify(t);
-              return m()[e];
-            }).then(function(t) {
+              m();
+              var t = JSON.stringify(e);
+              return h()[t];
+            }).then(function(e) {
               return Promise.all([
-                t ? t.value : e(),
-                void 0 !== t
+                e ? e.value : t(),
+                void 0 !== e
               ]);
-            }).then(function(t) {
-              var e = n(t, 2),
-                i = e[0];
+            }).then(function(e) {
+              var t = r(e, 2),
+                i = t[0];
               return Promise.all([
                 i,
-                e[1] || r.miss(i)
+                t[1] || n.miss(i)
               ]);
-            }).then(function(t) {
-              return n(t, 1)[0];
+            }).then(function(e) {
+              return r(e, 1)[0];
             });
           },
-          set: function(t, e) {
+          set: function(e, t) {
             return Promise.resolve().then(function() {
-              var r = m();
-              return r[JSON.stringify(t)] = {
+              var n = h();
+              return n[JSON.stringify(e)] = {
                 timestamp: new Date().getTime(),
-                value: e
-              }, p().setItem(f, JSON.stringify(r)), e;
+                value: t
+              }, f().setItem(_, JSON.stringify(n)), t;
             });
           },
-          delete: function(t) {
+          delete: function(e) {
             return Promise.resolve().then(function() {
-              var e = m();
-              delete e[JSON.stringify(t)], p().setItem(f, JSON.stringify(e));
+              var t = h();
+              delete t[JSON.stringify(e)], f().setItem(_, JSON.stringify(t));
             });
           },
           clear: function() {
             return Promise.resolve().then(function() {
-              p().removeItem(f);
+              f().removeItem(_);
             });
           }
         }),
         a()
       ]
     }),
-    userAgent: (v = {
+    userAgent: (I = {
       value: 'Algolia for JavaScript ('.concat('4.23.3', ')'),
-      add: function(t) {
-        var e = '; '.concat(t.segment).concat(void 0 !== t.version ? ' ('.concat(t.version, ')') : '');
-        return -1 === v.value.indexOf(e) && (v.value = ''.concat(v.value).concat(e)), v;
+      add: function(e) {
+        var t = '; '.concat(e.segment).concat(void 0 !== e.version ? ' ('.concat(e.version, ')') : '');
+        return -1 === I.value.indexOf(t) && (I.value = ''.concat(I.value).concat(t)), I;
       }
     }).add({
       segment: 'Browser'
     })
   },
-  t0 = e(e({}, tv), s),
-  t1 = function() {
-    return function(t) {
-      var r, n, i, a;
-      return n = (r = e(e(e({}, tv), t), {}, {
+  e0 = t(t({}, eI), o),
+  e1 = function() {
+    return function(e) {
+      var n, r, i, a;
+      return r = (n = t(t(t({}, eI), e), {}, {
         methods: {
-          getPersonalizationStrategy: D,
-          setPersonalizationStrategy: j
+          getPersonalizationStrategy: y,
+          setPersonalizationStrategy: D
         }
-      })).region || 'us', i = o(l.WithinHeaders, r.appId, r.apiKey), a = b(e(e({
+      })).region || 'us', i = s(d.WithinHeaders, n.appId, n.apiKey), a = T(t(t({
         hosts: [{
-          url: 'personalization.'.concat(n, '.algolia.com')
+          url: 'personalization.'.concat(r, '.algolia.com')
         }]
-      }, r), {}, {
-        headers: e(e(e({}, i.headers()), {
+      }, n), {}, {
+        headers: t(t(t({}, i.headers()), {
           'content-type': 'application/json'
-        }), r.headers),
-        queryParameters: e(e({}, i.queryParameters()), r.queryParameters)
-      })), c({
-        appId: r.appId,
+        }), n.headers),
+        queryParameters: t(t({}, i.queryParameters()), n.queryParameters)
+      })), u({
+        appId: n.appId,
         transporter: a
-      }, r.methods);
+      }, n.methods);
     };
   };
-return P = (_ = e(e({}, t0), {}, {
+return S = (g = t(t({}, e0), {}, {
   methods: {
-    search: tn,
-    searchForFacetValues: ti,
-    multipleBatch: te,
-    multipleGetObjects: tr,
-    multipleQueries: tn,
-    copyIndex: A,
+    search: er,
+    searchForFacetValues: ei,
+    multipleBatch: et,
+    multipleGetObjects: en,
+    multipleQueries: er,
+    copyIndex: w,
     copySettings: G,
-    copySynonyms: U,
-    copyRules: C,
-    moveIndex: tt,
-    listIndices: Y,
-    getLogs: B,
-    listClusters: $,
-    multipleSearchForFacetValues: ti,
-    getApiKey: V,
-    addApiKey: q,
-    listApiKeys: X,
-    updateApiKey: tf,
-    deleteApiKey: L,
-    restoreApiKey: ts,
-    assignUserID: E,
-    assignUserIDs: R,
-    getUserID: H,
-    searchUserIDs: th,
-    listUserIDs: Z,
+    copySynonyms: k,
+    copyRules: x,
+    moveIndex: ee,
+    listIndices: $,
+    getLogs: j,
+    listClusters: X,
+    multipleSearchForFacetValues: ei,
+    getApiKey: H,
+    addApiKey: b,
+    listApiKeys: Q,
+    updateApiKey: e_,
+    deleteApiKey: F,
+    restoreApiKey: eo,
+    assignUserID: M,
+    assignUserIDs: P,
+    getUserID: K,
+    searchUserIDs: ec,
+    listUserIDs: J,
     getTopUserIDs: W,
-    removeUserID: ta,
-    hasPendingMappings: K,
-    clearDictionaryEntries: N,
-    deleteDictionaryEntries: z,
-    getDictionarySettings: J,
-    getAppTask: F,
-    replaceDictionaryEntries: to,
-    saveDictionaryEntries: tu,
-    searchDictionaryEntries: tc,
-    setDictionarySettings: tl,
-    waitAppTask: td,
-    customRequest: M,
-    initIndex: function(t) {
-      return function(e) {
-        return Q(t)(e, {
+    removeUserID: ea,
+    hasPendingMappings: z,
+    clearDictionaryEntries: U,
+    deleteDictionaryEntries: V,
+    getDictionarySettings: Y,
+    getAppTask: Z,
+    replaceDictionaryEntries: es,
+    saveDictionaryEntries: el,
+    searchDictionaryEntries: eu,
+    setDictionarySettings: ed,
+    waitAppTask: eE,
+    customRequest: B,
+    initIndex: function(e) {
+      return function(t) {
+        return q(e)(t, {
           methods: {
-            batch: tp,
-            delete: tw,
-            findAnswers: tj,
-            getObject: tq,
-            getObjects: tR,
-            saveObject: tV,
-            saveObjects: tF,
-            search: tK,
-            searchForFacetValues: tQ,
-            waitTask: tZ,
-            setSettings: tY,
-            getSettings: tA,
-            partialUpdateObject: tG,
-            partialUpdateObjects: tU,
-            deleteObject: tT,
-            deleteObjects: tS,
-            deleteBy: tx,
-            clearObjects: tb,
-            browseObjects: tm,
-            getObjectPosition: tE,
-            findObject: tk,
-            exists: tD,
-            saveSynonym: tW,
-            saveSynonyms: tH,
-            getSynonym: tC,
-            searchSynonyms: t$,
-            browseSynonyms: ty,
-            deleteSynonym: tI,
-            clearSynonyms: tP,
-            replaceAllObjects: tM,
-            replaceAllSynonyms: tz,
-            searchRules: tX,
-            getRule: tN,
-            deleteRule: tO,
-            saveRule: tJ,
-            saveRules: tB,
-            replaceAllRules: tL,
-            browseRules: tg,
-            clearRules: t_
+            batch: ef,
+            delete: eN,
+            findAnswers: eD,
+            getObject: eb,
+            getObjects: eP,
+            saveObject: eH,
+            saveObjects: eZ,
+            search: ez,
+            searchForFacetValues: eq,
+            waitTask: eJ,
+            setSettings: e$,
+            getSettings: ew,
+            partialUpdateObject: eG,
+            partialUpdateObjects: ek,
+            deleteObject: ev,
+            deleteObjects: eO,
+            deleteBy: eA,
+            clearObjects: eT,
+            browseObjects: eh,
+            getObjectPosition: eM,
+            findObject: eL,
+            exists: ey,
+            saveSynonym: eW,
+            saveSynonyms: eK,
+            getSynonym: ex,
+            searchSynonyms: eX,
+            browseSynonyms: em,
+            deleteSynonym: eC,
+            clearSynonyms: eS,
+            replaceAllObjects: eB,
+            replaceAllSynonyms: eV,
+            searchRules: eQ,
+            getRule: eU,
+            deleteRule: eR,
+            saveRule: eY,
+            saveRules: ej,
+            replaceAllRules: eF,
+            browseRules: ep,
+            clearRules: eg
           }
         });
       };
     },
     initAnalytics: function() {
-      return function(t) {
-        var r, n, i, a;
-        return n = (r = e(e(e({}, tv), t), {}, {
+      return function(e) {
+        var n, r, i, a;
+        return r = (n = t(t(t({}, eI), e), {}, {
           methods: {
-            addABTest: w,
-            getABTest: S,
-            getABTests: O,
-            stopABTest: I,
-            deleteABTest: T
+            addABTest: N,
+            getABTest: O,
+            getABTests: R,
+            stopABTest: C,
+            deleteABTest: v
           }
-        })).region || 'us', i = o(l.WithinHeaders, r.appId, r.apiKey), a = b(e(e({
+        })).region || 'us', i = s(d.WithinHeaders, n.appId, n.apiKey), a = T(t(t({
           hosts: [{
-            url: 'analytics.'.concat(n, '.algolia.com')
+            url: 'analytics.'.concat(r, '.algolia.com')
           }]
-        }, r), {}, {
-          headers: e(e(e({}, i.headers()), {
+        }, n), {}, {
+          headers: t(t(t({}, i.headers()), {
             'content-type': 'application/json'
-          }), r.headers),
-          queryParameters: e(e({}, i.queryParameters()), r.queryParameters)
-        })), c({
-          appId: r.appId,
+          }), n.headers),
+          queryParameters: t(t({}, i.queryParameters()), n.queryParameters)
+        })), u({
+          appId: n.appId,
           transporter: a
-        }, r.methods);
+        }, n.methods);
       };
     },
-    initPersonalization: t1,
+    initPersonalization: e1,
     initRecommendation: function() {
-      return function(t) {
-        return t0.logger.info('The `initRecommendation` method is deprecated. Use `initPersonalization` instead.'), t1()(t);
+      return function(e) {
+        return e0.logger.info('The `initRecommendation` method is deprecated. Use `initPersonalization` instead.'), e1()(e);
       };
     },
-    getRecommendations: t2,
-    getFrequentlyBoughtTogether: t4,
-    getLookingSimilar: t5,
-    getRecommendedForYou: t7,
-    getRelatedProducts: t3,
-    getTrendingFacets: t8,
-    getTrendingItems: t6
+    getRecommendations: e2,
+    getFrequentlyBoughtTogether: e3,
+    getLookingSimilar: e7,
+    getRecommendedForYou: e8,
+    getRelatedProducts: e4,
+    getTrendingFacets: e5,
+    getTrendingItems: e6
   }
-})).appId, x = o(void 0 !== _.authMode ? _.authMode : l.WithinHeaders, P, _.apiKey), c({
-  transporter: k = b(e(e({
+})).appId, A = s(void 0 !== g.authMode ? g.authMode : d.WithinHeaders, S, g.apiKey), u({
+  transporter: L = T(t(t({
     hosts: [{
-        url: ''.concat(P, '-dsn.algolia.net'),
-        accept: d.Read
+        url: ''.concat(S, '-dsn.algolia.net'),
+        accept: E.Read
       },
       {
-        url: ''.concat(P, '.algolia.net'),
-        accept: d.Write
+        url: ''.concat(S, '.algolia.net'),
+        accept: E.Write
       }
-    ].concat(function(t) {
-      for (var e = t.length - 1; e > 0; e--) {
-        var r = Math.floor(Math.random() * (e + 1)),
-          n = t[e];
-        t[e] = t[r], t[r] = n;
+    ].concat(function(e) {
+      for (var t = e.length - 1; t > 0; t--) {
+        var n = Math.floor(Math.random() * (t + 1)),
+          r = e[t];
+        e[t] = e[n], e[n] = r;
       }
-      return t;
+      return e;
     }([{
-        url: ''.concat(P, '-1.algolianet.com')
+        url: ''.concat(S, '-1.algolianet.com')
       },
       {
-        url: ''.concat(P, '-2.algolianet.com')
+        url: ''.concat(S, '-2.algolianet.com')
       },
       {
-        url: ''.concat(P, '-3.algolianet.com')
+        url: ''.concat(S, '-3.algolianet.com')
       }
     ]))
-  }, _), {}, {
-    headers: e(e(e({}, x.headers()), {
+  }, g), {}, {
+    headers: t(t(t({}, A.headers()), {
       'content-type': 'application/x-www-form-urlencoded'
-    }), _.headers),
-    queryParameters: e(e({}, x.queryParameters()), _.queryParameters)
+    }), g.headers),
+    queryParameters: t(t({}, A.queryParameters()), g.queryParameters)
   })),
-  appId: P,
-  addAlgoliaAgent: function(t, e) {
-    k.userAgent.add({
-      segment: t,
-      version: e
+  appId: S,
+  addAlgoliaAgent: function(e, t) {
+    L.userAgent.add({
+      segment: e,
+      version: t
     });
   },
   clearCache: function() {
     return Promise.all([
-      k.requestsCache.clear(),
-      k.responsesCache.clear()
+      L.requestsCache.clear(),
+      L.responsesCache.clear()
     ]).then(function() {});
   }
-}, _.methods);
+}, g.methods);
   }
-  return t9.version = '4.23.3', t9;
-}, t.exports = r();
+  return e9.version = '4.23.3', e9;
+}, e.exports = n();

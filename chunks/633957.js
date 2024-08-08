@@ -45,17 +45,17 @@ currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity()
   })), k = (0, a.Wu)([p.default], () => {
 var e;
 return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : []).map(e => p.default.getUser(e)).filter(g.lm);
-  }), G = (0, a.e7)([C.Z], () => {
+  }), F = (0, a.e7)([C.Z], () => {
 var e;
 let t = null == y ? void 0 : y.userIds.values().next().value;
 return null == t ? null : null === (e = C.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
-  }), F = s.useMemo(() => {
+  }), G = s.useMemo(() => {
 let e = new h.Z(n);
 return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;
   }, [n]), w = (0, d.s5)({
 userId: U,
 channelId: x,
-application: F
+application: G
   }), V = null == y, H = (0, S.NL)({
 embeddedActivity: y,
 joinability: w,
@@ -101,7 +101,7 @@ children: (0, i.jsxs)('div', {
         variant: 'text-md/medium',
         lineClamp: 1,
         color: 'text-normal',
-        children: null != G ? G : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
+        children: null != F ? F : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
       })
     }),
     (0, i.jsxs)('div', {

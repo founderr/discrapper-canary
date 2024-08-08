@@ -1,15 +1,15 @@
 var i = n(735250);
 n(470079);
-var a = n(948789),
-  s = n(442837),
-  r = n(481060),
-  l = n(212093),
-  o = n(963202),
-  c = n(677277),
-  d = n(285865),
-  u = n(918701),
-  _ = n(702428),
-  E = n(709158),
+var a = n(442837),
+  s = n(481060),
+  r = n(212093),
+  l = n(963202),
+  o = n(677277),
+  c = n(285865),
+  d = n(918701),
+  u = n(702428),
+  _ = n(709158),
+  E = n(703656),
   h = n(683301),
   m = n(150192),
   I = n(889010),
@@ -40,16 +40,16 @@ switch (e) {
 let {
   currentCategoryId: e,
   isViewingSearchResults: t
-} = (0, s.cj)([h.ZP], () => ({
+} = (0, a.cj)([h.ZP], () => ({
   currentCategoryId: h.ZP.getCurrentCategoryId(),
   isViewingSearchResults: h.ZP.getMostRecentQuery().length > 0
-})), n = (0, E.Z)(f.dr.QUEST_HOME_DESKTOP), o = (0, s.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), p = null == o ? void 0 : o.map(e => ({
+})), n = (0, _.Z)(f.dr.QUEST_HOME_DESKTOP), l = (0, a.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), p = null == l ? void 0 : l.map(e => ({
   ...e,
   icon: A(e.categoryId)
 })), v = e => {
-  (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== T.Gj.Quests && (0, a.uL)(S.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === T.Gj.Quests && (0, a.uL)(S.Z5c.QUEST_HOME);
+  (0, r.uY)(e, !0), c.Z.closeSidebar(), t && (0, r.AQ)(), (0, d.OG)() && e !== T.Gj.Quests && (0, E.uL)(S.Z5c.GUILD_DISCOVERY), !(0, d.OG)() && e === T.Gj.Quests && (0, E.uL)(S.Z5c.QUEST_HOME);
 };
-return (0, i.jsxs)(r.Scroller, {
+return (0, i.jsxs)(s.Scroller, {
   className: N.sidebarContainer,
   children: [
     (0, i.jsx)(g.V, {
@@ -61,12 +61,12 @@ return (0, i.jsxs)(r.Scroller, {
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t
     }),
-    (0, i.jsx)(c.Z, {
+    (0, i.jsx)(o.Z, {
       handleCategorySelect: v,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t
     }),
-    n && (0, i.jsx)(_.Z, {
+    n && (0, i.jsx)(u.Z, {
       onClick: () => v(T.Gj.Quests),
       isSelected: e === T.Gj.Quests
     })
@@ -76,11 +76,11 @@ return (0, i.jsxs)(r.Scroller, {
 t.Z = function() {
   let {
 guilds: e
-  } = (0, o.C3)({
+  } = (0, l.C3)({
 location: 'guild_discovery_sidebar',
 includeConverted: !0
   }), t = e.length > 0, {
 clanDiscoveryEnabled: n
-  } = (0, o.nk)('guild_discovery_sidebar');
+  } = (0, l.nk)('guild_discovery_sidebar');
   return t || n ? (0, i.jsx)(p.Z, {}) : (0, i.jsx)(v, {});
 };

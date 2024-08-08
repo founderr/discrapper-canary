@@ -19,8 +19,8 @@ var i = n(735250),
   N = n(25601),
   x = n(207055),
   S = n(981631),
-  Z = n(124368),
-  v = n(689938),
+  v = n(124368),
+  Z = n(689938),
   T = n(704672),
   L = n(848998),
   A = n(807633);
@@ -53,20 +53,20 @@ isSelectedChannel: r,
 isSelectedVoice: A,
 isLast: M,
 withGuildIcon: R
-  } = e, O = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]), y = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)), {
-unread: P,
+  } = e, O = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]), P = (0, o.e7)([g.Z], () => g.Z.hasVideo(t.id)), {
+unread: y,
 mentionCount: j
   } = (0, o.cj)([m.ZP], () => ({
 unread: m.ZP.hasUnread(t.id),
 mentionCount: m.ZP.getMentionCount(t.id)
-  })), D = (0, o.e7)([p.Z], () => p.Z.isMuted(t.id)), U = l.useCallback(e => {
-(0, _.ok)(t, !e.shiftKey, Z.on.CHANNEL_LIST);
-  }, [t]), G = l.useCallback(() => {
+  })), D = (0, o.e7)([p.Z], () => p.Z.isMuted(t.id)), w = l.useCallback(e => {
+(0, _.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
+  }, [t]), U = l.useCallback(() => {
 u.Z.preload(t.guild_id, t.id);
   }, [
 t.guild_id,
 t.id
-  ]), w = l.useCallback(e => {
+  ]), G = l.useCallback(e => {
 let l = f.Z.getChannel(t.id);
 null != l && (0, d.jW)(e, async () => {
   let {
@@ -80,12 +80,12 @@ null != l && (0, d.jW)(e, async () => {
   }, [t.id]), k = null == O ? 0 : O.length, {
 role: B,
 ...H
-  } = (0, s.JA)(t.id), V = l.useRef(null), F = j > 0 ? v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
+  } = (0, s.JA)(t.id), V = l.useRef(null), F = j > 0 ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
 channelName: t.name,
 mentionCount: j
-  }) : P ? v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({
+  }) : y ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({
 channelName: t.name
-  }) : v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({
+  }) : Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({
 channelName: t.name
   });
   return (0, i.jsxs)('li', {
@@ -115,20 +115,20 @@ children: [
       className: a()(T.iconVisibility, L.wrapper, L.typeThread, {
         [L.modeSelected]: r,
         [L.modeMuted]: !r && D,
-        [L.modeUnreadImportant]: !D && !r && P,
+        [L.modeUnreadImportant]: !D && !r && y,
         [L.withGuildIcon]: R
       }),
-      onMouseDown: G,
-      onContextMenu: w,
+      onMouseDown: U,
+      onContextMenu: G,
       children: [
-        !P || D || r ? null : (0, i.jsx)('div', {
+        !y || D || r ? null : (0, i.jsx)('div', {
           className: a()(L.unread, L.unreadImportant)
         }),
         (0, i.jsx)(c.Clickable, {
           ...H,
           innerRef: V,
           className: L.link,
-          onClick: U,
+          onClick: w,
           'aria-label': F,
           focusProps: {
             enabled: !1
@@ -146,7 +146,7 @@ children: [
                 children: [
                   k > 0 && t.userLimit > 0 ? (0, i.jsx)(E.Z, {
                     userCount: k,
-                    video: y,
+                    video: P,
                     channel: t
                   }) : null,
                   (0, I.Z)(j) ? (0, i.jsx)(N.Z, {

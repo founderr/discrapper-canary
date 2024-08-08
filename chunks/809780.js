@@ -45,9 +45,9 @@ var i, s, a, r, l = n(470079),
   y = n(823379),
   B = n(709054),
   k = n(981631),
-  G = n(124368);
+  F = n(124368);
 
-function F(e, t, n) {
+function G(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -161,7 +161,7 @@ for (let t in e)
   }
   }
   constructor(e, t) {
-super(), F(this, 'state', void 0), F(this, 'scrollerRef', void 0), F(this, 'maybeLoadMore', void 0), F(this, 'reloadMessages', void 0), F(this, 'getNumUnreadChannels', void 0), F(this, 'markChannelRead', void 0), F(this, 'markGuildRead', void 0), F(this, 'deleteChannel', void 0), F(this, 'markAllRead', void 0), F(this, 'toggle', void 0), F(this, 'handleUserGuildSettingsStoreChange', void 0), F(this, 'handleJoinedThreadsStoreChange', void 0), F(this, 'handleActiveThreadsStoreChange', void 0), this.state = e, this.scrollerRef = t, this.maybeLoadMore = () => {
+super(), G(this, 'state', void 0), G(this, 'scrollerRef', void 0), G(this, 'maybeLoadMore', void 0), G(this, 'reloadMessages', void 0), G(this, 'getNumUnreadChannels', void 0), G(this, 'markChannelRead', void 0), G(this, 'markGuildRead', void 0), G(this, 'deleteChannel', void 0), G(this, 'markAllRead', void 0), G(this, 'toggle', void 0), G(this, 'handleUserGuildSettingsStoreChange', void 0), G(this, 'handleJoinedThreadsStoreChange', void 0), G(this, 'handleActiveThreadsStoreChange', void 0), this.state = e, this.scrollerRef = t, this.maybeLoadMore = () => {
   var e;
   let t = null === (e = this.scrollerRef.current) || void 0 === e ? void 0 : e.getScrollerState();
   if (null != t)
@@ -368,7 +368,7 @@ sortOrder: function(e, t, n) {
   }
   if (i.isThread()) {
     let e = (0, S.J)(i);
-    return e === G.iN.ALL_MESSAGES ? 3 : e === G.iN.NO_MESSAGES ? 6 : 4;
+    return e === F.iN.ALL_MESSAGES ? 3 : e === F.iN.NO_MESSAGES ? 6 : 4;
   } {
     let n = j.ZP.getChannelMessageNotifications(e, t),
       i = n === k.bL.NULL ? j.ZP.getMessageNotifications(e) : n;

@@ -236,7 +236,7 @@ className: M.scrollingFooterWrap,
 children: T(N.Z.theme)
   }));
   let k = null == f ? void 0 : f(),
-G = y && null != k ? (0, i.jsx)('div', {
+F = y && null != k ? (0, i.jsx)('div', {
   className: M.footer,
   children: (0, i.jsx)(m.Z, {
     style: {
@@ -247,14 +247,14 @@ G = y && null != k ? (0, i.jsx)('div', {
     children: k
   })
 }) : null,
-F = {
+G = {
   maxHeight: b.height - 43 - 25
 };
-  D && (F.maxHeight -= 40);
+  D && (G.maxHeight -= 40);
   let w = null != _ && a;
   return (0, i.jsx)('div', {
 className: r()(p, M.messagesPopoutWrap),
-style: F,
+style: G,
 onClick: L,
 onDoubleClick: L,
 'aria-label': e['aria-label'],
@@ -285,7 +285,7 @@ children: (0, i.jsxs)(d.HeadingLevel, {
         B
       ]
     }),
-    G
+    F
   ]
 })
   });

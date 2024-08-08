@@ -140,32 +140,32 @@ function k(e) {
   approximate_member_count: p,
   approximate_presence_count: M,
   target_type: k,
-  target_application: G
+  target_application: F
 } = u;
-  o()(k === Z.Iq.EMBEDDED_APPLICATION && null != G, 'invalid application invite');
-  let F = s.useRef(null),
+  o()(k === Z.Iq.EMBEDDED_APPLICATION && null != F, 'invalid application invite');
+  let G = s.useRef(null),
 [w, V] = s.useState(!1),
 [H, Y] = s.useState(!1);
   s.useEffect(() => {
 let e = new ResizeObserver(() => function() {
     var e;
-    let t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetWidth;
+    let t = null === (e = G.current) || void 0 === e ? void 0 : e.offsetWidth;
     null != t && (V(t < U + j), Y(t <= 2 * b));
   }()),
-  t = F.current;
+  t = G.current;
 return null != t && e.observe(t), () => {
   e.disconnect();
 };
   }, [
-F,
+G,
 V,
 Y
   ]);
   let W = (0, c.e7)([R.Z], () => null != u.guild ? R.Z.getGuild(u.guild.id) : null, [u]),
-K = (0, f.Z)([G.id])[0],
+K = (0, f.Z)([F.id])[0],
 z = (0, c.e7)([E.ZP], () => {
   var e;
-  return (null == u ? void 0 : u.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
+  return (null == u ? void 0 : u.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === F.id;
 }),
 Q = (0, c.e7)([E.ZP], () => {
   var e;
@@ -173,7 +173,7 @@ Q = (0, c.e7)([E.ZP], () => {
     let {
       applicationId: t
     } = e;
-    return G.id === t;
+    return F.id === t;
   });
 }),
 q = A.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
@@ -182,13 +182,13 @@ X = (0, c.e7)([O.Z], () => null != q && O.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q
   analyticsLocations: J
 } = (0, N.ZP)(h.Z.INVITE_EMBED),
 $ = (0, I.Z)({
-  applicationId: G.id,
+  applicationId: F.id,
   size: b,
   names: ['embedded_cover']
 }),
-ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === G.id).flatMap(e => Array.from(e.userIds)) : [], [
+ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === F.id).flatMap(e => Array.from(e.userIds)) : [], [
   q,
-  G.id
+  F.id
 ]),
 et = (0, c.Wu)([x.default], () => ee.map(e => x.default.getUser(e)), [ee]),
 en = u.state === L.r2o.ACCEPTING,
@@ -208,7 +208,7 @@ ea = () => {
 };
   return (ei && z && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == u.code || '' === u.code) ? null : (0, i.jsxs)('div', {
 className: D.container,
-ref: F,
+ref: G,
 children: [
   (0, i.jsx)('div', {
     className: r()(D.imgContainer, {

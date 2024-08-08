@@ -161,8 +161,8 @@ let t, {
   b = g.ZP.canUseCustomStickersEverywhere(D),
   y = (0, l.e7)([f.Z], () => f.Z.getGuild(n.guild_id)),
   B = null != y,
-  [k, G] = s.useState(!1),
-  [F, w] = s.useState(null),
+  [k, F] = s.useState(!1),
+  [G, w] = s.useState(null),
   V = s.useMemo(() => ({
     page: null != a.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
     section: M.jXE.STICKER_POPOUT
@@ -263,7 +263,7 @@ return (s.useEffect(() => {
             children: [
               (0, i.jsx)(o.Clickable, {
                 onClick: () => {
-                  h(), G(!k);
+                  h(), F(!k);
                 },
                 className: P.showMoreEmojis,
                 children: (0, i.jsxs)(d.Z, {
@@ -300,7 +300,7 @@ return (s.useEffect(() => {
                     } = t;
                     return (0, i.jsx)('div', {
                       className: r()(P.otherEmoji, {
-                        [Z.nonInteractingSticker]: null != F && F !== e.id
+                        [Z.nonInteractingSticker]: null != G && G !== e.id
                       }),
                       onMouseEnter: () => {
                         null == n || n(), w(e.id);
@@ -314,7 +314,7 @@ return (s.useEffect(() => {
                         enlargeOnInteraction: !0,
                         enlargeWithName: !1,
                         enlargeScaleFactor: 2,
-                        isInteracting: F === e.id,
+                        isInteracting: G === e.id,
                         sticker: e
                       })
                     }, e.id);

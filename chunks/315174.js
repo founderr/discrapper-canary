@@ -118,8 +118,8 @@ bannerVisible: n,
 controller: r,
 className: s,
 onClick: S,
-onContextMenu: Z,
-onMouseDown: v,
+onContextMenu: v,
+onMouseDown: Z,
 disableBannerAnimation: T,
 'aria-expanded': L,
 'aria-controls': A,
@@ -127,19 +127,19 @@ guild: b,
 guildBanner: M,
 animationOverlayHeight: R,
 children: O,
-headerClassName: y,
-communityInfoVisible: P,
+headerClassName: P,
+communityInfoVisible: y,
 hasSubheader: j
-  } = e, D = b.hasFeature(m.oNc.ANIMATED_BANNER), U = (0, d.Z)(b), G = !U && b.hasCommunityInfoSubheader(), w = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), F = l.useRef(), W = h.QK.getSetting();
+  } = e, D = b.hasFeature(m.oNc.ANIMATED_BANNER), w = (0, d.Z)(b), U = !w && b.hasCommunityInfoSubheader(), G = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), F = l.useRef(), W = h.QK.getSetting();
   l.useEffect(() => {
-if (w && n && !H.current && W)
+if (G && n && !H.current && W)
   return B(!0), F.current = setTimeout(() => {
     B(!1);
   }, 5000), () => {
     clearTimeout(F.current);
   };
   }, [
-w,
+G,
 n,
 W
   ]), l.useEffect(() => {
@@ -164,14 +164,14 @@ children: [
       [I.hasBanner]: z(),
       [I.bannerVisible]: n,
       [(0, _.Q)(m.BRd.DARK)]: n,
-      [I.communityInfoVisible]: !U && P || j && G
+      [I.communityInfoVisible]: !w && y || j && U
     }),
-    onMouseDown: v,
-    onContextMenu: Z,
+    onMouseDown: Z,
+    onContextMenu: v,
     onClick: S,
     children: [
       Y ? null : (0, i.jsxs)('header', {
-        className: a()(I.header, y, {
+        className: a()(I.header, P, {
           [I.themedHeaderMobile]: o.tq
         }),
         children: [
@@ -198,7 +198,7 @@ children: [
                   offset: 4
                 },
                 onClick: S,
-                onContextMenu: Z,
+                onContextMenu: v,
                 'aria-label': C.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({
                   guildName: null !== (t = null == b ? void 0 : b.toString()) && void 0 !== t ? t : ''
                 })
@@ -209,7 +209,7 @@ children: [
               })
             ]
           }),
-          G && (0, i.jsx)(N, {
+          U && (0, i.jsx)(N, {
             guild: b,
             controller: r,
             hasBanner: null != M,
@@ -225,7 +225,7 @@ children: [
       }) : null
     ]
   }),
-  w && z() ? (0, i.jsx)('div', {
+  G && z() ? (0, i.jsx)('div', {
     className: I.animatedBannerHoverLayer,
     onMouseEnter: () => {
       B(!0), clearTimeout(F.current);

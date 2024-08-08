@@ -24,8 +24,8 @@ var i = n(735250),
   N = n(662146),
   x = n(689938),
   S = n(524343),
-  Z = n(690310);
-let v = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+  v = n(690310);
+let Z = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
   T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
   L = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 
@@ -41,26 +41,26 @@ unread: b = !1,
 defaultFolderName: M,
 useCircleMask: R = !1,
 draggable: O = !1,
-sorting: y = !1,
-onDragStart: P,
+sorting: P = !1,
+onDragStart: y,
 onDragEnd: j,
 onExpandCollapse: D,
-onContextMenu: U,
-renderChildNode: G,
-folderIconContent: w
+onContextMenu: w,
+renderChildNode: U,
+folderIconContent: G
   } = e, {
 id: k,
 name: B,
 children: H
   } = t, [V, F] = l.useState(!1), [W, z] = l.useState(!1), Y = V || W;
   l.useEffect(() => {
-y && F(!1);
-  }, [y]);
+P && F(!1);
+  }, [P]);
   let [{
 dragging: K
   }, q] = (0, s.c)({
 type: f.eD.FOLDER,
-item: () => (null == P || P(), {
+item: () => (null == y || y(), {
   type: f.eD.FOLDER,
   nodeId: t.id
 }),
@@ -88,7 +88,7 @@ leave: {
   height: 0
 },
 config: {
-  duration: v
+  duration: Z
 }
   }), ei = l.useCallback(e => null == n ? void 0 : n(k, e), [
 n,
@@ -100,34 +100,34 @@ children: [
     hovered: V,
     selected: r,
     unread: b,
-    className: Z.pill
+    className: v.pill
   }),
   (0, i.jsx)(N.Z, {
     text: X,
-    disabled: y,
+    disabled: P,
     selected: r,
     disableWrapper: !0,
     children: (0, i.jsx)('div', {
       ref: O ? q : void 0,
       className: a()({
-        [Z.wobble]: !K && W && !u
+        [v.wobble]: !K && W && !u
       }),
       'data-dnd-name': X,
       children: K ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(g.Z, {
         folderNode: t,
         expanded: u,
         forceCircular: R,
-        sorting: y,
+        sorting: P,
         mediaState: _,
         mentionCount: A,
         tooltipName: X,
         folderGroupId: ee,
         onClick: D,
-        onContextMenu: U,
+        onContextMenu: w,
         onHoverChange: F,
         onKeyDown: J,
         treeItemProps: $,
-        folderIconContent: w
+        folderIconContent: G
       })
     })
   }),
@@ -160,7 +160,7 @@ children: [
       },
       className: S.__invalid_expandedGuilds,
       role: 'group',
-      children: H.map(G)
+      children: H.map(U)
     }, l);
   }),
   O && u ? (0, i.jsx)(C.Zu, {

@@ -16,8 +16,8 @@ var s = n(735250),
   C = n(74538),
   g = n(775412),
   p = n(104494),
-  N = n(639119),
-  A = n(230916),
+  A = n(639119),
+  N = n(230916),
   m = n(248042),
   f = n(823188),
   S = n(21023),
@@ -139,9 +139,9 @@ t.Z = e => {
   selectedPlanTier: y = x.p9.TIER_2
 } = e,
 {
-  analyticsLocations: H
+  analyticsLocations: k
 } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-k = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
+H = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
 w = (0, T.V)(),
 F = 'PlanComparisonTable';
   (0, d.j)({
@@ -155,18 +155,18 @@ autoTrackExposure: !1
 W = (0, o.ap)(V),
 K = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
 Y = (0, C.M5)(K, x.p9.TIER_2),
-z = (0, N.N)(),
+z = (0, A.N)(),
 Q = null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
 q = (0, g.rT)(),
 J = (0, p.Ng)(),
 X = null != J && (0, p.Wp)(J, x.Si.TIER_2),
-$ = (0, A.A)(x.Xh.PREMIUM_MONTH_TIER_2),
+$ = (0, N.A)(x.Xh.PREMIUM_MONTH_TIER_2),
 ee = ''.concat($, '/').concat((0, C.eP)(x.rV.MONTH)),
 et = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
 en = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
 es = (0, S.n)(et, en, X, ee),
 ea = (0, m.Vi)();
-  if (!k || !w)
+  if (!H || !w)
 return null;
   let er = {
 label: (0, s.jsx)(c.Heading, {
@@ -242,7 +242,7 @@ colorOptions: Q === x.Si.TIER_0 ? W ? f.VE.PREMIUM_TIER_0_GRADIENT_FILL : f.VE.P
   }) : ea ? (0, s.jsx)(D, {}) : (0, s.jsx)(B, {});
   let ei = Q === x.Si.TIER_0 || q === x.p9.TIER_0 || y === x.p9.TIER_0;
   return (0, s.jsx)(E.Gt, {
-value: H,
+value: k,
 children: (0, s.jsxs)('div', {
   className: i()(O.root, r),
   'data-testid': 'v2-marketing-page-comparison-table',

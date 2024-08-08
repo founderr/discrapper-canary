@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return U;
+return w;
   }
 }), n(411104);
 var i = n(735250),
@@ -24,8 +24,8 @@ var i = n(735250),
   N = n(855981),
   x = n(55543),
   S = n(626135),
-  Z = n(768581),
-  v = n(358085),
+  v = n(768581),
+  Z = n(358085),
   T = n(998502),
   L = n(379164),
   A = n(590965),
@@ -33,9 +33,9 @@ var i = n(735250),
   M = n(474936),
   R = n(689938),
   O = n(978775),
-  y = n(549856);
+  P = n(549856);
 
-function P() {
+function y() {
   let {
 analyticsLocations: e,
 sourceAnalyticsLocations: t
@@ -143,7 +143,7 @@ children: (0, i.jsx)(o.ModalRoot, {
   });
 }
 
-function U(e) {
+function w(e) {
   let t, n, {
 transitionState: r
   } = e;
@@ -157,7 +157,7 @@ error: C,
 submitting: N
   } = (0, s.cj)([A.Z], () => A.Z.getProps());
   l.useEffect(() => {
-!__OVERLAY__ && v.isPlatformEmbedded && ((0, v.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
+!__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
   }, []);
   let x = (0, m.Dt)(),
 {
@@ -177,18 +177,18 @@ null != f && L.Z.acceptInvite(f);
   }
   let {
 guild: j,
-channel: U,
-inviter: G,
-target_application: w
+channel: w,
+inviter: U,
+target_application: G
   } = f, k = null != j, B = null != f.stage_instance, H = null == f.guild && null == f.channel && null != f.inviter;
-  if (null != w)
-t = null == j ? void 0 : j.name, n = I.Z.createFromServer(w).getCoverImageURL(1024);
+  if (null != G)
+t = null == j ? void 0 : j.name, n = I.Z.createFromServer(G).getCoverImageURL(1024);
   else if (null != j)
-t = j.name, n = Z.ZP.getGuildSplashURL({
+t = j.name, n = v.ZP.getGuildSplashURL({
   id: j.id,
   splash: j.splash
 });
-  else if ((null == (t = U.name) || '' === t) && null != G && (t = G.username), null == t)
+  else if ((null == (t = w.name) || '' === t) && null != U && (t = U.username), null == t)
 throw Error('no name for group DM invite');
   let V = (0, g.yU)(),
 F = B ? R.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : R.Z.Messages.INVITE_MODAL_BUTTON.format({
@@ -213,7 +213,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
           children: [
             (0, i.jsx)('div', {
               id: x,
-              className: y.marginBottom20,
+              className: P.marginBottom20,
               children: (0, i.jsx)(c.Z, {
                 invite: f,
                 disableUser: k,
@@ -221,7 +221,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
               })
             }),
             B && null != j ? (0, i.jsx)('div', {
-              className: a()(y.marginBottom20, O.stage),
+              className: a()(P.marginBottom20, O.stage),
               children: (0, i.jsx)(p.Z, {
                 isCard: !0,
                 stageInstance: f.stage_instance,
@@ -230,8 +230,8 @@ children: (0, i.jsxs)(o.ModalRoot, {
             }) : null,
             (0, i.jsxs)('div', {
               children: [
-                V ? (0, i.jsx)(P, {}) : null,
-                null == w ? (0, i.jsx)(o.Tooltip, {
+                V ? (0, i.jsx)(y, {}) : null,
+                null == G ? (0, i.jsx)(o.Tooltip, {
                   text: V ? R.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                   position: 'bottom',
                   children: e => {
@@ -270,7 +270,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
                 }),
                 (0, i.jsx)(_.Z, {
                   justify: _.Z.Justify.CENTER,
-                  className: y.marginTop8,
+                  className: P.marginTop8,
                   children: (0, i.jsx)(h.zx, {
                     look: h.zx.Looks.LINK,
                     className: O.noThanksButton,

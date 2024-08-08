@@ -39,9 +39,9 @@ return null;
   rarity: p
 } = R,
 {
-  color: N
+  color: A
 } = (0, c.F7)(p),
-A = (0, a.wj)(I) ? u : E,
+N = (0, a.wj)(I) ? u : E,
 m = (C.size - C.offset - 2 * C.stroke) * 0.8,
 f = C.size - C.stroke,
 S = {
@@ -68,7 +68,7 @@ children: [
     className: _.trophyIconContainer,
     children: (0, s.jsx)(r.TrophyIcon, {
       size: 'custom',
-      color: d ? N : (0, l.Lq)(A.trophy),
+      color: d ? A : (0, l.Lq)(N.trophy),
       width: m,
       height: m
     })
@@ -78,7 +78,7 @@ children: [
     style: h,
     children: (0, s.jsx)(r.LockIcon, {
       size: 'custom',
-      color: (0, l.Lq)(A.locked),
+      color: (0, l.Lq)(N.locked),
       ...S
     })
   }),

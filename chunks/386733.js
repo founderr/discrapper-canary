@@ -16,8 +16,8 @@ var s = n(735250),
   C = n(276444),
   g = n(520540),
   p = n(197115),
-  N = n(119269),
-  A = n(981631),
+  A = n(119269),
+  N = n(981631),
   m = n(689938),
   f = n(141253),
   S = n(691766);
@@ -129,7 +129,7 @@ r.forEach(e => {
   }, [r]);
   let P = r.length,
 L = 3 === P,
-v = R.Z.getArticleURL(A.BhN.REFERRAL_PROGRAM),
+v = R.Z.getArticleURL(N.BhN.REFERRAL_PROGRAM),
 Z = L ? m.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : m.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
 {
   analyticsLocations: D
@@ -149,9 +149,9 @@ window.removeEventListener('resize', G);
   }), []);
   let y = (0, s.jsxs)(s.Fragment, {
 children: [
-  (0, s.jsx)(N.Z, {
+  (0, s.jsx)(A.Z, {
     percentage: P / 3 * 100,
-    progressCircleVariation: N.Q.NITRO_LOGO,
+    progressCircleVariation: A.Q.NITRO_LOGO,
     iconClassName: i()({
       [f.referralProgressBarIcon]: !t,
       [f.referralProgressBarIconSettings]: t
@@ -192,7 +192,7 @@ children: [
             className: f.expandedProgressBarSelectFriendsCTA,
             color: o.ButtonColors.CUSTOM,
             onClick: () => {
-              I.default.track(A.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+              I.default.track(N.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                 location_stack: D
               }), (0, o.openModalLazy)(async () => {
                 let {

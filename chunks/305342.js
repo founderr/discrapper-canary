@@ -210,7 +210,7 @@ isCheckingTrialEligibility: A
   } = (0, x.Z)(f, a, u, E), P = (0, l.e7)([_.Z], () => _.Z.isSyncing), {
 activeSubscription: D,
 activeSubscriptionListing: U
-  } = (0, h.Z)(u), y = (null == U ? void 0 : U.id) === n, B = (null == D ? void 0 : D.status) === v.O0b.CANCELED, [k, G] = s.useState(!1), [F, w] = s.useState(!1), V = s.useCallback(e => {
+  } = (0, h.Z)(u), y = (null == U ? void 0 : U.id) === n, B = (null == D ? void 0 : D.status) === v.O0b.CANCELED, [k, F] = s.useState(!1), [G, w] = s.useState(!1), V = s.useCallback(e => {
 let t = !1;
 null != e && (t = e.scrollHeight - e.clientHeight > 1), w(t);
   }, []), [H] = T._T(n), [Y] = T.PK(n), [W] = T.TT(n), [K] = T.F2(n), z = (0, N.Z)(a, n), Q = null != W && null == D && z, q = (0, c.Z)(M.iP), [X, J] = s.useState(!1), $ = X || !q, ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(a)), et = (null == f ? void 0 : f.published) === !0, en = (null == f ? void 0 : f.soft_deleted) === !0, ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
@@ -286,15 +286,15 @@ children: [
               (0, i.jsx)(o.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-normal',
-                className: r()((!F || !k) && Z.tierDescriptionTruncate),
+                className: r()((!G || !k) && Z.tierDescriptionTruncate),
                 children: (0, i.jsx)('div', {
                   ref: V,
                   children: Y
                 })
               }),
-              F && (0, i.jsx)(j, {
+              G && (0, i.jsx)(j, {
                 isViewAll: k,
-                onToggle: () => G(e => !e),
+                onToggle: () => F(e => !e),
                 showMoreText: ei
               })
             ]

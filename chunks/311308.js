@@ -1,6 +1,6 @@
-let n = r(888902),
-  i = r(168188);
+let s = e(888902),
+  a = e(168188);
 t.exports = {
-  TimelineDataSeries: n,
-  TimelineGraphView: i
+  TimelineDataSeries: s,
+  TimelineGraphView: a
 };

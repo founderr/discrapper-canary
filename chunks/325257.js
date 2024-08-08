@@ -20,8 +20,8 @@ var i = n(735250),
   N = n(276952),
   x = n(249792),
   S = n(40153),
-  Z = n(593618),
-  v = n(252686),
+  v = n(593618),
+  Z = n(252686),
   T = n(682662),
   L = n(674552),
   A = n(981631),
@@ -61,14 +61,14 @@ return n => (0, i.jsx)(e, {
   });
 }
 t.Z = l.memo(function(e) {
-  var t, n, r, p, y;
+  var t, n, r, p, P;
   let {
-guildNode: P,
+guildNode: y,
 setRef: j,
 onDragStart: D,
-onDragEnd: U,
-route: G,
-guild: w,
+onDragEnd: w,
+route: U,
+guild: G,
 animatable: k,
 selected: B = !1,
 unread: H = !1,
@@ -83,11 +83,11 @@ guildJoinRequestStatus: Q
   } = e, {
 id: J,
 parentId: X
-  } = P, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != V ? (0, L.Or)(V) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+  } = y, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != V ? (0, L.Or)(V) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
   null == ee && W > 0 ? ee = null !== (r = (0, L.Ne)(W)) && void 0 !== r ? r : void 0 : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({
 guildJoinRequestStatus: Q
   })) && void 0 !== p ? p : void 0);
-  let et = null !== (y = e.lowerBadgeSize) && void 0 !== y ? y : {
+  let et = null !== (P = e.lowerBadgeSize) && void 0 !== P ? P : {
   width: (0, d.getBadgeWidthForValue)(W)
 },
 [{
@@ -97,11 +97,11 @@ guildJoinRequestStatus: Q
   item: () => (requestAnimationFrame(() => {
     null == D || D();
   }), {
-    type: P.type,
-    nodeId: P.id
+    type: y.type,
+    nodeId: y.id
   }),
   end() {
-    null == U || U(), (0, _.V1)(I.ZP.getCompatibleGuildFolders());
+    null == w || w(), (0, _.V1)(I.ZP.getCompatibleGuildFolders());
   },
   collect: e => ({
     dragging: e.isDragging()
@@ -115,8 +115,8 @@ es = !K && er,
 [eh] = l.useState(() => new u.sW(70, () => ed(!0)));
   l.useEffect(() => () => eh.cancel(), [eh]);
   let ep = l.useCallback(() => {
-  if (null != G) {
-    (0, m.uL)(G, {
+  if (null != U) {
+    (0, m.uL)(U, {
       state: R
     });
     return;
@@ -126,25 +126,25 @@ es = !K && er,
   });
 }, [
   J,
-  G
+  U
 ]),
 e_ = l.useCallback(() => {
-  if (null != G || null == w || F || !q)
+  if (null != U || null == G || F || !q)
     return;
-  let e = (0, f.V)(w.id);
+  let e = (0, f.V)(G.id);
   if (null != e)
-    h.Z.preload(w.id, e);
+    h.Z.preload(G.id, e);
 }, [
+  U,
   G,
-  w,
   F,
   q
 ]),
 ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(J)),
 em = l.useCallback(e => {
-  null != w && !ef && z(e, w);
+  null != G && !ef && z(e, G);
 }, [
-  w,
+  G,
   z,
   ef
 ]),
@@ -167,10 +167,10 @@ eI = l.useCallback(e => {
   J,
   j
 ]);
-  if (null == w)
+  if (null == G)
 return null;
   let eE = eu || eo ? (0, i.jsx)(x.Z, {
-  guild: w,
+  guild: G,
   show: eu,
   active: B,
   onAnimationStart: function() {
@@ -181,10 +181,10 @@ return null;
   }
 }) : (0, i.jsx)(d.NavItem, {
   ariaLabel: b.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
-    guildName: w.toString(),
+    guildName: G.toString(),
     mentions: W
   }),
-  name: w.toString(),
+  name: G.toString(),
   onClick: ep,
   onMouseEnter: function() {
     K || ea(!0);
@@ -195,16 +195,16 @@ return null;
   onMouseDown: e_,
   onContextMenu: em,
   onKeyDown: eg,
-  icon: w.getIconURL(96, es && k),
+  icon: G.getIconURL(96, es && k),
   selected: B || es,
   ...el,
   role: 'treeitem'
 }),
 eN = en ? (0, i.jsx)(S.OG, {
-  children: (0, i.jsx)(v.Z, {})
+  children: (0, i.jsx)(Z.Z, {})
 }) : (0, i.jsx)('div', {
   ref: Y ? ei : void 0,
-  'data-dnd-name': w.toString(),
+  'data-dnd-name': G.toString(),
   className: a()(M.blobContainer, {
     [M.sorting]: K,
     [M.wobble]: eu,
@@ -227,15 +227,15 @@ children: [
     unread: !en && H,
     className: M.pill
   }),
-  (0, i.jsx)(Z.Z, {
-    guild: w,
+  (0, i.jsx)(v.Z, {
+    guild: G,
     disabled: K,
     isDragging: en,
     children: eN
   }),
   Y ? (0, i.jsx)(S.ZP, {
-    name: w.name,
-    targetNode: P,
+    name: G.name,
+    targetNode: y,
     onDragOverChanged: eC
   }) : null
 ]

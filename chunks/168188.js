@@ -1,10 +1,10 @@
-var e = function() {
+var i = function() {
 
-  function t(t, e) {
+  function t(t, i) {
 this.scrollbar_ = {
   position_: 0,
   range_: 0
-}, this.devicePixelRatio = e || 1, this.canvas_ = t, t.width = parseInt(t.width, 10) * this.devicePixelRatio, t.height = parseInt(t.height, 10) * this.devicePixelRatio, this.gridColor = '#CCC', this.textColor = '#000', this.backgroundColor = '#FFF', this.fontWeight = 'normal', this.fontSize = 10, this.fontFamily = 'sans-serif', this.timeLocales = [], this.timeOptions = {}, this.startTime_ = 0, this.endTime_ = 1, this.graph_ = null, this.scale_ = 1000 / this.devicePixelRatio, this.updateScrollbarRange_(!0);
+}, this.devicePixelRatio = i || 1, this.canvas_ = t, t.width = parseInt(t.width, 10) * this.devicePixelRatio, t.height = parseInt(t.height, 10) * this.devicePixelRatio, this.gridColor = '#CCC', this.textColor = '#000', this.backgroundColor = '#FFF', this.fontWeight = 'normal', this.fontSize = 10, this.fontFamily = 'sans-serif', this.timeLocales = [], this.timeOptions = {}, this.startTime_ = 0, this.endTime_ = 1, this.graph_ = null, this.scale_ = 1000 / this.devicePixelRatio, this.updateScrollbarRange_(!0);
   }
   t.prototype = {
 setScale: function(t) {
@@ -17,11 +17,11 @@ graphScrolledToRightEdge_: function() {
   return this.scrollbar_.position_ == this.scrollbar_.range_;
 },
 updateScrollbarRange_: function(t) {
-  var e = this.getLength_() - this.canvas_.width;
-  e < 0 && (e = 0), this.scrollbar_.position_ > e && (t = !0), this.scrollbar_.range_ = e, t && (this.scrollbar_.position_ = e, this.repaint());
+  var i = this.getLength_() - this.canvas_.width;
+  i < 0 && (i = 0), this.scrollbar_.position_ > i && (t = !0), this.scrollbar_.range_ = i, t && (this.scrollbar_.position_ = i, this.repaint());
 },
-setDateRange: function(t, e) {
-  this.startTime_ = t.getTime(), this.endTime_ = e.getTime(), this.endTime_ <= this.startTime_ && (this.startTime_ = this.endTime_ - 1), this.updateScrollbarRange_(!0);
+setDateRange: function(t, i) {
+  this.startTime_ = t.getTime(), this.endTime_ = i.getTime(), this.endTime_ <= this.startTime_ && (this.startTime_ = this.endTime_ - 1), this.updateScrollbarRange_(!0);
 },
 updateEndDate: function(t) {
   this.endTime_ = t || new Date().getTime(), this.updateScrollbarRange_(this.graphScrolledToRightEdge_());
@@ -30,38 +30,38 @@ getStartDate: function() {
   return new Date(this.startTime_);
 },
 setDataSeries: function(t) {
-  this.graph_ = new e(this.devicePixelRatio);
-  for (var r = 0; r < t.length; ++r)
-    this.graph_.addDataSeries(t[r]);
+  this.graph_ = new i(this.devicePixelRatio);
+  for (var e = 0; e < t.length; ++e)
+    this.graph_.addDataSeries(t[e]);
   this.repaint();
 },
 addDataSeries: function(t) {
-  !this.graph_ && (this.graph_ = new e(this.devicePixelRatio)), this.graph_.addDataSeries(t), this.repaint();
+  !this.graph_ && (this.graph_ = new i(this.devicePixelRatio)), this.graph_.addDataSeries(t), this.repaint();
 },
 repaint: function() {
   if (null === this.canvas_.offsetParent)
     return;
   this.repaintTimerRunning_ = !1;
   var t = this.canvas_.width,
-    e = this.canvas_.height,
-    r = this.canvas_.getContext('2d');
-  if (r.fillStyle = this.backgroundColor, r.fillRect(0, 0, t, e), !(4 * this.fontSize > e) && !(t < 50)) {
-    r.save();
-    var n = this.scrollbar_.position_;
-    0 == this.scrollbar_.range_ && (n = this.getLength_() - t);
-    var i = this.startTime_ + n * this.scale_,
-      a = e;
-    e -= Math.ceil(this.fontSize * this.devicePixelRatio) + 4, this.drawTimeLabels(r, t, e, a, i), r.strokeStyle = this.gridColor, r.lineWidth = this.devicePixelRatio, r.strokeRect(1, 1, t - 1, e - 1), this.graph_ && (this.graph_.layout(t, e, this.fontSize, i, this.scale_), this.graph_.drawTicks(r), this.graph_.drawLines(r), this.graph_.drawLabels(r)), r.restore();
+    i = this.canvas_.height,
+    e = this.canvas_.getContext('2d');
+  if (e.fillStyle = this.backgroundColor, e.fillRect(0, 0, t, i), !(4 * this.fontSize > i) && !(t < 50)) {
+    e.save();
+    var s = this.scrollbar_.position_;
+    0 == this.scrollbar_.range_ && (s = this.getLength_() - t);
+    var a = this.startTime_ + s * this.scale_,
+      h = i;
+    i -= Math.ceil(this.fontSize * this.devicePixelRatio) + 4, this.drawTimeLabels(e, t, i, h, a), e.strokeStyle = this.gridColor, e.lineWidth = this.devicePixelRatio, e.strokeRect(1, 1, t - 1, i - 1), this.graph_ && (this.graph_.layout(t, i, this.fontSize, a, this.scale_), this.graph_.drawTicks(e), this.graph_.drawLines(e), this.graph_.drawLabels(e)), e.restore();
   }
 },
-drawTimeLabels: function(t, e, r, n, i) {
-  var a = 60000 * Math.ceil(i / 60000);
+drawTimeLabels: function(t, i, e, s, a) {
+  var h = 60000 * Math.ceil(a / 60000);
   for (t.textBaseline = 'bottom', t.textAlign = 'center', t.fillStyle = this.textColor, t.strokeStyle = this.gridColor, t.lineWidth = this.devicePixelRatio, t.font = `${ this.fontWeight } ${ this.fontSize * this.devicePixelRatio }px ${ this.fontFamily }`;;) {
-    var o = Math.round((a - i) / this.scale_);
-    if (o >= e)
+    var n = Math.round((h - a) / this.scale_);
+    if (n >= i)
       break;
-    var s = new Date(a).toLocaleTimeString(this.timeLocales, this.timeOptions);
-    t.fillText(s, o, n), t.beginPath(), t.lineTo(o, 1), t.lineTo(o, r), t.stroke(), a += 60000;
+    var r = new Date(h).toLocaleTimeString(this.timeLocales, this.timeOptions);
+    t.fillText(r, n, s), t.beginPath(), t.lineTo(n, 1), t.lineTo(n, e), t.stroke(), h += 60000;
   }
 },
 getDataSeriesCount: function() {
@@ -71,7 +71,7 @@ hasDataSeries: function(t) {
   return !!this.graph_ && this.graph_.hasDataSeries(t);
 }
   };
-  var e = function() {
+  var i = function() {
 function t(t) {
   this.devicePixelRatio = t || 1, this.dataSeries_ = [], this.width_ = 0, this.height_ = 0, this.fontHeight_ = 0, this.startTime_ = 0, this.scale_ = 0, this.min_ = 0, this.max_ = 0, this.labels_ = [];
 }
@@ -80,30 +80,30 @@ return t.prototype = {
     this.dataSeries_.push(t);
   },
   hasDataSeries: function(t) {
-    for (var e = 0; e < this.dataSeries_.length; ++e)
-      if (this.dataSeries_[e] == t)
+    for (var i = 0; i < this.dataSeries_.length; ++i)
+      if (this.dataSeries_[i] == t)
         return !0;
     return !1;
   },
   getValues: function(t) {
     return t.isVisible() ? t.getValues(this.startTime_, this.scale_, this.width_) : null;
   },
-  layout: function(t, e, r, n, i) {
-    this.width_ = t, this.height_ = e, this.fontHeight_ = r, this.startTime_ = n, this.scale_ = i;
-    for (var a = 0, o = 0, s = 0; s < this.dataSeries_.length; ++s) {
-      var u = this.getValues(this.dataSeries_[s]);
-      if (u)
-        for (var c = 0; c < u.length; ++c)
-          u[c] > a ? a = u[c] : u[c] < o && (o = u[c]);
+  layout: function(t, i, e, s, a) {
+    this.width_ = t, this.height_ = i, this.fontHeight_ = e, this.startTime_ = s, this.scale_ = a;
+    for (var h = 0, n = 0, r = 0; r < this.dataSeries_.length; ++r) {
+      var o = this.getValues(this.dataSeries_[r]);
+      if (o)
+        for (var l = 0; l < o.length; ++l)
+          o[l] > h ? h = o[l] : o[l] < n && (n = o[l]);
     }
-    this.layoutLabels_(o, a);
+    this.layoutLabels_(n, h);
   },
-  layoutLabels_: function(t, e) {
-    if (e - t < 1024) {
-      this.layoutLabelsBasic_(t, e, 2);
+  layoutLabels_: function(t, i) {
+    if (i - t < 1024) {
+      this.layoutLabelsBasic_(t, i, 2);
       return;
     }
-    var r = [
+    var e = [
         '',
         'k',
         'M',
@@ -111,72 +111,72 @@ return t.prototype = {
         'T',
         'P'
       ],
-      n = 1;
-    for (t /= 1024, e /= 1024; r[n + 1] && e - t >= 1024;)
-      t /= 1024, e /= 1024, ++n;
-    this.layoutLabelsBasic_(t, e, 2);
-    for (var i = 0; i < this.labels_.length; ++i)
-      this.labels_[i] += ' ' + r[n];
-    this.min_ *= Math.pow(1024, n), this.max_ *= Math.pow(1024, n);
+      s = 1;
+    for (t /= 1024, i /= 1024; e[s + 1] && i - t >= 1024;)
+      t /= 1024, i /= 1024, ++s;
+    this.layoutLabelsBasic_(t, i, 2);
+    for (var a = 0; a < this.labels_.length; ++a)
+      this.labels_[a] += ' ' + e[s];
+    this.min_ *= Math.pow(1024, s), this.max_ *= Math.pow(1024, s);
   },
-  layoutLabelsBasic_: function(t, e, r) {
+  layoutLabelsBasic_: function(t, i, e) {
     this.labels_ = [];
-    var n = e - t;
-    if (0 == n) {
-      this.min_ = this.max_ = e;
+    var s = i - t;
+    if (0 == s) {
+      this.min_ = this.max_ = i;
       return;
     }
-    var i = 2 * this.fontHeight_ + 4,
-      a = 1 + this.height_ / i;
-    a < 2 ? a = 2 : a > 6 && (a = 6);
-    for (var o = Math.pow(10, -r), s = r; !(Math.ceil(n / o) + 1 <= a);) {
+    var a = 2 * this.fontHeight_ + 4,
+      h = 1 + this.height_ / a;
+    h < 2 ? h = 2 : h > 6 && (h = 6);
+    for (var n = Math.pow(10, -e), r = e; !(Math.ceil(s / n) + 1 <= h);) {
       ;
-      if (Math.ceil(n / (2 * o)) + 1 <= a) {
-        o *= 2;
+      if (Math.ceil(s / (2 * n)) + 1 <= h) {
+        n *= 2;
         break;
       }
-      if (Math.ceil(n / (5 * o)) + 1 <= a) {
-        o *= 5;
+      if (Math.ceil(s / (5 * n)) + 1 <= h) {
+        n *= 5;
         break;
       }
-      o *= 10, s > 0 && --s;
+      n *= 10, r > 0 && --r;
     }
-    this.max_ = Math.ceil(e / o) * o, this.min_ = Math.floor(t / o) * o;
-    for (var u = this.max_; u >= this.min_; u -= o)
-      this.labels_.push(u.toFixed(s));
+    this.max_ = Math.ceil(i / n) * n, this.min_ = Math.floor(t / n) * n;
+    for (var o = this.max_; o >= this.min_; o -= n)
+      this.labels_.push(o.toFixed(r));
   },
   drawTicks: function(t) {
-    e = this.width_ - 1, r = this.width_ - 1 - 10, t.fillStyle = this.gridColor, t.lineWidth = this.devicePixelRatio, t.beginPath();
-    for (var e, r, n = 1; n < this.labels_.length - 1; ++n) {
-      var i = Math.round(this.height_ * n / (this.labels_.length - 1));
-      t.moveTo(e, i), t.lineTo(r, i);
+    i = this.width_ - 1, e = this.width_ - 1 - 10, t.fillStyle = this.gridColor, t.lineWidth = this.devicePixelRatio, t.beginPath();
+    for (var i, e, s = 1; s < this.labels_.length - 1; ++s) {
+      var a = Math.round(this.height_ * s / (this.labels_.length - 1));
+      t.moveTo(i, a), t.lineTo(e, a);
     }
     t.stroke();
   },
   drawLines: function(t) {
-    var e = 0,
-      r = this.height_ - 1;
-    this.max_ && (e = r / (this.max_ - this.min_));
-    for (var n = this.dataSeries_.length - 1; n >= 0; --n) {
-      var i = this.getValues(this.dataSeries_[n]);
-      if (i) {
-        t.strokeStyle = this.dataSeries_[n].getColor(), t.lineWidth = this.devicePixelRatio, t.beginPath();
-        for (var a = 0; a < i.length; ++a)
-          t.lineTo(a, r - Math.round((i[a] - this.min_) * e));
+    var i = 0,
+      e = this.height_ - 1;
+    this.max_ && (i = e / (this.max_ - this.min_));
+    for (var s = this.dataSeries_.length - 1; s >= 0; --s) {
+      var a = this.getValues(this.dataSeries_[s]);
+      if (a) {
+        t.strokeStyle = this.dataSeries_[s].getColor(), t.lineWidth = this.devicePixelRatio, t.beginPath();
+        for (var h = 0; h < a.length; ++h)
+          t.lineTo(h, e - Math.round((a[h] - this.min_) * i));
         t.stroke();
       }
     }
   },
   drawLabels: function(t) {
     if (0 != this.labels_.length) {
-      var e = this.width_ - 3;
-      t.fillStyle = this.textColor, t.textAlign = 'right', t.textBaseline = 'top', t.fillText(this.labels_[0], e, 0), t.textBaseline = 'bottom';
-      for (var r = (this.height_ - 1) / (this.labels_.length - 1), n = 1; n < this.labels_.length; ++n)
-        t.fillText(this.labels_[n], e, r * n);
+      var i = this.width_ - 3;
+      t.fillStyle = this.textColor, t.textAlign = 'right', t.textBaseline = 'top', t.fillText(this.labels_[0], i, 0), t.textBaseline = 'bottom';
+      for (var e = (this.height_ - 1) / (this.labels_.length - 1), s = 1; s < this.labels_.length; ++s)
+        t.fillText(this.labels_[s], i, e * s);
     }
   }
 }, t;
   }();
   return t;
 }();
-t.exports = e;
+t.exports = i;

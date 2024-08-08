@@ -16,8 +16,8 @@ var s = n(735250),
   C = n(15640),
   g = n(89057),
   p = n(433811),
-  N = n(246946),
-  A = n(594174),
+  A = n(246946),
+  N = n(594174),
   m = n(78839),
   f = n(626135),
   S = n(111361),
@@ -44,11 +44,11 @@ p.X.trigger();
   analyticsLocations: B
 } = (0, I.ZP)(T.Z.PREMIUM_MARKETING),
 j = (0, l.e7)([m.ZP], () => m.ZP.hasFetchedSubscriptions()),
-U = (0, l.e7)([A.default], () => A.default.getCurrentUser()),
+U = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
 G = (0, O.N)(),
 y = (0, b.Ng)(),
-H = (0, C.V)(),
-[k, w] = a.useState(!0),
+k = (0, C.V)(),
+[H, w] = a.useState(!0),
 F = a.useRef(0),
 V = (0, S.M5)(U, v.p9.TIER_2),
 W = (0, x.n)(),
@@ -73,17 +73,17 @@ n,
 G,
 y
   ]), a.useEffect(() => {
-!k && f.default.track(Z.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+!H && f.default.track(Z.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
   location_stack: r,
   load_duration_ms: F.current
 });
   }, [
 r,
-k
-  ]), (0, l.e7)([N.Z], () => N.Z.enabled)) ? (0, s.jsx)(E.Z, {}) : n ? (0, s.jsx)(g.c8, {}) : t === v.EZ.ApplicationStoreHome && V ? (0, s.jsx)(I.Gt, {
+H
+  ]), (0, l.e7)([A.Z], () => A.Z.enabled)) ? (0, s.jsx)(E.Z, {}) : n ? (0, s.jsx)(g.c8, {}) : t === v.EZ.ApplicationStoreHome && V ? (0, s.jsx)(I.Gt, {
 value: B,
 children: (0, s.jsx)(L.Z, {})
-  }) : j && H && !k ? (0, s.jsx)(I.Gt, {
+  }) : j && k && !H ? (0, s.jsx)(I.Gt, {
 value: B,
 children: (0, s.jsx)(P.Z, {
   entrypoint: t

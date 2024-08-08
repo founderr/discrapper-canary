@@ -21,8 +21,8 @@ var l = n(392711),
   N = n(30684),
   x = n(6242),
   S = n(757692),
-  Z = n(114064),
-  v = n(684259),
+  v = n(114064),
+  Z = n(684259),
   T = n(937579),
   L = n(485731),
   A = n(1163),
@@ -30,8 +30,8 @@ var l = n(392711),
   M = n(11352),
   R = n(474936),
   O = n(981631),
-  y = n(354459),
-  P = n(37113),
+  P = n(354459),
+  y = n(37113),
   j = n(689938);
 
 function D(e, t, n) {
@@ -42,7 +42,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class U extends c.Z {
+class w extends c.Z {
   _initialize() {
 __OVERLAY__ ? s.Z.subscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (s.Z.subscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), s.Z.subscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), s.Z.subscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure), s.Z.subscribe('POST_CONNECTION_OPEN', this._trackSkyLoadExposure), s.Z.subscribe('RTC_CONNECTION_STATE', this.maybeShowHDStreamingPerksDemoPostUpsellModal), s.Z.subscribe('MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED', this.maybeShowHDStreamingViewerUpsellMessage), s.Z.subscribe('VOICE_CHANNEL_SELECT', this.cleanupShowHDStreamingViewerUpsellMessage));
   }
@@ -108,9 +108,9 @@ let {
 if (!n || e.state !== O.hes.DISCONNECTED || e.willReconnect)
   return;
 let i = p.Z.getChannel(e.channelId);
-if (null == i || !(null === (t = Z.Z.getPerksDemos()) || void 0 === t ? void 0 : t[r.q.STREAM_HIGH_QUALITY]))
+if (null == i || !(null === (t = v.Z.getPerksDemos()) || void 0 === t ? void 0 : t[r.q.STREAM_HIGH_QUALITY]))
   return;
-let l = Z.Z.getActivated()[r.q.STREAM_HIGH_QUALITY];
+let l = v.Z.getActivated()[r.q.STREAM_HIGH_QUALITY];
 if (l && s.Z.dispatch({
     type: 'PREMIUM_PERKS_DEMO_COMPLETE',
     perkType: r.q.STREAM_HIGH_QUALITY
@@ -135,7 +135,7 @@ super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiu
     location: 'PremiumManager'
   });
 }), D(this, '_trackSkyLoadExposure', () => {
-  v.Z.trackExposure({
+  Z.Z.trackExposure({
     location: 'PremiumManager'
   });
 }), D(this, '_handlePremiumPaymentModalOpen', e => {
@@ -165,12 +165,12 @@ super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiu
       sendNitroMessage: s
     } = (0, x.TD)(a),
     c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : O.Eu4.NONE;
-  if (!!s && !(c >= O.Eu4.TIER_2) && (null == r ? void 0 : r.type) === y.fO.STREAM && (null == r ? void 0 : r.id) !== (null == n ? void 0 : n.id) && null != r.maxResolution && null != r.maxFrameRate) {
+  if (!!s && !(c >= O.Eu4.TIER_2) && (null == r ? void 0 : r.type) === P.fO.STREAM && (null == r ? void 0 : r.id) !== (null == n ? void 0 : n.id) && null != r.maxResolution && null != r.maxFrameRate) {
     if (e !== this._lastStreamingChannelId) {
       this._lastStreamingChannelId = e;
       let n = j.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
         nickname: r.userNick,
-        resolution: (0, P.o6)(r.maxResolution.height),
+        resolution: (0, y.o6)(r.maxResolution.height),
         fps: (0, I.bp)(r.maxFrameRate)
       });
       o.Z.sendNitroSystemMessage(e, n), g.default.track(O.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
@@ -186,4 +186,4 @@ super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiu
 });
   }
 }
-t.Z = new U();
+t.Z = new w();

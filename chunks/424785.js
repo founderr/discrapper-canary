@@ -25,8 +25,8 @@ var l = n(120356),
   N = n(501655),
   x = n(427679),
   S = n(71275),
-  Z = n(201469),
-  v = n(680089),
+  v = n(201469),
+  Z = n(680089),
   T = n(592125),
   L = n(430824),
   A = n(607744),
@@ -34,13 +34,13 @@ var l = n(120356),
   M = n(306680),
   R = n(9156),
   O = n(979651),
-  y = n(934415),
-  P = n(98597),
+  P = n(934415),
+  y = n(98597),
   j = n(648501),
   D = n(473403),
-  U = n(207055),
-  G = n(981631),
-  w = n(647086),
+  w = n(207055),
+  U = n(981631),
+  G = n(647086),
   k = n(689938),
   B = n(704672),
   H = n(368412);
@@ -53,7 +53,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class F extends P.ZP {
+class F extends y.ZP {
   getVoiceStatesCount() {
 var e;
 let {
@@ -65,7 +65,7 @@ return null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0;
 let {
   channel: e
 } = this.props;
-return (0, y.rY)(e, O.Z, L.Z);
+return (0, P.rY)(e, O.Z, L.Z);
   }
   getModeClass() {
 let {
@@ -87,12 +87,12 @@ let {
   speakerVoiceStates: l,
   numAudience: r
 } = this.props;
-return (0, i.jsx)(U.Z, {
+return (0, i.jsx)(w.Z, {
   channel: e,
   voiceStates: l,
   collapsed: t,
   tabIndex: n,
-  location: G.Sbl.GUILD_CHANNEL_LIST,
+  location: U.Sbl.GUILD_CHANNEL_LIST,
   numAudience: r
 });
   }
@@ -311,14 +311,14 @@ b.Z
 let e = T.Z.getChannel(n.parent_id),
   i = A.Z.getCheck(n.guild_id);
 return {
-  canManageChannel: null != t && b.Z.can(G.Plq.MANAGE_CHANNELS, n),
-  canReorderChannel: !0 !== l && (t.id === w._ || (null != e ? b.Z.can(G.Plq.MANAGE_CHANNELS, e) : b.Z.can(G.Plq.MANAGE_CHANNELS, t))),
-  canMoveMembers: b.Z.can(G.Plq.MOVE_MEMBERS, n),
-  locked: !b.Z.can(G.Plq.CONNECT, n),
-  bypassLimit: b.Z.can(G.Plq.MOVE_MEMBERS, n),
+  canManageChannel: null != t && b.Z.can(U.Plq.MANAGE_CHANNELS, n),
+  canReorderChannel: !0 !== l && (t.id === G._ || (null != e ? b.Z.can(U.Plq.MANAGE_CHANNELS, e) : b.Z.can(U.Plq.MANAGE_CHANNELS, t))),
+  canMoveMembers: b.Z.can(U.Plq.MOVE_MEMBERS, n),
+  locked: !b.Z.can(U.Plq.CONNECT, n),
+  bypassLimit: b.Z.can(U.Plq.MOVE_MEMBERS, n),
   unverifiedAccount: !i.canChat
 };
-  }), h = (0, a.e7)([v.Z], () => v.Z.isCollapsed(n.parent_id)), p = (0, Z.ZP)(n.id), _ = (0, a.e7)([x.Z], () => x.Z.getStageInstanceByChannel(n.id), [n.id]), f = (0, E.Rk)(n.id, N.pV.AUDIENCE), {
+  }), h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)), p = (0, v.ZP)(n.id), _ = (0, a.e7)([x.Z], () => x.Z.getStageInstanceByChannel(n.id), [n.id]), f = (0, E.Rk)(n.id, N.pV.AUDIENCE), {
 isSubscriptionGated: g,
 needSubscriptionToAccess: C
   } = (0, m.Z)(n.id), I = (0, a.e7)([R.ZP], () => R.ZP.isFavorite(t.id, n.id)), L = (0, S.xJ)(n.id), O = (0, j.Z)({
@@ -328,8 +328,8 @@ isChannelCollapsed: s,
 voiceStates: o,
 isSubscriptionGated: g,
 needSubscriptionToAccess: C,
-enableConnectedUserLimit: L || n.userLimit > 0 && n.userLimit < G.xGv
-  }), y = e.connected && null == O;
+enableConnectedUserLimit: L || n.userLimit > 0 && n.userLimit < U.xGv
+  }), P = e.connected && null == O;
   return (0, i.jsx)(W, {
 categoryCollapsed: h,
 connectAction: p,
@@ -341,7 +341,7 @@ needSubscriptionToAccess: C,
 ...d,
 ...e,
 isFavoriteSuggestion: r && !I,
-forceShowButtons: y,
+forceShowButtons: P,
 channelInfo: O,
 resolvedUnreadSetting: u
   });

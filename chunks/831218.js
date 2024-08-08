@@ -17,8 +17,8 @@ var i, l, r, a = n(735250),
   N = n(82295),
   x = n(313201),
   S = n(518311),
-  Z = n(355298),
-  v = n(869404),
+  v = n(355298),
+  Z = n(869404),
   T = n(333984),
   L = n(210887),
   A = n(592125),
@@ -26,8 +26,8 @@ var i, l, r, a = n(735250),
   M = n(55589),
   R = n(515753),
   O = n(981631),
-  y = n(689938),
-  P = n(257164);
+  P = n(689938),
+  y = n(257164);
 
 function j(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ let D = s.memo(function() {
 width: '184',
 height: '428',
 viewBox: '0 0 184 428',
-className: P.empty,
+className: y.empty,
 children: [
   (0, a.jsx)('rect', {
     x: 40,
@@ -186,7 +186,7 @@ children: [
 ]
   });
 });
-class U extends(l = s.Component) {
+class w extends(l = s.Component) {
   static getDerivedStateFromProps(e) {
 let {
   children: t,
@@ -258,14 +258,14 @@ return (0, a.jsx)(u.SJ, {
       children: i => (0, a.jsx)(_.List, {
         fade: !0,
         innerRole: r,
-        innerAriaLabel: y.Z.Messages.DIRECT_MESSAGES,
+        innerAriaLabel: P.Z.Messages.DIRECT_MESSAGES,
         innerTag: 'ul',
         ref: e => {
           var t;
           this._list = e, this.props.listRef.current = e, l.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
         },
         onScroll: this.handleScroll,
-        className: P.scroller,
+        className: y.scroller,
         sectionHeight: this.getSectionHeight,
         paddingTop: t,
         paddingBottom: 8,
@@ -367,17 +367,17 @@ super(...e), j(this, 'state', {
     showDMHeader: n
   } = this.props;
   return 0 !== t && n ? (0, a.jsxs)(N.Z, {
-    className: P.privateChannelsHeaderContainer,
+    className: y.privateChannelsHeaderContainer,
     children: [
       (0, a.jsx)('span', {
-        className: P.headerText,
-        children: y.Z.Messages.DIRECT_MESSAGES
+        className: y.headerText,
+        children: P.Z.Messages.DIRECT_MESSAGES
       }),
       (0, a.jsx)(S.Z, {
-        tooltip: y.Z.Messages.CREATE_DM,
+        tooltip: P.Z.Messages.CREATE_DM,
         tooltipPosition: 'top',
         popoutAlign: 'left',
-        iconClassName: P.privateChannelRecipientsInviteButtonIcon,
+        iconClassName: y.privateChannelRecipientsInviteButtonIcon,
         icon: _.PlusSmallIcon,
         subscribeToGlobalHotkey: !0
       })
@@ -391,7 +391,7 @@ super(...e), j(this, 'state', {
 });
   }
 }
-j(U, 'defaultProps', {
+j(w, 'defaultProps', {
   padding: 8
 });
 t.Z = e => {
@@ -400,14 +400,14 @@ version: t,
 theme: n,
 children: i,
 showDMHeader: l
-  } = e, r = s.Children.count(i), o = A.Z.getMutablePrivateChannels(), c = (0, v.k1)(o), p = (0, h.Wu)([
+  } = e, r = s.Children.count(i), o = A.Z.getMutablePrivateChannels(), c = (0, Z.k1)(o), p = (0, h.Wu)([
 M.Z,
-Z.Z,
+v.Z,
 T.Z
   ], () => {
 let e = M.Z.getPrivateChannelIds(),
-  t = (0, v.tU)(e, [
-    Z.Z,
+  t = (0, Z.tU)(e, [
+    v.Z,
     T.Z
   ]);
 return (0, I.Ce)(t);
@@ -459,7 +459,7 @@ setFocus: g
   });
   return (0, a.jsx)(u.bG, {
 navigator: S,
-children: (0, a.jsx)(U, {
+children: (0, a.jsx)(w, {
   channels: c,
   privateChannelIds: p,
   listRef: f,

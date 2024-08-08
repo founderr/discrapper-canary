@@ -49,9 +49,9 @@ function S(e) {
   let {
 disableTooltip: t,
 lastTargetNode: n
-  } = e, s = (0, r.e7)([p.Z], () => p.Z.getGuilds()), S = l.useMemo(() => Object.values(s), [s]), Z = (0, r.e7)([_.default], () => _.default.getCurrentUser()), v = l.useMemo(() => S.some(e => e.isOwner(Z)), [
+  } = e, s = (0, r.e7)([p.Z], () => p.Z.getGuilds()), S = l.useMemo(() => Object.values(s), [s]), v = (0, r.e7)([_.default], () => _.default.getCurrentUser()), Z = l.useMemo(() => S.some(e => e.isOwner(v)), [
 S,
-Z
+v
   ]), T = (0, a.useModalsStore)(e => (0, a.hasModalOpenSelector)(e, C.PU)), {
 analyticsLocations: L
   } = (0, o.ZP)(), A = (0, a.useRedesignIconContext)().enabled, b = (0, i.jsx)(m.Z, {
@@ -79,7 +79,7 @@ icon: A ? a.PlusMediumIcon : a.PlusSmallIcon
   return t ? b : (0, i.jsx)('div', {
 className: E.tutorialContainer,
 children: (0, i.jsxs)(h.Z, {
-  tutorialId: v ? 'create-more-servers' : 'create-first-server',
+  tutorialId: Z ? 'create-more-servers' : 'create-first-server',
   inlineSpecs: N,
   position: 'right',
   children: [

@@ -24,20 +24,20 @@ onClose: E,
 className: N,
 inlineArt: x = !1,
 isPremiumFeature: S = !1,
-shouldUseHorizontalButtons: Z = !1,
-showGIFTag: v = !1,
+shouldUseHorizontalButtons: v = !1,
+showGIFTag: Z = !1,
 dismissibleContent: T,
 position: L = 'top',
 align: A = 'center',
 art: b,
 isPremiumEarlyAccess: M = !1,
 maxWidth: R = 280
-  } = e, O = Z ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX, [y, P] = l.useState(!1), {
+  } = e, O = v ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX, [P, y] = l.useState(!1), {
 ref: j,
 width: D
   } = (0, o.Z)();
 
-  function U(e) {
+  function w(e) {
 (0, c.EW)(T, {
   dismissAction: e
 });
@@ -45,9 +45,9 @@ width: D
   return l.useEffect(() => {
 var e, t;
 let n = (null !== (t = null === (e = j.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-!y && n > R && P(!0);
+!P && n > R && y(!0);
   }, [
-y,
+P,
 D,
 j,
 R
@@ -65,7 +65,7 @@ children: (0, i.jsxs)('div', {
     (0, i.jsxs)('div', {
       className: a()(_, x ? p.artInline : p.artAbsolute),
       children: [
-        v && (0, i.jsx)(u.Z, {
+        Z && (0, i.jsx)(u.Z, {
           className: p.gifTag
         }),
         b
@@ -112,14 +112,14 @@ children: (0, i.jsxs)('div', {
     }),
     (0, i.jsx)('div', {
       ref: j,
-      className: y || !Z ? p.buttonContainerVertical : p.buttonContainerHorizontal,
+      className: P || !v ? p.buttonContainerVertical : p.buttonContainerHorizontal,
       children: null != I ? (0, i.jsxs)(i.Fragment, {
         children: [
           (0, i.jsx)(s.Button, {
             className: p.button,
             size: O,
             onClick: e => {
-              null == E || E(e), I(e), U(d.L.PRIMARY);
+              null == E || E(e), I(e), w(d.L.PRIMARY);
             },
             color: S || M ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
             children: null != g ? g : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
@@ -128,7 +128,7 @@ children: (0, i.jsxs)('div', {
             className: p.button,
             size: O,
             onClick: e => {
-              null == E || E(e), U(d.L.DISMISS);
+              null == E || E(e), w(d.L.DISMISS);
             },
             color: S || M ? s.Button.Colors.WHITE : s.Button.Colors.BRAND,
             look: S || M ? s.Button.Looks.LINK : s.Button.Looks.FILLED,
@@ -139,7 +139,7 @@ children: (0, i.jsxs)('div', {
         className: p.button,
         size: s.Button.Sizes.MAX,
         onClick: e => {
-          null == E || E(e), U(d.L.PRIMARY);
+          null == E || E(e), w(d.L.PRIMARY);
         },
         color: s.Button.Colors.WHITE,
         children: h.Z.Messages.EDUCATION_NEW_FEATURE_CONFIRM

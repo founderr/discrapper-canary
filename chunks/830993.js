@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return v;
+return Z;
   }
 }), n(47120), n(653041);
 var i = n(735250),
@@ -24,9 +24,9 @@ var i = n(735250),
   N = n(543432),
   x = n(981631),
   S = n(689938),
-  Z = n(146822);
+  v = n(146822);
 
-function v(e) {
+function Z(e) {
   var t, d;
   let {
 channel: h,
@@ -54,7 +54,7 @@ let n = l.useMemo(() => {
 (0, s.$)(n);
   }(h, g);
   let N = (0, o.ZP)(h),
-v = Array.from((0, o.uF)(N).values()),
+Z = Array.from((0, o.uF)(N).values()),
 L = null !== (t = null == g ? void 0 : g.filter(m.lm)) && void 0 !== t ? t : [],
 A = e => t => [
   x.IIU.PLAYING,
@@ -75,8 +75,8 @@ b = (0, r.e7)([_.Z], () => {
     }
   }), Object.values(e);
 }, [L], r.pF);
-  return b.length + v.length === 0 ? null : (0, i.jsxs)(a.Scroller, {
-className: Z.container,
+  return b.length + Z.length === 0 ? null : (0, i.jsxs)(a.Scroller, {
+className: v.container,
 children: [
   (0, i.jsx)(T, {
     channel: h,
@@ -84,9 +84,9 @@ children: [
     voiceStatesCount: null !== (d = null == g ? void 0 : g.length) && void 0 !== d ? d : 0
   }),
   (0, i.jsx)('div', {
-    className: Z.headerDivider
+    className: v.headerDivider
   }),
-  v.map((e, t) => {
+  Z.map((e, t) => {
     var n;
     return (0, i.jsx)(C.Z, {
       embeddedApp: e,
@@ -110,10 +110,10 @@ children: [
   E && (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsx)('div', {
-        className: Z.headerDivider
+        className: v.headerDivider
       }),
       (0, i.jsx)('div', {
-        className: Z.settingNudgeText,
+        className: v.settingNudgeText,
         children: (0, i.jsx)(a.Text, {
           variant: 'text-xs/normal',
           tag: 'span',
@@ -177,7 +177,7 @@ video: s,
 selected: n
   }), c = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
   return null == (0, d.KS)(t, c) ? null : (0, i.jsxs)('div', {
-className: Z.popoutHeaderContainer,
+className: v.popoutHeaderContainer,
 children: [
   (0, i.jsx)(I.Z, {
     channel: t

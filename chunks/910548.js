@@ -1,6 +1,6 @@
 n.d(t, {
   ZP: function() {
-return G;
+return F;
   }
 }), n(47120);
 var i, s, a, r, l = n(735250),
@@ -307,7 +307,7 @@ children: [
   });
 }
 
-function G(e) {
+function F(e) {
   let t, {
   message: n,
   compact: i,

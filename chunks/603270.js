@@ -176,8 +176,8 @@ let {
 if ((0, u.FE)(null == S ? void 0 : S.id, null == S ? void 0 : S.primarySkuId), !y || null == S || null == C)
   return null;
 let k = C.type === O.epS.SUBSCRIPTION,
-  G = null != B && (0, _.KW)(B.sku_flags),
-  F = () => {
+  F = null != B && (0, _.KW)(B.sku_flags),
+  G = () => {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -199,14 +199,14 @@ let k = C.type === O.epS.SUBSCRIPTION,
         t = k ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
       return n => {
         let s = () => {
-          n.onClose(), F();
+          n.onClose(), G();
         };
         return null != e && null != B ? (0, i.jsx)(e, {
           transitionState: n.transitionState,
           appId: S.id,
           skuId: C.id,
           groupListingId: B.id,
-          groupListingType: G ? 'user' : 'guild',
+          groupListingType: F ? 'user' : 'guild',
           onClose: n.onClose,
           onHeaderTitleClick: s
         }) : null != t ? (0, i.jsx)(t, {
@@ -219,7 +219,7 @@ let k = C.type === O.epS.SUBSCRIPTION,
       };
     });
   },
-  V = k ? G ? (0, i.jsxs)(i.Fragment, {
+  V = k ? F ? (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsx)(r.UserIcon, {
         size: 'custom',
@@ -258,7 +258,7 @@ return (0, i.jsx)(P, {
   },
   iconSrc: U,
   onIconClick: () => {
-    F(), f.default.track(O.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+    G(), f.default.track(O.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
       application_id: S.id,
       sku_id: C.id,
       area: 'app_icon'
@@ -282,7 +282,7 @@ return (0, i.jsx)(P, {
       k ? null != b ? (0, i.jsx)(R.p, {
         appId: S.id,
         groupListingId: null == B ? void 0 : B.id,
-        groupListingType: G ? 'user' : 'guild',
+        groupListingType: F ? 'user' : 'guild',
         skuId: C.id,
         subPlan: b,
         icon: (0, i.jsx)(r.ShopIcon, {

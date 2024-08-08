@@ -27,8 +27,8 @@ var i = n(735250),
   N = n(43267),
   x = n(933557),
   S = n(979264),
-  Z = n(163889),
-  v = n(111028),
+  v = n(163889),
+  Z = n(111028),
   T = n(853856),
   L = n(93687),
   A = n(785232),
@@ -36,17 +36,17 @@ var i = n(735250),
   M = n(204197),
   R = n(199902),
   O = n(158776),
-  y = n(306680),
-  P = n(111583),
+  P = n(306680),
+  y = n(111583),
   j = n(9156),
   D = n(594174),
-  U = n(709054),
-  G = n(998502),
-  w = n(788307),
+  w = n(709054),
+  U = n(998502),
+  G = n(788307),
   k = n(981631),
   B = n(689938),
   H = n(17147);
-let V = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
+let V = U.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
   F = {
 offset: {
   top: 2,
@@ -94,7 +94,7 @@ let {
   'aria-setsize': g,
   ...I
 } = this.props;
-return (0, i.jsx)(Z.Z, {
+return (0, i.jsx)(v.Z, {
   className: a()(H.channel, {
     [H.fullWidth]: d.tq
   }, _),
@@ -147,10 +147,10 @@ user: d,
 activities: L,
 applicationStream: R,
 isTyping: O,
-status: P,
+status: y,
 isMobile: D,
-'aria-posinset': U,
-'aria-setsize': G
+'aria-posinset': w,
+'aria-setsize': U
   } = e, [Y, K] = l.useState(!1), q = l.useRef(null), Q = l.useRef(null), {
 avatarSrc: J,
 avatarDecorationSrc: X,
@@ -159,7 +159,7 @@ eventHandlers: $
 user: d,
 size: p.AvatarSizes.SIZE_32,
 animateOnHover: !(s || Y)
-  }), ee = (0, h.e7)([j.ZP], () => j.ZP.isChannelMuted(t.getGuildId(), t.id)), et = (0, h.e7)([y.ZP], () => y.ZP.getMentionCount(t.id) > 0), en = (0, x.ZP)(t), ei = (0, h.e7)([T.Z], () => T.Z.isFavorite(t.id)), el = () => {
+  }), ee = (0, h.e7)([j.ZP], () => j.ZP.isChannelMuted(t.getGuildId(), t.id)), et = (0, h.e7)([P.ZP], () => P.ZP.getMentionCount(t.id) > 0), en = (0, x.ZP)(t), ei = (0, h.e7)([T.Z], () => T.Z.isFavorite(t.id)), el = () => {
 K(!0);
   }, er = () => {
 K(!1);
@@ -243,7 +243,7 @@ return t.isSystemDM() ? (0, i.jsx)('div', {
   children: B.Z.Messages.MEMBERS_HEADER.format({
     members: t.recipients.length + 1
   })
-}) : null != L && L.length > 0 ? (0, i.jsx)(w.Z, {
+}) : null != L && L.length > 0 ? (0, i.jsx)(G.Z, {
   ...e,
   activities: L,
   applicationStream: R,
@@ -259,18 +259,18 @@ if (t.isMultiUserDM())
     recipients: t.recipients,
     size: e,
     isTyping: O,
-    status: P
+    status: y
   }) : (0, i.jsx)(V, {
     ...$,
     src: (0, N.x)(t),
     'aria-hidden': !0,
     size: e,
-    status: O ? k.Skl.ONLINE : P,
+    status: O ? k.Skl.ONLINE : y,
     isTyping: O
   });
 o()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
 let n = null;
-return !d.isSystemUser() && (n = (0, m.Z)(L) ? k.Skl.STREAMING : P), (0, i.jsx)(V, {
+return !d.isSystemUser() && (n = (0, m.Z)(L) ? k.Skl.STREAMING : y), (0, i.jsx)(V, {
   ...$,
   size: p.AvatarSizes.SIZE_32,
   src: J,
@@ -300,7 +300,7 @@ children: e => {
     role: n,
     ...l
   } = e;
-  return (0, i.jsx)(Z.Z, {
+  return (0, i.jsx)(v.Z, {
     className: H.channel,
     role: n,
     focusProps: {
@@ -313,8 +313,8 @@ children: e => {
     onMouseLeave: er,
     onMouseDown: es,
     onContextMenu: eu,
-    'aria-setsize': G,
-    'aria-posinset': U,
+    'aria-setsize': U,
+    'aria-posinset': w,
     children: (0, i.jsxs)(p.Interactive, {
       className: a()(H.interactive, {
         [H.interactiveSystemDM]: em && ef,
@@ -340,7 +340,7 @@ children: e => {
             highlighted: et,
             muted: null != ee && ee,
             subText: eh(),
-            name: (0, i.jsx)(v.Z, {
+            name: (0, i.jsx)(Z.Z, {
               tooltipClassName: H.overflowTooltip,
               children: eg
             }),
@@ -400,15 +400,15 @@ c,
 a
   ]), d = (0, h.e7)([
 D.default,
-P.Z
+y.Z
   ], () => {
 if (t.isMultiUserDM())
-  return !!s && U.default.keys(P.Z.getTypingUsers(t.id)).some(e => {
+  return !!s && w.default.keys(y.Z.getTypingUsers(t.id)).some(e => {
     var t;
     return e !== (null === (t = D.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
   });
 if (null != r)
-  return P.Z.isTyping(t.id, t.getRecipientId());
+  return y.Z.isTyping(t.id, t.getRecipientId());
 return !1;
   }, [
 t,

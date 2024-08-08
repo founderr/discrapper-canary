@@ -164,8 +164,8 @@ canSubmitVote: U,
 expirationLabel: y = A.Z.Messages.POLL_EXPIRED,
 hasSelectedAnswer: B,
 hasVoted: k,
-isEditingVote: G,
-isExpired: F,
+isEditingVote: F,
+isExpired: G,
 isInteractive: w,
 reactions: V,
 selectedAnswerIds: H,
@@ -190,7 +190,7 @@ let o = ''.concat(e.answer_id),
   N = x({
     didSelfVote: h,
     hasVoted: k,
-    isExpired: F,
+    isExpired: G,
     isSelected: E,
     isLeader: T,
     showResults: K
@@ -230,7 +230,7 @@ return {
     attachmentIds: e.poll_media.attachment_ids
   },
   isSelected: E,
-  isVictor: F && T,
+  isVictor: G && T,
   didSelfVote: h,
   style: N,
   shouldAnimateTransition: Y && !S,
@@ -240,10 +240,10 @@ return {
   }))
 };
   }), J = (0, i.EQ)({
-isExpired: F,
+isExpired: G,
 canSubmitVote: U,
 hasVoted: k,
-isEditingVote: G,
+isEditingVote: F,
 canRemoveVote: b,
 isInteractive: w,
 showResults: K
@@ -279,9 +279,9 @@ presentation: 'button',
 enabled: U,
 type: 'submit'
   })), $ = (0, T.isIOS)() ? A.Z.Messages.POLL_TAP_FOR_VOTERS_A11Y_IOS : A.Z.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID, ee = (0, i.EQ)({
-isExpired: F,
+isExpired: G,
 isInteractive: w,
-isEditingVote: G
+isEditingVote: F
   }).with({
 isInteractive: !1,
 isExpired: !1
@@ -303,14 +303,14 @@ accessibilityHint: $,
 presentation: 'text',
 enabled: !0,
 type: 'showVoterDetails'
-  })), et = !w || F || k || K ? void 0 : {
+  })), et = !w || G || k || K ? void 0 : {
 label: A.Z.Messages.POLL_SHOW_VOTES,
 presentation: 'textButton',
 enabled: !0,
 type: 'showVotes'
   }, en = h.allow_multiselect, ei = (0, i.EQ)({
 isInteractive: w,
-isExpired: F,
+isExpired: G,
 canSelectMultipleAnswers: en
   }).with({
 isInteractive: !1
@@ -350,7 +350,7 @@ canSelectMultipleAnswers: en,
 hasSelectedAnswer: B,
 canShowVoteCounts: j,
 hasVoted: k,
-isExpired: F,
+isExpired: G,
 myAvatarUrl: M,
 secondaryAction: ee,
 tertiaryAction: et

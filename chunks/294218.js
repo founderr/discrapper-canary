@@ -41,8 +41,8 @@ animateAvatar: U,
 subscribeToComponentDispatch: y,
 renderThreadAccessory: B,
 trackAnnouncementViews: k = !1,
-...G
-  } = e, F = s.type === M.uaV.POLL_RESULT || null !== (t = e.disableInteraction) && void 0 !== t && t, w = s.isFirstMessageInForumPost(b), V = (0, u.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()), {
+...F
+  } = e, G = s.type === M.uaV.POLL_RESULT || null !== (t = e.disableInteraction) && void 0 !== t && t, w = s.isFirstMessageInForumPost(b), V = (0, u.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()), {
 content: H,
 hasSpoilerEmbeds: Y
   } = (0, C.Z)(s, {
@@ -67,9 +67,9 @@ et = (0, f.Gx)(s);
 compact: a,
 className: r()(L, {
   [v.ephemeral]: (0, I.yE)(s.flags, M.iLy.EPHEMERAL),
-  [v.disableInteraction]: F
+  [v.disableInteraction]: G
 }),
-disableInteraction: F,
+disableInteraction: G,
 childrenRepliedMessage: (0, x.Z)(s, b, W, K, a),
 childrenExecutedCommand: (0, O.Z)(s, b, a),
 childrenHeader: (0, A.Z)({
@@ -82,7 +82,7 @@ childrenAccessories: e.hideAccessories ? void 0 : (0, g.Q)(e, Y),
 childrenMessageContent: (0, S.Z)(e, H),
 childrenSystemMessage: (0, R.Z)({
   ...e,
-  disableInteraction: F
+  disableInteraction: G
 }),
 onContextMenu: Z,
 onClick: P,
@@ -92,6 +92,6 @@ hasReply: s.type === M.uaV.REPLY,
 'aria-describedby': et,
 messageRef: $,
 ...z,
-...G
+...F
   });
 });

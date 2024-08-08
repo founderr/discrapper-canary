@@ -15,7 +15,7 @@ return B;
 return j;
   },
   zs: function() {
-return G;
+return F;
   }
 }), n(627341);
 var i, s, a = n(735250),
@@ -355,7 +355,7 @@ className: i
   });
 }
 
-function G(e) {
+function F(e) {
   let {
 isSelected: t,
 size: n,
