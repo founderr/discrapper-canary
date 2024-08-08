@@ -26201,7 +26201,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 [data-focused=true] .categoryFadeBlurple_af1167 {
     -webkit-backdrop-filter: brightness(60%)blur(4px);
     backdrop-filter: brightness(60%)blur(4px);
-    border: 1px solid var(--border-strong)
+    border: 1px solid var(--border-strong);
+    border-radius: 5px
 }
 
 .categoryText_af1167 {
