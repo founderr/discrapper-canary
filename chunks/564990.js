@@ -41,18 +41,26 @@ return e;
   } catch (e) {
 throw new a.Hx(e);
   }
-}, c = async e => {
+}, c = async (e, t) => {
   try {
-let t = (await r.tn.get({
-  url: o.ANM.CONTENT_INVENTORY_OUTBOX(e)
+i.Z.dispatch({
+  type: 'CONTENT_INVENTORY_FETCH_OUTBOX_START',
+  userId: e
+});
+let n = (await r.tn.get({
+  url: o.ANM.CONTENT_INVENTORY_OUTBOX(e),
+  signal: t
 })).body;
 return i.Z.dispatch({
   type: 'CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS',
-  outbox: t,
+  outbox: n,
   userId: e
-}), t;
-  } catch (e) {
-throw new a.Hx(e);
+}), n;
+  } catch (t) {
+throw i.Z.dispatch({
+  type: 'CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE',
+  userId: e
+}), new a.Hx(t);
   }
 }, d = async (e, t, n) => {
   try {

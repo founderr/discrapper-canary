@@ -59,7 +59,7 @@ super(...e), u(this, 'iframeModalOpenTimeMs', void 0), u(this, 'actions', {
     ! function(e) {
       let {
         application: t
-      } = e, n = i.Z.getIFrameModalApplicationId(), r = i.Z.getIFrameModalKey();
+      } = e, n = i.ZP.getIFrameModalApplicationId(), r = i.ZP.getIFrameModalKey();
       t.id === n && null != n && (0, s.Z)(n, r);
     }(e);
   }

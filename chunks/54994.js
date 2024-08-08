@@ -1,29 +1,41 @@
 n.d(t, {
   Z: function() {
-return c;
+return d;
   }
-});
+}), n(47120);
 var r = n(470079),
   i = n(442837),
-  a = n(27144),
-  s = n(70956),
-  o = n(564990),
-  l = n(353647);
-let u = s.Z.Millis.MINUTE;
+  a = n(81897),
+  s = n(27144),
+  o = n(70956),
+  l = n(564990),
+  u = n(353647);
+let c = o.Z.Millis.MINUTE;
 
-function c(e) {
-  let t = (0, i.e7)([l.Z], () => l.Z.getUserOutbox(e.id)),
-{
-  pastActivityEnabled: n
-} = (0, a.z)({
-  location: 'useMaybeFetchUserOutbox'
-});
-  r.useEffect(() => {
-if (!(!n || null != t && Date.now() - t.lastFetched < u))
-  (0, o.JX)(e.id);
+function d(e) {
+  let {
+pastActivityEnabled: t
+  } = (0, s.z)({
+location: 'useMaybeFetchUserOutbox'
+  }), [n, o] = (0, i.Wu)([u.Z], () => [
+u.Z.getUserOutbox(e.id),
+u.Z.isFetchingUserOutbox(e.id)
+  ]), d = (0, a.Z)();
+  return r.useEffect(() => {
+var r;
+if (o || !t)
+  return;
+let i = null !== (r = null == n ? void 0 : n.lastFetched) && void 0 !== r ? r : 0;
+if (!(Date.now() - i < c))
+  (0, l.JX)(e.id, d);
   }, [
+null == n ? void 0 : n.lastFetched,
+e.id,
+o,
 t,
-e,
-n
-  ]);
+d
+  ]), {
+outbox: n,
+isFetching: o
+  };
 }
