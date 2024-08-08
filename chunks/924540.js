@@ -103,13 +103,10 @@ isTabSelected: s,
 trialDuration: t
   }) : (0, n.jsx)('div', {
 className: r()(g.premiumTrialBadge, o),
-children: (0, n.jsxs)(i.Text, {
+children: (0, n.jsx)(i.Text, {
   variant: 'eyebrow',
-  children: [
-    ' ',
-    t,
-    ' '
-  ]
+  className: g.premiumOfferBadgeCopy,
+  children: t
 })
   });
 }

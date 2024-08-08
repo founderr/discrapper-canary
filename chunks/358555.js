@@ -102,6 +102,7 @@ children: (0, r.jsx)(c.Z, {
 className: S.guildIconContainer,
 children: (0, r.jsx)(s.Z, {
   guild: n,
+  size: 20,
   tooltipPosition: 'bottom',
   tooltipColor: u.Tooltip.Colors.PRIMARY,
   className: o()(S.guildBadge, {

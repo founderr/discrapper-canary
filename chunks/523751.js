@@ -63,7 +63,8 @@ foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
 backgroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
 backgroundLightColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
 premiumBackgroundColor: E.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
-premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css
+premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css,
+sizeAdjustment: 2
   },
   [A.Q.DISCOVERABLE]: {
 IconComponent: c.GlobeEarthIcon,
@@ -72,7 +73,8 @@ foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
 backgroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
 backgroundLightColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
 premiumBackgroundColor: E.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
-premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css
+premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css,
+sizeAdjustment: 2
   },
   [A.Q.CLAN]: {},
   [A.Q.NONE]: {}
@@ -269,14 +271,17 @@ backgroundLightColor: V,
 foregroundDarkColor: H,
 foregroundLightColor: Z,
 premiumBackgroundColor: Y,
-premiumForegroundColor: j
+premiumForegroundColor: j,
+sizeAdjustment: W
   } = C[x];
   if (null == B)
 return null;
   w.premium && (t = j, n = Y);
-  let W = (0, u.wj)(U) ? H : Z,
-K = (0, u.wj)(U) ? F : V;
-  return t = null != t ? t : W, n = null != n ? n : K, (0, r.jsx)(c.Tooltip, {
+  let K = (0, u.wj)(U) ? H : Z,
+z = (0, u.wj)(U) ? F : V;
+  t = null != t ? t : K, n = null != n ? n : z;
+  let q = Math.floor(0.75 * L) - (null != W ? W : 0);
+  return (0, r.jsx)(c.Tooltip, {
 color: l,
 position: E,
 'aria-label': M,
@@ -291,10 +296,14 @@ children: e => (0, r.jsx)(c.Clickable, {
     ...e,
     className: T,
     flowerStarClassName: g,
+    allowFullSizedIcon: !0,
     color: null != n ? n : y,
     stroke: O,
     size: L,
     children: (0, r.jsx)(B, {
+      size: 'custom',
+      width: q,
+      height: q,
       className: S,
       color: null != t ? t : 'currentColor'
     })
