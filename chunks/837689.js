@@ -79,7 +79,8 @@ super(...e), T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
     p.TL,
     p.ET,
     p.C2,
-    p.Hk
+    p.Hk,
+    p.Rt
   ].map(e => c.Z.getUserTrialOffer(e)).filter(e => null != e && !(0, m.B)(e)).shift();
   return null != n ? {
     userTrialOffer: n
