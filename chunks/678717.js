@@ -34,8 +34,8 @@ var x = t(392750),
   Z = t(178821),
   E = t(248526),
   R = t(958328),
-  B = t(514866),
-  O = t(678639),
+  O = t(514866),
+  B = t(678639),
   P = t(351930),
   L = t(771751),
   A = t(596768),
@@ -78,7 +78,7 @@ function z() {
     {
       id: 'stores',
       name: 'Stores',
-      render: () => (0, a.jsx)(O.Z, {})
+      render: () => (0, a.jsx)(B.Z, {})
     },
     {
       id: 'dispatcher',
@@ -89,7 +89,7 @@ function z() {
   return g.Z.isDeveloper && (e.push({
     id: 'quick_actions',
     name: 'Quick Actions',
-    render: () => (0, a.jsx)(B.Z, {})
+    render: () => (0, a.jsx)(O.Z, {})
   }), e.push({
     id: 'perks_demos',
     name: 'Perks Demos',
@@ -121,6 +121,12 @@ function z() {
     name: 'Messaging',
     render: () => (0, a.jsx)(N.Z, {
       devSettingsCategory: y.zU.MESSAGING
+    })
+  }), e.push({
+    id: 'reporting',
+    name: 'Reporting',
+    render: () => (0, a.jsx)(N.Z, {
+      devSettingsCategory: y.zU.REPORTING
     })
   }), e.push({
     id: 'permissions',
