@@ -13,11 +13,11 @@ var a = n(735250),
   d = n(481060),
   u = n(110924),
   g = n(40851),
-  m = n(367907),
-  v = n(565384),
+  v = n(367907),
+  m = n(565384),
   p = n(906732),
-  f = n(835473),
-  I = n(600164),
+  I = n(835473),
+  f = n(600164),
   x = n(592125),
   _ = n(451478),
   h = n(626135),
@@ -26,8 +26,8 @@ var a = n(735250),
   E = n(115130),
   S = n(566620),
   b = n(421),
-  j = n(895395),
-  N = n(49978),
+  N = n(895395),
+  j = n(49978),
   M = n(427996),
   A = n(701488),
   Z = n(981631),
@@ -52,7 +52,7 @@ analyticsLocations: B,
 ...R
   } = e, k = (0, o.e7)([E.Z], () => E.Z.getIsEnabled(), []), {
 analyticsLocations: H
-  } = (0, p.ZP)(B), [F, U] = i.useState(_), Y = (0, u.Z)(F), [w, G] = i.useState(null), [W, z] = i.useState(g), [q, J] = i.useState(void 0), [K] = (0, f.Z)(null == W ? [] : [W]), X = i.useRef(null), $ = i.useMemo(() => ({
+  } = (0, p.ZP)(B), [F, U] = i.useState(_), Y = (0, u.Z)(F), [w, G] = i.useState(null), [W, z] = i.useState(g), [q, J] = i.useState(void 0), [K] = (0, I.Z)(null == W ? [] : [W]), X = i.useRef(null), $ = i.useMemo(() => ({
 application_id: W,
 source_section: l.section,
 impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW
@@ -127,9 +127,9 @@ let e = {
   a = {
     channel_id: null == t ? void 0 : t.id,
     guild_id: n,
-    location: (0, v.k$)(),
-    ...(0, m.hH)(n),
-    ...(0, m.v_)(x.Z.getChannel(null == t ? void 0 : t.id)),
+    location: (0, m.k$)(),
+    ...(0, v.hH)(n),
+    ...(0, v.v_)(x.Z.getChannel(null == t ? void 0 : t.id)),
     ...$,
     ...e
   };
@@ -157,7 +157,7 @@ children: (0, a.jsxs)(d.ModalRoot, {
     }),
     (0, a.jsxs)(d.ModalHeader, {
       separator: !1,
-      justify: I.Z.Justify.BETWEEN,
+      justify: f.Z.Justify.BETWEEN,
       className: s()(D.modalHeader),
       children: [
         (0, a.jsxs)('div', {
@@ -230,7 +230,7 @@ children: (0, a.jsxs)(d.ModalRoot, {
           },
           children: (0, a.jsx)(P, {
             slide: F,
-            children: (0, a.jsx)(j.Z, {
+            children: (0, a.jsx)(N.Z, {
               scrollerRef: X,
               channel: t,
               guildId: n,
@@ -250,7 +250,7 @@ children: (0, a.jsxs)(d.ModalRoot, {
           },
           children: (0, a.jsx)(P, {
             slide: F,
-            children: (0, a.jsx)(N.Z, {
+            children: (0, a.jsx)(j.Z, {
               applicationId: W,
               selectedChannelId: q,
               setSelectedChannelId: J,
@@ -284,27 +284,16 @@ children: (0, a.jsxs)(d.ModalRoot, {
       children: (() => {
         switch (F) {
           case A.ag.DIRECTORY:
-            return (0, a.jsx)(j.d, {});
+            return (0, a.jsx)(N.d, {});
           case A.ag.SELECT_CHANNEL:
-            return (0, a.jsxs)(a.Fragment, {
-              children: [
-                (0, a.jsx)('div', {
-                  className: D.modalDivider
-                }),
-                (0, a.jsx)(d.ModalFooter, {
-                  separator: !1,
-                  className: D.footer,
-                  children: (0, a.jsx)(N.q, {
-                    onBack: et,
-                    onClose: c,
-                    guildId: n,
-                    applicationId: W,
-                    locationObject: l,
-                    selectedChannelId: q,
-                    enableSelectedTextChannelInvite: T
-                  })
-                })
-              ]
+            return (0, a.jsx)(j.q, {
+              onBack: et,
+              onClose: c,
+              guildId: n,
+              applicationId: W,
+              locationObject: l,
+              selectedChannelId: q,
+              enableSelectedTextChannelInvite: T
             });
           case A.ag.DETAIL_PAGE:
           case A.ag.DIRECTORY:
