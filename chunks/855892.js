@@ -10,7 +10,7 @@ e.exports = {
   assetWrapper: 'assetWrapper_c2d7e2',
   textContainer: 'textContainer_c2d7e2',
   justifyCenter: 'justifyCenter_c2d7e2',
-  headerSpan: 'headerSpan_c2d7e2',
+  questName: 'questName_c2d7e2',
   header: 'header_c2d7e2',
   description: 'description_c2d7e2',
   textOverflowBlur: 'textOverflowBlur_c2d7e2'

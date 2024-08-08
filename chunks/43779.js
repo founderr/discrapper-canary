@@ -47,7 +47,7 @@ config: {
 completedRatio: j
   } = (0, _.I)(C), U = (0, _.Bd)(C), G = a.useCallback(() => (0, i.jsx)(c.Text, {
 variant: 'text-md/semibold',
-color: 'text-brand',
+color: 'text-normal',
 tag: 'span',
 className: S.header,
 children: O
@@ -127,14 +127,19 @@ children: [
           [S.justifyCenter]: !P
         }),
         children: [
-          (0, i.jsx)('span', {
-            className: S.headerSpan,
-            children: (0, i.jsx)(c.Text, {
-              variant: 'text-md/semibold',
-              color: 'header-primary',
-              className: S.header,
-              children: k
+          (0, i.jsx)(c.Heading, {
+            variant: 'eyebrow',
+            color: 'text-brand',
+            className: S.questName,
+            children: T.Z.Messages.QUEST.format({
+              questName: C.config.messages.questName
             })
+          }),
+          (0, i.jsx)(c.Text, {
+            variant: 'text-md/semibold',
+            color: 'header-primary',
+            className: S.header,
+            children: k
           }),
           w
         ]
