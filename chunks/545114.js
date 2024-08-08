@@ -48,7 +48,7 @@ v = (0, l.lg)(n),
   onClearSearch: M,
   onSearchSubmit: D,
   isSearchVisible: y
-} = (0, g.HF)({
+} = (0, g.H)({
   loadId: e.current,
   onClear: O,
   categoryId: v

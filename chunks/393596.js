@@ -11,7 +11,7 @@ var i = n(735250),
   _ = n(706454),
   E = n(683301),
   h = n(540742),
-  m = n(143021),
+  m = n(72881),
   I = n(768198);
 
 function g(e) {
@@ -20,11 +20,17 @@ loadId: t,
 categoryId: n,
 count: s
   } = e, E = a.useCallback(() => {
+var e;
 (0, o.j)(() => h.B.setState({
   searchCategoryId: n
-})), (0, m.y6)({
+}));
+let i = h.B.getState();
+(0, m.y)({
   loadId: t,
-  categoryId: n
+  categoryId: n,
+  offset: 0,
+  searchQuery: i.searchQuery,
+  languageCode: null !== (e = i.searchLanguageCode) && void 0 !== e ? e : (0, m.X)()
 });
   }, [
 n,

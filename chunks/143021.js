@@ -1,12 +1,9 @@
 n.d(t, {
-  HF: function() {
-return S;
+  H: function() {
+return m;
   },
-  f$: function() {
-return T;
-  },
-  y6: function() {
-return p;
+  f: function() {
+return h;
   }
 });
 var i = n(470079),
@@ -16,63 +13,20 @@ var i = n(470079),
   l = n(212093),
   o = n(296386),
   c = n(36867),
-  d = n(706454),
-  u = n(683301),
-  _ = n(251625),
-  E = n(900849),
-  h = n(540742),
-  m = n(731455);
-let I = [],
-  g = (0, _.oH)(() => {
-var e;
-let t = m.dU,
-  n = d.default.locale;
-return null !== (e = t.find(e => e.code === n)) && void 0 !== e ? e : t[0];
-  });
+  d = n(900849),
+  u = n(540742),
+  _ = n(72881);
+let E = [];
 
-function p(e) {
-  let {
-loadId: t,
-categoryId: n
-  } = e, {
-searchResultsQuery: i,
-searchQuery: a
-  } = h.B.getState(), {
-guilds: r,
-total: o,
-loading: d,
-initialized: _
-  } = c.Z.getResults(i, n);
-  if (d || _ && r.length >= o)
-return;
-  (0, s.j)(() => h.B.setState({
-searchResultsQuery: a,
-isSearchVisible: !0,
-searchCategoryId: n
-  }));
-  let m = g();
-  E.tI(t, n), null == u.ZP.getTopCategoryCounts(a) && l.G7(a, {
-approximate_member_count: E.sq
-  }), l.bR(a, {
-categoryId: n,
-preferredLocale: m.code,
-offset: r.length,
-length: 12,
-filters: {
-  approximate_member_count: E.sq
-}
-  }, !1);
-}
-
-function T(e) {
+function h(e) {
   let {
 loadId: t
-  } = e, n = (0, h.B)(e => {
+  } = e, n = (0, u.B)(e => {
 let {
   searchResultsQuery: t
 } = e;
 return t;
-  }, a.Z), s = (0, h.B)(e => {
+  }, a.Z), s = (0, u.B)(e => {
 let {
   searchCategoryId: t
 } = e;
@@ -81,15 +35,25 @@ return t;
 guilds: l,
 loading: o
   } = (0, r.e7)([c.Z], () => null == n ? {
-guilds: I,
+guilds: E,
 loading: !0
-  } : c.Z.getResults(n, s)), d = i.useCallback(() => p({
-loadId: t,
-categoryId: s
-  }), [
-t,
-s
-  ]);
+  } : c.Z.getResults(n, s)), d = i.useCallback(() => {
+var e;
+let n = u.B.getState(),
+  {
+    guilds: i,
+    total: a,
+    loading: s,
+    initialized: r
+  } = c.Z.getResults(n.searchResultsQuery, n.searchCategoryId);
+!s && (!r || !(i.length >= a)) && (0, _.y)({
+  loadId: t,
+  categoryId: n.searchCategoryId,
+  offset: i.length,
+  searchQuery: n.searchQuery,
+  languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, _.X)()
+});
+  }, [t]);
   return i.useMemo(() => ({
 guilds: l,
 loading: o,
@@ -105,17 +69,17 @@ s
   ]);
 }
 
-function S(e) {
+function m(e) {
   let {
 loadId: t,
 categoryId: n,
 onClear: r
-  } = e, c = (0, h.B)(e => {
+  } = e, c = (0, u.B)(e => {
 let {
   isSearchVisible: t
 } = e;
 return t;
-  }, a.Z), d = (0, h.B)(e => {
+  }, a.Z), E = (0, u.B)(e => {
 let {
   searchQuery: t
 } = e;
@@ -124,39 +88,46 @@ return t;
   i.useEffect(() => {
 l.Ue(), (0, o.le)();
   }, []);
-  let u = i.useCallback(e => {
-  (0, s.j)(() => h.B.setState({
+  let h = i.useCallback(e => {
+  (0, s.j)(() => u.B.setState({
     searchQuery: e
   }));
 }, []),
-_ = i.useCallback(() => {
-  r(), (0, s.j)(() => h.B.setState({
+m = i.useCallback(() => {
+  r(), (0, s.j)(() => u.B.setState({
     searchResultsQuery: '',
     searchQuery: '',
     isSearchVisible: !1
-  })), E.IZ(t);
+  })), d.IZ(t);
 }, [
   t,
   r
 ]),
-m = i.useCallback(() => p({
-  loadId: t,
-  categoryId: n
-}), [
+I = i.useCallback(() => {
+  var e;
+  let i = u.B.getState();
+  (0, _.y)({
+    loadId: t,
+    categoryId: n,
+    offset: 0,
+    searchQuery: i.searchQuery,
+    languageCode: null !== (e = i.searchLanguageCode) && void 0 !== e ? e : (0, _.X)()
+  });
+}, [
   n,
   t
 ]);
   return i.useMemo(() => ({
-searchQuery: d,
-onSearchTextChange: u,
-onClearSearch: _,
-onSearchSubmit: m,
+searchQuery: E,
+onSearchTextChange: h,
+onClearSearch: m,
+onSearchSubmit: I,
 isSearchVisible: c
   }), [
 c,
-_,
 m,
-u,
-d
+I,
+h,
+E
   ]);
 }

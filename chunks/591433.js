@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return f;
+return C;
   }
 }), n(47120), n(411104);
 var i = n(735250),
@@ -16,100 +16,101 @@ var i = n(735250),
   E = n(900849),
   h = n(143021),
   m = n(393596),
-  I = n(689938),
-  g = n(856059);
-let p = 52,
-  T = {
+  I = n(692420),
+  g = n(689938),
+  p = n(856059);
+let T = 52,
+  S = {
 top: 0,
 bottom: 0,
 left: 32,
 right: 202
   },
-  S = r().throttle(E.c6, 1000, {
+  f = r().throttle(E.c6, 1000, {
 leading: !1,
 trailing: !0
   });
 
-function f(e) {
+function C(e) {
   let {
 loadId: t,
 onGuildCardSeen: n,
 onGuildCardClick: r
   } = e, E = (0, c.ZP)(), {
-guilds: f,
-loading: C,
-searchResultsQuery: N,
-loadMore: A,
-searchCategoryId: v
-  } = (0, h.f$)({
+guilds: C,
+loading: N,
+searchResultsQuery: A,
+loadMore: v,
+searchCategoryId: Z
+  } = (0, h.f)({
 loadId: t
-  }), Z = a.useContext(_.AnalyticsContext), [L, O] = a.useState((0, d.P)());
+  }), L = a.useContext(_.AnalyticsContext), [O, R] = a.useState((0, d.P)());
   a.useEffect(() => {
-O((0, d.P)());
-  }, [N]);
-  let R = a.useCallback(e => {
-  S({
+R((0, d.P)());
+  }, [A]);
+  let x = a.useCallback(e => {
+  f({
     loadId: t,
-    searchId: L,
-    query: N,
-    guildResults: f,
-    analyticsContext: Z,
-    categoryId: v,
+    searchId: O,
+    query: A,
+    guildResults: C,
+    analyticsContext: L,
+    categoryId: Z,
     isTagSearch: !1
-  }), n(e, v);
+  }), n(e, Z);
 }, [
-  Z,
-  f,
+  L,
+  C,
   t,
   n,
-  v,
-  L,
+  Z,
+  O,
+  A
+]),
+b = a.useMemo(() => N ? [
+  C.length,
+  0
+] : [C.length], [
+  C.length,
   N
 ]),
-x = a.useMemo(() => C ? [
-  f.length,
-  0
-] : [f.length], [
-  f.length,
-  C
-]),
-b = a.useCallback(e => {
+P = a.useCallback(e => {
   switch (e) {
     case 0:
       return (0, i.jsx)(l.X, {
         variant: 'heading-xl/semibold',
-        className: g.heading,
-        children: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
-          query: N
+        className: p.heading,
+        children: g.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
+          query: A
         })
       });
     case 1:
       return (0, i.jsx)(o.Spinner, {
-        className: g.spinner
+        className: p.spinner
       });
   }
-}, [N]),
-P = a.useCallback(e => {
+}, [A]),
+M = a.useCallback(e => {
   switch (e) {
     case 0:
-      return p;
+      return T;
     case 1:
       return 120;
     default:
       throw Error('[getSectionHeight] Failed for section: '.concat(e));
   }
 }, []),
-M = a.useCallback((e, t) => {
+D = a.useCallback((e, t) => {
   switch (e) {
     case 0:
-      return f[t].id;
+      return C[t].id;
     case 1:
       return 'loading';
     default:
       throw Error('[getItemKey] Failed for section: '.concat(e));
   }
-}, [f]),
-D = a.useCallback(e => {
+}, [C]),
+y = a.useCallback(e => {
   switch (e) {
     case 0:
       return 320;
@@ -119,62 +120,70 @@ D = a.useCallback(e => {
       throw Error('[getItemHeight] Failed for section: '.concat(e));
   }
 }, []),
-y = a.useCallback((e, t, n, a) => {
+j = a.useCallback((e, t, n, a) => {
   if (0 === e) {
-    let e = f[t];
+    let e = C[t];
     return (0, i.jsx)('div', {
       style: n,
       children: (0, i.jsx)(u.Z, {
         guild: e,
-        onView: e => r(e, t, v),
-        onGuildCardSeen: R,
+        onView: e => r(e, t, Z),
+        onGuildCardSeen: x,
         theme: E
       }, e.id)
     }, a);
   }
   return null;
 }, [
-  f,
-  R,
+  C,
+  x,
   r,
-  v,
+  Z,
   E
 ]),
-j = a.useRef(null),
-U = a.useMemo(() => (0, s.debounce)(() => {
+U = a.useRef(null),
+G = a.useMemo(() => (0, s.debounce)(() => {
   var e;
-  let t = null === (e = j.current) || void 0 === e ? void 0 : e.getScrollerState();
+  let t = null === (e = U.current) || void 0 === e ? void 0 : e.getScrollerState();
   if (null == t)
     return;
   let n = t.scrollTop + t.offsetHeight;
-  t.scrollHeight - n < 200 && A();
-}, 250), [A]);
+  t.scrollHeight - n < 200 && v();
+}, 250), [v]);
   return (0, i.jsx)('div', {
-className: g.container,
+className: p.container,
 children: (0, i.jsx)(o.MasonryList, {
-  ref: j,
-  className: g.masonryList,
-  sections: x,
+  ref: U,
+  className: p.masonryList,
+  sections: b,
   columns: 3,
   itemGutter: 16,
-  padding: T,
-  renderItem: y,
-  renderSection: b,
-  getSectionHeight: P,
-  getItemKey: M,
-  getItemHeight: D,
+  padding: S,
+  renderItem: j,
+  renderSection: P,
+  getSectionHeight: M,
+  getItemKey: D,
+  getItemHeight: y,
   chunkSize: 24,
-  onScroll: U,
+  onScroll: G,
   renderAccessory: e => (0, i.jsx)('div', {
-    className: g.sidebar,
+    className: p.sidebar,
     style: {
       height: e
     },
-    children: (0, i.jsx)('div', {
-      className: g.sidebarContent,
-      children: (0, i.jsx)(m.Z, {
-        loadId: t
-      })
+    children: (0, i.jsxs)('div', {
+      className: p.sidebarContent,
+      children: [
+        (0, i.jsx)('div', {
+          className: p.sidebarLanguageSelect,
+          children: (0, i.jsx)(I.Z, {
+            loadId: t
+          })
+        }),
+        (0, i.jsx)(m.Z, {
+          loadId: t
+        })
+      ]
     })
   })
 })
