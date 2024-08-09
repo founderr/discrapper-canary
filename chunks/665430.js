@@ -1,6 +1,9 @@
 n.d(t, {
-  p: function() {
+  T: function() {
 return i;
+  },
+  p: function() {
+return a;
   }
 });
 let r = (0, n(818083).B)({
@@ -27,6 +30,16 @@ treatments: [{
 ]
   }),
   i = e => {
+let {
+  location: t
+} = e;
+return r.getCurrentConfig({
+  location: t
+}, {
+  autoTrackExposure: !1
+}).enabled;
+  },
+  a = e => {
 let {
   location: t
 } = e;
