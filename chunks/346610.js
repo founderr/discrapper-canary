@@ -1,9 +1,9 @@
 n.d(t, {
   WT: function() {
-return s;
+return o;
   },
   yk: function() {
-return o;
+return l;
   }
 });
 var r = n(818083);
@@ -76,22 +76,41 @@ treatments: [{
     }
   }
 ]
+  }),
+  s = (0, r.B)({
+kind: 'user',
+id: '2024-08_message_forwarding_icon',
+label: 'Message forwarding icon change',
+defaultConfig: {
+  useOldIcon: !1
+},
+treatments: [{
+  id: 1,
+  label: 'Use old icon',
+  config: {
+    useOldIcon: !0
+  }
+}]
   });
 
-function s(e, t) {
+function o(e, t) {
   let n = i.getCurrentConfig(e, t),
-r = a.getCurrentConfig(e, t);
+r = a.getCurrentConfig(e, t),
+o = s.getCurrentConfig(e, t);
   return {
 ...n,
-...r
+...r,
+...o
   };
 }
 
-function o(e, t) {
+function l(e, t) {
   let n = i.useExperiment(e, t),
-r = a.useExperiment(e, t);
+r = a.useExperiment(e, t),
+o = s.useExperiment(e, t);
   return {
 ...n,
-...r
+...r,
+...o
   };
 }
