@@ -38,28 +38,29 @@ search: i
 let I = l.forwardRef(function(e, t) {
   let {
 selected: n,
-tooltip: l,
 className: s,
-onClick: u
+onClick: d
   } = e, {
-clanDiscoveryEnabled: d
-  } = (0, o.nk)('guild_discovery'), h = (0, c.wE)(r.z.NEW_GAMING_DISCOVERY_NOTIF), _ = {
+clanDiscoveryEnabled: h
+  } = (0, o.nk)('guild_discovery'), _ = (0, u.v)({
+location: 'guild_discovery_button'
+  }), f = (0, c.wE)(r.z.NEW_GAMING_DISCOVERY_NOTIF), I = l.useMemo(() => ({
 lowerBadgeSize: {
   width: 12,
   height: 12
 }
-  };
-  return d && !h && (_.lowerBadge = (0, i.jsx)('div', {
+  }), []), E = _ ? m.Z.Messages.DISCOVER : m.Z.Messages.GUILD_DISCOVERY_TOOLTIP;
+  return h && !f && (I.lowerBadge = (0, i.jsx)('div', {
 className: g.guildNotif
   })), (0, i.jsx)(p.Z, {
 id: 'guild-discover-button',
 ref: t,
 className: s,
-onClick: null != u ? u : C,
+onClick: null != d ? d : C,
 selected: n,
-tooltip: null != l ? l : m.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
+tooltip: E,
 icon: a.CompassIcon,
-..._
+...I
   });
 });
 t.Z = I;
