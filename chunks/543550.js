@@ -29,6 +29,8 @@ var i = n(735250),
   N = n(813580);
 let A = (e, t) => {
   switch (e) {
+case I.hz.NONE:
+  return t === f.BRd.DARK ? N.genericUpsellBackgroundImageDark : N.genericUpsellBackgroundImageLight;
 case I.hz.GENSHIN:
   return t === f.BRd.DARK ? N.genshinUpsellBackgroundImageDark : N.genshinUpsellBackgroundImageLight;
 case I.hz.VALORANT:
@@ -64,6 +66,8 @@ Z = a.useCallback(e => {
 }, [g]),
 L = a.useMemo(() => {
   switch (e) {
+    case I.hz.NONE:
+      return C === f.BRd.DARK ? N.genericOnboardingBackgroundImageDark : N.genericOnboardingBackgroundImageLight;
     case I.hz.GENSHIN:
       return C === f.BRd.DARK ? N.genshinOnboardingBackgroundImageDark : N.genshinOnboardingBackgroundImageLight;
     case I.hz.VALORANT:
@@ -166,7 +170,7 @@ children: (0, i.jsxs)(c.u2, {
     (0, i.jsxs)('div', {
       className: r()(l, N.adminUpsell),
       children: [
-        (0, i.jsx)('div', {
+        e !== I.hz.NONE && (0, i.jsx)('div', {
           className: N.backgroundImageBlur
         }),
         (0, i.jsx)('div', {
@@ -179,7 +183,8 @@ children: (0, i.jsxs)(c.u2, {
       ]
     }),
     (0, i.jsx)(S.Z, {
-      title: C.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE
+      title: C.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
+      className: e === I.hz.NONE ? N.genericPreviewList : void 0
     })
   ]
 })

@@ -43,7 +43,7 @@ g = function() {
 }(),
 p = (0, l.e7)([u.Z], () => u.Z.isLoading());
   return i.useEffect(() => {
-!(n.length > 0) && (I === h.nJ ? (e(_.hz.VALORANT), t([I])) : I === h.xn && (e(_.hz.GENSHIN), t([I])));
+!(n.length > 0) && (I === h.nJ ? (e(_.hz.VALORANT), t([I])) : I === h.xn ? (e(_.hz.GENSHIN), t([I])) : null == I && (e(_.hz.NONE), t([])));
   }, [
 e,
 t,
