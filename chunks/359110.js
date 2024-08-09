@@ -28,5 +28,8 @@ openChannel: !0,
 function d(e, t) {
   i()(null != e.parent_id, 'Thread must have a parent ID.');
   let n = (0, s.e)(e);
-  (0, l.uL)(u.Z5c.CHANNEL(n, e.id), t);
+  (0, l.uL)(u.Z5c.CHANNEL(n, e.id), {
+openChannel: !0,
+...t
+  });
 }
