@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return y;
   }
 }), n(47120);
 var r = n(735250),
@@ -22,40 +22,42 @@ var r = n(735250),
   T = n(825801),
   g = n(215105),
   S = n(652853),
-  A = n(228168),
-  N = n(981631),
-  v = n(474936),
-  O = n(905936);
-let R = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+  A = n(429974),
+  N = n(228168),
+  v = n(981631),
+  O = n(474936),
+  R = n(905936);
+let C = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
-function C(e) {
+function y(e) {
   let {
 user: t,
 displayProfile: n,
 guildId: a,
 channelId: p,
-profileType: C,
-animateOnHover: y,
-onOpenProfile: D,
-isReplySource: L,
-onReply: b,
-showReplyPopout: M = !1
+profileType: y,
+animateOnHover: D,
+onOpenProfile: L,
+isReplySource: b,
+onReply: M,
+showReplyPopout: P = !1,
+showGuildProfile: U = !0
   } = e, {
-theme: P
+theme: w
   } = (0, S.z)(), {
-analyticsLocations: U
+analyticsLocations: x
   } = (0, d.ZP)(c.Z.AVATAR), {
-trackUserProfileAction: w
-  } = (0, m.KZ)(), x = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2), G = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
+trackUserProfileAction: G
+  } = (0, m.KZ)(), k = y === N.y0.FULL_SIZE ? U ? A.TW : A.c1 : void 0, B = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2), F = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
 t,
 p
-  ]), [k, B] = i.useState(!1), F = () => {
-B(!0);
-  }, V = () => {
-B(!1);
+  ]), [V, H] = i.useState(!1), Z = () => {
+H(!0);
+  }, Y = () => {
+H(!1);
   }, {
-status: H,
-isMobileOnline: Z
+status: j,
+isMobileOnline: W
   } = (0, o.cj)([
 E.Z,
 f.Z
@@ -65,57 +67,57 @@ let e = null != E.Z.getAnyStreamForUser(t.id),
     let {
       type: n
     } = t;
-    return e ? n === N.IIU.PLAYING : n !== N.IIU.CUSTOM_STATUS;
+    return e ? n === v.IIU.PLAYING : n !== v.IIU.CUSTOM_STATUS;
   });
 return {
-  status: (0, u.Z)(n) ? N.Skl.STREAMING : f.Z.getStatus(t.id),
+  status: (0, u.Z)(n) ? v.Skl.STREAMING : f.Z.getStatus(t.id),
   isMobileOnline: f.Z.isMobileOnline(t.id)
 };
-  }), Y = C === A.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, j = s()(O.avatar, {
-[O.hoisted]: L,
-[O.biteSize]: C === A.y0.BITE_SIZE,
-[O.fullSize]: C === A.y0.FULL_SIZE,
-[O.panel]: C === A.y0.PANEL
+  }), K = y === N.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, z = s()(R.avatar, {
+[R.hoisted]: b,
+[R.biteSize]: y === N.y0.BITE_SIZE,
+[R.fullSize]: y === N.y0.FULL_SIZE,
+[R.panel]: y === N.y0.PANEL
   }), {
-avatarDecorationSrc: W,
-avatarSrc: K,
-eventHandlers: z
+avatarDecorationSrc: q,
+avatarSrc: Q,
+eventHandlers: X
   } = (0, I.Z)({
 user: t,
 guildId: a,
-size: Y,
-animateOnHover: y
-  }), q = (0, r.jsx)(R, {
-src: K,
-avatarDecoration: W,
-size: Y,
+size: K,
+animateOnHover: D
+  }), $ = (0, r.jsx)(C, {
+src: Q,
+avatarDecoration: q,
+size: K,
 'aria-label': t.username,
-imageClassName: null != D ? O.overlay : void 0,
-status: G ? N.Skl.UNKNOWN : H,
-statusBackdropColor: x && !G ? (0, l.getStatusBackdropColor)(P) : void 0,
-isMobile: Z,
+imageClassName: null != L ? R.overlay : void 0,
+status: F ? v.Skl.UNKNOWN : j,
+statusBackdropColor: B && !F ? (0, l.getStatusBackdropColor)(w) : void 0,
+isMobile: W,
 statusTooltip: !0,
-statusTooltipDelay: A.vB
-  }), Q = () => null == D ? (0, r.jsx)('div', {
-...z,
-children: q
+statusTooltipDelay: N.vB
+  }), J = () => null == L ? (0, r.jsx)('div', {
+...X,
+children: $
   }) : (0, r.jsx)(l.Clickable, {
-...z,
+...X,
 onClick: () => {
-  w({
+  G({
     action: 'PRESS_VIEW_PROFILE',
-    analyticsLocations: U
-  }), null == D || D();
+    analyticsLocations: x
+  }), null == L || L();
 },
-className: O.clickable,
-children: q
+className: R.clickable,
+children: $
   });
   return (0, r.jsxs)('div', {
-className: j,
-onFocus: F,
-onBlur: V,
-onMouseOver: F,
-onMouseLeave: V,
+className: z,
+onFocus: Z,
+onBlur: Y,
+onMouseOver: Z,
+onMouseLeave: Y,
 children: [
   (0, r.jsx)(l.Popout, {
     renderPopout: e => {
@@ -126,24 +128,25 @@ children: [
         user: t,
         guildId: a,
         channelId: p,
-        profileType: C,
-        sourceType: A.N9.AVATAR,
+        profileType: y,
+        sourceType: N.N9.AVATAR,
+        modalKey: k,
         setPopoutRef: n,
-        onReply: b
+        onReply: M
       });
     },
     animationPosition: 'top',
     position: 'bottom',
     align: 'center',
-    shouldShow: M,
-    children: () => Q()
+    shouldShow: P,
+    children: () => J()
   }),
   (0, r.jsx)(T.Z, {
     user: t,
-    sourceType: A.N9.AVATAR,
-    isVisible: k,
+    sourceType: N.N9.AVATAR,
+    isVisible: V,
     isExpandable: !1,
-    onReply: b
+    onReply: M
   })
 ]
   });
