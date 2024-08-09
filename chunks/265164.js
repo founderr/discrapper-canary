@@ -160,7 +160,7 @@ a > K && (e.type === S.Rr.MESSAGE || e.type === S.Rr.SUMMARY) && e.data.channel_
   });
   let a = B,
 [s, r] = X(O);
-  if (B = (R = J(s, t)).length >= S.Lb, 0 === n.length && a === B)
+  if (R = J(s, t), B = H ? R.length >= S.Lb : i.length > 0, 0 === n.length && a === B)
 return !1;
   if (0 !== n.length)
 W = i, z = [
@@ -331,18 +331,17 @@ O = t.filter(e => S.zd.has(e.type)), ! function() {
   feed_item_ids: O.map(e => e.id)
 };
 let [a, s] = X(O);
-if (R = J(a), 0 === k)
-  a.length > 0 && !H && (B = !0, w = !0), Q({
-    newUnread: a,
-    newRead: s
-  });
-else {
+if (R = J(a), H && 0 !== k) {
   let e = R.length > S.Lb;
   B = e, e && (0, C.em)([
     ...a,
     ...s
   ], 0, S.xy);
-}
+} else
+  k = 0, a.length > 0 && !H && (B = !0, w = !0), Q({
+    newUnread: a,
+    newRead: s
+  });
   },
   LOAD_GRAVITY_HYDRATED: function(e) {
 let {
