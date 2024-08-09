@@ -64,23 +64,23 @@ highlighted: a = !1
   } = e, u = n.getIconURL(24);
   if (null == u)
 return null;
-  let d = (null == i ? void 0 : null === (t = i[n.id]) || void 0 === t ? void 0 : t.level) === o.m.HIGH,
-E = (0, r.jsxs)(l.Text, {
+  let E = (null == i ? void 0 : null === (t = i[n.id]) || void 0 === t ? void 0 : t.level) === o.m.HIGH,
+f = (0, r.jsxs)(l.Text, {
   variant: 'text-sm/semibold',
   color: 'interactive-active',
   className: _.tooltipText,
   children: [
     n.name,
-    d && (0, r.jsx)(l.Text, {
+    E && (0, r.jsx)(l.Text, {
       tag: 'div',
       variant: 'text-sm/normal',
       color: 'text-muted',
-      children: 'Very Active'
+      children: d.Z.Messages.CLAN_GAMEPLAY_ACTIVITY_HIGH
     })
   ]
 });
   return (0, r.jsx)(l.Tooltip, {
-text: E,
+text: f,
 position: 'bottom',
 'aria-label': n.name,
 children: e => (0, r.jsxs)('div', {
@@ -92,7 +92,7 @@ children: e => (0, r.jsxs)('div', {
       alt: n.name,
       className: _.gameImage
     }),
-    d && (0, r.jsx)(c.ZP, {
+    E && (0, r.jsx)(c.ZP, {
       mask: c.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
       width: 14,
       height: 14,
