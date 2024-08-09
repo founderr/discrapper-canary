@@ -56,7 +56,7 @@ var i = n(735250),
   $ = n(393333),
   ee = n(763296),
   et = n(640806),
-  en = n(484459),
+  en = n(184301),
   ei = n(584427),
   ea = n(52538),
   es = n(331187),
@@ -215,7 +215,10 @@ return (0, i.jsx)(g.Z, {
     animation: E.Popout.Animation.FADE,
     spacing: 14,
     fixed: !0,
-    preload: () => (0, en.Z)(n.id, null == n ? void 0 : n.getAvatarURL(null, 80)),
+    preload: () => (0, en.Z)(n, void 0, {
+      withMutualGuilds: !1,
+      withMutualFriends: !1
+    }),
     children: l => (0, i.jsxs)(E.Clickable, {
       ...l,
       'aria-label': ex.Z.Messages.SET_STATUS,
