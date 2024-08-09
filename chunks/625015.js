@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(204197),
   f = n(502762),
   E = n(981631),
-  C = n(921944),
-  g = n(474936),
+  g = n(921944),
+  C = n(474936),
   I = n(689938),
   x = n(186916);
 
@@ -30,7 +30,7 @@ function N(e) {
   let {
 avatarSrc: t,
 username: n
-  } = e, [a, c] = (0, o.U)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
+  } = e, [a, c] = (0, o.U)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
   return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, i.jsxs)(f.Z.Overlay, {
 className: x.overlay,
 children: [
@@ -51,10 +51,10 @@ children: [
         })
       }),
       (0, i.jsx)(r.Clickable, {
-        onClick: () => c(C.L.USER_DISMISS),
+        onClick: () => c(g.L.USER_DISMISS),
         'aria-label': I.Z.Messages.DISMISS,
         className: x.closeIconWrapper,
-        children: (0, i.jsx)(r.CloseSmallIcon, {
+        children: (0, i.jsx)(r.XSmallIcon, {
           size: 'md',
           color: 'currentColor',
           className: x.closeIcon
@@ -88,7 +88,7 @@ function v(e) {
   let {
 avatarSrc: t,
 username: n
-  } = e, [a, c] = (0, o.U)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
+  } = e, [a, c] = (0, o.U)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
   return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, i.jsx)(f.Z.Overlay, {
 className: x.overlay2,
 children: (0, i.jsxs)('div', {
@@ -109,10 +109,10 @@ children: (0, i.jsxs)('div', {
       })
     }),
     (0, i.jsx)(r.Clickable, {
-      onClick: () => c(C.L.USER_DISMISS),
+      onClick: () => c(g.L.USER_DISMISS),
       'aria-label': I.Z.Messages.DISMISS,
       className: x.closeIconWrapper,
-      children: (0, i.jsx)(r.CloseSmallIcon, {
+      children: (0, i.jsx)(r.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: x.closeIcon
@@ -184,7 +184,7 @@ avatarSrc: a
   } = (0, _.Z)({
 user: t,
 size: r.AvatarSizes.SIZE_32
-  }), s = h.default.getCurrentUser(), l = m.ZP.isPremium(s) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, g.p9.TIER_2), {
+  }), s = h.default.getCurrentUser(), l = m.ZP.isPremium(s) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, C.p9.TIER_2), {
 enabled: o,
 variant: u
   } = c.f.useExperiment({

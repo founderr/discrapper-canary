@@ -27,7 +27,7 @@ g = () => (0, i.jsx)(c.Clickable, {
   onClick: I,
   className: h.closeButton,
   'aria-label': E.Z.Messages.DISMISS,
-  children: (0, i.jsx)(c.CloseSmallIcon, {
+  children: (0, i.jsx)(c.XSmallIcon, {
     size: 'md',
     color: 'currentColor',
     className: h.closeIcon
@@ -49,7 +49,7 @@ children: [
     className: h.icon
   }),
   E.Z.Messages.DEV_NOTICE_STAGING.format({
-    buildNumber: '317116'
+    buildNumber: '317169'
   }),
   (0, i.jsx)(g, {})
 ]

@@ -35,7 +35,7 @@ children: [
     onClick: i,
     className: m.closeButton,
     'aria-label': p.Z.Messages.DISMISS,
-    children: (0, r.jsx)(o.CloseSmallIcon, {
+    children: (0, r.jsx)(o.XSmallIcon, {
       size: 'md',
       color: 'currentColor'
     })

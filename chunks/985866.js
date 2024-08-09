@@ -239,7 +239,7 @@ children: [
               className: N.platformSelectionOptionIcon
             });
           case h.y$.PLAYSTATION:
-            return (0, r.jsx)(u.PlaystationIcon, {
+            return (0, r.jsx)(u.PlaystationNeutralIcon, {
               className: N.platformSelectionOptionIcon
             });
           case h.y$.SWITCH:
@@ -247,7 +247,7 @@ children: [
               className: N.platformSelectionOptionIcon
             });
           case h.y$.XBOX:
-            return (0, r.jsx)(u.XboxIcon, {
+            return (0, r.jsx)(u.XboxNeutralIcon, {
               className: N.platformSelectionOptionIcon
             });
         }

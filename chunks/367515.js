@@ -77,7 +77,7 @@ children: [
   (0, s.jsx)('div', {
     className: R.actions,
     children: r ? (0, s.jsx)(u.Z, {
-      icon: o.CloseSmallIcon,
+      icon: o.XSmallIcon,
       className: R.__invalid_actionDeny,
       tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
       onClick: N
@@ -90,7 +90,7 @@ children: [
           onClick: p
         }),
         (0, s.jsx)(u.Z, {
-          icon: o.CloseSmallIcon,
+          icon: o.XSmallIcon,
           className: R.__invalid_actionDeny,
           tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
           onClick: A

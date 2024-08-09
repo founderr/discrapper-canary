@@ -70,7 +70,7 @@ children: [
     onClick: () => {
       l.K.set(g, R), S = R, A(!0);
     },
-    children: (0, r.jsx)(u.CloseSmallIcon, {
+    children: (0, r.jsx)(u.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: T.premiumRetentionNoticeClose

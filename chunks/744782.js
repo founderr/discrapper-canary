@@ -70,7 +70,7 @@ children: [
     onClick: L,
     className: g.close,
     'aria-label': h.Z.Messages.CLOSE,
-    children: (0, s.jsx)(t.CloseSmallIcon, {
+    children: (0, s.jsx)(t.XSmallIcon, {
       size: 'md',
       color: 'currentColor'
     })

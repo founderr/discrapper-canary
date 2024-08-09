@@ -166,7 +166,7 @@ children: [
       className: O.closeButton,
       tooltip: R.Z.Messages.CLOSE,
       color: l.CircleIconButtonColors.TERTIARY,
-      icon: (0, i.jsx)(l.CloseSmallIcon, {
+      icon: (0, i.jsx)(l.XSmallIcon, {
         size: 'xs',
         color: 'currentColor'
       }),

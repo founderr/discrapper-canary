@@ -160,7 +160,7 @@ children: e => (0, s.jsx)(h.Clickable, {
   ...e,
   onClick: n,
   'aria-label': T.Z.Messages.REMOVE_FAVORITE_SUGGESTION,
-  children: (0, s.jsx)(h.CloseSmallIcon, {
+  children: (0, s.jsx)(h.XSmallIcon, {
     size: 'xs',
     color: 'currentColor',
     className: L.actionIcon

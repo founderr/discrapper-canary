@@ -67,7 +67,7 @@ return (0, i.jsxs)('div', {
       className: C.closeContainer,
       onClick: () => t(!1),
       'aria-label': f.Z.Messages.CLOSE,
-      children: (0, i.jsx)(l.CloseSmallIcon, {
+      children: (0, i.jsx)(l.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: C.closeIcon

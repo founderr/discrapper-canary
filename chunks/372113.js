@@ -148,7 +148,7 @@ children: [
           children: [
             I && (0, i.jsx)('div', {
               className: M.rewardTileExpired,
-              children: (0, i.jsx)(l.CircleExclamationPointIcon, {
+              children: (0, i.jsx)(l.CircleWarningIcon, {
                 color: l.tokens.colors.WHITE
               })
             }),

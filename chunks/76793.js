@@ -108,7 +108,7 @@ children: [
   (0, n.jsx)(r.Clickable, {
     className: m.icon,
     onClick: c,
-    children: (0, n.jsx)(r.CloseSmallIcon, {
+    children: (0, n.jsx)(r.XSmallIcon, {
       size: 'md',
       color: r.tokens.colors.INTERACTIVE_NORMAL
     })

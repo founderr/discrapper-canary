@@ -100,7 +100,7 @@ analyticsLocation: o
   return (0, n.jsxs)('div', {
 className: r()(O.root, i),
 children: [
-  (0, n.jsx)(_.CircleExclamationPointIcon, {
+  (0, n.jsx)(_.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,

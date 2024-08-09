@@ -60,7 +60,7 @@ let {
 return this.isHost() ? null : (0, i.jsx)(I.Z, {
   tooltipText: S.Z.Messages.SPOTIFY_LISTEN_ALONG_STOP,
   onClick: e,
-  icon: c.CloseSmallIcon
+  icon: c.XSmallIcon
 });
   }
   renderHelpIcon() {

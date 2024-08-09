@@ -99,7 +99,7 @@ className: a
 className: o()(g.blockedPaymentsWarning, a),
 type: c.Card.Types.CUSTOM,
 children: [
-  (0, r.jsx)(c.CircleExclamationPointIcon, {
+  (0, r.jsx)(c.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,

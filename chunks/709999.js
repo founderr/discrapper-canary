@@ -274,7 +274,7 @@ children: (0, s.jsxs)(C.Clickable, {
     }),
     el ? (0, s.jsx)('div', {
       className: V.checkmarkWrapper,
-      children: (0, s.jsx)(C.CheckmarkBoldIcon, {
+      children: (0, s.jsx)(C.CheckmarkLargeBoldIcon, {
         size: 'custom',
         color: 'currentColor',
         width: 38,

@@ -27,7 +27,7 @@ role: 'group',
 childrenMessageContent: (0, i.jsx)(d.Z, {
   compact: s,
   className: m.blockedSystemMessage,
-  iconNode: (0, i.jsx)(r.CloseSmallIcon, {
+  iconNode: (0, i.jsx)(r.XSmallIcon, {
     size: 'md',
     color: 'currentColor',
     className: m.blockedIcon
@@ -65,7 +65,7 @@ unreadId: o,
 collapsedReason: d
   } = e, {
 hasJumpTarget: p = !1
-  } = n, [E, C] = a.useState(p), g = a.useCallback(() => C(e => !e), []), I = n.hasUnread ? n.content.length - 1 : n.content.length;
+  } = n, [E, g] = a.useState(p), C = a.useCallback(() => g(e => !e), []), I = n.hasUnread ? n.content.length - 1 : n.content.length;
   return (0, i.jsxs)('div', {
 className: l()({
   [_.groupStart]: !0,
@@ -80,7 +80,7 @@ children: [
     count: I,
     compact: r,
     expanded: E,
-    onClick: g,
+    onClick: C,
     collapsedReason: d
   }, 'collapsed-message-item'),
   E ? n.content.map((e, t) => {

@@ -46,7 +46,7 @@ children: [
   }) : null,
   h && N && (0, o.jsx)('div', {
     className: g.closeCircle,
-    children: (0, o.jsx)(d.CloseSmallIcon, {
+    children: (0, o.jsx)(d.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: g.close

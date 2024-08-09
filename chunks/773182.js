@@ -91,7 +91,7 @@ children: [
           (0, i.jsx)(u.Clickable, {
             onClick: () => M(l),
             className: Z.close,
-            children: (0, i.jsx)(u.CloseSmallIcon, {
+            children: (0, i.jsx)(u.XSmallIcon, {
               size: 'xs',
               color: u.tokens.colors.WHITE
             })

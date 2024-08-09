@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(914010),
   f = n(594174),
   E = n(626135),
-  C = n(645896),
-  g = n(905362),
+  g = n(645896),
+  C = n(905362),
   I = n(603368),
   x = n(353093),
   T = n(940725),
@@ -37,7 +37,7 @@ guild: n,
 showToast: s,
 onConfirm: o,
 onDismiss: p
-  } = e, [m, _] = a.useState(!1), E = a.useRef(null), g = (0, C.Cc)(n.id), T = (0, d.ZP)(), S = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), Z = (0, I.nP)(null == g ? void 0 : null === (t = g.branding) || void 0 === t ? void 0 : t.primaryColor, [
+  } = e, [m, _] = a.useState(!1), E = a.useRef(null), C = (0, g.Cc)(n.id), T = (0, d.ZP)(), S = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), Z = (0, I.nP)(null == C ? void 0 : null === (t = C.branding) || void 0 === t ? void 0 : t.primaryColor, [
 c.tokens.colors.BG_BRAND,
 0.5
   ]), b = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
@@ -156,7 +156,7 @@ return t && (0, i.jsx)(r.animated.div, {
           children: (0, i.jsx)(c.Clickable, {
             className: M.toastButton,
             onClick: L,
-            children: (0, i.jsx)(c.CloseSmallBoldIcon, {
+            children: (0, i.jsx)(c.XSmallBoldIcon, {
               size: 'custom',
               width: 20,
               height: 20
@@ -182,7 +182,7 @@ null != c.current && window.clearTimeout(c.current);
   }), []);
   let d = a.useCallback(() => {
   if (r(!1), null != t)
-    (0, g.S)(t);
+    (0, C.S)(t);
 }, [,
   t
 ]),

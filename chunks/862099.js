@@ -82,7 +82,7 @@ children: [
         onClick: c,
         className: B.closeIcon,
         'aria-label': w.Z.Messages.CLOSE,
-        children: (0, s.jsx)(d.CloseSmallIcon, {
+        children: (0, s.jsx)(d.XSmallIcon, {
           size: 'xs',
           color: 'currentColor'
         })
@@ -251,7 +251,7 @@ children: [
         },
         className: B.closeIcon,
         'aria-label': w.Z.Messages.CLOSE,
-        children: (0, s.jsx)(d.CloseSmallIcon, {
+        children: (0, s.jsx)(d.XSmallIcon, {
           size: 'xs',
           color: 'currentColor'
         })

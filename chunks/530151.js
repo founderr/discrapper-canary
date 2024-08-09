@@ -513,7 +513,7 @@ let {
   item: t
 } = e;
 return (0, i.jsx)(w, {
-  icon: _.CloseSmallIcon,
+  icon: _.XSmallIcon,
   tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
   onClick: () => m.al(t.applicationId, t.branchId)
 });

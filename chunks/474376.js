@@ -79,7 +79,7 @@ S = n.map(n => {
             secondaryColor: (0, r.Lq)(l ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
             className: p.activeIcon
           }),
-          c && (0, i.jsx)(s.CircleExclamationPointIcon, {
+          c && (0, i.jsx)(s.CircleWarningIcon, {
             color: (0, r.Lq)(I.Ilk.RED_400),
             secondaryColor: (0, r.Lq)(I.Ilk.WHITE_500),
             size: 'xs',

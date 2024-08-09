@@ -187,16 +187,16 @@ onVideoControlsHide: U
 width: V,
 height: B,
 spoiler: W,
-type: $,
-contentType: q
-  } = n, [X, z] = o.useState(!1), [J, Q] = o.useState(!1), Y = t.getChannelId(), K = I.Z.getChannel(Y), ee = (0, g.Z)(Y), et = s.P.useExperiment({
+type: X,
+contentType: $
+  } = n, [q, z] = o.useState(!1), [J, Q] = o.useState(!1), Y = t.getChannelId(), K = I.Z.getChannel(Y), ee = (0, g.Z)(Y), et = s.P.useExperiment({
 location: 'MediaMosaicItem'
   }, {
 autoTrackExposure: !0
-  }).imageRecsEnabled, en = o.useMemo(() => null != q && -1 !== q.indexOf('/') ? q.split('/') : [
+  }).imageRecsEnabled, en = o.useMemo(() => null != $ && -1 !== $.indexOf('/') ? $.split('/') : [
 'unknown',
 'unknown'
-  ], [q]), ei = 'IMAGE' === $ && !x.u.test(n.downloadUrl), eo = !1;
+  ], [$]), ei = 'IMAGE' === X && !x.u.test(n.downloadUrl), eo = !1;
   if (H) {
 (null == V || null == B) && (eo = !0);
 let e = (0, C.Dc)({
@@ -232,8 +232,8 @@ er = o.useCallback(() => {
       'VIDEO',
       'CLIP',
       'AUDIO'
-    ].includes($) || 'OTHER' === $;
-    return eo ? null : !X && (0, i.jsx)(R, {
+    ].includes(X) || 'OTHER' === X;
+    return eo ? null : !q && (0, i.jsx)(R, {
       mimeType: en,
       downloadURL: n.downloadUrl,
       showDownload: e,
@@ -252,7 +252,7 @@ er = o.useCallback(() => {
     },
     onClick: () => d(n),
     'aria-label': v.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
-    children: (0, i.jsx)(r.CloseSmallIcon, {
+    children: (0, i.jsx)(r.XSmallIcon, {
       size: 'xs',
       color: 'currentColor'
     })
@@ -261,9 +261,9 @@ er = o.useCallback(() => {
   F,
   u,
   W,
-  $,
-  H,
   X,
+  H,
+  q,
   n,
   en,
   ea,
@@ -274,7 +274,7 @@ er = o.useCallback(() => {
   ei,
   eo
 ]);
-  switch ($) {
+  switch (X) {
 case 'IMAGE':
   return (0, i.jsx)(h.h.Consumer, {
     children: e => (0, i.jsx)(_, {

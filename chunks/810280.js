@@ -52,7 +52,7 @@ children: [
     className: _.__invalid_buttonClose,
     'aria-label': u.Z.Messages.CLOSE,
     onClick: T,
-    children: (0, i.jsx)(s.CloseSmallIcon, {
+    children: (0, i.jsx)(s.XSmallIcon, {
       size: 'xs',
       color: 'currentColor',
       className: _.closeIcon

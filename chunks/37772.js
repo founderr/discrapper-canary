@@ -49,7 +49,7 @@ role: 'group',
 childrenMessageContent: (0, i.jsx)(D.Z, {
   compact: s,
   className: U.blockedSystemMessage,
-  iconNode: (0, i.jsx)(o.CloseSmallIcon, {
+  iconNode: (0, i.jsx)(o.XSmallIcon, {
     size: 'md',
     color: 'currentColor',
     className: U.blockedIcon

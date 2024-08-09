@@ -77,7 +77,7 @@ children: [
         }),
         (0, n.jsx)(l.Clickable, {
           onClick: a,
-          children: (0, n.jsx)(l.CloseSmallIcon, {
+          children: (0, n.jsx)(l.XSmallIcon, {
             size: 'xs',
             color: 'currentColor',
             className: C.closeIcon

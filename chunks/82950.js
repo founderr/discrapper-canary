@@ -63,7 +63,7 @@ return (0, i.jsxs)('div', {
       },
       className: h.close,
       'aria-label': E.Z.Messages.DISMISS,
-      children: (0, i.jsx)(l.CloseSmallIcon, {
+      children: (0, i.jsx)(l.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: h.closeIcon

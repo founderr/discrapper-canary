@@ -65,7 +65,7 @@ focusProps: {
     right: 6
   }
 },
-children: (0, i.jsx)(p.CloseSmallIcon, {
+children: (0, i.jsx)(p.XSmallIcon, {
   size: 'md',
   color: 'currentColor',
   className: H.closeIcon
@@ -152,8 +152,8 @@ isMobile: D,
 'aria-posinset': w,
 'aria-setsize': U
   } = e, [Y, K] = l.useState(!1), q = l.useRef(null), Q = l.useRef(null), {
-avatarSrc: J,
-avatarDecorationSrc: X,
+avatarSrc: X,
+avatarDecorationSrc: J,
 eventHandlers: $
   } = (0, M.Z)({
 user: d,
@@ -273,8 +273,8 @@ let n = null;
 return !d.isSystemUser() && (n = (0, m.Z)(L) ? k.Skl.STREAMING : y), (0, i.jsx)(V, {
   ...$,
   size: p.AvatarSizes.SIZE_32,
-  src: J,
-  avatarDecoration: X,
+  src: X,
+  avatarDecoration: J,
   status: n,
   isMobile: D,
   isTyping: O,

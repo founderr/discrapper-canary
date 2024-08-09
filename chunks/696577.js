@@ -66,7 +66,7 @@ children: e => {
         shouldHighlight: e
       }),
       (0, i.jsx)(_.Z, {
-        icon: r.CloseSmallIcon,
+        icon: r.XSmallIcon,
         actionType: _.Z.ActionTypes.DENY,
         tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
         onClick: C,
@@ -74,7 +74,7 @@ children: e => {
       })
     ]
   }) : (0, i.jsx)(_.Z, {
-    icon: r.CloseSmallIcon,
+    icon: r.XSmallIcon,
     actionType: _.Z.ActionTypes.DENY,
     tooltip: I.Z.Messages.FRIEND_REQUEST_CANCEL,
     onClick: C,

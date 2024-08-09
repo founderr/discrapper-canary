@@ -247,7 +247,7 @@ children: [
         }
       }), null == r || r();
     },
-    children: (0, i.jsx)(h.CloseSmallIcon, {
+    children: (0, i.jsx)(h.XSmallIcon, {
       size: 'xs',
       color: 'currentColor',
       className: G.remove

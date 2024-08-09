@@ -531,7 +531,7 @@ return Object.freeze({
     searchableTitles: [eD.Z.Messages.SUBSCRIPTIONS_TITLE],
     label: eD.Z.Messages.SUBSCRIPTIONS_TITLE,
     element: x.Z,
-    icon: eZ ? (0, n.jsx)(o.CircleExclamationPointIcon, {
+    icon: eZ ? (0, n.jsx)(o.CircleWarningIcon, {
       size: 'xs',
       color: r.Z.unsafe_rawColors.YELLOW_300.css
     }) : null

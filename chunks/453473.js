@@ -213,7 +213,7 @@ className: r()(L.messageContainer, L.deletedMessage),
 children: [
   (0, i.jsx)('div', {
     className: L.deleteIcon,
-    children: (0, i.jsx)(E.CircleExclamationPointIcon, {
+    children: (0, i.jsx)(E.CircleWarningIcon, {
       size: 'xxs',
       color: E.tokens.colors.INTERACTIVE_ACTIVE
     })
@@ -319,7 +319,7 @@ children: [
 
 function B() {
   return (0, i.jsx)(N.Z, {
-Icon: E.DoubleCheckmarkLargeIcon,
+Icon: E.DoubleCheckmarkIcon,
 header: v.Z.Messages.FOR_LATER_EMPTY,
 tip: v.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
   });

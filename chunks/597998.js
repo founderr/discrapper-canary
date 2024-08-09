@@ -17,8 +17,8 @@ var i, a = n(735250),
   _ = n(833858),
   f = n(223135),
   E = n(374129),
-  C = n(639351),
-  g = n(630388),
+  g = n(639351),
+  C = n(630388),
   I = n(51144),
   x = n(981631),
   T = n(354459),
@@ -210,7 +210,7 @@ d && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
 }, 'video'))), B && H.push((0, a.jsx)(o.TooltipContainer, {
   className: S.iconSpacing,
   text: v.Z.Messages.NOTICE_USER_DISCONNECTED,
-  children: (0, a.jsx)(o.CircleExclamationPointIcon, {
+  children: (0, a.jsx)(o.CircleWarningIcon, {
     className: r()(S.icon, f),
     color: o.tokens.colors.STATUS_WARNING_BACKGROUND
   })
@@ -224,7 +224,7 @@ d && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
   })
 }, 'activity')), Z === N.YE.XBOX || A === T.wR.XBOX ? H.push((0, a.jsx)('div', {
   className: r()(S.iconSpacing),
-  children: (0, a.jsx)(C.Z, {
+  children: (0, a.jsx)(g.Z, {
     className: r()(S.icon, f)
   })
 }, 'xbox')) : (Z === N.YE.PLAYSTATION || A === T.wR.PLAYSTATION) && H.push((0, a.jsx)('div', {
@@ -246,7 +246,7 @@ d && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
     className: r()(S.icon, f)
   })
 }, 'watch'));
-let V = null != O && !(0, g.yE)(O.flags, x.udG.EMBEDDED),
+let V = null != O && !(0, C.yE)(O.flags, x.udG.EMBEDDED),
   F = null == b && V;
 return 0 !== H.length || null != G || L || F ? (0, a.jsxs)('div', {
   className: S.icons,

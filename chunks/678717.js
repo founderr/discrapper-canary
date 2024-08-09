@@ -186,7 +186,7 @@ children: [
   (0, a.jsxs)(m.ZP, {
     className: H.headerBar,
     toolbar: (0, a.jsx)(m.ZP.Icon, {
-      icon: s.CloseSmallIcon,
+      icon: s.XSmallIcon,
       tooltip: M.Z.Messages.CLOSE,
       onClick: b.SO
     }),

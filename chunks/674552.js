@@ -89,7 +89,7 @@ switch (e) {
   case o.wB.REJECTED:
     return [
       d.Ilk.RED_400,
-      a.CloseSmallIcon
+      a.XSmallIcon
     ];
   case o.wB.APPROVED:
     return [

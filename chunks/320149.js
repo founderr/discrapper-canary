@@ -47,7 +47,7 @@ onError: x
   if (null == t || !t.isDM())
 return null;
   let P = [(0, i.jsx)(o.ZP.Icon, {
-icon: r.CloseSmallIcon,
+icon: r.XSmallIcon,
 tooltip: S.Z.Messages.CLOSE,
 onClick: () => I.Z.closeChannelSidebar(n)
   }, 'close')];

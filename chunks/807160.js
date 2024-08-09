@@ -488,7 +488,7 @@ let {
 } = this.props;
 if (e.includes('SKU_TYPE'))
   return null;
-let i = e.includes('PURCHASE_DATE') ? N.CloseSmallIcon : N.CheckmarkLargeIcon;
+let i = e.includes('PURCHASE_DATE') ? N.XSmallIcon : N.CheckmarkLargeIcon;
 if (!this.isPremium || !(0, z.U)())
   return (0, r.jsxs)('div', {
     className: ee.refundActions,

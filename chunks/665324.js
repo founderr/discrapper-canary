@@ -419,7 +419,7 @@ children: [
           }));
         },
         'aria-label': j.Z.Messages.REMOVE,
-        children: (0, s.jsx)(u.CloseSmallIcon, {
+        children: (0, s.jsx)(u.XSmallIcon, {
           size: 'md',
           color: 'currentColor',
           className: Z.soundEditIcon

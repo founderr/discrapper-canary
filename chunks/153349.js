@@ -16,8 +16,8 @@ var i, a, s = n(735250),
   _ = n(58540),
   f = n(665149),
   E = n(484459),
-  C = n(103575),
-  g = n(271383),
+  g = n(103575),
+  C = n(271383),
   I = n(496675),
   x = n(158776),
   T = n(471253),
@@ -34,7 +34,7 @@ let {
   toggleRequestToSpeakSidebar: t,
   chatOpen: n
 } = e, i = (0, s.jsx)(f.ZP.Icon, {
-  icon: h.CloseSmallIcon,
+  icon: h.XSmallIcon,
   tooltip: b.Z.Messages.CLOSE,
   onClick: t
 });
@@ -75,7 +75,7 @@ let {
 } = (0, d.cj)([x.Z], () => ({
   isMobile: x.Z.isMobileOnline(i.user.id),
   status: x.Z.getStatus(i.user.id, f)
-})), Z = (0, d.e7)([g.ZP], () => g.ZP.getMember(f, i.user.id)), A = l.useMemo(() => ({
+})), Z = (0, d.e7)([C.ZP], () => C.ZP.getMember(f, i.user.id)), A = l.useMemo(() => ({
   [f]: [i.user.id]
 }), [
   f,
@@ -118,7 +118,7 @@ return (0, s.jsxs)('div', {
         guildId: t.guild_id,
         channelId: t.id
       }),
-      renderPopout: e => (0, s.jsx)(C.Z, {
+      renderPopout: e => (0, s.jsx)(g.Z, {
         ...e,
         location: 'RequestToSpeakSidebar',
         userId: i.user.id,
@@ -183,7 +183,7 @@ return (0, s.jsxs)('div', {
         look: h.Button.Looks.BLANK,
         size: h.Button.Sizes.NONE,
         onClick: L,
-        children: (0, s.jsx)(h.CloseSmallIcon, {
+        children: (0, s.jsx)(h.XSmallIcon, {
           size: 'xs',
           color: 'currentColor'
         })

@@ -592,7 +592,7 @@ let {
 return null != e ? (0, n.jsxs)('div', {
   className: R.errorBoundary,
   children: [
-    (0, n.jsx)(d.CircleExclamationPointIcon, {
+    (0, n.jsx)(d.CircleWarningIcon, {
       className: R.errorBoundaryIcon
     }),
     (0, n.jsx)(d.Heading, {

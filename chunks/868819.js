@@ -35,7 +35,7 @@ function m(e) {
   return {
 text: null != e ? e : f.Z.Messages.APPLICATION_COMMAND_FAILED,
 color: 'text-danger',
-icon: (0, r.jsx)(u.CircleExclamationPointIcon, {
+icon: (0, r.jsx)(u.CircleWarningIcon, {
   size: 'xs',
   color: 'currentColor',
   className: s()(h.icon, h.errorIcon)

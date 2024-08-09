@@ -79,7 +79,7 @@ return _ && !n ? (0, i.jsxs)(S.ZP.Bar, {
   children: [
     (0, i.jsx)(I.Z, {}),
     (0, i.jsx)(h.Z.Icon, {
-      icon: l.CloseSmallIcon,
+      icon: l.XSmallIcon,
       onClick: this.handleCloseOpacitySettings,
       tooltip: C.Z.Messages.CLOSE
     })

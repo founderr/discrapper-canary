@@ -19,7 +19,7 @@ warning: c.warning
   },
   d = {
 info: o.CircleInformationIcon,
-warning: o.CircleExclamationPointIcon
+warning: o.CircleWarningIcon
   };
 
 function m(e) {

@@ -44,7 +44,7 @@ children: [
     href: l.fK7.INSTAGRAM_URL,
     className: c.link,
     focusProps: d,
-    children: (0, n.jsx)(a.InstagramIcon, {
+    children: (0, n.jsx)(a.InstagramNeutralIcon, {
       size: 'xs',
       color: 'currentColor',
       colorClass: c.foreground,
@@ -59,7 +59,7 @@ children: [
     href: l.fK7.FACEBOOK_URL,
     className: c.link,
     focusProps: d,
-    children: (0, n.jsx)(a.FacebookIcon, {
+    children: (0, n.jsx)(a.FacebookNeutralIcon, {
       size: 'xs',
       color: 'currentColor',
       colorClass: c.foreground,

@@ -90,7 +90,7 @@ children: (0, a.jsxs)('div', {
           look: r.Button.Looks.BLANK,
           size: r.Button.Sizes.NONE,
           'aria-label': m.Z.Messages.DISMISS,
-          children: (0, a.jsx)(r.CloseSmallIcon, {
+          children: (0, a.jsx)(r.XSmallIcon, {
             size: 'md',
             color: 'currentColor',
             className: M.closeIcon

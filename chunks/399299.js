@@ -137,7 +137,7 @@ text: n
 align: S.Z.Align.CENTER,
 className: F.warning,
 children: [
-  (0, l.jsx)(o.CircleExclamationPointIcon, {
+  (0, l.jsx)(o.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,

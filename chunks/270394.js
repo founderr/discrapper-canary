@@ -291,7 +291,7 @@ renderSection: () => {
             b && (0, i.jsxs)('div', {
               className: D.inviteDisabledTip,
               children: [
-                (0, i.jsx)(m.CircleExclamationPointIcon, {
+                (0, i.jsx)(m.CircleWarningIcon, {
                   size: 'custom',
                   width: 20,
                   height: 20,

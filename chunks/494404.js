@@ -121,7 +121,7 @@ return null != e && (t || n || null != s && s.isPrivate()) ? (0, i.jsx)(d.Button
   look: d.Button.Looks.BLANK,
   size: d.Button.Sizes.NONE,
   onClick: this.handleClickClose,
-  children: (0, i.jsx)(d.CloseSmallIcon, {
+  children: (0, i.jsx)(d.XSmallIcon, {
     size: 'md',
     color: 'currentColor',
     className: M.closeIcon

@@ -18,7 +18,7 @@ var n = t(735250),
   m = t(122021),
   A = t(275759),
   g = t(231757),
-  O = t(323588),
+  O = t(888496),
   h = t(605236),
   p = t(565138),
   R = t(297700),
@@ -260,7 +260,7 @@ children: [
               right: -4
             }
           },
-          children: (0, n.jsx)(_.CloseSmallIcon, {
+          children: (0, n.jsx)(_.XSmallIcon, {
             size: 'xs',
             color: 'currentColor'
           })

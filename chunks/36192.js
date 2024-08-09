@@ -259,7 +259,7 @@ children: [
       e.shiftKey ? null == _ || _(!0) : (0, u.L$)(l.id_hash);
     },
     'aria-label': O.Z.Messages.AUTH_SESSIONS_SESSION_LOG_OUT,
-    children: (0, n.jsx)(d.CloseSmallIcon, {
+    children: (0, n.jsx)(d.XSmallIcon, {
       size: 'md',
       color: 'currentColor'
     })

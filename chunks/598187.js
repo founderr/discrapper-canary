@@ -87,7 +87,7 @@ compact: t
 compact: t,
 header: (0, i.jsxs)(s.Fragment, {
   children: [
-    (0, i.jsx)(I.CircleExclamationPointIcon, {
+    (0, i.jsx)(I.CircleWarningIcon, {
       size: 'xs',
       color: E.Z.colors.HEADER_SECONDARY.css
     }),
@@ -114,7 +114,7 @@ compact: t
 compact: t,
 header: (0, i.jsxs)(s.Fragment, {
   children: [
-    (0, i.jsx)(I.CircleExclamationPointIcon, {
+    (0, i.jsx)(I.CircleWarningIcon, {
       size: 'xs',
       color: E.Z.colors.HEADER_SECONDARY.css
     }),
@@ -252,7 +252,7 @@ null != e && (0, p.kW)(a.id, e);
   }, [
 a.id,
 S
-  ]), Z = T === d.$.DM_RAID, P = Z ? I.CircleExclamationPointIcon : I.ChatAlertIcon;
+  ]), Z = T === d.$.DM_RAID, P = Z ? I.CircleWarningIcon : I.ChatWarningIcon;
   return (0, i.jsx)(H, {
 compact: r,
 header: (0, i.jsxs)(s.Fragment, {
@@ -398,7 +398,7 @@ suspiciousMentionActivityUntil: u
 compact: a,
 header: (0, i.jsxs)(s.Fragment, {
   children: [
-    (0, i.jsx)(I.CircleExclamationPointIcon, {
+    (0, i.jsx)(I.CircleWarningIcon, {
       size: 'xs',
       color: E.Z.colors.TEXT_DANGER.css
     }),

@@ -284,7 +284,7 @@ children: (0, s.jsxs)('div', {
     (null != Z ? Z : 0) > 0 ? (0, s.jsxs)('div', {
       className: f.warningContainer,
       children: [
-        (0, s.jsx)(d.CircleExclamationPointIcon, {
+        (0, s.jsx)(d.CircleWarningIcon, {
           size: 'custom',
           width: 20,
           height: 20,

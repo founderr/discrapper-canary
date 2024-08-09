@@ -135,7 +135,7 @@ getNumUnreadChannels: a
 className: S.markReadButton,
 tooltip: r ? g.Z.Messages.MARK_GUILD_AS_READ : g.Z.Messages.MARK_AS_READ,
 color: c.CircleIconButtonColors.TERTIARY,
-icon: r ? (0, i.jsx)(c.DoubleCheckmarkLargeIcon, {
+icon: r ? (0, i.jsx)(c.DoubleCheckmarkIcon, {
   size: 'xs',
   color: 'currentColor'
 }) : (0, i.jsx)(c.CheckmarkLargeIcon, {

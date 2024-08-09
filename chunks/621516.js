@@ -12,8 +12,8 @@ var a = n(735250),
   _ = n(961675),
   g = n(883429),
   x = n(432771),
-  C = n(406074),
-  f = n(434404),
+  f = n(406074),
+  C = n(434404),
   p = n(430824),
   T = n(63063),
   I = n(595433),
@@ -33,7 +33,7 @@ handleHide: t
 onClick: t,
 className: b.closeButton,
 'aria-label': N.Z.Messages.DISMISS,
-children: (0, a.jsx)(d.CloseSmallIcon, {
+children: (0, a.jsx)(d.XSmallIcon, {
   size: 'md',
   color: 'currentColor',
   className: b.closeIcon
@@ -141,7 +141,7 @@ t.Z = e => {
   var t, n;
   let {
 channel: r
-  } = e, h = (0, u.ZP)(), O = (0, c.wj)(h), Z = (0, o.e7)([p.Z], () => p.Z.getGuild(r.guild_id)), L = (0, o.e7)([m.Z], () => m.Z.useReducedMotion), P = (0, o.e7)([_.Z], () => _.Z.hasHidden(r.id)), w = (0, C.C)({
+  } = e, h = (0, u.ZP)(), O = (0, c.wj)(h), Z = (0, o.e7)([p.Z], () => p.Z.getGuild(r.guild_id)), L = (0, o.e7)([m.Z], () => m.Z.useReducedMotion), P = (0, o.e7)([_.Z], () => _.Z.hasHidden(r.id)), w = (0, f.C)({
 guildId: r.guild_id,
 channelId: r.id
   }), {
@@ -173,7 +173,7 @@ k = s.useMemo(() => [
   N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG
 ], []),
 H = () => {
-  f.Z.open(r.guild_id, E.pNK.ROLE_SUBSCRIPTIONS);
+  C.Z.open(r.guild_id, E.pNK.ROLE_SUBSCRIPTIONS);
 },
 B = null !== (t = null == Z ? void 0 : Z.hasFeature(E.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HAS_TIERS_CTA : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_NO_TIERS_CTA,
 G = null !== (n = (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE)) || (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== n && n,

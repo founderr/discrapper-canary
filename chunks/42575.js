@@ -58,7 +58,7 @@ children: e => {
         shouldHighlight: e
       }),
       (0, i.jsx)(u.Z, {
-        icon: s.CloseSmallIcon,
+        icon: s.XSmallIcon,
         actionType: u.Z.ActionTypes.DENY,
         tooltip: m.Z.Messages.FRIEND_REQUEST_IGNORE,
         onClick: C,

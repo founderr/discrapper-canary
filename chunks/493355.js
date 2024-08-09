@@ -30,7 +30,7 @@ children: [
       height: n
     })
   }),
-  (0, r.jsx)(s.CloseSmallIcon, {
+  (0, r.jsx)(s.XSmallIcon, {
     size: 'md',
     color: 'currentColor',
     className: u.badge

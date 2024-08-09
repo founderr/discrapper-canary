@@ -56,7 +56,7 @@ message: t,
 compact: n
   } = e;
   return (0, i.jsx)(a.Z, {
-iconNode: (0, i.jsx)(s.CircleExclamationPointIcon, {
+iconNode: (0, i.jsx)(s.CircleWarningIcon, {
   size: 'custom',
   width: 20,
   height: 20,
@@ -76,7 +76,7 @@ message: t,
 compact: n
   } = e;
   return (0, i.jsx)(a.Z, {
-iconNode: (0, i.jsx)(s.CircleExclamationPointIcon, {
+iconNode: (0, i.jsx)(s.CircleWarningIcon, {
   size: 'custom',
   width: 20,
   height: 20,

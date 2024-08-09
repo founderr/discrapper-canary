@@ -117,7 +117,7 @@ children: [
     size: l.Button.Sizes.NONE,
     look: l.Button.Looks.BLANK,
     className: p.buttonClose,
-    children: (0, i.jsx)(l.CloseSmallIcon, {
+    children: (0, i.jsx)(l.XSmallIcon, {
       size: 'xs',
       color: 'currentColor',
       className: p.dismissIcon

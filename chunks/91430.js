@@ -132,7 +132,7 @@ h.default.track(Z.rMx.TOOLTIP_VIEWED, {
   }, []), (0, n.jsxs)('div', {
 className: j.paymentBanner,
 children: [
-  (0, n.jsx)(u.CircleExclamationPointIcon, {
+  (0, n.jsx)(u.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,
@@ -156,7 +156,7 @@ h.default.track(Z.rMx.TOOLTIP_VIEWED, {
   }, []), (0, n.jsxs)('div', {
 className: j.paymentBanner,
 children: [
-  (0, n.jsx)(u.CircleExclamationPointIcon, {
+  (0, n.jsx)(u.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,
@@ -187,7 +187,7 @@ h.default.track(Z.rMx.TOOLTIP_VIEWED, {
   }, []), (0, n.jsxs)('div', {
 className: j.paymentBanner,
 children: [
-  (0, n.jsx)(u.CircleExclamationPointIcon, {
+  (0, n.jsx)(u.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,
@@ -378,7 +378,7 @@ h.default.track(Z.rMx.TOOLTIP_VIEWED, {
   }, []), (0, n.jsxs)('div', {
 className: j.duplicateSubscriptionsBanner,
 children: [
-  (0, n.jsx)(u.CircleExclamationPointIcon, {
+  (0, n.jsx)(u.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,

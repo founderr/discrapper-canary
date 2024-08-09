@@ -181,7 +181,7 @@ children: [
 
 function L() {
   return (0, i.jsx)(p.Z, {
-Icon: d.DoubleCheckmarkLargeIcon,
+Icon: d.DoubleCheckmarkIcon,
 header: A.Z.Messages.MESSAGE_REMINDERS_EMPTY,
 tip: A.Z.Messages.MESSAGE_REMINDERS_EMPTY_TIP
   });

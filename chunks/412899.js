@@ -164,7 +164,7 @@ children: (0, r.jsxs)('div', {
       }),
       children: [
         u,
-        d ? (0, r.jsx)(h.CloseSmallIcon, {
+        d ? (0, r.jsx)(h.XSmallIcon, {
           size: 'md',
           color: k,
           className: w.roleRemoveIcon,

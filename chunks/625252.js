@@ -45,7 +45,7 @@ children: [
       color: c.CircleIconButtonColors.SECONDARY,
       size: c.CircleIconButtonSizes.SIZE_24,
       onClick: g,
-      icon: (0, n.jsx)(c.CloseSmallIcon, {
+      icon: (0, n.jsx)(c.XSmallIcon, {
         size: 'xs',
         color: 'currentColor',
         className: C.closeIcon

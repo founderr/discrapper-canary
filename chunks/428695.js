@@ -85,7 +85,7 @@ children: [
     },
     className: p.close,
     'aria-label': h.Z.Messages.DISMISS,
-    children: (0, i.jsx)(o.CloseSmallIcon, {
+    children: (0, i.jsx)(o.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: p.closeIcon

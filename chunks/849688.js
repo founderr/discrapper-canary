@@ -79,7 +79,7 @@ children: (0, i.jsx)('div', {
         className: h.dismiss,
         children: (0, i.jsx)(l.Clickable, {
           onClick: I,
-          children: (0, i.jsx)(l.CloseSmallIcon, {
+          children: (0, i.jsx)(l.XSmallIcon, {
             size: 'xs',
             color: 'currentColor'
           })

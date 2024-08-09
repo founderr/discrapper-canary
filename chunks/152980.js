@@ -66,7 +66,7 @@ children: (0, a.jsxs)('div', {
       look: o.Button.Looks.BLANK,
       size: o.Button.Sizes.NONE,
       onClick: i,
-      children: (0, a.jsx)(o.CloseSmallIcon, {
+      children: (0, a.jsx)(o.XSmallIcon, {
         size: 'xxs',
         color: 'currentColor',
         className: m.__invalid_deleteIcon

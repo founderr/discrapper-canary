@@ -115,7 +115,7 @@ children: [
       (0, i.jsxs)('div', {
         className: C.header,
         children: [
-          (0, i.jsx)(o.CircleExclamationPointIcon, {
+          (0, i.jsx)(o.CircleWarningIcon, {
             className: a()(C.headerIcon, p(d)),
             size: 'custom',
             color: 'currentColor',

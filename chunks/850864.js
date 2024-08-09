@@ -403,7 +403,7 @@ children: [
     children: [
       (0, s.jsx)('div', {
         className: k.badExampleIcon,
-        children: (0, s.jsx)(c.CloseSmallIcon, {
+        children: (0, s.jsx)(c.XSmallIcon, {
           size: 'md',
           color: 'currentColor'
         })

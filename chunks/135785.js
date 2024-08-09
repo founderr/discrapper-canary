@@ -33,7 +33,7 @@ className: r()(T.container, I, {
 }),
 type: i.Card.Types.CUSTOM,
 children: [
-  (0, s.jsx)(i.CircleExclamationPointIcon, {
+  (0, s.jsx)(i.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,

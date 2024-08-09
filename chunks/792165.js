@@ -40,7 +40,7 @@ children: [
     className: f.close,
     onClick: () => null == C ? void 0 : C(m.L.DISMISS),
     'aria-label': N.Z.Messages.CLOSE,
-    children: (0, i.jsx)(o.CloseSmallIcon, {
+    children: (0, i.jsx)(o.XSmallIcon, {
       size: 'xs',
       color: 'currentColor',
       className: f.closeIcon

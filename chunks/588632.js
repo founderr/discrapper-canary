@@ -115,7 +115,7 @@ return (0, r.jsxs)('div', {
       onClick: () => {
         a(n.filter(n => t.includes(n.id) && n.id !== e.id));
       },
-      children: (0, r.jsx)(s.CloseSmallIcon, {
+      children: (0, r.jsx)(s.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: m.selectValuePillCloseIcon

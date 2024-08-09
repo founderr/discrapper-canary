@@ -21,7 +21,7 @@ var a = n(399606),
 function f(e) {
   let {
 member: t
-  } = e, n = (0, a.e7)([c.Z], () => c.Z.getGuild(t.guildId), [t.guildId]), f = (0, r.mh)(t.userId, t.guildId), E = (0, r.mV)(t.userId, t.guildId), C = (0, r.LD)(t.userId), g = (0, r.wi)(t.userId, t.guildId);
+  } = e, n = (0, a.e7)([c.Z], () => c.Z.getGuild(t.guildId), [t.guildId]), f = (0, r.mh)(t.userId, t.guildId), E = (0, r.mV)(t.userId, t.guildId), g = (0, r.LD)(t.userId), C = (0, r.wi)(t.userId, t.guildId);
   return null == n ? null : (0, i.jsx)(s.FormItem, {
 title: m.Z.Messages.ACCOUNT,
 titleClassName: _.infoTitle,
@@ -38,12 +38,12 @@ children: (0, i.jsxs)(h.WM, {
         color: 'text-normal',
         children: m.Z.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
       }),
-      description: f ? (0, i.jsx)(s.CheckmarkBoldIcon, {
+      description: f ? (0, i.jsx)(s.CheckmarkLargeBoldIcon, {
         size: 'custom',
         width: h.Mn,
         height: h.Mn,
         color: s.tokens.colors.INFO_POSITIVE_FOREGROUND
-      }) : (0, i.jsx)(s.CloseLargeBoldIcon, {
+      }) : (0, i.jsx)(s.XLargeBoldIcon, {
         size: 'custom',
         width: h.Mn,
         height: h.Mn,
@@ -61,12 +61,12 @@ children: (0, i.jsxs)(h.WM, {
         color: 'text-normal',
         children: m.Z.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
       }),
-      description: E === r.qc.AGREED ? (0, i.jsx)(s.CheckmarkBoldIcon, {
+      description: E === r.qc.AGREED ? (0, i.jsx)(s.CheckmarkLargeBoldIcon, {
         size: 'custom',
         width: h.Mn,
         height: h.Mn,
         color: s.tokens.colors.INFO_POSITIVE_FOREGROUND
-      }) : (0, i.jsx)(s.CloseLargeBoldIcon, {
+      }) : (0, i.jsx)(s.XLargeBoldIcon, {
         size: 'custom',
         width: h.Mn,
         height: h.Mn,
@@ -88,7 +88,7 @@ children: (0, i.jsxs)(h.WM, {
       description: (0, i.jsx)(s.Text, {
         variant: 'text-sm/medium',
         color: 'text-normal',
-        children: C
+        children: g
       })
     }),
     (0, i.jsx)(h._2, {
@@ -106,7 +106,7 @@ children: (0, i.jsxs)(h.WM, {
       description: (0, i.jsx)(s.Text, {
         variant: 'text-sm/medium',
         color: 'text-normal',
-        children: g
+        children: C
       })
     }),
     (0, i.jsx)(h._2, {

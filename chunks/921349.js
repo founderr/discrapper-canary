@@ -475,7 +475,7 @@ children: [
                 'aria-label': C.Z.Messages.CLEAR,
                 'aria-controls': eU,
                 onClick: ej,
-                children: (0, r.jsx)(S.CloseSmallIcon, {
+                children: (0, r.jsx)(S.XSmallIcon, {
                   size: 'xs',
                   color: 'currentColor',
                   className: y.clear
@@ -1013,7 +1013,7 @@ children: (0, r.jsxs)(_.zx, {
     (0, r.jsx)(p.n, {
       children: C.Z.Messages.REMOVE
     }),
-    !u && (0, r.jsx)(S.CloseSmallIcon, {
+    !u && (0, r.jsx)(S.XSmallIcon, {
       size: 'custom',
       color: 'currentColor',
       className: y.deleteOptionIcon,

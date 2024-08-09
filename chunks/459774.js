@@ -1,5 +1,5 @@
 n.d(t, {
-  A: function() {
+  C: function() {
 return o;
   }
 });

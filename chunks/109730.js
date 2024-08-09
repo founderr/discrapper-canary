@@ -105,7 +105,7 @@ children: [
         onClick: S,
         className: T.closeButton,
         'aria-label': f.Z.Messages.CLOSE,
-        children: (0, l.jsx)(n.CloseSmallIcon, {
+        children: (0, l.jsx)(n.XSmallIcon, {
           size: 'xs',
           color: 'currentColor',
           className: T.closeIcon

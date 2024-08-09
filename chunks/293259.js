@@ -88,7 +88,7 @@ children: [
           (null == B ? void 0 : B.profileFetchFailed) && !I.isClyde() ? (0, i.jsx)(r.Tooltip, {
             text: g.Z.Messages.USER_PROFILE_LOAD_ERROR,
             spacing: 20,
-            children: e => (0, i.jsx)(r.CircleExclamationPointIcon, {
+            children: e => (0, i.jsx)(r.CircleWarningIcon, {
               size: 'custom',
               width: 20,
               height: 20,

@@ -13,8 +13,8 @@ var n = a(735250),
   d = a(433517),
   A = a(481060),
   R = a(224706),
-  O = a(812206),
-  N = a(168551),
+  N = a(812206),
+  O = a(168551),
   T = a(485267),
   m = a(26033),
   L = a(561308),
@@ -42,9 +42,9 @@ let {
   game: s,
   onClose: a,
   trackClick: l
-} = e, r = (0, u.e7)([O.Z], () => {
+} = e, r = (0, u.e7)([N.Z], () => {
   var e;
-  return O.Z.getApplication(null !== (e = null == s ? void 0 : s.applicationId) && void 0 !== e ? e : '');
+  return N.Z.getApplication(null !== (e = null == s ? void 0 : s.applicationId) && void 0 !== e ? e : '');
 });
 if (null == s)
   return null;
@@ -105,11 +105,11 @@ let l = (a = a.filter(e => b.includes(e))).map(e => {
         size: 'xs'
       }, e);
     case _.z.XBOX:
-      return (0, n.jsx)(A.XboxIcon, {
+      return (0, n.jsx)(A.XboxNeutralIcon, {
         size: 'xs'
       }, e);
     case _.z.PLAYSTATION:
-      return (0, n.jsx)(A.PlaystationIcon, {
+      return (0, n.jsx)(A.PlaystationNeutralIcon, {
         size: 'xs'
       }, e);
     case _.z.NINTENDO:
@@ -145,7 +145,7 @@ let {
   onClose: W
 } = e, {
   clientThemesClassName: Y
-} = (0, N.ZP)(), {
+} = (0, O.ZP)(), {
   width: V,
   height: z
 } = (0, M.b)(), [X, J] = l.useState(() => {
@@ -222,7 +222,7 @@ l.useEffect(() => {
   i,
   er
 ]);
-let eu = O.Z.getApplication(i),
+let eu = N.Z.getApplication(i),
   ed = (0, u.e7)([g.Z], () => g.Z.getGame(i)),
   eA = l.useMemo(() => null == ed ? void 0 : ed.genres.map(G.P3).join(', '), [ed]),
   eR = l.useMemo(() => {
@@ -242,7 +242,7 @@ let eu = O.Z.getApplication(i),
     }
     return '';
   }, [ed]),
-  eO = l.useMemo(() => {
+  eN = l.useMemo(() => {
     var e, s;
     let a = (null !== (e = null == ed ? void 0 : ed.artwork) && void 0 !== e ? e : []).map(e => ({
       src: e
@@ -257,7 +257,7 @@ let eu = O.Z.getApplication(i),
     null == ed ? void 0 : ed.artwork,
     null == ed ? void 0 : ed.screenshots
   ]),
-  eN = (e, s) => {
+  eO = (e, s) => {
     (0, C.UE)({
       gameName: null != eL ? eL : '',
       applicationId: i,
@@ -366,7 +366,7 @@ return (0, n.jsx)(A.ModalRoot, {
                     onClick: () => {
                       var e;
                       let s = null !== (e = d.K.get(w)) && void 0 !== e ? e : {};
-                      s[i] = !s[i], d.K.set(w, s), eN(s[i] ? C.as.FollowGame : C.as.UnfollowGame), s[i] && (0, K.L)() && (0, A.openModalLazy)(async () => {
+                      s[i] = !s[i], d.K.set(w, s), eO(s[i] ? C.as.FollowGame : C.as.UnfollowGame), s[i] && (0, K.L)() && (0, A.openModalLazy)(async () => {
                         let {
                           default: e
                         } = await a.e('86564').then(a.bind(a, 641758));
@@ -439,7 +439,7 @@ return (0, n.jsx)(A.ModalRoot, {
                   })
                 ]
               }),
-              eO.length > 0 && (0, n.jsxs)(n.Fragment, {
+              eN.length > 0 && (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)(A.Heading, {
                     variant: 'heading-md/bold',
@@ -451,10 +451,10 @@ return (0, n.jsx)(A.ModalRoot, {
                     },
                     className: t()(U.row, U.imageScroller),
                     orientation: 'horizontal',
-                    children: eO.map((e, s) => (0, n.jsx)(A.Clickable, {
+                    children: eN.map((e, s) => (0, n.jsx)(A.Clickable, {
                       className: U.clickable,
                       onClick: () => {
-                        eN(C.as.ClickImage), (0, A.openModalLazy)(async () => {
+                        eO(C.as.ClickImage), (0, A.openModalLazy)(async () => {
                           let {
                             default: e
                           } = await a.e('99857').then(a.bind(a, 895023));
@@ -465,7 +465,7 @@ return (0, n.jsx)(A.ModalRoot, {
                             return (0, n.jsx)(e, {
                               className: U.mediaModal,
                               ...l,
-                              items: eO,
+                              items: eN,
                               startingIndex: s
                             });
                           };
@@ -494,7 +494,7 @@ return (0, n.jsx)(A.ModalRoot, {
                     children: et.map(e => (0, n.jsx)(y, {
                       game: e,
                       onClose: W,
-                      trackClick: eN
+                      trackClick: eO
                     }, null == e ? void 0 : e.applicationId))
                   })
                 ]
@@ -523,7 +523,7 @@ return (0, n.jsx)(A.ModalRoot, {
                       (es || !$) && (0, n.jsx)(A.Clickable, {
                         className: U.clickable,
                         onClick: () => {
-                          eN($ ? C.as.ShowMore : C.as.ShowLess), ee(!$);
+                          eO($ ? C.as.ShowMore : C.as.ShowLess), ee(!$);
                         },
                         children: (0, n.jsx)(A.Text, {
                           variant: 'text-sm/semibold',
@@ -534,7 +534,7 @@ return (0, n.jsx)(A.ModalRoot, {
                   }),
                   (0, n.jsx)(j.Z, {
                     websites: eS,
-                    trackClick: eN
+                    trackClick: eO
                   }),
                   (eG.length > 0 || ef.length > 0) && (0, n.jsx)('div', {
                     className: t()(U.column),

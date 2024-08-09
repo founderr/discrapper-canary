@@ -13,12 +13,12 @@ var n = a(735250),
   d = a(981631),
   A = a(689938),
   R = a(421377);
-let O = [
+let N = [
 i.p.OFFICIAL,
 i.p.TWITTER,
 i.p.YOUTUBE
   ],
-  N = e => {
+  O = e => {
 let {
   invite: s,
   trackClick: a
@@ -111,12 +111,12 @@ return null;
 let {
   category: s
 } = e;
-return O.includes(s);
+return N.includes(s);
   }).sort((e, s) => e.category - s.category);
   return (0, n.jsxs)('div', {
 className: t()(R.column),
 children: [
-  null != E && (0, n.jsx)(N, {
+  null != E && (0, n.jsx)(O, {
     invite: E,
     trackClick: a
   }),
@@ -148,7 +148,7 @@ children: [
               }), l = u.as.XLink, s = A.Z.Messages.GAME_PROFILE_LINK_TWITTER;
               break;
             case i.p.YOUTUBE:
-              l = u.as.YouTubeLink, E = (0, n.jsx)(o.YouTubeIcon, {
+              l = u.as.YouTubeLink, E = (0, n.jsx)(o.YoutubeNeutralIcon, {
                 colorClass: R.linkIcon
               }), s = A.Z.Messages.GAME_PROFILE_LINK_YOUTUBE;
           }

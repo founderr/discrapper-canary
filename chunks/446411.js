@@ -789,7 +789,7 @@ return (0, r.jsx)(s.Clickable, {
   className: N.embedSuppressButton,
   onClick: e,
   'aria-label': T.Z.Messages.SUPPRESS_ALL_EMBEDS,
-  children: (0, r.jsx)(s.CloseSmallIcon, {
+  children: (0, r.jsx)(s.XSmallIcon, {
     size: 'xs',
     color: 'currentColor'
   })

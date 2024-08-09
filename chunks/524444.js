@@ -706,7 +706,7 @@ children: [
             'aria-label': Z.Z.Messages.CLOSE,
             onClick: Q,
             className: Y.topicsDropdownClose,
-            children: (0, a.jsx)(E.CloseSmallIcon, {
+            children: (0, a.jsx)(E.XSmallIcon, {
               size: 'md',
               color: 'currentColor'
             })
@@ -1020,7 +1020,7 @@ children: [
             'aria-label': Z.Z.Messages.CLOSE,
             onClick: z,
             className: Y.topicsDropdownClose,
-            children: (0, a.jsx)(E.CloseSmallIcon, {
+            children: (0, a.jsx)(E.XSmallIcon, {
               size: 'md',
               color: 'currentColor'
             })

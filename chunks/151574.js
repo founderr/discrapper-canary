@@ -323,7 +323,7 @@ children: (0, a.jsxs)(f.Clickable, {
                   },
                   children: (0, a.jsx)(f.Tooltip, {
                     text: M.Z.Messages.EXPRESSION_SUGGESTIONS_STICKER_DISABLE,
-                    children: e => (0, a.jsx)(f.CloseSmallIcon, {
+                    children: e => (0, a.jsx)(f.XSmallIcon, {
                       size: 'md',
                       color: 'currentColor',
                       ...e,

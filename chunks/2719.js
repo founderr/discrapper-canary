@@ -95,7 +95,7 @@ children: [
     className: y.pomeloWarning,
     children: (0, n.jsx)(_.Tooltip, {
       text: F.Z.Messages.ACTION_NEEDED,
-      children: e => (0, n.jsx)(_.CircleExclamationPointIcon, {
+      children: e => (0, n.jsx)(_.CircleWarningIcon, {
         size: 'custom',
         width: 20,
         height: 20,
@@ -109,7 +109,7 @@ children: [
     children: (0, n.jsx)(_.Tooltip, {
       text: T,
       'aria-label': !1,
-      children: e => (0, n.jsx)(_.CircleExclamationPointIcon, {
+      children: e => (0, n.jsx)(_.CircleWarningIcon, {
         size: 'custom',
         width: 20,
         height: 20,
@@ -197,7 +197,7 @@ children: [
     children: (0, n.jsx)(_.Tooltip, {
       text: c,
       'aria-label': !1,
-      children: e => (0, n.jsx)(_.CircleExclamationPointIcon, {
+      children: e => (0, n.jsx)(_.CircleWarningIcon, {
         size: 'custom',
         width: 20,
         height: 20,

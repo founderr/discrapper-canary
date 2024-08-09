@@ -21,8 +21,8 @@ var i = n(735250),
   _ = n(928518),
   f = n(204197),
   E = n(470956),
-  C = n(314897),
-  g = n(271383),
+  g = n(314897),
+  C = n(271383),
   I = n(131951),
   x = n(451478),
   T = n(5192),
@@ -46,7 +46,7 @@ color: o.TooltipColors.GREY,
 children: e => (0, i.jsx)('div', {
   ...e,
   className: A.interactive,
-  children: (0, i.jsx)(o.CircleExclamationPointIcon, {
+  children: (0, i.jsx)(o.CircleWarningIcon, {
     color: o.tokens.colors.STATUS_WARNING_BACKGROUND
   })
 })
@@ -66,14 +66,14 @@ onVideoResize: L,
 blocked: P,
 noVideoRender: O = !1,
 pulseSpeakingIndicator: y = !1
-  } = e, D = I.Z.getVideoComponent(), k = (0, r.e7)([C.default], () => C.default.getId()), {
+  } = e, D = I.Z.getVideoComponent(), k = (0, r.e7)([g.default], () => g.default.getId()), {
 user: U,
 streamId: w,
 speaking: B
   } = t, H = U.id === k, G = (0, N.ZP)(t), V = (0, r.e7)([x.Z], () => x.Z.isFocused()), F = (0, r.e7)([_.Z], () => _.Z.getWindowFocused(v.KJ3.CHANNEL_CALL_POPOUT)), W = (0, r.e7)([I.Z], () => null != U.id && I.Z.isLocalVideoDisabled(U.id, (0, h.Z)(t.type)), [
 U.id,
 t.type
-  ]), z = (0, r.e7)([g.ZP], () => g.ZP.isGuestOrLurker(n.guild_id, U.id)), Y = T.ZP.getName(n.getGuildId(), n.id, U) + (z ? ' '.concat(Z.Z.Messages.GUEST_NAME_SUFFIX) : ''), K = B && (F || V), q = o < 124 ? b : M, {
+  ]), z = (0, r.e7)([C.ZP], () => C.ZP.isGuestOrLurker(n.guild_id, U.id)), Y = T.ZP.getName(n.getGuildId(), n.id, U) + (z ? ' '.concat(Z.Z.Messages.GUEST_NAME_SUFFIX) : ''), K = B && (F || V), q = o < 124 ? b : M, {
 avatarSrc: X,
 avatarDecorationSrc: Q
   } = (0, f.Z)({

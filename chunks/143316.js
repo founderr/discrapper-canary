@@ -31,12 +31,12 @@ children: [
   }) : null,
   'bottom-floating' === t ? (0, i.jsx)(l.a, {
     text: c.Z.Messages.MARK_ALL_AS_READ,
-    icon: a.DoubleCheckmarkLargeIcon,
+    icon: a.DoubleCheckmarkIcon,
     onClick: I
   }) : (0, i.jsx)(a.CircleIconButton, {
     tooltip: c.Z.Messages.MARK_ALL_AS_READ,
     color: a.CircleIconButtonColors.SECONDARY,
-    icon: (0, i.jsx)(a.DoubleCheckmarkLargeIcon, {
+    icon: (0, i.jsx)(a.DoubleCheckmarkIcon, {
       size: 'xs',
       color: 'currentColor'
     }),

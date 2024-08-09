@@ -70,7 +70,7 @@ children: null != n && null != t.message ? (0, i.jsxs)(i.Fragment, {
         className: g.closeButton,
         tooltip: C.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
         color: o.CircleIconButtonColors.TERTIARY,
-        icon: (0, i.jsx)(o.CloseSmallIcon, {
+        icon: (0, i.jsx)(o.XSmallIcon, {
           size: 'xs',
           color: 'currentColor'
         }),
@@ -104,7 +104,7 @@ children: null != n && null != t.message ? (0, i.jsxs)(i.Fragment, {
 
 function O() {
   return (0, i.jsx)(h.Z, {
-Icon: o.DoubleCheckmarkLargeIcon,
+Icon: o.DoubleCheckmarkIcon,
 header: C.Z.Messages.MESSAGE_BOOKMARKS_EMPTY,
 tip: C.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP
   });

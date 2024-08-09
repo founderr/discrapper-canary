@@ -164,7 +164,7 @@ children: [
           ref: H,
           className: C.defibrillatorHints,
           children: [
-            (0, i.jsx)(d.CircleExclamationPointIcon, {
+            (0, i.jsx)(d.CircleWarningIcon, {
               size: 'xs',
               color: d.tokens.colors.TEXT_DANGER
             }),

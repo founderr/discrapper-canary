@@ -56,7 +56,7 @@ children: [
           color: o.tokens.colors.STATUS_POSITIVE.css
         });
       case l.pC.FAILURE:
-        return (0, r.jsx)(o.CloseLargeIcon, {
+        return (0, r.jsx)(o.XLargeIcon, {
           size: 'md',
           className: u.icon,
           color: o.tokens.colors.STATUS_DANGER.css

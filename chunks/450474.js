@@ -56,7 +56,7 @@ multiValueRenderer: e => {
       (0, s.jsx)(a.Clickable, {
         className: c.closeWrapper,
         onClick: () => I(n),
-        children: (0, s.jsx)(a.CloseSmallIcon, {
+        children: (0, s.jsx)(a.XSmallIcon, {
           size: 'xs',
           color: 'currentColor',
           className: c.close

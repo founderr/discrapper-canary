@@ -44,7 +44,7 @@ children: [
         description: p
       }),
       (0, s.jsx)(E.Z, {
-        icon: N ? r.QrCodeCameraIcon : (0, r.makeIconCompat)(T.Z),
+        icon: N ? r.QrCodeIcon : (0, r.makeIconCompat)(T.Z),
         header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
         description: A
       })

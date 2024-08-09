@@ -49,7 +49,7 @@ return (0, i.jsxs)('div', {
     (0, i.jsx)(r.Clickable, {
       className: p.restoreButton,
       onClick: () => n(e.libraryApplication),
-      children: (0, i.jsx)(r.CloseSmallIcon, {
+      children: (0, i.jsx)(r.XSmallIcon, {
         size: 'md',
         color: 'currentColor',
         className: p.restoreIcon

@@ -298,7 +298,7 @@ children: [
     onClick: en,
     className: G.close,
     'aria-label': U.Z.Messages.DISMISS,
-    children: (0, s.jsx)(u.CloseSmallIcon, {
+    children: (0, s.jsx)(u.XSmallIcon, {
       size: 'md',
       color: 'currentColor',
       className: G.closeIcon

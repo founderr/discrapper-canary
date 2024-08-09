@@ -282,7 +282,7 @@ location: n
 2
   ]) ? h.tokens.colors.STATUS_POSITIVE : void 0;
   return (0, S.Ol)(t) ? (0, a.jsx)(b, {
-Icon: h.NewUserSmallIcon,
+Icon: h.NewUserSimpleIcon,
 text: O.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
 iconColor: r
   }) : null;

@@ -10,8 +10,8 @@ var s = t(735250),
   a = t(442837),
   r = t(481060),
   d = t(706371),
-  c = t(563115),
-  u = t(313201),
+  u = t(563115),
+  c = t(313201),
   m = t(661824),
   N = t(984933),
   _ = t(430824),
@@ -33,8 +33,8 @@ onDelete: _,
 option: O,
 guild: h,
 prompt: M,
-index: T
-  } = e, g = (0, u.Dt)(), p = (0, a.e7)([N.ZP], () => N.ZP.getDefaultChannel(h.id)), [B, A] = o.useState(() => {
+index: g
+  } = e, P = (0, c.Dt)(), p = (0, a.e7)([N.ZP], () => N.ZP.getDefaultChannel(h.id)), [B, A] = o.useState(() => {
 var e;
 return null !== (e = null == O ? void 0 : O.emoji) && void 0 !== e ? e : null;
   }), [C, L] = o.useState(() => {
@@ -55,7 +55,7 @@ var e;
 return null === (e = U.current) || void 0 === e ? void 0 : e.focus();
   }, []), (0, s.jsxs)(r.ModalRoot, {
 transitionState: n,
-'aria-labelledby': g,
+'aria-labelledby': P,
 children: [
   (0, s.jsxs)('div', {
     className: R.container,
@@ -69,11 +69,11 @@ children: [
         variant: 'text-xs/semibold',
         color: 'text-muted',
         children: j.Z.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({
-          index: T + 1
+          index: g + 1
         })
       }),
       (0, s.jsx)(r.Heading, {
-        id: g,
+        id: P,
         className: R.header,
         variant: 'heading-lg/semibold',
         children: null != M.title && M.title.length > 0 ? M.title : j.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE
@@ -117,7 +117,7 @@ children: [
         helperText: j.Z.Messages.ONBOARDING_PROMPT_NO_PRIVATE_CHANNELS,
         className: R.searchInput
       }),
-      (0, s.jsx)(c.Z, {
+      (0, s.jsx)(u.Z, {
         guildId: h.id,
         selectedRoleIds: H,
         disableEveryoneRole: !0,
@@ -129,7 +129,7 @@ children: [
       null == k.roles ? null : (0, s.jsx)(r.InputError, {
         error: k.roles
       }),
-      (0, s.jsx)(P, {
+      (0, s.jsx)(T, {
         guild: h,
         roleIds: H
       }),
@@ -218,7 +218,7 @@ children: [
   });
 }
 
-function P(e) {
+function T(e) {
   let {
 guild: n,
 roleIds: t
@@ -228,7 +228,7 @@ className: R.notice,
 children: (0, s.jsxs)('div', {
   className: R.noticeMessage,
   children: [
-    (0, s.jsx)(r.CircleExclamationPointIcon, {
+    (0, s.jsx)(r.CircleWarningIcon, {
       size: 'custom',
       width: 20,
       height: 20,

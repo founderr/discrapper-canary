@@ -32,7 +32,7 @@ children: (0, i.jsx)(r.Z, {
   roleColor: n,
   roleName: a,
   verified: h,
-  children: c && (0, i.jsx)(l.CloseSmallIcon, {
+  children: c && (0, i.jsx)(l.XSmallIcon, {
     size: 'custom',
     color: 'currentColor',
     height: 6,

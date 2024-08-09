@@ -36,7 +36,7 @@ children: [
         className: o.iconContainer,
         element: 'span',
         text: 'Inactive',
-        children: (0, n.jsx)(i.CloseSmallIcon, {
+        children: (0, n.jsx)(i.XSmallIcon, {
           size: 'md',
           color: 'currentColor',
           className: o.xmark

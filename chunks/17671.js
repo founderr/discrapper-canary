@@ -128,7 +128,7 @@ children: [
         onClick: a,
         className: G.iconButton,
         'aria-label': P.Z.Messages.CLOSE,
-        children: (0, l.jsx)(o.CloseSmallIcon, {
+        children: (0, l.jsx)(o.XSmallIcon, {
           size: 'md',
           color: 'currentColor',
           className: G.icon

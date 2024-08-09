@@ -1,5 +1,5 @@
 n.d(t, {
-  F: function() {
+  s: function() {
 return o;
   }
 });
@@ -27,7 +27,9 @@ fill: 'none',
 viewBox: '0 0 24 24',
 children: (0, r.jsx)('path', {
   fill: 'string' == typeof c ? c : c.css,
-  d: 'M17.3 18.7a1 1 0 0 0 1.4-1.4L13.42 12l5.3-5.3a1 1 0 0 0-1.42-1.4L12 10.58l-5.3-5.3a1 1 0 0 0-1.4 1.42L10.58 12l-5.3 5.3a1 1 0 1 0 1.42 1.4L12 13.42l5.3 5.3Z',
+  fillRule: 'evenodd',
+  d: 'M22.06 4.94a1.5 1.5 0 0 1 0 2.12l-12 12a1.5 1.5 0 0 1-2.12 0l-6-6a1.5 1.5 0 0 1 2.12-2.12L9 15.88 19.94 4.94a1.5 1.5 0 0 1 2.12 0Z',
+  clipRule: 'evenodd',
   className: d
 })
   });

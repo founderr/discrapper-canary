@@ -28,7 +28,7 @@ onClick: t
   return (0, i.jsx)(l.CircleIconButton, {
 tooltip: N.Z.Messages.MARK_ALL_AS_READ,
 color: l.CircleIconButtonColors.SECONDARY,
-icon: (0, i.jsx)(l.DoubleCheckmarkLargeIcon, {
+icon: (0, i.jsx)(l.DoubleCheckmarkIcon, {
   size: 'xs',
   color: 'currentColor'
 }),

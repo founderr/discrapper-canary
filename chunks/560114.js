@@ -170,7 +170,7 @@ let {
 return (0, x.Z)(e) ? (0, s.jsxs)('div', {
   className: es.warningContainer,
   children: [
-    (0, s.jsx)(_.CircleExclamationPointIcon, {
+    (0, s.jsx)(_.CircleWarningIcon, {
       size: 'custom',
       className: es.warningIcon,
       color: E.Z.unsafe_rawColors.YELLOW_300.css,

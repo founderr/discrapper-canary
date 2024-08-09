@@ -75,7 +75,7 @@ canceledCount: s
   return null == l ? null : (0, t.jsxs)('div', {
 className: M.pendingCancellation,
 children: [
-  (0, t.jsx)(u.CircleExclamationPointIcon, {
+  (0, t.jsx)(u.CircleWarningIcon, {
     size: 'custom',
     width: 20,
     height: 20,

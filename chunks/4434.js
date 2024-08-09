@@ -36,8 +36,8 @@ var i = s(735250),
   M = s(553797),
   g = s(741245),
   v = s(314182),
-  x = s(42818),
-  D = s(900683),
+  D = s(42818),
+  x = s(900683),
   Z = s(706454),
   f = s(430824),
   y = s(246946),
@@ -70,10 +70,10 @@ premiumSubscription: E,
 onClickPremiumSubscriptionLink: T,
 existingAvailableSlots: R = [],
 priceOptions: O
-  } = e, A = (0, L.Z)(), g = t.interval, v = t.intervalCount, x = (0, u.e7)([b.Z], () => b.Z.getForSkuAndInterval((0, W.Wz)(K.Si.GUILD), g, v)), y = (0, u.e7)([h.default], () => h.default.getCurrentUser()), j = (0, u.e7)([f.Z], () => f.Z.getGuild(l), [l]);
-  c()(null != x, 'Missing guildBoostingSubscriptionPlan'), c()(null != j, 'Unknown guild: '.concat(l));
+  } = e, A = (0, L.Z)(), g = t.interval, v = t.intervalCount, D = (0, u.e7)([b.Z], () => b.Z.getForSkuAndInterval((0, W.Wz)(K.Si.GUILD), g, v)), y = (0, u.e7)([h.default], () => h.default.getCurrentUser()), j = (0, u.e7)([f.Z], () => f.Z.getGuild(l), [l]);
+  c()(null != D, 'Missing guildBoostingSubscriptionPlan'), c()(null != j, 'Unknown guild: '.concat(l));
   let G = [{
-  planId: x.id,
+  planId: D.id,
   quantity: 1
 }],
 z = null == E ? void 0 : E.items.find(e => e.planId === K.Xh.PREMIUM_MONTH_TIER_2 || e.planId === K.Xh.PREMIUM_YEAR_TIER_2);
@@ -100,14 +100,14 @@ ee = !$ || null == A || !K.Tp.has(A) || null == Q,
 }),
 el = !ee && null == es && null == ei,
 et = (null === (s = (0, C.N)()) || void 0 === s ? void 0 : null === (n = s.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === K.Si.TIER_2,
-ea = W.ZP.hasBoostDiscount(y) && null != x.premiumUserPrice,
-er = null == es ? void 0 : es.invoiceItems.find(e => e.subscriptionPlanId === x.id),
+ea = W.ZP.hasBoostDiscount(y) && null != D.premiumUserPrice,
+er = null == es ? void 0 : es.invoiceItems.find(e => e.subscriptionPlanId === D.id),
 ec = null != er ? {
   amount: er.amount,
   tax: 0,
   taxInclusive: !0,
   currency: O.currency
-} : W.ZP.getPrice(x.id, ea, !1, O),
+} : W.ZP.getPrice(D.id, ea, !1, O),
 eo = r * ec.amount,
 eu = W.ZP.hasBoostDiscount(y) && null != E ? X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_DISCOUNT.format({
   planName: W.ZP.getDisplayPremiumType(E.planId)
@@ -146,7 +146,7 @@ children: [
               canceledCount: eI,
               date: E.currentPeriodEnd
             }),
-            children: e => (0, i.jsx)(_.CircleExclamationPointIcon, {
+            children: e => (0, i.jsx)(_.CircleWarningIcon, {
               size: 'custom',
               width: 20,
               height: 20,
@@ -254,7 +254,7 @@ children: [
       documentationLink: w.Z.getArticleURL(k.BhN.LOCALIZED_PRICING)
     })
   }),
-  (0, i.jsx)(D.Z, {
+  (0, i.jsx)(x.Z, {
     text: eu,
     color: N.JX.PREMIUM_TIER_2
   })
@@ -293,7 +293,7 @@ A = S.discounts.map(e => {
 M = (0, W.Ap)(a.paymentSourceId);
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  M ? null : (0, i.jsx)(x.hG, {
+  M ? null : (0, i.jsx)(D.hG, {
     proratedInvoice: l,
     renewalInvoice: t
   }),
@@ -315,7 +315,7 @@ children: [
         intervalCount: I.intervalCount
       }),
       0 !== P ? (0, i.jsx)(O.R$, {
-        label: (0, i.jsx)(x.As, {
+        label: (0, i.jsx)(D.As, {
           label: X.Z.Messages.PREMIUM_SUBSCRIPTION_PLAN_ADJUSTMENT.format({
             planName: (0, W.aq)(T[0].subscriptionPlanId)
           }),
@@ -324,7 +324,7 @@ children: [
         value: (0, F.T4)(P, l.currency)
       }) : null,
       0 !== L ? (0, i.jsx)(O.R$, {
-        label: (0, i.jsx)(x.As, {
+        label: (0, i.jsx)(D.As, {
           label: X.Z.Messages.PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT,
           tooltipText: X.Z.Messages.PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP
         }),
@@ -335,13 +335,13 @@ children: [
         label: (l.taxInclusive ? M ? X.Z.Messages.BILLING_INVOICE_TOTAL_TAX_INCLUSIVE : X.Z.Messages.BILLING_INVOICE_TODAY_TOTAL_TAX_INCLUSIVE : X.Z.Messages.BILLING_INVOICE_TODAY_TOTAL).format(),
         value: C
       }),
-      null != n ? (0, i.jsx)(x.nd, {
+      null != n ? (0, i.jsx)(D.nd, {
         premiumSubscription: n,
         proratedInvoice: l,
         renewalInvoice: t,
         isUpdate: !0,
         isPrepaidPaymentSource: M
-      }) : (0, i.jsx)(x.nd, {
+      }) : (0, i.jsx)(D.nd, {
         renewalInvoice: t,
         priceOptions: a,
         isPrepaidPaymentSource: M
@@ -372,15 +372,15 @@ M = (0, u.e7)([G.Z], () => null != I ? G.Z.getPaymentSource(I) : null),
 g = (0, u.e7)([y.Z], () => y.Z.hidePersonalInformation);
   l = null != c ? (0, W.Zx)(c, N[0].quantity, N[0].planId) : N;
   let {
-analyticsLocations: x
-  } = (0, p.ZP)(), [D] = (0, m.ED)({
+analyticsLocations: D
+  } = (0, p.ZP)(), [x] = (0, m.ED)({
 subscriptionId: null == c ? void 0 : c.id,
 items: l,
 renewal: !1,
 applyEntitlements: !0,
 paymentSourceId: A,
 currency: r.currency,
-analyticsLocations: x,
+analyticsLocations: D,
 analyticsLocation: P.Z.GUILD_BOOSTING_REVIEW_PRORATED
   }), [Z] = (0, m.ED)({
 subscriptionId: null == c ? void 0 : c.id,
@@ -388,7 +388,7 @@ items: l,
 renewal: !0,
 paymentSourceId: A,
 currency: r.currency,
-analyticsLocations: x,
+analyticsLocations: D,
 analyticsLocation: P.Z.GUILD_BOOSTING_REVIEW_RENEWAL
   });
   null != Z && (t = {
@@ -401,10 +401,10 @@ taxInclusive: Z.taxInclusive
   return (0, i.jsxs)('div', {
 className: J.reviewStep,
 children: [
-  null != D && null != Z ? (0, i.jsx)(Q, {
+  null != x && null != Z ? (0, i.jsx)(Q, {
     premiumSubscription: c,
     premiumSubscriptionPlan: d,
-    proratedInvoicePreview: D,
+    proratedInvoicePreview: x,
     renewalInvoicePreview: Z,
     priceOptions: r
   }) : null,
@@ -445,7 +445,7 @@ children: [
         paymentSourceType: null === (n = a[null != A ? A : '']) || void 0 === n ? void 0 : n.type,
         basePrice: t
       }),
-      showPricingLink: (null !== (s = null == D ? void 0 : D.currency) && void 0 !== s ? s : q.pK.USD) !== q.pK.USD,
+      showPricingLink: (null !== (s = null == x ? void 0 : x.currency) && void 0 !== s ? s : q.pK.USD) !== q.pK.USD,
       showWithdrawalWaiver: f,
       subscriptionPlan: d
     })
