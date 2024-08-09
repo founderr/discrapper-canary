@@ -1,4 +1,8 @@
-n(47120);
+n.d(t, {
+  I: function() {
+return g;
+  }
+}), n(47120);
 var i = n(735250),
   a = n(470079),
   s = n(120356),
@@ -15,49 +19,60 @@ var i = n(735250),
   I = n(768198);
 
 function g(e) {
+  var t;
+  let {
+categoryId: n,
+loadId: i
+  } = e;
+  (0, o.j)(() => h.B.setState({
+searchCategoryId: n
+  }));
+  let a = h.B.getState();
+  (0, m.y)({
+loadId: i,
+categoryId: n,
+offset: 0,
+searchQuery: a.searchQuery,
+languageCode: null !== (t = a.searchLanguageCode) && void 0 !== t ? t : (0, m.X)()
+  });
+}
+
+function p(e) {
   let {
 loadId: t,
 categoryId: n,
 count: s
-  } = e, E = a.useCallback(() => {
-var e;
-(0, o.j)(() => h.B.setState({
-  searchCategoryId: n
-}));
-let i = h.B.getState();
-(0, m.y)({
-  loadId: t,
+  } = e, o = a.useCallback(() => {
+g({
   categoryId: n,
-  offset: 0,
-  searchQuery: i.searchQuery,
-  languageCode: null !== (e = i.searchLanguageCode) && void 0 !== e ? e : (0, m.X)()
+  loadId: t
 });
   }, [
 n,
 t
-  ]), g = (0, h.B)(e => {
+  ]), E = (0, h.B)(e => {
 let {
   searchCategoryId: t
 } = e;
 return t;
-  }, l.Z) === n, p = s.toLocaleString(_.default.locale), T = (0, c.e7)([u.Z], () => u.Z.getCategoryName(n));
+  }, l.Z) === n, m = s.toLocaleString(_.default.locale), p = (0, c.e7)([u.Z], () => u.Z.getCategoryName(n));
   return (0, i.jsxs)(d.Clickable, {
-onClick: E,
+onClick: o,
 className: r()(I.category, {
-  [I.selected]: g
+  [I.selected]: E
 }),
 children: [
   (0, i.jsx)(d.Text, {
     className: I.name,
     variant: 'text-sm/medium',
     color: 'header-primary',
-    children: T
+    children: p
   }),
   (0, i.jsx)(d.Text, {
     className: I.count,
     variant: 'text-sm/normal',
     color: 'text-muted',
-    children: p
+    children: m
   })
 ]
   });
@@ -75,7 +90,7 @@ return t;
 className: I.categories,
 children: a.map(e => {
   let [n, a] = e;
-  return (0, i.jsx)(g, {
+  return (0, i.jsx)(p, {
     loadId: t,
     categoryId: n,
     count: a
