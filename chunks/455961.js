@@ -97,7 +97,7 @@ size: d.Button.Sizes.SMALL,
 className: Z.optInButton,
 onClick: x,
 submitting: s,
-children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_CTA
+children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_CTA_V2
   });
 }
 
