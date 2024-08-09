@@ -58,7 +58,7 @@ let {
 c.set(n, {
   ...t,
   lastFetched: Date.now()
-});
+}), d.delete(n);
   },
   CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: function(e) {
 let {

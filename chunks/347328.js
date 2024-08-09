@@ -23,32 +23,38 @@ user: t,
 activity: n,
 entry: h,
 display: p,
-onClose: m
-  } = e, I = (0, i.e7)([d.default], () => {
+onAction: m,
+onClose: I
+  } = e, T = (0, i.e7)([d.default], () => {
 var e;
 return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
-  }), T = (0, i.e7)([c.Z], () => null != c.Z.getAccount(null, E.ABu.CRUNCHYROLL));
+  }), g = (0, i.e7)([c.Z], () => null != c.Z.getAccount(null, E.ABu.CRUNCHYROLL));
   if (!(0, l.Z)(n) && !(0, u.gr)(h))
 return null;
-  if (!T)
+  if (!g)
 return (0, r.jsx)(a.MenuItem, {
   id: 'connect-crunchyroll',
   label: f.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
     platform: o.Z.get(E.ABu.CRUNCHYROLL).name
   }),
   action: () => {
-    s.Z.open(E.oAB.CONNECTIONS), null == m || m();
+    null == m || m({
+      action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM'
+    }), s.Z.open(E.oAB.CONNECTIONS), null == I || I();
   }
 });
-  if (I || 'live' === p || !(0, u.gr)(h))
+  if (T || 'live' === p || !(0, u.gr)(h))
 return null;
-  let g = h.extra.url;
-  return null == g || '' === g ? null : (0, r.jsx)(a.MenuItem, {
+  let S = h.extra.url;
+  return null == S || '' === S ? null : (0, r.jsx)(a.MenuItem, {
 id: 'watch-on-crunchyroll',
 label: f.Z.Messages.WATCH_ON_CRUNCHYROLL,
 action: () => {
+  null == m || m({
+    action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM'
+  });
   let e = null;
-  !(0, _.isDesktop)() && (e = window.open('', '_blank')), null != e ? e.location.href = g : window.open(g);
+  !(0, _.isDesktop)() && (e = window.open('', '_blank')), null != e ? e.location.href = S : window.open(S);
 }
   });
 }

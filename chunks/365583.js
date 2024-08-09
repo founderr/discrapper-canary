@@ -35,14 +35,15 @@ function A(e) {
 user: t,
 activity: n,
 entry: o,
-onClose: _
+onAction: _,
+onClose: E
   } = e;
   if (!(0, a.e7)([h.default], () => {
   var e;
   return (null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
 }))
 return null;
-  let E = function(e) {
+  let f = function(e) {
 let {
   activity: t,
   entry: n
@@ -58,11 +59,13 @@ return null;
 activity: n,
 entry: o
   });
-  return null == E ? null : (0, r.jsx)(s.MenuItem, {
+  return null == f ? null : (0, r.jsx)(s.MenuItem, {
 id: 'manage-privacy',
 label: I.Z.Messages.USER_ACTIVITY_MANAGE_PRIVACY,
 action: () => {
-  E(), null == _ || _();
+  null == _ || _({
+    action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM'
+  }), f(), null == E || E();
 }
   });
 }

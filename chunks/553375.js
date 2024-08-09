@@ -37,24 +37,29 @@ function d(e) {
   let {
 user: t,
 activity: n,
-entry: a
+entry: a,
+onAction: l
   } = e, {
-applicationId: l,
-sourceUserId: d
+applicationId: d,
+sourceUserId: _
   } = c({
 activity: n,
 entry: a,
 user: t
-  }), _ = (0, o.Z)({
+  }), E = (0, o.Z)({
 location: 'UserProfileActivityContextMenu',
 source: s.m1.UserProfileCardContextMenu,
 trackEntryPointImpression: !0,
-applicationId: l,
-sourceUserId: d
+applicationId: d,
+sourceUserId: _
   });
-  return null == _ ? null : (0, r.jsx)(i.MenuItem, {
+  return null == E ? null : (0, r.jsx)(i.MenuItem, {
 id: 'game-profile',
 label: u.Z.Messages.VIEW_GAME_PROFILE,
-action: _
+action: () => {
+  null == l || l({
+    action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM'
+  }), E();
+}
   });
 }

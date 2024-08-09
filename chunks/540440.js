@@ -24,22 +24,31 @@ function d(e) {
 user: t,
 entry: i,
 display: o,
-onClose: u
-  } = e, d = (0, a.e7)([l.default], () => l.default.getCurrentUser());
-  return t.id !== (null == d ? void 0 : d.id) || 'live' === o || null == i ? null : (0, r.jsx)(s.MenuItem, {
+onAction: u,
+onClose: d
+  } = e, _ = (0, a.e7)([l.default], () => l.default.getCurrentUser());
+  if (t.id !== (null == _ ? void 0 : _.id) || 'live' === o || null == i)
+return null;
+  let E = () => {
+(0, s.openModalLazy)(async () => {
+  let {
+    default: e
+  } = await n.e('26545').then(n.bind(n, 81596));
+  return n => (0, r.jsx)(e, {
+    entry: i,
+    user: t,
+    onAction: u,
+    ...n
+  });
+}), null == d || d();
+  };
+  return (0, r.jsx)(s.MenuItem, {
 id: 'delete-entry-history',
 label: c(i),
 action: () => {
-  (0, s.openModalLazy)(async () => {
-    let {
-      default: e
-    } = await n.e('26545').then(n.bind(n, 81596));
-    return n => (0, r.jsx)(e, {
-      entry: i,
-      user: t,
-      ...n
-    });
-  }), null == u || u();
+  null == u || u({
+    action: 'PRESS_DELETE_HISTORY_MENU_ITEM'
+  }), E();
 },
 color: 'danger'
   });

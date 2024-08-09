@@ -3,18 +3,21 @@ n.d(t, {
 return A;
   },
   NE: function() {
-return N;
+return v;
   },
   QN: function() {
 return g;
   },
   Qf: function() {
-return v;
+return O;
   },
   pQ: function() {
 return S;
+  },
+  z7: function() {
+return N;
   }
-}), n(653041);
+}), n(653041), n(47120);
 var r = n(367907),
   i = n(814443),
   a = n(271383),
@@ -163,6 +166,47 @@ let {
   guildId: t,
   channelId: n,
   analyticsLocations: i,
+  action: a,
+  display: s,
+  activity: o,
+  stream: l,
+  entry: c,
+  outbox: d
+} = e;
+u.default.track(f.rMx.USER_PROFILE_ACTIVITY_ACTION, {
+  ...(0, r.hH)(t),
+  ...(0, r.JS)(n),
+  ...T(e),
+  ...g(e),
+  location_stack: i,
+  activity_action: a,
+  activity_display: s,
+  activity_type: I(null != l ? f.IIU.STREAMING : null == o ? void 0 : o.type),
+  activity_name: null == o ? void 0 : o.name,
+  activity_platform: null == o ? void 0 : o.platform,
+  activity_session_id: null == o ? void 0 : o.session_id,
+  activity_application_id: null == o ? void 0 : o.application_id,
+  item_id: null == c ? void 0 : c.id,
+  author_id: null == c ? void 0 : c.author_id,
+  item_ids: null == d ? void 0 : d.entries.map(e => {
+    let {
+      id: t
+    } = e;
+    return t;
+  }),
+  author_ids: null == d ? void 0 : d.entries.map(e => {
+    let {
+      author_id: t
+    } = e;
+    return t;
+  })
+});
+  },
+  v = e => {
+let {
+  guildId: t,
+  channelId: n,
+  analyticsLocations: i,
   badge: a
 } = e;
 u.default.track(f.rMx.USER_PROFILE_BADGE_PRESSED, {
@@ -174,7 +218,7 @@ u.default.track(f.rMx.USER_PROFILE_BADGE_PRESSED, {
   badge: a
 });
   },
-  v = e => {
+  O = e => {
 let {
   guildId: t,
   channelId: n,

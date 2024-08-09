@@ -41,6 +41,7 @@ f = (0, a.e7)([c.Z], () => c.Z.getAnyStreamForUser(e)),
   return {
 live: h,
 recent: p,
-stream: f
+stream: f,
+outbox: n
   };
 }

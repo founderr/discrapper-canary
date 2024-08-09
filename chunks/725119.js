@@ -16,21 +16,22 @@ var i = n(481060),
 function d(e) {
   let {
 label: t,
-...n
+onAction: n,
+...d
   } = e, {
-analyticsLocations: d
+analyticsLocations: _
   } = (0, s.ZP)(), {
-context: _
-  } = (0, o.KZ)(), E = (0, a.Aq)();
+context: E
+  } = (0, o.KZ)(), f = (0, a.Aq)();
   return (0, r.jsx)(i.MenuItem, {
 id: 'user-profile',
 label: null != t ? t : c.Z.Messages.PROFILE,
 action: () => {
-  (0, l.openUserProfileModal)({
-    sourceAnalyticsLocations: d,
-    ..._,
-    ...n
-  }), E.dispatch(u.CkL.POPOUT_CLOSE);
+  null == n || n(), (0, l.openUserProfileModal)({
+    sourceAnalyticsLocations: _,
+    ...E,
+    ...d
+  }), f.dispatch(u.CkL.POPOUT_CLOSE);
 }
   });
 }

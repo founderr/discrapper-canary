@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return x;
+return G;
   }
 }), n(47120);
 var r = n(735250);
@@ -29,66 +29,78 @@ var i = n(120356),
   O = n(582123),
   R = n(622058),
   C = n(290274),
-  y = n(228168),
-  D = n(689938),
-  L = n(692184);
+  y = n(318134),
+  D = n(228168),
+  L = n(689938),
+  b = n(692184);
 let {
-  getAssetImage: b
+  getAssetImage: M
 } = n(81063);
 
-function M(e) {
+function P(e) {
   let {
 user: t,
 entry: n,
 header: i,
 className: l,
-onClose: u
+onClose: c
   } = e, {
-profileType: c
-  } = (0, S.z)(), _ = {
-[L.fullSize]: c === y.y0.FULL_SIZE
+profileType: _
+  } = (0, S.z)(), E = {
+[b.fullSize]: _ === D.y0.FULL_SIZE
   }, {
-iconUrl: E,
-appName: h
-  } = (0, m.n)(n), A = (0, T.Z)({
+iconUrl: h,
+appName: A
+  } = (0, m.n)(n), O = (0, T.Z)({
 location: 'UserProfileRecentActivityCard',
 applicationId: n.extra.application_id,
 source: I.m1.UserProfile,
 sourceUserId: t.id,
 trackEntryPointImpression: !0
-  }), O = () => n.content_type === s.s.TOP_GAME ? f.Hs.map((e, t) => (0, r.jsx)(e, {
+  }), {
+analyticsLocations: R
+  } = (0, u.ZP)(), {
+onAction: C,
+trackViewRef: L
+  } = (0, y.Z)({
+display: 'recent',
+user: t,
+entry: n,
+analyticsLocations: R
+  }), M = () => n.content_type === s.s.TOP_GAME ? f.Hs.map((e, t) => (0, r.jsx)(e, {
 entry: n
   }, 'entry-'.concat(t))) : d.W.map((e, t) => (0, r.jsx)(e, {
 entry: n
   }, 'entry-'.concat(t)));
-  return null == A ? (0, r.jsxs)(g.Z.Overlay, {
-className: a()(L.card, l),
+  return null == O ? (0, r.jsxs)(g.Z.Overlay, {
+className: a()(b.card, l),
+ref: L,
 children: [
   i,
   (0, r.jsx)('div', {
-    className: L.body,
+    className: b.body,
     children: (0, r.jsxs)('div', {
-      className: a()(L.content, _),
+      className: a()(b.content, E),
       children: [
         (0, r.jsx)(N.ZP, {
           image: {
-            src: E,
-            alt: h
+            src: h,
+            alt: A
           }
         }),
         (0, r.jsxs)('div', {
-          className: L.details,
+          className: b.details,
           children: [
             (0, r.jsx)('div', {
               children: (0, r.jsx)(v.Z, {
                 variant: 'heading-sm/semibold',
-                text: h
+                text: A
               })
             }),
             (0, r.jsx)(p.Gk, {
               location: p.Gt.USER_PROFILE,
-              className: L.badges,
-              children: O()
+              className: b.badges,
+              children: M()
             })
           ]
         })
@@ -97,94 +109,45 @@ children: [
   })
 ]
   }) : (0, r.jsxs)(g.Z.Overlay, {
-className: a()(L.card, l),
+className: a()(b.card, l),
+ref: L,
 children: [
   i,
   (0, r.jsx)('div', {
-    className: L.body,
+    className: b.body,
     children: (0, r.jsxs)('div', {
-      className: a()(L.content, _),
+      className: a()(b.content, E),
       children: [
         (0, r.jsx)(N.ZP, {
           image: {
-            src: E,
-            alt: h
+            src: h,
+            alt: A
           },
-          onClick: A
+          onClick: () => {
+            C({
+              action: 'PRESS_GAME_IMAGE'
+            }), O();
+          }
         }),
         (0, r.jsxs)('div', {
-          className: L.details,
+          className: b.details,
           children: [
             (0, r.jsx)(o.Clickable, {
-              className: L.clickable,
+              className: b.clickable,
               onClick: () => {
-                A(), null == u || u();
+                C({
+                  action: 'OPEN_GAME_PROFILE'
+                }), O(), null == c || c();
               },
               children: (0, r.jsx)(v.Z, {
                 variant: 'heading-sm/semibold',
-                text: h
+                text: A
               })
             }),
             (0, r.jsx)(p.Gk, {
               location: p.Gt.USER_PROFILE,
-              className: L.badges,
-              children: O()
-            })
-          ]
-        })
-      ]
-    })
-  })
-]
-  });
-}
-
-function P(e) {
-  let {
-entry: t,
-header: n,
-className: i
-  } = e, {
-profileType: s
-  } = (0, S.z)(), o = {
-[L.fullSize]: s === y.y0.FULL_SIZE
-  };
-  return (0, r.jsxs)(g.Z.Overlay, {
-className: a()(L.card, i),
-children: [
-  n,
-  (0, r.jsx)('div', {
-    className: L.body,
-    children: (0, r.jsxs)('div', {
-      className: a()(L.content, o),
-      children: [
-        (0, r.jsx)(N.ZP, {
-          image: {
-            src: b(t.extra.application_id, t.extra.media_assets_large_image, N.WQ),
-            alt: t.extra.media_title
-          }
-        }),
-        (0, r.jsxs)('div', {
-          className: L.details,
-          children: [
-            (0, r.jsxs)('div', {
-              children: [
-                (0, r.jsx)(v.Z, {
-                  variant: 'heading-sm/semibold',
-                  text: t.extra.media_title
-                }),
-                (0, r.jsx)(v.Z, {
-                  variant: 'text-xs/normal',
-                  text: t.extra.media_subtitle
-                })
-              ]
-            }),
-            (0, r.jsx)(p.Gk, {
-              location: p.Gt.USER_PROFILE,
-              className: L.badges,
-              children: h.td.map((e, n) => (0, r.jsx)(e, {
-                entry: t
-              }, 'entry-'.concat(n)))
+              className: b.badges,
+              children: M()
             })
           ]
         })
@@ -196,48 +159,61 @@ children: [
 }
 
 function U(e) {
-  var t, n, i;
   let {
-entry: s,
-header: o,
-className: l
+user: t,
+entry: n,
+header: i,
+className: s
   } = e, {
-profileType: u
-  } = (0, S.z)(), c = {
-[L.fullSize]: u === y.y0.FULL_SIZE
-  }, d = null === (t = s.extra.entries[0]) || void 0 === t ? void 0 : t.media;
-  if (null == d)
-return null;
-  let E = null !== (i = null === (n = d.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : d.title;
+profileType: o
+  } = (0, S.z)(), l = {
+[b.fullSize]: o === D.y0.FULL_SIZE
+  }, {
+analyticsLocations: c
+  } = (0, u.ZP)(), {
+trackViewRef: d
+  } = (0, y.Z)({
+display: 'recent',
+user: t,
+entry: n,
+analyticsLocations: c
+  });
   return (0, r.jsxs)(g.Z.Overlay, {
-className: a()(L.card, l),
+className: a()(b.card, s),
+ref: d,
 children: [
-  o,
+  i,
   (0, r.jsx)('div', {
-    className: L.body,
+    className: b.body,
     children: (0, r.jsxs)('div', {
-      className: a()(L.content, c),
+      className: a()(b.content, l),
       children: [
         (0, r.jsx)(N.ZP, {
           image: {
-            src: d.image_url,
-            alt: E
+            src: M(n.extra.application_id, n.extra.media_assets_large_image, N.WQ),
+            alt: n.extra.media_title
           }
         }),
         (0, r.jsxs)('div', {
-          className: L.details,
+          className: b.details,
           children: [
-            (0, r.jsx)('div', {
-              children: (0, r.jsx)(v.Z, {
-                variant: 'heading-sm/semibold',
-                text: E
-              })
+            (0, r.jsxs)('div', {
+              children: [
+                (0, r.jsx)(v.Z, {
+                  variant: 'heading-sm/semibold',
+                  text: n.extra.media_title
+                }),
+                (0, r.jsx)(v.Z, {
+                  variant: 'text-xs/normal',
+                  text: n.extra.media_subtitle
+                })
+              ]
             }),
             (0, r.jsx)(p.Gk, {
               location: p.Gt.USER_PROFILE,
-              className: L.badges,
-              children: _.te.map((e, t) => (0, r.jsx)(e, {
-                entry: s
+              className: b.badges,
+              children: h.td.map((e, t) => (0, r.jsx)(e, {
+                entry: n
               }, 'entry-'.concat(t)))
             })
           ]
@@ -250,51 +226,60 @@ children: [
 }
 
 function w(e) {
+  var t, n, i;
   let {
-entry: t,
-header: n,
-className: i
+user: s,
+entry: o,
+header: l,
+className: c
   } = e, {
-profileType: s
-  } = (0, S.z)(), o = {
-[L.fullSize]: s === y.y0.FULL_SIZE
-  };
+profileType: d
+  } = (0, S.z)(), E = {
+[b.fullSize]: d === D.y0.FULL_SIZE
+  }, {
+analyticsLocations: f
+  } = (0, u.ZP)(), {
+trackViewRef: h
+  } = (0, y.Z)({
+display: 'recent',
+user: s,
+entry: o,
+analyticsLocations: f
+  }), m = null === (t = o.extra.entries[0]) || void 0 === t ? void 0 : t.media;
+  if (null == m)
+return null;
+  let I = null !== (i = null === (n = m.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : m.title;
   return (0, r.jsxs)(g.Z.Overlay, {
-className: a()(L.card, i),
+className: a()(b.card, c),
+ref: h,
 children: [
-  n,
+  l,
   (0, r.jsx)('div', {
-    className: L.body,
+    className: b.body,
     children: (0, r.jsxs)('div', {
-      className: a()(L.content, o),
+      className: a()(b.content, E),
       children: [
         (0, r.jsx)(N.ZP, {
           image: {
-            src: t.extra.media.image_url,
-            alt: t.extra.media.title
+            src: m.image_url,
+            alt: I
           }
         }),
         (0, r.jsxs)('div', {
-          className: L.details,
+          className: b.details,
           children: [
-            (0, r.jsxs)('div', {
-              children: [
-                (0, r.jsx)(v.Z, {
-                  variant: 'heading-sm/semibold',
-                  text: t.extra.media.title
-                }),
-                (0, r.jsx)(v.Z, {
-                  variant: 'text-xs/normal',
-                  text: t.extra.artist.name
-                })
-              ]
+            (0, r.jsx)('div', {
+              children: (0, r.jsx)(v.Z, {
+                variant: 'heading-sm/semibold',
+                text: I
+              })
             }),
             (0, r.jsx)(p.Gk, {
               location: p.Gt.USER_PROFILE,
-              className: L.badges,
-              children: E.Ho.map((e, n) => (0, r.jsx)(e, {
-                entry: t
-              }, 'entry-'.concat(n)))
+              className: b.badges,
+              children: _.te.map((e, t) => (0, r.jsx)(e, {
+                entry: o
+              }, 'entry-'.concat(t)))
             })
           ]
         })
@@ -306,6 +291,73 @@ children: [
 }
 
 function x(e) {
+  let {
+user: t,
+entry: n,
+header: i,
+className: s
+  } = e, {
+profileType: o
+  } = (0, S.z)(), l = {
+[b.fullSize]: o === D.y0.FULL_SIZE
+  }, {
+analyticsLocations: c
+  } = (0, u.ZP)(), {
+trackViewRef: d
+  } = (0, y.Z)({
+display: 'recent',
+user: t,
+entry: n,
+analyticsLocations: c
+  });
+  return (0, r.jsxs)(g.Z.Overlay, {
+className: a()(b.card, s),
+ref: d,
+children: [
+  i,
+  (0, r.jsx)('div', {
+    className: b.body,
+    children: (0, r.jsxs)('div', {
+      className: a()(b.content, l),
+      children: [
+        (0, r.jsx)(N.ZP, {
+          image: {
+            src: n.extra.media.image_url,
+            alt: n.extra.media.title
+          }
+        }),
+        (0, r.jsxs)('div', {
+          className: b.details,
+          children: [
+            (0, r.jsxs)('div', {
+              children: [
+                (0, r.jsx)(v.Z, {
+                  variant: 'heading-sm/semibold',
+                  text: n.extra.media.title
+                }),
+                (0, r.jsx)(v.Z, {
+                  variant: 'text-xs/normal',
+                  text: n.extra.artist.name
+                })
+              ]
+            }),
+            (0, r.jsx)(p.Gk, {
+              location: p.Gt.USER_PROFILE,
+              className: b.badges,
+              children: E.Ho.map((e, t) => (0, r.jsx)(e, {
+                entry: n
+              }, 'entry-'.concat(t)))
+            })
+          ]
+        })
+      ]
+    })
+  })
+]
+  });
+}
+
+function G(e) {
   let {
 user: t,
 entry: n,
@@ -326,7 +378,7 @@ children: (0, r.jsx)(O.Z, {
     let {
       onAutoDismiss: o
     } = e, l = e => (0, r.jsx)(A.Z, {
-      text: d === y.y0.FULL_SIZE ? null : e,
+      text: d === D.y0.FULL_SIZE ? null : e,
       tags: s ? null : (0, r.jsx)(C.Z, {
         display: 'recent',
         entry: n,
@@ -335,23 +387,23 @@ children: (0, r.jsx)(O.Z, {
         onRequestOpen: o
       })
     });
-    return (0, c.dX)(n) ? (0, r.jsx)(M, {
-      header: l(D.Z.Messages.USER_ACTIVITY_RECENTLY_PLAYED),
+    return (0, c.dX)(n) ? (0, r.jsx)(P, {
+      header: l(L.Z.Messages.USER_ACTIVITY_RECENTLY_PLAYED),
       user: t,
       entry: n,
       className: i
-    }) : (0, c.y0)(n) ? (0, r.jsx)(P, {
-      header: l(D.Z.Messages.USER_ACTIVITY_RECENTLY_WATCHED),
+    }) : (0, c.y0)(n) ? (0, r.jsx)(U, {
+      header: l(L.Z.Messages.USER_ACTIVITY_RECENTLY_WATCHED),
       user: t,
       entry: n,
       className: i
-    }) : (0, c.dU)(n) ? (0, r.jsx)(U, {
-      header: l(D.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
+    }) : (0, c.dU)(n) ? (0, r.jsx)(w, {
+      header: l(L.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
       user: t,
       entry: n,
       className: i
-    }) : (0, c.KF)(n) ? (0, r.jsx)(w, {
-      header: l(D.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
+    }) : (0, c.KF)(n) ? (0, r.jsx)(x, {
+      header: l(L.Z.Messages.USER_ACTIVITY_RECENTLY_LISTENED_TO),
       user: t,
       entry: n,
       className: i

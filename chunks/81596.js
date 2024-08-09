@@ -1,40 +1,41 @@
-n.r(e), n.d(e, {
+e.r(n), e.d(n, {
   default: function() {
-return h;
+return C;
   }
-}), n(47120);
-var o = n(735250),
-  r = n(470079),
-  s = n(442837),
-  i = n(481060),
-  a = n(230711),
-  l = n(485267),
-  c = n(564990),
-  d = n(353647),
-  u = n(527790),
-  E = n(540440),
-  _ = n(365583),
-  R = n(689938),
-  T = n(157753);
+}), e(47120);
+var o = e(735250),
+  r = e(470079),
+  s = e(442837),
+  i = e(481060),
+  a = e(230711),
+  l = e(485267),
+  c = e(564990),
+  d = e(353647),
+  E = e(527790),
+  u = e(540440),
+  _ = e(365583),
+  R = e(689938),
+  T = e(157753);
 
-function h(t) {
+function C(t) {
   let {
-transitionState: e,
-onClose: n,
-user: h,
-entry: C
-  } = t, [f, N] = (0, s.Wu)([d.Z], () => [
+user: n,
+entry: e,
+transitionState: C,
+onAction: h,
+onClose: S
+  } = t, [f, I] = (0, s.Wu)([d.Z], () => [
 d.Z.isDeletingEntryHistory,
 d.Z.deleteOutboxEntryError
   ]);
   return r.useEffect(() => l.Bt, []), (0, o.jsxs)(i.ModalRoot, {
 size: i.ModalSize.SMALL,
-transitionState: e,
+transitionState: C,
 children: [
   (0, o.jsxs)(i.ModalContent, {
     className: T.content,
     children: [
-      null != N ? (0, o.jsxs)('div', {
+      null != I ? (0, o.jsxs)('div', {
         className: T.error,
         children: [
           (0, o.jsx)(i.CircleXIcon, {
@@ -48,26 +49,28 @@ children: [
       }) : null,
       (0, o.jsx)(i.Heading, {
         variant: 'heading-lg/semibold',
-        children: (0, E.y)(C)
+        children: (0, u.y)(e)
       }),
       (0, o.jsx)(i.Text, {
         variant: 'text-sm/normal',
         tag: 'span',
         children: R.Z.Messages.USER_ACTIVITY_CLEAR_HISTORY_DISCLAIMER.format({
-          settingsHook: (t, e) => {
-            let r = (0, _.C)(C);
+          settingsHook: (t, n) => {
+            let r = (0, _.C)(e);
             return (0, o.jsx)(i.Anchor, {
               onClick: () => {
-                null != r ? r() : a.Z.open(), n();
+                null == h || h({
+                  action: 'PRESS_CLEAR_HISTORY_DISCLAIMER'
+                }), null != r ? r() : a.Z.open(), S();
               },
               children: t
-            }, e);
+            }, n);
           }
         })
       }),
-      (0, o.jsx)(u.Z, {
-        user: h,
-        entry: C,
+      (0, o.jsx)(E.Z, {
+        user: n,
+        entry: e,
         className: T.card,
         hideContextMenu: !0
       })
@@ -81,12 +84,14 @@ children: [
         color: i.ButtonColors.RED,
         size: i.ButtonSizes.SMALL,
         onClick: () => {
-          (0, c.CV)(C, h.id, n);
+          null == h || h({
+            action: 'PRESS_CLEAR_HISTORY_BUTTON'
+          }), (0, c.CV)(e, n.id, S);
         },
-        children: null != N ? R.Z.Messages.RETRY : R.Z.Messages.CLEAR
+        children: null != I ? R.Z.Messages.RETRY : R.Z.Messages.CLEAR
       }),
       (0, o.jsx)(i.Button, {
-        onClick: n,
+        onClick: S,
         size: i.ButtonSizes.SMALL,
         look: i.ButtonLooks.FILLED,
         color: i.ButtonColors.TRANSPARENT,

@@ -15,14 +15,19 @@ var r = n(725119),
 
 function _(e) {
   let {
-profileType: t
-  } = (0, i.z)(), n = (0, r.Z)({
+onAction: t
+  } = e, {
+profileType: n
+  } = (0, i.z)(), _ = (0, r.Z)({
 userId: e.user.id,
 section: c.oh.ACTIVITY,
-label: d.Z.Messages.USER_ACTIVITY_VIEW_ALL_ACTIVITY
+label: d.Z.Messages.USER_ACTIVITY_VIEW_ALL_ACTIVITY,
+onAction: () => null == t ? void 0 : t({
+  action: 'PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM'
+})
   });
   return [
-t === c.y0.BITE_SIZE ? n : null,
+n === c.y0.BITE_SIZE ? _ : null,
 (0, u.Z)(e),
 (0, o.Z)(e),
 (0, l.Z)(e),

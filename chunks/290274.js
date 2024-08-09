@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return f;
   }
 });
 var r = n(735250);
@@ -8,37 +8,55 @@ n(470079);
 var i = n(120356),
   a = n.n(i),
   s = n(481060),
-  o = n(27144),
-  l = n(848966),
-  u = n(689938),
-  c = n(692184);
+  o = n(100527),
+  l = n(906732),
+  u = n(27144),
+  c = n(318134),
+  d = n(848966),
+  _ = n(689938),
+  E = n(692184);
 
-function d(e) {
+function f(e) {
   let {
 user: t,
 activity: n,
 entry: i,
-display: d,
-className: _,
-onSelect: E,
-onClose: f,
-onRequestOpen: h
+display: f,
+className: h,
+onSelect: p,
+onClose: m,
+onRequestOpen: I
   } = e, {
-pastActivityEnabled: p
-  } = (0, o.z)({
+pastActivityEnabled: T
+  } = (0, u.z)({
 location: 'UserProfileActivityContextMenu'
-  }), m = (0, l.Z)({
+  }), {
+analyticsLocations: g
+  } = (0, l.ZP)(o.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU), {
+onAction: S
+  } = (0, c.Z)({
+display: f,
+user: t,
+activity: n,
+entry: i,
+analyticsLocations: g
+  }), A = (0, d.Z)({
 entry: i,
 activity: n,
 user: t,
-display: d,
-onClose: f
+display: f,
+onClose: m,
+onAction: S
   });
-  return !p || 0 === m.length || t.bot ? null : (0, r.jsx)(s.Popout, {
+  return !T || 0 === A.length || t.bot ? null : (0, r.jsx)(s.Popout, {
 align: 'top',
 position: 'right',
 disablePointerEvents: !1,
-onRequestOpen: h,
+onRequestOpen: () => {
+  S({
+    action: 'OPEN_MENU'
+  }), null == I || I();
+},
 renderPopout: e => {
   let {
     closePopout: t
@@ -46,10 +64,10 @@ renderPopout: e => {
   return (0, r.jsx)(s.Menu, {
     navId: 'content-inventory-context',
     onClose: t,
-    'aria-label': u.Z.Messages.USER_PROFILE_ACTIVITY_ACTION_MENU_A11Y_LABEL,
-    onSelect: E,
+    'aria-label': _.Z.Messages.USER_PROFILE_ACTIVITY_ACTION_MENU_A11Y_LABEL,
+    onSelect: p,
     children: (0, r.jsx)(s.MenuGroup, {
-      children: m
+      children: A
     })
   });
 },
@@ -58,7 +76,7 @@ children: e => (0, r.jsx)(s.Clickable, {
   onContextMenu: t => {
     t.preventDefault(), e.onClick(t);
   },
-  className: a()(c.contextMenu, _),
+  className: a()(E.contextMenu, h),
   children: (0, r.jsx)(s.MoreHorizontalIcon, {
     color: s.tokens.colors.INTERACTIVE_NORMAL,
     size: 'xs'

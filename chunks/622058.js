@@ -1,8 +1,7 @@
 n.d(t, {
   R: function() {
-return s;
+return i;
   }
 });
-var r, i, a = n(26033);
-(r = i || (i = {})).LIVE = 'live', r.RECENT = 'recent';
-let s = e => (0, a.dX)(e) || (0, a.y0)(e) || (0, a.kq)(e);
+var r = n(26033);
+let i = e => (0, r.dX)(e) || (0, r.y0)(e) || (0, r.kq)(e);
