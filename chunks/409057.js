@@ -94,11 +94,20 @@ if (i.type === k.IIU.HANG_STATUS)
       className: V.hangStatusIcon
     })
   });
+if ((0, c.Z)(i) && null != Z)
+  return (0, r.jsx)(L.ZP, {
+    image: {
+      src: Z.getIconURL(L.WQ),
+      alt: F.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({
+        applicationName: Z.name
+      })
+    }
+  });
 let s = null === (e = i.assets) || void 0 === e ? void 0 : e.large_image,
   o = null === (t = i.assets) || void 0 === t ? void 0 : t.small_image,
   l = null === (n = i.assets) || void 0 === n ? void 0 : n.large_text,
-  c = null === (a = i.assets) || void 0 === a ? void 0 : a.small_text,
-  f = null == J ? void 0 : () => {
+  f = null === (a = i.assets) || void 0 === a ? void 0 : a.small_text,
+  h = null == J ? void 0 : () => {
     ee({
       action: 'PRESS_GAME_IMAGE'
     }), J();
@@ -110,7 +119,7 @@ if (null == s && null == o && (0, E.Z)(i)) {
       src: e,
       alt: F.Z.Messages.XBOX
     },
-    onClick: f
+    onClick: h
   });
 }
 if (null == s && null == o && (0, _.Z)(i)) {
@@ -120,7 +129,7 @@ if (null == s && null == o && (0, _.Z)(i)) {
       src: e,
       alt: F.Z.Messages.PLAYSTATION
     },
-    onClick: f
+    onClick: h
   });
 }
 return null == s && null != Z ? (0, r.jsx)(L.ZP, {
@@ -130,13 +139,13 @@ return null == s && null != Z ? (0, r.jsx)(L.ZP, {
       applicationName: Z.name
     })
   },
-  onClick: f
+  onClick: h
 }) : null == s && null != o ? (0, r.jsx)(L.ZP, {
   image: {
     src: H(i.application_id, o, L.WQ),
-    text: c
+    text: f
   },
-  onClick: f
+  onClick: h
 }) : null != o && (0, d.Z)(i) ? (0, r.jsx)(L.ZP, {
   image: {
     src: H(i.application_id, s, L.WQ),
@@ -144,15 +153,15 @@ return null == s && null != Z ? (0, r.jsx)(L.ZP, {
   },
   richImage: {
     src: H(i.application_id, o, L.Bp),
-    text: c
+    text: f
   },
-  onClick: f
+  onClick: h
 }) : (0, r.jsx)(L.ZP, {
   image: {
     src: H(i.application_id, s, L.WQ),
     text: l
   },
-  onClick: f
+  onClick: h
 });
   }, ei = () => {
 var e;
