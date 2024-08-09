@@ -210,7 +210,6 @@ children: [
       text: y.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER,
       children: e => (0, n.jsx)(R.Z, {
         ...e,
-        className: V.connectionAccountLabelVerified,
         color: c.Z.unsafe_rawColors.TWITTER.css,
         children: (0, n.jsx)(_.CheckmarkSmallIcon, {
           size: 'xs',
@@ -227,17 +226,20 @@ children: [
         }),
         (0, n.jsxs)('div', {
           children: [
-            (0, n.jsx)(_.Text, {
-              color: 'header-primary',
-              variant: 'text-md/semibold',
-              className: V.connectionAccountValue,
-              children: (0, n.jsxs)('div', {
-                className: V.connectionAccountLabelContainer,
-                children: [
-                  e.name,
-                  r
-                ]
-              })
+            (0, n.jsxs)('div', {
+              className: V.connectionAccountLabelContainer,
+              children: [
+                (0, n.jsx)(_.Text, {
+                  color: 'header-primary',
+                  variant: 'text-md/semibold',
+                  className: V.connectionAccountValue,
+                  children: e.name
+                }),
+                null != r && (0, n.jsx)('div', {
+                  className: V.connectionAccountLabelVerified,
+                  children: r
+                })
+              ]
             }),
             (0, n.jsx)(_.Text, {
               variant: 'text-xs/normal',

@@ -134,31 +134,21 @@ return (0, n.jsx)(u.Card, {
             alt: ''
           })
         }) : null;
-      return (0, n.jsxs)(g.Z, {
-        className: r()(b.__invalid_header, Z.marginBottom20),
+      return (0, n.jsxs)('div', {
+        className: r()(b.header, Z.marginBottom20),
         children: [
-          (0, n.jsxs)(g.Z, {
-            className: b.headerInfo,
-            children: [
-              s,
-              (0, n.jsx)(g.Z.Child, {
-                children: (0, n.jsx)(u.Heading, {
-                  variant: 'text-sm/semibold',
-                  children: t.name
-                })
-              })
-            ]
+          s,
+          (0, n.jsx)(u.Heading, {
+            variant: 'text-sm/semibold',
+            className: b.headerText,
+            children: t.name
           }),
-          (0, n.jsx)(g.Z.Child, {
-            wrap: !0,
-            grow: 0,
-            children: (0, n.jsx)(u.Button, {
-              color: u.ButtonColors.RED,
-              look: u.ButtonLooks.OUTLINED,
-              size: u.ButtonSizes.SMALL,
-              onClick: o,
-              children: L.Z.Messages.DEAUTHORIZE
-            })
+          (0, n.jsx)(u.Button, {
+            color: u.ButtonColors.RED,
+            look: u.ButtonLooks.OUTLINED,
+            size: u.ButtonSizes.SMALL,
+            onClick: o,
+            children: L.Z.Messages.DEAUTHORIZE
           })
         ]
       });
