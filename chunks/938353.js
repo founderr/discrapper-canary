@@ -416,7 +416,8 @@ let N = l.map(t => {
             duration: a
           });
         },
-        gifFavoriteButton: e0(n)
+        gifFavoriteButton: e0(n),
+        isSearchResult: this.props.isSearchResult
       },
       s = (0, em.q)({
         proxyURL: t.proxy_url,
@@ -744,20 +745,21 @@ super(...e), eQ(this, 'state', {
     canSuppressEmbeds: o,
     hasSpoilerEmbeds: c,
     shouldRedactExplicitContent: u,
-    hasInlineForwardButton: d
-  } = this.props, _ = (0, eS.BP)(e, s, i, c, u), E = h.P.getCurrentConfig({
+    hasInlineForwardButton: d,
+    isSearchResult: _
+  } = this.props, E = (0, eS.BP)(e, s, i, c, u), I = h.P.getCurrentConfig({
     location: 'MessageAccessories'
   }, {
     autoTrackExposure: !0
   }).imageRecsEnabled;
   if (e.type === eV.hBH.GIFT)
     return null;
-  let I = (0, a.jsx)(j.h.Provider, {
+  let m = (0, a.jsx)(j.h.Provider, {
     value: e$(e.url, e.image, e.video),
     children: (0, a.jsx)(g.ZP, {
       className: eK.embedWrapper,
       embed: e,
-      obscureReason: null != _ ? _ : void 0,
+      obscureReason: null != E ? E : void 0,
       autoPlayGif: r,
       hideMedia: !l,
       onSuppressEmbed: o ? this.handleEmbedSuppressed : void 0,
@@ -765,14 +767,15 @@ super(...e), eQ(this, 'state', {
       renderDescription: this.renderEmbedDescription,
       messageId: i,
       channelId: s,
-      showImageRecs: E,
+      showImageRecs: I,
+      isSearchResult: _,
       ...n
     })
   }, e.id);
   return d ? (0, a.jsxs)('div', {
     className: eK.embedContainer,
     children: [
-      I,
+      m,
       (0, a.jsx)(D.Z, {
         className: eW.hideIfMessageNotFocused,
         messageId: i,
@@ -781,7 +784,7 @@ super(...e), eQ(this, 'state', {
         embedIndex: t
       })
     ]
-  }) : I;
+  }) : m;
 }), eQ(this, 'renderEmbedTitle', (e, t) => e.type === eV.hBH.RICH ? W.Z.parseEmbedTitle(t, !0, {
   channelId: this.props.channel.id
 }) : t), eQ(this, 'renderEmbedDescription', (e, t, n) => e.type === eV.hBH.RICH ? W.Z.parse(t, !0, {
@@ -885,10 +888,11 @@ renderComponentAccessory: r = !1,
 renderThreadAccessory: l = !1,
 disableReactionCreates: o = !0,
 disableReactionUpdates: c = !0,
-...u
-  } = e, d = ec.x4.useSetting(), _ = ec.RS.useSetting(), E = ec.NA.useSetting(), I = ec.QK.useSetting(), m = (0, Y.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), T = (0, Q.Z)(null == i ? void 0 : i.id), h = (0, O.V)(i.id, n.author.id), N = (0, x.r)(n.id), f = (0, J.Z)(n);
+isSearchResult: u = !1,
+...d
+  } = e, _ = ec.x4.useSetting(), E = ec.RS.useSetting(), I = ec.NA.useSetting(), m = ec.QK.useSetting(), T = (0, Y.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), h = (0, Q.Z)(null == i ? void 0 : i.id), N = (0, O.V)(i.id, n.author.id), f = (0, x.r)(n.id), C = (0, J.Z)(n);
   return (0, a.jsx)(e1, {
-...u,
+...d,
 message: n,
 channel: i,
 disableReactionReads: s,
@@ -898,16 +902,17 @@ canSuppressEmbeds: !1,
 canDeleteAttachments: !1,
 renderComponentAccessory: r,
 renderThreadAccessory: l,
-inlineAttachmentMedia: d,
-inlineEmbedMedia: _,
-renderEmbeds: E,
-gifAutoPlay: I,
-poll: f,
-showListsAndHeaders: m,
-showMaskedLinks: m,
-shouldHideMediaOptions: T,
-shouldRedactExplicitContent: h,
-shouldRenderCtaButton: N,
-hasInlineForwardButton: !1
+inlineAttachmentMedia: _,
+inlineEmbedMedia: E,
+renderEmbeds: I,
+gifAutoPlay: m,
+poll: C,
+showListsAndHeaders: T,
+showMaskedLinks: T,
+shouldHideMediaOptions: h,
+shouldRedactExplicitContent: N,
+shouldRenderCtaButton: f,
+hasInlineForwardButton: !1,
+isSearchResult: u
   });
 };

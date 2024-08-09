@@ -1,6 +1,6 @@
 n.d(t, {
   BC: function() {
-return P;
+return R;
   },
   ZP: function() {
 return W;
@@ -27,8 +27,8 @@ var l, r = n(735250),
   _ = n(626135),
   w = n(585483),
   C = n(55935),
-  E = n(408433),
-  S = n(956664),
+  S = n(408433),
+  E = n(956664),
   j = n(468846),
   M = n(401419),
   T = n(249458),
@@ -49,7 +49,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 
-function P(e) {
+function R(e) {
   let {
 className: t,
 iframeWrapperClassName: n,
@@ -69,7 +69,7 @@ autoPlay: x = !1,
 autoMute: y,
 volume: _,
 onPlay: C,
-onPause: E,
+onPause: S,
 onEnded: M,
 onControlsHide: T,
 onControlsShow: A,
@@ -78,8 +78,8 @@ onMute: L,
 href: H,
 messageId: V,
 channelId: B,
-placeholder: P,
-placeholderVersion: R
+placeholder: R,
+placeholderVersion: P
   } = e, [W, O] = i.useState(x), D = null != d && null == d.proxyURL, G = i.useCallback(() => O(!1), [O]), Z = e => {
 e.preventDefault(), e.stopPropagation(), null == C || C(!1), O(!0), D && (w.S.dispatch(N.CkL.VIDEO_EMBED_PLAYBACK_STARTED), w.S.subscribeOnce(N.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G));
   };
@@ -94,7 +94,7 @@ width: U,
 height: q
   } = s;
   null != d && (U = d.width, q = d.height);
-  let z = (0, S.Tj)({
+  let z = (0, E.Tj)({
 width: U,
 height: q,
 maxWidth: l,
@@ -108,8 +108,8 @@ return (0, r.jsx)('div', {
   children: p({
     poster: K,
     src: d.proxyURL,
-    placeholder: P,
-    placeholderVersion: R,
+    placeholder: R,
+    placeholderVersion: P,
     width: U,
     height: q,
     responsive: h,
@@ -122,7 +122,7 @@ return (0, r.jsx)('div', {
     autoMute: y,
     volume: _,
     onPlay: C,
-    onPause: E,
+    onPause: S,
     onMute: L,
     onControlsHide: T,
     onControlsShow: A,
@@ -194,8 +194,8 @@ children: [
     responsive: h,
     containerClassName: k.embedVideoImageComponent,
     imageClassName: k.embedVideoImageComponentInner,
-    placeholder: P,
-    placeholderVersion: R,
+    placeholder: R,
+    placeholderVersion: P,
     onClick: v && null != d ? Z : null,
     renderForwardComponent: f
   }),
@@ -216,7 +216,7 @@ children: [
   });
 }
 
-function R(e) {
+function P(e) {
   let {
 className: t,
 href: n,
@@ -583,9 +583,9 @@ let g = (0, I.q)(n),
 g in v && (y.onClick = v[g]);
 let _ = n.url.split('.').pop(),
   w = null != n && !p.u.test(null == n ? void 0 : n.url),
-  C = t && null != this.props.channelId && void 0 !== this.props.channelId && ! function(e) {
+  C = !0 !== this.props.isSearchResult && t && null != this.props.channelId && void 0 !== this.props.channelId && w && ! function(e) {
     return null != e && (e.width <= A.OF || e.height <= A.OF);
-  }(n) && w && null != _;
+  }(n) && null != _;
 return (0, r.jsx)(m.h.Consumer, {
   children: t => (0, r.jsx)(T.G.Consumer, {
     children: l => {
@@ -648,7 +648,7 @@ if (e)
       let {
         disableAnimations: o
       } = e;
-      return (0, r.jsx)(R, {
+      return (0, r.jsx)(P, {
         className: k.embedMedia,
         href: l,
         thumbnail: i,
@@ -667,7 +667,7 @@ if (e)
       });
     }
   });
-return (0, r.jsx)(P, {
+return (0, r.jsx)(R, {
   className: k.embedMedia,
   href: l,
   allowFullScreen: h,
@@ -820,7 +820,7 @@ if (null == s)
   return;
 let {
   width: d
-} = (0, S.Tj)({
+} = (0, E.Tj)({
   width: s.width,
   height: s.height,
   maxWidth: a,
@@ -834,7 +834,7 @@ if (r === N.hBH.GIFV) {
   var u, m, h, c;
   let {
     width: e
-  } = (0, S.Tj)({
+  } = (0, E.Tj)({
     width: Math.max(null !== (u = null == i ? void 0 : i.width) && void 0 !== u ? u : 0, null !== (m = null == l ? void 0 : l.width) && void 0 !== m ? m : 0),
     height: Math.max(null !== (h = null == i ? void 0 : i.height) && void 0 !== h ? h : 0, null !== (c = null == l ? void 0 : l.height) && void 0 !== c ? c : 0),
     maxWidth: a,
@@ -848,7 +848,7 @@ let {
   hideMedia: e,
   embed: t
 } = this.props;
-return !e && (0, E.dY)(t);
+return !e && (0, S.dY)(t);
   }
   renderSuppressButton(e) {
 return (0, r.jsx)(s.Clickable, {
@@ -898,7 +898,7 @@ if (void 0 === o && void 0 === n && r !== N.hBH.RICH) {
   if (void 0 !== e) {
     let {
       width: t
-    } = (0, S.Tj)({
+    } = (0, E.Tj)({
       width: e.width,
       height: e.height,
       maxWidth: i,
@@ -956,7 +956,7 @@ super(...e), t = this, B(this, 'state', {
   videoControlsShown: !1,
   isImageHovered: !1,
   showImageAppMenu: !1,
-  ...(0, E.vP)(this.props.embed)
+  ...(0, S.vP)(this.props.embed)
 }), B(this, 'onReveal', () => {
   this.setState({
     isVisible: !0
