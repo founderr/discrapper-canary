@@ -90,15 +90,11 @@ children: [
         children: (0, n.jsxs)('div', {
           className: t()(C.column, C.gapXs),
           children: [
-            (0, n.jsxs)(c.Text, {
+            (0, n.jsx)(c.Text, {
               variant: 'text-md/medium',
               color: 'text-primary',
               lineClamp: 1,
-              children: [
-                h.slice(0, 18),
-                ' ',
-                h.length > 18 ? '...' : ''
-              ]
+              children: h
             }),
             (0, n.jsx)(N.Gk, {
               location: N.Gt.GAME_PROFILE,
