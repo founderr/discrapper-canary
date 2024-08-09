@@ -144,20 +144,22 @@ j = o.useCallback(async e => {
   let i = e.applicationId,
     o = (null === (t = b.result) || void 0 === t ? void 0 : t.sections[i]) != null,
     l = (null === (n = S.result) || void 0 === n ? void 0 : n.sections[i]) != null;
-  if (o || l || m.ZP.queryInstallOnDemandApp(e.applicationId, a.id), await (0, g.L)({
-      applicationId: i,
-      userIndexState: b,
-      guildIndexState: S,
-      location: p.Vh.IMAGE_RECS_MENU,
-      source: u._b.TEXT
-    })) {
-    let t = A.Id[e.id],
-      n = t.additionalOptions;
-    await Z(t.imageOption), (0, _.qJ)({
+  o || l || m.ZP.queryInstallOnDemandApp(e.applicationId, a.id);
+  let r = await (0, g.L)({
+    applicationId: i,
+    userIndexState: b,
+    guildIndexState: S,
+    location: p.Vh.IMAGE_RECS_MENU,
+    source: u._b.TEXT
+  });
+  if ((0, _.qJ)({
       command: e,
       location: p.Vh.IMAGE_RECS_MENU,
       source: u._b.TEXT
-    }), await (0, E.Z)({
+    }), r) {
+    let t = A.Id[e.id],
+      n = t.additionalOptions;
+    await Z(t.imageOption), await (0, E.Z)({
       command: {
         ...e
       },
