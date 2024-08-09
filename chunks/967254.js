@@ -163,9 +163,10 @@ return (0, i.jsx)(o.Clickable, {
       let {
         default: e
       } = await Promise.all([
+        n.e('72181'),
         n.e('46097'),
         n.e('18831'),
-        n.e('39067')
+        n.e('64455')
       ]).then(n.bind(n, 41164));
       return t => (0, i.jsx)(e, {
         classificationId: s,
