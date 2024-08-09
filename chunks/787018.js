@@ -1,6 +1,6 @@
 n.d(s, {
   Z: function() {
-return Z;
+return x;
   }
 }), n(47120);
 var i = n(735250),
@@ -11,75 +11,100 @@ var i = n(735250),
   a = n(785717),
   d = n(221292),
   c = n(318661),
-  u = n(502762),
+  u = n(299261),
+  _ = n(502762),
   I = n(475413),
-  _ = n(228168),
+  E = n(228168),
   f = n(981631),
-  E = n(689938),
-  m = n(570129),
-  S = n(161068);
+  m = n(689938),
+  S = n(570129),
+  Z = n(161068);
 
-function Z(e) {
+function x(e) {
   let {
 user: s,
 guildId: n,
-channelId: Z,
-messageId: x,
-roleId: v,
-transitionState: h,
-onViewBlockedProfileClick: T,
-showGuildProfile: p = !0,
-sourceAnalyticsLocations: g = []
-  } = e, N = n === f.ME ? void 0 : n, {
-analyticsLocations: C
+channelId: x,
+messageId: v,
+roleId: h,
+transitionState: T,
+onViewBlockedProfileClick: p,
+showGuildProfile: g = !0,
+sourceAnalyticsLocations: N = []
+  } = e, C = n === f.ME ? void 0 : n, {
+analyticsLocations: j
   } = (0, r.ZP)([
-...g,
+...N,
 t.Z.BLOCKED_PROFILE_MODAL
-  ]), j = (0, a.ZB)({
+  ]), A = (0, a.ZB)({
 layout: 'BLOCKED_PROFILE_MODAL',
 userId: s.id,
-guildId: N,
-channelId: Z,
-messageId: x,
-roleId: v,
-showGuildProfile: p
-  }), A = (0, c.ZP)(s.id, p ? N : void 0), O = l.createRef();
+guildId: C,
+channelId: x,
+messageId: v,
+roleId: h,
+showGuildProfile: g
+  }), O = (0, c.ZP)(s.id, g ? C : void 0), R = l.createRef();
   return (0, i.jsx)(r.Gt, {
-value: C,
+value: j,
 children: (0, i.jsx)(a.Mt, {
-  value: j,
+  value: A,
   children: (0, i.jsx)(o.ModalRoot, {
-    transitionState: h,
-    className: m.root,
+    transitionState: T,
+    className: S.root,
     hideShadow: !0,
-    'aria-label': E.Z.Messages.USER_PROFILE_MODAL,
-    children: (0, i.jsx)(u.Z, {
+    'aria-label': m.Z.Messages.USER_PROFILE_MODAL,
+    children: (0, i.jsx)(_.Z, {
       user: s,
-      displayProfile: A,
-      profileType: _.y0.FULL_SIZE,
-      ref: O,
+      displayProfile: O,
+      profileType: E.y0.FULL_SIZE,
+      ref: R,
       children: (0, i.jsxs)('div', {
-        className: m.container,
+        className: S.container,
         children: [
           (0, i.jsx)('img', {
             alt: '',
-            src: S,
-            className: m.previewForCollected,
+            src: Z,
+            className: S.previewForCollected,
             'aria-hidden': !0
           }),
-          (0, i.jsx)(I.tG, {
-            className: m.centeredButton,
-            action: 'VIEW_BLOCKED_PROFILE',
-            text: E.Z.Messages.VIEW_PROFILE,
-            autoFocus: !0,
-            fullWidth: !1,
-            onClick: () => {
-              null == T || T(), (0, d.pQ)({
+          (0, i.jsxs)('div', {
+            className: S.body,
+            children: [
+              (0, i.jsx)(u.Z, {
+                user: s,
+                guildId: C
+              }),
+              (0, i.jsx)(o.Heading, {
+                variant: 'heading-xl/bold',
+                className: S.header,
+                children: m.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
+              }),
+              (0, i.jsx)(o.Text, {
+                variant: 'text-md/medium',
+                children: m.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({
+                  username: s.username
+                })
+              }),
+              (0, i.jsx)(o.Text, {
+                variant: 'text-md/medium',
+                children: m.Z.Messages.USER_PROFILE_BLOCKED_MODAL_BODY_CONFIRMATION
+              }),
+              (0, i.jsx)(I.tG, {
+                className: S.centeredButton,
                 action: 'VIEW_BLOCKED_PROFILE',
-                analyticsLocations: C,
-                ...j
-              });
-            }
+                text: m.Z.Messages.VIEW_PROFILE,
+                autoFocus: !0,
+                fullWidth: !1,
+                onClick: () => {
+                  null == p || p(), (0, d.pQ)({
+                    action: 'VIEW_BLOCKED_PROFILE',
+                    analyticsLocations: j,
+                    ...A
+                  });
+                }
+              })
+            ]
           })
         ]
       })
