@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(592125),
   A = n(768943),
   R = n(43690),
-  O = n(962796),
-  x = n(767893),
+  x = n(962796),
+  O = n(767893),
   M = n(981631),
   v = n(689938),
   L = n(144754);
@@ -65,7 +65,7 @@ return a === _.Pr.ALL ? [
 ] : a === _.Pr.BOOKMARKS ? i : n;
   }), r = (0, d.e7)([A.Z], () => A.Z.getOverdueMessageReminderCount());
   return a.useEffect(() => () => {
-(0, O.Mf)();
+(0, x.Mf)();
   }, []), (0, i.jsx)(E.Dialog, {
 'aria-label': v.Z.Messages.FOR_LATER,
 children: (0, i.jsxs)('div', {
@@ -229,14 +229,14 @@ children: [
       label: v.Z.Messages.FOR_LATER_REMOVE,
       icon: E.TrashIcon,
       dangerous: !0,
-      onClick: () => t.saveData.type === u.J.REMINDER ? (0, O.bn)(t.saveData) : (0, R.h)(t.saveData)
+      onClick: () => t.saveData.type === u.J.REMINDER ? (0, x.bn)(t.saveData) : (0, R.h)(t.saveData)
     }, 'delete')
   })
 ]
   }) : (0, i.jsxs)('div', {
 className: L.messageContainer,
 children: [
-  (0, i.jsx)(x.Z, {
+  (0, i.jsx)(O.Z, {
     channel: s,
     jumpToMessage: l
   }),
@@ -269,7 +269,7 @@ jumpToMessage: a
 children: [
   (0, i.jsx)(h.s, {
     label: v.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
-    onClick: () => (0, O.Y_)(t.saveData.messageId, !t.complete),
+    onClick: () => (0, x.Y_)(t.saveData.messageId, !t.complete),
     children: (0, i.jsx)(E.Checkbox, {
       type: E.Checkbox.Types.INVERTED,
       value: t.complete,

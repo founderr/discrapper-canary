@@ -1,19 +1,19 @@
 n.d(t, {
   ZP: function() {
-return o;
+return a;
   },
   lY: function() {
 return s;
   }
 });
-var r = n(689938);
+var i = n(689938);
 
-function o(e) {
-  return e > 0 ? r.Z.Messages.EMBEDDED_ACTIVITIES_MAX_PARTICIPANTS.format({
+function a(e) {
+  return e > 0 ? i.Z.Messages.EMBEDDED_ACTIVITIES_MAX_PARTICIPANTS.format({
 count: e
-  }) : r.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS;
+  }) : i.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS;
 }
 
 function s(e) {
-  return e > 0 ? '1-'.concat(e) : r.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS_SHORT;
+  return e > 0 ? '1-'.concat(e) : i.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS_SHORT;
 }

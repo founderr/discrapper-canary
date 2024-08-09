@@ -6,20 +6,20 @@ return d;
 var i = n(735250);
 n(470079);
 var l = n(481060),
-  o = n(860719),
-  t = n(689938),
-  r = n(744224);
+  t = n(860719),
+  o = n(689938),
+  a = n(744224);
 
-function a(e) {
+function r(e) {
   let {
 content: s,
 heading: n
   } = e;
   return (0, i.jsxs)('div', {
-className: r.row,
+className: a.row,
 children: [
   null != n ? (0, i.jsx)(l.Heading, {
-    className: r.heading,
+    className: a.heading,
     variant: 'text-sm/normal',
     children: n
   }) : null,
@@ -40,26 +40,26 @@ listScrollerStyle: n
 hasMessageContent: d,
 hasGuildPresences: c,
 hasGuildMembers: u
-  } = (0, o.w)({
+  } = (0, t.w)({
 flags: s
   });
   if (null == s)
 return null;
   let _ = [];
-  return d && _.push((0, i.jsx)(a, {
-heading: t.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
-content: t.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
-  })), c && _.push((0, i.jsx)(a, {
-heading: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
-content: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
-  })), u && _.push((0, i.jsx)(a, {
-heading: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
-content: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
+  return d && _.push((0, i.jsx)(r, {
+heading: o.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
+content: o.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
+  })), c && _.push((0, i.jsx)(r, {
+heading: o.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
+content: o.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
+  })), u && _.push((0, i.jsx)(r, {
+heading: o.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
+content: o.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
   })), _.length > 0 && _.push((0, i.jsx)('div', {
-className: r.divider,
+className: a.divider,
 children: (0, i.jsx)(l.FormDivider, {})
-  })), _.push((0, i.jsx)(a, {
-content: t.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
+  })), _.push((0, i.jsx)(r, {
+content: o.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
   helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975'
 })
   })), (0, i.jsx)(l.ScrollerThin, {

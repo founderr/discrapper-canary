@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = t(735250);
@@ -8,24 +8,25 @@ t(470079);
 var a = t(481060),
   l = t(346610),
   r = t(868643),
-  o = t(996861),
-  s = t(689938);
+  o = t(245216),
+  s = t(996861),
+  u = t(689938);
 
-function u(e, n) {
+function d(e, n) {
   let t = (0, r.a)(e),
 {
-  canForwardMessages: u
+  canForwardMessages: d
 } = (0, l.yk)({
   location: 'MessageActionsMenu'
 }, {
   autoTrackExposure: !1
 });
-  return t && u ? (0, i.jsx)(a.MenuItem, {
+  return t && d ? (0, i.jsx)(a.MenuItem, {
 id: 'forward',
-label: s.Z.Messages.MESSAGE_ACTION_FORWARD,
-icon: a.ChatArrowRightIcon,
+label: u.Z.Messages.MESSAGE_ACTION_FORWARD,
+icon: o.Z,
 action: () => {
-  (0, o.ts)(n, e);
+  (0, s.ts)(n, e);
 }
   }) : null;
 }

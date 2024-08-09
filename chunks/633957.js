@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return x;
+return O;
   }
 }), n(47120);
 var i = n(735250),
@@ -26,17 +26,17 @@ var i = n(735250),
   S = n(226378),
   A = n(701488),
   R = n(689938),
-  O = n(606472);
+  x = n(606472);
 
-function x(e) {
+function O(e) {
   var t;
   let {
 application: n,
-channelId: x,
+channelId: O,
 guildId: M
   } = e, [v, L] = a.useState(!1), {
 analyticsLocations: Z
-  } = (0, T.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), b = (0, _.Z)(), D = (0, s.e7)([f.Z], () => f.Z.getChannel(x)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : x, U = (0, s.e7)([N.default], () => N.default.getId()), {
+  } = (0, T.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), b = (0, _.Z)(), D = (0, s.e7)([f.Z], () => f.Z.getChannel(O)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : O, U = (0, s.e7)([N.default], () => N.default.getId()), {
 embeddedActivity: y,
 currentEmbeddedActivity: B
   } = (0, s.cj)([o.ZP], () => ({
@@ -54,7 +54,7 @@ let e = new h.Z(n);
 return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;
   }, [n]), w = (0, d.s5)({
 userId: U,
-channelId: x,
+channelId: O,
 application: F
   }), V = null == y, H = (0, S.NL)({
 embeddedActivity: y,
@@ -67,7 +67,7 @@ try {
   V ? await (0, u.Z)({
     targetApplicationId: n.id,
     currentEmbeddedApplication: b,
-    channelId: x,
+    channelId: O,
     guildId: M,
     locationObject: P.location,
     embeddedActivitiesManager: E.Z,
@@ -75,7 +75,7 @@ try {
   }) : await (0, c.Z)({
     applicationId: y.applicationId,
     currentEmbeddedApplication: b,
-    activityChannelId: x,
+    activityChannelId: O,
     locationObject: P.location,
     embeddedActivitiesManager: E.Z,
     analyticsLocations: Z
@@ -85,14 +85,14 @@ try {
 }
   }, W = H.disabled ? R.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
   return (0, i.jsx)('div', {
-className: O.container,
+className: x.container,
 children: (0, i.jsxs)('div', {
-  className: O.contentContainer,
+  className: x.contentContainer,
   children: [
     (0, i.jsx)('div', {
-      className: O.headerContainer,
+      className: x.headerContainer,
       children: V ? (0, i.jsx)('div', {
-        className: O.__invalid_endedNote,
+        className: x.__invalid_endedNote,
         children: (0, i.jsx)(r.Text, {
           variant: 'text-md/medium',
           children: W
@@ -105,11 +105,11 @@ children: (0, i.jsxs)('div', {
       })
     }),
     (0, i.jsxs)('div', {
-      className: O.footerContainer,
+      className: x.footerContainer,
       children: [
         (0, i.jsx)(r.Tooltip, {
           text: H.tooltip,
-          tooltipContentClassName: O.tooltipContent,
+          tooltipContentClassName: x.tooltipContent,
           children: e => {
             let {
               onClick: t,

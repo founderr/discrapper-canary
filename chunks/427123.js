@@ -44,7 +44,7 @@ N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrent
   }
   return e;
 }
-class O extends(i = c.ZP.Store) {
+class x extends(i = c.ZP.Store) {
   initialize() {
 var e;
 this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = u.K.get(p)) && void 0 !== e ? e : A;
@@ -53,12 +53,12 @@ this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = u.K.get(p)) && void 0 !== e ? e 
 return o().values(g);
   }
 }
-r = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in(a = O) ? Object.defineProperty(a, s, {
+r = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in(a = x) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = r, t.Z = new O(d.Z, {
+}) : a[s] = r, t.Z = new x(d.Z, {
   LOGOUT: function() {
 g = {}, S = {};
   },

@@ -15,8 +15,8 @@ let f = {},
   b = [],
   g = new Set(),
   C = {},
-  A = {},
-  O = new Set();
+  O = {},
+  A = new Set();
 
 function v(e) {
   let t = E.Z.createFromServer(e),
@@ -32,7 +32,7 @@ f[n] = e,
       return;
     let i = n.expiresAt.valueOf() - o()().valueOf();
     if (i <= 0)
-      S.delete(t), delete f[t], P.emitChange();
+      S.delete(t), delete f[t], F.emitChange();
     else {
       let n = f[t];
       if (null == n)
@@ -45,7 +45,7 @@ f[n] = e,
 
 function R(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  if (t && !O.has(e.channel_id))
+  if (t && !A.has(e.channel_id))
 return !1;
   let n = (0, h.Fp)(e) ? (0, h.Q_)((null == e ? void 0 : e.embeds) != null ? null == e ? void 0 : e.embeds[0].url : void 0) : (0, h.Q_)(e.content);
   return 0 !== n.length && (n.forEach(e => {
@@ -77,7 +77,7 @@ function y(e) {
 channelId: t,
 messages: n
   } = e;
-  O.add(t), n.forEach(e => R(e, !0));
+  A.add(t), n.forEach(e => R(e, !0));
 }
 
 function L(e) {
@@ -94,7 +94,7 @@ let t = S.get(e);
 return null == t || t.isExpired() ? null : t;
   }
   getError(e) {
-return null != e ? A[e] : null;
+return null != e ? O[e] : null;
   }
   getForGifterSKUAndPlan(e, t, n) {
 return Array.from(S.values()).filter(i => i.userId === e && i.skuId === t && (null == n || i.subscriptionPlanId === n) && !i.isExpired());
@@ -130,15 +130,15 @@ l = 'GiftCodeStore', (s = 'displayName') in(r = D) ? Object.defineProperty(r, s,
   configurable: !0,
   writable: !0
 }) : r[s] = l;
-let P = new D(c.Z, {
+let F = new D(c.Z, {
   CONNECTION_OPEN: function() {
-return O.clear(), !1;
+return A.clear(), !1;
   },
   CHANNEL_SELECT: function(e) {
 let {
   channelId: t
 } = e;
-return null != t && O.add(t), !1;
+return null != t && A.add(t), !1;
   },
   GIFT_CODE_RESOLVE: N,
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {
@@ -186,7 +186,7 @@ let {
 } = e;
 I = I.filter(e => e !== t);
 let i = S.get(t);
-if (A[t] = n, null != i)
+if (O[t] = n, null != i)
   switch (n.code) {
     case p.evJ.UNKNOWN_GIFT_CODE:
       S.set(t, i.set('revoked', !0));
@@ -279,4 +279,4 @@ Object.values(t).map(e => {
 });
   }
 });
-t.Z = P;
+t.Z = F;

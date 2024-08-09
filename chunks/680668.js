@@ -27,9 +27,9 @@ function h(e) {
   guild: S,
   invite: A,
   author: R,
-  currentUserId: O
+  currentUserId: x
 } = e,
-x = O === R.id,
+O = x === R.id,
 {
   channel: M,
   approximate_member_count: v,
@@ -53,7 +53,7 @@ S.premiumTier = e;
   let k = b ? p : g,
 G = (0, _.e)({
   isVoiceChannel: j,
-  isOwnInvite: x,
+  isOwnInvite: O,
   isGuest: y,
   isHubGuild: B,
   isStage: U,

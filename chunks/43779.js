@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(393238),
   u = n(607070),
   _ = n(113434),
-  E = n(566078),
-  h = n(472144),
+  h = n(566078),
+  E = n(472144),
   m = n(644646),
   I = n(69439),
   g = n(46140),
@@ -32,7 +32,7 @@ isHovering: A,
 contentPosition: v,
 rowIndex: Z,
 onReceiveErrorHints: L
-  } = e, O = E.r.build(C.config).defaultReward.messages.name, R = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {
+  } = e, O = h.r.build(C.config).defaultReward.messages.name, R = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {
 ref: x,
 scrollHeight: b
   } = (0, d.Z)(), P = 104 !== b, {
@@ -96,7 +96,7 @@ children: [
                 autoplay: !1,
                 shouldAnimate: !B
               }),
-              (0, i.jsx)(h.Z, {
+              (0, i.jsx)(E.Z, {
                 quest: C,
                 size: 76,
                 percentComplete: j,

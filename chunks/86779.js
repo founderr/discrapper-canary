@@ -1,8 +1,8 @@
 n(47120), n(315314), n(610138), n(216116), n(78328), n(815648), n(773603);
 var s, r, i = n(735250),
   a = n(470079),
-  o = n(593473),
-  l = n(756647),
+  l = n(593473),
+  o = n(756647),
   c = n(442837),
   u = n(544891),
   d = n(433517),
@@ -34,7 +34,7 @@ t.Z = () => {
 {
   fingerprint: t,
   handoff_token: n
-} = (0, o.parse)(window.location.search),
+} = (0, l.parse)(window.location.search),
 s = Array.isArray(t) ? t.length > 1 ? t[0] : null : t,
 r = null != s ? s : null !== e ? e : void 0;
   a.useEffect(() => {
@@ -49,7 +49,7 @@ e
   let [m, R] = a.useState(null), O = a.useCallback(e => {
 R(e), I.default.track(N.rMx.MOBILE_WEB_HANDOFF_FAILURE, {
   reason: e,
-  fingerprint: (0, l.K)(r)
+  fingerprint: (0, o.K)(r)
 }, {
   fingerprint: r
 });
@@ -76,7 +76,7 @@ r
     I.default.track(N.rMx.LOGIN_SUCCESSFUL, {
       source: N.uRl.MOBILE_WEB_HANDOFF,
       is_new_user: !1,
-      fingerprint: (0, l.K)(r)
+      fingerprint: (0, o.K)(r)
     });
     let e = new URL(window.location.href),
       t = new URLSearchParams(e.search);
@@ -132,7 +132,7 @@ children: [
       n.delete('fingerprint'), n.delete('handoff_token');
       let s = new URLSearchParams();
       s.set('redirect', encodeURIComponent(window.location.pathname + n.toString())), s.set('key', e), s.set('fingerprint', r), t.search = s.toString(), I.default.track(N.rMx.DEEP_LINK_CLICKED, {
-        fingerprint: (0, l.K)(r),
+        fingerprint: (0, o.K)(r),
         source: 'mobile_web_handoff',
         destination: N.x0X
       }, {

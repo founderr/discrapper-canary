@@ -5,8 +5,8 @@ return P;
 }), n(47120);
 var s, r, i = n(735250),
   a = n(470079),
-  o = n(338545),
-  l = n(442837),
+  l = n(338545),
+  o = n(442837),
   c = n(481060),
   u = n(447543),
   d = n(587444),
@@ -81,15 +81,15 @@ children: t,
 cardChildren: n,
 startAnimHeightPx: s,
 innerStyle: r,
-...l
+...o
   } = e, {
 invite: u
-  } = l, [d, h] = a.useState(R(u)), {
+  } = o, [d, h] = a.useState(R(u)), {
 ref: E,
 height: g
   } = (0, _.Z)(), p = (0, c.useSpring)({
 height: null != g && 0 !== g ? ''.concat(g, 'px') : ''.concat(s, 'px'),
-config: o.config.stiff
+config: l.config.stiff
   });
   return a.useEffect(() => {
 let e = R(u);
@@ -97,11 +97,11 @@ e !== d && h(e);
   }, [
 u,
 d
-  ]), (0, i.jsxs)(o.animated.div, {
+  ]), (0, i.jsxs)(l.animated.div, {
 className: Z.inviteCard,
 style: p,
 children: [
-  (0, i.jsx)(o.animated.div, {
+  (0, i.jsx)(l.animated.div, {
     className: Z.inviteChildContainer,
     style: p,
     children: (0, i.jsx)('section', {
@@ -206,7 +206,7 @@ function P(e) {
   let {
 inviteKey: t,
 transitionTo: n
-  } = e, s = (0, l.e7)([p.Z], () => p.Z.getInvite(t));
+  } = e, s = (0, o.e7)([p.Z], () => p.Z.getInvite(t));
   return a.useEffect(() => {
 (0, E.e)('invite_mobile');
   }, []), a.useEffect(() => {
@@ -231,10 +231,10 @@ onAcceptInvite: e => {
       inviter_id: null == n ? void 0 : null === (i = n.inviter) || void 0 === i ? void 0 : i.id
     });
     let a = null != n && n.state !== C.r2o.EXPIRED && n.state !== C.r2o.BANNED ? t : void 0,
-      o = g.default.getFingerprint(),
-      l = null != o ? o : g.default.getId(),
+      l = g.default.getFingerprint(),
+      o = null != l ? l : g.default.getId(),
       c = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
-    u.Z.openApp(a, void 0, l, void 0, c);
+    u.Z.openApp(a, void 0, o, void 0, c);
   }(e, t, s);
 },
 transitionTo: n

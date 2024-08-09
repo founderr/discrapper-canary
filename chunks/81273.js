@@ -21,8 +21,8 @@ var i = n(735250),
   S = n(584825),
   A = n(697227),
   R = n(934826),
-  O = n(896083),
-  x = n(939872),
+  x = n(896083),
+  O = n(939872),
   M = n(265985),
   v = n(293810),
   L = n(981631),
@@ -52,7 +52,7 @@ K = (null == F ? void 0 : F.trialId) != null,
 {
   loading: z,
   getTrialPurchaseEligibility: Q
-} = (0, O.F)(),
+} = (0, x.F)(),
 q = (0, S.oC)(null == e ? void 0 : e.id),
 {
   analyticsLocations: X
@@ -105,7 +105,7 @@ k
     initialPlanId: U.id,
     skuId: U.sku_id,
     planGroup: H,
-    renderPurchaseConfirmation: (n, a) => $ ? (0, i.jsx)(x.m, {
+    renderPurchaseConfirmation: (n, a) => $ ? (0, i.jsx)(O.m, {
       listing: e,
       onClose: a,
       guildId: t

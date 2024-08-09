@@ -3,8 +3,8 @@ var s = n(735250),
   r = n(470079),
   i = n(954955),
   a = n.n(i),
-  o = n(748780),
-  l = n(873546),
+  l = n(748780),
+  o = n(873546),
   c = n(477690),
   u = n(481060),
   d = n(624138),
@@ -30,7 +30,7 @@ tension: 130
 t.Z = function(e) {
   return class extends r.Component {
 componentDidMount() {
-  !l.tq && (window.addEventListener('resize', this.handleResizeDebounced), this.handleResize());
+  !o.tq && (window.addEventListener('resize', this.handleResizeDebounced), this.handleResize());
 }
 componentWillUnmount() {
   clearTimeout(this.timeout), window.removeEventListener('resize', this.handleResizeDebounced);
@@ -45,7 +45,7 @@ componentWillLeave(e) {
   this.state.shouldAnimate ? this.animateTo(g.START, e) : e();
 }
 animateTo(e, t) {
-  o.Z.spring(this.anim, {
+  l.Z.spring(this.anim, {
     toValue: e,
     ...p
   }).start(t);
@@ -91,7 +91,7 @@ render() {
         let {
           reducedMotion: n
         } = t;
-        return (0, s.jsx)(o.Z.div, {
+        return (0, s.jsx)(l.Z.div, {
           style: this.getAnimatedStyle(n.enabled),
           children: (0, s.jsx)(e, {
             ...this.props
@@ -102,8 +102,8 @@ render() {
   });
 }
 constructor(...e) {
-  super(...e), h(this, 'timeout', void 0), h(this, 'anim', new o.Z.Value(g.START)), h(this, 'state', {
-    shouldAnimate: !l.tq
+  super(...e), h(this, 'timeout', void 0), h(this, 'anim', new l.Z.Value(g.START)), h(this, 'state', {
+    shouldAnimate: !o.tq
   }), h(this, 'handleResize', () => {
     let e = window.innerWidth > E;
     !this.state.shouldAnimate && e && this.anim.setValue(g.END), this.setState({

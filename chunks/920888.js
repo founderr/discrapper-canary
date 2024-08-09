@@ -51,8 +51,8 @@ let {
   reactionClassName: S,
   useChatFontScaling: A,
   forceHideReactionCreates: R,
-  remainingReactions: O,
-  combinedReactions: x,
+  remainingReactions: x,
+  combinedReactions: O,
   visibleReactionsCount: M
 } = this.props, {
   disableTransitionAppear: v
@@ -81,7 +81,7 @@ return (0, i.jsxs)(l.W, {
   }),
   children: [
     (0, i.jsx)(E.l, {
-      reactions: x,
+      reactions: O,
       message: e,
       readOnly: n,
       isLurking: a,
@@ -91,7 +91,7 @@ return (0, i.jsxs)(l.W, {
       useChatFontScaling: A,
       className: S
     }),
-    O > 0 && (0, i.jsx)(o.Clickable, {
+    x > 0 && (0, i.jsx)(o.Clickable, {
       onClick: t => {
         t.stopPropagation(), (0, I.op)(C, e);
       },
@@ -102,7 +102,7 @@ return (0, i.jsxs)(l.W, {
         variant: 'text-sm/normal',
         children: [
           '+',
-          O
+          x
         ]
       })
     }),

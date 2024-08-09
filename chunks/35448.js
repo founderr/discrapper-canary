@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(683301),
   u = n(540742),
   _ = n(89182),
-  E = n(393596),
-  h = n(689938),
+  h = n(393596),
+  E = n(689938),
   m = n(90615);
 
 function I(e) {
@@ -53,7 +53,7 @@ let {
 } = e;
 return t;
   }, s.Z), g = (0, r.e7)([d.ZP], () => d.ZP.getTopCategoryCounts(n)), p = (0, r.e7)([o.Z], () => o.Z.getCategoryName(c)), T = a.useCallback(e => {
-(0, E.I)({
+(0, h.I)({
   loadId: t,
   categoryId: Number(e)
 });
@@ -73,7 +73,7 @@ children: [
   (0, i.jsx)(l.Text, {
     variant: 'text-sm/medium',
     color: 'text-secondary',
-    children: h.Z.Messages.GLOBAL_DISCOVERY_SHOW
+    children: E.Z.Messages.GLOBAL_DISCOVERY_SHOW
   }),
   (0, i.jsx)(_.Z, {
     className: m.filter,
@@ -81,7 +81,7 @@ children: [
     title: p,
     onSelect: T,
     selected: ''.concat(c),
-    'aria-label': h.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
+    'aria-label': E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
   })
 ]
   });

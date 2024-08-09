@@ -1,43 +1,43 @@
 t(733860);
 var l = t(735250),
-  a = t(470079),
-  r = t(780384),
-  i = t(481060),
+  i = t(470079),
+  a = t(780384),
+  r = t(481060),
   s = t(197344),
   o = t(526167),
   u = t(73117),
   c = t(787462),
   d = t(70097),
   p = t(981631),
-  x = t(988868),
-  m = t(554355),
-  h = t(991989),
-  f = t(635507),
-  N = t(470794),
+  m = t(988868),
+  h = t(554355),
+  f = t(991989),
+  x = t(635507),
+  _ = t(470794),
   g = t(886777);
 
-function j(e) {
+function N(e) {
   let {
 movDark: n = u,
 movLight: t = c,
-mp4Dark: a = x,
-mp4Light: r = f,
-pngDark: i = m,
-pngLight: s = N,
-webmDark: d = h,
-webmLight: j = g
-  } = e, Z = (0, o.vu)(), v = [
+mp4Dark: i = m,
+mp4Light: a = x,
+pngDark: r = h,
+pngLight: s = _,
+webmDark: d = f,
+webmLight: N = g
+  } = e, v = (0, o.vu)(), E = [
 (0, l.jsx)('source', {
-  src: a,
+  src: i,
   type: 'video/mp4'
 }, 'mp4'),
 (0, l.jsx)('img', {
   alt: '',
-  src: i
+  src: r
 }, 'png')
-  ], I = [
+  ], Z = [
 (0, l.jsx)('source', {
-  src: r,
+  src: a,
   type: 'video/mp4'
 }, 'mp4'),
 (0, l.jsx)('img', {
@@ -45,26 +45,26 @@ webmLight: j = g
   src: s
 }, 'png')
   ];
-  return (Z > 52 || -1 === Z) && (v.unshift((0, l.jsx)('source', {
+  return (v > 52 || -1 === v) && (E.unshift((0, l.jsx)('source', {
 src: d,
 type: 'video/webm'
-  }, 'webm')), I.unshift((0, l.jsx)('source', {
-src: j,
+  }, 'webm')), Z.unshift((0, l.jsx)('source', {
+src: N,
 type: 'video/webm'
-  }, 'webm'))), (0, o.rO)() && (v.unshift((0, l.jsx)('source', {
+  }, 'webm'))), (0, o.rO)() && (E.unshift((0, l.jsx)('source', {
 src: n,
 type: 'video/mp4'
-  }, 'hevc')), I.unshift((0, l.jsx)('source', {
+  }, 'hevc')), Z.unshift((0, l.jsx)('source', {
 src: t,
 type: 'video/mp4'
   }, 'hevc'))), {
-[p.BRd.DARK]: v,
-[p.BRd.LIGHT]: I
+[p.BRd.DARK]: E,
+[p.BRd.LIGHT]: Z
   };
 }
-let Z = s.Z.getAppSpinnerSources(),
-  v = null != Z ? j(Z) : null,
-  I = j({});
+let v = s.Z.getAppSpinnerSources(),
+  E = null != v ? N(v) : null,
+  Z = N({});
 n.Z = e => {
   var n;
   let {
@@ -74,20 +74,20 @@ setRef: o,
 className: u,
 onReady: c
   } = e, {
-theme: x
-  } = (0, i.useThemeContext)(), {
-reducedMotion: m
-  } = a.useContext(i.AccessibilityPreferencesContext), h = I;
-  null != v && (h = v);
-  let f = null !== (n = h[(0, r.wj)(x) ? p.BRd.DARK : p.BRd.LIGHT]) && void 0 !== n ? n : h[p.BRd.DARK];
+theme: m
+  } = (0, r.useThemeContext)(), {
+reducedMotion: h
+  } = i.useContext(r.AccessibilityPreferencesContext), f = Z;
+  null != E && (f = E);
+  let x = null !== (n = f[(0, a.wj)(m) ? p.BRd.DARK : p.BRd.LIGHT]) && void 0 !== n ? n : f[p.BRd.DARK];
   return (0, l.jsx)(d.Z, {
 ref: o,
 onLoadedData: c,
 className: u,
-loop: !m.enabled && t,
-autoPlay: !m.enabled && s,
+loop: !h.enabled && t,
+autoPlay: !h.enabled && s,
 playsInline: !0,
 'data-testid': 'app-spinner',
-children: f
-  }, x);
+children: x
+  }, m);
 };

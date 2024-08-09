@@ -26,12 +26,12 @@ var i = n(735250),
   S = n(981631),
   A = n(689938),
   R = n(104219);
-let O = {
+let x = {
   left: 4,
   right: -12
 };
 
-function x(e) {
+function O(e) {
   var t;
   let {
 channel: n,
@@ -47,7 +47,7 @@ if ('ArrowLeft' === e.key) {
 }
   }, [n.id]);
   return (0, i.jsx)(c.FocusRing, {
-offset: O,
+offset: x,
 children: (0, i.jsxs)('div', {
   className: R.messageContainer,
   onKeyDown: E,
@@ -85,13 +85,13 @@ enabled: m
 location: '20e3b0_1'
   }, {
 autoTrackExposure: !1
-  }), p = T.jU.useSetting(), O = (0, o.e7)([N.Z], () => N.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)), M = (0, E.P1)(s), v = !1, L = 0 === a.messages.length || r()(a.messages[0].timestamp).isSame(r()(), 'day'), Z = null !== (n = null === (t = f.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
+  }), p = T.jU.useSetting(), x = (0, o.e7)([N.Z], () => N.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)), M = (0, E.P1)(s), v = !1, L = 0 === a.messages.length || r()(a.messages[0].timestamp).isSame(r()(), 'day'), Z = null !== (n = null === (t = f.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n, P = [];
   if (!a.collapsed) {
 let e = null,
   t = null,
   n = a.messages.slice(0, g.hC);
 n.forEach(n => {
-  if (!(0, d.Z)(n, O)) {
+  if (!(0, d.Z)(n, x)) {
     if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
       let t = (0, C.vc)(n.timestamp, 'LL');
       P.push((0, i.jsx)(I.Z, {
@@ -100,7 +100,7 @@ n.forEach(n => {
       }, t)), e = r()(n.timestamp);
     }
     let a = null == t || (0, _.Z)(s, t, n);
-    t = n, v = v || (0, E.DQ)(n), P.push((0, i.jsx)(x, {
+    t = n, v = v || (0, E.DQ)(n), P.push((0, i.jsx)(O, {
       channel: s,
       message: n,
       compact: p,

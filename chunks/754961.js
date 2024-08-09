@@ -1,6 +1,6 @@
 n.d(t, {
   T: function() {
-return h;
+return E;
   },
   i: function() {
 return m;
@@ -17,17 +17,17 @@ var i = n(735250),
   u = n(689938),
   _ = n(206240);
 
-function E(e) {
+function h(e) {
   let {
 index: t,
 onClick: n,
 name: s,
 isActive: d,
-animate: E,
-fillBackgroundColor: h,
+animate: h,
+fillBackgroundColor: E,
 hasError: m
-  } = e, I = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY), g = a.useMemo(() => (0, c.j1)(h, I.hex()), [
-h,
+  } = e, I = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY), g = a.useMemo(() => (0, c.j1)(E, I.hex()), [
+E,
 I
   ]), p = null != g, T = (0, o.useSpring)({
 transform: d ? 'translateX(0%)' : 'translateX(-100%)',
@@ -35,7 +35,7 @@ config: {
   ...l.config.stiff,
   clamp: !0
 }
-  }, E ? 'respect-motion-settings' : 'animate-never'), S = (0, i.jsxs)(i.Fragment, {
+  }, h ? 'respect-motion-settings' : 'animate-never'), S = (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(o.Text, {
     variant: 'text-sm/medium',
@@ -89,7 +89,7 @@ children: e => (0, i.jsxs)(o.Clickable, {
   });
 }
 
-function h(e) {
+function E(e) {
   let {
 steps: t,
 currentStepIndex: n,
@@ -108,7 +108,7 @@ children: t.map(e => {
     name: r,
     hasError: l
   } = e;
-  return (0, i.jsx)(E, {
+  return (0, i.jsx)(h, {
     name: r,
     onClick: t <= a ? () => s(t) : void 0,
     isActive: t <= n,
@@ -128,8 +128,8 @@ isBackDisabled: n,
 isNextDisabled: a,
 onNextClick: s,
 onBackClick: c,
-nextButtonBackgroundColor: E,
-nextButtonClassName: h,
+nextButtonBackgroundColor: h,
+nextButtonClassName: E,
 nextButtonAnimationStyle: m
   } = e;
   return (0, i.jsxs)('div', {
@@ -146,8 +146,8 @@ children: [
   (0, i.jsx)(l.animated.div, {
     style: m,
     children: (0, i.jsx)(d.Z, {
-      className: h,
-      themeColor: E,
+      className: E,
+      themeColor: h,
       color: o.Button.Colors.BRAND,
       look: o.Button.Looks.FILLED,
       size: o.Button.Sizes.MEDIUM,

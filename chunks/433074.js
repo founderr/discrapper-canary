@@ -29,7 +29,7 @@ function S(e) {
   let {
 code: S,
 message: A
-  } = e, [R, O, x] = (0, r.Wu)([h.Z], () => [
+  } = e, [R, x, O] = (0, r.Wu)([h.Z], () => [
 h.Z.getApplication(S),
 h.Z.isInvalidApplication(S),
 h.Z.getApplicationFetchState(S)
@@ -42,7 +42,7 @@ e && P(!0);
   a.useEffect(() => {
 (0, T.gZ)(S);
   }, [S]), a.useEffect(() => {
-Z && x === h.M.FETCHED && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+Z && O === h.M.FETCHED && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
   application_id: S,
   device_platform: s.tq ? 'mobile_web' : 'desktop_web',
   sender_user_id: A.author.id,
@@ -56,9 +56,9 @@ null == L ? void 0 : L.id,
 A.channel_id,
 v,
 A.author.id,
-x
+O
   ]), a.useEffect(() => {
-Z && O && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+Z && x && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
   device_platform: s.tq ? 'mobile_web' : 'desktop_web',
   sender_user_id: A.author.id,
   guild_id: v,
@@ -67,7 +67,7 @@ Z && O && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
   }, [
 Z,
 v,
-O,
+x,
 A.author.id,
 A.channel_id
   ]);
@@ -87,7 +87,7 @@ I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
   }
 });
   };
-  if (O)
+  if (x)
 return (0, i.jsxs)(c.Z, {
   containerRef: D,
   children: [
@@ -111,7 +111,7 @@ return (0, i.jsxs)(c.Z, {
     })
   ]
 });
-  if (null == R || x === h.M.FETCHING)
+  if (null == R || O === h.M.FETCHING)
 return (0, i.jsxs)(c.Z, {
   containerRef: D,
   children: [

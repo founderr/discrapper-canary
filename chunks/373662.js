@@ -36,7 +36,7 @@ buttonClassName: S,
 children: A,
 ...R
   } = e, {
-canShowReactionsOnMessageHover: O
+canShowReactionsOnMessageHover: x
   } = u.Z.useExperiment({
 location: 'HoverBar'
   }, {
@@ -60,7 +60,7 @@ children: e => {
     children: [
       (0, i.jsxs)(c.zx, {
         className: s()(S, {
-          [d.hoverBarButton]: O
+          [d.hoverBarButton]: x
         }),
         onMouseEnter: a,
         onMouseLeave: u,

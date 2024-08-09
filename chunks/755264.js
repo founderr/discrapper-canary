@@ -10,7 +10,7 @@ var i = n(392711),
   u = n(981631);
 let _ = 'selectedChannelGuildFrecency';
 
-function E(e) {
+function h(e) {
   var t;
   let n;
   (t = n || (n = {})).IMAGE = 'IMAGE', t.VIDEO = 'VIDEO';
@@ -37,10 +37,10 @@ return a.format = 'IMAGE' === t.format ? r.EO.IMAGE : 'VIDEO' === t.format ? r.E
 };
   });
 }
-let h = [{
+let E = [{
 version: 2,
 run(e) {
-  let t = E(1);
+  let t = h(1);
   if (0 === t.length)
     return !1;
   for (let {
@@ -98,7 +98,7 @@ cleanup() {
 version: 6,
 run(e) {
   null == e.favoriteGifs && (e.favoriteGifs = r.wK.create()), null == e.favoriteGifs.gifs && (e.favoriteGifs.gifs = {});
-  let t = E(1);
+  let t = h(1);
   if (0 === t.length)
     return !1;
   a()(e.favoriteGifs.gifs).values().sortBy('order').forEach((e, n) => e.order = t.length + 1 + n);
@@ -193,4 +193,4 @@ run(e) {
 cleanup() {}
   }
 ];
-t.Z = h;
+t.Z = E;

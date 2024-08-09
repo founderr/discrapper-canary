@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(252618),
   u = n(212476),
   _ = n(374939),
-  E = n(611928),
-  h = n(791734),
+  h = n(611928),
+  E = n(791734),
   m = n(63063),
   I = n(113434),
   g = n(709158),
@@ -55,18 +55,18 @@ location: N.Z.Messages.QUESTS
   }), t) ? (0, i.jsxs)('div', {
 className: A.container,
 children: [
-  (0, i.jsxs)(E.ZP, {
+  (0, i.jsxs)(h.ZP, {
     children: [
       (0, i.jsx)('div', {
         className: A.dragRegion
       }),
-      (0, i.jsx)(E.z6, {
+      (0, i.jsx)(h.z6, {
         scrollPosition: R
       }),
-      (0, i.jsx)(E.aV, {
+      (0, i.jsx)(h.aV, {
         icon: l.QuestsIcon
       }),
-      (0, i.jsx)(h.Z, {
+      (0, i.jsx)(E.Z, {
         tabs: v,
         selectedTab: Z,
         onTabSelect: L

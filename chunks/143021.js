@@ -3,7 +3,7 @@ n.d(t, {
 return m;
   },
   f: function() {
-return h;
+return E;
   }
 });
 var i = n(470079),
@@ -16,9 +16,9 @@ var i = n(470079),
   d = n(900849),
   u = n(540742),
   _ = n(72881);
-let E = [];
+let h = [];
 
-function h(e) {
+function E(e) {
   let {
 loadId: t
   } = e, n = (0, u.B)(e => {
@@ -35,7 +35,7 @@ return t;
 guilds: l,
 loading: o
   } = (0, r.e7)([c.Z], () => null == n ? {
-guilds: E,
+guilds: h,
 loading: !0
   } : c.Z.getResults(n, s)), d = i.useCallback(() => {
 var e;
@@ -79,7 +79,7 @@ let {
   isSearchVisible: t
 } = e;
 return t;
-  }, a.Z), E = (0, u.B)(e => {
+  }, a.Z), h = (0, u.B)(e => {
 let {
   searchQuery: t
 } = e;
@@ -88,7 +88,7 @@ return t;
   i.useEffect(() => {
 l.Ue(), (0, o.le)();
   }, []);
-  let h = i.useCallback(e => {
+  let E = i.useCallback(e => {
   (0, s.j)(() => u.B.setState({
     searchQuery: e
   }));
@@ -118,8 +118,8 @@ I = i.useCallback(() => {
   t
 ]);
   return i.useMemo(() => ({
-searchQuery: E,
-onSearchTextChange: h,
+searchQuery: h,
+onSearchTextChange: E,
 onClearSearch: m,
 onSearchSubmit: I,
 isSearchVisible: c
@@ -127,7 +127,7 @@ isSearchVisible: c
 c,
 m,
 I,
-h,
-E
+E,
+h
   ]);
 }

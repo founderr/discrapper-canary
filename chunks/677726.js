@@ -1,36 +1,36 @@
-n.d(t, {
+t.d(n, {
   Z: function() {
-return c;
+return a;
   }
 });
-var i = n(735250);
-n(470079);
-var l = n(120356),
-  r = n.n(l),
-  o = n(481060),
-  a = n(471731),
-  s = n(116711);
+var i = t(735250);
+t(470079);
+var l = t(120356),
+  r = t.n(l),
+  s = t(481060),
+  o = t(471731),
+  c = t(116711);
 
-function c(e) {
+function a(e) {
   let {
-title: t,
-className: n,
+title: n,
+className: t,
 ref: l
   } = e;
   return (0, i.jsxs)('div', {
-className: r()(s.header, n),
+className: r()(c.header, t),
 ref: l,
 children: [
-  (0, i.jsx)(a.Z, {
-    className: s.logo
+  (0, i.jsx)(o.Z, {
+    className: c.logo
   }),
-  (0, i.jsx)(o.HeadingLevel, {
+  (0, i.jsx)(s.HeadingLevel, {
     forceLevel: 1,
-    children: (0, i.jsx)(o.Heading, {
-      className: s.title,
+    children: (0, i.jsx)(s.Heading, {
+      className: c.title,
       variant: 'heading-md/semibold',
       color: 'header-secondary',
-      children: t
+      children: n
     })
   })
 ]

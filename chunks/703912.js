@@ -13,8 +13,8 @@ var i = n(664751),
   d = n(570140),
   u = n(979200),
   _ = n(489863),
-  E = n(166148),
-  h = n(307643),
+  h = n(166148),
+  E = n(307643),
   m = n(973616),
   I = n(594174),
   g = n(630388),
@@ -55,7 +55,7 @@ throw new T.Z({
 throw new T.Z({
   errorCode: f.lTL.OAUTH2_ERROR
 }, 'Client is not logged in');
-  let j = m.Z.createFromServer(await (0, h.UM)(S)),
+  let j = m.Z.createFromServer(await (0, E.UM)(S)),
 U = null != j && (0, g.yE)(j.flags, f.udG.EMBEDDED) && (null === (i = j.integrationTypesConfig) || void 0 === i ? void 0 : i[a.Y.USER_INSTALL]) != null;
   l = null == D ? U ? a.Y.USER_INSTALL : a.Y.GUILD_INSTALL : Number(D);
   try {
@@ -90,7 +90,7 @@ throw new T.Z({
   errorCode: f.lTL.OAUTH2_ERROR
 }, 'OAuth2 Authorization Error: '.concat(e.message || 'Unknown Error'));
   }
-  if (P === E.s.NONE && null != o && o.authorized && d)
+  if (P === h.s.NONE && null != o && o.authorized && d)
 try {
   return (await (0, _.Iq)({
     authorize: !0,

@@ -1,27 +1,27 @@
 s.d(n, {
   $W: function() {
-return L;
-  },
-  Mx: function() {
-return S;
-  },
-  PZ: function() {
 return Z;
   },
-  h4: function() {
+  Mx: function() {
 return T;
   },
-  ic: function() {
-return j;
-  },
-  n5: function() {
+  PZ: function() {
 return A;
   },
-  rU: function() {
+  h4: function() {
 return R;
   },
-  s8: function() {
+  ic: function() {
+return L;
+  },
+  n5: function() {
+return S;
+  },
+  rU: function() {
 return U;
+  },
+  s8: function() {
+return D;
   }
 }), s(47120);
 var t, r = s(735250),
@@ -33,18 +33,19 @@ var t, r = s(735250),
   d = s(471445),
   u = s(16206),
   h = s(790145),
-  E = s(925329),
-  p = s(565138),
-  C = s(754688),
-  m = s(237583),
-  N = s(430824),
-  x = s(699516),
-  _ = s(594174),
-  f = s(51144),
-  I = s(689938),
-  M = s(864276);
+  E = s(245216),
+  p = s(925329),
+  C = s(565138),
+  m = s(754688),
+  N = s(237583),
+  x = s(430824),
+  _ = s(699516),
+  f = s(594174),
+  I = s(51144),
+  M = s(689938),
+  g = s(864276);
 
-function g(e, n, s) {
+function v(e, n, s) {
   return n in e ? Object.defineProperty(e, n, {
 value: s,
 enumerable: !0,
@@ -52,7 +53,7 @@ configurable: !0,
 writable: !0
   }) : e[n] = s, e;
 }
-class v extends i.PureComponent {
+class j extends i.PureComponent {
   componentDidMount() {
 let {
   focused: e,
@@ -90,21 +91,21 @@ return (0, r.jsxs)(a.Clickable, {
   },
   tabIndex: -1,
   innerRef: this.setRef,
-  className: M.result,
+  className: g.result,
   onClick: this.handleClick,
   onMouseEnter: this.handleMouseEnter,
   onContextMenu: t,
   children: [
     n,
     null != s ? (0, r.jsx)('div', {
-      className: M.score,
+      className: g.score,
       children: s >> 0
     }) : null
   ]
 });
   }
   constructor(...e) {
-super(...e), g(this, 'node', void 0), g(this, 'handleClick', e => {
+super(...e), v(this, 'node', void 0), v(this, 'handleClick', e => {
   e.preventDefault();
   let {
     onClick: n
@@ -112,30 +113,30 @@ super(...e), g(this, 'node', void 0), g(this, 'handleClick', e => {
     node: s
   } = this;
   null != s && n(e, s);
-}), g(this, 'handleMouseEnter', e => {
+}), v(this, 'handleMouseEnter', e => {
   let {
     onMouseEnter: n
   } = this.props, {
     node: s
   } = this;
   null != s && n(e, s);
-}), g(this, 'setRef', e => {
+}), v(this, 'setRef', e => {
   this.node = e;
 });
   }
 }
-class j extends i.Component {
+class L extends i.Component {
   renderIcon() {
 let {
   guild: e
 } = this.props;
 return (0, r.jsx)('div', {
-  className: M.guildIconContainer,
-  children: (0, r.jsx)(p.Z, {
+  className: g.guildIconContainer,
+  children: (0, r.jsx)(C.Z, {
     tabIndex: -1,
     guild: e,
-    size: p.Z.Sizes.MINI,
-    className: M.guildIcon
+    size: C.Z.Sizes.MINI,
+    className: g.guildIcon
   })
 });
   }
@@ -144,9 +145,9 @@ let {
   guild: e
 } = this.props;
 return (0, r.jsx)('div', {
-  className: M.name,
+  className: g.name,
   children: (0, r.jsx)('span', {
-    className: M.match,
+    className: g.match,
     children: e.name
   })
 });
@@ -157,12 +158,12 @@ let {
   children: n
 } = this.props;
 return (0, r.jsxs)('div', {
-  className: e ? M.contentUnread : M.contentDefault,
+  className: e ? g.contentUnread : g.contentDefault,
   children: [
     this.renderIcon(),
     this.renderName(),
     (0, r.jsx)('div', {
-      className: M.misc,
+      className: g.misc,
       children: n
     })
   ]
@@ -172,7 +173,7 @@ return (0, r.jsxs)('div', {
 let {
   guild: e
 } = this.props;
-return I.Z.Messages.QUICK_SWITCHER_RESULTS_GUILD_LABEL.format({
+return M.Z.Messages.QUICK_SWITCHER_RESULTS_GUILD_LABEL.format({
   name: e.name
 });
   }
@@ -186,7 +187,7 @@ let {
   score: a,
   id: l
 } = this.props;
-return (0, r.jsx)(v, {
+return (0, r.jsx)(j, {
   id: l,
   'aria-label': this.getAccessibilityLabel(),
   onMouseEnter: e,
@@ -199,7 +200,7 @@ return (0, r.jsx)(v, {
 });
   }
 }
-class L extends(t = i.Component) {
+class Z extends(t = i.Component) {
   renderIcon() {
 var e;
 let {
@@ -209,11 +210,11 @@ if (null == s)
   return null;
 let t = null !== (e = (0, u.Z)(n)) && void 0 !== e ? e : '';
 return (0, r.jsx)('div', {
-  className: M.iconContainer,
+  className: g.iconContainer,
   role: 'img',
   'aria-label': t,
   children: (0, r.jsx)(s, {
-    className: M.icon,
+    className: g.icon,
     size: 'xs',
     color: 'currentColor'
   })
@@ -227,17 +228,17 @@ let {
   channel: i
 } = this.props;
 return null != s && s > 0 && (e = (0, r.jsx)(h.Z, {
-  className: M.badge,
+  className: g.badge,
   value: s
 })), null != t && (n = (0, r.jsx)('span', {
-  className: M.note,
-  children: (0, o.F6)(t, _.default, x.Z)
+  className: g.note,
+  children: (0, o.F6)(t, f.default, _.Z)
 })), (0, r.jsxs)('div', {
-  className: M.name,
+  className: g.name,
   children: [
     (0, r.jsx)('span', {
-      className: M.match,
-      children: (0, o.F6)(i, _.default, x.Z)
+      className: g.match,
+      children: (0, o.F6)(i, f.default, _.Z)
     }),
     e,
     this.renderVoiceStates(),
@@ -250,8 +251,8 @@ let {
   voiceStates: e,
   channel: n
 } = this.props;
-return null == e ? null : (0, r.jsx)(m.Z, {
-  className: M.voiceSummaryContainer,
+return null == e ? null : (0, r.jsx)(N.Z, {
+  className: g.voiceSummaryContainer,
   guildId: n.guild_id,
   users: e.map(e => {
     let {
@@ -272,12 +273,12 @@ let {
 } = this.props;
 return (0, r.jsxs)('div', {
   'aria-hidden': !0,
-  className: e || null != n && n > 0 ? M.contentUnread : M.contentDefault,
+  className: e || null != n && n > 0 ? g.contentUnread : g.contentDefault,
   children: [
     this.renderIcon(),
     this.renderName(),
     (0, r.jsx)('div', {
-      className: M.misc,
+      className: g.misc,
       children: s
     })
   ]
@@ -287,8 +288,8 @@ return (0, r.jsxs)('div', {
 var e;
 let {
   channel: n
-} = this.props, s = null === (e = N.Z.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name, t = (0, o.F6)(n, _.default, x.Z), r = (0, u.Z)(n);
-return I.Z.Messages.QUICK_SWITCHER_RESULTS_CHANNEL_LABEL.format({
+} = this.props, s = null === (e = x.Z.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name, t = (0, o.F6)(n, f.default, _.Z), r = (0, u.Z)(n);
+return M.Z.Messages.QUICK_SWITCHER_RESULTS_CHANNEL_LABEL.format({
   name: t,
   type: r,
   guild: s
@@ -304,7 +305,7 @@ let {
   score: a,
   id: l
 } = this.props;
-return (0, r.jsx)(v, {
+return (0, r.jsx)(j, {
   id: l,
   'aria-label': this.getAccessibilityLabel(),
   onMouseEnter: e,
@@ -317,16 +318,16 @@ return (0, r.jsx)(v, {
 });
   }
 }
-g(L, 'defaultProps', {
+v(Z, 'defaultProps', {
   unread: !1
 });
-class Z extends i.Component {
+class A extends i.Component {
   renderIcon() {
 let {
   channel: e
 } = this.props;
 return (0, r.jsx)('div', {
-  className: M.dmIconContainer,
+  className: g.dmIconContainer,
   children: (0, r.jsx)(a.Avatar, {
     src: (0, c.x)(e),
     size: a.AvatarSizes.SIZE_20,
@@ -341,14 +342,14 @@ let {
   channel: s
 } = this.props;
 return null != n && n > 0 && (e = (0, r.jsx)(h.Z, {
-  className: M.badge,
+  className: g.badge,
   value: n
 })), (0, r.jsxs)('div', {
-  className: M.name,
+  className: g.name,
   children: [
     (0, r.jsx)('span', {
-      className: M.match,
-      children: (0, o.F6)(s, _.default, x.Z)
+      className: g.match,
+      children: (0, o.F6)(s, f.default, _.Z)
     }),
     e
   ]
@@ -360,12 +361,12 @@ let {
   children: n
 } = this.props;
 return (0, r.jsxs)('div', {
-  className: null != e && e > 0 ? M.contentUnread : M.contentDefault,
+  className: null != e && e > 0 ? g.contentUnread : g.contentDefault,
   children: [
     this.renderIcon(),
     this.renderName(),
     (0, r.jsx)('div', {
-      className: M.misc,
+      className: g.misc,
       children: n
     })
   ]
@@ -375,11 +376,11 @@ return (0, r.jsxs)('div', {
 let {
   channel: e,
   mentions: n
-} = this.props, s = (0, o.F6)(e, _.default, x.Z);
-return null != n && n > 0 ? I.Z.Messages.QUICK_SWITCHER_RESULTS_GROUP_DM_UNREAD_LABEL.format({
+} = this.props, s = (0, o.F6)(e, f.default, _.Z);
+return null != n && n > 0 ? M.Z.Messages.QUICK_SWITCHER_RESULTS_GROUP_DM_UNREAD_LABEL.format({
   name: s,
   mentions: n
-}) : I.Z.Messages.QUICK_SWITCHER_RESULTS_GROUP_DM_LABEL.format({
+}) : M.Z.Messages.QUICK_SWITCHER_RESULTS_GROUP_DM_LABEL.format({
   name: s
 });
   }
@@ -393,7 +394,7 @@ let {
   score: a,
   id: l
 } = this.props;
-return (0, r.jsx)(v, {
+return (0, r.jsx)(j, {
   id: l,
   'aria-label': this.getAccessibilityLabel(),
   onMouseEnter: e,
@@ -406,13 +407,13 @@ return (0, r.jsx)(v, {
 });
   }
 }
-class A extends i.Component {
+class S extends i.Component {
   renderIcon() {
 let {
   user: e
 } = this.props;
 return (0, r.jsx)('div', {
-  className: M.iconContainer,
+  className: g.iconContainer,
   children: (0, r.jsx)(a.Avatar, {
     src: e.getAvatarURL(void 0, 20),
     'aria-hidden': !0,
@@ -425,8 +426,8 @@ let e;
 let {
   user: n,
   comparator: s
-} = this.props, t = x.Z.getNickname(n.id);
-return ((e = s === n.tag || null == s || '' === s ? n.username : s) === n.username || e === n.id) && (e = null != t ? t : f.ZP.getName(n)), e;
+} = this.props, t = _.Z.getNickname(n.id);
+return ((e = s === n.tag || null == s || '' === s ? n.username : s) === n.username || e === n.id) && (e = null != t ? t : I.ZP.getName(n)), e;
   }
   renderName() {
 let e;
@@ -435,19 +436,19 @@ let {
   mentions: s
 } = this.props, t = this.getDisplayNickname();
 return null != s && s > 0 && (e = (0, r.jsx)(h.Z, {
-  className: M.badge,
+  className: g.badge,
   value: s
 })), (0, r.jsxs)('div', {
-  className: M.name,
+  className: g.name,
   children: [
     (0, r.jsx)('span', {
-      className: M.match,
+      className: g.match,
       children: t
     }),
     e,
     (0, r.jsx)('span', {
-      className: M.username,
-      children: f.ZP.getUserTag(n)
+      className: g.username,
+      children: I.ZP.getUserTag(n)
     })
   ]
 });
@@ -458,12 +459,12 @@ let {
   mentions: n
 } = this.props;
 return (0, r.jsxs)('div', {
-  className: null != n && n > 0 ? M.contentUnread : M.contentDefault,
+  className: null != n && n > 0 ? g.contentUnread : g.contentDefault,
   children: [
     this.renderIcon(),
     this.renderName(),
     (0, r.jsx)('div', {
-      className: M.misc,
+      className: g.misc,
       children: e
     })
   ]
@@ -473,12 +474,12 @@ return (0, r.jsxs)('div', {
 let {
   mentions: e,
   user: n
-} = this.props, s = this.getDisplayNickname(), t = f.ZP.getUserTag(n);
-return null != e && e > 0 ? I.Z.Messages.QUICK_SWITCHER_RESULTS_USER_UNREAD_LABEL.format({
+} = this.props, s = this.getDisplayNickname(), t = I.ZP.getUserTag(n);
+return null != e && e > 0 ? M.Z.Messages.QUICK_SWITCHER_RESULTS_USER_UNREAD_LABEL.format({
   name: s,
   id: t,
   mentions: e
-}) : I.Z.Messages.QUICK_SWITCHER_RESULTS_USER_LABEL.format({
+}) : M.Z.Messages.QUICK_SWITCHER_RESULTS_USER_LABEL.format({
   name: s,
   id: t
 });
@@ -493,7 +494,7 @@ let {
   score: a,
   id: l
 } = this.props;
-return (0, r.jsx)(v, {
+return (0, r.jsx)(j, {
   id: l,
   'aria-label': this.getAccessibilityLabel(),
   onMouseEnter: e,
@@ -506,27 +507,27 @@ return (0, r.jsx)(v, {
 });
   }
 }
-class S extends i.Component {
+class T extends i.Component {
   renderContent() {
 let {
   children: e,
   application: n
 } = this.props;
 return (0, r.jsxs)('div', {
-  className: M.contentDefault,
+  className: g.contentDefault,
   children: [
     (0, r.jsx)('div', {
-      className: M.iconContainer,
-      children: (0, r.jsx)(E.Z, {
+      className: g.iconContainer,
+      children: (0, r.jsx)(p.Z, {
         tabIndex: -1,
-        className: M.gameIcon,
+        className: g.gameIcon,
         game: n,
-        size: M.gameIconSize
+        size: g.gameIconSize
       })
     }),
     n.name,
     (0, r.jsx)('div', {
-      className: M.misc,
+      className: g.misc,
       children: e
     })
   ]
@@ -540,7 +541,7 @@ let {
   focused: t,
   id: i
 } = this.props;
-return (0, r.jsx)(v, {
+return (0, r.jsx)(j, {
   id: i,
   onMouseEnter: e,
   onClick: n,
@@ -550,46 +551,46 @@ return (0, r.jsx)(v, {
 });
   }
 }
-class T extends i.Component {
+class R extends i.Component {
   render() {
 return (0, r.jsx)('div', {
-  className: M.__invalid_resultDefault,
+  className: g.__invalid_resultDefault,
   children: (0, r.jsx)('div', {
-    className: M.contentDefault,
+    className: g.contentDefault,
     children: (0, r.jsx)('div', {
-      className: M.header,
+      className: g.header,
       children: this.props.children
     })
   })
 });
   }
 }
-class R extends i.Component {
+class U extends i.Component {
   renderContent() {
 let e, n;
 let {
   link: s,
   children: t
-} = this.props, i = (0, C.Qj)(s.path);
-return null == i || void 0 === i.messageId ? (e = I.Z.Messages.QUICKSWITCHER_LINK_UNKNOWN, n = (0, r.jsx)(a.LinkIcon, {
+} = this.props, i = (0, m.Qj)(s.path);
+return null == i || void 0 === i.messageId ? (e = M.Z.Messages.QUICKSWITCHER_LINK_UNKNOWN, n = (0, r.jsx)(a.LinkIcon, {
   size: 'xs',
   color: 'currentColor'
-})) : (0, C.VO)(i) ? (e = I.Z.Messages.QUICKSWITCHER_LINK_MESSAGE, n = (0, r.jsx)(a.ChatArrowRightIcon, {
+})) : (0, m.VO)(i) ? (e = M.Z.Messages.QUICKSWITCHER_LINK_MESSAGE, n = (0, r.jsx)(E.Z, {
   size: 'xs',
   color: 'currentColor'
-})) : (e = I.Z.Messages.QUICKSWITCHER_LINK_NO_ACCESS, n = (0, r.jsx)(a.LockIcon, {
+})) : (e = M.Z.Messages.QUICKSWITCHER_LINK_NO_ACCESS, n = (0, r.jsx)(a.LockIcon, {
   size: 'xs',
   color: 'currentColor'
 })), (0, r.jsxs)('div', {
-  className: M.contentDefault,
+  className: g.contentDefault,
   children: [
     (0, r.jsx)('div', {
-      className: M.iconContainer,
+      className: g.iconContainer,
       children: n
     }),
     e,
     (0, r.jsx)('div', {
-      className: M.misc,
+      className: g.misc,
       children: t
     })
   ]
@@ -605,7 +606,7 @@ let {
   score: a,
   id: l
 } = this.props;
-return (0, r.jsx)(v, {
+return (0, r.jsx)(j, {
   id: l,
   onMouseEnter: e,
   onClick: n,
@@ -617,7 +618,7 @@ return (0, r.jsx)(v, {
 });
   }
 }
-class U extends i.Component {
+class D extends i.Component {
   renderContent() {
 let e;
 let {
@@ -626,13 +627,13 @@ let {
 } = this.props, t = '';
 switch (n.type) {
   case l.Ky.SHOP:
-    t = I.Z.Messages.COLLECTIBLES_SHOP, e = (0, r.jsx)(a.ShopIcon, {
+    t = M.Z.Messages.COLLECTIBLES_SHOP, e = (0, r.jsx)(a.ShopIcon, {
       size: 'xs',
       color: 'currentColor'
     });
     break;
   case l.Ky.NITRO_HOME:
-    t = I.Z.Messages.PREMIUM, e = (0, r.jsx)(a.NitroWheelIcon, {
+    t = M.Z.Messages.PREMIUM, e = (0, r.jsx)(a.NitroWheelIcon, {
       size: 'xs',
       color: 'currentColor'
     });
@@ -644,15 +645,15 @@ switch (n.type) {
     });
 }
 return (0, r.jsxs)('div', {
-  className: M.contentDefault,
+  className: g.contentDefault,
   children: [
     (0, r.jsx)('div', {
-      className: M.iconContainer,
+      className: g.iconContainer,
       children: e
     }),
     t,
     (0, r.jsx)('div', {
-      className: M.misc,
+      className: g.misc,
       children: s
     })
   ]
@@ -668,7 +669,7 @@ let {
   score: a,
   id: l
 } = this.props;
-return (0, r.jsx)(v, {
+return (0, r.jsx)(j, {
   id: l,
   onMouseEnter: e,
   onClick: n,

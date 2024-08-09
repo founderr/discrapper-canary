@@ -31,16 +31,16 @@ let t, n, {
     isLurking: S,
     isGuest: A,
     isPendingMember: R,
-    type: O
+    type: x
   } = e,
-  x = O === _.O.BURST,
-  M = (0, E.y4)(N, f, O),
-  v = (0, d.v)(x && null != p ? p : []),
+  O = x === _.O.BURST,
+  M = (0, E.y4)(N, f, x),
+  v = (0, d.v)(O && null != p ? p : []),
   L = a ? m : I,
-  Z = x ? C : h,
+  Z = O ? C : h,
   P = (0, u.y)(Z, E.aO),
   b = {};
-if (x && null != v) {
+if (O && null != v) {
   var D;
   let {
     accentColor: e,
@@ -68,7 +68,7 @@ return (0, i.jsxs)('div', {
       emojiId: c.id,
       emojiName: c.name,
       size: 'reaction',
-      animated: x && c.animated
+      animated: O && c.animated
     }),
     (0, i.jsx)('div', {
       className: L.reactionCount,

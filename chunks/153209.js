@@ -52,19 +52,19 @@ loadMore: S
   ].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [
 p,
 A
-  ]), O = p.length > 0 ? p[0] : null, x = E.d$.useSetting(), M = a.useMemo(() => {
-if (null != O && 0 >= m.default.compare(O.id, x))
+  ]), x = p.length > 0 ? p[0] : null, O = E.d$.useSetting(), M = a.useMemo(() => {
+if (null != x && 0 >= m.default.compare(x.id, O))
   return !1;
 for (let e of R) {
-  if (0 >= m.default.compare(e.id, x))
+  if (0 >= m.default.compare(e.id, O))
     break;
-  if (!(0, u.r)(e, x))
+  if (!(0, u.r)(e, O))
     return !0;
 }
 return !1;
   }, [
-O,
 x,
+O,
 R
   ]);
   return (0, i.jsxs)('div', {
@@ -77,7 +77,7 @@ children: [
     closePopout: l,
     children: M ? (0, i.jsx)(C, {
       onClick: () => {
-        null != O && (E.d$.updateSetting(O.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, {
+        null != x && (E.d$.updateSetting(x.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, {
           action_type: c.ud.MARK_ALL_READ
         }));
       }

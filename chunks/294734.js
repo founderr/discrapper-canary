@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return L;
+return Z;
   }
 });
 var i = n(735250),
@@ -25,14 +25,15 @@ var i = n(735250),
   g = n(100604),
   S = n(694784),
   A = n(39154),
-  R = n(689938),
+  R = n(245216),
+  x = n(689938),
   O = n(309243);
 
-function x() {
+function M() {
   return (0, i.jsxs)('div', {
 className: O.headerContainer,
 children: [
-  (0, i.jsx)(c.ChatArrowRightIcon, {
+  (0, i.jsx)(R.Z, {
     size: 'xs',
     className: O.headerIcon,
     color: o.Z.colors.TEXT_LOW_CONTRAST
@@ -41,13 +42,13 @@ children: [
     className: O.headerText,
     variant: 'text-sm/semibold',
     color: 'text-low-contrast',
-    children: R.Z.Messages.MESSAGE_FORWARDED
+    children: x.Z.Messages.MESSAGE_FORWARDED
   })
 ]
   });
 }
 
-function M(e) {
+function v(e) {
   let {
 message: t,
 snapshot: n,
@@ -89,7 +90,7 @@ children: [
   });
 }
 
-function v(e) {
+function L(e) {
   var t;
   let {
 message: n,
@@ -120,7 +121,7 @@ children: [
   (0, i.jsxs)('div', {
     className: O.content,
     children: [
-      (0, i.jsx)(x, {}),
+      (0, i.jsx)(M, {}),
       (0, i.jsx)(_.ZP, {
         message: o,
         content: C
@@ -136,7 +137,7 @@ children: [
         isMessageSnapshot: !0,
         renderThreadAccessory: !1
       }),
-      (0, i.jsx)(M, {
+      (0, i.jsx)(v, {
         message: n,
         snapshot: s,
         index: l
@@ -147,12 +148,12 @@ children: [
   }, l);
 }
 
-function L(e) {
+function Z(e) {
   let {
 message: t
   } = e;
   return (0, i.jsx)(i.Fragment, {
-children: t.messageSnapshots.map((e, n) => (0, i.jsx)(v, {
+children: t.messageSnapshots.map((e, n) => (0, i.jsx)(L, {
   message: t,
   snapshot: e,
   index: n

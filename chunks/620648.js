@@ -1,72 +1,72 @@
 n.d(s, {
   Z: function() {
-return T;
+return p;
   }
 });
 var i = n(735250),
   l = n(470079),
-  o = n(442837),
-  t = n(481060),
-  r = n(666520),
-  a = n(580552),
+  t = n(442837),
+  o = n(481060),
+  a = n(666520),
+  r = n(580552),
   d = n(169559),
   c = n(369077),
   u = n(706454),
   _ = n(246946),
   I = n(785717),
-  E = n(648067),
-  f = n(588822),
+  f = n(648067),
+  E = n(588822),
   m = n(900927),
-  S = n(652853),
-  Z = n(335191),
-  x = n(988246),
-  v = n(689938),
+  x = n(652853),
+  S = n(335191),
+  v = n(988246),
+  Z = n(689938),
   h = n(678108);
 
-function T(e) {
+function p(e) {
   var s;
   let {
 user: n,
-displayProfile: T,
-autoFocusNote: p = !1,
+displayProfile: p,
+autoFocusNote: T = !1,
 scrollToConnections: g = !1
   } = e, {
 trackUserProfileAction: N
-  } = (0, I.KZ)(), C = (0, o.e7)([_.Z], () => _.Z.hidePersonalInformation), {
-theme: j
-  } = (0, S.z)(), A = (0, o.e7)([u.default], () => u.default.locale), O = (0, d.Z)('user_profile'), R = (null == T ? void 0 : T.bio) != null && (null == T ? void 0 : T.bio) !== '' || (0, a.Z)(n.id), L = (0, E.Z)(n.id), U = l.useRef(null);
+  } = (0, I.KZ)(), j = (0, t.e7)([_.Z], () => _.Z.hidePersonalInformation), {
+theme: C
+  } = (0, x.z)(), A = (0, t.e7)([u.default], () => u.default.locale), R = (0, d.Z)('user_profile'), O = (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' || (0, r.Z)(n.id), L = (0, f.Z)(n.id), M = l.useRef(null);
   return (l.useLayoutEffect(() => {
 if (g) {
   var e;
-  null == U || null === (e = U.current) || void 0 === e || e.scrollIntoView();
+  null == M || null === (e = M.current) || void 0 === e || e.scrollIntoView();
 }
-  }, [g]), C) ? (0, i.jsx)(x.Z, {}) : (0, i.jsxs)(t.ScrollerThin, {
+  }, [g]), j) ? (0, i.jsx)(v.Z, {}) : (0, i.jsxs)(o.ScrollerThin, {
 fade: !0,
 className: h.infoScroller,
 children: [
   (0, i.jsxs)('div', {
     className: h.userInfoSection,
     children: [
-      R && (0, i.jsxs)(i.Fragment, {
+      O && (0, i.jsxs)(i.Fragment, {
         children: [
-          (0, i.jsx)(t.Heading, {
+          (0, i.jsx)(o.Heading, {
             variant: 'eyebrow',
             className: h.userInfoSectionHeader,
-            children: v.Z.Messages.USER_PROFILE_ABOUT_ME
+            children: Z.Z.Messages.USER_PROFILE_ABOUT_ME
           }),
-          (0, i.jsx)(f.Z, {
+          (0, i.jsx)(E.Z, {
             className: h.userInfoText,
-            userBio: null !== (s = null == T ? void 0 : T.bio) && void 0 !== s ? s : '',
+            userBio: null !== (s = null == p ? void 0 : p.bio) && void 0 !== s ? s : '',
             userId: n.id
           })
         ]
       }),
       (0, i.jsxs)('div', {
         children: [
-          (0, i.jsx)(t.Heading, {
+          (0, i.jsx)(o.Heading, {
             variant: 'eyebrow',
             className: h.userInfoSectionHeader,
-            children: v.Z.Messages.USER_PROFILE_MEMBER_SINCE
+            children: Z.Z.Messages.USER_PROFILE_MEMBER_SINCE
           }),
           (0, i.jsx)(m.Z, {
             userId: n.id,
@@ -74,7 +74,7 @@ children: [
           })
         ]
       }),
-      O && (0, i.jsx)('div', {
+      R && (0, i.jsx)('div', {
         className: h.clans,
         children: (0, i.jsx)('div', {
           className: h.userInfoText,
@@ -85,14 +85,14 @@ children: [
       }),
       !n.isNonUserBot() && (0, i.jsxs)(i.Fragment, {
         children: [
-          (0, i.jsx)(t.Heading, {
+          (0, i.jsx)(o.Heading, {
             variant: 'eyebrow',
             className: h.userInfoSectionHeader,
-            children: v.Z.Messages.NOTE
+            children: Z.Z.Messages.NOTE
           }),
-          (0, i.jsx)(r.Z, {
+          (0, i.jsx)(a.Z, {
             userId: n.id,
-            autoFocus: p,
+            autoFocus: T,
             className: h.note,
             onUpdate: () => N({
               action: 'SET_NOTE'
@@ -102,10 +102,10 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(Z.OA, {
-    ref: U,
+  (0, i.jsx)(S.OA, {
+    ref: M,
     connectedAccounts: L,
-    theme: j,
+    theme: C,
     locale: A,
     className: h.userInfoSection,
     userId: n.id

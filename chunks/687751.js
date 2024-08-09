@@ -9,8 +9,8 @@ var a = n(481060),
   d = n(594174),
   u = n(758119),
   _ = n(920644),
-  E = n(208381),
-  h = n(723359),
+  h = n(208381),
+  E = n(723359),
   m = n(981631);
 
 function I(e, t) {
@@ -18,7 +18,7 @@ function I(e, t) {
   if (null == e)
 return;
   let i = d.default.getCurrentUser();
-  (null === (n = l.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != i && null == i.nsfwAllowed && (0, u.mN)(h.L0.NSFW_CHANNEL);
+  (null === (n = l.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != i && null == i.nsfwAllowed && (0, u.mN)(E.L0.NSFW_CHANNEL);
 }
 class g extends r.Z {
   _initialize() {
@@ -54,12 +54,12 @@ let {
     ...n
   });
 }, {
-  modalKey: h.dG,
+  modalKey: E.dG,
   onCloseRequest: m.dG4
 });
   }
   handleAgeGateSuccess() {
-(0, a.updateModal)(h.dG, e => (0, i.jsx)(E.Z, {
+(0, a.updateModal)(E.dG, e => (0, i.jsx)(h.Z, {
   ...e
 }));
   }
@@ -67,13 +67,13 @@ let {
 let {
   underageMessage: t
 } = e;
-(0, a.updateModal)(h.dG, e => (0, i.jsx)(_.Z, {
+(0, a.updateModal)(E.dG, e => (0, i.jsx)(_.Z, {
   underageMessage: t,
   ...e
 }));
   }
   handleAgeGateModalClose() {
-(0, a.closeModal)(h.dG);
+(0, a.closeModal)(E.dG);
   }
 }
 t.Z = new g();

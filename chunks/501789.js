@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
   grid: 'grid_bd205c',
   speakerContainer: 'speakerContainer_bd205c',
   avatar: 'avatar_bd205c',

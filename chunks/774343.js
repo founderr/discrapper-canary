@@ -1,4 +1,4 @@
-var i, l, o, E, r, a, u, s = t(442837),
+var i, l, o, r, E, a, u, s = t(442837),
   d = t(570140),
   _ = t(592125),
   c = t(896797),
@@ -6,7 +6,7 @@ var i, l, o, E, r, a, u, s = t(442837),
   I = t(944486),
   A = t(55589),
   S = t(981631);
-let T = (null !== (a = null === (r = window) || void 0 === r ? void 0 : null === (E = r.location) || void 0 === E ? void 0 : E.pathname) && void 0 !== a ? a : '').startsWith(S.Z5c.ACTIVITIES) ? S.Z5c.ACTIVITIES : null;
+let T = (null !== (a = null === (E = window) || void 0 === E ? void 0 : null === (r = E.location) || void 0 === r ? void 0 : r.pathname) && void 0 !== a ? a : '').startsWith(S.Z5c.ACTIVITIES) ? S.Z5c.ACTIVITIES : null;
 
 function L(e) {
   let {

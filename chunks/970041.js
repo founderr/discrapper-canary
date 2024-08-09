@@ -6,10 +6,10 @@ return _;
 var i = n(735250);
 n(470079);
 var l = n(597312),
-  o = n(442837),
-  t = n(481060),
-  r = n(860719),
-  a = n(621853),
+  t = n(442837),
+  o = n(481060),
+  a = n(860719),
+  r = n(621853),
   d = n(689938),
   c = n(21232);
 
@@ -34,11 +34,11 @@ children: [
   (0, i.jsxs)('div', {
     className: c.rowText,
     children: [
-      (0, i.jsx)(t.Heading, {
+      (0, i.jsx)(o.Heading, {
         variant: 'text-xs/semibold',
         children: n
       }),
-      (0, i.jsx)(t.Text, {
+      (0, i.jsx)(o.Text, {
         variant: 'text-sm/normal',
         children: l
       })
@@ -51,14 +51,14 @@ children: [
 function _(e) {
   let {
 user: s
-  } = e, n = (0, o.e7)([a.Z], () => {
+  } = e, n = (0, t.e7)([r.Z], () => {
 var e;
-return null === (e = a.Z.getUserProfile(s.id)) || void 0 === e ? void 0 : e.application;
+return null === (e = r.Z.getUserProfile(s.id)) || void 0 === e ? void 0 : e.application;
   }), {
 hasMessageContent: _,
 hasGuildPresences: I,
-hasGuildMembers: E
-  } = (0, r.w)({
+hasGuildMembers: f
+  } = (0, a.w)({
 flags: null == n ? void 0 : n.flags
   });
   return (0, i.jsxs)(l.zJ, {
@@ -66,21 +66,21 @@ fade: !0,
 className: c.scroller,
 children: [
   _ && (0, i.jsx)(u, {
-    icon: t.ChatIcon,
+    icon: o.ChatIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
   }),
   I && (0, i.jsx)(u, {
-    icon: t.GameControllerIcon,
+    icon: o.GameControllerIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
   }),
-  E && (0, i.jsx)(u, {
-    icon: t.GroupIcon,
+  f && (0, i.jsx)(u, {
+    icon: o.GroupIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
   }),
-  (0, i.jsx)(t.Text, {
+  (0, i.jsx)(o.Text, {
     variant: 'text-xs/normal',
     children: d.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
       helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975'

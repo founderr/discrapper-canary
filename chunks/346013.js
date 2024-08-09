@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(103575),
   A = n(695346),
   R = n(271383),
-  O = n(594174),
-  x = n(768581),
+  x = n(594174),
+  O = n(768581),
   M = n(900849),
   v = n(506071),
   L = n(495114),
@@ -48,10 +48,10 @@ channel: B
 setPopout: G
   } = (0, p.Z)(y.id, b.d$), F = (0, C.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, K] = a.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, d.e7)([
 R.ZP,
-O.default
+x.default
   ], () => {
 var e;
-return R.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+return R.ZP.isMember(null == k ? void 0 : k.guildId, null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
   }, [k]), q = (0, d.e7)([R.ZP], () => (null == k ? void 0 : k.authorId) != null ? R.ZP.getMember(k.guildId, k.authorId) : null), [X, J] = a.useMemo(() => {
 var e;
 return [
@@ -96,7 +96,7 @@ return null;
   roleId: J,
   newAnalyticsLocations: t
 })),
-el = (0, x.NZ)({
+el = (0, O.NZ)({
   avatarDecoration: (null == q ? void 0 : q.avatarDecoration) != null ? null == q ? void 0 : q.avatarDecoration : null === (t = k.user) || void 0 === t ? void 0 : t.avatarDecoration,
   size: (0, T.y9)(_.AvatarSizes.SIZE_40),
   canAnimate: ee

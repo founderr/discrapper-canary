@@ -34,7 +34,7 @@ let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).
   }
 }
 
-function O(e) {
+function x(e) {
   let {
 children: t,
 className: n,
@@ -46,8 +46,8 @@ toolbar: T,
 mobileToolbar: h,
 'aria-label': g,
 'aria-labelledby': S,
-scrollable: O,
-role: x,
+scrollable: x,
+role: O,
 hideSearch: M,
 showDivider: v
   } = e, L = (0, l.e7)([m.default], () => m.default.getCurrentUser()), Z = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1, {
@@ -85,13 +85,13 @@ transparent: c,
 onDoubleClick: R,
 'aria-label': g,
 'aria-labelledby': S,
-role: x,
-scrollable: O,
+role: O,
+scrollable: x,
 children: t
   });
 }
 
-function x(e) {
+function O(e) {
   let {
 children: t,
 className: n,
@@ -120,10 +120,10 @@ analyticsLocations: a
   });
   return (0, i.jsx)(c.Gt, {
 value: a,
-children: t ? (0, i.jsx)(O, {
+children: t ? (0, i.jsx)(x, {
   ...n,
   className: r
-}) : (0, i.jsx)(x, {
+}) : (0, i.jsx)(O, {
   ...n,
   className: r
 })

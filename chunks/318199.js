@@ -17,8 +17,8 @@ var a = n(581282),
   d = n(906732),
   u = n(605236),
   _ = n(960048),
-  E = n(276792),
-  h = n(290347);
+  h = n(276792),
+  E = n(290347);
 
 function m(e) {
   let {
@@ -38,14 +38,14 @@ location: a
 analyticsLocations: s
   } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), u = (0, o.ZP)(), m = (0, r.a)(u);
   if ('announcementModalVariant1' === n.properties.oneofKind) {
-let e = (0, E.N)({
+let e = (0, h.N)({
   content: n.properties.announcementModalVariant1,
   renderModalProps: t,
   analyticsLocations: s,
   analyticsLocation: a,
   isLightTheme: m
 });
-return (0, i.jsx)(h.Z, {
+return (0, i.jsx)(E.Z, {
   ...e
 });
   }

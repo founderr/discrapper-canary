@@ -27,8 +27,8 @@ var a = n(442837),
   S = n(706454),
   A = n(933429),
   R = n(395361),
-  O = n(626135),
-  x = n(243778),
+  x = n(626135),
+  O = n(243778),
   M = n(921944),
   v = n(981631),
   L = n(801461),
@@ -40,7 +40,7 @@ let D = e => {
 dismissibleContent: t,
 noticeType: D
   } = e, j = (0, a.e7)([A.Z], () => A.Z.getNotice()), U = (0, a.e7)([S.default], () => S.default.locale);
-  return (0, i.jsx)(x.Z, {
+  return (0, i.jsx)(O.Z, {
 contentTypes: [t],
 groupName: M.R.NOTICE_BAR,
 bypassAutoDismiss: !0,
@@ -165,7 +165,7 @@ children: e => {
             className: b.premiumAction,
             noticeType: D,
             onClick: () => {
-              O.default.track(v.rMx.PREMIUM_PROMOTION_OPENED, {
+              x.default.track(v.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: v.jXE.NOTIFICATION_BAR,
                 location_object: v.qAy.BUTTON_CTA
               }), o.Z.open(v.oAB.PREMIUM);
@@ -215,11 +215,11 @@ children: e => {
         dismissCurrentNotice: () => A(M.L.UNKNOWN)
       });
     case s.z.QUEST_1_GO_LIVE_BANNER:
-      let x = null == j ? void 0 : null === (t = j.metadata) || void 0 === t ? void 0 : t.partnerGame;
+      let O = null == j ? void 0 : null === (t = j.metadata) || void 0 === t ? void 0 : t.partnerGame;
       return (0, i.jsx)(I.Z, {
         noticeType: D,
         markAsDismissed: () => A(M.L.UNKNOWN),
-        partnerGame: x
+        partnerGame: O
       });
     case s.z.QUEST_1_ENDED_INCOMPLETE:
       let y = null == j ? void 0 : null === (a = j.metadata) || void 0 === a ? void 0 : a.partnerGame;

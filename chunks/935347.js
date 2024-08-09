@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(433517),
   u = n(481060),
   _ = n(205355),
-  E = n(607070),
-  h = n(38618),
+  h = n(607070),
+  E = n(38618),
   m = n(197344),
   I = n(474873),
   g = n(706454),
@@ -308,16 +308,16 @@ this.state = {
   }
 }
 t.Z = c.ZP.connectStores([
-  h.Z,
+  E.Z,
   p.Z,
   I.Z,
-  E.Z
+  h.Z
 ], () => ({
-  isTryingToConnect: h.Z.isTryingToConnect(),
-  connected: h.Z.isConnected(),
+  isTryingToConnect: E.Z.isTryingToConnect(),
+  connected: E.Z.isConnected(),
   incident: p.Z.getIncident(),
   soundpack: I.Z.getSoundpack(),
-  reducedMotion: E.Z.useReducedMotion
+  reducedMotion: h.Z.useReducedMotion
 }))(e => {
   let {
 isTryingToConnect: t,

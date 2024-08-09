@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return d;
+return _;
   }
 });
 var i = n(735250),
@@ -10,43 +10,44 @@ var i = n(735250),
   l = n(375954),
   o = n(876338),
   c = n(912332),
-  u = n(689938);
+  u = n(245216),
+  d = n(689938);
 
-function d(e) {
+function _(e) {
   let {
 className: t,
 channelId: n,
-messageId: d,
-targetKind: _,
-embedIndex: E
-  } = e, I = a.useCallback(() => {
-let e = l.Z.getMessage(n, d);
+messageId: _,
+targetKind: E,
+embedIndex: I
+  } = e, m = a.useCallback(() => {
+let e = l.Z.getMessage(n, _);
 if (null == e)
   return;
 let t = (0, o.j)(e, {
-  targetKind: _,
-  embedIndex: E
+  targetKind: E,
+  embedIndex: I
 });
 (0, c.l8)({
   channelId: n,
-  messageId: d,
+  messageId: _,
   source: 'message-actions',
   forwardOptions: t
 });
   }, [
 n,
-E,
-d,
-_
+I,
+_,
+E
   ]);
   return (0, i.jsx)(r.CircleIconButton, {
 className: t,
-tooltip: u.Z.Messages.MESSAGE_ACTION_FORWARD,
+tooltip: d.Z.Messages.MESSAGE_ACTION_FORWARD,
 color: r.CircleIconButtonColors.SECONDARY,
-icon: (0, i.jsx)(r.ChatArrowRightIcon, {
+icon: (0, i.jsx)(u.Z, {
   size: 'xs',
   color: s.Z.colors.INTERACTIVE_NORMAL
 }),
-onClick: I
+onClick: m
   });
 }

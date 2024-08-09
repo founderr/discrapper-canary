@@ -22,8 +22,8 @@ var i, a, s, r, l = n(913527),
   S = n(594190),
   A = n(38618),
   R = n(569545),
-  O = n(615365),
-  x = n(528011),
+  x = n(615365),
+  O = n(528011),
   M = n(487419),
   v = n(715903),
   L = n(223606),
@@ -76,8 +76,8 @@ var i, a, s, r, l = n(913527),
   eS = n(358085),
   eA = n(74538),
   eR = n(922156),
-  eO = n(436181),
-  ex = n(941128),
+  ex = n(436181),
+  eO = n(941128),
   eM = n(981631),
   ev = n(188785),
   eL = n(702512),
@@ -265,7 +265,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
   ],
   eW = {
 [eM.kVF.GUILD_RAID_NOTIFICATION]: {
-  predicate: () => (0, x.g)().show && !eV(eM.kVF.GUILD_RAID_NOTIFICATION),
+  predicate: () => (0, O.g)().show && !eV(eM.kVF.GUILD_RAID_NOTIFICATION),
   metadata: () => ({
     dismissUntil: o()().add(3, 'hours').toDate()
   })
@@ -357,8 +357,8 @@ eM.kVF.SCHEDULED_MAINTENANCE
   })
 },
 [eM.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS]: {
-  predicate: () => null != eO.Z.getLastProgress(),
-  metadata: () => eO.Z.getLastProgress()
+  predicate: () => null != ex.Z.getLastProgress(),
+  metadata: () => ex.Z.getLastProgress()
 },
 [eM.kVF.SPOTIFY_AUTO_PAUSED]: {
   predicate: () => W.Z.wasAutoPaused()
@@ -390,7 +390,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
   predicate: () => (0, G.tq)()
 },
 [eM.kVF.CORRUPT_INSTALLATION]: {
-  predicate: () => eS.isPlatformEmbedded && (!u.Z.supported() || ex.Z.isCorruptInstallation())
+  predicate: () => eS.isPlatformEmbedded && (!u.Z.supported() || eO.Z.isCorruptInstallation())
 },
 [eM.kVF.VIDEO_UNSUPPORTED_BROWSER]: {
   predicate: e => {
@@ -440,7 +440,7 @@ eM.kVF.SCHEDULED_MAINTENANCE
     let {
       selectedGuildId: t
     } = e;
-    return null != t && O.Z.getCurrentConfig({
+    return null != t && x.Z.getCurrentConfig({
       location: 'notice_store'
     }).showSurvey && !eV(eM.kVF.SERVER_USAGE_SURVEY);
   },
@@ -811,7 +811,7 @@ this.syncWith([
   M.Z,
   H.Z,
   Q.Z
-], eK), this.waitFor(em.default, ed.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, eu.Z, eI.Z, W.Z, S.ZP, el.Z, eR.Z, eO.Z, eg.Z, es.Z, ef.ZP, ex.Z, et.Z, eN.Z, er.Z, F.Z, ep.Z, eC.Z, ee.Z, b.Z, C.Z, N.Z, V.Z, H.Z, Q.Z);
+], eK), this.waitFor(em.default, ed.Z, ei.Z, en.ZP, eo.Z, ea.Z, e_.Z, g.Z, eu.Z, eI.Z, W.Z, S.ZP, el.Z, eR.Z, ex.Z, eg.Z, es.Z, ef.ZP, eO.Z, et.Z, eN.Z, er.Z, F.Z, ep.Z, eC.Z, ee.Z, b.Z, C.Z, N.Z, V.Z, H.Z, Q.Z);
   }
   hasNotice() {
 return null != eG && null != eG.type;

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return x;
+return O;
   }
 });
 var i = n(735250),
@@ -26,13 +26,13 @@ var i = n(735250),
   S = n(358595),
   A = n(563917),
   R = n(135845),
-  O = n(981631);
+  x = n(981631);
 
-function x(e) {
+function O(e) {
   let {
 code: t,
 author: n,
-getAcceptInviteContext: x
+getAcceptInviteContext: O
   } = e, {
 invite: M,
 inviteError: v
@@ -44,7 +44,7 @@ inviteError: T.Z.getInviteError(t)
 null == M && r.Z.resolveInvite(t);
   }, [t]);
   let L = null != M ? M : {
-  state: O.r2o.RESOLVING,
+  state: x.r2o.RESOLVING,
   code: ''
 },
 {
@@ -62,16 +62,16 @@ j = () => {
 U = () => {
   (0, _.yU)() ? (0, E.Z)({
     analyticsSource: {
-      page: O.ZY5.INVITE_EMBED
+      page: x.ZY5.INVITE_EMBED
     },
     analyticsLocation: {
-      page: O.ZY5.INVITE_EMBED,
-      section: O.jXE.GUILD_CAP_UPSELL_MODAL
+      page: x.ZY5.INVITE_EMBED,
+      section: x.jXE.GUILD_CAP_UPSELL_MODAL
     },
     analyticsLocations: Z
   }) : r.Z.acceptInviteAndTransitionToInviteChannel({
     inviteKey: t,
-    context: x('Invite Button Embed')
+    context: O('Invite Button Embed')
   });
 },
 y = (0, i.jsx)(p.Z, {
@@ -83,17 +83,17 @@ y = (0, i.jsx)(p.Z, {
   author: n
 });
   switch (L.state) {
-case O.r2o.RESOLVING:
+case x.r2o.RESOLVING:
   y = (0, i.jsx)(S.Z, {});
   break;
-case O.r2o.EXPIRED:
-case O.r2o.BANNED:
+case x.r2o.EXPIRED:
+case x.r2o.BANNED:
   y = (0, i.jsx)(g.Z, {
-    banned: L.state === O.r2o.BANNED,
+    banned: L.state === x.r2o.BANNED,
     author: n
   });
   break;
-case O.r2o.ERROR:
+case x.r2o.ERROR:
   y = (0, i.jsx)(N.Z, {
     author: n,
     inviteError: v
@@ -114,7 +114,7 @@ default:
       y = (0, i.jsx)(f.Z, {
         invite: L,
         author: n,
-        getAcceptInviteContext: x
+        getAcceptInviteContext: O
       });
       break;
     default:
@@ -151,12 +151,12 @@ default:
       }
       (0, d.P1)(L) && (y = (0, i.jsx)(h.Z, {
         invite: L,
-        getAcceptInviteContext: x
+        getAcceptInviteContext: O
       }));
   }
   }
   return (0, i.jsx)(l.Z, {
-section: O.jXE.INVITE_LINK,
+section: x.jXE.INVITE_LINK,
 children: y
   });
 }

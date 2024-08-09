@@ -12,8 +12,8 @@ var i, a = n(735250),
   d = n(846519),
   u = n(477690),
   _ = n(481060),
-  E = n(570140),
-  h = n(239091),
+  h = n(570140),
+  E = n(239091),
   m = n(287259),
   I = n(785547),
   g = n(600164),
@@ -226,7 +226,7 @@ this._didUnmount = !0;
 let t = this.props.activeRowKey;
 if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
   let e = this._rowRefs[t];
-  null != e && (E.Z.wait(h.Zy), this.props.scrollToRow(e, b));
+  null != e && (h.Z.wait(E.Zy), this.props.scrollToRow(e, b));
 }
   }
   handleHighlightedApplicationKey() {
@@ -398,7 +398,7 @@ super(...e), x(this, '_didUnmount', !1), x(this, '_rowRefs', {}), x(this, 'state
   let {
     analyticsContext: i
   } = this.props;
-  (0, h.jW)(e, async () => {
+  (0, E.jW)(e, async () => {
     let {
       default: e
     } = await n.e('98335').then(n.bind(n, 485292));
@@ -431,7 +431,7 @@ n = (0, o.TH)(),
   sortKey: d,
   sortDirection: u,
   activeRowKey: _,
-  isNavigatingByKeyboard: E
+  isNavigatingByKeyboard: h
 } = (0, c.cj)([C.Z], () => ({
   sortKey: C.Z.sortKey,
   sortDirection: C.Z.sortDirection,
@@ -448,7 +448,7 @@ fetched: l,
 sortKey: d,
 sortDirection: u,
 activeRowKey: _,
-isNavigatingByKeyboard: E
+isNavigatingByKeyboard: h
   });
 }
 x(U, 'defaultProps', {

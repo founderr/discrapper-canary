@@ -13,7 +13,7 @@ var i, a = n(735250),
   u = n(689938),
   _ = n(942399);
 
-function E(e, t, n) {
+function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -22,7 +22,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 (i || (i = {})).SECTION_NO_RESULTS = 'SECTION_NO_RESULTS';
-let h = Object.freeze({
+let E = Object.freeze({
 SECTION_ALL: {
   lightSrc: n(900933),
   darkSrc: n(67764),
@@ -90,7 +90,7 @@ SECTION_NO_RESULTS: {
   m = e => {
 let {
   theme: t
-} = e, n = u.Z.Messages.FRIENDS_EMPTY_STATE_ALL, i = h.SECTION_ALL;
+} = e, n = u.Z.Messages.FRIENDS_EMPTY_STATE_ALL, i = E.SECTION_ALL;
 return (0, a.jsx)(s.Fragment, {
   children: (0, a.jsxs)(o.EmptyState, {
     theme: t,
@@ -120,17 +120,17 @@ let {
   switch (e) {
     case d.pJs.ADD_FRIEND:
     case d.pJs.ALL:
-      return h.SECTION_ALL;
+      return E.SECTION_ALL;
     case d.pJs.ONLINE:
-      return h.SECTION_ONLINE;
+      return E.SECTION_ONLINE;
     case d.pJs.PENDING:
-      return h.SECTION_PENDING;
+      return E.SECTION_PENDING;
     case d.pJs.SUGGESTIONS:
-      return h.SECTION_SUGGESTIONS;
+      return E.SECTION_SUGGESTIONS;
     case d.pJs.BLOCKED:
-      return h.SECTION_BLOCKED;
+      return E.SECTION_BLOCKED;
     case 'SECTION_NO_RESULTS':
-      return h.SECTION_NO_RESULTS;
+      return E.SECTION_NO_RESULTS;
     default:
       throw Error('FriendsEmptyState: Invalid empty state');
   }
@@ -159,14 +159,14 @@ return e === d.pJs.ADD_FRIEND ? (0, a.jsx)(r.Z.div, {
 });
   }
   constructor(...e) {
-super(...e), E(this, 'state', {
+super(...e), h(this, 'state', {
   opacity: new r.Z.Value(1)
-}), E(this, 'componentWillEnter', e => {
+}), h(this, 'componentWillEnter', e => {
   this.state.opacity.setValue(0), r.Z.timing(this.state.opacity, {
     toValue: 1,
     duration: 250
   }).start(e);
-}), E(this, 'componentWillLeave', e => {
+}), h(this, 'componentWillLeave', e => {
   r.Z.timing(this.state.opacity, {
     toValue: 0,
     duration: 250

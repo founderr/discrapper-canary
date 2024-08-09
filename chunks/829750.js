@@ -7,21 +7,21 @@ return o;
   }
 });
 var l = t(442837),
-  a = t(430824),
-  r = t(938475),
-  i = t(981631);
+  i = t(430824),
+  a = t(938475),
+  r = t(981631);
 
 function s(e) {
   return (0, l.cj)([
-r.ZP,
-a.Z
+a.ZP,
+i.Z
   ], () => {
-let n = r.ZP.countVoiceStatesForChannel(e.id),
-  t = a.Z.getGuild(e.getGuildId());
+let n = a.ZP.countVoiceStatesForChannel(e.id),
+  t = i.Z.getGuild(e.getGuildId());
 return null == t ? {
   reachedLimit: !1,
   limit: -1
-} : e.type === i.d4z.GUILD_STAGE_VOICE ? {
+} : e.type === r.d4z.GUILD_STAGE_VOICE ? {
   reachedLimit: n > t.maxStageVideoChannelUsers,
   limit: t.maxStageVideoChannelUsers
 } : {
@@ -32,12 +32,12 @@ return null == t ? {
 }
 
 function o(e) {
-  let n = r.ZP.countVoiceStatesForChannel(e.id),
-t = a.Z.getGuild(e.getGuildId());
+  let n = a.ZP.countVoiceStatesForChannel(e.id),
+t = i.Z.getGuild(e.getGuildId());
   return null == t ? {
 reachedLimit: !1,
 limit: -1
-  } : e.type === i.d4z.GUILD_STAGE_VOICE ? {
+  } : e.type === r.d4z.GUILD_STAGE_VOICE ? {
 reachedLimit: n > t.maxStageVideoChannelUsers,
 limit: t.maxStageVideoChannelUsers
   } : {

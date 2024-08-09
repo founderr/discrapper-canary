@@ -6,8 +6,8 @@ var i, a, s, r, l = n(392711),
   u = n(592125);
 n(914010);
 var _ = n(709054),
-  E = n(176505);
-let h = {},
+  h = n(176505);
+let E = {},
   m = {},
   I = {},
   g = {};
@@ -28,7 +28,7 @@ m[e] = o().slice(t, n);
 }
 
 function T(e, t, n, i) {
-  h[e].add(t);
+  E[e].add(t);
   let a = I[t];
   (null == a || a + 300000 > Date.now()) && p(t), null == m[t] && (m[t] = []), m[t].push({
 id: n,
@@ -47,14 +47,14 @@ class f extends(i = c.ZP.Store) {
 return g[e];
   }
   getActiveChannelIds(e) {
-return h[e];
+return E[e];
   }
   getChannelMessageData(e) {
 return m[e];
   }
   shouldFetch(e) {
 var t;
-return null == h[e] && !(null === (t = g[e]) || void 0 === t ? void 0 : t.loading);
+return null == E[e] && !(null === (t = g[e]) || void 0 === t ? void 0 : t.loading);
   }
 }
 r = 'ActiveChannelsStore', (s = 'displayName') in(a = f) ? Object.defineProperty(a, s, {
@@ -68,9 +68,9 @@ let {
   channelId: t,
   guildId: n
 } = e;
-if (!(0, E.ME)(t) || null == n)
+if (!(0, h.ME)(t) || null == n)
   return !1;
-let i = h[n];
+let i = E[n];
 if (null == i)
   return !1;
 i.forEach(e => {
@@ -81,7 +81,7 @@ let a = o().chain(Array.from(i)).filter(e => e in m).sortBy(e => {
   var t, n;
   return -(null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0);
 }).value();
-h[n] = new Set(a);
+E[n] = new Set(a);
   },
   MESSAGE_CREATE: function(e) {
 var t;
@@ -97,7 +97,7 @@ let r = u.Z.getChannel(n);
 if (null == r)
   return !1;
 let l = r.guild_id;
-if (null == l || null == h[l])
+if (null == l || null == E[l])
   return !1;
 T(l, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id);
   },
@@ -105,7 +105,7 @@ T(l, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id);
 let {
   guild: t
 } = e;
-delete h[t.id];
+delete E[t.id];
   },
   CHANNEL_DELETE: S,
   THREAD_DELETE: S,
@@ -128,7 +128,7 @@ g[t] = {
   loading: !1,
   error: null,
   fetchedAt: Date.now()
-}, h[t] = new Set(), n.forEach(e => {
+}, E[t] = new Set(), n.forEach(e => {
   let {
     channel_id: n,
     messages: i

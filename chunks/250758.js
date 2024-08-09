@@ -73,7 +73,7 @@ cursorScope: d
   } = a, {
 autocompletes: _
   } = a;
-  _ = x(e, c), p[e] = S({
+  _ = O(e, c), p[e] = S({
 searchId: e,
 query: o,
 mode: c,
@@ -110,7 +110,7 @@ results: i
   };
 }
 
-function O(e) {
+function x(e) {
   let t = (null != e ? e.getFullMatch() : '').trim(),
 n = function() {
   let e = (0, d.cn)() && !1;
@@ -132,7 +132,7 @@ results: i
   };
 }
 
-function x(e, t) {
+function O(e, t) {
   let n = [];
   return t.type === C.Sap.FILTER ? n.push(R(t.filter, t.token, e, 10)) : t.type === C.Sap.FILTER_ALL ? n = function(e, t) {
 let n = (null != e ? e.getFullMatch() : '').trim(),
@@ -162,8 +162,8 @@ return null != n && '' !== n && (function(e) {
       ]
     };
   }
-}(e, t))), 5 > (0, I.BU)(i) && i.push(O(e)), i;
-  }(t.token, e) : t.type === C.Sap.EMPTY && (n.push(O(t.token)), (0, d.cn)(), n.push(function(e) {
+}(e, t))), 5 > (0, I.BU)(i) && i.push(x(e)), i;
+  }(t.token, e) : t.type === C.Sap.EMPTY && (n.push(x(t.token)), (0, d.cn)(), n.push(function(e) {
 if (N.Z.hidePersonalInformation)
   return null;
 let t = h.Z.getHistory(e);
@@ -217,7 +217,7 @@ query: t,
 mode: n,
 tokens: i,
 cursorScope: a,
-autocompletes: x(e, n)
+autocompletes: O(e, n)
   });
 }
 class Z extends(i = l.ZP.Store) {
@@ -253,14 +253,14 @@ let n, {
 if (r === o.query && (null == o.mode || o.mode.filter === l.filter))
   n = o.autocompletes, u = !1;
 else if (l.type === C.Sap.EMPTY || l.type === C.Sap.FILTER && l.filter !== C.dCx.FILTER_FROM && l.filter !== C.dCx.FILTER_MENTIONS)
-  null != c && (c.context.clearQuery(), c.results = []), n = x(i, l);
+  null != c && (c.context.clearQuery(), c.results = []), n = O(i, l);
 else if (null != c) {
   let {
     token: e
   } = l;
   null != e && e.getFullMatch().trim().length > 0 ? (E.Z.requestMembers(i, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), {
     guild: i
-  }), n = o.autocompletes, u = !1) : (c.context.clearQuery(), n = x(i, l));
+  }), n = o.autocompletes, u = !1) : (c.context.clearQuery(), n = O(i, l));
 }
 return p[i] = S({
   searchId: i,

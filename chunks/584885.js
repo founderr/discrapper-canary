@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(225784),
   u = n(127541),
   _ = n(981631),
-  E = n(378042);
-let h = [
+  h = n(378042);
+let E = [
 [
   1696,
   20
@@ -64,7 +64,7 @@ showMoreCards: Z = !1
   a.useEffect(() => {
 r.Z.wait(() => f());
   }, [N]);
-  let L = (0, u.Z)(Z ? m : h),
+  let L = (0, u.Z)(Z ? m : E),
 {
   analyticsLocations: O
 } = (0, l.ZP)();
@@ -100,7 +100,7 @@ for (let t = 0; t < L; t++)
 t = e;
   } else
 t = R.slice(0, L).map(e => (0, i.jsx)(d.Z, {
-  className: E.__invalid_guildCard,
+  className: h.__invalid_guildCard,
   guild: e,
   onView: P,
   theme: T,
@@ -108,22 +108,22 @@ t = R.slice(0, L).map(e => (0, i.jsx)(d.Z, {
   onTagClick: v
 }, e.id));
   return (0, i.jsx)('section', {
-className: E.guildListSection,
+className: h.guildListSection,
 children: (0, i.jsxs)(s.HeadingLevel, {
   component: (0, i.jsx)(s.Heading, {
-    className: E.__invalid_title,
+    className: h.__invalid_title,
     variant: 'heading-lg/semibold',
     children: n
   }),
   children: [
     null != I && (0, i.jsx)(s.Text, {
-      className: E.subtitle,
+      className: h.subtitle,
       variant: 'text-sm/normal',
       color: 'header-secondary',
       children: I
     }),
     (0, i.jsx)('div', {
-      className: E.guildList,
+      className: h.guildList,
       children: t
     })
   ]

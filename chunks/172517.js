@@ -3,7 +3,7 @@ n.d(t, {
 return h;
   },
   Pk: function() {
-return l;
+return o;
   },
   Rq: function() {
 return g;
@@ -12,7 +12,7 @@ return g;
 return a;
   },
   dK: function() {
-return o;
+return l;
   },
   qd: function() {
 return E;
@@ -34,10 +34,10 @@ publicExponent: new Uint8Array([
 hash: 'SHA-256'
   }, !0, ['decrypt']);
 }
-async function o(e) {
+async function l(e) {
   return r()(null != e.publicKey, 'public key cannot be null'), btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey('spki', e.publicKey))));
 }
-async function l(e) {
+async function o(e) {
   return r()(null != e.publicKey, 'public key cannot be null'), d(await window.crypto.subtle.exportKey('spki', e.publicKey));
 }
 
@@ -73,11 +73,11 @@ async function g(e, t) {
   let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
   if (null == n)
 throw Error('Invalid encoded user record.');
-  let [, s, r, a, o] = n;
+  let [, s, r, a, l] = n;
   return new i.Z({
 id: s,
 discriminator: r,
 avatar: '0' === a ? null : a,
-username: o
+username: l
   });
 }

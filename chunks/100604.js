@@ -57,21 +57,21 @@ let h = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Z,
     messageSnapshot: R
   } = this,
   {
-    useOldIcon: O
+    useOldIcon: x
   } = (0, E.WT)({
     location: 'GetForwardInfo'
   }, {
     autoTrackExposure: !1
   }),
   {
-    showForwardBreadcrumb: x
+    showForwardBreadcrumb: O
   } = _.u.getCurrentConfig({
     location: 'MessageForward'
   });
-if (!x)
+if (!O)
   return {
     snapshotIndex: S,
-    useOldIcon: O
+    useOldIcon: x
   };
 let M = (0, d.Xf)(R.message.timestamp),
   v = h.getChannel(this.parentMessage.channel_id);
@@ -81,17 +81,17 @@ if (null != v && v.guild_id === (null === (e = A.messageReference) || void 0 ===
     let e = p.getGuild(v.guild_id);
     return null == e ? {
       snapshotIndex: S,
-      useOldIcon: O
+      useOldIcon: x
     } : {
       snapshotIndex: S,
       footerInfo: T(e, M),
-      useOldIcon: O
+      useOldIcon: x
     };
   }
   if (!C.can(e.accessPermissions, e))
     return {
       snapshotIndex: S,
-      useOldIcon: O
+      useOldIcon: x
     };
   let t = (0, i.F6)(e, N, f, !0);
   return {
@@ -104,29 +104,29 @@ if (null != v && v.guild_id === (null === (e = A.messageReference) || void 0 ===
         timestamp: M
       })
     },
-    useOldIcon: O
+    useOldIcon: x
   };
 }
 let L = null === (t = A.messageReference) || void 0 === t ? void 0 : t.guild_id;
 if (null == L)
   return {
     snapshotIndex: S,
-    useOldIcon: O
+    useOldIcon: x
   };
 let Z = null !== (m = p.getGuild(L)) && void 0 !== m ? m : g.getGuild(L);
 if (null == Z)
   return {
     snapshotIndex: S,
-    useOldIcon: O
+    useOldIcon: x
   };
 let P = h.getChannel(null === (n = A.messageReference) || void 0 === n ? void 0 : n.channel_id);
 return null == P || C.can(P.accessPermissions, P) ? {
   snapshotIndex: S,
   footerInfo: T(Z, M),
-  useOldIcon: O
+  useOldIcon: x
 } : {
   snapshotIndex: S,
-  useOldIcon: O
+  useOldIcon: x
 };
   }
   constructor(e, t, n) {

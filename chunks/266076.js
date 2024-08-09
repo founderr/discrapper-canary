@@ -1,7 +1,7 @@
-var i = n(735250),
+var l = n(735250),
   a = n(470079),
   s = n(481060),
-  l = n(43267),
+  i = n(43267),
   r = n(93687),
   o = n(785232);
 t.Z = a.memo(function(e) {
@@ -13,28 +13,28 @@ experimentLocation: c,
 isTyping: u,
 status: d,
 className: h,
-animated: p = !1,
-...m
+animated: _ = !1,
+...f
   } = e, {
-isFacepileEnabled: _
+isFacepileEnabled: E
   } = r.Z.useExperiment({
 location: c
   }, {
 autoTrackExposure: !0
   });
-  return t.recipients.length >= 2 && _ && null == t.icon ? (0, i.jsx)(o.Z, {
-'aria-label': m['aria-label'],
-'aria-hidden': m['aria-hidden'],
+  return t.recipients.length >= 2 && E && null == t.icon ? (0, l.jsx)(o.Z, {
+'aria-label': f['aria-label'],
+'aria-hidden': f['aria-hidden'],
 className: h,
 recipients: t.recipients,
 size: null != a ? a : n,
 isTyping: u,
 status: d
-  }) : (0, i.jsx)(s.Avatar, {
-'aria-hidden': m['aria-hidden'],
-'aria-label': m['aria-label'],
+  }) : (0, l.jsx)(s.Avatar, {
+'aria-hidden': f['aria-hidden'],
+'aria-label': f['aria-label'],
 className: h,
 size: n,
-src: (0, l.x)(t, 80, p)
+src: (0, i.x)(t, 80, _)
   });
 });

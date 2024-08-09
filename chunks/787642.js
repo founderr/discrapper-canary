@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(626135),
   u = n(768581),
   _ = n(125631),
-  E = n(981631),
-  h = n(689938),
+  h = n(981631),
+  E = n(689938),
   m = n(961517);
 
 function I(e, t, n) {
@@ -46,9 +46,9 @@ children: [
 }
 
 function g() {
-  let e = Object.values(c.Z.getGuilds()).filter(e => e.hasFeature(E.oNc.HUB)),
+  let e = Object.values(c.Z.getGuilds()).filter(e => e.hasFeature(h.oNc.HUB)),
 t = e => {
-  d.default.track(E.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
+  d.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
     guild_id: e
   }), (0, o.X)(e);
 };
@@ -59,7 +59,7 @@ children: [
     children: (0, i.jsx)(s.FormTitle, {
       tag: 'h2',
       className: m.title,
-      children: h.Z.Messages.ADD_FRIEND_MAKE_FRIENDS
+      children: E.Z.Messages.ADD_FRIEND_MAKE_FRIENDS
     })
   }),
   (0, i.jsxs)('div', {
@@ -72,8 +72,8 @@ children: [
       }), e.name, () => {
         t(e.id);
       })),
-      I(s.CompassIcon, h.Z.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
-        (0, r.AQ)(), d.default.track(E.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, l.uL)(E.Z5c.GUILD_DISCOVERY);
+      I(s.CompassIcon, E.Z.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+        (0, r.AQ)(), d.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, l.uL)(h.Z5c.GUILD_DISCOVERY);
       })
     ]
   })

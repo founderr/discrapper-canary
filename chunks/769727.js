@@ -7,8 +7,8 @@ var i, a, s = n(735250),
   d = n(481060),
   u = n(393238),
   _ = n(963202),
-  E = n(353093),
-  h = n(605236),
+  h = n(353093),
+  E = n(605236),
   m = n(931515),
   I = n(807933),
   g = n(702646),
@@ -41,11 +41,11 @@ let {
 } = (0, _.C3)({
   location: 'ClanDiscoveryAdminContainer',
   includeConverted: !0
-}), Z = r.useMemo(() => v.filter(e => !(0, E.EJ)(e)), [v]), {
+}), Z = r.useMemo(() => v.filter(e => !(0, h.EJ)(e)), [v]), {
   enableApplication: L
-} = (0, _.Fg)('ClanDiscoveryAdminContainer'), O = (0, h.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
+} = (0, _.Fg)('ClanDiscoveryAdminContainer'), O = (0, E.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
 switch (r.useEffect(() => {
-    !O && (0, h.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
+    !O && (0, E.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
       dismissAction: f.L.TAKE_ACTION,
       forceTrack: !0
     });

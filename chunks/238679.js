@@ -3,13 +3,13 @@ n.d(t, {
 return m;
   },
   KW: function() {
-return E;
+return h;
   },
   dO: function() {
 return _;
   },
   gQ: function() {
-return h;
+return E;
   }
 });
 var i = n(392711),
@@ -45,11 +45,11 @@ participants: Array.from(e.userIds, e => {
 }).filter(o.lm)
   };
 }
-let E = {
+let h = {
 [u.Gp.ANY]: [u.wE]
   },
-  h = {
-scope: E,
+  E = {
+scope: h,
 handler: () => e => {
   let {
     prevState: t,

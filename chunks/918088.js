@@ -6,7 +6,7 @@ return v;
 return L;
   },
   ef: function() {
-return O;
+return x;
   },
   r8: function() {
 return M;
@@ -42,12 +42,12 @@ let R = {
   showResults: !1
 };
 
-function O(e, t) {
+function x(e, t) {
   for (let n of e)
 if (('number' == typeof n.emoji.id ? ''.concat(n.emoji.id) : n.emoji.id) === t)
   return n;
 }
-let x = e => (0, i.EQ)(e).with({
+let O = e => (0, i.EQ)(e).with({
   isExpired: !0,
   isLeader: !0,
   didSelfVote: !0
@@ -101,11 +101,11 @@ A = !0;
 let t = _.Z.getMessage(e.channel_id, e.id);
 A = !e.isSearchHit && null != t, p = null !== (s = null == t ? void 0 : t.reactions) && void 0 !== s ? s : p;
   }
-  let O = T.size > 0,
-x = p.some(e => !0 === e.me_vote),
-v = !f && x,
+  let x = T.size > 0,
+O = p.some(e => !0 === e.me_vote),
+v = !f && O,
 L = v || m || C,
-Z = E && A && (!x || f || L),
+Z = E && A && (!O || f || L),
 P = null === (i = u.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
 b = null != P ? d.ZP.getSelfMember(P) : null,
 D = (0, o.EY)(b),
@@ -115,11 +115,11 @@ poll: l,
 canTapAnswers: Z,
 canRemoveVote: v && E && !m,
 canShowVoteCounts: L,
-canSubmitVote: !N && O && !v && E && !D && !j,
+canSubmitVote: !N && x && !v && E && !D && !j,
 expirationLabel: I,
-hasSelectedAnswer: O,
+hasSelectedAnswer: x,
 hasVoted: v,
-hasVoteRecorded: x,
+hasVoteRecorded: O,
 isEditingVote: f,
 isExpired: m,
 isInteractive: A,
@@ -176,18 +176,18 @@ showResults: K
 count: z.toLocaleString()
   }), q = Math.max(...L.map(e => {
 var t, n;
-let i = O(V, ''.concat(e.answer_id));
+let i = x(V, ''.concat(e.answer_id));
 return null !== (n = null == i ? void 0 : null === (t = i.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0;
   })), X = L.map(e => {
 var t, n, s;
 let o = ''.concat(e.answer_id),
-  u = O(V, o),
+  u = x(V, o),
   d = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
   _ = 0 === z ? 0 : d / z,
   E = H.has(o),
   T = d >= q && 0 !== d,
   h = k && null !== (s = null == u ? void 0 : u.me_vote) && void 0 !== s && s,
-  N = x({
+  N = O({
     didSelfVote: h,
     hasVoted: k,
     isExpired: F,

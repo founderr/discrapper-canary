@@ -9,13 +9,13 @@ var i = n(470079),
   d = n(874703),
   u = n(105622),
   _ = n(599960),
-  E = n(683167),
-  h = n(302800),
+  h = n(683167),
+  E = n(302800),
   m = n(921944);
 let I = 'useCollectiblesShopTabNewBadge';
 t.Z = () => {
   let e = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
-t = (0, E.I)(I),
+t = (0, h.I)(I),
 n = (0, s.e7)([d.Z], () => d.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
 g = (0, u.J)(I),
 p = i.useMemo(() => {
@@ -24,13 +24,13 @@ p = i.useMemo(() => {
   if (g)
     return null != n ? [n.dismissibleContent] : [];
   switch (t) {
-    case h.LM.TIDE:
+    case E.LM.TIDE:
       return [r.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
-    case h.LM.DARK_FANTASY:
+    case E.LM.DARK_FANTASY:
       return [r.z.COLLECTIBLES_SHOP_DARK_FANTASY_MARKETING];
-    case h.LM.ROBERT:
+    case E.LM.ROBERT:
       return [r.z.COLLECTIBLES_SHOP_ROBERT_MARKETING];
-    case h.LM.STORM:
+    case E.LM.STORM:
       return [r.z.COLLECTIBLES_SHOP_STORM_MARKETING];
     default:
       return [];
@@ -49,7 +49,7 @@ if (g) {
   if (null != n) {
     var N, A, v, Z, L, O;
     C = {
-      type: h.k2.COACHTIP,
+      type: E.k2.COACHTIP,
       title: () => n.title,
       body: () => n.body,
       imageSrc: n.avatar,
@@ -65,8 +65,8 @@ if (g) {
     });
   }
 } else
-  f === h.k2.COACHTIP ? C = h.fY[T] : f === h.k2.COACHTIP_HEADLINE_ONLY ? C = h.zM[T] : f === h.k2.BADGE && (C = {
-    type: h.k2.BADGE
+  f === E.k2.COACHTIP ? C = E.fY[T] : f === E.k2.COACHTIP_HEADLINE_ONLY ? C = E.zM[T] : f === E.k2.BADGE && (C = {
+    type: E.k2.BADGE
   });
   }
   return {

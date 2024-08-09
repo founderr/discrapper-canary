@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(353093),
   u = n(931515),
   _ = n(807933),
-  E = n(207796),
-  h = n(497189),
+  h = n(207796),
+  E = n(497189),
   m = n(895068),
   I = n(490610),
   g = n(689938),
@@ -44,7 +44,7 @@ children: (0, i.jsxs)(l.AdvancedScrollerNone, {
         }),
         (0, i.jsx)('div', {
           className: p.backgroundImageContent,
-          children: (0, i.jsx)(h.Z, {
+          children: (0, i.jsx)(E.Z, {
             eligibleGuilds: s,
             eligibleGuildsIncludingConverted: n
           })
@@ -65,7 +65,7 @@ onScroll: t
   } = e, {
 ref: n,
 width: c
-  } = (0, o.Z)(), d = (0, E.GN)(e => e.mode, r.Z), [u, h] = a.useState(!0), I = (0, l.useSpring)({
+  } = (0, o.Z)(), d = (0, h.GN)(e => e.mode, r.Z), [u, E] = a.useState(!0), I = (0, l.useSpring)({
 from: {
   opacity: 0
 },
@@ -78,7 +78,7 @@ config: {
   friction: 60
 },
 delay: 200,
-onRest: () => h(!1)
+onRest: () => E(!1)
   });
   return (0, i.jsxs)('section', {
 ref: n,

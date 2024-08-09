@@ -2,14 +2,14 @@ var s = n(735250),
   r = n(470079),
   i = n(266067),
   a = n(215569);
-class o extends r.Component {
+class l extends r.Component {
   render() {
 let {
   children: e,
   location: t,
   history: n,
-  staticContext: o,
-  match: l,
+  staticContext: l,
+  match: o,
   ...c
 } = this.props, u = null, d = null;
 return r.Children.forEach(e, e => {
@@ -17,20 +17,20 @@ return r.Children.forEach(e, e => {
     let {
       component: s,
       render: a,
-      ...l
-    } = e.props, c = l.path || l.from;
+      ...o
+    } = e.props, c = o.path || o.from;
     if (null != (u = null != c ? (0, i.LX)(t.pathname, {
-        ...l,
+        ...o,
         path: c
       }) : null))
-      l = {
-        ...l,
+      o = {
+        ...o,
         key: c,
         location: t,
         match: u,
         history: n,
-        staticContext: o
-      }, null != s ? d = r.createElement(s, l) : null != a && (d = a(l));
+        staticContext: l
+      }, null != s ? d = r.createElement(s, o) : null != a && (d = a(o));
   }
 }), (0, s.jsx)(a.W, {
   ...c,
@@ -38,4 +38,4 @@ return r.Children.forEach(e, e => {
 });
   }
 }
-t.Z = (0, i.EN)(o);
+t.Z = (0, i.EN)(l);

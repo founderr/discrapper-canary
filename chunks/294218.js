@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(963550),
   A = n(845080),
   R = n(295790),
-  O = n(145807),
-  x = n(56744),
+  x = n(145807),
+  O = n(56744),
   M = n(981631),
   v = n(848509);
 t.Z = a.memo(function(e) {
@@ -70,8 +70,8 @@ className: r()(L, {
   [v.disableInteraction]: F
 }),
 disableInteraction: F,
-childrenRepliedMessage: (0, x.Z)(a, D, W, K, s),
-childrenExecutedCommand: (0, O.Z)(a, D, s),
+childrenRepliedMessage: (0, O.Z)(a, D, W, K, s),
+childrenExecutedCommand: (0, x.Z)(a, D, s),
 childrenHeader: (0, A.Z)({
   ...e,
   guildId: D.guild_id,

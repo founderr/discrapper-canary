@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return Z;
+return E;
   }
 }), t(47120);
 var a = t(735250),
@@ -23,9 +23,9 @@ var a = t(735250),
   k = t(823379),
   v = t(71585),
   _ = t(146282),
-  C = t(650613),
+  j = t(650613),
   w = t(789086),
-  j = t(206583),
+  C = t(206583),
   N = t(262737),
   S = t(979756);
 let T = [{
@@ -63,14 +63,14 @@ render(e) {
   let {
     type: r
   } = e;
-  return (0, a.jsx)(I, {
+  return (0, a.jsx)(Z, {
     type: r
   });
 }
   }
 ];
 
-function I(e) {
+function Z(e) {
   var r, t;
   let {
 type: n
@@ -91,9 +91,9 @@ onClick: function() {
   });
 }
 
-function Z() {
+function E() {
   var e, r;
-  let t = (0, d.e7)([_.Z], () => _.Z.getFeed(j.YN.GLOBAL_FEED)),
+  let t = (0, d.e7)([_.Z], () => _.Z.getFeed(C.YN.GLOBAL_FEED)),
 i = (0, d.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
 l = (0, d.e7)([v.Z], () => v.Z.getDebugFastImpressionCappingEnabled()),
 s = function(e) {
@@ -107,31 +107,31 @@ s = function(e) {
     };
   });
 }(null == t ? void 0 : null === (e = t.entries) || void 0 === e ? void 0 : e.map(e => e.content)),
-I = (0, d.e7)([_.Z], () => {
+Z = (0, d.e7)([_.Z], () => {
   var e;
-  return (null === (e = _.Z.getFeedState(j.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+  return (null === (e = _.Z.getFeedState(C.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
 }),
-[Z, R] = n.useState(''),
+[E, R] = n.useState(''),
 O = (0, d.e7)([
   x.Z,
   g.Z
 ], () => {
   var e, r, t;
-  return parseInt(Z) > 0 ? Z : null !== (t = null === (e = x.Z.getGameByName(Z)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = g.Z.getApplicationByName(Z)) || void 0 === r ? void 0 : r.id;
-}, [Z]),
+  return parseInt(E) > 0 ? E : null !== (t = null === (e = x.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = g.Z.getApplicationByName(E)) || void 0 === r ? void 0 : r.id;
+}, [E]),
 B = (0, y.Z)({
   applicationId: O,
   location: 'DevToolsContentInventory',
   source: f.m1.DevTools
 }),
-P = Object.entries(null !== (r = u.K.get('GameProfileModal')) && void 0 !== r ? r : {}).filter(e => {
+A = Object.entries(null !== (r = u.K.get('GameProfileModal')) && void 0 !== r ? r : {}).filter(e => {
   let [r, t] = e;
   return t;
 }).map(e => {
   let [r] = e;
   return r;
 }),
-L = (0, p.Z)(P).filter(k.lm);
+P = (0, p.Z)(A).filter(k.lm);
   return (0, a.jsx)('div', {
 className: o()(S.panel),
 children: (0, a.jsxs)(h.ScrollerThin, {
@@ -155,10 +155,10 @@ children: (0, a.jsxs)(h.ScrollerThin, {
           onClick: function() {
             m.Z.dispatch({
               type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-              feedId: j.YN.GLOBAL_FEED
+              feedId: C.YN.GLOBAL_FEED
             });
           },
-          submitting: I,
+          submitting: Z,
           children: 'Refresh Now'
         })
       ]
@@ -216,7 +216,7 @@ children: (0, a.jsxs)(h.ScrollerThin, {
       ]
     }),
     false,
-    (0, a.jsx)(C.Z, {}),
+    (0, a.jsx)(j.Z, {}),
     (0, a.jsxs)(h.FormSection, {
       children: [
         (0, a.jsx)(h.FormTitle, {
@@ -226,16 +226,16 @@ children: (0, a.jsxs)(h.ScrollerThin, {
           placeholder: 'App ID or full name',
           onChange: e => (0 === e.length || e.length >= 18) && R(e),
           onKeyDown: e => {
-            'Enter' === e.key && (Z === e.currentTarget.value ? null == B || B() : R(e.currentTarget.value));
+            'Enter' === e.key && (E === e.currentTarget.value ? null == B || B() : R(e.currentTarget.value));
           },
-          error: Z.length > 0 && null == B ? 'No game profile for '.concat(null != O ? O : Z + ' - try by id', '.') : void 0,
+          error: E.length > 0 && null == B ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
           style: null != B ? {
             border: '1px solid green'
           } : {}
         }),
         (0, a.jsx)('ul', {
-          children: L.map(e => (0, a.jsx)('li', {
-            children: (0, a.jsx)(E, {
+          children: P.map(e => (0, a.jsx)('li', {
+            children: (0, a.jsx)(I, {
               application: e
             })
           }, 'follow-game-'.concat(e.id)))
@@ -246,7 +246,7 @@ children: (0, a.jsxs)(h.ScrollerThin, {
 })
   });
 }
-let E = e => {
+let I = e => {
   let {
 application: r
   } = e, t = (0, y.Z)({

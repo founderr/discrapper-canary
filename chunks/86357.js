@@ -100,7 +100,7 @@ return (0, d.jsx)('div', {
   children: h.Z.Messages.APPLICATION_STORE_FREE
 });
   };
-class O extends(s = _.PureComponent) {
+class x extends(s = _.PureComponent) {
   getState() {
 let {
   inLibrary: e,
@@ -239,9 +239,9 @@ switch (this.props.type) {
 }
   }
 }
-o = O, c = 'Types', u = i, c in o ? Object.defineProperty(o, c, {
+o = x, c = 'Types', u = i, c in o ? Object.defineProperty(o, c, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[c] = u, t.Z = O;
+}) : o[c] = u, t.Z = x;

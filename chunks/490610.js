@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(945124),
   u = n(231467),
   _ = n(931515),
-  E = n(207796),
-  h = n(777734),
+  h = n(207796),
+  E = n(777734),
   m = n(976757),
   I = n(981631),
   g = n(477975);
@@ -24,7 +24,7 @@ loaded: p,
 clans: T,
 searchResult: S,
 searchCriteria: f
-  } = (0, _.Qc)(20), C = (0, E.GN)(e => e.selectedTraits, l.Z), N = a.useMemo(() => new Set(f.games), [f.games]), A = a.useCallback(e => {
+  } = (0, _.Qc)(20), C = (0, h.GN)(e => e.selectedTraits, l.Z), N = a.useMemo(() => new Set(f.games), [f.games]), A = a.useCallback(e => {
 var t;
 return (0, i.jsx)(u.ZP, {
   clan: e,
@@ -56,7 +56,7 @@ children: (0, i.jsxs)('div', {
   children: [
     (0, i.jsx)('div', {
       className: g.previewListSection,
-      children: (0, i.jsx)(h.Z, {
+      children: (0, i.jsx)(E.Z, {
         title: t,
         subtitle: n
       })

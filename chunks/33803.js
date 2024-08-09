@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(5192),
   A = n(51144),
   R = n(937889),
-  O = n(739566),
-  x = n(779125),
+  x = n(739566),
+  O = n(779125),
   M = n(890410),
   v = n(464891),
   L = n(507418),
@@ -208,7 +208,7 @@ let z = a.memo(function(e) {
 } = e,
 o = F(n, a),
 c = w(a, n.author),
-u = (0, O.ZP)(n),
+u = (0, x.ZP)(n),
 d = (0, v.CF)({
   message: n,
   channel: a,
@@ -221,7 +221,7 @@ E = g.default.getUser(l),
 I = F(n, a),
 m = w(a, E);
   if (null != E) {
-let e = (0, O.ij)(E, a),
+let e = (0, x.ij)(E, a),
   i = (0, v.CF)({
     message: n,
     channel: a,
@@ -239,7 +239,7 @@ tag: 'span',
 className: G.spanCorrection,
 children: (0, T.Mq)(n, s, () => (0, i.jsx)('div', {
   className: G.channelNameContainer,
-  children: (0, i.jsx)(x.Z, {
+  children: (0, i.jsx)(O.Z, {
     channel: s,
     className: G.channelName,
     openChatWithoutConnecting: !0
@@ -264,8 +264,8 @@ eventHandlers: {
 onFocus: S,
 ...A
   } = (0, c.JA)(null != t ? t : ''), {
-isFocused: O,
-handleFocus: x,
+isFocused: x,
+handleFocus: O,
 handleBlur: L
   } = (0, Z.bb)(S), P = (0, d.e7)([E.Z], () => E.Z.keyboardModeEnabled), j = (0, d.e7)([p.Z], () => p.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]), {
 ruleName: w,
@@ -369,7 +369,7 @@ children: (0, i.jsx)(D.Z, {
           hideTimestamp: !0,
           className: r()(G.embedCard, {
             [G.compact]: n,
-            [G.selected]: es || P && O,
+            [G.selected]: es || P && x,
             [G.isClickable]: null != J && null != Y
           }),
           childrenAccessories: (0, i.jsxs)(i.Fragment, {
@@ -446,7 +446,7 @@ children: (0, i.jsx)(D.Z, {
           }),
           popoutProps: er,
           zalgo: !0,
-          onFocus: x,
+          onFocus: O,
           onBlur: L,
           onClick: eo
         })

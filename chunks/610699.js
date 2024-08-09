@@ -26,8 +26,8 @@ var i = n(735250),
   S = n(601964),
   A = n(592125),
   R = n(430824),
-  O = n(496675),
-  x = n(594174),
+  x = n(496675),
+  O = n(594174),
   M = n(624138),
   v = n(358595),
   L = n(981631),
@@ -177,7 +177,7 @@ Q = (0, c.e7)([E.ZP], () => {
   });
 }),
 q = A.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
-X = (0, c.e7)([O.Z], () => null != q && O.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
+X = (0, c.e7)([x.Z], () => null != q && x.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q), [q]),
 {
   analyticsLocations: J
 } = (0, N.ZP)(h.Z.INVITE_EMBED),
@@ -190,7 +190,7 @@ ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.
   q,
   G.id
 ]),
-et = (0, c.Wu)([x.default], () => ee.map(e => x.default.getUser(e)), [ee]),
+et = (0, c.Wu)([O.default], () => ee.map(e => O.default.getUser(e)), [ee]),
 en = u.state === L.r2o.ACCEPTING,
 ei = null != W;
   if (null == W) {

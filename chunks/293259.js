@@ -5,78 +5,78 @@ return A;
 });
 var i = n(735250),
   l = n(470079),
-  o = n(442837),
-  t = n(692547),
-  r = n(481060),
-  a = n(239091),
+  t = n(442837),
+  o = n(692547),
+  a = n(481060),
+  r = n(239091),
   d = n(233440),
   c = n(314897),
   u = n(158776),
   _ = n(699516),
   I = n(998502),
-  E = n(785717),
-  f = n(621853),
+  f = n(785717),
+  E = n(621853),
   m = n(204197),
-  S = n(735336),
-  Z = n(520978),
-  x = n(184325),
-  v = n(652853),
+  x = n(735336),
+  S = n(520978),
+  v = n(184325),
+  Z = n(652853),
   h = n(225714),
-  T = n(228168),
-  p = n(231338),
+  p = n(228168),
+  T = n(231338),
   g = n(689938),
   N = n(520067);
-let C = r.AvatarSizes.SIZE_120,
-  j = I.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+let j = a.AvatarSizes.SIZE_120,
+  C = I.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function A(e) {
   let {
 displayProfile: s,
 user: I,
 guildId: A,
-channelId: O,
-friendToken: R,
+channelId: R,
+friendToken: O,
 className: L,
-isStreaming: U,
-hasProfileEffect: M,
-onClose: P
-  } = e, b = (0, o.e7)([_.Z], () => _.Z.getRelationshipType(I.id)), y = (0, o.e7)([u.Z], () => u.Z.isMobileOnline(I.id)), D = (0, o.e7)([u.Z], () => u.Z.getStatus(I.id)), B = (0, o.e7)([f.Z], () => f.Z.getUserProfile(I.id)), F = (0, o.e7)([c.default], () => c.default.getId() === I.id), {
+isStreaming: M,
+hasProfileEffect: U,
+onClose: b
+  } = e, P = (0, t.e7)([_.Z], () => _.Z.getRelationshipType(I.id)), y = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(I.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(I.id)), F = (0, t.e7)([E.Z], () => E.Z.getUserProfile(I.id)), B = (0, t.e7)([c.default], () => c.default.getId() === I.id), {
 theme: G
-  } = (0, v.z)(), {
+  } = (0, Z.z)(), {
 trackUserProfileAction: w
-  } = (0, E.KZ)(), {
+  } = (0, f.KZ)(), {
 avatarSrc: k,
 eventHandlers: V,
 avatarDecorationSrc: Y
   } = (0, m.Z)({
 user: I,
-size: C
-  }), H = l.useMemo(() => (0, d.W)(I, O), [
+size: j
+  }), W = l.useMemo(() => (0, d.W)(I, R), [
 I,
-O
+R
   ]);
   return (0, i.jsxs)('header', {
 className: L,
 children: [
-  (0, i.jsx)(S.Z, {
+  (0, i.jsx)(x.Z, {
     displayProfile: s,
-    onClose: P,
+    onClose: b,
     user: I,
-    profileType: T.y0.MODAL,
-    hasProfileEffect: M
+    profileType: p.y0.MODAL,
+    hasProfileEffect: U
   }),
   (0, i.jsxs)('div', {
     className: N.header,
     children: [
       (0, i.jsx)('div', {
         ...V,
-        children: (0, i.jsx)(j, {
+        children: (0, i.jsx)(C, {
           src: k,
           avatarDecoration: Y,
-          size: C,
+          size: j,
           className: N.avatar,
-          status: H ? p.Sk.UNKNOWN : U ? p.Sk.STREAMING : D,
-          statusBackdropColor: (0, r.getStatusBackdropColor)(G),
+          status: W ? T.Sk.UNKNOWN : M ? T.Sk.STREAMING : D,
+          statusBackdropColor: (0, a.getStatusBackdropColor)(G),
           isMobile: y,
           statusTooltip: !0,
           'aria-label': I.username
@@ -85,41 +85,41 @@ children: [
       (0, i.jsxs)('div', {
         className: N.headerTop,
         children: [
-          (null == B ? void 0 : B.profileFetchFailed) && !I.isClyde() ? (0, i.jsx)(r.Tooltip, {
+          (null == F ? void 0 : F.profileFetchFailed) && !I.isClyde() ? (0, i.jsx)(a.Tooltip, {
             text: g.Z.Messages.USER_PROFILE_LOAD_ERROR,
             spacing: 20,
-            children: e => (0, i.jsx)(r.CircleWarningIcon, {
+            children: e => (0, i.jsx)(a.CircleWarningIcon, {
               size: 'custom',
               width: 20,
               height: 20,
               ...e,
               className: N.warningCircleIcon,
-              color: t.Z.unsafe_rawColors.YELLOW_300.css
+              color: o.Z.unsafe_rawColors.YELLOW_300.css
             })
-          }) : (0, i.jsx)(x.Z, {
+          }) : (0, i.jsx)(v.Z, {
             user: I,
             className: N.badgeList,
             guildId: A,
-            size: x.V.SIZE_24,
+            size: v.V.SIZE_24,
             shrinkAtCount: 8,
-            shrinkToSize: x.V.SIZE_18,
-            onBadgeClick: P
+            shrinkToSize: v.V.SIZE_18,
+            onBadgeClick: b
           }),
           (0, i.jsxs)('div', {
             className: N.relationshipButtons,
             children: [
-              (null == B ? void 0 : B.application) != null && (0, i.jsx)(Z.Z, {
+              (null == F ? void 0 : F.application) != null && (0, i.jsx)(S.Z, {
                 className: N.applicationInstallButton,
-                application: B.application
+                application: F.application
               }),
               (0, i.jsx)(h.Z, {
                 user: I,
-                isCurrentUser: F,
-                relationshipType: b,
-                friendToken: R,
-                onClose: P
+                isCurrentUser: B,
+                relationshipType: P,
+                friendToken: O,
+                onClose: b
               }),
-              F || I.isNonUserBot() ? null : (0, i.jsx)(r.Clickable, {
+              B || I.isNonUserBot() ? null : (0, i.jsx)(a.Clickable, {
                 focusProps: {
                   offset: {
                     left: 8
@@ -128,22 +128,22 @@ children: [
                 onClick: function(e) {
                   w({
                     action: 'PRESS_OPTIONS'
-                  }), (0, a.jW)(e, async () => {
+                  }), (0, r.jW)(e, async () => {
                     let {
                       default: e
                     } = await n.e('29136').then(n.bind(n, 193646));
                     return s => (0, i.jsx)(e, {
                       ...s,
                       user: I,
-                      isCurrentUser: F,
+                      isCurrentUser: B,
                       guildId: A,
-                      relationshipType: b,
+                      relationshipType: P,
                       trackUserProfileAction: w,
-                      onClose: P
+                      onClose: b
                     });
                   });
                 },
-                children: (0, i.jsx)(r.MoreVerticalIcon, {
+                children: (0, i.jsx)(a.MoreVerticalIcon, {
                   size: 'md',
                   color: 'currentColor',
                   className: N.additionalActionsIcon

@@ -1,75 +1,75 @@
 n.d(s, {
   Z: function() {
-return x;
+return v;
   }
 });
 var i = n(735250),
   l = n(470079),
-  o = n(120356),
-  t = n.n(o),
-  r = n(442837),
-  a = n(481060),
+  t = n(120356),
+  o = n.n(t),
+  a = n(442837),
+  r = n(481060),
   d = n(717881),
   c = n(387903),
   u = n(906732),
   _ = n(199902),
   I = n(158776),
-  E = n(785717),
-  f = n(221292),
+  f = n(785717),
+  E = n(221292),
   m = n(981631),
-  S = n(501649),
-  Z = n(735393);
+  x = n(501649),
+  S = n(735393);
 
-function x(e) {
+function v(e) {
   let {
 user: s,
 type: n,
-showActions: o,
-onClose: x
-  } = e, v = (0, r.e7)([_.Z], () => null != _.Z.getAnyStreamForUser(s.id)), h = (0, r.e7)([I.Z], () => I.Z.getActivities(s.id)), T = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), p = l.useMemo(() => v ? T.find(e => e.type === m.IIU.PLAYING) : null, [
-T,
-v
-  ]), g = l.useMemo(() => T.filter(e => e !== p), [
+showActions: t,
+onClose: v
+  } = e, Z = (0, a.e7)([_.Z], () => null != _.Z.getAnyStreamForUser(s.id)), h = (0, a.e7)([I.Z], () => I.Z.getActivities(s.id)), p = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), T = l.useMemo(() => Z ? p.find(e => e.type === m.IIU.PLAYING) : null, [
 p,
-T
+Z
+  ]), g = l.useMemo(() => p.filter(e => e !== T), [
+T,
+p
   ]), {
 analyticsLocations: N,
-newestAnalyticsLocation: C
+newestAnalyticsLocation: j
   } = (0, u.ZP)(), {
-context: j,
+context: C,
 trackUserProfileAction: A
-  } = (0, E.KZ)(), O = {
+  } = (0, f.KZ)(), R = {
 location: {
   page: m.ZY5.USER_PROFILE,
   section: m.jXE.PROFILE_MODAL
 }
   };
-  return (0, i.jsxs)(a.ScrollerThin, {
-className: Z.listScroller,
+  return (0, i.jsxs)(r.ScrollerThin, {
+className: S.listScroller,
 fade: !0,
 children: [
-  v ? (0, i.jsx)(d.Z, {
+  Z ? (0, i.jsx)(d.Z, {
     type: n,
     user: s,
-    source: C,
-    className: S.userProfileActivity,
+    source: j,
+    className: x.userProfileActivity,
     showChannelDetails: n === c.Y.SIMPLIFIED_PROFILE,
-    activity: p,
-    actionColor: S.actionColor,
-    analyticsParams: O,
-    showActions: o,
-    onClose: x,
+    activity: T,
+    actionColor: x.actionColor,
+    analyticsParams: R,
+    showActions: t,
+    onClose: v,
     onAction: () => {
       A({
         action: 'JOIN_ACTIVITY'
-      }), (0, f.Ac)({
+      }), (0, E.Ac)({
         activityType: m.IIU.STREAMING,
-        activityName: null == p ? void 0 : p.name,
-        activityPlatform: null == p ? void 0 : p.platform,
-        activitySessionId: null == p ? void 0 : p.session_id,
-        applicationId: null == p ? void 0 : p.application_id,
+        activityName: null == T ? void 0 : T.name,
+        activityPlatform: null == T ? void 0 : T.platform,
+        activitySessionId: null == T ? void 0 : T.session_id,
+        applicationId: null == T ? void 0 : T.application_id,
         analyticsLocations: N,
-        ...j
+        ...C
       });
     }
   }) : null,
@@ -78,24 +78,24 @@ children: [
     activity: e,
     user: s,
     useStoreStream: !1,
-    source: C,
-    className: t()(S.userProfileActivity, n === c.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
+    source: j,
+    className: o()(x.userProfileActivity, n === c.Y.SIMPLIFIED_PROFILE && x.simplifiedProfileActivity),
     showChannelDetails: n === c.Y.SIMPLIFIED_PROFILE,
-    actionColor: S.actionColor,
-    analyticsParams: O,
-    showActions: o,
-    onClose: x,
+    actionColor: x.actionColor,
+    analyticsParams: R,
+    showActions: t,
+    onClose: v,
     onAction: () => {
       A({
         action: 'JOIN_ACTIVITY'
-      }), (0, f.Ac)({
+      }), (0, E.Ac)({
         activityType: e.type,
         activityName: e.name,
         activityPlatform: e.platform,
         activitySessionId: e.session_id,
         applicationId: e.application_id,
         analyticsLocations: N,
-        ...j
+        ...C
       });
     }
   }, ''.concat(e.application_id, '-').concat(e.session_id, '-').concat(e.name)))

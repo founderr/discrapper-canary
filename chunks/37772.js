@@ -22,8 +22,8 @@ var i = n(735250),
   S = n(443877),
   A = n(492593),
   R = n(938353),
-  O = n(25015),
-  x = n(689674),
+  x = n(25015),
+  O = n(689674),
   M = n(963550),
   v = n(845080),
   L = n(295790),
@@ -81,13 +81,13 @@ disableReactionCreates: $
   } = (0, S.Z)(s), {
 content: ee,
 hasSpoilerEmbeds: et
-  } = (0, O.Z)(o, {
+  } = (0, x.Z)(o, {
 hideSimpleEmbedContent: z && Q,
 allowList: X,
 allowHeading: X,
 allowLinks: !0,
 previewLinkTarget: !0
-  }), en = (0, g.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))), ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W, es = !ea && void 0 === a, er = (0, x.Z)({
+  }), en = (0, g.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))), ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W, es = !ea && void 0 === a, er = (0, O.Z)({
 message: o,
 channel: s,
 enabled: es

@@ -9,9 +9,9 @@ var i = n(735250),
   d = n(359380),
   u = n(689938),
   _ = n(412206),
-  E = n(363778);
+  h = n(363778);
 
-function h(e) {
+function E(e) {
   let {
 gameApplicationIds: t,
 onUpdateGames: n,
@@ -23,7 +23,7 @@ n(new Set(e));
 children: [
   (0, i.jsx)(l.Heading, {
     variant: 'heading-lg/medium',
-    className: E.sectionTitle,
+    className: h.sectionTitle,
     children: u.Z.Messages.GAMES
   }),
   (0, i.jsx)(o.p, {
@@ -46,7 +46,7 @@ onUpdateTraits: n
 children: [
   (0, i.jsx)(l.Heading, {
     variant: 'heading-lg/medium',
-    className: E.sectionTitle,
+    className: h.sectionTitle,
     children: u.Z.Messages.CLAN_DISCOVERY_TRAITS
   }),
   (0, i.jsx)(d.d, {
@@ -65,7 +65,7 @@ onUpdatePlaystyle: n
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)('div', {
-    className: E.sectionTitle,
+    className: h.sectionTitle,
     children: (0, i.jsx)(l.Heading, {
       variant: 'heading-lg/medium',
       children: u.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE
@@ -88,37 +88,37 @@ onUpdateGames: o,
 onUpdatePlaystyle: c
   } = e;
   return (0, i.jsxs)('div', {
-className: r()(E.slideContent, _.container),
+className: r()(h.slideContent, _.container),
 children: [
   (0, i.jsxs)('div', {
     className: _.mainHeader,
     children: [
       (0, i.jsx)(l.Heading, {
         variant: 'heading-xxl/medium',
-        className: E.title,
+        className: h.title,
         children: u.Z.Messages.CLAN_DISCOVERY_PREFERENCES_TITLE
       }),
       (0, i.jsx)(l.Text, {
         variant: 'text-md/normal',
         color: 'header-secondary',
-        className: E.subtitle,
+        className: h.subtitle,
         children: u.Z.Messages.CLAN_DISCOVERY_PREFERENCES_DESCRIPTION
       })
     ]
   }),
-  (0, i.jsx)(h, {
+  (0, i.jsx)(E, {
     gameApplicationIds: n,
     onUpdateGames: o
   }),
   (0, i.jsx)('hr', {
-    className: E.divider
+    className: h.divider
   }),
   (0, i.jsx)(I, {
     playstyle: a,
     onUpdatePlaystyle: c
   }),
   (0, i.jsx)('hr', {
-    className: E.divider
+    className: h.divider
   }),
   (0, i.jsx)(m, {
     traits: t,

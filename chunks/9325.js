@@ -7,8 +7,8 @@ var s = n(735250),
   r = n(470079),
   i = n(442837),
   a = n(481060),
-  o = n(388905),
-  l = n(409059),
+  l = n(388905),
+  o = n(409059),
   c = n(962220),
   u = n(306453),
   d = n(108427),
@@ -35,18 +35,18 @@ r = null != s ? s : _.default.getId();
 function N(e) {
   let {
 code: t
-  } = e, n = (0, i.e7)([l.Z], () => l.Z.getGuildTemplate(t));
+  } = e, n = (0, i.e7)([o.Z], () => o.Z.getGuildTemplate(t));
   return (r.useEffect(() => {
 (0, d.e)('guild_template_mobile');
-  }, []), null == n || n.state === p.Rj.RESOLVING) ? (0, s.jsx)(o.ZP, {
+  }, []), null == n || n.state === p.Rj.RESOLVING) ? (0, s.jsx)(l.ZP, {
 children: (0, s.jsx)(a.Spinner, {})
-  }) : n.state === p.Rj.RESOLVED ? (0, s.jsxs)(o.ZP, {
+  }) : n.state === p.Rj.RESOLVED ? (0, s.jsxs)(l.ZP, {
 children: [
   (0, s.jsx)(u.Z, {
     guildTemplate: n,
     tall: !0
   }),
-  (0, s.jsx)(o.zx, {
+  (0, s.jsx)(l.zx, {
     onClick: e => f(e, t, n),
     className: m.marginTop20,
     children: I.Z.Messages.GUILD_TEMPLATE_OPEN

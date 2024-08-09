@@ -37,8 +37,8 @@ R = (0, r.e7)([u.Z], () => null != h && null != h.target_user ? u.Z.getStreamFor
   h,
   g
 ]),
-O = null != h && h.target_type === I.Iq.STREAM && null != h.target_user && null != A,
-x = null != h && null != R && null != h.channel && null != h.guild && R.channelId === h.channel.id && R.guildId === h.guild.id;
+x = null != h && h.target_type === I.Iq.STREAM && null != h.target_user && null != A,
+O = null != h && null != R && null != h.channel && null != h.guild && R.channelId === h.channel.id && R.guildId === h.guild.id;
   s()(null != h, 'Invite cannot be null');
   let {
 target_type: M,
@@ -54,10 +54,10 @@ if (null == h.guild)
 f = new c.ZP(h.guild);
   }
   let b = null != h.channel ? (0, o.jD)(h.channel) : null,
-D = O ? C : p;
-  P && !x ? a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({
+D = x ? C : p;
+  P && !O ? a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({
 name: v.username
-  }) : (t = m.Z.Messages.WATCH, n = l.Z.Button.Colors.GREEN, O && (t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING, n = l.Z.Button.Colors.PRIMARY), a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({
+  }) : (t = m.Z.Messages.WATCH, n = l.Z.Button.Colors.GREEN, x && (t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING, n = l.Z.Button.Colors.PRIMARY), a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({
 name: v.username
   }));
   let j = S === f.id && null != b ? (0, i.jsx)(l.Z.Channel, {
@@ -77,20 +77,20 @@ children: [
         children: [
           (0, i.jsx)(l.Z.Icon, {
             guild: f,
-            onClick: P && x ? D : void 0
+            onClick: P && O ? D : void 0
           }),
           (0, i.jsx)(l.Z.Info, {
             title: a,
-            onClick: P && x ? D : void 0,
+            onClick: P && O ? D : void 0,
             children: j
           })
         ]
       }),
-      x ? (0, i.jsx)(l.Z.Button, {
-        disabled: P && !x,
+      O ? (0, i.jsx)(l.Z.Button, {
+        disabled: P && !O,
         onClick: D,
         submitting: Z,
-        isDisabled: O && x,
+        isDisabled: x && O,
         color: n,
         children: t
       }) : null

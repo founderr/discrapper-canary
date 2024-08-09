@@ -6,10 +6,10 @@ return u;
 var i = n(735250);
 n(470079);
 var l = n(387903),
-  o = n(100849),
-  t = n(487922),
-  r = n(620648),
-  a = n(944546),
+  t = n(100849),
+  o = n(487922),
+  a = n(620648),
+  r = n(944546),
   d = n(470900),
   c = n(228168);
 
@@ -23,7 +23,7 @@ onClose: I
   } = e;
   switch (u) {
 case c.oh.ACTIVITY:
-  return (0, i.jsx)(o.Z, {
+  return (0, i.jsx)(t.Z, {
     user: n,
     type: l.Y.PROFILE_V2,
     onClose: I
@@ -34,18 +34,18 @@ case c.oh.MUTUAL_GUILDS:
     onClose: I
   });
 case c.oh.MUTUAL_FRIENDS:
-  return (0, i.jsx)(a.Z, {
+  return (0, i.jsx)(r.Z, {
     user: n,
     onClose: I
   });
 case c.oh.BOT_DATA_ACCESS:
-  return (0, i.jsx)(t.Z, {
+  return (0, i.jsx)(o.Z, {
     user: n
   });
 case c.oh.USER_INFO_CONNECTIONS:
 case c.oh.USER_INFO:
 default:
-  return (0, i.jsx)(r.Z, {
+  return (0, i.jsx)(a.Z, {
     displayProfile: s,
     autoFocusNote: _,
     user: n,

@@ -7,7 +7,7 @@ t.Z = function(e) {
   let {
 match: t,
 location: n
-  } = e, o = async (e, t) => {
+  } = e, l = async (e, t) => {
 await (0, r.s)(a.jE.PICK_GUILD_SETTINGS, {
   section: e.params.section,
   subsection: e.params.subsection,
@@ -17,6 +17,6 @@ await (0, r.s)(a.jE.PICK_GUILD_SETTINGS, {
   return (0, s.jsx)(i.Z, {
 match: t,
 location: n,
-attemptDeepLink: o
+attemptDeepLink: l
   });
 };

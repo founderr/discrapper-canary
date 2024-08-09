@@ -1,26 +1,26 @@
 n.d(t, {
   Z: function() {
-return a;
+return r;
   }
 }), n(47120);
-var r = n(470079),
-  o = n(81063);
+var i = n(470079),
+  a = n(81063);
 let s = [
   'embedded_cover',
   'embedded_background'
 ];
 
-function a(e) {
+function r(e) {
   let {
 applicationId: t,
 size: n,
-names: a = s
-  } = e, [u, i] = r.useState(null), [c, l] = r.useState(!0), d = (0, o.getAssetImage)(t, u, n);
-  return r.useEffect(() => {
-(0, o.getAssets)(t).then(e => {
-  for (let [t, n] of(l(!1), Object.entries(e)))
-    if (null != n && '' !== n.id && a.includes(n.name)) {
-      i(n.id);
+names: r = s
+  } = e, [l, o] = i.useState(null), [c, u] = i.useState(!0), d = (0, a.getAssetImage)(t, l, n);
+  return i.useEffect(() => {
+(0, a.getAssets)(t).then(e => {
+  for (let [t, n] of(u(!1), Object.entries(e)))
+    if (null != n && '' !== n.id && r.includes(n.name)) {
+      o(n.id);
       return;
     }
 });

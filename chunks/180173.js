@@ -44,7 +44,7 @@ children: [
     setTab: t,
     closePopout: n
   }),
-  0 === a.length ? (0, i.jsx)(O, {}) : (0, i.jsx)(o.AdvancedScrollerThin, {
+  0 === a.length ? (0, i.jsx)(x, {}) : (0, i.jsx)(o.AdvancedScrollerThin, {
     children: a.map(e => (0, i.jsx)(R, {
       savedMessage: e
     }, e.saveData.messageId))
@@ -102,7 +102,7 @@ children: null != n && null != t.message ? (0, i.jsxs)(i.Fragment, {
   });
 }
 
-function O() {
+function x() {
   return (0, i.jsx)(h.Z, {
 Icon: o.DoubleCheckmarkIcon,
 header: C.Z.Messages.MESSAGE_BOOKMARKS_EMPTY,
