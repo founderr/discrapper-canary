@@ -12,10 +12,10 @@ var i = n(735250),
   d = n(169559),
   c = n(369077),
   u = n(706454),
-  I = n(246946),
-  _ = n(785717),
-  f = n(648067),
-  E = n(588822),
+  _ = n(246946),
+  I = n(785717),
+  E = n(648067),
+  f = n(588822),
   m = n(900927),
   S = n(652853),
   Z = n(335191),
@@ -32,9 +32,9 @@ autoFocusNote: p = !1,
 scrollToConnections: g = !1
   } = e, {
 trackUserProfileAction: N
-  } = (0, _.KZ)(), C = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation), {
+  } = (0, I.KZ)(), C = (0, o.e7)([_.Z], () => _.Z.hidePersonalInformation), {
 theme: j
-  } = (0, S.z)(), A = (0, o.e7)([u.default], () => u.default.locale), O = (0, d.Z)('user_profile'), R = (null == T ? void 0 : T.bio) != null && (null == T ? void 0 : T.bio) !== '' || (0, a.Z)(n.id), L = (0, f.Z)(n.id), U = l.useRef(null);
+  } = (0, S.z)(), A = (0, o.e7)([u.default], () => u.default.locale), O = (0, d.Z)('user_profile'), R = (null == T ? void 0 : T.bio) != null && (null == T ? void 0 : T.bio) !== '' || (0, a.Z)(n.id), L = (0, E.Z)(n.id), U = l.useRef(null);
   return (l.useLayoutEffect(() => {
 if (g) {
   var e;
@@ -54,7 +54,7 @@ children: [
             className: h.userInfoSectionHeader,
             children: v.Z.Messages.USER_PROFILE_ABOUT_ME
           }),
-          (0, i.jsx)(E.Z, {
+          (0, i.jsx)(f.Z, {
             className: h.userInfoText,
             userBio: null !== (s = null == T ? void 0 : T.bio) && void 0 !== s ? s : '',
             userId: n.id

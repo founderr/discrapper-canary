@@ -45,25 +45,25 @@ flags: s
   });
   if (null == s)
 return null;
-  let I = [];
-  return d && I.push((0, i.jsx)(a, {
+  let _ = [];
+  return d && _.push((0, i.jsx)(a, {
 heading: t.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
 content: t.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
-  })), c && I.push((0, i.jsx)(a, {
+  })), c && _.push((0, i.jsx)(a, {
 heading: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
 content: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
-  })), u && I.push((0, i.jsx)(a, {
+  })), u && _.push((0, i.jsx)(a, {
 heading: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
 content: t.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
-  })), I.length > 0 && I.push((0, i.jsx)('div', {
+  })), _.length > 0 && _.push((0, i.jsx)('div', {
 className: r.divider,
 children: (0, i.jsx)(l.FormDivider, {})
-  })), I.push((0, i.jsx)(a, {
+  })), _.push((0, i.jsx)(a, {
 content: t.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
   helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975'
 })
   })), (0, i.jsx)(l.ScrollerThin, {
 className: n,
-children: I
+children: _
   });
 }

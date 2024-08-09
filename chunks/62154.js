@@ -18,25 +18,25 @@ function u(e) {
 displayProfile: s,
 user: n,
 selectedSection: u,
-autoFocusNote: I,
-onClose: _
+autoFocusNote: _,
+onClose: I
   } = e;
   switch (u) {
 case c.oh.ACTIVITY:
   return (0, i.jsx)(o.Z, {
     user: n,
     type: l.Y.PROFILE_V2,
-    onClose: _
+    onClose: I
   });
 case c.oh.MUTUAL_GUILDS:
   return (0, i.jsx)(d.Z, {
     user: n,
-    onClose: _
+    onClose: I
   });
 case c.oh.MUTUAL_FRIENDS:
   return (0, i.jsx)(a.Z, {
     user: n,
-    onClose: _
+    onClose: I
   });
 case c.oh.BOT_DATA_ACCESS:
   return (0, i.jsx)(t.Z, {
@@ -47,7 +47,7 @@ case c.oh.USER_INFO:
 default:
   return (0, i.jsx)(r.Z, {
     displayProfile: s,
-    autoFocusNote: I,
+    autoFocusNote: _,
     user: n,
     scrollToConnections: u === c.oh.USER_INFO_CONNECTIONS
   });

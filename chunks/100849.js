@@ -12,10 +12,10 @@ var i = n(735250),
   d = n(717881),
   c = n(387903),
   u = n(906732),
-  I = n(199902),
-  _ = n(158776),
-  f = n(785717),
-  E = n(221292),
+  _ = n(199902),
+  I = n(158776),
+  E = n(785717),
+  f = n(221292),
   m = n(981631),
   S = n(501649),
   Z = n(735393);
@@ -26,7 +26,7 @@ user: s,
 type: n,
 showActions: o,
 onClose: x
-  } = e, v = (0, r.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(s.id)), h = (0, r.e7)([_.Z], () => _.Z.getActivities(s.id)), T = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), p = l.useMemo(() => v ? T.find(e => e.type === m.IIU.PLAYING) : null, [
+  } = e, v = (0, r.e7)([_.Z], () => null != _.Z.getAnyStreamForUser(s.id)), h = (0, r.e7)([I.Z], () => I.Z.getActivities(s.id)), T = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), p = l.useMemo(() => v ? T.find(e => e.type === m.IIU.PLAYING) : null, [
 T,
 v
   ]), g = l.useMemo(() => T.filter(e => e !== p), [
@@ -38,7 +38,7 @@ newestAnalyticsLocation: C
   } = (0, u.ZP)(), {
 context: j,
 trackUserProfileAction: A
-  } = (0, f.KZ)(), O = {
+  } = (0, E.KZ)(), O = {
 location: {
   page: m.ZY5.USER_PROFILE,
   section: m.jXE.PROFILE_MODAL
@@ -62,7 +62,7 @@ children: [
     onAction: () => {
       A({
         action: 'JOIN_ACTIVITY'
-      }), (0, E.Ac)({
+      }), (0, f.Ac)({
         activityType: m.IIU.STREAMING,
         activityName: null == p ? void 0 : p.name,
         activityPlatform: null == p ? void 0 : p.platform,
@@ -88,7 +88,7 @@ children: [
     onAction: () => {
       A({
         action: 'JOIN_ACTIVITY'
-      }), (0, E.Ac)({
+      }), (0, f.Ac)({
         activityType: e.type,
         activityName: e.name,
         activityPlatform: e.platform,

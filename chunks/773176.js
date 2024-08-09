@@ -38,11 +38,11 @@ var i = n(735250),
   w = n(626135),
   B = n(572004),
   H = n(970257),
-  G = n(418476),
-  V = n(151007),
-  F = n(432376),
-  W = n(373662),
-  z = n(917990),
+  G = n(364742),
+  V = n(418476),
+  F = n(151007),
+  W = n(432376),
+  z = n(373662),
   Y = n(996861),
   K = n(603490),
   q = n(225138),
@@ -103,7 +103,7 @@ children: r.map(e => {
     }) : $.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD_ALLY.format({
       emojiName: e.name
     });
-  return (0, i.jsx)(W.s, {
+  return (0, i.jsx)(z.s, {
     tooltipText: (0, i.jsxs)(i.Fragment, {
       children: [
         (0, i.jsx)(d.Text, {
@@ -188,14 +188,14 @@ let {
 }), [
   t,
   I
-]), v = (0, Z.U)(t, n), S = (0, R.NE)(t, n), P = (0, R.Ek)(n), U = (0, c.e7)([T.Z], () => null != t.guild_id && T.Z.isLurking(t.guild_id), [t]), w = (0, c.e7)([O.ZP], () => null != t.guild_id && O.ZP.isCurrentUserGuest(t.guild_id), [t]), W = o.id === d, z = (x || n.canDeleteOwnMessage(d)) && h && !Q.V$x.UNDELETABLE.has(n.type);
+]), v = (0, Z.U)(t, n), S = (0, R.NE)(t, n), P = (0, R.Ek)(n), U = (0, c.e7)([T.Z], () => null != t.guild_id && T.Z.isLurking(t.guild_id), [t]), w = (0, c.e7)([O.ZP], () => null != t.guild_id && O.ZP.isCurrentUserGuest(t.guild_id), [t]), G = o.id === d, z = (x || n.canDeleteOwnMessage(d)) && h && !Q.V$x.UNDELETABLE.has(n.type);
 n.type === Q.uaV.AUTO_MODERATION_ACTION && (z = z && x);
 let Y = (0, H.a4)(n),
-  K = (0, V.Z)(n, t, x),
-  q = !t.isSystemDM() && (0, G.Z)(n, d) && h && !_,
+  K = (0, F.Z)(n, t, x),
+  q = !t.isSystemDM() && (0, V.Z)(n, d) && h && !_,
   {
     disableReactionCreates: J
-  } = (0, F.Z)({
+  } = (0, W.Z)({
     channel: t,
     canChat: I,
     renderReactions: f,
@@ -204,7 +204,7 @@ let Y = (0, H.a4)(n),
     isGuest: w,
     isActiveChannelOrUnarchivableThread: h
   }),
-  $ = t.type === Q.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(Q.oNc.NEWS) && (W || x) && (0, m.Z)(n),
+  $ = t.type === Q.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(Q.oNc.NEWS) && (G || x) && (0, m.Z)(n),
   ee = t.getGuildId(),
   et = null != ee && (n.type === Q.uaV.USER_JOIN || n.type === Q.uaV.GUILD_INVITE_REMINDER) && k.Z.canWithPartialContext(Q.Plq.MANAGE_GUILD, {
     guildId: ee
@@ -291,7 +291,7 @@ eN(!1);
 eI(J.L.TAKE_ACTION), (0, Y.ts)(e, t);
   }, [eI]), {
 canShowReactionsOnMessageHover: eA
-  } = z.Z.useExperiment({
+  } = G.Z.useExperiment({
 location: 'ExpandingButtons'
   }, {
 autoTrackExposure: !0
@@ -300,47 +300,47 @@ autoTrackExposure: !0
 children: [
   q ? (0, i.jsxs)(i.Fragment, {
     children: [
-      s && eh ? (0, i.jsx)(W.s, {
+      s && eh ? (0, i.jsx)(z.s, {
         label: $.Z.Messages.COPY_ID_MESSAGE,
         icon: d.IdIcon,
         onClick: e => (0, Y.F4)(t, n, e)
       }, 'copy-id') : null,
-      s && !ep ? (0, i.jsx)(W.s, {
+      s && !ep ? (0, i.jsx)(z.s, {
         label: $.Z.Messages.COPY_LINK,
         icon: d.LinkIcon,
         onClick: () => (0, Y.fB)(t, n)
       }, 'copy-link') : null,
-      x ? (0, i.jsx)(W.s, {
+      x ? (0, i.jsx)(z.s, {
         label: $.Z.Messages.CONFIGURE,
         icon: d.CircleQuestionIcon,
         onClick: () => (0, Y.zW)(t)
       }, 'configure') : null,
-      el ? (0, i.jsx)(W.s, {
+      el ? (0, i.jsx)(z.s, {
         label: er ? $.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : $.Z.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
         icon: er ? (0, d.makeIconCompat)(U.Z) : d.ListBulletsIcon,
         onClick: () => er ? (0, Y.l9)(t, n) : (0, Y.W1)(t, n)
       }, 'mark-reminder') : null,
-      eE ? (0, i.jsx)(W.s, {
+      eE ? (0, i.jsx)(z.s, {
         label: $.Z.Messages.MARK_UNREAD,
         icon: d.ChatMarkUnreadIcon,
         onClick: () => (0, Y.B8)(t, n)
       }, 'mark-unread') : null,
-      ec ? (0, i.jsx)(W.s, {
+      ec ? (0, i.jsx)(z.s, {
         label: eu ? $.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK : $.Z.Messages.MESSAGE_BOOKMARKS_BOOKMARK,
         icon: eu ? d.BookmarkIcon : d.BookmarkOutlineIcon,
         onClick: () => eu ? (0, Y.eM)(t, n) : (0, Y.dF)(t, n)
       }, 'bookmark') : null,
-      r ? (0, i.jsx)(W.s, {
+      r ? (0, i.jsx)(z.s, {
         label: n.pinned ? $.Z.Messages.UNPIN_MESSAGE : $.Z.Messages.PIN_MESSAGE,
         icon: d.PinIcon,
         onClick: e => (0, Y.rY)(t, n, e)
       }, 'pin') : null,
-      v && P ? (0, i.jsx)(W.s, {
+      v && P ? (0, i.jsx)(z.s, {
         label: $.Z.Messages.CREATE_THREAD,
         icon: d.ThreadIcon,
         onClick: () => (0, Y.gK)(t, n)
       }, 'thread') : null,
-      N && f ? (0, i.jsx)(W.s, {
+      N && f ? (0, i.jsx)(z.s, {
         label: $.Z.Messages.MESSAGE_ACTION_REPLY,
         icon: d.ArrowAngleLeftUpIcon,
         onClick: e => (0, Y.HH)(t, n, e)
@@ -370,17 +370,17 @@ children: [
       })
     ]
   }) : null,
-  N && !f ? (0, i.jsx)(W.s, {
+  N && !f ? (0, i.jsx)(z.s, {
     label: $.Z.Messages.MESSAGE_ACTION_REPLY,
     icon: d.ArrowAngleLeftUpIcon,
     onClick: e => (0, Y.HH)(t, n, e)
   }, 'reply-other') : null,
-  f ? (0, i.jsx)(W.s, {
+  f ? (0, i.jsx)(z.s, {
     label: $.Z.Messages.EDIT,
     icon: d.PencilIcon,
     onClick: () => (0, Y.Hd)(t, n)
   }, 'edit') : null,
-  P ? (0, i.jsx)(W.s, {
+  P ? (0, i.jsx)(z.s, {
     label: $.Z.Messages.MESSAGE_ACTION_FORWARD,
     icon: d.ChatArrowRightIcon,
     onClick: () => eZ(t, n),
@@ -388,23 +388,23 @@ children: [
     onTooltipHide: eS,
     showNewBadge: !eT && ex
   }, 'forward') : null,
-  v && !P ? (0, i.jsx)(W.s, {
+  v && !P ? (0, i.jsx)(z.s, {
     label: $.Z.Messages.CREATE_THREAD,
     icon: d.ThreadIcon,
     onClick: () => (0, Y.gK)(t, n)
   }, 'thread') : null,
-  !v && S ? (0, i.jsx)(W.s, {
+  !v && S ? (0, i.jsx)(z.s, {
     label: $.Z.Messages.VIEW_THREAD,
     icon: d.ThreadIcon,
     onClick: () => (0, Y.qe)(t, n)
   }, 'view-thread') : null,
-  E ? (0, i.jsx)(W.s, {
+  E ? (0, i.jsx)(z.s, {
     label: eC ? $.Z.Messages.NEWS_CHANNEL_PUBLISHED : $.Z.Messages.NEWS_CHANNEL_PUBLISH,
     icon: d.AnnouncementsIcon,
     onClick: () => (0, Y.Xl)(t, n),
     disabled: eC
   }, 'publish') : null,
-  o && (ep || q) ? (0, i.jsx)(W.s, {
+  o && (ep || q) ? (0, i.jsx)(z.s, {
     label: $.Z.Messages.DELETE,
     icon: d.TrashIcon,
     onClick: e => (0, Y.$Z)(t, n, e),
@@ -437,7 +437,7 @@ children: [
       } = e, {
         isShown: s
       } = t;
-      return (0, i.jsx)(W.s, {
+      return (0, i.jsx)(z.s, {
         label: $.Z.Messages.MORE,
         icon: d.MoreHorizontalIcon,
         selected: s,
@@ -457,12 +457,12 @@ message: n
   } = e, a = (0, c.e7)([I.Z], () => null != I.Z.getMessage(n.id), [n.id]), s = null == n.interaction || null != n.interactionData && (0, x.$s)(n.interactionData);
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  !a && s && (0, i.jsx)(W.s, {
+  !a && s && (0, i.jsx)(z.s, {
     label: $.Z.Messages.RETRY,
     icon: d.RetryIcon,
     onClick: () => (0, Y.mG)(t, n)
   }, 'retry'),
-  (0, i.jsx)(W.s, {
+  (0, i.jsx)(z.s, {
     label: $.Z.Messages.DELETE,
     icon: d.TrashIcon,
     onClick: e => (0, Y.$Z)(t, n, e)
@@ -558,7 +558,7 @@ onClick: en,
 onContextMenu: en,
 role: 'group',
 'aria-label': $.Z.Messages.MESSAGE_UTILITIES_A11Y_LABEL,
-children: (0, i.jsxs)(W.Z, {
+children: (0, i.jsxs)(z.Z, {
   className: e.innerClassName,
   children: [
     r,

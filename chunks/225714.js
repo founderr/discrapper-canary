@@ -1,6 +1,6 @@
 n.d(s, {
   Z: function() {
-return f;
+return E;
   }
 });
 var i = n(735250);
@@ -13,22 +13,22 @@ var l = n(481060),
   d = n(7242),
   c = n(934861),
   u = n(981631),
-  I = n(689938),
-  _ = n(682731);
+  _ = n(689938),
+  I = n(682731);
 
-function f(e) {
+function E(e) {
   let {
 isCurrentUser: s,
 user: n,
-relationshipType: f,
-friendToken: E,
+relationshipType: E,
+friendToken: f,
 persistentCallCtaEnabled: m = !1,
 activeInviteToCallCtaEnabled: S = !1,
 onClose: Z
   } = e, {
 newestAnalyticsLocation: x
   } = (0, t.ZP)();
-  if (s || f === u.OGo.BLOCKED)
+  if (s || E === u.OGo.BLOCKED)
 return null;
   let v = m ? (0, i.jsx)(a.Z, {
   user: n,
@@ -38,9 +38,9 @@ h = (0, i.jsx)(d.Z, {
   user: n,
   onClose: Z
 });
-  if (f === u.OGo.FRIEND && S && null != h)
+  if (E === u.OGo.FRIEND && S && null != h)
 return (0, i.jsxs)('div', {
-  className: _.multipleButtons,
+  className: I.multipleButtons,
   children: [
     (0, i.jsx)(c.v, {
       userId: n.id,
@@ -49,9 +49,9 @@ return (0, i.jsxs)('div', {
     h
   ]
 });
-  if (f === u.OGo.FRIEND || n.bot)
+  if (E === u.OGo.FRIEND || n.bot)
 return (0, i.jsxs)('div', {
-  className: _.multipleButtons,
+  className: I.multipleButtons,
   children: [
     v,
     (0, i.jsx)(c.c, {
@@ -60,13 +60,13 @@ return (0, i.jsxs)('div', {
     })
   ]
 });
-  if (f === u.OGo.PENDING_OUTGOING || f === u.OGo.PENDING_INCOMING)
+  if (E === u.OGo.PENDING_OUTGOING || E === u.OGo.PENDING_INCOMING)
 return S && null != h ? (0, i.jsxs)('div', {
-  className: _.multipleButtons,
+  className: I.multipleButtons,
   children: [
     (0, i.jsx)(r.ef, {
       icon: l.UserClockIcon,
-      tooltipText: I.Z.Messages.FRIENDS_SECTION_PENDING,
+      tooltipText: _.Z.Messages.FRIENDS_SECTION_PENDING,
       disabled: !0
     }),
     (0, i.jsx)(c.v, {
@@ -76,11 +76,11 @@ return S && null != h ? (0, i.jsxs)('div', {
     h
   ]
 }) : (0, i.jsxs)('div', {
-  className: _.multipleButtons,
+  className: I.multipleButtons,
   children: [
     (0, i.jsx)(r.ef, {
       icon: l.UserClockIcon,
-      tooltipText: I.Z.Messages.FRIENDS_SECTION_PENDING,
+      tooltipText: _.Z.Messages.FRIENDS_SECTION_PENDING,
       disabled: !0
     }),
     v,
@@ -91,19 +91,19 @@ return S && null != h ? (0, i.jsxs)('div', {
   ]
 });
   return S && null != h ? (0, i.jsxs)('div', {
-className: _.multipleButtons,
+className: I.multipleButtons,
 children: [
   (0, i.jsx)(r.ef, {
     action: 'SEND_FRIEND_REQUEST',
     icon: l.UserPlusIcon,
-    tooltipText: I.Z.Messages.USER_PROFILE_ADD_FRIEND,
+    tooltipText: _.Z.Messages.USER_PROFILE_ADD_FRIEND,
     onClick: () => {
       o.Z.addRelationship({
         userId: n.id,
         context: {
           location: x
         },
-        friendToken: E
+        friendToken: f
       });
     }
   }),
@@ -114,7 +114,7 @@ children: [
   h
 ]
   }) : (0, i.jsxs)('div', {
-className: _.multipleButtons,
+className: I.multipleButtons,
 children: [
   v,
   (0, i.jsx)(c.v, {
@@ -124,7 +124,7 @@ children: [
   (0, i.jsx)(r.tG, {
     action: 'SEND_FRIEND_REQUEST',
     icon: l.UserPlusIcon,
-    text: I.Z.Messages.USER_PROFILE_ADD_FRIEND,
+    text: _.Z.Messages.USER_PROFILE_ADD_FRIEND,
     color: l.Button.Colors.BRAND,
     onClick: () => {
       o.Z.addRelationship({
@@ -132,7 +132,7 @@ children: [
         context: {
           location: x
         },
-        friendToken: E
+        friendToken: f
       });
     }
   })

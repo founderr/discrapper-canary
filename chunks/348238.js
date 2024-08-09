@@ -63,9 +63,9 @@ var i = n(735250),
   N = n(358085),
   f = n(51144),
   C = n(91047),
-  p = n(901461),
-  g = n(50284),
-  S = n(917990),
+  p = n(364742),
+  g = n(901461),
+  S = n(50284),
   A = n(981631),
   R = n(689938);
 
@@ -144,7 +144,7 @@ id: o
   } = t, {
 id: u,
 flags: I
-  } = e, m = (0, h.yE)(I, A.iLy.EPHEMERAL), T = (0, p.Z)(e), f = (0, c.bp)();
+  } = e, m = (0, h.yE)(I, A.iLy.EPHEMERAL), T = (0, g.Z)(e), f = (0, c.bp)();
   return s.useCallback((e, t) => {
 if (m)
   return;
@@ -255,7 +255,7 @@ id: n
 id: i
   } = t;
   return s.useCallback(e => {
-e.altKey && (e.preventDefault(), (0, g.Z)(i, n));
+e.altKey && (e.preventDefault(), (0, S.Z)(i, n));
   }, [
 i,
 n
@@ -265,7 +265,7 @@ n
 function F(e, t, n) {
   let {
 canShowReactionsOnMessageHover: i
-  } = S.Z.useExperiment({
+  } = p.Z.useExperiment({
 location: 'useHoveredMessage'
   }, {
 autoTrackExposure: !1

@@ -12,10 +12,10 @@ var i = n(735250),
   d = n(233440),
   c = n(314897),
   u = n(158776),
-  I = n(699516),
-  _ = n(998502),
-  f = n(785717),
-  E = n(621853),
+  _ = n(699516),
+  I = n(998502),
+  E = n(785717),
+  f = n(621853),
   m = n(204197),
   S = n(735336),
   Z = n(520978),
@@ -27,12 +27,12 @@ var i = n(735250),
   g = n(689938),
   N = n(520067);
 let C = r.AvatarSizes.SIZE_120,
-  j = _.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+  j = I.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function A(e) {
   let {
 displayProfile: s,
-user: _,
+user: I,
 guildId: A,
 channelId: O,
 friendToken: R,
@@ -40,19 +40,19 @@ className: L,
 isStreaming: U,
 hasProfileEffect: M,
 onClose: P
-  } = e, b = (0, o.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, o.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, o.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, o.e7)([E.Z], () => E.Z.getUserProfile(_.id)), B = (0, o.e7)([c.default], () => c.default.getId() === _.id), {
+  } = e, b = (0, o.e7)([_.Z], () => _.Z.getRelationshipType(I.id)), y = (0, o.e7)([u.Z], () => u.Z.isMobileOnline(I.id)), D = (0, o.e7)([u.Z], () => u.Z.getStatus(I.id)), B = (0, o.e7)([f.Z], () => f.Z.getUserProfile(I.id)), F = (0, o.e7)([c.default], () => c.default.getId() === I.id), {
 theme: G
   } = (0, v.z)(), {
 trackUserProfileAction: w
-  } = (0, f.KZ)(), {
+  } = (0, E.KZ)(), {
 avatarSrc: k,
 eventHandlers: V,
 avatarDecorationSrc: Y
   } = (0, m.Z)({
-user: _,
+user: I,
 size: C
-  }), H = l.useMemo(() => (0, d.W)(_, O), [
-_,
+  }), H = l.useMemo(() => (0, d.W)(I, O), [
+I,
 O
   ]);
   return (0, i.jsxs)('header', {
@@ -61,7 +61,7 @@ children: [
   (0, i.jsx)(S.Z, {
     displayProfile: s,
     onClose: P,
-    user: _,
+    user: I,
     profileType: T.y0.MODAL,
     hasProfileEffect: M
   }),
@@ -79,13 +79,13 @@ children: [
           statusBackdropColor: (0, r.getStatusBackdropColor)(G),
           isMobile: y,
           statusTooltip: !0,
-          'aria-label': _.username
+          'aria-label': I.username
         })
       }),
       (0, i.jsxs)('div', {
         className: N.headerTop,
         children: [
-          (null == F ? void 0 : F.profileFetchFailed) && !_.isClyde() ? (0, i.jsx)(r.Tooltip, {
+          (null == B ? void 0 : B.profileFetchFailed) && !I.isClyde() ? (0, i.jsx)(r.Tooltip, {
             text: g.Z.Messages.USER_PROFILE_LOAD_ERROR,
             spacing: 20,
             children: e => (0, i.jsx)(r.CircleExclamationPointIcon, {
@@ -97,7 +97,7 @@ children: [
               color: t.Z.unsafe_rawColors.YELLOW_300.css
             })
           }) : (0, i.jsx)(x.Z, {
-            user: _,
+            user: I,
             className: N.badgeList,
             guildId: A,
             size: x.V.SIZE_24,
@@ -108,18 +108,18 @@ children: [
           (0, i.jsxs)('div', {
             className: N.relationshipButtons,
             children: [
-              (null == F ? void 0 : F.application) != null && (0, i.jsx)(Z.Z, {
+              (null == B ? void 0 : B.application) != null && (0, i.jsx)(Z.Z, {
                 className: N.applicationInstallButton,
-                application: F.application
+                application: B.application
               }),
               (0, i.jsx)(h.Z, {
-                user: _,
-                isCurrentUser: B,
+                user: I,
+                isCurrentUser: F,
                 relationshipType: b,
                 friendToken: R,
                 onClose: P
               }),
-              B || _.isNonUserBot() ? null : (0, i.jsx)(r.Clickable, {
+              F || I.isNonUserBot() ? null : (0, i.jsx)(r.Clickable, {
                 focusProps: {
                   offset: {
                     left: 8
@@ -134,8 +134,8 @@ children: [
                     } = await n.e('29136').then(n.bind(n, 193646));
                     return s => (0, i.jsx)(e, {
                       ...s,
-                      user: _,
-                      isCurrentUser: B,
+                      user: I,
+                      isCurrentUser: F,
                       guildId: A,
                       relationshipType: b,
                       trackUserProfileAction: w,

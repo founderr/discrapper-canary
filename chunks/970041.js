@@ -1,6 +1,6 @@
 n.d(s, {
   Z: function() {
-return I;
+return _;
   }
 }), n(789020);
 var i = n(735250);
@@ -48,16 +48,16 @@ children: [
   });
 }
 
-function I(e) {
+function _(e) {
   let {
 user: s
   } = e, n = (0, o.e7)([a.Z], () => {
 var e;
 return null === (e = a.Z.getUserProfile(s.id)) || void 0 === e ? void 0 : e.application;
   }), {
-hasMessageContent: I,
-hasGuildPresences: _,
-hasGuildMembers: f
+hasMessageContent: _,
+hasGuildPresences: I,
+hasGuildMembers: E
   } = (0, r.w)({
 flags: null == n ? void 0 : n.flags
   });
@@ -65,17 +65,17 @@ flags: null == n ? void 0 : n.flags
 fade: !0,
 className: c.scroller,
 children: [
-  I && (0, i.jsx)(u, {
+  _ && (0, i.jsx)(u, {
     icon: t.ChatIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
   }),
-  _ && (0, i.jsx)(u, {
+  I && (0, i.jsx)(u, {
     icon: t.GameControllerIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
   }),
-  f && (0, i.jsx)(u, {
+  E && (0, i.jsx)(u, {
     icon: t.GroupIcon,
     title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
     description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY

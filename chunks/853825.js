@@ -12,10 +12,10 @@ var i = n(735250),
   d = n(680295),
   c = n(5192),
   u = n(785717),
-  I = n(318661),
-  _ = n(78675),
-  f = n(741308),
-  E = n(588822),
+  _ = n(318661),
+  I = n(78675),
+  E = n(741308),
+  f = n(588822),
   m = n(899007),
   S = n(900927),
   Z = n(678738),
@@ -41,12 +41,12 @@ sessionId: U,
 transitionState: M,
 onClose: P,
 sourceAnalyticsLocations: b = []
-  } = e, y = n === g.ME ? void 0 : n, D = (0, I.ZP)(s.id, y), {
-analyticsLocations: F
+  } = e, y = n === g.ME ? void 0 : n, D = (0, _.ZP)(s.id, y), {
+analyticsLocations: B
   } = (0, a.ZP)([
 ...b,
 r.Z.SIMPLIFIED_PROFILE_MODAL
-  ]), B = (0, u.ZB)({
+  ]), F = (0, u.ZB)({
 layout: 'SIMPLIFIED_MODAL',
 userId: s.id,
 sourceSessionId: U,
@@ -56,9 +56,9 @@ messageId: R,
 roleId: L
   }), G = l.createRef(), w = (0, t.Z)(G);
   return (0, i.jsx)(a.Gt, {
-value: F,
+value: B,
 children: (0, i.jsx)(u.Mt, {
-  value: B,
+  value: F,
   children: (0, i.jsxs)(o.ModalRoot, {
     transitionState: M,
     className: C.root,
@@ -79,7 +79,7 @@ children: (0, i.jsx)(u.Mt, {
           }),
           (0, i.jsxs)('header', {
             children: [
-              (0, i.jsx)(_.Z, {
+              (0, i.jsx)(I.Z, {
                 user: s,
                 displayProfile: D,
                 profileType: p.y0.FULL_SIZE,
@@ -106,7 +106,7 @@ children: (0, i.jsx)(u.Mt, {
                 nickname: c.ZP.getName(y, O, s),
                 pronouns: null == D ? void 0 : D.pronouns,
                 nicknameVariant: 'heading-xl/bold',
-                tags: (0, i.jsx)(f.Z, {
+                tags: (0, i.jsx)(E.Z, {
                   displayProfile: D,
                   profileType: p.y0.FULL_SIZE,
                   onClose: P
@@ -136,7 +136,7 @@ children: (0, i.jsx)(u.Mt, {
                       fade: !0,
                       className: j.scroller,
                       children: [
-                        (0, i.jsx)(E.Z, {
+                        (0, i.jsx)(f.Z, {
                           userId: s.id,
                           userBio: null == D ? void 0 : D.bio,
                           setLineClamp: !1

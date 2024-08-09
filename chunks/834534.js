@@ -13,10 +13,10 @@ var l = n(442837),
   d = n(914010),
   c = n(785717),
   u = n(532776),
-  I = n(648067),
-  _ = n(588822),
-  f = n(900927),
-  E = n(678738),
+  _ = n(648067),
+  I = n(588822),
+  E = n(900927),
+  f = n(678738),
   m = n(652853),
   S = n(335191),
   Z = n(351707),
@@ -35,12 +35,12 @@ onClose: g
 theme: N
   } = (0, m.z)(), {
 trackUserProfileAction: C
-  } = (0, c.KZ)(), j = null == T ? void 0 : T.guildId, A = (0, l.e7)([a.Z], () => null != j ? a.Z.getGuild(j) : null), O = (0, l.e7)([d.Z], () => d.Z.getGuildId()), R = (0, l.e7)([r.default], () => r.default.locale), L = (0, I.Z)(s.id), U = (0, u.Z)(s.id);
+  } = (0, c.KZ)(), j = null == T ? void 0 : T.guildId, A = (0, l.e7)([a.Z], () => null != j ? a.Z.getGuild(j) : null), O = (0, l.e7)([d.Z], () => d.Z.getGuildId()), R = (0, l.e7)([r.default], () => r.default.locale), L = (0, _.Z)(s.id), U = (0, u.Z)(s.id);
   return (0, i.jsxs)(o.ScrollerThin, {
 fade: !0,
 className: h.scroller,
 children: [
-  (null == T ? void 0 : T.bio) != null && (null == T ? void 0 : T.bio) !== '' && (0, i.jsx)(_.Z, {
+  (null == T ? void 0 : T.bio) != null && (null == T ? void 0 : T.bio) !== '' && (0, i.jsx)(I.Z, {
     userBio: T.bio,
     setLineClamp: !1
   }),
@@ -50,15 +50,15 @@ children: [
     guild: A,
     scrollIntoView: p === x.Tb.ROLES
   }),
-  (0, i.jsx)(E.Z, {
+  (0, i.jsx)(f.Z, {
     heading: v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
-    children: (0, i.jsx)(f.Z, {
+    children: (0, i.jsx)(E.Z, {
       userId: s.id,
       guildId: null == T ? void 0 : T.guildId,
       tooltipDelay: x.vB
     })
   }),
-  L.length > 0 && (0, i.jsx)(E.Z, {
+  L.length > 0 && (0, i.jsx)(f.Z, {
     heading: v.Z.Messages.CONNECTIONS,
     children: (0, i.jsx)(S.OA, {
       connectedAccounts: L,
@@ -68,7 +68,7 @@ children: [
       locale: R
     })
   }),
-  U.length > 0 && (0, i.jsx)(E.Z, {
+  U.length > 0 && (0, i.jsx)(f.Z, {
     heading: v.Z.Messages.APPS,
     children: U.map(e => (0, i.jsx)(S.tH, {
       className: h.appsConnections,
@@ -82,7 +82,7 @@ children: [
       selectedGuildId: null != O ? O : void 0
     }, e.application.id))
   }),
-  (0, i.jsx)(E.Z, {
+  (0, i.jsx)(f.Z, {
     heading: v.Z.Messages.NOTE,
     scrollIntoView: p === x.Tb.NOTE,
     children: (0, i.jsx)(t.Z, {

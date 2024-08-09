@@ -12,10 +12,10 @@ var i = n(735250),
   d = n(58540),
   c = n(420660),
   u = n(100527),
-  I = n(906732),
-  _ = n(580552),
-  f = n(680295),
-  E = n(199902),
+  _ = n(906732),
+  I = n(580552),
+  E = n(680295),
+  f = n(199902),
   m = n(314897),
   S = n(158776),
   Z = n(594174),
@@ -45,7 +45,7 @@ hasActivity: c
   } = e, u = (0, o.e7)([h.Z], () => {
 var e, s;
 return (null === (s = h.Z.getUserProfile(l.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null;
-  }), I = null === (s = (0, p.Z)(l.id, !l.bot && !r).mutualFriends) || void 0 === s ? void 0 : s.length, f = null === (n = (0, g.Z)(l.id, !l.bot && !r).mutualGuilds) || void 0 === n ? void 0 : n.length;
+  }), _ = null === (s = (0, p.Z)(l.id, !l.bot && !r).mutualFriends) || void 0 === s ? void 0 : s.length, E = null === (n = (0, g.Z)(l.id, !l.bot && !r).mutualGuilds) || void 0 === n ? void 0 : n.length;
   return (0, i.jsx)('div', {
 className: U.tabBarContainer,
 children: (0, i.jsxs)(t.TabBar, {
@@ -54,7 +54,7 @@ children: (0, i.jsxs)(t.TabBar, {
   onItemSelect: d,
   className: U.tabBar,
   children: [
-    !l.isNonUserBot() || l.isClyde() || (0, _.Z)(l.id) ? (0, i.jsx)(t.TabBar.Item, {
+    !l.isNonUserBot() || l.isClyde() || (0, I.Z)(l.id) ? (0, i.jsx)(t.TabBar.Item, {
       className: U.tabBarItem,
       id: O.oh.USER_INFO,
       children: L.Z.Messages.USER_INFO
@@ -67,15 +67,15 @@ children: (0, i.jsxs)(t.TabBar, {
     l.bot || r ? null : (0, i.jsx)(t.TabBar.Item, {
       className: U.tabBarItem,
       id: O.oh.MUTUAL_FRIENDS,
-      children: null == I ? L.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER : L.Z.Messages.MUTUAL_FRIENDS_WITH_END_COUNT.format({
-        count: ''.concat(I)
+      children: null == _ ? L.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER : L.Z.Messages.MUTUAL_FRIENDS_WITH_END_COUNT.format({
+        count: ''.concat(_)
       })
     }),
-    r || l.isClyde() || (0, _.Z)(l.id) ? null : (0, i.jsx)(t.TabBar.Item, {
+    r || l.isClyde() || (0, I.Z)(l.id) ? null : (0, i.jsx)(t.TabBar.Item, {
       className: U.tabBarItem,
       id: O.oh.MUTUAL_GUILDS,
-      children: null == f ? L.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER : L.Z.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
-        count: ''.concat(f)
+      children: null == E ? L.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER : L.Z.Messages.MUTUAL_GUILDS_WITH_END_COUNT.format({
+        count: ''.concat(E)
       })
     }),
     l.bot && u ? (0, i.jsx)(t.TabBar.Item, {
@@ -98,14 +98,14 @@ messageId: P,
 roleId: b,
 sessionId: y,
 friendToken: D,
-initialSection: F = O.oh.USER_INFO,
-initialSubsection: B,
+initialSection: B = O.oh.USER_INFO,
+initialSubsection: F,
 transitionState: G,
 sourceAnalyticsLocations: w = [],
 onClose: k
   } = e, V = null !== (s = (0, o.e7)([Z.default], () => Z.default.getUser(h.id))) && void 0 !== s ? s : h, Y = (0, T.ZP)(null !== (n = V.id) && void 0 !== n ? n : ''), {
 analyticsLocations: H
-  } = (0, I.ZP)([
+  } = (0, _.ZP)([
 ...w,
 u.Z.PROFILE_MODAL
   ]), W = (0, x.ZB)({
@@ -121,10 +121,10 @@ roleId: b
   (0, d.$)({
 [p]: [V.id]
   });
-  let z = (0, o.e7)([E.Z], () => null != E.Z.getAnyStreamForUser(V.id)),
+  let z = (0, o.e7)([f.Z], () => null != f.Z.getAnyStreamForUser(V.id)),
 K = (0, o.e7)([S.Z], () => S.Z.findActivity(V.id, e => e.type !== R.IIU.CUSTOM_STATUS)),
 [Q, q] = l.useState(!1),
-[J, X] = l.useState(!V.isNonUserBot() || V.isClyde() || (0, _.Z)(V.id) ? F : O.oh.MUTUAL_GUILDS),
+[J, X] = l.useState(!V.isNonUserBot() || V.isClyde() || (0, I.Z)(V.id) ? B : O.oh.MUTUAL_GUILDS),
 $ = (0, o.e7)([m.default], () => m.default.getId() === V.id),
 ee = null != K || z,
 es = !$ || ee,
@@ -142,7 +142,7 @@ ei = (0, a.Z)(en);
   H
 ]),
 eo = null == Y ? void 0 : Y.profileEffectId;
-  return (0, i.jsx)(I.Gt, {
+  return (0, i.jsx)(_.Gt, {
 value: H,
 children: (0, i.jsx)(x.Mt, {
   value: W,
@@ -192,7 +192,7 @@ children: (0, i.jsx)(x.Mt, {
                   (0, i.jsx)(C.Z, {
                     displayProfile: Y,
                     user: V,
-                    autoFocusNote: B === O.Tb.NOTE && !Q,
+                    autoFocusNote: F === O.Tb.NOTE && !Q,
                     selectedSection: J,
                     onClose: k
                   })
@@ -201,7 +201,7 @@ children: (0, i.jsx)(x.Mt, {
             })
           ]
         }),
-        null != eo && (0, i.jsx)(f.Z, {
+        null != eo && (0, i.jsx)(E.Z, {
           profileEffectId: eo,
           bannerAdjustment: 0,
           isHovering: ei

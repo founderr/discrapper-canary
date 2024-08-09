@@ -12,10 +12,10 @@ var i = n(735250),
   d = n(699516),
   c = n(594174),
   u = n(453956),
-  I = n(380738),
-  _ = n(787018),
-  f = n(910364),
-  E = n(853825),
+  _ = n(380738),
+  I = n(787018),
+  E = n(910364),
+  f = n(853825),
   m = n(41527),
   S = n(107889);
 let Z = [
@@ -31,7 +31,7 @@ user: n,
 ...o
   } = e, {
 botProfilesEnabled: a
-  } = (0, I.J)({
+  } = (0, _.J)({
 location: s
   }), x = (0, r.e7)([c.default], () => c.default.getCurrentUser());
   t()(null != x, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined');
@@ -47,12 +47,12 @@ T(v);
 var s;
 return (null !== (s = o.sourceAnalyticsLocations) && void 0 !== s ? s : []).includes(e);
   });
-  return h && p && g ? (0, i.jsx)(_.Z, {
+  return h && p && g ? (0, i.jsx)(I.Z, {
 user: n,
 currentUser: x,
 onViewBlockedProfileClick: () => T(!1),
 ...o
-  }) : a && n.isNonUserBot() ? (0, i.jsx)(E.Z, {
+  }) : a && n.isNonUserBot() ? (0, i.jsx)(f.Z, {
 ...o,
 user: n,
 currentUser: x
@@ -60,7 +60,7 @@ currentUser: x
 ...o,
 user: n,
 currentUser: x
-  }) : n.bot ? (0, i.jsx)(f.Z, {
+  }) : n.bot ? (0, i.jsx)(E.Z, {
 ...o,
 user: n,
 currentUser: x

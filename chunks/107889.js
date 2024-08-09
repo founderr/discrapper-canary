@@ -12,10 +12,10 @@ var i = n(735250),
   d = n(100527),
   c = n(906732),
   u = n(54994),
-  I = n(680295),
-  _ = n(699516),
-  f = n(5192),
-  E = n(785717),
+  _ = n(680295),
+  I = n(699516),
+  E = n(5192),
+  f = n(785717),
   m = n(221292),
   S = n(481046),
   Z = n(910128),
@@ -43,8 +43,8 @@ currentUser: n,
 guildId: b,
 channelId: y,
 messageId: D,
-roleId: F,
-sessionId: B,
+roleId: B,
+sessionId: F,
 friendToken: G,
 initialSection: w,
 initialSubsection: k,
@@ -57,14 +57,14 @@ analyticsLocations: K
   } = (0, c.ZP)([
 ...W,
 d.Z.SIMPLIFIED_PROFILE_MODAL
-  ]), Q = (0, E.ZB)({
+  ]), Q = (0, f.ZB)({
 layout: 'SIMPLIFIED_MODAL',
 userId: s.id,
-sourceSessionId: B,
+sourceSessionId: F,
 guildId: z,
 channelId: y,
 messageId: D,
-roleId: F,
+roleId: B,
 showGuildProfile: H
   }), {
 profileStatusEditEnabled: q
@@ -77,7 +77,7 @@ activeInviteToCallCtaEnabled: X
 location: 'SimplifiedUserProfileModalHeader'
   }), [$, ee] = l.useState(), es = e => {
 ee(e);
-  }, en = (0, x.ZP)(s.id, H ? z : void 0), ei = (0, x.ZP)(s.id, z), el = (0, o.e7)([_.Z], () => _.Z.getRelationshipType(s.id)), eo = l.useMemo(() => null != z ? {
+  }, en = (0, x.ZP)(s.id, H ? z : void 0), ei = (0, x.ZP)(s.id, z), el = (0, o.e7)([I.Z], () => I.Z.getRelationshipType(s.id)), eo = l.useMemo(() => null != z ? {
 [z]: [s.id]
   } : {}, [
 z,
@@ -90,7 +90,7 @@ ea = () => (null == ei ? void 0 : ei.guildId) == null ? null : (null == en ? voi
   id: 'view-main-profile',
   label: M.Z.Messages.VIEW_MAIN_PROFILE,
   subtext: M.Z.Messages.AKA_DISPLAY_NAME.format({
-    displayName: f.ZP.getName(void 0, void 0, s)
+    displayName: E.ZP.getName(void 0, void 0, s)
   }),
   action: () => {
     Y(), (0, A.openUserProfileModal)({
@@ -108,7 +108,7 @@ ea = () => (null == ei ? void 0 : ei.guildId) == null ? null : (null == en ? voi
   id: 'view-server-profile',
   label: M.Z.Messages.VIEW_SERVER_PROFILE,
   subtext: M.Z.Messages.AKA_DISPLAY_NAME.format({
-    displayName: f.ZP.getName(z, y, s)
+    displayName: E.ZP.getName(z, y, s)
   }),
   action: () => {
     Y(), (0, A.openUserProfileModal)({
@@ -125,7 +125,7 @@ ea = () => (null == ei ? void 0 : ei.guildId) == null ? null : (null == en ? voi
 });
   return (0, i.jsx)(c.Gt, {
 value: K,
-children: (0, i.jsx)(E.Mt, {
+children: (0, i.jsx)(f.Mt, {
   value: Q,
   children: (0, i.jsxs)(t.ModalRoot, {
     transitionState: V,
@@ -224,7 +224,7 @@ children: (0, i.jsx)(E.Mt, {
           })
         ]
       }),
-      (null == en ? void 0 : en.profileEffectId) != null && (0, i.jsx)(I.Z, {
+      (null == en ? void 0 : en.profileEffectId) != null && (0, i.jsx)(_.Z, {
         profileEffectId: null == en ? void 0 : en.profileEffectId,
         isHovering: er
       })

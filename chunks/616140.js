@@ -12,10 +12,10 @@ var i = n(735250),
   d = n(246946),
   c = n(785717),
   u = n(27144),
-  I = n(100849),
-  _ = n(944546),
-  f = n(470900),
-  E = n(988246),
+  _ = n(100849),
+  I = n(944546),
+  E = n(470900),
+  f = n(988246),
   m = n(970041),
   S = n(715388),
   Z = n(879828),
@@ -40,15 +40,15 @@ location: 'SimplifiedUserProfileModalTabs'
 user: l,
 currentUser: o,
 onClose: r
-  }) : s === v.oh.ACTIVITY ? (0, i.jsx)(I.Z, {
+  }) : s === v.oh.ACTIVITY ? (0, i.jsx)(_.Z, {
 showActions: (null == o ? void 0 : o.id) !== l.id,
 user: l,
 type: a.Y.SIMPLIFIED_PROFILE,
 onClose: r
-  }) : s === v.oh.MUTUAL_FRIENDS ? (0, i.jsx)(_.Z, {
+  }) : s === v.oh.MUTUAL_FRIENDS ? (0, i.jsx)(I.Z, {
 user: l,
 onClose: r
-  }) : s === v.oh.MUTUAL_GUILDS ? (0, i.jsx)(f.Z, {
+  }) : s === v.oh.MUTUAL_GUILDS ? (0, i.jsx)(E.Z, {
 user: l,
 onClose: r
   }) : s === v.oh.BOT_DATA_ACCESS ? (0, i.jsx)(m.Z, {
@@ -72,9 +72,9 @@ function p(e) {
   var s, n, a;
   let {
 user: u,
-currentUser: I,
-displayProfile: _,
-items: f,
+currentUser: _,
+displayProfile: I,
+items: E,
 initialSection: m = v.oh.USER_INFO,
 initialSubsection: S,
 onClose: Z
@@ -84,22 +84,22 @@ trackUserProfileAction: x
 section: g,
 subsection: N
   }, C] = l.useState({
-section: null !== (a = null === (s = f.find(e => {
+section: null !== (a = null === (s = E.find(e => {
   let {
     section: s
   } = e;
   return s === m;
-})) || void 0 === s ? void 0 : s.section) && void 0 !== a ? a : null === (n = f[0]) || void 0 === n ? void 0 : n.section,
+})) || void 0 === s ? void 0 : s.section) && void 0 !== a ? a : null === (n = E[0]) || void 0 === n ? void 0 : n.section,
 subsection: S
   });
   l.useEffect(() => {
-if (null == f.find(e => e.section === g))
+if (null == E.find(e => e.section === g))
   C({
-    section: f[0].section,
+    section: E[0].section,
     subsection: void 0
   });
   }, [
-f,
+E,
 g
   ]);
   let j = l.useCallback(e => {
@@ -116,7 +116,7 @@ C
   ]);
   return p ? (0, i.jsx)('div', {
 className: h.container,
-children: (0, i.jsx)(E.Z, {})
+children: (0, i.jsx)(f.Z, {})
   }) : (0, i.jsxs)('div', {
 className: h.container,
 children: [
@@ -125,7 +125,7 @@ children: [
     type: 'top',
     selectedItem: g,
     onItemSelect: j,
-    children: f.map(e => {
+    children: E.map(e => {
       let {
         section: s,
         text: n
@@ -142,12 +142,12 @@ children: [
     })
   }),
   (0, i.jsx)(T, {
-    items: f,
+    items: E,
     section: g,
     subsection: N,
     user: u,
-    currentUser: I,
-    displayProfile: _,
+    currentUser: _,
+    displayProfile: I,
     onClose: Z
   })
 ]

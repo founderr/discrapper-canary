@@ -18,7 +18,7 @@ friendToken: a,
 relationshipType: d,
 persistentCallCtaEnabled: c = !1,
 activeInviteToCallCtaEnabled: u = !1,
-onClose: I
+onClose: _
   } = e;
   return (0, i.jsxs)('div', {
 className: t.buttons,
@@ -30,12 +30,12 @@ children: [
     persistentCallCtaEnabled: c,
     activeInviteToCallCtaEnabled: u,
     friendToken: a,
-    onClose: I
+    onClose: _
   }),
   (0, i.jsx)(l.Z, {
     user: s,
     guildId: r,
-    onClose: I
+    onClose: _
   })
 ]
   });

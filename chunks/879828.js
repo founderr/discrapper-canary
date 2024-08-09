@@ -12,10 +12,10 @@ var i = n(735250),
   d = n(678738),
   c = n(151545),
   u = n(527790),
-  I = n(304042),
-  _ = n(921944),
-  f = n(689938),
-  E = n(122606);
+  _ = n(304042),
+  I = n(921944),
+  E = n(689938),
+  f = n(122606);
 
 function m(e) {
   let {
@@ -30,19 +30,19 @@ stream: x
   return l.useEffect(() => {
 if (!!v && !h)
   (0, r.EW)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
-    dismissAction: _.L.AUTO_DISMISS,
+    dismissAction: I.L.AUTO_DISMISS,
     forceTrack: !0
   });
   }, [
 v,
 h
   ]), (0, i.jsxs)(t.ScrollerThin, {
-className: E.scroller,
+className: f.scroller,
 fade: !0,
 children: [
   (0, i.jsxs)(d.Z, {
     children: [
-      null != x && (0, i.jsx)(I.Z, {
+      null != x && (0, i.jsx)(_.Z, {
         user: s,
         currentUser: n,
         stream: x,
@@ -58,11 +58,11 @@ children: [
   }),
   (0, i.jsx)(d.Z, {
     heading: (0, i.jsxs)('div', {
-      className: E.heading,
+      className: f.heading,
       children: [
-        f.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+        E.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
         (0, i.jsx)(t.Tooltip, {
-          text: f.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_INFORMATION_TOOLTIP,
+          text: E.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_INFORMATION_TOOLTIP,
           children: e => (0, i.jsx)(t.CircleInformationIcon, {
             ...e,
             size: 'xxs',
