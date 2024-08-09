@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return R;
   }
 }), n(47120);
 var r = n(735250),
@@ -18,17 +18,16 @@ var r = n(735250),
   h = n(5192),
   p = n(51144),
   m = n(785717),
-  I = n(285050),
-  T = n(448520),
-  g = n(485216),
-  S = n(228168),
-  A = n(689938),
-  N = n(628372);
-let v = (0, _.kt)({
+  I = n(448520),
+  T = n(485216),
+  g = n(228168),
+  S = n(689938),
+  A = n(628372);
+let N = (0, _.kt)({
 id: '1',
 type: o.d.DM
   }),
-  O = e => {
+  v = e => {
 let {
   input: t,
   username: n,
@@ -36,18 +35,18 @@ let {
   sourceDetails: i
 } = e;
 switch (r) {
-  case S.N9.ACTIVITY:
-    let a = A.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({
+  case g.N9.ACTIVITY:
+    let a = S.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({
       username: n
     });
     return '> -# *'.concat(a, '*\n').concat(t);
-  case S.N9.AVATAR:
-    let s = A.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({
+  case g.N9.AVATAR:
+    let s = S.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({
       username: n
     });
     return '> -# *'.concat(s, '*\n').concat(t);
-  case S.N9.STATUS:
-    let o = A.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({
+  case g.N9.STATUS:
+    let o = S.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({
       username: n
     });
     return null != i ? '> -# *'.concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : '> -# *'.concat(o, '*\n').concat(t);
@@ -55,20 +54,20 @@ switch (r) {
     (0, f.vE)(r);
 }
   },
-  R = e => {
+  O = e => {
 switch (e) {
-  case S.N9.ACTIVITY:
-    return A.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
-  case S.N9.AVATAR:
-    return A.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
-  case S.N9.STATUS:
-    return A.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
+  case g.N9.ACTIVITY:
+    return S.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
+  case g.N9.AVATAR:
+    return S.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
+  case g.N9.STATUS:
+    return S.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
   default:
     (0, f.vE)(e);
 }
   };
 
-function C(e) {
+function R(e) {
   let {
 user: t,
 guildId: n,
@@ -76,83 +75,81 @@ channelId: a,
 profileType: o,
 sourceType: _,
 sourceDetails: f,
-onReply: A,
-setPopoutRef: C,
-modalKey: y
+onReply: S,
+setPopoutRef: R,
+modalKey: C
   } = e, {
-trackUserProfileAction: D
+trackUserProfileAction: y
   } = (0, m.KZ)(), {
-notifyReplySent: L
-  } = (0, I.e)(), {
-sendReply: b
-  } = (0, T.D)(_), [M, P] = i.useState(''), [U, w] = i.useState((0, c.JM)(M)), x = i.useRef(!1), G = i.useRef(null);
+sendReply: D
+  } = (0, I.D)(_), [L, b] = i.useState(''), [M, P] = i.useState((0, c.JM)(L)), U = i.useRef(!1), w = i.useRef(null);
   i.useEffect(() => {
-null == C || C(null == G ? void 0 : G.current);
+null == R || R(null == w ? void 0 : w.current);
   }, [
-G,
-C
+w,
+R
   ]);
-  let k = async e => {
+  let x = async e => {
 var n;
 if (null == e)
   return;
-D({
-  action: b
+y({
+  action: D
 });
-let r = O({
+let r = v({
   input: e,
   username: null !== (n = E.Z.getNickname(t.id)) && void 0 !== n ? n : p.ZP.getName(t),
   sourceType: _,
   sourceDetails: f
 });
-await (0, g.Z)({
+await (0, T.Z)({
   userId: t.id,
   content: r,
   location: 'UserProfileReplyPopout',
   openChannel: !1,
   whenReady: !1
-}), L();
+});
   };
   return (0, r.jsx)(l.V, {
-ref: G,
+ref: w,
 children: (0, r.jsx)('div', {
-  className: s()(N.container, {
-    [N.panel]: o === S.y0.PANEL
+  className: s()(A.container, {
+    [A.panel]: o === g.y0.PANEL
   }),
   children: (0, r.jsx)(d.Z, {
-    parentModalKey: y,
+    parentModalKey: C,
     emojiPickerCloseOnModalOuterClick: !0,
-    innerClassName: N.inner,
-    editorClassName: N.editor,
+    innerClassName: A.inner,
+    editorClassName: A.editor,
     type: u.I.USER_PROFILE_REPLY,
-    placeholder: R(_).format({
+    placeholder: O(_).format({
       username: h.ZP.getName(n, a, t)
     }),
-    channel: v,
-    textValue: M,
-    richValue: U,
+    channel: N,
+    textValue: L,
+    richValue: M,
     onChange: (e, t, n) => {
-      if (t !== M)
-        P(t), w(n);
+      if (t !== L)
+        b(t), P(n);
     },
-    focused: x.current,
+    focused: U.current,
     onFocus: () => {
-      x.current = !0;
+      U.current = !0;
     },
     onBlur: e => {
       var t;
-      if (null === (t = G.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
-        x.current = !1;
+      if (null === (t = w.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
+        U.current = !1;
         return;
       }
-      null !== G.current && (x.current = !1, null == A || A(null));
+      null !== w.current && (U.current = !1, null == S || S(null));
     },
     onSubmit: async e => {
       let {
         value: t
       } = e;
       try {
-        return await k(t.trim()), null == A || A(null), {
+        return await x(t.trim()), null == S || S(null), {
           shouldClear: !0,
           shouldRefocus: !1
         };
