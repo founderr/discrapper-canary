@@ -1,33 +1,33 @@
-s.d(n, {
+n.d(s, {
   Z: function() {
 return T;
   }
 });
-var i = s(735250);
-s(470079);
-var l = s(442837),
-  o = s(481060),
-  t = s(666520),
-  r = s(706454),
-  a = s(430824),
-  d = s(914010),
-  c = s(785717),
-  u = s(532776),
-  I = s(648067),
-  _ = s(588822),
-  f = s(900927),
-  E = s(678738),
-  m = s(652853),
-  S = s(335191),
-  Z = s(351707),
-  v = s(228168),
-  x = s(689938),
-  h = s(247321);
+var i = n(735250);
+n(470079);
+var l = n(442837),
+  o = n(481060),
+  t = n(666520),
+  r = n(706454),
+  a = n(430824),
+  d = n(914010),
+  c = n(785717),
+  u = n(532776),
+  I = n(648067),
+  _ = n(588822),
+  f = n(900927),
+  E = n(678738),
+  m = n(652853),
+  S = n(335191),
+  Z = n(351707),
+  x = n(228168),
+  v = n(689938),
+  h = n(247321);
 
 function T(e) {
   let {
-user: n,
-currentUser: s,
+user: s,
+currentUser: n,
 displayProfile: T,
 subsection: p,
 onClose: g
@@ -35,7 +35,7 @@ onClose: g
 theme: N
   } = (0, m.z)(), {
 trackUserProfileAction: C
-  } = (0, c.KZ)(), j = null == T ? void 0 : T.guildId, A = (0, l.e7)([a.Z], () => null != j ? a.Z.getGuild(j) : null), O = (0, l.e7)([d.Z], () => d.Z.getGuildId()), R = (0, l.e7)([r.default], () => r.default.locale), L = (0, I.Z)(n.id), U = (0, u.Z)(n.id);
+  } = (0, c.KZ)(), j = null == T ? void 0 : T.guildId, A = (0, l.e7)([a.Z], () => null != j ? a.Z.getGuild(j) : null), O = (0, l.e7)([d.Z], () => d.Z.getGuildId()), R = (0, l.e7)([r.default], () => r.default.locale), L = (0, I.Z)(s.id), U = (0, u.Z)(s.id);
   return (0, i.jsxs)(o.ScrollerThin, {
 fade: !0,
 className: h.scroller,
@@ -45,31 +45,31 @@ children: [
     setLineClamp: !1
   }),
   null != A && (0, i.jsx)(Z.Z, {
-    user: n,
-    currentUser: s,
+    user: s,
+    currentUser: n,
     guild: A,
-    scrollIntoView: p === v.Tb.ROLES
+    scrollIntoView: p === x.Tb.ROLES
   }),
   (0, i.jsx)(E.Z, {
-    heading: x.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+    heading: v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
     children: (0, i.jsx)(f.Z, {
-      userId: n.id,
+      userId: s.id,
       guildId: null == T ? void 0 : T.guildId,
-      tooltipDelay: v.vB
+      tooltipDelay: x.vB
     })
   }),
   L.length > 0 && (0, i.jsx)(E.Z, {
-    heading: x.Z.Messages.CONNECTIONS,
+    heading: v.Z.Messages.CONNECTIONS,
     children: (0, i.jsx)(S.OA, {
       connectedAccounts: L,
       className: h.connections,
-      userId: n.id,
+      userId: s.id,
       theme: N,
       locale: R
     })
   }),
   U.length > 0 && (0, i.jsx)(E.Z, {
-    heading: x.Z.Messages.APPS,
+    heading: v.Z.Messages.APPS,
     children: U.map(e => (0, i.jsx)(S.tH, {
       className: h.appsConnections,
       applicationRoleConnection: e,
@@ -83,12 +83,12 @@ children: [
     }, e.application.id))
   }),
   (0, i.jsx)(E.Z, {
-    heading: x.Z.Messages.NOTE,
-    scrollIntoView: p === v.Tb.NOTE,
+    heading: v.Z.Messages.NOTE,
+    scrollIntoView: p === x.Tb.NOTE,
     children: (0, i.jsx)(t.Z, {
-      userId: n.id,
+      userId: s.id,
       className: h.note,
-      autoFocus: p === v.Tb.NOTE,
+      autoFocus: p === x.Tb.NOTE,
       onUpdate: () => C({
         action: 'SET_NOTE'
       })

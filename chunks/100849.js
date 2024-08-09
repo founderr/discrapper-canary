@@ -1,34 +1,34 @@
-s.d(n, {
+n.d(s, {
   Z: function() {
-return v;
+return x;
   }
 });
-var i = s(735250),
-  l = s(470079),
-  o = s(120356),
-  t = s.n(o),
-  r = s(442837),
-  a = s(481060),
-  d = s(717881),
-  c = s(387903),
-  u = s(906732),
-  I = s(199902),
-  _ = s(158776),
-  f = s(785717),
-  E = s(221292),
-  m = s(981631),
-  S = s(501649),
-  Z = s(735393);
+var i = n(735250),
+  l = n(470079),
+  o = n(120356),
+  t = n.n(o),
+  r = n(442837),
+  a = n(481060),
+  d = n(717881),
+  c = n(387903),
+  u = n(906732),
+  I = n(199902),
+  _ = n(158776),
+  f = n(785717),
+  E = n(221292),
+  m = n(981631),
+  S = n(501649),
+  Z = n(735393);
 
-function v(e) {
+function x(e) {
   let {
-user: n,
-type: s,
+user: s,
+type: n,
 showActions: o,
-onClose: v
-  } = e, x = (0, r.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(n.id)), h = (0, r.e7)([_.Z], () => _.Z.getActivities(n.id)), T = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), p = l.useMemo(() => x ? T.find(e => e.type === m.IIU.PLAYING) : null, [
+onClose: x
+  } = e, v = (0, r.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(s.id)), h = (0, r.e7)([_.Z], () => _.Z.getActivities(s.id)), T = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), p = l.useMemo(() => v ? T.find(e => e.type === m.IIU.PLAYING) : null, [
 T,
-x
+v
   ]), g = l.useMemo(() => T.filter(e => e !== p), [
 p,
 T
@@ -48,17 +48,17 @@ location: {
 className: Z.listScroller,
 fade: !0,
 children: [
-  x ? (0, i.jsx)(d.Z, {
-    type: s,
-    user: n,
+  v ? (0, i.jsx)(d.Z, {
+    type: n,
+    user: s,
     source: C,
     className: S.userProfileActivity,
-    showChannelDetails: s === c.Y.SIMPLIFIED_PROFILE,
+    showChannelDetails: n === c.Y.SIMPLIFIED_PROFILE,
     activity: p,
     actionColor: S.actionColor,
     analyticsParams: O,
     showActions: o,
-    onClose: v,
+    onClose: x,
     onAction: () => {
       A({
         action: 'JOIN_ACTIVITY'
@@ -74,17 +74,17 @@ children: [
     }
   }) : null,
   g.map(e => (0, i.jsx)(d.Z, {
-    type: s,
+    type: n,
     activity: e,
-    user: n,
+    user: s,
     useStoreStream: !1,
     source: C,
-    className: t()(S.userProfileActivity, s === c.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
-    showChannelDetails: s === c.Y.SIMPLIFIED_PROFILE,
+    className: t()(S.userProfileActivity, n === c.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
+    showChannelDetails: n === c.Y.SIMPLIFIED_PROFILE,
     actionColor: S.actionColor,
     analyticsParams: O,
     showActions: o,
-    onClose: v,
+    onClose: x,
     onAction: () => {
       A({
         action: 'JOIN_ACTIVITY'

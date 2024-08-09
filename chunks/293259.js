@@ -1,37 +1,37 @@
-s.d(n, {
+n.d(s, {
   Z: function() {
 return A;
   }
 });
-var i = s(735250),
-  l = s(470079),
-  o = s(442837),
-  t = s(692547),
-  r = s(481060),
-  a = s(239091),
-  d = s(233440),
-  c = s(314897),
-  u = s(158776),
-  I = s(699516),
-  _ = s(998502),
-  f = s(785717),
-  E = s(621853),
-  m = s(204197),
-  S = s(735336),
-  Z = s(520978),
-  v = s(184325),
-  x = s(652853),
-  h = s(225714),
-  T = s(228168),
-  p = s(231338),
-  g = s(689938),
-  N = s(520067);
+var i = n(735250),
+  l = n(470079),
+  o = n(442837),
+  t = n(692547),
+  r = n(481060),
+  a = n(239091),
+  d = n(233440),
+  c = n(314897),
+  u = n(158776),
+  I = n(699516),
+  _ = n(998502),
+  f = n(785717),
+  E = n(621853),
+  m = n(204197),
+  S = n(735336),
+  Z = n(520978),
+  x = n(184325),
+  v = n(652853),
+  h = n(225714),
+  T = n(228168),
+  p = n(231338),
+  g = n(689938),
+  N = n(520067);
 let C = r.AvatarSizes.SIZE_120,
   j = _.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function A(e) {
   let {
-displayProfile: n,
+displayProfile: s,
 user: _,
 guildId: A,
 channelId: O,
@@ -42,11 +42,11 @@ hasProfileEffect: M,
 onClose: P
   } = e, b = (0, o.e7)([I.Z], () => I.Z.getRelationshipType(_.id)), y = (0, o.e7)([u.Z], () => u.Z.isMobileOnline(_.id)), D = (0, o.e7)([u.Z], () => u.Z.getStatus(_.id)), F = (0, o.e7)([E.Z], () => E.Z.getUserProfile(_.id)), B = (0, o.e7)([c.default], () => c.default.getId() === _.id), {
 theme: G
-  } = (0, x.z)(), {
+  } = (0, v.z)(), {
 trackUserProfileAction: w
   } = (0, f.KZ)(), {
-avatarSrc: V,
-eventHandlers: k,
+avatarSrc: k,
+eventHandlers: V,
 avatarDecorationSrc: Y
   } = (0, m.Z)({
 user: _,
@@ -59,7 +59,7 @@ O
 className: L,
 children: [
   (0, i.jsx)(S.Z, {
-    displayProfile: n,
+    displayProfile: s,
     onClose: P,
     user: _,
     profileType: T.y0.MODAL,
@@ -69,9 +69,9 @@ children: [
     className: N.header,
     children: [
       (0, i.jsx)('div', {
-        ...k,
+        ...V,
         children: (0, i.jsx)(j, {
-          src: V,
+          src: k,
           avatarDecoration: Y,
           size: C,
           className: N.avatar,
@@ -96,13 +96,13 @@ children: [
               className: N.warningCircleIcon,
               color: t.Z.unsafe_rawColors.YELLOW_300.css
             })
-          }) : (0, i.jsx)(v.Z, {
+          }) : (0, i.jsx)(x.Z, {
             user: _,
             className: N.badgeList,
             guildId: A,
-            size: v.V.SIZE_24,
+            size: x.V.SIZE_24,
             shrinkAtCount: 8,
-            shrinkToSize: v.V.SIZE_18,
+            shrinkToSize: x.V.SIZE_18,
             onBadgeClick: P
           }),
           (0, i.jsxs)('div', {
@@ -131,9 +131,9 @@ children: [
                   }), (0, a.jW)(e, async () => {
                     let {
                       default: e
-                    } = await s.e('29136').then(s.bind(s, 193646));
-                    return n => (0, i.jsx)(e, {
-                      ...n,
+                    } = await n.e('29136').then(n.bind(n, 193646));
+                    return s => (0, i.jsx)(e, {
+                      ...s,
                       user: _,
                       isCurrentUser: B,
                       guildId: A,

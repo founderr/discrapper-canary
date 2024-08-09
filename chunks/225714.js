@@ -1,41 +1,41 @@
-s.d(n, {
+n.d(s, {
   Z: function() {
 return f;
   }
 });
-var i = s(735250);
-s(470079);
-var l = s(481060),
-  o = s(194359),
-  t = s(906732),
-  r = s(475413),
-  a = s(261253),
-  d = s(7242),
-  c = s(934861),
-  u = s(981631),
-  I = s(689938),
-  _ = s(682731);
+var i = n(735250);
+n(470079);
+var l = n(481060),
+  o = n(194359),
+  t = n(906732),
+  r = n(475413),
+  a = n(261253),
+  d = n(7242),
+  c = n(934861),
+  u = n(981631),
+  I = n(689938),
+  _ = n(682731);
 
 function f(e) {
   let {
-isCurrentUser: n,
-user: s,
+isCurrentUser: s,
+user: n,
 relationshipType: f,
 friendToken: E,
 persistentCallCtaEnabled: m = !1,
 activeInviteToCallCtaEnabled: S = !1,
 onClose: Z
   } = e, {
-newestAnalyticsLocation: v
+newestAnalyticsLocation: x
   } = (0, t.ZP)();
-  if (n || f === u.OGo.BLOCKED)
+  if (s || f === u.OGo.BLOCKED)
 return null;
-  let x = m ? (0, i.jsx)(a.Z, {
-  user: s,
+  let v = m ? (0, i.jsx)(a.Z, {
+  user: n,
   onClose: Z
 }) : null,
 h = (0, i.jsx)(d.Z, {
-  user: s,
+  user: n,
   onClose: Z
 });
   if (f === u.OGo.FRIEND && S && null != h)
@@ -43,19 +43,19 @@ return (0, i.jsxs)('div', {
   className: _.multipleButtons,
   children: [
     (0, i.jsx)(c.v, {
-      userId: s.id,
+      userId: n.id,
       onClose: Z
     }),
     h
   ]
 });
-  if (f === u.OGo.FRIEND || s.bot)
+  if (f === u.OGo.FRIEND || n.bot)
 return (0, i.jsxs)('div', {
   className: _.multipleButtons,
   children: [
-    x,
+    v,
     (0, i.jsx)(c.c, {
-      userId: s.id,
+      userId: n.id,
       onClose: Z
     })
   ]
@@ -70,7 +70,7 @@ return S && null != h ? (0, i.jsxs)('div', {
       disabled: !0
     }),
     (0, i.jsx)(c.v, {
-      userId: s.id,
+      userId: n.id,
       onClose: Z
     }),
     h
@@ -83,9 +83,9 @@ return S && null != h ? (0, i.jsxs)('div', {
       tooltipText: I.Z.Messages.FRIENDS_SECTION_PENDING,
       disabled: !0
     }),
-    x,
+    v,
     (0, i.jsx)(c.c, {
-      userId: s.id,
+      userId: n.id,
       onClose: Z
     })
   ]
@@ -99,16 +99,16 @@ children: [
     tooltipText: I.Z.Messages.USER_PROFILE_ADD_FRIEND,
     onClick: () => {
       o.Z.addRelationship({
-        userId: s.id,
+        userId: n.id,
         context: {
-          location: v
+          location: x
         },
         friendToken: E
       });
     }
   }),
   (0, i.jsx)(c.v, {
-    userId: s.id,
+    userId: n.id,
     onClose: Z
   }),
   h
@@ -116,9 +116,9 @@ children: [
   }) : (0, i.jsxs)('div', {
 className: _.multipleButtons,
 children: [
-  x,
+  v,
   (0, i.jsx)(c.v, {
-    userId: s.id,
+    userId: n.id,
     onClose: Z
   }),
   (0, i.jsx)(r.tG, {
@@ -128,9 +128,9 @@ children: [
     color: l.Button.Colors.BRAND,
     onClick: () => {
       o.Z.addRelationship({
-        userId: s.id,
+        userId: n.id,
         context: {
-          location: v
+          location: x
         },
         friendToken: E
       });

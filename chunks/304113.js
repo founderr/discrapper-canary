@@ -1,72 +1,72 @@
-s.r(n), s.d(n, {
+n.r(s), n.d(s, {
   default: function() {
-return v;
+return x;
   }
-}), s(47120);
-var i = s(735250),
-  l = s(470079),
-  o = s(512722),
-  t = s.n(o),
-  r = s(442837),
-  a = s(100527),
-  d = s(699516),
-  c = s(594174),
-  u = s(453956),
-  I = s(380738),
-  _ = s(787018),
-  f = s(910364),
-  E = s(853825),
-  m = s(41527),
-  S = s(107889);
+}), n(47120);
+var i = n(735250),
+  l = n(470079),
+  o = n(512722),
+  t = n.n(o),
+  r = n(442837),
+  a = n(100527),
+  d = n(699516),
+  c = n(594174),
+  u = n(453956),
+  I = n(380738),
+  _ = n(787018),
+  f = n(910364),
+  E = n(853825),
+  m = n(41527),
+  S = n(107889);
 let Z = [
   a.Z.BITE_SIZE_PROFILE_POPOUT,
   a.Z.PROFILE_POPOUT,
   a.Z.PROFILE_PANEL
 ];
 
-function v(e) {
+function x(e) {
   let {
-location: n,
-user: s,
+location: s,
+user: n,
 ...o
   } = e, {
 botProfilesEnabled: a
   } = (0, I.J)({
-location: n
-  }), v = (0, r.e7)([c.default], () => c.default.getCurrentUser());
-  t()(null != v, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined');
-  let x = (0, r.e7)([d.Z], () => d.Z.isBlocked(s.id)),
-[h, T] = l.useState(x),
+location: s
+  }), x = (0, r.e7)([c.default], () => c.default.getCurrentUser());
+  t()(null != x, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined');
+  let v = (0, r.e7)([d.Z], () => d.Z.isBlocked(n.id)),
+[h, T] = l.useState(v),
 p = (0, u.sS)({
-  location: n
+  location: s
 });
   l.useEffect(() => {
-T(x);
-  }, [x]);
+T(v);
+  }, [v]);
   let g = !Z.some(e => {
-var n;
-return (null !== (n = o.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
+var s;
+return (null !== (s = o.sourceAnalyticsLocations) && void 0 !== s ? s : []).includes(e);
   });
   return h && p && g ? (0, i.jsx)(_.Z, {
-user: s,
-currentUser: v,
+user: n,
+currentUser: x,
 onViewBlockedProfileClick: () => T(!1),
 ...o
-  }) : a && s.isNonUserBot() ? (0, i.jsx)(E.Z, {
+  }) : a && n.isNonUserBot() ? (0, i.jsx)(E.Z, {
 ...o,
-user: s,
-currentUser: v
-  }) : a && s.bot ? (0, i.jsx)(m.Z, {
+user: n,
+currentUser: x
+  }) : a && n.bot ? (0, i.jsx)(m.Z, {
 ...o,
-user: s,
-currentUser: v
-  }) : s.bot ? (0, i.jsx)(f.Z, {
+user: n,
+currentUser: x
+  }) : n.bot ? (0, i.jsx)(f.Z, {
 ...o,
-user: s,
-currentUser: v
+user: n,
+currentUser: x
   }) : (0, i.jsx)(S.Z, {
 ...o,
-user: s,
-currentUser: v
+user: n,
+currentUser: x
   });
 }
