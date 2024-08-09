@@ -5,8 +5,8 @@ return m;
 }), n(411104);
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(481060),
   l = n(910111),
   o = n(732559),
@@ -33,13 +33,13 @@ function I(e) {
   let {
 operatingSystem: t,
 className: n
-  } = e, s = E[t];
-  if (null == s)
+  } = e, a = E[t];
+  if (null == a)
 throw Error('Unexpected operating system: '.concat(t));
-  let a = s.icon;
+  let s = a.icon;
   return (0, i.jsx)(r.Tooltip, {
-text: s.getLabel(),
-children: e => (0, i.jsx)(a, {
+text: a.getLabel(),
+children: e => (0, i.jsx)(s, {
   ...e,
   className: n
 })
@@ -49,13 +49,13 @@ let m = e => {
   let {
 systems: t,
 className: n,
-iconClassName: s
+iconClassName: a
   } = e;
   return (0, i.jsx)('div', {
-className: a()(_.OSSection, n),
+className: s()(_.OSSection, n),
 children: t.map(e => (0, i.jsx)(I, {
   operatingSystem: e,
-  className: a()(_.purchaseUnitOperatingSystem, s)
+  className: s()(_.purchaseUnitOperatingSystem, a)
 }, e))
   });
 };

@@ -5,8 +5,8 @@ return I;
 }), n(47120);
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(481060),
   l = n(446411),
   o = n(454585),
@@ -19,23 +19,23 @@ var s = n(120356),
 function I(e) {
   let {
 message: t,
-channel: s,
+channel: a,
 compact: l
   } = e, o = null != t.embeds && t.embeds.length > 0;
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(c.Z, {
-    className: a()(E.mainContainer, {
+    className: s()(E.mainContainer, {
       [E.compact]: l
     }),
     icon: n(570111),
     compact: l,
     children: (0, i.jsx)('div', {
-      className: a()(E.__invalid_content, {
+      className: s()(E.__invalid_content, {
         [E.compact]: l
       }),
       children: (0, i.jsx)('div', {
-        className: a()(E.__invalid_messageContent, {
+        className: s()(E.__invalid_messageContent, {
           [E.compact]: l
         }),
         children: t.content
@@ -43,7 +43,7 @@ children: [
     })
   }),
   (0, i.jsx)('div', {
-    className: a()(E.__invalid_embedContent, {
+    className: s()(E.__invalid_embedContent, {
       [E.compact]: l
     }),
     children: (0, i.jsx)(m, {
@@ -55,7 +55,7 @@ children: [
     children: (0, i.jsx)(r.Button, {
       color: r.Button.Colors.PRIMARY,
       onClick: () => {
-        o ? (0, u.z$)(t) : (0, u.XP)(s.guild_id, s.id, t.id);
+        o ? (0, u.z$)(t) : (0, u.XP)(a.guild_id, a.id, t.id);
       },
       children: _.Z.Messages.SYSTEM_MESSAGE_GET_GAMING_STATS
     })
@@ -68,10 +68,10 @@ function m(e) {
   var t;
   let {
 message: n
-  } = e, [s] = null !== (t = n.embeds) && void 0 !== t ? t : [];
-  return null == s ? null : (0, i.jsx)(l.ZP, {
+  } = e, [a] = null !== (t = n.embeds) && void 0 !== t ? t : [];
+  return null == a ? null : (0, i.jsx)(l.ZP, {
 className: E.embed,
-embed: s,
+embed: a,
 renderTitle: (e, t) => o.Z.parseEmbedTitle(t, !0, {
   channelId: n.channel_id
 }),

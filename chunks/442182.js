@@ -15,7 +15,7 @@ var s = n(735250),
   _ = n(100527),
   I = n(906732),
   E = n(777036),
-  T = n(484459),
+  T = n(184301),
   m = n(103575),
   N = n(594174),
   S = n(626135),
@@ -128,7 +128,7 @@ children: (0, s.jsx)(o.Popout, {
     ...e
   }),
   position: 'left',
-  preload: () => (0, T.W)(t.id, t.avatarURL, {
+  preload: () => (0, T.Z)(t.id, t.avatarURL, {
     guildId: i
   }),
   children: e => (0, s.jsxs)(o.Clickable, {

@@ -4,9 +4,9 @@ return f;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(392711),
-  r = n.n(a),
+  a = n(470079),
+  s = n(392711),
+  r = n.n(s),
   l = n(442837),
   o = n(570140),
   c = n(45114),
@@ -24,7 +24,7 @@ function f(e) {
   let {
 channel: t,
 channelRecord: n,
-deleteChannel: a
+deleteChannel: s
   } = e, f = (0, l.Wu)([
 _.Z,
 I.Z
@@ -42,12 +42,12 @@ return I.Z.getChannel(t);
 t.oldestReadMessageId,
 n.guild_id,
 n.id
-  ]), C = s.useCallback((e, t) => {
+  ]), C = a.useCallback((e, t) => {
 (0, E.ok)(e, t, h.on.INBOX);
   }, []);
-  return s.useEffect(() => {
+  return a.useEffect(() => {
 null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === f.length && o.Z.wait(() => {
-  (0, c.In)(t.channelId, !0), a(t.channelId);
+  (0, c.In)(t.channelId, !0), s(t.channelId);
 });
   }), (0, i.jsx)('div', {
 className: N.container,

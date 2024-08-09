@@ -16,7 +16,7 @@ var r = n(735250),
   E = n(797610),
   f = n(927723),
   h = n(124072),
-  p = n(484459),
+  p = n(184301),
   m = n(103575),
   I = n(592125),
   T = n(271383),
@@ -109,7 +109,7 @@ children: B()
   }) : (0, r.jsx)(_.Gt, {
 value: L,
 children: (0, r.jsx)(u.Popout, {
-  preload: null == b ? void 0 : () => (0, p.W)(b.id, b.getAvatarURL(P, 80), {
+  preload: null == b ? void 0 : () => (0, p.Z)(b.id, b.getAvatarURL(P, 80), {
     guildId: null != P ? P : void 0,
     channelId: null != a ? a : void 0
   }),

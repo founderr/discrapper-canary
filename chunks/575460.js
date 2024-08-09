@@ -5,8 +5,8 @@ return u;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(259580),
+var a = n(481060),
+  s = n(259580),
   r = n(528027),
   l = n(686807),
   o = n(113318),
@@ -22,7 +22,7 @@ guildId: n,
 emojiId: t.emoji_id,
 emojiName: t.emoji_name
   });
-  return (0, i.jsxs)(s.Clickable, {
+  return (0, i.jsxs)(a.Clickable, {
 className: c.container,
 onClick: () => {
   null == d || d.navigateToChannel(), u();
@@ -37,21 +37,21 @@ children: [
   (0, i.jsxs)('div', {
     className: c.infoContainer,
     children: [
-      (0, i.jsx)(s.Text, {
+      (0, i.jsx)(a.Text, {
         variant: 'text-md/medium',
         color: 'header-primary',
         className: c.name,
         children: (0, l.Z)(t)
       }),
-      (0, i.jsx)(s.Text, {
+      (0, i.jsx)(a.Text, {
         color: 'interactive-normal',
         variant: 'text-sm/normal',
         children: t.description
       })
     ]
   }),
-  (0, i.jsx)(a.Z, {
-    direction: a.Z.Directions.RIGHT,
+  (0, i.jsx)(s.Z, {
+    direction: s.Z.Directions.RIGHT,
     className: c.caret
   })
 ]

@@ -11,7 +11,7 @@ var r, i = n(735250),
   u = n.n(l),
   c = n(481060),
   d = n(686546),
-  _ = n(484459),
+  _ = n(184301),
   E = n(103575),
   f = n(598077),
   h = n(594174),
@@ -112,7 +112,7 @@ let {
 } = this.state, d = n.find(e => null != e && e.id === l), f = s && null == h.default.getUser(l);
 return (0, i.jsx)(c.Popout, {
   position: 'right',
-  preload: null == d ? void 0 : () => (0, _.W)(d.id, d.getAvatarURL(r, 80), {
+  preload: null == d ? void 0 : () => (0, _.Z)(d.id, d.getAvatarURL(r, 80), {
     guildId: r
   }),
   shouldShow: !0 === a && null != l,

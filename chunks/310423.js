@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(442837),
   o = n(481060),
   c = n(911969),
@@ -37,8 +37,8 @@ children: (0, i.jsx)(o.Text, {
 })
   });
 }
-t.Z = s.memo(function(e) {
-  var t, n, a, r, O, x;
+t.Z = a.memo(function(e) {
+  var t, n, s, r, O, x;
   let M, {
   channel: v,
   messageId: L,
@@ -48,11 +48,11 @@ t.Z = s.memo(function(e) {
   analyticsLocations: P
 } = (0, u.ZP)(),
 {
-  onCopy: D,
-  copyRef: b
+  onCopy: b,
+  copyRef: D
 } = (0, d.Z)(v, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
 j = (0, l.e7)([T.Z], () => T.Z.getGuild(v.guild_id), [v.guild_id]);
-  if (s.useEffect(() => {
+  if (a.useEffect(() => {
   (null == Z || Z.type === c.yU.CHAT && void 0 === Z.application_command) && _.OG(v.id, L);
 }, [
   v.id,
@@ -71,7 +71,7 @@ let e = [],
   ]));
 for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
   e = e.concat(function e(t) {
-    var n, a, r, l, u, d, _;
+    var n, s, r, l, u, d, _;
     let g, {
         option: O,
         channel: x,
@@ -81,17 +81,17 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
         commandOptionSpec: Z,
         sourceAnalyticsLocations: P
       } = t,
-      D = null != L ? L + ' ' + O.name : O.name;
+      b = null != L ? L + ' ' + O.name : O.name;
     if (O.type === c.jw.SUB_COMMAND || O.type === c.jw.SUB_COMMAND_GROUP) {
-      let t = [(0, i.jsxs)(s.Fragment, {
+      let t = [(0, i.jsxs)(a.Fragment, {
           children: [
             ' ',
             (0, i.jsx)(o.Text, {
               ...S,
-              children: null !== (a = null == Z ? void 0 : Z.name_localized) && void 0 !== a ? a : O.name
+              children: null !== (s = null == Z ? void 0 : Z.name_localized) && void 0 !== s ? s : O.name
             })
           ]
-        }, D)],
+        }, b)],
         c = Object.fromEntries(null === (n = null !== (r = null == Z ? void 0 : Z.options) && void 0 !== r ? r : []) || void 0 === n ? void 0 : n.map(e => [
           e.name,
           e
@@ -102,13 +102,13 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           channel: x,
           guild: M,
           messageId: v,
-          parentOptionKey: D,
+          parentOptionKey: b,
           commandOptionSpec: c[n.name],
           sourceAnalyticsLocations: P
         }));
       return t;
     }
-    let b = O.value;
+    let D = O.value;
     if (null != O.value)
       switch (O.type) {
         case c.jw.USER: {
@@ -197,10 +197,10 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
           break;
         default: {
           let e = null == Z ? void 0 : null === (u = Z.choices) || void 0 === u ? void 0 : u.find(e => e.value === O.value);
-          null != e && (b = null !== (d = e.name_localized) && void 0 !== d ? d : e.name);
+          null != e && (D = null !== (d = e.name_localized) && void 0 !== d ? d : e.name);
         }
       }
-    return null == g && (g = R(null == b ? void 0 : b.toString())), [(0, i.jsxs)(s.Fragment, {
+    return null == g && (g = R(null == D ? void 0 : D.toString())), [(0, i.jsxs)(a.Fragment, {
       children: [
         (0, i.jsxs)(o.Text, {
           ...S,
@@ -212,7 +212,7 @@ for (let n of null !== (O = Z.options) && void 0 !== O ? O : [])
         }),
         g
       ]
-    }, D)];
+    }, b)];
   }({
     option: n,
     channel: v,
@@ -228,7 +228,7 @@ M = (0, i.jsxs)(i.Fragment, {
       ...S,
       children: [
         '/',
-        null !== (x = null === (a = Z.application_command) || void 0 === a ? void 0 : a.name_localized) && void 0 !== x ? x : Z.name
+        null !== (x = null === (s = Z.application_command) || void 0 === s ? void 0 : s.name_localized) && void 0 !== x ? x : Z.name
       ]
     }),
     e
@@ -239,13 +239,13 @@ M = (0, i.jsxs)(i.Fragment, {
 className: g.container,
 onCopy: e => {
   var t, n, i;
-  let s = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
-  s.startsWith('/') && s.endsWith('\n') && D(e, Z);
+  let a = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
+  a.startsWith('/') && a.endsWith('\n') && b(e, Z);
 },
 children: [
   (0, i.jsx)('div', {
     className: g.tooltip,
-    ref: b,
+    ref: D,
     children: M
   }),
   (0, i.jsx)('div', {

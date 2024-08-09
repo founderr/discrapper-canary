@@ -7,7 +7,7 @@ var r, i = n(735250),
   u = n(129861),
   c = n(730749),
   d = n(600164),
-  _ = n(484459),
+  _ = n(184301),
   E = n(103575),
   f = n(981631),
   h = n(976231);
@@ -37,7 +37,7 @@ let {
   }
 };
 return (0, i.jsx)(l.Popout, {
-  preload: () => (0, _.W)(t.id, t.getAvatarURL(a, 80), {
+  preload: () => (0, _.Z)(t.id, t.getAvatarURL(a, 80), {
     guildId: a,
     channelId: s
   }),

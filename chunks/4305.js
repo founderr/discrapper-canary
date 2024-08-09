@@ -5,8 +5,8 @@ return l;
 });
 var i = n(735250);
 n(470079);
-var s = n(352736),
-  a = n(739566),
+var a = n(352736),
+  s = n(739566),
   r = n(834129);
 
 function l(e) {
@@ -15,7 +15,7 @@ message: t,
 usernameHook: l,
 compact: o,
 guildId: c
-  } = e, u = (0, a.ZP)(t), d = l(u), _ = s.Z.getWelcomeMessageKind(c), E = s.Z.getSystemMessageUserJoin(t.id, _).format({
+  } = e, u = (0, s.ZP)(t), d = l(u), _ = a.Z.getWelcomeMessageKind(c), E = a.Z.getSystemMessageUserJoin(t.id, _).format({
 username: u.nick,
 usernameHook: d
   });

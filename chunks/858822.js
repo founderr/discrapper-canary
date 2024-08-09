@@ -5,8 +5,8 @@ return I;
 });
 var i = n(735250);
 n(470079);
-var s = n(913527),
-  a = n.n(s),
+var a = n(913527),
+  s = n.n(a),
   r = n(442837),
   l = n(481060),
   o = n(92114),
@@ -19,14 +19,14 @@ var s = n(913527),
 function I(e, t) {
   let n = null == e ? void 0 : e.id,
 {
-  muted: s,
+  muted: a,
   muteConfig: I
 } = (0, r.cj)([d.ZP], () => ({
   muted: null != n ? d.ZP.isMuted(n) : void 0,
   muteConfig: null != n ? d.ZP.getMuteConfig(n) : void 0
 }), [n]),
 m = (0, u.U)(I);
-  return null == n ? null : s ? (0, i.jsx)(l.MenuItem, {
+  return null == n ? null : a ? (0, i.jsx)(l.MenuItem, {
 id: 'unmute-guild',
 label: E.Z.Messages.UNMUTE_SERVER,
 subtext: m,
@@ -41,16 +41,16 @@ action: () => o.Z.updateGuildNotificationSettings(n, {
 }, _.ZB.Muted),
 children: (0, c.k)().map(e => {
   let {
-    value: s,
+    value: a,
     label: r
   } = e;
   return (0, i.jsx)(l.MenuItem, {
-    id: ''.concat(s),
+    id: ''.concat(a),
     label: r,
     action: () => function(e) {
       if (null == n)
         return;
-      let i = e > 0 ? a()().add(e, 'second').toISOString() : null;
+      let i = e > 0 ? s()().add(e, 'second').toISOString() : null;
       o.Z.updateGuildNotificationSettings(n, {
         muted: !0,
         mute_config: {
@@ -58,8 +58,8 @@ children: (0, c.k)().map(e => {
           end_time: i
         }
       }, _.ZB.Muted, t);
-    }(s)
-  }, s);
+    }(a)
+  }, a);
 })
   });
 }

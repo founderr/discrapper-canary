@@ -6,7 +6,7 @@ var i = n(735250),
   l = n(481060),
   o = n(100527),
   c = n(707409),
-  d = n(484459),
+  d = n(184301),
   u = n(103575),
   _ = n(237583),
   E = n(51144),
@@ -76,7 +76,7 @@ return 1 === t.length ? n.single(t[0].user, e => this.renderActivityDiscordTag(e
   }
   renderActivityDiscordTag(e) {
 return (0, i.jsx)(l.Popout, {
-  preload: () => (0, d.W)(e),
+  preload: () => (0, d.Z)(e),
   renderPopout: t => (0, i.jsx)(u.Z, {
     ...t,
     location: 'ApplicationRecommendationActivity',
@@ -140,7 +140,7 @@ super(...e), g(this, 'renderUserTooltip', (e, t, n) => (0, i.jsxs)('div', {
     return null;
   let s = this.props.reason.userInfo.find(t => t.user === e);
   return null == s ? null : (0, i.jsx)(l.Popout, {
-    preload: () => (0, d.W)(e),
+    preload: () => (0, d.Z)(e),
     renderPopout: t => (0, i.jsx)(u.Z, {
       ...t,
       location: 'ApplicationRecommendationActivity',

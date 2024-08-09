@@ -1,72 +1,72 @@
-t.d(n, {
+l.d(n, {
   Z: function() {
-return u;
+return c;
   }
-}), t(47120);
-var l = t(735250),
-  r = t(470079),
-  i = t(481060),
-  a = t(911969),
-  o = t(970184),
-  s = t(293979),
-  c = t(93248);
+}), l(47120);
+var t = l(735250),
+  r = l(470079),
+  i = l(481060),
+  a = l(911969),
+  u = l(970184),
+  s = l(293979),
+  o = l(93248);
 
-function u(e) {
+function c(e) {
   let n;
   let {
-type: t,
-style: u,
+type: l,
+style: c,
 label: d,
 placeholder: m,
 minLength: f,
-maxLength: _,
-required: p,
-value: C
-  } = e, [v, h] = r.useState(null != C ? C : ''), {
-state: E,
-executeStateUpdate: x,
-error: I
-  } = (0, o.Ee)(e, null != C ? {
-type: t,
-value: C
+maxLength: p,
+required: E,
+value: v
+  } = e, [C, h] = r.useState(null != v ? v : ''), {
+state: x,
+executeStateUpdate: _,
+error: N
+  } = (0, u.Ee)(e, null != v ? {
+type: l,
+value: v
   } : void 0), T = (0, s.hz)(e.id);
   r.useEffect(() => {
-(null == E ? void 0 : E.type) === t && h(E.value);
+(null == x ? void 0 : x.type) === l && h(x.value);
   }, [
-t,
-E
+l,
+x
   ]);
-  let g = {
+  let I = {
 name: d,
-value: v,
+value: C,
 placeholder: m,
 minLength: f,
-maxLength: _,
-required: p,
+maxLength: p,
+required: E,
 onChange: e => {
-  h(e), x({
-    type: t,
+  h(e), _({
+    type: l,
     value: e
   });
 },
 autoFocus: T
   };
-  switch (u) {
+  switch (c) {
 case a.FO.SMALL:
-  n = (0, l.jsx)(i.TextInput, {
-    ...g
+  n = (0, t.jsx)(i.TextInput, {
+    ...I
   });
   break;
 case a.FO.PARAGRAPH:
-  n = (0, l.jsx)(i.TextArea, {
-    ...g
+  n = (0, t.jsx)(i.TextArea, {
+    ...I
   });
   }
-  return (0, l.jsx)(i.FormItem, {
+  return (0, t.jsx)(i.FormItem, {
 title: d,
-required: p,
-className: c.formItem,
-error: I,
+required: E,
+className: o.formItem,
+error: N,
 children: n
   });
 }

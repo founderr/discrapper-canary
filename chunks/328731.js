@@ -1,66 +1,66 @@
-t.d(n, {
+l.d(n, {
   Z: function() {
-return _;
+return p;
   }
 });
-var l = t(735250),
-  r = t(120356),
-  i = t.n(r),
-  a = t(481060),
-  o = t(318374),
-  s = t(171368),
-  c = t(5192),
-  u = t(192918),
-  d = t(256139),
-  m = t(689938),
-  f = t(559522);
+var t = l(735250),
+  r = l(120356),
+  i = l.n(r),
+  a = l(481060),
+  u = l(318374),
+  s = l(171368),
+  o = l(5192),
+  c = l(192918),
+  d = l(256139),
+  m = l(689938),
+  f = l(559522);
 
-function _(e) {
+function p(e) {
   let {
 entry: n,
-channel: t,
+channel: l,
 className: r
   } = e, {
-displayParticipants: _,
-participant1: p,
-participant2: C,
-numOtherParticipants: v
-  } = (0, u.Z)(n, 3), h = [
-p,
-C
+displayParticipants: p,
+participant1: E,
+participant2: v,
+numOtherParticipants: C
+  } = (0, c.Z)(n, 3), h = [
+E,
+v
   ];
-  return (0, l.jsxs)('div', {
+  return (0, t.jsxs)('div', {
 className: i()(f.container, r),
 children: [
-  _.length > 0 ? (0, l.jsxs)(l.Fragment, {
+  p.length > 0 ? (0, t.jsxs)(t.Fragment, {
     children: [
-      (0, l.jsx)(o.Z, {
+      (0, t.jsx)(u.Z, {
         maxUsers: 3,
-        users: _,
+        users: p,
         size: a.AvatarSizes.SIZE_20,
         avatarClassName: f.stackedAvatar,
         hideOverflowCount: !0,
         disableUsernameTooltip: !0
       }),
-      (0, l.jsx)(a.Spacer, {
+      (0, t.jsx)(a.Spacer, {
         size: 6,
         horizontal: !0
       })
     ]
   }) : null,
-  (0, l.jsx)(a.Heading, {
+  (0, t.jsx)(a.Heading, {
     variant: 'text-sm/semibold',
     className: i()(f.textSecondary, f.truncatedText),
     children: m.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS.format({
-      user1: c.ZP.getName(t.guild_id, t.id, h[0]),
-      user2: c.ZP.getName(t.guild_id, t.id, h[1]),
-      countOthers: v,
-      nameHook: (e, n) => (0, l.jsx)(d.Z, {
+      user1: o.ZP.getName(l.guild_id, l.id, h[0]),
+      user2: o.ZP.getName(l.guild_id, l.id, h[1]),
+      countOthers: C,
+      nameHook: (e, n) => (0, t.jsx)(d.Z, {
         tag: 'span',
         onClick: () => (0, s.openUserProfileModal)({
           userId: h[parseInt(n)].id
         }),
-        children: (0, l.jsx)(a.Text, {
+        children: (0, t.jsx)(a.Text, {
           variant: 'text-sm/semibold',
           className: i()(f.textPrimary, f.truncatedText),
           lineClamp: 1,

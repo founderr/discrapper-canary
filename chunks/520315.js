@@ -1,24 +1,24 @@
 t.d(n, {
   Z: function() {
-return r;
+return o;
   }
 }), t(47120);
 var i = t(470079),
   a = t(442837),
   l = t(607070);
 
-function r(e) {
+function o(e) {
   let {
 key: n,
 isExpanded: t,
-durationMs: r = 100,
-minHeightOverride: o,
+durationMs: o = 100,
+minHeightOverride: r,
 maxHeightOverride: s,
 maxAnimationHeight: c
-  } = e, u = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), [d, m] = i.useState(null), p = i.useCallback(() => {}, []), _ = i.useRef(), C = i.useRef(), f = i.useRef(n), h = i.useRef(r);
-  h.current = r;
-  let A = i.useRef(o);
-  A.current = o;
+  } = e, u = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), [d, m] = i.useState(null), p = i.useCallback(() => {}, []), _ = i.useRef(), C = i.useRef(), f = i.useRef(n), h = i.useRef(o);
+  h.current = o;
+  let A = i.useRef(r);
+  A.current = r;
   let E = i.useRef(s);
   E.current = s;
   let N = i.useRef(c);
@@ -34,14 +34,14 @@ let {
   height: l
 } = d.getBoundingClientRect();
 !t && (null == _.current || l < _.current) && (_.current = l), t && (null == C.current || l > C.current) && (C.current = l);
-let r = null !== (e = A.current) && void 0 !== e ? e : _.current,
-  o = null !== (i = E.current) && void 0 !== i ? i : C.current,
+let o = null !== (e = A.current) && void 0 !== e ? e : _.current,
+  r = null !== (i = E.current) && void 0 !== i ? i : C.current,
   s = f.current !== n;
-if (f.current = n, null == r || null == o || s)
+if (f.current = n, null == o || null == r || s)
   return;
-let c = Math.min(null !== (a = N.current) && void 0 !== a ? a : o, o),
-  u = t ? r : c,
-  m = t ? c : r;
+let c = Math.min(null !== (a = N.current) && void 0 !== a ? a : r, r),
+  u = t ? o : c,
+  m = t ? c : o;
 if (!(u !== m))
   return;
 x(!0), d.style.height = ''.concat(u, 'px'), d.style.transition = '';

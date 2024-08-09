@@ -5,8 +5,8 @@ return E;
 });
 var i = n(735250);
 n(470079);
-var s = n(442837),
-  a = n(481060),
+var a = n(442837),
+  s = n(481060),
   r = n(776568),
   l = n(218035),
   o = n(775666),
@@ -24,20 +24,20 @@ navId: I,
 label: m,
 location: T,
 includeGuildMute: h
-  } = e, N = (0, l.c)(t), f = (0, o.EQ)(t), C = (0, s.e7)([_.Z], () => _.Z.getGuild(t.guild_id)), p = (0, c.Z)(C), g = (0, u.Mn)('ChannelNotificationSettingsPopoutMenu') && d.$N.has(t.type);
-  return (0, i.jsxs)(a.Menu, {
+  } = e, N = (0, l.c)(t), f = (0, o.EQ)(t), C = (0, a.e7)([_.Z], () => _.Z.getGuild(t.guild_id)), p = (0, c.Z)(C), g = (0, u.Mn)('ChannelNotificationSettingsPopoutMenu') && d.$N.has(t.type);
+  return (0, i.jsxs)(s.Menu, {
 navId: I,
 onClose: n,
 'aria-label': m,
 onSelect: E,
 children: [
-  (0, i.jsx)(a.MenuGroup, {
+  (0, i.jsx)(s.MenuGroup, {
     children: (0, r.ZP)(t, T)
   }),
-  h ? (0, i.jsx)(a.MenuGroup, {
+  h ? (0, i.jsx)(s.MenuGroup, {
     children: p
   }) : null,
-  g ? f : (0, i.jsx)(a.MenuGroup, {
+  g ? f : (0, i.jsx)(s.MenuGroup, {
     children: N
   })
 ]

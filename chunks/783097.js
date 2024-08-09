@@ -27,8 +27,8 @@ return A;
 var i = t(668781),
   a = t(904245),
   l = t(895924),
-  r = t(667204),
-  o = t(957730),
+  o = t(667204),
+  r = t(957730),
   s = t(973616),
   c = t(768581),
   u = t(630388),
@@ -77,7 +77,7 @@ sectionName: d
 channel: m
   } = s, _ = async () => {
 try {
-  let i = await (0, r.Z)({
+  let i = await (0, o.Z)({
     command: n,
     optionValues: t,
     context: s,
@@ -88,7 +88,7 @@ try {
   });
   if (n.inputType === l.iw.BUILT_IN_TEXT && null != i) {
     var e;
-    let n = o.ZP.parse(m, i.content);
+    let n = r.ZP.parse(m, i.content);
     n.tts = null !== (e = i.tts) && void 0 !== e && e, a.Z.sendMessage(s.channel.id, n);
   }
 } catch (e) {

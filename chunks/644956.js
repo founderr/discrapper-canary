@@ -22,7 +22,7 @@ var i = n(120356),
   I = n(818083),
   T = n(480608),
   g = n(124072),
-  S = n(484459),
+  S = n(184301),
   A = n(103575),
   N = n(592125),
   v = n(271383),
@@ -99,7 +99,7 @@ children: (0, r.jsx)(c.Popout, {
       }).map(e => {
         let i = R.default.getUser(e.userId);
         return (0, r.jsx)(c.Popout, {
-          preload: () => (0, S.W)(i.id, i.getAvatarURL(t.guild_id, 80), {
+          preload: () => (0, S.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
             guildId: t.guild_id,
             channelId: t.id
           }),

@@ -5,8 +5,8 @@ return u;
 });
 var i = n(735250);
 n(470079);
-var s = n(692547),
-  a = n(481060),
+var a = n(692547),
+  s = n(481060),
   r = n(739566),
   l = n(834129),
   o = n(689938),
@@ -24,9 +24,9 @@ topic: t.content
   });
   return (0, i.jsx)(l.Z, {
 className: c.stageSystemMessage,
-iconNode: (0, i.jsx)(a.StageIcon, {
+iconNode: (0, i.jsx)(s.StageIcon, {
   size: 'md',
-  color: s.Z.unsafe_rawColors.GREEN_360.css
+  color: a.Z.unsafe_rawColors.GREEN_360.css
 }),
 iconContainerClassName: c.iconContainer,
 timestamp: t.timestamp,

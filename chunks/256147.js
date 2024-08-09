@@ -1,10 +1,10 @@
 n.d(t, {
   M: function() {
-return s;
+return i;
   }
 });
-var i = n(250683);
+var r = n(250683);
 
-function s(e) {
-  return i.fromByteArray(e);
+function i(e) {
+  return r.fromByteArray(e);
 }

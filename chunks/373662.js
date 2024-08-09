@@ -7,8 +7,8 @@ return _;
   }
 });
 var i = n(735250),
-  s = n(120356),
-  a = n.n(s),
+  a = n(120356),
+  s = n.n(a),
   r = n(330711),
   l = n(481060),
   o = n(377171),
@@ -20,7 +20,7 @@ function _(e) {
   let {
 label: t,
 ariaLabel: n,
-tooltipText: s,
+tooltipText: a,
 tooltipColor: _,
 icon: E,
 iconProps: I,
@@ -43,7 +43,7 @@ location: 'HoverBar'
 autoTrackExposure: !0
   });
   return (0, i.jsx)(l.Tooltip, {
-text: null != s ? s : t,
+text: null != a ? a : t,
 color: null != _ ? _ : l.TooltipColors.PRIMARY,
 'aria-label': t,
 onTooltipShow: T,
@@ -52,17 +52,17 @@ hideOnClick: !0,
 tooltipClassName: d.tooltip,
 children: e => {
   let {
-    onMouseEnter: s,
+    onMouseEnter: a,
     onMouseLeave: u,
     onClick: _
   } = e;
   return (0, i.jsxs)(i.Fragment, {
     children: [
       (0, i.jsxs)(c.zx, {
-        className: a()(S, {
+        className: s()(S, {
           [d.hoverBarButton]: O
         }),
-        onMouseEnter: s,
+        onMouseEnter: a,
         onMouseLeave: u,
         onClick: e => {
           null == _ || _(), m(e);
@@ -78,7 +78,7 @@ children: e => {
             ...I
           }) : null,
           null != A ? (0, i.jsx)('div', {
-            className: a()(d.icon, d.buttonContent),
+            className: s()(d.icon, d.buttonContent),
             children: A
           }) : null,
           p && (0, i.jsx)(l.LottieSparkle, {}),
@@ -101,15 +101,15 @@ function E(e) {
 children: t,
 ...n
   } = e, {
-canShowReactionsOnMessageHover: s
+canShowReactionsOnMessageHover: a
   } = u.Z.useExperiment({
 location: 'HoverBar'
   }, {
 autoTrackExposure: !0
   });
   return (0, i.jsx)(c.ZP, {
-className: a()(n.className, d.popover, {
-  [d.popoverReactionHoverBar]: s
+className: s()(n.className, d.popover, {
+  [d.popoverReactionHoverBar]: a
 }),
 children: t
   });

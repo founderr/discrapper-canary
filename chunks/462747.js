@@ -12,7 +12,7 @@ var a = t(120356),
   c = t(239091),
   s = t(129861),
   d = t(939863),
-  u = t(484459),
+  u = t(184301),
   _ = t(103575),
   g = t(314897),
   v = t(158776),
@@ -113,7 +113,7 @@ n.user_id,
 t
   ]);
   return null == c ? null : (0, i.jsx)(o.Popout, {
-preload: () => (0, u.W)(c.id, c.getAvatarURL(t, 80), {
+preload: () => (0, u.Z)(c.id, c.getAvatarURL(t, 80), {
   guildId: t
 }),
 renderPopout: e => (0, i.jsx)(_.Z, {

@@ -12,8 +12,8 @@ return x;
 var i = t(470079),
   a = t(392711),
   l = t.n(a),
-  r = t(25209),
-  o = t(481060),
+  o = t(25209),
+  r = t(481060),
   s = t(2052),
   c = t(542094),
   u = t(513202),
@@ -57,7 +57,7 @@ p.Z.RULES,
 'u',
 'spoiler'
   ]),
-  x = r.w4(v);
+  x = o.w4(v);
 
 function I(e) {
   var n;
@@ -66,7 +66,7 @@ channel: t,
 application: i,
 location: a,
 sectionName: l,
-commandName: r
+commandName: o
   } = e, m = (0, s.O)(), p = (0, c.Qv)({
 applicationId: i.id,
 channelId: t.id
@@ -88,8 +88,8 @@ onActivityItemSelectedProp: e => {
     source: t
   });
 }
-  }), N = o.ButtonColors.BRAND, v = null != r ? r : E.Z.Messages.LAUNCH;
-  return p === c.JS.JOIN ? (N = o.ButtonColors.GREEN, v = E.Z.Messages.JOIN_ACTIVITY) : p === c.JS.LEAVE && (N = o.ButtonColors.RED, v = E.Z.Messages.LEAVE), {
+  }), N = r.ButtonColors.BRAND, v = null != o ? o : E.Z.Messages.LAUNCH;
+  return p === c.JS.JOIN ? (N = r.ButtonColors.GREEN, v = E.Z.Messages.JOIN_ACTIVITY) : p === c.JS.LEAVE && (N = r.ButtonColors.RED, v = E.Z.Messages.LEAVE), {
 onActivityItemSelected: _,
 activityAction: p,
 buttonColor: N,

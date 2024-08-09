@@ -1,95 +1,95 @@
-t.d(n, {
+l.d(n, {
   ZP: function() {
-return x;
+return _;
   },
   xX: function() {
-return E;
+return x;
   }
 });
-var l = t(735250);
-t(470079);
-var r = t(120356),
-  i = t.n(r),
-  a = t(911969),
-  o = t(970184),
-  s = t(987106),
-  c = t(927057),
-  u = t(574597),
-  d = t(378975),
-  m = t(413991),
-  f = t(12067),
-  _ = t(676149),
-  p = t(861529),
-  C = t(770009),
-  v = t(889515),
-  h = t(800062);
+var t = l(735250);
+l(470079);
+var r = l(120356),
+  i = l.n(r),
+  a = l(911969),
+  u = l(970184),
+  s = l(987106),
+  o = l(927057),
+  c = l(574597),
+  d = l(378975),
+  m = l(413991),
+  f = l(12067),
+  p = l(676149),
+  E = l(861529),
+  v = l(770009),
+  C = l(889515),
+  h = l(800062);
 
-function E(e) {
+function x(e) {
   return e.map((e, n) => function(e, n) {
 switch (e.type) {
   case a.re.ACTION_ROW:
-    return (0, l.jsx)(v.Z, {
+    return (0, t.jsx)(C.Z, {
       ...e,
-      renderComponents: E
+      renderComponents: x
     }, n);
   case a.re.BUTTON:
-    return (0, l.jsx)(s.Z, {
+    return (0, t.jsx)(s.Z, {
       ...e
     }, n);
   case a.re.STRING_SELECT:
-    return (0, l.jsx)(d.Z, {
+    return (0, t.jsx)(d.Z, {
       ...e
     }, n);
   case a.re.CHANNEL_SELECT:
-    return (0, l.jsx)(c.Z, {
+    return (0, t.jsx)(o.Z, {
       ...e
     }, n);
   case a.re.USER_SELECT:
   case a.re.ROLE_SELECT:
   case a.re.MENTIONABLE_SELECT:
-    return (0, l.jsx)(u.Z, {
+    return (0, t.jsx)(c.Z, {
       ...e
     }, n);
   case a.re.INPUT_TEXT:
-    return (0, l.jsx)(m.Z, {
+    return (0, t.jsx)(m.Z, {
       ...e
     }, n);
   case a.re.TEXT:
-    return (0, l.jsx)(p.Z, {
+    return (0, t.jsx)(E.Z, {
       ...e
     }, n);
   case a.re.MEDIA_GALLERY:
-    return (0, l.jsx)(f.Z, {
+    return (0, t.jsx)(f.Z, {
       ...e
     }, n);
   case a.re.SEPARATOR:
-    return (0, l.jsx)(_.Z, {
+    return (0, t.jsx)(p.Z, {
       ...e
     }, n);
   case a.re.CONTENT_INVENTORY_ENTRY:
-    return (0, l.jsx)(C.Z, {
+    return (0, t.jsx)(v.Z, {
       ...e
     }, n);
 }
   }(e, n.toString()));
 }
 
-function x(e) {
+function _(e) {
   let {
 message: n
   } = e, {
-components: t
+components: l
   } = n;
-  return 0 === t.length ? null : (0, l.jsx)('div', {
+  return 0 === l.length ? null : (0, t.jsx)('div', {
 className: i()([
   h.container,
   {
     [h.containerUikit]: n.isUIKitComponents()
   }
 ]),
-children: (0, l.jsx)(o.Il, {
+children: (0, t.jsx)(u.Il, {
   message: n,
-  children: E(t)
+  children: x(l)
 })
   });
 }

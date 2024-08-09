@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(512722),
   o = n.n(l),
   c = n(392711),
@@ -29,8 +29,8 @@ var i = n(735250),
   L = n(585483),
   Z = n(63063),
   P = n(405656),
-  D = n(51144),
-  b = n(854709),
+  b = n(51144),
+  D = n(854709),
   j = n(981631),
   U = n(689938),
   y = n(368002);
@@ -44,12 +44,12 @@ writable: !0
   }) : e[t] = n, e;
 }
 let k = _()('2015-05-15').local(),
-  F = (0, E.Un)({
+  G = (0, E.Un)({
 createPromise: () => Promise.resolve().then(n.bind(n, 547800)),
 webpackId: 547800
   }),
-  G = (e, t, n) => {
-var s, a, r;
+  F = (e, t, n) => {
+var a, s, r;
 let {
   user: l,
   text: o
@@ -61,7 +61,7 @@ if (null == l)
 let c = v.default.getUser(l.id),
   u = g.Z.getChannel(e),
   d = (null == u ? void 0 : u.isPrivate()) ? A.Z.getNickname(l.id) : null,
-  _ = null !== (a = null !== (s = S.ZP.getNick(e, l.id)) && void 0 !== s ? s : d) && void 0 !== a ? a : D.ZP.getName(l),
+  _ = null !== (s = null !== (a = S.ZP.getNick(e, l.id)) && void 0 !== a ? a : d) && void 0 !== s ? s : b.ZP.getName(l),
   E = null !== (r = null == c ? void 0 : c.getAvatarURL(e, 20)) && void 0 !== r ? r : l.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
 return [
   (0, i.jsx)('img', {
@@ -75,7 +75,7 @@ return [
   }, 'display-nick-'.concat(t, '-').concat(l.id)),
   (0, i.jsx)('span', {
     className: y.displayUsername,
-    children: D.ZP.getUserTag(l, {
+    children: b.ZP.getUserTag(l, {
       identifiable: M.Z.enabled && M.Z.hidePersonalInformation ? 'never' : 'always'
     })
   }, 'display-username-'.concat(t, '-').concat(l.id))
@@ -83,15 +83,15 @@ return [
   },
   w = (e, t, n) => {
 let {
-  channel: s,
-  text: a
+  channel: a,
+  text: s
 } = n;
-if (null == s)
+if (null == a)
   return (0, i.jsx)('strong', {
-    children: a
+    children: s
   });
-let r = g.Z.getChannel(s.parent_id),
-  l = (0, p.KS)(s);
+let r = g.Z.getChannel(a.parent_id),
+  l = (0, p.KS)(a);
 return (0, i.jsxs)('div', {
   className: y.resultChannel,
   children: [
@@ -99,7 +99,7 @@ return (0, i.jsxs)('div', {
       className: y.searchResultChannelIcon
     }) : null,
     (0, i.jsx)('strong', {
-      children: (0, C.F6)(s, v.default, A.Z)
+      children: (0, C.F6)(a, v.default, A.Z)
     }),
     null != r ? (0, i.jsx)('span', {
       className: y.searchResultChannelCategory,
@@ -110,8 +110,8 @@ return (0, i.jsxs)('div', {
   },
   V = e => {
 let t, n, {
-  id: s,
-  searchId: a,
+  id: a,
+  searchId: s,
   result: l,
   group: o,
   className: c,
@@ -130,14 +130,14 @@ if (T) {
     children: null !== (C = null === (N = f.ZP[o]) || void 0 === N ? void 0 : N.key) && void 0 !== C ? C : 'addme:'
   });
 }
-return n = null != h ? h(a, o, l) : (0, i.jsx)('strong', {
+return n = null != h ? h(s, o, l) : (0, i.jsx)('strong', {
   children: l.text
 }), (0, i.jsxs)(m.Clickable, {
   tag: 'li',
   className: r()(y.option, c),
   onClick: E,
   onFocus: I,
-  id: s,
+  id: a,
   role: u,
   tabIndex: d,
   'aria-selected': _,
@@ -155,7 +155,7 @@ return n = null != h ? h(a, o, l) : (0, i.jsx)('strong', {
   H = e => (0, i.jsx)(V, {
 ...e,
 className: y.user,
-renderResult: G
+renderResult: F
   }),
   Y = {
 [j.dCx.FILTER_FROM]: {
@@ -194,12 +194,12 @@ renderResult: G
       children: e => {
         let {
           onMouseEnter: n,
-          onMouseLeave: s
+          onMouseLeave: a
         } = e;
         return (0, i.jsx)(m.Clickable, {
           onClick: () => (0, T.QQ)(t),
           onMouseEnter: n,
-          onMouseLeave: s,
+          onMouseLeave: a,
           className: y.searchClearHistory,
           title: U.Z.Messages.SEARCH_CLEAR_HISTORY,
           'aria-label': U.Z.Messages.SEARCH_CLEAR_HISTORY,
@@ -215,26 +215,26 @@ renderResult: G
     let {
       onSelect: t,
       onFocus: n,
-      result: a,
+      result: s,
       showFilter: l,
       searchId: o,
       renderResult: c,
       group: u,
       ...d
-    } = e, _ = '', E = s.useMemo(() => {
+    } = e, _ = '', E = a.useMemo(() => {
       var e;
-      return e = a.text, P.kG(e).map((e, t, n) => P.Fr(e, n[t + 1]) ? e : new N.WU(e.getFullMatch(), N.Xe));
-    }, [a.text]).map(e => {
+      return e = s.text, P.kG(e).map((e, t, n) => P.Fr(e, n[t + 1]) ? e : new N.WU(e.getFullMatch(), N.Xe));
+    }, [s.text]).map(e => {
       let t = e.getFullMatch();
       if ('' === t.trim())
         return null;
       let n = j.TNx.test(e.type),
-        s = j.KA4.test(e.type);
+        a = j.KA4.test(e.type);
       return _ += t, (0, i.jsx)('span', {
         className: r()({
           [y.filter]: n,
-          [y.answer]: s,
-          [y.nonText]: !n && !s
+          [y.answer]: a,
+          [y.nonText]: !n && !a
         }),
         children: t
       }, e.type + t);
@@ -280,16 +280,16 @@ renderResult: G
     var t;
     let {
       result: n,
-      onSelect: s,
-      onFocus: a,
+      onSelect: a,
+      onFocus: s,
       showFilter: l,
       searchId: o,
       ...c
     } = e, u = P.Ko(null !== (t = n.token) && void 0 !== t ? t : '');
     return (0, i.jsxs)(m.Clickable, {
       className: r()(y.option, y.searchOption),
-      onClick: s,
-      onFocus: a,
+      onClick: a,
+      onFocus: s,
       ...c,
       children: [
         (0, i.jsx)('span', {
@@ -312,17 +312,17 @@ renderResult: G
   }
 }
   };
-class W extends s.PureComponent {
+class W extends a.PureComponent {
   componentDidUpdate(e, t) {
 let {
   resultsState: n,
   totalResults: i
 } = this.props, {
-  mode: s
+  mode: a
 } = n, {
-  resultsState: a
+  resultsState: s
 } = e;
-null != s.filter && null == a.mode.filter && i > 0 ? this.setSelectedIndex(0) : s.type === j.Sap.FILTER_ALL && a.mode.type !== s.type ? this.setSelectedIndex(-1) : this.keepCurrentOptionSelected(e, t);
+null != a.filter && null == s.mode.filter && i > 0 ? this.setSelectedIndex(0) : a.type === j.Sap.FILTER_ALL && s.mode.type !== a.type ? this.setSelectedIndex(-1) : this.keepCurrentOptionSelected(e, t);
   }
   setSelectedIndex(e) {
 this.setState({
@@ -335,11 +335,11 @@ let {
 } = this.state, {
   navId: t,
   resultsState: n,
-  totalResults: s,
-  searchId: a
+  totalResults: a,
+  searchId: s
 } = this.props;
 return (0, i.jsx)(h.Z, {
-  numResults: s,
+  numResults: a,
   query: n.query,
   navId: t,
   hideQuery: !this.shouldShowSearchQuery(),
@@ -352,7 +352,7 @@ return (0, i.jsx)(h.Z, {
     searchEverywhere: !0
   }),
   renderNoResults: () => null,
-  searchFavorites: a === j.I_8 && (0, b.X)()
+  searchFavorites: s === j.I_8 && (0, D.X)()
 });
   }
   constructor(...e) {
@@ -367,19 +367,19 @@ super(...e), t = this, B(this, 'state', {
     selectedIndex: n
   } = this.state, {
     resultsState: i,
-    totalResults: s
+    totalResults: a
   } = this.props, {
-    mode: a,
+    mode: s,
     autocompletes: r
   } = i, {
     resultsState: l
   } = e;
-  if (a.type !== l.mode.type)
+  if (s.type !== l.mode.type)
     this.setSelectedIndex(-1);
   else if (t.selectedIndex >= 0 && (t.selectedIndex === n || l.autocompletes.length !== r.length)) {
     let e = P.zV(l.autocompletes, l.mode.type)[t.selectedIndex - 1],
-      n = P.zV(r, a.type).indexOf(e); -
-    1 !== n ? this.setSelectedIndex(n) : t.selectedIndex >= s && this.setSelectedIndex(s - 1);
+      n = P.zV(r, s.type).indexOf(e); -
+    1 !== n ? this.setSelectedIndex(n) : t.selectedIndex >= a && this.setSelectedIndex(a - 1);
   }
 }), B(this, 'focusNextOption', () => {
   this.focusOtherOption(1);
@@ -410,30 +410,30 @@ super(...e), t = this, B(this, 'state', {
   } = this.props.resultsState;
   if (P.Fz(i.filter))
     return;
-  let s = P.zV(n, i.type);
-  if (t >= s.length)
+  let a = P.zV(n, i.type);
+  if (t >= a.length)
     return !1;
-  let a = s[t],
+  let s = a[t],
     r = function(e) {
       let t = !0,
         n = e.trim();
       return u()(f.ZP).forOwn(e => {
         '' !== e.key && null != e.key && n === e.key && (t = !1);
       }), t;
-    }(a);
-  return this.setSearchQuery(a, r), !0;
+    }(s);
+  return this.setSearchQuery(s, r), !0;
 }), B(this, 'setSearchQuery', function(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     {
       mode: i,
-      cursorScope: s
+      cursorScope: a
     } = t.props.resultsState,
-    a = 0;
-  null != i.token ? a = i.token.start : (null == s ? void 0 : s.currentToken) != null && (a = s.currentToken.end);
-  let r = null != i.token ? i.token.end : a;
+    s = 0;
+  null != i.token ? s = i.token.start : (null == a ? void 0 : a.currentToken) != null && (s = a.currentToken.end);
+  let r = null != i.token ? i.token.end : s;
   L.S.dispatch(j.CkL.SET_SEARCH_QUERY, {
     query: e,
-    anchor: a,
+    anchor: s,
     focus: r,
     performSearch: n
   }), t.setSelectedIndex(-1);
@@ -445,7 +445,7 @@ super(...e), t = this, B(this, 'state', {
 }), B(this, 'renderDatePicker', () => (0, i.jsxs)('div', {
   className: y.datePicker,
   children: [
-    (0, i.jsx)(F, {
+    (0, i.jsx)(G, {
       onSelect: this.handleDateChange,
       maxDate: _()().local(),
       minDate: k
@@ -480,19 +480,19 @@ super(...e), t = this, B(this, 'state', {
     navId: t,
     searchId: n
   } = this.props, {
-    autocompletes: s,
-    mode: a
+    autocompletes: a,
+    mode: s
   } = this.props.resultsState;
-  if (P.Fz(a.filter))
+  if (P.Fz(s.filter))
     return this.renderDatePicker();
   let r = -1;
-  return s.map(s => {
+  return a.map(a => {
     var l, o, c;
     let u, d;
-    if (null == s || 0 === s.results.length)
+    if (null == a || 0 === a.results.length)
       return null;
-    let _ = null !== (l = Y[s.group]) && void 0 !== l ? l : {};
-    null != _.titleText && (d = ''.concat(s.group, '-header'), u = (0, i.jsx)('div', {
+    let _ = null !== (l = Y[a.group]) && void 0 !== l ? l : {};
+    null != _.titleText && (d = ''.concat(a.group, '-header'), u = (0, i.jsx)('div', {
       id: d,
       className: y.header,
       children: _.titleText()
@@ -502,7 +502,7 @@ super(...e), t = this, B(this, 'state', {
         searchId: n
       }) : null,
       m = null !== (c = _.component) && void 0 !== c ? c : V,
-      T = a.type === j.Sap.FILTER_ALL;
+      T = s.type === j.Sap.FILTER_ALL;
     return (0, i.jsxs)('ul', {
       role: 'group',
       'aria-labelledby': d,
@@ -510,29 +510,29 @@ super(...e), t = this, B(this, 'state', {
       children: [
         u,
         I,
-        s.results.map(a => {
+        a.results.map(s => {
           var l, o;
-          if (null == a || null == s)
+          if (null == s || null == a)
             return null;
           let c = e === (r += 1);
           return (0, i.jsx)(m, {
             searchId: n,
-            group: null !== (l = a.group) && void 0 !== l ? l : s.group,
-            result: a,
+            group: null !== (l = s.group) && void 0 !== l ? l : a.group,
+            result: s,
             showFilter: T,
             onSelect: this.selectOption.bind(null, r),
             onFocus: this.focusOption.bind(null, r),
             ...(0, h.M)(t, r, c)
-          }, ''.concat(s.group, '-').concat(a.text, '-').concat(null !== (o = a.key) && void 0 !== o ? o : ''));
+          }, ''.concat(a.group, '-').concat(s.text, '-').concat(null !== (o = s.key) && void 0 !== o ? o : ''));
         })
       ]
-    }, s.group);
+    }, a.group);
   });
 });
   }
 }
-t.ZP = s.forwardRef((e, t) => {
-  let [n, s, a] = (0, I.Wu)([
+t.ZP = a.forwardRef((e, t) => {
+  let [n, a, s] = (0, I.Wu)([
 x.Z,
 O.Z,
 R.Z
@@ -542,18 +542,18 @@ let e = x.Z.getGuildId(),
   n = null != e ? e : t;
 o()(null != n, 'SearchPopout.getStateFromStores - invalid searchId');
 let i = R.Z.getState(n),
-  s = P.BU(i.autocompletes);
+  a = P.BU(i.autocompletes);
 return [
   n,
   i,
-  s
+  a
 ];
   });
   return (0, i.jsx)(W, {
 ...e,
 searchId: n,
-resultsState: s,
-totalResults: a,
+resultsState: a,
+totalResults: s,
 ref: t
   });
 });

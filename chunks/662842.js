@@ -28,7 +28,7 @@ var i, a, s = n(735250),
   L = n(501655),
   O = n(427679),
   R = n(448206),
-  x = n(484459),
+  x = n(184301),
   b = n(103575),
   P = n(496675),
   M = n(594174),
@@ -323,7 +323,7 @@ children: [
     className: G.participants,
     children: [
       ee.map(e => (0, s.jsx)(u.Popout, {
-        preload: () => (0, x.W)(e, {
+        preload: () => (0, x.Z)(e, {
           guildId: t.id
         }),
         renderPopout: n => (0, s.jsx)(b.Z, {

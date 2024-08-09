@@ -4,8 +4,8 @@ return x;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(447543),
   l = n(410575),
   o = n(906732),
@@ -36,11 +36,11 @@ getAcceptInviteContext: x
   } = e, {
 invite: M,
 inviteError: v
-  } = (0, a.cj)([T.Z], () => ({
+  } = (0, s.cj)([T.Z], () => ({
 invite: T.Z.getInvite(t),
 inviteError: T.Z.getInviteError(t)
   }), [t]);
-  s.useEffect(() => {
+  a.useEffect(() => {
 null == M && r.Z.resolveInvite(t);
   }, [t]);
   let L = null != M ? M : {
@@ -50,9 +50,9 @@ null == M && r.Z.resolveInvite(t);
 {
   analyticsLocations: Z
 } = (0, o.ZP)(),
-P = (0, a.e7)([m.Z], () => (null == M ? void 0 : M.guild) != null ? m.Z.getGuild(M.guild.id) : null, [M]),
-D = (0, a.e7)([I.default], () => I.default.getId()),
-b = (0, a.e7)([c.ZP], () => {
+P = (0, s.e7)([m.Z], () => (null == M ? void 0 : M.guild) != null ? m.Z.getGuild(M.guild.id) : null, [M]),
+b = (0, s.e7)([I.default], () => I.default.getId()),
+D = (0, s.e7)([c.ZP], () => {
   var e;
   return c.ZP.getGuildScheduledEvent(null === (e = L.guild_scheduled_event) || void 0 === e ? void 0 : e.id);
 }, [L]),
@@ -77,7 +77,7 @@ U = () => {
 y = (0, i.jsx)(p.Z, {
   onTransitionToInviteChannel: j,
   onAcceptInstantInvite: U,
-  currentUserId: D,
+  currentUserId: b,
   guild: P,
   invite: L,
   author: n
@@ -105,7 +105,7 @@ default:
       y = (0, i.jsx)(C.Z, {
         onTransitionToInviteChannel: j,
         onAcceptInstantInvite: U,
-        currentUserId: D,
+        currentUserId: b,
         invite: L,
         author: n
       });
@@ -122,7 +122,7 @@ default:
         y = (0, i.jsx)(R.Z, {
           onTransitionToInviteChannel: j,
           onAcceptInstantInvite: U,
-          currentUserId: D,
+          currentUserId: b,
           guild: P,
           invite: L
         });
@@ -130,7 +130,7 @@ default:
       }
       if ((0, d.Tx)(L)) {
         y = (0, i.jsx)(u.ZP, {
-          guildScheduledEvent: b,
+          guildScheduledEvent: D,
           guild: L.guild,
           channel: L.channel,
           isMember: null != P,

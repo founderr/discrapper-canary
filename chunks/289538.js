@@ -6,7 +6,7 @@ return _;
 var n = a(735250),
   l = a(470079),
   r = a(481060),
-  t = a(484459),
+  t = a(184301),
   i = a(103575),
   o = a(5192),
   E = a(689938),
@@ -30,7 +30,7 @@ s,
 a
   ]);
   return (0, n.jsx)(r.Popout, {
-preload: () => (0, t.W)(s.id, I),
+preload: () => (0, t.Z)(s.id, I),
 renderPopout: e => (0, n.jsx)(i.Z, {
   ...e,
   location: 'GameProfileEntry',

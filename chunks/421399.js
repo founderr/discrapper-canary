@@ -20,7 +20,7 @@ var r, i, a = n(735250),
   p = n(979264),
   m = n(372900),
   I = n(477734),
-  T = n(484459),
+  T = n(184301),
   g = n(768581),
   S = n(463396),
   A = n(944192),
@@ -104,7 +104,7 @@ K = s.useMemo(() => R ? (0, a.jsx)(p.ZP, {
   n = null != P && null != y ? (0, a.jsx)(d.Popout, {
 preload: H ? void 0 : function() {
   let e = null != h ? h : i.author;
-  return (0, T.W)(e.id, null != r.guildMemberAvatar && null != G ? (0, g.JM)({
+  return (0, T.Z)(e.id, null != r.guildMemberAvatar && null != G ? (0, g.JM)({
     guildId: G,
     userId: e.id,
     avatar: r.guildMemberAvatar,

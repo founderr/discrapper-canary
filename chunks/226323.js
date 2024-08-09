@@ -12,7 +12,7 @@ var i = n(735250),
   c = n(239091),
   d = n(586902),
   u = n(512384),
-  _ = n(484459),
+  _ = n(184301),
   E = n(103575),
   h = n(314897),
   m = n(131951),
@@ -130,7 +130,7 @@ null != R ? (0, c.jW)(e, async () => {
 });
   }
   return (0, i.jsx)(o.Popout, {
-preload: () => (0, _.W)(h.id, h.getAvatarURL(R, 80), {
+preload: () => (0, _.Z)(h.id, h.getAvatarURL(R, 80), {
   guildId: R,
   channelId: s.id
 }),

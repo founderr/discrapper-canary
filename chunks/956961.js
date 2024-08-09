@@ -4,9 +4,9 @@ return M;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(913527),
   o = n.n(l),
   c = n(442837),
@@ -38,11 +38,11 @@ function M(e) {
   let {
 setTab: t,
 closePopout: n
-  } = e, a = (0, c.Wu)([m.Z], () => m.Z.getMessageReminders());
-  s.useEffect(() => () => {
+  } = e, s = (0, c.Wu)([m.Z], () => m.Z.getMessageReminders());
+  a.useEffect(() => () => {
 (0, T.Mf)();
   }, []);
-  let [r, l] = s.useState(!1), o = s.useMemo(() => a.filter(e => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [a]), _ = r ? a : o;
+  let [r, l] = a.useState(!1), o = a.useMemo(() => s.filter(e => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [s]), _ = r ? s : o;
   return (0, i.jsxs)('div', {
 className: R.container,
 children: [
@@ -66,7 +66,7 @@ children: [
           children: r ? A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({
             count: o.length
           }) : A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({
-            count: a.length
+            count: s.length
           })
         })
       })
@@ -83,11 +83,11 @@ children: [
 
 function v(e) {
   let t, {
-  messageReminder: s
+  messageReminder: a
 } = e,
-a = s.complete,
-l = s.saveData,
-u = s.message,
+s = a.complete,
+l = a.saveData,
+u = a.message,
 m = (0, c.e7)([N.Z], () => N.Z.getChannel(l.channelId)),
 p = () => {
   (0, I.uL)(S.Z5c.CHANNEL(null == m ? void 0 : m.getGuildId(), l.channelId, l.messageId));
@@ -106,7 +106,7 @@ children: [
     children: (0, i.jsxs)('div', {
       className: R.reminderActions,
       children: [
-        null != s.saveData.notes && s.saveData.notes.length > 0 ? (0, i.jsxs)(d.Text, {
+        null != a.saveData.notes && a.saveData.notes.length > 0 ? (0, i.jsxs)(d.Text, {
           variant: 'text-sm/normal',
           color: 'text-muted',
           className: R.notes,
@@ -116,7 +116,7 @@ children: [
               size: 'xxs',
               color: 'currentColor'
             }),
-            s.saveData.notes
+            a.saveData.notes
           ]
         }) : null,
         null != g ? (0, i.jsx)(d.Text, {
@@ -147,7 +147,7 @@ children: [
         }),
         (0, i.jsx)(d.Checkbox, {
           type: d.Checkbox.Types.INVERTED,
-          value: a,
+          value: s,
           onChange: (e, t) => {
             (0, T.Y_)(l.messageId, t);
           }
@@ -157,7 +157,7 @@ children: [
   }),
   (0, i.jsxs)('div', {
     className: r()(O.messageContainer, R.unloadedMessage, {
-      [R.disabledMessage]: a
+      [R.disabledMessage]: s
     }),
     children: [
       (0, i.jsx)(f.Z, {

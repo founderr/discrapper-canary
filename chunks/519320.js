@@ -1,4 +1,4 @@
-t.d(n, {
+i.d(n, {
   EW: function() {
 return l;
   },
@@ -9,24 +9,24 @@ return d;
 return r;
   }
 });
-var i, o, a = t(626135),
-  c = t(981631);
+var t, o, a = i(626135),
+  c = i(981631);
 
-function r(e, n, t, i) {
+function r(e, n, i, t) {
   a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
 message_id: e,
 total_duration_secs: n,
-start_duration_secs: Math.min(null != n ? n : t, t),
-sender_user_id: i
+start_duration_secs: Math.min(null != n ? n : i, i),
+sender_user_id: t
   });
 }
 
-function l(e, n, t, i, o) {
+function l(e, n, i, t, o) {
   a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
 message_id: e,
 total_duration_secs: n,
-end_duration_secs: Math.min(null != n ? n : t, t),
-sender_user_id: i,
+end_duration_secs: Math.min(null != n ? n : i, i),
+sender_user_id: t,
 duration_listening_secs: o
   });
 }
@@ -37,4 +37,4 @@ message_id: e,
 error_message: n
   });
 }
-(i = o || (o = {})).SENT = 'sent', i.CANCELLED_DURATION = 'cancelled_duration', i.CANCELLED_USER_REQUESTED = 'cancelled_user_requested', i.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict', i.CANCELLED_ON_BACKGROUND = 'cancelled_on_background';
+(t = o || (o = {})).SENT = 'sent', t.CANCELLED_DURATION = 'cancelled_duration', t.CANCELLED_USER_REQUESTED = 'cancelled_user_requested', t.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict', t.CANCELLED_ON_BACKGROUND = 'cancelled_on_background';

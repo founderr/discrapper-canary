@@ -11,7 +11,7 @@ var i = n(735250),
   o = n(239091),
   c = n(586902),
   u = n(40851),
-  d = n(484459),
+  d = n(184301),
   h = n(103575),
   p = n(237583),
   m = n(768581),
@@ -50,7 +50,7 @@ userId: s.id
 });
   };
   return (0, i.jsx)(r.Popout, {
-preload: () => (0, d.W)(s.user, {
+preload: () => (0, d.Z)(s.user, {
   guildId: t.guild_id,
   channelId: t.id
 }),

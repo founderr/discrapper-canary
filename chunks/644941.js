@@ -57,7 +57,7 @@ return (0, n.jsx)(A.Tooltip, {
       ...e,
       className: U.clickable,
       onClick: async () => {
-        l(C.as.ClickSimilarGame, s.applicationId), (0, A.openModalLazy)(() => Promise.resolve(e => (0, n.jsx)(W, {
+        l(C.as.ClickSimilarGame, s.applicationId), (0, A.openModalLazy)(() => Promise.resolve(e => (0, n.jsx)(Y, {
           applicationId: s.applicationId,
           source: C.m1.SimilarGames,
           ...e
@@ -135,16 +135,16 @@ return (0, n.jsxs)('div', {
 });
   },
   H = e => e.filter(Z.z6).slice(0, 5),
-  W = e => {
+  Y = e => {
 var s, r;
 let {
   applicationId: i,
   source: E,
   sourceUserId: _,
   transitionState: b,
-  onClose: W
+  onClose: Y
 } = e, {
-  clientThemesClassName: Y
+  clientThemesClassName: W
 } = (0, O.ZP)(), {
   width: V,
   height: z
@@ -291,7 +291,7 @@ let eL = null !== (s = ed.name) && void 0 !== s ? s : null == eu ? void 0 : eu.n
 return (0, n.jsx)(A.ModalRoot, {
   transitionState: b,
   size: A.ModalSize.DYNAMIC,
-  className: t()(Y, U.gameProfileModal),
+  className: t()(W, U.gameProfileModal),
   children: (0, n.jsxs)(A.ScrollerNone, {
     className: U.scrollable,
     children: [
@@ -420,7 +420,7 @@ return (0, n.jsx)(A.ModalRoot, {
                     children: null == eE ? void 0 : eE.slice(0, ec && !e_ ? 6 : void 0).map(e => (0, n.jsx)(D.Z, {
                       entry: e,
                       viewId: el,
-                      onClose: W
+                      onClose: Y
                     }, e.id))
                   })
                 ]
@@ -493,7 +493,7 @@ return (0, n.jsx)(A.ModalRoot, {
                     style: {},
                     children: et.map(e => (0, n.jsx)(y, {
                       game: e,
-                      onClose: W,
+                      onClose: Y,
                       trackClick: eO
                     }, null == e ? void 0 : e.applicationId))
                   })
@@ -571,4 +571,4 @@ return (0, n.jsx)(A.ModalRoot, {
   })
 });
   };
-s.default = W;
+s.default = Y;

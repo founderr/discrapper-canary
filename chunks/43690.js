@@ -1,23 +1,23 @@
 n.d(t, {
   D: function() {
-return a;
+return s;
   },
   h: function() {
 return r;
   }
 });
 var i = n(873011),
-  s = n(192720);
+  a = n(192720);
 
-function a(e) {
-  (0, s.gL)({
+function s(e) {
+  (0, a.gL)({
 type: i.J.BOOKMARK,
 ...e
   });
 }
 
 function r(e) {
-  (0, s.ep)({
+  (0, a.ep)({
 type: i.J.BOOKMARK,
 ...e
   });

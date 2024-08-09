@@ -1,10 +1,10 @@
-t.d(n, {
+l.d(n, {
   S: function() {
 return r;
   }
-}), t(47120);
-var l = t(470079);
-class r extends l.PureComponent {
+}), l(47120);
+var t = l(470079);
+class r extends t.PureComponent {
   static getDerivedStateFromError(e) {
 return {
   error: e
@@ -17,14 +17,14 @@ console.error('ErrorBoundary caught an error', e, n);
 return null != this.state.error ? this.props.fallback : this.props.children;
   }
   constructor(...e) {
-var n, t, l;
-super(...e), n = this, l = {
+var n, l, t;
+super(...e), n = this, t = {
   error: null
-}, (t = 'state') in n ? Object.defineProperty(n, t, {
-  value: l,
+}, (l = 'state') in n ? Object.defineProperty(n, l, {
+  value: t,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : n[t] = l;
+}) : n[l] = t;
   }
 }

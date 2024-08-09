@@ -6,8 +6,8 @@ return j;
 var i = t(735250),
   a = t(470079),
   l = t(392711),
-  r = t.n(l),
-  o = t(209173),
+  o = t.n(l),
+  r = t(209173),
   s = t(110924),
   c = t(367907),
   u = t(555573),
@@ -92,7 +92,7 @@ g = a.useMemo(() => {
   }));
   return [
     ...e,
-    ...r().compact(N.map(e => e.type === o.s.CONNECTION || n.has(e.data.id) ? null : {
+    ...o().compact(N.map(e => e.type === r.s.CONNECTION || n.has(e.data.id) ? null : {
       application: e.data,
       installOnDemand: !0
     }))
@@ -130,7 +130,7 @@ function O(e) {
 channel: n,
 query: t,
 entrypoint: l
-  } = e, r = l === h._b.TEXT, o = l === h._b.TEXT, {
+  } = e, o = l === h._b.TEXT, r = l === h._b.TEXT, {
 loading: s,
 isEmptyState: c,
 commandResults: u,
@@ -141,8 +141,8 @@ hasApplicationResults: p
 channel: n,
 query: t,
 commandLimit: 10,
-searchesCommands: r,
-searchesBots: o,
+searchesCommands: o,
+searchesBots: r,
 searchesActivities: !0
   }), _ = a.useMemo(() => m.map(e => ({
 application: e,
@@ -162,7 +162,7 @@ children: [
   p && (0, i.jsx)(U, {
     applicationResults: _,
     query: t,
-    searchesBots: o
+    searchesBots: r
   })
 ]
   });
@@ -172,19 +172,19 @@ function Z(e) {
   var n, t;
   let {
 channel: l,
-commandResults: r,
-query: o
-  } = e, m = r.length > 4, A = a.useMemo(() => m ? r.slice(0, 4) : r, [
-r,
+commandResults: o,
+query: r
+  } = e, m = o.length > 4, A = a.useMemo(() => m ? o.slice(0, 4) : o, [
+o,
 m
-  ]), [E, v] = a.useState(!1), x = null !== (n = (0, s.Z)(E)) && void 0 !== n ? n : E, P = a.useCallback(() => v(e => !e), []), b = (null !== (t = (0, s.Z)(o)) && void 0 !== t ? t : o)[0] !== o[0], M = E && !b;
+  ]), [E, v] = a.useState(!1), x = null !== (n = (0, s.Z)(E)) && void 0 !== n ? n : E, P = a.useCallback(() => v(e => !e), []), b = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0], M = E && !b;
   a.useLayoutEffect(() => v(!1), [b]);
   let {
 ref: j,
 isTransitioning: y,
 onTransitionEnd: O
   } = (0, N.Z)({
-key: o,
+key: r,
 isExpanded: M,
 durationMs: 200,
 maxAnimationHeight: L.K7
@@ -193,16 +193,16 @@ maxAnimationHeight: L.K7
 !x && E && (0, c.yw)(R.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
   section_name: h.L3.SEARCH,
   source: f.Z.entrypoint(),
-  num: r.length
+  num: o.length
 });
   }, [
-r.length,
+o.length,
 x,
 E
   ]);
   let Z = M || y,
 H = M ? I.Z.buttonTypes.VIEW_LESS : I.Z.buttonTypes.VIEW_MORE,
-U = Z ? r : A;
+U = Z ? o : A;
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
@@ -218,12 +218,12 @@ children: [
       let {
         command: t,
         application: a,
-        section: r
+        section: o
       } = e;
       return (0, i.jsx)(g.Z, {
         command: t,
         application: a,
-        query: o,
+        query: r,
         searchResultsPosition: n,
         onClick: () => {
           let e = f.Z.entrypoint();
@@ -234,12 +234,12 @@ children: [
           }), u.Po({
             channelId: l.id,
             command: t,
-            section: r,
+            section: o,
             location: d.Vh.APP_LAUNCHER_HOME_SEARCH,
             triggerSection: void 0,
-            queryLength: o.length,
+            queryLength: r.length,
             sectionName: h.L3.SEARCH,
-            query: o,
+            query: r,
             searchResultsPosition: n,
             source: e
           }), _.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, {

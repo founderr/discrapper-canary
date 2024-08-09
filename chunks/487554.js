@@ -3,7 +3,7 @@ n.d(t, {
 return l;
   }
 });
-var i, s, a, r, l, o = n(442837),
+var i, a, s, r, l, o = n(442837),
   c = n(570140);
 (i = l || (l = {}))[i.NOT_FETCHED = 0] = 'NOT_FETCHED', i[i.FETCHING = 1] = 'FETCHING', i[i.FETCHED = 2] = 'FETCHED', i[i.FAILED = 3] = 'FAILED';
 let u = {},
@@ -21,12 +21,12 @@ return null !== (t = d[e]) && void 0 !== t ? t : 0;
 return u;
   }
 }
-r = 'MediaPostEmbedStore', (a = 'displayName') in(s = _) ? Object.defineProperty(s, a, {
+r = 'MediaPostEmbedStore', (s = 'displayName') in(a = _) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new _(c.Z, {
+}) : a[s] = r, t.Z = new _(c.Z, {
   CONNECTION_OPEN: function() {
 u = {}, d = {};
   },

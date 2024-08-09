@@ -3,14 +3,14 @@ n.d(t, {
 return r;
   }
 });
-var i, o, a, l, r, s, u = n(442837),
-  d = n(570140);
+var i, o, a, l, r, c, d = n(442837),
+  s = n(570140);
 (i = r || (r = {}))[i.FETCHING = 0] = 'FETCHING', i[i.FETCHED = 1] = 'FETCHED', i[i.ERROR = 2] = 'ERROR';
-let c = {},
+let u = {},
   m = {},
   p = {};
 
-function h(e) {
+function _(e) {
   let {
 location: t,
 channelId: n,
@@ -18,15 +18,15 @@ withCommands: i
   } = e;
   return 'location:'.concat(t, ' channelId:').concat('0', ' withCommands:').concat(i);
 }
-let x = Object.freeze([]);
-class g extends(s = u.ZP.Store) {
+let E = Object.freeze([]);
+class g extends(c = d.ZP.Store) {
   getLastFetchTimeMs(e) {
 let {
   location: t,
   channelId: n,
   withCommands: i
 } = e;
-return p[h({
+return p[_({
   location: t,
   channelId: n,
   withCommands: i
@@ -38,7 +38,7 @@ let {
   channelId: n,
   withCommands: i
 } = e;
-return m[h({
+return m[_({
   location: t,
   channelId: n,
   withCommands: i
@@ -51,11 +51,11 @@ let {
   channelId: i,
   withCommands: o
 } = e;
-return null !== (t = c[h({
+return null !== (t = u[_({
   location: n,
   channelId: i,
   withCommands: o
-})]) && void 0 !== t ? t : x;
+})]) && void 0 !== t ? t : E;
   }
 }
 l = void 0, (a = 'displayName') in(o = g) ? Object.defineProperty(o, a, {
@@ -63,7 +63,7 @@ l = void 0, (a = 'displayName') in(o = g) ? Object.defineProperty(o, a, {
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[a] = l, t.ZP = new g(d.Z, {
+}) : o[a] = l, t.ZP = new g(s.Z, {
   APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function(e) {
 let {
   location: t,
@@ -72,7 +72,7 @@ let {
 } = e;
 m = {
   ...m,
-  [h({
+  [_({
     location: t,
     channelId: n,
     withCommands: i
@@ -85,13 +85,13 @@ let {
   location: n,
   channelId: i,
   withCommands: o
-} = e, a = h({
+} = e, a = _({
   location: n,
   channelId: i,
   withCommands: o
 });
-c = {
-  ...c,
+u = {
+  ...u,
   [a]: t
 }, m = {
   ...m,
@@ -111,7 +111,7 @@ let {
 } = e;
 m = {
   ...m,
-  [h({
+  [_({
     location: t,
     channelId: n,
     withCommands: i

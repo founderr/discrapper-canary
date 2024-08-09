@@ -25,7 +25,7 @@ var i = n(735250),
   T = n(518738),
   N = n(965376),
   v = n(159299),
-  S = n(484459),
+  S = n(184301),
   Z = n(103575),
   A = n(199902),
   M = n(271383),
@@ -110,7 +110,7 @@ if (null == E)
   return null;
 let Y = null == u ? void 0 : u.premiumSince;
 return (0, i.jsx)(p.Popout, {
-  preload: () => (0, S.W)(E, {
+  preload: () => (0, S.Z)(E, {
     guildId: t.guild_id,
     channelId: t.id
   }),

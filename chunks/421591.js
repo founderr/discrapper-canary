@@ -2,8 +2,8 @@ t(47120), t(852437);
 var i = t(735250),
   a = t(470079),
   l = t(481060),
-  r = t(100527),
-  o = t(367907),
+  o = t(100527),
+  r = t(367907),
   s = t(906732),
   c = t(541099),
   u = t(695676),
@@ -26,28 +26,28 @@ function E(e) {
 children: n
   } = e, [t, l] = a.useState([{
 type: u.gc.HOME
-  }]), [r, o] = a.useState({}), s = t[t.length - 1], [c, d] = a.useState(!1), m = a.useCallback(e => {
+  }]), [o, r] = a.useState({}), s = t[t.length - 1], [c, d] = a.useState(!1), m = a.useCallback(e => {
 l(n => [
   ...n,
   e
 ]);
   }, []), p = a.useCallback(() => {
 let e = null;
-l(n => n.length <= 1 ? n : (e = n[n.length - 1], n.slice(0, -1))), o(n => null == e ? n : {
+l(n => n.length <= 1 ? n : (e = n[n.length - 1], n.slice(0, -1))), r(n => null == e ? n : {
   ...n,
   [e.type]: e
 });
   }, []), _ = a.useCallback(e => {
 var n;
-return null !== (n = t.findLast(n => n.type === e)) && void 0 !== n ? n : r[e];
+return null !== (n = t.findLast(n => n.type === e)) && void 0 !== n ? n : o[e];
   }, [
 t,
-r
+o
   ]);
   return (0, i.jsx)(u.uX.Provider, {
 value: {
   history: t,
-  discard: r,
+  discard: o,
   currentView: s,
   pushHistory: m,
   goBack: p,
@@ -63,11 +63,11 @@ function N(e) {
   let {
 channel: n,
 entrypoint: t
-  } = e, [r, o] = a.useState(''), {
+  } = e, [o, r] = a.useState(''), {
 setScroller: s,
 isCloseToBottom: c
   } = function(e) {
-let [n, t] = a.useState(null), [i, l] = a.useState(!1), r = a.useRef(0);
+let [n, t] = a.useState(null), [i, l] = a.useState(!1), o = a.useRef(0);
 return a.useEffect(() => {
   null == n || n.scrollTo(0, 0);
 }, [
@@ -75,19 +75,19 @@ return a.useEffect(() => {
   e
 ]), a.useEffect(() => {
   if (null != n)
-    return n.scrollTo(0, r.current), n.addEventListener('scroll', e), () => {
+    return n.scrollTo(0, o.current), n.addEventListener('scroll', e), () => {
       n.removeEventListener('scroll', e, !1);
     };
 
   function e() {
     if (null != n)
-      r.current = n.scrollTop, l(n.scrollHeight - (n.scrollTop + n.clientHeight) < 0.5 * _.K7);
+      o.current = n.scrollTop, l(n.scrollHeight - (n.scrollTop + n.clientHeight) < 0.5 * _.K7);
   }
 }, [n]), {
   setScroller: t,
   isCloseToBottom: i
 };
-  }(r), {
+  }(o), {
 currentView: C,
 getMostRecentHistoryItemByType: h,
 setSlideReady: E
@@ -120,8 +120,8 @@ children: [
         setScroller: s,
         channel: n,
         entrypoint: t,
-        searchQuery: r,
-        setSearchQuery: o
+        searchQuery: o,
+        setSearchQuery: r
       })
     })
   }),
@@ -162,16 +162,16 @@ channel: t,
 entrypoint: l
   } = e, {
 analyticsLocations: u
-  } = (0, s.ZP)(r.Z.APP_LAUNCHER);
+  } = (0, s.ZP)(o.Z.APP_LAUNCHER);
   return a.useEffect(() => {
-(0, o.yw)(C.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
+(0, r.yw)(C.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
   source: l,
   location: 'app_launcher'
 });
   }, [l]), a.useEffect(() => {
 let e = Date.now();
 return () => {
-  (0, o.yw)(C.rMx.APP_LAUNCHER_CLOSED, {
+  (0, r.yw)(C.rMx.APP_LAUNCHER_CLOSED, {
     reason: c.Z.closeReason(),
     time_spent: Date.now() - e,
     source: l

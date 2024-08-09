@@ -1,23 +1,23 @@
-t.d(n, {
+l.d(n, {
   Z: function() {
 return s;
   }
 });
-var l = t(735250),
-  r = t(120356),
-  i = t.n(r),
-  a = t(481060),
-  o = t(365030);
+var t = l(735250),
+  r = l(120356),
+  i = l.n(r),
+  a = l(481060),
+  u = l(365030);
 
 function s(e) {
   let {
 className: n,
-onClick: t,
+onClick: l,
 ...r
   } = e;
-  return (0, l.jsx)(a.Clickable, {
+  return (0, t.jsx)(a.Clickable, {
 ...r,
-className: i()(null != t && o.clickable, n),
-onClick: t
+className: i()(null != l && u.clickable, n),
+onClick: l
   });
 }

@@ -1,4 +1,4 @@
-t.d(n, {
+i.d(n, {
   L9: function() {
 return T;
   },
@@ -20,25 +20,25 @@ return v;
   vZ: function() {
 return g;
   }
-}), t(789020);
-var i = t(735250),
-  o = t(470079),
-  a = t(442837),
-  c = t(993365),
-  r = t(981729),
-  l = t(481060),
-  d = t(543651),
-  s = t(394779),
-  u = t(519320),
-  _ = t(592125),
-  f = t(52824),
-  m = t(630388),
-  I = t(591759),
-  h = t(850908),
-  p = t(524444),
-  E = t(981631),
-  C = t(689938),
-  y = t(736984);
+}), i(789020);
+var t = i(735250),
+  o = i(470079),
+  a = i(442837),
+  c = i(993365),
+  r = i(981729),
+  l = i(481060),
+  d = i(543651),
+  s = i(394779),
+  u = i(519320),
+  _ = i(592125),
+  f = i(52824),
+  m = i(630388),
+  I = i(591759),
+  h = i(850908),
+  p = i(524444),
+  E = i(981631),
+  C = i(689938),
+  y = i(736984);
 
 function S(e) {
   let n = e.item.originalItem;
@@ -61,17 +61,17 @@ renderForwardComponent: (0, s.s)(e.message, {
 
 function g(e) {
   let n = e.item.originalItem,
-t = o.useCallback(() => {
+i = o.useCallback(() => {
   var e;
-  return (0, m.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, E.J0y.IS_CLIP) ? (0, i.jsxs)(r.DY, {
+  return (0, m.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, E.J0y.IS_CLIP) ? (0, t.jsxs)(r.DY, {
     text: C.Z.Messages.CLIPS_BETA_TAG_HOVER,
     className: y.clipPill,
     children: [
-      (0, i.jsx)(l.ClipsIcon, {
+      (0, t.jsx)(l.ClipsIcon, {
         size: 'xs',
         color: 'currentColor'
       }),
-      (0, i.jsx)(c.x, {
+      (0, t.jsx)(c.x, {
         variant: 'text-xs/semibold',
         color: 'always-white',
         children: C.Z.Messages.CLIP_TAG
@@ -89,7 +89,7 @@ fileName: (0, h.Z)(n),
 src: n.url,
 placeholder: n.placeholder,
 placeholderVersion: n.placeholder_version,
-renderOverlayContent: t,
+renderOverlayContent: i,
 renderForwardComponent: (0, s.s)(e.message, {
   type: 'attachment',
   attachmentId: n.id
@@ -110,30 +110,30 @@ src: n.url
 function A(e) {
   let {
 message: n,
-item: t
-  } = e, i = t.originalItem, a = o.useCallback((e, t, o) => {
+item: i
+  } = e, t = i.originalItem, a = o.useCallback((e, i, o) => {
 var a;
-(0, u.tb)(n.id, null !== (a = i.duration_secs) && void 0 !== a ? a : null, t, n.author.id);
+(0, u.tb)(n.id, null !== (a = t.duration_secs) && void 0 !== a ? a : null, i, n.author.id);
   }, [
 n,
-i.duration_secs
-  ]), c = o.useCallback((e, t) => {
+t.duration_secs
+  ]), c = o.useCallback((e, i) => {
 var o;
-(0, u.EW)(n.id, null !== (o = i.duration_secs) && void 0 !== o ? o : null, e, n.author.id, t);
+(0, u.EW)(n.id, null !== (o = t.duration_secs) && void 0 !== o ? o : null, e, n.author.id, i);
   }, [
 n,
-i.duration_secs
+t.duration_secs
   ]), r = o.useCallback(e => {
-var t;
-(0, u.Np)(n.id, null !== (t = null == e ? void 0 : e.message) && void 0 !== t ? t : null);
+var i;
+(0, u.Np)(n.id, null !== (i = null == e ? void 0 : e.message) && void 0 !== i ? i : null);
   }, [n]);
   return (0, p.wj)({
 ...e,
-fileSize: i.size,
-fileName: (0, h.Z)(i),
-src: i.url,
-durationSecs: i.duration_secs,
-waveform: i.waveform,
+fileSize: t.size,
+fileName: (0, h.Z)(t),
+src: t.url,
+durationSecs: t.duration_secs,
+waveform: t.waveform,
 onPlay: a,
 onPause: c,
 onError: r
@@ -163,7 +163,7 @@ fileSize: n.size
 
 function T(e) {
   if ('CLIP' === e.item.type)
-return (0, i.jsx)(O, {
+return (0, t.jsx)(O, {
   attachment: e.item.originalItem,
   message: e.message
 });
@@ -173,7 +173,7 @@ return (0, i.jsx)(O, {
 function O(e) {
   var n;
   let {
-attachment: t,
+attachment: i,
 message: o
   } = e, c = o.channel_id, r = (0, a.e7)([_.Z], () => {
 var e;
@@ -183,8 +183,8 @@ clip_created_at: l,
 clip_participants: s,
 title: u,
 application: f
-  } = t;
-  return (0, i.jsx)(d.Z, {
+  } = i;
+  return (0, t.jsx)(d.Z, {
 createdAt: null != l ? Date.parse(l) : void 0,
 participantIds: null !== (n = null == s ? void 0 : s.map(e => {
   let {

@@ -13,7 +13,7 @@ var i = n(735250),
   u = n(594174),
   d = n(453956),
   h = n(380738),
-  p = n(484459),
+  p = n(184301),
   m = n(87728),
   _ = n(705816),
   f = n(792379),
@@ -35,7 +35,7 @@ location: t
   l()(null != T, 'ProfilePanelExperimentWrapper: user cannot be undefined');
   let N = (0, r.e7)([u.default], () => u.default.getCurrentUser());
   l()(null != N, 'ProfilePanelExperimentWrapper: currentUser cannot be undefined'), a.useEffect(() => {
-(0, p.W)(T, {
+(0, p.Z)(T, {
   withMutualFriends: !T.bot,
   withMutualGuilds: !0,
   channelId: n.id

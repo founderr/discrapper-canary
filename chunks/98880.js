@@ -13,9 +13,9 @@ return W;
   }
 }), t(47120), t(411104);
 var i, a, l = t(735250),
-  r = t(470079),
-  o = t(120356),
-  s = t.n(o),
+  o = t(470079),
+  r = t(120356),
+  s = t.n(r),
   c = t(442837),
   u = t(481060),
   d = t(607070),
@@ -47,8 +47,8 @@ application: n,
 look: t = 'large_banner',
 isPartner: i,
 onClick: a,
-bannerImageStyle: r,
-enableVideoBanner: o = !0,
+bannerImageStyle: o,
+enableVideoBanner: r = !0,
 children: s,
 sectionName: c,
 resultsPosition: u,
@@ -69,8 +69,8 @@ children: 'icon' === t ? (0, l.jsx)(Z, {
   application: n,
   look: t,
   isPartner: i,
-  bannerImageStyle: r,
-  enableVideoBanner: o,
+  bannerImageStyle: o,
+  enableVideoBanner: r,
   children: s
 })
   });
@@ -82,7 +82,7 @@ application: n,
 onClick: t,
 children: i,
 sectionName: a,
-resultsPosition: o,
+resultsPosition: r,
 tracksImpression: c,
 disabled: d,
 containerStyle: m,
@@ -90,15 +90,15 @@ look: p
   } = e, {
 name: _,
 description: C
-  } = r.useMemo(() => (0, x.sl)(n, {
+  } = o.useMemo(() => (0, x.sl)(n, {
 fakeAppIconURL: j
   }), [n]), {
 trackItemImpressionRef: f
   } = (0, P.Z)({
 applicationId: n.id,
 sectionName: a,
-sectionPosition: o
-  }), h = r.useMemo(() => {
+sectionPosition: r
+  }), h = o.useMemo(() => {
 let e = d ? M.containerDisabled : M.container;
 return s()(e, {
   [M.containerBorderRadius]: 'row' !== p,
@@ -134,7 +134,7 @@ application: n
   } = e, {
 name: t,
 iconURL: i
-  } = r.useMemo(() => (0, x.sl)(n, {
+  } = o.useMemo(() => (0, x.sl)(n, {
 fakeAppIconURL: j
   }), [n]);
   return (0, l.jsx)(u.Tooltip, {
@@ -163,17 +163,17 @@ application: n,
 look: t,
 isPartner: i,
 bannerImageStyle: a,
-enableVideoBanner: o,
+enableVideoBanner: r,
 children: c
   } = e, {
 iconURL: d,
 name: m,
 description: p
-  } = r.useMemo(() => (0, x.sl)(n, {
+  } = o.useMemo(() => (0, x.sl)(n, {
 fakeAppIconURL: j
-  }), [n]), _ = r.useMemo(() => null == p ? null : (0, g.ae)(p), [p]), C = (0, h.ZP)(d, ''), [f, A] = r.useState(!1), E = r.useCallback(() => {
-!0 === o && A(!0);
-  }, [o]), v = r.useCallback(() => A(!1), []);
+  }), [n]), _ = o.useMemo(() => null == p ? null : (0, g.ae)(p), [p]), C = (0, h.ZP)(d, ''), [f, A] = o.useState(!1), E = o.useCallback(() => {
+!0 === r && A(!0);
+  }, [r]), v = o.useCallback(() => A(!1), []);
   return (0, l.jsxs)(l.Fragment, {
 children: [
   (0, l.jsxs)('div', {
@@ -281,15 +281,15 @@ showVideo: t
 applicationId: n.id,
 size: 600,
 names: ['embedded_cover']
-  }), a = r.useMemo(() => {
+  }), a = o.useMemo(() => {
 let e = (0, x.yJ)(n);
 return null != e && null != e.activity_preview_video_asset_id ? (0, m.Z)(n.id, e.activity_preview_video_asset_id) : null;
-  }, [n]), [o, c] = r.useState(t);
-  return r.useEffect(() => {
+  }, [n]), [r, c] = o.useState(t);
+  return o.useEffect(() => {
 t && c(!0);
   }, [t]), (0, l.jsxs)(l.Fragment, {
 children: [
-  null != a && o ? (0, l.jsx)('div', {
+  null != a && r ? (0, l.jsx)('div', {
     className: M.activityVideoContainer,
     children: (0, l.jsx)('div', {
       className: s()(M.activityVideo, {
@@ -353,17 +353,17 @@ sectionName: t,
 resultsPosition: i,
 query: a,
 installOnDemand: l,
-location: o
+location: r
   } = e, {
 pushHistory: s
   } = (0, I.hH)();
-  return r.useCallback(e => {
+  return o.useCallback(e => {
 e.stopPropagation(), (0, f.yw)(R.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
   application_id: n.id,
   section_name: t,
   search_results_position: i,
   source: v.Z.entrypoint(),
-  location: o,
+  location: r,
   query: a
 }), s({
   type: I.gc.APPLICATION,
@@ -374,7 +374,7 @@ e.stopPropagation(), (0, f.yw)(R.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
   }, [
 n,
 l,
-o,
+r,
 s,
 a,
 i,
@@ -396,8 +396,8 @@ channel: n,
 application: t,
 location: i,
 sectionName: a,
-isOneClickCTA: r,
-...o
+isOneClickCTA: o,
+...r
   } = e;
   if (!(0, x.BQ)(t))
 throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
@@ -413,20 +413,20 @@ location: i,
 sectionName: a
   });
   if (c === p.JS.START)
-return r ? (0, l.jsx)(y, {
-  ...o,
+return o ? (0, l.jsx)(y, {
+  ...r,
   sectionName: a,
   application: t,
   onClick: s,
   enableVideoBanner: !0
 }) : (0, l.jsx)(V, {
-  ...o,
+  ...r,
   sectionName: a,
   application: t,
   location: i
 });
   return (0, l.jsx)(y, {
-...o,
+...r,
 sectionName: a,
 application: t,
 onClick: e => {

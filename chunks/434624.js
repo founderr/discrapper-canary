@@ -4,9 +4,9 @@ return h;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(866442),
   o = n(596454),
   c = n(434650),
@@ -16,10 +16,10 @@ var i = n(735250),
   E = n(287151),
   I = n(716862),
   m = n(372178);
-let T = s.memo(function(e) {
+let T = a.memo(function(e) {
 let t, n, {
-    useChatFontScaling: s,
-    hideEmoji: a,
+    useChatFontScaling: a,
+    hideEmoji: s,
     emoji: c,
     className: T,
     count: h,
@@ -36,18 +36,18 @@ let t, n, {
   x = O === _.O.BURST,
   M = (0, E.y4)(N, f, O),
   v = (0, d.v)(x && null != p ? p : []),
-  L = s ? m : I,
+  L = a ? m : I,
   Z = x ? C : h,
   P = (0, u.y)(Z, E.aO),
-  D = {};
+  b = {};
 if (x && null != v) {
-  var b;
+  var D;
   let {
     accentColor: e,
     backgroundColor: i,
-    opacity: s
-  } = v, a = null !== (b = (0, l.wK)(null != i ? i : '', s)) && void 0 !== b ? b : '';
-  M && (D.borderColor = i), D.background = a, t = e, n = e;
+    opacity: a
+  } = v, s = null !== (D = (0, l.wK)(null != i ? i : '', a)) && void 0 !== D ? D : '';
+  M && (b.borderColor = i), b.background = s, t = e, n = e;
 }
 let j = {
   minWidth: P,
@@ -59,11 +59,11 @@ return (0, i.jsxs)('div', {
     [L.reactionMe]: M,
     [L.reactionReadOnly]: g && !S && !R && !A
   }),
-  style: D,
+  style: b,
   children: [
     (0, i.jsx)(o.Z, {
       className: r()({
-        [L.hideEmoji]: a
+        [L.hideEmoji]: s
       }),
       emojiId: c.id,
       emojiName: c.name,
@@ -78,12 +78,12 @@ return (0, i.jsxs)('div', {
   ]
 });
   }),
-  h = s.memo(function(e) {
+  h = a.memo(function(e) {
 let {
   showImmediate: t,
   reactions: n,
-  ...a
-} = e, [r, l] = s.useState(!1), [o, u] = s.useTransition(), d = s.useCallback(e => {
+  ...s
+} = e, [r, l] = a.useState(!1), [o, u] = a.useTransition(), d = a.useCallback(e => {
   e && !r && !o && u(() => {
     l(!0);
   });
@@ -99,7 +99,7 @@ return (0, i.jsxs)(i.Fragment, {
     n.map(e => {
       var t, n;
       return (0, i.jsx)(m, {
-        ...a,
+        ...s,
         ...e
       }, (t = e, ''.concat(t.type === _.O.BURST ? 'burst:' : '').concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ':').concat(t.emoji.name)));
     })

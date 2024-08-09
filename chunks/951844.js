@@ -1,4 +1,4 @@
-var i, s, a, r, l = n(735250),
+var i, a, s, r, l = n(735250),
   o = n(470079),
   c = n(120356),
   u = n.n(c),
@@ -16,11 +16,11 @@ let {
   className: t,
   textClassName: n,
   type: i = I.BLOCK,
-  style: s
+  style: a
 } = this.props;
 return (0, l.jsxs)('div', {
   className: u()(t, i),
-  style: s,
+  style: a,
   children: [
     (0, l.jsxs)(d.Text, {
       variant: 'text-sm/bold',
@@ -41,9 +41,9 @@ return (0, l.jsxs)('div', {
 });
   }
 }
-i = m, s = 'Types', a = I, s in i ? Object.defineProperty(i, s, {
-  value: a,
+i = m, a = 'Types', s = I, a in i ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[s] = a, t.Z = m;
+}) : i[a] = s, t.Z = m;

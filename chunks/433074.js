@@ -4,8 +4,8 @@ return S;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(873546),
+  a = n(470079),
+  s = n(873546),
   r = n(399606),
   l = n(481060),
   o = n(434650),
@@ -36,15 +36,15 @@ h.Z.getApplicationFetchState(S)
   ], [S]), M = (0, r.e7)([u.default], () => u.default.locale), v = (0, r.e7)([_.Z], () => {
 var e;
 return null !== (e = _.Z.getGuildId()) && void 0 !== e ? e : void 0;
-  }), L = (0, r.e7)([E.default], () => E.default.getCurrentUser()), [Z, P] = s.useState(!1), D = s.useCallback(e => {
+  }), L = (0, r.e7)([E.default], () => E.default.getCurrentUser()), [Z, P] = a.useState(!1), b = a.useCallback(e => {
 e && P(!0);
-  }, []), b = (0, o.O)(D);
-  s.useEffect(() => {
+  }, []), D = (0, o.O)(b);
+  a.useEffect(() => {
 (0, T.gZ)(S);
-  }, [S]), s.useEffect(() => {
+  }, [S]), a.useEffect(() => {
 Z && x === h.M.FETCHED && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
   application_id: S,
-  device_platform: a.tq ? 'mobile_web' : 'desktop_web',
+  device_platform: s.tq ? 'mobile_web' : 'desktop_web',
   sender_user_id: A.author.id,
   guild_id: v,
   channel_id: A.channel_id
@@ -57,9 +57,9 @@ A.channel_id,
 v,
 A.author.id,
 x
-  ]), s.useEffect(() => {
+  ]), a.useEffect(() => {
 Z && O && I.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
-  device_platform: a.tq ? 'mobile_web' : 'desktop_web',
+  device_platform: s.tq ? 'mobile_web' : 'desktop_web',
   sender_user_id: A.author.id,
   guild_id: v,
   channel_id: A.channel_id
@@ -74,7 +74,7 @@ A.channel_id
   let j = e => {
 I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
   application_id: S,
-  device_platform: a.tq ? 'mobile_web' : 'desktop_web',
+  device_platform: s.tq ? 'mobile_web' : 'desktop_web',
   clicked_section: e,
   guild_id: v,
   channel_id: A.channel_id
@@ -89,7 +89,7 @@ I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
   };
   if (O)
 return (0, i.jsxs)(c.Z, {
-  containerRef: b,
+  containerRef: D,
   children: [
     (0, i.jsx)(c.Z.Header, {
       text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER
@@ -113,7 +113,7 @@ return (0, i.jsxs)(c.Z, {
 });
   if (null == R || x === h.M.FETCHING)
 return (0, i.jsxs)(c.Z, {
-  containerRef: b,
+  containerRef: D,
   children: [
     (0, i.jsx)(c.Z.Header, {
       text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER
@@ -128,7 +128,7 @@ notation: 'compact',
 compactDisplay: 'short'
   }).format(null !== (n = null === (t = R.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
   return (0, i.jsxs)(c.Z, {
-containerRef: b,
+containerRef: D,
 children: [
   (0, i.jsx)(c.Z.Header, {
     text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_HEADER

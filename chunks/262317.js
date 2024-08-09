@@ -26,7 +26,7 @@ var i, a = n(735250),
   x = n(525925),
   T = n(701362),
   N = n(224184),
-  v = n(484459),
+  v = n(184301),
   S = n(103575),
   Z = n(597998),
   A = n(314897),
@@ -116,7 +116,7 @@ let {
   onMouseEnter: i ? void 0 : this.handleMouseEnter,
   onMouseLeave: i ? void 0 : this.handleHidePreview,
   children: (0, a.jsx)(u.Popout, {
-    preload: () => (0, v.W)(s.id, s.getAvatarURL(l.guild_id, 80), {
+    preload: () => (0, v.Z)(s.id, s.getAvatarURL(l.guild_id, 80), {
       guildId: l.guild_id,
       channelId: l.id
     }),

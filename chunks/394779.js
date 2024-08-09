@@ -1,19 +1,19 @@
-t.d(n, {
+i.d(n, {
   s: function() {
 return h;
   }
 });
-var i = t(735250),
-  o = t(470079),
-  a = t(120356),
-  c = t.n(a),
-  r = t(481060),
-  l = t(346610),
-  d = t(868643),
-  s = t(912332),
-  u = t(503349),
-  _ = t(689938),
-  f = t(691523);
+var t = i(735250),
+  o = i(470079),
+  a = i(120356),
+  c = i.n(a),
+  r = i(481060),
+  l = i(346610),
+  d = i(868643),
+  s = i(912332),
+  u = i(503349),
+  _ = i(689938),
+  f = i(691523);
 
 function m() {
   (0, r.closeModal)(u.c);
@@ -22,14 +22,14 @@ function m() {
 function I(e) {
   let {
 className: n,
-channelId: t,
+channelId: i,
 messageId: a,
 target: l
   } = e, d = o.useCallback(() => {
 if ('embed' === l.type) {
   (0, s.l8)({
     messageId: a,
-    channelId: t,
+    channelId: i,
     source: 'media-viewer',
     forwardOptions: {
       onlyEmbedIndices: [l.embedIndex]
@@ -40,7 +40,7 @@ if ('embed' === l.type) {
 }
 (0, s.l8)({
   messageId: a,
-  channelId: t,
+  channelId: i,
   source: 'media-viewer',
   forwardOptions: {
     onlyAttachmentIds: [l.attachmentId]
@@ -48,14 +48,14 @@ if ('embed' === l.type) {
   onRequestSent: m
 });
   }, [
-t,
+i,
 a,
 l
   ]);
-  return (0, i.jsx)(r.Clickable, {
+  return (0, t.jsx)(r.Clickable, {
 className: c()(f.container, n),
 onClick: d,
-children: (0, i.jsx)(r.Text, {
+children: (0, t.jsx)(r.Text, {
   className: f.text,
   variant: 'text-sm/medium',
   color: 'always-white',
@@ -66,17 +66,17 @@ children: (0, i.jsx)(r.Text, {
 
 function h(e, n) {
   let {
-canForwardMessages: t
+canForwardMessages: i
   } = (0, l.WT)({
 location: 'ForwardLink'
   }, {
 autoTrackExposure: !1
   });
-  return t && (0, d.h)(e) ? t => {
+  return i && (0, d.h)(e) ? i => {
 let {
   className: o
-} = t;
-return (0, i.jsx)(I, {
+} = i;
+return (0, t.jsx)(I, {
   className: o,
   channelId: e.channel_id,
   messageId: e.id,

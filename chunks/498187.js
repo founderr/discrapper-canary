@@ -1,35 +1,35 @@
-t.d(n, {
+l.d(n, {
   Z: function() {
-return p;
+return E;
   }
 });
-var l = t(876215),
-  r = t(758713),
-  i = t(835473),
-  a = t(810568),
-  o = t(168524),
-  s = t(561308),
-  c = t(206583),
-  u = t(96513),
-  d = t(701488),
-  m = t(689938);
+var t = l(876215),
+  r = l(758713),
+  i = l(835473),
+  a = l(810568),
+  u = l(168524),
+  s = l(561308),
+  o = l(206583),
+  c = l(96513),
+  d = l(701488),
+  m = l(689938);
 let f = {
-[r.z.XBOX]: c.kG.XBOX,
-[r.z.PLAYSTATION]: c.kG.PLAYSTATION
+[r.z.XBOX]: o.kG.XBOX,
+[r.z.PLAYSTATION]: o.kG.PLAYSTATION
   },
-  _ = {
-[u._.EMBED]: a.m1.Embed
+  p = {
+[c._.EMBED]: a.m1.Embed
   };
 
-function p(e) {
-  let n, t, {
+function E(e) {
+  let n, l, {
   entry: r,
   location: a,
-  baseEntryData: c
+  baseEntryData: o
 } = e,
-u = (0, i.q)(r.extra.application_id),
-p = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
-C = r.extra.game_name;
+c = (0, i.q)(r.extra.application_id),
+E = null == c ? void 0 : c.getIconURL(d.Si.LARGE),
+v = r.extra.game_name;
   if (null != r.extra.platform) {
 let e = f[r.extra.platform];
 null != e && (n = {
@@ -37,22 +37,22 @@ null != e && (n = {
   'aria-label': m.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
 });
   }
-  t = r.content_type === l.s.PLAYED_GAME ? (0, s.kr)(r) && !(0, s.n2)(r) ? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED;
-  let v = _[a],
-h = (0, o.Z)({
-  location: v,
+  l = r.content_type === t.s.PLAYED_GAME ? (0, s.kr)(r) && !(0, s.n2)(r) ? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED;
+  let C = p[a],
+h = (0, u.Z)({
+  location: C,
   applicationId: r.extra.application_id,
-  source: v,
+  source: C,
   trackEntryPointImpression: !0,
   sourceUserId: r.author_id
 });
   return {
-...c,
-thumbnailUrl: p,
-title: C,
+...o,
+thumbnailUrl: E,
+title: v,
 onClickTitle: h,
 onClickThumbnail: h,
-userDescription: t,
+userDescription: l,
 providerIconProps: n
   };
 }

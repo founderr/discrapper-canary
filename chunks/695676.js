@@ -3,15 +3,15 @@ t.d(n, {
 return a;
   },
   hH: function() {
-return o;
+return r;
   },
   uX: function() {
-return r;
+return o;
   }
 });
 var i, a, l = t(470079);
 (i = a || (a = {})).HOME = 'home', i.LIST = 'list', i.APPLICATION = 'application';
-let r = l.createContext({
+let o = l.createContext({
   history: [],
   discard: {},
   currentView: void 0,
@@ -22,6 +22,6 @@ let r = l.createContext({
   setSlideReady: () => {}
 });
 
-function o() {
-  return l.useContext(r);
+function r() {
+  return l.useContext(o);
 }

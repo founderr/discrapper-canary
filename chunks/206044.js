@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(338545),
   o = n(722770),
   c = n(442837),
@@ -32,10 +32,10 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
 let {
   quest: t,
   location: n,
-  questContentPosition: a,
+  questContentPosition: s,
   ...r
-} = e, [l, o] = s.useState(!1), c = s.useRef(new u.V7());
-s.useEffect(() => {
+} = e, [l, o] = a.useState(!1), c = a.useRef(new u.V7());
+a.useEffect(() => {
   let e = c.current;
   return function() {
     e.stop();
@@ -46,7 +46,7 @@ let _ = () => {
     questId: t.id,
     questContent: n,
     questContentCTA: h.jZ.COPY_QUEST_URL,
-    questContentPosition: a
+    questContentPosition: s
   }), (0, T.JG)((0, C.Rs)(t.id)), o(!0), c.current.start(1000, () => o(!1));
 };
 return (0, i.jsx)(d.Tooltip, {
@@ -68,24 +68,24 @@ t.Z = e => {
   var t;
   let {
 isFocused: n,
-isQuestExpired: a,
+isQuestExpired: s,
 quest: u,
 location: I,
 size: T,
-expansionSpring: D,
-isAnimating: b,
+expansionSpring: b,
+isAnimating: D,
 isExpanded: j,
 isInConcurrentQuestExperiment: U,
 contentPosition: y,
 toggleExpanded: B
   } = e, {
 ref: k,
-height: F
+height: G
   } = (0, _.Z)(), {
-ref: G,
+ref: F,
 width: w,
 scrollWidth: V
-  } = (0, _.Z)(), H = (0, c.e7)([m.Z], () => m.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = s.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]), K = s.useRef(null), z = (0, O.uq)(I), Q = I === f.jn.QUESTS_EMBED, q = (0, N.t5)(u, x.dr.QUESTS_CARD, I), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(u.config.expiresAt, {
+  } = (0, _.Z)(), H = (0, c.e7)([m.Z], () => m.Z.getState().theme), Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), W = a.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]), K = a.useRef(null), z = (0, O.uq)(I), Q = I === f.jn.QUESTS_EMBED, q = (0, N.t5)(u, x.dr.QUESTS_CARD, I), X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.B6)(u.config.expiresAt, {
 year: 'numeric',
 month: 'long',
 day: 'numeric'
@@ -101,7 +101,7 @@ e.stopPropagation(), e.currentTarget.blur(), B(), (0, h._3)({
   questContentPosition: y
 });
   };
-  s.useEffect(() => {
+  a.useEffect(() => {
 W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), K.current.currentTime = 0));
   }, [
 n,
@@ -116,12 +116,12 @@ className: r()(v.outerContainer, {
 }),
 'aria-label': M.Z.Messages.EXPAND,
 style: {
-  height: z ? F : void 0
+  height: z ? G : void 0
 },
 children: [
   (0, i.jsx)(Z, {
     style: {
-      opacity: D.to({
+      opacity: b.to({
         range: [
           0,
           1
@@ -154,7 +154,7 @@ children: [
           [v.headerContentEmbed]: Q
         }),
         style: {
-          y: z ? D.to({
+          y: z ? b.to({
             range: [
               0,
               1
@@ -169,7 +169,7 @@ children: [
           z && (0, i.jsx)(l.animated.div, {
             className: v.headerCollapsedContent,
             style: {
-              opacity: D.to({
+              opacity: b.to({
                 range: [
                   0,
                   1
@@ -179,9 +179,9 @@ children: [
                   0
                 ]
               }),
-              visibility: b || !j ? 'inherit' : 'hidden'
+              visibility: D || !j ? 'inherit' : 'hidden'
             },
-            'aria-hidden': !b && j,
+            'aria-hidden': !D && j,
             children: (0, i.jsxs)(d.ClickableContainer, {
               'aria-label': M.Z.Messages.EXPAND,
               onClick: ee,
@@ -231,7 +231,7 @@ children: [
               [v.outerContainerEmbed]: Q
             }),
             style: {
-              opacity: D.to({
+              opacity: b.to({
                 range: [
                   0,
                   1
@@ -241,9 +241,9 @@ children: [
                   1
                 ]
               }),
-              visibility: b || j ? 'inherit' : 'hidden'
+              visibility: D || j ? 'inherit' : 'hidden'
             },
-            'aria-hidden': !b && !j,
+            'aria-hidden': !D && !j,
             children: [
               (0, i.jsxs)('div', {
                 className: v.headerExpandedWrapper,
@@ -269,7 +269,7 @@ children: [
                         text: u.config.messages.questName,
                         shouldShow: null != w && null != V && w < V,
                         children: e => (0, i.jsx)(d.Heading, {
-                          ref: G,
+                          ref: F,
                           variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
                           className: v.heading,
                           ...e,
@@ -282,7 +282,7 @@ children: [
                         variant: 'text-xs/normal',
                         children: X ? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({
                           expirationDate: $
-                        }) : a ? M.Z.Messages.QUESTS_EXPIRED_ON.format({
+                        }) : s ? M.Z.Messages.QUESTS_EXPIRED_ON.format({
                           expirationDate: J
                         }) : M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
                           expirationDate: J
@@ -292,7 +292,7 @@ children: [
                   })
                 ]
               }),
-              !a && z && (0, i.jsx)(P, {
+              !s && z && (0, i.jsx)(P, {
                 quest: u,
                 location: I,
                 questContentPosition: y
@@ -304,7 +304,7 @@ children: [
       (0, i.jsxs)(l.animated.div, {
         className: v.iconsContainer,
         style: {
-          top: z ? D.to({
+          top: z ? b.to({
             range: [
               0,
               1
@@ -322,13 +322,13 @@ children: [
             questContentPosition: y,
             shouldShowDisclosure: !0,
             hideLearnMore: z,
-            showShareLink: !a && Q,
+            showShareLink: !s && Q,
             children: e => (0, i.jsx)(l.animated.div, {
               style: {
-                opacity: D,
-                visibility: b || j ? 'inherit' : 'hidden'
+                opacity: b,
+                visibility: D || j ? 'inherit' : 'hidden'
               },
-              'aria-hidden': !b && !j,
+              'aria-hidden': !D && !j,
               children: (0, i.jsx)(d.Clickable, {
                 ...e,
                 className: v.iconWrapper,
@@ -346,7 +346,7 @@ children: [
             'aria-label': j ? M.Z.Messages.COLLAPSE : M.Z.Messages.EXPAND,
             children: (0, i.jsx)(L, {
               style: {
-                rotate: D.to({
+                rotate: b.to({
                   range: [
                     0,
                     1

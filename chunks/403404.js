@@ -1,36 +1,36 @@
-t.d(n, {
+l.d(n, {
   Z: function() {
-return u;
+return c;
   }
 });
-var l = t(735250);
-t(470079);
-var r = t(481060),
-  i = t(424602),
-  a = t(397698),
-  o = t(776862),
-  s = t(701488),
-  c = t(981631);
+var t = l(735250);
+l(470079);
+var r = l(481060),
+  i = l(424602),
+  a = l(397698),
+  u = l(776862),
+  s = l(701488),
+  o = l(981631);
 
-function u(e) {
+function c(e) {
   let {
 channel: n,
-guildId: u,
+guildId: c,
 locationObject: d,
 openInPopout: m,
 initialSelectedApplicationId: f,
-initialSlide: _ = s.ag.DIRECTORY,
-enableSelectedTextChannelInvite: p = !1,
-analyticsLocations: C,
-opensAppLauncherModal: v = !1
-  } = e, h = C.length > 0 ? C[C.length - 1] : 'open-activity-shelf', {
-enabled: E
+initialSlide: p = s.ag.DIRECTORY,
+enableSelectedTextChannelInvite: E = !1,
+analyticsLocations: v,
+opensAppLauncherModal: C = !1
+  } = e, h = v.length > 0 ? v[v.length - 1] : 'open-activity-shelf', {
+enabled: x
   } = i.m1.getCurrentConfig({
 location: h
   }, {
 autoTrackExposure: !1
   });
-  if (v && E) {
+  if (C && x) {
 null != n && (0, a.Z)({
   openInPopout: m,
   channel: n,
@@ -38,27 +38,27 @@ null != n && (0, a.Z)({
 });
 return;
   }
-  m && (0, o.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-  let x = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
+  m && (0, u.Z)(o.KJ3.CHANNEL_CALL_POPOUT);
+  let _ = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
   return (0, r.openModalLazy)(async () => {
 let {
   default: e
 } = await Promise.all([
-  t.e('64714'),
-  t.e('6495')
-]).then(t.bind(t, 471840));
-return t => (0, l.jsx)(e, {
-  ...t,
+  l.e('64714'),
+  l.e('6495')
+]).then(l.bind(l, 471840));
+return l => (0, t.jsx)(e, {
+  ...l,
   channel: n,
-  guildId: u,
+  guildId: c,
   locationObject: d,
-  initialSlide: _,
+  initialSlide: p,
   initialSelectedApplicationId: f,
-  enableSelectedTextChannelInvite: p,
-  analyticsLocations: C
+  enableSelectedTextChannelInvite: E,
+  analyticsLocations: v
 });
   }, {
 modalKey: s.AC,
-contextKey: x
+contextKey: _
   });
 }

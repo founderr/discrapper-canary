@@ -6,8 +6,8 @@ return h;
 var i = t(735250),
   a = t(470079),
   l = t(780384),
-  r = t(481060),
-  o = t(410030),
+  o = t(481060),
+  r = t(410030),
   s = t(782568),
   c = t(63063),
   u = t(827498),
@@ -19,7 +19,7 @@ var i = t(735250),
   f = t(478408);
 
 function h() {
-  let e = (0, o.ZP)(),
+  let e = (0, r.ZP)(),
 n = (0, l.ap)(e) ? f : C,
 t = a.useCallback(() => {
   (0, s.Z)(c.Z.getArticleURL(m.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON));
@@ -44,20 +44,20 @@ children: [
   (0, i.jsxs)('div', {
     className: _.body,
     children: [
-      (0, i.jsx)(r.Heading, {
+      (0, i.jsx)(o.Heading, {
         variant: 'heading-lg/bold',
         color: 'header-primary',
         children: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE
       }),
-      (0, i.jsx)(r.Text, {
+      (0, i.jsx)(o.Text, {
         variant: 'text-xs/normal',
         color: 'text-normal',
         children: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
       })
     ]
   }),
-  (0, i.jsx)(r.Button, {
-    size: r.Button.Sizes.MEDIUM,
+  (0, i.jsx)(o.Button, {
+    size: o.Button.Sizes.MEDIUM,
     'aria-label': p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE_ARIA_LABEL.format({
       sectionTitle: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE,
       sectionBody: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY

@@ -1,6 +1,6 @@
 n.d(t, {
   a: function() {
-return d;
+return s;
   }
 });
 var i = n(544891),
@@ -8,14 +8,14 @@ var i = n(544891),
   a = n(706454),
   l = n(70956),
   r = n(844439),
-  s = n(981631);
-let u = 10 * l.Z.Millis.MINUTE;
-async function d(e) {
+  c = n(981631);
+let d = 10 * l.Z.Millis.MINUTE;
+async function s(e) {
   let {
 channelId: t,
 location: n,
 withCommands: l
-  } = e, d = Date.now(), c = r.ZP.getFetchState({
+  } = e, s = Date.now(), u = r.ZP.getFetchState({
 location: n,
 channelId: t,
 withCommands: l
@@ -24,7 +24,7 @@ location: n,
 channelId: t,
 withCommands: l
   });
-  if (c !== r.M.FETCHING && (null == m || !(m + u > d))) {
+  if (u !== r.M.FETCHING && (null == m || !(m + d > s))) {
 o.Z.dispatch({
   type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS',
   location: n,
@@ -33,7 +33,7 @@ o.Z.dispatch({
 });
 try {
   let e = await i.tn.get({
-    url: s.ANM.APP_RECOMMENDATIONS,
+    url: c.ANM.APP_RECOMMENDATIONS,
     query: {
       locale: a.default.locale,
       channel_id: t,

@@ -1,5 +1,5 @@
 n(47120), n(653041);
-var i, s, a, r, l = n(392711),
+var i, a, s, r, l = n(392711),
   o = n.n(l),
   c = n(442837),
   u = n(433517),
@@ -32,12 +32,12 @@ if (null == i) {
   !m.Z.isFetchingApplication(n) && !m.Z.didFetchingApplicationFail(n) && I.Z.fetchApplication(n);
   continue;
 }
-let s = f.Z.get(t);
-if (null == s) {
+let a = f.Z.get(t);
+if (null == a) {
   !f.Z.isFetching(t) && !f.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
   continue;
 }
-N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !s.available ? null != g[t] && (delete g[t], e = !0) : (g[t] = {
+N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !a.available ? null != g[t] && (delete g[t], e = !0) : (g[t] = {
   skuId: t,
   applicationId: n
 }, e = !0);
@@ -53,12 +53,12 @@ this.waitFor(T.ZP, f.Z, N.Z), A = null !== (e = u.K.get(p)) && void 0 !== e ? e 
 return o().values(g);
   }
 }
-r = 'DetectedOffPlatformPremiumPerksStore', (a = 'displayName') in(s = O) ? Object.defineProperty(s, a, {
+r = 'DetectedOffPlatformPremiumPerksStore', (s = 'displayName') in(a = O) ? Object.defineProperty(a, s, {
   value: r,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = r, t.Z = new O(d.Z, {
+}) : a[s] = r, t.Z = new O(d.Z, {
   LOGOUT: function() {
 g = {}, S = {};
   },

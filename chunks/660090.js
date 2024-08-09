@@ -1,18 +1,18 @@
 t.d(n, {
   Z: function() {
-return o;
+return r;
   }
 }), t(47120);
 var i = t(470079),
   a = t(674588),
   l = t(70956),
-  r = t(314734);
+  o = t(314734);
 
-function o(e) {
+function r(e) {
   let {
 sectionId: n,
 commandsByActiveSection: t
-  } = e, [o, s] = i.useState(r.bS.ALPHABETICAL), c = i.useMemo(() => {
+  } = e, [r, s] = i.useState(o.bS.ALPHABETICAL), c = i.useMemo(() => {
 var e, i;
 return null !== (i = null === (e = t.find(e => e.section.id === n)) || void 0 === e ? void 0 : e.data) && void 0 !== i ? i : [];
   }, [
@@ -69,18 +69,18 @@ a.i6(n, {
 });
   }, [n]), i.useLayoutEffect(() => {
 if (!!d)
-  s(r.bS.POPULAR);
+  s(o.bS.POPULAR);
   }, [d]);
   let m = c;
-  switch (o) {
-case r.bS.POPULAR:
+  switch (r) {
+case o.bS.POPULAR:
   m = u;
   break;
-case r.bS.ALPHABETICAL:
+case o.bS.ALPHABETICAL:
   m = c;
   }
   return {
-sortOrder: o,
+sortOrder: r,
 setSortOrder: s,
 commands: m,
 canSort: d

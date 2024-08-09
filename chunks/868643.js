@@ -1,17 +1,17 @@
-t.d(n, {
+i.d(n, {
   a: function() {
 return _;
   },
   h: function() {
 return u;
   }
-}), t(789020);
-var i = t(470079),
-  o = t(442837),
-  a = t(430198),
-  c = t(592125),
-  r = t(630388),
-  l = t(981631);
+}), i(789020);
+var t = i(470079),
+  o = i(442837),
+  a = i(430198),
+  c = i(592125),
+  r = i(630388),
+  l = i(981631);
 let d = l.iLy.CROSSPOSTED | l.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | l.iLy.GUILD_FEED_HIDDEN | l.iLy.HAS_SNAPSHOT | l.iLy.HAS_THREAD | l.iLy.IS_CROSSPOST | l.iLy.IS_VOICE_MESSAGE | l.iLy.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | l.iLy.SUPPRESS_EMBEDS | l.iLy.SUPPRESS_NOTIFICATIONS | l.iLy.URGENT;
 
 function s(e) {
@@ -22,8 +22,8 @@ function u(e) {
   var n;
   if (!s(e))
 return !1;
-  let t = null === (n = c.Z.getChannel(e.channel_id)) || void 0 === n ? void 0 : n.guild_id;
-  return !(null != t && a.Z.isChannelOrThreadParentGated(t, e.channel_id)) && !0;
+  let i = null === (n = c.Z.getChannel(e.channel_id)) || void 0 === n ? void 0 : n.guild_id;
+  return !(null != i && a.Z.isChannelOrThreadParentGated(i, e.channel_id)) && !0;
 }
 
 function _(e) {
@@ -34,8 +34,8 @@ c.Z
 var n;
 if (null == e)
   return !1;
-let t = null === (n = c.Z.getChannel(e.channel_id)) || void 0 === n ? void 0 : n.guild_id;
-return null != t && a.Z.isChannelOrThreadParentGated(t, e.channel_id);
+let i = null === (n = c.Z.getChannel(e.channel_id)) || void 0 === n ? void 0 : n.guild_id;
+return null != i && a.Z.isChannelOrThreadParentGated(i, e.channel_id);
   });
-  return i.useMemo(() => null != e && s(e), [e]) && !n;
+  return t.useMemo(() => null != e && s(e), [e]) && !n;
 }

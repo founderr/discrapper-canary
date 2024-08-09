@@ -4,8 +4,8 @@ return o;
   }
 }), n(47120), n(653041);
 var i = n(470079),
-  s = n(468988),
-  a = n(817460),
+  a = n(468988),
+  s = n(817460),
   r = n(570533),
   l = n(689938);
 
@@ -16,7 +16,7 @@ listing: n,
 guildId: o
   } = e, c = 0, u = 0;
   for (let e of n.role_benefits.benefits)
-(0, a.rC)(e) ? c += 1 : (0, a.lL)(e) && (u += 1);
+(0, s.rC)(e) ? c += 1 : (0, s.lL)(e) && (u += 1);
   let d = n.role_id,
 _ = (0, r.Z)(o).filter(e => e.roles.includes(d)).length;
   return i.useMemo(() => {
@@ -27,7 +27,7 @@ return !0 === t && e.push(l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_VISUAL_FL
   benefitCount: u
 })), 0 !== _ && e.push(l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EMOJI_SUBTITLE.format({
   emojiCount: _
-})), new s.Z(e);
+})), new a.Z(e);
   }, [
 c,
 u,

@@ -4,8 +4,8 @@ return p;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(442837),
+  a = n(470079),
+  s = n(442837),
   r = n(481060),
   l = n(565138),
   o = n(241559),
@@ -26,11 +26,11 @@ function p(e) {
   var t, p;
   let {
 onDismiss: g
-  } = e, S = (0, a.e7)([_.Z], () => _.Z.getGuildId()), A = (0, a.e7)([d.Z], () => null != S ? d.Z.getChannelId(S) : null, [S]), R = null != S ? S : null, O = (0, a.e7)([u.Z], () => null != R ? u.Z.getGuild(R) : null, [R]), {
+  } = e, S = (0, s.e7)([_.Z], () => _.Z.getGuildId()), A = (0, s.e7)([d.Z], () => null != S ? d.Z.getChannelId(S) : null, [S]), R = null != S ? S : null, O = (0, s.e7)([u.Z], () => null != R ? u.Z.getGuild(R) : null, [R]), {
 shouldShowIncidentActions: x,
 incidentData: M,
 isUnderLockdown: v
-  } = (0, I.mI)(R), L = (0, o.n2)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : h.lds), Z = s.useCallback(() => null != O && (0, c._X)(O.id), [O]);
+  } = (0, I.mI)(R), L = (0, o.n2)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : h.lds), Z = a.useCallback(() => null != O && (0, c._X)(O.id), [O]);
   if (null == O || null == M || !x)
 return null;
   let P = e => {
@@ -56,12 +56,12 @@ return null;
     });
   });
 },
-D = (0, i.jsx)(l.Z, {
+b = (0, i.jsx)(l.Z, {
   className: C.guildIcon,
   guild: O,
   size: l.Z.Sizes.MINI
 }),
-b = (0, T.OY)(M, O.name);
+D = (0, T.OY)(M, O.name);
   if (null != (null !== (p = M.dmsDisabledUntil) && void 0 !== p ? p : M.invitesDisabledUntil) && v)
 return (0, i.jsxs)(r.Notice, {
   className: C.notice,
@@ -71,8 +71,8 @@ return (0, i.jsxs)(r.Notice, {
       onClick: g,
       noticeType: h.kVF.GUILD_RAID_NOTIFICATION
     }),
-    D,
     b,
+    D,
     (0, i.jsx)(r.NoticeButton, {
       className: C.actionButton,
       onClick: () => P(!1),
@@ -107,7 +107,7 @@ children: [
     onClick: g,
     noticeType: h.kVF.GUILD_RAID_NOTIFICATION
   }),
-  D,
+  b,
   j,
   !U && (0, i.jsx)(r.NoticeButton, {
     className: C.actionButton,

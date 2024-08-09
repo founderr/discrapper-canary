@@ -8,7 +8,7 @@ var i = n(735250),
   o = n(481060),
   a = n(100527),
   l = n(906732),
-  r = n(484459),
+  r = n(184301),
   c = n(103575),
   u = n(592125),
   d = n(91047);
@@ -49,7 +49,7 @@ return (0, i.jsx)(l.Gt, {
   value: _,
   children: null != h ? (0, i.jsx)(o.Popout, {
     position: 'right',
-    preload: () => (0, r.W)(h.id, h.getAvatarURL(p, 80), {
+    preload: () => (0, r.Z)(h.id, h.getAvatarURL(p, 80), {
       guildId: p,
       channelId: m
     }),

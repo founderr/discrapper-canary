@@ -1,4 +1,4 @@
-t.d(n, {
+l.d(n, {
   _: function() {
 return r;
   },
@@ -6,10 +6,10 @@ return r;
 return i;
   }
 });
-var l = t(570140);
+var t = l(570140);
 
 function r(e, n) {
-  l.Z.dispatch({
+  t.Z.dispatch({
 type: 'APP_LAUNCHER_SHOW',
 entrypoint: e,
 activeViewType: n
@@ -17,7 +17,7 @@ activeViewType: n
 }
 
 function i(e) {
-  l.Z.dispatch({
+  t.Z.dispatch({
 type: 'APP_LAUNCHER_DISMISS',
 closeReason: e
   });

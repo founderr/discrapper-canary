@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(481060),
   l = n(585500),
   o = n(644646),
@@ -10,26 +10,26 @@ t.Z = function(e) {
   let {
 className: t,
 autoplay: n,
-quest: s,
+quest: a,
 questContent: u,
 taskDetails: d,
 location: _
   } = e, E = (0, l.D)({
-quest: s,
+quest: a,
 taskDetails: d,
 location: _,
 questContent: u
   });
   return (0, i.jsxs)('div', {
-className: a()(c.wrapper, t),
+className: s()(c.wrapper, t),
 style: {
-  color: s.config.colors.primary
+  color: a.config.colors.primary
 },
 children: [
   (0, i.jsx)(o.Z, {
     autoplay: n,
     className: c.rewardTile,
-    quest: s,
+    quest: a,
     questContent: u,
     location: _
   }),

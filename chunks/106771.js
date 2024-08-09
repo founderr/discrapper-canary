@@ -6,8 +6,8 @@ return m;
 var i = t(735250),
   a = t(470079),
   l = t(481060),
-  r = t(783097),
-  o = t(176412),
+  o = t(783097),
+  r = t(176412),
   s = t(753972),
   c = t(532309),
   u = t(875164),
@@ -25,12 +25,12 @@ searchResultsPosition: C
 iconURL: f,
 name: h,
 description: A
-  } = a.useMemo(() => (0, r.sl)(m, {
+  } = a.useMemo(() => (0, o.sl)(m, {
 fakeAppIconURL: d
   }), [m]), E = a.useMemo(() => {
 var e;
 let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : A;
-return null == n ? null : (0, o.ae)(n, void 0);
+return null == n ? null : (0, r.ae)(n, void 0);
   }, [
 A,
 null == t ? void 0 : t.displayDescription

@@ -10,7 +10,7 @@ var s = n(735250),
   u = n(100527),
   _ = n(933557),
   I = n(112831),
-  E = n(484459),
+  E = n(184301),
   T = n(103575),
   m = n(387667),
   N = n(699516),
@@ -35,7 +35,7 @@ let {
   guildId: a
 } = this.props;
 return (0, s.jsx)(d.Popout, {
-  preload: () => (0, E.W)(e.id, e.getAvatarURL(a, 80), {
+  preload: () => (0, E.Z)(e.id, e.getAvatarURL(a, 80), {
     guildId: a
   }),
   renderPopout: t => (0, s.jsx)(T.Z, {
@@ -381,7 +381,7 @@ return (0, s.jsx)(c.mh, {
         ...i,
         children: [
           (0, s.jsx)(d.Popout, {
-            preload: () => (0, E.W)(t.userId, o.getAvatarURL(l, 80), {
+            preload: () => (0, E.Z)(t.userId, o.getAvatarURL(l, 80), {
               guildId: l
             }),
             renderPopout: e => (0, s.jsx)(T.Z, {

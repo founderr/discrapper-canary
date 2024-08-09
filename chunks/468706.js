@@ -5,8 +5,8 @@ return u;
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-  a = n(240872),
+var a = n(481060),
+  s = n(240872),
   r = n(923500),
   l = n(163268),
   o = n(774863),
@@ -18,18 +18,18 @@ function u(e, t) {
   messageId: t,
   channelId: e
 }), !o.Z.canSubmitFpReport(t)) {
-a.Z.show({
+s.Z.show({
   title: c.Z.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER,
   body: c.Z.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY,
   confirmText: c.Z.Messages.OKAY
 }), r.Z.disableFalsePositiveButton(e, t);
 return;
   }
-  (0, s.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
 let {
-  default: s
+  default: a
 } = await n(773276);
-return n => (0, i.jsx)(s, {
+return n => (0, i.jsx)(a, {
   channelId: e,
   messageId: t,
   ...n

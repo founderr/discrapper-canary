@@ -6,8 +6,8 @@ return c;
 var i = t(735250),
   a = t(481060),
   l = t(984168),
-  r = t(314734),
-  o = t(689938),
+  o = t(314734),
+  r = t(689938),
   s = t(114601);
 
 function c(e) {
@@ -16,11 +16,11 @@ sortOrder: t,
 onSortOptionClick: c
   } = e;
   switch (t) {
-case r.bS.POPULAR:
-  n = o.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR;
+case o.bS.POPULAR:
+  n = r.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR;
   break;
-case r.bS.ALPHABETICAL:
-  n = o.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_ALPHABETICAL;
+case o.bS.ALPHABETICAL:
+  n = r.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_ALPHABETICAL;
   }
   return (0, i.jsx)(a.Popout, {
 renderPopout: e => {
@@ -45,7 +45,7 @@ children: (e, t) => {
     color: a.Button.Colors.CUSTOM,
     className: s.sortDropdown,
     innerClassName: s.sortDropdownInner,
-    'aria-label': o.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_HEADER,
+    'aria-label': r.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_HEADER,
     children: [
       (0, i.jsx)(a.ArrowsUpDownIcon, {
         size: 'xs',

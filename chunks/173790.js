@@ -6,8 +6,8 @@ return I;
 var i = t(735250),
   a = t(470079),
   l = t(442837),
-  r = t(218061),
-  o = t(481060),
+  o = t(218061),
+  r = t(481060),
   s = t(361213),
   c = t(778569),
   u = t(213459),
@@ -46,7 +46,7 @@ I ? u.ZP.queryInstallOnDemandApp(L.id, t.id) : u.ZP.maybeQueryForInstallLessApps
 L.id,
 t.id,
 I
-  ]), (0, i.jsxs)(o.ScrollerNone, {
+  ]), (0, i.jsxs)(r.ScrollerNone, {
 className: v.container,
 fade: !0,
 ref: S,
@@ -64,7 +64,7 @@ children: [
     src: T,
     className: v.appIcon
   }),
-  (0, i.jsx)(r.Z, {
+  (0, i.jsx)(o.Z, {
     size: 54
   }),
   (0, i.jsx)(R, {
@@ -91,12 +91,12 @@ sectionName: a
 applicationId: t.id,
 size: 2048,
 names: ['embedded_cover']
-  }), r = (0, _.yJ)(t), o = null != r && null != r.activity_preview_video_asset_id ? (0, s.Z)(t.id, r.activity_preview_video_asset_id) : null;
+  }), o = (0, _.yJ)(t), r = null != o && null != o.activity_preview_video_asset_id ? (0, s.Z)(t.id, o.activity_preview_video_asset_id) : null;
   return (0, i.jsx)(A.Z, {
 channel: n,
 application: t,
 imageCoverUrl: l.url,
-videoUrl: o,
+videoUrl: r,
 sectionName: a
   });
 }

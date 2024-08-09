@@ -1,6 +1,6 @@
-var l, r;
-t.d(n, {
+var t, r;
+l.d(n, {
   _: function() {
-return l;
+return t;
   }
-}), (r = l || (l = {}))[r.EMBED = 1] = 'EMBED';
+}), (r = t || (t = {}))[r.EMBED = 1] = 'EMBED';

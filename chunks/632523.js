@@ -4,8 +4,8 @@ return E;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(990547),
+  a = n(470079),
+  s = n(990547),
   r = n(91192),
   l = n(481060),
   o = n(724757),
@@ -20,10 +20,10 @@ initialized: t,
 items: n,
 loading: E,
 loadMore: I
-  } = e, m = s.useRef(null), T = (0, o.Z)('for-you', m);
+  } = e, m = a.useRef(null), T = (0, o.Z)('for-you', m);
   (0, c.Z)({
-type: a.ImpressionTypes.VIEW,
-name: a.ImpressionNames.NOTIFICATION_CENTER_LANDING,
+type: s.ImpressionTypes.VIEW,
+name: s.ImpressionNames.NOTIFICATION_CENTER_LANDING,
 properties: {
   empty: 0 === n.length
 }
@@ -43,7 +43,7 @@ children: (0, i.jsx)(r.bG, {
     children: e => {
       let {
         ref: t,
-        ...s
+        ...a
       } = e;
       return (0, i.jsxs)(l.AdvancedScroller, {
         className: _.container,
@@ -51,7 +51,7 @@ children: (0, i.jsx)(r.bG, {
           var n;
           m.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null;
         },
-        ...s,
+        ...a,
         onScroll: h,
         children: [
           (0, i.jsx)(d.U, {

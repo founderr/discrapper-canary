@@ -8,7 +8,7 @@ var i = n(735250),
   c = n(481060),
   d = n(100527),
   u = n(600164),
-  _ = n(484459),
+  _ = n(184301),
   E = n(103575),
   h = n(237583),
   m = n(63063),
@@ -107,7 +107,7 @@ super(...e), C(this, 'renderPartyMember', (e, t) => {
     onUserContextMenu: l
   } = this.props;
   return n = (null == s ? void 0 : s.id) === e.id ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, i.jsx)(c.Popout, {
-    preload: () => (0, _.W)(e.id, e.getAvatarURL(void 0, 80)),
+    preload: () => (0, _.Z)(e.id, e.getAvatarURL(void 0, 80)),
     renderPopout: t => (o()(null != e, ''), (0, i.jsx)(E.Z, {
       ...t,
       location: 'ListeningAlong',

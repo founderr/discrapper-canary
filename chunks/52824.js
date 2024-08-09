@@ -1,10 +1,10 @@
 n.d(t, {
   q: function() {
-return l;
+return i;
   }
 });
 
-function l(e) {
+function i(e) {
   let {
 proxyURL: t,
 url: n

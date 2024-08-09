@@ -1,45 +1,45 @@
-t.d(n, {
+l.d(n, {
   Z: function() {
 return f;
   }
 });
-var l = t(735250);
-t(470079);
-var r = t(512722),
-  i = t.n(r),
-  a = t(442837),
-  o = t(52396),
-  s = t(592125),
-  c = t(970184),
-  u = t(151200),
-  d = t(96513);
+var t = l(735250);
+l(470079);
+var r = l(512722),
+  i = l.n(r),
+  a = l(442837),
+  u = l(52396),
+  s = l(592125),
+  o = l(970184),
+  c = l(151200),
+  d = l(96513);
 
 function m(e) {
   let {
 contentInventoryEntry: n,
-channel: t
+channel: l
   } = e, {
 parsedEntry: r
-  } = (0, o.B)();
-  return (0, l.jsx)(u.Z, {
+  } = (0, u.B)();
+  return (0, t.jsx)(c.Z, {
 ...r,
 entry: n,
-channel: t
+channel: l
   });
 }
 
 function f(e) {
-  let n = (0, c.CJ)();
+  let n = (0, o.CJ)();
   i()(null != n, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
   let {
-channelId: t
-  } = n, r = (0, a.e7)([s.Z], () => s.Z.getChannel(t));
-  return i()(null != r, 'channel must be defined'), (0, l.jsx)(o.r, {
+channelId: l
+  } = n, r = (0, a.e7)([s.Z], () => s.Z.getChannel(l));
+  return i()(null != r, 'channel must be defined'), (0, t.jsx)(u.r, {
 location: d._.EMBED,
 entry: e.contentInventoryEntry,
 channel: r,
 errorFallback: null,
-children: (0, l.jsx)(m, {
+children: (0, t.jsx)(m, {
   ...e,
   channel: r
 })

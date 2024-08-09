@@ -5,8 +5,8 @@ return R;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(873546),
   l = n(442837),
   o = n(100527),
@@ -38,8 +38,8 @@ function O(e) {
   let {
 children: t,
 className: n,
-channelId: s,
-guildId: a,
+channelId: a,
+guildId: s,
 innerClassname: o,
 transparent: c = !1,
 toolbar: T,
@@ -63,13 +63,13 @@ innerClassName: o,
 toolbar: function() {
   if (null == T)
     return null;
-  let e = null != s && !M;
+  let e = null != a && !M;
   return r.tq ? h : (0, i.jsxs)(i.Fragment, {
     children: [
       T,
       e ? (0, i.jsx)(I.Z, {
         className: A.search
-      }, null != a ? a : s) : null,
+      }, null != s ? s : a) : null,
       v && (0, i.jsx)(N.ZP.Divider, {}),
       (0, i.jsx)(p.Z, {}),
       (0, i.jsx)(u.Z, {
@@ -95,15 +95,15 @@ function x(e) {
   let {
 children: t,
 className: n,
-'aria-label': s,
-'aria-labelledby': a,
+'aria-label': a,
+'aria-labelledby': s,
 role: r
   } = e;
   return (0, i.jsx)(N.ZP, {
 className: n,
 onDoubleClick: R,
-'aria-label': s,
-'aria-labelledby': a,
+'aria-label': a,
+'aria-labelledby': s,
 role: r,
 children: t
   });
@@ -114,12 +114,12 @@ function M(e) {
 isAuthenticated: t = !0,
 ...n
   } = e, {
-analyticsLocations: s
-  } = (0, c.ZP)(o.Z.HEADER_BAR), r = a()(n.className, {
+analyticsLocations: a
+  } = (0, c.ZP)(o.Z.HEADER_BAR), r = s()(n.className, {
 [A.forumOrHome]: null != n.channelType && g.TPd.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === S.oC.GUILD_HOME
   });
   return (0, i.jsx)(c.Gt, {
-value: s,
+value: a,
 children: t ? (0, i.jsx)(O, {
   ...n,
   className: r

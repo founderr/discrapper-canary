@@ -49,7 +49,7 @@ let t = function(e) {
     withoutMarkdown: _
   } = e, E = t.config.messages.gameTitle, f = o.r.build(t.config).defaultReward.messages.nameWithArticle, {
     targetMinutes: h
-  } = n, p = (0, i.zK)(t, l.S7.IN_HOUSE_CONSOLE_QUEST), m = (0, i.Kr)(t.config), I = (0, i.$J)(t) && (0, i.$H)(t), T = (0, s.p)({
+  } = n, p = (0, i.zK)(t, l.S7.IN_HOUSE_CONSOLE_QUEST), m = (0, i.Kr)(t.config), I = (0, i.$J)(t) && (0, i.$H)(t), T = (0, s.T)({
     location: r
   });
   if (p && null != m)

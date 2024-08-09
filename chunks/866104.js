@@ -7,9 +7,9 @@ return x;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(512722),
-  r = n.n(a),
+  a = n(470079),
+  s = n(512722),
+  r = n.n(s),
   l = n(442837),
   o = n(481060),
   c = n(131388),
@@ -59,7 +59,7 @@ function x(e) {
   let {
 coverImageAsset: t,
 isPreview: n = !1
-  } = e, s = I.QK.useSetting(), a = (0, f.n)() && s, [r, l] = (0, E.Z)(t, a), o = a ? (0, i.jsx)(d.Z, {
+  } = e, a = I.QK.useSetting(), s = (0, f.n)() && a, [r, l] = (0, E.Z)(t, s), o = s ? (0, i.jsx)(d.Z, {
 autoPlay: !0,
 loop: !0,
 className: R.coverImage,
@@ -83,7 +83,7 @@ children: null == l || n ? o : (0, i.jsx)('img', {
 }
 
 function M(e) {
-  var t, n, a;
+  var t, n, s;
   let {
 guild: d,
 subscriptionsSettings: E
@@ -91,28 +91,28 @@ subscriptionsSettings: E
   let {
 nickname: h,
 nickcolor: f
-  } = (a = I, (0, l.cj)([
+  } = (s = I, (0, l.cj)([
 m.ZP,
 T.default
   ], () => {
 var e, t;
 let n = T.default.getCurrentUser();
 r()(null != n, 'user cannot be null');
-let i = m.ZP.getMember(a, n.id);
+let i = m.ZP.getMember(s, n.id);
 return {
   nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : N.ZP.getName(n),
   nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
 };
-  }, [a])), {
+  }, [s])), {
 isTruncated: M,
 ExpandableTextContainer: v
-  } = (0, C.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = s.useState(1), D = (0, c.Z)('(max-width: 1439px)'), {
-selectedTab: b,
+  } = (0, C.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), b = (0, c.Z)('(max-width: 1439px)'), {
+selectedTab: D,
 isPhantomPreview: j
-  } = (0, p.m)(), U = b === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
+  } = (0, p.m)(), U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(v, {
-    lineClamp: D || 2 === Z ? 2 : 3,
+    lineClamp: b || 2 === Z ? 2 : 3,
     children: (0, i.jsx)(o.Text, {
       variant: 'text-sm/normal',
       color: 'text-normal',

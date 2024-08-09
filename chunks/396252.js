@@ -5,8 +5,8 @@ return h;
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(442837),
   l = n(481060),
   o = n(385499),
@@ -23,7 +23,7 @@ function h(e) {
   var t;
   let {
 message: n,
-compact: s,
+compact: a,
 usernameHook: h,
 channel: N
   } = e, f = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)), C = (0, u.ZP)(n), p = h(C), {
@@ -37,24 +37,24 @@ eventHandlers: {
 onMouseEnter: S,
 onMouseLeave: A,
 children: (0, i.jsx)(E.Z, {
-  className: a()(T.mainContainer, {
-    [T.compact]: s
+  className: s()(T.mainContainer, {
+    [T.compact]: a
   }),
-  iconNode: s ? null : (0, i.jsx)(_.S, {
+  iconNode: a ? null : (0, i.jsx)(_.S, {
     src: g
   }),
   iconContainerClassName: T.iconContainer,
-  compact: s,
+  compact: a,
   children: (0, i.jsxs)('div', {
-    className: a()(T.content, {
-      [T.compact]: s
+    className: s()(T.content, {
+      [T.compact]: a
     }),
     children: [
       (0, i.jsx)(d.nD, {
         message: n,
         messageClassname: T.spanCorrection,
-        className: a()(T.usernameContainer, T.spanCorrection, {
-          [T.compact]: s
+        className: s()(T.usernameContainer, T.spanCorrection, {
+          [T.compact]: a
         }),
         username: (0, i.jsxs)('div', {
           className: T.spanCorrection,
@@ -72,12 +72,12 @@ children: (0, i.jsx)(E.Z, {
             })
           ]
         }),
-        compact: s,
+        compact: a,
         showTimestamp: !0
       }),
       (0, i.jsx)('div', {
-        className: a()(T.__invalid_messageContent, {
-          [T.compact]: s
+        className: s()(T.__invalid_messageContent, {
+          [T.compact]: a
         }),
         children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
           username: C.nick,

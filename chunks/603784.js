@@ -9,7 +9,7 @@ var s = n(735250),
   u = n(726542),
   _ = n(100527),
   I = n(933557),
-  E = n(484459),
+  E = n(184301),
   T = n(103575),
   m = n(210887),
   N = n(699516),
@@ -134,7 +134,7 @@ let {
 } = e;
 if (null != a && null != i)
   return (0, s.jsx)(d.Popout, {
-    preload: () => (0, E.W)(i, a.getAvatarURL(t, 80), {
+    preload: () => (0, E.Z)(i, a.getAvatarURL(t, 80), {
       guildId: t
     }),
     renderPopout: e => (0, s.jsx)(T.Z, {

@@ -4,8 +4,8 @@ return u;
   }
 });
 var i = n(735250),
-  s = n(470079),
-  a = n(686546),
+  a = n(470079),
+  s = n(686546),
   r = n(598077),
   l = n(865112),
   o = n(934914);
@@ -25,10 +25,10 @@ return null == t ? null : (0, i.jsx)('div', {
   })
 });
   },
-  u = s.memo(function(e) {
+  u = a.memo(function(e) {
 let {
   item: t
-} = e, n = null, s = !1;
+} = e, n = null, a = !1;
 if (null != t.icon_name)
   n = (0, i.jsx)('img', {
     alt: '',
@@ -40,7 +40,7 @@ else if (null != t.other_user) {
     alt: '',
     className: o.image,
     src: e.getAvatarURL(void 0, 40)
-  }), s = !0;
+  }), a = !0;
 } else
   n = null != t.icon_url ? (0, i.jsx)('img', {
     alt: '',
@@ -54,8 +54,8 @@ let u = (0, l.Vi)(t.type);
 return (0, i.jsxs)('div', {
   className: o.container,
   children: [
-    (0, i.jsx)(a.ZP, {
-      mask: null == u ? a.QS.AVATAR_DEFAULT : a.QS.AVATAR_STATUS_ROUND_16,
+    (0, i.jsx)(s.ZP, {
+      mask: null == u ? s.QS.AVATAR_DEFAULT : s.QS.AVATAR_STATUS_ROUND_16,
       width: 40,
       height: 40,
       rightOverhang: 3,
@@ -63,7 +63,7 @@ return (0, i.jsxs)('div', {
       className: o.mask,
       children: (0, i.jsx)('div', {
         className: o.imageContainer,
-        style: s ? void 0 : {
+        style: a ? void 0 : {
           backgroundColor: (0, l.Vu)(t)
         },
         children: n

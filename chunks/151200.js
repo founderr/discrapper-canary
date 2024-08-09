@@ -1,100 +1,100 @@
-t.d(n, {
+l.d(n, {
   Z: function() {
-return C;
+return v;
   }
 });
-var l = t(735250);
-t(470079);
-var r = t(120356),
-  i = t.n(r),
-  a = t(481060),
-  o = t(256139),
-  s = t(328731),
-  c = t(435439),
-  u = t(206295),
-  d = t(297781),
-  m = t(43205),
-  f = t(792125),
-  _ = t(231338),
-  p = t(909707);
+var t = l(735250);
+l(470079);
+var r = l(120356),
+  i = l.n(r),
+  a = l(481060),
+  u = l(256139),
+  s = l(328731),
+  o = l(435439),
+  c = l(206295),
+  d = l(297781),
+  m = l(43205),
+  f = l(792125),
+  p = l(231338),
+  E = l(909707);
 
-function C(e) {
+function v(e) {
   let {
 entry: n,
-channel: t,
+channel: l,
 title: r,
-subtitle: C,
-thumbnailUrl: v,
+subtitle: v,
+thumbnailUrl: C,
 onClickTitle: h,
-onClickSubtitle: E,
-onClickThumbnail: x,
-providerIconProps: I,
+onClickSubtitle: x,
+onClickThumbnail: _,
+providerIconProps: N,
 style: T = {}
   } = e, {
-primaryColor: g,
-secondaryColor: N
-  } = (0, u.Z)(v);
-  return null != v && (T.background = 'linear-gradient(45deg, '.concat(g, ', ').concat(N, ')')), (0, l.jsxs)('div', {
+primaryColor: I,
+secondaryColor: g
+  } = (0, c.Z)(C);
+  return null != C && (T.background = 'linear-gradient(45deg, '.concat(I, ', ').concat(g, ')')), (0, t.jsxs)('div', {
 'data-disable-adaptive-theme': !0,
-className: i()(p.container, (0, f.Q)(_.BR.DARK)),
+className: i()(E.container, (0, f.Q)(p.BR.DARK)),
 style: T,
 children: [
-  (0, l.jsx)(a.Clickable, {
-    onClick: x,
-    className: i()(p.thumbnailContainer, null != x && p.clickable),
-    children: (0, l.jsx)(m.f, {
-      src: v,
+  (0, t.jsx)(a.Clickable, {
+    onClick: _,
+    className: i()(E.thumbnailContainer, null != _ && E.clickable),
+    children: (0, t.jsx)(m.f, {
+      src: C,
       constrain: 'width',
       size: 64
     })
   }),
-  (0, l.jsxs)('div', {
-    className: p.infoContainer,
+  (0, t.jsxs)('div', {
+    className: E.infoContainer,
     children: [
-      (0, l.jsx)(s.Z, {
-        channel: t,
+      (0, t.jsx)(s.Z, {
+        channel: l,
         entry: n,
-        className: p.users
+        className: E.users
       }),
-      (0, l.jsx)(a.Spacer, {
+      (0, t.jsx)(a.Spacer, {
         size: 2
       }),
-      (0, l.jsx)(o.Z, {
+      (0, t.jsx)(u.Z, {
         onClick: h,
-        children: (0, l.jsx)(a.Heading, {
+        children: (0, t.jsx)(a.Heading, {
           variant: 'heading-md/medium',
           lineClamp: 1,
-          className: i()(p.textPrimary, p.truncatedText),
+          className: i()(E.textPrimary, E.truncatedText),
           children: r
         })
       }),
-      null != C ? (0, l.jsxs)(l.Fragment, {
+      null != v ? (0, t.jsxs)(t.Fragment, {
         children: [
-          (0, l.jsx)(a.Spacer, {
+          (0, t.jsx)(a.Spacer, {
             size: 2
           }),
-          (0, l.jsx)(o.Z, {
-            onClick: E,
-            children: (0, l.jsx)(a.Text, {
+          (0, t.jsx)(u.Z, {
+            onClick: x,
+            children: (0, t.jsx)(a.Text, {
               variant: 'text-sm/normal',
-              className: i()(p.textSecondary, p.truncatedText),
+              className: i()(E.textSecondary, E.truncatedText),
               lineClamp: 1,
-              children: C
+              children: v
             })
           })
         ]
       }) : null,
-      (0, l.jsx)(d.PZ, {
-        className: p.badges,
+      (0, t.jsx)(d.PZ, {
+        className: E.badges,
         entry: n,
         location: d.Gt.EMBED
       })
     ]
   }),
-  (0, l.jsx)('div', {
-    className: p.headerIcons,
-    children: null != I ? (0, l.jsx)(c.Z, {
-      ...I
+  (0, t.jsx)('div', {
+    className: E.headerIcons,
+    children: null != N ? (0, t.jsx)(o.Z, {
+      ...N
     }) : null
   })
 ]

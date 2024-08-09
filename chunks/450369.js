@@ -18,7 +18,7 @@ var i = n(735250),
   _ = n(569545),
   f = n(382182),
   E = n(352978),
-  g = n(484459),
+  g = n(184301),
   C = n(103575),
   I = n(199902),
   x = n(430824),
@@ -49,7 +49,7 @@ let {
   id: _
 } = t;
 return (0, i.jsx)(o.Popout, {
-  preload: null == n ? void 0 : () => (0, g.W)(n.user, {
+  preload: null == n ? void 0 : () => (0, g.Z)(n.user, {
     guildId: s.guild_id,
     channelId: s.id
   }),

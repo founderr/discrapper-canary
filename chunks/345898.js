@@ -1,25 +1,25 @@
 var i = n(735250);
 n(470079);
-var s = n(120356),
-  a = n.n(s),
+var a = n(120356),
+  s = n.n(a),
   r = n(481060),
   l = n(299938);
 t.Z = e => {
   let {
 renderTitle: t,
 renderTagline: n,
-renderActions: s,
+renderActions: a,
 renderMedia: o,
 className: c,
 isHorizontal: u = !1
   } = e;
   return (0, i.jsxs)('div', {
-className: a()(l.tile, {
+className: s()(l.tile, {
   [l.tileHorizontal]: u
 }, c),
 children: [
   (0, i.jsx)('div', {
-    className: a()(l.media, {
+    className: s()(l.media, {
       [l.mediaHorizontal]: u
     }),
     children: null == o ? void 0 : o()
@@ -37,7 +37,7 @@ children: [
       }),
       (0, i.jsx)('div', {
         className: l.actions,
-        children: null == s ? void 0 : s()
+        children: null == a ? void 0 : a()
       })
     ]
   })

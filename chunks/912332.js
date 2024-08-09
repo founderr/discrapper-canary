@@ -1,4 +1,4 @@
-t.d(n, {
+i.d(n, {
   Np: function() {
 return d;
   },
@@ -12,10 +12,10 @@ return l;
 return c;
   }
 });
-var i = t(735250);
-t(470079);
-var o = t(481060),
-  a = t(822869);
+var t = i(735250);
+i(470079);
+var o = i(481060),
+  a = i(822869);
 let c = 'forward-modal';
 
 function r(e) {
@@ -31,11 +31,11 @@ onRequestSent: u
 let {
   ForwardModal: e
 } = await Promise.all([
-  t.e('6380'),
-  t.e('89900')
-]).then(t.bind(t, 930864));
-return t => (0, i.jsx)(e, {
-  ...t,
+  i.e('6380'),
+  i.e('89900')
+]).then(i.bind(i, 930864));
+return i => (0, t.jsx)(e, {
+  ...i,
   channelId: r,
   messageId: n,
   initialSelectedDestinations: d,
@@ -61,9 +61,9 @@ forwardOptions: r
   (0, o.openModalLazy)(async () => {
 let {
   ForwardFailedAlertModal: e
-} = await t.e('86590').then(t.bind(t, 384331));
-return t => (0, i.jsx)(e, {
-  ...t,
+} = await i.e('86590').then(i.bind(i, 384331));
+return i => (0, t.jsx)(e, {
+  ...i,
   messageId: n,
   channelId: a,
   failedDestinations: c,

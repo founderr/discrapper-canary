@@ -10,9 +10,9 @@ return P;
   }
 }), n(47120), n(653041);
 var i = n(735250),
-  s = n(470079),
-  a = n(120356),
-  r = n.n(a),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
   l = n(392711),
   o = n.n(l),
   c = n(91192),
@@ -52,10 +52,10 @@ let Z = e => {
 let {
   title: t,
   children: n,
-  className: s
+  className: a
 } = e;
 return (0, i.jsxs)('div', {
-  className: r()(s, M.header),
+  className: r()(a, M.header),
   children: [
     null == t ? null : (0, i.jsx)(d.Heading, {
       variant: 'heading-md/medium',
@@ -86,7 +86,7 @@ return (0, i.jsxs)('div', {
   ]
 });
   };
-class D extends s.PureComponent {
+class b extends a.PureComponent {
   renderJumpButton() {
 let {
   jumping: e
@@ -115,9 +115,9 @@ let {
   onCloseMessage: e,
   canCloseAllMessages: t,
   canManageMessages: n,
-  channel: s
+  channel: a
 } = this.props;
-return null != e && (t || n || null != s && s.isPrivate()) ? (0, i.jsx)(d.Button, {
+return null != e && (t || n || null != a && a.isPrivate()) ? (0, i.jsx)(d.Button, {
   look: d.Button.Looks.BLANK,
   size: d.Button.Sizes.NONE,
   onClick: this.handleClickClose,
@@ -153,20 +153,20 @@ super(...e), v(this, 'handleClickJump', e => {
 });
   }
 }
-let b = u.ZP.connectStores([p.Z], e => {
+let D = u.ZP.connectStores([p.Z], e => {
   let {
 channel: t
   } = e;
   return {
 canManageMessages: null != t && p.Z.can(O.Plq.MANAGE_MESSAGES, t)
   };
-})(D);
+})(b);
 
 function j(e) {
   let {
 analyticsName: t,
 items: n,
-hasMore: a,
+hasMore: s,
 loading: l,
 loadMore: _,
 renderHeader: E,
@@ -176,12 +176,12 @@ getProTip: f,
 scrollerClassName: C,
 className: p,
 listName: v
-  } = e, Z = s.useRef(null), P = (0, I.Z)(v, Z), D = (0, u.e7)([g.Z], () => g.Z.hasNotice()), b = (0, u.e7)([S.Z], () => S.Z.windowSize());
-  s.useEffect(() => {
+  } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), b = (0, u.e7)([g.Z], () => g.Z.hasNotice()), D = (0, u.e7)([S.Z], () => S.Z.windowSize());
+  a.useEffect(() => {
 A.default.track(O.rMx.OPEN_POPOUT, {
   type: t
 });
-  }, [t]), s.useEffect(() => {
+  }, [t]), a.useEffect(() => {
 function e() {
   var e;
   null === (e = Z.current) || void 0 === e || e.scrollPageUp({
@@ -199,12 +199,12 @@ return R.S.subscribe(O.CkL.SCROLL_PAGE_DOWN, t), R.S.subscribe(O.CkL.SCROLL_PAGE
   R.S.unsubscribe(O.CkL.SCROLL_PAGE_DOWN, t), R.S.unsubscribe(O.CkL.SCROLL_PAGE_UP, e);
 };
   }, []);
-  let j = s.useCallback(() => {
+  let j = a.useCallback(() => {
   var e;
   let t = null === (e = Z.current) || void 0 === e ? void 0 : e.getScrollerState();
-  null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && a && !l && (null == _ || _());
+  null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && s && !l && (null == _ || _());
 }, [
-  a,
+  s,
   _,
   l
 ]),
@@ -213,7 +213,7 @@ y = !0;
   null == n ? U = [(0, i.jsx)('div', {
 className: r()(M.emptyPlaceholder, M.loadingPlaceholder),
 children: (0, i.jsx)(d.Spinner, {})
-  }, 'spinner')] : 0 === n.length ? U.push((0, i.jsx)(s.Fragment, {
+  }, 'spinner')] : 0 === n.length ? U.push((0, i.jsx)(a.Fragment, {
 children: T(N.Z.theme)
   }, 'empty-state')) : (y = !1, U = [], o().each(n, e => {
 U.push(...h(e));
@@ -222,7 +222,7 @@ U.push(...h(e));
   null != n && n.length > 0 && null != _ && (B = l ? (0, i.jsx)('div', {
 className: M.loadingMore,
 children: (0, i.jsx)(d.Spinner, {})
-  }, 'loading-more-after') : a ? (0, i.jsx)('div', {
+  }, 'loading-more-after') : s ? (0, i.jsx)('div', {
 className: M.hasMore,
 children: (0, i.jsx)(d.Button, {
   look: d.Button.Looks.FILLED,
@@ -236,7 +236,7 @@ className: M.scrollingFooterWrap,
 children: T(N.Z.theme)
   }));
   let k = null == f ? void 0 : f(),
-F = y && null != k ? (0, i.jsx)('div', {
+G = y && null != k ? (0, i.jsx)('div', {
   className: M.footer,
   children: (0, i.jsx)(m.Z, {
     style: {
@@ -247,14 +247,14 @@ F = y && null != k ? (0, i.jsx)('div', {
     children: k
   })
 }) : null,
-G = {
-  maxHeight: b.height - 43 - 25
+F = {
+  maxHeight: D.height - 43 - 25
 };
-  D && (G.maxHeight -= 40);
-  let w = null != _ && a;
+  b && (F.maxHeight -= 40);
+  let w = null != _ && s;
   return (0, i.jsx)('div', {
 className: r()(p, M.messagesPopoutWrap),
-style: G,
+style: F,
 onClick: L,
 onDoubleClick: L,
 'aria-label': e['aria-label'],
@@ -285,7 +285,7 @@ children: (0, i.jsxs)(d.HeadingLevel, {
         B
       ]
     }),
-    F
+    G
   ]
 })
   });
@@ -295,7 +295,7 @@ function U(e) {
   let {
 analyticsName: t,
 onFetch: n,
-channel: a,
+channel: s,
 messages: r,
 hasMore: l,
 loading: o,
@@ -311,22 +311,22 @@ className: A,
 onCloseMessage: R,
 listName: v
   } = e, L = (0, u.e7)([C.Z], () => {
-let e = null != a ? C.Z.getMessages(a.id) : null;
+let e = null != s ? C.Z.getMessages(s.id) : null;
 return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
   });
 
   function Z(e, n) {
 let {
   id: i,
-  blocked: s,
-  author: a,
+  blocked: a,
+  author: s,
   channel_id: r
 } = e;
-if (s)
+if (a)
   _.Z.show({
     title: x.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
     body: x.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({
-      name: a.username
+      name: s.username
     }),
     confirmText: x.Z.Messages.OKAY
   });
@@ -335,18 +335,18 @@ else if (!L) {
   null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(O.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
 }
   }
-  s.useEffect(() => {
-n(a);
+  a.useEffect(() => {
+n(s);
   }, [
-a,
+s,
 n
   ]);
-  let P = s.useMemo(() => null == r ? void 0 : r.map(e => ({
+  let P = a.useMemo(() => null == r ? void 0 : r.map(e => ({
 message: e,
-channel: a
+channel: s
   })), [
 r,
-a
+s
   ]);
   return (0, i.jsx)(j, {
 className: A,
@@ -368,8 +368,8 @@ renderItem: function(e) {
     return [];
   if (null != p)
     return p(t, e => Z(t, e));
-  let s = [];
-  return null == n ? [] : (s.push((0, i.jsxs)('div', {
+  let a = [];
+  return null == n ? [] : (a.push((0, i.jsxs)('div', {
     className: M.messageGroupWrapper,
     children: [
       (0, i.jsx)(T.Z, {
@@ -377,8 +377,8 @@ renderItem: function(e) {
         message: t,
         channel: n
       }),
-      (0, i.jsx)(b, {
-        channel: a,
+      (0, i.jsx)(D, {
+        channel: s,
         message: t,
         jumping: L,
         canCloseAllMessages: I,
@@ -386,7 +386,7 @@ renderItem: function(e) {
         onCloseMessage: R
       })
     ]
-  }, t.id)), s);
+  }, t.id)), a);
 },
 listName: v,
 'aria-label': e['aria-label']

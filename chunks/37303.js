@@ -7,8 +7,8 @@ return f;
   }
 }), n(47120);
 var i = n(735250),
-  s = n(470079),
-  a = n(338545),
+  a = n(470079),
+  s = n(338545),
   r = n(442837),
   l = n(686777),
   o = n(113434),
@@ -26,12 +26,12 @@ function N(e) {
   let {
 questId: t,
 ...n
-  } = e, s = (0, r.e7)([c.Z], () => c.Z.getQuest(t));
-  if (null == s)
+  } = e, a = (0, r.e7)([c.Z], () => c.Z.getQuest(t));
+  if (null == a)
 return null;
   {
 let e = {
-  quest: s,
+  quest: a,
   ...n
 };
 return (0, i.jsx)(f, {
@@ -46,7 +46,7 @@ quest: t,
 location: n,
 initiallyExpanded: r,
 contentPosition: c
-  } = e, [N, f] = s.useState(!1), C = s.useCallback(() => f(!0), []), p = s.useCallback(() => f(!1), []), g = (0, o.tP)(t), {
+  } = e, [N, f] = a.useState(!1), C = a.useCallback(() => f(!0), []), p = a.useCallback(() => f(!1), []), g = (0, o.tP)(t), {
 containerRef: S,
 size: A,
 height: R
@@ -69,7 +69,7 @@ questContent: n,
 questContentPosition: c,
 trackGuildAndChannelMetadata: n === u.jn.QUESTS_EMBED,
 children: e => (0, i.jsx)(i.Fragment, {
-  children: (0, i.jsx)(a.animated.div, {
+  children: (0, i.jsx)(s.animated.div, {
     style: {
       maxHeight: n === u.jn.QUESTS_EMBED ? void 0 : x.to({
         range: [
