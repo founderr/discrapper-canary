@@ -1,4 +1,4 @@
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
   kind: 'user',
   id: '2024-07_hover_bar_reaction_suggestions',
   label: 'Hover Bar Reaction Suggestions',
@@ -24,4 +24,4 @@ canShowReactionsWithVisualOnMessageHover: !1
 }
   ]
 });
-t.Z = i;
+t.Z = r;
