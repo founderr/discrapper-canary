@@ -17,7 +17,7 @@ var n = t(735250),
   S = t(689938),
   E = t(350017);
 
-function m(e) {
+function g(e) {
   return (0, n.jsx)('div', {
 className: E.sectionHeader,
 children: (0, n.jsx)(r.Heading, {
@@ -29,10 +29,10 @@ children: (0, n.jsx)(r.Heading, {
   });
 }
 
-function g(e) {
+function m(e) {
   return (0, n.jsxs)('div', {
 children: [
-  null != e.title && (0, n.jsx)(m, {
+  null != e.title && (0, n.jsx)(g, {
     title: e.title
   }),
   (0, n.jsx)('div', {
@@ -92,32 +92,32 @@ children: [
     className: E.content,
     scrollerRef: s,
     children: [
-      (0, n.jsx)(g, {
+      (0, n.jsx)(m, {
         children: (0, n.jsx)(h.Z, {
           guildId: e.guildId
         })
       }),
-      (0, n.jsx)(g, {
+      (0, n.jsx)(m, {
         title: S.Z.Messages.NOTIFICATION_SETTINGS_PRESETS,
         noPadding: !0,
         children: (0, n.jsx)(N.Z, {
           guildId: e.guildId
         })
       }),
-      t && (0, n.jsx)(g, {
+      t && (0, n.jsx)(m, {
         children: (0, n.jsx)(d.Z, {
           onClose: e.onClose,
           guildId: e.guildId,
           isRedesign: !0
         })
       }),
-      (0, n.jsx)(g, {
+      (0, n.jsx)(m, {
         title: S.Z.Messages.NOTIFICATION_SETTINGS_ADVANCED,
         children: (0, n.jsx)(c.Z, {
           guildId: e.guildId
         })
       }),
-      (0, n.jsx)(m, {
+      (0, n.jsx)(g, {
         title: S.Z.Messages.CHANNEL_NOTIFICATION_OVERRIDES
       }),
       (0, n.jsx)(u.Z, {

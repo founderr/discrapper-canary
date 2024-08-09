@@ -30,11 +30,11 @@ opacity: 0.3
 transform: 'translate3d(5%, 0, 0)',
 opacity: 0.5
   },
-  A = {
+  R = {
 transform: 'translate3d(0, 0, 0)',
 opacity: 1
   },
-  R = {
+  A = {
 mass: 1.1,
 friction: 24,
 tension: 260
@@ -81,10 +81,10 @@ let U = t.length > 30,
         n = M.Z.getLastRefreshTimestamp(l.id),
         a = null == t || 0 === n,
         o = null != t && t.refreshTimestamp === n;
-      return a || !o ? A : U ? N : f;
+      return a || !o ? R : U ? N : f;
     },
-    enter: A,
-    config: R
+    enter: R,
+    config: A
   }),
   k = !h && i === T.po.LOADING;
 return (0, n.jsxs)('table', {

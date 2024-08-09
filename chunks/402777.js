@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(78675),
   f = n(113557),
   E = n(169979),
-  C = n(215105),
-  g = n(502762),
+  g = n(215105),
+  C = n(502762),
   I = n(256059),
   x = n(437758),
   T = n(544989),
@@ -57,7 +57,7 @@ H(e), V(t);
 value: D,
 children: (0, i.jsx)(h.Mt, {
   value: k,
-  children: (0, i.jsxs)(g.Z, {
+  children: (0, i.jsxs)(C.Z, {
     ref: U,
     user: t,
     displayProfile: O,
@@ -89,7 +89,7 @@ children: (0, i.jsx)(h.Mt, {
               let {
                 setPopoutRef: n
               } = e;
-              return null == B ? (0, i.jsx)(i.Fragment, {}) : (0, i.jsx)(C.Z, {
+              return null == B ? (0, i.jsx)(i.Fragment, {}) : (0, i.jsx)(g.Z, {
                 user: t,
                 channelId: L.id,
                 profileType: b.y0.PANEL,

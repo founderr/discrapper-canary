@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(475413),
   f = n(228168),
   E = n(689938),
-  C = n(833802),
-  g = n(321975);
+  g = n(833802),
+  C = n(321975);
 
 function I(e) {
   let {
@@ -43,19 +43,19 @@ children: (0, i.jsx)(u.Mt, {
     displayProfile: x,
     profileType: f.y0.PANEL,
     themeOverride: T,
-    className: C.container,
+    className: g.container,
     children: (0, i.jsx)(s.u2, {
       children: (0, i.jsxs)('div', {
-        className: C.container,
+        className: g.container,
         children: [
           (0, i.jsx)('img', {
             alt: '',
-            src: g,
-            className: C.previewForCollected,
+            src: C,
+            className: g.previewForCollected,
             'aria-hidden': !0
           }),
           (0, i.jsxs)('div', {
-            className: C.body,
+            className: g.body,
             children: [
               (0, i.jsx)(p.Z, {
                 user: t,
@@ -63,7 +63,7 @@ children: (0, i.jsx)(u.Mt, {
               }),
               (0, i.jsx)(l.Heading, {
                 variant: 'heading-lg/bold',
-                className: C.header,
+                className: g.header,
                 children: E.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
               }),
               (0, i.jsx)(l.Text, {
@@ -77,7 +77,7 @@ children: (0, i.jsx)(u.Mt, {
                 children: E.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_CONFIRMATION
               }),
               (0, i.jsx)(_.tG, {
-                className: C.centeredButton,
+                className: g.centeredButton,
                 action: 'VIEW_BLOCKED_PROFILE',
                 text: E.Z.Messages.VIEW_PROFILE,
                 autoFocus: !0,

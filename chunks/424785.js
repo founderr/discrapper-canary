@@ -33,8 +33,8 @@ var l = n(120356),
   b = n(496675),
   M = n(306680),
   R = n(9156),
-  O = n(979651),
-  P = n(934415),
+  P = n(979651),
+  O = n(934415),
   y = n(98597),
   j = n(648501),
   D = n(473403),
@@ -53,7 +53,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class F extends y.ZP {
+class W extends y.ZP {
   getVoiceStatesCount() {
 var e;
 let {
@@ -65,7 +65,7 @@ return null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0;
 let {
   channel: e
 } = this.props;
-return (0, P.rY)(e, O.Z, L.Z);
+return (0, O.rY)(e, P.Z, L.Z);
   }
   getModeClass() {
 let {
@@ -290,7 +290,7 @@ super(...e), V(this, 'state', {
 });
   }
 }
-let W = (0, u.B)((0, d.Q)(F));
+let F = (0, u.B)((0, d.Q)(W));
 
 function z(e) {
   let {
@@ -321,7 +321,7 @@ return {
   }), h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)), p = (0, v.ZP)(n.id), _ = (0, a.e7)([x.Z], () => x.Z.getStageInstanceByChannel(n.id), [n.id]), f = (0, E.Rk)(n.id, N.pV.AUDIENCE), {
 isSubscriptionGated: g,
 needSubscriptionToAccess: C
-  } = (0, m.Z)(n.id), I = (0, a.e7)([R.ZP], () => R.ZP.isFavorite(t.id, n.id)), L = (0, S.xJ)(n.id), O = (0, j.Z)({
+  } = (0, m.Z)(n.id), I = (0, a.e7)([R.ZP], () => R.ZP.isFavorite(t.id, n.id)), L = (0, S.xJ)(n.id), P = (0, j.Z)({
 channel: n,
 isChannelSelected: !1,
 isChannelCollapsed: s,
@@ -329,8 +329,8 @@ voiceStates: o,
 isSubscriptionGated: g,
 needSubscriptionToAccess: C,
 enableConnectedUserLimit: L || n.userLimit > 0 && n.userLimit < U.xGv
-  }), P = e.connected && null == O;
-  return (0, i.jsx)(W, {
+  }), O = e.connected && null == P;
+  return (0, i.jsx)(F, {
 categoryCollapsed: h,
 connectAction: p,
 numAudience: f,
@@ -341,8 +341,8 @@ needSubscriptionToAccess: C,
 ...d,
 ...e,
 isFavoriteSuggestion: r && !I,
-forceShowButtons: P,
-channelInfo: O,
+forceShowButtons: O,
+channelInfo: P,
 resolvedUnreadSetting: u
   });
 }

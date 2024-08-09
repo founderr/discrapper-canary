@@ -21,7 +21,7 @@ channelName: t,
 guildId: _,
 tagFilter: g,
 channel: x
-  } = e, C = (0, c.r_)(x), f = (0, l.cD)(x), p = x.isMediaChannel(), T = s.useCallback(() => {
+  } = e, f = (0, c.r_)(x), C = (0, l.cD)(x), p = x.isMediaChannel(), T = s.useCallback(() => {
 (0, d.qz)(), (0, r.openModalLazy)(async () => {
   let {
     default: e
@@ -31,10 +31,10 @@ channel: x
     guildId: _
   });
 });
-  }, [_]), I = g.size > 0, E = f || C, N = !I && C && !p, b = s.useCallback(() => N ? T() : f ? void o.S.dispatch(u.CkL.FOCUS_COMPOSER_TITLE) : (0, u.VqG)(), [
+  }, [_]), I = g.size > 0, E = C || f, N = !I && f && !p, b = s.useCallback(() => N ? T() : C ? void o.S.dispatch(u.CkL.FOCUS_COMPOSER_TITLE) : (0, u.VqG)(), [
 T,
 N,
-f
+C
   ]);
   return (0, a.jsxs)('div', {
 className: h.container,

@@ -40,8 +40,8 @@ mentionCount: A = 0,
 unread: b = !1,
 defaultFolderName: M,
 useCircleMask: R = !1,
-draggable: O = !1,
-sorting: P = !1,
+draggable: P = !1,
+sorting: O = !1,
 onDragStart: y,
 onDragEnd: j,
 onExpandCollapse: D,
@@ -52,10 +52,10 @@ folderIconContent: G
 id: k,
 name: B,
 children: H
-  } = t, [V, F] = l.useState(!1), [W, z] = l.useState(!1), Y = V || W;
+  } = t, [V, W] = l.useState(!1), [F, z] = l.useState(!1), Y = V || F;
   l.useEffect(() => {
-P && F(!1);
-  }, [P]);
+O && W(!1);
+  }, [O]);
   let [{
 dragging: K
   }, q] = (0, s.c)({
@@ -72,12 +72,12 @@ collect: e => ({
 })
   }), Q = l.useCallback(e => {
 z(e);
-  }, []), J = l.useCallback(e => {
+  }, []), X = l.useCallback(e => {
 ('ArrowRight' === e.key && !u || 'ArrowLeft' === e.key && u) && D();
   }, [
 D,
 u
-  ]), X = null != B && '' !== B ? B : null != M && '' !== M ? M : x.Z.Messages.SERVER_FOLDER_PLACEHOLDER, $ = (0, c.Ie)(''.concat(k)), ee = 'folder-items-'.concat(k), et = H.length * (T + L), en = (0, d.useTransition)(!K && u, {
+  ]), J = null != B && '' !== B ? B : null != M && '' !== M ? M : x.Z.Messages.SERVER_FOLDER_PLACEHOLDER, $ = (0, c.Ie)(''.concat(k)), ee = 'folder-items-'.concat(k), et = H.length * (T + L), en = (0, d.useTransition)(!K && u, {
 from: {
   height: 0
 },
@@ -103,36 +103,36 @@ children: [
     className: v.pill
   }),
   (0, i.jsx)(N.Z, {
-    text: X,
-    disabled: P,
+    text: J,
+    disabled: O,
     selected: r,
     disableWrapper: !0,
     children: (0, i.jsx)('div', {
-      ref: O ? q : void 0,
+      ref: P ? q : void 0,
       className: a()({
-        [v.wobble]: !K && W && !u
+        [v.wobble]: !K && F && !u
       }),
-      'data-dnd-name': X,
+      'data-dnd-name': J,
       children: K ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(g.Z, {
         folderNode: t,
         expanded: u,
         forceCircular: R,
-        sorting: P,
+        sorting: O,
         mediaState: _,
         mentionCount: A,
-        tooltipName: X,
+        tooltipName: J,
         folderGroupId: ee,
         onClick: D,
         onContextMenu: w,
-        onHoverChange: F,
-        onKeyDown: J,
+        onHoverChange: W,
+        onKeyDown: X,
         treeItemProps: $,
         folderIconContent: G
       })
     })
   }),
-  O ? (0, i.jsx)(C.ZP, {
-    name: X,
+  P ? (0, i.jsx)(C.ZP, {
+    name: J,
     targetNode: t,
     onDragOverChanged: Q
   }) : null
@@ -163,8 +163,8 @@ children: [
       children: H.map(U)
     }, l);
   }),
-  O && u ? (0, i.jsx)(C.Zu, {
-    name: X,
+  P && u ? (0, i.jsx)(C.Zu, {
+    name: J,
     targetNode: t
   }) : null
 ]

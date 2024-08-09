@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(569545),
   f = n(382182),
   E = n(352978),
-  C = n(484459),
-  g = n(103575),
+  g = n(484459),
+  C = n(103575),
   I = n(199902),
   x = n(430824),
   T = n(496675),
@@ -49,11 +49,11 @@ let {
   id: _
 } = t;
 return (0, i.jsx)(o.Popout, {
-  preload: null == n ? void 0 : () => (0, C.W)(n.user, {
+  preload: null == n ? void 0 : () => (0, g.W)(n.user, {
     guildId: s.guild_id,
     channelId: s.id
   }),
-  renderPopout: e => (0, i.jsx)(g.Z, {
+  renderPopout: e => (0, i.jsx)(C.Z, {
     ...e,
     location: 'StageTile',
     guildId: l,
@@ -89,9 +89,9 @@ let {
   width: l,
   isModerator: u,
   onContextMenu: h,
-  inPopout: C
+  inPopout: g
 } = e, {
-  reducedMotion: g
+  reducedMotion: C
 } = a.useContext(o.AccessibilityPreferencesContext), {
   id: v,
   blocked: j
@@ -124,11 +124,11 @@ return (0, i.jsx)(S.Z, {
   channel: s,
   className: b.tile,
   inCall: !0,
-  inPopout: C,
+  inPopout: g,
   onClick: y,
   onContextMenu: h,
   paused: !1,
-  pulseSpeakingIndicator: !g.enabled,
+  pulseSpeakingIndicator: !C.enabled,
   width: l,
   children: u && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
 }, v);
@@ -195,9 +195,9 @@ return null;
       });
   }
 },
-C = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+g = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
   return (0, i.jsx)(i.Fragment, {
-children: C ? (0, i.jsx)(j, {
+children: g ? (0, i.jsx)(j, {
   stageParticipant: a,
   rtcParticipant: _,
   channel: s,

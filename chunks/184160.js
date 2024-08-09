@@ -5,8 +5,8 @@ return h;
 });
 var t = n(735250);
 n(470079);
-var i = n(512722),
-  r = n.n(i),
+var r = n(512722),
+  i = n.n(r),
   l = n(780384),
   a = n(481060),
   o = n(410030),
@@ -23,7 +23,7 @@ function h(e) {
   let {
 handleStepChange: s,
 handleClose: n
-  } = e, i = (0, o.ZP)(), {
+  } = e, r = (0, o.ZP)(), {
 activeSubscription: h,
 selectedSkuId: f,
 setSelectedPlanId: I,
@@ -36,7 +36,7 @@ isGift: M,
 selectedSkuId: f,
 startedPaymentFlowWithPaymentSources: E.current
   });
-  return r()(null != T, 'Expected premium type'), (0, t.jsx)(C.Z, {
+  return i()(null != T, 'Expected premium type'), (0, t.jsx)(C.Z, {
 premiumType: T,
 titleText: x.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_TITLE,
 subtitleText: x.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_SUBTITLE.format({
@@ -53,7 +53,7 @@ footer: (0, t.jsxs)('div', {
     }),
     (0, t.jsx)(a.Button, {
       look: a.Button.Looks.LINK,
-      color: (0, l.wj)(i) ? a.Button.Colors.WHITE : a.Button.Colors.PRIMARY,
+      color: (0, l.wj)(r) ? a.Button.Colors.WHITE : a.Button.Colors.PRIMARY,
       onClick: n,
       children: x.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
     })

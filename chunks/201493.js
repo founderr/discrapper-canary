@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(273387),
   f = n(683818),
   E = n(102888),
-  C = n(65839),
-  g = n(453879),
+  g = n(65839),
+  C = n(453879),
   I = n(408310),
   x = n(486527),
   T = n(981631),
@@ -51,7 +51,7 @@ if (null != e)
     (0, o.In)(v.id, !0, !0, e);
   });
   }, [v.id]);
-  let j = a.useMemo(() => null != A ? (0, g.v)(Object.values(A), Z) : null, [
+  let j = a.useMemo(() => null != A ? (0, C.v)(Object.values(A), Z) : null, [
   A,
   Z
 ]),
@@ -136,7 +136,7 @@ children: (0, i.jsx)(E.Z, {
   guild: S,
   onAddGuild: w
 })
-  }) : (0, i.jsx)(C.Z, {
+  }) : (0, i.jsx)(g.Z, {
 channel: v,
 searchQuery: y,
 setSearchQuery: D,

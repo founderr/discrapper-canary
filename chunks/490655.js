@@ -67,8 +67,8 @@ W
 applicationIntegrations: Y,
 applicationBotIds: z,
 builtInIntegrations: q,
-customWebhooks: J,
-followedChannelWebhooks: X
+customWebhooks: X,
+followedChannelWebhooks: J
   } = a.useMemo(() => {
 let e = {},
   n = {},
@@ -179,7 +179,7 @@ case O.b4C.APPLICATION:
   break;
 case O.b4C.CHANNEL_FOLLOWING:
   Q = (0, i.jsx)(f.Z, {
-    followedChannelWebhooks: X,
+    followedChannelWebhooks: J,
     editedWebhook: L,
     selectableWebhookChannels: k,
     canNavigate: V,
@@ -190,7 +190,7 @@ case O.b4C.WEBHOOKS:
   Q = (0, i.jsx)(x.Z, {
     guild: s,
     channel: b,
-    customWebhooks: J,
+    customWebhooks: X,
     editedWebhook: L,
     selectableWebhookChannels: {
       ...k,
@@ -207,8 +207,8 @@ default:
     channel: b,
     applicationIntegrations: Y,
     builtInIntegrations: q,
-    customWebhooks: J,
-    followedChannelWebhooks: X,
+    customWebhooks: X,
+    followedChannelWebhooks: J,
     isLoading: j || null == s,
     canCreateWebhook: null != H,
     onManageCustomWebhooks: () => {

@@ -25,7 +25,7 @@ className: t
 username: _
   } = s, T = c.ZP.getUserAvatarURL(s), {
 analyticsLocations: N
-  } = (0, i.ZP)(), C = () => {
+  } = (0, i.ZP)(), R = () => {
 (0, o.openUserProfileModal)({
   userId: s.id,
   guildId: n,
@@ -40,7 +40,7 @@ analyticsLocations: N
 className: r()(E.container, t),
 children: [
   (0, a.jsx)(l.Anchor, {
-    onClick: C,
+    onClick: R,
     children: (0, a.jsx)(l.Avatar, {
       src: T,
       size: l.AvatarSizes.SIZE_80,
@@ -56,7 +56,7 @@ children: [
     })
   }),
   (0, a.jsx)(l.Anchor, {
-    onClick: C,
+    onClick: R,
     children: I.Z.Messages.VIEW_PROFILE
   })
 ]

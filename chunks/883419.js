@@ -35,8 +35,8 @@ reviewWarningMessage: P,
 planGroup: b,
 openInvoiceId: g,
 analyticsData: v,
-analyticsLocation: x,
-eligibleApplicationSubscriptionGuilds: L,
+analyticsLocation: L,
+eligibleApplicationSubscriptionGuilds: x,
 handleClose: R
   } = e, {
 activeSubscription: M,
@@ -126,7 +126,7 @@ children: [
           (0, r.jsx)(p.y, {
             selectedGuildId: ee,
             onGuildChange: ea,
-            eligibleApplicationSubscriptionGuilds: L
+            eligibleApplicationSubscriptionGuilds: x
           })
         ]
       }),
@@ -159,7 +159,7 @@ children: [
       onPurchaseError: e => K(e),
       legalTermsNodeRef: ei,
       flashLegalTerms: () => $(!0),
-      analyticsLocation: x,
+      analyticsLocation: L,
       baseAnalyticsData: v,
       flowStartTime: j.startTime,
       planGroup: b,

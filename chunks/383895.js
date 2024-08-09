@@ -13,8 +13,8 @@ var n = a(735250),
   d = a(201133),
   A = a(693824),
   R = a(919394),
-  O = a(91140),
-  N = a(297781),
+  N = a(91140),
+  O = a(297781),
   T = a(359110),
   m = a(592125),
   L = a(944486),
@@ -96,9 +96,9 @@ children: [
               lineClamp: 1,
               children: h
             }),
-            (0, n.jsx)(N.Gk, {
-              location: N.Gt.GAME_PROFILE,
-              children: O.W.map((e, a) => (0, n.jsx)(e, {
+            (0, n.jsx)(O.Gk, {
+              location: O.Gt.GAME_PROFILE,
+              children: N.W.map((e, a) => (0, n.jsx)(e, {
                 entry: s
               }, a))
             })

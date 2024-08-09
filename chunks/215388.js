@@ -68,7 +68,7 @@ required: E,
 value: N,
 enableThemedBackground: D = !1,
 parentModalKey: O
-  } = e, x = (0, l.useFormContext)(), [R, L] = n.useState(() => (0, i.JM)(N)), b = n.useRef(!0 === c), P = null != t ? t : null == x ? void 0 : x.titleId, V = null !== (A = null == x ? void 0 : x.errorId) && void 0 !== A ? A : h, _ = n.useMemo(() => ({
+  } = e, R = (0, l.useFormContext)(), [x, L] = n.useState(() => (0, i.JM)(N)), b = n.useRef(!0 === c), P = null != t ? t : null == R ? void 0 : R.titleId, V = null !== (A = null == R ? void 0 : R.errorId) && void 0 !== A ? A : h, _ = n.useMemo(() => ({
 analyticsName: 'simple',
 autocomplete: {
   alwaysUseLayer: !0,
@@ -102,7 +102,7 @@ placeholder: q,
 required: E,
 channel: m,
 textValue: N,
-richValue: R,
+richValue: x,
 type: _,
 onBlur: () => {
   b.current = !1;
@@ -117,7 +117,7 @@ parentModalKey: O,
 emojiPickerCloseOnModalOuterClick: !0,
 children: [
   !0 === v && (0, a.jsx)(U, {
-    hasError: null != x.error || null != C && N.length > C,
+    hasError: null != R.error || null != C && N.length > C,
     text: N,
     maxLength: C
   }),

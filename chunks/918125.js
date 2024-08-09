@@ -4,9 +4,9 @@ return h;
   }
 });
 var n = s(735250),
-  o = s(470079),
-  c = s(120356),
-  r = s.n(c),
+  c = s(470079),
+  o = s(120356),
+  r = s.n(o),
   i = s(481060),
   t = s(235449),
   l = s(300234),
@@ -16,21 +16,21 @@ function h(e) {
   let {
 guildId: a,
 goToThread: s
-  } = e, c = (0, t.nA)(a), h = o.useCallback(e => {
-let a = c[e.row];
+  } = e, o = (0, t.nA)(a), h = c.useCallback(e => {
+let a = o[e.row];
 return (0, n.jsx)(l.Z, {
   threadId: a,
   goToThread: s,
   showChannelName: !0
 }, ''.concat(e.section, '-').concat(e.row));
   }, [
-c,
+o,
 s
   ]);
   return (0, n.jsx)(i.List, {
 className: r()(d.list, d.activeThreadsList),
 fade: !0,
-sections: [c.length],
+sections: [o.length],
 renderSection: () => null,
 sectionHeight: 0,
 rowHeight: 80,

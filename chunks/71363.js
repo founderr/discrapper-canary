@@ -16,8 +16,8 @@ var s = n(735250),
   C = n(166021),
   g = n(32173),
   p = n(391110),
-  A = n(75077),
-  N = n(981631),
+  N = n(75077),
+  A = n(981631),
   m = n(689938),
   f = n(391552),
   S = n(865215);
@@ -42,7 +42,7 @@ P = (0, I.HI)({
 [v, Z] = a.useState(!1),
 D = (0, E.ZP)('perks-discoverability'),
 B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-j = (0, A.mN)();
+j = (0, N.mN)();
   return P === I.mJ.DEFAULT ? (t = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE, n = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD) : (t = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD, n = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (0, s.jsx)(c.AdvancedScrollerAuto, {
 className: i()(f.allPerksScroller, {
   [f.open]: r,
@@ -57,7 +57,7 @@ children: (0, s.jsx)('div', {
       (0, s.jsx)(R.Z, {
         className: f.heroHeading,
         onBackClick: () => {
-          h(!1), T.default.track(N.rMx.NITRO_HOME_NAVIGATION, {
+          h(!1), T.default.track(A.rMx.NITRO_HOME_NAVIGATION, {
             current_component: p.MQ.SEE_ALL,
             next_component: M,
             interaction_component: 'Back Button'
@@ -75,7 +75,7 @@ children: (0, s.jsx)('div', {
           }),
           (0, s.jsx)(C.Z, {
             className: f.cardCarousel,
-            cards: (0, A.sP)({
+            cards: (0, N.sP)({
               perksCards: O,
               variant: p.R0.CARD_CAROUSEL_FIRST_ROW,
               shopMarketingVariation: D,
@@ -93,7 +93,7 @@ children: (0, s.jsx)('div', {
           }),
           (0, s.jsx)(C.Z, {
             className: f.cardCarousel,
-            cards: (0, A.sP)({
+            cards: (0, N.sP)({
               perksCards: O,
               variant: p.R0.CARD_CAROUSEL_SECOND_ROW,
               shopMarketingVariation: D,
@@ -111,7 +111,7 @@ children: (0, s.jsx)('div', {
           }),
           (0, s.jsx)(C.Z, {
             className: f.cardCarousel,
-            cards: (0, A.sP)({
+            cards: (0, N.sP)({
               perksCards: O,
               variant: p.R0.CARD_CAROUSEL_THIRD_ROW,
               shopMarketingVariation: D,
@@ -128,7 +128,7 @@ children: (0, s.jsx)('div', {
       }),
       (0, s.jsx)(o.$, {
         onChange: e => {
-          e && !v && (T.default.track(N.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+          e && !v && (T.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
             location_stack: L
           }), Z(!0));
         },

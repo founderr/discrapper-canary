@@ -1,6 +1,6 @@
 t.d(s, {
   Z: function() {
-return m;
+return g;
   }
 });
 var n = t(735250);
@@ -18,16 +18,16 @@ var i = t(913527),
   S = t(689938),
   E = t(921744);
 
-function m(e) {
+function g(e) {
   var s;
   let {
 guildId: t
-  } = e, i = (0, a.e7)([d.Z], () => d.Z.getGuild(t)), m = (0, a.e7)([c.ZP], () => c.ZP.isMuted(t)), g = (0, a.e7)([c.ZP], () => c.ZP.getMuteConfig(t));
+  } = e, i = (0, a.e7)([d.Z], () => d.Z.getGuild(t)), g = (0, a.e7)([c.ZP], () => c.ZP.isMuted(t)), m = (0, a.e7)([c.ZP], () => c.ZP.getMuteConfig(t));
   return null == i ? null : (0, n.jsxs)(r.FormItem, {
 children: [
   (0, n.jsx)(r.FormSwitch, {
     hideBorder: !0,
-    value: m,
+    value: g,
     onChange: e => {
       o.Z.updateGuildNotificationSettings(t, {
         muted: e
@@ -41,7 +41,7 @@ children: [
       name: i.name
     })
   }),
-  m && (0, n.jsxs)('div', {
+  g && (0, n.jsxs)('div', {
     className: E.mutedConfig,
     children: [
       (0, n.jsxs)('div', {
@@ -62,7 +62,7 @@ children: [
                   minute: '2-digit'
                 })
               });
-            }(g)
+            }(m)
           })
         ]
       }),
@@ -78,7 +78,7 @@ children: [
           }, u.ZB.Muted);
         },
         options: (0, h.W9)(),
-        value: null !== (s = null == g ? void 0 : g.selected_time_window) && void 0 !== s ? s : N.Oe.ALWAYS
+        value: null !== (s = null == m ? void 0 : m.selected_time_window) && void 0 !== s ? s : N.Oe.ALWAYS
       })
     ]
   })

@@ -29,8 +29,8 @@ var l = n(392711),
   b = n(841174),
   M = n(11352),
   R = n(474936),
-  O = n(981631),
-  P = n(354459),
+  P = n(981631),
+  O = n(354459),
   y = n(37113),
   j = n(689938);
 
@@ -105,7 +105,7 @@ let {
 }, {
   autoTrackExposure: !1
 });
-if (!n || e.state !== O.hes.DISCONNECTED || e.willReconnect)
+if (!n || e.state !== P.hes.DISCONNECTED || e.willReconnect)
   return;
 let i = p.Z.getChannel(e.channelId);
 if (null == i || !(null === (t = v.Z.getPerksDemos()) || void 0 === t ? void 0 : t[r.q.STREAM_HIGH_QUALITY]))
@@ -164,8 +164,8 @@ super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiu
     {
       sendNitroMessage: s
     } = (0, x.TD)(a),
-    c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : O.Eu4.NONE;
-  if (!!s && !(c >= O.Eu4.TIER_2) && (null == r ? void 0 : r.type) === P.fO.STREAM && (null == r ? void 0 : r.id) !== (null == n ? void 0 : n.id) && null != r.maxResolution && null != r.maxFrameRate) {
+    c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : P.Eu4.NONE;
+  if (!!s && !(c >= P.Eu4.TIER_2) && (null == r ? void 0 : r.type) === O.fO.STREAM && (null == r ? void 0 : r.id) !== (null == n ? void 0 : n.id) && null != r.maxResolution && null != r.maxFrameRate) {
     if (e !== this._lastStreamingChannelId) {
       this._lastStreamingChannelId = e;
       let n = j.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
@@ -173,10 +173,10 @@ super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiu
         resolution: (0, y.o6)(r.maxResolution.height),
         fps: (0, I.bp)(r.maxFrameRate)
       });
-      o.Z.sendNitroSystemMessage(e, n), g.default.track(O.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+      o.Z.sendNitroSystemMessage(e, n), g.default.track(P.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
         type: R.cd.HD_STREAMING_VIEWER_UPSELL,
-        location_section: null != t ? O.jXE.TEXT_IN_VOICE : O.jXE.CHANNEL_TEXT_AREA,
-        location_object: O.qAy.MESSAGE,
+        location_section: null != t ? P.jXE.TEXT_IN_VOICE : P.jXE.CHANNEL_TEXT_AREA,
+        location_object: P.qAy.MESSAGE,
         guild_id: t
       });
     }

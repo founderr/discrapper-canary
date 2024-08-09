@@ -100,12 +100,12 @@ lineClamp: E = 1,
 cardWidth: N = 332,
 cardHeight: D,
 thumbnailHeight: O = 187,
-descriptionTextVariant: x = 'text-sm/normal',
-isDraft: R = !1
+descriptionTextVariant: R = 'text-sm/normal',
+isDraft: x = !1
   } = e, L = (0, o.hQ)(), b = (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsx)(C, {
-    showDraftBadge: R,
+    showDraftBadge: x,
     hidePurchaseToUnlockBadge: !0,
     children: (0, a.jsx)('img', {
       alt: '',
@@ -131,7 +131,7 @@ children: [
           }),
           (0, a.jsx)(s.FocusBlock, {
             children: (0, a.jsx)(l.Z, {
-              variant: x,
+              variant: R,
               color: 'text-muted',
               lineClamp: E,
               text: n
@@ -139,7 +139,7 @@ children: [
           }),
           h && (0, a.jsx)(g, {
             onShowFullDescription: m,
-            variant: x
+            variant: R
           }),
           q || null == T || '' === T.name ? null : (0, a.jsxs)(a.Fragment, {
             children: [

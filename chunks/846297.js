@@ -50,8 +50,8 @@ var n = r(344106),
   S = r(612568),
   p = r(683900),
   D = r(202406),
-  L = r(393746),
-  f = r(975927);
+  f = r(393746),
+  L = r(975927);
 let h = [
   new n.QD(),
   new _.c(),
@@ -69,7 +69,7 @@ function C(t = {}) {
 ...t,
 stackParser: (0, s.Sq)(t.stackParser || D.Dt),
 integrations: (0, a.m8)(t),
-transport: t.transport || ((0, c.Ak)() ? L.f : f.K)
+transport: t.transport || ((0, c.Ak)() ? f.f : L.K)
   };
   (0, i.M)(u.R, e), t.autoSessionTracking && function() {
 if (void 0 === l.m9.document) {

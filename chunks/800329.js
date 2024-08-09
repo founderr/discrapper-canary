@@ -38,8 +38,8 @@ width: 0,
 height: 0
   }), {
 width: E,
-height: C
-  } = _, g = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = E - 16, x = C - (p + m), {
+height: g
+  } = _, C = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = E - 16, x = g - (p + m), {
 tileStyle: T,
 tileWidth: N,
 rows: v,
@@ -83,8 +83,8 @@ return {
   rows: i,
   columns: a
 };
-  }(g, I, x), [
-g,
+  }(C, I, x), [
+C,
 I,
 x
   ]), Z = S + 1, A = Z * N + (Z - 1) * 8 <= E, M = Math.floor(N / c) + 8, b = Math.max(0, x - M * v) / 2;
@@ -110,7 +110,7 @@ renderRow: function(e) {
         className: l()(o.tile, {
           [o.padColumn]: A,
           [o.noVerticalMargin]: s >= (v - 1) * S,
-          [o.noHorizontalMargin]: (s + 1) % S == 0 || s === g - 1
+          [o.noHorizontalMargin]: (s + 1) % S == 0 || s === C - 1
         }),
         children: (0, i.jsx)('div', {
           className: o.tileSizer,

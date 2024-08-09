@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(358085),
   f = n(228488),
   E = n(981631),
-  C = n(495585);
-let g = () => {
+  g = n(495585);
+let C = () => {
   l.Z.wait(() => u.xv(E.KJ3.CHANNEL_CALL_POPOUT));
 };
 
@@ -119,7 +119,7 @@ v,
 T,
 M
   ]), a.useEffect(() => {
-!S && x && g();
+!S && x && C();
   }, [
 S,
 x
@@ -127,7 +127,7 @@ x
 themeable: !1,
 node: M,
 guestWindow: u,
-className: C.rightTrayIcon,
+className: g.rightTrayIcon,
 onClick: P(N)
   }) : null;
 }

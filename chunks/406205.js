@@ -16,8 +16,8 @@ var n = t(735250),
   N = t(748756),
   S = t(732760),
   E = t(686660),
-  m = t(981631),
-  g = t(490897),
+  g = t(981631),
+  m = t(490897),
   _ = t(526761),
   T = t(689938),
   x = t(289697),
@@ -46,7 +46,7 @@ guildId: s
   } = e, t = (0, r.e7)([c.ZP], () => c.ZP.getGuildFlags(s)), l = (0, r.e7)([c.ZP], () => {
 let e = c.ZP.getGuildUnreadSetting(s),
   t = c.ZP.getMessageNotifications(s);
-return e === g.i.UNSET ? t === m.bL.ALL_MESSAGES ? g.i.ALL_MESSAGES : g.i.ONLY_MENTIONS : e;
+return e === m.i.UNSET ? t === g.bL.ALL_MESSAGES ? m.i.ALL_MESSAGES : m.i.ONLY_MENTIONS : e;
   }), a = (0, r.e7)([c.ZP], () => c.ZP.getMessageNotifications(s)), [I, C] = (0, i.useState)(!1), v = I ? E.s8.CUSTOM : (0, E.gs)(l, a), L = e => {
 if (e === E.s8.CUSTOM) {
   C(!0);
@@ -129,14 +129,14 @@ children: [
             className: x.input,
             onChange: e => {
               C(!1), d.Z.updateGuildNotificationSettings(s, {
-                flags: (0, h.Q4)(t, e === g.i.ALL_MESSAGES ? _.vc.UNREADS_ALL_MESSAGES : _.vc.UNREADS_ONLY_MENTIONS)
+                flags: (0, h.Q4)(t, e === m.i.ALL_MESSAGES ? _.vc.UNREADS_ALL_MESSAGES : _.vc.UNREADS_ONLY_MENTIONS)
               }, u.UE.unreads(e));
             },
             options: (0, S.y)({
               notificationSetting: a
             }),
             renderOptionLabel: e => {
-              let s = e.disabled && e.value === g.i.ONLY_MENTIONS && l !== g.i.ONLY_MENTIONS;
+              let s = e.disabled && e.value === m.i.ONLY_MENTIONS && l !== m.i.ONLY_MENTIONS;
               return (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)('div', {
@@ -168,13 +168,13 @@ children: [
               let t = {
                 message_notifications: e
               };
-              e === m.bL.ALL_MESSAGES && l !== g.i.ALL_MESSAGES && (t.flags = (0, h.Q4)(c.ZP.getGuildFlags(s), _.vc.UNREADS_ALL_MESSAGES)), d.Z.updateGuildNotificationSettings(s, t, u.UE.notifications(e));
+              e === g.bL.ALL_MESSAGES && l !== m.i.ALL_MESSAGES && (t.flags = (0, h.Q4)(c.ZP.getGuildFlags(s), _.vc.UNREADS_ALL_MESSAGES)), d.Z.updateGuildNotificationSettings(s, t, u.UE.notifications(e));
             },
             options: (0, S.d)({
               notificationSetting: a
             }),
             renderOptionLabel: e => {
-              let s = e.value === m.bL.ALL_MESSAGES && l !== g.i.ALL_MESSAGES && a !== m.bL.ALL_MESSAGES;
+              let s = e.value === g.bL.ALL_MESSAGES && l !== m.i.ALL_MESSAGES && a !== g.bL.ALL_MESSAGES;
               return (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)(o.Text, {
@@ -225,7 +225,7 @@ unreadSetting: s
   name: T.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_3
 }
   ];
-  return s === g.i.ALL_MESSAGES && (t[1].muted = !1), (0, n.jsx)('div', {
+  return s === m.i.ALL_MESSAGES && (t[1].muted = !1), (0, n.jsx)('div', {
 className: x.channeList,
 children: t.map(e => (0, n.jsxs)('div', {
   className: x.channelListChannel,
@@ -270,7 +270,7 @@ function p(e) {
   return (0, n.jsxs)('div', {
 className: x.mockMessage,
 children: [
-  e.notificationSetting === m.bL.NO_MESSAGES && (0, n.jsx)('div', {
+  e.notificationSetting === g.bL.NO_MESSAGES && (0, n.jsx)('div', {
     className: x.mockMessageDisabled
   }),
   (0, n.jsx)('div', {
@@ -286,12 +286,12 @@ children: [
         variant: 'text-xs/medium',
         children: T.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR
       }),
-      e.notificationSetting === m.bL.ALL_MESSAGES && (0, n.jsx)(o.Text, {
+      e.notificationSetting === g.bL.ALL_MESSAGES && (0, n.jsx)(o.Text, {
         variant: 'text-xs/normal',
         color: 'text-muted',
         children: T.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_MESSAGE
       }),
-      e.notificationSetting !== m.bL.ALL_MESSAGES && (0, n.jsxs)(n.Fragment, {
+      e.notificationSetting !== g.bL.ALL_MESSAGES && (0, n.jsxs)(n.Fragment, {
         children: [
           (0, n.jsxs)(o.Text, {
             variant: 'text-xs/normal',

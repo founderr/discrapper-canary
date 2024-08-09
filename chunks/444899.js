@@ -16,8 +16,8 @@ var n = t(735250),
   N = t(699516),
   S = t(594174),
   E = t(621600),
-  m = t(981631),
-  g = t(689938),
+  g = t(981631),
+  m = t(689938),
   _ = t(520177);
 
 function T(e, s, t) {
@@ -59,9 +59,9 @@ let {
   guildMessageNotifications: a,
   checkboxColor: r
 } = this.props, o = s === e;
-(null == s || s === m.bL.NULL) && e === a && (o = !0);
+(null == s || s === g.bL.NULL) && e === a && (o = !0);
 let d = l.Checkbox.Types.INVERTED;
-return (i || s === m.bL.NULL || null == s) && (d = l.Checkbox.Types.GHOST), (0, n.jsx)(l.Checkbox, {
+return (i || s === g.bL.NULL || null == s) && (d = l.Checkbox.Types.GHOST), (0, n.jsx)(l.Checkbox, {
   value: !t && o,
   disabled: t,
   shape: l.Checkbox.Shapes.ROUND,
@@ -77,15 +77,15 @@ let {
 } = this.props;
 null != t.parent_id && (e = u.Z.getChannel(t.parent_id));
 let i = (0, d.KS)(t);
-if (t.type === m.d4z.GUILD_CATEGORY && null != t.guild_id && '' !== t.guild_id) {
+if (t.type === g.d4z.GUILD_CATEGORY && null != t.guild_id && '' !== t.guild_id) {
   let e = h.Z.getCategories(t.guild_id);
-  s = g.Z.Messages.NUM_CHANNELS.format({
+  s = m.Z.Messages.NUM_CHANNELS.format({
     num: null != e[t.id] ? e[t.id].length : 0
   });
 } else
-  s = null != e ? g.Z.Messages.IN_CATEGORY.format({
+  s = null != e ? m.Z.Messages.IN_CATEGORY.format({
     categoryName: (0, o.F6)(e, S.default, N.Z)
-  }) : g.Z.Messages.NO_CATEGORY;
+  }) : m.Z.Messages.NO_CATEGORY;
 return (0, n.jsxs)(c.Z, {
   grow: 1,
   className: _.nameContainer,
@@ -128,21 +128,21 @@ return (0, n.jsxs)(c.Z, {
       grow: 0,
       shrink: 0,
       className: s ? _.checkboxContainerMuted : _.checkboxContainer,
-      children: this.renderMessageNotificationsRadioOption(m.bL.ALL_MESSAGES)
+      children: this.renderMessageNotificationsRadioOption(g.bL.ALL_MESSAGES)
     }),
     (0, n.jsx)(c.Z.Child, {
       wrap: !0,
       grow: 0,
       shrink: 0,
       className: s ? _.checkboxContainerMuted : _.checkboxContainer,
-      children: this.renderMessageNotificationsRadioOption(m.bL.ONLY_MENTIONS)
+      children: this.renderMessageNotificationsRadioOption(g.bL.ONLY_MENTIONS)
     }),
     (0, n.jsx)(c.Z.Child, {
       wrap: !0,
       grow: 0,
       shrink: 0,
       className: s ? _.checkboxContainerMuted : _.checkboxContainer,
-      children: this.renderMessageNotificationsRadioOption(m.bL.NO_MESSAGES)
+      children: this.renderMessageNotificationsRadioOption(g.bL.NO_MESSAGES)
     }),
     (0, n.jsx)(c.Z.Child, {
       wrap: !0,
@@ -188,13 +188,13 @@ super(...e), T(this, '_timeout', void 0), T(this, 'state', {
   let {
     messageNotifications: t
   } = this.props;
-  this.setMessageNotification(null != t ? t : m.bL.NULL, s, E.UE.muted(s));
+  this.setMessageNotification(null != t ? t : g.bL.NULL, s, E.UE.muted(s));
 }), T(this, 'handleDelete', () => {
   let {
     onDelete: e,
     channel: s
   } = this.props;
-  this.setMessageNotification(m.bL.NULL, !1, E.ZB.OverrideDeleted), null != e && e(s.id);
+  this.setMessageNotification(g.bL.NULL, !1, E.ZB.OverrideDeleted), null != e && e(s.id);
 });
   }
 }

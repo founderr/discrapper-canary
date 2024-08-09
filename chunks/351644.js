@@ -81,7 +81,7 @@ isFetchingConnections: g.Z.isFetching(),
 accounts: g.Z.getAccounts()
   }), []), {
 canManageWebhooks: q,
-canManageGuild: J
+canManageGuild: X
   } = (0, d.cj)([p.Z], () => ({
 canManageWebhooks: null != n && p.Z.can(b.Plq.MANAGE_WEBHOOKS, n) || null != t && p.Z.can(b.Plq.MANAGE_WEBHOOKS, t),
 canManageGuild: null != n && null == t && p.Z.can(b.Plq.MANAGE_GUILD, n)
@@ -89,7 +89,7 @@ canManageGuild: null != n && null == t && p.Z.can(b.Plq.MANAGE_GUILD, n)
 n,
 t
   ]), {
-availableTwitchIntegrations: X,
+availableTwitchIntegrations: J,
 availableYoutubeIntegrations: Q,
 guildTwitchIntegrations: $,
 guildYoutubeIntegrations: ee
@@ -108,7 +108,7 @@ o.youtube
 showTwitchCard: en,
 showYoutubeCard: et
   } = a.useMemo(() => {
-if (Y || !J)
+if (Y || !X)
   return {
     showTwitchCard: !1,
     showYoutubeCard: !1
@@ -117,15 +117,15 @@ let e = null == n ? void 0 : n.hasFeature(b.oNc.COMMUNITY),
   t = z.filter(e => e.type === b.ABu.TWITCH).length > 0,
   i = z.filter(e => e.type === b.ABu.YOUTUBE).length > 0;
 return {
-  showTwitchCard: X > 0 || !t && e,
+  showTwitchCard: J > 0 || !t && e,
   showYoutubeCard: Q > 0 || !i && e
 };
   }, [
 Y,
-J,
+X,
 n,
 z,
-X,
+J,
 Q
   ]), ei = Object.values(s).length, ea = a.useMemo(() => {
 let e = ei > 100 ? D : r();
@@ -200,7 +200,7 @@ ed(!0), clearTimeout(ec.current), ec.current = setTimeout(() => {
 em = (0, i.jsx)('div', {
   className: v.footerImage
 });
-  0 === eI.length && J && (eI = function(e, n, t) {
+  0 === eI.length && X && (eI = function(e, n, t) {
 let a = (0, c.wj)(e) ? L : j,
   s = (0, i.jsxs)(h.Z, {
     direction: h.Z.Direction.VERTICAL,
@@ -313,7 +313,7 @@ return e > 0 ? (a = Z.Z.Messages.INTEGRATIONS_TWITCH_BUTTON, s = Z.Z.Messages.IN
     text: s
   }]
 }, 'integrations-twitch');
-  }(X, $, U)), et && eE.push(function(e, n, t) {
+  }(J, $, U)), et && eE.push(function(e, n, t) {
 let a, s, l;
 let o = _.Z.get(b.ABu.YOUTUBE);
 return e > 0 ? (a = Z.Z.Messages.INTEGRATIONS_YOUTUBE_BUTTON, s = Z.Z.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({
@@ -351,7 +351,7 @@ children: [
   }) : (0, i.jsxs)(i.Fragment, {
     children: [
       eE,
-      J ? (0, i.jsxs)(i.Fragment, {
+      X ? (0, i.jsxs)(i.Fragment, {
         children: [
           eE.length > 0 ? (0, i.jsx)(u.FormDivider, {
             className: v.divider

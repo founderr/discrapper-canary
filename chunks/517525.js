@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(194082),
   f = n(484459),
   E = n(594174),
-  C = n(626135),
-  g = n(74538),
+  g = n(626135),
+  C = n(74538),
   I = n(557457),
   x = n(475674),
   T = n(981631),
@@ -80,7 +80,7 @@ let P = t || s,
     location: O
   } = (0, p.O)(),
   y = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
-  D = o && !g.ZP.isPremium(y, N.p9.TIER_1) && !g.ZP.canStreamQuality(g.ZP.StreamQuality.MID, y),
+  D = o && !C.ZP.isPremium(y, N.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
   k = a.useCallback(() => {
     D && P && (0, h.openModalLazy)(async () => {
       let {
@@ -97,7 +97,7 @@ let P = t || s,
     O
   ]);
 if (a.useEffect(() => {
-    !Z && P && (C.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+    !Z && P && (g.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
       type: N.cd.STREAM_QUALITY_INDICATOR,
       has_premium_stream_fps: t,
       has_premium_stream_resolution: s,
@@ -157,13 +157,13 @@ className: c,
 premiumIndicator: u
   } = e, [d, p] = a.useState(!1), m = (0, I.Wc)(t), {
 reducedMotion: E
-  } = a.useContext(h.AccessibilityPreferencesContext), C = n && null != m;
+  } = a.useContext(h.AccessibilityPreferencesContext), g = n && null != m;
   a.useEffect(() => {
 (0, f.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
   dispatchWait: !0
 });
   }, [t]);
-  let g = (0, h.useTransition)(C, {
+  let C = (0, h.useTransition)(g, {
   enter: {
     from: E.enabled ? b : A,
     to: E.enabled ? R : M
@@ -172,7 +172,7 @@ reducedMotion: E
   config: P
 }, 'animate-always'),
 x = (0, h.useSpring)({
-  to: C ? L : j,
+  to: g ? L : j,
   config: P
 }, 'animate-always');
   return (e => {
@@ -184,7 +184,7 @@ return (0, i.jsxs)('div', {
   className: l()(S.streamQualityIndicator, n),
   ...a,
   children: [
-    g((e, n) => n ? (0, i.jsx)(r.animated.div, {
+    C((e, n) => n ? (0, i.jsx)(r.animated.div, {
       style: e,
       children: (0, i.jsx)(O, {
         className: S.liveQualityIndicator,
@@ -203,7 +203,7 @@ return (0, i.jsxs)('div', {
       children: (0, i.jsx)(_.ZP, {
         look: _.jZ.RED,
         size: o,
-        shape: C ? h.BadgeShapes.ROUND_RIGHT : h.BadgeShapes.ROUND
+        shape: g ? h.BadgeShapes.ROUND_RIGHT : h.BadgeShapes.ROUND
       })
     })
   ]

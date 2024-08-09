@@ -1,6 +1,6 @@
 a.r(n), a.d(n, {
   default: function() {
-return O;
+return g;
   }
 }), a(47120);
 var t = a(735250),
@@ -150,7 +150,7 @@ children: [
   });
 }
 
-function O(e) {
+function g(e) {
   let n, {
   channel: a,
   platform: s,
@@ -159,8 +159,8 @@ function O(e) {
 } = e,
 x = (0, d.e7)([N.Z], () => N.Z.getDevicesForPlatform(s), [s]),
 _ = (0, d.e7)([N.Z], () => N.Z.getLastSelectedDeviceByPlatform(s)),
-O = i.useMemo(() => Object.values(x), [x]),
-g = (0, d.e7)([N.Z], () => N.Z.getFetchingDevices(s)),
+g = i.useMemo(() => Object.values(x), [x]),
+O = (0, d.e7)([N.Z], () => N.Z.getFetchingDevices(s)),
 p = (0, d.e7)([N.Z], () => {
   var e;
   return null === (e = N.Z.getAwaitingRemoteSessionInfo()) || void 0 === e ? void 0 : e.deviceId;
@@ -173,9 +173,9 @@ p = (0, d.e7)([N.Z], () => {
   i.useEffect(() => {
 C.LO(s);
   }, [s]), i.useEffect(() => {
-1 === O.length ? R(O[0].id) : null != _ && R(_);
+1 === g.length ? R(g[0].id) : null != _ && R(_);
   }, [
-O,
+g,
 _
   ]);
   let Z = async () => {
@@ -192,11 +192,11 @@ try {
   });
 }
   };
-  return n = g ? (0, t.jsx)('div', {
+  return n = O ? (0, t.jsx)('div', {
 className: v.spinnerContainer,
 children: (0, t.jsx)(l.Spinner, {})
-  }) : 0 === O.length ? (0, t.jsx)(I, {}) : (0, t.jsx)(f, {
-devices: O,
+  }) : 0 === g.length ? (0, t.jsx)(I, {}) : (0, t.jsx)(f, {
+devices: g,
 onFinished: Z,
 selectedDeviceId: S,
 transferring: j || null != p,

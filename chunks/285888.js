@@ -201,16 +201,16 @@ let {
   ...I
 };
 null != g && (M.autoFocus = g), null != x && (M.isDisabled = x), null != m && (M.isClearable = m), null != _ && (M.isSearchable = _);
-let P = {
+let N = {
   IndicatorSeparator: () => null
 };
-null != o && (P.Option = e => (0, i.jsx)(d.wx.Option, {
+null != o && (N.Option = e => (0, i.jsx)(d.wx.Option, {
   ...e,
   children: o(e.data)
-})), null != a && (P.SingleValue = e => (0, i.jsx)(d.wx.SingleValue, {
+})), null != a && (N.SingleValue = e => (0, i.jsx)(d.wx.SingleValue, {
   ...e,
   children: a(e.data)
-})), null != s && (P.MultiValue = e => s(e.data));
+})), null != s && (N.MultiValue = e => s(e.data));
 if (C && Array.isArray(f)) {
   let n = {};
   l.forEach(e => {
@@ -232,7 +232,7 @@ return (0, i.jsx)(u.FocusRing, {
         className: t,
         ref: this._selectRef,
         isMulti: C,
-        components: P,
+        components: N,
         options: l,
         styles: null != v ? v : b,
         onFocus: this.handleFocus,

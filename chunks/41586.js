@@ -34,14 +34,14 @@ if (null != l && !!C)
   }, [
 l,
 C
-  ]), N = (0, u.e7)([T.Z], () => T.Z.getSearchStateByGuildId(l.id), [l.id], c()), A = (0, x.gm)(l.id), [R, S] = a.useState(N.query), Z = null != N.selectedSort && N.selectedSort !== b.d$.ORDER_BY_GUILD_JOINED_AT_DESC && N.selectedSort !== b.d$.ORDER_BY_UNSPECIFIED, j = a.useCallback(e => {
+  ]), N = (0, u.e7)([T.Z], () => T.Z.getSearchStateByGuildId(l.id), [l.id], c()), R = (0, x.gm)(l.id), [A, S] = a.useState(N.query), Z = null != N.selectedSort && N.selectedSort !== b.d$.ORDER_BY_GUILD_JOINED_AT_DESC && N.selectedSort !== b.d$.ORDER_BY_UNSPECIFIED, j = a.useCallback(e => {
 let t = e.trim();
-t.length > 0 && A(), (0, L.Dr)(l.id, {
+t.length > 0 && R(), (0, L.Dr)(l.id, {
   query: t
 });
   }, [
 l.id,
-A
+R
   ]), v = a.useCallback(r()(j, 300), [j]), D = a.useCallback(e => {
 S(e), v(e);
   }, [v]), O = a.useCallback(() => {
@@ -70,7 +70,7 @@ children: [
       className: s()(H.searchHeader),
       children: (0, n.jsx)(_.SearchBar, {
         className: H.searchBar,
-        query: R,
+        query: A,
         placeholder: p.Z.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
         onChange: D,
         onClear: O,

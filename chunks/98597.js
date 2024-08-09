@@ -147,7 +147,7 @@ children: e => (0, s.jsx)(h.Clickable, {
   });
 }
 
-function O(e) {
+function P(e) {
   let {
 channel: t
   } = e, n = () => {
@@ -169,7 +169,7 @@ children: e => (0, s.jsx)(h.Clickable, {
   });
 }
 
-function P(e) {
+function O(e) {
   let {
 channel: t
   } = e, n = () => {
@@ -204,12 +204,12 @@ return (0, s.jsx)(R, {
 });
   }
   renderRemoveSuggestionButton() {
-return (0, s.jsx)(O, {
+return (0, s.jsx)(P, {
   ...this.props
 });
   }
   renderAcceptSuggestionButton() {
-return (0, s.jsx)(P, {
+return (0, s.jsx)(O, {
   ...this.props
 });
   }

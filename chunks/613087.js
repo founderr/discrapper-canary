@@ -39,7 +39,7 @@ let {
   unregisterComponent: g,
   expansionSpring: f,
   mountPoints: C
-} = o.useContext(c), _ = o.useRef(null), h = o.useRef(null), E = o.useRef();
+} = o.useContext(c), _ = o.useRef(null), E = o.useRef(null), h = o.useRef();
 o.useEffect(() => {
   m();
 }, [m]), o.useLayoutEffect(() => {
@@ -57,12 +57,12 @@ let S = o.useCallback(e => {
   let {
     height: t
   } = e;
-  E.current !== t && (m(), E.current = t);
+  h.current !== t && (m(), h.current = t);
 }, [m]);
 (0, l.P)(_, S);
 let T = null === (n = C.get(d)) || void 0 === n ? void 0 : n.current,
-  v = null;
-return null == T ? v = null : p && null != f ? v = (0, s.jsxs)(s.Fragment, {
+  N = null;
+return null == T ? N = null : p && null != f ? N = (0, s.jsxs)(s.Fragment, {
   children: [
     'collapsed' === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
       style: {
@@ -78,7 +78,7 @@ return null == T ? v = null : p && null != f ? v = (0, s.jsxs)(s.Fragment, {
           ]
         })
       },
-      children: i(h)
+      children: i(E)
     }), T),
     'expanded' === u && (0, r.createPortal)((0, s.jsx)(a.animated.div, {
       style: {
@@ -94,17 +94,17 @@ return null == T ? v = null : p && null != f ? v = (0, s.jsxs)(s.Fragment, {
           ]
         })
       },
-      children: i(h)
+      children: i(E)
     }), T)
   ]
-}) : 'collapsed' === u && (v = (0, r.createPortal)(i(h), T)), (0, s.jsxs)('div', {
+}) : 'collapsed' === u && (N = (0, r.createPortal)(i(E), T)), (0, s.jsxs)('div', {
   style: {
-    opacity: null == v && 'collapsed' === u || null == T ? 1 : 0
+    opacity: null == N && 'collapsed' === u || null == T ? 1 : 0
   },
   ref: t,
   children: [
     i(_),
-    v
+    N
   ]
 });
   }),

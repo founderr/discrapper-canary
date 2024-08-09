@@ -35,7 +35,7 @@ object: A.qAy.CHANNEL
   }
 };
 
-function O(e, t) {
+function P(e, t) {
   (0, p.jW)(e, async () => {
 let {
   default: e
@@ -61,7 +61,7 @@ return n => (0, i.jsx)(e, {
   });
 }
 t.Z = l.memo(function(e) {
-  var t, n, r, p, P;
+  var t, n, r, p, O;
   let {
 guildNode: y,
 setRef: j,
@@ -73,22 +73,22 @@ animatable: k,
 selected: B = !1,
 unread: H = !1,
 mediaState: V,
-unavailable: F = !1,
-badge: W = 0,
-contextMenu: z = O,
+unavailable: W = !1,
+badge: F = 0,
+contextMenu: z = P,
 draggable: Y = !1,
 sorting: K = !1,
 preloadOnClick: q = !0,
 guildJoinRequestStatus: Q
   } = e, {
-id: J,
-parentId: X
-  } = y, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != V ? (0, L.Or)(V) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-  null == ee && W > 0 ? ee = null !== (r = (0, L.Ne)(W)) && void 0 !== r ? r : void 0 : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({
+id: X,
+parentId: J
+  } = y, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : W ? (0, L.Ny)() : null != V ? (0, L.Or)(V) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+  null == ee && F > 0 ? ee = null !== (r = (0, L.Ne)(F)) && void 0 !== r ? r : void 0 : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({
 guildJoinRequestStatus: Q
   })) && void 0 !== p ? p : void 0);
-  let et = null !== (P = e.lowerBadgeSize) && void 0 !== P ? P : {
-  width: (0, d.getBadgeWidthForValue)(W)
+  let et = null !== (O = e.lowerBadgeSize) && void 0 !== O ? O : {
+  width: (0, d.getBadgeWidthForValue)(F)
 },
 [{
   dragging: en
@@ -107,7 +107,7 @@ guildJoinRequestStatus: Q
     dragging: e.isDragging()
   })
 }),
-el = (0, o.Ie)(null != J ? J : A.lds),
+el = (0, o.Ie)(null != X ? X : A.lds),
 [er, ea] = l.useState(!1),
 es = !K && er,
 [eo, ec] = l.useState(!1),
@@ -121,15 +121,15 @@ es = !K && er,
     });
     return;
   }
-  (0, g.X)(J, {
+  (0, g.X)(X, {
     state: R
   });
 }, [
-  J,
+  X,
   U
 ]),
 e_ = l.useCallback(() => {
-  if (null != U || null == G || F || !q)
+  if (null != U || null == G || W || !q)
     return;
   let e = (0, f.V)(G.id);
   if (null != e)
@@ -137,10 +137,10 @@ e_ = l.useCallback(() => {
 }, [
   U,
   G,
-  F,
+  W,
   q
 ]),
-ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(J)),
+ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(X)),
 em = l.useCallback(e => {
   null != G && !ef && z(e, G);
 }, [
@@ -149,11 +149,11 @@ em = l.useCallback(e => {
   ef
 ]),
 eg = l.useCallback(e => {
-  if ('ArrowLeft' === e.key && null != X) {
+  if ('ArrowLeft' === e.key && null != J) {
     var t;
-    null === (t = document.querySelector('[aria-owns=folder-items-'.concat(X, ']'))) || void 0 === t || t.focus();
+    null === (t = document.querySelector('[aria-owns=folder-items-'.concat(J, ']'))) || void 0 === t || t.focus();
   }
-}, [X]),
+}, [J]),
 eC = l.useCallback(e => {
   if (e) {
     eh.delay();
@@ -162,9 +162,9 @@ eC = l.useCallback(e => {
   eh.cancel(), ed(!1);
 }, [eh]),
 eI = l.useCallback(e => {
-  null == j || j(J, e);
+  null == j || j(X, e);
 }, [
-  J,
+  X,
   j
 ]);
   if (null == G)
@@ -182,7 +182,7 @@ return null;
 }) : (0, i.jsx)(d.NavItem, {
   ariaLabel: b.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
     guildName: G.toString(),
-    mentions: W
+    mentions: F
   }),
   name: G.toString(),
   onClick: ep,

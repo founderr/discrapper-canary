@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(414910),
   f = n(415635),
   E = n(925329),
-  C = n(649739),
-  g = n(574176),
+  g = n(649739),
+  C = n(574176),
   I = n(833858),
   x = n(223135),
   T = n(37091),
@@ -79,8 +79,8 @@ noBorder: em = !1,
 noVideoRender: e_ = !1,
 focused: ef = !1,
 blocked: eE = !1,
-fit: eC = v.L.CONTAIN,
-paused: eg = !1,
+fit: eg = v.L.CONTAIN,
+paused: eC = !1,
 pulseSpeakingIndicator: eI = !1
   } = e, ex = a.useContext(P.h9), [eT, eN] = a.useState(!1), ev = (0, o.e7)([D.default], () => D.default.getId()), eS = (0, o.e7)([B.default], () => B.default.getCurrentUser()), eZ = I.type === $.fO.ACTIVITY ? null : null === (t = I.user) || void 0 === t ? void 0 : t.id, [eA] = (0, m.Z)(I.type === $.fO.ACTIVITY ? [I.id] : []), eM = (0, o.e7)([T.Z], () => T.Z.getEnabled()), eb = (0, o.e7)([U.Z], () => null != eZ && U.Z.isLocalVideoDisabled(eZ, (0, _.Z)(I.type)), [
 eZ,
@@ -129,12 +129,12 @@ return {
 };
   }(ev, I, eo.getGuildId()), eD = I.type === $.fO.STREAM && eZ === ev, ek = (0, F.So)(r.q.STREAM_HIGH_QUALITY), eU = (0, o.e7)([R.Z], () => R.Z.getState()), ew = ek && eD, eB = (0, M.o)(I, eS), eH = (0, A.lL)('CallTile', !0, eS, eB), eG = eH.persistentQualityIndicator && eH.enabled, eV = (0, o.e7)([O.Z], () => null != eZ ? O.Z.getEffectForUserId(eZ) : null), eF = (0, o.e7)([H.Z], () => H.Z.getVoicePlatformForChannel(eo.id, null != eZ ? eZ : J.lds)), {
 enableHangStatus: eW
-  } = g.n.useExperiment({
+  } = C.n.useExperiment({
 guildId: eo.guild_id,
 location: 'VoiceUsers'
   }), {
 showGameIcon: ez
-  } = C.ZP.useExperiment({
+  } = g.ZP.useExperiment({
 location: 'voice_users'
   }, {
 autoTrackExposure: !1
@@ -191,9 +191,9 @@ case $.fO.STREAM:
     participant: I,
     selected: ep,
     width: ec,
-    fit: eC,
+    fit: eg,
     onVideoResize: ed,
-    paused: eg,
+    paused: eC,
     inPopout: eu,
     focused: ef
   }), e5 = (0, i.jsx)(K._, {
@@ -212,9 +212,9 @@ case $.fO.USER:
     channel: eo,
     inCall: eh,
     participant: I,
-    fit: eC,
+    fit: eg,
     onVideoResize: ed,
-    paused: eg,
+    paused: eC,
     selected: ep,
     width: ec,
     blocked: eE,
@@ -243,9 +243,9 @@ case $.fO.HIDDEN_STREAM:
     participant: I,
     selected: ep,
     width: ec,
-    fit: eC,
+    fit: eg,
     onVideoResize: ed,
-    paused: eg,
+    paused: eC,
     inPopout: eu,
     focused: ef
   });
@@ -410,8 +410,8 @@ title: h,
 width: p,
 hasVideo: m,
 inCall: f,
-localVideoDisabled: C,
-videoToggleState: g,
+localVideoDisabled: g,
+videoToggleState: C,
 focused: T,
 blocked: N,
 hideAudioIcon: v,
@@ -484,7 +484,7 @@ else if (a || S !== $.fO.STREAM || !m || w || T) {
     }
   });
   }
-  return f && U.Z.supports(et.AN.VIDEO) || !m ? f && m && C && !H && (y = (0, i.jsx)(u.VideoSlashIcon, {
+  return f && U.Z.supports(et.AN.VIDEO) || !m ? f && m && g && !H && (y = (0, i.jsx)(u.VideoSlashIcon, {
 size: 'md',
 color: 'currentColor',
 colorClass: ei.localMuteStrikethrough
@@ -545,7 +545,7 @@ children: [
     className: l()(ei.overlayTop, {
       [ei.small]: p < 195
     }),
-    children: H || g === J.ZUi.AUTO_PROBING ? d ? (0, i.jsx)('div', {
+    children: H || C === J.ZUi.AUTO_PROBING ? d ? (0, i.jsx)('div', {
       className: ei.status,
       children: (0, i.jsx)(u.VideoSlashIcon, {
         size: 'md',

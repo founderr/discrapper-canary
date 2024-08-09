@@ -4,9 +4,9 @@ return L;
   }
 });
 var t = n(735250),
-  i = n(470079),
-  r = n(512722),
-  l = n.n(r),
+  r = n(470079),
+  i = n(512722),
+  l = n.n(i),
   a = n(881602),
   o = n(317269),
   C = n(669079),
@@ -19,7 +19,7 @@ var t = n(735250),
 
 function L(e) {
   var s, n;
-  let r, {
+  let i, {
   handleClose: L,
   planGroup: h,
   onSubscriptionConfirmation: f,
@@ -47,13 +47,13 @@ function L(e) {
   sendGiftMessage: U
 } = (0, u.wD)();
   l()(null != m, 'Expected plan to selected'), l()(null != A, 'Expected selectedSkuId'), l()(null != O, 'Step should be set');
-  let B = i.useCallback(() => {
+  let B = r.useCallback(() => {
 L(), null == f || f();
   }, [
 L,
 f
   ]);
-  return i.useEffect(() => {
+  return r.useEffect(() => {
 if (!(!P || null == Z || null == v || y || b || (0, C.pO)(Z)))
   a.F.getCurrentConfig({
     location: '36b986_1'
@@ -68,7 +68,7 @@ v,
 y,
 b,
 f
-  ]), r = null != I ? I(m, B, S) : N ? (0, t.jsx)(o.VY, {}) : P ? (0, t.jsx)(o.TB, {
+  ]), i = null != I ? I(m, B, S) : N ? (0, t.jsx)(o.VY, {}) : P ? (0, t.jsx)(o.TB, {
 planId: m.id,
 onClose: B
   }) : R.current === m.id ? (0, t.jsx)(o.ZP, {
@@ -88,7 +88,7 @@ children: [
   (0, t.jsxs)(p.C3, {
     children: [
       (0, t.jsx)(x.Z, {}),
-      r
+      i
     ]
   }),
   P && (0, t.jsx)(_.Z, {

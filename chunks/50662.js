@@ -18,8 +18,8 @@ var t = n(913527),
   _ = n(709054),
   T = n(246364),
   N = n(360328),
-  C = n(981631),
-  R = n(689938),
+  R = n(981631),
+  C = n(689938),
   M = n(617721);
 
 function m(e) {
@@ -40,24 +40,24 @@ submitting: j
   } = (0, N.s)(S, P), v = null === (s = t.actionedByUser) || void 0 === s ? void 0 : s.id, p = (0, l.e7)([E.default], () => E.default.getUser(v)), f = (0, l.e7)([I.ZP], () => null != v ? I.ZP.getMember(S, v) : null, [
 v,
 S
-  ]), Z = (0, l.e7)([u.Z], () => u.Z.getMemberCount(S)), B = (null != Z ? Z : 0) >= m.maxMembers, O = R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING, L = (0, a.jsx)(o.ClockIcon, {
+  ]), Z = (0, l.e7)([u.Z], () => u.Z.getMemberCount(S)), B = (null != Z ? Z : 0) >= m.maxMembers, O = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING, L = (0, a.jsx)(o.ClockIcon, {
 size: 'custom',
 color: 'currentColor',
 width: 24,
 height: 24,
 className: M.icon
   });
-  t.applicationStatus === T.wB.APPROVED ? (O = R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED, L = (0, a.jsx)(o.CircleCheckIcon, {
+  t.applicationStatus === T.wB.APPROVED ? (O = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED, L = (0, a.jsx)(o.CircleCheckIcon, {
 size: 'md',
 className: M.iconApproved,
 color: i.Z.colors.WHITE.css,
 secondaryColor: 'currentColor'
-  })) : t.applicationStatus === T.wB.REJECTED && (O = R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED, L = (0, a.jsx)(o.CircleXIcon, {
+  })) : t.applicationStatus === T.wB.REJECTED && (O = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED, L = (0, a.jsx)(o.CircleXIcon, {
 size: 'md',
 color: i.Z.colors.WHITE.css,
 secondaryColor: i.Z.colors.STATUS_DANGER.css
   }));
-  let D = null != p && null != h ? R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
+  let D = null != p && null != h ? C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
 date: r()(_.default.extractTimestamp(h)).format('ll'),
 usernameHook: function() {
   var e;
@@ -67,8 +67,8 @@ usernameHook: function() {
       userId: p.id,
       guildId: S,
       analyticsLocation: {
-        section: C.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-        object: C.qAy.ACTIONED_BY_USER
+        section: R.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+        object: R.qAy.ACTIONED_BY_USER
       }
     }),
     tag: 'div',
@@ -114,7 +114,7 @@ children: [
             className: M.buttons,
             children: [
               (0, a.jsx)(o.Tooltip, {
-                text: R.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
+                text: C.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
                 shouldShow: B,
                 children: e => (0, a.jsx)(o.Button, {
                   ...e,
@@ -122,14 +122,14 @@ children: [
                   submitting: j,
                   disabled: B,
                   onClick: g,
-                  children: R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
+                  children: C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
                 })
               }),
               (0, a.jsx)(o.Button, {
                 color: o.Button.Colors.RED,
                 onClick: b,
                 disabled: j,
-                children: R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
+                children: C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
               })
             ]
           }),

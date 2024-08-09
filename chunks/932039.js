@@ -110,9 +110,9 @@ if (null != l)
     date: l
   });
 return null;
-  }(), A = s.useCallback(() => {
+  }(), R = s.useCallback(() => {
 f(!0), L();
-  }, [L]), R = s.useCallback(e => {
+  }, [L]), A = s.useCallback(e => {
 g(e);
   }, [g]), S = s.useCallback(e => {
 I(e);
@@ -163,7 +163,7 @@ children: (0, o.jsx)(u.MenuGroup, {
             ...e,
             calendarClassName: h.calendar,
             value: C && null != n ? c()(n) : void 0,
-            onSelect: R,
+            onSelect: A,
             maxDate: c()().local(),
             minDate: x
           })
@@ -206,7 +206,7 @@ children: (0, o.jsx)(u.MenuGroup, {
       (0, o.jsx)(u.MenuSeparator, {}),
       (0, o.jsx)(u.MenuItem, {
         id: 'guild-member-'.concat(d, '-custom-option}'),
-        action: A,
+        action: R,
         render: e => (0, o.jsxs)('div', {
           className: r()(h.otherDatesContainer, {
             [h.focused]: e.isFocused

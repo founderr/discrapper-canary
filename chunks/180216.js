@@ -25,13 +25,13 @@ channelId: n
   } = e, E = (0, u.C)({
 guildId: t,
 channelId: n
-  }), C = (0, c.GG)(t), g = (0, c.YB)(t), I = (0, s.e7)([o.Z], () => o.Z.getGuild(t), [t]), x = null == I ? void 0 : I.name, T = (0, s.e7)([r.Z], () => r.Z.getChannel(n)), N = a.useMemo(() => {
+  }), g = (0, c.GG)(t), C = (0, c.YB)(t), I = (0, s.e7)([o.Z], () => o.Z.getGuild(t), [t]), x = null == I ? void 0 : I.name, T = (0, s.e7)([r.Z], () => r.Z.getChannel(n)), N = a.useMemo(() => {
 let e = {};
-for (let t of C)
+for (let t of g)
   for (let n of t.subscription_listings_ids)
     e[n] = t.id;
 return e;
-  }, [C]);
+  }, [g]);
   return ((0, d.Z)({
 guildId: t,
 location: m.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
@@ -56,7 +56,7 @@ children: [
     className: f.joinCtaSubtitle,
     variant: 'text-md/normal',
     color: 'header-secondary',
-    children: null == g ? void 0 : g.description
+    children: null == C ? void 0 : C.description
   }),
   (0, i.jsx)(h.Z, {
     guildId: t,

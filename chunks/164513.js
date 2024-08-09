@@ -5,8 +5,8 @@ return x;
 });
 var t = n(735250);
 n(470079);
-var i = n(481060),
-  r = n(906732),
+var r = n(481060),
+  i = n(906732),
   l = n(600164),
   a = n(522489),
   o = n(570711),
@@ -27,7 +27,7 @@ selectedGiftStyle: x,
 giftRecipient: L
   } = (0, d.wD)(), {
 analyticsLocations: h
-  } = (0, r.ZP)(), f = !__BILLING_STANDALONE__ && (0, C.MY)(L, !1) === C.xr.CUSTOM_STYLE, {
+  } = (0, i.ZP)(), f = !__BILLING_STANDALONE__ && (0, C.MY)(L, !1) === C.xr.CUSTOM_STYLE, {
 enabled: I
   } = a.m.useExperiment({
 location: 'GiftPurchaseConfirmationFooter'
@@ -36,7 +36,7 @@ autoTrackExposure: f,
 disable: !f
   });
   return I ? (0, t.jsx)(c.O3, {
-children: (0, t.jsx)(i.ModalFooter, {
+children: (0, t.jsx)(r.ModalFooter, {
   align: l.Z.Align.CENTER,
   children: (0, t.jsx)(o.Z, {
     repeatPurchase: !0,

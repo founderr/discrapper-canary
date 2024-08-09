@@ -20,11 +20,11 @@ className: n,
 expansionSpring: o,
 isExpanded: C,
 isExpansionAnimationComplete: _,
-quest: h,
-useReducedMotion: E
-  } = e, S = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {
+quest: E,
+useReducedMotion: h
+  } = e, S = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, {
 percentComplete: T
-  } = (0, i.Rf)(h), v = (0, i.Jf)(h), N = null != v ? v.completedRatio > 0 : T > 0;
+  } = (0, i.Rf)(E), N = (0, i.Jf)(E), v = null != N ? N.completedRatio > 0 : T > 0;
   return (0, s.jsxs)(a.animated.div, {
 'aria-hidden': C && _,
 className: r()(n, f.contentCollapsed, {
@@ -45,8 +45,8 @@ style: {
 },
 children: [
   (0, s.jsx)(m.Z, {
-    quest: h,
-    useReducedMotion: E
+    quest: E,
+    useReducedMotion: h
   }),
   (0, s.jsx)('div', {
     className: f.contentCollapsedWrapper,
@@ -55,14 +55,14 @@ children: [
       children: [
         (0, s.jsx)(p.Z, {
           className: f.questProgressRewardTile,
-          quest: h,
+          quest: E,
           questContent: c.jn.QUEST_BAR,
           autoplay: !1,
           location: x.dr.QUESTS_BAR
         }),
-        N ? (0, s.jsx)(u.Z, {
+        v ? (0, s.jsx)(u.Z, {
           className: f.questProgressBar,
-          quest: h
+          quest: E
         }) : (0, s.jsx)(l.Text, {
           className: f.questProgressHint,
           color: 'always-white',
@@ -75,14 +75,14 @@ children: [
       children: [
         (0, s.jsx)(d.Z, {
           className: f.partnerBranding,
-          quest: h
+          quest: E
         }),
         (0, s.jsx)(l.Heading, {
           color: 'always-white',
           variant: 'heading-sm/medium',
           className: f.questName,
           children: g.Z.Messages.QUEST.format({
-            questName: h.config.messages.questName
+            questName: E.config.messages.questName
           })
         })
       ]

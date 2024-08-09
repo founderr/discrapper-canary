@@ -13,7 +13,7 @@ function o(e) {
   let {
 onError: t,
 onSuccess: n
-  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [g, p] = s.useState(!1), [A, N] = s.useState(!1), [m, f] = s.useState(!1), S = o || d || u || T || g || m, h = s.useCallback(async e => {
+  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [g, p] = s.useState(!1), [N, A] = s.useState(!1), [m, f] = s.useState(!1), S = o || d || u || T || g || m, h = s.useCallback(async e => {
 if (!S) {
   c(!0);
   try {
@@ -94,19 +94,19 @@ R,
 t,
 n
   ]), P = s.useCallback(async e => {
-if (!A) {
-  N(!0);
+if (!N) {
+  A(!0);
   try {
     await r.ZP.fetchTeenActivity(e), null == n || n();
   } catch (n) {
     let e = new a.Hx(n);
     null == t || t(e);
   } finally {
-    N(!1);
+    A(!1);
   }
 }
   }, [
-A,
+N,
 t,
 n
   ]), L = s.useCallback(async (e, s) => {
@@ -159,7 +159,7 @@ isDeclineLoading: d,
 isDisconnectLoading: u,
 isCancelLoading: T,
 isGetLinkCodeLoading: R,
-isSelectTeenUserLoading: A,
+isSelectTeenUserLoading: N,
 isRequestingLink: g,
 isMoreLoading: m
   };

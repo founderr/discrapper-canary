@@ -50,11 +50,11 @@ let e = setTimeout(() => {
 }, 200);
 return () => clearTimeout(e);
   }, [t]);
-  let A = (0, i.ZP)(),
-N = (0, r.ap)(A),
+  let N = (0, i.ZP)(),
+A = (0, r.ap)(N),
 m = _(I),
-f = d(I, N),
-S = u(N, I);
+f = d(I, A),
+S = u(A, I);
   return (0, s.jsxs)('div', {
 className: o.circleContainer,
 children: [

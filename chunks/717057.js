@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(594174),
   f = n(709054),
   E = n(931240),
-  C = n(645896),
-  g = n(603368),
+  g = n(645896),
+  C = n(603368),
   I = n(532490),
   x = n(380365),
   T = n(979264),
@@ -105,7 +105,7 @@ guildId: n,
 onClose: s,
 onAccept: r,
 ...o
-  } = e, f = (0, h.Dt)(), I = (0, C.Cc)(n), T = (0, C.E8)(n), [N, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
+  } = e, f = (0, h.Dt)(), I = (0, g.Cc)(n), T = (0, g.E8)(n), [N, S] = a.useState(!0), [R, j] = a.useState(!1), L = a.useCallback(() => {
 r(), s();
   }, [
 r,
@@ -129,7 +129,7 @@ O = (0, c.e7)([m.Z], () => m.Z.getGuild(n)),
 y = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
 D = (0, c.e7)([p.ZP], () => null != y ? p.ZP.getMember(n, y.id) : null),
 k = (0, d.ZP)(),
-U = (0, g.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [
+U = (0, C.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [
   u.tokens.colors.BG_BRAND,
   0.7
 ]),
@@ -137,7 +137,7 @@ w = u.tokens.colors.BG_SURFACE_OVERLAY.resolve({
   theme: k,
   saturation: 1
 }).hex(),
-B = (0, g.nj)(U, w, 'top center');
+B = (0, C.nj)(U, w, 'top center');
   return null == O || null == y || null == D || null == I ? null : (0, i.jsx)(u.ModalRoot, {
 ...o,
 transitionState: o.transitionState,
@@ -204,7 +204,7 @@ children: (0, i.jsxs)(u.ModalContent, {
             size: 'custom',
             width: 20,
             height: 20,
-            color: null == U ? void 0 : (0, g.$0)(U).hex()
+            color: null == U ? void 0 : (0, C.$0)(U).hex()
           })
         ]
       })

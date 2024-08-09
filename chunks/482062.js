@@ -1,12 +1,12 @@
 n.d(t, {
   KT: function() {
-return f;
+return C;
   },
   ZP: function() {
 return h;
   },
   nX: function() {
-return C;
+return f;
   }
 }), n(47120);
 var a = n(735250),
@@ -46,10 +46,10 @@ g.current = n;
   var t;
   return (null !== (t = _.current) && void 0 !== t ? t : document).querySelector(e);
 }, []),
-C = s.useCallback((e, t) => {
+f = s.useCallback((e, t) => {
   g.current && a(e, t);
 }, [a]),
-f = s.useCallback(e => {
+C = s.useCallback(e => {
   if (g.current) {
     var t;
     null === (t = document.querySelector(e)) || void 0 === t || t.focus();
@@ -59,10 +59,10 @@ p = s.useCallback(e => {
   c.current = e;
   let n = (0, i.P1)(e, o),
     a = (0, i.x3)(e);
-  C(n, a), (0, r.h)(t, a, !0);
+  f(n, a), (0, r.h)(t, a, !0);
 }, [
   t,
-  C
+  f
 ]),
 [T, I] = s.useState(!1),
 E = s.useRef(T);
@@ -85,7 +85,7 @@ function a(e) {
   if (!e.currentTarget.contains(e.relatedTarget))
     I(!1), requestAnimationFrame(() => {
       let e = c.current;
-      null !== e && null == x((0, i.P1)(e, o)) && f((0, i.P1)(t, 'data-grid-id'));
+      null !== e && null == x((0, i.P1)(e, o)) && C((0, i.P1)(t, 'data-grid-id'));
     });
 }
 
@@ -100,8 +100,8 @@ function r() {
 }
   }, [
 t,
-C,
 f,
+C,
 p,
 x
   ]);
@@ -117,14 +117,14 @@ x
     h = null == s ? void 0 : s.querySelector(r);
   if (null == h)
     return;
-  let C = parseInt(null !== (t = h.getAttribute('data-grid-section')) && void 0 !== t ? t : ''),
-    f = parseInt(h.getAttribute('aria-rowindex')),
+  let f = parseInt(null !== (t = h.getAttribute('data-grid-section')) && void 0 !== t ? t : ''),
+    C = parseInt(h.getAttribute('aria-rowindex')),
     T = parseInt(h.getAttribute('aria-colindex'));
   switch (u.has(e.key) && (e.stopPropagation(), e.preventDefault()), e.key) {
     case l.R8.RIGHT: {
       let e = x(m({
-        section: C,
-        row: f,
+        section: f,
+        row: C,
         column: T + 1
       }));
       if (null != e) {
@@ -135,8 +135,8 @@ x
     }
     case l.R8.LEFT: {
       let e = x(m({
-        section: C,
-        row: f,
+        section: f,
+        row: C,
         column: T - 1
       }));
       if (null != e) {
@@ -147,12 +147,12 @@ x
     }
     case l.R8.DOWN: {
       let e = x(m({
-        section: C,
-        row: f + 1,
+        section: f,
+        row: C + 1,
         column: T
       }));
       if (null == e && (e = x(m({
-          section: C + 1,
+          section: f + 1,
           row: 0,
           column: T
         }))), null != e) {
@@ -163,21 +163,21 @@ x
     }
     case l.R8.UP: {
       let e;
-      if (0 === f) {
+      if (0 === C) {
         let t = parseInt(h.getAttribute(d));
         null == (e = x(m({
-          section: C - 1,
+          section: f - 1,
           row: t,
           column: T
         }))) && (e = x(m({
-          section: C - 1,
+          section: f - 1,
           row: t - 1,
           column: T
         })));
       } else
         e = x(m({
-          section: C,
-          row: f - 1,
+          section: f,
+          row: C - 1,
           column: T
         }));
       if (null != e) {
@@ -231,7 +231,7 @@ setFocus() {}
   }),
   x = s.createContext(_);
 
-function C(e) {
+function f(e) {
   let {
 id: t,
 section: n,
@@ -241,7 +241,7 @@ boundaries: u
   } = e, [m, h] = s.useState(0 === a && 0 === l ? 0 : -1), {
 id: _,
 setFocus: x
-  } = s.useContext(g), C = s.useCallback(() => x(t), [
+  } = s.useContext(g), f = s.useCallback(() => x(t), [
 t,
 x
   ]);
@@ -258,11 +258,11 @@ role: 'gridcell',
 'aria-rowindex': a,
 'aria-colindex': l,
 tabIndex: m,
-onFocus: C
+onFocus: f
   };
 }
 
-function f(e) {
+function C(e) {
   let {
 children: t,
 navigator: n

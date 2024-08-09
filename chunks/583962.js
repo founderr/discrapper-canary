@@ -58,7 +58,7 @@ return (0, i.jsx)(d.Menu, {
   },
   M = 57,
   R = 57 + A,
-  O = {
+  P = {
 tension: 180,
 friction: 80
   };
@@ -71,15 +71,15 @@ analyticsLocations: r
   } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
 premiumSubscriberCount: u,
 id: m
-  } = t, E = (0, I.rF)(u, m), A = (0, I.FZ)(E, t.id), M = null == A, R = null != A ? A : E, P = (0, c.e7)([x.Z], () => {
+  } = t, E = (0, I.rF)(u, m), A = (0, I.FZ)(E, t.id), M = null == A, R = null != A ? A : E, O = (0, c.e7)([x.Z], () => {
 var e;
 return null !== (e = x.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
   }), y = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t));
   l.useEffect(() => {
-P !== u && (0, N.v)(m, u);
+O !== u && (0, N.v)(m, u);
   }, [
 m,
-P,
+O,
 u
   ]);
   let j = ''.concat(Math.min(100, u / (0, I.vn)(t.id)[R] * 100), '%'),
@@ -88,12 +88,12 @@ u
 } = l.useRef(j),
 w = {
   from: {
-    width: P === u ? D : '0%'
+    width: O === u ? D : '0%'
   },
   to: {
     width: j
   },
-  config: O
+  config: P
 },
 [U, G] = (0, d.useSpring)(() => w),
 k = () => {

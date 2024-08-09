@@ -13,8 +13,8 @@ var i = n(735250),
   _ = n(314734),
   f = n(981631),
   E = n(689938),
-  C = n(406709);
-let g = {
+  g = n(406709);
+let C = {
   height: _.lv
 };
 
@@ -29,10 +29,10 @@ closeOnModalOuterClick: n = !1,
 parentModalKey: c
   } = e, h = a.useRef(null), {
 renderWindow: E,
-windowDispatch: C
-  } = a.useContext(o.ZP), g = null != c, x = (0, l.Jw)(null != c ? c : ''), T = a.useCallback(e => {
+windowDispatch: g
+  } = a.useContext(o.ZP), C = null != c, x = (0, l.Jw)(null != c ? c : ''), T = a.useCallback(e => {
 var t;
-if (!g && (0, l.$s)() || g && !(x && n))
+if (!C && (0, l.$s)() || C && !(x && n))
   return;
 let {
   target: i
@@ -55,19 +55,19 @@ let a = null === (t = (0, d.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
   }, [
 n,
 x,
-g
+C
   ]);
-  return a.useLayoutEffect(() => (E.addEventListener('mousedown', T), E.addEventListener('contextmenu', T), C.subscribe(f.CkL.POPOUT_CLOSE, I), () => {
-E.removeEventListener('mousedown', T), E.removeEventListener('contextmenu', T), C.unsubscribe(f.CkL.POPOUT_CLOSE, I);
+  return a.useLayoutEffect(() => (E.addEventListener('mousedown', T), E.addEventListener('contextmenu', T), g.subscribe(f.CkL.POPOUT_CLOSE, I), () => {
+E.removeEventListener('mousedown', T), E.removeEventListener('contextmenu', T), g.unsubscribe(f.CkL.POPOUT_CLOSE, I);
   }), [
 T,
 E,
-C
+g
   ]), (0, r.useFocusLock)(h), a.useEffect(() => {
-(!g && (0, l.$s)() || g && !x) && I();
+(!C && (0, l.$s)() || C && !x) && I();
   }, [
 x,
-g
+C
   ]), (0, i.jsx)(m.Z, {
 ref: h,
 channel: t,
@@ -82,7 +82,7 @@ positionTargetRef: t,
   return (0, i.jsx)('span', {
 style: _.u$,
 children: (0, i.jsx)(c.W5, {
-  className: C.positionLayer,
+  className: g.positionLayer,
   targetRef: t,
   position: 'top',
   align: 'right',
@@ -93,9 +93,9 @@ children: (0, i.jsx)(c.W5, {
       isPositioned: t
     } = e;
     return (0, i.jsx)('section', {
-      className: C.positionContainer,
+      className: g.positionContainer,
       role: 'dialog',
-      style: g,
+      style: C,
       'aria-label': E.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_LAUNCHER_ARIA_LABEL,
       children: t && (0, i.jsx)(x, {
         ...n

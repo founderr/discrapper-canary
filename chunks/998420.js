@@ -13,17 +13,17 @@ var a = n(735250),
   _ = n(208257),
   T = n(853486),
   N = n(689938),
-  C = n(133844);
+  R = n(133844);
 s.default = function(e) {
   let {
 guildId: s
   } = e, {
 analyticsLocations: n
-  } = (0, i.ZP)(l.Z.GUILD_MEMBER_APPLICATION_REVIEW), R = (0, E.L)({
+  } = (0, i.ZP)(l.Z.GUILD_MEMBER_APPLICATION_REVIEW), C = (0, E.L)({
 guildId: s
   }), {
 user: M
-  } = null != R ? R : {}, m = t.useMemo(() => null != M ? new c.Z(M) : null, [M]), A = (0, r.e7)([d.Z], () => d.Z.getGuild(s), [s]);
+  } = null != C ? C : {}, m = t.useMemo(() => null != M ? new c.Z(M) : null, [M]), A = (0, r.e7)([d.Z], () => d.Z.getGuild(s), [s]);
   return (0, o.Tt)({
 subsection: N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REQUIREMENTS,
 location: null == A ? void 0 : A.name
@@ -33,21 +33,21 @@ I.Z.fetchVerificationForm(s);
 value: n,
 children: [
   (0, a.jsx)('div', {
-    className: C.content,
+    className: R.content,
     children: (0, a.jsx)(_.Z, {
       guildId: s
     })
   }),
-  null != R && null != A && null != m && (0, a.jsxs)(a.Fragment, {
+  null != C && null != A && null != m && (0, a.jsxs)(a.Fragment, {
     children: [
       (0, a.jsx)('div', {
-        className: C.sidebarSeparator
+        className: R.sidebarSeparator
       }),
       (0, a.jsx)('section', {
-        className: C.sidebar,
+        className: R.sidebar,
         children: (0, a.jsx)(T.Z, {
           guild: A,
-          guildJoinRequest: R,
+          guildJoinRequest: C,
           guildJoinRequestUser: m,
           onClose: () => u.Z.setSelectedGuildJoinRequest(s, null)
         })

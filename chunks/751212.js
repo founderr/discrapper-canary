@@ -14,8 +14,8 @@ var n, i, l = t(735250),
   N = t(442837),
   S = t(692547),
   E = t(481060),
-  m = t(92114),
-  g = t(798140),
+  g = t(92114),
+  m = t(798140),
   _ = t(740504),
   T = t(933557),
   x = t(471445),
@@ -90,7 +90,7 @@ if (this.props.channelOverrides !== e.channelOverrides) {
 }
   }
   handleCheckboxChange(e, s, t) {
-m.Z.updateGuildNotificationSettings(this.props.guildId, {
+g.Z.updateGuildNotificationSettings(this.props.guildId, {
   [e]: s
 }, t);
   }
@@ -98,7 +98,7 @@ m.Z.updateGuildNotificationSettings(this.props.guildId, {
 let {
   value: n
 } = s;
-m.Z.updateGuildNotificationSettings(this.props.guildId, {
+g.Z.updateGuildNotificationSettings(this.props.guildId, {
   [e]: n
 }, t);
   }
@@ -250,7 +250,7 @@ return (0, l.jsxs)(E.FormItem, {
     }),
     (0, l.jsx)(E.FormSwitch, {
       onChange: e => {
-        m.Z.updateGuildNotificationSettings(r, {
+        g.Z.updateGuildNotificationSettings(r, {
           notify_highlights: e ? k.gLR.DISABLED : k.gLR.ENABLED
         }, D.UE.highlights(!e));
       },
@@ -368,7 +368,7 @@ let {
     },
     channel: o,
     guildMuted: s,
-    muted: null != d && (0, g.m$)(d),
+    muted: null != d && (0, m.m$)(d),
     messageNotifications: null != d ? d.message_notifications : null,
     guildMessageNotifications: n,
     onDelete: this.handleDeleteOverride,
@@ -466,7 +466,7 @@ super(...e), y(this, '_scroller', null), y(this, '_channelRefs', {}), y(this, 's
   });
 }), y(this, 'handleSelectMuteTime', e => {
   let s = e > 0 ? c()().add(e, 'second').toISOString() : null;
-  m.Z.updateGuildNotificationSettings(this.props.guildId, {
+  g.Z.updateGuildNotificationSettings(this.props.guildId, {
     muted: !0,
     mute_config: {
       selected_time_window: e,

@@ -17,8 +17,8 @@ var i = t(392711),
   N = t(324067),
   S = t(699516),
   E = t(594174),
-  m = t(981631),
-  g = t(689938),
+  g = t(981631),
+  m = t(689938),
   _ = t(357382);
 let T = e => {
   let {
@@ -26,7 +26,7 @@ channel: {
   type: s
 }
   } = e;
-  return (0, u.r8)(s) || s === m.d4z.GUILD_CATEGORY;
+  return (0, u.r8)(s) || s === g.d4z.GUILD_CATEGORY;
 };
 
 function x(e) {
@@ -48,7 +48,7 @@ return {
 let {
   channel: s
 } = e;
-return s.type !== m.d4z.GUILD_CATEGORY || null != x[s.id] && x[s.id].length > 0;
+return s.type !== g.d4z.GUILD_CATEGORY || null != x[s.id] && x[s.id].length > 0;
   }).map(e => {
 let {
   channel: s
@@ -62,12 +62,12 @@ return {
 children: [
   (0, n.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
-    children: g.Z.Messages.ADD_CHANNEL_TO_OVERRIDE
+    children: m.Z.Messages.ADD_CHANNEL_TO_OVERRIDE
   }),
   (0, n.jsx)('div', {
     className: _.input,
     children: (0, n.jsx)(r.SearchableSelect, {
-      value: m.lds,
+      value: g.lds,
       onChange: i,
       options: I,
       renderOptionLabel: e => {
@@ -82,7 +82,7 @@ children: [
           subtitle: i
         });
       },
-      placeholder: g.Z.Messages.SELECT_CHANNEL_OR_CATEGORY
+      placeholder: m.Z.Messages.SELECT_CHANNEL_OR_CATEGORY
     })
   })
 ]

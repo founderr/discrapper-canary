@@ -88,8 +88,8 @@ i.useEffect(() => {
 A = (0, s.e7)([d.ZP], () => d.ZP.getEmbeddedActivitiesForGuild(e)),
 R = (0, u.NX)(null === (t = A[0]) || void 0 === t ? void 0 : t.channelId, !1),
 {
-  guildHasVoice: O,
-  guildHasVideo: P,
+  guildHasVoice: P,
+  guildHasVideo: O,
   selectedVoiceChannelHasVideo: y
 } = (0, s.cj)([
   v.Z,
@@ -175,7 +175,7 @@ let S = Z.default.keys(_.Z.getStageInstancesByGuild(e)).some(e => {
     return !1;
   })(),
   D = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
-return o ? (c = !0, u = (null == l ? void 0 : l.channel_id) === s, h = v, g = b, I = T, E = D) : (c = O, u = null != l, h = S, g = P, I = L, E = M), {
+return o ? (c = !0, u = (null == l ? void 0 : l.channel_id) === s, h = v, g = b, I = T, E = D) : (c = P, u = null != l, h = S, g = O, I = L, E = M), {
   audio: c,
   video: g,
   screenshare: I,
@@ -193,8 +193,8 @@ l,
 e,
 R,
 n,
-P,
 O,
+P,
 y
   ]);
 }

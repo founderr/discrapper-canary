@@ -72,7 +72,7 @@ animationClassName: n,
 className: r,
 quest: l,
 useReducedMotion: i
-  } = e, g = (0, c.e7)([u.Z], () => u.Z.isFocused()), C = o.useRef(null), [_, h] = o.useState(!1), E = o.useMemo(() => {
+  } = e, g = (0, c.e7)([u.Z], () => u.Z.isFocused()), C = o.useRef(null), [_, E] = o.useState(!1), h = o.useMemo(() => {
 if (null == l)
   return null;
 let e = (0, p.oo)(l.config.colors.primary),
@@ -97,10 +97,10 @@ g ? T && (null === (s = C.current) || void 0 === s || null === (n = s.animation)
 T,
 g
   ]);
-  let v = o.useCallback(() => {
-h(!0);
+  let N = o.useCallback(() => {
+E(!0);
   }, []);
-  return null == E || S ? (0, s.jsx)('div', {
+  return null == h || S ? (0, s.jsx)('div', {
 className: m.backgroundFallback,
 style: {
   backgroundImage: 'linear-gradient(90deg, '.concat(l.config.colors.primary, ', ').concat(l.config.colors.secondary, ')')
@@ -109,8 +109,8 @@ style: {
 className: a()(m.lottieAnimationBackgroundWrapper, r),
 children: (0, s.jsx)(d.LottieAnimation, {
   ref: C,
-  onComplete: v,
-  importData: () => E,
+  onComplete: N,
+  importData: () => h,
   shouldAnimate: !_ && T,
   className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
   loop: 0,

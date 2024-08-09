@@ -16,8 +16,8 @@ var n = t(735250),
   N = t(933557),
   S = t(775666),
   E = t(471445),
-  m = t(592125),
-  g = t(324067),
+  g = t(592125),
+  m = t(324067),
   _ = t(699516),
   T = t(9156),
   x = t(594174),
@@ -38,15 +38,15 @@ function f(e) {
 guildId: s,
 requestScrollToBottom: t
   } = e, i = (0, r.Wu)([
-m.Z,
+g.Z,
 T.ZP
   ], () => (0, C.OD)(T.ZP.getChannelOverrides(s), {
 ignoreMute: !0,
 ignoreUnreadSetting: !1,
 ignoreNotificationSetting: !1
-  }).map(e => m.Z.getChannel(e)).filter(I.lm));
+  }).map(e => g.Z.getChannel(e)).filter(I.lm));
   (0, L.Z)(i, () => t());
-  let l = (0, r.e7)([g.Z], () => g.Z.getCategories(s)),
+  let l = (0, r.e7)([m.Z], () => m.Z.getCategories(s)),
 a = i.map((e, s) => (0, n.jsxs)('div', {
   className: R.channelRow,
   children: [
@@ -66,7 +66,7 @@ children: [
     onSelected: e => {
       if (null != i.find(s => s.id === e))
         return;
-      let t = m.Z.getChannel(e);
+      let t = g.Z.getChannel(e);
       null != t && u.Z.updateChannelOverrideSettings(s, e, {
         muted: !1,
         message_notifications: T.ZP.resolvedMessageNotifications(t),
@@ -126,7 +126,7 @@ function b(e) {
   let {
 channel: s,
 categories: t
-  } = e, l = (0, d.useToken)(o.Z.unsafe_rawColors.GREEN_360).hex(), u = (0, r.e7)([m.Z], () => m.Z.getChannel(null == s ? void 0 : s.parent_id)), g = (0, M.ZA)(s), [T, I] = i.useState(!1);
+  } = e, l = (0, d.useToken)(o.Z.unsafe_rawColors.GREEN_360).hex(), u = (0, r.e7)([g.Z], () => g.Z.getChannel(null == s ? void 0 : s.parent_id)), m = (0, M.ZA)(s), [T, I] = i.useState(!1);
   if (null == s)
 return null;
   let O = A.Z.Messages.NO_CATEGORY,
@@ -136,7 +136,7 @@ num: null != t[s.id] ? t[s.id].length : 0
   }) : null != u && (O = A.Z.Messages.IN_CATEGORY.format({
 categoryName: (0, N.F6)(u, x.default, _.Z)
   }));
-  let p = T ? v.s8.CUSTOM : g.preset;
+  let p = T ? v.s8.CUSTOM : m.preset;
   return (0, n.jsx)('div', {
 children: (0, n.jsxs)('div', {
   className: a()(R.row, R.channel),

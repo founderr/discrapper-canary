@@ -34,7 +34,7 @@ var r, i, a = n(735250),
   h = n(507274),
   p = n(84735),
   m = n(337033),
-  I = n(788698),
+  I = n(261833),
   T = n(742746),
   g = n(147479),
   S = n(600164),
@@ -186,7 +186,7 @@ className: l()(e.className, {
   [O.hideOnFullscreen]: e.hideOnFullscreen,
   [O.close]: !e.withCircleBackground
 }),
-children: (0, a.jsx)(I.F, {
+children: (0, a.jsx)(I.D, {
   size: 'md',
   color: 'currentColor',
   className: l()(e.innerClassName, O.closeIcon)

@@ -31,13 +31,13 @@ ctaLabel: I,
 ctaLoading: N,
 ctaDisabled: h,
 ctaClassName: p,
-onClick: R
-  } = e, g = (0, i.ZP)();
+onClick: g
+  } = e, R = (0, i.ZP)();
   return (0, s.jsx)(u.Z, {
 className: r()(d.statusWarningBlock, {
   [d.statusWarningBlockWithCta]: null != I
 }, n),
-color: (0, a.wj)(g) ? t : c.W.BROWN,
+color: (0, a.wj)(R) ? t : c.W.BROWN,
 children: (0, s.jsxs)('div', {
   className: o,
   children: [
@@ -46,13 +46,13 @@ children: (0, s.jsxs)('div', {
       color: 'interactive-active',
       children: _
     }),
-    null != I && null != R && (0, s.jsx)('div', {
+    null != I && null != g && (0, s.jsx)('div', {
       className: d.ctaButtonContainer,
       children: (0, s.jsx)(l.Button, {
-        className: r()(d.ctaButton, (0, a.wj)(g) ? void 0 : d.ctaBlackButton, p),
-        color: (0, a.wj)(g) ? l.Button.Colors.WHITE : l.Button.Colors.CUSTOM,
+        className: r()(d.ctaButton, (0, a.wj)(R) ? void 0 : d.ctaBlackButton, p),
+        color: (0, a.wj)(R) ? l.Button.Colors.WHITE : l.Button.Colors.CUSTOM,
         size: l.ButtonSizes.MEDIUM,
-        onClick: R,
+        onClick: g,
         disabled: h,
         submitting: N,
         children: (0, s.jsx)(l.Text, {

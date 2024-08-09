@@ -17,8 +17,8 @@ var a = n(735250),
   _ = n(481060),
   g = n(430742),
   x = n(166459),
-  C = n(541716),
-  f = n(67158),
+  f = n(541716),
+  C = n(67158),
   p = n(893718),
   T = n(472243),
   I = n(436660),
@@ -58,7 +58,7 @@ var a = n(735250),
   et = n(176505),
   en = n(689938),
   ea = n(623136);
-let es = C.I.CREATE_FORUM_POST;
+let es = f.I.CREATE_FORUM_POST;
 
 function er(e) {
   let {
@@ -82,9 +82,9 @@ return {
   formOpen: n,
   previewing: a
 };
-  }, c.Z), [g, x] = s.useState(null), C = s.useContext(F.oo), f = s.useCallback(() => {
-C.bumpDispatchPriority();
-  }, [C]), p = (0, h.e7)([P.Z], () => P.Z.can(ee.Plq.ATTACH_FILES, t)), T = (0, h.Wu)([y.Z], () => y.Z.getUploads(t.id, L.d.FirstThreadMessage)), I = u && p && i, v = (null == t ? void 0 : t.isMediaChannel()) === !0, S = function(e, t) {
+  }, c.Z), [g, x] = s.useState(null), f = s.useContext(F.oo), C = s.useCallback(() => {
+f.bumpDispatchPriority();
+  }, [f]), p = (0, h.e7)([P.Z], () => P.Z.can(ee.Plq.ATTACH_FILES, t)), T = (0, h.Wu)([y.Z], () => y.Z.getUploads(t.id, L.d.FirstThreadMessage)), I = u && p && i, v = (null == t ? void 0 : t.isMediaChannel()) === !0, S = function(e, t) {
 let n = (0, Y.AF)(),
   a = (0, z.ql)(e);
 return s.useCallback(() => {
@@ -184,8 +184,8 @@ return s.useCallback(async (t, s, l) => {
       shouldRefocus: !1
     };
   let {
-    content: C,
-    stickers: f,
+    content: f,
+    stickers: C,
     uploads: p,
     hasNameError: T,
     hasMessageError: I
@@ -200,8 +200,8 @@ return s.useCallback(async (t, s, l) => {
     let {
       valid: t
     } = await (0, U.v)({
-      content: C,
-      stickers: f,
+      content: f,
+      stickers: C,
       uploads: p,
       type: es,
       channel: e
@@ -211,7 +211,7 @@ return s.useCallback(async (t, s, l) => {
         shouldClear: !1,
         shouldRefocus: !0
       };
-    let n = await a(C, f, p);
+    let n = await a(f, C, p);
     return (0, R.ok)(n), B.Z.resort(e.id), (0, A.qB)(e.id, es.drafts.type), d(), m(!1), h(!1), G.Z.markAsSeen(e.id), g(!1), {
       shouldClear: !0,
       shouldRefocus: !1
@@ -245,8 +245,8 @@ children: (0, a.jsx)('div', {
   }),
   onClick: !u && i ? S : void 0,
   children: (0, a.jsxs)('form', {
-    onMouseDown: f,
-    onFocus: f,
+    onMouseDown: C,
+    onFocus: C,
     onSubmit: e => {
       if (e.preventDefault(), !!i)
         j();
@@ -335,7 +335,7 @@ let {
     hasClickedForm: l,
     submitting: i
   };
-}, c.Z), m = (0, Y.AF)(), h = (0, z.ql)(t), C = s.useCallback(() => {
+}, c.Z), m = (0, Y.AF)(), h = (0, z.ql)(t), f = s.useCallback(() => {
   var e;
   m.getState().resetFormState(), g.Z.clearDraft(t.id, L.d.ThreadSettings), g.Z.clearDraft(t.id, L.d.FirstThreadMessage), x.Z.clearAll(t.id, L.d.FirstThreadMessage), m.getState().setFormOpen(!1), m.getState().setBodyFocused(!1), m.getState().setTitleFocused(!1), m.getState().setHasClickedForm(!1), m.getState().setPreviewing(!1), null === (e = r.current) || void 0 === e || e.blur(), (0, W.Oq)({
     guildId: t.guild_id,
@@ -346,9 +346,9 @@ let {
   t.id,
   t.guild_id,
   r
-]), f = s.useMemo(() => {
+]), C = s.useMemo(() => {
   if (n && !l)
-    return (0, a.jsx)(eC, {});
+    return (0, a.jsx)(ef, {});
   if (!n && !l && (0 === o.textValue.trim().length || o.textValue.trim() === h))
     return (0, a.jsx)(_.MagnifyingGlassIcon, {
       size: 'md',
@@ -370,7 +370,7 @@ let {
       text: en.Z.Messages.FORUM_CLEAR_ALL,
       children: e => (0, a.jsx)(_.Clickable, {
         ...e,
-        onClick: C,
+        onClick: f,
         children: (0, a.jsx)(_.CircleXIcon, {
           size: 'md',
           color: 'currentColor',
@@ -384,14 +384,14 @@ let {
   d,
   i,
   o.textValue,
-  C,
+  f,
   t.id,
   h,
   u
 ]);
 return (0, a.jsx)('div', {
   className: ea.prefixElement,
-  children: f
+  children: C
 });
   }),
   ei = s.memo(function(e) {
@@ -425,7 +425,7 @@ let {
     hasClickedForm: l,
     submitting: i
   };
-}, c.Z), x = (0, Y.AF)(), C = null != t.topic && 0 !== t.topic.length, f = G.Z.hasSeen(t.id), p = (0, z.ql)(t), T = (0, h.e7)([D.default], () => D.default.getCurrentUser());
+}, c.Z), x = (0, Y.AF)(), f = null != t.topic && 0 !== t.topic.length, C = G.Z.hasSeen(t.id), p = (0, z.ql)(t), T = (0, h.e7)([D.default], () => D.default.getCurrentUser());
 o()(null != T, 'current user cannot be null');
 (0, F.yp)({
   event: ee.CkL.FOCUS_COMPOSER_TITLE,
@@ -483,7 +483,7 @@ return (0, a.jsxs)('div', {
         'Enter' === e.key && (e.preventDefault(), e.stopPropagation(), i && u.length > 0 ? null == l || l.focus() : r && e.shiftKey && ((0, W.nH)({
           guildId: t.guild_id,
           channelId: t.id
-        }), C && !f && x.getState().setGuidelinesOpen(!0), x.getState().setFormOpenFromUserAction(), u.trim().length > 0 && (x.getState().setBodyFocused(!0), null == l || l.focus())));
+        }), f && !C && x.getState().setGuidelinesOpen(!0), x.getState().setFormOpenFromUserAction(), u.trim().length > 0 && (x.getState().setBodyFocused(!0), null == l || l.focus())));
         let o = n.current instanceof _.TextAreaAutosize ? null === (a = n.current) || void 0 === a ? void 0 : a._textArea : n.current;
         if ('Home' === e.key || 'End' === e.key) {
           if (null == o)
@@ -585,8 +585,8 @@ let {
   messageError: m,
   previewing: g,
   textAreaState: x,
-  bodyFocused: C,
-  formOpen: f
+  bodyFocused: f,
+  formOpen: C
 } = (0, Y.xH)(e => {
   let {
     messageError: t,
@@ -660,7 +660,7 @@ return (0, a.jsx)('div', {
           placeholder: en.Z.Messages.FORUM_POST_MESSAGE_PLACEHOLDER,
           textValue: x.textValue,
           richValue: x.richValue,
-          focused: C,
+          focused: f,
           className: ea.channelTextArea,
           innerClassName: l()(ea.channelTextAreaInner, {
             [ea.channelTextAreaInnerError]: null != S
@@ -679,7 +679,7 @@ return (0, a.jsx)('div', {
                 return;
               'Home' === e.key ? I.Q.resetSelectionToStart(t) : I.Q.resetSelectionToEnd(t);
             }
-            f && 'Escape' === e.key && !T.getState().submitting && (null == i || i.blur(), T.getState().setFormOpen(!1), T.getState().setTitleFocused(!1), T.getState().setBodyFocused(!1), T.getState().setPreviewing(!1));
+            C && 'Escape' === e.key && !T.getState().submitting && (null == i || i.blur(), T.getState().setFormOpen(!1), T.getState().setTitleFocused(!1), T.getState().setBodyFocused(!1), T.getState().setPreviewing(!1));
           },
           autoCompletePosition: 'bottom'
         })
@@ -764,7 +764,7 @@ return {
 };
   }), {
 rateLimitPerUser: c
-  } = t, d = c > 0, u = (0, h.e7)([w.Z], () => w.Z.getSlowmodeCooldownGuess(t.id, w.S.CreateThread)), m = (0, h.e7)([P.Z], () => P.Z.can(ee.Plq.MANAGE_THREADS, t) || P.Z.can(ee.Plq.MANAGE_CHANNELS, t)), g = t.hasFlag(et.zZ.REQUIRE_TAG) && 0 === i.size && o.length > 0 && l.textValue.length > 0, x = (0, Y.AF)(), C = s.useCallback(() => {
+  } = t, d = c > 0, u = (0, h.e7)([w.Z], () => w.Z.getSlowmodeCooldownGuess(t.id, w.S.CreateThread)), m = (0, h.e7)([P.Z], () => P.Z.can(ee.Plq.MANAGE_THREADS, t) || P.Z.can(ee.Plq.MANAGE_CHANNELS, t)), g = t.hasFlag(et.zZ.REQUIRE_TAG) && 0 === i.size && o.length > 0 && l.textValue.length > 0, x = (0, Y.AF)(), f = s.useCallback(() => {
 x.getState().setBodyFocused(!1);
   }, [x]), p = s.useMemo(() => '' !== o.trim() && '' !== l.textValue.trim(), [
 o,
@@ -823,10 +823,10 @@ children: [
           })
         ]
       }),
-      (0, a.jsx)(f.Z, {
+      (0, a.jsx)(C.Z, {
         type: es,
         className: ea.expressionPicker,
-        onClick: C
+        onClick: f
       }, 'expression')
     ]
   })
@@ -864,7 +864,7 @@ return {
   }), u = t.hasFlag(et.zZ.REQUIRE_TAG) && 0 === c.size && o.length > 0 && i.textValue.length > 0, m = (0, h.Wu)([y.Z], () => y.Z.getUploads(t.id, L.d.FirstThreadMessage)), g = i.textValue.trim().length > 0 || m.length > 0, x = !u && g && o.trim().length > 0;
   if (__OVERLAY__)
 return null;
-  let C = function() {
+  let f = function() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
 return (0, a.jsxs)(_.Button, {
   ...e,
@@ -888,9 +888,9 @@ return (0, a.jsxs)(_.Button, {
   ]
 });
   };
-  return n ? C() : (0, a.jsx)(_.Tooltip, {
+  return n ? f() : (0, a.jsx)(_.Tooltip, {
 text: en.Z.Messages.FORUM_NO_POST_PERMISSION_HELP,
-children: e => C(e)
+children: e => f(e)
   });
 }
 
@@ -926,13 +926,13 @@ orientation: m.hy.HORIZONTAL
   }), {
 containerRef: g,
 containerWidth: x
-  } = (0, Q.Z)(), C = s.useRef(null), [f, p] = s.useState(!0), T = (0, z.Vm)(t), [I, E] = s.useState(0);
+  } = (0, Q.Z)(), f = s.useRef(null), [C, p] = s.useState(!0), T = (0, z.Vm)(t), [I, E] = s.useState(0);
   return (s.useLayoutEffect(() => {
 var e;
-let t = C.current,
+let t = f.current,
   n = null == t ? void 0 : null === (e = t.children) || void 0 === e ? void 0 : e[0],
   a = null == t || null == n || n.clientHeight > t.clientHeight;
-if (a !== f && p(a), a && null != g.current && null != n && null != n.children) {
+if (a !== C && p(a), a && null != g.current && null != n && null != n.children) {
   let {
     left: e,
     top: t
@@ -951,7 +951,7 @@ if (a !== f && p(a), a && null != g.current && null != n && null != n.children) 
 }
   }, [
 T,
-f,
+C,
 g,
 x
   ]), 0 === T.length) ? null : (0, a.jsx)(a.Fragment, {
@@ -966,7 +966,7 @@ children: (0, a.jsxs)('div', {
     }),
     (0, a.jsx)('div', {
       className: ea.tagList,
-      ref: C,
+      ref: f,
       children: (0, a.jsx)(u.bG, {
         navigator: h,
         children: (0, a.jsx)(u.SJ, {
@@ -994,7 +994,7 @@ children: (0, a.jsxs)('div', {
         })
       })
     }),
-    f && (0, a.jsx)(_.Popout, {
+    C && (0, a.jsx)(_.Popout, {
       onRequestOpen: () => i(!0),
       onRequestClose: () => i(!1),
       renderPopout: e => {
@@ -1051,7 +1051,7 @@ children: (0, a.jsxs)('div', {
   });
 }
 
-function eC(e) {
+function ef(e) {
   let {
 style: t,
 className: n

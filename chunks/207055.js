@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(106301),
   f = n(512384),
   E = n(470956),
-  C = n(597998),
-  g = n(199902),
+  g = n(597998),
+  C = n(199902),
   I = n(314897),
   x = n(271383),
   T = n(131951),
@@ -39,7 +39,7 @@ deaf: a,
 user: s,
 channel: l,
 sessionId: o,
-nick: C
+nick: g
   } = e, N = s.id, O = (0, r.e7)([I.default], () => I.default.getId() === N, [N]), [y, D, k] = (0, r.Wu)([T.Z], () => O ? [
 !T.Z.isSupported() || T.Z.isSelfMute() || T.Z.isSelfMutedTemporarily(),
 T.Z.isSelfDeaf(),
@@ -69,9 +69,9 @@ S.Z
   null != W && R.ZP.trackExposure({
 location: 'voice_users'
   });
-  let [z, Y] = (0, r.Wu)([g.Z], () => [
-g.Z.getStreamForUser(N, l.getGuildId()),
-g.Z.getActiveStreamForUser(N, l.getGuildId())
+  let [z, Y] = (0, r.Wu)([C.Z], () => [
+C.Z.getStreamForUser(N, l.getGuildId()),
+C.Z.getActiveStreamForUser(N, l.getGuildId())
   ], [
 l,
 N
@@ -89,7 +89,7 @@ shakeLocation: P.oZ.VOICE_USER,
 isShaking: w,
 children: (0, i.jsx)(j.ZP, {
   ...e,
-  nick: null != C ? C : q,
+  nick: null != g ? g : q,
   canDrag: e.canDrag && !B,
   otherClientSessionType: null == K ? void 0 : null === (t = K.clientInfo) || void 0 === t ? void 0 : t.os,
   voicePlatform: X,
@@ -125,7 +125,7 @@ tabIndex: p,
 location: m,
 numAudience: _,
 withGuildIcon: f = !1,
-className: g,
+className: C,
 children: x
   } = e, [T, S] = a.useState(null), [Z, A] = a.useState(!1), M = a.useRef(null), b = (0, E.Es)(s.id, null != c ? c : D), R = a.useRef(new o.sW(50, () => {
 S(M.current), M.current = null;
@@ -190,8 +190,8 @@ return null != _ && _ > 0 ? e.push((0, i.jsx)(j.ul, {
   numUsers: b.length - d
 })), e;
   })();
-  return null == B && null == x ? null : (0, i.jsxs)(C.e, {
-className: l()(g, O.list, {
+  return null == B && null == x ? null : (0, i.jsxs)(g.e, {
+className: l()(C, O.list, {
   [O.collapsed]: u,
   [O.withGuildIcon]: f
 }),

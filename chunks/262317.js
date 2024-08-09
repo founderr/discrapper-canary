@@ -20,8 +20,8 @@ var i, a = n(735250),
   _ = n(888651),
   f = n(100527),
   E = n(258609),
-  C = n(257115),
-  g = n(569545),
+  g = n(257115),
+  C = n(569545),
   I = n(382182),
   x = n(525925),
   T = n(701362),
@@ -187,7 +187,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     channelId: t.id,
     guildId: t.guild_id
   };
-  A.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, g.V9)(a))) : (0, m.iV)(a), null == i || i(e.id);
+  A.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, C.V9)(a))) : (0, m.iV)(a), null == i || i(e.id);
 }), D(this, 'handleJoinVoice', () => {
   let {
     user: e,
@@ -274,7 +274,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     priority: _,
     collapsed: f,
     isStreaming: E,
-    isGuest: g,
+    isGuest: C,
     nick: I,
     video: x,
     serverMute: T,
@@ -297,7 +297,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
     localMute: o,
     localVideoDisabled: c,
     isStreaming: E,
-    isGuest: g,
+    isGuest: C,
     video: x,
     priority: _,
     deaf: m,
@@ -328,7 +328,7 @@ super(...e), D(this, 'domElementRef', s.createRef()), D(this, 'state', {
   if (t) {
     var w;
     return (0, a.jsx)(u.Tooltip, {
-      text: null !== (w = (0, C.Z)(n)) && void 0 !== w ? w : O.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+      text: null !== (w = (0, g.Z)(n)) && void 0 !== w ? w : O.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
       children: e => {
         let {
           onClick: t,

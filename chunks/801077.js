@@ -24,8 +24,8 @@ var i, l, r, a, s = n(392711),
   b = n(480294),
   M = n(831506),
   R = n(731290),
-  O = n(430824),
-  P = n(496675),
+  P = n(430824),
+  O = n(496675),
   y = n(158776),
   j = n(699516),
   D = n(594174),
@@ -36,8 +36,8 @@ let k = !1,
   B = !1,
   H = [],
   V = [],
-  F = {},
   W = {},
+  F = {},
   z = new Set(),
   Y = new Set();
 
@@ -54,24 +54,24 @@ function q(e) {
 }
 
 function Q(e) {
-  return null == F[e] && (F = {
-...F,
-[e]: new T.Z({
-  name: e
-})
-  }), F[e];
-}
-
-function J(e) {
   return null == W[e] && (W = {
 ...W,
-[e]: new Z.Z({
-  url: e
+[e]: new T.Z({
+  name: e
 })
   }), W[e];
 }
 
 function X(e) {
+  return null == F[e] && (F = {
+...F,
+[e]: new Z.Z({
+  url: e
+})
+  }), F[e];
+}
+
+function J(e) {
   !Y.has(e) && z.add(e);
 }
 
@@ -79,12 +79,12 @@ function $(e) {
   if ((0, _.Z)(e))
 return v.r9;
   let t = null != e.application_id ? C.Z.getApplication(e.application_id) : null;
-  return null != t ? t : (0, f.Z)(e) ? Q(e.name) : (0, m.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && X(e.application_id), t);
+  return null != t ? t : (0, f.Z)(e) ? Q(e.name) : (0, m.Z)(e) && null != e.url ? X(e.url) : (null != e.application_id && J(e.application_id), t);
 }
 
 function ee(e) {
   let t = w.Z.getVoiceStateForUser(e);
-  return (null == t ? void 0 : t.channelId) != null && P.Z.canWithPartialContext(G.Plq.VIEW_CHANNEL, {
+  return (null == t ? void 0 : t.channelId) != null && O.Z.canWithPartialContext(G.Plq.VIEW_CHANNEL, {
 channelId: t.channelId
   }) ? t.channelId : null;
 }
@@ -127,7 +127,7 @@ let u = function(e) {
       tags: {
         source: 'ACTIVITIES'
       }
-    }), null) : e === v.XB ? v.r9 : e.startsWith(T.H) ? Q(e.slice(T.H.length)) : e.startsWith(Z._) ? J(e.slice(Z._.length)) : (X(e), null);
+    }), null) : e === v.XB ? v.r9 : e.startsWith(T.H) ? Q(e.slice(T.H.length)) : e.startsWith(Z._) ? X(e.slice(Z._.length)) : (J(e), null);
   }(c),
   m = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
 if ((0, p.Z)(s)) {
@@ -141,8 +141,8 @@ if ((0, p.Z)(s)) {
       isActivitiesEnabledForCurrentPlatform: t,
       ChannelStore: A.Z,
       VoiceStateStore: w.Z,
-      PermissionStore: P.Z,
-      GuildStore: O.Z
+      PermissionStore: O.Z,
+      GuildStore: P.Z
     }) !== h.Fw.CAN_JOIN)
     continue;
 } else if (null == m)
@@ -175,7 +175,7 @@ V = new Set();
 let n = ee(e.id),
   i = A.Z.getChannel(n),
   l = null != i ? i.getGuildId() : null,
-  r = O.Z.getGuild(l);
+  r = P.Z.getGuild(l);
 if (V.has(l) && H.has(n) || null == i || null == r || i.id === r.afkChannelId)
   null == i && (u = null, k = !0);
 else {
@@ -278,7 +278,7 @@ this.syncWith([
   j.Z,
   b.Z,
   S.Z
-], er), this.waitFor(E.Z, O.Z, C.Z, D.default, S.Z);
+], er), this.waitFor(E.Z, P.Z, C.Z, D.default, S.Z);
   }
   get currentActivityParties() {
 return H;

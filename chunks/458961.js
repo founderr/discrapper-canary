@@ -29,8 +29,8 @@ var a, n, r = t(735250),
   N = t(430824),
   D = t(937615),
   O = t(73346),
-  x = t(506071),
-  R = t(587123),
+  R = t(506071),
+  x = t(587123),
   L = t(240864),
   b = t(863663),
   P = t(923400),
@@ -137,7 +137,7 @@ transitionState: J,
 onClose: ee
   } = e, [eA, et] = s.useState(Y), ea = (0, u.e7)([L.Z], () => null == eA ? null : L.Z.getGuildProduct(eA), [eA]), en = (null == ea ? void 0 : ea.published) === !0, {
 application: er
-  } = (0, m.Z)(q, W.wW.GUILD_ROLE_SUBSCRIPTIONS), es = P.M['0'], eo = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), el = E.QK.useSetting(), ei = (0, x.n)(), ed = s.useCallback(() => {
+  } = (0, m.Z)(q, W.wW.GUILD_ROLE_SUBSCRIPTIONS), es = P.M['0'], eo = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), el = E.QK.useSetting(), ei = (0, R.n)(), ed = s.useCallback(() => {
 var e;
 return (null == ea ? void 0 : null === (e = ea.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? es.data : (0, O._W)(ea.image_asset.application_id, ea.image_asset, 600, ei && el ? void 0 : 'webp');
   }, [
@@ -154,20 +154,20 @@ ec && (ee(), (0, Z.B)(X.Z.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_
 ec,
 ee
   ]);
-  let [eu, eC] = s.useState(null !== (n = null == ea ? void 0 : ea.name) && void 0 !== n ? n : ''), [eg, eT] = s.useState(null !== (o = null == ea ? void 0 : ea.description) && void 0 !== o ? o : ''), [ep, eh] = s.useState(null !== (l = null == ea ? void 0 : ea.price_tier) && void 0 !== l ? l : void 0), [em, eI] = s.useState(ed), [eU, ef] = s.useState(null !== (i = null == ea ? void 0 : null === (A = ea.image_asset) || void 0 === A ? void 0 : A.filename) && void 0 !== i ? i : es.name), [ev, eq] = s.useState(!1), [eE, eN] = s.useState(), eD = s.useMemo(() => null != ep ? (0, D.T4)(ep, K.pKx.USD) : void 0, [ep]), [eO, ex] = s.useState(!0), {
-changesSaving: eR,
+  let [eu, eC] = s.useState(null !== (n = null == ea ? void 0 : ea.name) && void 0 !== n ? n : ''), [eg, eT] = s.useState(null !== (o = null == ea ? void 0 : ea.description) && void 0 !== o ? o : ''), [ep, eh] = s.useState(null !== (l = null == ea ? void 0 : ea.price_tier) && void 0 !== l ? l : void 0), [em, eI] = s.useState(ed), [eU, ef] = s.useState(null !== (i = null == ea ? void 0 : null === (A = ea.image_asset) || void 0 === A ? void 0 : A.filename) && void 0 !== i ? i : es.name), [ev, eq] = s.useState(!1), [eE, eN] = s.useState(), eD = s.useMemo(() => null != ep ? (0, D.T4)(ep, K.pKx.USD) : void 0, [ep]), [eO, eR] = s.useState(!0), {
+changesSaving: ex,
 saveError: eL,
 saveProductWithAttachments: eb,
 hasUnsavedAttachmentChanges: eP,
 cancelUnusedUploads: eV
-  } = (0, R.P)(), e_ = (null == ea ? void 0 : ea.attachments) != null && (null == ea ? void 0 : ea.attachments.length) > 0, eS = null != eL ? eL : eE, eZ = null != eR && 'published' in eR, ej = null != eR && !eZ, eF = null !== (I = null == ea ? void 0 : ea.role_id) && void 0 !== I ? I : null, [eM, eG] = s.useState(), eB = null != eM || null != eF, eK = (0, u.e7)([N.Z], () => null != eF && null !== eM ? N.Z.getRole(q, eF) : null != eM ? eM : void 0, [
+  } = (0, x.P)(), e_ = (null == ea ? void 0 : ea.attachments) != null && (null == ea ? void 0 : ea.attachments.length) > 0, eS = null != eL ? eL : eE, eZ = null != ex && 'published' in ex, ej = null != ex && !eZ, eF = null !== (I = null == ea ? void 0 : ea.role_id) && void 0 !== I ? I : null, [eM, eG] = s.useState(), eB = null != eM || null != eF, eK = (0, u.e7)([N.Z], () => null != eF && null !== eM ? N.Z.getRole(q, eF) : null != eM ? eM : void 0, [
 eM,
 eF,
 q
   ]), eW = '';
   eB && eO ? eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE : eB ? eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE : eO && (eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE);
   let eX = () => {
-  ex(!1), eV();
+  eR(!1), eV();
 },
 [ez, eQ] = s.useState(),
 {
@@ -497,7 +497,7 @@ children: [
               text: X.Z.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ATTACHMENTS_TOGGLE_LABEL,
               value: eO,
               onChange: e => {
-                e ? ex(!0) : eP ? (0, g.openModalLazy)(async () => {
+                e ? eR(!0) : eP ? (0, g.openModalLazy)(async () => {
                   let {
                     ConfirmModal: e
                   } = await Promise.resolve().then(t.bind(t, 481060));
@@ -554,7 +554,7 @@ children: [
 
 function $(e) {
   var A;
-  return (0, r.jsx)(R.W, {
+  return (0, r.jsx)(x.W, {
 guildId: e.guildId,
 editSkuId: null !== (A = e.productId) && void 0 !== A ? A : void 0,
 onFileSizeError: () => (0, q.Z)(B.ve),

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return g;
+return C;
   }
 }), n(47120);
 var i = n(735250),
@@ -18,15 +18,15 @@ var i = n(735250),
   _ = n(705816),
   f = n(792379),
   E = n(123579),
-  C = n(402777);
+  g = n(402777);
 
-function g(e) {
+function C(e) {
   let {
 location: t,
 channel: n,
 ...s
   } = e, {
-botProfilesEnabled: g
+botProfilesEnabled: C
   } = (0, h.J)({
 location: t
   }), I = (0, m.Z)();
@@ -56,11 +56,11 @@ user: T,
 channel: n,
 onViewBlockedProfileClick: () => Z(!1),
 ...s
-  }) : g && T.isNonUserBot() ? (0, i.jsx)(f.Z, {
+  }) : C && T.isNonUserBot() ? (0, i.jsx)(f.Z, {
 user: T,
 channel: n,
 ...s
-  }) : g || !T.bot ? (0, i.jsx)(C.Z, {
+  }) : C || !T.bot ? (0, i.jsx)(g.Z, {
 user: T,
 currentUser: N,
 channel: n,

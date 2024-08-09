@@ -10,9 +10,9 @@ return N;
   }
 }), n(47120), n(411104);
 var t = n(735250),
-  i = n(470079),
-  r = n(512722),
-  l = n.n(r),
+  r = n(470079),
+  i = n(512722),
+  l = n.n(i),
   a = n(442837),
   o = n(481060),
   C = n(16084),
@@ -30,69 +30,69 @@ var t = n(735250),
 
 function M(e) {
   var s, n;
-  let i, {
-  planId: r,
+  let r, {
+  planId: i,
   startingPremiumSubscriptionPlanId: o,
   paymentSourceType: C
 } = e,
 [d, u] = (0, a.Wu)([_.Z], () => [
   _.Z.get(o),
-  _.Z.get(r)
+  _.Z.get(i)
 ]);
-  if (l()(null != d && null != u, 'Missing startingPlan or newPlan'), s = o, n = r, h.Y1.indexOf(s) < h.Y1.indexOf(n))
-switch (r) {
+  if (l()(null != d && null != u, 'Missing startingPlan or newPlan'), s = o, n = i, h.Y1.indexOf(s) < h.Y1.indexOf(n))
+switch (i) {
   case h.Xh.PREMIUM_MONTH_TIER_1:
-    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1, f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (i = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format());
+    r = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1, f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (r = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format());
     break;
   case h.Xh.PREMIUM_MONTH_TIER_2:
-    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MONTH, f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (i = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format());
+    r = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MONTH, f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (r = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format());
     break;
   case h.Xh.PREMIUM_YEAR_TIER_1:
-    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_1_YEAR, f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (i = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_1_YEAR.format());
+    r = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_1_YEAR, f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (r = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_1_YEAR.format());
     break;
   case h.Xh.PREMIUM_YEAR_TIER_2:
-    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_YEAR.format({
+    r = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_YEAR.format({
       numFreeGuildSubscriptions: h.cb
-    }), f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (i = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_2_YEAR.format({
+    }), f.X7u.has(null != C ? C : f.HeQ.UNKNOWN) && (r = I.Z.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_2_YEAR.format({
       numFreeGuildSubscriptions: h.cb
     }));
     break;
   case h.Xh.PREMIUM_3_MONTH_TIER_2:
   case h.Xh.PREMIUM_6_MONTH_TIER_2:
-    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MULTI_MONTH;
+    r = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MULTI_MONTH;
     break;
   case h.Xh.PREMIUM_MONTH_TIER_0:
   case h.Xh.PREMIUM_YEAR_TIER_0:
-    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
+    r = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
     break;
   default:
-    throw Error('Unexpected planId: '.concat(r));
+    throw Error('Unexpected planId: '.concat(i));
 }
   else if (d.skuId === h.Si.TIER_2 && u.skuId === h.Si.TIER_1)
-i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_TO_TIER_1;
+r = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_TO_TIER_1;
   else
 switch (u.skuId) {
   case h.Si.TIER_0:
-    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
+    r = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
     break;
   case h.Si.TIER_1:
-    i = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1_YEAR_TO_MONTH;
+    r = I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1_YEAR_TO_MONTH;
     break;
   case h.Si.TIER_2:
-    i = 1 !== d.intervalCount ? I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_GENERIC_TO_MONTH : I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_YEAR_TO_MONTH;
+    r = 1 !== d.intervalCount ? I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_GENERIC_TO_MONTH : I.Z.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_YEAR_TO_MONTH;
     break;
   default:
     throw Error('Unexpected skuId: '.concat(u.skuId));
 }
   return (0, t.jsx)('div', {
 className: E.text,
-children: i
+children: r
   });
 }
 
 function N(e) {
   let s, n, {
-  planId: r,
+  planId: i,
   enableNoPaymentTrial: d,
   startingPremiumSubscriptionPlanId: u,
   onClose: c,
@@ -106,7 +106,7 @@ function N(e) {
   theme: A
 } = (0, o.useThemeContext)(),
 O = (0, a.e7)([p.Z], () => null != N ? p.Z.get(N.id) : null);
-  i.useEffect(() => {
+  r.useEffect(() => {
 if (null == N || null != O)
   return;
 let {
@@ -134,11 +134,11 @@ s = (0, t.jsx)('div', {
 });
   else if (null != u)
 s = (0, t.jsx)(M, {
-  planId: r,
+  planId: i,
   startingPremiumSubscriptionPlanId: u
 });
   else if (null != g) {
-let e = _.Z.get(r);
+let e = _.Z.get(i);
 l()(null != e, 'Missing plan'), s = (0, t.jsxs)(t.Fragment, {
   children: [
     (0, t.jsx)('div', {
@@ -154,13 +154,13 @@ l()(null != e, 'Missing plan'), s = (0, t.jsxs)(t.Fragment, {
   ]
 });
   } else {
-let e = _.Z.get(r);
+let e = _.Z.get(i);
 l()(null != e, 'Missing plan'), s = (0, t.jsx)('div', {
   className: E.text,
   children: S(e)
 });
   }
-  let R = x.ZP.getPremiumType(r);
+  let R = x.ZP.getPremiumType(i);
   return l()(null != R, 'premium type should not be null in purchase confirmation'), n = null != O ? I.Z.Messages.PREMIUM_PAYMENT_CONFIRMATION_BUTTON_IAP.format({
 skuName: O.name
   }) : j ? I.Z.Messages.PREMIUM_DOWNGRADE_DONE_BUTTON : null != g ? I.Z.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI_CTA : I.Z.Messages.PREMIUM_UPGRADE_DONE_BUTTON, (0, t.jsxs)('div', {
@@ -186,8 +186,8 @@ function j(e) {
 planId: s,
 onClose: n
   } = e, {
-giftRecipient: i,
-selectedGiftStyle: r,
+giftRecipient: r,
+selectedGiftStyle: i,
 hasSentMessage: o,
 giftMessageError: C,
 isSendingMessage: p
@@ -198,9 +198,9 @@ isSendingMessage: p
 giftCode: L,
 subscriptionPlan: x,
 onClose: n,
-selectedGiftStyle: r,
+selectedGiftStyle: i,
 hasSentMessage: o,
-giftRecipient: i,
+giftRecipient: r,
 giftMessageError: C,
 isSendingMessage: p
   });

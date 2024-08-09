@@ -17,13 +17,13 @@ strokeWidth: m = 3,
 glowBlur: x = 0.4,
 showProgressText: g = !1,
 children: f
-  } = e, C = (0, c.EK)(n, o > 0), _ = r / 2, h = r / 2 - m / 2, E = 2 * Math.PI * h, S = E - o * E, T = {
-strokeDasharray: ''.concat(E, ' ').concat(E),
+  } = e, C = (0, c.EK)(n, o > 0), _ = r / 2, E = r / 2 - m / 2, h = 2 * Math.PI * E, S = h - o * h, T = {
+strokeDasharray: ''.concat(h, ' ').concat(h),
 strokeDashoffset: S
-  }, v = {
-strokeDasharray: ''.concat(E, ' ').concat(E),
-strokeDashoffset: -o * E
   }, N = {
+strokeDasharray: ''.concat(h, ' ').concat(h),
+strokeDashoffset: -o * h
+  }, v = {
 boxShadow: '0 0 30px 0px '.concat(C.glow)
   }, {
 progressTextAnimation: j
@@ -37,7 +37,7 @@ ref: t,
 children: [
   (0, s.jsxs)('div', {
     className: p.inner,
-    style: N,
+    style: v,
     children: [
       f,
       (0, s.jsxs)(l.animated.div, {
@@ -116,17 +116,17 @@ children: [
         className: p.progress,
         strokeWidth: m,
         fill: 'transparent',
-        r: h,
+        r: E,
         cx: _,
         cy: _,
         stroke: 'url(#linear)',
-        style: v
+        style: N
       }),
       (0, s.jsx)('circle', {
         className: p.progress,
         strokeWidth: m,
         fill: 'transparent',
-        r: h,
+        r: E,
         cx: _,
         cy: _,
         stroke: C.foreground,

@@ -28,8 +28,8 @@ var n, a, o, s, i, r, C = l(735250),
   H = l(430824),
   f = l(699516),
   N = l(594174),
-  A = l(689938),
-  R = l(380666);
+  R = l(689938),
+  A = l(380666);
 let S = (0, L.hQ)(),
   Z = (0, L.hQ)(),
   j = 'text-sm/medium';
@@ -89,22 +89,22 @@ roleId: o,
 size: 16
   }), r = (0, E.e7)([H.Z], () => H.Z.getRole(n, o)), c = s.includes(I.CR) ? '' : '@', d = (0, h.useToken)(h.tokens.unsafe_rawColors.PRIMARY_300).hsl(), m = null !== (t = null == r ? void 0 : r.colorString) && void 0 !== t ? t : d;
   return (0, C.jsxs)('div', {
-className: u()(R.rowLabel, R.roleTagContainer, a),
+className: u()(A.rowLabel, A.roleTagContainer, a),
 children: [
   (0, C.jsx)(h.RoleDot, {
-    className: R.__invalid_roleDot,
+    className: A.__invalid_roleDot,
     color: m,
     background: !1,
     tooltip: !1
   }),
   null != i ? (0, C.jsx)(T.Z, {
-    className: R.roleTagIcon,
+    className: A.roleTagIcon,
     ...i,
     enableTooltip: !1
   }) : c,
   (0, C.jsx)(h.Text, {
     variant: j,
-    className: R.roleTagLabel,
+    className: A.roleTagLabel,
     children: s
   })
 ]
@@ -118,14 +118,14 @@ row: l,
 className: n
   } = e, a = null != t.parent_id, o = (0, b.KS)(t);
   return (0, C.jsxs)('div', {
-className: u()(R.rowLabel, R.channelLabel, {
-  [R.hasParent]: a
+className: u()(A.rowLabel, A.channelLabel, {
+  [A.hasParent]: a
 }, n),
 children: [
   null != o && (0, C.jsx)(o, {
     size: 'xs',
     color: 'currentColor',
-    className: R.channelIcon
+    className: A.channelIcon
   }),
   (0, C.jsx)(h.Text, {
     variant: t.isCategory() ? 'eyebrow' : j,
@@ -243,13 +243,13 @@ z = c.useCallback(e => {
     row: n
   } = e, a = k[l][n];
   return (0, C.jsx)(h.Clickable, {
-    className: u()(R.selectableSearchRow, R.rowHeight),
+    className: u()(A.selectableSearchRow, A.rowHeight),
     onClick: e => {
       e.stopPropagation(), G(a);
     },
     children: (0, C.jsx)('div', {
-      className: R.rowContainer,
-      children: w(a, t, R.searchRowLabel)
+      className: A.rowContainer,
+      children: w(a, t, A.searchRowLabel)
     })
   }, a.id);
 }, [
@@ -261,7 +261,7 @@ q = c.useMemo(() => b.map(e => {
   var l, n;
   return l = x[e], n = t, {
     ...l.tag,
-    label: w(l.row, n, R.noIndent)
+    label: w(l.row, n, A.noIndent)
   };
 }), [
   x,
@@ -269,10 +269,10 @@ q = c.useMemo(() => b.map(e => {
   t
 ]);
   return (0, C.jsxs)('div', {
-className: u()(R.searchContainer, d),
+className: u()(A.searchContainer, d),
 children: [
   (0, C.jsxs)('div', {
-    className: R.searchBox,
+    className: A.searchBox,
     children: [
       (0, C.jsx)(M.ZP, {
         tags: q,
@@ -291,7 +291,7 @@ children: [
         onQueryChange: e => {
           L(e.trim().toLocaleLowerCase());
         },
-        placeholder: null != i ? i : A.Z.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_PLACEHOLDER,
+        placeholder: null != i ? i : R.Z.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_PLACEHOLDER,
         sections: [b.length],
         inputProps: {
           'aria-labelledby': S,
@@ -302,13 +302,13 @@ children: [
         }
       }),
       j && (0, C.jsx)('div', {
-        className: R.resultsListParent,
+        className: A.resultsListParent,
         onFocus: e => Y(!0, 1, e),
         onBlur: e => Y(!1, 1, e),
         tabIndex: -1,
         children: (0, C.jsx)(h.ListAuto, {
-          className: R.resultsListContainer,
-          innerClassName: R.resultsList,
+          className: A.resultsListContainer,
+          innerClassName: A.resultsList,
           sections: F,
           renderRow: z,
           rowHeight: 34,
@@ -318,13 +318,13 @@ children: [
             } = e;
             return 0 === t ? (0, C.jsx)(h.FormTitle, {
               tag: 'h5',
-              className: u()(R.sectionTitle, R.sectionHeight),
-              children: A.Z.Messages.CHANNELS
-            }, A.Z.Messages.CHANNELS) : 1 === t ? (0, C.jsx)(h.FormTitle, {
+              className: u()(A.sectionTitle, A.sectionHeight),
+              children: R.Z.Messages.CHANNELS
+            }, R.Z.Messages.CHANNELS) : 1 === t ? (0, C.jsx)(h.FormTitle, {
               tag: 'h5',
-              className: u()(R.sectionTitle, R.sectionHeight),
-              children: A.Z.Messages.ROLES
-            }, A.Z.Messages.ROLES) : null;
+              className: u()(A.sectionTitle, A.sectionHeight),
+              children: R.Z.Messages.ROLES
+            }, R.Z.Messages.ROLES) : null;
           },
           renderFooter: e => {
             let {
@@ -332,7 +332,7 @@ children: [
             } = e;
             if (0 === t)
               return 0 === F[1] && F[0] > 0 ? null : (0, C.jsx)('div', {
-                className: R.sectionFooter,
+                className: A.sectionFooter,
                 children: (0, C.jsx)(h.FormDivider, {})
               });
             return null;
@@ -354,7 +354,7 @@ children: [
   null != r && (0, C.jsx)(h.Text, {
     variant: 'text-xs/normal',
     color: 'text-muted',
-    className: R.helperText,
+    className: A.helperText,
     children: r
   })
 ]

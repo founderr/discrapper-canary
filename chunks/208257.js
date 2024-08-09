@@ -13,8 +13,8 @@ var a = n(735250),
   _ = n(98493),
   T = n(985159),
   N = n(328977),
-  C = n(412222),
-  R = n(223312),
+  R = n(412222),
+  C = n(223312),
   M = n(571728),
   m = n(572940),
   A = n(80487),
@@ -82,7 +82,7 @@ function b(e) {
 guildId: b
   } = e, j = t.useRef(null), [v, p] = t.useState((0, T.z)({
 guildId: b
-  })), f = (0, C.C)({
+  })), f = (0, R.C)({
 guildId: b
   }), Z = (0, N.L)({
 guildId: b
@@ -90,7 +90,7 @@ guildId: b
 guildId: b
   })) && void 0 !== s ? s : 0, {
 guildJoinRequests: O
-  } = (0, R.j)({
+  } = (0, C.j)({
 guildId: b,
 applicationStatus: 'REVIEW_APPLICATION' === v ? E.wB.SUBMITTED : v,
 sortOrder: f

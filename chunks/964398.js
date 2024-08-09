@@ -131,7 +131,7 @@ children: S
   } = e, v = l.useRef(null), Z = l.useRef([]), T = l.useRef(!1), L = l.useRef(null), [A, b] = l.useState(0), [M, R] = l.useState({
 x: 0,
 y: 0
-  }), O = Math.abs(M.x) + Math.abs(M.y) > 0, P = l.useMemo(() => a().chunk(S, p), [S]), y = l.useCallback((e, t) => {
+  }), P = Math.abs(M.x) + Math.abs(M.y) > 0, O = l.useMemo(() => a().chunk(S, p), [S]), y = l.useCallback((e, t) => {
 null == Z.current[A] ? Z.current[A] = [] : Z.current[A][t] = e;
   }, [A]), j = l.useCallback((e, t) => {
 L.current = t, E(p * e + t);
@@ -206,14 +206,14 @@ t
 if (!x)
   return;
 let t = A + (e.deltaY > 0 ? 1 : -1);
-t >= 0 && t < P.length && (null != L.current && (P[t].length > L.current ? j(t, L.current) : D()), b(t));
+t >= 0 && t < O.length && (null != L.current && (O[t].length > L.current ? j(t, L.current) : D()), b(t));
   }, [
 x,
 A,
-P,
+O,
 j,
 D
-  ]), H = l.useMemo(() => P[A].map((e, l) => {
+  ]), H = l.useMemo(() => O[A].map((e, l) => {
 let r = h[l];
 if (null == r)
   throw Error('Too many items supplied '.concat(S.length, ' expected max of ').concat(h.length));
@@ -231,7 +231,7 @@ return (0, i.jsx)('div', {
   children: e
 }, l);
   }), [
-P,
+O,
 A,
 t,
 m,
@@ -314,7 +314,7 @@ children: (0, i.jsxs)('div', {
               cy: 144,
               r: 28.8
             }),
-            O && (0, i.jsx)('circle', {
+            P && (0, i.jsx)('circle', {
               className: u.chatWheelCenter,
               cx: 144 + M.x,
               cy: 144 + M.y,
@@ -339,7 +339,7 @@ children: (0, i.jsxs)('div', {
         C && (0, i.jsx)(d, {
           className: u.chatWheelDeadZoneIcon
         }),
-        x && P.length > 1 ? (0, i.jsx)('div', {
+        x && O.length > 1 ? (0, i.jsx)('div', {
           className: u.paginationHint,
           children: c.Z.Messages.CHAT_WHEEL_PAGINATION_HINT
         }) : null

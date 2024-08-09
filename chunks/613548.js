@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(569545),
   f = n(517525),
   E = n(665149),
-  C = n(6242),
-  g = n(757692),
+  g = n(6242),
+  C = n(757692),
   I = n(141321),
   x = n(44136),
   T = n(651183),
@@ -89,7 +89,7 @@ userParticipantCount: H
 selectedParticipant: y.Z.getSelectedParticipant(x),
 voiceParticipantsHidden: y.Z.getVoiceParticipantsHidden(x),
 userParticipantCount: y.Z.getUserParticipantCount(x)
-  }), [x]), F = (0, u.e7)([P.default], () => P.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, g.o)(L, F), K = (0, C.lL)('CallHeader', !0, F, Y), {
+  }), [x]), F = (0, u.e7)([P.default], () => P.default.getCurrentUser()), W = (0, D.Z)(n), z = (0, O.So)(c.q.STREAM_HIGH_QUALITY), Y = (0, C.o)(L, F), K = (0, g.lL)('CallHeader', !0, F, Y), {
 preventIdle: q,
 allowIdle: X
   } = (0, N.Y)('popup'), Q = [];

@@ -34,9 +34,9 @@ function p(e) {
   selectedStoreListing: g,
   application: v
 } = (0, d.usePaymentContext)(),
-x = (0, i.Z)(S.i),
+L = (0, i.Z)(S.i),
 {
-  createMultipleConfettiAt: L
+  createMultipleConfettiAt: x
 } = a.useContext(s.h),
 R = null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : '',
 M = () => {
@@ -47,7 +47,7 @@ B = (0, o.KW)(null !== (n = null == b ? void 0 : b.flags) && void 0 !== n ? n : 
 j = null != g && g.benefits.length > 0 ? m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
   benefitCount: g.benefits.length
 }) : null;
-  return C ? x ? p = (0, r.jsx)(c.h, {
+  return C ? L ? p = (0, r.jsx)(c.h, {
 title: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({
   tierName: R
 }),
@@ -73,7 +73,7 @@ description: B ? m.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFI
 onPrimary: M,
 primaryCTA: _.g.CONTINUE,
 primaryText: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
-  })) : p = x ? (0, r.jsx)(c.m, {
+  })) : p = L ? (0, r.jsx)(c.m, {
 tierName: R,
 onConfirm: M,
 subscription: O
@@ -82,9 +82,9 @@ tierName: R,
 onConfirm: M,
 subscription: O
   }), a.useEffect(() => {
-l.Z.useReducedMotion && k && L(window.innerWidth / 2, window.innerHeight / 2);
+l.Z.useReducedMotion && k && x(window.innerWidth / 2, window.innerHeight / 2);
   }, [
-L,
+x,
 k
   ]), (0, r.jsxs)(r.Fragment, {
 children: [

@@ -13,8 +13,8 @@ var i = n(735250),
   _ = n(621853),
   f = n(171368),
   E = n(433355),
-  C = n(699516),
-  g = n(594174),
+  g = n(699516),
+  C = n(594174),
   I = n(768581),
   x = n(525541),
   T = n(981631),
@@ -88,7 +88,7 @@ let {
   relationshipType: n,
   userId: a,
   showingBanner: s
-} = e, l = null === (t = g.default.getUser(a)) || void 0 === t ? void 0 : t.bot, c = () => {
+} = e, l = null === (t = C.default.getUser(a)) || void 0 === t ? void 0 : t.bot, c = () => {
   o.Z.addRelationship({
     userId: a,
     context: {
@@ -215,18 +215,18 @@ let {
   isOptimisticAccepted: _,
   isOptimisticRejected: f
 } = (0, d.m)({
-  user: g.default.getUser(n),
+  user: C.default.getUser(n),
   onError: s,
   onAcceptSuccess: o,
   onRejectSuccess: l
-}), C = h || p || _ || f;
+}), g = h || p || _ || f;
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)(r.Button, {
       className: Z.action,
       size: r.Button.Sizes.TINY,
       onClick: () => c(t),
-      disabled: C,
+      disabled: g,
       submitting: h,
       children: S.Z.Messages.MESSAGE_REQUEST_ACCEPT
     }),
@@ -235,7 +235,7 @@ return (0, i.jsxs)(i.Fragment, {
       size: r.Button.Sizes.TINY,
       onClick: () => u(t),
       color: r.Button.Colors.PRIMARY,
-      disabled: C,
+      disabled: g,
       submitting: p,
       children: S.Z.Messages.MESSAGE_REQUEST_IGNORE
     })
@@ -249,7 +249,7 @@ channel: n,
 showingBanner: a
   } = e, {
 channelId: r
-  } = (0, h._)(), o = (0, l.e7)([u.Z], () => null != r && u.Z.isSpam(r), [r]), c = (0, l.e7)([C.Z], () => C.Z.getRelationshipType(t), [t]), d = n.id === r;
+  } = (0, h._)(), o = (0, l.e7)([u.Z], () => null != r && u.Z.isSpam(r), [r]), c = (0, l.e7)([g.Z], () => g.Z.getRelationshipType(t), [t]), d = n.id === r;
   return t === N.fL ? null : o || d ? (0, i.jsxs)('div', {
 className: Z.mobileContainer,
 children: [

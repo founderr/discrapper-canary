@@ -46,20 +46,20 @@ let d = c.Z.saturation,
     theme: I.BRd.DARK,
     saturation: d
   })) || void 0 === n ? void 0 : null === (s = n.hex) || void 0 === s ? void 0 : s.call(n)) && void 0 !== o ? o : '#000'),
-  O = (0, E._i)(A),
-  N = (0, E._i)(R);
-for (let e = 1; e < 8 && !((0, E.Bd)(O) >= 0.725); e++) {
-  ;
-  O = r()(O).darken(0.5).num();
-}
+  N = (0, E._i)(A),
+  O = (0, E._i)(R);
 for (let e = 1; e < 8 && !((0, E.Bd)(N) >= 0.725); e++) {
   ;
   N = r()(N).darken(0.5).num();
 }
-let T = (0, E.Rf)(O);
+for (let e = 1; e < 8 && !((0, E.Bd)(O) >= 0.725); e++) {
+  ;
+  O = r()(O).darken(0.5).num();
+}
+let T = (0, E.Rf)(N);
 return {
   primaryColor: T,
-  secondaryColor: (0, E.Rf)(N)
+  secondaryColor: (0, E.Rf)(O)
 };
   };
 s.Z = e => {
@@ -67,13 +67,13 @@ s.Z = e => {
   let A;
   A = a(481060).tokens;
   let R = (0, o.e7)([c.Z], () => c.Z.saturation),
-[O, N] = (0, _.Cf)(e, null !== (d = null == A ? void 0 : null === (u = A.colors) || void 0 === u ? void 0 : null === (i = u.BACKGROUND_FLOATING) || void 0 === i ? void 0 : null === (t = i.resolve) || void 0 === t ? void 0 : null === (l = t.call(i, {
+[N, O] = (0, _.Cf)(e, null !== (d = null == A ? void 0 : null === (u = A.colors) || void 0 === u ? void 0 : null === (i = u.BACKGROUND_FLOATING) || void 0 === i ? void 0 : null === (t = i.resolve) || void 0 === t ? void 0 : null === (l = t.call(i, {
   theme: I.BRd.DARK,
   saturation: R
 })) || void 0 === l ? void 0 : null === (s = l.hex) || void 0 === s ? void 0 : s.call(l)) && void 0 !== d ? d : '#000');
   return n.useMemo(() => {
-let e = (0, E._i)(O),
-  s = (0, E._i)(N);
+let e = (0, E._i)(N),
+  s = (0, E._i)(O);
 for (let s = 1; s < 8 && !((0, E.Bd)(e) >= 0.725); s++) {
   ;
   e = r()(e).darken(0.5).num();
@@ -88,7 +88,7 @@ return {
   secondaryColor: (0, E.Rf)(s)
 };
   }, [
-O,
-N
+N,
+O
   ]);
 };

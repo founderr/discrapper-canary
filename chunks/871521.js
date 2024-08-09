@@ -24,9 +24,9 @@ speaker: s,
 className: p
   } = e, f = (0, u.bp)(), {
 reducedMotion: E
-  } = a.useContext(r.AccessibilityPreferencesContext), C = (0, c.Z)({
+  } = a.useContext(r.AccessibilityPreferencesContext), g = (0, c.Z)({
 userId: s.id
-  }), g = null != s.member ? (0, m.CA)(s.member) : null, I = e => {
+  }), C = null != s.member ? (0, m.CA)(s.member) : null, I = e => {
 (0, o.jW)(e, async () => {
   let {
     default: e
@@ -74,11 +74,11 @@ children: e => (0, i.jsx)(r.Tooltip, {
     },
     onContextMenu: I,
     children: (0, i.jsx)(r.Avatar, {
-      src: null != g ? g : s.user.getAvatarURL(t.guild_id, 24),
+      src: null != C ? C : s.user.getAvatarURL(t.guild_id, 24),
       size: r.AvatarSizes.SIZE_24,
       className: l()(_.avatar, p),
       'aria-label': s.userNick,
-      isSpeaking: C && !E.enabled
+      isSpeaking: g && !E.enabled
     })
   })
 })

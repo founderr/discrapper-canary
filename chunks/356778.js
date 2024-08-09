@@ -41,7 +41,7 @@ messageCount: m,
 lastMessage: null
   },
   E = (0, l.Z)(() => new Map()),
-  C = (e, t) => {
+  g = (e, t) => {
 (0, o.j)(() => {
   E.setState(n => {
     let i = n.get(e);
@@ -55,7 +55,7 @@ lastMessage: null
   });
 });
   },
-  g = e => E(t => t.get(e), r.Z);
+  C = e => E(t => t.get(e), r.Z);
 
 function I(e, t, n) {
   let i = null != n ? n : {};
@@ -108,12 +108,12 @@ let {
   t,
   n,
   a
-]), o = g(r), E = (0, u.Z)(r), [x, T] = s.useState({});
+]), o = C(r), E = (0, u.Z)(r), [x, T] = s.useState({});
 return s.useEffect(() => {
   if (E !== r) {
     let i = I(e, n, a),
       s = new d.ZP(t, p.aib.GUILD, i);
-    C(r, {
+    g(r, {
       searchFetcher: s,
       messageCount: m,
       lastMessage: null
@@ -121,7 +121,7 @@ return s.useEffect(() => {
       s.fetch(e => {
         let n = e.body,
           i = n.messages[0];
-        if (C(r, {
+        if (g(r, {
             searchFetcher: s,
             result: n,
             messageCount: n.total_results,
@@ -144,7 +144,7 @@ return s.useEffect(() => {
           });
         }
       }, e => {}, e => {
-        C(r, {
+        g(r, {
           messageCount: 0,
           lastMessage: null
         }), T({});
@@ -170,7 +170,7 @@ function T(e, t, n, i) {
   n,
   i
 ]),
-l = g(a),
+l = C(a),
 r = (0, u.Z)(a);
   return {
 key: a,
@@ -203,22 +203,22 @@ track_exact_total_hits: !0
   }), [
 e,
 f
-  ]), g = s.useCallback(e => {
+  ]), C = s.useCallback(e => {
 let t = e.messages,
   n = e.links,
   i = e.media;
-C(r, t), C(c, n), C(h, i);
+g(r, t), g(c, n), g(h, i);
   }, [
 c,
 h,
 r
   ]), x = s.useCallback(e => {
-g({
+C({
   messages: e,
   links: e,
   media: e
 });
-  }, [g]);
+  }, [C]);
   s.useEffect(() => {
 let e = new d.tJ(t, p.aib.GUILD, f, E);
 x({
@@ -244,7 +244,7 @@ let n = setTimeout(async () => {
     let e = t.tabs.messages,
       o = t.tabs.links,
       c = t.tabs.media;
-    g({
+    C({
       messages: {
         messageCount: null !== (n = null == e ? void 0 : e.total_results) && void 0 !== n ? n : 0,
         lastMessage: null !== (i = null == e ? void 0 : e.messages[0]) && void 0 !== i ? i : null
@@ -270,7 +270,7 @@ t,
 f,
 E,
 x,
-g
+C
   ]);
   let [N, v] = s.useState({});
   return {

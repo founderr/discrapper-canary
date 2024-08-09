@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(906732),
   f = n(358221),
   E = n(414910),
-  C = n(909820),
-  g = n(493010),
+  g = n(909820),
+  C = n(493010),
   I = n(788983),
   x = n(928518),
   T = n(703656),
@@ -77,13 +77,13 @@ selectedParticipant: c
   } = e, u = t.getGuildId(), d = (0, o.e7)([P.Z], () => P.Z.getMostRecentSelectedTextChannelId(u), [u]), h = b.default.getId(), p = !(0, o.e7)([f.Z], () => f.Z.isFullscreenInContext(n)) && (!O.isPlatformEmbedded || O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS)), m = null != c && c.type !== Q.fO.ACTIVITY && c.user.id !== h, _ = a.useMemo(() => {
 var e;
 return null !== (e = null == l ? void 0 : l.window) && void 0 !== e ? e : window;
-  }, [l]), C = (0, K.Z)({
+  }, [l]), g = (0, K.Z)({
 channel: t,
 appContext: n,
 popoutOpen: s,
 popoutWindow: l,
 currentWindow: _
-  }), g = n === X.IlC.POPOUT && O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS);
+  }), C = n === X.IlC.POPOUT && O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS);
   return (0, i.jsxs)(i.Fragment, {
 children: [
   m ? (0, i.jsx)(M.Z, {
@@ -92,7 +92,7 @@ children: [
     currentWindow: _,
     sliderClassName: $.volumeSlider
   }) : null,
-  g ? (0, i.jsx)(A.Z, {
+  C ? (0, i.jsx)(A.Z, {
     className: $.rightTrayIcon,
     popoutWindowAlwaysOnTop: r,
     onToggleStayOnTop: ei
@@ -103,7 +103,7 @@ children: [
     onOpenPopout: et(t, d),
     onClosePopout: en
   }) : null,
-  C
+  g
 ]
   });
 }
@@ -132,7 +132,7 @@ function el(e) {
 } = e,
 _ = (0, p.bp)(),
 E = (0, o.e7)([P.Z], () => P.Z.getVoiceChannelId() === n.id, [n.id]),
-g = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CONNECT, n)),
+C = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CONNECT, n)),
 I = (0, U.w8)(n.id, w.pV.SPEAKER),
 x = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(n.id)),
 T = h && _ !== X.IlC.POPOUT,
@@ -161,7 +161,7 @@ onScroll: e => {
   }) : (0, i.jsx)(V.Z, {
 participants: I,
 channel: n,
-hasConnectPermission: g
+hasConnectPermission: C
   }), (0, i.jsx)(S.Z, {
 style: {
   height: 'calc(100% - '.concat(b, ')'),
@@ -189,7 +189,7 @@ renderHeader: () => (0, i.jsx)(F.Z, {
   showRequestToSpeakSidebar: c,
   channel: n
 }),
-renderChatToasts: () => !M || m || T ? null : (0, i.jsx)(C.ZP, {
+renderChatToasts: () => !M || m || T ? null : (0, i.jsx)(g.ZP, {
   children: (0, i.jsx)(v.Z, {
     className: l()($.chatToasts, {
       [$.rtsSidebarOpen]: c
@@ -242,7 +242,7 @@ ref: M
   } = (0, h.Z)();
   return (0, i.jsx)(_.Gt, {
 value: N,
-children: (0, i.jsxs)(C.B2, {
+children: (0, i.jsxs)(g.B2, {
   children: [
     (0, i.jsxs)('div', {
       className: $.container,
@@ -270,7 +270,7 @@ children: (0, i.jsxs)(C.B2, {
         }) : null,
         (0, i.jsx)('div', {
           className: $.channelChatWrapper,
-          children: S && (!T || T && v === X.IlC.POPOUT) && (0, i.jsx)(g.Z, {
+          children: S && (!T || T && v === X.IlC.POPOUT) && (0, i.jsx)(C.Z, {
             channel: t,
             guild: Z,
             maxWidth: A - 550
@@ -278,7 +278,7 @@ children: (0, i.jsxs)(C.B2, {
         })
       ]
     }),
-    (0, i.jsx)(C.H_, {})
+    (0, i.jsx)(g.H_, {})
   ]
 })
   });

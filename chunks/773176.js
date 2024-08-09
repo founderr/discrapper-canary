@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(706140),
   f = n(543241),
   E = n(689789),
-  C = n(346610),
-  g = n(868643),
+  g = n(346610),
+  C = n(868643),
   I = n(223606),
   x = n(188597),
   T = n(41776),
@@ -211,12 +211,12 @@ let Y = (0, H.a4)(n),
   }),
   {
     canForwardMessages: en
-  } = (0, C.yk)({
+  } = (0, g.yk)({
     location: 'useMessageUtilitiesProps'
   }, {
     autoTrackExposure: !1
   }),
-  ei = (0, g.a)(n),
+  ei = (0, C.a)(n),
   {
     showReminders: ea
   } = b.Z.useExperiment({
@@ -283,7 +283,7 @@ ed({
   }, [
 es,
 ed
-  ]), eE = (0, R.$R)(t), eC = n.hasFlag(Q.iLy.CROSSPOSTED), [eg, eI] = (0, _.c)(P ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), ex = eg === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [eT, eN] = a.useState(!1), ev = a.useCallback(() => {
+  ]), eE = (0, R.$R)(t), eg = n.hasFlag(Q.iLy.CROSSPOSTED), [eC, eI] = (0, _.c)(P ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), ex = eC === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [eT, eN] = a.useState(!1), ev = a.useCallback(() => {
 eN(!0);
   }, []), eS = a.useCallback(() => {
 eN(!1);
@@ -399,10 +399,10 @@ children: [
     onClick: () => (0, Y.qe)(t, n)
   }, 'view-thread') : null,
   E ? (0, i.jsx)(z.s, {
-    label: eC ? $.Z.Messages.NEWS_CHANNEL_PUBLISHED : $.Z.Messages.NEWS_CHANNEL_PUBLISH,
+    label: eg ? $.Z.Messages.NEWS_CHANNEL_PUBLISHED : $.Z.Messages.NEWS_CHANNEL_PUBLISH,
     icon: d.AnnouncementsIcon,
     onClick: () => (0, Y.Xl)(t, n),
-    disabled: eC
+    disabled: eg
   }, 'publish') : null,
   o && (ep || q) ? (0, i.jsx)(z.s, {
     label: $.Z.Messages.DELETE,

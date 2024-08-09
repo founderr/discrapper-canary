@@ -13,8 +13,8 @@ var a = n(735250),
   _ = n(406432),
   g = n(169525),
   x = n(255269),
-  C = n(930282),
-  f = n(524444),
+  f = n(930282),
+  C = n(524444),
   p = n(695346),
   T = n(433355),
   I = n(592125),
@@ -45,8 +45,8 @@ className: m,
 coords: h,
 gridCoords: _,
 gridSectionBoundaries: g,
-observePostVisibilityAnalytics: C
-  } = e, f = (0, o.e7)([I.Z], () => I.Z.getChannel(n.parent_id)), S = n.id, j = s.useRef(null), F = (0, o.e7)([T.ZP], () => T.ZP.getCurrentSidebarChannelId(n.parent_id) === n.id), {
+observePostVisibilityAnalytics: f
+  } = e, C = (0, o.e7)([I.Z], () => I.Z.getChannel(n.parent_id)), S = n.id, j = s.useRef(null), F = (0, o.e7)([T.ZP], () => T.ZP.getCurrentSidebarChannelId(n.parent_id) === n.id), {
 firstMessage: k,
 loaded: H
   } = (0, b.cl)(n), {
@@ -69,16 +69,16 @@ goToThread: r,
 channel: n
   });
   s.useEffect(() => {
-null == C || C(j.current, S);
+null == f || f(j.current, S);
   }, [
-C,
+f,
 S
   ]);
   let J = (0, o.e7)([E.Z], () => E.Z.can(w.Plq.MANAGE_MESSAGES, n)),
 Q = p.QK.useSetting(),
 $ = p.cC.useSetting(),
 ee = (0, x.Z)($, J),
-et = (0, v.aU)(k, f, !1),
+et = (0, v.aU)(k, C, !1),
 [en, ea] = (0, A.rI)(h.width - 2 * A.LT),
 es = (0, N.xw)(n, i.z.CREATION_DATE, P.R6.POSTED_DURATION_AGO),
 er = (0, M.NN)(n),
@@ -299,7 +299,7 @@ gridSectionBoundaries: d
 let k = e => e.preventDefault(),
   H = s.memo(function(e) {
 return (0, a.jsx)(a.Fragment, {
-  children: (0, f.Yi)(e)
+  children: (0, C.Yi)(e)
 });
   }),
   B = s.memo(function(e) {
@@ -313,17 +313,17 @@ let {
 } = e, {
   containsVideo: u,
   containsGif: x
-} = s.useMemo(() => (0, v.cp)(t), [t]), C = s.useMemo(() => t.slice(j.$x, j.GV), [t]), f = (0, j.tu)({
-  numAttachments: C.length,
+} = s.useMemo(() => (0, v.cp)(t), [t]), f = s.useMemo(() => t.slice(j.$x, j.GV), [t]), C = (0, j.tu)({
+  numAttachments: f.length,
   containerWidth: r,
   containerHeight: i
 }), p = (0, j.S$)({
-  imageContainerStyles: f,
+  imageContainerStyles: C,
   containerWidth: r,
   containerHeight: i
-}), T = (0, h.m)(), I = s.useMemo(() => C.map((e, t) => {
+}), T = (0, h.m)(), I = s.useMemo(() => f.map((e, t) => {
   var s;
-  let [r, i] = (0, g.As)(e, !n, T), h = (0, g.MC)(i), C = {
+  let [r, i] = (0, g.As)(e, !n, T), h = (0, g.MC)(i), f = {
     ...p[t],
     src: e.src,
     width: e.width,
@@ -335,26 +335,26 @@ let {
   }, I = (0, _.d$)(e.src) ? ''.concat(e.src, '?format=png') : e.src, E = o && !r ? e.src : I;
   return (0, a.jsxs)('div', {
     className: D.bodyMediaFrame,
-    style: f[t],
+    style: C[t],
     children: [
       c ? (0, a.jsx)(m.Z, {
-        ...C,
+        ...f,
         src: E,
         backgroundSrc: I,
-        aspectRatio: C.maxWidth / C.maxHeight,
-        alt: null !== (s = C.alt) && void 0 !== s ? s : '',
+        aspectRatio: f.maxWidth / f.maxHeight,
+        alt: null !== (s = f.alt) && void 0 !== s ? s : '',
         className: l()(D.mediaPostContainer, {
           [D.obscured]: r
         }),
         imageChildClassName: D.mediaPostThumbnail
       }) : e.src.startsWith('data:') ? (0, a.jsx)(d.Image, {
-        ...C,
+        ...f,
         className: D.mediaContainer,
         imageClassName: l()(D.thumbnailOverride, {
           [D.obscured]: r
         })
       }) : (0, a.jsx)(H, {
-        ...C,
+        ...f,
         autoPlay: o && !r,
         containerClassName: D.mosaicMediaContainer,
         imageClassName: l()(D.imageCover, {
@@ -376,9 +376,9 @@ let {
   x,
   u,
   n,
-  f,
-  p,
   C,
+  p,
+  f,
   c,
   T
 ]);
@@ -487,7 +487,7 @@ children: (0, a.jsxs)('div', {
           color: o ? 'header-secondary' : 'text-muted',
           children: y.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED
         }),
-        r && null != n && (0, a.jsx)(C.ZP, {
+        r && null != n && (0, a.jsx)(f.ZP, {
           message: n,
           content: m,
           className: g

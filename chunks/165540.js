@@ -13,8 +13,8 @@ var i = n(735250),
   _ = n(541099),
   f = n(827498),
   E = n(663924),
-  C = n(998698),
-  g = n(605236),
+  g = n(998698),
+  C = n(605236),
   I = n(665906),
   x = n(271383),
   T = n(496675),
@@ -32,7 +32,7 @@ animateRef: s
   } = e, r = (0, o.e7)([_.Z], () => _.Z.shouldShowPopup() && _.Z.activeViewType() === n), {
 Component: m,
 events: E,
-play: C
+play: g
   } = (0, u.w)();
   a.useImperativeHandle(s, () => ({
 animate: () => {
@@ -40,13 +40,13 @@ animate: () => {
 }
   }), [E]);
   let I = a.useCallback(() => {
-(0, h.yw)(S.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), r ? p.y(f.ti.DISMISSED) : ((0, g.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
+(0, h.yw)(S.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), r ? p.y(f.ti.DISMISSED) : ((0, C.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
   dismissAction: A.L.TAKE_ACTION
-}), p._(f._b.TEXT, n)), C();
+}), p._(f._b.TEXT, n)), g();
   }, [
 r,
 n,
-C
+g
   ]);
   return (0, i.jsx)('div', {
 className: l()(b.buttonContainer, Z.t4),
@@ -112,10 +112,10 @@ let n = e.getGuildId(),
 return a;
   }(t, n), {
 activeCommand: u
-  } = (0, o.cj)([C.Z], () => {
+  } = (0, o.cj)([g.Z], () => {
 var e;
 return {
-  activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? C.Z.getActiveCommand(t.id) : null
+  activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? g.Z.getActiveCommand(t.id) : null
 };
   }), d = m.T.useExperiment({
 location: 'chat_input'

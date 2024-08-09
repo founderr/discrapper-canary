@@ -34,7 +34,7 @@ var l = n(120356),
   M = n(647086),
   R = n(704672);
 
-function O(e, t, n) {
+function P(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -42,7 +42,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class P extends Z.ZP {
+class O extends Z.ZP {
   componentWillUnmount() {
 this.resetTextChannelPopoutTimers();
   }
@@ -131,10 +131,10 @@ let {
 return m ? d(h(A)) : A;
   }
   constructor(...e) {
-super(...e), O(this, 'state', {
+super(...e), P(this, 'state', {
   shouldShowThreadsPopout: !1,
   shouldShowActivities: !1
-}), O(this, 'enterTimer', 0), O(this, 'exitTimer', 0), O(this, 'handleMouseEnter', () => {
+}), P(this, 'enterTimer', 0), P(this, 'exitTimer', 0), P(this, 'handleMouseEnter', () => {
   if (!!this.props.canShowThreadPreviewForUser || null != this.props.embeddedApps)
     this.resetTextChannelPopoutTimers(), this.enterTimer = setTimeout(() => {
       null != this.props.embeddedApps && this.props.embeddedApps.length > 0 ? this.setState({
@@ -143,7 +143,7 @@ super(...e), O(this, 'state', {
         shouldShowThreadsPopout: !0
       });
     }, 200);
-}), O(this, 'handleMouseLeave', () => {
+}), P(this, 'handleMouseLeave', () => {
   this.resetTextChannelPopoutTimers(), this.exitTimer = setTimeout(() => {
     this.state.shouldShowActivities && this.setState({
       shouldShowActivities: !1
@@ -151,23 +151,23 @@ super(...e), O(this, 'state', {
       shouldShowThreadsPopout: !1
     });
   }, 250);
-}), O(this, 'handleThreadsPopoutClose', () => {
+}), P(this, 'handleThreadsPopoutClose', () => {
   this.resetTextChannelPopoutTimers(), this.setState({
     shouldShowThreadsPopout: !1
   });
-}), O(this, 'handleActivitiesPopoutClose', () => {
+}), P(this, 'handleActivitiesPopoutClose', () => {
   this.resetTextChannelPopoutTimers(), this.setState({
     shouldShowActivities: !1
   });
-}), O(this, 'handleClosePopout', () => {
+}), P(this, 'handleClosePopout', () => {
   this.state.shouldShowActivities && this.handleActivitiesPopoutClose(), this.state.shouldShowThreadsPopout && this.handleThreadsPopoutClose();
-}), O(this, 'handleMouseDown', () => {
+}), P(this, 'handleMouseDown', () => {
   this.handleActivitiesPopoutClose(), this.handleThreadsPopoutClose();
   let {
     channel: e
   } = this.props, t = e.getGuildId();
   o.Z.preload(null != t ? t : b.ME, e.id);
-}), O(this, 'renderPopout', e => {
+}), P(this, 'renderPopout', e => {
   let {
     channel: t,
     sorting: n,
@@ -182,7 +182,7 @@ super(...e), O(this, 'state', {
     ...e,
     channel: this.props.channel
   });
-}), O(this, 'handleContextMenu', e => {
+}), P(this, 'handleContextMenu', e => {
   let {
     channel: t
   } = this.props;
@@ -240,7 +240,7 @@ super(...e), O(this, 'state', {
 });
   }
 }
-let y = (0, u.B)(P);
+let y = (0, u.B)(O);
 
 function j(e) {
   let {
@@ -272,7 +272,7 @@ isSubscriptionGated: L
   } = (0, f.Z)(t.id), A = (0, a.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)), R = (0, a.e7)([S.default], () => {
 let e = S.default.getCurrentUser();
 return null != e && (!t.isNSFW() || e.nsfwAllowed);
-  }, [t]), O = (0, d.NX)(t.id, !1), P = (0, T.Z)({
+  }, [t]), P = (0, d.NX)(t.id, !1), O = (0, T.Z)({
 channel: t,
 isChannelCollapsed: !1,
 isChannelSelected: o,
@@ -280,7 +280,7 @@ isSubscriptionGated: L,
 needSubscriptionToAccess: Z,
 isNewChannel: v,
 muted: s,
-enableActivities: O,
+enableActivities: P,
 resolvedUnreadSetting: _
   }), j = (0, h.ZP)(t);
   return (0, i.jsx)(y, {
@@ -294,10 +294,10 @@ needSubscriptionToAccess: Z,
 isNewChannel: v && e.canBeNewChannel,
 isFavoriteSuggestion: r && !A,
 canShowThreadPreviewForUser: R,
-channelInfo: P,
+channelInfo: O,
 embeddedApps: j,
 resolvedUnreadSetting: _,
-hasChannelInfo: null != P,
-enableActivities: O
+hasChannelInfo: null != O,
+enableActivities: P
   });
 }

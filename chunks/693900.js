@@ -45,20 +45,20 @@ ref: g,
 height: f = null
   } = (0, i.Z)(), C = null !== (t = (0, c.Z)(f)) && void 0 !== t ? t : null, [{
 height: _
-  }, h] = (0, l.useSpring)(() => ({
+  }, E] = (0, l.useSpring)(() => ({
 from: {
   height: 0
 },
 config: p
   }));
   return o.useLayoutEffect(() => {
-null !== f && h({
+null !== f && E({
   height: f,
   immediate: !m || x || null === C
 });
   }, [
 f,
-h,
+E,
 m,
 x,
 C

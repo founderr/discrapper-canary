@@ -115,8 +115,8 @@ guildId: t,
 onClose: l
   } = e, o = (0, d.e7)([M.Z], () => M.Z.getSearchStateByGuildId(t), [t], c()), {
 inviteCodes: i
-  } = (0, T.s)(t), C = (0, d.e7)([m.Z], () => m.Z.getGuild(t)), E = null == C ? void 0 : C.vanityURLCode, [N, A] = a.useState(!1), {
-selectedSourceInviteCode: R,
+  } = (0, T.s)(t), C = (0, d.e7)([m.Z], () => m.Z.getGuild(t)), E = null == C ? void 0 : C.vanityURLCode, [N, R] = a.useState(!1), {
+selectedSourceInviteCode: A,
 selectedJoinSourceType: S
   } = o, Z = null != S && S !== b.gq.UNSPECIFIED, j = (0, d.e7)([_.Z], () => _.Z.hideInstantInvites, []);
   j && (i = []);
@@ -138,7 +138,7 @@ D = a.useCallback(e => {
   }) : (0, x.Dr)(t, {
     selectedSourceInviteCode: null,
     selectedJoinSourceType: e
-  }), A(!1);
+  }), R(!1);
 }, [
   t,
   S
@@ -158,7 +158,7 @@ children: N ? (0, n.jsxs)(u.MenuGroup, {
   children: [
     (0, n.jsx)(u.MenuItem, {
       id: 'back',
-      action: () => A(!1),
+      action: () => R(!1),
       render: e => (0, n.jsxs)('span', {
         ...e,
         className: I.customLabelContainer,
@@ -198,7 +198,7 @@ children: N ? (0, n.jsxs)(u.MenuGroup, {
       id: 'members-table-invite-code-search',
       control: (e, t) => (0, n.jsx)(u.MenuSearchControl, {
         ...e,
-        query: null != R ? R : '',
+        query: null != A ? A : '',
         onChange: B,
         ref: t,
         placeholder: g.Z.Messages.MEMBER_SAFETY_INVITE_CODE_SEARCH_PLACEHOLDER
@@ -208,7 +208,7 @@ children: N ? (0, n.jsxs)(u.MenuGroup, {
     (0, n.jsx)(u.MenuRadioItem, {
       id: 'join-source-type-option-all',
       label: g.Z.Messages.GUILD_SETTINGS_FILTER_ALL,
-      checked: null == R && null == S,
+      checked: null == A && null == S,
       disabled: !1,
       action: () => D(null),
       group: 'join-source-type-options'
@@ -221,7 +221,7 @@ children: N ? (0, n.jsxs)(u.MenuGroup, {
         vanityUrl: E,
         text: e
       }),
-      checked: R === e,
+      checked: A === e,
       disabled: !1,
       action: () => v(e),
       group: 'join-source-type-options'
@@ -229,7 +229,7 @@ children: N ? (0, n.jsxs)(u.MenuGroup, {
     (0, n.jsx)(u.MenuSeparator, {}),
     (0, n.jsx)(u.MenuItem, {
       id: 'other-join-methods',
-      action: () => A(!0),
+      action: () => R(!0),
       render: e => (0, n.jsxs)('div', {
         className: s()(I.containerWithRightCaret, I.customLabelContainer),
         children: [

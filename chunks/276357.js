@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return f;
+return C;
   }
 }), n(47120);
 var a = n(735250),
@@ -18,15 +18,15 @@ var a = n(735250),
   g = n(689938),
   x = n(391950);
 
-function C() {
+function f() {
   return Promise.resolve();
 }
 
-function f(e) {
+function C(e) {
   let {
 channel: t,
 closePopout: n,
-setPopoutRef: f
+setPopoutRef: C
   } = e, p = (0, u.Vm)(t), {
 tagFilter: T
   } = (0, d.H)(t.id), I = (0, d.v)(), E = (0, i.e7)([c.Z], () => c.Z.keyboardModeEnabled), N = s.useCallback(e => {
@@ -57,8 +57,8 @@ n
 id: ''.concat(t.id, '-all-tags-dropdown-navigator'),
 isEnabled: !0,
 wrap: !0,
-scrollToStart: C,
-scrollToEnd: C
+scrollToStart: f,
+scrollToEnd: f
   }), S = s.useRef(null);
   return s.useEffect(() => {
 requestAnimationFrame(() => {
@@ -68,7 +68,7 @@ requestAnimationFrame(() => {
   }
 });
   }, []), (0, a.jsxs)(o.Dialog, {
-ref: f,
+ref: C,
 'aria-label': g.Z.Messages.FORUM_TAG_FILTER_HEADER,
 className: x.container,
 children: [

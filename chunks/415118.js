@@ -23,8 +23,8 @@ var t = i(481060),
   m = i(991307),
   p = i(725119),
   D = i(931617),
-  x = i(700994),
-  T = i(332031),
+  T = i(700994),
+  x = i(332031),
   O = i(981631),
   C = i(689938);
 n.default = (0, o.Z)((0, a.Z)(function(e) {
@@ -43,16 +43,16 @@ object: O.qAy.CONTEXT_MENU_ITEM
   }, S = (0, p.Z)({
 userId: n.id,
 guildId: i
-  }), R = (0, g.Z)(n, i, U), j = (0, v.Z)(n.id, U), G = (0, T.Z)(n.id), k = (0, A.Z)({
+  }), R = (0, g.Z)(n, i, U), j = (0, v.Z)(n.id, U), G = (0, x.Z)(n.id), k = (0, A.Z)({
 user: n,
 context: U
-  }), P = (0, _.Z)({
+  }), V = (0, _.Z)({
 user: n,
 guildId: i,
 context: U
-  }), V = (0, E.Z)({
+  }), P = (0, E.Z)({
 user: n
-  }), F = (0, x.Z)(n.id), y = (0, m.Z)(n.id), B = (0, c.Z)({
+  }), F = (0, T.Z)(n.id), y = (0, m.Z)(n.id), B = (0, c.Z)({
 guildId: i,
 userId: n.id,
 analyticsLocation: h,
@@ -63,7 +63,7 @@ guildId: i
   }), Y = (0, I.Z)({
 user: n,
 guildId: i
-  }), z = (0, u.Z)(null, n), H = (0, M.Z)(n), W = (0, N.Z)({
+  }), z = (0, u.Z)(null, n), W = (0, M.Z)(n), H = (0, N.Z)({
 user: n
   }), q = (0, f.Z)(n, i), X = (0, D.Z)(n.id, i), K = (0, b.Z)(n, i), J = (0, r.Z)({
 id: n.id,
@@ -83,8 +83,8 @@ children: [
           d && R,
           j,
           k,
-          a && P,
           a && V,
+          a && P,
           G
         ]
       }),
@@ -99,9 +99,9 @@ children: [
           o && y,
           a && B,
           a && Y,
-          H,
+          W,
           w,
-          a && W
+          a && H
         ]
       }),
       (0, l.jsx)(t.MenuGroup, {

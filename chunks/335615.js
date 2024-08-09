@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(239091),
   f = n(941028),
   E = n(144144),
-  C = n(276264),
-  g = n(607070),
+  g = n(276264),
+  C = n(607070),
   I = n(100527),
   x = n(367907),
   T = n(906732),
@@ -57,7 +57,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let K = V.ZP.getEnableHardwareAcceleration(),
-  q = 44 + C.x,
+  q = 44 + g.x,
   X = {
 origin: {
   x: 38,
@@ -91,7 +91,7 @@ let {
   isMobileOnline: _,
   premiumSince: f,
   ...E
-} = this.props, g = null != f ? new Date(f) : null;
+} = this.props, C = null != f ? new Date(f) : null;
 return (0, i.jsx)(m.Popout, {
   preload: () => (0, O.W)(s, {
     channelId: u.id,
@@ -105,7 +105,7 @@ return (0, i.jsx)(m.Popout, {
     let {
       isShown: f
     } = m;
-    return (0, i.jsx)(C.Z, {
+    return (0, i.jsx)(g.Z, {
       className: z.member,
       onContextMenu: this.renderUserContextMenu,
       shouldAnimateStatus: K,
@@ -116,7 +116,7 @@ return (0, i.jsx)(m.Popout, {
       activities: r,
       applicationStream: o,
       isOwner: n,
-      premiumSince: g,
+      premiumSince: C,
       colorString: e,
       colorRoleName: t,
       isTyping: p,
@@ -257,7 +257,7 @@ function ee(e) {
   let {
 index: t
   } = e, n = (0, c.JA)(''.concat(t));
-  return (0, i.jsx)(C.Z, {
+  return (0, i.jsx)(g.Z, {
 itemProps: n
   });
 }
@@ -532,7 +532,7 @@ channel: t,
 className: n
   } = e, {
 analyticsLocations: s
-  } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([g.Z], () => g.Z.keyboardModeEnabled), o = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)), {
+  } = (0, T.ZP)(I.Z.MEMBER_LIST), r = (0, h.e7)([C.Z], () => C.Z.keyboardModeEnabled), o = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)), {
 rows: d,
 groups: p,
 version: m,
@@ -561,7 +561,7 @@ n.scrollToIndex({
     });
   }
 });
-  }, []), C = a.useCallback(() => new Promise(e => {
+  }, []), g = a.useCallback(() => new Promise(e => {
 let t = f.current;
 if (null == t)
   return e();
@@ -581,7 +581,7 @@ t.scrollToBottom({
 id: 'members-'.concat(t.id),
 setFocus: E,
 isEnabled: r,
-scrollToStart: C,
+scrollToStart: g,
 scrollToEnd: x
   });
   return (0, i.jsx)(T.Gt, {

@@ -1,6 +1,6 @@
 l.d(t, {
   Z: function() {
-return R;
+return A;
   }
 }), l(47120);
 var n = l(735250),
@@ -65,9 +65,9 @@ children: (0, n.jsxs)(d.Clickable, {
 })
   });
 }
-let A = 'member-safety-force-show-signals-tooltip';
+let R = 'member-safety-force-show-signals-tooltip';
 
-function R(e) {
+function A(e) {
   let {
 guildId: t,
 currentPagedMembers: l
@@ -75,16 +75,16 @@ currentPagedMembers: l
 m.Z,
 u.Z
   ], () => m.Z.can(I.Plq.MANAGE_GUILD, u.Z.getGuild(t)), [t]), {
-selectedUserIds: R,
+selectedUserIds: A,
 addUsers: S,
 clearSelection: Z
-  } = (0, M.Z)(t), j = o.requireUnusualDmActivity || o.requireCommunicationDisabled || o.requireUnusualAccountActivity || o.requireUsernameQuarantined, v = o.selectedRoleIds.size > 0, D = null != o.selectedJoinDateOption.afterDate, O = o.selectedSort === _.d$.ORDER_BY_GUILD_JOINED_AT_ASC, B = null != o.selectedAccountAgeOption.afterDate, V = o.selectedSort === _.d$.ORDER_BY_USER_ID_ASC || o.selectedSort === _.d$.ORDER_BY_USER_ID_DESC, U = null != o.selectedSourceInviteCode && '' !== o.selectedSourceInviteCode, w = null != o.selectedJoinSourceType, k = U || w, [F, y] = a.useState(null == c.K.get(A, null)), P = a.useCallback(() => {
-c.K.set(A, Date.now()), y(!1);
+  } = (0, M.Z)(t), j = o.requireUnusualDmActivity || o.requireCommunicationDisabled || o.requireUnusualAccountActivity || o.requireUsernameQuarantined, v = o.selectedRoleIds.size > 0, D = null != o.selectedJoinDateOption.afterDate, O = o.selectedSort === _.d$.ORDER_BY_GUILD_JOINED_AT_ASC, B = null != o.selectedAccountAgeOption.afterDate, V = o.selectedSort === _.d$.ORDER_BY_USER_ID_ASC || o.selectedSort === _.d$.ORDER_BY_USER_ID_DESC, U = null != o.selectedSourceInviteCode && '' !== o.selectedSourceInviteCode, w = null != o.selectedJoinSourceType, k = U || w, [F, y] = a.useState(null == c.K.get(R, null)), P = a.useCallback(() => {
+c.K.set(R, Date.now()), y(!1);
   }, []), Y = (0, E.xC)(t), G = a.useMemo(() => l.filter(e => (0, E.rX)(t, Y, e)), [
 Y,
 l,
 t
-  ]), z = G.length > 0, q = 0 === G.filter(e => !R.has(e)).length, W = a.useCallback(() => {
+  ]), z = G.length > 0, q = 0 === G.filter(e => !A.has(e)).length, W = a.useCallback(() => {
 z && (q ? Z() : S(G));
   }, [
 z,

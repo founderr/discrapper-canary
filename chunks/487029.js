@@ -57,7 +57,7 @@ return l.useMemo(() => {
   n,
   e
 ]);
-  }((0, g.h)(n, !0)), b = (0, m.j)(), M = l.useRef(null), [R, O] = l.useState(void 0), P = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()), {
+  }((0, g.h)(n, !0)), b = (0, m.j)(), M = l.useRef(null), [R, P] = l.useState(void 0), O = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()), {
 analyticsLocations: y
   } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL), j = l.useCallback(e => {
 (0, f.GN)(e, n.id, y), L();
@@ -86,13 +86,13 @@ name: r.ImpressionNames.SOUNDBOARD_POPOUT,
 properties: {
   source: T,
   guild_id: t,
-  media_session_id: P
+  media_session_id: O
 }
   }, {
 disableTrack: !Z
   });
   let D = l.useCallback(e => {
-  M.current = e, O(null == e ? void 0 : e.soundId);
+  M.current = e, P(null == e ? void 0 : e.soundId);
 }, []),
 w = l.useCallback(e => {
   if (null == e) {

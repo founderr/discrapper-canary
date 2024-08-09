@@ -74,21 +74,21 @@ return r()(t.toLowerCase(), a.name.toLowerCase()) ? l.push(H(n, o)) : o && l.pus
   }, [
 t,
 o
-  ]), A = a.useCallback(c()(N, 300), [N]), R = a.useCallback(e => {
+  ]), R = a.useCallback(c()(N, 300), [N]), A = a.useCallback(e => {
 let t;
 d(t = C.has(e) ? new Set([...C].filter(t => t !== e)) : new Set([
   ...C,
   e
-])), A(t);
+])), R(t);
   }, [
 C,
-A
+R
   ]);
   return (0, n.jsx)(_.ComboboxPopout, {
 className: s()(L.rolePopout),
 placeholder: T.Z.Messages.MEMBERS_TABLE_ROLE_SELECTION_PLACEHOLDER,
 value: C,
-onChange: R,
+onChange: A,
 onClose: () => {
   l();
 },

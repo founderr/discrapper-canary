@@ -18,9 +18,9 @@ onCtxMenuOpened: g,
 onCtxMenuClosed: f,
 onCtxMenuSelection: C,
 quest: _,
-useReducedMotion: h,
-collapsedHeight: E
-  } = e, S = o.useRef(null), T = o.useRef(null), v = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, N = (0, r.Rf)(_);
+useReducedMotion: E,
+collapsedHeight: h
+  } = e, S = o.useRef(null), T = o.useRef(null), N = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, v = (0, r.Rf)(_);
   return (0, s.jsxs)(l.p, {
 expandedContentRef: n,
 collapsedContentRef: S,
@@ -33,13 +33,13 @@ children: [
     isExpanded: m,
     isExpansionAnimationComplete: x,
     quest: _,
-    useReducedMotion: h,
-    taskDetails: N
+    useReducedMotion: E,
+    taskDetails: v
   }),
   (0, s.jsx)(c.Z, {
     expansionSpring: p,
     className: u.content,
-    collapsedHeight: E,
+    collapsedHeight: h,
     onCtxMenuOpen: g,
     onCtxMenuClose: f,
     onCtxMenuSelect: C,
@@ -47,19 +47,19 @@ children: [
     isExpanded: m,
     isExpansionAnimationComplete: x,
     quest: _,
-    useReducedMotion: h,
+    useReducedMotion: E,
     ref: n,
-    taskDetails: N,
+    taskDetails: v,
     children: (0, s.jsxs)(s.Fragment, {
       children: [
         (0, s.jsx)(d.Z, {
           expansionSpring: p,
           isExpanded: m
         }),
-        !v && (0, s.jsx)(a.Z, {
+        !N && (0, s.jsx)(a.Z, {
           quest: _,
           expansionSpring: p,
-          useReducedMotion: h,
+          useReducedMotion: E,
           isExpanded: m,
           isExpansionAnimationComplete: x,
           onCtxMenuOpen: g,

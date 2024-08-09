@@ -98,7 +98,7 @@ Y = (0, r.Wu)([m.Z], () => {
 }),
 z = (0, u.LD)(y, !0),
 q = (null == L ? void 0 : L.application) != null && Object.keys(null !== (s = null === (t = z.result) || void 0 === t ? void 0 : null === (n = t.sections[L.application.id]) || void 0 === n ? void 0 : n.commands) && void 0 !== s ? s : {}).length > 0,
-J = (0, i.jsxs)(I.Z, {
+X = (0, i.jsxs)(I.Z, {
   children: [
     (0, i.jsx)(T.Z, {
       name: A,
@@ -170,11 +170,11 @@ onBlur: () => H(!1),
 children: (0, i.jsx)(d.Card, {
   editable: !0,
   className: l()(f.card, f.clickable),
-  children: J
+  children: X
 })
   }) : (0, i.jsx)(d.Card, {
 editable: !0,
 className: f.card,
-children: J
+children: X
   });
 }

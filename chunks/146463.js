@@ -13,8 +13,8 @@ var t = n(120356),
   _ = n(826581),
   T = n(246364),
   N = n(328977),
-  C = n(571728),
-  R = n(762660),
+  R = n(571728),
+  C = n(762660),
   M = n(689938),
   m = n(327961);
 let A = () => null;
@@ -76,13 +76,13 @@ listRef: h,
 atMaxMemberCapacity: S
   } = e, P = (0, i.e7)([d.Z], () => d.Z.getGuild(u), [u]), g = (0, i.e7)([_.Z], () => _.Z.isFetching()), b = g ? [t.length + 25] : [t.length], j = (0, N.L)({
 guildId: u
-  }), v = null !== (s = (0, C.A)({
+  }), v = null !== (s = (0, R.A)({
 guildId: u
   })) && void 0 !== s ? s : 0, p = (0, c.Z)('guild-join-requests'), f = e => {
 let {
   row: s
 } = e, l = t[s];
-return null == l ? (0, a.jsx)(R.h, {}, s) : (0, a.jsx)(R.C, {
+return null == l ? (0, a.jsx)(C.h, {}, s) : (0, a.jsx)(C.C, {
   className: r()({
     [m.selected]: j === l,
     [m.siblingSelected]: j === t[s - 1]

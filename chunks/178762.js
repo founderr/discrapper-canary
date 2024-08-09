@@ -21,8 +21,8 @@ var i = n(735250),
   _ = n(687694),
   f = n(69259),
   E = n(370370),
-  C = n(107062),
-  g = n(91140),
+  g = n(107062),
+  C = n(91140),
   I = n(227172),
   x = n(551228),
   T = n(678869),
@@ -52,7 +52,7 @@ let {
 } = e;
 switch (t.content_type) {
   case o.s.PLAYED_GAME:
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(C.Z, {
       ...n,
       entry: t
     });
@@ -117,7 +117,7 @@ switch (t.content_type) {
       entry: t
     });
   case o.s.LAUNCHED_ACTIVITY:
-    return (0, i.jsx)(C.ZP, {
+    return (0, i.jsx)(g.ZP, {
       ...n,
       entry: t
     });
@@ -130,15 +130,15 @@ t.ZP = a.memo(e => {
   let {
 index: s,
 ...l
-  } = e, [o, p] = a.useState('default'), E = (0, r.JA)(''.concat(s)), C = null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), {
-isRich: g,
+  } = e, [o, p] = a.useState('default'), E = (0, r.JA)(''.concat(s)), g = null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(), {
+isRich: C,
 appName: I
   } = (0, b.n)(l.entry), x = {
 entry: l.entry,
 channelId: l.channel.id,
 guildId: l.channel.guild_id,
 requestId: l.requestId,
-richPresenceName: g ? I : void 0
+richPresenceName: C ? I : void 0
   }, {
 openOnHover: T
   } = (0, _.C)({
@@ -151,7 +151,7 @@ v,
 L
   ]);
   let D = a.useCallback(e => {
-  if (!!C)
+  if (!!g)
     (0, d.jW)(e, async () => {
       let {
         default: e
@@ -163,7 +163,7 @@ L
     });
 }, [
   l,
-  C
+  g
 ]),
 k = a.useCallback(() => {
   p(String(Date.now()));

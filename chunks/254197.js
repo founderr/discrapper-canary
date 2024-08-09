@@ -30,8 +30,8 @@ var s = n(735250),
   y = n(95985),
   P = n(50476),
   I = n(658590),
-  k = n(740697),
-  L = n(46140),
+  L = n(740697),
+  k = n(46140),
   M = n(743294),
   U = n(689938),
   q = n(689065);
@@ -57,18 +57,18 @@ taskDetails: X
   questContentCTA: m.jZ.ACCEPT_QUEST
 });
   }, [Y]), es = (0, h.p)({
-location: L.dr.QUESTS_BAR
+location: k.dr.QUESTS_BAR
   }), {
 primaryVariant: eo
   } = E.u.useExperiment({
-location: L.dr.QUESTS_BAR
+location: k.dr.QUESTS_BAR
   }, {
 autoTrackExposure: !1
   }), er = (null === (n = Y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, ea = (null === (r = Y.userStatus) || void 0 === r ? void 0 : r.completedAt) != null, el = D && W, ei = (0, g._s)({
 quest: Y
   }), ec = X.percentComplete > 0, ed = (0, g.z)(Y), [eu, ep, em] = (0, R.me)(Y, X), ex = (0, _.ph)(Y), eg = (0, S.D)({
 quest: Y,
-location: L.dr.QUESTS_BAR,
+location: k.dr.QUESTS_BAR,
 questContent: C.jn.QUEST_BAR_V2,
 taskDetails: X,
 useV2Variants: eo === E.P.V2 || (0, I.a)(Y)
@@ -180,9 +180,9 @@ children: [
         }),
         (0, s.jsx)(j.n, {
           children: !ea && (0, i.EQ)(eu).with(A.L.SELECT, () => (0, s.jsx)(P.Z, {
-            onConsole: () => em(L.cd.CONSOLE),
-            onDesktop: () => em(L.cd.DESKTOP)
-          })).with(A.L.DESKTOP, () => (0, p.isWeb)() && es && (0, s.jsx)(k.Z, {})).with(A.L.CONSOLE, () => (0, s.jsx)(O.Z, {
+            onConsole: () => em(k.cd.CONSOLE),
+            onDesktop: () => em(k.cd.DESKTOP)
+          })).with(A.L.DESKTOP, () => (0, p.isWeb)() && es && (0, s.jsx)(L.Z, {})).with(A.L.CONSOLE, () => (0, s.jsx)(O.Z, {
             quest: Y,
             taskDetails: X
           })).exhaustive()
@@ -214,7 +214,7 @@ children: [
                 learnMoreStyle: 'text',
                 quest: Y,
                 questContent: C.jn.QUEST_BAR_V2,
-                location: L.dr.QUESTS_BAR
+                location: k.dr.QUESTS_BAR
               }),
               (0, s.jsx)(d.Heading, {
                 className: q.title,

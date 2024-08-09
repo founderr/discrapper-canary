@@ -20,19 +20,19 @@ t.Z = e => {
   let {
 expansionSpring: n,
 overlayRef: r,
-quest: h,
-progressBarRef: E,
+quest: E,
+progressBarRef: h,
 isExpanded: S
   } = e, {
 completionSpring: T,
-startCompletionAnimation: v
-  } = (0, x.GX)(), N = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, j = o.useRef(!1), A = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([m.Z], () => m.Z.hasLayers()), y = (0, u.Z)(b), [R, O] = o.useState(null), [I, M] = o.useState(null), U = o.useRef(new l.qA({
+startCompletionAnimation: N
+  } = (0, x.GX)(), v = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, j = o.useRef(!1), A = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([m.Z], () => m.Z.hasLayers()), O = (0, u.Z)(b), [R, y] = o.useState(null), [P, I] = o.useState(null), L = o.useRef(new l.qA({
 gravity: 0,
 wind: 0
-  })), k = (0, l.uR)(R, I), q = o.useCallback(() => {
+  })), k = (0, l.uR)(R, P), M = o.useCallback(() => {
 if (A)
   return;
-let e = E.current,
+let e = h.current,
   t = B.current;
 if (null != t && null != e && k.isReady) {
   var n, s, o, r;
@@ -84,37 +84,37 @@ if (null != t && null != e && k.isReady) {
   }), 100);
 }
   }, [
-E,
+h,
 B,
 k,
 A
-  ]), P = (0, u.Z)(S);
+  ]), U = (0, u.Z)(S);
   return (o.useEffect(() => {
-N && S && !P && (v(), q());
+v && S && !U && (N(), M());
   }, [
 S,
-N,
 v,
-q,
-P
+N,
+M,
+U
   ]), o.useEffect(() => {
-N && !b && y && setTimeout(() => {
-  v(), q();
+v && !b && O && setTimeout(() => {
+  N(), M();
 }, 200);
   }, [
-N,
-y,
-b,
 v,
-q
+O,
+b,
+N,
+M
   ]), o.useEffect(() => {
 if (!!k.isReady)
-  !j.current && N && (v(), q()), j.current = N;
+  !j.current && v && (N(), M()), j.current = v;
   }, [
-N,
-j,
-q,
 v,
+j,
+M,
+N,
 k
   ]), A) ? null : (0, s.jsxs)('div', {
 className: f.wrapper,
@@ -149,12 +149,12 @@ children: [
     },
     children: [
       (0, s.jsx)(l.O_, {
-        ref: O,
+        ref: y,
         className: f.confetti,
-        environment: U.current
+        environment: L.current
       }),
       (0, s.jsx)(l.Ji, {
-        ref: M,
+        ref: I,
         sprites: [C],
         colors: _,
         spriteWidth: g.Ko,

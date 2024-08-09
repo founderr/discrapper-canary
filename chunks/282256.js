@@ -43,12 +43,12 @@ if (l > a.width) {
 _({
   maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(l, 'px)')
 });
-  }, []), E = (0, o.y)(f), C = (0, c.p0)(h.userId, s);
+  }, []), E = (0, o.y)(f), g = (0, c.p0)(h.userId, s);
   a.useEffect(() => {
 if (null != E.current)
   f();
-  }, [C]);
-  let g = (0, r.O)(f);
+  }, [g]);
+  let C = (0, r.O)(f);
   return (0, i.jsxs)('div', {
 className: l()(d.container, n && d.isOverlayContainer),
 ref: E,
@@ -59,9 +59,9 @@ children: [
   }),
   (0, i.jsx)('div', {
     className: d.chipletParent,
-    ref: g,
+    ref: C,
     children: (0, i.jsx)('span', {
-      className: l()(d.chipletContainer, !C && n && d.noPadding),
+      className: l()(d.chipletContainer, !g && n && d.noPadding),
       ref: p,
       style: m,
       children: (0, i.jsx)(u.ZP, {

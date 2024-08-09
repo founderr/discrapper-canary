@@ -21,8 +21,8 @@ var i = n(475179),
   _ = n(979956),
   f = n(981631),
   E = n(959517),
-  C = n(474936),
-  g = n(689938);
+  g = n(474936),
+  C = n(689938);
 
 function I(e, t) {
   let n = d.default.getCurrentUser(),
@@ -46,16 +46,16 @@ u += 1, r += e.size, s.push(e.size), e.size > c && (c = e.size), null != e.type 
   error_type: E.xi.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
   attachment_mimetypes: h
 }), (0, l.openUploadError)({
-  title: g.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+  title: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
   help: (0, _.BK)(n, i),
-  showPremiumUpsell: !(0, m.M5)(n, C.p9.TIER_2),
+  showPremiumUpsell: !(0, m.M5)(n, g.p9.TIER_2),
   fileSize: c
 });
 return;
   }
   (0, l.openUploadError)({
-title: g.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-help: g.Z.Messages.UPLOAD_AREA_REQUEST_LIMIT_HELP.format({
+title: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+help: C.Z.Messages.UPLOAD_AREA_REQUEST_LIMIT_HELP.format({
   maxSize: p.Ng(p.OC())
 })
   });
@@ -79,8 +79,8 @@ return;
   }
   if (u.Z.getUploadCount(t.id, n) + e.length > f.dN1) {
 (0, l.openUploadError)({
-  title: g.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-  help: g.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
+  title: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+  help: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
     limit: f.dN1
   })
 }), h.default.track(f.rMx.UPLOAD_FILE_LIMIT_ERROR, {

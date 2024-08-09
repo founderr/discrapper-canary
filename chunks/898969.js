@@ -4,11 +4,11 @@ s.Z = e => {
   let {
 className: s,
 width: n = 83,
-height: i = 45
+height: r = 45
   } = e;
   return (0, t.jsxs)('svg', {
 width: n,
-height: i,
+height: r,
 viewBox: '0 0 83 45',
 fill: 'none',
 xmlns: 'http://www.w3.org/2000/svg',

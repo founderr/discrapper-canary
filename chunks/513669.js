@@ -68,7 +68,7 @@ O = () => {
   var e;
   return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
 },
-x = () => {
+R = () => {
   r === c && g(A[0].data, A[0].name), U(null), v(null);
 };
   return n.useEffect(() => {
@@ -139,7 +139,7 @@ children: [
         children: e => (0, a.jsx)(o.Clickable, {
           ...e,
           className: d.customImageAction,
-          onClick: x,
+          onClick: R,
           'aria-label': i.Z.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({
             filename: f
           }),

@@ -19,8 +19,8 @@ var a = n(120356),
   _ = n(925329),
   f = n(554747),
   E = n(854698),
-  C = n(897669),
-  g = n(665149),
+  g = n(897669),
+  C = n(665149),
   I = n(984370),
   x = n(910611),
   T = n(454585),
@@ -97,7 +97,7 @@ d = null != o;
   if ((null == a ? void 0 : a.type) === O.fO.ACTIVITY)
 null != n && (t = (0, i.jsxs)(i.Fragment, {
   children: [
-    (0, i.jsx)(g.ZP.Divider, {
+    (0, i.jsx)(C.ZP.Divider, {
       className: U.divider
     }),
     (0, i.jsx)(_.Z, {
@@ -121,7 +121,7 @@ let e = a.user,
   n = a.stream;
 t = (0, i.jsxs)(i.Fragment, {
   children: [
-    (0, i.jsx)(g.ZP.Divider, {
+    (0, i.jsx)(C.ZP.Divider, {
       className: U.divider
     }),
     (0, i.jsx)(H, {
@@ -137,7 +137,7 @@ t = (0, i.jsxs)(i.Fragment, {
   ]
 });
   } else
-d && (t = (0, i.jsx)(C.Z, {
+d && (t = (0, i.jsx)(g.Z, {
   guildEvent: o,
   recurrenceId: c
 }));
@@ -160,7 +160,7 @@ focusedParticipant: f
   } = (0, l.cj)([M.Z], () => ({
 focusedParticipant: M.Z.getSelectedParticipant(t.id),
 participantsOpen: M.Z.getParticipantsOpen(t.id)
-  }), [t.id]), E = (0, p.ZP)(t), C = (0, m.KS)(t), [S] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
+  }), [t.id]), E = (0, p.ZP)(t), g = (0, m.KS)(t), [S] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
   t.isDM() ? Z = k.Z.Messages.DM : t.isGroupDM() && (Z = k.Z.Messages.GROUP_DM);
   let R = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)),
 L = t.isGuildVoice() && c && null != R && R.length > 0,
@@ -217,7 +217,7 @@ location: 'ChannelCallHeader'
   return (0, i.jsxs)('div', {
 className: U.subtitleContainer,
 children: [
-  (0, i.jsxs)(g.ZP, {
+  (0, i.jsxs)(C.ZP, {
     onDoubleClick: I.O,
     transparent: !0,
     className: (0, A.Q)(D.BR.DARK),
@@ -231,12 +231,12 @@ children: [
       exitFullScreen: _
     }),
     children: [
-      null != C ? (0, i.jsx)(g.ZP.Icon, {
-        icon: C,
+      null != g ? (0, i.jsx)(C.ZP.Icon, {
+        icon: g,
         disabled: !0,
         'aria-label': Z
       }) : null,
-      (0, i.jsx)(g.ZP.Title, {
+      (0, i.jsx)(C.ZP.Title, {
         children: (0, i.jsxs)(i.Fragment, {
           children: [
             E,
