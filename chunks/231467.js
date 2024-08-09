@@ -193,55 +193,56 @@ branding: {
   primaryColor: L,
   secondaryColor: k
 },
-bannerHash: B
-  } = n, F = (0, d.Z)(n.games), V = (0, m.Z)('clan_discovery_card'), [H, Z] = i.useState(!1), Y = i.useRef(null), [j, W] = i.useState(!1), K = (0, y.GN)(e => e.savedGuildIds.includes(n.id), o.Z), z = (0, E.iN)('guild_card'), q = i.useCallback(e => {
-e.stopPropagation(), e.preventDefault(), (0, y.qQ)(n.id, !K);
+bannerHash: B,
+gameActivity: F
+  } = n, V = (0, d.Z)(n.games), H = (0, m.Z)('clan_discovery_card'), [Z, Y] = i.useState(!1), j = i.useRef(null), [W, K] = i.useState(!1), z = (0, y.GN)(e => e.savedGuildIds.includes(n.id), o.Z), q = (0, E.iN)('guild_card'), Q = i.useCallback(e => {
+e.stopPropagation(), e.preventDefault(), (0, y.qQ)(n.id, !z);
   }, [
 n.id,
-K
-  ]), Q = i.useCallback(() => {
-Z(!0);
-  }, []), X = i.useCallback(() => {
-Z(!1);
-  }, []), $ = M.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+z
+  ]), X = i.useCallback(() => {
+Y(!0);
+  }, []), $ = i.useCallback(() => {
+Y(!1);
+  }, []), J = M.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
 count: n.memberCount
-  }), J = null != A ? A : (0, p.pY)(n.id, B), ee = null == a && null == J ? {
+  }), ee = null != A ? A : (0, p.pY)(n.id, B), et = null == a && null == ee ? {
 background: 'linear-gradient(90deg, '.concat(L, ', ').concat(k, ')')
-  } : void 0, et = null != a ? a : null != J ? (0, r.jsx)('img', {
+  } : void 0, en = null != a ? a : null != ee ? (0, r.jsx)('img', {
 alt: M.Z.Messages.CLAN_LOOK_BANNER,
-src: J,
+src: ee,
 className: P.bannerImage
-  }) : null, en = i.useMemo(() => (0, b.HR)(n.traits, _), [
+  }) : null, er = i.useMemo(() => (0, b.HR)(n.traits, _), [
 n.traits,
 _
   ]);
   return i.useEffect(() => {
-let e = Y.current;
-null != e && null != e.offsetWidth && null != e.scrollWidth && W(e.offsetWidth < e.scrollWidth);
+let e = j.current;
+null != e && null != e.offsetWidth && null != e.scrollWidth && K(e.offsetWidth < e.scrollWidth);
   }, []), (0, r.jsxs)('div', {
 className: s()(P.card, h, {
   [P.cardStaticHeight]: !u
 }),
-onMouseEnter: Q,
-onMouseLeave: X,
+onMouseEnter: X,
+onMouseLeave: $,
 children: [
   (0, r.jsxs)('div', {
     className: P.cardBrandingHeader,
-    style: ee,
+    style: et,
     children: [
-      et,
+      en,
       (0, r.jsx)(G, {
         hasPendingJoinRequest: v,
         atMaxMemberCapacity: O,
         isGuildMember: c
       }),
-      z && (0, r.jsx)(l.Clickable, {
-        className: s()(P.favoriteButton, (H || K) && P.shownFavoriteButton),
-        onClick: q,
+      q && (0, r.jsx)(l.Clickable, {
+        className: s()(P.favoriteButton, (Z || z) && P.shownFavoriteButton),
+        onClick: Q,
         focusProps: {
-          enabled: H || K
+          enabled: Z || z
         },
-        children: K ? (0, r.jsx)(l.HeartIcon, {
+        children: z ? (0, r.jsx)(l.HeartIcon, {
           color: l.tokens.colors.INFO_DANGER_FOREGROUND,
           size: 'custom',
           width: 18,
@@ -276,7 +277,7 @@ children: [
                     guildName: n.name,
                     guildIcon: n.icon,
                     iconSize: 64,
-                    animate: !N || H
+                    animate: !N || Z
                   })
                 })
               }),
@@ -285,7 +286,7 @@ children: [
                 children: (0, r.jsx)(l.Tooltip, {
                   text: M.Z.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
                   position: 'top',
-                  shouldShow: !c && V,
+                  shouldShow: !c && H,
                   children: e => (0, r.jsxs)('div', {
                     ...e,
                     className: P.clanTagChiplet,
@@ -315,10 +316,10 @@ children: [
             children: (0, r.jsx)(l.Tooltip, {
               text: n.name,
               color: l.Tooltip.Colors.PRIMARY,
-              shouldShow: j,
+              shouldShow: W,
               children: e => (0, r.jsx)('span', {
                 ...e,
-                ref: Y,
+                ref: j,
                 className: P.nameText,
                 children: n.name
               })
@@ -355,7 +356,7 @@ children: [
         expanded: u
       }),
       (0, r.jsx)(x, {
-        traits: en,
+        traits: er,
         traitsToHighlight: _
       })
     ]
@@ -370,15 +371,16 @@ children: [
           children: (0, r.jsx)(l.Text, {
             variant: 'text-xs/normal',
             color: 'text-muted',
-            children: $
+            children: J
           })
         })
       }),
       (0, r.jsx)('div', {
         className: P.cardFooterGames,
         children: (0, r.jsx)(C.Z, {
-          games: F,
-          prioritizedGameIds: f
+          games: V,
+          prioritizedGameIds: f,
+          gameActivity: F
         })
       })
     ]
