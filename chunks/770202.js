@@ -12,8 +12,8 @@ var i = n(735250),
   p = n(592125),
   _ = n(430824),
   f = n(496675),
-  m = n(98597),
-  g = n(473403),
+  g = n(98597),
+  m = n(473403),
   C = n(981631),
   I = n(490897),
   E = n(704672);
@@ -33,7 +33,7 @@ function x(e, t) {
 throw Error('TextChannel, preloadChannel: Channel does not have a guildId');
   o.Z.preload(n, t.id);
 }
-class S extends m.ZP {
+class S extends g.ZP {
   render() {
 let {
   channel: e,
@@ -47,7 +47,7 @@ let {
     [E.disabled]: this.isDisabled()
   }),
   'data-dnd-name': e.name,
-  children: (0, i.jsxs)(g.Z, {
+  children: (0, i.jsxs)(m.Z, {
     className: E.iconVisibility,
     channel: e,
     selected: t,

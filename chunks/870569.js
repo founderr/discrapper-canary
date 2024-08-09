@@ -23,8 +23,8 @@ iconForeground: h,
 innerClassName: p,
 tooltipClassName: _,
 onMouseEnter: f,
-onMouseLeave: m,
-'aria-label': g,
+onMouseLeave: g,
+'aria-label': m,
 'aria-checked': C,
 role: I,
 tooltipColor: E,
@@ -38,7 +38,7 @@ color: null != h ? h : 'currentColor'
   return (0, i.jsx)(a.Tooltip, {
 tooltipClassName: _,
 text: t,
-'aria-label': g,
+'aria-label': m,
 color: E,
 forceOpen: N,
 children: e => {
@@ -66,7 +66,7 @@ children: e => {
       null == d || d(), null == f || f();
     },
     onMouseLeave: () => {
-      null == h || h(), null == m || m();
+      null == h || h(), null == g || g();
     },
     onContextMenu: l,
     role: I,

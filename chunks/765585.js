@@ -16,8 +16,8 @@ body: n,
 header: r,
 artClassName: _,
 headerClassName: f,
-contentClassName: m,
-tryItText: g,
+contentClassName: g,
+tryItText: m,
 dismissText: C,
 onTryFeature: I,
 onClose: E,
@@ -57,7 +57,7 @@ R
 className: N,
 ref: t,
 children: (0, i.jsxs)('div', {
-  className: a()(p.content, m, {
+  className: a()(p.content, g, {
     [p.contentNoArt]: null == _ || x,
     [p.contentPremium]: S || M
   }),
@@ -122,7 +122,7 @@ children: (0, i.jsxs)('div', {
               null == E || E(e), I(e), w(d.L.PRIMARY);
             },
             color: S || M ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
-            children: null != g ? g : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
+            children: null != m ? m : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }),
           (0, i.jsx)(s.Button, {
             className: p.button,

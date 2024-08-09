@@ -12,8 +12,8 @@ var i = n(735250),
   p = n(626135),
   _ = n(572004),
   f = n(63063),
-  m = n(476221),
-  g = n(981631),
+  g = n(476221),
+  m = n(981631),
   C = n(65154),
   I = n(689938),
   E = n(573169);
@@ -40,7 +40,7 @@ let t = Object.values(C.Yn).map(t => {
 };
 t.Z = function(e) {
   (0, l.useEffect)(() => {
-p.default.track(g.rMx.OPEN_POPOUT, {
+p.default.track(m.rMx.OPEN_POPOUT, {
   type: 'RTC Connection'
 });
   }, []);
@@ -72,7 +72,7 @@ n = (0, l.useCallback)(() => {
           (0, i.jsx)('div', {
             className: E.popoutText,
             children: (0, i.jsx)('strong', {
-              children: m.Z.getShortHostname(t)
+              children: g.Z.getShortHostname(t)
             })
           })
         ]
@@ -116,24 +116,24 @@ n = (0, l.useCallback)(() => {
 } = e,
 _ = d.Sb.getSetting(),
 x = {
-  [g.hes.AWAITING_ENDPOINT]: I.Z.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
-    url: g.yXt.STATUS
+  [m.hes.AWAITING_ENDPOINT]: I.Z.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
+    url: m.yXt.STATUS
   }),
-  [g.hes.CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_CONNECTING,
-  [g.hes.AUTHENTICATING]: I.Z.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
-  [g.hes.DISCONNECTED]: I.Z.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
-  [g.hes.RTC_CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
-  [g.hes.ICE_CHECKING]: I.Z.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-    url: f.Z.getArticleURL(g.BhN.VOICE_CONNECTION_ERRORS)
+  [m.hes.CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_CONNECTING,
+  [m.hes.AUTHENTICATING]: I.Z.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
+  [m.hes.DISCONNECTED]: I.Z.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
+  [m.hes.RTC_CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
+  [m.hes.ICE_CHECKING]: I.Z.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+    url: f.Z.getArticleURL(m.BhN.VOICE_CONNECTION_ERRORS)
   }),
-  [g.hes.DTLS_CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-    url: f.Z.getArticleURL(g.BhN.VOICE_CONNECTION_ERRORS)
+  [m.hes.DTLS_CONNECTING]: I.Z.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+    url: f.Z.getArticleURL(m.BhN.VOICE_CONNECTION_ERRORS)
   }),
-  [g.hes.RTC_CONNECTED]: n,
-  [g.hes.NO_ROUTE]: I.Z.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
-    url: f.Z.getArticleURL(g.BhN.VOICE_CONNECTION_ERRORS)
+  [m.hes.RTC_CONNECTED]: n,
+  [m.hes.NO_ROUTE]: I.Z.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
+    url: f.Z.getArticleURL(m.BhN.VOICE_CONNECTION_ERRORS)
   }),
-  [g.hes.RTC_DISCONNECTED]: I.Z.Messages.RTC_CONNECTION_STATE_DISCONNECTED
+  [m.hes.RTC_DISCONNECTED]: I.Z.Messages.RTC_CONNECTION_STATE_DISCONNECTED
 } [r];
   return (0, i.jsxs)(i.Fragment, {
 children: [
@@ -189,7 +189,7 @@ children: [
       }),
       !_ && !__OVERLAY__ && (0, i.jsx)(o.Anchor, {
         className: E.debugButton,
-        href: f.Z.getArticleURL(g.BhN.VOICE_VIDEO_TROUBLESHOOTING),
+        href: f.Z.getArticleURL(m.BhN.VOICE_VIDEO_TROUBLESHOOTING),
         children: I.Z.Messages.LEARN_MORE
       })
     ]

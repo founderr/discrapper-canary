@@ -11,7 +11,7 @@ var i = n(735250),
   p = n(688438),
   _ = n(981631),
   f = n(689938);
-let m = [{
+let g = [{
 key: 'EVENTS',
 renderIcon: e => (0, i.jsx)(a.CalendarIcon, {
   size: 'md',
@@ -112,9 +112,9 @@ location: '543af8_2'
 autoTrackExposure: !1
   }), _ = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id), f = l.useMemo(() => ({
 numEvents: a.length
-  }), [a.length]), g = (0, p.t)(n);
+  }), [a.length]), m = (0, p.t)(n);
   return (0, i.jsx)(i.Fragment, {
-children: m.map(e => {
+children: g.map(e => {
   let {
     key: l,
     getName: r,
@@ -130,7 +130,7 @@ children: m.map(e => {
     text: r(f),
     selected: _ && 'JOIN_SERVERS' === l,
     onClick: null != n ? () => a(t, n) : void 0,
-    trailing: 'JOIN_SERVERS' === l && g > 0 ? (0, c.N)(g) : null
+    trailing: 'JOIN_SERVERS' === l && m > 0 ? (0, c.N)(m) : null
   }, d);
 })
   });

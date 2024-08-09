@@ -12,8 +12,8 @@ var i = n(735250),
   p = n(988298),
   _ = n(475179),
   f = n(925549),
-  m = n(872810),
-  g = n(438139),
+  g = n(872810),
+  m = n(438139),
   C = n(730749),
   I = n(607070),
   E = n(566620),
@@ -66,8 +66,8 @@ var i = n(735250),
   ep = n(345243),
   e_ = n(115530),
   ef = n(793224),
-  em = n(978769),
-  eg = n(981631),
+  eg = n(978769),
+  em = n(981631),
   eC = n(918559),
   eI = n(702512),
   eE = n(689938),
@@ -81,7 +81,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let eS = (0, g.Z)(function(e) {
+let eS = (0, m.Z)(function(e) {
   let {
 message: t
   } = e;
@@ -101,7 +101,7 @@ let {
   activity: t,
   embeddedActivity: n
 } = this.props;
-return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === eg.IIU.PLAYING && (0, x.Z)(t, eg.xjy.JOIN));
+return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === em.IIU.PLAYING && (0, x.Z)(t, em.xjy.JOIN));
   }
   renderGoLiveButton() {
 let e, t, n, l;
@@ -193,7 +193,7 @@ return null != e && (0, Q.vd)(e.type) ? null : (0, i.jsx)(ef.Z, {});
 let {
   broadcast: e
 } = this.props;
-return null == e ? null : (0, i.jsx)(em.Z, {});
+return null == e ? null : (0, i.jsx)(eg.Z, {});
   }
   renderSparkles() {
 let {
@@ -360,7 +360,7 @@ let s = {
     start: n.connectedSince
   },
   o = r;
-null != a ? (e = eg.Z5c.CHANNEL(a.id, l.id), o = ''.concat(o, ' / ').concat(a.name)) : e = eg.Z5c.CHANNEL(eg.ME, l.id);
+null != a ? (e = em.Z5c.CHANNEL(a.id, l.id), o = ''.concat(o, ' / ').concat(a.name)) : e = em.Z5c.CHANNEL(em.ME, l.id);
 let c = (0, i.jsx)(Y.Z, {
   href: e,
   onClick: this.handleApplicationLinkClick,
@@ -426,7 +426,7 @@ super(...e), ex(this, 'modalKey', void 0), ex(this, 'state', {
     channel: t,
     runningGame: n
   } = this.props, i = null != t && (0, Q.vd)(t.type) ? t : null;
-  null != i && null != n && (null == e ? (0, m.tE)({
+  null != i && null != n && (null == e ? (0, g.tE)({
     channelId: i.id,
     pid: n.pid
   }) : (0, v.v$)((0, k.V9)(e), n.pid));
@@ -451,7 +451,7 @@ super(...e), ex(this, 'modalKey', void 0), ex(this, 'state', {
       ...t,
       selectSource: !1,
       guildId: a,
-      analyticsLocation: eg.Sbl.ACTIVITY_PANEL
+      analyticsLocation: em.Sbl.ACTIVITY_PANEL
     });
   }).then(e => {
     null != e && (this.modalKey = e);
@@ -472,7 +472,7 @@ super(...e), ex(this, 'modalKey', void 0), ex(this, 'state', {
     activity: e,
     analyticsContext: t
   } = this.props;
-  o()(null != e, 'Received null activity'), eu.default.track(eg.rMx.OPEN_MODAL, {
+  o()(null != e, 'Received null activity'), eu.default.track(em.rMx.OPEN_MODAL, {
     type: 'Send Join Invite',
     application_id: e.application_id,
     location: t.location
@@ -486,7 +486,7 @@ super(...e), ex(this, 'modalKey', void 0), ex(this, 'state', {
   if (null == e)
     return;
   let i = (0, O.BS)(e);
-  null != i && (eu.default.track(eg.rMx.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
+  null != i && (eu.default.track(em.rMx.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
     user_id: n,
     drops_quest_id: i.dropsQuestId,
     game_id: i.dropsGameId,
@@ -513,7 +513,7 @@ super(...e), ex(this, 'modalKey', void 0), ex(this, 'state', {
     channel: t,
     embeddedActivity: n
   } = this.props;
-  o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, Q.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId), f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : eg.ME, t.id), (0, Q.Qm)(t.type) && (0, E.tg)(eC.Ez.PANEL);
+  o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, Q.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId), f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : em.ME, t.id), (0, Q.Qm)(t.type) && (0, E.tg)(eC.Ez.PANEL);
 });
   }
 }
@@ -551,8 +551,8 @@ $.Z
   ], () => $.Z.getChannel(ea.Z.getVoiceChannelId())), o = (0, c.e7)([N.ZP], () => N.ZP.getConnectedActivityChannelId()), d = (0, c.e7)([$.Z], () => $.Z.getChannel(o)), h = (0, c.e7)([et.Z], () => et.Z.getGuild(null == d ? void 0 : d.guild_id)), [p, _] = (0, c.Wu)([X.Z], () => [
 X.Z.getCurrentUserActiveStream(),
 X.Z.getStreamerActiveStreamMetadata()
-  ]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), m = (0, c.e7)([P.Z], () => P.Z.getActivityPanelTooltipAction()), {
-partnerGame: g,
+  ]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), g = (0, c.e7)([P.Z], () => P.Z.getActivityPanelTooltipAction()), {
+partnerGame: m,
 dropsActivityPanelExperienceBlocked: C,
 showDropsSparkles: E
   } = (0, R.c)(eI.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), v = (0, c.e7)([
@@ -566,7 +566,7 @@ if (null != a && null != a.id)
   return a.id;
 if (null != x)
   return x.applicationId;
-  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([en.Z], () => (0, H.Z)(en.Z) && (0, ed.isWindows)()), b = (0, c.e7)([el.Z], () => null != r ? el.Z.findActivity(r, e => e.type === eg.IIU.PLAYING) : null), M = null != p && p.ownerId === r && p.state !== eg.jm8.ENDED, O = (0, c.e7)([es.Z], () => es.Z.getBroadcast()), y = (0, Z.Z)() && null != a, j = (0, c.e7)([
+  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([en.Z], () => (0, H.Z)(en.Z) && (0, ed.isWindows)()), b = (0, c.e7)([el.Z], () => null != r ? el.Z.findActivity(r, e => e.type === em.IIU.PLAYING) : null), M = null != p && p.ownerId === r && p.state !== em.jm8.ENDED, O = (0, c.e7)([es.Z], () => es.Z.getBroadcast()), y = (0, Z.Z)() && null != a, j = (0, c.e7)([
 eo.default,
 er.Z
   ], () => null != d ? (0, L.F6)(d, eo.default, er.Z) : void 0), w = (0, K.Z)(null == s ? void 0 : s.id, r);
@@ -577,7 +577,7 @@ canGoLive: A,
 activity: b,
 embeddedActivity: x,
 showDropsSparkles: E,
-dropsPartnerGame: g,
+dropsPartnerGame: m,
 dropsActivityPanelExperienceBlocked: C,
 userId: r,
 runningGame: a,
@@ -586,7 +586,7 @@ useReducedMotion: f,
 isStreaming: M,
 channel: d,
 canStream: v,
-dropsTooltipAction: m,
+dropsTooltipAction: g,
 stream: p,
 streamMetadata: _,
 broadcast: O,

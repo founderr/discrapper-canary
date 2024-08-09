@@ -14,8 +14,8 @@ var i, l, r = n(735250),
   p = n(748780),
   _ = n(442837),
   f = n(215569),
-  m = n(481060),
-  g = n(612226),
+  g = n(481060),
+  m = n(612226),
   C = n(951483),
   I = n(714338),
   E = n(607070),
@@ -57,11 +57,11 @@ default:
   }
 }
 let M = [
-  g.Q2.MESSAGE,
-  g.Q2.NAVIGATION,
-  g.Q2.VOICE_AND_VIDEO,
-  g.Q2.CHAT,
-  g.Q2.MISCELLANEOUS
+  m.Q2.MESSAGE,
+  m.Q2.NAVIGATION,
+  m.Q2.VOICE_AND_VIDEO,
+  m.Q2.CHAT,
+  m.Q2.MISCELLANEOUS
 ];
 
 function R(e) {
@@ -76,23 +76,23 @@ className: o()(T.backdrop, {
 }
 
 function P() {
-  let e = a.useMemo(() => h()((0, g.Rv)()).groupBy(e => e.group).value(), []);
+  let e = a.useMemo(() => h()((0, m.Rv)()).groupBy(e => e.group).value(), []);
   return (0, r.jsx)('div', {
 className: T.keyboardShortcutList,
 children: M.map(t => {
   let n = e[t],
-    i = (0, g.UD)(t),
-    l = (0, g.U6)(t);
+    i = (0, m.UD)(t),
+    l = (0, m.U6)(t);
   return (0, r.jsxs)('div', {
     className: T.keyboardShortcutSection,
     children: [
       (0, r.jsxs)('div', {
         children: [
-          (0, r.jsx)(m.Heading, {
+          (0, r.jsx)(g.Heading, {
             variant: 'heading-lg/semibold',
             children: i
           }),
-          null != l && (0, r.jsx)(m.Text, {
+          null != l && (0, r.jsx)(g.Text, {
             className: T.keybindGroupDescription,
             variant: 'text-sm/normal',
             children: l
@@ -106,13 +106,13 @@ children: M.map(t => {
           return (null === (n = e.predicate) || void 0 === n ? void 0 : n.call(e)) === !1 ? null : (0, r.jsxs)('div', {
             className: o()(T.keybindGroup),
             children: [
-              (0, r.jsx)(m.Text, {
+              (0, r.jsx)(g.Text, {
                 variant: 'text-sm/normal',
                 children: e.description
               }),
               (0, r.jsx)('div', {
                 className: 'keybind-shortcuts',
-                children: e.binds.map(e => (0, r.jsx)(m.KeyCombo, {
+                children: e.binds.map(e => (0, r.jsx)(g.KeyCombo, {
                   className: T.keybindKey,
                   shortcut: e
                 }, e))
@@ -152,14 +152,14 @@ return (0, r.jsxs)(p.Z.div, {
   className: T.keyboardShortcutsModal,
   style: this.getStyles(),
   children: [
-    (0, r.jsxs)(m.H, {
+    (0, r.jsxs)(g.H, {
       className: T.modalTitle,
       children: [
         (0, r.jsx)('div', {
           className: T.content,
           children: Z.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TITLE
         }),
-        (0, r.jsx)(m.KeyCombo, {
+        (0, r.jsx)(g.KeyCombo, {
           shortcut: 'mod+/'
         })
       ]
@@ -197,10 +197,10 @@ return (0, r.jsxs)(p.Z.div, {
         })
       ]
     }),
-    (0, r.jsx)(m.AdvancedScrollerAuto, {
+    (0, r.jsx)(g.AdvancedScrollerAuto, {
       ref: this.scrollerRef,
       fade: !0,
-      children: (0, r.jsx)(m.HeadingLevel, {
+      children: (0, r.jsx)(g.HeadingLevel, {
         children: (0, r.jsx)(P, {})
       })
     })
@@ -323,7 +323,7 @@ if (s) {
   let e = setTimeout(() => c(!1), 500);
   return () => clearTimeout(e);
 }
-  }, [s]), (0, r.jsx)(m.Clickable, {
+  }, [s]), (0, r.jsx)(g.Clickable, {
 onClick: u,
 className: o()(T.arrow, i, {
   [T.active]: t || s
@@ -336,7 +336,7 @@ function j(e) {
   let {
 transitionState: t,
 onClose: n
-  } = e, [i, l] = a.useState(!1), [s, c] = a.useState(!1), u = a.useMemo(() => __OVERLAY__ ? (0, C.Zg)() : (0, g.Rv)(), []), {
+  } = e, [i, l] = a.useState(!1), [s, c] = a.useState(!1), u = a.useMemo(() => __OVERLAY__ ? (0, C.Zg)() : (0, m.Rv)(), []), {
 keyboardModeEnabled: d,
 useReducedMotion: h
   } = (0, _.cj)([E.Z], () => ({
@@ -348,11 +348,11 @@ children: [
   (0, r.jsx)(R, {
     showBackdrop: s
   }),
-  (0, r.jsx)(m.ModalRoot, {
+  (0, r.jsx)(g.ModalRoot, {
     className: o()(T.noBackground, {
       [T.noShadow]: i
     }),
-    size: m.ModalSize.DYNAMIC,
+    size: g.ModalSize.DYNAMIC,
     'aria-label': Z.Z.Messages.KEYBINDS,
     transitionState: t,
     children: (0, r.jsx)(f.W, {

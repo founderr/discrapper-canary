@@ -72,14 +72,14 @@ guildChannelsVersion: u,
 voiceStates: d,
 guildId: _,
 selectedChannelId: f,
-selectedVoiceChannelId: m,
-optInEnabled: g
+selectedVoiceChannelId: g,
+optInEnabled: m
   } = e, {
 hasDivider: C,
 canHaveVoiceSummary: I
-  } = l.useMemo(() => (0, c.ie)(n, g, t), [
+  } = l.useMemo(() => (0, c.ie)(n, m, t), [
 n,
-g,
+m,
 t,
 u
   ]), E = l.useMemo(() => t === o.wZ ? null : n.getCategoryFromSection(t), [
@@ -89,12 +89,12 @@ u
   ]), N = l.useMemo(() => null != E && E.isCollapsed ? (0, s.c4)({
 channels: E.getChannelRecords(),
 selectedChannelId: f,
-selectedVoiceChannelId: m,
+selectedVoiceChannelId: g,
 voiceStates: d
   }) : [], [
 E,
 f,
-m,
+g,
 d
   ]), x = (0, a.Q)('ChannelListSectionFooter');
   if (t === n.voiceChannelsSectionNumber)

@@ -26,7 +26,7 @@ return null === (e = s.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.ep
 fingerprintBase64: n,
 chunkSize: h.y6,
 desiredLength: h.YP
-  }), m = l.useCallback(() => {
+  }), g = l.useCallback(() => {
 (0, o.PM)({
   channelId: t
 });
@@ -64,7 +64,7 @@ children: [
       null != f && (0, i.jsx)(d.H, {
         chunks: f,
         color: a.tokens.colors.INTERACTIVE_NORMAL.css,
-        onCopy: m
+        onCopy: g
       })
     ]
   }),

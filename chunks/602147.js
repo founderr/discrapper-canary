@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(603592),
   _ = n(981631),
   f = n(731455),
-  m = n(689938),
-  g = n(363844);
+  g = n(689938),
+  m = n(363844);
 
 function C() {
   let e = (0, u.a)({
@@ -49,9 +49,9 @@ lowerBadgeSize: {
   width: 12,
   height: 12
 }
-  }), []), E = _ ? m.Z.Messages.DISCOVER : m.Z.Messages.GUILD_DISCOVERY_TOOLTIP;
+  }), []), E = _ ? g.Z.Messages.DISCOVER : g.Z.Messages.GUILD_DISCOVERY_TOOLTIP;
   return h && !f && (I.lowerBadge = (0, i.jsx)('div', {
-className: g.guildNotif
+className: m.guildNotif
   })), (0, i.jsx)(p.Z, {
 id: 'guild-discover-button',
 ref: t,

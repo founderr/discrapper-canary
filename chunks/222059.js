@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(770471),
   _ = n(292584),
   f = n(835865),
-  m = n(456541),
-  g = n(143614),
+  g = n(456541),
+  m = n(143614),
   C = n(544803),
   I = n(899740),
   E = n(557494),
@@ -67,8 +67,8 @@ canViewBroadcasts: H
 location: 'home_button_no_track'
   }, {
 autoTrackExposure: !1
-  }), V = (0, g.Z)(), W = V.length > 0 && H;
-  (0, m.P)();
+  }), V = (0, m.Z)(), W = V.length > 0 && H;
+  (0, g.P)();
   let F = (0, r.Ie)('home'),
 z = () => {
   T(null), b(0), clearTimeout(Z);
@@ -200,9 +200,9 @@ s = Object.keys(w.nG),
 })),
 d = o + u,
 p = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
-m = (0, I.T)(),
-g = r + d + m,
-C = g === d && d > 0 && r + m === 0;
+g = (0, I.T)(),
+m = r + d + g,
+C = m === d && d > 0 && r + g === 0;
   l.useEffect(() => {
 n.length > 0 && (0, h.E7)();
   }, [n]), (0, f.Z)();
@@ -211,7 +211,7 @@ n.length > 0 && (0, h.E7)();
 selected: e,
 user: p,
 selectedChannelId: x.Z.getChannelId(D.ME),
-badge: g,
+badge: m,
 link: E,
 showProgressBadge: t
   });

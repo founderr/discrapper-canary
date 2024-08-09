@@ -12,8 +12,8 @@ var i = n(735250),
   p = n(768581),
   _ = n(792125),
   f = n(358555),
-  m = n(981631),
-  g = n(647086),
+  g = n(981631),
+  m = n(647086),
   C = n(689938),
   I = n(204157);
 
@@ -63,7 +63,7 @@ hasBanner: l,
 hasSubheader: r
   } = e, {
 value: o
-  } = n.springs, u = t.hasFeature(m.oNc.DISCOVERABLE), d = (0, i.jsx)('div', {
+  } = n.springs, u = t.hasFeature(g.oNc.DISCOVERABLE), d = (0, i.jsx)('div', {
 className: I.communityInfo,
 children: u && (0, i.jsx)(c.Tooltip, {
   text: C.Z.Messages.DISCOVERABLE_GUILD_HEADER_PUBLIC_INFO,
@@ -130,7 +130,7 @@ children: P,
 headerClassName: O,
 communityInfoVisible: y,
 hasSubheader: j
-  } = e, D = b.hasFeature(m.oNc.ANIMATED_BANNER), w = (0, d.Z)(b), U = !w && b.hasCommunityInfoSubheader(), G = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), W = l.useRef(), F = h.QK.getSetting();
+  } = e, D = b.hasFeature(g.oNc.ANIMATED_BANNER), w = (0, d.Z)(b), U = !w && b.hasCommunityInfoSubheader(), G = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), W = l.useRef(), F = h.QK.getSetting();
   l.useEffect(() => {
 if (G && n && !H.current && F)
   return B(!0), W.current = setTimeout(() => {
@@ -163,7 +163,7 @@ children: [
       [I.selected]: null != S && L,
       [I.hasBanner]: z(),
       [I.bannerVisible]: n,
-      [(0, _.Q)(m.BRd.DARK)]: n,
+      [(0, _.Q)(g.BRd.DARK)]: n,
       [I.communityInfoVisible]: !w && y || j && U
     }),
     onMouseDown: Z,
@@ -182,7 +182,7 @@ children: [
                 guild: b,
                 isBannerVisible: n
               }),
-              b.id === g._ && (0, i.jsx)(x, {}),
+              b.id === m._ && (0, i.jsx)(x, {}),
               (0, i.jsx)(c.Heading, {
                 variant: 'text-md/semibold',
                 lineClamp: 1,

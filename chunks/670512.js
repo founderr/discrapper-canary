@@ -19,11 +19,11 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let m = {
+let g = {
   friction: 15,
   tension: 100
 };
-class g extends(i = r.PureComponent) {
+class m extends(i = r.PureComponent) {
   componentDidMount() {
 this.setState({
   shown: !0
@@ -44,7 +44,7 @@ let {
 } = this.context;
 !0 !== t.enabled && o.Z.spring(this.state.translateY, {
   toValue: Math.min(e, 250),
-  ...m
+  ...g
 }).start();
   }
   renderArrowGroup(e) {
@@ -159,4 +159,4 @@ super(...e), f(this, 'state', {
 });
   }
 }
-f(g, 'contextType', u.AccessibilityPreferencesContext), t.Z = g;
+f(m, 'contextType', u.AccessibilityPreferencesContext), t.Z = m;

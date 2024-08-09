@@ -23,13 +23,13 @@ _(!0), (0, o.JG)(h), null == r || r();
   }, [
 r,
 h
-  ]), m = p ? s.CircleCheckIcon : s.CopyIcon;
+  ]), g = p ? s.CircleCheckIcon : s.CopyIcon;
   return (0, i.jsx)(s.Clickable, {
 className: a()(u.container, n),
 onClick: f,
 children: (0, i.jsx)(s.Tooltip, {
   text: p ? c.Z.Messages.COPIED : c.Z.Messages.COPY,
-  children: e => (0, i.jsx)(m, {
+  children: e => (0, i.jsx)(g, {
     ...d,
     ...e,
     size: 'xxs',

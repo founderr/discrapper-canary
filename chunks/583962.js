@@ -19,8 +19,8 @@ var i = n(735250),
   p = n(100527),
   _ = n(367907),
   f = n(906732),
-  m = n(434404),
-  g = n(496675),
+  g = n(434404),
+  m = n(496675),
   C = n(259580),
   I = n(267642),
   E = n(624138),
@@ -36,9 +36,9 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
 let {
   guild: t,
   onSelect: n
-} = e, [r, a] = l.useState(t.premiumProgressBarEnabled), [s, o] = l.useState(!1), u = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t)), p = async () => {
+} = e, [r, a] = l.useState(t.premiumProgressBarEnabled), [s, o] = l.useState(!1), u = (0, c.e7)([m.Z], () => m.Z.can(Z.Plq.MANAGE_GUILD, t)), p = async () => {
   if (!!u)
-    o(!0), await m.Z.saveGuild(t.id, {
+    o(!0), await g.Z.saveGuild(t.id, {
       premiumProgressBarEnabled: !r
     }), a(!r), o(!1);
 };
@@ -70,15 +70,15 @@ withMargin: n
 analyticsLocations: r
   } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY), {
 premiumSubscriberCount: u,
-id: m
-  } = t, E = (0, I.rF)(u, m), A = (0, I.FZ)(E, t.id), M = null == A, R = null != A ? A : E, O = (0, c.e7)([x.Z], () => {
+id: g
+  } = t, E = (0, I.rF)(u, g), A = (0, I.FZ)(E, t.id), M = null == A, R = null != A ? A : E, O = (0, c.e7)([x.Z], () => {
 var e;
-return null !== (e = x.Z.getCountForGuild(m)) && void 0 !== e ? e : 0;
-  }), y = (0, c.e7)([g.Z], () => g.Z.can(Z.Plq.MANAGE_GUILD, t));
+return null !== (e = x.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
+  }), y = (0, c.e7)([m.Z], () => m.Z.can(Z.Plq.MANAGE_GUILD, t));
   l.useEffect(() => {
-O !== u && (0, N.v)(m, u);
+O !== u && (0, N.v)(g, u);
   }, [
-m,
+g,
 O,
 u
   ]);
@@ -101,7 +101,7 @@ k = () => {
     location: {
       section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR
     },
-    guild_id: m,
+    guild_id: g,
     location_stack: r
   }), (0, S.Z)({
     analyticsLocations: r,

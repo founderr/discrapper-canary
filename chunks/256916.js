@@ -22,7 +22,7 @@ let f = {
   friction: 10,
   tension: 300
 };
-class m extends r.Component {
+class g extends r.Component {
   shouldComponentUpdate(e, t) {
 return !(0, d.Z)(this.props, e, ['animate']) || !(0, d.Z)(this.state, t);
   }
@@ -117,7 +117,7 @@ super(e), _(this, '_timeout', void 0), this.state = {
 };
   }
 }
-class g extends(i = r.PureComponent) {
+class m extends(i = r.PureComponent) {
   componentDidMount() {
 this.calculateState();
   }
@@ -144,7 +144,7 @@ let {
 } = this.context;
 return (0, l.jsx)('div', {
   className: null != a ? a : void 0,
-  children: (0, l.jsx)(m, {
+  children: (0, l.jsx)(g, {
     hide: !0 === c || null == e && null == t,
     className: s()(o, null != t ? p.mention : p.unread),
     text: null != t ? n : i,
@@ -214,9 +214,9 @@ super(...e), _(this, 'state', {
 });
   }
 }
-_(g, 'contextType', h.AccessibilityPreferencesContext), _(g, 'defaultProps', {
+_(m, 'contextType', h.AccessibilityPreferencesContext), _(m, 'defaultProps', {
   className: p.container,
   reverse: !1,
   hide: !1,
   animate: !0
-}), t.Z = g;
+}), t.Z = m;

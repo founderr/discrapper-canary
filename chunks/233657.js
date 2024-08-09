@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return g;
   }
 });
 var i = n(735250);
@@ -18,12 +18,12 @@ var l = n(442837),
   _ = n(689938),
   f = n(848998);
 
-function m(e) {
+function g(e) {
   let {
 guild: t,
-selected: m
+selected: g
   } = e, {
-hasUnread: g,
+hasUnread: m,
 mentionCount: C
   } = (0, l.cj)([u.ZP], () => ({
 hasUnread: u.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
@@ -56,7 +56,7 @@ renderIcon: e => (0, i.jsx)(a.CalendarIcon, {
   className: e
 }),
 text: x,
-selected: m,
+selected: g,
 onClick: E,
 onContextMenu: e => {
   (0, s.jW)(e, async () => {
@@ -69,7 +69,7 @@ onContextMenu: e => {
     });
   });
 },
-showUnread: g && !I,
+showUnread: m && !I,
 trailing: !I && C > 0 ? (0, i.jsx)(a.NumberBadge, {
   className: f.numberBadge,
   disableColor: !0,

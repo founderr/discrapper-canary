@@ -12,8 +12,8 @@ var i = n(735250),
   p = n(239091),
   _ = n(153867),
   f = n(35225),
-  m = n(703656),
-  g = n(769654),
+  g = n(703656),
+  m = n(769654),
   C = n(271383),
   I = n(771845),
   E = n(727258),
@@ -116,12 +116,12 @@ es = !K && er,
   l.useEffect(() => () => eh.cancel(), [eh]);
   let ep = l.useCallback(() => {
   if (null != U) {
-    (0, m.uL)(U, {
+    (0, g.uL)(U, {
       state: R
     });
     return;
   }
-  (0, g.X)(X, {
+  (0, m.X)(X, {
     state: R
   });
 }, [
@@ -141,14 +141,14 @@ e_ = l.useCallback(() => {
   q
 ]),
 ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(X)),
-em = l.useCallback(e => {
+eg = l.useCallback(e => {
   null != G && !ef && z(e, G);
 }, [
   G,
   z,
   ef
 ]),
-eg = l.useCallback(e => {
+em = l.useCallback(e => {
   if ('ArrowLeft' === e.key && null != J) {
     var t;
     null === (t = document.querySelector('[aria-owns=folder-items-'.concat(J, ']'))) || void 0 === t || t.focus();
@@ -193,8 +193,8 @@ return null;
     K || ea(!1);
   },
   onMouseDown: e_,
-  onContextMenu: em,
-  onKeyDown: eg,
+  onContextMenu: eg,
+  onKeyDown: em,
   icon: G.getIconURL(96, es && k),
   selected: B || es,
   ...el,

@@ -19,16 +19,16 @@ function h(e) {
 activity: h
   } = e, {
 channelId: p
-  } = null !== (t = (0, c.rq)(h)) && void 0 !== t ? t : {}, _ = (0, r.e7)([u.Z], () => u.Z.getStageInstanceByChannel(p), [p]), f = l.useRef(null), m = l.useCallback(() => {
+  } = null !== (t = (0, c.rq)(h)) && void 0 !== t ? t : {}, _ = (0, r.e7)([u.Z], () => u.Z.getStageInstanceByChannel(p), [p]), f = l.useRef(null), g = l.useCallback(() => {
 let e = s.Z.getChannel(p);
 null != e && o.Cq(e);
-  }, [p]), g = null !== (n = null == _ ? void 0 : _.topic) && void 0 !== n ? n : h.name, C = d.Z.Messages.STAGE_CHANNEL_ACTIVITY_FEED_JOIN.format({
-channel: g
+  }, [p]), m = null !== (n = null == _ ? void 0 : _.topic) && void 0 !== n ? n : h.name, C = d.Z.Messages.STAGE_CHANNEL_ACTIVITY_FEED_JOIN.format({
+channel: m
   });
   return (0, i.jsx)('div', {
 ref: f,
 children: (0, i.jsx)(a.Clickable, {
-  onClick: m,
+  onClick: g,
   focusProps: {
     ringTarget: f
   },

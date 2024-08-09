@@ -15,8 +15,8 @@ var i, l = n(735250),
   p = n(714338),
   _ = n(212819),
   f = n(14429),
-  m = n(951844),
-  g = n(313201),
+  g = n(951844),
+  m = n(313201),
   C = n(592125),
   I = n(888369),
   E = n(430824),
@@ -226,11 +226,11 @@ v.S.dispatch(M.CkL.QUICKSWITCHER_RESULT_FOCUS, {
 return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
   }
   renderProtip() {
-return (0, l.jsx)(m.Z, {
+return (0, l.jsx)(g.Z, {
   className: s()(P.protip, {
     [P.hasContent]: this.state.query.length > 0
   }),
-  type: m.Z.Types.INLINE,
+  type: g.Z.Types.INLINE,
   children: R.Z.Messages.QUICKSWITCHER_PROTIP.format({
     userSymbolHook: (e, t) => H(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
     textChannelSymbolHook: (e, t) => H(t, _.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
@@ -271,7 +271,7 @@ return (0, l.jsx)(u.ModalRoot, {
 });
   }
   constructor(...e) {
-super(...e), O(this, 'scrollerRef', r.createRef()), O(this, 'inputRef', r.createRef()), O(this, '_listId', (0, g.hQ)()), O(this, 'state', {
+super(...e), O(this, 'scrollerRef', r.createRef()), O(this, 'inputRef', r.createRef()), O(this, '_listId', (0, m.hQ)()), O(this, 'state', {
   query: this.props.query,
   mouseFocusDisabled: !0
 }), O(this, 'handleInputChange', () => {

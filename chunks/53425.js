@@ -16,7 +16,7 @@ selectedChannel: n,
 selectedVoiceChannelId: l,
 sortedThreadIds: r,
 withGuildIcon: _
-  } = e, f = (0, s.Wu)([o.Z], () => r.map(e => o.Z.getChannel(e)).filter(u.lm), [r]), m = (0, s.e7)([c.ZP], () => {
+  } = e, f = (0, s.Wu)([o.Z], () => r.map(e => o.Z.getChannel(e)).filter(u.lm), [r]), g = (0, s.e7)([c.ZP], () => {
 let e = f[f.length - 1];
 if (null == e)
   return 0;
@@ -36,7 +36,7 @@ children: (0, i.jsxs)('ul', {
         [p.spineBorderWithGuildIcon]: _
       }),
       style: {
-        bottom: 24 + m
+        bottom: 24 + g
       }
     }),
     f.map((e, t) => (0, i.jsx)(d.Z, {

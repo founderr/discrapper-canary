@@ -19,8 +19,8 @@ var i = n(735250),
   p = n(481060),
   _ = n(493683),
   f = n(239091),
-  m = n(420660),
-  g = n(385499),
+  g = n(420660),
+  m = n(385499),
   C = n(570908),
   I = n(702321),
   E = n(201895),
@@ -90,8 +90,8 @@ let {
   onClick: h,
   className: _,
   role: f,
-  'aria-posinset': m,
-  'aria-setsize': g,
+  'aria-posinset': g,
+  'aria-setsize': m,
   ...I
 } = this.props;
 return (0, i.jsx)(v.Z, {
@@ -104,8 +104,8 @@ return (0, i.jsx)(v.Z, {
     within: !0,
     ...W
   },
-  'aria-posinset': m,
-  'aria-setsize': g,
+  'aria-posinset': g,
+  'aria-setsize': m,
   children: (0, i.jsx)(p.Interactive, {
     as: 'div',
     selected: t,
@@ -270,7 +270,7 @@ if (t.isMultiUserDM())
   });
 o()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
 let n = null;
-return !d.isSystemUser() && (n = (0, m.Z)(L) ? k.Skl.STREAMING : y), (0, i.jsx)(V, {
+return !d.isSystemUser() && (n = (0, g.Z)(L) ? k.Skl.STREAMING : y), (0, i.jsx)(V, {
   ...$,
   size: p.AvatarSizes.SIZE_32,
   src: X,
@@ -281,7 +281,7 @@ return !d.isSystemUser() && (n = (0, m.Z)(L) ? k.Skl.STREAMING : y), (0, i.jsx)(
   'aria-label': d.username,
   statusTooltip: !0
 });
-  }, e_ = t.isMultiUserDM(), ef = t.isSystemDM(), em = (0, b.Q)(), eg = e_ || ef || t.type !== k.d4z.DM || (null == d ? void 0 : d.clan) == null ? en : (0, i.jsxs)(i.Fragment, {
+  }, e_ = t.isMultiUserDM(), ef = t.isSystemDM(), eg = (0, b.Q)(), em = e_ || ef || t.type !== k.d4z.DM || (null == d ? void 0 : d.clan) == null ? en : (0, i.jsxs)(i.Fragment, {
 children: [
   en,
   (0, i.jsx)(S.ZP, {
@@ -317,7 +317,7 @@ children: e => {
     'aria-posinset': w,
     children: (0, i.jsxs)(p.Interactive, {
       className: a()(H.interactive, {
-        [H.interactiveSystemDM]: em && ef,
+        [H.interactiveSystemDM]: eg && ef,
         [H.interactiveSelected]: s
       }),
       as: 'div',
@@ -342,11 +342,11 @@ children: e => {
             subText: eh(),
             name: (0, i.jsx)(Z.Z, {
               tooltipClassName: H.overflowTooltip,
-              children: eg
+              children: em
             }),
-            decorators: t.isSystemDM() ? (0, i.jsx)(g.Z, {
+            decorators: t.isSystemDM() ? (0, i.jsx)(m.Z, {
               className: H.decorator,
-              type: g.Z.Types.SYSTEM_DM,
+              type: m.Z.Types.SYSTEM_DM,
               verified: !0
             }) : null
           })

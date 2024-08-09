@@ -17,8 +17,8 @@ var l = n(120356),
   p = n(111028),
   _ = n(305325),
   f = n(281956),
-  m = n(66999),
-  g = n(506936),
+  g = n(66999),
+  m = n(506936),
   C = n(359110),
   I = n(922482),
   E = n(431328),
@@ -113,8 +113,8 @@ let {
   canMoveMembers: p,
   stageInstance: _,
   isSubscriptionGated: f,
-  needSubscriptionToAccess: m,
-  unread: g,
+  needSubscriptionToAccess: g,
+  unread: m,
   resolvedUnreadSetting: C,
   mentionCount: I,
   isFavoriteSuggestion: E
@@ -148,7 +148,7 @@ let {
             channel: e,
             selected: !E && t,
             connected: n,
-            unread: n ? g : void 0,
+            unread: n ? m : void 0,
             resolvedUnreadSetting: C,
             mentionCount: I,
             locked: l,
@@ -163,11 +163,11 @@ let {
             isFavoriteSuggestion: E,
             'aria-label': (0, h.ZP)({
               channel: e,
-              unread: g,
+              unread: m,
               mentionCount: I,
               userCount: x,
               isSubscriptionGated: f,
-              needSubscriptionToAccess: m
+              needSubscriptionToAccess: g
             }),
             ...c,
             children: [
@@ -236,8 +236,8 @@ super(...e), V(this, 'state', {
     shouldShowGuildVerificationPopout: t
   } = this.state;
   if (t)
-    return (0, i.jsx)(g.Z, {
-      type: g.R.VOICE,
+    return (0, i.jsx)(m.Z, {
+      type: m.R.VOICE,
       guildId: e.guild_id,
       closePopout: this.closeGuildVerificationPopout
     });
@@ -319,14 +319,14 @@ return {
   unverifiedAccount: !i.canChat
 };
   }), h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)), p = (0, v.ZP)(n.id), _ = (0, a.e7)([x.Z], () => x.Z.getStageInstanceByChannel(n.id), [n.id]), f = (0, E.Rk)(n.id, N.pV.AUDIENCE), {
-isSubscriptionGated: g,
+isSubscriptionGated: m,
 needSubscriptionToAccess: C
-  } = (0, m.Z)(n.id), I = (0, a.e7)([R.ZP], () => R.ZP.isFavorite(t.id, n.id)), L = (0, S.xJ)(n.id), P = (0, j.Z)({
+  } = (0, g.Z)(n.id), I = (0, a.e7)([R.ZP], () => R.ZP.isFavorite(t.id, n.id)), L = (0, S.xJ)(n.id), P = (0, j.Z)({
 channel: n,
 isChannelSelected: !1,
 isChannelCollapsed: s,
 voiceStates: o,
-isSubscriptionGated: g,
+isSubscriptionGated: m,
 needSubscriptionToAccess: C,
 enableConnectedUserLimit: L || n.userLimit > 0 && n.userLimit < U.xGv
   }), O = e.connected && null == P;
@@ -335,7 +335,7 @@ categoryCollapsed: h,
 connectAction: p,
 numAudience: f,
 stageInstance: _,
-isSubscriptionGated: g,
+isSubscriptionGated: m,
 needSubscriptionToAccess: C,
 ...c,
 ...d,

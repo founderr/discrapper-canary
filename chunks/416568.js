@@ -12,8 +12,8 @@ var i = n(735250),
   p = n(442837),
   _ = n(902704),
   f = n(846519),
-  m = n(481060),
-  g = n(925549),
+  g = n(481060),
+  m = n(925549),
   C = n(209613),
   I = n(100527),
   E = n(906732),
@@ -137,7 +137,7 @@ el(this, 'guildsTree', void 0), el(this, 'setScrolling', void 0), el(this, 'onSc
   let {
     scrollTop: t
   } = e.getScrollerState();
-  g.Z.updateGuildListScrollTo(t), this.onScroll();
+  m.Z.updateGuildListScrollTo(t), this.onScroll();
 }, 200), this._handleScrollThrottled = o().throttle(() => {
   let e = this.scrollerRef.current;
   if (null == e)
@@ -174,9 +174,9 @@ n
   ]), _ = (0, p.Wu)([
 P.Z,
 R.ZP
-  ], () => j.default.keys(P.Z.getGuilds()).filter(e => R.ZP.isCurrentUserGuest(e))), g = h.concat(_), C = (0, p.e7)([N.Z], () => N.Z.isFullscreenInContext()), el = (0, p.e7)([P.Z], () => P.Z.getGeoRestrictedGuilds()), [er, ea] = l.useState(!1), es = l.useCallback(() => ea(!0), []), eo = l.useCallback(() => ea(!1), []), eu = l.useRef(!1), [ed] = l.useState(() => new f.V7()), eh = l.useRef(null), ep = l.useRef(null), [e_, ef] = l.useState(!1), {
-clanDiscoveryEnabled: em,
-defaultGameId: eg
+  ], () => j.default.keys(P.Z.getGuilds()).filter(e => R.ZP.isCurrentUserGuest(e))), m = h.concat(_), C = (0, p.e7)([N.Z], () => N.Z.isFullscreenInContext()), el = (0, p.e7)([P.Z], () => P.Z.getGeoRestrictedGuilds()), [er, ea] = l.useState(!1), es = l.useCallback(() => ea(!0), []), eo = l.useCallback(() => ea(!1), []), eu = l.useRef(!1), [ed] = l.useState(() => new f.V7()), eh = l.useRef(null), ep = l.useRef(null), [e_, ef] = l.useState(!1), {
+clanDiscoveryEnabled: eg,
+defaultGameId: em
   } = (0, x.nk)('guilds_bar'), {
 guilds: eC,
 defaultGameId: eI
@@ -185,18 +185,18 @@ location: 'guilds_bar',
 includeConverted: !0
   }), eE = (0, T.v)({
 location: 'GuildsBar'
-  }), eN = em || eC.length > 0 || eE, ex = l.useMemo(() => eC.filter(e => !(0, S.EJ)(e)), [eC]).length > 0, eS = l.useMemo(() => ex ? z.OO : em ? z.KF : void 0, [
-em,
+  }), eN = eg || eC.length > 0 || eE, ex = l.useMemo(() => eC.filter(e => !(0, S.EJ)(e)), [eC]).length > 0, eS = l.useMemo(() => ex ? z.OO : eg ? z.KF : void 0, [
+eg,
 ex
-  ]), ev = l.useMemo(() => ex ? eI : em ? eg : void 0, [
+  ]), ev = l.useMemo(() => ex ? eI : eg ? em : void 0, [
 eI,
-em,
+eg,
 ex,
-eg
+em
   ]), eZ = null != eS, eT = !eZ, {
 ref: eL,
 ...eA
-  } = (0, d.OP)(), eb = (0, m.useFocusJumpSection)(), [eM, eR] = l.useState(!1), eP = l.useMemo(() => new ec(o, eR, () => {
+  } = (0, d.OP)(), eb = (0, g.useFocusJumpSection)(), [eM, eR] = l.useState(!1), eP = l.useMemo(() => new ec(o, eR, () => {
 var e, t;
 null === (e = eh.current) || void 0 === e || e.calculateState(), null === (t = ep.current) || void 0 === t || t.calculateState();
   }, e => {
@@ -281,7 +281,7 @@ children: (0, i.jsx)('nav', {
         className: ei.unreadMentionsIndicatorTop,
         barClassName: ei.unreadMentionsBar
       }),
-      (0, i.jsxs)(m.AdvancedScrollerNone, {
+      (0, i.jsxs)(g.AdvancedScrollerNone, {
         className: a()({
           [ei.scroller]: !0,
           [ei.scrolling]: eM
@@ -297,7 +297,7 @@ children: (0, i.jsx)('nav', {
           }),
           (0, i.jsx)(k.Z, {}),
           ek,
-          g.map(e => (0, i.jsx)(ee.Z, {
+          m.map(e => (0, i.jsx)(ee.Z, {
             guildId: e
           }, e)),
           (0, i.jsx)($.Z, {

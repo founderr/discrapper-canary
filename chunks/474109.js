@@ -12,8 +12,8 @@ var i = n(735250),
   p = n(251625),
   _ = n(981631),
   f = n(689938);
-let m = 'app-download-item',
-  g = 'add-server-item';
+let g = 'app-download-item',
+  m = 'add-server-item';
 
 function C() {
   return !1;
@@ -22,15 +22,15 @@ function C() {
 function I(e) {
   var t;
   let n = o.default.getMutableGuildStates();
-  return e === _.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(_.x8Z.SERVER_DISCOVERY_BADGE) || e !== m && e !== g && (null === (t = n[null != e ? e : 'null']) || void 0 === t ? void 0 : t.mentionCount) > 0;
+  return e === _.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(_.x8Z.SERVER_DISCOVERY_BADGE) || e !== g && e !== m && (null === (t = n[null != e ? e : 'null']) || void 0 === t ? void 0 : t.mentionCount) > 0;
 }
 let E = (0, p.oH)((e, t, n) => [
   'null',
   ...t,
   ...e,
-  g,
+  m,
   _.x8Z.E3_SERVER_DISCOVERY_BADGE,
-  m
+  g
 ]);
 t.Z = l.forwardRef(function(e, t) {
   let n = (0, r.Wu)([

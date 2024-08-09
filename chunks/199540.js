@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(430824),
   _ = n(624138),
   f = n(674552),
-  m = n(981631),
-  g = n(689938),
+  g = n(981631),
+  m = n(689938),
   C = n(524343);
 let I = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
   E = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
@@ -49,9 +49,9 @@ function x(e) {
   color: u,
   children: h
 } = r,
-p = null != u ? u : m.Wyy,
+p = null != u ? u : g.Wyy,
 _ = h.map(e => e.id),
-[f, g] = l.useState(!1),
+[f, m] = l.useState(!1),
 [x, S] = l.useState(c),
 v = c ? 0 : -E,
 Z = (0, d.useSpring)({
@@ -60,10 +60,10 @@ Z = (0, d.useSpring)({
     duration: I
   },
   onStart() {
-    g(!0), S(c);
+    m(!0), S(c);
   },
   onRest() {
-    g(!1), S(c);
+    m(!1), S(c);
   }
 }, 'animate-always'),
 T = f ? Z : void 0;
@@ -109,7 +109,7 @@ tooltipName: u,
 folderGroupId: h,
 folderIconContent: p,
 onClick: _,
-onContextMenu: m,
+onContextMenu: g,
 onHoverChange: I,
 onKeyDown: E,
 treeItemProps: {
@@ -139,12 +139,12 @@ children: (0, i.jsx)(d.Clickable, {
     [C.hover]: v
   }),
   onClick: _,
-  onContextMenu: m,
+  onContextMenu: g,
   onMouseEnter: T,
   onMouseLeave: L,
   onKeyDown: E,
   onFocus: N,
-  'aria-label': g.Z.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({
+  'aria-label': m.Z.Messages.GUILD_FOLDER_TOOLTIP_A11Y_LABEL.format({
     folderName: u,
     mentions: c
   }),

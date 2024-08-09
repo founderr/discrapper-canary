@@ -16,9 +16,9 @@ var i = n(735250),
   p = n(981631),
   _ = n(176505),
   f = n(689938),
-  m = n(511233);
+  g = n(511233);
 
-function g(e, t) {
+function m(e, t) {
   return (0, i.jsx)(s.Text, {
 variant: 'text-xs/bold',
 color: 'text-normal',
@@ -49,33 +49,33 @@ children: [
         right: 4
       }
     },
-    className: m.progressBarContainer,
+    className: g.progressBarContainer,
     onClick: function() {
       (0, d.uL)(p.Z5c.CHANNEL(t.id, _.oC.GUILD_HOME));
     },
     children: [
       (0, i.jsxs)('div', {
-        className: m.progressBarText,
+        className: g.progressBarText,
         children: [
           (0, i.jsx)(s.Heading, {
             variant: 'heading-sm/bold',
             children: f.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_GET_STARTED
           }),
           (0, i.jsxs)('div', {
-            className: m.rightContainer,
+            className: g.rightContainer,
             children: [
               (0, i.jsx)(s.Text, {
                 variant: 'text-xs/medium',
                 color: 'text-muted',
-                className: m.rightText,
+                className: g.rightText,
                 children: f.Z.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
-                  numberHook: g,
+                  numberHook: m,
                   total: E.toString(),
                   completed: I.toString()
                 })
               }),
               (0, i.jsx)(h.Z, {
-                className: m.arrow,
+                className: g.arrow,
                 width: 16,
                 height: 16,
                 direction: h.Z.Directions.RIGHT
@@ -85,7 +85,7 @@ children: [
         ]
       }),
       (0, i.jsx)(s.Progress, {
-        className: m.progressBar,
+        className: g.progressBar,
         foregroundGradientColor: [
           (0, o.Lq)(p.Ilk.GREEN_300),
           (0, o.Lq)(p.Ilk.GREEN_230)
@@ -97,7 +97,7 @@ children: [
   }),
   (0, i.jsx)('div', {
     role: 'separator',
-    className: m.divider
+    className: g.divider
   })
 ]
   });

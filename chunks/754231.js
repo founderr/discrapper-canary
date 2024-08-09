@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(424678),
   _ = n(594174),
   f = n(81063),
-  m = n(768581),
-  g = n(823379),
+  g = n(768581),
+  m = n(823379),
   C = n(51144),
   I = n(604972);
 let E = d.u.SIZE_24;
@@ -32,7 +32,7 @@ onOpenSpotifyAlbum: u
   } = e, d = null == r ? void 0 : r.assets, h = null == r ? void 0 : r.application_id;
   if (null == r || null == d || null == d.large_image && null == d.small_image)
 return null != s ? function(e) {
-  let t = m.ZP.getApplicationIconURL({
+  let t = g.ZP.getApplicationIconURL({
       id: e.application.id,
       icon: e.application.icon
     }),
@@ -49,14 +49,14 @@ return null != s ? function(e) {
 }(s) : null;
   let p = null !== (t = d.large_image) && void 0 !== t ? t : d.small_image,
 _ = (0, c.Z)(r),
-g = _ ? I.spotifyLargeImage : I.applicationLargeImage,
+m = _ ? I.spotifyLargeImage : I.applicationLargeImage,
 C = null != p ? (0, i.jsx)('img', {
   alt: null !== (n = d.large_text) && void 0 !== n ? n : '',
   src: (0, f.getAssetImage)(h, p, [
     128,
     128
   ]),
-  className: g
+  className: m
 }) : null;
   return _ && null != u ? (C = (0, i.jsx)(o.Clickable, {
 className: I.clickable,
@@ -166,9 +166,9 @@ sortedVoiceStates: u,
 onOpenSpotifyTrack: h,
 onOpenSpotifyArtist: p,
 onOpenSpotifyAlbum: f
-  } = e, m = [];
-  null != n ? m = Array.from(n.embeddedActivity.userIds) : (0, c.Z)(t) && null != u && (m = u.map(e => e.user.id));
-  let T = (0, s.Wu)([_.default], () => m.map(e => _.default.getUser(e)).filter(g.lm)),
+  } = e, g = [];
+  null != n ? g = Array.from(n.embeddedActivity.userIds) : (0, c.Z)(t) && null != u && (g = u.map(e => e.user.id));
+  let T = (0, s.Wu)([_.default], () => g.map(e => _.default.getUser(e)).filter(m.lm)),
 L = null != n || (0, c.Z)(t),
 A = l.useMemo(() => {
   let e = new Map();
@@ -208,7 +208,7 @@ children: [
           (0, i.jsx)(v, {
             activity: t
           }),
-          m.length > 0 && (0, i.jsx)(d.Z, {
+          g.length > 0 && (0, i.jsx)(d.Z, {
             className: I.usersSummary,
             guildId: a.guild_id,
             users: T,

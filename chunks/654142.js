@@ -15,13 +15,13 @@ var i = n(735250),
 t.Z = l.memo(function(e) {
   let {
 folderNode: t,
-...m
+...g
   } = e, {
-id: g,
+id: m,
 name: C,
 color: I,
 children: E
-  } = t, N = E.map(e => e.id), x = (0, o.Z)(e => e.guildId), S = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(g)), v = function(e) {
+  } = t, N = E.map(e => e.id), x = (0, o.Z)(e => e.guildId), S = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(m)), v = function(e) {
 let t = e.children.map(e => {
     let t = e.id,
       n = d.Z.getGuild(t);
@@ -39,29 +39,29 @@ unread: L
 mentionCount: N.map(e => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
 unread: N.some(e => u.default.hasUnread(e))
   })), A = l.useCallback(() => {
-s.Z.toggleGuildFolderExpand(g);
-  }, [g]), b = l.useCallback(e => {
+s.Z.toggleGuildFolderExpand(m);
+  }, [m]), b = l.useCallback(e => {
 (0, a.jW)(e, async () => {
   let {
     default: e
   } = await n.e('52590').then(n.bind(n, 205784));
   return t => (0, i.jsx)(e, {
     ...t,
-    folderId: g,
+    folderId: m,
     folderName: C,
     folderColor: I,
     unread: L || T > 0
   });
 });
   }, [
-g,
+m,
 C,
 I,
 L,
 T
   ]);
   return (0, i.jsx)(p.Z, {
-...m,
+...g,
 folderNode: t,
 expanded: S,
 selected: null != x && N.includes(x),

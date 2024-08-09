@@ -18,8 +18,8 @@ var i, l = n(735250),
   p = n(260300),
   _ = n(410575),
   f = n(607070),
-  m = n(100527),
-  g = n(906732),
+  g = n(100527),
+  m = n(906732),
   C = n(313201),
   I = n(540059),
   E = n(362658),
@@ -535,7 +535,7 @@ super(...e), eu(this, '_list', null), eu(this, 'unreadTopRef', r.createRef()), e
     stageChannelSpeakerVoiceStates: p,
     optInEnabled: _,
     withGuildIcon: f,
-    isRefreshEnabled: m
+    isRefreshEnabled: g
   } = this.props;
   if (t === y.wZ) {
     let e = u.getGuildActionSection(),
@@ -560,7 +560,7 @@ super(...e), eu(this, '_list', null), eu(this, 'unreadTopRef', r.createRef()), e
           selected: s === es.oC.GUILD_HOME
         }, el.z.GUILD_HOME);
       case el.z.GUILD_SCHEDULED_EVENTS:
-        if (m)
+        if (g)
           return null;
         return (0, l.jsx)(en.Z, {
           guild: i,
@@ -586,7 +586,7 @@ super(...e), eu(this, '_list', null), eu(this, 'unreadTopRef', r.createRef()), e
           guild: i
         });
       case el.z.CHANNELS_AND_ROLES:
-        if (m)
+        if (g)
           return null;
         return (0, l.jsx)(W.m, {
           guild: i,
@@ -599,7 +599,7 @@ super(...e), eu(this, '_list', null), eu(this, 'unreadTopRef', r.createRef()), e
           disableManageChannels: h
         }, el.z.GUILD_DIRECTORY);
       case el.z.GUILD_MOD_DASH_MEMBER_SAFETY:
-        if (m)
+        if (g)
           return null;
         return (0, l.jsx)(x.Z, {
           guild: i,
@@ -611,13 +611,13 @@ super(...e), eu(this, '_list', null), eu(this, 'unreadTopRef', r.createRef()), e
   }
   if (u.isPlaceholderRow(t, n))
     return null;
-  let g = u.getChannelFromSectionRow(t, n);
-  if (null == g)
+  let m = u.getChannelFromSectionRow(t, n);
+  if (null == m)
     return null;
   let {
     category: C,
     channel: I
-  } = g, E = C instanceof y.VR, v = I.record, Z = ''.concat(t).concat(I.id);
+  } = m, E = C instanceof y.VR, v = I.record, Z = ''.concat(t).concat(I.id);
   switch (v.type) {
     case ea.d4z.GUILD_ANNOUNCEMENT:
     case ea.d4z.GUILD_TEXT:
@@ -769,7 +769,7 @@ selectedChannelId: n,
 selectedVoiceChannelId: i
   } = e, a = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled), {
 analyticsLocations: s
-  } = (0, g.ZP)(m.Z.GUILD_CHANNEL_LIST), d = (0, u.e7)([M.Z], () => M.Z.getChannel(n)), h = (0, u.e7)([M.Z], () => M.Z.getChannel(i)), p = (0, u.e7)([O.Z], () => O.Z.getGuildId()), C = (0, Z.DM)(t), I = r.useRef(null), E = r.useCallback((e, t) => {
+  } = (0, m.ZP)(g.Z.GUILD_CHANNEL_LIST), d = (0, u.e7)([M.Z], () => M.Z.getChannel(n)), h = (0, u.e7)([M.Z], () => M.Z.getChannel(i)), p = (0, u.e7)([O.Z], () => O.Z.getGuildId()), C = (0, Z.DM)(t), I = r.useRef(null), E = r.useCallback((e, t) => {
 let n = I.current;
 if (null != n) {
   if (ea.Xyh.test(t) || (0, es.AB)(t))
@@ -809,7 +809,7 @@ n,
 v
   ]);
   let T = (0, L.Z)(t);
-  return (0, l.jsx)(g.Gt, {
+  return (0, l.jsx)(m.Gt, {
 value: s,
 children: (0, l.jsx)(_.Z, {
   section: ea.jXE.GUILD_CHANNEL_LIST,

@@ -12,7 +12,7 @@ return d;
 return f;
   },
   MF: function() {
-return g;
+return m;
   },
   NY: function() {
 return u;
@@ -30,7 +30,7 @@ return l;
 return a;
   },
   VE: function() {
-return m;
+return g;
   },
   Vf: function() {
 return o;
@@ -58,8 +58,8 @@ let i = 8,
   p = 84,
   _ = 135,
   f = 16,
-  m = 5,
-  g = {
+  g = 5,
+  m = {
 origin: {
   x: -36,
   y: 7

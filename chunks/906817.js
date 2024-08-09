@@ -3,7 +3,7 @@ n.d(t, {
 return f;
   },
   WW: function() {
-return m;
+return g;
   }
 });
 var i = n(735250),
@@ -37,7 +37,7 @@ return null == l || l.record.type === h.d4z.GUILD_CATEGORY ? d.QP : 16 + d.QP;
   return d.Pw;
 }
 
-function m(e, t) {
+function g(e, t) {
   switch (e) {
 case c.wZ:
   return 'hoisted-spacer';
@@ -62,8 +62,8 @@ t.ZP = l.memo(function(e) {
 sectionIndex: t,
 guild: n,
 guildChannels: f,
-guildChannelsVersion: m,
-selectedChannelId: g,
+guildChannelsVersion: g,
+selectedChannelId: m,
 disableManageChannels: C
   } = e, {
 isFavoritesPerk: I
@@ -73,12 +73,12 @@ if (null == e)
   return;
 let t = null,
   i = e.getShownChannelAndThreadIds();
-null != g && i.includes(g) && (t = (0, s.KY)(f)), (0, s.Uo)(n.id, i, t);
+null != m && i.includes(m) && (t = (0, s.KY)(f)), (0, s.Uo)(n.id, i, t);
   }, [
 n.id,
-g,
+m,
 f,
-m
+g
   ]);
   switch (t) {
 case c.wZ:

@@ -17,8 +17,8 @@ var l = n(120356),
   p = n(501655),
   _ = n(199902),
   f = n(592125),
-  m = n(594174),
-  g = n(938475),
+  g = n(594174),
+  m = n(938475),
   C = n(823379),
   I = n(709054),
   E = n(853856),
@@ -53,7 +53,7 @@ function T() {
 l = n.map(e => e.id),
 r = n.filter(e => e.type === N.d4z.GUILD_VOICE),
 a = n.filter(e => e.type === N.d4z.GUILD_STAGE_VOICE).map(e => e.id),
-x = (0, o.Wu)([g.ZP], () => s().flatMap(r, e => g.ZP.getVoiceStatesForChannel(e).map(e => {
+x = (0, o.Wu)([m.ZP], () => s().flatMap(r, e => m.ZP.getVoiceStatesForChannel(e).map(e => {
   let {
     user: t
   } = e;
@@ -81,8 +81,8 @@ A = (0, o.Wu)([u.ZP], () => {
   }
   return t;
 }, [l]),
-b = (0, o.Wu)([m.default], () => A.map(e => m.default.getUser(e)), [A]),
-M = (0, o.Wu)([m.default], () => L.map(e => m.default.getUser(e)), [L]),
+b = (0, o.Wu)([g.default], () => A.map(e => g.default.getUser(e)), [A]),
+M = (0, o.Wu)([g.default], () => L.map(e => g.default.getUser(e)), [L]),
 R = Z(c.VoiceNormalIcon, x.filter(e => !L.includes(e.id) && !A.includes(e.id)));
   let P = (e = v, t = T, 0 === e.length ? null : (0, i.jsxs)('div', {
   className: S.row,

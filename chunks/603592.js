@@ -16,8 +16,8 @@ onClick: r,
 onContextMenu: p,
 icon: _,
 selected: f,
-tooltip: m,
-upperBadge: g,
+tooltip: g,
+upperBadge: m,
 lowerBadge: C,
 lowerBadgeSize: I,
 showPill: E = !0,
@@ -27,7 +27,7 @@ children: S,
 onMouseEnter: v,
 onMouseLeave: Z,
 onMouseDown: T
-  } = e, L = (0, s.Ie)(n), [A, b] = l.useState(!1), M = 'string' == typeof m && null == x ? m : x;
+  } = e, L = (0, s.Ie)(n), [A, b] = l.useState(!1), M = 'string' == typeof g && null == x ? g : x;
   return (0, i.jsxs)(u.H, {
 children: [
   E ? (0, i.jsx)('div', {
@@ -38,12 +38,12 @@ children: [
     })
   }) : null,
   (0, i.jsx)(d.Z, {
-    text: m,
+    text: g,
     selected: f,
     children: (0, i.jsx)(o.BlobMask, {
       className: h.__invalid_circleButtonMask,
       selected: f || A,
-      upperBadge: g,
+      upperBadge: m,
       lowerBadge: C,
       lowerBadgeSize: I,
       children: (0, i.jsx)(o.Clickable, {

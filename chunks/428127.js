@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(451478),
   _ = n(934415),
   f = n(968847),
-  m = n(689938),
-  g = n(369343);
+  g = n(689938),
+  m = n(369343);
 let C = {
   friction: 30,
   tension: 300
@@ -37,12 +37,12 @@ selectedVoiceChannelId: null,
 voiceStates: o
   });
   return (0, i.jsxs)(u.Clickable, {
-className: a()(g.bar),
+className: a()(m.bar),
 onClick: p,
 children: [
   (0, i.jsx)(u.VoiceNormalIcon, {
     size: 'custom',
-    className: g.voiceChannelsIcon,
+    className: m.voiceChannelsIcon,
     width: 14,
     height: 14,
     color: c.Z.unsafe_rawColors.GREEN_330.css
@@ -50,14 +50,14 @@ children: [
   (0, i.jsx)(u.Text, {
     variant: 'text-xs/semibold',
     color: 'text-positive',
-    className: g.barText,
-    children: m.Z.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
+    className: m.barText,
+    children: g.Z.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
       count: C.length
     })
   }),
   (0, i.jsx)(h.Z, {
     guildId: n.id,
-    className: g.voiceChannelsUsers,
+    className: m.voiceChannelsUsers,
     users: C.slice(0, 4),
     renderMoreUsers: () => null,
     max: 4,
@@ -93,48 +93,48 @@ d,
 S
   ]);
   return (0, i.jsx)('div', {
-className: a()(g.container, {
-  [g.top]: 'top' === t,
-  [g.bottom]: 'bottom' === t
+className: a()(m.container, {
+  [m.top]: 'top' === t,
+  [m.bottom]: 'bottom' === t
 }),
 children: (0, i.jsx)(s.animated.div, {
-  className: g.containerPadding,
+  className: m.containerPadding,
   style: Z,
   'aria-hidden': v,
   children: N === f.x.HIDDEN ? (0, i.jsx)('div', {
-    className: a()(g.bar, g.emptyBar)
+    className: a()(m.bar, m.emptyBar)
   }) : N === f.x.UNREAD ? (0, i.jsxs)(u.Clickable, {
-    className: g.bar,
+    className: m.bar,
     onClick: T,
     children: [
       'bottom' === t ? (0, i.jsx)(u.ChevronSmallDownIcon, {
         size: 'custom',
         color: 'currentColor',
-        className: g.unreadIcon,
+        className: m.unreadIcon,
         height: 14,
         width: 14
       }) : (0, i.jsx)(u.ChevronSmallUpIcon, {
         size: 'custom',
         color: 'currentColor',
-        className: g.unreadIcon,
+        className: m.unreadIcon,
         height: 14,
         width: 14
       }),
       (0, i.jsx)(u.Text, {
         variant: 'text-xs/semibold',
         color: 'interactive-normal',
-        className: g.barText,
-        children: m.Z.Messages.NEW_UNREADS
+        className: m.barText,
+        children: g.Z.Messages.NEW_UNREADS
       })
     ]
   }) : N === f.x.MENTIONS ? (0, i.jsx)(u.Clickable, {
-    className: a()(g.bar, g.mentionsBar),
+    className: a()(m.bar, m.mentionsBar),
     onClick: T,
     children: (0, i.jsx)(u.Text, {
       variant: 'text-xs/semibold',
       color: 'status-danger-text',
-      className: g.barText,
-      children: m.Z.Messages.NEW_MENTIONS_COUNT.format({
+      className: m.barText,
+      children: g.Z.Messages.NEW_MENTIONS_COUNT.format({
         count: x
       })
     })

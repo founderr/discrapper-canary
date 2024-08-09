@@ -15,8 +15,8 @@ var i, l = n(735250),
   p = n(812206),
   _ = n(707409),
   f = n(703656),
-  m = n(417363),
-  g = n(941128),
+  g = n(417363),
+  m = n(941128),
   C = n(780570),
   I = n(353042),
   E = n(981631),
@@ -95,7 +95,7 @@ if (e.type === E.vxO.UPDATING || e.type === E.vxO.REPAIRING || e.type === E.vxO.
     return N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
   if (e.stage === E.f07.PATCHING || e.stage === E.f07.REPAIRING)
     return (0, l.jsx)(I.Z, {
-      getHistoricalTotalBytes: m.Z.getHistoricalTotalBytesWritten,
+      getHistoricalTotalBytes: g.Z.getHistoricalTotalBytesWritten,
       updateInterval: 5000,
       children: this.renderProgressBody
     });
@@ -221,19 +221,19 @@ return null != r && e.push(r), e;
   }, []);
 }
 t.Z = c.ZP.connectStores([
-  g.Z,
   m.Z,
+  g.Z,
   p.Z
 ], () => {
-  let e = g.Z.activeItems,
-t = L(e, m.Z),
+  let e = m.Z.activeItems,
+t = L(e, g.Z),
 {
   total: n,
   progress: i
 } = C.lK(t);
   return {
 percent: C.xI(i, n),
-isPaused: g.Z.paused,
+isPaused: m.Z.paused,
 firstApplication: e.length > 0 ? p.Z.getApplication(e[0].applicationId) : null,
 firstState: t.length > 0 ? t[0] : null
   };

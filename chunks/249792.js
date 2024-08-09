@@ -23,9 +23,9 @@ onAnimationStart: h,
 onAnimationRest: p
   } = e, _ = {}, f = {};
   _.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)', f.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)';
-  let m = (0, o.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
-g = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_630).hex();
-  l && null == t.icon && (_.backgroundColor = m, f.backgroundColor = g);
+  let g = (0, o.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
+m = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_630).hex();
+  l && null == t.icon && (_.backgroundColor = g, f.backgroundColor = m);
   let C = (0, o.useTransition)(n, {
 from: _,
 enter: f,

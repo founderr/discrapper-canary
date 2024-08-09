@@ -13,8 +13,8 @@ var l = n(392711),
   p = n(592125),
   _ = n(430824),
   f = n(594174),
-  m = n(295226),
-  g = n(626135),
+  g = n(295226),
+  m = n(626135),
   C = n(74538),
   I = n(557457),
   E = n(970645),
@@ -121,7 +121,7 @@ if (l && s.Z.dispatch({
 super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiumPaymentModalCloseReject', null), D(this, '_lastStreamingChannelId', null), D(this, '_maybeFetchPremiumOffer', async () => {
   let e = f.default.getCurrentUser();
   if (null != e && e.verified) {
-    let t = !(0, C.I5)(e) && m.Z.shouldFetchOffer();
+    let t = !(0, C.I5)(e) && g.Z.shouldFetchOffer();
     await (0, T.T)('PremiumManager', t);
   }
   s.Z.dispatch({
@@ -173,7 +173,7 @@ super(...e), D(this, '_premiumPaymentModalCloseResolve', null), D(this, '_premiu
         resolution: (0, y.o6)(r.maxResolution.height),
         fps: (0, I.bp)(r.maxFrameRate)
       });
-      o.Z.sendNitroSystemMessage(e, n), g.default.track(P.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+      o.Z.sendNitroSystemMessage(e, n), m.default.track(P.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
         type: R.cd.HD_STREAMING_VIEWER_UPSELL,
         location_section: null != t ? P.jXE.TEXT_IN_VOICE : P.jXE.CHANNEL_TEXT_AREA,
         location_object: P.qAy.MESSAGE,

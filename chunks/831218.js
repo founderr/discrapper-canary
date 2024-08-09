@@ -9,8 +9,8 @@ var i, l, r, a = n(735250),
   p = n(902704),
   _ = n(481060),
   f = n(925549),
-  m = n(607070),
-  g = n(367907),
+  g = n(607070),
+  m = n(367907),
   C = n(453542),
   I = n(762914),
   E = n(702321),
@@ -313,7 +313,7 @@ super(...e), j(this, 'state', {
       num_users_visible: a.length,
       num_users_visible_with_mobile_indicator: o.filter(e => null != e && b.Z.isMobileOnline(e)).length
     };
-  this.hasReportedAnalytics = !0, g.ZP.trackWithMetadata(P.rMx.DM_LIST_VIEWED, {
+  this.hasReportedAnalytics = !0, m.ZP.trackWithMetadata(P.rMx.DM_LIST_VIEWED, {
     ...u,
     ...(0, C.X)(),
     changelog_dm_visible: c
@@ -412,14 +412,14 @@ let e = M.Z.getPrivateChannelIds(),
   ]);
 return (0, I.Ce)(t);
   }, []), _ = (0, h.cj)([
-m.Z,
+g.Z,
 L.Z,
 A.Z
   ], () => ({
 theme: L.Z.darkSidebar ? P.BRd.DARK : n,
-keyboardModeEnabled: m.Z.keyboardModeEnabled,
+keyboardModeEnabled: g.Z.keyboardModeEnabled,
 version: null != t ? ''.concat(t, ':').concat(A.Z.getPrivateChannelsVersion()) : A.Z.getPrivateChannelsVersion()
-  })), f = s.useRef(null), g = s.useCallback(e => {
+  })), f = s.useRef(null), m = s.useCallback(e => {
 let t = f.current,
   n = document.querySelector(e);
 null != t && null != n && t.scrollIntoViewNode({
@@ -455,7 +455,7 @@ isEnabled: _.keyboardModeEnabled,
 scrollToStart: C,
 scrollToEnd: E,
 defaultFocused: (r + (l ? 1 : 0)).toString(),
-setFocus: g
+setFocus: m
   });
   return (0, a.jsx)(u.bG, {
 navigator: S,

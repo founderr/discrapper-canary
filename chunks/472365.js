@@ -16,8 +16,8 @@ var i = n(735250),
   p = n(792766),
   _ = n(600164),
   f = n(436774),
-  m = n(313201),
-  g = n(451603),
+  g = n(313201),
+  m = n(451603),
   C = n(885714),
   I = n(973616),
   E = n(594174),
@@ -106,7 +106,7 @@ children: [
 function D(e) {
   let {
 transitionState: t
-  } = e, n = (0, m.Dt)(), {
+  } = e, n = (0, g.Dt)(), {
 analyticsLocations: l
   } = (0, d.ZP)(u.Z.INVITE_MODAL);
   return (0, i.jsx)(d.Gt, {
@@ -159,7 +159,7 @@ submitting: N
   l.useEffect(() => {
 !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
   }, []);
-  let x = (0, m.Dt)(),
+  let x = (0, g.Dt)(),
 {
   analyticsLocations: S
 } = (0, d.ZP)(u.Z.INVITE_MODAL);
@@ -190,7 +190,7 @@ t = j.name, n = v.ZP.getGuildSplashURL({
 });
   else if ((null == (t = w.name) || '' === t) && null != U && (t = U.username), null == t)
 throw Error('no name for group DM invite');
-  let V = (0, g.yU)(),
+  let V = (0, m.yU)(),
 W = B ? R.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : R.Z.Messages.INVITE_MODAL_BUTTON.format({
   guildName: t
 });

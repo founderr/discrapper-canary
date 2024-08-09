@@ -22,7 +22,7 @@ shouldShow: h,
 forceOpen: p,
 selected: _ = !1,
 tooltipClass: f,
-tooltipContentClass: m
+tooltipContentClass: g
   } = e;
   return (0, i.jsx)(s.Tooltip, {
 shouldShow: h,
@@ -34,7 +34,7 @@ position: 'right',
 color: r,
 'aria-label': !1,
 tooltipClassName: a()(o.listItemTooltip, f),
-tooltipContentClassName: m,
+tooltipContentClassName: g,
 children: e => c ? l.cloneElement(l.Children.only(t), {
   ...e
 }) : (0, i.jsx)('div', {

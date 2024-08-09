@@ -19,9 +19,9 @@ var i = n(735250),
   p = n(662146),
   _ = n(981631),
   f = n(689938),
-  m = n(803438);
+  g = n(803438);
 
-function g(e) {
+function m(e) {
   let t = l.useRef(null),
 n = e.map(e => e[0]);
   return l.useLayoutEffect(() => {
@@ -70,14 +70,14 @@ r
   ]), [{
 canDrop: u,
 isOver: d
-  }, p] = (0, c.L)(o), _ = g([
+  }, p] = (0, c.L)(o), _ = m([
 [
   u,
-  m.autoPointerEvents
+  g.autoPointerEvents
 ],
 [
   d,
-  m.dragOver
+  g.dragOver
 ]
   ]);
   return (0, i.jsx)('div', {
@@ -87,7 +87,7 @@ ref: e => {
 'data-dnd-name': f.Z.Messages.DND_DROP_ABOVE.format({
   itemName: t
 }),
-className: a()(m.target)
+className: a()(g.target)
   });
 }
 
@@ -106,14 +106,14 @@ null == r || r(o);
 r,
 o
   ]);
-  let d = g([
+  let d = m([
 [
   s,
-  m.autoPointerEvents
+  g.autoPointerEvents
 ],
 [
   o,
-  m.dragOver
+  g.dragOver
 ]
   ]);
   return (0, i.jsx)(p.Z, {
@@ -121,7 +121,7 @@ text: t,
 shouldShow: o,
 forceOpen: o,
 disableWrapper: !0,
-tooltipClass: m.centerTargetTooltip,
+tooltipClass: g.centerTargetTooltip,
 children: (0, i.jsx)('div', {
   ref: e => {
     d.current = e, u(e);
@@ -129,7 +129,7 @@ children: (0, i.jsx)('div', {
   'data-dnd-name': f.Z.Messages.DND_DROP_COMBINE.format({
     itemName: t
   }),
-  className: a()(m.centerTarget, {})
+  className: a()(g.centerTarget, {})
 })
   });
 }
@@ -141,33 +141,33 @@ targetNode: n
   } = e, [{
 canDrop: l,
 isOver: r
-  }, s] = (0, c.L)(() => C([h.eD.GUILD], n, !0, !0)), o = g([
+  }, s] = (0, c.L)(() => C([h.eD.GUILD], n, !0, !0)), o = m([
 [
   r,
-  m.wrapperOver
+  g.wrapperOver
 ]
-  ]), u = g([
+  ]), u = m([
 [
   r,
-  m.dragOver
+  g.dragOver
 ],
 [
   l,
-  m.autoPointerEvents
+  g.autoPointerEvents
 ]
   ]);
   return (0, i.jsx)('div', {
 ref: o,
-className: a()(m.folderEndWrapper),
+className: a()(g.folderEndWrapper),
 'aria-hidden': !0,
 children: (0, i.jsx)('div', {
-  className: m.folderTarget,
+  className: g.folderTarget,
   children: (0, i.jsx)('div', {
     ref: e => {
       u.current = e, s(e);
     },
     'aria-label': 'At end of '.concat(t),
-    className: a()(m.target)
+    className: a()(g.target)
   })
 })
   });
@@ -193,7 +193,7 @@ below: r = !1,
 onDragOverChanged: a
   } = e, s = !l && null == n.parentId;
   return (0, i.jsxs)('div', {
-className: m.wrapper,
+className: g.wrapper,
 'aria-hidden': !0,
 children: [
   (0, i.jsx)(I, {

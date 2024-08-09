@@ -17,8 +17,8 @@ var l = n(120356),
   p = n(357352),
   _ = n(652515),
   f = n(550951),
-  m = n(886176),
-  g = n(605236),
+  g = n(886176),
+  m = n(605236),
   C = n(703656),
   I = n(984933),
   E = n(430824),
@@ -43,7 +43,7 @@ className: r()(L.previewChannelRow, {
   [L.phantomPreview]: A
 }),
 innerClassName: L.previewChannelRowContent,
-renderIcon: e => (0, i.jsx)(m.Z, {
+renderIcon: e => (0, i.jsx)(g.Z, {
   width: 20,
   height: 20,
   className: r()([
@@ -69,7 +69,7 @@ trailing: (0, i.jsxs)('div', {
     n && (0, i.jsx)(c.Clickable, {
       className: L.closeButton,
       onClick: e => {
-        if (e.stopPropagation(), (0, g.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW), N.default.track(S.rMx.GUILD_SHOP_PREVIEW_CLICK, {
+        if (e.stopPropagation(), (0, m.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW), N.default.track(S.rMx.GUILD_SHOP_PREVIEW_CLICK, {
             ...(0, h.hH)(t),
             action_taken: Z.mz.DISMISS_CHANNEL_ROW
           }), !u || !v) {
@@ -101,7 +101,7 @@ selected: l,
 handleClick: a
   }) : (0, i.jsx)(x.m, {
 id: 'shop-'.concat(t.id),
-renderIcon: e => (0, i.jsx)(m.Z, {
+renderIcon: e => (0, i.jsx)(g.Z, {
   width: 20,
   height: 20,
   className: e

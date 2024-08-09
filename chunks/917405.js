@@ -21,13 +21,13 @@ let _ = {
 [h.QKv.CONNECTING]: p.rtcConnectionStatusConnecting,
 [h.QKv.ERROR]: p.rtcConnectionStatusError
   },
-  m = {
+  g = {
 [h.IE4.FINE]: p.rtcConnectionQualityFine,
 [h.IE4.AVERAGE]: p.rtcConnectionQualityAverage,
 [h.IE4.BAD]: p.rtcConnectionQualityBad,
 [h.IE4.UNKNOWN]: null
   };
-class g extends l.PureComponent {
+class m extends l.PureComponent {
   renderPopoutTarget(e) {
 return (0, i.jsx)(s.Popout, {
   renderPopout: this.renderPopout,
@@ -80,7 +80,7 @@ return r === h.hes.RTC_CONNECTED && (e = (0, i.jsx)(s.Tooltip, {
 })), (0, i.jsxs)('div', {
   children: [
     (0, i.jsxs)('div', {
-      className: a()(p.rtcConnectionStatus, m[t], o),
+      className: a()(p.rtcConnectionStatus, g[t], o),
       children: [
         e,
         (0, i.jsx)('div', {
@@ -135,4 +135,4 @@ return (0, i.jsx)(e, {
 });
   }
 }
-t.Z = g;
+t.Z = m;
