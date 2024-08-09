@@ -19,6 +19,8 @@ e.exports = {
   imagePosition: 'imagePosition_ae1fa2',
   imageContainer: 'imageContainer_ae1fa2',
   richImageContainer: 'richImageContainer_ae1fa2',
+  imageAspectRatioDefault: 'imageAspectRatioDefault_ae1fa2',
+  imageAspectRatioCrunchyroll: 'imageAspectRatioCrunchyroll_ae1fa2',
   contentImage: 'contentImage_ae1fa2',
   hangStatusIconBackground: 'hangStatusIconBackground_ae1fa2',
   hangStatusIcon: 'hangStatusIcon_ae1fa2',

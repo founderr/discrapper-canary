@@ -33943,8 +33943,7 @@ h3.improved_f017d0:after {
     display: flex;
     justify-content: center;
     min-width: 60px;
-    height: -moz-max-content;
-    height: max-content
+    max-height: 100px
 }
 
 .imageContainer_ae1fa2 {
@@ -33964,6 +33963,14 @@ h3.improved_f017d0:after {
     width: 28px;
     height: 28px;
     flex-shrink: 0
+}
+
+.imageAspectRatioDefault_ae1fa2 {
+    aspect-ratio: 1/1
+}
+
+.imageAspectRatioCrunchyroll_ae1fa2 {
+    aspect-ratio: 2/3
 }
 
 .contentImage_ae1fa2 {

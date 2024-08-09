@@ -1,12 +1,12 @@
 n.d(t, {
   Bp: function() {
-return d;
+return _;
   },
   WQ: function() {
-return c;
+return d;
   },
   ZP: function() {
-return _;
+return E;
   }
 });
 var r = n(735250);
@@ -17,22 +17,30 @@ var i = n(120356),
   o = n(43205),
   l = n(689938),
   u = n(692184);
-let c = 60,
-  d = 24;
+let c = {
+default: u.imageAspectRatioDefault,
+crunchyroll: u.imageAspectRatioCrunchyroll
+  },
+  d = 60,
+  _ = 24;
 
-function _(e) {
+function E(e) {
   let {
 image: t,
 richImage: n,
-onClick: i
-  } = e;
+onClick: i,
+aspectRatio: E = 'default'
+  } = e, f = c[E];
   return (0, r.jsxs)('div', {
-className: u.imagePosition,
+className: a()(u.imagePosition, f),
+style: {
+  aspectRatio: E
+},
 children: [
   (0, r.jsx)(s.Tooltip, {
     text: t.text,
     children: e => {
-      var n, d;
+      var n, c;
       return (0, r.jsx)(s.Clickable, {
         ...e,
         className: a()(u.imageContainer, {
@@ -41,8 +49,8 @@ children: [
         onClick: i,
         children: (0, r.jsx)(o.f, {
           src: t.src,
-          alt: null !== (d = null !== (n = t.alt) && void 0 !== n ? n : t.text) && void 0 !== d ? d : l.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
-          size: c,
+          alt: null !== (c = null !== (n = t.alt) && void 0 !== n ? n : t.text) && void 0 !== c ? c : l.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
+          size: d,
           className: u.contentImage,
           constrain: 'width'
         })
@@ -59,7 +67,7 @@ children: [
         children: (0, r.jsx)(o.f, {
           src: n.src,
           alt: null !== (t = n.alt) && void 0 !== t ? t : n.text,
-          size: d,
+          size: _,
           className: u.contentImage,
           constrain: 'width'
         })
