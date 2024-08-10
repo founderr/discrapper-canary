@@ -62,7 +62,7 @@ avatarSrc: F,
 eventHandlers: V
   } = (0, m.Z)({
 user: t,
-guildId: a,
+guildId: null != n ? n.guildId : a,
 size: G,
 animateOnHover: R
   }), H = (0, r.jsx)(v, {
