@@ -1,8 +1,11 @@
 n.d(t, {
-  Z: function() {
+  ZP: function() {
+return I;
+  },
+  fO: function() {
 return E;
   },
-  s: function() {
+  sF: function() {
 return _;
   }
 });
@@ -97,6 +100,15 @@ children: e => {
 }
 
 function E(e) {
+  let {
+className: t
+  } = e;
+  return (0, i.jsx)('div', {
+className: s()(d.separator, t)
+  });
+}
+
+function I(e) {
   let {
 children: t,
 ...n

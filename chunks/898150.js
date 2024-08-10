@@ -1,70 +1,79 @@
-a.r(s), a.d(s, {
+E.r(s), E.d(s, {
   MESSAGE_REMINDER_DURATION_ITEMS: function() {
-return R;
+return l;
   },
-  MessageReminderCreateMenu: function() {
-return S;
+  MessageReminderEditMenu: function() {
+return r;
   }
 });
-var n = a(735250);
-a(470079);
-var E = a(913527),
-  t = a.n(E),
-  M = a(481060),
-  i = a(239091),
-  l = a(70956),
-  r = a(962796),
-  _ = a(689938);
-let R = [{
-duration: 30 * l.Z.Millis.MINUTE,
-getLabel: () => _.Z.Messages.MESSAGE_REMINDERS_IN_THIRTY_MIN
+var n = E(735250);
+E(470079);
+var M = E(913527),
+  a = E.n(M),
+  t = E(481060),
+  _ = E(239091),
+  R = E(70956),
+  S = E(962796),
+  i = E(689938);
+let l = [{
+duration: 30 * R.Z.Millis.MINUTE,
+getLabel: e => e ? i.Z.Messages.MESSAGE_REMINDERS_FOR_THIRTY_MIN : i.Z.Messages.MESSAGE_REMINDERS_IN_THIRTY_MIN
   },
   {
-duration: l.Z.Millis.HOUR,
-getLabel: () => _.Z.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
+duration: R.Z.Millis.HOUR,
+getLabel: e => e ? i.Z.Messages.MESSAGE_REMINDERS_FOR_ONE_HOUR : i.Z.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
   },
   {
-duration: 2 * l.Z.Millis.HOUR,
-getLabel: () => _.Z.Messages.MESSAGE_REMINDERS_IN_TWO_HOURS
+duration: 2 * R.Z.Millis.HOUR,
+getLabel: e => e ? i.Z.Messages.MESSAGE_REMINDERS_FOR_TWO_HOURS : i.Z.Messages.MESSAGE_REMINDERS_IN_TWO_HOURS
   },
   {
-duration: 4 * l.Z.Millis.HOUR,
-getLabel: () => _.Z.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
+duration: 4 * R.Z.Millis.HOUR,
+getLabel: e => e ? i.Z.Messages.MESSAGE_REMINDERS_FOR_FOUR_HOURS : i.Z.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
   }
 ];
 
-function S(e) {
-  var s;
+function r(e) {
   let {
-message: a
-  } = e;
-  let E = (s = e => (0, r.HG)({
-channelId: a.channel_id,
-messageId: a.id,
-dueAt: t()().add(e, 'millisecond').toDate()
-  }), R.map(e => {
+message: s,
+label: E,
+isSnooze: M = !1
+  } = e, R = function(e) {
 let {
-  duration: a,
-  getLabel: E
+  onSelectDuration: s,
+  isSnooze: E
 } = e;
-return (0, n.jsx)(M.MenuItem, {
-  id: 'create-reminder-'.concat(a),
-  label: E(),
-  action: () => s(a)
-}, a);
-  }));
-  return (0, n.jsx)(M.Menu, {
+return l.map(e => {
+  let {
+    duration: M,
+    getLabel: a
+  } = e;
+  return (0, n.jsx)(t.MenuItem, {
+    id: 'create-reminder-'.concat(M),
+    label: a(E),
+    action: () => s(M)
+  }, M);
+});
+  }({
+onSelectDuration: e => (0, S.HG)({
+  channelId: s.channel_id,
+  messageId: s.id,
+  dueAt: a()().add(e, 'millisecond').toDate()
+}),
+isSnooze: M
+  });
+  return (0, n.jsx)(t.Menu, {
 navId: 'message-reminder-create',
-onClose: i.Zy,
-'aria-label': _.Z.Messages.MESSAGE_REMINDERS_CREATE,
+onClose: _.Zy,
+'aria-label': i.Z.Messages.MESSAGE_REMINDERS_CREATE,
 onSelect: () => null,
-children: (0, n.jsxs)(M.MenuGroup, {
-  label: _.Z.Messages.MESSAGE_REMINDERS_CREATE,
+children: (0, n.jsxs)(t.MenuGroup, {
+  label: E,
   children: [
-    E,
-    (0, n.jsx)(M.MenuItem, {
+    R,
+    (0, n.jsx)(t.MenuItem, {
       id: 'create-reminder-custom',
-      label: _.Z.Messages.MESSAGE_REMINDERS_CUSTOM_DUE,
+      label: i.Z.Messages.MESSAGE_REMINDERS_CUSTOM_DUE,
       action: () => null
     }, 'custom')
   ]
