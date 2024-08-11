@@ -28,7 +28,7 @@ var s = n(735250),
   I = n(215023),
   v = n(474936),
   S = n(689938),
-  L = n(995184);
+  L = n(291256);
 let T = (0, C.IC)(96),
   N = {
 [o.T.DISXCORE]: {
@@ -103,7 +103,7 @@ let T = (0, C.IC)(96),
   left: () => n(960088),
   right: () => n(402313),
   leftOverflow: () => n(757631),
-  rightOverflow: () => n(991329),
+  rightOverflow: () => n(17142),
   leftLogo: () => n(237457),
   rightLogo: () => n(958609)
 }

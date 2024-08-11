@@ -25,7 +25,7 @@ var i = n(735250),
   p = n(228168),
   T = n(231338),
   g = n(689938),
-  N = n(520067);
+  N = n(88952);
 let j = a.AvatarSizes.SIZE_120,
   C = I.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 

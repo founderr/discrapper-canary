@@ -38,7 +38,7 @@ var i = n(735250),
   w = n(356659),
   B = n(921944),
   H = n(689938),
-  G = n(72704);
+  G = n(135449);
 t.Z = a.memo(function(e) {
   var t, s;
   let V, {
@@ -99,7 +99,7 @@ eg = (0, r.e7)([A.Z], () => A.Z.hasCurrentUserSentMessageSinceAppStart());
     default: e
   } = await Promise.all([
     n.e('2668'),
-    n.e('93932')
+    n.e('18963')
   ]).then(n.bind(n, 542055));
   return t => (0, i.jsx)(e, {
     ...t,

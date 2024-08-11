@@ -14,7 +14,7 @@ var n, t, l = o(735250),
   b = o(956664),
   m = o(185923),
   N = o(689938),
-  j = o(28070),
+  j = o(643094),
   O = o(84717);
 (t = n || (n = {})).TAB_ID_FILE_UPLOAD = 'tab-id-role-icon-file-upload', t.TAB_ID_EMOJI = 'tab-id-role-icon-emoji';
 

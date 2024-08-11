@@ -13,7 +13,7 @@ var i, s, o = n(735250),
   h = n(41776),
   m = n(981631),
   p = n(689938),
-  g = n(67121);
+  g = n(358758);
 (s = i || (i = {}))[s.CHAT = 0] = 'CHAT', s[s.REACTIONS = 1] = 'REACTIONS';
 t.Z = e => {
   let {

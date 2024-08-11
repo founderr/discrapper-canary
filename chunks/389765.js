@@ -1,4 +1,1 @@
-e.exports = {
-  info: 'info_e86508',
-  infoSpacing: 'infoSpacing_e86508'
-};
+e.exports = '/assets/a7bf1157100b9d5fe838.svg';

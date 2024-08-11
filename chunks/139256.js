@@ -39,7 +39,7 @@ var i, a, s = n(735250),
   S = n(65145),
   A = n(981631),
   R = n(689938),
-  x = n(357298);
+  x = n(2482);
 
 function O(e) {
   let {
@@ -163,7 +163,7 @@ answerElementType: 0
   }));
   return (0, s.jsx)(_, {
 className: l,
-children: t.map((e, t) => (0, s.jsx)(b, {
+children: t.map((e, t) => (0, s.jsx)(D, {
   className: o()(x.__invalid_answer, u),
   answer: e,
   isFirstAnswer: 0 === t,
@@ -175,7 +175,7 @@ children: t.map((e, t) => (0, s.jsx)(b, {
   });
 }
 
-function b(e) {
+function D(e) {
   let {
 className: t,
 answer: n,
@@ -224,7 +224,7 @@ case 2:
   }
 }
 
-function D(e) {
+function b(e) {
   var t;
   let {
 attachment: n,
@@ -282,7 +282,7 @@ let e = l.attachments.find(e => {
   return e.id === (null === (n = t.attachmentIds) || void 0 === n ? void 0 : n[0]);
 });
 if (null != e)
-  return U(n, (0, s.jsx)(D, {
+  return U(n, (0, s.jsx)(b, {
     className: i,
     attachment: e
   }));

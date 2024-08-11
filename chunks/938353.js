@@ -38,8 +38,8 @@ var i, a = n(735250),
   L = n(346610),
   Z = n(868643),
   P = n(394779),
-  b = n(294734),
-  D = n(426275),
+  D = n(294734),
+  b = n(426275),
   j = n(947849),
   U = n(715903),
   y = n(71619),
@@ -92,8 +92,8 @@ var i, a = n(735250),
   eL = n(530472),
   eZ = n(29909),
   eP = n(782658),
-  eb = n(219797),
-  eD = n(453687),
+  eD = n(219797),
+  eb = n(453687),
   ej = n(128854),
   eU = n(101578),
   ey = n(524444),
@@ -105,8 +105,8 @@ var i, a = n(735250),
   eV = n(981631),
   eH = n(474936),
   eY = n(689938),
-  eW = n(848509),
-  eK = n(738779),
+  eW = n(58755),
+  eK = n(736514),
   ez = n(680674);
 
 function eQ(e, t, n) {
@@ -399,12 +399,12 @@ let N = l.map(t => {
         onContextMenu: null != d ? e => {
           e.stopPropagation(), e.preventDefault(), d(e, n);
         } : void 0,
-        renderAudioComponent: T ? eb.jY : eb.q7,
-        renderImageComponent: eb.dS,
-        renderVideoComponent: eb.vZ,
-        renderPlaintextFilePreview: eb.d4,
-        renderGenericFileComponent: eb.ZK,
-        renderMosaicItemFooter: eb.L9,
+        renderAudioComponent: T ? eD.jY : eD.q7,
+        renderImageComponent: eD.dS,
+        renderVideoComponent: eD.vZ,
+        renderPlaintextFilePreview: eD.d4,
+        renderGenericFileComponent: eD.ZK,
+        renderMosaicItemFooter: eD.L9,
         onPlay: (e, n, a) => {
           eT.default.track(eV.rMx.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
             guild_id: i.guild_id,
@@ -425,7 +425,7 @@ let N = l.map(t => {
       });
     return s in m && (a.onClick = m[s]), a;
   }),
-  f = r ? (0, a.jsx)(D.Z, {
+  f = r ? (0, a.jsx)(b.Z, {
     className: eW.hideIfMessageNotFocused,
     messageId: e.id,
     channelId: i.id,
@@ -674,7 +674,7 @@ if (null != t)
   });
   }
   renderForwardedMessage(e) {
-return 0 === e.messageSnapshots.length ? null : (0, a.jsx)(b.Z, {
+return 0 === e.messageSnapshots.length ? null : (0, a.jsx)(D.Z, {
   message: e
 });
   }
@@ -689,7 +689,7 @@ let {
   showRemoveAttachmentModal: r
 } = this.state, o = this.renderCodedLinks(t), c = this.renderGiftCodes(t), u = this.renderReferralTrial(t), d = this.renderAttachments(t), _ = this.renderCtaButton(), E = this.renderSocialProofingFileSizeNitroUpsell(t), I = this.renderEmbeds(t), m = this.renderActivityInvite(t), T = this.renderReactions(t), h = this.renderPublishBump(t), N = this.renderEphemeralAccessories(t), f = this.renderStickersAccessories(t), C = this.renderThreadAccessories(t), p = this.renderComponentAccessories(t), g = this.renderThreadRoleMentionWarning(t), S = this.renderEmbeddedApplicationInstanceEmbed(t), A = this.renderInteractionPremiumUpsell(t), R = this.renderMediaPostEmbeds(t), x = this.renderSafetyPolicyNotice(t), O = this.renderSafetySystemNotification(t), M = this.renderVoiceChannelInvite(t, n), v = this.renderMediaObscureNotice(t), L = this.renderPoll(t, i), Z = this.renderForwardedMessage(t);
 return null == o && null == d && null == I && null == m && null == T && null == c && null == u && null == h && null == N && null == f && null == C && null == p && null == S && null == g && null == R && null == x && null != A && null == L && null == M && null == Z ? null : (0, a.jsxs)('div', {
-  id: (0, eD.bX)(t),
+  id: (0, eb.bX)(t),
   className: l()(e, eK.container),
   children: [
     Z,
@@ -776,7 +776,7 @@ super(...e), eQ(this, 'state', {
     className: eK.embedContainer,
     children: [
       m,
-      (0, a.jsx)(D.Z, {
+      (0, a.jsx)(b.Z, {
         className: eW.hideIfMessageNotFocused,
         messageId: i,
         channelId: s,
@@ -845,7 +845,7 @@ isGuest: T,
 communicationDisabled: p,
 isActiveChannelOrUnarchivableThread: g,
 isAutomodQuarantined: C
-  }), P = (0, Y.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), b = (0, Q.Z)(null == n ? void 0 : n.id), D = (0, J.Z)(i), j = (0, x.V)(n.id, i.author.id), B = (0, O.r)(i.id), {
+  }), P = (0, Y.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), D = (0, Q.Z)(null == n ? void 0 : n.id), b = (0, J.Z)(i), j = (0, x.V)(n.id, i.author.id), B = (0, O.r)(i.id), {
 hasInlineForwardButton: k
   } = (0, L.yk)({
 location: 'MessageAccessories'
@@ -865,10 +865,10 @@ inlineEmbedMedia: u,
 renderEmbeds: d,
 gifAutoPlay: E,
 canRenderReferralEmbed: n.isDM(),
-poll: D,
+poll: b,
 showListsAndHeaders: P,
 showMaskedLinks: P,
-shouldHideMediaOptions: b,
+shouldHideMediaOptions: D,
 shouldRedactExplicitContent: j,
 shouldRenderCtaButton: B,
 hasInlineForwardButton: G

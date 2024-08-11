@@ -27,14 +27,14 @@ var i = n(735250),
   M = n(981631),
   v = n(474936),
   L = n(689938),
-  Z = n(379157),
-  P = n(830645);
-let b = (e, t) => t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({
+  Z = n(450304),
+  P = n(78731);
+let D = (e, t) => t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({
 stickerPackName: e.name
   }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({
 stickerPackName: e.name
   }),
-  D = e => {
+  b = e => {
 let {
   sticker: t,
   stickerPack: n
@@ -95,7 +95,7 @@ let {
   A.Z.getStickerPack(n.pack_id),
   !A.Z.hasLoadedStickerPacks,
   A.Z.isPremiumPack(n.pack_id)
-], [n]), E = D({
+], [n]), E = b({
   sticker: n,
   stickerPack: c
 });
@@ -121,7 +121,7 @@ return (a.useEffect(() => {
     }),
     (0, i.jsx)(o.Text, {
       variant: 'text-sm/normal',
-      children: b(c, _)
+      children: D(c, _)
     }),
     (0, i.jsx)('ul', {
       className: Z.stickersList,
@@ -157,8 +157,8 @@ let t, {
   } = e,
   [S, A] = a.useState(null),
   [R, O] = a.useState(!1),
-  b = C.default.getCurrentUser(),
-  D = g.ZP.canUseCustomStickersEverywhere(b),
+  D = C.default.getCurrentUser(),
+  b = g.ZP.canUseCustomStickersEverywhere(D),
   y = (0, l.e7)([f.Z], () => f.Z.getGuild(n.guild_id)),
   B = null != y,
   [k, G] = a.useState(!1),
@@ -185,12 +185,12 @@ let Y = n.guild_id === s.getGuildId(),
   W = null != S,
   K = !1,
   z = 'Custom Sticker Popout';
-D ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (Y ? t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : W ? (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
+b ? t = B ? Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (Y ? t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : W ? (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, K = !0, z = 'Custom Sticker Popout (Upsell)') : (t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
   openPremiumSettings: () => {
     j(s), _();
   }
 }), z = 'Custom Sticker Popout (Soft Upsell)');
-let Q = !K && !B && W && D;
+let Q = !K && !B && W && b;
 return (a.useEffect(() => {
   h();
 }, [

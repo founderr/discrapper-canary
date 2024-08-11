@@ -16,7 +16,7 @@ var i, a, s = n(735250),
   T = n(543550),
   S = n(895068),
   f = n(921944),
-  C = n(540736);
+  C = n(69878);
 (a = i || (i = {})).TOP_PICKS = 'top_picks', a.OTHER_GUILDS = 'other_guilds';
 let N = {
 mass: 1,
