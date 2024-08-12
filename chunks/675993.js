@@ -10,8 +10,8 @@ var i = t(735250),
   r = t(581051),
   s = t(353381),
   c = t(442837),
-  u = t(993365),
-  d = t(481060),
+  d = t(993365),
+  u = t(481060),
   m = t(115130),
   p = t(147865),
   _ = t(427996),
@@ -33,10 +33,10 @@ application: t,
 videoUrl: l,
 imageCoverUrl: r,
 sectionName: s
-  } = e, u = a.useMemo(() => {
+  } = e, d = a.useMemo(() => {
 var e;
 return null !== (e = (0, A.jD)(t)) && void 0 !== e ? e : '';
-  }, [t]), d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled()), p = null != l || null != r, {
+  }, [t]), u = (0, c.e7)([m.Z], () => m.Z.getIsEnabled()), p = null != l || null != r, {
 isSlideReady: f
   } = (0, E.hH)(), [h, N] = a.useState(!1);
   return a.useEffect(() => {
@@ -73,17 +73,17 @@ children: (0, i.jsxs)('div', {
         (0, i.jsx)(R, {
           application: t
         }),
-        u.length > 0 ? (0, i.jsx)(b, {
-          description: u
+        d.length > 0 ? (0, i.jsx)(T, {
+          description: d
         }) : null,
-        d ? (0, i.jsx)('div', {
+        u ? (0, i.jsx)('div', {
           className: I.developerShelfControlsContainer,
           children: (0, i.jsx)(_.W, {
             hideSearch: !0,
             className: I.developerShelfControls
           })
         }) : null,
-        (0, i.jsx)(T, {
+        (0, i.jsx)(b, {
           channel: n,
           application: t,
           sectionName: s
@@ -104,7 +104,7 @@ application: t
 className: I.titleContainer,
 children: (0, i.jsx)('div', {
   className: I.titleInnerContainer,
-  children: (0, i.jsx)(d.Heading, {
+  children: (0, i.jsx)(u.Heading, {
     variant: 'heading-xl/extrabold',
     children: a
   })
@@ -129,7 +129,7 @@ children: [
   }),
   t.map((e, n) => (0, i.jsx)('div', {
     className: I.tagContainer,
-    children: (0, i.jsx)(u.x, {
+    children: (0, i.jsx)(d.x, {
       variant: 'text-sm/semibold',
       color: 'interactive-normal',
       children: e
@@ -152,11 +152,11 @@ return null;
   return (0, i.jsxs)('div', {
 className: I.tagContainer,
 children: [
-  (0, i.jsx)(d.GroupIcon, {
+  (0, i.jsx)(u.GroupIcon, {
     size: 'xs',
-    color: d.tokens.colors.INTERACTIVE_NORMAL
+    color: u.tokens.colors.INTERACTIVE_NORMAL
   }),
-  (0, i.jsx)(u.x, {
+  (0, i.jsx)(d.x, {
     variant: 'text-sm/semibold',
     color: 'interactive-normal',
     children: (0, p.lY)(a)
@@ -165,7 +165,7 @@ children: [
   });
 }
 
-function T(e) {
+function b(e) {
   let {
 channel: n,
 application: t,
@@ -183,12 +183,12 @@ children: null != t ? (0, i.jsx)(v.Z, {
   application: t,
   sectionName: a,
   commandName: l,
-  buttonSize: d.ButtonSizes.MAX
+  buttonSize: u.ButtonSizes.MAX
 }) : null
   }) : null;
 }
 
-function b(e) {
+function T(e) {
   let {
 description: n
   } = e, [t, l] = a.useState(!0);
@@ -246,7 +246,7 @@ children: [
     ref: C,
     className: I.overflowHidden,
     onTransitionEnd: A,
-    children: (0, i.jsx)(u.x, {
+    children: (0, i.jsx)(d.x, {
       ref: c,
       className: g.markup,
       variant: 'text-sm/medium',
@@ -257,21 +257,21 @@ children: [
       children: o
     })
   }),
-  null != p && p > 1 ? (0, i.jsxs)(d.Clickable, {
+  null != p && p > 1 ? (0, i.jsxs)(u.Clickable, {
     className: I.expandableDescriptionClickable,
     onClick: () => l(e => !e),
     children: [
-      (0, i.jsx)(u.x, {
+      (0, i.jsx)(d.x, {
         variant: 'text-sm/semibold',
         color: 'text-brand',
         children: E ? x.Z.Messages.APP_LAUNCHER_SHOW_LESS : x.Z.Messages.APP_LAUNCHER_SHOW_MORE
       }),
       E ? (0, i.jsx)(s.u, {
         size: 'sm',
-        color: d.tokens.colors.TEXT_BRAND
+        color: u.tokens.colors.TEXT_BRAND
       }) : (0, i.jsx)(r.C, {
         size: 'sm',
-        color: d.tokens.colors.TEXT_BRAND
+        color: u.tokens.colors.TEXT_BRAND
       })
     ]
   }) : null

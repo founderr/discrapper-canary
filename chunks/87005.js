@@ -10,9 +10,9 @@ var i = t(470079),
   r = t(911969),
   s = t(10718),
   c = t(148958),
-  u = t(881998);
+  d = t(881998);
 t(445392), t(783097);
-var d = t(689079);
+var u = t(689079);
 let m = {
 commandTypes: [
   r.yU.CHAT,
@@ -21,7 +21,7 @@ commandTypes: [
   },
   p = {
 placeholderCount: 0,
-limit: d.tn,
+limit: u.tn,
 includeFrecency: !0
   };
 
@@ -36,11 +36,11 @@ frecentApps: function(e) {
   i.useEffect(() => {
     o.Z.fetch();
   }, []);
-  let n = (0, l.Wu)([u.Z], () => {
+  let n = (0, l.Wu)([d.Z], () => {
       var e, n;
-      return null !== (n = null === (e = u.Z.getApps()) || void 0 === e ? void 0 : e.filter(e => e.scopes.includes(a.x.APPLICATIONS_COMMANDS))) && void 0 !== n ? n : [];
+      return null !== (n = null === (e = d.Z.getApps()) || void 0 === e ? void 0 : e.filter(e => e.scopes.includes(a.x.APPLICATIONS_COMMANDS))) && void 0 !== n ? n : [];
     }),
-    t = e.filter(e => e.id !== d.bi.FRECENCY && e.id !== d.bi.BUILT_IN);
+    t = e.filter(e => e.id !== u.bi.FRECENCY && e.id !== u.bi.BUILT_IN);
   return (0, c.h)(t, n);
 }(n)
   };

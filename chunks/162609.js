@@ -16,7 +16,7 @@ optionsEnabled: !1
   label: 'Enable the Contextual Image Recommendations',
   config: {
     imageRecsEnabled: !0,
-    optionsEnabled: !1
+    optionsEnabled: !0
   }
 },
 {

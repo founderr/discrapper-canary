@@ -13,8 +13,8 @@ var i = t(470079),
   r = t(288385),
   s = t(442837),
   c = t(911969),
-  u = t(127255),
-  d = t(654455),
+  d = t(127255),
+  u = t(654455),
   m = t(213459),
   p = t(807169),
   _ = t(104793),
@@ -66,15 +66,15 @@ let {
 return i.useMemo(() => {
   var e, n, t, i, o;
   let c = null !== (t = null === (e = r.result) || void 0 === e ? void 0 : e.sections) && void 0 !== t ? t : {},
-    u = null !== (i = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {},
-    d = [
+    d = null !== (i = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {},
+    u = [
       ...Object.keys(c),
-      ...Object.keys(u).filter(e => !(e in c))
+      ...Object.keys(d).filter(e => !(e in c))
     ];
-  l && d.push(N.bi.BUILT_IN);
+  l && u.push(N.bi.BUILT_IN);
   let p = [],
     _ = {};
-  for (let e of d) {
+  for (let e of u) {
     let n = (0, m.If)(a, e),
       t = null !== (o = n.sectionCommands) && void 0 !== o ? o : [];
     p.push(...t), t.forEach(e => {
@@ -105,16 +105,16 @@ let {
   onlyWithCommands: t,
   includeBuiltIn: i,
   allowFetch: a = !0
-} = e, l = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions, o = (0, m.em)(n, l, a), r = (0, m.PL)(l, a), s = [], u = new Set();
+} = e, l = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions, o = (0, m.em)(n, l, a), r = (0, m.PL)(l, a), s = [], d = new Set();
 if (null != o.result)
   for (let e of Object.values(o.result.sections)) {
     let n = e.descriptor.application;
-    null != n && (Object.keys(e.commands).length > 0 || !t) && (s.push(n), u.add(n.id));
+    null != n && (Object.keys(e.commands).length > 0 || !t) && (s.push(n), d.add(n.id));
   }
 if (null != r.result)
   for (let e of Object.values(r.result.sections)) {
     let n = e.descriptor.application;
-    null != n && !u.has(n.id) && (Object.keys(e.commands).length > 0 || !t) && s.push(n);
+    null != n && !d.has(n.id) && (Object.keys(e.commands).length > 0 || !t) && s.push(n);
   }
 return i && s.push(E.Wx), {
   apps: s,
@@ -124,7 +124,7 @@ return i && s.push(E.Wx), {
 channel: n,
 onlyWithCommands: !0,
 includeBuiltIn: !0
-  }), R = (0, u.Z)({
+  }), R = (0, d.Z)({
 guildId: n.getGuildId()
   }), S = i.useMemo(() => {
 var e;
@@ -147,11 +147,11 @@ return (0, A.N)(f, {
           descriptor: n,
           isGuildInstalled: s,
           isUserInstalled: c
-        } = (0, m.If)(e, i.applicationId), u = null != a.guild_id ? _.ML(null == n ? void 0 : n.permissions, a.guild_id, l, o, r) : null, d = null != a.guild_id ? _.ZJ(null == n ? void 0 : n.permissions, a, a.guild_id) : null;
+        } = (0, m.If)(e, i.applicationId), d = null != a.guild_id ? _.ML(null == n ? void 0 : n.permissions, a.guild_id, l, o, r) : null, u = null != a.guild_id ? _.ZJ(null == n ? void 0 : n.permissions, a, a.guild_id) : null;
         t[i.applicationId] = {
           descriptor: n,
-          applicationAllowedForUser: u,
-          applicationAllowedForChannel: d,
+          applicationAllowedForUser: d,
+          applicationAllowedForChannel: u,
           isGuildInstalled: s,
           isUserInstalled: c
         };
@@ -159,15 +159,15 @@ return (0, A.N)(f, {
       let {
         descriptor: s,
         applicationAllowedForChannel: c,
-        applicationAllowedForUser: u,
-        isGuildInstalled: d,
+        applicationAllowedForUser: d,
+        isGuildInstalled: u,
         isUserInstalled: p
       } = t[i.applicationId];
       return _.Ft(i, n, {
-        applicationAllowedForUser: u,
+        applicationAllowedForUser: d,
         applicationAllowedForChannel: c,
         commandBotId: null == s ? void 0 : s.botId,
-        isGuildInstalled: d,
+        isGuildInstalled: u,
         isUserInstalled: p
       }) === _.mF.ALLOWED;
     };
@@ -227,8 +227,8 @@ return (0, A.N)(f, {
   sortComparers: [
     function(e) {
       return (n, t) => {
-        let i = d.ZP.getScoreWithoutLoadingLatest(e, n);
-        return d.ZP.getScoreWithoutLoadingLatest(e, t) - i;
+        let i = u.ZP.getScoreWithoutLoadingLatest(e, n);
+        return u.ZP.getScoreWithoutLoadingLatest(e, t) - i;
       };
     }({
       channel: n
@@ -242,7 +242,7 @@ f,
 a,
 n,
 t
-  ]), T = i.useMemo(() => {
+  ]), b = i.useMemo(() => {
 if (0 === S.length)
   return [];
 let e = new Map(L.map(e => [
@@ -265,7 +265,7 @@ return l().compact(S.map(n => {
 L,
 S,
 h
-  ]), b = i.useMemo(() => {
+  ]), T = i.useMemo(() => {
 var e;
 if (!s && !C)
   return [];
@@ -314,14 +314,14 @@ return (0, A.N)(i, {
         descriptor: r,
         sectionCommands: s,
         isGuildInstalled: c,
-        isUserInstalled: u
-      } = (0, m.If)(e, t.id), d = null != i.guild_id ? _.ML(null == r ? void 0 : r.permissions, i.guild_id, a, l, o) : null, p = null != i.guild_id ? _.ZJ(null == r ? void 0 : r.permissions, i, i.guild_id) : null;
+        isUserInstalled: d
+      } = (0, m.If)(e, t.id), u = null != i.guild_id ? _.ML(null == r ? void 0 : r.permissions, i.guild_id, a, l, o) : null, p = null != i.guild_id ? _.ZJ(null == r ? void 0 : r.permissions, i, i.guild_id) : null;
       return null == s || !(s.length > 0) || s.some(e => _.Ft(e, n, {
-        applicationAllowedForUser: d,
+        applicationAllowedForUser: u,
         applicationAllowedForChannel: p,
         commandBotId: null == r ? void 0 : r.botId,
         isGuildInstalled: c,
-        isUserInstalled: u
+        isUserInstalled: d
       }) === _.mF.ALLOWED);
     };
   }(n)],
@@ -360,11 +360,11 @@ n,
 t,
 L,
 R
-  ]), M = T.length > 0, j = b.length > 0;
+  ]), M = b.length > 0, j = T.length > 0;
   return {
-commandResults: T,
+commandResults: b,
 hasCommandResults: M,
-applicationResults: b,
+applicationResults: T,
 hasApplicationResults: j,
 isEmptyState: !M && !j,
 loading: P && r
@@ -379,8 +379,8 @@ fetches: a = !0,
 pageLimit: l = 1 / 0
   } = e;
   t.startsWith(''.concat(v.GI)) && (t = t.substring(1));
-  let [c, u] = i.useState(1), d = i.useRef(c);
-  d.current = c;
+  let [c, d] = i.useState(1), u = i.useRef(c);
+  u.current = c;
   let {
 fetchState: m,
 totalPages: p
@@ -430,7 +430,7 @@ t,
 c
   ]), h = i.useCallback(() => {
 let e = _.length;
-m === f.M.FETCHED && e === d.current && e > 0 && e < p && e < l && _[e - 1].length > 0 && (d.current++, u(e => e + 1));
+m === f.M.FETCHED && e === u.current && e > 0 && e < p && e < l && _[e - 1].length > 0 && (u.current++, d(e => e + 1));
   }, [
 m,
 l,
@@ -468,7 +468,7 @@ A,
 c,
 a
   ]), i.useEffect(() => {
-u(1);
+d(1);
   }, [
 n.guild_id,
 t

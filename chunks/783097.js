@@ -31,8 +31,8 @@ var i = t(668781),
   r = t(957730),
   s = t(973616),
   c = t(768581),
-  u = t(630388),
-  d = t(981631),
+  d = t(630388),
+  u = t(981631),
   m = t(689079),
   p = t(689938);
 let _ = {
@@ -56,7 +56,7 @@ function A(e) {
   let {
 application: t
   } = e;
-  return C(t) && (0, u.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, d.udG.EMBEDDED);
+  return C(t) && (0, d.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED);
 }
 
 function E(e) {
@@ -71,8 +71,8 @@ command: n,
 optionValues: t,
 context: s,
 commandTargetId: c,
-maxSizeCallback: u,
-sectionName: d
+maxSizeCallback: d,
+sectionName: u
   } = e, {
 channel: m
   } = s, _ = async () => {
@@ -82,9 +82,9 @@ try {
     optionValues: t,
     context: s,
     commandTargetId: c,
-    maxSizeCallback: u,
+    maxSizeCallback: d,
     commandOrigin: l.bB.APPLICATION_LAUNCHER,
-    sectionName: d
+    sectionName: u
   });
   if (n.inputType === l.iw.BUILT_IN_TEXT && null != i) {
     var e;

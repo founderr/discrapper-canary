@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return u;
+return d;
   }
 });
 var i = t(735250),
@@ -11,27 +11,27 @@ var i = t(735250),
   s = t(689938),
   c = t(106477);
 
-function u(e) {
+function d(e) {
   let {
 application: n,
 src: t,
 className: l,
-size: u,
-botIconFirst: d,
+size: d,
+botIconFirst: u,
 fallbackAvatar: m,
 rendersPlaceholder: p = !1
   } = e, _ = a.useMemo(() => null != n ? r.ZP.getApplicationIconURL({
 id: n.id,
 icon: n.icon,
 bot: n.bot,
-size: u,
-botIconFirst: d,
+size: d,
+botIconFirst: u,
 fallbackAvatar: m
   }) : t, [
 n,
 t,
-u,
 d,
+u,
 m
   ]);
   if (null == _)

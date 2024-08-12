@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return d;
+return u;
   }
 });
 var i = t(735250),
@@ -10,9 +10,9 @@ var i = t(735250),
   r = t(481060),
   s = t(695676),
   c = t(689938),
-  u = t(581565);
+  d = t(581565);
 
-function d(e) {
+function u(e) {
   let {
 className: n
   } = e, {
@@ -22,7 +22,7 @@ t();
   }, [t]);
   return (0, i.jsx)(r.Clickable, {
 onClick: l,
-className: o()(u.clickable, n),
+className: o()(d.clickable, n),
 'aria-label': c.Z.Messages.BACK_ACCESSIBILITY_HINT,
 children: (0, i.jsx)(r.ArrowLargeLeftIcon, {
   size: 'sm',

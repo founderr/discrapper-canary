@@ -10,8 +10,8 @@ var i = t(735250),
   r = t(410030),
   s = t(782568),
   c = t(63063),
-  u = t(827498),
-  d = t(888617),
+  d = t(827498),
+  u = t(888617),
   m = t(981631),
   p = t(689938),
   _ = t(720123),
@@ -26,8 +26,8 @@ t = a.useCallback(() => {
 }, []),
 {
   trackSectionImpressionRef: h
-} = (0, d.Z)({
-  sectionName: u.L3.NEW_TO_APPS,
+} = (0, u.Z)({
+  sectionName: d.L3.NEW_TO_APPS,
   numItems: 1,
   numVisibleItems: 1
 });

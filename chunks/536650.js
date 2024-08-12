@@ -10,8 +10,8 @@ var i = t(735250),
   r = t(481060),
   s = t(410030),
   c = t(220082),
-  u = t(564334),
-  d = t(302221),
+  d = t(564334),
+  u = t(302221),
   m = t(772606),
   p = t(280283);
 
@@ -34,10 +34,10 @@ scrollerRef: _
   } = e, f = (0, o.ap)((0, s.ZP)()), h = a.useRef(null), A = a.useRef(null), E = a.useRef(null), N = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(), v = (0, c.ZP)('number' == typeof t ? '' : t, null != N ? N : ''), x = a.useMemo(() => {
 var e, n;
 let t = (0, l.compact)([
-  u.Z.parseHexString(v),
-  u.Z.parseHexString(f ? '#000000' : '#ffffff')
+  d.Z.parseHexString(v),
+  d.Z.parseHexString(f ? '#000000' : '#ffffff')
 ]);
-return null !== (n = null === (e = (0, d.k8)({
+return null !== (n = null === (e = (0, u.k8)({
   colors: t,
   ratio: 5,
   saturationFactor: 0.6
@@ -47,20 +47,20 @@ v,
 f
   ]), I = C(h), g = C(A), P = a.useCallback(() => {
 var e, n, t, i, a, o, r, s, c;
-let u = _.current,
-  d = h.current,
+let d = _.current,
+  u = h.current,
   m = E.current,
   p = parseInt(null !== (e = null == I ? void 0 : I.height) && void 0 !== e ? e : ''),
   C = parseInt(null !== (n = null == g ? void 0 : g.height) && void 0 !== n ? n : '');
-if (null != u && null != d && null != m && !isNaN(p) && !isNaN(C)) {
+if (null != d && null != u && null != m && !isNaN(p) && !isNaN(C)) {
   ;
-  let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0,
-    n = 0 !== u.scrollHeight ? u.scrollHeight : C + 20,
-    _ = 0 !== u.clientHeight ? u.clientHeight : C + 20,
+  let e = null !== (t = d.scrollTop) && void 0 !== t ? t : 0,
+    n = 0 !== d.scrollHeight ? d.scrollHeight : C + 20,
+    _ = 0 !== d.clientHeight ? d.clientHeight : C + 20,
     h = C - p,
     A = (0, l.clamp)(n - _, h + 1, C + 20);
   let E = (i = e, (a = h) === (o = A) ? 1 : (0, l.clamp)((i - a) / (o - a), 0, 1));
-  d.style.filter = 'brightness('.concat(1 + ((f ? 1.4 : 0.6) - (r = 1)) * E, ')'), d.style.backgroundColor = 'color-mix(in oklab,'.concat(v, ' ').concat((1 - E) * 100, '%, ').concat(x, ')'), m.style.opacity = ''.concat(0 + (1 - (s = 0)) * E), m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * E, 'px)');
+  u.style.filter = 'brightness('.concat(1 + ((f ? 1.4 : 0.6) - (r = 1)) * E, ')'), u.style.backgroundColor = 'color-mix(in oklab,'.concat(v, ' ').concat((1 - E) * 100, '%, ').concat(x, ')'), m.style.opacity = ''.concat(0 + (1 - (s = 0)) * E), m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * E, 'px)');
 }
   }, [
 x,

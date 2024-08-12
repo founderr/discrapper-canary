@@ -10,8 +10,8 @@ var i = t(735250),
   r = t(481060),
   s = t(895924),
   c = t(424602),
-  u = t(827498),
-  d = t(98880),
+  d = t(827498),
+  u = t(98880),
   m = t(772606),
   p = t(689938),
   _ = t(235435);
@@ -30,7 +30,7 @@ clickOnHomeActivityOpensAppDetail: A
 location: 'AppLauncherApplicationListViewScreen'
   }, {
 autoTrackExposure: !1
-  }), E = a.useMemo(() => t === u._b.TEXT ? d.kA : d.qR, [t]);
+  }), E = a.useMemo(() => t === d._b.TEXT ? u.kA : u.qR, [t]);
   return (0, i.jsxs)('section', {
 className: _.container,
 'aria-label': p.Z.Messages.APP_LAUNCHER_SECTION_VIEW_MORE_ARIA_LABEL.format({
@@ -53,8 +53,8 @@ children: [
   (0, i.jsx)(r.Scroller, {
     children: (0, i.jsx)('div', {
       className: o()({
-        [_.appGrid]: C !== d.U4.ROW,
-        [_.rows]: C === d.U4.ROW
+        [_.appGrid]: C !== u.U4.ROW,
+        [_.rows]: C === u.U4.ROW
       }),
       children: f.map((e, t) => {
         let {

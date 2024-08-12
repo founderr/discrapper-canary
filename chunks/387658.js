@@ -10,8 +10,8 @@ var i = t(735250),
   r = t(140835),
   s = t(246521),
   c = t(442837),
-  u = t(481060),
-  d = t(911969),
+  d = t(481060),
+  u = t(911969),
   m = t(607070),
   p = t(555573),
   _ = t(213459),
@@ -29,8 +29,8 @@ var i = t(735250),
   L = t(845936),
   R = t(176412),
   S = t(870205),
-  T = t(981631),
-  b = t(689079),
+  b = t(981631),
+  T = t(689079),
   M = t(689938),
   j = t(627542),
   y = t(763963);
@@ -44,7 +44,7 @@ channel: l,
 command: o,
 section: s,
 sectionName: c
-  } = e, d = a.useCallback(() => {
+  } = e, u = a.useCallback(() => {
 let e = N.Z.entrypoint();
 E.y(v.ti.COMMAND), (0, h.Mo)({
   command: o,
@@ -58,7 +58,7 @@ E.y(v.ti.COMMAND), (0, h.Mo)({
   sectionName: c,
   source: e,
   commandOrigin: f.bB.APPLICATION_LAUNCHER
-}), A.S.dispatch(T.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+}), A.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, {
   channelId: l.id
 });
   }, [
@@ -69,12 +69,12 @@ c
   ]), m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, _ = a.useMemo(() => (0, R.ae)(o.displayDescription, void 0), [o.displayDescription]), C = a.useMemo(() => (0, i.jsxs)('div', {
 className: y.commandTextContainer,
 children: [
-  (0, i.jsx)(u.Text, {
+  (0, i.jsx)(d.Text, {
     variant: 'text-sm/semibold',
     color: 'header-primary',
     children: o.displayName
   }),
-  (0, i.jsx)(u.Text, {
+  (0, i.jsx)(d.Text, {
     variant: 'text-xs/medium',
     color: 'text-muted',
     lineClamp: 1,
@@ -85,11 +85,11 @@ children: [
 o.displayName,
 _
   ]);
-  return (0, i.jsxs)(u.Clickable, {
+  return (0, i.jsxs)(d.Clickable, {
 className: y.command,
-onClick: d,
+onClick: u,
 children: [
-  (0, i.jsx)(u.FocusBlock, {
+  (0, i.jsx)(d.FocusBlock, {
     className: y.commandFocusBlock,
     children: C
   }),
@@ -123,7 +123,7 @@ l = a.useMemo(() => (0, i.jsxs)('div', {
     (0, i.jsx)('div', {
       className: j.textPlaceholder,
       style: n,
-      children: (0, i.jsx)(u.Text, {
+      children: (0, i.jsx)(d.Text, {
         className: j.hidden,
         variant: 'text-sm/semibold',
         color: 'header-primary',
@@ -134,7 +134,7 @@ l = a.useMemo(() => (0, i.jsxs)('div', {
     (0, i.jsx)('div', {
       className: j.textPlaceholder,
       style: t,
-      children: (0, i.jsx)(u.Text, {
+      children: (0, i.jsx)(d.Text, {
         className: j.hidden,
         variant: 'text-xs/medium',
         color: 'text-muted',
@@ -160,7 +160,7 @@ function B(e) {
 channel: n,
 command: t,
 sectionName: l
-  } = e, o = (0, _.PL)(!0, !0), r = (0, _.LD)(n.guild_id, !0), c = (0, x.D)(n), [d, m] = a.useState(!1), p = a.useCallback(async e => {
+  } = e, o = (0, _.PL)(!0, !0), r = (0, _.LD)(n.guild_id, !0), c = (0, x.D)(n), [u, m] = a.useState(!1), p = a.useCallback(async e => {
 e.stopPropagation();
 let n = N.Z.lastShownEntrypoint();
 try {
@@ -187,19 +187,19 @@ r,
 l,
 c
   ]);
-  return (0, i.jsxs)(u.Button, {
+  return (0, i.jsxs)(d.Button, {
 type: 'submit',
 onClick: p,
-disabled: d,
-size: u.ButtonSizes.ICON,
-color: u.Button.Colors.PRIMARY,
+disabled: u,
+size: d.ButtonSizes.ICON,
+color: d.Button.Colors.PRIMARY,
 className: y.commandSentCTAButton,
 innerClassName: y.commandSentCTAButtonInner,
 'aria-label': M.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
   commandName: t.name
 }),
 children: [
-  (0, i.jsx)(u.Text, {
+  (0, i.jsx)(d.Text, {
     variant: 'text-sm/medium',
     color: 'currentColor',
     children: M.Z.Messages.SEND
@@ -226,7 +226,7 @@ children: [
   (0, i.jsxs)('div', {
     className: y.commandListHeader,
     children: [
-      (0, i.jsx)(u.Heading, {
+      (0, i.jsx)(d.Heading, {
         variant: 'heading-sm/semibold',
         children: l
       }),
@@ -257,18 +257,18 @@ installOnDemand: r
   } = e, {
 filterSection: s,
 commandsByActiveSection: c,
-sectionDescriptors: u,
+sectionDescriptors: d,
 loading: m
   } = C.wi(t, {
-commandTypes: [d.yU.CHAT]
+commandTypes: [u.yU.CHAT]
   }, {
 placeholderCount: 0,
-limit: b.tn,
+limit: T.tn,
 includeFrecency: !0,
 allowApplicationState: r,
 installOnDemand: r,
 applicationId: l.id
-  }), p = null !== (n = u.find(e => e.id === l.id)) && void 0 !== n ? n : null, {
+  }), p = null !== (n = d.find(e => e.id === l.id)) && void 0 !== n ? n : null, {
 sortOrder: _,
 setSortOrder: f,
 commands: h,

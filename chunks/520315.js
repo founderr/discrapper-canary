@@ -15,7 +15,7 @@ durationMs: o = 100,
 minHeightOverride: r,
 maxHeightOverride: s,
 maxAnimationHeight: c
-  } = e, u = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), [d, m] = i.useState(null), p = i.useCallback(() => {}, []), _ = i.useRef(), C = i.useRef(), f = i.useRef(n), h = i.useRef(o);
+  } = e, d = (0, a.e7)([l.Z], () => l.Z.useReducedMotion), [u, m] = i.useState(null), p = i.useCallback(() => {}, []), _ = i.useRef(), C = i.useRef(), f = i.useRef(n), h = i.useRef(o);
   h.current = o;
   let A = i.useRef(r);
   A.current = r;
@@ -28,11 +28,11 @@ maxAnimationHeight: c
 void 0 !== n && (_.current = void 0, C.current = void 0, x(!1));
   }, [n]), i.useLayoutEffect(() => {
 var e, i, a;
-if (null == d)
+if (null == u)
   return;
 let {
   height: l
-} = d.getBoundingClientRect();
+} = u.getBoundingClientRect();
 !t && (null == _.current || l < _.current) && (_.current = l), t && (null == C.current || l > C.current) && (C.current = l);
 let o = null !== (e = A.current) && void 0 !== e ? e : _.current,
   r = null !== (i = E.current) && void 0 !== i ? i : C.current,
@@ -40,28 +40,28 @@ let o = null !== (e = A.current) && void 0 !== e ? e : _.current,
 if (f.current = n, null == o || null == r || s)
   return;
 let c = Math.min(null !== (a = N.current) && void 0 !== a ? a : r, r),
-  u = t ? o : c,
+  d = t ? o : c,
   m = t ? c : o;
-if (!(u !== m))
+if (!(d !== m))
   return;
-x(!0), d.style.height = ''.concat(u, 'px'), d.style.transition = '';
+x(!0), u.style.height = ''.concat(d, 'px'), u.style.transition = '';
 let p = null;
 return p = requestAnimationFrame(() => {
-  p = null, d.style.height = ''.concat(m, 'px'), d.style.transition = 'height '.concat(h.current, 'ms ease-in-out');
+  p = null, u.style.height = ''.concat(m, 'px'), u.style.transition = 'height '.concat(h.current, 'ms ease-in-out');
 }), () => null != p ? cancelAnimationFrame(p) : void 0;
   }, [
 n,
-d,
+u,
 t
   ]), i.useLayoutEffect(() => {
-if (null != d && !v)
-  d.style.height = '', d.style.transition = '';
+if (null != u && !v)
+  u.style.height = '', u.style.transition = '';
   }, [
 n,
-d,
+u,
 v
   ]), {
-ref: u ? p : m,
+ref: d ? p : m,
 isTransitioning: v,
 onTransitionEnd: I
   };

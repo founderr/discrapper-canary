@@ -6,8 +6,8 @@ var i = t(735250),
   r = t(367907),
   s = t(906732),
   c = t(541099),
-  u = t(695676),
-  d = t(173790),
+  d = t(695676),
+  u = t(173790),
   m = t(361917),
   p = t(684256),
   _ = t(314734),
@@ -25,8 +25,8 @@ function E(e) {
   let {
 children: n
   } = e, [t, l] = a.useState([{
-type: u.gc.HOME
-  }]), [o, r] = a.useState({}), s = t[t.length - 1], [c, d] = a.useState(!1), m = a.useCallback(e => {
+type: d.gc.HOME
+  }]), [o, r] = a.useState({}), s = t[t.length - 1], [c, u] = a.useState(!1), m = a.useCallback(e => {
 l(n => [
   ...n,
   e
@@ -44,7 +44,7 @@ return null !== (n = t.findLast(n => n.type === e)) && void 0 !== n ? n : o[e];
 t,
 o
   ]);
-  return (0, i.jsx)(u.uX.Provider, {
+  return (0, i.jsx)(d.uX.Provider, {
 value: {
   history: t,
   discard: o,
@@ -53,7 +53,7 @@ value: {
   goBack: p,
   getMostRecentHistoryItemByType: _,
   isSlideReady: c,
-  setSlideReady: d
+  setSlideReady: u
 },
 children: n
   });
@@ -91,7 +91,7 @@ return a.useEffect(() => {
 currentView: C,
 getMostRecentHistoryItemByType: h,
 setSlideReady: E
-  } = (0, u.hH)();
+  } = (0, d.hH)();
   a.useEffect(() => {
 E(!1);
   }, [
@@ -103,15 +103,15 @@ E(!0);
   }, [E]);
   if (null == C)
 return null;
-  let v = h(u.gc.LIST),
-x = h(u.gc.APPLICATION);
+  let v = h(d.gc.LIST),
+x = h(d.gc.APPLICATION);
   return (0, i.jsxs)(l.Slides, {
 activeSlide: C.type,
 width: _.Gy,
 onSlideReady: N,
 children: [
   (0, i.jsx)(l.Slide, {
-    id: u.gc.HOME,
+    id: d.gc.HOME,
     children: (0, i.jsx)('div', {
       className: f.slideContent,
       style: A,
@@ -126,7 +126,7 @@ children: [
     })
   }),
   (0, i.jsx)(l.Slide, {
-    id: u.gc.LIST,
+    id: d.gc.LIST,
     children: (0, i.jsx)('div', {
       className: f.slideContent,
       style: A,
@@ -141,11 +141,11 @@ children: [
     })
   }),
   (0, i.jsx)(l.Slide, {
-    id: u.gc.APPLICATION,
+    id: d.gc.APPLICATION,
     children: (0, i.jsx)('div', {
       className: f.slideContent,
       style: A,
-      children: null != x && (0, i.jsx)(d.Z, {
+      children: null != x && (0, i.jsx)(u.Z, {
         channel: n,
         application: x.application,
         sectionName: x.sectionName,
@@ -161,7 +161,7 @@ n.Z = a.memo(a.forwardRef(function(e, n) {
 channel: t,
 entrypoint: l
   } = e, {
-analyticsLocations: u
+analyticsLocations: d
   } = (0, s.ZP)(o.Z.APP_LAUNCHER);
   return a.useEffect(() => {
 (0, r.yw)(C.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
@@ -184,7 +184,7 @@ style: h,
 children: (0, i.jsx)('div', {
   className: f.contentWrapper,
   children: (0, i.jsx)(s.Gt, {
-    value: u,
+    value: d,
     children: (0, i.jsx)(E, {
       children: (0, i.jsx)(N, {
         channel: t,

@@ -10,8 +10,8 @@ var i = t(735250),
   r = t(176412),
   s = t(753972),
   c = t(532309),
-  u = t(875164),
-  d = t(413097);
+  d = t(875164),
+  u = t(413097);
 
 function m(e) {
   var n;
@@ -26,7 +26,7 @@ iconURL: f,
 name: h,
 description: A
   } = a.useMemo(() => (0, o.sl)(m, {
-fakeAppIconURL: d
+fakeAppIconURL: u
   }), [m]), E = a.useMemo(() => {
 var e;
 let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : A;
@@ -43,20 +43,20 @@ query: _,
 searchResultsPosition: C
   });
   return (0, i.jsx)(l.Clickable, {
-className: u.clickable,
+className: d.clickable,
 innerRef: e => N.current = e,
 onClick: p,
 children: (0, i.jsxs)(l.FocusBlock, {
-  className: u.focusBlock,
+  className: d.focusBlock,
   children: [
     (0, i.jsx)(s.Z, {
       src: f,
-      className: u.icon,
+      className: d.icon,
       'aria-hidden': !0,
       rendersPlaceholder: !0
     }),
     (0, i.jsxs)('div', {
-      className: u.cmdDetails,
+      className: d.cmdDetails,
       children: [
         (0, i.jsx)(l.Heading, {
           variant: 'heading-md/semibold',
@@ -73,13 +73,13 @@ children: (0, i.jsxs)(l.FocusBlock, {
       ]
     }),
     null != t ? (0, i.jsx)(l.Text, {
-      className: u.cmdAppName,
+      className: d.cmdAppName,
       variant: 'text-sm/normal',
       color: 'text-secondary',
       children: h
     }) : null,
     (0, i.jsx)('div', {
-      className: u.underline
+      className: d.underline
     })
   ]
 })

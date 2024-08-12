@@ -10,8 +10,8 @@ var i = t(735250),
   r = t(595519),
   s = t(374065),
   c = t(542094),
-  u = t(895924),
-  d = t(496675),
+  d = t(895924),
+  u = t(496675),
   m = t(499254),
   p = t(827498),
   _ = t(890280),
@@ -41,13 +41,13 @@ onSubmissionComplete: I
 applicationId: t.id,
 channelId: n.id
   }), {
-onActivityItemSelected: T,
-buttonColor: b,
+onActivityItemSelected: b,
+buttonColor: T,
 buttonText: M
   } = (0, C.P7)({
 channel: n,
 application: t,
-location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW,
 sectionName: E,
 commandName: N,
 autoDismissOnClick: S === c.JS.LEAVE,
@@ -57,7 +57,7 @@ submitting: null != P ? P : g
 let {
   channel: n,
   activityAction: t
-} = e, i = (0, l.e7)([d.Z], () => d.Z.can(f.Pl.USE_EMBEDDED_ACTIVITIES, n)), a = (0, s.KF)(n.id), o = !1;
+} = e, i = (0, l.e7)([u.Z], () => u.Z.can(f.Pl.USE_EMBEDDED_ACTIVITIES, n)), a = (0, s.KF)(n.id), o = !1;
 switch (t) {
   case c.JS.LEAVE:
     o = !1;
@@ -86,11 +86,11 @@ children: e => {
     ...a,
     type: 'submit',
     size: v,
-    color: b,
+    color: T,
     disabled: j,
     submitting: L,
     onClick: () => {
-      R(!0), T(), null == n || n();
+      R(!0), b(), null == n || n();
     },
     'aria-label': h.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
       buttonText: M,

@@ -16,8 +16,8 @@ var i = t(470079),
   r = t(481060),
   s = t(2052),
   c = t(542094),
-  u = t(513202),
-  d = t(367907),
+  d = t(513202),
+  u = t(367907),
   m = t(691424),
   p = t(428595),
   _ = t(364458),
@@ -70,18 +70,18 @@ autoDismissOnClick: o = !0,
 launchingComponentId: m,
 submitting: p = !1
   } = e, _ = (0, s.O)(), N = (0, c.Qv)({
-applicationId: t.id,
-channelId: n.id
+channelId: n.id,
+applicationId: t.id
   }), v = (0, c.w1)({
 applicationId: t.id,
-embeddedActivitiesManager: u.Z,
+embeddedActivitiesManager: d.Z,
 channelId: n.id,
 locationObject: _.location,
 onActivityItemSelectedProp: e => {
   let {
     applicationId: n
   } = e, t = f.Z.entrypoint();
-  o && C.y(h.ti.ACTIVITY), (0, d.yw)(A.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+  o && C.y(h.ti.ACTIVITY), (0, u.yw)(A.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
     location: i,
     application_id: n,
     section_name: a,
@@ -102,7 +102,7 @@ buttonText: I
 function g(e, n) {
   let t = f.Z.entrypoint(),
 l = i.useMemo(() => (0, a.debounce)((e, n) => {
-  (0, d.yw)(A.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+  (0, u.yw)(A.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
     type: e,
     source: n
   });

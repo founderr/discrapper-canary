@@ -19,8 +19,8 @@ return null !== (i = null === (e = t.find(e => e.section.id === n)) || void 0 ==
 t,
 n
   ]), {
-popularSortedCommands: u,
-canSort: d
+popularSortedCommands: d,
+canSort: u
   } = function(e) {
 let {
   alphabeticalSortedCommands: n
@@ -68,13 +68,13 @@ a.i6(n, {
   dontRefetchMs: l.Z.Millis.DAY
 });
   }, [n]), i.useLayoutEffect(() => {
-if (!!d)
+if (!!u)
   s(o.bS.POPULAR);
-  }, [d]);
+  }, [u]);
   let m = c;
   switch (r) {
 case o.bS.POPULAR:
-  m = u;
+  m = d;
   break;
 case o.bS.ALPHABETICAL:
   m = c;
@@ -83,6 +83,6 @@ case o.bS.ALPHABETICAL:
 sortOrder: r,
 setSortOrder: s,
 commands: m,
-canSort: d
+canSort: u
   };
 }

@@ -25,17 +25,17 @@ c = i.useMemo(() => null == n || 0 === n.length ? e : e.map(e => {
   e,
   n
 ]),
-u = i.useMemo(() => null == n ? void 0 : n.filter(n => !e.some(e => e.id === n.application.id)), [
+d = i.useMemo(() => null == n ? void 0 : n.filter(n => !e.some(e => e.id === n.application.id)), [
   e,
   n
 ]),
-d = i.useMemo(() => {
+u = i.useMemo(() => {
   var e;
-  null == u || u.forEach(e => {
+  null == d || d.forEach(e => {
     let n = r.default.extractTimestamp(e.id);
     null == t.getEntry(e.application.id) && t.track(e.application.id, n);
   }), t.compute();
-  let n = null !== (e = null == u ? void 0 : u.map(e => (0, l.X0)(e.application, !0))) && void 0 !== e ? e : [],
+  let n = null !== (e = null == d ? void 0 : d.map(e => (0, l.X0)(e.application, !0))) && void 0 !== e ? e : [],
     i = [...c];
   return i.push(...n), i.sort((e, n) => {
     var i, a;
@@ -45,7 +45,7 @@ d = i.useMemo(() => {
 }, [
   c,
   t,
-  u
+  d
 ]);
   return i.useMemo(() => {
 var e, i;
@@ -59,13 +59,13 @@ null == n || n.forEach(e => {
   (null == l || o > l) && (a = e, l = o);
 });
 let o = null !== (i = null == a ? void 0 : null === (e = a.application) || void 0 === e ? void 0 : e.id) && void 0 !== i ? i : '',
-  s = d.filter(e => e.id === o);
+  s = u.filter(e => e.id === o);
 return [
   ...s,
-  ...d.filter(e => e.id !== o)
+  ...u.filter(e => e.id !== o)
 ];
   }, [
-d,
+u,
 c,
 t,
 n

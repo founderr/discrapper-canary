@@ -14,15 +14,15 @@ applicationId: n,
 channelId: t,
 launchingComponentId: r,
 onSubmissionComplete: s
-  } = e, c = (0, a.e7)([o.ZP], () => o.ZP.getLaunchState(n, t)), u = null != c && c.isLaunching && c.componentId === r, d = (0, l.Z)(u);
+  } = e, c = (0, a.e7)([o.ZP], () => o.ZP.getLaunchState(n, t)), d = null != c && c.isLaunching && c.componentId === r, u = (0, l.Z)(d);
   return i.useEffect(() => {
-!u && d && (null == s || s());
+!d && u && (null == s || s());
   }, [
-u,
 d,
+u,
 s
   ]), {
-submitting: u,
-wasSubmitting: d
+submitting: d,
+wasSubmitting: u
   };
 }

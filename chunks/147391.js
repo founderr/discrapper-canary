@@ -29,13 +29,13 @@ section_name: E,
 source: C
   });
   let M = l.Z.getApplication(u),
-I = i.Y.USER_INSTALL,
-x = null == M ? void 0 : null === (s = M.integrationTypesConfig) || void 0 === s ? void 0 : null === (m = s[I]) || void 0 === m ? void 0 : null === (r = m.oauth2InstallParams) || void 0 === r ? void 0 : r.scopes;
+x = i.Y.USER_INSTALL,
+A = null == M ? void 0 : null === (s = M.integrationTypesConfig) || void 0 === s ? void 0 : null === (m = s[x]) || void 0 === m ? void 0 : null === (r = m.oauth2InstallParams) || void 0 === r ? void 0 : r.scopes;
   return new Promise(e => {
 (0, o.openOAuth2Modal)({
   clientId: u,
-  integrationType: I,
-  scopes: x,
+  integrationType: x,
+  scopes: A,
   callback: t => {
     let {
       location: n

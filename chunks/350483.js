@@ -38,7 +38,7 @@ n.Z = o().throttle(function(e, n) {
 } = n,
 O = null !== (l = a.Z.getState().guildId) && void 0 !== l ? l : I.ME,
 h = a.Z.getState().channelId,
-D = function(e, n) {
+g = function(e, n) {
   let t = [
       I.ME,
       ...d.ZP.getFlattenedGuildIds()
@@ -46,7 +46,7 @@ D = function(e, n) {
     i = t.indexOf(e);
   return n > 0 ? t.slice(i).concat(t.slice(0, i), e) : (t.splice(i, 0, e), t.slice(i + 1).concat(t.slice(0, i + 1)));
 }(O, e),
-g = e > 0 ? 0 : D.length - 1,
+D = e > 0 ? 0 : g.length - 1,
 f = S(O, N),
 R = f.indexOf(h) + e;
   for (; null != O && '' !== O;) {
@@ -73,7 +73,7 @@ if (E = f[R], A(O))
       });
     R += e, E = f[R];
   }
-if (g += e, null == (O = D[g]) || '' === O)
+if (D += e, null == (O = g[D]) || '' === O)
   break;
 f = S(O, N), R = e < 0 ? f.length - 1 : 0;
   }

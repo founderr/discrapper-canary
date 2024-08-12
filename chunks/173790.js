@@ -10,8 +10,8 @@ var i = t(735250),
   r = t(481060),
   s = t(361213),
   c = t(778569),
-  u = t(213459),
-  d = t(835473),
+  d = t(213459),
+  u = t(835473),
   m = t(541099),
   p = t(827498),
   _ = t(783097),
@@ -31,17 +31,17 @@ channel: t,
 application: s,
 sectionName: c,
 installOnDemand: I
-  } = e, P = (0, l.e7)([m.Z], () => m.Z.entrypoint()), L = null !== (n = (0, d.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, R = (0, _.ye)({
+  } = e, P = (0, l.e7)([m.Z], () => m.Z.entrypoint()), L = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s, R = (0, _.ye)({
 application: L
   }) ? g : A.Z, S = a.useRef(null), {
-iconURL: T,
-name: b
+iconURL: b,
+name: T
   } = a.useMemo(() => (0, _.sl)(L, {
 fakeAppIconURL: x,
 size: 84
   }), [L]);
   return a.useEffect(() => {
-I ? u.ZP.queryInstallOnDemandApp(L.id, t.id) : u.ZP.maybeQueryForInstallLessApps(L.id, t.id);
+I ? d.ZP.queryInstallOnDemandApp(L.id, t.id) : d.ZP.maybeQueryForInstallLessApps(L.id, t.id);
   }, [
 L.id,
 t.id,
@@ -52,16 +52,16 @@ fade: !0,
 ref: S,
 role: 'region',
 'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({
-  applicationName: b
+  applicationName: T
 }),
 children: [
   (0, i.jsx)(h.Z, {
-    name: b,
-    iconURL: T,
+    name: T,
+    iconURL: b,
     scrollerRef: S
   }),
-  null != T && (0, i.jsx)(C.Z, {
-    src: T,
+  null != b && (0, i.jsx)(C.Z, {
+    src: b,
     className: v.appIcon
   }),
   (0, i.jsx)(o.Z, {
