@@ -91,9 +91,12 @@ n
         },
         {
           section: 'top_picks',
-          items: e,
+          items: e.slice(0, t),
           sectionHeight: v,
           itemHeight: 400,
+          props: {
+            className: A.glassBackgroundTop
+          },
           header: N.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
           subtitle: N.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
@@ -102,6 +105,9 @@ n
           items: e.slice(t),
           sectionHeight: v,
           itemHeight: 400,
+          props: {
+            className: A.glassBackground
+          },
           header: N.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
         }
       ];

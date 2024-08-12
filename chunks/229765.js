@@ -1,8 +1,11 @@
 n.d(t, {
-  X: function() {
+  Cg: function() {
+return h;
+  },
+  XB: function() {
 return u;
   },
-  j: function() {
+  jc: function() {
 return _;
   }
 }), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120);
@@ -69,4 +72,34 @@ type: 'FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS',
 criteriaHash: s,
 searchResult: u
   });
+}
+
+function h(e) {
+  let t = l.Z.getSearchResult(e);
+  if ('loaded' === t.status)
+return t;
+  let n = a().v3(JSON.stringify(e));
+  return s.tn.post({
+url: c.ANM.DISCOVERY_RECOMMENDATIONS,
+body: {
+  game_application_ids: e.games,
+  traits: e.traits,
+  playstyle: e.playstyle
+}
+  }).then(e => {
+let t = e.body.guilds.map(o.Gh),
+  i = {
+    status: 'loaded',
+    loadedAt: Date.now(),
+    items: t
+  };
+return r.Z.dispatch({
+  type: 'FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS',
+  criteriaHash: n,
+  searchResult: i
+}), i;
+  }).catch(e => ({
+status: 'error',
+error: e
+  }));
 }

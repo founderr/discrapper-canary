@@ -31,33 +31,46 @@ a = m(),
 s = (0, c.An)({
   location: 'clan_discovery'
 }),
+h = (0, c.iN)('clan_discovery'),
 {
-  defaultGameId: h
+  defaultGameId: I
 } = (0, c.nk)('clan_discovery'),
-I = null != s ? s : h,
-g = function() {
-  let e = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery());
+g = null != s ? s : I,
+p = function() {
+  let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+    t = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery());
   return i.useEffect(() => {
-    !e && (0, d.X)();
-  }, [e]), e;
-}(),
-p = (0, l.e7)([u.Z], () => u.Z.isLoading());
+    e && !t && (0, d.XB)();
+  }, [
+    t,
+    e
+  ]), t;
+}(!h),
+T = (0, l.e7)([u.Z], () => u.Z.isLoading());
   return i.useEffect(() => {
-!(n.length > 0) && (I === E.nJ ? (e(_.hz.VALORANT), t([I])) : I === E.xn ? (e(_.hz.GENSHIN), t([I])) : null == I && (e(_.hz.NONE), t([])));
+!(n.length > 0) && !h && (g === E.nJ ? (e(_.hz.VALORANT), t([g])) : g === E.xn ? (e(_.hz.GENSHIN), t([g])) : null == g && (e(_.hz.NONE), t([])));
   }, [
 e,
 t,
-I,
-n
+g,
+n,
+h
   ]), i.useEffect(() => {
-g && (0, d.j)(a);
+if (h)
+  (0, d.Cg)(a);
+else {
+  if (!p)
+    return;
+  (0, d.jc)(a);
+}
   }, [
 a,
-g
+p,
+h
   ]), i.useEffect(() => {
 o.Z.getDetectableGames();
   }, []), {
-loading: p
+loading: T
   };
 }
 
@@ -67,34 +80,35 @@ t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 n = (0, _.GN)(e => e.savedGuildIds, r.Z),
 a = m(),
 s = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery()),
-o = (0, l.e7)([u.Z], () => u.Z.getSearchResult(a), [a]),
-c = (0, l.e7)([u.Z], () => t && null != n ? u.Z.getSavedGuildsResult(n) : [], [
+o = (0, c.iN)('clan_discovery'),
+d = (0, l.e7)([u.Z], () => u.Z.getSearchResult(a), [a]),
+E = (0, l.Wu)([u.Z], () => t && null != n ? u.Z.getSavedGuildsResult(n) : [], [
   t,
   n
 ]),
-d = i.useMemo(() => {
-  if ((0, h.Pw)(o)) {
-    let t = o.items;
+I = i.useMemo(() => {
+  if ((0, h.Pw)(d)) {
+    let t = d.items;
     return null != e ? t.slice(0, e) : t;
   }
   return [];
 }, [
   e,
-  o
+  d
 ]);
   return t ? {
-loaded: s,
-clans: c,
+loaded: s || o,
+clans: E,
 searchCriteria: a,
 searchResult: {
-  items: c,
+  items: E,
   loadedAt: Date.now(),
   status: 'loaded'
 }
   } : {
-loaded: s,
-clans: d,
+loaded: s || o,
+clans: I,
 searchCriteria: a,
-searchResult: o
+searchResult: d
   };
 }
