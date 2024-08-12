@@ -1,6 +1,6 @@
 n.d(t, {
   AC: function() {
-return et;
+return ee;
   },
   Cb: function() {
 return Y;
@@ -12,7 +12,7 @@ return c;
 return k;
   },
   Es: function() {
-return X;
+return Q;
   },
   Ev: function() {
 return C;
@@ -45,22 +45,22 @@ return r;
 return b;
   },
   OF: function() {
-return eo;
+return es;
   },
   P9: function() {
-return ee;
+return J;
   },
   PD: function() {
 return w;
   },
   Pc: function() {
-return en;
+return et;
   },
   S4: function() {
 return a;
   },
   Si: function() {
-return $;
+return X;
   },
   W0: function() {
 return d;
@@ -84,7 +84,7 @@ return _;
 return O;
   },
   eB: function() {
-return J;
+return $;
   },
   f9: function() {
 return W;
@@ -101,9 +101,6 @@ return M;
   l4: function() {
 return B;
   },
-  lj: function() {
-return Q;
-  },
   mI: function() {
 return P;
   },
@@ -114,13 +111,13 @@ return j;
 return y;
   },
   um: function() {
-return er;
+return en;
   },
   wP: function() {
-return es;
+return ea;
   },
   wT: function() {
-return ea;
+return ei;
   },
   xK: function() {
 return l;
@@ -153,18 +150,17 @@ let O = 160,
   K = '1011683823555199066',
   z = '1234546995360694434',
   q = '1214629548377768066',
-  Q = '1199271093882589195',
-  X = 'https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu',
-  $ = {
+  Q = 'https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu',
+  X = {
 SMALL: 64,
 LARGE: 160
   },
-  J = [
+  $ = [
 'in_development',
 'activities_team',
 'employee_release'
   ],
-  ee = [
+  J = [
 G,
 '1050941609774166066',
 j,
@@ -186,25 +182,25 @@ w,
 '1227719606223765687'
   ];
 (E = r || (r = {})).ADS = 'ADS', E.FAILED_LOAD = 'FAILED_LOAD', E.LAGGING = 'LAGGING', E.CONFUSING = 'CONFUSING', E.NOT_FUN = 'NOT_FUN', E.OTHER = 'OTHER', (f = i || (i = {}))[f.PLAY = 0] = 'PLAY', f[f.SPECTATE = 1] = 'SPECTATE', (h = a || (a = {})).DESKTOP = 'desktop', h.MOBILE = 'mobile', (p = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP', p.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP', p.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP', p.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP', (m = o || (o = {}))[m.NO_UPDATE = 0] = 'NO_UPDATE', m[m.ACTIVITY_STATE_UPDATE = 1] = 'ACTIVITY_STATE_UPDATE', m[m.ACTIVITY_STARTED = 2] = 'ACTIVITY_STARTED', m[m.ACTIVITY_ENDED = 3] = 'ACTIVITY_ENDED', m[m.USER_JOINED = 4] = 'USER_JOINED', m[m.USER_LEFT = 5] = 'USER_LEFT', m[m.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = 'ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST', (I = l || (l = {}))[I.UNLOCKED = 1] = 'UNLOCKED', I[I.PORTRAIT = 2] = 'PORTRAIT', I[I.LANDSCAPE = 3] = 'LANDSCAPE', (T = u || (u = {}))[T.DIRECTORY = 0] = 'DIRECTORY', T[T.SELECT_CHANNEL = 1] = 'SELECT_CHANNEL', T[T.DETAIL_PAGE = 2] = 'DETAIL_PAGE';
-let et = 'activity-shelf',
-  en = new Set([
+let ee = 'activity-shelf',
+  et = new Set([
 '755600276941176913',
 D,
 L,
 x
   ]),
-  er = new Set([
+  en = new Set([
 D,
 L,
 x
   ]);
 (g = c || (c = {})).DISCORD_TURNS_8 = 'DISCORD_TURNS_8', g.GDM_ACTIVITIES = 'GDM_ACTIVITIES', g.PUTT_PARTY = 'PUTT_PARTY', g.JAMSPACE_OLD = 'JAMSPACE', g.JAMSPACE = 'JAMSPACE2', g.POKER = 'POKER', g.FREE = 'FREE', (S = d || (d = {}))[S.PORTRAIT = 0] = 'PORTRAIT', S[S.LANDSCAPE = 1] = 'LANDSCAPE', (A = _ || (_ = {}))[A.FOCUSED = 0] = 'FOCUSED', A[A.PIP = 1] = 'PIP', A[A.GRID = 2] = 'GRID';
-let ei = {
+let er = {
 label_type: N.ww.NONE,
 release_phase: '',
 label_until: null
   },
-  ea = {
+  ei = {
 application_id: '',
 requires_age_gate: !1,
 legacy_responsive_aspect_ratio: !1,
@@ -212,16 +208,16 @@ default_orientation_lock_state: 1,
 tablet_default_orientation_lock_state: 1,
 supported_platforms: [N.C3.WEB],
 client_platform_config: {
-  [N.C3.WEB]: ei,
-  [N.C3.IOS]: ei,
-  [N.C3.ANDROID]: ei
+  [N.C3.WEB]: er,
+  [N.C3.IOS]: er,
+  [N.C3.ANDROID]: er
 },
 has_csp_exception: !1,
 displays_advertisements: !1
   },
-  es = [
+  ea = [
 v.d4z.GUILD_TEXT,
 v.d4z.DM,
 v.d4z.GROUP_DM
   ],
-  eo = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
+  es = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
