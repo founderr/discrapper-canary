@@ -847,7 +847,9 @@ function e_(e) {
   let t = (0, U.Z)(e.guild),
 n = (0, w.Z)(e.guild),
 i = s().uniq(n.concat(t)),
-r = (0, u.cj)([j.Z], () => j.Z.getGuild(e.guildId, i)),
+r = (0, u.cj)([j.Z], () => j.Z.getGuild(e.guildId, {
+  guildActionRows: i
+})),
 a = (0, I.Q)('GuildChannelList');
   return (0, l.jsx)(eh, {
 ...e,

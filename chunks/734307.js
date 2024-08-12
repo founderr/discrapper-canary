@@ -1,14 +1,14 @@
 t(47120);
-var i, l, E, a, r = t(392711),
+var i, l, a, E, r = t(392711),
   o = t.n(r),
-  _ = t(442837),
-  d = t(570140),
-  u = t(317381),
+  d = t(442837),
+  u = t(570140),
+  _ = t(317381),
   s = t(430198),
   c = t(924301),
   C = t(601070),
-  S = t(569471),
-  A = t(581883),
+  A = t(569471),
+  S = t(581883),
   T = t(314897),
   I = t(680089),
   L = t(592125),
@@ -26,13 +26,13 @@ let m = null,
   H = null,
   Z = new O.ZP();
 
-function p() {
+function v() {
   let e = P.Z.getChannelId(),
 n = P.Z.getVoiceChannelId();
   return m = e, H = n, Z.clear();
 }
 
-function M(e) {
+function p(e) {
   let {
 guild: {
   id: n
@@ -41,7 +41,7 @@ guild: {
   return Z.clearGuildId(n);
 }
 
-function v(e) {
+function M(e) {
   let {
 channel: {
   guild_id: n
@@ -68,14 +68,14 @@ function B() {
   return null != m && Z.nonPositionalChannelIdUpdate(m);
 }
 
-function j(e) {
+function w(e) {
   let {
 channel: n
   } = e;
   return Z.nonPositionalChannelIdUpdate(n.id);
 }
 
-function w(e) {
+function j(e) {
   let {
 id: n
   } = e;
@@ -120,15 +120,16 @@ guildScheduledEvent: n
   } = e;
   return Z.updateSubtitles(n.guild_id);
 }
-class K extends(i = _.ZP.Store) {
+class K extends(i = d.ZP.Store) {
   initialize() {
-this.waitFor(C.Z, T.default, I.Z, L.Z, D.Z, u.ZP, N.Z, s.Z, c.ZP, S.Z, U.Z, h.ZP, P.Z, R.ZP, A.Z);
+this.waitFor(C.Z, T.default, I.Z, L.Z, D.Z, _.ZP, N.Z, s.Z, c.ZP, A.Z, U.Z, h.ZP, P.Z, R.ZP, S.Z);
   }
   getGuild(e, n) {
-let t = Z.getGuild(e, n);
+var t, i;
+let l = Z.getGuild(e, null !== (t = null == n ? void 0 : n.guildActionRows) && void 0 !== t ? t : [], null !== (i = null == n ? void 0 : n.channelNoticeRows) && void 0 !== i ? i : []);
 return {
-  guildChannelsVersion: t.version,
-  guildChannels: t
+  guildChannelsVersion: l.version,
+  guildChannels: l
 };
   }
   getGuildWithoutChangingGuildActionRows(e) {
@@ -145,19 +146,19 @@ let n = Z.getGuildChannelRowsOnly(e);
 return n.getCategoryFromSection(n.recentsSectionNumber).getShownChannelIds().length;
   }
 }
-a = 'ChannelListStore', (E = 'displayName') in(l = K) ? Object.defineProperty(l, E, {
-  value: a,
+E = 'ChannelListStore', (a = 'displayName') in(l = K) ? Object.defineProperty(l, a, {
+  value: E,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[E] = a, n.Z = new K(d.Z, {
+}) : l[a] = E, n.Z = new K(u.Z, {
   APPLICATION_FETCH_FAIL: Y,
   APPLICATION_FETCH_SUCCESS: Y,
   APPLICATION_FETCH: Y,
   APPLICATIONS_FETCH_FAIL: Y,
   APPLICATIONS_FETCH_SUCCESS: Y,
   APPLICATIONS_FETCH: Y,
-  BACKGROUND_SYNC: p,
+  BACKGROUND_SYNC: v,
   BULK_ACK: function(e) {
 let {
   channels: n
@@ -170,7 +171,7 @@ return o()(n).map(e => {
 }), t;
   },
   BULK_CLEAR_RECENTS: x,
-  CACHE_LOADED_LAZY: p,
+  CACHE_LOADED_LAZY: v,
   CATEGORY_COLLAPSE_ALL: x,
   CATEGORY_COLLAPSE: y,
   CATEGORY_EXPAND_ALL: x,
@@ -183,8 +184,8 @@ let {
 } = e;
 return Z.clearGuildId(null === (n = L.Z.getChannel(t)) || void 0 === n ? void 0 : n.guild_id);
   },
-  CHANNEL_CREATE: v,
-  CHANNEL_DELETE: v,
+  CHANNEL_CREATE: M,
+  CHANNEL_DELETE: M,
   CHANNEL_LOCAL_ACK: b,
   CHANNEL_MUTE_EXPIRED: x,
   CHANNEL_RTC_UPDATE_CHAT_OPEN: b,
@@ -201,10 +202,10 @@ return o()(n).map(e => e.guild_id).uniq().forEach(e => {
 }), t;
   },
   CONNECTION_OPEN_SUPPLEMENTAL: Y,
-  CONNECTION_OPEN: p,
-  CURRENT_USER_UPDATE: p,
-  DECAY_READ_STATES: p,
-  DEV_TOOLS_DESIGN_TOGGLE_SET: p,
+  CONNECTION_OPEN: v,
+  CURRENT_USER_UPDATE: v,
+  DECAY_READ_STATES: v,
+  DEV_TOOLS_DESIGN_TOGGLE_SET: v,
   DISABLE_AUTOMATIC_ACK: b,
   DISMISS_FAVORITE_SUGGESTION: function(e) {
 let {
@@ -242,8 +243,8 @@ return Z.updateSubtitles(n);
   GAMES_DATABASE_FETCH: Y,
   GAMES_DATABASE_UPDATE: Y,
   GUILD_APPLICATIONS_FETCH_SUCCESS: Y,
-  GUILD_CREATE: M,
-  GUILD_DELETE: M,
+  GUILD_CREATE: p,
+  GUILD_DELETE: p,
   GUILD_MEMBER_UPDATE: function(e) {
 let {
   guildId: n,
@@ -261,7 +262,7 @@ return T.default.getId() === t.id && Z.clearGuildId(n);
   GUILD_SCHEDULED_EVENT_DELETE: k,
   GUILD_SCHEDULED_EVENT_UPDATE: k,
   GUILD_TOGGLE_COLLAPSE_MUTED: x,
-  GUILD_UPDATE: M,
+  GUILD_UPDATE: p,
   IMPERSONATE_STOP: x,
   IMPERSONATE_UPDATE: x,
   LOAD_CHANNELS: function(e) {
@@ -282,15 +283,15 @@ return Z.nonPositionalChannelIdUpdate(n);
   },
   MESSAGE_DELETE_BULK: b,
   MESSAGE_DELETE: b,
-  NOTIFICATION_SETTINGS_UPDATE: p,
-  OVERLAY_INITIALIZE: p,
+  NOTIFICATION_SETTINGS_UPDATE: v,
+  OVERLAY_INITIALIZE: v,
   PASSIVE_UPDATE_V2: function(e) {
 return Z.clearGuildId(e.guildId);
   },
-  RECOMPUTE_READ_STATES: p,
+  RECOMPUTE_READ_STATES: v,
   RESORT_THREADS: b,
-  SET_RECENTLY_ACTIVE_COLLAPSED: p,
-  THREAD_CREATE: j,
+  SET_RECENTLY_ACTIVE_COLLAPSED: v,
+  THREAD_CREATE: w,
   THREAD_DELETE: function(e) {
 let {
   channel: n
@@ -298,9 +299,9 @@ let {
 return Z.nonPositionalChannelUpdate(n);
   },
   THREAD_LIST_SYNC: x,
-  THREAD_MEMBER_UPDATE: w,
-  THREAD_MEMBERS_UPDATE: w,
-  THREAD_UPDATE: j,
+  THREAD_MEMBER_UPDATE: j,
+  THREAD_MEMBERS_UPDATE: j,
+  THREAD_UPDATE: w,
   TRY_ACK: b,
   UPDATE_CHANNEL_DIMENSIONS: b,
   UPDATE_CHANNEL_LIST_SUBTITLES: function(e) {
