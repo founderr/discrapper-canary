@@ -1,9 +1,13 @@
 n.d(t, {
-  j: function() {
-return i;
+  A: function() {
+return l;
   }
 });
-let r = (0, n(818083).B)({
+var r = n(442837),
+  i = n(818083),
+  a = n(592125),
+  s = n(155647);
+let o = (0, i.B)({
   kind: 'user',
   id: '2024-08_iar_privacy_and_safety_settings_upsells',
   label: 'IAR Privacy & Safety Settings Upsells',
@@ -19,13 +23,20 @@ config: {
   }]
 });
 
-function i(e) {
+function l(e) {
   let {
-enabled: t
-  } = r.getCurrentConfig({
-location: e
-  }, {
-autoTrackExposure: !0
-  });
-  return t;
+location: t,
+settingsUpsells: n,
+channelId: i
+  } = e, l = (0, r.e7)([a.Z], () => a.Z.getChannel(i));
+  return (0, s.jc)(n, null == l ? void 0 : l.type).length > 0 && function(e) {
+let {
+  enabled: t
+} = o.getCurrentConfig({
+  location: e
+}, {
+  autoTrackExposure: !0
+});
+return t;
+  }(t);
 }

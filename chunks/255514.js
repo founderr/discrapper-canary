@@ -139,7 +139,12 @@ J,
 H,
 t.id
   ]);
-  let eE = (0, o.fW)(k);
+  let eE = (0, o.fW)(k),
+ef = (0, l.A)({
+  location: 'web_iar_node_view',
+  settingsUpsells: null != eE ? eE : [],
+  channelId: 'message' === n.name ? n.record.channel_id : void 0
+});
   return (0, r.jsxs)('div', {
 className: w.container,
 children: [
@@ -204,7 +209,7 @@ children: [
         guildId: n.record.id,
         reportId: Y
       }),
-      null != x(t, 'settings_upsells') && 'message' === n.name && null != eE && (0, l.j)('web_iar_node_view') && (0, r.jsx)(C.Z, {
+      null != x(t, 'settings_upsells') && 'message' === n.name && null != eE && ef && (0, r.jsx)(C.Z, {
         settingsUpsells: eE
       }),
       null != x(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(y.Z, {
