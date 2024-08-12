@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return P;
+return O;
   }
 }), n(47120), n(724458), n(653041);
 var i = n(735250),
@@ -39,13 +39,13 @@ object: A.qAy.CHANNEL
   }
 };
 
-function P() {
+function O() {
   let e = (0, s.Ie)('favorites'),
 {
   favoriteAdded: t,
   clearFavoriteAdded: r
 } = (0, v.up)(),
-[P, O] = l.useState(!1),
+[O, P] = l.useState(!1),
 {
   favoriteServerMuted: y,
   favoriteChannels: j
@@ -103,7 +103,7 @@ V = l.useCallback(() => {
 children: [
   (0, i.jsx)(p.Z, {
     selected: U,
-    hovered: P,
+    hovered: O,
     unread: k && !y,
     className: M.pill
   }),
@@ -111,7 +111,7 @@ children: [
     onShow: V,
     children: (0, i.jsx)(T.S, {
       children: (0, i.jsx)(c.BlobMask, {
-        selected: U || P,
+        selected: U || O,
         upperBadge: B,
         lowerBadge: H,
         children: (0, i.jsx)(c.NavItem, {
@@ -124,9 +124,9 @@ children: [
             pathname: A.Z5c.CHANNEL(A.I_8, D),
             state: R
           },
-          selected: U || P,
-          onMouseEnter: () => O(!0),
-          onMouseLeave: () => O(!1),
+          selected: U || O,
+          onMouseEnter: () => P(!0),
+          onMouseLeave: () => P(!1),
           onMouseDown: function() {
             if (null != w)
               u.Z.preload(w.guild_id, w.id);

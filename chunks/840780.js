@@ -28,8 +28,8 @@ var i = n(735250),
   b = n(311352),
   M = n(436774),
   R = n(730417),
-  P = n(524347),
-  O = n(853197),
+  O = n(524347),
+  P = n(853197),
   y = n(616360),
   j = n(858064),
   D = n(594190),
@@ -40,8 +40,8 @@ var i = n(735250),
   B = n(382182),
   H = n(74299),
   V = n(914923),
-  W = n(165393),
-  F = n(989941),
+  F = n(165393),
+  W = n(989941),
   z = n(803647),
   Y = n(690221),
   K = n(231664),
@@ -303,7 +303,7 @@ let {
 return (0, i.jsxs)('div', {
   className: eN.gameWrapper,
   children: [
-    e ? (0, i.jsx)(W.Z, {
+    e ? (0, i.jsx)(F.Z, {
       title: s
     }) : (0, i.jsx)(A.ZP, {
       look: A.ZP.Looks.GRAY,
@@ -485,7 +485,7 @@ super(...e), ex(this, 'modalKey', void 0), ex(this, 'state', {
   } = this.props;
   if (null == e)
     return;
-  let i = (0, O.BS)(e);
+  let i = (0, P.BS)(e);
   null != i && (eu.default.track(em.rMx.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
     user_id: n,
     drops_quest_id: i.dropsQuestId,
@@ -545,13 +545,13 @@ guildId: n,
   } = e, r = (0, c.e7)([J.default], () => J.default.getId()), a = (0, c.e7)([
 D.ZP,
 ec.Z
-  ], () => (0, F.Z)(D.ZP, ec.Z)), s = (0, c.e7)([
+  ], () => (0, W.Z)(D.ZP, ec.Z)), s = (0, c.e7)([
 ea.Z,
 $.Z
   ], () => $.Z.getChannel(ea.Z.getVoiceChannelId())), o = (0, c.e7)([N.ZP], () => N.ZP.getConnectedActivityChannelId()), d = (0, c.e7)([$.Z], () => $.Z.getChannel(o)), h = (0, c.e7)([et.Z], () => et.Z.getGuild(null == d ? void 0 : d.guild_id)), [p, _] = (0, c.Wu)([X.Z], () => [
 X.Z.getCurrentUserActiveStream(),
 X.Z.getStreamerActiveStreamMetadata()
-  ]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), g = (0, c.e7)([P.Z], () => P.Z.getActivityPanelTooltipAction()), {
+  ]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), g = (0, c.e7)([O.Z], () => O.Z.getActivityPanelTooltipAction()), {
 partnerGame: m,
 dropsActivityPanelExperienceBlocked: C,
 showDropsSparkles: E
@@ -566,7 +566,7 @@ if (null != a && null != a.id)
   return a.id;
 if (null != x)
   return x.applicationId;
-  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([en.Z], () => (0, H.Z)(en.Z) && (0, ed.isWindows)()), b = (0, c.e7)([el.Z], () => null != r ? el.Z.findActivity(r, e => e.type === em.IIU.PLAYING) : null), M = null != p && p.ownerId === r && p.state !== em.jm8.ENDED, O = (0, c.e7)([es.Z], () => es.Z.getBroadcast()), y = (0, Z.Z)() && null != a, j = (0, c.e7)([
+  }()) && void 0 !== t ? t : '']), A = (0, c.e7)([en.Z], () => (0, H.Z)(en.Z) && (0, ed.isWindows)()), b = (0, c.e7)([el.Z], () => null != r ? el.Z.findActivity(r, e => e.type === em.IIU.PLAYING) : null), M = null != p && p.ownerId === r && p.state !== em.jm8.ENDED, P = (0, c.e7)([es.Z], () => es.Z.getBroadcast()), y = (0, Z.Z)() && null != a, j = (0, c.e7)([
 eo.default,
 er.Z
   ], () => null != d ? (0, L.F6)(d, eo.default, er.Z) : void 0), w = (0, K.Z)(null == s ? void 0 : s.id, r);
@@ -589,7 +589,7 @@ canStream: v,
 dropsTooltipAction: g,
 stream: p,
 streamMetadata: _,
-broadcast: O,
+broadcast: P,
 canStartBroadcast: y,
 channelName: j,
 guildForConnectedChannel: h,

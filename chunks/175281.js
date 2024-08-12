@@ -75,7 +75,7 @@ className: o()(T.backdrop, {
   });
 }
 
-function P() {
+function O() {
   let e = a.useMemo(() => h()((0, m.Rv)()).groupBy(e => e.group).value(), []);
   return (0, r.jsx)('div', {
 className: T.keyboardShortcutList,
@@ -126,7 +126,7 @@ children: M.map(t => {
 })
   });
 }
-class O extends a.PureComponent {
+class P extends a.PureComponent {
   componentDidMount() {
 this.lastInputedKeys = [], N.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, {
   capture: !0
@@ -201,7 +201,7 @@ return (0, r.jsxs)(p.Z.div, {
       ref: this.scrollerRef,
       fade: !0,
       children: (0, r.jsx)(g.HeadingLevel, {
-        children: (0, r.jsx)(P, {})
+        children: (0, r.jsx)(O, {})
       })
     })
   ]
@@ -361,7 +361,7 @@ children: [
         handleDemonClose: function() {
           c(!1), setTimeout(n, 500);
         }
-      }, 'raging-demo') : (0, r.jsx)(O, {
+      }, 'raging-demo') : (0, r.jsx)(P, {
         content: u,
         keyboardModeEnabled: d,
         activateRagingDemon: function() {

@@ -1,90 +1,90 @@
-t.d(n, {
+n.d(t, {
   m$: function() {
 return g;
   },
   wV: function() {
 return E;
   }
-}), t(47120), t(518263), t(970173), t(520712), t(268111), t(941497), t(32026), t(480839), t(744285), t(492257), t(873817);
-var r = t(470079),
-  u = t(442837),
-  l = t(470956),
-  i = t(314897),
-  c = t(19780),
-  a = t(979651),
-  o = t(709054),
-  s = t(729303),
-  d = t(651941),
-  f = t(441894);
+}), n(47120), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
+var r = n(470079),
+  l = n(442837),
+  u = n(470956),
+  i = n(314897),
+  a = n(19780),
+  c = n(979651),
+  o = n(709054),
+  s = n(729303),
+  d = n(651941),
+  f = n(441894);
 
 function Z(e) {
   let {
-voiceStates: n,
-version: t
-  } = (0, u.cj)([a.Z], () => ({
-voiceStates: a.Z.getVoiceStatesForChannel(e),
-version: a.Z.getVoiceStateVersion()
-  })), i = r.useMemo(() => o.default.keys(n), [
-n,
-t
+voiceStates: t,
+version: n
+  } = (0, l.cj)([c.Z], () => ({
+voiceStates: c.Z.getVoiceStatesForChannel(e),
+version: c.Z.getVoiceStateVersion()
+  })), i = r.useMemo(() => o.default.keys(t), [
+t,
+n
   ]);
-  return (0, l.Yp)(e, i);
+  return (0, u.Yp)(e, i);
 }
 
 function C(e) {
-  let [n, t, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [
-c.Z,
+  let [t, n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [
+a.Z,
 d.Z,
 s.Z
   ];
   if (null == e)
 return !1;
-  let u = n.getSecureFramesRosterMapEntry(e);
-  if (null == u)
+  let l = t.getSecureFramesRosterMapEntry(e);
+  if (null == l)
 return !1;
-  let l = new Uint8Array(u);
-  return t.isKeyVerified(e, l) || r.isKeyVerified(e, l);
+  let u = new Uint8Array(l);
+  return n.isKeyVerified(e, u) || r.isKeyVerified(e, u);
 }
 
 function E(e) {
   let {
-userId: n,
-channelId: t,
+userId: t,
+channelId: n,
 location: r
-  } = e, l = Z(t), a = (0, f.J)({
-channelId: t,
+  } = e, u = Z(n), c = (0, f.J)({
+channelId: n,
 location: r
-  }), o = (0, u.e7)([i.default], () => i.default.getId()), E = (0, u.e7)([
-c.Z,
+  }), o = (0, l.e7)([i.default], () => i.default.getId()), E = (0, l.e7)([
+a.Z,
 d.Z,
 s.Z
-  ], () => C(n, [
-c.Z,
+  ], () => C(t, [
+a.Z,
 d.Z,
 s.Z
-  ])), g = o !== n;
-  return a && g && E && l.has(o) && null != n && l.has(n);
+  ])), g = o !== t;
+  return c && g && E && u.has(o) && null != t && u.has(t);
 }
 
 function g(e) {
   let {
-channelId: n,
-location: t
+channelId: t,
+location: n
   } = e, r = (0, f.J)({
-channelId: n,
-location: t
-  }), l = Z(n), a = (0, u.e7)([i.default], () => i.default.getId());
-  return (0, u.e7)([
-c.Z,
+channelId: t,
+location: n
+  }), u = Z(t), c = (0, l.e7)([i.default], () => i.default.getId());
+  return (0, l.e7)([
+a.Z,
 d.Z,
 s.Z
   ], () => {
 if (!r)
   return !1;
-for (let e of l) {
-  if (e !== a) {
+for (let e of u) {
+  if (e !== c) {
     if (!C(e, [
-        c.Z,
+        a.Z,
         d.Z,
         s.Z
       ]))
@@ -93,8 +93,8 @@ for (let e of l) {
 }
 return !0;
   }, [
-a,
+c,
 r,
-l
+u
   ]);
 }

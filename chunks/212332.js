@@ -29,7 +29,7 @@ f = N ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
   return a.useEffect(() => {
 null == m.Z.cashAppPayComponent && (0, I.eI)();
   }, []), (0, i.jsxs)(l.Notice, {
-color: l.NoticeColors.SPOTIFY,
+color: l.NoticeColors.DEFAULT,
 children: [
   (0, i.jsx)(l.NoticeCloseButton, {
     onClick: t,

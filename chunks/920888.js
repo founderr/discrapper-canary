@@ -66,7 +66,7 @@ let {
 }, {
   autoTrackExposure: !0,
   disable: __OVERLAY__
-}), D = P && Z;
+}), b = P && Z;
 return (0, i.jsxs)(l.W, {
   component: 'div',
   className: r()(L.reactions, p),
@@ -114,8 +114,8 @@ return (0, i.jsxs)(l.W, {
       useChatFontScaling: A,
       isHovered: this.state.isHovered,
       className: r()({
-        [L.forceShow]: g && !Z || D,
-        [L.forceShowLook]: g || D
+        [L.forceShow]: g && !Z || b,
+        [L.forceShowLook]: g || b
       })
     })
   ]

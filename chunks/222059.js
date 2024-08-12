@@ -32,8 +32,8 @@ var i = n(735250),
   b = n(780570),
   M = n(557177),
   R = n(278464),
-  P = n(276952),
-  O = n(682662),
+  O = n(276952),
+  P = n(682662),
   y = n(662146),
   j = n(674552),
   D = n(981631),
@@ -67,9 +67,9 @@ canViewBroadcasts: H
 location: 'home_button_no_track'
   }, {
 autoTrackExposure: !1
-  }), V = (0, m.Z)(), W = V.length > 0 && H;
+  }), V = (0, m.Z)(), F = V.length > 0 && H;
   (0, g.P)();
-  let F = (0, r.Ie)('home'),
+  let W = (0, r.Ie)('home'),
 z = () => {
   T(null), b(0), clearTimeout(Z);
 };
@@ -83,12 +83,12 @@ location: 'home_button'
   !t && f ? K = (0, i.jsx)(c.Z, {
 className: k.downloadProgress,
 determineOwnVisibility: !1
-  }) : W && (K = (0, i.jsx)(A.Z, {
+  }) : F && (K = (0, i.jsx)(A.Z, {
 className: k.broadcastBadge
   }));
   let q = t || N || I,
 Q = (0, i.jsx)(o.BlobMask, {
-  highlight: W,
+  highlight: F,
   selected: q,
   lowerBadge: h > 0 ? (0, j.Ne)(h) : null,
   upperBadge: K,
@@ -109,7 +109,7 @@ Q = (0, i.jsx)(o.BlobMask, {
     },
     selected: q,
     ariaLabel: G.Z.Messages.DIRECT_MESSAGES,
-    ...F,
+    ...W,
     to: {
       pathname: _,
       state: {
@@ -123,7 +123,7 @@ Q = (0, i.jsx)(o.BlobMask, {
     children: (0, i.jsx)(d.Z, {})
   })
 }),
-X = W ? (0, i.jsx)(o.Popout, {
+X = F ? (0, i.jsx)(o.Popout, {
   position: 'right',
   renderPopout: e => {
     let {
@@ -154,9 +154,9 @@ children: (0, i.jsx)(E.Z, {
   inlineSpecs: B,
   tutorialId: 'friends-list',
   position: 'right',
-  children: (0, i.jsxs)(O.H, {
+  children: (0, i.jsxs)(P.H, {
     children: [
-      (0, i.jsx)(P.Z, {
+      (0, i.jsx)(O.Z, {
         selected: t,
         hovered: N,
         className: k.pill

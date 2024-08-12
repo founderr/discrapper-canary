@@ -35,7 +35,7 @@ object: A.qAy.CHANNEL
   }
 };
 
-function P(e, t) {
+function O(e, t) {
   (0, p.jW)(e, async () => {
 let {
   default: e
@@ -61,7 +61,7 @@ return n => (0, i.jsx)(e, {
   });
 }
 t.Z = l.memo(function(e) {
-  var t, n, r, p, O;
+  var t, n, r, p, P;
   let {
 guildNode: y,
 setRef: j,
@@ -73,9 +73,9 @@ animatable: k,
 selected: B = !1,
 unread: H = !1,
 mediaState: V,
-unavailable: W = !1,
-badge: F = 0,
-contextMenu: z = P,
+unavailable: F = !1,
+badge: W = 0,
+contextMenu: z = O,
 draggable: Y = !1,
 sorting: K = !1,
 preloadOnClick: q = !0,
@@ -83,12 +83,12 @@ guildJoinRequestStatus: Q
   } = e, {
 id: X,
 parentId: J
-  } = y, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : W ? (0, L.Ny)() : null != V ? (0, L.Or)(V) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-  null == ee && F > 0 ? ee = null !== (r = (0, L.Ne)(F)) && void 0 !== r ? r : void 0 : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({
+  } = y, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != V ? (0, L.Or)(V) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+  null == ee && W > 0 ? ee = null !== (r = (0, L.Ne)(W)) && void 0 !== r ? r : void 0 : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({
 guildJoinRequestStatus: Q
   })) && void 0 !== p ? p : void 0);
-  let et = null !== (O = e.lowerBadgeSize) && void 0 !== O ? O : {
-  width: (0, d.getBadgeWidthForValue)(F)
+  let et = null !== (P = e.lowerBadgeSize) && void 0 !== P ? P : {
+  width: (0, d.getBadgeWidthForValue)(W)
 },
 [{
   dragging: en
@@ -129,7 +129,7 @@ es = !K && er,
   U
 ]),
 e_ = l.useCallback(() => {
-  if (null != U || null == G || W || !q)
+  if (null != U || null == G || F || !q)
     return;
   let e = (0, f.V)(G.id);
   if (null != e)
@@ -137,7 +137,7 @@ e_ = l.useCallback(() => {
 }, [
   U,
   G,
-  W,
+  F,
   q
 ]),
 ef = (0, c.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(X)),
@@ -182,7 +182,7 @@ return null;
 }) : (0, i.jsx)(d.NavItem, {
   ariaLabel: b.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
     guildName: G.toString(),
-    mentions: F
+    mentions: W
   }),
   name: G.toString(),
   onClick: ep,

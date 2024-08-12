@@ -33,8 +33,8 @@ var l = n(120356),
   b = n(695346),
   M = n(592125),
   R = n(430824),
-  P = n(607744),
-  O = n(496675),
+  O = n(607744),
+  P = n(496675),
   y = n(306680),
   j = n(9156),
   D = n(979651),
@@ -45,8 +45,8 @@ var l = n(120356),
   B = n(830993),
   H = n(653577),
   V = n(207055),
-  W = n(981631),
-  F = n(647086),
+  F = n(981631),
+  W = n(647086),
   z = n(689938),
   Y = n(704672);
 
@@ -122,7 +122,7 @@ return (0, i.jsx)(V.Z, {
   voiceStates: t,
   withGuildIcon: l,
   tabIndex: r,
-  location: W.Sbl.GUILD_CHANNEL_LIST
+  location: F.Sbl.GUILD_CHANNEL_LIST
 });
   }
   renderChannelInfo() {
@@ -407,17 +407,17 @@ unread: y.ZP.hasUnread(n.id),
 mentionCount: y.ZP.getMentionCount(n.id)
   })), d = (0, a.e7)([j.ZP], () => j.ZP.resolveUnreadSetting(n)), h = (0, a.cj)([
 M.Z,
-P.Z,
-O.Z
+O.Z,
+P.Z
   ], () => {
 let e = M.Z.getChannel(n.parent_id),
-  i = P.Z.getCheck(n.guild_id);
+  i = O.Z.getCheck(n.guild_id);
 return {
-  canManageChannel: O.Z.can(W.Plq.MANAGE_CHANNELS, n),
-  canReorderChannel: !0 !== l && (t.id === F._ || (null != e ? O.Z.can(W.Plq.MANAGE_CHANNELS, e) : O.Z.can(W.Plq.MANAGE_CHANNELS, t))),
-  canMoveMembers: O.Z.can(W.Plq.MOVE_MEMBERS, n),
-  locked: !O.Z.can(W.Plq.CONNECT, n),
-  bypassLimit: O.Z.can(W.Plq.MOVE_MEMBERS, n),
+  canManageChannel: P.Z.can(F.Plq.MANAGE_CHANNELS, n),
+  canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? P.Z.can(F.Plq.MANAGE_CHANNELS, e) : P.Z.can(F.Plq.MANAGE_CHANNELS, t))),
+  canMoveMembers: P.Z.can(F.Plq.MOVE_MEMBERS, n),
+  locked: !P.Z.can(F.Plq.CONNECT, n),
+  bypassLimit: P.Z.can(F.Plq.MOVE_MEMBERS, n),
   unverifiedAccount: !i.canChat
 };
   }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), g = (0, m.ZP)(n), C = (0, v.qY)(n.id), {
@@ -444,7 +444,7 @@ enableActivities: !0
   return (0, i.jsx)(Q, {
 channelName: g,
 embeddedApps: f,
-embeddedActivityType: W.IIU.PLAYING,
+embeddedActivityType: F.IIU.PLAYING,
 video: _,
 hasActiveEvent: null != C,
 isSubscriptionGated: I,

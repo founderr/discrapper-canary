@@ -38,8 +38,8 @@ isChannelCollapsed: A,
 voiceStates: b,
 enableConnectedUserLimit: M,
 enableActivities: R,
-isSubscriptionGated: P,
-needSubscriptionToAccess: O,
+isSubscriptionGated: O,
+needSubscriptionToAccess: P,
 isNewChannel: y,
 muted: j,
 resolvedUnreadSetting: D
@@ -48,7 +48,7 @@ channel: n,
 locked: G,
 video: k || B,
 selected: L
-  }), V = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)), W = (0, o.n2)(n.guild_id, n.id), F = (0, l.e7)([h.Z], () => {
+  }), V = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)), F = (0, o.n2)(n.guild_id, n.id), W = (0, l.e7)([h.Z], () => {
 var e, t;
 return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(S.oNc.COMMUNITY)) && void 0 !== t && t;
   });
@@ -56,9 +56,9 @@ return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? v
 return (0, i.jsx)(x.Z, {
   mentionsCount: w
 });
-  if ((0, c.O)(P))
+  if ((0, c.O)(O))
 return (0, i.jsx)(c.Z, {
-  locked: O
+  locked: P
 });
   if (y)
 return (0, i.jsx)(a.TextBadge, {
@@ -74,18 +74,18 @@ return (0, i.jsx)(a.Text, {
     count: (0, a.getBadgeCountString)(V)
   })
 });
-  if (!j && n.isForumLikeChannel() && null != W && W > 0)
+  if (!j && n.isForumLikeChannel() && null != F && F > 0)
 return (0, i.jsx)(a.Text, {
   variant: 'text-xs/semibold',
   color: 'text-muted',
-  children: (0, a.getBadgeCountString)(W)
+  children: (0, a.getBadgeCountString)(F)
 });
   let z = null !== (t = null == b ? void 0 : b.length) && void 0 !== t ? t : 0;
   return null != M && M && H ? (0, i.jsx)(N.Z, {
 userCount: z,
 video: k || B,
 channel: n
-  }) : A && (0, g.a)(b) && F ? (0, i.jsx)(a.TextBadge, {
+  }) : A && (0, g.a)(b) && W ? (0, i.jsx)(a.TextBadge, {
 text: Z.Z.Messages.LIVE,
 color: r.Z.unsafe_rawColors.RED_400.css
   }) : null != R && R && (0, m.u)(U) ? (0, i.jsx)(E.Z, {

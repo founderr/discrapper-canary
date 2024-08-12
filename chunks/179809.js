@@ -40,8 +40,8 @@ mentionCount: A = 0,
 unread: b = !1,
 defaultFolderName: M,
 useCircleMask: R = !1,
-draggable: P = !1,
-sorting: O = !1,
+draggable: O = !1,
+sorting: P = !1,
 onDragStart: y,
 onDragEnd: j,
 onExpandCollapse: D,
@@ -52,10 +52,10 @@ folderIconContent: G
 id: k,
 name: B,
 children: H
-  } = t, [V, W] = l.useState(!1), [F, z] = l.useState(!1), Y = V || F;
+  } = t, [V, F] = l.useState(!1), [W, z] = l.useState(!1), Y = V || W;
   l.useEffect(() => {
-O && W(!1);
-  }, [O]);
+P && F(!1);
+  }, [P]);
   let [{
 dragging: K
   }, q] = (0, s.c)({
@@ -104,34 +104,34 @@ children: [
   }),
   (0, i.jsx)(N.Z, {
     text: J,
-    disabled: O,
+    disabled: P,
     selected: r,
     disableWrapper: !0,
     children: (0, i.jsx)('div', {
-      ref: P ? q : void 0,
+      ref: O ? q : void 0,
       className: a()({
-        [v.wobble]: !K && F && !u
+        [v.wobble]: !K && W && !u
       }),
       'data-dnd-name': J,
       children: K ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(m.Z, {
         folderNode: t,
         expanded: u,
         forceCircular: R,
-        sorting: O,
+        sorting: P,
         mediaState: _,
         mentionCount: A,
         tooltipName: J,
         folderGroupId: ee,
         onClick: D,
         onContextMenu: w,
-        onHoverChange: W,
+        onHoverChange: F,
         onKeyDown: X,
         treeItemProps: $,
         folderIconContent: G
       })
     })
   }),
-  P ? (0, i.jsx)(C.ZP, {
+  O ? (0, i.jsx)(C.ZP, {
     name: J,
     targetNode: t,
     onDragOverChanged: Q
@@ -163,7 +163,7 @@ children: [
       children: H.map(U)
     }, l);
   }),
-  P && u ? (0, i.jsx)(C.Zu, {
+  O && u ? (0, i.jsx)(C.Zu, {
     name: J,
     targetNode: t
   }) : null

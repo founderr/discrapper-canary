@@ -126,22 +126,22 @@ disableBannerAnimation: T,
 guild: b,
 guildBanner: M,
 animationOverlayHeight: R,
-children: P,
-headerClassName: O,
+children: O,
+headerClassName: P,
 communityInfoVisible: y,
 hasSubheader: j
-  } = e, D = b.hasFeature(g.oNc.ANIMATED_BANNER), w = (0, d.Z)(b), U = !w && b.hasCommunityInfoSubheader(), G = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), W = l.useRef(), F = h.QK.getSetting();
+  } = e, D = b.hasFeature(g.oNc.ANIMATED_BANNER), w = (0, d.Z)(b), U = !w && b.hasCommunityInfoSubheader(), G = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), F = l.useRef(), W = h.QK.getSetting();
   l.useEffect(() => {
-if (G && n && !H.current && F)
-  return B(!0), W.current = setTimeout(() => {
+if (G && n && !H.current && W)
+  return B(!0), F.current = setTimeout(() => {
     B(!1);
   }, 5000), () => {
-    clearTimeout(W.current);
+    clearTimeout(F.current);
   };
   }, [
 G,
 n,
-F
+W
   ]), l.useEffect(() => {
 H.current = n;
   }, [n]);
@@ -171,7 +171,7 @@ children: [
     onClick: S,
     children: [
       Y ? null : (0, i.jsxs)('header', {
-        className: a()(I.header, O, {
+        className: a()(I.header, P, {
           [I.themedHeaderMobile]: o.tq
         }),
         children: [
@@ -205,7 +205,7 @@ children: [
               }),
               (0, i.jsx)('div', {
                 className: I.headerChildren,
-                children: P
+                children: O
               })
             ]
           }),
@@ -228,7 +228,7 @@ children: [
   G && z() ? (0, i.jsx)('div', {
     className: I.animatedBannerHoverLayer,
     onMouseEnter: () => {
-      B(!0), clearTimeout(W.current);
+      B(!0), clearTimeout(F.current);
     },
     onMouseLeave: () => B(!1),
     style: {

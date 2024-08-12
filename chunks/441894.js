@@ -1,44 +1,44 @@
-t.d(n, {
+n.d(t, {
   J: function() {
-return a;
+return c;
   }
-}), t(47120);
-var r = t(442837),
-  u = t(592125),
-  l = t(19780),
-  i = t(977059),
-  c = t(760373);
+}), n(47120);
+var r = n(442837),
+  l = n(592125),
+  u = n(19780),
+  i = n(977059),
+  a = n(760373);
 
-function a(e) {
+function c(e) {
   let {
-channelId: n,
-location: t
+channelId: t,
+location: n
   } = e, {
-enabled: a
+enabled: c
   } = i.c.useExperiment({
-location: t
+location: n
   });
   return (0, r.e7)([
-l.Z,
-u.Z
-  ], () => function(e, n) {
-var t;
+u.Z,
+l.Z
+  ], () => function(e, t) {
+var n;
 let [r, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [
-  l.Z,
-  u.Z
+  u.Z,
+  l.Z
 ];
-if (!n || null == e || r.getChannelId() !== e)
+if (!t || null == e || r.getChannelId() !== e)
   return !1;
-let a = i.getChannel(e);
-if (null == a || a.isGuildStageVoice())
+let c = i.getChannel(e);
+if (null == c || c.isGuildStageVoice())
   return !1;
-let o = null === (t = r.getSecureFramesState()) || void 0 === t ? void 0 : t.version;
-return null != o && o > c.HK;
-  }(n, a, [
-l.Z,
-u.Z
+let o = null === (n = r.getSecureFramesState()) || void 0 === n ? void 0 : n.version;
+return null != o && o > a.HK;
+  }(t, c, [
+u.Z,
+l.Z
   ]), [
-n,
-a
+t,
+c
   ]);
 }
