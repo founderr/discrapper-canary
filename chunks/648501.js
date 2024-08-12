@@ -38,8 +38,8 @@ isChannelCollapsed: A,
 voiceStates: b,
 enableConnectedUserLimit: M,
 enableActivities: R,
-isSubscriptionGated: O,
-needSubscriptionToAccess: P,
+isSubscriptionGated: P,
+needSubscriptionToAccess: O,
 isNewChannel: y,
 muted: j,
 resolvedUnreadSetting: D
@@ -56,9 +56,9 @@ return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? v
 return (0, i.jsx)(x.Z, {
   mentionsCount: w
 });
-  if ((0, c.O)(O))
+  if ((0, c.O)(P))
 return (0, i.jsx)(c.Z, {
-  locked: P
+  locked: O
 });
   if (y)
 return (0, i.jsx)(a.TextBadge, {

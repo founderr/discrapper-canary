@@ -44,7 +44,7 @@ return null != e && e > i;
   }, [
 t.id,
 Z
-  ]), O = l.useCallback(e => {
+  ]), P = l.useCallback(e => {
 (0, c.jW)(e, async () => {
   let {
     default: e
@@ -54,8 +54,8 @@ Z
     guild: t
   });
 });
-  }, [t]), P = null;
-  return (!T || A || b) && !v && !M && (P = (0, i.jsx)(o.TextBadge, {
+  }, [t]), O = null;
+  return (!T || A || b) && !v && !M && (O = (0, i.jsx)(o.TextBadge, {
 color: s.Z.colors.BADGE_BRAND_BG.css,
 text: x.Z.Messages.NEW,
 className: S.newChannel
@@ -69,7 +69,7 @@ renderIcon: e => (0, i.jsx)(o.ChannelListMagnifyingGlassIcon, {
 text: Z ? x.Z.Messages.CHANNELS_AND_ROLES : x.Z.Messages.CHANNEL_BROWSER_TITLE,
 selected: v,
 onClick: R,
-onContextMenu: O,
-trailing: P
+onContextMenu: P,
+trailing: O
   });
 }

@@ -50,11 +50,11 @@ l = N.ZP.isChannelMuted(n, t.id);
   return (!i || !l) && I.ZP.getMentionCount(e) > 0;
 }
 
-function O(e) {
+function P(e) {
   return !N.ZP.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? _.Z.getMutableParticipants(e.id, f.pV.SPEAKER).length > 0 : x.ZP.getVoiceStatesForChannel(e).length > 0);
 }
 
-function P(e) {
+function O(e) {
   var t, n, i;
   let {
 guildChannels: l
@@ -94,12 +94,12 @@ for (let e = 0; e < C.length; e++) {
 }
   let Z = null,
 L = null,
-P = null !== (i = null == _ ? void 0 : _.getChannelRecords()) && void 0 !== i ? i : [];
+O = null !== (i = null == _ ? void 0 : _.getChannelRecords()) && void 0 !== i ? i : [];
   d && x > 0 ? Z = {
 mode: 'mentions',
 mentionCount: x,
 targetChannelId: o
-  } : !p && u().some(P, O) ? Z = {
+  } : !p && u().some(O, P) ? Z = {
 mode: 'voice-channels',
 mentionCount: 0,
 targetChannelId: null
@@ -123,7 +123,7 @@ topBar: y && null != L ? L : T,
 bottomBar: j && null != Z ? Z : T
   }, !0;
 }
-let y = u().throttle(P, 200);
+let y = u().throttle(O, 200);
 
 function j(e) {
   let {
@@ -188,7 +188,7 @@ let {
   guildId: t,
   channelIds: n
 } = e, i = C.Z.getGuild(t);
-return !!(null != i && i.hasFeature(Z.oNc.COMMUNITY)) && null != n && !u().isEqual(b[t], n) && (b[t] = n, P(t));
+return !!(null != i && i.hasFeature(Z.oNc.COMMUNITY)) && null != n && !u().isEqual(b[t], n) && (b[t] = n, O(t));
   },
   BULK_ACK: function(e) {
 let {

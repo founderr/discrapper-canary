@@ -40,8 +40,8 @@ mentionCount: A = 0,
 unread: b = !1,
 defaultFolderName: M,
 useCircleMask: R = !1,
-draggable: O = !1,
-sorting: P = !1,
+draggable: P = !1,
+sorting: O = !1,
 onDragStart: y,
 onDragEnd: j,
 onExpandCollapse: D,
@@ -54,8 +54,8 @@ name: B,
 children: H
   } = t, [V, F] = l.useState(!1), [W, z] = l.useState(!1), Y = V || W;
   l.useEffect(() => {
-P && F(!1);
-  }, [P]);
+O && F(!1);
+  }, [O]);
   let [{
 dragging: K
   }, q] = (0, s.c)({
@@ -104,11 +104,11 @@ children: [
   }),
   (0, i.jsx)(N.Z, {
     text: J,
-    disabled: P,
+    disabled: O,
     selected: r,
     disableWrapper: !0,
     children: (0, i.jsx)('div', {
-      ref: O ? q : void 0,
+      ref: P ? q : void 0,
       className: a()({
         [v.wobble]: !K && W && !u
       }),
@@ -117,7 +117,7 @@ children: [
         folderNode: t,
         expanded: u,
         forceCircular: R,
-        sorting: P,
+        sorting: O,
         mediaState: _,
         mentionCount: A,
         tooltipName: J,
@@ -131,7 +131,7 @@ children: [
       })
     })
   }),
-  O ? (0, i.jsx)(C.ZP, {
+  P ? (0, i.jsx)(C.ZP, {
     name: J,
     targetNode: t,
     onDragOverChanged: Q
@@ -163,7 +163,7 @@ children: [
       children: H.map(U)
     }, l);
   }),
-  O && u ? (0, i.jsx)(C.Zu, {
+  P && u ? (0, i.jsx)(C.Zu, {
     name: J,
     targetNode: t
   }) : null

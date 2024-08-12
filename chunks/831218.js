@@ -25,8 +25,8 @@ var i, l, r, a = n(735250),
   b = n(158776),
   M = n(55589),
   R = n(515753),
-  O = n(981631),
-  P = n(689938),
+  P = n(981631),
+  O = n(689938),
   y = n(257164);
 
 function j(e, t, n) {
@@ -258,7 +258,7 @@ return (0, a.jsx)(u.SJ, {
       children: i => (0, a.jsx)(_.List, {
         fade: !0,
         innerRole: r,
-        innerAriaLabel: P.Z.Messages.DIRECT_MESSAGES,
+        innerAriaLabel: O.Z.Messages.DIRECT_MESSAGES,
         innerTag: 'ul',
         ref: e => {
           var t;
@@ -313,7 +313,7 @@ super(...e), j(this, 'state', {
       num_users_visible: a.length,
       num_users_visible_with_mobile_indicator: o.filter(e => null != e && b.Z.isMobileOnline(e)).length
     };
-  this.hasReportedAnalytics = !0, m.ZP.trackWithMetadata(O.rMx.DM_LIST_VIEWED, {
+  this.hasReportedAnalytics = !0, m.ZP.trackWithMetadata(P.rMx.DM_LIST_VIEWED, {
     ...u,
     ...(0, C.X)(),
     changelog_dm_visible: c
@@ -326,7 +326,7 @@ super(...e), j(this, 'state', {
 }), j(this, 'handleScroll', c()(() => {
   if (null != this._list) {
     let e = this._list.getScrollerNode();
-    null != e && f.Z.updateChannelListScroll(O.ME, e.scrollTop);
+    null != e && f.Z.updateChannelListScroll(P.ME, e.scrollTop);
   }
 }, 100)), j(this, 'renderDM', (e, t) => {
   let {
@@ -371,10 +371,10 @@ super(...e), j(this, 'state', {
     children: [
       (0, a.jsx)('span', {
         className: y.headerText,
-        children: P.Z.Messages.DIRECT_MESSAGES
+        children: O.Z.Messages.DIRECT_MESSAGES
       }),
       (0, a.jsx)(S.Z, {
-        tooltip: P.Z.Messages.CREATE_DM,
+        tooltip: O.Z.Messages.CREATE_DM,
         tooltipPosition: 'top',
         popoutAlign: 'left',
         iconClassName: y.privateChannelRecipientsInviteButtonIcon,
@@ -416,7 +416,7 @@ g.Z,
 L.Z,
 A.Z
   ], () => ({
-theme: L.Z.darkSidebar ? O.BRd.DARK : n,
+theme: L.Z.darkSidebar ? P.BRd.DARK : n,
 keyboardModeEnabled: g.Z.keyboardModeEnabled,
 version: null != t ? ''.concat(t, ':').concat(A.Z.getPrivateChannelsVersion()) : A.Z.getPrivateChannelsVersion()
   })), f = s.useRef(null), m = s.useCallback(e => {

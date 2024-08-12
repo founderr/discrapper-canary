@@ -35,8 +35,8 @@ var i = n(735250),
   b = n(878857),
   M = n(204197),
   R = n(199902),
-  O = n(158776),
-  P = n(306680),
+  P = n(158776),
+  O = n(306680),
   y = n(111583),
   j = n(9156),
   D = n(594174),
@@ -146,7 +146,7 @@ selected: s = !1,
 user: d,
 activities: L,
 applicationStream: R,
-isTyping: O,
+isTyping: P,
 status: y,
 isMobile: D,
 'aria-posinset': w,
@@ -159,7 +159,7 @@ eventHandlers: $
 user: d,
 size: p.AvatarSizes.SIZE_32,
 animateOnHover: !(s || Y)
-  }), ee = (0, h.e7)([j.ZP], () => j.ZP.isChannelMuted(t.getGuildId(), t.id)), et = (0, h.e7)([P.ZP], () => P.ZP.getMentionCount(t.id) > 0), en = (0, x.ZP)(t), ei = (0, h.e7)([T.Z], () => T.Z.isFavorite(t.id)), el = () => {
+  }), ee = (0, h.e7)([j.ZP], () => j.ZP.isChannelMuted(t.getGuildId(), t.id)), et = (0, h.e7)([O.ZP], () => O.ZP.getMentionCount(t.id) > 0), en = (0, x.ZP)(t), ei = (0, h.e7)([T.Z], () => T.Z.isFavorite(t.id)), el = () => {
 K(!0);
   }, er = () => {
 K(!1);
@@ -258,15 +258,15 @@ if (t.isMultiUserDM())
     'aria-hidden': !0,
     recipients: t.recipients,
     size: e,
-    isTyping: O,
+    isTyping: P,
     status: y
   }) : (0, i.jsx)(V, {
     ...$,
     src: (0, N.x)(t),
     'aria-hidden': !0,
     size: e,
-    status: O ? k.Skl.ONLINE : y,
-    isTyping: O
+    status: P ? k.Skl.ONLINE : y,
+    isTyping: P
   });
 o()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
 let n = null;
@@ -277,7 +277,7 @@ return !d.isSystemUser() && (n = (0, g.Z)(L) ? k.Skl.STREAMING : y), (0, i.jsx)(
   avatarDecoration: J,
   status: n,
   isMobile: D,
-  isTyping: O,
+  isTyping: P,
   'aria-label': d.username,
   statusTooltip: !0
 });
@@ -377,22 +377,22 @@ location: 'private_channel'
   }, {
 autoTrackExposure: !0
   }), c = null == r ? void 0 : r.id, u = (0, h.cj)([
-O.Z,
+P.Z,
 R.Z
   ], () => {
 let e;
 if (t.isMultiUserDM()) {
   if (a) {
-    let n = O.Z.getState().statuses;
+    let n = P.Z.getState().statuses;
     t.recipients.some(e => n[e] === k.Skl.ONLINE) && (e = k.Skl.ONLINE);
   }
 } else
-  null != c && (e = O.Z.getStatus(c));
+  null != c && (e = P.Z.getStatus(c));
 return {
   status: e,
-  activities: null != c ? O.Z.getActivities(c) : null,
+  activities: null != c ? P.Z.getActivities(c) : null,
   applicationStream: null != c ? R.Z.getAnyStreamForUser(c) : null,
-  isMobile: null != c && O.Z.isMobileOnline(c)
+  isMobile: null != c && P.Z.isMobileOnline(c)
 };
   }, [
 t,

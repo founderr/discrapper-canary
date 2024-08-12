@@ -32,8 +32,8 @@ var i = n(735250),
   b = n(780570),
   M = n(557177),
   R = n(278464),
-  O = n(276952),
-  P = n(682662),
+  P = n(276952),
+  O = n(682662),
   y = n(662146),
   j = n(674552),
   D = n(981631),
@@ -154,9 +154,9 @@ children: (0, i.jsx)(E.Z, {
   inlineSpecs: B,
   tutorialId: 'friends-list',
   position: 'right',
-  children: (0, i.jsxs)(P.H, {
+  children: (0, i.jsxs)(O.H, {
     children: [
-      (0, i.jsx)(O.Z, {
+      (0, i.jsx)(P.Z, {
         selected: t,
         hovered: N,
         className: k.pill

@@ -84,7 +84,7 @@ A = (0, o.Wu)([u.ZP], () => {
 b = (0, o.Wu)([g.default], () => A.map(e => g.default.getUser(e)), [A]),
 M = (0, o.Wu)([g.default], () => L.map(e => g.default.getUser(e)), [L]),
 R = Z(c.VoiceNormalIcon, x.filter(e => !L.includes(e.id) && !A.includes(e.id)));
-  let O = (e = v, t = T, 0 === e.length ? null : (0, i.jsxs)('div', {
+  let P = (e = v, t = T, 0 === e.length ? null : (0, i.jsxs)('div', {
   className: S.row,
   children: [
     (0, i.jsx)(c.StageIcon, {
@@ -114,13 +114,13 @@ R = Z(c.VoiceNormalIcon, x.filter(e => !L.includes(e.id) && !A.includes(e.id)));
     })
   ]
 })),
-P = Z(c.ScreenArrowIcon, M.filter(e => null != e && !A.includes(e.id))),
+O = Z(c.ScreenArrowIcon, M.filter(e => null != e && !A.includes(e.id))),
 y = Z(c.ActivitiesIcon, b);
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  O,
-  R,
   P,
+  R,
+  O,
   y
 ]
   });

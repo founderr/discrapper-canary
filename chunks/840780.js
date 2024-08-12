@@ -28,8 +28,8 @@ var i = n(735250),
   b = n(194082),
   M = n(311352),
   R = n(436774),
-  O = n(730417),
-  P = n(524347),
+  P = n(730417),
+  O = n(524347),
   y = n(853197),
   j = n(616360),
   D = n(858064),
@@ -553,11 +553,11 @@ ee.Z
   ], () => ee.Z.getChannel(es.Z.getVoiceChannelId())), o = (0, c.e7)([N.ZP], () => N.ZP.getConnectedActivityChannelId()), d = (0, c.e7)([ee.Z], () => ee.Z.getChannel(o)), h = (0, c.e7)([en.Z], () => en.Z.getGuild(null == d ? void 0 : d.guild_id)), [p, _] = (0, c.Wu)([J.Z], () => [
 J.Z.getCurrentUserActiveStream(),
 J.Z.getStreamerActiveStreamMetadata()
-  ]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), g = (0, c.e7)([P.Z], () => P.Z.getActivityPanelTooltipAction()), {
+  ]), f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion), g = (0, c.e7)([O.Z], () => O.Z.getActivityPanelTooltipAction()), {
 partnerGame: m,
 dropsActivityPanelExperienceBlocked: C,
 showDropsSparkles: E
-  } = (0, O.c)(eE.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), S = (0, c.e7)([
+  } = (0, P.c)(eE.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP), x = (0, c.e7)([N.ZP], () => null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null), S = (0, c.e7)([
 en.Z,
 el.Z,
 et.ZP

@@ -75,7 +75,7 @@ R = l.useCallback(() => {
   E,
   c
 ]),
-O = l.useCallback(e => {
+P = l.useCallback(e => {
   e(), E(v.L.USER_DISMISS);
 }, [E]);
   return (0, i.jsxs)('div', {
@@ -94,7 +94,7 @@ children: [
             className: M
           }),
           (0, i.jsx)(u.Clickable, {
-            onClick: () => O(l),
+            onClick: () => P(l),
             className: T.close,
             children: (0, i.jsx)(u.XSmallIcon, {
               size: 'xs',

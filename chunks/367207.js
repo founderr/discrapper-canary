@@ -29,8 +29,8 @@ var l = n(392711),
   b = n(485731),
   M = n(1163),
   R = n(841174),
-  O = n(11352),
-  P = n(474936),
+  P = n(11352),
+  O = n(474936),
   y = n(981631),
   j = n(354459),
   D = n(37113),
@@ -136,7 +136,7 @@ super(...e), U(this, '_premiumPaymentModalCloseResolve', null), U(this, '_premiu
   let e = f.default.getCurrentUser();
   null != e && e.verified && N.Z.shouldFetchCampaignContext() && await (0, E.W)();
 }), U(this, '_trackCustomNotificationSoundsExposure', () => {
-  O.Y.trackExposure({
+  P.Y.trackExposure({
     location: 'PremiumManager'
   });
 }), U(this, '_trackSkyLoadExposure', () => {
@@ -179,7 +179,7 @@ super(...e), U(this, '_premiumPaymentModalCloseResolve', null), U(this, '_premiu
         fps: (0, I.bp)(r.maxFrameRate)
       });
       o.Z.sendNitroSystemMessage(e, n), m.default.track(y.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
-        type: P.cd.HD_STREAMING_VIEWER_UPSELL,
+        type: O.cd.HD_STREAMING_VIEWER_UPSELL,
         location_section: null != t ? y.jXE.TEXT_IN_VOICE : y.jXE.CHANNEL_TEXT_AREA,
         location_object: y.qAy.MESSAGE,
         guild_id: t

@@ -31,9 +31,9 @@ var i, l = n(735250),
   b = n(670512),
   M = n(981631),
   R = n(689938),
-  O = n(175057);
+  P = n(175057);
 
-function P(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -43,14 +43,14 @@ writable: !0
 }
 let y = 10,
   j = () => (0, l.jsxs)('div', {
-className: O.emptyState,
+className: P.emptyState,
 children: [
   (0, l.jsx)('div', {
-    className: O.emptyStateNote,
+    className: P.emptyStateNote,
     children: R.Z.Messages.QUICKSWITCHER_EMPTY_TEXT
   }),
   (0, l.jsx)('div', {
-    className: O.emptyStateCTA,
+    className: P.emptyStateCTA,
     children: (0, l.jsx)(u.Anchor, {
       href: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
       children: R.Z.Messages.QUICKSWITCHER_EMPTY_CTA
@@ -64,13 +64,13 @@ let e = E.Z.getGuild(this.props.channel.guild_id);
 return (0, l.jsx)(A.$W, {
   ...this.props,
   children: (0, l.jsx)('div', {
-    className: O.miscContainer,
+    className: P.miscContainer,
     children: null != e ? e.name : null
   })
 });
   }
 }
-P(D, 'defaultProps', {
+O(D, 'defaultProps', {
   unread: !1
 });
 let w = c.ZP.connectStores([
@@ -129,7 +129,7 @@ function H(e, t, n) {
 text: n,
 children: e => (0, l.jsx)('span', {
   ...e,
-  className: O.autocompleteQuerySymbol,
+  className: P.autocompleteQuerySymbol,
   children: t
 })
   }, e);
@@ -176,7 +176,7 @@ let {
 } = this.state, i = t.length > 0 && '' !== n;
 return (0, l.jsx)(u.FocusRing, {
   children: (0, l.jsx)('input', {
-    className: O.input,
+    className: P.input,
     'aria-label': R.Z.Messages.QUICK_SWITCHER,
     ref: this.inputRef,
     type: 'text',
@@ -212,7 +212,7 @@ return 0 === t.length && e.length > 0 ? (0, l.jsx)(j, {}) : 0 === t.length ? nul
   rowHeight: 34,
   paddingBottom: y,
   sections: [t.length],
-  className: O.scroller,
+  className: P.scroller,
   renderRow: this.renderRow,
   renderSection: this.renderSection
 });
@@ -227,8 +227,8 @@ return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
   }
   renderProtip() {
 return (0, l.jsx)(g.Z, {
-  className: s()(O.protip, {
-    [O.hasContent]: this.state.query.length > 0
+  className: s()(P.protip, {
+    [P.hasContent]: this.state.query.length > 0
   }),
   type: g.Z.Types.INLINE,
   children: R.Z.Messages.QUICKSWITCHER_PROTIP.format({
@@ -256,10 +256,10 @@ return (0, l.jsx)(u.ModalRoot, {
   'aria-label': R.Z.Messages.QUICK_SWITCHER,
   size: u.ModalSize.DYNAMIC,
   transitionState: this.props.transitionState,
-  className: s()(O.container, o.tq && O.mobileContainer),
+  className: s()(P.container, o.tq && P.mobileContainer),
   fullscreenOnMobile: !1,
   children: (0, l.jsxs)('div', {
-    className: s()(O.quickswitcher, o.tq && O.mobileQuickswitcher),
+    className: s()(P.quickswitcher, o.tq && P.mobileQuickswitcher),
     onMouseMove: this.handleMouseMove,
     children: [
       this.renderInput(),
@@ -271,15 +271,15 @@ return (0, l.jsx)(u.ModalRoot, {
 });
   }
   constructor(...e) {
-super(...e), P(this, 'scrollerRef', r.createRef()), P(this, 'inputRef', r.createRef()), P(this, '_listId', (0, m.hQ)()), P(this, 'state', {
+super(...e), O(this, 'scrollerRef', r.createRef()), O(this, 'inputRef', r.createRef()), O(this, '_listId', (0, m.hQ)()), O(this, 'state', {
   query: this.props.query,
   mouseFocusDisabled: !0
-}), P(this, 'handleInputChange', () => {
+}), O(this, 'handleInputChange', () => {
   let {
     current: e
   } = this.inputRef;
   null != e && this.search(e.value);
-}), P(this, 'handleMouseMove', () => {
+}), O(this, 'handleMouseMove', () => {
   let {
     mouseFocusDisabled: e
   } = this.state;
@@ -287,12 +287,12 @@ super(...e), P(this, 'scrollerRef', r.createRef()), P(this, 'inputRef', r.create
     this.setState({
       mouseFocusDisabled: !1
     });
-}), P(this, 'focusResult', e => {
+}), O(this, 'focusResult', e => {
   if (!this.state.mouseFocusDisabled)
     (0, T.tF)(this.props.results.indexOf(e));
-}), P(this, 'selectResult', e => {
+}), O(this, 'selectResult', e => {
   (0, T.Se)(e, this.props.queryMode === _.h8.TEXT_CHANNEL);
-}), P(this, 'handleContextMenu', e => {
+}), O(this, 'handleContextMenu', e => {
   let t = this.props.results[this.props.selectedIndex];
   switch (t.type) {
     case _.h8.GUILD:
@@ -432,7 +432,7 @@ super(...e), P(this, 'scrollerRef', r.createRef()), P(this, 'inputRef', r.create
         });
       });
   }
-}), P(this, 'handleKeyDown', e => {
+}), O(this, 'handleKeyDown', e => {
   let {
     mouseFocusDisabled: t,
     query: n
@@ -482,7 +482,7 @@ super(...e), P(this, 'scrollerRef', r.createRef()), P(this, 'inputRef', r.create
       return;
   }
   e.preventDefault(), (0, T.tF)(r);
-}), P(this, 'renderRow', e => {
+}), O(this, 'renderRow', e => {
   let {
     row: t
   } = e, n = this.props.results[t], {

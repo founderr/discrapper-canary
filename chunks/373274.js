@@ -34,8 +34,8 @@ var i, l = n(735250),
   b = n(131704),
   M = n(592125),
   R = n(796974),
-  O = n(984933),
-  P = n(914010),
+  P = n(984933),
+  O = n(914010),
   y = n(540126),
   j = n(734307),
   D = n(854444),
@@ -546,7 +546,7 @@ super(...e), eu(this, '_list', null), eu(this, 'unreadTopRef', r.createRef()), e
       case el.z.GUILD_HUB_HEADER_OPTIONS:
         return (0, l.jsx)(S.Z, {
           guild: i,
-          channel: O.ZP.getDefaultChannel(i.id)
+          channel: P.ZP.getDefaultChannel(i.id)
         }, el.z.GUILD_HUB_HEADER_OPTIONS);
       case el.z.GUILD_PREMIUM_PROGRESS_BAR:
         let r = e.getRows();
@@ -769,7 +769,7 @@ selectedChannelId: n,
 selectedVoiceChannelId: i
   } = e, a = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled), {
 analyticsLocations: s
-  } = (0, m.ZP)(g.Z.GUILD_CHANNEL_LIST), d = (0, u.e7)([M.Z], () => M.Z.getChannel(n)), h = (0, u.e7)([M.Z], () => M.Z.getChannel(i)), p = (0, u.e7)([P.Z], () => P.Z.getGuildId()), C = (0, Z.DM)(t), I = r.useRef(null), E = r.useCallback((e, t) => {
+  } = (0, m.ZP)(g.Z.GUILD_CHANNEL_LIST), d = (0, u.e7)([M.Z], () => M.Z.getChannel(n)), h = (0, u.e7)([M.Z], () => M.Z.getChannel(i)), p = (0, u.e7)([O.Z], () => O.Z.getGuildId()), C = (0, Z.DM)(t), I = r.useRef(null), E = r.useCallback((e, t) => {
 let n = I.current;
 if (null != n) {
   if (ea.Xyh.test(t) || (0, es.AB)(t))

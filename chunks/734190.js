@@ -53,7 +53,7 @@ isSelectedChannel: r,
 isSelectedVoice: A,
 isLast: M,
 withGuildIcon: R
-  } = e, O = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]), P = (0, o.e7)([m.Z], () => m.Z.hasVideo(t.id)), {
+  } = e, P = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]), O = (0, o.e7)([m.Z], () => m.Z.hasVideo(t.id)), {
 unread: y,
 mentionCount: j
   } = (0, o.cj)([g.ZP], () => ({
@@ -77,7 +77,7 @@ null != l && (0, d.jW)(e, async () => {
     channel: l
   });
 });
-  }, [t.id]), k = null == O ? 0 : O.length, {
+  }, [t.id]), k = null == P ? 0 : P.length, {
 role: B,
 ...H
   } = (0, s.JA)(t.id), V = l.useRef(null), F = j > 0 ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
@@ -146,7 +146,7 @@ children: [
                 children: [
                   k > 0 && t.userLimit > 0 ? (0, i.jsx)(E.Z, {
                     userCount: k,
-                    video: P,
+                    video: O,
                     channel: t
                   }) : null,
                   (0, I.Z)(j) ? (0, i.jsx)(N.Z, {
@@ -164,7 +164,7 @@ children: [
     channel: t,
     collapsed: !A,
     collapsedMax: 6,
-    voiceStates: O,
+    voiceStates: P,
     location: S.Sbl.GUILD_CHANNEL_LIST
   })
 ]
