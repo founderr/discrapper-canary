@@ -13,7 +13,8 @@ label: 'User Profile Past Activity Experiment',
 defaultConfig: {
   pastActivityEnabled: !1,
   mostRecentActivityEnabled: !1,
-  newActivityCardsEnabled: !1
+  newActivityCardsEnabled: !1,
+  selfRecentActivityFallbackEnabled: !1
 },
 treatments: [{
     id: 1,
@@ -21,7 +22,8 @@ treatments: [{
     config: {
       pastActivityEnabled: !0,
       mostRecentActivityEnabled: !1,
-      newActivityCardsEnabled: !0
+      newActivityCardsEnabled: !0,
+      selfRecentActivityFallbackEnabled: !1
     }
   },
   {
@@ -30,7 +32,8 @@ treatments: [{
     config: {
       pastActivityEnabled: !0,
       mostRecentActivityEnabled: !0,
-      newActivityCardsEnabled: !0
+      newActivityCardsEnabled: !0,
+      selfRecentActivityFallbackEnabled: !1
     }
   },
   {
@@ -39,7 +42,18 @@ treatments: [{
     config: {
       pastActivityEnabled: !1,
       mostRecentActivityEnabled: !1,
-      newActivityCardsEnabled: !0
+      newActivityCardsEnabled: !0,
+      selfRecentActivityFallbackEnabled: !1
+    }
+  },
+  {
+    id: 4,
+    label: 'Fallback - only self recent activity enabled',
+    config: {
+      pastActivityEnabled: !1,
+      mostRecentActivityEnabled: !1,
+      newActivityCardsEnabled: !1,
+      selfRecentActivityFallbackEnabled: !0
     }
   }
 ]
