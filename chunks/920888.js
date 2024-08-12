@@ -64,9 +64,8 @@ let {
 } = c.Z.getCurrentConfig({
   location: 'message_reactions'
 }, {
-  autoTrackExposure: !0,
-  disable: __OVERLAY__
-}), b = P && Z;
+  autoTrackExposure: !0
+}), b = P && Z, D = g && !Z || b;
 return (0, i.jsxs)(l.W, {
   component: 'div',
   className: r()(L.reactions, p),
@@ -108,13 +107,14 @@ return (0, i.jsxs)(l.W, {
       })
     }),
     !t && !R && (0, i.jsx)(d.X, {
+      tabIndex: D || this.state.isHovered ? 0 : -1,
       type: u.O.NORMAL,
       message: e,
       channel: C,
       useChatFontScaling: A,
       isHovered: this.state.isHovered,
       className: r()({
-        [L.forceShow]: g && !Z || b,
+        [L.forceShow]: D,
         [L.forceShowLook]: g || b
       })
     })

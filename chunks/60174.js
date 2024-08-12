@@ -43,21 +43,22 @@ let {
   message: t,
   className: n,
   children: a,
-  useChatFontScaling: s
+  useChatFontScaling: s,
+  tabIndex: l = 0
 } = this.props, {
-  isReactionPickerActive: l
-} = this.state, o = t.state === p.yb.SENDING, c = e === C.O.BURST;
-if (o || (0, N.yE)(t.flags, p.iLy.EPHEMERAL))
+  isReactionPickerActive: o
+} = this.state, c = t.state === p.yb.SENDING, E = e === C.O.BURST;
+if (c || (0, N.yE)(t.flags, p.iLy.EPHEMERAL))
   return null;
-let E = h.default.getCurrentUser(),
-  I = (0, f.I5)(E),
-  m = c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
-!I && c && (m = (0, i.jsx)(_.X, {
+let I = h.default.getCurrentUser(),
+  m = (0, f.I5)(I),
+  T = E ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
+!m && E && (T = (0, i.jsx)(_.X, {
   tooltipText: A.Z.Messages.ADD_BURST_REACTION
 }));
-let T = s ? x : R;
+let S = s ? x : R;
 return (0, i.jsx)(u.Popout, {
-  shouldShow: l,
+  shouldShow: o,
   onRequestClose: this.handleReactionPickerToggle,
   renderPopout: this.renderReactionPopout,
   position: 'right',
@@ -66,32 +67,33 @@ return (0, i.jsx)(u.Popout, {
       isShown: s
     } = t;
     return (0, i.jsx)(u.TooltipContainer, {
-      text: m,
+      text: T,
       color: u.TooltipColors.PRIMARY,
-      'aria-label': c ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION,
-      tooltipClassName: T.__invalid_addReactionTooltip,
+      'aria-label': E ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION,
+      tooltipClassName: S.__invalid_addReactionTooltip,
       children: (0, i.jsxs)(u.Clickable, {
         ...e,
+        tabIndex: l,
         onClick: e => {
           this.handleAddReactionClick(e);
         },
         onMouseEnter: () => (0, d.x)(g.qR.AddReactionPopoutMouseEntered),
         onFocus: () => (0, d.x)(g.qR.AddReactionPopoutFocused),
-        className: r()(T.reactionBtn, {
-          [T.active]: s
+        className: r()(S.reactionBtn, {
+          [S.active]: s
         }, n),
         children: [
-          c ? (0, i.jsx)(i.Fragment, {
+          E ? (0, i.jsx)(i.Fragment, {
             children: (0, i.jsx)(u.SuperReactionIcon, {
               size: 'sm',
               color: 'currentColor',
-              className: T.icon
+              className: S.icon
             })
           }) : (0, i.jsx)(i.Fragment, {
             children: (0, i.jsx)(u.ReactionIcon, {
               size: 'sm',
               color: 'currentColor',
-              className: T.icon
+              className: S.icon
             })
           }),
           a
