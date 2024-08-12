@@ -19,8 +19,8 @@ var a = n(735250),
   v = n(703656),
   m = n(430824),
   p = n(594174),
-  I = n(115130),
-  f = n(566620),
+  f = n(115130),
+  I = n(566620),
   x = n(520599),
   _ = n(127255),
   h = n(880308),
@@ -57,9 +57,9 @@ autoTrackExposure: !0
   }), {
 isDeveloperActivityShelfEnabled: H,
 filter: F
-  } = (0, o.cj)([I.Z], () => ({
-filter: I.Z.getFilter(),
-isDeveloperActivityShelfEnabled: I.Z.getIsEnabled()
+  } = (0, o.cj)([f.Z], () => ({
+filter: f.Z.getFilter(),
+isDeveloperActivityShelfEnabled: f.Z.getIsEnabled()
   }));
   if (i.useEffect(() => {
   let e = y.current;
@@ -74,7 +74,7 @@ isDeveloperActivityShelfEnabled: I.Z.getIsEnabled()
     L(null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0);
   }
 }, [y]), i.useEffect(() => {
-  (k || null != n) && (0, f.w1)({
+  (k || null != n) && (0, I.w1)({
     guildId: n,
     force: !0
   });
@@ -85,7 +85,7 @@ isDeveloperActivityShelfEnabled: I.Z.getIsEnabled()
 return null;
   let U = O.length > 0;
 
-  function Y(e) {
+  function w(e) {
 r();
   }
   return (0, a.jsx)(g.Gt, {

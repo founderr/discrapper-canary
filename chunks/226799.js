@@ -19,16 +19,16 @@ var t = a(701488),
   v = a(337664),
   f = a(585681),
   b = a(288021),
-  I = a(114089),
-  h = a(8361),
+  h = a(114089),
+  I = a(8361),
   j = a(655297),
   S = a(616297),
   _ = a(213860),
   y = a(747604),
   C = a(237931),
   M = a(992910),
-  Z = a(652120),
-  N = a(824046),
+  N = a(652120),
+  Z = a(824046),
   E = a(943615),
   T = a(669001),
   A = a(248313),
@@ -139,8 +139,8 @@ playersSuggestionMin: 1,
 playersSuggestionMax: 7,
 timeSuggestionMinutes: 15,
 gameplayImageUrls: [
-  Z,
-  N
+  N,
+  Z
 ]
   },
   [t.Gv]: {
@@ -182,8 +182,8 @@ gameplayImageUrls: [
   [t.In]: {
 gameplayImageUrls: [
   b,
-  I,
-  h
+  h,
+  I
 ]
   }
 };

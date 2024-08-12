@@ -16,8 +16,8 @@ var a = n(735250),
   v = n(695346),
   m = n(594174),
   p = n(695103),
-  I = n(880448),
-  f = n(823379),
+  f = n(880448),
+  I = n(823379),
   x = n(5192),
   _ = n(624138),
   h = n(115130),
@@ -43,7 +43,7 @@ className: Z.activityTag,
 color: 'interactive-normal',
 variant: 'text-xs/semibold',
 children: [
-  (0, f.lm)(n) ? (0, a.jsx)(n, {
+  (0, I.lm)(n) ? (0, a.jsx)(n, {
     className: Z.icon
   }) : null,
   t
@@ -63,7 +63,7 @@ var e;
 return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : []).map(e => {
   let [t] = e;
   return m.default.getUser(t);
-}).filter(f.lm);
+}).filter(I.lm);
   }), d = x.ZP.getName(l, null == i ? void 0 : i.id, null == c ? void 0 : c[0]);
   if (d = (0, _.aF)(d, 15), null == t || 0 === c.length) {
 var u, g;
@@ -104,7 +104,7 @@ function O(e) {
 activityItem: n,
 channel: l,
 guildId: m,
-locationObject: f,
+locationObject: I,
 onActivityItemVisible: x,
 onActivityItemSelected: _,
 large: j = !1
@@ -120,7 +120,7 @@ staffReleasePhase: H
 activityItem: n,
 channel: l,
 guildId: m,
-locationObject: f,
+locationObject: I,
 onActivityItemVisible: x,
 onActivityItemSelected: _,
 embeddedActivitiesManager: N.Z
@@ -129,12 +129,12 @@ h.Z,
 p.Z
   ], () => h.Z.inDevModeForApplication(n.application.id) || p.Z.inTestModeForApplication(n.application.id), [n.application.id]), {
 application: U
-  } = n, Y = i.useCallback(e => e && (null == x ? void 0 : x({
+  } = n, w = i.useCallback(e => e && (null == x ? void 0 : x({
 applicationId: n.application.id
   })), [
 n.application.id,
 x
-  ]), w = (0, d.O)(Y, 0.8, !0), [G, W] = i.useState(!1), [z, q] = i.useState(G);
+  ]), Y = (0, d.O)(w, 0.8, !0), [G, W] = i.useState(!1), [z, q] = i.useState(G);
   i.useEffect(() => {
 G && q(!0);
   }, [G]);
@@ -162,7 +162,7 @@ className: s()(Z.activityItem, {
 }),
 children: [
   (0, a.jsxs)('div', {
-    ref: w,
+    ref: Y,
     className: s()(Z.activityImageContainer, {
       [Z.large]: !0 === j
     }),
@@ -211,7 +211,7 @@ children: [
         children: e => (0, a.jsx)('div', {
           className: Z.devShelfBadge,
           ...e,
-          children: (0, a.jsx)(I.Z, {
+          children: (0, a.jsx)(f.Z, {
             className: Z.devShelfIcon
           })
         })

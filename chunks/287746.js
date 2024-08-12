@@ -157,8 +157,8 @@ if (null != a) {
   let e = null != s ? {
     type: b.Qi.APPLICATION,
     id: s.id,
-    icon: null !== (r = null == s ? void 0 : null === (l = s.bot) || void 0 === l ? void 0 : l.username) && void 0 !== r ? r : s.icon,
-    name: s.name,
+    icon: s.icon,
+    name: null !== (r = null == s ? void 0 : null === (l = s.bot) || void 0 === l ? void 0 : l.username) && void 0 !== r ? r : s.name,
     application: s
   } : null;
   v.Po({

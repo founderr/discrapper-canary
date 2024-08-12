@@ -1,48 +1,48 @@
 n.d(t, {
   L: function() {
-return d;
+return r;
   }
 });
 var i = n(373793),
   o = n(367907),
   a = n(69580),
   l = n(812206),
-  r = n(981631),
-  c = n(689079);
+  c = n(981631),
+  d = n(689079);
 
-function d(e) {
-  var t, n, d, s, u;
+function r(e) {
+  var t, n, r, s, m;
   let {
-applicationId: m,
+applicationId: u,
 userIndexState: p,
 guildIndexState: _,
 sectionName: E,
 location: g,
 source: x
   } = e;
-  if (m === c.bi.BUILT_IN || (null === (t = p.result) || void 0 === t ? void 0 : t.sections[m]) != null || (null === (n = _.result) || void 0 === n ? void 0 : n.sections[m]) != null)
+  if (u === d.bi.BUILT_IN || (null === (t = p.result) || void 0 === t ? void 0 : t.sections[u]) != null || (null === (n = _.result) || void 0 === n ? void 0 : n.sections[u]) != null)
 return Promise.resolve(!0);
-  (0, o.yw)(r.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
+  (0, o.yw)(c.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
 location: g,
-application_id: m,
+application_id: u,
 section_name: E,
 source: x
   });
-  let h = l.Z.getApplication(m),
-f = i.Y.USER_INSTALL,
-M = null == h ? void 0 : null === (u = h.integrationTypesConfig) || void 0 === u ? void 0 : null === (s = u[f]) || void 0 === s ? void 0 : null === (d = s.oauth2InstallParams) || void 0 === d ? void 0 : d.scopes;
+  let C = l.Z.getApplication(u),
+h = i.Y.USER_INSTALL,
+f = null == C ? void 0 : null === (m = C.integrationTypesConfig) || void 0 === m ? void 0 : null === (s = m[h]) || void 0 === s ? void 0 : null === (r = s.oauth2InstallParams) || void 0 === r ? void 0 : r.scopes;
   return new Promise(e => {
 (0, a.openOAuth2Modal)({
-  clientId: m,
-  integrationType: f,
-  scopes: M,
+  clientId: u,
+  integrationType: h,
+  scopes: f,
   callback: t => {
     let {
       location: n
     } = t;
-    null != n ? ((0, o.yw)(r.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
+    null != n ? ((0, o.yw)(c.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
       location: g,
-      application_id: m,
+      application_id: u,
       section_name: E,
       source: x
     }), e(!0)) : e(!1);

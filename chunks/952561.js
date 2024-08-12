@@ -1,13 +1,13 @@
 n.d(t, {
   Z: function() {
-return a;
+return r;
   }
 }), n(47120);
-var r = n(835473),
-  i = n(716600);
+var i = n(835473),
+  l = n(716600);
 
-function a() {
-  let e = (0, i.Z)(),
-[t] = (0, r.Z)(null == e ? [] : [e.applicationId]);
+function r() {
+  let e = (0, l.Z)(),
+[t] = (0, i.Z)(null == e ? [] : [e.applicationId]);
   return null != t ? t : void 0;
 }

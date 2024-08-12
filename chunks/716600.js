@@ -1,11 +1,11 @@
 n.d(t, {
   Z: function() {
-return a;
+return r;
   }
 });
-var r = n(442837),
-  i = n(317381);
+var i = n(442837),
+  l = n(317381);
 
-function a() {
-  return (0, r.e7)([i.ZP], () => i.ZP.getCurrentEmbeddedActivity());
+function r() {
+  return (0, i.e7)([l.ZP], () => l.ZP.getCurrentEmbeddedActivity());
 }

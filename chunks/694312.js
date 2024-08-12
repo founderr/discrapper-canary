@@ -22,28 +22,28 @@ v = null != p ? [
   p,
   ...f
 ] : f,
-h = (0, r.Z)(v),
-Z = i.useMemo(() => h.filter(u.lm), [h]),
-_ = i.useMemo(() => null != p && Z.length > 0 && Z[0].id === p && null != Z[0].embeddedActivityConfig ? [{
-  activity: Z[0].embeddedActivityConfig,
-  application: Z[0]
+Z = (0, r.Z)(v),
+h = i.useMemo(() => Z.filter(u.lm), [Z]),
+m = i.useMemo(() => null != p && h.length > 0 && h[0].id === p && null != h[0].embeddedActivityConfig ? [{
+  activity: h[0].embeddedActivityConfig,
+  application: h[0]
 }] : [], [
-  Z,
+  h,
   p
 ]),
-m = i.useMemo(() => n.map(e => {
-  let t = Z.find(t => t.id === e.application_id);
+_ = i.useMemo(() => n.map(e => {
+  let t = h.find(t => t.id === e.application_id);
   return null == t ? null : {
     activity: e,
     application: t
   };
 }).filter(u.lm), [
   n,
-  Z
+  h
 ]);
   return i.useMemo(() => [
-..._,
-...m
+...m,
+..._
   ].filter(e => {
 var t;
 let {
@@ -57,7 +57,7 @@ let {
 return !n.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null;
   }), [
 null == t ? void 0 : t.nsfwAllowed,
-m,
-_
+_,
+m
   ]);
 }

@@ -1,13 +1,13 @@
 n.d(t, {
   M: function() {
-return r;
+return c;
   }
 });
-var i, o, a, l, r, c, d = n(442837),
+var i, o, a, l, c, d, r = n(442837),
   s = n(570140);
-(i = r || (r = {}))[i.FETCHING = 0] = 'FETCHING', i[i.FETCHED = 1] = 'FETCHED', i[i.ERROR = 2] = 'ERROR';
-let u = {},
-  m = {},
+(i = c || (c = {}))[i.FETCHING = 0] = 'FETCHING', i[i.FETCHED = 1] = 'FETCHED', i[i.ERROR = 2] = 'ERROR';
+let m = {},
+  u = {},
   p = {};
 
 function _(e) {
@@ -19,7 +19,7 @@ withCommands: i
   return 'location:'.concat(t, ' channelId:').concat('0', ' withCommands:').concat(i);
 }
 let E = Object.freeze([]);
-class g extends(c = d.ZP.Store) {
+class g extends(d = r.ZP.Store) {
   getLastFetchTimeMs(e) {
 let {
   location: t,
@@ -38,7 +38,7 @@ let {
   channelId: n,
   withCommands: i
 } = e;
-return m[_({
+return u[_({
   location: t,
   channelId: n,
   withCommands: i
@@ -51,7 +51,7 @@ let {
   channelId: i,
   withCommands: o
 } = e;
-return null !== (t = u[_({
+return null !== (t = m[_({
   location: n,
   channelId: i,
   withCommands: o
@@ -70,8 +70,8 @@ let {
   channelId: n,
   withCommands: i
 } = e;
-m = {
-  ...m,
+u = {
+  ...u,
   [_({
     location: t,
     channelId: n,
@@ -90,11 +90,11 @@ let {
   channelId: i,
   withCommands: o
 });
-u = {
-  ...u,
-  [a]: t
-}, m = {
+m = {
   ...m,
+  [a]: t
+}, u = {
+  ...u,
   [a]: 1
 };
 let l = Date.now();
@@ -109,8 +109,8 @@ let {
   channelId: n,
   withCommands: i
 } = e;
-m = {
-  ...m,
+u = {
+  ...u,
   [_({
     location: t,
     channelId: n,

@@ -16,8 +16,8 @@ var a = n(735250),
   v = n(367907),
   m = n(565384),
   p = n(906732),
-  I = n(835473),
-  f = n(600164),
+  f = n(835473),
+  I = n(600164),
   x = n(592125),
   _ = n(451478),
   h = n(626135),
@@ -52,7 +52,7 @@ analyticsLocations: B,
 ...R
   } = e, k = (0, o.e7)([E.Z], () => E.Z.getIsEnabled(), []), {
 analyticsLocations: H
-  } = (0, p.ZP)(B), [F, U] = i.useState(_), Y = (0, u.Z)(F), [w, G] = i.useState(null), [W, z] = i.useState(g), [q, J] = i.useState(void 0), [K] = (0, I.Z)(null == W ? [] : [W]), X = i.useRef(null), $ = i.useMemo(() => ({
+  } = (0, p.ZP)(B), [F, U] = i.useState(_), w = (0, u.Z)(F), [Y, G] = i.useState(null), [W, z] = i.useState(g), [q, J] = i.useState(void 0), [K] = (0, f.Z)(null == W ? [] : [W]), X = i.useRef(null), $ = i.useMemo(() => ({
 application_id: W,
 source_section: l.section,
 impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW
@@ -61,15 +61,15 @@ l.section,
 W
   ]);
   i.useEffect(() => {
-if (F === A.ag.DIRECTORY && null != Y && Y !== A.ag.DIRECTORY && null != w) {
+if (F === A.ag.DIRECTORY && null != w && w !== A.ag.DIRECTORY && null != Y) {
   var e;
   null === (e = X.current) || void 0 === e || e.scrollTo({
-    top: w
+    top: Y
   });
 }
   }, [
-w,
 Y,
+w,
 F
   ]);
   let Q = i.useCallback(e => {
@@ -157,7 +157,7 @@ children: (0, a.jsxs)(d.ModalRoot, {
     }),
     (0, a.jsxs)(d.ModalHeader, {
       separator: !1,
-      justify: f.Z.Justify.BETWEEN,
+      justify: I.Z.Justify.BETWEEN,
       className: s()(D.modalHeader),
       children: [
         (0, a.jsxs)('div', {

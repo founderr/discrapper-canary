@@ -46,8 +46,8 @@ if (null != a && a.name === t) {
   let t = null != s ? {
     type: u.Qi.APPLICATION,
     id: s.id,
-    icon: null !== (d = null == s ? void 0 : null === (c = s.bot) || void 0 === c ? void 0 : c.username) && void 0 !== d ? d : s.icon,
-    name: s.name,
+    icon: s.icon,
+    name: null !== (d = null == s ? void 0 : null === (c = s.bot) || void 0 === c ? void 0 : c.username) && void 0 !== d ? d : s.name,
     application: s
   } : null;
   o.Po({
