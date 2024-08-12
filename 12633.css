@@ -10682,8 +10682,8 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .colorWarning_be03aa .button_be03aa {
-    border-color: var(--black-500) !important;
-    color: var(--black-500)
+    border-color: var(--status-warning-text) !important;
+    color: var(--status-warning-text)
 }
 
 .colorWarning_be03aa .button_be03aa:hover {
@@ -10691,7 +10691,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .colorWarning_be03aa .button_be03aa:hover {
-    color: var(--black-500)
+    color: var(--status-warning-text)
 }
 
 .colorWarning_be03aa .closeIcon_be03aa path {
