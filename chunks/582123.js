@@ -47,7 +47,7 @@ return (null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.i
   }), b = D && L && C === I.y0.BITE_SIZE, [M, P] = i.useState(!1);
   (0, l.Z)(() => P(!0), b ? 200 : null);
   let U = M ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
-[w, x] = (0, d.U)(U),
+[w, x] = (0, d.US)(U),
 G = () => {
   (0, m.openUserProfileModal)({
     userId: t.id,

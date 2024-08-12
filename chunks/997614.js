@@ -31,7 +31,7 @@ mute: N,
 suppress: v
   } = (0, p.Z)(t), S = (0, s.e7)([f.Z], () => f.Z.isDeaf()), Z = N || v || S, A = (0, u.sR)({
 isSoundboardButtonDisabled: Z
-  }), [M, b] = (0, c.c)(A);
+  }), [M, b] = (0, c.cv)(A);
 
   function R(e) {
 null != T && (0, o.jW)(e, async () => {

@@ -37,7 +37,7 @@ return (0, n.jsxs)('div', {
         (0, n.jsxs)('div', {
           className: c.headerText,
           children: [
-            (0, n.jsx)(r.Z, {
+            (0, n.jsx)(r.ZP, {
               contentTypes: [o],
               children: e => {
                 let {

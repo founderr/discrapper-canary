@@ -27,7 +27,7 @@ setTimeout(() => (0, r.EW)(l.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
   dismissAction: d.L.AUTO_DISMISS
 }), 10000);
   };
-  return (0, i.jsx)(o.Z, {
+  return (0, i.jsx)(o.ZP, {
 contentTypes: _,
 children: e => {
   let {

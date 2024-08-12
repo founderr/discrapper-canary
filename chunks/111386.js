@@ -34,7 +34,7 @@ let d = () => (0, i.jsxs)('div', {
 t.Z = e => {
   let {
 children: t
-  } = e, [n] = (0, r.U)([s.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP]), [o, u] = a.useState(!1);
+  } = e, [n] = (0, r.US)([s.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP]), [o, u] = a.useState(!1);
   return (a.useEffect(() => {
 setTimeout(() => {
   u(!0);

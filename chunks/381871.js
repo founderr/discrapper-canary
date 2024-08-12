@@ -109,7 +109,7 @@ Q
   ]);
   let J = j ? [r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
 $ = H === M.q.PREMIUM;
-  return (0, i.jsx)(p.Z, {
+  return (0, i.jsx)(p.ZP, {
 contentTypes: J,
 children: e => {
   let {

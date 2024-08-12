@@ -93,7 +93,7 @@ S.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
   },
   location_stack: _
 });
-  }, G = (0, r.wj)(n) ? x : b, [k, w] = (0, u.U)(t, N.R.GUILD_HEADER_TOOLTIPS);
+  }, G = (0, r.wj)(n) ? x : b, [k, w] = (0, u.US)(t, N.R.GUILD_HEADER_TOOLTIPS);
   return (0, i.jsx)(i.Fragment, {
 children: (() => {
   switch (k) {

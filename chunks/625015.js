@@ -30,7 +30,7 @@ function N(e) {
   let {
 avatarSrc: t,
 username: n
-  } = e, [a, c] = (0, o.U)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
+  } = e, [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
   return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, i.jsxs)(f.Z.Overlay, {
 className: x.overlay,
 children: [
@@ -88,7 +88,7 @@ function v(e) {
   let {
 avatarSrc: t,
 username: n
-  } = e, [a, c] = (0, o.U)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
+  } = e, [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
   return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL ? null : (0, i.jsx)(f.Z.Overlay, {
 className: x.overlay2,
 children: (0, i.jsxs)('div', {

@@ -52,12 +52,12 @@ function j() {
   let e = (0, l.e7)([E.Z], () => E.Z.hasCurrentUserSentMessageSinceAppStart()),
 t = [];
   e && t.push(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
-  let [n] = (0, m.c)(t);
+  let [n] = (0, m.cv)(t);
   return a.useEffect(() => () => {
 n === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
   dismissAction: S.L.TAKE_ACTION
 });
-  }, [n]), (0, i.jsx)(_.Z, {
+  }, [n]), (0, i.jsx)(_.ZP, {
 contentTypes: t,
 children: e => {
   let {

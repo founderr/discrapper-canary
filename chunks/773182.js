@@ -48,7 +48,7 @@ onClick: c,
 children: h,
 isEligibleForUpsell: _ = !0,
 withInviteIcon: f = !0
-  } = e, g = (0, s.TH)(), [I, E] = (0, C.U)([r], v.R.SIDEBAR), Z = I !== r, L = (0, d.Z)(), A = _ && !L && !Z && g.pathname !== x.Z5c.GUILD_DISCOVERY;
+  } = e, g = (0, s.TH)(), [I, E] = (0, C.US)([r], v.R.SIDEBAR), Z = I !== r, L = (0, d.Z)(), A = _ && !L && !Z && g.pathname !== x.Z5c.GUILD_DISCOVERY;
   l.useEffect(() => {
 A && o();
   }, [

@@ -55,7 +55,7 @@ if (t === x.vID.CLAN_ADMIN_UPSELL)
   return !n.hasFeature(x.oNc.CLAN) && T;
 return null == i ? void 0 : i.channelNoticePredicate(n, _);
   }).map(e => e.dismissibleContentType));
-  return (0, i.jsx)(u.Z, {
+  return (0, i.jsx)(u.ZP, {
 contentTypes: S,
 groupName: b.R.CHANNEL_NOTICES,
 children: e => {

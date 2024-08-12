@@ -117,7 +117,7 @@ let {
   title: n,
   isUserSettingsSearchEnabled: s
 } = this.props, l = e.flatMap(e => e.newIndicatorDismissibleContentTypes).filter(e => null != e), r = null != t ? t : e[0].section;
-return (0, i.jsx)(u.Z, {
+return (0, i.jsx)(u.ZP, {
   contentTypes: l,
   children: t => {
     let {

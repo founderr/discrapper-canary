@@ -40,7 +40,7 @@ let D = e => {
 dismissibleContent: t,
 noticeType: D
   } = e, j = (0, a.e7)([A.Z], () => A.Z.getNotice()), U = (0, a.e7)([S.default], () => S.default.locale);
-  return (0, i.jsx)(O.Z, {
+  return (0, i.jsx)(O.ZP, {
 contentTypes: [t],
 groupName: M.R.NOTICE_BAR,
 bypassAutoDismiss: !0,

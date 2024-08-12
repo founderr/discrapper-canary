@@ -53,7 +53,7 @@ let W = a.useCallback(() => {
   }, []),
   K = f === m.R0.CARD_CAROUSEL_FIRST_ROW || f === m.R0.CARD_CAROUSEL_SECOND_ROW || f === m.R0.CARD_CAROUSEL_THIRD_ROW,
   Y = (0, A.Z)(),
-  [z, Q] = (0, I.c)(null != r && n || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [r] : []);
+  [z, Q] = (0, I.cv)(null != r && n || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [r] : []);
 a.useEffect(() => () => {
   z === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && k && (0, T.EW)(z);
 }, [

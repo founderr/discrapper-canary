@@ -43,7 +43,7 @@ function L(e) {
   var t;
   let {
 channel: n
-  } = e, a = (0, u.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id), [s, l] = (0, m.U)([o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
+  } = e, a = (0, u.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id), [s, l] = (0, m.US)([o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
   if (null == a)
 return null;
   let r = x.ZP.getApplicationIconURL({

@@ -293,7 +293,7 @@ let {
   selectedChannelId: e,
   shouldRenderClipsEducation: t
 } = this.props;
-return (0, i.jsx)(Z.Z, {
+return (0, i.jsx)(Z.ZP, {
   contentTypes: [],
   children: n => {
     let {

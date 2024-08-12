@@ -53,7 +53,7 @@ return {
     [L.optionPlaying]: s === t && n
   }))
 };
-  }), [Y, V] = (0, S.U)([u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]), z = Y === u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
+  }), [Y, V] = (0, S.US)([u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]), z = Y === u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
   i.useEffect(() => () => {
 V(M.L.AUTO_DISMISS);
   }, [V]);

@@ -26,7 +26,7 @@ clipsEnabled: n,
 isAnimationDone: t,
 guildId: a,
 children: r
-  } = e, E = (0, i.e7)([g.Z], () => g.Z.getHardwareClassification()), S = E === C.x.MEETS_MINIMUM || E === C.x.UNKNOWN, f = E === C.x.BELOW_MINIMUM, R = t && (S || f) && !n, [A, T] = (0, d.c)(R ? [o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = A === o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
+  } = e, E = (0, i.e7)([g.Z], () => g.Z.getHardwareClassification()), S = E === C.x.MEETS_MINIMUM || E === C.x.UNKNOWN, f = E === C.x.BELOW_MINIMUM, R = t && (S || f) && !n, [A, T] = (0, d.cv)(R ? [o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = A === o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
   s.useEffect(() => {
 n && (0, u.EW)(o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
   forceTrack: !0

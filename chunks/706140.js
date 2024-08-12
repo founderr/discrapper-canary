@@ -1,5 +1,5 @@
 n.d(t, {
-  c: function() {
+  cv: function() {
 return E;
   }
 });
@@ -23,43 +23,46 @@ f = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
 h = (0, d.i)(e),
 p = null;
   a.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS) ? p = h.find(e => null == E || !(0, o.jl)(E, e)) : null != E && (p = h.find(e => !(0, o.jl)(E, e)));
-  let m = (0, u.ZP)(e => null != p && e.currentlyShown.has(p)),
-I = (0, i.e7)([l.Z], () => null != p && l.Z.hasUserHitDCCap(p));
-  r.useEffect(() => {
-if (null != p)
-  return (0, c.kk)(p, {
-    groupName: t,
-    guildId: f
-  }, n), () => {
-    if (null == p)
-      return;
-    let e = !l.Z.hasUserHitDCCap();
-    (0, u.gE)({
-      content: p,
-      groupName: t
-    }, e);
-  };
-  }, [
-p,
-t,
-f,
-I,
-n
-  ]);
-  let T = r.useCallback((e, n) => {
-null != p && (0, c.EW)(p, {
-  dismissAction: e,
-  groupName: t,
-  guildId: f,
-  forceTrack: n
-});
-  }, [
-p,
-t,
-f
-  ]);
+  let m = function(e, t, n, a, s) {
+let o = (0, u.ZP)(t => null != e && t.currentlyShown.has(e)),
+  d = (0, i.e7)([l.Z], () => null != e && l.Z.hasUserHitDCCap(e));
+return r.useEffect(() => {
+  if (null != e)
+    return (0, c.kk)(e, {
+      groupName: n,
+      guildId: t,
+      version: void 0
+    }, a), () => {
+      if (null == e)
+        return;
+      let t = !l.Z.hasUserHitDCCap();
+      (0, u.gE)({
+        content: e,
+        groupName: n
+      }, t);
+    };
+}, [
+  e,
+  n,
+  t,
+  d,
+  a,
+  s
+]), o && null != e ? e : null;
+  }(p, f, t, n);
   return [
-m && null != p ? p : null,
-T
+m,
+r.useCallback((e, n) => {
+  null != p && (0, c.EW)(p, {
+    dismissAction: e,
+    groupName: t,
+    guildId: f,
+    forceTrack: n
+  });
+}, [
+  p,
+  t,
+  f
+])
   ];
 }

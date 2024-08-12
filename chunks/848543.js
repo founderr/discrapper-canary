@@ -38,7 +38,7 @@ mute: O,
 suppress: R
   } = (0, m.Z)(t), x = (0, l.e7)([I.Z], () => I.Z.isDeaf()), b = O || R || x, [P, M] = a.useState(!1), D = t.getGuildId(), y = (0, p.sR)({
 isSoundboardButtonDisabled: b
-  }), [j, U] = (0, E.c)(y), {
+  }), [j, U] = (0, E.cv)(y), {
 analyticsLocations: G
   } = (0, h.ZP)(_.Z.SOUNDBOARD_BUTTON);
 

@@ -452,7 +452,7 @@ children: (0, a.jsxs)(tr, {
               channel: u,
               closePopout: d
             }),
-            (0, a.jsx)(S.Z, {
+            (0, a.jsx)(S.ZP, {
               contentTypes: ts,
               children: e => {
                 let {

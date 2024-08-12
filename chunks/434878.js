@@ -1298,7 +1298,7 @@ children: (0, a.jsxs)(D.I3, {
       ]
     }),
     v,
-    et && !eu && (0, a.jsx)(I.Z, {
+    et && !eu && (0, a.jsx)(I.ZP, {
       contentTypes: [g.z.FORUM_CHANNEL_HELPER_CARD],
       children: e => {
         let {

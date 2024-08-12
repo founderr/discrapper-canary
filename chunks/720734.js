@@ -250,7 +250,7 @@ let {
   dismissibleContents: t
 } = this.props;
 return null == e ? null : (0, i.jsx)(i.Fragment, {
-  children: (0, i.jsx)(j.Z, {
+  children: (0, i.jsx)(j.ZP, {
     contentTypes: t.avatar,
     children: e => {
       let {
@@ -310,7 +310,7 @@ return null == e ? null : (0, i.jsxs)('div', {
           onContextMenu: this.handleOutputAudioContextMenu,
           awaitingRemote: a
         }),
-        (0, i.jsx)(j.Z, {
+        (0, i.jsx)(j.ZP, {
           contentTypes: c.settings,
           children: e => {
             let {

@@ -142,7 +142,7 @@ r = (0, a.e7)([O.Z], () => O.Z.getProps().impressionSource),
 D = (0, I.gU)(),
 P = (0, f.bC)(),
 b = (0, d.Go)(),
-[Z] = (0, _.c)(b ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []),
+[Z] = (0, _.cv)(b ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []),
 v = 'useGenerateUserSettingsSections';
   (0, o.j)({
 location: v + ' auto on',

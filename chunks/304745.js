@@ -63,7 +63,7 @@ autoTrackExposure: !0
   U
 ]),
 G = [];
-  return !M && G.push(l.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.Z)(t.id) && !M && G.push(l.z.ACTIVITY_GDM_ROCKET_SPARKLE), (0, i.jsx)(I.Z, {
+  return !M && G.push(l.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.Z)(t.id) && !M && G.push(l.z.ACTIVITY_GDM_ROCKET_SPARKLE), (0, i.jsx)(I.ZP, {
 contentTypes: G,
 children: e => {
   let {

@@ -169,7 +169,7 @@ s.useEffect(() => {
   e,
   a
 ]);
-let [r] = (0, u.U)(a ? t : []);
+let [r] = (0, u.US)(a ? t : []);
 return a ? null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, m.Wb)(e.nitroTenureStatus) : null : null;
   },
   v = () => {
@@ -178,13 +178,13 @@ let t = null === (e = M()) || void 0 === e ? void 0 : e.nitroTenureStatus,
   n = (0, p.c)({
     location: 'Home'
   }) && null != t && t === S.EB.REDEEMABLE,
-  [s] = (0, u.U)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
+  [s] = (0, u.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
 return !!n && s === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
   },
   Z = () => {
 let e = M(),
   t = s.useMemo(() => P(e), [e]),
-  [n] = (0, _.c)(t),
+  [n] = (0, _.cv)(t),
   a = s.useRef(!1);
 return s.useCallback(() => {
   null != e && !0 === e.showNotification && (n === l.z.TENURE_REWARD_REDEEMABLE || n === l.z.TENURE_REWARD_PENDING) && ((0, d.EW)(n), n === l.z.TENURE_REWARD_PENDING && !1 === a.current && (R.default.track(h.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {

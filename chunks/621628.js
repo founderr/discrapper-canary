@@ -15,10 +15,10 @@ var n = t(735250),
   E = t(112831),
   u = t(675478),
   I = t(581883),
-  T = t(915486),
-  S = t(883904),
-  N = t(68985),
-  C = t(211644),
+  T = t(883904),
+  S = t(68985),
+  N = t(211644),
+  C = t(804501),
   m = t(197369),
   A = t(549856);
 
@@ -27,12 +27,15 @@ function g(e) {
 contents: s,
 content: t,
 onChange: a
-  } = e, i = (0, T.jl)(s, l.z[t]);
+  } = e, i = l.z[t], {
+isDismissed: r,
+handleToggleDismissState: o
+  } = (0, C.x)(i, s);
   return (0, n.jsx)(n.Fragment, {
 children: (0, n.jsx)(d.FormSwitch, {
-  value: i,
-  onChange: function() {
-    a(t), i ? (0, u.w9)(l.z[t]) : (0, u.nm)(l.z[t]);
+  value: r,
+  onChange: () => {
+    a(t), o();
   },
   children: (0, n.jsx)(d.FormText, {
     size: E.Z.Sizes.SIZE_16,
@@ -60,15 +63,15 @@ children: s.filter(e => isNaN(Number(e))).map(e => (0, n.jsx)(g, {
 
 function h() {
   var e;
-  let s = (0, C.ZP)(e => e.recentlyShown),
+  let s = (0, N.ZP)(e => e.recentlyShown),
 {
   dailyCapReached: t,
   dailyCapOverridden: i
-} = (0, o.cj)([N.Z], () => ({
-  dailyCapReached: N.Z.hasUserHitDCCap(),
-  dailyCapOverridden: N.Z.dailyCapOverridden
+} = (0, o.cj)([S.Z], () => ({
+  dailyCapReached: S.Z.hasUserHitDCCap(),
+  dailyCapOverridden: S.Z.dailyCapOverridden
 })),
-[E, T] = a.useState(''),
+[E, C] = a.useState(''),
 g = null !== (e = (0, o.e7)([I.Z], () => {
   var e;
   return null === (e = I.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
@@ -117,13 +120,13 @@ children: [
       }),
       (0, n.jsx)(d.FormSwitch, {
         value: i,
-        onChange: S.Nj,
+        onChange: T.Nj,
         children: 'Override Dismissible Content Daily Cap'
       }),
       (0, n.jsxs)(d.FormItem, {
         children: [
           (0, n.jsx)(d.Button, {
-            onClick: () => (0, S.EG)(),
+            onClick: () => (0, T.EG)(),
             children: 'Reset DismissibleContentFrameworkStore'
           }),
           (0, n.jsx)(d.FormText, {
@@ -142,8 +145,8 @@ children: [
         className: A.marginBottom20,
         size: d.SearchBar.Sizes.LARGE,
         query: E,
-        onChange: T,
-        onClear: () => T('')
+        onChange: C,
+        onClear: () => C('')
       }),
       (0, n.jsxs)(d.FormItem, {
         className: m.buttonsContainer,

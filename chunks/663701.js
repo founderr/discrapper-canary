@@ -208,7 +208,7 @@ return t ? (0, i.jsx)(V.PZ, {
   children: (0, i.jsx)(h.NumberBadge, {
     count: a
   })
-}) : (0, i.jsx)(N.Z, {
+}) : (0, i.jsx)(N.ZP, {
   contentTypes: [u.z.FAMILY_CENTER_NEW_BADGE],
   children: e => {
     let {

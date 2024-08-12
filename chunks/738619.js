@@ -109,7 +109,7 @@ function H(e) {
 channel: t,
 guild: n
   } = e;
-  return (0, i.jsx)(v.Z, {
+  return (0, i.jsx)(v.ZP, {
 contentTypes: [],
 children: e => {
   let {

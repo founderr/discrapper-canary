@@ -101,7 +101,7 @@ R.Z.isEditorOpen,
 R.Z.isUpsellPreview
   ]), ec = (0, c.e7)([Z.Z], () => Z.Z.getLayers().includes(et.S9g.USER_SETTINGS)), ed = (0, c.e7)([Y.default], () => K.ZP.canUseClientThemes(Y.default.getCurrentUser())), e_ = ee && !ec, eE = [];
   e_ && es && !ed && eE.push(d.z.CLIENT_THEMES_COACHMARK);
-  let [ef, eh] = (0, U.U)(eE, en.R.SIDEBAR, !0);
+  let [ef, eh] = (0, U.US)(eE, en.R.SIDEBAR, !0);
   eE.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
   let ep = ef === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
 em = ef === d.z.CLIENT_THEMES_COACHMARK;

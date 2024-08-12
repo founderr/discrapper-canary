@@ -159,7 +159,7 @@ location: 'ChannelPremiumGiftButton'
 autoTrackExposure: M
   }), U = [];
   P && M && U.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
-  let [x, G] = (0, h.U)(U), k = null != x, F = (0, v.Ft)(n), V = null != F;
+  let [x, G] = (0, h.US)(U), k = null != x, F = (0, v.Ft)(n), V = null != F;
   if (t)
 return null;
   let H = () => {

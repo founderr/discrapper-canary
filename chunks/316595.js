@@ -31,7 +31,7 @@ setTimeout(() => (0, o.EW)(l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
   dismissAction: d.L.AUTO_DISMISS
 }), 10000);
   };
-  return (0, i.jsx)(c.Z, {
+  return (0, i.jsx)(c.ZP, {
 contentTypes: f,
 children: e => {
   let {

@@ -21,7 +21,7 @@ var s = n(704215),
   f = n(306220);
 
 function _() {
-  let [e, t] = (0, l.c)([s.z.OVERLAY_KEYBIND_NOTIFICATION]), {
+  let [e, t] = (0, l.cv)([s.z.OVERLAY_KEYBIND_NOTIFICATION]), {
 showKeybindIndicators: n
   } = d.Z.useExperiment({
 location: 'Overlay'

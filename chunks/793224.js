@@ -87,7 +87,7 @@ D = e => (0, i.jsx)(Z.Z, {
 w = e => (0, i.jsx)(h.Z, {
   markAsDismissed: e
 });
-  return (0, i.jsx)(f.Z, {
+  return (0, i.jsx)(f.ZP, {
 contentTypes: P,
 bypassAutoDismiss: !0,
 children: e => {

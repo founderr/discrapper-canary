@@ -100,7 +100,7 @@ let C = (0, i.jsx)(b.ZP.Icon, {
   tooltip: _,
   tooltipColor: e
 });
-return (0, i.jsx)(f.Z, {
+return (0, i.jsx)(f.ZP, {
   contentTypes: d,
   children: e => {
     let {

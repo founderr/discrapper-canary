@@ -16,7 +16,7 @@ function p(e) {
 t.Z = a.memo(function() {
   return ! function() {
 let e = (0, s.e7)([u.Z], () => u.Z.isConnected()) ? [] : [],
-  [t, m] = (0, c.U)(e, h.R.GUILD_TAKEOVER_MODAL),
+  [t, m] = (0, c.US)(e, h.R.GUILD_TAKEOVER_MODAL),
   _ = (0, r.f9)(),
   f = a.useRef(null);
 a.useEffect(() => {

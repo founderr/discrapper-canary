@@ -40,7 +40,7 @@ children: (0, i.jsx)(l.Z, {
           id: n,
           children: I.Z.Messages.GAME_FEED_CURRENT_HEADER_TITLE
         }),
-        (0, i.jsx)(u.Z, {
+        (0, i.jsx)(u.ZP, {
           contentTypes: t,
           children: e => {
             let {

@@ -55,7 +55,7 @@ function m() {
 }, {
   autoTrackExposure: !0
 }),
-[n] = (0, o.c)([r.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]);
+[n] = (0, o.cv)([r.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]);
   return (0, i.jsx)(i.Fragment, {
 children: e.enabled && e.nestedEntry && n === r.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE && (0, i.jsx)(u.TextBadge, {
   className: g.newBadge,
@@ -81,7 +81,7 @@ P = I.Y.useExperiment({
 {
   playSound: b
 } = (0, A.Z)(),
-[L, F] = (0, o.c)([r]),
+[L, F] = (0, o.cv)([r]),
 V = L === r;
   if (a.useEffect(() => () => {
   y && F(C.L.TAKE_ACTION);

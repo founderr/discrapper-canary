@@ -284,7 +284,7 @@ eu({
   }, [
 et,
 eu
-  ]), ef = (0, j.$R)(t), eE = n.hasFlag(J.iLy.CROSSPOSTED), [eg, eC] = (0, _.c)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), eI = eg === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [ex, eT] = a.useState(!1), eN = a.useCallback(() => {
+  ]), ef = (0, j.$R)(t), eE = n.hasFlag(J.iLy.CROSSPOSTED), [eg, eC] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), eI = eg === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [ex, eT] = a.useState(!1), eN = a.useCallback(() => {
 eT(!0);
   }, []), ev = a.useCallback(() => {
 eT(!1);

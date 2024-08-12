@@ -2,6 +2,12 @@ n.d(t, {
   BU: function() {
 return y;
   },
+  Bn: function() {
+return L;
+  },
+  C9: function() {
+return M;
+  },
   DZ: function() {
 return O;
   },
@@ -15,7 +21,7 @@ return A;
 return R;
   },
   bE: function() {
-return M;
+return U;
   },
   fy: function() {
 return m.fy;
@@ -27,10 +33,10 @@ return v;
 return D;
   },
   sr: function() {
-return b;
+return P;
   },
   w9: function() {
-return L;
+return b;
   }
 }), n(411104), n(47120), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
 var r = n(512722),
@@ -315,7 +321,15 @@ t.dismissedContents = (0, E.GV)(t.dismissedContents, e);
   }, m.fy.INFREQUENT_USER_ACTION);
 }
 
-function L(e) {
+function L(e, t) {
+  return v.updateAsync('userContent', n => {
+null == n.recurringDismissibleContentStates[e] ? n.recurringDismissibleContentStates[e] = {
+  lastDismissedVersion: t
+} : n.recurringDismissibleContentStates[e].lastDismissedVersion = t;
+  }, m.fy.INFREQUENT_USER_ACTION);
+}
+
+function b(e) {
   return v.updateAsync('userContent', t => {
 if (!(0, E.jl)(t.dismissedContents, e))
   return !1;
@@ -323,13 +337,21 @@ t.dismissedContents = (0, E.jx)(t.dismissedContents, e);
   }, m.fy.INFREQUENT_USER_ACTION);
 }
 
-function b() {
-  return v.updateAsync('userContent', e => {
-e.dismissedContents = new Uint8Array();
+function M(e) {
+  return v.updateAsync('userContent', t => {
+if (null == t.recurringDismissibleContentStates[e])
+  return !1;
+t.recurringDismissibleContentStates[e].lastDismissedVersion = 0;
   }, m.fy.INFREQUENT_USER_ACTION);
 }
 
-function M() {
+function P() {
+  return v.updateAsync('userContent', e => {
+e.dismissedContents = new Uint8Array(), e.recurringDismissibleContentStates = {};
+  }, m.fy.INFREQUENT_USER_ACTION);
+}
+
+function U() {
   return v.updateAsync('userContent', e => {
 let t = new Uint8Array();
 for (let e of Object.keys(o.z))

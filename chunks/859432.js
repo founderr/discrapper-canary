@@ -119,7 +119,7 @@ eE = b.Y.useExperiment({
 }, {
   autoTrackExposure: !0
 }).enabled,
-[eI] = (0, g.c)([r.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
+[eI] = (0, g.cv)([r.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
 e_ = eE && eI === r.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
   return J || Q ? (0, a.jsx)(d.Menu, {
 onSelect: A,

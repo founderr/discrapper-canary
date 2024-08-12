@@ -47,7 +47,7 @@ T
   let N = m !== d.C5.DEFAULT && (null == T ? void 0 : T.id) !== t.id && !g && !(null != I && I !== n),
 v = N && (null == T ? void 0 : T.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
 O = N && null != S && null == S.profileEffectId && (null == A ? void 0 : A.profileEffectId) != null,
-[R, C] = (0, _.U)((v, []), void 0, !0);
+[R, C] = (0, _.US)((v, []), void 0, !0);
   return {
 shouldShow: R === o.z.SHOP_FOR_ALL_USER_POPOUT_UPSELL,
 canShowAvatarDecorationUpsell: v,

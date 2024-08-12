@@ -218,7 +218,7 @@ let t = (0, B.Z)(),
   s = (0, c.e7)([g.Z], () => g.Z.useReducedMotion);
 return a.useEffect(() => {
   (0, N.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
-}, []), (0, i.jsx)(A.Z, {
+}, []), (0, i.jsx)(A.ZP, {
   contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
   children: a => {
     let {
