@@ -50,7 +50,7 @@ children: [
   }) : null,
   (0, t.jsx)(a.Heading, {
     variant: 'text-sm/semibold',
-    className: i()(f.textSecondary, f.truncatedText),
+    className: i()(f.textSecondary, f.truncatedText, f.usersHeader),
     children: m.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS.format({
       user1: o.ZP.getName(l.guild_id, l.id, h[0]),
       user2: o.ZP.getName(l.guild_id, l.id, h[1]),
