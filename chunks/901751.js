@@ -58,7 +58,29 @@ function L(e) {
 (i = r || (r = {})).BEAT = 'BEAT', i.STOP = 'STOP', i.BEAT_TERMINAL = 'BEAT_TERMINAL';
 
 function b(e) {
-  let t = {
+  let t = function(e) {
+let t, n;
+for (let [e, n] of p.Z.quests)
+  if ((0, m.KM)(n)) {
+    t = n;
+    break;
+  }
+if (null == t)
+  return;
+for (let t of o.ZP.getSelfEmbeddedActivities().values())
+  if (null == e || t.channelId === e) {
+    n = t;
+    break;
+  }
+if (null != n)
+  return {
+    quest: t,
+    activity: n
+  };
+  }(e);
+  if (null != t)
+return t;
+  let n = {
 quest: null,
 activity: null
   };
@@ -66,23 +88,23 @@ activity: null
   location: S.dr.QUESTS_MANAGER,
   autoTrackExposure: !1
 }))
-return t;
-  for (let r of o.ZP.getSelfEmbeddedActivities().values()) {
-var n;
-if (null != e && r.channelId !== e)
+return n;
+  for (let t of o.ZP.getSelfEmbeddedActivities().values()) {
+var r;
+if (null != e && t.channelId !== e)
   continue;
-let i = null !== (n = (0, m.lQ)(p.Z.quests, r.applicationId)) && void 0 !== n ? n : null;
+let i = null !== (r = (0, m.lQ)(p.Z.quests, t.applicationId)) && void 0 !== r ? r : null;
 if (null != i && L(i))
   return {
     quest: i,
-    activity: r
+    activity: t
   };
-t = {
+n = {
   quest: null,
-  activity: r
+  activity: t
 };
   }
-  return t;
+  return n;
 }
 class M extends s.Z {
   constructor(...e) {
@@ -114,11 +136,10 @@ super(...e), N(this, 'streamKeyToHeartbeatState', new Map()), N(this, 'initiateH
           quest: E,
           activity: f
         } = b(),
-        h = null == E ? void 0 : E.config,
-        I = null != h && (null == E ? void 0 : E.id) === n && g.r.build(h).application.id === i && s && (null == f ? void 0 : f.channelId) === a,
-        T = l.ZP.getRunningGames().map(e => e.id),
-        S = (0, m.$H)(o) && T.includes(i);
-      return _ || I || S ? 'BEAT' : 'BEAT_TERMINAL';
+        h = null != (null == E ? void 0 : E.config) && (null == E ? void 0 : E.id) === n && (0, m.UZ)(i, E) && (null == f ? void 0 : f.channelId) === a,
+        I = l.ZP.getRunningGames().map(e => e.id),
+        T = (0, m.$H)(o) && I.includes(i);
+      return _ || h || T ? 'BEAT' : 'BEAT_TERMINAL';
     }({
       questId: t,
       streamKey: n,
@@ -315,7 +336,7 @@ super(...e), N(this, 'streamKeyToHeartbeatState', new Map()), N(this, 'initiateH
   let {
     quest: t,
     activity: n
-  } = b(e), r = C(e), i = (null == n || null == t) && this.streamKeyToHeartbeatState.has(r), a = null != n && null != t && L(t) && D(e) && !this.streamKeyToHeartbeatState.has(r);
+  } = b(e), r = C(e), i = (null == n || null == t) && this.streamKeyToHeartbeatState.has(r), a = null != n && null != t && L(t) && !this.streamKeyToHeartbeatState.has(r);
   i ? this.terminateHeartbeat({
     streamKey: r,
     sendTerminalHeartbeat: !0
