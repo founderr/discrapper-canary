@@ -34,7 +34,7 @@ type: i.J.REMINDER,
 function c(e, t) {
   a.Z.dispatch({
 type: 'MESSAGE_REMINDER_TOGGLE',
-messageId: e,
+savedMessageData: e,
 complete: t
   });
 }

@@ -26,7 +26,7 @@ showReminders: n
 location: 'use_message_reminders_item'
   }, {
 autoTrackExposure: !1
-  }), t = (0, r.e7)([s.Z], () => s.Z.isMessageReminder(e.id)), a = m(e, n => (0, u.HG)({
+  }), t = (0, r.e7)([s.Z], () => s.Z.isMessageReminder(e.channel_id, e.id)), a = m(e, n => (0, u.HG)({
 channelId: e.channel_id,
 messageId: e.id,
 dueAt: l()().add(n, 'millisecond').toDate()

@@ -1,98 +1,122 @@
-n(47120), n(733860);
+n(47120);
 var r, i, a, s, o = n(873011),
   l = n(442837),
-  u = n(570140);
-let c = [],
-  d = [],
+  u = n(759174),
+  c = n(570140);
+let d = new u.h(e => {
+let {
+  saveData: t
+} = e;
+return [t.type.toString()];
+  }, e => {
+let {
+  saveData: t
+} = e;
+return -t.savedAt.getTime();
+  }),
   _ = 0,
   E = new Set();
-class f extends(r = l.ZP.Store) {
+
+function f(e) {
+  let {
+channelId: t,
+messageId: n
+  } = e;
+  return ''.concat(t, '-').concat(n);
+}
+class h extends(r = l.ZP.Store) {
   initialize() {}
+  getSavedMessages() {
+return d.values();
+  }
   getMessageBookmarks() {
-return c;
+return d.values(o.J.BOOKMARK.toString());
   }
   getMessageReminders() {
-return d;
+return d.values(o.J.REMINDER.toString());
   }
   getOverdueMessageReminderCount() {
-return d.filter(e => null == e.saveData.dueAt || new Date() > e.saveData.dueAt).length;
+return this.getMessageReminders().filter(e => {
+  let {
+    saveData: t
+  } = e;
+  return null == t.dueAt || new Date() > t.dueAt;
+}).length;
   }
   getLastFetched() {
 return _;
   }
-  isMessageBookmarked(e) {
-return null != c.find(t => t.saveData.messageId === e);
+  isMessageBookmarked(e, t) {
+let n = d.get(f({
+  channelId: e,
+  messageId: t
+}));
+return (null == n ? void 0 : n.saveData.type) === o.J.BOOKMARK;
   }
-  isMessageReminder(e) {
-return null != d.find(t => t.saveData.messageId === e);
+  isMessageReminder(e, t) {
+let n = d.get(f({
+  channelId: e,
+  messageId: t
+}));
+return (null == n ? void 0 : n.saveData.type) === o.J.REMINDER;
   }
   hasSentNotification(e) {
 return E.has(e);
   }
+  getVersion() {
+return d.version;
+  }
   getState() {
 return {
-  messageBookmarks: c,
-  messageReminders: d
+  savedMessages: d
 };
   }
 }
-s = 'SavedMessagesStore', (a = 'displayName') in(i = f) ? Object.defineProperty(i, a, {
+s = 'SavedMessagesStore', (a = 'displayName') in(i = h) ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new f(u.Z, {
+}) : i[a] = s, t.Z = new h(c.Z, {
   SAVED_MESSAGES_UPDATE: function(e) {
 let {
   savedMessages: t
 } = e;
-_ = new Date().getTime();
-let n = t.sort((e, t) => t.saveData.savedAt.getTime() - e.saveData.savedAt.getTime());
-c = n.filter(e => e.saveData.type === o.J.BOOKMARK), (d = n.filter(e => e.saveData.type === o.J.REMINDER).map(e => ({
-  ...e,
-  complete: !1
-}))).forEach(e => {
-  null != e.saveData.dueAt && e.saveData.dueAt > new Date() && E.delete(e.saveData.messageId), null != e.saveData.dueAt && e.saveData.dueAt < new Date() && E.add(e.saveData.messageId);
+for (let e of (_ = new Date().getTime(), d.clear(), t))
+  d.set(f(e.saveData), e.saveData.type === o.J.REMINDER ? {
+    ...e,
+    complete: !1
+  } : e);
+t.forEach(e => {
+  e.saveData.type === o.J.REMINDER && (null != e.saveData.dueAt && e.saveData.dueAt > new Date() && E.delete(e.saveData.messageId), null != e.saveData.dueAt && e.saveData.dueAt < new Date() && E.add(e.saveData.messageId));
 });
   },
   SAVED_MESSAGE_CREATE: function(e) {
 let {
   savedMessage: t
 } = e;
-switch (t.saveData.type) {
-  case o.J.BOOKMARK:
-    (c = c.filter(e => e.saveData.messageId !== t.saveData.messageId)).unshift(t);
-    break;
-  case o.J.REMINDER:
-    (d = d.filter(e => e.saveData.messageId !== t.saveData.messageId)).unshift({
-      ...t,
-      complete: !1
-    });
-}
+d.set(f(t.saveData), t.saveData.type === o.J.REMINDER ? {
+  ...t,
+  complete: !1
+} : t);
   },
   SAVED_MESSAGE_DELETE: function(e) {
 let {
   savedMessageData: t
 } = e;
-switch (t.type) {
-  case o.J.BOOKMARK:
-    c = c.filter(e => e.saveData.messageId !== t.messageId);
-    break;
-  case o.J.REMINDER:
-    d = d.filter(e => e.saveData.messageId !== t.messageId);
-}
+d.delete(f(t));
   },
   MESSAGE_REMINDER_TOGGLE: function(e) {
 let {
-  messageId: t,
+  savedMessageData: t,
   complete: n
-} = e, r = d.findIndex(e => e.saveData.messageId === t);
-if (-1 === r)
+} = e, r = f(t), i = d.get(r);
+if (null == i)
   return !1;
-(d = [...d])[r] = {
-  ...d[r],
+d.set(r, {
+  ...i,
   complete: n
-};
+});
   },
   MESSAGE_REMINDER_NOTIFIED: function(e) {
 let {

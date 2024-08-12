@@ -233,8 +233,8 @@ let Y = (0, G.a4)(n),
     autoTrackExposure: !1
   }),
   [el, er] = (0, c.Wu)([M.Z], () => [
-    M.Z.isMessageReminder(n.id),
-    M.Z.isMessageBookmarked(n.id)
+    M.Z.isMessageReminder(t.id, n.id),
+    M.Z.isMessageBookmarked(t.id, n.id)
   ]),
   eo = (0, Q.Z)(),
   ec = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled);

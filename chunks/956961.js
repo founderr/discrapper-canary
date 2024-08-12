@@ -38,7 +38,7 @@ function M(e) {
   let {
 setTab: t,
 closePopout: n
-  } = e, s = (0, c.Wu)([m.Z], () => m.Z.getMessageReminders());
+  } = e, s = (0, c.e7)([m.Z], () => m.Z.getMessageReminders());
   a.useEffect(() => () => {
 (0, T.Mf)();
   }, []);
@@ -149,7 +149,7 @@ children: [
           type: d.Checkbox.Types.INVERTED,
           value: s,
           onChange: (e, t) => {
-            (0, T.Y_)(l.messageId, t);
+            (0, T.Y_)(l, t);
           }
         })
       ]

@@ -34,10 +34,7 @@ savedMessage: {
 }
 async function d(e) {
   (await r.tn.del({
-url: u.ANM.DELETE_SAVED_MESSAGE(e.channelId, e.messageId),
-body: {
-  type: e.type
-}
+url: u.ANM.DELETE_SAVED_MESSAGE(e.channelId, e.messageId)
   })).ok && i.Z.dispatch({
 type: 'SAVED_MESSAGE_DELETE',
 savedMessageData: e

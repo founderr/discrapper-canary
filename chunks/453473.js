@@ -53,18 +53,16 @@ closePopout: t
   } = e, n = (0, d.e7)([g.Z], () => {
 var e, t;
 return null !== (t = null === (e = g.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : _.Pr.ALL;
-  }), s = (0, d.Wu)([
+  }), [s] = (0, d.Wu)([
 R.Z,
 g.Z
   ], () => {
 var e, t;
-let n = R.Z.getMessageReminders(),
-  i = R.Z.getMessageBookmarks(),
-  a = null !== (t = null === (e = g.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : _.Pr.ALL;
-return a === _.Pr.ALL ? [
-  ...n,
-  ...i
-] : a === _.Pr.BOOKMARKS ? i : n;
+let n = null !== (t = null === (e = g.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : _.Pr.ALL;
+return [
+  n === _.Pr.ALL ? R.Z.getSavedMessages() : n === _.Pr.BOOKMARKS ? R.Z.getMessageBookmarks() : R.Z.getMessageReminders(),
+  R.Z.getVersion()
+];
   }), r = (0, d.e7)([R.Z], () => R.Z.getOverdueMessageReminderCount()), [l, o] = a.useState(new Date());
   return a.useEffect(() => {
 let e = setInterval(() => o(new Date()), A.Z.Millis.MINUTE);
@@ -287,7 +285,7 @@ return (0, i.jsxs)(i.Fragment, {
     (0, i.jsx)(h.sF, {
       label: Z.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
       icon: E.CheckmarkLargeIcon,
-      onClick: () => (0, O.Y_)(t.saveData.messageId, !t.complete)
+      onClick: () => (0, O.Y_)(t.saveData, !t.complete)
     }, 'mark-complete'),
     e ? (0, i.jsx)(h.sF, {
       label: Z.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
