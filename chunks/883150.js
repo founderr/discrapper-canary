@@ -1,6 +1,6 @@
 a.r(n), a.d(n, {
   default: function() {
-return u;
+return _;
   }
 });
 var s = a(735250);
@@ -13,7 +13,7 @@ var i = a(913527),
   E = a(962796),
   o = a(689938);
 
-function u(e) {
+function _(e) {
   let {
 message: n
   } = e, a = (0, r.W)(n, e => (0, E.HG)({

@@ -1,73 +1,73 @@
-i.d(n, {
+n.d(t, {
   Np: function() {
-return d;
+return c;
   },
   l8: function() {
-return r;
-  },
-  mc: function() {
 return l;
   },
+  mc: function() {
+return o;
+  },
   so: function() {
-return c;
+return r;
   }
 });
-var t = i(735250);
-i(470079);
-var o = i(481060),
-  a = i(822869);
-let c = 'forward-modal';
+var i = n(735250);
+n(470079);
+var a = n(481060),
+  s = n(822869);
+let r = 'forward-modal';
 
-function r(e) {
+function l(e) {
   let {
-messageId: n,
-channelId: r,
-source: l,
-initialSelectedDestinations: d = [],
-forwardOptions: s,
-onRequestSent: u
+messageId: t,
+channelId: l,
+source: o,
+initialSelectedDestinations: c = [],
+forwardOptions: u,
+onRequestSent: d
   } = e;
-  (0, a.Lb)(r, n, l), (0, o.openModalLazy)(async () => {
+  (0, s.Lb)(l, t, o), (0, a.openModalLazy)(async () => {
 let {
   ForwardModal: e
 } = await Promise.all([
-  i.e('6380'),
-  i.e('89900')
-]).then(i.bind(i, 930864));
-return i => (0, t.jsx)(e, {
-  ...i,
-  channelId: r,
-  messageId: n,
-  initialSelectedDestinations: d,
-  forwardOptions: s,
-  onRequestSent: u
+  n.e('6380'),
+  n.e('89900')
+]).then(n.bind(n, 930864));
+return n => (0, i.jsx)(e, {
+  ...n,
+  channelId: l,
+  messageId: t,
+  initialSelectedDestinations: c,
+  forwardOptions: u,
+  onRequestSent: d
 });
   }, {
-modalKey: c
+modalKey: r
   });
 }
 
-function l() {
-  (0, o.closeModal)(c);
+function o() {
+  (0, a.closeModal)(r);
 }
 
-function d(e) {
+function c(e) {
   let {
-messageId: n,
-channelId: a,
-failedDestinations: c,
-forwardOptions: r
+messageId: t,
+channelId: s,
+failedDestinations: r,
+forwardOptions: l
   } = e;
-  (0, o.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
 let {
   ForwardFailedAlertModal: e
-} = await i.e('86590').then(i.bind(i, 384331));
-return i => (0, t.jsx)(e, {
-  ...i,
-  messageId: n,
-  channelId: a,
-  failedDestinations: c,
-  forwardOptions: r
+} = await n.e('86590').then(n.bind(n, 384331));
+return n => (0, i.jsx)(e, {
+  ...n,
+  messageId: t,
+  channelId: s,
+  failedDestinations: r,
+  forwardOptions: l
 });
   });
 }

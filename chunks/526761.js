@@ -4,7 +4,7 @@ r.d(e, {
 return I;
   },
   GA: function() {
-return L;
+return f;
   },
   JC: function() {
 return C;
@@ -16,7 +16,7 @@ return h;
 return n;
   },
   XZ: function() {
-return f;
+return L;
   },
   Y_: function() {
 return a;
@@ -58,8 +58,8 @@ return s;
 let S = 250,
   p = 762880,
   D = 'ROLE_SUBSCRIPTIONS',
-  f = 'APPLICATION_SUBSCRIPTION_SUBSECTION',
-  L = 'SOUNDBOARD_SUBSECTION';
+  L = 'APPLICATION_SUBSCRIPTION_SUBSECTION',
+  f = 'SOUNDBOARD_SUBSECTION';
 (T = n || (n = {})).USER_PROFILE = 'user_profile', T.GUILD = 'guild', T.TRY_IT_OUT = 'try_it_out', (_ || (_ = {})).CUSTOM_APP_ICONS = 'custom_app_icon', (a || (a = {})).TRY_IT_OUT = 'try_it_out', (u = i || (i = {})).REDUCED_MOTION = 'reduced_motion', u.SYNC_PROFILE_THEME_WITH_USER_THEME = 'sync_profile_theme_with_user_theme', u.LEGACY_CHAT_INPUT = 'legacy_chat_input', (o || (o = {})).HARDWARE_ACCELERATION = 'hardware_acceleration', (l = E || (E = {})).DM_SAFETY_ALERTS = 'dm_safety_alerts', l.MESSAGE_REQUESTS = 'message_requests', l.EXPLICIT_MEDIA_REDACTION = 'explicit_media_redaction';
 let h = {
   ProfileCustomizationScrollPositions: a,

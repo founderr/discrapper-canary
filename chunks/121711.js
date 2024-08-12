@@ -7,7 +7,7 @@ var i = n(735250),
   o = n(410030),
   c = n(213609),
   d = n(252618),
-  u = n(212476),
+  u = n(979233),
   _ = n(374939),
   h = n(611928),
   E = n(791734),
@@ -29,7 +29,7 @@ onSelectTab: L
   } = (0, S.z)(), {
 onScroll: O,
 scrollPosition: R
-  } = (0, u.c)(), x = (0, o.ZP)(), b = (0, r.wj)(x), {
+  } = (0, u.M)(), x = (0, o.ZP)(), b = (0, r.wj)(x), {
 quests: P,
 isFetchingCurrentQuests: M
   } = (0, I.bA)(Z), D = (0, T.Z)(), y = null;

@@ -29,8 +29,8 @@ var a = t(374470),
   A = t(6148),
   T = t(519110),
   O = t(759875),
-  R = t(168405),
-  h = t(536639),
+  h = t(168405),
+  R = t(536639),
   N = t(720904),
   p = t(88791),
   x = t(235047),
@@ -108,11 +108,11 @@ onClose: q,
 navId: J,
 ariaLabel: $,
 shouldHideMediaOptions: Q = !1
-  } = e, ee = (0, u.Z)(r), en = (0, E.Z)(r), et = (0, N.Z)(n, t), ei = (0, _.Z)(n, t), ea = (0, A.Z)(n, t), el = (0, h.Z)(n, t), er = (0, T.Z)({
+  } = e, ee = (0, u.Z)(r), en = (0, E.Z)(r), et = (0, N.Z)(n, t), ei = (0, _.Z)(n, t), ea = (0, A.Z)(n, t), el = (0, R.Z)(n, t), er = (0, T.Z)({
 type: w,
 id: F,
 name: K
-  }), eo = (0, L.Z)(n, t), es = (0, R.Z)(n, t), eu = (0, p.Z)(n), ed = (0, f.Z)(n, t), ec = (0, Z.Z)(n, t), eE = (0, C.Z)(n, t), eM = (0, b.Z)(n, t), eI = (0, v.Z)(n, t), em = (0, P.Z)(n), e_ = (0, D.Z)(n, t), eg = (0, c.Z)(null != V ? V : H, z, n, {
+  }), eo = (0, L.Z)(n, t), es = (0, h.Z)(n, t), eu = (0, p.Z)(n), ed = (0, f.Z)(n, t), ec = (0, Z.Z)(n, t), eE = (0, C.Z)(n, t), eM = (0, b.Z)(n, t), eI = (0, v.Z)(n, t), em = (0, P.Z)(n), e_ = (0, D.Z)(n, t), eg = (0, c.Z)(null != V ? V : H, z, n, {
 shouldHideMediaOptions: Q
   }), ef = (0, d.Z)(X, n, {
 shouldHideMediaOptions: Q
@@ -120,7 +120,7 @@ shouldHideMediaOptions: Q
 id: n.id,
 label: k.Z.Messages.COPY_ID_MESSAGE,
 shiftId: ''.concat(n.channel_id, '-').concat(n.id)
-  }), ev = (0, j.Z)(n, t), eA = (0, O.Z)(n, t), eT = (0, G.Z)(n, t), eO = (0, m.Z)(r, t.getGuildId()), eR = (0, x.Z)(n), eh = (0, g.Z)(n), eN = (0, S.Z)(n), ep = (0, I.Z)({
+  }), ev = (0, j.Z)(n, t), eA = (0, O.Z)(n, t), eT = (0, G.Z)(n, t), eO = (0, m.Z)(r, t.getGuildId()), eh = (0, x.Z)(n), eR = (0, g.Z)(n), eN = (0, S.Z)(n), ep = (0, I.Z)({
 commandType: o.yU.MESSAGE,
 commandTargetId: n.id,
 channel: t,
@@ -154,8 +154,8 @@ children: [
       ep,
       eo,
       es,
-      eh,
       eR,
+      eh,
       ed,
       ec,
       e_,

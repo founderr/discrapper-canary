@@ -1,6 +1,6 @@
-var i, o;
+var i, a;
 n.d(t, {
   I: function() {
 return i;
   }
-}), (o = i || (i = {})).APP_LAUNCHER_TEXT = 'app_launcher_text', o.CONTEXTUAL_IMAGE = 'contextual_image';
+}), (a = i || (i = {})).APP_LAUNCHER_TEXT = 'app_launcher_text', a.CONTEXTUAL_IMAGE = 'contextual_image';

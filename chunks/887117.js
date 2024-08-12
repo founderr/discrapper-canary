@@ -12,7 +12,7 @@ return d._;
 return l.gE;
   },
   Dedupe: function() {
-return L.I;
+return f.I;
   },
   FunctionToString: function() {
 return _.cq;
@@ -21,7 +21,7 @@ return _.cq;
 return O.d;
   },
   HttpContext: function() {
-return f.q;
+return L.q;
   },
   Hub: function() {
 return _.Xb;
@@ -224,8 +224,8 @@ var n = r(89837),
   S = r(382078),
   p = r(124969),
   D = r(140735),
-  f = r(612568),
-  L = r(683900);
+  L = r(612568),
+  f = r(683900);
 let h = {};
 a.m9.Sentry && a.m9.Sentry.Integrations && (h = a.m9.Sentry.Integrations);
 let C = {

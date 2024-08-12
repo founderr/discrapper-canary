@@ -30,7 +30,7 @@ saveRule: v,
 errorMessage: A
   } = (0, c.w)(), {
 createNewEditingRule: T
-  } = (0, c.V)(), [O, R] = a.useState(!1), [h, N] = (0, s.I2)(n), {
+  } = (0, c.V)(), [O, h] = a.useState(!1), [R, N] = (0, s.I2)(n), {
 rulesByTriggerType: p,
 updateRule: x
   } = (0, s.pH)(n), C = a.useMemo(() => {
@@ -79,7 +79,7 @@ G = async n => {
     label: g.Z.Messages.LOADING
   })
 });
-  return !h && (U = (0, i.jsxs)(i.Fragment, {
+  return !R && (U = (0, i.jsxs)(i.Fragment, {
 children: [
   b && (0, i.jsx)(l.MenuItem, {
     id: 'add-first-rule',
@@ -134,7 +134,7 @@ label: g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION.format({
 }),
 onFocus: () => {
   if (!O)
-    R(!0), N();
+    h(!0), N();
 },
 children: U
   });

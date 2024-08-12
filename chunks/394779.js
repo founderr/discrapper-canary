@@ -1,62 +1,62 @@
-i.d(n, {
+n.d(t, {
   s: function() {
-return h;
+return T;
   }
 });
-var t = i(735250),
-  o = i(470079),
-  a = i(120356),
-  c = i.n(a),
-  r = i(481060),
-  l = i(346610),
-  d = i(868643),
-  s = i(912332),
-  u = i(503349),
-  _ = i(689938),
-  f = i(691523);
+var i = n(735250),
+  a = n(470079),
+  s = n(120356),
+  r = n.n(s),
+  l = n(481060),
+  o = n(346610),
+  c = n(868643),
+  u = n(912332),
+  d = n(503349),
+  _ = n(689938),
+  E = n(691523);
 
-function m() {
-  (0, r.closeModal)(u.c);
+function I() {
+  (0, l.closeModal)(d.c);
 }
 
-function I(e) {
+function m(e) {
   let {
-className: n,
-channelId: i,
-messageId: a,
-target: l
-  } = e, d = o.useCallback(() => {
-if ('embed' === l.type) {
-  (0, s.l8)({
-    messageId: a,
-    channelId: i,
+className: t,
+channelId: n,
+messageId: s,
+target: o
+  } = e, c = a.useCallback(() => {
+if ('embed' === o.type) {
+  (0, u.l8)({
+    messageId: s,
+    channelId: n,
     source: 'media-viewer',
     forwardOptions: {
-      onlyEmbedIndices: [l.embedIndex]
+      onlyEmbedIndices: [o.embedIndex]
     },
-    onRequestSent: m
+    onRequestSent: I
   });
   return;
 }
-(0, s.l8)({
-  messageId: a,
-  channelId: i,
+(0, u.l8)({
+  messageId: s,
+  channelId: n,
   source: 'media-viewer',
   forwardOptions: {
-    onlyAttachmentIds: [l.attachmentId]
+    onlyAttachmentIds: [o.attachmentId]
   },
-  onRequestSent: m
+  onRequestSent: I
 });
   }, [
-i,
-a,
-l
+n,
+s,
+o
   ]);
-  return (0, t.jsx)(r.Clickable, {
-className: c()(f.container, n),
-onClick: d,
-children: (0, t.jsx)(r.Text, {
-  className: f.text,
+  return (0, i.jsx)(l.Clickable, {
+className: r()(E.container, t),
+onClick: c,
+children: (0, i.jsx)(l.Text, {
+  className: E.text,
   variant: 'text-sm/medium',
   color: 'always-white',
   children: _.Z.Messages.MESSAGE_ACTION_FORWARD
@@ -64,23 +64,23 @@ children: (0, t.jsx)(r.Text, {
   });
 }
 
-function h(e, n) {
+function T(e, t) {
   let {
-canForwardMessages: i
-  } = (0, l.WT)({
+canForwardMessages: n
+  } = (0, o.WT)({
 location: 'ForwardLink'
   }, {
 autoTrackExposure: !1
   });
-  return i && (0, d.h)(e) ? i => {
+  return n && (0, c.h)(e) ? n => {
 let {
-  className: o
-} = i;
-return (0, t.jsx)(I, {
-  className: o,
+  className: a
+} = n;
+return (0, i.jsx)(m, {
+  className: a,
   channelId: e.channel_id,
   messageId: e.id,
-  target: n
+  target: t
 });
   } : () => null;
 }

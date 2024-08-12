@@ -24,8 +24,8 @@ var l, r = n(735250),
   x = n(400266),
   y = n(592125),
   I = n(52824),
-  _ = n(626135),
-  w = n(585483),
+  w = n(626135),
+  _ = n(585483),
   C = n(55935),
   S = n(408433),
   E = n(956664),
@@ -67,7 +67,7 @@ renderForwardComponent: f = N.VqG,
 playable: v = !0,
 autoPlay: x = !1,
 autoMute: y,
-volume: _,
+volume: w,
 onPlay: C,
 onPause: S,
 onEnded: M,
@@ -81,10 +81,10 @@ channelId: B,
 placeholder: R,
 placeholderVersion: P
   } = e, [W, O] = i.useState(x), D = null != d && null == d.proxyURL, G = i.useCallback(() => O(!1), [O]), Z = e => {
-e.preventDefault(), e.stopPropagation(), null == C || C(!1), O(!0), D && (w.S.dispatch(N.CkL.VIDEO_EMBED_PLAYBACK_STARTED), w.S.subscribeOnce(N.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G));
+e.preventDefault(), e.stopPropagation(), null == C || C(!1), O(!0), D && (_.S.dispatch(N.CkL.VIDEO_EMBED_PLAYBACK_STARTED), _.S.subscribeOnce(N.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G));
   };
   i.useEffect(() => () => {
-D && w.S.unsubscribe(N.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G);
+D && _.S.unsubscribe(N.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G);
   }, [
 D,
 G
@@ -120,7 +120,7 @@ return (0, r.jsx)('div', {
     onVolumeChange: F,
     playable: v,
     autoMute: y,
-    volume: _,
+    volume: w,
     onPlay: C,
     onPause: S,
     onMute: L,
@@ -519,7 +519,7 @@ if (n) {
       isImageHovered: !0
     });
     let e = y.Z.getChannel(this.props.channelId);
-    _.default.track(N.rMx.IMAGE_HOVERED, {
+    w.default.track(N.rMx.IMAGE_HOVERED, {
       guild_id: null == e ? void 0 : e.guild_id,
       channel_id: null == e ? void 0 : e.id,
       image_recommendations_shown: this.props.showImageRecs
@@ -581,11 +581,11 @@ let g = (0, I.q)(n),
     renderForwardComponent: h
   };
 g in v && (y.onClick = v[g]);
-let _ = n.url.split('.').pop(),
-  w = null != n && !p.u.test(null == n ? void 0 : n.url),
-  C = !0 !== this.props.isSearchResult && t && null != this.props.channelId && void 0 !== this.props.channelId && w && ! function(e) {
+let w = n.url.split('.').pop(),
+  _ = null != n && !p.u.test(null == n ? void 0 : n.url),
+  C = !0 !== this.props.isSearchResult && t && null != this.props.channelId && void 0 !== this.props.channelId && _ && ! function(e) {
     return null != e && (e.width <= A.OF || e.height <= A.OF);
-  }(n) && null != _;
+  }(n) && null != w;
 return (0, r.jsx)(m.h.Consumer, {
   children: t => (0, r.jsx)(T.G.Consumer, {
     children: l => {
@@ -603,7 +603,7 @@ return (0, r.jsx)(m.h.Consumer, {
           return !0 === this.props.showImageRecs && C ? this.renderImageHoverButtons({
             mimeType: [
               'image',
-              _
+              w
             ],
             downloadURL: null !== (e = n.proxyURL) && void 0 !== e ? e : n.url,
             isVisualMediaType: null != n,
