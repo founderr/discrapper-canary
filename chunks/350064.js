@@ -1,23 +1,20 @@
 n.d(t, {
   $: function() {
-return l;
+return o;
   }
 });
 var r = n(470079),
   i = n(566620),
-  a = n(246106),
-  s = n(797398),
-  o = n(513202);
-let l = e => {
+  a = n(175894),
+  s = n(246106);
+let o = e => {
   let {
 userActivity: t,
 inActivity: n
-  } = (0, a.Z)(e.id), l = o.Z;
-  return (0, s.Z)({
+  } = (0, s.Z)(e.id);
+  return (0, a.Z)({
 channel: e,
-userActivity: t,
-inActivity: n,
-embeddedActivitiesManager: l
+userActivity: t
   }), r.useEffect(() => () => {
 (null == t ? void 0 : t.applicationId) != null && (0, i.rp)(e.id, null == t ? void 0 : t.applicationId);
   }, [

@@ -20,12 +20,12 @@ var i, l, r = n(442837),
   d = n(358085),
   s = n(317381),
   p = n(638880),
-  f = n(146936),
+  f = n(122613),
   v = n(619915),
-  h = n(761122),
-  Z = n(361213),
-  _ = n(716600),
-  m = n(952561),
+  Z = n(761122),
+  h = n(361213),
+  m = n(716600),
+  _ = n(952561),
   g = n(778569),
   I = n(701488);
 (l = i || (i = {}))[l.START = 0] = 'START', l[l.JOIN = 1] = 'JOIN', l[l.LEAVE = 2] = 'LEAVE';
@@ -34,42 +34,42 @@ function E(e) {
   let {
 activityItem: t,
 channel: n,
-guildId: i,
-locationObject: l,
-onActivityItemSelected: r,
-embeddedActivitiesManager: o,
-assetNames: u = ['embedded_cover'],
-backgroundResolution: c = 250
+locationObject: i,
+onActivityItemSelected: l,
+embeddedActivitiesManager: r,
+assetNames: o = ['embedded_cover'],
+backgroundResolution: u = 250,
+launchingComponentId: c
   } = e, {
 application: s,
 activity: p
-  } = t, f = p.client_platform_config[(0, h.Z)((0, d.getOS)())], _ = null != f.label_until && Date.now() < Date.parse(f.label_until), m = (0, g.Z)({
+  } = t, f = p.client_platform_config[(0, Z.Z)((0, d.getOS)())], m = null != f.label_until && Date.now() < Date.parse(f.label_until), _ = (0, g.Z)({
 applicationId: s.id,
-size: c,
-names: u
-  }), E = null != p.activity_preview_video_asset_id ? (0, Z.Z)(s.id, p.activity_preview_video_asset_id) : null, b = (0, v.ZP)(n).find(e => {
+size: u,
+names: o
+  }), E = null != p.activity_preview_video_asset_id ? (0, h.Z)(s.id, p.activity_preview_video_asset_id) : null, y = (0, v.ZP)(n).find(e => {
 let {
   embeddedActivity: t
 } = e;
 return s.id === t.applicationId;
-  }), y = A({
+  }), b = A({
 channelId: null == n ? void 0 : n.id,
 applicationId: s.id
   }), C = w({
 applicationId: t.application.id,
 channelId: null == n ? void 0 : n.id,
-guildId: i,
-locationObject: l,
-embeddedActivitiesManager: o,
-onActivityItemSelectedProp: r
-  }), S = t.activity.client_platform_config[(0, h.Z)((0, d.getOS)())].release_phase, T = I.eB.includes(S) ? S.replace('_', ' ').replace(/(^\w|\s\w)/g, e => e.toUpperCase()) : void 0;
+locationObject: i,
+embeddedActivitiesManager: r,
+onActivityItemSelectedProp: l,
+launchingComponentId: c
+  }), S = t.activity.client_platform_config[(0, Z.Z)((0, d.getOS)())].release_phase, T = I.eB.includes(S) ? S.replace('_', ' ').replace(/(^\w|\s\w)/g, e => e.toUpperCase()) : void 0;
   return {
-imageBackground: m,
+imageBackground: _,
 videoUrl: E,
-joinableEmbeddedApp: b,
-activityAction: y,
+joinableEmbeddedApp: y,
+activityAction: b,
 onActivityItemSelected: C,
-labelType: _ ? f.label_type : a.ww.NONE,
+labelType: m ? f.label_type : a.ww.NONE,
 staffReleasePhase: T
   };
 }
@@ -78,7 +78,7 @@ function A(e) {
   let {
 channelId: t,
 applicationId: n
-  } = e, i = 0, l = (0, r.e7)([c.Z], () => c.Z.getChannel(t)), a = (0, _.Z)(), o = (0, m.Z)(), d = (0, u.q)(n), s = (0, v.ZP)(l).find(e => {
+  } = e, i = 0, l = (0, r.e7)([c.Z], () => c.Z.getChannel(t)), a = (0, m.Z)(), o = (0, _.Z)(), d = (0, u.q)(n), s = (0, v.ZP)(l).find(e => {
 let {
   embeddedActivity: t
 } = e;
@@ -91,50 +91,47 @@ function w(e) {
   let {
 applicationId: t,
 channelId: n,
-guildId: i,
-locationObject: l,
-embeddedActivitiesManager: r,
-onActivityItemSelectedProp: a
+locationObject: i,
+embeddedActivitiesManager: l,
+onActivityItemSelectedProp: r,
+launchingComponentId: a
   } = e, u = A({
 channelId: n,
 applicationId: t
-  }), c = (0, m.Z)(), {
-analyticsLocations: d
+  }), {
+analyticsLocations: c
   } = (0, o.ZP)();
   switch (u) {
 case 0:
-  return () => {
-    (0, f.Z)({
+  return async () => {
+    await (0, f.Z)({
       targetApplicationId: t,
-      currentEmbeddedApplication: c,
-      locationObject: l,
-      guildId: i,
+      locationObject: i,
       channelId: n,
-      embeddedActivitiesManager: r,
-      analyticsLocations: d
-    }).then(e => e && (null == a ? void 0 : a({
+      analyticsLocations: c,
+      componentId: a
+    }).then(e => e && (null == r ? void 0 : r({
       applicationId: t
     })));
   };
 case 1:
-  return () => {
-    !s.ZP.isLaunchingActivity() && (0, p.Z)({
+  return async () => {
+    !s.ZP.isLaunchingActivity() && await (0, p.Z)({
       applicationId: t,
-      currentEmbeddedApplication: c,
       activityChannelId: n,
-      locationObject: l,
-      embeddedActivitiesManager: r,
-      analyticsLocations: d
-    }).then(e => e && (null == a ? void 0 : a({
+      locationObject: i,
+      analyticsLocations: c,
+      componentId: a
+    }).then(e => e && (null == r ? void 0 : r({
       applicationId: t
     })));
   };
 case 2:
   return () => {
-    !s.ZP.isLaunchingActivity() && (null != n && r.leaveActivity({
+    !s.ZP.isLaunchingActivity() && (null != n && l.leaveActivity({
       channelId: n,
       applicationId: t
-    }), null == a || a({
+    }), null == r || r({
       applicationId: t
     }));
   };

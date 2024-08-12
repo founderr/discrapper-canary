@@ -60,40 +60,42 @@ p.Z.RULES,
   x = o.w4(v);
 
 function I(e) {
-  var n;
   let {
-channel: t,
-application: i,
-location: a,
-sectionName: l,
-commandName: o
-  } = e, m = (0, s.O)(), p = (0, c.Qv)({
-applicationId: i.id,
-channelId: t.id
-  }), _ = (0, c.w1)({
-applicationId: i.id,
+channel: n,
+application: t,
+location: i,
+sectionName: a,
+commandName: l,
+autoDismissOnClick: o = !0,
+launchingComponentId: m,
+submitting: p = !1
+  } = e, _ = (0, s.O)(), N = (0, c.Qv)({
+applicationId: t.id,
+channelId: n.id
+  }), v = (0, c.w1)({
+applicationId: t.id,
 embeddedActivitiesManager: u.Z,
-channelId: t.id,
-guildId: null !== (n = t.getGuildId()) && void 0 !== n ? n : void 0,
-locationObject: m.location,
+channelId: n.id,
+locationObject: _.location,
 onActivityItemSelectedProp: e => {
   let {
     applicationId: n
   } = e, t = f.Z.entrypoint();
-  C.y(h.ti.ACTIVITY), (0, d.yw)(A.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
-    location: a,
+  o && C.y(h.ti.ACTIVITY), (0, d.yw)(A.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+    location: i,
     application_id: n,
-    section_name: l,
-    action: p,
+    section_name: a,
+    action: N,
     source: t
   });
-}
-  }), N = r.ButtonColors.BRAND, v = null != o ? o : E.Z.Messages.LAUNCH;
-  return p === c.JS.JOIN ? (N = r.ButtonColors.GREEN, v = E.Z.Messages.JOIN_ACTIVITY) : p === c.JS.LEAVE && (N = r.ButtonColors.RED, v = E.Z.Messages.LEAVE), {
-onActivityItemSelected: _,
-activityAction: p,
-buttonColor: N,
-buttonText: v
+},
+launchingComponentId: m
+  }), x = r.ButtonColors.BRAND, I = null != l ? l : E.Z.Messages.LAUNCH;
+  return N === c.JS.JOIN ? (x = r.ButtonColors.GREEN, I = E.Z.Messages.JOIN_ACTIVITY) : N === c.JS.LEAVE && !p && (x = r.ButtonColors.RED, I = E.Z.Messages.LEAVE), {
+onActivityItemSelected: v,
+activityAction: N,
+buttonColor: x,
+buttonText: I
   };
 }
 

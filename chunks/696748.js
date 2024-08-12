@@ -250,5 +250,8 @@ application_name: s.name,
 type: f.q5t.LAUNCH,
 distributor: null != e ? e.getDistributor() : null,
 ...l
-  }), d.Z.launch(s.id, null == e ? void 0 : e.branchId);
+  }), d.Z.launch({
+applicationId: s.id,
+branchId: null == e ? void 0 : e.branchId
+  });
 }

@@ -3,7 +3,7 @@ var r = n(664751),
   i = n(243814),
   a = n(544891),
   s = n(570140),
-  o = n(566620),
+  o = n(638880),
   l = n(812206),
   u = n(439849),
   c = n(669764),
@@ -32,7 +32,12 @@ intent: i = v.Ws.PLAY,
 embedded: a = !1,
 analyticsLocations: o = []
   } = e;
-  C(t, null, r, a, o).then(() => I.Z.waitConnected(t)).then(() => Promise.race([I.Z.waitSubscribed(t, N.zMe.ACTIVITY_JOIN)])).then(() => {
+  C({
+applicationId: t,
+channelId: r,
+embedded: a,
+analyticsLocations: o
+  }).then(() => I.Z.waitConnected(t)).then(() => Promise.race([I.Z.waitSubscribed(t, N.zMe.ACTIVITY_JOIN)])).then(() => {
 s.Z.dispatch({
   type: 'ACTIVITY_JOIN',
   applicationId: t,
@@ -45,32 +50,41 @@ type: 'ACTIVITY_JOIN_FAILED',
 applicationId: t
   }));
 }
-
-function C(e, t, n) {
-  let u = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-c = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-  if (u)
-return null == n ? Promise.reject(Error('Invalid channel ID')) : ((0, o.J$)(n, e, c), Promise.resolve());
-  if (_.Z.isConnected(e))
+async function C(e) {
+  let {
+applicationId: t,
+branchId: n,
+channelId: u,
+embedded: c = !1,
+analyticsLocations: E = []
+  } = e;
+  if (c)
+return null == u ? Promise.reject(Error('Invalid channel ID')) : (await (0, o.Z)({
+  applicationId: t,
+  activityChannelId: u,
+  locationObject: {},
+  analyticsLocations: E
+}), Promise.resolve());
+  if (_.Z.isConnected(t))
 return Promise.resolve();
-  let E = null;
-  if (null == t) {
-let n = f.Z.getActiveLibraryApplication(e);
-t = null != n ? n.branchId : e;
+  let p = null;
+  if (null == n) {
+let e = f.Z.getActiveLibraryApplication(t);
+n = null != e ? e.branchId : t;
   }
-  if (h.Z.isLaunchable(e, t)) {
-var p;
-let n = h.Z.getState(e, t),
-  s = f.Z.getActiveLaunchOptionId(e, t);
-if (null == n)
+  if (h.Z.isLaunchable(t, n)) {
+var m;
+let e = h.Z.getState(t, n),
+  s = f.Z.getActiveLaunchOptionId(t, n);
+if (null == e)
   throw Error('Missing dispatch game when launching');
-let o = f.Z.getLibraryApplication(e, t);
+let o = f.Z.getLibraryApplication(t, n);
 if (null == o)
   throw Error('Missing library application when launching');
-E = (p = e, a.tn.post({
+p = (m = t, a.tn.post({
   url: N.ANM.OAUTH2_AUTHORIZE,
   query: {
-    client_id: p,
+    client_id: m,
     response_type: 'token',
     scope: [i.x.IDENTIFY].join(' ')
   },
@@ -93,36 +107,36 @@ E = (p = e, a.tn.post({
   if (404 === e.status)
     return null;
   throw e;
-})).then(e => I.Z.launchDispatchApplication(n, e, d.default.locale, o.getBranchName(), s));
+})).then(t => I.Z.launchDispatchApplication(e, t, d.default.locale, o.getBranchName(), s));
   } else {
-let t = l.Z.getApplication(e);
-E = null != t ? I.Z.launch(t) : I.Z.launchGame(e);
+let e = l.Z.getApplication(t);
+p = null != e ? I.Z.launch(e) : I.Z.launchGame(t);
   }
-  let m = Error('game not found');
-  return null != E ? (s.Z.dispatch({
+  let T = Error('game not found');
+  return null != p ? (s.Z.dispatch({
 type: 'LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE',
-applicationId: e,
-branchId: t
+applicationId: t,
+branchId: n
   }), s.Z.dispatch({
 type: 'GAME_LAUNCH_START',
-applicationId: e
-  }), E.then(t => {
+applicationId: t
+  }), p.then(e => {
 s.Z.dispatch({
   type: 'GAME_LAUNCH_SUCCESS',
-  applicationId: e,
-  pids: t
+  applicationId: t,
+  pids: e
 });
-  }).catch(t => {
+  }).catch(e => {
 A.Z.show(N.kVF.LAUNCH_GAME_FAILURE, O.Z.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), s.Z.dispatch({
   type: 'GAME_LAUNCH_FAIL',
-  applicationId: e,
-  error: m
+  applicationId: t,
+  error: T
 });
   })) : (s.Z.dispatch({
 type: 'GAME_LAUNCH_FAIL',
-applicationId: e,
-error: m
-  }), Promise.reject(m));
+applicationId: t,
+error: T
+  }), Promise.reject(T));
 }
 t.Z = {
   addGame(e, t) {

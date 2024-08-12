@@ -1,6 +1,6 @@
-var r;
+var r, i;
 
-function i(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -10,12 +10,12 @@ writable: !0
 }
 n.d(t, {
   Z: function() {
-return a;
+return s;
   }
-}), (r || (r = {})).PRIMARY_APP_COMMAND_NOT_FOUND = 'PRIMARY_APP_COMMAND_NOT_FOUND';
-class a {
+}), (i = r || (r = {})).PRIMARY_APP_COMMAND_NOT_FOUND = 'PRIMARY_APP_COMMAND_NOT_FOUND', i.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED = 'LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED';
+class s {
   constructor(e) {
-i(this, 'reason', void 0), this.reason = e;
+a(this, 'reason', void 0), this.reason = e;
   }
 }
-i(a, 'Reasons', r);
+a(s, 'Reasons', r);

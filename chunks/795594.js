@@ -14,8 +14,8 @@ var n = t(735250),
   T = t(230711),
   S = t(497321),
   N = t(468026),
-  C = t(566620),
-  m = t(317381),
+  C = t(317381),
+  m = t(513202),
   A = t(979200),
   g = t(600164),
   O = t(713938),
@@ -260,7 +260,7 @@ return (0, n.jsx)(u.Card, {
 s.Z = () => {
   let e = (0, d.e7)([p.Z], () => p.Z.hidePersonalInformation),
 s = (0, d.e7)([h.Z], () => h.Z.getApps()),
-i = (0, d.e7)([m.ZP], () => m.ZP.getSelfEmbeddedActivities());
+i = (0, d.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivities());
   a.useEffect(() => {
 I.Z.fetch();
   }, []);
@@ -271,9 +271,10 @@ I.Z.fetch();
   } = e;
   I.Z.delete(s);
   let n = i.get(t.id);
-  null != n && (0, C.mW)({
+  null != n && m.Z.leaveActivity({
     channelId: n.channelId,
-    applicationId: t.id
+    applicationId: t.id,
+    showFeedback: !1
   });
 },
 [o, c] = a.useState(''),

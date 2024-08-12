@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return H;
+return F;
   }
 }), n(47120);
 var r = n(735250),
@@ -18,170 +18,166 @@ var r = n(735250),
   h = n(620662),
   p = n(841784),
   m = n(275920),
-  I = n(952561),
-  T = n(513202),
-  g = n(906732),
-  S = n(835473),
-  A = n(592745),
-  N = n(592125),
-  v = n(757266),
-  O = n(650774),
-  R = n(430824),
-  C = n(283595),
-  y = n(496675),
-  D = n(699516),
-  L = n(944486),
-  b = n(979651),
-  M = n(181106),
-  P = n(417363),
-  U = n(358085),
-  w = n(804739),
-  x = n(652853),
-  G = n(475413),
-  k = n(228168),
-  B = n(981631),
-  F = n(701488),
-  V = n(689938);
+  I = n(906732),
+  T = n(835473),
+  g = n(592745),
+  S = n(592125),
+  A = n(757266),
+  N = n(650774),
+  v = n(430824),
+  O = n(283595),
+  R = n(496675),
+  C = n(699516),
+  y = n(944486),
+  D = n(979651),
+  L = n(181106),
+  b = n(417363),
+  M = n(358085),
+  P = n(804739),
+  U = n(652853),
+  w = n(475413),
+  x = n(228168),
+  G = n(981631),
+  k = n(701488),
+  B = n(689938);
 
-function H(e) {
+function F(e) {
   let {
 user: t,
 currentUser: n,
-activity: H,
-onAction: Z,
-onClose: Y
+activity: F,
+onAction: V,
+onClose: H
   } = e, {
-analyticsLocations: j,
-newestAnalyticsLocation: W
-  } = (0, g.ZP)(), {
-profileType: K
-  } = (0, x.z)(), [z] = (0, S.Z)([null == H ? void 0 : H.application_id]), q = (0, I.Z)(), Q = (0, p.Z)(H), X = null == H ? void 0 : H.application_id, $ = null == H ? void 0 : H.session_id, J = (0, f.Z)({
-activity: H,
+analyticsLocations: Z,
+newestAnalyticsLocation: Y
+  } = (0, I.ZP)(), {
+profileType: j
+  } = (0, U.z)(), [W] = (0, T.Z)([null == F ? void 0 : F.application_id]), K = (0, p.Z)(F), z = null == F ? void 0 : F.application_id, q = null == F ? void 0 : F.session_id, Q = (0, f.Z)({
+activity: F,
 userId: t.id,
 channelId: void 0
-  }), ee = (0, a.e7)([
-C.Z,
-A.Z,
-P.Z,
-v.Z
-  ], () => null != X && (0, w.t)({
-applicationId: X,
-LibraryApplicationStore: C.Z,
-LaunchableGameStore: A.Z,
-DispatchApplicationStore: P.Z,
-ConnectedAppsStore: v.Z
-  })) || Q, et = (0, a.e7)([d.ZP], () => [...d.ZP.getSelfEmbeddedActivities().values()].some(e => {
+  }), X = (0, a.e7)([
+O.Z,
+g.Z,
+b.Z,
+A.Z
+  ], () => null != z && (0, P.t)({
+applicationId: z,
+LibraryApplicationStore: O.Z,
+LaunchableGameStore: g.Z,
+DispatchApplicationStore: b.Z,
+ConnectedAppsStore: A.Z
+  })) || K, $ = (0, a.e7)([d.ZP], () => [...d.ZP.getSelfEmbeddedActivities().values()].some(e => {
 let {
   applicationId: t,
   channelId: n
 } = e;
-return t === X && n === J;
-  })), en = (0, a.e7)([M.Z], () => null != X && M.Z.getState(X, B.mFx.JOIN) === B.OcF.LOADING), er = (0, a.e7)([
+return t === z && n === Q;
+  })), J = (0, a.e7)([L.Z], () => null != z && L.Z.getState(z, G.mFx.JOIN) === G.OcF.LOADING), ee = (0, a.e7)([
+S.Z,
+v.Z,
 N.Z,
-R.Z,
-O.Z,
+C.Z,
+y.Z,
 D.Z,
-L.Z,
-b.Z,
-y.Z
+R.Z
   ], () => (0, E.Z)({
 user: t,
-activity: H,
-application: z,
-channelId: J,
+activity: F,
+application: W,
+channelId: Q,
 currentUser: n,
-isEmbedded: Q,
-ChannelStore: N.Z,
-GuildStore: R.Z,
-GuildMemberCountStore: O.Z,
-RelationshipStore: D.Z,
-SelectedChannelStore: L.Z,
-VoiceStateStore: b.Z,
-PermissionStore: y.Z
-  })), [ei, ea] = i.useState(!1), es = !er || ei || et || U.isPlatformEmbedded && !ee;
-  if (null == X || !(0, h.Z)(H, B.xjy.JOIN) && !Q)
+isEmbedded: K,
+ChannelStore: S.Z,
+GuildStore: v.Z,
+GuildMemberCountStore: N.Z,
+RelationshipStore: C.Z,
+SelectedChannelStore: y.Z,
+VoiceStateStore: D.Z,
+PermissionStore: R.Z
+  })), [et, en] = i.useState(!1), er = !ee || et || $ || M.isPlatformEmbedded && !X;
+  if (null == z || !(0, h.Z)(F, G.xjy.JOIN) && !K)
 return null;
-  let eo = async () => {
-if (Q && er && null != J && null != X && await (0, _.Z)({
-    applicationId: X,
-    activityChannelId: J,
-    currentEmbeddedApplication: q,
-    embeddedActivitiesManager: T.Z,
+  let ei = async () => {
+if (K && ee && null != Q && null != z && await (0, _.Z)({
+    applicationId: z,
+    activityChannelId: Q,
     locationObject: {
-      page: B.ZY5.USER_PROFILE
+      page: G.ZY5.USER_PROFILE
     },
-    analyticsLocations: j
+    analyticsLocations: Z
   })) {
-  null == Y || Y();
+  null == H || H();
   return;
 }
-if (er && null != X && null != $) {
+if (ee && null != z && null != q) {
   var e;
   await l.Z.join({
     userId: t.id,
-    sessionId: $,
-    applicationId: X,
-    channelId: L.Z.getVoiceChannelId(),
+    sessionId: q,
+    applicationId: z,
+    channelId: y.Z.getVoiceChannelId(),
     messageId: null,
-    intent: F.Ws.PLAY,
-    embedded: Q
+    intent: k.Ws.PLAY,
+    embedded: K
   }), (0, m.Z)({
-    type: B.q5t.JOIN,
+    type: G.q5t.JOIN,
     userId: t.id,
-    partyId: null == H ? void 0 : null === (e = H.party) || void 0 === e ? void 0 : e.id,
-    applicationId: X,
-    analyticsLocations: j
+    partyId: null == F ? void 0 : null === (e = F.party) || void 0 === e ? void 0 : e.id,
+    applicationId: z,
+    analyticsLocations: Z
   });
 }
-if (ea(!0), null != J && null != X)
+if (en(!0), null != Q && null != z)
   return c.pu({
-    channelId: J,
-    applicationId: X,
+    channelId: Q,
+    applicationId: z,
     userId: t.id,
-    location: W
+    location: Y
   });
-if (null != H) {
+if (null != F) {
   let e = await o.Z.sendActivityInviteUser({
-    type: B.mFx.JOIN_REQUEST,
+    type: G.mFx.JOIN_REQUEST,
     userId: t.id,
-    activity: H,
-    location: B.Sbl.PROFILE_POPOUT
+    activity: F,
+    location: G.Sbl.PROFILE_POPOUT
   });
   null != e && u.default.selectPrivateChannel(e.id);
 }
-  }, el = () => t.id === n.id ? V.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : U.isPlatformEmbedded && !ee && null != H ? V.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({
-name: H.name
+  }, ea = () => t.id === n.id ? B.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : M.isPlatformEmbedded && !X && null != F ? B.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({
+name: F.name
   }) : null;
-  return Q ? (0, r.jsx)(s.Tooltip, {
-text: el(),
-children: e => (0, r.jsx)(G.tG, {
+  return K ? (0, r.jsx)(s.Tooltip, {
+text: ea(),
+children: e => (0, r.jsx)(w.tG, {
   ...e,
   icon: s.ActivitiesIcon,
-  text: V.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY,
-  disabled: es,
-  submitting: en,
-  themeColor: K === k.y0.FULL_SIZE ? 'secondary' : 'primary',
+  text: B.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY,
+  disabled: er,
+  submitting: J,
+  themeColor: j === x.y0.FULL_SIZE ? 'secondary' : 'primary',
   fullWidth: !0,
   onClick: () => {
-    null == Z || Z({
+    null == V || V({
       action: 'PRESS_JOIN_BUTTON'
-    }), eo();
+    }), ei();
   }
 })
   }) : (0, r.jsx)(s.Tooltip, {
-text: el(),
-children: e => (0, r.jsx)(G.tG, {
+text: ea(),
+children: e => (0, r.jsx)(w.tG, {
   ...e,
   icon: s.GameControllerIcon,
-  text: er ? V.Z.Messages.JOIN : V.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
-  disabled: es,
-  submitting: en,
-  themeColor: K === k.y0.FULL_SIZE ? 'secondary' : 'primary',
+  text: ee ? B.Z.Messages.JOIN : B.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
+  disabled: er,
+  submitting: J,
+  themeColor: j === x.y0.FULL_SIZE ? 'secondary' : 'primary',
   fullWidth: !0,
   onClick: () => {
-    null == Z || Z({
+    null == V || V({
       action: 'PRESS_ASK_TO_JOIN_BUTTON'
-    }), eo();
+    }), ei();
   }
 })
   });

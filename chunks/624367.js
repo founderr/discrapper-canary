@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return b;
+return P;
   }
 }), n(47120), n(789020);
 var i = n(735250);
@@ -23,141 +23,135 @@ var a = n(613828),
   f = n(624138),
   C = n(317381),
   p = n(638880),
-  g = n(146936),
+  g = n(122613),
   S = n(147865),
   A = n(778569),
-  R = n(513202),
-  x = n(884338),
-  O = n(403404),
-  M = n(701488),
-  v = n(981631),
-  L = n(689938),
-  Z = n(615010);
-let P = (0, f.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+  R = n(884338),
+  x = n(403404),
+  O = n(701488),
+  M = n(981631),
+  v = n(689938),
+  L = n(615010);
+let Z = (0, f.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 
-function b(e) {
+function P(e) {
   var t, n, r, f;
   let {
-applicationId: b,
-message: D
+applicationId: P,
+message: b
   } = e, {
-analyticsLocations: j
-  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), U = (0, c.O)(), y = D.channel_id, B = (0, s.e7)([m.Z], () => m.Z.getChannel(y), [y]), k = null == B ? void 0 : B.guild_id, G = null != B && (B.isGuildVoice() || B.isPrivate()), F = (0, s.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(y)), w = (null == F ? void 0 : F.applicationId) === b, [V, H] = (0, _.Z)([
-b,
-null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : ''
-  ]), Y = (0, S.ZP)(null !== (r = null == V ? void 0 : V.maxParticipants) && void 0 !== r ? r : 0), [W] = (0, s.Wu)([C.ZP], () => G ? C.ZP.getEmbeddedActivitiesForChannel(y).filter(e => e.applicationId === b) : [], [
-b,
-y,
-G
-  ]), K = Array.from(null !== (f = null == W ? void 0 : W.userIds) && void 0 !== f ? f : []), z = (0, s.Wu)([T.default], () => K.map(e => T.default.getUser(e)).filter(N.lm), [K]), Q = (0, A.Z)({
-applicationId: b,
-size: P,
+analyticsLocations: D
+  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), j = (0, c.O)(), U = b.channel_id, y = (0, s.e7)([m.Z], () => m.Z.getChannel(U), [U]), B = null == y ? void 0 : y.guild_id, k = null != y && (y.isGuildVoice() || y.isPrivate()), G = (0, s.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(U)), F = (null == G ? void 0 : G.applicationId) === P, [w] = (0, _.Z)([
+P,
+null !== (n = null == G ? void 0 : G.applicationId) && void 0 !== n ? n : ''
+  ]), V = (0, S.ZP)(null !== (r = null == w ? void 0 : w.maxParticipants) && void 0 !== r ? r : 0), [H] = (0, s.Wu)([C.ZP], () => k ? C.ZP.getEmbeddedActivitiesForChannel(U).filter(e => e.applicationId === P) : [], [
+P,
+U,
+k
+  ]), Y = Array.from(null !== (f = null == H ? void 0 : H.userIds) && void 0 !== f ? f : []), W = (0, s.Wu)([T.default], () => Y.map(e => T.default.getUser(e)).filter(N.lm), [Y]), K = (0, A.Z)({
+applicationId: P,
+size: Z,
 names: ['embedded_cover']
-  }), q = E.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT), X = z.length > 0 ? L.Z.Messages.JOIN : L.Z.Messages.START, J = async () => {
-if (G) {
-  if (null != W && z.length > 0)
+  }), z = E.Z.getWindowOpen(M.KJ3.CHANNEL_CALL_POPOUT), Q = W.length > 0 ? v.Z.Messages.JOIN : v.Z.Messages.START, q = async () => {
+if (k) {
+  if (null != H && W.length > 0)
     await (0, p.Z)({
-      applicationId: W.applicationId,
-      currentEmbeddedApplication: H,
-      activityChannelId: y,
-      embeddedActivitiesManager: R.Z,
-      locationObject: U.location,
-      analyticsLocations: j
+      applicationId: H.applicationId,
+      activityChannelId: U,
+      locationObject: j.location,
+      analyticsLocations: D
     });
   else {
-    let e = B.isPrivate() && !I.Z.isCallActive(y),
-      t = () => (0, g.Z)({
-        targetApplicationId: b,
-        currentEmbeddedApplication: H,
-        channelId: y,
-        guildId: k,
-        embeddedActivitiesManager: R.Z,
-        analyticsLocations: j
+    let e = y.isPrivate() && !I.Z.isCallActive(U),
+      t = async () => await (0, g.Z)({
+        targetApplicationId: P,
+        channelId: U,
+        analyticsLocations: D
       });
     e ? o.Z.show({
-      title: L.Z.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
-      cancelText: L.Z.Messages.CANCEL,
-      confirmText: L.Z.Messages.CONFIRM,
+      title: v.Z.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
+      cancelText: v.Z.Messages.CANCEL,
+      confirmText: v.Z.Messages.CONFIRM,
       onConfirm: () => t(),
-      body: L.Z.Messages.EMBEDDED_ACTIVITIES_DM_START_CONFIRMATION_TEXT
+      body: v.Z.Messages.EMBEDDED_ACTIVITIES_DM_START_CONFIRMATION_TEXT
     }) : t();
   }
 } else
-  (0, O.Z)({
-    guildId: k,
-    locationObject: U.location,
-    openInPopout: q,
-    initialSelectedApplicationId: b,
-    initialSlide: M.ag.SELECT_CHANNEL,
-    analyticsLocations: j
+  (0, x.Z)({
+    guildId: B,
+    locationObject: j.location,
+    openInPopout: z,
+    initialSelectedApplicationId: P,
+    initialSlide: O.ag.SELECT_CHANNEL,
+    analyticsLocations: D
   });
   };
-  return null != V && (0, h.yE)(V.flags, v.udG.EMBEDDED) ? (0, i.jsx)(d.Gt, {
-value: j,
+  return null != w && (0, h.yE)(w.flags, M.udG.EMBEDDED) ? (0, i.jsx)(d.Gt, {
+value: D,
 children: (0, i.jsxs)('div', {
-  className: Z.container,
+  className: L.container,
   children: [
     (0, i.jsx)('div', {
-      className: Z.imgContainer,
+      className: L.imgContainer,
       children: (0, i.jsx)('img', {
-        className: Z.img,
-        alt: V.name,
-        src: Q.url
+        className: L.img,
+        alt: w.name,
+        src: K.url
       })
     }),
     (0, i.jsxs)('div', {
-      className: Z.content,
+      className: L.content,
       children: [
         (0, i.jsx)(l.Heading, {
-          className: Z.heading,
+          className: L.heading,
           variant: 'heading-xl/semibold',
-          children: V.name
+          children: w.name
         }),
         (0, i.jsx)(l.Heading, {
-          className: Z.description,
+          className: L.description,
           variant: 'heading-sm/medium',
-          children: null === (t = V.description) || void 0 === t ? void 0 : t.trim()
+          children: null === (t = w.description) || void 0 === t ? void 0 : t.trim()
         }),
         (0, i.jsx)(l.Heading, {
-          className: Z.learnMore,
+          className: L.learnMore,
           variant: 'heading-sm/medium',
           children: (0, i.jsx)(a.rU, {
-            to: v.Z5c.ACTIVITY_DETAILS(b),
-            children: L.Z.Messages.LEARN_MORE
+            to: M.Z5c.ACTIVITY_DETAILS(P),
+            children: v.Z.Messages.LEARN_MORE
           })
         }),
         (0, i.jsxs)('div', {
-          className: Z.cta,
+          className: L.cta,
           children: [
-            z.length > 0 ? (0, i.jsx)('div', {
-              className: Z.avatars,
-              children: (0, i.jsx)(x.Z, {
-                guildId: k,
-                users: z,
+            W.length > 0 ? (0, i.jsx)('div', {
+              className: L.avatars,
+              children: (0, i.jsx)(R.Z, {
+                guildId: B,
+                users: W,
                 max: 4
               })
             }) : (0, i.jsxs)('div', {
-              className: Z.maxParticipants,
+              className: L.maxParticipants,
               children: [
                 (0, i.jsx)(l.GroupIcon, {
                   size: 'md',
                   color: 'currentColor',
-                  className: Z.peopleIcon
+                  className: L.peopleIcon
                 }),
                 (0, i.jsx)(l.Text, {
                   variant: 'text-xs/semibold',
-                  children: Y
+                  children: V
                 })
               ]
             }),
             (0, i.jsx)('div', {
-              className: Z.buttonWrapper,
+              className: L.buttonWrapper,
               children: (0, i.jsx)(l.Button, {
-                onClick: J,
-                className: Z.button,
+                onClick: q,
+                className: L.button,
                 color: l.ButtonColors.GREEN,
-                disabled: w,
-                children: X
+                disabled: F,
+                children: Q
               })
             })
           ]

@@ -6,7 +6,7 @@ return l;
 var r = n(735250);
 n(470079);
 var i = n(481060),
-  a = n(566620),
+  a = n(513202),
   s = n(871499),
   o = n(689938);
 
@@ -20,9 +20,10 @@ centerButton: l = !1,
   return (0, r.jsx)(c, {
 ...u,
 onClick: () => {
-  (0, a.mW)({
+  a.Z.leaveActivity({
     channelId: t,
-    applicationId: n
+    applicationId: n,
+    showFeedback: !0
   });
 },
 iconComponent: i.DoorExitIcon,

@@ -44,12 +44,14 @@ let {
   leaveActivity(e) {
 let {
   channelId: t,
-  applicationId: n
+  applicationId: n,
+  showFeedback: r
 } = e;
 a.Z.wait(() => {
-  (0, c.mW)({
+  (0, c.rp)(t, n), (0, c.mW)({
     channelId: t,
-    applicationId: n
+    applicationId: n,
+    showFeedback: r
   });
 });
   }

@@ -14,16 +14,17 @@ var r = n(570140),
   d = n(966434),
   _ = n(649591),
   E = n(981631);
-async function f(e, t) {
+async function f(e, t, n) {
   try {
-var n;
-return null !== (n = s.Z.getApplication(e)) && void 0 !== n ? n : o.Z.createFromServer(await a.Z.fetchApplication(e));
-  } catch (n) {
+var l;
+return null !== (l = s.Z.getApplication(e)) && void 0 !== l ? l : o.Z.createFromServer(await a.Z.fetchApplication(e));
+  } catch (a) {
 r.Z.dispatch({
   type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
   applicationId: e,
-  guildId: t,
-  error: new i.Hx(n)
+  channelId: t,
+  guildId: n,
+  error: new i.Hx(a)
 });
   }
 }
@@ -51,7 +52,7 @@ user: i
   } = e;
   if (null == i.nsfwAllowed) {
 var a, s;
-let e = null != t ? t : await f(n, r.getGuildId());
+let e = null != t ? t : await f(n, r.id, r.getGuildId());
 if (null == e || null !== (s = null === (a = e.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) && void 0 !== s && s && !await new Promise(t => {
     (0, c.V)({
       application: e,
@@ -68,7 +69,7 @@ async function m(e) {
 application: t,
 applicationId: n,
 channel: r
-  } = e, i = null != t ? t : await f(n, r.getGuildId());
+  } = e, i = null != t ? t : await f(n, r.id, r.getGuildId());
   return null != i && (!!((0, l.yE)(i.flags, E.udG.EMBEDDED_RELEASED) || u.ZP.hasActivityEverBeenLaunched(n)) || new Promise(e => {
 (0, _.j)({
   application: i,

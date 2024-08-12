@@ -104,9 +104,6 @@ return B;
   lj: function() {
 return Q;
   },
-  m2: function() {
-return o;
-  },
   mI: function() {
 return P;
   },

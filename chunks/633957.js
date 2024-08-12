@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return O;
+return R;
   }
 }), n(47120);
 var i = n(735250),
@@ -10,106 +10,98 @@ var i = n(735250),
   l = n(2052),
   o = n(317381),
   c = n(638880),
-  u = n(146936),
+  u = n(122613),
   d = n(527805),
-  _ = n(952561),
-  E = n(513202),
-  I = n(884338),
-  m = n(100527),
-  T = n(906732),
-  h = n(973616),
-  N = n(314897),
-  f = n(592125),
-  C = n(158776),
-  p = n(594174),
-  g = n(823379),
-  S = n(226378),
-  A = n(701488),
-  R = n(689938),
-  x = n(606472);
+  _ = n(884338),
+  E = n(100527),
+  I = n(906732),
+  m = n(973616),
+  T = n(314897),
+  h = n(592125),
+  N = n(158776),
+  f = n(594174),
+  C = n(823379),
+  p = n(226378),
+  g = n(701488),
+  S = n(689938),
+  A = n(606472);
 
-function O(e) {
+function R(e) {
   var t;
   let {
 application: n,
-channelId: O,
-guildId: M
-  } = e, [v, L] = a.useState(!1), {
-analyticsLocations: Z
-  } = (0, T.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED), P = (0, l.O)(), b = (0, _.Z)(), D = (0, s.e7)([f.Z], () => f.Z.getChannel(O)), j = (null == D ? void 0 : null === (t = D.isThread) || void 0 === t ? void 0 : t.call(D)) ? null == D ? void 0 : D.parent_id : O, U = (0, s.e7)([N.default], () => N.default.getId()), {
-embeddedActivity: y,
-currentEmbeddedActivity: B
+channelId: R,
+guildId: x
+  } = e, {
+analyticsLocations: O
+  } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED), M = (0, l.O)(), v = (0, s.e7)([h.Z], () => h.Z.getChannel(R)), L = (null == v ? void 0 : null === (t = v.isThread) || void 0 === t ? void 0 : t.call(v)) ? null == v ? void 0 : v.parent_id : R, Z = (0, s.e7)([T.default], () => T.default.getId()), {
+embeddedActivity: P,
+currentEmbeddedActivity: b,
+activityLaunchState: D
   } = (0, s.cj)([o.ZP], () => ({
-embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != j ? j : '').find(e => e.applicationId === n.id),
-currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity()
-  })), k = (0, s.Wu)([p.default], () => {
+embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != L ? L : '').find(e => e.applicationId === n.id),
+currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity(),
+activityLaunchState: o.ZP.getLaunchState(n.id, null != L ? L : void 0)
+  })), j = (0, s.Wu)([f.default], () => {
 var e;
-return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : []).map(e => p.default.getUser(e)).filter(g.lm);
-  }), G = (0, s.e7)([C.Z], () => {
+return Array.from(null !== (e = null == P ? void 0 : P.userIds) && void 0 !== e ? e : []).map(e => f.default.getUser(e)).filter(C.lm);
+  }), U = (0, s.e7)([N.Z], () => {
 var e;
-let t = null == y ? void 0 : y.userIds.values().next().value;
-return null == t ? null : null === (e = C.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
-  }), F = a.useMemo(() => {
-let e = new h.Z(n);
-return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;
-  }, [n]), w = (0, d.s5)({
-userId: U,
-channelId: O,
-application: F
-  }), V = null == y, H = (0, S.NL)({
-embeddedActivity: y,
-joinability: w,
-currentEmbeddedActivity: B,
-channel: D
-  }), Y = async () => {
-L(!0);
-try {
-  V ? await (0, u.Z)({
-    targetApplicationId: n.id,
-    currentEmbeddedApplication: b,
-    channelId: O,
-    guildId: M,
-    locationObject: P.location,
-    embeddedActivitiesManager: E.Z,
-    analyticsLocations: Z
-  }) : await (0, c.Z)({
-    applicationId: y.applicationId,
-    currentEmbeddedApplication: b,
-    activityChannelId: O,
-    locationObject: P.location,
-    embeddedActivitiesManager: E.Z,
-    analyticsLocations: Z
-  });
-} finally {
-  L(!1);
-}
-  }, W = H.disabled ? R.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
+let t = null == P ? void 0 : P.userIds.values().next().value;
+return null == t ? null : null === (e = N.Z.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
+  }), y = a.useMemo(() => {
+let e = new m.Z(n);
+return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = g.wT), e;
+  }, [n]), B = (0, d.s5)({
+userId: Z,
+channelId: R,
+application: y
+  }), k = null == P, G = (0, p.NL)({
+embeddedActivity: P,
+joinability: B,
+currentEmbeddedActivity: b,
+channel: v
+  }), F = a.useId(), w = null != D && D.isLaunching && D.componentId === F, V = async () => {
+k ? await (0, u.Z)({
+  targetApplicationId: n.id,
+  channelId: R,
+  locationObject: M.location,
+  analyticsLocations: O,
+  componentId: F
+}) : await (0, c.Z)({
+  applicationId: P.applicationId,
+  activityChannelId: R,
+  locationObject: M.location,
+  analyticsLocations: O,
+  componentId: F
+});
+  }, H = G.disabled ? S.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : S.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
   return (0, i.jsx)('div', {
-className: x.container,
+className: A.container,
 children: (0, i.jsxs)('div', {
-  className: x.contentContainer,
+  className: A.contentContainer,
   children: [
     (0, i.jsx)('div', {
-      className: x.headerContainer,
-      children: V ? (0, i.jsx)('div', {
-        className: x.__invalid_endedNote,
+      className: A.headerContainer,
+      children: k ? (0, i.jsx)('div', {
+        className: A.__invalid_endedNote,
         children: (0, i.jsx)(r.Text, {
           variant: 'text-md/medium',
-          children: W
+          children: H
         })
       }) : (0, i.jsx)(r.Text, {
         variant: 'text-md/medium',
         lineClamp: 1,
         color: 'text-normal',
-        children: null != G ? G : R.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
+        children: null != U ? U : S.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
       })
     }),
     (0, i.jsxs)('div', {
-      className: x.footerContainer,
+      className: A.footerContainer,
       children: [
         (0, i.jsx)(r.Tooltip, {
-          text: H.tooltip,
-          tooltipContentClassName: x.tooltipContent,
+          text: G.tooltip,
+          tooltipContentClassName: A.tooltipContent,
           children: e => {
             let {
               onClick: t,
@@ -117,21 +109,21 @@ children: (0, i.jsxs)('div', {
             } = e;
             return (0, a.createElement)(r.Button, {
               ...n,
-              key: ''.concat(H.isJoinAction),
+              key: ''.concat(G.isJoinAction),
               onClick: () => {
-                Y(), null == t || t();
+                V(), null == t || t();
               },
-              color: H.isJoinAction ? r.ButtonColors.GREEN : r.ButtonColors.PRIMARY,
-              submitting: v,
-              disabled: H.disabled
-            }, H.text);
+              color: G.isJoinAction ? r.ButtonColors.GREEN : r.ButtonColors.PRIMARY,
+              submitting: w,
+              disabled: G.disabled
+            }, G.text);
           }
         }),
-        !V && (0, i.jsx)(I.Z, {
-          guildId: M,
-          users: k,
+        !k && (0, i.jsx)(_.Z, {
+          guildId: x,
+          users: j,
           max: 4,
-          size: I.u.SIZE_32
+          size: _.u.SIZE_32
         })
       ]
     })

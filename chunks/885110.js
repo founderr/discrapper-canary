@@ -151,8 +151,6 @@ Z();
   LOGOUT: function() {
 x = !0, M = b, V();
   },
-  EMBEDDED_ACTIVITY_CLOSE: V,
-  EMBEDDED_ACTIVITY_OPEN: V,
   FORCE_INVISIBLE: function(e) {
 return L = e.invisible, V();
   },
