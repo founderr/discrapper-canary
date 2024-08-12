@@ -19,6 +19,7 @@ e.exports = {
   headerText: 'headerText_e23249',
   title: 'title_e23249',
   rewardTile: 'rewardTile_e23249',
+  hiddenRewardTile: 'hiddenRewardTile_e23249',
   description: 'description_e23249',
   flex: 'flex_e23249',
   postEnrollmentBackground: 'postEnrollmentBackground_e23249',

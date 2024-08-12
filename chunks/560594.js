@@ -1,5 +1,7 @@
 e.exports = {
   wrapper: 'wrapper_efa999',
+  opaqueExpandedBackground: 'opaqueExpandedBackground_efa999',
+  rewardHighlightWrapper: 'rewardHighlightWrapper_efa999',
   interactable: 'interactable_efa999',
   wreathIcon: 'wreathIcon_efa999',
   questAvailable: 'questAvailable_efa999',
