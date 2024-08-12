@@ -27,23 +27,25 @@ initialPercentage: R,
 progressCircleVariation: C = 0,
 ellipseOpacity: g,
 customAnimationClassName: p,
-circleColor: N
-  } = e, A = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), m = t && !A;
+circleColor: N,
+circleStroke: A
+  } = e, m = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), f = t && !m;
   return (0, r.jsx)('div', {
 className: l()(E.progressCircle, n, {
   [E.progressCricleBottomMargin]: 0 === C
 }),
 children: (0, r.jsx)(u.Z, {
   animationClassName: l()(E.activeProgressCircle, {
-    [E.activeProgressCircleAnimation]: m,
-    [null != p ? p : '']: m
+    [E.activeProgressCircleAnimation]: f,
+    [null != p ? p : '']: f
   }),
+  progressCircleStroke: A,
   progressCircleStrokeSize: i,
   percentage: null != s ? s : I,
   initialPercentage: null != s ? s : R,
   progressCircleVariation: C,
   children: 0 === C ? (0, r.jsx)(d.Z, {
-    className: m ? E.nitroGemAnimation : void 0,
+    className: f ? E.nitroGemAnimation : void 0,
     backgroundColor: l()(E.gemBackgroundFill, a),
     backgroundCircleSize: T
   }) : (0, r.jsx)(_.Z, {

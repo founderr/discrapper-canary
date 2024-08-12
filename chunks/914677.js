@@ -42,19 +42,20 @@ children: n,
 animationClassName: c,
 initialPercentage: E = 0,
 progressCircleStrokeSize: T = 2,
-progressCircleVariation: I
-  } = e, R = 43 + T / 2, C = 2 * Math.PI * R, [g, p] = a.useState(E);
+progressCircleVariation: I,
+progressCircleStroke: R
+  } = e, C = 43 + T / 2, g = 2 * Math.PI * C, [p, N] = a.useState(E);
   a.useEffect(() => {
 let e = setTimeout(() => {
-  p(t);
+  N(t);
 }, 200);
 return () => clearTimeout(e);
   }, [t]);
-  let N = (0, i.ZP)(),
-A = (0, r.ap)(N),
-m = _(I),
-f = d(I, A),
-S = u(A, I);
+  let A = (0, i.ZP)(),
+m = (0, r.ap)(A),
+f = _(I),
+S = d(I, m),
+h = null != R ? R : u(m, I);
   return (0, s.jsxs)('div', {
 className: o.circleContainer,
 children: [
@@ -66,22 +67,22 @@ children: [
         className: I === l.Q.NITRO_GEM ? o.baseProgressCircle : void 0,
         fill: 'transparent',
         strokeWidth: T,
-        r: ''.concat(R),
+        r: ''.concat(C),
         cx: '50%',
         cy: '50%',
-        stroke: m,
-        strokeOpacity: f
+        stroke: f,
+        strokeOpacity: S
       }),
       (0, s.jsx)('circle', {
-        stroke: S,
+        stroke: h,
         strokeWidth: T,
         strokeLinecap: 'round',
-        strokeDasharray: ''.concat(C, ' ').concat(C),
+        strokeDasharray: ''.concat(g, ' ').concat(g),
         className: c,
         style: {
-          strokeDashoffset: (1 - g / 100) * C
+          strokeDashoffset: (1 - p / 100) * g
         },
-        r: ''.concat(R),
+        r: ''.concat(C),
         cx: '50%',
         cy: '50%'
       })
@@ -126,6 +127,29 @@ children: [
           (0, s.jsx)('stop', {
             offset: '1',
             stopColor: '#E742E1'
+          })
+        ]
+      }),
+      (0, s.jsxs)('linearGradient', {
+        id: 'dark-purple-gradient',
+        x1: '0%',
+        y1: '0%',
+        x2: '100%',
+        y2: '0%',
+        children: [
+          (0, s.jsx)('stop', {
+            offset: '0%',
+            style: {
+              stopColor: '#241731',
+              stopOpacity: 1
+            }
+          }),
+          (0, s.jsx)('stop', {
+            offset: '100%',
+            style: {
+              stopColor: '#241731',
+              stopOpacity: 1
+            }
           })
         ]
       })

@@ -31,30 +31,55 @@ children: [
     fill: 'none',
     xmlns: 'http://www.w3.org/2000/svg',
     children: [
-      (0, s.jsx)('defs', {
-        children: (0, s.jsxs)('linearGradient', {
-          id: 'purple-gradient',
-          x1: '0%',
-          y1: '0%',
-          x2: '100%',
-          y2: '0%',
-          children: [
-            (0, s.jsx)('stop', {
-              offset: '0%',
-              style: {
-                stopColor: '#E2C7FA',
-                stopOpacity: 1
-              }
-            }),
-            (0, s.jsx)('stop', {
-              offset: '100%',
-              style: {
-                stopColor: '#F3D3DE',
-                stopOpacity: 1
-              }
-            })
-          ]
-        })
+      (0, s.jsxs)('defs', {
+        children: [
+          (0, s.jsxs)('linearGradient', {
+            id: 'purple-gradient',
+            x1: '0%',
+            y1: '0%',
+            x2: '100%',
+            y2: '0%',
+            children: [
+              (0, s.jsx)('stop', {
+                offset: '0%',
+                style: {
+                  stopColor: '#E2C7FA',
+                  stopOpacity: 1
+                }
+              }),
+              (0, s.jsx)('stop', {
+                offset: '100%',
+                style: {
+                  stopColor: '#F3D3DE',
+                  stopOpacity: 1
+                }
+              })
+            ]
+          }),
+          (0, s.jsxs)('linearGradient', {
+            id: 'dark-purple-gradient',
+            x1: '0%',
+            y1: '0%',
+            x2: '0%',
+            y2: '100%',
+            children: [
+              (0, s.jsx)('stop', {
+                offset: '0%',
+                style: {
+                  stopColor: 'rgb(36,23,49)',
+                  stopOpacity: 1
+                }
+              }),
+              (0, s.jsx)('stop', {
+                offset: '100%',
+                style: {
+                  stopColor: 'rgb(36,23,49)',
+                  stopOpacity: 1
+                }
+              })
+            ]
+          })
+        ]
       }),
       (0, s.jsx)('ellipse', {
         cx: '57.2768',
