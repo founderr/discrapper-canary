@@ -5287,6 +5287,7 @@ e.exports = Object.freeze({
   ADD_FRIEND_ERROR_USERNAME_ONLY: 'We need !!{username}!!\'s four digit tag so we know which one they are.',
   ADD_FRIEND_ERROR_DISCORD_TAG_USERNAME: 'DiscordTag is a fake username. Enter your friend\'s real username and tag. It should look something like: TotallyARealUsername#0000',
   ADD_FRIEND_ERROR_INVALID_DISCORD_TAG: '**!!{discordTag}!!** is not accepting friend requests. They\u2019ll have to add you to become friends.',
+  ADD_FRIEND_ERROR_INVALID_DISCORD_TAG_A11Y: '!!{discordTag}!! is not accepting friend requests. They\u2019ll have to add you to become friends.',
   ADD_FRIEND_ERROR_TOO_MANY_FRIENDS: 'You\'ve maxed out your friend list. Welcome to the elite 1,000 friends club!',
   ADD_FRIEND_ERROR_ALREADY_FRIENDS: 'You\'re already friends with that user!',
   ADD_FRIEND_ERROR_OTHER: 'Hm, didn\'t work. Double check that the capitalization, spelling, any spaces, and numbers are correct.',
