@@ -1,18 +1,24 @@
 n.d(t, {
   B: function() {
+return s;
+  },
+  t: function() {
 return r;
   }
 });
-var i = n(652874),
-  a = n(49898),
-  s = n(731455);
-let r = (0, i.Z)(() => ({
-  selectedTab: a.vf.FEATURED,
-  isSearchVisible: !1,
-  searchQuery: '',
-  searchResultsQuery: '',
-  searchCategoryId: s.Hk,
-  initialSearchCategoryId: null,
-  searchLanguageCode: null,
-  clickedGuildScrollPosition: null
-}));
+var i = n(652874);
+let a = Object.freeze({
+selectedTab: null,
+isSearchVisible: !1,
+searchLanguageCode: null,
+searchQuery: '',
+searchResultsQuery: '',
+searchCategoryId: n(731455).Hk,
+initialSearchCategoryId: null,
+clickedGuildScrollPosition: null
+  }),
+  s = (0, i.Z)(() => a);
+
+function r() {
+  s.setState(a);
+}

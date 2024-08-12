@@ -1,6 +1,9 @@
 n.d(t, {
   d: function() {
 return l;
+  },
+  u: function() {
+return o;
   }
 });
 var i = n(652874),
@@ -23,3 +26,7 @@ partialize: e => ({
   selectedPage: e.selectedPage
 })
   }));
+
+function o() {
+  l.setState(r);
+}

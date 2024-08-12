@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return h;
+return g;
   }
 });
 var a = t(735250),
@@ -10,14 +10,16 @@ var a = t(735250),
   l = t(481060),
   c = t(931240),
   s = t(207796),
-  d = t(199391),
-  u = t(979756);
+  d = t(540742),
+  u = t(836768),
+  h = t(199391),
+  m = t(979756);
 
-function h() {
+function g() {
   let e = n.useRef(null);
   return (0, a.jsxs)('div', {
 ref: e,
-className: o()(u.panel, d.panel),
+className: o()(m.panel, h.panel),
 children: [
   (0, a.jsx)(l.Button, {
     size: l.Button.Sizes.SMALL,
@@ -28,6 +30,16 @@ children: [
     size: l.Button.Sizes.SMALL,
     onClick: s.PJ,
     children: 'Reset Clan Discovery State'
+  }),
+  (0, a.jsx)(l.Button, {
+    size: l.Button.Sizes.SMALL,
+    onClick: u.u,
+    children: 'Reset Global Discovery State'
+  }),
+  (0, a.jsx)(l.Button, {
+    size: l.Button.Sizes.SMALL,
+    onClick: d.t,
+    children: 'Reset Global Discovery Servers State'
   })
 ]
   });

@@ -38,14 +38,21 @@ u = i.useMemo(() => {
 }, [
   t,
   e
-]);
-  return {
-tabs: u,
-selectedTab: n,
-setSelectedTab: i.useCallback(e => {
+]),
+_ = i.useCallback(e => {
   (0, s.j)(() => o.B.setState({
     selectedTab: e
   }));
-}, [])
+}, []);
+  return i.useEffect(() => {
+(null == n || !u.some(e => e.id === n)) && _(u[0].id);
+  }, [
+n,
+u,
+_
+  ]), {
+tabs: u,
+selectedTab: null != n ? n : u[0].id,
+setSelectedTab: _
   };
 }

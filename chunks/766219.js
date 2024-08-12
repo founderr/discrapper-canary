@@ -117,6 +117,8 @@ default:
 }
 
 function _(e) {
+  if (null == e)
+return s.Hk;
   switch (e) {
 case a.vf.FEATURED:
 case a.vf.GUILDS:
