@@ -1,106 +1,128 @@
 n.d(s, {
   Z: function() {
-return v;
+return Z;
   }
 }), n(47120);
 var i = n(735250),
   l = n(470079),
   t = n(481060),
   o = n(100527),
-  a = n(906732),
-  r = n(785717),
-  d = n(221292),
-  c = n(318661),
-  u = n(299261),
-  _ = n(502762),
-  I = n(475413),
-  f = n(228168),
-  E = n(981631),
-  m = n(689938),
-  x = n(570129),
-  S = n(161068);
+  r = n(906732),
+  a = n(138201),
+  d = n(785717),
+  c = n(221292),
+  u = n(318661),
+  _ = n(299261),
+  I = n(502762),
+  f = n(475413),
+  E = n(228168),
+  m = n(981631),
+  x = n(689938),
+  S = n(570129),
+  v = n(161068);
 
-function v(e) {
+function Z(e) {
   let {
 user: s,
 guildId: n,
-channelId: v,
-messageId: Z,
+channelId: Z,
+messageId: p,
 roleId: h,
-transitionState: p,
-onViewBlockedProfileClick: T,
-showGuildProfile: g = !0,
-sourceAnalyticsLocations: N = []
-  } = e, j = n === E.ME ? void 0 : n, {
-analyticsLocations: C
-  } = (0, a.ZP)([
-...N,
+transitionState: T,
+onViewBlockedProfileClick: g,
+showGuildProfile: N = !0,
+sourceAnalyticsLocations: j = []
+  } = e, C = n === m.ME ? void 0 : n, {
+analyticsLocations: A
+  } = (0, r.ZP)([
+...j,
 o.Z.BLOCKED_PROFILE_MODAL
-  ]), A = (0, r.ZB)({
+  ]), R = (0, d.ZB)({
 layout: 'BLOCKED_PROFILE_MODAL',
 userId: s.id,
-guildId: j,
-channelId: v,
-messageId: Z,
+guildId: C,
+channelId: Z,
+messageId: p,
 roleId: h,
-showGuildProfile: g
-  }), R = (0, c.ZP)(s.id, g ? j : void 0), O = l.createRef();
-  return (0, i.jsx)(a.Gt, {
-value: C,
-children: (0, i.jsx)(r.Mt, {
-  value: A,
+showGuildProfile: N
+  }), O = [{
+  icon: t.BellSlashIcon,
+  description: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_NOTIFIED
+},
+{
+  icon: t.DenyIcon,
+  description: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED
+}
+  ], L = (0, u.ZP)(s.id, N ? C : void 0), M = l.createRef();
+  return (0, i.jsx)(r.Gt, {
+value: A,
+children: (0, i.jsx)(d.Mt, {
+  value: R,
   children: (0, i.jsx)(t.ModalRoot, {
-    transitionState: p,
-    className: x.root,
+    transitionState: T,
+    className: S.root,
     hideShadow: !0,
-    'aria-label': m.Z.Messages.USER_PROFILE_MODAL,
-    children: (0, i.jsx)(_.Z, {
+    'aria-label': x.Z.Messages.USER_PROFILE_MODAL,
+    children: (0, i.jsx)(I.Z, {
       user: s,
-      displayProfile: R,
-      profileType: f.y0.FULL_SIZE,
-      ref: O,
+      displayProfile: L,
+      profileType: E.y0.FULL_SIZE,
+      ref: M,
       children: (0, i.jsxs)('div', {
-        className: x.container,
+        className: S.container,
         children: [
           (0, i.jsx)('img', {
             alt: '',
-            src: S,
-            className: x.previewForCollected,
+            src: v,
+            className: S.previewForCollected,
             'aria-hidden': !0
           }),
           (0, i.jsxs)('div', {
-            className: x.body,
+            className: S.body,
             children: [
-              (0, i.jsx)(u.Z, {
+              (0, i.jsx)(_.Z, {
                 user: s,
-                guildId: j
+                guildId: C
               }),
               (0, i.jsx)(t.Heading, {
                 variant: 'heading-xl/bold',
-                className: x.header,
-                children: m.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
+                className: S.header,
+                children: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
               }),
               (0, i.jsx)(t.Text, {
                 variant: 'text-md/medium',
-                children: m.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({
+                children: x.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({
                   username: s.username
                 })
               }),
               (0, i.jsx)(t.Text, {
                 variant: 'text-md/medium',
-                children: m.Z.Messages.USER_PROFILE_BLOCKED_MODAL_BODY_CONFIRMATION
+                children: x.Z.Messages.USER_PROFILE_BLOCKED_MODAL_BODY_CONFIRMATION
               }),
-              (0, i.jsx)(I.tG, {
-                className: x.centeredButton,
+              (0, i.jsx)('div', {
+                className: S.safetyTable,
+                children: O.map((e, s) => {
+                  let {
+                    icon: n,
+                    description: l
+                  } = e;
+                  return (0, i.jsx)(a.Z, {
+                    icon: n,
+                    description: l
+                  }, s);
+                })
+              }),
+              (0, i.jsx)(f.tG, {
+                className: S.centeredButton,
                 action: 'VIEW_BLOCKED_PROFILE',
-                text: m.Z.Messages.VIEW_PROFILE,
+                text: x.Z.Messages.VIEW_PROFILE,
                 autoFocus: !0,
                 fullWidth: !1,
                 onClick: () => {
-                  null == T || T(), (0, d.pQ)({
+                  null == g || g(), (0, c.pQ)({
                     action: 'VIEW_BLOCKED_PROFILE',
-                    analyticsLocations: C,
-                    ...A
+                    analyticsLocations: A,
+                    ...R
                   });
                 }
               })

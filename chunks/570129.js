@@ -4,5 +4,6 @@ e.exports = {
   container: 'container_fb9b39',
   header: 'header_fb9b39',
   body: 'body_fb9b39',
-  centeredButton: 'centeredButton_fb9b39'
+  centeredButton: 'centeredButton_fb9b39',
+  safetyTable: 'safetyTable_fb9b39'
 };
