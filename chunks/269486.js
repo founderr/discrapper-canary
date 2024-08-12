@@ -16,10 +16,7 @@ let {
 } = await i.tn.get({
   url: r.ANM.CAMPAIGN_CONTEXT,
   query: {
-    campaigns: [
-      r.$Dd.CHECKOUT_RECOVERY,
-      r.$Dd.CASH_APP_PAY_AWARENESS
-    ]
+    campaigns: [r.$Dd.CASH_APP_PAY_AWARENESS]
   }
 });
 l.Z.dispatch({
