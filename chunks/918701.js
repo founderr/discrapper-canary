@@ -628,7 +628,7 @@ let l = null == o ? void 0 : null === (n = o.progress) || void 0 === n ? void 0 
   u = null !== (i = null !== (r = null == l ? void 0 : l.value) && void 0 !== r ? r : null == o ? void 0 : o.streamProgressSeconds) && void 0 !== i ? i : 0,
   c = eb(e, t),
   d = Math.min(0.99 * s, u + c);
-return (0, a.floor)(d, 2);
+return Math.max((0, a.floor)(d, 2), 0);
   },
   eP = e => {
 var t, n;

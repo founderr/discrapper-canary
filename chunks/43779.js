@@ -44,27 +44,28 @@ config: {
   clamp: !0
 }
   }), D = (null === (n = C.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, y = (null === (s = C.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null, {
-completedRatio: j
-  } = (0, _.I)(C), U = (0, _.Bd)(C), G = a.useCallback(() => (0, i.jsx)(c.Text, {
+completedRatio: j,
+completedRatioDisplay: U
+  } = (0, _.I)(C), G = (0, _.Bd)(C), k = a.useCallback(() => (0, i.jsx)(c.Text, {
 variant: 'text-md/semibold',
 color: 'text-normal',
 tag: 'span',
 className: S.header,
 children: O
-  }), [O]), k = a.useMemo(() => y ? G() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
-rewardHook: G
+  }), [O]), w = a.useMemo(() => y ? k() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({
+rewardHook: k
   }), [
 y,
-G
-  ]), w = a.useMemo(() => {
-if (null != U)
+k
+  ]), B = a.useMemo(() => {
+if (null != G)
   return (0, i.jsx)(c.Text, {
     variant: 'text-sm/medium',
     color: 'text-muted',
     className: r()(S.description),
-    children: U
+    children: G
   });
-  }, [U]), B = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
+  }, [G]), H = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
   return (0, i.jsxs)('div', {
 className: r()(S.container),
 children: [
@@ -94,13 +95,13 @@ children: [
                 className: S.confetti,
                 loop: !1,
                 autoplay: !1,
-                shouldAnimate: !B
+                shouldAnimate: !H
               }),
               (0, i.jsx)(E.Z, {
                 quest: C,
                 size: 76,
                 percentComplete: j,
-                showProgressText: A,
+                percentCompleteText: A ? U : void 0,
                 children: (0, i.jsx)('div', {
                   className: S.circularRewardTileWrapper,
                   children: (0, i.jsx)(m.Z, {
@@ -139,9 +140,9 @@ children: [
             variant: 'text-md/semibold',
             color: 'header-primary',
             className: S.header,
-            children: k
+            children: w
           }),
-          w
+          B
         ]
       }),
       P && (0, i.jsx)(l.animated.div, {
