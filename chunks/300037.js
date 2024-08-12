@@ -12,7 +12,7 @@ var a = t(120356),
   u = t(267642),
   I = t(981631),
   T = t(689938),
-  S = t(660847);
+  S = t(92965);
 s.Z = function(e) {
   let {
 className: s,

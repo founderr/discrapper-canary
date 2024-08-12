@@ -1,31 +1,21 @@
 t.d(s, {
   Z: function() {
-return l;
+return i;
   }
 });
 var n = t(735250);
 t(470079);
-var a = t(481060),
-  i = t(618070),
-  r = t(573512),
-  o = t(836864);
+var a = t(481060);
 
-function l() {
+function i() {
   return (0, n.jsx)(n.Fragment, {
-children: (0, n.jsxs)(a.FormSection, {
+children: (0, n.jsx)(a.FormSection, {
   tag: a.FormTitleTags.H1,
-  children: [
-    (0, n.jsx)(a.Text, {
-      tag: 'div',
-      variant: 'text-md/normal',
-      children: o.N.format(r.Z.HMvECw)
-    }),
-    (0, n.jsx)(a.Text, {
-      tag: 'div',
-      variant: 'text-md/normal',
-      children: o.N.format(i.Z.swfLzc)
-    })
-  ]
+  children: (0, n.jsx)(a.Text, {
+    tag: 'div',
+    variant: 'text-md/normal',
+    children: 'This page will showcase the new intl system when it is ready.'
+  })
 })
   });
 }

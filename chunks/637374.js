@@ -29,13 +29,13 @@ var i = n(735250),
   L = n(626135),
   Z = n(669079),
   P = n(74538),
-  D = n(296848),
-  b = n(51144),
+  b = n(296848),
+  D = n(51144),
   j = n(626799),
   U = n(981631),
   y = n(474936),
   B = n(689938),
-  k = n(145312);
+  k = n(85412);
 
 function G(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -183,7 +183,7 @@ let {
   sku: i
 } = this.props;
 return this.isCustomGiftMessage() && !n ? B.Z.Messages.GIFT_RECIPIENT_NOTIFICATION.format({
-  recipientDisplayName: b.ZP.getName(t)
+  recipientDisplayName: D.ZP.getName(t)
 }) : null == i ? null : e.isSubscription ? n ? B.Z.Messages.GIFT_EMBED_TITLE_SUBSCRIPTION_SELF : B.Z.Messages.GIFT_EMBED_TITLE_SUBSCRIPTION : n ? B.Z.Messages.GIFT_EMBED_TITLE_SELF : B.Z.Messages.GIFT_EMBED_TITLE;
   }
   renderBody(e) {
@@ -226,11 +226,11 @@ if (e.isExistingPremiumSubscriptionDisallowed)
   return B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_ALREADY_ACTIVE;
 if (e.hasMultipleCopies)
   return null != a ? e.isSubscription ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_GIVEAWAY.format({
-    username: b.ZP.getUserTag(a),
+    username: D.ZP.getUserTag(a),
     maxUses: e.maxUses,
     skuName: l
   }) : B.Z.Messages.GIFT_EMBED_BODY_GIVEAWAY.format({
-    username: b.ZP.getUserTag(a),
+    username: D.ZP.getUserTag(a),
     totalCopies: e.maxUses,
     skuName: l
   }) : e.isSubscription ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_GIVEAWAY.format({
@@ -242,7 +242,7 @@ if (e.hasMultipleCopies)
   });
 if (e.isSubscription)
   return null == s ? B.Z.Messages.LOADING : null != a ? (s.interval === y.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
-    username: b.ZP.getUserTag(a),
+    username: D.ZP.getUserTag(a),
     skuName: l,
     intervalCount: s.intervalCount
   }) : (s.interval === y.rV.MONTH ? B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_MONTHS : B.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_NO_USER_DEFAULT_YEARS).format({
@@ -250,7 +250,7 @@ if (e.isSubscription)
     intervalCount: s.intervalCount
   });
 return null != a ? B.Z.Messages.GIFT_EMBED_BODY_DEFAULT.format({
-  username: b.ZP.getUserTag(a)
+  username: D.ZP.getUserTag(a)
 }) : B.Z.Messages.GIFT_EMBED_BODY_NO_USER_DEFAULT;
   }
   renderPromotionActions() {
@@ -408,7 +408,7 @@ sku: s,
 giftCode: a,
 gifter: r,
 currentUser: i,
-subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, D.oE)(a.subscriptionPlanId) : null,
+subscriptionPlan: null != a && null != a.subscriptionPlanId ? (0, b.oE)(a.subscriptionPlanId) : null,
 isSelfGift: null != a ? S.default.getId() === a.userId : S.default.getId() === n.id,
 resolved: A.Z.getIsResolved(t),
 libraryApplication: null != s && (null == a ? void 0 : a.entitlementBranches) != null ? Z.z2(a.entitlementBranches, s, R.Z) : null,

@@ -17,7 +17,7 @@ var a = n(512722),
   E = n(981631),
   I = n(245335),
   m = n(689938),
-  T = n(29062);
+  T = n(182578);
 
 function h(e) {
   let t, n, a, {
@@ -53,15 +53,15 @@ if (null == h.guild)
   return (0, i.jsx)(_.Z, {});
 f = new c.ZP(h.guild);
   }
-  let D = null != h.channel ? (0, o.jD)(h.channel) : null,
-b = x ? C : p;
+  let b = null != h.channel ? (0, o.jD)(h.channel) : null,
+D = x ? C : p;
   P && !O ? a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({
 name: v.username
   }) : (t = m.Z.Messages.WATCH, n = l.Z.Button.Colors.GREEN, x && (t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING, n = l.Z.Button.Colors.PRIMARY), a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({
 name: v.username
   }));
-  let j = S === f.id && null != D ? (0, i.jsx)(l.Z.Channel, {
-channel: D
+  let j = S === f.id && null != b ? (0, i.jsx)(l.Z.Channel, {
+channel: b
   }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
 guildName: f.name
   });
@@ -77,18 +77,18 @@ children: [
         children: [
           (0, i.jsx)(l.Z.Icon, {
             guild: f,
-            onClick: P && O ? b : void 0
+            onClick: P && O ? D : void 0
           }),
           (0, i.jsx)(l.Z.Info, {
             title: a,
-            onClick: P && O ? b : void 0,
+            onClick: P && O ? D : void 0,
             children: j
           })
         ]
       }),
       O ? (0, i.jsx)(l.Z.Button, {
         disabled: P && !O,
-        onClick: b,
+        onClick: D,
         submitting: Z,
         isDisabled: x && O,
         color: n,

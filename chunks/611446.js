@@ -13,7 +13,7 @@ var T, o, n = s(735250),
   E = s(858597),
   c = s(486213),
   O = s(689938),
-  d = s(643415);
+  d = s(14188);
 (o = T || (T = {})).ACTIONS = 'ACTIONS', o.SAFETY_TIPS = 'SAFETY_TIPS', o.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS';
 t.default = e => {
   let {

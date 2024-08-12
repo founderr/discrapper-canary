@@ -29,8 +29,8 @@ var i = n(735250),
   L = n(488131),
   Z = n(814820),
   P = n(314897),
-  D = n(523746),
-  b = n(592125),
+  b = n(523746),
+  D = n(592125),
   j = n(430824),
   U = n(496675),
   y = n(158776),
@@ -73,7 +73,7 @@ var i = n(735250),
   eC = n(981631),
   ep = n(70722),
   eg = n(689938),
-  eS = n(820843);
+  eS = n(118496);
 
 function eA(e) {
   let {
@@ -210,7 +210,7 @@ let {
 } = e, {
   id: l,
   author: o
-} = t, u = P.default.getId(), d = t.getChannelId(), _ = (0, s.e7)([D.Z], () => D.Z.isCallActive(d, l), [
+} = t, u = P.default.getId(), d = t.getChannelId(), _ = (0, s.e7)([b.Z], () => b.Z.isCallActive(d, l), [
   d,
   l
 ]), E = (0, s.e7)([G.Z], () => G.Z.getVoiceState(eC.ME, u)), I = !_ && null != t.call && !t.call.participants.includes(u), m = _ && (null == E || E.channelId !== d), T = a.useCallback(() => c.default.selectVoiceChannel(d), [d]), h = (0, z.l)({
@@ -276,7 +276,7 @@ let {
   author: r
 } = t, l = t.getChannelId(), o = a.useCallback(() => {
   if (B.Z.getChannelId() !== l) {
-    let e = b.Z.getChannel(l);
+    let e = D.Z.getChannel(l);
     null != e && (0, R.XU)(e.guild_id, e.id);
   }
   setTimeout(() => F.S.dispatch(eC.CkL.TOGGLE_CHANNEL_PINS), 0);
@@ -355,7 +355,7 @@ let {
     id: o
   },
   messageReference: c
-} = t, d = t.getChannelId(), _ = (0, s.e7)([y.Z], () => y.Z.findActivity(o, e => e.type === eC.IIU.PLAYING), [o]), E = (0, s.e7)([b.Z], () => null != c ? b.Z.getChannel(c.channel_id) : null, [c]), I = null == c ? void 0 : c.guild_id, m = (0, z.l)({
+} = t, d = t.getChannelId(), _ = (0, s.e7)([y.Z], () => y.Z.findActivity(o, e => e.type === eC.IIU.PLAYING), [o]), E = (0, s.e7)([D.Z], () => null != c ? D.Z.getChannel(c.channel_id) : null, [c]), I = null == c ? void 0 : c.guild_id, m = (0, z.l)({
   user: l,
   channelId: d,
   guildId: r.guild_id,
@@ -386,7 +386,7 @@ return null != c && null != E && null != c.guild_id ? (0, i.jsx)(es.Z, {
 let {
   message: t,
   compact: n
-} = e, a = t.getChannelId(), r = (0, s.e7)([b.Z], () => b.Z.getChannel(a), [a]), l = null != r ? r.getGuildId() : null;
+} = e, a = t.getChannelId(), r = (0, s.e7)([D.Z], () => D.Z.getChannel(a), [a]), l = null != r ? r.getGuildId() : null;
 return (0, i.jsx)(en.FJ, {
   message: t,
   compact: n,
@@ -413,7 +413,7 @@ let {
   let i = null === (n = t.messageReference) || void 0 === n ? void 0 : n.channel_id;
   if (null != i) {
     await v.Z.loadThread(i);
-    let t = b.Z.getChannel(i);
+    let t = D.Z.getChannel(i);
     null != t && (0, L.ok)(t, e.shiftKey);
   }
 }, [t]), d = a.useCallback(() => {
@@ -422,7 +422,7 @@ let {
       default: e
     } = await Promise.all([
       n.e('91315'),
-      n.e('95971')
+      n.e('23502')
     ]).then(n.bind(n, 223901));
     return t => (0, i.jsx)(e, {
       channel: s,
@@ -431,14 +431,14 @@ let {
   });
 }, [s]), _ = a.useCallback(e => {
   var a;
-  let s = b.Z.getChannel(null === (a = t.messageReference) || void 0 === a ? void 0 : a.channel_id);
+  let s = D.Z.getChannel(null === (a = t.messageReference) || void 0 === a ? void 0 : a.channel_id);
   null != s && (0, l.jW)(e, async () => {
     let {
       default: e
     } = await Promise.all([
       n.e('39285'),
       n.e('48800'),
-      n.e('4985')
+      n.e('84248')
     ]).then(n.bind(n, 422200));
     return t => (0, i.jsx)(e, {
       ...t,

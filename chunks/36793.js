@@ -1,63 +1,62 @@
-
-function s(e, t, n, s) {
-  let a = e.naturalWidth / e.width,
-i = t.width / 2,
-r = t.height / 2,
-l = (e.width / 2 - i - n.x) * a,
-o = (e.height / 2 - r - n.y) * a,
-c = t.width * a,
-d = t.height * a,
-u = Math.min(c, s.width),
-_ = Math.min(d, s.height);
+function n(t, e, a, n) {
+  let i = t.naturalWidth / t.width,
+r = e.width / 2,
+b = e.height / 2,
+o = (t.width / 2 - r - a.x) * i,
+h = (t.height / 2 - b - a.y) * i,
+l = e.width * i,
+d = e.height * i,
+u = Math.min(l, n.width),
+g = Math.min(d, n.height);
   return {
-x: l,
-y: o,
-scaledCropWidth: c,
+x: o,
+y: h,
+scaledCropWidth: l,
 scaledCropHeight: d,
 canvasWidth: u,
-canvasHeight: _
+canvasHeight: g
   };
 }
 
-function a(e, t, n, a) {
+function i(t, e, a, i) {
   let {
-x: i,
-y: r,
-scaledCropWidth: l,
-scaledCropHeight: o,
-canvasWidth: c,
+x: r,
+y: b,
+scaledCropWidth: o,
+scaledCropHeight: h,
+canvasWidth: l,
 canvasHeight: d
-  } = s(e, t, n, a), u = document.createElement('canvas');
-  u.width = c, u.height = d;
-  let _ = u.getContext('2d');
-  return null != _ && _.drawImage(e, i, r, l, o, 0, 0, u.width, u.height), u.toDataURL('image/png');
+  } = n(t, e, a, i), u = document.createElement('canvas');
+  u.width = l, u.height = d;
+  let g = u.getContext('2d');
+  return null != g && g.drawImage(t, r, b, o, h, 0, 0, u.width, u.height), u.toDataURL('image/png');
 }
 
-function i(e, t, n) {
-  let s = e.naturalWidth / e.naturalHeight,
-i = t,
-r = n;
-  e.naturalWidth > e.naturalHeight ? i /= s : r *= s;
-  let l = {
-height: i,
-width: r
+function r(t, e, a) {
+  let n = t.naturalWidth / t.naturalHeight,
+r = e,
+b = a;
+  t.naturalWidth > t.naturalHeight ? r /= n : b *= n;
+  let o = {
+height: r,
+width: b
   };
-  return a(e, {
-width: e.width,
-height: e.height
+  return i(t, {
+width: t.width,
+height: t.height
   }, {
 x: 0,
 y: 0
-  }, l);
+  }, o);
 }
-n.d(t, {
+a.d(e, {
   Ae: function() {
-return i;
+return r;
   },
   PT: function() {
-return a;
+return i;
   },
   eu: function() {
-return s;
+return n;
   }
 });

@@ -32,14 +32,14 @@ var i = n(735250),
   v = n(74551),
   L = n(981631),
   Z = n(689938),
-  P = n(80706);
-let D = {
+  P = n(144754);
+let b = {
 offset: {
   left: 4,
   right: -12
 }
   },
-  b = e => {
+  D = e => {
 p.hW.updateAsync('forLater', t => {
   if (t.currentTab === e)
     return !1;
@@ -97,7 +97,7 @@ children: (0, i.jsxs)('div', {
             type: 'top',
             look: 'brand',
             selectedItem: n,
-            onItemSelect: b,
+            onItemSelect: D,
             className: P.tabBar,
             children: [
               (0, i.jsx)(E.TabBar.Item, {
@@ -259,7 +259,7 @@ children: [
     className: r()(P.message, t.complete ? P.disabledMessage : null),
     compact: C.jU.getSetting(),
     animateAvatar: !1,
-    focusProps: D,
+    focusProps: b,
     trackAnnouncementViews: !0
   }, t.message.id),
   (0, i.jsx)(h.ZP, {

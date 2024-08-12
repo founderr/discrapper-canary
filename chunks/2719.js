@@ -40,7 +40,7 @@ var n = t(735250),
   U = t(801461),
   G = t(228168),
   F = t(689938),
-  y = t(523193);
+  y = t(900168);
 let V = L.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
 
 function Y(e) {
@@ -133,7 +133,7 @@ children: [
             default: e
           } = await Promise.all([
             t.e('85342'),
-            t.e('2137')
+            t.e('51695')
           ]).then(t.bind(t, 193049));
           return s => (0, n.jsx)(e, {
             source: U.Kq.USER_SETTINGS_EDIT,
@@ -257,7 +257,7 @@ if (null == i.email)
         default: e
       } = await Promise.all([
         t.e('9343'),
-        t.e('12409')
+        t.e('45863')
       ]).then(t.bind(t, 642298));
       return s => (0, n.jsx)(e, {
         ...s
@@ -283,7 +283,7 @@ else {
         default: e
       } = await Promise.all([
         t.e('9343'),
-        t.e('12409')
+        t.e('45863')
       ]).then(t.bind(t, 642298));
       return s => (0, n.jsx)(e, {
         ...s

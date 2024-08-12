@@ -13,7 +13,7 @@ var a = n(990547),
   c = n(981631),
   d = n(921944),
   u = n(689938),
-  _ = n(920666);
+  _ = n(55317);
 let h = (e, t) => ({
   header: u.Z.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
 gameName: e.title

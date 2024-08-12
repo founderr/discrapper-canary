@@ -30,7 +30,7 @@ var i = n(735250),
   v = n(981631),
   S = n(65154),
   Z = n(689938),
-  A = n(149050);
+  A = n(26864);
 let M = o.AvatarSizes.SIZE_80,
   b = o.AvatarSizes.SIZE_40;
 

@@ -1,54 +1,22 @@
-t.d(A, {
-  Z: function() {
+n.d(t, {
+  q: function() {
 return l;
   }
-});
-var a = t(735250);
-t(470079);
-var n = t(120356),
-  r = t.n(n),
-  s = t(481060),
-  o = t(53281);
+}), n(470079);
+var r = n(100527),
+  i = n(367907),
+  a = n(626135),
+  s = n(50493),
+  o = n(981631);
 
-function l(e) {
-  let {
-children: A,
-className: t,
-innerClassName: n,
-onChange: l,
-'aria-label': i,
-'aria-describedby': d,
-filters: c,
-multiple: u = !1,
-disabled: C = !1,
-submitting: g = !1,
-...T
-  } = e;
-  return (0, a.jsx)(s.FocusRing, {
-within: !0,
-children: (0, a.jsxs)('div', {
-  className: r()(t, (0, s.getButtonStyle)({
-    ...T,
-    submitting: g,
-    disabled: C
-  })),
-  'aria-disabled': C,
-  children: [
-    (0, a.jsx)('span', {
-      'aria-hidden': !0,
-      className: n,
-      children: A
-    }),
-    (0, a.jsx)(o.Z, {
-      tabIndex: 0,
-      onChange: l,
-      filters: c,
-      multiple: u,
-      'aria-label': i,
-      'aria-describedby': d,
-      disabled: C
-    })
-  ]
-})
-  });
+function l(e, t, n) {
+  let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Z.MEMBER_SAFETY_PAGE,
+u = {
+  guild_id: e,
+  target_user_id: t,
+  subpanel_name: s.Y[n],
+  location: l,
+  ...(0, i.hH)(e)
+};
+  return a.default.track(o.rMx.GUILD_MOD_VIEW_OPENED, u);
 }

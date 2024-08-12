@@ -22,7 +22,7 @@ var s = n(735250),
   h = n(450215),
   g = n(981631),
   C = n(689938),
-  x = n(540880);
+  x = n(92257);
 let p = 'guild-role-subscription-tier-template-selector',
   R = e => {
 let [t, n] = a.useState(!0), [s, i] = a.useState();
