@@ -27,7 +27,7 @@ extendedOptInDuration: !1
 },
 {
   id: 3,
-  label: 'Perk Demo Opt In - Extended Demo & Opt In Duration',
+  label: 'both',
   config: {
     enabled: !0,
     extendedDemoDuration: !0,

@@ -72,7 +72,7 @@ children: [
       user: e,
       available: r,
       activateSuccess: p
-    }), (0, s.J1)(!1), (0, s.pM)(!1), (0, s.qA)(!1), (0, s.hP)(!1)),
+    }), (0, s.Vk)()),
     children: 'Update'
   })
 ]

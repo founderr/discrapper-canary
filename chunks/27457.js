@@ -29,8 +29,8 @@ var i = n(735250),
   Z = n(512384),
   A = n(6242),
   M = n(757692),
-  b = n(746599),
-  R = n(485731),
+  b = n(386542),
+  R = n(746599),
   j = n(614011),
   L = n(210975),
   P = n(937995),
@@ -127,7 +127,9 @@ return {
   muted: null !== (s = t.type === $.fO.USER && (null === (i = t.voiceState) || void 0 === i ? void 0 : i.isVoiceMuted())) && void 0 !== s && s,
   deafened: null !== (l = t.type === $.fO.USER && (null === (a = t.voiceState) || void 0 === a ? void 0 : a.isVoiceDeafened())) && void 0 !== l && l
 };
-  }(ev, I, eo.getGuildId()), eD = I.type === $.fO.STREAM && eZ === ev, ek = (0, F.So)(r.q.STREAM_HIGH_QUALITY), eU = (0, o.e7)([R.Z], () => R.Z.getState()), ew = ek && eD, eB = (0, M.o)(I, eS), eH = (0, A.lL)('CallTile', !0, eS, eB), eG = eH.persistentQualityIndicator && eH.enabled, eV = (0, o.e7)([O.Z], () => null != eZ ? O.Z.getEffectForUserId(eZ) : null), eF = (0, o.e7)([H.Z], () => H.Z.getVoicePlatformForChannel(eo.id, null != eZ ? eZ : J.lds)), {
+  }(ev, I, eo.getGuildId()), eD = I.type === $.fO.STREAM && eZ === ev, ek = (0, F.So)(r.q.STREAM_HIGH_QUALITY), {
+hqStreamingState: eU
+  } = (0, b.k)(r.q.STREAM_HIGH_QUALITY), ew = ek && eD, eB = (0, M.o)(I, eS), eH = (0, A.lL)('CallTile', !0, eS, eB), eG = eH.persistentQualityIndicator && eH.enabled, eV = (0, o.e7)([O.Z], () => null != eZ ? O.Z.getEffectForUserId(eZ) : null), eF = (0, o.e7)([H.Z], () => H.Z.getVoicePlatformForChannel(eo.id, null != eZ ? eZ : J.lds)), {
 enableHangStatus: eW
   } = C.n.useExperiment({
 guildId: eo.guild_id,
@@ -160,7 +162,7 @@ eN(ef);
   null != eZ && d.Z.toggleLocalMute(eZ, et.Yn.STREAM);
 }, [eZ]),
 e0 = a.useCallback(() => {
-  (0, b.hP)(!0);
+  (0, R.hP)();
 }, []),
 e1 = a.useCallback(e => {
   null == V || V(I, e);

@@ -147,7 +147,7 @@ channel: t,
 ...n
   } = e, {
 hqStreamingState: {
-  hqStreamingOptOutPopoutShouldShow: s
+  hqStreamingOptInPopoutShouldShow: s
 }
   } = (0, g.k)(r.q.STREAM_HIGH_QUALITY), {
 enabled: l

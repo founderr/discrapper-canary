@@ -132,7 +132,7 @@ if (A) {
   return;
 }
 (0, B.Z)(u);
-  }, P = (e, t) => {
+  }, P = W.pM, O = W.qA, y = (e, t) => {
 let {
   onClick: n,
   ...i
@@ -148,7 +148,7 @@ return (0, s.jsx)(et.O, {
   streamActive: null != u,
   isSelfStream: !0,
   onPopoutClick: a ? function(e) {
-    f.hqStreamingIsEnabled && !f.hqStreamingPopoutDismissed && (0, W.pM)(!0), null == n || n(e);
+    f.hqStreamingIsEnabled && !f.hqStreamingPopoutDismissed && P(), null == n || n(e);
   } : null,
   popoutOpen: t,
   shouldShowTooltip: !t,
@@ -157,21 +157,17 @@ return (0, s.jsx)(et.O, {
   onClick: null != u ? L : j
 });
   };
-  return A ? P() : (0, s.jsxs)(s.Fragment, {
+  return A ? y() : (0, s.jsxs)(s.Fragment, {
 children: [
   g && f.hqStreamingIsEnabled ? (0, s.jsx)(Y.$, {
     buttonRef: I,
     dismissed: f.hqStreamingPopoutDismissed,
-    onDismiss: () => {
-      (0, W.pM)(!0);
-    }
+    onDismiss: P
   }) : (0, s.jsx)(z.b, {
     channel: t,
     buttonRef: I,
     dismissed: f.hqStreamingOptInPopoutDismissed,
-    onDismiss: () => {
-      (0, W.qA)(!0);
-    }
+    onDismiss: O
   }),
   (0, s.jsx)(K.Z, {
     children: (0, s.jsx)(m.Popout, {
@@ -200,7 +196,7 @@ children: [
           isShown: i
         } = t;
         return (0, s.jsx)('div', {
-          children: P(n, i)
+          children: y(n, i)
         });
       }
     })
