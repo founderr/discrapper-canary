@@ -1,6 +1,6 @@
 n.d(t, {
   y: function() {
-return _;
+return C;
   }
 });
 var s = n(735250);
@@ -11,31 +11,30 @@ var o = n(481060),
   l = n(918701),
   i = n(796111),
   c = n(667105),
-  d = n(760171),
-  u = n(46140),
-  p = n(689938),
-  m = n(941624);
-let x = e => {
+  d = n(46140),
+  u = n(689938),
+  p = n(941624);
+let m = e => {
 let {
   quest: t
 } = e;
 return (0, s.jsx)(o.Button, {
-  className: m.cta,
+  className: p.cta,
   size: o.Button.Sizes.SMALL,
   onClick: () => (0, l.FE)(t, {
     content: a.jn.QUEST_BAR_V2,
     ctaContent: r.jZ.OPEN_GAME_LINK
   }),
-  children: p.Z.Messages.QUESTS_GET_THIS_GAME
+  children: u.Z.Messages.QUESTS_GET_THIS_GAME
 });
   },
-  g = e => {
+  x = e => {
 let {
   quest: t
 } = e;
 return (0, s.jsx)(o.Button, {
   fullWidth: !0,
-  className: m.cta,
+  className: p.cta,
   onClick: () => (0, l.gI)({
     quest: t,
     showInline: !1
@@ -44,10 +43,10 @@ return (0, s.jsx)(o.Button, {
     ctaContent: r.jZ.CONNECT_CONSOLE
   }),
   size: o.Button.Sizes.SMALL,
-  children: p.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
+  children: u.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CTA
 });
   },
-  f = e => {
+  g = e => {
 let {
   quest: t,
   useReducedMotion: n,
@@ -61,58 +60,58 @@ return (0, s.jsx)(o.ShinyButton, {
   size: o.Button.Sizes.SMALL,
   onClick: l,
   pauseAnimation: n || !r,
-  className: m.cta,
-  buttonShineClassName: m.shine,
-  children: p.Z.Messages.QUESTS_CLAIM_REWARD
+  className: p.cta,
+  buttonShineClassName: p.shine,
+  children: u.Z.Messages.QUESTS_CLAIM_REWARD
 });
   },
-  C = e => {
+  f = e => {
 var t;
 let {
   quest: n,
   useReducedMotion: o,
   isExpanded: r,
-  awaitingConsoleConnections: a,
-  hasMadeProgress: l,
-  isProgressing: c,
+  awaitingConsoleConnections: l,
+  hasMadeProgress: c,
+  isProgressing: u,
   activeScreen: p
-} = e, m = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, C = (0, i.P)({
-  location: u.dr.QUESTS_BAR
+} = e, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, C = (0, i.P)({
+  location: d.dr.QUESTS_BAR
 });
-if (m)
-  return (0, s.jsx)(f, {
+if (f)
+  return (0, s.jsx)(g, {
     quest: n,
     useReducedMotion: o,
     isExpanded: r
   });
-if (p === d.L.CONSOLE && a && !C)
-  return (0, s.jsx)(g, {
+if (p === a.LI.CONSOLE && l && !C)
+  return (0, s.jsx)(x, {
     quest: n
   });
-if (p !== d.L.SELECT && !l && !c)
-  return (0, s.jsx)(x, {
+if (p !== a.LI.SELECT && !c && !u)
+  return (0, s.jsx)(m, {
     quest: n
   });
 return null;
   };
 
-function _(e) {
+function C(e) {
   return (0, s.jsxs)('div', {
-className: m.ctaButtons,
+className: p.ctaButtons,
 children: [
   e.showBackButton && (0, s.jsx)(o.Button, {
-    className: m.backButton,
-    innerClassName: m.backButtonInner,
+    className: p.backButton,
+    innerClassName: p.backButtonInner,
     look: 'blank',
     grow: !1,
     fullWidth: !1,
     size: 'none',
     onClick: e.onBack,
     children: (0, s.jsx)(o.ChevronSmallLeftIcon, {
-      className: m.backIcon
+      className: p.backIcon
     })
   }),
-  (0, s.jsx)(C, {
+  (0, s.jsx)(f, {
     ...e
   })
 ]

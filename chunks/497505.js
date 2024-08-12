@@ -2,17 +2,20 @@ n.d(t, {
   HW: function() {
 return r;
   },
+  LI: function() {
+return i;
+  },
   jn: function() {
-return s.j;
+return l.j;
   },
   xw: function() {
-return o;
+return u;
   },
   y$: function() {
-return a.y;
+return o.y;
   }
 }), n(47120);
-var r, i, a = n(687522),
-  s = n(636977);
-let o = new Set(Object.values(a.y).filter(e => 'number' == typeof e));
-(i = r || (r = {})).GENERIC = 'generic', i.RATE_LIMITED = 'rate_limited';
+var r, i, a, s, o = n(687522),
+  l = n(636977);
+let u = new Set(Object.values(o.y).filter(e => 'number' == typeof e));
+(a = r || (r = {})).GENERIC = 'generic', a.RATE_LIMITED = 'rate_limited', (s = i || (i = {})).DESKTOP = 'desktop', s.CONSOLE = 'console', s.SELECT = 'select';
