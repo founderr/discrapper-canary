@@ -27,8 +27,9 @@ e.exports = {
   gameState: 'gameState_ae1fa2',
   guildIcon: 'guildIcon_ae1fa2',
   voiceChannel: 'voiceChannel_ae1fa2',
-  voiceChannelDetails: 'voiceChannelDetails_ae1fa2',
-  voiceChannelInfo: 'voiceChannelInfo_ae1fa2',
+  voiceChannelText: 'voiceChannelText_ae1fa2',
+  voiceIcon: 'voiceIcon_ae1fa2',
+  voiceChannelHeading: 'voiceChannelHeading_ae1fa2',
   voiceChannelDivider: 'voiceChannelDivider_ae1fa2',
   contextMenu: 'contextMenu_ae1fa2'
 };

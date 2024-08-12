@@ -174,11 +174,12 @@ return i.type === B.IIU.HANG_STATUS ? (0, r.jsx)(M.Z, {
   variant: 'heading-sm/semibold',
   text: (0, A.O8)(i)
 }) : (0, h.Z)(i) && null != W ? (0, r.jsxs)('div', {
-  className: H.voiceChannelInfo,
+  className: H.voiceChannelText,
   children: [
     (0, r.jsx)(l.VoiceNormalIcon, {
       size: 'xxs',
-      color: l.tokens.colors.TEXT_NORMAL
+      color: l.tokens.colors.TEXT_NORMAL,
+      className: H.voiceIcon
     }),
     (0, r.jsx)(M.Z, {
       variant: 'heading-sm/semibold',

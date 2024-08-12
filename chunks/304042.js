@@ -139,17 +139,17 @@ ea = () => V !== M.y0.FULL_SIZE ? null : (0, r.jsxs)('div', {
   children: [
     (0, r.jsxs)('div', {
       children: [
-        (0, r.jsxs)('div', {
-          className: w.voiceChannelInfo,
+        (0, r.jsxs)(o.Heading, {
+          variant: 'heading-sm/semibold',
+          color: 'text-normal',
+          className: w.voiceChannelHeading,
           children: [
             (0, r.jsx)(o.VoiceNormalIcon, {
               size: 'xxs',
-              color: o.tokens.colors.TEXT_NORMAL
+              color: o.tokens.colors.TEXT_NORMAL,
+              className: w.voiceIcon
             }),
-            (0, r.jsx)(R.Z, {
-              variant: 'heading-sm/semibold',
-              text: q.name
-            })
+            q.name
           ]
         }),
         (0, r.jsx)(R.Z, {
