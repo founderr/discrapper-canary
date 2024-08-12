@@ -264,8 +264,7 @@ children: [
     className: P.hoverBar,
     children: (0, i.jsx)(k, {
       savedMessage: t,
-      jumpToMessage: o,
-      throttledNow: s
+      jumpToMessage: o
     })
   })
 ]
@@ -275,62 +274,43 @@ children: [
 function k(e) {
   let {
 savedMessage: t,
-jumpToMessage: a,
-throttledNow: s
+jumpToMessage: a
   } = e;
-  if (o()(null != t.message, 'Saved message must be cached for For Later action buttons'), t.saveData.type === u.J.REMINDER && null != t.saveData.dueAt) {
-let e = t.saveData.dueAt < s;
-return (0, i.jsxs)(i.Fragment, {
-  children: [
-    (0, i.jsx)(h.sF, {
-      label: Z.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
-      icon: E.CheckmarkLargeIcon,
-      onClick: () => (0, O.Y_)(t.saveData, !t.complete)
-    }, 'mark-complete'),
-    e ? (0, i.jsx)(h.sF, {
-      label: Z.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
-      icon: E.ClockIcon,
-      onClick: e => (0, I.jW)(e, async () => {
-        let {
-          MessageReminderEditMenu: e
-        } = await n.e('69818').then(n.bind(n, 898150));
-        return n => (0, i.jsx)(e, {
-          ...n,
-          label: Z.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
-          message: t.message,
-          isSnooze: !0
-        });
-      })
-    }, 'snooze-reminder') : (0, i.jsx)(h.sF, {
-      label: Z.Z.Messages.MESSAGE_REMINDERS_EDIT,
-      icon: E.PencilIcon,
-      onClick: e => (0, I.jW)(e, async () => {
-        let {
-          MessageReminderEditMenu: e
-        } = await n.e('69818').then(n.bind(n, 898150));
-        return n => (0, i.jsx)(e, {
-          ...n,
-          label: Z.Z.Messages.MESSAGE_REMINDERS_REMIND_ME,
-          message: t.message
-        });
-      })
-    }, 'edit-reminder'),
-    (0, i.jsx)(h.fO, {}),
-    (0, i.jsx)(h.sF, {
-      label: Z.Z.Messages.JUMP_TO_MESSAGE,
-      icon: E.ArrowLargeRightIcon,
-      onClick: e => a(e)
-    }, 'jump-to-message'),
-    (0, i.jsx)(h.sF, {
-      label: Z.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
-      icon: E.TrashIcon,
-      dangerous: !0,
-      onClick: () => (0, O.bn)(t.saveData)
-    }, 'remove-reminder')
-  ]
-});
-  }
-  return (0, i.jsxs)(i.Fragment, {
+  return (o()(null != t.message, 'Saved message must be cached for For Later action buttons'), t.saveData.type === u.J.REMINDER && null != t.saveData.dueAt) ? (0, i.jsxs)(i.Fragment, {
+children: [
+  (0, i.jsx)(h.sF, {
+    label: Z.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
+    icon: E.CheckmarkLargeIcon,
+    onClick: () => (0, O.Y_)(t.saveData, !t.complete)
+  }, 'mark-complete'),
+  (0, i.jsx)(h.sF, {
+    label: Z.Z.Messages.MESSAGE_REMINDERS_EDIT,
+    icon: E.PencilIcon,
+    onClick: e => (0, I.jW)(e, async () => {
+      let {
+        MessageReminderEditMenu: e
+      } = await n.e('69818').then(n.bind(n, 898150));
+      return n => (0, i.jsx)(e, {
+        ...n,
+        label: Z.Z.Messages.MESSAGE_REMINDERS_REMIND_ME,
+        message: t.message
+      });
+    })
+  }, 'edit-reminder'),
+  (0, i.jsx)(h.fO, {}),
+  (0, i.jsx)(h.sF, {
+    label: Z.Z.Messages.JUMP_TO_MESSAGE,
+    icon: E.ArrowLargeRightIcon,
+    onClick: e => a(e)
+  }, 'jump-to-message'),
+  (0, i.jsx)(h.sF, {
+    label: Z.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
+    icon: E.TrashIcon,
+    dangerous: !0,
+    onClick: () => (0, O.bn)(t.saveData)
+  }, 'remove-reminder')
+]
+  }) : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(h.sF, {
     label: Z.Z.Messages.MESSAGE_REMINDERS_CREATE,
