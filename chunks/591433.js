@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return Z;
+return L;
   }
 }), n(47120), n(411104);
 var i = n(735250),
@@ -18,137 +18,152 @@ var i = n(735250),
   m = n(143021),
   I = n(393596),
   g = n(35448),
-  p = n(692420),
-  T = n(689938),
-  S = n(856059);
-let f = 52,
-  C = 84,
-  N = Object.freeze({
+  p = n(458203),
+  T = n(692420),
+  S = n(689938),
+  f = n(856059);
+let C = 52,
+  N = 84,
+  A = Object.freeze({
 top: 0,
 bottom: 0,
 left: 32,
 right: 202
   }),
-  A = Object.freeze({
+  v = Object.freeze({
 top: 0,
 bottom: 0,
 left: 32,
 right: 32
   }),
-  v = r().throttle(E.c6, 1000, {
+  Z = r().throttle(E.c6, 1000, {
 leading: !1,
 trailing: !0
   });
 
-function Z(e) {
+function L(e) {
   let {
 loadId: t,
 onGuildCardSeen: n,
 onGuildCardClick: r
   } = e, E = (0, d.ZP)(), {
-guilds: Z,
-loading: L,
-searchResultsQuery: O,
-loadMore: R,
-searchCategoryId: x
+guilds: L,
+loading: O,
+searchResultsQuery: R,
+loadMore: x,
+searchCategoryId: b
   } = (0, m.f)({
 loadId: t
-  }), b = a.useContext(h.AnalyticsContext), [P, M] = a.useState((0, u.P)()), [D, y] = a.useState(!0), j = a.useRef(D), [U, G] = a.useState(3), k = a.useRef(U), w = (0, c.y)(e => {
+  }), P = a.useContext(h.AnalyticsContext), [M, D] = a.useState((0, u.P)()), [y, j] = a.useState(!0), U = a.useRef(y), [G, k] = a.useState(3), w = a.useRef(G), B = (0, c.y)(e => {
 let t = null == e ? void 0 : e.getBoundingClientRect();
 if (null == t)
   return;
 let n = t.width;
-n < 1024 && j.current ? (j.current = !1, y(!1)) : n > 1024 && !j.current && (j.current = !0, y(!0));
+n < 1024 && U.current ? (U.current = !1, j(!1)) : n > 1024 && !U.current && (U.current = !0, j(!0));
 let i = 1;
-for (n -= D ? 420 : 0, n -= 250; n > 0;)
+for (n -= y ? 420 : 0, n -= 250; n > 0;)
   n -= 234, i += 1;
-i !== k.current && (k.current = i, G(i));
+i !== w.current && (w.current = i, k(i));
   });
   a.useEffect(() => {
-M((0, u.P)());
-  }, [O]);
-  let B = a.useCallback(e => {
-  v({
+D((0, u.P)());
+  }, [R]);
+  let H = a.useCallback(e => {
+  Z({
     loadId: t,
-    searchId: P,
-    query: O,
-    guildResults: Z,
-    analyticsContext: b,
-    categoryId: x,
+    searchId: M,
+    query: R,
+    guildResults: L,
+    analyticsContext: P,
+    categoryId: b,
     isTagSearch: !1
-  }), n(e, x);
+  }), n(e, b);
 }, [
-  b,
-  Z,
+  P,
+  L,
   t,
   n,
-  x,
-  P,
+  b,
+  M,
+  R
+]),
+V = a.useMemo(() => O ? [
+  L.length,
+  0
+] : [L.length], [
+  L.length,
   O
 ]),
-H = a.useMemo(() => L ? [
-  Z.length,
-  0
-] : [Z.length], [
-  Z.length,
-  L
-]),
-V = a.useCallback(e => {
+F = 0 === L.length,
+Y = a.useCallback((e, n, a) => {
   switch (e) {
     case 0:
-      return (0, i.jsxs)(i.Fragment, {
+      var s;
+      return (0, i.jsxs)('div', {
+        style: {
+          paddingLeft: n.left,
+          width: n.width - (null !== (s = n.left) && void 0 !== s ? s : 0)
+        },
         children: [
           (0, i.jsx)(l.X, {
             variant: 'heading-lg/semibold',
-            className: S.heading,
-            children: T.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
-              query: O
+            className: f.heading,
+            children: S.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({
+              query: R
             })
           }),
-          !D && (0, i.jsxs)('div', {
-            className: S.headingFilters,
+          !y && (0, i.jsxs)('div', {
+            className: f.headingFilters,
             children: [
               (0, i.jsx)(g.Z, {
                 loadId: t
               }),
-              (0, i.jsx)(p.Z, {
+              (0, i.jsx)(T.Z, {
                 loadId: t
               })
             ]
+          }),
+          F && (0, i.jsx)(p.Z, {
+            loadId: t
           })
         ]
-      });
+      }, a);
     case 1:
       return (0, i.jsx)(o.Spinner, {
-        className: S.spinner
-      });
+        className: f.spinner
+      }, a);
   }
 }, [
-  D,
+  F,
+  y,
   t,
-  O
+  R
 ]),
-F = a.useCallback(e => {
+W = a.useCallback(e => {
   switch (e) {
     case 0:
-      return D ? f : C;
+      let t = y ? C : N;
+      return F ? t + 400 : t;
     case 1:
       return 120;
     default:
       throw Error('[getSectionHeight] Failed for section: '.concat(e));
   }
-}, [D]),
-Y = a.useCallback((e, t) => {
+}, [
+  F,
+  y
+]),
+z = a.useCallback((e, t) => {
   switch (e) {
     case 0:
-      return Z[t].id;
+      return L[t].id;
     case 1:
       return 'loading';
     default:
       throw Error('[getItemKey] Failed for section: '.concat(e));
   }
-}, [Z]),
-W = a.useCallback(e => {
+}, [L]),
+K = a.useCallback(e => {
   switch (e) {
     case 0:
       return 320;
@@ -158,65 +173,65 @@ W = a.useCallback(e => {
       throw Error('[getItemHeight] Failed for section: '.concat(e));
   }
 }, []),
-z = a.useCallback((e, t, n, a) => {
+q = a.useCallback((e, t, n, a) => {
   if (0 === e) {
-    let e = Z[t];
+    let e = L[t];
     return (0, i.jsx)('div', {
       style: n,
       children: (0, i.jsx)(_.Z, {
         guild: e,
-        onView: e => r(e, t, x),
-        onGuildCardSeen: B,
+        onView: e => r(e, t, b),
+        onGuildCardSeen: H,
         theme: E
       }, e.id)
     }, a);
   }
   return null;
 }, [
-  Z,
-  B,
+  L,
+  H,
   r,
-  x,
+  b,
   E
 ]),
-K = a.useRef(null),
-q = a.useMemo(() => (0, s.debounce)(() => {
+Q = a.useRef(null),
+X = a.useMemo(() => (0, s.debounce)(() => {
   var e;
-  let t = null === (e = K.current) || void 0 === e ? void 0 : e.getScrollerState();
+  let t = null === (e = Q.current) || void 0 === e ? void 0 : e.getScrollerState();
   if (null == t)
     return;
   let n = t.scrollTop + t.offsetHeight;
-  t.scrollHeight - n < 200 && R();
-}, 250), [R]),
-Q = D ? N : A;
+  t.scrollHeight - n < 200 && x();
+}, 250), [x]),
+J = y ? A : v;
   return (0, i.jsx)('div', {
-className: S.container,
-ref: w,
+className: f.container,
+ref: B,
 children: (0, i.jsx)(o.MasonryList, {
-  ref: K,
-  className: S.masonryList,
-  sections: H,
-  columns: U,
+  ref: Q,
+  className: f.masonryList,
+  sections: V,
+  columns: G,
   itemGutter: 16,
-  padding: Q,
-  renderItem: z,
-  renderSection: V,
-  getSectionHeight: F,
-  getItemKey: Y,
-  getItemHeight: W,
+  padding: J,
+  renderItem: q,
+  renderSection: Y,
+  getSectionHeight: W,
+  getItemKey: z,
+  getItemHeight: K,
   chunkSize: 24,
-  onScroll: q,
-  renderAccessory: e => D ? (0, i.jsx)('div', {
-    className: S.sidebar,
+  onScroll: X,
+  renderAccessory: e => y ? (0, i.jsx)('div', {
+    className: f.sidebar,
     style: {
       height: e
     },
     children: (0, i.jsxs)('div', {
-      className: S.sidebarContent,
+      className: f.sidebarContent,
       children: [
         (0, i.jsx)('div', {
-          className: S.sidebarLanguageSelect,
-          children: (0, i.jsx)(p.Z, {
+          className: f.sidebarLanguageSelect,
+          children: (0, i.jsx)(T.Z, {
             loadId: t
           })
         }),

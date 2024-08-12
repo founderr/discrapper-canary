@@ -32,7 +32,8 @@ languageCode: d
   (0, i.j)(() => o.B.setState({
 searchResultsQuery: c,
 isSearchVisible: !0,
-searchCategoryId: n
+searchCategoryId: n,
+searchLanguageCode: d
   })), l.tI(t, n), null == r.ZP.getTopCategoryCounts(c) && a.G7(c, {
 approximate_member_count: l.sq
   }), a.bR(c, {
