@@ -80,6 +80,12 @@ F = a.useMemo(() => [{
   }
 ], [G]),
 y = a.useMemo(() => [{
+    value: R.LY.RESOLUTION_480,
+    label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+      resolution: R.LY.RESOLUTION_480
+    })
+  },
+  {
     value: R.LY.RESOLUTION_720,
     label: M.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
       resolution: R.LY.RESOLUTION_720
