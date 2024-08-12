@@ -231,10 +231,14 @@ let M = '700136079562375258',
   ],
   G = [
 'Recurring Events',
+'Beginner Friendly',
+'PUGs',
+'Inclusive',
+'Parent Friendly',
+'Work-life Balance',
 'Competitive',
-'Creator',
-'Esports',
-'Streamer'
+'Streamer',
+'Esports'
   ],
   k = new Set([
 ...U,
