@@ -5,8 +5,8 @@ return l;
 });
 var s = n(735250),
   o = n(470079),
-  r = n(338545),
-  a = n(613087);
+  a = n(338545),
+  r = n(613087);
 
 function l(e) {
   let {
@@ -16,7 +16,7 @@ isExpanded: n
 animatedComponentProps: l,
 recalculateAnimationPositions: i,
 mountPoints: c
-  } = o.useContext(a.B$);
+  } = o.useContext(r.B$);
   return o.useEffect(() => {
 i();
   }, [
@@ -37,12 +37,12 @@ children: l.map(e => {
   let {
     id: n,
     collapsedLeft: o,
-    expandedLeft: a,
+    expandedLeft: r,
     collapsedTop: l,
     expandedTop: i,
     width: d
   } = e, u = c.get(n);
-  return (0, s.jsx)(r.animated.div, {
+  return (0, s.jsx)(a.animated.div, {
     ref: u,
     style: {
       zIndex: 2,
@@ -50,7 +50,7 @@ children: l.map(e => {
       top: 0,
       left: 0,
       width: d,
-      transform: (0, r.to)([
+      transform: (0, a.to)([
         t.to({
           range: [
             0,
@@ -58,7 +58,7 @@ children: l.map(e => {
           ],
           output: [
             o,
-            a
+            r
           ]
         }),
         t.to({

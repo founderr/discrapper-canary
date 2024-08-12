@@ -12,8 +12,8 @@ var s = n(735250),
   u = n(390322),
   c = n(617136),
   d = n(272008),
-  C = n(113434),
-  E = n(569984),
+  E = n(113434),
+  C = n(569984),
   m = n(918701),
   p = n(341907),
   x = n(709158),
@@ -23,18 +23,18 @@ var s = n(735250),
 
 function b(e) {
   var t;
-  let n = (0, i.e7)([E.Z], () => E.Z.questDeliveryOverride, []),
+  let n = (0, i.e7)([C.Z], () => C.Z.questDeliveryOverride, []),
 u = (0, m.GN)(e.questContent),
 b = (0, m.zK)(e.quest, T.S7.IN_HOUSE_CONSOLE_QUEST),
 f = (0, m.KM)(e.quest),
-M = (0, x.Z)(T.dr.QUEST_CONTEXT_MENU),
+h = (0, x.Z)(T.dr.QUEST_CONTEXT_MENU),
 {
-  handleComplete: h,
+  handleComplete: M,
   handleResetDismissibilityClick: N,
-  handleResetStatusClick: j,
-  handleOverrideDeliveryClick: I
-} = (0, C.kJ)(e.quest.id),
-S = o.useCallback(() => {
+  handleResetStatusClick: S,
+  handleOverrideDeliveryClick: g
+} = (0, E.kJ)(e.quest.id),
+j = o.useCallback(() => {
   (0, m.FE)(e.quest, {
     content: e.questContent,
     ctaContent: c.jZ.CONTEXT_MENU_OPEN_GAME_LINK
@@ -43,7 +43,7 @@ S = o.useCallback(() => {
   e.quest,
   e.questContent
 ]),
-g = o.useCallback(() => {
+I = o.useCallback(() => {
   (0, m.f2)(e.quest.id, {
     content: e.questContent,
     position: e.questContentPosition,
@@ -69,13 +69,13 @@ children: [
       !1 === b && !1 === f && (0, s.jsx)(a.MenuItem, {
         id: 'play-game',
         label: q.Z.Messages.QUESTS_GET_THIS_GAME,
-        action: S,
+        action: j,
         icon: a.LinkExternalMediumIcon
       }),
       !0 === e.showShareLink && (0, s.jsx)(a.MenuItem, {
         id: 'share-link',
         label: q.Z.Messages.COPY_LINK,
-        action: g,
+        action: I,
         icon: a.CopyIcon
       })
     ]
@@ -116,7 +116,7 @@ children: [
             questContentCTA: c.jZ.CONTEXT_MENU_HIDE_CONTENT
           }), (0, m.GN)(e.questContent) && (0, d.gl)(e.quest.id, e.questContent);
         },
-        subtext: M ? q.Z.Messages.QUESTS_FIND_THIS_IN_DISCOVERY_QUEST_HOME : q.Z.Messages.QUESTS_FIND_QUEST
+        subtext: h ? q.Z.Messages.QUESTS_FIND_THIS_IN_DISCOVERY_QUEST_HOME : q.Z.Messages.QUESTS_FIND_QUEST
       })
     ]
   }, 'minor-actions'),
@@ -127,7 +127,7 @@ children: [
         id: 'delivery',
         label: 'Show in Quest Bar',
         checked: (null == n ? void 0 : n.id) === e.quest.id,
-        action: I
+        action: g
       }),
       (0, s.jsx)(a.MenuItem, {
         id: 'dismiss',
@@ -137,12 +137,12 @@ children: [
       (0, s.jsx)(a.MenuItem, {
         id: 'enrollment',
         label: 'Reset Quest',
-        action: j
+        action: S
       }),
       (0, s.jsx)(a.MenuItem, {
         id: 'complete',
         label: 'Complete Quest',
-        action: h
+        action: M
       }),
       (0, m.$J)(e.quest) && (0, s.jsxs)(a.MenuItem, {
         id: 'console',
@@ -179,20 +179,20 @@ onClose: i,
 preventIdle: r,
 quest: l,
 questContent: d,
-questContentPosition: C,
-...E
+questContentPosition: E,
+...C
   } = e, m = o.useCallback(() => {
 (0, c._3)({
   questId: l.id,
   questContent: d,
   questContentCTA: c.jZ.OPEN_CONTEXT_MENU,
-  questContentPosition: C
+  questContentPosition: E
 }), null != n && n();
   }, [
 n,
 l.id,
 d,
-C
+E
   ]);
   return (0, s.jsx)(a.Popout, {
 onRequestOpen: m,
@@ -203,17 +203,17 @@ renderPopout: e => {
   } = e;
   return r ? (0, s.jsx)(u.Z, {
     children: (0, s.jsx)(b, {
-      ...E,
+      ...C,
       quest: l,
       questContent: d,
-      questContentPosition: C,
+      questContentPosition: E,
       onClose: t
     })
   }) : (0, s.jsx)(b, {
-    ...E,
+    ...C,
     quest: l,
     questContent: d,
-    questContentPosition: C,
+    questContentPosition: E,
     onClose: t
   });
 },

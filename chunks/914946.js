@@ -60,8 +60,8 @@ var i, a = n(729594),
   d = n(155268),
   u = n(454585),
   _ = n(739566),
-  h = n(695346),
-  E = n(131704),
+  E = n(695346),
+  h = n(131704),
   m = n(598077),
   I = n(592125),
   g = n(430824),
@@ -108,7 +108,7 @@ function G(e, t) {
 i = e.getGuildId();
   return ![
 R.d4z.GUILD_CATEGORY,
-...E.tx
+...h.tx
   ].includes(e.type) && n.push(new Promise(t => {
 T.Z.whenReady(e.id, () => t()), c.Z.fetchMessages({
   channelId: e.id,
@@ -239,7 +239,7 @@ function Y(e) {
   party: a
 } = e,
 s = 0;
-  return (n && (s |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (s |= R.xjy.JOIN), t) ? (s |= R.xjy.EMBEDDED, s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == a ? void 0 : a.privacy) === R.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (h.cP.getSetting() && (s |= R.xjy.PARTY_PRIVACY_FRIENDS), h.Ou.getSetting() && (s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), s);
+  return (n && (s |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (s |= R.xjy.JOIN), t) ? (s |= R.xjy.EMBEDDED, s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == a ? void 0 : a.privacy) === R.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (E.cP.getSetting() && (s |= R.xjy.PARTY_PRIVACY_FRIENDS), E.Ou.getSetting() && (s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), s);
 }
 
 function W(e, t, n) {

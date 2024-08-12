@@ -8,8 +8,8 @@ var s = n(836560),
   d = n(710845),
   u = n(857192),
   _ = n(998502),
-  h = n(996106),
-  E = n(901077),
+  E = n(996106),
+  h = n(901077),
   m = n(76238),
   I = n(852926),
   g = n(186901),
@@ -78,7 +78,7 @@ message: i
 }
 class R extends m.Z {
   send(e) {
-(u.default.isLoggingOverlayEvents || e.cmd !== p.Etm.OVERLAY && e.evt !== p.zMe.OVERLAY) && N.info('Socket Emit: '.concat(this.id), (0, E.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), {
+(u.default.isLoggingOverlayEvents || e.cmd !== p.Etm.OVERLAY && e.evt !== p.zMe.OVERLAY) && N.info('Socket Emit: '.concat(this.id), (0, h.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), {
   binary: !0
 }) : this._socket.send(JSON.stringify(e));
   }
@@ -90,11 +90,11 @@ if (super('ws', t, n), S(this, '_socket', void 0), -1 === [
     'etf',
     'json'
   ].indexOf(n))
-  throw new h.Z({
+  throw new E.Z({
     closeCode: p.$VG.INVALID_ENCODING
   }, 'Invalid Encoding: '.concat(n));
 if ('etf' === n && null == i)
-  throw new h.Z({
+  throw new E.Z({
     closeCode: p.$VG.INVALID_ENCODING
   }, 'Erlpack cannot be used on this client');
 this._socket = e;
@@ -109,7 +109,7 @@ this._closeCallback(t, e);
   }
   constructor(e, t, n, i) {
 if (super('http', n, i), S(this, '_sendCallback', void 0), S(this, '_closeCallback', void 0), 'json' !== i)
-  throw new h.Z({
+  throw new E.Z({
     closeCode: p.$VG.INVALID_ENCODING
   }, 'Invalid Encoding: '.concat(i));
 this._sendCallback = e, this._closeCallback = t;
@@ -192,7 +192,7 @@ try {
   e.close(p.$VG.CLOSE_UNSUPPORTED, 'Payload not '.concat(e.encoding));
   return;
 }
-(u.default.isLoggingOverlayEvents || n.cmd !== p.Etm.OVERLAY) && N.info('Socket Message: '.concat(e.id), (0, E.Z)(n)), this.emit('request', e, n);
+(u.default.isLoggingOverlayEvents || n.cmd !== p.Etm.OVERLAY) && N.info('Socket Message: '.concat(e.id), (0, h.Z)(n)), this.emit('request', e, n);
   }
   constructor() {
 var e;

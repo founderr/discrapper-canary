@@ -1,33 +1,33 @@
 n.d(t, {
   Q: function() {
-return T;
+return S;
   }
 });
 var s = n(735250);
 n(470079);
 var o = n(120356),
-  r = n.n(o),
-  a = n(54042),
+  a = n.n(o),
+  r = n(54042),
   l = n(179839),
   i = n(481060),
   c = n(230711),
   d = n(231757),
   u = n(617136),
   p = n(497505),
-  m = n(796111),
-  x = n(46140),
+  x = n(796111),
+  m = n(46140),
   g = n(981631),
   f = n(689938),
-  C = n(276458);
+  _ = n(276458);
 
-function _(e) {
+function C(e) {
   let {
 quest: t,
 isConnected: n,
 consoleType: o
   } = e;
   return (0, s.jsx)(i.Clickable, {
-className: C.connectConsoleButtonWrapper,
+className: _.connectConsoleButtonWrapper,
 onClick: () => {
   (0, u._3)({
     questId: t.id,
@@ -37,23 +37,23 @@ onClick: () => {
     platformType: o
   });
 },
-children: o === g.ABu.PLAYSTATION ? (0, s.jsx)(a.T, {
-  colorClass: r()(C.connectConsoleButton, n ? C.playstationButtonConnected : C.connectConsoleButtonUnconnected),
+children: o === g.ABu.PLAYSTATION ? (0, s.jsx)(r.T, {
+  colorClass: a()(_.connectConsoleButton, n ? _.playstationButtonConnected : _.connectConsoleButtonUnconnected),
   size: 'sm'
 }) : (0, s.jsx)(l.M, {
-  colorClass: r()(C.connectConsoleButton, n ? C.xboxButtonConnected : C.connectConsoleButtonUnconnected),
+  colorClass: a()(_.connectConsoleButton, n ? _.xboxButtonConnected : _.connectConsoleButtonUnconnected),
   size: 'sm'
 })
   });
 }
 
-function E(e) {
+function h(e) {
   let {
 text: t,
 quest: n
   } = e;
   return (0, s.jsx)(i.Clickable, {
-className: C.showConnectionsButton,
+className: _.showConnectionsButton,
 onClick: () => {
   (0, u._3)({
     questId: n.id,
@@ -70,18 +70,18 @@ children: (0, s.jsx)(i.Text, {
   });
 }
 
-function h(e) {
+function E(e) {
   let {
 quest: t,
 xboxAccounts: n,
 playstationAccounts: o,
-xboxAndPlaystationAccounts: a
-  } = e, l = a.slice(0, 2), c = a.length > 0, d = n.length > 0, u = o.length > 0;
+xboxAndPlaystationAccounts: r
+  } = e, l = r.slice(0, 2), c = r.length > 0, d = n.length > 0, u = o.length > 0;
   return (0, s.jsxs)('div', {
-className: C.inlineConsoleConnectionDetails,
+className: _.inlineConsoleConnectionDetails,
 children: [
   (0, s.jsxs)('div', {
-    className: C.inlineConsoleConnectionDetailsUpper,
+    className: _.inlineConsoleConnectionDetailsUpper,
     children: [
       (0, s.jsx)(i.Text, {
         color: 'header-secondary',
@@ -89,17 +89,17 @@ children: [
         children: c ? f.Z.Messages.QUESTS_CONNECTED : f.Z.Messages.QUESTS_SELECT_TO_START
       }),
       (0, s.jsxs)('div', {
-        className: C.inlineConsoleConnectionDetailsIcons,
+        className: _.inlineConsoleConnectionDetailsIcons,
         children: [
-          (0, s.jsx)(_, {
+          (0, s.jsx)(C, {
             consoleType: g.ABu.PLAYSTATION,
             isConnected: u,
             quest: t
           }),
           (0, s.jsx)('div', {
-            className: C.consoleIconDivider
+            className: _.consoleIconDivider
           }),
-          (0, s.jsx)(_, {
+          (0, s.jsx)(C, {
             consoleType: g.ABu.XBOX,
             isConnected: d,
             quest: t
@@ -109,10 +109,10 @@ children: [
     ]
   }),
   c && (0, s.jsxs)('div', {
-    className: C.inlineConsoleConnectionDetailsLower,
+    className: _.inlineConsoleConnectionDetailsLower,
     children: [
       l.map((e, t) => (0, s.jsxs)('div', {
-        className: r()(C.inlineConsoleConnectionDetailsLowerItem, t > 0 ? C.marginTop4px : void 0),
+        className: a()(_.inlineConsoleConnectionDetailsLowerItem, t > 0 ? _.marginTop4px : void 0),
         children: [
           (0, s.jsx)(i.Text, {
             color: 'header-secondary',
@@ -126,7 +126,7 @@ children: [
           })
         ]
       }, t)),
-      a.length > 2 && (0, s.jsx)(E, {
+      r.length > 2 && (0, s.jsx)(h, {
         text: f.Z.Messages.QUESTS_VIEW_MORE_ACCOUNTS,
         quest: t
       })
@@ -136,20 +136,20 @@ children: [
   });
 }
 
-function S(e) {
+function T(e) {
   let {
 xboxAndPlaystationAccounts: t,
 quest: n
   } = e;
-  return t.length > 0 ? (0, s.jsx)(E, {
+  return t.length > 0 ? (0, s.jsx)(h, {
 text: f.Z.Messages.QUESTS_SHOW_CONNECTIONS,
 quest: n
   }) : null;
 }
 
-function T(e) {
-  let t = (0, m.P)({
-location: x.dr.QUESTS_BAR
+function S(e) {
+  let t = (0, x.P)({
+location: m.dr.QUESTS_BAR
   });
   return (0, s.jsxs)(s.Fragment, {
 children: [
@@ -158,9 +158,9 @@ children: [
     variant: 'text-xs/medium',
     children: f.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT
   }),
-  t ? (0, s.jsx)(h, {
+  t ? (0, s.jsx)(E, {
     ...e
-  }) : (0, s.jsx)(S, {
+  }) : (0, s.jsx)(T, {
     ...e
   })
 ]

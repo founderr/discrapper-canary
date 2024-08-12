@@ -17,15 +17,15 @@ t.Z = function(e) {
   let {
 children: t,
 hasChanges: n,
-onClose: h,
-onSave: E,
+onClose: E,
+onSave: h,
 onReset: m
   } = e, I = a.useCallback(() => {
-(0, o.fH)(o.v0.DISCOVERY), null == h || h();
-  }, [h]), g = a.useCallback(() => {
-null == E || E(), null == I || I();
+(0, o.fH)(o.v0.DISCOVERY), null == E || E();
+  }, [E]), g = a.useCallback(() => {
+null == h || h(), null == I || I();
   }, [
-E,
+h,
 I
   ]), p = a.useCallback(() => {
 null == m || m();

@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(979233),
   u = n(88693),
   _ = n(611928),
-  h = n(680180),
-  E = n(791734),
+  E = n(680180),
+  h = n(791734),
   m = n(341789),
   I = n(591433),
   g = n(282773),
@@ -96,7 +96,7 @@ switch (v) {
     return null;
   default:
     let e = (0, o.vb)(v);
-    return (0, i.jsx)(h.Z, {
+    return (0, i.jsx)(E.Z, {
       query: M,
       placeholder: f.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
         title: e
@@ -130,7 +130,7 @@ children: [
         icon: U ? s.ArrowLargeLeftIcon : s.ServerIcon,
         onClick: U ? y : void 0
       }),
-      (0, i.jsx)(E.Z, {
+      (0, i.jsx)(h.Z, {
         className: P,
         tabs: k,
         selectedTab: U ? null : v,

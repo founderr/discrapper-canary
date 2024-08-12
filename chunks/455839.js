@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
 return m;
   },
   default: function() {
-return E;
+return h;
   }
 });
 var i = n(735250);
@@ -17,18 +17,18 @@ var a = n(442837),
   d = n(496675),
   u = n(556017),
   _ = n(981631),
-  h = n(689938);
+  E = n(689938);
 
-function E(e) {
+function h(e) {
   let {
 guild: t,
 shiftId: n,
-onSelect: E,
+onSelect: h,
 closePopout: m,
 'aria-label': I
   } = e, g = (0, l.Z)({
 id: t.id,
-label: h.Z.Messages.COPY_ID_GUILD,
+label: E.Z.Messages.COPY_ID_GUILD,
 shiftId: n,
 onSuccess: m
   }), p = (0, a.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]), T = (0, a.e7)([d.Z], () => d.Z.can(_.Plq.ADMINISTRATOR, p)), {
@@ -41,15 +41,15 @@ autoTrackExposure: !1
 (0, r.Zy)(), null == m || m();
   };
   return (0, i.jsxs)(s.Menu, {
-onSelect: E,
+onSelect: h,
 navId: 'guild-discovery-context-menu',
-'aria-label': null != I ? I : h.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
+'aria-label': null != I ? I : E.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
 onClose: r.Zy,
 children: [
   (0, i.jsx)(s.MenuGroup, {
     children: !T && S ? (0, i.jsx)(s.MenuItem, {
       id: 'report-guild-discovery-listing',
-      label: h.Z.Messages.REPORT_SERVER_NO_NAME,
+      label: E.Z.Messages.REPORT_SERVER_NO_NAME,
       action: () => {
         (0, o.lt)(t), f();
       },
@@ -81,7 +81,7 @@ renderPopout: e => {
   let {
     closePopout: n
   } = e;
-  return (0, i.jsx)(E, {
+  return (0, i.jsx)(h, {
     guild: t,
     closePopout: n
   });

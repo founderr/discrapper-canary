@@ -8,8 +8,8 @@ var i = n(735250),
   d = n(895991),
   u = n(993977),
   _ = n(981631),
-  h = n(689938),
-  E = n(136853);
+  E = n(689938),
+  h = n(136853);
 
 function m() {
   return (0, i.jsxs)(s.rs, {
@@ -22,7 +22,7 @@ children: [
       root: !0,
       children: [
         (0, i.jsx)(o.yY, {
-          subsection: h.Z.Messages.SETTINGS
+          subsection: E.Z.Messages.SETTINGS
         }),
         (0, i.jsx)(u.Z, {})
       ]
@@ -35,7 +35,7 @@ children: [
       root: !0,
       children: [
         (0, i.jsx)(o.yY, {
-          subsection: h.Z.Messages.APPLICATION_LIBRARY_MY_GAMES
+          subsection: E.Z.Messages.APPLICATION_LIBRARY_MY_GAMES
         }),
         (0, i.jsx)(d.Z, {})
       ]
@@ -48,10 +48,10 @@ t.Z = a.memo(function() {
   return a.useEffect(() => {
 (0, c.e)('application_library');
   }, []), (0, i.jsxs)('div', {
-className: E.container,
+className: h.container,
 children: [
   (0, i.jsx)(o.yY, {
-    location: h.Z.Messages.LIBRARY
+    location: E.Z.Messages.LIBRARY
   }),
   (0, i.jsx)(m, {})
 ]

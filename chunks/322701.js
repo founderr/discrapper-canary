@@ -13,14 +13,14 @@ t.Z = function(e) {
 statusSections: t,
 renderRow: n,
 searchQuery: _,
-sectionFilter: h,
-useReducedMotion: E
+sectionFilter: E,
+useReducedMotion: h
   } = e, m = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled), I = (0, a.ZP)({
 id: 'people',
 isEnabled: m,
 async scrollToStart() {},
 async scrollToEnd() {}
-  }), g = h !== d.pJs.ONLINE && h !== d.pJs.ALL, p = E || '' !== _ || g, T = t.map((e, t) => p ? (0, i.jsx)('div', {
+  }), g = E !== d.pJs.ONLINE && E !== d.pJs.ALL, p = h || '' !== _ || g, T = t.map((e, t) => p ? (0, i.jsx)('div', {
 children: e.map(n)
   }, t) : (0, i.jsx)(l.W, {
 transitionAppear: !1,

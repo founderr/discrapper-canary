@@ -8,8 +8,8 @@ var i, a = n(735250),
   d = n(239091),
   u = n(686546),
   _ = n(372769),
-  h = n(134432),
-  E = n(695346),
+  E = n(134432),
+  h = n(695346),
   m = n(768581),
   I = n(900849),
   g = n(556017),
@@ -63,7 +63,7 @@ let {
 } = t, b = null === (e = t.features) || void 0 === e ? void 0 : e.has(f.oNc.HUB), P = m.ZP.getGuildDiscoverySplashURL({
   id: t.id,
   splash: t.discoverySplash,
-  size: 300 * (0, h.x_)()
+  size: 300 * (0, E.x_)()
 }), M = null != P ? P : this.getDefaultSplashURL(i, b), D = m.ZP.getGuildIconURL({
   id: t.id,
   icon: t.icon,
@@ -88,7 +88,7 @@ let {
 g.N.trackExposure({
   location: 'de1ef6_4'
 });
-let U = E.Sb.getSetting();
+let U = h.Sb.getSetting();
 return (0, a.jsx)(o.$, {
   active: !A,
   onChange: this.setIsVisible,

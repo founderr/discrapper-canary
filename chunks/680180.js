@@ -19,13 +19,13 @@ placeholder: s,
 onTextChange: d,
 onCollapsedClick: u,
 onClear: _,
-onSubmit: h
-  } = e, E = a.useRef(null), m = a.useCallback(e => {
-'Enter' === e.key && h();
-  }, [h]), I = a.useCallback(() => {
+onSubmit: E
+  } = e, h = a.useRef(null), m = a.useCallback(e => {
+'Enter' === e.key && E();
+  }, [E]), I = a.useCallback(() => {
 u(), setTimeout(() => {
   var e;
-  return null === (e = E.current) || void 0 === e ? void 0 : e.focus();
+  return null === (e = h.current) || void 0 === e ? void 0 : e.focus();
 });
   }, [u]);
   return t === o.WB.COLLAPSED ? (0, i.jsx)(l.Clickable, {
@@ -36,7 +36,7 @@ children: (0, i.jsx)(l.MagnifyingGlassIcon, {
   color: l.tokens.colors.INTERACTIVE_NORMAL
 })
   }) : (0, i.jsx)(l.SearchBar, {
-ref: E,
+ref: h,
 className: r()(c.searchBar, {
   [c.searchFloating]: t === o.WB.FLOATING
 }),

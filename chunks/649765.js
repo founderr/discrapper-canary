@@ -1,6 +1,6 @@
 n.d(t, {
   E: function() {
-return h;
+return E;
   }
 });
 var i = n(735250),
@@ -43,7 +43,7 @@ children: [
   })
 ]
   }),
-  h = e => {
+  E = e => {
 let {
   children: t
 } = e, n = (0, i.jsxs)('div', {

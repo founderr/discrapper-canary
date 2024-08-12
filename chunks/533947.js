@@ -3,8 +3,8 @@ n(653041), n(47120);
 var r, l, o, c, d = n(392711),
   u = n.n(d),
   _ = n(442837),
-  h = n(570140),
-  E = n(308063),
+  E = n(570140),
+  h = n(308063),
   m = n(388610),
   I = n(430824),
   g = n(496675),
@@ -78,7 +78,7 @@ c = 'ChannelSettingsIntegrationsStore', (o = 'displayName') in(l = x) ? Object.d
   configurable: !0,
   writable: !0
 }) : l[o] = c;
-let b = new x(h.Z, __OVERLAY__ ? {} : {
+let b = new x(E.Z, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_INIT: L,
   INTEGRATION_SETTINGS_SAVE_SUCCESS: L,
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
@@ -90,7 +90,7 @@ if (t !== T.CoT.INTEGRATIONS)
 if (s = T.b4C.OVERVIEW, null == i) {
   let e = m.Z.getChannel(),
     t = null == e ? void 0 : e.getGuildId();
-  null != e && null != t && (E.Z.fetchForChannel(t, e.id), C = !0), L();
+  null != e && null != t && (h.Z.fetchForChannel(t, e.id), C = !0), L();
 }
   },
   INTEGRATION_SETTINGS_SET_SECTION: function(e) {

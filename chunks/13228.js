@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return h;
+return E;
   }
 });
 var i = n(442837),
@@ -14,7 +14,7 @@ var i = n(442837),
   u = n(356659),
   _ = n(981631);
 
-function h(e) {
+function E(e) {
   let t = (0, o.nM)({
   autoTrackExposure: !0
 }),
@@ -41,9 +41,9 @@ let {
   clipsEducationState: {
     dismissedAt: i,
     numberOfGamesLaunchedSinceDismissal: s,
-    numberOfTimesDismissed: h
+    numberOfTimesDismissed: E
   },
-  hasTakenDecoupledClip: E,
+  hasTakenDecoupledClip: h,
   clipsSettings: {
     clipsEnabled: m
   }
@@ -55,6 +55,6 @@ if (!(null != e && (0, o.xt)(e)))
 let I = Date.now() - i > u.xx,
   g = s >= u._U,
   p = m ? u.xd : u.A5;
-return I && g && h < p && !E;
+return I && g && E < p && !h;
   });
 }

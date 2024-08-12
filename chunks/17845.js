@@ -19,15 +19,15 @@ description: n,
 button: s,
 backgroundImageUrl: u,
 className: _,
-bannerImageClassName: h,
-headerTextColor: E,
+bannerImageClassName: E,
+headerTextColor: h,
 descriptionTextColor: m
   } = e, I = (0, l.wj)((0, c.ZP)()), g = a.useMemo(() => null != u ? u : I ? 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-light-mode.png', [
 I,
 u
   ]), p = a.useMemo(() => ({
 backgroundImage: 'url('.concat(g, ')')
-  }), [g]), T = null != E ? E : I ? 'always-white' : 'header-primary', S = null != m ? m : I ? 'text-muted' : 'header-primary';
+  }), [g]), T = null != h ? h : I ? 'always-white' : 'header-primary', S = null != m ? m : I ? 'text-muted' : 'header-primary';
   return (0, i.jsxs)('div', {
 className: r()(d.imageContainer, _),
 children: [
@@ -51,7 +51,7 @@ children: [
     })
   }),
   (0, i.jsx)('div', {
-    className: r()(d.imageBackground, h),
+    className: r()(d.imageBackground, E),
     style: p,
     children: (0, i.jsx)('div', {
       className: d.gradientOverlay

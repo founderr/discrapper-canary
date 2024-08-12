@@ -1,7 +1,7 @@
 var s = n(735250),
   o = n(481060),
-  r = n(689938),
-  a = n(840155);
+  a = n(689938),
+  r = n(840155);
 
 function l(e) {
   let {
@@ -10,8 +10,8 @@ children: n
   } = e;
   return (0, s.jsx)(o.Button, {
 onClick: t,
-className: a.button,
-innerClassName: a.buttonInner,
+className: r.button,
+innerClassName: r.buttonInner,
 look: 'blank',
 children: n
   });
@@ -22,19 +22,19 @@ onDesktop: t,
 onConsole: n
   } = e;
   return (0, s.jsxs)('div', {
-className: a.buttons,
+className: r.buttons,
 children: [
   (0, s.jsxs)(l, {
     onClick: t,
     children: [
-      r.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP,
+      a.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP,
       (0, s.jsx)(o.ScreenIcon, {})
     ]
   }),
   (0, s.jsxs)(l, {
     onClick: n,
     children: [
-      r.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE,
+      a.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE,
       (0, s.jsx)(o.GameControllerIcon, {})
     ]
   })

@@ -1,49 +1,49 @@
 n(47120);
 var s = n(735250),
   o = n(470079),
-  r = n(120356),
-  a = n.n(r),
+  a = n(120356),
+  r = n.n(a),
   l = n(887024),
   i = n(699581),
   c = n(338545),
   d = n(442837),
   u = n(110924),
   p = n(607070),
-  m = n(819640),
-  x = n(569379),
+  x = n(819640),
+  m = n(569379),
   g = n(675654),
   f = n(267925),
-  C = n(197857);
-let _ = ['#51BC9D'];
+  _ = n(197857);
+let C = ['#51BC9D'];
 t.Z = e => {
   var t;
   let {
 expansionSpring: n,
-overlayRef: r,
-quest: E,
-progressBarRef: h,
-isExpanded: S
+overlayRef: a,
+quest: h,
+progressBarRef: E,
+isExpanded: T
   } = e, {
-completionSpring: T,
-startCompletionAnimation: N
-  } = (0, x.GX)(), v = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, j = o.useRef(!1), A = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([m.Z], () => m.Z.hasLayers()), O = (0, u.Z)(b), [R, y] = o.useState(null), [P, I] = o.useState(null), L = o.useRef(new l.qA({
+completionSpring: S,
+startCompletionAnimation: v
+  } = (0, m.GX)(), A = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, N = o.useRef(!1), j = (0, d.e7)([p.Z], () => p.Z.useReducedMotion), B = o.useRef(null), b = (0, d.e7)([x.Z], () => x.Z.hasLayers()), R = (0, u.Z)(b), [y, I] = o.useState(null), [k, M] = o.useState(null), O = o.useRef(new l.qA({
 gravity: 0,
 wind: 0
-  })), k = (0, l.uR)(R, P), M = o.useCallback(() => {
-if (A)
+  })), U = (0, l.uR)(y, k), L = o.useCallback(() => {
+if (j)
   return;
-let e = h.current,
+let e = E.current,
   t = B.current;
-if (null != t && null != e && k.isReady) {
-  var n, s, o, r;
+if (null != t && null != e && U.isReady) {
+  var n, s, o, a;
   let {
-    x: a,
+    x: r,
     y: l
   } = e.getBoundingClientRect(), {
     x: i,
     y: c
   } = t.getBoundingClientRect();
-  k.createMultipleConfetti((n = a - i, s = l - c, o = e.clientHeight, r = e.clientWidth, {
+  U.createMultipleConfetti((n = r - i, s = l - c, o = e.clientHeight, a = e.clientWidth, {
     ...g.We,
     position: {
       type: 'static-random',
@@ -53,7 +53,7 @@ if (null != t && null != e && k.isReady) {
       },
       maxValue: {
         x: n + o,
-        y: s + r
+        y: s + a
       }
     },
     velocity: {
@@ -84,39 +84,39 @@ if (null != t && null != e && k.isReady) {
   }), 100);
 }
   }, [
-h,
+E,
 B,
-k,
-A
-  ]), U = (0, u.Z)(S);
+U,
+j
+  ]), q = (0, u.Z)(T);
   return (o.useEffect(() => {
-v && S && !U && (N(), M());
+A && T && !q && (v(), L());
   }, [
-S,
+T,
+A,
 v,
-N,
-M,
-U
+L,
+q
   ]), o.useEffect(() => {
-v && !b && O && setTimeout(() => {
-  N(), M();
+A && !b && R && setTimeout(() => {
+  v(), L();
 }, 200);
   }, [
-v,
-O,
+A,
+R,
 b,
-N,
-M
-  ]), o.useEffect(() => {
-if (!!k.isReady)
-  !j.current && v && (N(), M()), j.current = v;
-  }, [
 v,
-j,
-M,
+L
+  ]), o.useEffect(() => {
+if (!!U.isReady)
+  !N.current && A && (v(), L()), N.current = A;
+  }, [
+A,
 N,
-k
-  ]), A) ? null : (0, s.jsxs)('div', {
+L,
+v,
+U
+  ]), j) ? null : (0, s.jsxs)('div', {
 className: f.wrapper,
 'aria-hidden': 'true',
 ref: B,
@@ -124,13 +124,13 @@ children: [
   (0, s.jsx)(c.animated.div, {
     className: f.background,
     style: {
-      opacity: T
+      opacity: S
     }
   }),
   (0, s.jsx)(c.animated.div, {
-    className: a()(f.borders, f.bordersTopLeft),
+    className: r()(f.borders, f.bordersTopLeft),
     style: {
-      opacity: T
+      opacity: S
     }
   }),
   (0, s.jsxs)(c.animated.div, {
@@ -149,23 +149,23 @@ children: [
     },
     children: [
       (0, s.jsx)(l.O_, {
-        ref: y,
+        ref: I,
         className: f.confetti,
-        environment: L.current
+        environment: O.current
       }),
       (0, s.jsx)(l.Ji, {
-        ref: I,
-        sprites: [C],
-        colors: _,
+        ref: M,
+        sprites: [_],
+        colors: C,
         spriteWidth: g.Ko,
         spriteHeight: g.Ko
       }),
-      null != r.current && (0, i.createPortal)((0, s.jsx)(c.animated.div, {
-        className: a()(f.borders, f.bordersBottom),
+      null != a.current && (0, i.createPortal)((0, s.jsx)(c.animated.div, {
+        className: r()(f.borders, f.bordersBottom),
         style: {
-          opacity: T
+          opacity: S
         }
-      }), r.current)
+      }), a.current)
     ]
   })
 ]

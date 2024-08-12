@@ -12,11 +12,11 @@ return _;
 var i = n(735250),
   a = n(120356),
   s = n.n(a),
-  r = n(330711),
-  l = n(481060),
-  o = n(377171),
-  c = n(951394),
-  u = n(364742),
+  r = n(481060),
+  l = n(377171),
+  o = n(951394),
+  c = n(364742),
+  u = n(689938),
   d = n(172648);
 
 function _(e) {
@@ -40,14 +40,14 @@ children: A,
 ...R
   } = e, {
 canShowReactionsOnMessageHover: x
-  } = u.Z.useExperiment({
+  } = c.Z.useExperiment({
 location: 'HoverBar'
   }, {
 autoTrackExposure: !0
   });
-  return (0, i.jsx)(l.Tooltip, {
+  return (0, i.jsx)(r.Tooltip, {
 text: null != a ? a : t,
-color: null != _ ? _ : l.TooltipColors.PRIMARY,
+color: null != _ ? _ : r.TooltipColors.PRIMARY,
 'aria-label': t,
 onTooltipShow: T,
 onTooltipHide: h,
@@ -56,17 +56,17 @@ tooltipClassName: d.tooltip,
 children: e => {
   let {
     onMouseEnter: a,
-    onMouseLeave: u,
+    onMouseLeave: c,
     onClick: _
   } = e;
   return (0, i.jsxs)(i.Fragment, {
     children: [
-      (0, i.jsxs)(c.zx, {
+      (0, i.jsxs)(o.zx, {
         className: s()(S, {
           [d.hoverBarButton]: x
         }),
         onMouseEnter: a,
-        onMouseLeave: u,
+        onMouseLeave: c,
         onClick: e => {
           null == _ || _(), m(e);
         },
@@ -84,15 +84,15 @@ children: e => {
             className: s()(d.icon, d.buttonContent),
             children: A
           }) : null,
-          p && (0, i.jsx)(l.LottieSparkle, {}),
-          g && (0, i.jsx)(l.TextBadge, {
-            text: r.Z.Messages.NEW,
-            color: o.Z.BG_BRAND,
+          p && (0, i.jsx)(r.LottieSparkle, {}),
+          g && (0, i.jsx)(r.TextBadge, {
+            text: u.Z.Messages.NEW,
+            color: l.Z.BG_BRAND,
             className: d.newBadge
           })
         ]
       }),
-      C && (0, i.jsx)(c.Z0, {})
+      C && (0, i.jsx)(o.Z0, {})
     ]
   });
 }
@@ -114,12 +114,12 @@ children: t,
 ...n
   } = e, {
 canShowReactionsOnMessageHover: a
-  } = u.Z.useExperiment({
+  } = c.Z.useExperiment({
 location: 'HoverBar'
   }, {
 autoTrackExposure: !0
   });
-  return (0, i.jsx)(c.ZP, {
+  return (0, i.jsx)(o.ZP, {
 className: s()(n.className, d.popover, {
   [d.popoverReactionHoverBar]: a
 }),

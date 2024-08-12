@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return E;
+return h;
   }
 }), n(47120);
 var i = n(735250),
@@ -13,14 +13,14 @@ var i = n(735250),
   d = n(439826),
   u = n(43779),
   _ = n(981631),
-  h = n(444627);
+  E = n(444627);
 
-function E(e) {
+function h(e) {
   let {
 quest: t,
 className: n,
 questContent: s,
-contentPosition: E,
+contentPosition: h,
 rowIndex: m
   } = e, [I, g] = a.useState(!1), [p, T] = a.useState([]), S = a.useCallback(() => {
 g(!0), (0, l.dA)({
@@ -38,7 +38,7 @@ g(!1);
   return (0, i.jsx)(c.A, {
 questOrQuests: t,
 questContent: s,
-questContentPosition: E,
+questContentPosition: h,
 questContentRowIndex: m,
 trackGuildAndChannelMetadata: s === o.jn.QUESTS_EMBED,
 children: e => (0, i.jsxs)('div', {
@@ -46,7 +46,7 @@ children: e => (0, i.jsxs)('div', {
   ref: t => {
     e.current = t;
   },
-  className: r()(h.container, n),
+  className: r()(E.container, n),
   onMouseEnter: S,
   onMouseLeave: f,
   children: [
@@ -59,7 +59,7 @@ children: e => (0, i.jsxs)('div', {
       quest: t,
       questContent: s,
       isHovering: I,
-      contentPosition: E,
+      contentPosition: h,
       rowIndex: m,
       onReceiveErrorHints: T
     })

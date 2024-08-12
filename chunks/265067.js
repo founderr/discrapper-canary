@@ -9,15 +9,15 @@ var i = n(243814),
   d = n(594174),
   u = n(996106),
   _ = n(452426),
-  h = n(736045),
-  E = n(186901),
+  E = n(736045),
+  h = n(186901),
   m = n(231338);
 t.Z = {
   [m.Et.GET_SOUNDBOARD_SOUNDS]: {
 scope: {
-  [E.Gp.ANY]: [
+  [h.Gp.ANY]: [
     i.x.RPC,
-    E.lH
+    h.lH
   ]
 },
 async handler() {
@@ -29,7 +29,7 @@ async handler() {
   },
   [m.Et.PLAY_SOUNDBOARD_SOUND]: {
 scope: {
-  [E.Gp.ALL]: [
+  [h.Gp.ALL]: [
     i.x.RPC,
     i.x.RPC_VOICE_WRITE
   ]
@@ -48,13 +48,13 @@ async handler(e) {
   await (0, s.w)();
   let i = d.default.getCurrentUser(),
     l = r.Z.getSound(t, n),
-    _ = (0, h.Z)(),
-    E = null != l && null != i && (0, o.Nq)(i, l, _);
+    _ = (0, E.Z)(),
+    h = null != l && null != i && (0, o.Nq)(i, l, _);
   if (null == _)
     throw new u.Z({
       errorCode: m.lT.INVALID_CHANNEL
     }, 'Invalid Channel.');
-  if (E) {
+  if (h) {
     if ((0, c.Z)(_))
       null != l && (0, o.GN)(l, _.id, [a.Z.RPC]);
     else

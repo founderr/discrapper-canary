@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(490983),
   u = n(626135),
   _ = n(630388),
-  h = n(804739),
-  E = n(957657),
+  E = n(804739),
+  h = n(957657),
   m = n(34305),
   I = n(981631),
   g = n(689938),
@@ -91,7 +91,7 @@ let {
 return (0, i.jsxs)('div', {
   className: p.body,
   children: [
-    (0, h.Q)() ? (0, i.jsxs)(a.Fragment, {
+    (0, E.Q)() ? (0, i.jsxs)(a.Fragment, {
       children: [
         (0, i.jsx)(r.FormSwitch, {
           value: t,
@@ -118,7 +118,7 @@ return (0, i.jsxs)('div', {
   render() {
 return (0, i.jsxs)(i.Fragment, {
   children: [
-    (0, i.jsx)(E.Z, {
+    (0, i.jsx)(h.Z, {
       currentRoute: I.Z5c.APPLICATION_LIBRARY_SETTINGS
     }),
     (0, i.jsx)(r.ScrollerAuto, {

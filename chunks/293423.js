@@ -9,8 +9,8 @@ var a = n(481060),
   d = n(939225),
   u = n(36246),
   _ = n(305342),
-  h = n(726324),
-  E = n(981631),
+  E = n(726324),
+  h = n(981631),
   m = n(689938),
   I = n(952366);
 t.Z = e => {
@@ -21,7 +21,7 @@ guild: g
   (0, o.Z)({
 guildId: g.id,
 groupListingId: null == p ? void 0 : p.id,
-location: E.Sbl.ROLE_SUBSCRIPTIONS_TAB,
+location: h.Sbl.ROLE_SUBSCRIPTIONS_TAB,
 relevantSubscriptionListingIds: null == p ? void 0 : p.subscription_listings_ids
   });
   let {
@@ -31,7 +31,7 @@ editStateIds: C
   } = r.B7(null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : null, g.id);
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  (0, i.jsxs)(h.Z, {
+  (0, i.jsxs)(E.Z, {
     title: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
       serverName: g.toString()
     }),
@@ -58,7 +58,7 @@ children: [
           guildId: g.id,
           groupListingId: null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : '',
           listingId: e,
-          analyticsLocation: E.Sbl.ROLE_SUBSCRIPTIONS_TAB
+          analyticsLocation: h.Sbl.ROLE_SUBSCRIPTIONS_TAB
         }, e);
       })
     })

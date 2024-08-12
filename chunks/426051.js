@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(433355),
   u = n(26373),
   _ = n(486622),
-  h = n(376191),
-  E = n(86203),
+  E = n(376191),
+  h = n(86203),
   m = n(689938),
   I = n(679638);
 
@@ -48,7 +48,7 @@ onError: T
   return (0, i.jsxs)('div', {
 className: I.container,
 children: [
-  (0, i.jsx)(h.Z, {
+  (0, i.jsx)(E.Z, {
     otherUser: n,
     channel: g,
     active: t
@@ -67,7 +67,7 @@ children: [
         submitting: Z,
         children: m.Z.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
       }),
-      (0, i.jsx)(E.Z, {
+      (0, i.jsx)(h.Z, {
         className: I.button,
         channel: g,
         buttonSize: r.Button.Sizes.SMALL

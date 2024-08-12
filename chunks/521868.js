@@ -19,14 +19,14 @@ function _(e) {
 customStatus: t,
 focusedClassName: a,
 analyticsLocations: _,
-trackUserProfileAction: h
-  } = e, E = (0, o.O)(), m = () => {
+trackUserProfileAction: E
+  } = e, h = (0, o.O)(), m = () => {
 (0, r.openModalLazy)(async () => {
   let {
     default: e
   } = await n.e('51714').then(n.bind(n, 211065));
   return t => (0, i.jsx)(e, {
-    sourceAnalyticsContext: E,
+    sourceAnalyticsContext: h,
     sourceAnalyticsLocations: _,
     ...t
   });
@@ -51,7 +51,7 @@ showIconFirst: !0,
 hint: e => (0, i.jsx)(r.Clickable, {
   ...e,
   onClick: e => {
-    e.stopPropagation(), h({
+    e.stopPropagation(), E({
       action: 'PRESS_CLEAR_CUSTOM_STATUS',
       analyticsLocations: _
     }), c.Ok.updateSetting(void 0);
@@ -63,7 +63,7 @@ hint: e => (0, i.jsx)(r.Clickable, {
   })
 }),
 action: () => {
-  h({
+  E({
     action: 'PRESS_EDIT_CUSTOM_STATUS',
     analyticsLocations: _
   }), m();
@@ -77,7 +77,7 @@ icon: e => (0, i.jsx)('div', {
 }),
 showIconFirst: !0,
 action: () => {
-  h({
+  E({
     action: 'PRESS_ADD_CUSTOM_STATUS',
     analyticsLocations: _
   }), m();

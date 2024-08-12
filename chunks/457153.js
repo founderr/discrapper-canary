@@ -1,24 +1,24 @@
 var s = n(735250),
   o = n(470079),
-  r = n(120356),
-  a = n.n(r),
+  a = n(120356),
+  r = n.n(a),
   l = n(338545),
   i = n(95985),
   c = n(985444);
 let d = o.forwardRef(function(e, t) {
   var n;
   let {
-className: r,
+className: a,
 expansionSpring: d,
 isExpanded: u,
 isExpansionAnimationComplete: p,
-quest: m,
-taskDetails: x
-  } = e, g = o.useRef(null), f = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
+quest: x,
+taskDetails: m
+  } = e, g = o.useRef(null), f = (null === (n = x.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
   return (0, s.jsx)(l.animated.div, {
 ref: t,
 'aria-hidden': u && p,
-className: a()(r, c.contentCollapsed, {
+className: r()(a, c.contentCollapsed, {
   [c.contentCollapsedExpanded]: u,
   [c.contentCollapsedAccepted]: f
 }),
@@ -38,10 +38,10 @@ children: (0, s.jsx)('div', {
   className: c.contentCollapsedWrapper,
   children: f ? (0, s.jsx)(i.Z, {
     contentLocation: 'collapsed',
-    quest: m,
+    quest: x,
     progressBarRef: g,
     isExpanded: !1,
-    taskDetails: x
+    taskDetails: m
   }) : null
 })
   });

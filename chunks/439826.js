@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(481060),
   u = n(393238),
   _ = n(410030),
-  h = n(70097),
-  E = n(113434),
+  E = n(70097),
+  h = n(113434),
   m = n(497505),
   I = n(918701),
   g = n(78826),
@@ -33,10 +33,10 @@ errorHints: A,
 onCtxMenuClose: v,
 onCtxMenuOpen: Z,
 onCtxMenuSelect: L
-  } = e, O = (0, I.j8)(s), R = (0, _.ZP)(), x = (0, c.wj)(R) ? S.BRd.DARK : S.BRd.LIGHT, b = x === S.BRd.DARK, P = a.useMemo(() => (0, I.nP)(s.config.assets.hero), [s]), M = a.useContext(o.S).reducedMotion.enabled, D = (0, I.Mi)(s, m.jn.GIFT_INVENTORY_FOR_YOU), y = (0, E.tP)(s), j = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, U = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, G = a.useRef(N), k = a.useRef(null), w = (0, E.B6)(s.config.expiresAt, {
+  } = e, O = (0, I.j8)(s), R = (0, _.ZP)(), x = (0, c.wj)(R) ? S.BRd.DARK : S.BRd.LIGHT, b = x === S.BRd.DARK, P = a.useMemo(() => (0, I.nP)(s.config.assets.hero), [s]), M = a.useContext(o.S).reducedMotion.enabled, D = (0, I.Mi)(s, m.jn.GIFT_INVENTORY_FOR_YOU), y = (0, h.tP)(s), j = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, U = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, G = a.useRef(N), k = a.useRef(null), w = (0, h.B6)(s.config.expiresAt, {
 month: 'numeric',
 day: 'numeric'
-  }), B = (0, E.z)(s), {
+  }), B = (0, h.z)(s), {
 ref: H,
 height: V = 0
   } = (0, u.Z)([A]), F = !U && !B && A.length > 0, Y = (0, d.useSpring)({
@@ -60,7 +60,7 @@ children: [
     className: C.heroAssetWrapper,
     children: P && !M ? (0, i.jsx)(g.Fl, {
       id: 'QuestTileBanner_heroAnimated',
-      children: e => (null != e.current && (k.current = e.current), (0, i.jsx)(h.Z, {
+      children: e => (null != e.current && (k.current = e.current), (0, i.jsx)(E.Z, {
         ref: e,
         autoPlay: !M && N,
         loop: !0,

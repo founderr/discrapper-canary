@@ -1,6 +1,6 @@
 n.d(t, {
   n: function() {
-return m;
+return x;
   },
   t: function() {
 return p;
@@ -8,8 +8,8 @@ return p;
 }), n(47120);
 var s = n(735250),
   o = n(470079),
-  r = n(338545),
-  a = n(442837),
+  a = n(338545),
+  r = n(442837),
   l = n(481060),
   i = n(393238),
   c = n(110924),
@@ -33,38 +33,38 @@ children: e.children
   });
 }
 
-function m(e) {
+function x(e) {
   var t;
   let {
 children: n
   } = e, {
 springConfig: p,
-isExpanded: m
-  } = o.useContext(u), x = (0, a.e7)([d.Z], () => d.Z.useReducedMotion), {
+isExpanded: x
+  } = o.useContext(u), m = (0, r.e7)([d.Z], () => d.Z.useReducedMotion), {
 ref: g,
 height: f = null
-  } = (0, i.Z)(), C = null !== (t = (0, c.Z)(f)) && void 0 !== t ? t : null, [{
-height: _
-  }, E] = (0, l.useSpring)(() => ({
+  } = (0, i.Z)(), _ = null !== (t = (0, c.Z)(f)) && void 0 !== t ? t : null, [{
+height: C
+  }, h] = (0, l.useSpring)(() => ({
 from: {
   height: 0
 },
 config: p
   }));
   return o.useLayoutEffect(() => {
-null !== f && E({
+null !== f && h({
   height: f,
-  immediate: !m || x || null === C
+  immediate: !x || m || null === _
 });
   }, [
 f,
-E,
-m,
+h,
 x,
-C
-  ]), (0, s.jsx)(r.animated.div, {
+m,
+_
+  ]), (0, s.jsx)(a.animated.div, {
 style: {
-  height: null === C ? 'auto' : _,
+  height: null === _ ? 'auto' : C,
   overflow: 'hidden'
 },
 children: (0, s.jsx)('div', {

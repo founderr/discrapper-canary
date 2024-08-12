@@ -52,7 +52,7 @@ treatments: [{
     config: {
       pastActivityEnabled: !1,
       mostRecentActivityEnabled: !1,
-      newActivityCardsEnabled: !1,
+      newActivityCardsEnabled: !0,
       selfRecentActivityFallbackEnabled: !0
     }
   }

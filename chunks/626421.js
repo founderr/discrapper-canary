@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return E;
+return h;
   }
 }), n(47120);
 var i = n(735250),
@@ -13,7 +13,7 @@ var i = n(735250),
   d = n(566840),
   u = n(921944),
   _ = n(805953);
-let h = a.memo(function(e) {
+let E = a.memo(function(e) {
   var t, n, s;
   let {
 state: l,
@@ -22,14 +22,14 @@ markAsDismissed: o
 name: c,
 guildId: d,
 boundingRect: u
-  } = l, h = a.useMemo(() => function(e, t, n) {
+  } = l, E = a.useMemo(() => function(e, t, n) {
 return null;
   }(c, 0, 0), [
 c,
 d,
 o
   ]);
-  if (null == h)
+  if (null == E)
 return null;
   return (0, i.jsx)('div', {
 className: r()(_.upsell, !(null != (t = u) && !(t.y < 0)) && _.hidden),
@@ -37,11 +37,11 @@ style: (n = c, null == (s = u) ? {} : {
   top: s.top,
   left: s.right - s.x
 }),
-children: h
+children: E
   });
 });
 
-function E() {
+function h() {
   let e = (0, l.e7)([c.Z], () => c.Z.getGuildId()),
 t = (0, d.Eg)(e),
 [n, a] = (0, o.US)(Object.values(t).filter(e => {
@@ -60,7 +60,7 @@ return null;
   let s = t[n];
   return null == s ? null : (0, i.jsx)('div', {
 className: _.container,
-children: (0, i.jsx)(h, {
+children: (0, i.jsx)(E, {
   state: s,
   markAsDismissed: a
 })

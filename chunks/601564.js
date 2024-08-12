@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(410575),
   u = n(666743),
   _ = n(112724),
-  h = n(447269),
-  E = n(612226),
+  E = n(447269),
+  h = n(612226),
   m = n(714338),
   I = n(663993),
   g = n(628123),
@@ -51,10 +51,10 @@ class R extends a.PureComponent {
   componentDidMount() {
 (0, o.Y)(this.props.location), this.stopListeningToHistory = (0, p.s1)().listen(e => {
   e.pathname.startsWith(N.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
-}), this.props.isAuthenticated && (0, c.tZ)(), m.Z.disable(), m.Z.setLayout(h.r), m.Z.enable(), (0, T.e)('application_store');
+}), this.props.isAuthenticated && (0, c.tZ)(), m.Z.disable(), m.Z.setLayout(E.r), m.Z.enable(), (0, T.e)('application_store');
   }
   componentWillUnmount() {
-null != this.stopListeningToHistory && this.stopListeningToHistory(), m.Z.disable(), m.Z.setLayout(E.oT), m.Z.enable();
+null != this.stopListeningToHistory && this.stopListeningToHistory(), m.Z.disable(), m.Z.setLayout(h.oT), m.Z.enable();
   }
   renderCustomErrorMessage() {
 return (0, i.jsxs)('div', {

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return E;
+return h;
   }
 });
 var i = n(735250);
@@ -14,13 +14,13 @@ var a = n(100527),
   d = n(921944),
   u = n(30513),
   _ = n(689938),
-  h = n(420569);
+  E = n(420569);
 
-function E(e) {
+function h(e) {
   let {
 guild: t,
 markAsDismissed: n
-  } = e, E = (0, o.KK)(t, c.Eu4.TIER_2), {
+  } = e, h = (0, o.KK)(t, c.Eu4.TIER_2), {
 analyticsLocations: m
   } = (0, s.ZP)(a.Z.GUILD_BANNER_NOTICE);
   return (0, i.jsx)(r.Z, {
@@ -28,10 +28,10 @@ guild: t,
 onDismissed: () => n(d.L.UNKNOWN),
 cta: _.Z.Messages.GUILD_BANNER_NOTICE_CTA,
 message: _.Z.Messages.GUILD_BANNER_NOTICE.format({
-  boostsNeeded: E
+  boostsNeeded: h
 }),
 type: c.vID.GUILD_BANNER,
-image: h,
+image: E,
 onClick: () => (0, l.Z)({
   analyticsLocations: m,
   analyticsSourceLocation: {

@@ -8,7 +8,7 @@ var i = n(735250),
   d = n(731455),
   u = n(689938),
   _ = n(901652),
-  h = n(882008);
+  E = n(882008);
 t.Z = function(e) {
   let {
 loadId: t
@@ -17,7 +17,7 @@ let {
   searchCategoryId: t
 } = e;
 return t;
-  }), E = (0, s.e7)([l.Z], () => l.Z.getCategoryName(n)), m = a.useCallback(() => {
+  }), h = (0, s.e7)([l.Z], () => l.Z.getCategoryName(n)), m = a.useCallback(() => {
 var e;
 let n = o.B.getState();
 (0, c.y)({
@@ -28,7 +28,7 @@ let n = o.B.getState();
   languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, c.X)()
 });
   }, [t]), I = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
-categoryName: E
+categoryName: h
   }), g = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
 onClick: m
   });
@@ -37,7 +37,7 @@ className: _.container,
 children: [
   (0, i.jsx)('img', {
     alt: '',
-    src: h,
+    src: E,
     className: _.image
   }),
   (0, i.jsx)(r.Heading, {

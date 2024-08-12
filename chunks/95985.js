@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var o = n(481060),
-  r = n(497505),
-  a = n(644646),
+  a = n(497505),
+  r = n(644646),
   l = n(613087),
   i = n(472144),
   c = n(569379),
@@ -13,12 +13,12 @@ t.Z = e => {
 contentLocation: t,
 quest: n,
 progressBarRef: p,
-isExpanded: m,
-taskDetails: x,
+isExpanded: x,
+taskDetails: m,
 activeScreen: g
   } = e, {
 percentComplete: f
-  } = x, C = (0, c.eQ)(n), _ = (0, c.vf)(n, m, g);
+  } = m, _ = (0, c.eQ)(n), C = (0, c.vf)(n, x, g);
   return (0, s.jsxs)('div', {
 className: u.questProgressWrapper,
 children: [
@@ -32,10 +32,10 @@ children: [
       percentComplete: f,
       size: 42,
       strokeWidth: 3,
-      children: (0, s.jsx)(a.Z, {
+      children: (0, s.jsx)(r.Z, {
         className: u.questProgressRewardTile,
         quest: n,
-        questContent: r.jn.QUEST_BAR_V2,
+        questContent: a.jn.QUEST_BAR_V2,
         autoplay: !1,
         location: d.dr.QUESTS_BAR
       })
@@ -52,7 +52,7 @@ children: [
           className: u.questProgressHint,
           color: 'header-primary',
           variant: 'text-sm/semibold',
-          children: C
+          children: _
         })
       }),
       (0, s.jsx)(l.l7, {
@@ -64,7 +64,7 @@ children: [
           className: u.questProgressHint,
           color: 'text-muted',
           variant: 'text-xs/normal',
-          children: _
+          children: C
         })
       })
     ]

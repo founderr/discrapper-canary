@@ -17,7 +17,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let _ = new Set();
-class h extends a.Z {
+class E extends a.Z {
   _initialize() {
 i.Z.subscribe('MESSAGE_CREATE', this.handleMessageCreate), i.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.handleSettingsUpdate);
   }
@@ -42,13 +42,13 @@ super(...e), u(this, 'handleSettingsUpdate', e => {
   } = e;
   if (!c.Z.isEnabled())
     return !1;
-  let h = s.default.getId();
-  if ((null == u ? void 0 : u.find(e => e.id === h)) != null ? (0, r.T)(o.hn.PING_ME) : (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 && (null == i ? void 0 : i.id) === h && (0, r.T)(o.hn.PING_SOMEONE), !(0, d.wU)(null == i ? void 0 : i.id, h, a, _))
+  let E = s.default.getId();
+  if ((null == u ? void 0 : u.find(e => e.id === E)) != null ? (0, r.T)(o.hn.PING_ME) : (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 && (null == i ? void 0 : i.id) === E && (0, r.T)(o.hn.PING_SOMEONE), !(0, d.wU)(null == i ? void 0 : i.id, E, a, _))
     return !1;
-  let E = d.ZP.getMostRecentMessageCombo(n),
+  let h = d.ZP.getMostRecentMessageCombo(n),
     {
       combo: m
-    } = null != E ? E : {};
+    } = null != h ? h : {};
   if (null == m)
     return !1;
   Object.values(o.hn).forEach(e => {
@@ -62,4 +62,4 @@ super(...e), u(this, 'handleSettingsUpdate', e => {
 });
   }
 }
-t.Z = new h();
+t.Z = new E();

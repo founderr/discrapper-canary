@@ -1,7 +1,7 @@
 var s = n(735250),
   o = n(470079),
-  r = n(113434),
-  a = n(308069),
+  a = n(113434),
+  r = n(308069),
   l = n(613087),
   i = n(457153),
   c = n(254197),
@@ -12,65 +12,65 @@ t.Z = function(e) {
   let {
 expandedContentRef: n,
 expansionSpring: p,
-isExpanded: m,
-isExpansionAnimationComplete: x,
+isExpanded: x,
+isExpansionAnimationComplete: m,
 onCtxMenuOpened: g,
 onCtxMenuClosed: f,
-onCtxMenuSelection: C,
-quest: _,
-useReducedMotion: E,
-collapsedHeight: h
-  } = e, S = o.useRef(null), T = o.useRef(null), N = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, v = (0, r.Rf)(_);
+onCtxMenuSelection: _,
+quest: C,
+useReducedMotion: h,
+collapsedHeight: E
+  } = e, T = o.useRef(null), S = o.useRef(null), v = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, A = (0, a.Rf)(C);
   return (0, s.jsxs)(l.p, {
 expandedContentRef: n,
-collapsedContentRef: S,
+collapsedContentRef: T,
 expansionSpring: p,
 children: [
   (0, s.jsx)(i.Z, {
-    ref: S,
+    ref: T,
     className: u.content,
     expansionSpring: p,
-    isExpanded: m,
-    isExpansionAnimationComplete: x,
-    quest: _,
-    useReducedMotion: E,
-    taskDetails: v
+    isExpanded: x,
+    isExpansionAnimationComplete: m,
+    quest: C,
+    useReducedMotion: h,
+    taskDetails: A
   }),
   (0, s.jsx)(c.Z, {
     expansionSpring: p,
     className: u.content,
-    collapsedHeight: h,
+    collapsedHeight: E,
     onCtxMenuOpen: g,
     onCtxMenuClose: f,
-    onCtxMenuSelect: C,
-    overlayRef: T,
-    isExpanded: m,
-    isExpansionAnimationComplete: x,
-    quest: _,
-    useReducedMotion: E,
+    onCtxMenuSelect: _,
+    overlayRef: S,
+    isExpanded: x,
+    isExpansionAnimationComplete: m,
+    quest: C,
+    useReducedMotion: h,
     ref: n,
-    taskDetails: v,
+    taskDetails: A,
     children: (0, s.jsxs)(s.Fragment, {
       children: [
         (0, s.jsx)(d.Z, {
           expansionSpring: p,
-          isExpanded: m
+          isExpanded: x
         }),
-        !N && (0, s.jsx)(a.Z, {
-          quest: _,
+        !v && (0, s.jsx)(r.Z, {
+          quest: C,
           expansionSpring: p,
-          useReducedMotion: E,
-          isExpanded: m,
-          isExpansionAnimationComplete: x,
+          useReducedMotion: h,
+          isExpanded: x,
+          isExpansionAnimationComplete: m,
           onCtxMenuOpen: g,
           onCtxMenuClose: f,
-          onCtxMenuSelect: C
+          onCtxMenuSelect: _
         })
       ]
     })
   }),
   (0, s.jsx)('div', {
-    ref: T,
+    ref: S,
     className: u.overlay
   })
 ]

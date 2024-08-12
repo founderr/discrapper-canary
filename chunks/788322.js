@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(686546),
   u = n(372769),
   _ = n(134432),
-  h = n(451603),
-  E = n(885714),
+  E = n(451603),
+  h = n(885714),
   m = n(768581),
   I = n(900849),
   g = n(556017),
@@ -67,8 +67,8 @@ let {
   className: t
 } = e.target;
 if (!t.includes('Menu')) {
-  if ((0, h.yU)()) {
-    (0, E.Z)({
+  if ((0, E.yU)()) {
+    (0, h.Z)({
       analyticsSource: {
         page: f.ZY5.GUILD_DISCOVERY
       },

@@ -8,7 +8,7 @@ var i = n(735250),
   d = n(731455),
   u = n(689938),
   _ = n(767142),
-  h = n(661278);
+  E = n(661278);
 t.Z = e => {
   let {
 loadId: t
@@ -34,7 +34,7 @@ children: (0, i.jsxs)('div', {
         (0, i.jsx)('img', {
           alt: '',
           className: _.headerImage,
-          src: h
+          src: E
         }),
         (0, i.jsxs)('div', {
           className: _.headerContent,

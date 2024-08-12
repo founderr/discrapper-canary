@@ -3,10 +3,10 @@ n.d(t, {
 return m;
   },
   _X: function() {
-return E;
+return h;
   },
   em: function() {
-return h;
+return E;
   },
   s0: function() {
 return _;
@@ -35,7 +35,7 @@ lock() {
 context: d.IlC.APP
   });
 }
-let h = async (e, t, n) => {
+let E = async (e, t, n) => {
   if ((0, o.YK)(e, t), (null == n || '' === n) && (0, o.s9)(t))
 return e.authorization.scopes = [
   c.cE,
@@ -47,7 +47,7 @@ return Promise.reject(new l.Z({
 }, 'No Client ID Specified'));
   let i = s.ZP.releaseChannel !== d.R5N.CANARY && !u.includes(n) && e.transport !== c.He.POST_MESSAGE;
   return await (0, o.vv)(n, i), (0, o.fy)(e, n, t);
-}, E = () => (0, o.tr)(e => {
+}, h = () => (0, o.tr)(e => {
   let t = [];
   if (null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut))
 t = e.modeOptions.shortcut.map(e => {

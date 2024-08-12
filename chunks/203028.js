@@ -14,8 +14,8 @@ var a = n(512722),
   d = n(51144),
   u = n(761282),
   _ = n(358924),
-  h = n(817915),
-  E = n(981631),
+  E = n(817915),
+  h = n(981631),
   m = n(689938);
 
 function I(e) {
@@ -85,7 +85,7 @@ if (p + T === 1 && null != S) {
   if (null != t)
     return t;
   switch (f.type) {
-    case E.IIU.PLAYING:
+    case h.IIU.PLAYING:
       if ((0, o.Z)(f))
         return {
           subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_XBOX,
@@ -100,22 +100,22 @@ if (p + T === 1 && null != S) {
             messageProps: N
           }),
           icon: null != e ? (0, i.jsx)(_.Z.Header.Icon, {
-            src: null != e.getIconURL(h.Z) ? e.getIconURL(h.Z) : n(211827)
+            src: null != e.getIconURL(E.Z) ? e.getIconURL(E.Z) : n(211827)
           }) : null
       };
-    case E.IIU.STREAMING:
+    case h.IIU.STREAMING:
       return {
         subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH,
-          icon: null != e && null != e.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
-            src: e.getIconURL(h.Z)
+          icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
+            src: e.getIconURL(E.Z)
           }) : null
       };
-    case E.IIU.LISTENING:
+    case h.IIU.LISTENING:
       let a;
       return a = (0, l.Z)(f) ? (0, i.jsx)(_.Z.Header.Icon, {
         src: _.Z.Header.Icon.Src.SPOTIFY
-      }) : null != e.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
-        src: e.getIconURL(h.Z)
+      }) : null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
+        src: e.getIconURL(E.Z)
       }) : (0, i.jsx)(_.Z.Header.Icon, {
         src: n(211827)
       }), {
@@ -124,11 +124,11 @@ if (p + T === 1 && null != S) {
         }),
         icon: a
       };
-    case E.IIU.WATCHING:
+    case h.IIU.WATCHING:
       return {
         subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING,
-          icon: null != e && null != e.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
-            src: e.getIconURL(h.Z)
+          icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
+            src: e.getIconURL(E.Z)
           }) : null
       };
     default:
@@ -154,7 +154,7 @@ if (0 === g.length) {
       if (null != e)
         return e;
     }
-    if (null != t && t.type === E.IIU.LISTENING)
+    if (null != t && t.type === h.IIU.LISTENING)
       return {
         subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_SPOTIFY,
         icon: (0, i.jsx)(_.Z.Header.Icon, {
@@ -180,8 +180,8 @@ if (0 === g.length) {
       location: c.ZP.Locations.ACTIVITY_FEED_NEW,
       messageProps: N
     }),
-    icon: null != n && null != n.getIconURL(h.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
-      src: n.getIconURL(h.Z)
+    icon: null != n && null != n.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, {
+      src: n.getIconURL(E.Z)
     }) : null
   };
 }

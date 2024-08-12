@@ -20,13 +20,13 @@ totalMembers: a,
 activity: r,
 guildId: u,
 sourceAnalyticsLocations: _
-  } = e, h = [];
+  } = e, E = [];
   for (let {
   user: e,
   status: n
 }
 of t)
-h.push((0, i.jsx)(s.MenuItem, {
+E.push((0, i.jsx)(s.MenuItem, {
   id: e.id,
   keepItemStyles: !0,
   render: t => (0, i.jsx)(o.Z, {
@@ -45,7 +45,7 @@ h.push((0, i.jsx)(s.MenuItem, {
   })
 }));
   for (let e of n)
-h.push((0, i.jsx)(s.MenuItem, {
+E.push((0, i.jsx)(s.MenuItem, {
   id: e.id,
   keepItemStyles: !0,
   render: t => (0, i.jsx)(o.Z, {
@@ -62,16 +62,16 @@ h.push((0, i.jsx)(s.MenuItem, {
     }
   })
 }));
-  let E = a - h.length;
-  return E > 0 && h.push((0, i.jsx)(s.MenuItem, {
+  let h = a - E.length;
+  return h > 0 && E.push((0, i.jsx)(s.MenuItem, {
 id: 'unknown-members-'.concat(null == r ? void 0 : r.session_id),
 render: e => (0, i.jsx)(o.Y, {
   ...e,
   label: d.Z.Messages.GAME_FEED_UNKNOWN_PLAYERS.format({
-    count: E
+    count: h
   })
 })
-  })), h;
+  })), E;
 }
 
 function _(e) {
@@ -86,8 +86,8 @@ let {
 } = e;
 return t.id;
   })), _ = n.filter(e => !c.has(e.id)), {
-analyticsLocations: h
-  } = (0, r.ZP)(), E = a.useMemo(() => {
+analyticsLocations: E
+  } = (0, r.ZP)(), h = a.useMemo(() => {
 let e = l.flatMap(e => {
   let {
     playingMembers: t
@@ -99,7 +99,7 @@ return n.filter(t => !e.includes(t.id));
 n,
 l
   ]);
-  if (l.length <= 1 && 0 === E.length) {
+  if (l.length <= 1 && 0 === h.length) {
 var m, I;
 return (0, i.jsx)(s.MenuGroup, {
   label: n.length > 1 ? d.Z.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({
@@ -111,7 +111,7 @@ return (0, i.jsx)(s.MenuGroup, {
     totalMembers: n.length,
     activity: null !== (I = null === (m = l[0]) || void 0 === m ? void 0 : m.activity) && void 0 !== I ? I : void 0,
     guildId: null == o ? void 0 : o.id,
-    sourceAnalyticsLocations: h
+    sourceAnalyticsLocations: E
   })
 });
   }
@@ -134,15 +134,15 @@ return (0, i.jsx)(s.MenuGroup, {
       totalMembers: a.length,
       activity: null != l ? l : void 0,
       guildId: null == o ? void 0 : o.id,
-      sourceAnalyticsLocations: h
+      sourceAnalyticsLocations: E
     })
   }, n);
 }),
-p = E.map(e => e.id);
+p = h.map(e => e.id);
   return [
 ...g,
 (0, i.jsx)(s.MenuGroup, {
-  label: ''.concat(d.Z.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, ' - ').concat(E.length),
+  label: ''.concat(d.Z.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, ' - ').concat(h.length),
   children: u({
     priorityMembers: t.filter(e => {
       let {
@@ -150,10 +150,10 @@ p = E.map(e => e.id);
       } = e;
       return p.includes(t.id);
     }),
-    otherMembers: E.filter(e => !c.has(e.id)),
-    totalMembers: E.length,
+    otherMembers: h.filter(e => !c.has(e.id)),
+    totalMembers: h.length,
     guildId: null == o ? void 0 : o.id,
-    sourceAnalyticsLocations: h
+    sourceAnalyticsLocations: E
   })
 })
   ];

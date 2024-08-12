@@ -16,8 +16,8 @@ var i = n(470079),
   d = n(229765),
   u = n(10473),
   _ = n(207796),
-  h = n(976757),
-  E = n(308083);
+  E = n(976757),
+  h = n(308083);
 
 function m() {
   return (0, _.GN)(_.t1, s());
@@ -31,7 +31,7 @@ a = m(),
 s = (0, c.An)({
   location: 'clan_discovery'
 }),
-h = (0, c.iN)('clan_discovery'),
+E = (0, c.iN)('clan_discovery'),
 {
   defaultGameId: I
 } = (0, c.nk)('clan_discovery'),
@@ -45,18 +45,18 @@ p = function() {
     t,
     e
   ]), t;
-}(!h),
+}(!E),
 T = (0, l.e7)([u.Z], () => u.Z.isLoading());
   return i.useEffect(() => {
-!(n.length > 0) && !h && (g === E.nJ ? (e(_.hz.VALORANT), t([g])) : g === E.xn ? (e(_.hz.GENSHIN), t([g])) : null == g && (e(_.hz.NONE), t([])));
+!(n.length > 0) && !E && (g === h.nJ ? (e(_.hz.VALORANT), t([g])) : g === h.xn ? (e(_.hz.GENSHIN), t([g])) : null == g && (e(_.hz.NONE), t([])));
   }, [
 e,
 t,
 g,
 n,
-h
+E
   ]), i.useEffect(() => {
-if (h)
+if (E)
   (0, d.Cg)(a);
 else {
   if (!p)
@@ -66,7 +66,7 @@ else {
   }, [
 a,
 p,
-h
+E
   ]), i.useEffect(() => {
 o.Z.getDetectableGames();
   }, []), {
@@ -82,12 +82,12 @@ a = m(),
 s = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery()),
 o = (0, c.iN)('clan_discovery'),
 d = (0, l.e7)([u.Z], () => u.Z.getSearchResult(a), [a]),
-E = (0, l.Wu)([u.Z], () => t && null != n ? u.Z.getSavedGuildsResult(n) : [], [
+h = (0, l.Wu)([u.Z], () => t && null != n ? u.Z.getSavedGuildsResult(n) : [], [
   t,
   n
 ]),
 I = i.useMemo(() => {
-  if ((0, h.Pw)(d)) {
+  if ((0, E.Pw)(d)) {
     let t = d.items;
     return null != e ? t.slice(0, e) : t;
   }
@@ -98,10 +98,10 @@ I = i.useMemo(() => {
 ]);
   return t ? {
 loaded: s || o,
-clans: E,
+clans: h,
 searchCriteria: a,
 searchResult: {
-  items: E,
+  items: h,
   loadedAt: Date.now(),
   status: 'loaded'
 }

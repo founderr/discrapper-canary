@@ -9,8 +9,8 @@ var i = n(735250),
   d = n(748780),
   u = n(873546),
   _ = n(442837),
-  h = n(481060),
-  E = n(570140),
+  E = n(481060),
+  h = n(570140),
   m = n(212093),
   I = n(827837),
   g = n(785570),
@@ -70,7 +70,7 @@ let {
   currentHomepageCategoryId: l,
   mostRecentQuery: o
 } = this.props;
-if ((0, I.N)(), (0, G.le)(), null == P.ZP.getSearchIndex() && (0, m.Ue)(), E.Z.wait(() => {
+if ((0, I.N)(), (0, G.le)(), null == P.ZP.getSearchIndex() && (0, m.Ue)(), h.Z.wait(() => {
     (0, g.M)(W.x8Z.SERVER_DISCOVERY_BADGE);
   }), !i && 0 === o.length && y.Zt({
     loadId: this.loadId,
@@ -95,7 +95,7 @@ if ((0, I.N)(), (0, G.le)(), null == P.ZP.getSearchIndex() && (0, m.Ue)(), E.Z.w
     length: parseInt(n, 10)
   });
 } else
-  null != l && l !== Y.Hk && E.Z.wait(() => (0, m.uY)(l));
+  null != l && l !== Y.Hk && h.Z.wait(() => (0, m.uY)(l));
 let d = null !== (t = null === (e = (0, L.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
 d > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({
   to: d
@@ -214,14 +214,14 @@ let {
   loadingGuildId: u
 } = this.state, _ = c === Y.Hk ? K.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : K.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
   categoryName: d
-}), h = null !== (t = null === (e = a[n]) || void 0 === e ? void 0 : e[c]) && void 0 !== t ? t : P.xk;
+}), E = null !== (t = null === (e = a[n]) || void 0 === e ? void 0 : e[c]) && void 0 !== t ? t : P.xk;
 return (0, i.jsx)(H.Z, {
   loadId: this.loadId,
   availableLanguages: s,
   defaultLanguage: r,
   placeholder: _,
   isFetchingSearch: l,
-  searchResults: h,
+  searchResults: E,
   mostRecentQuery: n,
   loadingGuildId: u,
   currentCategoryId: c,
@@ -292,7 +292,7 @@ let {
   location: '54961b_4'
 }, {
   autoTrackExposure: !1
-}), E = l === Y.Hk ? null === (e = c[W.Lcj.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = c[l]) || void 0 === t ? void 0 : t.guilds;
+}), h = l === Y.Hk ? null === (e = c[W.Lcj.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = c[l]) || void 0 === t ? void 0 : t.guilds;
 if (l === Y.U)
   return (0, i.jsx)(N.Z, {
     loadId: this.loadId
@@ -315,7 +315,7 @@ return (0, i.jsxs)('div', {
     u.tq && (0, i.jsx)(C.ZP, {
       children: (0, i.jsx)(a.Fragment, {})
     }),
-    (0, i.jsx)(h.AdvancedScrollerAuto, {
+    (0, i.jsx)(E.AdvancedScrollerAuto, {
       className: q.scroller,
       ref: this._scroller,
       onScroll: this.handleScroll,
@@ -323,7 +323,7 @@ return (0, i.jsxs)('div', {
         className: r()(q.viewWrapper, {
           [q.searchPage]: d
         }),
-        children: d ? this.renderSearchResults() : (0, i.jsxs)(h.HeadingLevel, {
+        children: d ? this.renderSearchResults() : (0, i.jsxs)(E.HeadingLevel, {
           forceLevel: 1,
           component: (0, i.jsxs)('div', {
             className: q.searchHeader,
@@ -338,14 +338,14 @@ return (0, i.jsxs)('div', {
                 children: (0, i.jsxs)('div', {
                   className: q.headerContent,
                   children: [
-                    (0, i.jsx)(h.Heading, {
+                    (0, i.jsx)(E.Heading, {
                       variant: 'heading-xl/semibold',
                       className: q.searchTitle,
                       children: l === Y.Hk ? K.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : K.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
                         categoryName: n
                       })
                     }),
-                    (0, i.jsx)(h.Text, {
+                    (0, i.jsx)(E.Text, {
                       variant: 'text-md/normal',
                       className: q.searchSubtitle,
                       children: l === Y.Hk && K.Z.Messages.GUILD_DISCOVERY_HOME_SUBTITLE
@@ -357,7 +357,7 @@ return (0, i.jsxs)('div', {
                       className: q.headerTagContainer,
                       discoveryTagStyle: F.B.LIGHT,
                       onTagClick: e => this.handleTagSearch(e, void 0, y.P1.HEADER),
-                      tags: o().chain(E).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
+                      tags: o().chain(h).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
                     })
                   ]
                 })
@@ -377,14 +377,14 @@ return (0, i.jsxs)('div', {
                   src: Q,
                   className: q.footerImage
                 }),
-                (0, i.jsx)(h.Heading, {
+                (0, i.jsx)(E.Heading, {
                   variant: 'heading-md/semibold',
                   children: K.Z.Messages.GUILD_DISCOVERY_CATEGORY_FOOTER_TITLE
                 }),
-                (0, i.jsx)(h.Button, {
-                  look: h.Button.Looks.LINK,
-                  color: h.Button.Colors.LINK,
-                  size: h.Button.Sizes.MIN,
+                (0, i.jsx)(E.Button, {
+                  look: E.Button.Looks.LINK,
+                  color: E.Button.Colors.LINK,
+                  size: E.Button.Sizes.MIN,
                   onClick: this.scrollToTop,
                   children: K.Z.Messages.GUILD_DISCOVERY_FOOTER_BODY
                 })

@@ -26,7 +26,7 @@ try {
 } catch (e) {
   u(!0);
 }
-  }, []), m = r.useCallback(e => {
+  }, []), _ = r.useCallback(e => {
 u(!1);
 try {
   (0, a.pf)(e);
@@ -37,10 +37,10 @@ try {
   return r.useEffect(() => {
 var e, r;
 if (null == i && !c && !t && !n && !l)
-  (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? p(o.id, d, s) : (null === (r = o.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null && m(o.id);
+  (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? p(o.id, d, s) : (null === (r = o.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null && _(o.id);
   }, [
 p,
-m,
+_,
 c,
 t,
 n,
@@ -51,7 +51,7 @@ i,
 d
   ]), {
 claimCode: p,
-fetchCode: m,
+fetchCode: _,
 hasError: c,
 setHasError: u
   };

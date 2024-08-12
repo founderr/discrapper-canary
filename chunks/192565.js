@@ -13,8 +13,8 @@ var i = n(735250),
   d = n(745628),
   u = n(950279),
   _ = n(796918),
-  h = n(513532),
-  E = n(741595),
+  E = n(513532),
+  h = n(741595),
   m = n(974842),
   I = n(363915),
   g = n(359380),
@@ -71,7 +71,7 @@ let {
   errors: a,
   handleClanUpdate: s
 } = S(t);
-return (0, i.jsx)(E.Z, {
+return (0, i.jsx)(h.Z, {
   title: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
   description: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
   onUpdatePlaystyle: e => s({
@@ -165,7 +165,7 @@ let {
 } = e, {
   errors: n
 } = S(t);
-return (0, i.jsx)(h.Z, {
+return (0, i.jsx)(E.Z, {
   guildId: t,
   error: null == n ? void 0 : n.verificationForm
 });

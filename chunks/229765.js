@@ -1,6 +1,6 @@
 n.d(t, {
   Cg: function() {
-return h;
+return E;
   },
   XB: function() {
 return u;
@@ -74,7 +74,7 @@ searchResult: u
   });
 }
 
-function h(e) {
+function E(e) {
   let t = l.Z.getSearchResult(e);
   if ('loaded' === t.status)
 return t;
