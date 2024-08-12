@@ -1,6 +1,6 @@
 n.d(s, {
   Z: function() {
-return a;
+return r;
   }
 });
 var i = n(735250);
@@ -9,12 +9,12 @@ var l = n(705556),
   t = n(225714),
   o = n(984904);
 
-function a(e) {
+function r(e) {
   let {
 user: s,
 isCurrentUser: n,
-guildId: a,
-friendToken: r,
+guildId: r,
+friendToken: a,
 relationshipType: d,
 persistentCallCtaEnabled: c = !1,
 activeInviteToCallCtaEnabled: u = !1,
@@ -29,12 +29,12 @@ children: [
     relationshipType: d,
     persistentCallCtaEnabled: c,
     activeInviteToCallCtaEnabled: u,
-    friendToken: r,
+    friendToken: a,
     onClose: _
   }),
   (0, i.jsx)(l.Z, {
     user: s,
-    guildId: a,
+    guildId: r,
     onClose: _
   })
 ]

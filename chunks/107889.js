@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(470079),
   t = n(442837),
   o = n(481060),
-  a = n(727637),
-  r = n(58540),
+  r = n(727637),
+  a = n(58540),
   d = n(100527),
   c = n(906732),
   u = n(680295),
@@ -21,8 +21,8 @@ var i = n(735250),
   S = n(318661),
   v = n(78675),
   Z = n(113557),
-  h = n(169979),
-  p = n(502762),
+  p = n(169979),
+  h = n(502762),
   T = n(544989),
   g = n(481932),
   N = n(195387),
@@ -50,17 +50,17 @@ initialSubsection: w,
 transitionState: k,
 onClose: V,
 showGuildProfile: Y,
-sourceAnalyticsLocations: W = []
-  } = e, H = b === L.ME ? void 0 : b, {
+sourceAnalyticsLocations: H = []
+  } = e, W = b === L.ME ? void 0 : b, {
 analyticsLocations: z
   } = (0, c.ZP)([
-...W,
+...H,
 d.Z.SIMPLIFIED_PROFILE_MODAL
   ]), K = (0, f.ZB)({
 layout: 'SIMPLIFIED_MODAL',
 userId: s.id,
 sourceSessionId: F,
-guildId: H,
+guildId: W,
 channelId: P,
 messageId: y,
 roleId: D,
@@ -76,16 +76,16 @@ activeInviteToCallCtaEnabled: J
 location: 'SimplifiedUserProfileModalHeader'
   }), [X, $] = l.useState(), ee = e => {
 $(e);
-  }, es = (0, S.ZP)(s.id, Y ? H : void 0), en = (0, S.ZP)(s.id, H), ei = (0, t.e7)([_.Z], () => _.Z.getRelationshipType(s.id)), el = l.useMemo(() => null != H ? {
-[H]: [s.id]
+  }, es = (0, S.ZP)(s.id, Y ? W : void 0), en = (0, S.ZP)(s.id, W), ei = (0, t.e7)([_.Z], () => _.Z.getRelationshipType(s.id)), el = l.useMemo(() => null != W ? {
+[W]: [s.id]
   } : {}, [
-H,
+W,
 s.id
   ]);
-  (0, r.$)(el);
+  (0, a.$)(el);
   let et = l.createRef(),
-eo = (0, a.Z)(et),
-ea = () => (null == en ? void 0 : en.guildId) == null ? null : (null == es ? void 0 : es.guildId) != null ? (0, i.jsx)(o.MenuItem, {
+eo = (0, r.Z)(et),
+er = () => (null == en ? void 0 : en.guildId) == null ? null : (null == es ? void 0 : es.guildId) != null ? (0, i.jsx)(o.MenuItem, {
   id: 'view-main-profile',
   label: M.Z.Messages.VIEW_MAIN_PROFILE,
   subtext: M.Z.Messages.AKA_DISPLAY_NAME.format({
@@ -96,7 +96,7 @@ ea = () => (null == en ? void 0 : en.guildId) == null ? null : (null == es ? voi
       ...K,
       showGuildProfile: !1,
       friendToken: B,
-      sourceAnalyticsLocations: W
+      sourceAnalyticsLocations: H
     }), (0, E.pQ)({
       action: 'PRESS_VIEW_MAIN_PROFILE',
       analyticsLocations: z,
@@ -107,14 +107,14 @@ ea = () => (null == en ? void 0 : en.guildId) == null ? null : (null == es ? voi
   id: 'view-server-profile',
   label: M.Z.Messages.VIEW_SERVER_PROFILE,
   subtext: M.Z.Messages.AKA_DISPLAY_NAME.format({
-    displayName: I.ZP.getName(H, P, s)
+    displayName: I.ZP.getName(W, P, s)
   }),
   action: () => {
     V(), (0, C.openUserProfileModal)({
       ...K,
       showGuildProfile: !0,
       friendToken: B,
-      sourceAnalyticsLocations: W
+      sourceAnalyticsLocations: H
     }), (0, E.pQ)({
       action: 'PRESS_VIEW_SERVER_PROFILE',
       analyticsLocations: z,
@@ -132,7 +132,7 @@ children: (0, i.jsx)(f.Mt, {
     hideShadow: !0,
     'aria-label': M.Z.Messages.USER_PROFILE_MODAL,
     children: [
-      (0, i.jsxs)(p.Z, {
+      (0, i.jsxs)(h.Z, {
         user: s,
         displayProfile: es,
         profileType: O.y0.FULL_SIZE,
@@ -143,7 +143,7 @@ children: (0, i.jsx)(f.Mt, {
             children: [
               (0, i.jsx)(N.Z, {
                 user: s,
-                guildId: H,
+                guildId: W,
                 channelId: P,
                 onClose: V
               }),
@@ -154,8 +154,8 @@ children: (0, i.jsx)(f.Mt, {
               }),
               (0, i.jsx)(j.Z, {
                 user: s,
-                guildId: H,
-                viewProfileItem: ea()
+                guildId: W,
+                viewProfileItem: er()
               })
             ]
           }),
@@ -177,7 +177,7 @@ children: (0, i.jsx)(f.Mt, {
                     location: 'SimplifiedUserProfileModal',
                     user: s,
                     displayProfile: es,
-                    guildId: H,
+                    guildId: W,
                     channelId: P,
                     profileType: O.y0.FULL_SIZE,
                     isReplySource: X === O.N9.AVATAR || X === O.N9.STATUS,
@@ -188,17 +188,17 @@ children: (0, i.jsx)(f.Mt, {
                   (0, i.jsx)(A.Z, {
                     user: s,
                     isCurrentUser: s.id === n.id,
-                    guildId: H,
+                    guildId: W,
                     relationshipType: ei,
                     persistentCallCtaEnabled: Q,
                     activeInviteToCallCtaEnabled: J,
-                    viewProfileItem: ea(),
+                    viewProfileItem: er(),
                     onClose: V
                   }),
-                  (0, i.jsx)(h.Z, {
+                  (0, i.jsx)(p.Z, {
                     location: 'SimplifiedUserProfileModal',
                     user: s,
-                    guildId: H,
+                    guildId: W,
                     channelId: P,
                     profileType: O.y0.FULL_SIZE,
                     editEnabled: q,

@@ -8,8 +8,8 @@ n(470079);
 var l = n(442837),
   t = n(699516),
   o = n(5192),
-  a = n(741308),
-  r = n(681837),
+  r = n(741308),
+  a = n(681837),
   d = n(91433),
   c = n(502762),
   u = n(530),
@@ -27,8 +27,8 @@ currentUser: x,
 channelId: S,
 displayProfile: v,
 initialSection: Z,
-initialSubsection: h,
-friendToken: p,
+initialSubsection: p,
+friendToken: h,
 onClose: T
   } = e, g = (0, l.e7)([t.Z], () => t.Z.getRelationshipType(n.id)), N = (0, I.Z)({
 user: n,
@@ -43,10 +43,10 @@ children: [
     nickname: o.ZP.getName(null == v ? void 0 : v.guildId, S, n),
     pronouns: null == v ? void 0 : v.pronouns,
     nicknameVariant: 'heading-xl/bold',
-    nicknameIcons: (0, i.jsx)(r.Z, {
+    nicknameIcons: (0, i.jsx)(a.Z, {
       userId: n.id
     }),
-    tags: (0, i.jsx)(a.Z, {
+    tags: (0, i.jsx)(r.Z, {
       displayProfile: v,
       profileType: f.y0.FULL_SIZE,
       onClose: T
@@ -58,7 +58,7 @@ children: [
       user: n,
       guildId: null !== (s = null == v ? void 0 : v.guildId) && void 0 !== s ? s : void 0,
       channelId: S,
-      friendToken: p,
+      friendToken: h,
       className: m.friendRequestBanner
     })
   }),
@@ -70,7 +70,7 @@ children: [
       displayProfile: v,
       items: N,
       initialSection: Z,
-      initialSubsection: h,
+      initialSubsection: p,
       onClose: T
     })
   })

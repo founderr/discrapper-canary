@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(470079),
   t = n(120356),
   o = n.n(t),
-  a = n(442837),
-  r = n(481060),
+  r = n(442837),
+  a = n(481060),
   d = n(717881),
   c = n(387903),
   u = n(906732),
@@ -26,12 +26,12 @@ user: s,
 type: n,
 showActions: t,
 onClose: v
-  } = e, Z = (0, a.e7)([_.Z], () => null != _.Z.getAnyStreamForUser(s.id)), h = (0, a.e7)([I.Z], () => I.Z.getActivities(s.id)), p = l.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), T = l.useMemo(() => Z ? p.find(e => e.type === m.IIU.PLAYING) : null, [
-p,
+  } = e, Z = (0, r.e7)([_.Z], () => null != _.Z.getAnyStreamForUser(s.id)), p = (0, r.e7)([I.Z], () => I.Z.getActivities(s.id)), h = l.useMemo(() => p.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [p]), T = l.useMemo(() => Z ? h.find(e => e.type === m.IIU.PLAYING) : null, [
+h,
 Z
-  ]), g = l.useMemo(() => p.filter(e => e !== T), [
+  ]), g = l.useMemo(() => h.filter(e => e !== T), [
 T,
-p
+h
   ]), {
 analyticsLocations: N,
 newestAnalyticsLocation: j
@@ -44,7 +44,7 @@ location: {
   section: m.jXE.PROFILE_MODAL
 }
   };
-  return (0, i.jsxs)(r.ScrollerThin, {
+  return (0, i.jsxs)(a.ScrollerThin, {
 className: S.listScroller,
 fade: !0,
 children: [

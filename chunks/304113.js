@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(470079),
   t = n(512722),
   o = n.n(t),
-  a = n(442837),
-  r = n(100527),
+  r = n(442837),
+  a = n(100527),
   d = n(699516),
   c = n(594174),
   u = n(453956),
@@ -19,9 +19,9 @@ var i = n(735250),
   m = n(41527),
   x = n(107889);
 let S = [
-  r.Z.BITE_SIZE_PROFILE_POPOUT,
-  r.Z.PROFILE_POPOUT,
-  r.Z.PROFILE_PANEL
+  a.Z.BITE_SIZE_PROFILE_POPOUT,
+  a.Z.PROFILE_POPOUT,
+  a.Z.PROFILE_PANEL
 ];
 
 function v(e) {
@@ -30,33 +30,33 @@ location: s,
 user: n,
 ...t
   } = e, {
-botProfilesEnabled: r
+botProfilesEnabled: a
   } = (0, _.J)({
 location: s
-  }), v = (0, a.e7)([c.default], () => c.default.getCurrentUser());
+  }), v = (0, r.e7)([c.default], () => c.default.getCurrentUser());
   o()(null != v, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined');
-  let Z = (0, a.e7)([d.Z], () => d.Z.isBlocked(n.id)),
-[h, p] = l.useState(Z),
+  let Z = (0, r.e7)([d.Z], () => d.Z.isBlocked(n.id)),
+[p, h] = l.useState(Z),
 T = (0, u.sS)({
   location: s
 });
   l.useEffect(() => {
-p(Z);
+h(Z);
   }, [Z]);
   let g = !S.some(e => {
 var s;
 return (null !== (s = t.sourceAnalyticsLocations) && void 0 !== s ? s : []).includes(e);
   });
-  return h && T && g ? (0, i.jsx)(I.Z, {
+  return p && T && g ? (0, i.jsx)(I.Z, {
 user: n,
 currentUser: v,
-onViewBlockedProfileClick: () => p(!1),
+onViewBlockedProfileClick: () => h(!1),
 ...t
-  }) : r && n.isNonUserBot() ? (0, i.jsx)(E.Z, {
+  }) : a && n.isNonUserBot() ? (0, i.jsx)(E.Z, {
 ...t,
 user: n,
 currentUser: v
-  }) : r && n.bot ? (0, i.jsx)(m.Z, {
+  }) : a && n.bot ? (0, i.jsx)(m.Z, {
 ...t,
 user: n,
 currentUser: v

@@ -8,8 +8,8 @@ n(470079);
 var l = n(387903),
   t = n(100849),
   o = n(487922),
-  a = n(620648),
-  r = n(944546),
+  r = n(620648),
+  a = n(944546),
   d = n(470900),
   c = n(228168);
 
@@ -34,7 +34,7 @@ case c.oh.MUTUAL_GUILDS:
     onClose: I
   });
 case c.oh.MUTUAL_FRIENDS:
-  return (0, i.jsx)(r.Z, {
+  return (0, i.jsx)(a.Z, {
     user: n,
     onClose: I
   });
@@ -45,7 +45,7 @@ case c.oh.BOT_DATA_ACCESS:
 case c.oh.USER_INFO_CONNECTIONS:
 case c.oh.USER_INFO:
 default:
-  return (0, i.jsx)(a.Z, {
+  return (0, i.jsx)(r.Z, {
     displayProfile: s,
     autoFocusNote: _,
     user: n,

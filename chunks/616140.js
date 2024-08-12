@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(470079),
   t = n(442837),
   o = n(706898),
-  a = n(481060),
-  r = n(387903),
+  r = n(481060),
+  a = n(387903),
   d = n(246946),
   c = n(785717),
   u = n(27144),
@@ -21,16 +21,16 @@ var i = n(735250),
   S = n(879828),
   v = n(834534),
   Z = n(228168),
-  h = n(47460);
+  p = n(47460);
 
-function p(e) {
+function h(e) {
   let {
 section: s,
 subsection: n,
 user: l,
 currentUser: t,
 displayProfile: o,
-onClose: a
+onClose: r
   } = e, {
 newActivityCardsEnabled: d
   } = (0, u.z)({
@@ -39,18 +39,18 @@ location: 'SimplifiedUserProfileModalTabs'
   return s === Z.oh.ACTIVITY && d ? (0, i.jsx)(S.Z, {
 user: l,
 currentUser: t,
-onClose: a
+onClose: r
   }) : s === Z.oh.ACTIVITY ? (0, i.jsx)(_.Z, {
 showActions: (null == t ? void 0 : t.id) !== l.id,
 user: l,
-type: r.Y.SIMPLIFIED_PROFILE,
-onClose: a
+type: a.Y.SIMPLIFIED_PROFILE,
+onClose: r
   }) : s === Z.oh.MUTUAL_FRIENDS ? (0, i.jsx)(I.Z, {
 user: l,
-onClose: a
+onClose: r
   }) : s === Z.oh.MUTUAL_GUILDS ? (0, i.jsx)(f.Z, {
 user: l,
-onClose: a
+onClose: r
   }) : s === Z.oh.BOT_DATA_ACCESS ? (0, i.jsx)(m.Z, {
 user: l
   }) : s === Z.oh.BOT_INFO ? (0, i.jsx)(x.Z, {
@@ -58,18 +58,18 @@ user: l,
 currentUser: t,
 displayProfile: o,
 subsection: n,
-onClose: a
+onClose: r
   }) : (0, i.jsx)(v.Z, {
 user: l,
 currentUser: t,
 displayProfile: o,
 subsection: n,
-onClose: a
+onClose: r
   });
 }
 
 function T(e) {
-  var s, n, r;
+  var s, n, a;
   let {
 user: u,
 currentUser: _,
@@ -84,12 +84,12 @@ trackUserProfileAction: v
 section: g,
 subsection: N
   }, j] = l.useState({
-section: null !== (r = null === (s = f.find(e => {
+section: null !== (a = null === (s = f.find(e => {
   let {
     section: s
   } = e;
   return s === m;
-})) || void 0 === s ? void 0 : s.section) && void 0 !== r ? r : null === (n = f[0]) || void 0 === n ? void 0 : n.section,
+})) || void 0 === s ? void 0 : s.section) && void 0 !== a ? a : null === (n = f[0]) || void 0 === n ? void 0 : n.section,
 subsection: x
   });
   l.useEffect(() => {
@@ -115,13 +115,13 @@ v,
 j
   ]);
   return T ? (0, i.jsx)('div', {
-className: h.container,
+className: p.container,
 children: (0, i.jsx)(E.Z, {})
   }) : (0, i.jsxs)('div', {
-className: h.container,
+className: p.container,
 children: [
   (0, i.jsx)(o.n, {
-    className: h.tabBar,
+    className: p.tabBar,
     type: 'top',
     selectedItem: g,
     onItemSelect: C,
@@ -131,17 +131,17 @@ children: [
         text: n
       } = e;
       return (0, i.jsx)(o.n.Item, {
-        className: h.tabBarItem,
+        className: p.tabBarItem,
         id: s,
         'aria-label': n,
-        children: (0, i.jsx)(a.Text, {
+        children: (0, i.jsx)(r.Text, {
           variant: 'text-sm/normal',
           children: n
         })
       }, s);
     })
   }),
-  (0, i.jsx)(p, {
+  (0, i.jsx)(h, {
     items: f,
     section: g,
     subsection: N,

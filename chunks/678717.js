@@ -30,17 +30,17 @@ var x = t(392750),
   N = t(912072),
   S = t(246992),
   T = t(442954),
-  Z = t(702904),
-  E = t(178821),
-  I = t(248526),
+  E = t(702904),
+  I = t(178821),
+  Z = t(248526),
   R = t(958328),
   O = t(514866),
   B = t(678639),
   A = t(351930),
   P = t(771751),
-  M = t(596768),
-  D = t(621060),
-  L = t(689938),
+  L = t(596768),
+  M = t(621060),
+  D = t(689938),
   G = t(683597),
   U = t(979756);
 
@@ -62,7 +62,7 @@ className: G.resizeHandle
   });
 }
 
-function F() {
+function z() {
   var e;
   let r = n.useMemo(() => {
   let e = [{
@@ -73,7 +73,7 @@ function F() {
     {
       id: 'triggers',
       name: 'Triggers',
-      render: () => (0, a.jsx)(M.Z, {})
+      render: () => (0, a.jsx)(L.Z, {})
     },
     {
       id: 'stores',
@@ -93,7 +93,7 @@ function F() {
   }), e.push({
     id: 'perks_demos',
     name: 'Perks Demos',
-    render: () => (0, a.jsx)(I.Z, {})
+    render: () => (0, a.jsx)(Z.Z, {})
   })), g.Z.isDeveloper && (e.push({
     id: 'clans',
     name: 'Clans',
@@ -101,7 +101,7 @@ function F() {
   }), e.push({
     id: 'performance',
     name: 'Performance',
-    render: () => (0, a.jsx)(E.Z, {})
+    render: () => (0, a.jsx)(I.Z, {})
   })), e.push({
     id: 'colors',
     name: 'Colors',
@@ -151,7 +151,7 @@ function F() {
   }), e.push({
     id: 'payments',
     name: 'Payments',
-    render: () => (0, a.jsx)(Z.Z, {})
+    render: () => (0, a.jsx)(E.Z, {})
   }), e.push({
     id: 'subscriptions',
     name: 'Subscriptions',
@@ -166,7 +166,7 @@ function F() {
   TabBar: t,
   renderSelectedTab: i,
   selectedTabId: o
-} = (0, D.Z)({
+} = (0, M.Z)({
   tabs: r,
   initialSelectedTabId: null !== (e = f.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
   onChangeTab: e => {
@@ -187,7 +187,7 @@ children: [
     className: U.headerBar,
     toolbar: (0, a.jsx)(m.ZP.Icon, {
       icon: s.XSmallIcon,
-      tooltip: L.Z.Messages.CLOSE,
+      tooltip: D.Z.Messages.CLOSE,
       onClick: b.SO
     }),
     children: [
@@ -209,7 +209,7 @@ children: [
   });
 }
 
-function z() {
+function F() {
   let e = n.useRef(null),
 r = (0, c.e7)([f.Z], () => f.Z.sidebarWidth),
 [t, i] = n.useState(null),
@@ -236,7 +236,7 @@ children: [
   }),
   (0, a.jsx)('div', {
     className: G.sidebarContent,
-    children: (0, a.jsx)(F, {})
+    children: (0, a.jsx)(z, {})
   })
 ]
   });
@@ -248,7 +248,7 @@ function V() {
 className: o()(G.container, G.mobileContainerExpanded),
 children: (0, a.jsx)('div', {
   className: G.sidebarContent,
-  children: (0, a.jsx)(F, {})
+  children: (0, a.jsx)(z, {})
 })
   }) : (0, a.jsx)('div', {
 className: G.container,
@@ -277,5 +277,5 @@ function Y(e) {
   let {
 mobile: r
   } = e;
-  return r ? (0, a.jsx)(V, {}) : (0, a.jsx)(z, {});
+  return r ? (0, a.jsx)(V, {}) : (0, a.jsx)(F, {});
 }

@@ -1,6 +1,6 @@
 n.d(s, {
   Z: function() {
-return a;
+return r;
   }
 }), n(627341);
 var i = n(278074),
@@ -8,7 +8,7 @@ var i = n(278074),
   t = n(228168),
   o = n(689938);
 
-function a(e) {
+function r(e) {
   var s;
   let n = null === (s = (0, l.Z)(e.id, !0).mutualGuilds) || void 0 === s ? void 0 : s.length;
   return [{

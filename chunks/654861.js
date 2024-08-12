@@ -207,11 +207,11 @@ return new o(Math.abs(this.value));
 return new E(this.value >= 0 ? this.value : -this.value);
   };
 
-  function L(t, e, r) {
+  function f(t, e, r) {
 return t < 10000000 ? new i(p(e, t), r) : new i(S(e, c(t)), r);
   }
 
-  function f(t) {
+  function L(t) {
 var e, r, n, _, a = t.length,
   i = T(a + a);
 for (n = 0; n < a; n++) {
@@ -254,18 +254,18 @@ return (e = o.length, -0.012 * e - 0.012 * (r = E.length) + 0.000015 * e * r > 0
   return R(I), I;
 }(o, E), s) : new i(S(o, E), s);
   }, i.prototype.times = i.prototype.multiply, o.prototype._multiplyBySmall = function(t) {
-return s(t.value * this.value) ? new o(t.value * this.value) : L(Math.abs(t.value), c(Math.abs(this.value)), this.sign !== t.sign);
+return s(t.value * this.value) ? new o(t.value * this.value) : f(Math.abs(t.value), c(Math.abs(this.value)), this.sign !== t.sign);
   }, i.prototype._multiplyBySmall = function(t) {
-return 0 === t.value ? a[0] : 1 === t.value ? this : -1 === t.value ? this.negate() : L(Math.abs(t.value), this.value, this.sign !== t.sign);
+return 0 === t.value ? a[0] : 1 === t.value ? this : -1 === t.value ? this.negate() : f(Math.abs(t.value), this.value, this.sign !== t.sign);
   }, o.prototype.multiply = function(t) {
 return W(t)._multiplyBySmall(this);
   }, o.prototype.times = o.prototype.multiply, E.prototype.multiply = function(t) {
 return new E(this.value * W(t).value);
   }, E.prototype.times = E.prototype.multiply, i.prototype.square = function() {
-return new i(f(this.value), !1);
+return new i(L(this.value), !1);
   }, o.prototype.square = function() {
 var t = this.value * this.value;
-return s(t) ? new o(t) : new i(f(c(Math.abs(this.value))), !1);
+return s(t) ? new o(t) : new i(L(c(Math.abs(this.value))), !1);
   }, E.prototype.square = function(t) {
 return new E(this.value * this.value);
   };
@@ -378,11 +378,11 @@ r = (n = l.length + A.length <= 200 ? function(t, e) {
   ];
 }(l, A))[0];
 var D = t.sign !== s.sign,
-  L = n[1],
-  f = t.sign;
-return 'number' == typeof r ? (D && (r = -r), r = new o(r)) : r = new i(r, D), 'number' == typeof L ? (f && (L = -L), L = new o(L)) : L = new i(L, f), [
+  f = n[1],
+  L = t.sign;
+return 'number' == typeof r ? (D && (r = -r), r = new o(r)) : r = new i(r, D), 'number' == typeof f ? (L && (f = -f), f = new o(f)) : f = new i(f, L), [
   r,
-  L
+  f
 ];
   }
 

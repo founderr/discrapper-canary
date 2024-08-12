@@ -1,7 +1,7 @@
 var n, a = i(442837),
   o = i(570140);
 
-function r(e, t, i) {
+function c(e, t, i) {
   return t in e ? Object.defineProperty(e, t, {
 value: i,
 enumerable: !0,
@@ -9,33 +9,33 @@ configurable: !0,
 writable: !0
   }) : e[t] = i, e;
 }
-let s = {
+let r = {
   canPlayWowMoment: !1,
   isFetchingWowMomentMedia: !1,
   wowMomentWumpusMediaUrl: null
 };
-class c extends(n = a.ZP.PersistedStore) {
+class s extends(n = a.ZP.PersistedStore) {
   initialize(e) {
-null != e && (s = e), s.canPlayWowMoment = !1, s.isFetchingWowMomentMedia = !1, s.wowMomentWumpusMediaUrl = null;
+null != e && (r = e), r.canPlayWowMoment = !1, r.isFetchingWowMomentMedia = !1, r.wowMomentWumpusMediaUrl = null;
   }
   getState() {
-return s;
+return r;
   }
   get canPlayWowMoment() {
-return s.canPlayWowMoment;
+return r.canPlayWowMoment;
   }
   get isFetchingWowMomentMedia() {
-return s.isFetchingWowMomentMedia;
+return r.isFetchingWowMomentMedia;
   }
   get wowMomentWumpusMedia() {
-return s.wowMomentWumpusMediaUrl;
+return r.wowMomentWumpusMediaUrl;
   }
 }
-r(c, 'displayName', 'PurchasedItemsFestivityStore'), r(c, 'persistKey', 'PurchasedItemsFestivityStore'), r(c, 'migrations', [e => ({
+c(s, 'displayName', 'PurchasedItemsFestivityStore'), c(s, 'persistKey', 'PurchasedItemsFestivityStore'), c(s, 'migrations', [e => ({
   ...e
-})]), t.Z = new c(o.Z, {
+})]), t.Z = new s(o.Z, {
   LOGOUT: function() {
-s = {
+r = {
   canPlayWowMoment: !1,
   isFetchingWowMomentMedia: !1,
   wowMomentWumpusMediaUrl: null
@@ -45,18 +45,18 @@ s = {
 let {
   value: t
 } = e;
-s.canPlayWowMoment = t;
+r.canPlayWowMoment = t;
   },
   PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA: function(e) {
 let {
   value: t
 } = e;
-s.isFetchingWowMomentMedia = t;
+r.isFetchingWowMomentMedia = t;
   },
   PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS: function(e) {
 let {
   wumpusMedia: t
 } = e;
-s.wowMomentWumpusMediaUrl = t, s.isFetchingWowMomentMedia = !1;
+r.wowMomentWumpusMediaUrl = t, r.isFetchingWowMomentMedia = !1;
   }
 });

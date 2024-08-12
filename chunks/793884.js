@@ -233,8 +233,8 @@ if (!A[t])
       break;
     case 'unhandledrejection':
       (function() {
-        L = T.onunhandledrejection, T.onunhandledrejection = function(t) {
-          return d('unhandledrejection', t), !L || !!L.__SENTRY_LOADER__ || L.apply(this, arguments);
+        f = T.onunhandledrejection, T.onunhandledrejection = function(t) {
+          return d('unhandledrejection', t), !f || !!f.__SENTRY_LOADER__ || f.apply(this, arguments);
         }, T.onunhandledrejection.__SENTRY_INSTRUMENTED__ = !0;
       }());
       break;
@@ -304,4 +304,4 @@ void 0 === _ ? (t({
   };
 }
 let D = null,
-  L = null;
+  f = null;

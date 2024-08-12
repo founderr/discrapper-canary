@@ -6,13 +6,13 @@ return p;
 return C;
   },
   X2: function() {
-return L;
+return f;
   },
   db: function() {
 return S;
   },
   nm: function() {
-return f;
+return L;
   },
   wh: function() {
 return h;
@@ -72,11 +72,11 @@ if ('transaction' === r)
 }
 let D = new WeakMap();
 
-function L(t) {
+function f(t) {
   return 'number' != typeof t && 'boolean' != typeof t || 'number' == typeof t && isNaN(t) ? (('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${ JSON.stringify(t) } of type ${ JSON.stringify(typeof t) }.`), !1) : !0 === t || !1 === t || !(t < 0) && !(t > 1) || (('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${ t }.`), !1);
 }
 
-function f(t, e, r) {
+function L(t, e, r) {
   var n;
   return ((n = e).samples.length < 2 ? (('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log('[Profiling] Discarding profile because it contains less than 2 samples'), !1) : !!n.frames.length || (('undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.kg.log('[Profiling] Discarding profile because it contains no frames'), !1)) ? function(t, e, r) {
 if ('transaction' !== t.type)

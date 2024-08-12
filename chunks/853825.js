@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(470079),
   t = n(481060),
   o = n(727637),
-  a = n(100527),
-  r = n(906732),
+  r = n(100527),
+  a = n(906732),
   d = n(680295),
   c = n(5192),
   u = n(785717),
@@ -21,8 +21,8 @@ var i = n(735250),
   S = n(678738),
   v = n(502762),
   Z = n(530),
-  h = n(679332),
-  p = n(544989),
+  p = n(679332),
+  h = n(544989),
   T = n(228168),
   g = n(981631),
   N = n(689938),
@@ -43,9 +43,9 @@ onClose: b,
 sourceAnalyticsLocations: P = []
   } = e, y = n === g.ME ? void 0 : n, D = (0, _.ZP)(s.id, y), {
 analyticsLocations: F
-  } = (0, r.ZP)([
+  } = (0, a.ZP)([
 ...P,
-a.Z.SIMPLIFIED_PROFILE_MODAL
+r.Z.SIMPLIFIED_PROFILE_MODAL
   ]), B = (0, u.ZB)({
 layout: 'SIMPLIFIED_MODAL',
 userId: s.id,
@@ -55,7 +55,7 @@ channelId: R,
 messageId: O,
 roleId: L
   }), G = l.createRef(), w = (0, o.Z)(G);
-  return (0, i.jsx)(r.Gt, {
+  return (0, i.jsx)(a.Gt, {
 value: F,
 children: (0, i.jsx)(u.Mt, {
   value: B,
@@ -71,9 +71,9 @@ children: (0, i.jsx)(u.Mt, {
         profileType: T.y0.FULL_SIZE,
         ref: G,
         children: [
-          (0, i.jsx)(p.Z, {
+          (0, i.jsx)(h.Z, {
             profileType: T.y0.FULL_SIZE,
-            children: (0, i.jsx)(h.Z, {
+            children: (0, i.jsx)(p.Z, {
               user: s
             })
           }),

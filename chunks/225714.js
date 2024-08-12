@@ -8,8 +8,8 @@ n(470079);
 var l = n(481060),
   t = n(194359),
   o = n(906732),
-  a = n(475413),
-  r = n(261253),
+  r = n(475413),
+  a = n(261253),
   d = n(7242),
   c = n(934861),
   u = n(981631),
@@ -30,15 +30,15 @@ newestAnalyticsLocation: v
   } = (0, o.ZP)();
   if (s || f === u.OGo.BLOCKED)
 return null;
-  let Z = m ? (0, i.jsx)(r.Z, {
+  let Z = m ? (0, i.jsx)(a.Z, {
   user: n,
   onClose: S
 }) : null,
-h = (0, i.jsx)(d.Z, {
+p = (0, i.jsx)(d.Z, {
   user: n,
   onClose: S
 });
-  if (f === u.OGo.FRIEND && x && null != h)
+  if (f === u.OGo.FRIEND && x && null != p)
 return (0, i.jsxs)('div', {
   className: I.multipleButtons,
   children: [
@@ -46,7 +46,7 @@ return (0, i.jsxs)('div', {
       userId: n.id,
       onClose: S
     }),
-    h
+    p
   ]
 });
   if (f === u.OGo.FRIEND || n.bot)
@@ -61,10 +61,10 @@ return (0, i.jsxs)('div', {
   ]
 });
   if (f === u.OGo.PENDING_OUTGOING || f === u.OGo.PENDING_INCOMING)
-return x && null != h ? (0, i.jsxs)('div', {
+return x && null != p ? (0, i.jsxs)('div', {
   className: I.multipleButtons,
   children: [
-    (0, i.jsx)(a.ef, {
+    (0, i.jsx)(r.ef, {
       icon: l.UserClockIcon,
       tooltipText: _.Z.Messages.FRIENDS_SECTION_PENDING,
       disabled: !0
@@ -73,12 +73,12 @@ return x && null != h ? (0, i.jsxs)('div', {
       userId: n.id,
       onClose: S
     }),
-    h
+    p
   ]
 }) : (0, i.jsxs)('div', {
   className: I.multipleButtons,
   children: [
-    (0, i.jsx)(a.ef, {
+    (0, i.jsx)(r.ef, {
       icon: l.UserClockIcon,
       tooltipText: _.Z.Messages.FRIENDS_SECTION_PENDING,
       disabled: !0
@@ -90,10 +90,10 @@ return x && null != h ? (0, i.jsxs)('div', {
     })
   ]
 });
-  return x && null != h ? (0, i.jsxs)('div', {
+  return x && null != p ? (0, i.jsxs)('div', {
 className: I.multipleButtons,
 children: [
-  (0, i.jsx)(a.ef, {
+  (0, i.jsx)(r.ef, {
     action: 'SEND_FRIEND_REQUEST',
     icon: l.UserPlusIcon,
     tooltipText: _.Z.Messages.USER_PROFILE_ADD_FRIEND,
@@ -111,7 +111,7 @@ children: [
     userId: n.id,
     onClose: S
   }),
-  h
+  p
 ]
   }) : (0, i.jsxs)('div', {
 className: I.multipleButtons,
@@ -121,7 +121,7 @@ children: [
     userId: n.id,
     onClose: S
   }),
-  (0, i.jsx)(a.tG, {
+  (0, i.jsx)(r.tG, {
     action: 'SEND_FRIEND_REQUEST',
     icon: l.UserPlusIcon,
     text: _.Z.Messages.USER_PROFILE_ADD_FRIEND,

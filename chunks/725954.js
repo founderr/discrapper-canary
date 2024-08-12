@@ -8,8 +8,8 @@ n(470079);
 var l = n(120356),
   t = n.n(l),
   o = n(442837),
-  a = n(481060),
-  r = n(129861),
+  r = n(481060),
+  a = n(129861),
   d = n(427217),
   c = n(158776),
   u = n(51144),
@@ -25,7 +25,7 @@ displayProfile: n
   return (0, i.jsxs)('div', {
 className: f.container,
 children: [
-  null == E && (0, i.jsx)(r.Z, {
+  null == E && (0, i.jsx)(a.Z, {
     user: s,
     className: f.nameTag,
     usernameClass: f.username,
@@ -33,14 +33,14 @@ children: [
   }),
   null != E && (0, i.jsxs)('div', {
     children: [
-      (0, i.jsx)(a.Text, {
+      (0, i.jsx)(r.Text, {
         variant: 'text-lg/semibold',
         style: {
           marginRight: '12px'
         },
         children: E
       }),
-      (0, i.jsx)(r.Z, {
+      (0, i.jsx)(a.Z, {
         user: s,
         forceUsername: !0,
         usernameClass: f.discriminator,
@@ -49,9 +49,9 @@ children: [
       })
     ]
   }),
-  (null == n ? void 0 : n.pronouns) != null && (null == n ? void 0 : n.pronouns) !== '' && (0, i.jsx)(a.Tooltip, {
+  (null == n ? void 0 : n.pronouns) != null && (null == n ? void 0 : n.pronouns) !== '' && (0, i.jsx)(r.Tooltip, {
     text: I.Z.Messages.USER_PROFILE_PRONOUNS,
-    children: e => (0, i.jsx)(a.Text, {
+    children: e => (0, i.jsx)(r.Text, {
       ...e,
       variant: 'text-sm/normal',
       className: t()(f.pronouns, f.nameTagSmall),
@@ -60,7 +60,7 @@ children: [
   }),
   null != l ? (0, i.jsx)('div', {
     className: f.__invalid_customStatusActivity,
-    children: (0, i.jsx)(a.Text, {
+    children: (0, i.jsx)(r.Text, {
       variant: 'text-sm/normal',
       color: 'header-secondary',
       className: f.customStatusText,

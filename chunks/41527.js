@@ -8,8 +8,8 @@ n(470079);
 var l = n(481060),
   t = n(100527),
   o = n(906732),
-  a = n(5192),
-  r = n(785717),
+  r = n(5192),
+  a = n(785717),
   d = n(318661),
   c = n(78675),
   u = n(741308),
@@ -22,8 +22,8 @@ var l = n(481060),
   S = n(437758),
   v = n(357836),
   Z = n(544989),
-  h = n(934861),
-  p = n(616140),
+  p = n(934861),
+  h = n(616140),
   T = n(29530),
   g = n(228168),
   N = n(981631),
@@ -50,7 +50,7 @@ analyticsLocations: w
   } = (0, o.ZP)([
 ...F,
 t.Z.SIMPLIFIED_PROFILE_MODAL
-  ]), k = (0, r.ZB)({
+  ]), k = (0, a.ZB)({
 layout: 'SIMPLIFIED_MODAL',
 userId: s.id,
 sourceSessionId: U,
@@ -61,7 +61,7 @@ roleId: M
   }), V = (0, T.Z)(s);
   return (0, i.jsx)(o.Gt, {
 value: w,
-children: (0, i.jsx)(r.Mt, {
+children: (0, i.jsx)(a.Mt, {
   value: k,
   children: (0, i.jsx)(l.ModalRoot, {
     transitionState: y,
@@ -101,12 +101,12 @@ children: (0, i.jsx)(r.Mt, {
                 (0, i.jsxs)('div', {
                   className: C.buttons,
                   children: [
-                    (0, i.jsx)(h.c, {
+                    (0, i.jsx)(p.c, {
                       userId: s.id,
                       onClose: D,
                       className: C.messageTextButton
                     }),
-                    (0, i.jsx)(h.v, {
+                    (0, i.jsx)(p.v, {
                       userId: s.id,
                       onClose: D,
                       tooltipContainerClassName: C.messageIconButton
@@ -136,7 +136,7 @@ children: (0, i.jsx)(r.Mt, {
             (0, i.jsx)(m.Z, {
               user: s,
               profileType: g.y0.FULL_SIZE,
-              nickname: a.ZP.getName(B, O, s),
+              nickname: r.ZP.getName(B, O, s),
               pronouns: null == G ? void 0 : G.pronouns,
               nicknameVariant: 'heading-xl/bold',
               nicknameIcons: (0, i.jsx)(f.Z, {
@@ -150,7 +150,7 @@ children: (0, i.jsx)(r.Mt, {
             }),
             (0, i.jsx)(E.Z.Overlay, {
               className: A.overlay,
-              children: (0, i.jsx)(p.Z, {
+              children: (0, i.jsx)(h.Z, {
                 user: s,
                 currentUser: n,
                 displayProfile: G,

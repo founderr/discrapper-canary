@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return E;
+return I;
   }
 }), t(47120);
 var a = t(735250),
@@ -63,14 +63,14 @@ render(e) {
   let {
     type: r
   } = e;
-  return (0, a.jsx)(Z, {
+  return (0, a.jsx)(E, {
     type: r
   });
 }
   }
 ];
 
-function Z(e) {
+function E(e) {
   var r, t;
   let {
 type: n
@@ -91,7 +91,7 @@ onClick: function() {
   });
 }
 
-function E() {
+function I() {
   var e, r;
   let t = (0, d.e7)([_.Z], () => _.Z.getFeed(C.YN.GLOBAL_FEED)),
 i = (0, d.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
@@ -107,18 +107,18 @@ s = function(e) {
     };
   });
 }(null == t ? void 0 : null === (e = t.entries) || void 0 === e ? void 0 : e.map(e => e.content)),
-Z = (0, d.e7)([_.Z], () => {
+E = (0, d.e7)([_.Z], () => {
   var e;
   return (null === (e = _.Z.getFeedState(C.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
 }),
-[E, R] = n.useState(''),
+[I, R] = n.useState(''),
 O = (0, d.e7)([
   x.Z,
   g.Z
 ], () => {
   var e, r, t;
-  return parseInt(E) > 0 ? E : null !== (t = null === (e = x.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = g.Z.getApplicationByName(E)) || void 0 === r ? void 0 : r.id;
-}, [E]),
+  return parseInt(I) > 0 ? I : null !== (t = null === (e = x.Z.getGameByName(I)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = g.Z.getApplicationByName(I)) || void 0 === r ? void 0 : r.id;
+}, [I]),
 B = (0, y.Z)({
   applicationId: O,
   location: 'DevToolsContentInventory',
@@ -158,7 +158,7 @@ children: (0, a.jsxs)(h.ScrollerThin, {
               feedId: C.YN.GLOBAL_FEED
             });
           },
-          submitting: Z,
+          submitting: E,
           children: 'Refresh Now'
         })
       ]
@@ -226,16 +226,16 @@ children: (0, a.jsxs)(h.ScrollerThin, {
           placeholder: 'App ID or full name',
           onChange: e => (0 === e.length || e.length >= 18) && R(e),
           onKeyDown: e => {
-            'Enter' === e.key && (E === e.currentTarget.value ? null == B || B() : R(e.currentTarget.value));
+            'Enter' === e.key && (I === e.currentTarget.value ? null == B || B() : R(e.currentTarget.value));
           },
-          error: E.length > 0 && null == B ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
+          error: I.length > 0 && null == B ? 'No game profile for '.concat(null != O ? O : I + ' - try by id', '.') : void 0,
           style: null != B ? {
             border: '1px solid green'
           } : {}
         }),
         (0, a.jsx)('ul', {
           children: P.map(e => (0, a.jsx)('li', {
-            children: (0, a.jsx)(I, {
+            children: (0, a.jsx)(Z, {
               application: e
             })
           }, 'follow-game-'.concat(e.id)))
@@ -246,7 +246,7 @@ children: (0, a.jsxs)(h.ScrollerThin, {
 })
   });
 }
-let I = e => {
+let Z = e => {
   let {
 application: r
   } = e, t = (0, y.Z)({

@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(470079),
   t = n(442837),
   o = n(692547),
-  a = n(481060),
-  r = n(239091),
+  r = n(481060),
+  a = n(239091),
   d = n(233440),
   c = n(314897),
   u = n(158776),
@@ -21,13 +21,13 @@ var i = n(735250),
   S = n(520978),
   v = n(184325),
   Z = n(652853),
-  h = n(225714),
-  p = n(228168),
+  p = n(225714),
+  h = n(228168),
   T = n(231338),
   g = n(689938),
   N = n(520067);
-let j = a.AvatarSizes.SIZE_120,
-  C = I.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+let j = r.AvatarSizes.SIZE_120,
+  C = I.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
 function A(e) {
   let {
@@ -51,7 +51,7 @@ avatarDecorationSrc: Y
   } = (0, m.Z)({
 user: I,
 size: j
-  }), W = l.useMemo(() => (0, d.W)(I, R), [
+  }), H = l.useMemo(() => (0, d.W)(I, R), [
 I,
 R
   ]);
@@ -62,7 +62,7 @@ children: [
     displayProfile: s,
     onClose: b,
     user: I,
-    profileType: p.y0.MODAL,
+    profileType: h.y0.MODAL,
     hasProfileEffect: U
   }),
   (0, i.jsxs)('div', {
@@ -75,8 +75,8 @@ children: [
           avatarDecoration: Y,
           size: j,
           className: N.avatar,
-          status: W ? T.Sk.UNKNOWN : M ? T.Sk.STREAMING : D,
-          statusBackdropColor: (0, a.getStatusBackdropColor)(G),
+          status: H ? T.Sk.UNKNOWN : M ? T.Sk.STREAMING : D,
+          statusBackdropColor: (0, r.getStatusBackdropColor)(G),
           isMobile: y,
           statusTooltip: !0,
           'aria-label': I.username
@@ -85,10 +85,10 @@ children: [
       (0, i.jsxs)('div', {
         className: N.headerTop,
         children: [
-          (null == F ? void 0 : F.profileFetchFailed) && !I.isClyde() ? (0, i.jsx)(a.Tooltip, {
+          (null == F ? void 0 : F.profileFetchFailed) && !I.isClyde() ? (0, i.jsx)(r.Tooltip, {
             text: g.Z.Messages.USER_PROFILE_LOAD_ERROR,
             spacing: 20,
-            children: e => (0, i.jsx)(a.CircleWarningIcon, {
+            children: e => (0, i.jsx)(r.CircleWarningIcon, {
               size: 'custom',
               width: 20,
               height: 20,
@@ -112,14 +112,14 @@ children: [
                 className: N.applicationInstallButton,
                 application: F.application
               }),
-              (0, i.jsx)(h.Z, {
+              (0, i.jsx)(p.Z, {
                 user: I,
                 isCurrentUser: B,
                 relationshipType: P,
                 friendToken: O,
                 onClose: b
               }),
-              B || I.isNonUserBot() ? null : (0, i.jsx)(a.Clickable, {
+              B || I.isNonUserBot() ? null : (0, i.jsx)(r.Clickable, {
                 focusProps: {
                   offset: {
                     left: 8
@@ -128,7 +128,7 @@ children: [
                 onClick: function(e) {
                   w({
                     action: 'PRESS_OPTIONS'
-                  }), (0, r.jW)(e, async () => {
+                  }), (0, a.jW)(e, async () => {
                     let {
                       default: e
                     } = await n.e('29136').then(n.bind(n, 193646));
@@ -143,7 +143,7 @@ children: [
                     });
                   });
                 },
-                children: (0, i.jsx)(a.MoreVerticalIcon, {
+                children: (0, i.jsx)(r.MoreVerticalIcon, {
                   size: 'md',
                   color: 'currentColor',
                   className: N.additionalActionsIcon

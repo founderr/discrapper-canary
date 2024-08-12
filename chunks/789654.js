@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return I;
+return Z;
   }
 }), t(47120), t(724458), t(757143), t(390547), t(653041);
 var a = t(735250),
@@ -55,8 +55,8 @@ let w = {
 ...g.c
   },
   C = {
-...Z(b.K),
-...Z(m.J)
+...E(b.K),
+...E(m.J)
   },
   N = [
 '100',
@@ -101,7 +101,7 @@ function T(e) {
   return 'name' in e;
 }
 
-function Z(e) {
+function E(e) {
   let r = {};
   return Object.keys(e).forEach(t => {
 let a = e[t];
@@ -119,7 +119,7 @@ r[t] = {
   }), r;
 }
 
-function E(e, r) {
+function I(e, r) {
   let [t, a] = n.useState(() => {
 let t = h.K.get(e);
 return null != t ? t : r;
@@ -135,13 +135,13 @@ a
   ];
 }
 
-function I() {
+function Z() {
   let e = (0, y.Fg)(),
 [{
   rawPalette: r,
   semanticTokens: t
 }, i, l, s, h, m] = function(e, r) {
-  let [t, a] = E(''.concat(e, '-states'), [r]), [i, o] = E(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
+  let [t, a] = I(''.concat(e, '-states'), [r]), [i, o] = I(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
     a([
       e,
       ...t
@@ -177,14 +177,14 @@ function I() {
 [g, b] = n.useState(''),
 [v, w] = n.useState({}),
 [S, T] = n.useState({}),
-Z = n.useMemo(() => Object.keys(r).reduce((e, r) => [
+E = n.useMemo(() => Object.keys(r).reduce((e, r) => [
   ...e,
   {
     value: r,
     label: r
   }
 ], []), [r]),
-I = n.useCallback((e, a, n, o) => {
+Z = n.useCallback((e, a, n, o) => {
   let l = d().cloneDeep(t);
   l[e][a] = {
     color: n,
@@ -455,9 +455,9 @@ children: [
             }),
             (0, a.jsx)(f.SearchableSelect, {
               value: l.color,
-              options: Z,
+              options: E,
               onChange: t => {
-                I(r, e, t, l.opacity);
+                Z(r, e, t, l.opacity);
               },
               renderOptionPrefix: r => null == r ? null : (0, a.jsx)('div', {
                 style: {
@@ -477,7 +477,7 @@ children: [
               },
               value: null === (i = l.opacity) || void 0 === i ? void 0 : i.toString(),
               onChange: t => {
-                '' !== t && I(r, e, l.color, parseFloat(t));
+                '' !== t && Z(r, e, l.color, parseFloat(t));
               }
             }),
             (0, a.jsx)(f.Clickable, {
@@ -487,7 +487,7 @@ children: [
               },
               onClick: () => {
                 var t;
-                c && I(r, e, o.color, null !== (t = o.opacity) && void 0 !== t ? t : 1);
+                c && Z(r, e, o.color, null !== (t = o.opacity) && void 0 !== t ? t : 1);
               },
               children: (0, a.jsx)(f.XSmallIcon, {
                 size: 'xs',

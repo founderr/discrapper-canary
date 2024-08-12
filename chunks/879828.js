@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(470079),
   t = n(704215),
   o = n(481060),
-  a = n(605236),
-  r = n(929498),
+  r = n(605236),
+  a = n(929498),
   d = n(678738),
   c = n(151545),
   u = n(527790),
@@ -26,16 +26,16 @@ onClose: m
 live: x,
 recent: S,
 stream: v
-  } = (0, r.Z)(s.id), Z = s.id === n.id, h = (0, a.wE)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+  } = (0, a.Z)(s.id), Z = s.id === n.id, p = (0, r.wE)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
   return l.useEffect(() => {
-if (!!Z && !h)
-  (0, a.EW)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
+if (!!Z && !p)
+  (0, r.EW)(t.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
     dismissAction: I.L.AUTO_DISMISS,
     forceTrack: !0
   });
   }, [
 Z,
-h
+p
   ]), (0, i.jsxs)(o.ScrollerThin, {
 className: E.scroller,
 fade: !0,
