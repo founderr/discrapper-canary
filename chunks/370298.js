@@ -142,31 +142,31 @@ F
   I.id,
   v
 ]),
-k = a.useCallback(async (e, t) => {
-  var n, i;
-  let a = b.Id[e.id];
-  await D(a.imageOption), null != p.Z.getActiveCommand(I.id) && s.Po({
+k = a.useCallback(async (e, t, n) => {
+  var i, a;
+  let o = b.Id[e.id];
+  await D(o.imageOption), null != p.Z.getActiveCommand(I.id) && s.Po({
     channelId: I.id,
     command: null,
     section: null
   });
-  let o = {
+  let l = {
     type: _.Qi.APPLICATION,
     id: t.id,
     icon: t.icon,
-    name: null !== (i = null == t ? void 0 : null === (n = t.bot) || void 0 === n ? void 0 : n.username) && void 0 !== i ? i : t.name,
+    name: null !== (a = null == t ? void 0 : null === (i = t.bot) || void 0 === i ? void 0 : i.username) && void 0 !== a ? a : t.name,
     application: t
   };
   s.Po({
     channelId: I.id,
     command: e,
-    section: o,
-    location: _.Vh.IMAGE_RECS_MENU,
+    section: l,
+    location: n,
     source: m._b.TEXT,
     initialValues: {
-      [a.imageOption]: {
+      [o.imageOption]: {
         type: d.jw.ATTACHMENT,
-        name: a.imageOption,
+        name: o.imageOption,
         value: 'image'
       }
     },
@@ -178,24 +178,24 @@ k = a.useCallback(async (e, t) => {
   I.id,
   D
 ]),
-H = a.useCallback(async e => {
-  var t, n;
-  let i = e.applicationId,
-    a = (null === (t = L.result) || void 0 === t ? void 0 : t.sections[i]) != null,
-    o = (null === (n = w.result) || void 0 === n ? void 0 : n.sections[i]) != null;
-  a || o || u.ZP.queryInstallOnDemandApp(e.applicationId, I.id);
-  let l = await (0, C.L)({
-    applicationId: i,
+H = a.useCallback(async (e, t) => {
+  var n, i;
+  let a = e.applicationId,
+    o = (null === (n = L.result) || void 0 === n ? void 0 : n.sections[a]) != null,
+    l = (null === (i = w.result) || void 0 === i ? void 0 : i.sections[a]) != null;
+  o || l || u.ZP.queryInstallOnDemandApp(e.applicationId, I.id);
+  let c = await (0, C.L)({
+    applicationId: a,
     userIndexState: L,
     guildIndexState: w,
-    location: _.Vh.IMAGE_RECS_MENU,
+    location: t,
     source: m._b.TEXT
   });
   if ((0, E.qJ)({
       command: e,
-      location: _.Vh.IMAGE_RECS_MENU,
+      location: t,
       source: m._b.TEXT
-    }), l) {
+    }), c) {
     let t = b.Id[e.id],
       n = t.additionalOptions;
     await D(t.imageOption), await (0, g.Z)({
@@ -252,7 +252,7 @@ children: [
       let n = j && null != b.Id[e.command.id].additionalOptions;
       return (0, i.jsx)(l.MenuItem, {
         id: e.command.id,
-        action: () => H(e.command),
+        action: () => H(e.command, _.Vh.IMAGE_RECS_MENU),
         label: null !== (t = b.Id[e.command.id].overrideCommandName) && void 0 !== t ? t : e.command.name,
         subtext: e.command.description,
         subtextLineClamp: 1,
@@ -266,14 +266,14 @@ children: [
               id: ''.concat(e.command.id, '-send'),
               label: O.Z.Messages.APP_IMAGE_REC_MENU_SEND_LABEL,
               subtext: O.Z.Messages.APP_IMAGE_REC_MENU_SEND_SUBTEXT,
-              action: () => H(e.command),
+              action: () => H(e.command, _.Vh.IMAGE_RECS_SUBMENU),
               icon: l.SendMessageIcon
             }, ''.concat(e.command.id, '-send')),
             (0, i.jsx)(l.MenuItem, {
               id: ''.concat(e.command.id, '-edit'),
               label: O.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_LABEL,
               subtext: O.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_SUBTEXT,
-              action: () => k(e.command, e.application),
+              action: () => k(e.command, e.application, _.Vh.IMAGE_RECS_SUBMENU),
               icon: l.PencilIcon
             }, ''.concat(e.command.id, '-edit'))
           ]
