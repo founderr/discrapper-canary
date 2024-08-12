@@ -3,19 +3,20 @@ n.d(t, {
 return s;
   },
   Qm: function() {
-return u;
+return p;
   },
   hR: function() {
-return p;
+return _;
   }
 }), n(47120);
 var i = n(470079),
-  o = n(892814),
-  a = n(442837),
+  a = n(892814),
+  o = n(442837),
   l = n(581364),
-  c = n(823379),
-  d = n(399654),
-  r = n(844439);
+  c = n(768581),
+  d = n(823379),
+  r = n(399654),
+  m = n(844439);
 let s = {
 '1238332854602043454': {
   imageOption: 'image'
@@ -141,9 +142,9 @@ let s = {
   imageOption: 'image'
 }
   },
-  m = new Set(Object.keys(s));
+  u = new Set(Object.keys(s));
 
-function u(e) {
+function p(e) {
   let {
 contentType: t
   } = e;
@@ -161,7 +162,7 @@ default:
   }
 }
 
-function p(e) {
+function _(e) {
   let {
 channelId: t
   } = e, {
@@ -170,7 +171,7 @@ recommendationsSections: s
   } = function(e) {
 let {
   channelId: t
-} = e, n = o.I.CONTEXTUAL_IMAGE, l = i.useMemo(() => ({
+} = e, n = a.I.CONTEXTUAL_IMAGE, l = i.useMemo(() => ({
   channelId: t,
   location: n,
   withCommands: !0
@@ -179,18 +180,18 @@ let {
   n
 ]);
 i.useEffect(() => {
-  (0, d.a)(l);
+  (0, r.a)(l);
 }, [l]);
 let {
   fetchState: c,
-  recommendationsSections: s
-} = (0, a.cj)([r.ZP], () => ({
-  fetchState: r.ZP.getFetchState(l),
-  recommendationsSections: r.ZP.getRecommendations(l)
+  recommendationsSections: d
+} = (0, o.cj)([m.ZP], () => ({
+  fetchState: m.ZP.getFetchState(l),
+  recommendationsSections: m.ZP.getRecommendations(l)
 }));
 return {
   fetchState: c,
-  recommendationsSections: s
+  recommendationsSections: d
 };
   }({
 channelId: t
@@ -203,16 +204,27 @@ imageRecCommandContexts: i.useMemo(() => {
     let {
       application: t,
       commands: n
-    } = e, i = null == n ? void 0 : n.find(e => m.has(e.id));
-    return null != i ? {
-      command: (0, l.Z8)({
-        rootCommand: i,
-        command: i,
-        applicationId: t.id
+    } = e, i = null == n ? void 0 : n.find(e => u.has(e.id));
+    if (null == i)
+      return null;
+    let a = (0, l.Z8)({
+      rootCommand: i,
+      command: i,
+      applicationId: t.id
+    });
+    return {
+      command: {
+        ...a,
+        name: a.name.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
+      },
+      applicationImageURL: c.ZP.getApplicationIconURL({
+        id: t.id,
+        icon: t.icon,
+        bot: t.bot
       }),
       application: t
-    } : null;
-  }).filter(c.lm);
+    };
+  }).filter(d.lm);
 }, [s])
   };
 }
