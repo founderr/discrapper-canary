@@ -531,88 +531,89 @@ if (n) {
 }
   }
   renderImage() {
+var e;
 let {
-  hiddenSpoiler: e = !1,
-  isVisible: t = !0,
-  image: n,
-  isGalleryImage: l = !1,
-  alt: i = F.Z.Messages.IMAGE,
-  allImages: a = null
+  hiddenSpoiler: t = !1,
+  isVisible: n = !0,
+  image: l,
+  isGalleryImage: i = !1,
+  alt: a = F.Z.Messages.IMAGE,
+  allImages: s = null
 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {
-  renderImageComponent: s,
-  className: d,
-  autoPlayGif: u,
-  renderForwardComponent: h
+  renderImageComponent: d,
+  className: u,
+  autoPlayGif: h,
+  renderForwardComponent: c
 } = this.props, {
-  maxMediaWidth: c,
-  maxMediaHeight: b
+  maxMediaWidth: b,
+  maxMediaHeight: g
 } = this.state;
-if (null == n)
+if (null == l)
   return null;
-let g = (0, I.q)(n),
-  v = null == a ? {} : (0, f.Cx)(a.map(e => (0, f.nP)(e, h))),
-  x = p.Z.isAnimated({
-    src: (0, I.q)(n),
-    original: n.url,
+let v = (0, I.q)(l),
+  x = null == s ? {} : (0, f.Cx)(s.map(e => (0, f.nP)(e, c))),
+  y = p.Z.isAnimated({
+    src: (0, I.q)(l),
+    original: l.url,
     animated: !1
   }),
-  y = {
-    containerClassName: o()(d, {
-      [k.embedMedia]: !l,
-      [k.embedImage]: !l,
-      [k.galleryImage]: l
+  w = {
+    containerClassName: o()(u, {
+      [k.embedMedia]: !i,
+      [k.embedImage]: !i,
+      [k.galleryImage]: i
     }),
-    imageContainerClassName: l ? k.galleryImageContainer : void 0,
-    imageClassName: l ? k.embedGalleryImageElement : void 0,
-    src: (0, I.q)(n),
-    alt: i,
+    imageContainerClassName: i ? k.galleryImageContainer : void 0,
+    imageClassName: i ? k.embedGalleryImageElement : void 0,
+    src: (0, I.q)(l),
+    alt: a,
     responsive: !0,
-    limitResponsiveWidth: !l,
-    width: n.width,
-    height: n.height,
-    maxWidth: c,
-    maxHeight: b,
-    original: n.url,
-    shouldLink: t,
+    limitResponsiveWidth: !i,
+    width: l.width,
+    height: l.height,
+    maxWidth: b,
+    maxHeight: g,
+    original: l.url,
+    shouldLink: n,
     disableAltTextDisplay: !0,
-    hiddenSpoilers: e,
-    placeholder: n.placeholder,
-    placeholderVersion: n.placeholderVersion,
-    renderForwardComponent: h
+    hiddenSpoilers: t,
+    placeholder: l.placeholder,
+    placeholderVersion: l.placeholderVersion,
+    renderForwardComponent: c
   };
-g in v && (y.onClick = v[g]);
-let w = n.url.split('.').pop(),
-  _ = null != n && !p.u.test(null == n ? void 0 : n.url),
-  C = !0 !== this.props.isSearchResult && t && null != this.props.channelId && void 0 !== this.props.channelId && _ && ! function(e) {
+v in x && (w.onClick = x[v]);
+let _ = null === (e = l.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0],
+  C = null != l && !p.u.test(null == l ? void 0 : l.url),
+  S = !0 !== this.props.isSearchResult && n && null != this.props.channelId && void 0 !== this.props.channelId && C && ! function(e) {
     return null != e && (e.width <= A.OF || e.height <= A.OF);
-  }(n) && null != w;
+  }(l) && null != _;
 return (0, r.jsx)(m.h.Consumer, {
-  children: t => (0, r.jsx)(T.G.Consumer, {
-    children: l => {
+  children: e => (0, r.jsx)(T.G.Consumer, {
+    children: n => {
       let {
         disableAnimations: r
-      } = l;
-      return s({
-        ...y,
-        autoPlay: u && !r && !e,
-        renderAccessory: x ? t : null,
-        onMouseEnter: () => this.handleImageHover(!0, n, C),
-        onMouseLeave: () => this.handleImageHover(!1, n, C),
+      } = n;
+      return d({
+        ...w,
+        autoPlay: h && !r && !t,
+        renderAccessory: y ? e : null,
+        onMouseEnter: () => this.handleImageHover(!0, l, S),
+        onMouseLeave: () => this.handleImageHover(!1, l, S),
         renderAdjacentContent: () => {
           var e;
-          return !0 === this.props.showImageRecs && C ? this.renderImageHoverButtons({
+          return !0 === this.props.showImageRecs && S ? this.renderImageHoverButtons({
             mimeType: [
               'image',
-              w
+              _
             ],
-            downloadURL: null !== (e = n.proxyURL) && void 0 !== e ? e : n.url,
-            isVisualMediaType: null != n,
+            downloadURL: null !== (e = l.proxyURL) && void 0 !== e ? e : l.url,
+            isVisualMediaType: null != l,
             channelId: this.props.channelId
           }) : null;
         }
       });
     }
-  }, n.url)
+  }, l.url)
 });
   }
   renderVideo() {
