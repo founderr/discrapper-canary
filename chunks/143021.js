@@ -1,9 +1,9 @@
 n.d(t, {
   H: function() {
-return m;
+return I;
   },
   f: function() {
-return E;
+return m;
   }
 });
 var i = n(470079),
@@ -15,10 +15,11 @@ var i = n(470079),
   c = n(36867),
   d = n(900849),
   u = n(540742),
-  _ = n(72881);
-let h = [];
+  _ = n(766219),
+  h = n(72881);
+let E = [];
 
-function E(e) {
+function m(e) {
   let {
 loadId: t
   } = e, n = (0, u.B)(e => {
@@ -35,7 +36,7 @@ return t;
 guilds: l,
 loading: o
   } = (0, r.e7)([c.Z], () => null == n ? {
-guilds: h,
+guilds: E,
 loading: !0
   } : c.Z.getResults(n, s)), d = i.useCallback(() => {
 var e;
@@ -46,12 +47,12 @@ let n = u.B.getState(),
     loading: s,
     initialized: r
   } = c.Z.getResults(n.searchResultsQuery, n.searchCategoryId);
-!s && (!r || !(i.length >= a)) && (0, _.y)({
+!s && (!r || !(i.length >= a)) && (0, h.y)({
   loadId: t,
   categoryId: n.searchCategoryId,
   offset: i.length,
   searchQuery: n.searchQuery,
-  languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, _.X)()
+  languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, h.X)()
 });
   }, [t]);
   return i.useMemo(() => ({
@@ -69,17 +70,16 @@ s
   ]);
 }
 
-function m(e) {
+function I(e) {
   let {
 loadId: t,
-categoryId: n,
-onClear: r
-  } = e, c = (0, u.B)(e => {
+onClear: n
+  } = e, r = (0, u.B)(e => {
 let {
   isSearchVisible: t
 } = e;
 return t;
-  }, a.Z), h = (0, u.B)(e => {
+  }, a.Z), c = (0, u.B)(e => {
 let {
   searchQuery: t
 } = e;
@@ -94,40 +94,44 @@ l.Ue(), (0, o.le)();
   }));
 }, []),
 m = i.useCallback(() => {
-  r(), (0, s.j)(() => u.B.setState({
+  d.IZ(t), n(), (0, s.j)(() => u.B.setState({
     searchResultsQuery: '',
     searchQuery: '',
-    isSearchVisible: !1
-  })), d.IZ(t);
+    isSearchVisible: !1,
+    searchCategoryId: (0, _.lg)(u.B.getState().selectedTab),
+    initialSearchCategoryId: null
+  }));
 }, [
   t,
-  r
+  n
 ]),
 I = i.useCallback(() => {
-  var e;
+  var e, n;
   let i = u.B.getState();
-  (0, _.y)({
+  if (i.searchQuery === i.searchResultsQuery)
+    return;
+  let a = null !== (e = i.searchCategoryId) && void 0 !== e ? e : (0, _.lg)(i.selectedTab);
+  (0, s.j)(() => u.B.setState({
+    initialSearchCategoryId: a
+  })), (0, h.y)({
     loadId: t,
-    categoryId: n,
+    categoryId: a,
     offset: 0,
     searchQuery: i.searchQuery,
-    languageCode: null !== (e = i.searchLanguageCode) && void 0 !== e ? e : (0, _.X)()
+    languageCode: null !== (n = i.searchLanguageCode) && void 0 !== n ? n : (0, h.X)()
   });
-}, [
-  n,
-  t
-]);
+}, [t]);
   return i.useMemo(() => ({
-searchQuery: h,
+searchQuery: c,
 onSearchTextChange: E,
 onClearSearch: m,
 onSearchSubmit: I,
-isSearchVisible: c
+isSearchVisible: r
   }), [
-c,
+r,
 m,
 I,
 E,
-h
+c
   ]);
 }

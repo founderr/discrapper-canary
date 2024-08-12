@@ -10,9 +10,9 @@ var i = n(735250),
   l = n(481060),
   o = n(150192),
   c = n(706454),
-  d = n(683301),
-  u = n(540742),
-  _ = n(89182),
+  d = n(540742),
+  u = n(89182),
+  _ = n(740474),
   h = n(393596),
   E = n(689938),
   m = n(90615);
@@ -42,22 +42,17 @@ children: [
 function g(e) {
   let {
 loadId: t
-  } = e, n = (0, u.B)(e => {
-let {
-  searchResultsQuery: t
-} = e;
-return t;
-  }, s.Z), c = (0, u.B)(e => {
+  } = e, n = (0, d.B)(e => {
 let {
   searchCategoryId: t
 } = e;
 return t;
-  }, s.Z), g = (0, r.e7)([d.ZP], () => d.ZP.getTopCategoryCounts(n)), p = (0, r.e7)([o.Z], () => o.Z.getCategoryName(c)), T = a.useCallback(e => {
+  }, s.Z), c = (0, _.q)(), g = (0, r.e7)([o.Z], () => o.Z.getCategoryName(n)), p = a.useCallback(e => {
 (0, h.I)({
   loadId: t,
   categoryId: Number(e)
 });
-  }, [t]), S = a.useMemo(() => null == g ? [] : g.map(e => {
+  }, [t]), T = a.useMemo(() => null == c ? [] : c.map(e => {
 let [t, n] = e;
 return {
   id: ''.concat(t),
@@ -66,8 +61,8 @@ return {
     count: n
   })
 };
-  }), [g]);
-  return null == g ? null : (0, i.jsxs)('div', {
+  }), [c]);
+  return null == c ? null : (0, i.jsxs)('div', {
 className: m.container,
 children: [
   (0, i.jsx)(l.Text, {
@@ -75,12 +70,12 @@ children: [
     color: 'text-secondary',
     children: E.Z.Messages.GLOBAL_DISCOVERY_SHOW
   }),
-  (0, i.jsx)(_.Z, {
+  (0, i.jsx)(u.Z, {
     className: m.filter,
-    items: S,
-    title: p,
-    onSelect: T,
-    selected: ''.concat(c),
+    items: T,
+    title: g,
+    onSelect: p,
+    selected: ''.concat(n),
     'aria-label': E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
   })
 ]

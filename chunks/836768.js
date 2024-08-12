@@ -1,18 +1,16 @@
 n.d(t, {
   d: function() {
-return o;
+return l;
   }
 });
 var i = n(652874),
   a = n(868888),
-  s = n(433517),
-  r = n(49898);
-let l = {
-selectedPage: r.F$.SERVERS,
-selectedServerTab: r.vf.GAMING
+  s = n(433517);
+let r = {
+selectedPage: n(49898).F$.SERVERS
   },
-  o = (0, i.Z)((0, a.tJ)(() => l, {
-name: 'global-discovery',
+  l = (0, i.Z)((0, a.tJ)(() => r, {
+name: 'global-discovery-ui-store',
 getStorage: () => ({
   getItem: e => {
     var t;

@@ -13,9 +13,9 @@ var i = n(735250),
   d = n(481060),
   u = n(150192),
   _ = n(706454),
-  h = n(683301),
-  E = n(540742),
-  m = n(72881),
+  h = n(540742),
+  E = n(72881),
+  m = n(740474),
   I = n(768198);
 
 function g(e) {
@@ -24,16 +24,16 @@ function g(e) {
 categoryId: n,
 loadId: i
   } = e;
-  (0, o.j)(() => E.B.setState({
+  (0, o.j)(() => h.B.setState({
 searchCategoryId: n
   }));
-  let a = E.B.getState();
-  (0, m.y)({
+  let a = h.B.getState();
+  (0, E.y)({
 loadId: i,
 categoryId: n,
 offset: 0,
 searchQuery: a.searchQuery,
-languageCode: null !== (t = a.searchLanguageCode) && void 0 !== t ? t : (0, m.X)()
+languageCode: null !== (t = a.searchLanguageCode) && void 0 !== t ? t : (0, E.X)()
   });
 }
 
@@ -50,7 +50,7 @@ g({
   }, [
 n,
 t
-  ]), h = (0, E.B)(e => {
+  ]), E = (0, h.B)(e => {
 let {
   searchCategoryId: t
 } = e;
@@ -59,7 +59,7 @@ return t;
   return (0, i.jsxs)(d.Clickable, {
 onClick: o,
 className: r()(I.category, {
-  [I.selected]: h
+  [I.selected]: E
 }),
 children: [
   (0, i.jsx)(d.Text, {
@@ -80,15 +80,10 @@ children: [
 t.Z = function(e) {
   let {
 loadId: t
-  } = e, n = (0, E.B)(e => {
-let {
-  searchResultsQuery: t
-} = e;
-return t;
-  }, l.Z), a = (0, c.e7)([h.ZP], () => h.ZP.getTopCategoryCounts(n));
-  return null == a ? null : (0, i.jsx)('div', {
+  } = e, n = (0, m.q)();
+  return null == n ? null : (0, i.jsx)('div', {
 className: I.categories,
-children: a.map(e => {
+children: n.map(e => {
   let [n, a] = e;
   return (0, i.jsx)(p, {
     loadId: t,

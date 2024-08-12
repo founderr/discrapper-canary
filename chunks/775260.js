@@ -8,7 +8,7 @@ var i = n(470079),
   s = n(731965),
   r = n(963202),
   l = n(169559),
-  o = n(836768),
+  o = n(540742),
   c = n(766219),
   d = n(49898);
 
@@ -21,7 +21,7 @@ function u() {
   includeConverted: !0,
   autoTrackExposure: !0
 }),
-n = (0, o.d)(e => e.selectedServerTab, a.Z),
+n = (0, o.B)(e => e.selectedTab, a.Z),
 u = i.useMemo(() => {
   let n = [
     d.vf.GAMING,
@@ -42,9 +42,9 @@ u = i.useMemo(() => {
   return {
 tabs: u,
 selectedTab: n,
-onSelectTab: i.useCallback(e => {
-  (0, s.j)(() => o.d.setState({
-    selectedServerTab: e
+setSelectedTab: i.useCallback(e => {
+  (0, s.j)(() => o.B.setState({
+    selectedTab: e
   }));
 }, [])
   };
