@@ -1,38 +1,53 @@
 n.d(t, {
   Z: function() {
-return l;
+return o;
   }
 });
 var i = n(735250);
 n(470079);
 var a = n(592471),
-  s = n(871499);
+  s = n(749280),
+  l = n(424602),
+  r = n(871499);
 
-function l(e) {
-  let t, {
-  isActivityActive: n,
-  onMouseEnter: l,
-  onMouseLeave: r,
-  onClick: o,
-  ...c
+function o(e) {
+  let t, n, o, c, {
+  isActivityActive: u,
+  onMouseEnter: d,
+  onMouseLeave: h,
+  onClick: p,
+  ...m
 } = e,
 {
-  Component: u,
-  events: d
-} = (0, a.s)();
-  return (0, i.jsx)(s.d, {
-isActive: n,
+  enabled: _
+} = l.nS.useExperiment({
+  location: 'ActivityButton'
+}, {
+  autoTrackExposure: !0
+}),
+{
+  Component: f,
+  events: E,
+  play: g
+} = (0, a.s)(),
+{
+  Component: C,
+  events: I,
+  play: x
+} = (0, s.w)();
+  return _ ? (n = C, o = I, c = x) : (n = f, o = E, c = g), (0, i.jsx)(r.d, {
+isActive: u,
 color: t,
-iconComponent: u,
+iconComponent: n,
 onMouseEnter: e => {
-  null == l || l(e), d.onMouseEnter();
+  null == d || d(e), o.onMouseEnter();
 },
 onMouseLeave: e => {
-  null == r || r(e), d.onMouseLeave();
+  null == h || h(e), o.onMouseLeave();
 },
 onClick: e => {
-  null == o || o(e), d.onClick();
+  null == p || p(e), c();
 },
-...c
+...m
   });
 }
