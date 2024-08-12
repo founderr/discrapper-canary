@@ -189,6 +189,7 @@ children: [
       className: a()(b.content, l),
       children: [
         (0, r.jsx)(N.ZP, {
+          aspectRatio: 'crunchyroll',
           image: {
             src: M(n.extra.application_id, n.extra.media_assets_large_image, N.WQ),
             alt: n.extra.media_title
