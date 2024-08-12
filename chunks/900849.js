@@ -3,7 +3,7 @@ n.d(t, {
 return g;
   },
   Eg: function() {
-return R;
+return C;
   },
   IZ: function() {
 return S;
@@ -24,13 +24,16 @@ return p;
 return T;
   },
   c6: function() {
-return v;
+return O;
   },
   j$: function() {
 return N;
   },
+  m9: function() {
+return v;
+  },
   mT: function() {
-return O;
+return R;
   },
   sq: function() {
 return h;
@@ -208,6 +211,15 @@ guild_id: r
 
 function v(e) {
   let {
+categoryId: t
+  } = e;
+  E.default.track(f.rMx.GUILD_DISCOVERY_SEARCH_FAILED, {
+category_id: t
+  });
+}
+
+function O(e) {
+  let {
 loadId: t,
 searchId: n,
 query: r,
@@ -228,7 +240,7 @@ category_id: s
   });
 }
 
-function O(e) {
+function R(e) {
   let t = l.Z.getLoadId(e);
   E.default.track(f.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
 guild_id: e,
@@ -236,7 +248,7 @@ load_id: t,
 guild_size: d.Z.getMemberCount(e)
   });
 }
-async function R(e) {
+async function C(e) {
   try {
 var t, n;
 let r = await s.tn.get({
