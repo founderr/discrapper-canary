@@ -1,144 +1,155 @@
 n.d(t, {
   Z: function() {
-return C;
+return N;
   }
 });
 var i = n(735250),
   a = n(470079),
   s = n(481060),
   r = n(117496),
-  l = n(766219),
-  o = n(801543),
-  c = n(88693),
-  d = n(212476),
-  u = n(611928),
-  _ = n(680180),
-  h = n(791734),
-  E = n(341789),
-  m = n(591433),
-  I = n(282773),
-  g = n(143021),
-  p = n(775260),
-  T = n(49898),
-  S = n(689938),
-  f = n(679199);
+  l = n(540742),
+  o = n(766219),
+  c = n(801543),
+  d = n(979233),
+  u = n(88693),
+  _ = n(611928),
+  h = n(680180),
+  E = n(791734),
+  m = n(341789),
+  I = n(591433),
+  g = n(282773),
+  p = n(143021),
+  T = n(775260),
+  S = n(49898),
+  f = n(689938),
+  C = n(679199);
 
-function C() {
+function N() {
   let e = a.useRef((0, r.P)()),
 {
   onScroll: t,
-  scrollPosition: n
-} = (0, d.c)(),
+  scrollPosition: n,
+  resetScrollPosition: N
+} = (0, d.M)(),
 {
-  tabs: C,
-  selectedTab: N,
-  setSelectedTab: A
-} = (0, p.Y)(),
-v = (0, l.lg)(N),
+  tabs: A,
+  selectedTab: v,
+  setSelectedTab: Z
+} = (0, T.Y)(),
+L = (0, o.lg)(v),
 {
-  searchBarState: Z,
-  onTabsAvailableWidthChange: L,
-  resetSearchBarState: O,
-  onCollapsedSearchBarClick: R,
-  tabsClassName: x
-} = (0, c.U)(),
+  searchBarState: O,
+  onTabsAvailableWidthChange: R,
+  resetSearchBarState: x,
+  onCollapsedSearchBarClick: b,
+  tabsClassName: P
+} = (0, u.U)(),
 {
-  searchQuery: b,
-  onSearchTextChange: P,
-  onClearSearch: M,
-  onSearchSubmit: D,
-  isSearchVisible: y
-} = (0, g.H)({
+  searchQuery: M,
+  onSearchTextChange: D,
+  onClearSearch: y,
+  onSearchSubmit: j,
+  isSearchVisible: U
+} = (0, p.H)({
   loadId: e.current,
-  onClear: O
+  onClear: x
 }),
-j = a.useCallback(e => {
-  A(e), M();
+G = a.useCallback(e => {
+  Z(e), y();
 }, [
-  M,
-  A
+  y,
+  Z
 ]),
-U = a.useMemo(() => y ? C.filter(e => {
+k = a.useMemo(() => U ? A.filter(e => {
   let {
     id: t
   } = e;
-  return !T.MU.has(t);
-}) : C, [
-  C,
-  y
+  return !S.MU.has(t);
+}) : A, [
+  A,
+  U
 ]),
-G = a.useRef(new o.Z(v)),
+w = a.useRef(new c.Z(L)),
 {
-  onGuildCardSeen: k,
-  onGuildCardClick: w
-} = (0, I.H)({
-  guildDiscoveryCardSeenManager: G.current,
+  onGuildCardSeen: B,
+  onGuildCardClick: H
+} = (0, g.H)({
+  guildDiscoveryCardSeenManager: w.current,
   loadId: e.current
 });
   a.useEffect(() => {
-G.current.flushSeenGuilds(e.current);
-  }, [v]);
-  let B = a.useMemo(() => {
-switch (N) {
-  case T.vf.HUBS:
-  case T.vf.GUILDS:
+w.current.flushSeenGuilds(e.current);
+  }, [L]), a.useEffect(() => {
+N();
+  }, [
+L,
+N
+  ]), a.useEffect(() => {
+!U && l.B.setState({
+  clickedGuildScrollPosition: null
+});
+  }, [U]);
+  let V = a.useMemo(() => {
+switch (v) {
+  case S.vf.HUBS:
+  case S.vf.GUILDS:
     return null;
   default:
-    let e = (0, l.vb)(N);
-    return (0, i.jsx)(_.Z, {
-      query: b,
-      placeholder: S.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
+    let e = (0, o.vb)(v);
+    return (0, i.jsx)(h.Z, {
+      query: M,
+      placeholder: f.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
         title: e
       }),
-      onTextChange: P,
-      onClear: M,
-      onSubmit: D,
-      onCollapsedClick: R,
-      state: Z
+      onTextChange: D,
+      onClear: y,
+      onSubmit: j,
+      onCollapsedClick: b,
+      state: O
     });
 }
   }, [
-M,
-R,
-D,
-P,
-Z,
+y,
 b,
-N
+j,
+D,
+O,
+M,
+v
   ]);
   return (0, i.jsxs)('div', {
-className: f.container,
+className: C.container,
 children: [
-  (0, i.jsxs)(u.ZP, {
-    className: y ? f.search : void 0,
+  (0, i.jsxs)(_.ZP, {
+    className: U ? C.search : void 0,
     children: [
-      !y && (0, i.jsx)(u.z6, {
+      !U && (0, i.jsx)(_.z6, {
         scrollPosition: n
       }),
-      (0, i.jsx)(u.aV, {
-        icon: y ? s.ArrowLargeLeftIcon : s.ServerIcon,
-        onClick: y ? M : void 0
+      (0, i.jsx)(_.aV, {
+        icon: U ? s.ArrowLargeLeftIcon : s.ServerIcon,
+        onClick: U ? y : void 0
       }),
-      (0, i.jsx)(h.Z, {
-        className: x,
-        tabs: U,
-        selectedTab: y ? null : N,
-        onTabSelect: j,
-        onAvailableWidthChange: L
+      (0, i.jsx)(E.Z, {
+        className: P,
+        tabs: k,
+        selectedTab: U ? null : v,
+        onTabSelect: G,
+        onAvailableWidthChange: R
       }),
-      B
+      V
     ]
   }),
-  y ? (0, i.jsx)(m.Z, {
+  U ? (0, i.jsx)(I.Z, {
     loadId: e.current,
-    onGuildCardClick: w,
-    onGuildCardSeen: k
-  }) : (0, i.jsx)(E.Z, {
+    onGuildCardClick: H,
+    onGuildCardSeen: B
+  }) : (0, i.jsx)(m.Z, {
     loadId: e.current,
-    selectedTab: N,
+    selectedTab: v,
     onScroll: t,
-    onGuildCardClick: w,
-    onGuildCardSeen: k
+    onGuildCardClick: H,
+    onGuildCardSeen: B
   })
 ]
   });

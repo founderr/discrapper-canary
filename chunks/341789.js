@@ -97,7 +97,7 @@ case E.vf.EDUCATION:
     onScroll: r,
     onGuildCardClick: m,
     onGuildCardSeen: u
-  });
+  }, n);
 case E.vf.HUBS:
   return (0, i.jsx)(h.X, {
     onScroll: r,

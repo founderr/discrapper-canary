@@ -99,27 +99,25 @@ m = i.useCallback(() => {
     searchQuery: '',
     isSearchVisible: !1,
     searchCategoryId: (0, _.lg)(u.B.getState().selectedTab),
-    initialSearchCategoryId: null
+    initialSearchCategoryId: null,
+    clickedGuildScrollPosition: null
   }));
 }, [
   t,
   n
 ]),
 I = i.useCallback(() => {
-  var e, n;
-  let i = u.B.getState();
-  if (i.searchQuery === i.searchResultsQuery)
-    return;
-  let a = null !== (e = i.searchCategoryId) && void 0 !== e ? e : (0, _.lg)(i.selectedTab);
-  (0, s.j)(() => u.B.setState({
-    initialSearchCategoryId: a
+  var e;
+  let n = u.B.getState();
+  n.searchQuery !== n.searchResultsQuery && ((0, s.j)(() => u.B.setState({
+    initialSearchCategoryId: n.searchCategoryId
   })), (0, h.y)({
     loadId: t,
-    categoryId: a,
+    categoryId: n.searchCategoryId,
     offset: 0,
-    searchQuery: i.searchQuery,
-    languageCode: null !== (n = i.searchLanguageCode) && void 0 !== n ? n : (0, h.X)()
-  });
+    searchQuery: n.searchQuery,
+    languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, h.X)()
+  }));
 }, [t]);
   return i.useMemo(() => ({
 searchQuery: c,
