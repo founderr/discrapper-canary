@@ -5,6 +5,9 @@ return a;
   KF: function() {
 return u;
   },
+  Mq: function() {
+return E;
+  },
   Q0: function() {
 return s;
   },
@@ -58,4 +61,8 @@ function d(e) {
 function _(e) {
   var t, n;
   return !!o(t = e) && t.extra.platform === i.z.XBOX || !!o(n = e) && n.extra.platform === i.z.PLAYSTATION;
+}
+
+function E(e) {
+  return (null == e ? void 0 : e.content_type) === r.s.LAUNCHED_ACTIVITY;
 }
