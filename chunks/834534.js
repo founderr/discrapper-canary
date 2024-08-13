@@ -5,8 +5,8 @@ return h;
 });
 var i = n(735250);
 n(470079);
-var l = n(442837),
-  t = n(481060),
+var t = n(442837),
+  l = n(481060),
   o = n(666520),
   a = n(706454),
   r = n(430824),
@@ -34,9 +34,9 @@ onClose: g
   } = e, {
 theme: N
   } = (0, m.z)(), {
-trackUserProfileAction: j
-  } = (0, c.KZ)(), C = null == h ? void 0 : h.guildId, A = (0, l.e7)([r.Z], () => null != C ? r.Z.getGuild(C) : null), R = (0, l.e7)([d.Z], () => d.Z.getGuildId()), O = (0, l.e7)([a.default], () => a.default.locale), L = (0, _.Z)(s.id), M = (0, u.Z)(s.id);
-  return (0, i.jsxs)(t.ScrollerThin, {
+trackUserProfileAction: C
+  } = (0, c.KZ)(), j = null == h ? void 0 : h.guildId, A = (0, t.e7)([r.Z], () => null != j ? r.Z.getGuild(j) : null), R = (0, t.e7)([d.Z], () => d.Z.getGuildId()), O = (0, t.e7)([a.default], () => a.default.locale), L = (0, _.Z)(s.id), M = (0, u.Z)(s.id);
+  return (0, i.jsxs)(l.ScrollerThin, {
 fade: !0,
 className: p.scroller,
 children: [
@@ -75,7 +75,7 @@ children: [
       applicationRoleConnection: e,
       locale: O,
       onApplicationClicked: () => {
-        j({
+        C({
           action: 'PRESS_APP_CONNECTION'
         }), g();
       },
@@ -89,7 +89,7 @@ children: [
       userId: s.id,
       className: p.note,
       autoFocus: T === v.Tb.NOTE,
-      onUpdate: () => j({
+      onUpdate: () => C({
         action: 'SET_NOTE'
       })
     })

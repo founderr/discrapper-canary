@@ -4,8 +4,8 @@ return Z;
   }
 }), n(47120);
 var i = n(735250),
-  l = n(470079),
-  t = n(481060),
+  t = n(470079),
+  l = n(481060),
   o = n(100527),
   a = n(906732),
   r = n(138201),
@@ -31,34 +31,34 @@ roleId: h,
 transitionState: T,
 onViewBlockedProfileClick: g,
 showGuildProfile: N = !0,
-sourceAnalyticsLocations: j = []
-  } = e, C = n === m.ME ? void 0 : n, {
+sourceAnalyticsLocations: C = []
+  } = e, j = n === m.ME ? void 0 : n, {
 analyticsLocations: A
   } = (0, a.ZP)([
-...j,
+...C,
 o.Z.BLOCKED_PROFILE_MODAL
   ]), R = (0, d.ZB)({
 layout: 'BLOCKED_PROFILE_MODAL',
 userId: s.id,
-guildId: C,
+guildId: j,
 channelId: Z,
 messageId: p,
 roleId: h,
 showGuildProfile: N
   }), O = [{
-  icon: t.BellSlashIcon,
+  icon: l.BellSlashIcon,
   description: S.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_NOTIFIED
 },
 {
-  icon: t.DenyIcon,
+  icon: l.DenyIcon,
   description: S.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED
 }
-  ], L = (0, u.ZP)(s.id, N ? C : void 0), M = l.createRef();
+  ], L = (0, u.ZP)(s.id, N ? j : void 0), M = t.createRef();
   return (0, i.jsx)(a.Gt, {
 value: A,
 children: (0, i.jsx)(d.Mt, {
   value: R,
-  children: (0, i.jsx)(t.ModalRoot, {
+  children: (0, i.jsx)(l.ModalRoot, {
     transitionState: T,
     className: x.root,
     hideShadow: !0,
@@ -82,20 +82,20 @@ children: (0, i.jsx)(d.Mt, {
             children: [
               (0, i.jsx)(_.Z, {
                 user: s,
-                guildId: C
+                guildId: j
               }),
-              (0, i.jsx)(t.Heading, {
+              (0, i.jsx)(l.Heading, {
                 variant: 'heading-xl/bold',
                 className: x.header,
                 children: S.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
               }),
-              (0, i.jsx)(t.Text, {
+              (0, i.jsx)(l.Text, {
                 variant: 'text-md/medium',
                 children: S.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({
                   username: s.username
                 })
               }),
-              (0, i.jsx)(t.Text, {
+              (0, i.jsx)(l.Text, {
                 variant: 'text-md/medium',
                 children: S.Z.Messages.USER_PROFILE_BLOCKED_MODAL_BODY_CONFIRMATION
               }),
@@ -104,11 +104,11 @@ children: (0, i.jsx)(d.Mt, {
                 children: O.map((e, s) => {
                   let {
                     icon: n,
-                    description: l
+                    description: t
                   } = e;
                   return (0, i.jsx)(r.Z, {
                     icon: n,
-                    description: l
+                    description: t
                   }, s);
                 })
               }),

@@ -328,15 +328,15 @@ children: [
     })
   }, 'create-reminder'),
   (0, i.jsx)(T.sF, {
-    label: v.Z.Messages.JUMP_TO_MESSAGE,
-    icon: _.ArrowLargeRightIcon,
-    onClick: e => a(e)
-  }, 'jump-to-message'),
-  (0, i.jsx)(T.sF, {
     label: v.Z.Messages.MESSAGE_BOOKMARKS_REMOVE,
     icon: _.BookmarkIcon,
     onClick: () => (0, A.x)(t.saveData)
-  }, 'remove-bookmark')
+  }, 'remove-bookmark'),
+  (0, i.jsx)(T.sF, {
+    label: v.Z.Messages.JUMP_TO_MESSAGE,
+    icon: _.ArrowLargeRightIcon,
+    onClick: e => a(e)
+  }, 'jump-to-message')
 ]
   });
 }

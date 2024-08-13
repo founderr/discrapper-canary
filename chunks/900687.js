@@ -5,8 +5,8 @@ return a;
 });
 var i = n(735250);
 n(470079);
-var l = n(705556),
-  t = n(225714),
+var t = n(705556),
+  l = n(225714),
   o = n(612309);
 
 function a(e) {
@@ -23,7 +23,7 @@ onClose: _
   return (0, i.jsxs)('div', {
 className: o.buttons,
 children: [
-  (0, i.jsx)(t.Z, {
+  (0, i.jsx)(l.Z, {
     user: s,
     isCurrentUser: n,
     relationshipType: d,
@@ -32,7 +32,7 @@ children: [
     friendToken: r,
     onClose: _
   }),
-  (0, i.jsx)(l.Z, {
+  (0, i.jsx)(t.Z, {
     user: s,
     guildId: a,
     onClose: _

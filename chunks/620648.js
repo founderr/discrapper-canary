@@ -4,8 +4,8 @@ return h;
   }
 });
 var i = n(735250),
-  l = n(470079),
-  t = n(442837),
+  t = n(470079),
+  l = n(442837),
   o = n(481060),
   a = n(666520),
   r = n(580552),
@@ -32,15 +32,15 @@ autoFocusNote: T = !1,
 scrollToConnections: g = !1
   } = e, {
 trackUserProfileAction: N
-  } = (0, I.KZ)(), j = (0, t.e7)([_.Z], () => _.Z.hidePersonalInformation), {
-theme: C
-  } = (0, S.z)(), A = (0, t.e7)([u.default], () => u.default.locale), R = (0, d.Z)('user_profile'), O = (null == h ? void 0 : h.bio) != null && (null == h ? void 0 : h.bio) !== '' || (0, r.Z)(n.id), L = (0, f.Z)(n.id), M = l.useRef(null);
-  return (l.useLayoutEffect(() => {
+  } = (0, I.KZ)(), C = (0, l.e7)([_.Z], () => _.Z.hidePersonalInformation), {
+theme: j
+  } = (0, S.z)(), A = (0, l.e7)([u.default], () => u.default.locale), R = (0, d.Z)('user_profile'), O = (null == h ? void 0 : h.bio) != null && (null == h ? void 0 : h.bio) !== '' || (0, r.Z)(n.id), L = (0, f.Z)(n.id), M = t.useRef(null);
+  return (t.useLayoutEffect(() => {
 if (g) {
   var e;
   null == M || null === (e = M.current) || void 0 === e || e.scrollIntoView();
 }
-  }, [g]), j) ? (0, i.jsx)(v.Z, {}) : (0, i.jsxs)(o.ScrollerThin, {
+  }, [g]), C) ? (0, i.jsx)(v.Z, {}) : (0, i.jsxs)(o.ScrollerThin, {
 fade: !0,
 className: p.infoScroller,
 children: [
@@ -105,7 +105,7 @@ children: [
   (0, i.jsx)(x.OA, {
     ref: M,
     connectedAccounts: L,
-    theme: C,
+    theme: j,
     locale: A,
     className: p.userInfoSection,
     userId: n.id

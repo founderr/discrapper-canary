@@ -4,8 +4,8 @@ return P;
   }
 }), n(47120);
 var i = n(735250),
-  l = n(470079),
-  t = n(442837),
+  t = n(470079),
+  l = n(442837),
   o = n(481060),
   a = n(727637),
   r = n(58540),
@@ -26,8 +26,8 @@ var i = n(735250),
   T = n(502762),
   g = n(544989),
   N = n(481932),
-  j = n(195387),
-  C = n(272510),
+  C = n(195387),
+  j = n(272510),
   A = n(171368),
   R = n(900687),
   O = n(806926),
@@ -75,21 +75,21 @@ persistentCallCtaEnabled: J,
 activeInviteToCallCtaEnabled: X
   } = (0, S.l)({
 location: 'SimplifiedUserProfileModalHeader'
-  }), [$, ee] = l.useState(), [es, en] = l.useState(), ei = e => {
+  }), [$, ee] = t.useState(), [es, en] = t.useState(), ei = e => {
 ee(e.interactionType), en(e.interactionSourceType);
-  }, el = (0, x.ZP)(s.id, H ? z : void 0), et = (0, x.ZP)(s.id, z), eo = (0, t.e7)([_.Z], () => _.Z.getRelationshipType(s.id)), ea = l.useMemo(() => null != z ? {
+  }, et = (0, x.ZP)(s.id, H ? z : void 0), el = (0, x.ZP)(s.id, z), eo = (0, l.e7)([_.Z], () => _.Z.getRelationshipType(s.id)), ea = t.useMemo(() => null != z ? {
 [z]: [s.id]
   } : {}, [
 z,
 s.id
   ]);
   (0, r.$)(ea);
-  let er = l.createRef(),
+  let er = t.createRef(),
 ed = (0, a.Z)(er),
-[ec, eu] = l.useState(!1),
-[e_, eI] = l.useState(!1),
-[ef, eE] = l.useState(!1),
-em = () => (null == et ? void 0 : et.guildId) == null ? null : (null == el ? void 0 : el.guildId) != null ? (0, i.jsx)(o.MenuItem, {
+[ec, eu] = t.useState(!1),
+[e_, eI] = t.useState(!1),
+[ef, eE] = t.useState(!1),
+em = () => (null == el ? void 0 : el.guildId) == null ? null : (null == et ? void 0 : et.guildId) != null ? (0, i.jsx)(o.MenuItem, {
   id: 'view-main-profile',
   label: U.Z.Messages.VIEW_MAIN_PROFILE,
   subtext: U.Z.Messages.AKA_DISPLAY_NAME.format({
@@ -138,14 +138,14 @@ children: (0, i.jsx)(f.Mt, {
     children: [
       (0, i.jsxs)(T.Z, {
         user: s,
-        displayProfile: el,
+        displayProfile: et,
         profileType: L.y0.FULL_SIZE,
         ref: er,
         children: [
           (0, i.jsxs)(g.Z, {
             profileType: L.y0.FULL_SIZE,
             children: [
-              (0, i.jsx)(j.Z, {
+              (0, i.jsx)(C.Z, {
                 user: s,
                 guildId: z,
                 channelId: y,
@@ -156,7 +156,7 @@ children: (0, i.jsx)(f.Mt, {
                 user: s,
                 friendToken: G
               }),
-              (0, i.jsx)(C.Z, {
+              (0, i.jsx)(j.Z, {
                 user: s,
                 guildId: z,
                 viewProfileItem: em()
@@ -167,9 +167,9 @@ children: (0, i.jsx)(f.Mt, {
             children: [
               (0, i.jsx)(v.Z, {
                 user: s,
-                displayProfile: el,
+                displayProfile: et,
                 profileType: L.y0.FULL_SIZE,
-                hasProfileEffect: (null == el ? void 0 : el.profileEffectId) != null
+                hasProfileEffect: (null == et ? void 0 : et.profileEffectId) != null
               }),
               (0, i.jsx)(h.Z, {
                 isReply: ef,
@@ -186,7 +186,7 @@ children: (0, i.jsx)(f.Mt, {
                   (0, i.jsx)(Z.Z, {
                     location: 'SimplifiedUserProfileModal',
                     user: s,
-                    displayProfile: el,
+                    displayProfile: et,
                     guildId: z,
                     channelId: y,
                     profileType: L.y0.FULL_SIZE,
@@ -210,7 +210,7 @@ children: (0, i.jsx)(f.Mt, {
                   (0, i.jsx)(p.Z, {
                     location: 'SimplifiedUserProfileModal',
                     user: s,
-                    displayProfile: el,
+                    displayProfile: et,
                     guildId: z,
                     channelId: y,
                     profileType: L.y0.FULL_SIZE,
@@ -232,7 +232,7 @@ children: (0, i.jsx)(f.Mt, {
             user: s,
             currentUser: n,
             channelId: y,
-            displayProfile: el,
+            displayProfile: et,
             initialSection: w,
             initialSubsection: k,
             friendToken: G,
@@ -240,8 +240,8 @@ children: (0, i.jsx)(f.Mt, {
           })
         ]
       }),
-      (null == el ? void 0 : el.profileEffectId) != null && (0, i.jsx)(u.Z, {
-        profileEffectId: null == el ? void 0 : el.profileEffectId,
+      (null == et ? void 0 : et.profileEffectId) != null && (0, i.jsx)(u.Z, {
+        profileEffectId: null == et ? void 0 : et.profileEffectId,
         isHovering: ed
       })
     ]

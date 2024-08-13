@@ -4,8 +4,8 @@ return A;
   }
 });
 var i = n(735250),
-  l = n(470079),
-  t = n(442837),
+  t = n(470079),
+  l = n(442837),
   o = n(692547),
   a = n(481060),
   r = n(239091),
@@ -26,8 +26,8 @@ var i = n(735250),
   T = n(231338),
   g = n(689938),
   N = n(88952);
-let j = a.AvatarSizes.SIZE_120,
-  C = I.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+let C = a.AvatarSizes.SIZE_120,
+  j = I.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function A(e) {
   let {
@@ -40,7 +40,7 @@ className: L,
 isStreaming: M,
 hasProfileEffect: U,
 onClose: b
-  } = e, P = (0, t.e7)([_.Z], () => _.Z.getRelationshipType(I.id)), y = (0, t.e7)([u.Z], () => u.Z.isMobileOnline(I.id)), D = (0, t.e7)([u.Z], () => u.Z.getStatus(I.id)), F = (0, t.e7)([E.Z], () => E.Z.getUserProfile(I.id)), B = (0, t.e7)([c.default], () => c.default.getId() === I.id), {
+  } = e, P = (0, l.e7)([_.Z], () => _.Z.getRelationshipType(I.id)), y = (0, l.e7)([u.Z], () => u.Z.isMobileOnline(I.id)), D = (0, l.e7)([u.Z], () => u.Z.getStatus(I.id)), F = (0, l.e7)([E.Z], () => E.Z.getUserProfile(I.id)), B = (0, l.e7)([c.default], () => c.default.getId() === I.id), {
 theme: G
   } = (0, Z.z)(), {
 trackUserProfileAction: w
@@ -50,8 +50,8 @@ eventHandlers: V,
 avatarDecorationSrc: Y
   } = (0, m.Z)({
 user: I,
-size: j
-  }), H = l.useMemo(() => (0, d.W)(I, R), [
+size: C
+  }), H = t.useMemo(() => (0, d.W)(I, R), [
 I,
 R
   ]);
@@ -70,10 +70,10 @@ children: [
     children: [
       (0, i.jsx)('div', {
         ...V,
-        children: (0, i.jsx)(C, {
+        children: (0, i.jsx)(j, {
           src: k,
           avatarDecoration: Y,
-          size: j,
+          size: C,
           className: N.avatar,
           status: H ? T.Sk.UNKNOWN : M ? T.Sk.STREAMING : D,
           statusBackdropColor: (0, a.getStatusBackdropColor)(G),

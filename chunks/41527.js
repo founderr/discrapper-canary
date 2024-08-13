@@ -5,8 +5,8 @@ return R;
 }), n(47120);
 var i = n(735250);
 n(470079);
-var l = n(481060),
-  t = n(100527),
+var t = n(481060),
+  l = n(100527),
   o = n(906732),
   a = n(5192),
   r = n(785717),
@@ -27,8 +27,8 @@ var l = n(481060),
   T = n(29530),
   g = n(228168),
   N = n(981631),
-  j = n(689938),
-  C = n(612309),
+  C = n(689938),
+  j = n(612309),
   A = n(392214);
 
 function R(e) {
@@ -49,7 +49,7 @@ sourceAnalyticsLocations: F = []
 analyticsLocations: w
   } = (0, o.ZP)([
 ...F,
-t.Z.SIMPLIFIED_PROFILE_MODAL
+l.Z.SIMPLIFIED_PROFILE_MODAL
   ]), k = (0, r.ZB)({
 layout: 'SIMPLIFIED_MODAL',
 userId: s.id,
@@ -63,11 +63,11 @@ roleId: M
 value: w,
 children: (0, i.jsx)(r.Mt, {
   value: k,
-  children: (0, i.jsx)(l.ModalRoot, {
+  children: (0, i.jsx)(t.ModalRoot, {
     transitionState: y,
     className: A.root,
     hideShadow: !0,
-    'aria-label': j.Z.Messages.USER_PROFILE_MODAL,
+    'aria-label': C.Z.Messages.USER_PROFILE_MODAL,
     children: (0, i.jsxs)(E.Z, {
       user: s,
       displayProfile: G,
@@ -99,17 +99,17 @@ children: (0, i.jsx)(r.Mt, {
                   profileType: g.y0.FULL_SIZE
                 }),
                 (0, i.jsxs)('div', {
-                  className: C.buttons,
+                  className: j.buttons,
                   children: [
                     (0, i.jsx)(p.c, {
                       userId: s.id,
                       onClose: D,
-                      className: C.messageTextButton
+                      className: j.messageTextButton
                     }),
                     (0, i.jsx)(p.v, {
                       userId: s.id,
                       onClose: D,
-                      tooltipContainerClassName: C.messageIconButton
+                      tooltipContainerClassName: j.messageIconButton
                     }),
                     (0, i.jsx)(v.Z, {
                       user: s,
@@ -123,7 +123,7 @@ children: (0, i.jsx)(r.Mt, {
                 (0, i.jsx)(I.Z, {
                   user: s,
                   profileType: g.y0.FULL_SIZE,
-                  hasEntered: y === l.ModalTransitionState.ENTERED,
+                  hasEntered: y === t.ModalTransitionState.ENTERED,
                   onClose: D
                 })
               ]

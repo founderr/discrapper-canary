@@ -7,10 +7,10 @@ t.Z = e => {
 onChangeAvatar: t,
 onChangeAvatarDecoration: n,
 onClose: l,
-className: o
+className: a
   } = e;
   return (0, r.jsxs)(s.Menu, {
-className: o,
+className: a,
 onClose: l,
 onSelect: void 0,
 navId: 'user-settings-change-avatar',

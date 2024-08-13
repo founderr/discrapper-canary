@@ -5,8 +5,8 @@ return _;
 }), n(789020);
 var i = n(735250);
 n(470079);
-var l = n(597312),
-  t = n(442837),
+var t = n(597312),
+  l = n(442837),
   o = n(481060),
   a = n(860719),
   r = n(621853),
@@ -17,7 +17,7 @@ function u(e) {
   let {
 icon: s,
 title: n,
-description: l
+description: t
   } = e;
   return (0, i.jsxs)('div', {
 className: c.row,
@@ -40,7 +40,7 @@ children: [
       }),
       (0, i.jsx)(o.Text, {
         variant: 'text-sm/normal',
-        children: l
+        children: t
       })
     ]
   })
@@ -51,7 +51,7 @@ children: [
 function _(e) {
   let {
 user: s
-  } = e, n = (0, t.e7)([r.Z], () => {
+  } = e, n = (0, l.e7)([r.Z], () => {
 var e;
 return null === (e = r.Z.getUserProfile(s.id)) || void 0 === e ? void 0 : e.application;
   }), {
@@ -61,7 +61,7 @@ hasGuildMembers: f
   } = (0, a.w)({
 flags: null == n ? void 0 : n.flags
   });
-  return (0, i.jsxs)(l.zJ, {
+  return (0, i.jsxs)(t.zJ, {
 fade: !0,
 className: c.scroller,
 children: [

@@ -5,8 +5,8 @@ return S;
 });
 var i = n(735250);
 n(470079);
-var l = n(442837),
-  t = n(699516),
+var t = n(442837),
+  l = n(699516),
   o = n(5192),
   a = n(741308),
   r = n(681837),
@@ -30,7 +30,7 @@ initialSection: Z,
 initialSubsection: p,
 friendToken: h,
 onClose: T
-  } = e, g = (0, l.e7)([t.Z], () => t.Z.getRelationshipType(n.id)), N = (0, I.Z)({
+  } = e, g = (0, t.e7)([l.Z], () => l.Z.getRelationshipType(n.id)), N = (0, I.Z)({
 user: n,
 currentUser: S
   });

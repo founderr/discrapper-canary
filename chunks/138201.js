@@ -5,15 +5,15 @@ return a;
 });
 var i = n(735250);
 n(470079);
-var l = n(120356),
-  t = n.n(l),
+var t = n(120356),
+  l = n.n(t),
   o = n(629738);
 
 function a(e) {
   let {
 icon: s,
 description: n,
-iconClassName: l,
+iconClassName: t,
 color: a
   } = e;
   return (0, i.jsxs)('div', {
@@ -23,7 +23,7 @@ children: [
     className: o.perkIconContainer,
     children: (0, i.jsx)(s, {
       color: null != a ? a : 'currentColor',
-      className: t()(o.perkIcon, l)
+      className: l()(o.perkIcon, t)
     })
   }),
   (0, i.jsx)('div', {

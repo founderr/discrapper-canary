@@ -5,8 +5,8 @@ return u;
 });
 var i = n(735250);
 n(470079);
-var l = n(387903),
-  t = n(100849),
+var t = n(387903),
+  l = n(100849),
   o = n(487922),
   a = n(620648),
   r = n(944546),
@@ -23,9 +23,9 @@ onClose: I
   } = e;
   switch (u) {
 case c.oh.ACTIVITY:
-  return (0, i.jsx)(t.Z, {
+  return (0, i.jsx)(l.Z, {
     user: n,
-    type: l.Y.PROFILE_V2,
+    type: t.Y.PROFILE_V2,
     onClose: I
   });
 case c.oh.MUTUAL_GUILDS:

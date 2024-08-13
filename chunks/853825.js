@@ -4,8 +4,8 @@ return R;
   }
 }), n(47120);
 var i = n(735250),
-  l = n(470079),
-  t = n(481060),
+  t = n(470079),
+  l = n(481060),
   o = n(727637),
   a = n(100527),
   r = n(906732),
@@ -26,8 +26,8 @@ var i = n(735250),
   T = n(228168),
   g = n(981631),
   N = n(689938),
-  j = n(392214),
-  C = n(408277),
+  C = n(392214),
+  j = n(408277),
   A = n(455749);
 
 function R(e) {
@@ -54,14 +54,14 @@ guildId: y,
 channelId: R,
 messageId: O,
 roleId: L
-  }), G = l.createRef(), w = (0, o.Z)(G);
+  }), G = t.createRef(), w = (0, o.Z)(G);
   return (0, i.jsx)(r.Gt, {
 value: F,
 children: (0, i.jsx)(u.Mt, {
   value: B,
-  children: (0, i.jsxs)(t.ModalRoot, {
+  children: (0, i.jsxs)(l.ModalRoot, {
     transitionState: U,
-    className: j.root,
+    className: C.root,
     hideShadow: !0,
     'aria-label': N.Z.Messages.USER_PROFILE_MODAL,
     children: [
@@ -86,7 +86,7 @@ children: (0, i.jsx)(u.Mt, {
                 hasProfileEffect: (null == D ? void 0 : D.profileEffectId) != null
               }),
               (0, i.jsx)('div', {
-                className: j.headerInner,
+                className: C.headerInner,
                 children: (0, i.jsx)(m.Z, {
                   user: s,
                   displayProfile: D,
@@ -98,7 +98,7 @@ children: (0, i.jsx)(u.Mt, {
             ]
           }),
           (0, i.jsxs)('div', {
-            className: j.body,
+            className: C.body,
             children: [
               (0, i.jsx)(Z.Z, {
                 user: s,
@@ -113,28 +113,28 @@ children: (0, i.jsx)(u.Mt, {
                 })
               }),
               (0, i.jsx)(v.Z.Overlay, {
-                className: j.overlay,
+                className: C.overlay,
                 children: (0, i.jsxs)('div', {
                   className: A.container,
                   children: [
-                    (0, i.jsx)(t.TabBar, {
+                    (0, i.jsx)(l.TabBar, {
                       className: A.tabBar,
                       type: 'top',
                       selectedItem: T.oh.BOT_INFO,
                       onItemSelect: g.dG4,
-                      children: (0, i.jsx)(t.TabBar.Item, {
+                      children: (0, i.jsx)(l.TabBar.Item, {
                         className: A.tabBarItem,
                         id: T.oh.BOT_INFO,
                         'aria-label': N.Z.Messages.USER_PROFILE_ABOUT_ME,
-                        children: (0, i.jsx)(t.Text, {
+                        children: (0, i.jsx)(l.Text, {
                           variant: 'text-sm/normal',
                           children: N.Z.Messages.USER_PROFILE_ABOUT_ME
                         })
                       }, T.oh.BOT_INFO)
                     }),
-                    (0, i.jsxs)(t.ScrollerThin, {
+                    (0, i.jsxs)(l.ScrollerThin, {
                       fade: !0,
-                      className: C.scroller,
+                      className: j.scroller,
                       children: [
                         (0, i.jsx)(E.Z, {
                           userId: s.id,

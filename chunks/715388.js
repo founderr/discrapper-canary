@@ -5,8 +5,8 @@ return Z;
 });
 var i = n(735250);
 n(470079);
-var l = n(442837),
-  t = n(481060),
+var t = n(442837),
+  l = n(481060),
   o = n(666520),
   a = n(592125),
   r = n(430824),
@@ -32,14 +32,14 @@ subsection: h,
 onClose: T
   } = e, {
 trackUserProfileAction: g
-  } = (0, c.KZ)(), N = (0, l.e7)([r.Z], () => (null == p ? void 0 : p.guildId) != null ? r.Z.getGuild(p.guildId) : null), j = (0, l.e7)([u.Z], () => {
+  } = (0, c.KZ)(), N = (0, t.e7)([r.Z], () => (null == p ? void 0 : p.guildId) != null ? r.Z.getGuild(p.guildId) : null), C = (0, t.e7)([u.Z], () => {
 var e;
 return null === (e = u.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
-  }), C = (0, l.e7)([
+  }), j = (0, t.e7)([
 a.Z,
 d.Z
   ], () => a.Z.getChannel(d.Z.getChannelId()));
-  return (0, i.jsxs)(t.ScrollerThin, {
+  return (0, i.jsxs)(l.ScrollerThin, {
 fade: !0,
 className: v.scroller,
 children: [
@@ -47,10 +47,10 @@ children: [
     userBio: p.bio,
     setLineClamp: !1
   }),
-  (null == j ? void 0 : j.popularApplicationCommandIds) != null && null != C && (0, i.jsx)(I.Z, {
-    applicationId: j.id,
-    commandIds: j.popularApplicationCommandIds,
-    channel: C,
+  (null == C ? void 0 : C.popularApplicationCommandIds) != null && null != j && (0, i.jsx)(I.Z, {
+    applicationId: C.id,
+    commandIds: C.popularApplicationCommandIds,
+    channel: j,
     guildId: null !== (s = null == p ? void 0 : p.guildId) && void 0 !== s ? s : void 0,
     onClick: T
   }),

@@ -5,19 +5,19 @@ return o;
 });
 var i = n(735250);
 n(470079);
-var l = n(689938),
-  t = n(431776);
+var t = n(689938),
+  l = n(431776);
 
 function o() {
   return (0, i.jsxs)('div', {
-className: t.empty,
+className: l.empty,
 children: [
   (0, i.jsx)('div', {
-    className: t.emptyIconStreamerMode
+    className: l.emptyIconStreamerMode
   }),
   (0, i.jsx)('div', {
-    className: t.emptyText,
-    children: l.Z.Messages.STREAMER_MODE_ENABLED
+    className: l.emptyText,
+    children: t.Z.Messages.STREAMER_MODE_ENABLED
   })
 ]
   });

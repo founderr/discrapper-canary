@@ -5,8 +5,8 @@ return f;
 });
 var i = n(735250);
 n(470079);
-var l = n(481060),
-  t = n(194359),
+var t = n(481060),
+  l = n(194359),
   o = n(906732),
   a = n(475413),
   r = n(261253),
@@ -65,7 +65,7 @@ return S && null != p ? (0, i.jsxs)('div', {
   className: I.multipleButtons,
   children: [
     (0, i.jsx)(a.ef, {
-      icon: l.UserClockIcon,
+      icon: t.UserClockIcon,
       tooltipText: _.Z.Messages.FRIENDS_SECTION_PENDING,
       disabled: !0
     }),
@@ -79,7 +79,7 @@ return S && null != p ? (0, i.jsxs)('div', {
   className: I.multipleButtons,
   children: [
     (0, i.jsx)(a.ef, {
-      icon: l.UserClockIcon,
+      icon: t.UserClockIcon,
       tooltipText: _.Z.Messages.FRIENDS_SECTION_PENDING,
       disabled: !0
     }),
@@ -95,10 +95,10 @@ className: I.multipleButtons,
 children: [
   (0, i.jsx)(a.ef, {
     action: 'SEND_FRIEND_REQUEST',
-    icon: l.UserPlusIcon,
+    icon: t.UserPlusIcon,
     tooltipText: _.Z.Messages.USER_PROFILE_ADD_FRIEND,
     onClick: () => {
-      t.Z.addRelationship({
+      l.Z.addRelationship({
         userId: n.id,
         context: {
           location: v
@@ -123,11 +123,11 @@ children: [
   }),
   (0, i.jsx)(a.tG, {
     action: 'SEND_FRIEND_REQUEST',
-    icon: l.UserPlusIcon,
+    icon: t.UserPlusIcon,
     text: _.Z.Messages.USER_PROFILE_ADD_FRIEND,
-    color: l.Button.Colors.BRAND,
+    color: t.Button.Colors.BRAND,
     onClick: () => {
-      t.Z.addRelationship({
+      l.Z.addRelationship({
         userId: n.id,
         context: {
           location: v

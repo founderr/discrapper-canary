@@ -4,8 +4,8 @@ return d;
   }
 }), n(653041), n(627341);
 var i = n(278074),
-  l = n(726059),
-  t = n(162267),
+  t = n(726059),
+  l = n(162267),
   o = n(929498),
   a = n(228168),
   r = n(689938);
@@ -19,7 +19,7 @@ currentUser: c
 live: u,
 recent: _,
 stream: I
-  } = (0, o.Z)(d.id), f = null === (s = (0, l.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualFriends) || void 0 === s ? void 0 : s.length, E = null === (n = (0, t.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualGuilds) || void 0 === n ? void 0 : n.length, m = [{
+  } = (0, o.Z)(d.id), f = null === (s = (0, t.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualFriends) || void 0 === s ? void 0 : s.length, E = null === (n = (0, l.Z)(d.id, d.id !== (null == c ? void 0 : c.id)).mutualGuilds) || void 0 === n ? void 0 : n.length, m = [{
 section: a.oh.USER_INFO,
 text: r.Z.Messages.USER_PROFILE_ABOUT_ME
   }];
