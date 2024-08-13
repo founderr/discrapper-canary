@@ -22,9 +22,9 @@ var l = t(735250),
   g = t(594190),
   C = t(569984),
   h = t(918701),
-  Z = t(977156),
+  I = t(977156),
   N = t(28798),
-  I = t(131951),
+  Z = t(131951),
   x = t(449224),
   f = t(358085),
   R = t(463727),
@@ -37,8 +37,8 @@ var l = t(735250),
   O = t(689938),
   j = t(624743);
 async function P() {
-  let e = I.Z.getVideoDevices(),
-n = (0, u.Z)(I.Z.getMediaEngine(), [
+  let e = Z.Z.getVideoDevices(),
+n = (0, u.Z)(Z.Z.getMediaEngine(), [
   o.vA.WINDOW,
   o.vA.SCREEN
 ], {
@@ -122,8 +122,8 @@ onChangeSelectedSource: t
 enableGoLiveCaptureCard: a
   } = R.Z.useExperiment({
 location: 'GoLive_Source_Select'
-  }), i = I.Z.supports(M.AN.GO_LIVE_HARDWARE), [u, E] = s.useState(null), [x, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [k, B] = s.useState(!1), V = s.useRef(null), y = s.useRef(new d.Xp()), W = (0, c.e7)([g.ZP], () => g.ZP.getRunningGames()), H = function(e, n, t) {
-let l = (0, Z.Zy)({
+  }), i = Z.Z.supports(M.AN.GO_LIVE_HARDWARE), [u, E] = s.useState(null), [x, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [k, B] = s.useState(!1), V = s.useRef(null), y = s.useRef(new d.Xp()), W = (0, c.e7)([g.ZP], () => g.ZP.getRunningGames()), H = function(e, n, t) {
+let l = (0, I.Zy)({
   location: p.dr.STREAM_SOURCE_SELECT
 });
 return s.useMemo(() => {
@@ -287,15 +287,15 @@ onSourceSelect: n
   } = e, t = s.useMemo(() => ({
 'prepicked:window': O.Z.Messages.GO_LIVE_MODAL_WINDOW,
 'prepicked:screen': O.Z.Messages.GO_LIVE_MODAL_SCREEN
-  }), []), [a, r] = s.useState([]), [i, o] = s.useState(t), c = s.useRef(new d.Xp());
+  }), []), [a, i] = s.useState([]), [o, c] = s.useState(t), u = s.useRef(new d.Xp());
   s.useEffect(() => {
-let e = c.current,
+let e = u.current,
   n = () => {
-    let e = Object.entries(I.Z.getVideoDevices()).filter(e => {
+    let e = Object.entries(Z.Z.getVideoDevices()).filter(e => {
       let [n, t] = e;
       return !t.disabled;
     });
-    r(e), o({
+    i(e), c({
       ...t,
       ...e.reduce((e, n) => {
         let [t, l] = n;
@@ -310,22 +310,22 @@ return n(), e.start(1000, n), () => {
   e.stop();
 };
   }, [t]);
-  let u = s.useRef({}),
-E = s.useCallback(e => {
+  let E = s.useRef({}),
+_ = s.useCallback(e => {
   var t;
   let {
     value: l
   } = e;
   n({
     id: l,
-    name: null !== (t = i[l]) && void 0 !== t ? t : '',
+    name: null !== (t = o[l]) && void 0 !== t ? t : '',
     url: ''
   });
 }, [
   n,
-  i
+  o
 ]);
-  return u.current = {
+  return E.current = {
 'prepicked:window': O.Z.Messages.GO_LIVE_MODAL_WINDOW,
 'prepicked:screen': O.Z.Messages.GO_LIVE_MODAL_SCREEN,
 ...a
@@ -333,14 +333,18 @@ E = s.useCallback(e => {
 children: [
   (0, l.jsx)(m.RadioGroup, {
     className: j.nativePickerContainer,
-    onChange: E,
+    onChange: _,
     options: [{
         name: O.Z.Messages.GO_LIVE_MODAL_WINDOW,
-        value: 'prepicked:window'
+        value: 'prepicked:window',
+        icon: m.BrowserIcon,
+        radioItemIconClassName: r()(j.hideRadioCheckbox)
       },
       {
         name: O.Z.Messages.GO_LIVE_MODAL_SCREEN,
-        value: 'prepicked:screen'
+        value: 'prepicked:screen',
+        icon: m.ScreenIcon,
+        radioItemIconClassName: r()(j.hideRadioCheckbox)
       }
     ]
   }),
@@ -354,12 +358,13 @@ children: [
       }),
       (0, l.jsx)(m.RadioGroup, {
         className: j.nativePickerContainer,
-        onChange: E,
+        onChange: _,
         options: a.map(e => {
           let [n, t] = e;
           return {
             name: t.name,
-            value: 'camera:' + t.id
+            value: 'camera:' + t.id,
+            icon: m.VideoIcon
           };
         })
       })

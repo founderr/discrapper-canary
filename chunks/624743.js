@@ -10,5 +10,6 @@ e.exports = {
   segmentControl: 'segmentControl_d7ec26',
   segmentControlOption: 'segmentControlOption_d7ec26',
   nativePickerContainer: 'nativePickerContainer_d7ec26',
-  nativePickerLabel: 'nativePickerLabel_d7ec26'
+  nativePickerLabel: 'nativePickerLabel_d7ec26',
+  hideRadioCheckbox: 'hideRadioCheckbox_d7ec26'
 };
