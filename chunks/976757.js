@@ -1,23 +1,29 @@
 n.d(t, {
+  Br: function() {
+return r;
+  },
   Gh: function() {
-return s;
+return c;
   },
   Pw: function() {
-return o;
+return d;
+  },
+  qz: function() {
+return i;
   }
 }), n(724458), n(945124);
-var r = n(116175),
-  i = n(308083);
+var r, i, a, s, o = n(116175),
+  l = n(308083);
 
-function a(e, t) {
+function u(e, t) {
   return void 0 === e || '' === e ? t : e;
 }
 
-function s(e) {
-  let t = (0, r.yf)(),
-n = (0, i.dt)(),
-s = {};
-  return null != e.game_activity && (s = Object.keys(e.game_activity).reduce((t, n) => {
+function c(e) {
+  let t = (0, o.yf)(),
+n = (0, l.dt)(),
+r = {};
+  return null != e.game_activity && (r = Object.keys(e.game_activity).reduce((t, n) => {
 var r;
 let i = null === (r = e.game_activity) || void 0 === r ? void 0 : r[n];
 return null == i ? t : (t[n] = {
@@ -38,19 +44,20 @@ banner: e.banner,
 bannerHash: e.banner_hash,
 badge: {
   badgeKind: e.badge,
-  primaryColor: a(e.badge_color_primary, t.primary),
-  secondaryColor: a(e.badge_color_secondary, t.secondary),
+  primaryColor: u(e.badge_color_primary, t.primary),
+  secondaryColor: u(e.badge_color_secondary, t.secondary),
   imageHash: e.badge_hash
 },
 branding: {
-  primaryColor: a(e.brand_color_primary, n.primary),
-  secondaryColor: a(e.brand_color_secondary, n.secondary)
+  primaryColor: u(e.brand_color_primary, n.primary),
+  secondaryColor: u(e.brand_color_secondary, n.secondary)
 },
 wildcardDescriptors: e.wildcard_descriptors,
-gameActivity: s
+gameActivity: r
   };
 }
 
-function o(e) {
+function d(e) {
   return 'loaded' === e.status;
 }
+(a = r || (r = {})).TOP_PICKS = 'TOP_PICKS', a.GLOBAL_DISCOVERY_TOP_PICKS = 'GLOBAL_DISCOVERY_TOP_PICKS', (s = i || (i = {})).SHOWN = 'SHOWN', s.HIT = 'HIT';

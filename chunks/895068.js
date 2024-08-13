@@ -158,30 +158,43 @@ n
   i
 ]),
 P = o.useMemo(() => new Set(Z.games), [Z.games]),
-M = o.useCallback((e, t, n, i) => {
-  var a;
+M = o.useCallback((e, t, n, a) => {
+  var s;
   let {
-    items: s,
-    section: r
+    items: r,
+    section: o
   } = b[e];
-  if ('upsell' === r || 'hero' === r)
+  if ('upsell' === o || 'hero' === o)
     return null;
-  let o = s[t];
+  let c = (e - function(e) {
+      switch (e) {
+        case 'upsell':
+        case 'saved_guilds':
+          return 0;
+        case 'global_discovery':
+        case 'default':
+          return 1;
+      }
+    }(i)) * x + t,
+    d = r[t];
   return (0, l.jsx)(m.ZP, {
-    clan: o,
-    affinity: null !== (a = o.affininty) && void 0 !== a ? a : (0, h.y)(o, Z),
+    clan: d,
+    index: c,
+    affinity: null !== (s = d.affininty) && void 0 !== s ? s : (0, h.y)(d, Z),
     traitsToHighlight: L,
     className: N.card,
     style: n,
     source: f.jXE.DISCOVER_SEARCH,
     prioritizedGameIds: P,
     onlyAnimateIconOnHover: !0
-  }, i);
+  }, a);
 }, [
   Z,
   b,
   L,
-  P
+  P,
+  x,
+  i
 ]),
 D = o.useCallback((e, t) => {
   let {

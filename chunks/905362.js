@@ -28,7 +28,7 @@ return n => (0, r.jsx)(t, {
   });
 }
 
-function u(e, t, i, s) {
+function u(e, t, i, s, l) {
   (0, o.Vr)({
 guildId: e,
 ...i
@@ -42,7 +42,8 @@ let {
 return n => (0, r.jsx)(e, {
   ...n,
   clan: t,
-  prioritizedGameIds: s
+  prioritizedGameIds: s,
+  position: l
 });
   });
 }

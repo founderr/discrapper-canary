@@ -13,7 +13,7 @@ var i = n(108131),
   a = n.n(i),
   s = n(544891),
   r = n(570140),
-  l = n(10473),
+  l = n(229893),
   o = n(976757),
   c = n(981631);
 let d = new Worker(new URL('/assets/' + n.u('59546'), n.b));
@@ -70,7 +70,8 @@ u = {
   r.Z.dispatch({
 type: 'FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS',
 criteriaHash: s,
-searchResult: u
+searchResult: u,
+recommendationId: 'static:'.concat(s)
   });
 }
 
@@ -87,17 +88,19 @@ body: {
   playstyle: e.playstyle
 }
   }).then(e => {
-let t = e.body.guilds.map(o.Gh),
-  i = {
+var t;
+let i = e.body.guilds.map(o.Gh),
+  a = {
     status: 'loaded',
     loadedAt: Date.now(),
-    items: t
+    items: i
   };
 return r.Z.dispatch({
   type: 'FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS',
   criteriaHash: n,
-  searchResult: i
-}), i;
+  searchResult: a,
+  recommendationId: null !== (t = e.body.recommendation_id) && void 0 !== t ? t : ''
+}), a;
   }).catch(e => ({
 status: 'error',
 error: e

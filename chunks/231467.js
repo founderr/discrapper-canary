@@ -432,7 +432,7 @@ if (e) {
 (0, f.q)(o.id, o, {
   source: h,
   location: L.Sbl.CLAN_DISCOVERY_CARD
-}, a);
+}, a, E);
   }, [
 o,
 m,

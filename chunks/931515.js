@@ -13,8 +13,8 @@ var i = n(470079),
   l = n(442837),
   o = n(224706),
   c = n(963202),
-  d = n(229765),
-  u = n(10473),
+  d = n(229893),
+  u = n(229765),
   _ = n(207796),
   E = n(976757),
   h = n(308083);
@@ -38,15 +38,15 @@ E = (0, c.iN)('clan_discovery'),
 g = null != s ? s : I,
 p = function() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-    t = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery());
+    t = (0, l.e7)([d.Z], () => d.Z.hasLoadedStaticClanDiscovery());
   return i.useEffect(() => {
-    e && !t && (0, d.XB)();
+    e && !t && (0, u.XB)();
   }, [
     t,
     e
   ]), t;
 }(!E),
-T = (0, l.e7)([u.Z], () => u.Z.isLoading());
+T = (0, l.e7)([d.Z], () => d.Z.isLoading());
   return i.useEffect(() => {
 !(n.length > 0) && !E && (g === h.nJ ? (e(_.hz.VALORANT), t([g])) : g === h.xn ? (e(_.hz.GENSHIN), t([g])) : null == g && (e(_.hz.NONE), t([])));
   }, [
@@ -57,11 +57,11 @@ n,
 E
   ]), i.useEffect(() => {
 if (E)
-  (0, d.Cg)(a);
+  (0, u.Cg)(a);
 else {
   if (!p)
     return;
-  (0, d.jc)(a);
+  (0, u.jc)(a);
 }
   }, [
 a,
@@ -79,22 +79,22 @@ function g() {
 t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 n = (0, _.GN)(e => e.savedGuildIds, r.Z),
 a = m(),
-s = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery()),
+s = (0, l.e7)([d.Z], () => d.Z.hasLoadedStaticClanDiscovery()),
 o = (0, c.iN)('clan_discovery'),
-d = (0, l.e7)([u.Z], () => u.Z.getSearchResult(a), [a]),
-h = (0, l.Wu)([u.Z], () => t && null != n ? u.Z.getSavedGuildsResult(n) : [], [
+u = (0, l.e7)([d.Z], () => d.Z.getSearchResult(a), [a]),
+h = (0, l.Wu)([d.Z], () => t && null != n ? d.Z.getSavedGuildsResult(n) : [], [
   t,
   n
 ]),
 I = i.useMemo(() => {
-  if ((0, E.Pw)(d)) {
-    let t = d.items;
+  if ((0, E.Pw)(u)) {
+    let t = u.items;
     return null != e ? t.slice(0, e) : t;
   }
   return [];
 }, [
   e,
-  d
+  u
 ]);
   return t ? {
 loaded: s || o,
@@ -109,6 +109,6 @@ searchResult: {
 loaded: s || o,
 clans: I,
 searchCriteria: a,
-searchResult: d
+searchResult: u
   };
 }

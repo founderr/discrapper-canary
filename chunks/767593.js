@@ -5,27 +5,28 @@ var o = t(735250),
   i = t(481060),
   s = t(442837),
   l = t(607070),
-  c = t(963202),
-  u = t(313201),
-  d = t(863249),
-  m = t(944163),
-  f = t(246364),
-  p = t(983736),
-  h = t(937111),
-  _ = t(200305),
-  x = t(271383),
-  b = t(594174),
-  C = t(231467),
-  I = t(981631),
-  N = t(308083),
-  E = t(689938),
+  c = t(970606),
+  u = t(963202),
+  d = t(313201),
+  m = t(863249),
+  f = t(944163),
+  p = t(246364),
+  h = t(983736),
+  _ = t(937111),
+  x = t(200305),
+  b = t(271383),
+  C = t(594174),
+  I = t(231467),
+  N = t(981631),
+  E = t(308083),
+  g = t(689938),
   v = t(133072);
-let g = {
+let R = {
 mass: 1,
 tension: 600,
 friction: 60
   },
-  R = [{
+  T = [{
   position: 0,
   alpha: 0
 },
@@ -79,7 +80,7 @@ friction: 60
 }
   ];
 
-function T(e) {
+function j(e) {
   let {
 children: n,
 containerRef: t,
@@ -108,22 +109,22 @@ if (0 === c && 0 === d)
 let e = [];
 if (e.push('to bottom'), c > 0) {
   let n = s > 0 ? 1 - Math.min(s, c) / s : 1;
-  for (let t = 0; t < R.length; t++) {
+  for (let t = 0; t < T.length; t++) {
     let {
       position: o,
       alpha: r
-    } = R[t], i = (o * a).toFixed(2);
+    } = T[t], i = (o * a).toFixed(2);
     e.push('hsla(0, 0%, 0%, '.concat(n + r * (1 - n), ') ').concat(i, 'px'));
   }
 }
 if (d > 0) {
   let n = f - a,
     t = s > 0 ? 1 - Math.min(s, d) / s : 1;
-  for (let o = R.length - 1; o >= 0; o--) {
+  for (let o = T.length - 1; o >= 0; o--) {
     let {
       position: r,
       alpha: i
-    } = R[o], s = (n + (1 - r) * a).toFixed(2);
+    } = T[o], s = (n + (1 - r) * a).toFixed(2);
     e.push('hsla(0, 0%, 0%, '.concat(t + i * (1 - t), ') ').concat(s, 'px'));
   }
 }
@@ -146,7 +147,7 @@ children: n
   });
 }
 
-function j(e) {
+function y(e) {
   let {
 guildId: n,
 formState: t,
@@ -158,14 +159,14 @@ children: [
   (0, o.jsx)(i.Heading, {
     variant: 'heading-xxl/normal',
     color: 'header-primary',
-    children: E.Z.Messages.CLAN_DISCOVERY_PROFILE_TITLE
+    children: g.Z.Messages.CLAN_DISCOVERY_PROFILE_TITLE
   }),
   (0, o.jsx)(i.Text, {
     variant: 'text-md/normal',
     color: 'header-secondary',
-    children: E.Z.Messages.CLAN_DISCOVERY_PROFILE_SUBTITLE
+    children: g.Z.Messages.CLAN_DISCOVERY_PROFILE_SUBTITLE
   }),
-  (0, o.jsx)(_.Y, {
+  (0, o.jsx)(x.Y, {
     guildId: n,
     formState: t,
     updateFormState: r
@@ -174,82 +175,95 @@ children: [
   });
 }
 n.default = function(e) {
-  var n, t, _, R;
+  var n, t, x, T;
   let {
-clan: y,
-prioritizedGameIds: F,
-transitionState: B,
-onClose: S
-  } = e, A = (0, u.Dt)(), M = (0, s.e7)([m.Z], () => m.Z.get(y.id)), [O, P] = r.useState(null !== (_ = null == M ? void 0 : M.formFields) && void 0 !== _ ? _ : []), k = (0, s.e7)([b.default], () => b.default.getCurrentUser()), q = (0, s.e7)([x.ZP], () => x.ZP.isMember(y.id, null == k ? void 0 : k.id), [
-y,
-k
-  ]), L = (0, s.e7)([h.Z], () => {
+clan: F,
+prioritizedGameIds: B,
+position: S,
+transitionState: A,
+onClose: M
+  } = e, O = (0, d.Dt)(), P = (0, s.e7)([f.Z], () => f.Z.get(F.id)), [k, q] = r.useState(null !== (x = null == P ? void 0 : P.formFields) && void 0 !== x ? x : []), [L, D] = r.useState(!1), Z = (0, s.e7)([C.default], () => C.default.getCurrentUser()), w = (0, s.e7)([b.ZP], () => b.ZP.isMember(F.id, null == Z ? void 0 : Z.id), [
+F,
+Z
+  ]), H = (0, s.e7)([_.Z], () => {
 var e;
-return (null === (e = h.Z.getRequest(y.id)) || void 0 === e ? void 0 : e.applicationStatus) === f.wB.SUBMITTED;
-  }), D = null == k ? void 0 : k.verified, Z = null == k ? void 0 : k.isPhoneVerified(), [w, H] = r.useState(''), {
-enableApplication: V
-  } = (0, c.Fg)('discovery');
+return (null === (e = _.Z.getRequest(F.id)) || void 0 === e ? void 0 : e.applicationStatus) === p.wB.SUBMITTED;
+  }), V = null == Z ? void 0 : Z.verified, Y = null == Z ? void 0 : Z.isPhoneVerified(), [U, z] = r.useState(''), {
+enableApplication: G
+  } = (0, u.Fg)('discovery');
   r.useEffect(() => {
-d.Z.fetchVerificationForm(y.id);
-  }, [y.id]), r.useEffect(() => {
-null != M && P(M.formFields);
-  }, [M]);
-  let Y = r.useCallback(async e => {
-  await d.Z.submitVerificationForm(y.id, e);
-}, [y.id]),
-U = r.useCallback(async () => {
+m.Z.fetchVerificationForm(F.id);
+  }, [F.id]), r.useEffect(() => {
+null != P && q(P.formFields);
+  }, [P]);
+  let K = r.useCallback(e => {
+  !L && (D(!0), (0, c.r)({
+    guildId: F.id,
+    position: S
+  })), q(e);
+}, [
+  q,
+  L,
+  D,
+  F.id,
+  S
+]),
+Q = r.useCallback(async e => {
+  await m.Z.submitVerificationForm(F.id, e);
+}, [F.id]),
+W = r.useCallback(async () => {
   try {
-    await Y({
-      ...null != M ? M : m.t,
-      formFields: O
-    }), S();
+    await Q({
+      ...null != P ? P : f.t,
+      formFields: k
+    }), M();
   } catch (e) {
-    H(null == e ? void 0 : e.message);
+    z(null == e ? void 0 : e.message);
   }
 }, [
-  Y,
-  S,
+  Q,
   M,
-  O
+  P,
+  k
 ]),
-z = !((null == M ? void 0 : null === (n = M.guild) || void 0 === n ? void 0 : n.verification_level) === I.sFg.VERY_HIGH ? Z : D || Z) || O.some(e => !(0, p.OA)(e)),
-G = (null !== (R = null == M ? void 0 : null === (t = M.guild) || void 0 === t ? void 0 : t.approximate_member_count) && void 0 !== R ? R : 0) >= N.Du,
-K = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-Q = (0, i.useSpring)({
+J = !((null == P ? void 0 : null === (n = P.guild) || void 0 === n ? void 0 : n.verification_level) === N.sFg.VERY_HIGH ? Y : V || Y) || k.some(e => !(0, h.OA)(e)),
+X = (null !== (T = null == P ? void 0 : null === (t = P.guild) || void 0 === t ? void 0 : t.approximate_member_count) && void 0 !== T ? T : 0) >= E.Du,
+$ = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
+ee = (0, i.useSpring)({
   from: {
     opacity: 0,
-    transform: 'translateY('.concat(K ? 0 : 40, 'px)')
+    transform: 'translateY('.concat($ ? 0 : 40, 'px)')
   },
   to: {
     opacity: 1,
     transform: 'translateY(0px)'
   },
-  config: g,
+  config: R,
   delay: 500
 }, 'animate-always'),
-W = r.useRef(null);
+en = r.useRef(null);
   return (0, o.jsxs)(i.ModalRoot, {
-transitionState: B,
-'aria-labelledby': A,
+transitionState: A,
+'aria-labelledby': O,
 size: i.ModalSize.DYNAMIC,
 className: v.container,
 hideShadow: !0,
 children: [
   (0, o.jsxs)(a.animated.div, {
     className: v.body,
-    style: Q,
+    style: ee,
     children: [
       (0, o.jsx)('div', {
         className: v.applicationContainer,
-        ref: W,
-        children: (0, o.jsx)(T, {
-          containerRef: W,
+        ref: en,
+        children: (0, o.jsx)(j, {
+          containerRef: en,
           faderSize: 180,
           faderEdgeThreshold: 48,
-          children: (0, o.jsx)(j, {
-            guildId: y.id,
-            formState: O,
-            updateFormState: P
+          children: (0, o.jsx)(y, {
+            guildId: F.id,
+            formState: k,
+            updateFormState: K
           })
         })
       }),
@@ -259,54 +273,54 @@ children: [
       (0, o.jsxs)('div', {
         className: v.clanContainer,
         children: [
-          (0, o.jsx)(C.xV, {
-            clan: y,
+          (0, o.jsx)(I.xV, {
+            clan: F,
             className: v.profileCard,
-            prioritizedGameIds: F,
+            prioritizedGameIds: B,
             expanded: !0,
-            isMember: q,
-            hasPendingJoinRequest: L,
-            atMaxMemberCapacity: G,
+            isMember: w,
+            hasPendingJoinRequest: H,
+            atMaxMemberCapacity: X,
             showFavoriteButton: !0
           }),
           (0, o.jsx)(i.Tooltip, {
-            text: E.Z.Messages.CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP,
-            shouldShow: !V,
+            text: g.Z.Messages.CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP,
+            shouldShow: !G,
             children: e => (0, o.jsxs)('div', {
               className: v.applyButtonContainer,
               children: [
                 (0, o.jsxs)(i.Button, {
                   ...e,
                   type: 'submit',
-                  onClick: U,
+                  onClick: W,
                   fullWidth: !0,
-                  disabled: z || !V || null == M,
+                  disabled: J || !G || null == P,
                   innerClassName: v.applyButtonInner,
                   children: [
-                    G && (0, o.jsx)(i.WarningIcon, {
+                    X && (0, o.jsx)(i.WarningIcon, {
                       size: 'custom',
                       color: 'white',
                       width: 20,
                       height: 20
                     }),
-                    E.Z.Messages.APPLY
+                    g.Z.Messages.APPLY
                   ]
                 }),
-                '' !== w && (0, o.jsx)(i.Text, {
+                '' !== U && (0, o.jsx)(i.Text, {
                   variant: 'text-sm/normal',
                   color: 'text-danger',
-                  children: w
+                  children: U
                 })
               ]
             })
           }),
-          G && (0, o.jsxs)(o.Fragment, {
+          X && (0, o.jsxs)(o.Fragment, {
             children: [
               (0, o.jsx)(i.Text, {
                 variant: 'text-xs/medium',
                 color: 'text-warning',
                 className: v.maxCapacityText,
-                children: E.Z.Messages.CLAN_DISCOVERY_APPLICATION_MAX_MEMBERS
+                children: g.Z.Messages.CLAN_DISCOVERY_APPLICATION_MAX_MEMBERS
               }),
               (0, o.jsx)('hr', {
                 className: v.separator
@@ -317,13 +331,13 @@ children: [
             variant: 'text-xs/medium',
             color: 'text-muted',
             className: v.noticeText,
-            children: E.Z.Messages.CLAN_APPLICATION_GDM_CONSENT
+            children: g.Z.Messages.CLAN_APPLICATION_GDM_CONSENT
           }),
           (0, o.jsx)(i.Text, {
             variant: 'text-xs/medium',
             color: 'text-muted',
             className: v.noticeText,
-            children: E.Z.Messages.MEMBER_VERIFICATION_WARNING
+            children: g.Z.Messages.MEMBER_VERIFICATION_WARNING
           })
         ]
       })
@@ -332,10 +346,10 @@ children: [
   (0, o.jsx)('div', {
     className: v.closeButtonContainer,
     children: (0, o.jsx)(i.Button, {
-      onClick: S,
+      onClick: M,
       look: i.ButtonLooks.OUTLINED,
       color: i.ButtonColors.PRIMARY,
-      children: E.Z.Messages.CLOSE
+      children: g.Z.Messages.CLOSE
     })
   })
 ]
