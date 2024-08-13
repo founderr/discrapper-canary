@@ -3,22 +3,21 @@ var r = n(990547),
   a = n(570140),
   s = n(37234),
   o = n(710845),
-  l = n(655006),
-  u = n(408987),
-  c = n(962086),
-  d = n(160404),
-  _ = n(41776),
-  E = n(314897),
-  f = n(271383),
-  h = n(430824),
-  p = n(546796),
-  m = n(573261),
-  I = n(999382),
-  T = n(981631),
-  g = n(308083),
-  S = n(689938);
-let A = new o.Z('GuildSettingsActionCreators'),
-  N = {
+  l = n(408987),
+  u = n(962086),
+  c = n(160404),
+  d = n(41776),
+  _ = n(314897),
+  E = n(271383),
+  f = n(430824),
+  h = n(546796),
+  p = n(573261),
+  m = n(999382),
+  I = n(981631),
+  T = n(308083),
+  g = n(689938);
+let S = new o.Z('GuildSettingsActionCreators'),
+  A = {
 init(e, t, n, r) {
   a.Z.dispatch({
     type: 'GUILD_SETTINGS_INIT',
@@ -55,8 +54,8 @@ async open(e, t, r, i) {
     n.e('23693'),
     n.e('87713'),
     n.e('35919')
-  ]).then(n.bind(n, 994763)), (null === (a = h.Z.getGuild(e)) || void 0 === a ? void 0 : a.hasFeature(T.oNc.COMMUNITY)) && (t === T.pNK.GUILD_AUTOMOD && (t = T.pNK.SAFETY, i = T.KsC.SAFETY_AUTOMOD), t === T.pNK.MEMBER_VERIFICATION && (t = T.pNK.SAFETY, i = T.KsC.SAFETY_DM_AND_SPAM_PROTECTION)), N.init(e, t, r, i);
-  (0, s.jN)(T.S9g.GUILD_SETTINGS);
+  ]).then(n.bind(n, 994763)), (null === (a = f.Z.getGuild(e)) || void 0 === a ? void 0 : a.hasFeature(I.oNc.COMMUNITY)) && (t === I.pNK.GUILD_AUTOMOD && (t = I.pNK.SAFETY, i = I.KsC.SAFETY_AUTOMOD), t === I.pNK.MEMBER_VERIFICATION && (t = I.pNK.SAFETY, i = I.KsC.SAFETY_DM_AND_SPAM_PROTECTION)), A.init(e, t, r, i);
+  (0, s.jN)(I.S9g.GUILD_SETTINGS);
 },
 close() {
   a.Z.dispatch({
@@ -71,8 +70,8 @@ saveRouteStack(e) {
 },
 setSection(e, t) {
   var n;
-  let r = I.Z.getGuildId();
-  null != r && ((null === (n = h.Z.getGuild(r)) || void 0 === n ? void 0 : n.hasFeature(T.oNc.COMMUNITY)) && (e === T.pNK.GUILD_AUTOMOD && (e = T.pNK.SAFETY, t = T.KsC.SAFETY_AUTOMOD), e === T.pNK.MEMBER_VERIFICATION && (e = T.pNK.SAFETY, t = T.KsC.SAFETY_DM_AND_SPAM_PROTECTION)), a.Z.dispatch({
+  let r = m.Z.getGuildId();
+  null != r && ((null === (n = f.Z.getGuild(r)) || void 0 === n ? void 0 : n.hasFeature(I.oNc.COMMUNITY)) && (e === I.pNK.GUILD_AUTOMOD && (e = I.pNK.SAFETY, t = I.KsC.SAFETY_AUTOMOD), e === I.pNK.MEMBER_VERIFICATION && (e = I.pNK.SAFETY, t = I.KsC.SAFETY_DM_AND_SPAM_PROTECTION)), a.Z.dispatch({
     type: 'GUILD_SETTINGS_SET_SECTION',
     section: e,
     subsection: t
@@ -91,7 +90,7 @@ selectRole: (e, t) => a.Z.dispatch({
 }),
 updateEmbed(e, t, n) {
   i.tn.patch({
-    url: T.ANM.GUILD_WIDGET(e),
+    url: I.ANM.GUILD_WIDGET(e),
     body: {
       enabled: t,
       channel_id: n
@@ -112,8 +111,8 @@ updateMFALevel(e) {
     level: n,
     isEnabled: r
   } = e;
-  return (0, p.Z)(e => i.tn.post({
-    url: T.ANM.GUILD_MFA(t),
+  return (0, h.Z)(e => i.tn.post({
+    url: I.ANM.GUILD_MFA(t),
     body: {
       level: n,
       ...e
@@ -121,8 +120,8 @@ updateMFALevel(e) {
     oldFormErrors: !0
   }), {
     modalProps: {
-      title: S.Z.Messages.GUILD_SECURITY_REQ_MFA_LABEL,
-      actionText: r ? S.Z.Messages.GUILD_SECURITY_REQ_MFA_TURN_OFF : S.Z.Messages.GUILD_SECURITY_REQ_MFA_TURN_ON
+      title: g.Z.Messages.GUILD_SECURITY_REQ_MFA_LABEL,
+      actionText: r ? g.Z.Messages.GUILD_SECURITY_REQ_MFA_TURN_OFF : g.Z.Messages.GUILD_SECURITY_REQ_MFA_TURN_ON
     },
     checkEnabled: !1
   }).then(e => a.Z.dispatch({
@@ -132,7 +131,7 @@ updateMFALevel(e) {
 },
 updateIcon(e, t) {
   i.tn.patch({
-    url: T.ANM.GUILD(e),
+    url: I.ANM.GUILD(e),
     body: {
       icon: t
     },
@@ -141,7 +140,7 @@ updateIcon(e, t) {
     a.Z.dispatch({
       type: 'GUILD_SETTINGS_UPDATE',
       icon: t
-    }), u.Z.checkGuildTemplateDirty(e);
+    }), l.Z.checkGuildTemplateDirty(e);
   }, e => a.Z.dispatch({
     type: 'GUILD_SETTINGS_SUBMIT_FAILURE',
     errors: e.body
@@ -154,25 +153,23 @@ cancelChanges(e) {
   });
 },
 updateGuild(e) {
-  var t, n;
   let {
-    safetyAlertsChannelId: r,
-    clan: i,
-    ...s
-  } = e, o = {
-    ...s
+    safetyAlertsChannelId: t,
+    clan: n,
+    ...r
+  } = e, i = {
+    ...r
   };
-  null != i && (o.clan = {
-    ...null !== (t = o.clan) && void 0 !== t ? t : {},
-    ...i
-  });
-  let u = I.Z.getGuildId();
-  null != u && (null === (n = l.l.getCurrentConfig({
-    guildId: u,
-    location: 'be0372_1'
-  })) || void 0 === n ? void 0 : n.enableRaidAlerts) && null != r && (o.safetyAlertsChannelId = r), a.Z.dispatch({
+  if (null != n) {
+    var s;
+    i.clan = {
+      ...null !== (s = i.clan) && void 0 !== s ? s : {},
+      ...n
+    };
+  }
+  null != m.Z.getGuildId() && null != t && (i.safetyAlertsChannelId = t), a.Z.dispatch({
     type: 'GUILD_SETTINGS_UPDATE',
-    ...o
+    ...i
   });
 },
 saveGuild(e, t) {
@@ -181,7 +178,7 @@ saveGuild(e, t) {
     description: r,
     icon: s,
     splash: o,
-    banner: l,
+    banner: u,
     homeHeader: c,
     afkChannelId: d,
     afkTimeout: _,
@@ -190,8 +187,8 @@ saveGuild(e, t) {
     defaultMessageNotifications: h,
     explicitContentFilter: p,
     features: m,
-    systemChannelFlags: I,
-    preferredLocale: S,
+    systemChannelFlags: g,
+    preferredLocale: A,
     rulesChannelId: N,
     safetyAlertsChannelId: v,
     discoverySplash: O,
@@ -203,17 +200,17 @@ saveGuild(e, t) {
     description: r,
     icon: s,
     splash: o,
-    banner: l,
+    banner: u,
     home_header: c,
     features: m,
-    preferred_locale: S,
+    preferred_locale: A,
     afk_channel_id: d,
     afk_timeout: _,
     system_channel_id: E,
     verification_level: f,
     default_message_notifications: h,
     explicit_content_filter: p,
-    system_channel_flags: I,
+    system_channel_flags: g,
     rules_channel_id: N,
     discovery_splash: O,
     public_updates_channel_id: R,
@@ -221,12 +218,12 @@ saveGuild(e, t) {
     ...null != C ? {
       premium_progress_bar_enabled: C
     } : null,
-    clan: null != y ? (0, g.A9)(y) : y
+    clan: null != y ? (0, T.A9)(y) : y
   };
   return a.Z.dispatch({
     type: 'GUILD_SETTINGS_SUBMIT'
   }), i.tn.patch({
-    url: T.ANM.GUILD(e),
+    url: I.ANM.GUILD(e),
     query: {
       for_discovery: D.isForDiscovery
     },
@@ -236,30 +233,30 @@ saveGuild(e, t) {
     a.Z.dispatch({
       type: 'GUILD_SETTINGS_SUBMIT_SUCCESS',
       guild: t.body
-    }), u.Z.checkGuildTemplateDirty(e);
+    }), l.Z.checkGuildTemplateDirty(e);
   }, e => {
     if (a.Z.dispatch({
         type: 'GUILD_SETTINGS_SUBMIT_FAILURE',
         errors: e.body
-      }), A.error('Failed to save guild settings', {
+      }), S.error('Failed to save guild settings', {
         errors: e.body
       }), D.throwErr)
       throw e.body;
   });
 },
 updateGuildModeration: (e, t) => i.tn.patch({
-  url: T.ANM.GUILD(e),
+  url: I.ANM.GUILD(e),
   body: {
     verification_level: t.verificationLevel,
     explicit_content_filter: t.explicitContentFilter
   },
   oldFormErrors: !0
-}).then(t => (u.Z.checkGuildTemplateDirty(e), t)),
+}).then(t => (l.Z.checkGuildTemplateDirty(e), t)),
 transferOwnership(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
     i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-  return (0, p.Z)(a => m.Z.patch({
-    url: T.ANM.GUILD(e),
+  return (0, h.Z)(a => p.Z.patch({
+    url: I.ANM.GUILD(e),
     body: {
       owner_id: t,
       code: i,
@@ -275,16 +272,16 @@ transferOwnership(e, t) {
     }
   }), {
     modalProps: {
-      title: S.Z.Messages.TRANSFER_OWNERSHIP,
-      actionText: S.Z.Messages.TRANSFER_OWNERSHIP
+      title: g.Z.Messages.TRANSFER_OWNERSHIP,
+      actionText: g.Z.Messages.TRANSFER_OWNERSHIP
     },
     checkEnabled: !1
   });
 },
 sendTransferOwnershipPincode(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return m.Z.put({
-    url: T.ANM.GUILD_PINCODE(e),
+  return p.Z.put({
+    url: I.ANM.GUILD_PINCODE(e),
     oldFormErrors: !0,
     trackedActionData: {
       event: r.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE,
@@ -295,38 +292,38 @@ sendTransferOwnershipPincode(e) {
     }
   });
 },
-deleteGuild: (e, t) => (0, p.Z)(t => i.tn.post({
-  url: T.ANM.GUILD_DELETE(e),
+deleteGuild: (e, t) => (0, h.Z)(t => i.tn.post({
+  url: I.ANM.GUILD_DELETE(e),
   body: t,
   oldFormErrors: !0
 }), {
   modalProps: {
-    title: S.Z.Messages.DELETE_SERVER_TITLE.format({
+    title: g.Z.Messages.DELETE_SERVER_TITLE.format({
       name: t
     }),
-    actionText: S.Z.Messages.DELETE_SERVER,
+    actionText: g.Z.Messages.DELETE_SERVER,
     disallowBackupCodes: !0
   },
   checkEnabled: !1
 }).then(() => {
-  N.close();
+  A.close();
 }),
 async leaveGuild(e) {
   await i.tn.del({
-    url: T.ANM.GUILD_LEAVE(e),
+    url: I.ANM.GUILD_LEAVE(e),
     body: {
-      lurking: _.Z.isLurking(e) || f.ZP.isCurrentUserGuest(e)
+      lurking: d.Z.isLurking(e) || E.ZP.isCurrentUserGuest(e)
     },
     oldFormErrors: !0
-  }), N.close();
+  }), A.close();
 },
 async updateMemberRoles(e, t, n, r, s) {
-  if (d.Z.isFullServerPreview(e) && t === E.default.getId()) {
-    (0, c.og)(e, n);
+  if (c.Z.isFullServerPreview(e) && t === _.default.getId()) {
+    (0, u.og)(e, n);
     return;
   }
   await i.tn.patch({
-    url: T.ANM.GUILD_MEMBER(e, t),
+    url: I.ANM.GUILD_MEMBER(e, t),
     body: {
       roles: n
     },
@@ -344,7 +341,7 @@ async updateMemberRoles(e, t, n, r, s) {
   }));
 },
 bulkAddMemberRoles: (e, t, n) => i.tn.patch({
-  url: T.ANM.GUILD_ROLE_MEMBERS(e, t),
+  url: I.ANM.GUILD_ROLE_MEMBERS(e, t),
   body: {
     member_ids: n
   }
@@ -357,7 +354,7 @@ bulkAddMemberRoles: (e, t, n) => i.tn.patch({
   });
 }),
 enableIntegration: (e, t, n) => i.tn.post({
-  url: T.ANM.GUILD_INTEGRATIONS(e),
+  url: I.ANM.GUILD_INTEGRATIONS(e),
   body: {
     type: t,
     id: n
@@ -365,11 +362,11 @@ enableIntegration: (e, t, n) => i.tn.post({
   oldFormErrors: !0
 }),
 disableIntegration: (e, t) => i.tn.del({
-  url: T.ANM.GUILD_INTEGRATION(e, t),
+  url: I.ANM.GUILD_INTEGRATION(e, t),
   oldFormErrors: !0
 }),
 updateIntegration: (e, t, n, r, a) => i.tn.patch({
-  url: T.ANM.GUILD_INTEGRATION(e, t),
+  url: I.ANM.GUILD_INTEGRATION(e, t),
   body: {
     expire_behavior: n,
     expire_grace_period: r,
@@ -379,9 +376,9 @@ updateIntegration: (e, t, n, r, a) => i.tn.patch({
 }),
 syncIntegration(e, t) {
   i.tn.post({
-    url: T.ANM.GUILD_INTEGRATION_SYNC(e, t),
+    url: I.ANM.GUILD_INTEGRATION_SYNC(e, t),
     oldFormErrors: !0
   });
 }
   };
-t.Z = N;
+t.Z = A;

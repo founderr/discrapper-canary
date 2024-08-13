@@ -1,12 +1,12 @@
 n.d(t, {
   ZP: function() {
-return V;
+return j;
   },
   fp: function() {
-return k;
+return M;
   },
   k0: function() {
-return F;
+return A;
   }
 }), n(47120);
 var s = n(735250),
@@ -18,269 +18,68 @@ var s = n(735250),
   c = n(481060),
   d = n(230711),
   u = n(497321),
-  _ = n(367907),
-  I = n(933557),
-  E = n(471445),
-  T = n(688465),
-  m = n(154285),
-  N = n(655006),
-  S = n(191471),
-  h = n(467319),
-  g = n(241559),
-  C = n(777036),
-  x = n(592125),
-  p = n(496675),
-  R = n(246946),
-  f = n(594174),
-  L = n(626135),
-  O = n(63063),
-  A = n(78451),
-  M = n(434404),
-  D = n(999382),
-  v = n(2150),
-  j = n(181339),
-  Z = n(193544),
-  b = n(717251),
-  U = n(981631),
-  G = n(689938),
-  P = n(75454);
+  _ = n(688465),
+  I = n(241559),
+  E = n(777036),
+  T = n(496675),
+  m = n(246946),
+  N = n(594174),
+  S = n(63063),
+  h = n(78451),
+  g = n(434404),
+  C = n(999382),
+  x = n(181339),
+  p = n(193544),
+  R = n(981631),
+  f = n(689938),
+  L = n(14020);
 
-function B(e) {
+function O(e) {
   let {
 guild: t
-  } = e, n = t.canHaveRaidActivityAlerts(), i = (0, o.e7)([p.Z], () => null != t && p.Z.can(U.Plq.MANAGE_GUILD, t), [t]), {
-enableRaidAlerts: r
-  } = N.l.useExperiment({
-guildId: t.id,
-location: '1a2662_1'
-  }, {
-autoTrackExposure: i
-  }), l = (0, h.a)(t.id), d = (0, o.e7)([x.Z], () => x.Z.getChannel(t.safetyAlertsChannelId), [t.safetyAlertsChannelId]), u = (0, I.ZP)(d), m = null != d, g = a.useMemo(() => {
-let e = (null == d ? void 0 : d.type) != null ? (0, E.Th)(d.type) : null;
-return null != e ? e : c.TextIcon;
-  }, [d]);
-
-  function R() {
-if (!!r)
-  (0, S.K)(t.id);
-  }
-  return i ? (0, s.jsxs)(s.Fragment, {
-children: [
-  (0, s.jsx)(c.FormDivider, {
-    className: P.divider
-  }),
-  (0, s.jsxs)('div', {
-    className: P.setupContainer,
-    children: [
-      (0, s.jsxs)('div', {
-        className: P.switchItemTextContent,
-        children: [
-          (0, s.jsxs)(c.Text, {
-            color: 'header-primary',
-            variant: 'text-md/semibold',
-            children: [
-              G.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_TITLE,
-              ' ',
-              (0, s.jsx)(T.Z, {
-                className: P.betaTag
-              })
-            ]
-          }),
-          (0, s.jsx)(c.Text, {
-            color: 'header-secondary',
-            variant: 'text-sm/normal',
-            children: G.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_DESCRIPTION
-          })
-        ]
-      }),
-      (0, s.jsx)(b.Z, {
-        title: (0, s.jsxs)('div', {
-          className: P.settingsRowHeader,
-          children: [
-            (0, s.jsx)(c.ShieldUserIcon, {
-              size: 'custom',
-              color: 'currentColor',
-              width: 20,
-              height: 20
-            }),
-            (0, s.jsx)(c.Text, {
-              color: 'text-normal',
-              variant: 'text-sm/medium',
-              children: G.Z.Messages.GUILD_ANTIRAID_SAFETY_JOIN_RAIDS_TITLE
-            })
-          ]
-        }),
-        highlightColor: v.q.GREEN,
-        action: r ? (0, s.jsx)(c.Button, {
-          look: c.Button.Looks.LINK,
-          size: c.Button.Sizes.MIN,
-          color: c.Button.Colors.LINK,
-          children: n ? G.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MANAGE_ACTION : G.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION
-        }) : (0, s.jsx)(c.Text, {
-          color: 'text-muted',
-          variant: 'text-sm/medium',
-          children: G.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION
-        }),
-        onClick: r ? R : void 0,
-        subsection: r ? (0, s.jsxs)('div', {
-          className: P.settingsRowSubsection,
-          children: [
-            (0, s.jsxs)('div', {
-              className: P.settingsRowSubsectionItem,
-              children: [
-                (0, s.jsx)(c.Text, {
-                  color: 'text-normal',
-                  variant: 'text-xs/semibold',
-                  children: G.Z.Messages.GUILD_ANTIRAID_SETTING_PROTECTION_LABEL
-                }),
-                (0, s.jsx)(c.Text, {
-                  color: 'text-muted',
-                  variant: 'text-xs/medium',
-                  children: m && n ? G.Z.Messages.GUILD_ANTIRAID_SETTING_ENABLED_ALERTS : G.Z.Messages.GUILD_ANTIRAID_SETTING_ENABLED
-                })
-              ]
-            }),
-            (0, s.jsx)('div', {
-              className: P.settingsRowSubsectionItem,
-              children: m && n ? (0, s.jsxs)(s.Fragment, {
-                children: [
-                  (0, s.jsx)(c.Text, {
-                    color: 'text-normal',
-                    variant: 'text-xs/semibold',
-                    children: G.Z.Messages.GUILD_ANTIRAID_SETTING_CHANNEL_LABEL
-                  }),
-                  (0, s.jsxs)(c.Text, {
-                    color: 'text-muted',
-                    variant: 'text-xs/medium',
-                    className: P.channelContainer,
-                    children: [
-                      (0, s.jsx)(g, {
-                        className: P.channelIcon,
-                        size: 'xxs',
-                        color: 'currentColor'
-                      }),
-                      ' ',
-                      u
-                    ]
-                  })
-                ]
-              }) : (0, s.jsxs)(s.Fragment, {
-                children: [
-                  (0, s.jsx)(c.Text, {
-                    color: 'text-normal',
-                    variant: 'text-xs/semibold',
-                    children: G.Z.Messages.GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL
-                  }),
-                  (0, s.jsx)(c.Text, {
-                    color: 'text-muted',
-                    variant: 'text-xs/medium',
-                    children: G.Z.Messages.GUILD_ANTIRAID_SETTING_CHANNEL_NONE
-                  })
-                ]
-              })
-            })
-          ]
-        }) : null
-      }),
-      !m && r ? (0, s.jsx)(C.Z, {
-        messageType: C.Q.INFO,
-        textVariant: 'text-xs/normal',
-        children: G.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ENABLE_TIP.format({
-          onClick: R
-        })
-      }) : null,
-      l ? (0, s.jsx)(b.Z, {
-        title: (0, s.jsxs)('div', {
-          className: P.settingsRowHeader,
-          children: [
-            (0, s.jsx)(c.ShieldAtIcon, {
-              size: 'custom',
-              color: 'currentColor',
-              width: 20,
-              height: 20
-            }),
-            (0, s.jsx)(c.Text, {
-              color: 'text-normal',
-              variant: 'text-sm/medium',
-              children: G.Z.Messages.GUILD_ANTIRAID_SAFETY_MENTION_RAIDS_TITLE
-            })
-          ]
-        }),
-        highlightColor: v.q.GREEN,
-        action: (0, s.jsx)(c.Button, {
-          look: c.Button.Looks.LINK,
-          size: c.Button.Sizes.MIN,
-          color: c.Button.Colors.LINK,
-          onClick: function() {
-            L.default.track(U.rMx.GUILD_SAFETY_MENTION_RAID_SETUP_CTA_CLICKED, {
-              ...(0, _.hH)(t.id)
-            }), M.Z.setSection(U.pNK.GUILD_AUTOMOD, U.KsC.AUTOMOD_MENTION_SPAM);
-          },
-          children: (0, s.jsxs)('div', {
-            className: P.setupAutomodButton,
-            children: [
-              G.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_IN_AUTOMOD_ACTION,
-              (0, s.jsx)(c.DoorExitIcon, {
-                size: 'xs',
-                color: 'currentColor',
-                className: P.setupAutomodIcon
-              })
-            ]
-          })
-        })
-      }) : null
-    ]
-  })
-]
-  }) : null;
-}
-
-function y(e) {
-  let {
-guild: t
-  } = e, n = (0, o.e7)([p.Z], () => null != t && p.Z.can(U.Plq.MANAGE_GUILD, t), [t]), i = a.useCallback(async e => {
+  } = e, n = (0, o.e7)([T.Z], () => null != t && T.Z.can(R.Plq.MANAGE_GUILD, t), [t]), i = a.useCallback(async e => {
 let {
   value: n
 } = e;
 try {
-  await M.Z.saveGuild(t.id, {
+  await g.Z.saveGuild(t.id, {
     verificationLevel: n
-  }), M.Z.updateGuild({
+  }), g.Z.updateGuild({
     verificationLevel: n
   });
 } catch (e) {
-  (0, c.showToast)((0, c.createToast)(G.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE));
+  (0, c.showToast)((0, c.createToast)(f.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE));
 }
   }, [t]), r = a.useMemo(() => {
-let e = (0, A.IF)(null == t ? void 0 : t.hasFeature(U.oNc.COMMUNITY)).map(e => ({
+let e = (0, h.IF)(null == t ? void 0 : t.hasFeature(R.oNc.COMMUNITY)).map(e => ({
   ...e,
   tooltipPosition: 'left'
 }));
-return (0, A.LJ)(e);
+return (0, h.LJ)(e);
   }, [t]), l = a.useMemo(() => r.find(e => e.value === (null == t ? void 0 : t.verificationLevel)), [
 t,
 r
   ]);
   return (0, s.jsxs)('div', {
-className: P.setupContainer,
+className: L.setupContainer,
 children: [
   (0, s.jsxs)('div', {
-    className: P.switchItemTextContent,
+    className: L.switchItemTextContent,
     children: [
       (0, s.jsx)(c.Text, {
         color: 'header-primary',
         variant: 'text-md/semibold',
-        children: G.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL
+        children: f.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL
       }),
       (0, s.jsx)(c.Text, {
         color: 'header-secondary',
         variant: 'text-sm/normal',
-        children: G.Z.Messages.FORM_HELP_VERIFICATION_LEVEL.format()
+        children: f.Z.Messages.FORM_HELP_VERIFICATION_LEVEL.format()
       })
     ]
   }),
-  (0, s.jsx)(Z.Z, {
-    changeTitle: G.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL_CHANGE,
+  (0, s.jsx)(p.Z, {
+    changeTitle: f.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL_CHANGE,
     value: null == l ? void 0 : l.value,
     options: r,
     disabled: !n,
@@ -290,30 +89,30 @@ children: [
   });
 }
 
-function F(e) {
+function A(e) {
   let {
 guild: t,
 className: n,
 withDivider: i = !0
-  } = e, l = (0, o.e7)([p.Z], () => null != t && p.Z.can(U.Plq.MANAGE_GUILD, t), [t]), d = a.useCallback(async e => {
+  } = e, l = (0, o.e7)([T.Z], () => null != t && T.Z.can(R.Plq.MANAGE_GUILD, t), [t]), d = a.useCallback(async e => {
 let {
   value: n
 } = e;
 try {
-  await M.Z.saveGuild(t.id, {
+  await g.Z.saveGuild(t.id, {
     explicitContentFilter: n
-  }), M.Z.updateGuild({
+  }), g.Z.updateGuild({
     explicitContentFilter: n
   });
 } catch (e) {
-  (0, c.showToast)((0, c.createToast)(G.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE));
+  (0, c.showToast)((0, c.createToast)(f.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE));
 }
   }, [t.id]), u = a.useMemo(() => {
-let e = (0, A.MF)(null == t ? void 0 : t.hasFeature(U.oNc.COMMUNITY)).map(e => ({
+let e = (0, h.MF)(null == t ? void 0 : t.hasFeature(R.oNc.COMMUNITY)).map(e => ({
   ...e,
   tooltipPosition: 'left'
 }));
-return (0, A.LJ)(e);
+return (0, h.LJ)(e);
   }, [t]), _ = a.useMemo(() => u.find(e => e.value === (null == t ? void 0 : t.explicitContentFilter)), [
 t,
 u
@@ -321,30 +120,30 @@ u
   return (0, s.jsxs)(s.Fragment, {
 children: [
   i && (0, s.jsx)(c.FormDivider, {
-    className: P.divider
+    className: L.divider
   }),
   (0, s.jsxs)('div', {
-    className: r()(P.setupContainer, n),
+    className: r()(L.setupContainer, n),
     children: [
       (0, s.jsxs)('div', {
-        className: P.switchItemTextContent,
+        className: L.switchItemTextContent,
         children: [
           (0, s.jsx)(c.Text, {
             color: 'header-primary',
             variant: 'text-md/semibold',
-            children: G.Z.Messages.FORM_LABEL_EXPLICIT_CONTENT_FILTER_V2
+            children: f.Z.Messages.FORM_LABEL_EXPLICIT_CONTENT_FILTER_V2
           }),
           (0, s.jsx)(c.Text, {
             color: 'header-secondary',
             variant: 'text-sm/normal',
-            children: G.Z.Messages.FORM_HELP_EXPLICIT_CONTENT_FILTER_V2.format({
-              helpdeskArticle: O.Z.getArticleURL(U.BhN.SAFE_DIRECT_MESSAGING)
+            children: f.Z.Messages.FORM_HELP_EXPLICIT_CONTENT_FILTER_V2.format({
+              helpdeskArticle: S.Z.getArticleURL(R.BhN.SAFE_DIRECT_MESSAGING)
             })
           })
         ]
       }),
-      (0, s.jsx)(Z.Z, {
-        changeTitle: G.Z.Messages.FORM_LABEL_EXPLICIT_CONTENT_FILTER_CHANGE,
+      (0, s.jsx)(p.Z, {
+        changeTitle: f.Z.Messages.FORM_LABEL_EXPLICIT_CONTENT_FILTER_CHANGE,
         value: null == _ ? void 0 : _.value,
         options: u,
         disabled: !l,
@@ -355,72 +154,72 @@ children: [
 ]
   });
 }
-async function k(e, t) {
-  if (e.hasFeature(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t)
+async function M(e, t) {
+  if (e.hasFeature(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t)
 return;
   let n = e.features;
-  return t ? n.add(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await M.Z.saveGuild(e.id, {
+  return t ? n.add(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await g.Z.saveGuild(e.id, {
 features: n
   });
 }
 
-function w(e) {
+function D(e) {
   let {
 guild: t
-  } = e, n = (0, o.e7)([p.Z], () => null != t && p.Z.can(U.Plq.MANAGE_GUILD, t), [t]), i = t.hasFeature(U.oNc.COMMUNITY), r = (0, g.n2)(t.id), [l, d] = a.useState(t.hasFeature(U.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), u = a.useCallback(async e => {
-d(e), await k(t, e);
+  } = e, n = (0, o.e7)([T.Z], () => null != t && T.Z.can(R.Plq.MANAGE_GUILD, t), [t]), i = t.hasFeature(R.oNc.COMMUNITY), r = (0, I.n2)(t.id), [l, d] = a.useState(t.hasFeature(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), u = a.useCallback(async e => {
+d(e), await M(t, e);
   }, [t]);
   return i || !r ? null : (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsxs)('div', {
-    className: P.setupContainer,
+    className: L.setupContainer,
     children: [
       (0, s.jsx)(c.FormSwitch, {
         value: l,
         onChange: u,
-        className: P.switchItem,
+        className: L.switchItem,
         disabled: !n,
         hideBorder: !0,
         children: (0, s.jsxs)('div', {
-          className: P.switchItemTextContent,
+          className: L.switchItemTextContent,
           children: [
             (0, s.jsxs)(c.Text, {
               color: 'header-primary',
               variant: 'text-md/semibold',
               children: [
-                G.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE,
-                (0, s.jsx)(T.Z, {
-                  className: P.betaTag
+                f.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE,
+                (0, s.jsx)(_.Z, {
+                  className: L.betaTag
                 })
               ]
             }),
             (0, s.jsx)(c.Text, {
               color: 'header-secondary',
               variant: 'text-sm/normal',
-              children: G.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION
+              children: f.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION
             })
           ]
         })
       }),
-      (0, s.jsx)(C.Z, {
-        messageType: C.Q.INFO,
+      (0, s.jsx)(E.Z, {
+        messageType: E.Q.INFO,
         textVariant: 'text-xs/normal',
-        children: G.Z.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_IN_COMMUNITY
+        children: f.Z.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_IN_COMMUNITY
       })
     ]
   }),
   (0, s.jsx)(c.FormDivider, {
-    className: P.divider
+    className: L.divider
   })
 ]
   });
 }
 
-function H(e) {
+function v(e) {
   let {
 guild: t,
 mfaLevel: n
-  } = e, i = (0, o.e7)([p.Z], () => null != t && p.Z.can(U.Plq.MANAGE_GUILD, t), [t]), r = (0, o.e7)([f.default], () => f.default.getCurrentUser()), {
+  } = e, i = (0, o.e7)([T.Z], () => null != t && T.Z.can(R.Plq.MANAGE_GUILD, t), [t]), r = (0, o.e7)([N.default], () => N.default.getCurrentUser()), {
 isGuildOwnerWithMFA: u,
 showMFAUserTooltip: _
   } = a.useMemo(() => null == r ? {
@@ -432,50 +231,50 @@ showMFAUserTooltip: !r.mfaEnabled && t.isOwner(r)
   }, [
 r,
 t
-  ]), I = n === U.BpS.ELEVATED, E = (0, l.throttle)(async e => {
+  ]), I = n === R.BpS.ELEVATED, m = (0, l.throttle)(async e => {
 if (!!u && !_)
-  await M.Z.updateMFALevel({
+  await g.Z.updateMFALevel({
     guildId: t.id,
-    level: e ? U.BpS.ELEVATED : U.BpS.NONE,
+    level: e ? R.BpS.ELEVATED : R.BpS.NONE,
     isEnabled: !e
   });
   }, 1000);
   return i ? (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)(c.FormDivider, {
-    className: P.divider
+    className: L.divider
   }),
   (0, s.jsxs)('div', {
-    className: P.setupContainer,
+    className: L.setupContainer,
     children: [
       (0, s.jsx)(c.FormSwitch, {
         value: I,
-        onChange: E,
-        className: P.switchItem,
+        onChange: m,
+        className: L.switchItem,
         disabled: !u,
         hideBorder: !0,
         children: (0, s.jsxs)('div', {
-          className: P.switchItemTextContent,
+          className: L.switchItemTextContent,
           children: [
             (0, s.jsx)(c.Text, {
               color: 'header-primary',
               variant: 'text-md/semibold',
-              children: G.Z.Messages.GUILD_SETTINGS_REQ_MFA_LABEL
+              children: f.Z.Messages.GUILD_SETTINGS_REQ_MFA_LABEL
             }),
             (0, s.jsx)(c.Text, {
               color: 'header-secondary',
               variant: 'text-sm/normal',
-              children: G.Z.Messages.GUILD_SETTINGS_REQ_MFA_BODY
+              children: f.Z.Messages.GUILD_SETTINGS_REQ_MFA_BODY
             })
           ]
         })
       }),
-      _ && (0, s.jsx)(C.Z, {
-        messageType: C.Q.INFO,
+      _ && (0, s.jsx)(E.Z, {
+        messageType: E.Q.INFO,
         textVariant: 'text-xs/normal',
-        children: G.Z.Messages.GUILD_SETTINGS_REQ_MFA_TOOLTIP.format({
+        children: f.Z.Messages.GUILD_SETTINGS_REQ_MFA_TOOLTIP.format({
           onClick: function() {
-            d.Z.open(U.oAB.ACCOUNT);
+            d.Z.open(R.oAB.ACCOUNT);
           }
         })
       })
@@ -485,46 +284,37 @@ children: [
   }) : null;
 }
 
-function V() {
-  var e;
+function j() {
   let {
-guild: t,
-mfaLevel: n
-  } = (0, o.cj)([D.Z], () => D.Z.getProps(), []), a = (0, o.e7)([R.Z], () => R.Z.enabled, []), {
-showAlertMode: i
-  } = (0, m.sw)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : U.lds);
-  return null == t ? null : a ? (0, s.jsx)(u.Z, {}) : (0, s.jsxs)(c.FormSection, {
-title: G.Z.Messages.SAFETY_SETUP,
+guild: e,
+mfaLevel: t
+  } = (0, o.cj)([C.Z], () => C.Z.getProps(), []), n = (0, o.e7)([m.Z], () => m.Z.enabled, []);
+  return null == e ? null : n ? (0, s.jsx)(u.Z, {}) : (0, s.jsxs)(c.FormSection, {
+title: f.Z.Messages.SAFETY_SETUP,
 tag: c.FormTitleTags.H1,
-titleClassName: P.headerContainer,
+titleClassName: L.headerContainer,
 children: [
-  (0, s.jsx)(w, {
-    guild: t
+  (0, s.jsx)(D, {
+    guild: e
   }),
-  (0, s.jsx)(y, {
-    guild: t
+  (0, s.jsx)(O, {
+    guild: e
   }),
-  (0, s.jsx)(H, {
-    guild: t,
-    mfaLevel: n
+  (0, s.jsx)(v, {
+    guild: e,
+    mfaLevel: t
   }),
-  (0, s.jsx)(F, {
-    guild: t
+  (0, s.jsx)(A, {
+    guild: e
   }),
-  i ? (0, s.jsxs)(s.Fragment, {
-    children: [
-      (0, s.jsx)(c.FormDivider, {
-        className: P.divider
-      }),
-      (0, s.jsx)('div', {
-        className: r()(P.setupContainer),
-        children: (0, s.jsx)(j.w, {
-          guild: t
-        })
-      })
-    ]
-  }) : (0, s.jsx)(B, {
-    guild: t
+  (0, s.jsx)(c.FormDivider, {
+    className: L.divider
+  }),
+  (0, s.jsx)('div', {
+    className: r()(L.setupContainer),
+    children: (0, s.jsx)(x.w, {
+      guild: e
+    })
   })
 ]
   });

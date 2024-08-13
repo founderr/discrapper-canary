@@ -1,31 +1,21 @@
-t.d(n, {
+e.d(t, {
   J: function() {
 return r;
-  },
-  K: function() {
-return o;
   }
 });
-var l = t(735250);
-t(470079);
-var a = t(481060),
-  i = t(866266);
+var u = e(735250);
+e(470079);
+var i = e(481060);
 
-function r(e) {
-  (0, a.openModalLazy)(async () => {
+function r(n) {
+  (0, i.openModalLazy)(async () => {
 let {
-  default: n
-} = await t.e('9354').then(t.bind(t, 461533));
-return t => (0, l.jsx)(n, {
-  ...t,
-  guildId: e
+  default: t
+} = await e.e('9354').then(e.bind(e, 461533));
+return e => (0, u.jsx)(t, {
+  ...e,
+  guildId: n
 });
   });
 }
-
-function o(e) {
-  (0, a.openModalLazy)(async () => n => (0, l.jsx)(i.Z, {
-...n,
-guildId: e
-  }));
-}
+e(866266);

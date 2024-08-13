@@ -11,7 +11,7 @@ var i = n(735250),
   p = n(451478),
   _ = n(61634),
   f = n(325257),
-  g = n(587350);
+  g = n(438266);
 t.Z = l.memo(function(e) {
   let {
 guildNode: t,
@@ -22,7 +22,7 @@ unread: Z
   } = (0, r.cj)([d.default], () => ({
 badge: d.default.getMentionCount(m),
 unread: d.default.hasUnread(m)
-  })), T = (0, o.Ij)(C) && 0 === v, L = l.useMemo(() => null != n ? n : T ? (0, i.jsx)('div', {
+  })), T = (0, o.I)(C) && 0 === v, L = l.useMemo(() => null != n ? n : T ? (0, i.jsx)('div', {
 className: g.pauseBackground,
 children: (0, i.jsx)(a.PauseIcon, {
   size: 'custom',

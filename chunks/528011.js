@@ -1,9 +1,9 @@
 t.d(n, {
   g: function() {
-return S;
+return g;
   },
   mI: function() {
-return p;
+return I;
   }
 }), t(47120);
 var r = t(149765),
@@ -15,60 +15,56 @@ var r = t(149765),
   s = t(594174),
   c = t(700785),
   d = t(709054),
-  _ = t(154285),
-  f = t(533244),
-  E = t(487419),
-  I = t(676770),
-  g = t(981631);
+  _ = t(533244),
+  f = t(487419),
+  E = t(676770);
+t(981631);
 
-function p(e) {
-  let {
-showAlertMode: n
-  } = (0, _.sw)(null != e ? e : g.aIL), t = (0, i.e7)([
-l.Z,
-u.Z
-  ], () => {
-let n = l.Z.getGuild(e);
-if (null == n)
-  return !1;
-let t = u.Z.getGuildPermissions(n);
-return null != t && r.Db(t, I.cv);
-  }), o = (0, i.e7)([E.Z], () => null != e ? E.Z.getGuildIncident(e) : null), a = null != o && (0, f.ur)(o);
+function I(e) {
+  let n = (0, i.e7)([
+  l.Z,
+  u.Z
+], () => {
+  let n = l.Z.getGuild(e);
+  if (null == n)
+    return !1;
+  let t = u.Z.getGuildPermissions(n);
+  return null != t && r.Db(t, E.cv);
+}),
+t = (0, i.e7)([f.Z], () => null != e ? f.Z.getGuildIncident(e) : null),
+o = null != t && (0, _.ur)(t);
   return {
-shouldShowIncidentActions: t && n,
-incidentData: o,
-isUnderLockdown: a
+shouldShowIncidentActions: n,
+incidentData: t,
+isUnderLockdown: o
   };
 }
 
-function S() {
+function g() {
   var e;
   let n = function(e) {
   let n = s.default.getCurrentUser(),
-    t = E.Z.getIncidentsByGuild();
+    t = f.Z.getIncidentsByGuild();
   for (let i of d.default.keys(t).map(e => l.Z.getGuild(e))) {
     if (null == i)
       continue;
     let o = t[i.id];
-    if (!(null == o || !(0, f.i9)(o) && !(0, f.ur)(o) || (0, f.ur)(o) && i.id !== e)) {
+    if (!(null == o || !(0, _.i9)(o) && !(0, _.ur)(o) || (0, _.ur)(o) && i.id !== e)) {
       if (r.Db(c.uB({
           user: n,
           context: i,
           checkElevated: !1
-        }), I.cv))
+        }), E.cv))
         return i.id;
     }
   }
   return null;
 }(a.Z.getGuildId()),
-{
-  showAlertMode: t
-} = (0, _.jy)(null != n ? n : g.aIL),
-i = null !== (e = o.Z.getGuildsProto()) && void 0 !== e ? e : {},
-u = null != n ? i[n] : null,
-p = null != u && u.disableRaidAlertNag;
+t = null !== (e = o.Z.getGuildsProto()) && void 0 !== e ? e : {},
+i = null != n ? t[n] : null,
+u = null != i && i.disableRaidAlertNag;
   return {
-show: null != n && t && !p,
+show: null != n && !u,
 guildId: n
   };
 }

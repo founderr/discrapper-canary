@@ -30,7 +30,7 @@ var r = n(735250),
   C = n(126134),
   y = n(981631),
   D = n(689938),
-  L = n(588096);
+  L = n(473422);
 
 function b(e) {
   let {
@@ -86,7 +86,7 @@ function M(e) {
 guild: n,
 closePopout: o,
 nudge: S
-  } = e, A = i.useRef(null), N = (0, u.Z)(n), v = (0, p.Ij)(n), {
+  } = e, A = i.useRef(null), N = (0, u.Z)(n), v = (0, p.I)(n), {
 isViewingRoles: O,
 backNavigationSection: R
   } = (0, a.cj)([T.Z], () => ({
