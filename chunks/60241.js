@@ -18,8 +18,8 @@ var i = n(120356),
   l = n(689938),
   u = n(139665);
 let c = {
-default: u.imageAspectRatioDefault,
-crunchyroll: u.imageAspectRatioCrunchyroll
+default: void 0,
+crunchyroll: u.aspectRatioCrunchyroll
   },
   d = 60,
   _ = 24;
@@ -28,28 +28,25 @@ function E(e) {
   let {
 image: t,
 richImage: n,
-onClick: i,
-aspectRatio: E = 'default'
-  } = e, f = c[E];
+aspectRatio: i,
+onClick: E
+  } = e;
   return (0, r.jsxs)('div', {
-className: a()(u.imagePosition, f),
-style: {
-  aspectRatio: E
-},
+className: a()(u.imagePosition, c[null != i ? i : 'default']),
 children: [
   (0, r.jsx)(s.Tooltip, {
     text: t.text,
     children: e => {
-      var n, c;
+      var n, i;
       return (0, r.jsx)(s.Clickable, {
         ...e,
         className: a()(u.imageContainer, {
-          [u.clickable]: null != i
+          [u.clickable]: null != E
         }),
-        onClick: i,
+        onClick: E,
         children: (0, r.jsx)(o.f, {
           src: t.src,
-          alt: null !== (c = null !== (n = t.alt) && void 0 !== n ? n : t.text) && void 0 !== c ? c : l.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
+          alt: null !== (i = null !== (n = t.alt) && void 0 !== n ? n : t.text) && void 0 !== i ? i : l.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
           size: d,
           className: u.contentImage,
           constrain: 'width'

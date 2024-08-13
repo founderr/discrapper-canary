@@ -34001,14 +34001,23 @@ h3.improved_f017d0:after {
     position: relative;
     overflow: visible;
     display: flex;
-    justify-content: center;
-    min-width: 60px;
-    max-height: 100px
+    height: -moz-max-content;
+    height: max-content;
+    aspect-ratio: 1/1
+}
+
+.imagePosition_ae1fa2.aspectRatioCrunchyroll_ae1fa2 {
+    aspect-ratio: 2/3
 }
 
 .imageContainer_ae1fa2 {
     display: flex;
+    justify-content: center;
     border-radius: var(--radius-xs)
+}
+
+.imageContainer_ae1fa2 .contentImage_ae1fa2 {
+    min-width: 60px
 }
 
 .richImageContainer_ae1fa2 {
@@ -34025,15 +34034,9 @@ h3.improved_f017d0:after {
     flex-shrink: 0
 }
 
-.imageAspectRatioDefault_ae1fa2 {
-    aspect-ratio: 1/1
-}
-
-.imageAspectRatioCrunchyroll_ae1fa2 {
-    aspect-ratio: 2/3
-}
-
 .contentImage_ae1fa2 {
+    -o-object-fit: cover;
+    object-fit: cover;
     border-radius: inherit
 }
 
