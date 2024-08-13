@@ -1,7 +1,7 @@
+var r, i;
 
-function r(e) {
+function a(e) {
   return {
-type: e.type,
 channelId: e.channel_id,
 messageId: e.message_id,
 savedAt: new Date(e.saved_at),
@@ -15,7 +15,10 @@ dueAt: null != e.due_at ? new Date(e.due_at) : void 0
   };
 }
 n.d(t, {
-  v: function() {
+  _: function() {
 return r;
+  },
+  v: function() {
+return a;
   }
-});
+}), (i = r || (r = {})).REMINDER = 'REMINDER', i.BOOKMARK = 'BOOKMARK';

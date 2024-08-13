@@ -1,13 +1,13 @@
 n(47120);
-var r, i, a, s, o = n(873011),
-  l = n(442837),
-  u = n(759174),
-  c = n(570140);
-let d = new u.h(e => {
+var r, i, a, s, o = n(442837),
+  l = n(759174),
+  u = n(570140),
+  c = n(686478);
+let d = new l.h(e => {
 let {
   saveData: t
 } = e;
-return [t.type.toString()];
+return [null != t.dueAt ? c._.REMINDER : c._.BOOKMARK];
   }, e => {
 let {
   saveData: t
@@ -24,16 +24,16 @@ messageId: n
   } = e;
   return ''.concat(t, '-').concat(n);
 }
-class h extends(r = l.ZP.Store) {
+class h extends(r = o.ZP.Store) {
   initialize() {}
   getSavedMessages() {
 return d.values();
   }
   getMessageBookmarks() {
-return d.values(o.J.BOOKMARK.toString());
+return d.values(c._.BOOKMARK);
   }
   getMessageReminders() {
-return d.values(o.J.REMINDER.toString());
+return d.values(c._.REMINDER);
   }
   getOverdueMessageReminderCount() {
 return this.getMessageReminders().filter(e => {
@@ -51,14 +51,14 @@ let n = d.get(f({
   channelId: e,
   messageId: t
 }));
-return (null == n ? void 0 : n.saveData.type) === o.J.BOOKMARK;
+return (null == n ? void 0 : n.saveData.dueAt) == null;
   }
   isMessageReminder(e, t) {
 let n = d.get(f({
   channelId: e,
   messageId: t
 }));
-return (null == n ? void 0 : n.saveData.type) === o.J.REMINDER;
+return (null == n ? void 0 : n.saveData.dueAt) != null;
   }
   hasSentNotification(e) {
 return E.has(e);
@@ -77,7 +77,7 @@ s = 'SavedMessagesStore', (a = 'displayName') in(i = h) ? Object.defineProperty(
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new h(c.Z, {
+}) : i[a] = s, t.Z = new h(u.Z, {
   SAVED_MESSAGES_UPDATE: function(e) {
 let {
   savedMessages: t
@@ -85,7 +85,7 @@ let {
 for (let e of (_ = new Date().getTime(), d.clear(), t))
   d.set(f(e.saveData), e);
 t.forEach(e => {
-  e.saveData.type === o.J.REMINDER && (null != e.saveData.dueAt && e.saveData.dueAt > new Date() && E.delete(e.saveData.messageId), null != e.saveData.dueAt && e.saveData.dueAt < new Date() && E.add(e.saveData.messageId));
+  null != e.saveData.dueAt && (null != e.saveData.dueAt && e.saveData.dueAt > new Date() && E.delete(e.saveData.messageId), null != e.saveData.dueAt && e.saveData.dueAt < new Date() && E.add(e.saveData.messageId));
 });
   },
   SAVED_MESSAGE_CREATE: function(e) {

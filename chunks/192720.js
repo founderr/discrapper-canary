@@ -20,7 +20,6 @@ async function c(e) {
   let t = await r.tn.put({
 url: u.ANM.PUT_SAVED_MESSAGE(e.channelId, e.messageId),
 body: {
-  type: e.type,
   due_at: e.dueAt
 }
   });
