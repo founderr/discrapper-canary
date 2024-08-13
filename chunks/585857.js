@@ -17,17 +17,17 @@ var o = n(120356),
   x = n(796111),
   m = n(46140),
   g = n(981631),
-  f = n(689938),
-  _ = n(59596);
+  _ = n(689938),
+  C = n(59596);
 
-function C(e) {
+function f(e) {
   let {
 quest: t,
 isConnected: n,
 consoleType: o
   } = e;
   return (0, s.jsx)(i.Clickable, {
-className: _.connectConsoleButtonWrapper,
+className: C.connectConsoleButtonWrapper,
 onClick: () => {
   (0, u._3)({
     questId: t.id,
@@ -38,10 +38,10 @@ onClick: () => {
   });
 },
 children: o === g.ABu.PLAYSTATION ? (0, s.jsx)(r.T, {
-  colorClass: a()(_.connectConsoleButton, n ? _.playstationButtonConnected : _.connectConsoleButtonUnconnected),
+  colorClass: a()(C.connectConsoleButton, n ? C.playstationButtonConnected : C.connectConsoleButtonUnconnected),
   size: 'sm'
 }) : (0, s.jsx)(l.M, {
-  colorClass: a()(_.connectConsoleButton, n ? _.xboxButtonConnected : _.connectConsoleButtonUnconnected),
+  colorClass: a()(C.connectConsoleButton, n ? C.xboxButtonConnected : C.connectConsoleButtonUnconnected),
   size: 'sm'
 })
   });
@@ -53,7 +53,7 @@ text: t,
 quest: n
   } = e;
   return (0, s.jsx)(i.Clickable, {
-className: _.showConnectionsButton,
+className: C.showConnectionsButton,
 onClick: () => {
   (0, u._3)({
     questId: n.id,
@@ -78,28 +78,28 @@ playstationAccounts: o,
 xboxAndPlaystationAccounts: r
   } = e, l = r.slice(0, 2), c = r.length > 0, d = n.length > 0, u = o.length > 0;
   return (0, s.jsxs)('div', {
-className: _.inlineConsoleConnectionDetails,
+className: C.inlineConsoleConnectionDetails,
 children: [
   (0, s.jsxs)('div', {
-    className: _.inlineConsoleConnectionDetailsUpper,
+    className: C.inlineConsoleConnectionDetailsUpper,
     children: [
       (0, s.jsx)(i.Text, {
         color: 'header-secondary',
         variant: 'text-xxs/normal',
-        children: c ? f.Z.Messages.QUESTS_CONNECTED : f.Z.Messages.QUESTS_SELECT_TO_START
+        children: c ? _.Z.Messages.QUESTS_CONNECTED : _.Z.Messages.QUESTS_SELECT_TO_START
       }),
       (0, s.jsxs)('div', {
-        className: _.inlineConsoleConnectionDetailsIcons,
+        className: C.inlineConsoleConnectionDetailsIcons,
         children: [
-          (0, s.jsx)(C, {
+          (0, s.jsx)(f, {
             consoleType: g.ABu.PLAYSTATION,
             isConnected: u,
             quest: t
           }),
           (0, s.jsx)('div', {
-            className: _.consoleIconDivider
+            className: C.consoleIconDivider
           }),
-          (0, s.jsx)(C, {
+          (0, s.jsx)(f, {
             consoleType: g.ABu.XBOX,
             isConnected: d,
             quest: t
@@ -109,15 +109,15 @@ children: [
     ]
   }),
   c && (0, s.jsxs)('div', {
-    className: _.inlineConsoleConnectionDetailsLower,
+    className: C.inlineConsoleConnectionDetailsLower,
     children: [
       l.map((e, t) => (0, s.jsxs)('div', {
-        className: a()(_.inlineConsoleConnectionDetailsLowerItem, t > 0 ? _.marginTop4px : void 0),
+        className: a()(C.inlineConsoleConnectionDetailsLowerItem, t > 0 ? C.marginTop4px : void 0),
         children: [
           (0, s.jsx)(i.Text, {
             color: 'header-secondary',
             variant: 'text-xxs/normal',
-            children: e.type === g.ABu.XBOX ? f.Z.Messages.QUESTS_XBOX_ID : f.Z.Messages.QUESTS_PSN_ONLINE_ID_V2
+            children: e.type === g.ABu.XBOX ? _.Z.Messages.QUESTS_XBOX_ID : _.Z.Messages.QUESTS_PSN_ONLINE_ID_V2
           }),
           (0, s.jsx)(i.Text, {
             color: 'header-secondary',
@@ -127,7 +127,7 @@ children: [
         ]
       }, t)),
       r.length > 2 && (0, s.jsx)(h, {
-        text: f.Z.Messages.QUESTS_VIEW_MORE_ACCOUNTS,
+        text: _.Z.Messages.QUESTS_VIEW_MORE_ACCOUNTS,
         quest: t
       })
     ]
@@ -142,7 +142,7 @@ xboxAndPlaystationAccounts: t,
 quest: n
   } = e;
   return t.length > 0 ? (0, s.jsx)(h, {
-text: f.Z.Messages.QUESTS_SHOW_CONNECTIONS,
+text: _.Z.Messages.QUESTS_SHOW_CONNECTIONS,
 quest: n
   }) : null;
 }
@@ -156,7 +156,7 @@ children: [
   (0, s.jsx)(i.Text, {
     color: 'text-muted',
     variant: 'text-xs/medium',
-    children: f.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT
+    children: _.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT
   }),
   t ? (0, s.jsx)(E, {
     ...e

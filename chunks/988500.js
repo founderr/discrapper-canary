@@ -8,11 +8,11 @@ t(470079);
 var a = t(481060),
   l = t(203143),
   r = t(615669),
-  o = t(689938);
-let s = {
+  s = t(689938);
+let o = {
   [r.z.END_EARLY]: e => (0, i.jsx)(a.MenuItem, {
 id: 'end-poll-early',
-label: o.Z.Messages.POLL_END_EARLY,
+label: s.Z.Messages.POLL_END_EARLY,
 icon: a.ClockXIcon,
 action: () => {
   l.Z.endPollEarly({
@@ -29,6 +29,6 @@ iconProps: {
 function u(e) {
   let n = (0, r.Z)(e);
   return 0 === n.length ? null : (0, i.jsx)(i.Fragment, {
-children: n.map(n => s[n](e))
+children: n.map(n => o[n](e))
   });
 }

@@ -27,7 +27,7 @@ onAction: () => null == t ? void 0 : t({
 })
   });
   return [
-n === c.y0.BITE_SIZE ? _ : null,
+n !== c.y0.FULL_SIZE ? _ : null,
 (0, u.Z)(e),
 (0, o.Z)(e),
 (0, l.Z)(e),

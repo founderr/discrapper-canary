@@ -12,9 +12,9 @@ var s = n(735250),
   x = n(617136),
   m = n(272008),
   g = n(113434),
-  f = n(569984),
-  _ = n(497505),
-  C = n(918701),
+  _ = n(569984),
+  C = n(497505),
+  f = n(918701),
   h = n(988303),
   E = n(302245),
   T = n(665430),
@@ -50,9 +50,9 @@ overlayRef: G,
 quest: F,
 useReducedMotion: Y,
 taskDetails: K
-  } = e, X = o.useRef(null), J = (0, c.e7)([f.Z], () => f.Z.isEnrolling(F.id), [F]), $ = (0, g.B6)(F.config.expiresAt), ee = o.useMemo(() => (0, C.nP)(F.config.assets.questBarHero), [F]), et = o.useCallback(() => {
+  } = e, X = o.useRef(null), J = (0, c.e7)([_.Z], () => _.Z.isEnrolling(F.id), [F]), $ = (0, g.B6)(F.config.expiresAt), ee = o.useMemo(() => (0, f.nP)(F.config.assets.questBarHero), [F]), et = o.useCallback(() => {
 (0, m.AH)(F.id, {
-  questContent: _.jn.QUEST_BAR_V2,
+  questContent: C.jn.QUEST_BAR_V2,
   questContentCTA: x.jZ.ACCEPT_QUEST
 });
   }, [F]), en = (0, T.p)({
@@ -65,10 +65,10 @@ location: O.dr.QUESTS_BAR
 autoTrackExposure: !1
   }), eo = (null === (n = F.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, ea = (null === (a = F.userStatus) || void 0 === a ? void 0 : a.completedAt) != null, er = Q && W, el = (0, g._s)({
 quest: F
-  }), ei = K.percentComplete > 0, ec = (0, g.z)(F), [ed, eu, ep] = (0, g.me)(F, K), ex = (0, C.ph)(F), em = (0, S.D)({
+  }), ei = K.percentComplete > 0, ec = (0, g.z)(F), [ed, eu, ep] = (0, g.me)(F, K), ex = (0, f.ph)(F), em = (0, S.D)({
 quest: F,
 location: O.dr.QUESTS_BAR,
-questContent: _.jn.QUEST_BAR_V2,
+questContent: C.jn.QUEST_BAR_V2,
 taskDetails: K,
 useV2Variants: es === h.P.V2 || (0, k.a)(F)
   }), eg = (0, E.vI)(F, O.dr.QUESTS_BAR, !0);
@@ -142,7 +142,7 @@ children: [
               onOpen: H,
               onClose: V,
               onSelect: z,
-              questContent: _.jn.QUEST_BAR_V2,
+              questContent: C.jn.QUEST_BAR_V2,
               quest: F,
               shouldShowDisclosure: !1,
               showShareLink: !0,
@@ -178,10 +178,10 @@ children: [
           activeScreen: ed
         }),
         (0, s.jsx)(j.n, {
-          children: !ea && (0, i.EQ)(ed).with(_.LI.SELECT, () => (0, s.jsx)(I.Z, {
+          children: !ea && (0, i.EQ)(ed).with(C.LI.SELECT, () => (0, s.jsx)(I.Z, {
             onConsole: () => ep(O.cd.CONSOLE),
             onDesktop: () => ep(O.cd.DESKTOP)
-          })).with(_.LI.DESKTOP, () => (0, p.isWeb)() && en && (0, s.jsx)(M.Z, {})).with(_.LI.CONSOLE, () => (0, s.jsx)(R.Z, {
+          })).with(C.LI.DESKTOP, () => (0, p.isWeb)() && en && (0, s.jsx)(M.Z, {})).with(C.LI.CONSOLE, () => (0, s.jsx)(R.Z, {
             quest: F,
             taskDetails: K
           })).exhaustive()
@@ -195,7 +195,7 @@ children: [
             hasMadeProgress: ei,
             isProgressing: ec,
             activeScreen: ed,
-            showBackButton: ed !== _.LI.SELECT && eu.length > 1 && !ei && !ec && en,
+            showBackButton: ed !== C.LI.SELECT && eu.length > 1 && !ei && !ec && en,
             onBack: () => ep(null)
           })
         })
@@ -214,7 +214,7 @@ children: [
                 }),
                 learnMoreStyle: 'text',
                 quest: F,
-                questContent: _.jn.QUEST_BAR_V2,
+                questContent: C.jn.QUEST_BAR_V2,
                 location: O.dr.QUESTS_BAR
               }),
               (0, s.jsx)(d.Heading, {
@@ -306,7 +306,7 @@ children: [
           controls: !1,
           children: (0, s.jsx)('source', {
             src: ex,
-            type: (0, C.mN)(ex)
+            type: (0, f.mN)(ex)
           })
         })
       }) : (0, s.jsx)(A.Fl, {

@@ -5,12 +5,12 @@ return p;
 });
 var s = n(497505),
   o = n(988303),
-  a = n(909389),
-  r = n(941348),
-  l = n(658590),
+  a = n(941348),
+  r = n(658590),
+  l = n(647365),
   i = n(743294);
 let c = {
-component: a.Z,
+component: l.Z,
 getCollapsedHeight: () => 40,
 getPreEnrollmentExpandedHeight: () => 240,
 getPostEnrollmentBackgroundImage: e => 'linear-gradient(90deg, '.concat(e.config.colors.primary, ', ').concat(e.config.colors.secondary, ')'),
@@ -24,7 +24,7 @@ getVerticalPadding: () => 8
   },
   d = i.Li,
   u = {
-component: r.Z,
+component: a.Z,
 getCollapsedHeight: e => {
   var t;
   return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null ? 66 : 40;
@@ -38,8 +38,8 @@ getVerticalPadding: () => d
   },
   p = (e, t, n) => {
 var a;
-let r = (null === (a = e.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null,
-  i = !r && t === o.P.V2 || r && n === o.P.V2 || (0, l.a)(e),
+let l = (null === (a = e.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null,
+  i = !l && t === o.P.V2 || l && n === o.P.V2 || (0, r.a)(e),
   d = i ? u : c;
 return {
   component: d.component,

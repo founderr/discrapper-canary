@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return o;
+return s;
   }
 });
 var i = t(735250);
@@ -9,7 +9,7 @@ var a = t(481060),
   l = t(79390),
   r = t(689938);
 
-function o(e) {
+function s(e) {
   return null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, l.eQ)(e) ? null : (0, i.jsx)(a.MenuItem, {
 id: 'reactions',
 label: r.Z.Messages.VIEW_REACTIONS,

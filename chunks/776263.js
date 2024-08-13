@@ -1,6 +1,6 @@
 n.d(t, {
   y: function() {
-return _;
+return C;
   }
 });
 var s = n(735250);
@@ -65,7 +65,7 @@ return (0, s.jsx)(o.ShinyButton, {
   children: u.Z.Messages.QUESTS_CLAIM_REWARD
 });
   },
-  f = e => {
+  _ = e => {
 var t;
 let {
   quest: n,
@@ -75,16 +75,16 @@ let {
   hasMadeProgress: c,
   isProgressing: u,
   activeScreen: p
-} = e, f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = (0, i.P)({
+} = e, _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, C = (0, i.P)({
   location: d.dr.QUESTS_BAR
 });
-if (f)
+if (_)
   return (0, s.jsx)(g, {
     quest: n,
     useReducedMotion: o,
     isExpanded: a
   });
-if (p === r.LI.CONSOLE && l && !_)
+if (p === r.LI.CONSOLE && l && !C)
   return (0, s.jsx)(m, {
     quest: n
   });
@@ -95,7 +95,7 @@ if (p !== r.LI.SELECT && !c && !u)
 return null;
   };
 
-function _(e) {
+function C(e) {
   return (0, s.jsxs)('div', {
 className: p.ctaButtons,
 children: [
@@ -111,7 +111,7 @@ children: [
       className: p.backIcon
     })
   }),
-  (0, s.jsx)(f, {
+  (0, s.jsx)(_, {
     ...e
   })
 ]

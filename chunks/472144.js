@@ -16,14 +16,14 @@ strokeWidth: p = 3,
 glowBlur: x = 0.4,
 percentCompleteText: m,
 children: g
-  } = e, f = (0, c.EK)(n, o > 0), _ = a / 2, C = a / 2 - p / 2, h = 2 * Math.PI * C, E = h - o * h, T = {
+  } = e, _ = (0, c.EK)(n, o > 0), C = a / 2, f = a / 2 - p / 2, h = 2 * Math.PI * f, E = h - o * h, T = {
 strokeDasharray: ''.concat(h, ' ').concat(h),
 strokeDashoffset: E
   }, S = {
 strokeDasharray: ''.concat(h, ' ').concat(h),
 strokeDashoffset: -o * h
   }, v = {
-boxShadow: '0 0 30px 0px '.concat(f.glow)
+boxShadow: '0 0 30px 0px '.concat(_.glow)
   }, {
 progressTextAnimation: A
   } = (0, i.useSpring)({
@@ -99,11 +99,11 @@ children: [
             children: [
               (0, s.jsx)('stop', {
                 offset: '0%',
-                stopColor: f.backgroundTop
+                stopColor: _.backgroundTop
               }),
               (0, s.jsx)('stop', {
                 offset: '100%',
-                stopColor: f.backgroundBottom
+                stopColor: _.backgroundBottom
               })
             ]
           })
@@ -113,9 +113,9 @@ children: [
         className: u.progress,
         strokeWidth: p,
         fill: 'transparent',
-        r: C,
-        cx: _,
-        cy: _,
+        r: f,
+        cx: C,
+        cy: C,
         stroke: 'url(#linear)',
         style: S
       }),
@@ -123,10 +123,10 @@ children: [
         className: u.progress,
         strokeWidth: p,
         fill: 'transparent',
-        r: C,
-        cx: _,
-        cy: _,
-        stroke: f.foreground,
+        r: f,
+        cx: C,
+        cy: C,
+        stroke: _.foreground,
         style: T
       })
     ]

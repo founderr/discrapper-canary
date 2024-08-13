@@ -11,9 +11,9 @@ var s = n(735250),
   x = n(111382),
   m = n(113434),
   g = n(497505),
-  f = n(918701),
-  _ = n(566078),
-  C = n(667105),
+  _ = n(918701),
+  C = n(566078),
+  f = n(667105),
   h = n(585857),
   E = n(46140),
   T = n(981631),
@@ -69,7 +69,7 @@ function j(e) {
   let {
 quest: t,
 useReducedMotion: n
-  } = e, a = (0, x.n)(), i = (0, C.k3)(t.id, g.jn.QUEST_BAR_V2), d = (0, C.g2)({
+  } = e, a = (0, x.n)(), i = (0, f.k3)(t.id, g.jn.QUEST_BAR_V2), d = (0, f.g2)({
 useReducedMotion: n
   }), {
 errorHints: h,
@@ -94,14 +94,14 @@ let e = h.length > 0,
     children: h.map((e, n) => {
       if (e.type === l.K.EXPIRED_CREDENTIAL && a) {
         let o = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-          a = (0, f.C9)(e),
-          r = (0, f._j)(e),
+          a = (0, _.C9)(e),
+          r = (0, _._j)(e),
           l = r === T.ABu.XBOX;
         return (0, s.jsx)(N, {
           children: a.format({
             account_name: null == o ? void 0 : o.name,
             onClick: () => {
-              (0, f.fY)({
+              (0, _.fY)({
                 quest: t,
                 showInline: l,
                 platformType: r
@@ -118,7 +118,7 @@ let e = h.length > 0,
       }, n);
     })
   });
-if ((0, f.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST))
+if ((0, _.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST))
   return {
     header: e ? S.Z.Messages.QUESTS_ANY_GAME_NOT_DETECTED : S.Z.Messages.QUESTS_MICROPHONE_UNIT_HEADER,
     renderBody: e ? n : () => (0, s.jsx)(c.Text, {
@@ -128,7 +128,7 @@ if ((0, f.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST))
       children: S.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY_ANY_GAME
     })
   };
-let o = _.r.build(t.config).application.name;
+let o = C.r.build(t.config).application.name;
 return {
   header: e ? S.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({
     gameTitle: o
@@ -212,9 +212,9 @@ isQuestComplete: x
   } = o.useMemo(() => {
 var e;
 let o = r.xboxAndPlaystationAccounts.length > 0,
-  a = o && (0, f.Bz)(t),
-  l = (0, f.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST),
-  i = _.r.build(t.config).application.name,
+  a = o && (0, _.Bz)(t),
+  l = (0, _.zK)(t, E.S7.IN_HOUSE_CONSOLE_QUEST),
+  i = C.r.build(t.config).application.name,
   c = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
 return {
   steps: [{

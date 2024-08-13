@@ -17,8 +17,8 @@ isExpanded: x,
 taskDetails: m,
 activeScreen: g
   } = e, {
-percentComplete: f
-  } = m, _ = (0, c.eQ)(n), C = (0, c.vf)(n, x, g);
+percentComplete: _
+  } = m, C = (0, c.eQ)(n), f = (0, c.vf)(n, x, g);
   return (0, s.jsxs)('div', {
 className: u.questProgressWrapper,
 children: [
@@ -29,7 +29,7 @@ children: [
     children: e => (0, s.jsx)(i.Z, {
       ref: e,
       quest: n,
-      percentComplete: f,
+      percentComplete: _,
       size: 42,
       strokeWidth: 3,
       children: (0, s.jsx)(r.Z, {
@@ -52,7 +52,7 @@ children: [
           className: u.questProgressHint,
           color: 'header-primary',
           variant: 'text-sm/semibold',
-          children: _
+          children: C
         })
       }),
       (0, s.jsx)(l.l7, {
@@ -64,7 +64,7 @@ children: [
           className: u.questProgressHint,
           color: 'text-muted',
           variant: 'text-xs/normal',
-          children: C
+          children: f
         })
       })
     ]

@@ -3,13 +3,13 @@ n.d(t, {
 return h;
   },
   GX: function() {
-return C;
-  },
-  eQ: function() {
 return f;
   },
-  vf: function() {
+  eQ: function() {
 return _;
+  },
+  vf: function() {
+return C;
   }
 }), n(47120);
 var s = n(470079),
@@ -26,7 +26,7 @@ var s = n(470079),
   m = n(46140),
   g = n(689938);
 
-function f(e) {
+function _(e) {
   var t, n;
   let s = (0, o.e7)([l.default], () => l.default.locale),
 {
@@ -45,7 +45,7 @@ return g.Z.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({
   return (0, u.$J)(e) ? g.Z.Messages.QUEST_BAR_TITLE_START_PLAYING : g.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
 }
 
-function _(e, t, n) {
+function C(e, t, n) {
   var s;
   let o = (0, c.B6)(x.r.build(e.config).rewardsExpireAt),
 a = (0, c.Rf)(e),
@@ -72,7 +72,7 @@ return l ? (0, u.AV)({
   return g.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED_SUBTITLE;
 }
 
-function C() {
+function f() {
   let [{
 spring: e
   }, t] = (0, a.useSpring)(() => ({

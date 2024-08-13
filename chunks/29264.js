@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return O;
+return R;
   }
 }), t(47120);
 var i = t(735250);
@@ -8,8 +8,8 @@ t(470079);
 var a = t(481060),
   l = t(668781),
   r = t(829883),
-  o = t(976853),
-  s = t(626135),
+  s = t(976853),
+  o = t(626135),
   u = t(358085),
   d = t(960048),
   c = t(591759),
@@ -30,29 +30,29 @@ let _ = 'https://media.discordapp.net',
 'tiff',
 'bmp'
   ]),
-  v = new Set([
+  T = new Set([
 'jpg',
 'jpeg',
 'png'
   ]),
-  A = e => {
+  v = e => {
 var n, t, i, a;
 return null === (a = c.Z.toURLSafe(e)) || void 0 === a ? void 0 : null === (i = a.pathname) || void 0 === i ? void 0 : null === (t = i.split('.')) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase();
   };
 
-function T(e, n) {
+function A(e, n) {
   l.Z.show({
 title: m.Z.Messages.ERROR,
 body: e
   }), d.Z.captureException(n);
 }
 
-function O(e, n, t) {
-  if ((0, o.Z)(null == n ? void 0 : n.getChannelId()) || (null == t ? void 0 : t.shouldHideMediaOptions) === !0 || !u.isPlatformEmbedded || null == e || ! function(e) {
+function R(e, n, t) {
+  if ((0, s.Z)(null == n ? void 0 : n.getChannelId()) || (null == t ? void 0 : t.shouldHideMediaOptions) === !0 || !u.isPlatformEmbedded || null == e || ! function(e) {
   let n = c.Z.toURLSafe(e);
   if (null == n)
     return !1;
-  let t = A(e);
+  let t = v(e);
   return (g.test(n.hostname) || n.host === f) && !e.startsWith(Z) && !(0, r.zt)(e) && null != t && S.has(t);
 }(e))
 return null;
@@ -62,33 +62,33 @@ return null;
 }(e),
 d = async () => {
   try {
-    await E.ZP.saveImage(l), s.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVED, {
+    await E.ZP.saveImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVED, {
       ...(0, M.v)()
     });
   } catch (e) {
-    s.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, {
+    o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, {
       ...(0, M.v)()
-    }), T(m.Z.Messages.ERROR_SAVING_IMAGE, e);
+    }), A(m.Z.Messages.ERROR_SAVING_IMAGE, e);
   }
-}, O = async () => {
+}, R = async () => {
   try {
-    await E.ZP.copyImage(l), s.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPIED, {
+    await E.ZP.copyImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPIED, {
       ...(0, M.v)()
     });
   } catch (e) {
-    T(m.Z.Messages.ERROR_COPYING_IMAGE, e), s.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, {
+    A(m.Z.Messages.ERROR_COPYING_IMAGE, e), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, {
       ...(0, M.v)()
     });
   }
 };
   return [
 E.ZP.canCopyImage() && function(e) {
-  let n = A(e);
-  return null != n && v.has(n);
+  let n = v(e);
+  return null != n && T.has(n);
 }(e) ? (0, i.jsx)(a.MenuItem, {
   id: 'copy-image',
   label: m.Z.Messages.COPY_IMAGE_MENU_ITEM,
-  action: O
+  action: R
 }, 'copy-image') : null,
 (0, i.jsx)(a.MenuItem, {
   id: 'save-image',

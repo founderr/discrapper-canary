@@ -11,9 +11,9 @@ var s = n(735250),
   x = n(685613),
   m = n(670638),
   g = n(341907),
-  f = n(898170),
   _ = n(303385),
-  C = n(46140),
+  C = n(788284),
+  f = n(46140),
   h = n(689938),
   E = n(91242);
 t.Z = e => {
@@ -36,7 +36,7 @@ isExpansionAnimationComplete: j
   content: d.jn.QUEST_BAR_V2,
   ctaContent: c.jZ.OPEN_GAME_LINK
 });
-  }, [t]), R = N && j, y = (0, p.vI)(t, C.dr.QUESTS_BAR, !0), I = (0, s.jsx)(i.Clickable, {
+  }, [t]), R = N && j, y = (0, p.vI)(t, f.dr.QUESTS_BAR, !0), I = (0, s.jsx)(i.Clickable, {
 onClick: b,
 className: r()({
   [E.logo]: R
@@ -120,7 +120,7 @@ children: [
         ]
       })
     },
-    children: (0, s.jsx)(f.Z, {
+    children: (0, s.jsx)(C.Z, {
       className: E.background,
       animationClassName: E.backgroundAnimation,
       quest: t,

@@ -37,13 +37,13 @@ let {
   recalculateAnimationPositions: x,
   registerComponent: m,
   unregisterComponent: g,
-  expansionSpring: f,
-  mountPoints: _
-} = o.useContext(c), C = o.useRef(null), h = o.useRef(null), E = o.useRef();
+  expansionSpring: _,
+  mountPoints: C
+} = o.useContext(c), f = o.useRef(null), h = o.useRef(null), E = o.useRef();
 o.useEffect(() => {
   x();
 }, [x]), o.useLayoutEffect(() => {
-  let e = C.current;
+  let e = f.current;
   return null != e && m(e, d, u), () => {
     null != e && g(d, u);
   };
@@ -59,15 +59,15 @@ let T = o.useCallback(e => {
   } = e;
   E.current !== t && (x(), E.current = t);
 }, [x]);
-(0, l.P)(C, T);
-let S = null === (n = _.get(d)) || void 0 === n ? void 0 : n.current,
+(0, l.P)(f, T);
+let S = null === (n = C.get(d)) || void 0 === n ? void 0 : n.current,
   v = null;
-return null == S ? v = null : p && null != f ? v = (0, s.jsxs)(s.Fragment, {
+return null == S ? v = null : p && null != _ ? v = (0, s.jsxs)(s.Fragment, {
   children: [
     'collapsed' === u && (0, a.createPortal)((0, s.jsx)(r.animated.div, {
       style: {
         position: 'absolute',
-        opacity: f.to({
+        opacity: _.to({
           range: [
             0,
             1
@@ -83,7 +83,7 @@ return null == S ? v = null : p && null != f ? v = (0, s.jsxs)(s.Fragment, {
     'expanded' === u && (0, a.createPortal)((0, s.jsx)(r.animated.div, {
       style: {
         position: 'absolute',
-        opacity: f.to({
+        opacity: _.to({
           range: [
             0,
             1
@@ -103,7 +103,7 @@ return null == S ? v = null : p && null != f ? v = (0, s.jsxs)(s.Fragment, {
   },
   ref: t,
   children: [
-    i(C),
+    i(f),
     v
   ]
 });
@@ -132,7 +132,7 @@ let {
     let n = new Map(e);
     return n.set(t, o.createRef()), n;
   });
-}, []), f = o.useCallback((e, t) => {
+}, []), _ = o.useCallback((e, t) => {
   let n = !1;
   d(s => {
     var o;
@@ -148,7 +148,7 @@ let {
     let n = new Map(t);
     return n.delete(e), n;
   });
-}, []), _ = o.useCallback(() => {
+}, []), C = o.useCallback(() => {
   let e = [];
   for (let t in l) {
     if (null == l[t] || null == n.current || null == a.current)
@@ -165,14 +165,14 @@ let {
       x = d.top - u.top,
       m = r.left - c.left + i.Li,
       g = d.left - u.left,
-      f = -r.right + c.right + i.Li,
-      _ = -d.right + u.right;
+      _ = -r.right + c.right + i.Li,
+      C = -d.right + u.right;
     e.push({
       id: t,
       collapsedLeft: g,
       expandedLeft: m,
-      collapsedRight: _,
-      expandedRight: f,
+      collapsedRight: C,
+      expandedRight: _,
       collapsedTop: x,
       expandedTop: p,
       width: r.width
@@ -188,11 +188,11 @@ let {
 return (0, s.jsx)(c.Provider, {
   value: {
     registerComponent: g,
-    unregisterComponent: f,
+    unregisterComponent: _,
     animatedComponents: l,
     expandedContentRef: n,
     collapsedContentRef: a,
-    recalculateAnimationPositions: _,
+    recalculateAnimationPositions: C,
     animatedComponentProps: u,
     expansionSpring: r,
     mountPoints: x

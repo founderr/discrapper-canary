@@ -42,9 +42,9 @@ springConfig: p,
 isExpanded: x
   } = o.useContext(u), m = (0, r.e7)([d.Z], () => d.Z.useReducedMotion), {
 ref: g,
-height: f = null
-  } = (0, i.Z)(), _ = null !== (t = (0, c.Z)(f)) && void 0 !== t ? t : null, [{
-height: C
+height: _ = null
+  } = (0, i.Z)(), C = null !== (t = (0, c.Z)(_)) && void 0 !== t ? t : null, [{
+height: f
   }, h] = (0, l.useSpring)(() => ({
 from: {
   height: 0
@@ -52,19 +52,19 @@ from: {
 config: p
   }));
   return o.useLayoutEffect(() => {
-null !== f && h({
-  height: f,
-  immediate: !x || m || null === _
+null !== _ && h({
+  height: _,
+  immediate: !x || m || null === C
 });
   }, [
-f,
+_,
 h,
 x,
 m,
-_
+C
   ]), (0, s.jsx)(a.animated.div, {
 style: {
-  height: null === _ ? 'auto' : C,
+  height: null === C ? 'auto' : f,
   overflow: 'hidden'
 },
 children: (0, s.jsx)('div', {

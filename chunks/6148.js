@@ -8,15 +8,15 @@ t(470079);
 var a = t(442837),
   l = t(481060),
   r = t(904245),
-  o = t(665906),
-  s = t(314897),
+  s = t(665906),
+  o = t(314897),
   u = t(418476),
   d = t(689938);
 
 function c(e, n) {
-  let t = (0, a.e7)([s.default], () => s.default.getId()),
-c = (0, o.$R)(n),
-E = (0, o.Gu)(n);
+  let t = (0, a.e7)([o.default], () => o.default.getId()),
+c = (0, s.$R)(n),
+E = (0, s.Gu)(n);
   return (0, u.Z)(e, t) && c && !E ? (0, i.jsx)(l.MenuItem, {
 id: 'edit',
 label: d.Z.Messages.EDIT_MESSAGE,

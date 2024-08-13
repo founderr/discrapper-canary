@@ -17,14 +17,14 @@ partnerBranding: x,
 useReducedMotion: m
   } = e, {
 enabled: g,
-variant: f
+variant: _
   } = l.Hp.useExperiment({
 location: c.dr.QUESTS_BAR
   });
   if (!g)
 return null;
-  let _ = null;
-  return (f === l.PW.REWARD_AVAILABLE ? _ = d.Z.Messages.REWARD_AVAILABLE : f === l.PW.EARN_A_REWARD ? _ = d.Z.Messages.EARN_A_REWARD : f === l.PW.EARN_A_REWARD_EXCLAMATION && (_ = d.Z.Messages.EARN_A_REWARD_EXCLAIMATION), null == _) ? null : (0, s.jsxs)(s.Fragment, {
+  let C = null;
+  return (_ === l.PW.REWARD_AVAILABLE ? C = d.Z.Messages.REWARD_AVAILABLE : _ === l.PW.EARN_A_REWARD ? C = d.Z.Messages.EARN_A_REWARD : _ === l.PW.EARN_A_REWARD_EXCLAMATION && (C = d.Z.Messages.EARN_A_REWARD_EXCLAIMATION), null == C) ? null : (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)(o.animated.div, {
     className: u.rewardTileSpacer,
@@ -143,7 +143,7 @@ children: [
         children: (0, s.jsx)(a.Text, {
           color: 'always-white',
           variant: 'text-xs/medium',
-          children: _
+          children: C
         })
       })
     ]

@@ -7,8 +7,8 @@ var i = t(735250),
   a = t(470079),
   l = t(442837),
   r = t(481060),
-  o = t(668781),
-  s = t(79390),
+  s = t(668781),
+  o = t(79390),
   u = t(222677),
   d = t(665906),
   c = t(496675),
@@ -30,7 +30,7 @@ return (null === (t = n.count_details) || void 0 === t ? void 0 : t.vote) != nul
   n.emoji
 ];
   }, []), Z = (t, i) => {
-t.shiftKey ? (0, u.$E)(n.id, e.id, i) : o.Z.show({
+t.shiftKey ? (0, u.$E)(n.id, e.id, i) : s.Z.show({
   title: m.Z.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_TITLE,
   body: m.Z.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_BODY,
   confirmText: m.Z.Messages.YES_TEXT,
@@ -40,7 +40,7 @@ t.shiftKey ? (0, u.$E)(n.id, e.id, i) : o.Z.show({
   }
 });
   };
-  return !g || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, s.eQ)(e) ? null : (0, i.jsx)(r.MenuItem, {
+  return !g || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, o.eQ)(e) ? null : (0, i.jsx)(r.MenuItem, {
 id: 'remove-emoji-reactions',
 label: m.Z.Messages.REMOVE_EMOJI_REACTIONS,
 color: 'danger',

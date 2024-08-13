@@ -12,9 +12,9 @@ var s = n(735250),
   x = n(819640),
   m = n(569379),
   g = n(675654),
-  f = n(301095),
-  _ = n(197857);
-let C = ['#51BC9D'];
+  _ = n(301095),
+  C = n(197857);
+let f = ['#51BC9D'];
 t.Z = e => {
   var t;
   let {
@@ -117,24 +117,24 @@ L,
 v,
 U
   ]), j) ? null : (0, s.jsxs)('div', {
-className: f.wrapper,
+className: _.wrapper,
 'aria-hidden': 'true',
 ref: B,
 children: [
   (0, s.jsx)(c.animated.div, {
-    className: f.background,
+    className: _.background,
     style: {
       opacity: S
     }
   }),
   (0, s.jsx)(c.animated.div, {
-    className: r()(f.borders, f.bordersTopLeft),
+    className: r()(_.borders, _.bordersTopLeft),
     style: {
       opacity: S
     }
   }),
   (0, s.jsxs)(c.animated.div, {
-    className: f.confettiWrapper,
+    className: _.confettiWrapper,
     style: {
       transform: n.to({
         range: [
@@ -150,18 +150,18 @@ children: [
     children: [
       (0, s.jsx)(l.O_, {
         ref: I,
-        className: f.confetti,
+        className: _.confetti,
         environment: O.current
       }),
       (0, s.jsx)(l.Ji, {
         ref: M,
-        sprites: [_],
-        colors: C,
+        sprites: [C],
+        colors: f,
         spriteWidth: g.Ko,
         spriteHeight: g.Ko
       }),
       null != a.current && (0, i.createPortal)((0, s.jsx)(c.animated.div, {
-        className: r()(f.borders, f.bordersBottom),
+        className: r()(_.borders, _.bordersBottom),
         style: {
           opacity: S
         }

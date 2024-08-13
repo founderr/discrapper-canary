@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return o;
+return s;
   }
 });
 var i = t(735250);
@@ -9,7 +9,7 @@ var a = t(481060),
   l = t(163268),
   r = t(689938);
 
-function o(e, n) {
+function s(e, n) {
   return null != n && (0, l.KP)({
 type: l.lJ.GenericMedia,
 media: n

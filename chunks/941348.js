@@ -15,12 +15,12 @@ expansionSpring: p,
 isExpanded: x,
 isExpansionAnimationComplete: m,
 onCtxMenuOpened: g,
-onCtxMenuClosed: f,
-onCtxMenuSelection: _,
-quest: C,
+onCtxMenuClosed: _,
+onCtxMenuSelection: C,
+quest: f,
 useReducedMotion: h,
 collapsedHeight: E
-  } = e, T = o.useRef(null), S = o.useRef(null), v = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, A = (0, a.Rf)(C);
+  } = e, T = o.useRef(null), S = o.useRef(null), v = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, A = (0, a.Rf)(f);
   return (0, s.jsxs)(l.p, {
 expandedContentRef: n,
 collapsedContentRef: T,
@@ -32,7 +32,7 @@ children: [
     expansionSpring: p,
     isExpanded: x,
     isExpansionAnimationComplete: m,
-    quest: C,
+    quest: f,
     useReducedMotion: h,
     taskDetails: A
   }),
@@ -41,12 +41,12 @@ children: [
     className: u.content,
     collapsedHeight: E,
     onCtxMenuOpen: g,
-    onCtxMenuClose: f,
-    onCtxMenuSelect: _,
+    onCtxMenuClose: _,
+    onCtxMenuSelect: C,
     overlayRef: S,
     isExpanded: x,
     isExpansionAnimationComplete: m,
-    quest: C,
+    quest: f,
     useReducedMotion: h,
     ref: n,
     taskDetails: A,
@@ -57,14 +57,14 @@ children: [
           isExpanded: x
         }),
         !v && (0, s.jsx)(r.Z, {
-          quest: C,
+          quest: f,
           expansionSpring: p,
           useReducedMotion: h,
           isExpanded: x,
           isExpansionAnimationComplete: m,
           onCtxMenuOpen: g,
-          onCtxMenuClose: f,
-          onCtxMenuSelect: _
+          onCtxMenuClose: _,
+          onCtxMenuSelect: C
         })
       ]
     })
