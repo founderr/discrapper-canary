@@ -78,7 +78,7 @@ isEnrolling: M
   } = (0, r.cj)([u.Z], () => ({
 isClaiming: u.Z.isClaimingReward(C.id) || u.Z.isFetchingRewardCode(C.id),
 isEnrolling: u.Z.isEnrolling(C.id)
-  })), D = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = (null === (n = C.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = y && (null === (a = C.userStatus) || void 0 === a ? void 0 : a.claimedAt) == null, U = (0, E.iQ)(C), G = !(0, E.zi)(C), k = (0, d._Q)(C), w = (0, E.zK)(C, I.S7.IN_HOUSE_CONSOLE_QUEST), B = (0, E.Xv)(C.config), H = (0, d.Rf)(C), [V, F, Y] = (0, d.me)(C, H), W = V === _.LI.SELECT, z = !W && F.length > 1, {
+  })), D = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = (null === (n = C.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = y && (null === (a = C.userStatus) || void 0 === a ? void 0 : a.claimedAt) == null, U = (0, E.iQ)(C), G = !(0, E.zi)(C), k = (0, d._Q)(C), w = (0, E.zK)(C, I.S7.IN_HOUSE_CONSOLE_QUEST), B = (0, E.Xv)(C.config), H = (0, d.Rf)(C), [V, F, Y] = (0, d.me)(C, H), W = G && V === _.LI.SELECT, z = G && !W && F.length > 1, {
 text: K,
 onClick: q
   } = (0, h.Ks)({
