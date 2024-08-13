@@ -117,7 +117,7 @@ BOTTOM_RIGHT: {
   b = 'falling-leaf',
   D = ['#61D5B2'],
   j = n(303893),
-  U = n(808392),
+  U = n(313226),
   y = [
 j,
 U

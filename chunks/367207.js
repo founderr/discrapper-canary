@@ -21,16 +21,16 @@ var l = n(392711),
   N = n(514851),
   x = n(970645),
   S = n(30684),
-  v = n(6242),
-  Z = n(757692),
+  Z = n(6242),
+  v = n(757692),
   T = n(114064),
   L = n(684259),
   A = n(937579),
   b = n(1163),
   M = n(841174),
   R = n(11352),
-  P = n(474936),
-  O = n(981631),
+  O = n(474936),
+  P = n(981631),
   y = n(354459),
   j = n(37113),
   D = n(689938);
@@ -105,7 +105,7 @@ let {
 }, {
   autoTrackExposure: !1
 });
-if (!t || e.state !== O.hes.DISCONNECTED || e.willReconnect)
+if (!t || e.state !== P.hes.DISCONNECTED || e.willReconnect)
   return;
 let n = p.Z.getChannel(e.channelId);
 if (null == n)
@@ -163,12 +163,12 @@ super(...e), w(this, '_premiumPaymentModalCloseResolve', null), w(this, '_premiu
 }), w(this, '_maybeSendViewerUpsellMessage', (0, l.debounce)((e, t, n) => {
   var i, l;
   let r = d.Z.getSelectedParticipant(e),
-    a = (0, Z.o)(r, n),
+    a = (0, v.o)(r, n),
     {
       sendNitroMessage: s
-    } = (0, v.TD)(a),
-    c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : O.Eu4.NONE;
-  if (!!s && !(c >= O.Eu4.TIER_2) && (null == r ? void 0 : r.type) === y.fO.STREAM && (null == r ? void 0 : r.id) !== (null == n ? void 0 : n.id) && null != r.maxResolution && null != r.maxFrameRate) {
+    } = (0, Z.TD)(a),
+    c = null !== (l = null === (i = _.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : P.Eu4.NONE;
+  if (!!s && !(c >= P.Eu4.TIER_2) && (null == r ? void 0 : r.type) === y.fO.STREAM && (null == r ? void 0 : r.id) !== (null == n ? void 0 : n.id) && null != r.maxResolution && null != r.maxFrameRate) {
     if (e !== this._lastStreamingChannelId) {
       this._lastStreamingChannelId = e;
       let n = D.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
@@ -176,10 +176,10 @@ super(...e), w(this, '_premiumPaymentModalCloseResolve', null), w(this, '_premiu
         resolution: (0, j.o6)(r.maxResolution.height),
         fps: (0, I.bp)(r.maxFrameRate)
       });
-      o.Z.sendNitroSystemMessage(e, n), m.default.track(O.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
-        type: P.cd.HD_STREAMING_VIEWER_UPSELL,
-        location_section: null != t ? O.jXE.TEXT_IN_VOICE : O.jXE.CHANNEL_TEXT_AREA,
-        location_object: O.qAy.MESSAGE,
+      o.Z.sendNitroSystemMessage(e, n), m.default.track(P.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+        type: O.cd.HD_STREAMING_VIEWER_UPSELL,
+        location_section: null != t ? P.jXE.TEXT_IN_VOICE : P.jXE.CHANNEL_TEXT_AREA,
+        location_object: P.qAy.MESSAGE,
         guild_id: t
       });
     }

@@ -37,7 +37,7 @@ applicationId: t.id,
 channelId: n.id,
 launchingComponentId: x,
 onSubmissionComplete: I
-  }), [L, b] = a.useState(!1), R = (0, c.Qv)({
+  }), [L, R] = a.useState(!1), b = (0, c.Qv)({
 applicationId: t.id,
 channelId: n.id
   }), {
@@ -50,10 +50,10 @@ application: t,
 location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW,
 sectionName: E,
 commandName: N,
-autoDismissOnClick: R === c.JS.LEAVE,
+autoDismissOnClick: b === c.JS.LEAVE,
 launchingComponentId: x,
 submitting: null != P ? P : g
-  }), y = function(e) {
+  }), j = function(e) {
 let {
   channel: n,
   activityAction: t
@@ -71,10 +71,10 @@ switch (t) {
 return o;
   }({
 channel: n,
-activityAction: R
+activityAction: b
   });
   return (0, i.jsx)(o.Tooltip, {
-shouldShow: y,
+shouldShow: j,
 tooltipContentClassName: A.tooltipContent,
 text: h.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START,
 children: e => {
@@ -87,10 +87,10 @@ children: e => {
     type: 'submit',
     size: v,
     color: T,
-    disabled: y,
+    disabled: j,
     submitting: L,
     onClick: () => {
-      b(!0), S(), null == n || n();
+      R(!0), S(), null == n || n();
     },
     'aria-label': h.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
       buttonText: M,

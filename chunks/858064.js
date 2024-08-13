@@ -112,8 +112,8 @@ viewerCountRequirement: E
   } = m.config, N = m.drop, {
 header: x,
 body: S,
-imgSrc: v,
-imgStyle: Z
+imgSrc: Z,
+imgStyle: v
   } = f(n, N, I), T = () => {
 o.default.track(h.rMx.DROPS_ACTIVITY_PANEL_POPOVER_CTA_CLICK, {
   user_id: C,
@@ -129,9 +129,9 @@ t();
 className: _.container,
 children: [
   (0, i.jsx)('img', {
-    src: v,
+    src: Z,
     alt: '',
-    className: Z
+    className: v
   }),
   (0, i.jsx)(r.Clickable, {
     className: _.__invalid_buttonClose,

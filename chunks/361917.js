@@ -28,8 +28,8 @@ var i = t(735250),
   P = t(424602),
   L = t(541099),
   R = t(827498),
-  S = t(87005),
-  b = t(783097),
+  b = t(87005),
+  S = t(783097),
   T = t(695676),
   M = t(98880),
   j = t(804307),
@@ -68,7 +68,7 @@ setScroller: r,
 isScrollCloseToBottom: s
   } = e, u = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []), _ = P.nS.useExperiment({
 location: 'app_launcher_home'
-  }).enabled, C = !!_ || t === R._b.TEXT, f = t === R._b.TEXT && !n.isPrivate(), h = _ || t === R._b.TEXT, A = !_ && t === R._b.VOICE, E = t === R._b.TEXT, [N, v] = $(C), [x, I] = $(f), [g, L] = $(h), [S, b] = $(A), T = N && x && g && S, M = (h || f) && !T, j = A && u;
+  }).enabled, C = !!_ || t === R._b.TEXT, f = t === R._b.TEXT && !n.isPrivate(), h = _ || t === R._b.TEXT, A = !_ && t === R._b.VOICE, E = t === R._b.TEXT, [N, v] = $(C), [x, I] = $(f), [g, L] = $(h), [b, S] = $(A), T = N && x && g && b, M = (h || f) && !T, j = A && u;
   a.useEffect(() => {
 (0, p.w1)({
   guildId: n.getGuildId(),
@@ -115,7 +115,7 @@ children: [
         }),
         A && (0, i.jsx)(q, {
           channel: n,
-          onEmptyState: b
+          onEmptyState: S
         }),
         T && (0, i.jsx)(O.A, {
           type: R.LG.HOME_EMPTY,
@@ -213,11 +213,11 @@ onEmptyState: l
   } = e, {
 frecentApps: o,
 loading: r
-  } = (0, S.f)(n), s = t === R._b.VOICE, c = a.useMemo(() => {
+  } = (0, b.f)(n), s = t === R._b.VOICE, c = a.useMemo(() => {
 let e = [];
 for (let n of o)
   if (null != n.application) {
-    if (s && !(0, b.ye)({
+    if (s && !(0, S.ye)({
         application: n.application
       }))
       continue;

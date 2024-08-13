@@ -1,45 +1,45 @@
 var n = r(466293),
-  _ = r(139069),
-  a = r(703284),
+  a = r(139069),
+  o = r(703284),
   i = r(501979),
-  o = r(98368),
+  _ = r(98368),
   E = r(433005),
   s = n ? n.prototype : void 0,
   c = s ? s.valueOf : void 0;
-t.exports = function(t, e, r, n, s, I, R) {
+e.exports = function(e, t, r, n, s, I, u) {
   switch (r) {
 case '[object DataView]':
-  if (t.byteLength != e.byteLength || t.byteOffset != e.byteOffset)
+  if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset)
     break;
-  t = t.buffer, e = e.buffer;
+  e = e.buffer, t = t.buffer;
 case '[object ArrayBuffer]':
-  if (t.byteLength != e.byteLength || !I(new _(t), new _(e)))
+  if (e.byteLength != t.byteLength || !I(new a(e), new a(t)))
     break;
   return !0;
 case '[object Boolean]':
 case '[object Date]':
 case '[object Number]':
-  return a(+t, +e);
+  return o(+e, +t);
 case '[object Error]':
-  return t.name == e.name && t.message == e.message;
+  return e.name == t.name && e.message == t.message;
 case '[object RegExp]':
 case '[object String]':
-  return t == e + '';
+  return e == t + '';
 case '[object Map]':
-  var T = o;
+  var l = _;
 case '[object Set]':
-  var u = 1 & n;
-  if (T || (T = E), t.size != e.size && !u)
+  var R = 1 & n;
+  if (l || (l = E), e.size != t.size && !R)
     break;
-  var l = R.get(t);
-  if (l)
-    return l == e;
-  n |= 2, R.set(t, e);
-  var A = i(T(t), T(e), n, s, I, R);
-  return R.delete(t), A;
+  var A = u.get(e);
+  if (A)
+    return A == t;
+  n |= 2, u.set(e, t);
+  var T = i(l(e), l(t), n, s, I, u);
+  return u.delete(e), T;
 case '[object Symbol]':
   if (c)
-    return c.call(t) == c.call(e);
+    return c.call(e) == c.call(t);
   }
   return !1;
 };

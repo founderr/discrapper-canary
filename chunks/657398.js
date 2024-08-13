@@ -1,7 +1,7 @@
 var n = r(466293),
-  _ = r(146945),
-  a = r(251584),
+  a = r(146945),
+  o = r(251584),
   i = n ? n.toStringTag : void 0;
-t.exports = function(t) {
-  return null == t ? void 0 === t ? '[object Undefined]' : '[object Null]' : i && i in Object(t) ? _(t) : a(t);
+e.exports = function(e) {
+  return null == e ? void 0 === e ? '[object Undefined]' : '[object Null]' : i && i in Object(e) ? a(e) : o(e);
 };

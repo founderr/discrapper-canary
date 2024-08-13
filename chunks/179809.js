@@ -24,8 +24,8 @@ var i = n(735250),
   N = n(662146),
   x = n(689938),
   S = n(325093),
-  v = n(81733);
-let Z = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+  Z = n(81733);
+let v = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
   T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
   L = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 
@@ -40,8 +40,8 @@ mentionCount: A = 0,
 unread: b = !1,
 defaultFolderName: M,
 useCircleMask: R = !1,
-draggable: P = !1,
-sorting: O = !1,
+draggable: O = !1,
+sorting: P = !1,
 onDragStart: y,
 onDragEnd: j,
 onExpandCollapse: D,
@@ -54,8 +54,8 @@ name: B,
 children: H
   } = t, [V, F] = l.useState(!1), [W, z] = l.useState(!1), Y = V || W;
   l.useEffect(() => {
-O && F(!1);
-  }, [O]);
+P && F(!1);
+  }, [P]);
   let [{
 dragging: K
   }, q] = (0, s.c)({
@@ -88,7 +88,7 @@ leave: {
   height: 0
 },
 config: {
-  duration: Z
+  duration: v
 }
   }), ei = l.useCallback(e => null == n ? void 0 : n(k, e), [
 n,
@@ -100,24 +100,24 @@ children: [
     hovered: V,
     selected: r,
     unread: b,
-    className: v.pill
+    className: Z.pill
   }),
   (0, i.jsx)(N.Z, {
     text: J,
-    disabled: O,
+    disabled: P,
     selected: r,
     disableWrapper: !0,
     children: (0, i.jsx)('div', {
-      ref: P ? q : void 0,
+      ref: O ? q : void 0,
       className: a()({
-        [v.wobble]: !K && W && !u
+        [Z.wobble]: !K && W && !u
       }),
       'data-dnd-name': J,
       children: K ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(m.Z, {
         folderNode: t,
         expanded: u,
         forceCircular: R,
-        sorting: O,
+        sorting: P,
         mediaState: _,
         mentionCount: A,
         tooltipName: J,
@@ -131,7 +131,7 @@ children: [
       })
     })
   }),
-  P ? (0, i.jsx)(C.ZP, {
+  O ? (0, i.jsx)(C.ZP, {
     name: J,
     targetNode: t,
     onDragOverChanged: Q
@@ -163,7 +163,7 @@ children: [
       children: H.map(U)
     }, l);
   }),
-  P && u ? (0, i.jsx)(C.Zu, {
+  O && u ? (0, i.jsx)(C.Zu, {
     name: J,
     targetNode: t
   }) : null

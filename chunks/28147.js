@@ -28,8 +28,8 @@ var i = t(735250),
   P = t(79984),
   L = t(314734),
   R = t(981631),
-  S = t(689938),
-  b = t(429032);
+  b = t(689938),
+  S = t(429032);
 let T = Array(6).fill(0).map((e, n) => n),
   M = [, , , ].fill(0).map((e, n) => n);
 
@@ -107,7 +107,7 @@ L = p && !P && !I;
   return u ? (0, i.jsx)(k, {}) : L ? (0, i.jsx)(x.A, {
 type: h.LG.SEARCH_EMPTY,
 searchQuery: t,
-textContent: l === h._b.TEXT ? S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+textContent: l === h._b.TEXT ? b.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : b.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)('div', {
 children: [
   C && (0, i.jsx)(Z, {
@@ -151,7 +151,7 @@ installOnDemand: !1
   return s ? (0, i.jsx)(k, {}) : c ? (0, i.jsx)(x.A, {
 type: h.LG.SEARCH_EMPTY,
 searchQuery: t,
-textContent: l === h._b.TEXT ? S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+textContent: l === h._b.TEXT ? b.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : b.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
   }) : (0, i.jsxs)('div', {
 children: [
   u && (0, i.jsx)(Z, {
@@ -206,12 +206,12 @@ U = Z ? o : A;
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: S.Z.Messages.COMMANDS,
+    title: b.Z.Messages.COMMANDS,
     buttonType: H,
     onClickViewButton: m ? P : void 0
   }),
   (0, i.jsx)('div', {
-    className: b.sectionContentContainer,
+    className: S.sectionContentContainer,
     ref: j,
     onTransitionEnd: O,
     children: U.map((e, n) => {
@@ -262,7 +262,7 @@ query: e.query,
 searchResultsPosition: e.resultsPosition
   });
   return (0, i.jsx)('div', {
-className: b.searchOpenAppDetailAppCard,
+className: S.searchOpenAppDetailAppCard,
 ref: e => n.current = e,
 children: (0, i.jsx)(E.kA, {
   ...e,
@@ -282,10 +282,10 @@ searchesBots: l
   return l ? (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: S.Z.Messages.APPS
+    title: b.Z.Messages.APPS
   }),
   (0, i.jsxs)('div', {
-    className: b.sectionContentContainer,
+    className: S.sectionContentContainer,
     children: [
       n.map((e, n) => {
         let {
@@ -308,10 +308,10 @@ children: [
   }) : (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: S.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
+    title: b.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
   }),
   (0, i.jsxs)('div', {
-    className: b.sectionActivitiesContentContainer,
+    className: S.sectionActivitiesContentContainer,
     children: [
       n.map((e, n) => {
         let {
@@ -349,17 +349,17 @@ function k() {
   return (0, i.jsxs)('div', {
 children: [
   (0, i.jsx)(I.Z, {
-    title: S.Z.Messages.COMMANDS
+    title: b.Z.Messages.COMMANDS
   }),
   (0, i.jsx)('div', {
-    className: b.sectionContentContainer,
+    className: S.sectionContentContainer,
     children: T.map(e => (0, i.jsx)(P.Z, {}, e))
   }),
   (0, i.jsx)(I.Z, {
-    title: S.Z.Messages.APPS
+    title: b.Z.Messages.APPS
   }),
   (0, i.jsx)('div', {
-    className: b.sectionContentContainer,
+    className: S.sectionContentContainer,
     children: M.map(e => (0, i.jsx)(P.Z, {}, e))
   })
 ]

@@ -100,7 +100,7 @@ super(...e), N(this, 'handleContextMenu', e => {
 });
   }
 }
-let v = (0, u.B)(S);
+let Z = (0, u.B)(S);
 t.Z = l.memo(function(e) {
   let {
 channel: t,
@@ -116,7 +116,7 @@ return {
   canReorderChannel: !0 !== l && null != e ? f.Z.can(C.Plq.MANAGE_CHANNELS, e) : f.Z.can(C.Plq.MANAGE_CHANNELS, n)
 };
   });
-  return (0, i.jsx)(v, {
+  return (0, i.jsx)(Z, {
 ...r,
 ...e
   });

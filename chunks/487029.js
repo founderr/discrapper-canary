@@ -29,8 +29,8 @@ guildId: t,
 channel: n,
 width: x,
 height: S,
-keepOpen: v,
-interactive: Z = !0,
+keepOpen: Z,
+interactive: v = !0,
 analyticsSource: T,
 onClose: L
   } = e, A = function(e) {
@@ -57,7 +57,7 @@ return l.useMemo(() => {
   n,
   e
 ]);
-  }((0, m.h)(n, !0)), b = (0, g.j)(), M = l.useRef(null), [R, P] = l.useState(void 0), O = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()), {
+  }((0, m.h)(n, !0)), b = (0, g.j)(), M = l.useRef(null), [R, O] = l.useState(void 0), P = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()), {
 analyticsLocations: y
   } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL), j = l.useCallback(e => {
 (0, f.GN)(e, n.id, y), L();
@@ -76,9 +76,9 @@ b,
 L
   ]), l.useEffect(() => () => {
 let e = M.current;
-!v && null != e && j(e);
+!Z && null != e && j(e);
   }, [
-v,
+Z,
 j
   ]), (0, c.Z)({
 type: r.ImpressionTypes.POPOUT,
@@ -86,13 +86,13 @@ name: r.ImpressionNames.SOUNDBOARD_POPOUT,
 properties: {
   source: T,
   guild_id: t,
-  media_session_id: O
+  media_session_id: P
 }
   }, {
-disableTrack: !Z
+disableTrack: !v
   });
   let D = l.useCallback(e => {
-  M.current = e, P(null == e ? void 0 : e.soundId);
+  M.current = e, O(null == e ? void 0 : e.soundId);
 }, []),
 w = l.useCallback(e => {
   if (null == e) {
@@ -117,7 +117,7 @@ U = l.useCallback(e => {
   j
 ]),
 G = l.useMemo(() => A.map(e => (0, i.jsx)(I.ZP, {
-  interactive: Z,
+  interactive: v,
   className: N.soundButton,
   sound: e,
   focused: R === e.soundId,
@@ -125,7 +125,7 @@ G = l.useMemo(() => A.map(e => (0, i.jsx)(I.ZP, {
 }, e.soundId)), [
   R,
   n,
-  Z,
+  v,
   A
 ]);
   return 0 === A.length ? null : (0, i.jsx)(o.Gt, {
@@ -135,11 +135,11 @@ children: (0, i.jsx)(C.Z, {
   wheelHeight: S,
   itemWidth: 96,
   itemHeight: 52,
-  showDeadZoneIndicator: !v,
+  showDeadZoneIndicator: !Z,
   activeItem: R,
   onItemSelect: w,
   onItemAction: U,
-  interactive: Z,
+  interactive: v,
   children: G
 })
   });

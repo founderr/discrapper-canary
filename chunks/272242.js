@@ -1,6 +1,6 @@
-var n, _;
-r.r(e), r.d(e, {
+var n, a;
+r.r(t), r.d(t, {
   ApplicationDirectoryProfileSections: function() {
 return n;
   }
-}), (_ = n || (n = {})).GENERAL = 'general', _.IMAGES = 'images', _.PREMIUM = 'premium', _.STORE = 'store', _.PRIVACY = 'privacy';
+}), (a = n || (n = {})).GENERAL = 'general', a.IMAGES = 'images', a.PREMIUM = 'premium', a.STORE = 'store', a.PRIVACY = 'privacy';

@@ -25,8 +25,8 @@ var l = n(442837),
   N = n(135724),
   x = n(25601),
   S = n(981631),
-  v = n(490897),
-  Z = n(689938),
+  Z = n(490897),
+  v = n(689938),
   T = n(704842);
 
 function L(e) {
@@ -38,8 +38,8 @@ isChannelCollapsed: A,
 voiceStates: b,
 enableConnectedUserLimit: M,
 enableActivities: R,
-isSubscriptionGated: P,
-needSubscriptionToAccess: O,
+isSubscriptionGated: O,
+needSubscriptionToAccess: P,
 isNewChannel: y,
 muted: j,
 resolvedUnreadSetting: D
@@ -56,21 +56,21 @@ return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? v
 return (0, i.jsx)(x.Z, {
   mentionsCount: w
 });
-  if ((0, c.O)(P))
+  if ((0, c.O)(O))
 return (0, i.jsx)(c.Z, {
-  locked: O
+  locked: P
 });
   if (y)
 return (0, i.jsx)(a.TextBadge, {
-  text: Z.Z.Messages.NEW,
+  text: v.Z.Messages.NEW,
   color: r.Z.unsafe_rawColors.BRAND_260.css,
   className: T.newChannel
 });
-  if (!j && D === v.i.ALL_MESSAGES && n.isForumLikeChannel() && null != V && V > 0)
+  if (!j && D === Z.i.ALL_MESSAGES && n.isForumLikeChannel() && null != V && V > 0)
 return (0, i.jsx)(a.Text, {
   variant: 'text-xs/semibold',
   color: 'text-brand',
-  children: Z.Z.Messages.CHANNEL_NEW_POSTS_LABEL.format({
+  children: v.Z.Messages.CHANNEL_NEW_POSTS_LABEL.format({
     count: (0, a.getBadgeCountString)(V)
   })
 });
@@ -86,7 +86,7 @@ userCount: z,
 video: k || B,
 channel: n
   }) : A && (0, g.a)(b) && W ? (0, i.jsx)(a.TextBadge, {
-text: Z.Z.Messages.LIVE,
+text: v.Z.Messages.LIVE,
 color: r.Z.unsafe_rawColors.RED_400.css
   }) : null != R && R && (0, m.u)(U) ? (0, i.jsx)(E.Z, {
 embeddedApps: U,

@@ -1,11 +1,11 @@
-r.d(e, {
+r.d(t, {
   V: function() {
-return a;
+return o;
   }
 });
 let {
   Themes: n
-} = r(15202).V, _ = {
+} = r(15202).V, a = {
   ACTION_SHEET_GRADIENT_BG: {
 category: 'background',
 [n.DARK]: {
@@ -6644,8 +6644,8 @@ gradient: {
   }
 }
   }
-}, a = {
-  SemanticColors: _,
+}, o = {
+  SemanticColors: a,
   RawColors: {
 APPLICATION_SUBSCRIPTION_END: '#0177a4',
 APPLICATION_SUBSCRIPTION_START: '#3442d9',
