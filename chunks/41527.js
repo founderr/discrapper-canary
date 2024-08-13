@@ -8,8 +8,8 @@ n(470079);
 var l = n(481060),
   t = n(100527),
   o = n(906732),
-  r = n(5192),
-  a = n(785717),
+  a = n(5192),
+  r = n(785717),
   d = n(318661),
   c = n(78675),
   u = n(741308),
@@ -18,8 +18,8 @@ var l = n(481060),
   f = n(681837),
   E = n(502762),
   m = n(530),
-  x = n(645410),
-  S = n(437758),
+  S = n(645410),
+  x = n(437758),
   v = n(357836),
   Z = n(544989),
   p = n(934861),
@@ -50,7 +50,7 @@ analyticsLocations: w
   } = (0, o.ZP)([
 ...F,
 t.Z.SIMPLIFIED_PROFILE_MODAL
-  ]), k = (0, a.ZB)({
+  ]), k = (0, r.ZB)({
 layout: 'SIMPLIFIED_MODAL',
 userId: s.id,
 sourceSessionId: U,
@@ -61,7 +61,7 @@ roleId: M
   }), V = (0, T.Z)(s);
   return (0, i.jsx)(o.Gt, {
 value: w,
-children: (0, i.jsx)(a.Mt, {
+children: (0, i.jsx)(r.Mt, {
   value: k,
   children: (0, i.jsx)(l.ModalRoot, {
     transitionState: y,
@@ -75,7 +75,7 @@ children: (0, i.jsx)(a.Mt, {
       children: [
         (0, i.jsx)(Z.Z, {
           profileType: g.y0.FULL_SIZE,
-          children: (0, i.jsx)(S.Z, {
+          children: (0, i.jsx)(x.Z, {
             user: s,
             guildId: B
           })
@@ -115,7 +115,7 @@ children: (0, i.jsx)(a.Mt, {
                       user: s,
                       guildId: B
                     }),
-                    (0, i.jsx)(x.Z, {
+                    (0, i.jsx)(S.Z, {
                       user: s
                     })
                   ]
@@ -136,7 +136,7 @@ children: (0, i.jsx)(a.Mt, {
             (0, i.jsx)(m.Z, {
               user: s,
               profileType: g.y0.FULL_SIZE,
-              nickname: r.ZP.getName(B, O, s),
+              nickname: a.ZP.getName(B, O, s),
               pronouns: null == G ? void 0 : G.pronouns,
               nicknameVariant: 'heading-xl/bold',
               nicknameIcons: (0, i.jsx)(f.Z, {

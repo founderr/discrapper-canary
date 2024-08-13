@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(470079),
   t = n(120356),
   o = n.n(t),
-  r = n(442837),
-  a = n(481060),
+  a = n(442837),
+  r = n(481060),
   d = n(717881),
   c = n(387903),
   u = n(906732),
@@ -17,8 +17,8 @@ var i = n(735250),
   f = n(785717),
   E = n(221292),
   m = n(981631),
-  x = n(711298),
-  S = n(431776);
+  S = n(711298),
+  x = n(431776);
 
 function v(e) {
   let {
@@ -26,7 +26,7 @@ user: s,
 type: n,
 showActions: t,
 onClose: v
-  } = e, Z = (0, r.e7)([_.Z], () => null != _.Z.getAnyStreamForUser(s.id)), p = (0, r.e7)([I.Z], () => I.Z.getActivities(s.id)), h = l.useMemo(() => p.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [p]), T = l.useMemo(() => Z ? h.find(e => e.type === m.IIU.PLAYING) : null, [
+  } = e, Z = (0, a.e7)([_.Z], () => null != _.Z.getAnyStreamForUser(s.id)), p = (0, a.e7)([I.Z], () => I.Z.getActivities(s.id)), h = l.useMemo(() => p.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [p]), T = l.useMemo(() => Z ? h.find(e => e.type === m.IIU.PLAYING) : null, [
 h,
 Z
   ]), g = l.useMemo(() => h.filter(e => e !== T), [
@@ -44,18 +44,18 @@ location: {
   section: m.jXE.PROFILE_MODAL
 }
   };
-  return (0, i.jsxs)(a.ScrollerThin, {
-className: S.listScroller,
+  return (0, i.jsxs)(r.ScrollerThin, {
+className: x.listScroller,
 fade: !0,
 children: [
   Z ? (0, i.jsx)(d.Z, {
     type: n,
     user: s,
     source: j,
-    className: x.userProfileActivity,
+    className: S.userProfileActivity,
     showChannelDetails: n === c.Y.SIMPLIFIED_PROFILE,
     activity: T,
-    actionColor: x.actionColor,
+    actionColor: S.actionColor,
     analyticsParams: R,
     showActions: t,
     onClose: v,
@@ -79,9 +79,9 @@ children: [
     user: s,
     useStoreStream: !1,
     source: j,
-    className: o()(x.userProfileActivity, n === c.Y.SIMPLIFIED_PROFILE && x.simplifiedProfileActivity),
+    className: o()(S.userProfileActivity, n === c.Y.SIMPLIFIED_PROFILE && S.simplifiedProfileActivity),
     showChannelDetails: n === c.Y.SIMPLIFIED_PROFILE,
-    actionColor: x.actionColor,
+    actionColor: S.actionColor,
     analyticsParams: R,
     showActions: t,
     onClose: v,

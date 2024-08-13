@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(470079),
   t = n(481060),
   o = n(100527),
-  r = n(906732),
-  a = n(138201),
+  a = n(906732),
+  r = n(138201),
   d = n(785717),
   c = n(221292),
   u = n(318661),
@@ -17,8 +17,8 @@ var i = n(735250),
   f = n(475413),
   E = n(228168),
   m = n(981631),
-  x = n(689938),
-  S = n(493248),
+  S = n(689938),
+  x = n(493248),
   v = n(161068);
 
 function Z(e) {
@@ -34,7 +34,7 @@ showGuildProfile: N = !0,
 sourceAnalyticsLocations: j = []
   } = e, C = n === m.ME ? void 0 : n, {
 analyticsLocations: A
-  } = (0, r.ZP)([
+  } = (0, a.ZP)([
 ...j,
 o.Z.BLOCKED_PROFILE_MODAL
   ]), R = (0, d.ZB)({
@@ -47,38 +47,38 @@ roleId: h,
 showGuildProfile: N
   }), O = [{
   icon: t.BellSlashIcon,
-  description: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_NOTIFIED
+  description: S.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_NOTIFIED
 },
 {
   icon: t.DenyIcon,
-  description: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED
+  description: S.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED
 }
   ], L = (0, u.ZP)(s.id, N ? C : void 0), M = l.createRef();
-  return (0, i.jsx)(r.Gt, {
+  return (0, i.jsx)(a.Gt, {
 value: A,
 children: (0, i.jsx)(d.Mt, {
   value: R,
   children: (0, i.jsx)(t.ModalRoot, {
     transitionState: T,
-    className: S.root,
+    className: x.root,
     hideShadow: !0,
-    'aria-label': x.Z.Messages.USER_PROFILE_MODAL,
+    'aria-label': S.Z.Messages.USER_PROFILE_MODAL,
     children: (0, i.jsx)(I.Z, {
       user: s,
       displayProfile: L,
       profileType: E.y0.FULL_SIZE,
       ref: M,
       children: (0, i.jsxs)('div', {
-        className: S.container,
+        className: x.container,
         children: [
           (0, i.jsx)('img', {
             alt: '',
             src: v,
-            className: S.previewForCollected,
+            className: x.previewForCollected,
             'aria-hidden': !0
           }),
           (0, i.jsxs)('div', {
-            className: S.body,
+            className: x.body,
             children: [
               (0, i.jsx)(_.Z, {
                 user: s,
@@ -86,36 +86,36 @@ children: (0, i.jsx)(d.Mt, {
               }),
               (0, i.jsx)(t.Heading, {
                 variant: 'heading-xl/bold',
-                className: S.header,
-                children: x.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
+                className: x.header,
+                children: S.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
               }),
               (0, i.jsx)(t.Text, {
                 variant: 'text-md/medium',
-                children: x.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({
+                children: S.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({
                   username: s.username
                 })
               }),
               (0, i.jsx)(t.Text, {
                 variant: 'text-md/medium',
-                children: x.Z.Messages.USER_PROFILE_BLOCKED_MODAL_BODY_CONFIRMATION
+                children: S.Z.Messages.USER_PROFILE_BLOCKED_MODAL_BODY_CONFIRMATION
               }),
               (0, i.jsx)('div', {
-                className: S.safetyTable,
+                className: x.safetyTable,
                 children: O.map((e, s) => {
                   let {
                     icon: n,
                     description: l
                   } = e;
-                  return (0, i.jsx)(a.Z, {
+                  return (0, i.jsx)(r.Z, {
                     icon: n,
                     description: l
                   }, s);
                 })
               }),
               (0, i.jsx)(f.tG, {
-                className: S.centeredButton,
+                className: x.centeredButton,
                 action: 'VIEW_BLOCKED_PROFILE',
-                text: x.Z.Messages.VIEW_PROFILE,
+                text: S.Z.Messages.VIEW_PROFILE,
                 autoFocus: !0,
                 fullWidth: !1,
                 onClick: () => {

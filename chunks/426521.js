@@ -1,6 +1,6 @@
 n.d(t, {
   U: function() {
-return b;
+return D;
   }
 });
 var i = n(735250),
@@ -97,7 +97,7 @@ children: [
 ]
   });
 }
-let D = a.memo(function(e) {
+let b = a.memo(function(e) {
 var t;
 let {
   item: r,
@@ -156,7 +156,7 @@ r.type === N.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (M = (0, i.j
   userId: r.other_user.id
 }));
 let v = null != r.local_id,
-  D = (0, C.Z)(r);
+  b = (0, C.Z)(r);
 return (0, i.jsxs)('div', {
   className: O.row,
   children: [
@@ -165,7 +165,7 @@ return (0, i.jsxs)('div', {
       focusProps: {
         offset: 4
       },
-      'aria-label': D,
+      'aria-label': b,
       onClick: x,
       children: [
         E ? null : (0, i.jsx)('div', {
@@ -183,7 +183,7 @@ return (0, i.jsxs)('div', {
             (0, i.jsx)(s.Text, {
               variant: 'text-md/normal',
               color: E ? 'text-muted' : 'text-normal',
-              children: 'string' != typeof D ? D : c.Z.parse(D)
+              children: 'string' != typeof b ? b : c.Z.parse(b)
             }),
             (null === (t = r.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(L, {
               item: r
@@ -207,12 +207,12 @@ return (0, i.jsxs)('div', {
   ]
 });
   }),
-  b = a.memo(function(e) {
+  D = a.memo(function(e) {
 let {
   items: t
 } = e, n = d.d$.useSetting();
 return (0, i.jsx)(i.Fragment, {
-  children: t.map(e => (0, i.jsx)(D, {
+  children: t.map(e => (0, i.jsx)(b, {
     item: e,
     ackedBeforeId: n
   }, e.id))

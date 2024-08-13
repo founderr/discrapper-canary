@@ -36,8 +36,8 @@ guildId: x
 analyticsLocations: O
   } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED), M = (0, l.O)(), v = (0, s.e7)([h.Z], () => h.Z.getChannel(R)), L = (null == v ? void 0 : null === (t = v.isThread) || void 0 === t ? void 0 : t.call(v)) ? null == v ? void 0 : v.parent_id : R, Z = (0, s.e7)([T.default], () => T.default.getId()), {
 embeddedActivity: P,
-currentEmbeddedActivity: D,
-activityLaunchState: b
+currentEmbeddedActivity: b,
+activityLaunchState: D
   } = (0, s.cj)([o.ZP], () => ({
 embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != L ? L : '').find(e => e.applicationId === n.id),
 currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity(),
@@ -59,9 +59,9 @@ application: y
   }), k = null == P, G = (0, p.NL)({
 embeddedActivity: P,
 joinability: B,
-currentEmbeddedActivity: D,
+currentEmbeddedActivity: b,
 channel: v
-  }), F = a.useId(), w = null != b && b.isLaunching && b.componentId === F, V = async () => {
+  }), F = a.useId(), w = null != D && D.isLaunching && D.componentId === F, V = async () => {
 k ? await (0, u.Z)({
   targetApplicationId: n.id,
   channelId: R,

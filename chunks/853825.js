@@ -7,8 +7,8 @@ var i = n(735250),
   l = n(470079),
   t = n(481060),
   o = n(727637),
-  r = n(100527),
-  a = n(906732),
+  a = n(100527),
+  r = n(906732),
   d = n(680295),
   c = n(5192),
   u = n(785717),
@@ -17,8 +17,8 @@ var i = n(735250),
   f = n(741308),
   E = n(588822),
   m = n(899007),
-  x = n(900927),
-  S = n(678738),
+  S = n(900927),
+  x = n(678738),
   v = n(502762),
   Z = n(530),
   p = n(679332),
@@ -43,9 +43,9 @@ onClose: b,
 sourceAnalyticsLocations: P = []
   } = e, y = n === g.ME ? void 0 : n, D = (0, _.ZP)(s.id, y), {
 analyticsLocations: F
-  } = (0, a.ZP)([
+  } = (0, r.ZP)([
 ...P,
-r.Z.SIMPLIFIED_PROFILE_MODAL
+a.Z.SIMPLIFIED_PROFILE_MODAL
   ]), B = (0, u.ZB)({
 layout: 'SIMPLIFIED_MODAL',
 userId: s.id,
@@ -55,7 +55,7 @@ channelId: R,
 messageId: O,
 roleId: L
   }), G = l.createRef(), w = (0, o.Z)(G);
-  return (0, i.jsx)(a.Gt, {
+  return (0, i.jsx)(r.Gt, {
 value: F,
 children: (0, i.jsx)(u.Mt, {
   value: B,
@@ -141,9 +141,9 @@ children: (0, i.jsx)(u.Mt, {
                           userBio: null == D ? void 0 : D.bio,
                           setLineClamp: !1
                         }),
-                        (0, i.jsx)(S.Z, {
+                        (0, i.jsx)(x.Z, {
                           heading: N.Z.Messages.BOT_PROFILE_CREATED_ON,
-                          children: (0, i.jsx)(x.Z, {
+                          children: (0, i.jsx)(S.Z, {
                             userId: s.id,
                             guildId: y,
                             tooltipDelay: T.vB

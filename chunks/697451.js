@@ -79,10 +79,10 @@ interactionData: s.interactionData
 l,
 s.id,
 s.interactionData
-  ]), L = (0, C.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l), Z = a.useMemo(() => e.compact ? (0, S.Z)((0, f.vc)(u()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(l.id, !0), D = s.interaction;
-  if (null == D || null == L)
+  ]), L = (0, C.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l), Z = a.useMemo(() => e.compact ? (0, S.Z)((0, f.vc)(u()(), 'LT')) : null, [e.compact]), P = (0, _.NX)(l.id, !0), b = s.interaction;
+  if (null == b || null == L)
 return null;
-  let b = () => {
+  let D = () => {
 let t = function(e, t) {
     let n, {
       message: a,
@@ -144,7 +144,7 @@ let t = function(e, t) {
       onRequestClose: E,
       children: h
     }) : h();
-  }(e, e => M(e, D.user, [m.Z.AVATAR])),
+  }(e, e => M(e, b.user, [m.Z.AVATAR])),
   n = function(e, t, n) {
     var a;
     let {
@@ -167,7 +167,7 @@ let t = function(e, t) {
       onContextMenu: c,
       onPopoutRequestClose: u
     });
-  }(e, L, e => M(e, D.user));
+  }(e, L, e => M(e, b.user));
 return (0, i.jsxs)(a.Fragment, {
   children: [
     t,
@@ -194,7 +194,7 @@ let e = () => {
   });
 };
 n = P ? R.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
-  userHook: b,
+  userHook: D,
   activityHook: () => (0, i.jsx)(d.Clickable, {
     tag: 'span',
     onClick: e,
@@ -204,11 +204,11 @@ n = P ? R.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
     })
   })
 }) : R.Z.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({
-  userHook: b
+  userHook: D
 });
   } else
 n = R.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
-  userHook: b,
+  userHook: D,
   commandHook: () => {
     let t = function(e, t) {
       let {

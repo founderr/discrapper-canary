@@ -1,6 +1,6 @@
 n.d(t, {
   c: function() {
-return b;
+return D;
   }
 }), n(47120);
 var i = n(735250),
@@ -71,7 +71,7 @@ return 0 === t.length ? null : (0, i.jsxs)('div', {
   ]
 });
   },
-  D = e => {
+  b = e => {
 let {
   guildId: t,
   listingId: n
@@ -118,7 +118,7 @@ return 0 === r.length ? null : (0, i.jsxs)('div', {
   ]
 });
   },
-  b = e => {
+  D = e => {
 let {
   listingId: t,
   guildId: n,
@@ -155,7 +155,7 @@ return null == s && 0 === c.length && 0 === u.length && 0 === _.size ? null : (0
       benefits: u,
       guildId: n
     }),
-    (0, i.jsx)(D, {
+    (0, i.jsx)(b, {
       guildId: n,
       listingId: t
     })
@@ -208,12 +208,12 @@ canOpenModal: p,
 cannotOpenReason: S,
 isCheckingTrialEligibility: A
   } = (0, O.Z)(f, s, u, E), P = (0, l.e7)([_.Z], () => _.Z.isSyncing), {
-activeSubscription: D,
+activeSubscription: b,
 activeSubscriptionListing: U
-  } = (0, h.Z)(u), y = (null == U ? void 0 : U.id) === n, B = (null == D ? void 0 : D.status) === v.O0b.CANCELED, [k, G] = a.useState(!1), [F, w] = a.useState(!1), V = a.useCallback(e => {
+  } = (0, h.Z)(u), y = (null == U ? void 0 : U.id) === n, B = (null == b ? void 0 : b.status) === v.O0b.CANCELED, [k, G] = a.useState(!1), [F, w] = a.useState(!1), V = a.useCallback(e => {
 let t = !1;
 null != e && (t = e.scrollHeight - e.clientHeight > 1), w(t);
-  }, []), [H] = T._T(n), [Y] = T.PK(n), [W] = T.TT(n), [K] = T.F2(n), z = (0, N.Z)(s, n), Q = null != W && null == D && z, q = (0, c.Z)(M.iP), [X, J] = a.useState(!1), $ = X || !q, ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(s)), et = (null == f ? void 0 : f.published) === !0, en = (null == f ? void 0 : f.soft_deleted) === !0, ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  }, []), [H] = T._T(n), [Y] = T.PK(n), [W] = T.TT(n), [K] = T.F2(n), z = (0, N.Z)(s, n), Q = null != W && null == b && z, q = (0, c.Z)(M.iP), [X, J] = a.useState(!1), $ = X || !q, ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(s)), et = (null == f ? void 0 : f.published) === !0, en = (null == f ? void 0 : f.soft_deleted) === !0, ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
   return (et || ee) && !en ? (0, i.jsxs)('article', {
 className: Z.container,
 'aria-label': H,
@@ -302,7 +302,7 @@ children: [
         ]
       }),
       $ && (0, i.jsx)(o.HeadingLevel, {
-        children: (0, i.jsx)(b, {
+        children: (0, i.jsx)(D, {
           listingId: n,
           guildId: s
         })

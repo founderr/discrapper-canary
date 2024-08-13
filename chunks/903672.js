@@ -65,19 +65,19 @@ loading: N.Z.loading,
 guildFilter: N.Z.guildFilter,
 roleFilter: N.Z.roleFilter,
 everyoneFilter: N.Z.everyoneFilter
-  })), L = (0, u.Z)(g), P = (0, u.Z)(O), b = (0, u.Z)(v);
+  })), L = (0, u.Z)(g), P = (0, u.Z)(O), D = (0, u.Z)(v);
   a.useEffect(() => {
 if (!N.Z.hasLoadedEver) {
   M(I, !0);
   return;
 }
-(null != L && g !== L || null != P && O !== P || null != b && v !== b) && M(I, !0);
+(null != L && g !== L || null != P && O !== P || null != D && v !== D) && M(I, !0);
   }, [
 L,
 g,
 P,
 O,
-b,
+D,
 v,
 I,
 !0
@@ -120,7 +120,7 @@ children: (0, i.jsx)(c.ZP, {
   },
   canCloseAllMessages: !0,
   renderHeader: j,
-  renderEmptyState: D,
+  renderEmptyState: b,
   renderMessage: Z,
   'aria-label': R.Z.Messages.RECENT_MENTIONS,
   listName: 'recents'
@@ -196,7 +196,7 @@ children: [
   });
 }
 
-function D(e) {
+function b(e) {
   return (0, i.jsx)(g.Z, {
 Icon: l.AtIcon,
 header: R.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,

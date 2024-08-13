@@ -86,7 +86,7 @@ return (0, i.jsxs)('div', {
   ]
 });
   };
-class D extends a.PureComponent {
+class b extends a.PureComponent {
   renderJumpButton() {
 let {
   jumping: e
@@ -153,14 +153,14 @@ super(...e), v(this, 'handleClickJump', e => {
 });
   }
 }
-let b = u.ZP.connectStores([p.Z], e => {
+let D = u.ZP.connectStores([p.Z], e => {
   let {
 channel: t
   } = e;
   return {
 canManageMessages: null != t && p.Z.can(x.Plq.MANAGE_MESSAGES, t)
   };
-})(D);
+})(b);
 
 function j(e) {
   let {
@@ -176,7 +176,7 @@ getProTip: f,
 scrollerClassName: C,
 className: p,
 listName: v
-  } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), D = (0, u.e7)([g.Z], () => g.Z.hasNotice()), b = (0, u.e7)([S.Z], () => S.Z.windowSize());
+  } = e, Z = a.useRef(null), P = (0, I.Z)(v, Z), b = (0, u.e7)([g.Z], () => g.Z.hasNotice()), D = (0, u.e7)([S.Z], () => S.Z.windowSize());
   a.useEffect(() => {
 A.default.track(x.rMx.OPEN_POPOUT, {
   type: t
@@ -248,9 +248,9 @@ G = y && null != k ? (0, i.jsx)('div', {
   })
 }) : null,
 F = {
-  maxHeight: b.height - 43 - 25
+  maxHeight: D.height - 43 - 25
 };
-  D && (F.maxHeight -= 40);
+  b && (F.maxHeight -= 40);
   let w = null != _ && s;
   return (0, i.jsx)('div', {
 className: r()(p, M.messagesPopoutWrap),
@@ -377,7 +377,7 @@ renderItem: function(e) {
         message: t,
         channel: n
       }),
-      (0, i.jsx)(b, {
+      (0, i.jsx)(D, {
         channel: s,
         message: t,
         jumping: L,

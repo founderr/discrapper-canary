@@ -40,12 +40,12 @@ case c.DY.FRIEND_SUGGESTION_CREATED:
   return null !== (p = e.body) && void 0 !== p ? p : '';
 case c.DY.GUILD_SCHEDULED_EVENT_STARTED:
   let P = e.guild_scheduled_event_id,
-    D = null != P ? i.ZP.getGuildScheduledEvent(P) : null,
-    b = null == D ? void 0 : D.name,
-    j = null === (g = a.Z.getGuild(null == D ? void 0 : D.guild_id)) || void 0 === g ? void 0 : g.name,
-    U = (0, i.Z2)(null != D ? D : void 0);
-  return (0, l.Ew)(j) || (0, l.Ew)(b) || !U ? null !== (S = e.body) && void 0 !== S ? S : '' : d.Z.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
-    event_name: b,
+    b = null != P ? i.ZP.getGuildScheduledEvent(P) : null,
+    D = null == b ? void 0 : b.name,
+    j = null === (g = a.Z.getGuild(null == b ? void 0 : b.guild_id)) || void 0 === g ? void 0 : g.name,
+    U = (0, i.Z2)(null != b ? b : void 0);
+  return (0, l.Ew)(j) || (0, l.Ew)(D) || !U ? null !== (S = e.body) && void 0 !== S ? S : '' : d.Z.Messages.NOTIFICATION_CENTER_GUILD_SCHEDULED_EVENT_ENDED.format({
+    event_name: D,
     guild_name: j
   });
 case c.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:

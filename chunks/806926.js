@@ -1,6 +1,6 @@
 n.d(s, {
   Z: function() {
-return x;
+return S;
   }
 });
 var i = n(735250);
@@ -8,8 +8,8 @@ n(470079);
 var l = n(442837),
   t = n(699516),
   o = n(5192),
-  r = n(741308),
-  a = n(681837),
+  a = n(741308),
+  r = n(681837),
   d = n(91433),
   c = n(502762),
   u = n(530),
@@ -19,12 +19,12 @@ var l = n(442837),
   E = n(981631),
   m = n(392214);
 
-function x(e) {
+function S(e) {
   var s;
   let {
 user: n,
-currentUser: x,
-channelId: S,
+currentUser: S,
+channelId: x,
 displayProfile: v,
 initialSection: Z,
 initialSubsection: p,
@@ -32,7 +32,7 @@ friendToken: h,
 onClose: T
   } = e, g = (0, l.e7)([t.Z], () => t.Z.getRelationshipType(n.id)), N = (0, I.Z)({
 user: n,
-currentUser: x
+currentUser: S
   });
   return (0, i.jsxs)('div', {
 className: m.body,
@@ -40,13 +40,13 @@ children: [
   (0, i.jsx)(u.Z, {
     user: n,
     profileType: f.y0.FULL_SIZE,
-    nickname: o.ZP.getName(null == v ? void 0 : v.guildId, S, n),
+    nickname: o.ZP.getName(null == v ? void 0 : v.guildId, x, n),
     pronouns: null == v ? void 0 : v.pronouns,
     nicknameVariant: 'heading-xl/bold',
-    nicknameIcons: (0, i.jsx)(a.Z, {
+    nicknameIcons: (0, i.jsx)(r.Z, {
       userId: n.id
     }),
-    tags: (0, i.jsx)(r.Z, {
+    tags: (0, i.jsx)(a.Z, {
       displayProfile: v,
       profileType: f.y0.FULL_SIZE,
       onClose: T
@@ -57,7 +57,7 @@ children: [
     children: (0, i.jsx)(d.Z, {
       user: n,
       guildId: null !== (s = null == v ? void 0 : v.guildId) && void 0 !== s ? s : void 0,
-      channelId: S,
+      channelId: x,
       friendToken: h,
       className: m.friendRequestBanner
     })
@@ -66,7 +66,7 @@ children: [
     className: m.overlay,
     children: (0, i.jsx)(_.Z, {
       user: n,
-      currentUser: x,
+      currentUser: S,
       displayProfile: v,
       items: N,
       initialSection: Z,

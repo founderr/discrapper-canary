@@ -29,8 +29,8 @@ var i = n(735250),
   L = n(667105),
   Z = n(860151),
   P = n(341907),
-  D = n(46140),
-  b = n(981631),
+  b = n(46140),
+  D = n(981631),
   j = n(354459),
   U = n(689938),
   y = n(212522);
@@ -40,7 +40,7 @@ t.Z = function(e) {
 channelId: B,
 previewQuest: k,
 isParticipatingOverride: G
-  } = e, [F, w] = a.useState(!1), V = a.useCallback(() => w(!0), []), H = a.useCallback(() => w(!1), []), Y = a.useContext(I.h9), W = (0, l.e7)([T.default], () => T.default.getCurrentUser()), K = (0, l.e7)([E.Z], () => E.Z.getState().theme), z = (0, o.wj)(K) ? b.BRd.DARK : b.BRd.LIGHT, {
+  } = e, [F, w] = a.useState(!1), V = a.useCallback(() => w(!0), []), H = a.useCallback(() => w(!1), []), Y = a.useContext(I.h9), W = (0, l.e7)([T.default], () => T.default.getCurrentUser()), K = (0, l.e7)([E.Z], () => E.Z.getState().theme), z = (0, o.wj)(K) ? D.BRd.DARK : D.BRd.LIGHT, {
 isCurrentUserStreamingQuestApplication: Q,
 quest: q
   } = (0, l.cj)([
@@ -94,7 +94,7 @@ if (null == q)
 let e = d.ZP.getRunningGames().map(e => e.id);
 if ((0, g.$H)(q) && e.includes(J))
   return !0;
-let t = null != W ? m.Z.findActivity(W.id, e => e.type !== b.IIU.CUSTOM_STATUS) : null;
+let t = null != W ? m.Z.findActivity(W.id, e => e.type !== D.IIU.CUSTOM_STATUS) : null;
 return !!(null != t && (0, g.$J)(q) && (0, g._D)(t, q)) || !1;
   }, [
 q,
@@ -113,19 +113,19 @@ null != q && ((0, h._3)({
   questId: q.id,
   questContent: p.jn.QUEST_LIVE_STREAM,
   questContentCTA: h.jZ.TRACK_PROGRESS
-}), (0, P.navigateToQuestHome)(D.dr.QUEST_CHANNEL_CALL_HEADER, q.id));
+}), (0, P.navigateToQuestHome)(b.dr.QUEST_CHANNEL_CALL_HEADER, q.id));
   }, [q]), el = a.useCallback(() => {
 null != q && ((0, h._3)({
   questId: q.id,
   questContent: p.jn.QUEST_LIVE_STREAM,
   questContentCTA: h.jZ.LEARN_MORE
-}), (0, P.navigateToQuestHome)(D.dr.QUEST_CHANNEL_CALL_HEADER, q.id));
+}), (0, P.navigateToQuestHome)(b.dr.QUEST_CHANNEL_CALL_HEADER, q.id));
   }, [q]), eo = (0, L.hf)({
 quest: q,
 location: p.jn.QUEST_LIVE_STREAM
   }), ec = a.useMemo(() => (0, S.T)({
 quest: q,
-location: D.dr.QUEST_CHANNEL_CALL_HEADER
+location: b.dr.QUEST_CHANNEL_CALL_HEADER
   }), [q]), eu = (0, f.tP)(q);
   if (null == q || !(0, g.dl)(q))
 return null;
@@ -149,7 +149,7 @@ eN = (0, i.jsx)(M.Z, {
   autoplay: F,
   quest: q,
   questContent: p.jn.QUEST_LIVE_STREAM,
-  location: D.dr.QUEST_CHANNEL_CALL_HEADER
+  location: b.dr.QUEST_CHANNEL_CALL_HEADER
 });
   return (0, i.jsx)(R.A, {
 questOrQuests: q,
@@ -239,7 +239,7 @@ children: () => {
             quest: q,
             questContent: p.jn.QUEST_LIVE_STREAM,
             taskDetails: eh,
-            location: D.dr.QUEST_CHANNEL_CALL_HEADER
+            location: b.dr.QUEST_CHANNEL_CALL_HEADER
           }),
           (0, i.jsxs)('div', {
             className: y.ctas,

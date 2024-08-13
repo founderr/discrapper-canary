@@ -33,8 +33,8 @@ var i = n(735250),
   L = n(981631),
   Z = n(245335),
   P = n(689938),
-  D = n(652267);
-let b = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+  b = n(652267);
+let D = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
   j = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
   U = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 
@@ -46,37 +46,37 @@ isLarge: a,
 isStacked: s
   } = e, l = [];
   return null != n && n > 0 && l.push((0, i.jsxs)('div', {
-className: D.statusWrapper,
+className: b.statusWrapper,
 children: [
   (0, i.jsx)('i', {
-    className: D.statusOnline
+    className: b.statusOnline
   }),
   (0, i.jsx)(d.Text, {
     variant: 'text-xs/normal',
-    className: D.count,
+    className: b.count,
     children: P.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
       membersOnline: n
     })
   })
 ]
   }, 'onlineCount')), null != t && l.push((0, i.jsxs)('div', {
-className: D.statusWrapper,
+className: b.statusWrapper,
 children: [
   (0, i.jsx)('i', {
-    className: D.statusOffline
+    className: b.statusOffline
   }),
   (0, i.jsx)(d.Text, {
     variant: 'text-xs/normal',
-    className: D.count,
+    className: b.count,
     children: P.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
       count: t
     })
   })
 ]
   }, 'memberCount')), (0, i.jsx)('div', {
-className: r()(D.statusCounts, {
-  [D.large]: a,
-  [D.stacked]: s
+className: r()(b.statusCounts, {
+  [b.large]: a,
+  [b.stacked]: s
 }),
 children: l
   });
@@ -92,13 +92,13 @@ hasEnded: s
   if (null != t && null != n) {
 let e = (0, C.KS)(t, n);
 return (0, i.jsxs)('div', {
-  className: r()(D.channel, {
-    [D.stacked]: a,
-    [D.ended]: s
+  className: r()(b.channel, {
+    [b.stacked]: a,
+    [b.ended]: s
   }),
   children: [
     null != e ? (0, i.jsx)(e, {
-      className: D.channelIcon,
+      className: b.channelIcon,
       size: 'xs',
       color: 'currentColor'
     }) : null,
@@ -115,9 +115,9 @@ return (0, i.jsxs)('div', {
 });
   }
   return null != n ? (0, i.jsx)('div', {
-className: r()(D.channel, {
-  [D.stacked]: a,
-  [D.ended]: s
+className: r()(b.channel, {
+  [b.stacked]: a,
+  [b.ended]: s
 }),
 children: (0, i.jsx)(p.Z, {
   children: (0, i.jsx)(d.Text, {
@@ -150,7 +150,7 @@ function k(e) {
 let e = new ResizeObserver(() => function() {
     var e;
     let t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetWidth;
-    null != t && (V(t < U + j), Y(t <= 2 * b));
+    null != t && (V(t < U + j), Y(t <= 2 * D));
   }()),
   t = F.current;
 return null != t && e.observe(t), () => {
@@ -183,7 +183,7 @@ X = (0, c.e7)([x.Z], () => null != q && x.Z.can(L.Plq.USE_EMBEDDED_ACTIVITIES, q
 } = (0, N.ZP)(h.Z.INVITE_EMBED),
 $ = (0, I.Z)({
   applicationId: G.id,
-  size: b,
+  size: D,
   names: ['embedded_cover']
 }),
 ee = (0, c.Wu)([E.ZP], () => null != q ? E.ZP.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === G.id).flatMap(e => Array.from(e.userIds)) : [], [
@@ -207,41 +207,41 @@ es = () => {
   });
 };
   return (ei && z && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START, null == u.code || '' === u.code) ? null : (0, i.jsxs)('div', {
-className: D.container,
+className: b.container,
 ref: F,
 children: [
   (0, i.jsx)('div', {
-    className: r()(D.imgContainer, {
-      [D.large]: w,
-      [D.stacked]: H
+    className: r()(b.imgContainer, {
+      [b.large]: w,
+      [b.stacked]: H
     }),
     children: (0, i.jsx)(m.Z, {
       imageBackground: $,
       applicationName: null !== (n = null == K ? void 0 : K.name) && void 0 !== n ? n : '',
-      imageClassName: r()(D.img, {
-        [D.large]: w,
-        [D.stacked]: H
+      imageClassName: r()(b.img, {
+        [b.large]: w,
+        [b.stacked]: H
       }),
-      imageNotFoundClassName: r()(D.brokenImg, {
-        [D.large]: w,
-        [D.stacked]: H
+      imageNotFoundClassName: r()(b.brokenImg, {
+        [b.large]: w,
+        [b.stacked]: H
       })
     })
   }),
   (0, i.jsxs)(g.Z, {
-    className: r()(D.content, {
-      [D.large]: w,
-      [D.stacked]: H
+    className: r()(b.content, {
+      [b.large]: w,
+      [b.stacked]: H
     }),
     children: [
       (0, i.jsxs)('div', {
-        className: D.info,
+        className: b.info,
         children: [
           (0, i.jsx)(d.FormTitle, {
             children: ei ? P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : P.Z.Messages.INVITE_BUTTON_TITLE_INVITED
           }),
           (0, i.jsx)(d.Heading, {
-            className: D.heading,
+            className: b.heading,
             variant: 'heading-xl/semibold',
             children: null == K ? void 0 : K.name
           }),
@@ -254,14 +254,14 @@ children: [
         ]
       }),
       (0, i.jsxs)('div', {
-        className: r()(D.currentState, {
-          [D.large]: w,
-          [D.split]: !Q && H
+        className: r()(b.currentState, {
+          [b.large]: w,
+          [b.split]: !Q && H
         }),
         children: [
           !Q && ei ? (0, i.jsxs)('div', {
-            className: r()(D.endedNote, {
-              [D.large]: w
+            className: r()(b.endedNote, {
+              [b.large]: w
             }),
             children: [
               (0, i.jsx)(d.Text, {
@@ -281,10 +281,10 @@ children: [
             isStacked: H
           }),
           (0, i.jsxs)('div', {
-            className: D.cta,
+            className: b.cta,
             children: [
               null != W && Q ? (0, i.jsx)('div', {
-                className: D.avatars,
+                className: b.avatars,
                 children: (0, i.jsx)(T.Z, {
                   guildId: W.id,
                   users: et,
@@ -299,11 +299,11 @@ children: [
                     ...n
                   } = e;
                   return (0, i.jsx)(d.Button, {
-                    className: D.actionButton,
+                    className: b.actionButton,
                     onClick: () => {
                       es(), null == t || t();
                     },
-                    wrapperClassName: D.tooltipButtonWrapper,
+                    wrapperClassName: b.tooltipButtonWrapper,
                     ...n,
                     submitting: en,
                     disabled: ea,

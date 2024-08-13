@@ -34,29 +34,29 @@ compact: s = !1,
 className: L,
 onContextMenu: Z,
 onClick: P,
-hideSimpleEmbedContent: D = !0,
-channel: b,
+hideSimpleEmbedContent: b = !0,
+channel: D,
 isGroupStart: j,
 animateAvatar: U,
 subscribeToComponentDispatch: y,
 renderThreadAccessory: B,
 trackAnnouncementViews: k = !1,
 ...G
-  } = e, F = a.type === M.uaV.POLL_RESULT || null !== (t = e.disableInteraction) && void 0 !== t && t, w = a.isFirstMessageInForumPost(b), V = (0, u.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()), {
+  } = e, F = a.type === M.uaV.POLL_RESULT || null !== (t = e.disableInteraction) && void 0 !== t && t, w = a.isFirstMessageInForumPost(D), V = (0, u.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()), {
 content: H,
 hasSpoilerEmbeds: Y
   } = (0, C.Z)(a, {
-hideSimpleEmbedContent: D,
+hideSimpleEmbedContent: b,
 allowList: w || V,
 allowHeading: w || V,
 allowLinks: !0,
 previewLinkTarget: !0
   }), W = a.type === M.uaV.REPLY ? a.messageReference : void 0, K = (0, o.e7)([d.Z], () => d.Z.getMessageByReference(W)), z = (0, l.JA)(a.id), Q = (0, h.ZP)(a), q = (0, o.e7)([_.Z], () => a.hasFlag(M.iLy.HAS_THREAD) && _.Z.getChannel(m.default.castMessageIdAsChannelId(a.id))), X = (0, c.p9)({
-guildId: b.guild_id,
+guildId: D.guild_id,
 roleId: Q.iconRoleId
-  }), J = (0, o.e7)([E.Z], () => E.Z.can(M.Plq.CREATE_INSTANT_INVITE, b)), $ = (0, p.Z)({
+  }), J = (0, o.e7)([E.Z], () => E.Z.can(M.Plq.CREATE_INSTANT_INVITE, D)), $ = (0, p.Z)({
 message: a,
-channel: b,
+channel: D,
 enabled: k
   });
   if ((0, T.Z)(a, J))
@@ -70,11 +70,11 @@ className: r()(L, {
   [v.disableInteraction]: F
 }),
 disableInteraction: F,
-childrenRepliedMessage: (0, O.Z)(a, b, W, K, s),
-childrenExecutedCommand: (0, x.Z)(a, b, s),
+childrenRepliedMessage: (0, O.Z)(a, D, W, K, s),
+childrenExecutedCommand: (0, x.Z)(a, D, s),
 childrenHeader: (0, A.Z)({
   ...e,
-  guildId: b.guild_id,
+  guildId: D.guild_id,
   author: Q,
   roleIcon: X
 }),

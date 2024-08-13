@@ -107,15 +107,15 @@ v = !f && O,
 L = v || m || C,
 Z = E && A && (!O || f || L),
 P = null === (i = u.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
-D = null != P ? d.ZP.getSelfMember(P) : null,
-b = (0, o.EY)(D),
-j = (0, c.b)(D);
+b = null != P ? d.ZP.getSelfMember(P) : null,
+D = (0, o.EY)(b),
+j = (0, c.b)(b);
   return {
 poll: l,
 canTapAnswers: Z,
 canRemoveVote: v && E && !m,
 canShowVoteCounts: L,
-canSubmitVote: !N && x && !v && E && !b && !j,
+canSubmitVote: !N && x && !v && E && !D && !j,
 expirationLabel: I,
 hasSelectedAnswer: x,
 hasVoted: v,
@@ -157,8 +157,8 @@ P = v(e, t, {
   if (null == P)
 return;
   let {
-canTapAnswers: D,
-canRemoveVote: b,
+canTapAnswers: b,
+canRemoveVote: D,
 canShowVoteCounts: j,
 canSubmitVote: U,
 expirationLabel: y = A.Z.Messages.POLL_EXPIRED,
@@ -244,7 +244,7 @@ isExpired: F,
 canSubmitVote: U,
 hasVoted: k,
 isEditingVote: G,
-canRemoveVote: b,
+canRemoveVote: D,
 isInteractive: w,
 showResults: K
   }).with({
@@ -325,7 +325,7 @@ promptLabel: ei,
 answers: X,
 answersInteraction: (0, i.EQ)({
   tapShouldOpenVotersModal: W,
-  canTapAnswers: D,
+  canTapAnswers: b,
   canSelectMultipleAnswers: en
 }).with({
   tapShouldOpenVotersModal: !0
@@ -345,7 +345,7 @@ resources: (0, p.Z)({
 containerStyle: 'normal',
 primaryAction: J,
 isInteractive: w,
-canTapAnswers: D,
+canTapAnswers: b,
 canSelectMultipleAnswers: en,
 hasSelectedAnswer: B,
 canShowVoteCounts: j,

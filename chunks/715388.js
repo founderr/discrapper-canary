@@ -8,8 +8,8 @@ n(470079);
 var l = n(442837),
   t = n(481060),
   o = n(666520),
-  r = n(592125),
-  a = n(430824),
+  a = n(592125),
+  r = n(430824),
   d = n(944486),
   c = n(785717),
   u = n(621853),
@@ -18,8 +18,8 @@ var l = n(442837),
   f = n(900927),
   E = n(678738),
   m = n(351707),
-  x = n(228168),
-  S = n(689938),
+  S = n(228168),
+  x = n(689938),
   v = n(408277);
 
 function Z(e) {
@@ -32,13 +32,13 @@ subsection: h,
 onClose: T
   } = e, {
 trackUserProfileAction: g
-  } = (0, c.KZ)(), N = (0, l.e7)([a.Z], () => (null == p ? void 0 : p.guildId) != null ? a.Z.getGuild(p.guildId) : null), j = (0, l.e7)([u.Z], () => {
+  } = (0, c.KZ)(), N = (0, l.e7)([r.Z], () => (null == p ? void 0 : p.guildId) != null ? r.Z.getGuild(p.guildId) : null), j = (0, l.e7)([u.Z], () => {
 var e;
 return null === (e = u.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
   }), C = (0, l.e7)([
-r.Z,
+a.Z,
 d.Z
-  ], () => r.Z.getChannel(d.Z.getChannelId()));
+  ], () => a.Z.getChannel(d.Z.getChannelId()));
   return (0, i.jsxs)(t.ScrollerThin, {
 fade: !0,
 className: v.scroller,
@@ -58,23 +58,23 @@ children: [
     user: n,
     currentUser: Z,
     guild: N,
-    scrollIntoView: h === x.Tb.ROLES
+    scrollIntoView: h === S.Tb.ROLES
   }),
   (0, i.jsx)(E.Z, {
-    heading: S.Z.Messages.BOT_PROFILE_CREATED_ON,
+    heading: x.Z.Messages.BOT_PROFILE_CREATED_ON,
     children: (0, i.jsx)(f.Z, {
       userId: n.id,
       guildId: null == p ? void 0 : p.guildId,
-      tooltipDelay: x.vB
+      tooltipDelay: S.vB
     })
   }),
   (0, i.jsx)(E.Z, {
-    heading: S.Z.Messages.NOTE,
-    scrollIntoView: h === x.Tb.NOTE,
+    heading: x.Z.Messages.NOTE,
+    scrollIntoView: h === S.Tb.NOTE,
     children: (0, i.jsx)(o.Z, {
       userId: n.id,
       className: v.note,
-      autoFocus: h === x.Tb.NOTE,
+      autoFocus: h === S.Tb.NOTE,
       onUpdate: () => g({
         action: 'SET_NOTE'
       })

@@ -1,6 +1,6 @@
 n.d(s, {
   Z: function() {
-return r;
+return a;
   }
 });
 var i = n(470079),
@@ -8,7 +8,7 @@ var i = n(470079),
   t = n(621853);
 let o = [];
 
-function r(e) {
+function a(e) {
   let s = (0, l.e7)([t.Z], () => t.Z.getUserProfile(e));
   return (0, i.useMemo)(() => (null == s ? void 0 : s.applicationRoleConnections) == null ? o : s.applicationRoleConnections, [null == s ? void 0 : s.applicationRoleConnections]);
 }

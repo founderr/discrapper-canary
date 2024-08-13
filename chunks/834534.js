@@ -8,8 +8,8 @@ n(470079);
 var l = n(442837),
   t = n(481060),
   o = n(666520),
-  r = n(706454),
-  a = n(430824),
+  a = n(706454),
+  r = n(430824),
   d = n(914010),
   c = n(785717),
   u = n(532776),
@@ -18,8 +18,8 @@ var l = n(442837),
   f = n(900927),
   E = n(678738),
   m = n(652853),
-  x = n(335191),
-  S = n(351707),
+  S = n(335191),
+  x = n(351707),
   v = n(228168),
   Z = n(689938),
   p = n(408277);
@@ -35,7 +35,7 @@ onClose: g
 theme: N
   } = (0, m.z)(), {
 trackUserProfileAction: j
-  } = (0, c.KZ)(), C = null == h ? void 0 : h.guildId, A = (0, l.e7)([a.Z], () => null != C ? a.Z.getGuild(C) : null), R = (0, l.e7)([d.Z], () => d.Z.getGuildId()), O = (0, l.e7)([r.default], () => r.default.locale), L = (0, _.Z)(s.id), M = (0, u.Z)(s.id);
+  } = (0, c.KZ)(), C = null == h ? void 0 : h.guildId, A = (0, l.e7)([r.Z], () => null != C ? r.Z.getGuild(C) : null), R = (0, l.e7)([d.Z], () => d.Z.getGuildId()), O = (0, l.e7)([a.default], () => a.default.locale), L = (0, _.Z)(s.id), M = (0, u.Z)(s.id);
   return (0, i.jsxs)(t.ScrollerThin, {
 fade: !0,
 className: p.scroller,
@@ -44,7 +44,7 @@ children: [
     userBio: h.bio,
     setLineClamp: !1
   }),
-  null != A && (0, i.jsx)(S.Z, {
+  null != A && (0, i.jsx)(x.Z, {
     user: s,
     currentUser: n,
     guild: A,
@@ -60,7 +60,7 @@ children: [
   }),
   L.length > 0 && (0, i.jsx)(E.Z, {
     heading: Z.Z.Messages.CONNECTIONS,
-    children: (0, i.jsx)(x.OA, {
+    children: (0, i.jsx)(S.OA, {
       connectedAccounts: L,
       className: p.connections,
       userId: s.id,
@@ -70,7 +70,7 @@ children: [
   }),
   M.length > 0 && (0, i.jsx)(E.Z, {
     heading: Z.Z.Messages.APPS,
-    children: M.map(e => (0, i.jsx)(x.tH, {
+    children: M.map(e => (0, i.jsx)(S.tH, {
       className: p.appsConnections,
       applicationRoleConnection: e,
       locale: O,

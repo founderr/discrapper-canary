@@ -114,8 +114,8 @@ BOTTOM_RIGHT: {
   }
 }
   }),
-  D = 'falling-leaf',
-  b = ['#61D5B2'],
+  b = 'falling-leaf',
+  D = ['#61D5B2'],
   j = n(303893),
   U = n(808392),
   y = [
@@ -220,7 +220,7 @@ s
 if (S && 'leaf_fall' === c) {
   let e = P[I].leafRotationDirection;
   p.createConfetti({
-    id: ''.concat(D, '-').concat((0, _.Z)()),
+    id: ''.concat(b, '-').concat((0, _.Z)()),
     position: {
       type: 'static',
       value: function(e, t) {
@@ -278,7 +278,7 @@ children: [
   (0, l.jsx)(d.Ji, {
     ref: C,
     sprites: y,
-    colors: b,
+    colors: D,
     spriteWidth: 45,
     spriteHeight: 45
   }),
@@ -358,7 +358,7 @@ usernameHook: P,
 guildName: a.name,
 newTierName: (0, g.nW)(c)
   });
-  let b = o.useCallback(() => {
+  let D = o.useCallback(() => {
   if (!v.enabled)
     if (E || 0 !== Math.floor(50 * Math.random())) {
       var e;
@@ -382,7 +382,7 @@ U = o.useCallback(() => {
   }), T.Z.open(R.oAB.POGGERMODE), I(!1);
 }, []),
 y = o.useCallback((e, t) => {
-  (null == t ? void 0 : t.id.startsWith(D)) && U();
+  (null == t ? void 0 : t.id.startsWith(b)) && U();
 }, [U]);
   o.useEffect(() => _(y));
   let B = (0, l.jsx)(m.Clickable, {
@@ -391,7 +391,7 @@ innerRef: M,
 onClick: r,
 children: (0, l.jsx)(p.Z, {
   className: O.icon,
-  onMouseEnter: b
+  onMouseEnter: D
 })
   });
   return (0, l.jsxs)(A.Z, {

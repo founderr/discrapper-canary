@@ -29,8 +29,8 @@ var i, a, s, r, l = n(913527),
   L = n(223606),
   Z = n(150340),
   P = n(160404),
-  D = n(41776),
-  b = n(347649),
+  b = n(41776),
+  D = n(347649),
   j = n(332473),
   U = n(514851),
   y = n(30684),
@@ -83,8 +83,8 @@ var i, a, s, r, l = n(913527),
   eL = n(981631),
   eZ = n(188785),
   eP = n(288836),
-  eD = n(474936),
-  eb = n(46140),
+  eb = n(474936),
+  eD = n(46140),
   ej = n(231338),
   eU = n(65154);
 let ey = {
@@ -313,7 +313,7 @@ eL.kVF.SCHEDULED_MAINTENANCE
     let {
       selectedGuildId: t
     } = e;
-    return null != t && D.Z.isLurking(t);
+    return null != t && b.Z.isLurking(t);
   }
 },
 [eL.kVF.VOICE_DISABLED]: {
@@ -510,17 +510,17 @@ eL.kVF.SCHEDULED_MAINTENANCE
   predicate: () => en.Z.isSuggestedAccountType(eL.ABu.PLAYSTATION) && null == en.Z.getAccount(null, eL.ABu.PLAYSTATION) && !eY(eL.kVF.CONNECT_PLAYSTATION)
 },
 [eL.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: {
-  predicate: () => eg.Z.getAlmostExpiringTrialOffers([eD.Si.TIER_2]).length > 0 && !eY(eL.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
+  predicate: () => eg.Z.getAlmostExpiringTrialOffers([eb.Si.TIER_2]).length > 0 && !eY(eL.kVF.PREMIUM_TIER_2_TRIAL_ENDING)
 },
 [eL.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: {
-  predicate: () => eg.Z.getAlmostExpiringTrialOffers([eD.Si.TIER_0]).length > 0 && !eY(eL.kVF.PREMIUM_TIER_0_TRIAL_ENDING)
+  predicate: () => eg.Z.getAlmostExpiringTrialOffers([eb.Si.TIER_0]).length > 0 && !eY(eL.kVF.PREMIUM_TIER_0_TRIAL_ENDING)
 },
 [eL.kVF.PREMIUM_UNCANCEL]: {
   predicate: e => {
     let {
       premiumSubscription: t,
       currentUser: n
-    } = e, i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0, a = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eL.O0b.CANCELED && 1 >= o()().diff(o()(t.canceledAt), 'days'), s = null != t && o()(t.currentPeriodEnd).isBefore(o()()), r = null != t && t.status === eL.O0b.CANCELED && !s && i <= 7 && i >= 0 && (0, ex.M5)(n, eD.p9.TIER_2) && !a && !n.hasFreePremium() && !t.isPurchasedExternally;
+    } = e, i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0, a = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eL.O0b.CANCELED && 1 >= o()().diff(o()(t.canceledAt), 'days'), s = null != t && o()(t.currentPeriodEnd).isBefore(o()()), r = null != t && t.status === eL.O0b.CANCELED && !s && i <= 7 && i >= 0 && (0, ex.M5)(n, eb.p9.TIER_2) && !a && !n.hasFreePremium() && !t.isPurchasedExternally;
     return !eY(eL.kVF.PREMIUM_UNCANCEL) && r;
   },
   metadata: e => {
@@ -540,7 +540,7 @@ eL.kVF.SCHEDULED_MAINTENANCE
     let {
       premiumSubscription: t,
       currentUser: n
-    } = e, i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0, a = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf('day'), 'days') : 0, s = null != t && o()(t.currentPeriodEnd).isBefore(o()()), r = eS.Z.applicationIdsFetched.has(eD.RQ), l = eS.Z.getForApplication(eD.RQ), c = null != t ? (0, ex.Af)(t) : null, u = null != c ? ex.ZP.getSkuIdForPlan(c.planId) : null, d = null != l && null != c && Array.from(l).filter(e => {
+    } = e, i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0, a = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf('day'), 'days') : 0, s = null != t && o()(t.currentPeriodEnd).isBefore(o()()), r = eS.Z.applicationIdsFetched.has(eb.RQ), l = eS.Z.getForApplication(eb.RQ), c = null != t ? (0, ex.Af)(t) : null, u = null != c ? ex.ZP.getSkuIdForPlan(c.planId) : null, d = null != l && null != c && Array.from(l).filter(e => {
       let {
         skuId: t,
         consumed: n
@@ -675,7 +675,7 @@ eL.kVF.SCHEDULED_MAINTENANCE
   })
 },
 [eL.kVF.POMELO_ELIGIBLE]: {
-  predicate: () => (0, j.e)() && !eY(eL.kVF.POMELO_ELIGIBLE) && !(0, b.ov)()
+  predicate: () => (0, j.e)() && !eY(eL.kVF.POMELO_ELIGIBLE) && !(0, D.ov)()
 },
 [eL.kVF.DROPS_ENDED_INCOMPLETE]: {
   predicate: () => !eY(eL.kVF.DROPS_ENDED_INCOMPLETE) && (0, f.un)(d.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(d.z.QUEST_2_COMPLETION_TOOLTIP) && (0, p.FL)(eP.X2.FORTNITE),
@@ -684,7 +684,7 @@ eL.kVF.SCHEDULED_MAINTENANCE
   })
 },
 [eL.kVF.UU_MIGRATION]: {
-  predicate: () => (0, j.e)() && !eY(eL.kVF.UU_MIGRATION) && (0, b.ov)()
+  predicate: () => (0, j.e)() && !eY(eL.kVF.UU_MIGRATION) && (0, D.ov)()
 },
 [eL.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION]: {
   predicate: e => {
@@ -732,7 +732,7 @@ eL.kVF.SCHEDULED_MAINTENANCE
       return !1;
     let t = (0, R.V9)(e),
       n = W.Z.getStreamHeartbeatFailure(t);
-    return null != n && Date.now() - n.firstFailedAt >= eb.Ot;
+    return null != n && Date.now() - n.firstFailedAt >= eD.Ot;
   },
   metadata: () => {
     let e = X.Z.getCurrentUserActiveStream();
@@ -816,7 +816,7 @@ this.syncWith([
   M.Z,
   W.Z,
   X.Z
-], eQ), this.waitFor(eh.default, eE.Z, es.Z, ea.ZP, eu.Z, er.Z, eI.Z, g.Z, e_.Z, eT.Z, z.Z, S.ZP, ec.Z, eO.Z, eM.Z, eA.Z, el.Z, ep.ZP, ev.Z, ei.Z, eC.Z, eo.Z, V.Z, eS.Z, eg.Z, en.Z, D.Z, C.Z, N.Z, Y.Z, W.Z, X.Z);
+], eQ), this.waitFor(eh.default, eE.Z, es.Z, ea.ZP, eu.Z, er.Z, eI.Z, g.Z, e_.Z, eT.Z, z.Z, S.ZP, ec.Z, eO.Z, eM.Z, eA.Z, el.Z, ep.ZP, ev.Z, ei.Z, eC.Z, eo.Z, V.Z, eS.Z, eg.Z, en.Z, b.Z, C.Z, N.Z, Y.Z, W.Z, X.Z);
   }
   hasNotice() {
 return null != ew && null != ew.type;

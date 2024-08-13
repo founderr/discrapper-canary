@@ -36,7 +36,7 @@ popoutPosition: O,
 popoutAlign: M
   } = e, {
 analyticsLocations: v
-  } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER), [L, Z] = a.useState(!1), [P, D] = function() {
+  } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER), [L, Z] = a.useState(!1), [P, b] = function() {
 let e = (0, r.e7)([m.Z], () => {
   var e, t;
   return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
@@ -52,7 +52,7 @@ return [
   }, [])
 ];
   }(), {
-showTutorial: b,
+showTutorial: D,
 setSeenTutorial: j
   } = function(e) {
 let t = (0, r.e7)([m.Z], () => {
@@ -80,9 +80,9 @@ n,
 t,
 L
   ]), B = a.useCallback(() => {
-y(), D(l.X.UNREADS);
+y(), b(l.X.UNREADS);
   }, [
-D,
+b,
 y
   ]);
   a.useEffect(() => (T.S.subscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.S.unsubscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
@@ -104,7 +104,7 @@ enabled: F
 location: 'RecentsPopout'
   });
   a.useEffect(() => {
-(!k && P === l.X.TODOS || !G && P === l.X.BOOKMARKS) && D(l.X.MENTIONS);
+(!k && P === l.X.TODOS || !G && P === l.X.BOOKMARKS) && b(l.X.MENTIONS);
   });
   let w = a.useCallback(e => {
 !e.shiftKey && U();
@@ -122,36 +122,36 @@ children: (0, i.jsx)(o.Popout, {
     return (0, i.jsx)(o.Dialog, {
       'aria-label': A.Z.Messages.INBOX,
       children: P === l.X.FOR_YOU ? (0, i.jsx)(h.Z, {
-        setTab: D,
+        setTab: b,
         badgeState: x,
         closePopout: U
       }) : P === l.X.MENTIONS ? (0, i.jsx)(C.Z, {
-        setTab: D,
+        setTab: b,
         onJump: w,
         badgeState: x,
         closePopout: U
       }) : F && P === l.X.GAME_INVITES ? (0, i.jsx)(g.Z, {
-        setTab: D,
+        setTab: b,
         badgeState: x,
         closePopout: U
       }) : G && P === l.X.BOOKMARKS ? (0, i.jsx)(N.Z, {
-        setTab: D,
+        setTab: b,
         onJump: w,
         closePopout: U
       }) : k && P === l.X.TODOS ? (0, i.jsx)(f.Z, {
-        setTab: D,
+        setTab: b,
         onJump: w,
         closePopout: U
       }) : (0, i.jsx)(s.SV, {
         fallback: (0, i.jsx)(p.h, {
-          setTab: D,
+          setTab: b,
           closePopout: U,
           badgeState: x
         }),
         children: (0, i.jsx)(p.Z, {
-          setTab: D,
+          setTab: b,
           onJump: w,
-          showTutorial: b,
+          showTutorial: D,
           setSeenTutorial: j,
           closePopout: U,
           badgeState: x

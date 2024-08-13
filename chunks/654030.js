@@ -28,8 +28,8 @@ var i, a = n(735250),
   L = n(181106),
   Z = n(417363),
   P = n(768581),
-  D = n(358085),
-  b = n(804739),
+  b = n(358085),
+  D = n(804739),
   j = n(410575),
   U = n(981631),
   y = n(701488);
@@ -79,7 +79,7 @@ let {
   isLaunchable: e,
   application: t
 } = this.props;
-return null != t && null != t.primarySkuId && !e && D.isPlatformEmbedded;
+return null != t && null != t.primarySkuId && !e && b.isPlatformEmbedded;
   }
   render() {
 return (0, a.jsx)(j.Z, {
@@ -222,7 +222,7 @@ super(...e), B(this, 'state', {
     isGameLaunchable: h,
     isLoading: o || this.state.sending,
     activityActionType: u,
-    isInBrowser: !D.isPlatformEmbedded,
+    isInBrowser: !b.isPlatformEmbedded,
     isSyncable: T,
     isSender: c,
     channelId: _,
@@ -291,7 +291,7 @@ connectedApplication: null != l ? A.Z.getApplication(l) : null,
 myPartyId: null != c && null != c.party ? c.party.id : null,
 isLaunching: u,
 isSyncable: _ && !I,
-isLaunchable: null != l && (0, b.t)({
+isLaunchable: null != l && (0, D.t)({
   LibraryApplicationStore: O.Z,
   LaunchableGameStore: h.Z,
   DispatchApplicationStore: Z.Z,

@@ -72,8 +72,8 @@ isQuestExpired: s,
 quest: u,
 location: I,
 size: T,
-expansionSpring: D,
-isAnimating: b,
+expansionSpring: b,
+isAnimating: D,
 isExpanded: j,
 isInConcurrentQuestExperiment: U,
 contentPosition: y,
@@ -121,7 +121,7 @@ style: {
 children: [
   (0, i.jsx)(Z, {
     style: {
-      opacity: D.to({
+      opacity: b.to({
         range: [
           0,
           1
@@ -154,7 +154,7 @@ children: [
           [v.headerContentEmbed]: Q
         }),
         style: {
-          y: z ? D.to({
+          y: z ? b.to({
             range: [
               0,
               1
@@ -169,7 +169,7 @@ children: [
           z && (0, i.jsx)(l.animated.div, {
             className: v.headerCollapsedContent,
             style: {
-              opacity: D.to({
+              opacity: b.to({
                 range: [
                   0,
                   1
@@ -179,9 +179,9 @@ children: [
                   0
                 ]
               }),
-              visibility: b || !j ? 'inherit' : 'hidden'
+              visibility: D || !j ? 'inherit' : 'hidden'
             },
-            'aria-hidden': !b && j,
+            'aria-hidden': !D && j,
             children: (0, i.jsxs)(d.ClickableContainer, {
               'aria-label': M.Z.Messages.EXPAND,
               onClick: ee,
@@ -231,7 +231,7 @@ children: [
               [v.outerContainerEmbed]: Q
             }),
             style: {
-              opacity: D.to({
+              opacity: b.to({
                 range: [
                   0,
                   1
@@ -241,9 +241,9 @@ children: [
                   1
                 ]
               }),
-              visibility: b || j ? 'inherit' : 'hidden'
+              visibility: D || j ? 'inherit' : 'hidden'
             },
-            'aria-hidden': !b && !j,
+            'aria-hidden': !D && !j,
             children: [
               (0, i.jsxs)('div', {
                 className: v.headerExpandedWrapper,
@@ -304,7 +304,7 @@ children: [
       (0, i.jsxs)(l.animated.div, {
         className: v.iconsContainer,
         style: {
-          top: z ? D.to({
+          top: z ? b.to({
             range: [
               0,
               1
@@ -325,10 +325,10 @@ children: [
             showShareLink: !s && Q,
             children: e => (0, i.jsx)(l.animated.div, {
               style: {
-                opacity: D,
-                visibility: b || j ? 'inherit' : 'hidden'
+                opacity: b,
+                visibility: D || j ? 'inherit' : 'hidden'
               },
-              'aria-hidden': !b && !j,
+              'aria-hidden': !D && !j,
               children: (0, i.jsx)(d.Clickable, {
                 ...e,
                 className: v.iconWrapper,
@@ -346,7 +346,7 @@ children: [
             'aria-label': j ? M.Z.Messages.COLLAPSE : M.Z.Messages.EXPAND,
             children: (0, i.jsx)(L, {
               style: {
-                rotate: D.to({
+                rotate: b.to({
                   range: [
                     0,
                     1
