@@ -13,7 +13,7 @@ var s = n(735250),
   T = n(794484),
   I = n(347475),
   R = n(342414),
-  C = n(487980),
+  C = n(938736),
   g = n(391110),
   p = n(71363),
   N = n(781800),
@@ -31,7 +31,7 @@ _.X.trigger();
 } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
 [S, h] = a.useState(!1);
   (0, E.FM)();
-  let M = (0, C.b)('SubscriberNitroHome');
+  let M = (0, C.bD)('SubscriberNitroHome');
   return (0, s.jsxs)(s.Fragment, {
 children: [
   (0, s.jsx)(o.AdvancedScrollerAuto, {

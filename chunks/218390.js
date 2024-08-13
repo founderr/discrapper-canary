@@ -37,8 +37,8 @@ var n = t(735250),
   G = t(823188),
   F = t(504865),
   y = t(179984),
-  V = t(386733),
-  Y = t(487980),
+  V = t(938736),
+  Y = t(386733),
   w = t(474936),
   H = t(981631),
   k = t(689938),
@@ -235,7 +235,7 @@ autoTrackExposure: !0
 location: A + ' auto off',
 autoTrackExposure: !1
   }), (0, B.B)('PremiumManagementSettings');
-  let M = (0, Y.b)('PremiumManagementSettings');
+  let M = (0, V.bD)('PremiumManagementSettings');
   a.useEffect(() => {
 u.Z.wait(async () => {
   !N && !e && await Promise.all([
@@ -270,7 +270,7 @@ children: (0, n.jsxs)(n.Fragment, {
       className: W.__invalid_container,
       children: [
         (0, n.jsx)(X, {}),
-        M && (0, n.jsx)(V.Z, {
+        M && (0, n.jsx)(Y.Z, {
           isInSettings: !0
         }),
         (0, n.jsx)(q, {}),

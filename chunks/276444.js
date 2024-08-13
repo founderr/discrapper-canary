@@ -21,20 +21,22 @@ let E = null,
   R = 0,
   C = !1,
   y = null,
-  D = () => !0;
+  D = !1,
+  L = !1,
+  b = () => !0;
 
-function L(e) {
+function M(e) {
   T.add(e);
 }
 
-function b(e) {
+function P(e) {
   let {
 messages: t
   } = e;
-  t.forEach(e => M(e));
+  t.forEach(e => U(e));
 }
 
-function M(e) {
+function U(e) {
   let t = e.type === o.u.PREMIUM_REFERRAL ? e.content : null;
   if (null == t)
 return !1;
@@ -43,9 +45,9 @@ var n;
 n = t, T.add(n), u.Z.wait(() => (0, d.IB)(t).catch(_.VqG));
   }
 }
-class P extends(r = l.ZP.Store) {
+class w extends(r = l.ZP.Store) {
   initialize() {
-this.waitFor(c.default), this.syncWith([c.default], D);
+this.waitFor(c.default), this.syncWith([c.default], b);
   }
   checkAndFetchReferralsRemaining() {
 null == E && !I && A < 5 && (null == N || N < Date.now()) && (0, d.C$)();
@@ -92,13 +94,19 @@ return S;
   getRecipientStatus() {
 return p;
   }
+  getIsSenderEligibleForIncentive() {
+return D;
+  }
+  getIsSenderQualifiedForIncentive() {
+return L;
+  }
 }
-s = 'ReferralTrialStore', (a = 'displayName') in(i = P) ? Object.defineProperty(i, a, {
+s = 'ReferralTrialStore', (a = 'displayName') in(i = w) ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new P(u.Z, {
+}) : i[a] = s, t.Z = new w(u.Z, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function(e) {
 let {
   userTrialOfferId: t,
@@ -119,9 +127,11 @@ let {
   sent_user_ids: n,
   refresh_at: r,
   recipient_status: i,
-  has_eligible_friends: a
+  has_eligible_friends: a,
+  isUserEligibleForIncentive: s,
+  isUserQualifiedForIncentive: o
 } = e;
-C = null == r && a, I = !1, E = t, h = n, y = r, p = i;
+C = null == r && a, I = !1, E = t, h = n, y = r, p = i, D = s, L = o;
   },
   BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
 let {} = e;
@@ -190,15 +200,15 @@ O = !1, v = t, R = n;
   REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function() {
 O = !1;
   },
-  LOAD_MESSAGES_SUCCESS: b,
+  LOAD_MESSAGES_SUCCESS: P,
   MESSAGE_CREATE: function(e) {
 let {
   message: t
 } = e;
-M(t);
+U(t);
   },
-  LOAD_MESSAGES_AROUND_SUCCESS: b,
+  LOAD_MESSAGES_AROUND_SUCCESS: P,
   LOGOUT: function() {
-E = null, f = {}, h = [], m = new Set(), I = !1, T = new Set(), g = new Set(), S = {}, A = 0, N = null, v = [], O = !1, R = 0, C = !1, y = null, p = new Map();
+E = null, f = {}, h = [], m = new Set(), I = !1, T = new Set(), g = new Set(), S = {}, A = 0, N = null, v = [], O = !1, R = 0, C = !1, y = null, p = new Map(), D = !1, L = !1;
   }
 });

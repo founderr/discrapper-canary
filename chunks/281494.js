@@ -101,7 +101,9 @@ l.Z.dispatch({
   sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : [],
   refresh_at: null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.refresh_at) && void 0 !== n ? n : null,
   recipient_status: r,
-  has_eligible_friends: e.body.has_eligible_friends
+  has_eligible_friends: e.body.has_eligible_friends,
+  isUserEligibleForIncentive: e.body.is_eligible_for_incentive,
+  isUserQualifiedForIncentive: e.body.is_qualified_for_incentive
 });
   }, () => {
 l.Z.dispatch({
