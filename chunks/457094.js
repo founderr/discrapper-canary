@@ -476,7 +476,7 @@ null == eD.Z.getChannel(t) ? (0, eh.dL)(eq.Z5c.CHANNEL(n)) : (0, eh.dL)(i);
 }
 class e6 extends a.PureComponent {
   componentDidMount() {
-ez.ZP.setZoomFactor(m.Z.zoom), em.Z.init(), Z.Z.initialize(), el.Z.initialize(), U.Z.initialize(), eb.Z.initialize(), G.Z.initialize(), ec.Z.initialize(), X.Z.initialize(), I.Z.init(), w.Z.init(), k.Z.init(), en.Z.initialize(), f.Z.initialize(), y.Z.initialize(), ed.Z.initialize(), S.ZP.initialize(), ex.Z.initialize(), er.Z.initialize(), T.Z.initialize(), V.Z.init(), q.Z.init(), eV.Z.init(), eY.Z.init(), p.Z.initialize(), eA.Z.init(), eH.Z.init(), eL.Z.init(), eS.Z.initialize(), ef.Z.initialize(), eZ.ZP.initialize(), eO.Z.init(), D.Z.initialize(), g.Z.initialize(), eI.Z.initialize(), eT.Z.initialize(), ea.Z.initialize(), ei.Z.initialize(), es.Z.initialize(), R.Z.initialize(), Q.Z.init({
+ez.ZP.setZoomFactor(m.Z.zoom), em.Z.init(), Z.Z.initialize(), el.Z.initialize(), U.Z.initialize(), eb.Z.initialize(), G.Z.initialize(), ec.Z.initialize(), X.Z.initialize(), I.Z.init(), w.Z.init(), k.Z.init(), en.Z.initialize(), f.Z.initialize(), y.Z.initialize(), ed.Z.initialize(), S.ZP.initialize(), ex.Z.initialize(), er.Z.initialize(), T.Z.initialize(), V.Z.init(), q.Z.init(), eV.Z.init(), eY.Z.init(), p.Z.initialize(), eA.Z.init(), eH.Z.init(), eL.Z.init(), eS.Z.initialize(), ef.Z.initialize(), eZ.Z.initialize(), eO.Z.init(), D.Z.initialize(), g.Z.initialize(), eI.Z.initialize(), eT.Z.initialize(), ea.Z.initialize(), ei.Z.initialize(), es.Z.initialize(), R.Z.initialize(), Q.Z.init({
   hasModalOpen: o.hasAnyModalOpen,
   openModal: () => (0, o.openModalLazy)(async () => {
     let {
@@ -489,7 +489,7 @@ ez.ZP.setZoomFactor(m.Z.zoom), em.Z.init(), Z.Z.initialize(), el.Z.initialize(),
 }), M.Z.init(), J.Z.initialize(), eu.Z.initialize(), eo.Z.initialize(), P.Z.initialize(), O.Z.initialize(), this.rewriterUnlisten = e_.Z.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = e_.Z.addRouteChangeListener(this.handleHistoryChange);
   }
   componentWillUnmount() {
-eb.Z.terminate(), ec.Z.terminate(), el.Z.terminate(), Z.Z.terminate(), S.ZP.terminate(), ex.Z.terminate(), T.Z.terminate(), ed.Z.terminate(), er.Z.terminate(), eZ.ZP.terminate(), p.Z.terminate(), D.Z.terminate(), J.Z.terminate(), g.Z.terminate(), eu.Z.terminate(), eI.Z.terminate(), eT.Z.terminate(), ea.Z.terminate(), ei.Z.terminate(), es.Z.terminate(), R.Z.terminate(), eo.Z.terminate(), P.Z.terminate(), j.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+eb.Z.terminate(), ec.Z.terminate(), el.Z.terminate(), Z.Z.terminate(), S.ZP.terminate(), ex.Z.terminate(), T.Z.terminate(), ed.Z.terminate(), er.Z.terminate(), eZ.Z.terminate(), p.Z.terminate(), D.Z.terminate(), J.Z.terminate(), g.Z.terminate(), eu.Z.terminate(), eI.Z.terminate(), eT.Z.terminate(), ea.Z.terminate(), ei.Z.terminate(), es.Z.terminate(), R.Z.terminate(), eo.Z.terminate(), P.Z.terminate(), j.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
   }
   handleHistoryChange(e) {
 let {

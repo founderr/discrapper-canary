@@ -40,24 +40,23 @@ animateOnHover: D,
 onOpenProfile: L,
 isReplySource: b,
 onReply: M,
-showReplyPopout: P = !1,
-showGuildProfile: U = !0
+showReplyPopout: P = !1
   } = e, {
-theme: w
+theme: U
   } = (0, S.z)(), {
-analyticsLocations: x
+analyticsLocations: w
   } = (0, d.ZP)(c.Z.AVATAR), {
-trackUserProfileAction: G
-  } = (0, m.KZ)(), k = y === N.y0.FULL_SIZE ? U ? A.TW : A.c1 : void 0, B = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2), F = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
+trackUserProfileAction: x
+  } = (0, m.KZ)(), G = y === N.y0.FULL_SIZE ? (0, A.z)(t.id, null == n ? void 0 : n.guildId) : void 0, k = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2), B = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
 t,
 p
-  ]), [V, H] = i.useState(!1), Z = () => {
-H(!0);
-  }, Y = () => {
-H(!1);
+  ]), [F, V] = i.useState(!1), H = () => {
+V(!0);
+  }, Z = () => {
+V(!1);
   }, {
-status: j,
-isMobileOnline: W
+status: Y,
+isMobileOnline: j
   } = (0, o.cj)([
 E.Z,
 f.Z
@@ -73,51 +72,51 @@ return {
   status: (0, u.Z)(n) ? v.Skl.STREAMING : f.Z.getStatus(t.id),
   isMobileOnline: f.Z.isMobileOnline(t.id)
 };
-  }), K = y === N.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, z = s()(R.avatar, {
+  }), W = y === N.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, K = s()(R.avatar, {
 [R.hoisted]: b,
 [R.biteSize]: y === N.y0.BITE_SIZE,
 [R.fullSize]: y === N.y0.FULL_SIZE,
 [R.panel]: y === N.y0.PANEL
   }), {
-avatarDecorationSrc: q,
-avatarSrc: Q,
-eventHandlers: X
+avatarDecorationSrc: z,
+avatarSrc: q,
+eventHandlers: Q
   } = (0, I.Z)({
 user: t,
 guildId: null != n ? n.guildId : a,
-size: K,
+size: W,
 animateOnHover: D
-  }), $ = (0, r.jsx)(C, {
-src: Q,
-avatarDecoration: q,
-size: K,
+  }), X = (0, r.jsx)(C, {
+src: q,
+avatarDecoration: z,
+size: W,
 'aria-label': t.username,
 imageClassName: null != L ? R.overlay : void 0,
-status: F ? v.Skl.UNKNOWN : j,
-statusBackdropColor: B && !F ? (0, l.getStatusBackdropColor)(w) : void 0,
-isMobile: W,
+status: B ? v.Skl.UNKNOWN : Y,
+statusBackdropColor: k && !B ? (0, l.getStatusBackdropColor)(U) : void 0,
+isMobile: j,
 statusTooltip: !0,
 statusTooltipDelay: N.vB
-  }), J = () => null == L ? (0, r.jsx)('div', {
-...X,
-children: $
+  }), $ = () => null == L ? (0, r.jsx)('div', {
+...Q,
+children: X
   }) : (0, r.jsx)(l.Clickable, {
-...X,
+...Q,
 onClick: () => {
-  G({
+  x({
     action: 'PRESS_VIEW_PROFILE',
-    analyticsLocations: x
+    analyticsLocations: w
   }), null == L || L();
 },
 className: R.clickable,
-children: $
+children: X
   });
   return (0, r.jsxs)('div', {
-className: z,
-onFocus: Z,
-onBlur: Y,
-onMouseOver: Z,
-onMouseLeave: Y,
+className: K,
+onFocus: H,
+onBlur: Z,
+onMouseOver: H,
+onMouseLeave: Z,
 children: [
   (0, r.jsx)(l.Popout, {
     renderPopout: e => {
@@ -130,7 +129,7 @@ children: [
         channelId: p,
         profileType: y,
         sourceType: N.N9.AVATAR,
-        modalKey: k,
+        modalKey: G,
         setPopoutRef: n,
         onReply: M
       });
@@ -139,12 +138,12 @@ children: [
     position: 'bottom',
     align: 'center',
     shouldShow: P,
-    children: () => J()
+    children: () => $()
   }),
   (0, r.jsx)(T.Z, {
     user: t,
     sourceType: N.N9.AVATAR,
-    isVisible: V,
+    isVisible: F,
     isExpandable: !1,
     onReply: M
   })

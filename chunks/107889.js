@@ -49,7 +49,7 @@ initialSection: G,
 initialSubsection: w,
 transitionState: k,
 onClose: V,
-showGuildProfile: Y,
+showGuildProfile: Y = !0,
 sourceAnalyticsLocations: H = []
   } = e, W = b === L.ME ? void 0 : b, {
 analyticsLocations: z
@@ -182,8 +182,7 @@ children: (0, i.jsx)(f.Mt, {
                     profileType: O.y0.FULL_SIZE,
                     isReplySource: X === O.N9.AVATAR || X === O.N9.STATUS,
                     onReply: ee,
-                    showReplyPopout: X === O.N9.AVATAR,
-                    showGuildProfile: Y
+                    showReplyPopout: X === O.N9.AVATAR
                   }),
                   (0, i.jsx)(A.Z, {
                     user: s,
@@ -198,6 +197,7 @@ children: (0, i.jsx)(f.Mt, {
                   (0, i.jsx)(p.Z, {
                     location: 'SimplifiedUserProfileModal',
                     user: s,
+                    displayProfile: es,
                     guildId: W,
                     channelId: P,
                     profileType: O.y0.FULL_SIZE,
@@ -206,7 +206,6 @@ children: (0, i.jsx)(f.Mt, {
                     isReplySource: X === O.N9.STATUS,
                     onReply: ee,
                     showReplyPopout: X === O.N9.STATUS,
-                    showGuildProfile: Y,
                     onClose: V
                   })
                 ]

@@ -1,9 +1,6 @@
 n.d(t, {
-  TW: function() {
+  z: function() {
 return m;
-  },
-  c1: function() {
-return p;
   }
 });
 var r = n(735250);
@@ -20,84 +17,86 @@ var i = n(481060),
   E = n(621853),
   f = n(981631),
   h = n(616922);
-let p = 'MainUserProfileModal',
-  m = 'GuildUserProfileModal',
-  I = null;
-async function T(e) {
-  var t, a, s, T;
+let p = null;
+
+function m(e, t) {
+  return 'USER_PROFILE_MODAL_KEY:'.concat(e, ':').concat(null == t || t === f.ME ? '' : t);
+}
+async function I(e) {
+  var t, a, s, I;
   let {
-userId: g,
-section: S,
-subsection: A,
-guildId: N = f.ME,
-channelId: v,
-friendToken: O,
-analyticsLocation: R,
-showGuildProfile: C = !0,
-...y
-  } = e, D = d.default.getUser(g);
-  if (null == D)
+userId: T,
+section: g,
+subsection: S,
+guildId: A = f.ME,
+channelId: N,
+friendToken: v,
+analyticsLocation: O,
+showGuildProfile: R = !0,
+...C
+  } = e, y = d.default.getUser(T);
+  if (null == y)
 return;
-  let L = E.Z.getUserProfile(g),
-b = u.Z.getPrimaryActivity(g),
-M = u.Z.getStatus(g),
-P = u.Z.isMobileOnline(g),
+  let D = E.Z.getUserProfile(T),
+L = u.Z.getPrimaryActivity(T),
+b = u.Z.getStatus(T),
+M = u.Z.isMobileOnline(T),
 {
-  party: U,
-  assets: w,
-  application_id: x
-} = null != b ? b : {},
-G = null != x ? l.Z.getApplication(x) : null,
-k = P ? f.j28.ONLINE_MOBILE : f.j28.ONLINE_DESKTOP,
-B = M === f.Skl.ONLINE ? k : M;
-  I = await (0, i.openModalLazy)(async () => {
+  party: P,
+  assets: U,
+  application_id: w
+} = null != L ? L : {},
+x = null != w ? l.Z.getApplication(w) : null,
+G = M ? f.j28.ONLINE_MOBILE : f.j28.ONLINE_DESKTOP,
+k = b === f.Skl.ONLINE ? G : b;
+  p = await (0, i.openModalLazy)(async () => {
 let {
   default: e
 } = await n.e('824').then(n.bind(n, 304113));
 return t => (0, r.jsx)(e, {
   location: 'handleOpenUserProfileModal',
-  user: D,
-  guildId: N,
-  friendToken: O,
-  initialSection: S,
-  initialSubsection: A,
-  channelId: v,
-  showGuildProfile: C,
+  user: y,
+  guildId: A,
+  friendToken: v,
+  initialSection: g,
+  initialSubsection: S,
+  channelId: N,
+  showGuildProfile: R,
   ...t,
-  ...y
+  ...C
 });
   }, {
-modalKey: C ? m : p
+modalKey: m(T, R ? A : void 0)
   }), _.default.track(f.rMx.OPEN_MODAL, {
 type: 'Profile Modal',
-guild_id: N !== f.ME ? N : null,
-channel_id: v,
-other_user_id: g,
-application_id: null !== (a = null == b ? void 0 : b.application_id) && void 0 !== a ? a : null,
-application_name: null == b ? void 0 : b.name,
-sku_id: null !== (s = null == G ? void 0 : G.primarySkuId) && void 0 !== s ? s : null,
-is_friend: c.Z.isFriend(g),
-has_images: !!(null !== (T = null == w ? void 0 : w.large_image) && void 0 !== T ? T : null == w ? void 0 : w.small_image),
-party_max: null == U ? void 0 : null === (t = U.size) || void 0 === t ? void 0 : t[1],
-party_id: null == U ? void 0 : U.id,
-party_platform: (0, h.Ps)(null == U ? void 0 : U.id) ? f.ABu.SPOTIFY : null,
-game_platform: (0, o.Z)(b),
-profile_user_status: B,
-profile_has_nitro_customization: (null == L ? void 0 : L.banner) != null,
-profile_has_profile_effect: (null == L ? void 0 : L.profileEffectId) != null,
-...null == R ? null : (0, _.expandLocation)(R)
+guild_id: A !== f.ME ? A : null,
+channel_id: N,
+other_user_id: T,
+application_id: null !== (a = null == L ? void 0 : L.application_id) && void 0 !== a ? a : null,
+application_name: null == L ? void 0 : L.name,
+sku_id: null !== (s = null == x ? void 0 : x.primarySkuId) && void 0 !== s ? s : null,
+is_friend: c.Z.isFriend(T),
+has_images: !!(null !== (I = null == U ? void 0 : U.large_image) && void 0 !== I ? I : null == U ? void 0 : U.small_image),
+party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
+party_id: null == P ? void 0 : P.id,
+party_platform: (0, h.Ps)(null == P ? void 0 : P.id) ? f.ABu.SPOTIFY : null,
+game_platform: (0, o.Z)(L),
+profile_user_status: k,
+profile_has_nitro_customization: (null == D ? void 0 : D.banner) != null,
+profile_has_profile_effect: (null == D ? void 0 : D.profileEffectId) != null,
+...null == O ? null : (0, _.expandLocation)(O)
   });
 }
 
-function g() {
-  null != I && (0, i.closeModal)(I), I = null;
+function T() {
+  null != p && (0, i.closeModal)(p), p = null;
 }
-class S extends s.Z {
+class g extends s.Z {
   _initialize() {
-a.Z.subscribe('USER_PROFILE_MODAL_OPEN', T), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', g);
+a.Z.subscribe('USER_PROFILE_MODAL_OPEN', I), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', T);
   }
   _terminate() {
-a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', T), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', g);
+a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', I), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', T);
   }
 }
-t.ZP = new S();
+t.Z = new g();

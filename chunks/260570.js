@@ -36,16 +36,16 @@ function b(e) {
   let {
 statusActivity: t,
 user: a,
-guildId: h,
-channelId: m,
-profileType: I,
-hasEntered: O = !0,
-animate: b = !0,
-editEnabled: M,
-isReplySource: P,
-onReply: U,
-showReplyPopout: w = !1,
-showGuildProfile: x = !0,
+displayProfile: h,
+guildId: m,
+channelId: I,
+profileType: O,
+hasEntered: b = !0,
+animate: M = !0,
+editEnabled: P,
+isReplySource: U,
+onReply: w,
+showReplyPopout: x = !1,
 onClose: G
   } = e, {
 analyticsLocations: k
@@ -54,19 +54,19 @@ trackUserProfileAction: B
   } = (0, T.KZ)(), F = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), [V] = i.useState(() => new u.V7()), [H, Z] = i.useState(!0), Y = i.useRef(null), j = i.useRef(null), W = i.useRef(null), K = i.useRef(null), {
 emoji: z,
 state: q
-  } = null != t ? t : {}, Q = null != q && '' !== q ? q : null, X = null != Q && Q.length > 0, $ = null != z, J = $ && !X, ee = $ ? 1.25 : 0, et = 18 + ee, en = L + ee, er = D + ee, ei = $ || X, ea = M && !ei, es = M && ei, [eo, el] = i.useState(J), [eu, ec] = i.useState(!J), [ed, e_] = i.useState(!1), eE = I === v.y0.FULL_SIZE ? x ? N.TW : N.c1 : void 0;
+  } = null != t ? t : {}, Q = null != q && '' !== q ? q : null, X = null != Q && Q.length > 0, $ = null != z, J = $ && !X, ee = $ ? 1.25 : 0, et = 18 + ee, en = L + ee, er = D + ee, ei = $ || X, ea = P && !ei, es = P && ei, [eo, el] = i.useState(J), [eu, ec] = i.useState(!J), [ed, e_] = i.useState(!1), eE = O === v.y0.FULL_SIZE ? (0, N.z)(a.id, null == h ? void 0 : h.guildId) : void 0;
   i.useLayoutEffect(() => {
 if (null == Y.current || J)
   return;
 let e = Y.current.getBoundingClientRect().height;
-if (el(J || e <= et), O) {
+if (el(J || e <= et), b) {
   var t, n, r, i;
   let e = null !== (r = null === (t = Y.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : en,
     a = null !== (i = null === (n = W.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : er;
   ec(!J && e > a), j.current = e, K.current = a;
 }
   }, [
-O,
+b,
 J,
 et,
 en,
@@ -113,7 +113,7 @@ return null;
 em = () => $ ? (0, r.jsx)(d.I, {
   className: X ? C.statusEmojiInline : C.statusEmojiOnly,
   emoji: z,
-  animate: b,
+  animate: M,
   hideTooltip: !1,
   tooltipDelay: v.vB
 }) : null,
@@ -139,7 +139,7 @@ eT = () => {
 },
 eg = () => (0, r.jsxs)('div', {
   className: s()(C.content, C.clamp, C.placeholderWidth, {
-    [C.panel]: I === v.y0.PANEL
+    [C.panel]: O === v.y0.PANEL
   }),
   ref: W,
   children: [
@@ -149,7 +149,7 @@ eg = () => (0, r.jsxs)('div', {
 }),
 eS = () => (0, r.jsxs)('div', {
   className: s()(C.content, C.unclamp, C.placeholderWidth, C.incorporeal, {
-    [C.panel]: I === v.y0.PANEL
+    [C.panel]: O === v.y0.PANEL
   }),
   ref: Y,
   children: [
@@ -192,15 +192,15 @@ ev = () => {
   });
 },
 eO = {
-  [C.biteSize]: I === v.y0.BITE_SIZE,
-  [C.fullSize]: I === v.y0.FULL_SIZE,
-  [C.panel]: I === v.y0.PANEL
+  [C.biteSize]: O === v.y0.BITE_SIZE,
+  [C.fullSize]: O === v.y0.FULL_SIZE,
+  [C.panel]: O === v.y0.PANEL
 },
 eR = s()(C.background, {
   [C.editable]: es
 }),
 eC = {
-  [C.hoisted]: P
+  [C.hoisted]: U
 },
 ey = s()({
   [C.statusBubbleShape]: !X && $ || !eo,
@@ -261,7 +261,7 @@ eM = () => (0, r.jsxs)(c.ClickableContainer, {
       sourceType: v.N9.STATUS,
       isVisible: ed,
       isExpandable: eu,
-      onReply: U
+      onReply: w
     }),
     es && (0, r.jsx)(g.Z, {
       isVisible: ed,
@@ -293,21 +293,21 @@ children: [
       } = e;
       return (0, r.jsx)(A.Z, {
         user: a,
-        guildId: h,
-        channelId: m,
-        profileType: I,
+        guildId: m,
+        channelId: I,
+        profileType: O,
         sourceDetails: eb(),
         sourceType: v.N9.STATUS,
         setPopoutRef: t,
         modalKey: eE,
-        onReply: U
+        onReply: w
       });
     },
     animationPosition: 'top',
     position: 'bottom',
     align: 'center',
     spacing: 6,
-    shouldShow: w,
+    shouldShow: x,
     children: () => eM()
   })
 ]
