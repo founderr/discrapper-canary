@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return R;
+return C;
   }
 }), n(47120);
 var r = n(735250),
@@ -20,14 +20,15 @@ var r = n(735250),
   m = n(785717),
   I = n(790286),
   T = n(485216),
-  g = n(228168),
-  S = n(689938),
-  A = n(227795);
-let N = (0, _.kt)({
+  g = n(825801),
+  S = n(228168),
+  A = n(689938),
+  N = n(227795);
+let v = (0, _.kt)({
 id: '1',
 type: o.d.DM
   }),
-  v = e => {
+  O = e => {
 let {
   input: t,
   username: n,
@@ -35,18 +36,18 @@ let {
   sourceDetails: i
 } = e;
 switch (r) {
-  case g.n_.ACTIVITY:
-    let a = S.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({
+  case S.n_.ACTIVITY:
+    let a = A.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({
       username: n
     });
     return '> -# *'.concat(a, '*\n').concat(t);
-  case g.n_.AVATAR:
-    let s = S.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({
+  case S.n_.AVATAR:
+    let s = A.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({
       username: n
     });
     return '> -# *'.concat(s, '*\n').concat(t);
-  case g.n_.STATUS:
-    let o = S.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({
+  case S.n_.STATUS:
+    let o = A.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({
       username: n
     });
     return null != i ? '> -# *'.concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : '> -# *'.concat(o, '*\n').concat(t);
@@ -54,20 +55,20 @@ switch (r) {
     (0, f.vE)(r);
 }
   },
-  O = e => {
+  R = e => {
 switch (e) {
-  case g.n_.ACTIVITY:
-    return S.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
-  case g.n_.AVATAR:
-    return S.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
-  case g.n_.STATUS:
-    return S.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
+  case S.n_.ACTIVITY:
+    return A.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
+  case S.n_.AVATAR:
+    return A.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
+  case S.n_.STATUS:
+    return A.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
   default:
     (0, f.vE)(e);
 }
   };
 
-function R(e) {
+function C(e) {
   let {
 user: t,
 guildId: n,
@@ -75,74 +76,79 @@ channelId: a,
 profileType: o,
 sourceType: _,
 sourceDetails: f,
-onInteraction: S,
-setPopoutRef: R,
-modalKey: C
+onInteraction: A,
+setPopoutRef: C,
+modalKey: y,
+setInteractionToastShown: D,
+setInteractionSent: L,
+setIsReplyInteraction: b
   } = e, {
-trackUserProfileAction: y
+trackUserProfileAction: M
   } = (0, m.KZ)(), {
-sendReply: D
-  } = (0, I.Q)(_), [L, b] = i.useState(''), [M, P] = i.useState((0, c.JM)(L)), U = i.useRef(!1), w = i.useRef(null);
+sendReply: P
+  } = (0, I.Q)(_), [U, w] = i.useState(''), [x, G] = i.useState((0, c.JM)(U)), k = i.useRef(!1), B = i.useRef(null);
   i.useEffect(() => {
-null == R || R(null == w ? void 0 : w.current);
+null == C || C(null == B ? void 0 : B.current);
   }, [
-w,
-R
+B,
+C
   ]);
-  let x = async e => {
+  let F = async e => {
 var n;
 if (null == e)
   return;
-y({
-  action: D
+M({
+  action: P
 });
-let r = v({
+let r = O({
   input: e,
   username: null !== (n = E.Z.getNickname(t.id)) && void 0 !== n ? n : p.ZP.getName(t),
   sourceType: _,
   sourceDetails: f
 });
-await (0, T.Z)({
+b(!0), L(!1), D(!0), await (0, T.Z)({
   userId: t.id,
   content: r,
   location: 'UserProfileReplyPopout',
   openChannel: !1,
   whenReady: !1
-});
+}), L(!0), setTimeout(() => {
+  D(!1);
+}, g._);
   };
   return (0, r.jsx)(l.V, {
-ref: w,
+ref: B,
 children: (0, r.jsx)('div', {
-  className: s()(A.container, {
-    [A.panel]: o === g.y0.PANEL
+  className: s()(N.container, {
+    [N.panel]: o === S.y0.PANEL
   }),
   children: (0, r.jsx)(d.Z, {
-    parentModalKey: C,
+    parentModalKey: y,
     emojiPickerCloseOnModalOuterClick: !0,
-    innerClassName: A.inner,
-    editorClassName: A.editor,
+    innerClassName: N.inner,
+    editorClassName: N.editor,
     type: u.I.USER_PROFILE_REPLY,
-    placeholder: O(_).format({
+    placeholder: R(_).format({
       username: h.ZP.getName(n, a, t)
     }),
-    channel: N,
-    textValue: L,
-    richValue: M,
+    channel: v,
+    textValue: U,
+    richValue: x,
     onChange: (e, t, n) => {
-      if (t !== L)
-        b(t), P(n);
+      if (t !== U)
+        w(t), G(n);
     },
-    focused: U.current,
+    focused: k.current,
     onFocus: () => {
-      U.current = !0;
+      k.current = !0;
     },
     onBlur: e => {
       var t;
-      if (null === (t = w.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
-        U.current = !1;
+      if (null === (t = B.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
+        k.current = !1;
         return;
       }
-      null !== w.current && (U.current = !1, null == S || S({
+      null !== B.current && (k.current = !1, null == A || A({
         interactionType: null,
         interactionSourceType: null,
         interactionSourceDetails: null
@@ -153,7 +159,7 @@ children: (0, r.jsx)('div', {
         value: t
       } = e;
       try {
-        return await x(t.trim()), null == S || S({
+        return await F(t.trim()), null == A || A({
           interactionType: null,
           interactionSourceType: null,
           interactionSourceDetails: null

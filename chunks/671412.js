@@ -40,23 +40,26 @@ animateOnHover: D,
 onOpenProfile: L,
 isInteractionSource: b,
 onInteraction: M,
-showReplyPopout: P = !1
+showReplyPopout: P = !1,
+setInteractionToastShown: U,
+setInteractionSent: w,
+setIsReplyInteraction: x
   } = e, {
-theme: U
+theme: G
   } = (0, S.z)(), {
-analyticsLocations: w
+analyticsLocations: k
   } = (0, d.ZP)(c.Z.AVATAR), {
-trackUserProfileAction: x
-  } = (0, m.KZ)(), G = y === N.y0.FULL_SIZE ? (0, A.z)(t.id, null == n ? void 0 : n.guildId) : void 0, k = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2), B = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
+trackUserProfileAction: B
+  } = (0, m.KZ)(), F = y === N.y0.FULL_SIZE ? (0, A.z)(t.id, null == n ? void 0 : n.guildId) : void 0, V = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2), H = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
 t,
 p
-  ]), [F, V] = i.useState(!1), H = () => {
-V(!0);
-  }, Z = () => {
-V(!1);
+  ]), [Z, Y] = i.useState(!1), j = () => {
+Y(!0);
+  }, W = () => {
+Y(!1);
   }, {
-status: Y,
-isMobileOnline: j
+status: K,
+isMobileOnline: z
   } = (0, o.cj)([
 E.Z,
 f.Z
@@ -72,51 +75,51 @@ return {
   status: (0, u.Z)(n) ? v.Skl.STREAMING : f.Z.getStatus(t.id),
   isMobileOnline: f.Z.isMobileOnline(t.id)
 };
-  }), W = y === N.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, K = s()(R.avatar, {
+  }), q = y === N.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80, Q = s()(R.avatar, {
 [R.hoisted]: b,
 [R.biteSize]: y === N.y0.BITE_SIZE,
 [R.fullSize]: y === N.y0.FULL_SIZE,
 [R.panel]: y === N.y0.PANEL
   }), {
-avatarDecorationSrc: z,
-avatarSrc: q,
-eventHandlers: Q
+avatarDecorationSrc: X,
+avatarSrc: $,
+eventHandlers: J
   } = (0, I.Z)({
 user: t,
 guildId: null != n ? n.guildId : a,
-size: W,
+size: q,
 animateOnHover: D
-  }), X = (0, r.jsx)(C, {
-src: q,
-avatarDecoration: z,
-size: W,
+  }), ee = (0, r.jsx)(C, {
+src: $,
+avatarDecoration: X,
+size: q,
 'aria-label': t.username,
 imageClassName: null != L ? R.overlay : void 0,
-status: B ? v.Skl.UNKNOWN : Y,
-statusBackdropColor: k && !B ? (0, l.getStatusBackdropColor)(U) : void 0,
-isMobile: j,
+status: H ? v.Skl.UNKNOWN : K,
+statusBackdropColor: V && !H ? (0, l.getStatusBackdropColor)(G) : void 0,
+isMobile: z,
 statusTooltip: !0,
 statusTooltipDelay: N.vB
-  }), $ = () => null == L ? (0, r.jsx)('div', {
-...Q,
-children: X
+  }), et = () => null == L ? (0, r.jsx)('div', {
+...J,
+children: ee
   }) : (0, r.jsx)(l.Clickable, {
-...Q,
+...J,
 onClick: () => {
-  x({
+  B({
     action: 'PRESS_VIEW_PROFILE',
-    analyticsLocations: w
+    analyticsLocations: k
   }), null == L || L();
 },
 className: R.clickable,
-children: X
+children: ee
   });
   return (0, r.jsxs)('div', {
-className: K,
-onFocus: H,
-onBlur: Z,
-onMouseOver: H,
-onMouseLeave: Z,
+className: Q,
+onFocus: j,
+onBlur: W,
+onMouseOver: j,
+onMouseLeave: W,
 children: [
   (0, r.jsx)(l.Popout, {
     renderPopout: e => {
@@ -129,23 +132,29 @@ children: [
         channelId: p,
         profileType: y,
         sourceType: N.n_.AVATAR,
-        modalKey: G,
+        modalKey: F,
         setPopoutRef: n,
-        onInteraction: M
+        onInteraction: M,
+        setInteractionToastShown: U,
+        setInteractionSent: w,
+        setIsReplyInteraction: x
       });
     },
     animationPosition: 'top',
     position: 'bottom',
     align: 'center',
     shouldShow: P,
-    children: () => $()
+    children: () => et()
   }),
   (0, r.jsx)(T.Z, {
     user: t,
     sourceType: N.n_.AVATAR,
-    isVisible: F,
+    isVisible: Z,
     isExpandable: !1,
-    onInteraction: M
+    onInteraction: M,
+    setInteractionToastShown: U,
+    setInteractionSent: w,
+    setIsReplyInteraction: x
   })
 ]
   });

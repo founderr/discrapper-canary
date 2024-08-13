@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return L;
+return P;
   }
 }), n(47120);
 var i = n(735250),
@@ -18,68 +18,69 @@ var i = n(735250),
   _ = n(78675),
   f = n(113557),
   E = n(169979),
-  g = n(215105),
-  C = n(502762),
-  I = n(256059),
-  x = n(437758),
-  T = n(544989),
-  N = n(481932),
-  v = n(272510),
-  S = n(171368),
-  Z = n(926150),
-  A = n(940885),
-  M = n(625015),
-  b = n(228168),
-  R = n(689938),
-  j = n(317986);
+  g = n(119096),
+  C = n(215105),
+  I = n(502762),
+  x = n(256059),
+  T = n(437758),
+  N = n(544989),
+  v = n(481932),
+  S = n(272510),
+  Z = n(171368),
+  A = n(926150),
+  M = n(940885),
+  b = n(625015),
+  R = n(228168),
+  j = n(689938),
+  L = n(317986);
 
-function L(e) {
+function P(e) {
   let {
 user: t,
 currentUser: n,
-channel: L
-  } = e, P = __OVERLAY__, O = (0, m.ZP)(t.id), y = (0, o.ZP)(), {
-analyticsLocations: D
-  } = (0, u.ZP)(c.Z.PROFILE_PANEL), k = (0, h.ZB)({
+channel: P
+  } = e, O = __OVERLAY__, y = (0, m.ZP)(t.id), D = (0, o.ZP)(), {
+analyticsLocations: k
+  } = (0, u.ZP)(c.Z.PROFILE_PANEL), U = (0, h.ZB)({
 layout: 'SIMPLIFIED_DM_PANEL',
 userId: t.id,
-channelId: L.id
-  }), U = a.useRef(null), w = (0, r.Z)(U), [B, H] = a.useState(), [G, V] = a.useState(), [F, W] = a.useState(), z = e => {
-H(e.interactionType), V(e.interactionSourceType), W(e.interactionSourceDetails);
-  }, Y = e => {
-(0, S.openUserProfileModal)({
-  sourceAnalyticsLocations: D,
-  ...k,
+channelId: P.id
+  }), w = a.useRef(null), B = (0, r.Z)(w), [H, G] = a.useState(!1), [V, F] = a.useState(!1), [W, z] = a.useState(!1), [Y, K] = a.useState(), [q, X] = a.useState(), [Q, J] = a.useState(), $ = e => {
+K(e.interactionType), X(e.interactionSourceType), J(e.interactionSourceDetails);
+  }, ee = e => {
+(0, Z.openUserProfileModal)({
+  sourceAnalyticsLocations: k,
+  ...U,
   ...e
 });
   };
   return (0, i.jsx)(u.Gt, {
-value: D,
+value: k,
 children: (0, i.jsx)(h.Mt, {
-  value: k,
-  children: (0, i.jsxs)(C.Z, {
-    ref: U,
+  value: U,
+  children: (0, i.jsxs)(I.Z, {
+    ref: w,
     user: t,
-    displayProfile: O,
-    profileType: b.y0.PANEL,
-    themeOverride: y,
-    className: j.container,
+    displayProfile: y,
+    profileType: R.y0.PANEL,
+    themeOverride: D,
+    className: L.container,
     children: [
-      null != B && (0, i.jsx)('div', {
-        className: j.backdrop
+      null != Y && (0, i.jsx)('div', {
+        className: L.backdrop
       }),
       (0, i.jsxs)(s.u2, {
         children: [
-          (0, i.jsxs)(T.Z, {
-            profileType: b.y0.PANEL,
+          (0, i.jsxs)(N.Z, {
+            profileType: R.y0.PANEL,
             children: [
-              (0, i.jsx)(N.Z, {
+              (0, i.jsx)(v.Z, {
                 user: t,
-                profileType: b.y0.PANEL
+                profileType: R.y0.PANEL
               }),
-              t.bot ? (0, i.jsx)(x.Z, {
+              t.bot ? (0, i.jsx)(T.Z, {
                 user: t
-              }) : (0, i.jsx)(v.Z, {
+              }) : (0, i.jsx)(S.Z, {
                 user: t
               })
             ]
@@ -89,90 +90,105 @@ children: (0, i.jsx)(h.Mt, {
               let {
                 setPopoutRef: n
               } = e;
-              return null == G ? (0, i.jsx)(i.Fragment, {}) : (0, i.jsx)(g.Z, {
+              return null == q ? (0, i.jsx)(i.Fragment, {}) : (0, i.jsx)(C.Z, {
                 user: t,
-                channelId: L.id,
-                profileType: b.y0.PANEL,
-                sourceDetails: F,
-                sourceType: G,
+                channelId: P.id,
+                profileType: R.y0.PANEL,
+                sourceDetails: Q,
+                sourceType: q,
                 setPopoutRef: n,
-                onInteraction: z
+                onInteraction: $,
+                setInteractionToastShown: G,
+                setInteractionSent: F,
+                setIsReplyInteraction: z
               });
             },
             animationPosition: 'top',
             position: 'bottom',
             align: 'center',
-            shouldShow: B === b.P.REPLY && null != G,
+            shouldShow: Y === R.P.REPLY && null != q,
             children: () => (0, i.jsxs)('header', {
-              className: j.header,
+              className: L.header,
               children: [
                 (0, i.jsx)(_.Z, {
                   user: t,
-                  displayProfile: O,
-                  profileType: b.y0.PANEL,
-                  animateOnHover: !w
+                  displayProfile: y,
+                  profileType: R.y0.PANEL,
+                  animateOnHover: !B
+                }),
+                (0, i.jsx)(g.Z, {
+                  isReply: W,
+                  sent: V,
+                  shown: H,
+                  className: L.toast
                 }),
                 (0, i.jsx)(f.Z, {
                   location: 'SimplifiedProfilePanel',
                   user: t,
-                  displayProfile: O,
-                  channelId: L.id,
-                  profileType: b.y0.PANEL,
-                  isInteractionSource: G === b.n_.AVATAR || G === b.n_.STATUS,
-                  onOpenProfile: P ? void 0 : Y,
-                  onInteraction: z
+                  displayProfile: y,
+                  channelId: P.id,
+                  profileType: R.y0.PANEL,
+                  isInteractionSource: q === R.n_.AVATAR || q === R.n_.STATUS,
+                  onOpenProfile: O ? void 0 : ee,
+                  onInteraction: $,
+                  setInteractionToastShown: G,
+                  setInteractionSent: F,
+                  setIsReplyInteraction: z
                 }),
                 (0, i.jsx)(E.Z, {
                   location: 'SimplifiedProfilePanel',
                   user: t,
-                  channelId: L.id,
-                  profileType: b.y0.PANEL,
-                  isInteractionSource: G === b.n_.STATUS,
-                  onInteraction: z
+                  channelId: P.id,
+                  profileType: R.y0.PANEL,
+                  isInteractionSource: q === R.n_.STATUS,
+                  onInteraction: $,
+                  setInteractionToastShown: G,
+                  setInteractionSent: F,
+                  setIsReplyInteraction: z
                 }),
-                (0, i.jsx)(I.Z, {
+                (0, i.jsx)(x.Z, {
                   user: t
                 })
               ]
             })
           }),
-          (0, i.jsx)(Z.Z, {
+          (0, i.jsx)(A.Z, {
             user: t,
             currentUser: n,
-            displayProfile: O,
-            channel: L,
-            isHovering: w,
-            onOpenProfile: P ? void 0 : Y
-          }),
-          (0, i.jsx)(A.Z, {
-            user: t
+            displayProfile: y,
+            channel: P,
+            isHovering: B,
+            onOpenProfile: O ? void 0 : ee
           }),
           (0, i.jsx)(M.Z, {
+            user: t
+          }),
+          (0, i.jsx)(b.Z, {
             user: t,
-            displayProfile: O
+            displayProfile: y
           })
         ]
       }),
-      !P && (0, i.jsx)('footer', {
-        className: j.footer,
+      !O && (0, i.jsx)('footer', {
+        className: L.footer,
         children: (0, i.jsx)(l.Button, {
           fullWidth: !0,
           size: l.Button.Sizes.LARGE,
           look: l.Button.Looks.BLANK,
-          color: j.footerButtonColor,
+          color: L.footerButtonColor,
           onClick: () => {
-            Y(), (0, p.pQ)({
+            ee(), (0, p.pQ)({
               action: 'PRESS_VIEW_PROFILE',
-              analyticsLocations: D,
-              ...k
+              analyticsLocations: k,
+              ...U
             });
           },
-          children: R.Z.Messages.VIEW_FULL_PROFILE
+          children: j.Z.Messages.VIEW_FULL_PROFILE
         })
       }),
-      (null == O ? void 0 : O.profileEffectId) != null && (0, i.jsx)(d.Z, {
-        profileEffectId: null == O ? void 0 : O.profileEffectId,
-        isHovering: w
+      (null == y ? void 0 : y.profileEffectId) != null && (0, i.jsx)(d.Z, {
+        profileEffectId: null == y ? void 0 : y.profileEffectId,
+        isHovering: B
       })
     ]
   })

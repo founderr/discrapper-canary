@@ -5,5 +5,6 @@ e.exports = {
   overlay: 'overlay_bc9cc2',
   friendRequestBannerOverlay: 'friendRequestBannerOverlay_bc9cc2',
   friendRequestBanner: 'friendRequestBanner_bc9cc2',
-  backdrop: 'backdrop_bc9cc2'
+  backdrop: 'backdrop_bc9cc2',
+  toast: 'toast_bc9cc2'
 };

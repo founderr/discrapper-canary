@@ -20615,6 +20615,11 @@ span.clanTag_a31c43 {
     z-index: 4
 }
 
+.toast_b07019 {
+    top: calc(.5*(-56px + var(--custom-user-banner-height-bite-size)));
+    z-index: 5
+}
+
 .popoutWrapper_ccc074 {
     position: relative;
     left: -30px;
@@ -31913,6 +31918,22 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     min-height: 32px;
     max-width: 32px;
     max-height: 32px
+}
+
+.toastContainer_f3571f {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 56px
+}
+
+.loadingSpinner_f3571f {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px
 }
 
 .actionButton_f5dff0 {
