@@ -76,9 +76,9 @@ null == k || k(null == K ? void 0 : K.current);
 K,
 k
   ]);
-  let [Q, X] = i.useState(), [$, J] = i.useState(), ee = (e, t) => {
-X(e), J(t);
-  }, et = e => {
+  let [Q, X] = i.useState(), [$, J] = i.useState(), [ee, et] = i.useState(), en = e => {
+X(e.interactionType), J(e.interactionSourceType), et(e.interactionSourceDetails);
+  }, er = e => {
 null == G || G(), (0, C.openUserProfileModal)({
   sourceAnalyticsLocations: V,
   ...H,
@@ -119,7 +119,7 @@ children: (0, r.jsx)(f.Mt, {
                   id: 'view-profile',
                   label: b.Z.Messages.VIEW_FULL_PROFILE,
                   action: () => {
-                    et(), (0, h.pQ)({
+                    er(), (0, h.pQ)({
                       action: 'PRESS_VIEW_PROFILE',
                       analyticsLocations: V,
                       ...H
@@ -134,21 +134,21 @@ children: (0, r.jsx)(f.Mt, {
               let {
                 setPopoutRef: n
               } = e;
-              return null == Q ? (0, r.jsx)(r.Fragment, {}) : (0, r.jsx)(S.Z, {
+              return null == $ ? (0, r.jsx)(r.Fragment, {}) : (0, r.jsx)(S.Z, {
                 user: t,
                 guildId: P,
                 channelId: U,
                 profileType: L.y0.BITE_SIZE,
-                sourceDetails: $,
-                sourceType: Q,
+                sourceType: $,
+                sourceDetails: ee,
                 setPopoutRef: n,
-                onReply: ee
+                onInteraction: en
               });
             },
             animationPosition: 'top',
             position: 'bottom',
             align: 'center',
-            shouldShow: null != Q,
+            shouldShow: Q === L.P.REPLY && null != $,
             children: () => (0, r.jsxs)('header', {
               className: M.header,
               children: [
@@ -169,9 +169,9 @@ children: (0, r.jsx)(f.Mt, {
                   guildId: P,
                   channelId: U,
                   profileType: L.y0.BITE_SIZE,
-                  onOpenProfile: B ? void 0 : et,
-                  isReplySource: Q === L.N9.AVATAR || Q === L.N9.STATUS,
-                  onReply: ee
+                  onOpenProfile: B ? void 0 : er,
+                  isInteractionSource: $ === L.n_.AVATAR || $ === L.n_.STATUS,
+                  onInteraction: en
                 }),
                 (0, r.jsx)(g.Z, {
                   location: 'BiteSizeProfilePopout',
@@ -180,8 +180,8 @@ children: (0, r.jsx)(f.Mt, {
                   channelId: U,
                   profileType: L.y0.BITE_SIZE,
                   editEnabled: W,
-                  isReplySource: Q === L.N9.STATUS,
-                  onReply: ee,
+                  isInteractionSource: $ === L.n_.STATUS,
+                  onInteraction: en,
                   onClose: G
                 })
               ]
@@ -193,7 +193,7 @@ children: (0, r.jsx)(f.Mt, {
             displayProfile: z,
             guild: Z,
             isHovering: q,
-            onOpenProfile: B ? void 0 : et,
+            onOpenProfile: B ? void 0 : er,
             channelId: U,
             onClose: G
           }),

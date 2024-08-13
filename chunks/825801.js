@@ -18,7 +18,7 @@ var i = n(120356),
   f = n(51144),
   h = n(785717),
   p = n(505737),
-  m = n(448520),
+  m = n(790286),
   I = n(485216),
   T = n(228168),
   g = n(185923),
@@ -32,17 +32,17 @@ sourceType: r,
 sourceDetails: i
   } = e, a = ':'.concat(t.name, ':');
   switch (r) {
-case T.N9.ACTIVITY:
+case T.n_.ACTIVITY:
   let s = S.Z.Messages.USER_PROFILE_REACTED_TO_ACTIVITY.format({
     username: n
   });
   return '> -# *'.concat(s, '*\n').concat(a);
-case T.N9.AVATAR:
+case T.n_.AVATAR:
   let o = S.Z.Messages.USER_PROFILE_REACTED_TO_AVATAR.format({
     username: n
   });
   return '> -# *'.concat(o, '*\n').concat(a);
-case T.N9.STATUS:
+case T.n_.STATUS:
   let l = S.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({
     username: n
   });
@@ -60,14 +60,14 @@ sourceType: i,
 sourceDetails: E,
 isVisible: v,
 isExpandable: O,
-onReply: R
+onInteraction: R
   } = e, {
 trackUserProfileAction: C
   } = (0, h.KZ)(), {
 sendReact: y,
 pressReact: D,
 pressReply: L
-  } = (0, m.D)(i), b = (0, s.e7)([d.default], () => d.default.getId() === t.id), M = (0, p.Z)(t.id), [P, U] = (0, s.Wu)([l.Z], () => [
+  } = (0, m.Q)(i), b = (0, s.e7)([d.default], () => d.default.getId() === t.id), M = (0, p.Z)(t.id), [P, U] = (0, s.Wu)([l.Z], () => [
 l.Z.useReducedMotion,
 l.Z.keyboardModeEnabled
   ]);
@@ -99,8 +99,8 @@ x = async e => {
 className: a()(A.popover, {
   [A.visible]: v,
   [A.expandable]: O,
-  [A.statusPopover]: i === T.N9.STATUS,
-  [A.avatarPopover]: i === T.N9.AVATAR
+  [A.statusPopover]: i === T.n_.STATUS,
+  [A.avatarPopover]: i === T.n_.AVATAR
 }),
 children: [
   (0, r.jsx)(o.TooltipContainer, {
@@ -109,6 +109,20 @@ children: [
     delay: w,
     'aria-label': !1,
     children: (0, r.jsx)(o.Popout, {
+      onRequestClose: () => {
+        null == R || R({
+          interactionType: null,
+          interactionSourceType: null,
+          interactionSourceDetails: null
+        });
+      },
+      onRequestOpen: () => {
+        null == R || R({
+          interactionType: T.P.REACT,
+          interactionSourceType: i,
+          interactionSourceDetails: E
+        });
+      },
       renderPopout: e => {
         let {
           closePopout: t
@@ -151,7 +165,11 @@ children: [
       onClick: () => {
         C({
           action: L
-        }), null == R || R(i, E);
+        }), null == R || R({
+          interactionType: T.P.REPLY,
+          interactionSourceType: i,
+          interactionSourceDetails: E
+        });
       },
       className: a()(A.button, A.right),
       'aria-label': S.Z.Messages.USER_PROFILE_REPLY,

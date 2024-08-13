@@ -44,9 +44,9 @@ analyticsLocations: D
 layout: 'SIMPLIFIED_DM_PANEL',
 userId: t.id,
 channelId: L.id
-  }), U = a.useRef(null), w = (0, r.Z)(U), [B, H] = a.useState(), [G, V] = a.useState(), F = (e, t) => {
-H(e), V(t);
-  }, W = e => {
+  }), U = a.useRef(null), w = (0, r.Z)(U), [B, H] = a.useState(), [G, V] = a.useState(), [F, W] = a.useState(), z = e => {
+H(e.interactionType), V(e.interactionSourceType), W(e.interactionSourceDetails);
+  }, Y = e => {
 (0, S.openUserProfileModal)({
   sourceAnalyticsLocations: D,
   ...k,
@@ -89,20 +89,20 @@ children: (0, i.jsx)(h.Mt, {
               let {
                 setPopoutRef: n
               } = e;
-              return null == B ? (0, i.jsx)(i.Fragment, {}) : (0, i.jsx)(g.Z, {
+              return null == G ? (0, i.jsx)(i.Fragment, {}) : (0, i.jsx)(g.Z, {
                 user: t,
                 channelId: L.id,
                 profileType: b.y0.PANEL,
-                sourceDetails: G,
-                sourceType: B,
+                sourceDetails: F,
+                sourceType: G,
                 setPopoutRef: n,
-                onReply: F
+                onInteraction: z
               });
             },
             animationPosition: 'top',
             position: 'bottom',
             align: 'center',
-            shouldShow: null != B,
+            shouldShow: B === b.P.REPLY && null != G,
             children: () => (0, i.jsxs)('header', {
               className: j.header,
               children: [
@@ -118,17 +118,17 @@ children: (0, i.jsx)(h.Mt, {
                   displayProfile: O,
                   channelId: L.id,
                   profileType: b.y0.PANEL,
-                  isReplySource: B === b.N9.AVATAR || B === b.N9.STATUS,
-                  onOpenProfile: P ? void 0 : W,
-                  onReply: F
+                  isInteractionSource: G === b.n_.AVATAR || G === b.n_.STATUS,
+                  onOpenProfile: P ? void 0 : Y,
+                  onInteraction: z
                 }),
                 (0, i.jsx)(E.Z, {
                   location: 'SimplifiedProfilePanel',
                   user: t,
                   channelId: L.id,
                   profileType: b.y0.PANEL,
-                  isReplySource: B === b.N9.STATUS,
-                  onReply: F
+                  isInteractionSource: G === b.n_.STATUS,
+                  onInteraction: z
                 }),
                 (0, i.jsx)(I.Z, {
                   user: t
@@ -142,7 +142,7 @@ children: (0, i.jsx)(h.Mt, {
             displayProfile: O,
             channel: L,
             isHovering: w,
-            onOpenProfile: P ? void 0 : W
+            onOpenProfile: P ? void 0 : Y
           }),
           (0, i.jsx)(A.Z, {
             user: t
@@ -161,7 +161,7 @@ children: (0, i.jsx)(h.Mt, {
           look: l.Button.Looks.BLANK,
           color: j.footerButtonColor,
           onClick: () => {
-            W(), (0, p.pQ)({
+            Y(), (0, p.pQ)({
               action: 'PRESS_VIEW_PROFILE',
               analyticsLocations: D,
               ...k

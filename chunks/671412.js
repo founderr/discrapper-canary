@@ -38,8 +38,8 @@ channelId: p,
 profileType: y,
 animateOnHover: D,
 onOpenProfile: L,
-isReplySource: b,
-onReply: M,
+isInteractionSource: b,
+onInteraction: M,
 showReplyPopout: P = !1
   } = e, {
 theme: U
@@ -128,10 +128,10 @@ children: [
         guildId: a,
         channelId: p,
         profileType: y,
-        sourceType: N.N9.AVATAR,
+        sourceType: N.n_.AVATAR,
         modalKey: G,
         setPopoutRef: n,
-        onReply: M
+        onInteraction: M
       });
     },
     animationPosition: 'top',
@@ -142,10 +142,10 @@ children: [
   }),
   (0, r.jsx)(T.Z, {
     user: t,
-    sourceType: N.N9.AVATAR,
+    sourceType: N.n_.AVATAR,
     isVisible: F,
     isExpandable: !1,
-    onReply: M
+    onInteraction: M
   })
 ]
   });

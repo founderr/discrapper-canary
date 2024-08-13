@@ -43,8 +43,8 @@ profileType: O,
 hasEntered: b = !0,
 animate: M = !0,
 editEnabled: P,
-isReplySource: U,
-onReply: w,
+onInteraction: U,
+isInteractionSource: w,
 showReplyPopout: x = !1,
 onClose: G
   } = e, {
@@ -200,7 +200,7 @@ eR = s()(C.background, {
   [C.editable]: es
 }),
 eC = {
-  [C.hoisted]: U
+  [C.hoisted]: w
 },
 ey = s()({
   [C.statusBubbleShape]: !X && $ || !eo,
@@ -258,10 +258,10 @@ eM = () => (0, r.jsxs)(c.ClickableContainer, {
     ei && (0, r.jsx)(S.Z, {
       user: a,
       sourceDetails: eb(),
-      sourceType: v.N9.STATUS,
+      sourceType: v.n_.STATUS,
       isVisible: ed,
       isExpandable: eu,
-      onReply: w
+      onInteraction: U
     }),
     es && (0, r.jsx)(g.Z, {
       isVisible: ed,
@@ -297,10 +297,10 @@ children: [
         channelId: I,
         profileType: O,
         sourceDetails: eb(),
-        sourceType: v.N9.STATUS,
+        sourceType: v.n_.STATUS,
         setPopoutRef: t,
         modalKey: eE,
-        onReply: w
+        onInteraction: U
       });
     },
     animationPosition: 'top',

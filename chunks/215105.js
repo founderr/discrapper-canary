@@ -18,7 +18,7 @@ var r = n(735250),
   h = n(5192),
   p = n(51144),
   m = n(785717),
-  I = n(448520),
+  I = n(790286),
   T = n(485216),
   g = n(228168),
   S = n(689938),
@@ -35,17 +35,17 @@ let {
   sourceDetails: i
 } = e;
 switch (r) {
-  case g.N9.ACTIVITY:
+  case g.n_.ACTIVITY:
     let a = S.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({
       username: n
     });
     return '> -# *'.concat(a, '*\n').concat(t);
-  case g.N9.AVATAR:
+  case g.n_.AVATAR:
     let s = S.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({
       username: n
     });
     return '> -# *'.concat(s, '*\n').concat(t);
-  case g.N9.STATUS:
+  case g.n_.STATUS:
     let o = S.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({
       username: n
     });
@@ -56,11 +56,11 @@ switch (r) {
   },
   O = e => {
 switch (e) {
-  case g.N9.ACTIVITY:
+  case g.n_.ACTIVITY:
     return S.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
-  case g.N9.AVATAR:
+  case g.n_.AVATAR:
     return S.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
-  case g.N9.STATUS:
+  case g.n_.STATUS:
     return S.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
   default:
     (0, f.vE)(e);
@@ -75,14 +75,14 @@ channelId: a,
 profileType: o,
 sourceType: _,
 sourceDetails: f,
-onReply: S,
+onInteraction: S,
 setPopoutRef: R,
 modalKey: C
   } = e, {
 trackUserProfileAction: y
   } = (0, m.KZ)(), {
 sendReply: D
-  } = (0, I.D)(_), [L, b] = i.useState(''), [M, P] = i.useState((0, c.JM)(L)), U = i.useRef(!1), w = i.useRef(null);
+  } = (0, I.Q)(_), [L, b] = i.useState(''), [M, P] = i.useState((0, c.JM)(L)), U = i.useRef(!1), w = i.useRef(null);
   i.useEffect(() => {
 null == R || R(null == w ? void 0 : w.current);
   }, [
@@ -142,14 +142,22 @@ children: (0, r.jsx)('div', {
         U.current = !1;
         return;
       }
-      null !== w.current && (U.current = !1, null == S || S(null));
+      null !== w.current && (U.current = !1, null == S || S({
+        interactionType: null,
+        interactionSourceType: null,
+        interactionSourceDetails: null
+      }));
     },
     onSubmit: async e => {
       let {
         value: t
       } = e;
       try {
-        return await x(t.trim()), null == S || S(null), {
+        return await x(t.trim()), null == S || S({
+          interactionType: null,
+          interactionSourceType: null,
+          interactionSourceDetails: null
+        }), {
           shouldClear: !0,
           shouldRefocus: !1
         };
