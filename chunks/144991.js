@@ -3,13 +3,13 @@ var i = t(735250),
   a = t(470079),
   s = t(120356),
   l = t.n(s),
-  o = t(149765),
-  r = t(253923),
+  r = t(149765),
+  o = t(253923),
   d = t(481060),
   c = t(453628),
   u = t(996987),
-  I = t(332379),
-  m = t(549856);
+  I = t(262401),
+  m = t(224499);
 class _ extends a.PureComponent {
   getOverwriteValue(e) {
 let {
@@ -18,10 +18,10 @@ let {
 } = this.props;
 if (null == n || null == t)
   throw Error('PermissionsForm.getOverwriteValue: Invalid allow or deny props');
-return o.e$(n, e) ? c.y.ALLOW : o.e$(t, e) ? c.y.DENY : c.y.PASSTHROUGH;
+return r.e$(n, e) ? c.y.ALLOW : r.e$(t, e) ? c.y.DENY : c.y.PASSTHROUGH;
   }
   getPermissionValue(e, n) {
-return o.e$(n, e);
+return r.e$(n, e);
   }
   handleChange(e, n) {
 let {
@@ -51,17 +51,17 @@ let {
   helpdeskArticleId: a,
   flag: s
 } = e, {
-  permissions: o,
+  permissions: r,
   locked: c,
   permissionRender: m
 } = this.props, _ = null == m ? void 0 : m(s), N = !!(c || _), E = 'string' == typeof _ ? this.renderDisabledIndicator(_) : null, T = l()({
   [I.title]: null != E
 });
-return null == o ? (0, i.jsxs)(u.Z, {
+return null == r ? (0, i.jsxs)(u.Z, {
   disabled: N,
   value: this.getOverwriteValue(s),
   onChange: e => this.handleChange(s, e),
-  note: (0, r._u)(t),
+  note: (0, o._u)(t),
   helpdeskArticleId: a,
   children: [
     E,
@@ -72,9 +72,9 @@ return null == o ? (0, i.jsxs)(u.Z, {
   ]
 }, String(s)) : (0, i.jsxs)(d.FormSwitch, {
   disabled: N,
-  value: this.getPermissionValue(s, o),
+  value: this.getPermissionValue(s, r),
   onChange: e => this.handleChange(s, e),
-  note: (0, r._u)(t),
+  note: (0, o._u)(t),
   children: [
     E,
     (0, i.jsx)('span', {

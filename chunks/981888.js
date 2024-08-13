@@ -1,26 +1,26 @@
-t.d(n, {
+a.d(n, {
   Z: function() {
-return l;
+return i;
   }
-}), t(47120);
-var i = t(470079),
-  a = t(881052);
+}), a(47120);
+var t = a(470079),
+  c = a(881052);
 
-function l(e, n) {
-  let [t, l] = i.useState(!1), [r, o] = i.useState(null);
+function i(e, n) {
+  let [a, i] = t.useState(!1), [o, r] = t.useState(null);
   return [
 async () => {
-  l(!0), o(null);
+  i(!0), r(null);
   try {
     let n = await e();
-    return l(!1), o(null), n;
-  } catch (t) {
-    let e = new a.Hx(t);
-    return null == n || n(e), o(e), l(!1), null;
+    return i(!1), r(null), n;
+  } catch (a) {
+    let e = new c.Hx(a);
+    return null == n || n(e), r(e), i(!1), null;
   }
 }, {
-  loading: t,
-  error: r
+  loading: a,
+  error: o
 }
   ];
 }

@@ -63,7 +63,7 @@ function u() {
     default: s
   } = await Promise.all([
     t.e('76540'),
-    t.e('93671')
+    t.e('92539')
   ]).then(t.bind(t, 628908));
   return t => (0, n.jsx)(s, {
     ...t,

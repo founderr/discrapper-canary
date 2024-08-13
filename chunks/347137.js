@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(677277),
   _ = n(285865),
   E = n(918701),
-  h = n(702428),
-  m = n(709158),
+  h = n(471985),
+  m = n(702428),
   I = n(683301),
   g = n(296386),
   p = n(150192),
@@ -20,7 +20,7 @@ var i = n(735250),
   C = n(981631),
   N = n(46140),
   A = n(689938),
-  v = n(885181);
+  v = n(653534);
 let Z = e => {
   switch (e) {
 case f.Gj.Activity:
@@ -44,7 +44,7 @@ isViewingSearchResults: t
   } = (0, l.cj)([I.ZP], () => ({
 currentCategoryId: I.ZP.getCurrentCategoryId(),
 isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
-  })), n = (0, m.Z)(N.dr.QUEST_HOME_DESKTOP), L = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), O = null == L ? void 0 : L.map(e => ({
+  })), n = (0, h.Z)(N.dr.QUEST_HOME_DESKTOP), L = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), O = null == L ? void 0 : L.map(e => ({
 ...e,
 icon: Z(e.categoryId)
   })), R = e => {
@@ -85,7 +85,7 @@ children: [
     currentCategoryId: e,
     shouldDisplaySelectedCategory: !t
   }),
-  n && (0, i.jsx)(h.Z, {
+  n && (0, i.jsx)(m.Z, {
     onClick: () => R(f.Gj.Quests),
     isSelected: e === f.Gj.Quests
   })

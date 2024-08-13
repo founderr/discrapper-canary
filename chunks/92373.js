@@ -7,22 +7,22 @@ var a = t(735250),
   c = t(210753),
   d = t(77498),
   u = t(689938),
-  m = t(721014);
+  m = t(840078);
 n.Z = function(e) {
   let {
 applicationId: n,
 imageContainerClassName: t,
 onClick: i,
-selected: f,
-locked: _ = !1,
+selected: _,
+locked: f = !1,
 otherGamesCount: C = 0
   } = e, h = (0, o.useToken)(o.tokens.colors.WHITE), {
 isFetching: x,
-coverImageUrl: g
+coverImageUrl: p
   } = (0, c.$)(n, {
 coverImageHeight: 336,
 coverImageWidth: 252
-  }), p = (0, l.e7)([d.Z], () => {
+  }), g = (0, l.e7)([d.Z], () => {
 var e, t;
 return null !== (t = null === (e = d.Z.getDetectableGame(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : '';
   }), T = r.useCallback(() => {
@@ -30,19 +30,19 @@ null == i || i(n);
   }, [
 n,
 i
-  ]), E = r.useMemo(() => x ? null : null == g ? (0, a.jsx)('div', {
+  ]), E = r.useMemo(() => x ? null : null == p ? (0, a.jsx)('div', {
 className: m.gameUnknownImage,
 children: (0, a.jsx)(o.UnknownGameIcon, {
   size: 'lg'
 })
   }) : (0, a.jsx)('img', {
 className: m.gameImage,
-alt: p,
-src: g
+alt: g,
+src: p
   }), [
-g,
+p,
 x,
-p
+g
   ]);
   return (0, a.jsxs)('div', {
 className: m.selectedGame,
@@ -51,14 +51,14 @@ children: [
     onClick: T,
     className: s()(t, x ? m.gameImageLoading : void 0, m.gameImageBackground),
     children: [
-      f && (0, a.jsx)('div', {
+      _ && (0, a.jsx)('div', {
         className: m.checkBackground,
         children: (0, a.jsx)(o.CircleCheckIcon, {
           size: 'md',
           color: 'currentColor',
           secondaryColor: h.hex(),
           className: s()(m.selectedGameCheck, {
-            [m.selectedGameCheckLocked]: _
+            [m.selectedGameCheckLocked]: f
           })
         })
       }),
@@ -80,8 +80,8 @@ children: [
     variant: 'text-xs/normal',
     color: 'header-primary',
     children: [
-      p,
-      _ && (0, a.jsx)(o.LockIcon, {
+      g,
+      f && (0, a.jsx)(o.LockIcon, {
         size: 'xxs'
       })
     ]

@@ -7,8 +7,8 @@ var i = t(735250),
   a = t(470079),
   s = t(392711),
   l = t.n(s),
-  o = t(149765),
-  r = t(442837),
+  r = t(149765),
+  o = t(442837),
   d = t(481060),
   c = t(895924),
   u = t(581364),
@@ -23,11 +23,11 @@ var i = t(735250),
   p = t(643886),
   f = t(869157),
   C = t(454092),
-  x = t(289465),
-  O = t(981631),
+  O = t(289465),
+  x = t(981631),
   S = t(689079),
   A = t(689938),
-  R = t(930873);
+  R = t(869880);
 
 function b(e) {
   let {
@@ -39,7 +39,7 @@ editedTargetPermissions: b,
 originalApplicationPermissions: M,
 originalCommandPermissions: L,
 selectedPermissionCount: j
-  } = e, D = (0, r.e7)([h.Z], () => null == s ? null : h.Z.getCommand(s), [s]), P = (null == D ? void 0 : D.defaultMemberPermissions) != null, B = (0, r.e7)([
+  } = e, D = (0, o.e7)([h.Z], () => null == s ? null : h.Z.getCommand(s), [s]), P = (null == D ? void 0 : D.defaultMemberPermissions) != null, B = (0, o.e7)([
 N.Z,
 _.ZP,
 E.Z
@@ -187,7 +187,7 @@ j
 let {
   default: e
 } = await t.e('21897').then(t.bind(t, 303313)), n = D.defaultMemberPermissions;
-return o.fS(n, u.BO) && (n = O.Plq.ADMINISTRATOR), t => (0, i.jsx)(e, {
+return r.fS(n, u.BO) && (n = x.Plq.ADMINISTRATOR), t => (0, i.jsx)(e, {
   ...t,
   defaultMemberPermissions: n
 });
@@ -246,7 +246,7 @@ children: [
         children: e.buttonText
       }),
       a = null;
-    return B ? Y && (a = A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_MAX) : a = null != s ? A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION, (0, i.jsx)(x.Z, {
+    return B ? Y && (a = A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_MAX) : a = null != s ? A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION, (0, i.jsx)(O.Z, {
       bar: (0, i.jsx)(d.Tooltip, {
         tooltipClassName: R.tooltip,
         text: a,

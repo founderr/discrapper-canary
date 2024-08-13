@@ -7,8 +7,8 @@ var i = t(735250),
   a = t(470079),
   s = t(120356),
   l = t.n(s),
-  o = t(658722),
-  r = t.n(o),
+  r = t(658722),
+  o = t.n(r),
   d = t(442837),
   c = t(780384),
   u = t(481060),
@@ -23,14 +23,14 @@ var i = t(735250),
   p = t(496675),
   f = t(626135),
   C = t(768581),
-  x = t(63063),
-  O = t(709054),
+  O = t(63063),
+  x = t(709054),
   S = t(51144),
   A = t(585835),
   R = t(997787),
   b = t(981631),
   Z = t(689938),
-  v = t(214263),
+  v = t(112286),
   M = t(509399),
   L = t(790904),
   j = t(609182);
@@ -64,7 +64,7 @@ function B(e) {
 guild: n,
 channel: t,
 applicationIntegrations: s,
-builtInIntegrations: o,
+builtInIntegrations: r,
 customWebhooks: B,
 followedChannelWebhooks: y,
 isLoading: G,
@@ -94,16 +94,16 @@ availableYoutubeIntegrations: Q,
 guildTwitchIntegrations: $,
 guildYoutubeIntegrations: ee
   } = a.useMemo(() => {
-var e, n, t, i, a, s, l, r;
+var e, n, t, i, a, s, l, o;
 return {
-  availableTwitchIntegrations: null !== (a = null === (e = o.twitch) || void 0 === e ? void 0 : e.length) && void 0 !== a ? a : 0,
-  availableYoutubeIntegrations: null !== (s = null === (n = o.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0,
-  guildTwitchIntegrations: null !== (l = null === (t = o.twitch) || void 0 === t ? void 0 : t.filter(e => e.enabled).length) && void 0 !== l ? l : 0,
-  guildYoutubeIntegrations: null !== (r = null === (i = o.youtube) || void 0 === i ? void 0 : i.filter(e => e.enabled).length) && void 0 !== r ? r : 0
+  availableTwitchIntegrations: null !== (a = null === (e = r.twitch) || void 0 === e ? void 0 : e.length) && void 0 !== a ? a : 0,
+  availableYoutubeIntegrations: null !== (s = null === (n = r.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0,
+  guildTwitchIntegrations: null !== (l = null === (t = r.twitch) || void 0 === t ? void 0 : t.filter(e => e.enabled).length) && void 0 !== l ? l : 0,
+  guildYoutubeIntegrations: null !== (o = null === (i = r.youtube) || void 0 === i ? void 0 : i.filter(e => e.enabled).length) && void 0 !== o ? o : 0
 };
   }, [
-o.twitch,
-o.youtube
+r.twitch,
+r.youtube
   ]), {
 showTwitchCard: en,
 showYoutubeCard: et
@@ -128,7 +128,7 @@ z,
 J,
 Q
   ]), ei = Object.values(s).length, ea = a.useMemo(() => {
-let e = ei > 100 ? D : r();
+let e = ei > 100 ? D : o();
 return Object.values(s).filter(n => {
   var t, i, a;
   let {
@@ -152,40 +152,40 @@ es,
   ] : ea, [
 ea,
 es
-  ]), eo = (0, u.useModalsStore)(u.hasAnyModalOpenSelector), [er, ed] = a.useState(!1), ec = a.useRef(0), eu = () => {
+  ]), er = (0, u.useModalsStore)(u.hasAnyModalOpenSelector), [eo, ed] = a.useState(!1), ec = a.useRef(0), eu = () => {
 ed(!0), clearTimeout(ec.current), ec.current = setTimeout(() => {
   ed(!1);
 }, 200);
   };
   a.useEffect(() => (window.addEventListener('scroll', eu, !0), () => window.removeEventListener('scroll', eu)));
   let eI = el.map(e => {
-  let t = !eo && e.integration.id === (null == es ? void 0 : es.integration.id);
+  let t = !er && e.integration.id === (null == es ? void 0 : es.integration.id);
   return function(e, n, t, a, s) {
     var l;
     let {
-      application: o,
-      integration: r
+      application: r,
+      integration: o
     } = n, d = [];
-    return null != r.user ? d.push({
+    return null != o.user ? d.push({
       icon: u.ClockIcon,
       text: Z.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
-        timestamp: O.default.extractTimestamp(r.id),
-        user: S.ZP.getUserTag(r.user)
+        timestamp: x.default.extractTimestamp(o.id),
+        user: S.ZP.getUserTag(o.user)
       })
     }) : d.push({
       icon: u.ClockIcon,
       text: Z.Z.Messages.INTEGRATION_ADDED_DATE.format({
-        timestamp: O.default.extractTimestamp(r.id)
+        timestamp: x.default.extractTimestamp(o.id)
       })
     }), (0, i.jsx)(A.Z, {
-      name: o.name,
-      imageSrc: null !== (l = o.getIconURL(48)) && void 0 !== l ? l : C.pK['0'],
+      name: r.name,
+      imageSrc: null !== (l = r.getIconURL(48)) && void 0 !== l ? l : C.pK['0'],
       integration: n,
       buttonText: Z.Z.Messages.INTEGRATIONS_APPLICATION_BUTTON,
       hasNextSection: !0,
       onButtonClick: () => {
-        t(o.id), f.default.track(b.rMx.APP_MANAGE_CTA_CLICKED, {
-          application_id: o.id,
+        t(r.id), f.default.track(b.rMx.APP_MANAGE_CTA_CLICKED, {
+          application_id: r.id,
           guild_id: null == e ? void 0 : e.id,
           is_admin: null != e ? p.Z.can(b.Plq.ADMINISTRATOR, e) : void 0
         });
@@ -194,8 +194,8 @@ ed(!0), clearTimeout(ec.current), ec.current = setTimeout(() => {
       guildId: null == e ? void 0 : e.id,
       isScrolling: a,
       canShowMigrationTooltip: s
-    }, 'integration-'.concat(r.id));
-  }(n, e, W, er, t);
+    }, 'integration-'.concat(o.id));
+  }(n, e, W, eo, t);
 }),
 em = (0, i.jsx)('div', {
   className: v.footerImage
@@ -258,7 +258,7 @@ let a = (0, c.wj)(e) ? L : j,
   });
 return n > 0 ? s : l;
   }(F, ei, null == n ? void 0 : n.id), em = null);
-  let e_ = x.Z.getArticleURL(b.BhN.INTEGRATIONS),
+  let e_ = O.Z.getArticleURL(b.BhN.INTEGRATIONS),
 eN = null != t ? Z.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL : Z.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
 eE = [];
   if (q) {
@@ -279,7 +279,7 @@ if (eE.push((eT = B.length, eh = k, eg = H, e = eT > 0 ? Z.Z.Messages.INTEGRATIO
   }, 'webhooks'))), (null == t ? void 0 : t.type) !== b.d4z.GUILD_VOICE && ((null == t ? void 0 : t.type) == null || !b.TPd.GUILD_THREADS_ONLY.has(t.type))) {
   ;
   let e, n;
-  eE.push((ep = y.length, ef = w, ep > 0 ? (e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_BUTTON, n = ef) : (e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON, n = () => open(x.Z.getArticleURL(b.BhN.CHANNEL_FOLLOWING))), (0, i.jsx)(A.Z, {
+  eE.push((ep = y.length, ef = w, ep > 0 ? (e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_BUTTON, n = ef) : (e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON, n = () => open(O.Z.getArticleURL(b.BhN.CHANNEL_FOLLOWING))), (0, i.jsx)(A.Z, {
     name: Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING,
     icon: u.ChannelsFollowedIcon,
     buttonText: e,
@@ -295,7 +295,7 @@ if (eE.push((eT = B.length, eh = k, eg = H, e = eT > 0 ? Z.Z.Messages.INTEGRATIO
   }
   return en && eE.push(function(e, n, t) {
 let a, s, l;
-let o = _.Z.get(b.ABu.TWITCH);
+let r = _.Z.get(b.ABu.TWITCH);
 return e > 0 ? (a = Z.Z.Messages.INTEGRATIONS_TWITCH_BUTTON, s = Z.Z.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({
   count: n
 }), l = () => t(b.ABu.TWITCH)) : (a = Z.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_BUTTON, s = Z.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY, l = () => (0, T.Z)({
@@ -303,8 +303,8 @@ return e > 0 ? (a = Z.Z.Messages.INTEGRATIONS_TWITCH_BUTTON, s = Z.Z.Messages.IN
   location: 'Integration Settings'
 })), (0, i.jsx)(A.Z, {
   name: Z.Z.Messages.INTEGRATIONS_TWITCH,
-  icon: o.icon.whiteSVG,
-  iconBackgroundColor: o.color,
+  icon: r.icon.whiteSVG,
+  iconBackgroundColor: r.color,
   iconClassName: v.platformIcon,
   buttonText: a,
   onButtonClick: l,
@@ -315,7 +315,7 @@ return e > 0 ? (a = Z.Z.Messages.INTEGRATIONS_TWITCH_BUTTON, s = Z.Z.Messages.IN
 }, 'integrations-twitch');
   }(J, $, U)), et && eE.push(function(e, n, t) {
 let a, s, l;
-let o = _.Z.get(b.ABu.YOUTUBE);
+let r = _.Z.get(b.ABu.YOUTUBE);
 return e > 0 ? (a = Z.Z.Messages.INTEGRATIONS_YOUTUBE_BUTTON, s = Z.Z.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({
   count: n
 }), l = () => t(b.ABu.YOUTUBE)) : (a = Z.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_BUTTON, s = Z.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY, l = () => (0, T.Z)({
@@ -323,8 +323,8 @@ return e > 0 ? (a = Z.Z.Messages.INTEGRATIONS_YOUTUBE_BUTTON, s = Z.Z.Messages.I
   location: 'Integration Settings'
 })), (0, i.jsx)(A.Z, {
   name: Z.Z.Messages.INTEGRATIONS_YOUTUBE,
-  icon: o.icon.whiteSVG,
-  iconBackgroundColor: o.color,
+  icon: r.icon.whiteSVG,
+  iconBackgroundColor: r.color,
   iconClassName: v.platformIcon,
   buttonText: a,
   onButtonClick: l,

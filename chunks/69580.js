@@ -69,7 +69,7 @@ var r, i, a = n(735250),
   Q = n(574384),
   X = n(981631),
   $ = n(689938),
-  J = n(312750);
+  J = n(828947);
 let ee = 'oauth2-authorize-header-id';
 
 function et() {

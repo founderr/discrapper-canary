@@ -53,7 +53,7 @@ var o, r = t(735250),
   z = t(474936),
   X = t(231338),
   q = t(689938),
-  $ = t(17764);
+  $ = t(55417);
 (o || (o = {})).PREMIUM = 'discord://app/settings/nitro';
 let J = z.Xh.NONE_MONTH,
   Q = [
@@ -225,15 +225,15 @@ eu,
 e_,
 eG
   ]), (0, N.bp)(eH, eT, eJ, ez), (0, T.dZ)(eH, eK, ez);
-  let e7 = a.useRef(null),
-[e1, e2] = (0, S.Z)(!1, 500),
+  let e1 = a.useRef(null),
+[e7, e2] = (0, S.Z)(!1, 500),
 [e8, e4] = a.useState(null),
-[e6, e9] = a.useState([]),
-[e5, e3] = a.useState(!1);
+[e6, e5] = a.useState([]),
+[e3, e9] = a.useState(!1);
   a.useEffect(() => {
 let e;
 if (!!eU)
-  null != U.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e9(e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, ey, !1)), null == ey && null != eu && null != eu.paymentSourceId ? e4(eu.currency) : null != e && e4(e[0]);
+  null != U.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e5(e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, ey, !1)), null == ey && null != eu && null != eu.paymentSourceId ? e4(eu.currency) : null != e && e4(e[0]);
   }, [
 ey,
 eu,
@@ -383,8 +383,8 @@ else if (eH === T.h8.PREMIUM_UPSELL) {
           eJ(T.h8.ADD_PAYMENT_STEPS), eM(null);
         },
         onPurchaseTermsChange: eB,
-        legalTermsNodeRef: e7,
-        hasLegalTermsFlash: e1
+        legalTermsNodeRef: e1,
+        hasLegalTermsFlash: e7
       }), t = T.h8.PLAN_SELECT, a = eO ? (0, r.jsx)(_.Button, {
         color: _.Button.Colors.GREEN,
         type: 'submit',
@@ -399,7 +399,7 @@ else if (eH === T.h8.PREMIUM_UPSELL) {
                 duration_ms: Date.now() - eZ,
                 guild_id: er,
                 application_id: es
-              }), e5)
+              }), e3)
               return;
             if (null == eu || null == ef) {
               c()(null != e, 'Missing paymentSource');
@@ -409,7 +409,7 @@ else if (eH === T.h8.PREMIUM_UPSELL) {
                 currency: l.currency
               });
               if (n.redirectConfirmation) {
-                e3(null != n.redirectURL);
+                e9(null != n.redirectURL);
                 return;
               }
             } else {
@@ -419,7 +419,7 @@ else if (eH === T.h8.PREMIUM_UPSELL) {
               n.currency = eu.currency, null == n.currency && (n.currency = l.currency), n.paymentSource = null != e_ ? eI[e_] : void 0, null == n.paymentSource && (c()(null != e, 'Missing paymentSource'), n.paymentSource = e, n.currency = l.currency);
               let t = await (0, f.Mg)(eu, n, eF);
               if (t.redirectConfirmation) {
-                e3(null != t.redirectURL);
+                e9(null != t.redirectURL);
                 return;
               }
             }
@@ -433,7 +433,7 @@ else if (eH === T.h8.PREMIUM_UPSELL) {
               duration_ms: Date.now() - eZ
             });
           } finally {
-            !e5 && ex(!1);
+            !e3 && ex(!1);
           }
         },
         children: q.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBMIT
@@ -443,7 +443,7 @@ else if (eH === T.h8.PREMIUM_UPSELL) {
           ...e,
           color: _.Button.Colors.GREEN,
           onClick: () => {
-            null != e7.current && (e7.current.scrollIntoView({
+            null != e1.current && (e1.current.scrollIntoView({
               behavior: 'smooth'
             }), e2(!0));
           },

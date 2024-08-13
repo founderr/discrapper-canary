@@ -10,7 +10,7 @@ var s, r, i, a, l = n(735250),
   p = n(314897),
   I = n(981631),
   m = n(689938),
-  f = n(549856);
+  f = n(224499);
 d.ZP.initialize();
 class N extends(a = o.PureComponent) {
   componentDidMount() {

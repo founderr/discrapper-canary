@@ -9,13 +9,13 @@ var a = t(735250),
   d = t(866442),
   u = t(442837),
   m = t(481060),
-  f = t(231467),
-  _ = t(650774),
+  _ = t(231467),
+  f = t(650774),
   C = t(430824),
   h = t(175557),
   x = t(688298),
-  g = t(995119),
-  p = t(116175),
+  p = t(995119),
+  g = t(116175),
   T = t(308083),
   E = t(689938),
   I = t(29211),
@@ -104,7 +104,7 @@ brandPrimaryColor: S,
 brandSecondaryColor: A,
 badgePrimaryColor: M,
 badgeSecondaryColor: j
-  } = i, R = (0, u.e7)([C.Z], () => C.Z.getGuild(o)), L = null !== (n = (0, u.e7)([_.Z], () => _.Z.getMemberCount(o))) && void 0 !== n ? n : 0, O = r.useMemo(() => ({
+  } = i, R = (0, u.e7)([C.Z], () => C.Z.getGuild(o)), L = null !== (n = (0, u.e7)([f.Z], () => f.Z.getMemberCount(o))) && void 0 !== n ? n : 0, O = r.useMemo(() => ({
 primary: null != S ? S : T.OH,
 secondary: null != A ? A : T.K_
   }), [
@@ -129,8 +129,8 @@ if (P)
   return O;
 if (w)
   return {
-    primary: null != M ? M : p.Nh,
-    secondary: null != j ? j : p.vY
+    primary: null != M ? M : g.Nh,
+    secondary: null != j ? j : g.vY
   };
 {
   let e = T.ym[Z - 2];
@@ -146,7 +146,7 @@ P,
 M,
 j,
 Z
-  ]), B = r.useCallback(() => {
+  ]), G = r.useCallback(() => {
 let e = N[Math.floor(Math.random() * N.length)].bannerKind,
   n = s().random().hex();
 t({
@@ -167,7 +167,7 @@ y,
 F.primary,
 F.secondary
   ]);
-  let G = r.useMemo(() => {
+  let B = r.useMemo(() => {
 var e, n, t;
 return {
   ...i,
@@ -224,8 +224,8 @@ children: [
         children: (0, a.jsxs)('div', {
           className: I.colorsContainer,
           children: [
-            (0, a.jsx)(g.Z, {
-              onClick: B
+            (0, a.jsx)(p.Z, {
+              onClick: G
             }),
             (0, a.jsxs)('div', {
               className: I.colorPickerContainer,
@@ -344,14 +344,14 @@ children: [
       }),
       (0, a.jsx)('div', {
         className: I.clanCardWrapper,
-        children: (0, a.jsx)(f.xV, {
+        children: (0, a.jsx)(_.xV, {
           bannerComponent: (0, a.jsx)(h.Z, {
             banner: y,
             primaryTintColor: F.primary,
             secondaryTintColor: F.secondary,
             className: I.clanBannerPreview
           }),
-          clan: G
+          clan: B
         })
       })
     ]

@@ -1,27 +1,27 @@
 t.d(n, {
   Z: function() {
-return r;
+return u;
   }
 });
 var a = t(735250);
 t(470079);
-var l = t(481060),
-  i = t(132871),
+var i = t(481060),
+  l = t(132871),
   s = t(147890),
   o = t(689938);
 
-function r(e) {
-  return (0, a.jsx)(l.MenuItem, {
+function u(e) {
+  return (0, a.jsx)(i.MenuItem, {
 id: 'application-directory',
 label: (0, a.jsx)(a.Fragment, {
   children: o.Z.Messages.APP_DIRECTORY
 }),
-icon: l.RobotIcon,
+icon: i.RobotIcon,
 action: () => {
   (0, s.goToAppDirectory)({
     guildId: e.id,
     entrypoint: {
-      name: i.ApplicationDirectoryEntrypointNames.GUILD_HEADER_POPOUT
+      name: l.ApplicationDirectoryEntrypointNames.GUILD_HEADER_POPOUT
     }
   });
 }

@@ -9,7 +9,7 @@ var _ = a(388905),
   t = a(837748),
   n = a(306453),
   r = a(58346),
-  L = a(804498);
+  L = a(963089);
 let l = {
   [r.HQ.CLASSROOM]: a(320440),
   [r.HQ.LOCAL_COMMUNITIES]: a(526916),

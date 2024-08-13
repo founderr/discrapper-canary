@@ -9,7 +9,7 @@ var a = s(332664),
   o = s(814249),
   l = s(531578),
   i = s(689938),
-  r = s(937326);
+  r = s(995335);
 let c = [{
 className: r.emojiThumbsUp,
 rating: l.aZ.GOOD,

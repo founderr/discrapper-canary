@@ -7,18 +7,18 @@ var r = t(120356),
   o = t(18100),
   l = t(308083),
   c = t(689938),
-  d = t(363778);
+  d = t(318577);
 n.Z = e => {
   var n, t, r;
   let {
 guildId: u,
 handleUpdate: m,
-progress: f,
-errors: _
+progress: _,
+errors: f
   } = e, {
 wildcardDescriptors: C,
 description: h
-  } = f, x = (e, n) => {
+  } = _, x = (e, n) => {
 let t = [...C];
 t[n] = e, m({
   wildcardDescriptors: t
@@ -38,11 +38,11 @@ children: [
     className: d.subtitle,
     children: c.Z.Messages.CLAN_SETUP_DESCRIPTION_SUBTITLE
   }),
-  (null == _ ? void 0 : _.description) != null && (0, a.jsx)(s.Text, {
+  (null == f ? void 0 : f.description) != null && (0, a.jsx)(s.Text, {
     variant: 'text-sm/normal',
     color: 'status-danger',
     className: d.errorText,
-    children: _.description
+    children: f.description
   }),
   (0, a.jsxs)('div', {
     className: d.content,
@@ -77,11 +77,11 @@ children: [
             className: d.title,
             children: c.Z.Messages.CLAN_SETUP_WILDCARDS_SUBTITLE
           }),
-          (null == _ ? void 0 : _.wildcardDescriptors) != null && (0, a.jsx)(s.Text, {
+          (null == f ? void 0 : f.wildcardDescriptors) != null && (0, a.jsx)(s.Text, {
             variant: 'text-sm/normal',
             color: 'status-danger',
             className: d.errorText,
-            children: _.wildcardDescriptors
+            children: f.wildcardDescriptors
           }),
           (0, a.jsxs)('div', {
             className: d.wildcardRow,
@@ -115,7 +115,7 @@ children: [
         className: d.fixedWidthSidebar,
         children: (0, a.jsx)(o.Z, {
           guildId: u,
-          progress: f,
+          progress: _,
           maskTraits: !0
         })
       })

@@ -23,17 +23,17 @@ var i = t(735250),
   E = t(78839),
   x = t(669079),
   N = t(63063),
-  T = t(74538),
-  S = t(937615),
+  S = t(74538),
+  T = t(937615),
   h = t(711459),
   b = t(847903),
   g = t(104494),
   P = t(639119),
   v = t(55610),
   A = t(653798),
-  C = t(553797),
-  M = t(927699),
-  y = t(987716),
+  y = t(553797),
+  C = t(927699),
+  M = t(987716),
   O = t(311821),
   R = t(459965),
   L = t(811616),
@@ -42,7 +42,7 @@ var i = t(735250),
   D = t(981631),
   w = t(231338),
   G = t(689938),
-  B = t(197266);
+  B = t(835657);
 
 function U(e) {
   var n, t, r, I;
@@ -89,15 +89,15 @@ q
   s()(null != ef, 'Price option has to be set');
   let eE = null != eu && Z.nG[eu.trial_id].skus.includes(O),
 ex = null != e_ && F.some(e => null == ep ? void 0 : ep.includes(e)) && null != e_.discount,
-eN = (0, T.aS)(Z.Xh.PREMIUM_MONTH_TIER_2, !1, ee, ef);
+eN = (0, S.aS)(Z.Xh.PREMIUM_MONTH_TIER_2, !1, ee, ef);
   a.useEffect(() => {
 W && h.ZP.trackExposure({
   location: '5f89bb_1'
 });
   }, [W]);
-  let eT = (null == em ? void 0 : em.id) != null && F.includes(em.id);
+  let eS = (null == em ? void 0 : em.id) != null && F.includes(em.id);
   a.useEffect(() => {
-if (!eT) {
+if (!eS) {
   if (null == eo || ee)
     eI(F[0]);
   else if (null != eo) {
@@ -106,23 +106,23 @@ if (!eT) {
   }
 }
   }, [
-eT,
+eS,
 ee,
 F,
 eo,
 eI
   ]);
-  let eS = !es && (ee || !eE && !ex) && eT && K,
+  let eT = !es && (ee || !eE && !ex) && eS && K,
 eh = (0, o.useRadioGroup)(),
-eb = (null == em ? void 0 : em.id) != null ? (0, T.aS)(em.id, !1, ee, ef) : void 0,
+eb = (null == em ? void 0 : em.id) != null ? (0, S.aS)(em.id, !1, ee, ef) : void 0,
 {
   ipCountryCode: eg
 } = (0, b.Z)(),
 eP = 'HR' === eg && null != eb && eb.currency === w.pK.EUR,
-ev = (0, T.Ap)(ef.paymentSourceId),
+ev = (0, S.Ap)(ef.paymentSourceId),
 eA = (null == ed ? void 0 : ed.interval) === Z.rV.DAY ? G.Z.Messages.BILLING_TRIAL_2_WEEK_PERIOD : G.Z.Messages.BILLING_TRIAL_30_DAY_PERIOD,
-eC = !ee && (ex || null != ed && eE && null != Y),
-eM = null == V ? void 0 : null === (I = V.find(e => e.subscriptionPlanId === Z.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === I ? void 0 : null === (r = I.discounts) || void 0 === r ? void 0 : null === (t = r.find(e => e.type === u.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount;
+ey = !ee && (ex || null != ed && eE && null != Y),
+eC = null == V ? void 0 : null === (I = V.find(e => e.subscriptionPlanId === Z.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === I ? void 0 : null === (r = I.discounts) || void 0 === r ? void 0 : null === (t = r.find(e => e.type === u.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount;
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsxs)('div', {
   className: es ? B.stepBodyCustomGift : B.stepBody,
@@ -134,7 +134,7 @@ children: (0, i.jsxs)('div', {
           fromBoostCancelModal: !1,
           className: B.legacyPricingNotice
         }),
-        es && null != et && (0, i.jsx)(y.q, {})
+        es && null != et && (0, i.jsx)(M.q, {})
       ]
     }),
     (0, i.jsxs)('div', {
@@ -145,7 +145,7 @@ children: (0, i.jsxs)('div', {
         }),
         (() => {
           if (er === x.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != ea)
-            return (0, i.jsx)(M.Z, {
+            return (0, i.jsx)(C.Z, {
               sectionTitle: G.Z.Messages.GIFT_OPTIONAL_MESSAGE,
               onTextChange: e => ea(e),
               pendingText: ei,
@@ -208,7 +208,7 @@ children: (0, i.jsxs)('div', {
             return (0, i.jsx)(o.FormTitle, {
               children: G.Z.Messages.GIFT_SUBSCRIPTION_SELECTION
             });
-          if (!eC)
+          if (!ey)
             return (0, i.jsx)('div', {
               className: B.selectPlanChooseTitle,
               children: G.Z.Messages.BILLING_SWITCH_PLAN_CHOOSE_ONE
@@ -233,7 +233,7 @@ children: (0, i.jsxs)('div', {
               ]
             });
           }
-          if (t && null != eM && null != eN && R === Z.Xh.PREMIUM_MONTH_TIER_2)
+          if (t && null != eC && null != eN && R === Z.Xh.PREMIUM_MONTH_TIER_2)
             return (0, i.jsxs)('div', {
               children: [
                 (0, i.jsx)(o.Text, {
@@ -241,8 +241,8 @@ children: (0, i.jsxs)('div', {
                   className: B.trialPlanSelectHeader,
                   children: G.Z.Messages.BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC.format({
                     numMonths: null == e_ ? void 0 : e_.discount.user_usage_limit,
-                    discountedPrice: (0, S.T4)(eN.amount - eM, eN.currency),
-                    regularPrice: (0, S.T4)(eN.amount, eN.currency)
+                    discountedPrice: (0, T.T4)(eN.amount - eC, eN.currency),
+                    regularPrice: (0, T.T4)(eN.amount, eN.currency)
                   })
                 }),
                 (0, i.jsx)('hr', {
@@ -259,21 +259,21 @@ children: (0, i.jsxs)('div', {
             selectPlan: eI,
             selected: (null == em ? void 0 : em.id) === e,
             priceOptions: ef,
-            shouldShowUpdatedPaymentModal: eC,
+            shouldShowUpdatedPaymentModal: ey,
             isEligibleForDiscount: ex,
-            discountAmountOff: eM,
+            discountAmountOff: eC,
             isEligibleForTrial: eE
           }, e))
         }),
         (0, i.jsx)('div', {
-          children: eS && null != em && null != eb ? (0, i.jsxs)('div', {
+          children: eT && null != em && null != eb ? (0, i.jsxs)('div', {
             children: [
               (0, i.jsx)('div', {
                 className: B.selectPlanDivider
               }),
               (0, i.jsx)(A.Ji, {
                 label: G.Z.Messages.BILLING_PAYMENT_BREAKDOWN_TOTAL,
-                value: (0, i.jsx)(C.Z, {
+                value: (0, i.jsx)(y.Z, {
                   price: eb.amount,
                   currency: eb.currency,
                   intervalType: ee ? null : em.interval,
@@ -287,10 +287,10 @@ children: (0, i.jsxs)('div', {
         }),
         eP && (0, i.jsx)(c.Z, {
           message: G.Z.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({
-            kunaPriceWithCurrency: (0, S.T4)(7.5345 * eb.amount, w.pK.HRK)
+            kunaPriceWithCurrency: (0, T.T4)(7.5345 * eb.amount, w.pK.HRK)
           })
         }),
-        !ee && !eC && K && (0, i.jsx)(c.Z, {
+        !ee && !ey && K && (0, i.jsx)(c.Z, {
           message: G.Z.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({
             documentationLink: N.Z.getArticleURL(D.BhN.LOCALIZED_PRICING)
           })

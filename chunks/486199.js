@@ -8,10 +8,10 @@ t(470079);
 var a = t(120356),
   s = t.n(a),
   l = t(481060),
-  o = t(600164),
-  r = t(528144),
+  r = t(600164),
+  o = t(528144),
   d = t(689938),
-  c = t(708048);
+  c = t(479422);
 
 function u(e) {
   let {
@@ -26,11 +26,11 @@ detailsClassName: N,
 isHeader: E,
 isPremium: T
   } = e;
-  return (0, i.jsxs)(o.Z, {
-justify: o.Z.Justify.CENTER,
+  return (0, i.jsxs)(r.Z, {
+justify: r.Z.Justify.CENTER,
 className: c.wrapper,
 children: [
-  null != a || null != u ? (0, i.jsx)(o.Z.Child, {
+  null != a || null != u ? (0, i.jsx)(r.Z.Child, {
     shrink: 0,
     grow: 0,
     children: function(e, n, t, a) {
@@ -48,9 +48,9 @@ children: [
       }) : (0, i.jsx)(e, {
         className: s()(c.icon, a),
         color: 'currentColor'
-      })), (0, i.jsx)(o.Z, {
-        align: o.Z.Align.CENTER,
-        justify: o.Z.Justify.CENTER,
+      })), (0, i.jsx)(r.Z, {
+        align: r.Z.Align.CENTER,
+        justify: r.Z.Justify.CENTER,
         style: {
           backgroundColor: t
         },
@@ -89,11 +89,11 @@ children: [
         ]
       }, n);
     });
-    return (0, i.jsxs)(o.Z, {
-      direction: o.Z.Direction.VERTICAL,
+    return (0, i.jsxs)(r.Z, {
+      direction: r.Z.Direction.VERTICAL,
       children: [
-        (0, i.jsxs)(r.Z, {
-          size: I ? r.Z.Sizes.SIZE_24 : r.Z.Sizes.SIZE_16,
+        (0, i.jsxs)(o.Z, {
+          size: I ? o.Z.Sizes.SIZE_24 : o.Z.Sizes.SIZE_16,
           className: I ? c.header : c.secondaryHeader,
           children: [
             n,
@@ -113,10 +113,10 @@ children: [
           color: 'header-secondary',
           children: t
         }) : null,
-        (0, i.jsx)(o.Z, {
-          direction: o.Z.Direction.HORIZONTAL,
-          align: o.Z.Align.CENTER,
-          wrap: o.Z.Wrap.WRAP,
+        (0, i.jsx)(r.Z, {
+          direction: r.Z.Direction.HORIZONTAL,
+          align: r.Z.Align.CENTER,
+          wrap: r.Z.Wrap.WRAP,
           children: _
         })
       ]

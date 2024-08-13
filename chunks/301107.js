@@ -1,33 +1,33 @@
 n.d(t, {
   W: function() {
-return a;
+return s;
   }
 }), n(411104);
-var i = n(470079),
-  l = n(250683),
-  r = n(253135);
+var r = n(470079),
+  i = n(250683),
+  a = n(253135);
 
-function a(e) {
+function s(e) {
   let {
 fingerprintBase64: t,
 chunkSize: n,
-desiredLength: a
-  } = e, s = i.useMemo(() => {
+desiredLength: s
+  } = e, o = r.useMemo(() => {
 if (null == t || '' === t)
   return null;
-let e = l.toByteArray(t),
-  i = (0, r.Dq)(e, a, n);
-if (null == i)
+let e = i.toByteArray(t),
+  r = (0, a.Dq)(e, s, n);
+if (null == r)
   return null;
-let s = RegExp('.{1,'.concat(n, '}'), 'g'),
-  o = i.match(s);
-return null == o ? null : Array.from(o);
+let o = RegExp('.{1,'.concat(n, '}'), 'g'),
+  E = r.match(o);
+return null == E ? null : Array.from(E);
   }, [
 n,
 t,
-a
+s
   ]);
-  if (null != t && '' !== t && null == s)
+  if (null != t && '' !== t && null == o)
 throw Error('[useReadableSecureFramesCode] Failed to parse base 64 code.');
-  return s;
+  return o;
 }

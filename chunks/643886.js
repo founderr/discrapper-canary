@@ -7,8 +7,8 @@ var i = t(470079),
   a = t(512722),
   s = t.n(a),
   l = t(149765),
-  o = t(442837),
-  r = t(271383),
+  r = t(442837),
+  o = t(271383),
   d = t(430824),
   c = t(496675),
   u = t(594174),
@@ -17,12 +17,12 @@ var i = t(470079),
   _ = t(981631);
 
 function N(e) {
-  let n = (0, o.e7)([d.Z], () => d.Z.getGuild(e));
+  let n = (0, r.e7)([d.Z], () => d.Z.getGuild(e));
   s()(null != n, 'guild must be present to be editing its integration settings');
-  let t = (0, o.e7)([c.Z], () => c.Z.getHighestRole(n)),
-a = (0, o.Wu)([r.ZP], () => r.ZP.getMembers(e), [e]),
-N = (0, o.cj)([u.default], () => u.default.getUsers()),
-h = (0, o.Wu)([d.Z], () => Object.values(d.Z.getRoles(e)), [e]),
+  let t = (0, r.e7)([c.Z], () => c.Z.getHighestRole(n)),
+a = (0, r.Wu)([o.ZP], () => o.ZP.getMembers(e), [e]),
+N = (0, r.cj)([u.default], () => u.default.getUsers()),
+h = (0, r.Wu)([d.Z], () => Object.values(d.Z.getRoles(e)), [e]),
 g = i.useMemo(() => {
   let e = [];
   for (let t of a) {
@@ -57,12 +57,12 @@ f = i.useMemo(() => {
     if (p(a))
       continue;
     let s = !l.e$(a.permissions, _.Plq.ADMINISTRATOR) && c.Z.isRoleHigher(n, t, a),
-      o = {
+      r = {
         id: a.id,
         name: a.name,
         canManage: s
       };
-    a.id === e ? i.unshift(o) : i.push(o);
+    a.id === e ? i.unshift(r) : i.push(r);
   }
   return i;
 }, [
@@ -71,8 +71,8 @@ f = i.useMemo(() => {
   n,
   t
 ]),
-[C, x] = i.useState(''),
-O = i.useMemo(() => {
+[C, O] = i.useState(''),
+x = i.useMemo(() => {
   let n = function(e) {
       return e.startsWith('@') ? e.substr(1) : e;
     }(C),
@@ -90,9 +90,9 @@ O = i.useMemo(() => {
 ]);
   return {
 query: C,
-results: O,
-setQuery: x,
-unfilteredCount: O.members.length + O.roles.length
+results: x,
+setQuery: O,
+unfilteredCount: x.members.length + x.roles.length
   };
 }
 

@@ -1,22 +1,22 @@
-t.d(n, {
+e.d(t, {
   Z: function() {
-return s;
+return c;
   }
 });
-var l = t(735250);
-t(470079);
-var a = t(481060),
-  i = t(37234),
-  r = t(434404),
-  o = t(981631),
-  u = t(689938);
+var u = e(735250);
+e(470079);
+var i = e(481060),
+  r = e(37234),
+  l = e(434404),
+  o = e(981631),
+  a = e(689938);
 
-function s(e, n) {
-  return n === o.IlC.POPOUT ? null : (0, l.jsx)(a.MenuItem, {
+function c(n, t) {
+  return t === o.IlC.POPOUT ? null : (0, u.jsx)(i.MenuItem, {
 id: 'nav-server-settings',
-label: u.Z.Messages.SERVER_SETTINGS,
+label: a.Z.Messages.SERVER_SETTINGS,
 action: () => {
-  (0, i.xf)(), r.Z.open(e, o.pNK.MODERATION);
+  (0, r.xf)(), l.Z.open(n, o.pNK.MODERATION);
 }
   });
 }

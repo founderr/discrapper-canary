@@ -36,7 +36,7 @@ var s = n(735250),
   G = n(701476),
   B = n(436620),
   U = n(689938),
-  F = n(549856);
+  F = n(224499);
 
 function k(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {

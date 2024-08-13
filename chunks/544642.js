@@ -1,22 +1,22 @@
-t.d(n, {
+e.d(t, {
   Z: function() {
-return s;
+return c;
   }
 });
-var l = t(735250);
-t(470079);
-var a = t(481060),
-  i = t(37234),
-  r = t(191471),
-  o = t(981631),
-  u = t(689938);
+var u = e(735250);
+e(470079);
+var i = e(481060),
+  r = e(37234),
+  l = e(191471),
+  o = e(981631),
+  a = e(689938);
 
-function s(e, n) {
-  return n === o.IlC.POPOUT ? null : (0, l.jsx)(a.MenuItem, {
+function c(n, t) {
+  return t === o.IlC.POPOUT ? null : (0, u.jsx)(i.MenuItem, {
 id: 'report-raid',
-label: u.Z.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
+label: a.Z.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
 action: () => {
-  (0, i.xf)(), (0, r.J)(e);
+  (0, r.xf)(), (0, l.J)(n);
 }
   });
 }

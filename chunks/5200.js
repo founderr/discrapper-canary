@@ -16,7 +16,7 @@ var i, a, s = n(735250),
   _ = n(513202),
   f = n(981631),
   E = n(689938),
-  g = n(478880);
+  g = n(774867);
 let C = ['embedded_cover'],
   I = {
 tension: 800,

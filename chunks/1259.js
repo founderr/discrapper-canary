@@ -35,16 +35,16 @@ function m(e) {
 t = (0, r.e7)([l.Z], () => l.Z.can(d.Plq.ADMINISTRATOR, n)),
 i = null == n ? void 0 : n.hasFeature(d.oNc.COMMUNITY),
 [m] = (0, r.Wu)([s.Z], () => [s.Z.getMemberCount(e)], [e]),
-f = (null != m ? m : 0) >= c.WZ && (null != m ? m : 0) < c.TN,
-_ = t && i && f;
+_ = (null != m ? m : 0) >= c.WZ && (null != m ? m : 0) < c.TN,
+f = t && i && _;
   a.useEffect(() => {
-_ && u.trackExposure({
+f && u.trackExposure({
   guildId: e,
   location: '747eb3_1'
 });
   }, [
 e,
-_
+f
   ]);
   let {
 enableLowerMemberCountReq: C
@@ -53,7 +53,7 @@ guildId: e,
 location: '747eb3_2'
   }, {
 autoTrackExposure: !1,
-disable: !_
+disable: !f
   });
   return C;
 }

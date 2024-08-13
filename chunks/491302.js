@@ -7,15 +7,15 @@ var i = t(735250),
   a = t(470079),
   s = t(481060),
   l = t(668781),
-  o = t(139387),
-  r = t(308063),
+  r = t(139387),
+  o = t(308063),
   d = t(600164),
   c = t(259580),
   u = t(768581),
   I = t(486199),
   m = t(981631),
   _ = t(689938),
-  N = t(584559);
+  N = t(707692);
 
 function E(e) {
   let {
@@ -41,7 +41,7 @@ return e = n, null != (t = n.avatar) && /^data:/.test(t) ? t : (0, u.ov)({
   confirmText: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE,
   cancelText: _.Z.Messages.CANCEL,
   onConfirm: () => {
-    r.Z.delete(n.guild_id, n.id).catch(() => {
+    o.Z.delete(n.guild_id, n.id).catch(() => {
       l.Z.show({
         title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_ERROR_DELETING,
         body: _.Z.Messages.WEBHOOK_ERROR_INTERNAL_SERVER_ERROR
@@ -72,8 +72,8 @@ text: (0, i.jsx)('span', {
   })
 }, 'guild-source')
   }));
-  let x = null;
-  return T && null != t && (x = (0, i.jsxs)('div', {
+  let O = null;
+  return T && null != t && (O = (0, i.jsxs)('div', {
 className: N.body,
 children: [
   (0, i.jsx)(s.FormDivider, {
@@ -92,7 +92,7 @@ children: [
                 children: (0, i.jsx)(s.TextInput, {
                   value: t.name,
                   onChange: e => {
-                    o.Z.updateWebhook({
+                    r.Z.updateWebhook({
                       name: e
                     });
                   },
@@ -109,7 +109,7 @@ children: [
                   value: t.channel_id,
                   options: E,
                   onChange: e => {
-                    o.Z.updateWebhook({
+                    r.Z.updateWebhook({
                       channelId: e
                     });
                   }
@@ -162,7 +162,7 @@ children: (0, i.jsxs)(d.Z, {
         ]
       })
     }),
-    x
+    O
   ]
 })
   });

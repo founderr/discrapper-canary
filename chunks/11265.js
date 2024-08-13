@@ -7,17 +7,17 @@ var a = t(735250),
   l = t(481060),
   c = t(393238),
   d = t(689938),
-  u = t(193981);
+  u = t(944455);
 n.Z = r.memo(function(e) {
   let {
 renderHeader: n,
 children: t,
 isExpanded: i,
 isStuck: m,
-onExpand: f,
-disableAnimation: _,
+onExpand: _,
+disableAnimation: f,
 disableBackground: C
-  } = e, [h, x] = r.useState(!0), [g, p] = r.useState(!1), {
+  } = e, [h, x] = r.useState(!0), [p, g] = r.useState(!1), {
 ref: T,
 height: E = 0
   } = (0, c.Z)(), {
@@ -30,14 +30,14 @@ config: {
   clamp: !0
 },
 onStart: () => {
-  p(!1);
+  g(!1);
 },
 onRest: () => {
-  p(!0);
+  g(!0);
 }
-  }, h || _ ? 'animate-never' : 'respect-motion-settings');
+  }, h || f ? 'animate-never' : 'respect-motion-settings');
   return r.useLayoutEffect(() => {
-p(!1), v(i);
+g(!1), v(i);
   }, [i]), r.useLayoutEffect(() => {
 let e = setTimeout(() => {
   x(!1);
@@ -50,13 +50,13 @@ className: s()(u.editCard, {
 }),
 children: (0, a.jsxs)(o.animated.div, {
   className: s()(u.contentExpandContainer, {
-    [u.showOverflow]: i && g
+    [u.showOverflow]: i && p
   }),
   style: y,
   children: [
     (0, a.jsx)(l.Clickable, {
       innerRef: T,
-      onClick: m ? void 0 : f,
+      onClick: m ? void 0 : _,
       className: s()(u.innerHeader, {
         [u.toggled]: i && m
       }),

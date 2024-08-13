@@ -1,6 +1,6 @@
 t.d(n, {
   J9: function() {
-return _;
+return f;
   },
   K0: function() {
 return E;
@@ -15,7 +15,7 @@ return x;
 return m;
   },
   Vv: function() {
-return p;
+return g;
   },
   W1: function() {
 return C;
@@ -33,10 +33,10 @@ return c;
 return h;
   },
   t$: function() {
-return g;
+return p;
   },
   zH: function() {
-return f;
+return _;
   }
 });
 var a = t(544891),
@@ -79,11 +79,11 @@ let {
   is_published: d,
   reasons_to_join: u,
   social_links: m,
-  about: f
+  about: _
 } = (await a.tn.get({
   url: l.ANM.GUILD_DISCOVERY_METADATA(e),
   oldFormErrors: !0
-})).body, _ = {
+})).body, f = {
   primaryCategoryId: n,
   secondaryCategoryIds: t,
   keywords: i,
@@ -93,13 +93,13 @@ let {
   isPublished: d,
   reasonsToJoin: u,
   socialLinks: m,
-  about: f
+  about: _
 };
 return r.Z.dispatch({
   type: 'GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER',
   guildId: e,
-  metadata: _
-}), _;
+  metadata: f
+}), f;
   } catch (e) {
 r.Z.dispatch({
   type: 'GUILD_DISCOVERY_METADATA_FETCH_FAIL'
@@ -131,7 +131,7 @@ primaryCategoryId: n
   });
 }
 
-function f(e, n) {
+function _(e, n) {
   r.Z.dispatch({
 type: 'GUILD_UPDATE_DISCOVERY_METADATA',
 guildId: e,
@@ -139,7 +139,7 @@ keywords: n
   });
 }
 
-function _(e, n) {
+function f(e, n) {
   r.Z.dispatch({
 type: 'GUILD_UPDATE_DISCOVERY_METADATA',
 guildId: e,
@@ -171,14 +171,14 @@ reasonsToJoin: n
   });
 }
 
-function g(e, n) {
+function p(e, n) {
   r.Z.dispatch({
 type: 'GUILD_UPDATE_DISCOVERY_METADATA',
 guildId: e,
 socialLinks: n
   });
 }
-async function p(e) {
+async function g(e) {
   let {
 guildId: n,
 primaryCategoryId: t,
@@ -189,17 +189,17 @@ partnerApplicationTimestamp: c,
 isPublished: d,
 reasonsToJoin: u,
 socialLinks: m,
-about: f
+about: _
   } = e;
   try {
 let {
   primary_category_id: e,
-  category_ids: _,
+  category_ids: f,
   keywords: C,
   emoji_discoverability_enabled: h,
   partner_actioned_timestamp: x,
-  partner_application_timestamp: g,
-  is_published: p,
+  partner_application_timestamp: p,
+  is_published: g,
   reasons_to_join: T,
   social_links: E,
   about: I
@@ -214,7 +214,7 @@ let {
     is_published: d,
     reasons_to_join: u,
     social_links: m,
-    about: f
+    about: _
   },
   oldFormErrors: !0
 })).body;
@@ -223,12 +223,12 @@ r.Z.dispatch({
   guildId: n,
   metadata: {
     primaryCategoryId: e,
-    secondaryCategoryIds: _,
+    secondaryCategoryIds: f,
     keywords: C,
     emojiDiscoverabilityEnabled: h,
     partnerActionedTimestamp: x,
-    partnerApplicationTimestamp: g,
-    isPublished: p,
+    partnerApplicationTimestamp: p,
+    isPublished: g,
     reasonsToJoin: T,
     socialLinks: E,
     about: I

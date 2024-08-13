@@ -7,8 +7,8 @@ var i = t(735250),
   a = t(470079),
   s = t(442837),
   l = t(481060),
-  o = t(668781),
-  r = t(600164),
+  r = t(668781),
+  o = t(600164),
   d = t(434404),
   c = t(590157),
   u = t(270144),
@@ -23,8 +23,8 @@ var i = t(735250),
   p = t(125657),
   f = t(725875),
   C = t(981631),
-  x = t(689938),
-  O = t(653181);
+  O = t(689938),
+  x = t(819949);
 
 function S(e) {
   let {
@@ -35,22 +35,22 @@ integration: a,
   } = e;
   return (0, i.jsx)(l.ConfirmModal, {
 ...s,
-header: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_TITLE.format({
+header: O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_TITLE.format({
   applicationName: n.name
 }),
-confirmText: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE,
-cancelText: x.Z.Messages.CANCEL,
+confirmText: O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE,
+cancelText: O.Z.Messages.CANCEL,
 onConfirm: () => {
   d.Z.disableIntegration(t.id, a.id).catch(() => {
-    o.Z.show({
-      title: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR_TITLE,
-      body: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR
+    r.Z.show({
+      title: O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR_TITLE,
+      body: O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR
     });
   });
 },
 children: (0, i.jsx)(l.Text, {
   variant: 'text-md/normal',
-  children: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_BODY.format({
+  children: O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_BODY.format({
     applicationName: n.name
   })
 })
@@ -61,7 +61,7 @@ function A(e) {
   var n;
   let {
 guild: t,
-applicationIntegration: o,
+applicationIntegration: r,
 selectableWebhookChannels: d,
 editedWebhook: A,
 errors: R,
@@ -70,7 +70,7 @@ canNavigate: b
 application: Z,
 integration: v,
 webhooks: M
-  } = o, [L, j] = (0, s.Wu)([_.Z], () => [
+  } = r, [L, j] = (0, s.Wu)([_.Z], () => [
 _.Z.can(C.Plq.MANAGE_ROLES, t),
 null == Z.bot || _.Z.canManageUser(C.Plq.MANAGE_GUILD, Z.bot.id, t)
   ], [
@@ -91,13 +91,13 @@ v
   ]), B = a.useMemo(() => {
 let e = [{
   icon: l.ClockIcon,
-  text: x.Z.Messages.INTEGRATION_ADDED_DATE.format({
+  text: O.Z.Messages.INTEGRATION_ADDED_DATE.format({
     timestamp: E.default.extractTimestamp(v.id)
   })
 }];
 return null != v.user && e.push({
   icon: l.UserIcon,
-  text: x.Z.Messages.INTEGRATION_ADDED_USER.format({
+  text: O.Z.Messages.INTEGRATION_ADDED_USER.format({
     user: T.ZP.getUserTag(v.user)
   })
 }), e;
@@ -106,18 +106,18 @@ v.id,
 v.user
   ]), y = a.useMemo(() => null != Z.bot ? (0, i.jsx)(p.Z, {
 guild: t,
-applicationIntegration: o
+applicationIntegration: r
   }) : (0, i.jsx)(l.Card, {
-className: O.emptyCard,
+className: x.emptyCard,
 editable: !0,
 children: (0, i.jsx)(l.Text, {
   color: 'text-muted',
   variant: 'text-sm/normal',
-  children: x.Z.Messages.INTEGRATIONS_APPLICATION_NO_BOT
+  children: O.Z.Messages.INTEGRATIONS_APPLICATION_NO_BOT
 })
   }), [
 Z.bot,
-o,
+r,
 t
   ]), {
 applicationSubscriptionListingsShown: G
@@ -136,7 +136,7 @@ children: [
   }),
   (null == Z ? void 0 : Z.description) != null ? (0, i.jsx)(m.Z, {
     userBio: Z.description,
-    className: O.headerDescription
+    className: x.headerDescription
   }) : null,
   L ? (0, i.jsx)(c.Z, {
     application: Z,
@@ -144,30 +144,30 @@ children: [
     guildId: t.id
   }) : null,
   (0, i.jsx)(l.FormDivider, {
-    className: O.headerDivider
+    className: x.headerDivider
   }),
   null != Z.bot ? (0, i.jsxs)('div', {
-    className: O.section,
+    className: x.section,
     children: [
       (0, i.jsx)(g.Z, {
         icon: (0, i.jsx)(l.RobotIcon, {
           size: 'xs',
           color: 'currentColor'
         }),
-        title: x.Z.Messages.INTEGRATIONS_APPLICATION_BOT
+        title: O.Z.Messages.INTEGRATIONS_APPLICATION_BOT
       }),
       y
     ]
   }) : null,
   G && null != Z.primarySkuId && (0, i.jsxs)('div', {
-    className: O.section,
+    className: x.section,
     children: [
       (0, i.jsx)(g.Z, {
         icon: (0, i.jsx)(l.TicketIcon, {
           size: 'md',
           color: 'currentColor'
         }),
-        title: x.Z.Messages.INTEGRATIONS_APPLICATION_SUBSCRIPTION_TIERS
+        title: O.Z.Messages.INTEGRATIONS_APPLICATION_SUBSCRIPTION_TIERS
       }),
       (0, i.jsx)(I.Z, {
         applicationId: Z.id,
@@ -177,14 +177,14 @@ children: [
     ]
   }),
   (0, i.jsxs)('div', {
-    className: O.section,
+    className: x.section,
     children: [
       (0, i.jsx)(g.Z, {
         icon: (0, i.jsx)(l.WebhookIcon, {
           size: 'md',
           color: 'currentColor'
         }),
-        title: x.Z.Messages.INTEGRATIONS_APPLICATION_WEBHOOKS
+        title: O.Z.Messages.INTEGRATIONS_APPLICATION_WEBHOOKS
       }),
       M.length > 0 ? (0, i.jsx)(f.Z, {
         webhooks: M,
@@ -193,30 +193,30 @@ children: [
         errors: R,
         canNavigate: b
       }) : (0, i.jsx)(l.Card, {
-        className: O.emptyCard,
+        className: x.emptyCard,
         editable: !0,
         children: (0, i.jsx)(l.Text, {
           color: 'text-muted',
           variant: 'text-sm/normal',
-          children: D ? x.Z.Messages.INTEGRATIONS_APPLICATION_NO_WEBHOOKS : x.Z.Messages.INTEGRATIONS_APPLICATION_APPLICATION_WEBHOOK_PERMISSIONS
+          children: D ? O.Z.Messages.INTEGRATIONS_APPLICATION_NO_WEBHOOKS : O.Z.Messages.INTEGRATIONS_APPLICATION_APPLICATION_WEBHOOK_PERMISSIONS
         })
       })
     ]
   }),
   (0, i.jsx)(l.FormDivider, {
-    className: O.headerDivider
+    className: x.headerDivider
   }),
-  (0, i.jsxs)(r.Z, {
-    className: O.section,
-    justify: r.Z.Justify.BETWEEN,
-    align: r.Z.Align.CENTER,
+  (0, i.jsxs)(o.Z, {
+    className: x.section,
+    justify: o.Z.Justify.BETWEEN,
+    align: o.Z.Align.CENTER,
     children: [
       (0, i.jsx)(l.Text, {
         color: 'header-secondary',
         variant: 'text-sm/normal',
-        children: j ? x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY : x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS
+        children: j ? O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY : O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS
       }),
-      (0, i.jsx)(r.Z.Child, {
+      (0, i.jsx)(o.Z.Child, {
         grow: 0,
         shrink: 0,
         children: (0, i.jsx)(l.Button, {
@@ -225,7 +225,7 @@ children: [
           look: l.Button.Looks.FILLED,
           disabled: !j,
           onClick: P,
-          children: x.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE
+          children: O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE
         })
       })
     ]

@@ -35,7 +35,7 @@ var i, a, s = n(735250),
   j = n(823379),
   L = n(5192),
   P = n(689938),
-  O = n(709139);
+  O = n(305268);
 (a = i || (i = {}))[a.SMALL = 0] = 'SMALL', a[a.MEDIUM = 1] = 'MEDIUM', a[a.LARGE = 2] = 'LARGE';
 let y = ['embedded_background'];
 

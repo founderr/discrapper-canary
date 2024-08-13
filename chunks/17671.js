@@ -34,7 +34,7 @@ var l = i(735250),
   M = i(981631),
   k = i(490897),
   P = i(689938),
-  G = i(24955);
+  G = i(90528);
 let D = N.Z;
 
 function S(e) {
@@ -111,7 +111,7 @@ children: [
                   default: e
                 } = await Promise.all([
                   i.e('58023'),
-                  i.e('42098')
+                  i.e('10221')
                 ]).then(i.bind(i, 779250));
                 return n => (0, l.jsx)(e, {
                   ...n,

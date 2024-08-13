@@ -8,23 +8,23 @@ n(470079);
 var a = n(120356),
   s = n.n(a),
   r = n(481060),
-  l = n(266843),
-  o = n(341907),
-  c = n(709158),
+  l = n(471985),
+  o = n(266843),
+  c = n(341907),
   u = n(46140),
   d = n(689938),
-  _ = n(687133),
+  _ = n(695623),
   E = n(87181);
 
 function I() {
-  let e = (0, c.Z)(u.dr.EMBED_DESKTOP);
+  let e = (0, l.Z)(u.dr.EMBED_DESKTOP);
   return (0, i.jsx)('div', {
 className: _.buttonContainer,
 children: (0, i.jsx)(r.Button, {
   className: _.button,
   color: r.ButtonColors.BRAND,
   onClick: () => {
-    (0, o.navigateToQuestHome)(u.dr.EMBED_DESKTOP);
+    (0, c.navigateToQuestHome)(u.dr.EMBED_DESKTOP);
   },
   children: e ? d.Z.Messages.QUESTS : d.Z.Messages.GIFT_INVENTORY
 })
@@ -35,7 +35,7 @@ function m() {
   let {
 containerRef: e,
 size: t
-  } = (0, l.h)();
+  } = (0, o.h)();
   return (0, i.jsxs)('div', {
 ref: t => e.current = t,
 className: s()(_.container, {

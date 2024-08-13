@@ -12,12 +12,12 @@ function l(e) {
 type: n,
 index: t,
 optionId: l,
-onDragStart: o,
-onDragComplete: r,
+onDragStart: r,
+onDragComplete: o,
 onDragReset: d
   } = e, [c, u] = i.useState(!1), [, I] = (0, a.c)({
 type: n,
-item: () => (o(l), {
+item: () => (r(l), {
   id: l,
   position: t
 }),
@@ -31,7 +31,7 @@ end: (e, n) => {
     d();
     return;
   }
-  r(t.optionId);
+  o(t.optionId);
 }
   }), [{
 dragSourcePosition: m

@@ -1,6 +1,6 @@
 let i, a;
 t(653041), t(47120);
-var s, l, o, r, d = t(392711),
+var s, l, r, o, d = t(392711),
   c = t.n(d),
   u = t(442837),
   I = t(570140),
@@ -14,8 +14,8 @@ let h = [],
   p = null,
   f = null,
   C = null,
-  x = !1,
   O = !1,
+  x = !1,
   S = T.QZA.CLOSED,
   A = {},
   R = !1,
@@ -36,7 +36,7 @@ null != e && m.Z.fetchForGuild(e), v(!1);
 function v(e) {
   if (null != (i = E.Z.getProps().guild) && _.Z.can(T.Plq.MANAGE_GUILD, i)) {
 let e = E.Z.getProps().integrations;
-null == e && (O = !0), h = null != e ? e : [];
+null == e && (x = !0), h = null != e ? e : [];
   } else
 h = [];
   if (g = null != i && _.Z.can(T.Plq.MANAGE_WEBHOOKS, i) ? N.Z.getWebhooksForGuild(i.id) : [], !e && null != f) {
@@ -114,7 +114,7 @@ return L(e);
 return j(e);
   }
   isFetching() {
-return O || x;
+return x || O;
   }
   showNotice() {
 return this.hasChanges();
@@ -127,12 +127,12 @@ return null === (n = h.find(n => {
 })) || void 0 === n ? void 0 : n.application;
   }
 }
-r = 'GuildSettingsIntegrationsStore', (o = 'displayName') in(l = D) ? Object.defineProperty(l, o, {
-  value: r,
+o = 'GuildSettingsIntegrationsStore', (r = 'displayName') in(l = D) ? Object.defineProperty(l, r, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[o] = r;
+}) : l[r] = o;
 let P = new D(I.Z, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_INIT: function() {
 return v(!1);
@@ -215,7 +215,7 @@ let {
 } = e;
 if (null == i || n !== i.id || S === T.QZA.SUBMITTING)
   return !1;
-for (let e of (O = !1, t))
+for (let e of (x = !1, t))
   if (null == h.find(n => {
       let {
         id: t
@@ -254,7 +254,7 @@ let {
 } = e;
 if (null == i || n !== i.id || null == a || S === T.QZA.SUBMITTING)
   return !1;
-x = !1;
+O = !1;
 for (let e = g.length - 1; e >= 0; e--) {
   let n = g[e];
   if (null != t && (null == n ? void 0 : n.channel_id) !== t)

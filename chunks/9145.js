@@ -36,7 +36,7 @@ var i = n(735250),
   P = n(918559),
   O = n(981631),
   y = n(689938),
-  D = n(202134);
+  D = n(402137);
 let k = R.u.SIZE_32,
   U = {
 [P.MI.NO_CHAT]: D.noChat,

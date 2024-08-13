@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return _;
+return f;
   }
 });
 var a = t(735250);
@@ -34,7 +34,7 @@ let l = [
 0.3,
 1
   ],
-  f = [{
+  _ = [{
   base: 2,
   tint: 1
 },
@@ -44,29 +44,29 @@ let l = [
 }
   ];
 
-function _(e) {
+function f(e) {
   let {
 width: n,
 height: t,
-primaryTintColor: _,
+primaryTintColor: f,
 secondaryTintColor: C,
 ...h
   } = e, {
 primaryColorsTransformed: x,
-secondaryColorsTransformed: g
+secondaryColorsTransformed: p
   } = (0, r.s)({
 primaryBaseColors: l,
-primaryTintColor: _,
+primaryTintColor: f,
 primaryTintLuminances: d,
 primaryLuminanceWeights: u,
 secondaryBaseColors: c,
 secondaryTintColor: C,
 secondaryTintLuminances: m,
-secondaryLuminanceWeights: f
+secondaryLuminanceWeights: _
   }), {
-styleContent: p,
+styleContent: g,
 containerId: T
-  } = (0, i.bC)(x, g);
+  } = (0, i.bC)(x, p);
   return (0, a.jsxs)('svg', {
 ...h,
 'aria-label': s.Z.Messages.CLAN_LOOK_BANNER,
@@ -107,11 +107,11 @@ children: [
             spreadMethod: 'pad',
             children: [
               (0, a.jsx)('stop', {
-                stopColor: g[1],
+                stopColor: p[1],
                 offset: '0%'
               }),
               (0, a.jsx)('stop', {
-                stopColor: g[0],
+                stopColor: p[0],
                 offset: '70%'
               })
             ]
@@ -119,7 +119,7 @@ children: [
         ]
       }),
       (0, a.jsx)('style', {
-        children: p
+        children: g
       })
     ]
   }),

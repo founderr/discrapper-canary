@@ -16,7 +16,7 @@ var i = n(120356),
   s = n(481060),
   o = n(43205),
   l = n(689938),
-  u = n(692184);
+  u = n(139665);
 let c = {
 default: u.imageAspectRatioDefault,
 crunchyroll: u.imageAspectRatioCrunchyroll

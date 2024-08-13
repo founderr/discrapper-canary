@@ -13,8 +13,8 @@ var n = t(735250),
   d = t(37234),
   _ = t(410030),
   E = t(605236),
-  u = t(341907),
-  I = t(709158),
+  u = t(471985),
+  I = t(341907),
   T = t(906739),
   S = t(46140),
   N = t(689938),
@@ -22,14 +22,14 @@ var n = t(735250),
   m = t(66094);
 
 function A() {
-  let e = (0, I.Z)(S.dr.USER_SETTINGS_GIFT_INVENTORY),
+  let e = (0, u.Z)(S.dr.USER_SETTINGS_GIFT_INVENTORY),
 s = (0, T.Z)(),
 t = (0, l.wj)((0, _.ZP)()),
 i = a.useMemo(() => ({
   backgroundImage: 'url('.concat(s, ')')
 }), [s]),
 A = a.useCallback(() => {
-  (0, d.xf)(), (0, u.navigateToQuestHome)(S.dr.USER_SETTINGS_GIFT_INVENTORY);
+  (0, d.xf)(), (0, I.navigateToQuestHome)(S.dr.USER_SETTINGS_GIFT_INVENTORY);
 }, []),
 g = a.useCallback(() => {
   (0, E.EW)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);

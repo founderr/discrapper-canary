@@ -2,7 +2,7 @@ var n = t(735250);
 t(470079);
 var a = t(866442),
   i = t(481060),
-  r = t(452693);
+  r = t(673105);
 s.Z = function(e) {
   let {
 colorKey: s,

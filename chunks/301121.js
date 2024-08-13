@@ -59,8 +59,8 @@ var n, a, i = t(735250),
   ea = t(981631),
   ei = t(800530),
   er = t(689938),
-  eo = t(339582),
-  el = t(549856);
+  eo = t(630785),
+  el = t(224499);
 
 function ec(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {

@@ -4,7 +4,7 @@ var r = t(120356),
   i = t.n(r),
   s = t(186078),
   o = t(137158),
-  l = t(672060);
+  l = t(944309);
 n.Z = function(e) {
   let {
 formField: n,
@@ -14,8 +14,8 @@ isDropHovered: c,
 onDrop: d,
 onEdit: u,
 onRemove: m,
-canRemove: f,
-actionsLocation: _
+canRemove: _,
+actionsLocation: f
   } = e, {
 label: C
   } = n;
@@ -28,8 +28,8 @@ onDrop: d,
 onEdit: u,
 onRemove: m,
 title: C,
-canRemove: f,
-actionsLocation: _,
+canRemove: _,
+actionsLocation: f,
 children: (0, a.jsx)(s.BO, {
   field: n,
   value: void 0,

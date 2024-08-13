@@ -27,7 +27,7 @@ var i = n(735250),
   A = n(474936),
   R = n(981631),
   x = n(689938),
-  O = n(951992);
+  O = n(474013);
 class M extends a.Component {
   renderTitle(e, t, n) {
 let {

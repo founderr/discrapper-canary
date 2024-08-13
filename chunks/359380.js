@@ -10,7 +10,7 @@ var a = t(735250),
   o = t(18100),
   l = t(308083),
   c = t(689938),
-  d = t(363778);
+  d = t(318577);
 let u = e => {
   let {
 title: n,
@@ -24,7 +24,7 @@ n.delete(e), u(n);
   }, [
 u,
 c
-  ]), f = r.useCallback(e => {
+  ]), _ = r.useCallback(e => {
 if (c.size === l.c4)
   return;
 let n = new Set(c);
@@ -51,7 +51,7 @@ children: [
         icon: t,
         text: e,
         selected: n,
-        onClick: n ? m : f
+        onClick: n ? m : _
       }, e);
     })
   })
@@ -65,8 +65,8 @@ guildId: n,
 onUpdateTraits: t,
 progress: s,
 availableTraits: m,
-hidePreview: f = !1
-  } = e, _ = r.useMemo(() => {
+hidePreview: _ = !1
+  } = e, f = r.useMemo(() => {
 let e = [];
 return l.gh.forEach(n => e.push({
   value: n,
@@ -78,7 +78,7 @@ return null !== (e = null != m ? m : null == s ? void 0 : s.interests) && void 0
   }, [
 m,
 null == s ? void 0 : s.interests
-  ]), h = r.useMemo(() => Array.from(C), [C]), x = r.useMemo(() => h.filter(e => l.gh.has(e)), [h]), g = r.useCallback(e => {
+  ]), h = r.useMemo(() => Array.from(C), [C]), x = r.useMemo(() => h.filter(e => l.gh.has(e)), [h]), p = r.useCallback(e => {
 t(new Set([
   ...h.filter(e => !l.gh.has(e)),
   ...e
@@ -86,7 +86,7 @@ t(new Set([
   }, [
 t,
 h
-  ]), p = r.useMemo(() => h.filter(e => l.WZ.has(e) || l.gh.has(e)), [h]), T = r.useCallback(e => {
+  ]), g = r.useMemo(() => h.filter(e => l.WZ.has(e) || l.gh.has(e)), [h]), T = r.useCallback(e => {
 let n = new Set(C);
 n.delete(e), t(n);
   }, [
@@ -123,9 +123,9 @@ children: [
         className: d.languageSelect,
         children: (0, a.jsx)(i.SearchableSelect, {
           wrapperClassName: d.input,
-          options: _,
+          options: f,
           value: x,
-          onChange: g,
+          onChange: p,
           placeholder: c.Z.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
           multi: !0
         })
@@ -134,10 +134,10 @@ children: [
   }),
   (0, a.jsx)('div', {
     className: d.fixedWidthSidebar,
-    children: null != s && h.length > 0 && !f && (0, a.jsx)(o.Z, {
+    children: null != s && h.length > 0 && !_ && (0, a.jsx)(o.Z, {
       guildId: n,
       progress: s,
-      traitsToHighlight: p,
+      traitsToHighlight: g,
       maskDescription: !0,
       onTraitClick: T
     })
@@ -154,7 +154,7 @@ onUpdateTraits: s,
 progress: o,
 traits: l,
 optional: u = !1,
-hidePreview: f = !1
+hidePreview: _ = !1
   } = e;
   return (0, a.jsxs)('div', {
 className: d.slideContent,
@@ -181,7 +181,7 @@ children: [
     onUpdateTraits: s,
     progress: o,
     availableTraits: l,
-    hidePreview: f
+    hidePreview: _
   })
 ]
   });

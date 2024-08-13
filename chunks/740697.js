@@ -2,7 +2,7 @@ var s = n(735250);
 n(470079);
 var o = n(481060),
   a = n(689938),
-  r = n(203828);
+  r = n(571141);
 t.Z = function() {
   return (0, s.jsxs)('div', {
 className: r.card,

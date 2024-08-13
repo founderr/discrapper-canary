@@ -7,15 +7,15 @@ var i = t(735250),
   a = t(470079),
   s = t(780384),
   l = t(481060),
-  o = t(668781),
-  r = t(308063),
+  r = t(668781),
+  o = t(308063),
   d = t(410030),
   c = t(600164),
   u = t(63063),
   I = t(725875),
   m = t(981631),
   _ = t(689938),
-  N = t(441418),
+  N = t(165204),
   E = t(893916),
   T = t(408942);
 
@@ -27,8 +27,8 @@ function h(e) {
   editedWebhook: p,
   selectableWebhookChannels: f,
   refToScroller: C,
-  errors: x,
-  canNavigate: O
+  errors: O,
+  canNavigate: x
 } = e,
 S = (0, d.ZP)(),
 [A, R] = a.useState(null),
@@ -40,19 +40,19 @@ let e = Object.values(f);
 n = e.length > 0 ? e[0] : null;
   }
   let v = a.useCallback(async () => {
-if (O() && null !== n) {
-  let e = await r.Z.create(t.id, n.id).catch(e => {
+if (x() && null !== n) {
+  let e = await o.Z.create(t.id, n.id).catch(e => {
     let {
       body: n,
       status: t
     } = e;
-    return n && n.code === m.evJ.TOO_MANY_WEBHOOKS ? o.Z.show({
+    return n && n.code === m.evJ.TOO_MANY_WEBHOOKS ? r.Z.show({
       title: _.Z.Messages.WEBHOOK_ERROR_CREATING_WEBHOOK,
       body: _.Z.Messages.WEBHOOK_ERROR_MAX_WEBHOOKS_REACHED
-    }) : 429 === t ? o.Z.show({
+    }) : 429 === t ? r.Z.show({
       title: _.Z.Messages.WEBHOOK_ERROR_CREATING_WEBHOOK,
       body: _.Z.Messages.WEBHOOK_ERROR_CREATING_WEBHOOK_RATE_LIMIT
-    }) : o.Z.show({
+    }) : r.Z.show({
       title: _.Z.Messages.WEBHOOK_ERROR_CREATING_WEBHOOK,
       body: _.Z.Messages.WEBHOOK_ERROR_INTERNAL_SERVER_ERROR
     }), null;
@@ -60,7 +60,7 @@ if (O() && null !== n) {
   null != e && (Z(e.id), R(e));
 }
   }, [
-O,
+x,
 n,
 t
   ]);
@@ -94,8 +94,8 @@ children: [
         editedWebhook: p,
         selectableWebhookChannels: f,
         lastCreatedWebhookId: null == A ? void 0 : A.id,
-        errors: x,
-        canNavigate: O
+        errors: O,
+        canNavigate: x
       })
     ]
   }) : function(e, n, t) {

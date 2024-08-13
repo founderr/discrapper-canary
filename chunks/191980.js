@@ -1,21 +1,21 @@
-n.d(t, {
+t.d(n, {
   $: function() {
 return l;
   },
   C: function() {
-return i;
+return o;
   }
 });
-var c = n(570140);
+var i = t(570140);
 
 function l() {
-  c.Z.dispatch({
+  i.Z.dispatch({
 type: 'SHOW_KEYBOARD_SHORTCUTS'
   });
 }
 
-function i() {
-  c.Z.dispatch({
+function o() {
+  i.Z.dispatch({
 type: 'HIDE_KEYBOARD_SHORTCUTS'
   });
 }

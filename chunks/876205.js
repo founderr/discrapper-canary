@@ -12,7 +12,7 @@ var s = n(120356),
   l = n(556296),
   c = n(13140),
   d = n(981631),
-  u = n(404810);
+  u = n(734543);
 let h = {
   [d.kg4.TOGGLE_MUTE]: {
 legacy: {

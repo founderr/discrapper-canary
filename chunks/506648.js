@@ -8,7 +8,7 @@ var i = n(735250),
   d = n(39377),
   u = n(981631),
   _ = n(689938),
-  E = n(600163);
+  E = n(269866);
 let h = [{
   feature: u.Qa3.SINGLE_PLAYER,
   getText: () => _.Z.Messages.APPLICATION_STORE_SINGLE_PLAYER,

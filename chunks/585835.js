@@ -7,8 +7,8 @@ var i = t(735250),
   a = t(470079),
   s = t(120356),
   l = t.n(s),
-  o = t(243814),
-  r = t(442837),
+  r = t(243814),
+  o = t(442837),
   d = t(481060),
   c = t(367907),
   u = t(213459),
@@ -24,7 +24,7 @@ var i = t(735250),
   f = t(503899);
 
 function C(e) {
-  var n, t, s, C, x, O, S;
+  var n, t, s, C, O, x, S;
   let {
 name: A,
 icon: R,
@@ -41,14 +41,14 @@ guildId: y,
 isScrolling: G,
 canShowMigrationTooltip: k
   } = e, [U, H] = a.useState(!1), [w, W] = a.useState(!1);
-  let F = (C = j, x = D, O = P, S = B, null == C || null == S ? null : O ? (0, i.jsxs)(I.Z, {
+  let F = (C = j, O = D, x = P, S = B, null == C || null == S ? null : x ? (0, i.jsxs)(I.Z, {
   align: I.Z.Align.CENTER,
   children: [
     (0, i.jsx)(d.Text, {
       variant: 'text-sm/normal',
       children: C
     }),
-    O ? (0, i.jsx)(d.ChevronSmallRightIcon, {
+    x ? (0, i.jsx)(d.ChevronSmallRightIcon, {
       size: 'custom',
       color: 'currentColor',
       width: 10,
@@ -58,9 +58,9 @@ canShowMigrationTooltip: k
   ]
 }) : (0, i.jsx)(d.Button, {
   size: d.Button.Sizes.SMALL,
-  look: O ? d.Button.Looks.LINK : d.Button.Looks.FILLED,
-  color: O ? d.Button.Colors.PRIMARY : d.Button.Colors.BRAND,
-  disabled: x,
+  look: x ? d.Button.Looks.LINK : d.Button.Looks.FILLED,
+  color: x ? d.Button.Colors.PRIMARY : d.Button.Colors.BRAND,
+  disabled: O,
   onClick: S,
   children: C
 })),
@@ -92,7 +92,7 @@ V
   shouldShow: !0,
   children: () => F
 }) : F,
-Y = (0, r.Wu)([m.Z], () => {
+Y = (0, o.Wu)([m.Z], () => {
   var e;
   return null != L && null != y && null !== (e = m.Z.getApplicationEntitlementsForGuild(L.application.id, y)) && void 0 !== e ? e : [];
 }),
@@ -123,7 +123,7 @@ X = (0, i.jsxs)(I.Z, {
             let s = [],
               {
                 application: l,
-                integration: r,
+                integration: o,
                 webhooks: c
               } = e;
             return null != l.bot && s.push((0, i.jsx)(d.TooltipContainer, {
@@ -146,7 +146,7 @@ X = (0, i.jsxs)(I.Z, {
                 color: 'currentColor',
                 className: f.featureIcon
               })
-            }, 'webhooks')), (null == r ? void 0 : null === (a = r.scopes) || void 0 === a ? void 0 : a.includes(o.x.APPLICATIONS_COMMANDS)) === !0 && t && s.push((0, i.jsx)('div', {
+            }, 'webhooks')), (null == o ? void 0 : null === (a = o.scopes) || void 0 === a ? void 0 : a.includes(r.x.APPLICATIONS_COMMANDS)) === !0 && t && s.push((0, i.jsx)('div', {
               className: f.feature,
               children: (0, i.jsx)(d.SlashBoxIcon, {
                 size: 'md',

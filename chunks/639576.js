@@ -1,29 +1,29 @@
-var n = t(147018),
-  a = t(345374),
-  i = t(886960),
-  o = t(49693),
-  f = t(980855),
-  s = t(299623),
-  l = t(959318),
-  c = Array,
-  u = Math.max,
-  d = Math.min;
+var n = r(147018),
+  i = r(345374),
+  o = r(886960),
+  a = r(49693),
+  s = r(980855),
+  u = r(299623),
+  c = r(959318),
+  l = Array,
+  h = Math.max,
+  f = Math.min;
 n({
   target: 'Array',
   proto: !0
 }, {
-  toSpliced: function(e, r) {
-var t, n, a, v, h = s(this),
-  p = o(h),
-  g = f(e, p),
-  b = arguments.length,
+  toSpliced: function(t, e) {
+var r, n, i, p, m = u(this),
+  d = a(m),
+  v = s(t, d),
+  g = arguments.length,
   y = 0;
-for (0 === b ? t = n = 0 : 1 === b ? (t = 0, n = p - g) : (t = b - 2, n = d(u(l(r), 0), p - g)), v = c(a = i(p + t - n)); y < g; y++)
-  v[y] = h[y];
-for (; y < g + t; y++)
-  v[y] = arguments[y - g + 2];
-for (; y < a; y++)
-  v[y] = h[y + n - t];
-return v;
+for (0 === g ? r = n = 0 : 1 === g ? (r = 0, n = d - v) : (r = g - 2, n = f(h(c(e), 0), d - v)), p = l(i = o(d + r - n)); y < v; y++)
+  p[y] = m[y];
+for (; y < v + r; y++)
+  p[y] = arguments[y - v + 2];
+for (; y < i; y++)
+  p[y] = m[y + n - r];
+return p;
   }
-}), a('toSpliced');
+}), i('toSpliced');

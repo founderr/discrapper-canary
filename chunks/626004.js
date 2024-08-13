@@ -13,7 +13,7 @@ var t = i(735250),
   d = i(49012),
   u = i(981631),
   _ = i(689938),
-  p = i(745482);
+  p = i(121281);
 let m = c.Z.getArticleURL(u.BhN.BOT_DATA_ACCESS);
 
 function I(e) {

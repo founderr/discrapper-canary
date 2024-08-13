@@ -5,36 +5,36 @@ return g;
 });
 var a = t(735250);
 t(470079);
-var l = t(120356),
-  i = t.n(l),
+var i = t(120356),
+  l = t.n(i),
   s = t(704215),
   o = t(481060),
-  r = t(605236),
-  d = t(434404),
-  u = t(41776),
+  u = t(605236),
+  r = t(434404),
+  d = t(41776),
   c = t(703656),
   E = t(981631),
   I = t(689938),
-  _ = t(849065);
+  _ = t(591822);
 let g = e => {
   let {
 guild: n
-  } = e, l = n.id, g = async () => {
-let e = u.Z.isLurking(l);
-await d.Z.leaveGuild(l), e ? (0, c.uL)(E.Z5c.GUILD_DISCOVERY) : !(0, r.un)(s.z.GUILD_LEAVE_FEEDBACK) && (0, o.openModalLazy)(async () => {
+  } = e, i = n.id, g = async () => {
+let e = d.Z.isLurking(i);
+await r.Z.leaveGuild(i), e ? (0, c.uL)(E.Z5c.GUILD_DISCOVERY) : !(0, u.un)(s.z.GUILD_LEAVE_FEEDBACK) && (0, o.openModalLazy)(async () => {
   let {
     default: e
   } = await t.e('74920').then(t.bind(t, 131102));
   return t => (0, a.jsx)(e, {
     ...t,
-    guildId: l,
+    guildId: i,
     guildName: n.name
   });
 });
   };
   return (0, a.jsx)(o.ConfirmModal, {
-className: i()(_.__invalid_confirmModal),
-bodyClassName: i()(_.__invalid_confirmModalBody),
+className: l()(_.__invalid_confirmModal),
+bodyClassName: l()(_.__invalid_confirmModalBody),
 header: I.Z.Messages.LEAVE_SERVER_TITLE.format({
   name: n.name
 }),

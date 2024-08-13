@@ -9,7 +9,7 @@ var i = n(735250),
   r = n(119269),
   l = n(227140),
   o = n(689938),
-  c = n(612358);
+  c = n(256345);
 let d = 'url(#dark-purple-gradient)',
   u = () => (0, i.jsxs)('div', {
 className: c.coachtipContent,

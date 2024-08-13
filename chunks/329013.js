@@ -29,8 +29,8 @@ var n = t(735250),
   h = t(921944),
   p = t(474936),
   R = t(689938),
-  x = t(823749),
-  M = t(549856);
+  x = t(582889),
+  M = t(224499);
 let f = () => {
 (0, I.EW)(r.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
   dismissAction: h.L.PRIMARY,

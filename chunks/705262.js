@@ -38,7 +38,7 @@ var r, i, a = n(735250),
   U = n(526761),
   w = n(231338),
   x = n(689938),
-  G = n(809728);
+  G = n(776133);
 (i = r || (r = {})).EDITOR = 'EDITOR', i.SETTINGS = 'SETTINGS';
 let k = Object.freeze({
 EDITOR: U.fy.SLOW_USER_ACTION,

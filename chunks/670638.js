@@ -15,8 +15,8 @@ var s = n(735250),
   E = n(113434),
   C = n(569984),
   m = n(918701),
-  p = n(341907),
-  x = n(709158),
+  p = n(471985),
+  x = n(341907),
   T = n(46140),
   _ = n(231338),
   q = n(689938);
@@ -27,7 +27,7 @@ function b(e) {
 u = (0, m.GN)(e.questContent),
 b = (0, m.zK)(e.quest, T.S7.IN_HOUSE_CONSOLE_QUEST),
 f = (0, m.KM)(e.quest),
-h = (0, x.Z)(T.dr.QUEST_CONTEXT_MENU),
+h = (0, p.Z)(T.dr.QUEST_CONTEXT_MENU),
 {
   handleComplete: M,
   handleResetDismissibilityClick: N,
@@ -91,14 +91,14 @@ children: [
             questContent: e.questContent,
             questContentPosition: e.questContentPosition,
             questContentCTA: c.jZ.CONTEXT_MENU_LEARN_MORE
-          }), (0, p.navigateToQuestHome)(T.dr.QUEST_CONTEXT_MENU, e.quest.id);
+          }), (0, x.navigateToQuestHome)(T.dr.QUEST_CONTEXT_MENU, e.quest.id);
         }
       }),
       e.shouldShowDisclosure && (0, s.jsx)(a.MenuItem, {
         id: 'display-disclosure',
         label: q.Z.Messages.QUESTS_DISCLOSURE_LABEL,
         action: () => {
-          (0, p.openDisclosureModal)(e.quest, {
+          (0, x.openDisclosureModal)(e.quest, {
             content: e.questContent,
             position: e.questContentPosition,
             ctaContent: c.jZ.CONTEXT_MENU_OPEN_DISCLOSURE

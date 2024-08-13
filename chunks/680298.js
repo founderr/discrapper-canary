@@ -7,10 +7,10 @@ var i = t(735250),
   a = t(470079),
   s = t(481060),
   l = t(239091),
-  o = t(911969),
-  r = t(399860),
+  r = t(911969),
+  o = t(399860),
   d = t(689938),
-  c = t(248217);
+  c = t(521422);
 
 function u(e) {
   let {
@@ -53,7 +53,7 @@ _
     label: d.Z.Messages.COPY_ID_COMMAND
   });
 });
-  }, [m]), h = m.type === o.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon, g = (0, r.gw)(m.type, m.displayName);
+  }, [m]), h = m.type === r.yU.CHAT ? s.SlashBoxIcon : s.PaperIcon, g = (0, o.gw)(m.type, m.displayName);
   return (0, i.jsxs)(s.Clickable, {
 onClick: E,
 className: c.item,

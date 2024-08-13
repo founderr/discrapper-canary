@@ -1,15 +1,15 @@
-e.d(t, {
+n.d(t, {
   f: function() {
-return o;
+return r;
   }
 });
-var a = e(63063),
-  r = e(981631),
-  i = e(689938);
+var s = n(63063),
+  a = n(981631),
+  i = n(689938);
 
-function o() {
+function r() {
   return i.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_ACCEPT_TERMS_CHECKBOX.format({
-fullTermsUrl: a.Z.getArticleURL(r.BhN.CREATOR_TERMS),
-creatorRevenuePolicyUrl: a.Z.getArticleURL(r.BhN.CREATOR_POLICY)
+fullTermsUrl: s.Z.getArticleURL(a.BhN.CREATOR_TERMS),
+creatorRevenuePolicyUrl: s.Z.getArticleURL(a.BhN.CREATOR_POLICY)
   });
 }

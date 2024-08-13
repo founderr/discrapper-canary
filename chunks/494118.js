@@ -8,12 +8,12 @@ t(470079);
 var a = t(780384),
   s = t(481060),
   l = t(410030),
-  o = t(600164),
-  r = t(63063),
+  r = t(600164),
+  o = t(63063),
   d = t(725875),
   c = t(981631),
   u = t(689938),
-  I = t(843144),
+  I = t(488558),
   m = t(893916),
   _ = t(408942);
 
@@ -30,7 +30,7 @@ children: [
   (0, i.jsx)(s.FormText, {
     type: s.FormTextTypes.DESCRIPTION,
     children: u.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_DESCRIPTION.format({
-      helpdeskArticle: r.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)
+      helpdeskArticle: o.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)
     })
   }),
   (0, i.jsx)(s.FormDivider, {
@@ -44,9 +44,9 @@ children: [
     canNavigate: T
   }) : function(e, n) {
     let t = (0, a.wj)(e) ? m : _;
-    return (0, i.jsxs)(o.Z, {
-      direction: o.Z.Direction.VERTICAL,
-      align: o.Z.Align.CENTER,
+    return (0, i.jsxs)(r.Z, {
+      direction: r.Z.Direction.VERTICAL,
+      align: r.Z.Align.CENTER,
       children: [
         (0, i.jsx)('img', {
           alt: '',
@@ -64,7 +64,7 @@ children: [
         })
       ]
     });
-  }(h, () => open(r.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)))
+  }(h, () => open(o.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)))
 ]
   });
 }

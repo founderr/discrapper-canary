@@ -26,8 +26,8 @@ var a = t(735250),
   j = t(650613),
   w = t(789086),
   C = t(206583),
-  N = t(262737),
-  S = t(979756);
+  N = t(787524),
+  S = t(535271);
 let T = [{
 key: 'type',
 cellClassName: o()(N.cell, N.cellType),

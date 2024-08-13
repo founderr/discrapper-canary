@@ -1,68 +1,68 @@
-l.d(n, {
+i.d(n, {
   Z: function() {
 return c;
   }
-}), l(47120);
-var t = l(735250),
-  r = l(470079),
-  i = l(442837),
-  a = l(481060),
-  s = l(194359),
-  u = l(699516),
-  d = l(594174),
-  o = l(689938);
+}), i(47120);
+var l = i(735250),
+  t = i(470079),
+  s = i(442837),
+  a = i(481060),
+  o = i(194359),
+  u = i(699516),
+  d = i(594174),
+  r = i(689938);
 
 function c(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'ContextMenu',
 {
-  id: l,
+  id: i,
   username: c,
   bot: Z
 } = e,
-E = (0, i.e7)([d.default], () => {
+M = (0, s.e7)([d.default], () => {
   var e;
-  return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === l;
-}, [l]),
-[M, _] = (0, i.Wu)([u.Z], () => [
-  u.Z.isFriend(l),
-  u.Z.isBlocked(l)
-], [l]),
-[f, g] = r.useState(!1);
-  return Z || E ? null : M ? (0, t.jsx)(a.MenuItem, {
+  return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === i;
+}, [i]),
+[E, _] = (0, s.Wu)([u.Z], () => [
+  u.Z.isFriend(i),
+  u.Z.isBlocked(i)
+], [i]),
+[f, N] = t.useState(!1);
+  return Z || M ? null : E ? (0, l.jsx)(a.MenuItem, {
 id: 'remove-friend',
-label: o.Z.Messages.REMOVE_FRIEND,
+label: r.Z.Messages.REMOVE_FRIEND,
 action: function() {
-  (0, a.openModal)(e => (0, t.jsx)(a.ConfirmModal, {
-    header: o.Z.Messages.REMOVE_FRIEND_TITLE.format({
+  (0, a.openModal)(e => (0, l.jsx)(a.ConfirmModal, {
+    header: r.Z.Messages.REMOVE_FRIEND_TITLE.format({
       name: c
     }),
-    confirmText: o.Z.Messages.REMOVE_FRIEND,
-    cancelText: o.Z.Messages.CANCEL,
+    confirmText: r.Z.Messages.REMOVE_FRIEND,
+    cancelText: r.Z.Messages.CANCEL,
     onConfirm: () => {
-      s.Z.removeFriend(l, {
+      o.Z.removeFriend(i, {
         location: n
-      }), g(!1);
+      }), N(!1);
     },
     ...e,
-    children: (0, t.jsx)(a.Text, {
+    children: (0, l.jsx)(a.Text, {
       variant: 'text-md/normal',
-      children: o.Z.Messages.REMOVE_FRIEND_BODY.format({
+      children: r.Z.Messages.REMOVE_FRIEND_BODY.format({
         name: c
       })
     })
   }));
 }
-  }) : (0, t.jsx)(a.MenuItem, {
+  }) : (0, l.jsx)(a.MenuItem, {
 id: 'add-friend',
-label: f ? o.Z.Messages.ADD_FRIEND_BUTTON_AFTER : o.Z.Messages.ADD_FRIEND,
+label: f ? r.Z.Messages.ADD_FRIEND_BUTTON_AFTER : r.Z.Messages.ADD_FRIEND,
 action: () => {
-  !f && (s.Z.addRelationship({
-    userId: l,
+  !f && (o.Z.addRelationship({
+    userId: i,
     context: {
       location: n
     }
-  }), g(!0));
+  }), N(!0));
 },
-disabled: _ || f && !M
+disabled: _ || f && !E
   });
 }

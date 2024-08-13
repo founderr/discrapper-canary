@@ -1,25 +1,25 @@
 t.d(n, {
   Z: function() {
-return r;
+return u;
   }
 });
 var a = t(735250);
 t(470079);
-var l = t(481060),
-  i = t(518756),
+var i = t(481060),
+  l = t(518756),
   s = t(576749),
   o = t(689938);
 
-function r(e) {
+function u(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-r = (0, i.Z)(e),
-d = (0, s.Z)();
-  return r ? (0, a.jsx)(l.MenuItem, {
+u = (0, l.Z)(e),
+r = (0, s.Z)();
+  return u ? (0, a.jsx)(i.MenuItem, {
 id: 'create-event',
 label: o.Z.Messages.SCHEDULE_EVENT,
-icon: n ? l.CalendarPlusIcon : void 0,
+icon: n ? i.CalendarPlusIcon : void 0,
 action: () => {
-  (0, l.openModalLazy)(async () => {
+  (0, i.openModalLazy)(async () => {
     let {
       default: n
     } = await Promise.all([
@@ -33,7 +33,7 @@ action: () => {
       ...t,
       guildId: e
     });
-  }, d);
+  }, r);
 }
   }) : null;
 }

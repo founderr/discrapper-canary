@@ -4,7 +4,7 @@ var i = n(735250),
   l = n(128557),
   r = n(981631),
   o = n(689938),
-  c = n(938163);
+  c = n(916469);
 t.Z = e => {
   let {
 guild: t,
@@ -15,7 +15,7 @@ onAddGuild: u
     default: e
   } = await Promise.all([
     n.e('7654'),
-    n.e('21026')
+    n.e('66633')
   ]).then(n.bind(n, 560114));
   return n => (0, i.jsx)(e, {
     ...n,

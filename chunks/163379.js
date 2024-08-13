@@ -15,7 +15,7 @@ let {
   default: e
 } = await Promise.all([
   n.e('72181'),
-  n.e('79773'),
+  n.e('29637'),
   n.e('44808')
 ]).then(n.bind(n, 678420));
 return t => (0, r.jsx)(e, {

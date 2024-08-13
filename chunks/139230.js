@@ -27,7 +27,7 @@ var t = a(735250),
   y = a(226799),
   C = a(981631),
   M = a(689938),
-  N = a(779277);
+  N = a(776097);
 
 function Z(e) {
   var n, a;
@@ -270,7 +270,7 @@ u
     default: e
   } = await Promise.all([
     a.e('60133'),
-    a.e('45260')
+    a.e('45374')
   ]).then(a.bind(a, 827940));
   return n => (0, t.jsx)(e, {
     activityItem: l,

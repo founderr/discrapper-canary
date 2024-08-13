@@ -1,6 +1,6 @@
 let i, a, s;
 t(47120);
-var l, o, r, d, c = t(442837),
+var l, r, o, d, c = t(442837),
   u = t(570140),
   I = t(581364),
   m = t(399860);
@@ -34,12 +34,12 @@ return E;
 return i;
   }
 }
-d = 'IntegrationPermissionStore', (r = 'displayName') in(o = h) ? Object.defineProperty(o, r, {
+d = 'IntegrationPermissionStore', (o = 'displayName') in(r = h) ? Object.defineProperty(r, o, {
   value: d,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : o[r] = d, n.Z = new h(u.Z, {
+}) : r[o] = d, n.Z = new h(u.Z, {
   LOGOUT: T,
   INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: function(e) {
 let {

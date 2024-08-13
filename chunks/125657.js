@@ -7,8 +7,8 @@ var i = t(735250),
   a = t(470079),
   s = t(149765),
   l = t(442837),
-  o = t(481060),
-  r = t(749210),
+  r = t(481060),
+  o = t(749210),
   d = t(412899),
   c = t(995648),
   u = t(385499),
@@ -20,7 +20,7 @@ var i = t(735250),
   T = t(823379),
   h = t(700785),
   g = t(689938),
-  p = t(988837);
+  p = t(276118);
 
 function f(e) {
   var n;
@@ -28,14 +28,14 @@ function f(e) {
 guild: t,
 applicationIntegration: f
   } = e, C = (0, l.e7)([E.Z], () => E.Z.getRoles(t.id)), {
-application: x
-  } = f, O = null != x.bot ? new _.Z(x.bot) : null, S = (0, l.e7)([N.ZP], () => null != O ? N.ZP.getMember(t.id, O.id) : null, [
-O,
+application: O
+  } = f, x = null != O.bot ? new _.Z(O.bot) : null, S = (0, l.e7)([N.ZP], () => null != x ? N.ZP.getMember(t.id, x.id) : null, [
+x,
 t
-  ]), A = null == O ? void 0 : O.id;
+  ]), A = null == x ? void 0 : x.id;
   a.useEffect(() => {
 if (null != A)
-  r.Z.requestMembersById(t.id, A);
+  o.Z.requestMembersById(t.id, A);
   }, [
 t.id,
 A
@@ -44,16 +44,16 @@ A
 var e, n, i;
 let a = C[t.getEveryoneRoleId()],
   l = null !== (n = null == S ? void 0 : null === (e = S.roles) || void 0 === e ? void 0 : e.map(e => C[e]).filter(T.lm)) && void 0 !== n ? n : [],
-  o = null !== (i = null == a ? void 0 : a.permissions) && void 0 !== i ? i : h.Hn;
+  r = null !== (i = null == a ? void 0 : a.permissions) && void 0 !== i ? i : h.Hn;
 for (let e of l)
-  o = s.IH(o, e.permissions);
-return o;
+  r = s.IH(r, e.permissions);
+return r;
   }, [
 t,
 C,
 S
   ]);
-  return null == O ? null : (0, i.jsx)(o.Card, {
+  return null == x ? null : (0, i.jsx)(r.Card, {
 editable: !0,
 className: p.card,
 children: (0, i.jsxs)(I.Z, {
@@ -64,35 +64,35 @@ children: (0, i.jsxs)(I.Z, {
       children: [
         (0, i.jsx)('img', {
           alt: '',
-          src: O.getAvatarURL(t.id, 32),
+          src: x.getAvatarURL(t.id, 32),
           className: p.iconWrapper
         }),
-        (0, i.jsx)(o.Text, {
+        (0, i.jsx)(r.Text, {
           color: 'header-primary',
           variant: 'text-sm/normal',
           children: g.Z.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({
-            user: O
+            user: x
           })
         }),
         (0, i.jsx)(u.Z, {
           className: p.tag,
-          verified: O.isVerifiedBot()
+          verified: x.isVerifiedBot()
         })
       ]
     }),
     function(e, n, t, a) {
       let l = [],
-        r = [];
+        o = [];
       for (let e of m.VY)
-        s.e$(a, e) ? l.push(e) : r.push(e);
+        s.e$(a, e) ? l.push(e) : o.push(e);
       return (0, i.jsxs)(i.Fragment, {
         children: [
-          (0, i.jsx)(o.FormDivider, {
+          (0, i.jsx)(r.FormDivider, {
             className: p.divider
           }),
           t.length > 0 ? (0, i.jsxs)(i.Fragment, {
             children: [
-              (0, i.jsx)(o.FormTitle, {
+              (0, i.jsx)(r.FormTitle, {
                 className: p.permissionHeader,
                 children: g.Z.Messages.ROLES_LIST.format({
                   numRoles: t.length
@@ -108,16 +108,16 @@ children: (0, i.jsxs)(I.Z, {
               })
             ]
           }) : null,
-          l.length > 0 || r.length > 0 ? (0, i.jsx)(c.Z, {
+          l.length > 0 || o.length > 0 ? (0, i.jsx)(c.Z, {
             className: p.permissionList,
             grantedPermissions: l,
             grantedPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
-            disabledPermissions: r,
+            disabledPermissions: o,
             disabledPermissionsHeader: g.Z.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
           }) : null
         ]
       });
-    }(O, t, null !== (n = null == S ? void 0 : S.roles) && void 0 !== n ? n : [], R)
+    }(x, t, null !== (n = null == S ? void 0 : S.roles) && void 0 !== n ? n : [], R)
   ]
 })
   });

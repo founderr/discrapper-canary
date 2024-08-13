@@ -26,7 +26,7 @@ var i = n(735250),
   I = n(354459),
   x = n(185923),
   T = n(420212),
-  N = n(419477);
+  N = n(894967);
 let v = x.Hz.CHAT,
   S = [
 f.ZP.getByName('thumbsup'),

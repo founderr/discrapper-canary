@@ -7,8 +7,8 @@ var a = n(442837),
   o = n(677277),
   c = n(285865),
   d = n(918701),
-  u = n(702428),
-  _ = n(709158),
+  u = n(471985),
+  _ = n(702428),
   E = n(703656),
   h = n(683301),
   m = n(150192),
@@ -19,7 +19,7 @@ var a = n(442837),
   S = n(981631),
   f = n(46140),
   C = n(689938),
-  N = n(468918);
+  N = n(745322);
 let A = e => {
 switch (e) {
   case T.Gj.Activity:
@@ -43,7 +43,7 @@ let {
 } = (0, a.cj)([h.ZP], () => ({
   currentCategoryId: h.ZP.getCurrentCategoryId(),
   isViewingSearchResults: h.ZP.getMostRecentQuery().length > 0
-})), n = (0, _.Z)(f.dr.QUEST_HOME_DESKTOP), l = (0, a.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), p = null == l ? void 0 : l.map(e => ({
+})), n = (0, u.Z)(f.dr.QUEST_HOME_DESKTOP), l = (0, a.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j), p = null == l ? void 0 : l.map(e => ({
   ...e,
   icon: A(e.categoryId)
 })), v = e => {
@@ -66,7 +66,7 @@ return (0, i.jsxs)(s.Scroller, {
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t
     }),
-    n && (0, i.jsx)(u.Z, {
+    n && (0, i.jsx)(_.Z, {
       onClick: () => v(T.Gj.Quests),
       isSelected: e === T.Gj.Quests
     })

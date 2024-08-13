@@ -1,90 +1,90 @@
-i.d(e, {
+t.d(n, {
   P: function() {
-return p;
+return N;
   },
   l: function() {
-return _;
+return E;
   }
-}), i(47120);
-var t = i(735250);
-i(470079);
-var r = i(392711),
-  a = i.n(r),
-  l = i(442837),
-  u = i(481060),
-  s = i(984933),
-  o = i(853856),
-  d = i(117984),
-  c = i(593214),
-  Z = i(362658),
-  h = i(981631),
-  M = i(689938);
+}), t(47120);
+var i = t(735250);
+t(470079);
+var a = t(392711),
+  l = t.n(a),
+  r = t(442837),
+  u = t(481060),
+  s = t(984933),
+  o = t(853856),
+  d = t(117984),
+  c = t(593214),
+  _ = t(362658),
+  M = t(981631),
+  I = t(689938);
 
-function f(n, e) {
-  return n.type === h.d4z.GROUP_DM ? e ? M.Z.Messages.UNFAVORITE_GDM : M.Z.Messages.FAVORITE_GDM : n.type === h.d4z.DM ? e ? M.Z.Messages.UNFAVORITE_DM : M.Z.Messages.FAVORITE_DM : e ? M.Z.Messages.UNFAVORITE_CHANNEL : M.Z.Messages.FAVORITE_CHANNEL;
+function f(e, n) {
+  return e.type === M.d4z.GROUP_DM ? n ? I.Z.Messages.UNFAVORITE_GDM : I.Z.Messages.FAVORITE_GDM : e.type === M.d4z.DM ? n ? I.Z.Messages.UNFAVORITE_DM : I.Z.Messages.FAVORITE_DM : n ? I.Z.Messages.UNFAVORITE_CHANNEL : I.Z.Messages.FAVORITE_CHANNEL;
 }
 
-function _(n) {
-  let e = (0, l.e7)([s.ZP], () => s.ZP.getChannels(h.I_8))[h.d4z.GUILD_CATEGORY],
+function E(e) {
+  let n = (0, r.e7)([s.ZP], () => s.ZP.getChannels(M.I_8))[M.d4z.GUILD_CATEGORY],
 {
-  isFavoritesPerk: i
-} = (0, Z.z)('58e21a_1'),
+  isFavoritesPerk: t
+} = (0, _.z)('58e21a_1'),
 {
-  notifyFavoriteAdded: r
+  notifyFavoriteAdded: a
 } = (0, c.up)();
-  if (!(0, c.li)(n))
+  if (!(0, c.li)(e))
 return null;
   let [
-[o], M
-  ] = a().partition(e, n => 'null' === n.channel.id);
+[o], I
+  ] = l().partition(n, e => 'null' === e.channel.id);
 
-  function _(e) {
-r(), (0, d.kj)(n.id, e);
+  function E(n) {
+a(), (0, d.kj)(e.id, n);
   }
-  return 0 === M.length ? (0, t.jsx)(u.MenuItem, {
+  return 0 === I.length ? (0, i.jsx)(u.MenuItem, {
 id: 'favorite-channel',
-label: f(n, !1),
-action: () => _(null)
-  }) : (0, t.jsxs)(u.MenuItem, {
+label: f(e, !1),
+action: () => E(null)
+  }) : (0, i.jsxs)(u.MenuItem, {
 id: 'favorite-channel',
-label: f(n, !1),
-action: () => _(null),
+label: f(e, !1),
+action: () => E(null),
 children: [
-  i && (0, t.jsx)(u.MenuGroup, {
-    children: (0, t.jsx)(u.MenuItem, {
+  t && (0, i.jsx)(u.MenuGroup, {
+    children: (0, i.jsx)(u.MenuItem, {
       id: 'favorite-'.concat(o.channel.id),
       label: o.channel.name,
-      action: () => _('null' === o.channel.id ? null : o.channel.id)
+      action: () => E('null' === o.channel.id ? null : o.channel.id)
     }, o.channel.id)
   }),
-  (0, t.jsx)(u.MenuGroup, {
-    children: M.map(n => (0, t.jsx)(u.MenuItem, {
-      id: 'favorite-'.concat(n.channel.id),
-      label: n.channel.name,
-      action: () => _(n.channel.id)
-    }, n.channel.id))
+  (0, i.jsx)(u.MenuGroup, {
+    children: I.map(e => (0, i.jsx)(u.MenuItem, {
+      id: 'favorite-'.concat(e.channel.id),
+      label: e.channel.name,
+      action: () => E(e.channel.id)
+    }, e.channel.id))
   })
 ]
   });
 }
 
-function p(n) {
-  let e = (0, l.e7)([o.Z], () => o.Z.isFavorite(n.id));
-  return __OVERLAY__ || !e ? null : (0, t.jsx)(u.MenuItem, {
+function N(e) {
+  let n = (0, r.e7)([o.Z], () => o.Z.isFavorite(e.id));
+  return __OVERLAY__ || !n ? null : (0, i.jsx)(u.MenuItem, {
 id: 'favorite-channel',
-label: f(n, !0),
+label: f(e, !0),
 color: 'danger',
-action: () => n.type === h.d4z.GUILD_CATEGORY ? (0, u.openModalLazy)(async () => {
+action: () => e.type === M.d4z.GUILD_CATEGORY ? (0, u.openModalLazy)(async () => {
   let {
-    default: e
-  } = await i.e('37720').then(i.bind(i, 357632));
-  return i => (0, t.jsx)(e, {
-    ...i,
+    default: n
+  } = await t.e('37720').then(t.bind(t, 357632));
+  return t => (0, i.jsx)(n, {
+    ...t,
     onConfirm: () => {
-      i.onClose(), (0, d.oC)(n.id);
+      t.onClose(), (0, d.oC)(e.id);
     },
-    channel: n
+    channel: e
   });
-}) : (0, d.oC)(n.id)
+}) : (0, d.oC)(e.id)
   });
 }

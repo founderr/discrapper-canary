@@ -13,8 +13,8 @@ var a = t(735250),
   d = t(430824),
   u = t(214715),
   m = t(308083),
-  f = t(689938),
-  _ = t(120713);
+  _ = t(689938),
+  f = t(376851);
 
 function C(e) {
   let {
@@ -25,8 +25,8 @@ onClick: i
   return (0, a.jsx)(u.Z, {
 variant: 'text-xs/semibold',
 color: o ? 'text-muted' : 'interactive-active',
-className: s()(_.trait, {
-  [_.strikethrough]: o
+className: s()(f.trait, {
+  [f.strikethrough]: o
 }),
 text: n,
 selected: t,
@@ -44,8 +44,8 @@ progress: i,
 traitsToHighlight: u,
 maskDescription: h,
 maskTraits: x,
-onTraitClick: g
-  } = e, p = (0, o.e7)([d.Z], () => d.Z.getGuild(t)), {
+onTraitClick: p
+  } = e, g = (0, o.e7)([d.Z], () => d.Z.getGuild(t)), {
 interests: T,
 description: E,
 playstyle: I,
@@ -55,36 +55,36 @@ brandPrimaryColor: N
   return (0, a.jsxs)('div', {
 children: [
   (0, a.jsxs)('div', {
-    className: s()(_.description, h ? _.descriptionBorderMask : void 0),
+    className: s()(f.description, h ? f.descriptionBorderMask : void 0),
     children: [
       (0, a.jsx)('div', {
-        className: h ? _.descriptionMask : void 0
+        className: h ? f.descriptionMask : void 0
       }),
       (0, a.jsx)(l.Heading, {
         variant: 'heading-md/medium',
         color: 'header-primary',
         lineClamp: 1,
-        children: null == p ? void 0 : p.name
+        children: null == g ? void 0 : g.name
       }),
       (0, a.jsxs)('div', {
-        className: _.clanInfoRow,
+        className: f.clanInfoRow,
         children: [
           (0, a.jsx)(l.Text, {
             variant: 'text-xxs/normal',
-            className: _.clanInfoItem,
+            className: f.clanInfoItem,
             children: (0, a.jsx)('span', {
               role: 'img',
-              'aria-label': f.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
+              'aria-label': _.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_ARIA_LABEL,
               children: '\uD83C\uDFAE'
             })
           }),
           (0, a.jsx)(l.Text, {
             variant: 'text-xs/normal',
             color: 'text-secondary',
-            className: _.clanInfoItem,
-            children: null !== (n = (0, m.mv)(I)) && void 0 !== n ? n : f.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+            className: f.clanInfoItem,
+            children: null !== (n = (0, m.mv)(I)) && void 0 !== n ? n : _.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
           }),
-          null != p && (0, a.jsx)(c.cS, {
+          null != g && (0, a.jsx)(c.cS, {
             wildcardDescriptors: b,
             primaryColor: null != N ? N : v.hex()
           })
@@ -93,39 +93,39 @@ children: [
       (0, a.jsx)(l.Text, {
         variant: 'text-xs/medium',
         color: 'header-secondary',
-        className: _.descriptionText,
-        children: (null == E ? void 0 : E.length) > 0 ? E : f.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+        className: f.descriptionText,
+        children: (null == E ? void 0 : E.length) > 0 ? E : _.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
       })
     ]
   }),
   (0, a.jsxs)('div', {
-    className: s()(_.tagsContainer, x ? _.traitsBorderMask : void 0),
+    className: s()(f.tagsContainer, x ? f.traitsBorderMask : void 0),
     children: [
       (0, a.jsx)('div', {
-        className: x ? _.traitsMask : void 0
+        className: x ? f.traitsMask : void 0
       }),
       (0, a.jsxs)('div', {
-        className: _.tagsCount,
+        className: f.tagsCount,
         children: [
           (0, a.jsx)(l.TagsIcon, {
             size: 'xxs',
-            className: _.tags
+            className: f.tags
           }),
           (0, a.jsx)(l.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: f.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
+            children: _.Z.Messages.CLAN_SETUP_NUM_TRAITS.format({
               n: y.length
             })
           })
         ]
       }),
       (0, a.jsx)('div', {
-        className: _.traits,
+        className: f.traits,
         children: y.map(e => (0, a.jsx)(C, {
           trait: e,
           selected: S.has(e),
-          onClick: g
+          onClick: p
         }, e))
       })
     ]

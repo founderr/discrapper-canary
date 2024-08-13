@@ -11,7 +11,7 @@ var n = t(735250),
   u = t(594174),
   I = t(843200),
   T = t(689938),
-  S = t(734833);
+  S = t(477810);
 class N extends a.PureComponent {
   renderIntroHeader() {
 let {

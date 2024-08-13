@@ -32,7 +32,7 @@ var n = t(735250),
   D = t(981631),
   P = t(65154),
   L = t(689938),
-  b = t(549856);
+  b = t(224499);
 let Z = (0, _.hQ)(),
   v = ''.concat(T.Z.getArticleURL(D.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 

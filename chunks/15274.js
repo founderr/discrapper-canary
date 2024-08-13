@@ -30,7 +30,7 @@ let {
   n.e('95393'),
   n.e('53115'),
   n.e('22347'),
-  n.e('99452')
+  n.e('73934')
 ]).then(n.bind(n, 697849));
 return n => (0, r.jsx)(e, {
   guildScheduledEventId: t,

@@ -9,34 +9,34 @@ var a = t(735250),
   d = t(481060),
   u = t(550271),
   m = t(688298),
-  f = t(995119),
-  _ = t(116175),
+  _ = t(995119),
+  f = t(116175),
   C = t(308083),
   h = t(689938),
-  x = t(885837),
-  g = t(363778);
-let p = [
-  _.ZD.SWORD,
-  _.ZD.WATER_DROP,
-  _.ZD.SKULL,
-  _.ZD.TOADSTOOL,
-  _.ZD.MOON,
-  _.ZD.LIGHTNING,
-  _.ZD.LEAF,
-  _.ZD.HEART,
-  _.ZD.FIRE,
-  _.ZD.COMPASS,
-  _.ZD.CROSSHAIRS,
-  _.ZD.FLOWER,
-  _.ZD.FORCE,
-  _.ZD.GEM,
-  _.ZD.LAVA,
-  _.ZD.PSYCHIC,
-  _.ZD.SMOKE,
-  _.ZD.SNOW,
-  _.ZD.SOUND,
-  _.ZD.SUN,
-  _.ZD.WIND
+  x = t(981808),
+  p = t(318577);
+let g = [
+  f.ZD.SWORD,
+  f.ZD.WATER_DROP,
+  f.ZD.SKULL,
+  f.ZD.TOADSTOOL,
+  f.ZD.MOON,
+  f.ZD.LIGHTNING,
+  f.ZD.LEAF,
+  f.ZD.HEART,
+  f.ZD.FIRE,
+  f.ZD.COMPASS,
+  f.ZD.CROSSHAIRS,
+  f.ZD.FLOWER,
+  f.ZD.FORCE,
+  f.ZD.GEM,
+  f.ZD.LAVA,
+  f.ZD.PSYCHIC,
+  f.ZD.SMOKE,
+  f.ZD.SNOW,
+  f.ZD.SOUND,
+  f.ZD.SUN,
+  f.ZD.WIND
 ];
 n.Z = e => {
   let {
@@ -49,7 +49,7 @@ error: E,
 furthestStep: I,
 inSettings: b
   } = e, N = r.useMemo(() => {
-let e = (0, _.yf)();
+let e = (0, f.yf)();
 return {
   primary: null != i ? i : e.primary,
   secondary: null != o ? o : e.secondary
@@ -71,8 +71,8 @@ i,
 o
   ]);
   let v = r.useMemo(() => {
-  for (let e = 0; e < _.sg.length; e++)
-    if (_.sg[e].primary === N.primary && _.sg[e].secondary === N.secondary)
+  for (let e = 0; e < f.sg.length; e++)
+    if (f.sg[e].primary === N.primary && f.sg[e].secondary === N.secondary)
       return 1 + e;
   return 0;
 }, [
@@ -81,7 +81,7 @@ o
 ]),
 [y, S] = r.useState(!1),
 A = r.useCallback(() => {
-  let e = p[Math.floor(Math.random() * p.length)],
+  let e = g[Math.floor(Math.random() * g.length)],
     t = s().random().hex();
   n({
     badgeKind: e,
@@ -103,20 +103,20 @@ i,
 o,
 b
   ]), (0, a.jsxs)('div', {
-className: g.slideContent,
+className: p.slideContent,
 children: [
   (0, a.jsx)(d.Heading, {
     variant: 'heading-xxl/medium',
-    className: g.title,
+    className: p.title,
     children: h.Z.Messages.CLAN_SETUP_CUSTOMIZE_TITLE
   }),
   (0, a.jsx)(d.Text, {
     variant: 'text-md/normal',
     color: 'header-secondary',
-    className: g.subtitle,
+    className: p.subtitle,
     children: h.Z.Messages.CLAN_SETUP_CUSTOMIZE_SUBTITLE
   }),
-  (0, a.jsx)(f.Z, {
+  (0, a.jsx)(_.Z, {
     onClick: A
   }),
   (0, a.jsxs)('div', {
@@ -135,7 +135,7 @@ children: [
               }),
               (0, a.jsx)('div', {
                 className: x.pickerGrid,
-                children: p.map(e => (0, a.jsx)(d.Clickable, {
+                children: g.map(e => (0, a.jsx)(d.Clickable, {
                   onClick: () => n({
                     badgeKind: e
                   }),
@@ -163,7 +163,7 @@ children: [
                 className: x.pickerGrid,
                 children: [
                   (0, a.jsx)(m.Z, {
-                    showSecondaryColor: _.ME[t] >= 2,
+                    showSecondaryColor: f.ME[t] >= 2,
                     palette: N,
                     onPrimaryColorChange: e => {
                       n({
@@ -192,11 +192,11 @@ children: [
                       })
                     })
                   }),
-                  _.sg.map((e, r) => (0, a.jsx)(d.Clickable, {
+                  f.sg.map((e, r) => (0, a.jsx)(d.Clickable, {
                     onClick: () => {
                       n({
-                        badgePrimaryColor: _.sg[r].primary,
-                        badgeSecondaryColor: _.sg[r].secondary
+                        badgePrimaryColor: f.sg[r].primary,
+                        badgeSecondaryColor: f.sg[r].secondary
                       });
                     },
                     className: l()(x.badgeAssetContainer, {
@@ -227,7 +227,7 @@ children: [
           null != E && (0, a.jsx)(d.Text, {
             variant: 'text-sm/normal',
             color: 'status-danger',
-            className: g.errorText,
+            className: p.errorText,
             children: E
           }),
           (0, a.jsx)(d.TextInput, {

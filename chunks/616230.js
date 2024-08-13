@@ -13,28 +13,28 @@ var a = t(735250),
   d = t(863249),
   u = t(944163),
   m = t(246364),
-  f = t(571728),
-  _ = t(755340),
+  _ = t(571728),
+  f = t(755340),
   C = t(449226),
   h = t(689938),
   x = t(70529),
-  g = t(136815);
+  p = t(136815);
 
-function p(e) {
+function g(e) {
   let {
 guild: n,
 isExpanded: i,
 emptyFormFields: s,
 hasTermsField: o
-  } = e, c = n.hasVerificationGate(), [u, m] = r.useState(c), f = e => {
+  } = e, c = n.hasVerificationGate(), [u, m] = r.useState(c), _ = e => {
 e.preventDefault(), e.stopPropagation();
-  }, _ = async e => {
+  }, f = async e => {
 try {
   m(e), await d.Z.enableVerificationForm(n.id, e);
 } catch {
   m(u);
 }
-  }, p = e => {
+  }, g = e => {
 e && s ? (0, l.openModalLazy)(async () => {
   let {
     ConfirmModal: n
@@ -44,13 +44,13 @@ e && s ? (0, l.openModalLazy)(async () => {
     header: h.Z.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
     cancelText: h.Z.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
     confirmText: h.Z.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
-    onConfirm: () => _(e),
+    onConfirm: () => f(e),
     children: (0, a.jsx)(l.Text, {
       variant: 'text-md/normal',
       children: h.Z.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
     })
   });
-}) : _(e);
+}) : f(e);
   }, T = () => {
 (0, l.openModalLazy)(async () => {
   let {
@@ -83,7 +83,7 @@ children: [
         children: h.Z.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
       }),
       !i && (0, a.jsx)('div', {
-        className: g.pillRow,
+        className: p.pillRow,
         children: o && (0, a.jsxs)(l.Text, {
           color: 'interactive-normal',
           variant: 'text-xs/medium',
@@ -102,29 +102,29 @@ children: [
     ]
   }),
   (0, a.jsx)('div', {
-    className: g.previewAndEnable,
+    className: p.previewAndEnable,
     children: i || u || !s ? (0, a.jsxs)(a.Fragment, {
       children: [
         (0, a.jsx)(l.Clickable, {
-          onMouseDown: f,
-          onMouseUp: f,
+          onMouseDown: _,
+          onMouseUp: _,
           onClick: e => {
-            f(e), T();
+            _(e), T();
           },
           children: (0, a.jsx)(l.Tooltip, {
-            tooltipContentClassName: g.__invalid_tooltip,
+            tooltipContentClassName: p.__invalid_tooltip,
             text: h.Z.Messages.PREVIEW,
             children: e => (0, a.jsx)(l.EyeIcon, {
               size: 'md',
               color: 'currentColor',
-              className: g.previewIcon,
+              className: p.previewIcon,
               ...e
             })
           })
         }),
         (0, a.jsx)(C.Z, {
           checked: u,
-          onChange: () => p(!u)
+          onChange: () => g(!u)
         })
       ]
     }) : (0, a.jsx)(l.Button, {
@@ -152,7 +152,7 @@ onDescriptionSave: I,
 verificationForm: b
   } = e, [N, v] = r.useState(C), y = r.useRef(!1), S = r.useCallback(() => {
 y.current = !0;
-  }, []), A = null !== (n = (0, f.A)({
+  }, []), A = null !== (n = (0, _.A)({
 guildId: l.id
   })) && void 0 !== n ? n : 0, M = (0, o.e7)([u.Z], () => null != b ? b : u.Z.get(l.id)), j = null !== (t = null == M ? void 0 : M.formFields) && void 0 !== t ? t : [];
   r.useEffect(() => {
@@ -161,7 +161,7 @@ d.Z.fetchVerificationForm(l.id);
   let R = null != M,
 L = !C;
   return (0, a.jsx)(c.Z, {
-renderHeader: L ? (0, a.jsx)(p, {
+renderHeader: L ? (0, a.jsx)(g, {
   guild: l,
   isExpanded: N,
   emptyFormFields: (null == j ? void 0 : j.length) == null || (null == j ? void 0 : j.length) === 0,
@@ -174,9 +174,9 @@ disableBackground: !L,
 children: (0, a.jsx)('div', {
   className: s()(x.itemBodyContainer, {
     [x.noPadding]: !L,
-    [g.rulesScreeningItemsNoBorder]: !L
+    [p.rulesScreeningItemsNoBorder]: !L
   }),
-  children: R && (0, a.jsx)(_.Z, {
+  children: R && (0, a.jsx)(f.Z, {
     guild: l,
     submittedGuildJoinRequestsCount: A,
     formFields: j,

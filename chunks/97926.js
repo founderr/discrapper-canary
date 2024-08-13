@@ -7,13 +7,13 @@ var n = t(735250),
   l = t(113434),
   c = t(497505),
   d = t(918701),
-  _ = t(625252),
-  E = t(37303),
-  u = t(709158),
+  _ = t(471985),
+  E = t(625252),
+  u = t(37303),
   I = t(46140),
   T = t(981631),
   S = t(689938),
-  N = t(165549);
+  N = t(299021);
 
 function C(e) {
   if (null == e)
@@ -32,7 +32,7 @@ isFetchingCurrentQuests: s
 fetchPolicy: 'cache-and-network'
   }), t = (0, l.EH)(), m = (0, o.q)({
 location: I.dr.USER_SETTINGS_GIFT_INVENTORY
-  }), A = (0, u.Z)(I.dr.USER_SETTINGS_GIFT_INVENTORY), [g, O] = a.useState(!0), [h, p] = a.useState([]), [R, x] = a.useState([]), M = a.useMemo(() => g ? s ? 'unsorted' : 'pending_sort' : 'sorted', [
+  }), A = (0, _.Z)(I.dr.USER_SETTINGS_GIFT_INVENTORY), [g, O] = a.useState(!0), [h, p] = a.useState([]), [R, x] = a.useState([]), M = a.useMemo(() => g ? s ? 'unsorted' : 'pending_sort' : 'sorted', [
 g,
 s
   ]);
@@ -132,7 +132,7 @@ return s.length > 0;
   });
   return s || 'sorted' !== M ? (0, n.jsx)(i.Spinner, {
 className: N.spinner
-  }) : 0 === h.length ? null : A ? (0, n.jsx)(_.Z, {}) : (0, n.jsx)(i.FormSection, {
+  }) : 0 === h.length ? null : A ? (0, n.jsx)(E.Z, {}) : (0, n.jsx)(i.FormSection, {
 className: N.questsContainer,
 children: (0, n.jsxs)(i.HeadingLevel, {
   component: (0, n.jsxs)('div', {
@@ -182,7 +182,7 @@ children: (0, n.jsxs)(i.HeadingLevel, {
             className: N.sectionHeader,
             children: o
           }),
-          r.map((e, s) => (0, n.jsx)(E.D, {
+          r.map((e, s) => (0, n.jsx)(u.D, {
             questId: e,
             location: a,
             contentPosition: s + l,
@@ -190,7 +190,7 @@ children: (0, n.jsxs)(i.HeadingLevel, {
           }, e))
         ]
       }, a);
-    }) : h.map((e, s) => (0, n.jsx)(E.D, {
+    }) : h.map((e, s) => (0, n.jsx)(u.D, {
       questId: e,
       location: c.jn.GIFT_INVENTORY_FOR_YOU,
       contentPosition: s

@@ -25,7 +25,7 @@ var i = n(735250),
   C = n(843445),
   N = n(981631),
   A = n(689938),
-  v = n(256964);
+  v = n(125944);
 
 function Z(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {

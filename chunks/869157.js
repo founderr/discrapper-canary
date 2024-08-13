@@ -7,8 +7,8 @@ var i = t(735250),
   a = t(470079),
   s = t(512722),
   l = t.n(s),
-  o = t(392711),
-  r = t.n(o),
+  r = t(392711),
+  o = t.n(r),
   d = t(442837),
   c = t(481060),
   u = t(749210),
@@ -23,22 +23,22 @@ var i = t(735250),
   p = t(594174),
   f = t(626135),
   C = t(5192),
-  x = t(709054),
-  O = t(360606),
+  O = t(709054),
+  x = t(360606),
   S = t(905753),
   A = t(399860),
   R = t(335049),
   b = t(617012),
   Z = t(981631),
   v = t(689938),
-  M = t(129033);
+  M = t(570767);
 
 function L(e) {
   let {
 commandId: n,
 editPermissions: t,
 guildId: s,
-noneSelectedText: o,
+noneSelectedText: r,
 overwrites: I,
 hasAccessToMutatePermissions: N
   } = e, T = (0, d.e7)([g.Z], () => g.Z.getGuild(s));
@@ -48,7 +48,7 @@ hasAccessToMutatePermissions: N
 b = a.useMemo(() => {
   var e;
   let n = (0, _.bD)(s);
-  let t = (e = h, r()(e).sortBy(e => e.position).reduce((e, n, t) => (e[n.id] = t, e), {}));
+  let t = (e = h, o()(e).sortBy(e => e.position).reduce((e, n, t) => (e[n.id] = t, e), {}));
   return Object.values(I).filter(e => e.canRead).sort((e, i) => {
     let a = e.type - i.type;
     if (0 !== a)
@@ -66,7 +66,7 @@ b = a.useMemo(() => {
               n = C.ZP.getName(t, void 0, s);
             return null == e ? void 0 : e.localeCompare(n);
           }
-          return x.default.compare(e.id, n.id);
+          return O.default.compare(e.id, n.id);
         }(e, i, s);
       case m.Kw.ROLE:
         return function(e, n, t, i) {
@@ -84,7 +84,7 @@ b = a.useMemo(() => {
           if (n.id === t)
             return 1;
           let i = Number(e.canWrite) - Number(n.canWrite);
-          return 0 !== i ? i : x.default.compare(e.id, n.id);
+          return 0 !== i ? i : O.default.compare(e.id, n.id);
         }(e, i, n);
     }
   });
@@ -123,7 +123,7 @@ f,
 R
   ]);
   let L = (0, d.e7)([S.Z], () => S.Z.getApplicationId()),
-D = (0, d.e7)([O.Z], () => null == L ? void 0 : O.Z.integrations.find(e => {
+D = (0, d.e7)([x.Z], () => null == L ? void 0 : x.Z.integrations.find(e => {
   var n;
   return (null === (n = e.application) || void 0 === n ? void 0 : n.id) === L;
 })),
@@ -143,7 +143,7 @@ children: b.length > 0 ? b.map(e => (0, i.jsx)(j, {
   children: (0, i.jsx)(c.Text, {
     color: 'text-muted',
     variant: 'text-sm/normal',
-    children: o
+    children: r
   })
 })
   });
@@ -152,8 +152,8 @@ children: b.length > 0 ? b.map(e => (0, i.jsx)(j, {
 function j(e) {
   var n, t, s;
   let l, {
-  guild: o,
-  commandId: r,
+  guild: r,
+  commandId: o,
   onChange: d,
   onRemove: u,
   overwrite: E,
@@ -161,23 +161,23 @@ function j(e) {
   canShowMigrationTooltip: p,
   hasAccessToMutatePermissions: C
 } = e,
-x = E.id === o.id || E.id === (0, _.bD)(o.id),
-O = null == g ? void 0 : null === (t = g.application) || void 0 === t ? void 0 : null === (n = t.bot) || void 0 === n ? void 0 : n.username,
+O = E.id === r.id || E.id === (0, _.bD)(r.id),
+x = null == g ? void 0 : null === (t = g.application) || void 0 === t ? void 0 : null === (n = t.bot) || void 0 === n ? void 0 : n.username,
 S = !E.canWrite || !C,
 A = h.default.getId();
-  C ? !E.canWrite && (E.type === m.Kw.USER ? l = E.id === A ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER : E.type === m.Kw.ROLE && (l = v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : l = null != r ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION;
-  let L = p && null != g && E.id === o.id && void 0 !== O && !E.permission;
+  C ? !E.canWrite && (E.type === m.Kw.USER ? l = E.id === A ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER : E.type === m.Kw.ROLE && (l = v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : l = null != o ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION;
+  let L = p && null != g && E.id === r.id && void 0 !== x && !E.permission;
   a.useEffect(() => {
 if (L) {
   var e;
   f.default.track(Z.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
-    ...(0, I.hH)(o.id),
+    ...(0, I.hH)(r.id),
     application_id: null == g ? void 0 : null === (e = g.application) || void 0 === e ? void 0 : e.id,
     location: 'toggle'
   });
 }
   }, [
-o.id,
+r.id,
 null == g ? void 0 : null === (s = g.application) || void 0 === s ? void 0 : s.id,
 L
   ]);
@@ -193,7 +193,7 @@ L
       isDisabled: S,
       currentValue: E.permission,
       onChange: L ? e => {
-        N.Z.dismissToggleTooltip(o.id, g), d(e);
+        N.Z.dismissToggleTooltip(r.id, g), d(e);
       } : d
     })
   })
@@ -201,12 +201,12 @@ L
 P = (0, i.jsx)(c.Popout, {
   renderPopout: () => (0, i.jsx)(c.Clickable, {
     onClick: e => {
-      e.stopPropagation(), N.Z.dismissToggleTooltip(o.id, g);
+      e.stopPropagation(), N.Z.dismissToggleTooltip(r.id, g);
     },
     children: (0, i.jsx)(T.ZP, {
       className: M.tooltip,
       content: v.Z.Messages.COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP.format({
-        botName: O,
+        botName: x,
         link: 'https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/'
       }),
       onClick: () => {}
@@ -215,7 +215,7 @@ P = (0, i.jsx)(c.Popout, {
   position: 'bottom',
   align: 'center',
   animation: c.Popout.Animation.TRANSLATE,
-  onRequestClose: () => N.Z.dismissToggleTooltip(o.id, g),
+  onRequestClose: () => N.Z.dismissToggleTooltip(r.id, g),
   shouldShow: L,
   closeOnScroll: !0,
   children: () => j
@@ -226,7 +226,7 @@ children: [
   (0, i.jsx)('div', {
     className: M.entryName,
     children: (0, i.jsx)(R.Z, {
-      guild: o,
+      guild: r,
       id: E.id,
       type: E.type,
       isLocked: S,
@@ -237,8 +237,8 @@ children: [
     className: M.entryActions,
     children: [
       (0, i.jsx)(D, {
-        commandId: r,
-        isSentinel: x,
+        commandId: o,
+        isSentinel: O,
         isDisabled: !C,
         onRemove: u
       }),

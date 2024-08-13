@@ -1,9 +1,9 @@
 t.d(n, {
   Md: function() {
-return _;
+return f;
   },
   a0: function() {
-return f;
+return _;
   }
 });
 var a = t(735250);
@@ -18,40 +18,40 @@ var r = t(392711),
   u = t(981631),
   m = t(689938);
 
-function f(e) {
+function _(e) {
   let {
 dropHoveredIndex: n,
 formField: u,
-guild: f,
-index: _,
+guild: _,
+index: f,
 isDragEnabled: h,
 submittedGuildJoinRequestsCount: x,
-removeFormField: g,
-updateFormField: p,
+removeFormField: p,
+updateFormField: g,
 updateFormFieldOrder: T,
 canRemove: E,
 actionsLocation: I
   } = e, b = async () => {
-await g(_);
+await p(f);
   }, N = async e => {
-await p(_, e);
+await g(f, e);
   }, v = async (e, n, t) => {
 await T(e, n, t);
-  }, y = (0, r.uniqueId)(), S = n === _, A = {
+  }, y = (0, r.uniqueId)(), S = n === f, A = {
 key: y,
-index: _,
+index: f,
 isDragEnabled: h,
 isDropHovered: S,
 onEdit: () => {
-  0 === x ? C(u, N, f) : (0, i.openModalLazy)(async () => {
+  0 === x ? C(u, N, _) : (0, i.openModalLazy)(async () => {
     let {
       default: e
     } = await t.e('74673').then(t.bind(t, 394045));
     return n => (0, a.jsx)(e, {
       ...n,
-      guildId: f.id,
+      guildId: _.id,
       submittedGuildJoinRequestsCount: x,
-      onConfirm: () => C(u, N, f)
+      onConfirm: () => C(u, N, _)
     });
   });
 },
@@ -63,7 +63,7 @@ actionsLocation: I
   switch (u.field_type) {
 case s.QJ.TERMS:
   return (0, a.jsx)(c.Z, {
-    channelId: f.rulesChannelId,
+    channelId: _.rulesChannelId,
     title: m.Z.Messages.GUILD_RULES_HEADER,
     formField: u,
     ...A
@@ -88,7 +88,7 @@ default:
   }
 }
 
-function _(e, n, r) {
+function f(e, n, r) {
   let o = {
 onCloseRequest: u.dG4
   };

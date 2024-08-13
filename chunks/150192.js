@@ -1,6 +1,6 @@
 t.d(n, {
   j: function() {
-return _;
+return f;
   }
 }), t(653041), t(47120);
 var a, r, i, s, o = t(392711),
@@ -9,9 +9,9 @@ var a, r, i, s, o = t(392711),
   d = t(570140),
   u = t(823379),
   m = t(731455),
-  f = t(689938);
+  _ = t(689938);
 
-function _(e, n) {
+function f(e, n) {
   return l().isEqual(e.map(e => [
 e.categoryId,
 e.name
@@ -23,8 +23,8 @@ e.name
 let C = null,
   h = [],
   x = [],
-  g = {};
-class p extends(a = c.ZP.Store) {
+  p = {};
+class g extends(a = c.ZP.Store) {
   getPrimaryCategories() {
 return h;
   }
@@ -32,7 +32,7 @@ return h;
 let e = m.L3.map(e => x.find(n => n.categoryId === e)).filter(u.lm);
 return [{
     categoryId: m.Hk,
-    name: f.Z.Messages.HOME
+    name: _.Z.Messages.HOME
   },
   ...e
 ];
@@ -41,7 +41,7 @@ return [{
 let e = m.L3.map(e => x.find(n => n.categoryId === e)).filter(u.lm);
 return [{
     categoryId: m.Hk,
-    name: f.Z.Messages.COMMUNITIES
+    name: _.Z.Messages.COMMUNITIES
   },
   ...e
 ];
@@ -53,15 +53,15 @@ return x;
 return C;
   }
   getCategoryName(e) {
-return e === m.Hk ? f.Z.Messages.HOME : g[e];
+return e === m.Hk ? _.Z.Messages.HOME : p[e];
   }
 }
-s = 'GuildDiscoveryCategoryStore', (i = 'displayName') in(r = p) ? Object.defineProperty(r, i, {
+s = 'GuildDiscoveryCategoryStore', (i = 'displayName') in(r = g) ? Object.defineProperty(r, i, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[i] = s, n.Z = new p(d.Z, {
+}) : r[i] = s, n.Z = new g(d.Z, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
 let n, {
     categories: t,
@@ -88,7 +88,7 @@ if (t.sort((e, n) => e.name < n.name ? -1 : 1).forEach(e => {
       }), i.push({
         categoryId: t,
         name: a
-      }), g[t] = a;
+      }), p[t] = a;
     }
   }), null != n) {
   let {
@@ -98,7 +98,7 @@ if (t.sort((e, n) => e.name < n.name ? -1 : 1).forEach(e => {
   r.push({
     categoryId: e,
     name: t
-  }), g[e] = t;
+  }), p[e] = t;
 }
 C = a, h = r, x = i;
   }

@@ -5,8 +5,8 @@ var a, r, i, s, o = t(392711),
   d = t.n(c),
   u = t(442837),
   m = t(570140),
-  f = t(944163),
-  _ = t(116175),
+  _ = t(944163),
+  f = t(116175),
   C = t(308083);
 let h = () => ({
 gameApplicationIds: new Set(),
@@ -20,26 +20,26 @@ wildcardDescriptors: [
 ],
 tag: '',
 verificationForm: {
-  ...f.t
+  ..._.t
 },
-badgeKind: _.ZD.SWORD,
-badgePrimaryColor: _.sg['0'].primary,
-badgeSecondaryColor: _.sg['0'].secondary,
+badgeKind: f.ZD.SWORD,
+badgePrimaryColor: f.sg['0'].primary,
+badgeSecondaryColor: f.sg['0'].secondary,
 banner: C.qC.NIGHT_SKY,
 brandPrimaryColor: C.ym['0'].primary,
 brandSecondaryColor: C.ym['0'].secondary
   }),
   x = h(),
-  g = d()(x),
-  p = !1,
+  p = d()(x),
+  g = !1,
   T = !1,
   E = {};
 class I extends(a = u.ZP.Store) {
   getState() {
 return {
   initialSettings: x,
-  settings: g,
-  dirty: p,
+  settings: p,
+  dirty: g,
   errors: E,
   submitting: T
 };
@@ -52,7 +52,7 @@ s = 'ClanSettingsStore', (i = 'displayName') in(r = I) ? Object.defineProperty(r
   writable: !0
 }) : r[i] = s, n.Z = new I(m.Z, {
   CLAN_SETTINGS_FETCH_START: function() {
-T = !1, x = h(), g = d()(x), p = !1, E = {};
+T = !1, x = h(), p = d()(x), g = !1, E = {};
   },
   CLAN_SETTINGS_FETCH_SUCCESS: function(e) {
 let {
@@ -61,26 +61,26 @@ let {
 x = {
   ...h(),
   ...n
-}, g = d()(x), p = !1;
+}, p = d()(x), g = !1;
   },
   CLAN_SETTINGS_UPDATE: function(e) {
 let {
   updates: n
 } = e;
-for (let e in (g = {
-    ...g,
+for (let e in (p = {
+    ...p,
     ...d()(n)
   }, n))
   delete E[e], E = {
     ...E
   };
-p = !l().isEqual(l().omit(g, 'verificationForm'), l().omit(x, 'verificationForm'));
+g = !l().isEqual(l().omit(p, 'verificationForm'), l().omit(x, 'verificationForm'));
   },
   CLAN_SETTINGS_SUBMIT: function() {
 T = !0, E = {};
   },
   CLAN_SETTINGS_SUBMIT_SUCCESS: function() {
-T = !1, x = d()(g), p = !1, E = {};
+T = !1, x = d()(p), g = !1, E = {};
   },
   CLAN_SETTINGS_SUBMIT_ERROR: function(e) {
 let {
@@ -104,18 +104,18 @@ let {
   form: n,
   isLocalUpdate: t
 } = e;
-if (null == g.verificationForm)
+if (null == p.verificationForm)
   return !1;
-if (g = {
-    ...g,
+if (p = {
+    ...p,
     verificationForm: {
-      ...g.verificationForm,
+      ...p.verificationForm,
       ...n
     }
   }, t) {
   var a;
-  p = !l().isEqual(g.verificationForm.formFields, null === (a = x.verificationForm) || void 0 === a ? void 0 : a.formFields);
+  g = !l().isEqual(p.verificationForm.formFields, null === (a = x.verificationForm) || void 0 === a ? void 0 : a.formFields);
 } else
-  p = !1;
+  g = !1;
   }
 });

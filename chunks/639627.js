@@ -28,7 +28,7 @@ children: (0, r.jsx)(s.ZP, {
         default: a
       } = await Promise.all([
         n.e('48017'),
-        n.e('54144')
+        n.e('29625')
       ]).then(n.bind(n, 850085));
       return n => (0, r.jsx)(a, {
         imgURI: t,

@@ -3,7 +3,7 @@ t(470079);
 var r = t(73880),
   i = t(137158),
   s = t(689938),
-  o = t(672060);
+  o = t(944309);
 n.Z = function(e) {
   let {
 formField: n,
@@ -13,8 +13,8 @@ isDropHovered: c,
 onDrop: d,
 onEdit: u,
 onRemove: m,
-canRemove: f,
-actionsLocation: _
+canRemove: _,
+actionsLocation: f
   } = e, {
 label: C,
 placeholder: h
@@ -28,8 +28,8 @@ onDrop: d,
 onEdit: u,
 onRemove: m,
 title: C,
-canRemove: f,
-actionsLocation: _,
+canRemove: _,
+actionsLocation: f,
 children: (0, a.jsx)(r.Q8, {
   className: o.fieldBackground,
   placeholder: null != h ? h : s.Z.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,

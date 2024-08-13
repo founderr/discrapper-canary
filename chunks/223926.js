@@ -11,7 +11,7 @@ var n, t, o = s(735250),
   M = s(246364),
   d = s(981631),
   P = s(689938),
-  C = s(646580);
+  C = s(514045);
 (t = n || (n = {})).SPAM = 'spam', t.ABUSIVE = 'abusive', t.HARM = 'harm', t.PII = 'pii', t.OTHER = 'other';
 a.default = function(e) {
   let {

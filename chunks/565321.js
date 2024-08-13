@@ -6,25 +6,25 @@ var a = t(735250),
   o = t(484455),
   l = t(592286),
   c = t(689938),
-  d = t(672060);
+  d = t(944309);
 n.Z = function(e) {
   let {
 guildId: n,
 onSave: t,
 formDescription: u
-  } = e, [m, f] = r.useState(null), [_, C] = r.useState(u), h = r.useRef(!1), x = r.useRef(!1);
+  } = e, [m, _] = r.useState(null), [f, C] = r.useState(u), h = r.useRef(!1), x = r.useRef(!1);
   r.useEffect(() => () => {
 x.current = !0;
   }, []);
-  let g = r.useCallback(async () => {
+  let p = r.useCallback(async () => {
 if (!h.current) {
-  f(null);
+  _(null);
   try {
-    await t(n, _);
+    await t(n, f);
   } catch (e) {
     if (x.current)
       return;
-    f(new s.Hx(e).getAnyErrorMessage());
+    _(new s.Hx(e).getAnyErrorMessage());
   } finally {
     if (x.current)
       return;
@@ -32,7 +32,7 @@ if (!h.current) {
   }
 }
   }, [
-_,
+f,
 n,
 t
   ]);
@@ -42,12 +42,12 @@ children: [
   (0, a.jsx)(i.TextArea, {
     className: d.fieldBackground,
     maxLength: l.Us,
-    value: null != _ ? _ : '',
+    value: null != f ? f : '',
     placeholder: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
     onChange: e => {
       C(e);
     },
-    onBlur: g,
+    onBlur: p,
     autosize: !0
   }),
   null != m && '' !== m ? (0, a.jsx)(i.Text, {

@@ -8,8 +8,8 @@ t(470079);
 var a = t(442837),
   s = t(481060),
   l = t(749210),
-  o = t(240872),
-  r = t(605436),
+  r = t(240872),
+  o = t(605436),
   d = t(228643),
   c = t(299206),
   u = t(496675),
@@ -32,7 +32,7 @@ label: m.Z.Messages.COPY_ID_ROLE
   null != T && N.push(T);
   let h = (null === (t = n.tags) || void 0 === t ? void 0 : t.guild_connections) === null,
 g = n.managed && !h,
-p = null != n && (0, r.pM)(e.id, n.id);
+p = null != n && (0, o.pM)(e.id, n.id);
   return !_ && !g && !p && N.push((0, i.jsx)(s.MenuGroup, {
 children: (0, i.jsx)(s.MenuItem, {
   id: 'delete-role',
@@ -40,7 +40,7 @@ children: (0, i.jsx)(s.MenuItem, {
   color: 'danger',
   icon: s.TrashIcon,
   action: () => {
-    o.Z.show({
+    r.Z.show({
       title: m.Z.Messages.SETTINGS_ROLES_DELETE_TITLE,
       body: m.Z.Messages.SETTINGS_ROLES_DELETE_BODY.format({
         name: n.name

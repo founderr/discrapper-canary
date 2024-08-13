@@ -8,7 +8,7 @@ var r = n(735250),
   c = n(421591),
   l = n(314734),
   d = n(689938),
-  f = n(608305);
+  f = n(551397);
 t.default = o.memo(function(e) {
   let {
 channel: t,

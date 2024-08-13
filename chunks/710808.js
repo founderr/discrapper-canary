@@ -20,7 +20,7 @@ var n = t(735250),
   N = t(981631),
   C = t(65154),
   m = t(689938),
-  A = t(549856);
+  A = t(224499);
 async function g() {
   let e = await c.Z.fileManager.getModulePath(),
 s = c.Z.fileManager.join(e, 'discord_voice');

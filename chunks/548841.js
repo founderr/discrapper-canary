@@ -7,7 +7,7 @@ var s = t(481060),
   l = t(471253),
   o = t(939863),
   c = t(689938),
-  u = t(25484);
+  u = t(53771);
 e.default = n => {
   let {
 channel: e,

@@ -7,8 +7,8 @@ var i = t(735250),
   a = t(470079),
   s = t(120356),
   l = t.n(s),
-  o = t(913527),
-  r = t.n(o),
+  r = t(913527),
+  o = t.n(r),
   d = t(442837),
   c = t(481060),
   u = t(139387),
@@ -23,17 +23,17 @@ var i = t(735250),
   p = t(531087),
   f = t(768581),
   C = t(709054),
-  x = t(486199),
-  O = t(981631),
+  O = t(486199),
+  x = t(981631),
   S = t(689938),
-  A = t(935003),
-  R = t(549856);
+  A = t(436911),
+  R = t(224499);
 
 function b(e) {
   let n, {
   guild: t,
   integration: s,
-  editedIntegration: o,
+  editedIntegration: r,
   isExpanded: b,
   onToggleExpand: Z,
   onDisable: v,
@@ -59,7 +59,7 @@ y = a.useCallback(() => {
       onConfirm: () => v(s),
       children: (0, i.jsx)(c.Text, {
         variant: 'text-md/normal',
-        children: s.type === O.ABu.YOUTUBE ? S.Z.Messages.DISABLE_INTEGRATION_YOUTUBE_BODY : S.Z.Messages.DISABLE_INTEGRATION_TWITCH_BODY
+        children: s.type === x.ABu.YOUTUBE ? S.Z.Messages.DISABLE_INTEGRATION_YOUTUBE_BODY : S.Z.Messages.DISABLE_INTEGRATION_TWITCH_BODY
       })
     });
   });
@@ -74,7 +74,7 @@ G = a.useCallback(() => {
   s.id
 ]),
 k = a.useCallback(() => {
-  null != s.role_id && (N.Z.setSection(O.pNK.ROLES), N.Z.selectRole(s.role_id));
+  null != s.role_id && (N.Z.setSection(x.pNK.ROLES), N.Z.selectRole(s.role_id));
 }, [s.role_id]),
 {
   serviceName: U,
@@ -86,7 +86,7 @@ k = a.useCallback(() => {
   var e, n, t, i, a;
   let l = null !== (t = null === (n = I.Z.get(s.type)) || void 0 === n ? void 0 : null === (e = n.getPlatformUserUrl) || void 0 === e ? void 0 : e.call(n, s.account)) && void 0 !== t ? t : '';
   switch (s.type) {
-    case O.ABu.YOUTUBE:
+    case x.ABu.YOUTUBE:
       return {
         serviceName: S.Z.Messages.INTEGRATIONS_YOUTUBE,
           expireBehaviorLabel: S.Z.Messages.FORM_LABEL_MEMBERSHIP_EXPIRE_BEHAVIOR,
@@ -96,7 +96,7 @@ k = a.useCallback(() => {
           }),
           channelURL: l
       };
-    case O.ABu.TWITCH:
+    case x.ABu.TWITCH:
     default:
       return {
         serviceName: S.Z.Messages.INTEGRATIONS_TWITCH,
@@ -130,7 +130,7 @@ k = a.useCallback(() => {
       user: s.user,
       platformName: a.name
     }) : S.Z.Messages.INTEGRATIONS_LAST_SYNC.format({
-      datetime: r()(s.synced_at).calendar()
+      datetime: o()(s.synced_at).calendar()
     })
   };
 }, [
@@ -154,9 +154,9 @@ Y = a.useMemo(() => {
   s.role_id
 ]);
   if (a.useEffect(() => {
-  (null == o ? void 0 : o.id) === s.id && (null == o ? void 0 : o.enabled) === !0 && D(!1);
+  (null == r ? void 0 : r.id) === s.id && (null == r ? void 0 : r.enabled) === !0 && D(!1);
 }, [
-  o,
+  r,
   s.id
 ]), s.enabled && null != s.user)
 n = [{
@@ -182,7 +182,7 @@ n = [{
   className: A.header,
   align: m.Z.Align.CENTER,
   children: [
-    (0, i.jsx)(x.Z, {
+    (0, i.jsx)(O.Z, {
       name: ''.concat(s.name),
       detailsClassName: A.description,
       details: n
@@ -214,7 +214,7 @@ n = [{
   ]
 }),
 q = null;
-  return b && !j && null != o && (q = (0, i.jsxs)(m.Z, {
+  return b && !j && null != r && (q = (0, i.jsxs)(m.Z, {
 className: A.body,
 direction: m.Z.Direction.VERTICAL,
 children: [
@@ -228,7 +228,7 @@ children: [
       subscribersText: a,
       descriptionText: s,
       roleLink: l,
-      onSync: o
+      onSync: r
     } = e;
     return (0, i.jsxs)(m.Z, {
       children: [
@@ -277,7 +277,7 @@ children: [
                   look: c.Button.Looks.FILLED,
                   color: c.Button.Colors.PRIMARY,
                   disabled: n.syncing || n.revoked,
-                  onClick: o,
+                  onClick: r,
                   children: n.syncing ? (0, i.jsx)(p.Z, {
                     width: 24,
                     height: 24
@@ -292,7 +292,7 @@ children: [
       ]
     });
   }({
-    integration: o,
+    integration: r,
     labelText: W,
     subscribersText: F,
     descriptionText: K,
@@ -366,7 +366,7 @@ children: [
       ]
     });
   }({
-    integration: o,
+    integration: r,
     labelText: w,
     onBehaviorChange: function(e) {
       u.Z.updateIntegration({
@@ -379,7 +379,7 @@ children: [
       });
     }
   }),
-  s.type === O.ABu.TWITCH ? function(e) {
+  s.type === x.ABu.TWITCH ? function(e) {
     let {
       integration: n,
       emojis: t,
@@ -426,7 +426,7 @@ children: [
       ]
     });
   }({
-    integration: o,
+    integration: r,
     emojis: Y,
     onToggle: function(e) {
       u.Z.updateIntegration({

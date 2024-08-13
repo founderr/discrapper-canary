@@ -1,24 +1,24 @@
-n.d(t, {
+t.d(r, {
   B: function() {
-return s;
+return i;
   },
   t: function() {
-return r;
+return o;
   }
 });
-var i = n(652874);
-let a = Object.freeze({
+var a = t(652874);
+let n = Object.freeze({
 selectedTab: null,
 isSearchVisible: !1,
 searchLanguageCode: null,
 searchQuery: '',
 searchResultsQuery: '',
-searchCategoryId: n(731455).Hk,
+searchCategoryId: t(731455).Hk,
 initialSearchCategoryId: null,
 clickedGuildScrollPosition: null
   }),
-  s = (0, i.Z)(() => a);
+  i = (0, a.Z)(() => n);
 
-function r() {
-  s.setState(a);
+function o() {
+  i.setState(n);
 }

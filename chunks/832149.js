@@ -11,7 +11,7 @@ let {
   default: e
 } = await Promise.all([
   s.e('87624'),
-  s.e('83660')
+  s.e('28072')
 ]).then(s.bind(s, 331042));
 return s => (0, i.jsx)(e, {
   product: t,

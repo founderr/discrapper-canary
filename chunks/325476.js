@@ -1,10 +1,10 @@
 var i, a, s = t(735250),
   l = t(470079),
-  o = t(120356),
-  r = t.n(o),
+  r = t(120356),
+  o = t.n(r),
   d = t(481060),
   c = t(600164),
-  u = t(427344);
+  u = t(811692);
 
 function I(e, n, t) {
   return n in e ? Object.defineProperty(e, n, {
@@ -49,7 +49,7 @@ let {
   ...n
 } = this.props;
 return (0, s.jsx)(c.Z.Child, {
-  className: r()(u.content, e),
+  className: o()(u.content, e),
   wrap: !0,
   ...n
 });

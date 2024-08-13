@@ -20,7 +20,7 @@ var n = t(735250),
   N = t(210887),
   C = t(981631),
   m = t(689938),
-  A = t(452935);
+  A = t(945437);
 let g = [{
 label: 'Latin alphabet',
 value: 'aBcDeFgHiJkLmNoPqRsTuVwXyZ'

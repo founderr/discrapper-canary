@@ -32,7 +32,7 @@ let {
   ForwardModal: e
 } = await Promise.all([
   n.e('6380'),
-  n.e('89900')
+  n.e('18499')
 ]).then(n.bind(n, 930864));
 return n => (0, i.jsx)(e, {
   ...n,

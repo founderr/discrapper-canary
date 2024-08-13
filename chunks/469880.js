@@ -7,10 +7,10 @@ var i = t(735250),
   a = t(470079),
   s = t(481060),
   l = t(932776),
-  o = t(680298),
-  r = t(289465),
+  r = t(680298),
+  o = t(289465),
   d = t(689938),
-  c = t(549031);
+  c = t(400587);
 
 function u(e) {
   let {
@@ -25,7 +25,7 @@ setQuery: N,
 unfilteredCount: E
   } = (0, l.O)(), T = null != m && E > 0;
   return (0, i.jsx)(a.Fragment, {
-children: T ? (0, i.jsx)(r.Z, {
+children: T ? (0, i.jsx)(o.Z, {
   bar: (0, i.jsx)(s.SearchBar, {
     query: _,
     onChange: N,
@@ -35,7 +35,7 @@ children: T ? (0, i.jsx)(r.Z, {
   title: d.Z.Messages.COMMANDS,
   children: m.map((e, l) => (0, i.jsxs)(a.Fragment, {
     children: [
-      (0, i.jsx)(o.Z, {
+      (0, i.jsx)(r.Z, {
         applicationIcon: n,
         applicationName: t,
         canNavigate: u,

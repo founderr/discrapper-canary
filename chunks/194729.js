@@ -21,8 +21,8 @@ var i = n(735250),
   C = n(665149),
   N = n(5955),
   A = n(918701),
-  v = n(121711),
-  Z = n(709158),
+  v = n(471985),
+  Z = n(121711),
   L = n(703656),
   O = n(108427),
   R = n(706454),
@@ -45,7 +45,7 @@ var i = n(735250),
   W = n(981631),
   z = n(46140),
   K = n(689938),
-  q = n(468918),
+  q = n(745322),
   Q = n(368179),
   X = n(52518);
 
@@ -533,7 +533,7 @@ location: 'guild_discovery',
 includeConverted: !0
   }), s = n.length > 0, {
 clanDiscoveryEnabled: r
-  } = (0, p.nk)('guild_discovery'), l = (0, _.e7)([P.ZP], () => P.ZP.getCurrentCategoryId()), o = (0, _.e7)([P.ZP], () => P.ZP.getIsReady()), c = (0, Z.Z)(z.dr.QUEST_HOME_DESKTOP), d = (0, A.XT)(), u = (0, _.e7)([S.Z], () => S.Z.hasLoadedExperiments);
+  } = (0, p.nk)('guild_discovery'), l = (0, _.e7)([P.ZP], () => P.ZP.getCurrentCategoryId()), o = (0, _.e7)([P.ZP], () => P.ZP.getIsReady()), c = (0, v.Z)(z.dr.QUEST_HOME_DESKTOP), d = (0, A.XT)(), u = (0, _.e7)([S.Z], () => S.Z.hasLoadedExperiments);
   return (a.useEffect(() => {
 c && d && (0, m.uY)(Y.Gj.Quests);
   }, [
@@ -546,7 +546,7 @@ if (!!d)
 c,
 d,
 u
-  ]), (s || r) && (!o || l === Y.Gj.Clans)) ? (0, i.jsx)(w.Z, {}) : c && l === Y.Gj.Quests ? (0, i.jsx)(v.Z, {}) : (0, i.jsx)(et, {
+  ]), (s || r) && (!o || l === Y.Gj.Clans)) ? (0, i.jsx)(w.Z, {}) : c && l === Y.Gj.Quests ? (0, i.jsx)(Z.Z, {}) : (0, i.jsx)(et, {
 searchRoute: t
   });
 };

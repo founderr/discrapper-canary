@@ -5,20 +5,20 @@ return c;
 });
 var a = t(735250);
 t(470079);
-var l = t(392711),
-  i = t.n(l),
+var i = t(392711),
+  l = t.n(i),
   s = t(442837),
   o = t(481060),
-  r = t(344185),
-  d = t(665906),
-  u = t(689938);
+  u = t(344185),
+  r = t(665906),
+  d = t(689938);
 
 function c(e) {
-  let n = (0, d.Xb)(e),
-l = (0, s.e7)([r.Z], () => !i().isEmpty(r.Z.getThreadsForGuild(e.id)));
-  return n && l ? (0, a.jsx)(o.MenuItem, {
+  let n = (0, r.Xb)(e),
+i = (0, s.e7)([u.Z], () => !l().isEmpty(u.Z.getThreadsForGuild(e.id)));
+  return n && i ? (0, a.jsx)(o.MenuItem, {
 id: 'active-threads',
-label: u.Z.Messages.ACTIVE_THREADS,
+label: d.Z.Messages.ACTIVE_THREADS,
 icon: o.ChatIcon,
 action: () => {
   (0, o.openModalLazy)(async () => {

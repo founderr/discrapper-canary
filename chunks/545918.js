@@ -30,12 +30,12 @@ var l = t(735250),
   R = t(937283),
   m = t(440857),
   j = t(707113),
-  v = t(981631),
-  Z = t(176505),
+  Z = t(981631),
+  v = t(176505),
   p = t(50493),
   O = t(689938),
-  B = t(455136),
-  k = t(489919);
+  B = t(212911),
+  k = t(625032);
 
 function G(e) {
   let {
@@ -48,7 +48,7 @@ subsection: o
   }), (0, l.jsxs)(C.Z, {
 className: B.header,
 innerClassname: B.__invalid_innerHeader,
-channelId: Z.oC.MEMBER_SAFETY,
+channelId: v.oC.MEMBER_SAFETY,
 guildId: n.id,
 hideSearch: !0,
 toolbar: null != t ? (0, l.jsx)(r.Button, {
@@ -113,14 +113,14 @@ u
   ]);
   let b = (0, a.e7)([T.ZP], () => null != T.ZP.getGuildSidebarState(n), [n]),
 P = s.useCallback(e => {
-  (0, x.By)(e.guildId, !0) ? (0, E.r)(e.guildId, e.userId, Z.oC.MEMBER_SAFETY, {
+  (0, x.By)(e.guildId, !0) ? (0, E.r)(e.guildId, e.userId, v.oC.MEMBER_SAFETY, {
     modViewPanel: p.k.INFO
   }) : (0, h.openUserProfileModal)({
     userId: e.userId,
     guildId: e.guildId,
     sourceAnalyticsLocations: o,
     analyticsLocation: {
-      section: v.jXE.MEMBER_SAFETY_PAGE
+      section: Z.jXE.MEMBER_SAFETY_PAGE
     }
   });
 }, [o]);

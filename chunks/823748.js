@@ -110,7 +110,7 @@ var i = n(735250),
   e7 = n(440493),
   e4 = n(157925),
   e3 = n(689938),
-  e5 = n(489919);
+  e5 = n(625032);
 
 function e6(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -175,7 +175,7 @@ o()(null != a, 'Missing user in Channel.openDMContextMenu'), (0, E.jW)(e, async 
     n.e('70474'),
     n.e('22036'),
     n.e('56826'),
-    n.e('79598')
+    n.e('30295')
   ]).then(n.bind(n, 131404));
   return n => (0, i.jsx)(e, {
     ...n,

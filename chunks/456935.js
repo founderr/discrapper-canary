@@ -11,7 +11,7 @@ var a = t(735250),
   l = t(484455),
   c = t(981631),
   d = t(689938),
-  u = t(672060);
+  u = t(944309);
 
 function m(e) {
   switch (e) {
@@ -27,7 +27,7 @@ default:
   return '';
   }
 }
-let f = {
+let _ = {
   [c.sFg.NONE]: '',
   [c.sFg.LOW]: i.Z.unsafe_rawColors.GREEN_360.css,
   [c.sFg.MEDIUM]: i.Z.unsafe_rawColors.YELLOW_300.css,
@@ -37,7 +37,7 @@ let f = {
 n.ZP = function(e) {
   let {
 guild: n
-  } = e, i = o.Z.can(c.Plq.MANAGE_GUILD, n), _ = n.verificationLevel, C = _ === c.sFg.VERY_HIGH ? s.MobilePhoneIcon : s.EnvelopeIcon, h = r.useMemo(() => m(_), [_]), x = f[_], g = (0, a.jsx)('div', {
+  } = e, i = o.Z.can(c.Plq.MANAGE_GUILD, n), f = n.verificationLevel, C = f === c.sFg.VERY_HIGH ? s.MobilePhoneIcon : s.EnvelopeIcon, h = r.useMemo(() => m(f), [f]), x = _[f], p = (0, a.jsx)('div', {
 className: u.verificationLevelTitle,
 children: d.Z.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
   verificationLevelHook: function() {
@@ -51,9 +51,9 @@ children: d.Z.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
     }, 'hook');
   }
 })
-  }), p = _ === c.sFg.VERY_HIGH ? d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
+  }), g = f === c.sFg.VERY_HIGH ? d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
   return (0, a.jsx)(l.Z, {
-title: g,
+title: p,
 children: (0, a.jsxs)('div', {
   className: u.verificationContainer,
   children: [
@@ -67,7 +67,7 @@ children: (0, a.jsxs)('div', {
     (0, a.jsx)(s.Text, {
       className: u.guildVerificationText,
       variant: 'text-sm/normal',
-      children: p
+      children: g
     }),
     i && (0, a.jsx)(s.Clickable, {
       className: u.iconInteractiveContainer,

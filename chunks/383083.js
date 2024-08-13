@@ -1,5 +1,5 @@
-var n = t(413135).Buffer,
-  a = [
+var n = r(413135).Buffer,
+  i = [
 255,
 255,
 26,
@@ -81,31 +81,31 @@ var n = t(413135).Buffer,
 255,
 255
   ];
-r.encode = function(e) {
-  !n.isBuffer(e) && (e = new n(e));
-  var r, t, a = 0,
-i = 0,
+e.encode = function(t) {
+  !n.isBuffer(t) && (t = new n(t));
+  var e, r, i = 0,
 o = 0,
-f = 0;
-  for (var s = new n(8 * (t = Math.floor((r = e).length / 5), r.length % 5 == 0 ? t : t + 1)); a < e.length;) {
-var l = e[a];
-o > 3 ? (f = (f = l & 255 >> o) << (o = (o + 5) % 8) | (a + 1 < e.length ? e[a + 1] : 0) >> 8 - o, a++) : (f = l >> 8 - (o + 5) & 31, 0 == (o = (o + 5) % 8) && a++), s[i] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567'.charCodeAt(f), i++;
+a = 0,
+s = 0;
+  for (var u = new n(8 * (r = Math.floor((e = t).length / 5), e.length % 5 == 0 ? r : r + 1)); i < t.length;) {
+var c = t[i];
+a > 3 ? (s = (s = c & 255 >> a) << (a = (a + 5) % 8) | (i + 1 < t.length ? t[i + 1] : 0) >> 8 - a, i++) : (s = c >> 8 - (a + 5) & 31, 0 == (a = (a + 5) % 8) && i++), u[o] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567'.charCodeAt(s), o++;
   }
-  for (a = i; a < s.length; a++)
-s[a] = 61;
-  return s;
-}, r.decode = function(e) {
-  var r, t = 0,
-i = 0,
-o = 0;
-  !n.isBuffer(e) && (e = new n(e));
-  for (var f = new n(Math.ceil(5 * e.length / 8)), s = 0; s < e.length && 61 != e[s]; s++) {
+  for (i = o; i < u.length; i++)
+u[i] = 61;
+  return u;
+}, e.decode = function(t) {
+  var e, r = 0,
+o = 0,
+a = 0;
+  !n.isBuffer(t) && (t = new n(t));
+  for (var s = new n(Math.ceil(5 * t.length / 8)), u = 0; u < t.length && 61 != t[u]; u++) {
 ;
-var l = e[s] - 48;
-if (l < a.length)
-  i = a[l], t <= 3 ? 0 == (t = (t + 5) % 8) ? (r |= i, f[o] = r, o++, r = 0) : r |= 255 & i << 8 - t : (r |= 255 & i >>> (t = (t + 5) % 8), f[o] = r, o++, r = 255 & i << 8 - t);
+var c = t[u] - 48;
+if (c < i.length)
+  o = i[c], r <= 3 ? 0 == (r = (r + 5) % 8) ? (e |= o, s[a] = e, a++, e = 0) : e |= 255 & o << 8 - r : (e |= 255 & o >>> (r = (r + 5) % 8), s[a] = e, a++, e = 255 & o << 8 - r);
 else
   throw Error('Invalid input - it is not base32 encoded string');
   }
-  return f.slice(0, o);
+  return s.slice(0, a);
 };

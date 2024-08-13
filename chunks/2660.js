@@ -7,7 +7,7 @@ var a = n(442837),
   o = n(113434),
   c = n(46140),
   u = n(182294),
-  d = n(267423);
+  d = n(679001);
 let _ = () => (0, i.jsx)('div', {
 className: d.questsCollectibleReward
   }),
