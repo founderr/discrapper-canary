@@ -212,42 +212,40 @@ super(...e), M(this, 'layoutClass', b.dividerContainer), M(this, 'selectable', !
   }
 }), M(G, 'User', class e extends x {
   renderContent() {
+var e;
 let {
-  user: e,
-  nick: t,
-  status: n,
-  hidePersonalInformation: r,
-  guildId: a
-} = this.props;
+  user: t,
+  nick: n,
+  status: r,
+  hidePersonalInformation: a,
+  guildId: s
+} = this.props, o = null == s ? N.Z.getNickname(t.id) : null;
 return (0, i.jsxs)(C.RX, {
   children: [
     (0, i.jsx)(C.Tw, {
       children: (0, i.jsx)(d.Avatar, {
         size: d.AvatarSizes.SIZE_24,
-        src: e.getAvatarURL(a, 24),
+        src: t.getAvatarURL(s, 24),
         'aria-hidden': !0,
-        status: n
+        status: r
       })
     }),
     (0, i.jsx)(C.z5, {
       children: (0, i.jsx)(C.BR, {
-        children: null != t ? t : R.ZP.getName(e)
+        children: null !== (e = null != n ? n : o) && void 0 !== e ? e : R.ZP.getName(t)
       })
     }),
     (0, i.jsxs)(C.dY, {
       children: [
-        (0, i.jsx)('span', {
-          className: b.__invalid_descriptionUsername,
-          children: R.ZP.getUserTag(e, {
-            mode: 'username',
-            identifiable: r ? 'never' : 'always'
-          })
+        R.ZP.getUserTag(t, {
+          mode: 'username',
+          identifiable: a ? 'never' : 'always'
         }),
-        r || e.isPomelo() ? null : (0, i.jsxs)('span', {
+        a || t.isPomelo() ? null : (0, i.jsxs)('span', {
           className: b.descriptionDiscriminator,
           children: [
             '#',
-            e.discriminator
+            t.discriminator
           ]
         })
       ]
@@ -442,7 +440,6 @@ return (0, g.jl)(o) ? n = null === (e = T.Z.getStickerPack(o.pack_id)) || void 0
     (0, i.jsxs)(C.z5, {
       children: [
         (0, i.jsx)(C.BR, {
-          className: b.__invalid_stickerName,
           children: o.name
         }),
         null != r && (0, i.jsx)(C.wL, {
