@@ -63,7 +63,11 @@ children: e => (0, r.jsx)(o.TooltipContainer, {
         size: 'xs',
         color: 'currentColor'
       }),
-      0 === p && f.Z.Messages.USER_PROFILE_ADD_ROLE
+      0 === p && (0, r.jsx)(o.Text, {
+        variant: 'text-xs/normal',
+        color: 'none',
+        children: f.Z.Messages.USER_PROFILE_ADD_ROLE
+      })
     ]
   })
 })
