@@ -27,24 +27,25 @@ disabled: r,
 className: i,
 onClick: u,
 onRemove: p,
-selected: S,
-ariaLabel: C
+onContextMenu: S,
+selected: C,
+ariaLabel: T
   } = e, {
-name: T,
-emojiId: m,
-emojiName: A
-  } = n, N = null != p, [h, v] = l.useState(!1), L = (0, c.e7)([E.Z], () => null != m ? E.Z.getUsableCustomEmojiById(m) : null), R = N || null != u, M = (!N || !h) && (null != m || null != A), O = 0 === t, b = l.useRef(null), D = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled), U = (0, o.jsxs)(o.Fragment, {
+name: m,
+emojiId: A,
+emojiName: N
+  } = n, h = null != p, [v, L] = l.useState(!1), R = (0, c.e7)([E.Z], () => null != A ? E.Z.getUsableCustomEmojiById(A) : null), M = h || null != u, O = (!h || !v) && (null != A || null != N), b = 0 === t, D = l.useRef(null), U = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled), Z = (0, o.jsxs)(o.Fragment, {
 children: [
-  M ? (0, o.jsx)(_.Z, {
+  O ? (0, o.jsx)(_.Z, {
     className: a()(g.emoji, {
-      [g.small]: O
+      [g.small]: b
     }),
-    emojiId: m,
-    emojiName: A,
-    animated: !!(null == L ? void 0 : L.animated),
+    emojiId: A,
+    emojiName: N,
+    animated: !!(null == R ? void 0 : R.animated),
     size: 'reaction'
   }) : null,
-  h && N && (0, o.jsx)('div', {
+  v && h && (0, o.jsx)('div', {
     className: g.closeCircle,
     children: (0, o.jsx)(d.XSmallIcon, {
       size: 'md',
@@ -53,41 +54,42 @@ children: [
     })
   }),
   (0, o.jsx)(d.Text, {
-    variant: O ? 'text-xs/semibold' : 'text-sm/semibold',
+    variant: b ? 'text-xs/semibold' : 'text-sm/semibold',
     lineClamp: 1,
-    children: T
+    children: m
   })
 ]
-  }), Z = {
+  }), P = {
 key: n.id,
 className: a()(g.pill, {
   [g.disabled]: r,
-  [g.clickable]: R,
-  [g.small]: O,
-  [g.selected]: S
+  [g.clickable]: M,
+  [g.small]: b,
+  [g.selected]: C
 }, i),
 onClick: e => {
-  null == u || u(e), null == p || p(n), !D && null != b.current && b.current.blur();
+  null == u || u(e), null == p || p(n), !U && null != D.current && D.current.blur();
 },
-onMouseEnter: () => N && v(!0),
-onMouseLeave: () => N && v(!1)
-  }, P = (0, s.JA)('forum-tag-'.concat(n.id));
-  return R ? (0, o.jsx)(d.Clickable, {
-...P,
-innerRef: b,
+onContextMenu: e => null == S ? void 0 : S(e, n),
+onMouseEnter: () => h && L(!0),
+onMouseLeave: () => h && L(!1)
+  }, y = (0, s.JA)('forum-tag-'.concat(n.id));
+  return M ? (0, o.jsx)(d.Clickable, {
+...y,
+innerRef: D,
 focusProps: {
-  ringTarget: b
+  ringTarget: D
 },
-'aria-label': null != C ? C : I.Z.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
-  tagName: T
+'aria-label': null != T ? T : I.Z.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
+  tagName: m
 }),
 role: 'button',
-'aria-pressed': S,
-...Z,
-children: U
+'aria-pressed': C,
+...P,
+children: Z
   }) : (0, o.jsx)('div', {
-...Z,
-children: U
+...P,
+children: Z
   });
 }
 
