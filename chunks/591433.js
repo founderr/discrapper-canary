@@ -179,7 +179,7 @@ Q = a.useCallback((e, t, n) => {
   r(e, t, n);
   let s = null === (a = J.current) || void 0 === a ? void 0 : null === (i = a.getScrollerState()) || void 0 === i ? void 0 : i.scrollTop;
   null != s && m.B.setState({
-    clickedGuildScrollPosition: s
+    searchScrollPosition: s
   });
 }, [r]),
 X = a.useCallback((e, t, n, a) => {
@@ -204,9 +204,18 @@ X = a.useCallback((e, t, n, a) => {
   h
 ]),
 J = a.useRef(null);
-  a.useLayoutEffect(() => {
+  a.useEffect(() => {
+let e = J.current;
+return () => {
+  var t;
+  let n = null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollTop;
+  null != n && m.B.setState({
+    searchScrollPosition: n
+  });
+};
+  }, []), a.useLayoutEffect(() => {
 let {
-  clickedGuildScrollPosition: e
+  searchScrollPosition: e
 } = m.B.getState();
 null != e && setTimeout(() => {
   var t;
@@ -215,7 +224,7 @@ null != e && setTimeout(() => {
     animate: !1,
     callback: () => {
       m.B.setState({
-        clickedGuildScrollPosition: null
+        searchScrollPosition: null
       });
     }
   });

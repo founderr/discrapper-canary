@@ -15,7 +15,7 @@ searchQuery: '',
 searchResultsQuery: '',
 searchCategoryId: t(731455).Hk,
 initialSearchCategoryId: null,
-clickedGuildScrollPosition: null
+searchScrollPosition: null
   }),
   i = (0, a.Z)(() => n);
 

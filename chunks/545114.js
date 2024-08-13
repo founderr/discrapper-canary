@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return A;
+return v;
   }
 });
 var i = n(735250),
@@ -22,26 +22,26 @@ var i = n(735250),
   T = n(143021),
   S = n(775260),
   f = n(49898),
-  C = n(689938),
-  N = n(645664);
+  C = n(731455),
+  N = n(689938),
+  A = n(645664);
 
-function A() {
+function v() {
   let e = a.useRef((0, r.P)()),
 {
   onScroll: t,
   scrollPosition: n,
-  resetScrollPosition: A
+  resetScrollPosition: v
 } = (0, u.M)(),
 {
-  tabs: v,
-  selectedTab: Z,
-  setSelectedTab: L
+  tabs: Z,
+  selectedTab: L,
+  setSelectedTab: O
 } = (0, S.Y)(),
-O = (0, c.lg)(Z),
+R = (0, c.lg)(L),
 {
-  searchBarState: R,
-  onTabsAvailableWidthChange: x,
-  resetSearchBarState: b,
+  searchBarState: x,
+  onTabsAvailableWidthChange: b,
   onCollapsedSearchBarClick: P,
   tabsClassName: M
 } = (0, _.U)(),
@@ -52,25 +52,25 @@ O = (0, c.lg)(Z),
   onSearchSubmit: U,
   isSearchVisible: G
 } = (0, T.H)({
-  loadId: e.current,
-  onClear: b
+  loadId: e.current
 }),
 k = a.useCallback(e => {
-  L(e), j();
+  O(e), G && j();
 }, [
+  G,
   j,
-  L
+  O
 ]),
-w = a.useMemo(() => G ? v.filter(e => {
+w = a.useMemo(() => G ? Z.filter(e => {
   let {
     id: t
   } = e;
   return !f.MU.has(t);
-}) : v, [
-  v,
+}) : Z, [
+  Z,
   G
 ]),
-B = a.useRef(new d.Z(O)),
+B = a.useRef(new d.Z(R)),
 {
   onGuildCardSeen: H,
   onGuildCardClick: V
@@ -80,49 +80,49 @@ B = a.useRef(new d.Z(O)),
 });
   a.useEffect(() => {
 B.current.flushSeenGuilds(e.current);
-  }, [O]), a.useEffect(() => {
-A();
+  }, [R]), a.useEffect(() => {
+v();
   }, [
-O,
-A
+R,
+v
   ]), a.useEffect(() => {
 !G && o.B.setState({
-  clickedGuildScrollPosition: null
+  searchScrollPosition: null
 });
   }, [G]);
   let F = a.useMemo(() => {
-switch (Z) {
+switch (L) {
   case f.vf.HUBS:
   case f.vf.GUILDS:
     return (0, i.jsx)(l.Z, {});
   default:
-    let e = (0, c.vb)(Z);
     return (0, i.jsx)(h.Z, {
       query: D,
-      placeholder: C.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
-        title: e
+      placeholder: R === C.Hk ? N.Z.Messages.SEARCH : N.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
+        title: (0, c.vb)(L)
       }),
       onTextChange: y,
       onClear: j,
       onSubmit: U,
       onCollapsedClick: P,
-      state: R
+      state: x
     });
 }
   }, [
+R,
 j,
 P,
 U,
 y,
-R,
+x,
 D,
-Z
+L
   ]);
   return (0, i.jsxs)('div', {
-className: N.container,
+className: A.container,
 children: [
   (0, i.jsxs)(E.ZP, {
-    className: G ? N.search : void 0,
+    className: G ? A.search : void 0,
     children: [
       !G && (0, i.jsx)(E.z6, {
         scrollPosition: n
@@ -134,9 +134,9 @@ children: [
       (0, i.jsx)(m.Z, {
         className: M,
         tabs: w,
-        selectedTab: G ? null : Z,
+        selectedTab: G ? null : L,
         onTabSelect: k,
-        onAvailableWidthChange: x
+        onAvailableWidthChange: b
       }),
       F
     ]
@@ -147,7 +147,7 @@ children: [
     onGuildCardSeen: H
   }) : (0, i.jsx)(I.Z, {
     loadId: e.current,
-    selectedTab: Z,
+    selectedTab: L,
     onScroll: t,
     onGuildCardClick: V,
     onGuildCardSeen: H

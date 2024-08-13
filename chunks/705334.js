@@ -38,7 +38,7 @@ switch (e) {
   return (0, i.jsxs)(c.Clickable, {
 onClick: m,
 className: r()(h.navItem, {
-  [h.selectedNavItem]: n
+  [h.selected]: n
 }),
 children: [
   (0, i.jsx)('div', {

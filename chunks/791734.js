@@ -1,13 +1,17 @@
-n(47120), n(724458);
+n.d(t, {
+  Z: function() {
+return I;
+  }
+}), n(47120), n(724458);
 var i = n(735250),
   a = n(470079),
   s = n(120356),
   r = n.n(s),
   l = n(780384),
   o = n(481060),
-  c = n(393903),
-  d = n(410030),
-  u = n(355932),
+  c = n(410030),
+  d = n(355932),
+  u = n(889711),
   _ = n(871025),
   E = n(689938),
   h = n(525197);
@@ -17,7 +21,7 @@ function m(e) {
 onTabSelect: t,
 tabs: n,
 selectedTab: s
-  } = e, c = (0, d.ZP)(), u = (0, l.wj)(c), m = a.useMemo(() => null != n.find(e => {
+  } = e, d = (0, c.ZP)(), u = (0, l.wj)(d), m = a.useMemo(() => null != n.find(e => {
 let {
   id: t
 } = e;
@@ -70,53 +74,56 @@ children: (e, t) => {
 }
   });
 }
-t.Z = a.forwardRef(function(e, t) {
+
+function I(e) {
   let {
-className: n,
-selectedTab: s,
-tabs: _,
-onTabSelect: E,
-onAvailableWidthChange: I
-  } = e, g = (0, d.ZP)(), p = (0, l.wj)(g), [T, S] = a.useState(0), {
-lastVisibleIndex: f,
-onItemLayout: C,
-overflowItemsRef: N,
-itemWidthsRef: A
-  } = (0, u.zP)({
-items: _,
+className: t,
+selectedTab: n,
+tabs: s,
+onTabSelect: l,
+onAvailableWidthChange: c
+  } = e, [_, E] = a.useState(0), I = a.useRef(_), {
+lastVisibleIndex: g,
+onItemLayout: p,
+overflowItemsRef: T,
+itemWidthsRef: S
+  } = (0, d.zP)({
+items: s,
 itemGapPx: 20,
 maxLines: 1,
-containerWidth: T
-  }), v = a.useMemo(() => _.slice(0, f + 1), [
-f,
-_
-  ]), Z = a.useMemo(() => _.slice(f + 1), [
-f,
-_
-  ]), L = (0, c.y)(e => {
-let t = null == e ? void 0 : e.getBoundingClientRect();
-if (null == t)
+containerWidth: _
+  }), f = a.useMemo(() => s.slice(0, g + 1), [
+g,
+s
+  ]), C = a.useMemo(() => s.slice(g + 1), [
+g,
+s
+  ]), N = a.useRef(null), A = a.useCallback(() => {
+var e;
+let t = null === (e = N.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+if (null == t || I.current === t.width)
   return;
-S(t.width);
-let n = A.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
+E(t.width), I.current = t.width;
+let n = S.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
   i = t.width - n;
-null == I || I(i);
-  });
-  return a.useImperativeHandle(t, () => ({
-getBoundingClientRect: () => {
-  var e;
-  return null === (e = L.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-}
-  })), (0, i.jsxs)('div', {
-className: r()(h.container, n),
-ref: L,
+null == c || c(i);
+  }, [
+S,
+c
+  ]);
+  return a.useEffect(() => {
+let e = (0, u.pP)(A);
+return (0, u.YP)(e, document.body), () => (0, u.UC)(e, document.body);
+  }, [A]), (0, i.jsxs)('div', {
+className: r()(h.container, t),
+ref: N,
 children: [
   (0, i.jsxs)('div', {
     className: h.measurements,
     children: [
-      _.map((e, t) => (0, i.jsx)(u.AJ, {
+      s.map((e, t) => (0, i.jsx)(d.AJ, {
         index: t,
-        onItemLayout: C,
+        onItemLayout: p,
         children: (0, i.jsx)(o.TabBar.Item, {
           id: e.id,
           'aria-label': e.label,
@@ -128,44 +135,37 @@ children: [
         })
       }, e.id)),
       (0, i.jsx)('div', {
-        ref: N,
+        ref: T,
         children: (0, i.jsx)(m, {
-          tabs: Z,
-          onTabSelect: E,
-          selectedTab: s
+          tabs: C,
+          onTabSelect: l,
+          selectedTab: n
         })
       })
     ]
   }),
   (0, i.jsxs)(o.TabBar, {
     type: 'top',
-    selectedItem: s,
-    onItemSelect: E,
+    look: 'brand',
+    selectedItem: n,
+    onItemSelect: l,
     className: h.tabs,
     children: [
-      v.map(e => {
-        let t = s === e.id;
-        return (0, i.jsx)(o.TabBar.Item, {
-          id: e.id,
-          color: 'text-muted',
-          'aria-label': e.label,
-          className: r()(h.tab, {
-            [h.selected]: t
-          }),
-          children: (0, i.jsx)(o.Text, {
-            variant: 'text-md/medium',
-            color: t ? 'header-primary' : p ? 'text-muted' : 'header-primary',
-            children: e.label
-          })
-        }, e.id);
-      }),
-      0 !== Z.length ? (0, i.jsx)(m, {
-        tabs: Z,
-        onTabSelect: E,
-        selectedTab: s
+      f.map(e => (0, i.jsx)(o.TabBar.Item, {
+        id: e.id,
+        'aria-label': e.label,
+        className: r()(h.tab, {
+          [h.selected]: n === e.id
+        }),
+        children: e.label
+      }, e.id)),
+      0 !== C.length ? (0, i.jsx)(m, {
+        tabs: C,
+        onTabSelect: l,
+        selectedTab: n
       }) : null
     ]
   })
 ]
   });
-});
+}

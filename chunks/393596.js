@@ -1,6 +1,6 @@
 n.d(t, {
   I: function() {
-return g;
+return I;
   }
 }), n(47120);
 var i = n(735250),
@@ -9,70 +9,71 @@ var i = n(735250),
   r = n.n(s),
   l = n(143927),
   o = n(731965),
-  c = n(442837),
-  d = n(481060),
-  u = n(150192),
-  _ = n(706454),
-  E = n(540742),
-  h = n(72881),
-  m = n(740474),
-  I = n(636228);
+  c = n(481060),
+  d = n(706454),
+  u = n(540742),
+  _ = n(72881),
+  E = n(907336),
+  h = n(740474),
+  m = n(636228);
 
-function g(e) {
+function I(e) {
   var t;
   let {
 categoryId: n,
 loadId: i
   } = e;
-  (0, o.j)(() => E.B.setState({
+  (0, o.j)(() => u.B.setState({
 searchCategoryId: n
   }));
-  let a = E.B.getState();
-  (0, h.y)({
+  let a = u.B.getState();
+  (0, _.y)({
 loadId: i,
 categoryId: n,
 offset: 0,
 searchQuery: a.searchQuery,
-languageCode: null !== (t = a.searchLanguageCode) && void 0 !== t ? t : (0, h.X)()
+languageCode: null !== (t = a.searchLanguageCode) && void 0 !== t ? t : (0, _.X)()
   });
 }
 
-function p(e) {
+function g(e) {
   let {
 loadId: t,
 categoryId: n,
 count: s
   } = e, o = a.useCallback(() => {
-g({
+I({
   categoryId: n,
   loadId: t
 });
   }, [
 n,
 t
-  ]), h = (0, E.B)(e => {
+  ]), _ = (0, u.B)(e => {
 let {
   searchCategoryId: t
 } = e;
 return t;
-  }, l.Z) === n, m = s.toLocaleString(_.default.locale), p = (0, c.e7)([u.Z], () => u.Z.getCategoryName(n));
-  return (0, i.jsxs)(d.Clickable, {
+  }, l.Z) === n, h = s.toLocaleString(d.default.locale), g = (0, E.E)({
+categoryId: n
+  });
+  return (0, i.jsxs)(c.Clickable, {
 onClick: o,
-className: r()(I.category, {
-  [I.selected]: h
+className: r()(m.category, {
+  [m.selected]: _
 }),
 children: [
-  (0, i.jsx)(d.Text, {
-    className: I.name,
+  (0, i.jsx)(c.Text, {
+    className: m.name,
     variant: 'text-sm/medium',
     color: 'header-primary',
-    children: p
+    children: g
   }),
-  (0, i.jsx)(d.Text, {
-    className: I.count,
+  (0, i.jsx)(c.Text, {
+    className: m.count,
     variant: 'text-sm/normal',
     color: 'text-muted',
-    children: m
+    children: h
   })
 ]
   });
@@ -80,12 +81,12 @@ children: [
 t.Z = function(e) {
   let {
 loadId: t
-  } = e, n = (0, m.q)();
+  } = e, n = (0, h.q)();
   return null == n ? null : (0, i.jsx)('div', {
-className: I.categories,
+className: m.categories,
 children: n.map(e => {
   let [n, a] = e;
-  return (0, i.jsx)(p, {
+  return (0, i.jsx)(g, {
     loadId: t,
     categoryId: n,
     count: a

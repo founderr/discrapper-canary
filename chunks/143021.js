@@ -72,14 +72,13 @@ s
 
 function I(e) {
   let {
-loadId: t,
-onClear: n
-  } = e, r = (0, u.B)(e => {
+loadId: t
+  } = e, n = (0, u.B)(e => {
 let {
   isSearchVisible: t
 } = e;
 return t;
-  }, a.Z), c = (0, u.B)(e => {
+  }, a.Z), r = (0, u.B)(e => {
 let {
   searchQuery: t
 } = e;
@@ -88,25 +87,22 @@ return t;
   i.useEffect(() => {
 l.Ue(), (0, o.le)();
   }, []);
-  let h = i.useCallback(e => {
+  let c = i.useCallback(e => {
   (0, s.j)(() => u.B.setState({
     searchQuery: e
   }));
 }, []),
-m = i.useCallback(() => {
-  d.IZ(t), n(), (0, s.j)(() => u.B.setState({
+h = i.useCallback(() => {
+  d.IZ(t), (0, s.j)(() => u.B.setState({
     searchResultsQuery: '',
     searchQuery: '',
     isSearchVisible: !1,
     searchCategoryId: (0, _.lg)(u.B.getState().selectedTab),
     initialSearchCategoryId: null,
-    clickedGuildScrollPosition: null
+    searchScrollPosition: null
   }));
-}, [
-  t,
-  n
-]),
-I = i.useCallback(() => {
+}, [t]),
+m = i.useCallback(() => {
   var e;
   let n = u.B.getState();
   n.searchQuery !== n.searchResultsQuery && ((0, s.j)(() => u.B.setState({
@@ -120,16 +116,16 @@ I = i.useCallback(() => {
   }));
 }, [t]);
   return i.useMemo(() => ({
-searchQuery: c,
-onSearchTextChange: h,
-onClearSearch: m,
-onSearchSubmit: I,
-isSearchVisible: r
+searchQuery: r,
+onSearchTextChange: c,
+onClearSearch: h,
+onSearchSubmit: m,
+isSearchVisible: n
   }), [
-r,
-m,
-I,
+n,
 h,
-c
+m,
+c,
+r
   ]);
 }

@@ -1,36 +1,37 @@
 n.d(t, {
   Z: function() {
-return g;
+return I;
   }
 }), n(47120);
 var i = n(735250),
   a = n(470079),
   s = n(143927),
-  r = n(442837),
-  l = n(481060),
-  o = n(150192),
-  c = n(706454),
-  d = n(540742),
-  u = n(89182),
-  _ = n(740474),
-  E = n(393596),
-  h = n(689938),
-  m = n(548998);
+  r = n(481060),
+  l = n(706454),
+  o = n(540742),
+  c = n(89182),
+  d = n(907336),
+  u = n(740474),
+  _ = n(393596),
+  E = n(689938),
+  h = n(548998);
 
-function I(e) {
+function m(e) {
   let {
 count: t,
 categoryId: n
-  } = e, a = t.toLocaleString(c.default.locale), s = (0, r.e7)([o.Z], () => o.Z.getCategoryName(n));
+  } = e, a = t.toLocaleString(l.default.locale), s = (0, d.E)({
+categoryId: n
+  });
   return (0, i.jsxs)('div', {
-className: m.label,
+className: h.label,
 children: [
-  (0, i.jsx)(l.Text, {
+  (0, i.jsx)(r.Text, {
     variant: 'text-sm/medium',
     color: 'header-primary',
     children: s
   }),
-  (0, i.jsx)(l.Text, {
+  (0, i.jsx)(r.Text, {
     variant: 'text-sm/normal',
     color: 'text-muted',
     children: a
@@ -39,44 +40,46 @@ children: [
   });
 }
 
-function g(e) {
+function I(e) {
   let {
 loadId: t
-  } = e, n = (0, d.B)(e => {
+  } = e, n = (0, o.B)(e => {
 let {
   searchCategoryId: t
 } = e;
 return t;
-  }, s.Z), c = (0, _.q)(), g = (0, r.e7)([o.Z], () => o.Z.getCategoryName(n)), p = a.useCallback(e => {
-(0, E.I)({
+  }, s.Z), l = (0, u.q)(), I = (0, d.E)({
+categoryId: n
+  }), g = a.useCallback(e => {
+(0, _.I)({
   loadId: t,
   categoryId: Number(e)
 });
-  }, [t]), T = a.useMemo(() => null == c ? [] : c.map(e => {
+  }, [t]), p = a.useMemo(() => null == l ? [] : l.map(e => {
 let [t, n] = e;
 return {
   id: ''.concat(t),
-  label: (0, i.jsx)(I, {
+  label: (0, i.jsx)(m, {
     categoryId: t,
     count: n
   })
 };
-  }), [c]);
-  return null == c ? null : (0, i.jsxs)('div', {
-className: m.container,
+  }), [l]);
+  return null == l ? null : (0, i.jsxs)('div', {
+className: h.container,
 children: [
-  (0, i.jsx)(l.Text, {
+  (0, i.jsx)(r.Text, {
     variant: 'text-sm/medium',
     color: 'text-secondary',
-    children: h.Z.Messages.GLOBAL_DISCOVERY_SHOW
+    children: E.Z.Messages.GLOBAL_DISCOVERY_SHOW
   }),
-  (0, i.jsx)(u.Z, {
-    className: m.filter,
-    items: T,
-    title: g,
-    onSelect: p,
+  (0, i.jsx)(c.Z, {
+    className: h.filter,
+    items: p,
+    title: I,
+    onSelect: g,
     selected: ''.concat(n),
-    'aria-label': h.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
+    'aria-label': E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
   })
 ]
   });
