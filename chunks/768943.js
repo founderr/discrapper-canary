@@ -51,14 +51,14 @@ let n = d.get(f({
   channelId: e,
   messageId: t
 }));
-return (null == n ? void 0 : n.saveData.dueAt) == null;
+return null != n && null == n.saveData.dueAt;
   }
   isMessageReminder(e, t) {
 let n = d.get(f({
   channelId: e,
   messageId: t
 }));
-return (null == n ? void 0 : n.saveData.dueAt) != null;
+return null != n && null != n.saveData.dueAt;
   }
   hasSentNotification(e) {
 return E.has(e);

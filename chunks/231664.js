@@ -1,21 +1,21 @@
 n.d(t, {
   Z: function() {
-return o;
+return u;
   }
 });
 var i = n(848246),
-  l = n(442837),
-  r = n(358221),
-  a = n(74538),
-  s = n(557457);
+  a = n(442837),
+  s = n(361291),
+  l = n(74538),
+  r = n(557457),
+  o = n(933843),
+  c = n(37113);
 
-function o(e, t) {
-  let n = (0, l.e7)([r.Z], () => null != e ? r.Z.getStreamParticipants(e).find(e => e.user.id === t) : void 0, [
-e,
-t
-  ]);
-  if (!(0, a.So)(i.q.STREAM_HIGH_QUALITY))
-return;
-  let o = null != n ? (0, s.Wc)(n) : void 0;
-  return null != o ? ''.concat((0, s.ml)(o.maxResolution), ' ').concat((0, s.bp)(o.maxFrameRate)) : void 0;
+function u() {
+  let {
+resolution: e,
+fps: t
+  } = (0, a.e7)([s.Z], () => s.Z.getState());
+  if (!(!(0, l.So)(i.q.STREAM_HIGH_QUALITY) || (0, o.mc)(e, t)))
+return ''.concat((0, c.o6)(e), ' ').concat((0, r.bp)(t));
 }

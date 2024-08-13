@@ -141,7 +141,7 @@ let U = (0, i.jsx)(h.Tooltip, {
 return (0, i.jsx)(h.TextBadge, {
   text: U,
   className: l()(M, S.qualityIndicatorBadge, {
-    [S.qualityIndicatorBadgePremium]: b
+    [S.qualityIndicatorBadgePremium]: P && b
   }),
   color: u.Z.unsafe_rawColors.PRIMARY_500.css,
   shape: d
