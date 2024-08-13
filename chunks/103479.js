@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return f;
+return _;
   }
 });
 var r = n(735250);
@@ -9,12 +9,10 @@ var i = n(763472),
   a = n(394821),
   s = n(49012),
   o = n(591759),
-  l = n(652853),
-  u = n(475413),
-  c = n(228168),
-  d = n(689938),
-  _ = n(139665);
-async function E(e) {
+  l = n(475413),
+  u = n(689938),
+  c = n(139665);
+async function d(e) {
   let {
 activity: t,
 user: n,
@@ -37,27 +35,24 @@ if (null == l || null == l.protocol || null == l.hostname)
   } catch (e) {}
 }
 
-function f(e) {
+function _(e) {
   let {
 user: t,
 activity: n,
 onAction: i
-  } = e, {
-profileType: s
-  } = (0, l.z)();
+  } = e;
   if ((null == n ? void 0 : n.buttons) == null || n.buttons.length < 1)
 return null;
-  let o = (0, a.Z)(n);
+  let s = (0, a.Z)(n);
   return (0, r.jsx)(r.Fragment, {
-children: n.buttons.map((e, a) => (0, r.jsx)(u.tG, {
-  text: o ? d.Z.Messages.WATCH : e,
-  className: _.customButton,
+children: n.buttons.map((e, a) => (0, r.jsx)(l.tG, {
+  text: s ? u.Z.Messages.WATCH : e,
+  className: c.customButton,
   fullWidth: !0,
-  themeColor: s === c.y0.FULL_SIZE ? 'secondary' : 'primary',
   onClick: () => {
     null == i || i({
-      action: o ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON'
-    }), E({
+      action: s ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON'
+    }), d({
       user: t,
       activity: n,
       index: a
