@@ -40,6 +40,7 @@ return t;
 className: f.voiceChannel,
 children: [
   (0, r.jsx)(l.Z, {
+    showTooltip: !0,
     guild: n,
     size: l.Z.Sizes.SMOL,
     className: f.guildIcon
