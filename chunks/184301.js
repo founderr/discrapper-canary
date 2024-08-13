@@ -2,7 +2,7 @@ n.d(t, {
   Z: function() {
 return c;
   }
-}), n(47120), n(411104), n(998459);
+}), n(47120), n(411104);
 var r = n(259443),
   i = n(911284),
   a = n(598077),
@@ -40,7 +40,7 @@ e = l.id, t = l.getAvatarURL(void 0, 80), n = c;
 throw Error('Invalid arguments');
   if (null == e)
 return Promise.resolve();
-  let [d] = await Promise.allSettled([
+  let [d] = await Promise.all([
 (0, o.Z)(e, t, {
   withMutualFriends: !0,
   withMutualGuilds: !0,
@@ -48,7 +48,5 @@ return Promise.resolve();
 }),
 u(e)
   ]);
-  if ('rejected' === d.status)
-throw Error(d.reason);
-  return d.value;
+  return d;
 }
