@@ -348,7 +348,13 @@ let l = [{
     darkSVG: n(678922),
     whiteSVG: n(752561)
   },
-  enabled: !0
+  enabled: !0,
+  getPlatformUserUrl: e => {
+    let {
+      id: t
+    } = e;
+    return 'https://roblox.com/users/'.concat(encodeURIComponent(t), '/profile');
+  }
 },
 {
   type: o.ABu.PAYPAL,
