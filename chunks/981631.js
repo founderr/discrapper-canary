@@ -1062,6 +1062,7 @@ GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW: t => '/guilds/'.concat(t, '/analytics/engag
 GUILD_ANALYTICS_MEMBER_INSIGHTS: t => '/guilds/'.concat(t, '/analytics/member-insights'),
 GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW: t => '/guilds/'.concat(t, '/analytics/growth-activation/overview'),
 GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION: t => '/guilds/'.concat(t, '/analytics/growth-activation/retention'),
+GUILD_TOP_GAMES: t => '/guilds/'.concat(t, '/top-games'),
 GUILD_TOP_READ_CHANNELS: t => '/guilds/'.concat(t, '/top-read-channels'),
 EMOJI: (t, e) => '/emojis/'.concat(t, '.').concat(e),
 EMOJI_GUILD_DATA: t => '/emojis/'.concat(t, '/guild'),

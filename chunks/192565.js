@@ -60,7 +60,9 @@ return (0, i.jsx)(u.Z, {
     gameApplicationIds: e
   }),
   gameApplicationIds: n.gameApplicationIds,
-  error: null == s ? void 0 : s.gameApplicationIds
+  error: null == s ? void 0 : s.gameApplicationIds,
+  guildId: t,
+  includeSuggestedGames: !0
 });
   },
   [p.Wy.PLAYSTYLE]: function(e) {

@@ -26,7 +26,7 @@ var s = n(735250),
   O = n(981631),
   A = n(231338),
   M = n(689938),
-  D = n(867716);
+  D = n(289836);
 let v = e => [{
   section: _.ID.HEADER,
   label: M.Z.Messages.CLAN_SETTINGS_BASIC_INFO
@@ -327,7 +327,9 @@ children: [
                     description: M.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
                     onUpdateGames: w,
                     gameApplicationIds: null !== (e = U.gameApplicationIds) && void 0 !== e ? e : new Set(),
-                    error: G.gameApplicationIds
+                    error: G.gameApplicationIds,
+                    guildId: t,
+                    includeSuggestedGames: !0
                   });
                 case L.Wy.PLAYSTYLE:
                   return (0, s.jsx)(p.Z, {
