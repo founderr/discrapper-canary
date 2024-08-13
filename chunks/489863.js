@@ -76,13 +76,13 @@ body: {
   authorize: t,
   integration_type: p,
   location_context: function() {
-    var e;
-    let t = o.Z.getChannelId(),
-      n = s.Z.getChannel(t);
+    var e, t, n;
+    let r = o.Z.getChannelId(),
+      i = s.Z.getBasicChannel(r);
     return {
-      guild_id: null == n ? void 0 : n.guild_id,
-      channel_id: t,
-      channel_type: null !== (e = null == n ? void 0 : n.type) && void 0 !== e ? e : l.d4z.UNKNOWN
+      guild_id: null !== (e = null == i ? void 0 : i.guild_id) && void 0 !== e ? e : '10000',
+      channel_id: null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : '10000',
+      channel_type: null !== (n = null == i ? void 0 : i.type) && void 0 !== n ? n : l.d4z.UNKNOWN
     };
   }()
 },
