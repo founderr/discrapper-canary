@@ -83,10 +83,7 @@ let {
   savedMessages: t
 } = e;
 for (let e of (_ = new Date().getTime(), d.clear(), t))
-  d.set(f(e.saveData), e.saveData.type === o.J.REMINDER ? {
-    ...e,
-    complete: !1
-  } : e);
+  d.set(f(e.saveData), e);
 t.forEach(e => {
   e.saveData.type === o.J.REMINDER && (null != e.saveData.dueAt && e.saveData.dueAt > new Date() && E.delete(e.saveData.messageId), null != e.saveData.dueAt && e.saveData.dueAt < new Date() && E.add(e.saveData.messageId));
 });
@@ -95,28 +92,13 @@ t.forEach(e => {
 let {
   savedMessage: t
 } = e;
-d.set(f(t.saveData), t.saveData.type === o.J.REMINDER ? {
-  ...t,
-  complete: !1
-} : t);
+d.set(f(t.saveData), t);
   },
   SAVED_MESSAGE_DELETE: function(e) {
 let {
   savedMessageData: t
 } = e;
 d.delete(f(t));
-  },
-  MESSAGE_REMINDER_TOGGLE: function(e) {
-let {
-  savedMessageData: t,
-  complete: n
-} = e, r = f(t), i = d.get(r);
-if (null == i)
-  return !1;
-d.set(r, {
-  ...i,
-  complete: n
-});
   },
   MESSAGE_REMINDER_NOTIFIED: function(e) {
 let {

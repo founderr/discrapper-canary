@@ -15,8 +15,8 @@ var i = n(735250),
   _ = n(239091),
   E = n(294218),
   I = n(703656),
-  m = n(768943),
-  T = n(962796),
+  m = n(324701),
+  T = n(768943),
   h = n(695346),
   N = n(592125),
   f = n(655354),
@@ -38,11 +38,7 @@ function M(e) {
   let {
 setTab: t,
 closePopout: n
-  } = e, s = (0, c.e7)([m.Z], () => m.Z.getMessageReminders());
-  a.useEffect(() => () => {
-(0, T.M)();
-  }, []);
-  let [r, l] = a.useState(!1), o = a.useMemo(() => s.filter(e => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [s]), _ = r ? s : o;
+  } = e, s = (0, c.e7)([T.Z], () => T.Z.getMessageReminders()), [r, l] = a.useState(!1), o = a.useMemo(() => s.filter(e => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [s]), _ = r ? s : o;
   return (0, i.jsxs)('div', {
 className: R.container,
 children: [
@@ -85,24 +81,23 @@ function v(e) {
   let t, {
   messageReminder: a
 } = e,
-s = a.complete,
-l = a.saveData,
-u = a.message,
-m = (0, c.e7)([N.Z], () => N.Z.getChannel(l.channelId)),
-p = () => {
-  (0, I.uL)(S.Z5c.CHANNEL(null == m ? void 0 : m.getGuildId(), l.channelId, l.messageId));
+s = a.saveData,
+l = a.message,
+u = (0, c.e7)([N.Z], () => N.Z.getChannel(s.channelId)),
+T = () => {
+  (0, I.uL)(S.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), s.channelId, s.messageId));
 },
-g = null;
-  return (null != l.dueAt && (l.dueAt > new Date() ? (t = 'text-muted', g = A.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
-duration: o().duration(l.dueAt.getTime() - Date.now(), 'millisecond').humanize()
-  })) : (t = 'text-danger', g = A.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
-duration: o().duration(Date.now() - l.dueAt.getTime(), 'millisecond').humanize()
-  }))), null == u || null == m) ? null : (0, i.jsxs)('div', {
+p = null;
+  return (null != s.dueAt && (s.dueAt > new Date() ? (t = 'text-muted', p = A.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
+duration: o().duration(s.dueAt.getTime() - Date.now(), 'millisecond').humanize()
+  })) : (t = 'text-danger', p = A.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
+duration: o().duration(Date.now() - s.dueAt.getTime(), 'millisecond').humanize()
+  }))), null == l || null == u) ? null : (0, i.jsxs)('div', {
 className: x.container,
 children: [
   (0, i.jsx)(C.Z, {
-    channel: m,
-    gotoChannel: p,
+    channel: u,
+    gotoChannel: T,
     children: (0, i.jsxs)('div', {
       className: R.reminderActions,
       children: [
@@ -119,10 +114,10 @@ children: [
             a.saveData.notes
           ]
         }) : null,
-        null != g ? (0, i.jsx)(d.Text, {
+        null != p ? (0, i.jsx)(d.Text, {
           variant: 'text-sm/medium',
           color: t,
-          children: g
+          children: p
         }) : null,
         (0, i.jsx)(d.TooltipContainer, {
           text: A.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
@@ -133,7 +128,7 @@ children: [
               } = await n.e('6045').then(n.bind(n, 883150));
               return t => (0, i.jsx)(e, {
                 ...t,
-                message: u
+                message: l
               });
             }),
             className: R.clock,
@@ -145,34 +140,38 @@ children: [
             })
           })
         }),
-        (0, i.jsx)(d.Checkbox, {
-          type: d.Checkbox.Types.INVERTED,
-          value: s,
-          onChange: (e, t) => {
-            (0, T.Y)(l, t);
-          }
+        (0, i.jsx)(d.TooltipContainer, {
+          text: A.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
+          children: (0, i.jsx)(d.Clickable, {
+            onClick: () => (0, m.x)(s),
+            className: R.delete,
+            children: (0, i.jsx)(d.TrashIcon, {
+              size: 'custom',
+              width: 20,
+              height: 20,
+              color: 'currentColor'
+            })
+          })
         })
       ]
     })
   }),
   (0, i.jsxs)('div', {
-    className: r()(x.messageContainer, R.unloadedMessage, {
-      [R.disabledMessage]: s
-    }),
+    className: r()(x.messageContainer, R.unloadedMessage),
     children: [
       (0, i.jsx)(f.Z, {
         className: x.jumpMessageButton,
-        onJump: p
+        onJump: T
       }),
       (0, i.jsx)(E.Z, {
-        message: u,
-        channel: m,
+        message: l,
+        channel: u,
         className: x.message,
         compact: h.jU.getSetting(),
         animateAvatar: !1,
         focusProps: O,
         trackAnnouncementViews: !0
-      }, u.id)
+      }, l.id)
     ]
   })
 ]
