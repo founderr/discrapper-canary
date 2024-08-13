@@ -1,9 +1,9 @@
 n.d(t, {
+  XA: function() {
+return c;
+  },
   ep: function() {
 return d;
-  },
-  gL: function() {
-return c;
   },
   sE: function() {
 return _;
@@ -24,21 +24,25 @@ body: {
   due_at: e.dueAt
 }
   });
-  t.ok && i.Z.dispatch({
-type: 'SAVED_MESSAGE_CREATE',
-savedMessage: {
+  if (t.ok) {
+let e = {
   message: t.body.message && (0, a.e5)(t.body.message),
   saveData: (0, l.v)(t.body.save_data)
-}
-  });
+};
+return i.Z.dispatch({
+  type: 'SAVED_MESSAGE_CREATE',
+  savedMessage: e
+}), e;
+  }
 }
 async function d(e) {
-  (await r.tn.del({
-url: u.ANM.DELETE_SAVED_MESSAGE(e.channelId, e.messageId)
-  })).ok && i.Z.dispatch({
-type: 'SAVED_MESSAGE_DELETE',
-savedMessageData: e
-  });
+  if ((await r.tn.del({
+  url: u.ANM.DELETE_SAVED_MESSAGE(e.channelId, e.messageId)
+})).ok)
+return i.Z.dispatch({
+  type: 'SAVED_MESSAGE_DELETE',
+  savedMessageData: e
+}), !0;
 }
 async function _() {
   if (new Date().getTime() - o.Z.getLastFetched() < 1 * s.Z.Millis.MINUTE)

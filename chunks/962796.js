@@ -1,47 +1,26 @@
 n.d(t, {
-  HG: function() {
+  M: function() {
 return l;
   },
-  Mf: function() {
-return u;
-  },
-  Y_: function() {
-return c;
-  },
-  bn: function() {
-return o;
+  Y: function() {
+return r;
   }
 }), n(47120);
-var i = n(873011),
-  a = n(570140),
-  s = n(192720),
-  r = n(768943);
+var i = n(570140),
+  a = n(192720),
+  s = n(768943);
 
-function l(e) {
-  (0, s.gL)({
-type: i.J.REMINDER,
-...e
-  });
-}
-
-function o(e) {
-  (0, s.ep)({
-type: i.J.REMINDER,
-...e
-  });
-}
-
-function c(e, t) {
-  a.Z.dispatch({
+function r(e, t) {
+  i.Z.dispatch({
 type: 'MESSAGE_REMINDER_TOGGLE',
 savedMessageData: e,
 complete: t
   });
 }
 
-function u() {
-  let e = r.Z.getMessageReminders().filter(e => e.complete);
+function l() {
+  let e = s.Z.getMessageReminders().filter(e => e.complete);
   if (e.length > 0)
 for (let t of e)
-  o(t.saveData);
+  (0, a.ep)(t.saveData);
 }

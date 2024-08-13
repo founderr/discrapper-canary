@@ -78,6 +78,16 @@ children: [
           className: c.icon,
           color: o.tokens.colors.STATUS_POSITIVE.css
         });
+      case u.pC.BOOKMARK:
+        return (0, r.jsx)(o.BookmarkIcon, {
+          className: c.icon,
+          color: o.tokens.colors.HEADER_PRIMARY.css
+        });
+      case u.pC.CLOCK:
+        return (0, r.jsx)(o.ClockIcon, {
+          className: c.icon,
+          color: o.tokens.colors.HEADER_PRIMARY.css
+        });
       default:
         return null;
     }

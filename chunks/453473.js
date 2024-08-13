@@ -25,8 +25,8 @@ var i = n(735250),
   g = n(581883),
   S = n(592125),
   A = n(70956),
-  R = n(768943),
-  x = n(43690),
+  R = n(324701),
+  x = n(768943),
   O = n(962796),
   M = n(767893),
   v = n(74551),
@@ -54,20 +54,20 @@ closePopout: t
 var e, t;
 return null !== (t = null === (e = g.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : _.Pr.ALL;
   }), [s] = (0, d.Wu)([
-R.Z,
+x.Z,
 g.Z
   ], () => {
 var e, t;
 let n = null !== (t = null === (e = g.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : _.Pr.ALL;
 return [
-  n === _.Pr.ALL ? R.Z.getSavedMessages() : n === _.Pr.BOOKMARKS ? R.Z.getMessageBookmarks() : R.Z.getMessageReminders(),
-  R.Z.getVersion()
+  n === _.Pr.ALL ? x.Z.getSavedMessages() : n === _.Pr.BOOKMARKS ? x.Z.getMessageBookmarks() : x.Z.getMessageReminders(),
+  x.Z.getVersion()
 ];
-  }), r = (0, d.e7)([R.Z], () => R.Z.getOverdueMessageReminderCount()), [l, o] = a.useState(new Date());
+  }), r = (0, d.e7)([x.Z], () => x.Z.getOverdueMessageReminderCount()), [l, o] = a.useState(new Date());
   return a.useEffect(() => {
 let e = setInterval(() => o(new Date()), A.Z.Millis.MINUTE);
 return () => {
-  (0, O.Mf)(), clearInterval(e);
+  (0, O.M)(), clearInterval(e);
 };
   }, []), (0, i.jsx)(E.Dialog, {
 'aria-label': Z.Z.Messages.FOR_LATER,
@@ -236,7 +236,7 @@ children: [
       label: Z.Z.Messages.FOR_LATER_REMOVE,
       icon: E.TrashIcon,
       dangerous: !0,
-      onClick: () => t.saveData.type === u.J.REMINDER ? (0, O.bn)(t.saveData) : (0, x.h)(t.saveData)
+      onClick: () => (0, R.x)(t.saveData)
     }, 'delete')
   })
 ]
@@ -281,7 +281,7 @@ children: [
   (0, i.jsx)(h.sF, {
     label: Z.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
     icon: E.CheckmarkLargeIcon,
-    onClick: () => (0, O.Y_)(t.saveData, !t.complete)
+    onClick: () => (0, O.Y)(t.saveData, !t.complete)
   }, 'mark-complete'),
   (0, i.jsx)(h.sF, {
     label: Z.Z.Messages.MESSAGE_REMINDERS_EDIT,
@@ -307,7 +307,7 @@ children: [
     label: Z.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
     icon: E.TrashIcon,
     dangerous: !0,
-    onClick: () => (0, O.bn)(t.saveData)
+    onClick: () => (0, R.x)(t.saveData)
   }, 'remove-reminder')
 ]
   }) : (0, i.jsxs)(i.Fragment, {
@@ -332,10 +332,10 @@ children: [
     onClick: e => a(e)
   }, 'jump-to-message'),
   (0, i.jsx)(h.sF, {
-    label: Z.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
+    label: Z.Z.Messages.MESSAGE_BOOKMARKS_REMOVE,
     icon: E.TrashIcon,
     dangerous: !0,
-    onClick: () => (0, x.h)(t.saveData)
+    onClick: () => (0, R.x)(t.saveData)
   }, 'remove-bookmark')
 ]
   });

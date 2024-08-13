@@ -40,7 +40,7 @@ setTab: t,
 closePopout: n
   } = e, s = (0, c.e7)([m.Z], () => m.Z.getMessageReminders());
   a.useEffect(() => () => {
-(0, T.Mf)();
+(0, T.M)();
   }, []);
   let [r, l] = a.useState(!1), o = a.useMemo(() => s.filter(e => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [s]), _ = r ? s : o;
   return (0, i.jsxs)('div', {
@@ -149,7 +149,7 @@ children: [
           type: d.Checkbox.Types.INVERTED,
           value: s,
           onChange: (e, t) => {
-            (0, T.Y_)(l, t);
+            (0, T.Y)(l, t);
           }
         })
       ]

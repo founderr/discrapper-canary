@@ -12,8 +12,8 @@ var a = n(120356),
   o = n(481060),
   c = n(294218),
   u = n(703656),
-  d = n(768943),
-  _ = n(43690),
+  d = n(324701),
+  _ = n(768943),
   E = n(695346),
   I = n(592125),
   m = n(655354),
@@ -35,7 +35,7 @@ function A(e) {
   let {
 setTab: t,
 closePopout: n
-  } = e, a = (0, r.e7)([d.Z], () => d.Z.getMessageBookmarks());
+  } = e, a = (0, r.e7)([_.Z], () => _.Z.getMessageBookmarks());
   return (0, i.jsxs)('div', {
 className: p.container,
 children: [
@@ -68,13 +68,13 @@ children: null != n && null != t.message ? (0, i.jsxs)(i.Fragment, {
       gotoChannel: a,
       children: (0, i.jsx)(o.CircleIconButton, {
         className: g.closeButton,
-        tooltip: C.Z.Messages.MESSAGE_BOOKMARKS_REMOVE_BOOKMARK,
+        tooltip: C.Z.Messages.MESSAGE_BOOKMARKS_REMOVE,
         color: o.CircleIconButtonColors.TERTIARY,
         icon: (0, i.jsx)(o.XSmallIcon, {
           size: 'xs',
           color: 'currentColor'
         }),
-        onClick: () => (0, _.h)(t.saveData)
+        onClick: () => (0, d.x)(t.saveData)
       })
     }),
     (0, i.jsxs)('div', {

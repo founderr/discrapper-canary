@@ -1,31 +1,33 @@
-a.r(n), a.d(n, {
+s.r(n), s.d(n, {
   default: function() {
-return _;
+return M;
   }
 });
-var s = a(735250);
-a(470079);
-var i = a(913527),
-  t = a.n(i),
-  d = a(481060),
-  l = a(239091),
-  r = a(235047),
-  E = a(962796),
-  o = a(689938);
+var t = s(735250);
+s(470079);
+var a = s(913527),
+  i = s.n(a),
+  r = s(481060),
+  l = s(239091),
+  u = s(324701),
+  d = s(898150),
+  o = s(689938);
 
-function _(e) {
+function M(e) {
   let {
 message: n
-  } = e, a = (0, r.W)(n, e => (0, E.HG)({
-channelId: n.channel_id,
-messageId: n.id,
-dueAt: t()().add(e, 'millisecond').toDate()
-  }));
-  return (0, s.jsx)(d.Menu, {
+  } = e, s = (0, d.useMessageReminderDurationSuggestions)({
+onSelectDuration: e => (0, u.z)({
+  channelId: n.channel_id,
+  messageId: n.id,
+  dueAt: i()().add(e, 'millisecond').toDate()
+})
+  });
+  return (0, t.jsx)(r.Menu, {
 navId: 'message-reminder-snooze',
 onClose: l.Zy,
 'aria-label': o.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
 onSelect: () => {},
-children: a
+children: s
   });
 }

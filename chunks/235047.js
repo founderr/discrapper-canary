@@ -1,9 +1,6 @@
 t.d(n, {
-  W: function() {
-return m;
-  },
   Z: function() {
-return I;
+return M;
   }
 });
 var i = t(735250);
@@ -11,51 +8,46 @@ t(470079);
 var a = t(913527),
   l = t.n(a),
   r = t(442837),
-  o = t(481060),
-  s = t(768943),
-  u = t(962796),
+  s = t(481060),
+  o = t(324701),
+  u = t(768943),
   d = t(742989),
-  c = t(550727),
-  E = t(448239),
-  M = t(689938);
+  c = t(898150),
+  E = t(689938);
 
-function I(e) {
+function M(e) {
   let {
 showReminders: n
   } = d.Z.useExperiment({
 location: 'use_message_reminders_item'
   }, {
 autoTrackExposure: !1
-  }), t = (0, r.e7)([s.Z], () => s.Z.isMessageReminder(e.channel_id, e.id)), a = m(e, n => (0, u.HG)({
-channelId: e.channel_id,
-messageId: e.id,
-dueAt: l()().add(n, 'millisecond').toDate()
-  }));
-  return n ? (0, i.jsx)(o.MenuItem, {
-id: 'mark-todo',
-label: t ? M.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : M.Z.Messages.MESSAGE_REMINDERS_REMIND_ME,
-icon: t ? (0, o.makeIconCompat)(E.Z) : void 0,
-action: () => t ? (0, u.bn)({
+  }), t = (0, r.e7)([u.Z], () => u.Z.isMessageReminder(e.channel_id, e.id)), a = (0, c.useMessageReminderDurationSuggestions)({
+onSelectDuration: n => (0, o.z)({
   channelId: e.channel_id,
-  messageId: e.id
-}) : (0, u.HG)({
-  channelId: e.channel_id,
-  messageId: e.id
-}),
-children: t ? null : a
-  }) : null;
-}
-
-function m(e, n) {
-  return c.B.map(e => {
-let {
-  duration: t,
-  getLabel: a
-} = e;
-return (0, i.jsx)(o.MenuItem, {
-  id: 'mark-todo-'.concat(t),
-  label: a(),
-  action: () => n(t)
-}, t);
+  messageId: e.id,
+  dueAt: l()().add(n, 'millisecond').toDate(),
+  displayToast: !0
+})
   });
+  return n ? (0, i.jsxs)(s.MenuItem, {
+id: 'mark-todo',
+label: t ? E.Z.Messages.MESSAGE_REMINDERS_EDIT : E.Z.Messages.MESSAGE_REMINDERS_CREATE,
+children: [
+  (0, i.jsx)(s.MenuGroup, {
+    label: E.Z.Messages.MESSAGE_REMINDERS_REMIND_ME,
+    children: a
+  }),
+  t ? (0, i.jsx)(s.MenuItem, {
+    id: 'remove-reminder',
+    label: E.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
+    action: () => (0, o.z)({
+      channelId: e.channel_id,
+      messageId: e.id,
+      displayToast: !0
+    }),
+    color: 'danger'
+  }) : null
+]
+  }) : null;
 }
