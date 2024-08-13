@@ -20,8 +20,8 @@ var n = s(735250),
   x = s(146085),
   f = s(192079),
   C = s(777036),
-  I = s(277053),
-  M = s(271383),
+  M = s(277053),
+  I = s(271383),
   R = s(430824),
   Z = s(496675),
   v = s(594174),
@@ -115,7 +115,7 @@ renderRow: function(e) {
   }
   if (null == p)
     return null;
-  let I = !f && null == a && null != p.id;
+  let M = !f && null == a && null != p.id;
   return (0, n.jsxs)(T.Z, {
     justify: T.Z.Justify.BETWEEN,
     align: T.Z.Align.CENTER,
@@ -138,7 +138,7 @@ renderRow: function(e) {
         children: (0, n.jsx)(o.Clickable, {
           onClick: () => {
             var e, s, n;
-            return I && null != p && (e = p.id, s = p.name, n = p.rowType, void d.Z.show({
+            return M && null != p && (e = p.id, s = p.name, n = p.rowType, void d.Z.show({
               title: F.Z.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
               body: F.Z.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({
                 name: s
@@ -153,7 +153,7 @@ renderRow: function(e) {
               }(e, n)
             }));
           },
-          'aria-disabled': !I,
+          'aria-disabled': !M,
           'aria-label': F.Z.Messages.REMOVE,
           children: (0, n.jsx)(o.CircleXIcon, {
             size: 'md',
@@ -192,7 +192,7 @@ function H(e) {
 guild: t,
 channel: l,
 permissionUpdates: a
-  } = e, d = (0, r.e7)([R.Z], () => R.Z.getRoles(t.id)), c = L.RZ(t, d, l, x.yP, a), u = (0, r.e7)([M.ZP], () => L.cR(M.ZP.getMemberIds(t.id), l, t, x.yP, a)), h = (0, S.nG)(l.id);
+  } = e, d = (0, r.e7)([R.Z], () => R.Z.getRoles(t.id)), c = L.RZ(t, d, l, x.yP, a), u = (0, r.e7)([I.ZP], () => L.cR(I.ZP.getMemberIds(t.id), l, t, x.yP, a)), h = (0, S.nG)(l.id);
 
   function m() {
 (0, o.openModalLazy)(async () => {
@@ -399,25 +399,25 @@ children: [
   });
 }
 t.Z = r.ZP.connectStores([
-  I.Z,
+  M.Z,
   Z.Z,
-  M.ZP,
+  I.ZP,
   R.Z
 ], () => {
   let e;
-  let t = I.Z.channel,
-s = I.Z.category,
+  let t = M.Z.channel,
+s = M.Z.category,
 n = [],
 l = [],
 a = {},
 i = !1;
   if (null != t) {
 e = R.Z.getGuild(t.getGuildId());
-let s = M.ZP.getMemberIds(null == e ? void 0 : e.id);
+let s = I.ZP.getMemberIds(null == e ? void 0 : e.id);
 if (null != e) {
   let r = R.Z.getRoles(e.id);
-  a = I.Z.editedPermissionIds.reduce((e, t) => {
-    let s = I.Z.getPermissionOverwrite(t);
+  a = M.Z.editedPermissionIds.reduce((e, t) => {
+    let s = M.Z.getPermissionOverwrite(t);
     return null != s && (e[t] = s), e;
   }, {}), n = L.kA(e, r, t, t.accessPermissions, a), l = L.cR(s, t, e, t.accessPermissions, a), i = L.Yk(t, a);
 }
@@ -430,7 +430,7 @@ filteredMembers: l,
 filteredRoles: n,
 guild: e,
 isPrivateGuildChannel: i,
-locked: I.Z.locked,
+locked: M.Z.locked,
 permissionUpdates: a
   };
 })(function(e) {

@@ -24,8 +24,8 @@ var n = s(735250),
   x = s(388610),
   f = s(592125),
   C = s(496675),
-  I = s(699516),
-  M = s(594174),
+  M = s(699516),
+  I = s(594174),
   R = s(585483),
   Z = s(787263),
   v = s(975316),
@@ -104,14 +104,14 @@ return null == l ? null : (0, n.jsx)(c.ZP, {
               color: 'currentColor',
               className: D.channelIcon
             }) : null,
-            (0, m.F6)(t, M.default, I.Z),
+            (0, m.F6)(t, I.default, M.Z),
             null != s ? (0, n.jsx)(i.Text, {
               tag: 'span',
               variant: 'text-xs/semibold',
               color: 'header-secondary',
               lineClamp: 1,
               className: D.category,
-              children: (0, m.F6)(s, M.default, I.Z)
+              children: (0, m.F6)(s, I.default, M.Z)
             }) : null
           ]
         }) : b.Z.Messages.CHANNEL_SETTINGS
