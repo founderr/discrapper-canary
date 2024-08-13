@@ -1,9 +1,9 @@
 n.d(t, {
   B: function() {
-return d;
+return _;
   },
   y: function() {
-return c;
+return d;
   }
 });
 var r = n(735250);
@@ -13,23 +13,26 @@ var i = n(278074),
   s = n(481060),
   o = n(26033),
   l = n(594174),
-  u = n(689938);
-
-function c(e) {
-  return (0, i.EQ)(e).when(o.dX, () => u.Z.Messages.USER_ACTIVITY_CLEAR_GAME_HISTORY).when(o.y0, () => u.Z.Messages.USER_ACTIVITY_CLEAR_WATCH_HISTORY).when(o.dU, () => u.Z.Messages.USER_ACTIVITY_CLEAR_LISTENING_HISTORY).otherwise(() => null);
-}
+  u = n(324745),
+  c = n(689938);
 
 function d(e) {
+  return (0, i.EQ)(e).when(o.dX, () => c.Z.Messages.USER_ACTIVITY_CLEAR_GAME_HISTORY).when(o.y0, () => c.Z.Messages.USER_ACTIVITY_CLEAR_WATCH_HISTORY).when(o.dU, () => c.Z.Messages.USER_ACTIVITY_CLEAR_LISTENING_HISTORY).otherwise(() => null);
+}
+
+function _(e) {
   let {
 user: t,
 entry: i,
 display: o,
-onAction: u,
-onClose: d
-  } = e, _ = (0, a.e7)([l.default], () => l.default.getCurrentUser());
-  if (t.id !== (null == _ ? void 0 : _.id) || 'live' === o || null == i)
+onAction: c,
+onClose: _
+  } = e, E = (0, u.Z)({
+onClose: _
+  }), f = (0, a.e7)([l.default], () => l.default.getCurrentUser());
+  if (t.id !== (null == f ? void 0 : f.id) || 'live' === o || null == i)
 return null;
-  let E = () => {
+  let h = () => {
 (0, s.openModalLazy)(async () => {
   let {
     default: e
@@ -37,18 +40,19 @@ return null;
   return n => (0, r.jsx)(e, {
     entry: i,
     user: t,
-    onAction: u,
+    onAction: c,
+    onOpenGameSettings: E,
     ...n
   });
-}), null == d || d();
+}), null == _ || _();
   };
   return (0, r.jsx)(s.MenuItem, {
 id: 'delete-entry-history',
-label: c(i),
+label: d(i),
 action: () => {
-  null == u || u({
+  null == c || c({
     action: 'PRESS_DELETE_HISTORY_MENU_ITEM'
-  }), E();
+  }), h();
 },
 color: 'danger'
   });

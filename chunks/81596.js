@@ -23,8 +23,9 @@ user: n,
 entry: e,
 transitionState: C,
 onAction: h,
-onClose: S
-  } = t, [f, I] = (0, s.Wu)([d.Z], () => [
+onClose: S,
+onOpenGameSettings: f
+  } = t, [I, L] = (0, s.Wu)([d.Z], () => [
 d.Z.isDeletingEntryHistory,
 d.Z.deleteOutboxEntryError
   ]);
@@ -35,7 +36,7 @@ children: [
   (0, o.jsxs)(i.ModalContent, {
     className: T.content,
     children: [
-      null != I ? (0, o.jsxs)('div', {
+      null != L ? (0, o.jsxs)('div', {
         className: T.error,
         children: [
           (0, o.jsx)(i.CircleXIcon, {
@@ -56,7 +57,10 @@ children: [
         tag: 'span',
         children: R.Z.Messages.USER_ACTIVITY_CLEAR_HISTORY_DISCLAIMER.format({
           settingsHook: (t, n) => {
-            let r = (0, _.C)(e);
+            let r = (0, _.C)({
+              entry: e,
+              onOpenGameSettings: f
+            });
             return (0, o.jsx)(i.Anchor, {
               onClick: () => {
                 null == h || h({
@@ -80,7 +84,7 @@ children: [
     className: T.footer,
     children: [
       (0, o.jsx)(i.Button, {
-        disabled: f,
+        disabled: I,
         color: i.ButtonColors.RED,
         size: i.ButtonSizes.SMALL,
         onClick: () => {
@@ -88,7 +92,7 @@ children: [
             action: 'PRESS_CLEAR_HISTORY_BUTTON'
           }), (0, c.CV)(e, n.id, S);
         },
-        children: null != I ? R.Z.Messages.RETRY : R.Z.Messages.CLEAR
+        children: null != L ? R.Z.Messages.RETRY : R.Z.Messages.CLEAR
       }),
       (0, o.jsx)(i.Button, {
         onClick: S,
