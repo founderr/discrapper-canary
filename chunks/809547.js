@@ -18,11 +18,9 @@ categoryId: i,
 integrationType: a,
 minUserInstallCommandCount: s,
 excludeAppsWithCustomInstallUrl: o,
-excludeNonEmbeddedApps: l,
-excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
-source: c = d.F.APP_DIRECTORY
+source: l = d.F.APP_DIRECTORY
   } = e;
-  return 'query:\''.concat(t, '\' guildId:').concat(n, ' page:').concat(r, ' categoryId:').concat(i, ' integrationType:').concat(a, ' minUserInstallCommandCount:').concat(s, ' excludeAppsWithCustomInstallUrl:').concat(o, ' excludeNonEmbeddedApps:').concat(l, ' excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:').concat(u, ' source:').concat(c, ' ');
+  return 'query:\''.concat(t, '\' guildId:').concat(n, ' page:').concat(r, ' categoryId:').concat(i, ' integrationType:').concat(a, ' minUserInstallCommandCount:').concat(s, ' excludeAppsWithCustomInstallUrl:').concat(o, ' source:').concat(l);
 }
 (r = o || (o = {}))[r.FETCHING = 0] = 'FETCHING', r[r.FETCHED = 1] = 'FETCHED', r[r.ERROR = 2] = 'ERROR';
 let h = new(c())({
@@ -39,10 +37,8 @@ let {
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  excludeNonEmbeddedApps: l,
-  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
-  source: c
-} = e, d = f({
+  source: l
+} = e, u = f({
   query: t,
   guildId: n,
   page: r,
@@ -50,11 +46,9 @@ let {
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  excludeNonEmbeddedApps: l,
-  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
-  source: c
+  source: l
 });
-return h.get(d);
+return h.get(u);
   }
   getFetchState(e) {
 let {
@@ -65,9 +59,7 @@ let {
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  excludeNonEmbeddedApps: l,
-  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
-  source: c
+  source: l
 } = e;
 return p[f({
   query: t,
@@ -77,9 +69,7 @@ return p[f({
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  excludeNonEmbeddedApps: l,
-  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
-  source: c
+  source: l
 })];
   }
 }
