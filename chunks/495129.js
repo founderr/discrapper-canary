@@ -35,12 +35,12 @@ let {
   rawName: t
 } = e;
 return 'guild_id' === t;
-  })) || void 0 === t ? void 0 : t.rawValue, b = null === (R = L.embeds[0]) || void 0 === R ? void 0 : null === (A = R.fields) || void 0 === A ? void 0 : null === (S = A.find(e => {
+  })) || void 0 === t ? void 0 : t.rawValue, D = null === (R = L.embeds[0]) || void 0 === R ? void 0 : null === (A = R.fields) || void 0 === A ? void 0 : null === (S = A.find(e => {
 let {
   rawName: t
 } = e;
 return 'channel_id' === t;
-  })) || void 0 === S ? void 0 : S.rawValue, D = (0, r.e7)([T.Z], () => T.Z.getGuild(P)), j = (0, r.e7)([m.Z], () => m.Z.getChannel(b)), U = (0, r.e7)([h.default], () => h.default.getCurrentUser()), y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)), B = null === (x = Z.recipients) || void 0 === x ? void 0 : x.find(e => e !== L.author.id), k = (0, r.e7)([h.default], () => null != B ? h.default.getUser(B) : null), G = (0, d.ZP)(L), F = (0, f._T)(Z.getGuildId(), Z.id, k), w = (0, r.Wu)([N.ZP], () => null != j ? N.ZP.getVoiceStatesForChannel(j) : [], [j]), V = w.some(e => e.user.id === (null == U ? void 0 : U.id)), H = null === (v = L.embeds[0]) || void 0 === v ? void 0 : null === (M = v.fields) || void 0 === M ? void 0 : null === (O = M.find(e => {
+  })) || void 0 === S ? void 0 : S.rawValue, b = (0, r.e7)([T.Z], () => T.Z.getGuild(P)), j = (0, r.e7)([m.Z], () => m.Z.getChannel(D)), U = (0, r.e7)([h.default], () => h.default.getCurrentUser()), y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)), B = null === (x = Z.recipients) || void 0 === x ? void 0 : x.find(e => e !== L.author.id), k = (0, r.e7)([h.default], () => null != B ? h.default.getUser(B) : null), G = (0, d.ZP)(L), F = (0, f._T)(Z.getGuildId(), Z.id, k), w = (0, r.Wu)([N.ZP], () => null != j ? N.ZP.getVoiceStatesForChannel(j) : [], [j]), V = w.some(e => e.user.id === (null == U ? void 0 : U.id)), H = null === (v = L.embeds[0]) || void 0 === v ? void 0 : null === (M = v.fields) || void 0 === M ? void 0 : null === (O = M.find(e => {
 let {
   rawName: t
 } = e;
@@ -49,7 +49,7 @@ return 'voice_user_ids' === t;
 username: F
   }) : p.Z.Messages.WAVED_AT_YOU.format({
 username: G.nick
-  }), z = null != D && null != j, Q = null;
+  }), z = null != b && null != j, Q = null;
   Q = z ? y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({
 channelHook: (e, t) => (0, i.jsx)(_.Z, {
   channel: null != j ? j : void 0
@@ -108,7 +108,7 @@ children: [
       (0, i.jsxs)(l.Button, {
         color: l.Button.Colors.BRAND,
         onClick: () => {
-          null != b && null != P && ((0, I.uL)(C.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
+          null != D && null != P && ((0, I.uL)(C.Z5c.CHANNEL(P, D)), c.default.selectVoiceChannel(D));
         },
         className: g.button,
         innerClassName: g.buttonInner,

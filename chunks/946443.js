@@ -40,9 +40,9 @@ closePopout: x,
 badgeState: M
   } = e, v = a.useRef(null), [L, Z] = (0, g.ZP)(v), {
 loadState: P,
-channels: b
+channels: D
   } = L, {
-maybeLoadMore: D,
+maybeLoadMore: b,
 markAllRead: j
   } = Z;
   (function(e, t, n) {
@@ -93,7 +93,7 @@ E.Z.unsubscribe('CONNECTION_OPEN', x);
   }), [x]));
   let U = (0, u.e7)([I.Z], () => I.Z.messageGroupSpacing),
 y = (0, m.Z)('unreads', v);
-  if (0 === b.length) {
+  if (0 === D.length) {
 var B;
 return (0, i.jsxs)('div', {
   className: R.container,
@@ -140,13 +140,13 @@ children: [
             v.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null;
           },
           ...a,
-          onScroll: P === g.jd.Done ? void 0 : D,
+          onScroll: P === g.jd.Done ? void 0 : b,
           className: R.scroller,
           children: [
             s ? (0, i.jsx)(O, {
               setSeenTutorial: l
             }) : null,
-            (0, p.Z)(b, Z, n),
+            (0, p.Z)(D, Z, n),
             P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, {
               className: R.spinner
             })

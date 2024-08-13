@@ -106,13 +106,13 @@ return {
   }, [s])), {
 isTruncated: M,
 ExpandableTextContainer: v
-  } = (0, C.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), b = (0, c.Z)('(max-width: 1439px)'), {
-selectedTab: D,
+  } = (0, C.s)(), L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [Z, P] = a.useState(1), D = (0, c.Z)('(max-width: 1439px)'), {
+selectedTab: b,
 isPhantomPreview: j
-  } = (0, p.m)(), U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
+  } = (0, p.m)(), U = b === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, y = L ? (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(v, {
-    lineClamp: b || 2 === Z ? 2 : 3,
+    lineClamp: D || 2 === Z ? 2 : 3,
     children: (0, i.jsx)(o.Text, {
       variant: 'text-sm/normal',
       color: 'text-normal',

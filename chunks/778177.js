@@ -29,8 +29,8 @@ var i = n(735250),
   L = n(585483),
   Z = n(63063),
   P = n(405656),
-  b = n(51144),
-  D = n(854709),
+  D = n(51144),
+  b = n(854709),
   j = n(981631),
   U = n(689938),
   y = n(999969);
@@ -61,7 +61,7 @@ if (null == l)
 let c = v.default.getUser(l.id),
   u = g.Z.getChannel(e),
   d = (null == u ? void 0 : u.isPrivate()) ? A.Z.getNickname(l.id) : null,
-  _ = null !== (s = null !== (a = S.ZP.getNick(e, l.id)) && void 0 !== a ? a : d) && void 0 !== s ? s : b.ZP.getName(l),
+  _ = null !== (s = null !== (a = S.ZP.getNick(e, l.id)) && void 0 !== a ? a : d) && void 0 !== s ? s : D.ZP.getName(l),
   E = null !== (r = null == c ? void 0 : c.getAvatarURL(e, 20)) && void 0 !== r ? r : l.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
 return [
   (0, i.jsx)('img', {
@@ -75,7 +75,7 @@ return [
   }, 'display-nick-'.concat(t, '-').concat(l.id)),
   (0, i.jsx)('span', {
     className: y.displayUsername,
-    children: b.ZP.getUserTag(l, {
+    children: D.ZP.getUserTag(l, {
       identifiable: M.Z.enabled && M.Z.hidePersonalInformation ? 'never' : 'always'
     })
   }, 'display-username-'.concat(t, '-').concat(l.id))
@@ -352,7 +352,7 @@ return (0, i.jsx)(h.Z, {
     searchEverywhere: !0
   }),
   renderNoResults: () => null,
-  searchFavorites: s === j.I_8 && (0, D.X)()
+  searchFavorites: s === j.I_8 && (0, b.X)()
 });
   }
   constructor(...e) {

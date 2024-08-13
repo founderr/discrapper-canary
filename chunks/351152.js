@@ -20,10 +20,10 @@ var s = t(120356),
   g = t(382182),
   C = t(148381),
   h = t(689938),
-  Z = t(458623),
+  I = t(458623),
   N = t(544347);
 
-function I(e) {
+function Z(e) {
   let {
 guildId: n,
 onClick: t
@@ -65,12 +65,12 @@ onSelectGuild: n
   } = e, t = (0, o.e7)([_.ZP], () => _.ZP.getGuildFolders());
   return (0, l.jsx)(C.Z, {
 title: h.Z.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
-scrollerClassName: a()(N.guildScroller, Z.marginBottom),
+scrollerClassName: a()(N.guildScroller, I.marginBottom),
 children: i().flatMap(t, e => {
   let {
     guildIds: t
   } = e;
-  return t.map(e => (0, l.jsx)(I, {
+  return t.map(e => (0, l.jsx)(Z, {
     guildId: e,
     onClick: n
   }, e));

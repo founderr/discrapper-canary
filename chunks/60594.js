@@ -17,9 +17,9 @@ var l, s, a = t(735250),
   g = t(812206),
   C = t(600164),
   h = t(313201),
-  Z = t(594190),
+  I = t(594190),
   N = t(998594),
-  I = t(751571),
+  Z = t(751571),
   x = t(361291),
   f = t(592125),
   R = t(430824),
@@ -63,9 +63,9 @@ soundshareEnabled: et
 T.Z,
 f.Z
   ], () => f.Z.getChannel(T.Z.getVoiceChannelId())), es = (0, u.e7)([
-Z.ZP,
+I.ZP,
 L.Z
-  ], () => (0, M.isWindows)() ? (0, G.Z)(Z.ZP, L.Z) : null), ea = (0, u.e7)([v.default], () => {
+  ], () => (0, M.isWindows)() ? (0, G.Z)(I.ZP, L.Z) : null), ea = (0, u.e7)([v.default], () => {
 let e = v.default.getCurrentUser();
 return o()(null != e, 'GoLiveModal: user cannot be undefined'), e;
   }), er = null !== (n = null == el ? void 0 : el.getGuildId()) && void 0 !== n ? n : J, ei = (0, u.e7)([R.Z], () => {
@@ -85,9 +85,9 @@ autoTrackExposure: !0
   }).enableSystemPicker;
   (0, D.UB)(), $ !== B.tI.PRESET_CUSTOM && (ee = eo, en = ec), !(0, j.Z)($, ee, en, ea, ei) && (ee = eo, en = ec);
   let e_ = (0, h.Dt)();
-  let [eS, eg] = r.useState((F = K, z = Y, F ? 0 : z ? 2 : 3)), [eC, eh] = r.useState(null), [eZ, eN] = r.useState(!1), [eI, ex] = r.useState(null), [ef, eR] = r.useState(null), [eA, eT] = r.useState(null), [ev, eL] = r.useState($), [ep, eM] = r.useState(ee), [eO, ej] = r.useState(en), [eP, eD] = r.useState(et), [eG, eU] = r.useState(null != J ? J : null), eb = null !== (s = null == el ? void 0 : el.id) && void 0 !== s ? s : eI;
+  let [eS, eg] = r.useState((F = K, z = Y, F ? 0 : z ? 2 : 3)), [eC, eh] = r.useState(null), [eI, eN] = r.useState(!1), [eZ, ex] = r.useState(null), [ef, eR] = r.useState(null), [eA, eT] = r.useState(null), [ev, eL] = r.useState($), [ep, eM] = r.useState(ee), [eO, ej] = r.useState(en), [eP, eD] = r.useState(et), [eG, eU] = r.useState(null != J ? J : null), eb = null !== (s = null == el ? void 0 : el.id) && void 0 !== s ? s : eZ;
   r.useEffect(() => {
-let e = (0, M.isWindows)() ? (0, G.Z)(Z.ZP, L.Z) : null,
+let e = (0, M.isWindows)() ? (0, G.Z)(I.ZP, L.Z) : null,
   n = (null == e ? void 0 : e.id) != null ? g.Z.getApplication(e.id) : null;
 p.default.track(V.rMx.OPEN_MODAL, {
   type: 'Go Live Modal',
@@ -102,7 +102,7 @@ p.default.track(V.rMx.OPEN_MODAL, {
 ! function() {
   var e, n;
   o()(null != es || null != ef, 'got nothing to stream');
-  let t = null !== (e = null == el ? void 0 : el.id) && void 0 !== e ? e : eI;
+  let t = null !== (e = null == el ? void 0 : el.id) && void 0 !== e ? e : eZ;
   o()(null != t, 'Received null target channel ID');
   let l = f.Z.getChannel(t),
     s = null !== (n = null == l ? void 0 : l.getGuildId()) && void 0 !== n ? n : J;
@@ -116,7 +116,7 @@ p.default.track(V.rMx.OPEN_MODAL, {
     frameRate: i,
     soundshareEnabled: eP
   });
-  let c = (0, k.Z)(es, ef, Z.ZP.getRunningGames()),
+  let c = (0, k.Z)(es, ef, I.ZP.getRunningGames()),
     u = !(0, M.isWindows)() || null == c || (null == ef ? void 0 : ef.id.startsWith('camera:')) || null == c ? null : c.pid;
   (0, _.WH)(s, t, {
     pid: u,
@@ -125,7 +125,7 @@ p.default.track(V.rMx.OPEN_MODAL, {
     audioSourceId: eA,
     sound: eP
   }), !eE && (async () => {
-    !await I.Z.hasPermission(y.Eu.SCREEN_RECORDING, {
+    !await Z.Z.hasPermission(y.Eu.SCREEN_RECORDING, {
       showAuthorizationError: !1
     }) && m.Z.show({
       title: W.Z.Messages.WARNING_SCREEN_RECORDING_PERMISSION_TITLE,
@@ -156,7 +156,7 @@ ev
 var n, l, s;
 if (e.preventDefault(), 2 === eS || 1 === eS)
   return eg(3);
-let r = (0, k.Z)(es, ef, Z.ZP.getRunningGames()),
+let r = (0, k.Z)(es, ef, I.ZP.getRunningGames()),
   i = O.ZP.supportsFeature(V.eRX.ELEVATED_HOOK) && (null == r ? void 0 : r.elevated);
 if ((0, M.isMac)() && null != ef && (null === (n = ef.id) || void 0 === n ? void 0 : n.startsWith('screen'))) {
   let e = await A.Z.getMediaEngine().getDesktopSources(),
@@ -305,13 +305,13 @@ eQ = (0, a.jsxs)(d.Slides, {
       children: (0, a.jsx)('div', {
         className: H.modalSize,
         children: (0, a.jsx)(U.Z, {
-          selectedChannelId: null !== (i = null == el ? void 0 : el.id) && void 0 !== i ? i : eI,
+          selectedChannelId: null !== (i = null == el ? void 0 : el.id) && void 0 !== i ? i : eZ,
           selectedPreset: ev,
           selectedResolution: ep,
           selectedSource: ef,
           selectedFPS: eO,
           sound: eP,
-          sourceChanged: eZ,
+          sourceChanged: eI,
           selectSource: Y,
           onChangeSelectedFPS: e => ek(ev, ep, e),
           onChangeSelectedResolution: e => ek(ev, e, eO),
@@ -347,7 +347,7 @@ eX = function(e, n, t, l) {
     default:
       return null;
   }
-}(eS, K, Y, eZ),
+}(eS, K, Y, eI),
 eq = 3 !== eS || null == ef && null == es || null == eb,
 e$ = r.useCallback(() => {
   null != eX && (D.ZP.releasePickerStream(), eg(eX));

@@ -19,9 +19,9 @@ var l = t(735250),
   g = t(594190),
   C = t(925329),
   h = t(565138),
-  Z = t(695346),
+  I = t(695346),
   N = t(494620),
-  I = t(592125),
+  Z = t(592125),
   x = t(650774),
   f = t(430824),
   R = t(131951),
@@ -159,8 +159,8 @@ guildId: n
   } = e, t = (0, i.e7)([x.Z], () => {
 var e;
 return null !== (e = x.Z.getMemberCount(n)) && void 0 !== e ? e : 0;
-  }), a = Z.eo.useSetting(), c = s.useCallback((e, n) => {
-Z.eo.updateSetting(n), L.default.track(y.rMx.NOTIFY_STREAM_SETTING_UPDATE, {
+  }), a = I.eo.useSetting(), c = s.useCallback((e, n) => {
+I.eo.updateSetting(n), L.default.track(y.rMx.NOTIFY_STREAM_SETTING_UPDATE, {
   value: n
 });
   }, []);
@@ -212,7 +212,7 @@ selectedGuildId: S,
 targetGuildPremiumTier: g,
 selectSource: C,
 selectGuild: h,
-sound: Z,
+sound: I,
 onClose: x,
 onChangeSelectedFPS: f,
 onChangeSelectedResolution: v,
@@ -225,8 +225,8 @@ onChangeSound: B,
 isAnimationDone: V
   } = e, z = (0, i.e7)([
 A.Z,
-I.Z
-  ], () => I.Z.getChannel(A.Z.getVoiceChannelId())), q = (0, i.e7)([j.Z], () => j.Z.GPUDriversOutdated), $ = (0, i.e7)([j.Z], () => j.Z.problematicGPUDriver), ee = (0, i.e7)([T.default], () => T.default.getCurrentUser()), en = (0, m.Go)(), et = (0, m.Zq)({
+Z.Z
+  ], () => Z.Z.getChannel(A.Z.getVoiceChannelId())), q = (0, i.e7)([j.Z], () => j.Z.GPUDriversOutdated), $ = (0, i.e7)([j.Z], () => j.Z.problematicGPUDriver), ee = (0, i.e7)([T.default], () => T.default.getCurrentUser()), en = (0, m.Go)(), et = (0, m.Zq)({
 autoTrackExposure: !en
   }), el = (0, D.Z)();
   null != n && n.id.startsWith('screen') && !R.Z.supportsScreenSoundshare() && (el = H.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
@@ -256,7 +256,7 @@ children: [
         text: el
       }) : null,
       null != n && null == el ? (0, l.jsx)(X, {
-        enabled: Z,
+        enabled: I,
         onChange: B,
         screen: n.id.startsWith('screen')
       }) : null

@@ -38,10 +38,10 @@ function P(e) {
   var t, n, r, f;
   let {
 applicationId: P,
-message: b
+message: D
   } = e, {
-analyticsLocations: D
-  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), j = (0, c.O)(), U = b.channel_id, y = (0, s.e7)([m.Z], () => m.Z.getChannel(U), [U]), B = null == y ? void 0 : y.guild_id, k = null != y && (y.isGuildVoice() || y.isPrivate()), G = (0, s.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(U)), F = (null == G ? void 0 : G.applicationId) === P, [w] = (0, _.Z)([
+analyticsLocations: b
+  } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK), j = (0, c.O)(), U = D.channel_id, y = (0, s.e7)([m.Z], () => m.Z.getChannel(U), [U]), B = null == y ? void 0 : y.guild_id, k = null != y && (y.isGuildVoice() || y.isPrivate()), G = (0, s.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(U)), F = (null == G ? void 0 : G.applicationId) === P, [w] = (0, _.Z)([
 P,
 null !== (n = null == G ? void 0 : G.applicationId) && void 0 !== n ? n : ''
   ]), V = (0, S.ZP)(null !== (r = null == w ? void 0 : w.maxParticipants) && void 0 !== r ? r : 0), [H] = (0, s.Wu)([C.ZP], () => k ? C.ZP.getEmbeddedActivitiesForChannel(U).filter(e => e.applicationId === P) : [], [
@@ -59,14 +59,14 @@ if (k) {
       applicationId: H.applicationId,
       activityChannelId: U,
       locationObject: j.location,
-      analyticsLocations: D
+      analyticsLocations: b
     });
   else {
     let e = y.isPrivate() && !I.Z.isCallActive(U),
       t = async () => await (0, g.Z)({
         targetApplicationId: P,
         channelId: U,
-        analyticsLocations: D
+        analyticsLocations: b
       });
     e ? o.Z.show({
       title: v.Z.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
@@ -83,11 +83,11 @@ if (k) {
     openInPopout: z,
     initialSelectedApplicationId: P,
     initialSlide: O.ag.SELECT_CHANNEL,
-    analyticsLocations: D
+    analyticsLocations: b
   });
   };
   return null != w && (0, h.yE)(w.flags, M.udG.EMBEDDED) ? (0, i.jsx)(d.Gt, {
-value: D,
+value: b,
 children: (0, i.jsxs)('div', {
   className: L.container,
   children: [

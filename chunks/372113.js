@@ -107,8 +107,8 @@ isFocused: o,
 isQuestExpired: I,
 isExpanded: C,
 isAnimating: v,
-contentPosition: b
-  } = e, D = (0, E._Q)(t), j = D >= E.OH.ACCEPTED, U = D >= E.OH.COMPLETED, y = D >= E.OH.CLAIMED, B = (0, T.Xv)(t.config), k = (0, S.uq)(n), G = n === m.jn.QUESTS_EMBED, F = C || v, w = j && !y && k, V = (0, E.t5)(t, R.dr.QUESTS_CARD, n), {
+contentPosition: D
+  } = e, b = (0, E._Q)(t), j = b >= E.OH.ACCEPTED, U = b >= E.OH.COMPLETED, y = b >= E.OH.CLAIMED, B = (0, T.Xv)(t.config), k = (0, S.uq)(n), G = n === m.jn.QUESTS_EMBED, F = C || v, w = j && !y && k, V = (0, E.t5)(t, R.dr.QUESTS_CARD, n), {
 xboxAndPlaystationAccounts: H
   } = (0, E.z6)(), Y = (0, r.e7)([c.default], () => c.default.locale), W = (0, E.z)(t), K = k && B, z = I && !U, Q = H.length > 0 && k && (0, T.$J)(t) && j && !U && !W, q = (0, i.jsx)(f.Z, {
 autoplay: o,
@@ -122,7 +122,7 @@ learnMoreStyle: k ? null : 'text',
 location: R.dr.QUESTS_CARD,
 quest: t,
 questContent: n,
-questContentPosition: b
+questContentPosition: D
   });
   return (0, i.jsxs)('div', {
 className: M.root,
@@ -246,7 +246,7 @@ children: [
               (0, p.navigateToQuestHome)(R.dr.QUESTS_CARD, t.id), (0, _._3)({
                 questId: t.id,
                 questContent: n,
-                questContentPosition: b,
+                questContentPosition: D,
                 questContentCTA: _.jZ.LEARN_MORE
               });
             },
@@ -254,7 +254,7 @@ children: [
           }),
           I && !U ? null : (0, i.jsx)(P, {
             quest: t,
-            progressState: D,
+            progressState: b,
             isCollectibleQuest: B,
             location: n,
             inGiftInventory: k

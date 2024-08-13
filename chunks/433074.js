@@ -36,9 +36,9 @@ h.Z.getApplicationFetchState(S)
   ], [S]), M = (0, r.e7)([u.default], () => u.default.locale), v = (0, r.e7)([_.Z], () => {
 var e;
 return null !== (e = _.Z.getGuildId()) && void 0 !== e ? e : void 0;
-  }), L = (0, r.e7)([E.default], () => E.default.getCurrentUser()), [Z, P] = a.useState(!1), b = a.useCallback(e => {
+  }), L = (0, r.e7)([E.default], () => E.default.getCurrentUser()), [Z, P] = a.useState(!1), D = a.useCallback(e => {
 e && P(!0);
-  }, []), D = (0, o.O)(b);
+  }, []), b = (0, o.O)(D);
   a.useEffect(() => {
 (0, T.gZ)(S);
   }, [S]), a.useEffect(() => {
@@ -89,7 +89,7 @@ I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
   };
   if (x)
 return (0, i.jsxs)(c.Z, {
-  containerRef: D,
+  containerRef: b,
   children: [
     (0, i.jsx)(c.Z.Header, {
       text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER
@@ -113,7 +113,7 @@ return (0, i.jsxs)(c.Z, {
 });
   if (null == R || O === h.M.FETCHING)
 return (0, i.jsxs)(c.Z, {
-  containerRef: D,
+  containerRef: b,
   children: [
     (0, i.jsx)(c.Z.Header, {
       text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER
@@ -128,7 +128,7 @@ notation: 'compact',
 compactDisplay: 'short'
   }).format(null !== (n = null === (t = R.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
   return (0, i.jsxs)(c.Z, {
-containerRef: D,
+containerRef: b,
 children: [
   (0, i.jsx)(c.Z.Header, {
     text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_HEADER

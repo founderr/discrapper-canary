@@ -29,8 +29,8 @@ var i = n(735250),
   L = n(295790),
   Z = n(145807),
   P = n(56744),
-  b = n(834129),
-  D = n(981631),
+  D = n(834129),
+  b = n(981631),
   j = n(689938),
   U = n(392997),
   y = n(58755);
@@ -46,7 +46,7 @@ collapsedReason: s
 className: t,
 compact: a,
 role: 'group',
-childrenMessageContent: (0, i.jsx)(b.Z, {
+childrenMessageContent: (0, i.jsx)(D.Z, {
   compact: a,
   className: U.blockedSystemMessage,
   iconNode: (0, i.jsx)(o.XSmallIcon, {
@@ -69,14 +69,14 @@ t.Z = a.memo(function e(t) {
   let {
 channel: s,
 message: o,
-compact: b = !1,
+compact: D = !1,
 className: U,
 onContextMenu: k,
 onClick: G,
 disableInteraction: F = !1,
 hasThread: w,
 treatSpam: V
-  } = t, H = D.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, l.e7)([T.Z], () => o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), K = m.x4.useSetting(), z = m.RS.useSetting(), Q = m.NA.useSetting(), q = m.QK.useSetting(), X = (0, d.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {
+  } = t, H = b.OBS.has(o.type) ? o.messageReference : void 0, Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)), W = (0, l.e7)([T.Z], () => o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null), K = m.x4.useSetting(), z = m.RS.useSetting(), Q = m.NA.useSetting(), q = m.QK.useSetting(), X = (0, d.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()), J = (0, _.Z)(null == s ? void 0 : s.id), {
 disableReactionCreates: $
   } = (0, S.Z)(s), {
 content: ee,
@@ -87,7 +87,7 @@ allowList: X,
 allowHeading: X,
 allowLinks: !0,
 previewLinkTarget: !0
-  }), en = (0, g.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))), ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W, es = !ea && void 0 === a, er = (0, O.Z)({
+  }), en = (0, g.ZP)(o), ei = (0, l.e7)([T.Z], () => o.hasFlag(b.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))), ea = o.type === b.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W, es = !ea && void 0 === a, er = (0, O.Z)({
 message: o,
 channel: s,
 enabled: es
@@ -99,17 +99,17 @@ channel: W,
 hasThread: !1
   }) : (h.Z.isBlockedForMessage(o) ? a = j.Z.Messages.BLOCKED_MESSAGE_COUNT : (0, C.DQ)(o) && V && (a = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a) ? (0, i.jsx)(B, {
 className: U,
-compact: b,
+compact: D,
 count: 1,
 collapsedReason: a
   }) : (0, i.jsx)(A.Z, {
-compact: b,
+compact: D,
 className: r()(U, {
-  [y.ephemeral]: (0, N.yE)(o.flags, D.iLy.EPHEMERAL),
+  [y.ephemeral]: (0, N.yE)(o.flags, b.iLy.EPHEMERAL),
   [y.disableInteraction]: F,
   [y.groupStart]: t.isGroupStart
 }),
-childrenRepliedMessage: (0, P.Z)(o, s, H, Y, b),
+childrenRepliedMessage: (0, P.Z)(o, s, H, Y, D),
 childrenHeader: (0, v.Z)({
   ...t,
   author: en,
@@ -119,7 +119,7 @@ childrenAccessories: (0, i.jsx)(R.BB, {
   channel: s,
   message: o,
   hasSpoilerEmbeds: et,
-  compact: b,
+  compact: D,
   canSuppressEmbeds: !1,
   canDeleteAttachments: !1,
   disableReactionReads: !1,
@@ -139,13 +139,13 @@ childrenAccessories: (0, i.jsx)(R.BB, {
   shouldRenderCtaButton: eo,
   hasInlineForwardButton: !1
 }),
-childrenExecutedCommand: (0, Z.Z)(o, s, b),
+childrenExecutedCommand: (0, Z.Z)(o, s, D),
 childrenMessageContent: (0, M.Z)(t, ee),
 childrenSystemMessage: (0, L.Z)(t),
 onContextMenu: k,
 onClick: G,
-hasThread: !1 !== w && null != ei && o.hasFlag(D.iLy.HAS_THREAD),
-hasReply: o.type === D.uaV.REPLY,
+hasThread: !1 !== w && null != ei && o.hasFlag(b.iLy.HAS_THREAD),
+hasReply: o.type === b.uaV.REPLY,
 isSystemMessage: (0, p.Z)(o),
 messageRef: er
   });

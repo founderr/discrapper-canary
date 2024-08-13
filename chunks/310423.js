@@ -48,8 +48,8 @@ t.Z = a.memo(function(e) {
   analyticsLocations: P
 } = (0, u.ZP)(),
 {
-  onCopy: b,
-  copyRef: D
+  onCopy: D,
+  copyRef: b
 } = (0, d.Z)(v, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
 j = (0, l.e7)([T.Z], () => T.Z.getGuild(v.guild_id), [v.guild_id]);
   if (a.useEffect(() => {
@@ -81,7 +81,7 @@ for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
         commandOptionSpec: Z,
         sourceAnalyticsLocations: P
       } = t,
-      b = null != L ? L + ' ' + x.name : x.name;
+      D = null != L ? L + ' ' + x.name : x.name;
     if (x.type === c.jw.SUB_COMMAND || x.type === c.jw.SUB_COMMAND_GROUP) {
       let t = [(0, i.jsxs)(a.Fragment, {
           children: [
@@ -91,7 +91,7 @@ for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
               children: null !== (s = null == Z ? void 0 : Z.name_localized) && void 0 !== s ? s : x.name
             })
           ]
-        }, b)],
+        }, D)],
         c = Object.fromEntries(null === (n = null !== (r = null == Z ? void 0 : Z.options) && void 0 !== r ? r : []) || void 0 === n ? void 0 : n.map(e => [
           e.name,
           e
@@ -102,13 +102,13 @@ for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
           channel: O,
           guild: M,
           messageId: v,
-          parentOptionKey: b,
+          parentOptionKey: D,
           commandOptionSpec: c[n.name],
           sourceAnalyticsLocations: P
         }));
       return t;
     }
-    let D = x.value;
+    let b = x.value;
     if (null != x.value)
       switch (x.type) {
         case c.jw.USER: {
@@ -197,10 +197,10 @@ for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
           break;
         default: {
           let e = null == Z ? void 0 : null === (u = Z.choices) || void 0 === u ? void 0 : u.find(e => e.value === x.value);
-          null != e && (D = null !== (d = e.name_localized) && void 0 !== d ? d : e.name);
+          null != e && (b = null !== (d = e.name_localized) && void 0 !== d ? d : e.name);
         }
       }
-    return null == g && (g = R(null == D ? void 0 : D.toString())), [(0, i.jsxs)(a.Fragment, {
+    return null == g && (g = R(null == b ? void 0 : b.toString())), [(0, i.jsxs)(a.Fragment, {
       children: [
         (0, i.jsxs)(o.Text, {
           ...S,
@@ -212,7 +212,7 @@ for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
         }),
         g
       ]
-    }, b)];
+    }, D)];
   }({
     option: n,
     channel: v,
@@ -240,12 +240,12 @@ className: g.container,
 onCopy: e => {
   var t, n, i;
   let a = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
-  a.startsWith('/') && a.endsWith('\n') && b(e, Z);
+  a.startsWith('/') && a.endsWith('\n') && D(e, Z);
 },
 children: [
   (0, i.jsx)('div', {
     className: g.tooltip,
-    ref: D,
+    ref: b,
     children: M
   }),
   (0, i.jsx)('div', {

@@ -15,9 +15,9 @@ var l = t(735250),
   g = t(435064),
   C = t(894694),
   h = t(39604),
-  Z = t(981631),
+  I = t(981631),
   N = t(921944),
-  I = t(689938),
+  Z = t(689938),
   x = t(759041),
   f = t(458623);
 let R = e => {
@@ -49,26 +49,26 @@ renderPopout: e => {
     inlineArt: !0,
     artClassName: x.clipsEducationArt,
     position: 'right',
-    header: I.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
+    header: Z.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
     headerClassName: x.clipsEducationHeader,
     body: (0, l.jsxs)(l.Fragment, {
       children: [
         (0, l.jsx)(c.Text, {
           variant: 'text-sm/normal',
           color: 'always-white',
-          children: I.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
+          children: Z.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
         }),
         f ? (0, l.jsx)(c.Text, {
           variant: 'text-sm/normal',
           color: 'always-white',
           className: x.warningText,
-          children: I.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
-            url: _.Z.getArticleURL(Z.BhN.CLIPS)
+          children: Z.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
+            url: _.Z.getArticleURL(I.BhN.CLIPS)
           })
         }) : null
       ]
     }),
-    tryItText: I.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
+    tryItText: Z.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
     onTryFeature: e => {
       (0, h.em)({
         clipsEnabled: !0,
@@ -88,11 +88,11 @@ n.Z = function(e) {
   let {
 isAnimationDone: n,
 guildId: t
-  } = e, s = (0, i.e7)([g.Z], () => g.Z.getSettings().clipsEnabled), a = (0, i.e7)([E.Z], () => E.Z.getKeybindForAction(Z.kg4.SAVE_CLIP));
+  } = e, s = (0, i.e7)([g.Z], () => g.Z.getSettings().clipsEnabled), a = (0, i.e7)([E.Z], () => E.Z.getKeybindForAction(I.kg4.SAVE_CLIP));
   r()(null != a, 'Clips keybind should be set');
   let o = S.BB(a.shortcut, !0);
   return (0, l.jsx)(c.FormItem, {
-title: I.Z.Messages.CLIPS_SETTINGS,
+title: Z.Z.Messages.CLIPS_SETTINGS,
 titleClassName: f.formItemTitle,
 className: f.modalContent,
 children: (0, l.jsxs)('div', {
@@ -111,14 +111,14 @@ children: (0, l.jsxs)('div', {
           trackAnalytics: !0
         }),
         hideBorder: !0,
-        children: I.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
+        children: Z.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
       })
     }),
     (0, l.jsx)(c.Text, {
       variant: 'text-xs/normal',
       color: 'interactive-normal',
       className: x.description,
-      children: I.Z.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
+      children: Z.Z.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
         keybind: o,
         keybindHook: () => (0, l.jsx)('span', {
           className: x.keybindHintKeys,

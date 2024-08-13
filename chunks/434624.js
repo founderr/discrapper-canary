@@ -39,15 +39,15 @@ let t, n, {
   L = a ? m : I,
   Z = O ? C : h,
   P = (0, u.y)(Z, E.aO),
-  b = {};
+  D = {};
 if (O && null != v) {
-  var D;
+  var b;
   let {
     accentColor: e,
     backgroundColor: i,
     opacity: a
-  } = v, s = null !== (D = (0, l.wK)(null != i ? i : '', a)) && void 0 !== D ? D : '';
-  M && (b.borderColor = i), b.background = s, t = e, n = e;
+  } = v, s = null !== (b = (0, l.wK)(null != i ? i : '', a)) && void 0 !== b ? b : '';
+  M && (D.borderColor = i), D.background = s, t = e, n = e;
 }
 let j = {
   minWidth: P,
@@ -59,7 +59,7 @@ return (0, i.jsxs)('div', {
     [L.reactionMe]: M,
     [L.reactionReadOnly]: g && !S && !R && !A
   }),
-  style: b,
+  style: D,
   children: [
     (0, i.jsx)(o.Z, {
       className: r()({

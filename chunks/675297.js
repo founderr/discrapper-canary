@@ -38,9 +38,9 @@ showOpaqueBackground: O = !1
 var e;
 return o.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : N.lds);
   }), L = (0, s.U)(t, 600), Z = (0, I.C)(t), P = (0, u.SO)(M), {
-shouldHideGuildPurchaseEntryPoints: b
-  } = (0, l.uP)(n), D = (0, I.k)(t);
-  if (null == M || b)
+shouldHideGuildPurchaseEntryPoints: D
+  } = (0, l.uP)(n), b = (0, I.k)(t);
+  if (null == M || D)
 return null;
   let j = () => (0, T.e)({
   guildId: n,
@@ -75,7 +75,7 @@ U = (0, i.jsx)(m.m, {
 imageUrl: L,
 name: t.name,
 description: t.description,
-formattedPrice: D,
+formattedPrice: b,
 role: v,
 ctaComponent: (0, i.jsx)(h.Z, {
   guildId: n,

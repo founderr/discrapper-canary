@@ -27,12 +27,12 @@ onChangeSelectedChannelId: g
 i.Z,
 r.ZP,
 o.Z
-  ], () => (0, d.h_)(r.ZP.getChannels(t), i.Z, o.Z)), Z = (0, s.e7)([u.ZP], () => u.ZP.getVoiceStates(t)), N = h.map(e => {
+  ], () => (0, d.h_)(r.ZP.getChannels(t), i.Z, o.Z)), I = (0, s.e7)([u.ZP], () => u.ZP.getVoiceStates(t)), N = h.map(e => {
 var t;
 return {
   name: (0, l.jsx)(m.Z, {
     channel: e,
-    users: null === (t = Z[e.id]) || void 0 === t ? void 0 : t.filter(e => {
+    users: null === (t = I[e.id]) || void 0 === t ? void 0 : t.filter(e => {
       let {
         user: n
       } = e;

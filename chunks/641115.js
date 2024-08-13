@@ -19,9 +19,9 @@ var l = t(735250),
   g = t(436774),
   C = t(1163),
   h = t(594174),
-  Z = t(74538),
+  I = t(74538),
   N = t(451467),
-  I = t(122186),
+  Z = t(122186),
   x = t(37113),
   f = t(981631),
   R = t(474936),
@@ -132,18 +132,18 @@ captureDeviceSelected: P
   } = e, D = (0, u.e7)([h.default], () => {
 let e = h.default.getCurrentUser();
 return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
-  }), G = Z.ZP.canStreamQuality(Z.U2.MID, D), {
+  }), G = I.ZP.canStreamQuality(I.U2.MID, D), {
 location: U
   } = (0, E.O)(), b = (0, _.Zq)({
 autoTrackExposure: !1
-  }), w = (0, Z.I5)(D, R.p9.TIER_1);
+  }), w = (0, I.I5)(D, R.p9.TIER_1);
   C.Z.useExperiment({
 location: 'Go Live Modal'
   }, {
 autoTrackExposure: !0,
 disable: w
   });
-  let k = (0, Z.So)(c.q.STREAM_HIGH_QUALITY),
+  let k = (0, I.So)(c.q.STREAM_HIGH_QUALITY),
 B = !G && !b || k,
 [V, y] = s.useState(!1),
 W = P ? x.z8 : x.WC,
@@ -203,7 +203,7 @@ Y = t === x.tI.PRESET_DOCUMENTS ? (0, l.jsxs)(l.Fragment, {
         })
       })
     }),
-    B ? (0, l.jsx)(I.Z, {
+    B ? (0, l.jsx)(Z.Z, {
       message: A.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
       onClose: n,
       openStreamUpsellModal: p
@@ -227,7 +227,7 @@ Y = t === x.tI.PRESET_DOCUMENTS ? (0, l.jsxs)(l.Fragment, {
         })
       ]
     }),
-    B ? (0, l.jsx)(I.Z, {
+    B ? (0, l.jsx)(Z.Z, {
       onClose: n,
       openStreamUpsellModal: p,
       glow: V

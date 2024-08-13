@@ -33,8 +33,8 @@ var i = n(735250),
   L = n(83561),
   Z = n(834129),
   P = n(981631),
-  b = n(674563),
-  D = n(689938),
+  D = n(674563),
+  b = n(689938),
   j = n(549766);
 
 function U() {
@@ -93,14 +93,14 @@ header: (0, i.jsxs)(a.Fragment, {
     (0, i.jsx)(I.Text, {
       variant: 'text-md/semibold',
       color: 'header-secondary',
-      children: D.Z.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_TITLE
+      children: b.Z.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_TITLE
     })
   ]
 }),
 content: (0, i.jsx)(I.Text, {
   variant: 'text-md/normal',
   color: 'text-muted',
-  children: D.Z.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_DESCRIPTION
+  children: b.Z.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_DESCRIPTION
 })
   });
 }
@@ -120,14 +120,14 @@ header: (0, i.jsxs)(a.Fragment, {
     (0, i.jsx)(I.Text, {
       variant: 'text-md/semibold',
       color: 'header-secondary',
-      children: D.Z.Messages.GUILD_AUTOMOD_NOTFICATION_APP_INTERACTION_BLOCKED_TITLE
+      children: b.Z.Messages.GUILD_AUTOMOD_NOTFICATION_APP_INTERACTION_BLOCKED_TITLE
     })
   ]
 }),
 content: (0, i.jsx)(I.Text, {
   variant: 'text-md/normal',
   color: 'text-muted',
-  children: D.Z.Messages.GUILD_AUTOMOD_NOTFICATION_APP_INTERACTION_BLOCKED_DESCRIPTION
+  children: b.Z.Messages.GUILD_AUTOMOD_NOTFICATION_APP_INTERACTION_BLOCKED_DESCRIPTION
 })
   });
 }
@@ -157,7 +157,7 @@ header: (0, i.jsxs)(a.Fragment, {
     (0, i.jsx)(I.Text, {
       variant: 'text-md/semibold',
       color: 'text-positive',
-      children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_TITLE
+      children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_TITLE
     })
   ]
 }),
@@ -171,7 +171,7 @@ subheader: (0, i.jsxs)('div', {
           (0, i.jsx)(I.Text, {
             variant: 'text-xs/medium',
             color: 'text-normal',
-            children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX
+            children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX
           }),
           (0, i.jsx)(I.Popout, {
             renderPopout: function(e) {
@@ -226,7 +226,7 @@ subheader: (0, i.jsxs)('div', {
 content: (0, i.jsx)(I.Text, {
   variant: 'text-md/normal',
   color: 'text-muted',
-  children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_DESCRIPTION
+  children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_DESCRIPTION
 })
   });
 }
@@ -262,7 +262,7 @@ header: (0, i.jsxs)(a.Fragment, {
     (0, i.jsx)(I.Text, {
       variant: 'text-md/semibold',
       color: 'text-danger',
-      children: O ? D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
+      children: O ? b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
     })
   ]
 }),
@@ -272,14 +272,14 @@ subheader: (0, i.jsxs)('div', {
     null != r && (0, i.jsx)(I.Text, {
       variant: 'text-xs/medium',
       color: 'text-normal',
-      children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_JOINS.format({
+      children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_JOINS.format({
         joinCount: r
       })
     }),
     null != u && (0, i.jsx)(I.Text, {
       variant: 'text-xs/medium',
       color: 'text-normal',
-      children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_DMS.format({
+      children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_DMS.format({
         dmsSent: u
       })
     }),
@@ -298,8 +298,8 @@ subheader: (0, i.jsxs)('div', {
 content: null != l ? (0, i.jsx)(I.Text, {
   variant: 'text-md/normal',
   color: 'text-muted',
-  children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
-    dateTime: l.toLocaleString(D.Z.getLocale(), N.pQ)
+  children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
+    dateTime: l.toLocaleString(b.Z.getLocale(), N.pQ)
   })
 }) : null,
 footerButtons: S ? (0, i.jsxs)('div', {
@@ -324,7 +324,7 @@ footerButtons: S ? (0, i.jsxs)('div', {
           (0, i.jsx)(I.Text, {
             variant: 'text-xs/medium',
             color: 'text-link',
-            children: D.Z.Messages.ACTIONS
+            children: b.Z.Messages.ACTIONS
           })
         ]
       })
@@ -371,7 +371,7 @@ header: (0, i.jsxs)(a.Fragment, {
     (0, i.jsx)(I.Text, {
       variant: 'text-md/semibold',
       color: 'text-danger',
-      children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_TITLE
+      children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_TITLE
     })
   ]
 }),
@@ -386,7 +386,7 @@ subheader: (0, i.jsx)('div', {
 content: (0, i.jsx)(I.Text, {
   variant: 'text-md/normal',
   color: 'text-muted',
-  children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_DESCRIPTION
+  children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_DESCRIPTION
 }),
 footerButtons: (0, i.jsxs)('div', {
   className: j.dotSeparatedRow,
@@ -406,7 +406,7 @@ footerButtons: (0, i.jsxs)('div', {
         children: (0, i.jsx)(I.Text, {
           variant: 'text-xs/medium',
           color: 'text-link',
-          children: D.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
+          children: b.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
         })
       })
     }),
@@ -424,7 +424,7 @@ footerButtons: (0, i.jsxs)('div', {
         children: (0, i.jsx)(I.Text, {
           variant: 'text-xs/medium',
           color: 'text-link',
-          children: D.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
+          children: b.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
         })
       })
     })
@@ -523,10 +523,10 @@ children: (0, i.jsx)(Z.Z, {
               color: 'text-brand',
               tag: 'span',
               className: j.username,
-              children: D.Z.Messages.GUILD_AUTOMOD_USERNAME
+              children: b.Z.Messages.GUILD_AUTOMOD_USERNAME
             }),
             (0, i.jsx)(T.Z, {
-              type: b.Hb.SYSTEM_DM,
+              type: D.Hb.SYSTEM_DM,
               className: j.systemTag
             }),
             _ && (0, i.jsx)(I.Text, {
@@ -534,7 +534,7 @@ children: (0, i.jsx)(Z.Z, {
               color: 'header-primary',
               tag: 'span',
               className: j.spanCorrection,
-              children: D.Z.Messages.GUILD_AUTOMOD_NOTFICATION_ALERT_TITLE
+              children: b.Z.Messages.GUILD_AUTOMOD_NOTFICATION_ALERT_TITLE
             })
           ]
         }),

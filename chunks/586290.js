@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return Z;
+return I;
   }
 }), t(724458), t(47120);
 var l = t(735250),
@@ -20,7 +20,7 @@ var l = t(735250),
   C = t(458623),
   h = t(224499);
 
-function Z(e) {
+function I(e) {
   let {
 selectedSource: n,
 onChangeVideoDeviceSource: t,
@@ -28,8 +28,8 @@ onChangeAudioDevice: a
   } = e;
   r()(null != n, 'Camera capture device cannot be null');
   let i = (0, _.Z)(),
-Z = (0, u.e7)([m.Z], () => m.Z.getInputDevices()),
-[N, I] = s.useState(function(e, n, t) {
+I = (0, u.e7)([m.Z], () => m.Z.getInputDevices()),
+[N, Z] = s.useState(function(e, n, t) {
   if (null != n && null != t) {
     let l = n.find(n => n.id === e);
     if (null == l)
@@ -38,7 +38,7 @@ Z = (0, u.e7)([m.Z], () => m.Z.getInputDevices()),
     if (null != s)
       return s.id;
   }
-}(n.id, i, Z));
+}(n.id, i, I));
   return null != N && a(N), (0, l.jsx)(s.Fragment, {
 children: (0, l.jsxs)(d.FormItem, {
   title: 'Capture Device',
@@ -69,9 +69,9 @@ children: (0, l.jsxs)(d.FormItem, {
         value: N,
         className: h.__invalid_marginaTop8,
         onChange: e => {
-          I(e), a(e);
+          Z(e), a(e);
         },
-        options: o().map(Z, e => {
+        options: o().map(I, e => {
           let {
             id: n,
             name: t

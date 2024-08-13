@@ -30,9 +30,9 @@ var i = n(735250),
 t.Z = (e, t, n, s) => {
   let l;
   let P = (0, c.e7)([N.Z], () => N.Z.isLurking(t)),
-b = (0, h.J)(t),
-D = (0, c.e7)([T.Z], () => null != t ? T.Z.getRequest(t) : null),
-j = (null == D ? void 0 : D.applicationStatus) === m.wB.SUBMITTED,
+D = (0, h.J)(t),
+b = (0, c.e7)([T.Z], () => null != t ? T.Z.getRequest(t) : null),
+j = (null == b ? void 0 : b.applicationStatus) === m.wB.SUBMITTED,
 U = null == e ? void 0 : e.subscription_plans[0],
 y = null == U ? void 0 : U.id,
 B = (null == e ? void 0 : e.published) === !0,
@@ -58,7 +58,7 @@ q = (0, S.oC)(null == e ? void 0 : e.id),
   analyticsLocations: X
 } = (0, E.ZP)(),
 J = (null == F ? void 0 : F.paymentGateway) === L.gg$.APPLE_PARTNER;
-  j ? l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : P && !b ? l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : Y === y ? l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
+  j ? l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : P && !D ? l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : Y === y ? l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
 changeDate: null != F ? o()(F.currentPeriodEnd).format('MMM DD, YYYY') : ''
   }) : W ? l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : K ? l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : J && (l = Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
   let $ = (0, _.Z)(v.iP);
@@ -133,7 +133,7 @@ et = a.useCallback(() => {
   (0, I.hk)(t);
 }, [t]);
   return {
-openModal: b ? et : ee,
+openModal: D ? et : ee,
 canOpenModal: !P && null != G && V && !j && !W && !K && !J,
 cannotOpenReason: l,
 isCheckingTrialEligibility: z

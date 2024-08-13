@@ -51,8 +51,8 @@ null == M && r.Z.resolveInvite(t);
   analyticsLocations: Z
 } = (0, o.ZP)(),
 P = (0, s.e7)([m.Z], () => (null == M ? void 0 : M.guild) != null ? m.Z.getGuild(M.guild.id) : null, [M]),
-b = (0, s.e7)([I.default], () => I.default.getId()),
-D = (0, s.e7)([c.ZP], () => {
+D = (0, s.e7)([I.default], () => I.default.getId()),
+b = (0, s.e7)([c.ZP], () => {
   var e;
   return c.ZP.getGuildScheduledEvent(null === (e = L.guild_scheduled_event) || void 0 === e ? void 0 : e.id);
 }, [L]),
@@ -77,7 +77,7 @@ U = () => {
 y = (0, i.jsx)(p.Z, {
   onTransitionToInviteChannel: j,
   onAcceptInstantInvite: U,
-  currentUserId: b,
+  currentUserId: D,
   guild: P,
   invite: L,
   author: n
@@ -105,7 +105,7 @@ default:
       y = (0, i.jsx)(C.Z, {
         onTransitionToInviteChannel: j,
         onAcceptInstantInvite: U,
-        currentUserId: b,
+        currentUserId: D,
         invite: L,
         author: n
       });
@@ -122,7 +122,7 @@ default:
         y = (0, i.jsx)(R.Z, {
           onTransitionToInviteChannel: j,
           onAcceptInstantInvite: U,
-          currentUserId: b,
+          currentUserId: D,
           guild: P,
           invite: L
         });
@@ -130,7 +130,7 @@ default:
       }
       if ((0, d.Tx)(L)) {
         y = (0, i.jsx)(u.ZP, {
-          guildScheduledEvent: D,
+          guildScheduledEvent: b,
           guild: L.guild,
           channel: L.channel,
           isMember: null != P,

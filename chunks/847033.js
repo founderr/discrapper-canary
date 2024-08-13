@@ -40,14 +40,14 @@ function x(e) {
 children: n,
 initialTab: s,
 guildId: r
-  } = e, R = (0, l.e7)([T.Z], () => T.Z.getGuild(r)), x = (0, l.e7)([E.Z], () => E.Z.isViewingServerShop(r)), O = (0, f.g)(R, 'guild_shop_page'), M = (0, N.RF)(r, 'guild_shop_page'), v = (null == R ? void 0 : R.hasFeature(S.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0, L = (0, _.mY)(null == R ? void 0 : R.id), Z = null === (t = (0, d.YB)(r)) || void 0 === t ? void 0 : t.server_shop_tab_order, P = [], b = C.y.GUILD_SHOP_FULL_PREVIEW;
-  x || v && L ? (P.push(Z === p.a3.PRODUCTS_FIRST ? C.y.GUILD_PRODUCTS : C.y.GUILD_ROLE_SUBSCRIPTIONS), P.push(Z === p.a3.PRODUCTS_FIRST ? C.y.GUILD_ROLE_SUBSCRIPTIONS : C.y.GUILD_PRODUCTS), b = P[0]) : v && !L ? (P.push(C.y.GUILD_PRODUCTS), b = C.y.GUILD_PRODUCTS) : !v && L && (P.push(C.y.GUILD_ROLE_SUBSCRIPTIONS), b = C.y.GUILD_ROLE_SUBSCRIPTIONS, O && P.push(C.y.GUILD_PRODUCTS_PREVIEW)), s = null != s ? s : b;
-  let [D, j] = a.useState(s), U = O && !(L && M) || D === C.y.GUILD_PRODUCTS_PREVIEW;
+  } = e, R = (0, l.e7)([T.Z], () => T.Z.getGuild(r)), x = (0, l.e7)([E.Z], () => E.Z.isViewingServerShop(r)), O = (0, f.g)(R, 'guild_shop_page'), M = (0, N.RF)(r, 'guild_shop_page'), v = (null == R ? void 0 : R.hasFeature(S.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0, L = (0, _.mY)(null == R ? void 0 : R.id), Z = null === (t = (0, d.YB)(r)) || void 0 === t ? void 0 : t.server_shop_tab_order, P = [], D = C.y.GUILD_SHOP_FULL_PREVIEW;
+  x || v && L ? (P.push(Z === p.a3.PRODUCTS_FIRST ? C.y.GUILD_PRODUCTS : C.y.GUILD_ROLE_SUBSCRIPTIONS), P.push(Z === p.a3.PRODUCTS_FIRST ? C.y.GUILD_ROLE_SUBSCRIPTIONS : C.y.GUILD_PRODUCTS), D = P[0]) : v && !L ? (P.push(C.y.GUILD_PRODUCTS), D = C.y.GUILD_PRODUCTS) : !v && L && (P.push(C.y.GUILD_ROLE_SUBSCRIPTIONS), D = C.y.GUILD_ROLE_SUBSCRIPTIONS, O && P.push(C.y.GUILD_PRODUCTS_PREVIEW)), s = null != s ? s : D;
+  let [b, j] = a.useState(s), U = O && !(L && M) || b === C.y.GUILD_PRODUCTS_PREVIEW;
   return a.useEffect(() => {
 j(s);
   }, [s]), (0, i.jsx)(A.Provider, {
 value: {
-  selectedTab: D,
+  selectedTab: b,
   setSelectedTab: j,
   categoryTabs: P,
   isPhantomPreview: U,
@@ -56,7 +56,7 @@ value: {
     let t = {
       ...(0, c.hH)(r)
     };
-    if (D === C.y.GUILD_PRODUCTS_PREVIEW)
+    if (b === C.y.GUILD_PRODUCTS_PREVIEW)
       e.stopPropagation(), j(C.y.GUILD_ROLE_SUBSCRIPTIONS), t.action_taken = g.mz.DISMISS_TAB_PREVIEW;
     else {
       var n;

@@ -1,6 +1,6 @@
 n.d(t, {
   n: function() {
-return D;
+return b;
   }
 }), n(411104), n(47120), n(390547), n(724458);
 var i = n(512722),
@@ -49,7 +49,7 @@ selectedEmojiAnswersCount: a
   };
 }
 
-function b(e) {
+function D(e) {
   let {
 guildId: t,
 title: n,
@@ -68,7 +68,7 @@ onConfirm: () => {
   });
 }
 
-function D(e) {
+function b(e) {
   let {
 channelId: t,
 messageId: n,
@@ -77,7 +77,7 @@ answerId: i
   if (null == a)
 return;
   if (m.Z.isLurking(a.guild_id)) {
-b({
+D({
   guildId: a.guild_id,
   title: Z.Z.Messages.POLL_LURKING_SEE_VOTES_TITLE,
   body: Z.Z.Messages.POLL_LURKING_VOTE_SUBTITLE
@@ -167,7 +167,7 @@ messageId: n
   if (null == i)
 return;
   if (m.Z.isLurking(i.guild_id)) {
-b({
+D({
   guildId: i.guild_id,
   title: Z.Z.Messages.POLL_LURKING_VOTE_TITLE,
   body: Z.Z.Messages.POLL_LURKING_VOTE_SUBTITLE
@@ -228,7 +228,7 @@ messageId: n
   } = e, i = C.Z.getChannel(t);
   if (null != i) {
 if (m.Z.isLurking(i.guild_id)) {
-  b({
+  D({
     guildId: i.guild_id,
     title: Z.Z.Messages.POLL_LURKING_UNVOTE_TITLE,
     body: Z.Z.Messages.POLL_LURKING_UNVOTE_SUBTITLE
@@ -309,7 +309,7 @@ case 'showVotes':
   });
   break;
 case 'showVoterDetails':
-  D({
+  b({
     channelId: t,
     messageId: n
   });
@@ -422,7 +422,7 @@ let {
   tapShouldOpenVotersModal: c
 } = null !== (n = (0, v.Tk)(o)) && void 0 !== n ? n : {};
 if (!0 === c) {
-  D({
+  b({
     channelId: r,
     messageId: l,
     answerId: i

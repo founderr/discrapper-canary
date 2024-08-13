@@ -33,8 +33,8 @@ var i = n(735250),
   L = n(495114),
   Z = n(170140),
   P = n(981631),
-  b = n(959517),
-  D = n(689938),
+  D = n(959517),
+  b = n(689938),
   j = n(494104),
   U = n(527455);
 
@@ -46,7 +46,7 @@ message: y,
 channel: B
   } = e, k = (0, Z.J)(l, y), {
 setPopout: G
-  } = (0, p.Z)(y.id, b.d$), F = (0, C.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, K] = a.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, d.e7)([
+  } = (0, p.Z)(y.id, D.d$), F = (0, C.qo)(y, B, G, !0), w = A.QK.useSetting(), V = (0, v.n)(), [H, Y] = a.useState(!1), [W, K] = a.useState((null == k ? void 0 : k.coverImage) == null), z = (0, d.e7)([E.Z], () => E.Z.useReducedMotion), Q = (0, d.e7)([
 R.ZP,
 x.default
   ], () => {
@@ -118,7 +118,7 @@ children: [
     children: [
       !W && (!0 === k.shouldShowBlurredThumbnailImage ? (0, i.jsx)('img', {
         src: U,
-        alt: D.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
+        alt: b.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         className: r()(j.thumbnail, {
           [j.spoiler]: k.shouldSpoiler
         }),
@@ -127,7 +127,7 @@ children: [
       }) : (0, i.jsx)(h.Z, {
         src: !(V && (w || H)) && ed ? ''.concat(eu, '?format=png') : eu,
         backgroundSrc: ''.concat(eu, '?format=png'),
-        alt: D.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
+        alt: b.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         aspectRatio: 16 / 9,
         className: r()(j.thumbnail, {
           [j.spoiler]: k.shouldSpoiler
@@ -192,7 +192,7 @@ children: [
                 ...e,
                 size: _.AvatarSizes.SIZE_40,
                 src: eo,
-                'aria-label': D.Z.Messages.MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
+                'aria-label': b.Z.Messages.MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
                 avatarDecoration: el
               })
             })
@@ -223,7 +223,7 @@ children: [
                 variant: 'text-sm/medium',
                 color: 'text-muted',
                 className: j.descriptionFooterAuthorContainer,
-                children: D.Z.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
+                children: b.Z.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
                   authorName: k.authorName,
                   authorNameHook: () => (0, i.jsx)(_.Popout, {
                     renderPopout: e => er(e, [I.Z.USERNAME]),

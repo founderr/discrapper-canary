@@ -31,8 +31,8 @@ position: A = 'top',
 align: P = 'center',
 art: w,
 isPremiumEarlyAccess: k = !1,
-maxWidth: Z = 280
-  } = e, R = E ? c.Button.Sizes.LARGE : c.Button.Sizes.MAX, [y, B] = o.useState(!1), {
+maxWidth: R = 280
+  } = e, Z = E ? c.Button.Sizes.LARGE : c.Button.Sizes.MAX, [y, B] = o.useState(!1), {
 ref: W,
 width: L
   } = (0, l.Z)();
@@ -45,12 +45,12 @@ width: L
   return o.useEffect(() => {
 var e, t;
 let n = (null !== (t = null === (e = W.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-!y && n > Z && B(!0);
+!y && n > R && B(!0);
   }, [
 y,
 L,
 W,
-Z
+R
   ]), o.useEffect(() => {
 (0, s.kk)(T);
   }, [T]), (0, r.jsx)('div', {
@@ -117,7 +117,7 @@ children: (0, r.jsxs)('div', {
         children: [
           (0, r.jsx)(c.Button, {
             className: _.button,
-            size: R,
+            size: Z,
             onClick: e => {
               null == I || I(e), C(e), O(d.L.PRIMARY);
             },
@@ -126,7 +126,7 @@ children: (0, r.jsxs)('div', {
           }),
           (0, r.jsx)(c.Button, {
             className: _.button,
-            size: R,
+            size: Z,
             onClick: e => {
               null == I || I(e), O(d.L.DISMISS);
             },

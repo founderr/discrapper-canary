@@ -36,8 +36,8 @@ var i = n(735250),
   L = n(749277),
   Z = n(492435),
   P = n(353926),
-  b = n(506357),
-  D = n(36459),
+  D = n(506357),
+  b = n(36459),
   j = n(236069),
   U = n(305325),
   y = n(281956),
@@ -168,7 +168,7 @@ case eu.kVF.GUILD_RAID_NOTIFICATION:
   let {
     dismissUntil: eR
   } = ec.metadata;
-  return (0, i.jsx)(b.Z, {
+  return (0, i.jsx)(D.Z, {
     onDismiss: () => eN(eR)
   });
 case eu.kVF.WIN32_DEPRECATED_MESSAGE:
@@ -436,9 +436,9 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
     return null;
   let {
     skuId: eP,
-      applicationId: eb
-  } = ec.metadata, eD = en.Z.get(eP), ej = x.Z.getApplication(eb);
-  if (null == eD || null == ej)
+      applicationId: eD
+  } = ec.metadata, eb = en.Z.get(eP), ej = x.Z.getApplication(eD);
+  if (null == eb || null == ej)
     return null;
   let eU = {
     page: eu.ZY5.IN_APP
@@ -447,7 +447,7 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
     color: c.NoticeColors.PREMIUM_TIER_1,
     children: [
       (0, i.jsx)(c.NoticeCloseButton, {
-        onClick: () => _.Z(eD.id),
+        onClick: () => _.Z(eb.id),
         noticeType: eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK
       }),
       (0, i.jsx)(c.NitroWheelIcon, {
@@ -457,13 +457,13 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
       }),
       eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
         applicationName: ej.name,
-        skuName: eD.name
+        skuName: eb.name
       }),
       (0, i.jsx)(c.PrimaryCTANoticeButton, {
         noticeType: eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
         onClick: () => (0, el.S)({
           applicationId: ej.id,
-          skuId: eD.id,
+          skuId: eb.id,
           openPremiumPaymentModal: () => {
             (0, V.Z)({
               initialPlanId: null,
@@ -475,7 +475,7 @@ case eu.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
           analyticsLocations: eC,
           analyticsLocationObject: eU,
           context: __OVERLAY__ ? eu.IlC.OVERLAY : eu.IlC.APP
-        }).then(() => _.Z(eD.id)),
+        }).then(() => _.Z(eb.id)),
         children: eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
       })
     ]
@@ -958,14 +958,14 @@ case eu.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION:
       (0, i.jsx)(c.NoticeCloseButton, {
         noticeType: eu.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION,
         onClick: () => {
-          null != A && (0, D.T9)(A), eN(eV);
+          null != A && (0, b.T9)(A), eN(eV);
         }
       }),
       eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE,
       (0, i.jsx)(c.NoticeButton, {
         onClick: () => {
-          null != A && (0, D.UE)(A, eH, () => {
-            eN(eV), (0, D.T9)(A);
+          null != A && (0, b.UE)(A, eH, () => {
+            eN(eV), (0, b.T9)(A);
           });
         },
         children: eI.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
