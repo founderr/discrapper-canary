@@ -75,7 +75,7 @@ action: () => {
 ],
 [(0, c.Z)({
   id: null == v ? void 0 : null === (t = v.application) || void 0 === t ? void 0 : t.id,
-  label: m.Z.Messages.COPY_ID_APPLICATION,
+  label: m.Z.Messages.COPY_ID_APP,
   onSuccess: () => g({
     action: 'COPY_APP_ID',
     analyticsLocations: S

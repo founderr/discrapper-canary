@@ -34134,7 +34134,8 @@ h3.improved_f017d0:after {
 
 .contextMenu_ae1fa2 {
     display: flex;
-    cursor: pointer
+    cursor: pointer;
+    margin-right: 4px
 }
 
 .timestamp_c5d1c1 {
