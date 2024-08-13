@@ -157,13 +157,13 @@ hideMutedChannels: n,
 favoritesSectionNumber: 1,
 recentsSectionNumber: 2,
 voiceChannelsSectionNumber: -999,
-getSections: () => [
-  0,
-  0,
-  0,
-  R.channelList.length,
-  ...p.map(e => Math.max(1, e.channelList.length))
-],
+getSections() {
+  let e = [];
+  e[g.Fq] = 0, e[g.wZ] = 0, e[g.p2] = 0, e[g.PB] = 0, e[g.wd] = R.channelList.length;
+  for (let n = 0; n < p.length; n++)
+    e[g.wF + n] = Math.max(1, p[n].channelList.length);
+  return e;
+},
 isPlaceholderRow: (e, n) => !(e < g.wF) && 0 === n && 0 === p[e - g.wF].channelList.length,
 getCategoryFromSection: e => e === g.wd ? R : p[e - g.wF],
 getNamedCategoryFromSection: e => p[e - g.wF],
