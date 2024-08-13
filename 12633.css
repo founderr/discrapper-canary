@@ -20620,6 +20620,10 @@ span.clanTag_a31c43 {
     z-index: 5
 }
 
+.activity_b07019 {
+    border-radius: var(--radius-xs)
+}
+
 .popoutWrapper_ccc074 {
     position: relative;
     left: -30px;
@@ -33896,7 +33900,8 @@ h3.improved_f017d0:after {
     gap: 8px;
     padding: 8px;
     overflow: visible;
-    position: relative
+    position: relative;
+    border: none
 }
 
 .header_ae1fa2 {

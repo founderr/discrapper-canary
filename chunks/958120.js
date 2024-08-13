@@ -106,7 +106,8 @@ children: [
   B ? (0, r.jsx)(f.Z, {
     user: t,
     currentUser: n,
-    onClose: P
+    onClose: P,
+    className: C.activity
   }) : (0, r.jsx)(S.Z, {
     user: t,
     guild: D,
