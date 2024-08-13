@@ -24,6 +24,9 @@ return B;
   FE: function() {
 return eC;
   },
+  Fs: function() {
+return eX;
+  },
   GN: function() {
 return ei;
   },
@@ -839,4 +842,25 @@ quest: a,
 idx: null !== (r = null == s ? void 0 : s.tier) && void 0 !== r ? r : null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedTier
   }) : null, _ = null !== (i = null == d ? void 0 : null === (n = d.messages) || void 0 === n ? void 0 : n.redemptionInstructionsByPlatform) && void 0 !== i ? i : l.defaultRewardRedemptionInstructionsByPlatform;
   return null != c ? _[c] : void 0;
+}
+
+function eX(e) {
+  let {
+isTargetedDisclosure: t,
+gamePublisher: n,
+gameTitle: r,
+isInHouseQuest: i,
+hasQuestHomeExperiment: a
+  } = e;
+  if (i)
+return t ? L.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_BAR : a ? L.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_HOME : L.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE;
+  return t ? L.Z.Messages.QUESTS_DISCLOSURE_PUBLISHER_TARGETING.format({
+gamePublisher: i ? L.Z.Messages.DISCORD : n
+  }) : a ? L.Z.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING_QUEST_HOME.format({
+gamePublisher: n,
+gameTitle: r
+  }) : L.Z.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING.format({
+gamePublisher: n,
+gameTitle: r
+  });
 }
