@@ -103,30 +103,45 @@ apps: L
 let {
   channel: n,
   onlyWithCommands: t,
-  includeBuiltIn: i,
-  allowFetch: a = !0
-} = e, l = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions, o = (0, m.em)(n, l, a), r = (0, m.PL)(l, a), s = [], d = new Set();
-if (null != o.result)
-  for (let e of Object.values(o.result.sections)) {
+  includeBuiltIn: a,
+  allowFetch: l = !0,
+  includeEmbeddedApps: o,
+  includeNonEmbeddedApps: r
+} = e, s = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions, d = (0, m.em)(n, s, l), u = (0, m.PL)(s, l), _ = i.useCallback(e => {
+  let n = e.descriptor.application;
+  return null != n && (!!(o && (0, E.ye)({
+    application: n
+  })) || null != n && r && !(0, E.ye)({
+    application: n
+  }) && (!t || Object.keys(e.commands).length > 0));
+}, [
+  o,
+  r,
+  t
+]), C = [], f = new Set();
+if (null != d.result)
+  for (let e of Object.values(d.result.sections)) {
     let n = e.descriptor.application;
-    null != n && (Object.keys(e.commands).length > 0 || !t) && (s.push(n), d.add(n.id));
+    null != n && _(e) && (C.push(n), f.add(n.id));
   }
-if (null != r.result)
-  for (let e of Object.values(r.result.sections)) {
+if (null != u.result)
+  for (let e of Object.values(u.result.sections)) {
     let n = e.descriptor.application;
-    null != n && !d.has(n.id) && (Object.keys(e.commands).length > 0 || !t) && s.push(n);
+    null != n && !f.has(n.id) && _(e) && C.push(n);
   }
-return i && s.push(E.Wx), {
-  apps: s,
-  loading: (null == o ? void 0 : o.fetchState.fetching) === !0 || (null == r ? void 0 : r.fetchState.fetching) === !0
+return r && a && C.push(E.Wx), {
+  apps: C,
+  loading: (null == d ? void 0 : d.fetchState.fetching) === !0 || (null == u ? void 0 : u.fetchState.fetching) === !0
 };
   }({
 channel: n,
 onlyWithCommands: !0,
-includeBuiltIn: !0
+includeBuiltIn: !0,
+includeEmbeddedApps: C,
+includeNonEmbeddedApps: s
   }), R = (0, d.Z)({
 guildId: n.getGuildId()
-  }), S = i.useMemo(() => {
+  }), b = i.useMemo(() => {
 var e;
 if (!r)
   return [];
@@ -242,14 +257,14 @@ f,
 a,
 n,
 t
-  ]), b = i.useMemo(() => {
-if (0 === S.length)
+  ]), S = i.useMemo(() => {
+if (0 === b.length)
   return [];
 let e = new Map(L.map(e => [
   e.id,
   e
 ]));
-return l().compact(S.map(n => {
+return l().compact(b.map(n => {
   var t;
   let i = e.get(n.applicationId);
   if (null == i)
@@ -263,14 +278,12 @@ return l().compact(S.map(n => {
 }));
   }, [
 L,
-S,
+b,
 h
   ]), T = i.useMemo(() => {
 var e;
-if (!s && !C)
-  return [];
 let i = [];
-if (s && C) {
+if (C) {
   let e = new Set(L.map(e => {
     let {
       id: n
@@ -291,12 +304,7 @@ if (s && C) {
     return n;
   }));
 } else
-  i = s ? L : R.map(e => {
-    let {
-      application: n
-    } = e;
-    return n;
-  });
+  s && (i = L);
 return (0, A.N)(i, {
   limit: o,
   filterPredicates: [function(e) {
@@ -360,9 +368,9 @@ n,
 t,
 L,
 R
-  ]), M = b.length > 0, j = T.length > 0;
+  ]), M = S.length > 0, j = T.length > 0;
   return {
-commandResults: b,
+commandResults: S,
 hasCommandResults: M,
 applicationResults: T,
 hasApplicationResults: j,

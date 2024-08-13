@@ -20,7 +20,7 @@ return ec;
   v1: function() {
 return et;
   }
-}), n(47120), n(653041), n(390547);
+}), n(47120), n(653041), n(390547), n(789020);
 var r, i, a, s = n(470079),
   o = n(512722),
   l = n.n(o),
@@ -300,7 +300,8 @@ for (let e of i.applications) {
           icon: e.icon,
           id: e.id,
           name: e.name,
-          bot: e.bot
+          bot: e.bot,
+          flags: e.flags
         };
       }(e)),
       permissions: null != e.permissions ? (0, h.tk)(el(e.permissions, a)) : void 0,
