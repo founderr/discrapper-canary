@@ -1,70 +1,84 @@
 n.d(t, {
   S: function() {
-return c;
+return E;
   },
   z: function() {
-return u;
+return _;
   }
 });
-var r = n(544891),
-  i = n(570140),
-  a = n(168232),
-  s = n(594174),
-  o = n(114064),
-  l = n(981631);
-async function u() {
-  let e = s.default.getCurrentUser();
+var r = n(913527),
+  i = n.n(r),
+  a = n(544891),
+  s = n(570140),
+  o = n(168232),
+  l = n(594174),
+  u = n(114064),
+  c = n(1163),
+  d = n(981631);
+async function _() {
+  let e = l.default.getCurrentUser();
   try {
 let {
   body: t
-} = await r.tn.get({
-  url: l.ANM.USER_PERKS_DEMOS
+} = await a.tn.get({
+  url: d.ANM.USER_PERKS_DEMOS
 });
-(0, a.QI)(e) && (t = {
-  ...t,
+(0, o.QI)(e) && (t.available = {
+  ...t.available,
   ... function() {
-    let e = o.Z.overrides(),
+    let e = u.Z.overrides(),
       t = {};
     for (let i in e) {
       var n, r;
-      t[i] = null !== (r = null === (n = e[i]) || void 0 === n ? void 0 : n.available) && void 0 !== r ? r : void 0;
+      !0 === (null !== (r = null === (n = e[i]) || void 0 === n ? void 0 : n.available) && void 0 !== r ? r : void 0) && (t[i] = !0);
     }
     return t;
   }()
-}), i.Z.dispatch({
+}), s.Z.dispatch({
   type: 'PREMIUM_PERKS_DEMOS_FETCH_SUCCESS',
   demos: t
 });
   } catch (e) {
-i.Z.dispatch({
+s.Z.dispatch({
   type: 'PREMIUM_PERKS_DEMOS_FETCH_FAILURE'
 });
   }
 }
-async function c(e) {
-  if (o.Z.getActivated()[e])
+async function E(e) {
+  if (u.Z.hasActivated(e))
 return !0;
-  let t = s.default.getCurrentUser();
+  let t = l.default.getCurrentUser();
   try {
-if ((0, a.QI)(t) && function(e) {
+if ((0, o.QI)(t) && function(e) {
     var t;
-    return (null === (t = o.Z.overrides()[e]) || void 0 === t ? void 0 : t.activateSuccess) === !0;
+    return (null === (t = u.Z.overrides()[e]) || void 0 === t ? void 0 : t.activateSuccess) === !0;
   }(e))
-  return d(e), !0;
-return await r.tn.post({
-  url: l.ANM.USER_PERKS_DEMOS_ACTIVATE(e)
-}), d(e), !0;
+  return f(e, {
+    start_time: i()().toISOString(),
+    end_time: (c.Z.getCurrentConfig({
+      location: 'activatePerkDemo'
+    }, {
+      autoTrackExposure: !1
+    }).extendedDemoDuration ? i()().add(7, 'days') : i()().add(1, 'hour')).toISOString()
+  }), !0;
+let {
+  body: n
+} = await a.tn.post({
+  url: d.ANM.USER_PERKS_DEMOS_ACTIVATE(e)
+});
+return f(e, n), !0;
   } catch {
-return i.Z.dispatch({
+return s.Z.dispatch({
   type: 'PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE',
   perkType: e
 }), !1;
   }
 }
 
-function d(e) {
-  i.Z.dispatch({
+function f(e, t) {
+  s.Z.dispatch({
 type: 'PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS',
-perkType: e
+perkType: e,
+activatedDuration: t
   });
 }

@@ -8,17 +8,16 @@ var r = n(442837),
   a = n(485731);
 
 function s(e) {
-  var t, n;
   let {
-demos: s,
-activated: o
+available: t,
+activated: n
   } = (0, r.cj)([i.Z], () => ({
-demos: i.Z.getPerksDemos(),
-activated: i.Z.getActivated()
-  })), l = (0, r.e7)([a.Z], () => a.Z.getState());
+available: i.Z.isAvailable(e),
+activated: i.Z.hasActiveDemo(e)
+  }));
   return {
-available: null !== (t = null == s ? void 0 : s[e]) && void 0 !== t && t,
-activated: null !== (n = o[e]) && void 0 !== n && n,
-hqStreamingState: l
+available: t,
+activated: n,
+hqStreamingState: (0, r.e7)([a.Z], () => a.Z.getState())
   };
 }

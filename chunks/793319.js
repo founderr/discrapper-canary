@@ -96,49 +96,48 @@ canGoLive: a,
 hasPermission: r,
 disabled: o
   } = e, c = (0, C.bp)(), u = (0, p.Wu)([ei.Z], () => ei.Z.getAllActiveStreams()).find(e => e.ownerId === n.id), {
-available: d,
-activated: _,
-hqStreamingState: f
-  } = (0, F.k)(h.q.STREAM_HIGH_QUALITY), g = null != u && d && _, I = l.useRef(null), x = t.getGuildId(), T = l.useCallback(() => {
+activated: d,
+hqStreamingState: _
+  } = (0, F.k)(h.q.STREAM_HIGH_QUALITY), f = null != u && d, g = l.useRef(null), I = t.getGuildId(), x = l.useCallback(() => {
 if (null == i || i(), !a)
   return (0, eg.Z)();
-(0, eC.Z)(x, t.id, ex.ZY5.GUILD_CHANNEL);
+(0, eC.Z)(I, t.id, ex.ZY5.GUILD_CHANNEL);
   }, [
-x,
+I,
 t.id,
 a,
 i
-  ]), N = (0, p.e7)([
+  ]), T = (0, p.e7)([
 D.ZP,
 eo.Z
-  ], () => (0, w.Z)(D.ZP, eo.Z)), A = (0, Z.ZP)(), b = (0, S.Z)() && null != N, R = () => {
-b && (null == u ? (0, E.tE)({
+  ], () => (0, w.Z)(D.ZP, eo.Z)), N = (0, Z.ZP)(), A = (0, S.Z)() && null != T, b = () => {
+A && (null == u ? (0, E.tE)({
   channelId: t.id,
-  pid: null == N ? void 0 : N.pid
-}) : (0, v.v$)((0, k.V9)(u), null == N ? void 0 : N.pid));
-  }, j = () => {
-if (b) {
-  (0, M.D)(R);
+  pid: null == T ? void 0 : T.pid
+}) : (0, v.v$)((0, k.V9)(u), null == T ? void 0 : T.pid));
+  }, R = () => {
+if (A) {
+  (0, M.D)(b);
   return;
 }
 if (a) {
-  T();
+  x();
   return;
 }
 (0, eg.Z)();
-  }, L = () => {
-if (A) {
+  }, j = () => {
+if (N) {
   (0, M.Z)(() => (0, B.Z)(u));
   return;
 }
 (0, B.Z)(u);
-  }, P = W.pM, O = W.qA, y = (e, t) => {
+  }, L = W.pM, P = W.qA, O = (e, t) => {
 let {
   onClick: n,
   ...i
 } = null != e ? e : {
   onClick: void 0
-}, a = null != u && !A;
+}, a = null != u && !N;
 return (0, s.jsx)(et.O, {
   ...i,
   centerButton: !0,
@@ -148,26 +147,26 @@ return (0, s.jsx)(et.O, {
   streamActive: null != u,
   isSelfStream: !0,
   onPopoutClick: a ? function(e) {
-    f.hqStreamingIsEnabled && !f.hqStreamingPopoutDismissed && P(), null == n || n(e);
+    _.hqStreamingIsEnabled && !_.hqStreamingPopoutDismissed && L(), null == n || n(e);
   } : null,
   popoutOpen: t,
   shouldShowTooltip: !t,
-  premiumGlow: g && f.hqStreamingIsEnabled,
-  buttonRef: I,
-  onClick: null != u ? L : j
+  premiumGlow: f && _.hqStreamingIsEnabled,
+  buttonRef: g,
+  onClick: null != u ? j : R
 });
   };
-  return A ? y() : (0, s.jsxs)(s.Fragment, {
+  return N ? O() : (0, s.jsxs)(s.Fragment, {
 children: [
-  g && f.hqStreamingIsEnabled ? (0, s.jsx)(Y.$, {
-    buttonRef: I,
-    dismissed: f.hqStreamingPopoutDismissed,
-    onDismiss: P
+  f && _.hqStreamingIsEnabled ? (0, s.jsx)(Y.$, {
+    buttonRef: g,
+    dismissed: _.hqStreamingPopoutDismissed,
+    onDismiss: L
   }) : (0, s.jsx)(z.b, {
     channel: t,
-    buttonRef: I,
-    dismissed: f.hqStreamingOptInPopoutDismissed,
-    onDismiss: O
+    buttonRef: g,
+    dismissed: _.hqStreamingOptInPopoutDismissed,
+    onDismiss: P
   }),
   (0, s.jsx)(K.Z, {
     children: (0, s.jsx)(m.Popout, {
@@ -180,7 +179,7 @@ children: [
             channel: t,
             currentUser: n,
             activeStreams: null != u ? [u] : [],
-            handleGoLive: T,
+            handleGoLive: x,
             onClose: i,
             appContext: c
           })
@@ -196,7 +195,7 @@ children: [
           isShown: i
         } = t;
         return (0, s.jsx)('div', {
-          children: y(n, i)
+          children: O(n, i)
         });
       }
     })

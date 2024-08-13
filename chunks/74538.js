@@ -1347,13 +1347,9 @@ if (null != t)
 
 function eG(e) {
   let {
-available: t,
-activated: n,
-hqStreamingState: {
-  hqStreamingDidEnable: r
-}
+activated: t
   } = (0, f.k)(e);
-  return t && n && r;
+  return t;
 }
 
 function ek(e) {
@@ -1631,12 +1627,8 @@ return (0, p.ks)(p.O1, e);
 return (0, p.ks)(p.uw, e);
   },
   canStreamQuality: function(e, t) {
-return !! function(e) {
-  var t, n;
-  let r = h.Z.getPerksDemos(),
-    i = h.Z.getActivated();
-  return null !== (t = null == r ? void 0 : r[e]) && void 0 !== t && t && null !== (n = i[e]) && void 0 !== n && n;
-}(d.q.STREAM_HIGH_QUALITY) || ('high' === e ? (0, p.ks)(p.O8, t) : 'mid' === e && (0, p.ks)(p.g7, t));
+var n;
+return n = d.q.STREAM_HIGH_QUALITY, !!h.Z.hasActiveDemo(n) || ('high' === e ? (0, p.ks)(p.O8, t) : 'mid' === e && (0, p.ks)(p.g7, t));
   },
   hasFreeBoosts: function(e) {
 return (0, p.ks)(p.$0, e);

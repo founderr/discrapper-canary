@@ -1,69 +1,89 @@
-var r, i, a, s, o = n(848246),
-  l = n(442837),
-  u = n(570140),
-  c = n(168232),
-  d = n(933843),
-  _ = n(746599);
-let E = {
-perksDemos: null,
+let r;
+var i, a, s, o, l = n(848246),
+  u = n(442837),
+  c = n(570140),
+  d = n(168232),
+  _ = n(933843),
+  E = n(746599),
+  f = n(1163);
+let h = {
+available: {},
 activated: {},
 lastFetched: null,
 overrides: {}
   },
-  f = E;
-class h extends(s = l.ZP.Store) {
-  getPerksDemos() {
-return f.perksDemos;
+  p = h;
+
+function m() {
+  r = f.Z.getCurrentConfig({
+location: 'PerksDemosStore'
+  }, {
+autoTrackExposure: !1
+  });
+}
+class I extends(o = u.ZP.Store) {
+  isAvailable(e) {
+var t;
+return null !== (t = p.available[e]) && void 0 !== t && t;
   }
-  getActivated() {
-return f.activated;
+  hasActiveDemo(e) {
+let t = p.activated[e];
+return null != t && null != r && new Date() <= new Date(t.end_time);
+  }
+  hasActivated(e) {
+return null != p.activated[e];
   }
   shouldFetch() {
-return null == f.lastFetched || Date.now() > f.lastFetched + 86400000;
+return null == p.lastFetched || Date.now() > p.lastFetched + 86400000;
   }
   shouldActivate(e) {
 var t;
-return (null === (t = f.perksDemos) || void 0 === t ? void 0 : t[e]) === !0 && !0 !== f.activated[e];
+return null !== (t = p.available[e]) && void 0 !== t && t && null == p.activated[e];
   }
   overrides() {
-return f.overrides;
+return p.overrides;
   }
 }
-a = 'PerksDemosStore', (i = 'displayName') in(r = h) ? Object.defineProperty(r, i, {
-  value: a,
+s = 'PerksDemosStore', (a = 'displayName') in(i = I) ? Object.defineProperty(i, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[i] = a, t.Z = new h(u.Z, {
+}) : i[a] = s, t.Z = new I(c.Z, {
   PREMIUM_PERKS_DEMOS_FETCH_SUCCESS: function(e) {
 let {
-  demos: t
+  demos: {
+    available: t,
+    activated: n
+  }
 } = e;
-f.perksDemos = t, f.lastFetched = Date.now();
+p.available = null != t ? t : {}, p.activated = null != n ? n : {}, p.lastFetched = Date.now();
   },
   PREMIUM_PERKS_DEMOS_FETCH_FAILURE: function() {
-f.perksDemos = E.perksDemos, f.lastFetched = null;
+p.available = h.available, p.lastFetched = null;
   },
   PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS: function(e) {
 let {
-  perkType: t
+  perkType: t,
+  activatedDuration: n
 } = e;
-f.activated[t] = !0;
+p.activated[t] = n;
   },
   PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE: function(e) {
 let {
   perkType: t
 } = e;
-f.activated[t] = !1;
+delete p.activated[t];
   },
   PREMIUM_PERKS_DEMO_COMPLETE: function(e) {
 let {
   perkType: t
 } = e;
-null != f.perksDemos && !0 === f.activated[t] && (f.perksDemos[t] = !1);
+if (p.available[t] = !1, (null == r ? void 0 : r.extendedDemoDuration) !== !0)
+  delete p.activated[t];
   },
   LOGOUT: function() {
-f = E;
+p = h;
   },
   PREMIUM_PERKS_DEMO_OVERRIDE: function(e) {
 let {
@@ -72,16 +92,19 @@ let {
   available: r,
   activateSuccess: i
 } = e;
-void 0 !== t && (0, c.QI)(t) && (f.overrides[n] = {
+void 0 !== t && (0, d.QI)(t) && (p.overrides[n] = {
   available: r,
   activateSuccess: i
-}, null == f.perksDemos && (f.perksDemos = {}), f.perksDemos[n] = r || !1, f.activated[n] = !1, f.lastFetched = null);
+}, null == p.available && (p.available = {}), p.available[n] = r || !1, delete p.activated[n], p.lastFetched = null);
   },
   STREAM_START: function() {
-if (!!(0, d.vw)(o.q.STREAM_HIGH_QUALITY))
-  (0, _.cD)(!0);
+if (!!(0, _.vw)(l.q.STREAM_HIGH_QUALITY))
+  (0, E.cD)(!0);
   },
   STREAM_STOP: function() {
-(0, _.cD)(!1);
-  }
+(0, E.cD)(!1);
+  },
+  CONNECTION_OPEN: m,
+  EXPERIMENTS_FETCH_SUCCESS: m,
+  EXPERIMENT_OVERRIDE_BUCKET: m
 });
