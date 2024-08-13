@@ -70,7 +70,7 @@ var t = i(735250),
   ep = i(981631),
   em = i(558921),
   eI = i(689938),
-  ef = i(57853),
+  ef = i(364658),
   eg = i(902294);
 let eh = d().parserFor(ec.Z),
   eC = d().reactFor(d().ruleOutput(ec.Z, 'react')),
@@ -365,7 +365,7 @@ e0 = a.useCallback(e => (0, t.jsxs)(g.Menu, {
   e$
 ]),
 [e1, e6] = (0, x.Z)(!1, 1000),
-e5 = a.useCallback(() => {
+e8 = a.useCallback(() => {
   if (null != eM)
     G.default.track(ep.rMx.APP_SHARE_BUTTON_CLICKED, {
       source: 'product_page',
@@ -388,7 +388,7 @@ if (E && 'true' === e.searchParams.get(ex)) {
 E,
 eW
   ]);
-  let e8 = a.useCallback(() => {
+  let e5 = a.useCallback(() => {
   null != eM && (E ? eW('product_page') : (G.default.track(ep.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
     application_id: p,
     guild_id: f,
@@ -412,12 +412,12 @@ eW
   groupListingId: null == eM ? void 0 : eM.primary_sku_id,
   guildId: f
 }),
-e4 = (null == eM ? void 0 : eM.id) === em.g,
-[e9, e2] = a.useState(!1),
+e2 = (null == eM ? void 0 : eM.id) === em.g,
+[e4, e9] = a.useState(!1),
 [e7, ne] = a.useState(!1),
 [nn, ni] = a.useState(!0),
 nt = e => {
-  null != e && e2(e.scrollHeight > e.clientHeight);
+  null != e && e9(e.scrollHeight > e.clientHeight);
 },
 na = null != ez && ez.length > 0,
 nr = (null == eM ? void 0 : eM.flags) != null,
@@ -458,7 +458,7 @@ p
               children: r
             })
           }),
-          (e9 || e7) && (0, t.jsx)(eR, {
+          (e4 || e7) && (0, t.jsx)(eR, {
             isViewAll: e7,
             onToggle: () => {
               ne(e => !e);
@@ -591,7 +591,7 @@ p
   eM,
   eL,
   e7,
-  e9,
+  e4,
   eq,
   ey,
   eJ,
@@ -707,7 +707,7 @@ children: [
                           src: i(744050)
                         })
                       }),
-                      e4 && (0, t.jsx)(en.Z, {
+                      e2 && (0, t.jsx)(en.Z, {
                         className: ef.partnerBadge
                       })
                     ]
@@ -716,13 +716,13 @@ children: [
                     className: ef.buttons,
                     children: [
                       (0, t.jsx)(g.Button, {
-                        onClick: e5,
+                        onClick: e8,
                         color: g.Button.Colors.PRIMARY,
                         children: e1 ? eI.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : eI.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
                       }),
                       (0, t.jsx)(g.Button, {
                         color: g.Button.Colors.BRAND,
-                        onClick: e8,
+                        onClick: e5,
                         disabled: !eY,
                         children: eI.Z.Messages.APPLICATION_ADD_BUTTON
                       }),

@@ -26,7 +26,7 @@ var l = t(120356),
   S = t(84658),
   D = t(981631),
   G = t(689938),
-  A = t(808000);
+  A = t(645);
 let h = () => [{
   emoji: '\uD83E\uDDD9',
   emojiDescription: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_1_EMOJI,

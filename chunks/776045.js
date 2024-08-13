@@ -10,7 +10,7 @@ var a, n, r = t(735250),
   s = t(470079),
   o = t(481060),
   l = t(689938),
-  i = t(547102);
+  i = t(84139);
 (n = a || (a = {})).DANGER = 'danger', n.WARNING = 'warning';
 
 function d(e) {

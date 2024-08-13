@@ -14,8 +14,8 @@ var a = t(735250),
   u = t(484036),
   h = t(681619),
   m = t(621060),
-  g = t(979756),
-  p = t(60645);
+  g = t(535271),
+  p = t(813879);
 
 function b(e, r) {
   return e.store.getName().localeCompare(r.store.getName());

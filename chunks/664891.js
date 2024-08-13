@@ -20,22 +20,22 @@ var i = t(735250),
   E = t(598),
   x = t(45572),
   N = t(614223),
-  T = t(246946),
-  S = t(351402),
+  S = t(246946),
+  T = t(351402),
   h = t(509545),
   b = t(74538),
   g = t(296848),
   P = t(374649),
   v = t(642530),
   A = t(653798),
-  C = t(585602),
-  M = t(314182),
-  y = t(314404),
+  y = t(585602),
+  C = t(314182),
+  M = t(314404),
   O = t(42818),
   R = t(981631),
   L = t(689938),
-  j = t(598891),
-  Z = t(711978);
+  j = t(121622),
+  Z = t(56035);
 
 function D(e) {
   var n;
@@ -44,7 +44,7 @@ function D(e) {
   paymentSources: m,
   priceOptions: I,
   onPaymentSourceChange: P,
-  onPaymentSourceAdd: C,
+  onPaymentSourceAdd: y,
   planId: O,
   setHasAcceptedTerms: j,
   legalTermsNodeRef: D,
@@ -69,8 +69,8 @@ function D(e) {
 en = I.paymentSourceId,
 et = (0, o.e7)([h.Z], () => h.Z.get(O));
   s()(null != et, 'Missing newPlan');
-  let ei = (0, o.e7)([T.Z], () => T.Z.hidePersonalInformation),
-ea = l.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback),
+  let ei = (0, o.e7)([S.Z], () => S.Z.hidePersonalInformation),
+ea = l.M.EEA_COUNTRIES.has(T.Z.ipCountryCodeWithFallback),
 er = z === x.A.PURCHASING || z === x.A.COMPLETED,
 es = (0, N.Kp)({
   isTrial: !1,
@@ -132,7 +132,7 @@ children: [
         negativeMarginTop: !0
       }),
       (0, i.jsx)(v.Z, {}),
-      (0, i.jsx)(y.O, {
+      (0, i.jsx)(M.O, {
         planOptions: eo,
         eligibleForMultiMonthPlans: !1,
         selectedPlanId: O,
@@ -158,7 +158,7 @@ children: [
         paymentSources: Object.values(m),
         selectedPaymentSourceId: en,
         onChange: P,
-        onPaymentSourceAdd: C,
+        onPaymentSourceAdd: y,
         hidePersonalInformation: ei,
         disabled: er
       })
@@ -180,7 +180,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(M.Z, {
+  (0, i.jsx)(C.Z, {
     isActive: F,
     ref: D,
     children: null != r && (0, g.R4)(r, O, H) ? (0, i.jsx)(B, {
@@ -265,7 +265,7 @@ startedPaymentFlowWithPaymentSourcesRef: d
 isGift: _
   } = (0, f.wD)(), {
 analyticsLocations: p
-  } = (0, I.ZP)(), x = (0, b.al)(n, t.id, 1, new Set(s)), [T, S] = (0, P.ED)({
+  } = (0, I.ZP)(), x = (0, b.al)(n, t.id, 1, new Set(s)), [S, T] = (0, P.ED)({
 subscriptionId: n.id,
 items: x,
 renewal: !1,
@@ -284,7 +284,7 @@ currency: l.currency,
 preventFetch: o,
 analyticsLocations: p,
 analyticsLocation: m.Z.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
-  }), v = null != S ? S : g;
+  }), v = null != T ? T : g;
   if (a.useEffect(() => {
   r(v);
 }, [
@@ -294,22 +294,22 @@ analyticsLocation: m.Z.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
 return (0, i.jsx)(c.FormErrorBlock, {
   children: v.message
 });
-  let C = (0, N.Kp)({
+  let y = (0, N.Kp)({
   isTrial: !1,
   isGift: _,
   selectedSkuId: u,
   startedPaymentFlowWithPaymentSources: d.current
 }),
-M = (0, N.$g)(C, T, t);
-  if (null == T || null == h || M)
+C = (0, N.$g)(y, S, t);
+  if (null == S || null == h || C)
 return (0, i.jsx)(c.Spinner, {
   className: Z.__invalid_spinner
 });
-  let y = (0, b.Ap)(l.paymentSourceId);
+  let M = (0, b.Ap)(l.paymentSourceId);
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(O.hG, {
-    proratedInvoice: T,
+    proratedInvoice: S,
     renewalInvoice: h
   }),
   (0, i.jsxs)(A.PO, {
@@ -319,16 +319,16 @@ children: [
         children: L.Z.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS
       }),
       (0, i.jsx)(O.Lu, {
-        invoice: T,
+        invoice: S,
         newPlan: t,
-        isPrepaidPaymentSource: y
+        isPrepaidPaymentSource: M
       }),
       (0, i.jsx)(O.nd, {
         premiumSubscription: n,
-        proratedInvoice: T,
+        proratedInvoice: S,
         renewalInvoice: h,
         isUpdate: !0,
-        isPrepaidPaymentSource: y
+        isPrepaidPaymentSource: M
       })
     ]
   })
@@ -348,10 +348,10 @@ function B(e) {
   disabled: E,
   isEEA: x,
   paymentSources: N,
-  setHasAcceptedTerms: T
+  setHasAcceptedTerms: S
 } = e,
 {
-  analyticsLocations: S
+  analyticsLocations: T
 } = (0, I.ZP)(),
 h = (0, b.al)(s, l.id, 1, new Set(u)),
 [g, v] = (0, P.ED)({
@@ -361,7 +361,7 @@ h = (0, b.al)(s, l.id, 1, new Set(u)),
   paymentSourceId: _.paymentSourceId,
   currency: _.currency,
   preventFetch: f,
-  analyticsLocations: S,
+  analyticsLocations: T,
   analyticsLocation: m.Z.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
 });
   return (a.useEffect(() => {
@@ -377,7 +377,7 @@ currency: g.currency,
 tax: g.tax,
 taxInclusive: g.taxInclusive
   }), null == r) ? null : (0, i.jsx)(p.Z, {
-onChange: T,
+onChange: S,
 finePrint: (0, i.jsx)(d.Z, {
   subscriptionPlan: l,
   paymentSourceType: null === (n = N[null !== (t = _.paymentSourceId) && void 0 !== t ? t : '']) || void 0 === n ? void 0 : n.type,
@@ -514,7 +514,7 @@ children: [
         label: n,
         value: (0, b.PK)(a, s, !0)
       }),
-      (0, i.jsx)(C.Z, {
+      (0, i.jsx)(y.Z, {
         invoice: u
       }),
       (0, i.jsx)(A.KU, {}),

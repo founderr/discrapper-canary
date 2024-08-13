@@ -6,8 +6,8 @@ var i = n(735250),
   r = n(481060),
   l = n(981631),
   c = n(689938),
-  d = n(22606),
-  u = n(549856);
+  d = n(526201),
+  u = n(224499);
 let h = 0,
   p = () => 'notification-position-selector-'.concat(h++),
   f = e => {

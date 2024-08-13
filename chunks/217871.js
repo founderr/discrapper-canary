@@ -18,7 +18,7 @@ var i = n(735250),
   C = n(641033),
   I = n(989830),
   x = n(689938),
-  T = n(934376);
+  T = n(37834);
 let N = a.memo(function(e) {
 let {
   channelId: t,

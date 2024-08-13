@@ -33,7 +33,7 @@ S = e => {
       default: e
     } = await Promise.all([
       t.e('58023'),
-      t.e('37240')
+      t.e('3802')
     ]).then(t.bind(t, 779250));
     return t => (0, l.jsx)(e, {
       ...t,

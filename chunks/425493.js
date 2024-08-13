@@ -5,7 +5,7 @@ var s = n(120356),
   l = n(873546),
   u = n(481060),
   c = n(689938),
-  d = n(580933);
+  d = n(26270);
 (r = i || (i = {})).DEFAULT = '', r.BOLD = 'Bold', r.SOLID = 'Solid';
 let _ = e => {
   let {

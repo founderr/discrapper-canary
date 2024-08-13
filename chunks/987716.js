@@ -16,7 +16,7 @@ var i = t(735250),
   p = t(703926),
   m = t(474936),
   I = t(689938),
-  f = t(635904);
+  f = t(62612);
 let E = e => {
   let {
 isShopGift: n
@@ -25,21 +25,21 @@ giftRecipient: t,
 selectedGiftStyle: E,
 setSelectedGiftStyle: x,
 emojiConfetti: N,
-soundEffect: T,
-setEmojiConfetti: S,
+soundEffect: S,
+setEmojiConfetti: T,
 setSoundEffect: h
   } = (0, s.wD)(), [b, g] = a.useState(!1), P = a.useRef(null), v = (0, r.useRadioGroup)({
 orientation: 'horizontal'
-  }), A = (0, o.MY)(t, n), C = A === o.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, M = A !== o.xr.DEFAULT, y = (0, u.rK)(), {
+  }), A = (0, o.MY)(t, n), y = A === o.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, C = A !== o.xr.DEFAULT, M = (0, u.rK)(), {
 enabled: O
   } = u.ZP.useExperiment({
 location: 'premiumGiftSelect_GiftAnimationOptions'
   }, {
-autoTrackExposure: y
+autoTrackExposure: M
   }), R = null;
-  return M && (R = y && O ? m.V4 : m.QI), (0, i.jsxs)('div', {
+  return C && (R = M && O ? m.V4 : m.QI), (0, i.jsxs)('div', {
 children: [
-  M && (0, i.jsxs)('div', {
+  C && (0, i.jsxs)('div', {
     className: f.giftMainAnimation,
     children: [
       null != E ? (0, i.jsx)(d.Z, {
@@ -51,13 +51,13 @@ children: [
       }) : (0, i.jsx)(r.Spinner, {
         className: f.spinner
       }),
-      C && (0, i.jsxs)('div', {
+      y && (0, i.jsxs)('div', {
         className: f.soundEmojiContainer,
         children: [
           (0, i.jsx)('div', {
             className: f.sound,
             children: (0, i.jsx)(l.Z, {
-              sound: T,
+              sound: S,
               onSelect: e => {
                 null != h && h(null == e ? void 0 : e);
               }
@@ -66,7 +66,7 @@ children: [
           (0, i.jsx)('div', {
             className: f.emoji,
             children: (0, i.jsx)(_.Z, {
-              setEmojiConfetti: S,
+              setEmojiConfetti: T,
               emojiConfetti: null == N ? void 0 : N
             })
           })

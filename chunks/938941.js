@@ -23,7 +23,7 @@ var r = n(735250),
   a = n(227879),
   s = n(260034),
   o = n(993365),
-  l = n(133065);
+  l = n(4834);
 
 function u(e) {
   return (0, r.jsx)(a.bL, {
