@@ -182,67 +182,70 @@ traitsToHighlight: _,
 prioritizedGameIds: f,
 className: h,
 showBrandingFooter: T = !1,
-bannerUrl: A,
-onlyAnimateIconOnHover: N = !1,
-hasPendingJoinRequest: v = !1,
-atMaxMemberCapacity: O = !1
+showFavoriteButton: A = !1,
+bannerUrl: N,
+onlyAnimateIconOnHover: v = !1,
+hasPendingJoinRequest: O = !1,
+atMaxMemberCapacity: R = !1
   } = e, {
-tag: R,
-badge: D,
+tag: D,
+badge: L,
 branding: {
-  primaryColor: L,
-  secondaryColor: k
+  primaryColor: k,
+  secondaryColor: B
 },
-bannerHash: B,
-gameActivity: F
-  } = n, V = (0, d.Z)(n.games), H = (0, m.Z)('clan_discovery_card'), [Z, Y] = i.useState(!1), j = i.useRef(null), [W, K] = i.useState(!1), z = (0, y.GN)(e => e.savedGuildIds.includes(n.id), o.Z), q = (0, E.iN)('guild_card'), Q = i.useCallback(e => {
-e.stopPropagation(), e.preventDefault(), (0, y.qQ)(n.id, !z);
+bannerHash: F,
+gameActivity: V
+  } = n, H = (0, d.Z)(n.games), Z = (0, m.Z)('clan_discovery_card'), [Y, j] = i.useState(!1), W = i.useRef(null), [K, z] = i.useState(!1), q = (0, y.GN)(e => e.savedGuildIds.includes(n.id), o.Z), Q = (0, E.iN)('guild_card'), X = i.useCallback(e => {
+e.stopPropagation(), e.preventDefault(), (0, y.qQ)(n.id, !q);
   }, [
 n.id,
-z
-  ]), X = i.useCallback(() => {
-Y(!0);
-  }, []), $ = i.useCallback(() => {
-Y(!1);
-  }, []), J = M.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
+q
+  ]), $ = i.useCallback(() => {
+j(!0);
+  }, []), J = i.useCallback(() => {
+j(!1);
+  }, []), ee = M.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({
 count: n.memberCount
-  }), ee = null != A ? A : (0, p.pY)(n.id, B), et = null == a && null == ee ? {
-background: 'linear-gradient(90deg, '.concat(L, ', ').concat(k, ')')
-  } : void 0, en = null != a ? a : null != ee ? (0, r.jsx)('img', {
+  }), et = null != N ? N : (0, p.pY)(n.id, F), en = null == a && null == et ? {
+background: 'linear-gradient(90deg, '.concat(k, ', ').concat(B, ')')
+  } : void 0, er = null != a ? a : null != et ? (0, r.jsx)('img', {
 alt: M.Z.Messages.CLAN_LOOK_BANNER,
-src: ee,
+src: et,
 className: P.bannerImage
-  }) : null, er = i.useMemo(() => (0, b.HR)(n.traits, _), [
+  }) : null, ei = i.useMemo(() => (0, b.HR)(n.traits, _), [
 n.traits,
 _
   ]);
-  return i.useEffect(() => {
-let e = j.current;
-null != e && null != e.offsetWidth && null != e.scrollWidth && K(e.offsetWidth < e.scrollWidth);
-  }, []), (0, r.jsxs)('div', {
+  i.useEffect(() => {
+let e = W.current;
+null != e && null != e.offsetWidth && null != e.scrollWidth && z(e.offsetWidth < e.scrollWidth);
+  }, []);
+  let ea = Q && (A || Y || q);
+  return (0, r.jsxs)('div', {
 className: s()(P.card, h, {
   [P.cardStaticHeight]: !u
 }),
-onMouseEnter: X,
-onMouseLeave: $,
+onMouseEnter: $,
+onMouseLeave: J,
 children: [
   (0, r.jsxs)('div', {
     className: P.cardBrandingHeader,
-    style: et,
+    style: en,
     children: [
-      en,
+      er,
       (0, r.jsx)(G, {
-        hasPendingJoinRequest: v,
-        atMaxMemberCapacity: O,
+        hasPendingJoinRequest: O,
+        atMaxMemberCapacity: R,
         isGuildMember: c
       }),
-      q && (0, r.jsx)(l.Clickable, {
-        className: s()(P.favoriteButton, (Z || z) && P.shownFavoriteButton),
-        onClick: Q,
+      Q && (0, r.jsx)(l.Clickable, {
+        className: s()(P.favoriteButton, ea && P.shownFavoriteButton),
+        onClick: X,
         focusProps: {
-          enabled: Z || z
+          enabled: ea
         },
-        children: z ? (0, r.jsx)(l.HeartIcon, {
+        children: q ? (0, r.jsx)(l.HeartIcon, {
           color: l.tokens.colors.INFO_DANGER_FOREGROUND,
           size: 'custom',
           width: 18,
@@ -277,7 +280,7 @@ children: [
                     guildName: n.name,
                     guildIcon: n.icon,
                     iconSize: 64,
-                    animate: !N || Z
+                    animate: !v || Y
                   })
                 })
               }),
@@ -286,7 +289,7 @@ children: [
                 children: (0, r.jsx)(l.Tooltip, {
                   text: M.Z.Messages.CLAN_DISCOVERY_CARD_TAG_TOOLTIP,
                   position: 'top',
-                  shouldShow: !c && H,
+                  shouldShow: !c && Z,
                   children: e => (0, r.jsxs)('div', {
                     ...e,
                     className: P.clanTagChiplet,
@@ -294,14 +297,14 @@ children: [
                       (0, r.jsx)(g.A, {
                         width: 16,
                         height: 16,
-                        badge: D.badgeKind,
-                        primaryTintColor: D.primaryColor,
-                        secondaryTintColor: D.secondaryColor
+                        badge: L.badgeKind,
+                        primaryTintColor: L.primaryColor,
+                        secondaryTintColor: L.secondaryColor
                       }),
                       (0, r.jsx)(l.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-primary',
-                        children: R
+                        children: D
                       })
                     ]
                   })
@@ -316,10 +319,10 @@ children: [
             children: (0, r.jsx)(l.Tooltip, {
               text: n.name,
               color: l.Tooltip.Colors.PRIMARY,
-              shouldShow: W,
+              shouldShow: K,
               children: e => (0, r.jsx)('span', {
                 ...e,
-                ref: j,
+                ref: W,
                 className: P.nameText,
                 children: n.name
               })
@@ -356,7 +359,7 @@ children: [
         expanded: u
       }),
       (0, r.jsx)(x, {
-        traits: er,
+        traits: ei,
         traitsToHighlight: _
       })
     ]
@@ -371,16 +374,16 @@ children: [
           children: (0, r.jsx)(l.Text, {
             variant: 'text-xs/normal',
             color: 'text-muted',
-            children: J
+            children: ee
           })
         })
       }),
       (0, r.jsx)('div', {
         className: P.cardFooterGames,
         children: (0, r.jsx)(C.Z, {
-          games: V,
+          games: H,
           prioritizedGameIds: f,
-          gameActivity: F
+          gameActivity: V
         })
       })
     ]
@@ -388,7 +391,7 @@ children: [
   T && (0, r.jsx)('div', {
     className: P.cardBrandingFooter,
     style: {
-      background: 'linear-gradient(90deg, '.concat(L, ', ').concat(k, ')')
+      background: 'linear-gradient(90deg, '.concat(k, ', ').concat(B, ')')
     }
   })
 ]

@@ -19,8 +19,8 @@ var o = t(735250),
   I = t(981631),
   N = t(308083),
   E = t(689938),
-  g = t(133072);
-let v = {
+  v = t(133072);
+let g = {
 mass: 1,
 tension: 600,
 friction: 60
@@ -140,7 +140,7 @@ f
   return (0, o.jsx)(i.AdvancedScrollerNone, {
 ref: l,
 style: _,
-className: g.scroller,
+className: v.scroller,
 onScroll: h,
 children: n
   });
@@ -153,7 +153,7 @@ formState: t,
 updateFormState: r
   } = e;
   return (0, o.jsxs)('div', {
-className: g.verificationForm,
+className: v.verificationForm,
 children: [
   (0, o.jsx)(i.Heading, {
     variant: 'heading-xxl/normal',
@@ -224,7 +224,7 @@ Q = (0, i.useSpring)({
     opacity: 1,
     transform: 'translateY(0px)'
   },
-  config: v,
+  config: g,
   delay: 500
 }, 'animate-always'),
 W = r.useRef(null);
@@ -232,15 +232,15 @@ W = r.useRef(null);
 transitionState: B,
 'aria-labelledby': A,
 size: i.ModalSize.DYNAMIC,
-className: g.container,
+className: v.container,
 hideShadow: !0,
 children: [
   (0, o.jsxs)(a.animated.div, {
-    className: g.body,
+    className: v.body,
     style: Q,
     children: [
       (0, o.jsx)('div', {
-        className: g.applicationContainer,
+        className: v.applicationContainer,
         ref: W,
         children: (0, o.jsx)(T, {
           containerRef: W,
@@ -254,25 +254,26 @@ children: [
         })
       }),
       (0, o.jsx)('div', {
-        className: g.verticalRule
+        className: v.verticalRule
       }),
       (0, o.jsxs)('div', {
-        className: g.clanContainer,
+        className: v.clanContainer,
         children: [
           (0, o.jsx)(C.xV, {
             clan: y,
-            className: g.profileCard,
+            className: v.profileCard,
             prioritizedGameIds: F,
             expanded: !0,
             isMember: q,
             hasPendingJoinRequest: L,
-            atMaxMemberCapacity: G
+            atMaxMemberCapacity: G,
+            showFavoriteButton: !0
           }),
           (0, o.jsx)(i.Tooltip, {
             text: E.Z.Messages.CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP,
             shouldShow: !V,
             children: e => (0, o.jsxs)('div', {
-              className: g.applyButtonContainer,
+              className: v.applyButtonContainer,
               children: [
                 (0, o.jsxs)(i.Button, {
                   ...e,
@@ -280,7 +281,7 @@ children: [
                   onClick: U,
                   fullWidth: !0,
                   disabled: z || !V || null == M,
-                  innerClassName: g.applyButtonInner,
+                  innerClassName: v.applyButtonInner,
                   children: [
                     G && (0, o.jsx)(i.WarningIcon, {
                       size: 'custom',
@@ -304,24 +305,24 @@ children: [
               (0, o.jsx)(i.Text, {
                 variant: 'text-xs/medium',
                 color: 'text-warning',
-                className: g.maxCapacityText,
+                className: v.maxCapacityText,
                 children: E.Z.Messages.CLAN_DISCOVERY_APPLICATION_MAX_MEMBERS
               }),
               (0, o.jsx)('hr', {
-                className: g.separator
+                className: v.separator
               })
             ]
           }),
           (0, o.jsx)(i.Text, {
             variant: 'text-xs/medium',
             color: 'text-muted',
-            className: g.noticeText,
+            className: v.noticeText,
             children: E.Z.Messages.CLAN_APPLICATION_GDM_CONSENT
           }),
           (0, o.jsx)(i.Text, {
             variant: 'text-xs/medium',
             color: 'text-muted',
-            className: g.noticeText,
+            className: v.noticeText,
             children: E.Z.Messages.MEMBER_VERIFICATION_WARNING
           })
         ]
@@ -329,7 +330,7 @@ children: [
     ]
   }),
   (0, o.jsx)('div', {
-    className: g.closeButtonContainer,
+    className: v.closeButtonContainer,
     children: (0, o.jsx)(i.Button, {
       onClick: S,
       look: i.ButtonLooks.OUTLINED,

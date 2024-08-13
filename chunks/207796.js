@@ -46,7 +46,8 @@ savedGuildIds: t
 game: t
   })),
   setSelectedGames: t => (0, d.j)(() => e({
-selectedGames: t
+selectedGames: t,
+started: !0
   })),
   setSelectedPlaystyle: t => (0, d.j)(() => e({
 selectedPlaystyle: t,
@@ -80,15 +81,16 @@ selectedTraits: e.selectedTraits
   })
 }));
 
-function f(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-n = E.getState().mode,
+function f(e, t) {
+  let n = E.getState().mode,
 r = E.getState().started;
-  (0, d.j)(() => E.setState({
-mode: e,
-previousMode: n,
-started: t || r
-  }));
+  (0, d.j)(() => {
+E.setState({
+  mode: e,
+  previousMode: n,
+  started: null != t ? t : r
+});
+  });
 }
 
 function h(e, t) {

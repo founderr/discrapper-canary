@@ -10,7 +10,6 @@ e.exports = {
   sectionHeaderSpacer: 'sectionHeaderSpacer_a24e0c',
   card: 'card_a24e0c',
   topPicksSection: 'topPicksSection_a24e0c',
-  topPicksToolbar: 'topPicksToolbar_a24e0c',
   hero: 'hero_a24e0c',
   glassBackground: 'glassBackground_a24e0c',
   glassBackgroundTop: 'glassBackgroundTop_a24e0c'

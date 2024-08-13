@@ -238,35 +238,27 @@ children: [
   }) : null;
 }
 
-function C() {
-  let e = (0, E.GN)(e => e.mode, l.Z),
-t = (0, E.GN)(e => e.savedGuildIds, l.Z),
-n = a.useCallback(() => {
-  if (e === E.v0.SAVED_GUILDS) {
-    (0, E.fH)(E.v0.DISCOVERY, !0);
-    return;
-  }
-  (0, E.fH)(E.v0.SAVED_GUILDS, !0);
-}, [e]),
-s = (0, i.jsx)(o.HeartIcon, {
-  className: I.filterPillIcon,
-  color: 'currentColor'
-}),
-r = (0, i.jsxs)('div', {
-  className: I.savedInnerContainer,
-  children: [
-    m.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
-    t.length > 0 ? (0, i.jsx)(o.NumberBadge, {
-      count: t.length,
-      color: _.Z.BG_MOD_SUBTLE
-    }) : null
-  ]
-});
+function C(e) {
+  let {
+onClick: t
+  } = e, n = (0, E.GN)(e => e.mode, l.Z), a = (0, E.GN)(e => e.savedGuildIds, l.Z), s = (0, i.jsx)(o.HeartIcon, {
+className: I.filterPillIcon,
+color: 'currentColor'
+  }), r = (0, i.jsxs)('div', {
+className: I.savedInnerContainer,
+children: [
+  m.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
+  a.length > 0 ? (0, i.jsx)(o.NumberBadge, {
+    count: a.length,
+    color: _.Z.BG_MOD_SUBTLE
+  }) : null
+]
+  });
   return (0, i.jsx)(g, {
 icon: s,
 text: r,
-onClick: n,
-isActive: e === E.v0.SAVED_GUILDS,
+onClick: t,
+isActive: n === E.v0.SAVED_GUILDS,
 ariaLabel: m.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
 autoWidth: !0
   });
@@ -316,14 +308,15 @@ autoWidth: !0
 
 function A(e) {
   let {
-title: t
+title: t,
+onNavigateBack: n
   } = e;
   return null == t ? null : (0, i.jsxs)('div', {
 className: I.backToDiscovery,
 children: [
   (0, i.jsx)(o.Clickable, {
     className: I.backArrow,
-    onClick: () => (0, E.fH)(E.v0.DISCOVERY),
+    onClick: n,
     children: (0, i.jsx)(o.ArrowLargeLeftIcon, {
       color: 'currentColor'
     })
@@ -339,7 +332,8 @@ children: [
 
 function v(e) {
   let {
-className: t
+className: t,
+onNavigateBack: n
   } = e;
   return (0, i.jsxs)('div', {
 className: r()(I.toolbar, t),
@@ -347,7 +341,8 @@ children: [
   (0, i.jsx)('div', {
     className: I.addClan,
     children: (0, i.jsx)(A, {
-      title: m.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS
+      title: m.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
+      onNavigateBack: n
     })
   }),
   (0, i.jsx)('div', {
@@ -360,9 +355,13 @@ children: [
 function Z(e) {
   let {
 className: t
-  } = e;
-  return (0, E.GN)(e => e.mode, l.Z) === E.v0.SAVED_GUILDS ? (0, i.jsx)(v, {
-className: t
+  } = e, n = (0, E.GN)(e => e.mode, l.Z), s = (0, E.GN)(e => e.started, l.Z), o = a.useCallback(() => {
+if (n !== E.v0.SAVED_GUILDS)
+  return (0, E.fH)(E.v0.SAVED_GUILDS);
+  }, [n]), c = a.useCallback(() => s ? (0, E.fH)(E.v0.DISCOVERY) : (0, E.fH)(E.v0.GET_STARTED), [s]);
+  return n === E.v0.SAVED_GUILDS ? (0, i.jsx)(v, {
+className: t,
+onNavigateBack: c
   }) : (0, i.jsxs)('div', {
 className: r()(I.toolbar, t),
 children: [
@@ -377,7 +376,9 @@ children: [
     className: I.actions,
     children: [
       (0, i.jsx)(N, {}),
-      (0, i.jsx)(C, {})
+      (0, i.jsx)(C, {
+        onClick: o
+      })
     ]
   })
 ]

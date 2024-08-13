@@ -3,10 +3,10 @@ n.d(t, {
 return a;
   },
   ZP: function() {
-return L;
+return Z;
   },
   s: function() {
-return Z;
+return v;
   }
 }), n(47120);
 var i, a, s, r, l = n(735250),
@@ -19,22 +19,21 @@ var i, a, s, r, l = n(735250),
   h = n(945124),
   m = n(231467),
   I = n(931515),
-  g = n(702646),
-  p = n(207796),
-  T = n(526282),
-  S = n(777734),
-  f = n(976757),
-  C = n(981631),
-  N = n(689938),
-  A = n(266489);
-let v = 56;
+  g = n(207796),
+  p = n(526282),
+  T = n(777734),
+  S = n(976757),
+  f = n(981631),
+  C = n(689938),
+  N = n(266489);
+let A = 56;
 
-function Z(e) {
+function v(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
-  return e === p.v0.SAVED_GUILDS ? 'saved_guilds' : t;
+  return e === g.v0.SAVED_GUILDS ? 'saved_guilds' : t;
 }
 
-function L(e) {
+function Z(e) {
   let {
 width: t,
 isAnimating: n,
@@ -43,25 +42,25 @@ onScroll: a
   } = e, {
 loaded: s,
 clans: r,
-searchResult: Z,
-searchCriteria: L
-  } = (0, I.Qc)(null, 'saved_guilds' === i), O = (0, p.GN)(e => e.selectedTraits, c.Z), R = (0, u.Z)(Z), x = Math.min(null != t ? t : 1024, 2000), b = o.useMemo(() => {
-let e = x / 256,
-  t = x / 376,
-  n = x / e,
-  i = x / t;
+searchResult: v,
+searchCriteria: Z
+  } = (0, I.Qc)(null, 'saved_guilds' === i), L = (0, g.GN)(e => e.selectedTraits, c.Z), O = (0, u.Z)(v), R = Math.min(null != t ? t : 1024, 2000), x = o.useMemo(() => {
+let e = R / 256,
+  t = R / 376,
+  n = R / e,
+  i = R / t;
 return i > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e;
-  }, [x]);
+  }, [R]);
   o.useEffect(() => {
-if (null != Z && !!(0, f.Pw)(Z))
-  (!(null != R && (0, f.Pw)(R)) || !(R.loadedAt >= Z.loadedAt)) && (0, _.Oe)(Z.items.map(e => e.id), 'top_picks', L);
+if (null != v && !!(0, S.Pw)(v))
+  (!(null != O && (0, S.Pw)(O)) || !(O.loadedAt >= v.loadedAt)) && (0, _.Oe)(v.items.map(e => e.id), 'top_picks', Z);
   }, [
-L,
 Z,
-R,
+v,
+O,
 n
   ]);
-  let P = o.useMemo(() => function(e, t, n) {
+  let b = o.useMemo(() => function(e, t, n) {
   if (null == e)
     return [];
   switch (n) {
@@ -92,23 +91,23 @@ n
         {
           section: 'top_picks',
           items: e.slice(0, t),
-          sectionHeight: v,
+          sectionHeight: A,
           itemHeight: 400,
           props: {
-            className: A.glassBackgroundTop
+            className: N.glassBackgroundTop
           },
-          header: N.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: N.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: C.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: C.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
           items: e.slice(t),
-          sectionHeight: v,
+          sectionHeight: A,
           itemHeight: 400,
           props: {
-            className: A.glassBackground
+            className: N.glassBackground
           },
-          header: N.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
+          header: C.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
         }
       ];
     case 'upsell':
@@ -121,10 +120,10 @@ n
         {
           section: 'top_picks',
           items: e.slice(0, t),
-          sectionHeight: v,
+          sectionHeight: A,
           itemHeight: 400,
-          header: N.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: N.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: C.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: C.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
@@ -137,94 +136,88 @@ n
       return [{
           section: 'top_picks',
           items: e.slice(0, t),
-          sectionHeight: v,
+          sectionHeight: A,
           itemHeight: 400,
-          header: N.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-          subtitle: N.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
+          header: C.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+          subtitle: C.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE
         },
         {
           section: 'other_guilds',
           items: e.slice(t),
-          sectionHeight: v,
+          sectionHeight: A,
           itemHeight: 400,
-          header: N.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
+          header: C.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE
         }
       ];
     default:
       return [];
   }
-}(r, b, i), [
+}(r, x, i), [
   r,
-  b,
+  x,
   i
 ]),
-M = o.useMemo(() => new Set(L.games), [L.games]),
-D = o.useCallback((e, t, n, i) => {
+P = o.useMemo(() => new Set(Z.games), [Z.games]),
+M = o.useCallback((e, t, n, i) => {
   var a;
   let {
     items: s,
     section: r
-  } = P[e];
+  } = b[e];
   if ('upsell' === r || 'hero' === r)
     return null;
   let o = s[t];
   return (0, l.jsx)(m.ZP, {
     clan: o,
-    affinity: null !== (a = o.affininty) && void 0 !== a ? a : (0, h.y)(o, L),
-    traitsToHighlight: O,
-    className: A.card,
+    affinity: null !== (a = o.affininty) && void 0 !== a ? a : (0, h.y)(o, Z),
+    traitsToHighlight: L,
+    className: N.card,
     style: n,
-    source: C.jXE.DISCOVER_SEARCH,
-    prioritizedGameIds: M,
+    source: f.jXE.DISCOVER_SEARCH,
+    prioritizedGameIds: P,
     onlyAnimateIconOnHover: !0
   }, i);
 }, [
+  Z,
+  b,
   L,
-  P,
-  O,
-  M
+  P
 ]),
-y = o.useCallback((e, t) => {
+D = o.useCallback((e, t) => {
   let {
     header: n,
-    subtitle: a,
-    section: s
-  } = P[e];
-  switch (s) {
+    subtitle: i,
+    section: a
+  } = b[e];
+  switch (a) {
     case 'upsell':
-      return (0, l.jsx)(T.Z, {});
+      return (0, l.jsx)(p.Z, {});
     case 'hero':
       return (0, l.jsx)(E.Z, {
-        title: N.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
-        description: N.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
+        title: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
+        description: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
         backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/guilds-hero-background.png',
-        className: A.hero
+        className: N.hero
       });
     case 'top_picks':
-      return (0, l.jsxs)('div', {
-        className: A.topPicksSection,
-        children: [
-          (0, l.jsx)(S.Z, {
-            style: {
-              ...t,
-              marginTop: 8,
-              position: 'absolute'
-            },
-            title: n,
-            subtitle: a
-          }),
-          'global_discovery' === i ? (0, l.jsx)('div', {
-            className: A.topPicksToolbar,
-            children: (0, l.jsx)(g.Z, {})
-          }) : null
-        ]
+      return (0, l.jsx)('div', {
+        className: N.topPicksSection,
+        children: (0, l.jsx)(T.Z, {
+          style: {
+            ...t,
+            marginTop: 8,
+            position: 'absolute'
+          },
+          title: n,
+          subtitle: i
+        })
       });
     default:
       if (null === n)
         return null;
-      return (0, l.jsx)(S.Z, {
+      return (0, l.jsx)(T.Z, {
         title: n,
-        subtitle: a,
+        subtitle: i,
         style: {
           ...t,
           marginTop: 8,
@@ -232,48 +225,45 @@ y = o.useCallback((e, t) => {
         }
       });
   }
-}, [
-  P,
-  i
-]);
+}, [b]);
   return 0 === r.length && s && 'saved_guilds' === i ? (0, l.jsxs)('div', {
-className: A.emptySavedGuilds,
+className: N.emptySavedGuilds,
 children: [
   (0, l.jsx)(d.Heading, {
     variant: 'heading-md/medium',
     color: 'header-primary',
-    children: N.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
+    children: C.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
   }),
   (0, l.jsx)(d.Text, {
     variant: 'text-sm/medium',
     color: 'header-secondary',
-    children: N.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
+    children: C.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
   })
 ]
   }) : 0 !== r.length && s ? (0, l.jsx)(l.Fragment, {
 children: (0, l.jsx)('div', {
-  className: A.masonryListContainer,
+  className: N.masonryListContainer,
   children: (0, l.jsx)(d.MasonryList, {
-    className: A.masonryList,
-    sections: P.map(e => {
+    className: N.masonryList,
+    sections: b.map(e => {
       let {
         items: t
       } = e;
       return t.length;
     }),
-    columns: b,
+    columns: x,
     itemGutter: 16,
     paddingHorizontal: 32,
     paddingVertical: 'upsell' === i ? 64 : 0,
     removeEdgeItemGutters: !0,
-    renderItem: D,
-    renderSection: y,
-    getSectionHeight: e => P[e].sectionHeight,
-    getItemKey: (e, t) => P[e].items[t].id,
-    getItemHeight: e => P[e].itemHeight,
+    renderItem: M,
+    renderSection: D,
+    getSectionHeight: e => b[e].sectionHeight,
+    getItemKey: (e, t) => b[e].items[t].id,
+    getItemHeight: e => b[e].itemHeight,
     getSectionProps: e => {
       var t;
-      return null !== (t = P[e].props) && void 0 !== t ? t : {};
+      return null !== (t = b[e].props) && void 0 !== t ? t : {};
     },
     chunkSize: 24,
     maxContentWidth: 2000,
