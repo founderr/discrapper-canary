@@ -17,7 +17,7 @@ src: t,
 size: n,
 constrain: a = 'height',
 className: c,
-alt: d = 'icon',
+alt: d,
 fallbackSrc: _
   } = e, E = (0, l.ZP)(), f = ''.concat(n, 'px'), [h, p] = i.useState(!1), [m, I] = i.useState(!1), T = null == _ || m;
   if (null == t || h && T)
@@ -38,11 +38,17 @@ height: f
 maxWidth: f,
 minHeight: f
   };
-  return (0, r.jsx)('img', {
-style: g,
-className: s()(u.contentImage, c),
-src: h && null != _ ? _ : t,
-alt: d,
-onError: e => h ? I(!0) : p(!0)
-  });
+  return (0, r.jsx)(o.Tooltip, {
+'aria-label': d,
+text: d,
+shouldShow: null != d,
+children: e => (0, r.jsx)('img', {
+  ...e,
+  style: g,
+  className: s()(u.contentImage, c),
+  src: h && null != _ ? _ : t,
+  alt: null != d ? d : 'icon',
+  onError: e => h ? I(!0) : p(!0)
+})
+  }, 'voice-preview');
 }
