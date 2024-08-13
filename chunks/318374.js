@@ -43,6 +43,8 @@ return (0, r.jsx)(u.Dialog, {
       channelId: f,
       nick: _.ZP.getName(e),
       disablePopout: 'function' == typeof N ? N(e.id) : N,
+      ignoreModalClicks: !0,
+      onPopoutClose: () => O(!1),
       onContextMenu: t => (0, c.jW)(t, async () => {
         let {
           default: t

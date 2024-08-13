@@ -28,30 +28,32 @@ let {
   user: t,
   analyticsContext: n,
   disablePopout: r,
-  guildId: a,
-  channelId: s
-} = this.props, o = {
+  ignoreModalClicks: a,
+  guildId: s,
+  channelId: o
+} = this.props, u = {
   location: {
     ...n.location,
     object: f.qAy.LIST_ITEM
   }
 };
 return (0, i.jsx)(l.Popout, {
-  preload: () => (0, _.Z)(t.id, t.getAvatarURL(a, 80), {
-    guildId: a,
-    channelId: s
+  preload: () => (0, _.Z)(t.id, t.getAvatarURL(s, 80), {
+    guildId: s,
+    channelId: o
   }),
   renderPopout: e => (0, i.jsx)(E.Z, {
     ...e,
     location: 'UserListItem',
     userId: t.id,
-    guildId: a,
-    channelId: s,
-    analyticsParams: o
+    guildId: s,
+    channelId: o,
+    analyticsParams: u
   }),
   position: 'left',
   onRequestClose: this.handleUserPopoutClose,
   shouldShow: !r && e,
+  ignoreModalClicks: a,
   children: e => this.renderUserPopout(e)
 });
   }
