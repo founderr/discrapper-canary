@@ -16,5 +16,6 @@ e.exports = {
   trialPriceLine: 'trialPriceLine_df35cb',
   afterTrialPriceLine: 'afterTrialPriceLine_df35cb',
   formTitle: 'formTitle_df35cb',
-  spinnerWrapper: 'spinnerWrapper_df35cb'
+  spinnerWrapper: 'spinnerWrapper_df35cb',
+  trialHeader: 'trialHeader_df35cb'
 };
