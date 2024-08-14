@@ -30,28 +30,14 @@ i = a.useMemo(() => ({
 }), [s]),
 A = a.useCallback(() => {
   (0, d.xf)(), (0, I.navigateToQuestHome)(S.dr.USER_SETTINGS_GIFT_INVENTORY);
-}, []),
-g = a.useCallback(() => {
-  (0, E.EW)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
 }, []);
-  return !e || (0, E.un)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME) ? null : (0, n.jsxs)('div', {
+  return (a.useCallback(() => {
+(0, E.EW)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
+  }, []), e) ? ((0, E.un)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME), (0, n.jsxs)('div', {
 className: r()(C.container),
 style: i,
 children: [
-  (0, n.jsx)('div', {
-    className: C.buttonWrapper,
-    children: (0, n.jsx)(c.CircleIconButton, {
-      tooltip: N.Z.Messages.CLOSE,
-      color: c.CircleIconButtonColors.SECONDARY,
-      size: c.CircleIconButtonSizes.SIZE_24,
-      onClick: g,
-      icon: (0, n.jsx)(c.XSmallIcon, {
-        size: 'xs',
-        color: 'currentColor',
-        className: C.closeIcon
-      })
-    })
-  }),
+  !1,
   (0, n.jsxs)('div', {
     className: C.textContainer,
     children: [
@@ -90,5 +76,5 @@ children: [
     ]
   })
 ]
-  });
+  })) : null;
 }
