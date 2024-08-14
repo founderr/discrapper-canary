@@ -93,6 +93,7 @@ v
   let F = a.useMemo(() => {
 switch (L) {
   case f.vf.HUBS:
+    return null;
   case f.vf.GUILDS:
     return (0, i.jsx)(l.Z, {});
   default:

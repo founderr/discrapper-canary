@@ -30,38 +30,46 @@ _.Zt({
   allGuilds: [],
   categoryId: h.U
 });
-  }, [t]), (0, i.jsx)(E.Z, {
+  }, [t]), (0, i.jsxs)(E.Z, {
 title: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
 description: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
 onScroll: n,
-children: (0, i.jsx)('div', {
-  className: I.content,
-  children: g.length > 0 ? (0, i.jsxs)('div', {
-    children: [
-      (0, i.jsx)(r.Heading, {
-        variant: 'heading-lg/semibold',
-        children: m.Z.Messages.YOUR_HUB
-      }),
-      g.map(e => (0, i.jsx)(o.Z, {
-        onView: () => l.Z.transitionToGuildSync(e.id),
-        guild: {
-          ...e,
-          presenceCount: void 0,
-          memberCount: void 0,
-          premiumSubscriptionCount: void 0,
-          emojis: void 0
-        },
-        theme: p
-      }, e.id)),
-      (0, i.jsx)(c.Z, {
-        hasHub: !0
+children: [
+  (0, i.jsx)('div', {
+    className: I.content,
+    children: g.length > 0 ? (0, i.jsxs)('div', {
+      children: [
+        (0, i.jsx)(r.Heading, {
+          variant: 'heading-lg/semibold',
+          children: m.Z.Messages.YOUR_HUB
+        }),
+        g.map(e => (0, i.jsx)(o.Z, {
+          onView: () => l.Z.transitionToGuildSync(e.id),
+          guild: {
+            ...e,
+            presenceCount: void 0,
+            memberCount: void 0,
+            premiumSubscriptionCount: void 0,
+            emojis: void 0
+          },
+          theme: p
+        }, e.id)),
+        (0, i.jsx)(c.Z, {
+          hasHub: !0
+        })
+      ]
+    }) : (0, i.jsx)('div', {
+      children: (0, i.jsx)(c.Z, {
+        hasHub: !1
       })
-    ]
-  }) : (0, i.jsx)('div', {
-    children: (0, i.jsx)(c.Z, {
-      hasHub: !1
     })
+  }),
+  (0, i.jsx)(r.Text, {
+    className: I.disclaimer,
+    variant: 'text-sm/medium',
+    color: 'header-secondary',
+    children: m.Z.Messages.HUB_DISCOVERY_FOOTER_DESCRIPTION
   })
-})
+]
   });
 }
