@@ -43,7 +43,7 @@ var r, i, a, s, o, l, u = n(470079),
   U = n(149203),
   w = n(185923),
   x = n(689938);
-(s = r || (r = {}))[s.EMOJI = 0] = 'EMOJI', s[s.CREATE_EMOJI = 1] = 'CREATE_EMOJI', s[s.EXPAND_EMOJIS = 2] = 'EXPAND_EMOJIS', s[s.COLLAPSE_EMOJIS = 3] = 'COLLAPSE_EMOJIS', (o = i || (i = {}))[o.SECTION_HEADING = 0] = 'SECTION_HEADING', o[o.SECTION_ROW = 1] = 'SECTION_ROW';
+(s = r || (r = {}))[s.EMOJI = 0] = 'EMOJI', s[s.CREATE_EMOJI = 1] = 'CREATE_EMOJI', s[s.EXPAND_OR_COLLAPSE_EMOJIS = 2] = 'EXPAND_OR_COLLAPSE_EMOJIS', (o = i || (i = {}))[o.SECTION_HEADING = 0] = 'SECTION_HEADING', o[o.SECTION_ROW = 1] = 'SECTION_ROW';
 let G = e => {
   let {
 channel: t,
@@ -62,19 +62,19 @@ autoTrackExposure: !0
   }), {
 topEmojis: V,
 newlyAddedEmojis: H
-  } = (0, P.Z)(T, i), Z = (0, E.Wu)([O.ZP], () => O.ZP.getFlattenedGuildIds(), []), {
-canCreateExpressions: Y
-  } = (0, S.XJ)(f), j = (0, E.e7)([R.default], () => R.default.getCurrentUser()), W = (0, y.I5)(j), K = g.getCustomEmoji(), z = e => {
+  } = (0, P.Z)(T, i), Z = (0, E.Wu)([O.ZP], () => O.ZP.getFlattenedGuildIds(), []), Y = (0, E.e7)([h.ZP], () => h.ZP.expandedSectionsByGuildIds), {
+canCreateExpressions: j
+  } = (0, S.XJ)(f), W = (0, E.e7)([R.default], () => R.default.getCurrentUser()), K = (0, y.I5)(W), z = g.getCustomEmoji(), q = e => {
 if (e.type === p.B.GUILD)
   return e.guildId;
-  }, q = u.useMemo(() => d().groupBy(K, z), [K]), {
-enabled: Q,
-treatment: X
+  }, Q = u.useMemo(() => d().groupBy(z, q), [z]), {
+enabled: X,
+treatment: $
   } = L.Z.useExperiment({
 location: 'EmojiPicker'
   }, {
 autoTrackExposure: !0,
-disable: !Y
+disable: !j
   });
   return u.useMemo(() => {
 let e = [],
@@ -85,7 +85,8 @@ let e = [],
   m = 0;
 if (null != g && null != s) {
   let T = Math.floor(s / (l + 2 * o)),
-    g = (a, s) => {
+    g = 3 * T,
+    S = (a, s) => {
       let o = new Map(),
         c = n.has(s.sectionId),
         [_, f] = d().partition(a, e => {
@@ -97,30 +98,31 @@ if (null != g && null != s) {
           return o.set(e, n), !n;
         }),
         I = _.concat(f),
-        g = s.guild,
-        S = v.Z.getGuildId(),
-        A = s.sectionId === U.En.TOP_GUILD_EMOJI,
-        N = !A && null != g && S === g.id && I.length < g.getMaxEmojiSlots(),
-        O = A && I.length < T && !Q,
-        R = null != g && A && Q && X === L.B.WITH_TOP_LIST && q[g.id].length < g.getMaxEmojiSlots(),
-        y = r && Y && null != g && (N || O || R),
-        M = I.length >= 3 * T && !W && s.type === U.En.GUILD && null != g && S !== g.id,
+        S = s.guild,
+        A = v.Z.getGuildId(),
+        N = s.sectionId === U.En.TOP_GUILD_EMOJI,
+        O = !N && null != S && A === S.id && I.length < S.getMaxEmojiSlots(),
+        R = N && I.length < T && !X,
+        y = null != S && N && X && $ === L.B.WITH_TOP_LIST && Q[S.id].length < S.getMaxEmojiSlots(),
+        M = r && j && null != S && (O || R || y),
+        P = I.length > g && !K && s.type === U.En.GUILD && null != S && A !== S.id && !c,
         {
-          enabled: P
+          enabled: w
         } = D.Z.getCurrentConfig({
           location: 'useEmojiGrid'
         }, {
-          autoTrackExposure: M,
-          disable: !M
-        });
-      y && R && I.length === T && I.shift(), P && I.splice(3 * T);
-      let w = Q && y && !c,
-        G = Math.ceil((y ? I.length + 1 : I.length) / T),
-        k = [];
-      for (let e = 0; e < G; e++) {
+          autoTrackExposure: P,
+          disable: !P
+        }),
+        G = w && null != S && !Y.has(S.id);
+      M && y && I.length === T && I.shift(), G && I.splice(g - 1);
+      let k = X && M && !c,
+        B = Math.ceil((M ? I.length + 1 : I.length) / T),
+        F = [];
+      for (let e = 0; e < B; e++) {
         let t = 0 === e,
-          n = e * T - (w && e > 0 ? 1 : 0),
-          r = n + T - (w && t ? 1 : 0),
+          n = e * T - (k && e > 0 ? 1 : 0),
+          r = n + T - (k && t ? 1 : 0),
           i = I.slice(n, r).map((e, n) => {
             var r, i;
             return {
@@ -129,15 +131,15 @@ if (null != g && null != s) {
               size: l,
               isDisabled: o.get(e),
               rowIndex: m,
-              columnIndex: w && t ? n + 1 : n,
+              columnIndex: k && t ? n + 1 : n,
               visibleRowIndex: p,
               category: s.type,
               subCategory: s.sectionId === U.En.TOP_GUILD_EMOJI ? (0, b.IP)(V, H, null !== (i = null !== (r = e.id) && void 0 !== r ? r : e.uniqueName) && void 0 !== i ? i : e.name) : U.t0.NONE
             };
           });
-        if (w && t && !c && (i = [{
+        if (k && t && !c && (i = [{
               type: 1,
-              guildId: g.id,
+              guildId: S.id,
               name: x.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
               size: l,
               rowIndex: m,
@@ -145,12 +147,12 @@ if (null != g && null != s) {
               visibleRowIndex: p
             },
             ...i
-          ]), k.push(i), !c) {
-          if (!Q && y && e === G - 1) {
-            let t = k[e];
+          ]), F.push(i), !c) {
+          if (!X && M && e === B - 1) {
+            let t = F[e];
             t.push({
               type: 1,
-              guildId: g.id,
+              guildId: S.id,
               name: x.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
               size: l,
               rowIndex: e,
@@ -158,46 +160,47 @@ if (null != g && null != s) {
               visibleRowIndex: p
             });
           }
-          if (P && e === G - 1 && null != g) {
-            let t = k[e];
-            t[T - 1] = {
+          if (w && e === B - 1 && null != S) {
+            let t = F[e];
+            t.push({
               type: 2,
-              guildId: g.id,
+              guildId: S.id,
               name: x.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION,
               size: l,
               rowIndex: e,
               columnIndex: t.length,
-              visibleRowIndex: p
-            };
+              visibleRowIndex: p,
+              sectionCollapsedToThreeRows: G
+            });
           }
           h.push(i.length), E.push(i), p++;
         }
         m++;
       }
-      let B = {
+      let Z = {
         ...s,
         count: a.length
       };
-      u.push(B), e.push(c ? 0 : G);
+      u.push(Z), e.push(c ? 0 : B);
     };
   if (null != a)
-    0 !== a.unlocked.length && g(a.unlocked, {
+    0 !== a.unlocked.length && S(a.unlocked, {
       type: U.En.SEARCH_RESULTS,
       sectionId: U.En.SEARCH_RESULTS,
       count: a.unlocked.length,
       isNitroLocked: !1
-    }), 0 !== a.locked.length && g(a.locked, {
+    }), 0 !== a.locked.length && S(a.locked, {
       type: U.En.PREMIUM_UPSELL,
       categoryId: U.UX.PREMIUM_UPSELL,
       sectionId: U.En.PREMIUM_UPSELL,
       count: a.locked.length,
-      isNitroLocked: !W
+      isNitroLocked: !K
     });
   else
     for (let e of c)
       if (e === U.UX.CUSTOM) {
         let n = n => {
-          let r = q[n];
+          let r = Q[n];
           if (null == r)
             return;
           let a = r.filter(e => C.ZP.getEmojiUnavailableReason({
@@ -208,12 +211,12 @@ if (null != g && null != s) {
           if (0 === a.length)
             return;
           let s = N.Z.getGuild(n),
-            o = !W && C.ZP.isEmojiCategoryNitroLocked({
+            o = !K && C.ZP.isEmojiCategoryNitroLocked({
               categoryEmojis: a,
               channel: t,
               intention: i
             });
-          g(a, {
+          S(a, {
             categoryId: e,
             guild: s,
             type: U.En.GUILD,
@@ -233,7 +236,7 @@ if (null != g && null != s) {
         topEmojis: V,
         newlyAddedEmojis: H
       });
-      t.length > 0 && g(t, {
+      t.length > 0 && S(t, {
         categoryId: e,
         guild: N.Z.getGuild(f.id),
         type: U.En.TOP_GUILD_EMOJI,
@@ -248,7 +251,7 @@ if (null != g && null != s) {
       channel: t,
       intention: i
     }));
-    g(n, {
+    S(n, {
       categoryId: e,
       type: U.En.RECENT,
       sectionId: U.En.RECENT,
@@ -261,7 +264,7 @@ if (null != g && null != s) {
       channel: t,
       intention: i
     }));
-    0 !== n.length && g(n, {
+    0 !== n.length && S(n, {
       categoryId: e,
       type: U.En.FAVORITES,
       sectionId: U.En.FAVORITES,
@@ -270,7 +273,7 @@ if (null != g && null != s) {
     });
   } else {
     let t = I.ZP.getByCategory(e);
-    null != t && g(t, {
+    null != t && S(t, {
       categoryId: e,
       type: U.En.UNICODE,
       sectionId: e,
@@ -292,23 +295,24 @@ l,
 o,
 a,
 n,
-Q,
 X,
-q,
+$,
+Q,
 r,
-Y,
+j,
 t,
 i,
 V,
 H,
-W,
+K,
 c,
 f,
 Z,
 F,
 B,
 k,
-G
+G,
+Y
   ]);
 };
 (l = a || (a = {}))[l.PREMIUM = 0] = 'PREMIUM', l[l.ROLE_SUBSCRIPTION = 1] = 'ROLE_SUBSCRIPTION';

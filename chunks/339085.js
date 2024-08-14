@@ -56,7 +56,8 @@ Y.UX.CUSTOM.toString()
   ].concat(k.ZP.getCategories()),
   z = {
 pendingUsages: [],
-emojiReactionPendingUsages: []
+emojiReactionPendingUsages: [],
+expandedSectionsByGuildIds: new Set()
   };
 class q {
   getEmoji(e) {
@@ -460,7 +461,7 @@ ef(t, null == e ? void 0 : e.emojis), eE();
 }
 class eI extends(i = d.ZP.PersistedStore) {
   initialize(e) {
-this.waitFor(f.Z, C.Z, R.ZP, y.Z, v.default, S.Z, F.Z, L.default, I.Z), null != e && (null != e.pendingUsages && (z.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (z.emojiReactionPendingUsages = e.emojiReactionPendingUsages)), this.syncWith([O.Z], eh);
+this.waitFor(f.Z, C.Z, R.ZP, y.Z, v.default, S.Z, F.Z, L.default, I.Z), null != e && (null != e.pendingUsages && (z.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (z.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (z.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([O.Z], eh);
   }
   getState() {
 return z;
@@ -470,6 +471,9 @@ return $;
   }
   hasPendingUsage() {
 return z.pendingUsages.length > 0 || z.emojiReactionPendingUsages.length > 0;
+  }
+  get expandedSectionsByGuildIds() {
+return z.expandedSectionsByGuildIds;
   }
   get categories() {
 return J;
@@ -724,5 +728,14 @@ let {
   text: t
 } = e;
 en = t;
+  },
+  TOGGLE_GUILD_EXPANDED_STATE: function(e) {
+let {
+  guildId: t
+} = e, n = new Set(z.expandedSectionsByGuildIds);
+z.expandedSectionsByGuildIds.has(t) ? n.delete(t) : n.add(t), z = {
+  ...z,
+  expandedSectionsByGuildIds: n
+};
   }
 });
