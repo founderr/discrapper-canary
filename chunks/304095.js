@@ -8,5 +8,8 @@ e.exports = {
   premiumIcon: 'premiumIcon_f59576',
   iconTextContainer: 'iconTextContainer_f59576',
   upsellText: 'upsellText_f59576',
-  enhancedUpsellText: 'enhancedUpsellText_f59576'
+  enhancedUpsellText: 'enhancedUpsellText_f59576',
+  extendedDemoContainer: 'extendedDemoContainer_f59576',
+  extendedDemoDurationText: 'extendedDemoDurationText_f59576',
+  extendedDemoButton: 'extendedDemoButton_f59576'
 };

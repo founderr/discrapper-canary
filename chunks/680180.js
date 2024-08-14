@@ -19,24 +19,25 @@ placeholder: s,
 onTextChange: d,
 onCollapsedClick: u,
 onClear: _,
-onSubmit: E
-  } = e, h = a.useRef(null), m = a.useCallback(e => {
-'Enter' === e.key && E();
-  }, [E]), I = a.useCallback(() => {
+onBlur: E,
+onSubmit: h
+  } = e, m = a.useRef(null), I = a.useCallback(e => {
+'Enter' === e.key && h();
+  }, [h]), g = a.useCallback(() => {
 u(), setTimeout(() => {
   var e;
-  return null === (e = h.current) || void 0 === e ? void 0 : e.focus();
+  return null === (e = m.current) || void 0 === e ? void 0 : e.focus();
 });
   }, [u]);
   return t === o.WB.COLLAPSED ? (0, i.jsx)(l.Clickable, {
 className: c.searchIcon,
-onClick: I,
+onClick: g,
 children: (0, i.jsx)(l.MagnifyingGlassIcon, {
   size: 'md',
   color: l.tokens.colors.INTERACTIVE_NORMAL
 })
   }) : (0, i.jsx)(l.SearchBar, {
-ref: h,
+ref: m,
 className: r()(c.searchBar, {
   [c.searchFloating]: t === o.WB.FLOATING
 }),
@@ -45,6 +46,7 @@ query: n,
 placeholder: s,
 onChange: d,
 onClear: _,
-onKeyDown: m
+onKeyDown: I,
+onBlur: E
   });
 }

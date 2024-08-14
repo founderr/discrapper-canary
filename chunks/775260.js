@@ -41,7 +41,8 @@ u = i.useMemo(() => {
 ]),
 _ = i.useCallback(e => {
   (0, s.j)(() => o.B.setState({
-    selectedTab: e
+    selectedTab: e,
+    searchCategoryId: (0, c.lg)(e)
   }));
 }, []);
   return i.useEffect(() => {

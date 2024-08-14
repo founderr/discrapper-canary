@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return S;
+return I;
   }
 });
 var l = t(735250);
@@ -10,70 +10,125 @@ var s = t(120356),
   r = t(848246),
   i = t(481060),
   o = t(436774),
-  c = t(197115),
-  u = t(74538),
-  d = t(981631),
-  m = t(474936),
-  E = t(689938),
-  _ = t(304095);
+  c = t(1163),
+  u = t(846401),
+  d = t(197115),
+  m = t(74538),
+  E = t(981631),
+  _ = t(474936),
+  S = t(689938),
+  g = t(304095);
 
-function S(e) {
+function h(e) {
   let {
-message: n,
-onClose: t,
-openStreamUpsellModal: s,
-glow: S = !1
-  } = e, g = {
-section: d.jXE.STREAM_SETTINGS,
-object: d.qAy.PREMIUM_UPSELL_BANNER,
-objectType: d.Qqv.BUY
-  }, C = (0, u.So)(r.q.STREAM_HIGH_QUALITY);
+location: n,
+...t
+  } = e;
+  return (0, l.jsx)(d.Z, {
+className: a()(g.enhancedCTA, g.ctaGradientBackground),
+iconClassName: g.premiumIcon,
+subscriptionTier: _.Si.TIER_2,
+buttonText: S.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
+size: i.Button.Sizes.TINY,
+premiumModalAnalyticsLocation: n,
+...t
+  });
+}
+
+function C() {
+  let e = (0, u.Z)();
   return (0, l.jsxs)('div', {
-className: a()(_.upsellBanner, _.enhancedBanner, {
-  [_.gradientGlow]: S
-}),
+className: g.extendedDemoContainer,
 children: [
   (0, l.jsxs)('div', {
-    className: _.iconTextContainer,
     children: [
-      (0, l.jsx)(i.NitroWheelIcon, {
-        size: 'md',
-        color: o.JX.PREMIUM_TIER_2
+      (0, l.jsxs)('div', {
+        className: g.extendedDemoContainer,
+        children: [
+          (0, l.jsx)(i.Text, {
+            variant: 'text-xs/bold',
+            color: 'status-warning',
+            className: g.extendedDemoDurationText,
+            children: e.toUpperCase()
+          }),
+          (0, l.jsx)(i.Text, {
+            variant: 'text-xs/bold',
+            children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_TITLE.toUpperCase()
+          })
+        ]
       }),
       (0, l.jsx)(i.Text, {
         variant: 'text-sm/medium',
-        className: a()(_.upsellText, _.enhancedUpsellText),
-        children: null != n ? n : C ? (0, l.jsxs)(l.Fragment, {
-          children: [
-            E.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_UPSELL_BODY,
-            ' ',
-            E.Z.Messages.LEARN_MORE_CLICK.format({
-              onClick: () => s({
-                analyticsLocation: g,
-                onClose: t
-              })
-            })
-          ]
-        }) : E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
-          onClick: () => s({
-            analyticsLocation: g,
-            onClose: t
-          })
-        })
+        children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_BODY
       })
     ]
   }),
   (0, l.jsx)('div', {
-    className: _.enhancedCTAs,
-    children: (0, l.jsx)(c.Z, {
-      className: a()(_.enhancedCTA, _.ctaGradientBackground),
-      iconClassName: _.premiumIcon,
-      subscriptionTier: m.Si.TIER_2,
-      buttonText: E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
-      size: i.Button.Sizes.TINY,
-      premiumModalAnalyticsLocation: g
+    className: g.extendedDemoButton,
+    children: (0, l.jsx)(h, {
+      size: i.Button.Sizes.SMALL
     })
   })
 ]
+  });
+}
+
+function I(e) {
+  let {
+message: n,
+onClose: t,
+openStreamUpsellModal: s,
+glow: u = !1
+  } = e, d = {
+section: E.jXE.STREAM_SETTINGS,
+object: E.qAy.PREMIUM_UPSELL_BANNER,
+objectType: E.Qqv.BUY
+  }, _ = (0, m.So)(r.q.STREAM_HIGH_QUALITY), I = c.Z.useExperiment({
+location: 'StreamSettingsUpsellBanner'
+  }, {
+autoTrackExposure: !1
+  }).extendedDemoDuration;
+  return (0, l.jsx)('div', {
+className: a()(g.upsellBanner, g.enhancedBanner, {
+  [g.gradientGlow]: u
+}),
+children: _ && I ? (0, l.jsx)(C, {}) : (0, l.jsxs)(l.Fragment, {
+  children: [
+    (0, l.jsxs)('div', {
+      className: g.iconTextContainer,
+      children: [
+        (0, l.jsx)(i.NitroWheelIcon, {
+          size: 'md',
+          color: o.JX.PREMIUM_TIER_2
+        }),
+        (0, l.jsx)(i.Text, {
+          variant: 'text-sm/medium',
+          className: a()(g.upsellText, g.enhancedUpsellText),
+          children: null != n ? n : _ ? (0, l.jsxs)(l.Fragment, {
+            children: [
+              S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_UPSELL_BODY,
+              ' ',
+              S.Z.Messages.LEARN_MORE_CLICK.format({
+                onClick: () => s({
+                  analyticsLocation: d,
+                  onClose: t
+                })
+              })
+            ]
+          }) : S.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
+            onClick: () => s({
+              analyticsLocation: d,
+              onClose: t
+            })
+          })
+        })
+      ]
+    }),
+    (0, l.jsx)('div', {
+      className: g.enhancedCTAs,
+      children: (0, l.jsx)(h, {})
+    })
+  ]
+})
   });
 }

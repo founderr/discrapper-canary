@@ -86,7 +86,8 @@ E(() => d);
   VOICE_STATE_UPDATES: function() {
 if (null == l.Z.getVoiceStateForUser(o.default.getId()))
   E(() => ({
-    hqStreamingOptInPopoutDismissed: !1
+    hqStreamingOptInPopoutDismissed: !1,
+    hqStreamingFrameAnimationPlayed: !1
   }));
   },
   CONNECTION_OPEN: f,

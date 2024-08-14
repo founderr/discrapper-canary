@@ -1,39 +1,54 @@
-e.r(E), e.d(E, {
+E.r(e), E.d(e, {
   default: function() {
-return D;
+return I;
   }
 });
-var s = e(735250);
-e(470079);
-var n = e(230711),
-  L = e(174609),
-  o = e(790527),
-  t = e(474936),
-  M = e(981631),
-  a = e(689938);
+var s = E(735250);
+E(470079);
+var D = E(913527),
+  o = E.n(D),
+  M = E(848246),
+  a = E(442837),
+  t = E(230711),
+  n = E(174609),
+  L = E(114064),
+  O = E(790527),
+  A = E(1163),
+  r = E(474936),
+  i = E(981631),
+  c = E(689938);
 
-function D(_) {
+function I(_) {
   let {
-onClose: E,
+onClose: e,
 ...D
-  } = _;
-  return (0, s.jsx)(o.Z, {
-type: t.cd.STREAM_QUALITY_UPSELL,
-artURL: e(279360),
-title: a.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_TITLE,
-glowUp: a.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_TITLE,
+  } = _, I = A.Z.useExperiment({
+location: 'PerksDemoPostUpsellModal'
+  }, {
+autoTrackExposure: !1
+  }).extendedDemoDuration, d = (0, a.e7)([L.Z], () => {
+let _ = o()(L.Z.activatedEndTime(M.q.STREAM_HIGH_QUALITY));
+return o().duration(_.diff(o()())).days();
+  }), R = I ? d < 1 ? c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_MODAL_BODY_1_DAY : c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_MODAL_BODY_MANY_DAYS.format({
+days: Math.floor(d)
+  }) : c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_BODY;
+  return (0, s.jsx)(O.Z, {
+type: r.cd.STREAM_QUALITY_UPSELL,
+artURL: E(279360),
+title: c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_TITLE,
+glowUp: c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_TITLE,
 showEnhancedUpsell: !0,
-body: a.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_BODY,
+body: R,
 analyticsLocation: {
-  section: M.jXE.PREMIUM_PERKS_DEMO_UPSELL_MODAL
+  section: i.jXE.PREMIUM_PERKS_DEMO_UPSELL_MODAL
 },
-onSubscribeClick: L.Z,
-secondaryCTA: a.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
+onSubscribeClick: n.Z,
+secondaryCTA: c.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
 onSecondaryClick: () => {
-  E(), n.Z.open(M.oAB.PREMIUM);
+  e(), t.Z.open(i.oAB.PREMIUM);
 },
 enableArtBoxShadow: !1,
-onClose: E,
+onClose: e,
 ...D
   });
 }

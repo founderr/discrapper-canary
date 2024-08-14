@@ -106,7 +106,11 @@ function j(e) {
 channel: t,
 hidden: n,
 onDismiss: a
-  } = e;
+  } = e, s = x.Z.useExperiment({
+location: 'StreamButtonDemoOptInPopoutContent'
+  }, {
+autoTrackExposure: !1
+  }).extendedDemoDuration;
   return (0, i.jsxs)('div', {
 className: l()(Z.optInPopout, Z.variant2OptInPopout, {
   [Z.hidden]: n
@@ -129,7 +133,7 @@ children: [
         (0, i.jsx)(o.x, {
           className: Z.variant2Text,
           variant: 'text-sm/medium',
-          children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_BODY
+          children: s ? S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_POPOUT_BODY : S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_BODY
         }),
         (0, i.jsx)(R, {
           channel: t

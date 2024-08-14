@@ -101,31 +101,25 @@ h = i.useCallback(() => {
     initialSearchCategoryId: null,
     searchScrollPosition: null
   }));
-}, [t]),
-m = i.useCallback(() => {
-  var e;
-  let n = u.B.getState();
-  n.searchQuery !== n.searchResultsQuery && ((0, s.j)(() => u.B.setState({
-    initialSearchCategoryId: n.searchCategoryId
-  })), (0, E.y)({
-    loadId: t,
-    categoryId: n.searchCategoryId,
-    offset: 0,
-    searchQuery: n.searchQuery,
-    languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, E.X)()
-  }));
 }, [t]);
-  return i.useMemo(() => ({
+  return {
 searchQuery: r,
 onSearchTextChange: c,
 onClearSearch: h,
-onSearchSubmit: m,
+onSearchSubmit: i.useCallback(() => {
+  var e;
+  let n = u.B.getState();
+  if (n.searchQuery !== n.searchResultsQuery)
+    '' !== n.searchQuery.trim() && ((0, s.j)(() => u.B.setState({
+      initialSearchCategoryId: n.searchCategoryId
+    })), (0, E.y)({
+      loadId: t,
+      categoryId: n.searchCategoryId,
+      offset: 0,
+      searchQuery: n.searchQuery,
+      languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, E.X)()
+    }));
+}, [t]),
 isSearchVisible: n
-  }), [
-n,
-h,
-m,
-c,
-r
-  ]);
+  };
 }

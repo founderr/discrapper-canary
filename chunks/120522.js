@@ -49,18 +49,20 @@ async function E(e) {
 return !0;
   let t = l.default.getCurrentUser();
   try {
-if ((0, o.QI)(t) && function(e) {
-    var t;
-    return (null === (t = u.Z.overrides()[e]) || void 0 === t ? void 0 : t.activateSuccess) === !0;
-  }(e))
-  return f(e, {
-    start_time: i()().toISOString(),
-    end_time: (c.Z.getCurrentConfig({
-      location: 'activatePerkDemo'
-    }, {
-      autoTrackExposure: !1
-    }).extendedDemoDuration ? i()().add(7, 'days') : i()().add(1, 'hour')).toISOString()
-  }), !0;
+if ((0, o.QI)(t)) {
+  let t = function(e) {
+    return u.Z.overrides()[e];
+  }(e);
+  if ((null == t ? void 0 : t.activateSuccess) === !0)
+    return f(e, {
+      start_time: i()().toISOString(),
+      end_time: (c.Z.getCurrentConfig({
+        location: 'activatePerkDemo'
+      }, {
+        autoTrackExposure: !1
+      }).extendedDemoDuration ? i()().add(t.demoDuration, 'days') : i()().add(1, 'hour')).toISOString()
+    }), !0;
+}
 let {
   body: n
 } = await a.tn.post({

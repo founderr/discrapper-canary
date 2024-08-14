@@ -28,7 +28,7 @@ return null !== (t = p.available[e]) && void 0 !== t && t;
   }
   hasActiveDemo(e) {
 let t = p.activated[e];
-return null != t && null != r && new Date() <= new Date(t.end_time);
+return null != t && null != r && (r.enabled && !r.extendedDemoDuration || r.extendedDemoDuration && new Date() <= new Date(t.end_time));
   }
   hasActivated(e) {
 return null != p.activated[e];
@@ -42,6 +42,10 @@ return null !== (t = p.available[e]) && void 0 !== t && t && null == p.activated
   }
   overrides() {
 return p.overrides;
+  }
+  activatedEndTime(e) {
+var t;
+return null === (t = p.activated[e]) || void 0 === t ? void 0 : t.end_time;
   }
 }
 s = 'PerksDemosStore', (a = 'displayName') in(i = I) ? Object.defineProperty(i, a, {
@@ -90,11 +94,13 @@ let {
   user: t,
   perkType: n,
   available: r,
-  activateSuccess: i
+  activateSuccess: i,
+  demoDuration: a
 } = e;
 void 0 !== t && (0, d.QI)(t) && (p.overrides[n] = {
   available: r,
-  activateSuccess: i
+  activateSuccess: i,
+  demoDuration: a
 }, null == p.available && (p.available = {}), p.available[n] = r || !1, delete p.activated[n], p.lastFetched = null);
   },
   STREAM_START: function() {

@@ -29,11 +29,14 @@ t,
 n
   ]), o = i.useCallback(() => {
 r(a.WB.FLOATING);
-  }, []), c = n === a.WB.FLOATING ? s.floatingSearchTabsMask : void 0;
+  }, []), c = i.useCallback(() => {
+n === a.WB.FLOATING && r(a.WB.COLLAPSED);
+  }, [n]), d = n === a.WB.FLOATING ? s.floatingSearchTabsMask : void 0;
   return {
 searchBarState: n,
 onTabsAvailableWidthChange: l,
-tabsClassName: c,
-onCollapsedSearchBarClick: o
+tabsClassName: d,
+onCollapsedSearchBarClick: o,
+onSearchBarBlur: c
   };
 }

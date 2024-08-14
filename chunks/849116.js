@@ -1,4 +1,5 @@
 e.exports = {
-  content: 'content_dacfd4',
-  disclaimer: 'disclaimer_dacfd4'
+  disclaimer: 'disclaimer_dacfd4',
+  text: 'text_dacfd4',
+  divider: 'divider_dacfd4'
 };

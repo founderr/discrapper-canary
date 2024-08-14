@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return p;
+return b;
   }
 }), t(47120);
 var a = t(735250),
@@ -30,12 +30,22 @@ let m = [{
   label: 'Success',
   value: !0
 }
+  ],
+  p = [{
+  label: '1 day',
+  value: 1
+},
+{
+  label: '7 days',
+  value: 7
+}
   ];
 
-function p() {
+function b() {
   let e = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
 [r, t] = n.useState(!1),
-[p, b] = n.useState(!1);
+[b, f] = n.useState(!1),
+[y, x] = n.useState(1);
   return (0, a.jsxs)('div', {
 className: h.container,
 children: [
@@ -58,9 +68,22 @@ children: [
     tag: l.FormTitleTags.H3,
     children: (0, a.jsx)(l.SingleSelect, {
       options: g,
-      value: p,
+      value: b,
       onChange: e => {
-        b(e);
+        f(e);
+      },
+      popoutLayerContext: u.O$
+    })
+  }),
+  (0, a.jsx)(l.FormSection, {
+    title: 'Override Demo Duration',
+    className: h.formElement,
+    tag: l.FormTitleTags.H3,
+    children: (0, a.jsx)(l.SingleSelect, {
+      options: p,
+      value: y,
+      onChange: e => {
+        x(e);
       },
       popoutLayerContext: u.O$
     })
@@ -71,7 +94,8 @@ children: [
       perkType: i.q.STREAM_HIGH_QUALITY,
       user: e,
       available: r,
-      activateSuccess: p
+      activateSuccess: b,
+      demoDuration: y
     }), (0, s.Vk)()),
     children: 'Update'
   })
