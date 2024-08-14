@@ -34,149 +34,151 @@ var r = n(735250),
   w = n(256507);
 
 function x(e) {
-  var t, n;
+  var t, n, a;
   let {
-channel: a,
-isLoading: y
-  } = e, [x, G] = i.useState(!1), k = (0, o.e7)([N.ZP], () => N.ZP.getSelfEmbeddedActivityForChannel(a.id)), B = (0, o.e7)([N.ZP], () => N.ZP.getActivityPanelMode()), F = (0, E.q)(null == k ? void 0 : k.applicationId), V = null == k ? void 0 : k.launchId, H = (0, o.e7)([g.Z], () => g.Z.getChannelId() === a.id), {
-dockedRect: Z,
-isHidden: Y
+channel: y,
+isLoading: x
+  } = e, [G, k] = i.useState(!1), B = (0, o.e7)([N.ZP], () => N.ZP.getSelfEmbeddedActivityForChannel(y.id)), F = (0, o.e7)([N.ZP], () => N.ZP.getActivityPanelMode()), V = (0, E.q)(null == B ? void 0 : B.applicationId), H = null == B ? void 0 : B.launchId, Z = (0, o.e7)([g.Z], () => g.Z.getChannelId() === y.id), {
+dockedRect: Y,
+isHidden: j
   } = (0, o.cj)([T.Z], () => {
 let e = T.Z.pipWindow;
 return {
   dockedRect: null != e ? T.Z.getDockedRect(e.id) : null,
   isHidden: T.Z.isEmbeddedActivityHidden()
 };
-  }), j = (0, o.e7)([h.Z], () => h.Z.getWindow(b.KJ3.CHANNEL_CALL_POPOUT)), {
-activityParticipant: W,
-selectedParticipant: K,
-participantsOpen: z
+  }), W = (0, o.e7)([h.Z], () => h.Z.getWindow(b.KJ3.CHANNEL_CALL_POPOUT)), {
+activityParticipant: K,
+selectedParticipant: z,
+participantsOpen: q
   } = (0, o.cj)([f.Z], () => ({
-activityParticipant: null != k ? f.Z.getParticipant(a.id, k.applicationId) : null,
-selectedParticipant: f.Z.getSelectedParticipant(a.id),
-participantsOpen: f.Z.getParticipantsOpen(a.id)
-  })), q = H || null != j, Q = (0, O.Z)(a.id), X = Q && (null == K ? void 0 : K.type) !== M.fO.ACTIVITY, $ = !Q && B === L.Ez.PIP, J = (!q || q && (X || $) && null == Z) && !Y, ee = J && null != T.Z.pipVideoWindow && null != T.Z.pipActivityWindow;
-
-  function et() {
-var e;
-null != k && c.Z.selectParticipant(a.id, k.applicationId);
-let t = null !== (e = a.getGuildId()) && void 0 !== e ? e : b.ME;
-d.Z.channelListScrollTo(t, a.id), (0, p.XU)(t, a.id), null == j && (0, _.Ou)();
-  }
+activityParticipant: null != B ? f.Z.getParticipant(y.id, B.applicationId) : null,
+selectedParticipant: f.Z.getSelectedParticipant(y.id),
+participantsOpen: f.Z.getParticipantsOpen(y.id)
+  })), Q = Z || null != W, X = (0, O.Z)(y.id), $ = X && (null == z ? void 0 : z.type) !== M.fO.ACTIVITY, J = !X && F === L.Ez.PIP, ee = (!Q || Q && ($ || J) && null == Y) && !j, et = ee && null != T.Z.pipVideoWindow && null != T.Z.pipActivityWindow;
 
   function en() {
-G(!x);
+var e;
+null != B && c.Z.selectParticipant(y.id, B.applicationId);
+let t = null !== (e = y.getGuildId()) && void 0 !== e ? e : b.ME;
+d.Z.channelListScrollTo(t, y.id), (0, p.XU)(t, y.id), null == W && (0, _.Ou)();
+  }
+
+  function er() {
+k(!G);
   }
   i.useEffect(() => {
-if ((null == k ? void 0 : k.applicationId) != null) {
-  let e = J ? D.cE.PIP : D.cE.FOCUSED;
+if ((null == B ? void 0 : B.applicationId) != null) {
+  let e = ee ? D.cE.PIP : D.cE.FOCUSED;
   u.Z.dispatch({
     type: 'ACTIVITY_LAYOUT_MODE_UPDATE',
     layoutMode: e,
-    applicationId: k.applicationId
+    applicationId: B.applicationId
   });
 }
   }, [
-null == k ? void 0 : k.applicationId,
-J
+null == B ? void 0 : B.applicationId,
+ee
   ]);
-  if (null == k || null == V || null == W && (0, O.Z)(a.id) || null == F)
+  if (null == B || null == H || null == K && (0, O.Z)(y.id) || null == V)
 return null;
-  let er = Array.from(k.userIds).map(e => S.default.getUser(e)).filter(e => null != e),
-ei = {
-  instance_id: null !== (n = null !== (t = k.compositeInstanceId) && void 0 !== t ? t : k.launchId) && void 0 !== n ? n : '',
-  channel_id: a.id
+  let ei = Array.from(B.userIds).map(e => S.default.getUser(e)).filter(e => null != e),
+ea = {
+  instance_id: null !== (a = null !== (n = B.compositeInstanceId) && void 0 !== n ? n : B.launchId) && void 0 !== a ? a : '',
+  channel_id: y.id,
+  location_id: null === (t = B.location) || void 0 === t ? void 0 : t.id,
+  launch_id: B.launchId
 };
-  return null != a.guild_id && '' !== a.guild_id && (ei.guild_id = a.guild_id), (0, r.jsx)(I.ZP, {
+  return null != y.guild_id && '' !== y.guild_id && (ea.guild_id = y.guild_id), (0, r.jsx)(I.ZP, {
 timeout: 2000,
 children: e => {
-  var t, n, i, o, u, c, d, _;
+  var t, n, i, a, o, u, c, d;
   let {
-    idle: E,
-    onActive: f,
-    onForceIdle: h
+    idle: _,
+    onActive: E,
+    onForceIdle: f
   } = e;
   return (0, r.jsxs)(m.Z, {
     className: s()(P.root, {
-      [P.pipMode]: J,
-      [w.elevationHigh]: J,
-      [U.idle]: E && !(null === (t = k.config) || void 0 === t ? void 0 : t.useInteractivePIP),
-      [P.pipModeShort]: J && !x,
-      [P.pipModeTall]: J && x,
-      [P.hidden]: Y,
-      [P.multiPIPMode]: ee
+      [P.pipMode]: ee,
+      [w.elevationHigh]: ee,
+      [U.idle]: _ && !(null === (t = B.config) || void 0 === t ? void 0 : t.useInteractivePIP),
+      [P.pipModeShort]: ee && !G,
+      [P.pipModeTall]: ee && G,
+      [P.hidden]: j,
+      [P.multiPIPMode]: et
     }),
-    noBorder: !J,
+    noBorder: !ee,
     children: [
       (0, r.jsx)('div', {
         className: 'theme-dark',
-        children: (i = f, o = h, u = E, c = $, d = er, J && null != k && ((null == W ? void 0 : W.type) === M.fO.ACTIVITY || c) ? (null === (_ = k.config) || void 0 === _ ? void 0 : _.useInteractivePIP) ? (0, r.jsx)(C.of, {
-          onJumpToChannel: et,
-          applicationId: k.applicationId,
-          channel: a,
-          showControls: !u,
+        children: (i = E, a = f, o = _, u = J, c = ei, ee && null != B && ((null == K ? void 0 : K.type) === M.fO.ACTIVITY || u) ? (null === (d = B.config) || void 0 === d ? void 0 : d.useInteractivePIP) ? (0, r.jsx)(C.of, {
+          onJumpToChannel: en,
+          applicationId: B.applicationId,
+          channel: y,
+          showControls: !o,
           onMouseDown: i,
           onMouseMove: i,
-          onMouseLeave: o,
-          onToggleHeight: en,
-          isExpanded: x,
-          hideExpandedButton: c
-        }) : c ? (0, r.jsx)(r.Fragment, {
+          onMouseLeave: a,
+          onToggleHeight: er,
+          isExpanded: G,
+          hideExpandedButton: u
+        }) : u ? (0, r.jsx)(r.Fragment, {
           children: (0, r.jsx)(C.q5, {
-            idle: u,
+            idle: o,
             onMouseMove: i,
             onMouseDown: i,
-            onMouseLeave: o,
+            onMouseLeave: a,
             onJumpToChannel: () => {
-              et(), (0, A.tg)(L.Ez.PANEL);
+              en(), (0, A.tg)(L.Ez.PANEL);
             },
-            channel: a,
-            applicationId: k.applicationId,
-            users: d
+            channel: y,
+            applicationId: B.applicationId,
+            users: c
           })
-        }) : null == W ? null : (0, r.jsxs)(r.Fragment, {
+        }) : null == K ? null : (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)('div', {
               onMouseMove: i,
               onMouseDown: i,
-              onMouseLeave: o,
+              onMouseLeave: a,
               className: P.clickShield,
-              onDoubleClick: et
+              onDoubleClick: en
             }),
             (0, r.jsx)(C.YB, {
-              idle: u,
+              idle: o,
               onMouseMove: i,
               onMouseDown: i,
-              onMouseLeave: o,
-              onJumpToChannel: et,
-              channel: a,
-              applicationId: k.applicationId,
-              selectedParticipant: W
+              onMouseLeave: a,
+              onJumpToChannel: en,
+              channel: y,
+              applicationId: B.applicationId,
+              selectedParticipant: K
             })
           ]
         }) : null)
       }),
-      y ? (0, r.jsx)(l.Spinner, {
+      x ? (0, r.jsx)(l.Spinner, {
         className: s()(P.iframe, {
-          [P.pipModeShort]: J && !x,
-          [P.pipModeTall]: J && x
+          [P.pipModeShort]: ee && !G,
+          [P.pipModeTall]: ee && G
         })
       }) : (0, r.jsx)(R.J, {
-        allowPopups: (0, v.h)(F),
-        referrerPolicy: D.um.has(k.applicationId) ? 'no-referrer' : 'origin',
-        url: k.url,
-        queryParams: ei,
+        allowPopups: (0, v.h)(V),
+        referrerPolicy: D.um.has(B.applicationId) ? 'no-referrer' : 'origin',
+        url: B.url,
+        queryParams: ea,
         className: s()(P.iframe, {
-          [P.pipModeShort]: J && !x,
-          [P.pipModeTall]: J && x,
-          [P.pipNonInteractive]: J && !(null === (n = k.config) || void 0 === n ? void 0 : n.useInteractivePIP)
+          [P.pipModeShort]: ee && !G,
+          [P.pipModeTall]: ee && G,
+          [P.pipNonInteractive]: ee && !(null === (n = B.config) || void 0 === n ? void 0 : n.useInteractivePIP)
         }),
-        shouldRefocus: !J && H
+        shouldRefocus: !ee && Z
       }),
-      !J && (0, r.jsx)(C.Ds, {
-        participantsOpen: z,
+      !ee && (0, r.jsx)(C.Ds, {
+        participantsOpen: q,
         showToggleParticipants: !1,
-        channelId: a.id
+        channelId: y.id
       })
     ]
   });

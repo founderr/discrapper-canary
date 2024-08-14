@@ -1,6 +1,6 @@
 n.d(t, {
   Id: function() {
-return s;
+return u;
   },
   Qm: function() {
 return p;
@@ -8,19 +8,16 @@ return p;
   hR: function() {
 return _;
   }
-}), n(47120);
+});
 var i = n(470079),
   a = n(892814),
   o = n(442837),
   l = n(581364),
   c = n(768581),
   d = n(823379),
-  r = n(399654),
-  m = n(844439);
-let s = {
-'1238332854602043454': {
-  imageOption: 'image'
-},
+  m = n(399654),
+  r = n(844439);
+let u = {
 '1181475143340539995': {
   imageOption: 'image',
   additionalOptions: [{
@@ -135,14 +132,21 @@ let s = {
     }
   ]
 },
+'991195178360635431': {
+  imageOption: 'image',
+  onlyAllowEdit: !0
+},
 '1091213298818613408': {
   imageOption: 'image'
 },
 '1029794689932611625': {
   imageOption: 'image'
+},
+'1238332854602043454': {
+  imageOption: 'image'
 }
   },
-  u = new Set(Object.keys(s));
+  s = Object.keys(u);
 
 function p(e) {
   let {
@@ -167,7 +171,7 @@ function _(e) {
 channelId: t
   } = e, {
 fetchState: n,
-recommendationsSections: s
+recommendationsSections: u
   } = function(e) {
 let {
   channelId: t
@@ -180,14 +184,14 @@ let {
   n
 ]);
 i.useEffect(() => {
-  (0, r.a)(l);
+  (0, m.a)(l);
 }, [l]);
 let {
   fetchState: c,
   recommendationsSections: d
-} = (0, o.cj)([m.ZP], () => ({
-  fetchState: m.ZP.getFetchState(l),
-  recommendationsSections: m.ZP.getRecommendations(l)
+} = (0, o.cj)([r.ZP], () => ({
+  fetchState: r.ZP.getFetchState(l),
+  recommendationsSections: r.ZP.getRecommendations(l)
 }));
 return {
   fetchState: c,
@@ -199,32 +203,38 @@ channelId: t
   return {
 fetchState: n,
 imageRecCommandContexts: i.useMemo(() => {
-  let e = s.length > 0 ? s[0].items : void 0;
-  return void 0 === e ? [] : e.map(e => {
-    let {
-      application: t,
-      commands: n
-    } = e, i = null == n ? void 0 : n.find(e => u.has(e.id));
+  let e = u.length > 0 ? u[0].items : void 0;
+  return void 0 === e ? [] : s.map(t => {
+    let n;
+    let i = e.find(e => {
+      var i;
+      return null != (n = null === (i = e.commands) || void 0 === i ? void 0 : i.find(e => e.id === t));
+    });
     if (null == i)
       return null;
-    let a = (0, l.Z8)({
-      rootCommand: i,
-      command: i,
-      applicationId: t.id
+    let {
+      application: a
+    } = i;
+    if (null == n)
+      return null;
+    let o = (0, l.Z8)({
+      rootCommand: n,
+      command: n,
+      applicationId: a.id
     });
     return {
       command: {
-        ...a,
-        name: a.name.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
+        ...o,
+        name: o.name.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
       },
       applicationImageURL: c.ZP.getApplicationIconURL({
-        id: t.id,
-        icon: t.icon,
-        bot: t.bot
+        id: a.id,
+        icon: a.icon,
+        bot: a.bot
       }),
-      application: t
+      application: a
     };
   }).filter(d.lm);
-}, [s])
+}, [u])
   };
 }
