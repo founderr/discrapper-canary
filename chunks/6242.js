@@ -12,50 +12,20 @@ var i = n(818083),
   l = n(474936);
 let r = (0, i.B)({
   kind: 'user',
-  id: '2024-06_hd_streaming_viewer',
+  id: '2024-08_hd_streaming_viewer',
   label: 'HD Streaming Viewer Upsell',
   defaultConfig: {
 enabled: !1,
-sendNitroMessage: !1,
-persistentQualityIndicator: !1
+sendNitroMessage: !1
   },
   treatments: [{
-  id: 1,
-  label: 'Send Nitro message, styled/persistent indicator',
-  config: {
-    enabled: !0,
-    sendNitroMessage: !0,
-    persistentQualityIndicator: !0
-  }
-},
-{
-  id: 2,
-  label: 'Send Nitro message, styled indicator',
-  config: {
-    enabled: !0,
-    sendNitroMessage: !0,
-    persistentQualityIndicator: !1
-  }
-},
-{
-  id: 3,
-  label: 'Styled/persistent indicator',
-  config: {
-    enabled: !0,
-    sendNitroMessage: !1,
-    persistentQualityIndicator: !0
-  }
-},
-{
-  id: 4,
-  label: 'Styled indicator',
-  config: {
-    enabled: !0,
-    sendNitroMessage: !1,
-    persistentQualityIndicator: !1
-  }
+id: 1,
+label: 'Enabled',
+config: {
+  enabled: !0,
+  sendNitroMessage: !0
 }
-  ]
+  }]
 });
 
 function o(e, t) {
