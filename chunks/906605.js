@@ -76,7 +76,7 @@ u.Z.getCustomHangStatus(),
 ...u.Z.getRecentCustomStatuses()
   ].filter(e => {
 var t;
-return null != e && null != e.emoji && (null === (t = e.emoji) || void 0 === t ? void 0 : t.id) != null && null == i.Z.getCustomEmojiById(e.emoji.id);
+return null != e && null != e.emoji && (null === (t = e.emoji) || void 0 === t ? void 0 : t.id) != null && null == i.ZP.getCustomEmojiById(e.emoji.id);
   });
   e.length > 0 && r.Z.dispatch({
 type: 'DELETE_INVALID_HANG_STATUSES',

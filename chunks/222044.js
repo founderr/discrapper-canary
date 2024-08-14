@@ -22,7 +22,7 @@ null != n && n.isForumLikeChannel() && function(e) {
     var r, a;
     t.push(s.ZP.getEmojiURL({
       id: n.emojiId,
-      animated: null !== (a = null === (r = i.Z.getUsableCustomEmojiById(n.emojiId)) || void 0 === r ? void 0 : r.animated) && void 0 !== a && a,
+      animated: null !== (a = null === (r = i.ZP.getUsableCustomEmojiById(n.emojiId)) || void 0 === r ? void 0 : r.animated) && void 0 !== a && a,
       size: u.kV.reaction
     }));
   } else

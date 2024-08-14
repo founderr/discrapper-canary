@@ -45,13 +45,13 @@ function c(e) {
   let {
 emojiId: t
   } = e;
-  return u(e, null != t && '0' !== t ? a.Z.getUsableCustomEmojiById(t) : null);
+  return u(e, null != t && '0' !== t ? a.ZP.getUsableCustomEmojiById(t) : null);
 }
 
 function d() {
   let e = o.Ok.useSetting(),
 t = null == e ? void 0 : e.emojiId,
-n = (0, i.e7)([a.Z], () => null != t && '0' !== t ? a.Z.getUsableCustomEmojiById(t) : null, [t]);
+n = (0, i.e7)([a.ZP], () => null != t && '0' !== t ? a.ZP.getUsableCustomEmojiById(t) : null, [t]);
   return (0, r.useMemo)(() => null != e ? u(e, n) : null, [
 e,
 n

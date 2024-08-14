@@ -64,7 +64,7 @@ reaction: {
     let a = h.Z.getMessages(i.id).last();
     if (null == a || null == a.id)
       return;
-    let s = o.Z.getDisambiguatedEmojiContext(i.guild_id).getByName(e.trim().slice(2, -1));
+    let s = o.ZP.getDisambiguatedEmojiContext(i.guild_id).getByName(e.trim().slice(2, -1));
     if (null != s)
       return (0, c.rU)(i.id, a.id, (0, u.g1)(s)), {
         content: ''

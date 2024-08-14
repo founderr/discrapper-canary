@@ -22,7 +22,7 @@ id: n,
 name: s,
 emojiId: r,
 emojiName: d
-  } = t, u = (0, l.e7)([c.Z], () => null != r ? c.Z.getUsableCustomEmojiById(r) : null), h = null != r || null != d;
+  } = t, u = (0, l.e7)([c.ZP], () => null != r ? c.ZP.getUsableCustomEmojiById(r) : null), h = null != r || null != d;
   return (0, a.jsx)(i.ComboboxItem, {
 value: n,
 children: (0, a.jsx)(i.ComboboxItem.Label, {

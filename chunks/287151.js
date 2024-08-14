@@ -611,10 +611,10 @@ let {
 } = e, {
   joinedEmojiSourceGuild: c
 } = (0, d.cj)([
-  E.Z,
+  E.ZP,
   L.Z
 ], () => {
-  let e = E.Z.getCustomEmojiById(n);
+  let e = E.ZP.getCustomEmojiById(n);
   return {
     joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === I.B.GUILD ? L.Z.getGuild(null == e ? void 0 : e.guildId) : void 0
   };

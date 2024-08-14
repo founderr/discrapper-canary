@@ -15,7 +15,7 @@ return !1;
   let l = e.emoji;
   if (null == l.id || null == n || !(0, i.zi)(n.type))
 return !0;
-  let u = r.Z.getUsableCustomEmojiById(l.id),
+  let u = r.ZP.getUsableCustomEmojiById(l.id),
 c = a.ZP.isInternalEmojiForGuildId(u, n.getGuildId()),
 d = s.BT({
   permission: o.Plq.USE_EXTERNAL_EMOJIS,

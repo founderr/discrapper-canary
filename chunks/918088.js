@@ -209,7 +209,7 @@ return {
       let i = e.animated;
       if (null == i && null != e.id) {
         var a, s;
-        i = null !== (s = null === (a = r.Z.getCustomEmojiById(e.id)) || void 0 === a ? void 0 : a.animated) && void 0 !== s && s;
+        i = null !== (s = null === (a = r.ZP.getCustomEmojiById(e.id)) || void 0 === a ? void 0 : a.animated) && void 0 !== s && s;
       }
       let o = t && null != i && i;
       return {

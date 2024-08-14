@@ -40,7 +40,7 @@ match: e => /^<(a)?:(\w+):(\d+)>/.exec(e),
 parse(e, t, n) {
   let [r, i, s, o] = e, {
     guildId: l
-  } = n, u = a.Z.getDisambiguatedEmojiContext(l).getById(o), c = null == u || u.require_colons;
+  } = n, u = a.ZP.getDisambiguatedEmojiContext(l).getById(o), c = null == u || u.require_colons;
   return null != u && (s = u.name), {
     emojiId: o,
     name: c ? ':'.concat(s, ':') : s,

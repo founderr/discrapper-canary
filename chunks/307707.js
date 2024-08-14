@@ -8,7 +8,7 @@ var s = E(399606),
   I = E(633302);
 
 function n(e, _) {
-  let E = (0, s.e7)([T.Z], () => null != e ? T.Z.getCustomEmojiById(e) : null, [e]);
+  let E = (0, s.e7)([T.ZP], () => null != e ? T.ZP.getCustomEmojiById(e) : null, [e]);
   return {
 customEmoji: E,
 unicodeEmoji: null != _ ? I.ZP.getByName(I.ZP.convertSurrogateToName(_, !1)) : null

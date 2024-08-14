@@ -63,7 +63,7 @@ if (i.signal.aborted)
 
 function v(e, t, n, r) {
   var i, a;
-  let o = c.Z.getCustomEmojiById(null !== (i = t.emojiId) && void 0 !== i ? i : ''),
+  let o = c.ZP.getCustomEmojiById(null !== (i = t.emojiId) && void 0 !== i ? i : ''),
 {
   abortController: l,
   onRequestProgress: u

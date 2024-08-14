@@ -319,7 +319,7 @@ customEmoji: function(e) {
         key: s,
         guildId: o,
         isInteracting: l
-      } = a, u = _.Z.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+      } = a, u = _.ZP.getDisambiguatedEmojiContext(o).getById(e.emojiId);
       if (null != u) {
         let t = u.require_colons;
         e = {

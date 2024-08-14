@@ -54,7 +54,7 @@ emojiSearchResults: a,
 gridWidth: s,
 emojiPaddingHorizontal: o,
 emojiSpriteSize: l
-  } = e, c = (0, E.e7)([h.Z], () => h.Z.categories), f = (0, E.e7)([N.Z], () => N.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]), T = null == t ? null : t.getGuildId(), g = (0, E.e7)([h.Z], () => h.Z.getDisambiguatedEmojiContext(T), [T]), G = (0, b.NJ)(T), k = (0, b.wC)(T), B = (0, b.q5)(T), {
+  } = e, c = (0, E.e7)([h.ZP], () => h.ZP.categories), f = (0, E.e7)([N.Z], () => N.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]), T = null == t ? null : t.getGuildId(), g = (0, E.e7)([h.ZP], () => h.ZP.getDisambiguatedEmojiContext(T), [T]), G = (0, b.NJ)(T), k = (0, b.wC)(T), B = (0, b.q5)(T), {
 canSplitFrecencyList: F
   } = (0, m.S)({
 location: 'useEmojiGrid',
@@ -320,7 +320,7 @@ let {
   setUpsellConfigs: i,
   emojiSelectAnalytics: a,
   trackEmojiFavorited: s
-} = e, o = (0, E.e7)([h.Z], () => h.Z.getDisambiguatedEmojiContext(null == n ? void 0 : n.getGuildId()), [n]);
+} = e, o = (0, E.e7)([h.ZP], () => h.ZP.getDisambiguatedEmojiContext(null == n ? void 0 : n.getGuildId()), [n]);
 return u.useCallback((e, l) => {
   switch (e.type) {
     case 1:

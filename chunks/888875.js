@@ -33,10 +33,10 @@ f.DZ.beforeSendCallbacks.push({
       h.Z.hasLoaded(m.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.stickerFrecency = a.ls.create(), e.stickerFrecency.stickers = (0, p.tU)(d.Z.stickerFrecencyWithoutFetchingLatest.usageHistory, 100));
   }
 }), f.DZ.beforeSendCallbacks.push({
-  hasChanges: () => u.Z.hasPendingUsage() && h.Z.hasLoaded(m.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+  hasChanges: () => u.ZP.hasPendingUsage() && h.Z.hasLoaded(m.yP.FRECENCY_AND_FAVORITES_SETTINGS),
   processProto: e => {
-    if (!!u.Z.hasPendingUsage())
-      h.Z.hasLoaded(m.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.emojiFrecency = a.PL.create(), e.emojiReactionFrecency = a.PL.create(), e.emojiFrecency.emojis = (0, p.tU)(u.Z.emojiFrecencyWithoutFetchingLatest.usageHistory, 100), e.emojiReactionFrecency.emojis = (0, p.tU)(u.Z.emojiReactionFrecencyWithoutFetchingLatest.usageHistory, 100));
+    if (!!u.ZP.hasPendingUsage())
+      h.Z.hasLoaded(m.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (e.emojiFrecency = a.PL.create(), e.emojiReactionFrecency = a.PL.create(), e.emojiFrecency.emojis = (0, p.tU)(u.ZP.emojiFrecencyWithoutFetchingLatest.usageHistory, 100), e.emojiReactionFrecency.emojis = (0, p.tU)(u.ZP.emojiReactionFrecencyWithoutFetchingLatest.usageHistory, 100));
   }
 }), f.DZ.beforeSendCallbacks.push({
   hasChanges: () => c.Z.hasPendingUsage() && h.Z.hasLoaded(m.yP.FRECENCY_AND_FAVORITES_SETTINGS),
@@ -92,7 +92,7 @@ function R() {
   A && (clearTimeout(S), S = null, C());
 }
 async function C() {
-  y(g), !h.Z.hasLoaded(m.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || u.Z.hasPendingUsage() || o.ZP.hasPendingUsage() || l.Z.hasPendingUsage() || _.Z.hasPendingUsage()) && await f.DZ.loadIfNecessary(), i().forEach(f.aj, e => {
+  y(g), !h.Z.hasLoaded(m.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || u.ZP.hasPendingUsage() || o.ZP.hasPendingUsage() || l.Z.hasPendingUsage() || _.Z.hasPendingUsage()) && await f.DZ.loadIfNecessary(), i().forEach(f.aj, e => {
 e.markDirtyIfHasPendingChange();
   });
 }

@@ -106,7 +106,7 @@ let i = (0, N.Gt)(e),
     topEmojis: p,
     newlyAddedEmojis: A
   }),
-  O = (0, s.e7)([l.Z], () => l.Z.getDisambiguatedEmojiContext(n), [n]),
+  O = (0, s.e7)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(n), [n]),
   C = (0, s.e7)([_.Z], () => {
     var e;
     return null === (e = _.Z.getGuild(n)) || void 0 === e ? void 0 : e.name;
@@ -149,7 +149,7 @@ return r.useMemo(() => {
         emojisDisabled: o
       }), null != f && (e.id === n ? u.unshift(f) : u.push(f));
     }
-  })(s, S.En.GUILD), l.Z.categories.reduce((t, r) => {
+  })(s, S.En.GUILD), l.ZP.categories.reduce((t, r) => {
     if (r === S.UX.TOP_GUILD_EMOJI) {
       let {
         emojisDisabled: e,
@@ -419,9 +419,9 @@ function k(e, t, n) {
 d.DZ.loadIfNecessary();
   }, []);
   let i = (0, N.Gt)(n);
-  return (0, s.e7)([l.Z], () => {
+  return (0, s.e7)([l.ZP], () => {
 let r = e.replace(/^:/, '').replace(/:$/, '');
-return '' === r ? null : l.Z.searchWithoutFetchingLatest({
+return '' === r ? null : l.ZP.searchWithoutFetchingLatest({
   channel: t,
   query: r,
   count: 0,
@@ -439,31 +439,31 @@ i
 function B(e) {
   return r.useEffect(() => {
 d.DZ.loadIfNecessary();
-  }, []), (0, s.Wu)([l.Z], () => l.Z.getDisambiguatedEmojiContext(e).getFrequentlyUsedEmojisWithoutFetchingLatest());
+  }, []), (0, s.Wu)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(e).getFrequentlyUsedEmojisWithoutFetchingLatest());
 }
 
 function F(e) {
   return r.useEffect(() => {
 d.DZ.loadIfNecessary();
-  }, []), (0, s.Wu)([l.Z], () => l.Z.getDisambiguatedEmojiContext(e).getFrequentlyUsedReactionEmojisWithoutFetchingLatest());
+  }, []), (0, s.Wu)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(e).getFrequentlyUsedReactionEmojisWithoutFetchingLatest());
 }
 
 function V(e) {
   return r.useEffect(() => {
 d.DZ.loadIfNecessary();
-  }, []), (0, s.Wu)([l.Z], () => l.Z.getDisambiguatedEmojiContext(e).favoriteEmojisWithoutFetchingLatest);
+  }, []), (0, s.Wu)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(e).favoriteEmojisWithoutFetchingLatest);
 }
 
 function H(e, t) {
   return r.useEffect(() => {
 d.DZ.loadIfNecessary();
-  }, []), (0, s.e7)([l.Z], () => null != t && l.Z.getDisambiguatedEmojiContext(e).isFavoriteEmojiWithoutFetchingLatest(t));
+  }, []), (0, s.e7)([l.ZP], () => null != t && l.ZP.getDisambiguatedEmojiContext(e).isFavoriteEmojiWithoutFetchingLatest(t));
 }
 
 function Z(e) {
   return r.useEffect(() => {
 d.DZ.loadIfNecessary();
-  }, []), (0, s.Wu)([l.Z], () => l.Z.getDisambiguatedEmojiContext(e).getEmojiInPriorityOrderWithoutFetchingLatest());
+  }, []), (0, s.Wu)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(e).getEmojiInPriorityOrderWithoutFetchingLatest());
 }
 
 function Y(e, t, n) {

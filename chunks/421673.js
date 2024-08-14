@@ -43,7 +43,7 @@ u = s.reduce((t, s) => (f(a, null == r ? void 0 : r.id), t[s.soundId] = function
   var a;
   let s = 0,
     u = t.name.toLocaleLowerCase(),
-    c = null != t.emojiId ? o.Z.getCustomEmojiById(t.emojiId) : null,
+    c = null != t.emojiId ? o.ZP.getCustomEmojiById(t.emojiId) : null,
     _ = null != t.emojiName ? l.ZP.convertSurrogateToName(t.emojiName, !1) : null,
     E = null != _ ? l.ZP.getByName(_) : null,
     f = null != c ? [c.name] : null !== (a = null == E ? void 0 : E.names) && void 0 !== a ? a : [];

@@ -747,7 +747,7 @@ let {
   matchComparator: a
 } = e;
 return A.DZ.loadIfNecessary(), {
-  emojis: f.Z.searchWithoutFetchingLatest({
+  emojis: f.ZP.searchWithoutFetchingLatest({
     channel: n,
     query: t,
     count: i,

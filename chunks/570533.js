@@ -10,7 +10,7 @@ var r = t(470079),
 let u = [];
 
 function a(e) {
-  let n = (0, i.e7)([o.Z], () => o.Z.getGuildEmoji(e), [e]);
+  let n = (0, i.e7)([o.ZP], () => o.ZP.getGuildEmoji(e), [e]);
   return r.useMemo(() => null == n ? u : n.filter(n => (0, l.Kt)(n, e)), [
 n,
 e

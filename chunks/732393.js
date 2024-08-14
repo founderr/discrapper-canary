@@ -25,7 +25,7 @@ tag: n
 name: t,
 emojiId: r,
 emojiName: d
-  } = n, u = (0, a.e7)([o.Z], () => null != r ? o.Z.getUsableCustomEmojiById(r) : null);
+  } = n, u = (0, a.e7)([o.ZP], () => null != r ? o.ZP.getUsableCustomEmojiById(r) : null);
   return (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsx)(s.Z, {

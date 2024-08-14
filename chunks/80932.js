@@ -125,7 +125,7 @@ function O(e) {
 return e;
   let t = e.map(e => {
 var t;
-return null !== (t = u.Z.getCustomEmojiById(e)) && void 0 !== t ? t : c.ZP.getByName(e);
+return null !== (t = u.ZP.getCustomEmojiById(e)) && void 0 !== t ? t : c.ZP.getByName(e);
   }).filter(h.lm);
   return [...(0, d.Z)(t).keys()];
 }

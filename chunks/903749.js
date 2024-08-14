@@ -13,7 +13,7 @@ function r(e) {
   let {
 emojiId: l,
 emojiName: s
-  } = e, t = (0, i.e7)([a.Z], () => null != l ? a.Z.getCustomEmojiById(l) : null);
+  } = e, t = (0, i.e7)([a.ZP], () => null != l ? a.ZP.getCustomEmojiById(l) : null);
   if (null != t || null != s) {
 if (null == l)
   return n()(null != s, 'emojiName must be defined if emojiId is not defined'), o.ZP.convertSurrogateToName(s, !1);

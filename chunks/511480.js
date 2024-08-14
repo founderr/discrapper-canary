@@ -229,7 +229,7 @@ let {
   emojiDiscoverabilityEnabled: o
 } = n, c = r;
 if (null == c && null != a) {
-  let e = h.Z.getGuildEmoji(a.id);
+  let e = h.ZP.getGuildEmoji(a.id);
   c = {
     ...a,
     premiumSubscriptionCount: null == a ? void 0 : a.premiumSubscriberCount,

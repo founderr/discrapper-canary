@@ -100,7 +100,7 @@ guilds: _,
   (function(e) {
 null != o.Z.database() && !1 === e.databaseOk && d.Z.replaceDisableAllDatabases('ReadyPayloadUtils: database was not ok'), S = {};
 let t = Object.values(m.Z.getGuilds()),
-  n = f.Z.getGuilds(),
+  n = f.ZP.getGuilds(),
   r = h.Z.getRawStickersByGuild(),
   i = I.ZP.getReadStatesByChannel();
 for (let o of t) {
@@ -142,7 +142,7 @@ function y(e, t) {
 s = M(e, null == a ? void 0 : {
   properties: T.tK(a),
   roles: m.Z.getRoles(a.id),
-  emojis: null !== (r = null === (n = f.Z.getGuilds()[a.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== r ? r : null,
+  emojis: null !== (r = null === (n = f.ZP.getGuilds()[a.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== r ? r : null,
   stickers: null !== (i = h.Z.getRawStickersByGuild().get(a.id)) && void 0 !== i ? i : null,
   readStates: {}
 });

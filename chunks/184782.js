@@ -30,7 +30,7 @@ let M = e => {
 channelData: n,
 onClose: i,
 trackOptionClick: r
-  } = e, d = (0, s.e7)([E.Z], () => E.Z.getChannel(n.channel_id)), h = (0, s.e7)([p.Z], () => null != d && p.Z.can(I.Pl.VIEW_CHANNEL, d)), j = (0, s.e7)([u.Z], () => null != n.emoji_id ? u.Z.getCustomEmojiById(n.emoji_id) : null, [n.emoji_id]), _ = null != n.emoji_name ? m.ZP.getByName(m.ZP.convertSurrogateToName(n.emoji_name, !1)) : null, C = null !== (l = (0, c.KS)(d)) && void 0 !== l ? l : o.TextIcon;
+  } = e, d = (0, s.e7)([E.Z], () => E.Z.getChannel(n.channel_id)), h = (0, s.e7)([p.Z], () => null != d && p.Z.can(I.Pl.VIEW_CHANNEL, d)), j = (0, s.e7)([u.ZP], () => null != n.emoji_id ? u.ZP.getCustomEmojiById(n.emoji_id) : null, [n.emoji_id]), _ = null != n.emoji_name ? m.ZP.getByName(m.ZP.convertSurrogateToName(n.emoji_name, !1)) : null, C = null !== (l = (0, c.KS)(d)) && void 0 !== l ? l : o.TextIcon;
   return null != d && h ? (0, a.jsxs)(o.Clickable, {
 className: v.optionContainer,
 onClick: () => {

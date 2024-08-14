@@ -86,7 +86,7 @@ case ':':
     if (null == n)
       return null;
     let r = n[1],
-      i = a.Z.getDisambiguatedEmojiContext(t).getCustomEmoji();
+      i = a.ZP.getDisambiguatedEmojiContext(t).getCustomEmoji();
     if (null != i && r in i) {
       let e = i[r];
       return {

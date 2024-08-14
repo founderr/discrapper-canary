@@ -220,7 +220,7 @@ return n;
 
 function W(e, n) {
   let t = (0, m.Z)(n, e),
-i = (0, c.Wu)([f.Z], () => f.Z.getGuildEmoji(n), [n]);
+i = (0, c.Wu)([f.ZP], () => f.ZP.getGuildEmoji(n), [n]);
   return M(e, 'tierEmojiIds', r.useMemo(() => null == t ? k : H(i, t.id), [
 i,
 t
@@ -311,10 +311,10 @@ unicodeEmoji: null == c ? void 0 : c.unicodeEmoji
   trial: I,
   max_num_active_trial_users: E
 }), void 0 !== p) {
-let e = H(f.Z.getGuildEmoji(n), i),
+let e = H(f.ZP.getGuildEmoji(n), i),
   t = (0, l.difference)([...p], [...e]),
   r = (0, l.difference)([...e], [...p]),
-  o = t.map(e => f.Z.getCustomEmojiById(e)).map(e => {
+  o = t.map(e => f.ZP.getCustomEmojiById(e)).map(e => {
     if (null != e)
       return (0, d.dv)({
         guildId: n,
@@ -325,7 +325,7 @@ let e = H(f.Z.getGuildEmoji(n), i),
         ]
       });
   }),
-  u = r.map(e => f.Z.getCustomEmojiById(e)).map(e => {
+  u = r.map(e => f.ZP.getCustomEmojiById(e)).map(e => {
     if (null == e)
       return;
     let t = e.roles.filter(e => e !== i);

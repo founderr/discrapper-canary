@@ -62,7 +62,7 @@ null != e.channels && function(e, t) {
     });
   });
 }(e.guild_id, new Set(e.roles)), null != e.emojis && function(e, t) {
-  let n = c.Z.getGuildEmoji(e),
+  let n = c.ZP.getGuildEmoji(e),
     r = n.filter(e => t.has(e.id));
   n.length !== r.length && s.Z.dispatch({
     type: 'GUILD_EMOJIS_UPDATE',
@@ -102,7 +102,7 @@ let i = null === (t = E.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
 p.fileOnly('requesting deleted guild entities (id: '.concat(e, ', name: ').concat(i, ')'));
 let a = A(Object.keys(_.Z.getMutableBasicGuildChannelsForGuild(e))),
   s = A(Object.keys(E.Z.getRoles(e))),
-  o = A(c.Z.getGuildEmoji(e).map(e => e.id)),
+  o = A(c.ZP.getGuildEmoji(e).map(e => e.id)),
   l = A(null !== (r = null === (n = d.Z.getStickersByGuildId(e)) || void 0 === n ? void 0 : n.map(e => e.id)) && void 0 !== r ? r : []);
 h.Z.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, s, o, l);
   }(e), Math.ceil(2000 * Math.random()));

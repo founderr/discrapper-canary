@@ -11,7 +11,7 @@ var r = n(594174),
 function o(e) {
   if (null == e || null == r.default.getCurrentUser())
 return;
-  let t = i.Z.getTopEmojisMetadata(e);
+  let t = i.ZP.getTopEmojisMetadata(e);
   if (null != t) {
 let {
   topEmojisTTL: e

@@ -13,7 +13,7 @@ let s = [];
 
 function o(e) {
   let {
-emojiStoreInstance: t = i.Z,
+emojiStoreInstance: t = i.ZP,
 guildId: n,
 pickerIntention: r
   } = e;
@@ -24,8 +24,8 @@ newlyAddedEmojis: r !== a.Hz.REACTION ? t.getNewlyAddedEmoji(n) : s
 }
 
 function l(e, t) {
-  return (0, r.cj)([i.Z], () => o({
-emojiStoreInstance: i.Z,
+  return (0, r.cj)([i.ZP], () => o({
+emojiStoreInstance: i.ZP,
 guildId: e,
 pickerIntention: t
   }), [

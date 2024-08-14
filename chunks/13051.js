@@ -143,7 +143,7 @@ k = a.useCallback(() => {
   s.user
 ]),
 Y = a.useMemo(() => {
-  let e = _.Z.getGuildEmoji(t.id),
+  let e = _.ZP.getGuildEmoji(t.id),
     n = Object.values(L).filter(e => null != e.tags && e.tags.integration_id === s.id).map(e => e.id);
   return s.enable_emoticons ? e.sort((e, n) => e.name.localeCompare(n.name)).filter(e => null != s.role_id && (null == e ? void 0 : e.roles.some(e => n.includes(e)))) : [];
 }, [

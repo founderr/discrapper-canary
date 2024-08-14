@@ -253,7 +253,7 @@ let t = Object.values(e).flatMap(e => e.map(e => 'emoji' === e.type ? new p.dy({
   type: h.B.UNICODE,
   names: [e.name.replaceAll(':', '')],
   surrogates: ''
-}) : 'customEmoji' === e.type ? f.Z.getCustomEmojiById(e.emojiId) : null).filter(R.lm));
+}) : 'customEmoji' === e.type ? f.ZP.getCustomEmojiById(e.emojiId) : null).filter(R.lm));
 t.length > 0 && a.Z.dispatch({
   type: 'EMOJI_TRACK_USAGE',
   emojiUsed: t

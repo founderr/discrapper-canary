@@ -43,7 +43,7 @@ i.Z.sendStickers(t.id, a, '', {
 });
 return;
   }
-  let g = u.Z.getGuildIds().filter(T).map(e => a.Z.getUsableGuildEmoji(e)).flat().filter(e => null == _.ZP.getEmojiUnavailableReason({
+  let g = u.Z.getGuildIds().filter(T).map(e => a.ZP.getUsableGuildEmoji(e)).flat().filter(e => null == _.ZP.getEmojiUnavailableReason({
 emoji: e,
 channel: t,
 guildId: N,

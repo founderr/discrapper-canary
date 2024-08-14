@@ -81,7 +81,7 @@ return;
     var t;
     let s = null == n.roleIds ? n.roleIds : n.roleIds.filter(n => null != d.Z.getRole(e.id, n)),
       l = null == n.channelIds ? n.channelIds : n.channelIds.filter(e => null != c.Z.getChannel(e)),
-      a = (null == n ? void 0 : null === (t = n.emoji) || void 0 === t ? void 0 : t.id) == null || null == r.Z.getCustomEmojiById(n.emoji.id) ? void 0 : n.emoji;
+      a = (null == n ? void 0 : null === (t = n.emoji) || void 0 === t ? void 0 : t.id) == null || null == r.ZP.getCustomEmojiById(n.emoji.id) ? void 0 : n.emoji;
     return {
       ...n,
       roleIds: s,

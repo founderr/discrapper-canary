@@ -46,7 +46,7 @@ let i, {
   [p, R] = a.useState(!1),
   A = a.useRef(null),
   D = (0, u.e7)([L.Z], () => L.Z.getChannel(o.channel_id)),
-  v = (0, u.e7)([S.Z], () => null != o.emoji_id ? S.Z.getUsableCustomEmojiById(o.emoji_id) : null),
+  v = (0, u.e7)([S.ZP], () => null != o.emoji_id ? S.ZP.getUsableCustomEmojiById(o.emoji_id) : null),
   P = null != D && M.Uu(j.Plq.VIEW_CHANNEL, D),
   B = null !== (t = (0, N.KS)(D)) && void 0 !== t ? t : _.TextIcon,
   y = (0, m.ZP)(D, !1),

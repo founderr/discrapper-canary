@@ -10,7 +10,7 @@ var r = n(339085),
 function s(e, t) {
   if (null == e.id)
 return !0;
-  let n = r.Z.getCustomEmojiById(e.id);
+  let n = r.ZP.getCustomEmojiById(e.id);
   return null != n && !i.ZP.isEmojiDisabled({
 emoji: n,
 channel: t,

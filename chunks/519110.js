@@ -39,10 +39,10 @@ section: T ? f.jXE.EXPRESSION_PICKER : f.jXE.CONTEXT_MENU
   }), [
 _,
 T
-  ]), v = (0, S.Go)(), A = (0, l.e7)([g.Z], () => t === d.S.STICKER && null != n ? g.Z.getStickerById(n) : null), m = null != A && v.includes(A.id), R = (0, l.e7)([c.Z], () => {
+  ]), v = (0, S.Go)(), A = (0, l.e7)([g.Z], () => t === d.S.STICKER && null != n ? g.Z.getStickerById(n) : null), m = null != A && v.includes(A.id), R = (0, l.e7)([c.ZP], () => {
 if (t === d.S.EMOJI) {
   if (null != n)
-    return c.Z.getDisambiguatedEmojiContext().getById(n);
+    return c.ZP.getDisambiguatedEmojiContext().getById(n);
   if (null != C) {
     var e;
     return null !== (e = Z(C)) && void 0 !== e ? e : Z(I.ZP.convertSurrogateToName(C));

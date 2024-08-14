@@ -32,7 +32,7 @@ guildId: t,
 emojiData: n,
 'aria-labelledby': i,
 onSelectEmoji: r
-  } = e, d = (0, l.e7)([E.Z], () => null != n.id ? E.Z.getCustomEmojiById(n.id) : void 0), u = (0, l.e7)([N.ZP], () => N.ZP.getDefaultChannel(t)), m = a.useCallback(e => {
+  } = e, d = (0, l.e7)([E.ZP], () => null != n.id ? E.ZP.getCustomEmojiById(n.id) : void 0), u = (0, l.e7)([N.ZP], () => N.ZP.getDefaultChannel(t)), m = a.useCallback(e => {
 let {
   closePopout: t
 } = e;

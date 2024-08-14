@@ -34,11 +34,11 @@ ariaLabel: M
 name: x,
 emojiId: I,
 emojiName: T
-  } = t, v = null != E, [O, R] = a.useState(!1), b = (0, u.e7)([f.Z], () => null != I ? f.Z.getUsableCustomEmojiById(I) : null), C = v || null != o, L = (!v || !O) && (null != I || null != T), j = 0 === l, P = a.useRef(null), Z = (0, u.e7)([m.Z], () => m.Z.keyboardModeEnabled), D = (0, s.jsxs)(s.Fragment, {
+  } = t, v = null != E, [O, R] = a.useState(!1), b = (0, u.e7)([f.ZP], () => null != I ? f.ZP.getUsableCustomEmojiById(I) : null), C = v || null != o, L = (!v || !O) && (null != I || null != T), P = 0 === l, j = a.useRef(null), Z = (0, u.e7)([m.Z], () => m.Z.keyboardModeEnabled), D = (0, s.jsxs)(s.Fragment, {
 children: [
   L ? (0, s.jsx)(_.Z, {
     className: r()(g.emoji, {
-      [g.small]: j
+      [g.small]: P
     }),
     emojiId: I,
     emojiName: T,
@@ -54,7 +54,7 @@ children: [
     })
   }),
   (0, s.jsx)(c.Text, {
-    variant: j ? 'text-xs/semibold' : 'text-sm/semibold',
+    variant: P ? 'text-xs/semibold' : 'text-sm/semibold',
     lineClamp: 1,
     children: x
   })
@@ -64,11 +64,11 @@ key: t.id,
 className: r()(g.pill, {
   [g.disabled]: i,
   [g.clickable]: C,
-  [g.small]: j,
+  [g.small]: P,
   [g.selected]: p
 }, n),
 onClick: e => {
-  null == o || o(e), null == E || E(t), !Z && null != P.current && P.current.blur();
+  null == o || o(e), null == E || E(t), !Z && null != j.current && j.current.blur();
 },
 onContextMenu: e => null == A ? void 0 : A(e, t),
 onMouseEnter: () => v && R(!0),
@@ -76,9 +76,9 @@ onMouseLeave: () => v && R(!1)
   }, N = (0, d.JA)('forum-tag-'.concat(t.id));
   return C ? (0, s.jsx)(c.Clickable, {
 ...N,
-innerRef: P,
+innerRef: j,
 focusProps: {
-  ringTarget: P
+  ringTarget: j
 },
 'aria-label': null != M ? M : h.Z.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
   tagName: x

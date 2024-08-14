@@ -71,7 +71,7 @@ let {
   emojiList: o,
   channelGuildId: l,
   isBurstReaction: u
-} = e, c = (0, _.e7)([A.Z], () => A.Z.getDisambiguatedEmojiContext(l), [l]), E = s.useCallback((e, r) => {
+} = e, c = (0, _.e7)([A.ZP], () => A.ZP.getDisambiguatedEmojiContext(l), [l]), E = s.useCallback((e, r) => {
   switch (e.type) {
     case W.ld.CREATE_EMOJI:
       i(void 0, !0), L.Z.open(e.guildId, $.pNK.EMOJI);
@@ -245,8 +245,8 @@ eH
 analyticsLocations: eW
   } = (0, g.ZP)(T.Z.EMOJI_PICKER), {
 diversitySurrogate: eK
-  } = (0, _.cj)([A.Z], () => ({
-diversitySurrogate: A.Z.diversitySurrogate
+  } = (0, _.cj)([A.ZP], () => ({
+diversitySurrogate: A.ZP.diversitySurrogate
   })), ez = (0, B.DV)(eb, u, o), eq = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eQ = P.d4.useSetting(), eX = s.useMemo(() => new Set(eQ), [eQ]), e$ = s.useCallback(e => {
 P.d4.updateSetting(Array.from(e));
   }, []), eJ = (0, y.ep)({
@@ -426,7 +426,7 @@ let e = M.p.NONE;
   renderHeader: eS
 }),
 ts = [];
-  o === ee.Hz.REACTION && ts.push(E.z.SUPER_REACTIONS_NITRO_MARKETING), !A.Z.hasFavoriteEmojis(ew) && ts.push(E.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
+  o === ee.Hz.REACTION && ts.push(E.z.SUPER_REACTIONS_NITRO_MARKETING), !A.ZP.hasFavoriteEmojis(ew) && ts.push(E.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
   let to = (0, a.jsx)(m.Z, {
 ...ej,
 children: (0, a.jsxs)(tr, {

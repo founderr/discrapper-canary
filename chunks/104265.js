@@ -29,9 +29,9 @@ hideMemberCount: C,
 canBeNew: b
   } = e, O = (0, u.wj)((0, h.ZP)()), [N, j] = o.useState(!1), _ = N && !C, M = o.useRef(null), {
 reducedMotion: k
-  } = o.useContext(d.AccessibilityPreferencesContext), Z = (0, s.e7)([v.Z], () => {
+  } = o.useContext(d.AccessibilityPreferencesContext), Z = (0, s.e7)([v.ZP], () => {
 var e, n, r, o;
-return (null === (e = t.emoji) || void 0 === e ? void 0 : e.id) != null && null !== (o = null === (n = v.Z.getCustomEmojiById(null === (r = t.emoji) || void 0 === r ? void 0 : r.id)) || void 0 === n ? void 0 : n.animated) && void 0 !== o && o;
+return (null === (e = t.emoji) || void 0 === e ? void 0 : e.id) != null && null !== (o = null === (n = v.ZP.getCustomEmojiById(null === (r = t.emoji) || void 0 === r ? void 0 : r.id)) || void 0 === n ? void 0 : n.animated) && void 0 !== o && o;
   }), y = (0, p.Z)(n, 1000), T = null == y || null == t.roleIds ? 0 : Math.max(...t.roleIds.map(e => y[e])), S = b && !a && t.isUnseen, w = (0, d.useSpring)({
 transform: a || k.enabled ? 'scale(1)' : 'scale(0.7)',
 opacity: a ? 1 : 0,

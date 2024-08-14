@@ -101,7 +101,7 @@ messageId: U,
 isBurstReaction: w,
 rowPosition: x,
 inNitroLockedSection: G
-  } = e, [k, B] = i.useState(''), F = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), V = (0, o.e7)([d.Z], () => d.Z.getDisambiguatedEmojiContext(f), [f]), H = i.useRef(null), {
+  } = e, [k, B] = i.useState(''), F = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), V = (0, o.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(f), [f]), H = i.useRef(null), {
 emoji: Z,
 size: Y,
 isDisabled: j,
@@ -110,7 +110,7 @@ columnIndex: W
 if (e.stopPropagation(), S.current || v.current)
   return;
 let n = e.altKey;
-n && !d.Z.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(Z) && P(a), (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP), T(t, {
+n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(Z) && P(a), (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP), T(t, {
   isFinalSelection: !e.shiftKey,
   toggleFavorite: n
 });

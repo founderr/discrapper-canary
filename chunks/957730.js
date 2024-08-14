@@ -289,7 +289,7 @@ emoji: {
   parse(e, t, n) {
     let [r, i, a] = e, {
       guild: s
-    } = n, o = l.Z.getDisambiguatedEmojiContext(s ? s.id : null).getById(a), u = null != o ? o.name : i;
+    } = n, o = l.ZP.getDisambiguatedEmojiContext(s ? s.id : null).getById(a), u = null != o ? o.name : i;
     return {
       content: ':'.concat(u, ':')
     };
@@ -433,7 +433,7 @@ d = E.Z.computeAllActiveJoinedThreads(n).map(e => ({
   id: e.id,
   text: e.name
 })),
-_ = l.Z.getDisambiguatedEmojiContext(n),
+_ = l.ZP.getDisambiguatedEmojiContext(n),
 f = _.getEscapedCustomEmoticonNames(),
 h = _.getCustomEmoji(),
 g = _.getCustomEmoticonRegex();

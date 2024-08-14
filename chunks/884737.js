@@ -21,7 +21,7 @@ return w;
 return v;
   },
   ML: function() {
-return f;
+return P;
   },
   N$: function() {
 return m;
@@ -42,7 +42,7 @@ return J;
 return p;
   },
   lU: function() {
-return P;
+return f;
   },
   nm: function() {
 return j;
@@ -145,7 +145,7 @@ let C = new r.Z('AuditLogUtils'),
 [u.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
 ...d()
   }),
-  f = () => ({
+  P = () => ({
 [u.zUn.NAME]: es(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
 [u.zUn.POSITION]: es(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE),
 [u.zUn.TOPIC]: eI(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR),
@@ -165,7 +165,7 @@ let C = new r.Z('AuditLogUtils'),
 [u.zUn.VIDEO_QUALITY_MODE]: es(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE),
 [u.zUn.DEFAULT_AUTO_ARCHIVE_DURATION]: es(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE)
   }),
-  P = () => ({
+  f = () => ({
 [u.zUn.NICK]: eI(c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE, c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE),
 [u.zUn.DEAF]: {
   true: c.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,
@@ -937,7 +937,7 @@ let s = function(e, _) {
       case u.KFR.WEBHOOK:
         return e_(e, u.zUn.NAME, e => L.Z.webhooks.find(_ => _.id === e), e => e.name);
       case u.KFR.EMOJI:
-        return e_(e, u.zUn.NAME, e => N.Z.getGuildEmoji(_.id).find(_ => _.id === e), e => e.name);
+        return e_(e, u.zUn.NAME, e => N.ZP.getGuildEmoji(_.id).find(_ => _.id === e), e => e.name);
       case u.KFR.STICKER:
         return e_(e, u.zUn.NAME, e => D.Z.getStickerById(e), e => e.name);
       case u.KFR.STAGE_INSTANCE:

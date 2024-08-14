@@ -46,7 +46,7 @@ function B(e) {
 emojiId: n,
 emojiName: s,
 className: a
-  } = e, r = (0, _.e7)([C.Z], () => null != n ? C.Z.getCustomEmojiById(n) : void 0);
+  } = e, r = (0, _.e7)([C.ZP], () => null != n ? C.ZP.getCustomEmojiById(n) : void 0);
   return (0, i.jsx)(m.Z, {
 emojiId: n,
 emojiName: s,
