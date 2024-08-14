@@ -151,19 +151,21 @@ return new o({
 });
   }
   getGoliveLQQuality() {
-let e = this.goliveSimulcastLQRes.width,
-  t = this.goliveSimulcastLQRes.height;
+var e, t, n, r;
+let a = this.goliveSimulcastLQRes.width,
+  s = this.goliveSimulcastLQRes.height,
+  l = Math.min(i.Gs, null !== (n = null === (e = this.goliveMaxQuality.encode) || void 0 === e ? void 0 : e.framerate) && void 0 !== n ? n : i.Gs);
 return new o({
   capture: {
-    width: e,
-    height: t,
-    framerate: i.Gs
+    width: a,
+    height: s,
+    framerate: Math.min(i.Gs, null !== (r = null === (t = this.goliveMaxQuality.capture) || void 0 === t ? void 0 : t.framerate) && void 0 !== r ? r : i.Gs)
   },
   encode: {
-    width: e,
-    height: t,
-    framerate: i.Gs,
-    pixelCount: e * t
+    width: a,
+    height: s,
+    framerate: l,
+    pixelCount: a * s
   },
   bitrateMin: 15000,
   bitrateMax: this.goliveSimulcastLQBitrate,

@@ -1,6 +1,10 @@
 e.exports = {
   expandedProgressBarContainer: 'expandedProgressBarContainer_c88bb1',
   expandedProgressBarContainerSettingsPage: 'expandedProgressBarContainerSettingsPage_c88bb1',
+  standardCircle: 'standardCircle_c88bb1',
+  redeemedCircle: 'redeemedCircle_c88bb1',
+  convertedCircleGlow: 'convertedCircleGlow_c88bb1',
+  content: 'content_c88bb1',
   expandedProgressBarContainerVariant1: 'expandedProgressBarContainerVariant1_c88bb1',
   expandedProgressBarContainerVariant2: 'expandedProgressBarContainerVariant2_c88bb1',
   allReferralsSentBorder: 'allReferralsSentBorder_c88bb1',

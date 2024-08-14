@@ -25,19 +25,20 @@ var s = n(735250),
 let x = e => {
 let {
   userRecord: t,
-  placement: n
+  placement: n,
+  trialStatus: a
 } = e, {
-  avatarSrc: a,
-  eventHandlers: r
+  avatarSrc: r,
+  eventHandlers: l
 } = (0, u.Z)({
   user: t,
   size: o.AvatarSizes.SIZE_32,
   animateOnHover: !0
-}), i = null != t, l = i ? (0, s.jsx)(o.Avatar, {
-  src: a,
+}), c = null != t, d = c ? (0, s.jsx)(o.Avatar, {
+  src: r,
   'aria-label': t.username,
   size: o.AvatarSizes.SIZE_32,
-  ...r
+  ...l
 }) : (0, s.jsx)(o.Heading, {
   variant: 'heading-md/semibold',
   className: h.userAvatarProgressBarUnitNum,
@@ -45,12 +46,22 @@ let {
 });
 return (0, s.jsx)(o.Tooltip, {
   text: S.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_UNSENT_TOOLTIP,
-  shouldShow: !i,
+  shouldShow: !c,
   tooltipContentClassName: h.unsentTooltipContent,
   children: e => (0, s.jsx)('div', {
-    className: h.userAvatarProgressBarUnit,
-    ...e,
-    children: l
+    className: i()({
+      [h.redeemedCircle]: !1,
+      [h.convertedCircleGlow]: !1,
+      [h.standardCircle]: !1
+    }),
+    children: (0, s.jsx)('div', {
+      className: void 0,
+      children: (0, s.jsx)('div', {
+        className: h.userAvatarProgressBarUnit,
+        ...e,
+        children: d
+      })
+    })
   })
 });
   },
@@ -76,30 +87,34 @@ return (0, s.jsxs)('div', {
   },
   O = e => {
 let {
-  userRecords: t
-} = e, n = t.length, a = n < 1 ? null : t[0], r = n < 2 ? null : t[1], i = n < 3 ? null : t[2];
+  userRecords: t,
+  recipientStatus: n
+} = e, a = t.length, r = a < 1 ? null : t[0], i = a < 2 ? null : t[1], l = a < 3 ? null : t[2];
 return (0, s.jsxs)('div', {
   className: h.userAvatarProgressBarContainer,
   children: [
     (0, s.jsx)(x, {
-      userRecord: a,
-      placement: 1
-    }),
-    (0, s.jsx)(b, {
-      numSentReferrals: n,
-      placement: 1
-    }),
-    (0, s.jsx)(x, {
       userRecord: r,
-      placement: 2
+      placement: 1,
+      trialStatus: (null == r ? void 0 : r.id) != null ? n.get(null == r ? void 0 : r.id) : void 0
     }),
     (0, s.jsx)(b, {
-      numSentReferrals: n,
-      placement: 2
+      numSentReferrals: a,
+      placement: 1
     }),
     (0, s.jsx)(x, {
       userRecord: i,
-      placement: 3
+      placement: 2,
+      trialStatus: (null == i ? void 0 : i.id) != null ? n.get(null == i ? void 0 : i.id) : void 0
+    }),
+    (0, s.jsx)(b, {
+      numSentReferrals: a,
+      placement: 2
+    }),
+    (0, s.jsx)(x, {
+      userRecord: l,
+      placement: 3,
+      trialStatus: (null == l ? void 0 : l.id) != null ? n.get(null == l ? void 0 : l.id) : void 0
     })
   ]
 });
@@ -158,7 +173,8 @@ y = (0, s.jsxs)('div', {
           })
         }),
         (0, s.jsx)(O, {
-          userRecords: P
+          userRecords: P,
+          recipientStatus: u
         }),
         (0, s.jsx)(o.Text, {
           variant: t ? 'text-sm/normal' : 'text-lg/medium',
