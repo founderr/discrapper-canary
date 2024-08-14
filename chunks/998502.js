@@ -371,7 +371,10 @@ if ('window' === n) {
 }
 if (n.startsWith('screen'))
   return 1;
-return null;
+if ('prepicked' === n)
+  return 1;
+else
+  return null;
   },
   getDesktopSourceFromPid(e) {
 if (!(0, I.isWindows)() || null == this.getDiscordUtils().getWindowHandleFromPid || null == e)
