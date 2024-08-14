@@ -35,7 +35,7 @@ children: (0, r.jsx)('div', {
   className: o.gridOverlay,
   'data-horizontal': n,
   style: {
-    backgroundSize: ''.concat(t, 'px ').concat(t, 'px')
+    '--custom-grid-spacing': ''.concat(t, 'px')
   }
 })
   }) : null;
