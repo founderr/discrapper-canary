@@ -118,10 +118,11 @@ className: t,
 items: n,
 renderItem: a,
 itemGapPx: o = 0,
-maxLines: f
+maxLines: f,
+renderOverflow: h
   } = e, {
-ref: h,
-width: p
+ref: p,
+width: m
   } = function() {
 let [e, t] = i.useState(0);
 return {
@@ -132,24 +133,27 @@ return {
   width: e
 };
   }(), {
-lastVisibleIndex: m,
-onItemLayout: I,
-overflowItemsRef: T
+lastVisibleIndex: I,
+onItemLayout: T,
+overflowItemsRef: g
   } = d({
 items: n,
 itemGapPx: o,
 maxLines: f,
-containerWidth: p
-  }), g = i.useMemo(() => n.slice(0, m + 1), [
+containerWidth: m
+  }), S = i.useCallback(e => (0, r.jsx)(_, {
+items: e,
+renderItem: a
+  }), [a]), A = i.useMemo(() => n.slice(0, I + 1), [
 n,
-m
-  ]), S = i.useMemo(() => n.slice(m + 1), [
+I
+  ]), N = i.useMemo(() => n.slice(I + 1), [
 n,
-m
+I
   ]);
   return (0, r.jsxs)('div', {
 className: s()(t, c.items),
-ref: h,
+ref: p,
 children: [
   (0, r.jsxs)('div', {
     'aria-hidden': !0,
@@ -159,24 +163,21 @@ children: [
         className: c.itemMeasurements,
         children: n.map((e, t) => (0, r.jsx)(E, {
           index: t,
-          onItemLayout: I,
+          onItemLayout: T,
           children: a(e)
         }, e))
       }),
       (0, r.jsx)('div', {
         className: c.overflowMeasurement,
-        ref: T,
+        ref: g,
         children: a(u.Z.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({
           count: Number('1'.concat(n.length))
         }))
       })
     ]
   }),
-  g.map(a),
-  S.length > 0 && (0, r.jsx)(_, {
-    items: S,
-    renderItem: a
-  })
+  A.map(a),
+  N.length > 0 && (null != h ? h : S)(N)
 ]
   });
 };
