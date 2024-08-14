@@ -18,8 +18,8 @@ var i = l(475179),
   _ = l(626135),
   m = l(403182),
   f = l(74538),
-  h = l(979956),
-  g = l(981631),
+  g = l(979956),
+  h = l(981631),
   E = l(959517),
   A = l(474936),
   p = l(689938);
@@ -36,7 +36,7 @@ _ = [];
   for (let e of t)
 u += 1, o += e.size, s.push(e.size), e.size > d && (d = e.size), null != e.type ? _.push(e.type) : _.push('unknown');
   if (d > n) {
-(0, r.yw)(g.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
+(0, r.yw)(h.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
   channel_id: e.id,
   guild_id: i,
   user_individual_file_size_limit: n,
@@ -47,7 +47,7 @@ u += 1, o += e.size, s.push(e.size), e.size > d && (d = e.size), null != e.type 
   attachment_mimetypes: _
 }), (0, a.openUploadError)({
   title: p.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-  help: (0, h.BK)(l, i),
+  help: (0, g.BK)(l, i),
   showPremiumUpsell: !(0, f.M5)(l, A.p9.TIER_2),
   fileSize: d
 });
@@ -73,23 +73,23 @@ return;
   if (null != r && r.length !== e.length)
 throw Error('Unexpected mismatch between files and file metadata');
   let E = t.getGuildId();
-  if ((0, h.Bf)(e, E)) {
+  if ((0, g.Bf)(e, E)) {
 M(t, e);
 return;
   }
-  if (u.Z.getUploadCount(t.id, l) + e.length > g.dN1) {
+  if (u.Z.getUploadCount(t.id, l) + e.length > h.dN1) {
 (0, a.openUploadError)({
   title: p.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
   help: p.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
-    limit: g.dN1
+    limit: h.dN1
   })
-}), _.default.track(g.rMx.UPLOAD_FILE_LIMIT_ERROR, {
+}), _.default.track(h.rMx.UPLOAD_FILE_LIMIT_ERROR, {
   existing_count: u.Z.getUploadCount(t.id, l),
   new_count: e.length
 });
 return;
   }
-  if ((t.type === g.d4z.GUILD_VOICE || t.type === g.d4z.GUILD_STAGE_VOICE) && !d.Z.getChatOpen(t.id) && i.Z.updateChatOpen(t.id, !0), c) {
+  if ((t.type === h.d4z.GUILD_VOICE || t.type === h.d4z.GUILD_STAGE_VOICE) && !d.Z.getChatOpen(t.id) && i.Z.updateChatOpen(t.id, !0), c) {
 let i = Array.from(e).map((e, t) => ({
   file: e,
   platform: o.ow.WEB,

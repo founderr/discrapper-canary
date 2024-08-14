@@ -27,8 +27,8 @@ var n = s(735250),
   x = s(752305),
   f = s(893718),
   C = s(600164),
-  M = s(313201),
-  I = s(907040),
+  I = s(313201),
+  M = s(907040),
   R = s(633302),
   Z = s(109434),
   v = s(162389),
@@ -69,17 +69,17 @@ configurable: !0,
 writable: !0
   }) : e[t] = s, e;
 }
-let el = (0, M.hQ)(),
-  ea = (0, M.hQ)(),
-  ei = (0, M.hQ)(),
-  er = (0, M.hQ)(),
-  eo = (0, M.hQ)(),
-  ed = (0, M.hQ)(),
-  ec = (0, M.hQ)(),
-  eu = (0, M.hQ)(),
-  eh = (0, M.hQ)(),
-  em = (0, M.hQ)(),
-  eg = (0, M.hQ)(),
+let el = (0, I.hQ)(),
+  ea = (0, I.hQ)(),
+  ei = (0, I.hQ)(),
+  er = (0, I.hQ)(),
+  eo = (0, I.hQ)(),
+  ed = (0, I.hQ)(),
+  ec = (0, I.hQ)(),
+  eu = (0, I.hQ)(),
+  eh = (0, I.hQ)(),
+  em = (0, I.hQ)(),
+  eg = (0, I.hQ)(),
   eE = (0, y.kt)({
 id: '1',
 type: q.d4z.DM
@@ -223,8 +223,8 @@ let {
   isThreadModerator: _,
   canManageThread: x,
   guild: C,
-  isForumPost: M,
-  isOwner: I,
+  isForumPost: I,
+  isOwner: M,
   showAdvancedSlowModeSetting: Z
 } = this.props, L = y.Ec.has(e.type), j = e.isForumLikeChannel(), D = j && (null === (s = e.availableTags) || void 0 === s ? void 0 : s.every(e => e.moderated)), w = (null === (l = H.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) === !0, P = y.TK.has(e.type) ? (0, n.jsxs)('div', {
   children: [
@@ -531,7 +531,7 @@ let {
     (0, n.jsx)(h.FormText, {
       className: es.marginTop8,
       type: h.FormText.Types.DESCRIPTION,
-      children: M ? ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION_FORUM_POST : ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION
+      children: I ? ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION_FORUM_POST : ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION
     })
   ]
 }) : null, en = e.type === q.d4z.PRIVATE_THREAD && null != e.threadMetadata ? (0, n.jsx)('div', {
@@ -628,7 +628,7 @@ return e.type === q.d4z.GUILD_CATEGORY ? (T = ee.Z.Messages.CATEGORY_NAME, g = '
         error: this.getError('name'),
         name: g,
         autoFocus: !0,
-        disabled: I ? !N : !p,
+        disabled: M ? !N : !p,
         maxLength: q.HN8
       })
     }),
@@ -902,7 +902,7 @@ super(e), en(this, 'renderEmojiPicker', e => {
   } = e, {
     channel: s
   } = this.props;
-  return (0, n.jsx)(I.Z, {
+  return (0, n.jsx)(M.Z, {
     guildId: null == s ? void 0 : s.guild_id,
     closePopout: t,
     onSelectEmoji: (e, s) => {

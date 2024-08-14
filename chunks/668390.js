@@ -62,8 +62,8 @@ locked: S,
 lockTooltip: x,
 showContextMenu: f,
 theme: C,
-roleStyle: M,
-'aria-label': I
+roleStyle: I,
+'aria-label': M
   } = e, R = l.useCallback(e => {
 (0, d.jW)(e, async () => {
   let {
@@ -84,11 +84,11 @@ id: a,
 selectedItem: p,
 onItemSelect: N,
 itemType: _,
-'aria-label': null != x ? ''.concat(I, ', ').concat(x) : I,
+'aria-label': null != x ? ''.concat(M, ', ').concat(x) : M,
 children: (0, n.jsxs)('div', {
   className: m.roleContent,
   children: [
-    'dot' === M ? (0, n.jsx)(o.RoleDot, {
+    'dot' === I ? (0, n.jsx)(o.RoleDot, {
       color: null != t ? t : void 0,
       className: m.roleDot,
       background: !1,

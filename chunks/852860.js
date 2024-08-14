@@ -41,7 +41,7 @@ return o.S.subscribe(d.CkL.EMPHASIZE_NOTICE, e), () => {
   o.S.unsubscribe(d.CkL.EMPHASIZE_NOTICE, e);
 };
   }, [C]);
-  let M = f.to({
+  let I = f.to({
   range: [
     0,
     1
@@ -51,7 +51,7 @@ return o.S.subscribe(d.CkL.EMPHASIZE_NOTICE, e), () => {
     (0, r.useToken)(i.Z.unsafe_rawColors.WHITE_500).hex()
   ]
 }),
-I = f.to({
+M = f.to({
   range: [
     0,
     1
@@ -74,7 +74,7 @@ R = f.to({
   return (0, n.jsx)(a.animated.div, {
 className: u.container,
 style: {
-  backgroundColor: I
+  backgroundColor: M
 },
 children: (0, n.jsx)('div', {
   className: u.flexContainer,
@@ -87,7 +87,7 @@ children: (0, n.jsx)('div', {
         children: (0, n.jsx)(a.animated.div, {
           className: u.message,
           style: {
-            color: null != h ? R : M
+            color: null != h ? R : I
           },
           children: null !== (t = null != h ? h : s) && void 0 !== t ? t : c.Z.Messages.SETTINGS_NOTICE_MESSAGE
         })
@@ -103,7 +103,7 @@ children: (0, n.jsx)('div', {
             onClick: g,
             children: (0, n.jsx)(a.animated.span, {
               style: {
-                color: M
+                color: I
               },
               children: null != p ? p : c.Z.Messages.RESET
             })

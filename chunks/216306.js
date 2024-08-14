@@ -6,7 +6,7 @@ return d;
 return Z;
   },
   Uo: function() {
-return f;
+return P;
   },
   fU: function() {
 return H;
@@ -15,7 +15,7 @@ return H;
 return h;
   },
   tn: function() {
-return P;
+return f;
   }
 }), E(733860);
 var s = E(470079),
@@ -90,7 +90,7 @@ if (_[s] > 0) {
   return null;
 }
 
-function f(e, _) {
+function P(e, _) {
   let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
   (0, l.n)(e, _), (0, r.y5)(_.map(e => ({
 channelId: e,
@@ -99,7 +99,7 @@ messageId: M.ZP.lastMessageId(e)
   }))), null != E && (0, U.uL)(R.Z5c.CHANNEL(e, E));
 }
 
-function P(e, _, E, s) {
+function f(e, _, E, s) {
   let T = (0, L.wE)(a.z.CHANNEL_BROWSER_NUX),
 I = (0, t.cj)([G.Z], () => {
   let _ = {},

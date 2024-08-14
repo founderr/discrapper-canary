@@ -27,8 +27,8 @@ var n = s(735250),
   x = s(325476),
   f = s(146085),
   C = s(598077),
-  M = s(277053),
-  I = s(388610),
+  I = s(277053),
+  M = s(388610),
   R = s(271383),
   Z = s(430824),
   v = s(496675),
@@ -46,20 +46,20 @@ var n = s(735250),
   U = s(689938),
   H = s(137580);
 let G = o.ZP.connectStores([
-  M.Z,
-  I.Z
+  I.Z,
+  M.Z
 ], () => {
-  let e = I.Z.getChannel();
+  let e = M.Z.getChannel();
   return {
-submitting: M.Z.formState === B.QZA.SUBMITTING,
+submitting: I.Z.formState === B.QZA.SUBMITTING,
 onReset() {
   (0, m.S1)();
 },
 onSave() {
   if (null == e)
     return;
-  let t = M.Z.editedPermissionIds.reduce((e, t) => {
-    let s = M.Z.getPermissionOverwrite(t);
+  let t = I.Z.editedPermissionIds.reduce((e, t) => {
+    let s = I.Z.getPermissionOverwrite(t);
     return null != s && e.push(s), e;
   }, []);
   (0, m.hw)(e.id, t);
@@ -70,7 +70,7 @@ onSave() {
 function k(e) {
   let {
 overwrite: t
-  } = e, s = (0, o.e7)([M.Z], () => M.Z.channel), l = (0, o.e7)([Z.Z], () => null != s ? Z.Z.getGuild(s.getGuildId()) : null), a = (0, o.e7)([Z.Z], () => null != l ? Z.Z.getRoles(l.id) : void 0);
+  } = e, s = (0, o.e7)([I.Z], () => I.Z.channel), l = (0, o.e7)([Z.Z], () => null != s ? Z.Z.getGuild(s.getGuildId()) : null), a = (0, o.e7)([Z.Z], () => null != l ? Z.Z.getRoles(l.id) : void 0);
   if (null == s || null == l || null == t)
 return null;
   let {
@@ -135,8 +135,8 @@ u.Z.show({
   }, S = e => {
 let t = v.Z.can(B.Plq.ADMINISTRATOR, l) || v.Z.can(B.Plq.MANAGE_ROLES, s, void 0, void 0, !0);
 return s.isGuildStageVoice() && f.xS.has(e) ? U.Z.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.fS(e, B.Plq.MANAGE_ROLES) || t) && (null == e || v.Z.can(e, l) || t)) && U.Z.Messages.HELP_MISSING_PERMISSION;
-  }, C = g === i, I = s.isForumLikeChannel() && r.e$(t.deny, B.Plq.SEND_MESSAGES), R = r.e$(t.deny, B.Plq.SEND_MESSAGES), A = r.e$(t.deny, B.Plq.READ_MESSAGE_HISTORY), L = D.Z.generateChannelPermissionSpec(i, s, C, {
-createPostsDisabled: I,
+  }, C = g === i, M = s.isForumLikeChannel() && r.e$(t.deny, B.Plq.SEND_MESSAGES), R = r.e$(t.deny, B.Plq.SEND_MESSAGES), A = r.e$(t.deny, B.Plq.READ_MESSAGE_HISTORY), L = D.Z.generateChannelPermissionSpec(i, s, C, {
+createPostsDisabled: M,
 sendMessagesDisabled: R,
 readMessageHistoryDisabled: A
   });
@@ -264,7 +264,7 @@ function Y() {
 channel: e,
 permissionOverwrites: t,
 selectedOverwriteId: a
-  } = (0, o.cj)([M.Z], () => M.Z), r = null == e ? void 0 : e.getGuildId(), {
+  } = (0, o.cj)([I.Z], () => I.Z), r = null == e ? void 0 : e.getGuildId(), {
 guild: u,
 guildRoles: E
   } = (0, o.cj)([Z.Z], () => {
@@ -287,11 +287,11 @@ return null;
     channel: e,
     permissionOverwrites: t,
     position: null != l ? l : 'bottom',
-    onSelect: I,
+    onSelect: M,
     onClose: a
   });
 },
-I = (t, s) => {
+M = (t, s) => {
   h.Z.updatePermissionOverwrite(e.id, {
     id: t,
     type: s,
@@ -403,7 +403,7 @@ function Q() {
 channel: e,
 permissionOverwrites: t,
 selectedOverwriteId: s
-  } = (0, o.cj)([M.Z], () => M.Z);
+  } = (0, o.cj)([I.Z], () => I.Z);
   if (null == (0, o.e7)([Z.Z], () => null != e ? Z.Z.getGuild(e.getGuildId()) : null) || null == e || null == t || null == s)
 return null;
   let l = t[s];

@@ -15,7 +15,7 @@ function u() {
   let {
 resolution: e,
 fps: t
-  } = (0, a.e7)([s.Z], () => s.Z.getState());
+  } = (0, a.cj)([s.Z], () => s.Z.getState());
   if (!(!(0, l.So)(i.q.STREAM_HIGH_QUALITY) || (0, o.mc)(e, t)))
 return ''.concat((0, c.o6)(e), ' ').concat((0, r.bp)(t));
 }

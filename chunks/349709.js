@@ -34,13 +34,13 @@ setEmojiName: C
   } = e, R = (0, E.Z)({
 emojiId: T,
 emojiName: v
-  }), S = (0, o.e7)([_.ZP], () => null != s ? _.ZP.getDefaultChannel(s) : null), j = n.createRef(), h = (0, c.Z)(j), N = () => {
+  }), S = (0, o.e7)([_.ZP], () => null != s ? _.ZP.getDefaultChannel(s) : null), j = n.createRef(), h = (0, c.Z)(j), P = () => {
 C(void 0), p(void 0);
-  }, U = e => (l, s) => {
+  }, N = e => (l, s) => {
 let t = (null == l ? void 0 : l.id) == null;
-N(), t ? C(null == l ? void 0 : l.optionallyDiverseSequence) : (x && C(null == l ? void 0 : l.name), p(null == l ? void 0 : l.id)), s && e();
-  }, Z = e => {
-e.stopPropagation(), N();
+P(), t ? C(null == l ? void 0 : l.optionallyDiverseSequence) : (x && C(null == l ? void 0 : l.name), p(null == l ? void 0 : l.id)), s && e();
+  }, U = e => {
+e.stopPropagation(), P();
   };
   return (0, t.jsx)(r.FormItem, {
 required: D,
@@ -58,7 +58,7 @@ children: (0, t.jsx)(r.Popout, {
       closePopout: l,
       pickerIntention: f.Hz.SOUNDBOARD,
       onNavigateAway: l,
-      onSelectEmoji: U(l),
+      onSelectEmoji: N(l),
       guildId: s,
       channel: S
     });
@@ -89,7 +89,7 @@ children: (0, t.jsx)(r.Popout, {
         }),
         h && null != R && (0, t.jsx)(d.Z, {
           ...e,
-          onClick: Z,
+          onClick: U,
           className: L.removeButton
         })
       ]

@@ -64,9 +64,9 @@ navId: 'quests-entry',
 'aria-label': q.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
 onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : _.dG,
 children: [
-  (0, s.jsxs)(a.MenuGroup, {
+  !1 === M && (0, s.jsxs)(a.MenuGroup, {
     children: [
-      !1 === h && !1 === M && (0, s.jsx)(a.MenuItem, {
+      !1 === h && (0, s.jsx)(a.MenuItem, {
         id: 'play-game',
         label: q.Z.Messages.QUESTS_GET_THIS_GAME,
         action: f,
