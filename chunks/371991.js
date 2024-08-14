@@ -47,10 +47,11 @@ entry: t,
 inline: n = !1,
 textColor: a,
 hovered: o = !1,
-bold: l = !1
-  } = e, c = h(t, o), d = i.useMemo(() => (0, E.T_)(t, c), [
+bold: l = !1,
+scaleFontToUserSetting: c = !1
+  } = e, d = h(t, o), _ = i.useMemo(() => (0, E.T_)(t, d), [
 t,
-c
+d
   ]);
   return (0, r.jsx)(u.Text, {
 className: s()(f.timestamp, {
@@ -60,7 +61,8 @@ className: s()(f.timestamp, {
 variant: 'text-xs/medium',
 tabularNumbers: !0,
 color: a,
-children: d
+scaleFontToUserSetting: c,
+children: _
   });
 };
 t.ZP = e => {
@@ -68,17 +70,20 @@ t.ZP = e => {
 entry: t,
 textColor: n,
 hovered: i = !1,
-bold: a = !1
-  } = e, s = (0, E.kr)(t), l = (0, o.e7)([d.default], () => d.default.locale);
-  return s ? (0, r.jsx)(p, {
+bold: a = !1,
+scaleFontToUserSetting: s = !1
+  } = e, l = (0, E.kr)(t), c = (0, o.e7)([d.default], () => d.default.locale);
+  return l ? (0, r.jsx)(p, {
 entry: t,
 textColor: n,
 hovered: i,
-bold: a
+bold: a,
+scaleFontToUserSetting: s
   }) : (0, r.jsx)(u.Text, {
 variant: 'text-xs/normal',
 color: n,
 lineClamp: 1,
-children: (0, E.GL)(t, l)
+scaleFontToUserSetting: s,
+children: (0, E.GL)(t, c)
   });
 };

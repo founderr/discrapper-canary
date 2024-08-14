@@ -132,7 +132,8 @@ tooltipText: i,
 showTooltip: s
   } = e, {
 defaultTextColor: o,
-defaultIconColor: l
+defaultIconColor: l,
+location: u
   } = L();
   return (0, a.jsx)(h.Tooltip, {
 text: i,
@@ -148,6 +149,7 @@ children: e => (0, a.jsxs)(b, {
       variant: 'text-xs/normal',
       color: o,
       className: C.badgeLabel,
+      scaleFontToUserSetting: 4 === u,
       children: n
     })
   ]
@@ -197,7 +199,8 @@ children: [
     entry: t,
     textColor: o ? 'text-positive' : r,
     hovered: n,
-    bold: !0
+    bold: !0,
+    scaleFontToUserSetting: 4 === s
   })
 ]
   });

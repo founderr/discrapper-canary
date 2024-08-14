@@ -65,6 +65,7 @@ children: [
           variant: 'heading-md/medium',
           lineClamp: 1,
           className: i()(E.textPrimary, E.truncatedText),
+          scaleFontToUserSetting: !0,
           children: r
         })
       }),
@@ -79,6 +80,7 @@ children: [
               variant: 'text-sm/normal',
               className: i()(E.textSecondary, E.truncatedText),
               lineClamp: 1,
+              scaleFontToUserSetting: !0,
               children: v
             })
           })
