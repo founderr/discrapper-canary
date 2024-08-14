@@ -2,9 +2,9 @@ s(411104), s(47120);
 var t = s(735250),
   r = s(470079),
   l = s(120356),
-  a = s.n(l),
-  i = s(512722),
-  c = s.n(i),
+  i = s.n(l),
+  a = s(512722),
+  c = s.n(a),
   o = s(442837),
   u = s(481060),
   I = s(850840),
@@ -48,7 +48,7 @@ let {
   applicationName: n,
   hasPreviouslyAcceptedEULA: r,
   forceShow: l,
-  disabled: i,
+  disabled: a,
   className: o,
   checkboxClassname: I,
   checkboxLabelClassname: d,
@@ -74,7 +74,7 @@ return (c()(!R || null != m, 'subscriptionPlan cannot be null if shouldShowUpdat
       type: u.Checkbox.Types.INVERTED,
       value: p,
       onChange: this.handleToggleEULAAcceptance,
-      disabled: i,
+      disabled: a,
       className: M.checkbox,
       children: (0, t.jsx)('div', {
         className: M.checkboxLabel,
@@ -95,7 +95,7 @@ return (c()(!R || null != m, 'subscriptionPlan cannot be null if shouldShowUpdat
       })
     }) : null,
     null == A ? null : (0, t.jsx)('div', {
-      className: a()(M.finePrint, U),
+      className: i()(M.finePrint, U),
       children: A
     }),
     L ? (0, t.jsxs)('div', {
@@ -105,10 +105,10 @@ return (c()(!R || null != m, 'subscriptionPlan cannot be null if shouldShowUpdat
           type: u.Checkbox.Types.INVERTED,
           value: O,
           onChange: this.handleToggleEUWithdralWaiverAcceptance,
-          disabled: i,
-          className: a()(M.checkbox, I),
+          disabled: a,
+          className: i()(M.checkbox, I),
           children: (0, t.jsx)('div', {
-            className: a()(M.checkboxLabel, d),
+            className: i()(M.checkboxLabel, d),
             children: N.Z.Messages.BILLING_ONLINE_PURCHASE_WAIVER_CHECKBOX
           })
         }),

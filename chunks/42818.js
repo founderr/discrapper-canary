@@ -3,10 +3,10 @@ s.d(n, {
 return g;
   },
   By: function() {
-return x;
+return Z;
   },
   Lu: function() {
-return Z;
+return x;
   },
   e9: function() {
 return Y;
@@ -24,9 +24,9 @@ return H;
 var t = s(735250),
   r = s(470079),
   l = s(120356),
-  a = s.n(l),
-  i = s(512722),
-  c = s.n(i),
+  i = s.n(l),
+  a = s(512722),
+  c = s.n(a),
   o = s(442837),
   u = s(481060),
   I = s(911969),
@@ -61,8 +61,8 @@ function f(e) {
 invoiceItem: s,
 overrideAmount: r,
 showGuildSubscriptionAdjustmentTooltip: l,
-currency: a,
-className: i,
+currency: i,
+className: a,
 isPrepaidPaymentSource: _,
 referralTrialOfferId: E
   } = e, d = (0, o.e7)([T.Z], () => T.Z.get(s.subscriptionPlanId)), N = null === (n = (0, R.N)(E)) || void 0 === n ? void 0 : n.subscription_trial;
@@ -138,7 +138,7 @@ children: [
   })
 ]
   }));
-  let L = (0, A.T4)(null != r ? r : s.amount, a),
+  let L = (0, A.T4)(null != r ? r : s.amount, i),
 m = _ ? L : (0, A.og)(L, d.interval, d.intervalCount);
   return (0, t.jsx)(S.i$, {
 label: P,
@@ -147,8 +147,8 @@ originalAmount: s.subscriptionPlanPrice * s.quantity,
 discounts: s.discounts,
 interval: d.interval,
 intervalCount: d.intervalCount,
-currency: a,
-className: i
+currency: i,
+className: a
   });
 }
 
@@ -178,11 +178,11 @@ children: [
   });
 }
 
-function x(e) {
+function Z(e) {
   let {
 invoice: n,
 isPrepaidPaymentSource: s
-  } = e, r = (0, L.j)(n.invoiceItems), l = r.find(e => !(0, M.Z8)(e.subscriptionPlanId) && e.amount >= 0), a = r.find(e => (0, M.Z8)(e.subscriptionPlanId) && e.amount >= 0), i = (0, o.e7)([T.Z], () => null != a ? T.Z.get(a.subscriptionPlanId) : null), c = null != a ? a.amount : 0, u = (0, A.T4)(c, n.currency), I = null != i ? (0, A.og)(u, i.interval, i.intervalCount) : 0;
+  } = e, r = (0, L.j)(n.invoiceItems), l = r.find(e => !(0, M.Z8)(e.subscriptionPlanId) && e.amount >= 0), i = r.find(e => (0, M.Z8)(e.subscriptionPlanId) && e.amount >= 0), a = (0, o.e7)([T.Z], () => null != i ? T.Z.get(i.subscriptionPlanId) : null), c = null != i ? i.amount : 0, u = (0, A.T4)(c, n.currency), I = null != a ? (0, A.og)(u, a.interval, a.intervalCount) : 0;
   return (0, t.jsxs)(t.Fragment, {
 children: [
   null != l ? (0, t.jsx)(f, {
@@ -190,10 +190,10 @@ children: [
     currency: n.currency,
     isPrepaidPaymentSource: s
   }) : null,
-  0 !== c && null != a && null != i ? (0, t.jsx)(S.R$, {
+  0 !== c && null != i && null != a ? (0, t.jsx)(S.R$, {
     label: O.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_INVOICE_ROW_CONTENT.format({
-      numGuildSubscriptions: a.quantity,
-      planName: (0, M.Gf)(i.id, !1, s)
+      numGuildSubscriptions: i.quantity,
+      planName: (0, M.Gf)(a.id, !1, s)
     }),
     value: s ? u : I
   }) : null,
@@ -209,25 +209,25 @@ children: [
   });
 }
 
-function Z(e) {
+function x(e) {
   let {
 invoice: n,
 newPlan: s,
 isPrepaidPaymentSource: r,
 referralTrialOfferId: l
-  } = e, a = (0, L.j)(n.invoiceItems), i = a.find(e => e.subscriptionPlanId === s.id);
-  c()(null != i, 'Expected newPlanInvoiceItem');
-  let o = a.find(e => !(0, M.Z8)(e.subscriptionPlanId) && e.amount < 0),
-u = a.find(e => null == e.subscriptionPlanId && null != e.discounts && e.discounts.find(e => e.type === I.eW.PREMIUM_LEGACY_UPGRADE_PROMOTION)),
-_ = v(i, I.eW.PREMIUM_TRIAL),
-E = h(i, I.eW.SUBSCRIPTION_PLAN),
-T = i.quantity * E,
-d = i.amount + (null != o ? o.amount : 0) - T + (null != u ? u.amount : 0),
-N = a.filter(e => e.subscriptionPlanId === U.Xh.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === U.Xh.PREMIUM_YEAR_GUILD).reduce((e, n) => e + n.amount, 0);
+  } = e, i = (0, L.j)(n.invoiceItems), a = i.find(e => e.subscriptionPlanId === s.id);
+  c()(null != a, 'Expected newPlanInvoiceItem');
+  let o = i.find(e => !(0, M.Z8)(e.subscriptionPlanId) && e.amount < 0),
+u = i.find(e => null == e.subscriptionPlanId && null != e.discounts && e.discounts.find(e => e.type === I.eW.PREMIUM_LEGACY_UPGRADE_PROMOTION)),
+_ = v(a, I.eW.PREMIUM_TRIAL),
+E = h(a, I.eW.SUBSCRIPTION_PLAN),
+T = a.quantity * E,
+d = a.amount + (null != o ? o.amount : 0) - T + (null != u ? u.amount : 0),
+N = i.filter(e => e.subscriptionPlanId === U.Xh.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === U.Xh.PREMIUM_YEAR_GUILD).reduce((e, n) => e + n.amount, 0);
   return (0, t.jsxs)(t.Fragment, {
 children: [
   (0, t.jsx)(f, {
-    invoiceItem: i,
+    invoiceItem: a,
     currency: n.currency,
     overrideAmount: T,
     isPrepaidPaymentSource: r,
@@ -288,10 +288,10 @@ renewalInvoice: s
 intervalType: r,
 intervalCount: l
   } = (0, M.dn)(n), {
-intervalType: a,
-intervalCount: i
+intervalType: i,
+intervalCount: a
   } = (0, M.dn)(s);
-  return r !== a || l !== i || n.subscriptionPeriodEnd.getTime() === s.subscriptionPeriodStart.getTime() ? null : (0, t.jsx)('div', {
+  return r !== i || l !== a || n.subscriptionPeriodEnd.getTime() === s.subscriptionPeriodStart.getTime() ? null : (0, t.jsx)('div', {
 className: C.subscriptionPeriodResetNotice,
 children: O.Z.Messages.PREMIUM_SUBSCRIPTION_PERIOD_RESET_NOTICE.format({
   renewalDate: n.subscriptionPeriodEnd
@@ -304,10 +304,10 @@ function G(e) {
 isUpdate: n,
 currentInvoice: s,
 newInvoice: r
-  } = e, l = null != s ? (0, L.j)(s.invoiceItems) : null, i = null != s ? (0, M.dn)(s) : null, {
+  } = e, l = null != s ? (0, L.j)(s.invoiceItems) : null, a = null != s ? (0, M.dn)(s) : null, {
 intervalType: c,
 intervalCount: o
-  } = (0, M.dn)(r), u = null != i && (i.intervalType !== c || i.intervalCount !== o);
+  } = (0, M.dn)(r), u = null != a && (a.intervalType !== c || a.intervalCount !== o);
   return (0, t.jsxs)(t.Fragment, {
 children: [
   (0, t.jsx)(S.KU, {
@@ -336,7 +336,7 @@ children: [
       invoiceItem: e,
       currency: r.currency,
       showGuildSubscriptionAdjustmentTooltip: u && (e.subscriptionPlanId === U.Xh.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === U.Xh.PREMIUM_YEAR_GUILD || e.subscriptionPlanId === U.Xh.PREMIUM_3_MONTH_GUILD || e.subscriptionPlanId === U.Xh.PREMIUM_6_MONTH_GUILD),
-      className: a()({
+      className: i()({
         [C.subscriptionAddedInvoiceItem]: !n || s
       })
     }, e.id);
@@ -360,8 +360,8 @@ function j(e) {
 proratedInvoice: s,
 renewalInvoice: r,
 isTrial: l,
-isUpdate: a,
-overrideRenewalDate: i,
+isUpdate: i,
+overrideRenewalDate: a,
 trialFooterMessageOverride: c
   } = e, o = null === (n = (0, R.N)()) || void 0 === n ? void 0 : n.subscription_trial, {
 intervalType: u,
@@ -388,7 +388,7 @@ return (0, t.jsx)(t.Fragment, {
   return (0, t.jsx)(t.Fragment, {
 children: _.format({
   rate: (0, A.og)((0, A.T4)(r.subtotal, r.currency), u, I),
-  renewalDate: null != i ? i : a ? null != s ? s.subscriptionPeriodEnd : r.subscriptionPeriodStart : r.subscriptionPeriodEnd,
+  renewalDate: null != a ? a : i ? null != s ? s.subscriptionPeriodEnd : r.subscriptionPeriodStart : r.subscriptionPeriodEnd,
   contactLink: p.EYA.CONTACT,
   helpdeskArticle: N.Z.getArticleURL(p.BhN.BILLING)
 })
@@ -400,8 +400,8 @@ function y(e) {
 premiumSubscription: n,
 proratedInvoice: s,
 renewalInvoice: l,
-overrideRenewalDate: a,
-isUpdate: i = !1,
+overrideRenewalDate: i,
+isUpdate: a = !1,
 isTrial: c = !1,
 priceOptions: o,
 isPrepaidPaymentSource: I = !1,
@@ -412,7 +412,7 @@ analyticsLocations: M
   } = (0, E.ZP)(), A = {
 subscriptionId: null == n ? void 0 : n.id,
 renewal: !0,
-preventFetch: !i,
+preventFetch: !a,
 analyticsLocatinons: M,
 analyticsLocation: _.Z.SUBSCRIPTION_INVOICE_FOOTER,
 ...o
@@ -424,8 +424,8 @@ children: [
       proratedInvoice: s,
       renewalInvoice: l,
       isTrial: c,
-      isUpdate: i,
-      overrideRenewalDate: a,
+      isUpdate: a,
+      overrideRenewalDate: i,
       trialFooterMessageOverride: T
     })
   }),
@@ -443,7 +443,7 @@ children: [
         ]
       }),
       R ? (0, t.jsx)(G, {
-        isUpdate: i,
+        isUpdate: a,
         currentInvoice: L,
         newInvoice: l
       }) : null
@@ -458,19 +458,19 @@ function Y(e) {
   plan: s,
   className: r,
   isPrepaidPaymentSource: l = !1,
-  isCustomGift: a = !1,
-  invoicePreview: i
+  isCustomGift: i = !1,
+  invoicePreview: a
 } = e,
 {
   tax: c,
   taxInclusive: o,
   currency: I
-} = i,
-_ = i.total,
+} = a,
+_ = a.total,
 E = _ - c,
 T = (0, A.T4)(E, I),
 d = (0, A.T4)(_, I);
-  return n = a ? (0, M.L7)(s.interval, !0, void 0, void 0, !0, (0, M.Rd)(s.id)) : O.Z.Messages.BILLING_INVOICE_GIFT_PLAN.format({
+  return n = i ? (0, M.L7)(s.interval, !0, void 0, void 0, !0, (0, M.Rd)(s.id)) : O.Z.Messages.BILLING_INVOICE_GIFT_PLAN.format({
 planName: (0, M.Gf)(s.id, !1, l)
   }), (0, t.jsxs)('div', {
 className: r,
@@ -496,7 +496,7 @@ children: [
             value: T
           }),
           (0, t.jsx)(m.Z, {
-            invoice: i
+            invoice: a
           }),
           (0, t.jsx)(S.KU, {}),
           (0, t.jsx)(S.R$, {

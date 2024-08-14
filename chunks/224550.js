@@ -3,8 +3,8 @@ var t = s(735250);
 s(470079);
 var r = s(858987),
   l = s(122289),
-  a = s(63063),
-  i = s(74538),
+  i = s(63063),
+  a = s(74538),
   c = s(937615),
   o = s(296848),
   u = s(981631),
@@ -29,7 +29,7 @@ currentSubscription: U
 return null;
   let p = null == e.planGroup ? [] : e.planGroup;
   if (null != A) {
-let e = i.ZP.getIntervalForInvoice(A);
+let e = a.ZP.getIntervalForInvoice(A);
 n = e.intervalType, s = e.intervalCount, T = (0, c.og)((0, c.T4)(A.total, A.currency), n, s);
   } else
 null != d && (n = d.interval, s = d.intervalCount);
@@ -115,19 +115,19 @@ C = (null == U ? void 0 : U.isPaused) ? _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALE
   rate: e,
   paidURL: u.EYA.PAID_TERMS,
   contactLink: u.EYA.CONTACT,
-  helpdeskArticle: a.Z.getArticleURL(u.BhN.BILLING)
+  helpdeskArticle: i.Z.getArticleURL(u.BhN.BILLING)
 }) : null != U && (0, o.GY)(U, d.id, p) ? _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2.format({
   primaryText: t,
   rate: e,
   paidURL: u.EYA.PAID_TERMS,
   contactLink: u.EYA.CONTACT,
-  helpdeskArticle: a.Z.getArticleURL(u.BhN.BILLING)
+  helpdeskArticle: i.Z.getArticleURL(u.BhN.BILLING)
 }) : _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_V2.format({
   primaryText: t,
   rate: e,
   paidURL: u.EYA.PAID_TERMS,
   contactLink: u.EYA.CONTACT,
-  helpdeskArticle: a.Z.getArticleURL(u.BhN.BILLING)
+  helpdeskArticle: i.Z.getArticleURL(u.BhN.BILLING)
 });
   }
   return (0, t.jsxs)(t.Fragment, {

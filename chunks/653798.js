@@ -25,8 +25,8 @@ var t = s(735250);
 s(470079);
 var r = s(120356),
   l = s.n(r),
-  a = s(911969),
-  i = s(937615),
+  i = s(911969),
+  a = s(937615),
   c = s(689938),
   o = s(246502);
 
@@ -82,7 +82,7 @@ interval: u,
 currency: I,
 className: E,
 intervalCount: T
-  } = e, d = e => null != r ? r.find(n => n.type === e) : null, N = d(a.eW.SUBSCRIPTION_PLAN), M = d(a.eW.ENTITLEMENT), A = null != N ? Math.floor(N.amount / l * 100) : null, P = (0, i.T4)(l, I);
+  } = e, d = e => null != r ? r.find(n => n.type === e) : null, N = d(i.eW.SUBSCRIPTION_PLAN), M = d(i.eW.ENTITLEMENT), A = null != N ? Math.floor(N.amount / l * 100) : null, P = (0, a.T4)(l, I);
   return (0, t.jsxs)(t.Fragment, {
 children: [
   (0, t.jsx)(_, {
@@ -106,7 +106,7 @@ children: [
     className: o.rowDiscountOriginalPrice,
     children: [
       '(',
-      null != u && null != T ? (0, i.og)(P, u, T) : P,
+      null != u && null != T ? (0, a.og)(P, u, T) : P,
       ')'
     ]
   }) : null,
