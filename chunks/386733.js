@@ -147,94 +147,100 @@ G = () => {
   a.useEffect(() => (G(), window.addEventListener('resize', G), () => {
 window.removeEventListener('resize', G);
   }), []);
-  let y = (0, s.jsxs)(s.Fragment, {
-children: [
-  (0, s.jsx)(N.Z, {
-    percentage: P / 3 * 100,
-    progressCircleVariation: N.Q.NITRO_LOGO,
-    iconClassName: i()({
-      [f.referralProgressBarIcon]: !t,
-      [f.referralProgressBarIconSettings]: t
-    })
-  }),
-  (0, s.jsxs)('div', {
-    className: f.expandedProgressBarContent,
-    children: [
-      (0, s.jsx)(o.Heading, {
-        variant: t ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
-        className: f.expandedProgressBarHeader,
-        children: Z
-      }),
-      (0, s.jsx)(x, {
-        userRecords: h
-      }),
-      (0, s.jsx)(o.Text, {
-        variant: t ? 'text-sm/normal' : 'text-lg/medium',
-        children: b(L, P > 0, r.length, v)
-      }),
-      (0, s.jsxs)('div', {
-        className: i()(f.expandedProgressBarButtonContainer, {
-          [f.expandedProgressBarButtonContainerMinLayout]: j && !t,
-          [f.expandedProgressBarButtonContainerLayout]: !j && !t
-        }),
-        children: [
-          !t && !O && (0, s.jsx)(p.Z, {
-            color: o.ButtonColors.CUSTOM,
-            buttonText: m.Z.Messages.GIFT_NITRO,
-            className: i()(f.expandedProgressBarGiftingCTA, {
-              [f.expandedProgressBarGiftingCTAMinLayout]: j && !t,
-              [f.expandedProgressBarGiftingCTALayout]: !j && !t
-            }),
-            look: o.ButtonLooks.OUTLINED,
-            isGift: !0
-          }),
-          (0, s.jsx)(o.ShinyButton, {
-            className: f.expandedProgressBarSelectFriendsCTA,
-            color: o.ButtonColors.CUSTOM,
-            onClick: () => {
-              I.default.track(A.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
-                location_stack: D
-              }), (0, o.openModalLazy)(async () => {
-                let {
-                  default: e
-                } = await n.e('47435').then(n.bind(n, 204387));
-                return t => (0, s.jsx)(e, {
-                  ...t,
-                  sourceAnalyticsLocations: D
-                });
-              });
-            },
-            onlyShineOnHover: !0,
-            children: (0, s.jsxs)('div', {
-              className: f.expandedProgressBarSelectFriendsCTAInner,
-              children: [
-                (0, s.jsx)('img', {
-                  src: S,
-                  alt: '',
-                  className: f.expandedProgressBarSelectFriendsIcon
-                }),
-                L ? m.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : m.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
-              ]
-            })
-          })
-        ]
+  let y = (0, s.jsxs)('div', {
+  className: f.referralInfoContent,
+  children: [
+    (0, s.jsx)(N.Z, {
+      percentage: P / 3 * 100,
+      progressCircleVariation: N.Q.NITRO_LOGO,
+      iconClassName: i()({
+        [f.referralProgressBarIcon]: !t,
+        [f.referralProgressBarIconSettings]: t
       })
-    ]
-  })
-]
-  });
+    }),
+    (0, s.jsxs)('div', {
+      className: f.expandedProgressBarContent,
+      children: [
+        (0, s.jsx)(o.Heading, {
+          variant: t ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
+          className: f.expandedProgressBarHeader,
+          children: Z
+        }),
+        (0, s.jsx)(x, {
+          userRecords: h
+        }),
+        (0, s.jsx)(o.Text, {
+          variant: t ? 'text-sm/normal' : 'text-lg/medium',
+          children: b(L, P > 0, r.length, v)
+        }),
+        (0, s.jsxs)('div', {
+          className: i()(f.expandedProgressBarButtonContainer, {
+            [f.expandedProgressBarButtonContainerMinLayout]: j && !t,
+            [f.expandedProgressBarButtonContainerLayout]: !j && !t
+          }),
+          children: [
+            !t && !O && (0, s.jsx)(p.Z, {
+              color: o.ButtonColors.CUSTOM,
+              buttonText: m.Z.Messages.GIFT_NITRO,
+              className: i()(f.expandedProgressBarGiftingCTA, {
+                [f.expandedProgressBarGiftingCTAMinLayout]: j && !t,
+                [f.expandedProgressBarGiftingCTALayout]: !j && !t
+              }),
+              look: o.ButtonLooks.OUTLINED,
+              isGift: !0
+            }),
+            (0, s.jsx)(o.ShinyButton, {
+              className: f.expandedProgressBarSelectFriendsCTA,
+              color: o.ButtonColors.CUSTOM,
+              onClick: () => {
+                I.default.track(A.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+                  location_stack: D
+                }), (0, o.openModalLazy)(async () => {
+                  let {
+                    default: e
+                  } = await n.e('47435').then(n.bind(n, 204387));
+                  return t => (0, s.jsx)(e, {
+                    ...t,
+                    sourceAnalyticsLocations: D
+                  });
+                });
+              },
+              onlyShineOnHover: !0,
+              children: (0, s.jsxs)('div', {
+                className: f.expandedProgressBarSelectFriendsCTAInner,
+                children: [
+                  (0, s.jsx)('img', {
+                    src: S,
+                    alt: '',
+                    className: f.expandedProgressBarSelectFriendsIcon
+                  }),
+                  L ? m.Z.Messages.REFERRAL_PROGRAM_REMIND_FRIENDS : m.Z.Messages.REFERRAL_PROGRAM_SELECT_FRIENDS
+                ]
+              })
+            })
+          ]
+        })
+      ]
+    })
+  ]
+}),
+H = 3 === r.length;
   return (0, s.jsx)(_.Gt, {
 value: D,
-children: (0, s.jsx)('div', {
+children: (0, s.jsxs)('div', {
   ref: B,
   className: i()({
     [f.expandedProgressBarContainer]: !t,
     [f.expandedProgressBarContainerSettingsPage]: t,
     [f.expandedProgressBarContainerVariant1]: !O && !t,
     [f.expandedProgressBarContainerVariant2]: O && !t,
-    [f.allReferralsSentBorder]: 3 === r.length
+    [f.allReferralsSentBorder]: H,
+    [f.containerWithBanner]: !1
   }),
-  children: y
+  children: [
+    !1,
+    y
+  ]
 })
   });
 };
