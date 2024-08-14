@@ -8,33 +8,34 @@ var i, u, l, o, E = n(442837),
 let A = {},
   c = {},
   T = {},
-  I = {};
+  I = {},
+  d = new Set();
 
-function d(e) {
+function R(e) {
   let t = e.id,
 n = e.sku.id,
 r = A[t],
 i = S.Z.createFromServer(e);
   if (!(null != r && !r.isSlimDirectoryVersion() && i.isSlimDirectoryVersion()))
-!1 === e.published ? (null == T[n] && (T[n] = new Set()), T[n].add(t)) : I[n] = t, A[t] = i;
+!1 === e.published ? (null == T[n] && (T[n] = new Set()), T[n].add(t)) : I[n] = t, A[t] = i, d.delete(e.sku.id);
 }
 
 function C(e, t) {
   return ''.concat(e, ':').concat(t);
 }
 
-function R() {
-  A = {}, I = {}, T = {}, c = {};
+function N() {
+  A = {}, I = {}, T = {}, c = {}, d = new Set();
 }
 
-function N() {
+function M() {
   if (r === _.default.locale)
 return !1;
-  R(), r = _.default.locale;
+  N(), r = _.default.locale;
 }
-class M extends(i = E.ZP.Store) {
+class P extends(i = E.ZP.Store) {
   initialize() {
-this.waitFor(_.default), this.syncWith([_.default], N), r = _.default.locale;
+this.waitFor(_.default), this.syncWith([_.default], M), r = _.default.locale;
   }
   get(e) {
 return A[e];
@@ -49,6 +50,9 @@ return null == t ? [] : Array.from(t).map(e => A[e]).filter(s.lm);
   }
   getForChannel(e, t) {
 return c[C(e, t)];
+  }
+  isFetchingForSKU(e) {
+return d.has(e);
   }
   getStoreListing(e) {
 let {
@@ -74,18 +78,30 @@ if (null != n)
 return null;
   }
 }
-o = 'StoreListingStore', (l = 'displayName') in(u = M) ? Object.defineProperty(u, l, {
+o = 'StoreListingStore', (l = 'displayName') in(u = P) ? Object.defineProperty(u, l, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : u[l] = o, t.Z = new M(a.Z, {
+}) : u[l] = o, t.Z = new P(a.Z, {
+  STORE_LISTINGS_FETCH_START: function(e) {
+let {
+  skuId: t
+} = e;
+d.add(t);
+  },
+  STORE_LISTINGS_FETCH_FAIL: function(e) {
+let {
+  skuId: t
+} = e;
+d.delete(t);
+  },
   STORE_LISTINGS_FETCH_SUCCESS: function(e) {
 let {
   storeListings: t
 } = e;
 for (let e of t)
-  d(e);
+  R(e);
   },
   STORE_LISTING_FETCH_SUCCESS: function(e) {
 let {
@@ -96,16 +112,16 @@ if (null != n) {
   let e = S.Z.createFromServer(t);
   c[C(n, e.skuId)] = e, I[e.skuId] = e.id;
 } else
-  d(t);
+  R(t);
   },
-  USER_SETTINGS_PROTO_UPDATE: N,
-  APPLICATION_STORE_CLEAR_DATA: R,
+  USER_SETTINGS_PROTO_UPDATE: M,
+  APPLICATION_STORE_CLEAR_DATA: N,
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {
 let {
   giftCode: t
 } = e;
 if (null == t.store_listing)
   return !1;
-d(t.store_listing);
+R(t.store_listing);
   }
 });

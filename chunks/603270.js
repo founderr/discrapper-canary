@@ -154,7 +154,7 @@ let {
     N.Z.getForSKU(d),
     h.Z.isFetching(d),
     h.Z.didFetchingSkuFail(d),
-    u.length > 0 ? u[0].toServerData() : null,
+    u.length > 0 ? u[0] : null,
     a,
     o
   ];
