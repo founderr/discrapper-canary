@@ -6,47 +6,48 @@ var r = n(470079),
   o = n(271383),
   l = n(594174),
   u = n(768581),
-  c = n(660097);
+  c = n(676742),
+  d = n(660097);
 t.Z = e => {
   var t;
   let {
 user: n,
-guildId: d,
-size: _,
-onlyAnimateOnHover: E = !1,
-showPending: f = !1,
-showTryItOut: h = !1,
-avatarDecorationOverride: p
-  } = e, [m, I] = r.useState(!1), {
-canAnimate: T
-  } = (0, a.j)(m, E), g = (0, i.e7)([o.ZP], () => null != d && null != n ? o.ZP.getMember(d, n.id) : null), [S, A] = (0, i.Wu)([l.default], () => {
+guildId: _,
+size: E,
+onlyAnimateOnHover: f = !1,
+showPending: h = !1,
+showTryItOut: p = !1,
+avatarDecorationOverride: m
+  } = e, [I, T] = r.useState(!1), {
+canAnimate: g
+  } = (0, a.j)(I, f), S = (0, i.e7)([o.ZP], () => null != _ && null != n ? o.ZP.getMember(_, n.id) : null), [A, N] = (0, i.Wu)([l.default], () => {
 var e;
 return [
   null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id,
   l.default.getUser(null == n ? void 0 : n.id)
 ];
-  }), N = null == g ? null == A ? void 0 : A.avatarDecoration : null === g.avatarDecoration ? null : null !== (t = g.avatarDecoration) && void 0 !== t ? t : null == A ? void 0 : A.avatarDecoration, {
-pendingAvatarDecoration: v
+  }), v = null == S ? null == N ? void 0 : N.avatarDecoration : null === S.avatarDecoration ? null : null !== (t = S.avatarDecoration) && void 0 !== t ? t : null == N ? void 0 : N.avatarDecoration, {
+pendingAvatarDecoration: O
   } = (0, s.Z)({
-isTryItOut: h,
-guildId: d
-  }), O = f && void 0 !== v && void 0 !== S && S === (null == n ? void 0 : n.id), R = null != d && null === v, C = O ? R ? null == n ? void 0 : n.avatarDecoration : null != v ? v : N : null != N ? N : null == n ? void 0 : n.avatarDecoration, y = r.useMemo(() => (0, u.NZ)({
-avatarDecoration: void 0 !== p ? p : C,
-canAnimate: T,
-size: _
+isTryItOut: p,
+guildId: _
+  }), R = h && void 0 !== O && void 0 !== A && A === (null == n ? void 0 : n.id), C = null != _ && null === O, y = (0, c.Z)(R ? C ? null == N ? void 0 : N.avatarDecoration : null != O ? O : v : null != v ? v : null == N ? void 0 : N.avatarDecoration), D = r.useMemo(() => (0, u.NZ)({
+avatarDecoration: void 0 !== m ? m : y,
+canAnimate: g,
+size: E
   }), [
-C,
-T,
-_,
-p
-  ]), D = r.useCallback(() => I(!0), []);
+y,
+g,
+E,
+m
+  ]), L = r.useCallback(() => T(!0), []);
   return {
-avatarPlaceholderSrc: c,
-avatarDecorationSrc: y,
-isAvatarDecorationAnimating: T,
+avatarPlaceholderSrc: d,
+avatarDecorationSrc: D,
+isAvatarDecorationAnimating: g,
 eventHandlers: {
-  onMouseEnter: D,
-  onMouseLeave: r.useCallback(() => I(!1), [])
+  onMouseEnter: L,
+  onMouseLeave: r.useCallback(() => T(!1), [])
 }
   };
 };

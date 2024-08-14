@@ -179,7 +179,7 @@ avatarDecoration: t,
 size: n,
 canAnimate: r = !1
   } = e;
-  if (null == t)
+  if (null == t || (0, o.fO)(t))
 return;
   if (/^data:/.test(t.asset))
 return t.asset;

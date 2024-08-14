@@ -50,27 +50,29 @@ feature_tier: d.h1.PREMIUM_STANDARD
   });
 }
 async function E(e, t) {
-  var n, u;
-  let d = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-  if (null == d)
+  var n, u, d;
+  let _ = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+  if (null == _)
 return;
-  let _ = o.dN.getSetting();
-  null != e.bio && _ && (e.bio = s.ZP.parse(void 0, e.bio).content);
+  let E = o.dN.getSetting();
+  null != e.bio && E && (e.bio = s.ZP.parse(void 0, e.bio).content);
   try {
 i.Z.dispatch({
   type: 'USER_PROFILE_UPDATE_START',
-  userId: d
+  userId: _
 });
 let n = await r.tn.patch({
   url: null != t ? c.ANM.GUILD_PROFILE(t, c.ME) : c.ANM.USER_PROFILE(c.ME),
   body: e
 });
 if (n.ok) {
-  let e = null === (u = n.body.profile_effect) || void 0 === u ? void 0 : u.id;
+  let e = null === (u = n.body.profile_effect) || void 0 === u ? void 0 : u.id,
+    t = null === (d = n.body.profile_effect) || void 0 === d ? void 0 : d.expires_at;
   i.Z.dispatch({
     type: 'USER_PROFILE_UPDATE_SUCCESS',
-    userId: d,
+    userId: _,
     profileEffectId: e,
+    profileEffectExpiresAt: t,
     ...n.body
   });
 } else {
