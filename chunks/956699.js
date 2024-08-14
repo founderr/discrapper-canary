@@ -21,23 +21,24 @@ var n = t(735250),
   O = t(663993),
   h = t(600164),
   p = t(112831),
-  R = t(38618),
-  x = t(921801),
-  M = t(857192),
-  f = t(558724),
-  D = t(808506),
-  P = t(998502),
-  L = t(210887),
-  b = t(601948),
-  Z = t(726985),
-  v = t(981631),
-  j = t(908442),
-  B = t(943822),
-  U = t(440376),
-  G = t(224499),
-  F = t(594402);
+  R = t(482215),
+  x = t(38618),
+  M = t(921801),
+  f = t(857192),
+  D = t(558724),
+  P = t(808506),
+  L = t(998502),
+  b = t(210887),
+  Z = t(601948),
+  v = t(726985),
+  j = t(981631),
+  B = t(908442),
+  U = t(943822),
+  G = t(440376),
+  F = t(224499),
+  y = t(594402);
 
-function y(e, s, t) {
+function V(e, s, t) {
   return s in e ? Object.defineProperty(e, s, {
 value: t,
 enumerable: !0,
@@ -45,14 +46,14 @@ configurable: !0,
 writable: !0
   }) : e[s] = t, e;
 }
-let V = [
+let Y = [
 'discord_web',
 'discord_marketing',
 'discord_developers',
 'discord_ios',
 'discord_android'
   ],
-  Y = [{
+  w = [{
   value: 'branch',
   label: 'Branch Name'
 },
@@ -62,10 +63,10 @@ let V = [
 }
   ];
 
-function w(e) {
+function H(e) {
   return 'discord_ios' in e || 'discord_android' in e;
 }
-class H extends a.Component {
+class k extends a.Component {
   render() {
 let {
   project: e,
@@ -76,24 +77,24 @@ let {
 } = this.props;
 return (0, n.jsxs)(h.Z, {
   direction: h.Z.Direction.VERTICAL,
-  className: r()(B.buildOverrideGroup, G.marginBottom20, U.card, B.row),
+  className: r()(U.buildOverrideGroup, F.marginBottom20, G.card, U.row),
   children: [
     (0, n.jsx)(N.Z, {
-      className: r()(B.removeBuildOverride, {
-        [B.removeBuildOverrideDisabled]: a
+      className: r()(U.removeBuildOverride, {
+        [U.removeBuildOverrideDisabled]: a
       }),
       onClick: a ? void 0 : this.handleRemoveBuildOverride
     }),
     (0, n.jsxs)(h.Z, {
-      className: G.marginBottom8,
+      className: F.marginBottom8,
       children: [
         (0, n.jsx)(h.Z.Child, {
           basis: '50%',
           children: (0, n.jsx)(E.FormItem, {
             title: 'Override Type',
-            className: B.item,
+            className: U.item,
             children: (0, n.jsx)(E.SingleSelect, {
-              options: Y,
+              options: w,
               onChange: this.handleOverrideTypeChanged,
               value: s,
               isDisabled: a
@@ -104,7 +105,7 @@ return (0, n.jsxs)(h.Z, {
           basis: '50%',
           children: (0, n.jsx)(E.FormItem, {
             title: 'branch' === s ? 'Branch Name' : 'Build ID',
-            className: B.item,
+            className: U.item,
             children: (0, n.jsx)(E.TextInput, {
               value: t,
               onChange: this.handleOverrideIdChanged,
@@ -117,7 +118,7 @@ return (0, n.jsxs)(h.Z, {
     (0, n.jsxs)(h.Z.Child, {
       children: [
         null != i && '' !== i && (0, n.jsx)(E.FormText, {
-          className: B.item,
+          className: U.item,
           style: {
             color: _.Z.unsafe_rawColors.RED_400.css
           },
@@ -125,7 +126,7 @@ return (0, n.jsxs)(h.Z, {
           children: i
         }),
         (0, n.jsxs)(E.FormText, {
-          className: B.item,
+          className: U.item,
           type: E.FormText.Types.DESCRIPTION,
           children: [
             'This controls the build that will be served for the ',
@@ -141,13 +142,13 @@ return (0, n.jsxs)(h.Z, {
 });
   }
   constructor(...e) {
-super(...e), y(this, 'handleRemoveBuildOverride', () => {
+super(...e), V(this, 'handleRemoveBuildOverride', () => {
   this.props.onBuildOverrideRemoved(this.props.project);
-}), y(this, 'handleOverrideIdChanged', e => {
+}), V(this, 'handleOverrideIdChanged', e => {
   this.props.onBuildOverrideUpdated(this.props.project, {
     id: e
   });
-}), y(this, 'handleOverrideTypeChanged', e => {
+}), V(this, 'handleOverrideTypeChanged', e => {
   this.props.onBuildOverrideUpdated(this.props.project, {
     type: e,
     id: ''
@@ -155,7 +156,7 @@ super(...e), y(this, 'handleRemoveBuildOverride', () => {
 });
   }
 }
-class k extends a.Component {
+class W extends a.Component {
   async refreshBuildOverrides() {
 this.setState({
   loading: !0
@@ -185,12 +186,12 @@ let {
 if (null == e)
   return [];
 let s = Object.keys(e);
-return l().without(V, ...s);
+return l().without(Y, ...s);
   }
   renderEmpty() {
 return (0, n.jsxs)(E.EmptyState, {
-  theme: L.Z.theme,
-  className: r()(G.marginTop40, G.marginBottom20),
+  theme: b.Z.theme,
+  className: r()(F.marginTop40, F.marginBottom20),
   children: [
     (0, n.jsx)(E.EmptyStateImage, {
       darkSrc: t(770227),
@@ -210,7 +211,7 @@ let {
   saving: s,
   errors: t
 } = this.state;
-return null == e ? null : l().map(e, (e, a) => (0, n.jsx)(H, {
+return null == e ? null : l().map(e, (e, a) => (0, n.jsx)(k, {
   project: a,
   overrideType: e.type,
   overrideId: e.id,
@@ -265,7 +266,7 @@ return (0, n.jsxs)(h.Z, {
     (0, n.jsx)(h.Z.Child, {
       grow: 0,
       children: (0, n.jsx)(E.Button, {
-        disabled: w(null != s ? s : {}),
+        disabled: H(null != s ? s : {}),
         onClick: this.handleSaveChanges,
         submitting: e,
         color: E.Button.Colors.GREEN,
@@ -292,21 +293,21 @@ let {
   buildOverrides: a
 } = this.state;
 e = s ? (0, n.jsx)(E.Spinner, {
-  className: G.marginTop20
+  className: F.marginTop20
 }) : null != a && 0 === Object.keys(a).length ? this.renderEmpty() : this.renderItems();
 let i = !t && !s && this.getAvailableProjects().length > 0,
-  r = w(null != a ? a : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, n.jsx)(E.Text, {
+  r = H(null != a ? a : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, n.jsx)(E.Text, {
     color: 'text-danger',
     variant: 'text-md/normal',
     children: 'Mobile build overrides must be generated using the desktop/web stable client for now!'
   }) : null;
-return (0, n.jsx)(x.F, {
-  setting: Z.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
+return (0, n.jsx)(M.F, {
+  setting: v.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
   children: (0, n.jsxs)(E.FormSection, {
-    className: G.marginTop60,
+    className: F.marginTop60,
     children: [
       (0, n.jsxs)(h.Z, {
-        className: G.marginBottom20,
+        className: F.marginBottom20,
         children: [
           (0, n.jsx)(h.Z.Child, {
             children: (0, n.jsx)(E.FormTitle, {
@@ -347,14 +348,14 @@ return (0, n.jsx)(x.F, {
 });
   }
   constructor(...e) {
-super(...e), y(this, 'state', {
+super(...e), V(this, 'state', {
   loading: !0,
   buildOverrides: {},
   loadedBuildOverrides: {},
   errors: {},
   saving: !1,
   didSave: !1
-}), y(this, 'handleAddBuildOverride', async () => {
+}), V(this, 'handleAddBuildOverride', async () => {
   var e;
   let s = await (e = this.getAvailableProjects(), new Promise(s => {
     (0, E.openModal)(t => {
@@ -374,7 +375,7 @@ super(...e), y(this, 'state', {
           }),
           (0, n.jsx)(E.ModalContent, {
             children: (0, n.jsx)('div', {
-              className: B.buildOverrideList,
+              className: U.buildOverrideList,
               children: e.map(e => (0, n.jsx)(E.Button, {
                 value: e,
                 color: E.Button.Colors.GREEN,
@@ -407,7 +408,7 @@ super(...e), y(this, 'state', {
   this.setState({
     buildOverrides: t
   });
-}), y(this, 'handleBuildOverrideUpdated', (e, s) => {
+}), V(this, 'handleBuildOverrideUpdated', (e, s) => {
   let {
     buildOverrides: t
   } = this.state, n = {
@@ -420,20 +421,20 @@ super(...e), y(this, 'state', {
   this.setState({
     buildOverrides: a
   });
-}), y(this, 'handleBuildOverrideRemoved', e => {
+}), V(this, 'handleBuildOverrideRemoved', e => {
   let s = {
     ...this.state.buildOverrides
   };
   delete s[e], this.setState({
     buildOverrides: s
   });
-}), y(this, 'handleDiscardChanges', () => {
+}), V(this, 'handleDiscardChanges', () => {
   this.setState({
     buildOverrides: l().cloneDeep(this.state.loadedBuildOverrides),
     errors: {},
     didSave: !1
   });
-}), y(this, 'handleSaveChanges', async () => {
+}), V(this, 'handleSaveChanges', async () => {
   let {
     buildOverrides: e
   } = this.state;
@@ -464,21 +465,21 @@ super(...e), y(this, 'state', {
       saving: !1,
       didSave: !1
     });
-}), y(this, 'handleLinkGeneration', () => {
+}), V(this, 'handleLinkGeneration', () => {
   let {
     buildOverrides: e
   } = this.state;
-  (0, E.openModal)(s => (0, n.jsx)(W, {
+  (0, E.openModal)(s => (0, n.jsx)(K, {
     ...s,
     buildOverrides: e
   }));
 });
   }
 }
-class W extends a.Component {
+class K extends a.Component {
   isMobile() {
 var e;
-return w(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
+return H(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
   }
   renderSettingsForm() {
 let {
@@ -492,7 +493,7 @@ let {
   allowLoggedOut: l,
   experiments: c,
   experimentsError: d
-} = this.state, _ = j.S6.find(s => s.value === e), u = i.map(e => ({
+} = this.state, _ = B.S6.find(s => s.value === e), u = i.map(e => ({
   label: e,
   value: e
 }));
@@ -501,19 +502,19 @@ return (0, n.jsxs)(h.Z.Child, {
   children: [
     (0, n.jsx)(E.FormItem, {
       title: 'Expire After',
-      className: G.marginBottom20,
+      className: F.marginBottom20,
       children: (0, n.jsx)(E.SingleSelect, {
         value: null != _ ? _.value : null,
-        options: j.S6,
+        options: B.S6,
         onChange: this.handleExpirationChange
       })
     }),
     this.isMobile() ? null : (0, n.jsx)(E.FormItem, {
       title: 'Release Channel',
-      className: G.marginBottom20,
+      className: F.marginBottom20,
       children: (0, n.jsx)(E.SingleSelect, {
         value: s,
-        options: j.F$,
+        options: B.F$,
         onChange: this.handleReleaseChannelChange
       })
     }),
@@ -521,7 +522,7 @@ return (0, n.jsxs)(h.Z.Child, {
       children: [
         (0, n.jsx)(E.FormItem, {
           title: 'Add allowed app version (required)',
-          className: G.marginBottom20,
+          className: F.marginBottom20,
           children: (0, n.jsxs)(h.Z, {
             direction: h.Z.Direction.HORIZONTAL,
             children: [
@@ -546,7 +547,7 @@ return (0, n.jsxs)(h.Z.Child, {
         }),
         (0, n.jsx)(E.FormItem, {
           title: 'Remove allowed app version',
-          className: G.marginBottom20,
+          className: F.marginBottom20,
           children: (0, n.jsx)(E.SingleSelect, {
             value: null,
             options: u,
@@ -559,7 +560,7 @@ return (0, n.jsxs)(h.Z.Child, {
     this.isMobile() ? null : (0, n.jsx)(n.Fragment, {
       children: (0, n.jsxs)(E.FormItem, {
         title: 'Limit to User IDs (optional)',
-        className: G.marginBottom20,
+        className: F.marginBottom20,
         children: [
           (0, n.jsx)(h.Z, {
             direction: h.Z.Direction.HORIZONTAL,
@@ -577,7 +578,7 @@ return (0, n.jsxs)(h.Z.Child, {
           (0, n.jsx)(E.Text, {
             variant: 'text-sm/normal',
             color: 'text-muted',
-            className: G.marginTop8,
+            className: F.marginTop8,
             children: 'User IDs can be separated by whitespace or commas.'
           })
         ]
@@ -585,7 +586,7 @@ return (0, n.jsxs)(h.Z.Child, {
     }),
     (0, n.jsxs)(E.FormItem, {
       title: 'Client Experiment Override',
-      className: G.marginBottom20,
+      className: F.marginBottom20,
       children: [
         (0, n.jsx)(h.Z, {
           direction: h.Z.Direction.HORIZONTAL,
@@ -603,7 +604,7 @@ return (0, n.jsxs)(h.Z.Child, {
         (0, n.jsx)(E.Text, {
           variant: 'text-sm/normal',
           color: 'text-muted',
-          className: G.marginTop8,
+          className: F.marginTop8,
           children: 'Locally override the given experiments to the given bucket. This ONLY applies locally and WILL NOT affect the server. When the user clears build override, the experiment override is removed as well.'
         })
       ]
@@ -626,7 +627,7 @@ let e = JSON.stringify(this.generatePayload(), null, 2),
     render: t => {
       let a = t.highlight('json', e, !0);
       return null == a ? s() : (0, n.jsx)('code', {
-        className: 'hljs scroller '.concat(a.language, ' ').concat(F.scrollbarGhost, ' ').concat(B.codebox),
+        className: 'hljs scroller '.concat(a.language, ' ').concat(y.scrollbarGhost, ' ').concat(U.codebox),
         dangerouslySetInnerHTML: {
           __html: a.value
         }
@@ -669,7 +670,7 @@ return (0, n.jsxs)('div', {
     }),
     (0, n.jsx)(p.Z, {
       color: e,
-      className: ''.concat(G.marginBottom8, ' ').concat(G.marginTop8),
+      className: ''.concat(F.marginBottom8, ' ').concat(F.marginTop8),
       children: s
     })
   ]
@@ -713,7 +714,7 @@ return (0, n.jsxs)(E.ModalRoot, {
 });
   }
   constructor(...e) {
-super(...e), y(this, 'state', {
+super(...e), V(this, 'state', {
   ttlSeconds: 3600,
   releaseChannel: 'all',
   userIds: new Set(),
@@ -726,16 +727,16 @@ super(...e), y(this, 'state', {
   statusText: null,
   statusTextColor: p.Z.Colors.STATUS_RED,
   allowLoggedOut: !1
-}), y(this, 'setUserEntryError', e => {
+}), V(this, 'setUserEntryError', e => {
   this.setState({
     userIdEntryError: e
   });
-}), y(this, 'setStatusMessage', (e, s) => {
+}), V(this, 'setStatusMessage', (e, s) => {
   this.setState({
     statusText: e,
     statusTextColor: null != s ? s : p.Z.Colors.STATUS_RED
   });
-}), y(this, 'handleUserIDEntry', e => {
+}), V(this, 'handleUserIDEntry', e => {
   if (!/^[\d\s,]*$/.test(e))
     return this.setUserEntryError('User IDs are numbers!');
   let s = new Set(e.split(/[,\s]+/).filter(Boolean));
@@ -743,17 +744,17 @@ super(...e), y(this, 'state', {
     userIdEntry: e,
     userIds: s
   });
-}), y(this, 'setAllowedVersionError', e => {
+}), V(this, 'setAllowedVersionError', e => {
   this.setState({
     allowedVersionEntryError: e
   });
-}), y(this, 'handleAllowedVersionEntry', e => {
+}), V(this, 'handleAllowedVersionEntry', e => {
   this.setState({
     allowedVersionEntry: e
   });
-}), y(this, 'handleAllowedVersionEnter', e => {
-  e.charCode === v.yXg.ENTER && this.handleAddAllowedVersion();
-}), y(this, 'handleAddAllowedVersion', () => {
+}), V(this, 'handleAllowedVersionEnter', e => {
+  e.charCode === j.yXg.ENTER && this.handleAddAllowedVersion();
+}), V(this, 'handleAddAllowedVersion', () => {
   let {
     allowedVersions: e,
     allowedVersionEntry: s
@@ -766,26 +767,26 @@ super(...e), y(this, 'state', {
     allowedVersionEntry: '',
     allowedVersionEntryError: ''
   });
-}), y(this, 'handleRemoveAllowedVersion', e => {
+}), V(this, 'handleRemoveAllowedVersion', e => {
   let {
     allowedVersions: s
   } = this.state;
   s = s.filter(s => s !== e), this.setState({
     allowedVersions: s
   });
-}), y(this, 'handleAllowLoggedOut', e => {
+}), V(this, 'handleAllowLoggedOut', e => {
   this.setState({
     allowLoggedOut: e
   });
-}), y(this, 'handleExpirationChange', e => {
+}), V(this, 'handleExpirationChange', e => {
   this.setState({
     ttlSeconds: e
   });
-}), y(this, 'handleReleaseChannelChange', e => {
+}), V(this, 'handleReleaseChannelChange', e => {
   this.setState({
     releaseChannel: e
   });
-}), y(this, 'handleExperiments', e => {
+}), V(this, 'handleExperiments', e => {
   if (0 === e.trim().length) {
     this.setState({
       experimentsError: void 0
@@ -818,7 +819,7 @@ super(...e), y(this, 'state', {
     experiments: e,
     experimentsError: void 0
   });
-}), y(this, 'generatePayload', () => ({
+}), V(this, 'generatePayload', () => ({
   overrides: this.props.buildOverrides,
   meta: {
     release_channel: 'all' === this.state.releaseChannel ? null : this.state.releaseChannel,
@@ -828,7 +829,7 @@ super(...e), y(this, 'state', {
     allow_logged_out: this.state.allowLoggedOut,
     experiments: null == this.state.experiments ? null : JSON.parse(this.state.experiments)
   }
-})), y(this, 'handleGenerateLink', async () => {
+})), V(this, 'handleGenerateLink', async () => {
   if (this.isMobile() && 0 === this.state.allowedVersions.length) {
     this.setAllowedVersionError('You must add at least one allowed version for iOS');
     return;
@@ -843,43 +844,43 @@ super(...e), y(this, 'state', {
   }
 }
 
-function K() {
+function z() {
   throw Error('Send help');
 }
 
-function z() {
+function Q() {
   let [e, s] = a.useState(!1), [t, i] = a.useState('');
   return (a.useEffect(() => {
 (async () => {
-  i(await (0, D.Y)());
+  i(await (0, P.Y)());
 })();
   }, []), e) ? {} : (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)('div', {
     className: [
-      B.buttonsContainer,
-      G.marginBottom20
+      U.buttonsContainer,
+      F.marginBottom20
     ].join(' '),
     children: [
-      (0, n.jsx)(x.F, {
-        setting: Z.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
+      (0, n.jsx)(M.F, {
+        setting: v.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
         children: (0, n.jsx)(E.Button, {
           onClick: () => window.open(t, '_blank'),
           disabled: '' === t,
           children: 'Open Overlay'
         })
       }),
-      (0, n.jsx)(x.F, {
-        setting: Z.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
+      (0, n.jsx)(M.F, {
+        setting: v.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
         children: (0, n.jsx)(E.Button, {
           onClick: () => {
-            R.Z.getSocket().close(), R.Z.getSocket().connect();
+            x.Z.getSocket().close(), x.Z.getSocket().connect();
           },
           children: 'Reset Socket'
         })
       }),
-      (0, n.jsx)(x.F, {
-        setting: Z.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
+      (0, n.jsx)(M.F, {
+        setting: v.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
         children: (0, n.jsx)(E.Button, {
           onClick: () => {
             u.Z.dispatch({
@@ -894,13 +895,13 @@ children: [
       })
     ]
   }),
-  (0, n.jsx)(x.F, {
-    setting: Z.s6.DEVELOPER_OPTIONS_CRASHES,
+  (0, n.jsx)(M.F, {
+    setting: v.s6.DEVELOPER_OPTIONS_CRASHES,
     children: (0, n.jsx)(E.FormSection, {
       title: 'Crashes',
       tag: E.FormTitleTags.H1,
       children: (0, n.jsxs)('div', {
-        className: B.buttonsContainer,
+        className: U.buttonsContainer,
         children: [
           (0, n.jsx)(E.SingleSelect, {
             value: void 0,
@@ -929,7 +930,7 @@ children: [
                 label: 'Out of Memory'
               }
             ],
-            onChange: e => null != e && P.ZP.crash(e)
+            onChange: e => null != e && L.ZP.crash(e)
           }),
           (0, n.jsx)(E.SingleSelect, {
             value: void 0,
@@ -952,7 +953,7 @@ children: [
             ],
             onChange: e => {
               var s;
-              return null != e ? (s = e, void P.ZP.triggerJSException(s)) : void 0;
+              return null != e ? (s = e, void L.ZP.triggerJSException(s)) : void 0;
             }
           }),
           (0, n.jsx)(E.Button, {
@@ -960,7 +961,7 @@ children: [
             children: 'React Crash'
           }),
           (0, n.jsx)(E.Button, {
-            onClick: K,
+            onClick: z,
             children: 'onClick Throw'
           })
         ]
@@ -970,40 +971,52 @@ children: [
 ]
   });
 }
-let Q = d.ZP.connectStores([M.default], () => ({
-  isTracingRequests: M.default.isTracingRequests,
-  isForcedCanary: M.default.isForcedCanary,
-  isLoggingGatewayEvents: M.default.isLoggingGatewayEvents,
-  isLoggingOverlayEvents: M.default.isLoggingOverlayEvents,
-  isLoggingAnalyticsEvents: M.default.isLoggingAnalyticsEvents,
-  isAxeEnabled: M.default.isAxeEnabled,
-  cssDebuggingEnabled: M.default.cssDebuggingEnabled,
-  isSourceMapsEnabled: M.default.sourceMapsEnabled,
-  isAnalyticsDebuggerEnabled: M.default.isAnalyticsDebuggerEnabled,
-  isIdleStatusIndicatorEnabled: M.default.isIdleStatusIndicatorEnabled,
-  appDirectoryIncludesInactiveCollections: M.default.appDirectoryIncludesInactiveCollections
+let X = d.ZP.connectStores([f.default], () => ({
+  isTracingRequests: f.default.isTracingRequests,
+  isForcedCanary: f.default.isForcedCanary,
+  isLoggingGatewayEvents: f.default.isLoggingGatewayEvents,
+  isLoggingOverlayEvents: f.default.isLoggingOverlayEvents,
+  isLoggingAnalyticsEvents: f.default.isLoggingAnalyticsEvents,
+  isAxeEnabled: f.default.isAxeEnabled,
+  cssDebuggingEnabled: f.default.cssDebuggingEnabled,
+  layoutDebuggingEnabled: f.default.layoutDebuggingEnabled,
+  isSourceMapsEnabled: f.default.sourceMapsEnabled,
+  isAnalyticsDebuggerEnabled: f.default.isAnalyticsDebuggerEnabled,
+  isIdleStatusIndicatorEnabled: f.default.isIdleStatusIndicatorEnabled,
+  appDirectoryIncludesInactiveCollections: f.default.appDirectoryIncludesInactiveCollections
 }))(e => {
   let {
 isTracingRequests: s,
 isForcedCanary: t,
-isLoggingGatewayEvents: a,
-isLoggingOverlayEvents: i,
-isLoggingAnalyticsEvents: r,
-isAxeEnabled: o,
-cssDebuggingEnabled: l,
-isSourceMapsEnabled: c,
-isAnalyticsDebuggerEnabled: d,
-isIdleStatusIndicatorEnabled: _,
-appDirectoryIncludesInactiveCollections: u
-  } = e;
-  return (0, n.jsx)(x.F, {
-setting: Z.s6.DEVELOPER_OPTIONS_FLAGS,
+isLoggingGatewayEvents: i,
+isLoggingOverlayEvents: r,
+isLoggingAnalyticsEvents: o,
+isAxeEnabled: l,
+cssDebuggingEnabled: c,
+layoutDebuggingEnabled: d,
+isSourceMapsEnabled: _,
+isAnalyticsDebuggerEnabled: u,
+isIdleStatusIndicatorEnabled: I,
+appDirectoryIncludesInactiveCollections: S
+  } = e, {
+spacing: N,
+minSpacing: C,
+maxSpacing: m,
+showHorizontalLines: A
+  } = (0, R.i)(), g = a.useMemo(() => Array.from({
+length: m - C + 1
+  }, (e, s) => C + s), [
+C,
+m
+  ]);
+  return (0, n.jsx)(M.F, {
+setting: v.s6.DEVELOPER_OPTIONS_FLAGS,
 children: (0, n.jsxs)(E.FormSection, {
   title: 'Developer Flags',
   tag: E.FormTitleTags.H1,
   children: [
-    (0, n.jsx)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
       children: (0, n.jsx)(E.FormSwitch, {
         value: s,
         note: 'Force trace all client requests with APM',
@@ -1013,8 +1026,8 @@ children: (0, n.jsxs)(E.FormSection, {
         children: 'Enable Tracing Requests'
       })
     }),
-    (0, n.jsx)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
       children: (0, n.jsx)(E.FormSwitch, {
         value: t,
         note: 'Force all API requests to canary instances',
@@ -1024,10 +1037,10 @@ children: (0, n.jsxs)(E.FormSection, {
         children: 'Enable Forced Canary'
       })
     }),
-    (0, n.jsx)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: a,
+        value: i,
         note: 'Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.',
         onChange: e => (0, T.y)({
           logGatewayEvents: e
@@ -1035,10 +1048,10 @@ children: (0, n.jsxs)(E.FormSection, {
         children: 'Enable Logging of Gateway Events to Console'
       })
     }),
-    (0, n.jsx)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: i,
+        value: r,
         note: 'Logs all overlay related RPC events. Super noisy if an overlay is connected',
         onChange: e => (0, T.y)({
           logOverlayEvents: e
@@ -1046,10 +1059,10 @@ children: (0, n.jsxs)(E.FormSection, {
         children: 'Enable Logging of Overlay RPC Events & Commands'
       })
     }),
-    (0, n.jsx)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: r,
+        value: o,
         note: 'Logs all analytics events to the developer console',
         onChange: e => (0, T.y)({
           logAnalyticsEvents: e
@@ -1057,10 +1070,10 @@ children: (0, n.jsxs)(E.FormSection, {
         children: 'Enable Logging of Analytics Events'
       })
     }),
-    (0, n.jsx)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: c,
+        value: _,
         note: 'Only enable on devices you trust.',
         onChange: e => (0, T.y)({
           sourceMapsEnabled: e
@@ -1068,10 +1081,10 @@ children: (0, n.jsxs)(E.FormSection, {
         children: 'Enable source maps to be loaded on this client'
       })
     }),
-    (0, n.jsx)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: d,
+        value: u,
         note: 'Displays a floating debugger with viewed impressions',
         onChange: e => (0, T.y)({
           analyticsDebuggerEnabled: e
@@ -1079,10 +1092,10 @@ children: (0, n.jsxs)(E.FormSection, {
         children: 'Enable standard analytics debugger view'
       })
     }),
-    (0, n.jsx)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: _,
+        value: I,
         note: 'Displays a floating idle status indicator',
         onChange: e => (0, T.y)({
           idleStatusIndicatorEnabled: e
@@ -1090,10 +1103,10 @@ children: (0, n.jsxs)(E.FormSection, {
         children: 'Enable idle status indicator'
       })
     }),
-    (0, n.jsx)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: o,
+        value: l,
         note: 'Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development',
         onChange: e => (0, T.y)({
           axeEnabled: e
@@ -1101,10 +1114,10 @@ children: (0, n.jsxs)(E.FormSection, {
         children: 'Enable Accessibility Auditing'
       })
     }),
-    (0, n.jsx)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: l,
+        value: c,
         note: 'Display raw colors as pink. Toggling this will refresh the browser.',
         onChange: e => {
           (0, T.y)({
@@ -1114,10 +1127,69 @@ children: (0, n.jsxs)(E.FormSection, {
         children: 'Enable CSS Debugging'
       })
     }),
-    (0, n.jsx)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
       children: (0, n.jsx)(E.FormSwitch, {
-        value: u,
+        value: d,
+        note: 'Renders an 8px grid as an overlay on the entire app.',
+        onChange: e => {
+          (0, T.y)({
+            layoutDebuggingEnabled: e
+          });
+        },
+        children: 'Enable Layout Debugging'
+      })
+    }),
+    (0, n.jsxs)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
+      children: [
+        (0, n.jsxs)(E.FormSection, {
+          className: F.marginBottom20,
+          children: [
+            (0, n.jsx)(E.FormTitle, {
+              children: 'Layout Debugging Grid Spacing'
+            }),
+            (0, n.jsx)(E.Slider, {
+              initialValue: N,
+              minValue: C,
+              maxValue: m,
+              markers: g,
+              onValueChange: e => R.i.setState({
+                spacing: Math.round(e)
+              }),
+              onValueRender: e => ''.concat(Math.round(e), 'px'),
+              onMarkerRender: e => e % C == 0 ? ''.concat(e) : void 0,
+              equidistant: !0
+            }),
+            (0, n.jsx)(E.FormText, {
+              type: E.FormTextTypes.DESCRIPTION,
+              children: 'Adjust the spacing between the grid lines.'
+            })
+          ]
+        }),
+        (0, n.jsxs)(E.FormSection, {
+          className: F.marginBottom20,
+          children: [
+            (0, n.jsx)(E.FormTitle, {
+              children: 'Layout Debugging Grid Spacing'
+            }),
+            (0, n.jsx)(E.FormSwitch, {
+              value: A,
+              onChange: e => {
+                R.i.setState({
+                  showHorizontalLines: e
+                });
+              },
+              children: 'Show Horizontal Grid Lines'
+            })
+          ]
+        })
+      ]
+    }),
+    (0, n.jsx)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
+      children: (0, n.jsx)(E.FormSwitch, {
+        value: S,
         note: 'In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.',
         onChange: e => (0, T.y)({
           appDirectoryIncludesInactiveCollections: e
@@ -1125,18 +1197,18 @@ children: (0, n.jsxs)(E.FormSection, {
         children: 'Preview Unpublished Collections on App Directory Homepage'
       })
     }),
-    (0, n.jsxs)(x.F, {
-      setting: Z.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+    (0, n.jsxs)(M.F, {
+      setting: v.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
       children: [
         (0, n.jsx)('div', {
           className: [
-            B.buttonsContainer,
-            G.marginBottom20
+            U.buttonsContainer,
+            F.marginBottom20
           ].join(' '),
-          children: (0, n.jsx)(b.S, {})
+          children: (0, n.jsx)(Z.S, {})
         }),
         (0, n.jsx)(E.FormDivider, {
-          className: B.divider
+          className: U.divider
         })
       ]
     })
@@ -1145,27 +1217,27 @@ children: (0, n.jsxs)(E.FormSection, {
   });
 });
 
-function X() {
-  let e = (0, d.e7)([f.Z], () => f.Z.getSurveyOverride()),
+function q() {
+  let e = (0, d.e7)([D.Z], () => D.Z.getSurveyOverride()),
 [s, t] = a.useState(null != e ? e : '');
-  return (0, n.jsx)(x.F, {
-setting: Z.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
+  return (0, n.jsx)(M.F, {
+setting: v.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
 children: (0, n.jsxs)(E.FormSection, {
   tag: E.FormTitleTags.H1,
   title: 'Survey Override',
-  className: G.marginTop60,
+  className: F.marginTop60,
   children: [
     (0, n.jsx)(E.FormTitle, {
       children: 'Copy the ID of the Survey you want to test:'
     }),
     (0, n.jsxs)('form', {
-      className: B.surveyOverride,
+      className: U.surveyOverride,
       onSubmit: e => {
         e.preventDefault(), s.length > 0 ? S.Xq(s) : S.Xq(null);
       },
       children: [
         (0, n.jsx)(E.TextInput, {
-          className: B.surveyOverrideInput,
+          className: U.surveyOverrideInput,
           value: s,
           onChange: t
         }),
@@ -1180,25 +1252,25 @@ children: (0, n.jsxs)(E.FormSection, {
   });
 }
 
-function q() {
+function J() {
   var e;
   let s = (0, d.e7)([g.Z], () => g.Z.overrideId()),
 [t, i] = a.useState(null !== (e = g.Z.overrideId()) && void 0 !== e ? e : '');
-  return (0, n.jsx)(x.F, {
-setting: Z.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
+  return (0, n.jsx)(M.F, {
+setting: v.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
 children: (0, n.jsxs)(E.FormSection, {
   tag: E.FormTitleTags.H1,
   title: 'Changelog Override',
-  className: G.marginTop60,
+  className: F.marginTop60,
   children: [
     (0, n.jsx)(E.FormTitle, {
       children: 'Enter the ID of the changelog you want to test'
     }),
     (0, n.jsxs)('div', {
-      className: B.surveyOverride,
+      className: U.surveyOverride,
       children: [
         (0, n.jsx)(E.TextInput, {
-          className: B.surveyOverrideInput,
+          className: U.surveyOverrideInput,
           value: t,
           onChange: i
         }),
@@ -1215,17 +1287,17 @@ children: (0, n.jsxs)(E.FormSection, {
 })
   });
 }
-class J extends a.PureComponent {
+class $ extends a.PureComponent {
   render() {
 return (0, n.jsxs)(a.Fragment, {
   children: [
-    (0, n.jsx)(Q, {}),
-    (0, n.jsx)(z, {}),
     (0, n.jsx)(X, {}),
+    (0, n.jsx)(Q, {}),
     (0, n.jsx)(q, {}),
-    (0, n.jsx)(k, {})
+    (0, n.jsx)(J, {}),
+    (0, n.jsx)(W, {})
   ]
 });
   }
 }
-s.Z = J;
+s.Z = $;
