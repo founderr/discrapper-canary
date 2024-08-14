@@ -36,21 +36,21 @@ location: s
   }), v = (0, a.e7)([c.default], () => c.default.getCurrentUser());
   o()(null != v, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined');
   let Z = (0, a.e7)([d.Z], () => d.Z.isBlocked(n.id)),
-[p, h] = t.useState(Z),
+[h, p] = t.useState(Z),
 T = (0, u.sS)({
   location: s
 });
   t.useEffect(() => {
-h(Z);
+p(Z);
   }, [Z]);
   let g = !x.some(e => {
 var s;
 return (null !== (s = l.sourceAnalyticsLocations) && void 0 !== s ? s : []).includes(e);
   });
-  return p && T && g ? (0, i.jsx)(I.Z, {
+  return h && T && g ? (0, i.jsx)(I.Z, {
 user: n,
 currentUser: v,
-onViewBlockedProfileClick: () => h(!1),
+onViewBlockedProfileClick: () => p(!1),
 ...l
   }) : r && n.isNonUserBot() ? (0, i.jsx)(E.Z, {
 ...l,

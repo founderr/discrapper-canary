@@ -21,8 +21,8 @@ var i = n(735250),
   x = n(678738),
   v = n(502762),
   Z = n(530),
-  p = n(679332),
-  h = n(544989),
+  h = n(679332),
+  p = n(544989),
   T = n(228168),
   g = n(981631),
   N = n(689938),
@@ -71,9 +71,9 @@ children: (0, i.jsx)(u.Mt, {
         profileType: T.y0.FULL_SIZE,
         ref: G,
         children: [
-          (0, i.jsx)(h.Z, {
+          (0, i.jsx)(p.Z, {
             profileType: T.y0.FULL_SIZE,
-            children: (0, i.jsx)(p.Z, {
+            children: (0, i.jsx)(h.Z, {
               user: s
             })
           }),

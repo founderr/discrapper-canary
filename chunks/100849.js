@@ -26,12 +26,12 @@ user: s,
 type: n,
 showActions: l,
 onClose: v
-  } = e, Z = (0, a.e7)([_.Z], () => null != _.Z.getAnyStreamForUser(s.id)), p = (0, a.e7)([I.Z], () => I.Z.getActivities(s.id)), h = t.useMemo(() => p.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [p]), T = t.useMemo(() => Z ? h.find(e => e.type === m.IIU.PLAYING) : null, [
-h,
+  } = e, Z = (0, a.e7)([_.Z], () => null != _.Z.getAnyStreamForUser(s.id)), h = (0, a.e7)([I.Z], () => I.Z.getActivities(s.id)), p = t.useMemo(() => h.filter(e => e.type !== m.IIU.CUSTOM_STATUS), [h]), T = t.useMemo(() => Z ? p.find(e => e.type === m.IIU.PLAYING) : null, [
+p,
 Z
-  ]), g = t.useMemo(() => h.filter(e => e !== T), [
+  ]), g = t.useMemo(() => p.filter(e => e !== T), [
 T,
-h
+p
   ]), {
 analyticsLocations: N,
 newestAnalyticsLocation: C

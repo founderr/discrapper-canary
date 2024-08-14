@@ -27,8 +27,8 @@ currentUser: S,
 channelId: x,
 displayProfile: v,
 initialSection: Z,
-initialSubsection: p,
-friendToken: h,
+initialSubsection: h,
+friendToken: p,
 onClose: T
   } = e, g = (0, t.e7)([l.Z], () => l.Z.getRelationshipType(n.id)), N = (0, I.Z)({
 user: n,
@@ -58,7 +58,7 @@ children: [
       user: n,
       guildId: null !== (s = null == v ? void 0 : v.guildId) && void 0 !== s ? s : void 0,
       channelId: x,
-      friendToken: h,
+      friendToken: p,
       className: m.friendRequestBanner
     })
   }),
@@ -70,7 +70,7 @@ children: [
       displayProfile: v,
       items: N,
       initialSection: Z,
-      initialSubsection: p,
+      initialSubsection: h,
       onClose: T
     })
   })

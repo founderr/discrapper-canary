@@ -8,8 +8,8 @@ var i = n(735250),
   u = n(481060),
   d = n(904245),
   h = n(232961),
-  p = n(223606),
-  m = n(63063),
+  m = n(223606),
+  p = n(63063),
   _ = n(530472),
   f = n(453687),
   E = n(930282),
@@ -64,7 +64,7 @@ children: [
         tag: 'span',
         className: x.learnMore,
         children: I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({
-          helpUrl: m.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE)
+          helpUrl: p.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE)
         })
       })
     })
@@ -78,10 +78,10 @@ t.Z = a.memo(function(e) {
 className: s,
 compact: r,
 message: u,
-children: m,
+children: p,
 content: _,
 onUpdate: C
-  } = e, S = null === (t = u.editedTimestamp) || void 0 === t ? void 0 : t.toString(), Z = a.useRef(!1), A = (0, c.e7)([p.Z], () => p.Z.getMessage(u.id), [u.id]), M = a.useCallback(() => {
+  } = e, S = null === (t = u.editedTimestamp) || void 0 === t ? void 0 : t.toString(), Z = a.useRef(!1), A = (0, c.e7)([m.Z], () => m.Z.getMessage(u.id), [u.id]), M = a.useCallback(() => {
 (null == A ? void 0 : A.isBlockedEdit) ? (0, h.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
   }, [
 u,
@@ -94,7 +94,7 @@ C,
 u.content,
 _,
 S,
-m
+p
   ]), (0, i.jsxs)('div', {
 id: (0, f.ut)(u),
 className: l()(s, N.markup, {
@@ -104,7 +104,7 @@ className: l()(s, N.markup, {
   [x.blockedSend]: !(null == A ? void 0 : A.isBlockedEdit)
 }),
 children: [
-  null != m ? m : (0, E.L5)(u, _),
+  null != p ? p : (0, E.L5)(u, _),
   (null == A ? void 0 : A.isBlockedEdit) && null != u.timestamp && (0, i.jsxs)(i.Fragment, {
     children: [
       ' ',

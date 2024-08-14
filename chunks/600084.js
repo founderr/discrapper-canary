@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(736052),
   d = n(878857),
   h = n(621853),
-  p = n(484459),
-  m = n(131704),
+  m = n(484459),
+  p = n(131704),
   _ = n(984933),
   f = n(496675),
   E = n(594174),
@@ -45,7 +45,7 @@ return null;
 return (0, i.jsx)(x.Z, {
   channel: n
 });
-  if (m.Ec.has(n.type))
+  if (p.Ec.has(n.type))
 return (0, i.jsx)(A.Z, {
   channel: n
 });
@@ -68,16 +68,16 @@ function O(e) {
 channel: n,
 showingBanner: c
   } = e, u = (0, o.ZP)(n), {
-type: m
+type: p
   } = n, _ = (0, s.e7)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), x = g.ZP.useUserTag(_), {
 canManageRoles: v,
 canReadMessageHistory: Z
   } = (0, s.cj)([f.Z], () => ({
 canManageRoles: f.Z.can(b.Plq.MANAGE_ROLES, n),
 canReadMessageHistory: f.Z.can(b.Plq.READ_MESSAGE_HISTORY, n)
-  })), A = (0, s.e7)([h.Z], () => m === b.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null, [
+  })), A = (0, s.e7)([h.Z], () => p === b.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null, [
 n,
-m
+p
   ]), {
 systemDMRedesignEnabled: M
   } = d.Z.useExperiment({
@@ -86,12 +86,12 @@ location: 'bf1a4f_1'
 autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t
   });
   if (a.useEffect(() => {
-  m === b.d4z.DM && null == A && null != _ && r.Z.wait(() => (0, p.Z)(n.getRecipientId(), _.getAvatarURL(null, 80), {
+  p === b.d4z.DM && null == A && null != _ && r.Z.wait(() => (0, m.Z)(n.getRecipientId(), _.getAvatarURL(null, 80), {
     withMutualGuilds: !0
   }));
 }, [
   A,
-  m,
+  p,
   n,
   _
 ]), n.isSystemDM())
@@ -101,7 +101,7 @@ return M ? (0, i.jsx)(S.Z, {
   channel: n,
   children: j.Z.Messages.SYSTEM_DM_EMPTY_MESSAGE
 });
-  if (m === b.d4z.DM)
+  if (p === b.d4z.DM)
 return (0, i.jsxs)(N.Z, {
   channel: n,
   user: _,

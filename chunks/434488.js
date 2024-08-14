@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(2052),
   d = n(127255),
   h = n(5200),
-  p = n(403404),
-  m = n(100527),
+  m = n(403404),
+  p = n(100527),
   _ = n(906732),
   f = n(605236),
   E = n(448239),
@@ -64,8 +64,8 @@ inPopout: n,
 handleClose: a
   } = e, {
 analyticsLocations: s
-  } = (0, _.ZP)(m.Z.VC_TILE_ACTIVITY_SHELF_BUTTON), r = (0, u.O)(), d = () => {
-(0, p.Z)({
+  } = (0, _.ZP)(p.Z.VC_TILE_ACTIVITY_SHELF_BUTTON), r = (0, u.O)(), d = () => {
+(0, m.Z)({
   channel: t,
   guildId: t.guild_id,
   locationObject: r.location,
@@ -135,7 +135,7 @@ g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
   let o = (0, u.O)(),
 {
   analyticsLocations: d
-} = (0, _.ZP)(m.Z.VC_TILE_ACTIVITY_INVITE);
+} = (0, _.ZP)(p.Z.VC_TILE_ACTIVITY_INVITE);
   return (0, i.jsx)(_.Gt, {
 value: d,
 children: (0, i.jsxs)(I.Z, {
@@ -191,7 +191,7 @@ children: (0, i.jsxs)(I.Z, {
           className: N.button,
           innerClassName: N.buttonContents,
           onClick: function() {
-            (0, p.Z)({
+            (0, m.Z)({
               channel: t,
               guildId: t.guild_id,
               locationObject: o.location,
@@ -229,12 +229,12 @@ g.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
   n_participants: u
 });
   }, []);
-  let p = (0, d.Z)({
+  let m = (0, d.Z)({
   guildId: n.id
 }).slice(0, 3),
 {
   analyticsLocations: C
-} = (0, _.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION);
+} = (0, _.ZP)(p.Z.VC_TILE_ACTIVITY_SUGGESTION);
   return (0, i.jsx)(_.Gt, {
 value: C,
 children: (0, i.jsxs)(I.Z, {
@@ -254,7 +254,7 @@ children: (0, i.jsxs)(I.Z, {
       className: l()(N.activitiesContainer, {
         [N.activitiesContainerSmol]: o <= 300
       }),
-      children: p.map(e => (0, i.jsx)(h.Y, {
+      children: m.map(e => (0, i.jsx)(h.Y, {
         channel: t,
         activityItem: e,
         aspectRatio: h.Y.AspectRatio.SIXTEEN_BY_NINE,

@@ -16,8 +16,8 @@ var i = n(735250),
   u = n(704215),
   d = n(481060),
   h = n(699682),
-  p = n(367907),
-  m = n(812206),
+  m = n(367907),
+  p = n(812206),
   _ = n(644914),
   f = n(434404),
   E = n(330010),
@@ -43,12 +43,12 @@ icon: s,
 header: r,
 completed: o,
 onClick: c
-  } = e, [u, p] = a.useState(!1), m = (0, h.Z)(o);
+  } = e, [u, m] = a.useState(!1), p = (0, h.Z)(o);
   return a.useEffect(() => {
-null != m && o !== m && (p(!0), setTimeout(() => p(!1), 1000));
+null != p && o !== p && (m(!0), setTimeout(() => m(!1), 1000));
   }, [
 o,
-m
+p
   ]), (0, i.jsxs)(d.Clickable, {
 className: l()(t, R.card, {
   [R.completed]: o
@@ -103,7 +103,7 @@ handleDownload: G,
 handleAddApplication: V
   } = function(e) {
 let t = a.useCallback(() => {
-    p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
       setup_type: M.Ft.CHANNEL_WELCOME,
       action: M.j7.INVITE
     }), null != e && (0, d.openModalLazy)(async () => {
@@ -124,7 +124,7 @@ let t = a.useCallback(() => {
     });
   }, [e]),
   s = a.useCallback(() => {
-    p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
       setup_type: M.Ft.CHANNEL_WELCOME,
       action: M.j7.SEND_MESSAGE
     }), T.S.dispatch(A.CkL.TEXTAREA_FOCUS, {
@@ -133,7 +133,7 @@ let t = a.useCallback(() => {
     });
   }, []),
   l = a.useCallback(() => {
-    p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
       setup_type: M.Ft.CHANNEL_WELCOME,
       action: M.j7.PERSONALIZE_SERVER
     }), null != e && f.Z.open(e.id, A.pNK.OVERVIEW, {
@@ -141,7 +141,7 @@ let t = a.useCallback(() => {
     });
   }, [e]),
   r = a.useCallback(() => {
-    p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
       setup_type: M.Ft.CHANNEL_WELCOME,
       action: M.j7.DOWNLOAD
     }), (0, d.openModalLazy)(async () => {
@@ -160,7 +160,7 @@ return {
   handlePersonalize: l,
   handleDownload: r,
   handleAddApplication: a.useCallback(() => {
-    null != e && (p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+    null != e && (m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
       setup_type: M.Ft.CHANNEL_WELCOME,
       action: M.j7.ADD_APP
     }), (0, d.openModalLazy)(async () => {
@@ -238,7 +238,7 @@ return i.push((0, r.Z)(() => new o.Z.Value(0))), i.push((0, r.Z)(() => new o.Z.V
   } : {},
   opacities: i
 };
-  }(F), Y = (0, c.e7)([m.Z], () => m.Z.getGuildApplicationIds(null == s ? void 0 : s.id)).length > 0;
+  }(F), Y = (0, c.e7)([p.Z], () => p.Z.getGuildApplicationIds(null == s ? void 0 : s.id)).length > 0;
   if (a.useEffect(() => {
   var e;
   (0, E.i)(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : A.lds);

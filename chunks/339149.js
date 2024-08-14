@@ -31,7 +31,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let Z = {
+let v = {
   [E.vxO.INSTALLING]: {
 [_.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
   name: e
@@ -84,7 +84,7 @@ let Z = {
 })
   }
 };
-class v extends r.PureComponent {
+class Z extends r.PureComponent {
   renderText() {
 let {
   state: e,
@@ -121,7 +121,7 @@ super(...e), S(this, 'renderProgressBody', (e, t) => {
     return null;
   let o = e[e.length - 1] / t * 1000,
     c = 0 !== o ? Math.max(1, (a - r) / o) : null,
-    u = Z[s],
+    u = v[s],
     d = null != u ? Object.keys(u) : [],
     {
       unit: h,
@@ -157,7 +157,7 @@ let {
   firstState: t,
   isPaused: n
 } = this.props;
-return null == e || null == t ? N.Z.Messages.LIBRARY : (0, l.jsx)(v, {
+return null == e || null == t ? N.Z.Messages.LIBRARY : (0, l.jsx)(Z, {
   application: e,
   state: t,
   isPaused: n

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(230711),
   d = n(607070),
   h = n(367907),
-  p = n(243778),
-  m = n(543241),
+  m = n(243778),
+  p = n(543241),
   _ = n(633302),
   f = n(970731),
   E = n(594174),
@@ -56,7 +56,7 @@ function w(e) {
 channel: n,
 closePopout: _,
 onFocus: C
-  } = e, j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), w = (0, l.e7)([E.default], () => E.default.getCurrentUser()), B = I.ZP.canUseFancyVoiceChannelReactions(w), H = (0, l.e7)([T.Z], () => T.Z.getState().animationType), G = a.useRef(!1), V = (0, m.wC)(n.guild_id), F = (0, s.uniqBy)([
+  } = e, j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion), w = (0, l.e7)([E.default], () => E.default.getCurrentUser()), B = I.ZP.canUseFancyVoiceChannelReactions(w), H = (0, l.e7)([T.Z], () => T.Z.getState().animationType), G = a.useRef(!1), V = (0, p.wC)(n.guild_id), F = (0, s.uniqBy)([
 ...V,
 ...U
   ], 'name').filter(e => !g.ZP.isEmojiFilteredOrLocked({
@@ -109,7 +109,7 @@ Q
   ]);
   let J = j ? [r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
 $ = H === M.q.PREMIUM;
-  return (0, i.jsx)(p.ZP, {
+  return (0, i.jsx)(m.ZP, {
 contentTypes: J,
 children: e => {
   let {

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 }), n(47120);
 var i = n(470079),
@@ -21,7 +21,7 @@ let h = new Set([
   a.s.LAUNCHED_ACTIVITY
 ]);
 
-function p(e) {
+function m(e) {
   let t = (0, u.Z)(d.YN.GLOBAL_FEED);
   t = (0, r.Z)({
 entries: t,

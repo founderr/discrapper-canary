@@ -34,8 +34,8 @@ t.Z = a.forwardRef(function(e, t) {
 renderPopout: n,
 children: u
   } = e, [d, h] = a.useState(!1), {
-isHovered: p,
-setIsHovered: m,
+isHovered: m,
+setIsHovered: p,
 onMouseEnter: _,
 onMouseLeave: f,
 cancelTimers: E
@@ -50,17 +50,17 @@ cancelTimers: E
   }
 
   function I(e) {
-E(), h(!d), (!p || d) && e();
+E(), h(!d), (!m || d) && e();
   }
   a.useImperativeHandle(t, () => ({
 hidePopout() {
-  m(!1), h(!1);
+  p(!1), h(!1);
 }
   }), [
-m,
+p,
 h
   ]);
-  let x = p || d;
+  let x = m || d;
   return (0, i.jsx)(s.Popout, {
 animation: s.Popout.Animation.FADE,
 shouldShow: x,
@@ -69,7 +69,7 @@ position: 'top',
 align: 'left',
 spacing: 16,
 onRequestClose: () => {
-  m(!1), h(!1);
+  p(!1), h(!1);
 },
 renderPopout: e => (0, i.jsx)(c, {
   isHovered: x,

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(239091),
   d = n(872810),
   h = n(40851),
-  p = n(358221),
-  m = n(258609),
+  m = n(358221),
+  p = n(258609),
   _ = n(569545),
   f = n(382182),
   E = n(352978),
@@ -43,9 +43,9 @@ let {
   onContextMenu: d,
   inPopout: h
 } = e, {
-  reducedMotion: p
+  reducedMotion: m
 } = a.useContext(o.AccessibilityPreferencesContext), {
-  blocked: m,
+  blocked: p,
   id: _
 } = t;
 return (0, i.jsx)(o.Popout, {
@@ -68,13 +68,13 @@ return (0, i.jsx)(o.Popout, {
     children: (0, i.jsx)(S.Z, {
       participant: n,
       aspectRatio: R,
-      blocked: m,
+      blocked: p,
       channel: s,
       className: b.tile,
       inCall: !0,
       inPopout: h,
       paused: !1,
-      pulseSpeakingIndicator: !p.enabled,
+      pulseSpeakingIndicator: !m.enabled,
       width: c,
       children: u && (0, i.jsx)(Z.Z, {})
     }, _)
@@ -98,12 +98,12 @@ let {
 } = t, L = (0, r.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []), {
   selectedParticipant: P,
   largeStream: O
-} = (0, r.cj)([p.Z], () => ({
-  selectedParticipant: null != s ? p.Z.getSelectedParticipant(s.id) : null,
-  largeStream: null != s && p.Z.getStageStreamSize(s.id)
+} = (0, r.cj)([m.Z], () => ({
+  selectedParticipant: null != s ? m.Z.getSelectedParticipant(s.id) : null,
+  largeStream: null != s && m.Z.getStageStreamSize(s.id)
 })), y = a.useCallback((e, t) => {
   if (e.type === M.fO.STREAM && 0 === L.filter(t => (0, _.V9)(t) === e.id && t.state !== A.jm8.ENDED).length) {
-    if (!(0, f.p9)(s, N.Z, x.Z, T.Z, m.Z)[0])
+    if (!(0, f.p9)(s, N.Z, x.Z, T.Z, p.Z)[0])
       return;
     (0, d.rn)((0, _.my)(e.id), {
       forceMultiple: t.shiftKey
@@ -142,13 +142,13 @@ width: o
   } = e, c = (0, h.bp)(), d = s.getGuildId();
   l()(null != d, 'Channel cannot be guildless');
   let {
-user: m
-  } = a, _ = (0, r.e7)([p.Z], () => p.Z.getParticipant(s.id, a.id), [
+user: p
+  } = a, _ = (0, r.e7)([m.Z], () => m.Z.getParticipant(s.id, a.id), [
 s.id,
 a.id
-  ]), f = (0, r.e7)([v.ZP], () => v.ZP.isModerator(m.id, s.id), [
+  ]), f = (0, r.e7)([v.ZP], () => v.ZP.isModerator(p.id, s.id), [
 s.id,
-m.id
+p.id
   ]);
   if (null == _ || _.type === M.fO.ACTIVITY)
 return null;
@@ -183,7 +183,7 @@ return null;
         ]).then(n.bind(n, 757387));
         return t => (0, i.jsx)(e, {
           ...t,
-          user: m,
+          user: p,
           guildId: d,
           channel: s,
           showMediaItems: !0,
@@ -202,7 +202,7 @@ children: g ? (0, i.jsx)(j, {
   rtcParticipant: _,
   channel: s,
   guildId: d,
-  user: m,
+  user: p,
   width: o,
   isModerator: f,
   onContextMenu: E,
@@ -212,7 +212,7 @@ children: g ? (0, i.jsx)(j, {
   rtcParticipant: _,
   channel: s,
   guildId: d,
-  user: m,
+  user: p,
   width: o,
   isModerator: f,
   onContextMenu: E,

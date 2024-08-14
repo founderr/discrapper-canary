@@ -8,8 +8,8 @@ var i = n(735250),
   u = n(333984),
   d = n(486622),
   h = n(922409),
-  p = n(86203),
-  m = n(6025),
+  m = n(86203),
+  p = n(6025),
   _ = n(621853),
   f = n(171368),
   E = n(433355),
@@ -204,14 +204,14 @@ let {
 } = e, s = a.useCallback(() => {
   (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
 }, []), l = a.useCallback(() => {
-  m.Z.closeChannelSidebar(E.uZ);
+  p.Z.closeChannelSidebar(E.uZ);
 }, []), o = a.useCallback(() => {
-  m.Z.closeChannelSidebar(E.uZ);
+  p.Z.closeChannelSidebar(E.uZ);
 }, []), {
   acceptMessageRequest: c,
   rejectMessageRequest: u,
   isAcceptLoading: h,
-  isRejectLoading: p,
+  isRejectLoading: m,
   isOptimisticAccepted: _,
   isOptimisticRejected: f
 } = (0, d.m)({
@@ -219,7 +219,7 @@ let {
   onError: s,
   onAcceptSuccess: o,
   onRejectSuccess: l
-}), g = h || p || _ || f;
+}), g = h || m || _ || f;
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)(r.Button, {
@@ -236,7 +236,7 @@ return (0, i.jsxs)(i.Fragment, {
       onClick: () => u(t),
       color: r.Button.Colors.PRIMARY,
       disabled: g,
-      submitting: p,
+      submitting: m,
       children: S.Z.Messages.MESSAGE_REQUEST_IGNORE
     })
   ]
@@ -267,7 +267,7 @@ children: [
         channelId: n.id,
         otherUserId: t
       }),
-      (0, i.jsx)(p.Z, {
+      (0, i.jsx)(m.Z, {
         channel: n
       })
     ]

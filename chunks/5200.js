@@ -11,8 +11,8 @@ var i, a, s = n(735250),
   u = n(481060),
   d = n(792125),
   h = n(542094),
-  p = n(182906),
-  m = n(556505),
+  m = n(182906),
+  p = n(556505),
   _ = n(513202),
   f = n(981631),
   E = n(689938),
@@ -52,7 +52,7 @@ A(!1);
 className: g.overlayBadge,
 children: (0, s.jsx)('div', {
   className: g.badgeContainer,
-  children: (0, s.jsx)(m.Z, {
+  children: (0, s.jsx)(p.Z, {
     name: i.application.name,
     labelType: S
   })
@@ -129,7 +129,7 @@ children: (0, s.jsx)(u.Spring, {
       },
       children: (0, s.jsxs)(s.Fragment, {
         children: [
-          (0, s.jsx)(p.Z, {
+          (0, s.jsx)(m.Z, {
             imageBackground: N,
             applicationName: i.application.name,
             imageClassName: g.activitySuggestionImage,

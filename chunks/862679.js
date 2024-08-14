@@ -12,8 +12,8 @@ message: t,
 subtitle: n,
 countdown: d,
 buttonText: h,
-buttonColor: p,
-buttonSubmitting: m,
+buttonColor: m,
+buttonSubmitting: p,
 onButtonClick: _,
 imageSrc: f,
 animationSrc: E,
@@ -70,7 +70,7 @@ children: [
         onClick: C,
         look: r.Button.Looks.LINK,
         color: r.Button.Colors.PRIMARY,
-        submitting: m,
+        submitting: p,
         children: g
       }),
       null != h && (0, i.jsx)(r.Button, {
@@ -78,8 +78,8 @@ children: [
         innerClassName: u.innerButton,
         size: r.Button.Sizes.SMALL,
         onClick: _,
-        submitting: m,
-        color: null != p ? p : r.Button.Colors.PRIMARY,
+        submitting: p,
+        color: null != m ? m : r.Button.Colors.PRIMARY,
         children: h
       })
     ]

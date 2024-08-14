@@ -17,16 +17,16 @@ var i, l, r, a = n(735250),
   N = n(82295),
   x = n(313201),
   S = n(518311),
-  Z = n(355298),
-  v = n(869404),
+  v = n(355298),
+  Z = n(869404),
   T = n(333984),
   L = n(210887),
   A = n(592125),
   b = n(158776),
   M = n(55589),
   R = n(515753),
-  O = n(981631),
-  P = n(689938),
+  P = n(981631),
+  O = n(689938),
   y = n(680136);
 
 function j(e, t, n) {
@@ -258,7 +258,7 @@ return (0, a.jsx)(u.SJ, {
       children: i => (0, a.jsx)(_.List, {
         fade: !0,
         innerRole: r,
-        innerAriaLabel: P.Z.Messages.DIRECT_MESSAGES,
+        innerAriaLabel: O.Z.Messages.DIRECT_MESSAGES,
         innerTag: 'ul',
         ref: e => {
           var t;
@@ -313,7 +313,7 @@ super(...e), j(this, 'state', {
       num_users_visible: a.length,
       num_users_visible_with_mobile_indicator: o.filter(e => null != e && b.Z.isMobileOnline(e)).length
     };
-  this.hasReportedAnalytics = !0, m.ZP.trackWithMetadata(O.rMx.DM_LIST_VIEWED, {
+  this.hasReportedAnalytics = !0, m.ZP.trackWithMetadata(P.rMx.DM_LIST_VIEWED, {
     ...u,
     ...(0, C.X)(),
     changelog_dm_visible: c
@@ -326,7 +326,7 @@ super(...e), j(this, 'state', {
 }), j(this, 'handleScroll', c()(() => {
   if (null != this._list) {
     let e = this._list.getScrollerNode();
-    null != e && f.Z.updateChannelListScroll(O.ME, e.scrollTop);
+    null != e && f.Z.updateChannelListScroll(P.ME, e.scrollTop);
   }
 }, 100)), j(this, 'renderDM', (e, t) => {
   let {
@@ -371,10 +371,10 @@ super(...e), j(this, 'state', {
     children: [
       (0, a.jsx)('span', {
         className: y.headerText,
-        children: P.Z.Messages.DIRECT_MESSAGES
+        children: O.Z.Messages.DIRECT_MESSAGES
       }),
       (0, a.jsx)(S.Z, {
-        tooltip: P.Z.Messages.CREATE_DM,
+        tooltip: O.Z.Messages.CREATE_DM,
         tooltipPosition: 'top',
         popoutAlign: 'left',
         iconClassName: y.privateChannelRecipientsInviteButtonIcon,
@@ -400,14 +400,14 @@ version: t,
 theme: n,
 children: i,
 showDMHeader: l
-  } = e, r = s.Children.count(i), o = A.Z.getMutablePrivateChannels(), c = (0, v.k1)(o), p = (0, h.Wu)([
+  } = e, r = s.Children.count(i), o = A.Z.getMutablePrivateChannels(), c = (0, Z.k1)(o), p = (0, h.Wu)([
 M.Z,
-Z.Z,
+v.Z,
 T.Z
   ], () => {
 let e = M.Z.getPrivateChannelIds(),
-  t = (0, v.tU)(e, [
-    Z.Z,
+  t = (0, Z.tU)(e, [
+    v.Z,
     T.Z
   ]);
 return (0, I.Ce)(t);
@@ -416,7 +416,7 @@ g.Z,
 L.Z,
 A.Z
   ], () => ({
-theme: L.Z.darkSidebar ? O.BRd.DARK : n,
+theme: L.Z.darkSidebar ? P.BRd.DARK : n,
 keyboardModeEnabled: g.Z.keyboardModeEnabled,
 version: null != t ? ''.concat(t, ':').concat(A.Z.getPrivateChannelsVersion()) : A.Z.getPrivateChannelsVersion()
   })), f = s.useRef(null), m = s.useCallback(e => {

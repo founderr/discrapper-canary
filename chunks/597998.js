@@ -12,8 +12,8 @@ var i, a = n(735250),
   u = n(657305),
   d = n(367907),
   h = n(194082),
-  p = n(282256),
-  m = n(925329),
+  m = n(282256),
+  p = n(925329),
   _ = n(833858),
   f = n(223135),
   E = n(374129),
@@ -132,7 +132,7 @@ let {
       ]
     }) : ''
   ]
-}), m = {
+}), p = {
   clan: t.clan,
   userId: t.id,
   contextGuildId: d,
@@ -145,8 +145,8 @@ let {
   }
 };
 return !n || u ? (0, a.jsx)(a.Fragment, {
-  children: (0, a.jsx)(p.Z, {
-    ...m,
+  children: (0, a.jsx)(m.Z, {
+    ...p,
     children: h
   })
 }) : null;
@@ -161,8 +161,8 @@ let {
   serverDeaf: l,
   collapsed: c,
   video: d,
-  isStreaming: p,
-  disabled: m,
+  isStreaming: m,
+  disabled: p,
   isWatching: _,
   iconClassName: f,
   embeddedApplication: I,
@@ -179,7 +179,7 @@ let {
   handleHoverIcons: w,
   disconnected: B
 } = this.props;
-if (c || m)
+if (c || p)
   return null;
 let H = [],
   G = (0, a.jsx)(j, {
@@ -232,7 +232,7 @@ d && (n ? H.push((0, a.jsx)(o.TooltipContainer, {
   children: (0, a.jsx)(E.Z, {
     className: r()(S.icon, f)
   })
-}, 'playstation')), p ? H.push((0, a.jsx)('div', {
+}, 'playstation')), m ? H.push((0, a.jsx)('div', {
   className: r()(S.iconSpacing, S.liveIconSpacing),
   children: (0, a.jsx)(h.ZP, {
     size: h.ZP.Sizes.SMALL
@@ -372,7 +372,7 @@ iconClassName: n,
 guildId: i,
 channelId: l,
 userId: u
-  } = e, [h, p] = s.useState(!1), _ = (0, c.O)(e => p(e));
+  } = e, [h, m] = s.useState(!1), _ = (0, c.O)(e => m(e));
   return s.useEffect(() => {
 h && d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
   channel_id: l,
@@ -395,10 +395,10 @@ text: v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({
 className: S.iconSpacing,
 children: (0, a.jsx)('div', {
   ref: _,
-  children: (0, a.jsx)(m.Z, {
+  children: (0, a.jsx)(p.Z, {
     className: r()(S.icon, n),
     game: t,
-    size: m.Z.Sizes.XSMALL,
+    size: p.Z.Sizes.XSMALL,
     onMouseEnter: () => {
       d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
         channel_id: l,

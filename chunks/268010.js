@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(591759),
   d = n(561308),
   h = n(644810),
-  p = n(206295),
-  m = n(335326),
+  m = n(206295),
+  p = n(335326),
   _ = n(297781),
   f = n(591853),
   E = n(410441),
@@ -39,10 +39,10 @@ closePopout: x
 user: T,
 mediaImageSrc: N,
 episodeDescription: v
-  } = (0, m.Bj)(n), {
+  } = (0, p.Bj)(n), {
 primaryColor: S,
 secondaryColor: Z
-  } = (0, p.Z)(N), A = (0, s.e7)([r.default], () => r.default.locale), M = a.useCallback(e => {
+  } = (0, m.Z)(N), A = (0, s.e7)([r.default], () => r.default.locale), M = a.useCallback(e => {
 if (null != T && null != N)
   return (0, h.B)({
     entry: n,
@@ -91,7 +91,7 @@ children: [
     }),
     badges: (0, i.jsx)(_.Gk, {
       location: _.Gt.POPOUT,
-      children: m.td.map((e, t) => (0, i.jsx)(e, {
+      children: p.td.map((e, t) => (0, i.jsx)(e, {
         entry: n
       }, t))
     }),

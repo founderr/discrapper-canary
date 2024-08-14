@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(306680),
   d = n(111583),
   h = n(459273),
-  p = n(566620),
-  m = n(317381),
+  m = n(566620),
+  p = n(317381),
   _ = n(918559),
   f = n(981631),
   E = n(689938),
@@ -25,9 +25,9 @@ function C(e) {
 channelId: t,
 className: n,
 ...C
-  } = e, I = a.useRef(null), x = (0, l.e7)([m.ZP], () => m.ZP.getFocusedLayout() === _.MI.RESIZABLE), T = a.useCallback(() => {
+  } = e, I = a.useRef(null), x = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout() === _.MI.RESIZABLE), T = a.useCallback(() => {
 let e = x ? _.MI.NO_CHAT : _.MI.RESIZABLE;
-(0, p.gC)(e);
+(0, m.gC)(e);
   }, [x]), {
 unreadCount: N,
 mentionCount: v
@@ -58,7 +58,7 @@ A = [Z];
   v > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
 mentionCount: v
   })), N > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
-  let M = (0, l.e7)([m.ZP], () => m.ZP.getFocusedLayout()),
+  let M = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout()),
 b = v > 0 ? v : N,
 R = b > 0;
   return (0, i.jsxs)('div', {

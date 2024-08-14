@@ -39,13 +39,13 @@ children: [
 }
 
 function h(e) {
-  let [t, n] = a.useState(), [s, l] = a.useState(), [r, u] = a.useState(!1), [h, p] = a.useState(!1), {
-enabled: m
+  let [t, n] = a.useState(), [s, l] = a.useState(), [r, u] = a.useState(!1), [h, m] = a.useState(!1), {
+enabled: p
   } = (0, o.s1)(e);
   return a.useEffect(() => {
-m && null != t && null != s ? u(t < s) : u(!1);
+p && null != t && null != s ? u(t < s) : u(!1);
   }, [
-m,
+p,
 t,
 s
   ]), {
@@ -56,7 +56,7 @@ horizontalScrollNotice: a.useMemo(() => r ? (0, i.jsx)(d, {
   r,
   h
 ]),
-handleScroll: () => p(!0),
+handleScroll: () => m(!0),
 handleSetScrollerRef: e => {
   var t;
   return l(null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollWidth);

@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(704215),
   d = n(481060),
   h = n(596454),
-  p = n(607070),
-  m = n(110630),
+  m = n(607070),
+  p = n(110630),
   _ = n(706140),
   f = n(543241),
   E = n(689789),
@@ -201,7 +201,7 @@ let z = (0, B.a4)(n),
     isGuest: U,
     isActiveChannelOrUnarchivableThread: h
   }),
-  J = t.type === X.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(X.oNc.NEWS) && (H || x) && (0, m.Z)(n),
+  J = t.type === X.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(X.oNc.NEWS) && (H || x) && (0, p.Z)(n),
   $ = t.getGuildId(),
   ee = null != $ && (n.type === X.uaV.USER_JOIN || n.type === X.uaV.GUILD_INVITE_REMINDER) && k.Z.canWithPartialContext(X.Plq.MANAGE_GUILD, {
     guildId: $
@@ -223,7 +223,7 @@ let z = (0, B.a4)(n),
   }),
   ea = (0, c.e7)([M.Z], () => M.Z.isMessageBookmarked(t.id, n.id)),
   es = (0, q.Z)(),
-  el = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled);
+  el = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled);
 return {
   channel: t,
   message: n,
@@ -268,7 +268,7 @@ es({
   }, [
 $,
 es
-  ]), eh = (0, R.$R)(t), ep = n.hasFlag(X.iLy.CROSSPOSTED), [em, e_] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), ef = em === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [eE, eg] = a.useState(!1), eC = a.useCallback(() => {
+  ]), eh = (0, R.$R)(t), em = n.hasFlag(X.iLy.CROSSPOSTED), [ep, e_] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []), ef = ep === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE, [eE, eg] = a.useState(!1), eC = a.useCallback(() => {
 eg(!0);
   }, []), eI = a.useCallback(() => {
 eg(!1);
@@ -379,10 +379,10 @@ children: [
     onClick: () => (0, z.qe)(t, n)
   }, 'view-thread') : null,
   f ? (0, i.jsx)(W.sF, {
-    label: ep ? J.Z.Messages.NEWS_CHANNEL_PUBLISHED : J.Z.Messages.NEWS_CHANNEL_PUBLISH,
+    label: em ? J.Z.Messages.NEWS_CHANNEL_PUBLISHED : J.Z.Messages.NEWS_CHANNEL_PUBLISH,
     icon: d.AnnouncementsIcon,
     onClick: () => (0, z.Xl)(t, n),
-    disabled: ep
+    disabled: em
   }, 'publish') : null,
   r && (eo || P) ? (0, i.jsx)(W.sF, {
     label: J.Z.Messages.DELETE,

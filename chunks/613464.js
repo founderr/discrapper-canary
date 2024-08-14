@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(110924),
   d = n(410030),
   h = n(58540),
-  p = n(100527),
-  m = n(906732),
+  m = n(100527),
+  p = n(906732),
   _ = n(527379),
   f = n(184301),
   E = n(318661),
@@ -40,7 +40,7 @@ n,
 t
   ]), [L, P] = a.useState(null == R || null == j), O = (0, u.Z)(j), y = a.useRef(null), {
 analyticsLocations: D
-  } = (0, m.ZP)(p.Z.GUILD_MEMBER_MOD_VIEW), k = (0, E.ZP)(t, n), U = (0, d.ZP)();
+  } = (0, p.ZP)(m.Z.GUILD_MEMBER_MOD_VIEW), k = (0, E.ZP)(t, n), U = (0, d.ZP)();
   return (a.useEffect(() => {
 !b && s();
   }, [
@@ -91,7 +91,7 @@ children: (0, i.jsx)(o.Spinner, {
   animated: !0,
   type: L ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
 })
-  }) : (0, i.jsx)(m.Gt, {
+  }) : (0, i.jsx)(p.Gt, {
 value: D,
 children: (0, i.jsx)('div', {
   className: l()(S.sidebarContainer, Z),

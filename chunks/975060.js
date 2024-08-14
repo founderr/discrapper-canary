@@ -9,31 +9,31 @@ let _ = '',
   T = null,
   I = '',
   d = '',
-  R = '',
   C = '',
+  R = '',
   N = '',
-  P = '',
   M = '',
-  f = '',
-  U = !1,
+  P = '',
+  U = '',
+  f = !1,
   L = null,
   O = null,
   h = null,
   p = null;
 
 function m() {
-  A = null, _ = '', S = null, s = '', c = !1, T = null, I = 'US', d = '', R = '', C = '', N = '', P = '', M = '', f = '', U = !1, L = null, O = null, h = null, p = null;
+  A = null, _ = '', S = null, s = '', c = !1, T = null, I = 'US', d = '', C = '', R = '', N = '', M = '', P = '', U = '', f = !1, L = null, O = null, h = null, p = null;
 }
 
 function Z(e) {
-  d = e.name, I = e.country, C = e.line1, N = e.line2, P = e.city, M = e.postalCode, f = e.state, R = e.email;
+  d = e.name, I = e.country, R = e.line1, N = e.line2, M = e.city, P = e.postalCode, U = e.state, C = e.email;
 }
 
-function G() {
+function D() {
   L = null;
 }
 
-function D(e) {
+function G(e) {
   let {
 error: t
   } = e;
@@ -75,17 +75,17 @@ return c;
   getBillingAddressInfo() {
 return {
   name: d,
-  email: R,
+  email: C,
   country: I,
-  line1: C,
+  line1: R,
   line2: N,
-  city: P,
-  postalCode: M,
-  state: f
+  city: M,
+  postalCode: P,
+  state: U
 };
   }
   get isBillingAddressInfoValid() {
-return U;
+return f;
   }
   get error() {
 return L;
@@ -123,7 +123,7 @@ let {
   info: t,
   isValid: n
 } = e;
-null != t.name && '' !== t.name && (d = t.name), I = t.country, d = t.name, C = t.line1, N = t.line2, P = t.city, M = t.postalCode, f = t.state, R = t.email, U = n;
+null != t.name && '' !== t.name && (d = t.name), I = t.country, d = t.name, R = t.line1, N = t.line2, M = t.city, P = t.postalCode, U = t.state, C = t.email, f = n;
   },
   BRAINTREE_TOKENIZE_PAYPAL_START: function() {
 _ = '', S = null;
@@ -134,7 +134,7 @@ let {
   nonce: n,
   billingAddress: r
 } = e;
-_ = t, S = n, Z(r), U = I.length > 0;
+_ = t, S = n, Z(r), f = I.length > 0;
   },
   BRAINTREE_TOKENIZE_VENMO_START: function() {
 s = '', S = null;
@@ -152,11 +152,11 @@ let {
 } = e;
 T = t;
   },
-  BILLING_PAYMENT_SOURCE_CREATE_START: G,
-  MODAL_POP: G,
-  NEW_PAYMENT_SOURCE_CLEAR_ERROR: G,
-  BILLING_PAYMENT_SOURCE_CREATE_FAIL: D,
-  STRIPE_TOKEN_FAILURE: D,
+  BILLING_PAYMENT_SOURCE_CREATE_START: D,
+  MODAL_POP: D,
+  NEW_PAYMENT_SOURCE_CLEAR_ERROR: D,
+  BILLING_PAYMENT_SOURCE_CREATE_FAIL: G,
+  STRIPE_TOKEN_FAILURE: G,
   BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: m,
   LOGOUT: m,
   BILLING_POPUP_BRIDGE_CALLBACK: function(e) {

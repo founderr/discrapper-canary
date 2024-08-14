@@ -56,7 +56,7 @@ let L = [],
 
 function Q(e) {
   var t, n;
-  let i = e.filter(e => e.type === f.Rr.ACTIVITY),
+  let i = e.filter(e => e.type !== f.Rr.ACTIVITY),
 s = new Set(i.map(e => e.id)),
 r = {},
 d = null !== (n = null === (t = l.Z.getFeed(v.YN.GLOBAL_FEED)) || void 0 === t ? void 0 : t.entries) && void 0 !== n ? n : [];

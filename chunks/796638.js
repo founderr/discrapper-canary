@@ -6,7 +6,7 @@ return E;
 return g;
   },
   cF: function() {
-return p;
+return m;
   }
 }), n(47120), n(653041);
 var i = n(735250),
@@ -19,8 +19,8 @@ var i = n(735250),
   u = n(27457),
   d = n(354459),
   h = n(835894);
-let p = 112,
-  m = 16 / 9 * p + 8,
+let m = 112,
+  p = 16 / 9 * m + 8,
   _ = 10 * o.Z.Millis.SECOND;
 
 function f(e) {
@@ -66,9 +66,9 @@ return () => {
     u = a.findIndex(f),
     h = null; -
   1 !== u && (h = a[u], a.splice(u, 1));
-  let p = null != h ? e - m - 8 : e,
-    E = Math.max(0, Math.min(Math.floor((p - 8) / 132), 12, t.length)),
-    g = Math.min((p - 8) / E - 8, m),
+  let m = null != h ? e - p - 8 : e,
+    E = Math.max(0, Math.min(Math.floor((m - 8) / 132), 12, t.length)),
+    g = Math.min((m - 8) / E - 8, p),
     C = Math.max(0, E - o.length),
     I = o.slice(0, E),
     x = a.slice(0, C),
@@ -121,7 +121,7 @@ onClick: r,
 channel: o,
 inCall: c,
 popoutWindow: d,
-paused: p = !1
+paused: m = !1
   } = e, _ = null != d;
   return (0, i.jsx)('div', {
 className: h.root,
@@ -143,9 +143,9 @@ children: t.map(e => {
       onClick: r,
       onDoubleClick: s,
       onContextMenu: l,
-      width: t ? m : n,
+      width: t ? p : n,
       inCall: c,
-      paused: p,
+      paused: m,
       inPopout: _
     })
   }, e.id);

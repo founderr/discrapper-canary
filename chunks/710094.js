@@ -33,8 +33,8 @@ function y(e) {
   var n, t;
   let r, {
   handleStepChange: y,
-  trialId: C,
-  trialFooterMessageOverride: M,
+  trialId: M,
+  trialFooterMessageOverride: C,
   reviewWarningMessage: O,
   planGroup: R,
   openInvoiceId: L,
@@ -49,8 +49,8 @@ function y(e) {
   activeSubscription: U,
   setUpdatedSubscription: k,
   contextMetadata: F,
-  currencies: W,
-  paymentSourceId: H,
+  currencies: H,
+  paymentSourceId: W,
   paymentSources: Y,
   priceOptions: K,
   purchaseError: V,
@@ -80,7 +80,7 @@ function y(e) {
   let ep = a.useRef(null),
 [em, eI] = (0, l.Z)(!1, 500);
   (0, p.t)();
-  let ef = null !== (t = null != C ? C : D) && void 0 !== t ? t : null,
+  let ef = null !== (t = null != M ? M : D) && void 0 !== t ? t : null,
 eE = null != ef && (!ei || P.nG[ef].skus.includes(q)) ? ef : null,
 ex = (0, u.N)(D),
 eN = (0, c.Ng)(),
@@ -104,14 +104,14 @@ null != V && null != ep.current && ep.current.scrollIntoView({
   k,
   es
 ]),
-eh = null != H ? Y[H] : null,
+eh = null != W ? Y[W] : null,
 eb = null != X && P.o4.has(X.id) && null != eh && !(0, o.aQ)(eh) ? Error(A.Z.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
 eg = a.useRef(null),
 [eP, ev] = a.useState(null),
 eA = !eu && null != ex && null != q && P.nG[ex.trial_id].skus.includes(q),
 ey = null == eN ? void 0 : null === (n = eN.discount) || void 0 === n ? void 0 : n.plan_ids,
-eC = !eu && null != eN && null != ey && null != X && ey.includes(X.id),
-eM = eu && (0, m.pO)(e_),
+eM = !eu && null != eN && null != ey && null != X && ey.includes(X.id),
+eC = eu && (0, m.pO)(e_),
 eO = null == w && null == G && er === v.GZ.SUBSCRIPTION,
 eR = (0, S.Kp)({
   isTrial: eA,
@@ -143,19 +143,19 @@ selectedPlanId: X.id,
 paymentSources: Y,
 onPaymentSourceChange: e => Q(null != e ? e.id : null),
 priceOptions: K,
-currencies: W,
+currencies: H,
 onCurrencyChange: e => J(e),
 handlePaymentSourceAdd: () => y(E.h8.ADD_PAYMENT_STEPS),
 setHasAcceptedTerms: ea,
 legalTermsNodeRef: eg,
 hasLegalTermsFlash: em,
 trialId: eE,
-trialFooterMessageOverride: M,
+trialFooterMessageOverride: C,
 reviewWarningMessage: O,
 purchaseState: et,
 referralTrialOfferId: D,
-isTrial: eA || null != C && null != M,
-isDiscount: eC,
+isTrial: eA || null != M && null != C,
+isDiscount: eM,
 handleClose: B
   })) : (s()(null != X, 'Expected plan to be selected'), r = (0, i.jsx)(_.Z, {
 premiumSubscription: U,
@@ -173,7 +173,7 @@ legalTermsNodeRef: eg,
 hasLegalTermsFlash: em,
 onInvoiceError: e => ev(e),
 planGroup: R,
-currencies: W,
+currencies: H,
 onCurrencyChange: e => J(e),
 hasOpenInvoice: null != L,
 purchaseState: et,
@@ -183,7 +183,7 @@ children: [
   (0, i.jsx)(x.P, {
     giftMessage: ed
   }),
-  !eM && (0, i.jsx)(h.Z, {
+  !eC && (0, i.jsx)(h.Z, {
     isEligibleForTrial: eA
   }),
   (0, i.jsxs)(g.C3, {

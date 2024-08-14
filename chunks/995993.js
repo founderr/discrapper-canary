@@ -1,6 +1,6 @@
 n.d(t, {
   m: function() {
-return Z;
+return v;
   }
 });
 var i = n(735250),
@@ -25,11 +25,11 @@ var i = n(735250),
   x = n(689938),
   S = n(704842);
 
-function Z(e) {
+function v(e) {
   let {
 guild: t,
-selected: Z
-  } = e, v = (0, h.Z)(t), T = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX), L = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter(e => p.Z.shouldIndicateNewChannel(t.id, e))), A = (0, r.e7)([f.ZP], () => f.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)), b = L.length > m.Cb, M = (0, r.e7)([
+selected: v
+  } = e, Z = (0, h.Z)(t), T = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX), L = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter(e => p.Z.shouldIndicateNewChannel(t.id, e))), A = (0, r.e7)([f.ZP], () => f.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)), b = L.length > m.Cb, M = (0, r.e7)([
 d.Z,
 f.ZP
   ], () => {
@@ -40,11 +40,11 @@ if (null == n)
 let i = g.default.extractTimestamp(n);
 return null != e && e > i;
   }), R = l.useCallback(() => {
-(0, _.uL)(I.Z5c.CHANNEL(t.id, v ? E.oC.CUSTOMIZE_COMMUNITY : E.oC.CHANNEL_BROWSER));
+(0, _.uL)(I.Z5c.CHANNEL(t.id, Z ? E.oC.CUSTOMIZE_COMMUNITY : E.oC.CHANNEL_BROWSER));
   }, [
 t.id,
-v
-  ]), O = l.useCallback(e => {
+Z
+  ]), P = l.useCallback(e => {
 (0, c.jW)(e, async () => {
   let {
     default: e
@@ -54,8 +54,8 @@ v
     guild: t
   });
 });
-  }, [t]), P = null;
-  return (!T || A || b) && !Z && !M && (P = (0, i.jsx)(o.TextBadge, {
+  }, [t]), O = null;
+  return (!T || A || b) && !v && !M && (O = (0, i.jsx)(o.TextBadge, {
 color: s.Z.colors.BADGE_BRAND_BG.css,
 text: x.Z.Messages.NEW,
 className: S.newChannel
@@ -66,10 +66,10 @@ renderIcon: e => (0, i.jsx)(o.ChannelListMagnifyingGlassIcon, {
   color: 'currentColor',
   className: e
 }),
-text: v ? x.Z.Messages.CHANNELS_AND_ROLES : x.Z.Messages.CHANNEL_BROWSER_TITLE,
-selected: Z,
+text: Z ? x.Z.Messages.CHANNELS_AND_ROLES : x.Z.Messages.CHANNEL_BROWSER_TITLE,
+selected: v,
 onClick: R,
-onContextMenu: O,
-trailing: P
+onContextMenu: P,
+trailing: O
   });
 }

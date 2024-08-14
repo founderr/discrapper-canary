@@ -15,8 +15,8 @@ function o(e) {
   isActivityActive: u,
   onMouseEnter: d,
   onMouseLeave: h,
-  onClick: p,
-  ...m
+  onClick: m,
+  ...p
 } = e,
 {
   enabled: _
@@ -46,8 +46,8 @@ onMouseLeave: e => {
   null == h || h(e), o.onMouseLeave();
 },
 onClick: e => {
-  null == p || p(e), c();
+  null == m || m(e), c();
 },
-...m
+...p
   });
 }

@@ -20,14 +20,14 @@ color: c,
 title: u,
 description: d,
 userCount: h,
-onClick: p,
-highlight: m
+onClick: m,
+highlight: p
   } = e;
   return (0, i.jsxs)(l.Clickable, {
-className: s()(o.container, t, null != m && {
-  [o.pulse]: m
+className: s()(o.container, t, null != p && {
+  [o.pulse]: p
 }),
-onClick: p,
+onClick: m,
 children: [
   (0, i.jsx)('div', {
     style: {

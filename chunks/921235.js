@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(268350),
   d = n(926491),
   h = n(419922),
-  p = n(314897),
-  m = n(375954),
+  m = n(314897),
+  p = n(375954),
   _ = n(594174),
   f = n(626135),
   E = n(51144),
@@ -33,9 +33,9 @@ channel: n
 (0, u.FQ)('847199849233514549', !0);
   }, []);
   let v = (0, r.e7)([
-  m.Z,
-  p.default
-], () => !!l()(m.Z.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== p.default.getId() && e.state === C.yb.SENT && !(0, g.Z)(e))),
+  p.Z,
+  m.default
+], () => !!l()(p.Z.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== m.default.getId() && e.state === C.yb.SENT && !(0, g.Z)(e))),
 S = (0, r.e7)([_.default], () => _.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
 Z = null !== (t = E.ZP.useName(S)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
 A = (0, r.e7)([d.Z], () => d.Z.getStickerById(T)),

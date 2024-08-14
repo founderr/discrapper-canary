@@ -1,6 +1,6 @@
 n.d(s, {
   Z: function() {
-return h;
+return p;
   }
 });
 var i = n(735250);
@@ -22,26 +22,26 @@ var t = n(442837),
   x = n(351707),
   v = n(228168),
   Z = n(689938),
-  p = n(408277);
+  h = n(408277);
 
-function h(e) {
+function p(e) {
   let {
 user: s,
 currentUser: n,
-displayProfile: h,
+displayProfile: p,
 subsection: T,
 onClose: g
   } = e, {
 theme: N
   } = (0, m.z)(), {
 trackUserProfileAction: C
-  } = (0, c.KZ)(), j = null == h ? void 0 : h.guildId, A = (0, t.e7)([r.Z], () => null != j ? r.Z.getGuild(j) : null), R = (0, t.e7)([d.Z], () => d.Z.getGuildId()), O = (0, t.e7)([a.default], () => a.default.locale), L = (0, _.Z)(s.id), M = (0, u.Z)(s.id);
+  } = (0, c.KZ)(), j = null == p ? void 0 : p.guildId, A = (0, t.e7)([r.Z], () => null != j ? r.Z.getGuild(j) : null), R = (0, t.e7)([d.Z], () => d.Z.getGuildId()), O = (0, t.e7)([a.default], () => a.default.locale), L = (0, _.Z)(s.id), M = (0, u.Z)(s.id);
   return (0, i.jsxs)(l.ScrollerThin, {
 fade: !0,
-className: p.scroller,
+className: h.scroller,
 children: [
-  (null == h ? void 0 : h.bio) != null && (null == h ? void 0 : h.bio) !== '' && (0, i.jsx)(I.Z, {
-    userBio: h.bio,
+  (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' && (0, i.jsx)(I.Z, {
+    userBio: p.bio,
     setLineClamp: !1
   }),
   null != A && (0, i.jsx)(x.Z, {
@@ -54,7 +54,7 @@ children: [
     heading: Z.Z.Messages.USER_PROFILE_MEMBER_SINCE,
     children: (0, i.jsx)(f.Z, {
       userId: s.id,
-      guildId: null == h ? void 0 : h.guildId,
+      guildId: null == p ? void 0 : p.guildId,
       tooltipDelay: v.vB
     })
   }),
@@ -62,7 +62,7 @@ children: [
     heading: Z.Z.Messages.CONNECTIONS,
     children: (0, i.jsx)(S.OA, {
       connectedAccounts: L,
-      className: p.connections,
+      className: h.connections,
       userId: s.id,
       theme: N,
       locale: O
@@ -71,7 +71,7 @@ children: [
   M.length > 0 && (0, i.jsx)(E.Z, {
     heading: Z.Z.Messages.APPS,
     children: M.map(e => (0, i.jsx)(S.tH, {
-      className: p.appsConnections,
+      className: h.appsConnections,
       applicationRoleConnection: e,
       locale: O,
       onApplicationClicked: () => {
@@ -87,7 +87,7 @@ children: [
     scrollIntoView: T === v.Tb.NOTE,
     children: (0, i.jsx)(o.Z, {
       userId: s.id,
-      className: p.note,
+      className: h.note,
       autoFocus: T === v.Tb.NOTE,
       onUpdate: () => C({
         action: 'SET_NOTE'

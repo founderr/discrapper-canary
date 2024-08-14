@@ -13,9 +13,9 @@ var i = n(735250),
   u = n(294218),
   d = n(592125),
   h = n(689938),
-  p = n(374294);
+  m = n(374294);
 
-function m(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -37,31 +37,31 @@ if (null == r)
 let c = d.Z.getChannel(r.channel_id);
 if (null == c)
   return null;
-let m = 'search-result-'.concat(r.id);
+let p = 'search-result-'.concat(r.id);
 return (0, i.jsx)(o.FocusRing, {
   ringTarget: this.hitRef,
-  ringClassName: p.__invalid_searchResultFocusRing,
+  ringClassName: m.__invalid_searchResultFocusRing,
   offset: 4,
   children: (0, i.jsxs)('li', {
-    className: p.container,
+    className: m.container,
     ...t,
     'aria-posinset': 1 + n + a,
     'aria-setsize': s,
-    'aria-labelledby': m,
+    'aria-labelledby': p,
     children: [
       (0, i.jsx)(o.Clickable, {
         tabIndex: -1,
         onClick: this.handleMessageClick,
         innerRef: this.containerRef,
-        className: p.searchResult,
+        className: m.searchResult,
         focusProps: {
           enabled: !1
         },
         children: (0, i.jsx)('div', {
           ref: this.hitRef,
-          className: p.message,
+          className: m.message,
           children: (0, i.jsx)(u.Z, {
-            id: m,
+            id: p,
             message: r,
             channel: c,
             onContextMenu: e => this.handleContextMenu(e, r),
@@ -73,10 +73,10 @@ return (0, i.jsx)(o.FocusRing, {
         }, r.id)
       }),
       (0, i.jsx)('div', {
-        className: p.buttonsContainer,
+        className: m.buttonsContainer,
         'aria-hidden': !0,
         children: (0, i.jsx)(o.Clickable, {
-          className: p.button,
+          className: m.button,
           onClick: this.jumpTo,
           children: h.Z.Messages.JUMP
         })
@@ -86,7 +86,7 @@ return (0, i.jsx)(o.FocusRing, {
 });
   }
   constructor(...e) {
-super(...e), m(this, 'containerRef', a.createRef()), m(this, 'hitRef', a.createRef()), m(this, 'handleContextMenu', (e, t) => {
+super(...e), p(this, 'containerRef', a.createRef()), p(this, 'hitRef', a.createRef()), p(this, 'handleContextMenu', (e, t) => {
   let a = d.Z.getChannel(t.channel_id);
   if (null != a)
     e.stopPropagation(), (0, c.jW)(e, async () => {
@@ -99,14 +99,14 @@ super(...e), m(this, 'containerRef', a.createRef()), m(this, 'hitRef', a.createR
         channel: a
       });
     });
-}), m(this, 'jumpTo', e => {
+}), p(this, 'jumpTo', e => {
   null != e && (e.preventDefault(), e.stopPropagation());
   let {
     onJump: t,
     result: n
   } = this.props, i = n.find(e => e.isSearchHit);
   null != i && t(i);
-}), m(this, 'handleMessageClick', e => {
+}), p(this, 'handleMessageClick', e => {
   if (function(e, t) {
       var n;
       let i = null === (n = window) || void 0 === n ? void 0 : n.getSelection();

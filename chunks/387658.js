@@ -27,13 +27,13 @@ var i = t(735250),
   g = t(660090),
   P = t(783097),
   L = t(845936),
-  R = t(176412),
-  b = t(870205),
+  b = t(176412),
+  R = t(870205),
   S = t(981631),
   T = t(689079),
   M = t(689938),
-  j = t(202558),
-  y = t(66086);
+  y = t(202558),
+  j = t(66086);
 let O = 'placeholder',
   Z = [, , , , , ].fill(O);
 
@@ -66,8 +66,8 @@ l.id,
 o,
 s,
 c
-  ]), m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, _ = a.useMemo(() => (0, R.ae)(o.displayDescription, void 0), [o.displayDescription]), C = a.useMemo(() => (0, i.jsxs)('div', {
-className: y.commandTextContainer,
+  ]), m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0, _ = a.useMemo(() => (0, b.ae)(o.displayDescription, void 0), [o.displayDescription]), C = a.useMemo(() => (0, i.jsxs)('div', {
+className: j.commandTextContainer,
 children: [
   (0, i.jsx)(d.Text, {
     variant: 'text-sm/semibold',
@@ -86,14 +86,14 @@ o.displayName,
 _
   ]);
   return (0, i.jsxs)(d.Clickable, {
-className: y.command,
+className: j.command,
 onClick: u,
 children: [
   (0, i.jsx)(d.FocusBlock, {
-    className: y.commandFocusBlock,
+    className: j.commandFocusBlock,
     children: C
   }),
-  m ? (0, i.jsx)(r.F, {}) : (0, i.jsx)(B, {
+  m ? (0, i.jsx)(r.F, {}) : (0, i.jsx)(k, {
     channel: l,
     command: o,
     sectionName: c
@@ -118,13 +118,13 @@ function U() {
   }
 }), []),
 l = a.useMemo(() => (0, i.jsxs)('div', {
-  className: y.commandTextContainerPlaceholder,
+  className: j.commandTextContainerPlaceholder,
   children: [
     (0, i.jsx)('div', {
-      className: j.textPlaceholder,
+      className: y.textPlaceholder,
       style: n,
       children: (0, i.jsx)(d.Text, {
-        className: j.hidden,
+        className: y.hidden,
         variant: 'text-sm/semibold',
         color: 'header-primary',
         lineClamp: 1,
@@ -132,10 +132,10 @@ l = a.useMemo(() => (0, i.jsxs)('div', {
       })
     }),
     (0, i.jsx)('div', {
-      className: j.textPlaceholder,
+      className: y.textPlaceholder,
       style: t,
       children: (0, i.jsx)(d.Text, {
-        className: j.hidden,
+        className: y.hidden,
         variant: 'text-xs/medium',
         color: 'text-muted',
         lineClamp: 1,
@@ -148,14 +148,14 @@ l = a.useMemo(() => (0, i.jsxs)('div', {
   t
 ]);
   return (0, i.jsx)('div', {
-className: o()(y.command, j.loadingAnimation, {
-  [j.noAnimation]: e
+className: o()(j.command, y.loadingAnimation, {
+  [y.noAnimation]: e
 }),
 children: l
   });
 }
 
-function B(e) {
+function k(e) {
   let {
 channel: n,
 command: t,
@@ -193,8 +193,8 @@ onClick: p,
 disabled: u,
 size: d.ButtonSizes.ICON,
 color: d.Button.Colors.PRIMARY,
-className: y.commandSentCTAButton,
-innerClassName: y.commandSentCTAButtonInner,
+className: j.commandSentCTAButton,
+innerClassName: j.commandSentCTAButtonInner,
 'aria-label': M.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({
   commandName: t.name
 }),
@@ -212,7 +212,7 @@ children: [
   });
 }
 
-function k(e) {
+function B(e) {
   let {
 channel: n,
 commands: t,
@@ -224,7 +224,7 @@ children: r
   return 0 === t.length ? null : (0, i.jsxs)(i.Fragment, {
 children: [
   (0, i.jsxs)('div', {
-    className: y.commandListHeader,
+    className: j.commandListHeader,
     children: [
       (0, i.jsx)(d.Heading, {
         variant: 'heading-sm/semibold',
@@ -234,7 +234,7 @@ children: [
     ]
   }),
   (0, i.jsx)('ul', {
-    className: y.commandContainer,
+    className: j.commandContainer,
     'aria-label': l,
     children: t.map((e, t) => e === O ? (0, i.jsx)(U, {}, e + t) : (0, i.jsx)(H, {
       channel: n,
@@ -289,22 +289,22 @@ commands: h,
 limit: 5
   });
   return (0, i.jsxs)('ul', {
-className: y.contentContainer,
+className: j.contentContainer,
 children: [
-  (0, i.jsx)(k, {
+  (0, i.jsx)(B, {
     channel: t,
     section: p,
     commands: E,
     headerName: M.Z.Messages.APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER,
     sectionName: o
   }),
-  (0, i.jsx)(k, {
+  (0, i.jsx)(B, {
     channel: t,
     section: p,
     commands: m.current ? Z : h,
     headerName: M.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
     sectionName: o,
-    children: A && (0, i.jsx)(b.Z, {
+    children: A && (0, i.jsx)(R.Z, {
       sortOrder: _,
       onSortOptionClick: f
     })

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(442837),
   d = n(410030),
   h = n(607070),
-  p = n(645041),
-  m = n(430824),
+  m = n(645041),
+  p = n(430824),
   _ = n(914010),
   f = n(594174),
   E = n(626135),
@@ -36,8 +36,8 @@ function b(e) {
 guild: n,
 showToast: s,
 onConfirm: o,
-onDismiss: p
-  } = e, [m, _] = a.useState(!1), E = a.useRef(null), C = (0, g.Cc)(n.id), T = (0, d.ZP)(), S = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), Z = (0, I.nP)(null == C ? void 0 : null === (t = C.branding) || void 0 === t ? void 0 : t.primaryColor, [
+onDismiss: m
+  } = e, [p, _] = a.useState(!1), E = a.useRef(null), C = (0, g.Cc)(n.id), T = (0, d.ZP)(), S = (0, u.e7)([h.Z], () => h.Z.useReducedMotion), Z = (0, I.nP)(null == C ? void 0 : null === (t = C.branding) || void 0 === t ? void 0 : t.primaryColor, [
 c.tokens.colors.BG_BRAND,
 0.5
   ]), b = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
@@ -57,8 +57,8 @@ return null != t && (t.style.zIndex = '1003'), () => {
 };
   }, []);
   let L = a.useCallback(e => {
-  e.stopPropagation(), e.preventDefault(), p();
-}, [p]),
+  e.stopPropagation(), e.preventDefault(), m();
+}, [m]),
 P = a.useCallback(e => {
   e.stopPropagation(), e.preventDefault(), o();
 }, [o]),
@@ -113,7 +113,7 @@ return t && (0, i.jsx)(r.animated.div, {
     'aria-label': U,
     onClick: P,
     children: (0, i.jsxs)('div', {
-      className: l()(M.toastContainerInner, m ? M.hovered : null),
+      className: l()(M.toastContainerInner, p ? M.hovered : null),
       children: [
         (0, i.jsxs)('div', {
           className: M.guildIconContainer,
@@ -171,7 +171,7 @@ return t && (0, i.jsx)(r.animated.div, {
 }
 
 function R(e) {
-  let {} = e, t = (0, u.e7)([_.Z], () => _.Z.getGuildId()), n = (0, T.h)(t, 'clan_tag_upsell_toast'), s = (0, u.e7)([m.Z], () => m.Z.getGuild(t), [t]), [l, r] = a.useState(!1), c = a.useRef(null);
+  let {} = e, t = (0, u.e7)([_.Z], () => _.Z.getGuildId()), n = (0, T.h)(t, 'clan_tag_upsell_toast'), s = (0, u.e7)([p.Z], () => p.Z.getGuild(t), [t]), [l, r] = a.useState(!1), c = a.useRef(null);
   a.useEffect(() => (n && (c.current = window.setTimeout(() => {
 r(!0), E.default.track(S.rMx.DISMISSIBLE_CONTENT_SHOWN, {
   type: o.C[o.C.ADOPT_CLAN_IDENTITY_NOTICE],
@@ -188,7 +188,7 @@ null != c.current && window.clearTimeout(c.current);
 ]),
 h = a.useCallback(() => {
   if (r(!1), null != t)
-    (0, p.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : S.lds, !0, Z.L.DISMISS);
+    (0, m.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : S.lds, !0, Z.L.DISMISS);
 }, [t]);
   return n && null != t && null != s ? (0, i.jsx)(b, {
 guild: s,

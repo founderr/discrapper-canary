@@ -24,16 +24,16 @@ var i = n(735250),
   N = n(855981),
   x = n(55543),
   S = n(626135),
-  Z = n(768581),
-  v = n(358085),
+  v = n(768581),
+  Z = n(358085),
   T = n(998502),
   L = n(379164),
   A = n(590965),
   b = n(981631),
   M = n(474936),
   R = n(689938),
-  O = n(933284),
-  P = n(224499);
+  P = n(933284),
+  O = n(224499);
 
 function y() {
   let {
@@ -59,19 +59,19 @@ onClick: () => (0, C.Z)({
   },
   analyticsLocations: e
 }),
-className: O.experimentUpsellError,
+className: P.experimentUpsellError,
 children: [
   (0, i.jsx)(o.NitroWheelIcon, {
     size: 'md',
-    className: O.experimentUpsellIcon,
+    className: P.experimentUpsellIcon,
     color: f.JX.PREMIUM_TIER_2
   }),
   (0, i.jsx)('span', {
-    className: O.experimentUpsellText,
+    className: P.experimentUpsellText,
     children: R.Z.Messages.GUILD_CAP_UPSELL_TOOLTIP
   }),
   (0, i.jsx)('span', {
-    className: O.experimentGetNitro,
+    className: P.experimentGetNitro,
     children: R.Z.Messages.GUILD_CAP_UPSELL_GET_NITRO
   })
 ]
@@ -84,20 +84,20 @@ className: t
   } = e;
   return (0, i.jsxs)('div', {
 'aria-hidden': 'true',
-className: a()(O.iconContainer, t),
+className: a()(P.iconContainer, t),
 children: [
   (0, i.jsx)(N.Z, {
-    className: O.iconSparklePlus
+    className: P.iconSparklePlus
   }),
   (0, i.jsx)(o.LinkIcon, {
     size: 'custom',
     color: 'currentColor',
-    className: O.iconLink,
+    className: P.iconLink,
     width: 40,
     height: 40
   }),
   (0, i.jsx)(x.Z, {
-    className: O.iconSparkleStar
+    className: P.iconSparkleStar
   })
 ]
   });
@@ -116,10 +116,10 @@ children: (0, i.jsx)(o.ModalRoot, {
   'aria-labelledby': n,
   transitionState: t,
   children: (0, i.jsxs)(o.ModalContent, {
-    className: O.errorContent,
+    className: P.errorContent,
     children: [
       (0, i.jsx)(j, {
-        className: O.errorImage
+        className: P.errorImage
       }),
       (0, i.jsx)(o.Heading, {
         id: n,
@@ -128,7 +128,7 @@ children: (0, i.jsx)(o.ModalRoot, {
         children: R.Z.Messages.INVITE_MODAL_ERROR_INVALID_TITLE
       }),
       (0, i.jsx)('div', {
-        className: O.errorBody,
+        className: P.errorBody,
         children: R.Z.Messages.INVITE_MODAL_ERROR_INVALID_BODY
       }),
       (0, i.jsx)(h.zx, {
@@ -157,7 +157,7 @@ error: C,
 submitting: N
   } = (0, s.cj)([A.Z], () => A.Z.getProps());
   l.useEffect(() => {
-!__OVERLAY__ && v.isPlatformEmbedded && ((0, v.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
+!__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
   }, []);
   let x = (0, g.Dt)(),
 {
@@ -184,7 +184,7 @@ target_application: G
   if (null != G)
 t = null == j ? void 0 : j.name, n = I.Z.createFromServer(G).getCoverImageURL(1024);
   else if (null != j)
-t = j.name, n = Z.ZP.getGuildSplashURL({
+t = j.name, n = v.ZP.getGuildSplashURL({
   id: j.id,
   splash: j.splash
 });
@@ -200,20 +200,20 @@ children: (0, i.jsxs)(o.ModalRoot, {
   size: o.ModalSize.DYNAMIC,
   'aria-labelledby': x,
   transitionState: r,
-  className: O.container,
+  className: P.container,
   children: [
     (0, i.jsx)('div', {
-      className: O.contentWrapper,
+      className: P.contentWrapper,
       children: (0, i.jsx)(o.Scroller, {
-        className: O.scroller,
+        className: P.scroller,
         children: (0, i.jsxs)(_.Z, {
-          className: O.inviteContent,
+          className: P.inviteContent,
           direction: _.Z.Direction.VERTICAL,
           justify: _.Z.Justify.BETWEEN,
           children: [
             (0, i.jsx)('div', {
               id: x,
-              className: P.marginBottom20,
+              className: O.marginBottom20,
               children: (0, i.jsx)(c.Z, {
                 invite: f,
                 disableUser: k,
@@ -221,7 +221,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
               })
             }),
             B && null != j ? (0, i.jsx)('div', {
-              className: a()(P.marginBottom20, O.stage),
+              className: a()(O.marginBottom20, P.stage),
               children: (0, i.jsx)(p.Z, {
                 isCard: !0,
                 stageInstance: f.stage_instance,
@@ -251,7 +251,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
                     });
                   }
                 }) : (0, i.jsxs)('div', {
-                  className: O.buttonGroup,
+                  className: P.buttonGroup,
                   children: [
                     (0, i.jsx)(h.zx, {
                       size: h.zx.Sizes.LARGE,
@@ -270,10 +270,10 @@ children: (0, i.jsxs)(o.ModalRoot, {
                 }),
                 (0, i.jsx)(_.Z, {
                   justify: _.Z.Justify.CENTER,
-                  className: P.marginTop8,
+                  className: O.marginTop8,
                   children: (0, i.jsx)(h.zx, {
                     look: h.zx.Looks.LINK,
-                    className: O.noThanksButton,
+                    className: P.noThanksButton,
                     onClick: function() {
                       L.Z.close();
                     },
@@ -288,7 +288,7 @@ children: (0, i.jsxs)(o.ModalRoot, {
       })
     }),
     null != n && (0, i.jsx)('div', {
-      className: O.inviteSplash,
+      className: P.inviteSplash,
       style: {
         backgroundImage: 'url('.concat(n, ')')
       }

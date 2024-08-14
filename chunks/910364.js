@@ -21,8 +21,8 @@ var i = n(735250),
   x = n(594174),
   v = n(785717),
   Z = n(221292),
-  p = n(621853),
-  h = n(318661),
+  h = n(621853),
+  p = n(318661),
   T = n(726059),
   g = n(162267),
   N = n(502762),
@@ -42,9 +42,9 @@ isCurrentUser: a,
 section: r,
 setSection: d,
 hasActivity: c
-  } = e, u = (0, l.e7)([p.Z], () => {
+  } = e, u = (0, l.e7)([h.Z], () => {
 var e, s;
-return (null === (s = p.Z.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null;
+return (null === (s = h.Z.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null;
   }), _ = null === (s = (0, T.Z)(t.id, !t.bot && !a).mutualFriends) || void 0 === s ? void 0 : s.length, f = null === (n = (0, g.Z)(t.id, !t.bot && !a).mutualGuilds) || void 0 === n ? void 0 : n.length;
   return (0, i.jsx)('div', {
 className: M.tabBarContainer,
@@ -91,7 +91,7 @@ children: (0, i.jsxs)(o.TabBar, {
 function b(e) {
   var s, n;
   let {
-user: p,
+user: h,
 guildId: T,
 channelId: g,
 messageId: b,
@@ -103,7 +103,7 @@ initialSubsection: B,
 transitionState: G,
 sourceAnalyticsLocations: w = [],
 onClose: k
-  } = e, V = null !== (s = (0, l.e7)([x.default], () => x.default.getUser(p.id))) && void 0 !== s ? s : p, Y = (0, h.ZP)(null !== (n = V.id) && void 0 !== n ? n : ''), {
+  } = e, V = null !== (s = (0, l.e7)([x.default], () => x.default.getUser(h.id))) && void 0 !== s ? s : h, Y = (0, p.ZP)(null !== (n = V.id) && void 0 !== n ? n : ''), {
 analyticsLocations: H
   } = (0, _.ZP)([
 ...w,

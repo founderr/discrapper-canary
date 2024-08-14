@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(904245),
   d = n(603263),
   h = n(963374),
-  p = n(607070),
-  m = n(933557),
+  m = n(607070),
+  p = n(933557),
   _ = n(471445),
   f = n(95398),
   E = n(905405),
@@ -43,7 +43,7 @@ function D(e) {
 search: n,
 searchId: s,
 renderEmbeds: l,
-scrollTo: m,
+scrollTo: p,
 searchResults: _,
 blockCount: f,
 onChangePage: E
@@ -97,18 +97,18 @@ return _.reduce((n, i) => {
 _,
 T
   ]), b = a.useRef([]), R = Z.reduce((e, t) => e + 1 + t.results.length, 0), L = a.useCallback((e, t) => {
-if (!p.Z.keyboardModeEnabled)
+if (!m.Z.keyboardModeEnabled)
   return;
 let n = b.current,
   i = null != t ? n[t] : void 0;
 if (null == i || null == i.hitRef.current)
   return;
 let a = i.hitRef.current.getClientRects()[0];
-m(a.top - 0.5 * a.height, !1, () => {
+p(a.top - 0.5 * a.height, !1, () => {
   var t;
   null === (t = document.getElementById(e)) || void 0 === t || t.focus();
 });
-  }, [m]), D = a.useCallback(e => {
+  }, [p]), D = a.useCallback(e => {
 let t = b.current[e];
 null == t || t.jumpTo();
   }, []), k = (0, r.ZP)({
@@ -130,7 +130,7 @@ return (0, i.jsx)(U, {
   startIndex: a,
   resultRefs: b,
   totalResults: C,
-  scrollTo: m,
+  scrollTo: p,
   searchId: s,
   renderEmbeds: l,
   offset: g,
@@ -229,7 +229,7 @@ highlighter: c,
 startIndex: u,
 resultRefs: d,
 totalResults: h,
-scrollTo: p,
+scrollTo: m,
 searchId: I,
 renderEmbeds: N,
 offset: M,
@@ -242,7 +242,7 @@ if (e === b.Z.getChannelId())
 let t = v.Z.getChannel(e);
 if (null != t && !!Z.Z.can(P.Plq.VIEW_CHANNEL, t))
   (0, x.Kh)(t.id);
-  }, []), H = null != l ? (0, m.F6)(l, R.default, A.Z, !1) : '???', G = D && null != l.guild_id ? null === (t = S.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == l ? void 0 : l.parent_id) != null ? v.Z.getChannel(l.parent_id) : null, F = null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : null, W = null !== (s = (0, _.KS)(l)) && void 0 !== s ? s : o.TextIcon, z = Z.Z.can(P.Plq.MANAGE_MESSAGES, l), {
+  }, []), H = null != l ? (0, p.F6)(l, R.default, A.Z, !1) : '???', G = D && null != l.guild_id ? null === (t = S.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == l ? void 0 : l.parent_id) != null ? v.Z.getChannel(l.parent_id) : null, F = null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : null, W = null !== (s = (0, _.KS)(l)) && void 0 !== s ? s : o.TextIcon, z = Z.Z.can(P.Plq.MANAGE_MESSAGES, l), {
 content: Y
   } = (0, C.ZP)({
 content: H,
@@ -302,7 +302,7 @@ children: (0, i.jsxs)('ul', {
       return (0, i.jsx)(L.Z, {
         ref: e => d.current[n] = e,
         totalResults: h,
-        scrollTo: p,
+        scrollTo: m,
         searchId: I,
         renderEmbeds: N,
         searchOffset: M,

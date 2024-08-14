@@ -81,9 +81,9 @@ topBar: _
 mode: N,
 mentionCount: x,
 targetChannelId: S
-  } = 'bottom' === t ? h : _, Z = N === f.x.HIDDEN, v = (0, u.useSpring)({
+  } = 'bottom' === t ? h : _, v = N === f.x.HIDDEN, Z = (0, u.useSpring)({
 to: {
-  transform: Z ? 'bottom' === t ? 'translateY(180%)' : 'translateY(-180%)' : 'translateY(0%)'
+  transform: v ? 'bottom' === t ? 'translateY(180%)' : 'translateY(-180%)' : 'translateY(0%)'
 },
 config: C
   }, E ? 'respect-motion-settings' : 'animate-never'), T = l.useCallback(e => {
@@ -99,8 +99,8 @@ className: a()(m.container, {
 }),
 children: (0, i.jsx)(s.animated.div, {
   className: m.containerPadding,
-  style: v,
-  'aria-hidden': Z,
+  style: Z,
+  'aria-hidden': v,
   children: N === f.x.HIDDEN ? (0, i.jsx)('div', {
     className: a()(m.bar, m.emptyBar)
   }) : N === f.x.UNREAD ? (0, i.jsxs)(u.Clickable, {

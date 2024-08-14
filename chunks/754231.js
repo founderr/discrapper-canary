@@ -122,7 +122,7 @@ children: o
   });
 }
 
-function Z(e) {
+function v(e) {
   let {
 activity: t
   } = e, n = null == t ? void 0 : t.state;
@@ -132,7 +132,7 @@ children: n
   });
 }
 
-function v(e) {
+function Z(e) {
   let {
 activity: t
   } = e;
@@ -205,7 +205,7 @@ children: [
             user: r,
             onOpenSpotifyArtist: p
           }),
-          (0, i.jsx)(Z, {
+          (0, i.jsx)(v, {
             activity: t
           }),
           g.length > 0 && (0, i.jsx)(d.Z, {
@@ -235,7 +235,7 @@ children: [
       })
     ]
   }),
-  (0, i.jsx)(v, {
+  (0, i.jsx)(Z, {
     activity: t
   })
 ]

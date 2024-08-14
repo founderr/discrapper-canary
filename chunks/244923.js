@@ -1,23 +1,23 @@
-var t = s(735250);
-s(470079);
-var r = s(481060),
-  l = s(366939),
-  i = s(853872),
-  a = s(212895),
-  c = s(296848);
+var s = t(735250);
+t(470079);
+var r = t(481060),
+  l = t(366939),
+  i = t(853872),
+  a = t(212895),
+  c = t(296848);
 n.Z = function(e) {
   let {
 activeSubscription: n,
-onNext: s,
+onNext: t,
 isSubmitting: o,
 paymentSourceId: u,
 buttonLabel: I,
 analyticsLocations: _
   } = e, E = async () => {
 let e = i.Z.getPaymentSource(u);
-null != e && (await (0, a.i1)(u, (0, c.yb)(n)), await l.tq(n, e, n.currency, _), s());
+null != e && (await (0, a.i1)(u, (0, c.yb)(n)), await l.tq(n, e, n.currency, _), t());
   };
-  return (0, t.jsx)(r.Button, {
+  return (0, s.jsx)(r.Button, {
 'data-testid': 'purchase',
 onClick: E,
 color: r.Button.Colors.GREEN,

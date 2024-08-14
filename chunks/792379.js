@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(906732),
   d = n(580552),
   h = n(680295),
-  p = n(5192),
-  m = n(785717),
+  m = n(5192),
+  p = n(785717),
   _ = n(221292),
   f = n(318661),
   E = n(78675),
@@ -40,7 +40,7 @@ user: t,
 channel: n
   } = e, P = __OVERLAY__ || !(0, d.Z)(t.id), O = (0, f.ZP)(t.id), y = (0, o.ZP)(), {
 analyticsLocations: D
-  } = (0, u.ZP)(c.Z.PROFILE_PANEL), k = (0, m.ZB)({
+  } = (0, u.ZP)(c.Z.PROFILE_PANEL), k = (0, p.ZB)({
 layout: 'SIMPLIFIED_DM_PANEL',
 userId: t.id,
 channelId: n.id
@@ -53,7 +53,7 @@ channelId: n.id
   };
   return (0, i.jsx)(u.Gt, {
 value: D,
-children: (0, i.jsx)(m.Mt, {
+children: (0, i.jsx)(p.Mt, {
   value: k,
   children: (0, i.jsxs)(N.Z, {
     ref: U,
@@ -98,7 +98,7 @@ children: (0, i.jsx)(m.Mt, {
               (0, i.jsx)(v.Z, {
                 user: t,
                 profileType: b.y0.PANEL,
-                nickname: p.ZP.getName(null, n.id, t),
+                nickname: m.ZP.getName(null, n.id, t),
                 pronouns: null == O ? void 0 : O.pronouns,
                 onOpenProfile: P ? void 0 : B,
                 tags: (0, i.jsx)(g.Z, {

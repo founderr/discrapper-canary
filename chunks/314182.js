@@ -1,16 +1,16 @@
-var t = s(735250),
-  r = s(470079),
-  l = s(120356),
-  i = s.n(l),
-  a = s(432734);
+var s = t(735250),
+  r = t(470079),
+  l = t(120356),
+  i = t.n(l),
+  a = t(432734);
 let c = r.forwardRef(function(e, n) {
   let {
-isActive: s,
+isActive: t,
 children: r
   } = e;
-  return (0, t.jsx)('div', {
+  return (0, s.jsx)('div', {
 className: i()(a.wrapper, {
-  [a.wrapperActive]: s
+  [a.wrapperActive]: t
 }),
 ref: n,
 children: r

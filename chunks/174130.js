@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 });
 var i = n(735250);
@@ -15,15 +15,15 @@ var a = n(442837),
   d = n(916069),
   h = n(689938);
 
-function p(e) {
+function m(e) {
   let {
 channel: t
   } = e, {
 isFavoritesPerk: n
-  } = (0, u.z)('ChannelFavoritesHeaderButton'), p = (0, d.Z)(), {
-notifyFavoriteAdded: m
+  } = (0, u.z)('ChannelFavoritesHeaderButton'), m = (0, d.Z)(), {
+notifyFavoriteAdded: p
   } = (0, c.up)(), _ = (0, a.e7)([r.Z], () => r.Z.isFavorite(t.id));
-  if (!n || p)
+  if (!n || m)
 return null;
   let f = _ ? s.StarIcon : s.StarOutlineIcon,
 E = _ ? h.Z.Messages.UNFAVORITE_CHANNEL : h.Z.Messages.FAVORITE_CHANNEL;
@@ -32,7 +32,7 @@ icon: f,
 tooltip: E,
 'aria-label': E,
 onClick: () => {
-  _ ? (0, o.oC)(t.id) : (m(), (0, o.kj)(t.id));
+  _ ? (0, o.oC)(t.id) : (p(), (0, o.kj)(t.id));
 }
   });
 }

@@ -21,8 +21,8 @@ var i = n(735250),
   x = n(318661),
   v = n(78675),
   Z = n(113557),
-  p = n(169979),
-  h = n(119096),
+  h = n(169979),
+  p = n(119096),
   T = n(502762),
   g = n(544989),
   N = n(481932),
@@ -171,7 +171,7 @@ children: (0, i.jsx)(f.Mt, {
                 profileType: L.y0.FULL_SIZE,
                 hasProfileEffect: (null == et ? void 0 : et.profileEffectId) != null
               }),
-              (0, i.jsx)(h.Z, {
+              (0, i.jsx)(p.Z, {
                 isReply: ef,
                 sent: e_,
                 shown: ec,
@@ -207,7 +207,7 @@ children: (0, i.jsx)(f.Mt, {
                     viewProfileItem: em(),
                     onClose: Y
                   }),
-                  (0, i.jsx)(p.Z, {
+                  (0, i.jsx)(h.Z, {
                     location: 'SimplifiedUserProfileModal',
                     user: s,
                     displayProfile: et,

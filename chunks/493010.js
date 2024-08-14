@@ -8,8 +8,8 @@ var i = n(735250),
   u = n(325708),
   d = n(541716),
   h = n(605236),
-  p = n(665149),
-  m = n(703558),
+  m = n(665149),
+  p = n(703558),
   _ = n(585483),
   f = n(909820),
   E = n(981631),
@@ -30,7 +30,7 @@ maxWidth: x
   let T = a.useCallback(() => {
   r.Z.updateChatOpen(t.id, !1), _.S.safeDispatch(E.CkL.FOCUS_CHAT_BUTTON);
 }, [t.id]),
-N = (0, i.jsx)(p.ZP.Icon, {
+N = (0, i.jsx)(m.ZP.Icon, {
   icon: l.XSmallIcon,
   tooltip: C.Z.Messages.CLOSE,
   onClick: T
@@ -42,18 +42,18 @@ floatingLayer: f.ZP,
 children: [
   (0, i.jsx)(o.Z, {
     channel: t,
-    draftType: m.d.ChannelMessage
+    draftType: p.d.ChannelMessage
   }),
-  (0, i.jsxs)(p.ZP, {
+  (0, i.jsxs)(m.ZP, {
     toolbar: N,
     'aria-label': C.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
     children: [
-      (0, i.jsx)(p.ZP.Icon, {
+      (0, i.jsx)(m.ZP.Icon, {
         icon: l.ChatIcon,
         disabled: !0,
         'aria-label': C.Z.Messages.VOICE_CHAT_TEXT_CHANNEL
       }),
-      (0, i.jsx)(p.ZP.Title, {
+      (0, i.jsx)(m.ZP.Title, {
         children: t.name
       })
     ]

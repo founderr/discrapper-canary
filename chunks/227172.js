@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(420660),
   d = n(429589),
   h = n(757182),
-  p = n(706454),
-  m = n(374129),
+  m = n(706454),
+  p = n(374129),
   _ = n(639351),
   f = n(823379),
   E = n(192918),
@@ -38,14 +38,14 @@ let R = {
   [s.z.IOS]: null,
   [s.z.ANDROID]: null,
   [s.z.XBOX]: _.Z,
-  [s.z.PLAYSTATION]: m.Z
+  [s.z.PLAYSTATION]: p.Z
 };
 t.Z = e => {
   var t;
   let {
 channel: n,
 entry: s,
-requestId: m,
+requestId: p,
 closePopout: _
   } = e, {
 iconUrl: j,
@@ -59,7 +59,7 @@ richIcon: U
   } = (0, A.n)(s), {
 primaryColor: w,
 secondaryColor: B
-  } = (0, T.Z)(j), H = (0, l.e7)([p.default], () => p.default.locale), {
+  } = (0, T.Z)(j), H = (0, l.e7)([m.default], () => m.default.locale), {
 streamPreviewUrl: G,
 stream: V
   } = (0, g.Z)(s), {
@@ -167,7 +167,7 @@ children: [
       generateReactionImage: K,
       reactionImageAltText: (0, x.IS)(s, P),
       entry: s,
-      requestId: m,
+      requestId: p,
       buttons: $
     })
   })

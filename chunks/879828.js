@@ -26,16 +26,16 @@ onClose: m
 live: S,
 recent: x,
 stream: v
-  } = (0, r.Z)(s.id), Z = s.id === n.id, p = (0, a.wE)(l.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+  } = (0, r.Z)(s.id), Z = s.id === n.id, h = (0, a.wE)(l.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
   return t.useEffect(() => {
-if (!!Z && !p)
+if (!!Z && !h)
   (0, a.EW)(l.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
     dismissAction: I.L.AUTO_DISMISS,
     forceTrack: !0
   });
   }, [
 Z,
-p
+h
   ]), (0, i.jsxs)(o.ScrollerThin, {
 className: E.scroller,
 fade: !0,

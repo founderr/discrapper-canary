@@ -1,7 +1,7 @@
 s(653041), s(47120);
 var a = s(735250),
-  n = s(470079),
-  l = s(442837),
+  l = s(470079),
+  n = s(442837),
   i = s(481060),
   r = s(325432),
   o = s(391690),
@@ -19,7 +19,7 @@ writable: !0
   }) : e[t] = s, e;
 }
 let I = 'select';
-class A extends n.PureComponent {
+class A extends l.PureComponent {
   fetchAllDirectoryMetadata() {
 let {
   installationPaths: e
@@ -144,7 +144,7 @@ super(...e), p(this, 'state', {
 });
   }
 }
-t.Z = l.ZP.connectStores([o.Z], () => ({
+t.Z = n.ZP.connectStores([o.Z], () => ({
   installationPaths: o.Z.installationPaths,
   installationPathsMetadata: o.Z.installationPathsMetadata
 }))(A);

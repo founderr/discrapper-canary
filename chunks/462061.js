@@ -16,8 +16,8 @@ var i = n(735250),
   u = n(763520),
   d = n(358221),
   h = n(414910),
-  p = n(266910),
-  m = n(352978),
+  m = n(266910),
+  p = n(352978),
   _ = n(928518),
   f = n(204197),
   E = n(470956),
@@ -84,7 +84,7 @@ animateOnHover: !K
   }), J = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
   return (a.useEffect(() => {
 n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === U.id && c.Z.selectParticipant(n.id, null);
-  }, [G]), s && !W && !O && G && !R && null != D && I.Z.supports(S.AN.VIDEO)) ? (0, i.jsx)(m.Z, {
+  }, [G]), s && !W && !O && G && !R && null != D && I.Z.supports(S.AN.VIDEO)) ? (0, i.jsx)(p.Z, {
 onResize: L,
 wrapperClassName: A.videoWrapper,
 className: A.content,
@@ -99,7 +99,7 @@ userId: U.id
 className: l()(A.content, {
   [A.blockedAvatar]: P
 }),
-children: (0, i.jsx)(p.Z, {
+children: (0, i.jsx)(m.Z, {
   'aria-label': Y,
   src: X,
   avatarDecoration: Q,

@@ -32,13 +32,13 @@ var i, l, r, a, s = n(735250),
   N = n(430824),
   x = n(496675),
   S = n(914010),
-  Z = n(281029),
-  v = n(981631),
+  v = n(281029),
+  Z = n(981631),
   T = n(689938),
   L = n(391463);
 
 function A(e, t, n) {
-  return null != t && !!t && !(0, Z.ig)(n, e.type);
+  return null != t && !!t && !(0, v.ig)(n, e.type);
 }
 
 function b(e, t) {
@@ -56,7 +56,7 @@ hasChannelInfo: r = !1
   if ((0, d.e7)([
   x.Z,
   S.Z
-], () => n || S.Z.getGuildId() === v.I_8 || !x.Z.can(v.Plq.MANAGE_CHANNELS, t) && !x.Z.can(v.Plq.MANAGE_ROLES, t) && !x.Z.can(v.Plq.MANAGE_WEBHOOKS, t) || (0, I.r8)(t.type) && !x.Z.can(v.Plq.VIEW_CHANNEL, t) || t.isGuildVocal() && !x.Z.can(v.Plq.CONNECT, t) || !I.dF.has(t.type)))
+], () => n || S.Z.getGuildId() === Z.I_8 || !x.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !x.Z.can(Z.Plq.MANAGE_ROLES, t) && !x.Z.can(Z.Plq.MANAGE_WEBHOOKS, t) || (0, I.r8)(t.type) && !x.Z.can(Z.Plq.VIEW_CHANNEL, t) || t.isGuildVocal() && !x.Z.can(Z.Plq.CONNECT, t) || !I.dF.has(t.type)))
 return null;
 
   function a() {
@@ -98,13 +98,13 @@ locked: l,
 tabIndex: r,
 forceShowButtons: a,
 hasChannelInfo: o = !1
-  } = e, c = (0, d.e7)([N.Z], () => N.Z.getGuild(t.getGuildId())), p = (0, d.e7)([m.Z], () => m.Z.getStageInstanceByChannel(t.id), [t.id]), g = (0, d.e7)([_.ZP], () => _.ZP.getActiveEventByChannel(t.id), [t.id]), I = (0, d.e7)([x.Z], () => (0, f.b)(x.Z, c, t, p)), S = (0, d.e7)([x.Z], () => x.Z.can(v.Plq.CREATE_INSTANT_INVITE, t) ? T.Z.Messages.CREATE_INSTANT_INVITE : T.Z.Messages.INVITE_TO_SERVER);
+  } = e, c = (0, d.e7)([N.Z], () => N.Z.getGuild(t.getGuildId())), p = (0, d.e7)([m.Z], () => m.Z.getStageInstanceByChannel(t.id), [t.id]), g = (0, d.e7)([_.ZP], () => _.ZP.getActiveEventByChannel(t.id), [t.id]), I = (0, d.e7)([x.Z], () => (0, f.b)(x.Z, c, t, p)), S = (0, d.e7)([x.Z], () => x.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? T.Z.Messages.CREATE_INSTANT_INVITE : T.Z.Messages.INVITE_TO_SERVER);
   if (l || !I)
 return null;
 
-  function Z() {
+  function v() {
 if (null != c) {
-  let e = E.Z.getAllActiveStreams().filter(e => e.state !== v.jm8.ENDED && e.channelId === t.id);
+  let e = E.Z.getAllActiveStreams().filter(e => e.state !== Z.jm8.ENDED && e.channelId === t.id);
   (0, h.openModalLazy)(async () => {
     let {
       default: i
@@ -117,7 +117,7 @@ if (null != c) {
       guild: c,
       channel: t,
       streamUserId: 1 === e.length ? e[0].ownerId : null,
-      source: v.t4x.GUILD_CHANNELS,
+      source: Z.t4x.GUILD_CHANNELS,
       guildScheduledEvent: g
     });
   });
@@ -139,7 +139,7 @@ text: S,
 children: e => (0, s.jsx)(h.Clickable, {
   className: u()(L.iconItem, a ? L.alwaysShown : void 0, o ? L.iconWithChannelInfo : L.iconNoChannelInfo),
   ...e,
-  onClick: Z,
+  onClick: v,
   tabIndex: r,
   'aria-label': S,
   children: A
@@ -147,7 +147,7 @@ children: e => (0, s.jsx)(h.Clickable, {
   });
 }
 
-function O(e) {
+function P(e) {
   let {
 channel: t
   } = e, n = () => {
@@ -169,12 +169,12 @@ children: e => (0, s.jsx)(h.Clickable, {
   });
 }
 
-function P(e) {
+function O(e) {
   let {
 channel: t
   } = e, n = () => {
 (0, g.dM)(t.guild_id, t.id, !0, {
-  section: v.jXE.CHANNEL_LIST
+  section: Z.jXE.CHANNEL_LIST
 });
   };
   return (0, s.jsx)(h.Tooltip, {
@@ -204,12 +204,12 @@ return (0, s.jsx)(R, {
 });
   }
   renderRemoveSuggestionButton() {
-return (0, s.jsx)(O, {
+return (0, s.jsx)(P, {
   ...this.props
 });
   }
   renderAcceptSuggestionButton() {
-return (0, s.jsx)(P, {
+return (0, s.jsx)(O, {
   ...this.props
 });
   }

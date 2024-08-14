@@ -16,8 +16,8 @@ var i = n(735250),
   u = n(872810),
   d = n(763520),
   h = n(194082),
-  p = n(710845),
-  m = n(590293),
+  m = n(710845),
+  p = n(590293),
   _ = n(863908),
   f = n(871118),
   E = n(517525),
@@ -43,7 +43,7 @@ var i = n(735250),
   k = n(65154),
   U = n(689938),
   w = n(149050);
-let B = new p.Z('StreamTile');
+let B = new m.Z('StreamTile');
 
 function H(e) {
   let {
@@ -77,11 +77,11 @@ participant: t,
 selected: n,
 onVideoResize: s,
 paused: h,
-fit: p,
+fit: m,
 inPopout: E,
 width: P,
 focused: O
-  } = e, H = v.Z.getVideoComponent(), G = (0, r.e7)([T.default], () => T.default.getId()), V = (0, m.Z)(), {
+  } = e, H = v.Z.getVideoComponent(), G = (0, r.e7)([T.default], () => T.default.getId()), V = (0, p.Z)(), {
 stream: F,
 user: W,
 streamId: z
@@ -139,7 +139,7 @@ return (0, i.jsxs)(i.Fragment, {
       className: w.content,
       streamId: z,
       videoComponent: H,
-      fit: p,
+      fit: m,
       paused: h || J,
       videoSpinnerContext: Q ? d.m.SELF_STREAM : d.m.REMOTE_STREAM,
       userId: W.id

@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(481060),
   d = n(2052),
   h = n(40851),
-  p = n(607070),
-  m = n(100527),
+  m = n(607070),
+  p = n(100527),
   _ = n(906732),
   f = n(703656),
   E = n(210887),
@@ -54,7 +54,7 @@ let {
   location: 'ActivitiesMiniShelf'
 }, {
   autoTrackExposure: !0
-}), H = (0, c.e7)([E.Z], () => E.Z.getState().theme), G = (0, c.e7)([p.Z], () => p.Z.useReducedMotion), {
+}), H = (0, c.e7)([E.Z], () => E.Z.getState().theme), G = (0, c.e7)([m.Z], () => m.Z.useReducedMotion), {
   id: V,
   guild_id: F
 } = n;
@@ -75,12 +75,12 @@ a.useEffect(() => {
 let W = (0, h.bp)(),
   {
     analyticsLocations: z
-  } = (0, _.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
+  } = (0, _.ZP)(p.Z.ACTIVITIES_MINI_SHELF),
   {
     analyticsLocations: Y
   } = (0, _.ZP)([
     ...z,
-    m.Z.ACTIVITIES_MINI_SHELF_BANNER
+    p.Z.ACTIVITIES_MINI_SHELF_BANNER
   ]),
   K = W === M.IlC.POPOUT,
   q = (0, d.O)(),

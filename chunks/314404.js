@@ -32,8 +32,8 @@ var i = t(735250),
   v = t(55610),
   A = t(653798),
   y = t(553797),
-  C = t(927699),
-  M = t(987716),
+  M = t(927699),
+  C = t(987716),
   O = t(311821),
   R = t(459965),
   L = t(811616),
@@ -53,8 +53,8 @@ selectedPlanId: R,
 setSelectedPlanId: U,
 priceOptions: k,
 planOptions: F,
-eligibleForMultiMonthPlans: W,
-referralTrialOfferId: H,
+eligibleForMultiMonthPlans: H,
+referralTrialOfferId: W,
 subscriptionPeriodEnd: Y,
 showTotal: K = !0,
 discountInvoiceItems: V,
@@ -80,7 +80,7 @@ location: 'PremiumSwitchPlanSelectBody'
   let [eo, ec] = (0, l.Wu)([f.Z], () => [
 null != E ? f.Z.get(E.planId) : null,
 null != R ? f.Z.get(R) : null
-  ]), eu = (0, P.N)(H), ed = null == eu ? void 0 : eu.subscription_trial, e_ = (0, g.Ng)(), ep = null == e_ ? void 0 : null === (n = e_.discount) || void 0 === n ? void 0 : n.plan_ids, em = null != ec ? ec : Q, eI = a.useCallback(e => {
+  ]), eu = (0, P.N)(W), ed = null == eu ? void 0 : eu.subscription_trial, e_ = (0, g.Ng)(), ep = null == e_ ? void 0 : null === (n = e_.discount) || void 0 === n ? void 0 : n.plan_ids, em = null != ec ? ec : Q, eI = a.useCallback(e => {
 null != U ? U(e) : q(e);
   }, [
 U,
@@ -91,10 +91,10 @@ q
 ex = null != e_ && F.some(e => null == ep ? void 0 : ep.includes(e)) && null != e_.discount,
 eN = (0, S.aS)(Z.Xh.PREMIUM_MONTH_TIER_2, !1, ee, ef);
   a.useEffect(() => {
-W && h.ZP.trackExposure({
+H && h.ZP.trackExposure({
   location: '5f89bb_1'
 });
-  }, [W]);
+  }, [H]);
   let eS = (null == em ? void 0 : em.id) != null && F.includes(em.id);
   a.useEffect(() => {
 if (!eS) {
@@ -122,7 +122,7 @@ eP = 'HR' === eg && null != eb && eb.currency === w.pK.EUR,
 ev = (0, S.Ap)(ef.paymentSourceId),
 eA = (null == ed ? void 0 : ed.interval) === Z.rV.DAY ? G.Z.Messages.BILLING_TRIAL_2_WEEK_PERIOD : G.Z.Messages.BILLING_TRIAL_30_DAY_PERIOD,
 ey = !ee && (ex || null != ed && eE && null != Y),
-eC = null == V ? void 0 : null === (I = V.find(e => e.subscriptionPlanId === Z.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === I ? void 0 : null === (r = I.discounts) || void 0 === r ? void 0 : null === (t = r.find(e => e.type === u.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount;
+eM = null == V ? void 0 : null === (I = V.find(e => e.subscriptionPlanId === Z.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === I ? void 0 : null === (r = I.discounts) || void 0 === r ? void 0 : null === (t = r.find(e => e.type === u.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount;
   return (0, i.jsx)(i.Fragment, {
 children: (0, i.jsxs)('div', {
   className: es ? B.stepBodyCustomGift : B.stepBody,
@@ -134,7 +134,7 @@ children: (0, i.jsxs)('div', {
           fromBoostCancelModal: !1,
           className: B.legacyPricingNotice
         }),
-        es && null != et && (0, i.jsx)(M.q, {})
+        es && null != et && (0, i.jsx)(C.q, {})
       ]
     }),
     (0, i.jsxs)('div', {
@@ -145,7 +145,7 @@ children: (0, i.jsxs)('div', {
         }),
         (() => {
           if (er === x.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != ea)
-            return (0, i.jsx)(C.Z, {
+            return (0, i.jsx)(M.Z, {
               sectionTitle: G.Z.Messages.GIFT_OPTIONAL_MESSAGE,
               onTextChange: e => ea(e),
               pendingText: ei,
@@ -233,7 +233,7 @@ children: (0, i.jsxs)('div', {
               ]
             });
           }
-          if (t && null != eC && null != eN && R === Z.Xh.PREMIUM_MONTH_TIER_2)
+          if (t && null != eM && null != eN && R === Z.Xh.PREMIUM_MONTH_TIER_2)
             return (0, i.jsxs)('div', {
               children: [
                 (0, i.jsx)(o.Text, {
@@ -241,7 +241,7 @@ children: (0, i.jsxs)('div', {
                   className: B.trialPlanSelectHeader,
                   children: G.Z.Messages.BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC.format({
                     numMonths: null == e_ ? void 0 : e_.discount.user_usage_limit,
-                    discountedPrice: (0, T.T4)(eN.amount - eC, eN.currency),
+                    discountedPrice: (0, T.T4)(eN.amount - eM, eN.currency),
                     regularPrice: (0, T.T4)(eN.amount, eN.currency)
                   })
                 }),
@@ -261,7 +261,7 @@ children: (0, i.jsxs)('div', {
             priceOptions: ef,
             shouldShowUpdatedPaymentModal: ey,
             isEligibleForDiscount: ex,
-            discountAmountOff: eC,
+            discountAmountOff: eM,
             isEligibleForTrial: eE
           }, e))
         }),

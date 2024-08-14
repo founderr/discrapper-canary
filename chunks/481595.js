@@ -29,8 +29,8 @@ var i = t(735250),
   v = t(669079),
   A = t(937615),
   y = t(987209),
-  C = t(598),
-  M = t(45572),
+  M = t(598),
+  C = t(45572),
   O = t(119226),
   R = t(981631),
   L = t(689938),
@@ -108,11 +108,11 @@ paymentSourceId: B,
 setHasAcceptedTerms: U,
 skusById: k,
 skuPricePreviewsById: F,
-selectedSkuId: W,
-isEmbeddedIAP: H,
+selectedSkuId: H,
+isEmbeddedIAP: W,
 purchaseType: Y,
 purchasePreviewError: K
-  } = (0, C.usePaymentContext)(), {
+  } = (0, M.usePaymentContext)(), {
 isGift: V,
 giftRecipient: z
   } = (0, y.wD)(), X = V && (0, v.pO)(z), {
@@ -122,9 +122,9 @@ hasFetchedPaymentSources: J
 defaultPaymentSourceId: h.Z.defaultPaymentSourceId,
 hasFetchedPaymentSources: h.Z.hasFetchedPaymentSources
   }));
-  s()(null != W, 'Expected selectedSkuId');
-  let Q = k[W],
-$ = F[W],
+  s()(null != H, 'Expected selectedSkuId');
+  let Q = k[H],
+$ = F[H],
 ee = null != B ? B : b.c,
 en = null != $ ? $[ee] : null;
   s()(null != Q, 'SKU must exist and be fetched.'), s()(null != A, 'Application must exist.');
@@ -134,7 +134,7 @@ en = null != $ ? $[ee] : null;
 ], () => g.Z.inTestModeForApplication(A.id) || I.Z.inDevModeForApplication(A.id), [A.id]),
 ei = (0, o.e7)([S.Z], () => S.Z.enabled),
 ea = l.M.EEA_COUNTRIES.has(T.Z.ipCountryCodeWithFallback),
-er = w === M.A.PURCHASING || w === M.A.COMPLETED,
+er = w === C.A.PURCHASING || w === C.A.COMPLETED,
 es = null != B ? G[B].type : null;
   return a.useEffect(() => {
 J && B === q && q !== b.c && null == en && (0, u.x2)(Q.applicationId, Q.id, q);
@@ -158,7 +158,7 @@ children: [
   (0, i.jsx)(D, {
     application: A,
     sku: Q,
-    isEmbeddedIAP: H
+    isEmbeddedIAP: W
   }),
   X && (0, i.jsx)(O.Z, {
     sku: Q
@@ -217,7 +217,7 @@ children: [
       }) : void 0,
       finePrint: (0, i.jsx)(d.Z, {
         paymentSourceType: es,
-        isEmbeddedIAP: H,
+        isEmbeddedIAP: W,
         purchaseType: Y,
         productLine: Q.productLine,
         isGift: V

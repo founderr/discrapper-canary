@@ -19,8 +19,8 @@ var i = n(735250),
   u = n(835473),
   d = n(385499),
   h = n(933557),
-  p = n(471445),
-  m = n(243778),
+  m = n(471445),
+  p = n(243778),
   _ = n(266076),
   f = n(565138),
   E = n(703656),
@@ -43,7 +43,7 @@ function L(e) {
   var t;
   let {
 channel: n
-  } = e, a = (0, u.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id), [s, l] = (0, m.US)([o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
+  } = e, a = (0, u.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id), [s, l] = (0, p.US)([o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
   if (null == a)
 return null;
   let r = x.ZP.getApplicationIconURL({
@@ -114,10 +114,10 @@ guild: r,
 inSidebar: o = !1,
 handleClick: u,
 handleContextMenu: d,
-handleParentClick: m,
+handleParentClick: p,
 handleParentContextMenu: f,
 renderFollowButton: E
-  } = e, C = (0, p.KS)(t, r), {
+  } = e, C = (0, m.KS)(t, r), {
 prefix: x,
 level: T
   } = function(e, t) {
@@ -252,14 +252,14 @@ case M.d4z.PUBLIC_THREAD:
 case M.d4z.PRIVATE_THREAD:
   let S = null;
   if (!o && null != s) {
-    let e = (0, p.KS)(s, r);
+    let e = (0, m.KS)(s, r);
     S = (0, i.jsxs)(a.Fragment, {
       children: [
         D(e, R.Z.Messages.TEXT_CHANNEL),
         (0, i.jsx)(Z.Z.Title, {
           level: T,
           onContextMenu: f,
-          onClick: m,
+          onClick: p,
           className: l()(j.parentChannelName, j.cursorPointer),
           children: (0, h.F6)(s, I.default, g.Z)
         }),

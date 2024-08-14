@@ -22,8 +22,8 @@ var t = n(481060),
   x = n(437758),
   v = n(357836),
   Z = n(544989),
-  p = n(934861),
-  h = n(616140),
+  h = n(934861),
+  p = n(616140),
   T = n(29530),
   g = n(228168),
   N = n(981631),
@@ -101,12 +101,12 @@ children: (0, i.jsx)(r.Mt, {
                 (0, i.jsxs)('div', {
                   className: j.buttons,
                   children: [
-                    (0, i.jsx)(p.c, {
+                    (0, i.jsx)(h.c, {
                       userId: s.id,
                       onClose: D,
                       className: j.messageTextButton
                     }),
-                    (0, i.jsx)(p.v, {
+                    (0, i.jsx)(h.v, {
                       userId: s.id,
                       onClose: D,
                       tooltipContainerClassName: j.messageIconButton
@@ -150,7 +150,7 @@ children: (0, i.jsx)(r.Mt, {
             }),
             (0, i.jsx)(E.Z.Overlay, {
               className: A.overlay,
-              children: (0, i.jsx)(h.Z, {
+              children: (0, i.jsx)(p.Z, {
                 user: s,
                 currentUser: n,
                 displayProfile: G,

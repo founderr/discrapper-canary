@@ -16,8 +16,8 @@ var l, r, a, s, o = n(442837),
   N = n(176505);
 let x = E.IlC.APP,
   S = !1,
-  Z = !1,
-  v = [];
+  v = !1,
+  Z = [];
 
 function T() {
   S = !0;
@@ -28,13 +28,13 @@ this.waitFor(f.Z, g.Z, C.default);
   }
   isOpen() {
 let e = __OVERLAY__ ? E.IlC.OVERLAY : E.IlC.APP;
-return !!(S && v.length > 0 && x === e);
+return !!(S && Z.length > 0 && x === e);
   }
   getProps() {
 return {
-  invite: v.length > 0 ? v[0][0] : null,
+  invite: Z.length > 0 ? Z[0][0] : null,
   error: null != i && '' !== i ? i : null,
-  submitting: Z
+  submitting: v
 };
   }
 }
@@ -84,12 +84,12 @@ if (!(t.state === E.r2o.EXPIRED || t.state === E.r2o.BANNED || t.state === E.r2o
     }
   }
 }
-if (v.some(e => {
+if (Z.some(e => {
     let [n] = e;
     return n.code === t.code;
   }))
   return !1;
-x = e.context, Z = !1;
+x = e.context, v = !1;
 let n = function(e) {
   let {
     approximate_member_count: t,
@@ -120,24 +120,24 @@ let n = function(e) {
     ...e.inviter
   }), h;
 }(t);
-v.push([
+Z.push([
   n,
   e.resolve
 ]);
   },
   INVITE_MODAL_CLOSE: function() {
-if (i = null, Z = !1, v.length > 0) {
-  let [, e] = v.shift();
+if (i = null, v = !1, Z.length > 0) {
+  let [, e] = Z.shift();
   null != e && e();
 }
   },
   INVITE_ACCEPT: function() {
-Z = !0;
+v = !0;
   },
   INVITE_MODAL_ERROR: function(e) {
 let {
   message: t
 } = e;
-i = t, Z = !1;
+i = t, v = !1;
   }
 });

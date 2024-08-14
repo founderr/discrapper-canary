@@ -14,8 +14,8 @@ var i, a, s = n(735250),
   u = n(481060),
   d = n(2052),
   h = n(317381),
-  p = n(638880),
-  m = n(613611),
+  m = n(638880),
+  p = n(613611),
   _ = n(527805),
   f = n(716600),
   E = n(778569),
@@ -89,7 +89,7 @@ u.AvatarSizes.SIZE_24,
   ], x = (0, c.Wu)([
 R.default,
 M.default
-  ], () => Array.from(r).map(e => (0, m.J)(e, M.default) ? null : R.default.getUser(e.userId)).filter(j.lm)), T = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === f.id)), {
+  ], () => Array.from(r).map(e => (0, p.J)(e, M.default) ? null : R.default.getUser(e.userId)).filter(j.lm)), T = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === f.id)), {
 analyticsLocations: N
   } = (0, v.ZP)(), Z = (0, d.O)(), A = L.ZP.getName(E.getGuildId(), E.id, null == x ? void 0 : x[0]), b = (0, _.s5)({
 userId: null === (t = R.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -137,7 +137,7 @@ children: [
     children: b ? (0, s.jsx)(u.Button, {
       onClick: function(e) {
         if (e.stopPropagation(), null != T)
-          (0, p.Z)({
+          (0, m.Z)({
             applicationId: T.applicationId,
             activityChannelId: E.id,
             locationObject: Z.location,
@@ -176,8 +176,8 @@ channel: r
 analyticsLocations: o
   } = (0, v.ZP)(N.Z.ACTIVITY_TILE), {
 id: u
-  } = t, d = (0, f.Z)(), h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u, [p] = (0, Z.Z)([u]), {
-url: m
+  } = t, d = (0, f.Z)(), h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u, [m] = (0, Z.Z)([u]), {
+url: p
   } = (0, E.Z)({
 applicationId: u,
 names: y,
@@ -208,16 +208,16 @@ children: (0, s.jsx)('div', {
         className: O.iframe,
         embedId: (0, x.Z)(r.id, u)
       }),
-      I && null != p && null != m && '' !== m ? (0, s.jsx)('img', {
+      I && null != m && null != p && '' !== p ? (0, s.jsx)('img', {
         className: O.splashImage,
-        alt: p.name,
-        src: m
+        alt: m.name,
+        src: p
       }) : null,
-      S && null != p && (0, s.jsx)(k, {
+      S && null != m && (0, s.jsx)(k, {
         width: n,
         channel: r,
         participants: t.participants,
-        application: p
+        application: m
       }),
       a || I ? null : (0, s.jsx)('div', {
         className: O.clickShield

@@ -24,16 +24,16 @@ var i = n(735250),
   N = n(699516),
   x = n(944486),
   S = n(594174),
-  Z = n(295226),
-  v = n(774343),
+  v = n(295226),
+  Z = n(774343),
   T = n(417363),
   L = n(941128),
   A = n(436088),
   b = n(780570),
   M = n(557177),
   R = n(278464),
-  O = n(276952),
-  P = n(682662),
+  P = n(276952),
+  O = n(682662),
   y = n(662146),
   j = n(674552),
   D = n(981631),
@@ -61,7 +61,7 @@ user: n,
 badge: h,
 link: _,
 showProgressBadge: f
-  } = e, I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen), [N, x] = l.useState(!1), [S, Z] = l.useState(!1), [v, T] = l.useState(null), [L, b] = l.useState(0), [R, w] = l.useState(!1), {
+  } = e, I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen), [N, x] = l.useState(!1), [S, v] = l.useState(!1), [Z, T] = l.useState(null), [L, b] = l.useState(0), [R, w] = l.useState(!1), {
 canViewBroadcasts: H
   } = p.Z.useExperiment({
 location: 'home_button_no_track'
@@ -71,7 +71,7 @@ autoTrackExposure: !1
   (0, g.P)();
   let W = (0, r.Ie)('home'),
 z = () => {
-  T(null), b(0), clearTimeout(v);
+  T(null), b(0), clearTimeout(Z);
 };
   if (null == n)
 return null;
@@ -99,11 +99,11 @@ Q = (0, i.jsx)(o.BlobMask, {
     onMouseEnter: () => x(!0),
     onMouseLeave: () => x(!1),
     onClick: () => {
-      if (!__OVERLAY__ && (null != v && clearTimeout(v), T(setTimeout(z, 500)), b(L + 1), 15 === L)) {
+      if (!__OVERLAY__ && (null != Z && clearTimeout(Z), T(setTimeout(z, 500)), b(L + 1), 15 === L)) {
         z();
         let e = !s.K.get(D.wli);
-        s.K.set(D.wli, e), e && s.K.set(U.O5, !0), e ? (0, M.GN)('discodo') : (0, M.GN)('user_leave'), Z(!0), setTimeout(() => {
-          Z(!1);
+        s.K.set(D.wli, e), e && s.K.set(U.O5, !0), e ? (0, M.GN)('discodo') : (0, M.GN)('user_leave'), v(!0), setTimeout(() => {
+          v(!1);
         }, 1000);
       }
     },
@@ -154,9 +154,9 @@ children: (0, i.jsx)(E.Z, {
   inlineSpecs: B,
   tutorialId: 'friends-list',
   position: 'right',
-  children: (0, i.jsxs)(P.H, {
+  children: (0, i.jsxs)(O.H, {
     children: [
-      (0, i.jsx)(O.Z, {
+      (0, i.jsx)(P.Z, {
         selected: t,
         hovered: N,
         className: k.pill
@@ -194,9 +194,9 @@ s = Object.keys(w.nG),
 {
   unviewedTrialCount: o,
   unviewedDiscountCount: u
-} = (0, a.cj)([Z.Z], () => ({
-  unviewedTrialCount: Z.Z.getUnacknowledgedOffers(s).length,
-  unviewedDiscountCount: Z.Z.getUnacknowledgedDiscountOffers().length
+} = (0, a.cj)([v.Z], () => ({
+  unviewedTrialCount: v.Z.getUnacknowledgedOffers(s).length,
+  unviewedDiscountCount: v.Z.getUnacknowledgedDiscountOffers().length
 })),
 d = o + u,
 p = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
@@ -206,7 +206,7 @@ C = m === d && d > 0 && r + g === 0;
   l.useEffect(() => {
 n.length > 0 && (0, h.E7)();
   }, [n]), (0, f.Z)();
-  let E = v.Z.getHomeLink();
+  let E = Z.Z.getHomeLink();
   return C && (E = D.Z5c.APPLICATION_STORE), (0, i.jsx)(H, {
 selected: e,
 user: p,

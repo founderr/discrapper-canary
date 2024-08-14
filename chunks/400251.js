@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(749210),
   d = n(686546),
   h = n(951394),
-  p = n(565138),
-  m = n(372769),
+  m = n(565138),
+  p = n(372769),
   _ = n(134432),
   f = n(769654),
   E = n(601964),
@@ -184,11 +184,11 @@ children: [
           height: 48,
           children: (0, i.jsx)('div', {
             className: v.iconMask,
-            children: (0, i.jsx)(p.Z, {
+            children: (0, i.jsx)(m.Z, {
               className: v.icon,
               iconSrc: Z,
               guild: new E.ZP(s),
-              size: p.Z.Sizes.MEDIUM,
+              size: m.Z.Sizes.MEDIUM,
               active: !0
             })
           })
@@ -202,7 +202,7 @@ children: [
       (0, i.jsxs)('div', {
         className: v.title,
         children: [
-          (0, i.jsx)(m.Z, {
+          (0, i.jsx)(p.Z, {
             className: v.guildBadge,
             guild: s,
             tooltipColor: o.Tooltip.Colors.PRIMARY

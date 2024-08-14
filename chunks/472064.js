@@ -1,7 +1,7 @@
 s.r(t), s(47120), s(411104);
 var a = s(735250),
-  n = s(470079),
-  l = s(442837),
+  l = s(470079),
+  n = s(442837),
   i = s(481060),
   r = s(570140),
   o = s(57513),
@@ -18,8 +18,8 @@ var a = s(735250),
   N = s(391690),
   m = s(424218),
   f = s(94692),
-  P = s(981631),
-  E = s(689938),
+  E = s(981631),
+  P = s(689938),
   C = s(904958);
 
 function g(e, t, s) {
@@ -30,16 +30,16 @@ configurable: !0,
 writable: !0
   }) : e[t] = s, e;
 }
-class S extends n.Component {
+class S extends l.Component {
   fetchInstallSize() {
 let {
   applicationId: e,
   branchId: t,
   buildId: s,
   manifestIds: a,
-  buildSizeKB: n
+  buildSizeKB: l
 } = this.props;
-null != s && null != a && null == n && r.Z.wait(() => {
+null != s && null != a && null == l && r.Z.wait(() => {
   (0, c.q)(e, t, s, a);
 });
   }
@@ -69,7 +69,7 @@ return (0, a.jsx)(i.Button, {
   disabled: t || null == e || !s,
   color: i.Button.Colors.GREEN,
   onClick: this.handleInstall,
-  children: E.Z.Messages.GAME_ACTION_BUTTON_INSTALL
+  children: P.Z.Messages.GAME_ACTION_BUTTON_INSTALL
 });
   }
   render() {
@@ -78,13 +78,13 @@ let {
   buildSizeKB: t,
   transitionState: s
 } = this.props, {
-  selectedInstallationPath: n,
-  isInstalling: l
+  selectedInstallationPath: l,
+  isInstalling: n
 } = this.state, r = null != e && e.getSplashURL(440);
 return (0, a.jsxs)(i.ModalRoot, {
   transitionState: s,
   size: i.ModalSize.SMALL,
-  'aria-label': E.Z.Messages.APPLICATION_INSTALLATION_MODAL_TITLE,
+  'aria-label': P.Z.Messages.APPLICATION_INSTALLATION_MODAL_TITLE,
   children: [
     null != r ? (0, a.jsx)('div', {
       className: C.splash,
@@ -99,7 +99,7 @@ return (0, a.jsxs)(i.ModalRoot, {
           grow: 1,
           children: (0, a.jsx)(i.Heading, {
             variant: 'heading-lg/semibold',
-            children: E.Z.Messages.APPLICATION_INSTALLATION_MODAL_TITLE
+            children: P.Z.Messages.APPLICATION_INSTALLATION_MODAL_TITLE
           })
         }),
         (0, a.jsx)(I.Z.Child, {
@@ -138,14 +138,14 @@ return (0, a.jsxs)(i.ModalRoot, {
         (0, a.jsx)(f.Z, {
           autoFocus: !0,
           className: C.selector,
-          value: n,
+          value: l,
           requiredDiskKB: t,
           onChange: this.handleChangePath
         }),
         (0, a.jsx)(u.Z, {
           eulaId: e.eulaId,
           applicationName: e.name,
-          disabled: l,
+          disabled: n,
           onChange: this.handlePurchaseTermsChange,
           className: C.terms
         })
@@ -172,7 +172,7 @@ super(...e), g(this, 'state', {
   let {
     application: s,
     branchId: a,
-    analyticsLocation: n
+    analyticsLocation: l
   } = this.props;
   if (null == s)
     return null;
@@ -182,8 +182,8 @@ super(...e), g(this, 'state', {
     buildId: e,
     manifestIds: t,
     installationPath: this.state.selectedInstallationPath,
-    analyticsLocation: n
-  }), (0, L.uL)(P.Z5c.APPLICATION_LIBRARY), this.close();
+    analyticsLocation: l
+  }), (0, L.uL)(E.Z5c.APPLICATION_LIBRARY), this.close();
 }), g(this, 'handleInstall', () => {
   let {
     application: e,
@@ -204,7 +204,7 @@ super(...e), g(this, 'state', {
 });
   }
 }
-t.default = l.ZP.connectStores([
+t.default = n.ZP.connectStores([
   _.Z,
   N.Z,
   T.Z,

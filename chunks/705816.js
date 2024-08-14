@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(785717),
   d = n(221292),
   h = n(318661),
-  p = n(299261),
-  m = n(502762),
+  m = n(299261),
+  p = n(502762),
   _ = n(475413),
   f = n(228168),
   E = n(689938),
@@ -37,7 +37,7 @@ channelId: n.id
 value: N,
 children: (0, i.jsx)(u.Mt, {
   value: v,
-  children: (0, i.jsx)(m.Z, {
+  children: (0, i.jsx)(p.Z, {
     ref: S,
     user: t,
     displayProfile: x,
@@ -57,7 +57,7 @@ children: (0, i.jsx)(u.Mt, {
           (0, i.jsxs)('div', {
             className: g.body,
             children: [
-              (0, i.jsx)(p.Z, {
+              (0, i.jsx)(m.Z, {
                 user: t,
                 guildId: null
               }),

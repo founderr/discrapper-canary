@@ -47,7 +47,7 @@ for (let e of A)
 t,
 A
   ]);
-  let R = (0, i.cj)([E.Z], () => {
+  let C = (0, i.cj)([E.Z], () => {
 let e = {};
 for (let n of A) {
   var t;
@@ -71,7 +71,7 @@ I
   ]), {
 hasFetchedSkus: c,
 skusById: d,
-skuPricePreviewsById: R,
+skuPricePreviewsById: C,
 previewErrorsById: T
   };
 }

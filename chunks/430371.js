@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(988980),
   d = n(157813),
   h = n(314897),
-  p = n(131951),
-  m = n(585483),
+  m = n(131951),
+  p = n(585483),
   _ = n(807705),
   f = n(27457),
   E = n(111248),
@@ -48,7 +48,7 @@ function Z(e) {
   idle: B
 } = e,
 H = null != R,
-G = p.Z.getVideoComponent(),
+G = m.Z.getVideoComponent(),
 V = h.default.getId(),
 [F, W] = a.useState(null),
 [z, Y] = a.useState(!0),
@@ -94,25 +94,25 @@ return () => {
     clamp: !0
   },
   onStart: () => q(!0),
-  onChange: () => m.S.dispatch(I.CkL.REMEASURE_TARGET),
+  onChange: () => p.S.dispatch(I.CkL.REMEASURE_TARGET),
   onRest: () => {
-    q(!1), m.S.dispatch(I.CkL.REMEASURE_TARGET);
+    q(!1), p.S.dispatch(I.CkL.REMEASURE_TARGET);
   }
 }, 'animate-always'),
-ep = (0, o.useSpring)({
+em = (0, o.useSpring)({
   value: ee ? 1 : 0,
   config: {
     ...r.config.stiff,
     clamp: !0
   }
 }, 'animate-always'),
-em = (0, o.useSpring)({
+ep = (0, o.useSpring)({
   value: ec,
   config: {
     ...r.config.stiff,
     clamp: !0
   }
-}, et === ee && ep.value.idle && !ea || es ? 'animate-never' : 'animate-always'),
+}, et === ee && em.value.idle && !ea || es ? 'animate-never' : 'animate-always'),
 e_ = (0, o.useSpring)({
   value: n,
   config: {
@@ -157,12 +157,12 @@ children: [
       (0, i.jsxs)(r.animated.div, {
         className: N.videoFrame,
         style: {
-          top: ep.value.to(e => -e * S / 2)
+          top: em.value.to(e => -e * S / 2)
         },
         children: [
           (0, i.jsx)(r.animated.div, {
             style: {
-              width: em.value
+              width: ep.value
             },
             className: N.videoWrapper,
             children: (0, i.jsx)('div', {

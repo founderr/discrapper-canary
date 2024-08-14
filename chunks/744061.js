@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(626135),
   d = n(981631),
   h = n(689938),
-  p = n(282794),
-  m = n(910212);
+  m = n(282794),
+  p = n(910212);
 
 function _(e) {
   let {
@@ -72,53 +72,53 @@ return null != I && (async () => {
   }, [I]), (0, i.jsx)(r.Dialog, {
 'aria-labelledby': 'content-warning-popout-label',
 children: (0, i.jsxs)('form', {
-  className: p.contentWarningPopout,
+  className: m.contentWarningPopout,
   onSubmit: x,
   children: [
     (0, i.jsxs)('div', {
-      className: p.body,
+      className: m.body,
       children: [
         null != I && (0, i.jsx)('div', {
-          className: p.animation,
+          className: m.animation,
           ref: N
         }),
         (0, i.jsxs)('div', {
-          className: p.content,
+          className: m.content,
           children: [
             (0, i.jsx)('div', {
-              className: p.header,
+              className: m.header,
               children: h.Z.Messages.SELF_XSS_HEADER
             }),
             (0, i.jsx)(r.Text, {
               id: 'content-warning-popout-label',
-              className: m.markup,
+              className: p.markup,
               variant: 'text-sm/normal',
               children: C.body
             }),
             (0, i.jsxs)('div', {
-              className: p.buttonWrapper,
+              className: m.buttonWrapper,
               children: [
                 (0, i.jsxs)('div', {
-                  className: p.buttonContainer,
+                  className: m.buttonContainer,
                   children: [
                     (0, i.jsx)(r.Button, {
-                      className: p.button,
+                      className: m.button,
                       color: r.Button.Colors.PRIMARY,
                       onClick: T,
                       children: h.Z.Messages.EDIT_MESSAGE
                     }),
                     (0, i.jsx)(r.Text, {
                       variant: 'text-xs/normal',
-                      className: p.buttonHint,
+                      className: m.buttonHint,
                       children: h.Z.Messages.EVERYONE_POPOUT_ESC.format()
                     })
                   ]
                 }),
                 (0, i.jsxs)('div', {
-                  className: p.buttonContainer,
+                  className: m.buttonContainer,
                   children: [
                     (0, i.jsx)(r.Button, {
-                      className: p.button,
+                      className: m.button,
                       onClick: x,
                       type: 'submit',
                       autoFocus: !0,
@@ -126,7 +126,7 @@ children: (0, i.jsxs)('form', {
                     }),
                     (0, i.jsx)(r.Text, {
                       variant: 'text-xs/normal',
-                      className: p.buttonHint,
+                      className: m.buttonHint,
                       children: h.Z.Messages.EVERYONE_POPOUT_ENTER.format()
                     })
                   ]
@@ -138,12 +138,12 @@ children: (0, i.jsxs)('form', {
       ]
     }),
     null != C.footer && '' !== C.footer ? (0, i.jsxs)('div', {
-      className: p.footer,
+      className: m.footer,
       children: [
         (0, i.jsx)(r.CircleInformationIcon, {
           size: 'xs',
           color: s.Z.unsafe_rawColors.PRIMARY_400.css,
-          className: p.icon
+          className: m.icon
         }),
         (0, i.jsx)(r.Text, {
           variant: 'text-sm/normal',

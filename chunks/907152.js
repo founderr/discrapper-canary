@@ -18,8 +18,8 @@ var u = n(709054),
   d = n(561308);
 n(206295);
 var h = n(737583),
-  p = n(169040),
-  m = n(689938);
+  m = n(169040),
+  p = n(689938);
 let _ = (e, t) => ({
 AvatarImage1: e[0],
 ...null != e[1] && {
@@ -34,51 +34,51 @@ AvatarImage1: e[0],
   }),
   f = (e, t) => {
 let n = [{
-    iconPath: p.NM,
+    iconPath: m.NM,
     text: t
   }],
   i = u.default.extractTimestamp(e.extra.application_id);
 if (7 >= a()().diff(a()(i), 'days') && n.push({
-    iconPath: p.As,
-    text: m.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
+    iconPath: m.As,
+    text: p.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
   }), (0, d.Ol)(e) && n.push({
-    iconPath: p.fO,
-    text: m.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
+    iconPath: m.fO,
+    text: p.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
   }), (0, d.q_)(e)) {
   let t = (0, d.vU)(e);
   n.push({
-    iconPath: p.t1,
-    text: m.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+    iconPath: m.t1,
+    text: p.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
       days: t
     })
   });
 }
 (0, d.ig)(e) === s.o.GLOBAL && n.push({
-  iconPath: p.Op,
-  text: m.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+  iconPath: m.Op,
+  text: p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
 });
 let l = (0, d.dw)(e);
 if (null != l && n.push({
-    iconPath: p.Z,
+    iconPath: m.Z,
     text: (0, d.GE)(l)
   }), (0, d.V5)(e)) {
   let {
     text: t
   } = (0, d.zo)(e);
   null != t && n.push({
-    iconPath: p.Md,
+    iconPath: m.Md,
     text: t
   });
 }
 if ((0, d.Jd)(e)) {
   let t = (0, d.yA)(e);
   if (null != t) {
-    let e = m.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
+    let e = p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
       hours: Math.round(t / c.Z.Seconds.HOUR)
     });
     return [{
-      iconPath: p.eF,
-      text: ''.concat(m.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, ' \u2014 ').concat(e)
+      iconPath: m.eF,
+      text: ''.concat(p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, ' \u2014 ').concat(e)
     }];
   }
 }
@@ -96,28 +96,28 @@ let {
   stop: t
 }));
 e.setSize({
-  w: p.nx,
-  h: p.bg
+  w: m.nx,
+  h: m.bg
 }, 4), e.drawRoundedGradientRect(c, {
   x: 0,
-  y: p.bg
+  y: m.bg
 }, {
-  x: p.nx,
+  x: m.nx,
   y: 0
 }, {
   x: 0,
   y: 0,
-  h: p.bg,
-  w: p.nx
+  h: m.bg,
+  w: m.nx
 }, 8), e.setColor('white'), e.drawRoundedImage('ApplicationImage', {
-  x: p.sB,
-  y: p.sB
+  x: m.sB,
+  y: m.sB
 }, {
-  w: p.Pu,
-  h: p.Pu
+  w: m.Pu,
+  h: m.Pu
 }, 8) === r.vP.Failure && e.drawPath(l.Cv, {
-  x: p.sB,
-  y: p.sB
+  x: m.sB,
+  y: m.sB
 }, !0, 2 + 2 / 3);
 (0, h.l)({
   canvas: e,
@@ -127,27 +127,27 @@ e.setSize({
     'AvatarImage3'
   ].slice(0, o),
   position: {
-    x: p.Iq,
-    y: p.sB
+    x: m.Iq,
+    y: m.sB
   },
-  avatarImageSize: p.$S
+  avatarImageSize: m.$S
 }), e.setColor('white'), e.setFont({
   size: 16,
-  family: p.I8,
-  weight: p.Ue,
+  family: m.I8,
+  weight: m.Ue,
   truncate: r.GX.Wrap
 }), e.drawText(a, {
-  x: p.Iq,
+  x: m.Iq,
   y: 64,
   h: 32,
-  w: p.kC
+  w: m.kC
 }, !0);
 let u = f(s, n);
 (0, h.J)({
   canvas: e,
   badges: u,
-  startPosition: p.Iq,
-  maxWidth: p.kC
+  startPosition: m.Iq,
+  maxWidth: m.kC
 });
   },
   g = async e => {

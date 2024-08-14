@@ -21,9 +21,9 @@ var i = n(735250),
   x = n(879828),
   v = n(834534),
   Z = n(228168),
-  p = n(455749);
+  h = n(455749);
 
-function h(e) {
+function p(e) {
   let {
 section: s,
 subsection: n,
@@ -115,13 +115,13 @@ v,
 C
   ]);
   return T ? (0, i.jsx)('div', {
-className: p.container,
+className: h.container,
 children: (0, i.jsx)(E.Z, {})
   }) : (0, i.jsxs)('div', {
-className: p.container,
+className: h.container,
 children: [
   (0, i.jsx)(o.n, {
-    className: p.tabBar,
+    className: h.tabBar,
     type: 'top',
     selectedItem: g,
     onItemSelect: j,
@@ -131,7 +131,7 @@ children: [
         text: n
       } = e;
       return (0, i.jsx)(o.n.Item, {
-        className: p.tabBarItem,
+        className: h.tabBarItem,
         id: s,
         'aria-label': n,
         children: (0, i.jsx)(a.Text, {
@@ -141,7 +141,7 @@ children: [
       }, s);
     })
   }),
-  (0, i.jsx)(h, {
+  (0, i.jsx)(p, {
     items: f,
     section: g,
     subsection: N,

@@ -17,15 +17,15 @@ handleMouseDown: n,
 handleMouseMove: u,
 handleMouseUp: d,
 handleMouseEnter: h
-  } = e, p = i.useRef(null), m = (0, a.e7)([l.Z], () => l.Z.getRTCConnection((0, s.V9)(t))), _ = i.useCallback((e, t, i) => {
-p.current = Date.now(), n(e, t, i);
+  } = e, m = i.useRef(null), p = (0, a.e7)([l.Z], () => l.Z.getRTCConnection((0, s.V9)(t))), _ = i.useCallback((e, t, i) => {
+m.current = Date.now(), n(e, t, i);
   }, [n]);
   return {
 handleMouseUp: i.useCallback((e, t, n) => {
-  if (d(e, t, n), null != p.current) {
-    if (null != m) {
+  if (d(e, t, n), null != m.current) {
+    if (null != p) {
       var i, a, s;
-      i = e, a = m, s = Date.now() - p.current, r.default.track(o.rMx.PREMIUM_FEATURE_USAGE, {
+      i = e, a = p, s = Date.now() - m.current, r.default.track(o.rMx.PREMIUM_FEATURE_USAGE, {
         feature_name: ''.concat(c.QP.SHARED_CANVAS, '_').concat(i.type),
         feature_tier: c.h1.FREE,
         media_session_id: a.getMediaSessionId(),
@@ -34,11 +34,11 @@ handleMouseUp: i.useCallback((e, t, n) => {
         duration: s
       });
     }
-    p.current = null;
+    m.current = null;
   }
 }, [
   d,
-  m
+  p
 ]),
 handleMouseDown: _,
 handleMouseMove: u,

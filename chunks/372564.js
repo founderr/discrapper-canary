@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(822951),
   d = n(835473),
   h = n(933557),
-  p = n(454585),
-  m = n(63063),
+  m = n(454585),
+  p = n(63063),
   _ = n(984370),
   f = n(981631),
   E = n(689938),
@@ -48,7 +48,7 @@ children: (0, i.jsx)(o.ModalContent, {
         selectable: !0,
         variant: 'text-md/normal',
         className: g.content,
-        children: p.Z.parseTopic(n.topic, !0, {
+        children: m.Z.parseTopic(n.topic, !0, {
           channelId: n.id
         })
       }),
@@ -63,7 +63,7 @@ children: (0, i.jsx)(o.ModalContent, {
             color: 'header-secondary',
             children: E.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_TOPIC_NOTICE.format({
               applicationName: r.name,
-              helpdeskArticle: m.Z.getArticleURL(f.BhN.CHANNEL_LINKED_LOBBIES),
+              helpdeskArticle: p.Z.getArticleURL(f.BhN.CHANNEL_LINKED_LOBBIES),
               separatorHook: (e, t) => (0, i.jsx)('span', {
                 className: g.linkedLobbyNoticeSeparator,
                 children: e
@@ -102,7 +102,7 @@ return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0,
           'aria-label': E.Z.Messages.OPEN_CHANNEL_TOPIC,
           className: g.topicClickTarget
         }),
-        p.Z.parseTopic(e.topic, !0, {
+        m.Z.parseTopic(e.topic, !0, {
           channelId: e.id,
           allowLinks: !0
         })

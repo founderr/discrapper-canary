@@ -30,16 +30,16 @@ setEmojiConfetti: T,
 setSoundEffect: h
   } = (0, s.wD)(), [b, g] = a.useState(!1), P = a.useRef(null), v = (0, r.useRadioGroup)({
 orientation: 'horizontal'
-  }), A = (0, o.MY)(t, n), y = A === o.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, C = A !== o.xr.DEFAULT, M = (0, u.rK)(), {
+  }), A = (0, o.MY)(t, n), y = A === o.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, M = A !== o.xr.DEFAULT, C = (0, u.rK)(), {
 enabled: O
   } = u.ZP.useExperiment({
 location: 'premiumGiftSelect_GiftAnimationOptions'
   }, {
-autoTrackExposure: M
+autoTrackExposure: C
   }), R = null;
-  return C && (R = M && O ? m.V4 : m.QI), (0, i.jsxs)('div', {
+  return M && (R = C && O ? m.V4 : m.QI), (0, i.jsxs)('div', {
 children: [
-  C && (0, i.jsxs)('div', {
+  M && (0, i.jsxs)('div', {
     className: f.giftMainAnimation,
     children: [
       null != E ? (0, i.jsx)(d.Z, {

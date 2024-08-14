@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   }
 });
 var i = n(735250);
@@ -15,18 +15,18 @@ var a = n(481060),
   d = n(689938),
   h = n(243113);
 
-function p(e) {
+function m(e) {
   var t;
   let {
 user: n,
-guildId: p,
-channel: m,
+guildId: m,
+channel: p,
 entry: _,
 onSelect: f
   } = e, E = (0, c.Z)({
 userId: n.id,
-guildId: p,
-channelId: m.id
+guildId: m,
+channelId: p.id
   }), g = (0, l.Z)({
 id: n.id,
 label: d.Z.Messages.COPY_ID_USER

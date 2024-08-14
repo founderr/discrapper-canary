@@ -13,36 +13,36 @@ let s = 'no_payment_source',
   T = null,
   I = null,
   d = null,
-  R = {},
-  C = null,
+  C = {},
+  R = null,
   N = !1,
-  P = null,
-  M = !1,
-  f = !1,
+  M = null,
+  P = !1,
   U = !1,
+  f = !1,
   L = !1,
   O = null,
   h = new Set();
 
 function p(e) {
-  null != r && null != C ? r(C) : null != i && i(e), r = null, i = null;
+  null != r && null != R ? r(R) : null != i && i(e), r = null, i = null;
 }
 class m extends(u = a.ZP.Store) {
   getPricesForSku(e) {
-return R[e];
+return C[e];
   }
   isOpen() {
 let e = __OVERLAY__ ? S.IlC.OVERLAY : S.IlC.APP;
-return O === e && U;
+return O === e && f;
   }
   get isPurchasingSKU() {
 return N;
   }
   get forceConfirmationStepOnMount() {
-return M;
+return P;
   }
   get error() {
-return P;
+return M;
   }
   get skuId() {
 return A;
@@ -57,7 +57,7 @@ return I;
 return d;
   }
   get isIAP() {
-return f;
+return U;
   }
   get giftCode() {
 return c;
@@ -76,13 +76,13 @@ E = 'SKUPaymentModalStore', (o = 'displayName') in(l = m) ? Object.definePropert
   writable: !0
 }) : l[o] = E, t.Z = new m(_.Z, {
   SKU_PURCHASE_MODAL_OPEN: function(e) {
-p(), A = e.skuId, T = e.applicationId, f = e.isIAP, I = e.analyticsLocation, O = e.context, L = e.isGift, U = !0, M = !1, r = e.resolve, i = e.reject, P = null, C = null, d = e.promotionId;
+p(), A = e.skuId, T = e.applicationId, U = e.isIAP, I = e.analyticsLocation, O = e.context, L = e.isGift, f = !0, P = !1, r = e.resolve, i = e.reject, M = null, R = null, d = e.promotionId;
   },
   SKU_PURCHASE_MODAL_CLOSE: function(e) {
 let {
   error: t
 } = e;
-U = !1, O = null, p(t);
+f = !1, O = null, p(t);
   },
   SKU_PURCHASE_PREVIEW_FETCH: function(e) {
 let {
@@ -96,10 +96,10 @@ let {
   paymentSourceId: n,
   price: r
 } = e;
-R = {
-  ...R,
+C = {
+  ...C,
   [t]: {
-    ...R[t],
+    ...C[t],
     [null != n ? n : s]: r
   }
 }, h.delete(t);
@@ -118,19 +118,19 @@ let {
   entitlements: t,
   giftCode: n
 } = e;
-N = !1, C = t, c = n;
+N = !1, R = t, c = n;
   },
   SKU_PURCHASE_FAIL: function(e) {
 let {
   error: t
 } = e;
-N = !1, P = t;
+N = !1, M = t;
   },
   SKU_PURCHASE_SHOW_CONFIRMATION_STEP: function() {
-M = !0;
+P = !0;
   },
   SKU_PURCHASE_CLEAR_ERROR: function() {
-P = null;
+M = null;
   },
   SKU_PURCHASE_UPDATE_IS_GIFT: function(e) {
 L = e.isGift;
@@ -141,7 +141,7 @@ let {
 } = e;
 if (!t || null == O)
   return !1;
-U = !1, O = null, p();
+f = !1, O = null, p();
   },
   GIFT_CODE_CREATE: function(e) {
 let {

@@ -14,14 +14,14 @@ var a = n(442837),
   u = n(496675),
   d = n(396769),
   h = n(967128),
-  p = n(981631),
-  m = n(689938),
+  m = n(981631),
+  p = n(689938),
   _ = n(349836);
 
 function f(e) {
   let {
 channel: t
-  } = e, n = (0, r.ZP)(t, !0), f = (0, a.e7)([u.Z], () => u.Z.can(p.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
+  } = e, n = (0, r.ZP)(t, !0), f = (0, a.e7)([u.Z], () => u.Z.can(m.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
   return (0, i.jsxs)(h.ZP, {
 channelId: t.id,
 children: [
@@ -29,12 +29,12 @@ children: [
     channelType: t.type
   }),
   (0, i.jsx)(h.Ot, {
-    children: m.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({
+    children: p.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({
       channelName: n
     })
   }),
   (0, i.jsx)(h.jz, {
-    children: m.Z.Messages.BEGINNING_CHANNEL_DESCRIPTION.format({
+    children: p.Z.Messages.BEGINNING_CHANNEL_DESCRIPTION.format({
       channelName: n,
       topicHook: () => o.Z.parseTopic(t.topic, !0, {
         channelId: t.id
@@ -44,7 +44,7 @@ children: [
   f ? (0, i.jsx)('div', {
     className: _.buttonContainer,
     children: (0, i.jsx)(d.Z, {
-      label: m.Z.Messages.EDIT_CHANNEL,
+      label: p.Z.Messages.EDIT_CHANNEL,
       onClick: () => {
         l.ZP.open(t.id);
       },

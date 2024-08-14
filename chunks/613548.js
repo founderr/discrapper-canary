@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(442837),
   d = n(481060),
   h = n(194082),
-  p = n(320007),
-  m = n(236091),
+  m = n(320007),
+  p = n(236091),
   _ = n(569545),
   f = n(517525),
   E = n(665149),
@@ -116,7 +116,7 @@ ee.push((0, i.jsx)(R.Z, {
   return P && ee.push((0, i.jsx)(W, {
 channelId: N,
 guildId: n.guild_id
-  }, 'current-speaker')), ee.push((0, i.jsx)(m.Z, {
+  }, 'current-speaker')), ee.push((0, i.jsx)(p.Z, {
 className: F.button,
 channelId: N
   }, 'clips-enabled-indicator')), (null == O ? void 0 : O.type) === H.fO.STREAM && (ee.push((0, i.jsx)(v.Z, {
@@ -154,7 +154,7 @@ channelId: N
 className: F.button,
 channelId: N,
 isHorizontal: !0
-  }, 'select-participant')), !t && ee.push((0, i.jsx)(p.Z, {
+  }, 'select-participant')), !t && ee.push((0, i.jsx)(m.Z, {
 className: F.button
   }, 'clips')), ee.push((0, i.jsx)(I.Z, {
 onOpen: J,

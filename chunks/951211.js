@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return p;
+return m;
   },
   r: function() {
 return i;
@@ -15,14 +15,14 @@ var i, a, s = n(481060),
   d = n(981631),
   h = n(689938);
 
-function p(e) {
+function m(e) {
   let {
 canAttachFiles: t,
 canStartThreads: n,
 useSlate: i,
 canUseApplicationCommands: a,
-hasClips: p,
-channel: m,
+hasClips: m,
+channel: p,
 activities: _,
 newClipsCount: f,
 canPostPolls: E,
@@ -37,7 +37,7 @@ display: h.Z.Messages.CHAT_ATTACH_UPLOAD_A_FILE
 type: 'UPLOAD_TEXT_AS_FILE',
 icon: s.FileUpIcon,
 display: h.Z.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
-  })), p && t && C !== d.IlC.POPOUT && I.push({
+  })), m && t && C !== d.IlC.POPOUT && I.push({
 type: 'CLIPS',
 icon: s.ClipsIcon,
 display: h.Z.Messages.CLIPS_SHARE_A_CLIP,
@@ -65,7 +65,7 @@ if (!(0, l.Z)(e, d.xjy.EMBEDDED))
     type: 'INVITE_TO_GAME',
     icon: s.DpadIcon,
     display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
-      channel: (0, r.F6)(m, u.default, c.Z, !0),
+      channel: (0, r.F6)(p, u.default, c.Z, !0),
       game: null != e ? e.name : ''
     }),
     activity: e
@@ -73,7 +73,7 @@ if (!(0, l.Z)(e, d.xjy.EMBEDDED))
     type: 'INVITE_TO_LISTEN',
     icon: s.UserPlayIcon,
     display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
-      channel: (0, r.F6)(m, u.default, c.Z, !0),
+      channel: (0, r.F6)(p, u.default, c.Z, !0),
       name: null != e ? e.name : ''
     }),
     activity: e
@@ -81,7 +81,7 @@ if (!(0, l.Z)(e, d.xjy.EMBEDDED))
     type: 'INVITE_TO_WATCH',
     icon: s.EyeIcon,
     display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
-      channel: (0, r.F6)(m, u.default, c.Z, !0),
+      channel: (0, r.F6)(p, u.default, c.Z, !0),
       name: null != e ? e.name : ''
     }),
     activity: e

@@ -34,11 +34,11 @@ return null;
   user: n,
   onClose: x
 }) : null,
-p = (0, i.jsx)(d.Z, {
+h = (0, i.jsx)(d.Z, {
   user: n,
   onClose: x
 });
-  if (f === u.OGo.FRIEND && S && null != p)
+  if (f === u.OGo.FRIEND && S && null != h)
 return (0, i.jsxs)('div', {
   className: I.multipleButtons,
   children: [
@@ -46,7 +46,7 @@ return (0, i.jsxs)('div', {
       userId: n.id,
       onClose: x
     }),
-    p
+    h
   ]
 });
   if (f === u.OGo.FRIEND || n.bot)
@@ -61,7 +61,7 @@ return (0, i.jsxs)('div', {
   ]
 });
   if (f === u.OGo.PENDING_OUTGOING || f === u.OGo.PENDING_INCOMING)
-return S && null != p ? (0, i.jsxs)('div', {
+return S && null != h ? (0, i.jsxs)('div', {
   className: I.multipleButtons,
   children: [
     (0, i.jsx)(a.ef, {
@@ -73,7 +73,7 @@ return S && null != p ? (0, i.jsxs)('div', {
       userId: n.id,
       onClose: x
     }),
-    p
+    h
   ]
 }) : (0, i.jsxs)('div', {
   className: I.multipleButtons,
@@ -90,7 +90,7 @@ return S && null != p ? (0, i.jsxs)('div', {
     })
   ]
 });
-  return S && null != p ? (0, i.jsxs)('div', {
+  return S && null != h ? (0, i.jsxs)('div', {
 className: I.multipleButtons,
 children: [
   (0, i.jsx)(a.ef, {
@@ -111,7 +111,7 @@ children: [
     userId: n.id,
     onClose: x
   }),
-  p
+  h
 ]
   }) : (0, i.jsxs)('div', {
 className: I.multipleButtons,

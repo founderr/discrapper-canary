@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(481060),
   d = n(430742),
   h = n(904245),
-  p = n(144144),
-  m = n(166459),
+  m = n(144144),
+  p = n(166459),
   _ = n(966390),
   f = n(738619),
   E = n(410575),
@@ -63,8 +63,8 @@ var i = n(735250),
   eu = n(323873),
   ed = n(271383),
   eh = n(375954),
-  ep = n(496675),
-  em = n(944486),
+  em = n(496675),
+  ep = n(944486),
   e_ = n(117530),
   ef = n(594174),
   eE = n(626135),
@@ -182,8 +182,8 @@ let {
   chatInputType: c,
   placeholder: d,
   accessibilityLabel: h,
-  shakeIntensity: p,
-  poggermodeEnabled: m,
+  shakeIntensity: m,
+  poggermodeEnabled: p,
   onCommandSentinelTyped: _
 } = this.props, {
   contentWarningProps: f
@@ -228,9 +228,9 @@ return (0, i.jsx)(u.Popout, {
       ...f
     });
   },
-  children: () => m ? (0, i.jsx)(u.Shaker, {
-    isShaking: p > 0,
-    intensity: p,
+  children: () => p ? (0, i.jsx)(u.Shaker, {
+    isShaking: m > 0,
+    intensity: m,
     className: eP.shaker,
     children: E
   }) : E
@@ -288,7 +288,7 @@ super(...e), t = this, eO(this, 'isFirstChange', !0), eO(this, 'editorRef', null
         return;
       }
       if (e_.Z.getUploadCount(i.id, ec.d.ChannelMessage) > 0) {
-        m.Z.clearAll(i.id, ec.d.ChannelMessage);
+        p.Z.clearAll(i.id, ec.d.ChannelMessage);
         return;
       }
   }
@@ -317,7 +317,7 @@ super(...e), t = this, eO(this, 'isFirstChange', !0), eO(this, 'editorRef', null
   d.Z.changeDraft(a, t, ec.d.ChannelMessage);
   let s = '' !== t && n !== this.state.richValue,
     l = s && !eD.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
-  this.isFirstChange = !1, l && this.state.textValue.length < t.length && this.handleIncrementCombo(), l ? p.Z.startTyping(a) : '' === t && p.Z.stopTyping(a), s && i && (0, C.rf)(), this.setState({
+  this.isFirstChange = !1, l && this.state.textValue.length < t.length && this.handleIncrementCombo(), l ? m.Z.startTyping(a) : '' === t && m.Z.stopTyping(a), s && i && (0, C.rf)(), this.setState({
     textValue: t,
     richValue: n
   });
@@ -351,11 +351,11 @@ super(...e), t = this, eO(this, 'isFirstChange', !0), eO(this, 'editorRef', null
         shouldRefocus: !0
       });
     if (M.Z.getCommandOrigin(o.id) === b.bB.APPLICATION_LAUNCHER) {
-      var p;
+      var m;
       let {
         location: e,
         sectionName: t
-      } = null !== (p = (0, eA._U)(a)) && void 0 !== p ? p : {}, n = T.Z.lastShownEntrypoint();
+      } = null !== (m = (0, eA._U)(a)) && void 0 !== m ? m : {}, n = T.Z.lastShownEntrypoint();
       if (!await (0, N.L)({
           applicationId: a.applicationId,
           userIndexState: S.ZP.getUserState(),
@@ -410,11 +410,11 @@ super(...e), t = this, eO(this, 'isFirstChange', !0), eO(this, 'editorRef', null
         shouldClear: !1,
         shouldRefocus: !1
       };
-    let p = (0, K.g)(t, {
+    let m = (0, K.g)(t, {
       channel: o,
       isEdit: !1
     });
-    null != p && (null != p.content && (t = p.content), null != p.tts && (d = p.tts));
+    null != m && (null != m.content && (t = m.content), null != m.tts && (d = m.tts));
     let f = q.ZP.parse(o, t);
     f.tts = f.tts || d;
     let E = h.Z.getSendMessageOptionsForReply(c);
@@ -439,7 +439,7 @@ super(...e), t = this, eO(this, 'isFirstChange', !0), eO(this, 'editorRef', null
           ...E,
           stickerIds: i
         }
-      }), m.Z.clearAll(o.id, ec.d.ChannelMessage);
+      }), p.Z.clearAll(o.id, ec.d.ChannelMessage);
     } else
       null != i && i.length > 0 ? '' !== t ? h.Z.sendMessage(o.id, f, void 0, {
         ...E,
@@ -477,7 +477,7 @@ let {
   currentChannelId: i
 } = t;
 return n.id !== i ? {
-  textAreaFocused: null != n && !r.tq && ep.Z.can(ej.Plq.SEND_MESSAGES, n),
+  textAreaFocused: null != n && !r.tq && em.Z.can(ej.Plq.SEND_MESSAGES, n),
   currentChannelId: n.id
 } : null;
   }
@@ -502,8 +502,8 @@ let {
   chatInputType: c,
   placeholder: d,
   accessibilityLabel: h,
-  showQuarantinedUserBanner: p,
-  filterAfterTimestamp: m,
+  showQuarantinedUserBanner: m,
+  filterAfterTimestamp: p,
   communicationDisabledUntil: _,
   shakeIntensity: g,
   poggermodeEnabled: C,
@@ -592,8 +592,8 @@ return (0, i.jsx)(E.Z, {
                 (0, i.jsx)(X.Z, {
                   channel: n,
                   forceCozy: I,
-                  filterAfterTimestamp: m,
-                  showingQuarantineBanner: p
+                  filterAfterTimestamp: p,
+                  showingQuarantineBanner: m
                 }),
                 null == n.guild_id || v ? null : (0, i.jsx)(z.Z, {
                   guildId: n.guild_id,
@@ -601,7 +601,7 @@ return (0, i.jsx)(E.Z, {
                 }),
                 I ? null : null !== (e = this.renderMessageBanner({
                   channel: n,
-                  showQuarantinedUserBanner: p,
+                  showQuarantinedUserBanner: m,
                   guild: a,
                   communicationDisabledUntil: _,
                   showAutomodUserProfileChatBlocker: x
@@ -696,7 +696,7 @@ super(...e), eO(this, 'inputFormRef', a.createRef()), eO(this, 'state', {
     switch (e.which) {
       case ej.yXg.ARROW_LEFT:
         n === L.I.SIDEBAR && eC.S.dispatch(ej.CkL.FOCUS_CHANNEL_TEXT_AREA, {
-          channelId: em.Z.getChannelId()
+          channelId: ep.Z.getChannelId()
         });
         return;
       case ej.yXg.ARROW_RIGHT:
@@ -723,7 +723,7 @@ super(...e), eO(this, 'inputFormRef', a.createRef()), eO(this, 'state', {
     communicationDisabledUntil: s,
     showAutomodUserProfileChatBlocker: l
   } = e;
-  return t.type === ej.d4z.DM && n ? (0, i.jsx)(en.Z, {}) : null != s && (0, G.J)(s) && null != a && !ep.Z.can(ej.Plq.ADMINISTRATOR, a) ? (0, i.jsx)(F.T, {
+  return t.type === ej.d4z.DM && n ? (0, i.jsx)(en.Z, {}) : null != s && (0, G.J)(s) && null != a && !em.Z.can(ej.Plq.ADMINISTRATOR, a) ? (0, i.jsx)(F.T, {
     guild: a,
     disabledUntil: s
   }) : l ? (0, i.jsx)(H.h, {
@@ -741,9 +741,9 @@ filterAfterTimestamp: s
   } = e, {
 placeholder: l,
 accessibilityLabel: r
-  } = (0, eS.Z)(t), o = (0, en.S)(ef.default.getCurrentUser(), t), [d] = (0, V.AB)(null == n ? void 0 : n.id), h = (0, B.Ux)(null == n ? void 0 : n.id), p = (0, c.e7)([ef.default], () => ef.default.getCurrentUser()), m = (0, c.e7)([ed.ZP], () => {
+  } = (0, eS.Z)(t), o = (0, en.S)(ef.default.getCurrentUser(), t), [d] = (0, V.AB)(null == n ? void 0 : n.id), h = (0, B.Ux)(null == n ? void 0 : n.id), m = (0, c.e7)([ef.default], () => ef.default.getCurrentUser()), p = (0, c.e7)([ed.ZP], () => {
 var e, t, i;
-return null != p && null !== (i = null === (e = ed.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : ej.lds, null == p ? void 0 : p.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
+return null != m && null !== (i = null === (e = ed.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : ej.lds, null == m ? void 0 : m.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
   }), _ = (0, c.e7)([J.Z], () => J.Z.isEnabled()), f = (0, et.Z)(t.id), E = (0, W.Z)(t.id);
   return (0, i.jsx)(ew, {
 channel: t,
@@ -761,6 +761,6 @@ communicationDisabledUntil: d,
 shakeIntensity: f,
 poggermodeEnabled: _,
 isSelectedResourceChannel: E,
-showAutomodUserProfileChatBlocker: h && !m
+showAutomodUserProfileChatBlocker: h && !p
   });
 });

@@ -16,8 +16,8 @@ var i = n(735250),
   u = n(346479),
   d = n(665906),
   h = n(981631),
-  p = n(689938),
-  m = n(107002);
+  m = n(689938),
+  p = n(107002);
 
 function _(e) {
   let {
@@ -31,19 +31,19 @@ c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
   banner_type: 'thread'
 });
   }, [t]), (0, i.jsxs)('div', {
-className: l()(m.chatHeaderBar, {
-  [m.narrow]: n
+className: l()(p.chatHeaderBar, {
+  [p.narrow]: n
 }),
 children: [
   (0, i.jsx)(r.Text, {
-    className: m.chatHeaderBarText,
+    className: p.chatHeaderBarText,
     variant: 'text-sm/normal',
     color: 'header-secondary',
-    children: t.isForumPost() ? p.Z.Messages.FORUM_POST_HEADER_NOTICE_LOCKED : p.Z.Messages.THREAD_HEADER_NOTICE_LOCKED
+    children: t.isForumPost() ? m.Z.Messages.FORUM_POST_HEADER_NOTICE_LOCKED : m.Z.Messages.THREAD_HEADER_NOTICE_LOCKED
   }),
   s ? (0, i.jsx)(r.Button, {
     size: n ? r.Button.Sizes.SMALL : r.Button.Sizes.TINY,
-    className: m.chatHeaderBarButton,
+    className: p.chatHeaderBarButton,
     color: r.Button.Colors.PRIMARY,
     onClick: () => {
       c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {
@@ -53,7 +53,7 @@ children: [
         cta_type: 'unarchive'
       }), u.Z.unarchiveThread(t, !1);
     },
-    children: p.Z.Messages.UNARCHIVE
+    children: m.Z.Messages.UNARCHIVE
   }) : null
 ]
   });
@@ -71,19 +71,19 @@ c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
   banner_type: 'thread'
 });
   }, [t]), (0, i.jsxs)('div', {
-className: l()(m.chatHeaderBar, {
-  [m.narrow]: n
+className: l()(p.chatHeaderBar, {
+  [p.narrow]: n
 }),
 children: [
   (0, i.jsx)(r.Text, {
-    className: m.chatHeaderBarText,
+    className: p.chatHeaderBarText,
     variant: 'text-sm/normal',
     color: 'header-secondary',
-    children: t.isForumPost() ? p.Z.Messages.FORUM_POST_HEADER_NOTICE_ACTIVE_LOCKED : p.Z.Messages.THREAD_HEADER_NOTICE_ACTIVE_LOCKED
+    children: t.isForumPost() ? m.Z.Messages.FORUM_POST_HEADER_NOTICE_ACTIVE_LOCKED : m.Z.Messages.THREAD_HEADER_NOTICE_ACTIVE_LOCKED
   }),
   s ? (0, i.jsx)(r.Button, {
     size: n ? r.Button.Sizes.SMALL : r.Button.Sizes.TINY,
-    className: m.chatHeaderBarButton,
+    className: p.chatHeaderBarButton,
     color: r.Button.Colors.PRIMARY,
     onClick: () => {
       c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {
@@ -93,7 +93,7 @@ children: [
         cta_type: 'unlock'
       }), u.Z.unlockThread(t);
     },
-    children: p.Z.Messages.UNLOCK
+    children: m.Z.Messages.UNLOCK
   }) : null
 ]
   });

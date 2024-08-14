@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(592125),
   d = n(496675),
   h = n(981631),
-  p = n(689938),
-  m = n(375387);
+  m = n(689938),
+  p = n(375387);
 
 function _(e) {
   let {
@@ -24,17 +24,17 @@ previewText: a,
 className: s
   } = e;
   return (0, i.jsx)('div', {
-className: l()(m.emptyPreviewContainer, s),
+className: l()(p.emptyPreviewContainer, s),
 children: t ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsx)('div', {
-      className: m.emptyPreviewImage
+      className: p.emptyPreviewImage
     }),
     n ? null : (0, i.jsx)(o.Text, {
       variant: 'text-sm/normal',
       color: 'none',
-      className: m.emptyPreviewText,
-      children: null != a ? a : p.Z.Messages.STREAM_NO_PREVIEW
+      className: p.emptyPreviewText,
+      children: null != a ? a : m.Z.Messages.STREAM_NO_PREVIEW
     })
   ]
 })
@@ -64,13 +64,13 @@ g
 className: n,
 isLoading: g,
 noText: s,
-previewText: f ? void 0 : p.Z.Messages.STREAM_NO_PERMISSION_CTA
+previewText: f ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
   }) : (0, i.jsx)('div', {
-className: l()(n, m.root),
+className: l()(n, p.root),
 children: (0, i.jsx)('img', {
   src: I,
   alt: '',
-  className: m.image
+  className: p.image
 })
   });
 }

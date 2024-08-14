@@ -14,8 +14,8 @@ var a = n(442837),
   u = n(924301),
   d = n(554747),
   h = n(854698),
-  p = n(688641),
-  m = n(689938),
+  m = n(688641),
+  p = n(689938),
   _ = n(572563);
 
 function f(e) {
@@ -25,7 +25,7 @@ channelId: t
 canManageGuildEvent: C
   } = (0, r.XJ)(f), I = (0, a.cj)([u.ZP], () => E.reduce((e, t) => (e[t.id] = u.ZP.getUserCount(t.id, (0, h.DK)(t)), e), {}));
   return E.length < 1 || g ? null : (0, i.jsx)(i.Fragment, {
-children: E.map(e => (0, i.jsx)(p.Z, {
+children: E.map(e => (0, i.jsx)(m.Z, {
   icon: (0, i.jsx)(l.CalendarIcon, {
     size: 'custom',
     color: 'currentColor',
@@ -33,10 +33,10 @@ children: E.map(e => (0, i.jsx)(p.Z, {
     width: 20
   }),
   color: s.Z.unsafe_rawColors.GREEN_360.css,
-  title: (C(e) ? m.Z.Messages.GUILD_EVENT_START_PROMPT : m.Z.Messages.GUILD_EVENT_UPCOMING_PROMPT).format({
+  title: (C(e) ? p.Z.Messages.GUILD_EVENT_START_PROMPT : p.Z.Messages.GUILD_EVENT_UPCOMING_PROMPT).format({
     eventName: e.name
   }),
-  description: m.Z.Messages.GUILD_EVENT_START_PROMPT_DESCRIPTION.format({
+  description: p.Z.Messages.GUILD_EVENT_START_PROMPT_DESCRIPTION.format({
     startTime: (0, h.ub)(e.scheduled_start_time).startDateTimeString
   }),
   onClick: () => {

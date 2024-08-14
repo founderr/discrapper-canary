@@ -21,8 +21,8 @@ var i = n(735250),
   x = n(520978),
   v = n(184325),
   Z = n(652853),
-  p = n(225714),
-  h = n(228168),
+  h = n(225714),
+  p = n(228168),
   T = n(231338),
   g = n(689938),
   N = n(88952);
@@ -62,7 +62,7 @@ children: [
     displayProfile: s,
     onClose: b,
     user: I,
-    profileType: h.y0.MODAL,
+    profileType: p.y0.MODAL,
     hasProfileEffect: U
   }),
   (0, i.jsxs)('div', {
@@ -112,7 +112,7 @@ children: [
                 className: N.applicationInstallButton,
                 application: F.application
               }),
-              (0, i.jsx)(p.Z, {
+              (0, i.jsx)(h.Z, {
                 user: I,
                 isCurrentUser: B,
                 relationshipType: P,

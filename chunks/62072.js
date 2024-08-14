@@ -8,8 +8,8 @@ var i = n(470079),
   u = n(665906),
   d = n(488131),
   h = n(695346),
-  p = n(314897),
-  m = n(592125),
+  m = n(314897),
+  p = n(592125),
   _ = n(323873),
   f = n(271383),
   E = n(607744),
@@ -40,10 +40,10 @@ let y = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
   U = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
   w = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
   B = g.Z.getMessage(t, e),
-  H = m.Z.getChannel(t);
+  H = p.Z.getChannel(t);
 if (null == B || null == H)
   return;
-let G = p.default.getId();
+let G = m.default.getId();
 switch (n.key.toLowerCase()) {
   case 'backspace':
     y && (b(H) || B.canDeleteOwnMessage(G)) && (n.preventDefault(), (0, A.$Z)(H, B, n));
@@ -103,7 +103,7 @@ switch (n.key.toLowerCase()) {
     if (y && (0, u.ki)(H, B))
       n.preventDefault(), (0, d.R6)(H, B, 'Message Shortcut');
     else if (B.hasFlag(M.iLy.HAS_THREAD)) {
-      let e = m.Z.getChannel(N.default.castMessageIdAsChannelId(B.id));
+      let e = p.Z.getChannel(N.default.castMessageIdAsChannelId(B.id));
       null != e && (y || w) && (n.preventDefault(), (0, d.ok)(e, w));
     }
     break;

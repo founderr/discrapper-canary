@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(374470),
   d = n(442837),
   h = n(481060),
-  p = n(260300),
-  m = n(997638),
+  m = n(260300),
+  p = n(997638),
   _ = n(819640),
   f = n(451478),
   E = n(21825),
@@ -76,7 +76,7 @@ switch (this.props.position) {
 s.offsetX += null !== (e = this.props.offset.x) && void 0 !== e ? e : 0, s.offsetY += null !== (t = this.props.offset.y) && void 0 !== t ? t : 0, this.setState(s);
   }
   handleSkipTips() {
-p.Z.suppressAll();
+m.Z.suppressAll();
   }
   getTutorialPopoutText() {
 let {
@@ -99,7 +99,7 @@ let {
   isLongText: c,
   highPriority: u,
   spacing: d,
-  arrowAlignment: p = m.cy.TOP,
+  arrowAlignment: m = p.cy.TOP,
   popoutPosition: _
 } = s, {
   offsetX: f,
@@ -133,7 +133,7 @@ let {
     [I.highPriority]: u
   };
 }, N = this.getTutorialPopoutText();
-return (0, i.jsx)(m.ZP, {
+return (0, i.jsx)(p.ZP, {
   position: _,
   renderMedia: r,
   textAlign: o,
@@ -141,7 +141,7 @@ return (0, i.jsx)(m.ZP, {
   isLongText: c,
   uniqueId: e,
   autoInvert: t,
-  arrowAlignment: p,
+  arrowAlignment: m,
   onSkipAll: this.handleSkipTips,
   onComplete: this.handleDismiss,
   ...N,
@@ -174,7 +174,7 @@ super(...e), x(this, 'state', {
   offsetX: null,
   offsetY: null
 }), x(this, 'handleDismiss', () => {
-  p.Z.dismiss(this.props.tutorialId);
+  m.Z.dismiss(this.props.tutorialId);
 });
   }
 }

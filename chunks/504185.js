@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(481060),
   d = n(570140),
   h = n(393238),
-  p = n(40851),
-  m = n(100527),
+  m = n(40851),
+  p = n(100527),
   _ = n(906732),
   f = n(358221),
   E = n(414910),
@@ -74,7 +74,7 @@ popoutOpen: s,
 popoutWindow: l,
 popoutWindowAlwaysOnTop: r,
 selectedParticipant: c
-  } = e, u = t.getGuildId(), d = (0, o.e7)([P.Z], () => P.Z.getMostRecentSelectedTextChannelId(u), [u]), h = b.default.getId(), p = !(0, o.e7)([f.Z], () => f.Z.isFullscreenInContext(n)) && (!O.isPlatformEmbedded || O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS)), m = null != c && c.type !== Q.fO.ACTIVITY && c.user.id !== h, _ = a.useMemo(() => {
+  } = e, u = t.getGuildId(), d = (0, o.e7)([P.Z], () => P.Z.getMostRecentSelectedTextChannelId(u), [u]), h = b.default.getId(), m = !(0, o.e7)([f.Z], () => f.Z.isFullscreenInContext(n)) && (!O.isPlatformEmbedded || O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS)), p = null != c && c.type !== Q.fO.ACTIVITY && c.user.id !== h, _ = a.useMemo(() => {
 var e;
 return null !== (e = null == l ? void 0 : l.window) && void 0 !== e ? e : window;
   }, [l]), g = (0, K.Z)({
@@ -86,7 +86,7 @@ currentWindow: _
   }), C = n === X.IlC.POPOUT && O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS);
   return (0, i.jsxs)(i.Fragment, {
 children: [
-  m ? (0, i.jsx)(M.Z, {
+  p ? (0, i.jsx)(M.Z, {
     context: (0, E.Z)(c.type),
     userId: c.user.id,
     currentWindow: _,
@@ -97,7 +97,7 @@ children: [
     popoutWindowAlwaysOnTop: r,
     onToggleStayOnTop: ei
   }) : null,
-  p ? (0, i.jsx)(Z.Z, {
+  m ? (0, i.jsx)(Z.Z, {
     className: $.rightTrayIcon,
     popoutOpen: s,
     onOpenPopout: et(t, d),
@@ -111,7 +111,7 @@ children: [
 function es(e) {
   let {
 channel: t
-  } = e, n = (0, p.bp)(), a = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CREATE_INSTANT_INVITE, t)), s = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id)), l = (0, o.e7)([B.Z], () => B.Z.getStageInstanceByChannel(t.id)), r = a || (null == l ? void 0 : l.invite_code) != null;
+  } = e, n = (0, m.bp)(), a = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CREATE_INSTANT_INVITE, t)), s = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id)), l = (0, o.e7)([B.Z], () => B.Z.getStageInstanceByChannel(t.id)), r = a || (null == l ? void 0 : l.invite_code) != null;
   return null != s && r ? (0, i.jsx)(N.Z, {
 channel: t,
 appContext: n,
@@ -128,9 +128,9 @@ function el(e) {
   popoutWindow: u,
   popoutWindowAlwaysOnTop: d,
   popoutOpen: h,
-  chatOpen: m
+  chatOpen: p
 } = e,
-_ = (0, p.bp)(),
+_ = (0, m.bp)(),
 E = (0, o.e7)([P.Z], () => P.Z.getVoiceChannelId() === n.id, [n.id]),
 C = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CONNECT, n)),
 I = (0, U.w8)(n.id, w.pV.SPEAKER),
@@ -189,7 +189,7 @@ renderHeader: () => (0, i.jsx)(F.Z, {
   showRequestToSpeakSidebar: c,
   channel: n
 }),
-renderChatToasts: () => !M || m || T ? null : (0, i.jsx)(g.ZP, {
+renderChatToasts: () => !M || p || T ? null : (0, i.jsx)(g.ZP, {
   children: (0, i.jsx)(v.Z, {
     className: l()($.chatToasts, {
       [$.rtsSidebarOpen]: c
@@ -225,7 +225,7 @@ popoutWindow: x.Z.getWindow(X.KJ3.CHANNEL_CALL_POPOUT),
 popoutWindowAlwaysOnTop: x.Z.getIsAlwaysOnTop(X.KJ3.CHANNEL_CALL_POPOUT)
   })), T = null != E && !E.closed, {
 analyticsLocations: N
-  } = (0, _.ZP)(m.Z.STAGE_CHANNEL_CALL), v = (0, p.bp)(), S = (0, o.e7)([f.Z], () => f.Z.getChatOpen(t.id), [t.id]), Z = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id), [t.guild_id]);
+  } = (0, _.ZP)(p.Z.STAGE_CHANNEL_CALL), v = (0, m.bp)(), S = (0, o.e7)([f.Z], () => f.Z.getChatOpen(t.id), [t.id]), Z = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id), [t.guild_id]);
   a.useEffect(() => {
 null == c.K.get(ee) && ((0, u.openModalLazy)(async () => {
   let {

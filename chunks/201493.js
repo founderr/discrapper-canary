@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(306680),
   d = n(626135),
   h = n(597),
-  p = n(99325),
-  m = n(866112),
+  m = n(99325),
+  p = n(866112),
   _ = n(273387),
   f = n(683818),
   E = n(102888),
@@ -59,15 +59,15 @@ if (null != e)
   mostRecentQuery: L,
   searchFetching: P,
   searchResults: O
-} = (0, s.cj)([m.Z], () => {
+} = (0, s.cj)([p.Z], () => {
   let {
     mostRecentQuery: e,
     fetching: t
-  } = m.Z.getSearchState(v.id);
+  } = p.Z.getSearchState(v.id);
   return {
     mostRecentQuery: e,
     searchFetching: t,
-    searchResults: m.Z.getSearchResults(v.id, e)
+    searchResults: p.Z.getSearchResults(v.id, e)
   };
 }),
 [y, D] = a.useState(L),
@@ -81,7 +81,7 @@ k = '' !== L,
   autoTrackExposure: !1
 });
   a.useEffect(() => {
-p.c$(v.id), p.YZ(v.id), U && h.c(v.id), D(L);
+m.c$(v.id), m.YZ(v.id), U && h.c(v.id), D(L);
   }, [v.id]), a.useEffect(() => {
 d.default.track(T.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
   directory_channel_id: v.id,
@@ -108,13 +108,13 @@ Z
   });
 } : void 0,
 B = e => {
-  0 !== y.trim().length && e.charCode === T.yXg.ENTER && (p.Rq(v.id, y), d.default.track(T.rMx.GUILD_DIRECTORY_SEARCH, {
+  0 !== y.trim().length && e.charCode === T.yXg.ENTER && (m.Rq(v.id, y), d.default.track(T.rMx.GUILD_DIRECTORY_SEARCH, {
     directory_channel_id: v.id,
     directory_guild_id: S.id
   }));
 },
 H = () => {
-  D(''), p.So(v.id);
+  D(''), m.So(v.id);
 };
   return k ? (0, i.jsx)(I.Z, {
 searchQuery: y,
@@ -145,7 +145,7 @@ handleClearSearch: H,
 handleCreateOrAddGuild: w,
 currentCategoryId: Z,
 handleSelectCategory: e => {
-  p.Su(v.id, e);
+  m.Su(v.id, e);
 },
 directoryEntries: j,
 categoryCounts: M,

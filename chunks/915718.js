@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(40851),
   d = n(607070),
   h = n(451576),
-  p = n(358221),
-  m = n(70097),
+  m = n(358221),
+  p = n(70097),
   _ = n(605236),
   f = n(243778),
   E = n(590293),
@@ -89,10 +89,10 @@ let {
 } = this.props;
 if (t)
   return null;
-let p = c.isManaged(),
+let m = c.isManaged(),
   _ = '',
   E = !1;
-s ? (_ = p ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, E = !0) : o ? (_ = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, E = !0) : _ = a ? p ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : p ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
+s ? (_ = m ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, E = !0) : o ? (_ = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, E = !0) : _ = a ? m ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL : m ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL;
 let C = (0, i.jsx)(b.ZP.Icon, {
   icon: r.PhoneCallIcon,
   onClick: this.handleVoiceClick,
@@ -120,7 +120,7 @@ return (0, i.jsx)(f.ZP, {
           return (0, i.jsx)(g.ZP, {
             header: (0, i.jsxs)('div', {
               children: [
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(p.Z, {
                   className: O.tooltipImage,
                   autoPlay: !h,
                   src: 'https://cdn.discordapp.com/attachments/860252504826445825/1078051428028924006/mobile_coachmark.mp4',
@@ -209,8 +209,8 @@ super(...e), y(this, 'handleStartCall', (e, t) => {
 function k(e) {
   let {
 channel: t
-  } = e, n = (0, E.Z)(), r = (0, s.e7)([p.Z], () => p.Z.getMode(t.id)), o = (0, s.e7)([Z.Z], () => Z.Z.isInChannel(t.id)), c = (0, s.e7)([d.Z], () => d.Z.useReducedMotion), {
-callActive: m,
+  } = e, n = (0, E.Z)(), r = (0, s.e7)([m.Z], () => m.Z.getMode(t.id)), o = (0, s.e7)([Z.Z], () => Z.Z.isInChannel(t.id)), c = (0, s.e7)([d.Z], () => d.Z.useReducedMotion), {
+callActive: p,
 callUnavailable: _
   } = (0, s.cj)([x.Z], () => ({
 callActive: x.Z.isCallActive(t.id),
@@ -233,7 +233,7 @@ return () => clearTimeout(e);
 channel: t,
 mode: r,
 inCall: o,
-callActive: m,
+callActive: p,
 callUnavailable: _,
 notFriend: g,
 isBlocked: C,

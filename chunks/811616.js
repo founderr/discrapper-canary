@@ -36,9 +36,9 @@ isEligibleForDiscount: g,
 discountAmountOff: P,
 isEligibleForTrial: v
   } = e, A = (0, o.e7)([_.default], () => _.default.locale), y = (0, o.e7)([p.Z], () => p.Z.get(t)), {
-isGift: C,
-giftRecipient: M
-  } = (0, d.wD)(), O = C && (0, m.pO)(M);
+isGift: M,
+giftRecipient: C
+  } = (0, d.wD)(), O = M && (0, m.pO)(C);
   l()(null != y, 'Missing subscriptionPlan');
   let R = null != n && n.planId === t,
 L = R || t === N.Xh.PREMIUM_MONTH_TIER_2 && null != n && [
@@ -46,7 +46,7 @@ L = R || t === N.Xh.PREMIUM_MONTH_TIER_2 && null != n && [
   N.Xh.PREMIUM_YEAR_TIER_1
 ].includes(n.planId),
 j = N.nH[t],
-Z = (0, f.aS)(t, !1, C, h),
+Z = (0, f.aS)(t, !1, M, h),
 D = (0, f.Ap)(h.paymentSourceId),
 w = null != j && !b,
 G = (0, x.Ng)(),
@@ -111,7 +111,7 @@ children: [
                   [T.updatedOptionSelected]: b && (s || O)
                 }),
                 children: [
-                  (0, f.L7)(y.interval, C, D, y.intervalCount, O, (0, f.Rd)(y.id)),
+                  (0, f.L7)(y.interval, M, D, y.intervalCount, O, (0, f.Rd)(y.id)),
                   O && k()
                 ]
               }),

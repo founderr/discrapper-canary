@@ -13,8 +13,8 @@ var i = n(735250),
   u = n(780384),
   d = n(481060),
   h = n(410030),
-  p = n(451478),
-  m = n(584511),
+  m = n(451478),
+  p = n(584511),
   _ = n(354459),
   f = n(817632),
   E = n(257995),
@@ -185,7 +185,7 @@ width: E,
 guildId: g
   } = e, C = (0, h.ZP)();
   let I = (t = E, n = a.length, ((0, d.getAvatarSize)(d.AvatarSizes.SIZE_80) + 16) * n > t ? d.AvatarSizes.SIZE_40 : d.AvatarSizes.SIZE_80),
-x = (0, o.e7)([p.Z], () => p.Z.isFocused()),
+x = (0, o.e7)([m.Z], () => m.Z.isFocused()),
 T = a.map(e => {
   var t, n;
   if (e.type !== _.fO.USER)
@@ -200,7 +200,7 @@ T = a.map(e => {
     className: f.participant,
     width: (0, d.getAvatarSize)(I),
     theme: C,
-    children: (0, i.jsx)(m.Z, {
+    children: (0, i.jsx)(p.Z, {
       src: a.getAvatarURL(g, (0, d.getAvatarSize)(I), r && x),
       size: I,
       muted: null !== (t = null == l ? void 0 : l.isVoiceMuted()) && void 0 !== t && t,

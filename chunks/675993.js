@@ -70,7 +70,7 @@ children: (0, i.jsxs)('div', {
         (0, i.jsx)(L, {
           application: t
         }),
-        (0, i.jsx)(R, {
+        (0, i.jsx)(b, {
           application: t
         }),
         d.length > 0 ? (0, i.jsx)(T, {
@@ -112,7 +112,7 @@ children: (0, i.jsx)('div', {
   });
 }
 
-function R(e) {
+function b(e) {
   let {
 application: n
   } = e, t = a.useMemo(() => {
@@ -124,7 +124,7 @@ application: n
   }) ? (0, i.jsxs)('div', {
 className: I.tagsContainer,
 children: [
-  (0, i.jsx)(b, {
+  (0, i.jsx)(R, {
     application: n
   }),
   t.map((e, n) => (0, i.jsx)('div', {
@@ -139,7 +139,7 @@ children: [
   }) : null;
 }
 
-function b(e) {
+function R(e) {
   var n;
   let {
 application: t

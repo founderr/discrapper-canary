@@ -19,20 +19,20 @@ i = S.Z.createFromServer(e);
 !1 === e.published ? (null == T[n] && (T[n] = new Set()), T[n].add(t)) : I[n] = t, A[t] = i;
 }
 
-function R(e, t) {
+function C(e, t) {
   return ''.concat(e, ':').concat(t);
 }
 
-function C() {
+function R() {
   A = {}, I = {}, T = {}, c = {};
 }
 
 function N() {
   if (r === _.default.locale)
 return !1;
-  C(), r = _.default.locale;
+  R(), r = _.default.locale;
 }
-class P extends(i = E.ZP.Store) {
+class M extends(i = E.ZP.Store) {
   initialize() {
 this.waitFor(_.default), this.syncWith([_.default], N), r = _.default.locale;
   }
@@ -41,14 +41,14 @@ return A[e];
   }
   getForSKU(e, t) {
 let n = I[e];
-return null != t ? c[R(t, e)] : null != n ? A[n] : null;
+return null != t ? c[C(t, e)] : null != n ? A[n] : null;
   }
   getUnpublishedForSKU(e) {
 let t = T[e];
 return null == t ? [] : Array.from(t).map(e => A[e]).filter(s.lm);
   }
   getForChannel(e, t) {
-return c[R(e, t)];
+return c[C(e, t)];
   }
   getStoreListing(e) {
 let {
@@ -74,12 +74,12 @@ if (null != n)
 return null;
   }
 }
-o = 'StoreListingStore', (l = 'displayName') in(u = P) ? Object.defineProperty(u, l, {
+o = 'StoreListingStore', (l = 'displayName') in(u = M) ? Object.defineProperty(u, l, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : u[l] = o, t.Z = new P(a.Z, {
+}) : u[l] = o, t.Z = new M(a.Z, {
   STORE_LISTINGS_FETCH_SUCCESS: function(e) {
 let {
   storeListings: t
@@ -94,12 +94,12 @@ let {
 } = e;
 if (null != n) {
   let e = S.Z.createFromServer(t);
-  c[R(n, e.skuId)] = e, I[e.skuId] = e.id;
+  c[C(n, e.skuId)] = e, I[e.skuId] = e.id;
 } else
   d(t);
   },
   USER_SETTINGS_PROTO_UPDATE: N,
-  APPLICATION_STORE_CLEAR_DATA: C,
+  APPLICATION_STORE_CLEAR_DATA: R,
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {
 let {
   giftCode: t

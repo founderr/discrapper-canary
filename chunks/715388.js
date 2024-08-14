@@ -27,12 +27,12 @@ function Z(e) {
   let {
 user: n,
 currentUser: Z,
-displayProfile: p,
-subsection: h,
+displayProfile: h,
+subsection: p,
 onClose: T
   } = e, {
 trackUserProfileAction: g
-  } = (0, c.KZ)(), N = (0, t.e7)([r.Z], () => (null == p ? void 0 : p.guildId) != null ? r.Z.getGuild(p.guildId) : null), C = (0, t.e7)([u.Z], () => {
+  } = (0, c.KZ)(), N = (0, t.e7)([r.Z], () => (null == h ? void 0 : h.guildId) != null ? r.Z.getGuild(h.guildId) : null), C = (0, t.e7)([u.Z], () => {
 var e;
 return null === (e = u.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
   }), j = (0, t.e7)([
@@ -43,38 +43,38 @@ d.Z
 fade: !0,
 className: v.scroller,
 children: [
-  (null == p ? void 0 : p.bio) != null && (null == p ? void 0 : p.bio) !== '' && (0, i.jsx)(_.Z, {
-    userBio: p.bio,
+  (null == h ? void 0 : h.bio) != null && (null == h ? void 0 : h.bio) !== '' && (0, i.jsx)(_.Z, {
+    userBio: h.bio,
     setLineClamp: !1
   }),
   (null == C ? void 0 : C.popularApplicationCommandIds) != null && null != j && (0, i.jsx)(I.Z, {
     applicationId: C.id,
     commandIds: C.popularApplicationCommandIds,
     channel: j,
-    guildId: null !== (s = null == p ? void 0 : p.guildId) && void 0 !== s ? s : void 0,
+    guildId: null !== (s = null == h ? void 0 : h.guildId) && void 0 !== s ? s : void 0,
     onClick: T
   }),
   null != N && (0, i.jsx)(m.Z, {
     user: n,
     currentUser: Z,
     guild: N,
-    scrollIntoView: h === S.Tb.ROLES
+    scrollIntoView: p === S.Tb.ROLES
   }),
   (0, i.jsx)(E.Z, {
     heading: x.Z.Messages.BOT_PROFILE_CREATED_ON,
     children: (0, i.jsx)(f.Z, {
       userId: n.id,
-      guildId: null == p ? void 0 : p.guildId,
+      guildId: null == h ? void 0 : h.guildId,
       tooltipDelay: S.vB
     })
   }),
   (0, i.jsx)(E.Z, {
     heading: x.Z.Messages.NOTE,
-    scrollIntoView: h === S.Tb.NOTE,
+    scrollIntoView: p === S.Tb.NOTE,
     children: (0, i.jsx)(o.Z, {
       userId: n.id,
       className: v.note,
-      autoFocus: h === S.Tb.NOTE,
+      autoFocus: p === S.Tb.NOTE,
       onUpdate: () => g({
         action: 'SET_NOTE'
       })

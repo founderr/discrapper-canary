@@ -8,8 +8,8 @@ var i, a = n(735250),
   u = n(613828),
   d = n(731965),
   h = n(442837),
-  p = n(481060),
-  m = n(490173),
+  m = n(481060),
+  p = n(490173),
   _ = n(40851),
   f = n(607070),
   E = n(899663),
@@ -67,9 +67,9 @@ e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale()
 let {
   guestWindow: e
 } = this.props, t = e.document;
-e.removeEventListener('blur', this.handleBlur), t.removeEventListener('contextmenu', this.handleContextMenu, !0), (0, d.j)(() => p.useModalsStore.setState(e => ({
+e.removeEventListener('blur', this.handleBlur), t.removeEventListener('contextmenu', this.handleContextMenu, !0), (0, d.j)(() => m.useModalsStore.setState(e => ({
   ...e,
-  [p.POPOUT_MODAL_CONTEXT]: []
+  [m.POPOUT_MODAL_CONTEXT]: []
 }))), e.removeEventListener('beforeunload', this.warnPopoutClose);
   }
   updateSaturationFactor() {
@@ -149,14 +149,14 @@ let {
 });
 return (0, a.jsx)(u.VK, {
   children: (0, a.jsx)(R.Z, {
-    children: (0, a.jsx)(p.ThemeContextProvider, {
+    children: (0, a.jsx)(m.ThemeContextProvider, {
       theme: e,
-      children: (0, a.jsx)(p.RedesignIconContextProvider, {
+      children: (0, a.jsx)(m.RedesignIconContextProvider, {
         children: (0, a.jsx)('div', {
           'data-popout-root': !0,
           ref: this.rootRef,
           className: r()((0, D.Q)(e), (0, N.Z)(), A, I),
-          children: (0, a.jsx)(p.FocusRingScope, {
+          children: (0, a.jsx)(m.FocusRingScope, {
             containerRef: this.rootRef,
             children: (0, a.jsx)(E.Z, {
               children: (0, a.jsxs)(v.Z, {
@@ -182,8 +182,8 @@ return (0, a.jsx)(u.VK, {
                             })
                           ]
                         }),
-                        (0, a.jsx)(p.Modals, {}),
-                        (0, a.jsx)(m.Z, {}),
+                        (0, a.jsx)(m.Modals, {}),
+                        (0, a.jsx)(p.Z, {}),
                         (0, a.jsx)(b.Un, {})
                       ]
                     })
@@ -241,7 +241,7 @@ o = (0, h.e7)([f.Z], () => f.Z.useForcedColors ? 'yes' : 'no'),
 {
   fontScale: u,
   keyboardModeEnabled: d,
-  reducedMotionEnabled: m,
+  reducedMotionEnabled: p,
   fontScaleClass: _,
   saturation: E,
   systemForcedColors: C,
@@ -265,7 +265,7 @@ v = (0, h.e7)([g.ZP], () => null != e.channelId && null !== g.ZP.getSelfEmbedded
   clientThemesClassName: b,
   clientThemesCSS: R
 } = (0, T.ZP)();
-  return null == n ? null : (0, a.jsx)(p.DnDProvider, {
+  return null == n ? null : (0, a.jsx)(m.DnDProvider, {
 children: (0, a.jsx)(x.Gt, {
   value: Z,
   children: (0, a.jsx)(F, {
@@ -282,7 +282,7 @@ children: (0, a.jsx)(x.Gt, {
     fontScale: u,
     keyboardModeEnabled: d,
     mouseModeEnabled: S,
-    reducedMotionEnabled: m,
+    reducedMotionEnabled: p,
     connectedToEmbeddedActivity: v,
     fontScaleClass: _,
     saturation: E,

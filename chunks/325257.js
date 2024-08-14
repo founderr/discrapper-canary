@@ -20,8 +20,8 @@ var i = n(735250),
   N = n(276952),
   x = n(249792),
   S = n(40153),
-  Z = n(593618),
-  v = n(252686),
+  v = n(593618),
+  Z = n(252686),
   T = n(682662),
   L = n(674552),
   A = n(981631),
@@ -35,7 +35,7 @@ object: A.qAy.CHANNEL
   }
 };
 
-function O(e, t) {
+function P(e, t) {
   (0, p.jW)(e, async () => {
 let {
   default: e
@@ -61,7 +61,7 @@ return n => (0, i.jsx)(e, {
   });
 }
 t.Z = l.memo(function(e) {
-  var t, n, r, p, P;
+  var t, n, r, p, O;
   let {
 guildNode: y,
 setRef: j,
@@ -75,7 +75,7 @@ unread: H = !1,
 mediaState: V,
 unavailable: F = !1,
 badge: W = 0,
-contextMenu: z = O,
+contextMenu: z = P,
 draggable: Y = !1,
 sorting: K = !1,
 preloadOnClick: q = !0,
@@ -87,7 +87,7 @@ parentId: J
   null == ee && W > 0 ? ee = null !== (r = (0, L.Ne)(W)) && void 0 !== r ? r : void 0 : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({
 guildJoinRequestStatus: Q
   })) && void 0 !== p ? p : void 0);
-  let et = null !== (P = e.lowerBadgeSize) && void 0 !== P ? P : {
+  let et = null !== (O = e.lowerBadgeSize) && void 0 !== O ? O : {
   width: (0, d.getBadgeWidthForValue)(W)
 },
 [{
@@ -201,7 +201,7 @@ return null;
   role: 'treeitem'
 }),
 eN = en ? (0, i.jsx)(S.OG, {
-  children: (0, i.jsx)(v.Z, {})
+  children: (0, i.jsx)(Z.Z, {})
 }) : (0, i.jsx)('div', {
   ref: Y ? ei : void 0,
   'data-dnd-name': G.toString(),
@@ -227,7 +227,7 @@ children: [
     unread: !en && H,
     className: M.pill
   }),
-  (0, i.jsx)(Z.Z, {
+  (0, i.jsx)(v.Z, {
     guild: G,
     disabled: K,
     isDragging: en,

@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(53281),
   d = n(110924),
   h = n(40851),
-  p = n(595519),
-  m = n(620662),
+  m = n(595519),
+  p = n(620662),
   _ = n(424602),
   f = n(924557),
   E = n(435064),
@@ -77,12 +77,12 @@ eo = (0, r.e7)([E.Z], () => E.Z.hasClips()),
 [ec, eu] = a.useState(null),
 ed = (0, f.Go)() && ($ || eo),
 eh = W.isPrivate(),
-ep = (0, r.e7)([M.Z], () => eh || M.Z.can(U.Plq.ATTACH_FILES, W) && M.Z.can(U.Plq.SEND_MESSAGES, W)),
-em = (0, r.e7)([N.default], () => N.default.locale),
+em = (0, r.e7)([M.Z], () => eh || M.Z.can(U.Plq.ATTACH_FILES, W) && M.Z.can(U.Plq.SEND_MESSAGES, W)),
+ep = (0, r.e7)([N.default], () => N.default.locale),
 e_ = [
   'en-US',
   'en-GB'
-].includes(em) ? H.Z.Messages.CHAT_ATTACH_PLUS_BUTTON_A11Y_LABEL : H.Z.Messages.MORE_OPTIONS,
+].includes(ep) ? H.Z.Messages.CHAT_ATTACH_PLUS_BUTTON_A11Y_LABEL : H.Z.Messages.MORE_OPTIONS,
 ef = (0, d.Z)(ee);
   (null == ef ? void 0 : ef.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && es && en && !el && !ei && !er && eu('recentClips');
   let eE = (e, t, n) => {
@@ -123,10 +123,10 @@ ex = (0, T.Xu)(W),
 eT = !v.dN.useSetting() && !(0, P.isAndroidWeb)() && null != window.ResizeObserver,
 eN = (0, x.UI)(null != W ? W : void 0),
 ev = (0, c.useRedesignIconContext)().enabled,
-eS = (0, p.qB)(W.id, 'ChannelAttachButton'),
+eS = (0, m.qB)(W.id, 'ChannelAttachButton'),
 eZ = null !== (s = null == et ? void 0 : et.length) && void 0 !== s ? s : 0,
 eA = (0, k.Z)({
-  canAttachFiles: ep,
+  canAttachFiles: em,
   canStartThreads: eI || ex,
   useSlate: eT,
   hasClips: ed,
@@ -140,8 +140,8 @@ eA = (0, k.Z)({
 });
   if (0 === eA.length)
 return null;
-  let eM = J.some(e => (0, m.Z)(e, U.xjy.SYNC)),
-eb = J.some(e => (0, m.Z)(e, U.xjy.JOIN) && !(0, m.Z)(e, U.xjy.EMBEDDED)) || eM;
+  let eM = J.some(e => (0, p.Z)(e, U.xjy.SYNC)),
+eb = J.some(e => (0, p.Z)(e, U.xjy.JOIN) && !(0, p.Z)(e, U.xjy.EMBEDDED)) || eM;
   V = ev ? (0, i.jsx)(c.CirclePlusIcon, {
 className: G.__invalid_attachButtonIcon,
 colorClass: G.attachButtonPlus
@@ -212,7 +212,7 @@ children: e => (0, i.jsx)(c.Button, {
   className: l()(G.attachButton, F),
   innerClassName: G.attachButtonInner,
   'aria-label': e_,
-  onDoubleClick: ep ? () => {
+  onDoubleClick: em ? () => {
     var e;
     return null === (e = Q.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
   } : void 0,

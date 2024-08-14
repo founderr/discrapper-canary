@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(206295),
   d = n(227172),
   h = n(555672),
-  p = n(297781),
-  m = n(591853),
+  m = n(297781),
+  p = n(591853),
   _ = n(410441),
   f = n(797342),
   E = n(689938);
@@ -75,9 +75,9 @@ T
   if (null == T || null == M || null == b || !(0, h.qy)(b))
 return null;
   let j = null != n.extra.platform ? d.v[n.extra.platform] : null;
-  return (0, i.jsxs)(m.yR, {
+  return (0, i.jsxs)(p.yR, {
 children: [
-  (0, i.jsx)(m.wG, {
+  (0, i.jsx)(p.wG, {
     thumbnailSrc: null != S ? S : I,
     thumbnailTitle: x,
     channel: t,
@@ -89,15 +89,15 @@ children: [
     userDescription: E.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
     title: v,
     subtitle: N,
-    badges: (0, i.jsx)(p.Gk, {
-      location: p.Gt.POPOUT,
+    badges: (0, i.jsx)(m.Gk, {
+      location: m.Gt.POPOUT,
       children: h.Hs.map((e, t) => (0, i.jsx)(e, {
         entry: n
       }, t))
     })
   }),
-  (0, i.jsx)(m.St, {
-    children: (0, i.jsx)(m.WT, {
+  (0, i.jsx)(p.St, {
+    children: (0, i.jsx)(p.WT, {
       closePopout: r,
       user: T,
       channel: t,

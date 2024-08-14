@@ -9,8 +9,8 @@ var i = n(735250),
   u = n(197115),
   d = n(703656),
   h = n(594174),
-  p = n(626135),
-  m = n(74538),
+  m = n(626135),
+  p = n(74538),
   _ = n(204197),
   f = n(502762),
   E = n(981631),
@@ -20,7 +20,7 @@ var i = n(735250),
   x = n(753821);
 
 function T() {
-  p.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
+  m.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
 cta_type: 'Learn more button',
 target: 'premium marketing page'
   }), (0, d.uL)(E.Z5c.APPLICATION_STORE);
@@ -184,7 +184,7 @@ avatarSrc: a
   } = (0, _.Z)({
 user: t,
 size: r.AvatarSizes.SIZE_32
-  }), s = h.default.getCurrentUser(), l = m.ZP.isPremium(s) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, C.p9.TIER_2), {
+  }), s = h.default.getCurrentUser(), l = p.ZP.isPremium(s) || null == n || !p.ZP.isPremiumAtLeast(n.premiumType, C.p9.TIER_2), {
 enabled: o,
 variant: u
   } = c.f.useExperiment({

@@ -34,8 +34,8 @@ planGroup: P,
 trialId: v,
 priceOptions: A,
 paymentSource: y,
-isPrepaidPaymentPastDue: C,
-openInvoiceId: M,
+isPrepaidPaymentPastDue: M,
+openInvoiceId: C,
 premiumSubscription: O,
 onNext: R,
 metadata: L,
@@ -81,8 +81,8 @@ else if (a()(null != g, 'Missing subscriptionPlan'), N) {
     loadId: G,
     giftInfoOptions: B
   });
-} else if (C && null != M && null != y && null != O)
-  e = m.Uk1.has(y.type) ? await (0, s.G)(O, M, y, A.currency) : await (0, s.Mg)(O, {
+} else if (M && null != C && null != y && null != O)
+  e = m.Uk1.has(y.type) ? await (0, s.G)(O, C, y, A.currency) : await (0, s.Mg)(O, {
     paymentSource: y,
     currency: A.currency
   }, h, T, G);
