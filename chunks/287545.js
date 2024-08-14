@@ -141,31 +141,38 @@ P = I.default.getCurrentUser();
 return;
   let w = O.ZP.getShelfActivities(M),
 x = A.Z.getState().shelfOrder,
-G = (0, R.Z)({
+F = (0, R.Z)({
   applicationId: l,
   activityConfigs: w
 }),
-F = 1 + x.findIndex(e => e === l),
+V = 1 + x.findIndex(e => e === l),
 {
-  releasePhase: V
-} = B(G),
-H = await (0, d.Z)(),
-Z = null != v ? [v] : [];
-  T.default.track(U.rMx.ACTIVITY_SESSION_JOINED, {
+  releasePhase: H
+} = B(F),
+Z = await (0, d.Z)(),
+Y = null != v ? [v] : [],
+j = {
+  activitySessionId: C,
+  activityUserSessionId: D,
+  launchId: m.launchId,
+  mediaSessionIds: Y,
+  activitiesInfraVersion: b
+};
+  G[l] = j, T.default.track(U.rMx.ACTIVITY_SESSION_JOINED, {
 channel_id: N.id,
 guild_id: N.getGuildId(),
-media_session_id: Z[0],
+media_session_id: Y[0],
 activity_session_id: C,
 application_id: l,
 location_stack: _ ? void 0 : k[l],
 user_premium_tier: P.premiumType,
-raw_thermal_state: H,
+raw_thermal_state: Z,
 n_participants: c.Z.getUserParticipantCount(N.id),
 is_activity_start: _,
-release_phase: V,
-activity_premium_tier_requirement: null == G ? void 0 : null === (t = G.activity) || void 0 === t ? void 0 : t.premium_tier_requirement,
-shelf_rank: null == G ? void 0 : null === (n = G.activity) || void 0 === n ? void 0 : n.shelf_rank,
-shelf_sorted_rank: F > 0 ? F : null,
+release_phase: H,
+activity_premium_tier_requirement: null == F ? void 0 : null === (t = F.activity) || void 0 === t ? void 0 : t.premium_tier_requirement,
+shelf_rank: null == F ? void 0 : null === (n = F.activity) || void 0 === n ? void 0 : n.shelf_rank,
+shelf_sorted_rank: V > 0 ? V : null,
 activity_user_session_id: D,
 channel_type: N.type
   }), T.default.track(U.rMx.ACTIVITY_IFRAME_MOUNT, {
@@ -175,12 +182,12 @@ channel_type: N.type,
 guild_id: N.getGuildId(),
 application_id: l,
 instance_id: m.launchId,
-initial_media_session_id: Z[0],
+initial_media_session_id: Y[0],
 activity_user_session_id: D,
-raw_thermal_state: H,
+raw_thermal_state: Z,
 is_activity_start: _,
-shelf_rank: null == G ? void 0 : null === (r = G.activity) || void 0 === r ? void 0 : r.shelf_rank,
-shelf_sorted_rank: F > 0 ? F : null,
+shelf_rank: null == F ? void 0 : null === (r = F.activity) || void 0 === r ? void 0 : r.shelf_rank,
+shelf_sorted_rank: V > 0 ? V : null,
 activities_infra_version: b
   });
 }
