@@ -101,15 +101,17 @@ size: n = d.lE
 return null;
   let r = e.format_type;
   e.format_type === c.u3.GIF && t && (r = c.u3.PNG);
-  let a = _.ANM.STICKER_ASSET(e.id, N(r));
+  let a = N(r),
+s = _.ANM.STICKER_ASSET(e.id, a),
+o = a === c.og.WEBP ? '&quality=lossless' : '';
   if ('development' !== h) {
 if (e.format_type === c.u3.LOTTIE)
-  return ''.concat(location.protocol).concat(p).concat(a);
+  return ''.concat(location.protocol).concat(p).concat(s);
 let r = e.format_type === c.u3.APNG && t && !(0, l.isAndroid)() ? '&passthrough=false' : '',
-  s = Math.min(2, (0, i.x_)());
-return ''.concat(location.protocol).concat(f).concat(a, '?size=').concat((0, i.oO)(n * s)).concat(r);
+  a = Math.min(2, (0, i.x_)());
+return ''.concat(location.protocol).concat(f).concat(s, '?size=').concat((0, i.oO)(n * a)).concat(r).concat(o);
   }
-  return ''.concat(location.protocol).concat(E).concat(a);
+  return ''.concat(location.protocol).concat(E).concat(s);
 }, C = (e, t) => {
   let n;
   let r = e.banner_asset_id;
