@@ -46,7 +46,8 @@ children: (0, i.jsxs)(l.AdvancedScrollerNone, {
           className: p.backgroundImageContent,
           children: (0, i.jsx)(h.Z, {
             eligibleGuilds: s,
-            eligibleGuildsIncludingConverted: n
+            eligibleGuildsIncludingConverted: n,
+            preventBack: !0
           })
         })
       ]

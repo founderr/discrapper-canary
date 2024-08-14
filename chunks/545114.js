@@ -1,160 +1,165 @@
 n.d(t, {
   Z: function() {
-return v;
+return Z;
   }
 });
 var i = n(735250),
   a = n(470079),
   s = n(481060),
-  r = n(117496),
-  l = n(702646),
-  o = n(540742),
-  c = n(766219),
-  d = n(801543),
-  u = n(979233),
-  _ = n(88693),
-  E = n(611928),
-  h = n(680180),
-  m = n(791734),
-  I = n(341789),
-  g = n(591433),
-  p = n(282773),
-  T = n(143021),
-  S = n(775260),
-  f = n(49898),
-  C = n(731455),
-  N = n(689938),
-  A = n(645664);
+  r = n(963202),
+  l = n(117496),
+  o = n(702646),
+  c = n(540742),
+  d = n(766219),
+  u = n(801543),
+  _ = n(979233),
+  E = n(88693),
+  h = n(611928),
+  m = n(680180),
+  I = n(791734),
+  g = n(341789),
+  p = n(591433),
+  T = n(282773),
+  S = n(143021),
+  f = n(775260),
+  C = n(49898),
+  N = n(731455),
+  A = n(689938),
+  v = n(645664);
 
-function v() {
-  let e = a.useRef((0, r.P)()),
+function Z() {
+  let e = a.useRef((0, l.P)()),
 {
   onScroll: t,
   scrollPosition: n,
-  resetScrollPosition: v
-} = (0, u.M)(),
+  resetScrollPosition: Z
+} = (0, _.M)(),
 {
-  tabs: Z,
-  selectedTab: L,
-  setSelectedTab: O
-} = (0, S.Y)(),
-R = (0, c.lg)(L),
-x = !f.MU.has(L),
+  tabs: L,
+  selectedTab: O,
+  setSelectedTab: R
+} = (0, f.Y)(),
+x = (0, d.lg)(O),
+b = !C.MU.has(O),
+P = (0, r.iN)('global_discovery_servers_layout'),
 {
-  searchBarState: b,
-  onTabsAvailableWidthChange: P,
-  onCollapsedSearchBarClick: M,
-  tabsClassName: D
-} = (0, _.U)({
-  isSearchBarVisible: x
+  searchBarState: M,
+  onTabsAvailableWidthChange: D,
+  onCollapsedSearchBarClick: y,
+  tabsClassName: j
+} = (0, E.U)({
+  isSearchBarVisible: b
 }),
 {
-  searchQuery: y,
-  onSearchTextChange: j,
-  onClearSearch: U,
-  onSearchSubmit: G,
-  isSearchVisible: k
-} = (0, T.H)({
+  searchQuery: U,
+  onSearchTextChange: G,
+  onClearSearch: k,
+  onSearchSubmit: w,
+  isSearchVisible: B
+} = (0, S.H)({
   loadId: e.current
 }),
-w = a.useCallback(e => {
-  O(e), k && U();
+H = a.useCallback(e => {
+  R(e), B && k();
 }, [
+  B,
   k,
-  U,
-  O
+  R
 ]),
-B = a.useMemo(() => k ? Z.filter(e => {
+V = a.useMemo(() => B ? L.filter(e => {
   let {
     id: t
   } = e;
-  return !f.MU.has(t);
-}) : Z, [
-  Z,
-  k
+  return !C.MU.has(t);
+}) : L, [
+  L,
+  B
 ]),
-H = a.useRef(new d.Z(R)),
+F = a.useRef(new u.Z(x)),
 {
-  onGuildCardSeen: V,
-  onGuildCardClick: F
-} = (0, p.H)({
-  guildDiscoveryCardSeenManager: H.current,
+  onGuildCardSeen: Y,
+  onGuildCardClick: W
+} = (0, T.H)({
+  guildDiscoveryCardSeenManager: F.current,
   loadId: e.current
 });
   a.useEffect(() => {
-H.current.flushSeenGuilds(e.current);
-  }, [R]), a.useEffect(() => {
-v();
+F.current.flushSeenGuilds(e.current);
+  }, [x]), a.useEffect(() => {
+Z();
   }, [
-L,
-v
+O,
+Z
   ]), a.useEffect(() => {
-!k && o.B.setState({
+!B && c.B.setState({
   searchScrollPosition: null
 });
-  }, [k]);
-  let Y = a.useMemo(() => {
-switch (L) {
-  case f.vf.HUBS:
+  }, [B]);
+  let z = a.useMemo(() => {
+switch (O) {
+  case C.vf.HUBS:
     return null;
-  case f.vf.GUILDS:
-    return (0, i.jsx)(l.Z, {});
+  case C.vf.GUILDS:
+    if (P)
+      return (0, i.jsx)(o.Z, {});
+    return null;
   default:
-    return (0, i.jsx)(h.Z, {
-      query: y,
-      placeholder: R === C.Hk ? N.Z.Messages.SEARCH : N.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
-        title: (0, c.vb)(L)
+    return (0, i.jsx)(m.Z, {
+      query: U,
+      placeholder: x === N.Hk ? A.Z.Messages.SEARCH : A.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({
+        title: (0, d.vb)(O)
       }),
-      onTextChange: j,
-      onClear: U,
-      onSubmit: G,
-      onCollapsedClick: M,
-      state: b
+      onTextChange: G,
+      onClear: k,
+      onSubmit: w,
+      onCollapsedClick: y,
+      state: M
     });
 }
   }, [
-R,
-U,
-M,
-G,
-j,
-b,
+x,
+k,
 y,
-L
+w,
+G,
+M,
+U,
+O,
+P
   ]);
   return (0, i.jsxs)('div', {
-className: A.container,
+className: v.container,
 children: [
-  (0, i.jsxs)(E.ZP, {
-    className: k ? A.search : void 0,
+  (0, i.jsxs)(h.ZP, {
+    className: B ? v.search : void 0,
     children: [
-      !k && (0, i.jsx)(E.z6, {
+      !B && (0, i.jsx)(h.z6, {
         scrollPosition: n
       }),
-      (0, i.jsx)(E.aV, {
-        icon: k ? s.ArrowLargeLeftIcon : s.ServerIcon,
-        onClick: k ? U : void 0
+      (0, i.jsx)(h.aV, {
+        icon: B ? s.ArrowLargeLeftIcon : s.ServerIcon,
+        onClick: B ? k : void 0
       }),
-      (0, i.jsx)(m.Z, {
-        className: D,
-        tabs: B,
-        selectedTab: k ? null : L,
-        onTabSelect: w,
-        onAvailableWidthChange: P
+      (0, i.jsx)(I.Z, {
+        className: j,
+        tabs: V,
+        selectedTab: B ? null : O,
+        onTabSelect: H,
+        onAvailableWidthChange: D
       }),
-      Y
+      z
     ]
   }),
-  k ? (0, i.jsx)(g.Z, {
+  B ? (0, i.jsx)(p.Z, {
     loadId: e.current,
-    onGuildCardClick: F,
-    onGuildCardSeen: V
-  }) : (0, i.jsx)(I.Z, {
+    onGuildCardClick: W,
+    onGuildCardSeen: Y
+  }) : (0, i.jsx)(g.Z, {
     loadId: e.current,
-    selectedTab: L,
+    selectedTab: O,
     onScroll: t,
-    onGuildCardClick: F,
-    onGuildCardSeen: V
+    onGuildCardClick: W,
+    onGuildCardSeen: Y
   })
 ]
   });
