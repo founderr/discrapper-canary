@@ -21,17 +21,17 @@ let E = (0, i.getAvatarSize)(i.AvatarSizes.SIZE_120),
   h = async e => {
 let {
   pastActivityEnabled: t,
-  selfRecentActivityFallbackEnabled: n
-} = c.o.getCurrentConfig({
-  location: 'UserProfileModalActionCreators'
-}, {
+  selfPastActivityEnabled: n
+} = (0, c.L)({
+  location: 'UserProfileModalActionCreators',
   autoTrackExposure: !1
-}), r = l.default.getId() === e;
-try {
-  await (0, o.Z)(e, t || r && n);
-} catch (t) {
-  f.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
-}
+});
+if (!!(t || n && l.default.getId() === e))
+  try {
+    await (0, o.Z)(e);
+  } catch (t) {
+    f.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
+  }
   };
 async function p(e) {
   let {

@@ -12,19 +12,19 @@ let l = new r.Y('preloadUserProfileForPopout'),
   u = async e => {
 let {
   mostRecentActivityEnabled: t
-} = s.o.getCurrentConfig({
-  location: 'preloadUserProfileForPopout'
-}, {
+} = (0, s.L)({
+  location: 'preloadUserProfileForPopout',
   autoTrackExposure: !1
 });
-try {
-  await Promise.race([
-    (0, i.Z)(e, t),
-    new Promise(e => setTimeout(e, 300))
-  ]);
-} catch (t) {
-  l.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
-}
+if (!!t)
+  try {
+    await Promise.race([
+      (0, i.Z)(e),
+      new Promise(e => setTimeout(e, 300))
+    ]);
+  } catch (t) {
+    l.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
+  }
   };
 async function c() {
   let e, t, n;

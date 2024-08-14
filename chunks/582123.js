@@ -38,18 +38,17 @@ context: R
 profileType: C,
 primaryColor: y
   } = (0, p.z)(), {
-pastActivityEnabled: D,
-selfRecentActivityFallbackEnabled: L
+selfPastActivityEnabled: D
   } = (0, h.z)({
 location: 'UserProfileActivityEducationTooltipPopout'
-  }), b = (0, a.e7)([E.default], () => {
+  }), L = (0, a.e7)([E.default], () => {
 var e;
 return (null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
-  }), M = (D || L) && b && C === I.y0.BITE_SIZE, [P, U] = i.useState(!1);
-  (0, l.Z)(() => U(!0), M ? 200 : null);
-  let w = P ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
-[x, G] = (0, d.US)(w),
-k = () => {
+  }), b = D && L && C === I.y0.BITE_SIZE, [M, P] = i.useState(!1);
+  (0, l.Z)(() => P(!0), b ? 200 : null);
+  let U = M ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
+[w, x] = (0, d.US)(U),
+G = () => {
   (0, m.openUserProfileModal)({
     userId: t.id,
     section: I.oh.ACTIVITY,
@@ -58,7 +57,7 @@ k = () => {
   }), null == v || v();
 };
   return (0, r.jsx)(o.Popout, {
-shouldShow: null != x,
+shouldShow: null != w,
 spacing: null != y ? N : 28,
 renderPopout: e => {
   let {
@@ -89,15 +88,15 @@ renderPopout: e => {
       },
       buttonLayout: _._F.STACKED,
       caretPosition: 'right' === t ? _.DF.LEFT_TOP : _.DF.RIGHT_TOP,
-      onClick: k,
+      onClick: G,
       onSecondaryClick: n,
-      markAsDismissed: G
+      markAsDismissed: x
     })
   });
 },
 children: e => n({
   ...e,
-  onAutoDismiss: () => G(T.L.AUTO_DISMISS)
+  onAutoDismiss: () => x(T.L.AUTO_DISMISS)
 })
   });
 }

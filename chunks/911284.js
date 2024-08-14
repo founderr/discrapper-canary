@@ -10,10 +10,9 @@ let s = r.Z.Millis.MINUTE;
 
 function o(e) {
   var t, n;
-  let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  if (!r || a.Z.isFetchingUserOutbox(e))
+  if (a.Z.isFetchingUserOutbox(e))
 return;
-  let o = null !== (n = null === (t = a.Z.getUserOutbox(e)) || void 0 === t ? void 0 : t.lastFetched) && void 0 !== n ? n : 0;
-  if (!(Date.now() - o < s))
+  let r = null !== (n = null === (t = a.Z.getUserOutbox(e)) || void 0 === t ? void 0 : t.lastFetched) && void 0 !== n ? n : 0;
+  if (!(Date.now() - r < s))
 return (0, i.JX)(e);
 }

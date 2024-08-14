@@ -27,34 +27,33 @@ onSelect: p,
 onClose: m,
 onRequestOpen: I
   } = e, {
-pastActivityEnabled: T,
-selfRecentActivityFallbackEnabled: g
+newActivityCardsEnabled: T
   } = (0, u.z)({
 location: 'UserProfileActivityContextMenu'
   }), {
-analyticsLocations: S
+analyticsLocations: g
   } = (0, l.ZP)(o.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU), {
-onAction: A
+onAction: S
   } = (0, c.Z)({
 display: f,
 user: t,
 activity: n,
 entry: i,
-analyticsLocations: S
-  }), N = (0, d.Z)({
+analyticsLocations: g
+  }), A = (0, d.Z)({
 entry: i,
 activity: n,
 user: t,
 display: f,
 onClose: m,
-onAction: A
+onAction: S
   });
-  return !(T || g) || 0 === N.length || t.bot ? null : (0, r.jsx)(s.Popout, {
+  return !T || 0 === A.length || t.bot ? null : (0, r.jsx)(s.Popout, {
 align: 'top',
 position: 'right',
 disablePointerEvents: !1,
 onRequestOpen: () => {
-  A({
+  S({
     action: 'OPEN_MENU'
   }), null == I || I();
 },
@@ -68,7 +67,7 @@ renderPopout: e => {
     'aria-label': _.Z.Messages.USER_PROFILE_ACTIVITY_ACTION_MENU_A11Y_LABEL,
     onSelect: p,
     children: (0, r.jsx)(s.MenuGroup, {
-      children: N
+      children: A
     })
   });
 },

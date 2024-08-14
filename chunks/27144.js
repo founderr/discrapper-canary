@@ -1,29 +1,30 @@
 n.d(t, {
-  o: function() {
-return r;
+  L: function() {
+return s;
   },
   z: function() {
-return i;
+return o;
   }
 });
-let r = (0, n(818083).B)({
+var r = n(818083);
+let i = (0, r.B)({
 kind: 'user',
 id: '2024-07_user_profile_past_activity',
 label: 'User Profile Past Activity Experiment',
 defaultConfig: {
   pastActivityEnabled: !1,
+  selfPastActivityEnabled: !1,
   mostRecentActivityEnabled: !1,
-  newActivityCardsEnabled: !1,
-  selfRecentActivityFallbackEnabled: !1
+  newActivityCardsEnabled: !1
 },
 treatments: [{
     id: 1,
     label: 'Past activity enabled',
     config: {
       pastActivityEnabled: !0,
+      selfPastActivityEnabled: !0,
       mostRecentActivityEnabled: !1,
-      newActivityCardsEnabled: !0,
-      selfRecentActivityFallbackEnabled: !1
+      newActivityCardsEnabled: !0
     }
   },
   {
@@ -31,43 +32,77 @@ treatments: [{
     label: 'Past and most recent activity enabled',
     config: {
       pastActivityEnabled: !0,
+      selfPastActivityEnabled: !0,
       mostRecentActivityEnabled: !0,
-      newActivityCardsEnabled: !0,
-      selfRecentActivityFallbackEnabled: !1
-    }
-  },
-  {
-    id: 3,
-    label: 'New activity cards enabled',
-    config: {
-      pastActivityEnabled: !1,
-      mostRecentActivityEnabled: !1,
-      newActivityCardsEnabled: !0,
-      selfRecentActivityFallbackEnabled: !1
-    }
-  },
-  {
-    id: 4,
-    label: 'Fallback - only self recent activity enabled',
-    config: {
-      pastActivityEnabled: !1,
-      mostRecentActivityEnabled: !1,
-      newActivityCardsEnabled: !0,
-      selfRecentActivityFallbackEnabled: !0
+      newActivityCardsEnabled: !0
     }
   }
 ]
   }),
-  i = e => {
+  a = (0, r.B)({
+kind: 'user',
+id: '2024-08_self_recent_activity',
+label: 'Self Recent Activity Experiment',
+defaultConfig: {
+  pastActivityEnabled: !1,
+  selfPastActivityEnabled: !1,
+  mostRecentActivityEnabled: !1,
+  newActivityCardsEnabled: !1
+},
+treatments: [{
+  id: 1,
+  label: 'Enables past activity on the current user\'s profile',
+  config: {
+    pastActivityEnabled: !1,
+    selfPastActivityEnabled: !0,
+    mostRecentActivityEnabled: !1,
+    newActivityCardsEnabled: !0
+  }
+}]
+  }),
+  s = e => {
 let {
   location: t,
   autoTrackExposure: n = !0,
-  trackExposureOptions: i = {}
-} = e;
-return r.useExperiment({
+  trackExposureOptions: r = {}
+} = e, s = i.getCurrentConfig({
   location: t
 }, {
   autoTrackExposure: n,
-  trackExposureOptions: i
+  trackExposureOptions: r
+}), o = a.getCurrentConfig({
+  location: t
+}, {
+  autoTrackExposure: n,
+  trackExposureOptions: r
 });
+return {
+  pastActivityEnabled: s.pastActivityEnabled || o.pastActivityEnabled,
+  mostRecentActivityEnabled: s.mostRecentActivityEnabled || o.mostRecentActivityEnabled,
+  newActivityCardsEnabled: s.newActivityCardsEnabled || o.newActivityCardsEnabled,
+  selfPastActivityEnabled: s.selfPastActivityEnabled || o.selfPastActivityEnabled
+};
+  },
+  o = e => {
+let {
+  location: t,
+  autoTrackExposure: n = !0,
+  trackExposureOptions: r = {}
+} = e, s = i.useExperiment({
+  location: t
+}, {
+  autoTrackExposure: n,
+  trackExposureOptions: r
+}), o = a.useExperiment({
+  location: t
+}, {
+  autoTrackExposure: n,
+  trackExposureOptions: r
+});
+return {
+  pastActivityEnabled: s.pastActivityEnabled || o.pastActivityEnabled,
+  mostRecentActivityEnabled: s.mostRecentActivityEnabled || o.mostRecentActivityEnabled,
+  newActivityCardsEnabled: s.newActivityCardsEnabled || o.newActivityCardsEnabled,
+  selfPastActivityEnabled: s.selfPastActivityEnabled || o.selfPastActivityEnabled
+};
   };
