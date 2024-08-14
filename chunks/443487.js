@@ -148,8 +148,9 @@ function g(e) {
 children: t
   } = e;
   return (0, r.jsx)(o.Heading, {
+color: 'text-normal',
 variant: 'heading-sm/medium',
-className: h.contentDescription,
+className: h.contentTitle,
 lineClamp: 1,
 children: t
   });
