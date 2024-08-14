@@ -35,12 +35,13 @@ let {
   questContentPosition: s,
   ...r
 } = e, [l, o] = a.useState(!1), c = a.useRef(new u.V7());
-a.useEffect(() => {
-  let e = c.current;
-  return function() {
-    e.stop();
-  };
-}, []);
+if (a.useEffect(() => {
+    let e = c.current;
+    return function() {
+      e.stop();
+    };
+  }, []), (0, C.zK)(t, O.S7.FRACTIONS_QUEST))
+  return null;
 let _ = () => {
   (0, h._3)({
     questId: t.id,
