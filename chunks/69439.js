@@ -193,15 +193,20 @@ children: [
           function(e) {
             switch (e) {
               case _.LI.DESKTOP:
-                return (0, i.jsx)(l.ScreenIcon, {});
+                return (0, i.jsx)(l.ScreenIcon, {
+                  color: 'currentColor'
+                });
               case _.LI.CONSOLE:
-                return (0, i.jsx)(l.GameControllerIcon, {});
+                return (0, i.jsx)(l.GameControllerIcon, {
+                  color: 'currentColor'
+                });
               default:
                 return null;
             }
           }(V),
           (0, i.jsx)(l.ChevronSmallDownIcon, {
-            className: p.platformSelectorSecondaryChevron
+            className: p.platformSelectorSecondaryChevron,
+            color: 'currentColor'
           })
         ]
       })
