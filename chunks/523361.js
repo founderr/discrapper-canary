@@ -1,9 +1,9 @@
 t.d(n, {
   HG: function() {
-return a;
+return o;
   },
   Md: function() {
-return o;
+return a;
   },
   Q8: function() {
 return u;
@@ -15,11 +15,11 @@ let u = () => [
 r.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1,
 r.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2
   ],
-  o = () => [
+  a = () => [
 r.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1,
 r.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2
   ],
-  a = [{
+  o = [{
   id: '781323471249604648',
   format_type: i.u3.APNG,
   description: 'Cheerful Choco jumps out of gift box',

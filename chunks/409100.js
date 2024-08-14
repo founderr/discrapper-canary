@@ -44,8 +44,8 @@ forceInverted: t,
 subscriptionTier: n,
 isEligibleForBogoPromotion: C = !1,
 isPersistentCTA: g = !1,
-useShorterCTA: p = !1,
-...N
+useShorterCTA: N = !1,
+...p
   } = e, A = (0, i.ZP)(), m = (0, a.wj)(A) || t, f = (0, d.N)(), S = null == f ? void 0 : f.subscription_trial, h = (0, l.a5)({
 intervalType: null == S ? void 0 : S.interval,
 intervalCount: null == S ? void 0 : S.interval_count
@@ -55,7 +55,7 @@ enabled: b
 location: 'SubscribeButton'
   }, {
 autoTrackExposure: !1
-  }), O = b && (null == f ? void 0 : f.trial_id) === u.a7, P = C ? E.Z.Messages.BOGO_CLAIM_OFFER : null != M ? R(n, p, g, M.discount.amount) : I({
+  }), O = b && (null == f ? void 0 : f.trial_id) === u.a7, P = C ? E.Z.Messages.BOGO_CLAIM_OFFER : null != M ? R(n, N, g, M.discount.amount) : I({
 showTrialCTA: x,
 subscriptionTier: n,
 shouldShowUpsells: !1,
@@ -66,11 +66,11 @@ subscriptionTrial: S
   });
   return (0, s.jsx)(_.Z, {
 color: m ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
-buttonShineClassName: 'buttonShineClassName' in N ? N.buttonShineClassName : m ? T.brandShine : void 0,
+buttonShineClassName: 'buttonShineClassName' in p ? p.buttonShineClassName : m ? T.brandShine : void 0,
 buttonText: P,
 buttonTextClassName: x ? T.freeTrialText : void 0,
 onlyShineOnHover: !0,
 subscriptionTier: n,
-...N
+...p
   });
 };

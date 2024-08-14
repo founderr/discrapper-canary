@@ -118,8 +118,8 @@ bannerVisible: n,
 controller: r,
 className: s,
 onClick: S,
-onContextMenu: v,
-onMouseDown: Z,
+onContextMenu: Z,
+onMouseDown: v,
 disableBannerAnimation: T,
 'aria-expanded': L,
 'aria-controls': A,
@@ -166,8 +166,8 @@ children: [
       [(0, _.Q)(g.BRd.DARK)]: n,
       [I.communityInfoVisible]: !w && y || j && U
     }),
-    onMouseDown: Z,
-    onContextMenu: v,
+    onMouseDown: v,
+    onContextMenu: Z,
     onClick: S,
     children: [
       Y ? null : (0, i.jsxs)('header', {
@@ -198,7 +198,7 @@ children: [
                   offset: 4
                 },
                 onClick: S,
-                onContextMenu: v,
+                onContextMenu: Z,
                 'aria-label': C.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({
                   guildName: null !== (t = null == b ? void 0 : b.toString()) && void 0 !== t ? t : ''
                 })

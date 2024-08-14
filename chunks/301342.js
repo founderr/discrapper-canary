@@ -34,16 +34,16 @@ var i = n(735250),
   x = n(689938),
   S = n(405695);
 
-function v(e) {
+function Z(e) {
   e.stopPropagation();
 }
-let Z = l.memo(function(e) {
+let v = l.memo(function(e) {
   let t, {
   channel: r,
   connectChannelDragSource: h,
   connectChannelDropTarget: I,
   disableManageChannels: E,
-  position: Z,
+  position: v,
   sortingPosition: T,
   hideIcon: L,
   children: A
@@ -51,7 +51,7 @@ let Z = l.memo(function(e) {
 b = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
 M = (0, o.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
 R = (0, o.e7)([m.Z], () => m.Z.can(N.Plq.MANAGE_CHANNELS, r));
-  t = null != T ? Z > T ? S.containerDragAfter : S.containerDragBefore : S.containerDefault;
+  t = null != T ? v > T ? S.containerDragAfter : S.containerDragBefore : S.containerDefault;
   let P = l.useCallback(() => {
   M ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
 }, [
@@ -146,7 +146,7 @@ k = (0, i.jsxs)('li', {
             ]
           }),
           (0, i.jsx)('div', {
-            onClick: v,
+            onClick: Z,
             className: S.children,
             children: R && !E ? (0, i.jsx)(c.Tooltip, {
               text: x.Z.Messages.CREATE_CHANNEL,
@@ -189,7 +189,7 @@ k = (0, i.jsxs)('li', {
 });
   return null != I && null != h ? I(h(k)) : k;
 });
-t.ZP = (0, h.B)(Z);
+t.ZP = (0, h.B)(v);
 let T = l.memo(function(e) {
 let {
   name: t,

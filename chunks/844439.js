@@ -3,11 +3,11 @@ n.d(t, {
 return c;
   }
 });
-var i, a, o, l, c, d, r = n(442837),
-  m = n(570140);
+var i, a, o, l, c, d, m = n(442837),
+  r = n(570140);
 (i = c || (c = {}))[i.FETCHING = 0] = 'FETCHING', i[i.FETCHED = 1] = 'FETCHED', i[i.ERROR = 2] = 'ERROR';
-let s = {},
-  u = {},
+let u = {},
+  s = {},
   p = {};
 
 function _(e) {
@@ -19,7 +19,7 @@ withCommands: i
   return 'location:'.concat(t, ' channelId:').concat('0', ' withCommands:').concat(i);
 }
 let E = Object.freeze([]);
-class g extends(d = r.ZP.Store) {
+class g extends(d = m.ZP.Store) {
   getLastFetchTimeMs(e) {
 let {
   location: t,
@@ -38,7 +38,7 @@ let {
   channelId: n,
   withCommands: i
 } = e;
-return u[_({
+return s[_({
   location: t,
   channelId: n,
   withCommands: i
@@ -51,7 +51,7 @@ let {
   channelId: i,
   withCommands: a
 } = e;
-return null !== (t = s[_({
+return null !== (t = u[_({
   location: n,
   channelId: i,
   withCommands: a
@@ -63,15 +63,15 @@ l = void 0, (o = 'displayName') in(a = g) ? Object.defineProperty(a, o, {
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.ZP = new g(m.Z, {
+}) : a[o] = l, t.ZP = new g(r.Z, {
   APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function(e) {
 let {
   location: t,
   channelId: n,
   withCommands: i
 } = e;
-u = {
-  ...u,
+s = {
+  ...s,
   [_({
     location: t,
     channelId: n,
@@ -90,11 +90,11 @@ let {
   channelId: i,
   withCommands: a
 });
-s = {
-  ...s,
-  [o]: t
-}, u = {
+u = {
   ...u,
+  [o]: t
+}, s = {
+  ...s,
   [o]: 1
 };
 let l = Date.now();
@@ -109,8 +109,8 @@ let {
   channelId: n,
   withCommands: i
 } = e;
-u = {
-  ...u,
+s = {
+  ...s,
   [_({
     location: t,
     channelId: n,

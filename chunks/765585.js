@@ -19,14 +19,14 @@ headerClassName: m,
 contentClassName: h,
 tryItText: g,
 dismissText: b,
-onTryFeature: C,
-onClose: I,
-className: v,
-inlineArt: S = !1,
-isPremiumFeature: x = !1,
+onTryFeature: x,
+onClose: C,
+className: I,
+inlineArt: v = !1,
+isPremiumFeature: S = !1,
 shouldUseHorizontalButtons: E = !1,
-showGIFTag: N = !1,
-dismissibleContent: T,
+showGIFTag: T = !1,
+dismissibleContent: N,
 position: A = 'top',
 align: P = 'center',
 art: w,
@@ -34,11 +34,11 @@ isPremiumEarlyAccess: k = !1,
 maxWidth: R = 280
   } = e, Z = E ? c.Button.Sizes.LARGE : c.Button.Sizes.MAX, [y, B] = o.useState(!1), {
 ref: W,
-width: L
+width: D
   } = (0, l.Z)();
 
-  function O(e) {
-(0, s.EW)(T, {
+  function L(e) {
+(0, s.EW)(N, {
   dismissAction: e
 });
   }
@@ -48,24 +48,24 @@ let n = (null !== (t = null === (e = W.current) || void 0 === e ? void 0 : e.scr
 !y && n > R && B(!0);
   }, [
 y,
-L,
+D,
 W,
 R
   ]), o.useEffect(() => {
-(0, s.kk)(T);
-  }, [T]), (0, r.jsx)('div', {
-className: v,
+(0, s.kk)(N);
+  }, [N]), (0, r.jsx)('div', {
+className: I,
 ref: t,
 children: (0, r.jsxs)('div', {
   className: a()(_.content, h, {
-    [_.contentNoArt]: null == p || S,
-    [_.contentPremium]: x || k
+    [_.contentNoArt]: null == p || v,
+    [_.contentPremium]: S || k
   }),
   children: [
     (0, r.jsxs)('div', {
-      className: a()(p, S ? _.artInline : _.artAbsolute),
+      className: a()(p, v ? _.artInline : _.artAbsolute),
       children: [
-        N && (0, r.jsx)(u.Z, {
+        T && (0, r.jsx)(u.Z, {
           className: _.gifTag
         }),
         w
@@ -75,11 +75,11 @@ children: (0, r.jsxs)('div', {
       className: _.body,
       children: [
         (0, r.jsxs)(c.Heading, {
-          className: a()(x ? _.headerWithPremiumIcon : _.header, m),
+          className: a()(S ? _.headerWithPremiumIcon : _.header, m),
           variant: 'heading-md/bold',
           color: 'always-white',
           children: [
-            x && !k ? (0, r.jsx)(c.NitroWheelIcon, {
+            S && !k ? (0, r.jsx)(c.NitroWheelIcon, {
               size: 'md',
               color: 'currentColor',
               className: _.premiumIcon
@@ -113,25 +113,25 @@ children: (0, r.jsxs)('div', {
     (0, r.jsx)('div', {
       ref: W,
       className: y || !E ? _.buttonContainerVertical : _.buttonContainerHorizontal,
-      children: null != C ? (0, r.jsxs)(r.Fragment, {
+      children: null != x ? (0, r.jsxs)(r.Fragment, {
         children: [
           (0, r.jsx)(c.Button, {
             className: _.button,
             size: Z,
             onClick: e => {
-              null == I || I(e), C(e), O(d.L.PRIMARY);
+              null == C || C(e), x(e), L(d.L.PRIMARY);
             },
-            color: x || k ? c.Button.Colors.BRAND_INVERTED : c.Button.Colors.WHITE,
+            color: S || k ? c.Button.Colors.BRAND_INVERTED : c.Button.Colors.WHITE,
             children: null != g ? g : f.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }),
           (0, r.jsx)(c.Button, {
             className: _.button,
             size: Z,
             onClick: e => {
-              null == I || I(e), O(d.L.DISMISS);
+              null == C || C(e), L(d.L.DISMISS);
             },
-            color: x || k ? c.Button.Colors.WHITE : c.Button.Colors.BRAND,
-            look: x || k ? c.Button.Looks.LINK : c.Button.Looks.FILLED,
+            color: S || k ? c.Button.Colors.WHITE : c.Button.Colors.BRAND,
+            look: S || k ? c.Button.Looks.LINK : c.Button.Looks.FILLED,
             children: null != b ? b : f.Z.Messages.EDUCATION_NEW_FEATURE_DISMISS
           })
         ]
@@ -139,7 +139,7 @@ children: (0, r.jsxs)('div', {
         className: _.button,
         size: c.Button.Sizes.MAX,
         onClick: e => {
-          null == I || I(e), O(d.L.PRIMARY);
+          null == C || C(e), L(d.L.PRIMARY);
         },
         color: c.Button.Colors.WHITE,
         children: f.Z.Messages.EDUCATION_NEW_FEATURE_CONFIRM

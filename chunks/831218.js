@@ -17,8 +17,8 @@ var i, l, r, a = n(735250),
   N = n(82295),
   x = n(313201),
   S = n(518311),
-  v = n(355298),
-  Z = n(869404),
+  Z = n(355298),
+  v = n(869404),
   T = n(333984),
   L = n(210887),
   A = n(592125),
@@ -400,14 +400,14 @@ version: t,
 theme: n,
 children: i,
 showDMHeader: l
-  } = e, r = s.Children.count(i), o = A.Z.getMutablePrivateChannels(), c = (0, Z.k1)(o), p = (0, h.Wu)([
+  } = e, r = s.Children.count(i), o = A.Z.getMutablePrivateChannels(), c = (0, v.k1)(o), p = (0, h.Wu)([
 M.Z,
-v.Z,
+Z.Z,
 T.Z
   ], () => {
 let e = M.Z.getPrivateChannelIds(),
-  t = (0, Z.tU)(e, [
-    v.Z,
+  t = (0, v.tU)(e, [
+    Z.Z,
     T.Z
   ]);
 return (0, I.Ce)(t);

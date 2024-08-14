@@ -19,8 +19,8 @@ t.Z = () => {
 t = (0, o.c)(),
 n = (0, a.e7)([i.default], () => i.default.getCurrentUser()),
 g = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
-p = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
-N = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
+N = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
+p = (0, l.o)(R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
 A = (0, r.useRedesignIconContext)().enabled;
   return void 0 === n ? null : (0, s.jsxs)('div', {
 className: C.container,
@@ -41,12 +41,12 @@ children: [
       (0, s.jsx)(E.Z, {
         icon: r.EyeIcon,
         header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
-        description: p
+        description: N
       }),
       (0, s.jsx)(E.Z, {
         icon: A ? r.QrCodeIcon : (0, r.makeIconCompat)(T.Z),
         header: R.Z.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
-        description: N
+        description: p
       })
     ]
   }),

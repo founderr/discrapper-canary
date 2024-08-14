@@ -44,10 +44,10 @@ initialPercentage: E = 0,
 progressCircleStrokeSize: T = 2,
 progressCircleVariation: I,
 progressCircleStroke: R
-  } = e, C = 43 + T / 2, g = 2 * Math.PI * C, [p, N] = a.useState(E);
+  } = e, C = 43 + T / 2, g = 2 * Math.PI * C, [N, p] = a.useState(E);
   a.useEffect(() => {
 let e = setTimeout(() => {
-  N(t);
+  p(t);
 }, 200);
 return () => clearTimeout(e);
   }, [t]);
@@ -80,7 +80,7 @@ children: [
         strokeDasharray: ''.concat(g, ' ').concat(g),
         className: c,
         style: {
-          strokeDashoffset: (1 - p / 100) * g
+          strokeDashoffset: (1 - N / 100) * g
         },
         r: ''.concat(C),
         cx: '50%',

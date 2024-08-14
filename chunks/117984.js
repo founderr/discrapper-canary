@@ -27,8 +27,8 @@ return N;
 var i = t(524437),
   r = t(675478),
   u = t(592125),
-  o = t(496675),
-  a = t(709054),
+  a = t(496675),
+  o = t(709054),
   l = t(853856),
   s = t(231338);
 
@@ -55,7 +55,7 @@ if (null == r) {
   continue;
 }
 if (!r.isPrivate()) {
-  if (!o.Z.can(s.Pl.VIEW_CHANNEL, r)) {
+  if (!a.Z.can(s.Pl.VIEW_CHANNEL, r)) {
     delete e[n];
     continue;
   }
@@ -94,7 +94,7 @@ r.hW.updateAsync('favorites', t => {
 }
 
 function T(e) {
-  let n = a.default.fromTimestamp(Date.now());
+  let n = o.default.fromTimestamp(Date.now());
   r.hW.updateAsync('favorites', t => {
 t.favoriteChannels[n] = i.aV.create({
   nickname: e,

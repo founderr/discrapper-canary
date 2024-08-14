@@ -20,25 +20,25 @@ var l = t(735250),
   _ = t(600164),
   S = t(152708),
   g = t(594190),
-  C = t(569984),
-  h = t(918701),
+  h = t(569984),
+  C = t(918701),
   I = t(977156),
   N = t(28798),
-  Z = t(131951),
-  x = t(449224),
+  x = t(131951),
+  Z = t(449224),
   f = t(358085),
   R = t(463727),
   A = t(855403),
   T = t(989941),
   v = t(958707),
   L = t(133179),
-  p = t(46140),
-  M = t(65154),
+  M = t(46140),
+  p = t(65154),
   O = t(689938),
   j = t(624743);
 async function P() {
-  let e = Z.Z.getVideoDevices(),
-n = (0, u.Z)(Z.Z.getMediaEngine(), [
+  let e = x.Z.getVideoDevices(),
+n = (0, u.Z)(x.Z.getMediaEngine(), [
   o.vA.WINDOW,
   o.vA.SCREEN
 ], {
@@ -109,7 +109,7 @@ return null != t && null != l && null != s ? {
 }
 
 function G(e) {
-  let n = (0, f.isWindows)() ? (0, T.Z)(g.ZP, x.Z) : null,
+  let n = (0, f.isWindows)() ? (0, T.Z)(g.ZP, Z.Z) : null,
 t = g.ZP.getRunningGames();
   return null != n && (0, A.Z)(e.id, n.windowHandle) ? 2 : null != t.find(n => (0, A.Z)(e.id, n.windowHandle)) ? 1 : 0;
 }
@@ -122,9 +122,9 @@ onChangeSelectedSource: t
 enableGoLiveCaptureCard: a
   } = R.Z.useExperiment({
 location: 'GoLive_Source_Select'
-  }), i = Z.Z.supports(M.AN.GO_LIVE_HARDWARE), [u, E] = s.useState(null), [x, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [k, B] = s.useState(!1), V = s.useRef(null), y = s.useRef(new d.Xp()), W = (0, c.e7)([g.ZP], () => g.ZP.getRunningGames()), H = function(e, n, t) {
+  }), i = x.Z.supports(p.AN.GO_LIVE_HARDWARE), [u, E] = s.useState(null), [Z, f] = s.useState(null), [T, D] = s.useState(null), U = null != T && T.length > 0, [b, w] = s.useState(o.vA.WINDOW), [k, B] = s.useState(!1), V = s.useRef(null), y = s.useRef(new d.Xp()), H = (0, c.e7)([g.ZP], () => g.ZP.getRunningGames()), W = function(e, n, t) {
 let l = (0, I.Zy)({
-  location: p.dr.STREAM_SOURCE_SELECT
+  location: M.dr.STREAM_SOURCE_SELECT
 });
 return s.useMemo(() => {
   if (null == t || !l)
@@ -134,7 +134,7 @@ return s.useMemo(() => {
     let t = n.find(e => (0, A.Z)(l.id, e.windowHandle));
     if ((null == t ? void 0 : t.id) == null)
       continue;
-    let r = (0, h.lQ)(e, t.id);
+    let r = (0, C.lQ)(e, t.id);
     if (null != r && (null === (s = r.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && (null === (a = r.userStatus) || void 0 === a ? void 0 : a.completedAt) == null)
       return {
         source: l,
@@ -148,9 +148,9 @@ return s.useMemo(() => {
   n,
   t
 ]);
-  }((0, c.e7)([C.Z], () => C.Z.quests), W, x), F = s.useMemo(() => null == x ? null : [...x].sort((e, n) => (null == H ? void 0 : H.source.id) === e.id ? -1 : (null == H ? void 0 : H.source.id) === n.id ? 1 : G(n) - G(e)), [
-H,
-x
+  }((0, c.e7)([h.Z], () => h.Z.quests), H, Z), F = s.useMemo(() => null == Z ? null : [...Z].sort((e, n) => (null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === n.id ? 1 : G(n) - G(e)), [
+W,
+Z
   ]);
   s.useEffect(() => {
 let e = y.current;
@@ -208,7 +208,7 @@ return (0, l.jsx)(m.Clickable, {
 }, s);
   });
 
-  function J() {
+  function Q() {
 let e = V.current;
 null != e && B(!e.isScrolledToTop());
   }
@@ -253,7 +253,7 @@ children: [
     children: (0, l.jsx)(m.AdvancedScroller, {
       ref: z,
       className: j.sourceScroller,
-      onScroll: J,
+      onScroll: Q,
       children: (0, l.jsx)(S.Z, {
         layout: S.Z.Layout.WRAP,
         columns: 2,
@@ -264,10 +264,10 @@ children: [
   }) : (0, l.jsxs)(m.AdvancedScroller, {
     ref: z,
     className: j.sourceScroller,
-    onScroll: J,
+    onScroll: Q,
     children: [
-      b === o.vA.WINDOW && null != H && (0, l.jsx)(N.Z, {
-        quest: H.quest
+      b === o.vA.WINDOW && null != W && (0, l.jsx)(N.Z, {
+        quest: W.quest
       }),
       (0, l.jsx)(S.Z, {
         layout: S.Z.Layout.WRAP,
@@ -291,7 +291,7 @@ onSourceSelect: n
   s.useEffect(() => {
 let e = u.current,
   n = () => {
-    let e = Object.entries(Z.Z.getVideoDevices()).filter(e => {
+    let e = Object.entries(x.Z.getVideoDevices()).filter(e => {
       let [n, t] = e;
       return !t.disabled;
     });

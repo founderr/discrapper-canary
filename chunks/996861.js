@@ -1,6 +1,6 @@
 t.d(n, {
   $Z: function() {
-return C;
+return T;
   },
   B8: function() {
 return P;
@@ -12,7 +12,7 @@ return S;
 return x;
   },
   Hd: function() {
-return T;
+return C;
   },
   Xl: function() {
 return D;
@@ -61,8 +61,8 @@ var u = t(623292),
   m = t(934415),
   M = t(572004),
   _ = t(585483),
-  N = t(709054),
-  h = t(111618),
+  h = t(709054),
+  N = t(111618),
   I = t(50284),
   Z = t(730954),
   A = t(981631);
@@ -83,11 +83,11 @@ channel: n.channel_id
   }), (0, M.JG)((0, m.wR)(e.guild_id, e.id, n.id));
 }
 
-function C(e, n, t) {
+function T(e, n, t) {
   n.state === A.yb.SEND_FAILED || t.shiftKey ? s.Z.deleteMessage(e.id, n.id, n.state === A.yb.SEND_FAILED) : l.Z.confirmDelete(e, n);
 }
 
-function T(e, n) {
+function C(e, n) {
   s.Z.startEditMessage(e.id, n.id, n.content);
 }
 
@@ -108,7 +108,7 @@ function D(e, n) {
 }
 
 function L(e, n) {
-  (0, Z.Z)(e, n, void 0, h.Z.getOptions(n.id));
+  (0, Z.Z)(e, n, void 0, N.Z.getOptions(n.id));
 }
 
 function x(e, n, t) {
@@ -127,7 +127,7 @@ function G(e, n) {
 }
 
 function b(e, n) {
-  let t = f.Z.getChannel(N.default.castMessageIdAsChannelId(n.id));
+  let t = f.Z.getChannel(h.default.castMessageIdAsChannelId(n.id));
   null != t && (0, c.ok)(t);
 }
 

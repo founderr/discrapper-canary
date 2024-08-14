@@ -23,11 +23,11 @@ function g(e) {
 selectedChannelId: n,
 guildId: t,
 onChangeSelectedChannelId: g
-  } = e, C = (0, s.e7)([c.default], () => c.default.getCurrentUser()), h = (0, s.e7)([
+  } = e, h = (0, s.e7)([c.default], () => c.default.getCurrentUser()), C = (0, s.e7)([
 i.Z,
 r.ZP,
 o.Z
-  ], () => (0, d.h_)(r.ZP.getChannels(t), i.Z, o.Z)), I = (0, s.e7)([u.ZP], () => u.ZP.getVoiceStates(t)), N = h.map(e => {
+  ], () => (0, d.h_)(r.ZP.getChannels(t), i.Z, o.Z)), I = (0, s.e7)([u.ZP], () => u.ZP.getVoiceStates(t)), N = C.map(e => {
 var t;
 return {
   name: (0, l.jsx)(m.Z, {
@@ -36,7 +36,7 @@ return {
       let {
         user: n
       } = e;
-      return n.id !== (null == C ? void 0 : C.id);
+      return n.id !== (null == h ? void 0 : h.id);
     }).map(e => {
       let {
         user: n

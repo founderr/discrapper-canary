@@ -128,11 +128,11 @@ onItemSelect: E,
 onItemAction: N,
 interactive: x = !0,
 children: S
-  } = e, v = l.useRef(null), Z = l.useRef([]), T = l.useRef(!1), L = l.useRef(null), [A, b] = l.useState(0), [M, R] = l.useState({
+  } = e, Z = l.useRef(null), v = l.useRef([]), T = l.useRef(!1), L = l.useRef(null), [A, b] = l.useState(0), [M, R] = l.useState({
 x: 0,
 y: 0
   }), P = Math.abs(M.x) + Math.abs(M.y) > 0, O = l.useMemo(() => a().chunk(S, p), [S]), y = l.useCallback((e, t) => {
-null == Z.current[A] ? Z.current[A] = [] : Z.current[A][t] = e;
+null == v.current[A] ? v.current[A] = [] : v.current[A][t] = e;
   }, [A]), j = l.useCallback((e, t) => {
 L.current = t, E(p * e + t);
   }, [E]), D = l.useCallback(() => {
@@ -166,9 +166,9 @@ if (null != L.current)
 N,
 A
   ]), k = l.useMemo(() => (0, r.throttle)(e => {
-if (null == v.current)
+if (null == Z.current)
   return;
-let i = v.current.getBoundingClientRect(),
+let i = Z.current.getBoundingClientRect(),
   l = i.left + i.width / 2,
   r = {
     x: l,
@@ -183,8 +183,8 @@ if (U(a, r, Math.max(t, n)), T.current) {
   return;
 }
 let s = (0, o.ld)(r, a, Math.max(t, n));
-for (let e = 0; e < Z.current[A].length; e++) {
-  let t = Z.current[A][e];
+for (let e = 0; e < v.current[A].length; e++) {
+  let t = v.current[A][e];
   if (null == t)
     continue;
   let n = t.getBoundingClientRect();
@@ -246,7 +246,7 @@ onMouseMove: k,
 onWheel: B,
 onClick: G,
 children: (0, i.jsxs)('div', {
-  ref: v,
+  ref: Z,
   className: u.chatWheel,
   style: {
     width: t,

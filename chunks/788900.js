@@ -12,44 +12,44 @@ let {
   max: l,
   cos: s,
   round: a
-} = Math, r = e[0] | e[1] << 8 | e[2] << 16, i = e[3] | e[4] << 8, o = (63 & r) / 63, c = (r >> 6 & 63) / 31.5 - 1, u = (r >> 12 & 63) / 31.5 - 1, d = r >> 23, m = i >> 15, E = l(3, m ? d ? 5 : 7 : 7 & i), _ = l(3, m ? 7 & i : d ? 5 : 7), S = d ? (15 & e[5]) / 15 : 1, g = (e[5] >> 4) / 15, C = d ? 6 : 5, h = 0, I = (n, t, l) => {
+} = Math, r = e[0] | e[1] << 8 | e[2] << 16, i = e[3] | e[4] << 8, o = (63 & r) / 63, c = (r >> 6 & 63) / 31.5 - 1, u = (r >> 12 & 63) / 31.5 - 1, d = r >> 23, m = i >> 15, E = l(3, m ? d ? 5 : 7 : 7 & i), _ = l(3, m ? 7 & i : d ? 5 : 7), S = d ? (15 & e[5]) / 15 : 1, g = (e[5] >> 4) / 15, h = d ? 6 : 5, C = 0, I = (n, t, l) => {
   let s = [];
   for (let a = 0; a < t; a++)
     for (let r = a ? 0 : 1; r * t < n * (t - a); r++)
-      s.push(((e[C + (h >> 1)] >> ((1 & h++) << 2) & 15) / 7.5 - 1) * l);
+      s.push(((e[h + (C >> 1)] >> ((1 & C++) << 2) & 15) / 7.5 - 1) * l);
   return s;
-}, N = I(E, _, (r >> 18 & 31) / 31), Z = I(3, 3, (i >> 3 & 63) / 63 * 1.25), x = I(3, 3, (i >> 9 & 63) / 63 * 1.25), f = d && I(5, 5, g), R = function(e) {
+}, N = I(E, _, (r >> 18 & 31) / 31), x = I(3, 3, (i >> 3 & 63) / 63 * 1.25), Z = I(3, 3, (i >> 9 & 63) / 63 * 1.25), f = d && I(5, 5, g), R = function(e) {
   let n = e[3],
     t = 128 & e[2],
     l = 128 & e[4];
   return (l ? t ? 5 : 7 : 7 & n) / (l ? 7 & n : t ? 5 : 7);
-}(e), A = a(R > 1 ? 32 : 32 * R), T = a(R > 1 ? 32 / R : 32), v = new Uint8Array(A * T * 4), L = [], p = [];
+}(e), A = a(R > 1 ? 32 : 32 * R), T = a(R > 1 ? 32 / R : 32), v = new Uint8Array(A * T * 4), L = [], M = [];
 for (let e = 0, a = 0; e < T; e++)
   for (let r = 0; r < A; r++, a += 4) {
     let i = o,
       m = c,
       g = u,
-      C = S;
+      h = S;
     for (let e = 0, t = l(E, d ? 5 : 3); e < t; e++)
       L[e] = s(n / A * (r + 0.5) * e);
     for (let t = 0, a = l(_, d ? 5 : 3); t < a; t++)
-      p[t] = s(n / T * (e + 0.5) * t);
+      M[t] = s(n / T * (e + 0.5) * t);
     for (let e = 0, n = 0; e < _; e++)
-      for (let t = e ? 0 : 1, l = 2 * p[e]; t * _ < E * (_ - e); t++, n++)
+      for (let t = e ? 0 : 1, l = 2 * M[e]; t * _ < E * (_ - e); t++, n++)
         i += N[n] * L[t] * l;
     for (let e = 0, n = 0; e < 3; e++)
-      for (let t = e ? 0 : 1, l = 2 * p[e]; t < 3 - e; t++, n++) {
+      for (let t = e ? 0 : 1, l = 2 * M[e]; t < 3 - e; t++, n++) {
         let e = L[t] * l;
-        m += Z[n] * e, g += x[n] * e;
+        m += x[n] * e, g += Z[n] * e;
       }
     if (d)
       for (let e = 0, n = 0; e < 5; e++)
-        for (let t = e ? 0 : 1, l = 2 * p[e]; t < 5 - e; t++, n++)
-          C += f[n] * L[t] * l;
-    let h = i - 2 / 3 * m,
-      I = (3 * i - h + g) / 2,
+        for (let t = e ? 0 : 1, l = 2 * M[e]; t < 5 - e; t++, n++)
+          h += f[n] * L[t] * l;
+    let C = i - 2 / 3 * m,
+      I = (3 * i - C + g) / 2,
       R = I - g;
-    v[a] = l(0, 255 * t(1, I)), v[a + 1] = l(0, 255 * t(1, R)), v[a + 2] = l(0, 255 * t(1, h)), v[a + 3] = l(0, 255 * t(1, C));
+    v[a] = l(0, 255 * t(1, I)), v[a + 1] = l(0, 255 * t(1, R)), v[a + 2] = l(0, 255 * t(1, C)), v[a + 3] = l(0, 255 * t(1, h));
   }
 return {
   w: A,

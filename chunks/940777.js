@@ -24,8 +24,8 @@ var i = n(735250),
   N = n(979651),
   x = n(709054),
   S = n(853856),
-  v = n(593214),
-  Z = n(919755),
+  Z = n(593214),
+  v = n(919755),
   T = n(110977),
   L = n(603274),
   A = n(981631),
@@ -44,7 +44,7 @@ function P() {
 {
   favoriteAdded: t,
   clearFavoriteAdded: r
-} = (0, v.up)(),
+} = (0, Z.up)(),
 [P, O] = l.useState(!1),
 {
   favoriteServerMuted: y,
@@ -59,7 +59,7 @@ U = (0, m.Z)(e => e.guildId) === A.I_8,
 {
   badge: G,
   unread: k
-} = (0, Z.Z)(j),
+} = (0, v.Z)(j),
 B = function(e) {
   let t = (0, o.e7)([E.Z], () => E.Z.getVoiceChannelId()),
     n = null != t && null != e[t],

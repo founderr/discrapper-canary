@@ -19,8 +19,8 @@ var s = n(735250),
   R = n(497505),
   C = n(918701),
   g = n(302245),
-  p = n(977156),
-  N = n(5881),
+  N = n(977156),
+  p = n(5881),
   A = n(602667),
   m = n(78826),
   f = n(693900),
@@ -33,10 +33,10 @@ function b(e) {
   var t, n, r;
   let {
 quest: I
-  } = e, b = (0, N.T)({
+  } = e, b = (0, p.T)({
 quest: I,
 location: h.dr.QUESTS_BAR
-  }), O = (0, p.Zy)({
+  }), O = (0, N.Zy)({
 location: h.dr.QUESTS_BAR
   }), P = (0, o.e7)([_.Z], () => _.Z.useReducedMotion), L = (0, o.e7)([u.Z], () => u.Z.hasLayers()), v = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, Z = (0, d.Z)(v), D = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, B = (0, d.Z)(D), j = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null, U = null != I.userStatus && (0, C.zE)(I.userStatus, R.jn.QUEST_BAR), G = (0, T.tP)(I), {
 hasError: y,

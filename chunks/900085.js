@@ -23,8 +23,8 @@ var i, l = n(735250),
   N = n(306680),
   x = n(944486),
   S = n(938475),
-  v = n(585483),
-  Z = n(63063),
+  Z = n(585483),
+  v = n(63063),
   T = n(51596),
   L = n(823385),
   A = n(415795),
@@ -52,7 +52,7 @@ children: [
   (0, l.jsx)('div', {
     className: P.emptyStateCTA,
     children: (0, l.jsx)(u.Anchor, {
-      href: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
+      href: v.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
       children: R.Z.Messages.QUICKSWITCHER_EMPTY_CTA
     })
   })
@@ -218,7 +218,7 @@ return 0 === t.length && e.length > 0 ? (0, l.jsx)(j, {}) : 0 === t.length ? nul
 });
   }
   focusNode(e) {
-v.S.dispatch(M.CkL.QUICKSWITCHER_RESULT_FOCUS, {
+Z.S.dispatch(M.CkL.QUICKSWITCHER_RESULT_FOCUS, {
   node: e
 });
   }
@@ -236,7 +236,7 @@ return (0, l.jsx)(g.Z, {
     textChannelSymbolHook: (e, t) => H(t, _.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
     voiceChannelSymbolHook: (e, t) => H(t, _.xQ.VOICE_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
     guildSymbolHook: (e, t) => H(t, _.xQ.GUILD, R.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
-    helpdeskArticle: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
+    helpdeskArticle: v.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
   })
 });
   }

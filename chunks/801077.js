@@ -16,8 +16,8 @@ var i, l, r, a, s = n(392711),
   N = n(656063),
   x = n(761282),
   S = n(814443),
-  v = n(789407),
-  Z = n(974543),
+  Z = n(789407),
+  v = n(974543),
   T = n(250889),
   L = n(199902),
   A = n(592125),
@@ -65,7 +65,7 @@ function Q(e) {
 function X(e) {
   return null == W[e] && (W = {
 ...W,
-[e]: new Z.Z({
+[e]: new v.Z({
   url: e
 })
   }), W[e];
@@ -77,7 +77,7 @@ function J(e) {
 
 function $(e) {
   if ((0, _.Z)(e))
-return v.r9;
+return Z.r9;
   let t = null != e.application_id ? C.Z.getApplication(e.application_id) : null;
   return null != t ? t : (0, f.Z)(e) ? Q(e.name) : (0, g.Z)(e) && null != e.url ? X(e.url) : (null != e.application_id && J(e.application_id), t);
 }
@@ -120,14 +120,14 @@ if (null != n && G.push({
 let c = (0, N.Z)(s);
 if (null == c)
   continue;
-j = c === v.XB;
+j = c === Z.XB;
 let u = function(e) {
     let t = C.Z.getApplication(e);
     return null != t ? t : 'string' != typeof e ? (new I.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), {
       tags: {
         source: 'ACTIVITIES'
       }
-    }), null) : e === v.XB ? v.r9 : e.startsWith(T.H) ? Q(e.slice(T.H.length)) : e.startsWith(Z._) ? X(e.slice(Z._.length)) : (J(e), null);
+    }), null) : e === Z.XB ? Z.r9 : e.startsWith(T.H) ? Q(e.slice(T.H.length)) : e.startsWith(v._) ? X(e.slice(v._.length)) : (J(e), null);
   }(c),
   g = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
 if ((0, p.Z)(s)) {

@@ -15,8 +15,8 @@ var s = n(735250),
   R = n(211242),
   C = n(15640),
   g = n(89057),
-  p = n(433811),
-  N = n(246946),
+  N = n(433811),
+  p = n(246946),
   A = n(594174),
   m = n(78839),
   f = n(626135),
@@ -36,7 +36,7 @@ t.Z = function(e) {
 entrypoint: t = v.EZ.UserSettings
   } = e;
   a.useEffect(() => {
-p.X.trigger();
+N.X.trigger();
   }, []);
   let n = (0, R.Q)(),
 {
@@ -80,7 +80,7 @@ y
   }, [
 r,
 k
-  ]), (0, l.e7)([N.Z], () => N.Z.enabled)) ? (0, s.jsx)(E.Z, {}) : n ? (0, s.jsx)(g.c8, {}) : t === v.EZ.ApplicationStoreHome && V ? (0, s.jsx)(I.Gt, {
+  ]), (0, l.e7)([p.Z], () => p.Z.enabled)) ? (0, s.jsx)(E.Z, {}) : n ? (0, s.jsx)(g.c8, {}) : t === v.EZ.ApplicationStoreHome && V ? (0, s.jsx)(I.Gt, {
 value: B,
 children: (0, s.jsx)(L.Z, {})
   }) : j && H && !k ? (0, s.jsx)(I.Gt, {

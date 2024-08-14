@@ -18,8 +18,8 @@ t.Z = e => {
   titleClassName: R,
   buttonClassName: C,
   perkImage: g,
-  isCarousel: p,
-  onCtaClick: N,
+  isCarousel: N,
+  onCtaClick: p,
   perkComponent: A,
   subtitle: m = '',
   descriptionCta: f = '',
@@ -59,8 +59,8 @@ children: [
     src: g,
     alt: '',
     className: r()({
-      [_.cardImage]: !p,
-      [_.carouselCardImage]: p
+      [_.cardImage]: !N,
+      [_.carouselCardImage]: N
     })
   }),
   null != A && (0, s.jsx)(s.Fragment, {
@@ -71,11 +71,11 @@ children: [
           className: _.cardComponent,
           children: A
         }),
-        0 !== f.length && null != N && (0, s.jsx)(i.Button, {
+        0 !== f.length && null != p && (0, s.jsx)(i.Button, {
           className: C,
           disabled: !b,
           fullWidth: !0,
-          onClick: N,
+          onClick: p,
           children: (0, s.jsxs)('div', {
             className: null == M ? void 0 : null === (t = M.descriptionCta) || void 0 === t ? void 0 : t.className,
             children: [

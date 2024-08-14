@@ -24,8 +24,8 @@ var i = n(735250),
   N = n(855981),
   x = n(55543),
   S = n(626135),
-  v = n(768581),
-  Z = n(358085),
+  Z = n(768581),
+  v = n(358085),
   T = n(998502),
   L = n(379164),
   A = n(590965),
@@ -157,7 +157,7 @@ error: C,
 submitting: N
   } = (0, s.cj)([A.Z], () => A.Z.getProps());
   l.useEffect(() => {
-!__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
+!__OVERLAY__ && v.isPlatformEmbedded && ((0, v.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
   }, []);
   let x = (0, g.Dt)(),
 {
@@ -184,7 +184,7 @@ target_application: G
   if (null != G)
 t = null == j ? void 0 : j.name, n = I.Z.createFromServer(G).getCoverImageURL(1024);
   else if (null != j)
-t = j.name, n = v.ZP.getGuildSplashURL({
+t = j.name, n = Z.ZP.getGuildSplashURL({
   id: j.id,
   splash: j.splash
 });

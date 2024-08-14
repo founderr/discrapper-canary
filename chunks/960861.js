@@ -16,18 +16,18 @@ var r, o, i, a, c, l, s = n(470079),
   h = n(131951),
   g = n(496675),
   b = n(944486),
-  C = n(382182),
-  I = n(74299),
-  v = n(65154);
+  x = n(382182),
+  C = n(74299),
+  I = n(65154);
 (r = c || (c = {}))[r.Present = 0] = 'Present', r[r.Update = 1] = 'Update', r[r.Cancel = 2] = 'Cancel', r[r.Error = 3] = 'Error';
-let S = 0,
-  x = {};
+let v = 0,
+  S = {};
 
 function E() {
-  return h.Z.supports(v.AN.NATIVE_SCREENSHARE_PICKER);
+  return h.Z.supports(I.AN.NATIVE_SCREENSHARE_PICKER);
 }
 
-function N() {
+function T() {
   return E() && _.Z.getCurrentConfig({
 location: 'NativeScreenSharePickerStore_enabled'
   }, {
@@ -35,29 +35,29 @@ autoTrackExposure: !1
   }).enableSystemPicker;
 }
 
-function T() {
+function N() {
   var e, t;
   null === (t = h.Z.getMediaEngine()) || void 0 === t || null === (e = t.releaseNativeDesktopVideoSourcePickerStream) || void 0 === e || e.call(t);
 }
 
 function A() {
-  return (0, s.useEffect)(() => (S++, () => {
-0 == --S && T();
+  return (0, s.useEffect)(() => (v++, () => {
+0 == --v && N();
   }), []);
 }
 
 function P(e) {
-  if (N()) {
+  if (T()) {
 var t, n;
-T();
+N();
 let r = p.Z.getChannel(e),
-  o = null != r && (0, I.Z)(h.Z) && (0, C.JL)(r, m.Z, g.Z, !1);
+  o = null != r && (0, C.Z)(h.Z) && (0, x.JL)(r, m.Z, g.Z, !1);
 null === (n = h.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, o);
   }
 }
 
 function w() {
-  T(), P(b.Z.getVoiceChannelId());
+  N(), P(b.Z.getVoiceChannelId());
 }
 class k extends(l = u.ZP.Store) {
   initialize() {
@@ -75,19 +75,19 @@ this.syncWith([
 return E();
   }
   enabled() {
-return N();
+return T();
   }
   presentPicker(e) {
 var t, n;
-x = {
+S = {
   lastPickerAction: 0
 }, null === (n = h.Z.getMediaEngine()) || void 0 === n || null === (t = n.presentNativeScreenSharePicker) || void 0 === t || t.call(n, e);
   }
   releasePickerStream() {
-T();
+N();
   }
   getPickerState() {
-return x;
+return S;
   }
 }
 a = 'NativeScreenSharePickerStore', (i = 'displayName') in(o = k) ? Object.defineProperty(o, i, {
@@ -101,18 +101,18 @@ t.ZP = new k(d.Z, {
 let {
   existing: t
 } = e;
-if (x = {
+if (S = {
     lastPickerAction: 1
-  }, 0 === S && !t) {
+  }, 0 === v && !t) {
   let e = p.Z.getChannel(b.Z.getVoiceChannelId());
-  null != e && (0, I.Z)(h.Z) && (0, C.JL)(e, m.Z, g.Z, !1) && (0, f.WH)(e.getGuildId(), e.id, {
+  null != e && (0, C.Z)(h.Z) && (0, x.JL)(e, m.Z, g.Z, !1) && (0, f.WH)(e.getGuildId(), e.id, {
     sourceId: 'prepicked:0'
   });
 }
   },
   NATIVE_SCREEN_SHARE_PICKER_CANCEL: function(e) {
 let {} = e;
-x = {
+S = {
   lastPickerAction: 2
 };
   },
@@ -120,7 +120,7 @@ x = {
 let {
   error: t
 } = e;
-x = {
+S = {
   lastPickerAction: 3,
   lastPickerError: t
 };

@@ -50,7 +50,7 @@ children: [
     color: 'header-secondary',
     children: t.isForumLikeChannel() ? N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM : N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER
   }),
-  r.slice(0, t.isForumLikeChannel() ? r.length : c).map(e => (0, i.jsx)(v, {
+  r.slice(0, t.isForumLikeChannel() ? r.length : c).map(e => (0, i.jsx)(Z, {
     thread: e
   }, e.id)).filter(e => l.isValidElement(e)).slice(0, c),
   (0, i.jsx)(o.Clickable, {
@@ -76,7 +76,7 @@ children: [
   });
 }
 
-function v(e) {
+function Z(e) {
   let {
 thread: t
   } = e, n = (0, s.e7)([g.default], () => g.default.getUser(t.ownerId)), l = (0, h.Ok)(t);

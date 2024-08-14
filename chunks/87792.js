@@ -15,8 +15,8 @@ var s = n(735250),
   R = n(858719),
   C = n(780985),
   g = n(880257),
-  p = n(631885),
-  N = n(240351),
+  N = n(631885),
+  p = n(240351),
   A = n(792258),
   m = n(657825),
   f = n(198952),
@@ -61,10 +61,10 @@ loadMore: _,
 isMoreLoading: T
   } = (0, I.G)({
 onError: n
-  }), C = M.tx.get(t), [p, N] = a.useState(M.iB), f = (0, E.Xi)({
+  }), C = M.tx.get(t), [N, p] = a.useState(M.iB), f = (0, E.Xi)({
 location: 'family_center_activity_section_web'
   }), S = a.useCallback(() => {
-N(e => e + M.iB), _(t);
+p(e => e + M.iB), _(t);
   }, [
 t,
 _
@@ -109,7 +109,7 @@ P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
 ]);
   if (0 === l.length)
 return null;
-  let L = l.slice(0, p);
+  let L = l.slice(0, N);
   return (0, s.jsxs)('div', {
 className: O.actionSection,
 children: [
@@ -143,12 +143,12 @@ children: [
 }
 let v = () => {
 let e = (0, g.Z)(),
-  t = (0, p.mq)(M.ne.ACTIVE),
+  t = (0, N.mq)(M.ne.ACTIVE),
   n = (0, T.o)(b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
     activeLinks: t.length
   }), b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
   a = (0, u.Qr)(!!e),
-  r = (0, p.Rd)(a);
+  r = (0, N.Rd)(a);
 return e && t.length > 1 ? (0, s.jsx)(o.Text, {
   variant: 'eyebrow',
   children: r
@@ -196,7 +196,7 @@ return void 0 === r ? null : (0, s.jsxs)('div', {
 });
   },
   D = () => {
-let e = (0, p.mq)(M.ne.ACTIVE),
+let e = (0, N.mq)(M.ne.ACTIVE),
   t = (0, l.e7)([_.Z], () => _.Z.getSelectedTeenId()),
   {
     selectTeenUser: n
@@ -229,7 +229,7 @@ return (0, s.jsx)(o.Select, {
   B = e => {
 let {
   userId: t
-} = e, n = (0, g.Z)(), a = (0, p.mq)(M.ne.ACTIVE), r = (0, u.Qr)(!!n), i = (0, p.Rd)(r);
+} = e, n = (0, g.Z)(), a = (0, N.mq)(M.ne.ACTIVE), r = (0, u.Qr)(!!n), i = (0, N.Rd)(r);
 return n && 1 !== a.length ? (0, s.jsx)(D, {}) : (0, s.jsx)(Z, {
   userId: t,
   subText: i
@@ -238,7 +238,7 @@ return n && 1 !== a.length ? (0, s.jsx)(D, {}) : (0, s.jsx)(Z, {
 t.Z = e => {
   let {
 user: t
-  } = e, n = Array.from(M.tx.entries()), a = (0, R.kE)(), r = (0, u.t3)(), i = (0, p.Rd)(r);
+  } = e, n = Array.from(M.tx.entries()), a = (0, R.kE)(), r = (0, u.t3)(), i = (0, N.Rd)(r);
   return (0, s.jsxs)('div', {
 className: O.container,
 children: [
@@ -265,7 +265,7 @@ children: [
             className: O.activityCounterRow,
             children: n.map(e => {
               let [t, n] = e;
-              return (0, s.jsx)(N.Z, {
+              return (0, s.jsx)(p.Z, {
                 displayType: t,
                 header: n.tooltipHeader()
               }, 'counter-'.concat(t));

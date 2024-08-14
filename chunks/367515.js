@@ -21,7 +21,7 @@ var s = n(735250),
 function C(e) {
   let {
 user: t
-  } = e, r = (0, d.Z)(), C = (0, _.VM)(), g = (0, l.e7)([c.default], () => c.default.getCurrentUser()), p = a.useCallback(() => {
+  } = e, r = (0, d.Z)(), C = (0, _.VM)(), g = (0, l.e7)([c.default], () => c.default.getCurrentUser()), N = a.useCallback(() => {
 i()(void 0 !== g, 'User must be logged in to accept a link request'), (0, o.openModalLazy)(async () => {
   let {
     default: e
@@ -35,7 +35,7 @@ i()(void 0 !== g, 'User must be logged in to accept a link request'), (0, o.open
   }, [
 g,
 t
-  ]), N = a.useCallback(() => {
+  ]), p = a.useCallback(() => {
 i()(void 0 !== g, 'User must be logged in to decline a link request'), (0, o.openModalLazy)(async () => {
   let {
     default: e
@@ -87,13 +87,13 @@ children: [
           icon: o.CheckmarkLargeIcon,
           className: R.__invalid_actionAccept,
           tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
-          onClick: p
+          onClick: N
         }),
         (0, s.jsx)(u.Z, {
           icon: o.XSmallIcon,
           className: R.__invalid_actionDeny,
           tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
-          onClick: N
+          onClick: p
         })
       ]
     })

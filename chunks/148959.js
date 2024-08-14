@@ -22,7 +22,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 let p = 10 * E.Z.Millis.SECOND,
-  m = 30 * E.Z.Millis.SECOND;
+  m = 10 * E.Z.Millis.SECOND;
 (s = r || (r = {})).RequestedSSRCsUpdate = 'requested-ssrcs-update', s.RequestedStreamsUpdate = 'requested-streams-update', (o = i || (i = {}))[o.Ready = 0] = 'Ready', o[o.Pending = 1] = 'Pending', o[o.PendingSeamless = 2] = 'PendingSeamless', o[o.Finalizing = 3] = 'Finalizing', (l = a || (a = {}))[l.None = 0] = 'None', l[l.Low = 60] = 'Low', l[l.High = 100] = 'High';
 class I extends d.Z {
   setUserID(e) {

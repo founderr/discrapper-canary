@@ -46,7 +46,7 @@ children: [
     children: s
   }),
   (0, i.jsx)(c.Text, {
-    variant: 'text-md/normal',
+    variant: 'text-md/medium',
     color: 'none',
     children: E
   })

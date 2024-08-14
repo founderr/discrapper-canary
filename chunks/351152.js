@@ -1,6 +1,6 @@
 t.d(n, {
   Z: function() {
-return x;
+return Z;
   }
 }), t(390547);
 var l = t(735250);
@@ -18,12 +18,12 @@ var s = t(120356),
   _ = t(771845),
   S = t(259580),
   g = t(382182),
-  C = t(148381),
-  h = t(689938),
+  h = t(148381),
+  C = t(689938),
   I = t(458623),
   N = t(544347);
 
-function Z(e) {
+function x(e) {
   let {
 guildId: n,
 onClick: t
@@ -59,18 +59,18 @@ children: [
   }) : null;
 }
 
-function x(e) {
+function Z(e) {
   let {
 onSelectGuild: n
   } = e, t = (0, o.e7)([_.ZP], () => _.ZP.getGuildFolders());
-  return (0, l.jsx)(C.Z, {
-title: h.Z.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
+  return (0, l.jsx)(h.Z, {
+title: C.Z.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
 scrollerClassName: a()(N.guildScroller, I.marginBottom),
 children: i().flatMap(t, e => {
   let {
     guildIds: t
   } = e;
-  return t.map(e => (0, l.jsx)(Z, {
+  return t.map(e => (0, l.jsx)(x, {
     guildId: e,
     onClick: n
   }, e));

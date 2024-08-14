@@ -29,8 +29,8 @@ guildId: t,
 channel: n,
 width: x,
 height: S,
-keepOpen: v,
-interactive: Z = !0,
+keepOpen: Z,
+interactive: v = !0,
 analyticsSource: T,
 onClose: L
   } = e, A = function(e) {
@@ -76,9 +76,9 @@ b,
 L
   ]), l.useEffect(() => () => {
 let e = M.current;
-!v && null != e && j(e);
+!Z && null != e && j(e);
   }, [
-v,
+Z,
 j
   ]), (0, c.Z)({
 type: r.ImpressionTypes.POPOUT,
@@ -89,7 +89,7 @@ properties: {
   media_session_id: O
 }
   }, {
-disableTrack: !Z
+disableTrack: !v
   });
   let D = l.useCallback(e => {
   M.current = e, P(null == e ? void 0 : e.soundId);
@@ -117,7 +117,7 @@ U = l.useCallback(e => {
   j
 ]),
 G = l.useMemo(() => A.map(e => (0, i.jsx)(I.ZP, {
-  interactive: Z,
+  interactive: v,
   className: N.soundButton,
   sound: e,
   focused: R === e.soundId,
@@ -125,7 +125,7 @@ G = l.useMemo(() => A.map(e => (0, i.jsx)(I.ZP, {
 }, e.soundId)), [
   R,
   n,
-  Z,
+  v,
   A
 ]);
   return 0 === A.length ? null : (0, i.jsx)(o.Gt, {
@@ -135,11 +135,11 @@ children: (0, i.jsx)(C.Z, {
   wheelHeight: S,
   itemWidth: 96,
   itemHeight: 52,
-  showDeadZoneIndicator: !v,
+  showDeadZoneIndicator: !Z,
   activeItem: R,
   onItemSelect: w,
   onItemAction: U,
-  interactive: Z,
+  interactive: v,
   children: G
 })
   });

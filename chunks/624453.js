@@ -10,8 +10,8 @@ var i, s, l, a, r = t(392711),
   m = t(271383),
   M = t(430824),
   _ = t(375954),
-  N = t(699516),
-  h = t(594174);
+  h = t(699516),
+  N = t(594174);
 let I = {};
 
 function Z(e) {
@@ -38,12 +38,12 @@ channel: n
 
 function p() {
   o().forEach(I, e => {
-e.messages = e.messages.map(e => e.set('blocked', N.Z.isBlockedForMessage(e)));
+e.messages = e.messages.map(e => e.set('blocked', h.Z.isBlockedForMessage(e)));
   });
 }
 class S extends(i = u.ZP.Store) {
   initialize() {
-this.waitFor(g.Z, M.Z, m.ZP, _.Z, h.default, f.default);
+this.waitFor(g.Z, M.Z, m.ZP, _.Z, N.default, f.default);
   }
   getPinnedMessages(e) {
 var n;

@@ -20,8 +20,8 @@ var i = n(735250),
   N = n(317381),
   x = n(620662),
   S = n(513202),
-  v = n(835473),
-  Z = n(67212),
+  Z = n(835473),
+  v = n(67212),
   T = n(757454),
   L = n(552740),
   A = n(933557),
@@ -82,7 +82,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let ev = (0, m.Z)(function(e) {
+let eZ = (0, m.Z)(function(e) {
   let {
 message: t
   } = e;
@@ -90,7 +90,7 @@ message: t
 children: t
   });
 });
-class eZ extends l.PureComponent {
+class ev extends l.PureComponent {
   componentDidUpdate(e) {
 !e.dropsActivityPanelExperienceBlocked && this.props.dropsActivityPanelExperienceBlocked && this.setState({
   isDropsActivityPanelTooltipOpen: !1
@@ -389,7 +389,7 @@ return (0, i.jsxs)('div', {
             children: t.name
           })
         }),
-        (0, X.Qm)(l.type) ? c : (0, i.jsx)(ev, {
+        (0, X.Qm)(l.type) ? c : (0, i.jsx)(eZ, {
           timestamps: s
         })
       ]
@@ -430,7 +430,7 @@ super(...e), eS(this, 'modalKey', void 0), eS(this, 'state', {
   null != i && null != n && (null == e ? (0, g.tE)({
     channelId: i.id,
     pid: n.pid
-  }) : (0, Z.v$)((0, B.V9)(e), n.pid));
+  }) : (0, v.v$)((0, B.V9)(e), n.pid));
 }), eS(this, 'handleClickGoLiveButton', () => {
   let {
     guildId: e,
@@ -561,7 +561,7 @@ showDropsSparkles: E
 en.Z,
 el.Z,
 et.ZP
-  ], () => null != s ? H.JL(s, en.Z, el.Z, !1) : null != n && H.h_(et.ZP.getChannels(n), en.Z, el.Z).length > 0), [Z] = (0, v.Z)([null !== (t = function() {
+  ], () => null != s ? H.JL(s, en.Z, el.Z, !1) : null != n && H.h_(et.ZP.getChannels(n), en.Z, el.Z).length > 0), [v] = (0, Z.Z)([null !== (t = function() {
 if (null != _ && null != _.id)
   return _.id;
 if (null != a && null != a.id)
@@ -572,7 +572,7 @@ if (null != x)
 ec.default,
 ea.Z
   ], () => null != d ? (0, A.F6)(d, ec.default, ea.Z) : void 0), D = (0, q.Z)();
-  return (0, i.jsx)(eZ, {
+  return (0, i.jsx)(ev, {
 ...l,
 guildId: n,
 canGoLive: L,
@@ -583,7 +583,7 @@ dropsPartnerGame: m,
 dropsActivityPanelExperienceBlocked: C,
 userId: r,
 runningGame: a,
-application: Z,
+application: v,
 useReducedMotion: f,
 isStreaming: M,
 channel: d,

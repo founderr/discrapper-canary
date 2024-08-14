@@ -15,11 +15,11 @@ let T = (0, d.uk)('poggermode_applause', r.Z.getSoundpack()),
   R = !1,
   C = [],
   g = null,
-  p = () => {
+  N = () => {
 if (!I)
   T.loop(), I = !0;
   },
-  N = () => {
+  p = () => {
 T.stop(), I = !1;
   },
   A = () => {
@@ -62,10 +62,10 @@ t === E.hes.RTC_CONNECTED ? T.volume = 0.1 : T.volume = 1;
 let {
   userId: t
 } = e;
-i.default.getId() === t && N();
+i.default.getId() === t && p();
   }
   stopAudio() {
-N();
+p();
   }
   startAudio() {
 var e;
@@ -78,7 +78,7 @@ let n = i.default.getId(),
   s = c.Z.isTyping(t, n),
   a = u.ZP.getUserCombo(n, t),
   r = null !== (e = null == a ? void 0 : a.multiplier) && void 0 !== e ? e : 1;
-s && r >= 7 ? p() : N();
+s && r >= 7 ? N() : p();
   }
   playAchievementUnlockSound() {
 if (!!A())

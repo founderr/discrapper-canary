@@ -93,8 +93,8 @@ return () => {
 };
   }, []);
   let g = null != R && n,
-p = g ? l.Clickable : 'div';
-  return (0, s.jsxs)(p, {
+N = g ? l.Clickable : 'div';
+  return (0, s.jsxs)(N, {
 className: i()(_.container, g && _.actionable),
 onClick: () => {
   g && R();

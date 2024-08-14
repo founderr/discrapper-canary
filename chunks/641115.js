@@ -17,12 +17,12 @@ var l = t(735250),
   _ = t(924557),
   S = t(600164),
   g = t(436774),
-  C = t(1163),
-  h = t(594174),
+  h = t(1163),
+  C = t(594174),
   I = t(74538),
   N = t(451467),
-  Z = t(122186),
-  x = t(37113),
+  x = t(122186),
+  Z = t(37113),
   f = t(981631),
   R = t(474936),
   A = t(689938),
@@ -30,7 +30,7 @@ var l = t(735250),
   v = t(782765),
   L = t(224499);
 
-function p(e) {
+function M(e) {
   let {
 analyticsLocation: n,
 onClose: s
@@ -47,7 +47,7 @@ return t => (0, l.jsx)(e, {
   });
 }
 
-function M() {
+function p() {
   return (0, l.jsxs)('div', {
 className: v.toolTipTextContainer,
 children: [
@@ -84,7 +84,7 @@ function O(e) {
 tooltipClassName: v.tooltip,
 spacing: 6,
 'aria-label': A.Z.Messages.UNLOCK_WITH_NITRO,
-text: (0, l.jsx)(M, {}),
+text: (0, l.jsx)(p, {}),
 children: (0, l.jsx)('div', {
   className: v.textContainer,
   onMouseEnter: () => E(!0),
@@ -95,7 +95,7 @@ children: (0, l.jsx)('div', {
     children: S
   })
 })
-  }), t = () => p({
+  }), t = () => M({
 analyticsLocation: c,
 onClose: m
   })) : (n = (0, l.jsx)('div', {
@@ -126,18 +126,18 @@ selectedResolution: a,
 selectedFPS: r,
 onResolutionChange: i,
 onFPSChange: g,
-onPresetChange: M,
+onPresetChange: p,
 targetGuildPremiumTier: j,
 captureDeviceSelected: P
-  } = e, D = (0, u.e7)([h.default], () => {
-let e = h.default.getCurrentUser();
+  } = e, D = (0, u.e7)([C.default], () => {
+let e = C.default.getCurrentUser();
 return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
   }), G = I.ZP.canStreamQuality(I.U2.MID, D), {
 location: U
   } = (0, E.O)(), b = (0, _.Zq)({
 autoTrackExposure: !1
   }), w = (0, I.I5)(D, R.p9.TIER_1);
-  C.Z.useExperiment({
+  h.Z.useExperiment({
 location: 'Go Live Modal'
   }, {
 autoTrackExposure: !0,
@@ -146,49 +146,49 @@ disable: w
   let k = (0, I.So)(c.q.STREAM_HIGH_QUALITY),
 B = !G && !b || k,
 [V, y] = s.useState(!1),
-W = P ? x.z8 : x.WC,
-H = {
+H = P ? Z.z8 : Z.WC,
+W = {
   ...U,
   section: f.jXE.STREAM_SETTINGS
 },
 F = (0, l.jsx)(d.ButtonGroup, {
-  buttons: W.map(e => O({
+  buttons: H.map(e => O({
     type: e,
     selected: e.value === a,
     needsPremium: !(0, N.Z)(t, e.value, r, D, j),
-    needsDemo: k && e.value !== x.LY.RESOLUTION_720,
-    analyticsLocation: H,
+    needsDemo: k && e.value !== Z.LY.RESOLUTION_720,
+    analyticsLocation: W,
     onClick: () => i(e.value),
     onClose: n,
     setIsHovering: y
   }))
 }),
 z = (0, l.jsx)(d.ButtonGroup, {
-  buttons: x.k0.map(e => O({
+  buttons: Z.k0.map(e => O({
     type: e,
     selected: e.value === r,
     needsPremium: !(0, N.Z)(t, a, e.value, D, j),
-    needsDemo: k && e.value === x.ws.FPS_60,
-    analyticsLocation: H,
+    needsDemo: k && e.value === Z.ws.FPS_60,
+    analyticsLocation: W,
     onClick: () => g(e.value),
     onClose: n,
     setIsHovering: y
   }))
 }),
 K = [{
-    value: x.tI.PRESET_VIDEO,
+    value: Z.tI.PRESET_VIDEO,
     label: A.Z.Messages.STREAM_PRESET_VIDEO
   },
   ...P ? [] : [{
-    value: x.tI.PRESET_DOCUMENTS,
+    value: Z.tI.PRESET_DOCUMENTS,
     label: A.Z.Messages.STREAM_PRESET_DOCUMENTS
   }],
   {
-    value: x.tI.PRESET_CUSTOM,
+    value: Z.tI.PRESET_CUSTOM,
     label: A.Z.Messages.STREAM_PRESET_CUSTOM
   }
 ],
-Y = t === x.tI.PRESET_DOCUMENTS ? (0, l.jsxs)(l.Fragment, {
+Y = t === Z.tI.PRESET_DOCUMENTS ? (0, l.jsxs)(l.Fragment, {
   children: [
     (0, l.jsx)(S.Z, {
       children: (0, l.jsx)(d.FormItem, {
@@ -203,10 +203,10 @@ Y = t === x.tI.PRESET_DOCUMENTS ? (0, l.jsxs)(l.Fragment, {
         })
       })
     }),
-    B ? (0, l.jsx)(Z.Z, {
+    B ? (0, l.jsx)(x.Z, {
       message: A.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
       onClose: n,
-      openStreamUpsellModal: p
+      openStreamUpsellModal: M
     }) : null
   ]
 }) : (0, l.jsxs)(l.Fragment, {
@@ -227,15 +227,15 @@ Y = t === x.tI.PRESET_DOCUMENTS ? (0, l.jsxs)(l.Fragment, {
         })
       ]
     }),
-    B ? (0, l.jsx)(Z.Z, {
+    B ? (0, l.jsx)(x.Z, {
       onClose: n,
-      openStreamUpsellModal: p,
+      openStreamUpsellModal: M,
       glow: V
     }) : null
   ]
 });
   return (0, l.jsx)(m.Z, {
-...H,
+...W,
 children: (0, l.jsx)(d.FormItem, {
   title: A.Z.Messages.STREAM_QUALITY,
   titleClassName: T.formItemTitle,
@@ -247,7 +247,7 @@ children: (0, l.jsx)(d.FormItem, {
         value: t,
         className: L.marginTop8,
         options: K,
-        onChange: e => M(e)
+        onChange: e => p(e)
       }),
       Y
     ]

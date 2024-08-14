@@ -19,8 +19,8 @@ var s = n(399606),
   R = n(101732),
   C = n(450598),
   g = n(633030),
-  p = n(97942),
-  N = n(269987),
+  N = n(97942),
+  p = n(269987),
   A = n(548629),
   m = n(507084),
   f = n(680313),
@@ -97,7 +97,7 @@ return {
         onTryItOutClick: t
       });
     },
-    imageSource: p,
+    imageSource: N,
     imageClassName: t.perGuildProfilesImage
   },
   longerMessages: {
@@ -121,7 +121,7 @@ return {
   remix: {
     title: T.Z.Messages.REMIXING_PERKS_CARD_TITLE,
     description: T.Z.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-    imageSource: H(n, N, A),
+    imageSource: H(n, p, A),
     imageClassName: t.remixingImage,
     isEarlyAccess: !0
   },

@@ -36,11 +36,11 @@ return null;
   let C = (0, r.getAvatarSpecs)(T),
 {
   name: g,
-  rarity: p
+  rarity: N
 } = R,
 {
-  color: N
-} = (0, c.F7)(p),
+  color: p
+} = (0, c.F7)(N),
 A = (0, a.wj)(I) ? u : E,
 m = (C.size - C.offset - 2 * C.stroke) * 0.8,
 f = C.size - C.stroke,
@@ -68,7 +68,7 @@ children: [
     className: _.trophyIconContainer,
     children: (0, s.jsx)(r.TrophyIcon, {
       size: 'custom',
-      color: d ? N : (0, l.Lq)(A.trophy),
+      color: d ? p : (0, l.Lq)(A.trophy),
       width: m,
       height: m
     })
@@ -82,7 +82,7 @@ children: [
       ...S
     })
   }),
-  d && p === c.EP.LEGENDARY && (0, s.jsx)('div', {
+  d && N === c.EP.LEGENDARY && (0, s.jsx)('div', {
     className: _.lockContainer,
     style: h,
     children: (0, s.jsx)(o.Z, {

@@ -39,8 +39,8 @@ var x = t(392750),
   A = t(351930),
   P = t(771751),
   L = t(596768),
-  M = t(621060),
-  D = t(689938),
+  D = t(621060),
+  M = t(689938),
   G = t(941735),
   U = t(535271);
 
@@ -62,7 +62,7 @@ className: G.resizeHandle
   });
 }
 
-function z() {
+function F() {
   var e;
   let r = n.useMemo(() => {
   let e = [{
@@ -166,7 +166,7 @@ function z() {
   TabBar: t,
   renderSelectedTab: i,
   selectedTabId: o
-} = (0, M.Z)({
+} = (0, D.Z)({
   tabs: r,
   initialSelectedTabId: null !== (e = f.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
   onChangeTab: e => {
@@ -187,7 +187,7 @@ children: [
     className: U.headerBar,
     toolbar: (0, a.jsx)(m.ZP.Icon, {
       icon: s.XSmallIcon,
-      tooltip: D.Z.Messages.CLOSE,
+      tooltip: M.Z.Messages.CLOSE,
       onClick: b.SO
     }),
     children: [
@@ -209,7 +209,7 @@ children: [
   });
 }
 
-function F() {
+function z() {
   let e = n.useRef(null),
 r = (0, c.e7)([f.Z], () => f.Z.sidebarWidth),
 [t, i] = n.useState(null),
@@ -236,7 +236,7 @@ children: [
   }),
   (0, a.jsx)('div', {
     className: G.sidebarContent,
-    children: (0, a.jsx)(z, {})
+    children: (0, a.jsx)(F, {})
   })
 ]
   });
@@ -248,7 +248,7 @@ function V() {
 className: o()(G.container, G.mobileContainerExpanded),
 children: (0, a.jsx)('div', {
   className: G.sidebarContent,
-  children: (0, a.jsx)(z, {})
+  children: (0, a.jsx)(F, {})
 })
   }) : (0, a.jsx)('div', {
 className: G.container,
@@ -277,5 +277,5 @@ function Y(e) {
   let {
 mobile: r
   } = e;
-  return r ? (0, a.jsx)(V, {}) : (0, a.jsx)(F, {});
+  return r ? (0, a.jsx)(V, {}) : (0, a.jsx)(z, {});
 }

@@ -19,8 +19,8 @@ var i = n(735250),
   N = n(25601),
   x = n(207055),
   S = n(981631),
-  v = n(124368),
-  Z = n(689938),
+  Z = n(124368),
+  v = n(689938),
   T = n(391463),
   L = n(140757),
   A = n(645829);
@@ -60,7 +60,7 @@ mentionCount: j
 unread: g.ZP.hasUnread(t.id),
 mentionCount: g.ZP.getMentionCount(t.id)
   })), D = (0, o.e7)([p.Z], () => p.Z.isMuted(t.id)), w = l.useCallback(e => {
-(0, _.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
+(0, _.ok)(t, !e.shiftKey, Z.on.CHANNEL_LIST);
   }, [t]), U = l.useCallback(() => {
 u.Z.preload(t.guild_id, t.id);
   }, [
@@ -80,12 +80,12 @@ null != l && (0, d.jW)(e, async () => {
   }, [t.id]), k = null == P ? 0 : P.length, {
 role: B,
 ...H
-  } = (0, s.JA)(t.id), V = l.useRef(null), F = j > 0 ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
+  } = (0, s.JA)(t.id), V = l.useRef(null), F = j > 0 ? v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
 channelName: t.name,
 mentionCount: j
-  }) : y ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({
+  }) : y ? v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({
 channelName: t.name
-  }) : Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({
+  }) : v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({
 channelName: t.name
   });
   return (0, i.jsxs)('li', {

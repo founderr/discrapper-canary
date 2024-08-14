@@ -25,8 +25,8 @@ var l = n(120356),
   N = n(305325),
   x = n(281956),
   S = n(66999),
-  v = n(554747),
-  Z = n(506936),
+  Z = n(554747),
+  v = n(506936),
   T = n(574176),
   L = n(359110),
   A = n(155409),
@@ -155,8 +155,8 @@ let {
   hasActiveEvent: N,
   embeddedApps: x,
   isSubscriptionGated: S,
-  isFavoriteSuggestion: v,
-  withGuildIcon: Z
+  isFavoriteSuggestion: Z,
+  withGuildIcon: v
 } = this.props, {
   shouldShowActivities: T,
   shouldShowGuildVerificationPopout: L
@@ -189,7 +189,7 @@ let {
                 [Y.iconLive]: N
               }),
               channel: e,
-              selected: !v && t,
+              selected: !Z && t,
               connected: n,
               unread: n ? l : void 0,
               resolvedUnreadSetting: a,
@@ -203,7 +203,7 @@ let {
                 this.handleContextMenu(e), null == d || d();
               },
               connectDragPreview: m,
-              isFavoriteSuggestion: v,
+              isFavoriteSuggestion: Z,
               'aria-label': (0, f.ZP)({
                 channel: e,
                 unread: l,
@@ -216,15 +216,15 @@ let {
                 channel: e,
                 embeddedApps: x
               }),
-              withGuildIcon: Z,
+              withGuildIcon: v,
               ...h,
               children: [
-                v && this.renderAcceptSuggestionButton(),
-                v && this.renderRemoveSuggestionButton(),
-                !v && this.renderOpenChatButton(),
-                !v && this.renderInviteButton(),
-                !v && this.renderEditButton(),
-                !v && this.renderChannelInfo()
+                Z && this.renderAcceptSuggestionButton(),
+                Z && this.renderRemoveSuggestionButton(),
+                !Z && this.renderOpenChatButton(),
+                !Z && this.renderInviteButton(),
+                !Z && this.renderEditButton(),
+                !Z && this.renderChannelInfo()
               ]
             });
           }
@@ -343,8 +343,8 @@ super(...e), K(this, 'state', {
     });
   }
   if (o)
-    return (0, i.jsx)(Z.Z, {
-      type: Z.R.VOICE,
+    return (0, i.jsx)(v.Z, {
+      type: v.R.VOICE,
       guildId: e.guild_id,
       closePopout: this.closeGuildVerificationPopout
     });
@@ -420,10 +420,10 @@ return {
   bypassLimit: O.Z.can(F.Plq.MOVE_MEMBERS, n),
   unverifiedAccount: !i.canChat
 };
-  }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), g = (0, m.ZP)(n), C = (0, v.qY)(n.id), {
+  }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), g = (0, m.ZP)(n), C = (0, Z.qY)(n.id), {
 isSubscriptionGated: I,
 needSubscriptionToAccess: N
-  } = (0, S.Z)(n.id), x = (0, E.Z)(), Z = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)), L = e.connected || (null == x ? void 0 : x.channelId) === n.id, {
+  } = (0, S.Z)(n.id), x = (0, E.Z)(), v = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)), L = e.connected || (null == x ? void 0 : x.channelId) === n.id, {
 enableHangStatus: A,
 allowChannelTopic: b
   } = T.n.useExperiment({
@@ -453,7 +453,7 @@ needSubscriptionToAccess: N,
 ...h,
 ...e,
 connected: L,
-isFavoriteSuggestion: r && !Z,
+isFavoriteSuggestion: r && !v,
 forceShowButtons: w,
 channelInfo: R,
 enableHangStatus: A,

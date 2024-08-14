@@ -14,8 +14,8 @@ var i = t(735250),
   m = t(699516),
   M = t(594174),
   _ = t(630388),
-  N = t(970257),
-  h = t(981631),
+  h = t(970257),
+  N = t(981631),
   I = t(689938),
   Z = t(608362);
 
@@ -37,11 +37,11 @@ let {
   message: l,
   showContextMenuHint: a,
   ...o
-} = this.props, u = s.type === h.d4z.GUILD_ANNOUNCEMENT && (0, _.yE)(l.flags, h.iLy.CROSSPOSTED);
+} = this.props, u = s.type === N.d4z.GUILD_ANNOUNCEMENT && (0, _.yE)(l.flags, N.iLy.CROSSPOSTED);
 return a && (e = (0, i.jsx)(c.Z, {
   className: Z.spacingTop,
   children: I.Z.Messages.DELETE_MESSAGE_CONTEXT_MENU_HINT.format()
-})), (0, N.vc)(l) && (n = (0, i.jsx)(r.FormSwitch, {
+})), (0, h.vc)(l) && (n = (0, i.jsx)(r.FormSwitch, {
   value: t,
   onChange: this.handleToggleReport,
   hideBorder: !0,

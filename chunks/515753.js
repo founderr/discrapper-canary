@@ -27,8 +27,8 @@ var i = n(735250),
   N = n(43267),
   x = n(933557),
   S = n(979264),
-  v = n(163889),
-  Z = n(111028),
+  Z = n(163889),
+  v = n(111028),
   T = n(853856),
   L = n(93687),
   A = n(785232),
@@ -94,7 +94,7 @@ let {
   'aria-setsize': m,
   ...I
 } = this.props;
-return (0, i.jsx)(v.Z, {
+return (0, i.jsx)(Z.Z, {
   className: a()(H.channel, {
     [H.fullWidth]: d.tq
   }, _),
@@ -300,7 +300,7 @@ children: e => {
     role: n,
     ...l
   } = e;
-  return (0, i.jsx)(v.Z, {
+  return (0, i.jsx)(Z.Z, {
     className: H.channel,
     role: n,
     focusProps: {
@@ -340,7 +340,7 @@ children: e => {
             highlighted: et,
             muted: null != ee && ee,
             subText: eh(),
-            name: (0, i.jsx)(Z.Z, {
+            name: (0, i.jsx)(v.Z, {
               tooltipClassName: H.overflowTooltip,
               children: em
             }),

@@ -20,8 +20,8 @@ var i = n(735250),
   N = n(358221),
   x = n(963202),
   S = n(353093),
-  v = n(706590),
-  Z = n(940777),
+  Z = n(706590),
+  v = n(940777),
   T = n(831565),
   L = n(41776),
   A = n(905423),
@@ -188,12 +188,12 @@ location: 'GuildsBar'
   }), eN = eg || eC.length > 0 || eE, ex = l.useMemo(() => eC.filter(e => !(0, S.EJ)(e)), [eC]).length > 0, eS = l.useMemo(() => ex ? z.OO : eg ? z.KF : void 0, [
 eg,
 ex
-  ]), ev = l.useMemo(() => ex ? eI : eg ? em : void 0, [
+  ]), eZ = l.useMemo(() => ex ? eI : eg ? em : void 0, [
 eI,
 eg,
 ex,
 em
-  ]), eZ = null != eS, eT = !eZ, {
+  ]), ev = null != eS, eT = !ev, {
 ref: eL,
 ...eA
   } = (0, d.OP)(), eb = (0, g.useFocusJumpSection)(), [eM, eR] = l.useState(!1), eP = l.useMemo(() => new ec(o, eR, () => {
@@ -253,7 +253,7 @@ eP.scrollTo({
   }, [eP]);
   (0, U.Z)(eP.scrollToGuild);
   let eU = o.getRoots(),
-eG = (0, v.Z)(),
+eG = (0, Z.Z)(),
 ek = (0, b.U)(),
 eB = el.map(e => (0, i.jsx)(F.Z, {
   id: e.id,
@@ -290,7 +290,7 @@ children: (0, i.jsx)('nav', {
         onScroll: eP.handleScroll,
         children: [
           (0, i.jsx)(Y.u, {}),
-          eG ? (0, i.jsx)(Z.Z, {}) : null,
+          eG ? (0, i.jsx)(v.Z, {}) : null,
           (0, i.jsx)(H.Z, {}),
           (0, i.jsx)(K.Z, {
             isOnHubVerificationRoute: eD
@@ -360,7 +360,7 @@ children: (0, i.jsx)('nav', {
       }) : null : (0, i.jsx)(z.LW, {
         hideGradient: e_,
         children: (0, i.jsx)(eS, {
-          defaultGameId: ev,
+          defaultGameId: eZ,
           children: e => {
             let {
               onClick: t
@@ -380,7 +380,7 @@ children: (0, i.jsx)('nav', {
         isVisible: eP.isItemVisible,
         onJumpTo: eP.handleJumpToGuild,
         className: a()(ei.unreadMentionsIndicatorBottom, {
-          [ei.unreadMentionsFixedFooter]: !n && eZ
+          [ei.unreadMentionsFixedFooter]: !n && ev
         }),
         barClassName: ei.unreadMentionsBar
       })

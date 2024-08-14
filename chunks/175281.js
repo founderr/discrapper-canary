@@ -22,8 +22,8 @@ var i, l, r = n(735250),
   N = n(585483),
   x = n(557177),
   S = n(264549),
-  v = n(981631),
-  Z = n(689938),
+  Z = n(981631),
+  v = n(689938),
   T = n(876824);
 
 function L(e, t, n) {
@@ -44,13 +44,13 @@ let A = {
 
 function b(e) {
   switch (e.keyCode) {
-case v.yXg.ARROW_UP:
+case Z.yXg.ARROW_UP:
   return 'UP';
-case v.yXg.ARROW_DOWN:
+case Z.yXg.ARROW_DOWN:
   return 'DOWN';
-case v.yXg.ARROW_LEFT:
+case Z.yXg.ARROW_LEFT:
   return 'LEFT';
-case v.yXg.ARROW_RIGHT:
+case Z.yXg.ARROW_RIGHT:
   return 'RIGHT';
 default:
   return null;
@@ -128,14 +128,14 @@ children: M.map(t => {
 }
 class O extends a.PureComponent {
   componentDidMount() {
-this.lastInputedKeys = [], N.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, {
+this.lastInputedKeys = [], N.S.subscribe(Z.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(Z.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, {
   capture: !0
 }), window.addEventListener('keyup', this.handleKeyUp, {
   capture: !0
 });
   }
   componentWillUnmount() {
-N.S.unsubscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.unsubscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, {
+N.S.unsubscribe(Z.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.unsubscribe(Z.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, {
   capture: !0
 }), window.removeEventListener('keyup', this.handleKeyUp, {
   capture: !0
@@ -157,7 +157,7 @@ return (0, r.jsxs)(p.Z.div, {
       children: [
         (0, r.jsx)('div', {
           className: T.content,
-          children: Z.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TITLE
+          children: v.Z.Messages.KEYBIND_DESCRIPTION_MODAL_TITLE
         }),
         (0, r.jsx)(g.KeyCombo, {
           shortcut: 'mod+/'
@@ -166,7 +166,7 @@ return (0, r.jsxs)(p.Z.div, {
     }),
     (0, r.jsx)('div', {
       className: T.modalSubtitle,
-      children: Z.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SUBTITLE
+      children: v.Z.Messages.KEYBIND_DESCRIPTION_MODAL_SUBTITLE
     }),
     (0, r.jsxs)('div', {
       className: T.ddrArrows,
@@ -288,7 +288,7 @@ super(...e), L(this, 'state', {
     }
   ]
 })), L(this, 'handleKeyDown', e => {
-  if (this.lastInputedKeys.push(e.keyCode), this.lastInputedKeys = this.lastInputedKeys.slice(-5), this.lastInputedKeys[0] === v.yXg.H && this.lastInputedKeys[1] === v.yXg.H && this.lastInputedKeys[2] === v.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === v.yXg.N && this.lastInputedKeys[4] === v.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)
+  if (this.lastInputedKeys.push(e.keyCode), this.lastInputedKeys = this.lastInputedKeys.slice(-5), this.lastInputedKeys[0] === Z.yXg.H && this.lastInputedKeys[1] === Z.yXg.H && this.lastInputedKeys[2] === Z.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === Z.yXg.N && this.lastInputedKeys[4] === Z.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)
     return;
   let t = b(e);
   null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({
@@ -353,7 +353,7 @@ children: [
       [T.noShadow]: i
     }),
     size: g.ModalSize.DYNAMIC,
-    'aria-label': Z.Z.Messages.KEYBINDS,
+    'aria-label': v.Z.Messages.KEYBINDS,
     transitionState: t,
     children: (0, r.jsx)(f.W, {
       component: 'div',

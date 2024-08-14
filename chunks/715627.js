@@ -24,13 +24,13 @@ let {
   offsetYPercentageMin: R,
   customConfettiCanvas: C,
   speedValues: g = o,
-  dragCoefficientValue: p = 0.001,
-  onAnimationEnd: N
+  dragCoefficientValue: N = 0.001,
+  onAnimationEnd: p
 } = e, [A, m] = a.useState(null), {
   confettiCanvas: f
 } = a.useContext(i.h), S = (0, r.uR)(null != C ? C : f, A), [h, M] = a.useState(!1);
 a.useEffect(() => {
-  h && (null == N || N());
+  h && (null == p || p());
 });
 let x = a.useMemo(() => {
   if (null != d)
@@ -91,7 +91,7 @@ return a.useEffect(() => {
           value: i
         }
       };
-    }(t.getBoundingClientRect(), E, T, I, R, g, p), null != u ? u : 50), s === e.length - 1 && null != N && M(!0);
+    }(t.getBoundingClientRect(), E, T, I, R, g, N), null != u ? u : 50), s === e.length - 1 && null != p && M(!0);
   }, 60 * s)), () => {
     for (let t of e)
       clearTimeout(t);
@@ -106,8 +106,8 @@ return a.useEffect(() => {
   I,
   R,
   g,
-  p,
-  N
+  N,
+  p
 ]), (0, s.jsx)(r.Ji, {
   ref: m,
   sprites: null != x ? x : l.CA,

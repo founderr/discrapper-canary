@@ -1,6 +1,6 @@
 n.d(t, {
   a: function() {
-return m;
+return r;
   }
 });
 var i = n(544891),
@@ -9,22 +9,22 @@ var i = n(544891),
   l = n(70956),
   c = n(844439),
   d = n(981631);
-let r = 10 * l.Z.Millis.MINUTE;
-async function m(e) {
+let m = 10 * l.Z.Millis.MINUTE;
+async function r(e) {
   let {
 channelId: t,
 location: n,
 withCommands: l
-  } = e, m = Date.now(), s = c.ZP.getFetchState({
+  } = e, r = Date.now(), u = c.ZP.getFetchState({
 location: n,
 channelId: t,
 withCommands: l
-  }), u = c.ZP.getLastFetchTimeMs({
+  }), s = c.ZP.getLastFetchTimeMs({
 location: n,
 channelId: t,
 withCommands: l
   });
-  if (s !== c.M.FETCHING && (null == u || !(u + r > m))) {
+  if (u !== c.M.FETCHING && (null == s || !(s + m > r))) {
 a.Z.dispatch({
   type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS',
   location: n,
