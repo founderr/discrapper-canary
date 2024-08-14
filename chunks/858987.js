@@ -1,132 +1,153 @@
 s.d(n, {
   K: function() {
-return T;
+return N;
   },
   Z: function() {
-return N;
+return A;
   }
 });
 var t = s(735250);
 s(470079);
 var r = s(512722),
   l = s.n(r),
-  a = s(481060),
-  i = s(598),
-  c = s(74538),
-  o = s(296848),
-  u = s(231338),
-  I = s(689938),
-  _ = s(357831),
-  E = s(74316);
+  i = s(481060),
+  a = s(906732),
+  c = s(598),
+  o = s(74538),
+  u = s(296848),
+  I = s(244923),
+  _ = s(231338),
+  E = s(689938),
+  T = s(357831),
+  d = s(74316);
 
-function T(e) {
+function N(e) {
   let {
 purchaseType: n,
 plan: s,
 premiumSubscription: t,
 isGift: r,
-planGroup: a,
-isPrepaidPaymentSource: i
+planGroup: i,
+isPrepaidPaymentSource: a,
+inReverseTrial: c
   } = e;
-  if (n === u.GZ.ONE_TIME)
-return r ? I.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT : I.Z.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
+  if (n === _.GZ.ONE_TIME)
+return r ? E.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT : E.Z.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
   if (l()(null != s, 'Subscription plan must be selected to render SubscriptionReviewButton'), r)
-return I.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
-  if ((0, c.PV)(s.id)) {
-if (i)
-  return I.Z.Messages.BILLING_SELECT_PLAN;
+return E.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
+  if (c)
+return E.Z.Messages.BILLING_SELECT_PLAN_PREMIUM_MONTH_TIER_2;
+  if ((0, o.PV)(s.id)) {
+if (a)
+  return E.Z.Messages.BILLING_SELECT_PLAN;
 if (null != t)
-  return t.isPaused ? I.Z.Messages.RESUME : (0, o.R4)(t, s.id, a) ? I.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : I.Z.Messages.BILLING_SWITCH_PLAN_CHANGE;
-return (0, c.W_)(null, s);
+  return t.isPaused ? E.Z.Messages.RESUME : (0, u.R4)(t, s.id, i) ? E.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : E.Z.Messages.BILLING_SWITCH_PLAN_CHANGE;
+return (0, o.W_)(null, s);
   }
-  return I.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN;
+  return E.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN;
 }
 
-function d(e, n) {
+function M(e, n) {
   null != e.current && (e.current.scrollIntoView({
 behavior: 'smooth'
   }), n());
 }
 
-function N(e) {
+function A(e) {
   let {
 legalTermsNodeRef: n,
 invoiceError: s,
 planError: r,
 disablePurchase: l,
-flashLegalTerms: c,
-isSubmitting: o,
-premiumSubscription: u,
-isGift: N,
-planGroup: M,
-isPrepaid: A,
-isTrial: P,
-makePurchase: L,
-needsPaymentSource: R
+flashLegalTerms: o,
+isSubmitting: u,
+premiumSubscription: _,
+isGift: A,
+planGroup: P,
+isPrepaid: L,
+isTrial: R,
+makePurchase: S,
+needsPaymentSource: m,
+inReverseTrial: U,
+onNext: p
   } = e, {
-selectedPlan: S,
-hasAcceptedTerms: m,
-purchaseType: U
-  } = (0, i.usePaymentContext)(), p = T({
-purchaseType: U,
-plan: S,
-premiumSubscription: u,
-isGift: N,
-planGroup: M,
-isPrepaidPaymentSource: A
-  });
+selectedPlan: O,
+hasAcceptedTerms: C,
+purchaseType: v,
+paymentSourceId: h,
+activeSubscription: f
+  } = (0, c.usePaymentContext)(), g = N({
+purchaseType: v,
+plan: O,
+premiumSubscription: _,
+isGift: A,
+planGroup: P,
+isPrepaidPaymentSource: L,
+inReverseTrial: U
+  }), {
+analyticsLocations: Z
+  } = (0, a.ZP)();
   if (null != s || null != r || l)
-return (0, t.jsx)(a.Button, {
-  color: a.Button.Colors.GREEN,
+return (0, t.jsx)(i.Button, {
+  color: i.Button.Colors.GREEN,
   disabled: !0,
-  children: p
+  children: g
 });
-  if (R)
-return (0, t.jsx)(a.Tooltip, {
-  text: I.Z.Messages.BILLING_SELECT_PAYMENT_SOURCE_TOOLTIP,
-  children: e => (0, t.jsx)(a.Button, {
+  if (m)
+return (0, t.jsx)(i.Tooltip, {
+  text: E.Z.Messages.BILLING_SELECT_PAYMENT_SOURCE_TOOLTIP,
+  children: e => (0, t.jsx)(i.Button, {
     ...e,
-    color: a.Button.Colors.GREEN,
+    color: i.Button.Colors.GREEN,
     type: 'submit',
     'data-testid': 'submitButton',
     disabled: !0,
-    children: p
+    children: g
   })
 });
-  if (P)
-return (0, t.jsxs)(a.ShinyButton, {
-  innerClassName: _.innerButton,
-  'data-testid': m ? 'purchase' : 'submitButton',
-  onClick: m ? L : () => d(n, c),
-  color: a.Button.Colors.GREEN,
-  submitting: o,
+  if (R)
+return (0, t.jsxs)(i.ShinyButton, {
+  innerClassName: T.innerButton,
+  'data-testid': C ? 'purchase' : 'submitButton',
+  onClick: C ? S : () => M(n, o),
+  color: i.Button.Colors.GREEN,
+  submitting: u,
   children: [
     (0, t.jsx)('img', {
       alt: '',
-      className: _.nitroIcon,
-      src: E
+      className: T.nitroIcon,
+      src: d
     }),
-    p
+    g
   ]
 });
-  else if (!m)
-return (0, t.jsx)(a.Tooltip, {
-  text: I.Z.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP,
-  children: e => (0, t.jsx)(a.Button, {
+  else if (!C)
+return (0, t.jsx)(i.Tooltip, {
+  text: E.Z.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP,
+  children: e => (0, t.jsx)(i.Button, {
     ...e,
-    color: a.Button.Colors.GREEN,
+    color: i.Button.Colors.GREEN,
     type: 'submit',
-    onClick: () => d(n, c),
+    onClick: () => M(n, o),
     'data-testid': 'submitButton',
-    children: p
+    children: g
   })
 });
+  else if (U && null != f && null != h)
+return (0, t.jsx)(I.Z, {
+  activeSubscription: f,
+  onNext: p,
+  isSubmitting: u,
+  paymentSourceId: h,
+  buttonLabel: g,
+  analyticsLocations: Z
+});
   else
-return (0, t.jsx)(a.Button, {
+return (0, t.jsx)(i.Button, {
   'data-testid': 'purchase',
-  onClick: L,
-  color: a.Button.Colors.GREEN,
-  submitting: o,
-  children: p
+  onClick: S,
+  color: i.Button.Colors.GREEN,
+  submitting: u,
+  children: g
 });
 }

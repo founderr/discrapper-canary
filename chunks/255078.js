@@ -99,6 +99,9 @@ return u.JwP.ALL_PAUSE.has(this.status);
   get isPaused() {
 return this.status === u.O0b.PAUSED;
   }
+  get inReverseTrial() {
+return null != this.trialId && c.h8.includes(this.trialId) && null == this.paymentSourceId;
+  }
   constructor(e) {
 super(), d(this, 'id', void 0), d(this, 'type', void 0), d(this, 'items', void 0), d(this, 'createdAt', void 0), d(this, 'canceledAt', void 0), d(this, 'currentPeriodStart', void 0), d(this, 'currentPeriodEnd', void 0), d(this, 'status', void 0), d(this, 'paymentSourceId', void 0), d(this, 'paymentGateway', void 0), d(this, 'paymentGatewayPlanId', void 0), d(this, 'paymentGatewaySubscriptionId', void 0), d(this, 'trialId', void 0), d(this, 'trialEndsAt', void 0), d(this, 'renewalMutations', void 0), d(this, 'streakStartedAt', void 0), d(this, 'currency', void 0), d(this, 'pauseEndsAt', void 0), d(this, 'planId', void 0), d(this, 'additionalPlans', void 0), d(this, 'metadata', void 0), d(this, 'latestInvoice', void 0), d(this, 'useStorekitResubscribe', void 0), d(this, 'price', void 0), d(this, 'userId', void 0), this.id = e.id, this.type = e.type, this.items = e.items, this.createdAt = e.createdAt, this.canceledAt = e.canceledAt, this.currentPeriodStart = e.currentPeriodStart, this.currentPeriodEnd = e.currentPeriodEnd, this.status = e.status, this.paymentSourceId = e.paymentSourceId, this.paymentGateway = e.paymentGateway, this.paymentGatewayPlanId = e.paymentGatewayPlanId, this.paymentGatewaySubscriptionId = e.paymentGatewaySubscriptionId, this.trialId = e.trialId, this.trialEndsAt = e.trialEndsAt, this.renewalMutations = e.renewalMutations, this.currency = e.currency, this.pauseEndsAt = e.pauseEndsAt, this.metadata = e.metadata, this.latestInvoice = e.latestInvoice, this.useStorekitResubscribe = e.useStorekitResubscribe, this.price = e.price, this.userId = e.userId;
 let t = this.renewalMutations,

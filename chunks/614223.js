@@ -17,9 +17,10 @@ function i(e) {
 isTrial: t,
 isGift: n,
 selectedSkuId: r,
-startedPaymentFlowWithPaymentSources: i
+startedPaymentFlowWithPaymentSources: i,
+inReverseTrial: l
   } = e;
-  return !t && !n && null != r && a.YQ.includes(r) && i;
+  return !t && !n && !l && null != r && a.YQ.includes(r) && i;
 }
 
 function l(e, t, n) {
