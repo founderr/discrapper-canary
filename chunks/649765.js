@@ -70,6 +70,7 @@ return (0, i.jsx)(s.Tooltip, {
   'aria-label': o.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS,
   tooltipClassName: c.marketingBadgeTooltip,
   allowOverflow: !0,
+  tooltipPointerClassName: void 0,
   tooltipContentClassName: (0, c.tooltipContent),
   children: e => (0, i.jsx)('div', {
     ...e,

@@ -8,6 +8,7 @@ e.exports = {
   marketingBadgeTooltip: 'marketingBadgeTooltip_decb53',
   tooltipContent: 'tooltipContent_decb53',
   incentiveTooltipContent: 'incentiveTooltipContent_decb53',
+  incentiveTooltipPointer: 'incentiveTooltipPointer_decb53',
   icon: 'icon_decb53',
   incentiveIcon: 'incentiveIcon_decb53'
 };
