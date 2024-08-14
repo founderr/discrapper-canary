@@ -181,15 +181,17 @@ categoryId: _,
 integrationType: E,
 minUserInstallCommandCount: h,
 excludeAppsWithCustomInstallUrl: p,
-source: m = i.F.APP_DIRECTORY
-  } = null != l ? l : {}, I = Date.now(), T = d.Z.getFetchState({
+excludeNonEmbeddedApps: m,
+excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
+source: T = i.F.APP_DIRECTORY
+  } = null != l ? l : {}, g = Date.now(), S = d.Z.getFetchState({
 query: n,
 guildId: r,
 page: c,
 categoryId: _,
 integrationType: E
   }), {
-lastFetchTimeMs: g
+lastFetchTimeMs: A
   } = null !== (t = d.Z.getSearchResults({
 query: n,
 guildId: r,
@@ -197,7 +199,7 @@ page: c,
 categoryId: _,
 integrationType: E
   })) && void 0 !== t ? t : {};
-  if (T !== d.M.FETCHING && (null == g || !(g + 600000 > I))) {
+  if (S !== d.M.FETCHING && (null == A || !(A + 600000 > g))) {
 s.Z.dispatch({
   type: 'APPLICATION_DIRECTORY_FETCH_SEARCH',
   query: n,
@@ -207,7 +209,9 @@ s.Z.dispatch({
   integrationType: E,
   minUserInstallCommandCount: h,
   excludeAppsWithCustomInstallUrl: p,
-  source: m
+  excludeNonEmbeddedApps: m,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
+  source: T
 });
 try {
   let e = await a.tn.get({
@@ -221,7 +225,9 @@ try {
       integration_type: E,
       min_user_install_command_count: h,
       exclude_apps_with_custom_install_url: p,
-      source: m
+      exclude_non_embedded_apps: m,
+      exclude_embedded_apps_without_primary_entry_point_app_command: I,
+      source: T
     }
   });
   s.Z.dispatch({
@@ -241,7 +247,9 @@ try {
     },
     minUserInstallCommandCount: h,
     excludeAppsWithCustomInstallUrl: p,
-    source: m
+    excludeNonEmbeddedApps: m,
+    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
+    source: T
   }), null == u || u(e.body.result_count);
 } catch (e) {
   s.Z.dispatch({
@@ -253,7 +261,9 @@ try {
     integrationType: E,
     minUserInstallCommandCount: h,
     excludeAppsWithCustomInstallUrl: p,
-    source: m
+    excludeNonEmbeddedApps: m,
+    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
+    source: T
   });
 }
   }

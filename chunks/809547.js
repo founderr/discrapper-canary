@@ -18,9 +18,11 @@ categoryId: i,
 integrationType: a,
 minUserInstallCommandCount: s,
 excludeAppsWithCustomInstallUrl: o,
-source: l = d.F.APP_DIRECTORY
+excludeNonEmbeddedApps: l,
+excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
+source: c = d.F.APP_DIRECTORY
   } = e;
-  return 'query:\''.concat(t, '\' guildId:').concat(n, ' page:').concat(r, ' categoryId:').concat(i, ' integrationType:').concat(a, ' minUserInstallCommandCount:').concat(s, ' excludeAppsWithCustomInstallUrl:').concat(o, ' source:').concat(l);
+  return 'query:\''.concat(t, '\' guildId:').concat(n, ' page:').concat(r, ' categoryId:').concat(i, ' integrationType:').concat(a, ' minUserInstallCommandCount:').concat(s, ' excludeAppsWithCustomInstallUrl:').concat(o, ' excludeNonEmbeddedApps:').concat(l, ' excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:').concat(u, ' source:').concat(c);
 }
 (r = o || (o = {}))[r.FETCHING = 0] = 'FETCHING', r[r.FETCHED = 1] = 'FETCHED', r[r.ERROR = 2] = 'ERROR';
 let h = new(c())({
@@ -37,8 +39,10 @@ let {
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  source: l
-} = e, u = f({
+  excludeNonEmbeddedApps: l,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
+  source: c
+} = e, d = f({
   query: t,
   guildId: n,
   page: r,
@@ -46,9 +50,11 @@ let {
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  source: l
+  excludeNonEmbeddedApps: l,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
+  source: c
 });
-return h.get(u);
+return h.get(d);
   }
   getFetchState(e) {
 let {
@@ -59,7 +65,9 @@ let {
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  source: l
+  excludeNonEmbeddedApps: l,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
+  source: c
 } = e;
 return p[f({
   query: t,
@@ -69,7 +77,9 @@ return p[f({
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  source: l
+  excludeNonEmbeddedApps: l,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
+  source: c
 })];
   }
 }
@@ -88,8 +98,10 @@ let {
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  source: l
-} = e, u = f({
+  excludeNonEmbeddedApps: l,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
+  source: c
+} = e, d = f({
   query: t,
   guildId: n,
   page: r,
@@ -97,11 +109,13 @@ let {
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  source: l
+  excludeNonEmbeddedApps: l,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
+  source: c
 });
 p = {
   ...p,
-  [u]: 0
+  [d]: 0
 };
   },
   APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS: function(e) {
@@ -114,8 +128,10 @@ let {
   integrationType: s,
   minUserInstallCommandCount: o,
   excludeAppsWithCustomInstallUrl: l,
-  source: u
-} = e, c = f({
+  excludeNonEmbeddedApps: u,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: c,
+  source: d
+} = e, _ = f({
   query: t,
   guildId: n,
   page: r,
@@ -123,14 +139,16 @@ let {
   integrationType: s,
   minUserInstallCommandCount: o,
   excludeAppsWithCustomInstallUrl: l,
-  source: u
+  excludeNonEmbeddedApps: u,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: c,
+  source: d
 });
-h.set(c, {
+h.set(_, {
   lastFetchTimeMs: Date.now(),
   ...a
 }), p = {
   ...p,
-  [c]: 1
+  [_]: 1
 };
   },
   APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE: function(e) {
@@ -142,8 +160,10 @@ let {
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  source: l
-} = e, u = f({
+  excludeNonEmbeddedApps: l,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
+  source: c
+} = e, d = f({
   query: t,
   guildId: n,
   page: r,
@@ -151,11 +171,13 @@ let {
   integrationType: a,
   minUserInstallCommandCount: s,
   excludeAppsWithCustomInstallUrl: o,
-  source: l
+  excludeNonEmbeddedApps: l,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
+  source: c
 });
 p = {
   ...p,
-  [u]: 2
+  [d]: 2
 };
   }
 });
