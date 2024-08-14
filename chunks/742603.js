@@ -14,8 +14,8 @@ var a = n(120356),
   u = n(657305),
   d = n(835473),
   h = n(12498),
-  m = n(933557),
-  p = n(471445),
+  p = n(933557),
+  m = n(471445),
   _ = n(925329),
   f = n(554747),
   E = n(854698),
@@ -160,7 +160,7 @@ focusedParticipant: f
   } = (0, l.cj)([M.Z], () => ({
 focusedParticipant: M.Z.getSelectedParticipant(t.id),
 participantsOpen: M.Z.getParticipantsOpen(t.id)
-  }), [t.id]), E = (0, m.ZP)(t), g = (0, p.KS)(t), [S] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
+  }), [t.id]), E = (0, p.ZP)(t), g = (0, m.KS)(t), [S] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []), Z = k.Z.Messages.VOICE_CHANNEL;
   t.isDM() ? Z = k.Z.Messages.DM : t.isGroupDM() && (Z = k.Z.Messages.GROUP_DM);
   let R = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)),
 L = t.isGuildVoice() && c && null != R && R.length > 0,
@@ -240,11 +240,15 @@ children: [
         children: (0, i.jsxs)(i.Fragment, {
           children: [
             E,
-            F && (0, i.jsx)(r.ShieldLockIcon, {
-              size: 'xxs',
-              'aria-label': k.Z.Messages.E2EE_CALL_VERIFIED_A11Y,
-              color: r.tokens.colors.INTERACTIVE_NORMAL,
-              className: U.secureFramesIcon
+            F && (0, i.jsx)(r.Tooltip, {
+              text: k.Z.Messages.E2EE_CALL_VERIFIED_TOOLTIP,
+              children: e => (0, i.jsx)(r.ShieldLockIcon, {
+                ...e,
+                size: 'xxs',
+                'aria-label': k.Z.Messages.E2EE_CALL_VERIFIED_A11Y,
+                color: r.tokens.colors.INTERACTIVE_NORMAL,
+                className: U.secureFramesIcon
+              })
             })
           ]
         })
