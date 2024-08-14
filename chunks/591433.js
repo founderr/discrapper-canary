@@ -99,11 +99,10 @@ Y = 0 === O.length && !R,
 W = a.useCallback((e, n, a) => {
   switch (e) {
     case 0:
-      var s;
       return (0, i.jsxs)('div', {
         style: {
           paddingLeft: n.left,
-          width: n.width - (null !== (s = n.left) && void 0 !== s ? s : 0)
+          width: n.width - 16
         },
         children: [
           (0, i.jsx)(l.X, {

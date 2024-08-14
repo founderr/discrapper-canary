@@ -200,6 +200,7 @@ return (0, a.jsx)(o.$, {
                           className: N.dotOnline
                         }),
                         (0, a.jsx)(c.Text, {
+                          className: N.memberCountText,
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
                           children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
@@ -215,6 +216,7 @@ return (0, a.jsx)(o.$, {
                           className: N.dotOffline
                         }),
                         (0, a.jsx)(c.Text, {
+                          className: N.memberCountText,
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
                           children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({

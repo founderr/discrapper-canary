@@ -7,26 +7,33 @@ var i = n(470079),
   a = n(49898),
   s = n(9886);
 
-function r() {
-  let [e, t] = i.useState(a.WB.DEFAULT), n = i.useCallback(n => {
-let i = Math.round(n);
-switch (e) {
+function r(e) {
+  let {
+isSearchBarVisible: t
+  } = e, [n, r] = i.useState(a.WB.DEFAULT), l = i.useCallback(e => {
+if (!t)
+  return;
+let i = Math.round(e);
+switch (n) {
   case a.WB.DEFAULT:
-    i < 260 - a.U1 && t(a.WB.COLLAPSED);
+    i < 260 - a.U1 && r(a.WB.COLLAPSED);
     break;
   case a.WB.COLLAPSED:
-    i > 260 - a.Kl && t(a.WB.DEFAULT);
+    i > 260 - a.Kl && r(a.WB.DEFAULT);
     break;
   case a.WB.FLOATING:
-    i > 260 && t(a.WB.DEFAULT);
+    i > 260 && r(a.WB.DEFAULT);
 }
-  }, [e]), r = i.useCallback(() => {
-t(a.WB.FLOATING);
-  }, []);
+  }, [
+t,
+n
+  ]), o = i.useCallback(() => {
+r(a.WB.FLOATING);
+  }, []), c = n === a.WB.FLOATING ? s.floatingSearchTabsMask : void 0;
   return {
-searchBarState: e,
-tabsClassName: e === a.WB.FLOATING ? s.floatingSearchTabsMask : void 0,
-onTabsAvailableWidthChange: n,
-onCollapsedSearchBarClick: r
+searchBarState: n,
+onTabsAvailableWidthChange: l,
+tabsClassName: c,
+onCollapsedSearchBarClick: o
   };
 }

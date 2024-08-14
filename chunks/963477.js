@@ -17,6 +17,7 @@ e.exports = {
   description: 'description_e90879',
   memberInfo: 'memberInfo_e90879',
   memberCount: 'memberCount_e90879',
+  memberCountText: 'memberCountText_e90879',
   dotOnline: 'dotOnline_e90879',
   dotOffline: 'dotOffline_e90879 dotOnline_e90879',
   loading: 'loading_e90879',
