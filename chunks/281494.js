@@ -40,7 +40,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-(a = r || (r = {}))[a.REDEEMED = 1] = 'REDEEMED', a[a.PENDING = 2] = 'PENDING', (s = i || (i = {}))[s.SUCCESS = 1] = 'SUCCESS', s[s.FAIL = 2] = 'FAIL';
+(a = r || (r = {}))[a.REDEEMED = 1] = 'REDEEMED', a[a.PENDING = 2] = 'PENDING', a[a.CONVERTED = 3] = 'CONVERTED', (s = i || (i = {}))[s.SUCCESS = 1] = 'SUCCESS', s[s.FAIL = 2] = 'FAIL';
 let h = new class e {
   set(e, t) {
 this.cache.set(e, t);
