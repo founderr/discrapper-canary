@@ -69,6 +69,12 @@ let _ = {
   hideLogoOnBanner: !0,
   hideAttributionLogos: !0,
   blur: !1
+},
+[d.T.DOJO]: {
+  addGradient: !1,
+  hideLogoOnBanner: !0,
+  hideAttributionLogos: !0,
+  showDarkBannerText: !0
 }
   },
   E = e => {
