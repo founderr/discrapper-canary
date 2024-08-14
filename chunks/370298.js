@@ -122,7 +122,7 @@ F
   let t = await fetch(v),
     n = await t.arrayBuffer(),
     i = y.join('/'),
-    a = new File([n], 'ContextualImageRecsUpload'.concat((0, b.Qm)({
+    a = new File([n], 'image'.concat((0, b.Qm)({
       contentType: i
     })), {
       type: i
