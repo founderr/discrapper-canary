@@ -210,7 +210,8 @@ children: [
         reportId: Y
       }),
       null != x(t, 'settings_upsells') && 'message' === n.name && null != eE && ef && (0, r.jsx)(C.Z, {
-        settingsUpsells: eE
+        settingsUpsells: eE,
+        channelId: n.record.channel_id
       }),
       null != x(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(y.Z, {
         stageInstance: n.record

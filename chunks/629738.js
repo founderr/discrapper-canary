@@ -1,6 +1,7 @@
 e.exports = {
-  perkRow: 'perkRow_e33a4d',
-  perkIconContainer: 'perkIconContainer_e33a4d',
-  perkIcon: 'perkIcon_e33a4d',
-  perkDescription: 'perkDescription_e33a4d'
+  row: 'row_e33a4d',
+  iconContainer: 'iconContainer_e33a4d',
+  icon: 'icon_e33a4d',
+  textContainer: 'textContainer_e33a4d',
+  button: 'button_e33a4d'
 };

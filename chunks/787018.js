@@ -26,8 +26,8 @@ function Z(e) {
 user: s,
 guildId: n,
 channelId: Z,
-messageId: p,
-roleId: h,
+messageId: h,
+roleId: p,
 transitionState: T,
 onViewBlockedProfileClick: g,
 showGuildProfile: N = !0,
@@ -42,8 +42,8 @@ layout: 'BLOCKED_PROFILE_MODAL',
 userId: s.id,
 guildId: j,
 channelId: Z,
-messageId: p,
-roleId: h,
+messageId: h,
+roleId: p,
 showGuildProfile: N
   }), O = [{
   icon: l.BellSlashIcon,
@@ -108,7 +108,8 @@ children: (0, i.jsx)(d.Mt, {
                   } = e;
                   return (0, i.jsx)(r.Z, {
                     icon: n,
-                    description: t
+                    title: t,
+                    titleVariant: 'text-md/normal'
                   }, s);
                 })
               }),
