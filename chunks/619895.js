@@ -225,7 +225,7 @@ imageRecCommandContexts: i.useMemo(() => {
     return {
       command: {
         ...o,
-        name: o.name.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
+        name: o.name.split(/[_ ]/).map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
       },
       applicationImageURL: c.ZP.getApplicationIconURL({
         id: a.id,
