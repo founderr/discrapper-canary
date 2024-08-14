@@ -53,7 +53,7 @@ config: v,
 onStart: () => U(!0),
 onRest: () => U(1 === D)
   }), w = (0, d.useSpring)({
-transform: 'translateX('.concat(1 === D ? 0 : -1 * (P - 380) / 2 + 190, 'px)'),
+transform: 'translateX('.concat(1 === D ? 0 : -1 * (P - 380) / 2 + 47.5, 'px)'),
 config: v
   }, 'respect-motion-settings'), B = (0, d.useTransition)(0 === D, {
 from: {
