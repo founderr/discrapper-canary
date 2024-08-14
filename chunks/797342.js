@@ -13,57 +13,57 @@ var r = n(442837),
   c = n(701488);
 
 function d(e) {
-  var t, n, d, _, E, f, h, p, m, I, T;
-  let g = (0, r.e7)([a.default], () => a.default.getUser(e.author_id)),
+  var t, n, d, _, E, f, h, p, m, I, T, g, S;
+  let A = (0, r.e7)([a.default], () => a.default.getUser(e.author_id)),
 {
-  activity: S,
-  activityApplication: A,
-  fallbackApplication: N
+  activity: N,
+  activityApplication: v,
+  fallbackApplication: O
 } = (0, u.qy)(e),
-v = (0, o.wh)('useRichActivityDataForEntry'),
+R = (0, o.wh)('useRichActivityDataForEntry'),
 {
-  coverImageUrl: O
-} = (0, i.$)(null === (t = null != N ? N : A) || void 0 === t ? void 0 : t.id),
-R = null !== (h = null === (n = null != N ? N : A) || void 0 === n ? void 0 : n.getIconURL(c.Si.LARGE)) && void 0 !== h ? h : void 0;
-  if (!v || null == S)
+  coverImageUrl: C
+} = (0, i.$)(null === (t = null != O ? O : v) || void 0 === t ? void 0 : t.id),
+y = null !== (f = null === (n = null != O ? O : v) || void 0 === n ? void 0 : n.getIconURL(c.Si.LARGE)) && void 0 !== f ? f : void 0;
+  if (!R || null == N)
 return {
   isRich: !1,
   richIcon: void 0,
-  iconUrl: R,
+  iconUrl: y,
   iconFallbackUrl: void 0,
   iconTitle: void 0,
-  coverImageUrl: O,
+  coverImageUrl: C,
   appName: (0, l.dX)(e) ? e.extra.game_name : void 0,
-  user: g,
-  inExperiment: v,
+  user: A,
+  inExperiment: R,
   activity: void 0,
   state: void 0,
   details: void 0,
   party: void 0
 };
-  let C = null !== (p = null === (d = S.assets) || void 0 === d ? void 0 : d.large_image) && void 0 !== p ? p : null === (_ = S.assets) || void 0 === _ ? void 0 : _.small_image,
-y = null != A && null != C ? (0, s.getAssetImage)(A.id, C, [
+  let D = null !== (h = null === (d = N.assets) || void 0 === d ? void 0 : d.large_image) && void 0 !== h ? h : null === (_ = N.assets) || void 0 === _ ? void 0 : _.small_image,
+L = null != v && null != D ? (0, s.getAssetImage)(v.id, D, [
   c.Si.LARGE,
   c.Si.LARGE
-]) : void 0,
-D = null !== (I = null !== (m = null === (E = S.assets) || void 0 === E ? void 0 : E.large_text) && void 0 !== m ? m : null === (f = S.assets) || void 0 === f ? void 0 : f.small_text) && void 0 !== I ? I : void 0,
-L = null !== (T = S.name) && void 0 !== T ? T : 'game_name' in e.extra ? e.extra.game_name : void 0,
-b = S.details,
-M = S.state,
-P = S.party;
+]) : void 0;
+  let b = null === (E = (null === (I = (m = N).assets) || void 0 === I ? void 0 : I.large_image) != null ? null === (g = m.assets) || void 0 === g ? void 0 : g.large_text : (null === (T = m.assets) || void 0 === T ? void 0 : T.small_image) != null ? null === (S = m.assets) || void 0 === S ? void 0 : S.small_text : void 0) || void 0 === E ? void 0 : E.trim(),
+M = null !== (p = N.name) && void 0 !== p ? p : 'game_name' in e.extra ? e.extra.game_name : void 0,
+P = N.details,
+U = N.state,
+w = N.party;
   return {
-isRich: null != y || null != D || null != b || null != M || null != P,
-richIcon: y,
-coverImageUrl: O,
-iconUrl: null != y ? y : R,
-iconFallbackUrl: null != y ? R : void 0,
-iconTitle: D,
-user: g,
-activity: S,
-state: M,
-details: b,
-party: P,
-appName: L,
-inExperiment: v
+isRich: null != L || null != b || null != P || null != U || null != w,
+richIcon: L,
+coverImageUrl: C,
+iconUrl: null != L ? L : y,
+iconFallbackUrl: null != L ? y : void 0,
+iconTitle: b,
+user: A,
+activity: N,
+state: U,
+details: P,
+party: w,
+appName: M,
+inExperiment: R
   };
 }

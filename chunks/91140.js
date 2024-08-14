@@ -57,7 +57,8 @@ children: [
     alt: E,
     src: _,
     size: 48,
-    className: u.thumbnail
+    className: u.thumbnail,
+    showTooltip: null != E
   })
 ]
   });

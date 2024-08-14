@@ -1,6 +1,6 @@
 n.d(t, {
   f: function() {
-return c;
+return d;
   }
 }), n(47120);
 var r = n(735250),
@@ -9,46 +9,48 @@ var r = n(735250),
   s = n.n(a),
   o = n(481060),
   l = n(410030),
-  u = n(487596);
+  u = n(689938),
+  c = n(487596);
 
-function c(e) {
+function d(e) {
   let {
 src: t,
 size: n,
 constrain: a = 'height',
-className: c,
-alt: d,
-fallbackSrc: _
-  } = e, E = (0, l.ZP)(), f = ''.concat(n, 'px'), [h, p] = i.useState(!1), [m, I] = i.useState(!1), T = null == _ || m;
-  if (null == t || h && T)
+className: d,
+alt: _,
+fallbackSrc: E,
+showTooltip: f = !1
+  } = e, h = (0, l.ZP)(), p = ''.concat(n, 'px'), [m, I] = i.useState(!1), [T, g] = i.useState(!1), S = null == E || T;
+  if (null == t || m && S)
 return (0, r.jsx)(o.UnknownGameIcon, {
   size: 'custom',
   width: '100%',
   height: '100%',
-  color: 'dark' === E ? 'white' : 'black',
+  color: 'dark' === h ? 'white' : 'black',
   style: {
-    maxWidth: f
+    maxWidth: p
   },
-  className: s()(u.contentImage, c)
+  className: s()(c.contentImage, d)
 });
-  let g = 'height' === a ? {
-maxWidth: f,
-height: f
+  let A = 'height' === a ? {
+maxWidth: p,
+height: p
   } : {
-maxWidth: f,
-minHeight: f
+maxWidth: p,
+minHeight: p
   };
   return (0, r.jsx)(o.Tooltip, {
-'aria-label': d,
-text: d,
-shouldShow: null != d,
+'aria-label': _,
+text: _,
+shouldShow: f,
 children: e => (0, r.jsx)('img', {
   ...e,
-  style: g,
-  className: s()(u.contentImage, c),
-  src: h && null != _ ? _ : t,
-  alt: null != d ? d : 'icon',
-  onError: e => h ? I(!0) : p(!0)
+  style: A,
+  className: s()(c.contentImage, d),
+  src: m && null != E ? E : t,
+  alt: null != _ ? _ : u.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
+  onError: e => m ? g(!0) : I(!0)
 })
   }, 'voice-preview');
 }

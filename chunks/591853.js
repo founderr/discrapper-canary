@@ -663,7 +663,8 @@ children: [
                 alt: s,
                 src: n,
                 fallbackSrc: a,
-                className: eu.contentImage
+                className: eu.contentImage,
+                showTooltip: null != s
               })
             })
           }),
