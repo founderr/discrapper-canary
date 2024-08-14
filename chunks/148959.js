@@ -84,7 +84,7 @@ if (0 === e && this.isReceiving()) {
 }
 switch (this.switchState) {
   case 0:
-    this.isReceiving() ? (this.receivingHQ() && 60 === e || this.receivingLQ() && 100 === e) && (this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC, this.switchState = 2, this.requestBoth()) : (this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC, this.switchState = 1, 100 === e ? this.requestHQ() : this.requestLQ());
+    this.isReceiving() && this.receivingLQ() && 100 === e ? (this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC, this.switchState = 2, this.requestBoth()) : (this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC, this.switchState = 1, 100 === e ? this.requestHQ() : this.requestLQ());
     break;
   case 2:
     60 === e && this.pendingHQ() ? (this.switchState = 0, this.pendingSSRC = -1, this.requestLQ()) : 100 === e && this.pendingLQ() && (this.switchState = 0, this.pendingSSRC = -1, this.requestHQ());
