@@ -48,8 +48,9 @@ C.hW.updateAsync('forLater', t => {
 
 function D(e) {
   let {
-closePopout: t
-  } = e, n = (0, u.e7)([p.Z], () => {
+closePopout: t,
+throttledNow: n
+  } = e, a = (0, u.e7)([p.Z], () => {
 var e, t;
 return null !== (t = null === (e = p.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : d.Pr.ALL;
   }), [s] = (0, u.Wu)([
@@ -62,13 +63,8 @@ return [
   n === d.Pr.ALL ? x.Z.getSavedMessages() : n === d.Pr.BOOKMARKS ? x.Z.getMessageBookmarks() : x.Z.getMessageReminders(),
   x.Z.getVersion()
 ];
-  }), r = (0, u.e7)([x.Z], () => x.Z.getOverdueMessageReminderCount()), [l, o] = a.useState(new Date());
-  return a.useEffect(() => {
-let e = setInterval(() => o(new Date()), A.Z.Millis.MINUTE);
-return () => {
-  clearInterval(e);
-};
-  }, []), (0, i.jsx)(_.Dialog, {
+  }), r = (0, u.e7)([x.Z], () => x.Z.getOverdueMessageReminderCount());
+  return (0, i.jsx)(_.Dialog, {
 'aria-label': L.Z.Messages.FOR_LATER,
 children: (0, i.jsxs)('div', {
   className: Z.popoutContainer,
@@ -93,7 +89,7 @@ children: (0, i.jsxs)('div', {
           children: (0, i.jsxs)(_.TabBar, {
             type: 'top',
             look: 'brand',
-            selectedItem: n,
+            selectedItem: a,
             onItemSelect: b,
             className: Z.tabBar,
             children: [
@@ -122,7 +118,7 @@ children: (0, i.jsxs)('div', {
     (0, i.jsx)(U, {
       savedMessages: s,
       closePopout: t,
-      throttledNow: l
+      throttledNow: n
     })
   ]
 })
@@ -136,28 +132,38 @@ onClose: n,
 children: s,
 popoutPosition: r,
 popoutAlign: l
-  } = e, [o, c] = a.useState(!1), u = a.useCallback(() => {
+  } = e, [o, c] = a.useState(!1), d = a.useCallback(() => {
 c(!1), o && (null == n || n());
   }, [
 n,
 o
-  ]), d = a.useCallback(() => {
+  ]), E = a.useCallback(() => {
 c(!o), o ? null == n || n() : null == t || t();
   }, [
 n,
 t,
 o
   ]);
-  return a.useEffect(() => (S.S.subscribe(v.CkL.TOGGLE_FOR_LATER, d), () => void S.S.unsubscribe(v.CkL.TOGGLE_FOR_LATER, d)), [d]), (0, i.jsx)(_.Popout, {
+  a.useEffect(() => (S.S.subscribe(v.CkL.TOGGLE_FOR_LATER, E), () => void S.S.unsubscribe(v.CkL.TOGGLE_FOR_LATER, E)), [E]);
+  let [I, m] = a.useState(new Date());
+  a.useEffect(() => {
+let e = setInterval(() => m(new Date()), A.Z.Millis.MINUTE);
+return () => {
+  clearInterval(e);
+};
+  }, []);
+  let T = (0, u.e7)([x.Z], () => x.Z.hasOverdueReminder(I), [I]);
+  return (0, i.jsx)(_.Popout, {
 animation: _.Popout.Animation.NONE,
 position: r,
 align: l,
 autoInvert: !1,
 shouldShow: o,
-onRequestClose: u,
+onRequestClose: d,
 renderPopout: function() {
   return (0, i.jsx)(D, {
-    closePopout: u
+    closePopout: d,
+    throttledNow: I
   });
 },
 ignoreModalClicks: !0,
@@ -165,7 +171,7 @@ children: (e, t) => {
   let {
     isShown: n
   } = t;
-  return s(d, n, e);
+  return s(E, n, e, T);
 }
   });
 }

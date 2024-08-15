@@ -1,6 +1,6 @@
 n.d(t, {
   Co: function() {
-return D;
+return L;
   },
   QS: function() {
 return i;
@@ -14,7 +14,7 @@ var r, i, a = n(735250),
   c = n(3682),
   d = n(419061),
   _ = n(233259);
-(r = i || (i = {})).SQUIRCLE = 'svg-mask-squircle', r.HEADER_BAR_BADGE = 'svg-mask-header-bar-badge', r.VOICE_USER_SUMMARY_ITEM = 'svg-mask-voice-user-summary-item', r.VERTICAL_FADE = 'svg-mask-vertical-fade', r.PANEL_BUTTON = 'svg-mask-panel-button', r.CHANNEL_CALL_CONTROL_BUTTON = 'svg-mask-channel-call-control-button', r.CHANNEL_CALL_CONTROL_BUTTON_BADGE_16 = 'svg-mask-channel-call-control-button-badge-16', r.CHANNEL_CALL_CONTROL_BUTTON_BADGE_22 = 'svg-mask-channel-call-control-button-badge-22', r.CHANNEL_CALL_CONTROL_BUTTON_BADGE_29 = 'svg-mask-channel-call-control-button-badge-29', r.AVATAR_DEFAULT = 'svg-mask-avatar-default', r.AVATAR_STATUS_ROUND_16 = 'svg-mask-avatar-status-round-16', r.AVATAR_STATUS_ROUND_20 = 'svg-mask-avatar-status-round-20', r.AVATAR_STATUS_ROUND_24 = 'svg-mask-avatar-status-round-24', r.AVATAR_STATUS_ROUND_32 = 'svg-mask-avatar-status-round-32', r.AVATAR_STATUS_ROUND_40 = 'svg-mask-avatar-status-round-40', r.AVATAR_STATUS_ROUND_48 = 'svg-mask-avatar-status-round-48', r.AVATAR_STATUS_ROUND_56 = 'svg-mask-avatar-status-round-56', r.AVATAR_STATUS_ROUND_80 = 'svg-mask-avatar-status-round-80', r.AVATAR_STATUS_ROUND_100 = 'svg-mask-avatar-status-round-100', r.AVATAR_STATUS_ROUND_120 = 'svg-mask-avatar-status-round-120', r.DIAGONAL_FACEPILE_16 = 'svg-mask-diagonal-facepile-16', r.DIAGONAL_FACEPILE_20 = 'svg-mask-diagonal-facepile-20', r.DIAGONAL_FACEPILE_24 = 'svg-mask-diagonal-facepile-24', r.DIAGONAL_FACEPILE_32 = 'svg-mask-diagonal-facepile-32', r.DIAGONAL_FACEPILE_40 = 'svg-mask-diagonal-facepile-40', r.DIAGONAL_FACEPILE_48 = 'svg-mask-diagonal-facepile-48', r.DIAGONAL_FACEPILE_56 = 'svg-mask-diagonal-facepile-56', r.DIAGONAL_FACEPILE_80 = 'svg-mask-diagonal-facepile-80', r.DIAGONAL_FACEPILE_100 = 'svg-mask-diagonal-facepile-100', r.DIAGONAL_FACEPILE_120 = 'svg-mask-diagonal-facepile-120', r.DIAGONAL_FACEPILE_STATUS_16 = 'svg-mask-diagonal-facepile-status-16', r.DIAGONAL_FACEPILE_STATUS_20 = 'svg-mask-diagonal-facepile-status-20', r.DIAGONAL_FACEPILE_STATUS_24 = 'svg-mask-diagonal-facepile-status-24', r.DIAGONAL_FACEPILE_STATUS_32 = 'svg-mask-diagonal-facepile-status-32', r.DIAGONAL_FACEPILE_STATUS_40 = 'svg-mask-diagonal-facepile-status-40', r.DIAGONAL_FACEPILE_STATUS_48 = 'svg-mask-diagonal-facepile-status-48', r.DIAGONAL_FACEPILE_STATUS_56 = 'svg-mask-diagonal-facepile-status-56', r.DIAGONAL_FACEPILE_STATUS_80 = 'svg-mask-diagonal-facepile-status-80', r.DIAGONAL_FACEPILE_STATUS_100 = 'svg-mask-diagonal-facepile-status-100', r.DIAGONAL_FACEPILE_STATUS_120 = 'svg-mask-diagonal-facepile-status-120', r.DIAGONAL_FACEPILE_TYPING_16 = 'svg-mask-diagonal-facepile-typing-16', r.DIAGONAL_FACEPILE_TYPING_20 = 'svg-mask-diagonal-facepile-typing-20', r.DIAGONAL_FACEPILE_TYPING_24 = 'svg-mask-diagonal-facepile-typing-24', r.DIAGONAL_FACEPILE_TYPING_32 = 'svg-mask-diagonal-facepile-typing-32', r.DIAGONAL_FACEPILE_TYPING_40 = 'svg-mask-diagonal-facepile-typing-40', r.DIAGONAL_FACEPILE_TYPING_48 = 'svg-mask-diagonal-facepile-typing-48', r.DIAGONAL_FACEPILE_TYPING_56 = 'svg-mask-diagonal-facepile-typing-56', r.DIAGONAL_FACEPILE_TYPING_80 = 'svg-mask-diagonal-facepile-typing-80', r.DIAGONAL_FACEPILE_TYPING_100 = 'svg-mask-diagonal-facepile-typing-100', r.DIAGONAL_FACEPILE_TYPING_120 = 'svg-mask-diagonal-facepile-typing-120', r.AVATAR_STATUS_MOBILE_16 = 'svg-mask-avatar-status-mobile-16', r.AVATAR_STATUS_MOBILE_20 = 'svg-mask-avatar-status-mobile-20', r.AVATAR_STATUS_MOBILE_24 = 'svg-mask-avatar-status-mobile-24', r.AVATAR_STATUS_MOBILE_32 = 'svg-mask-avatar-status-mobile-32', r.AVATAR_STATUS_MOBILE_40 = 'svg-mask-avatar-status-mobile-40', r.AVATAR_STATUS_MOBILE_48 = 'svg-mask-avatar-status-mobile-48', r.AVATAR_STATUS_MOBILE_56 = 'svg-mask-avatar-status-mobile-56', r.AVATAR_STATUS_MOBILE_80 = 'svg-mask-avatar-status-mobile-80', r.AVATAR_STATUS_MOBILE_100 = 'svg-mask-avatar-status-mobile-100', r.AVATAR_STATUS_MOBILE_120 = 'svg-mask-avatar-status-mobile-120', r.AVATAR_STATUS_TYPING_16 = 'svg-mask-avatar-status-typing-16', r.AVATAR_STATUS_TYPING_20 = 'svg-mask-avatar-status-typing-20', r.AVATAR_STATUS_TYPING_24 = 'svg-mask-avatar-status-typing-24', r.AVATAR_STATUS_TYPING_32 = 'svg-mask-avatar-status-typing-32', r.AVATAR_STATUS_TYPING_40 = 'svg-mask-avatar-status-typing-40', r.AVATAR_STATUS_TYPING_48 = 'svg-mask-avatar-status-typing-48', r.AVATAR_STATUS_TYPING_56 = 'svg-mask-avatar-status-typing-56', r.AVATAR_STATUS_TYPING_80 = 'svg-mask-avatar-status-typing-80', r.AVATAR_STATUS_TYPING_100 = 'svg-mask-avatar-status-typing-100', r.AVATAR_STATUS_TYPING_120 = 'svg-mask-avatar-status-typing-120', r.AVATAR_DECORATION_STATUS_ROUND_16 = 'svg-mask-avatar-decoration-status-round-16', r.AVATAR_DECORATION_STATUS_ROUND_20 = 'svg-mask-avatar-decoration-status-round-20', r.AVATAR_DECORATION_STATUS_ROUND_24 = 'svg-mask-avatar-decoration-status-round-24', r.AVATAR_DECORATION_STATUS_ROUND_32 = 'svg-mask-avatar-decoration-status-round-32', r.AVATAR_DECORATION_STATUS_ROUND_40 = 'svg-mask-avatar-decoration-status-round-40', r.AVATAR_DECORATION_STATUS_ROUND_48 = 'svg-mask-avatar-decoration-status-round-48', r.AVATAR_DECORATION_STATUS_ROUND_56 = 'svg-mask-avatar-decoration-status-round-56', r.AVATAR_DECORATION_STATUS_ROUND_80 = 'svg-mask-avatar-decoration-status-round-80', r.AVATAR_DECORATION_STATUS_ROUND_120 = 'svg-mask-avatar-decoration-status-round-120', r.AVATAR_DECORATION_STATUS_MOBILE_16 = 'svg-mask-avatar-decoration-status-mobile-16', r.AVATAR_DECORATION_STATUS_MOBILE_20 = 'svg-mask-avatar-decoration-status-mobile-20', r.AVATAR_DECORATION_STATUS_MOBILE_24 = 'svg-mask-avatar-decoration-status-mobile-24', r.AVATAR_DECORATION_STATUS_MOBILE_32 = 'svg-mask-avatar-decoration-status-mobile-32', r.AVATAR_DECORATION_STATUS_MOBILE_40 = 'svg-mask-avatar-decoration-status-mobile-40', r.AVATAR_DECORATION_STATUS_MOBILE_48 = 'svg-mask-avatar-decoration-status-mobile-48', r.AVATAR_DECORATION_STATUS_MOBILE_56 = 'svg-mask-avatar-decoration-status-mobile-56', r.AVATAR_DECORATION_STATUS_MOBILE_80 = 'svg-mask-avatar-decoration-status-mobile-80', r.AVATAR_DECORATION_STATUS_MOBILE_100 = 'svg-mask-avatar-decoration-status-mobile-100', r.AVATAR_DECORATION_STATUS_MOBILE_120 = 'svg-mask-avatar-decoration-status-mobile-120', r.AVATAR_DECORATION_STATUS_TYPING_16 = 'svg-mask-avatar-decoration-status-typing-16', r.AVATAR_DECORATION_STATUS_TYPING_20 = 'svg-mask-avatar-decoration-status-typing-20', r.AVATAR_DECORATION_STATUS_TYPING_24 = 'svg-mask-avatar-decoration-status-typing-24', r.AVATAR_DECORATION_STATUS_TYPING_32 = 'svg-mask-avatar-decoration-status-typing-32', r.AVATAR_DECORATION_STATUS_TYPING_40 = 'svg-mask-avatar-decoration-status-typing-40', r.AVATAR_DECORATION_STATUS_TYPING_48 = 'svg-mask-avatar-decoration-status-typing-48', r.AVATAR_DECORATION_STATUS_TYPING_56 = 'svg-mask-avatar-decoration-status-typing-56', r.AVATAR_DECORATION_STATUS_TYPING_80 = 'svg-mask-avatar-decoration-status-typing-80', r.AVATAR_DECORATION_STATUS_TYPING_100 = 'svg-mask-avatar-decoration-status-typing-100', r.AVATAR_DECORATION_STATUS_TYPING_120 = 'svg-mask-avatar-decoration-status-typing-120', r.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80 = 'svg-mask-avatar-decoration-profile-status-square-80', r.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80 = 'svg-mask-avatar-decoration-profile-status-mobile-square-80', r.AVATAR_VOICE_CALL_80 = 'svg-mask-avatar-voice-call-80', r.AVATAR_CALL_ICON = 'svg-mask-avatar-call-icon', r.AVATAR_CALL_ICON_32 = 'svg-mask-avatar-call-icon-32', r.STATUS_ONLINE_MOBILE = 'svg-mask-status-online-mobile', r.STATUS_ONLINE = 'svg-mask-status-online', r.STATUS_IDLE = 'svg-mask-status-idle', r.STATUS_DND = 'svg-mask-status-dnd', r.STATUS_OFFLINE = 'svg-mask-status-offline', r.STATUS_STREAMING = 'svg-mask-status-streaming', r.STATUS_TYPING = 'svg-mask-status-typing', r.STATUS_SCREENSHARE = 'svg-mask-status-screenshare', r.STICKER_ROUNDED_RECT = 'svg-mask-sticker-rounded-rect', r.STICKER_SHOP_NOTIFICATION = 'svg-mask-sticker-shop-notification', r.GUILD_ICON_WITH_CHANNEL_TYPE = 'svg-mask-guild-icon-with-channel-type', r.GUILD_POPOUT_FACE_PILE_AVATAR = 'svg-mask-guild-popout-activity-icon', r.CHAT_INPUT_BUTTON_NOTIFICATION = 'svg-mask-chat-input-button-notification', r.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI = 'svg-mask-autocomplete-emoji-upsell-emoji', r.EVENT_TICKET = 'svg-mask-event-ticket', r.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR = 'svg-mask-content-inventory-card-face-pile-avatar', r.CLAN_ICON = 'svg-mask-clan-icon', r.FORWARD_ATTACHMENT_PILE_OVERFLOW = 'svg-mask-forward-attachment-pile-overflow', r.GAMEPLAY_HIGH_ACTIVITY_ICON = 'svg-mask-gameplay-high-activity-icon';
+(r = i || (i = {})).SQUIRCLE = 'svg-mask-squircle', r.HEADER_BAR_BADGE_TOP = 'svg-mask-header-bar-badge-top', r.HEADER_BAR_BADGE_BOTTOM = 'svg-mask-header-bar-badge-bottom', r.VOICE_USER_SUMMARY_ITEM = 'svg-mask-voice-user-summary-item', r.VERTICAL_FADE = 'svg-mask-vertical-fade', r.PANEL_BUTTON = 'svg-mask-panel-button', r.CHANNEL_CALL_CONTROL_BUTTON = 'svg-mask-channel-call-control-button', r.CHANNEL_CALL_CONTROL_BUTTON_BADGE_16 = 'svg-mask-channel-call-control-button-badge-16', r.CHANNEL_CALL_CONTROL_BUTTON_BADGE_22 = 'svg-mask-channel-call-control-button-badge-22', r.CHANNEL_CALL_CONTROL_BUTTON_BADGE_29 = 'svg-mask-channel-call-control-button-badge-29', r.AVATAR_DEFAULT = 'svg-mask-avatar-default', r.AVATAR_STATUS_ROUND_16 = 'svg-mask-avatar-status-round-16', r.AVATAR_STATUS_ROUND_20 = 'svg-mask-avatar-status-round-20', r.AVATAR_STATUS_ROUND_24 = 'svg-mask-avatar-status-round-24', r.AVATAR_STATUS_ROUND_32 = 'svg-mask-avatar-status-round-32', r.AVATAR_STATUS_ROUND_40 = 'svg-mask-avatar-status-round-40', r.AVATAR_STATUS_ROUND_48 = 'svg-mask-avatar-status-round-48', r.AVATAR_STATUS_ROUND_56 = 'svg-mask-avatar-status-round-56', r.AVATAR_STATUS_ROUND_80 = 'svg-mask-avatar-status-round-80', r.AVATAR_STATUS_ROUND_100 = 'svg-mask-avatar-status-round-100', r.AVATAR_STATUS_ROUND_120 = 'svg-mask-avatar-status-round-120', r.DIAGONAL_FACEPILE_16 = 'svg-mask-diagonal-facepile-16', r.DIAGONAL_FACEPILE_20 = 'svg-mask-diagonal-facepile-20', r.DIAGONAL_FACEPILE_24 = 'svg-mask-diagonal-facepile-24', r.DIAGONAL_FACEPILE_32 = 'svg-mask-diagonal-facepile-32', r.DIAGONAL_FACEPILE_40 = 'svg-mask-diagonal-facepile-40', r.DIAGONAL_FACEPILE_48 = 'svg-mask-diagonal-facepile-48', r.DIAGONAL_FACEPILE_56 = 'svg-mask-diagonal-facepile-56', r.DIAGONAL_FACEPILE_80 = 'svg-mask-diagonal-facepile-80', r.DIAGONAL_FACEPILE_100 = 'svg-mask-diagonal-facepile-100', r.DIAGONAL_FACEPILE_120 = 'svg-mask-diagonal-facepile-120', r.DIAGONAL_FACEPILE_STATUS_16 = 'svg-mask-diagonal-facepile-status-16', r.DIAGONAL_FACEPILE_STATUS_20 = 'svg-mask-diagonal-facepile-status-20', r.DIAGONAL_FACEPILE_STATUS_24 = 'svg-mask-diagonal-facepile-status-24', r.DIAGONAL_FACEPILE_STATUS_32 = 'svg-mask-diagonal-facepile-status-32', r.DIAGONAL_FACEPILE_STATUS_40 = 'svg-mask-diagonal-facepile-status-40', r.DIAGONAL_FACEPILE_STATUS_48 = 'svg-mask-diagonal-facepile-status-48', r.DIAGONAL_FACEPILE_STATUS_56 = 'svg-mask-diagonal-facepile-status-56', r.DIAGONAL_FACEPILE_STATUS_80 = 'svg-mask-diagonal-facepile-status-80', r.DIAGONAL_FACEPILE_STATUS_100 = 'svg-mask-diagonal-facepile-status-100', r.DIAGONAL_FACEPILE_STATUS_120 = 'svg-mask-diagonal-facepile-status-120', r.DIAGONAL_FACEPILE_TYPING_16 = 'svg-mask-diagonal-facepile-typing-16', r.DIAGONAL_FACEPILE_TYPING_20 = 'svg-mask-diagonal-facepile-typing-20', r.DIAGONAL_FACEPILE_TYPING_24 = 'svg-mask-diagonal-facepile-typing-24', r.DIAGONAL_FACEPILE_TYPING_32 = 'svg-mask-diagonal-facepile-typing-32', r.DIAGONAL_FACEPILE_TYPING_40 = 'svg-mask-diagonal-facepile-typing-40', r.DIAGONAL_FACEPILE_TYPING_48 = 'svg-mask-diagonal-facepile-typing-48', r.DIAGONAL_FACEPILE_TYPING_56 = 'svg-mask-diagonal-facepile-typing-56', r.DIAGONAL_FACEPILE_TYPING_80 = 'svg-mask-diagonal-facepile-typing-80', r.DIAGONAL_FACEPILE_TYPING_100 = 'svg-mask-diagonal-facepile-typing-100', r.DIAGONAL_FACEPILE_TYPING_120 = 'svg-mask-diagonal-facepile-typing-120', r.AVATAR_STATUS_MOBILE_16 = 'svg-mask-avatar-status-mobile-16', r.AVATAR_STATUS_MOBILE_20 = 'svg-mask-avatar-status-mobile-20', r.AVATAR_STATUS_MOBILE_24 = 'svg-mask-avatar-status-mobile-24', r.AVATAR_STATUS_MOBILE_32 = 'svg-mask-avatar-status-mobile-32', r.AVATAR_STATUS_MOBILE_40 = 'svg-mask-avatar-status-mobile-40', r.AVATAR_STATUS_MOBILE_48 = 'svg-mask-avatar-status-mobile-48', r.AVATAR_STATUS_MOBILE_56 = 'svg-mask-avatar-status-mobile-56', r.AVATAR_STATUS_MOBILE_80 = 'svg-mask-avatar-status-mobile-80', r.AVATAR_STATUS_MOBILE_100 = 'svg-mask-avatar-status-mobile-100', r.AVATAR_STATUS_MOBILE_120 = 'svg-mask-avatar-status-mobile-120', r.AVATAR_STATUS_TYPING_16 = 'svg-mask-avatar-status-typing-16', r.AVATAR_STATUS_TYPING_20 = 'svg-mask-avatar-status-typing-20', r.AVATAR_STATUS_TYPING_24 = 'svg-mask-avatar-status-typing-24', r.AVATAR_STATUS_TYPING_32 = 'svg-mask-avatar-status-typing-32', r.AVATAR_STATUS_TYPING_40 = 'svg-mask-avatar-status-typing-40', r.AVATAR_STATUS_TYPING_48 = 'svg-mask-avatar-status-typing-48', r.AVATAR_STATUS_TYPING_56 = 'svg-mask-avatar-status-typing-56', r.AVATAR_STATUS_TYPING_80 = 'svg-mask-avatar-status-typing-80', r.AVATAR_STATUS_TYPING_100 = 'svg-mask-avatar-status-typing-100', r.AVATAR_STATUS_TYPING_120 = 'svg-mask-avatar-status-typing-120', r.AVATAR_DECORATION_STATUS_ROUND_16 = 'svg-mask-avatar-decoration-status-round-16', r.AVATAR_DECORATION_STATUS_ROUND_20 = 'svg-mask-avatar-decoration-status-round-20', r.AVATAR_DECORATION_STATUS_ROUND_24 = 'svg-mask-avatar-decoration-status-round-24', r.AVATAR_DECORATION_STATUS_ROUND_32 = 'svg-mask-avatar-decoration-status-round-32', r.AVATAR_DECORATION_STATUS_ROUND_40 = 'svg-mask-avatar-decoration-status-round-40', r.AVATAR_DECORATION_STATUS_ROUND_48 = 'svg-mask-avatar-decoration-status-round-48', r.AVATAR_DECORATION_STATUS_ROUND_56 = 'svg-mask-avatar-decoration-status-round-56', r.AVATAR_DECORATION_STATUS_ROUND_80 = 'svg-mask-avatar-decoration-status-round-80', r.AVATAR_DECORATION_STATUS_ROUND_120 = 'svg-mask-avatar-decoration-status-round-120', r.AVATAR_DECORATION_STATUS_MOBILE_16 = 'svg-mask-avatar-decoration-status-mobile-16', r.AVATAR_DECORATION_STATUS_MOBILE_20 = 'svg-mask-avatar-decoration-status-mobile-20', r.AVATAR_DECORATION_STATUS_MOBILE_24 = 'svg-mask-avatar-decoration-status-mobile-24', r.AVATAR_DECORATION_STATUS_MOBILE_32 = 'svg-mask-avatar-decoration-status-mobile-32', r.AVATAR_DECORATION_STATUS_MOBILE_40 = 'svg-mask-avatar-decoration-status-mobile-40', r.AVATAR_DECORATION_STATUS_MOBILE_48 = 'svg-mask-avatar-decoration-status-mobile-48', r.AVATAR_DECORATION_STATUS_MOBILE_56 = 'svg-mask-avatar-decoration-status-mobile-56', r.AVATAR_DECORATION_STATUS_MOBILE_80 = 'svg-mask-avatar-decoration-status-mobile-80', r.AVATAR_DECORATION_STATUS_MOBILE_100 = 'svg-mask-avatar-decoration-status-mobile-100', r.AVATAR_DECORATION_STATUS_MOBILE_120 = 'svg-mask-avatar-decoration-status-mobile-120', r.AVATAR_DECORATION_STATUS_TYPING_16 = 'svg-mask-avatar-decoration-status-typing-16', r.AVATAR_DECORATION_STATUS_TYPING_20 = 'svg-mask-avatar-decoration-status-typing-20', r.AVATAR_DECORATION_STATUS_TYPING_24 = 'svg-mask-avatar-decoration-status-typing-24', r.AVATAR_DECORATION_STATUS_TYPING_32 = 'svg-mask-avatar-decoration-status-typing-32', r.AVATAR_DECORATION_STATUS_TYPING_40 = 'svg-mask-avatar-decoration-status-typing-40', r.AVATAR_DECORATION_STATUS_TYPING_48 = 'svg-mask-avatar-decoration-status-typing-48', r.AVATAR_DECORATION_STATUS_TYPING_56 = 'svg-mask-avatar-decoration-status-typing-56', r.AVATAR_DECORATION_STATUS_TYPING_80 = 'svg-mask-avatar-decoration-status-typing-80', r.AVATAR_DECORATION_STATUS_TYPING_100 = 'svg-mask-avatar-decoration-status-typing-100', r.AVATAR_DECORATION_STATUS_TYPING_120 = 'svg-mask-avatar-decoration-status-typing-120', r.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80 = 'svg-mask-avatar-decoration-profile-status-square-80', r.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80 = 'svg-mask-avatar-decoration-profile-status-mobile-square-80', r.AVATAR_VOICE_CALL_80 = 'svg-mask-avatar-voice-call-80', r.AVATAR_CALL_ICON = 'svg-mask-avatar-call-icon', r.AVATAR_CALL_ICON_32 = 'svg-mask-avatar-call-icon-32', r.STATUS_ONLINE_MOBILE = 'svg-mask-status-online-mobile', r.STATUS_ONLINE = 'svg-mask-status-online', r.STATUS_IDLE = 'svg-mask-status-idle', r.STATUS_DND = 'svg-mask-status-dnd', r.STATUS_OFFLINE = 'svg-mask-status-offline', r.STATUS_STREAMING = 'svg-mask-status-streaming', r.STATUS_TYPING = 'svg-mask-status-typing', r.STATUS_SCREENSHARE = 'svg-mask-status-screenshare', r.STICKER_ROUNDED_RECT = 'svg-mask-sticker-rounded-rect', r.STICKER_SHOP_NOTIFICATION = 'svg-mask-sticker-shop-notification', r.GUILD_ICON_WITH_CHANNEL_TYPE = 'svg-mask-guild-icon-with-channel-type', r.GUILD_POPOUT_FACE_PILE_AVATAR = 'svg-mask-guild-popout-activity-icon', r.CHAT_INPUT_BUTTON_NOTIFICATION = 'svg-mask-chat-input-button-notification', r.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI = 'svg-mask-autocomplete-emoji-upsell-emoji', r.EVENT_TICKET = 'svg-mask-event-ticket', r.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR = 'svg-mask-content-inventory-card-face-pile-avatar', r.CLAN_ICON = 'svg-mask-clan-icon', r.FORWARD_ATTACHMENT_PILE_OVERFLOW = 'svg-mask-forward-attachment-pile-overflow', r.GAMEPLAY_HIGH_ACTIVITY_ICON = 'svg-mask-gameplay-high-activity-icon';
 
 function E(e, t) {
   return (e - 0.5) / (null != t ? t : d.hs) + 0.5;
@@ -72,7 +72,30 @@ children: [
   });
 }
 
-function p(e) {
+function p(e, t) {
+  return (0, a.jsxs)('mask', {
+id: e,
+maskContentUnits: 'objectBoundingBox',
+viewBox: '0 0 1 1',
+children: [
+  (0, a.jsx)('rect', {
+    fill: 'white',
+    x: 0,
+    y: 0,
+    width: 1,
+    height: 1
+  }),
+  (0, a.jsx)('circle', {
+    fill: 'black',
+    cx: 0.75,
+    cy: 24 * t / 24,
+    r: 0.25
+  })
+]
+  });
+}
+
+function m(e) {
   let t = e.size,
 n = e.size / (c.z3 + c.o),
 r = n * c.z3,
@@ -121,8 +144,8 @@ children: [
   });
 }
 
-function m(e, t) {
-  let n = p((0, u.UC)(t));
+function T(e, t) {
+  let n = m((0, u.UC)(t));
   return (0, a.jsx)('mask', {
 id: e,
 maskContentUnits: 'objectBoundingBox',
@@ -131,9 +154,9 @@ children: I(n)
   });
 }
 
-function T(e, t) {
+function g(e, t) {
   let n = (0, u.UC)(t),
-r = p(n),
+r = m(n),
 i = r.totalSize,
 s = n.status / 2;
   return (0, a.jsxs)('mask', {
@@ -152,9 +175,9 @@ children: [
   });
 }
 
-function g(e, t) {
+function S(e, t) {
   let n = (0, u.UC)(t),
-r = p(n),
+r = m(n),
 i = r.totalSize,
 s = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
 o = n.size - n.status - s - n.offset,
@@ -178,7 +201,7 @@ children: [
   });
 }
 
-function S(e) {
+function A(e) {
   return (0, a.jsx)('mask', {
 id: e,
 maskContentUnits: 'objectBoundingBox',
@@ -192,7 +215,7 @@ children: (0, a.jsx)('circle', {
   });
 }
 
-function A(e, t) {
+function N(e, t) {
   let n = (0, u.UC)(t),
 r = n.status / 2;
   return (0, a.jsxs)('mask', {
@@ -216,7 +239,7 @@ children: [
   });
 }
 
-function N(e, t) {
+function v(e, t) {
   let n = (0, u.UC)(t),
 r = n.status / 2,
 i = (r + n.stroke) / n.size / d.hs,
@@ -243,7 +266,7 @@ children: [
   });
 }
 
-function v(e, t) {
+function O(e, t) {
   let n = (0, u.UC)(t),
 r = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
 i = n.size - n.status - r - n.offset,
@@ -272,7 +295,7 @@ children: [
   });
 }
 
-function O(e, t) {
+function R(e, t) {
   let n = (0, u.UC)(t),
 r = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
 i = E((n.size - n.status - n.stroke - n.offset) / n.size),
@@ -305,7 +328,7 @@ children: [
   });
 }
 
-function R(e, t) {
+function C(e, t) {
   let n = (0, u.UC)(t);
   return (0, a.jsxs)('mask', {
 id: e,
@@ -331,7 +354,7 @@ children: [
   });
 }
 
-function C(e, t) {
+function y(e, t) {
   let n = (0, u.UC)(t),
 r = E((n.size - n.status - n.stroke - n.offset) / n.size),
 i = E((n.size - n.status * u.EW - n.stroke - n.offset) / n.size),
@@ -362,7 +385,7 @@ children: [
   });
 }
 
-function y(e) {
+function D(e) {
   let {
 mask: t,
 width: n = 24,
@@ -394,9 +417,9 @@ children: (0, a.jsx)('foreignObject', {
 })
   });
 }
-y.Masks = i, t.ZP = y;
-let D = s.memo(function() {
-  var e, t, n, r, i, s, o, l, c, _, p, I, y, D, L, b, M, P, U, w, x, G;
+D.Masks = i, t.ZP = D;
+let L = s.memo(function() {
+  var e, t, n, r, i, s, o, l, c, _, m, I, D, L, b, M, P, U, w, x, G;
   return (0, a.jsxs)('svg', {
 viewBox: '0 0 1 1',
 style: {
@@ -418,28 +441,10 @@ children: [
       d: 'M0 0.464C0 0.301585 0 0.220377 0.0316081 0.158343C0.0594114 0.103776 0.103776 0.0594114 0.158343 0.0316081C0.220377 0 0.301585 0 0.464 0H0.536C0.698415 0 0.779623 0 0.841657 0.0316081C0.896224 0.0594114 0.940589 0.103776 0.968392 0.158343C1 0.220377 1 0.301585 1 0.464V0.536C1 0.698415 1 0.779623 0.968392 0.841657C0.940589 0.896224 0.896224 0.940589 0.841657 0.968392C0.779623 1 0.698415 1 0.536 1H0.464C0.301585 1 0.220377 1 0.158343 0.968392C0.103776 0.940589 0.0594114 0.896224 0.0316081 0.841657C0 0.779623 0 0.698415 0 0.536V0.464Z'
     })
   })),
-  (t = 'svg-mask-header-bar-badge', (0, a.jsxs)('mask', {
+  p('svg-mask-header-bar-badge-top', 0.25),
+  p('svg-mask-header-bar-badge-bottom', 0.75),
+  (t = 'svg-mask-voice-user-summary-item', (0, a.jsxs)('mask', {
     id: t,
-    maskContentUnits: 'objectBoundingBox',
-    viewBox: '0 0 1 1',
-    children: [
-      (0, a.jsx)('rect', {
-        fill: 'white',
-        x: 0,
-        y: 0,
-        width: 1,
-        height: 1
-      }),
-      (0, a.jsx)('circle', {
-        fill: 'black',
-        cx: 0.75,
-        cy: 0.75,
-        r: 0.25
-      })
-    ]
-  })),
-  (n = 'svg-mask-voice-user-summary-item', (0, a.jsxs)('mask', {
-    id: n,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: [
@@ -491,8 +496,8 @@ children: [
       ]
     });
   }('svg-mask-vertical-fade'),
-  (r = 'svg-mask-panel-button', (0, a.jsxs)('mask', {
-    id: r,
+  (n = 'svg-mask-panel-button', (0, a.jsxs)('mask', {
+    id: n,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: [
@@ -511,8 +516,8 @@ children: [
       })
     ]
   })),
-  (i = 'svg-mask-channel-call-control-button', (0, a.jsxs)('mask', {
-    id: i,
+  (r = 'svg-mask-channel-call-control-button', (0, a.jsxs)('mask', {
+    id: r,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: [
@@ -533,51 +538,51 @@ children: [
   h('svg-mask-channel-call-control-button-badge-16', 16),
   h('svg-mask-channel-call-control-button-badge-22', 22),
   h('svg-mask-channel-call-control-button-badge-29', 29),
-  S('svg-mask-avatar-default'),
-  A('svg-mask-avatar-status-round-16', u.EF.SIZE_16),
-  N('svg-mask-avatar-decoration-status-round-16', u.EF.SIZE_16),
-  R('svg-mask-avatar-status-mobile-16', u.EF.SIZE_16),
-  C('svg-mask-avatar-decoration-status-mobile-16', u.EF.SIZE_16),
-  v('svg-mask-avatar-status-typing-16', u.EF.SIZE_16),
-  O('svg-mask-avatar-decoration-status-typing-16', u.EF.SIZE_16),
-  A('svg-mask-avatar-status-round-20', u.EF.SIZE_20),
-  N('svg-mask-avatar-decoration-status-round-20', u.EF.SIZE_20),
-  R('svg-mask-avatar-status-mobile-20', u.EF.SIZE_20),
-  C('svg-mask-avatar-decoration-status-mobile-20', u.EF.SIZE_20),
-  v('svg-mask-avatar-status-typing-20', u.EF.SIZE_20),
-  O('svg-mask-avatar-decoration-status-typing-20', u.EF.SIZE_20),
-  A('svg-mask-avatar-status-round-24', u.EF.SIZE_24),
-  N('svg-mask-avatar-decoration-status-round-24', u.EF.SIZE_24),
-  R('svg-mask-avatar-status-mobile-24', u.EF.SIZE_24),
-  C('svg-mask-avatar-decoration-status-mobile-24', u.EF.SIZE_24),
-  v('svg-mask-avatar-status-typing-24', u.EF.SIZE_24),
-  O('svg-mask-avatar-decoration-status-typing-24', u.EF.SIZE_24),
-  A('svg-mask-avatar-status-round-32', u.EF.SIZE_32),
-  N('svg-mask-avatar-decoration-status-round-32', u.EF.SIZE_32),
-  R('svg-mask-avatar-status-mobile-32', u.EF.SIZE_32),
-  C('svg-mask-avatar-decoration-status-mobile-32', u.EF.SIZE_32),
-  v('svg-mask-avatar-status-typing-32', u.EF.SIZE_32),
-  O('svg-mask-avatar-decoration-status-typing-32', u.EF.SIZE_32),
-  A('svg-mask-avatar-status-round-40', u.EF.SIZE_40),
-  N('svg-mask-avatar-decoration-status-round-40', u.EF.SIZE_40),
-  R('svg-mask-avatar-status-mobile-40', u.EF.SIZE_40),
-  C('svg-mask-avatar-decoration-status-mobile-40', u.EF.SIZE_40),
-  v('svg-mask-avatar-status-typing-40', u.EF.SIZE_40),
-  O('svg-mask-avatar-decoration-status-typing-40', u.EF.SIZE_40),
-  A('svg-mask-avatar-status-round-48', u.EF.SIZE_48),
-  N('svg-mask-avatar-decoration-status-round-48', u.EF.SIZE_48),
-  R('svg-mask-avatar-status-mobile-48', u.EF.SIZE_48),
-  C('svg-mask-avatar-decoration-status-mobile-48', u.EF.SIZE_48),
-  v('svg-mask-avatar-status-typing-48', u.EF.SIZE_48),
-  O('svg-mask-avatar-decoration-status-typing-48', u.EF.SIZE_48),
-  A('svg-mask-avatar-status-round-56', u.EF.SIZE_56),
-  N('svg-mask-avatar-decoration-status-round-56', u.EF.SIZE_56),
-  R('svg-mask-avatar-status-mobile-56', u.EF.SIZE_56),
-  C('svg-mask-avatar-decoration-status-mobile-56', u.EF.SIZE_56),
-  v('svg-mask-avatar-status-typing-56', u.EF.SIZE_56),
-  O('svg-mask-avatar-decoration-status-typing-56', u.EF.SIZE_56),
-  A('svg-mask-avatar-status-round-80', u.EF.SIZE_80),
-  N('svg-mask-avatar-decoration-status-round-80', u.EF.SIZE_80),
+  A('svg-mask-avatar-default'),
+  N('svg-mask-avatar-status-round-16', u.EF.SIZE_16),
+  v('svg-mask-avatar-decoration-status-round-16', u.EF.SIZE_16),
+  C('svg-mask-avatar-status-mobile-16', u.EF.SIZE_16),
+  y('svg-mask-avatar-decoration-status-mobile-16', u.EF.SIZE_16),
+  O('svg-mask-avatar-status-typing-16', u.EF.SIZE_16),
+  R('svg-mask-avatar-decoration-status-typing-16', u.EF.SIZE_16),
+  N('svg-mask-avatar-status-round-20', u.EF.SIZE_20),
+  v('svg-mask-avatar-decoration-status-round-20', u.EF.SIZE_20),
+  C('svg-mask-avatar-status-mobile-20', u.EF.SIZE_20),
+  y('svg-mask-avatar-decoration-status-mobile-20', u.EF.SIZE_20),
+  O('svg-mask-avatar-status-typing-20', u.EF.SIZE_20),
+  R('svg-mask-avatar-decoration-status-typing-20', u.EF.SIZE_20),
+  N('svg-mask-avatar-status-round-24', u.EF.SIZE_24),
+  v('svg-mask-avatar-decoration-status-round-24', u.EF.SIZE_24),
+  C('svg-mask-avatar-status-mobile-24', u.EF.SIZE_24),
+  y('svg-mask-avatar-decoration-status-mobile-24', u.EF.SIZE_24),
+  O('svg-mask-avatar-status-typing-24', u.EF.SIZE_24),
+  R('svg-mask-avatar-decoration-status-typing-24', u.EF.SIZE_24),
+  N('svg-mask-avatar-status-round-32', u.EF.SIZE_32),
+  v('svg-mask-avatar-decoration-status-round-32', u.EF.SIZE_32),
+  C('svg-mask-avatar-status-mobile-32', u.EF.SIZE_32),
+  y('svg-mask-avatar-decoration-status-mobile-32', u.EF.SIZE_32),
+  O('svg-mask-avatar-status-typing-32', u.EF.SIZE_32),
+  R('svg-mask-avatar-decoration-status-typing-32', u.EF.SIZE_32),
+  N('svg-mask-avatar-status-round-40', u.EF.SIZE_40),
+  v('svg-mask-avatar-decoration-status-round-40', u.EF.SIZE_40),
+  C('svg-mask-avatar-status-mobile-40', u.EF.SIZE_40),
+  y('svg-mask-avatar-decoration-status-mobile-40', u.EF.SIZE_40),
+  O('svg-mask-avatar-status-typing-40', u.EF.SIZE_40),
+  R('svg-mask-avatar-decoration-status-typing-40', u.EF.SIZE_40),
+  N('svg-mask-avatar-status-round-48', u.EF.SIZE_48),
+  v('svg-mask-avatar-decoration-status-round-48', u.EF.SIZE_48),
+  C('svg-mask-avatar-status-mobile-48', u.EF.SIZE_48),
+  y('svg-mask-avatar-decoration-status-mobile-48', u.EF.SIZE_48),
+  O('svg-mask-avatar-status-typing-48', u.EF.SIZE_48),
+  R('svg-mask-avatar-decoration-status-typing-48', u.EF.SIZE_48),
+  N('svg-mask-avatar-status-round-56', u.EF.SIZE_56),
+  v('svg-mask-avatar-decoration-status-round-56', u.EF.SIZE_56),
+  C('svg-mask-avatar-status-mobile-56', u.EF.SIZE_56),
+  y('svg-mask-avatar-decoration-status-mobile-56', u.EF.SIZE_56),
+  O('svg-mask-avatar-status-typing-56', u.EF.SIZE_56),
+  R('svg-mask-avatar-decoration-status-typing-56', u.EF.SIZE_56),
+  N('svg-mask-avatar-status-round-80', u.EF.SIZE_80),
+  v('svg-mask-avatar-decoration-status-round-80', u.EF.SIZE_80),
   function(e, t) {
     let n = (0, u.UC)(t),
       r = n.status / 2,
@@ -605,8 +610,8 @@ children: [
       ]
     });
   }('svg-mask-avatar-decoration-profile-status-square-80', u.EF.SIZE_80),
-  R('svg-mask-avatar-status-mobile-80', u.EF.SIZE_80),
-  C('svg-mask-avatar-decoration-status-mobile-80', u.EF.SIZE_80),
+  C('svg-mask-avatar-status-mobile-80', u.EF.SIZE_80),
+  y('svg-mask-avatar-decoration-status-mobile-80', u.EF.SIZE_80),
   function(e, t) {
     let n = (0, u.UC)(t),
       r = n.size * d.hs / n.size,
@@ -638,41 +643,41 @@ children: [
       ]
     });
   }('svg-mask-avatar-decoration-profile-status-mobile-square-80', u.EF.SIZE_80),
-  v('svg-mask-avatar-status-typing-80', u.EF.SIZE_80),
-  O('svg-mask-avatar-decoration-status-typing-80', u.EF.SIZE_80),
-  A('svg-mask-avatar-status-round-120', u.EF.SIZE_120),
-  N('svg-mask-avatar-decoration-status-round-120', u.EF.SIZE_120),
-  R('svg-mask-avatar-status-mobile-120', u.EF.SIZE_120),
-  C('svg-mask-avatar-decoration-status-mobile-120', u.EF.SIZE_120),
-  v('svg-mask-avatar-status-typing-120', u.EF.SIZE_120),
-  O('svg-mask-avatar-decoration-status-typing-120', u.EF.SIZE_120),
-  m('svg-mask-diagonal-facepile-16', u.EF.SIZE_16),
-  T('svg-mask-diagonal-facepile-status-16', u.EF.SIZE_16),
-  g('svg-mask-diagonal-facepile-typing-16', u.EF.SIZE_16),
-  m('svg-mask-diagonal-facepile-20', u.EF.SIZE_20),
-  T('svg-mask-diagonal-facepile-status-20', u.EF.SIZE_20),
-  g('svg-mask-diagonal-facepile-typing-20', u.EF.SIZE_20),
-  m('svg-mask-diagonal-facepile-24', u.EF.SIZE_24),
-  T('svg-mask-diagonal-facepile-status-24', u.EF.SIZE_24),
-  g('svg-mask-diagonal-facepile-typing-24', u.EF.SIZE_24),
-  m('svg-mask-diagonal-facepile-32', u.EF.SIZE_32),
-  T('svg-mask-diagonal-facepile-status-32', u.EF.SIZE_32),
-  g('svg-mask-diagonal-facepile-typing-32', u.EF.SIZE_32),
-  m('svg-mask-diagonal-facepile-40', u.EF.SIZE_40),
-  T('svg-mask-diagonal-facepile-status-40', u.EF.SIZE_40),
-  g('svg-mask-diagonal-facepile-typing-40', u.EF.SIZE_40),
-  m('svg-mask-diagonal-facepile-48', u.EF.SIZE_48),
-  T('svg-mask-diagonal-facepile-status-48', u.EF.SIZE_48),
-  g('svg-mask-diagonal-facepile-typing-48', u.EF.SIZE_48),
-  m('svg-mask-diagonal-facepile-56', u.EF.SIZE_56),
-  T('svg-mask-diagonal-facepile-status-56', u.EF.SIZE_56),
-  g('svg-mask-diagonal-facepile-typing-56', u.EF.SIZE_56),
-  m('svg-mask-diagonal-facepile-80', u.EF.SIZE_80),
-  T('svg-mask-diagonal-facepile-status-80', u.EF.SIZE_80),
-  g('svg-mask-diagonal-facepile-typing-80', u.EF.SIZE_80),
-  m('svg-mask-diagonal-facepile-120', u.EF.SIZE_120),
-  T('svg-mask-diagonal-facepile-status-120', u.EF.SIZE_120),
-  g('svg-mask-diagonal-facepile-typing-120', u.EF.SIZE_120),
+  O('svg-mask-avatar-status-typing-80', u.EF.SIZE_80),
+  R('svg-mask-avatar-decoration-status-typing-80', u.EF.SIZE_80),
+  N('svg-mask-avatar-status-round-120', u.EF.SIZE_120),
+  v('svg-mask-avatar-decoration-status-round-120', u.EF.SIZE_120),
+  C('svg-mask-avatar-status-mobile-120', u.EF.SIZE_120),
+  y('svg-mask-avatar-decoration-status-mobile-120', u.EF.SIZE_120),
+  O('svg-mask-avatar-status-typing-120', u.EF.SIZE_120),
+  R('svg-mask-avatar-decoration-status-typing-120', u.EF.SIZE_120),
+  T('svg-mask-diagonal-facepile-16', u.EF.SIZE_16),
+  g('svg-mask-diagonal-facepile-status-16', u.EF.SIZE_16),
+  S('svg-mask-diagonal-facepile-typing-16', u.EF.SIZE_16),
+  T('svg-mask-diagonal-facepile-20', u.EF.SIZE_20),
+  g('svg-mask-diagonal-facepile-status-20', u.EF.SIZE_20),
+  S('svg-mask-diagonal-facepile-typing-20', u.EF.SIZE_20),
+  T('svg-mask-diagonal-facepile-24', u.EF.SIZE_24),
+  g('svg-mask-diagonal-facepile-status-24', u.EF.SIZE_24),
+  S('svg-mask-diagonal-facepile-typing-24', u.EF.SIZE_24),
+  T('svg-mask-diagonal-facepile-32', u.EF.SIZE_32),
+  g('svg-mask-diagonal-facepile-status-32', u.EF.SIZE_32),
+  S('svg-mask-diagonal-facepile-typing-32', u.EF.SIZE_32),
+  T('svg-mask-diagonal-facepile-40', u.EF.SIZE_40),
+  g('svg-mask-diagonal-facepile-status-40', u.EF.SIZE_40),
+  S('svg-mask-diagonal-facepile-typing-40', u.EF.SIZE_40),
+  T('svg-mask-diagonal-facepile-48', u.EF.SIZE_48),
+  g('svg-mask-diagonal-facepile-status-48', u.EF.SIZE_48),
+  S('svg-mask-diagonal-facepile-typing-48', u.EF.SIZE_48),
+  T('svg-mask-diagonal-facepile-56', u.EF.SIZE_56),
+  g('svg-mask-diagonal-facepile-status-56', u.EF.SIZE_56),
+  S('svg-mask-diagonal-facepile-typing-56', u.EF.SIZE_56),
+  T('svg-mask-diagonal-facepile-80', u.EF.SIZE_80),
+  g('svg-mask-diagonal-facepile-status-80', u.EF.SIZE_80),
+  S('svg-mask-diagonal-facepile-typing-80', u.EF.SIZE_80),
+  T('svg-mask-diagonal-facepile-120', u.EF.SIZE_120),
+  g('svg-mask-diagonal-facepile-status-120', u.EF.SIZE_120),
+  S('svg-mask-diagonal-facepile-typing-120', u.EF.SIZE_120),
   function(e) {
     let t = 8 * u.EW;
     return (0, a.jsxs)('mask', {
@@ -706,9 +711,9 @@ children: [
       ]
     });
   }('svg-mask-status-online-mobile'),
-  S('svg-mask-status-online'),
-  (s = 'svg-mask-status-idle', (0, a.jsxs)('mask', {
-    id: s,
+  A('svg-mask-status-online'),
+  (i = 'svg-mask-status-idle', (0, a.jsxs)('mask', {
+    id: i,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: [
@@ -726,8 +731,8 @@ children: [
       })
     ]
   })),
-  (o = 'svg-mask-status-dnd', (0, a.jsxs)('mask', {
-    id: o,
+  (s = 'svg-mask-status-dnd', (0, a.jsxs)('mask', {
+    id: s,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: [
@@ -748,8 +753,8 @@ children: [
       })
     ]
   })),
-  (l = 'svg-mask-status-offline', (0, a.jsxs)('mask', {
-    id: l,
+  (o = 'svg-mask-status-offline', (0, a.jsxs)('mask', {
+    id: o,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: [
@@ -767,8 +772,8 @@ children: [
       })
     ]
   })),
-  (c = 'svg-mask-status-streaming', (0, a.jsxs)('mask', {
-    id: c,
+  (l = 'svg-mask-status-streaming', (0, a.jsxs)('mask', {
+    id: l,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: [
@@ -784,8 +789,8 @@ children: [
       })
     ]
   })),
-  (_ = 'svg-mask-status-typing', (0, a.jsx)('mask', {
-    id: _,
+  (c = 'svg-mask-status-typing', (0, a.jsx)('mask', {
+    id: c,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: (0, a.jsx)('rect', {
@@ -798,8 +803,8 @@ children: [
       rx: 0.2
     })
   })),
-  (p = 'svg-mask-status-screenshare', (0, a.jsxs)('mask', {
-    id: p,
+  (_ = 'svg-mask-status-screenshare', (0, a.jsxs)('mask', {
+    id: _,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: [
@@ -814,8 +819,8 @@ children: [
       })
     ]
   })),
-  (I = 'svg-mask-avatar-voice-call-80', (0, a.jsxs)('mask', {
-    id: I,
+  (m = 'svg-mask-avatar-voice-call-80', (0, a.jsxs)('mask', {
+    id: m,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: [
@@ -835,8 +840,8 @@ children: [
   })),
   f('svg-mask-avatar-call-icon', u.EF.SIZE_56, 1),
   f('svg-mask-avatar-call-icon-32', u.EF.SIZE_32, 0.5),
-  (y = 'svg-mask-sticker-rounded-rect', (0, a.jsx)('mask', {
-    id: y,
+  (I = 'svg-mask-sticker-rounded-rect', (0, a.jsx)('mask', {
+    id: I,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: (0, a.jsx)('path', {

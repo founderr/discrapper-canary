@@ -21,7 +21,7 @@ onOpen: t,
 onClose: n,
 popoutPosition: 'bottom',
 popoutAlign: 'right',
-children: (e, t, n) => (0, i.jsx)('div', {
+children: (e, t, n, r) => (0, i.jsx)('div', {
   children: (0, i.jsx)(s.JO, {
     ...n,
     className: o,
@@ -29,7 +29,9 @@ children: (e, t, n) => (0, i.jsx)('div', {
     icon: a.BookmarkIcon,
     'aria-label': l.Z.Messages.FOR_LATER,
     tooltip: t ? null : l.Z.Messages.FOR_LATER,
-    selected: t
+    selected: t,
+    showBadge: r,
+    badgePosition: 'top'
   })
 })
   });

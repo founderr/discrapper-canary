@@ -13,6 +13,8 @@ e.exports = {
   icon: 'icon_fc4f04',
   selected: 'selected_fc4f04',
   iconBadge: 'iconBadge_fc4f04',
+  iconBadgeTop: 'iconBadgeTop_fc4f04',
+  iconBadgeBottom: 'iconBadgeBottom_fc4f04',
   divider: 'divider_fc4f04',
   caret: 'caret_fc4f04',
   themed: 'themed_fc4f04',

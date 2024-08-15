@@ -60,6 +60,14 @@ let n = d.get(f({
 }));
 return null != n && null != n.saveData.dueAt;
   }
+  hasOverdueReminder(e) {
+return this.getMessageReminders().some(t => {
+  let {
+    saveData: n
+  } = t;
+  return null == n.dueAt || e > n.dueAt;
+});
+  }
   hasSentNotification(e) {
 return E.has(e);
   }
