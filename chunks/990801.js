@@ -1,1 +1,3 @@
-e.exports = { searchBar: 'searchBar_ac8310' };
+e.exports = {
+  searchBar: 'searchBar_ac8310'
+};

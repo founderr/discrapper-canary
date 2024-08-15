@@ -1,1 +1,3 @@
-e.exports = { libraryHeader: 'libraryHeader_cb9493' };
+e.exports = {
+  libraryHeader: 'libraryHeader_cb9493'
+};

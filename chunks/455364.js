@@ -1,1 +1,3 @@
-e.exports = { counter: 'counter_d1cc0e' };
+e.exports = {
+  counter: 'counter_d1cc0e'
+};

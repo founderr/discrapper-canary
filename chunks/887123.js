@@ -1,1 +1,3 @@
-e.exports = { actionBarIcon: 'actionBarIcon_b1fc5c' };
+e.exports = {
+  actionBarIcon: 'actionBarIcon_b1fc5c'
+};

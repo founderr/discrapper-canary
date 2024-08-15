@@ -1,1 +1,3 @@
-e.exports = { subtext: 'subtext_be40e6' };
+e.exports = {
+  subtext: 'subtext_be40e6'
+};

@@ -1,1 +1,3 @@
-e.exports = { pricePerInterval: 'pricePerInterval_d06503' };
+e.exports = {
+  pricePerInterval: 'pricePerInterval_d06503'
+};

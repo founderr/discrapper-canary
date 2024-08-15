@@ -1,1 +1,3 @@
-e.exports = { multipleButtons: 'multipleButtons_fcef98' };
+e.exports = {
+  multipleButtons: 'multipleButtons_fcef98'
+};

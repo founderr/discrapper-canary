@@ -1,1 +1,3 @@
-e.exports = { empty: 'empty_c7d602' };
+e.exports = {
+  empty: 'empty_c7d602'
+};

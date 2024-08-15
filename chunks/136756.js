@@ -1,1 +1,3 @@
-e.exports = { divider: 'divider_b03b7f' };
+e.exports = {
+  divider: 'divider_b03b7f'
+};

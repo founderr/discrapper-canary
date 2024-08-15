@@ -1,1 +1,3 @@
-e.exports = { cardContentsContainer: 'cardContentsContainer_ceaee4' };
+e.exports = {
+  cardContentsContainer: 'cardContentsContainer_ceaee4'
+};

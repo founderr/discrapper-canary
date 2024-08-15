@@ -1,1 +1,3 @@
-e.exports = { colorGuildBlue: 'colorGuildBlue_a92125' };
+e.exports = {
+  colorGuildBlue: 'colorGuildBlue_a92125'
+};

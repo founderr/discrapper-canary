@@ -1,1 +1,3 @@
-e.exports = { key: 'key_a384c4' };
+e.exports = {
+  key: 'key_a384c4'
+};

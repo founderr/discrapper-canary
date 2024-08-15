@@ -1,1 +1,3 @@
-e.exports = { modalContent: 'modalContent_ad4aeb' };
+e.exports = {
+  modalContent: 'modalContent_ad4aeb'
+};

@@ -1,1 +1,3 @@
-e.exports = { avatar: 'avatar_f24497' };
+e.exports = {
+  avatar: 'avatar_f24497'
+};

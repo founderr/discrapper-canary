@@ -1,1 +1,3 @@
-e.exports = { textArea: 'textArea_cc484a' };
+e.exports = {
+  textArea: 'textArea_cc484a'
+};

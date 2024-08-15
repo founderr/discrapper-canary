@@ -1,1 +1,3 @@
-e.exports = { pendingIcon: 'pendingIcon_ae3d49' };
+e.exports = {
+  pendingIcon: 'pendingIcon_ae3d49'
+};

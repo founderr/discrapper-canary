@@ -1,1 +1,3 @@
-e.exports = { content: 'content_dac7ec' };
+e.exports = {
+  content: 'content_dac7ec'
+};

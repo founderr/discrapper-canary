@@ -1,1 +1,3 @@
-e.exports = { strikethrough: 'strikethrough_fde376' };
+e.exports = {
+  strikethrough: 'strikethrough_fde376'
+};

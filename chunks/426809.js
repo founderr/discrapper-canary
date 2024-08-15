@@ -1,1 +1,3 @@
-e.exports = { ruleNameInput: 'ruleNameInput_d841d9' };
+e.exports = {
+  ruleNameInput: 'ruleNameInput_d841d9'
+};

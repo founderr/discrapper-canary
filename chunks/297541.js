@@ -1,1 +1,3 @@
-e.exports = { loading: 'loading_cea94f' };
+e.exports = {
+  loading: 'loading_cea94f'
+};

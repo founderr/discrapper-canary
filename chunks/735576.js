@@ -1,1 +1,3 @@
-e.exports = { benefitLabel: 'benefitLabel_a47da1' };
+e.exports = {
+  benefitLabel: 'benefitLabel_a47da1'
+};

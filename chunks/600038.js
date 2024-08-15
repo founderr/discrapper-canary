@@ -1,1 +1,3 @@
-e.exports = { checkboxMargin: 'checkboxMargin_bc8387' };
+e.exports = {
+  checkboxMargin: 'checkboxMargin_bc8387'
+};

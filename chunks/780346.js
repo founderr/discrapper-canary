@@ -1,1 +1,3 @@
-e.exports = { marketingUnsubscribeButton: 'marketingUnsubscribeButton_e04794' };
+e.exports = {
+  marketingUnsubscribeButton: 'marketingUnsubscribeButton_e04794'
+};

@@ -1,1 +1,3 @@
-e.exports = { tooltipText: 'tooltipText_ce31b4' };
+e.exports = {
+  tooltipText: 'tooltipText_ce31b4'
+};

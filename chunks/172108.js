@@ -1,1 +1,3 @@
-e.exports = { reducedMotionTooltip: 'reducedMotionTooltip_e11726' };
+e.exports = {
+  reducedMotionTooltip: 'reducedMotionTooltip_e11726'
+};

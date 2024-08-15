@@ -1,1 +1,3 @@
-e.exports = { localizeBadge: 'localizeBadge_d44307' };
+e.exports = {
+  localizeBadge: 'localizeBadge_d44307'
+};

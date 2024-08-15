@@ -1,1 +1,3 @@
-e.exports = { errorCodeMessage: 'errorCodeMessage_c78a6e' };
+e.exports = {
+  errorCodeMessage: 'errorCodeMessage_c78a6e'
+};
