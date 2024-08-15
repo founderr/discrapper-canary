@@ -16,13 +16,10 @@ function c(e) {
 title: t,
 description: n,
 onScroll: a,
-backgroundImageUrl: c,
-button: d,
-children: u,
-bannerContainerClassName: _,
-bannerImageClassName: E,
-headerTextColor: h,
-descriptionTextColor: m
+button: c,
+children: d,
+bannerContainerClassName: u,
+bannerBackground: _
   } = e;
   return (0, i.jsxs)(r.AdvancedScroller, {
 onScroll: a,
@@ -31,18 +28,15 @@ children: [
   (0, i.jsx)(l.Z, {
     title: t,
     description: n,
-    backgroundImageUrl: c,
-    button: d,
-    className: _,
-    headerTextColor: h,
-    descriptionTextColor: m,
-    bannerImageClassName: E
+    button: c,
+    className: u,
+    background: _
   }),
   (0, i.jsx)('section', {
     className: s()(o.contentContainer, o.gradient),
     children: (0, i.jsx)('div', {
       className: s()(o.content),
-      children: u
+      children: d
     })
   })
 ]

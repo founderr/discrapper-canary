@@ -209,8 +209,13 @@ D = o.useCallback((e, t) => {
       return (0, l.jsx)(E.Z, {
         title: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE,
         description: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
-        backgroundImageUrl: 'https://cdn.discordapp.com/assets/discovery/guilds-hero-background.png',
-        className: N.hero
+        className: N.hero,
+        background: (0, l.jsx)('div', {
+          className: N.bannerImageBackground,
+          children: (0, l.jsx)('div', {
+            className: N.bannerImageGradient
+          })
+        })
       });
     case 'top_picks':
       return (0, l.jsx)('div', {
