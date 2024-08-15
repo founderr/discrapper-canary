@@ -100,7 +100,7 @@ children: [
         variant: 'text-sm/semibold',
         color: 'interactive-active',
         children: h.Z.Messages.E2EE_ANONYMOUS_DEVICE_TAG.format({
-          index: o
+          index: o + 1
         })
       }),
       (0, n.jsx)(r.Text, {
