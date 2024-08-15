@@ -1,46 +1,48 @@
 n.d(t, {
   BC: function() {
-return R;
+return W;
   },
   ZP: function() {
-return W;
+return G;
   }
 }), n(47120), n(653041);
 var l, r = n(735250),
   i = n(470079),
   a = n(120356),
   o = n.n(a),
-  s = n(481060),
-  d = n(370298),
-  u = n(95398),
-  m = n(947849),
-  h = n(624195),
-  c = n(44824),
-  p = n(124347),
-  b = n(283756),
-  g = n(169525),
-  f = n(780088),
-  v = n(785992),
-  x = n(400266),
-  y = n(592125),
-  I = n(52824),
-  w = n(626135),
-  _ = n(585483),
-  C = n(55935),
-  S = n(408433),
-  E = n(956664),
-  j = n(468846),
-  M = n(401419),
-  T = n(249458),
-  N = n(981631),
-  A = n(217702),
-  F = n(689938),
-  k = n(592733),
-  L = n(458857),
-  H = n(910212),
-  V = n(736514);
+  s = n(892814),
+  d = n(481060),
+  u = n(399654),
+  m = n(370298),
+  h = n(95398),
+  c = n(947849),
+  p = n(624195),
+  b = n(44824),
+  g = n(124347),
+  f = n(283756),
+  v = n(169525),
+  x = n(780088),
+  I = n(785992),
+  y = n(400266),
+  w = n(592125),
+  _ = n(52824),
+  C = n(626135),
+  E = n(585483),
+  S = n(55935),
+  j = n(408433),
+  M = n(956664),
+  T = n(468846),
+  N = n(401419),
+  A = n(249458),
+  F = n(981631),
+  k = n(217702),
+  L = n(689938),
+  H = n(592733),
+  V = n(458857),
+  B = n(910212),
+  R = n(736514);
 
-function B(e, t, n) {
+function P(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -49,7 +51,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 
-function R(e) {
+function W(e) {
   let {
 className: t,
 iframeWrapperClassName: n,
@@ -62,49 +64,49 @@ allowFullScreen: m = !0,
 responsive: h = !1,
 renderImageComponent: c,
 renderVideoComponent: p,
-renderLinkComponent: g,
-renderForwardComponent: f = N.VqG,
+renderLinkComponent: b,
+renderForwardComponent: g = F.VqG,
 playable: v = !0,
 autoPlay: x = !1,
-autoMute: y,
-volume: w,
-onPlay: C,
-onPause: S,
-onEnded: M,
-onControlsHide: T,
-onControlsShow: A,
-onVolumeChange: F,
-onMute: L,
-href: H,
+autoMute: I,
+volume: y,
+onPlay: w,
+onPause: C,
+onEnded: S,
+onControlsHide: j,
+onControlsShow: N,
+onVolumeChange: A,
+onMute: k,
+href: L,
 messageId: V,
 channelId: B,
 placeholder: R,
 placeholderVersion: P
-  } = e, [W, O] = i.useState(x), D = null != d && null == d.proxyURL, G = i.useCallback(() => O(!1), [O]), Z = e => {
-e.preventDefault(), e.stopPropagation(), null == C || C(!1), O(!0), D && (_.S.dispatch(N.CkL.VIDEO_EMBED_PLAYBACK_STARTED), _.S.subscribeOnce(N.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G));
+  } = e, [W, O] = i.useState(x), G = null != d && null == d.proxyURL, D = i.useCallback(() => O(!1), [O]), Z = e => {
+e.preventDefault(), e.stopPropagation(), null == w || w(!1), O(!0), G && (E.S.dispatch(F.CkL.VIDEO_EMBED_PLAYBACK_STARTED), E.S.subscribeOnce(F.CkL.VIDEO_EMBED_PLAYBACK_STARTED, D));
   };
   i.useEffect(() => () => {
-D && _.S.unsubscribe(N.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G);
+G && E.S.unsubscribe(F.CkL.VIDEO_EMBED_PLAYBACK_STARTED, D);
   }, [
-D,
-G
+G,
+D
   ]);
   let {
 width: U,
 height: q
   } = s;
   null != d && (U = d.width, q = d.height);
-  let z = (0, E.Tj)({
+  let z = (0, M.Tj)({
 width: U,
 height: q,
 maxWidth: l,
 maxHeight: a
   });
   U = Math.max(z.width, 150), q = Math.max(z.height, 144);
-  let K = (0, I.q)(s);
+  let K = (0, _.q)(s);
   if (null != d && null != d.proxyURL)
 return (0, r.jsx)('div', {
-  className: o()(k.embedVideo, t),
+  className: o()(H.embedVideo, t),
   children: p({
     poster: K,
     src: d.proxyURL,
@@ -114,24 +116,24 @@ return (0, r.jsx)('div', {
     height: q,
     responsive: h,
     autoPlay: x,
-    onEnded: M,
+    onEnded: S,
     naturalWidth: d.width,
     naturalHeight: d.height,
-    onVolumeChange: F,
+    onVolumeChange: A,
     playable: v,
-    autoMute: y,
-    volume: w,
-    onPlay: C,
-    onPause: S,
-    onMute: L,
-    onControlsHide: T,
-    onControlsShow: A,
-    renderForwardComponent: f
+    autoMute: I,
+    volume: y,
+    onPlay: w,
+    onPause: C,
+    onMute: k,
+    onControlsHide: j,
+    onControlsShow: N,
+    renderForwardComponent: g
   })
 });
   if (W && null != d) {
 let e;
-let i = !0 === y || 'function' == typeof y && y(),
+let i = !0 === I || 'function' == typeof I && I(),
   s = {
     width: U,
     height: q
@@ -162,9 +164,9 @@ return (0, r.jsx)('div', {
   className: t,
   style: s,
   children: (0, r.jsx)('div', {
-    className: o()(k.embedVideo, n),
+    className: o()(H.embedVideo, n),
     style: c,
-    children: (0, r.jsx)(j.ZP, {
+    children: (0, r.jsx)(T.ZP, {
       provider: u,
       src: d.url,
       style: e,
@@ -177,7 +179,7 @@ return (0, r.jsx)('div', {
 });
   }
   return (0, r.jsxs)('div', {
-className: o()(k.embedVideo, t),
+className: o()(H.embedVideo, t),
 style: h ? {
   maxWidth: U
 } : {
@@ -192,21 +194,21 @@ children: [
     maxWidth: U,
     maxHeight: q,
     responsive: h,
-    containerClassName: k.embedVideoImageComponent,
-    imageClassName: k.embedVideoImageComponentInner,
+    containerClassName: H.embedVideoImageComponent,
+    imageClassName: H.embedVideoImageComponentInner,
     placeholder: R,
     placeholderVersion: P,
     onClick: v && null != d ? Z : null,
-    renderForwardComponent: f
+    renderForwardComponent: g
   }),
   (0, r.jsx)('div', {
-    className: k.embedVideoActions,
+    className: H.embedVideoActions,
     children: (0, r.jsx)('div', {
-      className: k.centerContent,
-      children: v ? (0, r.jsx)(b.Z, {
+      className: H.centerContent,
+      children: v ? (0, r.jsx)(f.Z, {
         onPlay: null != d ? Z : null,
-        externalURL: H,
-        renderLinkComponent: g,
+        externalURL: L,
+        renderLinkComponent: b,
         messageId: V,
         channelId: B
       }) : null
@@ -216,7 +218,7 @@ children: [
   });
 }
 
-function P(e) {
+function O(e) {
   let {
 className: t,
 href: n,
@@ -228,19 +230,19 @@ video: d,
 renderImageComponent: u,
 renderForwardComponent: m,
 responsive: h,
-alt: p,
-disableAltTextDisplay: b = !1,
+alt: c,
+disableAltTextDisplay: p = !1,
 playable: g = !0,
 hiddenSpoilers: f,
 placeholder: v,
 placeholderVersion: x
   } = e;
-  return (0, r.jsx)(c.Z, {
-className: o()(k.embedVideo, t),
+  return (0, r.jsx)(b.Z, {
+className: o()(H.embedVideo, t),
 original: n,
-poster: (0, I.q)(s),
-src: (0, I.q)(d),
-alt: p,
+poster: (0, _.q)(s),
+src: (0, _.q)(d),
+alt: c,
 width: s.width,
 height: s.height,
 naturalHeight: d.height,
@@ -253,12 +255,12 @@ playable: g,
 renderImageComponent: u,
 renderForwardComponent: m,
 hiddenSpoilers: f,
-disableAltTextDisplay: b,
+disableAltTextDisplay: p,
 placeholder: v,
 placeholderVersion: x
   });
 }
-class W extends(l = i.PureComponent) {
+class G extends(l = i.PureComponent) {
   renderProvider() {
 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
   {
@@ -270,9 +272,9 @@ let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     channelId: i
   } = this.props;
 return null == t ? null : (0, r.jsx)('div', {
-  className: o()(k.embedProvider, k.embedMargin),
+  className: o()(H.embedProvider, H.embedMargin),
   children: null != t.url ? n({
-    className: k.embedLink,
+    className: H.embedLink,
     href: t.url,
     tabIndex: e ? 0 : -1,
     children: t.name,
@@ -296,15 +298,15 @@ let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     channelId: i
   } = this.props;
 return null == t ? null : (0, r.jsxs)('div', {
-  className: o()(k.embedAuthor, k.embedMargin),
+  className: o()(H.embedAuthor, H.embedMargin),
   children: [
     null != t.iconProxyURL ? (0, r.jsx)('img', {
       alt: '',
-      className: k.embedAuthorIcon,
+      className: H.embedAuthorIcon,
       src: t.iconProxyURL
     }) : null,
     null != t.url ? n({
-      className: k.embedAuthorNameLink,
+      className: H.embedAuthorNameLink,
       href: t.url,
       tabIndex: e ? 0 : -1,
       children: t.name,
@@ -313,7 +315,7 @@ return null == t ? null : (0, r.jsxs)('div', {
       messageId: l,
       channelId: i
     }) : (0, r.jsx)('span', {
-      className: k.embedAuthorName,
+      className: H.embedAuthorName,
       children: t.name
     })
   ]
@@ -333,9 +335,9 @@ let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     url: d
   } = t;
 return null == s ? null : (0, r.jsx)('div', {
-  className: o()(k.embedTitle, k.embedMargin),
+  className: o()(H.embedTitle, H.embedMargin),
   children: null != d ? n({
-    className: k.embedTitleLink,
+    className: H.embedTitleLink,
     href: d,
     tabIndex: e ? 0 : -1,
     children: l(t, s),
@@ -354,7 +356,7 @@ let {
   rawDescription: n
 } = e;
 return null == n ? null : (0, r.jsx)('div', {
-  className: o()(k.embedDescription, k.embedMargin),
+  className: o()(H.embedDescription, H.embedMargin),
   children: t(e, n, !1)
 });
   }
@@ -370,14 +372,14 @@ let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     renderForwardComponent: a,
     autoPlayGif: o
   } = this.props;
-return null == t ? null : (0, r.jsx)(T.G.Consumer, {
+return null == t ? null : (0, r.jsx)(A.G.Consumer, {
   children: r => {
     let {
       disableAnimations: s
     } = r;
     return i({
-      containerClassName: k.embedThumbnail,
-      src: (0, I.q)(t),
+      containerClassName: H.embedThumbnail,
+      src: (0, _.q)(t),
       original: t.url,
       width: t.width,
       height: t.height,
@@ -411,7 +413,7 @@ return t.forEach(t => {
     this.props.renderDescription(e, i, !0)
   ]), (3 === l.length || !a) && (n.push(l), l = null);
 }), null != l && n.push(l), (0, r.jsx)('div', {
-  className: k.embedFields,
+  className: H.embedFields,
   children: n.map((e, t) => {
     let {
       length: n
@@ -419,7 +421,7 @@ return t.forEach(t => {
     return e.map((e, l) => {
       let [i, a] = e;
       return (0, r.jsxs)('div', {
-        className: k.embedField,
+        className: H.embedField,
         style: {
           gridColumn: function(e, t) {
             let n = 12 / t,
@@ -429,11 +431,11 @@ return t.forEach(t => {
         },
         children: [
           (0, r.jsx)('div', {
-            className: k.embedFieldName,
+            className: H.embedFieldName,
             children: i
           }),
           (0, r.jsx)('div', {
-            className: k.embedFieldValue,
+            className: H.embedFieldValue,
             children: a
           })
         ]
@@ -461,20 +463,20 @@ let [i, a, o, s] = n.images.map(l => this.renderImage({
   allImages: n.images
 }));
 return null == i && null == a && null == o && null == s ? null : (0, r.jsxs)('div', {
-  className: k.embedGalleryImagesWrapper,
+  className: H.embedGalleryImagesWrapper,
   style: {
     height: l
   },
   children: [
     (0, r.jsxs)('div', {
-      className: k.embedGallerySide,
+      className: H.embedGallerySide,
       children: [
         i,
         null != s && o
       ]
     }),
     (0, r.jsxs)('div', {
-      className: k.embedGallerySide,
+      className: H.embedGallerySide,
       children: [
         a,
         null == s && null != o && o,
@@ -492,11 +494,11 @@ let {
   channelId: i
 } = e;
 return (0, r.jsx)('div', {
-  className: o()(L.hoverButtonGroup, {
-    [L.nonMediaMosaicItem]: !l,
-    [L.forceShowHover]: this.state.showImageAppMenu
+  className: o()(V.hoverButtonGroup, {
+    [V.nonMediaMosaicItem]: !l,
+    [V.forceShowHover]: this.state.showImageAppMenu
   }),
-  children: (0, r.jsx)(d.Z, {
+  children: (0, r.jsx)(m.Z, {
     toggleShowMenu: () => {
       this.setState({
         showImageAppMenu: !this.state.showImageAppMenu
@@ -504,8 +506,8 @@ return (0, r.jsx)('div', {
     },
     showMenu: this.state.showImageAppMenu,
     channelId: i,
-    className: o()(L.hoverButton, {
-      [L.selected]: this.state.showImageAppMenu
+    className: o()(V.hoverButton, {
+      [V.selected]: this.state.showImageAppMenu
     }),
     imageUrl: n,
     mimeType: t
@@ -515,11 +517,16 @@ return (0, r.jsx)('div', {
   handleImageHover(e, t, n) {
 if (n) {
   if (e && !this.state.isImageHovered) {
+    var l;
     this.setState({
       isImageHovered: !0
     });
-    let e = y.Z.getChannel(this.props.channelId);
-    w.default.track(N.rMx.IMAGE_HOVERED, {
+    let e = w.Z.getChannel(this.props.channelId);
+    (0, u.a)({
+      channelId: null !== (l = null == e ? void 0 : e.id) && void 0 !== l ? l : '',
+      location: s.I.CONTEXTUAL_IMAGE,
+      withCommands: !0
+    }), C.default.track(F.rMx.IMAGE_HOVERED, {
       guild_id: null == e ? void 0 : e.guild_id,
       channel_id: null == e ? void 0 : e.id,
       image_recommendations_shown: this.props.showImageRecs
@@ -537,74 +544,74 @@ let {
   isVisible: n = !0,
   image: l,
   isGalleryImage: i = !1,
-  alt: a = F.Z.Messages.IMAGE,
+  alt: a = L.Z.Messages.IMAGE,
   allImages: s = null
 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {
   renderImageComponent: d,
   className: u,
-  autoPlayGif: h,
-  renderForwardComponent: c
+  autoPlayGif: m,
+  renderForwardComponent: h
 } = this.props, {
-  maxMediaWidth: b,
-  maxMediaHeight: g
+  maxMediaWidth: p,
+  maxMediaHeight: b
 } = this.state;
 if (null == l)
   return null;
-let v = (0, I.q)(l),
-  x = null == s ? {} : (0, f.Cx)(s.map(e => (0, f.nP)(e, c))),
-  y = p.Z.isAnimated({
-    src: (0, I.q)(l),
+let f = (0, _.q)(l),
+  v = null == s ? {} : (0, x.Cx)(s.map(e => (0, x.nP)(e, h))),
+  I = g.Z.isAnimated({
+    src: (0, _.q)(l),
     original: l.url,
     animated: !1
   }),
-  w = {
+  y = {
     containerClassName: o()(u, {
-      [k.embedMedia]: !i,
-      [k.embedImage]: !i,
-      [k.galleryImage]: i
+      [H.embedMedia]: !i,
+      [H.embedImage]: !i,
+      [H.galleryImage]: i
     }),
-    imageContainerClassName: i ? k.galleryImageContainer : void 0,
-    imageClassName: i ? k.embedGalleryImageElement : void 0,
-    src: (0, I.q)(l),
+    imageContainerClassName: i ? H.galleryImageContainer : void 0,
+    imageClassName: i ? H.embedGalleryImageElement : void 0,
+    src: (0, _.q)(l),
     alt: a,
     responsive: !0,
     limitResponsiveWidth: !i,
     width: l.width,
     height: l.height,
-    maxWidth: b,
-    maxHeight: g,
+    maxWidth: p,
+    maxHeight: b,
     original: l.url,
     shouldLink: n,
     disableAltTextDisplay: !0,
     hiddenSpoilers: t,
     placeholder: l.placeholder,
     placeholderVersion: l.placeholderVersion,
-    renderForwardComponent: c
+    renderForwardComponent: h
   };
-v in x && (w.onClick = x[v]);
-let _ = null === (e = l.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0],
-  C = null != l && !p.u.test(null == l ? void 0 : l.url),
-  S = !0 !== this.props.isSearchResult && n && null != this.props.channelId && void 0 !== this.props.channelId && C && ! function(e) {
-    return null != e && (e.width <= A.OF || e.height <= A.OF);
-  }(l) && null != _;
-return (0, r.jsx)(m.h.Consumer, {
-  children: e => (0, r.jsx)(T.G.Consumer, {
+f in v && (y.onClick = v[f]);
+let w = null === (e = l.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0],
+  C = null != l && !g.u.test(null == l ? void 0 : l.url),
+  E = !0 !== this.props.isSearchResult && n && null != this.props.channelId && void 0 !== this.props.channelId && C && ! function(e) {
+    return null != e && (e.width <= k.OF || e.height <= k.OF);
+  }(l) && null != w;
+return (0, r.jsx)(c.h.Consumer, {
+  children: e => (0, r.jsx)(A.G.Consumer, {
     children: n => {
       let {
         disableAnimations: r
       } = n;
       return d({
-        ...w,
-        autoPlay: h && !r && !t,
-        renderAccessory: y ? e : null,
-        onMouseEnter: () => this.handleImageHover(!0, l, S),
-        onMouseLeave: () => this.handleImageHover(!1, l, S),
+        ...y,
+        autoPlay: m && !r && !t,
+        renderAccessory: I ? e : null,
+        onMouseEnter: () => this.handleImageHover(!0, l, E),
+        onMouseLeave: () => this.handleImageHover(!1, l, E),
         renderAdjacentContent: () => {
           var e;
-          return !0 === this.props.showImageRecs && S ? this.renderImageHoverButtons({
+          return !0 === this.props.showImageRecs && E ? this.renderImageHoverButtons({
             mimeType: [
               'image',
-              _
+              w
             ],
             downloadURL: null !== (e = l.proxyURL) && void 0 !== e ? e : l.url,
             isVisualMediaType: null != l,
@@ -644,13 +651,13 @@ let {
 if (null == l || null == i)
   return null;
 if (e)
-  return null == a ? null : (0, r.jsx)(T.G.Consumer, {
+  return null == a ? null : (0, r.jsx)(A.G.Consumer, {
     children: e => {
       let {
         disableAnimations: o
       } = e;
-      return (0, r.jsx)(P, {
-        className: k.embedMedia,
+      return (0, r.jsx)(O, {
+        className: H.embedMedia,
         href: l,
         thumbnail: i,
         video: a,
@@ -668,8 +675,8 @@ if (e)
       });
     }
   });
-return (0, r.jsx)(R, {
-  className: k.embedMedia,
+return (0, r.jsx)(W, {
+  className: H.embedMedia,
   href: l,
   allowFullScreen: h,
   thumbnail: i,
@@ -707,22 +714,22 @@ let {
 if (null != e) {
   let n = null != e.iconProxyURL && '' !== e.iconProxyURL ? e.iconProxyURL : e.iconURL;
   return (0, r.jsxs)('div', {
-    className: o()(k.embedFooter, k.embedMargin),
+    className: o()(H.embedFooter, H.embedMargin),
     children: [
       null != n ? (0, r.jsx)('img', {
         alt: '',
-        className: k.embedFooterIcon,
+        className: H.embedFooterIcon,
         src: n
       }) : null,
       (0, r.jsxs)('span', {
-        className: k.embedFooterText,
+        className: H.embedFooterText,
         children: [
           e.text,
           null != e.text && null != t ? (0, r.jsx)('span', {
-            className: k.embedFooterSeparator,
+            className: H.embedFooterSeparator,
             children: '\u2022'
           }) : null,
-          null != t ? (0, C.Y4)(t) : null
+          null != t ? (0, S.Y4)(t) : null
         ]
       })
     ]
@@ -730,10 +737,10 @@ if (null != e) {
 }
 if (null != t)
   return (0, r.jsx)('div', {
-    className: o()(k.embedFooter, k.embedMargin),
+    className: o()(H.embedFooter, H.embedMargin),
     children: (0, r.jsx)('span', {
-      className: k.embedFooterText,
-      children: (0, C.Y4)(t)
+      className: H.embedFooterText,
+      children: (0, S.Y4)(t)
     })
   });
   }
@@ -746,13 +753,13 @@ let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     isVisible: n
   } = this.state;
 switch (t.type) {
-  case N.hBH.GIFV:
+  case F.hBH.GIFV:
     return this.renderVideo({
       gifv: !0,
       hiddenSpoiler: e,
       isVisible: n
     });
-  case N.hBH.VIDEO:
+  case F.hBH.VIDEO:
   default:
     if (null != t.video)
       return this.renderVideo({
@@ -782,9 +789,9 @@ let {
   isVisible: r
 } = this.state, i = this.renderProvider(r), a = this.renderAuthor(r), o = this.renderTitle(r);
 switch (n.type) {
-  case N.hBH.IMAGE:
-  case N.hBH.VIDEO:
-  case N.hBH.GIFV:
+  case F.hBH.IMAGE:
+  case F.hBH.VIDEO:
+  case F.hBH.GIFV:
     break;
   default:
     e = this.renderDescription();
@@ -793,7 +800,7 @@ let s = this.renderFields();
 !l && (t = this.renderMedia(!r));
 let d = this.renderFooter(),
   u = null == t;
-return n.type === N.hBH.RICH && (u = null == n.video), {
+return n.type === F.hBH.RICH && (u = null == n.video), {
   provider: i,
   author: a,
   title: o,
@@ -821,21 +828,21 @@ if (null == s)
   return;
 let {
   width: d
-} = (0, E.Tj)({
+} = (0, M.Tj)({
   width: s.width,
   height: s.height,
   maxWidth: a,
   maxHeight: o
 });
-if (!e && (r === N.hBH.VIDEO || d >= 300))
+if (!e && (r === F.hBH.VIDEO || d >= 300))
   return d + 32;
-if (r === N.hBH.RICH && void 0 !== n)
+if (r === F.hBH.RICH && void 0 !== n)
   return 520;
-if (r === N.hBH.GIFV) {
+if (r === F.hBH.GIFV) {
   var u, m, h, c;
   let {
     width: e
-  } = (0, E.Tj)({
+  } = (0, M.Tj)({
     width: Math.max(null !== (u = null == i ? void 0 : i.width) && void 0 !== u ? u : 0, null !== (m = null == l ? void 0 : l.width) && void 0 !== m ? m : 0),
     height: Math.max(null !== (h = null == i ? void 0 : i.height) && void 0 !== h ? h : 0, null !== (c = null == l ? void 0 : l.height) && void 0 !== c ? c : 0),
     maxWidth: a,
@@ -849,19 +856,19 @@ let {
   hideMedia: e,
   embed: t
 } = this.props;
-return !e && (0, S.dY)(t);
+return !e && (0, j.dY)(t);
   }
   renderSuppressButton(e) {
-return (0, r.jsx)(s.Clickable, {
+return (0, r.jsx)(d.Clickable, {
   focusProps: {
     offset: {
       bottom: 4
     }
   },
-  className: k.embedSuppressButton,
+  className: H.embedSuppressButton,
   onClick: e,
-  'aria-label': F.Z.Messages.SUPPRESS_ALL_EMBEDS,
-  children: (0, r.jsx)(s.XSmallIcon, {
+  'aria-label': L.Z.Messages.SUPPRESS_ALL_EMBEDS,
+  children: (0, r.jsx)(d.XSmallIcon, {
     size: 'xs',
     color: 'currentColor'
   })
@@ -871,7 +878,7 @@ return (0, r.jsx)(s.Clickable, {
 let {
   embed: e
 } = this.props;
-return e.type === N.hBH.IMAGE || e.type === N.hBH.VIDEO || e.type === N.hBH.GIFV || (e.type === N.hBH.RICH || e.type === N.hBH.ARTICLE) && (null != e.video || null != e.image);
+return e.type === F.hBH.IMAGE || e.type === F.hBH.VIDEO || e.type === F.hBH.GIFV || (e.type === F.hBH.RICH || e.type === F.hBH.ARTICLE) && (null != e.video || null != e.image);
   }
   getEmbedColor(e) {
 let {
@@ -894,12 +901,12 @@ let {
 if (!this.usesJustifiedAutoStyle())
   return;
 let o = e ? void 0 : this.getMaxWidth(!1);
-if (void 0 === o && void 0 === n && r !== N.hBH.RICH) {
+if (void 0 === o && void 0 === n && r !== F.hBH.RICH) {
   let e = null != t ? t : l;
   if (void 0 !== e) {
     let {
       width: t
-    } = (0, E.Tj)({
+    } = (0, M.Tj)({
       width: e.width,
       height: e.height,
       maxWidth: i,
@@ -920,28 +927,28 @@ let {
   obscureReason: n,
   className: l
 } = this.props;
-return null != t.provider && M.j.includes(t.provider.name) ? (0, r.jsx)(M.Z, {
+return null != t.provider && N.j.includes(t.provider.name) ? (0, r.jsx)(N.Z, {
   embed: t,
   className: l
-}) : (0, v.Z)(t) ? (0, r.jsx)(x.Z, {
+}) : (0, I.Z)(t) ? (0, r.jsx)(y.Z, {
   embed: t,
   className: l
-}) : (null === (e = t.provider) || void 0 === e ? void 0 : e.name) === 'Amazon Music' && t.type === N.hBH.RICH ? (0, r.jsx)(h.Z, {
+}) : (null === (e = t.provider) || void 0 === e ? void 0 : e.name) === 'Amazon Music' && t.type === F.hBH.RICH ? (0, r.jsx)(p.Z, {
   embed: t,
   className: l
-}) : this.isInline() ? null != n ? (0, r.jsx)(u.Z, {
-  type: u.Z.Types.ATTACHMENT,
+}) : this.isInline() ? null != n ? (0, r.jsx)(h.Z, {
+  type: h.Z.Types.ATTACHMENT,
   reason: n,
   onReveal: this.onReveal,
   onToggleObscurity: this.onToggleObscurity,
   isSingleMosaicItem: !0,
   containerStyles: this.getSpoilerStyles(!0),
   obscurityControlClassName: o()({
-    [k.obscureVideoSpacing]: this.state.isVisible && this.state.videoControlsShown
+    [H.obscureVideoSpacing]: this.state.isVisible && this.state.videoControlsShown
   }),
   children: this.renderInlineMediaEmbed
-}) : this.renderInlineMediaEmbed() : null != n ? (0, r.jsx)(u.Z, {
-  type: u.Z.Types.EMBED,
+}) : this.renderInlineMediaEmbed() : null != n ? (0, r.jsx)(h.Z, {
+  type: h.Z.Types.EMBED,
   onReveal: this.onReveal,
   onToggleObscurity: this.onToggleObscurity,
   reason: n,
@@ -952,21 +959,21 @@ return null != t.provider && M.j.includes(t.provider.name) ? (0, r.jsx)(M.Z, {
   }
   constructor(...e) {
 var t;
-super(...e), t = this, B(this, 'state', {
+super(...e), t = this, P(this, 'state', {
   isVisible: null == this.props.obscureReason,
   videoControlsShown: !1,
   isImageHovered: !1,
   showImageAppMenu: !1,
-  ...(0, S.vP)(this.props.embed)
-}), B(this, 'onReveal', () => {
+  ...(0, j.vP)(this.props.embed)
+}), P(this, 'onReveal', () => {
   this.setState({
     isVisible: !0
   });
-}), B(this, 'onToggleObscurity', () => {
+}), P(this, 'onToggleObscurity', () => {
   this.setState({
     isVisible: !this.state.isVisible
   });
-}), B(this, 'renderInlineMediaEmbed', function() {
+}), P(this, 'renderInlineMediaEmbed', function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     {
       obscureReason: n,
@@ -975,22 +982,22 @@ super(...e), t = this, B(this, 'state', {
     i = t.getMaxWidth(!0);
   return (0, r.jsx)('div', {
     'aria-hidden': e,
-    className: o()(k.inlineMediaEmbed, l, {
-      [k.spoilerAttachment]: n === g.wk.SPOILER,
-      [k.hiddenExplicitAttachment]: null != n && [
-        g.wk.EXPLICIT_CONTENT,
-        g.wk.POTENTIAL_EXPLICIT_CONTENT
+    className: o()(H.inlineMediaEmbed, l, {
+      [H.spoilerAttachment]: n === v.wk.SPOILER,
+      [H.hiddenExplicitAttachment]: null != n && [
+        v.wk.EXPLICIT_CONTENT,
+        v.wk.POTENTIAL_EXPLICIT_CONTENT
       ].includes(n),
-      [k.isHidden]: e,
-      [k.justifyAuto]: t.usesJustifiedAutoStyle(),
-      [V.embedFlexGrow]: null != i
+      [H.isHidden]: e,
+      [H.justifyAuto]: t.usesJustifiedAutoStyle(),
+      [R.embedFlexGrow]: null != i
     }),
     style: {
       maxWidth: i
     },
     children: t.renderMedia(e)
   });
-}), B(this, 'renderEmbedContent', function() {
+}), P(this, 'renderEmbedContent', function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     {
       className: n,
@@ -1008,14 +1015,14 @@ super(...e), t = this, B(this, 'state', {
       footer: p
     } = t.renderAll();
   return (0, r.jsx)('article', {
-    className: o()(n, V.embedFlexGrow, k.embedFull, H.markup, {
-      [k.isHidden]: e,
-      [k.spoilerEmbed]: i === g.wk.SPOILER,
-      [k.hiddenExplicitEmbed]: null != i && [
-        g.wk.EXPLICIT_CONTENT,
-        g.wk.POTENTIAL_EXPLICIT_CONTENT
+    className: o()(n, R.embedFlexGrow, H.embedFull, B.markup, {
+      [H.isHidden]: e,
+      [H.spoilerEmbed]: i === v.wk.SPOILER,
+      [H.hiddenExplicitEmbed]: null != i && [
+        v.wk.EXPLICIT_CONTENT,
+        v.wk.POTENTIAL_EXPLICIT_CONTENT
       ].includes(i),
-      [k.justifyAuto]: t.usesJustifiedAutoStyle()
+      [H.justifyAuto]: t.usesJustifiedAutoStyle()
     }),
     'aria-hidden': e,
     style: {
@@ -1023,11 +1030,11 @@ super(...e), t = this, B(this, 'state', {
       maxWidth: t.getMaxWidth(!1)
     },
     children: (0, r.jsx)('div', {
-      className: k.gridContainer,
+      className: H.gridContainer,
       children: (0, r.jsxs)('div', {
         className: o()({
-          [k.grid]: !0,
-          [k.hasThumbnail]: null != h
+          [H.grid]: !0,
+          [H.hasThumbnail]: null != h
         }),
         children: [
           null != l ? t.renderSuppressButton(l) : null,
@@ -1046,7 +1053,7 @@ super(...e), t = this, B(this, 'state', {
 });
   }
 }
-B(W, 'defaultProps', {
+P(G, 'defaultProps', {
   hideMedia: !1,
   allowFullScreen: !0,
   maxThumbnailWidth: 80,
