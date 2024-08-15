@@ -120,7 +120,12 @@ let en = (0, i.useCallback)(e => {
   f,
   X
 ]);
-return (0, r.jsxs)('div', {
+return i.useLayoutEffect(() => {
+  2 !== H.current.dirty && (H.current.dirty = 2);
+}, [
+  z,
+  H
+]), (0, r.jsxs)('div', {
   ref: V,
   onScroll: en,
   className: s()(M, {
