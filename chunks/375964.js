@@ -6030,6 +6030,7 @@ e.exports = Object.freeze({
   KEYBIND_DESCRIPTION_MODAL_TOGGLE_PINS: 'Toggle pins popout',
   KEYBIND_DESCRIPTION_MODAL_TOGGLE_INBOX: 'Toggle inbox popout',
   KEYBIND_DESCRIPTION_MODAL_MARK_TOP_INBOX_CHANNEL_READ: 'Mark top inbox channel read',
+  KEYBIND_DESCRIPTION_MODAL_TOGGLE_FOR_LATER: 'Toggle for later popout',
   KEYBIND_DESCRIPTION_MODAL_TOGGLE_USERS: 'Toggle channel member list or voice text chat',
   KEYBIND_DESCRIPTION_MODAL_TOGGLE_MUTE: 'Toggle mute',
   KEYBIND_DESCRIPTION_MODAL_TOGGLE_DEAFEN: 'Toggle deafen',
