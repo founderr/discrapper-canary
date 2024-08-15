@@ -10,10 +10,10 @@ var r, i, u, l, o = n(442837),
   T = n(689938);
 let I = !1,
   d = null,
-  C = null;
+  R = null;
 
-function R() {
-  I = !1, C = null;
+function C() {
+  I = !1, R = null;
 }
 
 function N(e) {
@@ -56,14 +56,14 @@ payment: t
   c.PyE.CANCELED
 ].includes(t.status))
 return !1;
-  I = !1, C = null, d = null, E.Z.wait(a.fw), E.Z.wait(_.pB);
+  I = !1, R = null, d = null, E.Z.wait(a.fw), E.Z.wait(_.pB);
 }
 class U extends(r = o.ZP.Store) {
   get isAwaitingAuthentication() {
 return I;
   }
   get error() {
-return C;
+return R;
   }
   get awaitingPaymentId() {
 return d;
@@ -75,18 +75,18 @@ l = 'PaymentAuthenticationStore', (u = 'displayName') in(i = U) ? Object.defineP
   configurable: !0,
   writable: !0
 }) : i[u] = l, t.Z = new U(E.Z, {
-  BILLING_SUBSCRIPTION_UPDATE_START: R,
-  PAYMENT_AUTHENTICATION_CLEAR_ERROR: R,
-  PREMIUM_PAYMENT_ERROR_CLEAR: R,
-  PREMIUM_PAYMENT_MODAL_CLOSE: R,
-  PREMIUM_PAYMENT_MODAL_OPEN: R,
-  PREMIUM_PAYMENT_SUBSCRIBE_START: R,
-  PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: R,
-  PREMIUM_PAYMENT_UPDATE_SUCCESS: R,
-  SKU_PURCHASE_MODAL_CLOSE: R,
-  SKU_PURCHASE_MODAL_OPEN: R,
-  SKU_PURCHASE_START: R,
-  SKU_PURCHASE_SUCCESS: R,
+  BILLING_SUBSCRIPTION_UPDATE_START: C,
+  PAYMENT_AUTHENTICATION_CLEAR_ERROR: C,
+  PREMIUM_PAYMENT_ERROR_CLEAR: C,
+  PREMIUM_PAYMENT_MODAL_CLOSE: C,
+  PREMIUM_PAYMENT_MODAL_OPEN: C,
+  PREMIUM_PAYMENT_SUBSCRIBE_START: C,
+  PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: C,
+  PREMIUM_PAYMENT_UPDATE_SUCCESS: C,
+  SKU_PURCHASE_MODAL_CLOSE: C,
+  SKU_PURCHASE_MODAL_OPEN: C,
+  SKU_PURCHASE_START: C,
+  SKU_PURCHASE_SUCCESS: C,
   BILLING_SUBSCRIPTION_UPDATE_FAIL: N,
   PREMIUM_PAYMENT_SUBSCRIBE_FAIL: N,
   PREMIUM_PAYMENT_UPDATE_FAIL: N,
@@ -96,7 +96,7 @@ l = 'PaymentAuthenticationStore', (u = 'displayName') in(i = U) ? Object.defineP
 let {
   error: t
 } = e;
-C = t, I = !1;
+R = t, I = !1;
   },
   PAYMENT_UPDATE: P,
   BILLING_PAYMENT_FETCH_SUCCESS: P

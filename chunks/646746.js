@@ -22,10 +22,10 @@ function g(e) {
   let {
 message: I,
 forwardOptions: A
-  } = e, p = null == A ? void 0 : A.onlyAttachmentIds, C = null == A ? void 0 : A.onlyEmbedIndices, N = null !== (n = null === (t = I.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : I, b = N.attachments;
-  null != p ? b = N.attachments.filter(e => p.includes(e.id)) : null != C && (b = []);
-  let L = N.embeds;
-  null != C ? L = N.embeds.filter((e, t) => C.includes(t)) : null != p && (L = []), (null != C || '' === N.content && L.length > 0) && (N = N.set('content', L.map(e => e.url).join('\n')));
+  } = e, p = null == A ? void 0 : A.onlyAttachmentIds, C = null == A ? void 0 : A.onlyEmbedIndices, N = null !== (n = null === (t = I.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : I, L = N.attachments;
+  null != p ? L = N.attachments.filter(e => p.includes(e.id)) : null != C && (L = []);
+  let b = N.embeds;
+  null != C ? b = N.embeds.filter((e, t) => C.includes(t)) : null != p && (b = []), (null != C || '' === N.content && b.length > 0) && (N = N.set('content', b.map(e => e.url).join('\n')));
   let v = '' !== N.content && null == p,
 T = a.useMemo(() => v ? (0, d.ZP)(I, {
   formatInline: !0,
@@ -39,12 +39,12 @@ T = a.useMemo(() => v ? (0, d.ZP)(I, {
   v,
   I
 ]),
-x = b.length,
+x = L.length,
 Z = null,
 y = null,
 M = null;
-  if (x > 0 || L.length > 0) {
-let e = (0, r.countBy)(b, e => (0, _.aw)(e, !0)),
+  if (x > 0 || b.length > 0) {
+let e = (0, r.countBy)(L, e => (0, _.aw)(e, !0)),
   t = null !== (m = e.IMAGE) && void 0 !== m ? m : 0,
   n = null !== (S = e.VIDEO) && void 0 !== S ? S : 0;
 t > 0 && n > 0 ? (Z = f.Z.Messages.NUM_IMAGES_VIDEOS.format({
@@ -61,7 +61,7 @@ t > 0 && n > 0 ? (Z = f.Z.Messages.NUM_IMAGES_VIDEOS.format({
   children: [
     (0, l.jsx)(u.Z, {
       className: E.thumbnail,
-      src: b[0].proxy_url,
+      src: L[0].proxy_url,
       width: 56,
       height: 56
     }),
@@ -74,14 +74,14 @@ t > 0 && n > 0 ? (Z = f.Z.Messages.NUM_IMAGES_VIDEOS.format({
 }) : x > 0 ? M = (0, l.jsx)('div', {
   className: E.attachmentPreview,
   children: (0, l.jsx)(u.Z, {
-    src: b[0].proxy_url,
+    src: L[0].proxy_url,
     width: 56,
     height: 56
   })
-}) : (null === (g = L[0]) || void 0 === g ? void 0 : null === (s = g.thumbnail) || void 0 === s ? void 0 : s.proxyURL) != null && (M = (0, l.jsx)('div', {
+}) : (null === (g = b[0]) || void 0 === g ? void 0 : null === (s = g.thumbnail) || void 0 === s ? void 0 : s.proxyURL) != null && (M = (0, l.jsx)('div', {
   className: E.attachmentPreview,
   children: (0, l.jsx)(u.Z, {
-    src: L[0].thumbnail.proxyURL,
+    src: b[0].thumbnail.proxyURL,
     width: 56,
     height: 56
   })

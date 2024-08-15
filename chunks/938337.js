@@ -1,4 +1,4 @@
-t.d(n, {
+t.d(e, {
   i: function() {
 return c;
   }
@@ -6,27 +6,27 @@ return c;
 var i = t(735250),
   l = t(470079),
   r = t(512100),
-  s = t(906732),
-  o = t(626135),
+  o = t(906732),
+  s = t(626135),
   a = t(981631);
 
-function c(e) {
+function c(n) {
   let {
-appId: n,
+appId: e,
 skuId: t,
 ...c
-  } = e, {
+  } = n, {
 analyticsLocations: d
-  } = (0, s.ZP)();
+  } = (0, o.ZP)();
   return l.useEffect(() => {
-o.default.track(a.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
-  application_id: n,
+s.default.track(a.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
+  application_id: e,
   sku_id: t,
   location_stack: d
 });
   }, [
 d,
-n,
+e,
 t
   ]), (0, i.jsx)(r.u, {
 ...c

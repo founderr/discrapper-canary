@@ -21,16 +21,16 @@ tryItText: g,
 dismissText: b,
 onTryFeature: x,
 onClose: C,
-className: I,
-inlineArt: v = !1,
+className: v,
+inlineArt: I = !1,
 isPremiumFeature: S = !1,
 shouldUseHorizontalButtons: E = !1,
 showGIFTag: T = !1,
 dismissibleContent: N,
 position: A = 'top',
 align: P = 'center',
-art: w,
-isPremiumEarlyAccess: k = !1,
+art: k,
+isPremiumEarlyAccess: w = !1,
 maxWidth: R = 280
   } = e, Z = E ? c.Button.Sizes.LARGE : c.Button.Sizes.MAX, [y, B] = o.useState(!1), {
 ref: W,
@@ -54,21 +54,21 @@ R
   ]), o.useEffect(() => {
 (0, s.kk)(N);
   }, [N]), (0, r.jsx)('div', {
-className: I,
+className: v,
 ref: t,
 children: (0, r.jsxs)('div', {
   className: a()(_.content, h, {
-    [_.contentNoArt]: null == p || v,
-    [_.contentPremium]: S || k
+    [_.contentNoArt]: null == p || I,
+    [_.contentPremium]: S || w
   }),
   children: [
     (0, r.jsxs)('div', {
-      className: a()(p, v ? _.artInline : _.artAbsolute),
+      className: a()(p, I ? _.artInline : _.artAbsolute),
       children: [
         T && (0, r.jsx)(u.Z, {
           className: _.gifTag
         }),
-        w
+        k
       ]
     }),
     (0, r.jsxs)('div', {
@@ -79,12 +79,12 @@ children: (0, r.jsxs)('div', {
           variant: 'heading-md/bold',
           color: 'always-white',
           children: [
-            S && !k ? (0, r.jsx)(c.NitroWheelIcon, {
+            S && !w ? (0, r.jsx)(c.NitroWheelIcon, {
               size: 'md',
               color: 'currentColor',
               className: _.premiumIcon
             }) : null,
-            k ? (0, r.jsxs)(c.Text, {
+            w ? (0, r.jsxs)(c.Text, {
               color: 'always-white',
               variant: 'eyebrow',
               className: _.earlyAccessBadgeContainer,
@@ -121,7 +121,7 @@ children: (0, r.jsxs)('div', {
             onClick: e => {
               null == C || C(e), x(e), L(d.L.PRIMARY);
             },
-            color: S || k ? c.Button.Colors.BRAND_INVERTED : c.Button.Colors.WHITE,
+            color: S || w ? c.Button.Colors.BRAND_INVERTED : c.Button.Colors.WHITE,
             children: null != g ? g : f.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
           }),
           (0, r.jsx)(c.Button, {
@@ -130,8 +130,8 @@ children: (0, r.jsxs)('div', {
             onClick: e => {
               null == C || C(e), L(d.L.DISMISS);
             },
-            color: S || k ? c.Button.Colors.WHITE : c.Button.Colors.BRAND,
-            look: S || k ? c.Button.Looks.LINK : c.Button.Looks.FILLED,
+            color: S || w ? c.Button.Colors.WHITE : c.Button.Colors.BRAND,
+            look: S || w ? c.Button.Looks.LINK : c.Button.Looks.FILLED,
             children: null != b ? b : f.Z.Messages.EDUCATION_NEW_FEATURE_DISMISS
           })
         ]

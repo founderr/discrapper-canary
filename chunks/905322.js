@@ -5,8 +5,8 @@ return a;
 });
 var l = i(735250),
   t = i(470079),
-  s = i(777207),
-  r = i(393713);
+  r = i(777207),
+  s = i(393713);
 
 function a(e) {
   let {
@@ -38,17 +38,17 @@ o,
 u
   ]);
   return (0, l.jsxs)('div', {
-className: r.wrapper,
+className: s.wrapper,
 children: [
   (0, l.jsx)('div', {
-    className: r.background,
+    className: s.background,
     style: c
   }),
   (0, l.jsxs)('div', {
-    className: r.content,
+    className: s.content,
     children: [
       null != a && (0, l.jsx)('div', {
-        className: r.icon,
+        className: s.icon,
         children: (0, l.jsx)('img', {
           src: a.toString(),
           alt: ''
@@ -56,12 +56,12 @@ children: [
       }),
       (0, l.jsxs)('div', {
         children: [
-          (0, l.jsx)(s.x, {
+          (0, l.jsx)(r.x, {
             variant: 'heading-xl/bold',
             tag: 'div',
             children: n
           }),
-          null != i && (0, l.jsxs)(s.x, {
+          null != i && (0, l.jsxs)(r.x, {
             variant: 'text-sm/normal',
             children: [
               '\u201C',
@@ -74,7 +74,7 @@ children: [
     ]
   }),
   null != o ? (0, l.jsx)('div', {
-    className: r.image,
+    className: s.image,
     style: p
   }) : null
 ]

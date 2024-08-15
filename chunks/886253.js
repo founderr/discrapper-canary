@@ -1,109 +1,109 @@
-t.d(n, {
+t.d(e, {
   A: function() {
-return p;
+return x;
   }
 });
 var i = t(735250);
 t(470079);
 var l = t(442837),
   r = t(481060),
-  s = t(264043),
-  o = t(812206),
+  o = t(264043),
+  s = t(812206),
   a = t(572004),
   c = t(601911),
   d = t(504211),
   u = t(981631),
-  m = t(689938),
-  S = t(437561),
-  _ = t(27399);
+  S = t(689938),
+  m = t(437561),
+  I = t(27399);
 
-function p(e) {
+function x(n) {
   let {
-appId: n,
+appId: e,
 skuId: t,
-transitionState: p,
+transitionState: x,
 onClose: f,
-onHeaderTitleClick: h,
-children: I,
-footer: x
-  } = e, v = (0, l.e7)([
-o.Z,
-s.Z
+onHeaderTitleClick: _,
+children: p,
+footer: h
+  } = n, T = (0, l.e7)([
+s.Z,
+o.Z
   ], () => {
-var e;
-return null !== (e = o.Z.getApplication(n)) && void 0 !== e ? e : s.Z.getApplicationRecord(n);
-  }, [n]);
-  if (null == v)
+var n;
+return null !== (n = s.Z.getApplication(e)) && void 0 !== n ? n : o.Z.getApplicationRecord(e);
+  }, [e]);
+  if (null == T)
 return null;
-  let T = (0, c.y)(v, 25),
+  let v = (0, c.y)(T, 25),
 {
   termsOfServiceUrl: E,
   privacyPolicyUrl: N
-} = v;
+} = T;
   return (0, i.jsxs)(r.ModalRoot, {
-transitionState: p,
+transitionState: x,
 size: r.ModalSize.DYNAMIC,
-className: _.modal,
+className: I.modal,
 children: [
   (0, i.jsxs)(r.ModalHeader, {
-    className: S.modalHeader,
+    className: m.modalHeader,
     children: [
       (0, i.jsxs)(r.Clickable, {
-        className: S.modalTitle,
-        onClick: h,
+        className: m.modalTitle,
+        onClick: _,
         children: [
-          null != T && (0, i.jsx)('img', {
-            src: T.href,
+          null != v && (0, i.jsx)('img', {
+            src: v.href,
             alt: '',
-            className: _.appIcon
+            className: I.appIcon
           }),
           (0, i.jsx)(r.Heading, {
             variant: 'heading-md/semibold',
-            children: v.name
+            children: T.name
           })
         ]
       }),
       (0, i.jsx)(r.ModalCloseButton, {
         onClick: f,
-        className: S.modalCloseBtn
+        className: m.modalCloseBtn
       })
     ]
   }),
-  I,
+  p,
   (0, i.jsxs)(r.ModalFooter, {
-    className: _.footer,
+    className: I.footer,
     children: [
       null != E && null != N ? (0, i.jsx)(r.Text, {
         color: 'header-primary',
         variant: 'text-sm/normal',
-        children: m.Z.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
+        children: S.Z.Messages.STOREFRONT_DETAILS_TOS_AND_PRIVACY.format({
           tosUrl: E,
           ppUrl: N
         })
       }) : (0, i.jsx)(r.Text, {
         color: 'header-primary',
         variant: 'text-xs/normal',
-        children: m.Z.Messages.STOREFRONT_NO_TOS_PP
+        children: S.Z.Messages.STOREFRONT_NO_TOS_PP
       }),
       (0, i.jsxs)('div', {
-        className: _.footerButtons,
+        className: I.footerButtons,
         children: [
           a.wS && (0, i.jsx)(r.Button, {
             look: r.ButtonLooks.FILLED,
             size: r.ButtonSizes.ICON,
             color: r.ButtonColors.CUSTOM,
-            'aria-label': m.Z.Messages.COPY_LINK,
-            className: _.linkButton,
+            'aria-label': S.Z.Messages.COPY_LINK,
+            className: I.linkButton,
             onClick: () => {
-              let e = ''.concat(location.protocol, '//').concat(location.host).concat(u.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(n, t));
-              (0, a.JG)(e), (0, r.showToast)((0, r.createToast)(m.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), (0, d.X)(n, d.B.DETAILS_MODAL, t);
+              let n = ''.concat(location.protocol, '//').concat(location.host).concat(u.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(e, t));
+              (0, a.JG)(n), (0, r.showToast)((0, r.createToast)(S.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), (0, d.X)(e, d.B.DETAILS_MODAL, t);
             },
             children: (0, i.jsx)(r.LinkIcon, {
               size: 'xs',
               color: 'currentColor'
             })
           }),
-          x
+          h
         ]
       })
     ]

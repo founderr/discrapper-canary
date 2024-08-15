@@ -22,7 +22,7 @@ error: t
 function d() {
   A = 0, c = null, T = null;
 }
-class C extends(E = a.ZP.Store) {
+class R extends(E = a.ZP.Store) {
   get purchaseTokenAuthState() {
 return A;
   }
@@ -33,12 +33,12 @@ return c;
 return T;
   }
 }
-l = 'PurchaseTokenAuthStore', (u = 'displayName') in(i = C) ? Object.defineProperty(i, u, {
+l = 'PurchaseTokenAuthStore', (u = 'displayName') in(i = R) ? Object.defineProperty(i, u, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[u] = l, t.Z = new C(_.Z, {
+}) : i[u] = l, t.Z = new R(_.Z, {
   SKU_PURCHASE_FAIL: I,
   PREMIUM_PAYMENT_SUBSCRIBE_FAIL: I,
   USER_PAYMENT_CLIENT_ADD: function(e) {

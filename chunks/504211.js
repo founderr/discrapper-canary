@@ -1,18 +1,18 @@
-t.d(n, {
+t.d(e, {
   B: function() {
 return l;
   },
   X: function() {
-return o;
+return s;
   }
 });
 var i, l, r = t(626135),
-  s = t(981631);
+  o = t(981631);
 
-function o(e, n, t) {
-  r.default.track(s.rMx.STOREFRONT_COPY_LINK_CLICKED, {
-application_id: e,
-area: n,
+function s(n, e, t) {
+  r.default.track(o.rMx.STOREFRONT_COPY_LINK_CLICKED, {
+application_id: n,
+area: e,
 sku_id: t
   });
 }

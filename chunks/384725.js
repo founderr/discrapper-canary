@@ -1,10 +1,10 @@
 var A = I(735250);
 I(470079);
 var O = I(481060),
-  S = I(570140);
+  T = I(570140);
 _.Z = {
   open(E) {
-S.Z.dispatch({
+T.Z.dispatch({
   type: 'SAFETY_HUB_APPEAL_OPEN',
   classificationId: E
 }), (0, O.openModalLazy)(async () => {
@@ -18,7 +18,7 @@ S.Z.dispatch({
 });
   },
   close() {
-S.Z.dispatch({
+T.Z.dispatch({
   type: 'SAFETY_HUB_APPEAL_CLOSE'
 });
   }

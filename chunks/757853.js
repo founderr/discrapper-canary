@@ -25,8 +25,8 @@ var l, a, s = n(735250),
   p = n(448486),
   C = n(987509),
   N = n(592125),
-  b = n(430824),
-  L = n(158776),
+  L = n(430824),
+  b = n(158776),
   v = n(306680),
   T = n(699516),
   x = n(594174),
@@ -76,7 +76,7 @@ t.channel_id,
 t.id,
 f,
 n
-  ]), b = i.useCallback(() => {
+  ]), L = i.useCallback(() => {
 A(!1), p.current = !1, Z.default.track(O.rMx.FORWARD_ONE_TAP_UNDO, {
   channel_id: t.channel_id,
   message_id: t.id
@@ -151,7 +151,7 @@ children: [
         size: _.Button.Sizes.SMALL,
         color: _.Button.Colors.BRAND,
         look: _.Button.Looks.OUTLINED,
-        onClick: b,
+        onClick: L,
         children: w.Z.Messages.UNDO
       })
     ]
@@ -167,7 +167,7 @@ subLabel: n,
 ...l
   } = e, a = R.ZP.useName(t), i = R.ZP.useUserTag(t, {
 decoration: 'never'
-  }), r = (0, h.e7)([T.Z], () => T.Z.getNickname(t.id)), o = (0, h.e7)([L.Z], () => L.Z.getStatus(t.id));
+  }), r = (0, h.e7)([T.Z], () => T.Z.getNickname(t.id)), o = (0, h.e7)([b.Z], () => b.Z.getStatus(t.id));
   return (0, s.jsx)(G, {
 ...l,
 icon: (0, s.jsx)(f.Z, {
@@ -205,7 +205,7 @@ function U(e) {
 channel: t,
 subLabel: n,
 ...l
-  } = e, a = (0, h.e7)([b.Z], () => b.Z.getGuild(null == t ? void 0 : t.guild_id)), i = (0, S.ZP)(t), r = (0, h.e7)([
+  } = e, a = (0, h.e7)([L.Z], () => L.Z.getGuild(null == t ? void 0 : t.guild_id)), i = (0, S.ZP)(t), r = (0, h.e7)([
 N.Z,
 x.default,
 T.Z

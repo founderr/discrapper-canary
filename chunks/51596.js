@@ -6,7 +6,7 @@ return x;
 return Z;
   },
   F_: function() {
-return L;
+return b;
   },
   Se: function() {
 return R;
@@ -46,13 +46,13 @@ let N = Object.freeze({
 [o.xQ.GUILD]: o.h8.GUILD,
 [o.xQ.APPLICATION]: o.h8.APPLICATION
   }),
-  b = new RegExp('^'.concat(o.xQ.USER, '|').concat(o.xQ.TEXT_CHANNEL, '|').concat(o.xQ.VOICE_CHANNEL, '|\\').concat(o.xQ.GUILD, '|\\').concat(o.xQ.APPLICATION));
+  L = new RegExp('^'.concat(o.xQ.USER, '|').concat(o.xQ.TEXT_CHANNEL, '|').concat(o.xQ.VOICE_CHANNEL, '|\\').concat(o.xQ.GUILD, '|\\').concat(o.xQ.APPLICATION));
 
-function L(e) {
+function b(e) {
   var t, n;
   let l;
   let [a, s] = (l = null !== (n = N[(t = e).charAt(0)]) && void 0 !== n ? n : null, [
-t.replace(b, ''),
+t.replace(L, ''),
 l
   ]);
   return {
@@ -142,7 +142,7 @@ m.default.track(A.rMx.QUICKSWITCHER_OPENED, {
 });
   }(e), l.Z.dispatch({
 type: 'QUICKSWITCHER_SHOW',
-...L(t)
+...b(t)
   });
 }
 
@@ -153,7 +153,7 @@ function Z() {
 function y(e) {
   l.Z.dispatch({
 type: 'QUICKSWITCHER_SEARCH',
-...L(e)
+...b(e)
   });
 }
 

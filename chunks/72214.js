@@ -43,7 +43,7 @@ return null != n && h.M.includes(n) && (l = [n], a = n), {
 };
   }(t), [t]), {
 queryMode: C
-  } = p, [N, b] = l.useState(null != _ ? _ : []);
+  } = p, [N, L] = l.useState(null != _ ? _ : []);
   l.useLayoutEffect(() => {
 let {
   query: e,
@@ -52,12 +52,12 @@ let {
 S({
   query: e,
   resultTypes: t
-}), b(null != _ ? _ : []);
+}), L(null != _ ? _ : []);
   }, [
 S,
 p
   ]), (0, r.D)();
-  let L = (0, a.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
+  let b = (0, a.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
 v = (0, a.e7)([s.Z], () => s.Z.isConnected()),
 T = '' !== I;
   return l.useMemo(() => (0, u.ZP)({
@@ -65,7 +65,7 @@ results: A,
 hasQuery: T,
 queryMode: C,
 targetDestination: n,
-frequentChannels: L,
+frequentChannels: b,
 selectedDestinations: _,
 pinnedDestinations: N,
 originDestination: f,
@@ -76,7 +76,7 @@ A,
 T,
 C,
 n,
-L,
+b,
 _,
 N,
 f,

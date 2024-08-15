@@ -9,8 +9,8 @@ let _ = '',
   T = null,
   I = '',
   d = '',
-  C = '',
   R = '',
+  C = '',
   N = '',
   M = '',
   P = '',
@@ -22,18 +22,18 @@ let _ = '',
   p = null;
 
 function m() {
-  A = null, _ = '', S = null, s = '', c = !1, T = null, I = 'US', d = '', C = '', R = '', N = '', M = '', P = '', U = '', f = !1, L = null, O = null, h = null, p = null;
+  A = null, _ = '', S = null, s = '', c = !1, T = null, I = 'US', d = '', R = '', C = '', N = '', M = '', P = '', U = '', f = !1, L = null, O = null, h = null, p = null;
 }
 
 function Z(e) {
-  d = e.name, I = e.country, R = e.line1, N = e.line2, M = e.city, P = e.postalCode, U = e.state, C = e.email;
+  d = e.name, I = e.country, C = e.line1, N = e.line2, M = e.city, P = e.postalCode, U = e.state, R = e.email;
 }
 
-function D() {
+function G() {
   L = null;
 }
 
-function G(e) {
+function D(e) {
   let {
 error: t
   } = e;
@@ -75,9 +75,9 @@ return c;
   getBillingAddressInfo() {
 return {
   name: d,
-  email: C,
+  email: R,
   country: I,
-  line1: R,
+  line1: C,
   line2: N,
   city: M,
   postalCode: P,
@@ -123,7 +123,7 @@ let {
   info: t,
   isValid: n
 } = e;
-null != t.name && '' !== t.name && (d = t.name), I = t.country, d = t.name, R = t.line1, N = t.line2, M = t.city, P = t.postalCode, U = t.state, C = t.email, f = n;
+null != t.name && '' !== t.name && (d = t.name), I = t.country, d = t.name, C = t.line1, N = t.line2, M = t.city, P = t.postalCode, U = t.state, R = t.email, f = n;
   },
   BRAINTREE_TOKENIZE_PAYPAL_START: function() {
 _ = '', S = null;
@@ -152,11 +152,11 @@ let {
 } = e;
 T = t;
   },
-  BILLING_PAYMENT_SOURCE_CREATE_START: D,
-  MODAL_POP: D,
-  NEW_PAYMENT_SOURCE_CLEAR_ERROR: D,
-  BILLING_PAYMENT_SOURCE_CREATE_FAIL: G,
-  STRIPE_TOKEN_FAILURE: G,
+  BILLING_PAYMENT_SOURCE_CREATE_START: G,
+  MODAL_POP: G,
+  NEW_PAYMENT_SOURCE_CLEAR_ERROR: G,
+  BILLING_PAYMENT_SOURCE_CREATE_FAIL: D,
+  STRIPE_TOKEN_FAILURE: D,
   BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: m,
   LOGOUT: m,
   BILLING_POPUP_BRIDGE_CALLBACK: function(e) {
