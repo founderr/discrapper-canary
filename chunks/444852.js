@@ -103,26 +103,26 @@ return this.analyticsContext.streamRegion;
 return this.analyticsContext.maxViewers;
   }
   updateStats(e) {
-var t, n, r, a, s, o;
+var t, n, r, a, s, o, l;
 for (let {
     connection: t,
-    stats: n
+    stats: o
   }
   of e)
   if (t === this._connection) {
-    let e = n.transport.inboundBitrateEstimate;
+    let e = o.transport.inboundBitrateEstimate;
     if (null != e) {
       if (e > 100000000)
         break;
       if (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 10 && this._bandwidthSamples.shift(), 10 === this._bandwidthSamples.length) {
         let e = i().mean(this._bandwidthSamples),
-          t = null !== (a = null === (r = this._goLiveQualityManager) || void 0 === r ? void 0 : r.isDowngraded()) && void 0 !== a && a;
-        t && e > 1500000 ? null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!1) : !t && e < 1000000 && (null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!0));
+          t = null !== (r = null === (n = this._goLiveQualityManager) || void 0 === n ? void 0 : n.isDowngraded()) && void 0 !== r && r;
+        t && e > 1500000 ? null === (a = this._goLiveQualityManager) || void 0 === a || a.setGoLiveStreamDowngraded(!1) : !t && e < 1000000 && (null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!0));
       }
       break;
     }
   }
-null === (n = this._videoQuality) || void 0 === n || n.setViewedSimulcastQuality(!(null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.isDowngraded()));
+  (null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.getUserID()) != null && (null === (l = this._videoQuality) || void 0 === l || l.setViewedSimulcastQuality(!(null === (o = this._goLiveQualityManager) || void 0 === o ? void 0 : o.isDowngraded())));
   }
   _initializeEvents() {
 let e = !1;
