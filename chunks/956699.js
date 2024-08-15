@@ -844,11 +844,112 @@ super(...e), V(this, 'state', {
   }
 }
 
-function z() {
-  throw Error('Send help');
+function z(e) {
+  let {
+layoutDebuggingEnabled: s,
+cssDebuggingEnabled: t
+  } = e, {
+horizontalSpacing: i,
+verticalSpacing: r,
+maxHorizontalSpacing: o,
+maxVerticalSpacing: l
+  } = (0, R.i)(), c = a.useMemo(() => Array.from({
+length: o + 1
+  }, (e, s) => s), [o]), d = a.useMemo(() => Array.from({
+length: l + 1
+  }, (e, s) => s), [l]);
+  return (0, n.jsxs)(n.Fragment, {
+children: [
+  (0, n.jsx)(E.FormTitle, {
+    tag: E.FormTitleTags.H1,
+    children: 'Design Tools'
+  }),
+  (0, n.jsx)(M.F, {
+    setting: v.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
+    children: (0, n.jsx)(E.FormSwitch, {
+      value: t,
+      note: 'Display raw colors as pink. Toggling this will refresh the browser.',
+      onChange: e => {
+        (0, T.y)({
+          cssDebuggingEnabled: e
+        }), setTimeout(() => location.reload(), 500);
+      },
+      children: 'Enable CSS Debugging'
+    })
+  }),
+  (0, n.jsx)(M.F, {
+    setting: v.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
+    children: (0, n.jsx)(E.FormSwitch, {
+      value: s,
+      note: 'Renders a grid on top of the app to help debug layout alignment issues.',
+      onChange: e => {
+        (0, T.y)({
+          layoutDebuggingEnabled: e
+        });
+      },
+      children: 'Enable Layout Debugging'
+    })
+  }),
+  (0, n.jsxs)(M.F, {
+    setting: v.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
+    children: [
+      (0, n.jsxs)(E.FormSection, {
+        className: F.marginBottom20,
+        children: [
+          (0, n.jsx)(E.FormTitle, {
+            children: 'Horizontal Grid Spacing'
+          }),
+          (0, n.jsx)(E.FormText, {
+            className: F.marginBottom20,
+            type: E.FormTextTypes.DESCRIPTION,
+            children: 'Adjust the spacing between horizontal grid lines. Set to 0 to disable horizontal grid lines.'
+          }),
+          (0, n.jsx)(E.Slider, {
+            initialValue: i,
+            minValue: 0,
+            maxValue: o,
+            markers: c,
+            onValueChange: e => R.i.getState().setHorizontalSpacing(e),
+            onValueRender: e => ''.concat(Math.round(e), 'px'),
+            onMarkerRender: e => e % 4 == 0 ? ''.concat(e) : void 0,
+            equidistant: !0
+          })
+        ]
+      }),
+      (0, n.jsxs)(E.FormSection, {
+        className: F.marginBottom20,
+        children: [
+          (0, n.jsx)(E.FormTitle, {
+            children: 'Vertical Grid Spacing'
+          }),
+          (0, n.jsx)(E.FormText, {
+            className: F.marginBottom20,
+            type: E.FormTextTypes.DESCRIPTION,
+            children: 'Adjust the spacing between vertical grid lines. Set to 0 to disable vertical grid lines.'
+          }),
+          (0, n.jsx)(E.Slider, {
+            initialValue: r,
+            minValue: 0,
+            maxValue: l,
+            markers: d,
+            onValueChange: e => R.i.getState().setVerticalSpacing(e),
+            onValueRender: e => ''.concat(Math.round(e), 'px'),
+            onMarkerRender: e => e % 4 == 0 ? ''.concat(e) : void 0,
+            equidistant: !0
+          })
+        ]
+      })
+    ]
+  })
+]
+  });
 }
 
 function Q() {
+  throw Error('Send help');
+}
+
+function X() {
   let [e, s] = a.useState(!1), [t, i] = a.useState('');
   return (a.useEffect(() => {
 (async () => {
@@ -961,7 +1062,7 @@ children: [
             children: 'React Crash'
           }),
           (0, n.jsx)(E.Button, {
-            onClick: z,
+            onClick: Q,
             children: 'onClick Throw'
           })
         ]
@@ -971,7 +1072,7 @@ children: [
 ]
   });
 }
-let X = d.ZP.connectStores([f.default], () => ({
+let q = d.ZP.connectStores([f.default], () => ({
   isTracingRequests: f.default.isTracingRequests,
   isForcedCanary: f.default.isForcedCanary,
   isLoggingGatewayEvents: f.default.isLoggingGatewayEvents,
@@ -988,236 +1089,162 @@ let X = d.ZP.connectStores([f.default], () => ({
   let {
 isTracingRequests: s,
 isForcedCanary: t,
-isLoggingGatewayEvents: i,
-isLoggingOverlayEvents: r,
-isLoggingAnalyticsEvents: o,
-isAxeEnabled: l,
-cssDebuggingEnabled: c,
-layoutDebuggingEnabled: d,
-isSourceMapsEnabled: _,
-isAnalyticsDebuggerEnabled: u,
-isIdleStatusIndicatorEnabled: I,
-appDirectoryIncludesInactiveCollections: S
-  } = e, {
-spacing: N,
-minSpacing: C,
-maxSpacing: m,
-showHorizontalLines: A
-  } = (0, R.i)(), O = a.useMemo(() => Array.from({
-length: m - C + 1
-  }, (e, s) => C + s), [
-C,
-m
-  ]);
-  return (0, n.jsx)(M.F, {
-setting: v.s6.DEVELOPER_OPTIONS_FLAGS,
-children: (0, n.jsxs)(E.FormSection, {
-  title: 'Developer Flags',
-  tag: E.FormTitleTags.H1,
-  children: [
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: s,
-        note: 'Force trace all client requests with APM',
-        onChange: e => (0, T.y)({
-          trace: e
-        }),
-        children: 'Enable Tracing Requests'
-      })
-    }),
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: t,
-        note: 'Force all API requests to canary instances',
-        onChange: e => (0, T.y)({
-          canary: e
-        }),
-        children: 'Enable Forced Canary'
-      })
-    }),
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: i,
-        note: 'Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.',
-        onChange: e => (0, T.y)({
-          logGatewayEvents: e
-        }),
-        children: 'Enable Logging of Gateway Events to Console'
-      })
-    }),
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: r,
-        note: 'Logs all overlay related RPC events. Super noisy if an overlay is connected',
-        onChange: e => (0, T.y)({
-          logOverlayEvents: e
-        }),
-        children: 'Enable Logging of Overlay RPC Events & Commands'
-      })
-    }),
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: o,
-        note: 'Logs all analytics events to the developer console',
-        onChange: e => (0, T.y)({
-          logAnalyticsEvents: e
-        }),
-        children: 'Enable Logging of Analytics Events'
-      })
-    }),
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: _,
-        note: 'Only enable on devices you trust.',
-        onChange: e => (0, T.y)({
-          sourceMapsEnabled: e
-        }),
-        children: 'Enable source maps to be loaded on this client'
-      })
-    }),
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: u,
-        note: 'Displays a floating debugger with viewed impressions',
-        onChange: e => (0, T.y)({
-          analyticsDebuggerEnabled: e
-        }),
-        children: 'Enable standard analytics debugger view'
-      })
-    }),
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: I,
-        note: 'Displays a floating idle status indicator',
-        onChange: e => (0, T.y)({
-          idleStatusIndicatorEnabled: e
-        }),
-        children: 'Enable idle status indicator'
-      })
-    }),
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: l,
-        note: 'Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development',
-        onChange: e => (0, T.y)({
-          axeEnabled: e
-        }),
-        children: 'Enable Accessibility Auditing'
-      })
-    }),
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: c,
-        note: 'Display raw colors as pink. Toggling this will refresh the browser.',
-        onChange: e => {
-          (0, T.y)({
-            cssDebuggingEnabled: e
-          }), setTimeout(() => location.reload(), 500);
-        },
-        children: 'Enable CSS Debugging'
-      })
-    }),
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: d,
-        note: 'Renders an 8px grid as an overlay on the entire app.',
-        onChange: e => {
-          (0, T.y)({
-            layoutDebuggingEnabled: e
-          });
-        },
-        children: 'Enable Layout Debugging'
-      })
-    }),
-    (0, n.jsxs)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
+isLoggingGatewayEvents: a,
+isLoggingOverlayEvents: i,
+isLoggingAnalyticsEvents: r,
+isAxeEnabled: o,
+cssDebuggingEnabled: l,
+layoutDebuggingEnabled: c,
+isSourceMapsEnabled: d,
+isAnalyticsDebuggerEnabled: _,
+isIdleStatusIndicatorEnabled: u,
+appDirectoryIncludesInactiveCollections: I
+  } = e;
+  return (0, n.jsxs)(n.Fragment, {
+children: [
+  (0, n.jsx)(M.F, {
+    setting: v.s6.DEVELOPER_OPTIONS_FLAGS,
+    children: (0, n.jsxs)(E.FormSection, {
+      title: 'Developer Flags',
+      tag: E.FormTitleTags.H1,
       children: [
-        (0, n.jsxs)(E.FormSection, {
-          className: F.marginBottom20,
+        (0, n.jsx)(M.F, {
+          setting: v.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
+          children: (0, n.jsx)(E.FormSwitch, {
+            value: s,
+            note: 'Force trace all client requests with APM',
+            onChange: e => (0, T.y)({
+              trace: e
+            }),
+            children: 'Enable Tracing Requests'
+          })
+        }),
+        (0, n.jsx)(M.F, {
+          setting: v.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
+          children: (0, n.jsx)(E.FormSwitch, {
+            value: t,
+            note: 'Force all API requests to canary instances',
+            onChange: e => (0, T.y)({
+              canary: e
+            }),
+            children: 'Enable Forced Canary'
+          })
+        }),
+        (0, n.jsx)(M.F, {
+          setting: v.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
+          children: (0, n.jsx)(E.FormSwitch, {
+            value: a,
+            note: 'Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.',
+            onChange: e => (0, T.y)({
+              logGatewayEvents: e
+            }),
+            children: 'Enable Logging of Gateway Events to Console'
+          })
+        }),
+        (0, n.jsx)(M.F, {
+          setting: v.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
+          children: (0, n.jsx)(E.FormSwitch, {
+            value: i,
+            note: 'Logs all overlay related RPC events. Super noisy if an overlay is connected',
+            onChange: e => (0, T.y)({
+              logOverlayEvents: e
+            }),
+            children: 'Enable Logging of Overlay RPC Events & Commands'
+          })
+        }),
+        (0, n.jsx)(M.F, {
+          setting: v.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
+          children: (0, n.jsx)(E.FormSwitch, {
+            value: r,
+            note: 'Logs all analytics events to the developer console',
+            onChange: e => (0, T.y)({
+              logAnalyticsEvents: e
+            }),
+            children: 'Enable Logging of Analytics Events'
+          })
+        }),
+        (0, n.jsx)(M.F, {
+          setting: v.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
+          children: (0, n.jsx)(E.FormSwitch, {
+            value: d,
+            note: 'Only enable on devices you trust.',
+            onChange: e => (0, T.y)({
+              sourceMapsEnabled: e
+            }),
+            children: 'Enable source maps to be loaded on this client'
+          })
+        }),
+        (0, n.jsx)(M.F, {
+          setting: v.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
+          children: (0, n.jsx)(E.FormSwitch, {
+            value: _,
+            note: 'Displays a floating debugger with viewed impressions',
+            onChange: e => (0, T.y)({
+              analyticsDebuggerEnabled: e
+            }),
+            children: 'Enable standard analytics debugger view'
+          })
+        }),
+        (0, n.jsx)(M.F, {
+          setting: v.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
+          children: (0, n.jsx)(E.FormSwitch, {
+            value: u,
+            note: 'Displays a floating idle status indicator',
+            onChange: e => (0, T.y)({
+              idleStatusIndicatorEnabled: e
+            }),
+            children: 'Enable idle status indicator'
+          })
+        }),
+        (0, n.jsx)(M.F, {
+          setting: v.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
+          children: (0, n.jsx)(E.FormSwitch, {
+            value: o,
+            note: 'Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development',
+            onChange: e => (0, T.y)({
+              axeEnabled: e
+            }),
+            children: 'Enable Accessibility Auditing'
+          })
+        }),
+        (0, n.jsx)(M.F, {
+          setting: v.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
+          children: (0, n.jsx)(E.FormSwitch, {
+            value: I,
+            note: 'In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.',
+            onChange: e => (0, T.y)({
+              appDirectoryIncludesInactiveCollections: e
+            }),
+            children: 'Preview Unpublished Collections on App Directory Homepage'
+          })
+        }),
+        (0, n.jsxs)(M.F, {
+          setting: v.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
           children: [
-            (0, n.jsx)(E.FormTitle, {
-              children: 'Layout Debugging Grid Spacing'
+            (0, n.jsx)('div', {
+              className: [
+                U.buttonsContainer,
+                F.marginBottom20
+              ].join(' '),
+              children: (0, n.jsx)(Z.S, {})
             }),
-            (0, n.jsx)(E.Slider, {
-              initialValue: N,
-              minValue: C,
-              maxValue: m,
-              markers: O,
-              onValueChange: e => R.i.setState({
-                spacing: Math.round(e)
-              }),
-              onValueRender: e => ''.concat(Math.round(e), 'px'),
-              onMarkerRender: e => e % C == 0 ? ''.concat(e) : void 0,
-              equidistant: !0
-            }),
-            (0, n.jsx)(E.FormText, {
-              type: E.FormTextTypes.DESCRIPTION,
-              children: 'Adjust the spacing between the grid lines.'
+            (0, n.jsx)(E.FormDivider, {
+              className: U.divider
             })
           ]
-        }),
-        (0, n.jsxs)(E.FormSection, {
-          className: F.marginBottom20,
-          children: [
-            (0, n.jsx)(E.FormTitle, {
-              children: 'Layout Debugging Grid Spacing'
-            }),
-            (0, n.jsx)(E.FormSwitch, {
-              value: A,
-              onChange: e => {
-                R.i.setState({
-                  showHorizontalLines: e
-                });
-              },
-              children: 'Show Horizontal Grid Lines'
-            })
-          ]
-        })
-      ]
-    }),
-    (0, n.jsx)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
-      children: (0, n.jsx)(E.FormSwitch, {
-        value: S,
-        note: 'In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.',
-        onChange: e => (0, T.y)({
-          appDirectoryIncludesInactiveCollections: e
-        }),
-        children: 'Preview Unpublished Collections on App Directory Homepage'
-      })
-    }),
-    (0, n.jsxs)(M.F, {
-      setting: v.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
-      children: [
-        (0, n.jsx)('div', {
-          className: [
-            U.buttonsContainer,
-            F.marginBottom20
-          ].join(' '),
-          children: (0, n.jsx)(Z.S, {})
-        }),
-        (0, n.jsx)(E.FormDivider, {
-          className: U.divider
         })
       ]
     })
-  ]
-})
+  }),
+  (0, n.jsx)(z, {
+    layoutDebuggingEnabled: c,
+    cssDebuggingEnabled: l
+  })
+]
   });
 });
 
-function q() {
+function J() {
   let e = (0, d.e7)([D.Z], () => D.Z.getSurveyOverride()),
 [s, t] = a.useState(null != e ? e : '');
   return (0, n.jsx)(M.F, {
@@ -1252,7 +1279,7 @@ children: (0, n.jsxs)(E.FormSection, {
   });
 }
 
-function J() {
+function $() {
   var e;
   let s = (0, d.e7)([O.Z], () => O.Z.overrideId()),
 [t, i] = a.useState(null !== (e = O.Z.overrideId()) && void 0 !== e ? e : '');
@@ -1287,17 +1314,17 @@ children: (0, n.jsxs)(E.FormSection, {
 })
   });
 }
-class $ extends a.PureComponent {
+class ee extends a.PureComponent {
   render() {
 return (0, n.jsxs)(a.Fragment, {
   children: [
-    (0, n.jsx)(X, {}),
-    (0, n.jsx)(Q, {}),
     (0, n.jsx)(q, {}),
+    (0, n.jsx)(X, {}),
     (0, n.jsx)(J, {}),
+    (0, n.jsx)($, {}),
     (0, n.jsx)(W, {})
   ]
 });
   }
 }
-s.Z = $;
+s.Z = ee;

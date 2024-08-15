@@ -12,30 +12,37 @@ var r = n(735250),
   s = n(857192),
   o = n(511023);
 let l = (0, i.Z)(e => ({
-  spacing: 8,
-  minSpacing: 4,
-  maxSpacing: 64,
-  setSpacing: t => {
+  horizontalSpacing: 8,
+  verticalSpacing: 8,
+  maxHorizontalSpacing: 64,
+  maxVerticalSpacing: 64,
+  setHorizontalSpacing: t => {
 e({
-  spacing: Math.min(Math.max(t, 4), 64)
+  horizontalSpacing: Math.round(Math.min(Math.max(t, 0), 64))
 });
   },
-  showHorizontalLines: !0
+  setVerticalSpacing: t => {
+e({
+  verticalSpacing: Math.round(Math.min(Math.max(t, 0), 64))
+});
+  }
 }));
 
 function u() {
   let e = (0, a.e7)([s.default], () => s.default.layoutDebuggingEnabled),
 {
-  spacing: t,
-  showHorizontalLines: n
+  horizontalSpacing: t,
+  verticalSpacing: n
 } = l();
   return e ? (0, r.jsx)('div', {
 className: o.container,
 children: (0, r.jsx)('div', {
   className: o.gridOverlay,
-  'data-horizontal': n,
+  'data-horizontal': t > 0,
+  'data-vertical': n > 0,
   style: {
-    '--custom-grid-spacing': ''.concat(t, 'px')
+    '--custom-grid-horizontal-spacing': ''.concat(t, 'px'),
+    '--custom-grid-vertical-spacing': ''.concat(n, 'px')
   }
 })
   }) : null;
