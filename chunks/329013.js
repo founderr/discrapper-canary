@@ -24,8 +24,8 @@ var n = t(735250),
   C = t(165583),
   m = t(197115),
   A = t(504983),
-  g = t(626135),
-  O = t(981631),
+  O = t(626135),
+  g = t(981631),
   h = t(921944),
   p = t(474936),
   R = t(689938),
@@ -67,7 +67,7 @@ let {
   ]
 });
 return a.useEffect(() => {
-  r && g.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
+  r && O.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
     type: p.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
     location_stack: t
   });

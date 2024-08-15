@@ -22,8 +22,8 @@ onFocus: E,
 onBlur: f,
 onMouseOver: h,
 onMouseDown: p,
-onMouseLeave: m,
-buttonProps: I,
+onMouseLeave: I,
+buttonProps: m,
 'aria-label': T
   } = e, g = i.useRef(null);
   return (0, r.jsxs)(t, {
@@ -31,12 +31,12 @@ ref: g,
 className: o,
 onClick: u,
 onMouseOver: h,
-onMouseLeave: m,
+onMouseLeave: I,
 onDoubleClick: c,
 onContextMenu: d,
 children: [
   (0, r.jsx)(a.P, {
-    ...I,
+    ...m,
     focusProps: {
       ringTarget: g,
       ...l

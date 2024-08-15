@@ -17,10 +17,10 @@ var r = n(735250),
   f = n(43267),
   h = n(933557),
   p = n(703656),
-  m = n(932724),
-  I = n(672339),
+  I = n(932724),
+  m = n(672339),
   T = n(898531),
-  g = n(738436),
+  g = n(923973),
   S = n(189771),
   A = n(560688),
   N = n(871499),
@@ -56,8 +56,8 @@ header: t
   return i.useEffect(() => {
 let e = C.default.getCurrentUser();
 if (s && null != e) {
-  let t = (0, m.P)(e);
-  (0, I.FU)(t, a, {
+  let t = (0, I.P)(e);
+  (0, m.FU)(t, a, {
     track: !1
   }).catch(P.dG4);
 }
@@ -156,7 +156,7 @@ animatedStyle: t,
 y: n,
 x: a,
 channel: _
-  } = e, [p, m] = i.useState(!1), I = (0, f.x)(_), T = (0, h.ZP)(_), [g, S] = (0, l.Wu)([R.Z], () => [
+  } = e, [p, I] = i.useState(!1), m = (0, f.x)(_), T = (0, h.ZP)(_), [g, S] = (0, l.Wu)([R.Z], () => [
 R.Z.supports(U.AN.VIDEO),
 Object.keys(R.Z.getVideoDevices()).length
   ]), A = (0, l.e7)([y.Z], () => y.Z.isFocused()), N = (0, l.e7)([L.Z], () => L.Z.getMode(_.id)), v = i.useCallback(e => {
@@ -180,7 +180,7 @@ M = (0, r.jsxs)(r.Fragment, {
     (0, r.jsx)(b.Z, {
       className: x.icon,
       ringing: A,
-      src: null != I ? I : '',
+      src: null != m ? m : '',
       ringingType: b.Z.RingingType.INCOMING,
       size: p ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
     }),
@@ -262,7 +262,7 @@ children: (0, r.jsx)(r.Fragment, {
         look: u.Button.Looks.LINK,
         color: u.Button.Colors.PRIMARY,
         className: x.previewButton,
-        onClick: () => m(!0),
+        onClick: () => I(!0),
         children: w.Z.Messages.INCOMING_CALL_PREVIEW_CAMERA
       }) : null
     ]

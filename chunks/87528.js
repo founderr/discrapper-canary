@@ -1,6 +1,6 @@
 i.d(t, {
   Z: function() {
-return C;
+return f;
   }
 }), i(47120), i(724458), i(653041);
 var n = i(735250),
@@ -18,13 +18,13 @@ var n = i(735250),
   m = i(981631),
   g = i(486073);
 
-function C(e) {
+function f(e) {
   let {
 collection: t,
 collection: {
   id: i,
-  title: C,
-  application_directory_collection_items: f
+  title: f,
+  application_directory_collection_items: C
 }
   } = e, [x, I] = a.useState(300), [b, N] = a.useState(4), v = parseFloat(o.Z.COLLECTION_LIST_CARD_GAP), A = (0, u.useApplicationDirectoryHistory)(e => e.guildId), E = (0, p.Z)({
 collection: t
@@ -53,14 +53,14 @@ E
   return (0, n.jsx)('div', {
 ref: E,
 children: (0, n.jsx)(_.Z, {
-  header: C,
+  header: f,
   headerId: T,
   tileWidth: x,
   tileMargin: v,
   onScroll: e => {
     let {
       tileIndex: t
-    } = e, n = f.slice(t, t + b).reduce((e, t) => {
+    } = e, n = C.slice(t, t + b).reduce((e, t) => {
       let {
         type: i,
         application: n
@@ -77,7 +77,7 @@ children: (0, n.jsx)(_.Z, {
   children: (0, n.jsx)('ul', {
     'aria-labelledby': T,
     className: g.itemsContainer,
-    children: f.map(e => {
+    children: C.map(e => {
       let {
         id: t,
         type: a,

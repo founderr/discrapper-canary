@@ -161,8 +161,8 @@ return {
 let e = [];
 for (let [h, p] of Object.entries(this.periodicInboundStats)) {
   let {
-    previous: m,
-    current: I,
+    previous: I,
+    current: m,
     currentTimestampMs: T,
     previousTimestampMs: g,
     numRateSamples: S
@@ -172,13 +172,13 @@ for (let [h, p] of Object.entries(this.periodicInboundStats)) {
     let A = T - g,
       N = {
         userId: h,
-        silent: null !== (n = I.silent) && void 0 !== n ? n : 0 - (null !== (t = m.silent) && void 0 !== t ? t : 0),
-        normal: null !== (i = I.normal) && void 0 !== i ? i : 0 - (null !== (r = m.normal) && void 0 !== r ? r : 0),
-        merged: null !== (s = I.merged) && void 0 !== s ? s : 0 - (null !== (a = m.merged) && void 0 !== a ? a : 0),
-        expanded: null !== (l = I.expanded) && void 0 !== l ? l : 0 - (null !== (o = m.expanded) && void 0 !== o ? o : 0),
-        accelerated: null !== (c = I.accelerated) && void 0 !== c ? c : 0 - (null !== (u = m.accelerated) && void 0 !== u ? u : 0),
-        preemptiveExpanded: null !== (_ = I.preemptiveExpanded) && void 0 !== _ ? _ : 0 - (null !== (d = m.preemptiveExpanded) && void 0 !== d ? d : 0),
-        cng: null !== (f = I.cng) && void 0 !== f ? f : 0 - (null !== (E = m.cng) && void 0 !== E ? E : 0),
+        silent: null !== (n = m.silent) && void 0 !== n ? n : 0 - (null !== (t = I.silent) && void 0 !== t ? t : 0),
+        normal: null !== (i = m.normal) && void 0 !== i ? i : 0 - (null !== (r = I.normal) && void 0 !== r ? r : 0),
+        merged: null !== (s = m.merged) && void 0 !== s ? s : 0 - (null !== (a = I.merged) && void 0 !== a ? a : 0),
+        expanded: null !== (l = m.expanded) && void 0 !== l ? l : 0 - (null !== (o = I.expanded) && void 0 !== o ? o : 0),
+        accelerated: null !== (c = m.accelerated) && void 0 !== c ? c : 0 - (null !== (u = I.accelerated) && void 0 !== u ? u : 0),
+        preemptiveExpanded: null !== (_ = m.preemptiveExpanded) && void 0 !== _ ? _ : 0 - (null !== (d = I.preemptiveExpanded) && void 0 !== d ? d : 0),
+        cng: null !== (f = m.cng) && void 0 !== f ? f : 0 - (null !== (E = I.cng) && void 0 !== E ? E : 0),
         accelerateRate: p.accelerateRateSum / S,
         expandRate: p.expandRateSum / S,
         preemptiveExpandRate: p.preemptiveExpandRateSum / S,
@@ -187,7 +187,7 @@ for (let [h, p] of Object.entries(this.periodicInboundStats)) {
       };
     N.normal + N.merged + N.expanded + N.accelerated + N.preemptiveExpanded > 0 && e.push(N);
   }
-  this.periodicInboundStats[h].accelerateRateSum = 0, this.periodicInboundStats[h].expandRateSum = 0, this.periodicInboundStats[h].preemptiveExpandRateSum = 0, this.periodicInboundStats[h].speechExpandRateSum = 0, this.periodicInboundStats[h].numRateSamples = 0, this.periodicInboundStats[h].previous = I, this.periodicInboundStats[h].previousTimestampMs = T;
+  this.periodicInboundStats[h].accelerateRateSum = 0, this.periodicInboundStats[h].expandRateSum = 0, this.periodicInboundStats[h].preemptiveExpandRateSum = 0, this.periodicInboundStats[h].speechExpandRateSum = 0, this.periodicInboundStats[h].numRateSamples = 0, this.periodicInboundStats[h].previous = m, this.periodicInboundStats[h].previousTimestampMs = T;
 }
 return e;
   }
@@ -225,7 +225,7 @@ u(this, 'connection', void 0), u(this, 'inboundStats', void 0), u(this, 'outboun
   }), i().forEach(e.rtp.inbound, (t, n) => {
     i().forEach(t, t => {
       if ('audio' === t.type) {
-        var r, a, s, o, l, u, c, d, _, E, f, h, p, m, I, T, g;
+        var r, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, g;
         let S = null !== (r = e.transport.ping) && void 0 !== r ? r : 0,
           A = t.packetsReceived,
           N = t.packetsLost,
@@ -310,8 +310,8 @@ u(this, 'connection', void 0), u(this, 'inboundStats', void 0), u(this, 'outboun
             previous: D,
             currentTimestampMs: Date.now(),
             current: D,
-            accelerateRateSum: null !== (m = t.accelerateRate) && void 0 !== m ? m : 0,
-            expandRateSum: null !== (I = t.expandRate) && void 0 !== I ? I : 0,
+            accelerateRateSum: null !== (I = t.accelerateRate) && void 0 !== I ? I : 0,
+            expandRateSum: null !== (m = t.expandRate) && void 0 !== m ? m : 0,
             preemptiveExpandRateSum: null !== (T = t.preemptiveExpandRate) && void 0 !== T ? T : 0,
             speechExpandRateSum: null !== (g = t.speechExpandRate) && void 0 !== g ? g : 0,
             numRateSamples: 1

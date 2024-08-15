@@ -21,16 +21,16 @@ var l = n(392711),
   N = n(269486),
   x = n(514851),
   S = n(970645),
-  Z = n(30684),
-  v = n(371260),
+  v = n(30684),
+  Z = n(371260),
   T = n(6242),
   L = n(467721),
   A = n(757692),
   b = n(114064),
   M = n(933843),
   R = n(684259),
-  P = n(937579),
-  O = n(1163),
+  O = n(937579),
+  P = n(1163),
   y = n(841174),
   j = n(11352),
   D = n(474936),
@@ -104,7 +104,7 @@ return new Promise((e, r) => {
   maybeShowHDStreamingPerksDemoPostUpsellModal(e) {
 let {
   enabled: t
-} = O.Z.getCurrentConfig({
+} = P.Z.getCurrentConfig({
   location: 'PremiumManager'
 }, {
   autoTrackExposure: !1
@@ -131,14 +131,14 @@ super(...e), B(this, '_premiumPaymentModalCloseResolve', null), B(this, '_premiu
   let e = g.default.getCurrentUser();
   if (null != e && e.verified) {
     let t = !(0, I.I5)(e) && m.Z.shouldFetchOffer();
-    await (0, P.T)('PremiumManager', t);
+    await (0, O.T)('PremiumManager', t);
   }
   s.Z.dispatch({
     type: 'PREMIUM_MARKETING_DATA_READY'
   });
 }), B(this, '_maybeFetchCheckoutRecovery', async () => {
   let e = g.default.getCurrentUser();
-  null != e && e.verified && !(0, I.I5)(e) && Z.Z.shouldFetchCheckoutRecovery() && await (0, S.o)();
+  null != e && e.verified && !(0, I.I5)(e) && v.Z.shouldFetchCheckoutRecovery() && await (0, S.o)();
 }), B(this, '_maybeFetchCampaignContext', async () => {
   let e = g.default.getCurrentUser();
   null != e && e.verified && x.Z.shouldFetchCampaignContext() && await (0, N.W)();
@@ -179,7 +179,7 @@ super(...e), B(this, '_premiumPaymentModalCloseResolve', null), B(this, '_premiu
     c = null !== (l = null === (i = f.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : w.Eu4.NONE;
   if (L.Z.cooldownIsActive() || !s || c >= w.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== U.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate)
     return;
-  v.I();
+  Z.I();
   let u = k.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
     nickname: r.userNick,
     resolution: (0, G.o6)(r.maxResolution.height),

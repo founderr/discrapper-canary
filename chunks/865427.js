@@ -6,7 +6,7 @@ return _;
 return c;
   },
   _G: function() {
-return m;
+return I;
   },
   _I: function() {
 return E;
@@ -52,7 +52,7 @@ oldFormErrors: !0
 function E(e) {
   if (T(e))
 return Promise.resolve(function(e) {
-  let t = e.match(I);
+  let t = e.match(m);
   if (null == t || 2 !== t.length)
     return null;
   let n = (0, s.getNativePlatform)(),
@@ -93,13 +93,13 @@ return {};
 }
 let p = RegExp('^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$', 'i');
 
-function m(e) {
+function I(e) {
   return null != e && p.test(e);
 }
-let I = RegExp('^dev://branch/([\\w-./]+)$', 'i');
+let m = RegExp('^dev://branch/([\\w-./]+)$', 'i');
 
 function T(e) {
-  return null != e && I.test(e);
+  return null != e && m.test(e);
 }
 let g = new Set([
 'canary.discord.com',

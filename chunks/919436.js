@@ -19,8 +19,8 @@ var i, l = n(735250),
   N = n(451478),
   x = n(276952),
   S = n(682662),
-  Z = n(662146),
-  v = n(674552),
+  v = n(662146),
+  Z = n(674552),
   T = n(981631),
   L = n(154338);
 
@@ -155,13 +155,13 @@ return (0, l.jsx)(a.animated.div, {
         unread: !g && h,
         className: L.pill
       }),
-      (0, l.jsx)(Z.Z, {
+      (0, l.jsx)(v.Z, {
         text: null != t ? t : '',
         selected: n,
         children: (0, l.jsx)(c.BlobMask, {
           selected: n || _,
-          lowerBadge: i > 0 ? (0, v.Ne)(i) : null,
-          upperBadge: (0, v.Or)({
+          lowerBadge: i > 0 ? (0, Z.Ne)(i) : null,
+          upperBadge: (0, Z.Or)({
             audio: r,
             video: o,
             screenshare: u,

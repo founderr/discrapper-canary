@@ -6,7 +6,7 @@ return O;
 return T;
   },
   S1: function() {
-return m;
+return I;
   },
   Wx: function() {
 return y;
@@ -24,7 +24,7 @@ return g;
 return S;
   },
   ob: function() {
-return I;
+return m;
   },
   pC: function() {
 return A;
@@ -54,7 +54,7 @@ var r = n(544891),
   h = n(981631),
   p = n(689938);
 
-function m(e, t) {
+function I(e, t) {
   E.Z.init({
 userToken: e,
 userId: t,
@@ -75,7 +75,7 @@ errorCallback: e => {
   });
 }
 
-function I() {
+function m() {
   E.Z.destroy();
 }
 

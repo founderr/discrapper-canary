@@ -30,7 +30,7 @@ effect: s,
 back: t
   } = e, {
 upsertConfig: i
-  } = (0, I.E)(), g = (0, l.e7)([E.default], () => E.default.getCurrentUser()), [O, h] = a.useState(!0), p = a.useRef(null), [R, x] = a.useState(!1), [M, f] = a.useState(!1), [D, P] = a.useState(!1), [L, b] = a.useState([]), [Z, v] = a.useState(s.name);
+  } = (0, I.E)(), O = (0, l.e7)([E.default], () => E.default.getCurrentUser()), [g, h] = a.useState(!0), p = a.useRef(null), [R, x] = a.useState(!1), [M, f] = a.useState(!1), [D, P] = a.useState(!1), [L, b] = a.useState([]), [Z, v] = a.useState(s.name);
   return (a.useEffect(() => {
 let e = s.config.effects;
 e.length > 0 && b([...e].map(e => {
@@ -49,7 +49,7 @@ i({
   }, [
 L,
 Z
-  ]), null == g) ? (0, n.jsx)('div', {}) : (0, n.jsxs)('div', {
+  ]), null == O) ? (0, n.jsx)('div', {}) : (0, n.jsxs)('div', {
 className: N.root,
 children: [
   (0, n.jsx)('div', {
@@ -70,7 +70,7 @@ children: [
             alt: '',
             width: 450
           }),
-          O && (0, n.jsx)(S.Z, {
+          g && (0, n.jsx)(S.Z, {
             config: {
               type: o.Z.PROFILE_EFFECT,
               title: 'debug',
@@ -229,7 +229,7 @@ children: [
             className: r()(N.userProfilePreview, N.preview),
             children: [
               (0, n.jsx)(_.Z, {
-                user: g,
+                user: O,
                 pendingAvatar: void 0,
                 pendingProfileEffectId: null,
                 canUsePremiumCustomization: !0,

@@ -32,14 +32,14 @@ afterCompute: () => {},
 numFrequentlyItems: d.yP
   });
 
-function m(e) {
+function I(e) {
   h.pendingUsages.push({
 key: e,
 timestamp: Date.now()
   }), p.track(e), p.compute();
 }
 
-function I() {
+function m() {
   var e, t;
   let n = null !== (t = null === (e = c.Z.frecencyWithoutFetchingLatest.applicationFrecency) || void 0 === e ? void 0 : e.applications) && void 0 !== t ? t : {};
   p.overwriteHistory(a().mapValues(n, e => ({
@@ -49,7 +49,7 @@ recentUses: e.recentUses.map(Number).filter(e => e > 0)
 }
 class T extends(r = s.ZP.PersistedStore) {
   initialize(e) {
-null != e && (h = e), this.syncWith([c.Z], I);
+null != e && (h = e), this.syncWith([c.Z], m);
   }
   getState() {
 return h;
@@ -75,13 +75,13 @@ let {
 } = e;
 if (!f.includes(t.type))
   return !1;
-m(t.applicationId);
+I(t.applicationId);
   },
   EMBEDDED_ACTIVITY_OPEN: function(e) {
 let {
   applicationId: t
 } = e;
-m(t);
+I(t);
   },
   USER_SETTINGS_PROTO_UPDATE: function(e) {
 let {

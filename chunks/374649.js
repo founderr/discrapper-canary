@@ -137,7 +137,7 @@ return u.Z.createInvoiceFromServer(e.body);
 throw new l.HF(e);
   }
 }
-async function m(e) {
+async function I(e) {
   let {
 subscriptionId: t,
 preventFetch: n
@@ -151,7 +151,7 @@ oldFormErrors: !0
   return u.Z.createInvoiceFromServer(r.body);
 }
 
-function I(e, t) {
+function m(e, t) {
   let {
 preventFetch: n = !1
   } = e, [i, a] = (0, r.useState)(null), [o, l] = (0, r.useState)(null), u = (0, s.e7)([c.ZP], () => c.ZP.getSubscriptions());
@@ -181,7 +181,7 @@ o
 
 function T(e) {
   let t = (0, r.useCallback)(() => p(e), [JSON.stringify(e)]);
-  return I(e, t);
+  return m(e, t);
 }
 
 function g(e) {
@@ -193,12 +193,12 @@ let {
 e = n;
   }
   let t = (0, r.useCallback)(() => 'subscriptionId' in e ? h(e) : 'items' in e ? f(e) : null, [JSON.stringify(e)]);
-  return I(e, t);
+  return m(e, t);
 }
 
 function S(e) {
-  let t = (0, r.useCallback)(() => m(e), [JSON.stringify(e)]);
-  return I(e, t);
+  let t = (0, r.useCallback)(() => I(e), [JSON.stringify(e)]);
+  return m(e, t);
 }
 
 function A(e) {

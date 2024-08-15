@@ -198,13 +198,13 @@ let E = l.Z.windowSize(),
     width: 312,
     height: 0
   },
-  m = {
+  I = {
     top: 0,
     left: 0,
     right: 0,
     bottom: 0
   },
-  I = {
+  m = {
     width: 0,
     height: 0
   };
@@ -223,16 +223,16 @@ if (n.forEach(e => {
         h = (0, u.vS)(r, i, E), p = (0, u.w_)(i, E), (0, d.E9)(n);
         break;
       case _.Odu.GUILDS_TEXT:
-        m = (0, u.vS)(r, i, E), I = (0, u.w_)(i, E), (0, d.E9)(n);
+        I = (0, u.vS)(r, i, E), m = (0, u.w_)(i, E), (0, d.E9)(n);
     }
   }), e) {
-  let e = 'auto' === I.width ? o.minSize.width : I.width;
+  let e = 'auto' === m.width ? o.minSize.width : m.width;
   e -= i.minSize.width;
-  let [n, a] = (0, u.o4)(m, {
-    ...I,
+  let [n, a] = (0, u.o4)(I, {
+    ...m,
     width: i.minSize.width
-  }, E), [l, c] = (0, u.uq)(m, {
-    ...I,
+  }, E), [l, c] = (0, u.uq)(I, {
+    ...m,
     width: e
   }, E, {
     x: 10,

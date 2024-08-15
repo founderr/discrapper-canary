@@ -22,8 +22,8 @@ disallowEmptySelection: n,
 allowDuplicateSelectionEvents: a,
 selectionBehavior: o = 'toggle',
 disabledBehavior: u = 'all'
-  } = e, c = (0, i.useRef)(!1), [, d] = (0, i.useState)(!1), _ = (0, i.useRef)(null), E = (0, i.useRef)(null), [, f] = (0, i.useState)(null), h = (0, i.useMemo)(() => l(e.selectedKeys), [e.selectedKeys]), p = (0, i.useMemo)(() => l(e.defaultSelectedKeys, new s()), [e.defaultSelectedKeys]), [m, I] = (0, r.zk)(h, p, e.onSelectionChange), T = (0, i.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set(), [e.disabledKeys]), [g, S] = (0, i.useState)(o);
-  'replace' === o && 'toggle' === g && 'object' == typeof m && 0 === m.size && S('replace');
+  } = e, c = (0, i.useRef)(!1), [, d] = (0, i.useState)(!1), _ = (0, i.useRef)(null), E = (0, i.useRef)(null), [, f] = (0, i.useState)(null), h = (0, i.useMemo)(() => l(e.selectedKeys), [e.selectedKeys]), p = (0, i.useMemo)(() => l(e.defaultSelectedKeys, new s()), [e.defaultSelectedKeys]), [I, m] = (0, r.zk)(h, p, e.onSelectionChange), T = (0, i.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set(), [e.disabledKeys]), [g, S] = (0, i.useState)(o);
+  'replace' === o && 'toggle' === g && 'object' == typeof I && 0 === I.size && S('replace');
   let A = (0, i.useRef)(o);
   return (0, i.useEffect)(() => {
 o !== A.current && (S(o), A.current = o);
@@ -47,7 +47,7 @@ get childFocusStrategy() {
 setFocusedKey(e, t = 'first') {
   _.current = e, E.current = t, f(e);
 },
-selectedKeys: m,
+selectedKeys: I,
 setSelectedKeys(e) {
   (a || ! function(e, t) {
     if (e.size !== t.size)
@@ -56,7 +56,7 @@ setSelectedKeys(e) {
       if (!t.has(n))
         return !1;
     return !0;
-  }(e, m)) && I(e);
+  }(e, I)) && m(e);
 },
 disabledKeys: T,
 disabledBehavior: u

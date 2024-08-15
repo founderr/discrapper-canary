@@ -97,8 +97,8 @@ var l = function(e, t, n, i) {
         f = o,
         h = _.minRanking,
         p = _.maxRanking,
-        m = _.threshold;
-      return E < h && E >= s.MATCHES ? E = h : E > p && (E = p), E > a && (a = E, l = r, c = m, f = d), {
+        I = _.threshold;
+      return E < h && E >= s.MATCHES ? E = h : E > p && (E = p), E > a && (a = E, l = r, c = I, f = d), {
         rankedValue: f,
         rank: a,
         keyIndex: l,

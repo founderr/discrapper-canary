@@ -1,46 +1,46 @@
-n.d(s, {
+t.d(n, {
   Z: function() {
-return _;
+return I;
   }
-}), n(789020);
-var i = n(735250);
-n(470079);
-var t = n(597312),
-  l = n(442837),
-  o = n(481060),
-  a = n(860719),
-  r = n(621853),
-  d = n(689938),
-  c = n(116604);
+}), t(789020);
+var s = t(735250);
+t(470079);
+var i = t(597312),
+  o = t(442837),
+  l = t(481060),
+  r = t(860719),
+  a = t(621853),
+  c = t(689938),
+  d = t(116604);
 
 function u(e) {
   let {
-icon: s,
-title: n,
-description: t
+icon: n,
+title: t,
+description: i
   } = e;
-  return (0, i.jsxs)('div', {
-className: c.row,
+  return (0, s.jsxs)('div', {
+className: d.row,
 children: [
-  (0, i.jsx)('div', {
-    className: c.rowIcon,
-    children: (0, i.jsx)(s, {
+  (0, s.jsx)('div', {
+    className: d.rowIcon,
+    children: (0, s.jsx)(n, {
       size: 'custom',
       width: 20,
       height: 20,
       color: 'currentColor'
     })
   }),
-  (0, i.jsxs)('div', {
-    className: c.rowText,
+  (0, s.jsxs)('div', {
+    className: d.rowText,
     children: [
-      (0, i.jsx)(o.Heading, {
+      (0, s.jsx)(l.Heading, {
         variant: 'text-xs/semibold',
-        children: n
-      }),
-      (0, i.jsx)(o.Text, {
-        variant: 'text-sm/normal',
         children: t
+      }),
+      (0, s.jsx)(l.Text, {
+        variant: 'text-sm/normal',
+        children: i
       })
     ]
   })
@@ -48,41 +48,41 @@ children: [
   });
 }
 
-function _(e) {
+function I(e) {
   let {
-user: s
-  } = e, n = (0, l.e7)([r.Z], () => {
+user: n
+  } = e, t = (0, o.e7)([a.Z], () => {
 var e;
-return null === (e = r.Z.getUserProfile(s.id)) || void 0 === e ? void 0 : e.application;
+return null === (e = a.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
   }), {
-hasMessageContent: _,
-hasGuildPresences: I,
+hasMessageContent: I,
+hasGuildPresences: _,
 hasGuildMembers: f
-  } = (0, a.w)({
-flags: null == n ? void 0 : n.flags
+  } = (0, r.w)({
+flags: null == t ? void 0 : t.flags
   });
-  return (0, i.jsxs)(t.zJ, {
+  return (0, s.jsxs)(i.zJ, {
 fade: !0,
-className: c.scroller,
+className: d.scroller,
 children: [
-  _ && (0, i.jsx)(u, {
-    icon: o.ChatIcon,
-    title: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
-    description: d.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
+  I && (0, s.jsx)(u, {
+    icon: l.ChatIcon,
+    title: c.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_HEADER,
+    description: c.Z.Messages.BOTS_DATA_ACCESS_MESSAGE_CONTENT_BODY
   }),
-  I && (0, i.jsx)(u, {
-    icon: o.GameControllerIcon,
-    title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
-    description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
+  _ && (0, s.jsx)(u, {
+    icon: l.GameControllerIcon,
+    title: c.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_HEADER,
+    description: c.Z.Messages.BOTS_DATA_ACCESS_GUILD_PRESENCES_BODY
   }),
-  f && (0, i.jsx)(u, {
-    icon: o.GroupIcon,
-    title: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
-    description: d.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
+  f && (0, s.jsx)(u, {
+    icon: l.GroupIcon,
+    title: c.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_HEADER,
+    description: c.Z.Messages.BOTS_DATA_ACCESS_GUILD_MEMBERS_BODY
   }),
-  (0, i.jsx)(o.Text, {
+  (0, s.jsx)(l.Text, {
     variant: 'text-xs/normal',
-    children: d.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
+    children: c.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
       helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975'
     })
   })

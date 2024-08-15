@@ -26,8 +26,8 @@ var r = n(735250),
   f = n(481060),
   h = n(408886),
   p = n(44315),
-  m = n(665149),
-  I = n(534828),
+  I = n(665149),
+  m = n(534828),
   T = n(981631),
   g = n(689938),
   S = n(773100);
@@ -43,8 +43,8 @@ disabled: l = !1,
 style: c = {},
 onClick: d,
 'aria-label': E
-  } = e, h = (0, o.JA)('color-'.concat(t)), m = null != t ? (0, u.Rf)(t) : c.backgroundColor, I = !1;
-  return i && !a ? I = !0 : (i || a) && (I = (0, u.Bd)(t) > 0.1), (0, r.jsx)(_.t, {
+  } = e, h = (0, o.JA)('color-'.concat(t)), I = null != t ? (0, u.Rf)(t) : c.backgroundColor, m = !1;
+  return i && !a ? m = !0 : (i || a) && (m = (0, u.Bd)(t) > 0.1), (0, r.jsx)(_.t, {
 offset: -2,
 children: (0, r.jsxs)('button', {
   type: 'button',
@@ -58,9 +58,9 @@ children: (0, r.jsxs)('button', {
   onClick: () => null == d ? void 0 : d(t),
   style: {
     ...c,
-    backgroundColor: m
+    backgroundColor: I
   },
-  'aria-label': null != E ? E : m,
+  'aria-label': null != E ? E : I,
   ...h,
   children: [
     i ? (0, r.jsx)(f.EyeDropperIcon, {
@@ -69,7 +69,7 @@ children: (0, r.jsxs)('button', {
       colorClass: S.colorPickerDropperFg,
       width: 14,
       height: 14,
-      color: (0, p.Lq)(I ? T.Ilk.WHITE_500 : T.Ilk.BLACK_500)
+      color: (0, p.Lq)(m ? T.Ilk.WHITE_500 : T.Ilk.BLACK_500)
     }) : null,
     function() {
       let e = 16,
@@ -79,7 +79,7 @@ children: (0, r.jsxs)('button', {
           size: 'custom',
           width: e,
           height: t,
-          color: (0, p.Lq)(I ? T.Ilk.WHITE_500 : T.Ilk.BLACK_500)
+          color: (0, p.Lq)(m ? T.Ilk.WHITE_500 : T.Ilk.BLACK_500)
         });
     }()
   ]
@@ -204,7 +204,7 @@ M = async () => {
   a((0, u._i)(e));
 }, w = (0, r.jsxs)(r.Fragment, {
   children: [
-    (0, r.jsx)(I.Z, {
+    (0, r.jsx)(m.Z, {
       onChange: P,
       onChangeComplete: e => {
         let {
@@ -218,7 +218,7 @@ M = async () => {
     (0, r.jsxs)('div', {
       className: S.customColorPickerInputContainer,
       children: [
-        T && null != v && (0, r.jsx)(m.JO, {
+        T && null != v && (0, r.jsx)(I.JO, {
           onClick: M,
           tooltip: g.Z.Messages.PICK_A_COLOR_FROM_THE_PAGE,
           tooltipPosition: 'top',
@@ -274,14 +274,14 @@ children: e.map(e => (0, r.jsx)(N, {
   onClick: d,
   disabled: c
 }, e))
-  }), p = a.slice(0, a.length / 2), m = a.slice(a.length / 2, a.length), I = (0, l.ZP)({
+  }), p = a.slice(0, a.length / 2), I = a.slice(a.length / 2, a.length), m = (0, l.ZP)({
 id: 'color-picker',
 isEnabled: !0,
 scrollToStart: A,
 scrollToEnd: A
   });
   return (0, r.jsx)(o.bG, {
-navigator: I,
+navigator: m,
 children: (0, r.jsx)(o.SJ, {
   children: e => {
     let {
@@ -313,7 +313,7 @@ children: (0, r.jsx)(o.SJ, {
         (0, r.jsxs)('div', {
           children: [
             h(p),
-            h(m)
+            h(I)
           ]
         })
       ]

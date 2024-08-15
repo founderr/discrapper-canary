@@ -28,8 +28,8 @@ sections: a,
 activeCategoryIndex: f,
 filteredSectionId: h,
 onSectionClick: p,
-applicationCommandListRef: m
-  } = e, I = i.useRef(null), T = i.useCallback((e, t) => {
+applicationCommandListRef: I
+  } = e, m = i.useRef(null), T = i.useCallback((e, t) => {
 var n;
 let r = 8;
 return (null === (n = a[t + 1]) || void 0 === n ? void 0 : n.type) === c.Qi.BUILT_IN && (r += 8), 32 + r;
@@ -54,7 +54,7 @@ let s = (0, d.ky)(i),
     height: u,
     selectable: !0
   }),
-  m = i.type !== c.Qi.BUILT_IN && t < a.length - 1 && a[t + 1].type === c.Qi.BUILT_IN;
+  I = i.type !== c.Qi.BUILT_IN && t < a.length - 1 && a[t + 1].type === c.Qi.BUILT_IN;
 return (0, r.jsxs)('div', {
   className: _.section,
   children: [
@@ -76,7 +76,7 @@ return (0, r.jsxs)('div', {
         });
       }
     }),
-    m ? (0, r.jsx)('hr', {
+    I ? (0, r.jsx)('hr', {
       className: _.builtInSeparator
     }) : null
   ]
@@ -91,8 +91,8 @@ h
   return 0 === a.length ? null : (0, r.jsx)('div', {
 className: s()(t, _.wrapper),
 children: (0, r.jsx)(u.Z, {
-  categoryListRef: I,
-  expressionsListRef: m,
+  categoryListRef: m,
+  expressionsListRef: I,
   store: l.Xn,
   categories: a,
   className: _.list,

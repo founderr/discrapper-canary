@@ -1,6 +1,6 @@
 n.d(t, {
   LU: function() {
-return m;
+return I;
   }
 }), n(47120), n(653041);
 var r, i = n(392711),
@@ -37,7 +37,7 @@ afterCompute: () => {},
 numFrequentlyItems: d.yP
   });
 
-function m(e, t) {
+function I(e, t) {
   return e.filter(e => {
 if (e.includes(':'))
   return null != t.guild && t.guild.id === e.split(':')[1];
@@ -45,7 +45,7 @@ return !0;
   }).map(e => e.split(':')[0]);
 }
 
-function I(e, t) {
+function m(e, t) {
   return 0 > Number(t.id) ? t.id : null != e.guild && null != t.guildId ? ''.concat(t.id, ':').concat(e.guild.id) : t.id;
 }
 
@@ -72,7 +72,7 @@ return p;
   }
   getScoreWithoutLoadingLatest(e, t) {
 var n;
-return null !== (n = p.getScore(I(e, t))) && void 0 !== n ? n : 0;
+return null !== (n = p.getScore(m(e, t))) && void 0 !== n ? n : 0;
   }
   getTopCommandsWithoutLoadingLatest() {
 return p.frequently;
@@ -86,7 +86,7 @@ let {
 } = e;
 if (!f.includes(t.type))
   return !1;
-let r = I(n, t);
+let r = m(n, t);
 h.pendingUsages.push({
   key: r,
   timestamp: Date.now()

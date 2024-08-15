@@ -14,7 +14,7 @@ var t = e.state,
   n = e.options,
   c = e.name;
 if (!t.modifiersData[c]._skip) {
-  for (var d = n.mainAxis, _ = void 0 === d || d, E = n.altAxis, f = void 0 === E || E, h = n.fallbackPlacements, p = n.padding, m = n.boundary, I = n.rootBoundary, T = n.altBoundary, g = n.flipVariations, S = void 0 === g || g, A = n.allowedAutoPlacements, N = t.options.placement, v = (0, i.Z)(N) === N, O = h || (v || !S ? [(0, r.Z)(N)] : function(e) {
+  for (var d = n.mainAxis, _ = void 0 === d || d, E = n.altAxis, f = void 0 === E || E, h = n.fallbackPlacements, p = n.padding, I = n.boundary, m = n.rootBoundary, T = n.altBoundary, g = n.flipVariations, S = void 0 === g || g, A = n.allowedAutoPlacements, N = t.options.placement, v = (0, i.Z)(N) === N, O = h || (v || !S ? [(0, r.Z)(N)] : function(e) {
       if ((0, i.Z)(e) === l.d7)
         return [];
       var t = (0, r.Z)(e);
@@ -26,8 +26,8 @@ if (!t.modifiersData[c]._skip) {
     }(N)), R = [N].concat(O).reduce(function(e, n) {
       return e.concat((0, i.Z)(n) === l.d7 ? (0, o.Z)(t, {
         placement: n,
-        boundary: m,
-        rootBoundary: I,
+        boundary: I,
+        rootBoundary: m,
         padding: p,
         flipVariations: S,
         allowedAutoPlacements: A
@@ -43,8 +43,8 @@ if (!t.modifiersData[c]._skip) {
       G = x ? 'width' : 'height',
       k = (0, s.Z)(t, {
         placement: P,
-        boundary: m,
-        rootBoundary: I,
+        boundary: I,
+        rootBoundary: m,
         altBoundary: T,
         padding: p
       }),

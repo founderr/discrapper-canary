@@ -8,9 +8,9 @@ var r, i, a, s, o = n(392711),
   f = n(914010),
   h = n(981631);
 let p = {},
-  m = {};
+  I = {};
 
-function I() {
+function m() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
 t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.Z.getChannelId(),
 n = _.Z.getChannel(t);
@@ -51,7 +51,7 @@ return null != t && t.unavailable;
   getInternalState() {
 return {
   calls: p,
-  enqueuedRings: m
+  enqueuedRings: I
 };
   }
 }
@@ -62,10 +62,10 @@ a = 'CallStore', (i = 'displayName') in(r = T) ? Object.defineProperty(r, i, {
   writable: !0
 }) : r[i] = a, t.Z = new T(d.Z, {
   CONNECTION_OPEN: function() {
-return I(!0);
+return m(!0);
   },
   CONNECTION_CLOSED: function() {
-p = {}, m = {};
+p = {}, I = {};
   },
   OVERLAY_INITIALIZE: function(e) {
 let {
@@ -73,24 +73,24 @@ let {
 } = e;
 p = {
   ...t.calls
-}, m = {
+}, I = {
   ...t.enqueuedRings
 };
   },
   CONNECTION_RESUMED: function() {
-return I(!0);
+return m(!0);
   },
   CHANNEL_SELECT: function(e) {
 let {
   channelId: t
 } = e;
-return I(!1, t);
+return m(!1, t);
   },
   CHANNEL_DELETE: function(e) {
 let {
   channel: t
 } = e;
-if (null != m[t.id] && delete m[t.id], null == p[t.id])
+if (null != I[t.id] && delete I[t.id], null == p[t.id])
   return !1;
 delete p[t.id];
   },
@@ -108,9 +108,9 @@ if (p[t] = {
     ringing: i,
     unavailable: !1,
     regionUpdated: !1
-  }, null != m[t]) {
-  let e = m[t];
-  delete m[t], 1 !== e.indexOf('all') && (e = null), c.tn.post({
+  }, null != I[t]) {
+  let e = I[t];
+  delete I[t], 1 !== e.indexOf('all') && (e = null), c.tn.post({
     url: h.ANM.CALL_RING(t),
     body: {
       recipients: e
@@ -149,7 +149,7 @@ let {
   region: null,
   regionUpdated: !1,
   unavailable: n
-}, null != m[t] && delete m[t];
+}, null != I[t] && delete I[t];
   },
   CALL_ENQUEUE_RING: function(e) {
 var t;
@@ -157,12 +157,12 @@ let {
   channelId: n,
   recipients: r
 } = e;
-m[n] = l().union(null !== (t = m[n]) && void 0 !== t ? t : [], null != r ? r : ['all']);
+I[n] = l().union(null !== (t = I[n]) && void 0 !== t ? t : [], null != r ? r : ['all']);
   },
   VOICE_CHANNEL_SELECT: function(e) {
 let {
   channelId: t
 } = e;
-null == t && (m = {});
+null == t && (I = {});
   }
 });

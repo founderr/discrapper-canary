@@ -29,7 +29,7 @@ E,
 n
   ]);
   let p = u.VY.filter(e => a.e$(n, e)),
-m = p.filter(e => !a.e$(h, e)).map(e => {
+I = p.filter(e => !a.e$(h, e)).map(e => {
   let t = (0, u.wt)(e),
     n = !a.e$(_, e);
   return (0, r.jsx)('li', {
@@ -45,7 +45,7 @@ m = p.filter(e => !a.e$(h, e)).map(e => {
     })
   }, String(e));
 }),
-I = p.filter(e => a.e$(h, e)).map(e => {
+m = p.filter(e => a.e$(h, e)).map(e => {
   let t = (0, u.wt)(e);
   return (0, r.jsxs)('li', {
     className: d.permission,
@@ -68,7 +68,7 @@ I = p.filter(e => a.e$(h, e)).map(e => {
   return (0, r.jsxs)('div', {
 className: d.botPermissions,
 children: [
-  m.length > 0 ? (0, r.jsxs)(r.Fragment, {
+  I.length > 0 ? (0, r.jsxs)(r.Fragment, {
     children: [
       (0, r.jsx)(o.x, {
         variant: 'text-sm/medium',
@@ -81,11 +81,11 @@ children: [
       }),
       (0, r.jsx)('ul', {
         className: d.permissionsList,
-        children: m
+        children: I
       })
     ]
   }) : null,
-  I.length > 0 ? (0, r.jsxs)(r.Fragment, {
+  m.length > 0 ? (0, r.jsxs)(r.Fragment, {
     children: [
       (0, r.jsx)(o.x, {
         variant: 'text-sm/medium',
@@ -97,7 +97,7 @@ children: [
       }),
       (0, r.jsx)('ul', {
         className: d.permissionsList,
-        children: I
+        children: m
       })
     ]
   }) : null

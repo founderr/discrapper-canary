@@ -13,8 +13,8 @@ var r = n(697988),
   f = n(823379),
   h = n(920303),
   p = n(569471),
-  m = n(91159),
-  I = n(952537),
+  I = n(91159),
+  m = n(952537),
   T = n(981631),
   g = n(176505),
   S = n(689938);
@@ -255,7 +255,7 @@ try {
 });
   },
   async setNotificationSettings(e, t) {
-return (0, m.ZJ)(e, t), !p.Z.hasJoined(e.id) && await this.joinThread(e, 'Change Notification Settings'), i.tn.patch({
+return (0, I.ZJ)(e, t), !p.Z.hasJoined(e.id) && await this.joinThread(e, 'Change Notification Settings'), i.tn.patch({
   url: T.ANM.THREAD_MEMBER_SETTINGS(e.id),
   body: t
 });
@@ -303,7 +303,7 @@ return (0, m.ZJ)(e, t), !p.Z.hasJoined(e.id) && await this.joinThread(e, 'Change
     threads: i,
     firstMessages: c,
     mostRecentMessages: d,
-    members: (null != l ? l : []).map(e => (0, I.Z)(e)),
+    members: (null != l ? l : []).map(e => (0, m.Z)(e)),
     owners: i.map(e => e.owner).filter(f.lm),
     hasMore: u
   });

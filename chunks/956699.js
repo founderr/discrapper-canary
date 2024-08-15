@@ -17,8 +17,8 @@ var n = t(735250),
   C = t(484614),
   m = t(386506),
   A = t(865427),
-  g = t(802098),
-  O = t(663993),
+  O = t(802098),
+  g = t(663993),
   h = t(600164),
   p = t(112831),
   R = t(482215),
@@ -620,7 +620,7 @@ return (0, n.jsxs)(h.Z.Child, {
   renderPayloadBlock() {
 let e = JSON.stringify(this.generatePayload(), null, 2),
   s = () => e,
-  a = (0, n.jsx)(O.GI, {
+  a = (0, n.jsx)(g.GI, {
     createPromise: () => Promise.resolve().then(t.bind(t, 364964)),
     webpackId: 364964,
     renderFallback: s,
@@ -1003,7 +1003,7 @@ spacing: N,
 minSpacing: C,
 maxSpacing: m,
 showHorizontalLines: A
-  } = (0, R.i)(), g = a.useMemo(() => Array.from({
+  } = (0, R.i)(), O = a.useMemo(() => Array.from({
 length: m - C + 1
   }, (e, s) => C + s), [
 C,
@@ -1153,7 +1153,7 @@ children: (0, n.jsxs)(E.FormSection, {
               initialValue: N,
               minValue: C,
               maxValue: m,
-              markers: g,
+              markers: O,
               onValueChange: e => R.i.setState({
                 spacing: Math.round(e)
               }),
@@ -1254,8 +1254,8 @@ children: (0, n.jsxs)(E.FormSection, {
 
 function J() {
   var e;
-  let s = (0, d.e7)([g.Z], () => g.Z.overrideId()),
-[t, i] = a.useState(null !== (e = g.Z.overrideId()) && void 0 !== e ? e : '');
+  let s = (0, d.e7)([O.Z], () => O.Z.overrideId()),
+[t, i] = a.useState(null !== (e = O.Z.overrideId()) && void 0 !== e ? e : '');
   return (0, n.jsx)(M.F, {
 setting: v.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
 children: (0, n.jsxs)(E.FormSection, {

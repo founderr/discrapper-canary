@@ -8,8 +8,8 @@ var a, s, o, l, u = n(442837),
   f = n(592125),
   h = n(70956),
   p = n(622449);
-let m = 5 * h.Z.Millis.MINUTE,
-  I = 10 * h.Z.Millis.SECOND,
+let I = 5 * h.Z.Millis.MINUTE,
+  m = 10 * h.Z.Millis.SECOND,
   T = {},
   g = {},
   S = {};
@@ -74,8 +74,8 @@ l = 'InteractionStore', (o = 'displayName') in(s = O) ? Object.defineProperty(s,
 T = {}, g = {}, S = {}, A = {}, setInterval(() => {
   let e = Date.now();
   for (let [t, n] of Object.entries(A))
-    e - n.insertedAt > I && delete A[t];
-}, m);
+    e - n.insertedAt > m && delete A[t];
+}, I);
   },
   INTERACTION_QUEUE: function(e) {
 let {

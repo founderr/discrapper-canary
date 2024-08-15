@@ -62,7 +62,7 @@ super(e), this.state = {
 };
   }
 }
-class m extends(r = a.PureComponent) {
+class I extends(r = a.PureComponent) {
   componentDidMount() {
 document.addEventListener('mousedown', this.handleMouseEvent, !0), document.addEventListener('mousemove', this.handleMouseEvent, !0);
   }
@@ -175,7 +175,7 @@ super(e), f(this, '_timeout', new u.V7()), f(this, 'handleMouseEvent', () => {
 };
   }
 }
-f(m, 'defaultProps', {
+f(I, 'defaultProps', {
   layout: _.AEg.MINIMUM,
   animated: !0
 });

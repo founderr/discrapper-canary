@@ -1,19 +1,19 @@
-o.d(n, {
+n.d(t, {
   VO: function() {
-return s;
-  },
-  f0: function() {
 return u;
   },
+  f0: function() {
+return m;
+  },
   fS: function() {
-return c;
+return d;
   }
 });
-var t = o(652874),
-  i = o(731965),
-  a = o(626135),
-  r = o(981631);
-let d = {
+var l = n(652874),
+  r = n(731965),
+  i = n(626135),
+  a = n(981631);
+let o = {
 guildId: void 0,
 channelId: void 0,
 channelType: void 0,
@@ -22,21 +22,21 @@ thumbnailSwipes: 0,
 selectedItemChanges: 0,
 numMediaItems: 0
   },
-  l = (0, t.Z)(() => d);
+  s = (0, l.Z)(() => o);
 
-function c(e, n, o, t) {
-  (0, i.j)(() => l.setState({
-...d,
+function d(e, t, n, l) {
+  (0, r.j)(() => s.setState({
+...o,
 guildId: e,
-channelId: n,
-channelType: o,
-numMediaItems: t
+channelId: t,
+channelType: n,
+numMediaItems: l
   }));
 }
 
-function s() {
-  let e = l.getState();
-  a.default.track(r.rMx.MEDIA_VIEWER_SESSION_COMPLETED, {
+function u() {
+  let e = s.getState();
+  i.default.track(a.rMx.MEDIA_VIEWER_SESSION_COMPLETED, {
 guild_id: e.guildId,
 channel_id: e.channelId,
 channel_type: e.channelType,
@@ -44,13 +44,13 @@ number_viewer_swipes: e.viewerSwipes,
 number_thumbnail_swipes: e.thumbnailSwipes,
 number_selected_item_changes: e.selectedItemChanges,
 number_media_items: e.numMediaItems
-  }), (0, i.j)(() => l.setState({
-...d
+  }), (0, r.j)(() => s.setState({
+...o
   }));
 }
 
-function u() {
-  (0, i.j)(() => l.setState(e => ({
+function m() {
+  (0, r.j)(() => s.setState(e => ({
 selectedItemChanges: e.selectedItemChanges + 1
   })));
 }

@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(985375),
   h = n(653235),
   p = n(215016),
-  m = n(981631),
-  I = n(149203),
+  I = n(981631),
+  m = n(149203),
   T = n(689938),
   g = n(114381);
 
@@ -29,7 +29,7 @@ writable: !0
 let A = e => e.stopPropagation();
 class N extends i.PureComponent {
   componentDidMount() {
-c.gK(), document.addEventListener('keydown', this.backToFrontPage), '' !== this.props.query && this.search(this.props.query, m.wI2.SEARCH);
+c.gK(), document.addEventListener('keydown', this.backToFrontPage), '' !== this.props.query && this.search(this.props.query, I.wI2.SEARCH);
   }
   componentWillUnmount() {
 u.Z.wait(() => c.v2()), document.removeEventListener('keydown', this.backToFrontPage);
@@ -37,8 +37,8 @@ u.Z.wait(() => c.v2()), document.removeEventListener('keydown', this.backToFront
   search(e, t, n) {
 c.yC(e, t, n), '' === e ? this.setState({
   resultType: null
-}) : this.state.resultType !== m.wI2.SEARCH && this.setState({
-  resultType: m.wI2.SEARCH
+}) : this.state.resultType !== I.wI2.SEARCH && this.setState({
+  resultType: I.wI2.SEARCH
 });
   }
   renderHeaderContent() {
@@ -48,13 +48,13 @@ let {
   resultType: t
 } = this.state;
 switch (t) {
-  case m.wI2.FAVORITES:
+  case I.wI2.FAVORITES:
     return (0, r.jsx)(l.FormTitle, {
       tag: 'h5',
       className: g.searchHeader,
       children: T.Z.Messages.CATEGORY_FAVORITE
     });
-  case m.wI2.TRENDING_GIFS:
+  case I.wI2.TRENDING_GIFS:
     return (0, r.jsx)(l.FormTitle, {
       tag: 'h5',
       className: g.searchHeader,
@@ -112,7 +112,7 @@ return null == c ? (0, r.jsx)(h.Z, {
   hideFavoritesTile: u,
   onSelectItem: this.handleSelectItem
 }) : (0, r.jsx)(p.ZP, {
-  data: c === m.wI2.FAVORITES ? i : e,
+  data: c === I.wI2.FAVORITES ? i : e,
   onSelectGIF: this.handleSelectGIF,
   resultType: c,
   resultQuery: t,
@@ -130,9 +130,9 @@ let {
   forwardedRef: t
 } = this.props;
 return (0, r.jsxs)('div', {
-  id: I.vO,
+  id: m.vO,
   role: 'tabpanel',
-  'aria-labelledby': I._3,
+  'aria-labelledby': m._3,
   className: s()(g.container, e),
   onClick: A,
   ref: t,
@@ -155,11 +155,11 @@ super(...e), S(this, 'state', {
   let {
     resultType: t
   } = this.state;
-  e.keyCode === m.yXg.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
+  e.keyCode === I.yXg.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
 }), S(this, 'handleChangeQuery', e => {
-  (0, _.ql)(e), this.search(e, m.wI2.SEARCH);
+  (0, _.ql)(e), this.search(e, I.wI2.SEARCH);
 }), S(this, 'handleSelectSuggestion', e => {
-  (0, _.ql)(''), c.v2(), this.search(e, m.wI2.SEARCH_SUGGESTION, !0);
+  (0, _.ql)(''), c.v2(), this.search(e, I.wI2.SEARCH_SUGGESTION, !0);
 }), S(this, 'handleClearQuery', () => {
   let {
     current: e
@@ -177,10 +177,10 @@ super(...e), S(this, 'state', {
     current: n
   } = this.searchBarRef;
   switch (e) {
-    case m.wI2.TRENDING_CATEGORY:
-      c.yC(t, m.wI2.TRENDING_CATEGORY, !0), null != n && n.focus();
+    case I.wI2.TRENDING_CATEGORY:
+      c.yC(t, I.wI2.TRENDING_CATEGORY, !0), null != n && n.focus();
       break;
-    case m.wI2.TRENDING_GIFS:
+    case I.wI2.TRENDING_GIFS:
       c.UU();
   }
   this.setState({

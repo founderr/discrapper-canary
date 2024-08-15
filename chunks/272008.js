@@ -27,7 +27,7 @@ return R;
 return N;
   },
   is: function() {
-return m;
+return I;
   },
   m0: function() {
 return T;
@@ -39,7 +39,7 @@ return v;
 return A;
   },
   xw: function() {
-return I;
+return m;
   }
 }), n(411104);
 var r = n(990547),
@@ -100,12 +100,12 @@ return {
 errorHints: []
   };
 }
-async function m(e) {
+async function I(e) {
   await i.tn.post({
 url: f.ANM.QUEST_ON_CONSOLE_STOP(e)
   });
 }
-async function I() {
+async function m() {
   if (!c.Z.isFetchingCurrentQuests) {
 a.Z.dispatch({
   type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN'

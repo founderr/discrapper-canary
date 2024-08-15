@@ -49,15 +49,15 @@ f = d.ZP.useName((null == e ? void 0 : e.author.bot) ? null == e ? void 0 : e.au
     guildRoles: t
   };
 }, [i]),
-I = (0, a.e7)([u.Z], () => null != r && (null == n ? void 0 : n.isPrivate()) ? u.Z.getNickname(r) : null);
-  return null == e ? null : m({
+m = (0, a.e7)([u.Z], () => null != r && (null == n ? void 0 : n.isPrivate()) ? u.Z.getNickname(r) : null);
+  return null == e ? null : I({
 user: e.author,
 channel: n,
 guild: h,
 guildRoles: p,
 userName: f,
 member: _,
-friendNickname: I
+friendNickname: m
   });
 }
 
@@ -83,7 +83,7 @@ i = (0, a.e7)([o.ZP], () => null == r || null == n ? null : o.ZP.getMember(r, n)
 }, [r]),
 _ = (0, a.e7)([u.Z], () => null != n && (null == t ? void 0 : t.isPrivate()) ? u.Z.getNickname(n) : null),
 E = d.ZP.useName(e);
-  return m({
+  return I({
 user: e,
 channel: t,
 guild: s,
@@ -101,7 +101,7 @@ i = l.Z.getGuild(r),
 a = null != r ? l.Z.getRoles(r) : void 0,
 s = null == r || null == n ? null : o.ZP.getMember(r, n),
 c = null != n && null != t && t.isPrivate() ? u.Z.getNickname(n) : null;
-  return m({
+  return I({
 user: e,
 channel: t,
 guild: i,
@@ -111,7 +111,7 @@ friendNickname: c
   });
 }
 
-function m(e) {
+function I(e) {
   var t, n, r, i;
   let {
 user: a,

@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(600164),
   m = t(313201),
   A = t(605236),
-  g = t(786761),
-  O = t(3148),
+  O = t(786761),
+  g = t(3148),
   h = t(739566),
   p = t(753206),
   R = t(311476),
@@ -61,40 +61,40 @@ COMPACT: 'compact'
   K = e => {
 let s = 0;
 return [
-  (0, g.e5)({
-    ...(0, O.ZP)({
+  (0, O.e5)({
+    ...(0, g.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
     }),
     state: j.yb.SENT,
     id: ''.concat(s++)
   }),
-  (0, g.e5)({
-    ...(0, O.ZP)({
+  (0, O.e5)({
+    ...(0, g.ZP)({
       channelId: W,
       content: (0, c.wj)(e) ? G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
     }),
     state: j.yb.SENT,
     id: ''.concat(s++)
   }),
-  (0, g.e5)({
-    ...(0, O.ZP)({
+  (0, O.e5)({
+    ...(0, g.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
     }),
     state: j.yb.SENT,
     id: ''.concat(s++)
   }),
-  (0, g.e5)({
-    ...(0, O.ZP)({
+  (0, O.e5)({
+    ...(0, g.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
     }),
     state: j.yb.SENT,
     id: ''.concat(s++)
   }),
-  (0, g.e5)({
-    ...(0, O.ZP)({
+  (0, O.e5)({
+    ...(0, g.ZP)({
       channelId: W,
       content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
     }),

@@ -29,8 +29,8 @@ var r = n(735250),
   f = n(906732),
   h = n(213609),
   p = n(600164),
-  m = n(686546),
-  I = n(111028),
+  I = n(686546),
+  m = n(111028),
   T = n(738774),
   g = n(785896),
   S = n(231053),
@@ -91,7 +91,7 @@ return (0, r.jsx)(u.V, {
             (0, r.jsx)(c.Text, {
               className: j.__invalid_emojiName,
               variant: 'text-md/semibold',
-              children: (0, r.jsx)(I.Z, {
+              children: (0, r.jsx)(m.Z, {
                 children: n
               })
             }),
@@ -155,8 +155,8 @@ let {
 return (0, r.jsxs)(p.Z, {
   align: p.Z.Align.CENTER,
   children: [
-    (0, r.jsx)(m.ZP, {
-      mask: m.ZP.Masks.SQUIRCLE,
+    (0, r.jsx)(I.ZP, {
+      mask: I.ZP.Masks.SQUIRCLE,
       width: 32,
       height: 32,
       className: j.__invalid_guildIconContainer,
@@ -194,13 +194,13 @@ return (0, r.jsxs)(p.Z, {
               children: (0, r.jsx)(c.Heading, {
                 className: j.guildName,
                 variant: 'heading-md/semibold',
-                children: (0, r.jsx)(I.Z, {
+                children: (0, r.jsx)(m.Z, {
                   children: l
                 })
               })
             }) : (0, r.jsx)(c.Heading, {
               variant: 'heading-md/semibold',
-              children: (0, r.jsx)(I.Z, {
+              children: (0, r.jsx)(m.Z, {
                 children: l
               })
             })
@@ -256,7 +256,7 @@ return _ ? (0, r.jsx)(F.SE, {}) : (0, r.jsx)(u.V, {
 var t, n, a;
 let {
   node: u,
-  sourceType: m,
+  sourceType: I,
   expressionSourceApplication: g,
   expressionSourceGuild: N,
   joinedEmojiSourceGuildRecord: v,
@@ -301,7 +301,7 @@ let et = W(),
 });
 let eo = P.Z.getGuildId(),
   el = (0, B.a)({
-    sourceType: m,
+    sourceType: I,
     expressionSourceApplication: g,
     isPremium: Q,
     hasJoinedEmojiSourceGuild: J,
@@ -364,7 +364,7 @@ return (0, r.jsxs)(F.W_, {
                 children: [
                   (0, r.jsx)(c.Text, {
                     variant: 'text-md/semibold',
-                    children: (0, r.jsx)(I.Z, {
+                    children: (0, r.jsx)(m.Z, {
                       children: u.name
                     })
                   }),

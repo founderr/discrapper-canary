@@ -102,7 +102,7 @@ guildId: e,
 status: o.body.application_status,
 request: o.body
   });
-}, m = async (e, t) => {
+}, I = async (e, t) => {
   let n = await r.tn.patch({
 url: d.ANM.GUILD_JOIN_REQUESTS(e),
 body: {
@@ -114,7 +114,7 @@ type: 'GUILD_JOIN_REQUESTS_BULK_ACTION',
 guildId: e,
 action: t
   }), n.body;
-}, I = async e => {
+}, m = async e => {
   try {
 let {
   body: t
@@ -154,8 +154,8 @@ t.Z = {
   ackUserGuildJoinRequest: h,
   removeGuildJoinRequest: f,
   updateGuildJoinRequest: p,
-  actionAllPendingJoinRequests: m,
-  resetGuildJoinRequest: I,
+  actionAllPendingJoinRequests: I,
+  resetGuildJoinRequest: m,
   fetchRequestToJoinGuilds: T,
   setSelectedApplicationTab: (e, t) => {
 i.Z.dispatch({

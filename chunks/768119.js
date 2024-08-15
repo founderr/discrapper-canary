@@ -9,12 +9,12 @@ var i, a, s, o, l = n(392711),
   f = n(952537),
   h = n(592125),
   p = n(430824),
-  m = n(981631);
-let I = {},
+  I = n(981631);
+let m = {},
   T = !1;
 
 function g(e) {
-  return null == I[e] && (I[e] = {
+  return null == m[e] && (m[e] = {
 searchId: e,
 searchType: S(e),
 isIndexing: !1,
@@ -32,18 +32,18 @@ documentsIndexed: 0,
 resultsBlocked: 0,
 showBlockedResults: !1,
 showNoResultsAlt: !1
-  }), I[e];
+  }), m[e];
 }
 
 function S(e) {
-  return e === m.aib.DMS ? m.aib.DMS : e === m.I_8 ? m.aib.FAVORITES : null != p.Z.getGuild(e) ? m.aib.GUILD : null != h.Z.getChannel(e) ? m.aib.CHANNEL : null;
+  return e === I.aib.DMS ? I.aib.DMS : e === I.I_8 ? I.aib.FAVORITES : null != p.Z.getGuild(e) ? I.aib.GUILD : null != h.Z.getChannel(e) ? I.aib.CHANNEL : null;
 }
 
 function A(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
   if (null == e)
 return n;
-  let r = I[e];
+  let r = m[e];
   return null == r ? n : t(r);
 }
 let N = 'SearchStore',
@@ -69,16 +69,16 @@ history: O
 function y(e) {
   let {
 searchId: t
-  } = e, n = I[t];
+  } = e, n = m[t];
   if (null == n)
 return !1;
-  null != n.searchFetcher && n.searchFetcher.cancel(), delete I[t];
+  null != n.searchFetcher && n.searchFetcher.cancel(), delete m[t];
 }
 
 function D(e) {
   if (e === R)
 return !1;
-  null != e && null == I[e] && g(e), R = e;
+  null != e && null == m[e] && g(e), R = e;
 }
 class L extends(i = c.ZP.Store) {
   initialize() {
@@ -202,7 +202,7 @@ s.searchFetcher = l, s.isSearching = !0, s.rawResults = null, s.analyticsId = nu
   searchId: i,
   query: r
 });
-let c = i === m.I_8 ? null === (t = h.Z.getChannel(i)) || void 0 === t ? void 0 : t.guild_id : o === m.aib.GUILD ? i : null;
+let c = i === I.I_8 ? null === (t = h.Z.getChannel(i)) || void 0 === t ? void 0 : t.guild_id : o === I.aib.GUILD ? i : null;
 l.fetch(e => {
   var t, n;
   _.Z.dispatch({
@@ -312,8 +312,8 @@ null != O[t] && (O[t] = O[t].filter(e => e !== n), d.K.set(N, {
 d.K.remove(N), O = {};
   },
   CONNECTION_OPEN: function() {
-Object.keys(I).forEach(e => {
-  null != I[e] && (I[e].searchType = S(e));
+Object.keys(m).forEach(e => {
+  null != m[e] && (m[e].searchType = S(e));
 });
   },
   SEARCH_MODAL_OPEN: function(e) {

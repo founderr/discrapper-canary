@@ -14,8 +14,8 @@ var i = n(442837),
   f = n(594174),
   h = n(981631),
   p = n(354459),
-  m = n(689938),
-  I = n(582920);
+  I = n(689938),
+  m = n(582920);
 
 function T(e) {
   let {
@@ -23,7 +23,7 @@ closePopout: t,
 idle: n,
 pipWindows: a,
 voiceChannelId: f,
-onSelect: I
+onSelect: m
   } = e;
   n && t();
   let T = (0, i.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(f)),
@@ -34,7 +34,7 @@ A = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(f));
 navId: 'pip-menu',
 'aria-label': 'switch PIP',
 onClose: t,
-onSelect: I,
+onSelect: m,
 children: function() {
   let e = a.find(e => e.component === h.NYg.EMBED_IFRAME),
     t = a.find(e => e.component === h.NYg.VIDEO),
@@ -58,11 +58,11 @@ children: function() {
       if (e.pipWindow.component === h.NYg.EMBED_IFRAME && null != T) {
         var t;
         let e = null === (t = c.Z.getApplication(T.applicationId)) || void 0 === t ? void 0 : t.name;
-        return null == e ? m.Z.Messages.SWITCH_PIP_TO_ACTIVITY : m.Z.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({
+        return null == e ? I.Z.Messages.SWITCH_PIP_TO_ACTIVITY : I.Z.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({
           activityName: e
         });
       }
-      return null == e.participant || e.participant.type !== p.fO.STREAM ? m.Z.Messages.SWITCH_PIP_TO_GO_LIVE : m.Z.Messages.SWITCH_PIP_TO_USER_STREAM.format({
+      return null == e.participant || e.participant.type !== p.fO.STREAM ? I.Z.Messages.SWITCH_PIP_TO_GO_LIVE : I.Z.Messages.SWITCH_PIP_TO_USER_STREAM.format({
         username: e.participant.userNick
       });
     }(e),
@@ -96,7 +96,7 @@ renderPopout: e => (0, r.jsx)(T, {
   ...e
 }),
 children: e => (0, r.jsx)(s.Clickable, {
-  className: I.menuIcon,
+  className: m.menuIcon,
   ...e,
   children: (0, r.jsx)(s.MoreVerticalIcon, {
     size: 'md',

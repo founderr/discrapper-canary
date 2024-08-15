@@ -14,8 +14,8 @@ let f = i.forwardRef(function(e, t) {
 onKeyDown: n,
 stickersListRef: f,
 channel: h
-  } = e, p = (0, c.fQ)(h), m = i.useRef(null), {
-searchQuery: I,
+  } = e, p = (0, c.fQ)(h), I = i.useRef(null), {
+searchQuery: m,
 isSearchSuggestion: T
   } = (0, u.Iu)(e => ({
 searchQuery: e.searchQuery,
@@ -29,20 +29,20 @@ l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c), l.ZN.setInspectedExpressionPosi
   return i.useImperativeHandle(t, () => ({
 focus: () => {
   var e;
-  return null === (e = m.current) || void 0 === e ? void 0 : e.focus();
+  return null === (e = I.current) || void 0 === e ? void 0 : e.focus();
 }
   })), i.useLayoutEffect(() => {
 if (T) {
   var e;
-  null === (e = m.current) || void 0 === e || e.focus();
+  null === (e = I.current) || void 0 === e || e.focus();
 }
   }, [T]), (0, r.jsx)('div', {
 className: E.wrapper,
 children: (0, r.jsx)(o.ZP, {
   autoFocus: p,
   disabled: !p,
-  query: I,
-  ref: m,
+  query: m,
+  ref: I,
   size: o.ZP.Sizes.MEDIUM,
   placeholder: null != g ? g : p ? _.Z.Messages.SEARCH_FOR_STICKERS : _.Z.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
   onClear: N,

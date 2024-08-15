@@ -27,7 +27,7 @@ let {
   onContextMenu: f,
   style: h,
   title: p,
-  uppercase: m
+  uppercase: I
 } = e;
 return (0, r.jsx)(s.H, {
   role: null != E ? 'button' : void 0,
@@ -39,7 +39,7 @@ return (0, r.jsx)(s.H, {
     [l]: !0,
     [o.selectable]: c,
     [o.muted]: n,
-    [o.uppercase]: m
+    [o.uppercase]: I
   }),
   title: p,
   style: null != _ ? {

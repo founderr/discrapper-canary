@@ -12,8 +12,8 @@ var i, a = n(392711),
   f = n(210887),
   h = n(314897),
   p = n(592125),
-  m = n(703558),
-  I = n(984933),
+  I = n(703558),
+  m = n(984933),
   T = n(271383),
   g = n(430824),
   S = n(496675),
@@ -126,7 +126,7 @@ function j(e, t) {
         limit: 100,
         fuzzy: !0,
         filter: () => !0,
-        type: I.Zb
+        type: m.Zb
       });
   }
   let i = [],
@@ -139,7 +139,7 @@ function j(e, t) {
   a.length > 0 && i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_LAST_CHANNEL), ...a);
   let o = function(e) {
     let t = [];
-    return m.Z.getRecentlyEditedDrafts(m.d.ChannelMessage).forEach(n => {
+    return I.Z.getRecentlyEditedDrafts(I.d.ChannelMessage).forEach(n => {
       let {
         channelId: r
       } = n;
@@ -152,7 +152,7 @@ function j(e, t) {
   o.length > 0 && i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_DRAFTS), ...o);
   let l = A.ZP.getMentionChannelIds().filter(e => e !== r && !V.includes(e)).map(e => Z(e)).filter(C.lm).reverse();
   if (l.length > 0 && (i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_MENTIONS)), i = i.concat(l)), null != n) {
-    let e = I.ZP.getSelectableChannelIds(n).filter(e => {
+    let e = m.ZP.getSelectableChannelIds(n).filter(e => {
       let t = p.Z.getChannel(e);
       return !(null == t || e === r || V.includes(e) || O.ZP.isChannelMuted(t.guild_id, e) || null != t.parent_id && O.ZP.isChannelMuted(t.guild_id, t.parent_id)) && (0, _.d)(t);
     }).map(e => Z(e)).filter(e => e);

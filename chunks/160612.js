@@ -165,18 +165,18 @@ var f = (l = E.exports) && l.__esModule && Object.prototype.hasOwnProperty.call(
       n.current = e;
     }, [e]), n.current;
   },
-  m = function(e) {
+  I = function(e) {
     return null !== e && 'object' === i(e);
   },
-  I = '[object Object]',
+  m = '[object Object]',
   T = function e(t, n) {
-    if (!m(t) || !m(n))
+    if (!I(t) || !I(n))
       return t === n;
     var r = Array.isArray(t);
     if (r !== Array.isArray(n))
       return !1;
-    var i = Object.prototype.toString.call(t) === I;
-    if (i !== (Object.prototype.toString.call(n) === I))
+    var i = Object.prototype.toString.call(t) === m;
+    if (i !== (Object.prototype.toString.call(n) === m))
       return !1;
     if (!i && !r)
       return t === n;
@@ -194,21 +194,21 @@ var f = (l = E.exports) && l.__esModule && Object.prototype.hasOwnProperty.call(
     });
   },
   g = function(e, t, n) {
-    return m(e) ? Object.keys(e).reduce(function(i, s) {
-      var o = !m(t) || !T(e[s], t[s]);
+    return I(e) ? Object.keys(e).reduce(function(i, s) {
+      var o = !I(t) || !T(e[s], t[s]);
       return n.includes(s) ? (o && console.warn('Unsupported prop change: options.'.concat(s, ' is not a mutable property.')), i) : o ? r(r({}, i || {}), {}, a({}, s, e[s])) : i;
     }, null) : null;
   },
   S = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
   A = function(e) {
     var t, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
-    if (null === e || m(t = e) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)
+    if (null === e || I(t = e) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)
       return e;
     throw Error(n);
   },
   N = function(e) {
     var t, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
-    if (m(t = e) && 'function' == typeof t.then)
+    if (I(t = e) && 'function' == typeof t.then)
       return {
         tag: 'async',
         stripePromise: Promise.resolve(e).then(function(e) {
@@ -408,17 +408,17 @@ var U = function(e, t) {
       h,
       n
     ]);
-    var I = p(r);
+    var m = p(r);
     t.useEffect(function() {
       if (!!d.customCheckoutSdk) {
-        r.clientSecret && !m(I) && !T(r.clientSecret, I.clientSecret) && console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
-        var e, t, n = null == I ? void 0 : null === (e = I.elementsOptions) || void 0 === e ? void 0 : e.appearance,
+        r.clientSecret && !I(m) && !T(r.clientSecret, m.clientSecret) && console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
+        var e, t, n = null == m ? void 0 : null === (e = m.elementsOptions) || void 0 === e ? void 0 : e.appearance,
           i = null == r ? void 0 : null === (t = r.elementsOptions) || void 0 === t ? void 0 : t.appearance;
         i && !T(i, n) && d.customCheckoutSdk.changeAppearance(i);
       }
     }, [
       r,
-      I,
+      m,
       d.customCheckoutSdk
     ]), t.useEffect(function() {
       v(d.stripe);
@@ -469,8 +469,8 @@ var x = function(e) {
           _ = n.onReady,
           E = n.onChange,
           f = n.onEscape,
-          m = n.onClick,
-          I = n.onLoadError,
+          I = n.onClick,
+          m = n.onLoadError,
           T = n.onLoaderStart,
           S = n.onNetworksChange,
           A = n.onConfirm,
@@ -485,7 +485,7 @@ var x = function(e) {
           b = D[1],
           M = t.useRef(null),
           P = t.useRef(null);
-        h(L, 'blur', c), h(L, 'focus', d), h(L, 'escape', f), h(L, 'click', m), h(L, 'loaderror', I), h(L, 'loaderstart', T), h(L, 'networkschange', S), h(L, 'confirm', A), h(L, 'cancel', N), h(L, 'shippingaddresschange', v), h(L, 'shippingratechange', O), h(L, 'change', E), _ && (r = 'expressCheckout' === e ? _ : function() {
+        h(L, 'blur', c), h(L, 'focus', d), h(L, 'escape', f), h(L, 'click', I), h(L, 'loaderror', m), h(L, 'loaderstart', T), h(L, 'networkschange', S), h(L, 'confirm', A), h(L, 'cancel', N), h(L, 'shippingaddresschange', v), h(L, 'shippingratechange', O), h(L, 'change', E), _ && (r = 'expressCheckout' === e ? _ : function() {
           _(L);
         }), h(L, 'ready', r), t.useLayoutEffect(function() {
           if (null === M.current && null !== P.current && (C || y)) {

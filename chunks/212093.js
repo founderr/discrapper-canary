@@ -22,7 +22,7 @@ return function e(t, n) {
       preferredLocale: a,
       offset: d,
       length: p,
-      tag: m
+      tag: I
     } = n,
     T = c.ZP.getSearchIndex();
   if (null == T)
@@ -52,14 +52,14 @@ return function e(t, n) {
     offset: d,
     limit: p,
     categoryId: i,
-    tag: m
+    tag: I
   }), l.Z.dispatch({
     type: 'GUILD_DISCOVERY_SEARCH_FETCH_START',
     section: f.Lcj.SEARCH,
     query: t,
     categoryId: i
   });
-  let g = Object.assign({}, I, n.filters),
+  let g = Object.assign({}, m, n.filters),
     S = Object.keys(g).map(e => ''.concat(e).concat(g[e]));
   i !== h.Hk && S.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
   let A = S.join(' AND ');
@@ -157,8 +157,8 @@ var r = n(807034),
   f = n(981631),
   h = n(731455);
 let p = window.GLOBAL_ENV.ALGOLIA_KEY,
-  m = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
-  I = {
+  I = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
+  m = {
 'auto_removed:': !1,
 approximate_presence_count: '> 0',
 approximate_member_count: '> 0'
@@ -169,7 +169,7 @@ function T() {
 return;
   let e = a()('NKTZZ4AIZU', p, {
 responsesCache: (0, r.A)()
-  }).initIndex(m);
+  }).initIndex(I);
   l.Z.wait(() => l.Z.dispatch({
 type: 'GUILD_DISCOVERY_SEARCH_INIT',
 index: e
@@ -180,7 +180,7 @@ function g(e, t) {
   let n = c.ZP.getSearchIndex();
   if (null == n)
 return;
-  let r = Object.assign({}, I, t),
+  let r = Object.assign({}, m, t),
 i = Object.keys(r).map(e => ''.concat(e).concat(r[e]));
   try {
 let t = n.search(e, {

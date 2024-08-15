@@ -77,14 +77,14 @@ s.Ci.WE.weekday,
 s.Ci.TH.weekday,
 s.Ci.FR.weekday
   ],
-  m = [
+  I = [
 s.Ci.SU.weekday,
 s.Ci.MO.weekday,
 s.Ci.TU.weekday,
 s.Ci.WE.weekday,
 s.Ci.TH.weekday
   ],
-  I = [
+  m = [
 s.Ci.TU.weekday,
 s.Ci.WE.weekday,
 s.Ci.TH.weekday,
@@ -295,7 +295,7 @@ default:
 function F(e) {
   let t = D(e.toDate().getDay()),
 n = D(e.toDate().getUTCDay());
-  return n.weekday - t.weekday > 0 ? I : n.weekday - t.weekday < 0 ? m : p;
+  return n.weekday - t.weekday > 0 ? m : n.weekday - t.weekday < 0 ? I : p;
 }
 
 function V(e) {

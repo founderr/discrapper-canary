@@ -25,15 +25,15 @@ color: f,
 className: h,
 onAction: p
   } = e, {
-tooltip: m,
-loading: I,
+tooltip: I,
+loading: m,
 disabled: T,
 onClick: g
   } = (0, l.Fe)(t, n, d, o.ZP.getNickname(c, i, n)), S = () => {
 null == p || p(), g();
   };
   return (0, r.jsx)(s.Tooltip, {
-text: m,
+text: I,
 children: e => {
   let {
     onMouseEnter: n,
@@ -49,8 +49,8 @@ children: e => {
     onMouseEnter: n,
     onMouseLeave: i,
     disabled: T,
-    submitting: I,
-    'aria-label': null != m ? m : t.name,
+    submitting: m,
+    'aria-label': null != I ? I : t.name,
     children: (0, r.jsx)(s.UserPlayIcon, {
       size: 'xs',
       color: 'currentColor'

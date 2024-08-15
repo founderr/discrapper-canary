@@ -54,8 +54,8 @@ var u = new WeakMap(),
   f = new WeakMap(),
   h = new WeakMap(),
   p = new WeakMap(),
-  m = new WeakMap(),
   I = new WeakMap(),
+  m = new WeakMap(),
   T = new WeakMap();
 class g {
   constructor(e, t, n) {
@@ -110,17 +110,17 @@ if (i(this, u, {
     writable: !0,
     value: e => {
       s(this, _).forEach(t => {
-        t.transition && e.addEventListener(t.transition.event, s(this, m));
+        t.transition && e.addEventListener(t.transition.event, s(this, I));
       });
     }
   }), i(this, p, {
     writable: !0,
     value: e => {
       s(this, _).forEach(t => {
-        t.transition && e.removeEventListener(t.transition.event, s(this, m));
+        t.transition && e.removeEventListener(t.transition.event, s(this, I));
       });
     }
-  }), i(this, m, {
+  }), i(this, I, {
     writable: !0,
     value: e => {
       let t = s(this, u);
@@ -128,7 +128,7 @@ if (i(this, u, {
         var n;
         s(this, d)[t].instance.teardown(), Object.keys(s(this, E)).forEach(e => {
           let t = s(this, E)[e];
-          t.unsubscribe(), t.unsubscribe = s(this, I).call(this, t.func, ...t.args);
+          t.unsubscribe(), t.unsubscribe = s(this, m).call(this, t.func, ...t.args);
         }), s(this, c).backendChanged(this);
         let r = s(this, d)[s(this, u)];
         if (r.instance.setup(), r.skipDispatchOnTransition)
@@ -137,14 +137,14 @@ if (i(this, u, {
         null === (n = e.target) || void 0 === n || n.dispatchEvent(i);
       }
     }
-  }), i(this, I, {
+  }), i(this, m, {
     writable: !0,
     value: (e, t, n, r) => s(this, d)[s(this, u)].instance[e](t, n, r)
   }), i(this, T, {
     writable: !0,
     value: (e, t, n, r) => {
       let i = ''.concat(e, '_').concat(t),
-        a = s(this, I).call(this, e, t, n, r);
+        a = s(this, m).call(this, e, t, n, r);
       return s(this, E)[i] = {
         func: e,
         args: [

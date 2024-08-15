@@ -23,8 +23,8 @@ tooltipNote: E,
 onChange: f,
 className: h,
 style: p,
-note: m,
-children: I
+note: I,
+children: m
   } = e, T = i.useRef(null), g = i.useRef(null), S = i.useId(), A = (0, r.jsx)(l.r, {
 id: S,
 checked: t,
@@ -53,7 +53,7 @@ children: [
         (0, r.jsx)('label', {
           htmlFor: S,
           className: _.title,
-          children: I
+          children: m
         }),
         (0, r.jsx)('div', {
           className: _.control,
@@ -65,12 +65,12 @@ children: [
       ]
     })
   }),
-  null != m && (0, r.jsx)('div', {
+  null != I && (0, r.jsx)('div', {
     className: _.note,
     children: (0, r.jsx)(d.R, {
       disabled: n,
       type: d.g.DESCRIPTION,
-      children: m
+      children: I
     })
   }),
   !a && (0, r.jsx)(c.$, {

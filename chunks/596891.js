@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(621600),
   h = n(82554),
   p = n(981631),
-  m = n(689938),
-  I = n(295135);
+  I = n(689938),
+  m = n(295135);
 t.Z = e => {
   let {
 userId: t,
@@ -54,32 +54,32 @@ b = i.useCallback(() => {
   n
 ]),
 M = T === h.b.USER,
-P = M ? m.Z.Messages.REPORTS_MUTE_USER_ELEMENT_DESCRIPTION : m.Z.Messages.MOBILE_REPORTS_MUTE_ELEMENT_DESCRIPTION,
-U = M ? m.Z.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : m.Z.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION,
-w = M ? m.Z.Messages.REPORTS_BLOCK_AND_MUTE_USER_ELEMENT_DESCRIPTION : m.Z.Messages.MOBILE_REPORTS_BLOCK_AND_MUTE_ELEMENT_DESCRIPTION,
+P = M ? I.Z.Messages.REPORTS_MUTE_USER_ELEMENT_DESCRIPTION : I.Z.Messages.MOBILE_REPORTS_MUTE_ELEMENT_DESCRIPTION,
+U = M ? I.Z.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : I.Z.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION,
+w = M ? I.Z.Messages.REPORTS_BLOCK_AND_MUTE_USER_ELEMENT_DESCRIPTION : I.Z.Messages.MOBILE_REPORTS_BLOCK_AND_MUTE_ELEMENT_DESCRIPTION,
 x = S || g;
   return null != y && x ? (0, r.jsxs)('div', {
-className: I.container,
+className: m.container,
 children: [
   (0, r.jsx)(s.Text, {
-    className: I.description,
+    className: m.description,
     variant: 'text-sm/normal',
     children: g && S ? w : g ? U : P
   }),
   (0, r.jsxs)('div', {
-    className: I.userContainer,
+    className: m.userContainer,
     children: [
       (0, r.jsxs)('div', {
-        className: I.userInfo,
+        className: m.userInfo,
         children: [
           (0, r.jsx)(s.Avatar, {
             size: s.AvatarSizes.SIZE_32,
             src: y.getAvatarURL(void 0, 32),
-            className: I.avatar,
+            className: m.avatar,
             'aria-label': y.username
           }),
           (0, r.jsx)(s.Text, {
-            className: I.userName,
+            className: m.userName,
             variant: 'text-sm/semibold',
             children: y.username
           }),
@@ -93,21 +93,21 @@ children: [
         ]
       }),
       (0, r.jsxs)('div', {
-        className: I.actionButtonsContainer,
+        className: m.actionButtonsContainer,
         children: [
           S && (0, r.jsx)(s.Button, {
             onClick: b,
             disabled: v,
             size: s.Button.Sizes.SMALL,
             color: s.Button.Colors.PRIMARY,
-            children: v ? m.Z.Messages.MUTED : m.Z.Messages.MUTE
+            children: v ? I.Z.Messages.MUTED : I.Z.Messages.MUTE
           }),
           g && (0, r.jsx)(s.Button, {
             onClick: L,
             disabled: R,
             size: s.Button.Sizes.SMALL,
             color: s.Button.Colors.RED,
-            children: R ? m.Z.Messages.BLOCKED : m.Z.Messages.BLOCK
+            children: R ? I.Z.Messages.BLOCKED : I.Z.Messages.BLOCK
           })
         ]
       })

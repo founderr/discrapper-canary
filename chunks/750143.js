@@ -1,10 +1,10 @@
 t.d(n, {
   X: function() {
-return l;
+return i;
   },
   i: function() {
 return r;
   }
 });
 let r = '(max-width: 485px)',
-  l = '(max-height: 450px)';
+  i = '(max-height: 450px)';

@@ -22,8 +22,8 @@ var a = t(990547),
   C = t(574755),
   m = t(377171),
   A = t(621628),
-  g = t(18438),
-  O = t(778825),
+  O = t(18438),
+  g = t(778825),
   h = t(665166),
   p = t(351780),
   R = t(231765),
@@ -76,8 +76,8 @@ var a = t(990547),
   eC = t(338345),
   em = t(400287),
   eA = t(554042),
-  eg = t(200645),
-  eO = t(287490),
+  eO = t(200645),
+  eg = t(287490),
   eh = t(168308),
   ep = t(277329),
   eR = t(674116),
@@ -91,7 +91,7 @@ let eb = () => [
 i.z.CLIENT_THEMES_SETTINGS_BADGE,
 i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE
   ],
-  eZ = eg.Z,
+  eZ = eO.Z,
   ev = e => {
 let {
   unseenGiftCount: s,
@@ -255,13 +255,13 @@ return Object.freeze({
     notice: {
       stores: [
         j.Z,
-        O.Z
+        g.Z
       ],
       element: M.Z
     },
     onSettingsClose: () => {
       l.Z.wait(() => {
-        (0, g.It)(), (0, d.P6)(), _.Z.clearSubsection(eM.oAB.PROFILE_CUSTOMIZATION);
+        (0, O.It)(), (0, d.P6)(), _.Z.clearSubsection(eM.oAB.PROFILE_CUSTOMIZATION);
       });
     }
   },
@@ -1133,7 +1133,7 @@ return Object.freeze({
     section: eM.oAB.WINDOWS,
     searchableTitles: [eP.Z.Messages.USER_SETTINGS_WINDOWS_SETTINGS],
     label: eP.Z.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
-    element: eg.Z,
+    element: eO.Z,
     predicate: () => F.isPlatformEmbedded && (0, F.isWindows)()
   },
   [ex.s6.LINUX_SETTINGS]: {
@@ -1295,7 +1295,7 @@ return Object.freeze({
     section: eM.oAB.EXPERIMENTS,
     searchableTitles: ['Experiments'],
     label: 'Experiments',
-    element: eO.Z,
+    element: eg.Z,
     predicate: () => b.Z.isDeveloper
   },
   [ex.s6.DEVELOPER_OPTIONS]: {

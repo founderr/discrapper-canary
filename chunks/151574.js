@@ -11,8 +11,8 @@ var r, i, a = n(735250),
   f = n(481060),
   h = n(100527),
   p = n(906732),
-  m = n(570220),
-  I = n(686546),
+  I = n(570220),
+  m = n(686546),
   T = n(28546),
   g = n(285651),
   S = n(926491),
@@ -58,8 +58,8 @@ focusProps: {
 onClick: () => c(s, r),
 onMouseOver: o,
 children: [
-  (0, a.jsx)(I.ZP, {
-    mask: I.ZP.Masks.STICKER_ROUNDED_RECT,
+  (0, a.jsx)(m.ZP, {
+    mask: m.ZP.Masks.STICKER_ROUNDED_RECT,
     width: w + 4,
     height: w + 4,
     className: P.mask,
@@ -89,7 +89,7 @@ isEditorFocused: i,
 onSelectSticker: o,
 stickerIconVisible: _ = !1,
 submitButtonVisible: E = !1
-  } = e, I = s.useContext(m.ZP), [v, O] = s.useState(null), [U, w] = s.useState(!1), [B, F] = s.useState(null), V = (0, T.Iu)(e => null != e.activeView), H = s.useRef(null), [Z, Y] = s.useState(''), [j, W] = s.useState(''), [K, z] = s.useState(!1), [q, Q] = s.useState(!1), X = (0, D.Z)(Z, U, r), {
+  } = e, m = s.useContext(I.ZP), [v, O] = s.useState(null), [U, w] = s.useState(!1), [B, F] = s.useState(null), V = (0, T.Iu)(e => null != e.activeView), H = s.useRef(null), [Z, Y] = s.useState(''), [j, W] = s.useState(''), [K, z] = s.useState(!1), [q, Q] = s.useState(!1), X = (0, D.Z)(Z, U, r), {
 analyticsLocations: $
   } = (0, p.ZP)(h.Z.EXPRESSION_SUGGESTIONS), {
 handleTextChange: J,
@@ -111,13 +111,13 @@ let e = e => {
       O(null), null === (r = n.current) || void 0 === r || r.focus();
     }
   };
-return I.addListener('text-changed', J), I.addListener('autocomplete-visibility-change', e), I.addListener('selection-changed', t), () => {
-  I.removeListener('text-changed', J), I.removeListener('autocomplete-visibility-change', e), I.removeListener('selection-changed', t);
+return m.addListener('text-changed', J), m.addListener('autocomplete-visibility-change', e), m.addListener('selection-changed', t), () => {
+  m.removeListener('text-changed', J), m.removeListener('autocomplete-visibility-change', e), m.removeListener('selection-changed', t);
 };
   }, [
 J,
 n,
-I
+m
   ]), s.useLayoutEffect(() => {
 null == v && F(null);
   }, [v]);
@@ -212,15 +212,15 @@ es = (e, t) => {
         analyticsLocations: $
       });
     }
-    I.emit('sticker-suggestions-hidden');
+    m.emit('sticker-suggestions-hidden');
   }
 },
 eo = s.useRef([]),
 el = s.useRef(!1);
   s.useEffect(() => {
-ei && (eo.current = X), ei !== el.current && (I.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, L.Tk)(Z), W(Z))), el.current = ei;
+ei && (eo.current = X), ei !== el.current && (m.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, L.Tk)(Z), W(Z))), el.current = ei;
   }, [
-I,
+m,
 ei,
 X,
 Z

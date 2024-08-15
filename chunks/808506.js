@@ -10,8 +10,8 @@ var a, s, o, l, u, c, d = n(807864),
   f = n(26151),
   h = n(224706),
   p = n(765250),
-  m = n(13245),
-  I = n(287734),
+  I = n(13245),
+  m = n(287734),
   T = n(579806),
   g = n(887278),
   S = n(490029),
@@ -381,7 +381,7 @@ function ed() {
 
 function e_(e) {
   let t = L.Z.getGameForPID(e);
-  m.Z.setAssociatedGame(null != W ? W : -1, e, t);
+  I.Z.setAssociatedGame(null != W ? W : -1, e, t);
 }
 let eE = (() => {
   let e = null;
@@ -393,7 +393,7 @@ try {
   let {
     OutOfProcess: r
   } = await eu();
-  return null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setClickZoneCallback(ev), r.setHostWindowCallbacks(ec, ed, e_), r.setFocusCallback(ep), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, em), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, eI), r;
+  return null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setClickZoneCallback(ev), r.setHostWindowCallbacks(ec, ed, e_), r.setFocusCallback(ep), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, eI), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, em), r;
 } catch (e) {
   throw $.error('failed loading out of process overlay', e), e;
 }
@@ -427,15 +427,15 @@ var t, n;
 if ((null !== (n = null === (t = k[null != j ? j : 0]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : G.gl.Disabled) === G.gl.OutOfProcess)
   return;
   }
-  m.Z.setFocusedPID(0 === e ? null : e);
-}
-
-function em(e) {
-  j = null;
+  I.Z.setFocusedPID(0 === e ? null : e);
 }
 
 function eI(e) {
-  m.Z.successfullyShown(e);
+  j = null;
+}
+
+function em(e) {
+  I.Z.successfullyShown(e);
 }
 
 function eT(e, t, n) {
@@ -488,7 +488,7 @@ eS(e);
 let eN = null;
 
 function ev(e, t, n) {
-  m.Z.relayClickZoneClicked(e, t, n);
+  I.Z.relayClickZoneClicked(e, t, n);
 }
 async function eO(e) {
   if (!!(0, w.VS)())
@@ -552,7 +552,7 @@ case x.BmY.CONNECT:
       pid: i,
       token: a,
       payloads: [n]
-    }), en(i, 'READY'), m.Z.overlayReady(i);
+    }), en(i, 'READY'), I.Z.overlayReady(i);
   });
   break;
 case x.BmY.DISPATCH:
@@ -625,7 +625,7 @@ let t = () => new Promise(e => {
   }),
   n = 0,
   r = () => {
-    15 === n ? m.Z.notifyReadyToShow(e.associatedGamePID) : (n += 1, t().then(r));
+    15 === n ? I.Z.notifyReadyToShow(e.associatedGamePID) : (n += 1, t().then(r));
   };
 r();
   }
@@ -679,7 +679,7 @@ let {
 } = e;
 K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
 let n = new URLSearchParams();
-n.append('build_id', '0df05e92a6ab1215499ef1071dc57764084a64ab'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
+n.append('build_id', 'd1dcdc31379c3e2f78d0f9e04ec348a61ab80603'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString());
   },
   OVERLAY_CALL_PRIVATE_CHANNEL: function(e) {
 let {
@@ -687,7 +687,7 @@ let {
   ring: n
 } = e;
 setImmediate(() => {
-  I.default.selectPrivateChannel(t), f.Z.call(t, !1, !!n);
+  m.default.selectPrivateChannel(t), f.Z.call(t, !1, !!n);
 });
   },
   OVERLAY_JOIN_GAME: function(e) {
@@ -705,7 +705,7 @@ setImmediate(() => {
     applicationId: r,
     channelId: i,
     messageId: a
-  }), null != j && m.Z.setLocked(!0, j);
+  }), null != j && I.Z.setLocked(!0, j);
 });
   },
   OVERLAY_CRASHED: function(e) {

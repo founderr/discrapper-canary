@@ -10,10 +10,10 @@ return T;
 return g;
   },
   getPlatform: function() {
-return m;
+return I;
   },
   getPlatformName: function() {
-return I;
+return m;
   },
   isAndroid: function() {
 return h;
@@ -67,7 +67,7 @@ function d() {
 }
 
 function _() {
-  return 'WEB' === m();
+  return 'WEB' === I();
 }
 
 function E() {
@@ -87,11 +87,11 @@ function p() {
   return 'ios' === o;
 }
 
-function m() {
+function I() {
   return l() ? 'WINDOWS' : u() ? 'OSX' : c() ? 'LINUX' : 'WEB';
 }
 
-function I() {
+function m() {
   return o;
 }
 

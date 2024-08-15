@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return P;
+return O;
   }
 }), n(47120), n(724458), n(653041);
 var i = n(735250),
@@ -24,8 +24,8 @@ var i = n(735250),
   N = n(979651),
   x = n(709054),
   S = n(853856),
-  Z = n(593214),
-  v = n(919755),
+  v = n(593214),
+  Z = n(919755),
   T = n(110977),
   L = n(603274),
   A = n(981631),
@@ -39,13 +39,13 @@ object: A.qAy.CHANNEL
   }
 };
 
-function P() {
+function O() {
   let e = (0, s.Ie)('favorites'),
 {
   favoriteAdded: t,
   clearFavoriteAdded: r
-} = (0, Z.up)(),
-[P, O] = l.useState(!1),
+} = (0, v.up)(),
+[O, P] = l.useState(!1),
 {
   favoriteServerMuted: y,
   favoriteChannels: j
@@ -59,7 +59,7 @@ U = (0, m.Z)(e => e.guildId) === A.I_8,
 {
   badge: G,
   unread: k
-} = (0, v.Z)(j),
+} = (0, Z.Z)(j),
 B = function(e) {
   let t = (0, o.e7)([E.Z], () => E.Z.getVoiceChannelId()),
     n = null != t && null != e[t],
@@ -103,7 +103,7 @@ V = l.useCallback(() => {
 children: [
   (0, i.jsx)(p.Z, {
     selected: U,
-    hovered: P,
+    hovered: O,
     unread: k && !y,
     className: M.pill
   }),
@@ -111,7 +111,7 @@ children: [
     onShow: V,
     children: (0, i.jsx)(T.S, {
       children: (0, i.jsx)(c.BlobMask, {
-        selected: U || P,
+        selected: U || O,
         upperBadge: B,
         lowerBadge: H,
         children: (0, i.jsx)(c.NavItem, {
@@ -124,9 +124,9 @@ children: [
             pathname: A.Z5c.CHANNEL(A.I_8, D),
             state: R
           },
-          selected: U || P,
-          onMouseEnter: () => O(!0),
-          onMouseLeave: () => O(!1),
+          selected: U || O,
+          onMouseEnter: () => P(!0),
+          onMouseLeave: () => P(!1),
           onMouseDown: function() {
             if (null != w)
               u.Z.preload(w.guild_id, w.id);

@@ -65,12 +65,12 @@ body: {
   })).body) : [];
 }
 
-function m() {
+function I() {
   c = {
 ...a.Z.getCollapsedCategories()
   };
 }
-class I extends i.Z {
+class m extends i.Z {
   constructor(...e) {
 super(...e), u(this, 'actions', {
   CATEGORY_COLLAPSE: f,
@@ -78,8 +78,8 @@ super(...e), u(this, 'actions', {
   CATEGORY_COLLAPSE_ALL: f,
   CATEGORY_EXPAND_ALL: f,
   POST_CONNECTION_OPEN: E,
-  USER_GUILD_SETTINGS_FULL_UPDATE: m
+  USER_GUILD_SETTINGS_FULL_UPDATE: I
 }), u(this, 'saveUserGuildSettings', h), u(this, 'saveUserGuildSettingsBulk', p);
   }
 }
-t.Z = new I();
+t.Z = new m();

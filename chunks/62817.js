@@ -11,11 +11,11 @@ let c = Object.freeze([]),
 
 function p(e, t) {}
 
-function m() {
+function I() {
   h = {};
 }
 
-function I(e, t) {
+function m(e, t) {
   let n = d[e];
   return null != n && (d[e] = n.filter(e => e.id !== t), delete _[t], delete E[t], n.length !== d[e].length);
 }
@@ -107,14 +107,14 @@ let {
   channelId: t,
   file: n
 } = e;
-return I(t, n.id);
+return m(t, n.id);
   },
   UPLOAD_FAIL: function(e) {
 let {
   channelId: t,
   file: n
 } = e;
-return I(t, n.id);
+return m(t, n.id);
   },
   UPLOAD_CANCEL_REQUEST: function(e) {
 let {

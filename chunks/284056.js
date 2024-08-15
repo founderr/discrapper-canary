@@ -20,7 +20,7 @@ var s = n(735250),
   C = n(689938),
   g = n(610781);
 
-function N(e, t, n) {
+function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -28,7 +28,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class p extends a.PureComponent {
+class N extends a.PureComponent {
   componentDidMount() {
 this._initTimeout.start(1000, this.setupVoiceActivity);
   }
@@ -156,14 +156,14 @@ return _ && e && !c && this._micTestStop(), (0, s.jsxs)('div', {
 });
   }
   constructor(...e) {
-super(...e), N(this, '_initTimeout', new c.V7()), N(this, '_silenceTimeout', new c.V7()), N(this, '_messageTimeout', new c.V7()), N(this, '_micTestStartTime', void 0), N(this, 'state', {
+super(...e), p(this, '_initTimeout', new c.V7()), p(this, '_silenceTimeout', new c.V7()), p(this, '_messageTimeout', new c.V7()), p(this, '_micTestStartTime', void 0), p(this, 'state', {
   volume: -100,
   isMicTesting: !1,
   isDetectingInput: !0,
   didDeafenUser: !1
-}), N(this, 'setupVoiceActivity', () => {
+}), p(this, 'setupVoiceActivity', () => {
   E.Z.getMediaEngine().on(o.aB.VoiceActivity, this.handleVoiceActivity);
-}), N(this, 'handleVoiceActivity', e => {
+}), p(this, 'handleVoiceActivity', e => {
   let {
     isMicTesting: t
   } = this.state;
@@ -181,7 +181,7 @@ super(...e), N(this, '_initTimeout', new c.V7()), N(this, '_silenceTimeout', new
     volume: e,
     isDetectingInput: !0
   });
-}), N(this, 'handleToggleMicTest', () => {
+}), p(this, 'handleToggleMicTest', () => {
   this.state.isMicTesting ? this._micTestStop() : this._micTestStart();
 });
   }
@@ -218,4 +218,4 @@ vadAutoThreshold: l.autoThreshold,
 inputDeviceName: null != n ? n.name : '',
 outputDeviceName: null != r ? r.name : ''
   };
-})(p);
+})(N);

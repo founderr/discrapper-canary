@@ -23,11 +23,11 @@ writable: !0
 }
 let p = n(981631).en1 + 500;
 (a = r || (r = {}))[a.ChannelMessage = 0] = 'ChannelMessage', a[a.ThreadSettings = 1] = 'ThreadSettings', a[a.FirstThreadMessage = 2] = 'FirstThreadMessage', a[a.ApplicationLauncherCommand = 3] = 'ApplicationLauncherCommand', a[a.Poll = 4] = 'Poll', a[a.SlashCommand = 5] = 'SlashCommand';
-let m = {};
+let I = {};
 
-function I(e) {
-  let t = m[e];
-  return null == t && (t = m[e] = {}), t;
+function m(e) {
+  let t = I[e];
+  return null == t && (t = I[e] = {}), t;
 }
 
 function T(e) {
@@ -41,7 +41,7 @@ draftType: i
   let s = _.default.getId();
   if (null != s && null != r && '' !== r) {
 var o, l;
-let e = I(s),
+let e = m(s),
   t = e[n];
 if (null == t && (t = e[n] = {}), (l = r).length > p && (l = l.substr(0, p)), (r = l) === (null === (o = t[i]) || void 0 === o ? void 0 : o.draft))
   return !1;
@@ -58,7 +58,7 @@ function g(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.default.getId();
   if (null == n)
 return !1;
-  let r = I(n),
+  let r = m(n),
 i = r[e];
   if (null == i)
 return !1;
@@ -69,7 +69,7 @@ function S() {
   let e = _.default.getId();
   if (null == e || f.Z.totalUnavailableGuilds > 0)
 return;
-  let t = I(e);
+  let t = m(e);
   for (let e in t)
 null == E.Z.getChannel(e) && delete t[e];
 }
@@ -82,13 +82,13 @@ channel: {
   } = e, n = _.default.getId();
   if (null == n)
 return !1;
-  let r = I(n);
+  let r = m(n);
   return delete r[t], !1;
 }
 class N extends(i = l.ZP.PersistedStore) {
   initialize(e) {
-m = null != e ? e : {}, ! function() {
-  for (let [e, t] of d.default.entries(m))
+I = null != e ? e : {}, ! function() {
+  for (let [e, t] of d.default.entries(I))
     for (let [n, r] of d.default.entries(t)) {
       let t = r[0];
       null != t && ('' === t.draft || '' === t.draft.trim()) && g(n, 0, e);
@@ -96,13 +96,13 @@ m = null != e ? e : {}, ! function() {
 }(), this.waitFor(_.default, E.Z, f.Z);
   }
   getState() {
-return m;
+return I;
   }
   getThreadDraftWithParentMessageId(e) {
 let t = _.default.getId();
 if (null == t)
   return;
-let n = I(t),
+let n = m(t),
   r = d.default.keys(n).find(t => {
     let n = this.getThreadSettings(t);
     return (null == n ? void 0 : n.parentMessageId) === e;
@@ -113,7 +113,7 @@ return null != r ? this.getThreadSettings(r) : void 0;
 let t = _.default.getId();
 if (null == t)
   return [];
-let n = I(t);
+let n = m(t);
 return o()(n).mapValues(t => null == t ? void 0 : t[e]).pickBy(c.lm).toPairs().map(e => {
   let [t, {
     timestamp: n,
@@ -135,7 +135,7 @@ return o()(n).mapValues(t => null == t ? void 0 : t[e]).pickBy(c.lm).toPairs().m
 let n = _.default.getId();
 if (null == n)
   return '';
-let r = I(n)[e];
+let r = m(n)[e];
 if (null != r) {
   let e = r[t];
   if (null != e)
@@ -147,7 +147,7 @@ return '';
 let t = _.default.getId();
 if (null == t)
   return null;
-let n = I(t)[e];
+let n = m(t)[e];
 return null == n ? null : n[1];
   }
 }
@@ -174,13 +174,13 @@ return n;
 ]), t.Z = new N(u.Z, {
   CONNECTION_OPEN: function() {
 let e = _.default.getId();
-return !(e in m) && (m[e] = {}), S(), !1;
+return !(e in I) && (I[e] = {}), S(), !1;
   },
   LOGOUT: function(e) {
-!e.isSwitchingAccount && (m = {});
+!e.isSwitchingAccount && (I = {});
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
-e.userId in m && delete m[e.userId];
+e.userId in I && delete I[e.userId];
   },
   GUILD_DELETE: function() {
 return S(), !1;
@@ -193,7 +193,7 @@ let {
 } = e, n = _.default.getId();
 if (null == n || t.ownerId === n)
   return !1;
-let r = I(n),
+let r = m(n),
   i = r[t.parent_id];
 if (null == i)
   return !1;
@@ -232,7 +232,7 @@ let {
 } = e, r = _.default.getId();
 if (null == r)
   return;
-let i = I(r),
+let i = m(r),
   a = i[t];
 null == a && (a = i[t] = {}), a[1] = {
   timestamp: Date.now(),

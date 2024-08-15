@@ -1,12 +1,12 @@
 n.d(t, {
   In: function() {
-return I;
+return m;
   },
   Lr: function() {
 return h;
   },
   PR: function() {
-return m;
+return I;
   },
   k: function() {
 return f;
@@ -74,7 +74,7 @@ body: {
   });
 }
 
-function m(e) {
+function I(e) {
   let t = c.default.getUser(e);
   return null != t ? Promise.resolve(t) : o.tn.get({
 url: _.ANM.USER(e),
@@ -84,7 +84,7 @@ type: 'USER_UPDATE',
 user: t.body
   }), c.default.getUser(e)));
 }
-async function I(e) {
+async function m(e) {
   let {
 friendToken: t,
 withMutualGuilds: n,

@@ -1,6 +1,6 @@
 n.d(t, {
   Iu: function() {
-return m;
+return I;
   },
   PG: function() {
 return d;
@@ -84,4 +84,4 @@ let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   isSearchSuggestion: t
 }));
   },
-  m = c;
+  I = c;

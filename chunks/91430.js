@@ -30,8 +30,8 @@ var n = t(735250),
   C = t(600164),
   m = t(925329),
   A = t(963249),
-  g = t(301766),
-  O = t(594174),
+  O = t(301766),
+  g = t(594174),
   h = t(626135),
   p = t(63063),
   R = t(74538),
@@ -53,8 +53,8 @@ function B(e) {
   fromStandaloneBillingPage: i = !0,
   className: o
 } = e,
-c = (0, _.e7)([O.default], () => {
-  let e = O.default.getCurrentUser();
+c = (0, _.e7)([g.default], () => {
+  let e = g.default.getCurrentUser();
   return l()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e;
 });
   if (0 === (0, R.uV)(t.additionalPlans))
@@ -420,14 +420,14 @@ renewal: !0,
 applyEntitlements: !0,
 analyticsLocations: I,
 analyticsLocation: E
-  }), A = (0, _.e7)([O.default], () => {
+  }), A = (0, _.e7)([g.default], () => {
 var e;
-return null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
+return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
   }), h = d()(a.currentPeriodEnd), p = null != a.paymentSourceId, R = null !== (s = null == m ? void 0 : m.total) && void 0 !== s ? s : 0, x = null == r ? void 0 : r.invalid, D = !p && R > 0 && (7 >= h.diff(d()(), 'days') || a.status === Z.O0b.PAST_DUE) && !A && !a.isPurchasedExternally, P = x && a.status === Z.O0b.PAST_DUE && !A && !a.isPurchasedExternally, L = (0, f.U)(), B = !A && L, y = (null == a ? void 0 : a.status) === Z.O0b.PAST_DUE ? d()().diff(d()(a.currentPeriodStart), 'days') : 0, [V] = (0, M.Ox)({
 subscriptionId: a.id,
 preventFetch: !B
   });
-  return null == C || null == m ? (0, n.jsx)(u.Spinner, {}) : (null != a.renewalMutations && (a.renewalMutations.planId !== a.planId && !(0, g.Q0)(a.renewalMutations.planId) || a.hasExternalPlanChange) && (t = (0, n.jsx)(b.Z, {
+  return null == C || null == m ? (0, n.jsx)(u.Spinner, {}) : (null != a.renewalMutations && (a.renewalMutations.planId !== a.planId && !(0, O.Q0)(a.renewalMutations.planId) || a.hasExternalPlanChange) && (t = (0, n.jsx)(b.Z, {
 subscription: a,
 renewalMutations: a.renewalMutations,
 className: j.renewalMutationNotice,

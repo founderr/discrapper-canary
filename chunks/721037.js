@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(210887),
   h = n(442917),
   p = n(592125),
-  m = n(366050),
-  I = n(944486),
+  I = n(366050),
+  m = n(944486),
   T = n(451478),
   g = n(823379),
   S = n(981631),
@@ -75,8 +75,8 @@ t.Z = a.ZP.connectStores([
   T.Z,
   f.Z,
   p.Z,
-  I.Z,
   m.Z,
+  I.Z,
   d.Z
 ], e => {
   var t, n, r, i;
@@ -85,7 +85,7 @@ t.Z = a.ZP.connectStores([
 } = e,
 c = E.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT),
 _ = o.ZP.getCurrentEmbeddedActivity(),
-h = null != _ && !(0, u.Z)(_.channelId, p.Z, I.Z),
+h = null != _ && !(0, u.Z)(_.channelId, p.Z, m.Z),
 v = o.ZP.getActivityPanelMode(),
 O = h && v === A.Ez.PANEL,
 R = null != _ && (null === (t = d.Z.getSelectedParticipant(_.channelId)) || void 0 === t ? void 0 : t.type) === N.fO.ACTIVITY,
@@ -98,9 +98,9 @@ C = null == e ? C : {
 };
   }
   let y = s ? S.IlC.POPOUT : S.IlC.APP;
-  a = s && h ? null : s || !c || h ? null != _ && O ? null !== (n = m.Z.pipActivityWindow) && void 0 !== n ? n : m.Z.pipVideoWindow : null !== (r = m.Z.pipVideoWindow) && void 0 !== r ? r : m.Z.pipActivityWindow : null;
-  let D = Array.from(m.Z.pipWindows.values()),
-L = m.Z.pipWidth,
+  a = s && h ? null : s || !c || h ? null != _ && O ? null !== (n = I.Z.pipActivityWindow) && void 0 !== n ? n : I.Z.pipVideoWindow : null !== (r = I.Z.pipVideoWindow) && void 0 !== r ? r : I.Z.pipActivityWindow : null;
+  let D = Array.from(I.Z.pipWindows.values()),
+L = I.Z.pipWidth,
 b = D.find(e => e.component === S.NYg.VIDEO),
 M = [
   b,
@@ -114,7 +114,7 @@ pipWidth: L,
 maxX: C.width,
 maxY: C.height,
 theme: f.Z.theme,
-dockedRect: m.Z.getDockedRect(null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : ''),
+dockedRect: I.Z.getDockedRect(null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : ''),
 appContext: y,
 roundCorners: !P
   };

@@ -9,7 +9,7 @@ return f;
 return E;
   },
   jU: function() {
-return m;
+return I;
   },
   nG: function() {
 return h;
@@ -65,6 +65,6 @@ l.Z
   ], () => null != e && l.Z.can(_.Plq.MUTE_MEMBERS, s.Z.getChannel(e)), [e]);
 }
 
-function m(e) {
+function I(e) {
   return !!(null != e && e.isGuildStageVoice() && a.Z.isLurking(e.guild_id) && d.Z.isPublic(e.id)) && l.Z.can(c.gl, e);
 }

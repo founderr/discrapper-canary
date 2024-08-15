@@ -23,9 +23,9 @@ var r = n(470079),
   f = n(894344),
   h = n(203777),
   p = n(616922);
-let m = 30 * l.Z.Millis.SECOND;
+let I = 30 * l.Z.Millis.SECOND;
 
-function I(e) {
+function m(e) {
   let {
 currentUserTrackId: t,
 syncingWithUser: n,
@@ -42,7 +42,7 @@ o,
 u
   ]);
   let d = r.useCallback(() => {
-  l(!0), u.start(m, () => l(!1));
+  l(!0), u.start(I, () => l(!1));
 }, [u]),
 _ = r.useCallback(() => {
   l(!1), u.stop();
@@ -75,7 +75,7 @@ function g(e, t, n) {
   loading: l,
   startLoading: u,
   clearLoading: c
-} = I(i),
+} = m(i),
 E = r.useCallback(() => {
   u(), (0, h.Z)(i, p.kG.USER_ACTIVITY_PLAY, n).catch(c);
 }, [
@@ -105,15 +105,15 @@ s = T(e, t),
 {
   loading: E,
   startLoading: h,
-  clearLoading: m
-} = I(s),
+  clearLoading: I
+} = m(s),
 g = r.useCallback(() => {
-  h(), (0, f.Z)(s, p.kG.USER_ACTIVITY_SYNC, n).catch(m);
+  h(), (0, f.Z)(s, p.kG.USER_ACTIVITY_SYNC, n).catch(I);
 }, [
   s,
   n,
   h,
-  m
+  I
 ]);
   return {
 label: (0, d.Z)(s, p.kG.USER_ACTIVITY_SYNC),
@@ -137,7 +137,7 @@ function A(e, t, n) {
   loading: u,
   startLoading: c,
   clearLoading: E
-} = I(i),
+} = m(i),
 h = r.useCallback(() => {
   c(), (0, f.Z)(i, p.kG.EMBED_SYNC, n).catch(E);
 }, [

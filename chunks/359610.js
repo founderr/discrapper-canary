@@ -1,24 +1,24 @@
-n.d(t, {
+i.d(n, {
   Z: function() {
-return a;
+return r;
   }
 });
-var r = n(735250);
-n(470079);
-var i = n(481060);
+var t = i(735250);
+i(470079);
+var a = i(481060);
 
-function a(e) {
+function r(e) {
   let {
-children: t,
-className: n,
-size: a = i.Button.Sizes.SMALL,
-...s
+children: n,
+className: i,
+size: r = a.Button.Sizes.SMALL,
+...o
   } = e;
-  return (0, r.jsx)(i.Button, {
-...s,
-color: i.Button.Colors.BRAND,
-size: a,
-className: n,
-children: t
+  return (0, t.jsx)(a.Button, {
+...o,
+color: a.Button.Colors.BRAND,
+size: r,
+className: i,
+children: n
   });
 }

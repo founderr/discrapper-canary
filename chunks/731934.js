@@ -15,8 +15,8 @@ var s = n(735250),
   R = n(631885),
   C = n(895328),
   g = n(568671),
-  N = n(419821),
-  p = n(367515),
+  p = n(419821),
+  N = n(367515),
   A = n(250285),
   m = n(292352),
   f = n(134612),
@@ -153,7 +153,7 @@ children: [
   });
 }
 
-function L(e) {
+function v(e) {
   let {
 sectionType: t,
 sectionTitle: n,
@@ -166,9 +166,9 @@ let {
 return null == i ? null : (0, s.jsx)(A.Z, {
   userId: i.id,
   isLast: l,
-  children: () => t === m.ne.ACTIVE ? (0, s.jsx)(N.u, {
+  children: () => t === m.ne.ACTIVE ? (0, s.jsx)(p.u, {
     user: i
-  }) : (0, s.jsx)(p.B, {
+  }) : (0, s.jsx)(N.B, {
     user: i
   })
 }, i.id);
@@ -217,7 +217,7 @@ children: (0, s.jsx)(o.bG, {
 })
   });
 }
-let v = () => {
+let L = () => {
 let e = (0, I.Z)(),
   t = (0, R.mq)(m.ne.ACTIVE),
   n = e ? m.AG : m.i0,
@@ -227,7 +227,7 @@ let e = (0, I.Z)(),
   },
   r = (0, E.o)(S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(a), S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(a));
 return (0, s.jsx)(s.Fragment, {
-  children: t.length > 0 ? (0, s.jsx)(L, {
+  children: t.length > 0 ? (0, s.jsx)(v, {
     sectionType: m.ne.ACTIVE,
     sectionTitle: r,
     requests: t
@@ -307,7 +307,7 @@ let e = (0, R.mq)(m.ne.PENDING),
   }), S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
     count: e.length
   }));
-return 0 === e.length ? null : (0, s.jsx)(L, {
+return 0 === e.length ? null : (0, s.jsx)(v, {
   sectionType: m.ne.PENDING,
   sectionTitle: t,
   requests: e
@@ -319,7 +319,7 @@ t.Z = () => {
 className: h.container,
 children: [
   e ? (0, s.jsx)(O, {}) : (0, s.jsx)(P, {}),
-  (0, s.jsx)(v, {}),
+  (0, s.jsx)(L, {}),
   (0, s.jsx)(B, {}),
   (0, s.jsx)(Z, {}),
   (0, s.jsx)(D, {})

@@ -36,14 +36,14 @@ for (var c = [], d = [], _ = [], E = 0; E < o - 1; E++)
   n = e[E + 1] - e[E], r = t[E + 1] - t[E], d.push(n), c.push(r), _.push(r / n);
 for (var f = [_[0]], h = 0; h < d.length - 1; h++) {
   var p = _[h],
-    m = _[h + 1];
-  if (p * m <= 0)
+    I = _[h + 1];
+  if (p * I <= 0)
     f.push(0);
   else {
     n = d[h];
-    var I = d[h + 1],
-      T = n + I;
-    f.push(3 * T / ((T + I) / p + (T + n) / m));
+    var m = d[h + 1],
+      T = n + m;
+    f.push(3 * T / ((T + m) / p + (T + n) / I));
   }
 }
 f.push(_[_.length - 1]);

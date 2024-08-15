@@ -67,7 +67,7 @@ function u(e, t, n, r, i, a, s, o) {
   }, this.d = {
     x: s,
     y: o
-  }, null != s && null != o ? (this.getArcLength = m, this.getPoint = f, this.getDerivative = d) : (this.getArcLength = h, this.getPoint = E, this.getDerivative = c), this.init();
+  }, null != s && null != o ? (this.getArcLength = I, this.getPoint = f, this.getDerivative = d) : (this.getArcLength = h, this.getPoint = E, this.getDerivative = c), this.init();
 }
 
 function c(e, t, n) {
@@ -145,7 +145,7 @@ function p(e, t, n) {
   return p(e - 1, t, a);
 }
 
-function m(e, t, n) {
+function I(e, t, n) {
   var r, i, a, s;
   for (void 0 === n && (n = 1), r = n / 2, i = 0, a = 0; a < 20; a++)
     s = r * eg[20][a] + r, i += eS[20][a] * function(e, t, n) {
@@ -156,7 +156,7 @@ function m(e, t, n) {
   return r * i;
 }
 
-function I(e, t, n, r) {
+function m(e, t, n, r) {
   var i = e * n + t * r;
   return i > 1 && (i = 1), i < -1 && (i = -1), (e * r - t * n < 0 ? -1 : 1) * Math.acos(i);
 }
@@ -1057,7 +1057,7 @@ var eo = {
   },
   ed = 2 * Math.PI,
   e_ = function(e, t, n, r, i, a, o, l, u) {
-    var c, d, _, E, f, h, p, m, I, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P = Math.sin(u * ed / 360),
+    var c, d, _, E, f, h, p, I, m, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P = Math.sin(u * ed / 360),
       U = Math.cos(u * ed / 360),
       w = U * (e - n) / 2 + P * (t - r) / 2,
       x = -P * (e - n) / 2 + U * (t - r) / 2;
@@ -1066,9 +1066,9 @@ var eo = {
     o = Math.abs(o);
     var G = w * w / (o * o) + x * x / ((l = Math.abs(l)) * l);
     G > 1 && (o *= Math.sqrt(G), l *= Math.sqrt(G));
-    var k = (c = e, d = t, _ = n, E = r, f = i, h = a, p = o, m = l, I = P, g = (T = U) * (c - _) / 2 + I * (d - E) / 2, S = -I * (c - _) / 2 + T * (d - E) / 2, A = p * p, N = m * m, v = g * g, (R = A * N - A * (O = S * S) - N * v) < 0 && (R = 0), R /= A * O + N * v, C = (R = Math.sqrt(R) * (f === h ? -1 : 1)) * p / m * S, y = -(R * m) / p * g, b = s(1, 0, D = (g - C) / p, L = (S - y) / m), M = s(D, L, (-g - C) / p, (-S - y) / m), 0 === h && M > 0 && (M -= ed), 1 === h && M < 0 && (M += ed), [
-        T * C - I * y + (c + _) / 2,
-        I * C + T * y + (d + E) / 2,
+    var k = (c = e, d = t, _ = n, E = r, f = i, h = a, p = o, I = l, m = P, g = (T = U) * (c - _) / 2 + m * (d - E) / 2, S = -m * (c - _) / 2 + T * (d - E) / 2, A = p * p, N = I * I, v = g * g, (R = A * N - A * (O = S * S) - N * v) < 0 && (R = 0), R /= A * O + N * v, C = (R = Math.sqrt(R) * (f === h ? -1 : 1)) * p / I * S, y = -(R * I) / p * g, b = s(1, 0, D = (g - C) / p, L = (S - y) / I), M = s(D, L, (-g - C) / p, (-S - y) / I), 0 === h && M > 0 && (M -= ed), 1 === h && M < 0 && (M += ed), [
+        T * C - m * y + (c + _) / 2,
+        m * C + T * y + (d + E) / 2,
         b,
         M
       ]),
@@ -1398,11 +1398,11 @@ var ef = l,
     z: 0
   },
   ep = /([astvzqmhlc])([^astvzqmhlc]*)/gi,
-  em = function(e) {
+  eI = function(e) {
     var t = [];
     return e.replace(ep, function(e, n, r) {
       var i, a = n.toLowerCase();
-      for (r = (i = r.match(eI)) ? i.map(Number) : [], 'm' === a && r.length > 2 && (t.push([n].concat(r.splice(0, 2))), a = 'l', n = 'm' === n ? 'l' : 'L'); r.length >= 0;) {
+      for (r = (i = r.match(em)) ? i.map(Number) : [], 'm' === a && r.length > 2 && (t.push([n].concat(r.splice(0, 2))), a = 'l', n = 'm' === n ? 'l' : 'L'); r.length >= 0;) {
         if (r.length === eh[a])
           return r.unshift(n), t.push(r);
         if (r.length < eh[a])
@@ -1411,7 +1411,7 @@ var ef = l,
       }
     }), t;
   },
-  eI = /-?[0-9]*\.?[0-9]+(?:e[-+]?\d+)?/gi,
+  em = /-?[0-9]*\.?[0-9]+(?:e[-+]?\d+)?/gi,
   eT = function(e, t, n, r, i, a, s, o) {
     return new u(e, t, n, r, i, a, s, o);
   };
@@ -2257,7 +2257,7 @@ var eg = [
   ],
   eN = 2 * Math.PI,
   ev = function(e, t, n, r, i, a, s, o, l) {
-    var u, c, d, _, E, f, h, p, m, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P = Math.sin(i * eN / 360),
+    var u, c, d, _, E, f, h, p, I, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P = Math.sin(i * eN / 360),
       U = Math.cos(i * eN / 360),
       w = U * (e - o) / 2 + P * (t - l) / 2,
       x = -P * (e - o) / 2 + U * (t - l) / 2;
@@ -2266,9 +2266,9 @@ var eg = [
     n = Math.abs(n);
     var G = w * w / (n * n) + x * x / ((r = Math.abs(r)) * r);
     G > 1 && (n *= Math.sqrt(G), r *= Math.sqrt(G));
-    var k = (u = e, c = t, d = o, _ = l, E = a, f = s, h = n, p = r, m = P, g = (T = U) * (u - d) / 2 + m * (c - _) / 2, S = -m * (u - d) / 2 + T * (c - _) / 2, A = h * h, N = p * p, v = g * g, (R = A * N - A * (O = S * S) - N * v) < 0 && (R = 0), R /= A * O + N * v, C = (R = Math.sqrt(R) * (E === f ? -1 : 1)) * h / p * S, y = -(R * p) / h * g, b = I(1, 0, D = (g - C) / h, L = (S - y) / p), M = I(D, L, (-g - C) / h, (-S - y) / p), 0 === f && M > 0 && (M -= eN), 1 === f && M < 0 && (M += eN), [
-        T * C - m * y + (u + d) / 2,
-        m * C + T * y + (c + _) / 2,
+    var k = (u = e, c = t, d = o, _ = l, E = a, f = s, h = n, p = r, I = P, g = (T = U) * (u - d) / 2 + I * (c - _) / 2, S = -I * (u - d) / 2 + T * (c - _) / 2, A = h * h, N = p * p, v = g * g, (R = A * N - A * (O = S * S) - N * v) < 0 && (R = 0), R /= A * O + N * v, C = (R = Math.sqrt(R) * (E === f ? -1 : 1)) * h / p * S, y = -(R * p) / h * g, b = m(1, 0, D = (g - C) / h, L = (S - y) / p), M = m(D, L, (-g - C) / h, (-S - y) / p), 0 === f && M > 0 && (M -= eN), 1 === f && M < 0 && (M += eN), [
+        T * C - I * y + (u + d) / 2,
+        I * C + T * y + (c + _) / 2,
         b,
         M
       ]),
@@ -2378,7 +2378,7 @@ var eC = function(e) {
     function t(e) {
       if (!e)
         return null;
-      for (var a, s = em(e), o = [
+      for (var a, s = eI(e), o = [
           0,
           0
         ], l = [

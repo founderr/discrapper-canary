@@ -30,8 +30,8 @@ let {
   onKeyPress: f,
   autoComplete: h,
   forwardedRef: p,
-  closeIconClassName: m,
-  searchIconClassName: I,
+  closeIconClassName: I,
+  searchIconClassName: m,
   cta: T
 } = this.props, g = null != r && r.length > 0, S = null != p ? p : this._textInputRef;
 return (0, i.jsx)(l.FocusRing, {
@@ -73,12 +73,12 @@ return (0, i.jsx)(l.FocusRing, {
         children: (0, i.jsx)(l.CircleXIcon, {
           size: 'md',
           color: 'currentColor',
-          className: o()(c.clearIcon, m)
+          className: o()(c.clearIcon, I)
         })
       }) : (0, i.jsx)(l.MagnifyingGlassIcon, {
         size: 'md',
         color: 'currentColor',
-        className: o()(c.searchIcon, I),
+        className: o()(c.searchIcon, m),
         'aria-label': u.Z.Messages.SEARCH
       })
     ]

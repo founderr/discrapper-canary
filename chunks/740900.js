@@ -31,17 +31,17 @@ function p(e) {
   return e.isIncludedInSearchResults && t.push('INCLUDED_IN_SEARCH_RESULTS'), t;
 }
 
-function m(e) {
+function I(e) {
   return e.sort;
 }
 
-function I() {
-  return new o.h(p, m);
+function m() {
+  return new o.h(p, I);
 }
 (i = r || (r = {})).NEW_GUILD_MEMBER = 'NEW_GUILD_MEMBER', i.CURRENT_GUILD_MEMBER = 'CURRENT_GUILD_MEMBER', i.INCLUDED_IN_SEARCH_RESULTS = 'INCLUDED_IN_SEARCH_RESULTS';
 class T {
   reset() {
-this._membersMap.clear(), this._membersMap = I(), this.resetNewMemberTimestamp();
+this._membersMap.clear(), this._membersMap = m(), this.resetNewMemberTimestamp();
   }
   resetNewMemberTimestamp() {
 this.newMemberTimestamp = Date.now();
@@ -137,6 +137,6 @@ return this._membersMap.size(e);
 return this._membersMap.version;
   }
   constructor(e) {
-f(this, 'guildId', void 0), f(this, '_membersMap', void 0), f(this, 'newMemberTimestamp', Date.now()), this.guildId = e, this._membersMap = I();
+f(this, 'guildId', void 0), f(this, '_membersMap', void 0), f(this, 'newMemberTimestamp', Date.now()), this.guildId = e, this._membersMap = m();
   }
 }

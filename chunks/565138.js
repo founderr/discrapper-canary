@@ -11,9 +11,9 @@ var r, i = n(735250),
   f = n(451478),
   h = n(956664),
   p = n(153066),
-  m = n(815112);
+  I = n(815112);
 
-function I(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -121,7 +121,7 @@ let {
   iconSrc: t
 } = this.props;
 return null != e.icon || null != t ? null : (0, i.jsx)('div', {
-  className: m.acronym,
+  className: I.acronym,
   children: e.acronym
 });
   }
@@ -134,7 +134,7 @@ let {
   badgeTooltipDelay: a
 } = this.props;
 return e && null != t.hasFeature ? (0, i.jsx)(E.Z, {
-  className: m.guildIconBadge,
+  className: I.guildIconBadge,
   guild: t,
   badgeStrokeColor: n,
   tooltipColor: r,
@@ -155,7 +155,7 @@ let {
   tooltipPosition: E,
   onClick: f,
   to: h,
-  badgeStrokeColor: I,
+  badgeStrokeColor: m,
   animate: T,
   tabIndex: g,
   iconSrc: A,
@@ -163,10 +163,10 @@ let {
   ...v
 } = this.props, O = S[l], R = null != f ? d.Clickable : 'div';
 return (0, i.jsxs)(R, {
-  className: o()(m.icon, r, (0, p.l)(m, 'iconSize', l), {
-    [null !== (e = (0, p.l)(m, 'iconActive', l)) && void 0 !== e ? e : '']: s,
-    [m.iconInactive]: !s,
-    [m.noIcon]: null == n.icon
+  className: o()(I.icon, r, (0, p.l)(I, 'iconSize', l), {
+    [null !== (e = (0, p.l)(I, 'iconActive', l)) && void 0 !== e ? e : '']: s,
+    [I.iconInactive]: !s,
+    [I.noIcon]: null == n.icon
   }),
   'aria-hidden': N,
   style: null == n.icon ? {
@@ -243,7 +243,7 @@ return (0, i.jsx)(N, {
 });
   }
 }
-I(v, 'Sizes', T), I(v, 'defaultProps', {
+m(v, 'Sizes', T), m(v, 'defaultProps', {
   size: T.LARGE,
   textScale: 1,
   showBadge: !1,

@@ -9,10 +9,10 @@ return d;
 return h;
   },
   SJ: function() {
-return m;
+return I;
   },
   bG: function() {
-return I;
+return m;
   },
   eg: function() {
 return f;
@@ -120,14 +120,14 @@ tabIndex: i
   };
 }
 
-function m(e) {
+function I(e) {
   let {
 children: t
   } = e;
   return t(h());
 }
 
-function I(e) {
+function m(e) {
   let {
 children: t,
 navigator: n

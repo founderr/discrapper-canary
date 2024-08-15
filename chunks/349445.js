@@ -1,17 +1,17 @@
 n.d(t, {
   SV: function() {
-return r;
+return a;
   }
 });
 var i = n(470079);
 let o = (0, i.createContext)(null),
-  a = {
+  r = {
 didCatch: !1,
 error: null
   };
-class r extends i.Component {
+class a extends i.Component {
   constructor(e) {
-super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = a;
+super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = r;
   }
   static getDerivedStateFromError(e) {
 return {
@@ -24,12 +24,12 @@ let {
   error: e
 } = this.state;
 if (null !== e) {
-  for (var t, n, i = arguments.length, o = Array(i), r = 0; r < i; r++)
-    o[r] = arguments[r];
+  for (var t, n, i = arguments.length, o = Array(i), a = 0; a < i; a++)
+    o[a] = arguments[a];
   null === (t = (n = this.props).onReset) || void 0 === t || t.call(n, {
     args: o,
     reason: 'imperative-api'
-  }), this.setState(a);
+  }), this.setState(r);
 }
   }
   componentDidCatch(e, t) {
@@ -47,12 +47,12 @@ if (n && null !== t.error && function() {
       t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
     return e.length !== t.length || e.some((e, n) => !Object.is(e, t[n]));
   }(e.resetKeys, i)) {
-  var o, r;
-  null === (o = (r = this.props).onReset) || void 0 === o || o.call(r, {
+  var o, a;
+  null === (o = (a = this.props).onReset) || void 0 === o || o.call(a, {
     next: i,
     prev: e.resetKeys,
     reason: 'keys'
-  }), this.setState(a);
+  }), this.setState(r);
 }
   }
   render() {
@@ -60,18 +60,18 @@ let {
   children: e,
   fallbackRender: t,
   FallbackComponent: n,
-  fallback: a
+  fallback: r
 } = this.props, {
-  didCatch: r,
+  didCatch: a,
   error: c
 } = this.state, l = e;
-if (r) {
+if (a) {
   let e = {
     error: c,
     resetErrorBoundary: this.resetErrorBoundary
   };
-  if ((0, i.isValidElement)(a))
-    l = a;
+  if ((0, i.isValidElement)(r))
+    l = r;
   else if ('function' == typeof t)
     l = t(e);
   else if (n)
@@ -81,7 +81,7 @@ if (r) {
 }
 return (0, i.createElement)(o.Provider, {
   value: {
-    didCatch: r,
+    didCatch: a,
     error: c,
     resetErrorBoundary: this.resetErrorBoundary
   }

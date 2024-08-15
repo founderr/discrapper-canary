@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(786761),
   m = t(3148),
   A = t(739566),
-  g = t(753206),
-  O = t(440849),
+  O = t(753206),
+  g = t(440849),
   h = t(921801),
   p = t(196051),
   R = t(441729),
@@ -166,7 +166,7 @@ children: (0, n.jsxs)(d.Card, {
     }),
     (0, n.jsx)('div', {
       className: U.previewMessage,
-      children: (0, n.jsx)(g.Z, {
+      children: (0, n.jsx)(O.Z, {
         compact: e,
         author: {
           ...(0, A.ZH)(s),
@@ -405,14 +405,14 @@ children: [
   (0, n.jsx)(d.FormSwitch, {
     className: G.marginBottom40,
     value: e,
-    note: null != l ? (0, O.Z)(l) : void 0,
+    note: null != l ? (0, g.Z)(l) : void 0,
     onChange: f.QK.updateSetting,
     children: B.Z.Messages.GIF_AUTO_PLAY_LABEL
   }),
   (0, n.jsx)(d.FormSwitch, {
     className: r()(G.marginTop8, G.marginBottom20),
     value: s,
-    note: null != _ ? (0, O.Z)(_) : void 0,
+    note: null != _ ? (0, g.Z)(_) : void 0,
     onChange: f.Yk.updateSetting,
     children: B.Z.Messages.ANIMATE_EMOJI
   })
@@ -433,7 +433,7 @@ children: [
   (0, n.jsx)(d.FormText, {
     type: d.FormText.Types.DESCRIPTION,
     className: G.marginBottom8,
-    children: null != s ? (0, O.Z)(s) : B.Z.Messages.STICKERS_AUTO_PLAY_HELP
+    children: null != s ? (0, g.Z)(s) : B.Z.Messages.STICKERS_AUTO_PLAY_HELP
   }),
   (0, n.jsx)(d.RadioGroup, {
     options: [{

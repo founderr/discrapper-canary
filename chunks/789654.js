@@ -40,23 +40,23 @@ return e;
   }, e;
 }
 
-function j() {
+function w() {
   let e = v([
 '\n      export const rawPalette = {\n        ',
 '\n      } as const;\n    '
   ]);
-  return j = function() {
+  return w = function() {
 return e;
   }, e;
 }
-let w = {
+let C = {
 ...b.K,
 ...m.J,
 ...g.c
   },
-  C = {
-...E(b.K),
-...E(m.J)
+  j = {
+...I(b.K),
+...I(m.J)
   },
   N = [
 '100',
@@ -101,13 +101,13 @@ function T(e) {
   return 'name' in e;
 }
 
-function E(e) {
+function I(e) {
   let r = {};
   return Object.keys(e).forEach(t => {
 let a = e[t];
 if ('name' in a)
   a = function e(r) {
-    let t = w[r.name];
+    let t = C[r.name];
     return 'name' in t ? e(t) : t;
   }(a);
 r[t] = {
@@ -119,7 +119,7 @@ r[t] = {
   }), r;
 }
 
-function I(e, r) {
+function E(e, r) {
   let [t, a] = n.useState(() => {
 let t = h.K.get(e);
 return null != t ? t : r;
@@ -141,7 +141,7 @@ function Z() {
   rawPalette: r,
   semanticTokens: t
 }, i, l, s, h, m] = function(e, r) {
-  let [t, a] = I(''.concat(e, '-states'), [r]), [i, o] = I(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
+  let [t, a] = E(''.concat(e, '-states'), [r]), [i, o] = E(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
     a([
       e,
       ...t
@@ -172,12 +172,12 @@ function Z() {
   ];
 }('color-override-03-03-23', {
   rawPalette: p.b,
-  semanticTokens: C
+  semanticTokens: j
 }),
 [g, b] = n.useState(''),
-[v, w] = n.useState({}),
+[v, C] = n.useState({}),
 [S, T] = n.useState({}),
-E = n.useMemo(() => Object.keys(r).reduce((e, r) => [
+I = n.useMemo(() => Object.keys(r).reduce((e, r) => [
   ...e,
   {
     value: r,
@@ -273,8 +273,8 @@ O = n.useCallback(e => {
     return ''.concat(a ? '\n' : '').concat(u);
   }).join(',\n'));
 }, []),
-B = n.useCallback(e => c()(j(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
-A = n.useCallback(e => {
+A = n.useCallback(e => c()(w(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
+P = n.useCallback(e => {
   let r = {};
   Object.keys(e).forEach(t => {
     Object.keys(e[t]).map(a => {
@@ -336,7 +336,7 @@ children: [
             size: f.Button.Sizes.MIN,
             onClick: () => {
               navigator.clipboard.readText().then(e => {
-                A(JSON.parse(e));
+                P(JSON.parse(e));
               });
             },
             children: 'Import'
@@ -344,7 +344,7 @@ children: [
           (0, a.jsx)(f.Button, {
             size: f.Button.Sizes.MIN,
             onClick: () => {
-              navigator.clipboard.writeText(B(r));
+              navigator.clipboard.writeText(A(r));
             },
             children: 'Export'
           })
@@ -381,7 +381,7 @@ children: [
           onClick: () => {
             i({
               rawPalette: p.b,
-              semanticTokens: C
+              semanticTokens: j
             });
           },
           children: 'Reset all'
@@ -418,9 +418,9 @@ children: [
         margin: 8,
         alignItems: 'center'
       },
-      children: Object.keys(C).filter(e => '' === g || e.toLowerCase().includes(g)).map(r => {
+      children: Object.keys(j).filter(e => '' === g || e.toLowerCase().includes(g)).map(r => {
         var i;
-        let o = C[r][e],
+        let o = j[r][e],
           l = null == t[r] ? {
             ...o
           } : t[r][e],
@@ -443,7 +443,7 @@ children: [
               children: (0, a.jsx)(f.Checkbox, {
                 value: v[r],
                 onChange: () => {
-                  w(e => ({
+                  C(e => ({
                     ...e,
                     [r]: !e[r]
                   }));
@@ -455,7 +455,7 @@ children: [
             }),
             (0, a.jsx)(f.SearchableSelect, {
               value: l.color,
-              options: E,
+              options: I,
               onChange: t => {
                 Z(r, e, t, l.opacity);
               },

@@ -26,8 +26,8 @@ function A(e) {
 premiumSubscription: s,
 premiumType: t,
 onClose: A,
-confettiCanvas: g,
-userWasChurned: O = !1,
+confettiCanvas: O,
+userWasChurned: g = !1,
 userDiscountOffer: h
   } = e, p = (0, l.ZP)(), R = (0, r.wj)(p) ? C : m, x = a.useRef(null), [M, f] = a.useState(!1), D = (0, u._)(s, T.Xh.PREMIUM_MONTH_TIER_2, h), P = (0, _.aS)(T.Xh.PREMIUM_MONTH_TIER_2), L = (0, E.T4)(P.amount, P.currency), b = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
   if (a.useEffect(() => {
@@ -74,7 +74,7 @@ children: [
               }),
               (0, n.jsx)(o.Heading, {
                 variant: 'heading-xl/bold',
-                children: O ? S.Z.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : S.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
+                children: g ? S.Z.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : S.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
               })
             ]
           }),
@@ -89,7 +89,7 @@ children: [
   }),
   !b && M && (0, n.jsx)(d.Z, {
     confettiTarget: x.current,
-    confettiCanvas: g,
+    confettiCanvas: O,
     confettiVelocityMultiplier: 0.75
   })
 ]

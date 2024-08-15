@@ -21,7 +21,7 @@ tzid: null
 function c(e, t) {
   return void 0 === t && (t = {}),
 function(e, t) {
-  var n, r, s, u, c, E, f, h, p, m = (n = e, r = t, s = [], u = [], c = [], E = [], h = (f = (0, l.o)(n)).dtstart, p = f.tzid, function(e, t) {
+  var n, r, s, u, c, E, f, h, p, I = (n = e, r = t, s = [], u = [], c = [], E = [], h = (f = (0, l.o)(n)).dtstart, p = f.tzid, function(e, t) {
       if (void 0 === t && (t = !1), !(e = e && e.trim()))
         throw Error('Invalid empty string');
       if (!t)
@@ -92,16 +92,16 @@ function(e, t) {
       exrulevals: c,
       exdatevals: E
     }),
-    I = m.rrulevals,
-    T = m.rdatevals,
-    g = m.exrulevals,
-    S = m.exdatevals,
-    A = m.dtstart,
-    N = m.tzid,
+    m = I.rrulevals,
+    T = I.rdatevals,
+    g = I.exrulevals,
+    S = I.exdatevals,
+    A = I.dtstart,
+    N = I.tzid,
     v = !1 === t.cache;
-  if (t.compatible && (t.forceset = !0, t.unfold = !0), t.forceset || I.length > 1 || T.length || g.length || S.length) {
+  if (t.compatible && (t.forceset = !0, t.unfold = !0), t.forceset || m.length > 1 || T.length || g.length || S.length) {
     var O = new a.p(v);
-    return O.dtstart(A), O.tzid(N || void 0), I.forEach(function(e) {
+    return O.dtstart(A), O.tzid(N || void 0), m.forEach(function(e) {
       O.rrule(new i.Ci(d(e, A, N), v));
     }), T.forEach(function(e) {
       O.rdate(e);
@@ -111,7 +111,7 @@ function(e, t) {
       O.exdate(e);
     }), t.compatible && t.dtstart && O.rdate(A), O;
   }
-  var R = I[0] || {};
+  var R = m[0] || {};
   return new i.Ci(d(R, R.dtstart || t.dtstart || A, R.tzid || t.tzid || N), v);
 }(e, function(e) {
   var t = [],

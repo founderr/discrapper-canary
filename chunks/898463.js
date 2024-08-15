@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(95398),
   h = n(70097),
   p = n(592125),
-  m = n(956664),
-  I = n(709054),
+  I = n(956664),
+  m = n(709054),
   T = n(273031),
   g = n(859235),
   S = n(689938),
@@ -97,7 +97,7 @@ return n.onload = () => {
   let {
     width: e,
     height: t
-  } = (0, m.zp)(n.width, n.height);
+  } = (0, I.zp)(n.width, n.height);
   E({
     width: e,
     height: t
@@ -240,7 +240,7 @@ upload: a,
 keyboardModeEnabled: d,
 label: f,
 size: h = g.q.MEDIUM,
-canEdit: m = !0,
+canEdit: I = !0,
 hideFileName: N = !1,
 clip: v
   } = e, O = null != v, R = (h = O ? g.q.CLIP : h) === g.q.SMALL, y = (0, o.e7)([p.Z], () => {
@@ -269,7 +269,7 @@ e.stopPropagation(), (0, l.openModal)(e => (0, r.jsx)(c.default, {
   return (0, r.jsxs)(g.Z, {
 actions: (0, r.jsxs)(i.Fragment, {
   children: [
-    m ? (0, r.jsx)(T.Z, {
+    I ? (0, r.jsx)(T.Z, {
       className: s()({
         [A.action]: R
       }),
@@ -291,7 +291,7 @@ actions: (0, r.jsxs)(i.Fragment, {
         })
       })
     }) : null,
-    m && !O ? (0, r.jsx)(T.Z, {
+    I && !O ? (0, r.jsx)(T.Z, {
       className: s()({
         [A.action]: R
       }),
@@ -348,7 +348,7 @@ children: [
     children: [
       (0, r.jsx)(_.Z, {
         className: A.clipsFooter,
-        createdAt: I.default.extractTimestamp(v.id),
+        createdAt: m.default.extractTimestamp(v.id),
         participantIds: v.users,
         applicationId: v.applicationId,
         title: v.name,

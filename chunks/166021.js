@@ -26,15 +26,15 @@ g > T && u > g - T ? E(g - T) : g <= T && E(0);
 g,
 T
   ]);
-  let N = a.useCallback(e => ({
+  let p = a.useCallback(e => ({
   x: (e - u) * 100
 }), [u]),
-[p, A] = (0, o.useSprings)(t.length, N);
+[N, A] = (0, o.useSprings)(t.length, p);
   return a.useEffect(() => {
-A(N);
+A(p);
   }, [
 A,
-N
+p
   ]), (0, s.jsx)('div', {
 className: n,
 children: (0, s.jsxs)('div', {
@@ -55,7 +55,7 @@ children: (0, s.jsxs)('div', {
     }),
     (0, s.jsx)('div', {
       className: d.cardInnerContainer,
-      children: p.map((e, n) => {
+      children: N.map((e, n) => {
         let {
           x: a
         } = e;

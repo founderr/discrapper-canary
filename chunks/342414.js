@@ -15,8 +15,8 @@ var a = n(120356),
   R = n(938736),
   C = n(386733),
   g = n(689938),
-  N = n(636013),
-  p = n(872905),
+  p = n(636013),
+  N = n(872905),
   A = n(578478);
 let m = e => {
 let {
@@ -25,21 +25,21 @@ let {
 } = e;
 return (0, s.jsx)(s.Fragment, {
   children: (0, s.jsxs)('div', {
-    className: r()(N.container, t),
+    className: r()(p.container, t),
     'data-testid': 'subscriber-nitro-home-hero-header',
     children: [
       (0, s.jsx)('img', {
-        src: p,
+        src: N,
         alt: '',
-        className: N.headerArt
+        className: p.headerArt
       }),
       (0, s.jsxs)('div', {
-        className: N.content,
+        className: p.content,
         children: [
           (0, s.jsx)(T.Cy, {
             text: g.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
-            className: r()(N.trialPill, {
-              [N.hidden]: !n
+            className: r()(p.trialPill, {
+              [p.hidden]: !n
             }),
             colorOptions: T.VE.PREMIUM_TIER_2_WHITE_FILL
           }),
@@ -49,11 +49,11 @@ return (0, s.jsx)(s.Fragment, {
             children: g.Z.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE
           }),
           (0, s.jsx)('div', {
-            className: N.buttonContainer,
+            className: p.buttonContainer,
             children: (0, s.jsx)(E.Z, {
               color: l.ButtonColors.BRAND,
               buttonText: g.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
-              className: N.button,
+              className: p.button,
               isGift: !0
             })
           })
@@ -79,18 +79,18 @@ return (0, s.jsxs)(s.Fragment, {
     (0, s.jsx)('img', {
       src: A,
       alt: '',
-      className: N.headerArtV2
+      className: p.headerArtV2
     }),
     (0, s.jsx)('div', {
-      className: N.containerV2,
+      className: p.containerV2,
       'data-testid': 'subscriber-nitro-home-hero-header',
       children: (0, s.jsxs)('div', {
-        className: N.contentV2,
+        className: p.contentV2,
         children: [
           (0, s.jsx)(T.Cy, {
             text: g.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
-            className: r()(N.trialPill, {
-              [N.hidden]: !t
+            className: r()(p.trialPill, {
+              [p.hidden]: !t
             }),
             colorOptions: T.VE.PREMIUM_TIER_2_WHITE_FILL
           }),
@@ -100,11 +100,11 @@ return (0, s.jsxs)(s.Fragment, {
             children: g.Z.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE
           }),
           i && (0, s.jsx)('div', {
-            className: N.buttonContainer,
+            className: p.buttonContainer,
             children: (0, s.jsx)(E.Z, {
               color: l.ButtonColors.BRAND,
               buttonText: g.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
-              className: N.button,
+              className: p.button,
               isGift: !0
             })
           }),
@@ -120,16 +120,16 @@ children: [
   (0, s.jsx)('img', {
     src: A,
     alt: '',
-    className: N.headerArtV2
+    className: p.headerArtV2
   }),
   (0, s.jsx)('div', {
-    className: N.reverseContainer,
+    className: p.reverseContainer,
     'data-testid': 'subscriber-nitro-home-hero-header',
     children: (0, s.jsxs)('div', {
-      className: N.contentV2,
+      className: p.contentV2,
       children: [
         (0, s.jsx)('div', {
-          className: N.reverseTrialHomeHeader,
+          className: p.reverseTrialHomeHeader,
           children: (0, s.jsx)(l.Heading, {
             variant: 'display-lg',
             color: 'always-white',

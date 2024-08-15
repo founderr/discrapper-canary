@@ -15,8 +15,8 @@ var a = n(120356),
   R = n(725727),
   C = n(474936),
   g = n(981631),
-  N = n(689938),
-  p = n(983152);
+  p = n(689938),
+  N = n(983152);
 t.Z = function(e) {
   let {
 isFullScreen: t,
@@ -30,30 +30,30 @@ return null;
   return (0, s.jsx)(c.O, {
 newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
 children: (0, s.jsxs)('div', {
-  className: r()(p.banner, {
-    [p.bannerFullScreen]: t
+  className: r()(N.banner, {
+    [N.bannerFullScreen]: t
   }),
   children: [
     (0, s.jsx)('div', {
-      className: p.bannerLeftImageContainer,
+      className: N.bannerLeftImageContainer,
       children: (0, s.jsx)('img', {
         alt: '',
         src: t ? n(277698) : n(144823),
-        className: p.image
+        className: N.image
       })
     }),
     (0, s.jsxs)('div', {
-      className: p.bannerContent,
+      className: N.bannerContent,
       children: [
         (0, s.jsxs)('div', {
           children: [
             (0, s.jsx)(l.Heading, {
               variant: 'display-sm',
               color: 'always-white',
-              children: null == m || null == (0, u.he)(m) ? N.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : N.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
+              children: null == m || null == (0, u.he)(m) ? p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
             }),
             (0, s.jsx)(l.Text, {
-              className: p.countdown,
+              className: N.countdown,
               variant: 'text-sm/bold',
               children: (0, s.jsx)(E.Z, {
                 endDate: f
@@ -62,28 +62,28 @@ children: (0, s.jsxs)('div', {
             (0, s.jsx)(l.Text, {
               variant: 'text-sm/medium',
               color: 'always-white',
-              children: N.Z.Messages.BOGO_MARKETING_PAGE_BANNER_SUBHEADER_2024.format({
+              children: p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_SUBHEADER_2024.format({
                 helpCenterLink: _.Z.getArticleURL(g.BhN.SUMMER_BOGO_2024)
               })
             })
           ]
         }),
         (0, s.jsx)(I.Z, {
-          buttonText: N.Z.Messages.BOGO_CLAIM_OFFER,
-          buttonTextClassName: p.subscribeButtonText,
+          buttonText: p.Z.Messages.BOGO_CLAIM_OFFER,
+          buttonTextClassName: N.subscribeButtonText,
           subscriptionTier: C.Si.TIER_2,
           showIcon: !1,
-          className: null != a ? a : p.subscribeButton,
+          className: null != a ? a : N.subscribeButton,
           forceInverted: !0
         })
       ]
     }),
     (0, s.jsx)('div', {
-      className: p.bannerRightImageContainer,
+      className: N.bannerRightImageContainer,
       children: (0, s.jsx)('img', {
         alt: '',
         src: t ? n(10501) : n(485978),
-        className: p.image
+        className: N.image
       })
     })
   ]

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 }), n(653041), n(47120), n(789020), n(724458);
 var r = n(392711),
@@ -17,9 +17,9 @@ var r = n(392711),
   f = n(823379),
   h = n(789662),
   p = n(981631),
-  m = n(526761);
+  I = n(526761);
 
-function I(e, t, n, r, E) {
+function m(e, t, n, r, E) {
   if (t !== h.AR.UseGreyDot)
 return [{
   label: 'Setting the guild to a white dot unread',
@@ -27,9 +27,9 @@ return [{
     T(e, t, !0);
   }
 }];
-  let m = [],
-I = Object.values(o.Z.getMutableGuildChannelsForGuild(e.id)).filter(e => c.Z.can(p.Plq.VIEW_CHANNEL, e));
-  return m.push(... function(e, t) {
+  let I = [],
+m = Object.values(o.Z.getMutableGuildChannelsForGuild(e.id)).filter(e => c.Z.can(p.Plq.VIEW_CHANNEL, e));
+  return I.push(... function(e, t) {
 if (!(d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id)))
   return [];
 let n = [{
@@ -50,7 +50,7 @@ return r.length > 0 && n.push({
       });
   }
 }), n;
-  }(e, I)), m.push(function(e) {
+  }(e, m)), I.push(function(e) {
 if (d.ZP.getMessageNotifications(e.id) === p.bL.ALL_MESSAGES)
   return {
     label: 'Setting the guild to only mentions since it is in care-a-little but was previously all-messages',
@@ -58,14 +58,14 @@ if (d.ZP.getMessageNotifications(e.id) === p.bL.ALL_MESSAGES)
       e.message_notifications = p.bL.ONLY_MENTIONS;
     }
   };
-  }(e)), m.push(function() {
+  }(e)), I.push(function() {
 return {
   label: 'Setting the guild to a grey dot unread',
   apply: (e, t) => {
     T(e, t, !1);
   }
 };
-  }()), m.push(... function(e) {
+  }()), I.push(... function(e) {
 let t = [],
   [n, r] = i()(e).filter(e => e.type === p.d4z.GUILD_ANNOUNCEMENT).partition(e => d.ZP.isChannelMuted(e.guild_id, e.id) || null != e.parent_id && d.ZP.isChannelMuted(e.guild_id, e.parent_id)).value();
 return n.length > 0 && t.push({
@@ -79,7 +79,7 @@ return n.length > 0 && t.push({
       S(e, t, n.id, !0);
   }
 }), t;
-  }(I)), m.push(... function(e) {
+  }(m)), I.push(... function(e) {
 let t = [],
   n = [];
 for (let t of e)
@@ -94,7 +94,7 @@ return n.length > 0 && t.push({
       });
   }
 }), t;
-  }(I)), m.push(... function(e) {
+  }(m)), I.push(... function(e) {
 let t = [],
   n = [],
   r = [];
@@ -118,7 +118,7 @@ return e.forEach(e => {
       S(e, t, n.id, !1);
   }
 }), t;
-  }(I)), l.Z.hasConsented(p.pjP.PERSONALIZATION) ? m.push(... function(e, t, n, r, a) {
+  }(m)), l.Z.hasConsented(p.pjP.PERSONALIZATION) ? I.push(... function(e, t, n, r, a) {
 if (d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id))
   return [];
 let s = new Set(t.map(e => e.id)),
@@ -151,7 +151,7 @@ return _.length > 0 && f.push({
   label: 'NOT setting '.concat(E.length, ' channels to white-dot because they were only viewed a little.'),
   debug: E.map(e => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join('')
 }), f;
-  }(e, I, n, r, E)) : m.push(... function(e, t) {
+  }(e, m, n, r, E)) : I.push(... function(e, t) {
 if (d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id))
   return [];
 let n = [],
@@ -170,12 +170,12 @@ return s.length > 0 && n.push({
       S(e, t, n.id, !0);
   }
 }), n;
-  }(e, I)), m.filter(f.lm);
+  }(e, m)), I.filter(f.lm);
 }
 
 function T(e, t, n) {
   var r, i;
-  e.flags = (0, E.mB)(null !== (i = null !== (r = e.flags) && void 0 !== r ? r : t.flags) && void 0 !== i ? i : 0, m.vc.UNREADS_ALL_MESSAGES, n), e.flags = (0, E.mB)(e.flags, m.vc.UNREADS_ONLY_MENTIONS, !n);
+  e.flags = (0, E.mB)(null !== (i = null !== (r = e.flags) && void 0 !== r ? r : t.flags) && void 0 !== i ? i : 0, I.vc.UNREADS_ALL_MESSAGES, n), e.flags = (0, E.mB)(e.flags, I.vc.UNREADS_ONLY_MENTIONS, !n);
 }
 
 function g(e, t, n, r) {
@@ -187,6 +187,6 @@ function g(e, t, n, r) {
 function S(e, t, n, r) {
   g(e, t, n, (e, t) => {
 var n, i;
-e.flags = (0, E.mB)(null !== (i = null !== (n = e.flags) && void 0 !== n ? n : t.flags) && void 0 !== i ? i : 0, m.ic.UNREADS_ALL_MESSAGES, r), e.flags = (0, E.mB)(e.flags, m.ic.UNREADS_ONLY_MENTIONS, !r);
+e.flags = (0, E.mB)(null !== (i = null !== (n = e.flags) && void 0 !== n ? n : t.flags) && void 0 !== i ? i : 0, I.ic.UNREADS_ALL_MESSAGES, r), e.flags = (0, E.mB)(e.flags, I.ic.UNREADS_ONLY_MENTIONS, !r);
   });
 }

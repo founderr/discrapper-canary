@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(806966),
   h = n(434404),
   p = n(675478),
-  m = n(819758),
-  I = n(626135),
+  I = n(819758),
+  m = n(626135),
   T = n(392552),
   g = n(784222),
   S = n(926243),
@@ -75,12 +75,12 @@ et = e => {
         ref: f,
         tabIndex: h,
         onFocus: p,
-        ...m
-      } = null !== (n = M(E, x)) && void 0 !== n ? n : {}, I = z.rowIndex === _ && z.columnIndex === E, T = () => {
+        ...I
+      } = null !== (n = M(E, x)) && void 0 !== n ? n : {}, m = z.rowIndex === _ && z.columnIndex === E, T = () => {
         !U.current && !w.current && L(e);
       };
       return (0, i.createElement)('li', {
-        ...m,
+        ...I,
         key: t
       }, (0, r.jsx)(l.FocusRing, {
         children: (0, r.jsx)('button', {
@@ -89,8 +89,8 @@ et = e => {
           className: s()(O.emojiItem, {
             [O.emojiItemLarge]: J,
             [O.emojiItemMedium]: ee,
-            [O.emojiItemSelected]: I,
-            [null != V ? V : '']: I,
+            [O.emojiItemSelected]: m,
+            [null != V ? V : '']: m,
             [O.showPulse]: Q === t
           }),
           onFocus: null != p ? p : T,
@@ -119,7 +119,7 @@ et = e => {
           t.stopPropagation(), !U.current && !w.current && (a(e, {
             isFinalSelection: !0,
             toggleFavorite: !1
-          }), (0, d.D)(e.guildId), I.default.track(N.rMx.EMOJI_PICKER_THREE_ROW_COLLAPSE_TOGGLED, {
+          }), (0, d.D)(e.guildId), m.default.track(N.rMx.EMOJI_PICKER_THREE_ROW_COLLAPSE_TOGGLED, {
             collapsed: e.sectionCollapsedToThreeRows,
             guild_id: e.guildId
           }));
@@ -218,7 +218,7 @@ children: [
           [O.alignRight]: er.length > 0
         }),
         children: [
-          (0, r.jsx)(m.Z, {
+          (0, r.jsx)(I.Z, {
             foreground: O.newlyAddedBadgeStar
           }),
           (0, r.jsx)(l.Text, {

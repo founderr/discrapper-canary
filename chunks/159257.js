@@ -37,8 +37,8 @@ id: null !== (u = _.id) && void 0 !== u ? u : E.id,
 direction: h
   } = (0, l.bU)(), {
 addGlobalListener: p,
-removeGlobalListener: m
-  } = (0, r.xi)(), I = (0, a.useRef)(null), T = 'rtl' === h, g = (0, a.useRef)(null), {
+removeGlobalListener: I
+  } = (0, r.xi)(), m = (0, a.useRef)(null), T = 'rtl' === h, g = (0, a.useRef)(null), {
 moveProps: S
   } = (0, s.r_)({
 onMoveStart() {
@@ -52,15 +52,15 @@ onMove({
     height: a,
     width: s
   } = n.current.getBoundingClientRect(), o = f ? a : s;
-  null == g.current && (g.current = t.getThumbPercent(I.current) * o);
+  null == g.current && (g.current = t.getThumbPercent(m.current) * o);
   let l = f ? r : e;
-  if ((f || T) && (l = -l), g.current += l, null != I.current && n.current) {
+  if ((f || T) && (l = -l), g.current += l, null != m.current && n.current) {
     let e = (0, i.uZ)(g.current / o, 0, 1);
-    t.setThumbPercent(I.current, e);
+    t.setThumbPercent(m.current, e);
   }
 },
 onMoveEnd() {
-  null != I.current && (t.setThumbDragging(I.current, !1), I.current = null);
+  null != m.current && (t.setThumbDragging(m.current, !1), m.current = null);
 }
   }), A = (0, a.useRef)(void 0), N = (r, i, a, s) => {
 if (n.current && !e.isDisabled && t.values.every((e, n) => !t.isThumbDragging(n))) {
@@ -74,11 +74,11 @@ if (n.current && !e.isDisabled && t.values.every((e, n) => !t.isThumbDragging(n)
   ('rtl' === h || f) && (d = 1 - d);
   let _ = t.getPercentValue(d),
     E = t.values.findIndex(e => _ - e < 0);
-  (e = 0 === E ? E : -1 === E ? t.values.length - 1 : Math.abs(t.values[E - 1] - _) < Math.abs(t.values[E] - _) ? E - 1 : E) >= 0 && t.isThumbEditable(e) ? (r.preventDefault(), I.current = e, t.setFocusedThumb(e), A.current = i, t.setThumbDragging(I.current, !0), t.setThumbValue(e, _), p(window, 'mouseup', v, !1), p(window, 'touchend', v, !1), p(window, 'pointerup', v, !1)) : I.current = null;
+  (e = 0 === E ? E : -1 === E ? t.values.length - 1 : Math.abs(t.values[E - 1] - _) < Math.abs(t.values[E] - _) ? E - 1 : E) >= 0 && t.isThumbEditable(e) ? (r.preventDefault(), m.current = e, t.setFocusedThumb(e), A.current = i, t.setThumbDragging(m.current, !0), t.setThumbValue(e, _), p(window, 'mouseup', v, !1), p(window, 'touchend', v, !1), p(window, 'pointerup', v, !1)) : m.current = null;
 }
   }, v = e => {
 var n, r;
-(null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === A.current && (null != I.current && (t.setThumbDragging(I.current, !1), I.current = null), m(window, 'mouseup', v, !1), m(window, 'touchend', v, !1), m(window, 'pointerup', v, !1));
+(null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === A.current && (null != m.current && (t.setThumbDragging(m.current, !1), m.current = null), I(window, 'mouseup', v, !1), I(window, 'touchend', v, !1), I(window, 'pointerup', v, !1));
   };
   return 'htmlFor' in _ && _.htmlFor && (delete _.htmlFor, _.onClick = () => {
 var e;
@@ -119,10 +119,10 @@ isRequired: E,
 validationState: f,
 isInvalid: h,
 trackRef: p,
-inputRef: m,
-orientation: I = t.orientation,
+inputRef: I,
+orientation: m = t.orientation,
 name: T
-  } = e, g = e.isDisabled || t.isDisabled, S = 'vertical' === I, {
+  } = e, g = e.isDisabled || t.isDisabled, S = 'vertical' === m, {
 direction: A
   } = (0, l.bU)(), {
 addGlobalListener: N,
@@ -135,8 +135,8 @@ fieldProps: C
 id: d(t, _),
 'aria-labelledby': `${ O.id } ${ null !== (n = e['aria-labelledby']) && void 0 !== n ? n : '' }`.trim()
   }), y = t.values[_], D = (0, a.useCallback)(() => {
-m.current && (0, r.Ao)(m.current);
-  }, [m]), L = t.focusedThumb === _;
+I.current && (0, r.Ao)(I.current);
+  }, [I]), L = t.focusedThumb === _;
   (0, a.useEffect)(() => {
 L && D();
   }, [
@@ -218,7 +218,7 @@ focusableProps: w
   } = (0, u.kc)((0, r.dG)(e, {
 onFocus: () => t.setFocusedThumb(_),
 onBlur: () => t.setFocusedThumb(void 0)
-  }), m), x = (0, a.useRef)(void 0), G = e => {
+  }), I), x = (0, a.useRef)(void 0), G = e => {
 D(), x.current = e, t.setThumbDragging(_, !0), N(window, 'mouseup', k, !1), N(window, 'touchend', k, !1), N(window, 'pointerup', k, !1);
   }, k = e => {
 var n, r;
@@ -236,7 +236,7 @@ onTouchStart: e => {
   G(e.changedTouches[0].identifier);
 }
   });
-  return (0, r.y$)(m, y, e => {
+  return (0, r.y$)(I, y, e => {
 t.setThumbValue(_, e);
   }), {
 inputProps: (0, r.dG)(w, C, {
@@ -248,7 +248,7 @@ inputProps: (0, r.dG)(w, C, {
   value: y,
   name: T,
   disabled: g,
-  'aria-orientation': I,
+  'aria-orientation': m,
   'aria-valuetext': t.getThumbValueLabel(_),
   'aria-required': E || void 0,
   'aria-invalid': h || 'invalid' === f || void 0,

@@ -18,8 +18,8 @@ var r, i, a = n(735250),
   f = n(703656),
   h = n(626135),
   p = n(357355),
-  m = n(197115),
-  I = n(302945),
+  I = n(197115),
+  m = n(302945),
   T = n(474936),
   g = n(981631),
   S = n(689938),
@@ -82,7 +82,7 @@ children: [
             variant: 'heading-xl/bold',
             children: r
           }),
-          L && (0, a.jsx)(I.Z, {
+          L && (0, a.jsx)(m.Z, {
             affinities: y
           }),
           (0, a.jsx)(c.Text, {
@@ -108,7 +108,7 @@ children: [
             },
             children: S.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA
           }),
-          (0, a.jsx)(m.Z, {
+          (0, a.jsx)(I.Z, {
             showGradient: !0,
             premiumModalAnalyticsLocation: {
               section: N,

@@ -1,15 +1,15 @@
 t.d(n, {
   DK: function() {
-return v;
+return Z;
   },
   Dx: function() {
-return N;
+return _;
   },
   EJ: function() {
 return O;
   },
   Ee: function() {
-return E;
+return v;
   },
   Hh: function() {
 return L;
@@ -18,13 +18,13 @@ return L;
 return C;
   },
   MC: function() {
-return S;
+return j;
   },
   Vj: function() {
 return T;
   },
   gO: function() {
-return j;
+return S;
   },
   i_: function() {
 return b;
@@ -39,7 +39,7 @@ return I;
 return M;
   },
   zx: function() {
-return Z;
+return E;
   }
 }), t(536091);
 var l = t(735250);
@@ -57,10 +57,10 @@ var i = t(120356),
   h = t(792125),
   f = t(981631),
   x = t(689938),
-  _ = t(986579);
-let g = r.Avatar;
-null == g && (g = () => null);
-let N = e => {
+  g = t(986579);
+let N = r.Avatar;
+null == N && (N = () => null);
+let _ = e => {
 let {
   className: n,
   id: t,
@@ -69,12 +69,12 @@ let {
 return (0, l.jsx)(r.Heading, {
   variant: 'heading-xl/semibold',
   color: 'header-primary',
-  className: a()(_.title, n),
+  className: a()(g.title, n),
   id: t,
   children: i
 });
   },
-  v = e => {
+  Z = e => {
 let {
   className: n,
   children: t
@@ -86,7 +86,7 @@ return (0, l.jsx)(r.Text, {
   children: t
 });
   },
-  E = e => {
+  v = e => {
 let {
   className: n,
   src: t
@@ -94,10 +94,10 @@ let {
 return (0, l.jsx)('img', {
   alt: '',
   src: t,
-  className: a()(_.image, n)
+  className: a()(g.image, n)
 });
   },
-  Z = e => {
+  E = e => {
 let {
   className: n,
   ...t
@@ -106,23 +106,23 @@ return (0, l.jsx)(r.Button, {
   size: i ? r.Button.Sizes.MIN : r.Button.Sizes.LARGE,
   fullWidth: !i,
   className: a()(n, {
-    [_.button]: !i,
-    [_.linkButton]: i
+    [g.button]: !i,
+    [g.linkButton]: i
   }),
   ...t
 });
   };
-Z.Looks = r.Button.Looks, Z.Colors = r.Button.Colors, Z.Sizes = r.Button.Sizes;
+E.Looks = r.Button.Looks, E.Colors = r.Button.Colors, E.Sizes = r.Button.Sizes;
 let I = e => {
 let {
   className: n,
   src: t,
   size: i
 } = e;
-return (0, l.jsx)(g, {
+return (0, l.jsx)(N, {
   src: t,
   size: i,
-  className: a()(_.inviteLargeIcon, n),
+  className: a()(g.inviteLargeIcon, n),
   'aria-hidden': !0
 });
   },
@@ -142,20 +142,20 @@ return (0, l.jsx)(d.Z, {
 });
   };
 T.Sizes = d.Z.Sizes;
-let S = e => {
+let j = e => {
   let {
 className: n,
 channel: t,
 size: i
   } = e;
-  return (0, l.jsx)(g, {
+  return (0, l.jsx)(N, {
 src: (0, s.x)(t),
 size: i,
-className: a()(_.inviteIcon, n),
+className: a()(g.inviteIcon, n),
 'aria-hidden': !0
   });
 };
-S.Sizes = r.AvatarSizes;
+j.Sizes = r.AvatarSizes;
 let C = e => {
 let {
   label: n,
@@ -170,55 +170,55 @@ let {
   autoComplete: h,
   autoFocus: f,
   maxLength: x,
-  spellCheck: g,
-  name: N,
-  description: v,
-  required: E,
-  onFocus: Z,
+  spellCheck: N,
+  name: _,
+  description: Z,
+  required: v,
+  onFocus: E,
   onBlur: I
 } = e, T = (0, c.Dt)();
 return (0, l.jsxs)(r.FormItem, {
   title: n,
   error: t,
   className: o,
-  required: E,
+  required: v,
   tag: 'label',
   htmlFor: T,
   children: [
     (0, l.jsx)(r.TextInput, {
-      name: N,
+      name: _,
       type: p,
       value: s,
       inputRef: d,
       placeholder: i,
       inputClassName: a()(u, {
-        [_.inputError]: null != t
+        [g.inputError]: null != t
       }),
       'aria-label': n,
       onChange: m,
       autoComplete: h,
       autoFocus: f,
       maxLength: x,
-      spellCheck: g,
+      spellCheck: N,
       id: T,
-      onFocus: Z,
+      onFocus: E,
       onBlur: I
     }),
-    null != v ? (0, l.jsx)(r.FormText, {
+    null != Z ? (0, l.jsx)(r.FormText, {
       type: r.FormText.Types.DESCRIPTION,
-      className: _.description,
-      children: v
+      className: g.description,
+      children: Z
     }) : null
   ]
 });
   },
-  j = e => {
+  S = e => {
 let {
   className: n,
   children: t
 } = e;
 return (0, l.jsx)('div', {
-  className: a()(_.block, n),
+  className: a()(g.block, n),
   children: t
 });
   },
@@ -230,7 +230,7 @@ let {
 } = e;
 return (0, l.jsx)(r.Text, {
   variant: i ? 'text-sm/normal' : 'text-xs/normal',
-  className: a()(_.subText, n),
+  className: a()(g.subText, n),
   children: t
 });
   },
@@ -243,7 +243,7 @@ return (0, l.jsx)(u.Z, {
   align: u.Z.Align.CENTER,
   className: n,
   children: (0, l.jsx)(o.Z, {
-    className: _.spinnerVideo
+    className: g.spinnerVideo
   })
 });
   },
@@ -256,14 +256,14 @@ let n, {
   textClassName: c
 } = e;
 return null == i ? null : (null != t && t > 0 && (n = (0, l.jsxs)('div', {
-  className: a()(_.pill, _.pillOnline, o && _.pillFlat),
+  className: a()(g.pill, g.pillOnline, o && g.pillFlat),
   children: [
     (0, l.jsx)('i', {
-      className: _.pillIconOnline
+      className: g.pillIconOnline
     }),
     (0, l.jsx)(r.Text, {
       tag: 'span',
-      className: a()(_.pillMessage, c),
+      className: a()(g.pillMessage, c),
       variant: 'text-sm/normal',
       children: x.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
         membersOnline: t
@@ -276,14 +276,14 @@ return null == i ? null : (null != t && t > 0 && (n = (0, l.jsxs)('div', {
   children: [
     n,
     (0, l.jsxs)('div', {
-      className: a()(_.pill, o && _.pillFlat),
+      className: a()(g.pill, o && g.pillFlat),
       children: [
         (0, l.jsx)('i', {
-          className: _.pillIconTotal
+          className: g.pillIconTotal
         }),
         (0, l.jsx)(r.Text, {
           tag: 'span',
-          className: a()(_.pillMessage, c),
+          className: a()(g.pillMessage, c),
           variant: 'text-sm/normal',
           children: x.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
             count: i
@@ -299,7 +299,7 @@ let {
   user: n
 } = e;
 return null == n ? null : (0, l.jsxs)('div', {
-  className: _.joiningAs,
+  className: g.joiningAs,
   children: [
     (0, l.jsx)(r.Text, {
       tag: 'span',
@@ -308,13 +308,13 @@ return null == n ? null : (0, l.jsxs)('div', {
       children: x.Z.Messages.MULTI_ACCOUNT_SERVER_INVITE_JOINING_AS
     }),
     (0, l.jsx)(I, {
-      className: _.joiningAsAvatar,
+      className: g.joiningAsAvatar,
       src: n.getAvatarURL(void 0, 24),
       size: r.AvatarSizes.SIZE_24,
       'aria-label': n.username
     }),
     (0, l.jsx)(r.Text, {
-      className: _.joiningAsUsername,
+      className: g.joiningAsUsername,
       tag: 'span',
       variant: 'text-md/semibold',
       color: 'header-primary',
@@ -327,17 +327,17 @@ return null == n ? null : (0, l.jsxs)('div', {
 let {
   className: n
 } = e;
-return (0, l.jsxs)(j, {
+return (0, l.jsxs)(S, {
   className: n,
   children: [
-    (0, l.jsx)(Z, {
+    (0, l.jsx)(E, {
       onClick: () => window.open((0, p.t3)()),
       children: x.Z.Messages.NUF_DOWNLOAD_APP_BUTTON_PLATFORM.format({
         platform: (0, p.DW)()
       })
     }),
     (0, l.jsx)(b, {
-      className: _.downloadButtonSubtext,
+      className: g.downloadButtonSubtext,
       children: x.Z.Messages.INCOMPATIBLE_BROWSER.format({
         supportedBrowserURL: m.Z.getArticleURL(f.BhN.SUPPORTED_BROWSERS)
       })
@@ -361,13 +361,13 @@ style: c
 'data-disable-adaptive-theme': !0,
 onSubmit: r,
 style: c,
-className: a()(o ? _.authBoxExpanded : _.authBox, (0, h.Q)(u), n),
+className: a()(o ? g.authBoxExpanded : g.authBox, (0, h.Q)(u), n),
 children: [
   (0, l.jsx)('div', {
-    className: _.discordLogo
+    className: g.discordLogo
   }),
   (0, l.jsx)('div', {
-    className: a()(_.centeringWrapper, t),
+    className: a()(g.centeringWrapper, t),
     children: s
   })
 ]

@@ -100,7 +100,7 @@ let {
   postProcessor: E,
   shouldFilterKeywords: f,
   contentMessage: h
-} = n, I = !1, T = (null != h ? h : t).content, g = e(f ? (0, i.N)(T, {
+} = n, m = !1, T = (null != h ? h : t).content, g = e(f ? (0, i.N)(T, {
   escapeReplacement: !0,
   messageId: t.id,
   channelId: t.channel_id,
@@ -113,8 +113,8 @@ let {
   return ('link' === n.type || 'attachmentLink' === n.type) && u.has(r.type) && (0, o.dY)(r) ? [] : e;
 }(e, (null != h ? h : t).embeds)), !_ && (e = function(e, t) {
   return t ? p(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = p(e[0].content)), e);
-}(e, n)), I = function(e, t) {
-  return t ? m(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && m(e[0].content);
+}(e, n)), m = function(e, t) {
+  return t ? I(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && I(e[0].content);
 }(e = function(e) {
   let t = e.some(e => 'link' !== e.type || !1);
   return e.filter(e => {
@@ -128,7 +128,7 @@ let {
   }), t;
 }(e)), null != E && (e = E(e, n)), e));
 return {
-  hasSpoilerEmbeds: I,
+  hasSpoilerEmbeds: m,
   content: g
 };
   }(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
@@ -166,6 +166,6 @@ e.jumboable = !0;
   }), e);
 }
 
-function m(e) {
+function I(e) {
   return e.some(e => 'spoiler' === e.type && Array.isArray(e.content) && e.content.some(e => 'link' === e.type || 'attachmentLink' === e.type));
 }

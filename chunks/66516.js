@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(594174),
   m = t(63063),
   A = t(74538),
-  g = t(18438),
-  O = t(778825),
+  O = t(18438),
+  g = t(778825),
   h = t(856607),
   p = t(594496),
   R = t(856768),
@@ -55,11 +55,11 @@ return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
   }), D = (0, o.e7)([S.Z], () => !S.Z.isFetchingProfile(i.id)), P = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation), {
 source: L,
 ...b
-  } = (0, o.cj)([O.Z], () => ({
-...O.Z.getAllPending(),
-source: O.Z.getSource()
+  } = (0, o.cj)([g.Z], () => ({
+...g.Z.getAllPending(),
+source: g.Z.getSource()
   }));
-  return (a.useEffect(() => () => c.Z.wait(g.W3), []), a.useEffect(() => {
+  return (a.useEffect(() => () => c.Z.wait(O.W3), []), a.useEffect(() => {
 null != L && E.ZP.trackWithMetadata(x.rMx.SETTINGS_PANE_VIEWED, {
   settings_type: 'guild',
   destination_pane: x.jXE.SETTINGS_CUSTOMIZE_PROFILE,
@@ -79,7 +79,7 @@ children: [
       (0, n.jsx)(R.Z, {
         guildId: s.id,
         onChange: e => {
-          null != e && (0, g.HP)(e);
+          null != e && (0, O.HP)(e);
         }
       }),
       (0, n.jsx)(I.Z, {

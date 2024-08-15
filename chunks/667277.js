@@ -29,12 +29,12 @@ function p(e, t) {
 if (Array.isArray(e) || (i = function(e, t) {
     if (e) {
       if ('string' == typeof e)
-        return m(e, t);
+        return I(e, t);
       var n = Object.prototype.toString.call(e).slice(8, -1);
       if ('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)
         return Array.from(e);
       if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
-        return m(e, t);
+        return I(e, t);
     }
   }(e)) || t && e && 'number' == typeof e.length) {
   i && (e = i);
@@ -82,31 +82,31 @@ f: function() {
   };
 }
 
-function m(e, t) {
+function I(e, t) {
   (null == t || t > e.length) && (t = e.length);
   for (var n = 0, r = Array(t); n < t; n++)
 r[n] = e[n];
   return r;
 }
-var I = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
+var m = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
   T = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
   g = /^'([^]*?)'?$/,
   S = /''/g,
   A = /\S/,
   N = /[a-zA-Z]/;
 
-function v(e, t, n, m) {
+function v(e, t, n, I) {
   (0, d.Z)(3, arguments);
   var v = String(e),
 O = String(t),
 R = (0, f.j)(),
-C = null !== (U = null !== (w = null == m ? void 0 : m.locale) && void 0 !== w ? w : R.locale) && void 0 !== U ? U : r.Z;
+C = null !== (U = null !== (w = null == I ? void 0 : I.locale) && void 0 !== w ? w : R.locale) && void 0 !== U ? U : r.Z;
   if (!C.match)
 throw RangeError('locale must contain match property');
-  var y = (0, c.Z)(null !== (x = null !== (G = null !== (k = null !== (B = null == m ? void 0 : m.firstWeekContainsDate) && void 0 !== B ? B : null == m ? void 0 : null === (F = m.locale) || void 0 === F ? void 0 : null === (V = F.options) || void 0 === V ? void 0 : V.firstWeekContainsDate) && void 0 !== k ? k : R.firstWeekContainsDate) && void 0 !== G ? G : null === (H = R.locale) || void 0 === H ? void 0 : null === (Z = H.options) || void 0 === Z ? void 0 : Z.firstWeekContainsDate) && void 0 !== x ? x : 1);
+  var y = (0, c.Z)(null !== (x = null !== (G = null !== (k = null !== (B = null == I ? void 0 : I.firstWeekContainsDate) && void 0 !== B ? B : null == I ? void 0 : null === (F = I.locale) || void 0 === F ? void 0 : null === (V = F.options) || void 0 === V ? void 0 : V.firstWeekContainsDate) && void 0 !== k ? k : R.firstWeekContainsDate) && void 0 !== G ? G : null === (H = R.locale) || void 0 === H ? void 0 : null === (Z = H.options) || void 0 === Z ? void 0 : Z.firstWeekContainsDate) && void 0 !== x ? x : 1);
   if (!(y >= 1 && y <= 7))
 throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
-  var D = (0, c.Z)(null !== (Y = null !== (j = null !== (W = null !== (K = null == m ? void 0 : m.weekStartsOn) && void 0 !== K ? K : null == m ? void 0 : null === (z = m.locale) || void 0 === z ? void 0 : null === (q = z.options) || void 0 === q ? void 0 : q.weekStartsOn) && void 0 !== W ? W : R.weekStartsOn) && void 0 !== j ? j : null === (Q = R.locale) || void 0 === Q ? void 0 : null === (X = Q.options) || void 0 === X ? void 0 : X.weekStartsOn) && void 0 !== Y ? Y : 0);
+  var D = (0, c.Z)(null !== (Y = null !== (j = null !== (W = null !== (K = null == I ? void 0 : I.weekStartsOn) && void 0 !== K ? K : null == I ? void 0 : null === (z = I.locale) || void 0 === z ? void 0 : null === (q = z.options) || void 0 === q ? void 0 : q.weekStartsOn) && void 0 !== W ? W : R.weekStartsOn) && void 0 !== j ? j : null === (Q = R.locale) || void 0 === Q ? void 0 : null === (X = Q.options) || void 0 === X ? void 0 : X.weekStartsOn) && void 0 !== Y ? Y : 0);
   if (!(D >= 0 && D <= 6))
 throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
   if ('' === O)
@@ -120,14 +120,14 @@ b = [new _.GT()],
 M = O.match(T).map(function(e) {
   var t = e[0];
   return t in o.Z ? (0, o.Z[t])(e, C.formatLong) : e;
-}).join('').match(I),
+}).join('').match(m),
 P = [],
 U, w, x, G, k, B, F, V, H, Z, Y, j, W, K, z, q, Q, X, $, J = p(M);
   try {
 for (J.s(); !($ = J.n()).done;) {
   var ee = function() {
     var t = $.value;
-    !(null != m && m.useAdditionalWeekYearTokens) && (0, u.Do)(t) && (0, u.qp)(t, O, e), !(null != m && m.useAdditionalDayOfYearTokens) && (0, u.Iu)(t) && (0, u.qp)(t, O, e);
+    !(null != I && I.useAdditionalWeekYearTokens) && (0, u.Do)(t) && (0, u.qp)(t, O, e), !(null != I && I.useAdditionalDayOfYearTokens) && (0, u.Iu)(t) && (0, u.qp)(t, O, e);
     var n = t[0],
       r = E.f[n];
     if (r) {

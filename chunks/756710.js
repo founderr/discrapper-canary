@@ -23,18 +23,18 @@ menuItemProps: E,
 action: f,
 dontCloseOnActionIfHoldingShiftKey: h,
 dontCloseOnAction: p,
-onClose: m
-  } = e, I = i.useRef(null);
+onClose: I
+  } = e, m = i.useRef(null);
   i.useEffect(() => {
-a && (0, l.F)(I);
+a && (0, l.F)(m);
   }, [a]);
   let T = i.useCallback(e => {
   if (null == f)
     return !1;
-  !(e.shiftKey && h) && !p && m(), e.persist(), requestAnimationFrame(() => f(e));
+  !(e.shiftKey && h) && !p && I(), e.persist(), requestAnimationFrame(() => f(e));
 }, [
   f,
-  m,
+  I,
   h,
   p
 ]),
@@ -42,7 +42,7 @@ g = _ ? s()(c.item, u._[n], {
   [c.focused]: a
 }) : c.customItem;
   return (0, r.jsx)(o.P, {
-innerRef: I,
+innerRef: m,
 className: g,
 onClick: d ? void 0 : T,
 'aria-disabled': d,

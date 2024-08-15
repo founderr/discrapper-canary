@@ -23,7 +23,7 @@ canWatch: n,
 unavailableReason: f,
 onAction: h,
 onClose: p
-  } = e, m = (0, i.e7)([u.Z], () => {
+  } = e, I = (0, i.e7)([u.Z], () => {
 let e = u.Z.getActiveStreamForApplicationStream(t);
 return (null == e ? void 0 : e.state) !== d.jm8.ENDED && (null == e ? void 0 : e.ownerId) === t.ownerId && u.Z.getAllActiveStreamsForChannel(t.channelId).some(e => {
   let {
@@ -51,7 +51,7 @@ children: [
       }
     })
   }),
-  m && (0, r.jsx)(c.ef, {
+  I && (0, r.jsx)(c.ef, {
     tooltipText: _.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
     icon: a.EyePlusIcon,
     disabled: !n,

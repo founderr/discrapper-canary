@@ -21,7 +21,7 @@ var n = t(735250),
   C = t(981631),
   m = t(689938),
   A = t(945437);
-let g = [{
+let O = [{
 label: 'Latin alphabet',
 value: 'aBcDeFgHiJkLmNoPqRsTuVwXyZ'
   },
@@ -51,7 +51,7 @@ value: 'custom'
   }
 ];
 
-function O(e, s) {
+function g(e, s) {
   let [t, n] = a.useState(() => {
 let t = l.K.get(e);
 return null != t ? t : s;
@@ -115,16 +115,16 @@ M = (0, o.e7)([I.C], () => {
   var e, s;
   return (0, T.fD)() ? null === (s = I.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web : null;
 }),
-[f, D] = O('playground-overrideText', null),
-[P, L] = O('playground-defaultText', g[0].value),
+[f, D] = g('playground-overrideText', null),
+[P, L] = g('playground-defaultText', O[0].value),
 b = a.useCallback(e => {
-  let s = g.find(s => {
+  let s = O.find(s => {
     let {
       value: t
     } = s;
     return t === e;
   });
-  '' === e || null == e ? (L(g[0].value), D(null)) : null != s ? L(s.value) : (L('custom'), D(e));
+  '' === e || null == e ? (L(O[0].value), D(null)) : null != s ? L(s.value) : (L('custom'), D(e));
 }, [
   D,
   L
@@ -174,7 +174,7 @@ children: (0, n.jsxs)(c.FormSection, {
         (0, n.jsx)(c.FormItem, {
           children: (0, n.jsx)(c.SingleSelect, {
             className: A.select,
-            options: g,
+            options: O,
             onChange: e => b(e),
             value: P
           })

@@ -28,21 +28,21 @@ forcedDivider: N = !1,
 withTutorial: m = !1,
 isTryItOutFlow: A = !1
   } = e, {
-analyticsLocations: g
-  } = (0, l.ZP)(), O = null != t, {
+analyticsLocations: O
+  } = (0, l.ZP)(), g = null != t, {
 userAvatarDecoration: h,
 guildAvatarDecoration: p,
 pendingAvatarDecoration: R,
 pendingErrors: x
   } = (0, u.$U)(s, t), M = (0, _.Z)('enable_avatar_decoration_uploads'), f = a.useCallback(() => (0, d.ps)({
-analyticsLocations: g,
+analyticsLocations: O,
 isTryItOutFlow: A,
 guild: t
   }), [
-g,
+O,
 A,
 t
-  ]), D = A || void 0 !== R ? null != R : (O ? p : h) != null, P = m ? o.ShinyButton : o.Button;
+  ]), D = A || void 0 !== R ? null != R : (g ? p : h) != null, P = m ? o.ShinyButton : o.Button;
   return (0, n.jsxs)(I.Z, {
 className: i,
 forcedDivider: N,

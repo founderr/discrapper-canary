@@ -1,6 +1,6 @@
 t.d(s, {
   Sz: function() {
-return g;
+return O;
   },
   of: function() {
 return A;
@@ -121,7 +121,7 @@ children: [
   });
 }
 
-function g(e) {
+function O(e) {
   let {
 premiumSubscription: s,
 premiumType: t,
@@ -129,8 +129,8 @@ onClose: i,
 pauseDuration: o,
 analyticsLocation: d
   } = e, [I, A] = a.useState(!1), {
-analyticsLocations: g
-  } = (0, E.ZP)(), [O, h] = a.useState(!1), p = (0, _.ZP)(), R = null, x = null, M = [
+analyticsLocations: O
+  } = (0, E.ZP)(), [g, h] = a.useState(!1), p = (0, _.ZP)(), R = null, x = null, M = [
 S.O0b.PAST_DUE,
 S.O0b.PAUSED
   ].includes(s.status) ? s.currentPeriodStart : s.currentPeriodEnd, f = r()(M).add(o, 'days').toDate();
@@ -190,7 +190,7 @@ children: [
       children: [
         (0, n.jsx)(c.Button, {
           color: c.Button.Colors.RED,
-          disabled: O || null == o,
+          disabled: g || null == o,
           onClick: async () => {
             await m({
               premiumSubscription: s,
@@ -198,7 +198,7 @@ children: [
               setIsCancelling: h,
               setHasError: A,
               onClose: i,
-              analyticsLocations: g,
+              analyticsLocations: O,
               analyticsLocation: d
             });
           },

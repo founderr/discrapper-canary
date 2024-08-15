@@ -12,8 +12,8 @@ var r = n(735250),
   f = n(592125),
   h = n(430824),
   p = n(944486),
-  m = n(709586),
-  I = n(626135),
+  I = n(709586),
+  m = n(626135),
   T = n(524444),
   g = n(981631),
   S = n(176505),
@@ -27,7 +27,7 @@ guild: n
 name: v
   } = t;
   i.useEffect(() => {
-I.default.track(g.rMx.OPEN_POPOUT, {
+m.default.track(g.rMx.OPEN_POPOUT, {
   type: 'Role Icon Popout',
   guild_id: n.id,
   ...(0, o.v_)(f.Z.getChannel(p.Z.getChannelId(n.id)))
@@ -99,7 +99,7 @@ children: (0, r.jsx)(T.W_, {
         onClick: D,
         autoFocus: !0,
         children: [
-          (0, r.jsx)(m.Z, {
+          (0, r.jsx)(I.Z, {
             width: 14,
             height: 14,
             className: N.boosterBadge

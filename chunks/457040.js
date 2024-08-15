@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(806966),
   h = n(28546),
   p = n(98528),
-  m = n(98278),
-  I = n(639119),
+  I = n(98278),
+  m = n(639119),
   T = n(695346),
   g = n(594174),
   S = n(626135),
@@ -58,7 +58,7 @@ let {
   location: j
 } = (0, d.O)(), {
   analyticsLocations: W
-} = (0, E.ZP)(_.Z.STICKER_PICKER), X = (null === (a = (0, I.N)()) || void 0 === a ? void 0 : a.subscription_trial) != null, $ = i.useRef(null), J = i.useRef(null), ee = i.useRef(null), et = (0, N.Q)(e => e.showPremiumUpsell), [en, er] = (0, h.Iu)(e => [
+} = (0, E.ZP)(_.Z.STICKER_PICKER), X = (null === (a = (0, m.N)()) || void 0 === a ? void 0 : a.subscription_trial) != null, $ = i.useRef(null), J = i.useRef(null), ee = i.useRef(null), et = (0, N.Q)(e => e.showPremiumUpsell), [en, er] = (0, h.Iu)(e => [
   e.searchQuery,
   e.isSearchSuggestion
 ], o.Z), ei = i.useRef('');
@@ -89,13 +89,13 @@ let ea = (0, R.Sd)(u),
     sendable: eh = [],
     sendableWithPremium: ep = []
   } = null != ed ? ed : {},
-  em = eh.length + ep.length,
-  eI = i.useCallback(e => {
-    '' === en ? (0, O.On)(e) : (0, O.Yk)(e, en, em), A(e.sticker, y.V0.STICKER_PICKER);
+  eI = eh.length + ep.length,
+  em = i.useCallback(e => {
+    '' === en ? (0, O.On)(e) : (0, O.Yk)(e, en, eI), A(e.sticker, y.V0.STICKER_PICKER);
   }, [
     A,
     en,
-    em
+    eI
   ]),
   eT = null != eo && eo > B,
   {
@@ -136,13 +136,13 @@ let ea = (0, R.Sd)(u),
         });
         break;
       case y.al.STICKER:
-        null != e.sticker && (0, v.kl)(e.sticker, ec, u) && eI(e);
+        null != e.sticker && (0, v.kl)(e.sticker, ec, u) && em(e);
     }
   }, [
     j,
     ec,
     u,
-    eI
+    em
   ]),
   {
     getItemProps: eR,
@@ -181,10 +181,10 @@ let eb = () => {
 i.useEffect(() => {
   '' === ei.current && '' !== en && (0, O.n8)(), ei.current = en;
 }, [en]), i.useEffect(() => {
-  0 === em ? q(en) : Q(en, em, er);
+  0 === eI ? q(en) : Q(en, eI, er);
 }, [
   en,
-  em,
+  eI,
   er
 ]), i.useLayoutEffect(() => {
   var e;
@@ -193,7 +193,7 @@ i.useEffect(() => {
 let eM = i.useCallback(() => {
   Y(), S.default.track(G.rMx.PREMIUM_PROMOTION_OPENED, {
     location_section: G.jXE.STICKER_PICKER_UPSELL
-  }), (0, m.z)();
+  }), (0, I.z)();
 }, [Y]);
 return (0, r.jsxs)(E.Gt, {
   value: W,
@@ -226,7 +226,7 @@ return (0, r.jsxs)(E.Gt, {
             gridWidth: eo,
             gutterWidth: eN,
             isUsingKeyboardNavigation: eL,
-            onSelectSticker: eI,
+            onSelectSticker: em,
             rowCount: eg,
             rowCountBySection: eS,
             stickersCategories: ea,

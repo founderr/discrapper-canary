@@ -25,8 +25,8 @@ viewProfileItem: f
 trackUserProfileAction: h
   } = (0, d.KZ)(), {
 analyticsLocations: p,
-newestAnalyticsLocation: m
-  } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU), I = (0, u.Z)({
+newestAnalyticsLocation: I
+  } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU), m = (0, u.Z)({
 user: t,
 guildId: n,
 onAction: () => h({
@@ -35,7 +35,7 @@ onAction: () => h({
 })
   }), T = (0, l.Z)({
 user: t,
-location: m,
+location: I,
 color: 'danger',
 onBlock: () => h({
   action: 'BLOCK',
@@ -48,7 +48,7 @@ onUnblock: () => h({
   }), g = (0, c.Z)({
 user: t,
 guildId: n,
-location: m,
+location: I,
 color: 'danger',
 onAction: () => h({
   action: 'REPORT',
@@ -57,7 +57,7 @@ onAction: () => h({
   }), S = (0, c.T)({
 user: t,
 guildId: n,
-location: m,
+location: I,
 color: 'danger',
 onAction: () => h({
   action: 'REPORT',
@@ -66,7 +66,7 @@ onAction: () => h({
   }), A = [
 [
   f,
-  I
+  m
 ],
 [
   T,

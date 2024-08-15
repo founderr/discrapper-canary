@@ -13,9 +13,9 @@ let u = a().defaultRules.lheading,
   f = a().defaultRules.blockQuote,
   h = a().defaultRules.paragraph,
   p = /\{(.+?)}/,
-  m = /^\$(\w+?)\$/;
+  I = /^\$(\w+?)\$/;
 r = n(235375);
-let I = e => {
+let m = e => {
 let {
   transformUpperCase: t = !1
 } = e;
@@ -45,7 +45,7 @@ list: {
 },
 interpolation: {
   order: l.ZP.order,
-  match: e => m.exec(e),
+  match: e => I.exec(e),
   parse(e, t, n) {
     let r = n.interpolations[e[1]];
     return null == r ? {
@@ -60,7 +60,7 @@ interpolation: {
 },
 lheading: {
   ...u,
-  parse: I({
+  parse: m({
     transformUpperCase: !0
   }),
   ...'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading
@@ -81,7 +81,7 @@ paragraph: {
   g = e => ({
 lheading: {
   ...u,
-  parse: I({
+  parse: m({
     transformUpperCase: !1
   }),
   ...'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading

@@ -19,7 +19,7 @@ if (!!e)
   (0, _.Z)(!0);
   }), c.Z.getMode() === E.pM4.PUSH_TO_TALK && i.Z.requestPermission(f.Eu.INPUT_MONITORING);
 }
-class m extends r.Z {
+class I extends r.Z {
   handleVoiceChannelSelect(e) {
 let {
   channelId: t
@@ -58,4 +58,4 @@ super(...e), t = this, n = 'actions', r = {
 }) : t[n] = r;
   }
 }
-t.Z = new m();
+t.Z = new I();

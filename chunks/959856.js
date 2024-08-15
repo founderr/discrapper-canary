@@ -17,8 +17,8 @@ var r = n(512722),
   f = n(970838),
   h = n(68721),
   p = n(997653),
-  m = n(384136),
-  I = n(740197),
+  I = n(384136),
+  m = n(740197),
   T = n(548820),
   g = n(579237),
   S = n(582168),
@@ -51,9 +51,9 @@ return !0;
   supports(e) {
 switch (e) {
   case N.AN.AUDIO_INPUT_DEVICE:
-    return I.S5;
+    return m.S5;
   case N.AN.AUDIO_OUTPUT_DEVICE:
-    return I.ZA;
+    return m.ZA;
   case N.AN.VIDEO:
     return v.U8;
   case N.AN.DESKTOP_CAPTURE:
@@ -136,21 +136,21 @@ try {
 this.outputVolume = e, this.connections.forEach(t => t.setOutputVolume(e));
   }
   getAudioInputDevices() {
-return (0, I.Hg)();
+return (0, m.Hg)();
   }
   setAudioInputDevice(e) {
 var t, n;
 this.sourceId = e, this.eachConnection(t => t.setAudioSource(e), N.Yn.DEFAULT), null === (t = this.voiceActivityInput) || void 0 === t || t.setSource(e), null === (n = this.loopback) || void 0 === n || n.setAudioSource(e);
   }
   getAudioOutputDevices() {
-return (0, I.HS)();
+return (0, m.HS)();
   }
   setAudioOutputDevice(e) {
 var t;
 this.sinkId = e, this.connections.forEach(t => t.setSinkId(e)), null === (t = this.loopback) || void 0 === t || t.setAudioSink(e);
   }
   getVideoInputDevices() {
-return (0, I.l0)();
+return (0, m.l0)();
   }
   setVideoInputDevice(e) {
 this.eachConnection(t => t.setVideoSource(e), N.Yn.DEFAULT);
@@ -163,7 +163,7 @@ e('');
   }
   async getDesktopSource(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-  n = await m.Z.get(e, t);
+  n = await I.Z.get(e, t);
 return this.pendingDesktopInputs[n.id] = n, n.id;
   }
   getDesktopSources() {
@@ -286,7 +286,7 @@ super(), O(this, 'Video', A.Z), O(this, 'Camera', S.Z), O(this, '_audioContext',
     case _.aB.VoiceActivity:
       null != this.voiceActivityInput && 0 === this.listenerCount(_.aB.VoiceActivity) && (this.voiceActivityInput.destroy(), this.voiceActivityInput = null);
   }
-}), O(this, 'handleDeviceChange', () => (0, I.PW)().then(e => {
+}), O(this, 'handleDeviceChange', () => (0, m.PW)().then(e => {
   let [t, n, r] = e;
   return this.emit(_.aB.DeviceChange, t, n, r);
 })), O(this, 'handleVoiceActivity', e => {

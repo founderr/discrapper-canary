@@ -17,16 +17,16 @@ var n = t(735250),
   C = t(626135),
   m = t(251625),
   A = t(358085),
-  g = t(210887),
-  O = t(981631),
+  O = t(210887),
+  g = t(981631),
   h = t(689938),
   p = t(806406),
   R = t(256507),
   x = t(257995),
   M = t(440376),
   f = t(224499);
-let D = o.ZP.connectStores([g.Z], () => ({
-theme: g.Z.theme
+let D = o.ZP.connectStores([O.Z], () => ({
+theme: O.Z.theme
   }))(c.EmptyState),
   P = (0, A.isWindows)();
 
@@ -93,7 +93,7 @@ isOverride: I
 S.Z,
 u.ZP,
 N.Z
-  ], () => (0, u.FZ)(t)), [A, g] = a.useState(!1), [R, f] = a.useState(null !== (s = m.name) && void 0 !== s ? s : '???'), D = r()(x.flexCenter, {
+  ], () => (0, u.FZ)(t)), [A, O] = a.useState(!1), [R, f] = a.useState(null !== (s = m.name) && void 0 !== s ? s : '???'), D = r()(x.flexCenter, {
 [p.game]: !i,
 [p.activeGame]: i,
 [M.card]: !i,
@@ -120,12 +120,12 @@ d.Z.toggleDetection(m);
 if (A)
   return;
 let e = null != m.id ? S.Z.getDetectableGame(m.id) : null;
-C.default.track(O.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+C.default.track(g.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
   application_id: null == e ? void 0 : e.id,
   game_name: m.name
 }), (0, c.showToast)((0, c.createToast)(h.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({
   gameName: m.name
-}), c.ToastType.SUCCESS)), g(!0);
+}), c.ToastType.SUCCESS)), O(!0);
   }
   return (0, n.jsxs)('div', {
 className: D,

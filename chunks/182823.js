@@ -209,13 +209,13 @@ for (let e in r) {
   return t;
 }
 let p = new Set(['id']),
-  m = new Set([
+  I = new Set([
 'aria-label',
 'aria-labelledby',
 'aria-describedby',
 'aria-details'
   ]),
-  I = new Set([
+  m = new Set([
 'href',
 'target',
 'rel',
@@ -232,7 +232,7 @@ isLink: r,
 propNames: i
   } = t, a = {};
   for (let t in e)
-Object.prototype.hasOwnProperty.call(e, t) && (p.has(t) || n && m.has(t) || r && I.has(t) || (null == i ? void 0 : i.has(t)) || T.test(t)) && (a[t] = e[t]);
+Object.prototype.hasOwnProperty.call(e, t) && (p.has(t) || n && I.has(t) || r && m.has(t) || (null == i ? void 0 : i.has(t)) || T.test(t)) && (a[t] = e[t]);
   return a;
 }
 

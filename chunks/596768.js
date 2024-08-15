@@ -23,11 +23,11 @@ var a = t(735250),
   k = t(681619),
   v = t(621060),
   _ = t(689938),
-  j = t(408126),
-  w = t(535271);
-let C = [{
+  w = t(408126),
+  C = t(535271);
+let j = [{
   key: 'id',
-  cellClassName: j.eventColumn,
+  cellClassName: w.eventColumn,
   render(e) {
     let {
       experimentId: r
@@ -37,7 +37,7 @@ let C = [{
 },
 {
   key: 'bucket',
-  cellClassName: j.locationColumn,
+  cellClassName: w.locationColumn,
   render(e) {
     let {
       descriptor: r
@@ -47,7 +47,7 @@ let C = [{
 },
 {
   key: 'timestamp',
-  cellClassName: j.locationColumn,
+  cellClassName: w.locationColumn,
   render(e) {
     let {
       timestamp: r
@@ -74,7 +74,7 @@ render: e => {
   return (0, a.jsxs)(a.Fragment, {
     children: [
       (0, a.jsxs)(g.ZP, {
-        className: o()(w.headerBar, j.subPanelHeaderBar),
+        className: o()(C.headerBar, w.subPanelHeaderBar),
         children: [
           (0, a.jsx)(g.ZP.Icon, {
             icon: h.AnalyticsIcon,
@@ -86,7 +86,7 @@ render: e => {
         ]
       }),
       (0, a.jsxs)(y.E, {
-        className: j.commonProperties,
+        className: w.commonProperties,
         children: [
           (0, a.jsx)(y.Z9, {
             name: 'Timestamp (local)',
@@ -168,22 +168,22 @@ m.Z.dispatch({
   }, []);
   return (0, a.jsxs)('div', {
 ref: t,
-className: o()(w.panel, j.panel),
+className: o()(C.panel, w.panel),
 children: [
   (0, a.jsxs)('div', {
-    className: j.toolbar,
+    className: w.toolbar,
     children: [
       (0, a.jsx)('div', {
         title: 'Enables tracking of all triggers',
-        className: j.triggersEnable,
+        className: w.triggersEnable,
         children: (0, a.jsx)(h.Switch, {
           checked: S,
           onChange: T,
-          className: j.__invalid_toolbarSwitch
+          className: w.__invalid_toolbarSwitch
         })
       }),
       (0, a.jsx)(h.Button, {
-        className: j.toolbarButton,
+        className: w.toolbarButton,
         look: h.Button.Looks.BLANK,
         size: h.Button.Sizes.ICON,
         onClick: f.Zw,
@@ -197,7 +197,7 @@ children: [
         })
       }),
       (0, a.jsx)(h.SearchBar, {
-        className: j.searchBar,
+        className: w.searchBar,
         query: e,
         onChange: r,
         onClear: () => r(''),
@@ -206,16 +206,16 @@ children: [
     ]
   }),
   (0, a.jsx)(h.ScrollerThin, {
-    className: j.tableContainer,
+    className: w.tableContainer,
     children: (0, a.jsx)(k.Z, {
-      columns: C,
+      columns: j,
       data: l,
       selectedRowKey: s,
       onClickRow: d
     })
   }),
   null != g && (0, a.jsxs)(x.Z, {
-    className: j.subPanel,
+    className: w.subPanel,
     minHeight: 100,
     initialHeight: null != t.current ? t.current.clientHeight / 2 : 300,
     children: [

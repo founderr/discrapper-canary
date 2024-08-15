@@ -60,7 +60,7 @@ function O() {
   for (let t in e)
 L.set(t, R(e[t]));
 }
-let P = (i = [], s = [], l = [], () => {
+let T = (i = [], s = [], l = [], () => {
   let e = L.values('FAVORITE'),
 t = L.values('DEFAULT');
   return (i !== e || s !== t) && (l = [], e.forEach(e => {
@@ -75,7 +75,7 @@ let {
 return l.push(t);
   }), s = t), l;
 });
-class T extends(a = g.ZP.Store) {
+class P extends(a = g.ZP.Store) {
   initialize() {
 this.waitFor(S.Z, y.Z, N.default, v.Z, _.ZP), this.syncWith([
   _.ZP,
@@ -83,7 +83,7 @@ this.waitFor(S.Z, y.Z, N.default, v.Z, _.ZP), this.syncWith([
 ], Z);
   }
   getPrivateChannelIds() {
-return P();
+return T();
   }
   getSortedChannels() {
 return [
@@ -102,12 +102,12 @@ return L.values().forEach(t => {
 }), e;
   }
 }
-u = 'PrivateChannelSortStore', (o = 'displayName') in(h = T) ? Object.defineProperty(h, o, {
+u = 'PrivateChannelSortStore', (o = 'displayName') in(h = P) ? Object.defineProperty(h, o, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : h[o] = u, t.Z = new T(f.Z, {
+}) : h[o] = u, t.Z = new P(f.Z, {
   CONNECTION_OPEN: Z,
   CONNECTION_OPEN_SUPPLEMENTAL: Z,
   OVERLAY_INITIALIZE: Z,

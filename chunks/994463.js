@@ -3,10 +3,10 @@ var s = E(735250),
   T = E(470079),
   I = E(525654),
   n = E.n(I),
-  A = E(748780),
-  t = E(568372);
+  t = E(748780),
+  A = E(568372);
 
-function a(e, _, E) {
+function r(e, _, E) {
   return _ in e ? Object.defineProperty(e, _, {
 value: E,
 enumerable: !0,
@@ -15,7 +15,7 @@ writable: !0
   }) : e[_] = E, e;
 }
 
-function r(e) {
+function a(e) {
   let _ = e => e.interpolate({
 inputRange: [
   0,
@@ -43,7 +43,7 @@ let {
   x: e,
   y: _
 } = this.state;
-'Firefox' !== n().name && (A.Z.animate(e, {
+'Firefox' !== n().name && (t.Z.animate(e, {
   loop: !0,
   toValueMin: -74,
   toValueMax: 95,
@@ -51,7 +51,7 @@ let {
   friction: 5,
   tension: 1,
   shouldLoop: this.shouldLoop
-}), A.Z.animate(_, {
+}), t.Z.animate(_, {
   loop: !0,
   toValueMin: -59,
   toValueMax: 75,
@@ -66,13 +66,13 @@ this._isMounted = !1;
   }
   render() {
 return (0, s.jsxs)('div', {
-  className: t.searchIndexAnimation,
+  className: A.searchIndexAnimation,
   children: [
     (0, s.jsx)('div', {
-      className: t.searchIndexBackground
+      className: A.searchIndexBackground
     }),
     (0, s.jsxs)('svg', {
-      className: t.searchIndexForeground,
+      className: A.searchIndexForeground,
       width: '320',
       height: '280',
       children: [
@@ -94,9 +94,9 @@ return (0, s.jsxs)('div', {
                 (0, s.jsx)('mask', {
                   id: 'search-index-foreground-mask-b',
                   fill: '#fff',
-                  children: (0, s.jsx)(A.Z.use, {
-                    style: r(this.state),
-                    className: t.mask,
+                  children: (0, s.jsx)(t.Z.use, {
+                    style: a(this.state),
+                    className: A.mask,
                     xlinkHref: '#search-index-foreground-mask-a'
                   })
                 }),
@@ -420,9 +420,9 @@ return (0, s.jsxs)('div', {
                 })
               ]
             }),
-            (0, s.jsxs)(A.Z.g, {
-              className: t.magnifyingGlass,
-              style: r(this.state),
+            (0, s.jsxs)(t.Z.g, {
+              className: A.magnifyingGlass,
+              style: a(this.state),
               children: [
                 (0, s.jsx)('path', {
                   fill: '#C9D2F0',
@@ -477,10 +477,10 @@ return (0, s.jsxs)('div', {
 });
   }
   constructor(...e) {
-super(...e), a(this, 'state', {
-  x: new A.Z.Value(0),
-  y: new A.Z.Value(0)
-}), a(this, '_isMounted', !1), a(this, 'shouldLoop', () => this._isMounted);
+super(...e), r(this, 'state', {
+  x: new t.Z.Value(0),
+  y: new t.Z.Value(0)
+}), r(this, '_isMounted', !1), r(this, 'shouldLoop', () => this._isMounted);
   }
 }
 _.Z = N;

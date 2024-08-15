@@ -22,8 +22,8 @@ GuildStore: E,
 GuildMemberCountStore: f,
 RelationshipStore: h,
 SelectedChannelStore: p,
-VoiceStateStore: m,
-PermissionStore: I
+VoiceStateStore: I,
+PermissionStore: m
   } = e, T = _.getChannel(u), g = (0, i.a)(T);
   if (null == t)
 return !1;
@@ -36,8 +36,8 @@ return (0, a.ZP)({
   application: l,
   isActivitiesEnabledForCurrentPlatform: g,
   ChannelStore: _,
-  VoiceStateStore: m,
-  PermissionStore: I,
+  VoiceStateStore: I,
+  PermissionStore: m,
   GuildStore: E
 }) === a.Fw.CAN_JOIN;
   if (!(0, r.isDesktop)())
@@ -46,7 +46,7 @@ return !1;
 return !0;
   if ((0, s.Z)(n, o.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
 let e = _.getChannel(p.getVoiceChannelId());
-if (null == e || !m.isInChannel(e.id, t.id))
+if (null == e || !I.isInChannel(e.id, t.id))
   return !1;
 switch (e.type) {
   case o.d4z.DM:

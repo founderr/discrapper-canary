@@ -21,18 +21,18 @@ writable: !0
 }
 let h = null,
   p = new l.b(750, 500),
-  m = new u.S(15),
-  I = !1;
+  I = new u.S(15),
+  m = !1;
 class T extends s.Z {
   initialize() {
 this.waitFor(r.Z), this.waitFor(a.Z), this.waitFor(i.Z), this.syncWith([o.Z], () => !0), this.syncWith([a.Z], g);
   }
   loadCache() {
 let e = this.readSnapshot(T.LATEST_SNAPSHOT_VERSION);
-null != e && (I = !0, T.mergeSnapshot(e));
+null != e && (m = !0, T.mergeSnapshot(e));
   }
   canEvictOrphans() {
-return I;
+return m;
   }
   saveLimit(e) {
 let t = r.Z.getBasicChannel(e);
@@ -56,15 +56,15 @@ return {
   version: T.LATEST_SNAPSHOT_VERSION,
   data: {
     channels: [...p.allValues()].filter(e => !e.fallback),
-    penalized: [...m.keys()],
+    penalized: [...I.keys()],
     lastChannel: h
   }
 };
   }
   static mergeSnapshot(e) {
 let t = p,
-  n = m;
-for (let n of (p = new l.b(p.primaryCapacity, p.extendedCapacity), m = new u.S(m.capacity), h = null != h ? h : e.lastChannel, [
+  n = I;
+for (let n of (p = new l.b(p.primaryCapacity, p.extendedCapacity), I = new u.S(I.capacity), h = null != h ? h : e.lastChannel, [
     e.channels,
     t.values()
   ]))
@@ -75,7 +75,7 @@ for (let t of [
     n.keys()
   ])
   for (let e of t)
-    m.put(e, null);
+    I.put(e, null);
   }
   static recordChannel(e) {
 let t = r.Z.getBasicChannel(e);
@@ -86,7 +86,7 @@ if (null != t && (0, _.v)(t)) {
     channelId: e,
     channelType: t.type
   };
-  h = r, p.put(e, r), (0, c.Hr)(t) && null != m.put(e, null) && p.delete(e);
+  h = r, p.put(e, r), (0, c.Hr)(t) && null != I.put(e, null) && p.delete(e);
 }
   }
   static deleteChannel(e) {
@@ -162,10 +162,10 @@ function C(e) {
 }
 
 function y(e) {
-  p.clear(), m.clear(), I = !1;
+  p.clear(), I.clear(), m = !1;
 }
 
 function D(e) {
-  I = !0;
+  m = !0;
 }
 f(T, 'displayName', 'SaveableChannelsStore'), f(T, 'LATEST_SNAPSHOT_VERSION', 1), t.ZP = new T();

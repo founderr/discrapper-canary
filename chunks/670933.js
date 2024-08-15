@@ -14,7 +14,7 @@ function s(e, t) {
 throw RangeError('additionalDigits must be 0, 1 or 2');
   if (!('string' == typeof e || '[object String]' === Object.prototype.toString.call(e)))
 return new Date(NaN);
-  var m = function(e) {
+  var I = function(e) {
 var t, n = {},
   r = e.split(o.dateTimeDelimiter);
 if (r.length > 2)
@@ -25,8 +25,8 @@ if (/:/.test(r[0]) ? t = r[0] : (n.date = r[0], t = r[1], o.timeZoneDelimiter.te
 }
 return n;
   }(e);
-  if (m.date) {
-var I = function(e, t) {
+  if (I.date) {
+var m = function(e, t) {
   var n = RegExp('^(?:(\\d{4}|[+-]\\d{' + (4 + t) + '})|(\\d{2}|[+-]\\d{' + (2 + t) + '})$)'),
     r = e.match(n);
   if (!r)
@@ -40,7 +40,7 @@ var I = function(e, t) {
     year: null === a ? i : 100 * a,
     restDateString: e.slice((r[1] || r[2]).length)
   };
-}(m.date, p);
+}(I.date, p);
 s = function(e, t) {
   if (null === t)
     return new Date(NaN);
@@ -68,13 +68,13 @@ s = function(e, t) {
   }(t, a, s) || ! function(e, t) {
     return t >= 1 && t <= (f(e) ? 366 : 365);
   }(t, i) ? new Date(NaN) : (c.setUTCFullYear(t, a, Math.max(i, s)), c);
-}(I.restDateString, I.year);
+}(m.restDateString, m.year);
   }
   if (!s || isNaN(s.getTime()))
 return new Date(NaN);
   var T = s.getTime(),
 g = 0;
-  if (m.time && isNaN(g = function(e) {
+  if (I.time && isNaN(g = function(e) {
   var t = e.match(u);
   if (!t)
     return NaN;
@@ -84,9 +84,9 @@ g = 0;
   return ! function(e, t, n) {
     return 24 === e ? 0 === t && 0 === n : n >= 0 && n < 60 && t >= 0 && t < 60 && e >= 0 && e < 25;
   }(n, i, a) ? NaN : n * r.vh + i * r.yJ + 1000 * a;
-}(m.time)))
+}(I.time)))
 return new Date(NaN);
-  if (m.timezone) {
+  if (I.timezone) {
 if (isNaN(h = function(e) {
     if ('Z' === e)
       return 0;
@@ -99,7 +99,7 @@ if (isNaN(h = function(e) {
     return ! function(e, t) {
       return t >= 0 && t <= 59;
     }(i, a) ? NaN : n * (i * r.vh + a * r.yJ);
-  }(m.timezone)))
+  }(I.timezone)))
   return new Date(NaN);
   } else {
 var S = new Date(T + g),

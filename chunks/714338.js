@@ -13,8 +13,8 @@ let _ = {},
   f = !1,
   h = s()(new(i())(window)),
   p = (0, c.isMac)() ? 'cmd' : 'ctrl',
-  m = (0, c.isMac)() ? 'opt' : 'alt',
-  I = (0, c.isMac)() ? 'return' : 'enter',
+  I = (0, c.isMac)() ? 'opt' : 'alt',
+  m = (0, c.isMac)() ? 'return' : 'enter',
   T = [
 ...o.u.binds,
 'mod+shift+[',
@@ -71,8 +71,8 @@ null != n.keypress && i.call(h, r, N(t, n.keypress), 'keypress');
 (0, c.isDesktop)() && new(i())(document.documentElement).bind('backspace', e => e.preventDefault()), t.Z = {
   combokeys: h,
   modKey: p,
-  altKey: m,
-  returnKey: I,
+  altKey: I,
+  returnKey: m,
   setGetKeybindList(e) {
 g = e;
   },

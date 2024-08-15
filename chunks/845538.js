@@ -38,7 +38,7 @@ o.default.track(l.rMx.PREMIUM_GIFT_UPSELL_VIEWED, {
 ], []),
 h = E || !(a.tq || a.Em),
 p = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : c.Z.Messages.SEASONAL_GIFTING_POPUP_HEADER,
-m = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
+I = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
   return (0, r.jsxs)('div', {
 className: d.container,
 children: [
@@ -75,7 +75,7 @@ children: [
         className: d.dmButton,
         color: s.Button.Colors.BRAND_INVERTED,
         onClick: () => u(),
-        children: m
+        children: I
       })
     ]
   }),

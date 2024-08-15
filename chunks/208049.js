@@ -47,7 +47,7 @@ var r = n(392711),
   f = n(981631),
   h = n(526761),
   p = n(689938);
-let m = async e => {
+let I = async e => {
   try {
 let t = (await a.tn.get({
   url: f.ANM.SOUNDBOARD_DEFAULT_SOUNDS,
@@ -64,7 +64,7 @@ throw s.Z.dispatch({
   type: 'SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE'
 }), new l.Z(e);
   }
-}, I = e => new Promise(t => {
+}, m = e => new Promise(t => {
   let n = () => {
 s.Z.unsubscribe(e, n), setTimeout(t, 0);
   };
@@ -75,13 +75,13 @@ return Promise.resolve();
   s.Z.dispatch({
 type: 'SOUNDBOARD_FETCH_DEFAULT_SOUNDS'
   });
-  let t = I('SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS');
-  return m(e), t;
+  let t = m('SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS');
+  return I(e), t;
 }, g = () => {
   let e = (0, _.D)();
   if (0 === e.length)
 return Promise.resolve();
-  let t = I('SOUNDBOARD_SOUNDS_RECEIVED');
+  let t = m('SOUNDBOARD_SOUNDS_RECEIVED');
   return s.Z.dispatch({
 type: 'GUILD_SOUNDBOARD_FETCH'
   }), s.Z.dispatch({

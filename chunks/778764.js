@@ -21,15 +21,15 @@ var n = t(735250),
   C = t(755733),
   m = t(981631),
   A = t(689938),
-  g = t(824901);
+  O = t(824901);
 
-function O(e) {
+function g(e) {
   let {
 transitionState: s,
 onClose: r,
 ticket: l,
 challenge: c
-  } = e, E = (0, d.Dt)(), [N, O] = a.useState(''), [h, p] = a.useState(!0), [R, x] = a.useState(C.x.INIT), [M, f] = a.useState(''), [D, P] = a.useState(null), L = async () => {
+  } = e, E = (0, d.Dt)(), [N, g] = a.useState(''), [h, p] = a.useState(!0), [R, x] = a.useState(C.x.INIT), [M, f] = a.useState(''), [D, P] = a.useState(null), L = async () => {
 let e;
 x(C.x.REGISTER);
 let s = u.isPlatformEmbedded && T.ZP.supportsFeature(m.eRX.WEBAUTHN) ? T.ZP.webAuthnRegister(c) : i.Ue(JSON.parse(c)).then(e => JSON.stringify(e));
@@ -46,7 +46,7 @@ transitionState: s,
 'aria-labelledby': E,
 children: [
   (0, n.jsxs)(o.ModalHeader, {
-    className: g.header,
+    className: O.header,
     separator: !1,
     children: [
       (0, n.jsxs)(o.Heading, {
@@ -60,7 +60,7 @@ children: [
       }),
       (0, n.jsx)(o.ModalCloseButton, {
         onClick: r,
-        className: g.modalCloseButton
+        className: O.modalCloseButton
       })
     ]
   }),
@@ -72,10 +72,10 @@ children: [
         id: C.x.INIT,
         children: [
           (0, n.jsxs)(o.ModalContent, {
-            className: g.content,
+            className: O.content,
             children: [
               (0, n.jsx)('div', {
-                className: g.icon,
+                className: O.icon,
                 children: (0, n.jsx)('img', {
                   alt: '',
                   src: t(773072)
@@ -108,10 +108,10 @@ children: [
         id: C.x.REGISTER,
         children: [
           (0, n.jsxs)(o.ModalContent, {
-            className: g.content,
+            className: O.content,
             children: [
               (0, n.jsx)('div', {
-                className: g.icon,
+                className: O.icon,
                 children: (0, n.jsx)('img', {
                   alt: '',
                   src: t(773072)
@@ -144,10 +144,10 @@ children: [
           },
           children: [
             (0, n.jsxs)(o.ModalContent, {
-              className: g.content,
+              className: O.content,
               children: [
                 (0, n.jsx)('div', {
-                  className: g.icon,
+                  className: O.icon,
                   children: (0, n.jsx)('img', {
                     alt: '',
                     src: t(637163)
@@ -160,10 +160,10 @@ children: [
                       children: A.Z.Messages.TWO_FA_WEBAUTHN_NAME_INSTRUCTIONS
                     }),
                     (0, n.jsx)(o.TextInput, {
-                      className: g.input,
+                      className: O.input,
                       value: N,
                       onChange: e => {
-                        O(e), p(0 === e.length);
+                        g(e), p(0 === e.length);
                       },
                       autoFocus: !0,
                       minLength: 1
@@ -173,7 +173,7 @@ children: [
               ]
             }),
             (0, n.jsxs)(o.ModalFooter, {
-              className: g.footer,
+              className: O.footer,
               children: [
                 (0, n.jsx)(o.Button, {
                   type: 'submit',
@@ -251,19 +251,19 @@ credentials: N.Z.getCredentials()
   let [t, i] = a.useState(!1);
   return (0, n.jsxs)(o.FormSection, {
 title: A.Z.Messages.TWO_FA_WEBAUTHN_TITLE,
-className: g.settings,
+className: O.settings,
 children: [
   (0, n.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
-    className: g.description,
+    className: O.description,
     children: A.Z.Messages.TWO_FA_WEBAUTHN_DESCRIPTION
   }),
   e.length > 0 && (0, n.jsx)('div', {
-    className: g.credentialList,
+    className: O.credentialList,
     children: e.map(e => (0, n.jsx)(c.Z, {
       avatar: null,
       name: e.name,
-      className: g.credentialItem,
+      className: O.credentialItem,
       onContextMenu: s => {
         (0, l.vq)(s, s => (0, n.jsx)(h, {
           ...s,
@@ -281,12 +281,12 @@ children: [
           }));
         },
         'aria-label': A.Z.Messages.TWO_FA_WEBAUTHN_CREDENTIAL_OPTIONS,
-        innerClassName: g.credentialOptions,
+        innerClassName: O.credentialOptions,
         children: (0, n.jsx)(o.MoreVerticalIcon, {
           size: 'md',
           color: 'currentColor',
-          className: g.__invalid_overflowIcon,
-          colorClass: g.__invalid_overflowIconFg,
+          className: O.__invalid_overflowIcon,
+          colorClass: O.__invalid_overflowIconFg,
           'aria-hidden': !0
         })
       })
@@ -300,7 +300,7 @@ children: [
             ticket: s,
             challenge: t
           } = e;
-          (0, o.openModal)(e => (0, n.jsx)(O, {
+          (0, o.openModal)(e => (0, n.jsx)(g, {
             ...e,
             ticket: s,
             challenge: t

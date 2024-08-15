@@ -31,14 +31,14 @@ opacity: 0
 opacity: 1
   }), A = e => {
 e.finished && (null == i || i());
-  }, [g, O] = (0, c.useSpring)(() => ({
+  }, [O, g] = (0, c.useSpring)(() => ({
 from: {
   backgroundColor: S,
   borderColor: S
 }
   }), 'animate-never'), h = E + 200 + 200, p = T ? 0 : 200;
   return a.useEffect(() => {
-O({
+g({
   reset: !0,
   immediate: !1,
   to: {
@@ -49,7 +49,7 @@ O({
     duration: p,
     easing: l.Z.Easing.ease
   }
-}), O({
+}), g({
   delay: E,
   immediate: T,
   to: [{
@@ -60,7 +60,7 @@ O({
     duration: p,
     easing: l.Z.Easing.ease
   }
-}), O({
+}), g({
   delay: h,
   immediate: T,
   to: [{
@@ -73,8 +73,8 @@ O({
   },
   onRest: A
 });
-  }, [O]), (0, n.jsx)(o.animated.div, {
-style: g,
+  }, [g]), (0, n.jsx)(o.animated.div, {
+style: O,
 className: r()(u.settingsItemHighlight, t),
 children: s
   });

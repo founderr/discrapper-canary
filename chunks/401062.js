@@ -24,8 +24,8 @@ var r, i, a = n(392711),
   f = n(70956),
   h = n(176354),
   p = n(696900),
-  m = n(456631),
-  I = n(963838),
+  I = n(456631),
+  m = n(963838),
   T = n(353368),
   g = n(981631),
   S = n(710111);
@@ -48,7 +48,7 @@ abortController: i,
 onRequestProgress: a
   } = A(e), o = null !== (r = p.Z.getState().animationType) && void 0 !== r ? r : T.q.BASIC, u = {
 animation_type: o,
-animation_id: (0, I.Iu)(o, I.v)
+animation_id: (0, m.Iu)(o, m.v)
   };
   s.tn.post({
 url: g.ANM.CUSTOM_CALL_SOUNDS(e),
@@ -93,7 +93,7 @@ animationType: i,
 animationId: a,
 isPremium: l
   } = e;
-  if (null == n || m.Z.isOnCooldown)
+  if (null == n || I.Z.isOnCooldown)
 return;
   let u = l && null != i ? i : T.q.BASIC;
   try {

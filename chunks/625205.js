@@ -27,8 +27,8 @@ function m() {
 {
   canSetInputDevice: m,
   canSetOutputDevice: A,
-  inputDeviceId: g,
-  outputDeviceId: O
+  inputDeviceId: O,
+  outputDeviceId: g
 } = (0, r.cj)([E.Z], () => ({
   canSetInputDevice: E.Z.supports(T.AN.AUDIO_INPUT_DEVICE),
   canSetOutputDevice: E.Z.supports(T.AN.AUDIO_OUTPUT_DEVICE),
@@ -95,7 +95,7 @@ children: [
         children: S.Z.Messages.FORM_LABEL_INPUT_DEVICE
       }),
       (0, n.jsx)(l.SingleSelect, {
-        value: g,
+        value: O,
         onChange: e => c.Z.setInputDevice(e, 'Settings'),
         options: i().map(h, e => {
           let {
@@ -123,7 +123,7 @@ children: [
         children: S.Z.Messages.FORM_LABEL_OUTPUT_DEVICE
       }),
       (0, n.jsx)(l.SingleSelect, {
-        value: O,
+        value: g,
         onChange: e => c.Z.setOutputDevice(e, 'Settings'),
         options: i().map(p, e => {
           let {

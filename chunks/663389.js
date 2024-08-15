@@ -8,8 +8,8 @@ let E = _.QZA.CLOSED,
   f = null,
   h = null,
   p = {},
-  m = {},
   I = {},
+  m = {},
   T = null,
   g = null,
   S = !1,
@@ -26,7 +26,7 @@ function D(e) {
   let o = d.default.getCurrentUser();
   if (null == o)
 return L();
-  h = null !== (t = e.section) && void 0 !== t ? t : h, C = null !== (n = e.section) && void 0 !== n ? n : h, null != e.subsection && null != h && (p[h] = e.subsection), null != e.scrollPosition && null != h && (m[h] = e.scrollPosition), A = !!e.openWithoutBackstack, E = _.QZA.OPEN, I = {}, g = {
+  h = null !== (t = e.section) && void 0 !== t ? t : h, C = null !== (n = e.section) && void 0 !== n ? n : h, null != e.subsection && null != h && (p[h] = e.subsection), null != e.scrollPosition && null != h && (I[h] = e.scrollPosition), A = !!e.openWithoutBackstack, E = _.QZA.OPEN, m = {}, g = {
 ...T = {
   [_.oAB.ACCOUNT]: {
     userId: o.id,
@@ -43,11 +43,11 @@ return L();
 }
 
 function L() {
-  E = _.QZA.CLOSED, S = !1, T = null, C = null, g = null, f = null, h = null, p = {}, m = {}, v = null, O = null, R = [], y = null;
+  E = _.QZA.CLOSED, S = !1, T = null, C = null, g = null, f = null, h = null, p = {}, I = {}, v = null, O = null, R = [], y = null;
 }
 
 function b() {
-  E = _.QZA.OPEN, I = {};
+  E = _.QZA.OPEN, m = {};
 }
 class M extends(s = u.ZP.Store) {
   initialize() {
@@ -69,7 +69,7 @@ return h;
 return null != h ? p[h] : null;
   }
   getScrollPosition() {
-return null != h ? m[h] : null;
+return null != h ? I[h] : null;
   }
   shouldOpenWithoutBackstack() {
 return A;
@@ -79,9 +79,9 @@ return {
   submitting: E === _.QZA.SUBMITTING,
   section: h,
   subsection: null != h ? p[h] : null,
-  scrollPosition: null != h ? m[h] : null,
+  scrollPosition: null != h ? I[h] : null,
   settings: g,
-  errors: I,
+  errors: m,
   hasChanges: this.hasChanges(),
   openWithoutBackstack: A,
   analyticsLocation: O,
@@ -113,7 +113,7 @@ E = _.QZA.SUBMITTING;
 var t;
 if (E !== _.QZA.SUBMITTING)
   return !1;
-E = _.QZA.OPEN, h = _.oAB.ACCOUNT, I = null !== (t = e.errors) && void 0 !== t ? t : {};
+E = _.QZA.OPEN, h = _.oAB.ACCOUNT, m = null !== (t = e.errors) && void 0 !== t ? t : {};
   },
   USER_SETTINGS_MODAL_SET_SECTION: function(e) {
 var t;
@@ -129,7 +129,7 @@ null != t ? delete p[t] : null != h && delete p[h];
 let {
   forSection: t
 } = e;
-null != t ? delete m[t] : null != h && delete m[h];
+null != t ? delete I[t] : null != h && delete I[h];
   },
   USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function(e) {
 let {

@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(496675),
   h = n(699516),
   p = n(771845),
-  m = n(594174),
-  I = n(981631),
+  I = n(594174),
+  m = n(981631),
   T = n(689938);
 
 function g(e, t) {
@@ -32,7 +32,7 @@ function S(e) {
 user: t,
 guildId: n,
 onAction: o
-  } = e, u = (0, a.e7)([m.default], () => m.default.getCurrentUser(), []), d = (0, a.Wu)([
+  } = e, u = (0, a.e7)([I.default], () => I.default.getCurrentUser(), []), d = (0, a.Wu)([
 p.ZP,
 E.Z,
 f.Z
@@ -56,12 +56,12 @@ children: d.map(e => S[e.id] ? (0, r.jsx)(s.MenuItem, {
   label: e.name,
   action: () => {
     null == o || o(), ! function(e, t) {
-      let n = _.ZP.getDefaultChannel(e.id, !0, I.Plq.CREATE_INSTANT_INVITE);
+      let n = _.ZP.getDefaultChannel(e.id, !0, m.Plq.CREATE_INSTANT_INVITE);
       if (null != n) {
         if (A({
             ...S,
             [e.id]: !0
-          }), !f.Z.can(I.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode) {
+          }), !f.Z.can(m.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode) {
           g(t, e.vanityURLCode);
           return;
         }

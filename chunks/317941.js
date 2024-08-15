@@ -17,8 +17,8 @@ var n = t(735250),
   C = t(246946),
   m = t(509545),
   A = t(55563),
-  g = t(259580),
-  O = t(572004),
+  O = t(259580),
+  g = t(572004),
   h = t(669079),
   p = t(296848),
   R = t(474936),
@@ -66,7 +66,7 @@ return (0, n.jsxs)(u.Z, {
       value: (0, h.Nz)(s.code),
       text: this.copyButtonText,
       mode: t,
-      supportsCopy: O.wS,
+      supportsCopy: g.wS,
       hideMessage: e ? x.Z.Messages.GIFT_INVENTORY_HIDDEN : null,
       onCopy: this.handleCopy,
       buttonColor: c.ButtonColors.BRAND,
@@ -104,7 +104,7 @@ super(...e), f(this, '_copyModeTimeout', new l.V7()), f(this, 'state', {
   } = this.props;
   (0, h.dM)(s, t);
   try {
-    (0, O.JG)(e), this.setState({
+    (0, g.JG)(e), this.setState({
       copyMode: c.CopyInputModes.SUCCESS
     });
   } catch (e) {
@@ -219,8 +219,8 @@ return (0, n.jsxs)(_.Z, {
                 })
               ]
             }),
-            (0, n.jsx)(g.Z, {
-              direction: E ? g.Z.Directions.UP : g.Z.Directions.DOWN,
+            (0, n.jsx)(O.Z, {
+              direction: E ? O.Z.Directions.UP : O.Z.Directions.DOWN,
               className: M.expandIcon
             })
           ]

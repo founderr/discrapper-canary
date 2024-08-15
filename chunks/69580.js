@@ -33,8 +33,8 @@ var r, i, a = n(735250),
   f = n(442837),
   h = n(693789),
   p = n(952265),
-  m = n(21340),
-  I = n(922770),
+  I = n(21340),
+  m = n(922770),
   T = n(993365),
   g = n(481060),
   S = n(893776),
@@ -115,7 +115,7 @@ children: (0, a.jsx)('div', {
   className: l()(J.authorize, {
     [J.inApp]: n.inApp
   }),
-  children: (0, a.jsx)(m.zJ, {
+  children: (0, a.jsx)(I.zJ, {
     orientation: 'auto',
     children: d
   })
@@ -153,7 +153,7 @@ children: [
     className: l()(J.authorize, {
       [J.inApp]: n.inApp
     }),
-    children: (0, a.jsx)(m.zJ, {
+    children: (0, a.jsx)(I.zJ, {
       orientation: 'auto',
       children: c
     })
@@ -173,7 +173,7 @@ children: (0, a.jsx)('div', {
 
 function ei(e) {
   var t, n, r, i, o;
-  let p, m, v, C, D, z, {
+  let p, I, v, C, D, z, {
   clientId: et,
   responseType: en,
   redirectUri: er,
@@ -190,8 +190,8 @@ function ei(e) {
   integrationType: ef,
   disableGuildSelect: eh = !1,
   disableContinueUntilRead: ep = !1,
-  showLogout: em = !1,
-  cancelCompletesFlow: eI = !0,
+  showLogout: eI = !1,
+  cancelCompletesFlow: em = !0,
   isTrustedName: eT = !1,
   isEmbeddedFlow: eg = !1,
   inApp: eS = !1,
@@ -305,7 +305,7 @@ eM
     eN(e);
     return;
   }
-  if (!e && !eI) {
+  if (!e && !em) {
     null != eA && (eA({
       application: null == eD ? void 0 : eD.application,
       guild: eK
@@ -358,7 +358,7 @@ eM
   }
 }, [
   eN,
-  eI,
+  em,
   eA,
   null == eD ? void 0 : eD.application,
   eK,
@@ -493,12 +493,12 @@ to = !0;
   switch (eb) {
 case null:
   return {
-    body: (0, a.jsx)(I.$, {})
+    body: (0, a.jsx)(m.$, {})
   };
 case 0:
   if (null == eX)
     return {
-      body: (0, a.jsx)(I.$, {})
+      body: (0, a.jsx)(m.$, {})
     };
   p = (0, a.jsx)(K.Z, {
     inApp: eS,
@@ -511,7 +511,7 @@ case 0:
 case 1:
   if (null == eD || null == eW || null == ez)
     return {
-      body: (0, a.jsx)(I.$, {})
+      body: (0, a.jsx)(m.$, {})
     };
   let tl = null == eP || eP instanceof Error ? {} : eP,
     tu = null == eB ? void 0 : eB.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
@@ -541,12 +541,12 @@ case 1:
         onChannelChange: eZ
       }) : null
     ]
-  }), e0.includes(_.x.BOT) && !E.fS(e2, U.Hn) && (v = 2), tt.length > 1 && (m = 0), ti = td && null == eK || tc && null == eH;
+  }), e0.includes(_.x.BOT) && !E.fS(e2, U.Hn) && (v = 2), tt.length > 1 && (I = 0), ti = td && null == eK || tc && null == eH;
   break;
 case 2:
   if (null == eD)
     return {
-      body: (0, a.jsx)(I.$, {})
+      body: (0, a.jsx)(m.$, {})
     };
   p = (0, a.jsx)(Y.Z, {
     application: eD.application,
@@ -556,7 +556,7 @@ case 2:
       ej(n => e ? E.Od(n, t) : E.IH(n, t));
     },
     guild: eK
-  }), m = 1;
+  }), I = 1;
   }
   if (ta && null != eD) {
 let e = null === (i = eD.bot) || void 0 === i ? void 0 : i.approximate_guild_count;
@@ -583,7 +583,7 @@ user: eW,
 application: eD.application,
 bot: eD.bot,
 accountScopes: e1,
-showLogout: em || !1,
+showLogout: eI || !1,
 location: eC,
 isTrustedName: eT
   }));
@@ -593,10 +593,10 @@ className: l()(J.footer, {
   [J.inApp]: eS
 }),
 children: [
-  null != m ? (0, a.jsx)(h.zx, {
+  null != I ? (0, a.jsx)(h.zx, {
     look: h.zx.Looks.LINK,
     color: h.zx.Colors.PRIMARY,
-    onClick: () => eM(m),
+    onClick: () => eM(I),
     children: $.Z.Messages.BACK
   }) : (0, a.jsx)(h.zx, {
     look: h.zx.Looks.LINK,

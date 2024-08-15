@@ -14,9 +14,9 @@ var i = n(481060),
   f = n(959457),
   h = n(178635),
   p = n(531578),
-  m = n(981631);
+  I = n(981631);
 
-function I(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -29,13 +29,13 @@ class T extends h.Z {
 l.Z.init();
   }
   constructor(...e) {
-super(...e), I(this, 'actions', {
+super(...e), m(this, 'actions', {
   VOICE_CHANNEL_SHOW_FEEDBACK: e => this.handleVoiceChannelFeedback(e),
   STREAM_CLOSE: e => this.handleStreamClose(e),
   VIDEO_BACKGROUND_SHOW_FEEDBACK: e => this.handleVideoBackgroundShowFeedback(e),
   EMBEDDED_ACTIVITY_CLOSE: e => this.handleActivityClose(e),
   IN_APP_REPORTS_SHOW_FEEDBACK: e => this.handleInAppReportsFeedback(e)
-}), I(this, 'handleVoiceChannelFeedback', e => {
+}), m(this, 'handleVoiceChannelFeedback', e => {
   let {
     analyticsData: t
   } = e;
@@ -50,7 +50,7 @@ super(...e), I(this, 'actions', {
       });
     });
   });
-}), I(this, 'handleStreamClose', e => {
+}), m(this, 'handleStreamClose', e => {
   var t;
   let {
     streamKey: a,
@@ -76,7 +76,7 @@ super(...e), I(this, 'actions', {
       });
     });
   });
-}), I(this, 'handleVideoBackgroundShowFeedback', e => {
+}), m(this, 'handleVideoBackgroundShowFeedback', e => {
   let {
     analyticsData: t
   } = e;
@@ -91,7 +91,7 @@ super(...e), I(this, 'actions', {
       });
     });
   });
-}), I(this, 'handleActivityClose', e => {
+}), m(this, 'handleActivityClose', e => {
   let {
     applicationId: t,
     channelId: s,
@@ -99,7 +99,7 @@ super(...e), I(this, 'actions', {
   } = e, l = a.Z.getApplication(t), c = d.Z.getChannel(s), _ = {
     rtc_connection_id: E.Z.getRTCConnectionId(),
     media_session_id: E.Z.getMediaSessionId()
-  }, f = u.Z.getWindowOpen(m.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+  }, f = u.Z.getWindowOpen(I.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
   null != l && null != c && o && this.possiblyShowFeedbackModal(p.nw.ACTIVITY, () => {
     (0, i.openModalLazy)(async () => {
       let {
@@ -115,7 +115,7 @@ super(...e), I(this, 'actions', {
       contextKey: f
     });
   });
-}), I(this, 'handleInAppReportsFeedback', e => {
+}), m(this, 'handleInAppReportsFeedback', e => {
   let {
     reportId: t,
     reportType: a

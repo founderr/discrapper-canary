@@ -67,12 +67,12 @@ return null !== e.prevFatigableCandidate && e.candidates.has(e.prevFatigableCand
   return t !== (null === (n = e.prevFatigableCandidate) || void 0 === n ? void 0 : n.content);
 })), e.candidates.get(t[Math.floor(Math.random() * t.length)]);
   },
-  m = e => null != e.prevFatigableCandidate && e.candidates.has(e.prevFatigableCandidate.content) && null == e.shownFatigableCandidate,
-  I = e => {
+  I = e => null != e.prevFatigableCandidate && e.candidates.has(e.prevFatigableCandidate.content) && null == e.shownFatigableCandidate,
+  m = e => {
 if (0 === e.candidates.size)
   return e;
 let t = new Date().getTime() - e.lastWinnerTime > 300000;
-if (m(e) && !t)
+if (I(e) && !t)
   return s.unschedule(), f(e, h(e));
 if (null != e.shownFatigableCandidate && !t || s.scheduled())
   return e;
@@ -91,7 +91,7 @@ let t = a.O.has(e.content);
 (0, i.j)(() => {
   l.setState(n => {
     let r = u(n);
-    return t ? d(r, e) : I(_(r, e));
+    return t ? d(r, e) : m(_(r, e));
   });
 });
   },
@@ -99,7 +99,7 @@ let t = a.O.has(e.content);
 (0, i.j)(() => {
   l.setState(n => {
     let r = u(n);
-    return t ? I(c(E(r, e), e)) : c(E(r, e), e);
+    return t ? m(c(E(r, e), e)) : c(E(r, e), e);
   });
 });
   },

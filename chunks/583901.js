@@ -6,7 +6,7 @@ return g;
 return T;
   },
   oK: function() {
-return m;
+return I;
   }
 }), n(627341);
 var r = n(735250);
@@ -25,7 +25,7 @@ var i = n(120356),
   h = n(689938),
   p = n(901487);
 
-function m() {
+function I() {
   return (0, r.jsx)('div', {
 className: p.selectionCircle,
 children: (0, r.jsx)(c.CircleCheckIcon, {
@@ -38,7 +38,7 @@ children: (0, r.jsx)(c.CircleCheckIcon, {
   });
 }
 
-function I(e) {
+function m(e) {
   let {
 name: t,
 className: n,
@@ -69,7 +69,7 @@ children: e => (0, r.jsxs)('div', {
       onClick: o ? f.dG4 : s,
       children: u
     }),
-    o && (0, r.jsx)(m, {}),
+    o && (0, r.jsx)(I, {}),
     !o && d && (0, r.jsx)('div', {
       className: p.redCircle
     }),
@@ -90,7 +90,7 @@ function T(e) {
 theme: t,
 isSelected: n,
 onSelect: i
-  } = e, _ = (0, o.e7)([d.Z], () => d.Z.systemPrefersColorScheme), m = e => (0, u.ap)(e) ? l.Z.unsafe_rawColors.PRIMARY_600.css : l.Z.unsafe_rawColors.WHITE_500.css, T = (0, s.EQ)({
+  } = e, _ = (0, o.e7)([d.Z], () => d.Z.systemPrefersColorScheme), I = e => (0, u.ap)(e) ? l.Z.unsafe_rawColors.PRIMARY_600.css : l.Z.unsafe_rawColors.WHITE_500.css, T = (0, s.EQ)({
 theme: t,
 systemPrefersColorScheme: _
   }).with({
@@ -105,7 +105,7 @@ theme: f.BRd.DARKER
   }, () => p.darkerIcon).with({
 theme: f.BRd.MIDNIGHT
   }, () => p.midnightIcon).otherwise(() => p.darkIcon), g = (0, s.EQ)(t).with(f.BRd.LIGHT, () => h.Z.Messages.THEME_LIGHT).with(f.BRd.DARK, () => h.Z.Messages.THEME_DARK).with(f.BRd.DARKER, () => 'Darker').with(f.BRd.MIDNIGHT, () => h.Z.Messages.THEME_MIDNIGHT).with('system', () => h.Z.Messages.THEME_SYSTEM).exhaustive(), S = (0, c.useRedesignIconContext)().enabled;
-  return (0, r.jsx)(I, {
+  return (0, r.jsx)(m, {
 onSelect: i,
 isSelected: n,
 name: g,
@@ -113,9 +113,9 @@ className: a()(p.defaultThemeSelection, T),
 children: 'system' === t && (0, r.jsx)('div', {
   className: p.iconWrapper,
   children: S ? (0, r.jsx)(c.RefreshIcon, {
-    color: m(_)
+    color: I(_)
   }) : (0, r.jsx)(E.Z, {
-    fill: m(_)
+    fill: I(_)
   })
 })
   });
@@ -138,7 +138,7 @@ theme: f
 colors: d,
 angle: E
   });
-  return (0, r.jsx)(I, {
+  return (0, r.jsx)(m, {
 onSelect: i ? void 0 : o,
 isSelected: n,
 name: t.getName(),

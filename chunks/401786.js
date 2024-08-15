@@ -19,8 +19,8 @@ var n, a, i = t(735250),
   C = t(55610),
   m = t(653798),
   A = t(311821),
-  g = t(42818),
-  O = t(314884),
+  O = t(42818),
+  g = t(314884),
   h = t(509545),
   p = t(78839),
   R = t(267642),
@@ -94,7 +94,7 @@ children: [
 (a = n || (n = {}))[a.START = 1] = 'START', a[a.PREVIEW = 2] = 'PREVIEW', a[a.CONFIRM = 3] = 'CONFIRM';
 async function v(e, s, t, n) {
   let a = null != n ? n : function() {
-let e = Object.values(O.Z.boostSlots),
+let e = Object.values(g.Z.boostSlots),
   s = l().sortBy(e.filter(e => !(0, R.tl)(e)), e => [
     null != e.premiumGuildSubscription,
     null != e.cooldownEndsAt ? new Date(e.cooldownEndsAt) : null
@@ -116,7 +116,7 @@ guildBoostSlotId: o,
 onBack: l,
 onNext: _,
 onClose: E
-  } = e, [C, O] = r.useState(!1), [p, R] = r.useMemo(() => {
+  } = e, [C, g] = r.useState(!1), [p, R] = r.useMemo(() => {
 try {
   return [
     (0, N.g)(a, -1),
@@ -210,7 +210,7 @@ children: [
           null != U && U.length > 0 ? (0, i.jsxs)('div', {
             children: [
               (0, i.jsx)(m.KU, {}),
-              (0, i.jsx)(g.nd, {
+              (0, i.jsx)(O.nd, {
                 premiumSubscription: a,
                 renewalInvoice: G,
                 isUpdate: !0
@@ -230,9 +230,9 @@ children: [
         disabled: C,
         onClick: async () => {
           try {
-            O(!0), await v(a, p, j, o), _();
+            g(!0), await v(a, p, j, o), _();
           } catch {
-            O(!1);
+            g(!1);
           }
         },
         children: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON

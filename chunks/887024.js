@@ -161,7 +161,7 @@ return e.prototype.update = function(e) {
   configurable: !0
 }), e;
   }(),
-  m = function(e) {
+  I = function(e) {
 function t(t, n, r) {
   var i = e.call(this, t, n) || this;
   return i._z = r, i;
@@ -184,7 +184,7 @@ return E(t, e), t.prototype.update = function(t) {
   configurable: !0
 }), t;
   }(p),
-  I = function(e) {
+  m = function(e) {
 function t() {
   return null !== e && e.apply(this, arguments) || this;
 }
@@ -272,11 +272,11 @@ function R(e) {
 switch (e.type) {
   case 'static':
     var t = v(e.value);
-    return new p(new I(t.x), new I(t.y));
+    return new p(new m(t.x), new m(t.y));
   case 'static-random':
     var n = v(e.minValue),
       r = v(e.maxValue);
-    return new p(new I(S(n.x, r.x)), new I(S(n.y, r.y)));
+    return new p(new m(S(n.x, r.x)), new m(S(n.y, r.y)));
   case 'linear':
     t = v(e.value);
     var i = v(e.addValue);
@@ -300,10 +300,10 @@ switch (e.type) {
       E = v(e.minFinal),
       f = v(e.maxFinal),
       h = v(e.minDuration),
-      m = v(e.maxDuration),
+      I = v(e.maxDuration),
       O = v(e.minDirection),
       R = v(e.maxDirection);
-    return new p(new g(S(n.x, r.x), S(d.x, _.x), S(E.x, f.x), S(h.x, m.x), N(O.x, R.x), A(e.easingFunctions)[0]), new g(S(n.y, r.y), S(d.y, _.y), S(E.y, f.y), S(h.y, m.y), N(O.y, R.y), A(e.easingFunctions)[0]));
+    return new p(new g(S(n.x, r.x), S(d.x, _.x), S(E.x, f.x), S(h.x, I.x), N(O.x, R.x), A(e.easingFunctions)[0]), new g(S(n.y, r.y), S(d.y, _.y), S(E.y, f.y), S(h.y, I.y), N(O.y, R.y), A(e.easingFunctions)[0]));
 }
   }(f(f({}, e), {
 valueType: 'Vector2'
@@ -401,27 +401,27 @@ U = r.useCallback(function(e, t, n, r, a) {
       switch (e.type) {
         case 'static':
           var t = O(e.value);
-          return new m(new I(t.x), new I(t.y), new I(t.z));
+          return new I(new m(t.x), new m(t.y), new m(t.z));
         case 'static-random':
           var n = O(e.minValue),
             r = O(e.maxValue);
-          return new m(new I(S(n.x, r.x)), new I(S(n.y, r.y)), new I(S(n.z, r.z)));
+          return new I(new m(S(n.x, r.x)), new m(S(n.y, r.y)), new m(S(n.z, r.z)));
         case 'linear':
           t = O(e.value);
           var i = O(e.addValue);
-          return new m(new T(t.x, i.x), new T(t.y, i.y), new T(t.z, i.z));
+          return new I(new T(t.x, i.x), new T(t.y, i.y), new T(t.z, i.z));
         case 'linear-random':
           n = O(e.minValue), r = O(e.maxValue);
           var a = O(e.minAddValue),
             s = O(e.maxAddValue);
-          return new m(new T(S(n.x, r.x), S(a.x, s.x)), new T(S(n.y, r.y), S(a.y, s.y)), new T(S(n.z, r.z), S(a.z, s.z)));
+          return new I(new T(S(n.x, r.x), S(a.x, s.x)), new T(S(n.y, r.y), S(a.y, s.y)), new T(S(n.z, r.z), S(a.z, s.z)));
         case 'oscillating':
           t = O(e.value);
           var o = O(e.start),
             l = O(e.final),
             u = O(e.duration),
             c = O(e.direction);
-          return new m(new g(t.x, o.x, l.x, u.x, c.x, e.easingFunction), new g(t.y, o.y, l.y, u.z, c.y, e.easingFunction), new g(t.z, o.z, l.z, u.z, c.z, e.easingFunction));
+          return new I(new g(t.x, o.x, l.x, u.x, c.x, e.easingFunction), new g(t.y, o.y, l.y, u.z, c.y, e.easingFunction), new g(t.z, o.z, l.z, u.z, c.z, e.easingFunction));
         case 'oscillating-random':
           n = O(e.minValue), r = O(e.maxValue);
           var d = O(e.minStart),
@@ -432,7 +432,7 @@ U = r.useCallback(function(e, t, n, r, a) {
             p = O(e.maxDuration),
             v = O(e.minDirection),
             R = O(e.maxDirection);
-          return new m(new g(S(n.x, r.x), S(d.x, _.x), S(E.x, f.x), S(h.x, p.x), N(v.x, R.x), A(e.easingFunctions)[0]), new g(S(n.y, r.y), S(d.y, _.y), S(E.y, f.y), S(h.y, p.y), N(v.y, R.y), A(e.easingFunctions)[0]), new g(S(n.z, r.z), S(d.z, _.z), S(E.z, f.z), S(h.z, p.z), N(v.z, R.z), A(e.easingFunctions)[0]));
+          return new I(new g(S(n.x, r.x), S(d.x, _.x), S(E.x, f.x), S(h.x, p.x), N(v.x, R.x), A(e.easingFunctions)[0]), new g(S(n.y, r.y), S(d.y, _.y), S(E.y, f.y), S(h.y, p.y), N(v.y, R.y), A(e.easingFunctions)[0]), new g(S(n.z, r.z), S(d.z, _.z), S(E.z, f.z), S(h.z, p.z), N(v.z, R.z), A(e.easingFunctions)[0]));
       }
     }(f(f({}, L), {
       valueType: 'Vector3'
@@ -442,9 +442,9 @@ U = r.useCallback(function(e, t, n, r, a) {
     opacity: (b = h.opacity, function(e) {
       switch (e.type) {
         case 'static':
-          return new I(e.value);
+          return new m(e.value);
         case 'static-random':
-          return new I(S(e.minValue, e.maxValue));
+          return new m(S(e.minValue, e.maxValue));
         case 'linear':
           return new T(e.value, e.addValue);
         case 'linear-random':
@@ -681,7 +681,7 @@ c
   d,
   c
 ]),
-m = r.useCallback(function() {
+I = r.useCallback(function() {
   var e = l.map(function(e) {
     var t = new Image(),
       n = 'string' == typeof e ? e : e.src,
@@ -709,7 +709,7 @@ m = r.useCallback(function() {
     });
   });
 }, [l]),
-I = r.useCallback(function(e) {
+m = r.useCallback(function(e) {
   for (var t in h.current)
     h.current[t](e);
 }, []),
@@ -809,10 +809,10 @@ T = r.useCallback(function() {
         case 0:
           return [
             4,
-            m()
+            I()
           ];
         case 1:
-          return e.sent(), p(), f.current = !0, I(!0), [2];
+          return e.sent(), p(), f.current = !0, m(!0), [2];
       }
     });
   }, new(n || (n = Promise))(function(i, a) {
@@ -841,17 +841,17 @@ T = r.useCallback(function() {
     l((r = r.apply(e, t || [])).next());
   });
 }, [
-  I,
   m,
+  I,
   p
 ]);
   return r.useEffect(function() {
 T();
   }, [T]), r.useEffect(function() {
 return function() {
-  return I(!1);
+  return m(!1);
 };
-  }, [I]), r.useEffect(function() {
+  }, [m]), r.useEffect(function() {
 null != _.current && (_.current.width = (c + 2) * Math.max(u.length, 1), _.current.height = (d + 2) * l.length);
   }, [
 u.length,

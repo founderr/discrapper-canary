@@ -23,8 +23,8 @@ guildId: o,
 channelId: f,
 className: h,
 avatarClassName: p,
-onFocus: m,
-size: I = u.AvatarSizes.SIZE_24,
+onFocus: I,
+size: m = u.AvatarSizes.SIZE_24,
 overflowCountVariant: T = 'text-xs/medium',
 overflowCountColor: g = 'interactive-normal',
 hideOverflowCount: S = !1,
@@ -76,7 +76,7 @@ children: function() {
         children: (0, r.jsx)(u.Avatar, {
           src: e.getAvatarURL(o, 24),
           'aria-label': t,
-          size: I
+          size: m
         })
       }) : (0, r.jsx)(u.TooltipContainer, {
         text: t,
@@ -84,7 +84,7 @@ children: function() {
         children: (0, r.jsx)(u.Avatar, {
           src: e.getAvatarURL(o, 24),
           'aria-label': t,
-          size: I
+          size: m
         })
       }, e.id);
     }).value(),
@@ -96,7 +96,7 @@ children: function() {
     onRequestClose: () => O(!1),
     children: () => (0, r.jsx)(u.Button, {
       className: s()(E.avatar, E.overflow),
-      onFocus: m,
+      onFocus: I,
       onClick: () => O(!0),
       look: u.Button.Looks.BLANK,
       size: u.Button.Sizes.NONE,

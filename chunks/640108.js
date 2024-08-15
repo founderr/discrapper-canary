@@ -15,8 +15,8 @@ var r, i, a = n(735250),
   f = n(167080),
   h = n(818083),
   p = n(268353),
-  m = n(866960),
-  I = n(181058),
+  I = n(866960),
+  m = n(181058),
   T = n(626135),
   g = n(70956),
   S = n(36703),
@@ -153,7 +153,7 @@ return e ? (0, a.jsx)(_.Clickable, {
   onClick: i,
   tabIndex: s ? -1 : 0,
   'aria-label': D.Z.Messages.PLAY_AGAIN,
-  children: (0, a.jsx)(I.Z, {
+  children: (0, a.jsx)(m.Z, {
     className: L.controlIcon
   }, 'replay')
 }) : (0, a.jsx)(_.Clickable, {
@@ -395,9 +395,9 @@ this.analyticsEnabled && T.default.track(C.rMx.MEDIA_PLAY_FINISHED, {
   mime_type: this.metadata.mimeType,
   file_size: this.metadata.fileSize,
   file_duration_sec: this.metadata.fileDurationSec,
-  connection_type: m.Z.getType(),
-  effective_connection_speed: m.Z.getEffectiveConnectionSpeed(),
-  service_provider: m.Z.getServiceProvider()
+  connection_type: I.Z.getType(),
+  effective_connection_speed: I.Z.getEffectiveConnectionSpeed(),
+  service_provider: I.Z.getServiceProvider()
 }), this.playTimeSec = 0, this.playWallTimeMs = 0, this.firstPlayWaitingMs = 0, this.stallCount = 0, this.stallMs = 0, this.seekCount = 0, this.seekWaitingMs = 0, this.playbackStartTime = void 0, this.lastPlayingTime = void 0, this.moveToState('not_started');
   }
   updatePlayTime(e) {
@@ -722,8 +722,8 @@ let {
     hideControls: E,
     muted: f,
     playing: h,
-    fullscreen: m,
-    volume: I,
+    fullscreen: I,
+    volume: m,
     dragging: T
   }
 } = this, g = this.getWidth();
@@ -731,7 +731,7 @@ return _ || n || t === w.AUDIO ? (0, a.jsx)(B, {
   buffers: u,
   currentTime: c,
   duration: d,
-  volume: (0, S.P)(I, 1),
+  volume: (0, S.P)(m, 1),
   hide: t === w.VIDEO && E,
   muted: f,
   autoPlay: n,
@@ -749,7 +749,7 @@ return _ || n || t === w.AUDIO ? (0, a.jsx)(B, {
   dragging: T,
   type: t,
   ref: this.controlsRef,
-  width: m ? window.screen.width : g,
+  width: I ? window.screen.width : g,
   disabled: !r,
   children: t === w.VIDEO ? (0, a.jsx)(p.Z, {
     'aria-label': D.Z.Messages.TITLE_BAR_FULLSCREEN_WINDOW,

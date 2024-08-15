@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(778764),
   m = t(314897),
   A = t(325067),
-  g = t(594174),
-  O = t(572004),
+  O = t(594174),
+  g = t(572004),
   h = t(287880),
   p = t(714565),
   R = t(202858),
@@ -49,9 +49,9 @@ code: {
   consumed: t
 }
   } = e, i = ''.concat(s.substr(0, 4), '-').concat(s.substr(4)), r = a.useRef(null), o = a.useCallback(e => {
-if ('c' === e.key && e.metaKey && O.wS) {
+if ('c' === e.key && e.metaKey && g.wS) {
   var s;
-  e.preventDefault(), e.stopPropagation(), (0, O.JG)(i), null == r || null === (s = r.current) || void 0 === s || s.focus();
+  e.preventDefault(), e.stopPropagation(), (0, g.JG)(i), null == r || null === (s = r.current) || void 0 === s || s.focus();
 }
   }, [i]);
   return (0, n.jsx)('li', {
@@ -396,7 +396,7 @@ super(...e), b(this, 'state', {
 }
 
 function j(e) {
-  let s = (0, o.e7)([g.default], () => g.default.getCurrentUser());
+  let s = (0, o.e7)([O.default], () => O.default.getCurrentUser());
   r()(null != s, 'TwoFactorAuth: currentUser cannot be undefined');
   let t = (0, o.cj)([
 A.Z,

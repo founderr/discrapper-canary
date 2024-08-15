@@ -12,7 +12,7 @@ let d = new Map(),
 function p(e) {
   e(d), d = new Map(d);
 }
-class m extends(i = l.ZP.Store) {
+class I extends(i = l.ZP.Store) {
   getFeeds() {
 return d;
   }
@@ -53,12 +53,12 @@ return (0, c.vu)(a, t);
 return f;
   }
 }
-o = 'ContentInventoryStore', (s = 'displayName') in(a = m) ? Object.defineProperty(a, s, {
+o = 'ContentInventoryStore', (s = 'displayName') in(a = I) ? Object.defineProperty(a, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = o, t.Z = new m(u.Z, {
+}) : a[s] = o, t.Z = new I(u.Z, {
   CONNECTION_OPEN: function() {
 d = new Map(), f = !1;
   },

@@ -13,7 +13,7 @@ var r = n(108131),
   f = n(709054),
   h = n(38618);
 let p = new u.Z('EntityVersionsManager');
-class m extends o.Z {
+class I extends o.Z {
   _initialize() {
 s.Z.subscribe('CONNECTION_OPEN', T);
   }
@@ -24,7 +24,7 @@ s.Z.unsubscribe('CONNECTION_OPEN', T);
 var t, n, r;
 super(...e), t = this, n = 'actions', r = {
   GUILD_CREATE: g,
-  DELETED_ENTITY_IDS: I
+  DELETED_ENTITY_IDS: m
 }, n in t ? Object.defineProperty(t, n, {
   value: r,
   enumerable: !0,
@@ -34,7 +34,7 @@ super(...e), t = this, n = 'actions', r = {
   }
 }
 
-function I(e) {
+function m(e) {
   var t;
   let n = null === (t = E.Z.getGuild(e.guild_id)) || void 0 === t ? void 0 : t.name;
   p.fileOnly('received deleted guild entities (id: '.concat(e.guild_id, ', name: ').concat(n, ')')), a.ZP.Emitter.batched(() => {
@@ -111,4 +111,4 @@ h.Z.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, s, o, l);
 function A(e) {
   return i().v3(e.sort().join(',')).toString();
 }
-t.Z = new m();
+t.Z = new I();

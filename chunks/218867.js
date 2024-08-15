@@ -22,8 +22,8 @@ renderSectionFooter: E,
 renderListHeader: f,
 rowCount: h,
 rowCountBySection: p,
-rowHeight: m,
-sectionMarginBottom: I,
+rowHeight: I,
+sectionMarginBottom: m,
 sectionHeaderHeight: T,
 sectionFooterHeight: g,
 listHeaderHeight: S,
@@ -43,10 +43,10 @@ null != t && (t.scrollTop = R);
   let e = 'function' == typeof S ? S() : S;
   return null == e ? 0 : e;
 }, [S]),
-x = i.useCallback((e, t, n) => 'function' == typeof m ? m(n, {
+x = i.useCallback((e, t, n) => 'function' == typeof I ? I(n, {
   sectionIndex: e,
   sectionRowIndex: t
-}) : m, [m]),
+}) : I, [I]),
 G = i.useCallback(e => {
   let t = 'function' == typeof T ? T(e) : T;
   return null == t ? 0 : t;
@@ -56,9 +56,9 @@ k = i.useCallback(e => {
   return null == t ? 0 : t;
 }, [g]),
 B = i.useCallback(e => {
-  let t = 'function' == typeof I ? I(e) : I;
+  let t = 'function' == typeof m ? m(e) : m;
   return null == t ? 0 : t;
-}, [I]),
+}, [m]),
 F = i.useRef([]),
 V = i.useRef([]),
 {
@@ -266,10 +266,10 @@ for (let i = 0; i < Y.length; i++) {
     t = a;
     let o = [],
       p = 0,
-      m = 0,
-      I = s + u >= y && s <= e;
-    for (null != _ && (A || I) && o.push(_(i)), !I && !A && (n += u); p + u + f < l - h;) {
-      let r = x(i, m, t),
+      I = 0,
+      m = s + u >= y && s <= e;
+    for (null != _ && (A || m) && o.push(_(i)), !m && !A && (n += u); p + u + f < l - h;) {
+      let r = x(i, I, t),
         a = s + p + u,
         l = a + r;
       if (l <= y)
@@ -277,11 +277,11 @@ for (let i = 0; i < Y.length; i++) {
       else if (l > y && a < e)
         o.push(c(t, {
           sectionIndex: i,
-          sectionRowIndex: m
+          sectionRowIndex: I
         }));
       else
         break;
-      p += r, m++, t++;
+      p += r, I++, t++;
     }
     let T = s + u + p,
       g = T + f >= y && T <= e;

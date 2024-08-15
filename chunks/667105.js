@@ -29,8 +29,8 @@ var r = n(735250),
   f = n(796111),
   h = n(920916),
   p = n(669041),
-  m = n(341907),
-  I = n(46140),
+  I = n(341907),
+  m = n(46140),
   T = n(689938);
 
 function g(e) {
@@ -50,7 +50,7 @@ null != t && ((0, c._3)({
   questContentCTA: c.jZ.CLAIM_REWARD,
   questContentPosition: r,
   questContentRowIndex: a
-}), o ? (0, E.Xv)(t.config) ? (0, h.openCollectibleRewardModal)(t, n) : (0, E.vQ)(t.config) ? (0, m.openQuestInGameRewardModal)(t, n) : (0, m.openQuestsRewardCodeModal)({
+}), o ? (0, E.Xv)(t.config) ? (0, h.openCollectibleRewardModal)(t, n) : (0, E.vQ)(t.config) ? (0, I.openQuestInGameRewardModal)(t, n) : (0, I.openQuestsRewardCodeModal)({
   questId: t.id,
   location: n,
   questContentPosition: r
@@ -168,7 +168,7 @@ switch (n) {
         onClick: () => (0, E.gI)({
           quest: t,
           showInline: (0, f.i)({
-            location: I.dr.QUESTS_CARD
+            location: m.dr.QUESTS_CARD
           })
         }, {
           content: a,

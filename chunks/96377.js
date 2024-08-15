@@ -19,8 +19,8 @@ var t = e.state,
   f = e.name,
   h = n.mainAxis,
   p = n.altAxis,
-  m = n.boundary,
-  I = n.rootBoundary,
+  I = n.boundary,
+  m = n.rootBoundary,
   T = n.altBoundary,
   g = n.padding,
   S = n.tether,
@@ -28,8 +28,8 @@ var t = e.state,
   N = n.tetherOffset,
   v = void 0 === N ? 0 : N,
   O = (0, c.Z)(t, {
-    boundary: m,
-    rootBoundary: I,
+    boundary: I,
+    rootBoundary: m,
     padding: g,
     altBoundary: T
   }),
@@ -98,8 +98,8 @@ if (!!b) {
       ef = null != (es = null == x ? void 0 : x[L]) ? es : 0,
       eh = eE ? ed : eu - M[ec] - P[ec] - ef + w.altAxis,
       ep = eE ? eu + M[ec] + P[ec] - ef - w.altAxis : e_,
-      em = A && eE ? (0, o.q)(eh, eu, ep) : (0, o.u)(A ? eh : ed, eu, A ? ep : e_);
-    b[L] = em, G[L] = em - eu;
+      eI = A && eE ? (0, o.q)(eh, eu, ep) : (0, o.u)(A ? eh : ed, eu, A ? ep : e_);
+    b[L] = eI, G[L] = eI - eu;
   }
   t.modifiersData[f] = G;
 }

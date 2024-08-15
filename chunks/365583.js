@@ -1,6 +1,6 @@
 n.d(t, {
   C: function() {
-return I;
+return m;
   },
   Z: function() {
 return T;
@@ -21,14 +21,14 @@ var i = n(442837),
   f = n(324745),
   h = n(981631),
   p = n(689938);
-let m = () => s.Z.open(h.oAB.CONNECTIONS, null);
+let I = () => s.Z.open(h.oAB.CONNECTIONS, null);
 
-function I(e) {
+function m(e) {
   let {
 entry: t,
 onOpenGameSettings: n
   } = e;
-  return (0, _.aA)(t) || (0, _.y0)(t) || (0, _.dU)(t) ? m : (0, _.dX)(t) ? n : null;
+  return (0, _.aA)(t) || (0, _.y0)(t) || (0, _.dU)(t) ? I : (0, _.dX)(t) ? n : null;
 }
 
 function T(e) {
@@ -52,7 +52,7 @@ let {
   entry: n,
   onOpenGameSettings: r
 } = e;
-return null != n ? I({
+return null != n ? m({
   entry: n,
   onOpenGameSettings: r
 }) : null != t ? function(e) {
@@ -60,7 +60,7 @@ return null != n ? I({
     activity: t,
     onOpenGameSettings: n
   } = e;
-  return (0, d.Z)(t) || (0, c.Z)(t) || (0, o.Z)(t) ? m : (0, u.Z)(t) && !(0, l.Z)(t) ? n : null;
+  return (0, d.Z)(t) || (0, c.Z)(t) || (0, o.Z)(t) ? I : (0, u.Z)(t) && !(0, l.Z)(t) ? n : null;
 }({
   activity: t,
   onOpenGameSettings: r

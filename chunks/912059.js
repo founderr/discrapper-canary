@@ -65,15 +65,15 @@ h = (0, a.pu)(n, {
 p = (0, r.zL)(e, {
   labelable: !0
 }),
-m = (0, r.dG)(p, {
+I = (0, r.dG)(p, {
   role: 'grid',
   id: E,
   'aria-multiselectable': 'multiple' === t.selectionManager.selectionMode ? 'true' : void 0
 }, 0 === t.collection.size ? {
   tabIndex: h ? -1 : 0
 } : _, f);
-  return o && (m['aria-rowcount'] = t.collection.size, m['aria-colcount'] = 1), (0, i.B6)({}, t), {
-gridProps: m
+  return o && (I['aria-rowcount'] = t.collection.size, I['aria-colcount'] = 1), (0, i.B6)({}, t), {
+gridProps: I
   };
 }
 
@@ -86,8 +86,8 @@ shouldSelectOnPressUp: E
 direction: h
   } = (0, u.bU)(), {
 onAction: p,
-linkBehavior: m
-  } = c.get(t), I = (0, r.mp)(), T = (0, l.useRef)(null), {
+linkBehavior: I
+  } = c.get(t), m = (0, r.mp)(), T = (0, l.useRef)(null), {
 itemProps: g,
 ...S
   } = (0, s.Cs)({
@@ -100,7 +100,7 @@ onAction: p ? () => p(i.key) : void 0,
 focus: () => {
   (null != T.current && i.key !== T.current || !n.current.contains(document.activeElement)) && (0, a.ex)(n.current);
 },
-linkBehavior: m
+linkBehavior: I
   }), A = S.hasAction ? (0, r.ib)(i.props) : {}, N = (0, r.dG)(g, A, {
 role: 'row',
 onKeyDownCapture: e => {
@@ -160,7 +160,7 @@ onFocus: e => {
 'aria-label': i.textValue || void 0,
 'aria-selected': t.selectionManager.canSelectItem(i.key) ? t.selectionManager.isSelected(i.key) : void 0,
 'aria-disabled': t.selectionManager.isDisabled(i.key) || void 0,
-'aria-labelledby': I && i.textValue ? `${ d(t, i.key) } ${ I }` : void 0,
+'aria-labelledby': m && i.textValue ? `${ d(t, i.key) } ${ m }` : void 0,
 id: d(t, i.key)
   });
   return _ && (N['aria-rowindex'] = i.index + 1), {
@@ -170,7 +170,7 @@ gridCellProps: {
   'aria-colindex': 1
 },
 descriptionProps: {
-  id: I
+  id: m
 },
 ...S
   };

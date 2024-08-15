@@ -29,7 +29,7 @@ let h = new(c())({
 max: 20
   }),
   p = {};
-class m extends(l = _.ZP.Store) {
+class I extends(l = _.ZP.Store) {
   getSearchResults(e) {
 let {
   query: t,
@@ -83,12 +83,12 @@ return p[f({
 })];
   }
 }
-s = 'ApplicationDirectorySearchStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
+s = 'ApplicationDirectorySearchStore', (a = 'displayName') in(i = I) ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new m(E.Z, {
+}) : i[a] = s, t.Z = new I(E.Z, {
   APPLICATION_DIRECTORY_FETCH_SEARCH: function(e) {
 let {
   query: t,

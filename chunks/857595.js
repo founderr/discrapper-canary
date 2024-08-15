@@ -3,7 +3,7 @@ n.d(t, {
 return A;
   },
   Nc: function() {
-return I;
+return m;
   },
   Nv: function() {
 return y;
@@ -48,7 +48,7 @@ return c;
 return S;
   },
   r_: function() {
-return m;
+return I;
   },
   rf: function() {
 return f;
@@ -115,13 +115,13 @@ type: 'ACCESSIBILITY_DARK_SIDEBAR_TOGGLE'
   });
 }
 
-function m() {
+function I() {
   r.Z.dispatch({
 type: 'KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN'
   });
 }
 
-function I(e) {
+function m(e) {
   r.Z.dispatch({
 type: 'ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED',
 systemPrefersReducedMotion: e

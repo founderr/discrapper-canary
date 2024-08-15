@@ -35,14 +35,14 @@ var r = n(392711),
   f = n(486472),
   h = n(823379),
   p = n(668781),
-  m = n(981631),
-  I = n(526761),
+  I = n(981631),
+  m = n(526761),
   T = n(689938);
 
 function g(e) {
   E.hW.updateAsync('textAndImages', t => {
 t.diversitySurrogate = s.Gm.create(), t.diversitySurrogate.value = e;
-  }, I.fy.FREQUENT_USER_ACTION);
+  }, m.fy.FREQUENT_USER_ACTION);
 }
 
 function S(e) {
@@ -50,7 +50,7 @@ function S(e) {
 type: 'EMOJI_FETCH',
 guildId: e
   }), a.tn.get({
-url: m.ANM.GUILD_EMOJIS(e),
+url: I.ANM.GUILD_EMOJIS(e),
 oldFormErrors: !0
   }).then(t => o.Z.dispatch({
 type: 'EMOJI_FETCH_SUCCESS',
@@ -73,7 +73,7 @@ roles: i
 type: 'EMOJI_UPLOAD_START',
 guildId: t
   }), a.tn.post({
-url: m.ANM.GUILD_EMOJIS(t),
+url: I.ANM.GUILD_EMOJIS(t),
 body: {
   image: n,
   name: r,
@@ -95,7 +95,7 @@ type: 'EMOJI_DELETE',
 guildId: e,
 emojiId: t
   }), a.tn.del({
-url: m.ANM.GUILD_EMOJI(e, t),
+url: I.ANM.GUILD_EMOJI(e, t),
 oldFormErrors: !0
   });
 }
@@ -108,7 +108,7 @@ roles: i
   } = e;
   try {
 return await a.tn.patch({
-  url: m.ANM.GUILD_EMOJI(t, n),
+  url: I.ANM.GUILD_EMOJI(t, n),
   body: {
     name: r,
     roles: i
@@ -138,12 +138,12 @@ function R(e) {
 function C(e) {
   let t = R(e);
   if (null != t)
-E.DZ.updateAsync('favoriteEmojis', e => (e.emojis = O(e.emojis), i().size(e.emojis) >= I.oX) ? (p.Z.show({
+E.DZ.updateAsync('favoriteEmojis', e => (e.emojis = O(e.emojis), i().size(e.emojis) >= m.oX) ? (p.Z.show({
   title: T.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
   body: T.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
-    count: I.oX
+    count: m.oX
   })
-}), !1) : !e.emojis.includes(t) && void e.emojis.push(t), I.fy.INFREQUENT_USER_ACTION);
+}), !1) : !e.emojis.includes(t) && void e.emojis.push(t), m.fy.INFREQUENT_USER_ACTION);
 }
 
 function y(e) {
@@ -153,5 +153,5 @@ E.DZ.updateAsync('favoriteEmojis', e => {
   if (e.emojis = O(e.emojis), !e.emojis.includes(t))
     return !1;
   e.emojis = e.emojis.filter(e => t !== e);
-}, I.fy.INFREQUENT_USER_ACTION);
+}, m.fy.INFREQUENT_USER_ACTION);
 }

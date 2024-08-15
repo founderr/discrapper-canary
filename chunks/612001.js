@@ -33,7 +33,7 @@ return Q;
 return y;
   },
   r7: function() {
-return I;
+return m;
   },
   r_: function() {
 return el;
@@ -100,9 +100,9 @@ return (0, a._)(this, h);
 }), (0, o._)(this, h, !0), this.type = e, this.pointerType = t, this.target = n.currentTarget, this.shiftKey = n.shiftKey, this.metaKey = n.metaKey, this.ctrlKey = n.ctrlKey, this.altKey = n.altKey;
   }
 }
-let m = Symbol('linkClicked');
+let I = Symbol('linkClicked');
 
-function I(e) {
+function m(e) {
   let {
 onPress: t,
 onPressChange: n,
@@ -114,7 +114,7 @@ isPressed: u,
 preventFocusOnPress: c,
 shouldCancelOnPointerExit: d,
 allowTextSelectionOnPress: h,
-ref: I,
+ref: m,
 ...R
   } = function(e) {
 let t = (0, i.useContext)(f);
@@ -214,7 +214,7 @@ let e = D.current,
       O(t.target, t.key) && t.preventDefault();
       let n = t.target,
         a = P(A(e.target, t), 'keyboard', e.target.contains(n));
-      b(), a && t.stopPropagation(), 'Enter' !== t.key && T(e.target) && e.target.contains(n) && !t[m] && (t[m] = !0, (0, r.nG)(e.target, t, !1)), e.isPressed = !1, null === (i = e.metaKeyEvents) || void 0 === i || i.delete(t.key);
+      b(), a && t.stopPropagation(), 'Enter' !== t.key && T(e.target) && e.target.contains(n) && !t[I] && (t[I] = !0, (0, r.nG)(e.target, t, !1)), e.isPressed = !1, null === (i = e.metaKeyEvents) || void 0 === i || i.delete(t.key);
     } else if ('Meta' === t.key && (null === (n = e.metaKeyEvents) || void 0 === n ? void 0 : n.size)) {
       let t = e.metaKeyEvents;
       for (let n of (e.metaKeyEvents = void 0, t.values()))
@@ -1001,7 +1001,7 @@ addGlobalListener: c,
 removeGlobalListener: d
   } = (0, r.xi)(), {
 pressProps: _
-  } = I({
+  } = m({
 isDisabled: t,
 onPressStart(e) {
   if (e.continuePropagation(), ('mouse' === e.pointerType || 'touch' === e.pointerType) && (n && n({

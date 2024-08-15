@@ -15,8 +15,8 @@ var s = n(735250),
   R = n(858719),
   C = n(780985),
   g = n(880257),
-  N = n(631885),
-  p = n(240351),
+  p = n(631885),
+  N = n(240351),
   A = n(792258),
   m = n(657825),
   f = n(198952),
@@ -51,7 +51,7 @@ children: (0, s.jsx)(o.CircleInformationIcon, {
   });
 }
 
-function L(e) {
+function v(e) {
   let {
 displayType: t
   } = e, n = a.useCallback(() => {
@@ -61,10 +61,10 @@ loadMore: _,
 isMoreLoading: T
   } = (0, I.G)({
 onError: n
-  }), C = M.tx.get(t), [N, p] = a.useState(M.iB), f = (0, E.Xi)({
+  }), C = M.tx.get(t), [p, N] = a.useState(M.iB), f = (0, E.Xi)({
 location: 'family_center_activity_section_web'
   }), S = a.useCallback(() => {
-p(e => e + M.iB), _(t);
+N(e => e + M.iB), _(t);
   }, [
 t,
 _
@@ -109,7 +109,7 @@ P = a.useCallback(() => (0, s.jsxs)(s.Fragment, {
 ]);
   if (0 === l.length)
 return null;
-  let L = l.slice(0, N);
+  let v = l.slice(0, p);
   return (0, s.jsxs)('div', {
 className: O.actionSection,
 children: [
@@ -117,13 +117,13 @@ children: [
   (0, s.jsx)('div', {
     className: O.actions,
     style: {
-      maxHeight: 65 * L.length
+      maxHeight: 65 * v.length
     },
-    children: L.map((e, t) => x({
+    children: v.map((e, t) => x({
       row: t
     }))
   }),
-  L.length !== c ? (0, s.jsx)(o.Clickable, {
+  v.length !== c ? (0, s.jsx)(o.Clickable, {
     className: O.loadMoreBar,
     onClick: S,
     role: 'button',
@@ -134,21 +134,21 @@ children: [
       className: O.loadMore,
       variant: 'text-sm/bold',
       children: b.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({
-        pageSize: Math.min(c - L.length, M.iB)
+        pageSize: Math.min(c - v.length, M.iB)
       })
     })
   }) : null
 ]
   });
 }
-let v = () => {
+let L = () => {
 let e = (0, g.Z)(),
-  t = (0, N.mq)(M.ne.ACTIVE),
+  t = (0, p.mq)(M.ne.ACTIVE),
   n = (0, T.o)(b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
     activeLinks: t.length
   }), b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
   a = (0, u.Qr)(!!e),
-  r = (0, N.Rd)(a);
+  r = (0, p.Rd)(a);
 return e && t.length > 1 ? (0, s.jsx)(o.Text, {
   variant: 'eyebrow',
   children: r
@@ -196,7 +196,7 @@ return void 0 === r ? null : (0, s.jsxs)('div', {
 });
   },
   D = () => {
-let e = (0, N.mq)(M.ne.ACTIVE),
+let e = (0, p.mq)(M.ne.ACTIVE),
   t = (0, l.e7)([_.Z], () => _.Z.getSelectedTeenId()),
   {
     selectTeenUser: n
@@ -229,7 +229,7 @@ return (0, s.jsx)(o.Select, {
   B = e => {
 let {
   userId: t
-} = e, n = (0, g.Z)(), a = (0, N.mq)(M.ne.ACTIVE), r = (0, u.Qr)(!!n), i = (0, N.Rd)(r);
+} = e, n = (0, g.Z)(), a = (0, p.mq)(M.ne.ACTIVE), r = (0, u.Qr)(!!n), i = (0, p.Rd)(r);
 return n && 1 !== a.length ? (0, s.jsx)(D, {}) : (0, s.jsx)(Z, {
   userId: t,
   subText: i
@@ -238,14 +238,14 @@ return n && 1 !== a.length ? (0, s.jsx)(D, {}) : (0, s.jsx)(Z, {
 t.Z = e => {
   let {
 user: t
-  } = e, n = Array.from(M.tx.entries()), a = (0, R.kE)(), r = (0, u.t3)(), i = (0, N.Rd)(r);
+  } = e, n = Array.from(M.tx.entries()), a = (0, R.kE)(), r = (0, u.t3)(), i = (0, p.Rd)(r);
   return (0, s.jsxs)('div', {
 className: O.container,
 children: [
   (0, s.jsxs)('div', {
     className: O.connectedCounter,
     children: [
-      (0, s.jsx)(v, {}),
+      (0, s.jsx)(L, {}),
       (0, s.jsx)(P, {})
     ]
   }),
@@ -265,7 +265,7 @@ children: [
             className: O.activityCounterRow,
             children: n.map(e => {
               let [t, n] = e;
-              return (0, s.jsx)(p.Z, {
+              return (0, s.jsx)(N.Z, {
                 displayType: t,
                 header: n.tooltipHeader()
               }, 'counter-'.concat(t));
@@ -275,7 +275,7 @@ children: [
             className: O.activityOverview,
             children: a ? n.map(e => {
               let [t] = e;
-              return (0, s.jsx)(L, {
+              return (0, s.jsx)(v, {
                 displayType: t
               }, ''.concat(t, '-list'));
             }) : (0, s.jsx)(h.Z, {

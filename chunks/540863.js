@@ -19,8 +19,8 @@ required: E = !1,
 style: f,
 title: h,
 error: p,
-...m
-  } = e, I = i.useId(), T = i.useId(), g = null !== (n = m.titleId) && void 0 !== n ? n : I, S = null != p ? null !== (o = m.errorId) && void 0 !== o ? o : T : void 0;
+...I
+  } = e, m = i.useId(), T = i.useId(), g = null !== (n = I.titleId) && void 0 !== n ? n : m, S = null != p ? null !== (o = I.errorId) && void 0 !== o ? o : T : void 0;
   return (0, r.jsxs)('div', {
 ref: t,
 className: null != c ? c : void 0,
@@ -34,7 +34,7 @@ children: [
     className: d,
     id: g,
     errorId: S,
-    ...m,
+    ...I,
     children: h
   }) : null,
   (0, r.jsx)(a.ol, {

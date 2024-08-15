@@ -34,11 +34,11 @@ onClose: i
   } = e, {
 analyticsLocations: p
   } = (0, u.ZP)(), {
-trackUserProfileAction: m
-  } = (0, _.KZ)(), [I, T] = (0, s.Wu)([l.Z], () => [
+trackUserProfileAction: I
+  } = (0, _.KZ)(), [m, T] = (0, s.Wu)([l.Z], () => [
 l.Z.useReducedMotion,
 l.Z.keyboardModeEnabled
-  ]), g = !n || I || T ? 0 : 300;
+  ]), g = !n || m || T ? 0 : 300;
   return (0, r.jsxs)(c.ZP, {
 className: a()(f.popover, {
   [f.visible]: t,
@@ -54,7 +54,7 @@ children: [
       className: a()(f.button, f.left),
       'aria-label': E.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_A11Y_LABEL,
       onClick: () => {
-        m({
+        I({
           action: 'PRESS_EDIT_CUSTOM_STATUS'
         }), h(p), null == i || i();
       },
@@ -73,7 +73,7 @@ children: [
       className: a()(f.button, f.right),
       'aria-label': E.Z.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS_A11Y_LABEL,
       onClick: () => {
-        m({
+        I({
           action: 'PRESS_CLEAR_CUSTOM_STATUS'
         }), d.Ok.updateSetting(void 0);
       },

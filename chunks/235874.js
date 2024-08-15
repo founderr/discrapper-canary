@@ -45,8 +45,8 @@ let {
   positionKey: f,
   preload: h,
   disablePointerEvents: p,
-  ignoreModalClicks: m,
-  closeOnScroll: I,
+  ignoreModalClicks: I,
+  closeOnScroll: m,
   useMouseEnter: T,
   renderPopout: g,
   layerContext: S
@@ -81,8 +81,8 @@ return (0, s.jsx)(u.H, {
   onShiftClick: E,
   positionKey: f,
   disablePointerEvents: p,
-  ignoreModalClicks: m,
-  closeOnScroll: I,
+  ignoreModalClicks: I,
+  closeOnScroll: m,
   useMouseEnter: T,
   layerContext: S,
   children: e

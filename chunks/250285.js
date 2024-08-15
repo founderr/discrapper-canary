@@ -29,9 +29,9 @@ analyticsLocations: C
   }, [
 t,
 C
-  ]), N = () => {
+  ]), p = () => {
 R(!0);
-  }, p = () => {
+  }, N = () => {
 R(!1);
   };
   return (0, s.jsx)(c.mh, {
@@ -49,8 +49,8 @@ children: e => (0, s.jsx)(l.tE, {
       [E.last]: r,
       [E.active]: I
     }),
-    onMouseEnter: N,
-    onMouseLeave: p,
+    onMouseEnter: p,
+    onMouseLeave: N,
     onClick: g,
     ...e,
     children: n(I)

@@ -66,7 +66,7 @@ placeholder: c,
 placeholderVersion: d,
 placeholderStyle: f,
 children: h
-  } = e, p = t === l.zo9.LOADING, [m] = i.useState(p), [I, T] = i.useState(!1), g = (0, o.L)(c, d, m);
+  } = e, p = t === l.zo9.LOADING, [I] = i.useState(p), [m, T] = i.useState(!1), g = (0, o.L)(c, d, I);
   i.useEffect(() => {
 let e = setTimeout(() => {
   T(!0);
@@ -74,8 +74,8 @@ let e = setTimeout(() => {
 return () => {
   clearTimeout(e);
 };
-  }, [m]);
-  let S = (0, s.useTransition)(p && I, _);
+  }, [I]);
+  let S = (0, s.useTransition)(p && m, _);
   return (0, r.jsxs)('div', {
 className: u.loadingOverlay,
 style: {

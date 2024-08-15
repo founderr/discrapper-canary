@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(585483),
   m = t(16703),
   A = t(785145),
-  g = t(981631),
-  O = t(526761),
+  O = t(981631),
+  g = t(526761),
   h = t(726985),
   p = t(689938),
   R = t(798042);
@@ -54,13 +54,13 @@ M = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
   function Z(s) {
 if (f !== s) {
   if (t) {
-    C.S.dispatch(g.CkL.SHAKE_APP, {
+    C.S.dispatch(O.CkL.SHAKE_APP, {
       duration: 300,
       intensity: o.$x
-    }), C.S.dispatch(g.CkL.EMPHASIZE_NOTICE);
+    }), C.S.dispatch(O.CkL.EMPHASIZE_NOTICE);
     return;
   }
-  s === O.NB.GUILD && null == e && null != x && (0, d.Fq)(x, P), D(s);
+  s === g.NB.GUILD && null == e && null != x && (0, d.Fq)(x, P), D(s);
 }
   }
   a.useEffect(() => {
@@ -73,7 +73,7 @@ M
   ]);
   let v = !0,
 j = !0;
-  return L && 1 === b.length && (b.includes(h.s6.PROFILE_SERVER_PROFILES) ? (Z(O.NB.GUILD), j = !1) : b.includes(h.s6.PROFILE_USER_PROFILE) && (Z(O.NB.USER_PROFILE), v = !1)), (0, n.jsx)(l.Gt, {
+  return L && 1 === b.length && (b.includes(h.s6.PROFILE_SERVER_PROFILES) ? (Z(g.NB.GUILD), j = !1) : b.includes(h.s6.PROFILE_USER_PROFILE) && (Z(g.NB.USER_PROFILE), v = !1)), (0, n.jsx)(l.Gt, {
 value: P,
 children: (0, n.jsxs)(r.HeadingLevel, {
   component: (0, n.jsx)(r.Heading, {
@@ -90,17 +90,17 @@ children: (0, n.jsxs)(r.HeadingLevel, {
       children: [
         j ? (0, n.jsx)(r.TabBar.Item, {
           className: R.tabBarItem,
-          id: O.NB.USER_PROFILE,
+          id: g.NB.USER_PROFILE,
           children: p.Z.Messages.EDIT_PROFILE_CATEGORY_USER_PROFILE
-        }, O.NB.USER_PROFILE) : null,
+        }, g.NB.USER_PROFILE) : null,
         v ? (0, n.jsx)(r.TabBar.Item, {
           className: R.tabBarItem,
-          id: O.NB.GUILD,
+          id: g.NB.GUILD,
           children: p.Z.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
-        }, O.NB.GUILD) : null
+        }, g.NB.GUILD) : null
       ]
     }),
-    f === O.NB.GUILD ? (0, n.jsx)(E.Z, {
+    f === g.NB.GUILD ? (0, n.jsx)(E.Z, {
       selectedGuild: x
     }) : (0, n.jsx)(I.Z, {})
   ]

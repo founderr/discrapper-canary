@@ -3,7 +3,7 @@ n.d(t, {
 return N;
   },
   ZP: function() {
-return I;
+return m;
   },
   iF: function() {
 return A;
@@ -33,12 +33,12 @@ for (let t of n)
   h[t.toLowerCase()] = e;
 }
 let p = /^[a-z0-9_+\-.#]+$/,
-  m = /^[a-z0-9_+\-.#]+$/i;
+  I = /^[a-z0-9_+\-.#]+$/i;
 for (let e in h)
   if (null == e.match(p))
 throw Error('Language name does not match regex: '.concat(e));
 
-function I(e) {
+function m(e) {
   let {
 onChange: t
   } = e, n = null;
@@ -87,8 +87,8 @@ d.bN.richValue(e) !== n && (l.T.withMergedEntry(e, () => {
             _ = n && 0 === s.length,
             f = r && 0 === s.length,
             p = (c ? s.slice(1) : s).length % 2 == 1,
-            I = p && (null == u || '' === u || null != u.match(m)),
-            T = I && null != u && null !== (a = h[u.toLowerCase()]) && void 0 !== a ? a : null;
+            m = p && (null == u || '' === u || null != u.match(I)),
+            T = m && null != u && null !== (a = h[u.toLowerCase()]) && void 0 !== a ? a : null;
           return {
             blockEntry: t,
             wasInCodeBlock: n,
@@ -98,7 +98,7 @@ d.bN.richValue(e) !== n && (l.T.withMergedEntry(e, () => {
             hljsTypes: null,
             closesCodeBlock: c,
             opensCodeBlock: p,
-            opensCodeBlockOnOwnLine: I
+            opensCodeBlockOnOwnLine: m
           };
         }(e, r, i, a, null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null), t.push(n);
       }

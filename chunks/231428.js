@@ -20,8 +20,8 @@ var n, a = t(735250),
   C = t(600164),
   m = t(239827),
   A = t(818035),
-  g = t(509545),
-  O = t(78839),
+  O = t(509545),
+  g = t(78839),
   h = t(74538),
   p = t(807160),
   R = t(474936),
@@ -181,7 +181,7 @@ n = null === (s = e.subscription) || void 0 === s ? void 0 : s.items[0].planId;
 
 function v(e) {
   let s = (0, _.e7)([A.Z], () => A.Z.getPayments()),
-t = (0, _.e7)([O.ZP], () => O.ZP.getPremiumTypeSubscription()),
+t = (0, _.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription()),
 n = i.useMemo(() => new Set(s.filter(Z).map(e => {
   let {
     subscription: s
@@ -194,7 +194,7 @@ r = i.useMemo(() => new Set(s.filter(Z).map(e => {
   } = e;
   return s;
 })), [s]),
-o = (0, _.Wu)([g.Z], () => g.Z.getPlanIdsForSkus(Array.from(r))),
+o = (0, _.Wu)([O.Z], () => O.Z.getPlanIdsForSkus(Array.from(r))),
 l = i.useCallback(() => o.length === n.size, [
   o,
   n

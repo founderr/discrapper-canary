@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(626135),
   h = n(981631),
   p = n(596401);
-let m = l().defaultRules.link,
-  I = {
+let I = l().defaultRules.link,
+  m = {
 section: h.jXE.SETTINGS_CHANGELOG
   },
   T = e => {
@@ -47,7 +47,7 @@ link: {
       o = i.startsWith('/shop/fullscreen?source=1') || i.startsWith('/activities');
     return r = a || s ? e => {
       f.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, {
-        location: I
+        location: m
       }), a ? d.Z.open(h.oAB.PREMIUM) : s && d.Z.open(h.oAB.HYPESQUAD_ONLINE), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
         cta_type: 'nitro'
       }), (0, u.closeModal)(p.Xd), e.preventDefault();
@@ -62,7 +62,7 @@ link: {
         ...f.default.getCampaignParams(i)
       });
     }, {
-      ...m.parse(e, t, n),
+      ...I.parse(e, t, n),
       callToAction: r
     };
   },

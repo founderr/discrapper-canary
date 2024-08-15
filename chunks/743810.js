@@ -1,12 +1,12 @@
 t.d(n, {
   Nv: function() {
-return L;
+return N;
   },
   pd: function() {
 return A;
   },
   uX: function() {
-return N;
+return L;
   },
   wk: function() {
 return S;
@@ -66,7 +66,7 @@ action() {
 }
   },
   T = (e, n) => a.ZP.getMentionCount(n) > 0,
-  L = {
+  N = {
 binds: ['mod+shift+alt+down'],
 comboKeysBindGlobal: !0,
 action: () => ((0, i.Z)(1, {
@@ -75,7 +75,7 @@ action: () => ((0, i.Z)(1, {
   withVoiceChannels: !0
 }), !1)
   },
-  N = {
+  L = {
 binds: ['mod+shift+alt+up'],
 comboKeysBindGlobal: !0,
 action: () => ((0, i.Z)(-1, {

@@ -1,6 +1,6 @@
 n.d(t, {
   HR: function() {
-return m;
+return I;
   },
   L5: function() {
 return p;
@@ -24,7 +24,7 @@ function p(e, t) {
   return e.type === _.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(_.iLy.SOURCE_MESSAGE_DELETED) ? E.Z.Messages.SOURCE_MESSAGE_DELETED : t;
 }
 
-function m(e, t) {
+function I(e, t) {
   var n, r;
   let {
 message: i
@@ -40,20 +40,20 @@ className: n,
 message: a,
 children: o,
 content: u,
-onUpdate: m,
-contentRef: I
+onUpdate: I,
+contentRef: m
   } = e, T = a.isEdited(), g = a.state === _.yb.SEND_FAILED, S = a.state === _.yb.SENDING, A = a.isCommandType(), N = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = i.useRef(!1);
   return i.useLayoutEffect(() => {
-v.current ? null != m && m() : v.current = !0;
+v.current ? null != I && I() : v.current = !0;
   }, [
-m,
+I,
 a.content,
 u,
 N,
 o
   ]), (0, r.jsxs)('div', {
 id: (0, c.ut)(a),
-ref: I,
+ref: m,
 className: s()(n, h.markup, {
   [f.messageContent]: !0,
   [f.isSending]: S && !A,
@@ -83,4 +83,4 @@ children: [
   })
 ]
   });
-}, m);
+}, I);

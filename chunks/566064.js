@@ -28,13 +28,13 @@ prepareFocus: E,
 getNewFocusPosition: f,
 maintainFocusPosition: h = !0,
 enabled: p = !0,
-onDispatch: m,
-autoFocusElement: I = !0,
+onDispatch: I,
+autoFocusElement: m = !0,
 useVirtualFocus: T = !1
   } = e, g = r.useCallback((e, t) => {
 let n = (0, i.Z)(e, t);
-return null != m && m(e, n, t), n;
-  }, [m]), [S, A] = r.useReducer(g, {
+return null != I && I(e, n, t), n;
+  }, [I]), [S, A] = r.useReducer(g, {
 focusedX: c,
 focusedY: d,
 columnCounts: n
@@ -60,11 +60,11 @@ function(e) {
     getNewFocusPosition: f,
     dispatch: h,
     maintainFocusPosition: p,
-    enabled: m,
-    autoFocusElement: I,
+    enabled: I,
+    autoFocusElement: m,
     useVirtualFocus: T
   } = e, g = r.useRef();
-  g.current = m;
+  g.current = I;
   let S = u(l(t, c, d)),
     [A, N] = r.useState(!1),
     [v, O] = r.useState(!1),
@@ -81,10 +81,10 @@ function(e) {
     }));
   r.useEffect(() => () => y.clean(), [y]);
   let D = r.useCallback(e => {
-      if (!g.current || !I)
+      if (!g.current || !m)
         return !1;
       e.focus();
-    }, [I]),
+    }, [m]),
     L = r.useCallback((e, n) => {
       let r = l(t, e, n);
       (null != E ? E(e, n, r) : Promise.resolve()).then(() => {
@@ -199,7 +199,7 @@ function(e) {
           return;
         case a.Us.SELECT_FOCUSED_ITEM:
           var r;
-          if (I && (null == (r = S) ? void 0 : r.ownerDocument.activeElement) !== r || e.repeat)
+          if (m && (null == (r = S) ? void 0 : r.ownerDocument.activeElement) !== r || e.repeat)
             return;
           e.preventDefault(), e.stopPropagation(), h({
             type: t
@@ -208,7 +208,7 @@ function(e) {
     }, [
       b,
       h,
-      I,
+      m,
       S,
       _,
       c,
@@ -294,7 +294,7 @@ function(e) {
   getNewFocusPosition: f,
   maintainFocusPosition: h,
   enabled: p,
-  autoFocusElement: I,
+  autoFocusElement: m,
   useVirtualFocus: T
 });
 }

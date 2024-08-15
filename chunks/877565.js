@@ -43,10 +43,10 @@ getQuery: E,
 key: f,
 indexOffset: h = 0,
 headerClassName: p,
-headerTrailingContent: m,
-footer: I
+headerTrailingContent: I,
+footer: m
   } = e;
-  if (null == I && (null == a || 0 === a.length))
+  if (null == m && (null == a || 0 === a.length))
 return null;
   let T = null == a ? void 0 : a.map((e, t) => {
 let r = t + h,
@@ -68,10 +68,10 @@ children: [
     query: t,
     getQuery: E,
     headerClassName: p,
-    headerTrailingContent: m
+    headerTrailingContent: I
   }) : null,
   T,
-  I
+  m
 ]
   }, f);
 }

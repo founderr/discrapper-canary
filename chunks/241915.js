@@ -24,8 +24,8 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let m = 80,
-  I = 132,
+let I = 80,
+  m = 132,
   T = 80,
   g = {
 [E.VD2.TOP_RIGHT]: h.resizeHandleTopRight,
@@ -94,10 +94,10 @@ let {
   dockedRect: l
 } = this.props, c = Math.round(n), d = Math.round(o - i - this._boundHeight), f = Math.round(r), h = Math.round(s - a - this._boundWidth), p = (0, _.getPlatform)() !== _.PlatformTypes.WEB && this.inPopout ? 22 : 0;
 if (null != l) {
-  var m, I;
+  var I, m;
   return {
-    y: (null !== (m = null == l ? void 0 : l.y) && void 0 !== m ? m : 0) - p,
-    x: null !== (I = null == l ? void 0 : l.x) && void 0 !== I ? I : 0
+    y: (null !== (I = null == l ? void 0 : l.y) && void 0 !== I ? I : 0) - p,
+    x: null !== (m = null == l ? void 0 : l.x) && void 0 !== m ? m : 0
   };
 }
 switch (e) {
@@ -334,10 +334,10 @@ children: (() => {
     maxY: s,
     width: r,
     dockedRect: u,
-    edgeOffsetTop: m,
-    edgeOffsetBottom: I,
+    edgeOffsetTop: I,
+    edgeOffsetBottom: m,
     edgeOffsetLeft: T,
-    edgeOffsetRight: m,
+    edgeOffsetRight: I,
     roundCorners: _,
     isResizable: !f,
     children: e

@@ -13,8 +13,8 @@ var i = n(392711),
   f = n(594174),
   h = n(449753),
   p = n(569545),
-  m = n(803647),
-  I = n(70722),
+  I = n(803647),
+  m = n(70722),
   T = n(981631);
 let g = (0, i.debounce)(l.xc, 1000);
 t.Z = {
@@ -61,7 +61,7 @@ h.Z.init(), s.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', e => {
     let n = c.Z.getAllActiveStreams(),
       r = E.Z.getChannelId();
     n.forEach(e => {
-      e.channelId !== r && (0, m.Z)(e, !1);
+      e.channelId !== r && (0, I.Z)(e, !1);
     });
   });
 }), s.Z.subscribe('STREAM_CREATE', e => {
@@ -75,7 +75,7 @@ h.Z.init(), s.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', e => {
   if (null == i || null == r || r !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id))
     return;
   let a = _.Z.getMemberCount(i);
-  if (null != a && !(a < 2) && !(a > I.tB))
+  if (null != a && !(a < 2) && !(a > m.tB))
     u.eo.getSetting() && g(n);
 });
   }

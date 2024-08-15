@@ -9,8 +9,8 @@ var n, a, r, o, s = i(735250),
   p = i(481060),
   m = i(570140),
   g = i(578361),
-  C = i(768762),
-  f = i(259580),
+  f = i(768762),
+  C = i(259580),
   x = i(585483),
   I = i(981631),
   b = i(689938),
@@ -57,12 +57,12 @@ return (0, s.jsxs)('div', {
       className: l,
       onClick: this.handlePrevious,
       'aria-label': b.Z.Messages.PAGINATION_PREVIOUS,
-      children: 'caret' === o ? (0, s.jsx)(f.Z, {
-        className: N.arrow,
-        direction: f.Z.Directions.LEFT
-      }) : (0, s.jsx)(C.Z, {
+      children: 'caret' === o ? (0, s.jsx)(C.Z, {
         className: N.arrow,
         direction: C.Z.Directions.LEFT
+      }) : (0, s.jsx)(f.Z, {
+        className: N.arrow,
+        direction: f.Z.Directions.LEFT
       })
     }),
     (0, s.jsx)('div', {
@@ -82,12 +82,12 @@ return (0, s.jsxs)('div', {
       className: l,
       onClick: this.handleNext,
       'aria-label': b.Z.Messages.PAGINATION_NEXT,
-      children: 'caret' === o ? (0, s.jsx)(f.Z, {
-        className: N.arrow,
-        direction: f.Z.Directions.RIGHT
-      }) : (0, s.jsx)(C.Z, {
+      children: 'caret' === o ? (0, s.jsx)(C.Z, {
         className: N.arrow,
         direction: C.Z.Directions.RIGHT
+      }) : (0, s.jsx)(f.Z, {
+        className: N.arrow,
+        direction: f.Z.Directions.RIGHT
       })
     })
   ]
@@ -177,8 +177,8 @@ let {
   themedPagination: _,
   includeHitboxPadding: p,
   style: m,
-  aspectRatio: C,
-  children: f
+  aspectRatio: f,
+  children: C
 } = this.props, {
   visibleIndex: x
 } = this.state;
@@ -193,7 +193,7 @@ return (0, s.jsxs)('div', {
       children: [
         (0, s.jsx)('div', {
           style: {
-            aspectRatio: C
+            aspectRatio: f
           },
           children: (0, s.jsx)(g.Z, {
             className: d()(N.carousel, n),
@@ -219,7 +219,7 @@ return (0, s.jsxs)('div', {
         })
       ]
     }),
-    null != f && f({
+    null != C && C({
       step: x,
       direction: this.getCurrentDirection()
     })

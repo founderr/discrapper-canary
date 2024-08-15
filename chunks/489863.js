@@ -54,7 +54,7 @@ permissions: E,
 guildId: f,
 channelId: h,
 integrationType: p,
-nonce: m
+nonce: I
   } = e;
   return (await i.tn.post({
 url: l.ANM.OAUTH2_AUTHORIZE,
@@ -66,7 +66,7 @@ query: {
   code_challenge_method: d,
   scope: r.join(' '),
   state: _,
-  nonce: m
+  nonce: I
 },
 body: {
   guild_id: f,

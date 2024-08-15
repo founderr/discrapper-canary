@@ -56,9 +56,9 @@ E = function(e, t) {
           ], h = 0; h < f.length; h++) {
           var p = f[h];
           if (null != p)
-            for (var m = 0; m < p.length; m++) {
-              var I = p[m],
-                T = e[I],
+            for (var I = 0; I < p.length; I++) {
+              var m = p[I],
+                T = e[m],
                 g = T.order;
               if (g > E)
                 break;
@@ -66,7 +66,7 @@ E = function(e, t) {
                 A = T.match(t, s, S);
               if (A) {
                 var N = T.quality ? T.quality(A, s, S) : 0;
-                (g < E || N > _) && (l = I, c = T, d = A, _ = N, E = g);
+                (g < E || N > _) && (l = m, c = T, d = A, _ = N, E = g);
               }
             }
         }
@@ -102,10 +102,10 @@ p = function(e) {
   };
   return t.regex = e, t;
 },
-m = 'function' == typeof Symbol && Symbol.for && Symbol.for('react.element') || 60103,
-I = function(e, t, n) {
+I = 'function' == typeof Symbol && Symbol.for && Symbol.for('react.element') || 60103,
+m = function(e, t, n) {
   return {
-    $$typeof: m,
+    $$typeof: I,
     type: e,
     key: null == t ? void 0 : t,
     ref: null,
@@ -275,7 +275,7 @@ W = {
       };
     },
     react: function(e, t, n) {
-      return I('h' + e.level, n.key, {
+      return m('h' + e.level, n.key, {
         children: t(e.content, n)
       });
     },
@@ -308,7 +308,7 @@ W = {
     match: h(/^( *[-*_]){3,} *(?:\n *)+\n/),
     parse: D,
     react: function(e, t, n) {
-      return I('hr', n.key, g);
+      return m('hr', n.key, g);
     },
     html: function(e, t, n) {
       return '<hr>';
@@ -325,8 +325,8 @@ W = {
     },
     react: function(e, t, n) {
       var r = e.lang ? 'markdown-code-' + e.lang : void 0;
-      return I('pre', n.key, {
-        children: I('code', null, {
+      return m('pre', n.key, {
+        children: m('code', null, {
           className: r,
           children: e.content
         })
@@ -362,7 +362,7 @@ W = {
       };
     },
     react: function(e, t, n) {
-      return I('blockquote', n.key, {
+      return m('blockquote', n.key, {
         children: t(e.content, n)
       });
     },
@@ -403,10 +403,10 @@ W = {
       };
     },
     react: function(e, t, n) {
-      return I(e.ordered ? 'ol' : 'ul', n.key, {
+      return m(e.ordered ? 'ol' : 'ul', n.key, {
         start: e.start,
         children: e.items.map(function(e, r) {
-          return I('li', '' + r, {
+          return m('li', '' + r, {
             children: t(e, n)
           });
         })
@@ -457,30 +457,30 @@ W = {
           };
         },
         i = e.header.map(function(e, i) {
-          return I('th', '' + i, {
+          return m('th', '' + i, {
             style: r(i),
             scope: 'col',
             children: t(e, n)
           });
         }),
         a = e.cells.map(function(e, i) {
-          return I('tr', '' + i, {
+          return m('tr', '' + i, {
             children: e.map(function(e, i) {
-              return I('td', '' + i, {
+              return m('td', '' + i, {
                 style: r(i),
                 children: t(e, n)
               });
             })
           });
         });
-      return I('table', n.key, {
+      return m('table', n.key, {
         children: [
-          I('thead', 'thead', {
-            children: I('tr', null, {
+          m('thead', 'thead', {
+            children: m('tr', null, {
               children: i
             })
           }),
-          I('tbody', 'tbody', {
+          m('tbody', 'tbody', {
             children: a
           })
         ]
@@ -526,7 +526,7 @@ W = {
     match: h(/^((?:[^\n]|\n(?! *\n))+)(?:\n *)+\n/),
     parse: y,
     react: function(e, t, n) {
-      return I('div', n.key, {
+      return m('div', n.key, {
         className: 'paragraph',
         children: t(e.content, n)
       });
@@ -632,7 +632,7 @@ W = {
       };
     },
     react: function(e, t, n) {
-      return I('a', n.key, {
+      return m('a', n.key, {
         href: S(e.target),
         title: e.title,
         children: t(e.content, n)
@@ -657,7 +657,7 @@ W = {
       };
     },
     react: function(e, t, n) {
-      return I('img', n.key, {
+      return m('img', n.key, {
         src: S(e.target),
         alt: e.alt,
         title: e.title
@@ -707,7 +707,7 @@ W = {
       };
     },
     react: function(e, t, n) {
-      return I('em', n.key, {
+      return m('em', n.key, {
         children: t(e.content, n)
       });
     },
@@ -724,7 +724,7 @@ W = {
     },
     parse: y,
     react: function(e, t, n) {
-      return I('strong', n.key, {
+      return m('strong', n.key, {
         children: t(e.content, n)
       });
     },
@@ -741,7 +741,7 @@ W = {
     },
     parse: y,
     react: function(e, t, n) {
-      return I('u', n.key, {
+      return m('u', n.key, {
         children: t(e.content, n)
       });
     },
@@ -755,7 +755,7 @@ W = {
     match: f(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/),
     parse: y,
     react: function(e, t, n) {
-      return I('del', n.key, {
+      return m('del', n.key, {
         children: t(e.content, n)
       });
     },
@@ -773,7 +773,7 @@ W = {
       };
     },
     react: function(e, t, n) {
-      return I('code', n.key, {
+      return m('code', n.key, {
         children: e.content
       });
     },
@@ -787,7 +787,7 @@ W = {
     match: p(/^ {2,}\n/),
     parse: D,
     react: function(e, t, n) {
-      return I('br', n.key, g);
+      return m('br', n.key, g);
     },
     html: function(e, t, n) {
       return '<br>';
@@ -857,7 +857,7 @@ ReactMarkdown: function(e) {
   var t = {};
   for (var n in e)
     'source' !== n && Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-  return t.children = J(e.source), I('div', null, t);
+  return t.children = J(e.source), m('div', null, t);
 },
 defaultBlockParse: q,
 defaultInlineParse: function(e, t) {
@@ -871,7 +871,7 @@ sanitizeText: v,
 sanitizeUrl: S,
 unescapeUrl: R,
 htmlTag: T,
-reactElement: I,
+reactElement: m,
 defaultRawParse: z,
 ruleOutput: function(e, t) {
   return !t && 'undefined' != typeof console && console.warn('simple-markdown ruleOutput should take \'react\' or \'html\' as the second argument.'),

@@ -19,8 +19,8 @@ rows: c,
 rowHeight: d,
 onScroll: _,
 listClassName: E
-  } = e, f = i.useRef(null), h = i.useRef(null), p = i.useRef(null), m = i.useRef(null), {
-isUsingKeyboardNavigation: I,
+  } = e, f = i.useRef(null), h = i.useRef(null), p = i.useRef(null), I = i.useRef(null), {
+isUsingKeyboardNavigation: m,
 focusIndex: T,
 ...g
   } = u;
@@ -28,13 +28,13 @@ focusIndex: T,
 var e;
 n && ((0, s.F)(f), null === (e = p.current) || void 0 === e || e.focus());
   }, [n]), i.useEffect(() => {
-if (n && T >= 0 && I) {
+if (n && T >= 0 && m) {
   var e;
-  null === (e = m.current) || void 0 === e || e.scrollRowIntoView(T);
+  null === (e = I.current) || void 0 === e || e.scrollRowIntoView(T);
 }
   }, [
 n,
-I,
+m,
 T
   ]);
   let S = i.useCallback(e => c[e], [c]);
@@ -61,7 +61,7 @@ children: [
         ...g,
         ref: p,
         children: (0, r.jsx)(o.Z, {
-          ref: m,
+          ref: I,
           className: E,
           listPadding: [
             6,

@@ -122,7 +122,7 @@ maxLines: f,
 renderOverflow: h
   } = e, {
 ref: p,
-width: m
+width: I
   } = function() {
 let [e, t] = i.useState(0);
 return {
@@ -133,23 +133,23 @@ return {
   width: e
 };
   }(), {
-lastVisibleIndex: I,
+lastVisibleIndex: m,
 onItemLayout: T,
 overflowItemsRef: g
   } = d({
 items: n,
 itemGapPx: o,
 maxLines: f,
-containerWidth: m
+containerWidth: I
   }), S = i.useCallback(e => (0, r.jsx)(_, {
 items: e,
 renderItem: a
-  }), [a]), A = i.useMemo(() => n.slice(0, I + 1), [
+  }), [a]), A = i.useMemo(() => n.slice(0, m + 1), [
 n,
-I
-  ]), N = i.useMemo(() => n.slice(I + 1), [
+m
+  ]), N = i.useMemo(() => n.slice(m + 1), [
 n,
-I
+m
   ]);
   return (0, r.jsxs)('div', {
 className: s()(t, c.items),

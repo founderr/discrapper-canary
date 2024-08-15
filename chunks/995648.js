@@ -1,71 +1,71 @@
-t.d(n, {
+i.d(n, {
   Z: function() {
-return d;
+return c;
   }
 });
-var i = t(735250);
-t(470079);
-var a = t(120356),
-  s = t.n(a),
-  l = t(481060),
-  r = t(422559),
-  o = t(812666);
+var t = i(735250);
+i(470079);
+var a = i(120356),
+  r = i.n(a),
+  o = i(481060),
+  l = i(422559),
+  s = i(812666);
 
-function d(e) {
+function c(e) {
   let {
 grantedPermissions: n,
-disabledPermissions: t,
+disabledPermissions: i,
 grantedPermissionsHeader: a,
-disabledPermissionsHeader: d,
-className: c
+disabledPermissionsHeader: c,
+className: d
   } = e;
-  return (0, i.jsxs)('div', {
-className: s()(o.list, c),
+  return (0, t.jsxs)('div', {
+className: r()(s.list, d),
 children: [
-  null != n && n.length > 0 ? (0, i.jsxs)(i.Fragment, {
+  null != n && n.length > 0 ? (0, t.jsxs)(t.Fragment, {
     children: [
-      null != a ? (0, i.jsx)(l.FormTitle, {
-        className: o.permissionHeader,
+      null != a ? (0, t.jsx)(o.FormTitle, {
+        className: s.permissionHeader,
         children: a
       }) : null,
-      (0, i.jsx)('div', {
-        className: o.container,
-        children: n.map(e => (0, i.jsxs)('div', {
-          className: o.permission,
+      (0, t.jsx)('div', {
+        className: s.container,
+        children: n.map(e => (0, t.jsxs)('div', {
+          className: s.permission,
           children: [
-            (0, i.jsx)(l.CheckmarkLargeIcon, {
+            (0, t.jsx)(o.CheckmarkLargeIcon, {
               size: 'xs',
               color: 'currentColor',
-              className: o.check
+              className: s.check
             }),
-            (0, i.jsx)(l.Text, {
+            (0, t.jsx)(o.Text, {
               variant: 'text-sm/normal',
-              children: (0, r.wt)(e)
+              children: (0, l.wt)(e)
             })
           ]
         }, e.toString()))
       })
     ]
   }) : null,
-  null != t && t.length > 0 ? (0, i.jsxs)(i.Fragment, {
+  null != i && i.length > 0 ? (0, t.jsxs)(t.Fragment, {
     children: [
-      null != d ? (0, i.jsx)(l.FormTitle, {
-        className: o.permissionHeader,
-        children: d
+      null != c ? (0, t.jsx)(o.FormTitle, {
+        className: s.permissionHeader,
+        children: c
       }) : null,
-      (0, i.jsx)('div', {
-        className: o.container,
-        children: t.map(e => (0, i.jsxs)('div', {
-          className: o.permission,
+      (0, t.jsx)('div', {
+        className: s.container,
+        children: i.map(e => (0, t.jsxs)('div', {
+          className: s.permission,
           children: [
-            (0, i.jsx)(l.XSmallIcon, {
+            (0, t.jsx)(o.XSmallIcon, {
               size: 'xs',
               color: 'currentColor',
-              className: o.cross
+              className: s.cross
             }),
-            (0, i.jsx)(l.Text, {
+            (0, t.jsx)(o.Text, {
               variant: 'text-sm/normal',
-              children: (0, r.wt)(e)
+              children: (0, l.wt)(e)
             })
           ]
         }, e.toString()))

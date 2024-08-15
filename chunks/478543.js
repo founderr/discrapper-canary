@@ -13,9 +13,9 @@ var r = n(735250),
   f = n(145022),
   h = n(981631),
   p = n(689938),
-  m = n(962740);
+  I = n(962740);
 
-function I(e) {
+function m(e) {
   let {
 url: t
   } = e, [n, a] = i.useState(!1), o = i.useRef(void 0), l = i.useCallback(() => {
@@ -26,13 +26,13 @@ t,
 n
   ]);
   return i.useEffect(() => () => clearTimeout(o.current), []), d.wS ? (0, r.jsxs)(u.Clickable, {
-className: s()(m.copyLink, n ? m.copied : null),
+className: s()(I.copyLink, n ? I.copied : null),
 onClick: l,
 children: [
   (0, r.jsx)(u.LinkIcon, {
     size: 'md',
     color: 'currentColor',
-    className: m.copyLinkIcon
+    className: I.copyLinkIcon
   }),
   n ? p.Z.Messages.BUILD_OVERRIDE_LINK_COPIED : p.Z.Messages.BUILD_OVERRIDE_LINK_COPY
 ]
@@ -52,15 +52,15 @@ submitting: d = !1
   return (0, r.jsxs)(i.Fragment, {
 children: [
   (0, r.jsxs)('div', {
-    className: m.buildInfo,
+    className: I.buildInfo,
     children: [
       (0, r.jsx)(u.Text, {
         variant: 'text-sm/medium',
-        className: m.subHead,
+        className: I.subHead,
         children: t
       }),
       (0, r.jsx)('div', {
-        className: m.buildDetails,
+        className: I.buildDetails,
         children: n
       })
     ]
@@ -69,8 +69,8 @@ children: [
     submitting: d,
     color: a,
     onClick: o,
-    className: s()(m.button, c ? m.disabledButtonOverride : null),
-    size: m.buttonSize,
+    className: s()(I.button, c ? I.disabledButtonOverride : null),
+    size: I.buttonSize,
     disabled: c,
     children: l
   })
@@ -100,54 +100,54 @@ N,
 v
   ]);
   return (0, r.jsxs)('div', {
-className: m.wrapper,
+className: I.wrapper,
 children: [
   (t = g, n = S, a = o, (0, r.jsxs)(u.Text, {
     variant: 'text-xs/normal',
-    className: m.titleRegion,
+    className: I.titleRegion,
     children: [
       (0, r.jsx)('strong', {
-        className: m.title,
+        className: I.title,
         children: null != t && null != t.releaseChannel ? p.Z.Messages.BUILD_OVERRIDE_FOR.format({
           releaseChannel: t.releaseChannel
         }) : p.Z.Messages.BUILD_OVERRIDE
       }),
       (0, r.jsx)(u.Anchor, {
-        className: m.infoLink,
+        className: I.infoLink,
         href: _.Z.getArticleURL(h.BhN.BUILD_OVERRIDE_EMBED),
         target: '_blank',
         children: (0, r.jsx)(u.CircleInformationIcon, {
           size: 'xs',
           color: 'currentColor',
-          className: m.infoIcon
+          className: I.infoIcon
         })
       }),
-      a ? null : (0, r.jsx)(I, {
+      a ? null : (0, r.jsx)(m, {
         url: n
       })
     ]
   })),
   (0, r.jsxs)('div', {
-    className: m.content,
+    className: I.content,
     children: [
       (0, r.jsx)(c.Z, {
-        className: m.icon
+        className: I.icon
       }),
       o ? (0, r.jsxs)(i.Fragment, {
         children: [
           (0, r.jsxs)('div', {
-            className: m.buildInfo,
+            className: I.buildInfo,
             children: [
               (0, r.jsx)('div', {
-                className: s()(m.barLoader, m.barTitle)
+                className: s()(I.barLoader, I.barTitle)
               }),
               (0, r.jsx)('div', {
-                className: m.barLoader
+                className: I.barLoader
               })
             ]
           }),
           (0, r.jsx)('div', {
-            className: m.buttonLoader
+            className: I.buttonLoader
           })
         ]
       }) : function(e) {
@@ -161,8 +161,8 @@ children: [
           } = e,
           h = ['discord_web'];
         !E.isPlatformEmbedded && h.push('discord_marketing', 'discord_developers');
-        let m = (0, f.Z)(o, h);
-        if (!m.valid)
+        let I = (0, f.Z)(o, h);
+        if (!I.valid)
           return function(e) {
             return T({
               subHead: p.Z.Messages.BUILD_OVERRIDE_ISNT_AVAILABLE,
@@ -171,12 +171,12 @@ children: [
               buildDetails: e,
               disabled: !0
             });
-          }(m.reason);
+          }(I.reason);
         l()(null != o, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
         let {
-          discord_web: I,
+          discord_web: m,
           discord_developers: g
-        } = o.targetBuildOverride, S = null != I ? I : g;
+        } = o.targetBuildOverride, S = null != m ? m : g;
         if (l()(null != S, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), t = S, null == (n = s) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type)
           i = p.Z.Messages.BUILD_OVERRIDE_APPLY, r = c, a = u.Button.Colors.GREEN;
         else

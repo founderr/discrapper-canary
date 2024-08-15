@@ -15,9 +15,9 @@ var r, i, a = n(735250),
   f = n(722770),
   h = n(846519),
   p = n(215569),
-  m = n(314274);
+  I = n(314274);
 
-function I(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -77,7 +77,7 @@ return (0, a.jsx)(_.animated.div, {
 });
   }
   constructor(...e) {
-super(...e), I(this, 'timeoutId', void 0);
+super(...e), m(this, 'timeoutId', void 0);
   }
 }
 
@@ -262,15 +262,15 @@ let {
   maskId: d,
   lowerBadgeMask: E,
   upperBadgeMask: h,
-  focused: I,
+  focused: m,
   hasRenderedBadge: T,
   renderComplex: g
 } = this.state;
 if (!g)
   return (0, a.jsx)('div', {
     className: l()(t, {
-      [m.wrapperSimple]: !0,
-      [m.simpleFocused]: I
+      [I.wrapperSimple]: !0,
+      [I.simpleFocused]: m
     }),
     style: o,
     onFocus: this.handleFocus,
@@ -279,7 +279,7 @@ if (!g)
       width: 48,
       height: 48,
       viewBox: '0 0 '.concat(48, ' ').concat(48),
-      className: m.svg,
+      className: I.svg,
       overflow: 'visible',
       children: (0, a.jsx)('foreignObject', {
         x: 0,
@@ -299,7 +299,7 @@ let S = ''.concat(d, '-upper_badge_masks'),
   C = (null == i ? void 0 : i.width) != null ? i.width : 16,
   y = (null == i ? void 0 : i.height) != null ? i.height : 16;
 return (0, a.jsxs)('div', {
-  className: l()(t, m.wrapper),
+  className: l()(t, I.wrapper),
   style: o,
   onFocus: this.handleFocus,
   onBlur: this.handleBlur,
@@ -308,8 +308,8 @@ return (0, a.jsxs)('div', {
       width: 48,
       height: 48,
       viewBox: '0 0 '.concat(48, ' ').concat(48),
-      className: l()(m.svg, {
-        [m.noContain]: c
+      className: l()(I.svg, {
+        [I.noContain]: c
       }),
       overflow: 'visible',
       children: [
@@ -361,7 +361,7 @@ return (0, a.jsxs)('div', {
               href: '#'.concat(N),
               fill: 'white',
               className: l()({
-                [m.isHighlighted]: c
+                [I.isHighlighted]: c
               })
             }),
             T ? (0, a.jsxs)(a.Fragment, {
@@ -398,17 +398,17 @@ return (0, a.jsxs)('div', {
             })
           ]
         }) : null,
-        I ? (0, a.jsxs)(s.Fragment, {
+        m ? (0, a.jsxs)(s.Fragment, {
           children: [
             (0, a.jsx)('g', {
-              className: m.focusStroke,
+              className: I.focusStroke,
               mask: 'url(#'.concat(O, ')'),
               children: (0, a.jsx)('use', {
                 href: '#'.concat(N)
               })
             }),
             (0, a.jsxs)('g', {
-              className: m.focusFill,
+              className: I.focusFill,
               children: [
                 null != u ? (0, a.jsx)('use', {
                   href: '#'.concat(S)
@@ -424,7 +424,7 @@ return (0, a.jsxs)('div', {
           d: this.getPathInterpolation(),
           stroke: f.Z.BRAND_500,
           'stroke-width': 2,
-          className: m.highlight,
+          className: I.highlight,
           mask: 'url(#'.concat(O, ')')
         }),
         (0, a.jsx)('foreignObject', {
@@ -442,12 +442,12 @@ return (0, a.jsxs)('div', {
       component: s.Fragment,
       children: [
         null != r ? (0, a.jsx)(v, {
-          className: m.lowerBadge,
+          className: I.lowerBadge,
           animatedStyle: this.getLowerBadgeStyles(),
           children: r
         }, 'lower-badge') : null,
         null != u ? (0, a.jsx)(v, {
-          className: m.upperBadge,
+          className: I.upperBadge,
           animatedStyle: this.getUpperBadgeStyles(),
           children: u
         }, 'upper-badge') : null
@@ -457,27 +457,27 @@ return (0, a.jsxs)('div', {
 }, 'wrapper');
   }
   constructor(...e) {
-super(...e), I(this, 'timeout', new h.V7()), I(this, 'state', {
+super(...e), m(this, 'timeout', new h.V7()), m(this, 'state', {
   renderComplex: !1,
   hasRenderedBadge: !1,
   maskId: (0, E.Z)(),
   focused: !1
-}), I(this, 'handleTimeout', () => {
+}), m(this, 'handleTimeout', () => {
   this.timeout.stop(), this.setState({
     renderComplex: !1
   });
-}), I(this, 'handleFocus', () => {
+}), m(this, 'handleFocus', () => {
   this.setState({
     focused: !0
   });
-}), I(this, 'handleBlur', () => {
+}), m(this, 'handleBlur', () => {
   this.setState({
     focused: !1
   });
 });
   }
 }
-I(R, 'defaultProps', {
+m(R, 'defaultProps', {
   selected: !1,
   lowerBadgeSize: {
 width: 16,

@@ -1,12 +1,12 @@
 n.d(t, {
   $_: function() {
-return L;
+return v;
   },
   FM: function() {
 return B;
   },
   IB: function() {
-return v;
+return L;
   },
   IY: function() {
 return Z;
@@ -43,8 +43,8 @@ var s = n(470079),
   R = n(626135),
   C = n(823379),
   g = n(111361),
-  N = n(595878),
-  p = n(944880),
+  p = n(595878),
+  N = n(944880),
   A = n(513785),
   m = n(106255),
   f = n(474936),
@@ -156,10 +156,10 @@ switch (e.nitroTenureStatus) {
     return [];
 }
   },
-  L = () => {
+  v = () => {
 let e = M(),
   [t, n] = s.useState(P(e)),
-  a = (0, N.c)({
+  a = (0, p.c)({
     location: 'Home'
   });
 s.useEffect(() => {
@@ -172,10 +172,10 @@ s.useEffect(() => {
 let [r] = (0, u.US)(a ? t : []);
 return a ? null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, m.Wb)(e.nitroTenureStatus) : null : null;
   },
-  v = () => {
+  L = () => {
 var e;
 let t = null === (e = M()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-  n = (0, N.c)({
+  n = (0, p.c)({
     location: 'Home'
   }) && null != t && t === S.EB.REDEEMABLE,
   [s] = (0, u.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
@@ -225,6 +225,6 @@ function B() {
   let t = M(),
 n = null !== (e = null == t ? void 0 : t.showCard) && void 0 !== e && e;
   s.useEffect(() => {
-n && p.Z.forceRefreshIfOutdated();
+n && N.Z.forceRefreshIfOutdated();
   }, [n]);
 }

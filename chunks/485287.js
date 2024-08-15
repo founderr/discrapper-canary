@@ -20,33 +20,33 @@ var r = n(442837),
   f = n(754277);
 let h = e => e / 400,
   p = !1,
-  m = (0, u.tu)('stage_waiting', 'stage_waiting', h(s.Z.getOutputVolume()));
+  I = (0, u.tu)('stage_waiting', 'stage_waiting', h(s.Z.getOutputVolume()));
 
-function I() {
+function m() {
   let e = o.Z.getVoiceChannelId();
   if (null == e) {
-m.stop(), p = !1;
+I.stop(), p = !1;
 return;
   }
   let t = a.Z.getChannel(e);
   if (!(null == t ? void 0 : t.isGuildStageVoice()) || s.Z.isSelfDeaf()) {
-m.stop(), p = !1;
+I.stop(), p = !1;
 return;
   }
   if (f.Z.shouldPlay()) {
-m.volume = h(s.Z.getOutputVolume()), m.loop(), p = !0;
+I.volume = h(s.Z.getOutputVolume()), I.loop(), p = !0;
 return;
   }
   if (E.Z.isLive(e)) {
-m.stop(), p = !1;
+I.stop(), p = !1;
 return;
   }
   if (f.Z.isMuted()) {
-m.pause(), p = !1;
+I.pause(), p = !1;
 return;
   }
   let n = null != Object.values(l.Z.getVoiceStatesForChannel(e)).find(e => !e.suppress && !e.isVoiceMuted());
-  n || p ? n && (m.pause(), p = !1) : (m.volume = h(s.Z.getOutputVolume()), m.loop(), p = !0);
+  n || p ? n && (I.pause(), p = !1) : (I.volume = h(s.Z.getOutputVolume()), I.loop(), p = !0);
 }
 
 function T(e) {
@@ -69,36 +69,36 @@ let {
 } = e;
 if (null != t) {
   let e = a.Z.getChannel(t);
-  (null == e ? void 0 : e.isGuildStageVoice()) ? I(): (m.stop(), p = !1);
+  (null == e ? void 0 : e.isGuildStageVoice()) ? m(): (I.stop(), p = !1);
 } else
-  m.stop(), p = !1;
+  I.stop(), p = !1;
   }
   handleLogout() {
-m.stop(), p = !1;
+I.stop(), p = !1;
   }
   handlePlay(e) {
 let {
   play: t
 } = e;
-t ? I() : (m.pause(), p = !1);
+t ? m() : (I.pause(), p = !1);
   }
   handleMute(e) {
 let {
   muted: t
 } = e;
-t ? (m.pause(), p = !1) : I();
+t ? (I.pause(), p = !1) : m();
   }
   handleVoiceStateUpdates() {
-I();
+m();
   }
   handleSetOutputVolume(e) {
 let {
   volume: t
 } = e;
-m.volume = h(t);
+I.volume = h(t);
   }
   handleToggleSelfDeaf() {
-I();
+m();
   }
   constructor(...e) {
 var t, n, r;

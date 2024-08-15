@@ -33,8 +33,8 @@ n.Z = o().throttle(function(e, n) {
   channelPredicate: _ = () => !0,
   guildPredicate: A = () => !0,
   guildFeaturePredicate: T = () => !1,
-  ensureChatIsVisible: L = () => !1,
-  withVoiceChannels: N = !1
+  ensureChatIsVisible: N = () => !1,
+  withVoiceChannels: L = !1
 } = n,
 O = null !== (l = a.Z.getState().guildId) && void 0 !== l ? l : I.ME,
 h = a.Z.getState().channelId,
@@ -47,14 +47,14 @@ g = function(e, n) {
   return n > 0 ? t.slice(i).concat(t.slice(0, i), e) : (t.splice(i, 0, e), t.slice(i + 1).concat(t.slice(0, i + 1)));
 }(O, e),
 D = e > 0 ? 0 : g.length - 1,
-f = S(O, N),
-R = f.indexOf(h) + e;
+R = S(O, L),
+f = R.indexOf(h) + e;
   for (; null != O && '' !== O;) {
-if (E = f[R], A(O))
+if (E = R[f], A(O))
   for (; null != E && '' !== E;) {
     if ('string' == typeof E) {
       if (_(O, E))
-        return (0, C.K)(O, E, !1, L(O, E));
+        return (0, C.K)(O, E, !1, N(O, E));
     } else if ('object' == typeof E && T(E.resourceId, E.type))
       return O !== s.Z.getGuildId() && (0, C.K)(O, null === (o = u.ZP.getDefaultChannel(O)) || void 0 === o ? void 0 : o.id), (0, r.openModalLazy)(async () => {
         let {
@@ -71,11 +71,11 @@ if (E = f[R], A(O))
           guildId: O
         });
       });
-    R += e, E = f[R];
+    f += e, E = R[f];
   }
 if (D += e, null == (O = g[D]) || '' === O)
   break;
-f = S(O, N), R = e < 0 ? f.length - 1 : 0;
+R = S(O, L), f = e < 0 ? R.length - 1 : 0;
   }
   c.S.dispatch(I.CkL.SHAKE_APP, {
 duration: 200,

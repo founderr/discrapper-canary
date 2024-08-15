@@ -17,8 +17,8 @@ var n = t(735250),
   C = t(333867),
   m = t(963249),
   A = t(87484),
-  g = t(197115),
-  O = t(911367),
+  O = t(197115),
+  g = t(911367),
   h = t(430824),
   p = t(78839),
   R = t(981631),
@@ -42,7 +42,7 @@ children: null != s && null != t ? (0, n.jsx)('div', {
 }
 s.Z = function() {
   let [e, s] = a.useState(x.Si.TIER_2), [t, S] = a.useState(null), [N] = (0, r.Wu)([h.Z], () => [h.Z.getGuilds()]), [D] = (0, r.Wu)([p.ZP], () => [p.ZP.getPremiumSubscription()]);
-  (0, O.t)();
+  (0, g.t)();
   let P = Object.values(N).map(e => ({
   value: e,
   label: e.name
@@ -96,7 +96,7 @@ children: (0, n.jsxs)(o.FormSection, {
           ],
           onChange: e => s(e)
         }),
-        (0, n.jsx)(g.Z, {
+        (0, n.jsx)(O.Z, {
           subscriptionTier: e,
           isGift: !0,
           premiumModalAnalyticsLocation: {}

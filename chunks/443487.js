@@ -6,7 +6,7 @@ return T;
 return p;
   },
   e$: function() {
-return m;
+return I;
   },
   ll: function() {
 return g;
@@ -57,7 +57,7 @@ children: [
   });
 }
 
-function m(e) {
+function I(e) {
   let {
 children: t
   } = e;
@@ -67,7 +67,7 @@ children: t
   });
 }
 
-function I(e) {
+function m(e) {
   let {
 users: t,
 guildId: n
@@ -102,7 +102,7 @@ entry: i,
 maxAvatars: a = 3
   } = e, l = i.author_id, f = (0, s.e7)([d.default], () => d.default.getUser(l)), {
 displayParticipants: p,
-numOtherParticipants: m
+numOtherParticipants: I
   } = (0, E.Z)(i, a), T = (0, s.e7)([u.ZP], () => u.ZP.getMember(t, l)), g = (0, s.e7)([c.Z], () => {
 var e;
 return (null == T ? void 0 : T.colorRoleId) != null ? null === (e = c.Z.getRole(t, T.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0;
@@ -117,7 +117,7 @@ A = _.ZP.getName(t, n, f);
   return (0, r.jsxs)('div', {
 className: h.userSection,
 children: [
-  (0, r.jsx)(I, {
+  (0, r.jsx)(m, {
     users: p,
     guildId: t
   }),
@@ -127,7 +127,7 @@ children: [
     name: A,
     className: h.userName
   }),
-  m > 0 ? (0, r.jsx)('div', {
+  I > 0 ? (0, r.jsx)('div', {
     className: h.additionalParticipantBadge,
     children: (0, r.jsxs)(o.Text, {
       variant: 'text-xxs/medium',
@@ -135,7 +135,7 @@ children: [
       className: h.additionalParticipantBadgeText,
       children: [
         '+',
-        m
+        I
       ]
     })
   }) : null

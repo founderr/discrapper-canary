@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(594174),
   m = t(351402),
   A = t(853872),
-  g = t(78839),
-  O = t(706454),
+  O = t(78839),
+  g = t(706454),
   h = t(726985),
   p = t(981631),
   R = t(689938),
@@ -96,17 +96,17 @@ return s ? (0, n.jsx)(E.Z, {}) : (0, n.jsxs)('div', {
 
 function f() {
   let e = (0, o.cj)([
-O.default,
+g.default,
 m.Z,
 A.Z,
 C.default,
 N.Z,
-g.ZP
+O.ZP
   ], () => {
-let e = g.ZP.getPremiumTypeSubscription(),
+let e = O.ZP.getPremiumTypeSubscription(),
   s = C.default.getCurrentUser();
 return r()(null != s, 'UserSettingsBilling: currentUser cannot be undefined'), {
-  locale: O.default.locale,
+  locale: g.default.locale,
   hide: N.Z.enabled,
   isClaimed: s.isClaimed(),
   isVerified: s.verified,

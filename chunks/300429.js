@@ -16,7 +16,7 @@ let p = {
   1: {}
 };
 
-function m(e, t, n) {
+function I(e, t, n) {
   if (function(e, t) {
   null != p[t][e.id] && (p[t][e.id].timer.stop(), delete p[t][e.id]);
 }(e, t), function(e, t) {
@@ -39,18 +39,18 @@ d.Z.dispatch({
   }, !0);
 }
 
-function I(e, t) {
+function m(e, t) {
   let n = E.Z.getChannel(e);
   if (null == n)
 return !1;
-  m(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * _.Z.Millis.SECOND + 100);
+  I(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * _.Z.Millis.SECOND + 100);
 }
 
 function T(e) {
   let {
 file: t
   } = e, n = E.Z.getChannel(t.channelId);
-  return null != n && m(n, 0, 0);
+  return null != n && I(n, 0, 0);
 }
 class g extends(i = u.ZP.Store) {
   initialize() {
@@ -72,7 +72,7 @@ let {
   channelId: t,
   slowmodeType: n
 } = e;
-return I(t, n);
+return m(t, n);
   },
   SLOWMODE_SET_COOLDOWN: function(e) {
 let {
@@ -82,13 +82,13 @@ let {
 } = e, i = E.Z.getChannel(t);
 if (null == i)
   return !1;
-m(i, n, 0 === r ? 0 : r + 100);
+I(i, n, 0 === r ? 0 : r + 100);
   },
   UPLOAD_START: function(e) {
 let {
   channelId: t
 } = e;
-return I(t, 0);
+return m(t, 0);
   },
   UPLOAD_FAIL: T,
   UPLOAD_CANCEL_REQUEST: T,
@@ -105,7 +105,7 @@ let {
     let t = p[e][r.id],
       i = r.rateLimitPerUser;
     if (null != t && t.rateLimitPerUser !== i)
-      m(r, e, Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, i * _.Z.Millis.SECOND));
+      I(r, e, Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, i * _.Z.Millis.SECOND));
   }
 });
   },

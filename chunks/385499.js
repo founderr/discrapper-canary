@@ -18,11 +18,11 @@ let d = e => {
   children: h = []
 } = e,
 p = null,
-m = u.Z.Messages.VERIFIED_BOT_TOOLTIP;
+I = u.Z.Messages.VERIFIED_BOT_TOOLTIP;
   switch (i) {
 case l.Hb.SYSTEM_DM:
 case l.Hb.OFFICIAL:
-  _ = !0, m = u.Z.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP_OFFICIAL, p = u.Z.Messages.SYSTEM_DM_TAG_OFFICIAL;
+  _ = !0, I = u.Z.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP_OFFICIAL, p = u.Z.Messages.SYSTEM_DM_TAG_OFFICIAL;
   break;
 case l.Hb.SERVER:
   p = u.Z.Messages.BOT_TAG_SERVER;
@@ -34,7 +34,7 @@ case l.Hb.STAFF_ONLY_DM:
   p = u.Z.Messages.STAFF_BADGE_TOOLTIP;
   break;
 case l.Hb.AI:
-  _ = !0, m = u.Z.Messages.AI_GENERATED_TOOLTIP, p = u.Z.Messages.AI_TAG;
+  _ = !0, I = u.Z.Messages.AI_GENERATED_TOOLTIP, p = u.Z.Messages.AI_TAG;
   break;
 case l.Hb.REMIX:
   _ = !1, p = u.Z.Messages.REMIXING_TAG;
@@ -43,11 +43,11 @@ case l.Hb.BOT:
 default:
   p = u.Z.Messages.APP_TAG;
   }
-  let I = i === l.Hb.ORIGINAL_POSTER,
+  let m = i === l.Hb.ORIGINAL_POSTER,
 T = i === l.Hb.REMIX,
 g = null;
   _ && (g = (0, r.jsx)(s.u, {
-text: m,
+text: I,
 align: 'center',
 position: 'top',
 children: e => (0, r.jsx)(o.CheckmarkSmallBoldIcon, {
@@ -59,7 +59,7 @@ children: e => (0, r.jsx)(o.CheckmarkSmallBoldIcon, {
   let S = e => (0, r.jsxs)('span', {
 ...e,
 className: a()(d, t, f ? c.rem : c.px, {
-  [c.botTagOP]: I,
+  [c.botTagOP]: m,
   [c.botTagRemix]: T
 }),
 children: [

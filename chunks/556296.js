@@ -16,8 +16,8 @@ var i, a = n(879443),
   f = n(570140),
   h = n(714338),
   p = n(710845),
-  m = n(658785),
-  I = n(131951),
+  I = n(658785),
+  m = n(131951),
   T = n(626135),
   g = n(358085),
   S = n(998502),
@@ -60,7 +60,7 @@ v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET
 function k() {
   let {
 showKeybindIndicators: e
-  } = m.Z.getCurrentConfig({
+  } = I.Z.getCurrentConfig({
 location: 'KeybindsStore'
   });
   null == _().find(M, e => L.action === e.action && e.enabled && e.shortcut.length > 0) && !__OVERLAY__ && !x && U && e && (H(L), x = !0);
@@ -176,10 +176,10 @@ params: {}
 }
 let K = [
   function() {
-let e = I.Z.getShortcuts();
+let e = m.Z.getShortcuts();
 return _().each(M, t => {
   t.action === v.kg4.PUSH_TO_TALK && !0 === t.managed && (null == t.context || null == e[t.context]) && Y(t);
-}), _().reduce(I.Z.getShortcuts(), (e, t, n) => {
+}), _().reduce(m.Z.getShortcuts(), (e, t, n) => {
   let r = _().find(M, e => e.action === v.kg4.PUSH_TO_TALK && !0 === e.managed && e.context === n);
   if (null == r)
     H(Z({
@@ -229,14 +229,14 @@ if (!!M.hasOwnProperty(t))
   }
   let {
 showKeybindIndicators: t
-  } = m.Z.getCurrentConfig({
+  } = I.Z.getCurrentConfig({
 location: 'KeybindsStore'
   });
   return t && e.push((0, A.BB)(L.shortcut)), e;
 });
 class q extends(i = E.ZP.DeviceSettingsStore) {
   initialize(e) {
-!__OVERLAY__ && this.waitFor(I.Z, N.Z), M = null != e ? e : {};
+!__OVERLAY__ && this.waitFor(m.Z, N.Z), M = null != e ? e : {};
   }
   getUserAgnosticState() {
 return M;
@@ -261,7 +261,7 @@ let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
   n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
   {
     showKeybindIndicators: r
-  } = m.Z.getCurrentConfig({
+  } = I.Z.getCurrentConfig({
     location: 'KeybindsStore'
   }),
   i = _().find(M, r => r.action === e && (!t || r.managed) && (!n || r.shortcut.length > 0 && r.enabled));
@@ -366,7 +366,7 @@ w = t, b = {}, P = 0, Object.values(M).filter(e => G.includes(e.action) && e.man
   } catch (t) {
     D.error('Failed to register keybind', e, t);
   }
-}), U = !0, null == r && (r = m.Z.subscribe({
+}), U = !0, null == r && (r = I.Z.subscribe({
   location: 'KeybindsStore'
 }, F));
   }

@@ -1,12 +1,12 @@
 n.d(t, {
   I1: function() {
-return I;
+return m;
   },
   eM: function() {
 return p;
   },
   rK: function() {
-return m;
+return I;
   },
   rj: function() {
 return h;
@@ -53,7 +53,7 @@ type: 'GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE',
 guildId: e
   }), t));
 }
-async function m(e) {
+async function I(e) {
   var t, n;
   let r = s.default.getId(),
 i = (0, c.yE)(null !== (n = null === (t = o.ZP.getMember(e, r)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, f.q.COMPLETED_ONBOARDING),
@@ -63,12 +63,12 @@ return Promise.resolve();
   let u = d.Z.shouldFetchPrompts(e),
 _ = d.Z.getOnboardingPrompts(e);
   if (!u && _.length > 0)
-return _.every(e => !e.inOnboarding) ? (T(e), Promise.resolve()) : (!i && I(e), Promise.resolve());
+return _.every(e => !e.inOnboarding) ? (T(e), Promise.resolve()) : (!i && m(e), Promise.resolve());
   let h = await p(e);
-  return Array.isArray(h) && h.every(e => !e.inOnboarding) ? (T(e), Promise.resolve()) : (!i && I(e), h);
+  return Array.isArray(h) && h.every(e => !e.inOnboarding) ? (T(e), Promise.resolve()) : (!i && m(e), h);
 }
 
-function I(e) {
+function m(e) {
   i.Z.dispatch({
 type: 'GUILD_ONBOARDING_START',
 guildId: e

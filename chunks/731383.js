@@ -40,7 +40,7 @@ skipNulls: !1,
 strictNullHandling: !1
   },
   f = {},
-  h = function e(t, n, a, s, o, u, d, _, h, p, m, I, T, g, S, A) {
+  h = function e(t, n, a, s, o, u, d, _, h, p, I, m, T, g, S, A) {
 for (var N, v, O = t, R = A, C = 0, y = !1; void 0 !== (R = R.get(f)) && !y;) {
   var D = R.get(t);
   if (C += 1, void 0 !== D) {
@@ -50,15 +50,15 @@ for (var N, v, O = t, R = A, C = 0, y = !1; void 0 !== (R = R.get(f)) && !y;) {
   }
   void 0 === R.get(f) && (C = 0);
 }
-if ('function' == typeof _ ? O = _(n, O) : O instanceof Date ? O = m(O) : 'comma' === a && l(O) && (O = i.maybeMap(O, function(e) {
-    return e instanceof Date ? m(e) : e;
+if ('function' == typeof _ ? O = _(n, O) : O instanceof Date ? O = I(O) : 'comma' === a && l(O) && (O = i.maybeMap(O, function(e) {
+    return e instanceof Date ? I(e) : e;
   })), null === O) {
   if (o)
-    return d && !g ? d(n, E.encoder, S, 'key', I) : n;
+    return d && !g ? d(n, E.encoder, S, 'key', m) : n;
   O = '';
 }
 if ('string' == typeof(N = O) || 'number' == typeof N || 'boolean' == typeof N || 'symbol' == typeof N || 'bigint' == typeof N || i.isBuffer(O))
-  return d ? [T(g ? n : d(n, E.encoder, S, 'key', I)) + '=' + T(d(O, E.encoder, S, 'value', I))] : [T(n) + '=' + T(String(O))];
+  return d ? [T(g ? n : d(n, E.encoder, S, 'key', m)) + '=' + T(d(O, E.encoder, S, 'value', m))] : [T(n) + '=' + T(String(O))];
 var L = [];
 if (void 0 === O)
   return L;
@@ -79,7 +79,7 @@ for (var M = s && l(O) && 1 === O.length ? n + '[]' : n, P = 0; P < v.length; ++
     var x = l(O) ? 'function' == typeof a ? a(M, U) : M : M + (p ? '.' + U : '[' + U + ']');
     A.set(t, C);
     var G = r();
-    G.set(f, A), c(L, e(w, x, a, s, o, u, 'comma' === a && g && l(O) ? null : d, _, h, p, m, I, T, g, S, G));
+    G.set(f, A), c(L, e(w, x, a, s, o, u, 'comma' === a && g && l(O) ? null : d, _, h, p, I, m, T, g, S, G));
   }
 }
 return L;
@@ -131,10 +131,10 @@ return '';
 throw TypeError('`commaRoundTrip` must be a boolean, or absent');
   var E = 'comma' === _ && t && t.commaRoundTrip;
   !n && (n = Object.keys(s)), u.sort && n.sort(u.sort);
-  for (var f = r(), m = 0; m < n.length; ++m) {
-var I = n[m];
-if (!u.skipNulls || null !== s[I])
-  c(d, h(s[I], I, _, E, u.strictNullHandling, u.skipNulls, u.encode ? u.encoder : null, u.filter, u.sort, u.allowDots, u.serializeDate, u.format, u.formatter, u.encodeValuesOnly, u.charset, f));
+  for (var f = r(), I = 0; I < n.length; ++I) {
+var m = n[I];
+if (!u.skipNulls || null !== s[m])
+  c(d, h(s[m], m, _, E, u.strictNullHandling, u.skipNulls, u.encode ? u.encoder : null, u.filter, u.sort, u.allowDots, u.serializeDate, u.format, u.formatter, u.encodeValuesOnly, u.charset, f));
   }
   var T = d.join(u.delimiter),
 g = !0 === u.addQueryPrefix ? '?' : '';

@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(481060),
   h = n(430742),
   p = n(607070),
-  m = n(100527),
-  I = n(906732),
+  I = n(100527),
+  m = n(906732),
   T = n(998698),
   g = n(271668),
   S = n(931981),
@@ -57,7 +57,7 @@ var r = n(735250),
   ei = n(957825),
   ea = n(305489);
 t.Z = i.memo(i.forwardRef(function(e, t) {
-  var a, l, es, eo, el, eu, ec, ed, e_, eE, ef, eh, ep, em, eI;
+  var a, l, es, eo, el, eu, ec, ed, e_, eE, ef, eh, ep, eI, em;
   let {
 textValue: eT,
 richValue: eg,
@@ -102,7 +102,7 @@ onCommandSentinelTyped: e3
   u()(null != eL, 'chat input type must be set');
   let {
 analyticsLocations: e4
-  } = (0, I.ZP)(m.Z.CHANNEL_TEXT_AREA), e5 = function(e) {
+  } = (0, m.ZP)(I.Z.CHANNEL_TEXT_AREA), e5 = function(e) {
 let t = i.useRef(null);
 if (null != e && 'function' == typeof e)
   throw Error('Only Ref objects are supported');
@@ -217,8 +217,8 @@ let n = i.useCallback(() => {
 });
   }(eL, ti);
   let {
-eventEmitter: tm,
-handleEditorSelectionChanged: tI
+eventEmitter: tI,
+handleEditorSelectionChanged: tm
   } = function(e, t, n) {
 let [r] = i.useState(() => new o.EventEmitter());
 return i.useEffect(() => {
@@ -239,12 +239,12 @@ submit: tg,
 handleSubmit: tS
   } = function(e, t, a, s) {
 let [o, l] = i.useState(!1), u = i.useCallback((i, c, d, _, E) => {
-  var p, m, I;
+  var p, I, m;
   if (o)
     return;
   l(!0);
-  let T = null !== (m = null === (p = b.Z.getStickerPreview(s, t.drafts.type)) || void 0 === p ? void 0 : p.map(e => e.id)) && void 0 !== m ? m : [],
-    g = null !== (I = F.Z.getUploads(s, t.drafts.type)) && void 0 !== I ? I : [];
+  let T = null !== (I = null === (p = b.Z.getStickerPreview(s, t.drafts.type)) || void 0 === p ? void 0 : p.map(e => e.id)) && void 0 !== I ? I : [],
+    g = null !== (m = F.Z.getUploads(s, t.drafts.type)) && void 0 !== m ? m : [];
   if (null == c && !_ && !E && (0, C.CB)(g, s)) {
     l(!1), (0, f.openModalLazy)(async () => {
       let {
@@ -330,11 +330,11 @@ ep,
 ef,
 eh
   ]));
-  let tR = (em = e7, i.useCallback(function(e, t) {
+  let tR = (eI = e7, i.useCallback(function(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    r = em.current;
+    r = eI.current;
   null != e && null != r && r.insertEmoji(e, t, n), t && (0, v._Q)();
-}, [em])),
+}, [eI])),
 tC = function(e) {
   let {
     editorRef: t,
@@ -345,7 +345,7 @@ tC = function(e) {
     submit: o
   } = e, {
     analyticsLocations: l
-  } = (0, I.ZP)();
+  } = (0, m.ZP)();
   return i.useCallback((e, i) => {
     var u, c;
     !n && ((0, P.Hc)(i, r, a, s.drafts.type) ? ((0, q._H)({
@@ -375,10 +375,10 @@ tC = function(e) {
   chatInputType: eL,
   submit: eF
 });
-  let ty = (eI = e7, i.useCallback(e => {
-  let t = eI.current;
+  let ty = (em = e7, i.useCallback(e => {
+  let t = em.current;
   null != e && null != t && t.insertSound(e), (0, v._Q)();
-}, [eI])),
+}, [em])),
 tD = i.useCallback(() => {
   var e;
   return null == e9 ? void 0 : null === (e = e9.current) || void 0 === e ? void 0 : e.hide();
@@ -444,8 +444,8 @@ tD = i.useCallback(() => {
     handleAutocompleteVisibilityChange: s,
     handleOuterClick: o
   };
-}(eL, tm, e7);
-  (0, j.S)(tm, eD.guild_id, eD.id);
+}(eL, tI, e7);
+  (0, j.S)(tI, eD.guild_id, eD.id);
   let tB = null != eU,
 tF = ti && !((tn || tr) && to) || tT && (null === (es = eL.submit) || void 0 === es ? void 0 : es.useDisabledStylesOnSubmit),
 tV = null;
@@ -463,8 +463,8 @@ tj = (0, S.e)(eD),
 tW = null != te || null != eU || tj,
 tK = !!(null === (eo = eL.emojis) || void 0 === eo ? void 0 : eo.button) && tL <= 44;
   return (0, r.jsx)(N.f6, {
-value: tm,
-children: (0, r.jsxs)(I.Gt, {
+value: tI,
+children: (0, r.jsxs)(m.Gt, {
   value: e4,
   children: [
     tZ && tl ? (0, r.jsx)(et.Z, {
@@ -552,7 +552,7 @@ children: (0, r.jsxs)(I.Gt, {
                     onTab: tM,
                     onEnter: tP,
                     onMoveSelection: tU,
-                    onSelectionChanged: tI,
+                    onSelectionChanged: tm,
                     onMaybeShowAutocomplete: tN,
                     onHideAutocomplete: tv,
                     promptToUpload: eV,

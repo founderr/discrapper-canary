@@ -18,8 +18,8 @@ let {
   channel: t,
   connected: h,
   needSubscriptionToAccess: p,
-  locked: m = !1,
-  routeDirectlyToChannel: I = !1,
+  locked: I = !1,
+  routeDirectlyToChannel: m = !1,
   bypassChangeModal: T,
   bypassGuildIdCheck: g = !1
 } = e;
@@ -27,7 +27,7 @@ t.isThread() && (await u.Z.unarchiveThreadIfNecessary(t.id), !l.Z.hasJoined(t.id
 let S = s.Z.getRemoteSessionId(),
   A = _.Z.getVoiceStateForSession(c.default.getId(), S),
   N = (null == A ? void 0 : A.channelId) === t.id || d.Z.getChannelId() === _.Z.getCurrentClientVoiceChannelId(t.guild_id);
-return !T && !m && (0, E._)(t) ? new Promise(e => {
+return !T && !I && (0, E._)(t) ? new Promise(e => {
   (0, i.openModalLazy)(async () => {
     let {
       default: i
@@ -38,14 +38,14 @@ return !T && !m && (0, E._)(t) ? new Promise(e => {
         channel: t,
         connected: h,
         needSubscriptionToAccess: p,
-        routeDirectlyToChannel: I,
-        locked: m,
+        routeDirectlyToChannel: m,
+        locked: I,
         bypassChangeModal: !0
       })),
       ...n
     });
   });
-}) : (!m && !h && a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (h || N || p || I) && ! function(e) {
+}) : (!I && !h && a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (h || N || p || m) && ! function(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = e.getGuildId();
   if (null == n && !t)

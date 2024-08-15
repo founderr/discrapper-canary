@@ -6,7 +6,7 @@ return o;
 return h;
   },
   L3: function() {
-return I;
+return m;
   },
   U: function() {
 return p;
@@ -33,7 +33,7 @@ return c;
 return S;
   },
   lA: function() {
-return m;
+return I;
   },
   md: function() {
 return v;
@@ -52,8 +52,8 @@ let _ = 0,
   h = -1,
   p = -2;
 (r = o || (o = {}))[r.Quests = -4] = 'Quests', r[r.Clans = -3] = 'Clans', r[r.Hub = p] = 'Hub', r[r.Communities = h] = 'Communities', r[r.Activity = 1] = 'Activity', r[r.Music = 2] = 'Music', r[r.Television = 3] = 'Television', r[r.Science = 5] = 'Science', r[r.Education = 6] = 'Education';
-let m = 1000,
-  I = [
+let I = 1000,
+  m = [
 1,
 2,
 3,

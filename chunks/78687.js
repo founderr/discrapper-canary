@@ -95,7 +95,7 @@ return i(e).container.childNodes[0].childNodes[0].childNodes[1];
 makeDetectable: function(e, l, d) {
   var f, h, p;
 
-  function m() {
+  function I() {
     if (e.debug) {
       var n = Array.prototype.slice.call(arguments);
       if (n.unshift(a.get(l), 'Scroll: '), t.log.apply)
@@ -106,7 +106,7 @@ makeDetectable: function(e, l, d) {
     }
   }!d && (d = l, l = e, e = null), e = e || {};
 
-  function I(e) {
+  function m(e) {
     var t = i(e).container.childNodes[0],
       n = window.getComputedStyle(t);
     return !n.width || -1 === n.width.indexOf('px');
@@ -119,8 +119,8 @@ makeDetectable: function(e, l, d) {
   }
 
   function g() {
-    if (m('storeStyle invoked.'), !i(l)) {
-      m('Aborting because element has been uninstalled');
+    if (I('storeStyle invoked.'), !i(l)) {
+      I('Aborting because element has been uninstalled');
       return;
     }
     var e = T();
@@ -179,8 +179,8 @@ makeDetectable: function(e, l, d) {
   }
 
   function y() {
-    if (m('Injecting elements'), !i(l)) {
-      m('Aborting because element has been uninstalled');
+    if (I('Injecting elements'), !i(l)) {
+      I('Aborting because element has been uninstalled');
       return;
     }! function() {
       var n = i(l).style;
@@ -221,7 +221,7 @@ makeDetectable: function(e, l, d) {
         'right: ' + (d = (d = -E) ? d + 'px' : '0'),
         'bottom: ' + (a = a ? a + 'px' : '0')
       ]))),
-      I = u([
+      m = u([
         'position: absolute',
         'flex: none',
         'overflow: scroll',
@@ -258,14 +258,14 @@ makeDetectable: function(e, l, d) {
 
     function D() {
       var e = i(l);
-      e && e.onExpand ? e.onExpand() : m('Aborting expand scroll handler: element has been uninstalled');
+      e && e.onExpand ? e.onExpand() : I('Aborting expand scroll handler: element has been uninstalled');
     }
 
     function L() {
       var e = i(l);
-      e && e.onShrink ? e.onShrink() : m('Aborting shrink scroll handler: element has been uninstalled');
+      e && e.onShrink ? e.onShrink() : I('Aborting shrink scroll handler: element has been uninstalled');
     }
-    A.dir = 'ltr', A.style.cssText = h, A.className = o, N.className = o, N.style.cssText = p, v.style.cssText = I, O.style.cssText = g, R.style.cssText = T, y.style.cssText = S, v.appendChild(O), R.appendChild(y), N.appendChild(v), N.appendChild(R), A.appendChild(N), _.appendChild(A), c(v, 'scroll', D), c(R, 'scroll', L), i(l).onExpandScroll = D, i(l).onShrinkScroll = L;
+    A.dir = 'ltr', A.style.cssText = h, A.className = o, N.className = o, N.style.cssText = p, v.style.cssText = m, O.style.cssText = g, R.style.cssText = T, y.style.cssText = S, v.appendChild(O), R.appendChild(y), N.appendChild(v), N.appendChild(R), A.appendChild(N), _.appendChild(A), c(v, 'scroll', D), c(R, 'scroll', L), i(l).onExpandScroll = D, i(l).onShrinkScroll = L;
   }
 
   function D() {
@@ -280,14 +280,14 @@ makeDetectable: function(e, l, d) {
       var o = l.offsetWidth,
         c = l.offsetHeight,
         d = o !== i(l).lastWidth || c !== i(l).lastHeight;
-      m('Storing current size', o, c), S(l, o, c), n.add(0, function() {
+      I('Storing current size', o, c), S(l, o, c), n.add(0, function() {
         if (!!d) {
           if (!i(l)) {
-            m('Aborting because element has been uninstalled');
+            I('Aborting because element has been uninstalled');
             return;
           }
           if (!u()) {
-            m('Aborting because element container has not been initialized');
+            I('Aborting because element container has not been initialized');
             return;
           }
           if (e.debug) {
@@ -299,21 +299,21 @@ makeDetectable: function(e, l, d) {
         }
       }), n.add(1, function() {
         if (!i(l)) {
-          m('Aborting because element has been uninstalled');
+          I('Aborting because element has been uninstalled');
           return;
         }
         if (!u()) {
-          m('Aborting because element container has not been initialized');
+          I('Aborting because element container has not been initialized');
           return;
         }
         R(l, o, c);
       }), d && r && n.add(2, function() {
         if (!i(l)) {
-          m('Aborting because element has been uninstalled');
+          I('Aborting because element has been uninstalled');
           return;
         }
         if (!u()) {
-          m('Aborting because element container has not been initialized');
+          I('Aborting because element container has not been initialized');
           return;
         }
         r();
@@ -325,41 +325,41 @@ makeDetectable: function(e, l, d) {
     }
 
     function c() {
-      m('notifyListenersIfNeeded invoked');
+      I('notifyListenersIfNeeded invoked');
       var e = i(l);
-      return void 0 === i(l).lastNotifiedWidth && e.lastWidth === e.startSize.width && e.lastHeight === e.startSize.height ? m('Not notifying: Size is the same as the start size, and there has been no notification yet.') : e.lastWidth === e.lastNotifiedWidth && e.lastHeight === e.lastNotifiedHeight ? m('Not notifying: Size already notified') : void(m('Current size not notified, notifying...'), e.lastNotifiedWidth = e.lastWidth, e.lastNotifiedHeight = e.lastHeight, r(i(l).listeners, function(e) {
+      return void 0 === i(l).lastNotifiedWidth && e.lastWidth === e.startSize.width && e.lastHeight === e.startSize.height ? I('Not notifying: Size is the same as the start size, and there has been no notification yet.') : e.lastWidth === e.lastNotifiedWidth && e.lastHeight === e.lastNotifiedHeight ? I('Not notifying: Size already notified') : void(I('Current size not notified, notifying...'), e.lastNotifiedWidth = e.lastWidth, e.lastNotifiedHeight = e.lastHeight, r(i(l).listeners, function(e) {
         e(l);
       }));
     }
 
     function d() {
-      if (m('Scroll detected.'), I(l)) {
-        m('Scroll event fired while unrendered. Ignoring...');
+      if (I('Scroll detected.'), m(l)) {
+        I('Scroll event fired while unrendered. Ignoring...');
         return;
       }
       o(c);
     }
-    if (m('registerListenersAndPositionElements invoked.'), !i(l)) {
-      m('Aborting because element has been uninstalled');
+    if (I('registerListenersAndPositionElements invoked.'), !i(l)) {
+      I('Aborting because element has been uninstalled');
       return;
     }
     i(l).onRendered = function() {
-      if (m('startanimation triggered.'), I(l)) {
-        m('Ignoring since element is still unrendered...');
+      if (I('startanimation triggered.'), m(l)) {
+        I('Ignoring since element is still unrendered...');
         return;
       }
-      m('Element rendered.');
+      I('Element rendered.');
       var e = _(l),
         t = E(l);
-      (0 === e.scrollLeft || 0 === e.scrollTop || 0 === t.scrollLeft || 0 === t.scrollTop) && (m('Scrollbars out of sync. Updating detector elements...'), o(c));
+      (0 === e.scrollLeft || 0 === e.scrollTop || 0 === t.scrollLeft || 0 === t.scrollTop) && (I('Scrollbars out of sync. Updating detector elements...'), o(c));
     }, i(l).onExpand = d, i(l).onShrink = d;
     var f = i(l).style;
     s(l, f.width, f.height);
   }
 
   function L() {
-    if (m('finalizeDomMutation invoked.'), !i(l)) {
-      m('Aborting because element has been uninstalled');
+    if (I('finalizeDomMutation invoked.'), !i(l)) {
+      I('Aborting because element has been uninstalled');
       return;
     }
     var e = i(l).style;
@@ -372,16 +372,16 @@ makeDetectable: function(e, l, d) {
 
   function M() {
     var e;
-    m('Installing...'), i(l).listeners = [], e = T(), i(l).startSize = {
+    I('Installing...'), i(l).listeners = [], e = T(), i(l).startSize = {
       width: e.width,
       height: e.height
-    }, m('Element start size', i(l).startSize), n.add(0, g), n.add(1, y), n.add(2, D), n.add(3, L), n.add(4, b);
+    }, I('Element start size', i(l).startSize), n.add(0, g), n.add(1, y), n.add(2, D), n.add(3, L), n.add(4, b);
   }
-  if (m('Making detectable...'), (p = (h = f = l).getRootNode && h.getRootNode().contains(h), (h === h.ownerDocument.body || h.ownerDocument.body.contains(h) || p) && null !== window.getComputedStyle(f)) ? 1 : 0)
+  if (I('Making detectable...'), (p = (h = f = l).getRootNode && h.getRootNode().contains(h), (h === h.ownerDocument.body || h.ownerDocument.body.contains(h) || p) && null !== window.getComputedStyle(f)) ? 1 : 0)
     M();
   else
-    m('Element is detached'), C(), m('Waiting until element is attached...'), i(l).onRendered = function() {
-      m('Element is now attached'), M();
+    I('Element is detached'), C(), I('Waiting until element is attached...'), i(l).onRendered = function() {
+      I('Element is now attached'), M();
     };
 },
 addListener: function(e, t) {

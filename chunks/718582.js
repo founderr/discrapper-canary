@@ -3,7 +3,7 @@ n.d(t, {
 return ed;
   },
   CE: function() {
-return em;
+return eI;
   },
   DE: function() {
 return ef;
@@ -54,8 +54,8 @@ var r, i, a = n(470079),
   f = n(835473),
   h = n(12498),
   p = n(557135),
-  m = n(471445),
-  I = n(66999),
+  I = n(471445),
+  m = n(66999),
   T = n(15274),
   g = n(924301),
   S = n(230900),
@@ -189,11 +189,11 @@ f = E.map(e => {
 }),
 h = (0, l.e7)([x.Z], () => x.Z.getRelationships()),
 p = a.useMemo(() => Object.keys(h).filter(e => h[e] === W.OGo.BLOCKED), [h]),
-m = (0, l.e7)([B.ZP], () => B.ZP.getVoiceStates(t), [t]),
-I = a.useMemo(() => {
-  let t = Object.keys(m);
+I = (0, l.e7)([B.ZP], () => B.ZP.getVoiceStates(t), [t]),
+m = a.useMemo(() => {
+  let t = Object.keys(I);
   return 0 === t.length ? [] : t.filter(t => {
-    let n = m[t].filter(V.lm);
+    let n = I[t].filter(V.lm);
     return !(0 === n.length || f.includes(t)) && null == n.find(e => {
       let {
         user: t
@@ -202,7 +202,7 @@ I = a.useMemo(() => {
     }) && t !== e.afkChannelId && c.includes(t);
   });
 }, [
-  m,
+  I,
   f,
   c,
   p,
@@ -214,10 +214,10 @@ T = (0, l.e7)([
   D.Z,
   w.Z,
   L.Z
-], () => I.map(e => {
+], () => m.map(e => {
   var t;
   let n = D.Z.getAllApplicationStreamsForChannel(e).map(e => e.ownerId),
-    r = m[e].filter(V.lm),
+    r = I[e].filter(V.lm),
     i = d.ZP.getEmbeddedActivitiesForChannel(e),
     a = j.L.HANGOUT,
     s = [],
@@ -260,8 +260,8 @@ T = (0, l.e7)([
     isStage: !!(null === (t = L.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildStageVoice())
   };
 }), [
-  m,
-  I
+  I,
+  m
 ], s.isEqual),
 S = (0, l.e7)([b.Z], () => b.Z.hasConsented(W.pjP.PERSONALIZATION)),
 A = (0, l.e7)([y.Z], () => y.Z.getUserAffinities()),
@@ -511,7 +511,7 @@ let e_ = async (e, t) => {
   p.Z.handleVoiceConnect({
 channel: t,
 connected: k.Z.isInChannel(t.id),
-needSubscriptionToAccess: (0, I.$)(t.id).needSubscriptionToAccess,
+needSubscriptionToAccess: (0, m.$)(t.id).needSubscriptionToAccess,
 locked: !1
   }), (0, A.XU)(e, t.id);
 };
@@ -567,7 +567,7 @@ i = null == r ? void 0 : r.replace(/[<#>]/g, ''),
 a = null != i ? L.Z.getChannel(i) : L.Z.getChannel(e.channel_id),
 s = U.Z.can(W.Plq.VIEW_CHANNEL, a);
   if (null != a && s)
-t = (0, m.Th)(a.type), n = a.name;
+t = (0, I.Th)(a.type), n = a.name;
   else {
 if (null == r)
   return null;
@@ -584,7 +584,7 @@ function ep(e) {
   return (0, f.q)(t);
 }
 
-function em(e) {
+function eI(e) {
   let t = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(e)),
 n = null != t && t.trim().length > 0;
   return {

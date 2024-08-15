@@ -23,8 +23,8 @@ var r = n(735250),
   f = n(71619),
   h = n(340797),
   p = n(98278),
-  m = n(869765),
-  I = n(243317),
+  I = n(869765),
+  m = n(243317),
   T = n(621853),
   g = n(484459),
   S = n(184301),
@@ -244,8 +244,8 @@ let {
 } = e, {
   message: h,
   author: p,
-  compact: m = !1,
-  subscribeToGroupId: I,
+  compact: I = !1,
+  subscribeToGroupId: m,
   animate: T = !0,
   onContextMenu: g,
   onClickAvatar: v,
@@ -258,7 +258,7 @@ let {
   return null !== (e = a.displayCompactAvatars) && void 0 !== e ? e : N.ZP.displayCompactAvatars;
 }), P = null != h.messageReference && null != h.webhookId && h.hasFlag(G.iLy.IS_CROSSPOST), U = h.author, {
   id: w
-} = U, x = m ? 32 : 80, {
+} = U, x = I ? 32 : 80, {
   avatarSrc: k,
   avatarDecorationSrc: B,
   eventHandlers: F
@@ -266,7 +266,7 @@ let {
   user: U,
   guildId: s,
   size: x,
-  animateOnHover: null != I ? !D : !T,
+  animateOnHover: null != m ? !D : !T,
   showPending: !0
 }), H = h.isInteractionPlaceholder(), Z = i.useMemo(() => {
   var e, t;
@@ -285,12 +285,12 @@ let {
   k
 ]);
 return (i.useEffect(() => {
-  if (null != I)
-    return y.S.subscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(I, ':').concat(w), L), () => void y.S.unsubscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(I, ':').concat(w), L);
+  if (null != m)
+    return y.S.subscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), L), () => void y.S.unsubscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), L);
 }, [
   w,
-  I
-]), m && !M) ? void 0 : null != _ && null != R ? (0, r.jsx)(d.Gt, {
+  m
+]), I && !M) ? void 0 : null != _ && null != R ? (0, r.jsx)(d.Gt, {
   value: b,
   children: (0, r.jsx)(u.Popout, {
     preload: P ? void 0 : function() {
@@ -312,7 +312,7 @@ return (i.useEffect(() => {
       ...F,
       avatarSrc: Z,
       avatarDecorationSrc: B,
-      compact: m,
+      compact: I,
       onClick: v,
       onContextMenu: g,
       onMouseDown: e.onMouseDown,
@@ -327,7 +327,7 @@ return (i.useEffect(() => {
     ...F,
     avatarSrc: Z,
     avatarDecorationSrc: B,
-    compact: m,
+    compact: I,
     onClick: v,
     onContextMenu: g,
     onMouseDown: void 0,
@@ -387,14 +387,14 @@ userId: t.author.id,
 messageId: t.id
   }, 'connections'));
   let eo = [];
-  (0, D.yE)(t.flags, G.iLy.SUPPRESS_NOTIFICATIONS) && eo.push((0, r.jsx)(I.Z, {}, 'suppress-notifications'));
+  (0, D.yE)(t.flags, G.iLy.SUPPRESS_NOTIFICATIONS) && eo.push((0, r.jsx)(m.Z, {}, 'suppress-notifications'));
   let el = {};
   el[M.a.SYSTEM_TAG] = et, el[M.a.BADGES] = en;
   let eu = H(e, K, el),
 ec = (0, P.XX)(t, U),
 ed = (0, P.Dv)(t),
 e_ = F ? ''.concat(ec) : ''.concat(ec, ' ').concat(ed),
-eE = (null == n ? void 0 : n.state) === m.Y.LOADED ? (0, P.Gq)(t) : void 0;
+eE = (null == n ? void 0 : n.state) === I.Y.LOADED ? (0, P.Gq)(t) : void 0;
   return (0, r.jsx)(Z, {
 message: t,
 avatar: $,

@@ -1,15 +1,15 @@
 E.d(_, {
   RE: function() {
-return S;
+return L;
   },
   RN: function() {
-return l;
+return D;
   },
   po: function() {
 return T;
   },
   qr: function() {
-return D;
+return S;
   },
   xb: function() {
 return G;
@@ -20,38 +20,38 @@ return U;
 });
 var s, T, I = E(470079),
   n = E(399606),
-  A = E(906732),
-  t = E(171368),
-  a = E(430824),
-  r = E(594174),
+  t = E(906732),
+  A = E(171368),
+  r = E(430824),
+  a = E(594174),
   N = E(91047),
-  L = E(981631);
-let S = (e, _) => {
+  l = E(981631);
+let L = (e, _) => {
   let {
 guildId: E,
 userId: s,
 colorRoleId: T
   } = e;
-  (0, t.openUserProfileModal)({
+  (0, A.openUserProfileModal)({
 userId: s,
 guildId: E,
 sourceAnalyticsLocations: _,
 roleId: T,
 analyticsLocation: {
-  section: L.jXE.MEMBER_SAFETY_PAGE,
-  object: L.qAy.ACTIONED_BY_USER
+  section: l.jXE.MEMBER_SAFETY_PAGE,
+  object: l.qAy.ACTIONED_BY_USER
 }
   });
 };
 
-function D(e, _, E) {
+function S(e, _, E) {
   let {
 analyticsLocations: s
-  } = (0, A.ZP)();
+  } = (0, t.ZP)();
   return I.useCallback(T => {
 if (null == e)
   return;
-let I = r.default.getUser(e.userId);
+let I = a.default.getUser(e.userId);
 if (null != I)
   T.stopPropagation(), (0, N.n8)(T, {
     user: I,
@@ -67,14 +67,14 @@ _
   ]);
 }
 
-function l(e, _, E) {
+function D(e, _, E) {
   let {
 analyticsLocations: s
-  } = (0, A.ZP)();
+  } = (0, t.ZP)();
   return I.useCallback(T => {
 if (null == e)
   return;
-let I = r.default.getUser(e.userId);
+let I = a.default.getUser(e.userId);
 if (null != I)
   T.stopPropagation(), (0, N._j)(T, {
     user: I,
@@ -92,12 +92,12 @@ _
 }
 
 function U(e) {
-  return (0, n.e7)([a.Z], () => {
+  return (0, n.e7)([r.Z], () => {
 var _;
 if (null == e)
   return null;
-let E = a.Z.getGuild(e.guildId);
-return null == E || null == e.highestRoleId ? null : null !== (_ = a.Z.getRole(E.id, e.highestRoleId)) && void 0 !== _ ? _ : null;
+let E = r.Z.getGuild(e.guildId);
+return null == E || null == e.highestRoleId ? null : null !== (_ = r.Z.getRole(E.id, e.highestRoleId)) && void 0 !== _ ? _ : null;
   }, [e]);
 }
 

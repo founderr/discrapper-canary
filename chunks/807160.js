@@ -18,8 +18,8 @@ var n, a, i, r = t(735250),
   C = t(37234),
   m = t(782568),
   A = t(812206),
-  g = t(593061),
-  O = t(600164),
+  O = t(593061),
+  g = t(600164),
   h = t(925329),
   p = t(267101),
   R = t(240864),
@@ -81,8 +81,8 @@ let {
 } = e;
 return (0, r.jsx)('li', {
   className: ee.paymentDetail,
-  children: (0, r.jsxs)(O.Z, {
-    justify: O.Z.Justify.BETWEEN,
+  children: (0, r.jsxs)(g.Z, {
+    justify: g.Z.Justify.BETWEEN,
     children: [
       (0, r.jsx)('div', {
         children: s
@@ -136,8 +136,8 @@ detail: t
   } = e;
   return (0, r.jsx)('li', {
 className: ee.guildProductDetail,
-children: (0, r.jsxs)(O.Z, {
-  justify: O.Z.Justify.BETWEEN,
+children: (0, r.jsxs)(g.Z, {
+  justify: g.Z.Justify.BETWEEN,
   children: [
     (0, r.jsx)('div', {
       children: s
@@ -405,7 +405,7 @@ return (0, r.jsxs)('div', {
 let {
   payment: e
 } = this.props;
-return (0, r.jsx)(g.Z, {
+return (0, r.jsx)(O.Z, {
   payment: e
 });
   }
@@ -726,9 +726,9 @@ return (0, r.jsx)(I.mh, {
     },
     ...e,
     children: [
-      (0, r.jsxs)(O.Z, {
+      (0, r.jsxs)(g.Z, {
         className: ee.summaryInfo,
-        align: O.Z.Align.CENTER,
+        align: g.Z.Align.CENTER,
         children: [
           this.renderDescription(),
           (0, r.jsxs)('div', {

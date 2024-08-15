@@ -34,8 +34,8 @@ p = (0, i.default)({
     }, n, E ? void 0 === f ? {} : f : {})
   }
 }),
-m = {};
-  return u && (m.onMouseOver = function(e) {
+I = {};
+  return u && (I.onMouseOver = function(e) {
 return u(t, e);
   }), r.createElement('div', o({
 style: p.swatch,
@@ -47,7 +47,7 @@ tabIndex: 0,
 onKeyDown: function(e) {
   return 13 === e.keyCode && l(t, e);
 }
-  }, m), _, h && r.createElement(s.Z, {
+  }, I), _, h && r.createElement(s.Z, {
 borderRadius: p.swatch.borderRadius,
 boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
   }));

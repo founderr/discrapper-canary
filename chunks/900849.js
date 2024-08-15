@@ -9,13 +9,13 @@ return C;
 return S;
   },
   Lq: function() {
-return m;
+return I;
   },
   P1: function() {
 return r;
   },
   PP: function() {
-return I;
+return m;
   },
   Ub: function() {
 return p;
@@ -85,7 +85,7 @@ welcomeModalChannelId: r,
 search: f.location.search
   }, r)), null == i || i();
 }
-async function m(e) {
+async function I(e) {
   let t, {
 loadId: n,
 guildId: i,
@@ -130,7 +130,7 @@ function(e) {
 });
 }
 
-function I(e) {
+function m(e) {
   return {
 id: e.id,
 name: e.name,
@@ -261,7 +261,7 @@ let r = await s.tn.get({
   i = null === (n = r.body) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : t[0];
 if (null == i)
   return i;
-return I(i);
+return m(i);
   } catch (e) {
 return null;
   }

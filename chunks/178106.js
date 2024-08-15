@@ -12,9 +12,9 @@ var r, i = n(392711),
   f = n(763296),
   h = n(697426),
   p = n(710111),
-  m = n(526761);
+  I = n(526761);
 
-function I(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -77,7 +77,7 @@ return g.values();
 return S.frequently;
   }
 }
-I(v, 'displayName', 'SoundboardEventStore'), I(v, 'persistKey', 'SoundboardEventStore'), t.Z = new v(u.Z, {
+m(v, 'displayName', 'SoundboardEventStore'), m(v, 'persistKey', 'SoundboardEventStore'), t.Z = new v(u.Z, {
   GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function(e) {
 let {
   sound: t,
@@ -123,6 +123,6 @@ let {
   },
   wasSaved: n
 } = e;
-N() && t === m.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (T = []);
+N() && t === I.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (T = []);
   }
 });

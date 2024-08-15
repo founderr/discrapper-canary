@@ -25,7 +25,7 @@ of t)
 (null == e ? void 0 : e.application) != null && (h(u.Z.createFromServer(e.application)), n = !0);
   return n;
 }
-class m extends(r = o.ZP.Store) {
+class I extends(r = o.ZP.Store) {
   _getAllApplications() {
 return Object.values(d);
   }
@@ -59,12 +59,12 @@ return !1 === f[e];
 return Object.keys(f);
   }
 }
-s = 'ApplicationStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
+s = 'ApplicationStore', (a = 'displayName') in(i = I) ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new m(l.Z, {
+}) : i[a] = s, t.Z = new I(l.Z, {
   LOGOUT: function() {
 d = {}, _ = {}, E = {}, f = {};
   },

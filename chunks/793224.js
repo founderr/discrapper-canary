@@ -25,8 +25,8 @@ var l = n(442837),
   N = n(944486),
   x = n(885110),
   S = n(449224),
-  Z = n(436088),
-  v = n(870569),
+  v = n(436088),
+  Z = n(870569),
   T = n(981631),
   L = n(921944),
   A = n(689938);
@@ -47,15 +47,15 @@ n = (0, l.e7)([
 }),
 M = (0, d.Z)() && null != n,
 R = (0, l.e7)([x.Z], () => null != x.Z.getBroadcast()),
-P = (0, l.Wu)([I.Z], () => I.Z.getAllActiveStreams());
+O = (0, l.Wu)([I.Z], () => I.Z.getAllActiveStreams());
   if (!M && !R)
 return null;
   if (u.Z.trackExposure({
   location: 'broadcast_button_rtc_panel'
 }), !b)
 return null;
-  let O = [];
-  M && O.push(r.z.BROADCASTING_BROADCASTER_TOOLTIP);
+  let P = [];
+  M && P.push(r.z.BROADCASTING_BROADCASTER_TOOLTIP);
   let y = () => {
   o.ZP.trackWithMetadata(T.rMx.BROADCAST_START_BUTTON_HOVERED, {
     game_id: null == n ? void 0 : n.id
@@ -63,7 +63,7 @@ return null;
 },
 j = () => {
   if (M) {
-    let i = P.find(e => e.ownerId === t);
+    let i = O.find(e => e.ownerId === t);
     null == i ? (0, _.X)(A.Z.Messages.START_BROADCASTING, A.Z.Messages.START_BROADCASTING_CTA, () => {
       (0, s.tE)({
         pid: null == n ? void 0 : n.pid,
@@ -73,13 +73,13 @@ j = () => {
   } else
     (0, c.b_)();
 },
-D = e => (0, i.jsx)(v.Z, {
+D = e => (0, i.jsx)(Z.Z, {
   tooltipText: M ? A.Z.Messages.START_BROADCASTING : A.Z.Messages.STOP_BROADCASTING,
   onClick: () => {
     j(), null == e || e(L.L.UNKNOWN);
   },
   onMouseEnter: y,
-  icon: M ? (0, a.makeIconCompat)(Z.Z) : () => (0, i.jsx)(p.Z, {
+  icon: M ? (0, a.makeIconCompat)(v.Z) : () => (0, i.jsx)(p.Z, {
     width: 20,
     height: 20
   })
@@ -88,7 +88,7 @@ w = e => (0, i.jsx)(h.Z, {
   markAsDismissed: e
 });
   return (0, i.jsx)(f.ZP, {
-contentTypes: O,
+contentTypes: P,
 bypassAutoDismiss: !0,
 children: e => {
   let {

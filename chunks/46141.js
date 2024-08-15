@@ -39,13 +39,13 @@ return p;
 return T;
   },
   o_: function() {
-return I;
+return m;
   },
   qo: function() {
 return d;
   },
   sn: function() {
-return m;
+return I;
   },
   u_: function() {
 return O;
@@ -131,11 +131,11 @@ switch (e.type) {
       bank: e.bank
     });
   case o.HeQ.PAYSAFE_CARD:
-    return new m({
+    return new I({
       ...r
     });
   case o.HeQ.GCASH:
-    return new I({
+    return new m({
       ...r
     });
   case o.HeQ.GRABPAY_MY:
@@ -187,9 +187,9 @@ switch (t) {
   case o.HeQ.PRZELEWY24:
     return new f(e);
   case o.HeQ.PAYSAFE_CARD:
-    return new m(e);
-  case o.HeQ.GCASH:
     return new I(e);
+  case o.HeQ.GCASH:
+    return new m(e);
   case o.HeQ.GRABPAY_MY:
     return new T(e);
   case o.HeQ.MOMO_WALLET:
@@ -282,13 +282,13 @@ if (super(e), e.type !== o.HeQ.IDEAL)
 this.bank = e.bank;
   }
 }
-class m extends u {
+class I extends u {
   constructor(e) {
 if (super(e), e.type !== o.HeQ.PAYSAFE_CARD)
   throw Error('Cannot instantiate PaysafeSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.PAYSAFE_CARD));
   }
 }
-class I extends u {
+class m extends u {
   constructor(e) {
 if (super(e), e.type !== o.HeQ.GCASH)
   throw Error('Cannot instantiate GcashSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.GCASH));

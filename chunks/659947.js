@@ -28,7 +28,7 @@ voiceChannelGuildFilter: null
   }), e.setLimit(1 / 0);
 }
 
-function g(e) {
+function O(e) {
   let {
 height: s
   } = e;
@@ -39,14 +39,14 @@ style: {
   });
 }
 
-function O() {
-  return (0, n.jsx)(g, {
+function g() {
+  return (0, n.jsx)(O, {
 height: 16
   }, 'footer');
 }
 
 function h() {
-  return (0, n.jsx)(g, {
+  return (0, n.jsx)(O, {
 height: 8
   }, 'header');
 }
@@ -113,7 +113,7 @@ transitionState: s,
 onClose: t,
 onSelect: o
   } = e, c = a.useId(), C = a.useRef(null), {
-mouseFocusEnabled: g,
+mouseFocusEnabled: O,
 enableMouseFocus: R,
 disableMouseFocus: x
   } = function() {
@@ -258,7 +258,7 @@ children: (0, n.jsxs)(r.ModalRoot, {
           channel: a,
           category: i,
           focused: L === s,
-          onMouseEnter: () => g.current && b(s),
+          onMouseEnter: () => O.current && b(s),
           onClick: () => {
             o(a.id), t();
           },
@@ -270,7 +270,7 @@ children: (0, n.jsxs)(r.ModalRoot, {
         }, a.id);
       },
       renderListHeader: h,
-      renderFooter: O,
+      renderFooter: g,
       sectionHeight: 0,
       rowHeight: 34,
       className: N.voiceChannelList,

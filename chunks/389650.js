@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(924557),
   m = t(600164),
   A = t(74299),
-  g = t(777036),
-  O = t(131951),
+  O = t(777036),
+  g = t(131951),
   h = t(556296),
   p = t(808506),
   R = t(63063),
@@ -330,8 +330,8 @@ return (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsx)(m.Z.Child, {
                 grow: 0,
-                children: (0, n.jsx)(g.Z, {
-                  messageType: g.Q.WARNING,
+                children: (0, n.jsx)(O.Z, {
+                  messageType: O.Q.WARNING,
                   children: b.Z.Messages.ADD_KEYBIND_WARNING
                 })
               }),
@@ -354,8 +354,8 @@ return (0, n.jsxs)(n.Fragment, {
             ]
           })
         ]
-      }) : (0, n.jsx)(g.Z, {
-        messageType: g.Q.INFO,
+      }) : (0, n.jsx)(O.Z, {
+        messageType: O.Q.INFO,
         textVariant: 'text-lg/medium',
         className: Z.browserNotice,
         children: b.Z.Messages.KEYBIND_IN_BROSWER_NOTICE.format({
@@ -448,7 +448,7 @@ super(...e), B(this, 'handleAddKeybind', () => {
 
 function Y() {
   let e = (0, c.e7)([h.Z], () => h.Z.getState()),
-s = (0, c.e7)([O.Z], () => (0, A.Z)(O.Z)),
+s = (0, c.e7)([g.Z], () => (0, A.Z)(g.Z)),
 t = (0, c.e7)([p.Z], () => p.Z.isSupported()),
 a = (0, C.Go)();
   return (0, n.jsx)(V, {

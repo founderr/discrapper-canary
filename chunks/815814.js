@@ -18,17 +18,17 @@ _ = u((h && E(n) ? p(n, '') : n).length);
   if (!l(e))
 throw TypeError('Array.prototype.map callback must be a function');
   arguments.length > 1 && (t = arguments[1]);
-  for (var f = r(n, _), m = 0; m < _;) {
-var I = d(m);
-if (o(n, I)) {
+  for (var f = r(n, _), I = 0; I < _;) {
+var m = d(I);
+if (o(n, m)) {
   var T = i(e, t, [
-    s(n, I),
-    m,
+    s(n, m),
+    I,
     n
   ]);
-  a(f, I, T);
+  a(f, m, T);
 }
-m += 1;
+I += 1;
   }
   return f;
 };

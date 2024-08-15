@@ -64,12 +64,12 @@ let h = [
 55,
 60
   ],
-  m = [
+  I = [
 720,
 480,
 360
   ],
-  I = [
+  m = [
 'framesCodec',
 'framesNetwork',
 'packets',
@@ -155,7 +155,7 @@ return null == e ? u : (u.bytes = e.bytesReceived, u.framesCodec = e.framesDecod
 }(e.decoderImplementationName), u.codecType = A(e.codec.name), u.qpSum = 0, u.freezeCount = e.freezeCount, u.pauseCount = e.pauseCount, u.totalFreezesDuration = e.totalFreezesDuration, u.totalPausesDuration = e.totalPausesDuration, u.totalFramesDuration = e.totalFramesDuration, u.keyframes = null !== (r = e.keyFramesDecoded) && void 0 !== r ? r : null, u.passthroughCount = null !== (i = e.passthroughCount) && void 0 !== i ? i : 0, u.cryptorSuccessCount = null !== (a = e.decryptSuccessCount) && void 0 !== a ? a : 0, u.cryptorFailureCount = null !== (s = e.decryptFailureCount) && void 0 !== s ? s : 0, u.cryptorDuration = null !== (o = e.decryptDuration) && void 0 !== o ? o : 0, u.cryptorAttempts = null !== (l = e.decryptAttempts) && void 0 !== l ? l : 0, u);
   }
   static parseOutboundStats(e, t) {
-var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, m, I, T, g, v;
+var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, g, v;
 let O = new N();
 return null == e ? O : {
   bytes: e.bytesSent,
@@ -193,8 +193,8 @@ return null == e ? O : {
   framesDroppedEncoderQueue: null !== (f = e.framesDroppedEncoderQueue) && void 0 !== f ? f : null,
   framesDroppedCongestionWindow: null !== (h = e.framesDroppedCongestionWindow) && void 0 !== h ? h : null,
   passthroughCount: null !== (p = e.passthroughCount) && void 0 !== p ? p : 0,
-  cryptorSuccessCount: null !== (m = e.encryptSuccessCount) && void 0 !== m ? m : 0,
-  cryptorFailureCount: null !== (I = e.encryptFailureCount) && void 0 !== I ? I : 0,
+  cryptorSuccessCount: null !== (I = e.encryptSuccessCount) && void 0 !== I ? I : 0,
+  cryptorFailureCount: null !== (m = e.encryptFailureCount) && void 0 !== m ? m : 0,
   cryptorDuration: null !== (T = e.encryptDuration) && void 0 !== T ? T : 0,
   cryptorAttempts: null !== (g = e.encryptAttempts) && void 0 !== g ? g : 0,
   cryptorMaxAttempts: null !== (v = e.encryptMaxAttempts) && void 0 !== v ? v : 0
@@ -212,7 +212,7 @@ return 0 !== this.videoStoppedReason;
 return this.videoStoppedWatch.elapsed();
   }
   collectAggregationStats(e, t) {
-for (let r of I) {
+for (let r of m) {
   var n;
   let i = e[r];
   if (null === i)
@@ -254,15 +254,15 @@ if (this.intervalTotal += E, this.resolutionTotal += s * E, this.minorResolution
   return;
 let {
   bytes: f,
-  framesCodec: I,
+  framesCodec: m,
   timestamp: T
 } = this.statsWindow[this.statsWindow.length - 3];
-m.forEach(e => {
+I.forEach(e => {
   s <= e && (this.resolutionBuckets[e] += E);
 });
 let g = (a - T) / 1000,
   S = (r - f) * 8 / g,
-  A = (i - I) / g;
+  A = (i - m) / g;
 h.forEach(e => {
   S <= e && (this.bitrateBuckets[e] += E);
 }), p.forEach(e => {
@@ -328,7 +328,7 @@ f(this, 'decoderBuckets', {
   this.bitrateBuckets[e] = 0;
 }), p.forEach(e => {
   this.fpsBuckets[e] = 0;
-}), m.forEach(e => {
+}), I.forEach(e => {
   this.resolutionBuckets[e] = 0;
 });
   }

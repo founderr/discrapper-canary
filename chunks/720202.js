@@ -22,7 +22,7 @@ function p(e, t) {
   return f.request(e, t), !1;
 }
 
-function m(e, t) {
+function I(e, t) {
   return t.forEach(t => {
 let {
   author: n,
@@ -32,12 +32,12 @@ null != n && p(e, n.id), null == r || r.forEach(t => p(e, t.id));
   }), !1;
 }
 
-function I(e) {
+function m(e) {
   let {
 channelId: t,
 messages: n
   } = e, r = _.Z.getChannel(t);
-  return null != r && null != r.guild_id && m(r.guild_id, n);
+  return null != r && null != r.guild_id && I(r.guild_id, n);
 }
 
 function T(e) {
@@ -45,7 +45,7 @@ function T(e) {
 guildId: t,
 messages: n
   } = e;
-  return null != t && m(t, l().flatten(n));
+  return null != t && I(t, l().flatten(n));
 }
 class g extends(r = u.ZP.Store) {
   initialize() {
@@ -78,9 +78,9 @@ return !1;
   },
   SEARCH_FINISH: T,
   MOD_VIEW_SEARCH_FINISH: T,
-  LOCAL_MESSAGES_LOADED: I,
-  LOAD_MESSAGES_SUCCESS: I,
-  LOAD_MESSAGES_AROUND_SUCCESS: I,
-  LOAD_PINNED_MESSAGES_SUCCESS: I,
-  LOAD_RECENT_MENTIONS_SUCCESS: I
+  LOCAL_MESSAGES_LOADED: m,
+  LOAD_MESSAGES_SUCCESS: m,
+  LOAD_MESSAGES_AROUND_SUCCESS: m,
+  LOAD_PINNED_MESSAGES_SUCCESS: m,
+  LOAD_RECENT_MENTIONS_SUCCESS: m
 });

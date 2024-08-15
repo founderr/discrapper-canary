@@ -16,8 +16,8 @@ var n = t(735250),
   C = t(600164),
   m = t(925329),
   A = t(406174),
-  g = t(810762),
-  O = t(681833),
+  O = t(810762),
+  g = t(681833),
   h = t(856888),
   p = t(921801),
   R = t(246946),
@@ -97,7 +97,7 @@ P = (0, o.e7)([x.Z], () => x.Z.getSubsection());
 (0, u.Y2)(), d.jg(), (0, _.X8)(), d.tZ();
   }), function() {
 I.Z.clearSubsection();
-  }), []), R.Z.enabled) ? (0, n.jsx)(T.Z, {}) : E && m ? P === G.cP ? (0, n.jsx)(g.Z, {
+  }), []), R.Z.enabled) ? (0, n.jsx)(T.Z, {}) : E && m ? P === G.cP ? (0, n.jsx)(O.Z, {
 onGoBack: () => I.Z.clearSubsection()
   }) : P === G.XZ ? (0, n.jsx)(h.Z, {
 onGoBack: () => I.Z.clearSubsection()
@@ -119,7 +119,7 @@ children: (0, n.jsxs)('div', {
     (0, n.jsx)(A.Z, {
       onClickManageSubscription: () => I.Z.setSection(U.oAB.SUBSCRIPTIONS, G.cP)
     }),
-    (0, n.jsx)(O.Z, {
+    (0, n.jsx)(g.Z, {
       onClickManageSubscription: () => {
         I.Z.setSection(U.oAB.SUBSCRIPTIONS, G.XZ), L.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
       }

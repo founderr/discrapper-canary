@@ -34,12 +34,12 @@ parse: function(t) {
       value: '{',
       description: '"{"'
     },
-    m = {
+    I = {
       type: 'literal',
       value: ',',
       description: '","'
     },
-    I = {
+    m = {
       type: 'literal',
       value: '}',
       description: '"}"'
@@ -239,13 +239,13 @@ parse: function(t) {
               return e;
             }()) !== c) {
             if (ed() !== c) {
-              if (i = $, 44 === t.charCodeAt($) ? (a = ',', $++) : (a = c, 0 === er && ei(m)), a !== c && (s = ed()) !== c && (o = function() {
+              if (i = $, 44 === t.charCodeAt($) ? (a = ',', $++) : (a = c, 0 === er && ei(I)), a !== c && (s = ed()) !== c && (o = function() {
                   var e;
                   return (e = function() {
                     var e, n, r, i, a, s, o;
                     if (e = $, t.substr($, 6) === T ? (n = T, $ += 6) : (n = c, 0 === er && ei(g)), n === c && (t.substr($, 4) === S ? (n = S, $ += 4) : (n = c, 0 === er && ei(A)), n === c && (t.substr($, 4) === N ? (n = N, $ += 4) : (n = c, 0 === er && ei(v)))), n !== c) {
                       if (ed() !== c) {
-                        if (r = $, 44 === t.charCodeAt($) ? (i = ',', $++) : (i = c, 0 === er && ei(m)), i !== c && (a = ed()) !== c && (s = ep()) !== c ? r = i = [
+                        if (r = $, 44 === t.charCodeAt($) ? (i = ',', $++) : (i = c, 0 === er && ei(I)), i !== c && (a = ed()) !== c && (s = ep()) !== c ? r = i = [
                             i,
                             a,
                             s
@@ -266,7 +266,7 @@ parse: function(t) {
                     var e, n, r, i, a;
                     if (e = $, t.substr($, 6) === O ? (n = O, $ += 6) : (n = c, 0 === er && ei(R)), n !== c) {
                       if (ed() !== c) {
-                        if (44 === t.charCodeAt($) ? (r = ',', $++) : (r = c, 0 === er && ei(m)), r !== c) {
+                        if (44 === t.charCodeAt($) ? (r = ',', $++) : (r = c, 0 === er && ei(I)), r !== c) {
                           if (ed() !== c) {
                             if ((i = eu()) !== c) {
                               ;
@@ -291,7 +291,7 @@ parse: function(t) {
                     var e, n, r, i, a;
                     if (e = $, t.substr($, 13) === C ? (n = C, $ += 13) : (n = c, 0 === er && ei(y)), n !== c) {
                       if (ed() !== c) {
-                        if (44 === t.charCodeAt($) ? (r = ',', $++) : (r = c, 0 === er && ei(m)), r !== c) {
+                        if (44 === t.charCodeAt($) ? (r = ',', $++) : (r = c, 0 === er && ei(I)), r !== c) {
                           if (ed() !== c) {
                             if ((i = eu()) !== c) {
                               ;
@@ -316,7 +316,7 @@ parse: function(t) {
                     var e, n, r, i, a;
                     if (e = $, t.substr($, 6) === D ? (n = D, $ += 6) : (n = c, 0 === er && ei(L)), n !== c) {
                       if (ed() !== c) {
-                        if (44 === t.charCodeAt($) ? (r = ',', $++) : (r = c, 0 === er && ei(m)), r !== c) {
+                        if (44 === t.charCodeAt($) ? (r = ',', $++) : (r = c, 0 === er && ei(I)), r !== c) {
                           if (ed() !== c) {
                             if (i = [], (a = el()) !== c)
                               for (; a !== c;)
@@ -346,7 +346,7 @@ parse: function(t) {
                   o
                 ] : ($ = i, i = c), i === c && (i = null), i !== c) {
                 if ((a = ed()) !== c) {
-                  if (125 === t.charCodeAt($) ? (s = '}', $++) : (s = c, 0 === er && ei(I)), s !== c) {
+                  if (125 === t.charCodeAt($) ? (s = '}', $++) : (s = c, 0 === er && ei(m)), s !== c) {
                     ;
                     e = n = {
                       type: 'argumentElement',
@@ -384,7 +384,7 @@ parse: function(t) {
             if (ed() !== c) {
               if ((a = es()) !== c) {
                 if (ed() !== c) {
-                  if (125 === t.charCodeAt($) ? (s = '}', $++) : (s = c, 0 === er && ei(I)), s !== c)
+                  if (125 === t.charCodeAt($) ? (s = '}', $++) : (s = c, 0 === er && ei(m)), s !== c)
                     e = n = {
                       type: 'optionalFormatPattern',
                       selector: r,

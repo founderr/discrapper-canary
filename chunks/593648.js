@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(378364),
   m = t(197344),
   A = t(734934),
-  g = t(223683),
-  O = t(312400),
+  O = t(223683),
+  g = t(312400),
   h = t(115345),
   p = t(392888),
   R = t(921801),
@@ -549,14 +549,14 @@ children: (0, n.jsx)(d.FormSwitch, {
 }
 
 function q() {
-  let e = O.xT.useExperiment({
+  let e = g.xT.useExperiment({
   location: 'UserSettingsNotifications'
 }, {
   autoTrackExposure: !1
 }).enabled,
 {
   manuallyOpen: s
-} = O.fs.useExperiment({
+} = g.fs.useExperiment({
   location: 'UserSettingsNotifications'
 }, {
   autoTrackExposure: !1
@@ -603,7 +603,7 @@ children: [
             (0, n.jsx)(R.F, {
               setting: G.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
               children: (0, n.jsx)(d.Button, {
-                onClick: g.KP,
+                onClick: O.KP,
                 children: 'Restore most recent snapshot'
               })
             }),
@@ -640,7 +640,7 @@ children: [
 }
 async function J(e) {
   e(!0);
-  let s = await (0, g.Tn)();
+  let s = await (0, O.Tn)();
   0 === s.length ? await (0, h.oL)() : _.Z.show({
 title: V.Z.Messages.CONFIRM,
 body: V.Z.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({

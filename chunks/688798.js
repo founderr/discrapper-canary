@@ -13,8 +13,8 @@ var r = n(913527),
   f = n(695346),
   h = n(375954),
   p = n(306680),
-  m = n(709054),
-  I = n(839627),
+  I = n(709054),
+  m = n(839627),
   T = n(802098),
   g = n(128014),
   S = n(163379),
@@ -32,7 +32,7 @@ writable: !0
 }
 async function R(e, t) {
   let n = f.l4.getSetting(),
-r = m.default.extractTimestamp(e);
+r = I.default.extractTimestamp(e);
   if ((n >= e || i()().diff(r, 'days') > 30) && !t)
 return;
   let a = await (0, _.Y7)();
@@ -50,7 +50,7 @@ c = p.ZP.getOldestUnreadMessageId(s),
 E = p.ZP.hasUnread(s);
   if (null == u || null == c || E || u.id > c)
 return;
-  let I = (0, d.ZP)({
+  let m = (0, d.ZP)({
 ...u,
 channelId: s,
 messageReference: void 0,
@@ -58,7 +58,7 @@ poll: void 0,
 changelogId: u.changelogId
   });
   l.Z.receiveMessage(s, {
-...I,
+...m,
 state: N.yb.SENT,
 channel_id: s
   }, !0, {});
@@ -71,7 +71,7 @@ super(...e), O(this, 'actions', {
   let {
     canReceiveMessage: t,
     canReceiveUnpublishedMessages: n
-  } = I.Z.getCurrentConfig({
+  } = m.Z.getCurrentConfig({
     location: 'changelog_manager'
   }, {
     autoTrackExposure: !1
@@ -98,7 +98,7 @@ super(...e), O(this, 'actions', {
     return;
   let l = T.Z.lastSeenChangelogId(),
     c = T.Z.lastSeenChangelogDate();
-  if (null != l && 0 >= m.default.compare(o, l))
+  if (null != l && 0 >= I.default.compare(o, l))
     return;
   let d = await s.Z.fetchChangelog(o, E.default.locale);
   if (null != d) {

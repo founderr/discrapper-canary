@@ -20,7 +20,7 @@ roleStyle: i,
 roleFilter: s,
 onSelect: h,
 onClose: p
-  } = e, m = (0, u.e7)([d.Z], () => d.Z.getRoles(n.id)), I = e => o()(m).filter(s).filter(t => a()(e.toLowerCase(), t.name.toLowerCase())).value();
+  } = e, I = (0, u.e7)([d.Z], () => d.Z.getRoles(n.id)), m = e => o()(I).filter(s).filter(t => a()(e.toLowerCase(), t.name.toLowerCase())).value();
   return (0, r.jsx)(c.ComboboxPopout, {
 className: t,
 value: new Set(),
@@ -28,7 +28,7 @@ onChange: h,
 placeholder: E.Z.Messages.ADD_ROLE_PLACEHOLDER,
 'aria-label': E.Z.Messages.ADD_ROLE_A11Y_LABEL,
 onClose: p,
-children: e => I(e).map(e => {
+children: e => m(e).map(e => {
   var t, n;
   return (0, r.jsxs)(c.ComboboxItem, {
     value: e.id,

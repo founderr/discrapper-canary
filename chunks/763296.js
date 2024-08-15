@@ -7,8 +7,8 @@ var r, i, a, s, o, l, u = n(392711),
   f = n(581883),
   h = n(594174),
   p = n(626135),
-  m = n(36703),
-  I = n(709054),
+  I = n(36703),
+  m = n(709054),
   T = n(710111),
   g = n(981631),
   S = n(526761);
@@ -30,7 +30,7 @@ sound: t
 }
 let b = c().debounce(e => {
   p.default.track(g.rMx.UPDATE_SOUNDBOARD_SETTINGS, {
-volume: Math.round((0, m.P)(e))
+volume: Math.round((0, I.P)(e))
   }), E.kU.updateSetting({
 volume: e
   });
@@ -202,7 +202,7 @@ v.has(t) ? v.delete(t) : v.add(t);
 let {
   soundboardStoreState: t
 } = e;
-A = new Map(I.default.entries(t.soundboardSounds)), C = new Set(t.favoritedSoundIds), v = new Set(t.localSoundboardMutes);
+A = new Map(m.default.entries(t.soundboardSounds)), C = new Set(t.favoritedSoundIds), v = new Set(t.localSoundboardMutes);
   },
   GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(e) {
 let {

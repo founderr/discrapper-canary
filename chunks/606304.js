@@ -9,8 +9,8 @@ var r, i, a, s, o = n(442837),
   f = n(981631),
   h = n(65154);
 let p = new Map(),
-  m = null,
   I = null,
+  m = null,
   T = null;
 
 function g(e, t) {
@@ -34,7 +34,7 @@ return !1;
   for (let [e, {
   flags: i
 }] of r) {
-if (!n || e !== m) {
+if (!n || e !== I) {
   if ((i & t) === t)
     return !0;
 }
@@ -47,7 +47,7 @@ function N(e) {
 user: t,
 sessionId: n
   } = e;
-  m = t.id, I = n, T = null;
+  I = t.id, m = n, T = null;
 }
 class v extends(r = o.ZP.Store) {
   initialize() {
@@ -82,7 +82,7 @@ return A(e, h.Dg.VOICE, !0);
   }
   isCurrentUserSpeaking() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-return null != m && this.isSpeaking(m, e);
+return null != I && this.isSpeaking(I, e);
   }
   isAnyonePrioritySpeaking() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
@@ -90,7 +90,7 @@ return A(e, h.Dg.VOICE | h.Dg.PRIORITY);
   }
   isCurrentUserPrioritySpeaking() {
 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-return null != m && this.isPrioritySpeaker(m, e) && this.isSpeaking(m, e);
+return null != I && this.isPrioritySpeaker(I, e) && this.isSpeaking(I, e);
   }
 }
 s = 'SpeakingStore', (a = 'displayName') in(i = v) ? Object.defineProperty(i, a, {
@@ -150,7 +150,7 @@ return t.reduce((e, t) => {
     channelId: r,
     sessionId: i
   } = t, a = !1, s = T;
-  return n === m && i === I && (T = null != r ? r : null), s !== T && (a = p.delete(h.Yn.DEFAULT) || a), null == r ? a = n === m && i === I ? p.delete(h.Yn.DEFAULT) || a : g(h.Yn.DEFAULT, n) || a : n === m && i !== I ? a = p.delete(h.Yn.DEFAULT) || a : n !== m && r !== _.Z.getChannelId() && (a = g(h.Yn.DEFAULT, n) || a), a || e;
+  return n === I && i === m && (T = null != r ? r : null), s !== T && (a = p.delete(h.Yn.DEFAULT) || a), null == r ? a = n === I && i === m ? p.delete(h.Yn.DEFAULT) || a : g(h.Yn.DEFAULT, n) || a : n === I && i !== m ? a = p.delete(h.Yn.DEFAULT) || a : n !== I && r !== _.Z.getChannelId() && (a = g(h.Yn.DEFAULT, n) || a), a || e;
 }, !1);
   }
 });

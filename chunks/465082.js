@@ -24,8 +24,8 @@ className: p,
 childrenClassName: h,
 showAdd: x,
 showMutualGuilds: I,
-showPrimaryCategory: T,
-children: R,
+showPrimaryCategory: R,
+children: T,
 onView: b,
 guildCountPosition: A = 'top',
 subheaderTextVariant: v = 'text-sm/normal',
@@ -54,7 +54,7 @@ mutualGuilds: M,
 mutualGuildShownMax: E,
 guildIconSize: P,
 compact: !0
-  }), k = T && null != Z, H = L && 'top' === A, U = L && 'bottom' === A, B = null !== (f = C.storefront_available) && void 0 !== f && f, G = (0, a.jsxs)('article', {
+  }), k = R && null != Z, H = L && 'top' === A, U = L && 'bottom' === A, B = null !== (f = C.storefront_available) && void 0 !== f && f, w = (0, a.jsxs)('article', {
 children: [
   (0, a.jsxs)('div', {
     className: m.topWrapper,
@@ -122,9 +122,9 @@ children: [
       }) : null
     ]
   }),
-  null != R || null != h ? (0, a.jsx)('div', {
+  null != T || null != h ? (0, a.jsx)('div', {
     className: r()(h, m.__invalid_children),
-    children: R
+    children: T
   }) : null,
   U ? (0, a.jsx)('div', {
     className: m.bottomGuildCountContainer,
@@ -139,12 +139,12 @@ onClick: () => b({
 }),
 className: r()(p, m.listing, m.clickable),
 ...S,
-children: G
+children: w
   }) : (0, a.jsx)(c.FocusRing, {
 children: (0, a.jsx)('li', {
   className: r()(p, m.listing),
   ...S,
-  children: G
+  children: w
 })
   });
 }

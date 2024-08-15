@@ -28,21 +28,21 @@ t.Z = function(e) {
 children: t,
 confettiTriggerRef: n,
 guild: i,
-isProgressBarAnimationComplete: m,
-setConfettiCount: I,
+isProgressBarAnimationComplete: I,
+setConfettiCount: m,
 setShouldFireConfetti: T,
 tier: g,
 tierMarkerAnimationPosition: S
   } = e, {
 analyticsLocations: A
-  } = (0, l.ZP)(), N = E.oCV[g] - i.premiumSubscriberCount, v = g <= S || m, O = v && g <= i.premiumTier, R = v && g < i.premiumTier, C = v && g === i.premiumTier, {
+  } = (0, l.ZP)(), N = E.oCV[g] - i.premiumSubscriberCount, v = g <= S || I, O = v && g <= i.premiumTier, R = v && g < i.premiumTier, C = v && g === i.premiumTier, {
 scaleFactor: y
   } = (0, o.useSpring)({
 from: {
   scaleFactor: 0
 },
 to: {
-  scaleFactor: S >= g || m && S + 1 === g || m && -1 === S && g === E.Eu4.NONE ? 1 : 0
+  scaleFactor: S >= g || I && S + 1 === g || I && -1 === S && g === E.Eu4.NONE ? 1 : 0
 },
 config: {
   tension: 360,
@@ -117,7 +117,7 @@ children: e => (0, r.jsxs)(L, {
     }),
     O && g === E.Eu4.TIER_3 ? (0, r.jsx)(_.m, {
       confettiTriggerRef: n,
-      setConfettiCount: I,
+      setConfettiCount: m,
       setShouldFireConfetti: T,
       children: D
     }) : D,

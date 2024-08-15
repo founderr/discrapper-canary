@@ -1,33 +1,33 @@
-s.d(t, {
+a.d(t, {
   Z: function() {
-return S;
+return f;
   }
-}), s(47120);
-var n = s(735250),
-  i = s(470079),
-  a = s(338545),
-  r = s(481060),
-  l = s(230711),
-  o = s(318661),
-  u = s(63063),
-  d = s(51144),
-  c = s(544508),
-  E = s(801461),
-  _ = s(981631),
-  m = s(689938),
-  g = s(740080);
+}), a(47120);
+var n = a(735250),
+  s = a(470079),
+  i = a(338545),
+  r = a(481060),
+  o = a(230711),
+  l = a(318661),
+  u = a(63063),
+  d = a(51144),
+  c = a(544508),
+  E = a(801461),
+  _ = a(981631),
+  m = a(689938),
+  g = a(740080);
 
-function S(e) {
+function f(e) {
   let {
 userRef: t,
-usernameSuggestionLoading: s = !1,
-oneClickFlow: S = !1,
-...I
+usernameSuggestionLoading: a = !1,
+oneClickFlow: f = !1,
+...S
   } = e, {
-user: T,
-editState: O,
+user: I,
+editState: T,
 onClose: N
-  } = I, h = (0, o.ZP)(T.id), f = function(e, t, s) {
+  } = S, h = (0, l.ZP)(I.id), O = function(e, t, a) {
 switch (e) {
   case E.Wq.EDIT_USERNAME:
     return {
@@ -46,7 +46,7 @@ switch (e) {
         }),
         subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_2.format({
           onClick: () => {
-            s(), l.Z.open(_.oAB.ACCOUNT);
+            a(), o.Z.open(_.oAB.ACCOUNT);
           }
         })
     };
@@ -64,12 +64,12 @@ switch (e) {
         subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
     };
 }
-  }(O, d.ZP.getName(T), N), [M, L] = (0, r.useSpring)(() => ({
+  }(T, d.ZP.getName(I), N), [M, v] = (0, r.useSpring)(() => ({
 opacity: 0,
 y: 10
   }));
-  return i.useEffect(() => {
-L({
+  return s.useEffect(() => {
+v({
   y: 0,
   opacity: 1,
   from: {
@@ -78,12 +78,12 @@ L({
   }
 });
   }, [
-L,
-O
+v,
+T
   ]), (0, n.jsxs)('div', {
 className: g.displayNameContainer,
 children: [
-  (0, n.jsxs)(a.animated.div, {
+  (0, n.jsxs)(i.animated.div, {
     style: {
       opacity: M.opacity,
       y: M.y
@@ -93,7 +93,7 @@ children: [
         className: g.title,
         color: 'header-primary',
         variant: 'heading-xl/extrabold',
-        children: f.header
+        children: O.header
       }),
       (0, n.jsxs)('div', {
         className: g.subtitle,
@@ -101,24 +101,24 @@ children: [
           (0, n.jsx)(r.Heading, {
             color: 'header-secondary',
             variant: 'heading-sm/medium',
-            children: f.subtitle
+            children: O.subtitle
           }),
-          null != f.link && (0, n.jsx)(r.Text, {
+          null != O.link && (0, n.jsx)(r.Text, {
             className: g.link,
             color: 'header-secondary',
             variant: 'text-sm/medium',
-            children: f.link
+            children: O.link
           })
         ]
       })
     ]
   }),
   (0, n.jsx)(c.Z, {
-    ...I,
+    ...S,
     displayProfile: h,
     ref: t,
-    usernameSuggestionLoading: s,
-    oneClickFlow: S
+    usernameSuggestionLoading: a,
+    oneClickFlow: f
   })
 ]
   });

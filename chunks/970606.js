@@ -9,13 +9,13 @@ return S;
 return y;
   },
   GO: function() {
-return I;
+return m;
   },
   GS: function() {
 return O;
   },
   Lp: function() {
-return m;
+return I;
   },
   Oe: function() {
 return A;
@@ -130,14 +130,14 @@ source: r
   });
 }
 
-function m(e, t) {
+function I(e, t) {
   u.default.track(d.rMx.CLAN_CONVERT_STEP_VIEWED, {
 guild_id: e,
 step: t
   });
 }
 
-function I(e, t) {
+function m(e, t) {
   u.default.track(d.rMx.CLAN_SETTINGS_VIEWED, {
 guild_id: e,
 page: t

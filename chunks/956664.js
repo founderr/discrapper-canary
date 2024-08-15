@@ -21,7 +21,7 @@ return h;
 return A;
   },
   fD: function() {
-return I;
+return m;
   },
   kD: function() {
 return S;
@@ -128,8 +128,8 @@ s = r.height = 0 === e.height ? 128 : e.height;
 u = l()(o, t);
   return 'boolean' == typeof u ? f : u.palette();
 }
-let p = e => 'number' == typeof e ? null : m(e),
-  m = s().memoize(e => new Promise((t, n) => {
+let p = e => 'number' == typeof e ? null : I(e),
+  I = s().memoize(e => new Promise((t, n) => {
 let r = new Image();
 r.crossOrigin = 'Anonymous', r.onerror = e => {
   n(e), r.onerror = r.onload = null, r = null;
@@ -138,7 +138,7 @@ r.crossOrigin = 'Anonymous', r.onerror = e => {
 }, r.src = e;
   }));
 
-function I(e) {
+function m(e) {
   return new Promise((t, n) => {
 let r = new FileReader();
 r.readAsDataURL(e), r.onload = () => {

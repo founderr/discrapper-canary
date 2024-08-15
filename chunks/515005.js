@@ -12,8 +12,8 @@ var r = n(735250),
   f = n(285651),
   h = n(373228),
   p = n(378233),
-  m = n(419922),
-  I = n(490095),
+  I = n(419922),
+  m = n(490095),
   T = n(981631),
   g = n(689938),
   S = n(323276);
@@ -159,7 +159,7 @@ return (0, r.jsx)('div', {
           'data-id': e.sticker.id,
           children: [
             (0, r.jsx)(u.HiddenVisually, {
-              children: (0, m.Co)(e.sticker)
+              children: (0, I.Co)(e.sticker)
             }),
             (0, r.jsxs)('div', {
               'aria-hidden': !0,
@@ -167,7 +167,7 @@ return (0, r.jsx)('div', {
                 !G && (0, r.jsx)('div', {
                   className: S.inspectedIndicator
                 }),
-                (0, r.jsx)(m.ZP, {
+                (0, r.jsx)(I.ZP, {
                   className: s()(S.stickerNode, {
                     [S.stickerNodeDimmed]: G && !A && null != R && -1 !== R.rowIndex && -1 !== R.columnIndex,
                     [S.stickerNodeHidden]: N,
@@ -180,7 +180,7 @@ return (0, r.jsx)('div', {
                   sticker: e.sticker,
                   size: w
                 }),
-                o ? (0, r.jsx)(I.Z, {
+                o ? (0, r.jsx)(m.Z, {
                   size: 20
                 }) : null
               ]

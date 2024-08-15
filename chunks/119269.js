@@ -26,8 +26,8 @@ percentage: I,
 initialPercentage: R,
 progressCircleVariation: C = 0,
 ellipseOpacity: g,
-customAnimationClassName: N,
-circleColor: p,
+customAnimationClassName: p,
+circleColor: N,
 circleStroke: A
   } = e, m = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), f = t && !m;
   return (0, r.jsx)('div', {
@@ -37,7 +37,7 @@ className: l()(E.progressCircle, n, {
 children: (0, r.jsx)(u.Z, {
   animationClassName: l()(E.activeProgressCircle, {
     [E.activeProgressCircleAnimation]: f,
-    [null != N ? N : '']: f
+    [null != p ? p : '']: f
   }),
   progressCircleStroke: A,
   progressCircleStrokeSize: i,
@@ -49,7 +49,7 @@ children: (0, r.jsx)(u.Z, {
     backgroundColor: l()(E.gemBackgroundFill, a),
     backgroundCircleSize: T
   }) : (0, r.jsx)(_.Z, {
-    circleColor: p,
+    circleColor: N,
     ellipseOpacity: g
   })
 })

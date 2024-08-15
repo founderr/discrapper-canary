@@ -20,8 +20,8 @@ let {
   orientation: f = 'vertical',
   fade: h = !1,
   customTheme: p = !1,
-  paddingFix: m = !0,
-  style: I,
+  paddingFix: I = !0,
+  style: m,
   ...T
 } = u, {
   scrollerRef: g,
@@ -38,7 +38,7 @@ i.useImperativeHandle(c, () => ({
   A
 ]);
 let N = (0, l.tT)({
-  paddingFix: m,
+  paddingFix: I,
   orientation: f,
   dir: E,
   className: _,
@@ -52,7 +52,7 @@ return (0, r.jsx)('div', {
     [t]: h,
     [n]: p
   }),
-  style: (0, l.uT)(I, f),
+  style: (0, l.uT)(m, f),
   dir: E,
   ...T,
   children: (0, r.jsxs)(o.Jc, {

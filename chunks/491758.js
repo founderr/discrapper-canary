@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(435064),
   m = t(894694),
   A = t(779618),
-  g = t(39604),
-  O = t(442334),
+  O = t(39604),
+  g = t(442334),
   h = t(356659),
   p = t(981631),
   R = t(37113),
@@ -158,7 +158,7 @@ children: [
         className: D.formItem,
         value: s,
         note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
-        onChange: e => g.em({
+        onChange: e => O.em({
           clipsEnabled: e,
           trackAnalytics: !0
         }),
@@ -182,7 +182,7 @@ children: [
           className: D.formItem,
           value: i,
           note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
-          onChange: e => g._Q({
+          onChange: e => O._Q({
             enabled: e,
             trackAnalytics: !0
           }),
@@ -201,7 +201,7 @@ children: [
           className: D.formItem,
           value: t,
           note: M.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
-          onChange: e => g.N0(e),
+          onChange: e => O.N0(e),
           children: M.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
         })
       })
@@ -211,17 +211,17 @@ children: [
   (0, n.jsxs)(l.FormSection, {
     className: P.marginTop20,
     children: [
-      (0, n.jsx)(O.Q, {
+      (0, n.jsx)(g.Q, {
         className: D.formItem,
-        select: g.eU,
+        select: O.eU,
         title: M.Z.Messages.CLIPS_SETTINGS_LENGTH,
         note: M.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: L,
         options: F
       }),
-      (0, n.jsx)(O.Q, {
+      (0, n.jsx)(g.Q, {
         className: D.formItem,
-        select: e => g.yi({
+        select: e => O.yi({
           resolution: e,
           frameRate: b.frameRate
         }),
@@ -230,9 +230,9 @@ children: [
         value: b.resolution,
         options: y
       }),
-      (0, n.jsx)(O.Q, {
+      (0, n.jsx)(g.Q, {
         className: D.formItem,
-        select: e => g.yi({
+        select: e => O.yi({
           resolution: b.resolution,
           frameRate: e
         }),
@@ -241,7 +241,7 @@ children: [
         value: b.frameRate,
         options: V
       }),
-      (0, n.jsx)(O.O, {
+      (0, n.jsx)(g.O, {
         className: D.formItem,
         title: M.Z.Messages.CLIPS_SETTINGS_KEYBIND,
         note: M.Z.Messages.CLIPS_SETTINGS_KEYBIND_HELP,

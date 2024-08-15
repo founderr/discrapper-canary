@@ -1,22 +1,22 @@
-t.d(r, {
+t.d(n, {
   Z: function() {
-return l;
+return i;
   }
 });
-var a = t(735250);
+var r = t(735250);
 t(470079);
-var n = t(120356),
-  i = t.n(n),
+var l = t(120356),
+  a = t.n(l),
   o = t(456831);
 
-function l(e) {
+function i(e) {
   let {
-children: r,
+children: n,
 tag: t,
-className: n
+className: l
   } = e;
-  return t = null != t ? t : 'h3', (0, a.jsx)(t, {
-className: i()(o.title, n),
-children: r
+  return t = null != t ? t : 'h3', (0, r.jsx)(t, {
+className: a()(o.title, l),
+children: n
   });
 }

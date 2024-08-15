@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(94432),
   h = n(245274);
 let p = f.e3 / 1000,
-  m = 6,
-  I = 2,
+  I = 6,
+  m = 2,
   T = [
 0,
 0,
@@ -46,7 +46,7 @@ canvasHeight: l,
 segmentValue: u,
 segmentIndex: c,
 constrainMin: d
-  } = e, _ = d ? (24 - I) * u + I : 24 * u;
+  } = e, _ = d ? (24 - m) * u + m : 24 * u;
   if (0 !== _)
 t = s, n = 6 * c * o, r = (l / 2 - _ / 2) * o, i = _ * o, a = 1 * o, t.moveTo(n, r + a), t.lineTo(n, r + i - a), t.arc(n + a, r + i - a, a, Math.PI, 0, !0), t.lineTo(n + 2 * a, r + a), t.arc(n + a, r + a, a, 0, Math.PI, !0), t.closePath();
 }
@@ -87,7 +87,7 @@ className: t,
 waveform: n,
 currentTime: a,
 duration: d,
-played: I,
+played: m,
 playing: v,
 onDrag: O,
 onDragStart: R,
@@ -98,7 +98,7 @@ width: D
   } = (0, u.Z)(), L = i.useMemo(() => {
 var e;
 let t;
-return Math.floor(((t = (e = d) <= p ? 40 : e >= 45 ? 294 : (Math.min(e, 45) - p) / (45 - p) * 254 + 40) + 4) / m) * m - 4;
+return Math.floor(((t = (e = d) <= p ? 40 : e >= 45 ? 294 : (Math.min(e, 45) - p) / (45 - p) * 254 + 40) + 4) / I) * I - 4;
   }, [d]), b = i.useRef(), M = function(e, t) {
 let n = i.useMemo(() => function(e) {
     let t;
@@ -133,7 +133,7 @@ return i.useMemo(() => {
   n,
   r
 ]);
-  }(n, D), P = i.useRef(I), U = i.useRef(v), w = i.useRef(null), x = window.devicePixelRatio, {
+  }(n, D), P = i.useRef(m), U = i.useRef(v), w = i.useRef(null), x = window.devicePixelRatio, {
 lastBackgroundFillColor: G,
 backgroundFillColor: k,
 lastActiveFillColor: B,
@@ -158,10 +158,10 @@ return {
   lastInactiveFillColor: f,
   inactiveFillColor: h
 };
-  }(I, v);
+  }(m, v);
   i.useEffect(() => {
 let e = g({
-  showAll: !I,
+  showAll: !m,
   currentTime: a,
   duration: d,
   numSegments: M.length
@@ -172,7 +172,7 @@ let e = b.current;
 if (null == e)
   return;
 let t = g({
-  showAll: !I,
+  showAll: !m,
   currentTime: a,
   duration: d,
   numSegments: M.length
@@ -189,7 +189,7 @@ for (let n = 0; n < e.length; n++) {
 M,
 a,
 d,
-I
+m
   ]), i.useEffect(() => {
 let e = null;
 return e = requestAnimationFrame(function t(n) {
@@ -199,7 +199,7 @@ return e = requestAnimationFrame(function t(n) {
   if (null == r || null == i || null == a)
     return;
   let s = !1;
-  (P.current !== I || U.current !== v) && (P.current = I, U.current = v, w.current = n), null != w.current && n > w.current + 200 && (w.current = null);
+  (P.current !== m || U.current !== v) && (P.current = m, U.current = v, w.current = n), null != w.current && n > w.current + 200 && (w.current = null);
   let o = r.height / x;
   i.clearRect(0, 0, r.width, r.height), i.beginPath();
   let [l, u] = N(G, k, n, w.current);
@@ -241,7 +241,7 @@ M,
 D,
 a,
 d,
-I,
+m,
 v,
 G,
 k,

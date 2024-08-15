@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(587446),
   h = n(996073),
   p = n(327943),
-  m = n(997945),
-  I = n(401460),
+  I = n(997945),
+  m = n(401460),
   T = n(441319),
   g = n(981631),
   S = n(526761),
@@ -49,7 +49,7 @@ b = (0, l.useRadioGroup)({
   labelledBy: L
 }),
 M = e => {
-  if (y && !v && e !== m.aH.DEFAULT) {
+  if (y && !v && e !== I.aH.DEFAULT) {
     (0, l.openModalLazy)(async () => {
       let {
         default: e
@@ -131,13 +131,13 @@ children: (0, r.jsx)('div', {
             isHidden: t
           } = e;
           return !t;
-        }).map((e, t) => (0, r.jsx)(I.Z, {
+        }).map((e, t) => (0, r.jsx)(m.Z, {
           icon: e,
           isSelected: R === e.id,
           onSelect: e => M(e),
           disabled: a,
           tabIndex: 0 !== t || a ? void 0 : 0,
-          locked: y && !v && e.id !== m.aH.DEFAULT
+          locked: y && !v && e.id !== I.aH.DEFAULT
         }, e.id))
       })
     ]

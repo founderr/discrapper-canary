@@ -24,7 +24,7 @@ return R;
 return U;
   },
   fy: function() {
-return m.fy;
+return I.fy;
   },
   hW: function() {
 return v;
@@ -53,8 +53,8 @@ var r = n(512722),
   f = n(262847),
   h = n(581883),
   p = n(48481),
-  m = n(526761),
-  I = n(981631);
+  I = n(526761),
+  m = n(981631);
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -98,13 +98,13 @@ o[e] = s, __OVERLAY__ ? d.Z.dispatch({
     proto: o
   },
   delaySeconds: n,
-  jitter: n === m.fy.AUTOMATED || n === m.fy.DAILY,
+  jitter: n === I.fy.AUTOMATED || n === I.fy.DAILY,
   partial: !0,
   resetEditInfo: !1,
   local: !0
 }) : (this.logger.log('Updating '.concat(String(e), ' with delay ').concat(n)), this.markDirty(o, {
   delaySeconds: n,
-  jitter: n === m.fy.AUTOMATED || n === m.fy.DAILY
+  jitter: n === I.fy.AUTOMATED || n === I.fy.DAILY
 }));
   }
   markDirty(e, t) {
@@ -171,7 +171,7 @@ if (e || !t.loaded && !t.loading) {
         settings: t
       }
     } = await s.tn.get({
-      url: I.ANM.USER_SETTINGS_PROTO(this.type)
+      url: m.ANM.USER_SETTINGS_PROTO(this.type)
     }), n = (0, p.d5)(this.ProtoClass, t);
     if (null == n) {
       this.dispatchChanges({
@@ -206,7 +206,7 @@ if (e || !t.loaded && !t.loading) {
 i()(!__OVERLAY__, 'this cannot run in the overlay'), this.logger.log('Marking dirty due to migrates'), i()(null == this.getEditInfo().editInfo.offlineEditDataVersion, 'offline changes are not supported with migrations'), this.markDirty(e, {
   cleanup: t,
   dispatch: !1,
-  delaySeconds: m.fy.AUTOMATED,
+  delaySeconds: I.fy.AUTOMATED,
   jitter: !0
 });
   }
@@ -261,7 +261,7 @@ T(this, 'ProtoClass', void 0), T(this, 'type', void 0), T(this, 'logger', void 0
     let {
       body: n
     } = await s.tn.patch({
-      url: I.ANM.USER_SETTINGS_PROTO(this.type),
+      url: m.ANM.USER_SETTINGS_PROTO(this.type),
       body: {
         settings: t,
         required_data_version: e.offlineEditDataVersion
@@ -290,7 +290,7 @@ T(this, 'ProtoClass', void 0), T(this, 'type', void 0), T(this, 'logger', void 0
         rateLimited: !0,
         timeout: t
       });
-    } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === I.evJ.INVALID_USER_SETTINGS_DATA)
+    } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === m.evJ.INVALID_USER_SETTINGS_DATA)
       throw this.logger.log('Reloading do to invalid data'), this.loadIfNecessary(!0), e;
     else
       throw this.logger.log('Unknown user settings error'), e;
@@ -298,11 +298,11 @@ T(this, 'ProtoClass', void 0), T(this, 'type', void 0), T(this, 'logger', void 0
 }, this.logger = new a.Y(this.ProtoClass.typeName);
   }
 }
-let v = new N(u.o8, m.yP.PRELOADED_USER_SETTINGS),
-  O = new N(l.ji, m.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+let v = new N(u.o8, I.yP.PRELOADED_USER_SETTINGS),
+  O = new N(l.ji, I.yP.FRECENCY_AND_FAVORITES_SETTINGS),
   R = {
-[m.yP.PRELOADED_USER_SETTINGS]: v,
-[m.yP.FRECENCY_AND_FAVORITES_SETTINGS]: O
+[I.yP.PRELOADED_USER_SETTINGS]: v,
+[I.yP.FRECENCY_AND_FAVORITES_SETTINGS]: O
   };
 
 function C(e, t, n) {
@@ -318,7 +318,7 @@ function D(e) {
 if ((0, E.jl)(t.dismissedContents, e))
   return !1;
 t.dismissedContents = (0, E.GV)(t.dismissedContents, e);
-  }, m.fy.INFREQUENT_USER_ACTION);
+  }, I.fy.INFREQUENT_USER_ACTION);
 }
 
 function L(e, t) {
@@ -326,7 +326,7 @@ function L(e, t) {
 null == n.recurringDismissibleContentStates[e] ? n.recurringDismissibleContentStates[e] = {
   lastDismissedVersion: t
 } : n.recurringDismissibleContentStates[e].lastDismissedVersion = t;
-  }, m.fy.INFREQUENT_USER_ACTION);
+  }, I.fy.INFREQUENT_USER_ACTION);
 }
 
 function b(e) {
@@ -334,7 +334,7 @@ function b(e) {
 if (!(0, E.jl)(t.dismissedContents, e))
   return !1;
 t.dismissedContents = (0, E.jx)(t.dismissedContents, e);
-  }, m.fy.INFREQUENT_USER_ACTION);
+  }, I.fy.INFREQUENT_USER_ACTION);
 }
 
 function M(e) {
@@ -342,13 +342,13 @@ function M(e) {
 if (null == t.recurringDismissibleContentStates[e])
   return !1;
 t.recurringDismissibleContentStates[e].lastDismissedVersion = 0;
-  }, m.fy.INFREQUENT_USER_ACTION);
+  }, I.fy.INFREQUENT_USER_ACTION);
 }
 
 function P() {
   return v.updateAsync('userContent', e => {
 e.dismissedContents = new Uint8Array(), e.recurringDismissibleContentStates = {};
-  }, m.fy.INFREQUENT_USER_ACTION);
+  }, I.fy.INFREQUENT_USER_ACTION);
 }
 
 function U() {
@@ -357,5 +357,5 @@ let t = new Uint8Array();
 for (let e of Object.keys(o.z))
   t = (0, E.GV)(t, o.z[e]);
 e.dismissedContents = t;
-  }, m.fy.INFREQUENT_USER_ACTION);
+  }, I.fy.INFREQUENT_USER_ACTION);
 }

@@ -91,7 +91,7 @@ m(A, 'defaultProps', {
   hideDivider: !1,
   onEditClick: () => {}
 });
-class g extends i.PureComponent {
+class O extends i.PureComponent {
   renderFooter() {
 let {
   paymentSources: e
@@ -217,4 +217,4 @@ super(...e), m(this, 'state', {
 });
   }
 }
-s.Z = g;
+s.Z = O;

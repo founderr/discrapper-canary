@@ -13,20 +13,20 @@ var l = t(735250),
   h = t(554355),
   f = t(991989),
   x = t(635507),
-  _ = t(470794),
-  g = t(886777);
+  g = t(470794),
+  N = t(886777);
 
-function N(e) {
+function _(e) {
   let {
 movDark: n = u,
 movLight: t = c,
 mp4Dark: i = m,
 mp4Light: a = x,
 pngDark: r = h,
-pngLight: s = _,
+pngLight: s = g,
 webmDark: d = f,
-webmLight: N = g
-  } = e, v = (0, o.vu)(), E = [
+webmLight: _ = N
+  } = e, Z = (0, o.vu)(), v = [
 (0, l.jsx)('source', {
   src: i,
   type: 'video/mp4'
@@ -35,7 +35,7 @@ webmLight: N = g
   alt: '',
   src: r
 }, 'png')
-  ], Z = [
+  ], E = [
 (0, l.jsx)('source', {
   src: a,
   type: 'video/mp4'
@@ -45,26 +45,26 @@ webmLight: N = g
   src: s
 }, 'png')
   ];
-  return (v > 52 || -1 === v) && (E.unshift((0, l.jsx)('source', {
+  return (Z > 52 || -1 === Z) && (v.unshift((0, l.jsx)('source', {
 src: d,
 type: 'video/webm'
-  }, 'webm')), Z.unshift((0, l.jsx)('source', {
-src: N,
+  }, 'webm')), E.unshift((0, l.jsx)('source', {
+src: _,
 type: 'video/webm'
-  }, 'webm'))), (0, o.rO)() && (E.unshift((0, l.jsx)('source', {
+  }, 'webm'))), (0, o.rO)() && (v.unshift((0, l.jsx)('source', {
 src: n,
 type: 'video/mp4'
-  }, 'hevc')), Z.unshift((0, l.jsx)('source', {
+  }, 'hevc')), E.unshift((0, l.jsx)('source', {
 src: t,
 type: 'video/mp4'
   }, 'hevc'))), {
-[p.BRd.DARK]: E,
-[p.BRd.LIGHT]: Z
+[p.BRd.DARK]: v,
+[p.BRd.LIGHT]: E
   };
 }
-let v = s.Z.getAppSpinnerSources(),
-  E = null != v ? N(v) : null,
-  Z = N({});
+let Z = s.Z.getAppSpinnerSources(),
+  v = null != Z ? _(Z) : null,
+  E = _({});
 n.Z = e => {
   var n;
   let {
@@ -77,8 +77,8 @@ onReady: c
 theme: m
   } = (0, r.useThemeContext)(), {
 reducedMotion: h
-  } = i.useContext(r.AccessibilityPreferencesContext), f = Z;
-  null != E && (f = E);
+  } = i.useContext(r.AccessibilityPreferencesContext), f = E;
+  null != v && (f = v);
   let x = null !== (n = f[(0, a.wj)(m) ? p.BRd.DARK : p.BRd.LIGHT]) && void 0 !== n ? n : f[p.BRd.DARK];
   return (0, l.jsx)(d.Z, {
 ref: o,

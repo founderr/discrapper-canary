@@ -23,12 +23,12 @@ isHovering: E = !1,
 lineClamp: f = 6,
 setLineClamp: h = !0,
 textColor: p,
-userId: m
-  } = e, I = i.useMemo(() => (0, u.Z)(m) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.YP)(t), [
-m,
+userId: I
+  } = e, m = i.useMemo(() => (0, u.Z)(I) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.YP)(t), [
+I,
 t
   ]);
-  return null == I ? null : (0, r.jsx)('div', {
+  return null == m ? null : (0, r.jsx)('div', {
 className: s()(n, _.markup),
 children: (0, r.jsx)(o.Text, {
   variant: 'text-sm/normal',
@@ -39,7 +39,7 @@ children: (0, r.jsx)(o.Text, {
       disableAnimations: a && !E,
       disableInteractions: !1
     },
-    children: I
+    children: m
   })
 })
   });

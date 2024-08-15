@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(204418),
   h = n(583434),
   p = n(530618),
-  m = n(70097),
-  I = n(454585),
+  I = n(70097),
+  m = n(454585),
   T = n(164946),
   g = n(166625),
   S = n(25990),
@@ -53,7 +53,7 @@ location: d,
 reward: E,
 decoration: f,
 onUseNow: h
-  } = e, m = i.useRef(null), [I, T] = i.useState(null), g = i.useRef(new o.qA()), S = (0, u.e7)([_.Z], () => _.Z.useReducedMotion), R = (0, u.e7)([A.default], () => A.default.getCurrentUser()), y = (0, O.j8)(l), L = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [M, P] = i.useState(L ? 'claimed' : 'loading');
+  } = e, I = i.useRef(null), [m, T] = i.useState(null), g = i.useRef(new o.qA()), S = (0, u.e7)([_.Z], () => _.Z.useReducedMotion), R = (0, u.e7)([A.default], () => A.default.getCurrentUser()), y = (0, O.j8)(l), L = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, [M, P] = i.useState(L ? 'claimed' : 'loading');
   i.useEffect(() => {
 !L && (0, N.QB)(l.id, v.y$.CROSS_PLATFORM, d).then(() => P('claimed')).catch(() => P('error'));
   }, [
@@ -70,7 +70,7 @@ children: [
     environment: g.current
   }),
   (0, r.jsx)('div', {
-    ref: m,
+    ref: I,
     children: (0, r.jsx)(c.ModalRoot, {
       transitionState: n,
       size: c.ModalSize.DYNAMIC,
@@ -99,8 +99,8 @@ children: [
     })
   }),
   !S && !L && 'claimed' === M && (0, r.jsx)(p.Z, {
-    confettiTarget: m.current,
-    confettiCanvas: I,
+    confettiTarget: I.current,
+    confettiCanvas: m,
     sprites: D.CA,
     colors: D.Br
   })
@@ -132,7 +132,7 @@ children: [
   (0, r.jsxs)('div', {
     className: b.headerContainer,
     children: [
-      (0, r.jsx)(m.Z, {
+      (0, r.jsx)(I.Z, {
         className: b.headerBackground,
         autoPlay: !1,
         loop: !1,
@@ -205,7 +205,7 @@ children: [
             (0, r.jsx)(c.Text, {
               variant: 'text-sm/normal',
               color: 'always-white',
-              children: I.Z.parse(h, !1, {
+              children: m.Z.parse(h, !1, {
                 allowLinks: !0
               })
             })

@@ -46,7 +46,7 @@ error: R
 includeSoftDeleted: !0
   }), {
 currentListing: g,
-nextListing: N
+nextListing: p
   } = a.useMemo(() => {
 if ((null == n ? void 0 : n.renewalMutations) == null)
   return {
@@ -64,14 +64,14 @@ return {
 n,
 C
   ]);
-  if (null == n || null == g || null == N)
+  if (null == n || null == g || null == p)
 return null;
-  let p = i()(n.currentPeriodEnd).format('MMM DD, YYYY');
+  let N = i()(n.currentPeriodEnd).format('MMM DD, YYYY');
   return (0, s.jsx)(_.Z, {
 message: u.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_DESCRIPTION.format({
   currentListing: g.name,
-  nextListing: N.name,
-  changeDate: p
+  nextListing: p.name,
+  changeDate: N
 }),
 error: null == R ? void 0 : R.message,
 onClick: () => T(n),

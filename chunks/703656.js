@@ -13,7 +13,7 @@ return N;
 return O;
   },
   XU: function() {
-return I;
+return m;
   },
   dL: function() {
 return g;
@@ -31,7 +31,7 @@ return C;
 return S;
   },
   uL: function() {
-return m;
+return I;
   },
   uv: function() {
 return T;
@@ -58,7 +58,7 @@ function p(e, t) {
   return !!('string' == typeof e && _.some(t => e.startsWith(t))) && (d.log(''.concat(t, ' - route to external path ').concat(e)), window.dispatchEvent(new Event('beforeunload')), window.location[t](e), !0);
 }
 
-function m(e, t) {
+function I(e, t) {
   if (p(e, 'assign'))
 return;
   d.log('transitionTo - Transitioning to '.concat(e));
@@ -71,12 +71,12 @@ pathname: e,
   }), i = n, a = s;
 }
 
-function I(e, t, n, r) {
+function m(e, t, n, r) {
   d.log('transitionToGuild - Transitioning to '.concat(JSON.stringify({
 guildId: e,
 channelId: t,
 messageId: n
-  }))), m(c.Z5c.CHANNEL(e, t, n), r);
+  }))), I(c.Z5c.CHANNEL(e, t, n), r);
 }
 
 function T() {

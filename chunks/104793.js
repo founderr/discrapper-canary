@@ -1,6 +1,6 @@
 n.d(t, {
   Ft: function() {
-return I;
+return m;
   },
   ML: function() {
 return A;
@@ -24,15 +24,15 @@ var r, i, a = n(512722),
   f = n(581364),
   h = n(807169),
   p = n(689079),
-  m = n(981631);
+  I = n(981631);
 
-function I(e, t, n) {
+function m(e, t, n) {
   var r;
   let {
 context: i,
 commandTypes: a,
 allowNsfw: c,
-computedPermissions: I,
+computedPermissions: m,
 userId: T,
 roleIds: g,
 isImpersonating: N,
@@ -65,7 +65,7 @@ if (!e.predicate({
   if (e.applicationId === p.bi.BUILT_IN)
 return 0;
   let b = (0, h.ny)(i);
-  if (null == b || l.e$(I, m.Plq.ADMINISTRATOR) || y && (null === (r = e.integration_types) || void 0 === r ? void 0 : r.includes(o.Y.USER_INSTALL)))
+  if (null == b || l.e$(m, I.Plq.ADMINISTRATOR) || y && (null === (r = e.integration_types) || void 0 === r ? void 0 : r.includes(o.Y.USER_INSTALL)))
 return 0;
   if (!v && C && (null == e.integration_types || e.integration_types.includes(o.Y.GUILD_INSTALL)))
 return 5;
@@ -88,7 +88,7 @@ return !0 === e;
 return !1 === e;
   }(M) ? 7 : function(e) {
 return !1 === e;
-  }(O) || null != e.defaultMemberPermissions && !(!l.fS(e.defaultMemberPermissions, f.BO) && l.e$(I, e.defaultMemberPermissions)) ? 7 : 0;
+  }(O) || null != e.defaultMemberPermissions && !(!l.fS(e.defaultMemberPermissions, f.BO) && l.e$(m, e.defaultMemberPermissions)) ? 7 : 0;
 }
 
 function T(e) {

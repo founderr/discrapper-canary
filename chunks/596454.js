@@ -16,8 +16,8 @@ var r, i = n(735250),
   f = n(237997),
   h = n(768581),
   p = n(176354),
-  m = n(506071),
-  I = n(149203);
+  I = n(506071),
+  m = n(149203);
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.pr
 if (null != t)
   return t;
 if (null != n) {
-  let e = I.kV[l];
+  let e = m.kV[l];
   return h.ZP.getEmojiURL({
     id: n,
     animated: s && !0 === i && (!0 === a || u || !0 === o),
@@ -223,7 +223,7 @@ n = {
   autoplay: null == e.autoplay ? t : e.autoplay,
   allowAnimatedEmoji: t
 },
-r = __OVERLAY__ ? (0, c.e7)([f.Z], () => f.Z.isInstanceFocused()) : (0, m.n)();
+r = __OVERLAY__ ? (0, c.e7)([f.Z], () => f.Z.isInstanceFocused()) : (0, I.n)();
   return (0, i.jsx)(S, {
 ...e,
 ...n,

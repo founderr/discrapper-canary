@@ -23,8 +23,8 @@ ORIGINAL_MP4: 'original.mp4'
   },
   h = E.MP4,
   p = null,
-  m = '',
   I = '',
+  m = '',
   T = [],
   g = [],
   S = [],
@@ -38,10 +38,10 @@ class v extends(r = o.ZP.Store) {
 return p;
   }
   getQuery() {
-return m;
+return I;
   }
   getResultQuery() {
-return I;
+return m;
   }
   getResultItems() {
 return T;
@@ -69,12 +69,12 @@ s = 'GIFPickerViewStore', (a = 'displayName') in(i = v) ? Object.defineProperty(
 p = e.analyticsID;
   },
   GIF_PICKER_QUERY: function(e) {
-'' === (m = e.query) && (I = '', T = [], S = []);
+'' === (I = e.query) && (m = '', T = [], S = []);
   },
   GIF_PICKER_QUERY_SUCCESS: function(e) {
-if (null != e.query && m === I)
+if (null != e.query && I === m)
   return !1;
-null != e.query && (I = e.query), T = e.items.map(e => {
+null != e.query && (m = e.query), T = e.items.map(e => {
   let {
     width: t,
     height: n,
@@ -118,7 +118,7 @@ let {
 } = e;
 if (null == t)
   return !1;
-I = t, T = [];
+m = t, T = [];
   },
   GIF_PICKER_TRENDING_FETCH_SUCCESS: function(e) {
 let t = e.trendingCategories;

@@ -43,7 +43,7 @@ skipNulls: !1,
 strictNullHandling: !1
   },
   f = {},
-  h = function e(t, n, a, s, o, u, d, _, h, p, m, I, T, g, S, A, N, v) {
+  h = function e(t, n, a, s, o, u, d, _, h, p, I, m, T, g, S, A, N, v) {
 for (var O, R, C = t, y = v, D = 0, L = !1; void 0 !== (y = y.get(f)) && !L;) {
   var b = y.get(t);
   if (D += 1, void 0 !== b) {
@@ -73,7 +73,7 @@ else if (l(p))
   R = p;
 else {
   var P = Object.keys(C);
-  R = m ? P.sort(m) : P;
+  R = I ? P.sort(I) : P;
 }
 var U = _ ? n.replace(/\./g, '%2E') : n,
   w = s && l(C) && 1 === C.length ? U + '[]' : U;
@@ -83,11 +83,11 @@ for (var x = 0; x < R.length; ++x) {
   var G = R[x],
     k = 'object' == typeof G && void 0 !== G.value ? G.value : C[G];
   if (!d || null !== k) {
-    var B = I && _ ? G.replace(/\./g, '%2E') : G,
-      F = l(C) ? 'function' == typeof a ? a(w, B) : w : w + (I ? '.' + B : '[' + B + ']');
+    var B = m && _ ? G.replace(/\./g, '%2E') : G,
+      F = l(C) ? 'function' == typeof a ? a(w, B) : w : w + (m ? '.' + B : '[' + B + ']');
     v.set(t, D);
     var V = r();
-    V.set(f, v), c(M, e(k, F, a, s, o, u, d, _, 'comma' === a && A && l(C) ? null : h, p, m, I, T, g, S, A, N, V));
+    V.set(f, v), c(M, e(k, F, a, s, o, u, d, _, 'comma' === a && A && l(C) ? null : h, p, I, m, T, g, S, A, N, V));
   }
 }
 return M;
@@ -148,11 +148,11 @@ return '';
 _ = 'comma' === d && s.commaRoundTrip;
   !n && (n = Object.keys(a)), s.sort && n.sort(s.sort);
   for (var E = r(), f = 0; f < n.length; ++f) {
-var m = n[f];
-if (!s.skipNulls || null !== a[m])
-  c(u, h(a[m], m, d, _, s.allowEmptyArrays, s.strictNullHandling, s.skipNulls, s.encodeDotInKeys, s.encode ? s.encoder : null, s.filter, s.sort, s.allowDots, s.serializeDate, s.format, s.formatter, s.encodeValuesOnly, s.charset, E));
+var I = n[f];
+if (!s.skipNulls || null !== a[I])
+  c(u, h(a[I], I, d, _, s.allowEmptyArrays, s.strictNullHandling, s.skipNulls, s.encodeDotInKeys, s.encode ? s.encoder : null, s.filter, s.sort, s.allowDots, s.serializeDate, s.format, s.formatter, s.encodeValuesOnly, s.charset, E));
   }
-  var I = u.join(s.delimiter),
+  var m = u.join(s.delimiter),
 T = !0 === s.addQueryPrefix ? '?' : '';
-  return s.charsetSentinel && ('iso-8859-1' === s.charset ? T += 'utf8=%26%2310003%3B&' : T += 'utf8=%E2%9C%93&'), I.length > 0 ? T + I : '';
+  return s.charsetSentinel && ('iso-8859-1' === s.charset ? T += 'utf8=%26%2310003%3B&' : T += 'utf8=%E2%9C%93&'), m.length > 0 ? T + m : '';
 };

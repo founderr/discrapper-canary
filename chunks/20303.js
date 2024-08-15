@@ -8,16 +8,16 @@ var r, i, a, s, o, l = n(442837),
 let f = 'MaskedLinkStore',
   h = new Set(),
   p = new Set(),
-  m = null === (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === r ? void 0 : r.replace('//', '');
+  I = null === (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === r ? void 0 : r.replace('//', '');
 
-function I(e) {
+function m(e) {
   let t = (0, _.F)(e);
   switch (t) {
 case window.GLOBAL_ENV.CDN_HOST:
 case window.GLOBAL_ENV.INVITE_HOST:
 case window.GLOBAL_ENV.GIFT_CODE_HOST:
 case window.GLOBAL_ENV.GUILD_TEMPLATE_HOST:
-case m:
+case I:
 case location.hostname:
   return !0;
 default:
@@ -44,7 +44,7 @@ else {
 }
   }
   isTrustedDomain(e) {
-return I(e);
+return m(e);
   }
   isTrustedProtocol(e) {
 return T(e);
@@ -60,7 +60,7 @@ o = 'MaskedLinkStore', (s = 'displayName') in(a = g) ? Object.defineProperty(a, 
 let {
   url: t
 } = e;
-if (I(t))
+if (m(t))
   return !1;
 h.add((0, _.F)(t)), u.K.set(f, {
   trustedDomains: h,

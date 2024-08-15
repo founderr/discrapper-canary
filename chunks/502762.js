@@ -28,7 +28,7 @@ let r = (0, o.EQ)(e).with(E.y0.MODAL, E.y0.FULL_SIZE, () => f.userProfileModalIn
   }));
 return s()(r, i);
   },
-  m = i.forwardRef(function(e, t) {
+  I = i.forwardRef(function(e, t) {
 let {
   user: n,
   displayProfile: i,
@@ -36,8 +36,8 @@ let {
   className: o,
   pendingThemeColors: d,
   pendingProfileEffectId: E,
-  themeOverride: m,
-  children: I,
+  themeOverride: I,
+  children: m,
   forceShowPremium: T = !1,
   showOutOfBoundaryComponents: g = !1
 } = e, {
@@ -53,7 +53,7 @@ let {
   profileThemeStyle: v,
   profileThemeClassName: O
 } = (0, c.Z)({
-  theme: null != m ? m : S,
+  theme: null != I ? I : S,
   primaryColor: A,
   secondaryColor: N
 }), R = (null == i ? void 0 : i.canEditThemes) || T, C = null !== E && ((null == i ? void 0 : i.banner) != null || void 0 !== E);
@@ -64,19 +64,19 @@ return (0, r.jsx)('div', {
   children: (0, r.jsx)('div', {
     className: p(a, R, C),
     children: (0, r.jsx)(l.ThemeContextProvider, {
-      theme: null != m ? m : S,
+      theme: null != I ? I : S,
       children: (0, r.jsx)(_.X, {
         profileType: a,
-        theme: null != m ? m : S,
+        theme: null != I ? I : S,
         primaryColor: A,
         secondaryColor: N,
-        children: I
+        children: m
       })
     })
   })
 });
   }),
-  I = e => (0, o.EQ)(e).with(E.y0.POPOUT, E.y0.SETTINGS, () => f.userPopoutOverlayBackground).with(E.y0.MODAL, () => f.userProfileModalOverlayBackground).with(E.y0.BITE_SIZE, () => f.biteSizeOverlayBackground).with(E.y0.FULL_SIZE, () => f.fullSizeOverlayBackground).otherwise(() => f.overlayBackground),
+  m = e => (0, o.EQ)(e).with(E.y0.POPOUT, E.y0.SETTINGS, () => f.userPopoutOverlayBackground).with(E.y0.MODAL, () => f.userProfileModalOverlayBackground).with(E.y0.BITE_SIZE, () => f.biteSizeOverlayBackground).with(E.y0.FULL_SIZE, () => f.fullSizeOverlayBackground).otherwise(() => f.overlayBackground),
   T = i.forwardRef(function(e, t) {
 let {
   children: n,
@@ -86,10 +86,10 @@ let {
 } = (0, _.z)();
 return (0, r.jsx)('div', {
   ref: t,
-  className: s()(I(a), i),
+  className: s()(m(a), i),
   children: n
 });
   });
-t.Z = Object.assign(m, {
+t.Z = Object.assign(I, {
   Overlay: T
 });

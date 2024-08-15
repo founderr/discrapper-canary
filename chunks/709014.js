@@ -21,8 +21,8 @@ src: o,
 size: f = 'md',
 width: h,
 height: p,
-className: m,
-initialAnimation: I,
+className: I,
+initialAnimation: m,
 markers: T
   } = e, [g, S] = i.useState(null), A = i.useRef(null), N = i.useRef(null), v = i.useRef(null), O = 'custom' === f ? {
 width: h,
@@ -66,7 +66,7 @@ var t;
 let n, {
     default: r
   } = e,
-  i = null !== (t = N.current) && void 0 !== t ? t : I;
+  i = null !== (t = N.current) && void 0 !== t ? t : m;
 if (null != i && null != T[i]) {
   let e = T[i];
   n = [
@@ -87,7 +87,7 @@ var e;
 null === (e = v.current) || void 0 === e || e.destroy();
   }), [
 g,
-I,
+m,
 T
   ]), (0, r.jsx)('div', {
 style: {
@@ -95,7 +95,7 @@ style: {
   display: 'flex',
   ...O
 },
-className: s()(E.lottieIcon, m),
+className: s()(E.lottieIcon, I),
 ref: A
   });
 });

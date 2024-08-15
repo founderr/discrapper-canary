@@ -1,9 +1,9 @@
 n.d(t, {
   G: function() {
-return m;
+return I;
   },
   j: function() {
-return I;
+return m;
   }
 }), n(47120);
 var r = n(735250),
@@ -21,13 +21,13 @@ var r = n(735250),
   h = n(689938),
   p = n(68560);
 
-function m(e) {
+function I(e) {
   let {
 children: t,
 wrapperClassName: n,
 embedded: a
-  } = e, [o, m] = i.useState(f.hO.INITIAL), I = i.useCallback(e => {
-m(t => Math.max(t, e));
+  } = e, [o, I] = i.useState(f.hO.INITIAL), m = i.useCallback(e => {
+I(t => Math.max(t, e));
   }, []);
   return (0, c.Tt)({
 location: h.Z.Messages.OAUTH2_TITLE
@@ -39,7 +39,7 @@ children: (0, r.jsx)(u.Z, {
   splash: (0, d.gK)(),
   waveState: o,
   showLogo: !0,
-  updateWaveState: I,
+  updateWaveState: m,
   children: (0, r.jsx)('div', {
     className: s()(p.oauth2Wrapper, n),
     children: t
@@ -48,7 +48,7 @@ children: (0, r.jsx)(u.Z, {
   });
 }
 
-function I(e) {
+function m(e) {
   let {
 children: t,
 footer: n,

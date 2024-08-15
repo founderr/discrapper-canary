@@ -41,16 +41,16 @@ let t = (0, l.throttle)(a, c),
       a = 1 === u(d) ? 'width' : 'height';
     n.current.style[a] = ''.concat(i, 'px'), t(i);
   },
-  m = t => {
+  I = t => {
     f(!1);
     let n = e(t);
     a(n), null == s || s(n);
   },
-  I = _ ? 'pointerup' : 'mouseup',
+  m = _ ? 'pointerup' : 'mouseup',
   T = _ ? 'pointermove' : 'mousemove',
   g = n.current.ownerDocument;
-return g.addEventListener(I, m), g.addEventListener(T, o), () => {
-  g.removeEventListener(I, m), g.removeEventListener(T, o), t.cancel();
+return g.addEventListener(m, I), g.addEventListener(T, o), () => {
+  g.removeEventListener(m, I), g.removeEventListener(T, o), t.cancel();
 };
   }, [
 E,

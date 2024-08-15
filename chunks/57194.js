@@ -247,8 +247,8 @@ h = function(t, n) {
   };
 },
 p = h(/:/, 'operator'),
-m = h(/\bof\b/, 'keyword'),
-I = {
+I = h(/\bof\b/, 'keyword'),
+m = {
   begin: [
     /(^|\s+)/,
     /type/,
@@ -411,7 +411,7 @@ contains: [
   },
   l,
   u,
-  I,
+  m,
   {
     scope: 'meta',
     begin: /\[</,
@@ -426,7 +426,7 @@ contains: [
       S
     ]
   },
-  m,
+  I,
   p,
   T,
   g,

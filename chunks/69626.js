@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(703558),
   h = n(496675),
   p = n(944486),
-  m = n(585483),
-  I = n(981631),
+  I = n(585483),
+  m = n(981631),
   T = n(689079),
   g = n(665692),
   S = n(689938),
@@ -40,7 +40,7 @@ let {
 } = l.Xq(r, n);
 if (null != a && a.name === t) {
   var c, d;
-  m.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+  I.S.dispatch(m.CkL.FOCUS_CHANNEL_TEXT_AREA, {
     channelId: e
   });
   let t = null != s ? {
@@ -69,7 +69,7 @@ cancelText: S.Z.Messages.CANCEL,
 onConfirm: () => a(),
 confirmButtonColor: s.Button.Colors.BRAND,
 onCloseCallback: () => {
-  m.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+  I.S.dispatch(m.CkL.FOCUS_CHANNEL_TEXT_AREA, {
     channelId: e
   });
 },
@@ -87,7 +87,7 @@ function v(e) {
 node: n,
 output: o,
 state: f
-  } = e, m = (0, a.e7)([
+  } = e, I = (0, a.e7)([
 E.Z,
 p.Z
   ], () => {
@@ -97,32 +97,32 @@ return E.Z.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : p.Z.getCh
 hasSendMessagePerm: S,
 hasUseAppCommandsPerm: A
   } = (0, a.cj)([h.Z], () => {
-let e = h.Z.can(I.Plq.SEND_MESSAGES, m);
+let e = h.Z.can(m.Plq.SEND_MESSAGES, I);
 return {
   hasSendMessagePerm: e,
-  hasUseAppCommandsPerm: h.Z.can(I.Plq.USE_APPLICATION_COMMANDS, m)
+  hasUseAppCommandsPerm: h.Z.can(m.Plq.USE_APPLICATION_COMMANDS, I)
 };
   }), {
 command: v
-  } = l.YZ(m, null !== (t = n.commandKey) && void 0 !== t ? t : ''), O = _.dN.useSetting(), R = i.useMemo(() => {
-if (null == v || null == m || v.name !== n.commandName || O)
+  } = l.YZ(I, null !== (t = n.commandKey) && void 0 !== t ? t : ''), O = _.dN.useSetting(), R = i.useMemo(() => {
+if (null == v || null == I || v.name !== n.commandName || O)
   return !1;
-let e = m.isPrivate();
-if ((0, d.xl)(m) || !e && !S)
+let e = I.isPrivate();
+if ((0, d.xl)(I) || !e && !S)
   return !1;
 let t = (null == v ? void 0 : v.applicationId) === T.bi.BUILT_IN;
 return !!e || !!t || !!A || !1;
   }, [
-m,
+I,
 v,
 S,
 A,
 n.commandName,
 O
   ]), C = i.useCallback(e => {
-null == e || e.stopPropagation(), null != m && null != n.commandName && null != n.commandKey && N(m.id, n.commandName, n.commandKey, u.Vh.MENTION);
+null == e || e.stopPropagation(), null != I && null != n.commandName && null != n.commandKey && N(I.id, n.commandName, n.commandKey, u.Vh.MENTION);
   }, [
-m,
+I,
 n.commandKey,
 n.commandName
   ]);

@@ -53,8 +53,8 @@ var r = n(990547),
   f = n(213459),
   h = n(812236),
   p = n(812206),
-  m = n(358221),
-  I = n(233764),
+  I = n(358221),
+  m = n(233764),
   T = n(188597),
   g = n(835873),
   S = n(973616),
@@ -104,8 +104,8 @@ analyticsLocations: o,
 locationObject: l,
 embeddedActivitiesManager: u,
 componentId: c
-  } = e, m = N.Z.getChannel(r), g = null !== (t = null == m ? void 0 : m.getGuildId()) && void 0 !== t ? t : void 0;
-  if (null == g && !(null !== (n = null == m ? void 0 : m.isPrivate()) && void 0 !== n && n))
+  } = e, I = N.Z.getChannel(r), g = null !== (t = null == I ? void 0 : I.getGuildId()) && void 0 !== t ? t : void 0;
+  if (null == g && !(null !== (n = null == I ? void 0 : I.isPrivate()) && void 0 !== n && n))
 return !1;
   try {
 a.Z.dispatch({
@@ -158,7 +158,7 @@ if (s) {
       channelId: r,
       guildId: g
     }), !0);
-  }, n = Y.Yq.includes(i), a = (null == m ? void 0 : m.type) === Z.d4z.GUILD_VOICE, s = p.Z.getApplication(i), o = null != s && (0, D.yE)(s.flags, Z.udG.EMBEDDED), l = null != s && (0, D.yE)(s.flags, Z.udG.EMBEDDED_RELEASED), u = (0, M.l5)(m);
+  }, n = Y.Yq.includes(i), a = (null == I ? void 0 : I.type) === Z.d4z.GUILD_VOICE, s = p.Z.getApplication(i), o = null != s && (0, D.yE)(s.flags, Z.udG.EMBEDDED), l = null != s && (0, D.yE)(s.flags, Z.udG.EMBEDDED_RELEASED), u = (0, M.l5)(I);
   if (n) {
     if (t = !1, !await e({
         canSendFakeCommand: !1
@@ -182,7 +182,7 @@ if (s) {
         if (!await e({
             canSendFakeCommand: !1
           }))
-          throw new I.Z(I.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+          throw new m.Z(m.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
         t = !1;
       } else
         t = !0;
@@ -192,7 +192,7 @@ if (s) {
       canSendFakeCommand: o && l
     });
     if (t = !n, o && !n)
-      throw new I.Z(I.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+      throw new m.Z(m.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
   }
 }
 if ((!s || t) && !await q({
@@ -201,7 +201,7 @@ if ((!s || t) && !await q({
     embeddedActivitiesManager: u,
     guildId: g
   }))
-  throw new I.Z(I.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
+  throw new m.Z(m.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
 a.Z.dispatch({
   type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
   applicationId: i,
@@ -213,7 +213,7 @@ return a.Z.dispatch({
   guildId: g,
   applicationId: i,
   channelId: r,
-  error: e instanceof I.Z ? e : new d.Z(e)
+  error: e instanceof m.Z ? e : new d.Z(e)
 }), !1;
   }
   return !0;
@@ -261,14 +261,14 @@ return E === k.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ? (0, g.w)() : E === k.j
 }))
 return !1;
   let h = (0, B.Z)(a),
-m = H.wP.includes(_.type);
+I = H.wP.includes(_.type);
   if (h) {
 if (!await (0, F.Z)({
     channelId: a,
     bypassChangeModal: null != n
   }))
   return !1;
-  } else if (!(0, M.WS)(_, !0) || !m)
+  } else if (!(0, M.WS)(_, !0) || !I)
 return !1;
   return await b.Z.post({
 url: Z.ANM.ACTIVITY_CHANNEL_LAUNCH(a, i),
@@ -305,7 +305,7 @@ locationId: null == o ? void 0 : null === (t = o.location) || void 0 === t ? voi
 instanceId: null == o ? void 0 : o.launchId,
 showFeedback: s
   });
-  let u = m.Z.getSelectedParticipantId(r),
+  let u = I.Z.getSelectedParticipantId(r),
 c = null === (n = R.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
   if (null != P.ZP.getEmbeddedActivitiesForChannel(r).find(e => e.applicationId === i) && null != c && '' !== c)
 u === i && l.Z.selectParticipant(r, null);

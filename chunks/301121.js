@@ -19,8 +19,8 @@ var n, a, i = t(735250),
   C = t(409700),
   m = t(809206),
   A = t(230711),
-  g = t(241420),
-  O = t(600164),
+  O = t(241420),
+  g = t(600164),
   h = t(651530),
   p = t(163268),
   R = t(294602),
@@ -98,9 +98,9 @@ children: [
     guildId: t.id,
     onChange: n
   }),
-  (0, i.jsx)(g.ConnectedPrivacySettings, {
+  (0, i.jsx)(O.ConnectedPrivacySettings, {
     guild: t,
-    ingress: g.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
+    ingress: O.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
   })
 ]
   });
@@ -786,7 +786,7 @@ return a && null != n && (e = (0, i.jsx)(T.Card, {
       date: E()(n.created_at).add(ea.eBq, 'days').format('MMMM Do YYYY')
     })
   })
-}), o = null), null != o && (o = (0, i.jsx)(O.Z, {
+}), o = null), null != o && (o = (0, i.jsx)(g.Z, {
   children: o
 })), (0, i.jsxs)(r.Fragment, {
   children: [

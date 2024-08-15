@@ -15,8 +15,8 @@ var r, i, a = n(735250),
   f = n(477690),
   h = n(481060),
   p = n(80932),
-  m = n(410575),
-  I = n(2052),
+  I = n(410575),
+  m = n(2052),
   T = n(100527),
   g = n(906732),
   S = n(243778),
@@ -116,8 +116,8 @@ let {
 ]), {
   gridDispatch: f,
   getItemProps: h,
-  getRowProps: m,
-  gridContainerProps: I,
+  getRowProps: I,
+  gridContainerProps: m,
   handleGridContainerKeyDown: T,
   isUsingKeyboardNavigation: g
 } = (0, y.VO)({
@@ -143,8 +143,8 @@ return s.useEffect(() => O.kJ.useStore.subscribe(e => {
   });
 }, e => e.inspectedExpressionPosition), [f]), {
   getItemProps: h,
-  getRowProps: m,
-  gridContainerProps: I,
+  getRowProps: I,
+  gridContainerProps: m,
   handleGridContainerKeyDown: T,
   isUsingKeyboardNavigation: g
 };
@@ -200,8 +200,8 @@ t.Z = s.memo(s.forwardRef(function(e, t) {
   className: ef,
   headerClassName: eh,
   analyticsOverride: ep = ed,
-  searchProps: em = {},
-  wrapper: eI,
+  searchProps: eI = {},
+  wrapper: em,
   shouldHidePickerActions: eT = !1,
   messageId: eg,
   renderHeader: eS,
@@ -212,7 +212,7 @@ t.Z = s.memo(s.forwardRef(function(e, t) {
   onKeyDown: ev,
   autoFocus: eO = !0,
   accessory: eR
-} = em,
+} = eI,
 eC = (0, _.e7)([U.ZP], () => null != c ? U.ZP.getDefaultChannel(c) : null, [c]),
 [ey, eD] = s.useState(null),
 eL = s.useRef(''),
@@ -230,7 +230,7 @@ onPickerOpen: e5
   }));
   let {
 location: eF
-  } = (0, I.O)(), {
+  } = (0, m.O)(), {
 page: eV,
 section: eH,
 object: eZ,
@@ -384,7 +384,7 @@ eq,
 ez,
 o
   ]);
-  let tr = null != eI ? eI : p ? 'div' : h.Dialog,
+  let tr = null != em ? em : p ? 'div' : h.Dialog,
 ti = null != eJ;
   if ((null == ey ? void 0 : ey.type) === W.Bg.PREMIUM) {
 let e = M.p.NONE;
@@ -427,7 +427,7 @@ let e = M.p.NONE;
 }),
 ts = [];
   o === ee.Hz.REACTION && ts.push(E.z.SUPER_REACTIONS_NITRO_MARKETING), !A.ZP.hasFavoriteEmojis(ew) && ts.push(E.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
-  let to = (0, a.jsx)(m.Z, {
+  let to = (0, a.jsx)(I.Z, {
 ...ej,
 children: (0, a.jsxs)(tr, {
   id: X.cZ,

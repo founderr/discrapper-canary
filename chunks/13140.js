@@ -3,10 +3,10 @@ n.d(t, {
 return O;
   },
   C$: function() {
-return I;
+return m;
   },
   H9: function() {
-return m;
+return I;
   },
   Kd: function() {
 return v;
@@ -45,7 +45,7 @@ return c.CgE.WINDOWS;
 return c.CgE.BROWSER;
 }
 
-function m(e) {
+function I(e) {
   let [, t, n] = e;
   switch (n) {
 case c.CgE.LINUX:
@@ -61,7 +61,7 @@ default:
   }
 }
 
-function I(e) {
+function m(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p(),
 n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.MoX.KEYBOARD_KEY;
   switch (n) {
@@ -200,7 +200,7 @@ altKey: !1,
 ctrlKey: !1
   };
   return null == e ? [] : e.reduce((e, n) => {
-let r = m(n),
+let r = I(n),
   i = {
     ...t
   };
@@ -212,7 +212,7 @@ if (null == r)
 if (A.test(r))
   return t[r + 'Key'] = !0, e.map(e => (e[r + 'Key'] = !0, e));
 {
-  let t = I(r, c.CgE.BROWSER);
+  let t = m(r, c.CgE.BROWSER);
   return null != t && (i.keyCode = t), e.push(i), e;
 }
   }, []);
@@ -222,7 +222,7 @@ function v(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p(),
 n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.MoX.KEYBOARD_KEY;
   return e.replace(/numpad plus/i, '').replace(/NUMPAD \+/i, 'numpad plus').replace(/mod/i, o.Z.modKey).split('+').map(e => e.trim().replace('plus', '+')).reduce((e, r) => {
-let i = I(S(r), t, n);
+let i = m(S(r), t, n);
 return null != i && e.push([
   n,
   i,
@@ -237,7 +237,7 @@ r = e.map(e => {
   let [t, n, r] = e;
   if (t === c.MoX.KEYBOARD_KEY || t === c.MoX.KEYBOARD_MODIFIER_KEY) {
     var i;
-    return null !== (i = m(null != r ? [
+    return null !== (i = I(null != r ? [
       t,
       n,
       r

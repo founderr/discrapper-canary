@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(452634),
   h = n(620662),
   p = n(841784),
-  m = n(275920),
-  I = n(906732),
+  I = n(275920),
+  m = n(906732),
   T = n(835473),
   g = n(592745),
   S = n(592125),
@@ -49,7 +49,7 @@ onClose: F
   } = e, {
 analyticsLocations: V,
 newestAnalyticsLocation: H
-  } = (0, I.ZP)(), [Z] = (0, T.Z)([null == k ? void 0 : k.application_id]), Y = (0, p.Z)(k), j = null == k ? void 0 : k.application_id, W = null == k ? void 0 : k.session_id, K = (0, f.Z)({
+  } = (0, m.ZP)(), [Z] = (0, T.Z)([null == k ? void 0 : k.application_id]), Y = (0, p.Z)(k), j = null == k ? void 0 : k.application_id, W = null == k ? void 0 : k.session_id, K = (0, f.Z)({
 activity: k,
 userId: t.id,
 channelId: void 0
@@ -117,7 +117,7 @@ if (X && null != j && null != W) {
     messageId: null,
     intent: x.Ws.PLAY,
     embedded: Y
-  }), (0, m.Z)({
+  }), (0, I.Z)({
     type: w.q5t.JOIN,
     userId: t.id,
     partyId: null == k ? void 0 : null === (e = k.party) || void 0 === e ? void 0 : e.id,

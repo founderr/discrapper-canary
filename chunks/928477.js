@@ -33,8 +33,8 @@ var r, i, a = n(470079),
   f = n(957730),
   h = n(467798),
   p = n(592125),
-  m = n(703558),
-  I = n(375954),
+  I = n(703558),
+  m = n(375954),
   T = n(300429),
   g = n(70956),
   S = n(630388),
@@ -64,7 +64,7 @@ function b(e, t) {
 
 function M(e, t) {
   var n, r, i, a, s, o, l;
-  let u = null == t ? null : I.Z.getMessage(e.id, t),
+  let u = null == t ? null : m.Z.getMessage(e.id, t),
 c = null !== (s = null == u ? void 0 : null === (r = u.embeds) || void 0 === r ? void 0 : null === (n = r[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== s ? s : '',
 d = null !== (o = null == u ? void 0 : null === (a = u.poll) || void 0 === a ? void 0 : null === (i = a.question) || void 0 === i ? void 0 : i.text) && void 0 !== o ? o : '';
   if ('' !== c)
@@ -107,10 +107,10 @@ useDefaultThreadName: _,
 uploadHandler: E
   } = e;
   return a.useCallback(async (e, a, h) => {
-var I;
+var m;
 let T = null == n,
   g = L(r, i),
-  S = null !== (I = r.name) && void 0 !== I ? I : '';
+  S = null !== (m = r.name) && void 0 !== m ? m : '';
 if ('' === S && _) {
   let e = M(t, n);
   S = '' !== e ? e : y.Z.Messages.THREAD;
@@ -129,14 +129,14 @@ let v = (0, N.WD)(t),
       }
     });
   });
-R !== O && (u.Z.clearDraft(t.id, m.d.ThreadSettings), u.Z.clearDraft(t.id, m.d.FirstThreadMessage), null == l || l(R), (T || e.length > 0 || null != a && a.length > 0 || null != h && h.length > 0) && function(e, t, n, r, i) {
+R !== O && (u.Z.clearDraft(t.id, I.d.ThreadSettings), u.Z.clearDraft(t.id, I.d.FirstThreadMessage), null == l || l(R), (T || e.length > 0 || null != a && a.length > 0 || null != h && h.length > 0) && function(e, t, n, r, i) {
   if (null != i && null != r && r.length > 0)
     i(e, r, t, n);
   else if (null != n && n.length > 0)
     c.Z.sendStickers(e.id, n, t);
   else
     c.Z.sendMessage(e.id, f.ZP.parse(e, t));
-}(R, e, a, h, E)), d.Z.clearAll(t.id, m.d.FirstThreadMessage);
+}(R, e, a, h, E)), d.Z.clearAll(t.id, I.d.FirstThreadMessage);
   }, [
 t,
 n,
@@ -174,7 +174,7 @@ let c = 0,
   [_, f] = (0, h.Z)(e);
 _ && (e = f, c = (0, S.pj)(c, C.iLy.SUPPRESS_NOTIFICATIONS));
 let p = (0, N.WD)(t, null),
-  I = C.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
+  m = C.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
   T = {
     name: n,
     auto_archive_duration: p,
@@ -185,11 +185,11 @@ let p = (0, N.WD)(t, null),
       flags: 0 !== c ? c : void 0
     }
   },
-  g = await x(t, () => null != l && l.length > 0 ? o(I, T, l) : s.tn.post({
-    url: I,
+  g = await x(t, () => null != l && l.length > 0 ? o(m, T, l) : s.tn.post({
+    url: m,
     body: T
   }));
-return u.Z.clearDraft(t.id, m.d.ThreadSettings), u.Z.clearDraft(t.id, m.d.FirstThreadMessage), d.Z.clearAll(t.id, m.d.FirstThreadMessage), (0, E.Je)({
+return u.Z.clearDraft(t.id, I.d.ThreadSettings), u.Z.clearDraft(t.id, I.d.FirstThreadMessage), d.Z.clearAll(t.id, I.d.FirstThreadMessage), (0, E.Je)({
   guildId: t.guild_id,
   channelId: t.id,
   postId: g.id

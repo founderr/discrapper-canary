@@ -16,12 +16,12 @@ iconType: d,
 onMouseEnter: _,
 onMouseLeave: E,
 ...f
-  } = e, [h, p] = i.useState(!1), m = i.useCallback(e => {
+  } = e, [h, p] = i.useState(!1), I = i.useCallback(e => {
 p(!0), null == _ || _(e);
   }, [
 p,
 _
-  ]), I = i.useCallback(e => {
+  ]), m = i.useCallback(e => {
 p(!1), null == E || E(e);
   }, [
 p,
@@ -37,8 +37,8 @@ className: s()(n, {
   [c.wrapper]: !0,
   interactive: f.onClick
 }),
-onMouseEnter: m,
-onMouseLeave: I,
+onMouseEnter: I,
+onMouseLeave: m,
 style: T,
 tabIndex: null != f.onClick ? 0 : -1,
 children: null != d ? (0, r.jsx)(u.Z, {

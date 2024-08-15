@@ -25,7 +25,7 @@ className: f
   } = e, h = u.ZP.getName(n, i, t), {
 trackUserProfileAction: p
   } = (0, c.KZ)(), {
-newestAnalyticsLocation: m
+newestAnalyticsLocation: I
   } = (0, l.ZP)();
   return (0, r.jsxs)('div', {
 className: a()(_.container, f),
@@ -51,7 +51,7 @@ children: [
             userId: t.id,
             friendToken: E,
             context: {
-              location: m
+              location: I
             }
           });
         },
@@ -66,7 +66,7 @@ children: [
           p({
             action: 'IGNORE_FRIEND_REQUEST'
           }), o.Z.cancelFriendRequest(t.id, {
-            location: m
+            location: I
           });
         },
         children: d.Z.Messages.FRIEND_REQUEST_IGNORE

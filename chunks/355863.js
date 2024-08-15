@@ -9,9 +9,9 @@ var a, s, o, l = n(392711),
   f = n(131792),
   h = n(252982),
   p = n(434529),
-  m = n(981631);
+  I = n(981631);
 
-function I(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -22,7 +22,7 @@ writable: !0
 (o = a || (a = {})).REQUIRED = 'REQUIRED', o.OPTIONAL = 'OPTIONAL', o.OPTIONAL_DEFAULT = 'OPTIONAL_DEFAULT';
 let T = 'migrated',
   g = {
-[m.Odu.GUILDS]: {
+[I.Odu.GUILDS]: {
   minSize: {
     width: 312,
     height: 300
@@ -45,7 +45,7 @@ let T = 'migrated',
     pinned: !1
   }
 },
-[m.Odu.TEXT]: {
+[I.Odu.TEXT]: {
   minSize: {
     width: 430,
     height: 300
@@ -68,7 +68,7 @@ let T = 'migrated',
     pinned: !0
   }
 },
-[m.Odu.VOICE]: {
+[I.Odu.VOICE]: {
   minSize: {
     width: 272,
     height: 100
@@ -91,7 +91,7 @@ let T = 'migrated',
     pinned: !0
   }
 },
-[m.Odu.GUILDS_TEXT]: {
+[I.Odu.GUILDS_TEXT]: {
   minSize: {
     height: 300,
     width: 610
@@ -235,7 +235,7 @@ return u().forEach(this.getRegisteredWidgets(), (n, r) => {
 }), t;
   }
 }
-I(N, 'displayName', 'LayoutStore'), I(N, 'persistKey', 'LayoutStore'), I(N, 'migrations', [
+m(N, 'displayName', 'LayoutStore'), m(N, 'persistKey', 'LayoutStore'), m(N, 'migrations', [
   () => {
 let {
   pinnedWidgets: e,
@@ -294,7 +294,7 @@ return {
 let {
   layouts: t,
   widgets: n
-} = e, r = new Set(Object.keys(m.Odu)), i = Array.from(n).filter(e => {
+} = e, r = new Set(Object.keys(I.Odu)), i = Array.from(n).filter(e => {
   let [t] = e;
   return !r.has(t);
 }), a = Array.from(t).filter(e => {
@@ -308,7 +308,7 @@ return a.forEach(e => {
         let [r, i] = n;
         return r === e && i.layoutId === t;
       });
-      return null != n && (null == a && n[1].type === m.Odu.VOICE && (a = n[0]), null == r && n[1].type === m.Odu.TEXT && (r = n[1].pinned), null != r && null != a || void 0);
+      return null != n && (null == a && n[1].type === I.Odu.VOICE && (a = n[0]), null == r && n[1].type === I.Odu.TEXT && (r = n[1].pinned), null != r && null != a || void 0);
     }), r || null == a)
     return;
   let s = (0, c.Z)();
@@ -318,8 +318,8 @@ return a.forEach(e => {
   ], i.push([
     s,
     {
-      ...A(m.Odu.GUILDS_TEXT),
-      type: m.Odu.GUILDS_TEXT,
+      ...A(I.Odu.GUILDS_TEXT),
+      type: I.Odu.GUILDS_TEXT,
       id: s,
       layoutId: t,
       zIndex: 2

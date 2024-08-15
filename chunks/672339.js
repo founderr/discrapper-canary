@@ -28,7 +28,7 @@ n = await t.blob();
   return new Uint8ClampedArray(await n.arrayBuffer());
 }
 
-function m(e, t, n, r, i) {
+function I(e, t, n, r, i) {
   (0, u.RI)({
 [e]: {
   graph: n,
@@ -38,13 +38,13 @@ function m(e, t, n, r, i) {
 }
   });
 }
-async function I(e, t, n) {
+async function m(e, t, n) {
   var r, s;
   let l, c = !1;
   if (null == n)
-return m(e, t, a.zZ.NONE);
+return I(e, t, a.zZ.NONE);
   if (n === f.f7)
-return m(e, t, a.zZ.BACKGROUND_BLUR);
+return I(e, t, a.zZ.BACKGROUND_BLUR);
   if ('string' == typeof n || 'number' == typeof n) {
 ;
 let e = (0, _.Z)()[n];
@@ -84,7 +84,7 @@ try {
       }, n.onerror = e => t(e), n.src = s;
     })),
     r = c ? await p(l) : void 0;
-  m(e, t, a.zZ.BACKGROUND_REPLACEMENT, n, r);
+  I(e, t, a.zZ.BACKGROUND_REPLACEMENT, n, r);
 } catch (e) {
   (0, u.Nm)();
 }
@@ -94,7 +94,7 @@ async function T(e, t) {
 track: n = !0,
 location: r
   } = t;
-  await I(a.TO.CAMERA_BACKGROUND_LIVE, {
+  await m(a.TO.CAMERA_BACKGROUND_LIVE, {
 type: a.W$.INPUT_DEVICE
   }, e), n && (0, d.Bh)(e, r, 'Enabled');
 }
@@ -103,7 +103,7 @@ async function g(e, t, n) {
 track: r = !0,
 location: i
   } = n;
-  (0, u.GS)(), await I(a.TO.CAMERA_BACKGROUND_PREVIEW, {
+  (0, u.GS)(), await m(a.TO.CAMERA_BACKGROUND_PREVIEW, {
 type: a.W$.STREAM,
 streamId: t
   }, e), r && (0, d.Bh)(e, i, 'Preview');

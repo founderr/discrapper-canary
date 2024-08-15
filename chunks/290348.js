@@ -24,13 +24,13 @@ return z;
 return U;
   },
   R7: function() {
-return B;
+return F;
   },
   TT: function() {
 return V;
   },
   UE: function() {
-return j;
+return w;
   },
   XZ: function() {
 return W;
@@ -195,16 +195,16 @@ function G(e, n) {
   let t = (0, m.Z)(n, e);
   return M(e, 'channelAccessFormat', r.useMemo(() => null == t ? h.I.SOME_CHANNELS_ACCESS : (0, C.MT)(t) ? h.I.ALL_CHANNELS_ACCESS : h.I.SOME_CHANNELS_ACCESS, [t]));
 }
-let w = [];
+let j = [];
 
-function j(e) {
-  let n = O(e, e => null == e ? w : e.role_benefits.benefits.filter(I.rC));
+function w(e) {
+  let n = O(e, e => null == e ? j : e.role_benefits.benefits.filter(I.rC));
   return M(e, 'channelBenefits', n);
 }
-let F = [];
+let B = [];
 
-function B(e) {
-  let n = O(e, e => null == e ? F : e.role_benefits.benefits.filter(I.lL));
+function F(e) {
+  let n = O(e, e => null == e ? B : e.role_benefits.benefits.filter(I.lL));
   return M(e, 'intangibleBenefits', n);
 }
 let k = new Set();

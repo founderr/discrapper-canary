@@ -22,7 +22,7 @@ var n = t(735250),
   m = t(989374),
   A = t(224499);
 
-function g(e) {
+function O(e) {
   let {
 contents: s,
 content: t,
@@ -46,14 +46,14 @@ children: (0, n.jsx)(d.FormSwitch, {
   });
 }
 
-function O(e) {
+function g(e) {
   let {
 items: s,
 dismissedContents: t,
 handleChange: a
   } = e;
   return (0, n.jsx)(n.Fragment, {
-children: s.filter(e => isNaN(Number(e))).map(e => (0, n.jsx)(g, {
+children: s.filter(e => isNaN(Number(e))).map(e => (0, n.jsx)(O, {
   contents: t,
   content: e,
   onChange: a
@@ -72,7 +72,7 @@ function h() {
   dailyCapOverridden: S.Z.dailyCapOverridden
 })),
 [E, C] = a.useState(''),
-g = null !== (e = (0, o.e7)([I.Z], () => {
+O = null !== (e = (0, o.e7)([I.Z], () => {
   var e;
   return null === (e = I.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
 })) && void 0 !== e ? e : new Uint8Array(),
@@ -170,9 +170,9 @@ children: [
               children: 'Recently Shown'
             })
           }),
-          (0, n.jsx)(O, {
+          (0, n.jsx)(g, {
             items: x,
-            dismissedContents: g,
+            dismissedContents: O,
             handleChange: R
           })
         ]
@@ -185,9 +185,9 @@ children: [
               children: 'Recent Overrides'
             })
           }),
-          (0, n.jsx)(O, {
+          (0, n.jsx)(g, {
             items: M,
-            dismissedContents: g,
+            dismissedContents: O,
             handleChange: R
           })
         ]
@@ -198,9 +198,9 @@ children: [
           children: 'Available Dismissible Contents'
         })
       }),
-      (0, n.jsx)(O, {
+      (0, n.jsx)(g, {
         items: f,
-        dismissedContents: g,
+        dismissedContents: O,
         handleChange: R
       })
     ]

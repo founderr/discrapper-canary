@@ -23,18 +23,18 @@ className: E,
 selectable: f = !1,
 onFocus: h,
 onBlur: p,
-onMouseOver: m,
-onMouseLeave: I,
+onMouseOver: I,
+onMouseLeave: m,
 ...T
   } = e, [g, S] = i.useState(!1), A = i.useCallback(() => {
 S(!0), null == h || h();
   }, [h]), N = i.useCallback(() => {
 S(!1), null == p || p();
   }, [p]), v = i.useCallback(() => {
-S(!0), null == m || m();
-  }, [m]), O = i.useCallback(() => {
-S(!1), null == I || I();
-  }, [I]), R = i.useMemo(() => {
+S(!0), null == I || I();
+  }, [I]), O = i.useCallback(() => {
+S(!1), null == m || m();
+  }, [m]), R = i.useMemo(() => {
 if (t.type === u.Qi.APPLICATION) {
   var e;
   return l.ZP.getApplicationIconURL({

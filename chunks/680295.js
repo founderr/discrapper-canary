@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(142145),
   h = n(710867),
   p = n(312904),
-  m = n(186917),
-  I = n(360850);
+  I = n(186917),
+  m = n(360850);
 let T = e => {
 let {
   bannerAdjustment: t = 0,
@@ -28,7 +28,7 @@ let {
   useOpacityOnHover: l = !0,
   autoPlay: u = !0,
   restartMethod: h,
-  urlQueryString: m,
+  urlQueryString: I,
   profileEffectConfig: T,
   noBorderRadius: g = !1,
   introDelay: S = c.lG
@@ -72,11 +72,11 @@ return i.useEffect(() => {
   h
 ]), (0, r.jsx)('div', {
   ref: A,
-  className: s()(I.profileEffects, {
-    [I.hovered]: o && l
+  className: s()(m.profileEffects, {
+    [m.hovered]: o && l
   }),
   children: (0, r.jsx)('div', {
-    className: g ? I.innerNoRadius : I.inner,
+    className: g ? m.innerNoRadius : m.inner,
     children: N.map((e, i) => {
       if (!U.current && T.animationType === d.Q.PERSISTENT && null != T.staticFrameSrc && 0 === i && !0 === u) {
         var a, s, o, l;
@@ -84,7 +84,7 @@ return i.useEffect(() => {
           staticFrameSrc: n
         } = T;
         return (0, r.jsx)('img', {
-          className: I.effect,
+          className: m.effect,
           style: {
             top: null !== (o = null === (a = e.position) || void 0 === a ? void 0 : a.y) && void 0 !== o ? o : 0 - t,
             left: null !== (l = null === (s = e.position) || void 0 === s ? void 0 : s.x) && void 0 !== l ? l : 0
@@ -101,7 +101,7 @@ return i.useEffect(() => {
         accessibilityLabel: D,
         hasPlayedThrough: w,
         setHasPlayedThrough: x,
-        urlQueryString: m,
+        urlQueryString: I,
         maxLoops: n,
         loopEnd: C,
         bannerAdjustment: t
@@ -124,14 +124,14 @@ let {
   accessibilityLabel: d
 } = t;
 return (0, r.jsx)('div', {
-  className: s()(I.profileEffects, {
-    [I.hovered]: o && l
+  className: s()(m.profileEffects, {
+    [m.hovered]: o && l
   }),
   children: (0, r.jsx)('div', {
-    className: a ? I.innerNoRadius : I.inner,
+    className: a ? m.innerNoRadius : m.inner,
     children: (0, r.jsx)('img', {
       src: n && !o ? c : u,
-      className: I.effect,
+      className: m.effect,
       style: {
         top: 0 - i
       },
@@ -146,7 +146,7 @@ n = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
 [a, s] = i.useState(!1),
 {
   preset: c
-} = (0, m.Z)(e.profileEffectId, () => s(!1)),
+} = (0, I.Z)(e.profileEffectId, () => s(!1)),
 _ = (0, E.Cc)(null == c ? void 0 : c.config);
   return ((0, E.qB)(_), null != c && null != _ && (t || e.shopPreview || c.config.animationType !== d.Q.INTERMITTENT)) ? !t && e.shopPreview || !t && c.config.animationType === d.Q.PERSISTENT || n || !1 === e.autoPlay && !1 === e.isHovering ? (0, r.jsx)(g, {
 useThumbnail: e.useThumbnail,

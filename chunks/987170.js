@@ -78,7 +78,7 @@ if (null != n) {
 }
   }
 
-  function m(t, n) {
+  function I(t, n) {
 let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
   i = null != r.disable && r.disable,
   a = c(e.kind, e.id, t),
@@ -105,7 +105,7 @@ useExperiment: function(t) {
     E = !1 !== o.autoTrackExposure,
     h = c(e.kind, e.id, t),
     p = null == o.trackExposureOptions ? void 0 : (0, i.Z)(null !== (a = o.trackExposureOptions) && void 0 !== a ? a : {}),
-    I = null !== (s = null == h ? void 0 : h.triggerDebuggingEnabled) && void 0 !== s && s,
+    m = null !== (s = null == h ? void 0 : h.triggerDebuggingEnabled) && void 0 !== s && s,
     [
       [T, g, S], A
     ] = (0, r.useState)(() => {
@@ -118,7 +118,7 @@ useExperiment: function(t) {
     }),
     N = (0, i.Z)(t);
   return (0, r.useEffect)(() => {
-    if (!l && (!!E || !!I))
+    if (!l && (!!E || !!m))
       f(N, p, !1 === E);
   }, [
     l,
@@ -127,8 +127,8 @@ useExperiment: function(t) {
     p,
     g,
     S,
-    I
-  ]), (0, r.useEffect)(() => m(N, (e, t, n) => {
+    m
+  ]), (0, r.useEffect)(() => I(N, (e, t, n) => {
     A(r => r[0] === e && r[1] === t && r[2] === n ? r : [
       e,
       t,
@@ -141,7 +141,7 @@ useExperiment: function(t) {
     N
   ]), T;
 },
-subscribe: m,
+subscribe: I,
 trackExposure: h,
 getCurrentConfig: function(t) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {

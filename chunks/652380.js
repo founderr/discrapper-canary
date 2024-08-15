@@ -17,8 +17,8 @@ var n = t(735250),
   C = t(478977),
   m = t(456799),
   A = t(210851),
-  g = t(602683),
-  O = t(916028),
+  O = t(602683),
+  g = t(916028),
   h = t(15033),
   p = t(899457),
   R = t(673105);
@@ -246,7 +246,7 @@ children: [
   }),
   (0, n.jsx)('div', {
     className: R.fields,
-    children: (0, n.jsx)(O.Z, {
+    children: (0, n.jsx)(g.Z, {
       onSelect: function(e) {
         if (B(e), null != e)
           o(e);
@@ -262,25 +262,25 @@ children: [
   (0, n.jsxs)('div', {
     className: R.fields,
     children: [
-      (0, n.jsx)(g.Z, {
+      (0, n.jsx)(O.Z, {
         title: 'Quest Name',
         assetKey: 'questName',
         onMessageChange: F,
         initialValue: r.config.messages.questName
       }),
-      (0, n.jsx)(g.Z, {
+      (0, n.jsx)(O.Z, {
         title: 'Game Title',
         assetKey: 'gameTitle',
         onMessageChange: F,
         initialValue: r.config.messages.gameTitle
       }),
-      (0, n.jsx)(g.Z, {
+      (0, n.jsx)(O.Z, {
         title: 'Reward Name',
         assetKey: 'rewardName',
         onMessageChange: y,
         initialValue: U.name
       }),
-      (0, n.jsx)(g.Z, {
+      (0, n.jsx)(O.Z, {
         title: 'Reward Name With Article',
         assetKey: 'rewardNameWithArticle',
         onMessageChange: y,

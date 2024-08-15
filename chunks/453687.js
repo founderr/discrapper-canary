@@ -60,9 +60,9 @@ E = e.attachments.length > 0,
 f = e.stickerItems.length > 0,
 h = e.codedLinks.length > 0,
 p = e.hasFlag(a.iLy.HAS_THREAD),
-m = _ || E || f || h || p || e.type === a.uaV.THREAD_CREATED,
-I = _ && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
-T = e.type !== a.uaV.DEFAULT || !I && '' !== e.content,
+I = _ || E || f || h || p || e.type === a.uaV.THREAD_CREATED,
+m = _ && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
+T = e.type !== a.uaV.DEFAULT || !m && '' !== e.content,
 g = (0, i.Z)(e),
 S = !g && (null == n ? void 0 : n.hasTimestamp) !== !1,
 A = l(e, t),
@@ -72,7 +72,7 @@ v = g ? '' : ''.concat(c ? N : A, ' ').concat(r.Z0);
 let t = s(e);
 v += ' '.concat(t);
   }
-  if (m) {
+  if (I) {
 let t = d(e);
 v += ' '.concat(t);
   }

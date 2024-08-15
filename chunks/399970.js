@@ -31,7 +31,7 @@ authorizing: m
 authorizedApplicationId: I.Z.testModeApplicationId,
 authorizationError: I.Z.error,
 authorizing: I.Z.isFetchingAuthorization
-  })), [A, g] = r.useState(null != n ? n : ''), [O, h] = r.useState('8080'), [p, R] = r.useState('localhost'), x = (0, u.Dt)(), M = C.test(A);
+  })), [A, O] = r.useState(null != n ? n : ''), [g, h] = r.useState('8080'), [p, R] = r.useState('localhost'), x = (0, u.Dt)(), M = C.test(A);
   async function f() {
 d.q$();
 let e = function(e, s, t) {
@@ -43,13 +43,13 @@ let e = function(e, s, t) {
     case 'proxy':
       return (0, _.Z)(t);
   }
-}(p, O, A);
+}(p, g, A);
 null != await d.Wt(A, e) && s();
   }
   r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
   let D = null != n && n === A,
 P = D ? function() {
-  d.mc(), g(''), R(null);
+  d.mc(), O(''), R(null);
 } : f;
   return (0, i.jsxs)(l.ModalRoot, {
 'aria-labelledby': x,
@@ -99,7 +99,7 @@ children: [
                 maxLength: 19,
                 error: M ? null : T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
                 onChange: function(e) {
-                  g(e);
+                  O(e);
                 },
                 disabled: m
               })
@@ -132,7 +132,7 @@ children: [
               title: T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
               required: !0,
               children: (0, i.jsx)(l.TextInput, {
-                value: O,
+                value: g,
                 maxLength: 5,
                 onChange: e => h(e),
                 disabled: m
@@ -141,7 +141,7 @@ children: [
             (0, i.jsx)(l.Button, {
               submitting: m,
               type: 'submit',
-              disabled: !M || 0 === A.length || 'localhost' === p && 0 === O.length,
+              disabled: !M || 0 === A.length || 'localhost' === p && 0 === g.length,
               color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
               children: D ? T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
             })

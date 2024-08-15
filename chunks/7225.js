@@ -3,7 +3,7 @@ t.r(n), t.d(n, {
 return L;
   }
 }), t(47120);
-var i, a, o = t(735250),
+var a, i, o = t(735250),
   r = t(470079),
   l = t(442837),
   s = t(481060),
@@ -24,9 +24,9 @@ function L(e) {
   let {
 onClose: n,
 transitionState: t,
-appId: i,
-onlySubscribeServerSubForGuildId: a
-  } = e, L = (0, l.e7)([d.Z], () => d.Z.getApplication(i), [i]), [S, g] = r.useState(() => d.Z.isFetchingApplication(i) ? {
+appId: a,
+onlySubscribeServerSubForGuildId: i
+  } = e, L = (0, l.e7)([d.Z], () => d.Z.getApplication(a), [a]), [S, g] = r.useState(() => d.Z.isFetchingApplication(a) ? {
 status: 1
   } : {
 status: 0
@@ -37,7 +37,7 @@ var e;
   r.useEffect(() => {
 0 === S.status && (g({
   status: 1
-}), c.Z.fetchApplication(i).then(() => {
+}), c.Z.fetchApplication(a).then(() => {
   g({
     status: 2
   });
@@ -48,15 +48,15 @@ var e;
   });
 }));
   }, [
-i,
+a,
 S.status
   ]);
   let {
 subs: v,
 otps: R,
 subscriptionGroupListing: x
-  } = (0, _.q)(i, a);
-  if ((0, f.FE)(i, null == L ? void 0 : L.primarySkuId, {
+  } = (0, _.q)(a, i);
+  if ((0, f.FE)(a, null == L ? void 0 : L.primarySkuId, {
   refetchOnMount: !0
 }), null == L)
 return null;
@@ -91,8 +91,8 @@ children: [
             color: s.ButtonColors.TRANSPARENT,
             'aria-label': m.Z.Messages.COPY_LINK,
             onClick: () => {
-              let e = ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(i, h.ApplicationDirectoryProfileSections.STORE));
-              (0, p.JG)(e), (0, s.showToast)((0, s.createToast)(m.Z.Messages.COPIED_LINK, s.ToastType.SUCCESS)), (0, C.X)(i, C.B.STORE_MODAL);
+              let e = ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(a, h.ApplicationDirectoryProfileSections.STORE));
+              (0, p.JG)(e), (0, s.showToast)((0, s.createToast)(m.Z.Messages.COPIED_LINK, s.ToastType.SUCCESS)), (0, C.X)(a, C.B.STORE_MODAL);
             },
             children: (0, o.jsx)(s.LinkIcon, {
               size: 'custom',
@@ -117,7 +117,7 @@ children: [
     children: (0, o.jsx)(b.AF, {
       app: L,
       subscriptionGroupListing: x,
-      onlySubscribeServerSubForGuildId: a,
+      onlySubscribeServerSubForGuildId: i,
       subscriptionListings: v,
       otpListings: R
     })
@@ -129,4 +129,4 @@ children: [
 ]
   });
 }
-(a = i || (i = {}))[a.NONE = 0] = 'NONE', a[a.FETCHING = 1] = 'FETCHING', a[a.FETCHED = 2] = 'FETCHED', a[a.ERROR = 3] = 'ERROR';
+(i = a || (a = {}))[i.NONE = 0] = 'NONE', i[i.FETCHING = 1] = 'FETCHING', i[i.FETCHED = 2] = 'FETCHED', i[i.ERROR = 3] = 'ERROR';

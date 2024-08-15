@@ -30,7 +30,7 @@ transitionState: s,
 icons: E,
 fileSize: f,
 onClose: h
-  } = e, p = (0, l.Dt)(), m = null != E ? E : d.J6;
+  } = e, p = (0, l.Dt)(), I = null != E ? E : d.J6;
   return i ? (0, r.jsx)(u.Z, {
 transitionState: s,
 onClose: h,
@@ -45,7 +45,7 @@ children: (0, r.jsx)('div', {
     className: _.inner,
     children: [
       (0, r.jsx)(c.Z, {
-        icons: m
+        icons: I
       }),
       (0, r.jsx)('div', {
         id: p,

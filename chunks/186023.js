@@ -17,8 +17,8 @@ modalProps: E,
 onSubmit: f,
 onNavigate: h,
 emailToken: p,
-isAuthenticated: m = !0
-  } = e, I = (0, o.Dt)(), {
+isAuthenticated: I = !0
+  } = e, m = (0, o.Dt)(), {
 nodes: T,
 root_node_id: g,
 success_node_id: S,
@@ -52,7 +52,7 @@ if (L([
 v(i);
   }, x = async e => {
 var r;
-let i = m ? await (0, u.ZD)(n, t, [
+let i = I ? await (0, u.ZD)(n, t, [
     ...D,
     e
   ]) : await (0, u.fw)(n, t, [
@@ -112,7 +112,7 @@ S
   ]);
   return (0, r.jsx)(a.ModalRoot, {
 transitionState: E.transitionState,
-'aria-labelledby': I,
+'aria-labelledby': m,
 children: (0, r.jsx)(a.Slides, {
   width: 440,
   activeSlide: N,

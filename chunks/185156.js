@@ -17,8 +17,8 @@ var n = i(735250),
   p = i(132871),
   m = i(147890),
   g = i(409425),
-  C = i(57716),
-  f = i(981631),
+  f = i(57716),
+  C = i(981631),
   x = i(689938),
   I = i(377351);
 
@@ -37,7 +37,7 @@ className: I.applicationCta,
 onClick: r,
 children: l
   }) : (0, n.jsx)(h.Z, {
-href: f.Z5c.APPLICATION_DIRECTORY_PROFILE(u),
+href: C.Z5c.APPLICATION_DIRECTORY_PROFILE(u),
 children: (0, n.jsx)(c.Button, {
   className: I.applicationCta,
   onClick: r,
@@ -105,7 +105,7 @@ collection: {
   title: r,
   application_directory_collection_items: c
 }
-  } = e, h = (0, C.Z)({
+  } = e, h = (0, f.Z)({
 collection: t
   }), [g, N] = a.useState(), v = (0, p.useApplicationDirectoryHistory)(e => e.guildId);
   return a.useEffect(() => {
@@ -134,7 +134,7 @@ children: (0, n.jsx)(d.Z, {
     let {
       application: a
     } = e;
-    null != a && u.default.track(f.rMx.APP_DIRECTORY_COLLECTION_SCROLLED, {
+    null != a && u.default.track(C.rMx.APP_DIRECTORY_COLLECTION_SCROLLED, {
       collection_id: i,
       offset: n,
       results: [a.id],
@@ -159,13 +159,13 @@ children: (0, n.jsx)(d.Z, {
       hash: a
     });
     if (l === s.C.APPLICATION && null != o) {
-      var C, I;
+      var f, I;
       return (0, n.jsx)(b, {
         collectionTitle: r,
         title: o.name,
-        description: null !== (I = null === (C = o.directory_entry) || void 0 === C ? void 0 : C.short_description) && void 0 !== I ? I : o.description,
+        description: null !== (I = null === (f = o.directory_entry) || void 0 === f ? void 0 : f.short_description) && void 0 !== I ? I : o.description,
         handleClick: () => {
-          u.default.track(f.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+          u.default.track(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
             collection_id: i,
             application_id: o.id,
             guild_id: v,
@@ -185,7 +185,7 @@ children: (0, n.jsx)(d.Z, {
         title: d,
         description: c,
         handleClick: () => {
-          u.default.track(f.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+          u.default.track(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
             collection_id: i,
             link: p,
             guild_id: v,

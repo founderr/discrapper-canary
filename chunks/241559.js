@@ -1,6 +1,6 @@
 n.d(t, {
   hB: function() {
-return m;
+return I;
   },
   lv: function() {
 return _;
@@ -12,7 +12,7 @@ return f;
 return p;
   },
   rX: function() {
-return I;
+return m;
   },
   xC: function() {
 return h;
@@ -91,7 +91,7 @@ return null != t && s.Z.can(c.Plq.MANAGE_GUILD, t);
   }, [e]);
 }
 
-function m(e, t, n) {
+function I(e, t, n) {
   return (0, i.e7)([
 s.Z,
 a.Z
@@ -105,7 +105,7 @@ n
   ]);
 }
 
-function I(e, t, n) {
+function m(e, t, n) {
   let r = a.Z.getGuild(e);
   return null != r && t && s.Z.canManageUser(c.Plq.BAN_MEMBERS, n, r);
 }

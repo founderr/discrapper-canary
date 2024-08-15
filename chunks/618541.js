@@ -15,10 +15,10 @@ if (null == r)
 return (0, c.K0)() + E.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(E.gg$.BRAINTREE, r);
   },
   open: e => {
-i = e, window.open(e), I.emitChange();
+i = e, window.open(e), m.emitChange();
   }
 });
-class m extends(a = u.ZP.Store) {
+class I extends(a = u.ZP.Store) {
   getClient() {
 return f;
   }
@@ -32,13 +32,13 @@ return p;
 return i;
   }
 }
-l = 'BraintreeStore', (o = 'displayName') in(s = m) ? Object.defineProperty(s, o, {
+l = 'BraintreeStore', (o = 'displayName') in(s = I) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : s[o] = l;
-let I = new m(d.Z, {
+let m = new I(d.Z, {
   BRAINTREE_CREATE_CLIENT_SUCCESS: function(e) {
 let {
   client: t
@@ -86,4 +86,4 @@ p = t;
 p = null;
   }
 });
-t.Z = I;
+t.Z = m;

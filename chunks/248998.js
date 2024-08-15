@@ -33,12 +33,12 @@ N = T && !r,
 C = r ? 'header-primary' : 'text-muted',
 m = r ? 'header-secondary' : 'text-muted',
 A = o()(t),
-g = null != S && r,
-O = g ? l.Clickable : 'div';
-  return (0, n.jsxs)(O, {
-className: i()(E.container, g && E.actionable),
+O = null != S && r,
+g = O ? l.Clickable : 'div';
+  return (0, n.jsxs)(g, {
+className: i()(E.container, O && E.actionable),
 onClick: () => {
-  g && S();
+  O && S();
 },
 children: [
   (0, n.jsx)('div', {

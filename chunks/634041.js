@@ -9,8 +9,8 @@ var r, i, a, s, o = n(442837),
   f = n(647177);
 let h = !1,
   p = null,
-  m = !1,
-  I = {};
+  I = !1,
+  m = {};
 
 function T(e) {
   var t;
@@ -22,7 +22,7 @@ return !1;
 }
 
 function g() {
-  p !== _.Z.getVoiceChannelId() && (m = !1), T() && (m = !0), p = _.Z.getVoiceChannelId();
+  p !== _.Z.getVoiceChannelId() && (I = !1), T() && (I = !0), p = _.Z.getVoiceChannelId();
 }
 class S extends(r = o.ZP.Store) {
   initialize() {
@@ -32,13 +32,13 @@ this.waitFor(c.Z, _.Z, d.Z), this.syncWith([
 ], g);
   }
   get videoFilterAssets() {
-return I;
+return m;
   }
   get hasBeenApplied() {
 return h;
   }
   get hasUsedBackgroundInCall() {
-return m;
+return I;
   }
 }
 s = 'VideoBackgroundStore', (a = 'displayName') in(i = S) ? Object.defineProperty(i, a, {
@@ -51,7 +51,7 @@ s = 'VideoBackgroundStore', (a = 'displayName') in(i = S) ? Object.definePropert
 let {
   assets: t
 } = e;
-I = t.reduce((e, t) => ({
+m = t.reduce((e, t) => ({
   ...e,
   [t.id]: t
 }), {});
@@ -60,8 +60,8 @@ I = t.reduce((e, t) => ({
 let {
   videoFilterAsset: t
 } = e;
-I = {
-  ...I,
+m = {
+  ...m,
   [t.id]: t
 };
   },
@@ -69,15 +69,15 @@ I = {
 let {
   videoFilterAsset: t
 } = e;
-I = {
-  ...I
-}, delete I[t.id];
+m = {
+  ...m
+}, delete m[t.id];
   },
   VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function(e) {
 let {
   backgroundOption: t
 } = e;
-T(t) && (m = !0);
+T(t) && (I = !0);
   },
   MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(e) {
 let {

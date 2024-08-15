@@ -15,6 +15,6 @@ h = (0, a.Z)(null !== (n = null !== (o = null !== (l = null !== (u = null == t ?
   if (!(h >= 0 && h <= 6))
 throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
   var p = (0, r.default)(e),
-m = p.getUTCDay();
-  return p.setUTCDate(p.getUTCDate() - ((m < h ? 7 : 0) + m - h)), p.setUTCHours(0, 0, 0, 0), p;
+I = p.getUTCDay();
+  return p.setUTCDate(p.getUTCDate() - ((I < h ? 7 : 0) + I - h)), p.setUTCHours(0, 0, 0, 0), p;
 }

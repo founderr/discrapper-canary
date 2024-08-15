@@ -17,7 +17,7 @@ reportId: n
   i.useEffect(() => {
 f(!p);
   }, [p]);
-  let m = i.useCallback(() => {
+  let I = i.useCallback(() => {
 f(!0), s.ZP.trackWithMetadata(c.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
   guild_id: t,
   report_id: n
@@ -28,14 +28,14 @@ n
   ]);
   if (null == h)
 return null;
-  let I = () => {
+  let m = () => {
 (0, a.openModal)(e => (0, r.jsx)(a.ConfirmModal, {
   header: d.Z.Messages.LEAVE_SERVER_TITLE.format({
     name: h.name
   }),
   confirmText: d.Z.Messages.LEAVE_SERVER,
   cancelText: d.Z.Messages.CANCEL,
-  onConfirm: m,
+  onConfirm: I,
   ...e,
   children: (0, r.jsx)(a.Text, {
     variant: 'text-md/normal',
@@ -76,7 +76,7 @@ children: [
         ]
       }),
       (0, r.jsx)(a.Button, {
-        onClick: () => I(),
+        onClick: () => m(),
         disabled: E,
         size: a.Button.Sizes.SMALL,
         color: a.Button.Colors.RED,

@@ -87,8 +87,8 @@ let t = e - 1721426,
   h = 2;
 e < o(_, E, 3, 1) ? h = 0 : l(E) && (h = 1);
 let p = Math.floor(((f + h) * 12 + 373) / 367),
-  m = e - o(_, E, p, 1) + 1;
-return new j(_, E, p, m);
+  I = e - o(_, E, p, 1) + 1;
+return new j(_, E, p, I);
   }
   toJulianDay(e) {
 return o(e.era, e.year, e.month, e.day);
@@ -231,13 +231,13 @@ function p(e, t) {
   return e.calendar.toJulianDay(e) - t.calendar.toJulianDay(t);
 }
 
-function m(e) {
+function I(e) {
   return 3600000 * e.hour + 60000 * e.minute + 1000 * e.second + e.millisecond;
 }
-let I = null;
+let m = null;
 
 function T() {
-  return null == I && (I = new Intl.DateTimeFormat().resolvedOptions().timeZone), I;
+  return null == m && (m = new Intl.DateTimeFormat().resolvedOptions().timeZone), m;
 }
 
 function g(e) {
@@ -623,7 +623,7 @@ return e = this, `${ H(e) }T${ t = e, `${ String(t.hour).padStart(2, '0') }:${ S
 let t = p(this, e);
 if (0 === t) {
   var n, r;
-  return n = this, r = L(e), m(n) - m(r);
+  return n = this, r = L(e), I(n) - I(r);
 }
 return t;
   }
@@ -978,14 +978,14 @@ function ep(e) {
   return 460322 + i[e - 1300];
 }
 
-function em(e, t) {
+function eI(e, t) {
   return (r[e - 1300] & 1 << 11 - (t - 1)) == 0 ? 29 : 30;
 }
 
-function eI(e, t) {
+function em(e, t) {
   let n = ep(e);
   for (let r = 1; r < t; r++)
-n += em(e, r);
+n += eI(e, r);
   return n;
 }
 
@@ -1011,20 +1011,20 @@ if (t < n || t > r)
       break;
     }
     if (r < i) {
-      let t = em(e, n);
+      let t = eI(e, n);
       for (n = 1; r > t;)
-        r -= t, t = em(e, ++n);
+        r -= t, t = eI(e, ++n);
       break;
     }
   }
-  return new j(this, e, n, t - eI(e, n) + 1);
+  return new j(this, e, n, t - em(e, n) + 1);
 }
   }
   toJulianDay(e) {
-return e.year < 1300 || e.year > 1600 ? super.toJulianDay(e) : 1948440 + eI(e.year, e.month) + (e.day - 1);
+return e.year < 1300 || e.year > 1600 ? super.toJulianDay(e) : 1948440 + em(e.year, e.month) + (e.day - 1);
   }
   getDaysInMonth(e) {
-return e.year < 1300 || e.year > 1600 ? super.getDaysInMonth(e) : em(e.year, e.month);
+return e.year < 1300 || e.year > 1600 ? super.getDaysInMonth(e) : eI(e.year, e.month);
   }
   getDaysInYear(e) {
 return e.year < 1300 || e.year > 1600 ? super.getDaysInYear(e) : eT(e.year);
@@ -1036,7 +1036,7 @@ if (super(), this.identifier = 'islamic-umalqura', !r && (r = new Uint16Array(Ui
   for (let t = 1300; t <= 1600; t++) {
     i[t - 1300] = e;
     for (let n = 1; n <= 12; n++)
-      e += em(t, n);
+      e += eI(t, n);
   }
 }
   }

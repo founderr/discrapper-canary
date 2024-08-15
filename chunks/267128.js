@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(245216),
   h = n(79390),
   p = n(869765),
-  m = n(403132),
-  I = n(378233),
+  I = n(403132),
+  m = n(378233),
   T = n(768581),
   g = n(55935),
   S = n(823379),
@@ -80,18 +80,18 @@ function M(e, t, n, i, a) {
   let d = (0, E.Z)(e),
 {
   trailingIconClass: p,
-  leadingIconClass: m,
+  leadingIconClass: I,
   iconSize: T
 } = a,
 g = null == t || '' === t || Array.isArray(t) && 0 === t.length,
-S = (0, I.cv)(d).length > 0,
+S = (0, m.cv)(d).length > 0,
 A = null != d.interaction,
 v = d.hasFlag(C.iLy.IS_VOICE_MESSAGE),
 O = d.isPoll(),
 R = d.type === C.uaV.POLL_RESULT;
   if ((0, _.Z)(e) && (c = (0, r.jsx)(f.Z, {
   size: 'custom',
-  className: m,
+  className: I,
   width: T,
   height: T
 })), n)
@@ -171,7 +171,7 @@ let {
   onContextMenu: f,
   onPopoutRequestClose: h
 } = e, {
-  analyticsLocations: m
+  analyticsLocations: I
 } = (0, d.ZP)(c.Z.AVATAR);
 if (a || n.state !== p.Y.LOADED || o)
   return (0, r.jsx)('div', {
@@ -197,7 +197,7 @@ if (n.message.type === C.uaV.POLL_RESULT)
     height: R.WW,
     size: 'custom'
   });
-let I = () => {
+let m = () => {
   var e, t, a, o, u;
   return e = n.message.author, t = l, a = i.guild_id, o = E, u = f, (0, r.jsx)('img', {
     alt: '',
@@ -215,19 +215,19 @@ let I = () => {
   });
 };
 return null != t && null != _ ? (0, r.jsx)(d.Gt, {
-  value: m,
+  value: I,
   children: (0, r.jsx)(u.Popout, {
     renderPopout: t,
     shouldShow: _,
     position: 'right',
     onRequestClose: h,
-    children: I
+    children: m
   })
 }) : (0, r.jsx)(d.Gt, {
-  value: m,
-  children: I()
+  value: I,
+  children: m()
 });
-  }(e, f), I = function(e, t) {
+  }(e, f), m = function(e, t) {
 let {
   baseMessage: n,
   channel: i,
@@ -241,7 +241,7 @@ return null == c || c.type === C.uaV.USER_JOIN || c.type === C.uaV.ROLE_SUBSCRIP
   message: c,
   channel: i,
   compact: !0,
-  withMentionPrefix: (0, m.Z)(n, c),
+  withMentionPrefix: (0, I.Z)(n, c),
   showPopout: s,
   renderPopout: t,
   onClick: o,
@@ -314,7 +314,7 @@ className: s()(D.repliedMessage, P),
 'aria-label': t,
 children: [
   h,
-  I,
+  m,
   N
 ]
   });

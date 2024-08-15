@@ -17,8 +17,8 @@ var n = t(735250),
   C = t(690221),
   m = t(346585),
   A = t(347649),
-  g = t(332473),
-  O = t(303172),
+  O = t(332473),
+  g = t(303172),
   h = t(921801),
   p = t(777036),
   R = t(484459),
@@ -122,7 +122,7 @@ return this.props.shouldRenderPomeloWarning ? (0, n.jsxs)(p.Z, {
     '',
     (0, n.jsx)(C.Z, {
       className: Y.noticeTextButton,
-      onClick: () => (0, O.Z)(y.Kq.USER_SETTINGS),
+      onClick: () => (0, g.Z)(y.Kq.USER_SETTINGS),
       children: V.Z.Messages.GET_STARTED
     })
   ]
@@ -346,7 +346,7 @@ s.Z = () => {
 s = (0, c.e7)([M.Z], () => M.Z.getBackupCodes()),
 t = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
 a = (0, c.e7)([b.Z], () => b.Z.theme),
-i = (0, g.b)(),
+i = (0, O.b)(),
 r = (0, A.CC)(),
 o = (0, c.e7)([L.default], () => L.default.locale);
   return (0, n.jsx)(H, {

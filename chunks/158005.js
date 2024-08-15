@@ -27,13 +27,13 @@ validationBehavior: h = 'aria'
   } = e, p = (0, o.Xe)({
 usage: 'search',
 sensitivity: 'base'
-  }), m = (0, i.useMemo)(() => c || new a.dp(t.collection, t.disabledKeys, null, p), [
+  }), I = (0, i.useMemo)(() => c || new a.dp(t.collection, t.disabledKeys, null, p), [
 c,
 t.collection,
 t.disabledKeys,
 p
   ]), {
-menuTriggerProps: I,
+menuTriggerProps: m,
 menuProps: T
   } = (0, u.u4)({
 isDisabled: d,
@@ -41,7 +41,7 @@ type: 'listbox'
   }, t, n), {
 typeSelectProps: g
   } = (0, a.ip)({
-keyboardDelegate: m,
+keyboardDelegate: I,
 selectionManager: t.selectionManager,
 onTypeSelect(e) {
   t.setSelectedKey(e);
@@ -65,7 +65,7 @@ errorMessage: e.errorMessage || A
   let y = (0, r.zL)(e, {
   labelable: !0
 }),
-D = (0, r.dG)(g, I, O),
+D = (0, r.dG)(g, m, O),
 L = (0, r.Me)();
   return _.set(t, {
 isDisabled: d,
@@ -86,13 +86,13 @@ triggerProps: (0, r.dG)(y, {
     switch (e.key) {
       case 'ArrowLeft': {
         e.preventDefault();
-        let n = null != t.selectedKey ? m.getKeyAbove(t.selectedKey) : m.getFirstKey();
+        let n = null != t.selectedKey ? I.getKeyAbove(t.selectedKey) : I.getFirstKey();
         n && t.setSelectedKey(n);
         break;
       }
       case 'ArrowRight': {
         e.preventDefault();
-        let n = null != t.selectedKey ? m.getKeyBelow(t.selectedKey) : m.getFirstKey();
+        let n = null != t.selectedKey ? I.getKeyBelow(t.selectedKey) : I.getFirstKey();
         n && t.setSelectedKey(n);
       }
     }

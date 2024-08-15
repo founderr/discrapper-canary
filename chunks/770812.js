@@ -18,8 +18,8 @@ var i = n(990547),
   f = n(687476),
   h = n(761966),
   p = n(981631),
-  m = n(176505),
-  I = n(689938),
+  I = n(176505),
+  m = n(689938),
   T = n(473146);
 let g = () => {
   let e = (0, l.ZP)();
@@ -45,10 +45,10 @@ properties: {
   });
   let A = (0, a.e7)([E.Z], () => E.Z.getGuild(n)),
 N = (0, a.e7)([f.Z], () => null != n && f.Z.getUserSubscriptionRoles(n).size > 0),
-v = N ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({
+v = N ? m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({
   serverName: null == A ? void 0 : A.name
 }),
-O = N ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
+O = N ? m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
   return (0, r.jsxs)('div', {
 className: T.container,
 children: [
@@ -66,7 +66,7 @@ children: [
         children: (0, r.jsx)(o.XSmallIcon, {
           size: 'xs',
           color: 'currentColor',
-          'aria-label': I.Z.Messages.CLOSE,
+          'aria-label': m.Z.Messages.CLOSE,
           className: T.closeButtonIcon
         })
       }),
@@ -82,7 +82,7 @@ children: [
         color: 'header-primary',
         variant: 'heading-lg/extrabold',
         className: T.header,
-        children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_TITLE
+        children: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_TITLE
       }),
       (0, r.jsx)(o.Spacer, {
         size: 4
@@ -98,7 +98,7 @@ children: [
       }),
       (0, r.jsx)(h.Z, {
         onClick: () => {
-          (0, _.uL)(p.Z5c.CHANNEL(n, m.oC.ROLE_SUBSCRIPTIONS), {
+          (0, _.uL)(p.Z5c.CHANNEL(n, I.oC.ROLE_SUBSCRIPTIONS), {
             sourceLocationStack: S
           });
         },

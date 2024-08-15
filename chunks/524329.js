@@ -3,16 +3,16 @@ E.d(_, {
 return N;
   },
   RM: function() {
-return A;
-  },
-  VP: function() {
-return r;
-  },
-  Xb: function() {
 return t;
   },
-  sm: function() {
+  VP: function() {
 return a;
+  },
+  Xb: function() {
+return A;
+  },
+  sm: function() {
+return r;
   },
   y0: function() {
 return n;
@@ -29,7 +29,7 @@ T.Z.dispatch({
   isLurking: _
 });
   },
-  A = async e => {
+  t = async e => {
 T.Z.dispatch({
   type: 'WELCOME_SCREEN_FETCH_START'
 });
@@ -48,15 +48,15 @@ try {
     type: 'WELCOME_SCREEN_FETCH_FAIL'
   });
 }
-  }, t = () => {
+  }, A = () => {
 T.Z.dispatch({
   type: 'WELCOME_SCREEN_SETTINGS_RESET'
 });
-  }, a = () => {
+  }, r = () => {
 T.Z.dispatch({
   type: 'WELCOME_SCREEN_SETTINGS_CLEAR'
 });
-  }, r = e => {
+  }, a = e => {
 T.Z.dispatch({
   type: 'WELCOME_SCREEN_SETTINGS_UPDATE',
   settings: e

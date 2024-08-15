@@ -3,7 +3,7 @@ n.d(t, {
 return f;
   },
   Ew: function() {
-return m;
+return I;
   },
   Jz: function() {
 return h;
@@ -302,7 +302,7 @@ clamp(e, t) {
   };
 }
   },
-  m = {
+  I = {
 equals: (e, t) => null == e && null == t || null != e && null != t && p.equals(e, t),
 isValid(e, t) {
   if (null == t)
@@ -317,14 +317,14 @@ isValid(e, t) {
   return E.isText(i) && E.isText(a) && n.offset <= i.text.length && r.offset <= a.text.length;
 }
   },
-  I = (e, t) => {
+  m = (e, t) => {
 let n = (t.top + t.bottom) / 2;
 return e.top <= n && e.bottom >= n;
   },
   T = (e, t, n) => {
 let r = c.toDOMRange(e, t).getBoundingClientRect(),
   i = c.toDOMRange(e, n).getBoundingClientRect();
-return I(r, i) && I(i, r);
+return m(r, i) && m(i, r);
   },
   g = (e, t, n, r) => {
 let i = {

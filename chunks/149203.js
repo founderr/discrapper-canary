@@ -19,7 +19,7 @@ return i;
 return d;
   },
   _3: function() {
-return I;
+return m;
   },
   c: function() {
 return _;
@@ -40,7 +40,7 @@ return a;
 return f;
   },
   vO: function() {
-return m;
+return I;
   }
 }), (o = r || (r = {})).GUILD = 'GUILD', o.UNICODE = 'UNICODE', o.RECENT = 'RECENT', o.CUSTOM = 'CUSTOM', o.SEARCH_RESULTS = 'SEARCH_RESULTS', o.FAVORITES = 'FAVORITES', o.TOP_GUILD_EMOJI = 'TOP_GUILD_EMOJI', o.PREMIUM_UPSELL = 'PREMIUM_UPSELL';
 let d = 'emoji-picker-grid';
@@ -51,8 +51,8 @@ let E = 'emoji-picker-tab-panel',
   f = 'emoji-picker-tab',
   h = 'soundboard-picker-tab-panel',
   p = 'soundboard-picker-tab',
-  m = 'gif-picker-tab-panel',
-  I = 'gif-picker-tab',
+  I = 'gif-picker-tab-panel',
+  m = 'gif-picker-tab',
   T = {
 reaction: 32,
 default: 44,

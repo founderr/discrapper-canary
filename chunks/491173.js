@@ -12,8 +12,8 @@ var r = n(735250),
   f = n(378233),
   h = n(419922),
   p = n(689938),
-  m = n(471902);
-let I = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+  I = n(471902);
+let m = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
   T = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
   g = e => {
 let t = null,
@@ -64,15 +64,15 @@ let {
   title: c
 } = g(a), d = (0, f.jl)(a) || (0, f.J8)(a) ? (0, r.jsx)(h.ZP, {
   isInteracting: !0,
-  size: I,
+  size: m,
   sticker: a,
   disableAnimation: !0
 }) : (0, r.jsx)('div', {
-  className: m.iconWrapper,
+  className: I.iconWrapper,
   children: (0, r.jsx)(s.PlusSmallIcon, {
     size: 'md',
     color: 'currentColor',
-    className: m.icon
+    className: I.icon
   })
 });
 return (0, r.jsx)(u.Z, {

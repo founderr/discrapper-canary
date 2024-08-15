@@ -38,8 +38,8 @@ var r = n(392711),
   f = n(430824),
   h = n(131951),
   p = n(496675),
-  m = n(158776),
-  I = n(19780),
+  I = n(158776),
+  m = n(19780),
   T = n(306680),
   g = n(944486),
   S = n(914010),
@@ -126,7 +126,7 @@ return null;
   if (null == t)
 return null;
   let n = h.Z.isVideoEnabled(),
-r = I.Z.getMediaSessionId();
+r = m.Z.getMediaSessionId();
   return {
 channel_id: t.id,
 channel_type: t.type,
@@ -210,7 +210,7 @@ function k(e, t) {
 custom_status_count: 0
   };
   return i()(N.Z.getVoiceStates(e)).forEach(e => {
-e.channelId === t && null != m.Z.findActivity(e.userId, e => e.type === y.IIU.CUSTOM_STATUS) && n.custom_status_count++;
+e.channelId === t && null != I.Z.findActivity(e.userId, e => e.type === y.IIU.CUSTOM_STATUS) && n.custom_status_count++;
   }), n;
 }
 t.ZP = {

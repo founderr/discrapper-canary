@@ -46,12 +46,12 @@ d.b.SPOILER,
 d.b.LINE_BREAK,
 d.b.TIMESTAMP
   ],
-  m = [
+  I = [
 ...p,
 d.b.EMOJI,
 d.b.CUSTOM_EMOJI
   ],
-  I = [
+  m = [
 d.b.LIST,
 d.b.HEADING,
 d.b.BLOCK_QUOTE,
@@ -133,10 +133,10 @@ let L = {
     allowEscape: !1,
     parseInlineCodeChildContent: !0
   },
-  b = n.allowEmojiLinks ? m : p,
+  b = n.allowEmojiLinks ? I : p,
   M = [
     ...b,
-    ...I
+    ...m
   ],
   P = [
     ...T,

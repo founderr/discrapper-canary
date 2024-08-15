@@ -35,7 +35,7 @@ WEEKS: e => e / 60 / 24 / 7,
 MONTHS: e => e / 60 / 24 / 31,
 YEARS: e => e / 60 / 24 / 365
   },
-  m = [{
+  I = [{
   unit: 'NONE',
   max: 0
 },
@@ -68,7 +68,7 @@ YEARS: e => e / 60 / 24 / 365
   max: 1 / 0
 }
   ],
-  I = e => (t, n) => null == n ? '' : e().format({
+  m = e => (t, n) => null == n ? '' : e().format({
 time: t,
 ...n
   }),
@@ -110,10 +110,10 @@ ACTIVITY_FEED: {
 },
 ACTIVITY_FEED_NEW: {
   START: {
-    SECONDS: I(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-    MINUTES: I(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-    HOURS: I(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-    DAYS: I(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+    SECONDS: m(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
+    MINUTES: m(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
+    HOURS: m(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
+    DAYS: m(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
   },
   END: {
     SECONDS: e => f.Z.Messages.DURATION_SECONDS_AGO.format({
@@ -200,14 +200,14 @@ GAME_LIBRARY_LAST_PLAYED: {
   };
 
 function g(e, t) {
-  let n = m.findIndex(t => {
+  let n = I.findIndex(t => {
   let {
     max: n,
     unit: r
   } = t;
   return 'NONE' === r && e === n || e < n;
 }),
-r = _().findLast(m, e => {
+r = _().findLast(I, e => {
   let {
     unit: n
   } = e;
@@ -215,7 +215,7 @@ r = _().findLast(m, e => {
 }, n);
   if (null != r)
 return r.unit;
-  let i = m.find(e => {
+  let i = I.find(e => {
 let {
   unit: n
 } = e;

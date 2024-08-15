@@ -17,8 +17,8 @@ var n = t(735250),
   C = t(267642),
   m = t(74538),
   A = t(283029),
-  g = t(357956),
-  O = t(275909),
+  O = t(357956),
+  g = t(275909),
   h = t(981631),
   p = t(735825),
   R = t(689938),
@@ -39,7 +39,7 @@ children: [
   (0, n.jsxs)('div', {
     className: x.unappliedGuildBoostSlotContentPrimary,
     children: [
-      (0, n.jsx)(O.Z, {
+      (0, n.jsx)(g.Z, {
         className: x.unappliedGuildBoostSlotIcon,
         hasCooldown: s.isOnCooldown(),
         isCanceled: _,
@@ -51,7 +51,7 @@ children: [
         children: R.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format({
           date: o.currentPeriodEnd
         })
-      }) : s.isOnCooldown() && null != d ? (0, n.jsx)(g.Z, {
+      }) : s.isOnCooldown() && null != d ? (0, n.jsx)(O.Z, {
         cooldown: d.getTime()
       }) : (0, n.jsx)(l.Text, {
         className: x.__invalid_unappliedGuildBoostSlotDescription,
@@ -103,7 +103,7 @@ s.Z = function(e) {
   let s, t;
   let {
 guildBoostSlots: i
-  } = e, E = (0, o.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()), u = (null == E ? void 0 : E.isPausedOrPausePending) === !0, g = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), O = (0, o.e7)([S.default], () => S.default.getCurrentUser()), P = (0, T.Vp)(), {
+  } = e, E = (0, o.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()), u = (null == E ? void 0 : E.isPausedOrPausePending) === !0, O = (0, o.e7)([c.Z], () => c.Z.useReducedMotion), g = (0, o.e7)([S.default], () => S.default.getCurrentUser()), P = (0, T.Vp)(), {
 appliedGuildBoostSlots: L,
 unappliedGuildBoostSlots: b,
 numActiveGuildBoostSlots: Z,
@@ -129,12 +129,12 @@ let e = [];
 for (let s = 0; s < y; s++)
   e.push((0, n.jsx)(A.Z, {
     className: x.headerBoostGem,
-    useReducedMotion: g
+    useReducedMotion: O
   }, s));
 return e;
   }, [
 y,
-g
+O
   ]), Y = null != P, w = a.useMemo(() => b.find(e => e.isAvailable()), [b]);
   if (0 === b.length)
 return null;
@@ -143,7 +143,7 @@ return null;
   numUnappliedGuildBoostSlots: H
 }) : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({
   numUnappliedGuildBoostSlots: H
-}), m.ZP.isPremium(O)) {
+}), m.ZP.isPremium(g)) {
 if (F && 1 === H && Y)
   t = P.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
 else {
@@ -248,7 +248,7 @@ children: [
           onCancel: f,
           onUncancel: D,
           premiumSubscription: E,
-          useReducedMotion: g
+          useReducedMotion: O
         }, e.id))
       })
     ]

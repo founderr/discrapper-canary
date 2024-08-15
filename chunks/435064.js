@@ -20,8 +20,8 @@ writable: !0
   }) : e[t] = n, e;
 }
 let p = 'default',
-  m = [],
   I = [],
+  m = [],
   T = [],
   g = 0,
   S = null,
@@ -68,7 +68,7 @@ class L extends(r = i.ZP.DeviceSettingsStore) {
 null != e && (y = e), D(), this.waitFor(o.ZP);
   }
   getClips() {
-return I;
+return m;
   }
   getPendingClips() {
 return T;
@@ -90,7 +90,7 @@ return O;
   }
   getStreamClipAnimations(e) {
 var t;
-return null !== (t = R[e]) && void 0 !== t ? t : m;
+return null !== (t = R[e]) && void 0 !== t ? t : I;
   }
   hasAnyClipAnimations() {
 return Object.values(R).some(e => e.length > 0);
@@ -267,9 +267,9 @@ g = Math.max(g - 1, 0), A = {
     id: t
   } = e;
   return t !== r.id;
-}), I = [
+}), m = [
   r,
-  ...I
+  ...m
 ], y.hasClips = !0;
   },
   CLIPS_SAVE_CLIP_PLACEHOLDER: function(e) {
@@ -361,10 +361,10 @@ A = null;
 y.newClipIds = [];
   },
   CLIPS_LOAD_DIRECTORY_SUCCESS: function(e) {
-y.hasClips = e.clips.length > 0, I = e.clips;
+y.hasClips = e.clips.length > 0, m = e.clips;
   },
   CLIPS_DELETE_CLIP: function(e) {
-0 === (I = I.filter(t => {
+0 === (m = m.filter(t => {
   let {
     filepath: n
   } = t;
@@ -375,9 +375,9 @@ y.hasClips = e.clips.length > 0, I = e.clips;
 let {
   clip: t
 } = e;
-for (let [e, n] of I.entries())
+for (let [e, n] of m.entries())
   if (n.id === t.id) {
-    I[e] = t, I = [...I];
+    m[e] = t, m = [...m];
     return;
   }
   },

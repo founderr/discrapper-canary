@@ -19,8 +19,8 @@ data: {
 },
 onChange: h,
 initialText: p,
-isRequired: m
-  } = e, I = i.useRef(s.Z.reactParserFor({
+isRequired: I
+  } = e, m = i.useRef(s.Z.reactParserFor({
 ...s.Z.defaultRules,
 link: o.s
   })), [T, g] = i.useState(''), [S, A] = i.useState('');
@@ -50,7 +50,7 @@ children: [
       variant: 'text-sm/bold',
       children: [
         t,
-        m && (0, r.jsx)('span', {
+        I && (0, r.jsx)('span', {
           className: u.required,
           children: '*'
         })
@@ -69,7 +69,7 @@ children: [
   null != n && (0, r.jsx)('div', {
     children: (0, r.jsx)(a.Text, {
       variant: 'text-sm/normal',
-      children: I.current(n)
+      children: m.current(n)
     })
   })
 ]

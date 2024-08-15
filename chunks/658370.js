@@ -20,8 +20,8 @@ t.Z = e => {
 title: a,
 titleClassName: C = '',
 buttonClassName: g = '',
-subtitle: N = '',
-description: p = '',
+subtitle: p = '',
+description: N = '',
 descriptionCta: A = '',
 isPremiumGetCta: m,
 onCtaClick: f,
@@ -45,8 +45,8 @@ children: [
     title: a,
     cardVariantStyleInfo: P,
     titleClassName: C,
-    subtitle: N,
-    description: p
+    subtitle: p,
+    description: N
   }),
   m && (0, s.jsx)(E.Z, {
     className: g,

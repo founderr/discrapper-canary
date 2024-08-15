@@ -44,9 +44,9 @@ let {
   maxValue: f,
   value: h,
   onVolumeShow: p,
-  onVolumeHide: m
+  onVolumeHide: I
 } = this.props, {
-  hovered: I,
+  hovered: m,
   focused: T,
   dragging: g
 } = this.state, S = l.VoiceNormalIcon;
@@ -61,7 +61,7 @@ return _ || h === E ? S = l.VoiceXIcon : h < f / 2 && (S = l.VoiceLowIcon), (0, 
     clearTimeout(this._hoverTimeout), this._hoverTimeout = setTimeout(() => {
       this.setState({
         hovered: !1
-      }), null == m || m();
+      }), null == I || I();
     }, 150);
   },
   onFocus: () => this.setState({
@@ -74,7 +74,7 @@ return _ || h === E ? S = l.VoiceXIcon : h < f / 2 && (S = l.VoiceLowIcon), (0, 
   children: [
     (0, i.jsx)('div', {
       className: o()(d.volumeButtonSlider, r, {
-        [d.sliderVisible]: I || T || g
+        [d.sliderVisible]: m || T || g
       }),
       onMouseEnter: () => {
         clearTimeout(this._hoverTimeout), this.setState({

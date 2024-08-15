@@ -22,8 +22,8 @@ var i, a, s, o, l = n(392711),
   f = n(570140),
   h = n(593472),
   p = n(726542),
-  m = n(439849),
-  I = n(710845),
+  I = n(439849),
+  m = n(710845),
   T = n(630699),
   g = n(855403),
   S = n(454991),
@@ -40,7 +40,7 @@ var i, a, s, o, l = n(392711),
   M = n(370862),
   P = n(981631),
   U = n(987650);
-let w = new I.Z('RunningGameStore'),
+let w = new m.Z('RunningGameStore'),
   x = 'RunningGameStore',
   G = [{
   executables: [{
@@ -311,7 +311,7 @@ L.ZP.setGameCandidateOverrides(e);
   }
 }
 
-function em(e) {
+function eI(e) {
   if (null != e && 0 !== e.length)
 e.forEach(e => {
   if (z.gamesSeen.some(t => {
@@ -337,10 +337,10 @@ e.forEach(e => {
       return null != e.id && (t.id = e.id), null != e.nativeProcessObserverId && (t.nativeProcessObserverId = e.nativeProcessObserverId), null != e.name && (t.name = e.name), e.add && (t.add = !0), e.block && (t.block = !0), es(t, e), t;
     }(e));
   }
-}), z.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused), eE(), C.Z.setRecentGames(eI().map(e => ef(e)));
+}), z.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused), eE(), C.Z.setRecentGames(em().map(e => ef(e)));
 }
 
-function eI() {
+function em() {
   let e = u().values(z.gameOverrides);
   return z.gamesSeen.filter(e => void 0 === z.gameOverrides[eu(e)]).concat(e);
 }!__OVERLAY__ && (0, D.isDesktop)() && (q = function() {
@@ -430,7 +430,7 @@ if (u().values(null !== (t = i.gameOverrides) && void 0 !== t ? t : {}).forEach(
   }), z.enableOverlay = null !== (n = i.enableOverlay) && void 0 !== n ? n : {}, z.enableDetection = null !== (r = i.enableDetection) && void 0 !== r ? r : {}, ep(), Array.isArray(i.gamesSeen))
   for (let e of i.gamesSeen)
     'number' == typeof e.id && (e.nativeProcessObserverId = e.id, delete e.id, a = !0);
-em(i.gamesSeen), this.waitFor(A.Z), this.syncWith([
+eI(i.gamesSeen), this.waitFor(A.Z), this.syncWith([
   N.Z,
   A.Z,
   v.Z
@@ -482,7 +482,7 @@ return H.filter(e => e.hidden || null == e.id).filter(e => void 0 === z.gameOver
   }
   getGamesSeen(e) {
 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-  n = eI();
+  n = em();
 if (e) {
   let e = this.getVisibleGame();
   if (null != e) {
@@ -522,7 +522,7 @@ return ed(e);
   }
   addExecutableTrackedByAnalytics(e) {
 var t;
-en.add(null !== (t = (0, m.F)(e)) && void 0 !== t ? t : e);
+en.add(null !== (t = (0, I.F)(e)) && void 0 !== t ? t : e);
   }
 }
 o = 'RunningGameStore', (s = 'displayName') in(a = eT) ? Object.defineProperty(a, s, {
@@ -532,7 +532,7 @@ o = 'RunningGameStore', (s = 'displayName') in(a = eT) ? Object.defineProperty(a
   writable: !0
 }) : a[s] = o, t.ZP = new eT(f.Z, {
   RUNNING_GAMES_CHANGE: function(e) {
-em(Z);
+eI(Z);
   },
   CANDIDATE_GAMES_CHANGE: function(e) {
 H = e.games;
@@ -571,7 +571,7 @@ if (null == r) {
 (null == r.lastFocused || 0 === r.lastFocused) && (r.lastFocused = Math.floor(Date.now() / 1000)), z.gameOverrides[t] = {
   ...r,
   add: !0
-}, em(Z), ep(), eE(), el();
+}, eI(Z), ep(), eE(), el();
   },
   RUNNING_GAME_TOGGLE_OVERLAY: function(e) {
 if (z.enableOverlay[eu(e.game)] = e.newEnabledValue, eE(), !__OVERLAY__) {
@@ -646,7 +646,7 @@ let t = e.processes.map(e => {
   var t;
   return {
     pid: e.pid,
-    cleanedExePath: null !== (t = (0, m.F)(e.exePath)) && void 0 !== t ? t : e.exePath
+    cleanedExePath: null !== (t = (0, I.F)(e.exePath)) && void 0 !== t ? t : e.exePath
   };
 }).filter(e => {
   if (et.has(e.pid) || en.has(e.cleanedExePath))

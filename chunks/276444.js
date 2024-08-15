@@ -9,8 +9,8 @@ let E = null,
   f = {},
   h = [],
   p = new Map(),
-  m = new Set(),
-  I = !1,
+  I = new Set(),
+  m = !1,
   T = new Set(),
   g = new Set(),
   S = {},
@@ -50,7 +50,7 @@ class w extends(r = l.ZP.Store) {
 this.waitFor(c.default), this.syncWith([c.default], b);
   }
   checkAndFetchReferralsRemaining() {
-null == E && !I && A < 5 && (null == N || N < Date.now()) && (0, d.C$)();
+null == E && !m && A < 5 && (null == N || N < Date.now()) && (0, d.C$)();
   }
   getReferralsRemaining() {
 return this.checkAndFetchReferralsRemaining(), E;
@@ -59,13 +59,13 @@ return this.checkAndFetchReferralsRemaining(), E;
 return this.checkAndFetchReferralsRemaining(), null == h ? [] : h;
   }
   isFetchingReferralsRemaining() {
-return I;
+return m;
   }
   isFetchingRecipientEligibility(e) {
-return m.has(e);
+return I.has(e);
   }
   getRecipientEligibility(e) {
-return void 0 === f[e] && !m.has(e) && (0, d.Ve)(e), f[e];
+return void 0 === f[e] && !I.has(e) && (0, d.Ve)(e), f[e];
   }
   getRelevantUserTrialOffer(e) {
 return S[e];
@@ -112,14 +112,14 @@ let {
   userTrialOfferId: t,
   recipientId: n
 } = e;
-if (!I && (0, d.C$)(), !m.has(n) && (0, d.Ve)(n), !T.has(t)) {
+if (!m && (0, d.C$)(), !I.has(n) && (0, d.Ve)(n), !T.has(t)) {
   var r;
   r = t, T.add(r), u.Z.wait(() => (0, d.IB)(t).catch(_.VqG));
 }
   },
   BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
 let {} = e;
-C = !1, y = null, I = !0;
+C = !1, y = null, m = !0;
   },
   BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function(e) {
 let {
@@ -131,30 +131,30 @@ let {
   isUserEligibleForIncentive: s,
   isUserQualifiedForIncentive: o
 } = e;
-C = null == r && a, I = !1, E = t, h = n, y = r, p = i, D = s, L = o;
+C = null == r && a, m = !1, E = t, h = n, y = r, p = i, D = s, L = o;
   },
   BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
 let {} = e;
-C = !1, y = null, I = !1, A += 1, N = Date.now() + 1000 * Math.pow(2, A);
+C = !1, y = null, m = !1, A += 1, N = Date.now() + 1000 * Math.pow(2, A);
   },
   BILLING_CREATE_REFERRAL_PREVIEW_START: function(e) {
 let {
   recipientId: t
 } = e;
-m.add(t);
+I.add(t);
   },
   BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: function(e) {
 let {
   recipientId: t,
   is_eligible: n
 } = e;
-f[t] = n, m.delete(t);
+f[t] = n, I.delete(t);
   },
   BILLING_CREATE_REFERRAL_PREVIEW_FAIL: function(e) {
 let {
   recipientId: t
 } = e;
-f[t] = !1, m.delete(t);
+f[t] = !1, I.delete(t);
   },
   BILLING_CREATE_REFERRAL_SUCCESS: function(e) {
 let {
@@ -209,6 +209,6 @@ U(t);
   },
   LOAD_MESSAGES_AROUND_SUCCESS: P,
   LOGOUT: function() {
-E = null, f = {}, h = [], m = new Set(), I = !1, T = new Set(), g = new Set(), S = {}, A = 0, N = null, v = [], O = !1, R = 0, C = !1, y = null, p = new Map(), D = !1, L = !1;
+E = null, f = {}, h = [], I = new Set(), m = !1, T = new Set(), g = new Set(), S = {}, A = 0, N = null, v = [], O = !1, R = 0, C = !1, y = null, p = new Map(), D = !1, L = !1;
   }
 });

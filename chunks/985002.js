@@ -13,7 +13,7 @@ function o(e) {
   let {
 onError: t,
 onSuccess: n
-  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [g, N] = s.useState(!1), [p, A] = s.useState(!1), [m, f] = s.useState(!1), S = o || d || u || T || g || m, h = s.useCallback(async e => {
+  } = null != e ? e : {}, [o, c] = s.useState(!1), [d, _] = s.useState(!1), [u, E] = s.useState(!1), [T, I] = s.useState(!1), [R, C] = s.useState(!1), [g, p] = s.useState(!1), [N, A] = s.useState(!1), [m, f] = s.useState(!1), S = o || d || u || T || g || m, h = s.useCallback(async e => {
 if (!S) {
   c(!0);
   try {
@@ -94,7 +94,7 @@ R,
 t,
 n
   ]), P = s.useCallback(async e => {
-if (!p) {
+if (!N) {
   A(!0);
   try {
     await r.ZP.fetchTeenActivity(e), null == n || n();
@@ -106,19 +106,19 @@ if (!p) {
   }
 }
   }, [
-p,
+N,
 t,
 n
-  ]), L = s.useCallback(async (e, s) => {
+  ]), v = s.useCallback(async (e, s) => {
 if (!g) {
-  N(!0);
+  p(!0);
   try {
     await r.ZP.requestLink(e, s), null == n || n();
   } catch (n) {
     let e = new a.Hx(n);
     null == t || t(e);
   } finally {
-    N(!1);
+    p(!1);
   }
 }
   }, [
@@ -133,7 +133,7 @@ disconnectLinkRequest: x,
 cancelLinkRequest: b,
 selectTeenUser: P,
 getLinkCode: O,
-requestLink: L,
+requestLink: v,
 loadMore: s.useCallback(async e => {
   let n = i.Z.getActionsForDisplayType(e),
     s = n[n.length - 1],
@@ -159,7 +159,7 @@ isDeclineLoading: d,
 isDisconnectLoading: u,
 isCancelLoading: T,
 isGetLinkCodeLoading: R,
-isSelectTeenUserLoading: p,
+isSelectTeenUserLoading: N,
 isRequestingLink: g,
 isMoreLoading: m
   };

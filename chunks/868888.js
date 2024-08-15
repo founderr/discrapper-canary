@@ -109,7 +109,7 @@ i.setState = (e, t) => {
 let p = e((...e) => {
     n(...e), f();
   }, r, i),
-  m = () => {
+  I = () => {
     var e;
     if (!a)
       return;
@@ -143,7 +143,7 @@ return i.persist = {
     var e;
     null == (e = null == a ? void 0 : a.removeItem) || e.call(a, o.name);
   },
-  rehydrate: () => m(),
+  rehydrate: () => I(),
   hasHydrated: () => l,
   onHydrate: e => (d.add(e), () => {
     d.delete(e);
@@ -151,5 +151,5 @@ return i.persist = {
   onFinishHydration: e => (_.add(e), () => {
     _.delete(e);
   })
-}, m(), s || p;
+}, I(), s || p;
   };

@@ -18,8 +18,8 @@ var i = n(120356),
   f = n(318374),
   h = n(382182),
   p = n(769654),
-  m = n(543882),
-  I = n(592125),
+  I = n(543882),
+  m = n(592125),
   T = n(430824),
   g = n(496675),
   S = n(938475),
@@ -63,7 +63,7 @@ display: 'live',
 user: t,
 stream: i,
 analyticsLocations: Z
-  }), W = (0, s.e7)([T.Z], () => T.Z.getGuild(null == i ? void 0 : i.guildId)), K = (0, s.e7)([I.Z], () => I.Z.getChannel(null == i ? void 0 : i.channelId)), z = (0, s.Wu)([S.ZP], () => null != K ? S.ZP.getVoiceStatesForChannel(K).map(e => {
+  }), W = (0, s.e7)([T.Z], () => T.Z.getGuild(null == i ? void 0 : i.guildId)), K = (0, s.e7)([m.Z], () => m.Z.getChannel(null == i ? void 0 : i.channelId)), z = (0, s.Wu)([S.ZP], () => null != K ? S.ZP.getVoiceStatesForChannel(K).map(e => {
 let {
   user: t
 } = e;
@@ -74,12 +74,12 @@ isLoading: $,
 canSeePreview: J
   } = (0, s.cj)([
 g.Z,
-m.Z
+I.Z
   ], () => {
 let e = null != K && g.Z.canBasicChannel(M.S7T.CONNECT, K);
 return e ? {
-  url: m.Z.getPreviewURL(i.guildId, i.channelId, i.ownerId),
-  isLoading: m.Z.getIsPreviewLoading(i.guildId, i.channelId, i.ownerId),
+  url: I.Z.getPreviewURL(i.guildId, i.channelId, i.ownerId),
+  isLoading: I.Z.getIsPreviewLoading(i.guildId, i.channelId, i.ownerId),
   canSeePreview: e
 } : {
   url: null,

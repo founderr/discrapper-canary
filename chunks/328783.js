@@ -49,7 +49,7 @@ let s = e[0];
 return null == s ? null : (0, n.jsx)(n.Fragment, {
   children: C(s)
 });
-  }, [C]), A = a.useCallback(e => (0, d.nE)(e, !0, u.Sbl.USER_SETTINGS), []), g = a.useCallback(e => e === o, [o]), O = a.useCallback(e => e, []), h = a.useCallback(() => (0, d.nE)(null, !1), []);
+  }, [C]), A = a.useCallback(e => (0, d.nE)(e, !0, u.Sbl.USER_SETTINGS), []), O = a.useCallback(e => e === o, [o]), g = a.useCallback(e => e, []), h = a.useCallback(() => (0, d.nE)(null, !1), []);
   return (0, n.jsxs)(l.Z, {
 title: I.Z.Messages.CLANS,
 titleId: S,
@@ -62,12 +62,12 @@ children: [
   (0, n.jsx)(r.Select, {
     className: T.select,
     optionClassName: T.selectPopout,
-    isSelected: g,
+    isSelected: O,
     options: N,
     select: A,
     renderOptionValue: m,
     renderOptionLabel: C,
-    serialize: O,
+    serialize: g,
     clear: h,
     clearable: null != o
   })

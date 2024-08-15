@@ -17,8 +17,8 @@ var n = t(735250),
   C = t(726542),
   m = t(122021),
   A = t(275759),
-  g = t(231757),
-  O = t(888496),
+  O = t(231757),
+  g = t(888496),
   h = t(605236),
   p = t(565138),
   R = t(297700),
@@ -131,7 +131,7 @@ if (!1 !== I.verified)
   }, [I]);
 
   function J() {
-(0, g.Z)({
+(0, O.Z)({
   platformType: I.type,
   location: 'User Settings'
 });
@@ -167,7 +167,7 @@ let {
   verified: s
 } = I, t = e ? 1 : 0;
 if (e && !s) {
-  Y(t), (0, g.Z)({
+  Y(t), (0, O.Z)({
     platformType: I.type,
     location: 'User Settings'
   });
@@ -181,7 +181,7 @@ let {
   verified: s
 } = I, t = e ? 1 : 0;
 if (e && !s) {
-  k(t), (0, g.Z)({
+  k(t), (0, O.Z)({
     platformType: I.type,
     location: 'User Settings'
   });
@@ -282,22 +282,22 @@ children: [
       i = (0, A.FI)(t[G.PC.CREATED_AT], N);
     switch (e.type) {
       case U.ABu.REDDIT:
-        a = (0, O.oP)(t, V.metadataItem);
+        a = (0, g.oP)(t, V.metadataItem);
         break;
       case U.ABu.STEAM:
-        a = (0, O.Dq)(t, V.metadataItem);
+        a = (0, g.Dq)(t, V.metadataItem);
         break;
       case U.ABu.TWITTER:
-        a = (0, O.rJ)(t, V.metadataItem);
+        a = (0, g.rJ)(t, V.metadataItem);
         break;
       case U.ABu.EBAY:
-        a = (0, O.ul)(t, V.metadataItem);
+        a = (0, g.ul)(t, V.metadataItem);
         break;
       case U.ABu.PAYPAL:
-        a = (0, O.li)(t, V.metadataItem);
+        a = (0, g.li)(t, V.metadataItem);
         break;
       case U.ABu.TIKTOK:
-        a = (0, O.hf)(t, V.metadataItem);
+        a = (0, g.hf)(t, V.metadataItem);
     }
     null !== i && (null == a && (a = []), null == a || a.push((0, n.jsx)(_.Text, {
       variant: 'text-xs/normal',
@@ -459,7 +459,7 @@ children: [
 
 function W(e) {
   let s = C.Z.get(e);
-  (0, g.Z)({
+  (0, O.Z)({
 platformType: s.type
   }), P.default.track(U.rMx.ACCOUNT_LINK_STEP, {
 previous_step: 'desktop connections',

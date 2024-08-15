@@ -12,7 +12,7 @@ var r, i, a, s, o, l, u = n(735250),
   h = n(186325),
   p = n(441861);
 
-function m(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -21,7 +21,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 (o = r || (r = {}))[o.ENTERING = 0] = 'ENTERING', o[o.LEAVING = 1] = 'LEAVING', o[o.APPEARING = 2] = 'APPEARING', o[o.STATIC = 3] = 'STATIC', (l = i || (i = {})).SLIDE = 'slide', l.LIFT = 'lift';
-class I extends(a = c.PureComponent) {
+class m extends(a = c.PureComponent) {
   componentDidMount() {
 if (null != this._measureRef.current) {
   let {
@@ -214,15 +214,15 @@ return e ? (0, u.jsx)('div', {
 });
   }
   constructor(...e) {
-super(...e), m(this, 'state', {
+super(...e), I(this, 'state', {
   animationProgress: new E.Z.Value(0),
   targetHeight: 0,
   baseHeight: 0,
   animationState: null
-}), m(this, 'direction', this.props.getDirection()), m(this, '_measureRef', c.createRef());
+}), I(this, 'direction', this.props.getDirection()), I(this, '_measureRef', c.createRef());
   }
 }
-m(I, 'contextType', h.S), m(I, 'defaultProps', {
+I(m, 'contextType', h.S), I(m, 'defaultProps', {
   duration: 300
 });
 class T extends(s = c.Component) {
@@ -255,7 +255,7 @@ let {
 return (0, u.jsx)(f.W, {
   component: 'div',
   className: _()(p.transitionGroup, t),
-  children: (0, u.jsx)(I, {
+  children: (0, u.jsx)(m, {
     fillParent: l,
     sideMargin: a,
     animationMotionType: null != c ? c : 'slide',
@@ -271,13 +271,13 @@ return (0, u.jsx)(f.W, {
 });
   }
   constructor(...e) {
-super(...e), m(this, 'stepHeights', {}), m(this, 'prevStep', null), m(this, 'prevSteps', []), m(this, 'getBaseHeight', () => null != this.prevStep && null != this.stepHeights[this.prevStep] ? this.stepHeights[this.prevStep] : 0), m(this, 'getDirection', () => {
+super(...e), I(this, 'stepHeights', {}), I(this, 'prevStep', null), I(this, 'prevSteps', []), I(this, 'getBaseHeight', () => null != this.prevStep && null != this.stepHeights[this.prevStep] ? this.stepHeights[this.prevStep] : 0), I(this, 'getDirection', () => {
   let {
     steps: e,
     step: t
   } = this.props, n = null != this.prevStep ? e.indexOf(this.prevStep) : -1, r = -1 === n && null != this.prevStep ? this.prevSteps.indexOf(this.prevStep) : -1;
   return Math.max(n, r) > e.indexOf(t) ? -1 : 1;
-}), m(this, 'setHeight', e => {
+}), I(this, 'setHeight', e => {
   let {
     step: t
   } = this.props;
@@ -285,7 +285,7 @@ super(...e), m(this, 'stepHeights', {}), m(this, 'prevStep', null), m(this, 'pre
 });
   }
 }
-m(T, 'defaultProps', {
+I(T, 'defaultProps', {
   fillParent: !1,
   animationMotionType: 'slide'
 });

@@ -9,8 +9,8 @@ var r, i, a, s, o = n(348327),
   f = n(676035),
   h = n(594190),
   p = n(106301),
-  m = n(406066),
-  I = n(768419),
+  I = n(406066),
+  m = n(768419),
   T = n(695346),
   g = n(581883),
   S = n(199902),
@@ -24,7 +24,7 @@ function C() {
   let e = [],
 t = T.Ok.getSetting();
   null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, f.I)(t));
-  let n = m.Z.getActivities();
+  let n = I.Z.getActivities();
   e.push(...n);
   let r = A.Z.getStream();
   null != r && e.push({
@@ -50,7 +50,7 @@ e.push({
   }
 });
   }
-  let E = I.Z.getActivity();
+  let E = m.Z.getActivity();
   null != E && e.push({
 type: v.IIU.LISTENING,
 ...E
@@ -69,8 +69,8 @@ e.push({
 }
 class y extends(r = d.ZP.Store) {
   initialize() {
-this.waitFor(h.ZP, E.ZP, A.Z, S.Z, I.Z, g.Z, p.Z, N.Z), this.syncWith([
-  m.Z,
+this.waitFor(h.ZP, E.ZP, A.Z, S.Z, m.Z, g.Z, p.Z, N.Z), this.syncWith([
+  I.Z,
   p.Z
 ], () => C());
   }

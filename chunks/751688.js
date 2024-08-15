@@ -20,7 +20,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-class m extends(r = a.Component) {
+class I extends(r = a.Component) {
   render() {
 let {
   popoutOpen: e
@@ -117,6 +117,6 @@ super(...e), p(this, 'state', {
 });
   }
 }
-p(m, 'defaultProps', {
+p(I, 'defaultProps', {
   disablePopout: !1
-}), t.Z = (0, c.Z)(m);
+}), t.Z = (0, c.Z)(I);

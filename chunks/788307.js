@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(574176),
   h = n(106301),
   p = n(223135),
-  m = n(695346),
-  I = n(314897),
+  I = n(695346),
+  m = n(314897),
   T = n(592125),
   g = n(496675),
   S = n(158776),
@@ -35,7 +35,7 @@ className: n,
 animate: i = !0,
 hideTooltip: a,
 tooltipDelay: o
-  } = e, c = m.Yk.useSetting(), d = null != t.id ? ':'.concat(t.name, ':') : E.ZP.translateSurrogatesToInlineEmoji(t.name), _ = {
+  } = e, c = I.Yk.useSetting(), d = null != t.id ? ':'.concat(t.name, ':') : E.ZP.translateSurrogatesToInlineEmoji(t.name), _ = {
 className: s()(O.emoji, n),
 emojiId: t.id,
 emojiName: t.name,
@@ -97,11 +97,11 @@ className: a,
 textClassName: s,
 emojiClassName: u,
 animate: E = !0,
-hideTooltip: m = !1,
+hideTooltip: I = !1,
 hideEmoji: D = !1,
 user: L,
 hasQuest: b
-  } = e, M = null != n ? n.find(e => e.type === v.IIU.CUSTOM_STATUS) : null, P = (0, o.e7)([I.default], () => I.default.getId() === (null == L ? void 0 : L.id)), U = (0, o.e7)([h.Z], () => P ? h.Z.getHangStatusActivity() : null != n ? n.find(e => e.type === v.IIU.HANG_STATUS) : null), w = (0, o.e7)([
+  } = e, M = null != n ? n.find(e => e.type === v.IIU.CUSTOM_STATUS) : null, P = (0, o.e7)([m.default], () => m.default.getId() === (null == L ? void 0 : L.id)), U = (0, o.e7)([h.Z], () => P ? h.Z.getHangStatusActivity() : null != n ? n.find(e => e.type === v.IIU.HANG_STATUS) : null), w = (0, o.e7)([
 A.Z,
 T.Z
   ], () => {
@@ -121,7 +121,7 @@ hangStatusActivity: U
   }) : null != M && null != M.emoji && !D && (k = (0, r.jsx)(C, {
 emoji: M.emoji,
 animate: E,
-hideTooltip: m,
+hideTooltip: I,
 className: u
   }));
   let F = (0, o.e7)([S.Z], () => null != L ? S.Z.getStatus(L.id) : null),

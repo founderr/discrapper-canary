@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
   H: function() {
-return I;
+return m;
   }
 }), n(47120), n(733860);
 var i, a, s, o, l = n(392711),
@@ -13,8 +13,8 @@ var i, a, s, o, l = n(392711),
   f = n(354459);
 let h = [],
   p = {},
-  m = [],
-  I = e => {
+  I = [],
+  m = e => {
 null != e && d.Z.dispatch({
   type: 'VOICE_CHANNEL_EFFECT_CLEAR',
   userId: e
@@ -23,8 +23,8 @@ null != e && d.Z.dispatch({
   T = [],
   g = 10 * _.Z.Millis.SECOND,
   S = (0, l.debounce)(() => {
-let e = (0, E.cX)(m);
-c.uv.announce(e, 'polite'), m = [];
+let e = (0, E.cX)(I);
+c.uv.announce(e, 'polite'), I = [];
   }, 500);
 class A extends(i = u.ZP.Store) {
   get recentlyUsedEmojis() {
@@ -69,8 +69,8 @@ null != t && null != r && (p[n] = {
   emoji: t,
   sentAt: Date.now(),
   animationType: r
-}, m = [
-  ...m,
+}, I = [
+  ...I,
   {
     emojiName: t.name,
     userId: n

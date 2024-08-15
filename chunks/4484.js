@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(53529),
   h = n(288897),
   p = n(925994),
-  m = n(436660),
-  I = n(887490),
+  I = n(436660),
+  m = n(887490),
   T = n(194625),
   g = n(77188),
   S = n(230554),
@@ -67,12 +67,12 @@ allowNewLines: er,
 'aria-describedby': ec,
 'aria-labelledby': ed,
 'aria-autocomplete': e_
-  } = e, eE = i.useRef(null), ef = i.useRef(null), eh = i.useRef(!0), ep = i.useRef(!0), em = U || w, eI = i.useCallback((e, t, n) => {
+  } = e, eE = i.useRef(null), ef = i.useRef(null), eh = i.useRef(!0), ep = i.useRef(!0), eI = U || w, em = i.useCallback((e, t, n) => {
 var r;
 let {
   value: i,
   selection: a
-} = n, s = I.bN.richValue(e), o = e.selection, l = !1;
+} = n, s = m.bN.richValue(e), o = e.selection, l = !1;
 if (void 0 !== i && i !== s) {
   if (e.children = i, 'parent' === t && !e.previewMarkdown) {
     try {
@@ -84,14 +84,14 @@ if (void 0 !== i && i !== s) {
   }
   'undo' !== t && void 0 !== i && i !== s && f.T.insertEntry(e, 'other', !1, s, o), l = !0;
 }
-if (null != a && !I.Ew.isValid(e, a) && (a = void 0), (l || !I.Ew.isValid(e, o)) && void 0 === a) {
-  let t = I.bN.end(e, []);
+if (null != a && !m.Ew.isValid(e, a) && (a = void 0), (l || !m.Ew.isValid(e, o)) && void 0 === a) {
+  let t = m.bN.end(e, []);
   a = {
     anchor: t,
     focus: t
   };
 }
-if (null != a && !I.Ew.equals(a, o)) {
+if (null != a && !m.Ew.equals(a, o)) {
   e.selection = a;
   let t = f.T.currentEntry(e);
   null != t && (t.selection = a), l = !0;
@@ -100,7 +100,7 @@ let c = E.cr(e);
 if (null != c && c[0].command.id !== (null === (r = u.Z.getActiveCommand(b.id)) || void 0 === r ? void 0 : r.id) && f.T.withMergedEntry(e, () => {
     (0, O.L)(e, b.id, null, !0);
   }), l) {
-  if (!et && I.bN.focus(e), 'parent' === t)
+  if (!et && m.bN.focus(e), 'parent' === t)
     try {
       ep.current = !1, e.onChange();
     } finally {
@@ -124,7 +124,7 @@ canUseCommands: J,
 canOnlyUseTextCommands: ee,
 onChangeStart: eT,
 onChangeEnd: eg,
-updateState: eI
+updateState: em
   }), eA = i.useCallback((e, t) => {
 let n = E.tM(eS, e, b.id),
   r = E.lk(e, b.guild_id, b.id, n, t);
@@ -147,11 +147,11 @@ if (null != t && null != t.options) {
     return (null !== (n = t.options) && void 0 !== n ? n : []).find(t => t.name === e);
   });
   for (let e of t.options)
-    e.required && !(e.name in i.values) && (m.Q.insertCommandOption(eS, e), a.push(e));
+    e.required && !(e.name in i.values) && (I.Q.insertCommandOption(eS, e), a.push(e));
   if (a.length > 0) {
     var n, r;
     let e = a[0];
-    m.Q.selectCommandOption(eS, e.name), _.S.dispatch(D.CkL.SHAKE_APP, {
+    I.Q.selectCommandOption(eS, e.name), _.S.dispatch(D.CkL.SHAKE_APP, {
       duration: 200,
       intensity: 2
     }), (0, l.yw)(D.rMx.APPLICATION_COMMAND_VALIDATION_FAILED, {
@@ -163,7 +163,7 @@ if (null != t && null != t.options) {
     return;
   }
 }
-null == z || z((0, p.sk)(I.bN.richValue(eS), {
+null == z || z((0, p.sk)(m.bN.richValue(eS), {
   mode: 'raw',
   ignoreTrailingEmptyNodes: !0
 }), t, e);
@@ -193,7 +193,7 @@ moveSelection: X
   }), {
 handlePaste: eR,
 handleGlobalPaste: eC
-  } = (0, N.Z)(eS, em, F), ey = i.useCallback(e => {
+  } = (0, N.Z)(eS, eI, F), ey = i.useCallback(e => {
 null == q || q();
   }, [q]), eD = i.useCallback(e => {
 e !== ef.current ? ep.current && (null == B || B(null, (0, p.sk)(e, {
@@ -204,13 +204,13 @@ q,
 B
   ]);
   i.useLayoutEffect(() => {
-eh.current && (ef.current = n, eI(eS, 'parent', {
+eh.current && (ef.current = n, em(eS, 'parent', {
   value: n
 }));
   }, [
 eS,
 n,
-eI
+em
   ]), i.useEffect(() => {
 let e = () => {
   var e;
@@ -245,7 +245,7 @@ children: [
       guildId: b.guild_id,
       className: s()(L.slateTextArea, k),
       placeholder: x,
-      readOnly: em,
+      readOnly: eI,
       spellCheck: $,
       autoFocus: !et,
       canFocus: !U,

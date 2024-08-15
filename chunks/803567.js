@@ -20,8 +20,8 @@ var r = t(120356),
   C = t(626135),
   m = t(63063),
   A = t(210887),
-  g = t(726985),
-  O = t(981631),
+  O = t(726985),
+  g = t(981631),
   h = t(689938),
   p = t(224499);
 let R = t(775322),
@@ -29,18 +29,18 @@ let R = t(775322),
   M = (0, u.hQ)();
 (a = n || (n = {}))[a.NONE = 0] = 'NONE', a[a.STANDARD = 1] = 'STANDARD', a[a.KRISP = 2] = 'KRISP';
 let f = {
-  page: O.ZY5.USER_SETTINGS,
-  section: O.jXE.SETTINGS_VOICE_AND_VIDEO
+  page: g.ZY5.USER_SETTINGS,
+  section: g.jXE.SETTINGS_VOICE_AND_VIDEO
 };
 
 function D(e) {
   let s = e.currentTarget;
-  C.default.track(O.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
+  C.default.track(g.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
 text: s.text,
 href: s.href,
 location: {
-  page: O.ZY5.USER_SETTINGS,
-  section: O.jXE.SETTINGS_VOICE_AND_VIDEO
+  page: g.ZY5.USER_SETTINGS,
+  section: g.jXE.SETTINGS_VOICE_AND_VIDEO
 }
   });
 }
@@ -101,7 +101,7 @@ children: [
     },
     align: E.Z.Align.CENTER,
     body: (0, i.jsx)(d.Anchor, {
-      href: m.Z.getArticleURL(O.BhN.NOISE_SUPPRESSION),
+      href: m.Z.getArticleURL(g.BhN.NOISE_SUPPRESSION),
       onClick: D,
       children: h.Z.Messages.LEARN_MORE
     })
@@ -136,7 +136,7 @@ hasAutomaticGainControl: C
 hasEchoCancellation: S.Z.hasEchoCancellation(s),
 hasNoiseSuppression: S.Z.hasNoiseSuppression(s),
 hasAutomaticGainControl: S.Z.hasAutomaticGainControl(s)
-  }), [s]), m = E || u || C, A = e === O.pM4.VOICE_ACTIVITY && a, {
+  }), [s]), m = E || u || C, A = e === g.pM4.VOICE_ACTIVITY && a, {
 sidechainAvailable: R
   } = I.Z.getCurrentConfig({
 location: 'UserSettingsVoiceProcessing'
@@ -151,20 +151,20 @@ children: [
     children: h.Z.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
   }),
   (0, i.jsx)(T.F, {
-    setting: g.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
+    setting: O.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
     children: (0, i.jsx)(d.FormSwitch, {
       className: o()(p.marginTop8, p.marginBottom20),
       value: t,
       onChange: e => _.Z.setEchoCancellation(e, {
-        page: O.ZY5.USER_SETTINGS,
-        section: O.jXE.SETTINGS_VOICE_AND_VIDEO
+        page: g.ZY5.USER_SETTINGS,
+        section: g.jXE.SETTINGS_VOICE_AND_VIDEO
       }),
       disabled: E,
       children: h.Z.Messages.ECHO_CANCELLATION
     })
   }),
   R && (0, i.jsx)(T.F, {
-    setting: g.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
+    setting: O.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
     children: (0, i.jsx)(d.FormSwitch, {
       className: o()(p.marginTop8, p.marginBottom20),
       value: c,
@@ -174,11 +174,11 @@ children: [
     })
   }),
   (0, i.jsx)(T.F, {
-    setting: g.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
+    setting: O.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
     children: (0, i.jsx)(P, {})
   }),
   (0, i.jsx)(T.F, {
-    setting: g.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
+    setting: O.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
     children: (0, i.jsx)(d.FormSwitch, {
       value: r,
       onChange: s => _.Z.setMode(e, {
@@ -190,13 +190,13 @@ children: [
     })
   }),
   (0, i.jsx)(T.F, {
-    setting: g.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
+    setting: O.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
     children: (0, i.jsx)(d.FormSwitch, {
       className: '',
       value: n,
       onChange: e => _.Z.setAutomaticGainControl(e, {
-        page: O.ZY5.USER_SETTINGS,
-        section: O.jXE.SETTINGS_VOICE_AND_VIDEO
+        page: g.ZY5.USER_SETTINGS,
+        section: g.jXE.SETTINGS_VOICE_AND_VIDEO
       }),
       note: h.Z.Messages.USER_SETTINGS_AUTOMATIC_GAIN_CONTROL,
       disabled: C,

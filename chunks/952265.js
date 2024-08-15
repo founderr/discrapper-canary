@@ -15,7 +15,7 @@ return T;
 return A;
   },
   Mr: function() {
-return m;
+return I;
   },
   Vn: function() {
 return E;
@@ -33,7 +33,7 @@ return p;
 return O;
   },
   o: function() {
-return I;
+return m;
   },
   pT: function() {
 return N;
@@ -82,7 +82,7 @@ o = setTimeout(() => {
   }, n);
 }, 300),
 l = await e();
-  return clearTimeout(o), s ? O(a, n) && I(a, l, r.onCloseRequest, r.onCloseCallback, n) : p(l, {
+  return clearTimeout(o), s ? O(a, n) && m(a, l, r.onCloseRequest, r.onCloseCallback, n) : p(l, {
 ...r,
 modalKey: a
   }, n), a;
@@ -116,7 +116,7 @@ f.setState(t => {
         key: d,
         Layer: o,
         render: e,
-        onCloseRequest: null != l ? l : () => m(d, n),
+        onCloseRequest: null != l ? l : () => I(d, n),
         onCloseCallback: u,
         instant: a,
         backdropStyle: c
@@ -127,7 +127,7 @@ f.setState(t => {
   }), d;
 }
 
-function m(e) {
+function I(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _(),
 n = f.getState()[t],
 r = null != n ? n.find(t => {
@@ -149,7 +149,7 @@ f.setState(n => void 0 === n[t] ? n : {
   }), null != r && null != r.onCloseCallback && r.onCloseCallback();
 }
 
-function I(e, t, n, r) {
+function m(e, t, n, r) {
   let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : _();
   (0, s.j)(() => {
 f.setState(a => void 0 === a[i] ? a : {
@@ -157,7 +157,7 @@ f.setState(a => void 0 === a[i] ? a : {
   [i]: a[i].map(a => a.key === e ? {
     ...a,
     render: t,
-    onCloseRequest: null == n ? () => m(e, i) : n,
+    onCloseRequest: null == n ? () => I(e, i) : n,
     onCloseCallback: r
   } : a)
 });
@@ -194,7 +194,7 @@ function N() {
   let e = f.getState();
   for (let t in e)
 for (let n of e[t])
-  m(n.key, t);
+  I(n.key, t);
 }
 
 function v(e, t) {

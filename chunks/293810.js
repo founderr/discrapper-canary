@@ -1,12 +1,12 @@
 n.d(t, {
   C5: function() {
-return m;
+return I;
   },
   DN: function() {
 return p;
   },
   NT: function() {
-return I;
+return m;
   },
   PY: function() {
 return c;
@@ -46,8 +46,8 @@ interval_count: 7
   }
 ];
 (s = c || (c = {}))[s.NONE = 0] = 'NONE', s[s.IN_SUBSCRIPTION_SERVER = 1] = 'IN_SUBSCRIPTION_SERVER', s[s.SUBSCRIBED = 2] = 'SUBSCRIBED';
-let m = 'https://'.concat(_.$R, '/creators'),
-  I = 90,
+let I = 'https://'.concat(_.$R, '/creators'),
+  m = 90,
   T = Object.freeze({
 PROMO_PAGE_GUIDE: 'https://discord.com/creators/say-hello-to-promo-pages-our-new-server-subscriptions-feature',
 CASE_STUDIES: 'https://discord.com/creator-portal/learn-from-creators?tab=creator-case-studies',

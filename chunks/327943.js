@@ -24,10 +24,10 @@ client: {
   },
   h = !1,
   p = !0,
-  m = () => {
+  I = () => {
 p = !l.ZP.canUsePremiumAppIcons(s.default.getCurrentUser());
   },
-  I = e => {
+  m = e => {
 if (f.client.desktop = e, !p) {
   var t;
   o.default.track(c.rMx.APP_ICON_UPDATED, {
@@ -50,7 +50,7 @@ coachmarkImpressions: 2
 }
 class S extends(r = i.ZP.PersistedStore) {
   initialize(e) {
-null != e && (f = e), this.waitFor(s.default), this.syncWith([s.default], m);
+null != e && (f = e), this.waitFor(s.default), this.syncWith([s.default], I);
   }
   get isEditorOpen() {
 return h;
@@ -71,7 +71,7 @@ E(S, 'displayName', 'AppIconPersistedStoreState'), E(S, 'persistKey', 'AppIconPe
 let {
   id: t
 } = e;
-null != t && I(t);
+null != t && m(t);
   },
   APP_ICON_EDITOR_OPEN: function() {
 h = !0;

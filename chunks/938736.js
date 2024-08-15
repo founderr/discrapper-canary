@@ -15,7 +15,7 @@ return E;
 return g;
   },
   uv: function() {
-return N;
+return p;
   }
 });
 var s, a, r = n(442837),
@@ -115,7 +115,7 @@ let {
 let s = (0, r.e7)([o.Z], () => o.Z.getIsEligibleToSendReferrals());
 return t && s;
   },
-  N = e => {
+  p = e => {
 let t;
 let {
   enabled: n,

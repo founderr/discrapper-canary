@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(74538),
   h = n(998502),
   p = n(785717),
-  m = n(204197),
-  I = n(929498),
+  I = n(204197),
+  m = n(929498),
   T = n(652853),
   g = n(228168),
   S = n(981631),
@@ -46,7 +46,7 @@ t,
 h
   ]), {
 live: P
-  } = (0, I.Z)(t.id), [U] = P, {
+  } = (0, m.Z)(t.id), [U] = P, {
 status: w,
 isMobileOnline: x
   } = (0, o.cj)([E.Z], () => ({
@@ -60,7 +60,7 @@ isMobileOnline: E.Z.isMobileOnline(t.id)
 avatarDecorationSrc: B,
 avatarSrc: F,
 eventHandlers: V
-  } = (0, m.Z)({
+  } = (0, I.Z)({
 user: t,
 guildId: null != n ? n.guildId : a,
 size: G,

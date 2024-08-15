@@ -128,7 +128,7 @@ code: l,
 drop: S,
 platform: N,
 transitionState: C
-  } = e, m = (0, c.Dt)(), [A, g] = a.useState();
+  } = e, m = (0, c.Dt)(), [A, O] = a.useState();
   a.useEffect(() => {
 null == l && o.Z.wait(async () => {
   await (0, d.dN)(S.dropsQuestId);
@@ -137,7 +137,7 @@ null == l && o.Z.wait(async () => {
 S.dropsQuestId,
 l
   ]);
-  let O = (0, i.e7)([_.Z], () => _.Z.platformAvailability);
+  let g = (0, i.e7)([_.Z], () => _.Z.platformAvailability);
   return (0, n.jsx)(r.ModalRoot, {
 transitionState: C,
 'aria-labelledby': m,
@@ -152,14 +152,14 @@ children: (0, n.jsx)(n.Fragment, {
         }),
         code: l
       });
-    if (null === O)
+    if (null === g)
       return (0, n.jsx)('div', {
         className: I.spinnerContainer,
         children: (0, n.jsx)(r.Spinner, {})
       });
     {
-      let e = O.length > 0,
-        a = 1 === O.length;
+      let e = g.length > 0,
+        a = 1 === g.length;
       return (0, n.jsxs)(n.Fragment, {
         children: [
           (0, n.jsxs)(r.ModalHeader, {
@@ -181,7 +181,7 @@ children: (0, n.jsx)(n.Fragment, {
                 variant: 'text-md/normal',
                 className: I.dropBodyText,
                 children: a ? u.Z.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({
-                  platform: (0, E.Un)(O[0])
+                  platform: (0, E.Un)(g[0])
                 }) : u.Z.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({
                   title: S.title
                 })
@@ -193,12 +193,12 @@ children: (0, n.jsx)(n.Fragment, {
                 className: I.dropFormSection,
                 children: [
                   (0, n.jsx)(r.SingleSelect, {
-                    onChange: g,
-                    options: O.map(e => ({
+                    onChange: O,
+                    options: g.map(e => ({
                       value: e,
                       label: (0, E.Un)(e)
                     })),
-                    value: a ? O[0] : A,
+                    value: a ? g[0] : A,
                     isDisabled: !e,
                     className: e ? '' : I.selectDangerBorder,
                     look: e ? r.SelectLooks.FILLED : r.SelectLooks.CUSTOM
@@ -224,7 +224,7 @@ children: (0, n.jsx)(n.Fragment, {
                     } = await t.e('5004').then(t.bind(t, 233070));
                     return t => (void 0 !== A || a) && (0, n.jsx)(e, {
                       ...t,
-                      platform: void 0 === A ? O[0] : A,
+                      platform: void 0 === A ? g[0] : A,
                       code: l,
                       dropsQuestId: S.dropsQuestId,
                       closeParentModal: s,

@@ -21,7 +21,7 @@ t.Z = () => {
   let n = null !== (e = t.globalName) && void 0 !== e ? e : t.username,
 a = (0, i.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
 g = (null == a ? void 0 : a.trialId) === T.dO ? '1' : '2',
-N = (0, c.ZP)([o.Z.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER]);
+p = (0, c.ZP)([o.Z.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER]);
   return (0, s.jsxs)('div', {
 className: C.banner,
 children: [
@@ -49,7 +49,7 @@ children: [
     onClick: () => {
       (0, d.Z)({
         initialPlanId: T.Xh.PREMIUM_MONTH_TIER_2,
-        analyticsLocations: N.analyticsLocations,
+        analyticsLocations: p.analyticsLocations,
         analyticsObject: {
           object: I.qAy.BUTTON_CTA
         }

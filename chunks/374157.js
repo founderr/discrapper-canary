@@ -150,17 +150,17 @@ return;
   if (null == _)
 return;
   let p = a.bN.range(e, _),
-[m, I] = a.M8.edges(p),
+[I, m] = a.M8.edges(p),
 T = a.bN.richValue(e),
 g = f ? -1 : 1,
-S = null !== (r = null === (t = m.path) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : 0,
-A = null !== (i = null === (n = I.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : T.length - 1,
+S = null !== (r = null === (t = I.path) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : 0,
+A = null !== (i = null === (n = m.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : T.length - 1,
 N = f ? S : A,
 v = f ? A : S;
   for (;;) {
 let t = T[v],
-  n = null !== (u = v === S ? null === (s = m.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
-  r = null !== (c = v === A ? null === (o = I.path) || void 0 === o ? void 0 : o[1] : null) && void 0 !== c ? c : t.children.length - 1,
+  n = null !== (u = v === S ? null === (s = I.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
+  r = null !== (c = v === A ? null === (o = m.path) || void 0 === o ? void 0 : o[1] : null) && void 0 !== c ? c : t.children.length - 1,
   i = f ? r : n,
   _ = f ? n : r,
   E = i;
@@ -171,7 +171,7 @@ for (;;) {
       v,
       E
     ];
-  if (n = a.C0.equals(s, m.path) || a.C0.isAncestor(s, m.path) ? !f && a.bN.isEnd(e, m, s) ? null : m : a.bN.start(e, s), r = a.C0.equals(s, I.path) || a.C0.isAncestor(s, I.path) ? f && a.bN.isStart(e, I, s) ? null : I : a.bN.end(e, s), null != n && null != r) {
+  if (n = a.C0.equals(s, I.path) || a.C0.isAncestor(s, I.path) ? !f && a.bN.isEnd(e, I, s) ? null : I : a.bN.start(e, s), r = a.C0.equals(s, m.path) || a.C0.isAncestor(s, m.path) ? f && a.bN.isStart(e, m, s) ? null : m : a.bN.end(e, s), null != n && null != r) {
     if (a.LC.isText(i) && 0 === i.text.length) {
       let e = {
         path: s,

@@ -1,9 +1,9 @@
 n.d(t, {
   c4: function() {
-return m;
+return I;
   },
   st: function() {
-return I;
+return m;
   }
 });
 var r = n(735250),
@@ -31,7 +31,7 @@ icon: (0, r.jsx)(u.Dots, {
   };
 }
 
-function m(e) {
+function I(e) {
   return {
 text: null != e ? e : f.Z.Messages.APPLICATION_COMMAND_FAILED,
 color: 'text-danger',
@@ -43,7 +43,7 @@ icon: (0, r.jsx)(u.CircleWarningIcon, {
   };
 }
 
-function I(e) {
+function m(e) {
   let {
 className: t,
 icon: n,
@@ -94,14 +94,14 @@ h = function(e, t) {
         applicationName: t.author.username
       }));
     case _.rQ.TIMED_OUT:
-      return m(f.Z.Messages.APPLICATION_COMMAND_TIMED_OUT);
+      return I(f.Z.Messages.APPLICATION_COMMAND_TIMED_OUT);
     case _.rQ.FAILED:
-      return m(t.interactionError);
+      return I(t.interactionError);
   }
 }(u, t);
   else {
 let e = (0, c.SD)(u, t, a);
-null != e && (h = m(e));
+null != e && (h = I(e));
   }
   if (null == h)
 return null;
@@ -110,7 +110,7 @@ text: T,
 icon: g,
 color: S
   } = h;
-  return (0, r.jsx)(I, {
+  return (0, r.jsx)(m, {
 icon: g,
 text: T,
 className: n,

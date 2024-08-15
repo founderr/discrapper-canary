@@ -19,8 +19,8 @@ var r, i = n(873546),
   f = n(914010),
   h = n(594174),
   p = n(981631),
-  m = n(176505),
-  I = n(231338);
+  I = n(176505),
+  m = n(231338);
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -41,9 +41,9 @@ let g = 'message_requests',
 function C(e) {
   if (null == e)
 return null;
-  if ((0, m.AB)(e)) {
+  if ((0, I.AB)(e)) {
 let t = f.Z.getGuildId();
-return null == t ? null : (0, m.Qk)(e, t);
+return null == t ? null : (0, I.Qk)(e, t);
   }
   return e;
 }
@@ -69,7 +69,7 @@ function L() {
 let n = O[t];
 if (n.type === o.tI.VIEW_THREAD || n.type === o.tI.VIEW_CHANNEL) {
   let r = c.Z.getChannel(n.channelId);
-  (null == r || !d.Z.can(I.Pl.VIEW_CHANNEL, r)) && (delete O[t], e = !0);
+  (null == r || !d.Z.can(m.Pl.VIEW_CHANNEL, r)) && (delete O[t], e = !0);
 }
   }
   return e;

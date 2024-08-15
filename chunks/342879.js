@@ -13,8 +13,8 @@ var r = n(392711),
   f = n(206583),
   h = n(981631);
 let p = f.YN.GLOBAL_FEED,
-  m = new Map(),
-  I = new Set(),
+  I = new Map(),
+  m = new Set(),
   T = new Map(),
   g = null,
   S = (0, r.debounce)(_.yK, 3000, {
@@ -34,7 +34,7 @@ function N() {
 }
 
 function v(e) {
-  if (I.has(e) || e === f.YN.GAME_PROFILE_FEED && (!(0, s._J)('ContentInventoryManager') || void 0 !== E.Z.getFeed(e)))
+  if (m.has(e) || e === f.YN.GAME_PROFILE_FEED && (!(0, s._J)('ContentInventoryManager') || void 0 !== E.Z.getFeed(e)))
 return !1;
   if (e === p) {
 if (!(0, d.sA)('ContentInventoryManager') || E.Z.hidden || !c.Z.isFocused() || !o.Z.isConnected())
@@ -50,8 +50,8 @@ function O(e) {
   A(e, {
 loading: !1
   });
-  let t = m.get(e);
-  void 0 !== t && (clearTimeout(t), m.delete(e));
+  let t = I.get(e);
+  void 0 !== t && (clearTimeout(t), I.delete(e));
 }
 
 function R() {
@@ -65,7 +65,7 @@ n = Math.max(0, null == g ? 0 : new Date(g).getTime() - Date.now(), t);
   A(p, {
 loading: !1,
 nextFetchDate: new Date(Date.now() + n)
-  }), m.set(p, setTimeout(() => C(p), n));
+  }), I.set(p, setTimeout(() => C(p), n));
 }
 async function C(e) {
   let {
@@ -74,7 +74,7 @@ force: t = !1
   if (!!(v(e) || t))
 try {
   let t = E.Z.getFeed(e);
-  I.add(e), A(e, {
+  m.add(e), A(e, {
     loading: !0
   });
   let n = await (0, _.mt)({
@@ -85,7 +85,7 @@ try {
     type: 'CONTENT_INVENTORY_SET_FEED',
     feedId: e,
     feed: n
-  }), T.set(e, 0), I.delete(e), A(e, {
+  }), T.set(e, 0), m.delete(e), A(e, {
     loading: !1
   }), e === p && (g = null, R());
 } catch (a) {
@@ -93,7 +93,7 @@ try {
   let r = null !== (n = T.get(e)) && void 0 !== n ? n : 0;
   if (r < 3) {
     let n = 1000 * Math.pow(5, r);
-    m.set(e, setTimeout(() => C(e, {
+    I.set(e, setTimeout(() => C(e, {
       force: t
     }), n)), T.set(e, r + 1);
   } else
@@ -101,7 +101,7 @@ try {
       type: 'CONTENT_INVENTORY_CLEAR_FEED',
       feedId: e
     });
-  I.delete(e);
+  m.delete(e);
 }
 }
 

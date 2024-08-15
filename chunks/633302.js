@@ -3,7 +3,7 @@ n.d(t, {
 return N;
   },
   gw: function() {
-return I;
+return m;
   }
 }), n(411104), n(47120), n(757143), n(653041), n(724458);
 var r = n(392711),
@@ -28,14 +28,14 @@ let u = null,
   f = [],
   h = 0,
   p = 0,
-  m = {
+  I = {
 '1f3fb': 0,
 '1f3fc': 1,
 '1f3fd': 2,
 '1f3fe': 3,
 '1f3ff': 4
   },
-  I = [
+  m = [
 '\uD83C\uDFFB',
 '\uD83C\uDFFC',
 '\uD83C\uDFFD',
@@ -46,8 +46,8 @@ let u = null,
   g = n(523558),
   S = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
   A = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g;
-for (let e = 0; e < I.length; e++) {
-  let t = I[e];
+for (let e = 0; e < m.length; e++) {
+  let t = m[e];
   _['skin-tone-'.concat(e + 1)] = t, E[t] = 'skin-tone-'.concat(e + 1);
 }
 class N {
@@ -139,7 +139,7 @@ for (let t in i) {
   for (let e of n.names)
     d[e] = n, _[e] = r;
   if (!e.hasMultiDiversity) {
-    let t = m[n.emojiObject.diversity[0]];
+    let t = I[n.emojiObject.diversity[0]];
     for (let i of e.names) {
       let e = ''.concat(i, '::skin-tone-').concat(t + 1);
       _[e] = r, d[e] = n;
@@ -255,7 +255,7 @@ let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
 return Object.prototype.hasOwnProperty.call(g, e) && (r = g[e]), t ? ':'.concat(r, ':') : r;
   },
   convertSurrogateToBase: function(e) {
-return O(M(I.reduce((e, t) => e.replace(t, ''), e), !1));
+return O(M(m.reduce((e, t) => e.replace(t, ''), e), !1));
   },
   forEach: e => i().each(f, e),
   all: () => f,

@@ -85,9 +85,9 @@ function d(e, t, n) {
   var a, c, d, _, E, f, h;
   let {
 key: p
-  } = e, m = l.get(t), I = null !== (c = e.isDisabled) && void 0 !== c ? c : t.disabledKeys.has(p), T = null !== (d = e.isSelected) && void 0 !== d ? d : t.selectionManager.isSelected(p), g = null !== (_ = e.shouldSelectOnPressUp) && void 0 !== _ ? _ : null == m ? void 0 : m.shouldSelectOnPressUp, S = null !== (E = e.shouldFocusOnHover) && void 0 !== E ? E : null == m ? void 0 : m.shouldFocusOnHover, A = null !== (f = e.shouldUseVirtualFocus) && void 0 !== f ? f : null == m ? void 0 : m.shouldUseVirtualFocus, N = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == m ? void 0 : m.isVirtualized, v = (0, r.mp)(), O = (0, r.mp)(), R = {
+  } = e, I = l.get(t), m = null !== (c = e.isDisabled) && void 0 !== c ? c : t.disabledKeys.has(p), T = null !== (d = e.isSelected) && void 0 !== d ? d : t.selectionManager.isSelected(p), g = null !== (_ = e.shouldSelectOnPressUp) && void 0 !== _ ? _ : null == I ? void 0 : I.shouldSelectOnPressUp, S = null !== (E = e.shouldFocusOnHover) && void 0 !== E ? E : null == I ? void 0 : I.shouldFocusOnHover, A = null !== (f = e.shouldUseVirtualFocus) && void 0 !== f ? f : null == I ? void 0 : I.shouldUseVirtualFocus, N = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == I ? void 0 : I.isVirtualized, v = (0, r.mp)(), O = (0, r.mp)(), R = {
 role: 'option',
-'aria-disabled': I || void 0,
+'aria-disabled': m || void 0,
 'aria-selected': 'none' !== t.selectionManager.selectionMode ? T : void 0
   };
   !((0, r.V5)() && (0, r.Pf)()) && (R['aria-label'] = e['aria-label'], R['aria-labelledby'] = v, R['aria-describedby'] = O);
@@ -110,16 +110,16 @@ shouldSelectOnPressUp: g,
 allowsDifferentPressOrigin: g && S,
 isVirtualized: N,
 shouldUseVirtualFocus: A,
-isDisabled: I,
-onAction: (null == m ? void 0 : m.onAction) ? () => {
+isDisabled: m,
+onAction: (null == I ? void 0 : I.onAction) ? () => {
   var e;
-  return null == m ? void 0 : null === (e = m.onAction) || void 0 === e ? void 0 : e.call(m, p);
+  return null == I ? void 0 : null === (e = I.onAction) || void 0 === e ? void 0 : e.call(I, p);
 } : void 0,
-linkBehavior: null == m ? void 0 : m.linkBehavior
+linkBehavior: null == I ? void 0 : I.linkBehavior
   }), {
 hoverProps: P
   } = (0, i.XI)({
-isDisabled: I || !S,
+isDisabled: m || !S,
 onHoverStart() {
   !(0, i.E)() && (t.selectionManager.setFocused(!0), t.selectionManager.setFocusedKey(p));
 }
@@ -141,7 +141,7 @@ descriptionProps: {
 isFocused: L,
 isFocusVisible: L && (0, i.E)(),
 isSelected: T,
-isDisabled: I,
+isDisabled: m,
 isPressed: D,
 allowsSelection: M,
 hasAction: b

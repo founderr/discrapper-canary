@@ -43,7 +43,7 @@ let {
   listing: l,
   subscription: m,
   onClose: A
-} = e, g = (0, _.Dt)(), O = (0, u.YB)(i), h = (null == O ? void 0 : null === (s = O.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null ? (0, E._W)(O.cover_image_asset.application_id, O.cover_image_asset, 440) : void 0, {
+} = e, O = (0, _.Dt)(), g = (0, u.YB)(i), h = (null == g ? void 0 : null === (s = g.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null ? (0, E._W)(g.cover_image_asset.application_id, g.cover_image_asset, 440) : void 0, {
   analyticsLocations: p
 } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL), {
   cancelSubscription: R,
@@ -59,7 +59,7 @@ let {
 return (0, n.jsxs)(o.ModalRoot, {
   transitionState: t,
   className: N.__invalid_modal,
-  'aria-labelledby': g,
+  'aria-labelledby': O,
   children: [
     (0, n.jsxs)('div', {
       children: [
@@ -82,7 +82,7 @@ return (0, n.jsxs)(o.ModalRoot, {
       className: N.content,
       children: [
         (0, n.jsx)(o.Heading, {
-          id: g,
+          id: O,
           variant: 'text-md/medium',
           className: N.title,
           children: S.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_TITLE

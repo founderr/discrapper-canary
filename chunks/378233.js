@@ -57,8 +57,8 @@ let {
   MEDIA_PROXY_ENDPOINT: f,
   PROJECT_ENV: h,
   ASSET_ENDPOINT: p,
-  CDN_HOST: m
-} = window.GLOBAL_ENV, I = Object.values(c.og), T = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(I.join('|'), ')'))), g = RegExp('('.concat(location.protocol).concat(p, '|').concat(location.protocol).concat(f, ')(').concat(T, ')'), 'ig'), S = RegExp(''.concat(location.protocol).concat(E, '(').concat(T, ')'), 'ig'), A = e => {
+  CDN_HOST: I
+} = window.GLOBAL_ENV, m = Object.values(c.og), T = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(m.join('|'), ')'))), g = RegExp('('.concat(location.protocol).concat(p, '|').concat(location.protocol).concat(f, ')(').concat(T, ')'), 'ig'), S = RegExp(''.concat(location.protocol).concat(E, '(').concat(T, ')'), 'ig'), A = e => {
   if (null != e.cover_sticker_id) {
 let t = e.stickers.find(t => t.id === e.cover_sticker_id);
 if (null != t)
@@ -118,7 +118,7 @@ return ''.concat(location.protocol).concat(f).concat(s, '?size=').concat((0, i.o
   if (null == r)
 return null;
   let a = o.$k ? 'webp' : 'png';
-  return n = null != m ? ''.concat(location.protocol, '//').concat(m, '/app-assets/').concat(d.Ks, '/store/').concat(r, '.').concat(a) : ''.concat(location.protocol).concat(E).concat(_.ANM.STORE_ASSET(d.Ks, r, a)), null != t && (n += '?size='.concat((0, i.oO)(t))), n;
+  return n = null != I ? ''.concat(location.protocol, '//').concat(I, '/app-assets/').concat(d.Ks, '/store/').concat(r, '.').concat(a) : ''.concat(location.protocol).concat(E).concat(_.ANM.STORE_ASSET(d.Ks, r, a)), null != t && (n += '?size='.concat((0, i.oO)(t))), n;
 }, y = e => e.match('development' !== h ? g : S), D = e => e.stickers.some(e => {
   let {
 format_type: t

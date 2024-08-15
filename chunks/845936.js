@@ -18,17 +18,17 @@ applicationId: E,
 userIndexState: f,
 guildIndexState: h,
 onSuccess: p,
-sectionName: m,
-location: I,
+sectionName: I,
+location: m,
 entrypoint: T
   } = e;
   if (E === u.bi.BUILT_IN || (null === (t = f.result) || void 0 === t ? void 0 : t.sections[E]) != null || (null === (n = h.result) || void 0 === n ? void 0 : n.sections[E]) != null)
 return null == p || p(), Promise.resolve(!0);
   let g = null != T ? T : o.Z.lastShownEntrypoint();
   (0, i.yw)(l.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
-location: I,
+location: m,
 application_id: E,
-section_name: m,
+section_name: I,
 source: g
   });
   let S = a.Z.getApplication(E),
@@ -44,9 +44,9 @@ N = null == S ? void 0 : null === (_ = S.integrationTypesConfig) || void 0 === _
       location: n
     } = t;
     null != n && ((0, i.yw)(l.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
-      location: I,
+      location: m,
       application_id: E,
-      section_name: m,
+      section_name: I,
       source: g
     }), e(!0), null == p || p());
   }

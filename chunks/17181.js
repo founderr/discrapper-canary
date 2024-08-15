@@ -6,10 +6,10 @@ return p;
 return h;
   },
   isOnboardingActiveForGuild: function() {
-return I;
+return m;
   },
   openAndWaitForOnboarding: function() {
-return m;
+return I;
   }
 });
 var r = n(512722),
@@ -44,11 +44,11 @@ else {
     return;
   await (0, u.rK)(t);
 }
-c.ZP.shouldShowOnboarding(t) && (await m(t), null != n && (0, o.uL)(_.Z5c.CHANNEL(t, n)));
+c.ZP.shouldShowOnboarding(t) && (await I(t), null != n && (0, o.uL)(_.Z5c.CHANNEL(t, n)));
   }
 }
 
-function m(e) {
+function I(e) {
   return new Promise(t => {
 f[e] = t, (0, d.x)(e).then(() => {
   var t, n;
@@ -57,6 +57,6 @@ f[e] = t, (0, d.x)(e).then(() => {
   });
 }
 
-function I(e) {
+function m(e) {
   return null != f[e];
 }

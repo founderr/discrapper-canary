@@ -17,13 +17,13 @@ var n = t(735250),
   C = t(689938),
   m = t(956554),
   A = t(982404),
-  g = t(299156);
+  O = t(299156);
 s.Z = function(e) {
   let {
 premiumSubscription: s,
 premiumType: t,
 onClose: i,
-onConfirm: O,
+onConfirm: g,
 userDiscountOffer: h
   } = e, [p, R] = a.useState(!1), [x, M] = a.useState(!1), f = async e => {
 try {
@@ -32,12 +32,12 @@ try {
     body: {
       user_discount_offer_id: e
     }
-  }), O();
+  }), g();
 } catch (e) {
   R(!0);
 }
 M(!1);
-  }, D = (0, d.ZP)(), P = (0, l.wj)(D) ? A : g, L = (0, I._)(s, S.Xh.PREMIUM_MONTH_TIER_2, h), b = (0, E.aS)(S.Xh.PREMIUM_MONTH_TIER_2), Z = (0, u.T4)(b.amount, b.currency);
+  }, D = (0, d.ZP)(), P = (0, l.wj)(D) ? A : O, L = (0, I._)(s, S.Xh.PREMIUM_MONTH_TIER_2, h), b = (0, E.aS)(S.Xh.PREMIUM_MONTH_TIER_2), Z = (0, u.T4)(b.amount, b.currency);
   return null == h ? null : (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsx)(T.Z, {

@@ -25,16 +25,16 @@ var l = n(120356),
   N = n(501655),
   x = n(427679),
   S = n(71275),
-  Z = n(201469),
-  v = n(680089),
+  v = n(201469),
+  Z = n(680089),
   T = n(592125),
   L = n(430824),
   A = n(607744),
   b = n(496675),
   M = n(306680),
   R = n(9156),
-  P = n(979651),
-  O = n(934415),
+  O = n(979651),
+  P = n(934415),
   y = n(98597),
   j = n(648501),
   D = n(473403),
@@ -65,7 +65,7 @@ return null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0;
 let {
   channel: e
 } = this.props;
-return (0, O.rY)(e, P.Z, L.Z);
+return (0, P.rY)(e, O.Z, L.Z);
   }
   getModeClass() {
 let {
@@ -318,10 +318,10 @@ return {
   bypassLimit: b.Z.can(U.Plq.MOVE_MEMBERS, n),
   unverifiedAccount: !i.canChat
 };
-  }), h = (0, a.e7)([v.Z], () => v.Z.isCollapsed(n.parent_id)), p = (0, Z.ZP)(n.id), _ = (0, a.e7)([x.Z], () => x.Z.getStageInstanceByChannel(n.id), [n.id]), f = (0, E.Rk)(n.id, N.pV.AUDIENCE), {
+  }), h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)), p = (0, v.ZP)(n.id), _ = (0, a.e7)([x.Z], () => x.Z.getStageInstanceByChannel(n.id), [n.id]), f = (0, E.Rk)(n.id, N.pV.AUDIENCE), {
 isSubscriptionGated: m,
 needSubscriptionToAccess: C
-  } = (0, g.Z)(n.id), I = (0, a.e7)([R.ZP], () => R.ZP.isFavorite(t.id, n.id)), L = (0, S.xJ)(n.id), P = (0, j.Z)({
+  } = (0, g.Z)(n.id), I = (0, a.e7)([R.ZP], () => R.ZP.isFavorite(t.id, n.id)), L = (0, S.xJ)(n.id), O = (0, j.Z)({
 channel: n,
 isChannelSelected: !1,
 isChannelCollapsed: s,
@@ -329,7 +329,7 @@ voiceStates: o,
 isSubscriptionGated: m,
 needSubscriptionToAccess: C,
 enableConnectedUserLimit: L || n.userLimit > 0 && n.userLimit < U.xGv
-  }), O = e.connected && null == P;
+  }), P = e.connected && null == O;
   return (0, i.jsx)(W, {
 categoryCollapsed: h,
 connectAction: p,
@@ -341,8 +341,8 @@ needSubscriptionToAccess: C,
 ...d,
 ...e,
 isFavoriteSuggestion: r && !I,
-forceShowButtons: O,
-channelInfo: P,
+forceShowButtons: P,
+channelInfo: O,
 resolvedUnreadSetting: u
   });
 }

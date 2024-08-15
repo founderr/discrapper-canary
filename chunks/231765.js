@@ -17,8 +17,8 @@ var n, a, i, r, o = t(735250),
   C = t(57562),
   m = t(955204),
   A = t(64078),
-  g = t(351780),
-  O = t(954794),
+  O = t(351780),
+  g = t(954794),
   h = t(112843),
   p = t(524484),
   R = t(981631),
@@ -433,7 +433,7 @@ function H(e) {
   let {
 onChangePage: s,
 setShowEnableAnimation: t
-  } = e, n = (0, d.cj)([g.Z], () => g.Z.getState()), [a, i] = l.useState({
+  } = e, n = (0, d.cj)([O.Z], () => O.Z.getState()), [a, i] = l.useState({
 x: 0,
 y: 0
   }), r = (0, h.Z)();
@@ -515,7 +515,7 @@ switch (e) {
       setShowEnableAnimation: t
     });
   case 1:
-    return (0, o.jsx)(O.Z, {
+    return (0, o.jsx)(g.Z, {
       onBackClick: n(0)
     });
   default:

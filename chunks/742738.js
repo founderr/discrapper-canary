@@ -8,8 +8,8 @@ var r, i, a, s, o = n(348327),
   f = n(944486),
   h = n(700785),
   p = n(565799),
-  m = n(501655),
-  I = n(750154),
+  I = n(501655),
+  m = n(750154),
   T = n(427679),
   g = n(71275),
   S = n(157925),
@@ -31,10 +31,10 @@ if (null == u || !h.oz(A.Plq.VIEW_CHANNEL, u))
 let c = _.Z.getGuild(u.getGuildId());
 if (null == c || !c.hasFeature(A.oNc.DISCOVERABLE))
   return null;
-let E = (0, I.Lw)(u, l),
+let E = (0, m.Lw)(u, l),
   v = (null == N ? void 0 : null === (e = N.party) || void 0 === e ? void 0 : e.id) === E ? N : null,
-  O = p.Z.getMutableParticipants(u.id, m.pV.SPEAKER),
-  R = O.filter(e => e.type === m.Ui.STREAM).length,
+  O = p.Z.getMutableParticipants(u.id, I.pV.SPEAKER),
+  R = O.filter(e => e.type === I.Ui.STREAM).length,
   C = O.length - R,
   y = p.Z.getParticipantCount(o) - R,
   D = (null == v ? void 0 : null === (t = v.party) || void 0 === t ? void 0 : t.size) != null ? v.party.size[1] : 0;
@@ -92,7 +92,7 @@ let {
 } = e;
 if (null == N)
   return;
-let n = (0, I.rq)(N);
+let n = (0, m.rq)(N);
 null != n && null != t.find(e => e.channelId === n.channelId) && v();
   }
 });

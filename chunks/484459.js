@@ -17,8 +17,8 @@ async function _(e, t) {
   let f, {
 withMutualGuilds: h = !1,
 withMutualFriendsCount: p = !1,
-withMutualFriends: m = !1,
-friendToken: I,
+withMutualFriends: I = !1,
+friendToken: m,
 preloadUserBanner: T = !0,
 dispatchWait: g = !1,
 guildId: S,
@@ -39,24 +39,24 @@ y = c.Z.getMutualFriendsCount(e),
 D = c.Z.isFetchingProfile(e),
 L = T ? d.Z : void 0,
 b = null == R && h,
-M = null == C && m,
+M = null == C && I,
 P = null == y && p,
 U = null != S && null == O,
 w = Date.now() - (null !== (E = null == v ? void 0 : v.lastFetched) && void 0 !== E ? E : 0) >= 60000;
   if (!!(!D && (b || P || M)) || !!U || !!w)
 g ? await r.Z.wait(() => (0, i.In)(e, {
   withMutualGuilds: h,
-  withMutualFriends: m,
+  withMutualFriends: I,
   withMutualFriendsCount: p,
-  friendToken: I,
+  friendToken: m,
   guildId: S,
   connectionsRoleId: f,
   abortSignal: N
 }, L)) : await (0, i.In)(e, {
   withMutualGuilds: h,
-  withMutualFriends: m,
+  withMutualFriends: I,
   withMutualFriendsCount: p,
-  friendToken: I,
+  friendToken: m,
   guildId: S,
   connectionsRoleId: f,
   abortSignal: N

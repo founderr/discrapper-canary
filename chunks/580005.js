@@ -1,6 +1,6 @@
 n.d(t, {
   C: function() {
-return m;
+return I;
   }
 }), n(653041);
 var r, i = n(392711),
@@ -24,8 +24,8 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let m = 100,
-  I = new l.Z({
+let I = 100,
+  m = new l.Z({
 computeBonus: () => 100,
 computeWeight: e => {
   let t = 1;
@@ -36,7 +36,7 @@ lookupKey: e => {
   return null !== (n = null !== (t = d.Z.getGuild(e)) && void 0 !== t ? t : c.Z.getChannel(e)) && void 0 !== n ? n : c.Z.getChannel(c.Z.getDMFromUserId(e));
 },
 afterCompute: () => {},
-numFrequentlyItems: m,
+numFrequentlyItems: I,
 maxSamples: 10
   }),
   T = null,
@@ -47,10 +47,10 @@ function S(e) {
 guildId: t,
 channelId: n
   } = e, r = !1;
-  return n !== T && (T = null != n ? n : null, null != n && f.Xyh.test(n) && (r = !0, I.track(n), N.pendingUsages.push({
+  return n !== T && (T = null != n ? n : null, null != n && f.Xyh.test(n) && (r = !0, m.track(n), N.pendingUsages.push({
 key: n,
 timestamp: Date.now()
-  }))), t !== g && (g = null != t ? t : null, null != t && f.Xyh.test(t) && (r = !0, I.track(t), N.pendingUsages.push({
+  }))), t !== g && (g = null != t ? t : null, null != t && f.Xyh.test(t) && (r = !0, m.track(t), N.pendingUsages.push({
 key: t,
 timestamp: Date.now()
   }))), r;
@@ -61,7 +61,7 @@ function A() {
   let t = null === (e = u.Z.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
   if (null == t)
 return !1;
-  I.overwriteHistory(a().mapValues(t, e => ({
+  m.overwriteHistory(a().mapValues(t, e => ({
 ...e,
 recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), N.pendingUsages);
@@ -80,21 +80,21 @@ return N;
 return N.pendingUsages.length > 0;
   }
   get frecencyWithoutFetchingLatest() {
-return I;
+return m;
   }
   getFrequentlyWithoutFetchingLatest() {
-return I.frequently;
+return m.frequently;
   }
   getScoreWithoutFetchingLatest(e) {
 var t;
-return null !== (t = I.getFrecency(e)) && void 0 !== t ? t : 0;
+return null !== (t = m.getFrecency(e)) && void 0 !== t ? t : 0;
   }
   getScoreForDMWithoutFetchingLatest(e) {
 let t = c.Z.getDMFromUserId(e);
 return null != t ? this.getScoreWithoutFetchingLatest(t) : 0;
   }
   getMaxScore() {
-return 10 * m;
+return 10 * I;
   }
   getBonusScore() {
 return 100;

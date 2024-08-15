@@ -17,8 +17,8 @@ var n = t(735250),
   C = t(317381),
   m = t(513202),
   A = t(979200),
-  g = t(600164),
-  O = t(713938),
+  O = t(600164),
+  g = t(713938),
   h = t(881998),
   p = t(246946),
   R = t(768581),
@@ -126,7 +126,7 @@ return (0, n.jsx)(u.Card, {
           id: t.id,
           icon: t.icon
         }),
-        s = null != e ? (0, n.jsx)(g.Z.Child, {
+        s = null != e ? (0, n.jsx)(O.Z.Child, {
           className: b.appAvatar,
           grow: 0,
           children: (0, n.jsx)('img', {
@@ -213,7 +213,7 @@ return (0, n.jsx)(u.Card, {
       (() => {
         let e = [];
         for (let t of s)
-          e.push((0, O.jW)(t, s)), t === c.x.APPLICATIONS_COMMANDS && e.push(L.Z.Messages.SCOPE_DM_YOU);
+          e.push((0, g.jW)(t, s)), t === c.x.APPLICATIONS_COMMANDS && e.push(L.Z.Messages.SCOPE_DM_YOU);
         if (e.length > 0 || null != i && i.length > 0)
           return (0, n.jsx)(u.FormItem, {
             faded: !0,

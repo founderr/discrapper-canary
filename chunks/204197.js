@@ -31,8 +31,8 @@ showPending: u,
 animateOnHover: d,
 avatarOverride: E
   }), {
-avatarPlaceholderSrc: m,
-avatarDecorationSrc: I,
+avatarPlaceholderSrc: I,
+avatarDecorationSrc: m,
 eventHandlers: T
   } = (0, s.Z)({
 user: t,
@@ -49,8 +49,8 @@ p,
 T
   ]);
   return {
-avatarPlaceholderSrc: m,
-avatarDecorationSrc: I,
+avatarPlaceholderSrc: I,
+avatarDecorationSrc: m,
 avatarSrc: f,
 isAnimating: h,
 eventHandlers: {

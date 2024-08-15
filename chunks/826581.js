@@ -9,8 +9,8 @@ var r, i, a, s, o = n(913527),
   f = n(70956),
   h = n(881952),
   p = n(246364),
-  m = n(937111),
-  I = n(981631);
+  I = n(937111),
+  m = n(981631);
 let T = new Map(),
   g = {};
 
@@ -59,7 +59,7 @@ function P(e) {
   let {
 guildId: r,
 request: i
-  } = e, a = (0, m.j)(i), s = E.default.getCurrentUser();
+  } = e, a = (0, I.j)(i), s = E.default.getCurrentUser();
   if (null == s || a.userId === s.id)
 return !1;
   let o = null === (n = a.joinRequestId, t = y.get(n)) || void 0 === t ? void 0 : t.applicationStatus;
@@ -93,7 +93,7 @@ return null != t && l()().diff(t, 'seconds') < k;
   getSelectedApplicationTab(e) {
 var t;
 let n = _.Z.getGuild(e),
-  r = (null == n ? void 0 : n.hasFeature(I.oNc.CLAN)) ? 'REVIEW_APPLICATION' : p.wB.SUBMITTED;
+  r = (null == n ? void 0 : n.hasFeature(m.oNc.CLAN)) ? 'REVIEW_APPLICATION' : p.wB.SUBMITTED;
 return null !== (t = U[e]) && void 0 !== t ? t : r;
   }
   getSelectedSortOrder(e) {

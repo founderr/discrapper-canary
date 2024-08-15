@@ -1,6 +1,6 @@
 var r, i, a, s, o, l, u, c, d, _, E, f, h, p;
 
-function m(e, t) {
+function I(e, t) {
   let {
 sound_id: n,
 emoji_id: r,
@@ -20,7 +20,7 @@ available: null == s || s
   };
 }
 
-function I(e) {
+function m(e) {
   let {
 soundId: t,
 guildId: n,
@@ -49,7 +49,7 @@ return a;
 return r;
   },
   QL: function() {
-return I;
+return m;
   },
   YQ: function() {
 return u;
@@ -61,7 +61,7 @@ return o;
 return i;
   },
   o3: function() {
-return m;
+return I;
   },
   vB: function() {
 return l;

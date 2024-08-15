@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(925549),
   h = n(37234),
   p = n(519938),
-  m = n(367907),
-  I = n(158631),
+  I = n(367907),
+  m = n(158631),
   T = n(552740),
   g = n(358221),
   S = n(414910),
@@ -122,7 +122,7 @@ let {
 } = this.props;
 W.default.track(er.rMx.VIDEO_LAYOUT_TOGGLED, {
   video_layout: 'pip',
-  ...(0, m.AB)(e.id)
+  ...(0, I.AB)(e.id)
 });
   }
   componentWillUnmount() {
@@ -131,7 +131,7 @@ let {
 } = this.props;
 W.default.track(er.rMx.VIDEO_LAYOUT_TOGGLED, {
   video_layout: g.Z.getLayout(e.id),
-  ...(0, m.AB)(e.id)
+  ...(0, I.AB)(e.id)
 });
   }
   renderStreamState() {
@@ -346,7 +346,7 @@ t.Z = d.ZP.connectStores([
 ], e => {
   let {
 channel: t
-  } = e, n = Z.Z.getSpeaker(t.id), r = g.Z.getParticipant(t.id, n), i = c()(F.Z.getVideoDevices()).values().first(), a = null == i || i.disabled, s = null != r && r.type !== ei.fO.ACTIVITY && r.type !== ei.fO.HIDDEN_STREAM ? Y.Z.getStreamId(r.user.id, t.getGuildId(), (0, S.Z)(r.type)) : null, o = !a && F.Z.isVideoEnabled(), l = (0, O.Z)(F.Z), u = B.default.getId(), d = k.Z.getCurrentUserActiveStream(), _ = (0, I.tA)(t.id);
+  } = e, n = Z.Z.getSpeaker(t.id), r = g.Z.getParticipant(t.id, n), i = c()(F.Z.getVideoDevices()).values().first(), a = null == i || i.disabled, s = null != r && r.type !== ei.fO.ACTIVITY && r.type !== ei.fO.HIDDEN_STREAM ? Y.Z.getStreamId(r.user.id, t.getGuildId(), (0, S.Z)(r.type)) : null, o = !a && F.Z.isVideoEnabled(), l = (0, O.Z)(F.Z), u = B.default.getId(), d = k.Z.getCurrentUserActiveStream(), _ = (0, m.tA)(t.id);
   return {
 channel: t,
 streamId: s,

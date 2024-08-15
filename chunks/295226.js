@@ -31,11 +31,11 @@ function h() {
 }
 let p = () => !0;
 
-function m() {
+function I() {
   return null != c.ZP.getPremiumTypeSubscription() && (f.userDiscountOffers = {}, f.userTrialOffers = {}, !0);
 }
 
-function I() {
+function m() {
   let e = l.default.getCurrentUser();
   !(0, u.I5)(e) && Object.keys(f.userDiscountOffers).length > 0 && (0, o.T)('UserOfferStore', !0);
 }
@@ -57,7 +57,7 @@ return f.userTrialOffers[e.trial_id] = e, !0;
 }
 class g extends(r = i.ZP.PersistedStore) {
   initialize(e) {
-f = null != e ? e : E, this.waitFor(l.default), this.syncWith([l.default], p), this.syncWith([c.ZP], m), this.syncWith([s.Z], T);
+f = null != e ? e : E, this.waitFor(l.default), this.syncWith([l.default], p), this.syncWith([c.ZP], I), this.syncWith([s.Z], T);
   }
   getUserTrialOffer(e) {
 if (null !== e)
@@ -179,8 +179,8 @@ null != t ? f.userTrialOffers[t.trial_id] = t : f.userTrialOffers = {}, null != 
   BILLING_USER_OFFER_FETCH_FAIL: function() {
 h(), f.userOffersLastFetchedAtDate = Date.now(), f.isFetching = !1;
   },
-  BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: I,
-  BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: I,
-  BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: I,
+  BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: m,
+  BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: m,
+  BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: m,
   LOGOUT: h
 });

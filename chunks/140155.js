@@ -38,7 +38,7 @@ function p(e) {
   return null != e.id && null != e.type;
 }
 
-function m() {
+function I() {
   h = {
 loading: !1,
 initialized: !1,
@@ -55,7 +55,7 @@ notifCenterTabFocused: !1
   };
 }
 
-function I(e) {
+function m(e) {
   return {
 ...e,
 kind: 'notification-center-item',
@@ -64,7 +64,7 @@ message: null != e.message ? (0, o.e5)(e.message) : void 0
 }
 
 function T(e) {
-  let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? I(e.item) : e.item;
+  let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? m(e.item) : e.item;
   if (!h.initialized || !p(t) || h.notifCenterIds.has(t.id))
 return !1;
   h.notifCenterIds.add(t.id), h.notifCenterItems = [
@@ -150,7 +150,7 @@ return h.notifCenterTabFocused;
 f(N, 'displayName', 'NotificationCenterItemsStore'), f(N, 'persistKey', 'NotificationCenterItemsStore_v2');
 let v = new N(a.Z, {
   CONNECTION_OPEN: function(e) {
-m();
+I();
 let t = [];
 e.relationships.forEach(e => {
   let {
@@ -170,7 +170,7 @@ e.relationships.forEach(e => {
   });
 }), h.notifCenterLocalItems = t;
   },
-  LOGOUT: m,
+  LOGOUT: I,
   NOTIFICATION_CENTER_ITEMS_ACK: function(e) {
 let {
   ids: t
@@ -214,10 +214,10 @@ let {
 if (!!h.loading)
   h.loading = !1, h.initialized = !0, h.errored = !1, h.isDataStale = !1, (null == r || !h.notifCenterIds.has(r)) && (h.paginationHasMore = t.length > 0 && n, h.paginationCursor = t.length > 0 ? r : void 0), h.notifCenterItems = [
     ...h.notifCenterItems,
-    ...t.map(I).filter(e => !h.notifCenterIds.has(e.id))
+    ...t.map(m).filter(e => !h.notifCenterIds.has(e.id))
   ], h.notifCenterItems.sort((e, t) => c.default.compare(t.id, e.id)), t.forEach(e => h.notifCenterIds.add(e.id));
   },
-  RESET_NOTIFICATION_CENTER: m,
+  RESET_NOTIFICATION_CENTER: I,
   NOTIFICATION_CENTER_SET_ACTIVE: function(e) {
 let {
   active: t
@@ -267,7 +267,7 @@ h.notifCenterItems = h.notifCenterItems.map(e => e.item_enum === t ? {
   acked: !0
 } : e).filter(p);
   },
-  SET_RECENT_MENTIONS_FILTER: m,
+  SET_RECENT_MENTIONS_FILTER: I,
   MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function(e) {
 let {
   newBuild: t

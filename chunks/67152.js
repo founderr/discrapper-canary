@@ -19,9 +19,9 @@ onClose: n,
 bio: a,
 hidePersonalInformation: p
   } = e, {
-context: m
+context: I
   } = (0, u.KZ)(), {
-analyticsLocations: I
+analyticsLocations: m
   } = (0, l.ZP)(), [T, g] = i.useState(!1), [S, A] = i.useState(!1);
   return p || null == a || '' === a ? null : (0, r.jsxs)('div', {
 children: [
@@ -43,9 +43,9 @@ children: [
     color: f.viewFullBioColor,
     onClick: () => {
       null == n || n(), (0, d.openUserProfileModal)({
-        ...m,
+        ...I,
         userId: t.id,
-        sourceAnalyticsLocations: I,
+        sourceAnalyticsLocations: m,
         analyticsLocation: {
           section: _.jXE.BITE_SIZE_PROFILE_POPOUT
         }

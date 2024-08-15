@@ -108,15 +108,15 @@ guildId: n
 E.current = !0;
   }, []);
   let p = Math.min(_.length - 1, a.length - 1),
-m = _[Math.max(0, p)],
-I = a.length > 4,
+I = _[Math.max(0, p)],
+m = a.length > 4,
 T = a.length - 3,
 g = T >= 10 ? 1 : 2,
-S = m.map((e, t) => {
+S = I.map((e, t) => {
   let i = a[t];
   if (null == i)
     return null;
-  let o = I && t === g;
+  let o = m && t === g;
   return (0, r.jsx)('div', {
     className: s()(d.avatarContainer),
     style: {

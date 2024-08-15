@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(491758),
   m = t(183632),
   A = t(689938),
-  g = t(514651),
-  O = t(992133),
+  O = t(514651),
+  g = t(992133),
   h = t(224499);
 
 function p(e) {
@@ -49,7 +49,7 @@ children: [
     className: s,
     tag: o.FormTitleTags.H1,
     title: t ? (0, n.jsxs)('div', {
-      className: g.headerContainer,
+      className: O.headerContainer,
       children: [
         A.Z.Messages.CLIPS,
         (0, n.jsx)(N.Z, {})
@@ -69,7 +69,7 @@ children: [
     children: [
       (0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
-        className: O.formItem,
+        className: g.formItem,
         value: p,
         note: A.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => S.yg({
@@ -79,7 +79,7 @@ children: [
       }),
       R && D && (0, n.jsx)(o.FormSwitch, {
         hideBorder: !0,
-        className: O.formItem,
+        className: g.formItem,
         value: f,
         note: A.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => S.yl({

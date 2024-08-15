@@ -50,7 +50,7 @@ return n.getPayload = function() {
   this.done = !1, i.is.num(this._value) && (this.elapsedTime = 0, this.lastPosition = this._value, e && (this.lastVelocity = null), this.v0 = null);
 }, t;
   }(h),
-  m = function(e) {
+  I = function(e) {
 function t(t, n) {
   var r;
   return (r = e.call(this, 0) || this)._value = void 0, r._string = null, r._toString = void 0, r._toString = i.createInterpolator({
@@ -87,7 +87,7 @@ return n.getValue = function() {
   })), this._value = 0, e.prototype.reset.call(this);
 }, t;
   }(p),
-  I = {
+  m = {
 current: null
   },
   T = function(e) {
@@ -122,7 +122,7 @@ return n.getValue = function(e) {
   }
 }, n._addToPayload = function(e) {
   var t = this;
-  i.getFluidConfig(e) && I.current && I.current.dependencies.add(e);
+  i.getFluidConfig(e) && m.current && m.current.dependencies.add(e);
   var n = f(e);
   n && i.each(n, function(e) {
     return t.add(e);
@@ -149,7 +149,7 @@ return n.getValue = function() {
   }) : (this.source = this._makeAnimated(e), this.payload = this._makePayload(this.source));
 }, n._makeAnimated = function(e, t) {
   return void 0 === t && (t = e), e ? e.map(function(e, n) {
-    return (i.isAnimatedString(e) ? m : p).create(e, t[n]);
+    return (i.isAnimatedString(e) ? I : p).create(e, t[n]);
   }) : [];
 }, t;
   }(T),
@@ -162,13 +162,13 @@ a(t, e);
 var n = t.prototype;
 return n.setValue = function(t, n) {
   if (t) {
-    if (n && (I.current = n, t.style)) {
+    if (n && (m.current = n, t.style)) {
       var r = n.host.createAnimatedStyle;
       t = o(o({}, t), {}, {
         style: r(t.style)
       });
     }
-    e.prototype.setValue.call(this, t), I.current = null;
+    e.prototype.setValue.call(this, t), m.current = null;
   }
 }, n.onParentChange = function(e) {
   var t = this,
@@ -214,7 +214,7 @@ return u.forwardRef(function(n, r) {
   v = function(e) {
 return i.is.str(e) ? e : e && i.is.str(e.displayName) ? e.displayName : i.is.fun(e) && e.name || null;
   };
-t.Animated = h, t.AnimatedArray = g, t.AnimatedObject = T, t.AnimatedProps = S, t.AnimatedString = m, t.AnimatedValue = p, t.createHost = function(e, t) {
+t.Animated = h, t.AnimatedArray = g, t.AnimatedObject = T, t.AnimatedProps = S, t.AnimatedString = I, t.AnimatedValue = p, t.createHost = function(e, t) {
   var n = void 0 === t ? {} : t,
 r = n.applyAnimatedValues,
 a = n.createAnimatedStyle,

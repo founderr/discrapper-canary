@@ -23,7 +23,7 @@ writable: !0
 let h = [],
   p = !1;
 
-function m(e) {
+function I(e) {
   h = h.filter(t => {
 let {
   id: n
@@ -32,7 +32,7 @@ return n !== e;
   }), l.removeToken(e);
 }
 
-function I(e, t) {
+function m(e, t) {
   let n = h.slice(),
 r = n.find(t => {
   let {
@@ -127,7 +127,7 @@ i > -1 ? (h[i].avatar = t.avatar, h[i].username = t.username, h[i].discriminator
   let {
     id: t
   } = e;
-  m(t);
+  I(t);
 });
   },
   LOGOUT: function(e) {
@@ -138,10 +138,10 @@ p = !!e.isSwitchingAccount, !e.isSwitchingAccount && (h = h.filter(e => {
   return t !== r;
 })), r = null;
   },
-  MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: e => I(e.userId, 1),
-  MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: e => I(e.userId, 2),
-  MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: e => I(e.userId, 0),
-  MULTI_ACCOUNT_REMOVE_ACCOUNT: e => m(e.userId),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: e => m(e.userId, 1),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: e => m(e.userId, 2),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: e => m(e.userId, 0),
+  MULTI_ACCOUNT_REMOVE_ACCOUNT: e => I(e.userId),
   MULTI_ACCOUNT_MOVE_ACCOUNT: function(e) {
 let {
   from: t,

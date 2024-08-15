@@ -21,24 +21,24 @@ enqueueSetState: function() {}
   h = Object.assign,
   p = {};
 
-function m(e, t, n) {
+function I(e, t, n) {
   this.props = e, this.context = t, this.refs = p, this.updater = n || f;
 }
 
-function I() {}
+function m() {}
 
 function T(e, t, n) {
   this.props = e, this.context = t, this.refs = p, this.updater = n || f;
 }
-m.prototype.isReactComponent = {}, m.prototype.setState = function(e, t) {
+I.prototype.isReactComponent = {}, I.prototype.setState = function(e, t) {
   if ('object' != typeof e && 'function' != typeof e && null != e)
 throw Error('setState(...): takes an object of state variables to update or a function which returns an object of state variables.');
   this.updater.enqueueSetState(this, e, t, 'setState');
-}, m.prototype.forceUpdate = function(e) {
+}, I.prototype.forceUpdate = function(e) {
   this.updater.enqueueForceUpdate(this, e, 'forceUpdate');
-}, I.prototype = m.prototype;
-var g = T.prototype = new I();
-g.constructor = T, h(g, m.prototype), g.isPureReactComponent = !0;
+}, m.prototype = I.prototype;
+var g = T.prototype = new m();
+g.constructor = T, h(g, I.prototype), g.isPureReactComponent = !0;
 var S = Array.isArray,
   A = Object.prototype.hasOwnProperty,
   N = {
@@ -192,7 +192,7 @@ if (!R(e))
   throw Error('React.Children.only expected to receive a single React element child.');
 return e;
   }
-}, t.Component = m, t.Fragment = i, t.Profiler = s, t.PureComponent = T, t.StrictMode = a, t.Suspense = c, t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = {
+}, t.Component = I, t.Fragment = i, t.Profiler = s, t.PureComponent = T, t.StrictMode = a, t.Suspense = c, t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = {
   ReactCurrentDispatcher: b,
   ReactCurrentBatchConfig: M,
   ReactCurrentOwner: N

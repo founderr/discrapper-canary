@@ -13,8 +13,8 @@ isTryItOut: t,
 analyticsLocations: n,
 guildId: _
   } = e, E = (0, i.e7)([c.default], () => c.default.getCurrentUser()), f = (0, i.e7)([l.ZP], () => null != _ && null != E ? l.ZP.getMember(_, E.id) : null), h = null != f ? f.avatarDecoration : null == E ? void 0 : E.avatarDecoration, p = (0, a.Z)(n), {
-pendingAvatar: m,
-pendingAvatarDecoration: I,
+pendingAvatar: I,
+pendingAvatarDecoration: m,
 pendingErrors: T
   } = (0, i.cj)([
 u.Z,
@@ -30,8 +30,8 @@ p,
 _
   ]);
   return {
-pendingAvatar: m,
-pendingAvatarDecoration: I,
+pendingAvatar: I,
+pendingAvatarDecoration: m,
 setPendingAvatar: t ? d.c_ : g,
 setPendingAvatarDecoration: t ? d.Xz : S,
 savedAvatarDecoration: h,

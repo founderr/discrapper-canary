@@ -15,7 +15,7 @@ function u(e) {
 children: t
   } = e, [n, u] = i.useState(null), [c, d] = i.useState(null), _ = i.useRef(new Set()), [E, f] = i.useState(!1), h = i.useCallback(e => {
 _.current.delete(e), f(_.current.size > 0);
-  }, []), p = i.useCallback(e => (_.current.add(e), f(!0), () => h(e)), [h]), m = i.useCallback((e, t) => {
+  }, []), p = i.useCallback(e => (_.current.add(e), f(!0), () => h(e)), [h]), I = i.useCallback((e, t) => {
 for (let n of _.current)
   n(e, t);
   }, []);
@@ -33,7 +33,7 @@ children: [
     ref: d,
     className: l.canvas,
     environment: o.rq,
-    onClick: E ? m : void 0
+    onClick: E ? I : void 0
   }),
   (0, r.jsx)(a.Ji, {
     ref: u,

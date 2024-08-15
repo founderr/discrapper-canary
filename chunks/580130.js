@@ -9,8 +9,8 @@ var r, i, a, s, o = n(392711),
   f = n(55563);
 let h = {},
   p = {},
-  m = {},
   I = {},
+  m = {},
   T = !1,
   g = !1,
   S = new Set(),
@@ -18,7 +18,7 @@ let h = {},
   N = {};
 
 function v(e) {
-  h[e.id] = d.Z.createFromServer(e), null == m[e.sku_id] && (m[e.sku_id] = new Set()), null == I[e.application_id] && (I[e.application_id] = new Set()), null != e.subscription_id && (null == N[e.subscription_id] && (N[e.subscription_id] = new Set()), N[e.subscription_id].add(e.id)), I[e.application_id].add(e.id), m[e.sku_id].add(e.id);
+  h[e.id] = d.Z.createFromServer(e), null == I[e.sku_id] && (I[e.sku_id] = new Set()), null == m[e.application_id] && (m[e.application_id] = new Set()), null != e.subscription_id && (null == N[e.subscription_id] && (N[e.subscription_id] = new Set()), N[e.subscription_id].add(e.id)), m[e.application_id].add(e.id), I[e.sku_id].add(e.id);
 }
 
 function O(e) {
@@ -39,7 +39,7 @@ return h[e];
 return l().values(p);
   }
   getForApplication(e) {
-let t = I[e];
+let t = m[e];
 if (null == t)
   return null;
 let n = new Set();
@@ -48,7 +48,7 @@ for (let e of t)
 return n;
   }
   getForSku(e) {
-let t = m[e];
+let t = I[e];
 if (null == t)
   return null;
 let n = new Set();
@@ -85,7 +85,7 @@ return n;
   }
   isEntitledToSku(e, t, n) {
 let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-  i = m[t];
+  i = I[t];
 if (null != i)
   for (let t of i) {
     let n = h[t];
@@ -149,9 +149,9 @@ for (let e of t)
   ENTITLEMENT_DELETE: function(e) {
 return function(e) {
   delete h[e.id];
-  let t = I[e.application_id];
+  let t = m[e.application_id];
   null != t && t.delete(e.id);
-  let n = m[e.sku_id];
+  let n = I[e.sku_id];
   if (null != n && n.delete(e.id), null != e.subscription_id) {
     let t = N[e.subscription_id];
     null != t && t.delete(e.id);
@@ -159,7 +159,7 @@ return function(e) {
 }(e.entitlement);
   },
   LOGOUT: function() {
-h = {}, m = {}, I = {}, T = !1, g = !1, S = new Set(), A = new Set();
+h = {}, I = {}, m = {}, T = !1, g = !1, S = new Set(), A = new Set();
   },
   ENTITLEMENTS_FETCH_FOR_USER_START: function() {
 T = !0;

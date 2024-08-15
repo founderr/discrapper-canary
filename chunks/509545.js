@@ -9,8 +9,8 @@ var r, i, a, s, o = n(442837),
 let f = {},
   h = {},
   p = new Set(),
-  m = new Set(),
-  I = {},
+  I = new Set(),
+  m = {},
   T = {};
 
 function g(e) {
@@ -20,7 +20,7 @@ function g(e) {
   if (null != n) {
 var r;
 let t = new Set(Object.keys(n.paymentSourcePrices));
-I[e.id] = t;
+m[e.id] = t;
 let i = Array.from(null !== (r = T[e.skuId]) && void 0 !== r ? r : new Set());
 T[e.skuId] = new Set([
   ...i,
@@ -57,7 +57,7 @@ function A(e) {
 S();
 
 function N() {
-  (0, c.Ti)(f), (0, c.Ti)(h), p.clear(), m.clear(), (0, c.Ti)(I), (0, c.Ti)(T), S();
+  (0, c.Ti)(f), (0, c.Ti)(h), p.clear(), I.clear(), (0, c.Ti)(m), (0, c.Ti)(T), S();
 }
 let v = [
   E.rV.DAY,
@@ -99,7 +99,7 @@ return p.has(e);
 return e.some(e => this.isFetchingForSKU(e));
   }
   isLoadedForSKU(e) {
-return !!m.has(e) || !p.has(e) && null != h[e];
+return !!I.has(e) || !p.has(e) && null != h[e];
   }
   isLoadedForSKUs(e) {
 return e.every(e => this.isLoadedForSKU(e));
@@ -111,14 +111,14 @@ return E.YQ.map(e => this.isFetchingForSKU(e)).includes(!0);
 return E.YQ.every(e => this.isLoadedForSKU(e));
   }
   ignoreSKUFetch(e) {
-m.add(e);
+I.add(e);
   }
   getPaymentSourcesForPlanId(e) {
-return I.hasOwnProperty(e) ? I[e] : null;
+return m.hasOwnProperty(e) ? m[e] : null;
   }
   getPaymentSourceIds() {
 let e = new Set();
-return Object.values(I).forEach(t => t.forEach(t => e.add(t))), e;
+return Object.values(m).forEach(t => t.forEach(t => e.add(t))), e;
   }
   hasPaymentSourceForSKUId(e, t) {
 return E.Si.NONE === t || null != T[t] && T[t].has(e);
@@ -144,13 +144,13 @@ let {
   skuId: t,
   subscriptionPlans: n
 } = e;
-h[t] = new Set(), T[t] = new Set(), n.forEach(A), p.delete(t), m.delete(t);
+h[t] = new Set(), T[t] = new Set(), n.forEach(A), p.delete(t), I.delete(t);
   },
   SUBSCRIPTION_PLANS_FETCH_FAILURE: function(e) {
 let {
   skuId: t
 } = e;
-p.delete(t), m.delete(t);
+p.delete(t), I.delete(t);
   },
   SUBSCRIPTION_PLANS_RESET: N,
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {

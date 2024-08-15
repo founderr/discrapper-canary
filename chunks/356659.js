@@ -6,7 +6,7 @@ return B;
 return S;
   },
   Bg: function() {
-return m;
+return I;
   },
   D5: function() {
 return c;
@@ -45,7 +45,7 @@ return C;
 return R;
   },
   WM: function() {
-return I;
+return m;
   },
   X9: function() {
 return u;
@@ -100,8 +100,8 @@ let E = 'alt+c',
   f = 6 * _.Z.Millis.SECOND,
   h = new d.Z('Clips'),
   p = e => 'Discord_Clip_'.concat(e, '.mp4'),
-  m = 3,
-  I = 1,
+  I = 3,
+  m = 1,
   T = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
   g = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
   S = /(Apple M[12].*)/,

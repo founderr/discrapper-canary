@@ -20,8 +20,8 @@ var r = n(512722),
   f = n(201133),
   h = n(55000),
   p = n(314091),
-  m = n(981631),
-  I = n(689938);
+  I = n(981631),
+  m = n(689938);
 let T = async e => {
   let {
 reaction: t,
@@ -57,7 +57,7 @@ theme: s
   } = (0, p.j3)(a, 'black'), o = 'dark' === s, l = (0, p.ZH)(r), {
 assets: u,
 application_id: c
-  } = r, d = (0, _.getAssetImage)(c, null == u ? void 0 : u.large_image, 64), f = null == i ? void 0 : i.getIconURL(64), h = null != l ? o ? l.icon.darkPNG : l.icon.lightPNG : r.type === m.IIU.PLAYING ? o ? n(414575) : n(807612) : null, I = r.type === m.IIU.HANG_STATUS && (null === (t = r.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, E.qc)({
+  } = r, d = (0, _.getAssetImage)(c, null == u ? void 0 : u.large_image, 64), f = null == i ? void 0 : i.getIconURL(64), h = null != l ? o ? l.icon.darkPNG : l.icon.lightPNG : r.type === I.IIU.PLAYING ? o ? n(414575) : n(807612) : null, m = r.type === I.IIU.HANG_STATUS && (null === (t = r.emoji) || void 0 === t ? void 0 : t.id) != null ? (0, E.qc)({
 id: r.emoji.id,
 name: r.emoji.name,
 animated: !1
@@ -72,8 +72,8 @@ animated: !1
 ...null != f && {
   ApplicationImage: f
 },
-...null != I && {
-  HangStatus: I
+...null != m && {
+  HangStatus: m
 }
   };
 }, A = async e => {
@@ -93,7 +93,7 @@ drawImage: e => {
   var r;
   e.setFont({
     truncate: u.GX.Truncate
-  }), null != i ? y(e, n, t) : (0, l.Z)(n) ? O(e, n, t) : (0, o.Z)(n) && n.name === s.Z.get(m.ABu.LEAGUE_OF_LEGENDS).name ? C(e, n, t) : n.type === m.IIU.HANG_STATUS ? R(e, n, t) : v(e, n, t), (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has('Platform')) && e.drawImage('Platform', {
+  }), null != i ? y(e, n, t) : (0, l.Z)(n) ? O(e, n, t) : (0, o.Z)(n) && n.name === s.Z.get(I.ABu.LEAGUE_OF_LEGENDS).name ? C(e, n, t) : n.type === I.IIU.HANG_STATUS ? R(e, n, t) : v(e, n, t), (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has('Platform')) && e.drawImage('Platform', {
     x: h.En - h.o3 - h.ez,
     y: h.o3
   }, {
@@ -247,7 +247,7 @@ family: [
   'sans-serif'
 ],
 weight: 700
-  }), e.drawText(I.Z.Messages.STATUS_LEAD_IN_JUST, {
+  }), e.drawText(m.Z.Messages.STATUS_LEAD_IN_JUST, {
 x: l,
 y: h.SG + 1 * h.Nv,
 w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(h.W3.Platform)) ? h.ee : h.sp

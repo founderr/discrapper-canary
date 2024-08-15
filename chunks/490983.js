@@ -9,8 +9,8 @@ var r, i, a, s, o = n(658722),
   f = n(570140),
   h = n(812206),
   p = n(594190),
-  m = n(592745),
-  I = n(706454),
+  I = n(592745),
+  m = n(706454),
   T = n(757266),
   g = n(77498),
   S = n(283595),
@@ -34,7 +34,7 @@ let x = _()().subtract(1, 'week'),
   B = !1;
 
 function F(e, t) {
-  return e.application.name.localeCompare(t.application.name, I.default.locale, {
+  return e.application.name.localeCompare(t.application.name, m.default.locale, {
 sensitivity: 'base'
   });
 }
@@ -93,11 +93,11 @@ i = Object.values(S.Z.getAllLibraryApplications()).map(r => function(e, t, n, r,
     lastPlayed: l,
     supportsCloudSync: null != e && O.Z.supportsCloudSync(e.id, e.branchId),
     isNew: (a = e, s = l, null != a && _()(a.createdAt).isAfter(x) && 0 === s),
-    isLaunching: m.Z.launchingGames.has(e.id),
+    isLaunching: I.Z.launchingGames.has(e.id),
     isRunning: r.has(e.id),
     isLaunchable: (0, P.t)({
       LibraryApplicationStore: S.Z,
-      LaunchableGameStore: m.Z,
+      LaunchableGameStore: I.Z,
       DispatchApplicationStore: O.Z,
       ConnectedAppsStore: T.Z,
       applicationId: e.id,
@@ -120,11 +120,11 @@ a = [
       lastPlayed: a,
       supportsCloudSync: !1,
       isNew: !1,
-      isLaunching: m.Z.launchingGames.has(e),
+      isLaunching: I.Z.launchingGames.has(e),
       isRunning: r.has(e),
       isLaunchable: (0, P.t)({
         LibraryApplicationStore: S.Z,
-        LaunchableGameStore: m.Z,
+        LaunchableGameStore: I.Z,
         DispatchApplicationStore: O.Z,
         ConnectedAppsStore: T.Z,
         applicationId: e,
@@ -145,7 +145,7 @@ class q extends(r = E.ZP.Store) {
 this.syncWith([
   h.Z,
   g.Z,
-  m.Z,
+  I.Z,
   p.ZP,
   O.Z,
   R.Z,
@@ -155,7 +155,7 @@ this.syncWith([
   T.Z
 ], z, 200), this.syncWith([
   v.Z,
-  I.default
+  m.default
 ], () => !0);
   }
   get applicationFilterQuery() {
@@ -174,7 +174,7 @@ return H(G);
 return Y(this.libraryApplicationViewItems, k);
   }
   get sortedFilteredLibraryApplicationViewItems() {
-return j(this.filteredLibraryApplicationViewItems, v.Z.sortKey, v.Z.sortDirection, I.default.locale);
+return j(this.filteredLibraryApplicationViewItems, v.Z.sortKey, v.Z.sortDirection, m.default.locale);
   }
   get hiddenLibraryApplicationViewItems() {
 return W(G);

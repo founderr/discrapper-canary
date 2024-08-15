@@ -37,7 +37,7 @@ installationPath: i
   } = e;
   null == r.installations[t] && (r.installations[t] = {}), r.installations[t][n] = {
 installationPath: i
-  }, !r.installationPaths.has(i) && m({
+  }, !r.installationPaths.has(i) && I({
 path: i,
 metadata: {}
   });
@@ -53,14 +53,14 @@ return !1;
   delete r.installations[t][n], 0 === Object.keys(r.installations[t]).length && delete r.installations[t];
 }
 
-function m(e) {
+function I(e) {
   if (r.installationPaths.has(e.path))
 return !1;
   f(e.path, e.metadata);
   let t = new Set(r.installationPaths);
   t.add(e.path), r.installationPaths = t;
 }
-class I extends(i = a.ZP.PersistedStore) {
+class m extends(i = a.ZP.PersistedStore) {
   initialize(e) {
 let t = {
   ...e
@@ -103,7 +103,7 @@ var t, n;
 return e === E ? c.Z.Messages.INSTALL_LOCATION_MAIN : null !== (n = null !== (t = o.Z.fileManager.basename(e)) && void 0 !== t ? t : e.replace(/[/\\]+$/, '').split(/[/\\]+/g).slice(-1)[0]) && void 0 !== n ? n : '?';
   }
 }
-d(I, 'displayName', 'InstallationManagerStore'), d(I, 'persistKey', 'InstallationManagerStore'), t.Z = new I(s.Z, {
+d(m, 'displayName', 'InstallationManagerStore'), d(m, 'persistKey', 'InstallationManagerStore'), t.Z = new m(s.Z, {
   DISPATCH_APPLICATION_INSTALL: h,
   DISPATCH_APPLICATION_UNINSTALL: p,
   DISPATCH_APPLICATION_CANCEL: function(e) {
@@ -116,7 +116,7 @@ null != r && null == r.buildId && null == r.manifestIds && p({
   branchId: n
 });
   },
-  INSTALLATION_LOCATION_ADD: m,
+  INSTALLATION_LOCATION_ADD: I,
   INSTALLATION_LOCATION_REMOVE: function(e) {
 var t;
 let {

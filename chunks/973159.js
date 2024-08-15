@@ -1,116 +1,116 @@
-t(627341), t(47120), t(724458), t(653041);
-var a = t(735250),
-  n = t(470079),
-  i = t(120356),
-  r = t.n(i),
-  l = t(512722),
-  o = t.n(l),
-  c = t(392711),
-  u = t.n(c),
-  _ = t(278074),
-  d = t(442837),
-  I = t(780384),
-  m = t(481060),
-  C = t(570140),
-  E = t(179360),
-  N = t(230711),
-  T = t(410030),
-  A = t(607070),
-  p = t(44315),
-  S = t(112831),
-  L = t(543241),
-  x = t(906411),
-  R = t(565138),
-  M = t(822179),
-  f = t(419922),
-  g = t(484459),
-  O = t(318661),
-  h = t(813549),
-  P = t(735336),
-  j = t(502762),
-  U = t(652853),
-  Z = t(430824),
-  v = t(594174),
-  b = t(314884),
-  F = t(709586),
-  G = t(626135),
-  y = t(768581),
-  B = t(63063),
-  D = t(998502),
-  H = t(53900),
-  k = t(789155),
-  z = t(55610),
-  w = t(798769),
-  Y = t(474936),
-  V = t(981631),
-  W = t(228168),
-  K = t(689938),
-  J = t(123007),
-  X = t(834982),
-  q = t(912450),
-  Q = t(703548),
-  $ = t(869333),
-  ee = t(652528),
-  es = t(874692),
-  et = t(391458),
-  ea = t(70967),
-  en = t(674264),
-  ei = t(360088),
-  er = t(304880);
-let el = D.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
+n(627341), n(47120), n(724458), n(653041);
+var t = n(735250),
+  a = n(470079),
+  i = n(120356),
+  r = n.n(i),
+  l = n(512722),
+  o = n.n(l),
+  c = n(392711),
+  u = n.n(c),
+  _ = n(278074),
+  d = n(442837),
+  I = n(780384),
+  E = n(481060),
+  m = n(570140),
+  C = n(179360),
+  T = n(230711),
+  N = n(410030),
+  S = n(607070),
+  p = n(44315),
+  L = n(112831),
+  A = n(543241),
+  O = n(906411),
+  P = n(565138),
+  R = n(822179),
+  M = n(419922),
+  x = n(484459),
+  f = n(318661),
+  g = n(813549),
+  h = n(735336),
+  Z = n(502762),
+  j = n(652853),
+  U = n(430824),
+  v = n(594174),
+  b = n(314884),
+  F = n(709586),
+  y = n(626135),
+  G = n(768581),
+  D = n(63063),
+  B = n(998502),
+  k = n(53900),
+  H = n(789155),
+  Y = n(55610),
+  z = n(798769),
+  w = n(474936),
+  W = n(981631),
+  V = n(228168),
+  K = n(689938),
+  X = n(123007),
+  q = n(834982),
+  J = n(912450),
+  Q = n(703548),
+  $ = n(869333),
+  ee = n(652528),
+  es = n(874692),
+  en = n(391458),
+  et = n(70967),
+  ea = n(674264),
+  ei = n(360088),
+  er = n(304880);
+let el = B.ZP.getEnableHardwareAcceleration() ? E.AnimatedAvatar : E.Avatar,
   eo = {
 boostItemVisual: ee,
 emojiStickersVisual: es,
 screenShareItemVisual: ei,
-uploadsMessagesItemVisual: et,
-uploadsMessagesItemVisualV2: ea,
-PL: en,
+uploadsMessagesItemVisual: en,
+uploadsMessagesItemVisualV2: et,
+PL: ea,
 TR: er
   },
   ec = {
-boostItemVisual: X,
-emojiStickersVisual: q,
+boostItemVisual: q,
+emojiStickersVisual: J,
 screenShareItemVisual: ei,
 uploadsMessagesItemVisual: Q,
 uploadsMessagesItemVisualV2: $,
-PL: en,
+PL: ea,
 TR: er
   };
 
 function eu() {
-  let e = (0, T.ZP)();
+  let e = (0, N.ZP)();
   return (0, I.wj)(e) ? ec : eo;
 }
 
 function e_(e) {
   let {
 description: s,
-onLearnMore: t,
-renderVisual: n
+onLearnMore: n,
+renderVisual: a
   } = e;
-  return (0, a.jsxs)('div', {
-className: J.whatYouLoseItem,
+  return (0, t.jsxs)('div', {
+className: X.whatYouLoseItem,
 children: [
-  (0, a.jsxs)('div', {
-    className: J.whatYouLoseItemLeftColumn,
+  (0, t.jsxs)('div', {
+    className: X.whatYouLoseItemLeftColumn,
     children: [
-      (0, a.jsx)(m.Text, {
+      (0, t.jsx)(E.Text, {
         variant: 'text-md/normal',
         children: s
       }),
-      (0, a.jsx)(m.Button, {
-        look: m.Button.Looks.LINK,
-        color: m.Button.Colors.LINK,
-        size: m.Button.Sizes.NONE,
-        className: J.whatYouLoseItemLearnMore,
-        onClick: t,
+      (0, t.jsx)(E.Button, {
+        look: E.Button.Looks.LINK,
+        color: E.Button.Colors.LINK,
+        size: E.Button.Sizes.NONE,
+        className: X.whatYouLoseItemLearnMore,
+        onClick: n,
         children: K.Z.Messages.LEARN_MORE
       })
     ]
   }),
-  (0, a.jsx)('div', {
-    className: J.whatYouLoseItemRightColumn,
-    children: n()
+  (0, t.jsx)('div', {
+    className: X.whatYouLoseItemRightColumn,
+    children: a()
   })
 ]
   });
@@ -120,89 +120,89 @@ function ed(e) {
   let {
 ...s
   } = e, {
-theme: t
-  } = (0, U.z)(), n = (0, p.O0)(V.tPk.INTERACTIVE_ACTIVE, t);
-  return (0, a.jsx)(m.NitroWheelIcon, {
+theme: n
+  } = (0, j.z)(), a = (0, p.O0)(W.tPk.INTERACTIVE_ACTIVE, n);
+  return (0, t.jsx)(E.NitroWheelIcon, {
 size: 'md',
 ...s,
-color: n.hex
+color: a.hex
   });
 }
 
 function eI(e) {
   let {
 currentUser: s,
-premiumType: t,
-onClose: n
-  } = e, i = (0, O.ZP)(s.id), r = (0, d.e7)([A.Z], () => A.Z.useReducedMotion), l = t === Y.p9.TIER_1, o = (0, _.EQ)(null == i ? void 0 : i.premiumType).with(Y.p9.TIER_2, () => (0, a.jsxs)(j.Z, {
+premiumType: n,
+onClose: a
+  } = e, i = (0, f.ZP)(s.id), r = (0, d.e7)([S.Z], () => S.Z.useReducedMotion), l = n === w.p9.TIER_1, o = (0, _.EQ)(null == i ? void 0 : i.premiumType).with(w.p9.TIER_2, () => (0, t.jsxs)(Z.Z, {
 user: s,
 displayProfile: i,
 forceShowPremium: !0,
-profileType: W.y0.CANCEL_MODAL,
-className: J.profileCard,
+profileType: V.y0.CANCEL_MODAL,
+className: X.profileCard,
 children: [
-  (0, a.jsx)('div', {
-    className: J.profileBanner,
-    children: (0, a.jsx)(P.Z, {
+  (0, t.jsx)('div', {
+    className: X.profileBanner,
+    children: (0, t.jsx)(h.Z, {
       displayProfile: i,
       user: s,
       allowEdit: !1,
-      profileType: W.y0.CANCEL_MODAL
+      profileType: V.y0.CANCEL_MODAL
     })
   }),
-  (0, a.jsx)(el, {
-    className: J.profileAvatar,
-    src: s.getAvatarURL(void 0, (0, m.getAvatarSize)(m.AvatarSizes.SIZE_56), !r),
-    size: m.AvatarSizes.SIZE_56,
+  (0, t.jsx)(el, {
+    className: X.profileAvatar,
+    src: s.getAvatarURL(void 0, (0, E.getAvatarSize)(E.AvatarSizes.SIZE_56), !r),
+    size: E.AvatarSizes.SIZE_56,
     'aria-label': s.username
   }),
-  (0, a.jsx)(j.Z.Overlay, {
-    className: J.profileInner,
-    children: (0, a.jsxs)('div', {
-      className: J.profileUserInfo,
+  (0, t.jsx)(Z.Z.Overlay, {
+    className: X.profileInner,
+    children: (0, t.jsxs)('div', {
+      className: X.profileUserInfo,
       children: [
-        (0, a.jsx)(h.Z, {
-          className: J.profileNameTag,
-          usernameClass: J.profileNameTagUsername,
+        (0, t.jsx)(g.Z, {
+          className: X.profileNameTag,
+          usernameClass: X.profileNameTagUsername,
           name: s.toString()
         }),
-        (0, a.jsx)(ed, {
-          className: J.profilePremiumIcon
+        (0, t.jsx)(ed, {
+          className: X.profilePremiumIcon
         })
       ]
     })
   })
 ]
-  })).otherwise(() => (0, a.jsxs)('div', {
-className: J.profileCardTier1,
+  })).otherwise(() => (0, t.jsxs)('div', {
+className: X.profileCardTier1,
 children: [
-  (0, a.jsx)(el, {
-    className: J.profileAvatarTier1,
-    src: s.getAvatarURL(void 0, (0, m.getAvatarSize)(m.AvatarSizes.SIZE_56), !r),
-    size: m.AvatarSizes.SIZE_56,
+  (0, t.jsx)(el, {
+    className: X.profileAvatarTier1,
+    src: s.getAvatarURL(void 0, (0, E.getAvatarSize)(E.AvatarSizes.SIZE_56), !r),
+    size: E.AvatarSizes.SIZE_56,
     'aria-label': s.username
   }),
-  (0, a.jsxs)('div', {
-    className: J.profileUserInfoTier1,
+  (0, t.jsxs)('div', {
+    className: X.profileUserInfoTier1,
     children: [
-      (0, a.jsx)(h.Z, {
-        className: J.profileNameTag,
-        usernameClass: J.profileNameTagUsername,
+      (0, t.jsx)(g.Z, {
+        className: X.profileNameTag,
+        usernameClass: X.profileNameTagUsername,
         name: s.toString()
       }),
-      (0, a.jsx)(m.NitroWheelIcon, {
+      (0, t.jsx)(E.NitroWheelIcon, {
         size: 'md',
         color: 'currentColor',
-        className: J.profilePremiumIcon
+        className: X.profilePremiumIcon
       })
     ]
   })
 ]
   }));
-  return (0, a.jsx)(e_, {
+  return (0, t.jsx)(e_, {
 description: l ? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_PROFILE_TIER_1.format() : K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_PROFILE.format(),
 onLearnMore: () => {
-  n(), N.Z.open(V.oAB.PROFILE_CUSTOMIZATION), G.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
+  a(), T.Z.open(W.oAB.PROFILE_CUSTOMIZATION), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
     action: 'user_profile_customization'
   });
 },
@@ -210,108 +210,108 @@ renderVisual: () => o
   }, 'profile-item');
 }
 
-function em(e) {
+function eE(e) {
   let {
 premiumType: s
-  } = e, t = (0, d.e7)([A.Z], () => A.Z.useReducedMotion), n = (0, L.wC)(null).filter(e => e.type === x.B.GUILD && (e.animated || null != e.guildId)).slice(0, 3), i = (0, d.Wu)([M.Z], () => M.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - n.length)), r = eu().emojiStickersVisual, l = s === Y.p9.TIER_1;
-  return (0, a.jsx)(e_, {
+  } = e, n = (0, d.e7)([S.Z], () => S.Z.useReducedMotion), a = (0, A.wC)(null).filter(e => e.type === O.B.GUILD && (e.animated || null != e.guildId)).slice(0, 3), i = (0, d.Wu)([R.Z], () => R.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - a.length)), r = eu().emojiStickersVisual, l = s === w.p9.TIER_1;
+  return (0, t.jsx)(e_, {
 description: l ? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_EMOJI_STICKERS_TIER_1.format() : K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_EMOJI_STICKERS.format(),
 onLearnMore: () => {
-  window.open(B.Z.getArticleURL(V.BhN.PREMIUM_DETAILS)), G.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
+  window.open(D.Z.getArticleURL(W.BhN.PREMIUM_DETAILS)), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
     action: 'emojis_stickers'
   });
 },
-renderVisual: () => null != n && n.length > 0 || !l && null != i && i.length > 0 ? (0, a.jsxs)('div', {
-  className: J.emojiStickersPersonalizedContainer,
+renderVisual: () => null != a && a.length > 0 || !l && null != i && i.length > 0 ? (0, t.jsxs)('div', {
+  className: X.emojiStickersPersonalizedContainer,
   children: [
-    n.map(e => null == e.id ? e.url : y.ZP.getEmojiURL({
+    a.map(e => null == e.id ? e.url : G.ZP.getEmojiURL({
       id: e.id,
-      animated: !t && e.animated,
+      animated: !n && e.animated,
       size: 58
-    })).map(e => null != e ? (0, a.jsx)('img', {
-      className: J.personalizedEmoji,
+    })).map(e => null != e ? (0, t.jsx)('img', {
+      className: X.personalizedEmoji,
       alt: '',
       src: e
     }) : null),
-    l ? null : i.map(e => (0, a.jsx)(f.ZP, {
-      disableAnimation: t,
+    l ? null : i.map(e => (0, t.jsx)(M.ZP, {
+      disableAnimation: n,
       sticker: e,
       size: 58,
       withLoadingIndicator: !1
     }, e.id))
   ]
-}) : (0, a.jsx)('img', {
-  className: J.nonPersonalizedGraphic,
+}) : (0, t.jsx)('img', {
+  className: X.nonPersonalizedGraphic,
   alt: '',
   src: r
 })
   }, 'emoji-stickers-item');
 }
 
-function eC(e) {
+function em(e) {
   let {
 premiumType: s,
-onClose: t
+onClose: n
   } = e;
-  n.useEffect(() => C.Z.wait(() => (0, E.X8)()), []);
-  let i = (0, d.e7)([A.Z], () => A.Z.useReducedMotion),
+  a.useEffect(() => m.Z.wait(() => (0, C.X8)()), []);
+  let i = (0, d.e7)([S.Z], () => S.Z.useReducedMotion),
 [l, o] = (0, d.Wu)([
   b.Z,
-  Z.Z
+  U.Z
 ], () => {
   let e = b.Z.boostSlots,
     s = new Map();
   u()(e).map('premiumGuildSubscription').map('guildId').forEach(e => {
-    if (null != Z.Z.getGuild(e)) {
-      var t;
-      let a = null !== (t = s.get(e)) && void 0 !== t ? t : 0;
-      s.set(e, a + 1);
+    if (null != U.Z.getGuild(e)) {
+      var n;
+      let t = null !== (n = s.get(e)) && void 0 !== n ? n : 0;
+      s.set(e, t + 1);
     }
   });
-  let t = null,
-    a = 0;
-  return s.size > 0 && ([t, a] = Array.from(s.entries()).reduce((e, s) => s[1] > e[1] ? s : e)), [
-    Z.Z.getGuild(t),
-    a
+  let n = null,
+    t = 0;
+  return s.size > 0 && ([n, t] = Array.from(s.entries()).reduce((e, s) => s[1] > e[1] ? s : e)), [
+    U.Z.getGuild(n),
+    t
   ];
 }),
 c = null != l && o > 0,
 _ = eu().boostItemVisual;
-  return (0, a.jsx)(e_, {
-description: s === Y.p9.TIER_1 ? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BOOSTS_TIER_1.format() : K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BOOSTS.format(),
+  return (0, t.jsx)(e_, {
+description: s === w.p9.TIER_1 ? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BOOSTS_TIER_1.format() : K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BOOSTS.format(),
 onLearnMore: () => {
-  t(), N.Z.open(V.oAB.GUILD_BOOSTING), G.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
+  n(), T.Z.open(W.oAB.GUILD_BOOSTING), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
     action: 'boosts'
   });
 },
-renderVisual: () => c ? (0, a.jsx)('div', {
-  className: J.boostCardContainer,
-  children: (0, a.jsxs)('div', {
-    className: J.boostCard,
+renderVisual: () => c ? (0, t.jsx)('div', {
+  className: X.boostCardContainer,
+  children: (0, t.jsxs)('div', {
+    className: X.boostCard,
     children: [
-      (0, a.jsx)(R.Z, {
+      (0, t.jsx)(P.Z, {
         guild: l,
-        size: R.Z.Sizes.MEDIUM,
+        size: P.Z.Sizes.MEDIUM,
         animate: !i,
-        className: J.boostCardIcon
+        className: X.boostCardIcon
       }),
-      (0, a.jsxs)('div', {
-        className: J.boostCardInfo,
+      (0, t.jsxs)('div', {
+        className: X.boostCardInfo,
         children: [
-          (0, a.jsx)(m.Text, {
+          (0, t.jsx)(E.Text, {
             variant: 'text-md/normal',
-            className: r()(J.textSingleLineEllipsis, J.boostCardTitle),
+            className: r()(X.textSingleLineEllipsis, X.boostCardTitle),
             children: l.name
           }),
-          (0, a.jsxs)('div', {
-            className: J.boostCardSubtitle,
+          (0, t.jsxs)('div', {
+            className: X.boostCardSubtitle,
             children: [
-              (0, a.jsx)(F.Z, {
-                className: J.boostCardGem
+              (0, t.jsx)(F.Z, {
+                className: X.boostCardGem
               }),
-              (0, a.jsx)(m.Text, {
+              (0, t.jsx)(E.Text, {
                 variant: 'text-xs/normal',
-                className: r()(J.textSingleLineEllipsis, J.boostCardCount),
+                className: r()(X.textSingleLineEllipsis, X.boostCardCount),
                 children: K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BOOSTS_APPLIED.format({
                   boostCount: o
                 })
@@ -322,141 +322,141 @@ renderVisual: () => c ? (0, a.jsx)('div', {
       })
     ]
   })
-}) : (0, a.jsx)('img', {
+}) : (0, t.jsx)('img', {
   alt: '',
   src: _
 })
   }, 'boost-item');
 }
-let eE = () => {
+let eC = () => {
   let e = eu().screenShareItemVisual;
-  return (0, a.jsx)(e_, {
+  return (0, t.jsx)(e_, {
 description: K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SCREENSHARE.format(),
 onLearnMore: () => {
-  window.open(B.Z.getArticleURL(V.BhN.STREAM_QUALITY_SETTINGS)), G.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
+  window.open(D.Z.getArticleURL(W.BhN.STREAM_QUALITY_SETTINGS)), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
     action: 'screen_share'
   });
 },
-renderVisual: () => (0, a.jsx)('img', {
+renderVisual: () => (0, t.jsx)('img', {
   alt: '',
   src: e
 })
   }, 'screen-share-item');
 };
 
-function eN(e) {
+function eT(e) {
   let {
 premiumType: s
-  } = e, t = eu().uploadsMessagesItemVisual;
-  return (0, a.jsx)(e_, {
-description: s === Y.p9.TIER_2 ? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_UPLOADS_MESSAGES.format() : K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_UPLOADS_MESSAGES_TIER_1.format(),
+  } = e, n = eu().uploadsMessagesItemVisual;
+  return (0, t.jsx)(e_, {
+description: s === w.p9.TIER_2 ? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_UPLOADS_MESSAGES.format() : K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_UPLOADS_MESSAGES_TIER_1.format(),
 onLearnMore: () => {
-  window.open(B.Z.getArticleURL(V.BhN.PREMIUM_DETAILS)), G.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
+  window.open(D.Z.getArticleURL(W.BhN.PREMIUM_DETAILS)), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
     action: 'msgs_uploads'
   });
 },
-renderVisual: () => (0, a.jsx)('img', {
+renderVisual: () => (0, t.jsx)('img', {
   alt: '',
-  src: t
+  src: n
 })
   }, 'uploads-item');
 }
-let eT = e => {
+let eN = e => {
   let {
 country: s
-  } = e, t = eu(), n = 'PL' === s ? t.PL : t.TR;
-  return (0, a.jsx)(e_, {
+  } = e, n = eu(), a = 'PL' === s ? n.PL : n.TR;
+  return (0, t.jsx)(e_, {
 description: ('PL' === s ? K.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING_NO_HELP_CENTER_LINK : K.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING_NO_HELP_CENTER_LINK).format(),
 onLearnMore: () => {
-  window.open(B.Z.getArticleURL(V.BhN.LOCALIZED_PRICING)), G.default.track(V.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
+  window.open(D.Z.getArticleURL(W.BhN.LOCALIZED_PRICING)), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
     action: 'grandfathered_prices'
   });
 },
-renderVisual: () => (0, a.jsx)('img', {
+renderVisual: () => (0, t.jsx)('img', {
   alt: '',
-  src: n
+  src: a
 })
   }, 'grandfathered-prices-item');
 };
 
-function eA(e) {
+function eS(e) {
   let {
 currentUser: s,
-premiumType: t,
+premiumType: n,
 onClose: i,
 isDowngrade: r = !1
-  } = e, l = (0, H.Z)(), c = (0, z.U)(), u = n.useMemo(() => {
+  } = e, l = (0, k.Z)(), c = (0, Y.U)(), u = a.useMemo(() => {
 let e = [];
-switch (c && (o()(null != l, 'Subscription billing country should not be null'), e.push((0, a.jsx)(eT, {
+switch (c && (o()(null != l, 'Subscription billing country should not be null'), e.push((0, t.jsx)(eN, {
     country: l
-  }))), t) {
-  case Y.p9.TIER_0:
-    e.push((0, a.jsx)(em, {
-      premiumType: t
-    }), (0, a.jsx)(eN, {
-      premiumType: t
+  }))), n) {
+  case w.p9.TIER_0:
+    e.push((0, t.jsx)(eE, {
+      premiumType: n
+    }), (0, t.jsx)(eT, {
+      premiumType: n
     }));
     break;
-  case Y.p9.TIER_1:
-    r ? e.push((0, a.jsx)(eI, {
+  case w.p9.TIER_1:
+    r ? e.push((0, t.jsx)(eI, {
       currentUser: s,
-      premiumType: t,
+      premiumType: n,
       onClose: i
-    }), (0, a.jsx)(eE, {}), (0, a.jsx)(eC, {
-      premiumType: t,
+    }), (0, t.jsx)(eC, {}), (0, t.jsx)(em, {
+      premiumType: n,
       onClose: i
-    })) : e.push((0, a.jsx)(eI, {
+    })) : e.push((0, t.jsx)(eI, {
       currentUser: s,
-      premiumType: t,
+      premiumType: n,
       onClose: i
-    }), (0, a.jsx)(em, {
-      premiumType: t
-    }), (0, a.jsx)(eE, {}), (0, a.jsx)(eN, {
-      premiumType: t
-    }), (0, a.jsx)(eC, {
-      premiumType: t,
+    }), (0, t.jsx)(eE, {
+      premiumType: n
+    }), (0, t.jsx)(eC, {}), (0, t.jsx)(eT, {
+      premiumType: n
+    }), (0, t.jsx)(em, {
+      premiumType: n,
       onClose: i
     }));
     break;
-  case Y.p9.TIER_2:
-    r ? e.push((0, a.jsx)(eI, {
+  case w.p9.TIER_2:
+    r ? e.push((0, t.jsx)(eI, {
       currentUser: s,
-      premiumType: t,
+      premiumType: n,
       onClose: i
-    }), (0, a.jsx)(eC, {
-      premiumType: t,
+    }), (0, t.jsx)(em, {
+      premiumType: n,
       onClose: i
-    }), (0, a.jsx)(eE, {})) : e.push((0, a.jsx)(eI, {
+    }), (0, t.jsx)(eC, {})) : e.push((0, t.jsx)(eI, {
       currentUser: s,
-      premiumType: t,
+      premiumType: n,
       onClose: i
-    }), (0, a.jsx)(em, {
-      premiumType: t
-    }), (0, a.jsx)(eC, {
-      premiumType: t,
+    }), (0, t.jsx)(eE, {
+      premiumType: n
+    }), (0, t.jsx)(em, {
+      premiumType: n,
       onClose: i
-    }), (0, a.jsx)(eE, {}), (0, a.jsx)(eN, {
-      premiumType: t
+    }), (0, t.jsx)(eC, {}), (0, t.jsx)(eT, {
+      premiumType: n
     }));
 }
 return e;
   }, [
-t,
+n,
 s,
 i,
 r,
 c,
 l
   ]);
-  return (0, a.jsx)('div', {
-className: J.whatYouLoseItemContainer,
+  return (0, t.jsx)('div', {
+className: X.whatYouLoseItemContainer,
 children: u
   });
 }
 s.Z = function(e) {
   let {
 premiumType: s,
-titleText: t,
+titleText: n,
 subtitleText: i,
 footer: r,
 onClose: l,
@@ -464,78 +464,78 @@ onDiscountClaim: c,
 onContinue: u,
 analyticsLocations: _,
 isLoading: I = !1,
-churnUserDiscountOffer: C = null,
-isDowngrade: E = !1,
-subtitleIcon: N,
-subtitleClassName: T
-  } = e, A = (0, d.e7)([v.default], () => {
+churnUserDiscountOffer: m = null,
+isDowngrade: C = !1,
+subtitleIcon: T,
+subtitleClassName: N
+  } = e, S = (0, d.e7)([v.default], () => {
 let e = v.default.getCurrentUser();
 return o()(null != e, 'ProfileItem: currentUser cannot be undefined'), e;
   });
-  n.useEffect(() => {
-(0, g.Z)(A.id, A.getAvatarURL(null, 80));
-  }, [A]);
-  let p = null != C && !I;
-  return (n.useEffect(() => {
-p && G.default.track(V.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
+  a.useEffect(() => {
+(0, x.Z)(S.id, S.getAvatarURL(null, 80));
+  }, [S]);
+  let p = null != m && !I;
+  return (a.useEffect(() => {
+p && y.default.track(W.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
   location_stack: _,
-  discount_id: null == C ? void 0 : C.discount_id
+  discount_id: null == m ? void 0 : m.discount_id
 });
   }, [
 p,
 _,
-C
-  ]), I) ? (0, a.jsxs)(a.Fragment, {
+m
+  ]), I) ? (0, t.jsxs)(t.Fragment, {
 children: [
-  (0, a.jsx)(w.Z, {
+  (0, t.jsx)(z.Z, {
     premiumType: s,
     onClose: l
   }),
-  (0, a.jsx)(m.ModalContent, {
-    className: J.body,
-    children: (0, a.jsx)(m.Spinner, {
-      className: J.spinner
+  (0, t.jsx)(E.ModalContent, {
+    className: X.body,
+    children: (0, t.jsx)(E.Spinner, {
+      className: X.spinner
     })
   })
 ]
-  }) : (0, a.jsxs)(a.Fragment, {
+  }) : (0, t.jsxs)(t.Fragment, {
 children: [
-  (0, a.jsx)(w.Z, {
+  (0, t.jsx)(z.Z, {
     premiumType: s,
     onClose: l
   }),
-  (0, a.jsxs)(m.ModalContent, {
-    className: J.body,
+  (0, t.jsxs)(E.ModalContent, {
+    className: X.body,
     children: [
-      (0, a.jsx)(S.Z, {
-        size: S.Z.Sizes.SIZE_24,
-        className: J.title,
-        children: t
+      (0, t.jsx)(L.Z, {
+        size: L.Z.Sizes.SIZE_24,
+        className: X.title,
+        children: n
       }),
-      (0, a.jsxs)('div', {
-        className: T,
+      (0, t.jsxs)('div', {
+        className: N,
         children: [
-          N,
-          (0, a.jsx)(m.Text, {
+          T,
+          (0, t.jsx)(E.Text, {
             variant: 'text-md/normal',
-            className: J.subtitle,
+            className: X.subtitle,
             children: i
           })
         ]
       }),
-      (0, a.jsx)(eA, {
-        currentUser: A,
+      (0, t.jsx)(eS, {
+        currentUser: S,
         premiumType: s,
         onClose: l,
-        isDowngrade: E
+        isDowngrade: C
       })
     ]
   }),
-  !p && (0, a.jsx)(m.ModalFooter, {
+  !p && (0, t.jsx)(E.ModalFooter, {
     children: r
   }),
-  p && (0, a.jsx)(k.Z, {
-    churnUserDiscountOffer: C,
+  p && (0, t.jsx)(H.Z, {
+    churnUserDiscountOffer: m,
     onDiscountClaim: c,
     onContinue: u
   })

@@ -23,8 +23,8 @@ openWarningPopout: t,
 type: n,
 content: h,
 stickers: p,
-uploads: m,
-channel: I,
+uploads: I,
+channel: m,
 restrictMentions: T = !0,
 respectCooldown: g = !0
   } = e, S = _.ZP.canUseIncreasedMessageLength(u.default.getCurrentUser());
@@ -34,15 +34,15 @@ let {
   openWarningPopout: _,
   type: h,
   content: p,
-  stickers: m,
-  uploads: I,
+  stickers: I,
+  uploads: m,
   channel: T,
   restrictMentions: g,
   respectCooldown: S,
   userCanUsePremiumMessageLength: A,
   resolve: N
 } = e;
-if (0 === p.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == m || 0 === m.length) && (null == I || 0 === I.length)) {
+if (0 === p.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == I || 0 === I.length) && (null == m || 0 === m.length)) {
   N({
     valid: !1,
     failureReason: E.zYc.EMPTY_MESSAGE
@@ -133,8 +133,8 @@ openWarningPopout: t,
 type: n,
 content: h,
 stickers: p,
-uploads: m,
-channel: I,
+uploads: I,
+channel: m,
 restrictMentions: T,
 respectCooldown: g,
 userCanUsePremiumMessageLength: S,

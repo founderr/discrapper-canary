@@ -47,7 +47,7 @@ render(e) {
   }
 ];
 
-function j(e) {
+function w(e) {
   let {
 actionLog: r
   } = e, t = n.useMemo(() => r.traces.map(e => ({
@@ -61,7 +61,7 @@ children: (0, a.jsx)(f.Z, {
 })
   });
 }
-let w = [{
+let C = [{
 id: 'action',
 name: 'Action',
 render(e) {
@@ -108,19 +108,19 @@ render(e) {
   let {
     actionLog: r
   } = e;
-  return (0, a.jsx)(j, {
+  return (0, a.jsx)(w, {
     actionLog: r
   });
 }
   }
 ];
 
-function C(e) {
+function j(e) {
   let {
 actionLog: r,
 initialHeight: t
   } = e, i = n.useMemo(() => r.error ? [
-...w,
+...C,
 {
   id: 'error',
   name: (0, a.jsxs)(a.Fragment, {
@@ -159,7 +159,7 @@ initialHeight: t
     });
   }
 }
-  ] : w, [r]), {
+  ] : C, [r]), {
 TabBar: l,
 renderSelectedTab: c
   } = (0, y.Z)({
@@ -248,7 +248,7 @@ children: [
       onClickRow: e => l(Number.parseInt(e, 10))
     })
   }),
-  null != c && (0, a.jsx)(C, {
+  null != c && (0, a.jsx)(j, {
     actionLog: c,
     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
   })

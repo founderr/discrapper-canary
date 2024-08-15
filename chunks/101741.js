@@ -70,7 +70,7 @@ onCtaClick: () => (0, o.goToApplication)({
   });
 }
 
-function T(e) {
+function R(e) {
   let {
 result: t
   } = e, n = h.get(t.data.id);
@@ -82,7 +82,7 @@ secondaryInfo: f.Z.Messages.APP_DIRECTORY_ACTIVITY_LABEL
   });
 }
 
-function R(e) {
+function T(e) {
   let t, n, i, {
   result: s,
   guildId: o
@@ -122,11 +122,11 @@ children: [
           result: e
         }, l);
       if (e.type === i.s.ACTIVITY_APPLICATION)
-        return (0, a.jsx)(T, {
+        return (0, a.jsx)(R, {
           result: e
         }, l);
       if (e.type === i.s.CONNECTION)
-        return (0, a.jsx)(R, {
+        return (0, a.jsx)(T, {
           guildId: n,
           result: e
         }, l);

@@ -6,7 +6,7 @@ return f;
 return T;
   },
   WR: function() {
-return I;
+return m;
   },
   lr: function() {
 return p;
@@ -76,7 +76,7 @@ switch (null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 
     return;
 }
   },
-  m = async () => {
+  I = async () => {
 let e = null;
 try {
   var t;
@@ -86,7 +86,7 @@ try {
   e = null !== (t = n.body.offer) && void 0 !== t ? t : null;
 } catch (e) {}
 return e;
-  }, I = e => {
+  }, m = e => {
 let [t, n] = r.useState(!1), [i, a] = r.useState(!1), [s, o] = r.useState(null);
 if (e)
   return {
@@ -96,7 +96,7 @@ if (e)
 let l = () => {
   n(!0), a(!1);
 };
-return !i && !t && (a(!0), m().then(e => {
+return !i && !t && (a(!0), I().then(e => {
   o(e), l();
 }).catch(e => {
   l();

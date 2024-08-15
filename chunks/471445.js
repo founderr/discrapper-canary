@@ -96,7 +96,7 @@ function f(e, t) {
   if (null == e)
 return null;
   null == t && (t = s.Z.getGuild(e.getGuildId()));
-  let m = (0, i.n)(null == t ? void 0 : t.id, [
+  let I = (0, i.n)(null == t ? void 0 : t.id, [
 s.Z,
 o.Z,
 l.default,
@@ -151,13 +151,13 @@ case d.d4z.GUILD_TEXT:
     return r.RefreshIcon;
   return r.TextIcon;
 case d.d4z.GUILD_FORUM:
-  let I = e.isMediaChannel();
+  let m = e.isMediaChannel();
   if (e.isNSFW())
-    return I ? r.ImageWarningIcon : r.ForumWarningIcon;
+    return m ? r.ImageWarningIcon : r.ForumWarningIcon;
   if ((0, u.Z)(e))
-    return I ? r.ImageLockIcon : r.ForumLockIcon;
+    return m ? r.ImageLockIcon : r.ForumLockIcon;
   else
-    return I ? r.ImageIcon : r.ForumIcon;
+    return m ? r.ImageIcon : r.ForumIcon;
 case d.d4z.GUILD_MEDIA:
   if (e.isNSFW())
     return r.ImageWarningIcon;
@@ -166,7 +166,7 @@ case d.d4z.GUILD_MEDIA:
   else
     return r.ImageIcon;
 case d.d4z.GUILD_STAGE_VOICE:
-  if (m)
+  if (I)
     return (0, u.Z)(e) ? r.LockIcon : r.StageLockIcon;
   if (_)
     return r.LockIcon;
@@ -181,7 +181,7 @@ case d.d4z.GUILD_VOICE:
     return r.VoiceWarningIcon;
   if (f)
     return r.ScreenArrowIcon;
-  if (m) {
+  if (I) {
     if ((0, u.Z)(e))
       return r.LockIcon;
     return E ? r.VideoLockIcon : r.VoiceLockIcon;

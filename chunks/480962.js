@@ -23,20 +23,20 @@ renderSubmenu: _
 focusIndex: E,
 isUsingKeyboardNavigation: f,
 ...h
-  } = d, p = i.useRef(null), m = i.useRef(null), I = i.useRef(null);
+  } = d, p = i.useRef(null), I = i.useRef(null), m = i.useRef(null);
   return i.useLayoutEffect(() => {
 var e;
-a && ((0, l.F)(p), null === (e = I.current) || void 0 === e || e.focus());
+a && ((0, l.F)(p), null === (e = m.current) || void 0 === e || e.focus());
   }, [a]), (0, r.jsxs)('div', {
 ref: p,
 className: c.__invalid_submenuContainer,
 children: [
   (0, r.jsx)('div', {
-    ref: m
+    ref: I
   }),
   n,
   a ? (0, r.jsx)(o.j, {
-    targetRef: m,
+    targetRef: I,
     autoInvert: !0,
     nudgeAlignIntoViewport: !0,
     fixed: !0,
@@ -48,7 +48,7 @@ children: [
       children: (0, r.jsx)('div', {
         className: s()(c.submenu, t),
         ...h,
-        ref: I,
+        ref: m,
         children: (0, r.jsx)(u.zJ, {
           className: c.scroller,
           children: _()

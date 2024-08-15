@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(996073),
   m = t(25990),
   A = t(626135),
-  g = t(74538),
-  O = t(296810),
+  O = t(74538),
+  g = t(296810),
   h = t(921813),
   p = t(433411),
   R = t(532432),
@@ -42,7 +42,7 @@ function j(e) {
 user: U
   } = e, {
 reducedMotion: G
-  } = a.useContext(r.AccessibilityPreferencesContext), F = g.ZP.isPremium(U), {
+  } = a.useContext(r.AccessibilityPreferencesContext), F = O.ZP.isPremium(U), {
 pendingAvatar: y,
 pendingBanner: V,
 pendingThemeColors: Y,
@@ -99,7 +99,7 @@ children: (0, n.jsxs)(x.Z, {
   isShown: !0,
   hasBackground: !0,
   children: [
-    (0, n.jsx)(O.Z, {
+    (0, n.jsx)(g.Z, {
       layoutClassName: v.tryItOutLayout,
       previewTitle: (0, n.jsxs)(n.Fragment, {
         children: [

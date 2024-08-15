@@ -19,8 +19,8 @@ confettiTriggerRef: n,
 setConfettiCount: r,
 setShouldFireConfetti: i,
 tooltipProps: d
-  } = e, [E, f] = s.useState(0), h = s.useRef(-1), p = s.useRef(!0), m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), {
-scaleFactor: I
+  } = e, [E, f] = s.useState(0), h = s.useRef(-1), p = s.useRef(!0), I = (0, l.e7)([c.Z], () => c.Z.useReducedMotion), {
+scaleFactor: m
   } = (0, u.useSpring)({
 from: {
   scaleFactor: 1
@@ -35,12 +35,12 @@ config: {
   });
   return (s.useEffect(() => () => {
 p.current = !1;
-  }, []), m) ? (0, a.jsx)(a.Fragment, {
+  }, []), I) ? (0, a.jsx)(a.Fragment, {
 children: t
   }) : (0, a.jsx)(o.animated.div, {
 className: _.confettiTriggerWrapper,
 style: {
-  transform: I.to(e => 'scale('.concat(e, ')'))
+  transform: m.to(e => 'scale('.concat(e, ')'))
 },
 children: (0, a.jsx)(u.Clickable, {
   className: _.confettiTrigger,

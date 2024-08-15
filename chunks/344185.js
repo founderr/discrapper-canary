@@ -16,11 +16,11 @@ parentId: e.parent_id
   };
 }
 
-function m(e) {
+function I(e) {
   e in f && delete f[e];
 }
 
-function I(e) {
+function m(e) {
   null != e.threads && e.threads.length > 0 && (f[e.id] = {}, e.threads.filter(e => d.AW.has(e.type)).forEach(t => T(e.id, t))), e.hasThreadsSubscription && h.add(e.id);
 }
 
@@ -102,7 +102,7 @@ s = 'ActiveThreadsStore', (a = 'displayName') in(i = N) ? Object.defineProperty(
 }) : i[a] = s, t.Z = new N(c.Z, {
   CONNECTION_OPEN: function(e) {
 f = {}, h.clear(), e.guilds.forEach(e => {
-  I(e);
+  m(e);
 });
   },
   OVERLAY_INITIALIZE: function(e) {
@@ -117,13 +117,13 @@ f = {}, l()(t).filter(e => d.Ec.has(e.type)).groupBy('guild_id').forEach((e, t) 
 let {
   guild: t
 } = e;
-m(t.id), I(t);
+I(t.id), m(t);
   },
   GUILD_DELETE: function(e) {
 let {
   guild: t
 } = e;
-m(t.id);
+I(t.id);
   },
   THREAD_CREATE: g,
   THREAD_UPDATE: g,

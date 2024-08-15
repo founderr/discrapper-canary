@@ -12,8 +12,8 @@ var f = n(541049);
 n(449934);
 var h = n(12647),
   p = n(358085),
-  m = n(238514),
-  I = n(740492),
+  I = n(238514),
+  m = n(740492),
   T = n(581883),
   g = n(874893),
   S = n(981631),
@@ -38,10 +38,10 @@ if (__OVERLAY__)
   return S.BRd.DARK;
 if (d.Z.syncForcedColors && 'active' === d.Z.systemForcedColors && null != r)
   return r;
-let n = I.ZP.useSystemTheme;
+let n = m.ZP.useSystemTheme;
 if (n === g.K.ON && null != r)
   return r;
-let i = null === (e = m.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
+let i = null === (e = I.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
 if (null != i)
   return i;
 let a = null === (t = T.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
@@ -81,7 +81,7 @@ function L() {
 }
 class b extends(a = s.ZP.PersistedStore) {
   initialize(e) {
-(null == e ? void 0 : e.theme) != null && (v = e.theme), this.waitFor(I.ZP, m.Z, T.Z, d.Z);
+(null == e ? void 0 : e.theme) != null && (v = e.theme), this.waitFor(m.ZP, I.Z, T.Z, d.Z);
   }
   getState() {
 return {
@@ -89,7 +89,7 @@ return {
 };
   }
   get darkSidebar() {
-return (0, u.ap)(this.theme) && I.ZP.darkSidebar && !R;
+return (0, u.ap)(this.theme) && m.ZP.darkSidebar && !R;
   }
   get theme() {
 return C();

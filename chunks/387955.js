@@ -1,20 +1,20 @@
-s.d(t, {
+a.d(t, {
   Z: function() {
 return m;
   }
 });
-var n = s(735250);
-s(470079);
-var i = s(120356),
-  a = s.n(i),
-  r = s(481060),
-  l = s(63063),
-  o = s(773446),
-  u = s(572264),
-  d = s(981631),
-  c = s(689938),
-  E = s(740080),
-  _ = s(849399);
+var n = a(735250);
+a(470079);
+var s = a(120356),
+  i = a.n(s),
+  r = a(481060),
+  o = a(63063),
+  l = a(773446),
+  u = a(572264),
+  d = a(981631),
+  c = a(689938),
+  E = a(740080),
+  _ = a(849399);
 
 function m(e) {
   let {
@@ -47,11 +47,11 @@ children: [
     color: 'header-secondary',
     variant: 'text-sm/medium',
     children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({
-      helpdeskArticle: l.Z.getArticleURL(d.BhN.POMELO_FAQ)
+      helpdeskArticle: o.Z.getArticleURL(d.BhN.POMELO_FAQ)
     })
   }),
   (0, n.jsxs)('div', {
-    className: a()([
+    className: i()([
       E.infoItem,
       E.infoItemSpacing
     ]),
@@ -73,14 +73,14 @@ children: [
     ]
   }),
   (0, n.jsxs)('div', {
-    className: a()([
+    className: i()([
       E.infoItem,
       E.infoItemSpacing
     ]),
     children: [
       (0, n.jsx)('div', {
         className: E.infoIcon,
-        children: (0, n.jsx)(o.Z, {
+        children: (0, n.jsx)(l.Z, {
           width: 20,
           height: 20
         })

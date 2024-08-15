@@ -27,8 +27,8 @@ guild: t,
 className: i,
 sectionTitle: m,
 forcedDivider: A = !1,
-withTutorial: g = !1,
-showBorder: O = !1,
+withTutorial: O = !1,
+showBorder: g = !1,
 isTryItOutFlow: h = !1,
 initialSelectedEffectId: p
   } = e, R = (0, E.Kg)(s, t), x = _.ZP.canUsePremiumProfileCustomization(s), {
@@ -56,13 +56,13 @@ M
   ]);
   let L = null != t,
 b = h || void 0 !== f ? null != f : null != R,
-Z = g ? o.ShinyButton : o.Button;
+Z = O ? o.ShinyButton : o.Button;
   return (0, n.jsx)(u.Z, {
 forcedDivider: A,
 borderType: I.Y.PREMIUM,
 hasBackground: !0,
 title: m,
-showBorder: O,
+showBorder: g,
 errors: D,
 className: i,
 children: (0, n.jsxs)('div', {
@@ -72,7 +72,7 @@ children: (0, n.jsxs)('div', {
       size: o.Button.Sizes.SMALL,
       onClick: P,
       className: r()({
-        [C.buttonHighlighted]: g
+        [C.buttonHighlighted]: O
       }),
       children: N.Z.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
     }),

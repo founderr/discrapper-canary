@@ -18,20 +18,20 @@ channelId: f,
 ...h
   } = e, {
 analyticsLocations: p
-  } = (0, u.ZP)(l.Z.MASKED_LINK), m = i.useCallback(t => (0, c.q)(e, t, p), [
+  } = (0, u.ZP)(l.Z.MASKED_LINK), I = i.useCallback(t => (0, c.q)(e, t, p), [
 p,
 e
-  ]), I = i.useCallback(e => {
-1 === e.button && m(e);
-  }, [m]), T = s().sanitizeUrl(d);
+  ]), m = i.useCallback(e => {
+1 === e.button && I(e);
+  }, [I]), T = s().sanitizeUrl(d);
   return (0, r.jsx)(o.Anchor, {
 ...h,
 title: a,
 target: '_blank',
 rel: 'noreferrer noopener',
 href: T,
-onClick: m,
-onAuxClick: I,
+onClick: I,
+onAuxClick: m,
 children: null != _ ? _ : a
   });
 });

@@ -29,8 +29,8 @@ onThemeColorsChange: r,
 preventDisabled: C,
 guildId: m,
 className: A,
-showPremiumIcon: g = !0,
-showResetThemeButton: O = !1,
+showPremiumIcon: O = !0,
+showResetThemeButton: g = !1,
 forcedDivider: h
   } = e, p = (0, _.ZP)(s.id, m), {
 primaryColor: R,
@@ -50,7 +50,7 @@ r(o()(e, null == p ? void 0 : p.themeColors) ? void 0 : e);
 title: S.Z.Messages.USER_SETTINGS_PROFILE_THEME,
 disabled: !M && !C,
 className: i()(N.__invalid_profileThemesSection, A),
-showPremiumIcon: g,
+showPremiumIcon: O,
 forcedDivider: h,
 children: (0, n.jsxs)('div', {
   className: N.sectionContainer,
@@ -93,7 +93,7 @@ children: (0, n.jsxs)('div', {
         })
       })
     }),
-    O && null != m && (0, n.jsx)(c.Button, {
+    g && null != m && (0, n.jsx)(c.Button, {
       className: N.resetButton,
       color: c.Button.Colors.PRIMARY,
       look: c.Button.Looks.LINK,

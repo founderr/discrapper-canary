@@ -13,13 +13,13 @@ var r = n(392711),
   f = n(709054),
   h = n(725380),
   p = n(340332),
-  m = n(675478),
-  I = n(65154);
+  I = n(675478),
+  m = n(65154);
 let T = e => 'AudioContextSettingsMigrated:'.concat(e),
-  g = e => e === I.Yn.STREAM ? a.h.STREAM : a.h.USER;
+  g = e => e === m.Yn.STREAM ? a.h.STREAM : a.h.USER;
 
 function S() {
-  o.K.get(T(_.default.getId())) || m.hW.updateAsync('audioContextSettings', e => {
+  o.K.get(T(_.default.getId())) || I.hW.updateAsync('audioContextSettings', e => {
 let t = !1;
 for (let [n, r] of Object.entries(E.Z.getState().settingsByContext)) {
   let i = (0, p.z)(n);
@@ -50,7 +50,7 @@ for (let [n, r] of Object.entries(E.Z.getState().settingsByContext)) {
   }
 }
 return o.K.set(T(_.default.getId()), !0), t;
-  }, m.fy.AUTOMATED);
+  }, I.fy.AUTOMATED);
 }
 let A = i().debounce(() => {
 v();
@@ -60,7 +60,7 @@ maxWait: 500
   });
 
 function v() {
-  m.hW.updateAsync('audioContextSettings', e => {
+  I.hW.updateAsync('audioContextSettings', e => {
 let t = !1;
 return (0, h.$E)((n, r, i) => {
   let a = function(e, t, n, r) {
@@ -101,7 +101,7 @@ return (0, h.$E)((n, r, i) => {
   });
   t = t || a;
 }), t;
-  }, m.fy.INFREQUENT_USER_ACTION);
+  }, I.fy.INFREQUENT_USER_ACTION);
 }
 
 function O(e) {

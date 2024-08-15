@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(218867),
   h = n(313201),
   p = n(806966),
-  m = n(98528),
-  I = n(551058),
+  I = n(98528),
+  m = n(551058),
   T = n(555573),
   g = n(10718),
   S = n(367790),
@@ -66,7 +66,7 @@ applicationCommands: !a
 placeholderCount: 7,
 limit: C.tn,
 includeFrecency: !0
-  }), q = (0, m.Qs)({
+  }), q = (0, I.Qs)({
 activeCategoryIndex: F,
 isScrolling: o,
 listRef: G,
@@ -170,7 +170,7 @@ w
       height: 16,
       padding: 0
     });
-  return (0, r.jsx)(I.Z, {
+  return (0, r.jsx)(m.Z, {
     className: L.categoryHeader,
     icon: a,
     children: t.name

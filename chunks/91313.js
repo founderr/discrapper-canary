@@ -3,7 +3,7 @@ n.d(t, {
 return h;
   },
   IB: function() {
-return I;
+return m;
   },
   cr: function() {
 return f;
@@ -15,7 +15,7 @@ return p;
 return T;
   },
   tM: function() {
-return m;
+return I;
   },
   xi: function() {
 return g;
@@ -68,7 +68,7 @@ for (let e of r)
   return n;
 }
 
-function m(e, t, n) {
+function I(e, t, n) {
   let r = {};
   if (null == t.options)
 return {};
@@ -82,13 +82,13 @@ s = null == i ? void 0 : i[0].children;
 for (let t of s)
   if (d.aj.isType(t, 'applicationCommandOption')) {
     let i = a[t.optionName];
-    null != i && (r[t.optionName] = I(e, i, t, n));
+    null != i && (r[t.optionName] = m(e, i, t, n));
   }
   }
   return r;
 }
 
-function I(e, t, n, i) {
+function m(e, t, n, i) {
   let a = n.children.map(n => {
 if (t.type === r.jw.ATTACHMENT) {
   let e = l.Z.getUpload(i, t.name, o.d.SlashCommand);
@@ -150,7 +150,7 @@ function g(e, t, n, r, o) {
   let [u] = r, c = a.Z.getActiveCommand(n), d = null == c ? void 0 : null === (l = c.options) || void 0 === l ? void 0 : l.find(e => e.name === u.optionName);
   if (null == d)
 return;
-  let _ = I(e, d, u, n),
+  let _ = m(e, d, u, n),
 E = s.f({
   option: d,
   content: _,

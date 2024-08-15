@@ -9,33 +9,33 @@ var i, a, s, o, l = n(442837),
   f = n(709054),
   h = n(314897),
   p = n(981631),
-  m = n(647086);
-let I = {},
+  I = n(647086);
+let m = {},
   T = {},
   g = !1,
   S = [];
 
 function A(e) {
-  for (let t of (T = {}, I = {}, r = 0, e))
-r++, T[t.id] = _.cL(t), I[t.id] = t.roles;
+  for (let t of (T = {}, m = {}, r = 0, e))
+r++, T[t.id] = _.cL(t), m[t.id] = t.roles;
 }
 
 function N(e) {
   let {
 guildId: t,
 role: n
-  } = e, r = I[t], i = E.CL(n), a = null == r ? void 0 : r[i.id];
+  } = e, r = m[t], i = E.CL(n), a = null == r ? void 0 : r[i.id];
   if (null != a && (0, u.Z)(i, a))
 return !1;
   r = {
 ...r,
 [n.id]: E.CL(n)
-  }, r = E.iw(t, Object.values(r)), I[t] = r;
+  }, r = E.iw(t, Object.values(r)), m[t] = r;
 }
 let v = Object.freeze({});
 class O extends(i = l.ZP.Store) {
   getGuild(e) {
-return null == e ? void 0 : e === p.I_8 ? m.g : T[e];
+return null == e ? void 0 : e === p.I_8 ? I.g : T[e];
   }
   getGuilds() {
 return T;
@@ -53,15 +53,15 @@ return g;
 return S;
   }
   getAllGuildsRoles() {
-return I;
+return m;
   }
   getRoles(e) {
 var t;
-return null !== (t = I[e]) && void 0 !== t ? t : v;
+return null !== (t = m[e]) && void 0 !== t ? t : v;
   }
   getRole(e, t) {
 var n;
-return null === (n = I[e]) || void 0 === n ? void 0 : n[t];
+return null === (n = m[e]) || void 0 === n ? void 0 : n[t];
   }
 }
 o = 'GuildStore', (s = 'displayName') in(a = O) ? Object.defineProperty(a, s, {
@@ -76,15 +76,15 @@ for (let n of e.guilds) {
   let e = T[n.id];
   if (null == e || 'unavailable' === n.data_mode)
     return;
-  T[n.id] = _.sp(n, e), I[n.id] = 'partial' === n.data_mode ? _.EO(n.id, null !== (t = I[n.id]) && void 0 !== t ? t : v, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : E.C5(n.id, n.roles);
+  T[n.id] = _.sp(n, e), m[n.id] = 'partial' === n.data_mode ? _.EO(n.id, null !== (t = m[n.id]) && void 0 !== t ? t : v, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : E.C5(n.id, n.roles);
 }
 r = Object.keys(T).length;
   },
   CONNECTION_OPEN: function(e) {
 g = !0;
 let t = T;
-T = {}, I = {}, r = 0, e.guilds.forEach(e => {
-  r++, T[e.id] = _.wD(e, t[e.id]), I[e.id] = e.roles instanceof Array ? E.C5(e.id, e.roles) : e.roles;
+T = {}, m = {}, r = 0, e.guilds.forEach(e => {
+  r++, T[e.id] = _.wD(e, t[e.id]), m[e.id] = e.roles instanceof Array ? E.C5(e.id, e.roles) : e.roles;
 });
 let n = !1;
 if (S.length !== e.geoRestrictedGuilds.length)
@@ -99,9 +99,9 @@ n && (S = e.geoRestrictedGuilds);
   },
   OVERLAY_INITIALIZE: function(e) {
 var t;
-T = {}, I = {}, r = 0, null === (t = e.guilds) || void 0 === t || t.forEach(e => {
+T = {}, m = {}, r = 0, null === (t = e.guilds) || void 0 === t || t.forEach(e => {
   r++, T[e.id] = new d.ZP(e);
-}), I = e.allGuildsRoles;
+}), m = e.allGuildsRoles;
   },
   CACHE_LOADED: function(e) {
 A(e.guilds);
@@ -116,14 +116,14 @@ let t = _.wD(e.guild, T[e.guild.id]);
 null == T[t.id] && r++, T = {
   ...T,
   [t.id]: t
-}, I[t.id] = e.guild.roles instanceof Array ? E.C5(t.id, e.guild.roles) : e.guild.roles;
+}, m[t.id] = e.guild.roles instanceof Array ? E.C5(t.id, e.guild.roles) : e.guild.roles;
   },
   GUILD_UPDATE: function(e) {
 let t = _.di(e.guild, T[e.guild.id]);
 null == T[t.id] && r++, T = {
   ...T,
   [t.id]: t
-}, I[t.id] = E.C5(t.id, e.guild.roles);
+}, m[t.id] = E.C5(t.id, e.guild.roles);
   },
   GUILD_DELETE: function(e) {
 let {
@@ -137,7 +137,7 @@ if (null == T[t.id] || t.unavailable)
   return !1;
 T = {
   ...T
-}, delete T[t.id], I[t.id] = void 0, r--;
+}, delete T[t.id], m[t.id] = void 0, r--;
   },
   GUILD_ROLE_CREATE: N,
   GUILD_ROLE_UPDATE: N,
@@ -145,12 +145,12 @@ T = {
 let {
   guildId: t,
   roleId: n
-} = e, r = I[t];
+} = e, r = m[t];
 if (null == r)
   return !1;
 r = {
   ...r
-}, delete r[n], I[t] = r;
+}, delete r[n], m[t] = r;
   },
   GUILD_MEMBER_ADD: function(e) {
 let {

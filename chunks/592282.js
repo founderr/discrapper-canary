@@ -23,8 +23,8 @@ checked: a,
 subtext: f,
 disabled: h,
 isFocused: p,
-menuItemProps: m,
-action: I,
+menuItemProps: I,
+action: m,
 className: T,
 focusedClassName: g
   } = e, S = i.useRef(null);
@@ -37,8 +37,8 @@ className: s()(E.item, E.labelContainer, _._[t], T, {
   [E.focused]: p,
   [null != g ? g : '']: p
 }),
-onClick: h ? void 0 : I,
-...m,
+onClick: h ? void 0 : m,
+...I,
 'aria-checked': a,
 'aria-disabled': h,
 children: [

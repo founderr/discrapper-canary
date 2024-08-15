@@ -23,8 +23,8 @@ var a = t(512722),
   m = t(237997),
   A = t(626135);
 t(63063);
-var g = t(13140),
-  O = t(981631),
+var O = t(13140),
+  g = t(981631),
   h = t(689938),
   p = t(232603);
 let R = x(null);
@@ -32,7 +32,7 @@ let R = x(null);
 function x(e) {
   var s;
   let t = m.Z.getNotificationPositionMode(),
-n = t !== O._vf.DISABLED,
+n = t !== g._vf.DISABLED,
 a = N.Z.getOverlayKeybind(),
 i = N.Z.getOverlayChatKeybind();
   return {
@@ -40,8 +40,8 @@ enabled: C.Z.enabled,
 notifications_enabled: n,
 notifications_position: n ? t : null,
 text_notifications_mode: m.Z.getTextChatNotificationMode(),
-hotkey: null != a ? (0, g.BB)(a.shortcut) : null,
-text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null,
+hotkey: null != a ? (0, O.BB)(a.shortcut) : null,
+text_activation_hotkey: null != i ? (0, O.BB)(i.shortcut) : null,
 text_opacity_slider: m.Z.getTextWidgetOpacity(),
 old_enabled: null !== (s = null == e ? void 0 : e.enabled) && void 0 !== s ? s : C.Z.enabled
   };
@@ -70,7 +70,7 @@ legacyEnabled: r
 enabled: C.Z.enabled,
 legacyEnabled: C.Z.legacyEnabled
   })), {
-avatarSizeMode: g,
+avatarSizeMode: O,
 displayNameMode: f,
 displayUserMode: D,
 notificationPositionMode: P,
@@ -90,21 +90,21 @@ location: 'overlay_user_settings'
   }), j = (0, u.$1)();
 
   function B(e) {
-_.Z.setEnabled(e, r), A.default.track(O.rMx.OVERLAY_TOGGLED, {
+_.Z.setEnabled(e, r), A.default.track(g.rMx.OVERLAY_TOGGLED, {
   enabled: e,
   setting_type: 'overlay toggled - global'
 });
   }
 
   function U(e) {
-_.Z.setEnabled(a, e), A.default.track(O.rMx.OVERLAY_TOGGLED, {
+_.Z.setEnabled(a, e), A.default.track(g.rMx.OVERLAY_TOGGLED, {
   enabled: e,
   setting_type: 'overlay toggled - legacy'
 });
   }
   return ! function() {
 let e = x(R);
-!o().isEqual(e, R) && (A.default.track(O.rMx.OVERLAY_SETTINGS_UPDATED, e), R = e);
+!o().isEqual(e, R) && (A.default.track(g.rMx.OVERLAY_SETTINGS_UPDATED, e), R = e);
   }(), (0, n.jsxs)(n.Fragment, {
 children: [
   (0, n.jsxs)(c.FormSection, {
@@ -171,11 +171,11 @@ children: [
         children: (0, n.jsx)(c.RadioGroup, {
           options: [{
               name: h.Z.Messages.AVATAR_SIZE_OPTION_LARGE,
-              value: O.ipw.LARGE
+              value: g.ipw.LARGE
             },
             {
               name: h.Z.Messages.AVATAR_SIZE_OPTION_SMALL,
-              value: O.ipw.SMALL
+              value: g.ipw.SMALL
             }
           ],
           onChange: e => {
@@ -184,7 +184,7 @@ children: [
             } = e;
             return _.Z.setAvatarSizeMode(s);
           },
-          value: g
+          value: O
         })
       }),
       (0, n.jsx)(M, {
@@ -192,15 +192,15 @@ children: [
         children: (0, n.jsx)(c.RadioGroup, {
           options: [{
               name: h.Z.Messages.DISPLAY_OPTION_ALWAYS,
-              value: O.wC$.ALWAYS
+              value: g.wC$.ALWAYS
             },
             {
               name: h.Z.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING,
-              value: O.wC$.ONLY_WHILE_SPEAKING
+              value: g.wC$.ONLY_WHILE_SPEAKING
             },
             {
               name: h.Z.Messages.DISPLAY_OPTION_NEVER,
-              value: O.wC$.NEVER
+              value: g.wC$.NEVER
             }
           ],
           onChange: e => {
@@ -217,11 +217,11 @@ children: [
         children: (0, n.jsx)(c.RadioGroup, {
           options: [{
               name: h.Z.Messages.DISPLAY_OPTION_ALWAYS,
-              value: O.OYC.ALWAYS
+              value: g.OYC.ALWAYS
             },
             {
               name: h.Z.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING,
-              value: O.OYC.ONLY_WHILE_SPEAKING
+              value: g.OYC.ONLY_WHILE_SPEAKING
             }
           ],
           onChange: e => {
@@ -260,13 +260,13 @@ children: [
       }),
       (0, n.jsx)(M, {
         children: (0, n.jsx)(c.FormSwitch, {
-          value: P !== O._vf.DISABLED && L === O.Ypu.ENABLED,
-          disabled: P === O._vf.DISABLED,
+          value: P !== g._vf.DISABLED && L === g.Ypu.ENABLED,
+          disabled: P === g._vf.DISABLED,
           onChange: function() {
             let {
               ENABLED: e,
               DISABLED: s
-            } = O.Ypu;
+            } = g.Ypu;
             _.Z.setTextChatNotificationMode(L === e ? s : e);
           },
           hideBorder: !0,

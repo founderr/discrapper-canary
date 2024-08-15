@@ -21,8 +21,8 @@ let {
   tooltipDelay: d,
   size: E = 16,
   badgeColor: p,
-  iconClassName: m,
-  flowerStarClassName: I
+  iconClassName: I,
+  flowerStarClassName: m
 } = this.props, T = function(e) {
   switch (e) {
     case 2:
@@ -56,19 +56,19 @@ return (0, a.jsx)(u.Tooltip, {
       height: E
     },
     children: (0, a.jsx)(t, {
-      className: l()(h.icon, m),
+      className: l()(h.icon, I),
       color: 'currentColor'
     })
   }) : (0, a.jsx)(c.Z, {
     ...s,
     className: l()(n, r),
-    flowerStarClassName: I,
+    flowerStarClassName: m,
     color: p,
     stroke: i,
     size: E,
     children: (0, a.jsx)(t, {
       size: 'xxs',
-      className: l()(h.icon, m),
+      className: l()(h.icon, I),
       color: 'currentColor'
     })
   })

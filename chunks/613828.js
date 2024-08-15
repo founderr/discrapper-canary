@@ -69,7 +69,7 @@ var n = e.component,
   s = e.replace,
   c = e.to,
   p = e.innerRef,
-  m = (0, l.Z)(e, [
+  I = (0, l.Z)(e, [
     'component',
     'replace',
     'to',
@@ -80,7 +80,7 @@ return a.createElement(r.s6.Consumer, null, function(e) {
   var n = e.history,
     r = _(d(c, e.location), e.location),
     l = r ? n.createHref(r) : '',
-    h = (0, o.Z)({}, m, {
+    h = (0, o.Z)({}, I, {
       href: l,
       navigate: function() {
         var t = d(c, e.location);
@@ -90,12 +90,12 @@ return a.createElement(r.s6.Consumer, null, function(e) {
   return E !== f ? h.ref = t || p : h.innerRef = p, a.createElement(i, h);
 });
   }),
-  m = function(e) {
+  I = function(e) {
 return e;
   },
-  I = a.forwardRef;
-void 0 === I && (I = m);
-I(function(e, t) {
+  m = a.forwardRef;
+void 0 === m && (m = I);
+m(function(e, t) {
   var n = e['aria-current'],
 i = void 0 === n ? 'page' : n,
 s = e.activeClassName,
@@ -151,6 +151,6 @@ var n = g || e.location,
     style: b,
     to: s
   }, R);
-return m !== I ? M.ref = t || O : M.innerRef = O, a.createElement(p, M);
+return I !== m ? M.ref = t || O : M.innerRef = O, a.createElement(p, M);
   });
 });

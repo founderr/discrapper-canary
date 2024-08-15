@@ -28,13 +28,13 @@ parentChannel: E,
 postThread: f,
 user: h,
 selectedGuildId: p,
-canAccess: m = !1
+canAccess: I = !1
   } = e;
   if (null == u)
 return null;
-  let I = (0, l.EY)(u.thumbnail),
-T = !m && u.has_media_attachment,
-g = m ? d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
+  let m = (0, l.EY)(u.thumbnail),
+T = !I && u.has_media_attachment,
+g = I ? d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
 S = null != h ? o.ZP.getName(u.guild_id, u.channel_id, h) : void 0,
 A = null == h ? void 0 : h.getAvatarURL(null == _ ? void 0 : _.id, 40);
   (null == A || p !== u.guild_id) && (A = s.ZP.getGuildIconURL({
@@ -57,13 +57,13 @@ v = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null &
 title: null !== (i = u.title) && void 0 !== i ? i : '',
 subtitle: u.description,
 ctaText: g,
-coverImage: I,
+coverImage: m,
 coverImageOverlayText: T ? d.Z.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
 parentChannelId: u.parent_channel_id,
 threadId: u.channel_id,
 postThread: f,
 messageId: u.message_id,
-canAccess: m,
+canAccess: I,
 guildId: u.guild_id,
 guildName: null !== (a = null == _ ? void 0 : _.name) && void 0 !== a ? a : u.guild_name,
 authorId: null == u ? void 0 : u.author_id,

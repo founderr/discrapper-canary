@@ -10,8 +10,8 @@ var r = n(690244)('%TypeError%'),
   _ = n(148309),
   E = n(632384);
 e.exports = function(e, t, n, f, h) {
-  var p, m, I = E(e);
-  if ('Undefined' !== I && 'Object' !== I)
+  var p, I, m = E(e);
+  if ('Undefined' !== m && 'Object' !== m)
 throw new r('Assertion failed: O must be undefined or an Object');
   if (!d(t))
 throw new r('Assertion failed: P must be a Property Key');
@@ -30,7 +30,7 @@ throw new r('Assertion failed: Desc must be a Property Descriptor');
 }, h))
 throw new r('Assertion failed: current must be a Property Descriptor, or undefined');
   if ('Undefined' === E(h))
-return !!n && ('Undefined' === I || (l(f) ? i(u, _, o, e, t, f) : i(u, _, o, e, t, {
+return !!n && ('Undefined' === m || (l(f) ? i(u, _, o, e, t, f) : i(u, _, o, e, t, {
   '[[Configurable]]': !!f['[[Configurable]]'],
   '[[Enumerable]]': !!f['[[Enumerable]]'],
   '[[Value]]': f['[[Value]]'],
@@ -50,15 +50,15 @@ if (l(h)) {
 } else if (!h['[[Writable]]'] && ('[[Writable]]' in f && f['[[Writable]]'] || '[[Value]]' in f && !_(f['[[Value]]'], h['[[Value]]'])))
   return !1;
   }
-  if ('Undefined' !== I)
+  if ('Undefined' !== m)
 return u(h) && l(f) ? (p = ('[[Configurable]]' in f ? f : h)['[[Configurable]]'], i(u, _, o, e, t, {
   '[[Configurable]]': !!p,
-  '[[Enumerable]]': !!(m = ('[[Enumerable]]' in f ? f : h)['[[Enumerable]]']),
+  '[[Enumerable]]': !!(I = ('[[Enumerable]]' in f ? f : h)['[[Enumerable]]']),
   '[[Get]]': ('[[Get]]' in f ? f : h)['[[Get]]'],
   '[[Set]]': ('[[Set]]' in f ? f : h)['[[Set]]']
 })) : l(h) && u(f) ? (p = ('[[Configurable]]' in f ? f : h)['[[Configurable]]'], i(u, _, o, e, t, {
   '[[Configurable]]': !!p,
-  '[[Enumerable]]': !!(m = ('[[Enumerable]]' in f ? f : h)['[[Enumerable]]']),
+  '[[Enumerable]]': !!(I = ('[[Enumerable]]' in f ? f : h)['[[Enumerable]]']),
   '[[Value]]': ('[[Value]]' in f ? f : h)['[[Value]]'],
   '[[Writable]]': !!('[[Writable]]' in f ? f : h)['[[Writable]]']
 })) : i(u, _, o, e, t, f);

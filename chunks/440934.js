@@ -11,9 +11,9 @@ o(470079);
 var i = o(481060),
   a = o(112831),
   r = o(777036),
-  d = o(970184),
-  l = o(471073),
-  c = o(293979),
+  c = o(970184),
+  d = o(471073),
+  l = o(293979),
   s = o(954654),
   u = o(689938),
   f = o(167990);
@@ -31,7 +31,7 @@ submissionState: h,
 error: b,
 validators: C,
 onSubmit: g
-  } = (0, c.X9)(e, o);
+  } = (0, l.X9)(e, o);
   return (0, t.jsx)('form', {
 onSubmit: e => {
   e.preventDefault(), g();
@@ -74,7 +74,7 @@ children: (0, t.jsxs)(i.ModalRoot, {
           })
         }),
         (0, t.jsx)(i.FormSection, {
-          children: (0, t.jsx)(d.Il, {
+          children: (0, t.jsx)(c.Il, {
             modal: e,
             validators: C,
             children: (0, s.xX)(m)
@@ -88,7 +88,7 @@ children: (0, t.jsxs)(i.ModalRoot, {
           type: 'submit',
           color: i.Button.Colors.BRAND,
           size: i.Button.Sizes.MEDIUM,
-          submitting: h === l.i.IN_FLIGHT,
+          submitting: h === d.i.IN_FLIGHT,
           children: u.Z.Messages.SUBMIT
         }),
         (0, t.jsx)(i.Button, {

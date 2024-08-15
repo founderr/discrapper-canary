@@ -18,8 +18,8 @@ var i = n(120356),
   f = n(694320),
   h = n(981631),
   p = n(474936),
-  m = n(689938),
-  I = n(847943);
+  I = n(689938),
+  m = n(847943);
 
 function T(e) {
   var t, n, i, T;
@@ -29,30 +29,30 @@ textValue: S,
 maxCharacterCount: A,
 showRemainingCharsAfterCount: N,
 className: v
-  } = e, O = (0, s.e7)([_.default], () => E.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())), R = (0, c.Z)(), C = null != A ? A : R, y = null !== (T = null != N ? N : A) && void 0 !== T ? T : R / 10, D = S.length, L = null != g.upsellLongMessages && (null != D ? D : 0) > h.J6R && O, b = null != g.upsellLongMessages && !O, M = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === p.Si.TIER_2, P = C - D, U = P > y, w = P < 0 && M, x = 0 === P ? m.Z.Messages.CHARACTER_COUNT_AT_LIMIT : P > 0 ? m.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+  } = e, O = (0, s.e7)([_.default], () => E.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())), R = (0, c.Z)(), C = null != A ? A : R, y = null !== (T = null != N ? N : A) && void 0 !== T ? T : R / 10, D = S.length, L = null != g.upsellLongMessages && (null != D ? D : 0) > h.J6R && O, b = null != g.upsellLongMessages && !O, M = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === p.Si.TIER_2, P = C - D, U = P > y, w = P < 0 && M, x = 0 === P ? I.Z.Messages.CHARACTER_COUNT_AT_LIMIT : P > 0 ? I.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
 count: P
-  }) : m.Z.Messages.CHARACTER_COUNT_OVER_LIMIT, {
+  }) : I.Z.Messages.CHARACTER_COUNT_OVER_LIMIT, {
 analyticsLocations: G
   } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
   return L && P >= 0 || !U || b && !U ? (0, r.jsx)(u.Gt, {
 value: G,
 children: (0, r.jsxs)('div', {
-  className: a()(v, I.characterCount, {
-    [I.error]: P < 0
+  className: a()(v, m.characterCount, {
+    [m.error]: P < 0
   }),
   children: [
     (0, r.jsxs)('div', {
-      className: I.flairContainer,
+      className: m.flairContainer,
       children: [
         L && P >= 0 ? (0, r.jsx)(o.Tooltip, {
-          text: m.Z.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({
+          text: I.Z.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({
             maxLength: C
           }),
           position: 'top',
           children: e => (0, r.jsx)(o.NitroWheelIcon, {
             size: 'md',
             color: 'currentColor',
-            className: I.premiumFlair,
+            className: m.premiumFlair,
             ...e
           })
         }) : null,
@@ -68,12 +68,12 @@ children: (0, r.jsxs)('div', {
       ]
     }),
     (0, r.jsx)(o.HiddenVisually, {
-      children: m.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+      children: I.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
         count: P
       })
     }),
     b && !U ? (0, r.jsx)(f.Z, {
-      className: I.upsell,
+      className: m.upsell,
       iconOnly: (null === (i = g.upsellLongMessages) || void 0 === i ? void 0 : i.iconOnly) || !1,
       remaining: P
     }) : null

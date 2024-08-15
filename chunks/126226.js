@@ -18,8 +18,8 @@ var i = n(693789),
   f = n(581364),
   h = n(826298),
   p = n(588468),
-  m = n(496675),
-  I = n(226951),
+  I = n(496675),
+  m = n(226951),
   T = n(877565),
   g = n(590921),
   S = n(665692),
@@ -47,7 +47,7 @@ let C = {
   stores: [
 _.Z,
 u.ZP,
-m.Z
+I.Z
   ],
   matches: (e, t, n, r, i) => i.commands !== g.L8.DISABLED && null == _.Z.getActiveCommand(e.id) && (r || i.commands !== g.L8.OLD_BUILT_INS),
   queryResults(e, t, n, r, i) {
@@ -55,7 +55,7 @@ if (0 === n.length && r.commands !== g.L8.OLD_BUILT_INS)
   return O;
 if (r.commands === g.L8.OLD_BUILT_INS) {
   let r = (0, l.Kh)([s.yU.CHAT], !1, !1),
-    i = RegExp('^'.concat(I.Z.escape(n)), 'i'),
+    i = RegExp('^'.concat(m.Z.escape(n)), 'i'),
     a = (0, f.Dd)(r, i, {
       channel: e,
       guild: t

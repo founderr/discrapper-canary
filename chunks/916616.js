@@ -16,8 +16,8 @@ var r, i = n(735250),
   f = n(823023),
   h = n(981631),
   p = n(217702),
-  m = n(689938),
-  I = n(235202),
+  I = n(689938),
+  m = n(235202),
   T = n(167969),
   g = n(557256);
 
@@ -93,10 +93,10 @@ return F = null != F ? F : y, (0, i.jsx)(u.FocusRing, {
   ringTarget: this._containerRef,
   focusTarget: this._clickableRef,
   children: (0, i.jsxs)('div', {
-    className: o()(I.imageWrapper, {
-      [I.imageZoom]: D,
-      [I.imageWrapperBackground]: r !== h.zo9.READY,
-      [I.clickable]: null != P
+    className: o()(m.imageWrapper, {
+      [m.imageZoom]: D,
+      [m.imageWrapperBackground]: r !== h.zo9.READY,
+      [m.clickable]: null != P
     }, t),
     style: function(e, t, n, r) {
       return r === p.hV.MOSAIC ? {
@@ -117,17 +117,17 @@ return F = null != F ? F : y, (0, i.jsx)(u.FocusRing, {
         tabIndex: -1,
         onClick: P,
         'aria-hidden': !0,
-        className: I.originalLink,
+        className: m.originalLink,
         href: L,
         ref: this._containerRef,
         'data-role': 'img',
         'data-safe-src': null != w ? w : a
       }),
       null != P ? (0, i.jsx)(u.Clickable, {
-        className: I.clickableWrapper,
+        className: m.clickableWrapper,
         tabIndex: null != U ? U : 0,
         onClick: P,
-        'aria-label': null != c ? c : m.Z.Messages.IMAGE,
+        'aria-label': null != c ? c : I.Z.Messages.IMAGE,
         'aria-describedby': d.r5,
         innerRef: this._clickableRef,
         focusProps: {
@@ -136,7 +136,7 @@ return F = null != F ? F : y, (0, i.jsx)(u.FocusRing, {
         children: e
       }) : e,
       null != F ? (0, i.jsx)('div', {
-        className: I.imageAccessory,
+        className: m.imageAccessory,
         children: F
       }) : null
     ]
@@ -155,7 +155,7 @@ mediaLayoutType: n,
 alt: r
   } = e, a = (0, c.ZP)();
   return (0, i.jsx)('div', {
-className: I.imageErrorWrapper,
+className: m.imageErrorWrapper,
 style: function(e, t) {
   switch (t) {
     case p.hV.MOSAIC:
@@ -177,8 +177,8 @@ style: function(e, t) {
 }(t, n),
 children: (0, i.jsx)('img', {
   src: (0, l.ap)(a) ? g : T,
-  className: I.imageError,
-  alt: null != r ? r : m.Z.Messages.IMAGE
+  className: m.imageError,
+  alt: null != r ? r : I.Z.Messages.IMAGE
 })
   });
 }
@@ -195,7 +195,7 @@ let {
 } = e;
 return (0, i.jsx)('img', {
   className: null != a ? a : void 0,
-  alt: null != r ? r : m.Z.Messages.IMAGE,
+  alt: null != r ? r : I.Z.Messages.IMAGE,
   src: t,
   style: v(n, s)
 });

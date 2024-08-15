@@ -77,8 +77,8 @@ user: {
   hasProfileEffect: E
 }
   }), {
-radius: m,
-offsetX: I,
+radius: I,
+offsetX: m,
 offsetY: T
   } = c[n], g = u && (n === o.y0.POPOUT || n === o.y0.BITE_SIZE) ? 4 : 0, S = p - T - g;
   return (0, r.jsxs)('svg', {
@@ -101,9 +101,9 @@ children: [
       }),
       (0, r.jsx)('circle', {
         fill: 'black',
-        cx: m + I - g,
+        cx: I + m - g,
         cy: S,
-        r: m
+        r: I
       })
     ]
   }),

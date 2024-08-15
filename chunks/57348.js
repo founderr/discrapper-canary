@@ -1,6 +1,6 @@
 i.d(t, {
   Z: function() {
-return f;
+return C;
   }
 });
 var n = i(735250);
@@ -18,15 +18,15 @@ var a = i(120356),
   p = i(147890),
   m = i(57716),
   g = i(981631),
-  C = i(255569);
+  f = i(255569);
 
-function f(e) {
+function C(e) {
   let {
 collection: t,
 collection: {
   id: i,
   title: a,
-  application_directory_collection_items: f
+  application_directory_collection_items: C
 }
   } = e, x = (0, m.Z)({
 collection: t
@@ -36,18 +36,18 @@ ref: x,
 children: [
   (0, n.jsx)(s.Heading, {
     variant: 'heading-lg/semibold',
-    className: C.header,
+    className: f.header,
     children: a
   }),
   (0, n.jsx)('div', {
-    className: C.list,
-    children: f.map(e => {
+    className: f.list,
+    children: C.map(e => {
       let {
         id: t,
         type: a,
         application: _,
         image_hash: m,
-        title: f,
+        title: C,
         description: x,
         call_to_action_label: b,
         call_to_action_url: N
@@ -60,7 +60,7 @@ children: [
       });
       return a === o.C.APPLICATION && null != _ ? (0, n.jsx)(c.Z, {
         href: g.Z5c.APPLICATION_DIRECTORY_PROFILE(_.id),
-        className: C.item,
+        className: f.item,
         children: (0, n.jsx)(u.Z, {
           imageSrc: v,
           application: _,
@@ -79,15 +79,15 @@ children: [
           },
           animatesOnHover: !0
         })
-      }, t) : a === o.C.LINK && null != f ? (0, n.jsxs)(h.Z, {
-        className: r()(C.item, C.linkCard),
+      }, t) : a === o.C.LINK && null != C ? (0, n.jsxs)(h.Z, {
+        className: r()(f.item, f.linkCard),
         imageSrc: v,
-        header: f,
-        headerClassName: C.cardHeader,
+        header: C,
+        headerClassName: f.cardHeader,
         children: [
           (0, n.jsx)(s.Text, {
             variant: 'text-sm/normal',
-            className: C.linkDescription,
+            className: f.linkDescription,
             children: x
           }),
           (0, n.jsx)(s.Anchor, {
@@ -100,7 +100,7 @@ children: [
               });
             },
             href: N,
-            className: r()((0, s.getButtonStyle)(), C.linkCta),
+            className: r()((0, s.getButtonStyle)(), f.linkCta),
             children: b
           })
         ]

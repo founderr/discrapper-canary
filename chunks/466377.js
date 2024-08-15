@@ -33,8 +33,8 @@ var r, i, a = n(735250),
   f = n(693789),
   h = n(507274),
   p = n(84735),
-  m = n(337033),
-  I = n(261833),
+  I = n(337033),
+  m = n(261833),
   T = n(742746),
   g = n(147479),
   S = n(600164),
@@ -58,8 +58,8 @@ children: r,
 size: i = 'small',
 role: o = 'dialog',
 className: f,
-fullscreenOnMobile: m = !0,
-hideShadow: I = !1,
+fullscreenOnMobile: I = !0,
+hideShadow: m = !1,
 onAnimationEnd: T = N.dG,
 returnRef: g,
 ...S
@@ -92,8 +92,8 @@ children: (0, a.jsx)(h.V, {
   ...S,
   children: (0, a.jsx)(u.animated.div, {
     className: l()(f, O.root, R[i], {
-      [O.fullscreenOnMobile]: m,
-      [O.rootWithShadow]: !I
+      [O.fullscreenOnMobile]: I,
+      [O.rootWithShadow]: !m
     }),
     ref: D,
     style: y,
@@ -148,7 +148,7 @@ switch (null != e ? e : 'thin') {
 className: l()(O.content, t),
 ref: r,
 ...s,
-children: (0, a.jsx)(m.y, {
+children: (0, a.jsx)(I.y, {
   children: n
 })
   });
@@ -166,7 +166,7 @@ wrap: null !== (i = e.wrap) && void 0 !== i ? i : S.Z.Wrap.NO_WRAP,
 className: l()(O.footer, e.className, {
   [O.footerSeparator]: null === (s = e.separator) || void 0 === s || s
 }),
-children: (0, a.jsx)(m.y, {
+children: (0, a.jsx)(I.y, {
   children: e.children
 })
   });
@@ -186,7 +186,7 @@ className: l()(e.className, {
   [O.hideOnFullscreen]: e.hideOnFullscreen,
   [O.close]: !e.withCircleBackground
 }),
-children: (0, a.jsx)(I.D, {
+children: (0, a.jsx)(m.D, {
   size: 'md',
   color: 'currentColor',
   className: l()(e.innerClassName, O.closeIcon)

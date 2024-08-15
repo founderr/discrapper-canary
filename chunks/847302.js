@@ -3,10 +3,10 @@ n.d(t, {
 return S;
   },
   KH: function() {
-return I;
+return m;
   },
   ZP: function() {
-return m;
+return I;
   }
 }), n(47120), n(653041);
 var r = n(512722),
@@ -37,7 +37,7 @@ let E = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#
   ]),
   p = new Set(['applicationCommandOption']);
 
-function m(e, t, n) {
+function I(e, t, n) {
   let {
 isInline: r,
 isVoid: i,
@@ -49,12 +49,12 @@ o = !0;
   return e.onChange = () => {
 let r = _.bN.richValue(e);
 (r !== s || e.previewMarkdown !== o) && (l.T.withMergedEntry(e, () => {
-  _.bN.withoutNormalizing(e, () => I(e, t, n));
+  _.bN.withoutNormalizing(e, () => m(e, t, n));
 }), s = r, o = e.previewMarkdown), a();
   }, e;
 }
 
-function I(e, t, n) {
+function m(e, t, n) {
   let r = _.bN.areStylesDisabled(e);
   for (let i of _.bN.blocks(e))
 if (h.has(i[0].type))
@@ -86,7 +86,7 @@ for (let c = s.children.length - 1; c >= 0; c--) {
   if (!_.LC.isText(h))
     continue;
   let p = _.C0.child(l, c),
-    m = [];
+    I = [];
   for (E.lastIndex = 0; null != (f = E.exec(h.text));) {
     if (0 !== f.index && null == h.text.charAt(f.index - 1).match(/(\t|\s)/)) {
       E.lastIndex = f.index + 1;
@@ -98,13 +98,13 @@ for (let c = s.children.length - 1; c >= 0; c--) {
       }, a))
       continue;
     let i = (0, o.i)(f[0], n, r);
-    null != i && N(r, t[0], i) ? m.push({
+    null != i && N(r, t[0], i) ? I.push({
       index: f.index,
       length: f[0].length,
       node: i
     }) : E.lastIndex = f.index + 1;
   }
-  for (let t of m.reverse())
+  for (let t of I.reverse())
     (function(e, t, n, r, a) {
       let [s, o] = t, l = {
         path: o,

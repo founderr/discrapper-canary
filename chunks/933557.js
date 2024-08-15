@@ -45,12 +45,12 @@ case c.d4z.GROUP_DM:
       name: i
     });
   }
-  let m = e.recipients.map(t.getUser).filter(l.lm).map(e => {
+  let I = e.recipients.map(t.getUser).filter(l.lm).map(e => {
     var t;
     return null !== (t = n.getNickname(e.id)) && void 0 !== t ? t : u.ZP.getName(e);
   });
-  if (m.length > 0)
-    return m.join(', ');
+  if (I.length > 0)
+    return I.join(', ');
   return d.Z.Messages.GROUP_DM_ALONE.format({
     name: u.ZP.getName(t.getCurrentUser())
   });

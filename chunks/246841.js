@@ -24,8 +24,8 @@ onAction: f
   } = e, {
 label: h,
 tooltip: p,
-loading: m,
-disabled: I,
+loading: I,
+disabled: m,
 onClick: T
   } = (0, s.Ih)(t, n, l), g = () => {
 null == f || f(), T();
@@ -47,8 +47,8 @@ children: e => {
     onClick: g,
     onMouseEnter: t,
     onMouseLeave: n,
-    disabled: I,
-    submitting: m,
+    disabled: m,
+    submitting: I,
     children: [
       (0, r.jsx)(a.Z, {
         width: 16,

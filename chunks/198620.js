@@ -6,7 +6,7 @@ return g;
 return _;
   },
   k5: function() {
-return I;
+return m;
   },
   q5: function() {
 return E;
@@ -65,13 +65,13 @@ return !1;
   return !!(null != t && _(t)) && f(t);
 }
 
-function m(e) {
+function I(e) {
   var t;
   return p(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(p)) || p(e.video);
 }
 
-function I(e) {
-  return e.attachments.some(h) || e.embeds.some(m);
+function m(e) {
+  return e.attachments.some(h) || e.embeds.some(I);
 }
 async function T(e) {
   let t = await i.tn.post({

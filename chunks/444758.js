@@ -12,8 +12,8 @@ var r = n(302454),
   f = n(768581),
   h = n(934415),
   p = n(624138),
-  m = n(699450),
-  I = n(594199),
+  I = n(699450),
+  m = n(594199),
   T = n(981631),
   g = n(689938);
 let S = e => {
@@ -85,7 +85,7 @@ guildId: r.guild_id,
 name: (0, s.F6)(r, E.default, _.Z),
 isDm: r.isPrivate(),
 isForumPost: r.isForumPost(),
-isMentionable: (0, m.B)(r.type),
+isMentionable: (0, I.B)(r.type),
 canViewChannel: (0, l.YO)(r),
 roleSubscriptionGated: i,
 iconType: c,
@@ -215,7 +215,7 @@ return null != (s = r) ? R(s) : C('#'.concat(g.Z.Messages.UNKNOWN_CHANNEL_PLACEH
   };
 }
 let L = {
-order: I.ZP.order,
+order: m.ZP.order,
 requiredFirstCharacters: ['<'],
 match: e => /^<#(\d+)>/.exec(e),
 parse(e, t, n) {

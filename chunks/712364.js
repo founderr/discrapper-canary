@@ -30,8 +30,8 @@ let {
   retryPrompt: h,
   retrySuccessMessage: p
 } = this.props, {
-  code: m,
-  errorMessage: I,
+  code: I,
+  errorMessage: m,
   retrySuccess: T
 } = this.state, g = a.Children.count(r) > 0 ? (0, i.jsx)(l.Card, {
   type: l.Card.Types.WARNING,
@@ -92,7 +92,7 @@ return (0, i.jsx)(l.ModalRoot, {
                 onChange: this.handleCodeChange,
                 placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
                 maxLength: null != _ ? _ : 10,
-                value: m,
+                value: I,
                 autoComplete: 'one-time-code',
                 autoFocus: !0
               }),
@@ -100,7 +100,7 @@ return (0, i.jsx)(l.ModalRoot, {
                 color: 'text-danger',
                 variant: 'text-xs/normal',
                 className: c.error,
-                children: null != s ? s : I
+                children: null != s ? s : m
               }) : null,
               S
             ]
@@ -111,7 +111,7 @@ return (0, i.jsx)(l.ModalRoot, {
         children: [
           (0, i.jsx)(l.Button, {
             type: 'submit',
-            disabled: d || 0 === m.length,
+            disabled: d || 0 === I.length,
             children: null != n ? n : u.Z.Messages.CONFIRM
           }),
           (0, i.jsx)(l.Button, {

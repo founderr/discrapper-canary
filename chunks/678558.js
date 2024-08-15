@@ -18,8 +18,8 @@ analyticsLocation: t,
 analyticsSourceLocation: n,
 guild: a,
 buttonText: p,
-targetBoostedGuildTier: m,
-onClose: I = () => {},
+targetBoostedGuildTier: I,
+onClose: m = () => {},
 closeLayer: T = () => {},
 pauseAnimation: g = !1,
 applicationId: S,
@@ -28,14 +28,14 @@ withHighlight: N = !1,
 ...v
   } = e, {
 analyticsLocations: O
-  } = (0, u.ZP)(), R = (0, l.bp)() === E.IlC.POPOUT, [C, y] = i.useState(!1), D = null != m ? Math.max((0, d.KK)(a, m), 1) : 1, L = (0, d.aq)(), b = async () => {
+  } = (0, u.ZP)(), R = (0, l.bp)() === E.IlC.POPOUT, [C, y] = i.useState(!1), D = null != I ? Math.max((0, d.KK)(a, I), 1) : 1, L = (0, d.aq)(), b = async () => {
 y(!0), await (0, _.u)({
   analyticsLocations: O,
   analyticsLocation: t,
   analyticsSourceLocation: n,
   guild: a,
   numberOfBoostsToAdd: D,
-  onClose: I,
+  onClose: m,
   closeLayer: T,
   inPopout: R,
   applicationId: S,

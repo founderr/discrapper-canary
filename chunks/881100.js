@@ -1,6 +1,6 @@
 n.d(t, {
   N: function() {
-return k;
+return H;
   }
 });
 var s = n(399606),
@@ -19,8 +19,8 @@ var s = n(399606),
   R = n(101732),
   C = n(450598),
   g = n(633030),
-  N = n(97942),
-  p = n(269987),
+  p = n(97942),
+  N = n(269987),
   A = n(548629),
   m = n(507084),
   f = n(680313),
@@ -31,8 +31,8 @@ var s = n(399606),
   b = n(13327),
   O = n(59137),
   P = n(405991),
-  L = n(24615),
-  v = n(193943),
+  v = n(24615),
+  L = n(193943),
   Z = n(334347),
   D = n(943734),
   B = n(603076),
@@ -40,14 +40,14 @@ var s = n(399606),
   U = n(912429),
   G = n(772969),
   y = n(926262);
-let H = (e, t, n) => (0, a.wj)(e) ? t : n,
-  k = e => {
+let k = (e, t, n) => (0, a.wj)(e) ? t : n,
+  H = e => {
 let {
   styles: t
 } = e, n = (0, i.ZP)(), a = (0, s.e7)([l.default], () => {
   let e = l.default.getCurrentUser();
   return d.ZP.canUsePremiumProfileCustomization(e);
-}), k = (0, o.BU)(((0, c.Xv)() ? _.wb : _.Uq) / 1024, {
+}), H = (0, o.BU)(((0, c.Xv)() ? _.wb : _.Uq) / 1024, {
   useKibibytes: !0
 });
 return {
@@ -60,20 +60,20 @@ return {
   badgeAlt: {
     title: T.Z.Messages.PREMIUM_MARKETING_PERK_GRID_ITEM_HEADING_PREMIUM_SUBSCRIPTION_BADGE,
     description: T.Z.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_BADGE_DESCRIPTION_VARIANT_1,
-    imageSource: H(n, I, R),
+    imageSource: k(n, I, R),
     imageClassName: t.badgeNewImage
   },
   clientThemes: {
     title: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
     className: t.clientThemesCard,
-    imageSource: L,
+    imageSource: v,
     imageClassName: t.clientThemesImage
   },
   customAppIcons: {
     title: T.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-    imageSource: v,
+    imageSource: L,
     imageClassName: t.customAppIconImage
   },
   emoji: {
@@ -97,56 +97,56 @@ return {
         onTryItOutClick: t
       });
     },
-    imageSource: N,
+    imageSource: p,
     imageClassName: t.perGuildProfilesImage
   },
   longerMessages: {
     title: T.Z.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-    imageSource: H(n, D, B),
+    imageSource: k(n, D, B),
     imageClassName: t.longerMessagesImage
   },
   moreGuilds: {
     title: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-    imageSource: H(n, g, j),
+    imageSource: k(n, g, j),
     imageClassName: t.moreGuildsImage
   },
   moreGuildsAlt: {
     title: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-    imageSource: H(n, m, f),
+    imageSource: k(n, m, f),
     imageClassName: t.moreGuildsAltImage
   },
   remix: {
     title: T.Z.Messages.REMIXING_PERKS_CARD_TITLE,
     description: T.Z.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-    imageSource: H(n, p, A),
+    imageSource: k(n, N, A),
     imageClassName: t.remixingImage,
     isEarlyAccess: !0
   },
   soundboard: {
     title: T.Z.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
     description: T.Z.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-    imageSource: H(n, S, h),
+    imageSource: k(n, S, h),
     imageClassName: t.soundboardImage
   },
   stickers: {
     title: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
     description: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-    imageSource: H(n, M, U),
+    imageSource: k(n, M, U),
     imageClassName: t.stickersImage
   },
   stickersBurst: {
     title: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-    imageSource: H(n, M, U),
+    imageSource: k(n, M, U),
     imageClassName: t.stickersImage
   },
   stickersPerkDiscoverability: {
     title: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-    imageSource: H(n, M, U),
+    imageSource: k(n, M, U),
     imageClassName: t.stickersImage
   },
   streaming: {
@@ -158,15 +158,15 @@ return {
   superReactions: {
     title: T.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2,
     description: T.Z.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-    imageSource: H(n, x, b),
+    imageSource: k(n, x, b),
     imageClassName: t.superReactionsImage
   },
   upload: {
     title: T.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({
-      premiumMaxSize: k
+      premiumMaxSize: H
     }),
     description: T.Z.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({
-      premiumMaxSize: k
+      premiumMaxSize: H
     }),
     imageSource: y,
     imageClassName: t.uploadImage
@@ -174,7 +174,7 @@ return {
   videoBackground: {
     title: T.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
     description: T.Z.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-    imageSource: H(n, O, P),
+    imageSource: k(n, O, P),
     imageClassName: t.videoBackgroundImage
   }
 };

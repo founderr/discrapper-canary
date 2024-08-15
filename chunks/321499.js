@@ -21,9 +21,9 @@ var n = t(735250),
   C = t(689938),
   m = t(224499);
 let A = t(651714),
-  g = t(297166);
+  O = t(297166);
 
-function O() {
+function g() {
   let {
 experimentalEncoders: e
   } = (0, o.cj)([u.Z], () => ({
@@ -62,7 +62,7 @@ children: [
         className: m.marginBottom20,
         type: c.FormNoticeTypes.PRIMARY,
         imageData: {
-          src: (0, l.ap)(e) ? A : g,
+          src: (0, l.ap)(e) ? A : O,
           width: 70,
           height: 40
         },
@@ -103,7 +103,7 @@ children: [
             children: C.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_ENCODING
           })
         }),
-        (0, n.jsx)(O, {})
+        (0, n.jsx)(g, {})
       ]
     })
   })

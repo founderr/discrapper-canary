@@ -90,8 +90,8 @@ else
   for (var p in e)
     !(_ && 'prototype' === p) && i.call(e, p) && d.push(String(p));
 if (l) {
-  for (var m = f(e), I = 0; I < c.length; ++I)
-    !(m && 'constructor' === c[I]) && i.call(e, c[I]) && d.push(c[I]);
+  for (var I = f(e), m = 0; m < c.length; ++m)
+    !(I && 'constructor' === c[m]) && i.call(e, c[m]) && d.push(c[m]);
 }
 return d;
   };

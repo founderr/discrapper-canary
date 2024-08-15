@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(17181),
   h = n(303737),
   p = n(965638),
-  m = n(434404),
-  I = n(962086),
+  I = n(434404),
+  m = n(962086),
   T = n(160404),
   g = n(703656),
   S = n(814443),
@@ -93,7 +93,7 @@ backNavigationSection: R
 isViewingRoles: T.Z.isViewingRoles(n.id),
 backNavigationSection: T.Z.getBackNavigationSection(n.id)
   })), C = () => {
-T.Z.isFullServerPreview(n.id) && (0, g.uL)(y.Z5c.CHANNEL(n.id)), E.ZP.shouldShowOnboarding(n.id) && (_.Z.finishOnboarding(n.id), (0, f.discardOnboardingPromise)(n.id)), (0, I.mL)(n.id), m.Z.open(n.id, R), R === y.pNK.ROLE_SUBSCRIPTIONS && (0, h.GN)(n.id);
+T.Z.isFullServerPreview(n.id) && (0, g.uL)(y.Z5c.CHANNEL(n.id)), E.ZP.shouldShowOnboarding(n.id) && (_.Z.finishOnboarding(n.id), (0, f.discardOnboardingPromise)(n.id)), (0, m.mL)(n.id), I.Z.open(n.id, R), R === y.pNK.ROLE_SUBSCRIPTIONS && (0, h.GN)(n.id);
   }, M = null === (t = A.current) || void 0 === t ? void 0 : t.clientHeight, P = S + 14;
   return (0, r.jsx)(l.Z.Provider, {
 value: n.id,
@@ -144,7 +144,7 @@ children: (0, r.jsxs)('div', {
           variant: 'text-xs/medium',
           children: D.Z.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
             onClick: () => {
-              o(), m.Z.open(n.id, y.pNK.INSTANT_INVITES);
+              o(), I.Z.open(n.id, y.pNK.INSTANT_INVITES);
             }
           })
         })

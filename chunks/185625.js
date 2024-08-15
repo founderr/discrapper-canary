@@ -21,7 +21,7 @@ return _;
 return E;
   },
   hs: function() {
-return m;
+return I;
   },
   k8: function() {
 return S;
@@ -55,7 +55,7 @@ a = await r.tn.get({
 }
 async function c(e, t) {
   var n;
-  let i = I(e),
+  let i = m(e),
 a = await r.tn.get({
   url: l.ANM.GET_UNAUTHENTICATED_REPORT_MENU(i),
   query: (null == t ? void 0 : t.variant) != null ? {
@@ -89,7 +89,7 @@ body: g(e, t, n)
 function E(e, t, n, i) {
   if (s.ZP.get('iar_skip_api_report_submit'))
 return Promise.resolve();
-  let a = I(t);
+  let a = m(t);
   return r.tn.post({
 url: l.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(a),
 body: g(e, t, n, i)
@@ -120,7 +120,7 @@ async function p() {
 url: l.ANM.DSA_EXPERIMENT_UNAUTHENTICATED
   });
 }
-async function m(e) {
+async function I(e) {
   return (await r.tn.post({
 url: l.ANM.SUBMIT_REPORT_SECOND_LOOK,
 body: {
@@ -129,7 +129,7 @@ body: {
   })).body;
 }
 
-function I(e) {
+function m(e) {
   let t = e.name;
   if (!Object.values(o.BM).includes(t))
 throw Error('Invalid report type '.concat(e.name));

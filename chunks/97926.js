@@ -32,12 +32,12 @@ isFetchingCurrentQuests: s
 fetchPolicy: 'cache-and-network'
   }), t = (0, l.EH)(), m = (0, o.q)({
 location: I.dr.USER_SETTINGS_GIFT_INVENTORY
-  }), A = (0, _.Z)(I.dr.USER_SETTINGS_GIFT_INVENTORY), [g, O] = a.useState(!0), [h, p] = a.useState([]), [R, x] = a.useState([]), M = a.useMemo(() => g ? s ? 'unsorted' : 'pending_sort' : 'sorted', [
-g,
+  }), A = (0, _.Z)(I.dr.USER_SETTINGS_GIFT_INVENTORY), [O, g] = a.useState(!0), [h, p] = a.useState([]), [R, x] = a.useState([]), M = a.useMemo(() => O ? s ? 'unsorted' : 'pending_sort' : 'sorted', [
+O,
 s
   ]);
   a.useEffect(() => {
-O(!0);
+g(!0);
   }, [
 s,
 t
@@ -94,8 +94,8 @@ if ('pending_sort' === M) {
         if (m && !T && !E)
           return 1;
         let A = l && _,
-          g = E && u;
-        return A && !g ? 1 : !A && g ? -1 : 0;
+          O = E && u;
+        return A && !O ? 1 : !A && O ? -1 : 0;
       }).map(e => e.id),
       n = [{
           location: c.jn.GIFT_INVENTORY_FOR_YOU,
@@ -117,7 +117,7 @@ if ('pending_sort' === M) {
     let a = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null;
     return !(null !== (n = t.get(e.id)) && void 0 !== n && n) || a;
   }));
-  p(s), x(n), O(!1);
+  p(s), x(n), g(!1);
 }
   }, [
 e,

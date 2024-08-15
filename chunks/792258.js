@@ -31,8 +31,8 @@ R = n.getIconURL(40, !0),
 C = null,
 g = T[T.length - 1];
   if (null == n.icon && null != I) {
-var N;
-g = null !== (N = T[(C = (0, i.Zg)(I)).length - 1]) && void 0 !== N ? N : T[T.length - 1];
+var p;
+g = null !== (p = T[(C = (0, i.Zg)(I)).length - 1]) && void 0 !== p ? p : T[T.length - 1];
   }
   return (0, s.jsxs)('div', {
 className: E.container,

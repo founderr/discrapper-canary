@@ -25,8 +25,8 @@ undismissable: E,
 onDismissed: N,
 onClick: x,
 cta: S,
-ctaColor: Z,
-centerText: v,
+ctaColor: v,
+centerText: Z,
 className: T
   } = e;
   l.useEffect(() => {
@@ -50,7 +50,7 @@ onClick: () => {
   }), null == x || x();
 },
 fullWidth: !0,
-color: Z,
+color: v,
 children: S
   }));
   let A = null;
@@ -60,14 +60,14 @@ color: 'header-primary',
 className: a()(p.title, {
   [p.noImageTitle]: null == s
 }, {
-  [p.center]: v
+  [p.center]: Z
 }),
 children: n
   }));
   let b = null;
   'function' == typeof r ? b = r() : null != r && (b = (0, i.jsx)(o.Text, {
 className: a()({
-  [p.center]: v
+  [p.center]: Z
 }),
 variant: 'text-sm/normal',
 color: 'text-muted',

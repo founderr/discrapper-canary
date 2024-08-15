@@ -20,8 +20,8 @@ var r = n(512722),
   f = n(957730),
   h = n(968437),
   p = n(928477),
-  m = n(665906),
-  I = n(695346),
+  I = n(665906),
+  m = n(695346),
   T = n(592125),
   g = n(496675),
   S = n(594174),
@@ -180,7 +180,7 @@ return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.val
     let {
       channel: t
     } = e;
-    return !t.isPrivate() && I.OW.getSetting() && g.Z.can(R.Plq.SEND_TTS_MESSAGES, t);
+    return !t.isPrivate() && m.OW.getSetting() && g.Z.can(R.Plq.SEND_TTS_MESSAGES, t);
   },
   execute: e => {
     var t;
@@ -340,7 +340,7 @@ return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.val
     let {
       channel: t
     } = e;
-    return (0, m.ki)(t);
+    return (0, I.ki)(t);
   },
   execute: async (e, t) => {
     var n, r;

@@ -15,7 +15,7 @@ var i = n(392711),
   h = n(981631),
   p = n(689938);
 
-function m(e) {
+function I(e) {
   switch (e) {
 case h.nkL.GIF.title:
 case h.nkL.TENOR.title:
@@ -24,7 +24,7 @@ default:
   return '';
   }
 }
-let I = [
+let m = [
   ...a()(h.nkL).values().map(e => ({
 id: e.commandId,
 name: e.command,
@@ -33,10 +33,10 @@ type: u.yU.CHAT,
 inputType: E.iw.BUILT_IN_INTEGRATION,
 applicationId: f.bi.BUILT_IN,
 get description() {
-  return m(e.title);
+  return I(e.title);
 },
 get displayDescription() {
-  return m(e.title);
+  return I(e.title);
 },
 options: e.type === h.q9n.GIF ? [{
   name: 'query',
@@ -93,7 +93,7 @@ execute: (e, t) => {
   }), f = p.Z.Messages.LEAVE_GROUP_DM_BODY.format({
     name: u
   }), h = null !== (i = null === (n = e.find(e => 'silent' === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== i && i;
-  async function m() {
+  async function I() {
     try {
       await o.Z.closePrivateChannel(a.id, void 0, h);
     } catch (e) {
@@ -108,7 +108,7 @@ execute: (e, t) => {
     header: E,
     confirmText: p.Z.Messages.LEAVE_GROUP_DM,
     cancelText: p.Z.Messages.CANCEL,
-    onConfirm: m,
+    onConfirm: I,
     ...e,
     children: (0, r.jsx)(s.Text, {
       variant: 'text-md/normal',
@@ -146,4 +146,4 @@ integrationType: h.q9n.STICKER,
 integrationTitle: 'sticker'
   }
 ];
-t.Z = I;
+t.Z = m;

@@ -1,6 +1,6 @@
 t.d(s, {
   c: function() {
-return O;
+return g;
   }
 });
 var n = t(735250),
@@ -21,10 +21,10 @@ var n = t(735250),
   C = t(689938),
   m = t(115907),
   A = t(224499);
-let g = () => {
+let O = () => {
 (0, d.nJ)(), (0, o.xf)();
   },
-  O = () => {
+  g = () => {
 let {
   analyticsLocations: e
 } = (0, c.ZP)(l.Z.USER_SETTINGS), s = (0, i.e7)([_.Z], () => _.Z.isUpsellPreview), {
@@ -50,7 +50,7 @@ return a.useEffect(() => {
         children: [
           (0, n.jsx)(r.Button, {
             color: !t && s ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
-            onClick: () => g(),
+            onClick: () => O(),
             children: t ? C.Z.Messages.PREVIEW : C.Z.Messages.APP_ICON_PREVIEW_TITLE
           }),
           s ? (0, n.jsx)(I.Z, {

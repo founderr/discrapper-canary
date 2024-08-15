@@ -23,8 +23,8 @@ var r, i, a, s = n(735250),
   f = n(846519),
   h = n(377527),
   p = n(186325),
-  m = n(481060),
-  I = n(607070),
+  I = n(481060),
+  m = n(607070),
   T = n(314910),
   g = n(646115);
 
@@ -71,15 +71,15 @@ let {
   animationStyle: f,
   disableTooltipPointerEvents: h = !1,
   allowOverflow: p = !1,
-  tooltipPointerClassName: m
-} = e, I = ''.concat('string' == typeof a ? a : '', ':').concat(r);
+  tooltipPointerClassName: I
+} = e, m = ''.concat('string' == typeof a ? a : '', ':').concat(r);
 return (0, s.jsx)(T.W5, {
   disablePointerEvents: h,
   targetRef: t,
   position: r,
   autoInvert: !0,
   align: n,
-  positionKey: I,
+  positionKey: m,
   spacing: E,
   nudgeAlignIntoViewport: !0,
   children: e => {
@@ -98,7 +98,7 @@ return (0, s.jsx)(T.W5, {
       },
       children: [
         (0, s.jsx)('div', {
-          className: u()(g.tooltipPointer, m),
+          className: u()(g.tooltipPointer, I),
           style: function(e, t, n) {
             let r = 'left' === e || 'right' === e,
               i = '50%',
@@ -140,7 +140,7 @@ let {
 } = e, {
   reducedMotion: a
 } = o.useContext(p.S);
-return (0, m.useTransition)(t, {
+return (0, I.useTransition)(t, {
   keys: e => e ? 'tooltip' : 'empty',
   config: h.F,
   from: a.enabled ? R : O,
@@ -219,8 +219,8 @@ let {
   clickableOnMobile: E,
   hideOnClick: f,
   tooltipPointerClassName: h
-} = this.props, p = (_.tq || _.Em) && !0 === E && f, m = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement, I = null;
-return I = e instanceof Function ? m ? e() : null : e, (0, s.jsx)(y, {
+} = this.props, p = (_.tq || _.Em) && !0 === E && f, I = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement, m = null;
+return m = e instanceof Function ? I ? e() : null : e, (0, s.jsx)(y, {
   disableTooltipPointerEvents: !1 !== u && !p || !0 === u,
   targetElementRef: this.domElementRef,
   tooltipStyle: o,
@@ -231,11 +231,11 @@ return I = e instanceof Function ? m ? e() : null : e, (0, s.jsx)(y, {
   position: n,
   color: r,
   spacing: i,
-  isVisible: m,
+  isVisible: I,
   onAnimationRest: c,
   onNonAccessibleClick: p ? this.handleClick : void 0,
   allowOverflow: d,
-  children: I
+  children: m
 });
   }
   show() {
@@ -271,7 +271,7 @@ super(...e), S(this, 'showTimeout', new f.V7()), S(this, 'domElementRef', o.crea
 }), S(this, 'handleMouseLeave', () => {
   !((_.tq || _.Em) && !0 === this.props.clickableOnMobile) && this.hide();
 }), S(this, 'handleFocus', () => {
-  I.Z.keyboardModeEnabled && this.show();
+  m.Z.keyboardModeEnabled && this.show();
 }), S(this, 'handleBlur', () => {
   this.hide();
 }), S(this, 'handleClick', () => {

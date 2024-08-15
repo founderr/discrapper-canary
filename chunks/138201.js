@@ -24,7 +24,7 @@ buttonColor: E = s.Button.Colors.PRIMARY,
 buttonSize: f = s.Button.Sizes.SMALL,
 buttonDisabled: h,
 onButtonPress: p
-  } = e, m = null != _ ? (0, r.jsx)(s.Button, {
+  } = e, I = null != _ ? (0, r.jsx)(s.Button, {
 className: o.button,
 size: f,
 color: E,
@@ -58,7 +58,7 @@ children: [
       })
     ]
   }),
-  null != m && m
+  null != I && I
 ]
   });
 }

@@ -1,14 +1,14 @@
-n(47120);
-var i, o = n(442837),
-  a = n(570140);
+t(47120);
+var r, i = t(442837),
+  o = t(570140);
 
-function r(e, t, n) {
-  return t in e ? Object.defineProperty(e, t, {
-value: n,
+function a(e, n, t) {
+  return n in e ? Object.defineProperty(e, n, {
+value: t,
 enumerable: !0,
 configurable: !0,
 writable: !0
-  }) : e[t] = n, e;
+  }) : e[n] = t, e;
 }
 let c = {
 disable_alpha_voice_panel: 'Disable new Voice Panel UI: Currently the new voice ui is defaulted ON for staff.  It\'s not feature complete so if there\'s something you are missing, or you find a problem, you can disable it here.',
@@ -31,41 +31,41 @@ show_icymi_debug_scores: 'Show ICYMI debug scores',
 only_channel_screen: 'Down with PanelsView, rely on only ChannelScreen!'
   },
   l = {};
-class s extends(i = o.ZP.DeviceSettingsStore) {
+class s extends(r = i.ZP.DeviceSettingsStore) {
   getUserAgnosticState() {
 return {
   toggleStates: l
 };
   }
   initialize(e) {
-for (var t in c) {
-  var n, i;
-  let o = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
-  l[t] = o;
+for (var n in c) {
+  var t, r;
+  let i = null !== (r = null == e ? void 0 : null === (t = e.toggleStates) || void 0 === t ? void 0 : t[n]) && void 0 !== r && r;
+  l[n] = i;
 }
   }
   get(e) {
-var t;
-return null !== (t = l[e]) && void 0 !== t && t;
+var n;
+return null !== (n = l[e]) && void 0 !== n && n;
   }
-  set(e, t) {
-return l[e] = t, t;
+  set(e, n) {
+return l[e] = n, n;
   }
   all() {
 return l;
   }
   allWithDescriptions() {
 return Object.entries(l).map(e => {
-  let [t, n] = e;
+  let [n, t] = e;
   return [
-    t,
     n,
-    c[t]
+    t,
+    c[n]
   ];
 });
   }
 }
-r(s, 'displayName', 'DevToolsDesignTogglesStore'), r(s, 'persistKey', 'DevToolsDesignTogglesStore'), t.Z = new s(a.Z, {
+a(s, 'displayName', 'DevToolsDesignTogglesStore'), a(s, 'persistKey', 'DevToolsDesignTogglesStore'), n.Z = new s(o.Z, {
   DEV_TOOLS_DESIGN_TOGGLE_SET: function(e) {
 l[e.toggle] = e.value;
   }

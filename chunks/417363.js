@@ -8,14 +8,14 @@ var r, i, a, s, o, l = n(392711),
   f = n(314897),
   h = n(283595),
   p = n(129542),
-  m = n(70956),
-  I = n(780570),
+  I = n(70956),
+  m = n(780570),
   T = n(358085),
   g = n(804739),
   S = n(941128),
   A = n(391690),
   N = n(981631);
-let v = 1 * m.Z.Millis.MINUTE;
+let v = 1 * I.Z.Millis.MINUTE;
 (r || (r = {})).DISPATCH_APPLICATION_PROGRESS = 'dispatch_application_progress';
 let O = {},
   R = 'file://',
@@ -81,33 +81,33 @@ class H extends(i = c.ZP.Store) {
 this.waitFor(f.default);
   }
   getState(e, t) {
-return O[(0, I.Tu)(e, t)];
+return O[(0, m.Tu)(e, t)];
   }
   isUpToDate(e, t) {
-let n = O[(0, I.Tu)(e, t)];
+let n = O[(0, m.Tu)(e, t)];
 return null != n && n.type === N.vxO.UP_TO_DATE;
   }
   shouldPatch(e, t) {
-let n = O[(0, I.Tu)(e, t)];
+let n = O[(0, m.Tu)(e, t)];
 return null != n && !0 === n.shouldPatch;
   }
   isInstalled(e, t) {
-let n = O[(0, I.Tu)(e, t)];
+let n = O[(0, m.Tu)(e, t)];
 return null != n ? n.type !== N.vxO.UNINSTALLING : A.Z.shouldBeInstalled(e, t);
   }
   supportsCloudSync(e, t) {
 null == t && (t = e);
-let n = O[(0, I.Tu)(e, t)];
+let n = O[(0, m.Tu)(e, t)];
 return null != n && null != n.storage && !!n.storage.sync;
   }
   isLaunchable(e, t) {
 if (!(0, g.Q)())
   return !1;
-let n = O[(0, I.Tu)(e, t)];
+let n = O[(0, m.Tu)(e, t)];
 return null != n && n.type === N.vxO.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length;
   }
   getDefaultLaunchOption(e, t) {
-let n = O[(0, I.Tu)(e, t)];
+let n = O[(0, m.Tu)(e, t)];
 if (null == n)
   return null;
 let {
@@ -117,7 +117,7 @@ let {
 return null == r || null == i ? null : i[r];
   }
   getLaunchOptions(e, t) {
-let n = O[(0, I.Tu)(e, t)];
+let n = O[(0, m.Tu)(e, t)];
 return null == n || null == n.launchOptions ? [] : Object.values(n.launchOptions);
   }
   getHistoricalTotalBytesRead() {
@@ -156,7 +156,7 @@ let n = {},
   a = !1;
 for (let e in r)
   for (let t in r[e]) {
-    let s = (0, I.Tu)(e, t);
+    let s = (0, m.Tu)(e, t);
     if (n[s] = function(e) {
         let {
           build_id: t,
@@ -177,7 +177,7 @@ for (let e in r)
         switch (null == h && (h = !0), e.state.type) {
           case N.DJE.COMPLETE: {
             let e;
-            let I = {},
+            let m = {},
               g = null;
             if (f)
               e = N.vxO.REPAIRING;
@@ -189,8 +189,8 @@ for (let e in r)
               let e = _.Z.fileManager.join(d, 'content'),
                 t = (0, p.D)();
               if (null != l && 0 !== l.length) {
-                var m;
-                if (t === N.QR$.WIN64 && (m = t, !l.some(e => e.platforms.includes(m))))
+                var I;
+                if (t === N.QR$.WIN64 && (I = t, !l.some(e => e.platforms.includes(I))))
                   t = N.QR$.WIN32;
                 for (let n of l)
                   if (n.platforms.includes(t)) {
@@ -200,7 +200,7 @@ for (let e in r)
                       name: i,
                       working_dir: a
                     } = n, s = _.Z.fileManager.join(e, r);
-                    (0, T.isMac)() && !s.startsWith(R) && (s = ''.concat(R).concat(s)), t = null != a ? _.Z.fileManager.join(e, a) : _.Z.fileManager.dirname(s), I[i] = {
+                    (0, T.isMac)() && !s.startsWith(R) && (s = ''.concat(R).concat(s)), t = null != a ? _.Z.fileManager.join(e, a) : _.Z.fileManager.dirname(s), m[i] = {
                       ...n,
                       id: i,
                       fullExecutablePath: s,
@@ -214,7 +214,7 @@ for (let e in r)
                   let {
                     executable: r
                   } = n, i = 'Default';
-                  I[i] = {
+                  m[i] = {
                     ...n,
                     name: i,
                     id: i,
@@ -235,7 +235,7 @@ for (let e in r)
               targetManifestIds: i,
               installPath: d,
               installedSize: E,
-              launchOptions: I,
+              launchOptions: m,
               defaultLaunchOptionId: g,
               shouldPatch: h,
               storage: c
@@ -249,8 +249,8 @@ for (let e in r)
               network_progress: c,
               reader_progress: _,
               progress: p,
-              total: m,
-              paused: I
+              total: I,
+              paused: m
             } = e.state, T = l.type;
             return {
               type: o = T === N.f07.UNINSTALLING ? N.vxO.UNINSTALLING : f ? N.vxO.REPAIRING : null == t ? N.vxO.INSTALLING : N.vxO.UPDATING,
@@ -267,8 +267,8 @@ for (let e in r)
               networkProgress: c,
               readerProgress: _,
               progress: p,
-              total: m,
-              paused: I,
+              total: I,
+              paused: m,
               shouldPatch: h
             };
           }
@@ -289,7 +289,7 @@ for (let e in r)
             case N.f07.VERIFYING:
             case N.f07.REPAIRING:
             case N.f07.POST_INSTALL_SCRIPTS:
-              E.Z.setProgress('dispatch_application_progress', (0, I.xI)(e.progress, e.total) / 100), a = !0;
+              E.Z.setProgress('dispatch_application_progress', (0, m.xI)(e.progress, e.total) / 100), a = !0;
           }
       }
     }

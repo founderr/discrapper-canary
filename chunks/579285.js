@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(434404),
   h = n(271383),
   p = n(430824),
-  m = n(496675),
-  I = n(259580),
+  I = n(496675),
+  m = n(259580),
   T = n(700785),
   g = n(785717),
   S = n(256226),
@@ -37,7 +37,7 @@ highestRole: E,
 canManageRoles: f,
 width: h,
 onAddRole: p,
-onRemoveRole: m
+onRemoveRole: I
   } = e;
   s()(null != h, 'Unexpected null width');
   let R = i.useRef({}),
@@ -104,7 +104,7 @@ Z = M.map((e, i) => {
     },
     disableBorderColor: !0,
     ref: t => C(e.id, t),
-    onRemove: () => m(e),
+    onRemove: () => I(e),
     canRemove: f ? T.r6(a, n.id, E, e) : (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) === null && t.id === n.id
   }, e.id);
 }),
@@ -153,8 +153,8 @@ children: (0, r.jsx)(u.SJ, {
           children: (0, r.jsx)(d.Clickable, {
             onClick: W,
             className: O.collapseButton,
-            children: (0, r.jsx)(I.Z, {
-              direction: I.Z.Directions.LEFT,
+            children: (0, r.jsx)(m.Z, {
+              direction: m.Z.Directions.LEFT,
               width: 12,
               height: 12
             })
@@ -190,9 +190,9 @@ return i && !a ? 1 : !i && a ? -1 : 0;
   }), [
 l,
 u
-  ]), E = T.e9(a, n.id), [I] = (0, c.Wu)([m.Z], () => [
-m.Z.can(N.Plq.MANAGE_ROLES, a),
-null != a ? m.Z.getGuildVersion(a.id) : null
+  ]), E = T.e9(a, n.id), [m] = (0, c.Wu)([I.Z], () => [
+I.Z.can(N.Plq.MANAGE_ROLES, a),
+null != a ? I.Z.getGuildVersion(a.id) : null
   ]), S = i.useCallback(e => {
 var n, r;
 s({
@@ -216,7 +216,7 @@ u,
 a.id,
 t.id,
 s
-  ]), v = I && null != o;
+  ]), v = m && null != o;
   return 0 !== d.length || v ? (0, r.jsx)('div', {
 children: (0, r.jsx)(R, {
   user: t,
@@ -225,7 +225,7 @@ children: (0, r.jsx)(R, {
   guildMember: o,
   roles: d,
   highestRole: E,
-  canManageRoles: I,
+  canManageRoles: m,
   onAddRole: A,
   onRemoveRole: S
 })

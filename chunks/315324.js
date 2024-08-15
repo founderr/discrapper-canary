@@ -26,8 +26,8 @@ function p(e) {
 user: t,
 guild: n,
 channel: p,
-onAction: m,
-onClose: I
+onAction: I,
+onClose: m
   } = e, {
 profileType: T
   } = (0, _.z)(), g = (0, i.Wu)([d.ZP], () => d.ZP.getVoiceStatesForChannel(p).map(e => {
@@ -59,9 +59,9 @@ children: [
       }),
       (0, r.jsx)(a.Clickable, {
         onClick: () => {
-          s.default.selectVoiceChannel(p.id), (0, c.X)(n.id), null == m || m({
+          s.default.selectVoiceChannel(p.id), (0, c.X)(n.id), null == I || I({
             action: 'OPEN_VOICE_CHANNEL'
-          }), null == I || I();
+          }), null == m || m();
         },
         className: f.clickable,
         children: (0, r.jsx)(a.Text, {

@@ -3,7 +3,7 @@ t.d(n, {
 return D;
   },
   Hl: function() {
-return w;
+return j;
   },
   NJ: function() {
 return P;
@@ -27,7 +27,7 @@ return U;
 return y;
   },
   iE: function() {
-return j;
+return w;
   },
   iK: function() {
 return Z;
@@ -45,7 +45,7 @@ return o.a;
 return v;
   },
   xb: function() {
-return F;
+return B;
   },
   yd: function() {
 return L;
@@ -219,7 +219,7 @@ t = e.getSelection();
   return t = (t = t.set('focusOffset', n.length)).set('isBackward', !1), r.EditorState.forceSelection(e, t);
 }
 
-function w(e) {
+function j(e) {
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
 t = M(e);
   if (t.length > n) {
@@ -229,7 +229,7 @@ e = v('', e, n, t.length), i.getAnchorOffset() > n && (i = i.set('anchorOffset',
   return e;
 }
 
-function j(e) {
+function w(e) {
   let n = window.getSelection();
   if (null == n || 'Caret' !== n.type || null == e)
 return;
@@ -251,6 +251,6 @@ return;
   o < e.scrollLeft ? e.scrollLeft = o - 10 : o > e.scrollLeft + e.offsetWidth && (e.scrollLeft = o - e.offsetWidth + 3);
 }
 
-function F(e) {
+function B(e) {
   return 0 === M(e).length;
 }

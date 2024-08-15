@@ -20,8 +20,8 @@ icon: E,
 disabled: f,
 htmlFor: h,
 tag: p = 'h5',
-...m
-  } = e, I = i.useId(), T = null !== (n = m.titleId) && void 0 !== n ? n : I;
+...I
+  } = e, m = i.useId(), T = null !== (n = I.titleId) && void 0 !== n ? n : m;
   return (0, r.jsx)('div', {
 ref: t,
 className: c,

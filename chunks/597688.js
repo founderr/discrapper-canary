@@ -8,19 +8,19 @@ var a, s, o, l, u = n(392711),
 let f = new Map(),
   h = new Map(),
   p = f,
-  m = h,
-  I = !1,
+  I = h,
+  m = !1,
   T = new Set();
 let g = {},
   S = () => {
-p = f, m = h, i = void 0, I = !1, T = new Set(), r = void 0, g = {};
+p = f, I = h, i = void 0, m = !1, T = new Set(), r = void 0, g = {};
   };
 class A extends(a = c.ZP.Store) {
   initialize() {
 this.syncWith([_.default], S);
   }
   get isFetchingCategories() {
-return I;
+return m;
   }
   isFetchingProduct(e) {
 return null != e && T.has(e);
@@ -38,13 +38,13 @@ return g;
 return p;
   }
   get products() {
-return m;
+return I;
   }
   getCategory(e) {
 return null != e ? p.get(e) : void 0;
   }
   getProduct(e) {
-return null != e ? m.get(e) : void 0;
+return null != e ? I.get(e) : void 0;
   }
   getCategoryForProduct(e) {
 let t = this.getProduct(e);
@@ -58,22 +58,22 @@ l = 'CollectiblesCategoryStore', (o = 'displayName') in(s = A) ? Object.definePr
   writable: !0
 }) : s[o] = l, t.Z = new A(d.Z, {
   COLLECTIBLES_CATEGORIES_FETCH: e => {
-I = !0, r = void 0, g = e.options;
+m = !0, r = void 0, g = e.options;
   },
   COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: e => {
-0 === e.categories.length ? (p = f, m = h) : !(0, u.isEqual)([...p.values()], e.categories) && (p = new Map(e.categories.map(e => [
+0 === e.categories.length ? (p = f, I = h) : !(0, u.isEqual)([...p.values()], e.categories) && (p = new Map(e.categories.map(e => [
   e.skuId,
   e
-])), m = new Map((0, E.Cs)(p).map(e => [
+])), I = new Map((0, E.Cs)(p).map(e => [
   e.skuId,
   e
-]))), i = Date.now(), I = !1, r = void 0;
+]))), i = Date.now(), m = !1, r = void 0;
   },
   COLLECTIBLES_CATEGORIES_FETCH_FAILURE: e => {
 let {
   error: t
 } = e;
-p = f, m = h, I = !1, T = new Set(), r = t;
+p = f, I = h, m = !1, T = new Set(), r = t;
   },
   COLLECTIBLES_PRODUCT_FETCH: e => {
 let {
@@ -86,7 +86,7 @@ let {
   skuId: t,
   product: n
 } = e;
-m.set(t, n), (T = new Set(T)).delete(t), r = void 0;
+I.set(t, n), (T = new Set(T)).delete(t), r = void 0;
   },
   COLLECTIBLES_PRODUCT_FETCH_FAILURE: e => {
 let {

@@ -13,8 +13,8 @@ var i = n(952265),
   f = n(590921),
   h = n(665692),
   p = n(981631),
-  m = n(689938),
-  I = n(339626);
+  I = n(689938),
+  m = n(339626);
 
 function T(e, t) {
   return (0, r.jsx)(c.ZP, {
@@ -88,8 +88,8 @@ return (0, r.jsxs)(r.Fragment, {
       autocompletes: t,
       onHover: c,
       onClick: _,
-      titleWithQuery: m.Z.Messages.EMOJI_MATCHING,
-      titleWithoutQuery: m.Z.Messages.EMOJI,
+      titleWithQuery: I.Z.Messages.EMOJI_MATCHING,
+      titleWithoutQuery: I.Z.Messages.EMOJI,
       Component: a.ZP.Emoji,
       getProps: e => ({
         emoji: e,
@@ -115,8 +115,8 @@ return (0, r.jsxs)(r.Fragment, {
           });
         });
       },
-      titleWithQuery: 0 === t.length ? m.Z.Messages.EMOJI_MATCHING : null,
-      titleWithoutQuery: 0 === t.length ? m.Z.Messages.EMOJI : null,
+      titleWithQuery: 0 === t.length ? I.Z.Messages.EMOJI_MATCHING : null,
+      titleWithoutQuery: 0 === t.length ? I.Z.Messages.EMOJI : null,
       Component: a.ZP.EmojiUpsell,
       getProps: e => {
         let {
@@ -132,7 +132,7 @@ return (0, r.jsxs)(r.Fragment, {
       indexOffset: t.length
     }) : null,
     (t.length > 0 || o.length > 0) && s.length > 0 && (0, r.jsx)(a.ZP.Divider, {
-      className: I.emojiStickersDivider
+      className: m.emojiStickersDivider
     }),
     (0, E.HI)({
       query: u,
@@ -140,8 +140,8 @@ return (0, r.jsxs)(r.Fragment, {
       autocompletes: s,
       onHover: c,
       onClick: _,
-      titleWithQuery: m.Z.Messages.STICKERS_MATCHING,
-      titleWithoutQuery: m.Z.Messages.STICKER,
+      titleWithQuery: I.Z.Messages.STICKERS_MATCHING,
+      titleWithoutQuery: I.Z.Messages.STICKER,
       Component: a.ZP.Sticker,
       getProps: e => {
         let {
@@ -158,7 +158,7 @@ return (0, r.jsxs)(r.Fragment, {
       getQuery: e => e,
       key: 'stickers',
       indexOffset: t.length + o.length,
-      headerClassName: t.length > 0 ? I.stickersHeaderWithEmojiResults : void 0
+      headerClassName: t.length > 0 ? m.stickersHeaderWithEmojiResults : void 0
     })
   ]
 });

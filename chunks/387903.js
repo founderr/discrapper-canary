@@ -14,8 +14,8 @@ var r, i, a, s = n(735250),
   f = n(438139),
   h = n(410030),
   p = n(726542),
-  m = n(600164),
-  I = n(686546),
+  I = n(600164),
+  m = n(686546),
   T = n(111028),
   g = n(925329),
   S = n(810568),
@@ -264,8 +264,8 @@ else if ((0, D.dS)(e)) {
   let t = (0, D.rq)(e);
   if (null == t)
     return null;
-  f = (0, s.jsx)(I.ZP, {
-    mask: I.ZP.Masks.SQUIRCLE,
+  f = (0, s.jsx)(m.ZP, {
+    mask: m.ZP.Masks.SQUIRCLE,
     width: F.Si.SMALL,
     height: F.Si.SMALL,
     children: (0, s.jsx)('img', {
@@ -572,7 +572,7 @@ let d = 'UserPopout' === t || 'UserPopoutV2' === t || 'BiteSizePopout' === t,
   h = 'StreamPreview' === t,
   p = !1;
 (0, G.Z)(c) ? (e = this.renderXboxImage(), p = !0) : null == (e = this.renderImage(c)) && (p = null != (e = this.renderGameImage(c)));
-let I = this.renderName(c),
+let m = this.renderName(c),
   T = this.renderDetails(c),
   g = this.renderState(c, i),
   S = this.renderTimePlayed(c),
@@ -581,7 +581,7 @@ let I = this.renderName(c),
   v = this.renderTimeBar(c),
   O = ![
     e,
-    I,
+    m,
     T,
     g,
     S,
@@ -598,7 +598,7 @@ return (0, s.jsxs)('div', {
         className: Z.activityDetails,
         children: [
           e,
-          this.isStreamerOnTypeActivityFeed() ? null : (0, s.jsxs)(m.Z.Child, {
+          this.isStreamerOnTypeActivityFeed() ? null : (0, s.jsxs)(I.Z.Child, {
             className: u()((0, M.l)(Z, 'content', p ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
             children: [
               (0, s.jsxs)(E.Clickable, {
@@ -607,7 +607,7 @@ return (0, s.jsxs)('div', {
                   l(), null == o || o();
                 } : void 0,
                 children: [
-                  I,
+                  m,
                   T,
                   g,
                   S

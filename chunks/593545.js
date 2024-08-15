@@ -14,7 +14,7 @@ var r = n(735250),
   h = n(48182),
   p = n(594402);
 
-function m(e) {
+function I(e) {
   let {
 text: t,
 language: i
@@ -44,7 +44,7 @@ renderFallback: () => a()
   });
 }
 
-function I(e) {
+function m(e) {
   let {
 expanded: t,
 setExpanded: n,
@@ -209,7 +209,7 @@ children: [
     }),
     children: null == o ? (0, r.jsx)(l.Spinner, {
       className: h.spinner
-    }) : (0, r.jsx)(m, {
+    }) : (0, r.jsx)(I, {
       text: L,
       language: _
     })
@@ -221,7 +221,7 @@ children: [
     children: [
       b ? (0, r.jsxs)(r.Fragment, {
         children: [
-          (0, r.jsx)(I, {
+          (0, r.jsx)(m, {
             expanded: u,
             setExpanded: d,
             isWholeFile: C,
@@ -279,7 +279,7 @@ children: (0, r.jsxs)('div', {
       className: h.modalTextContainer,
       children: null == u ? (0, r.jsx)(l.Spinner, {
         className: h.spinner
-      }) : (0, r.jsx)(m, {
+      }) : (0, r.jsx)(I, {
         text: p,
         language: d
       })
@@ -317,8 +317,8 @@ className: l,
 onClick: c,
 onContextMenu: d
   } = e, [_, E] = i.useState(!1), [f, p] = i.useState(n.split('.').slice(-1)[0]), {
-fileContents: m,
-bytesLeft: I,
+fileContents: I,
+bytesLeft: m,
 hadError: T
   } = function(e, t) {
 let [n, r] = i.useState(!1), [a, s] = i.useState(null), [o, l] = i.useState(1);
@@ -372,8 +372,8 @@ className: l
 url: t,
 fileName: n,
 fileSize: a,
-fileContents: m,
-bytesLeft: I,
+fileContents: I,
+bytesLeft: m,
 expanded: _,
 setExpanded: E,
 language: f,

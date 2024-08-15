@@ -42,7 +42,7 @@ error: E
   n
 ]), null == n)
 return null;
-  let m = null == f || f.guildId !== n ? [] : (null !== (t = null == f ? void 0 : f.channels) && void 0 !== t ? t : []).map(e => ({
+  let I = null == f || f.guildId !== n ? [] : (null !== (t = null == f ? void 0 : f.channels) && void 0 !== t ? t : []).map(e => ({
 value: e.id,
 label: e.name
   }));
@@ -64,7 +64,7 @@ children: [
     maxVisibleItems: 5,
     onChange: _,
     placeholder: u.Z.Messages.SCOPE_WEBHOOK_INCOMING_CHANNEL_PLACEHOLDER,
-    options: m,
+    options: I,
     value: d,
     renderOptionLabel: e => (0, r.jsx)(s.x, {
       variant: 'text-md/normal',

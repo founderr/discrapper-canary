@@ -55,13 +55,13 @@ if (f.isInfinity())
 var h = f.getX(),
   p = h.umod(this.n);
 if (0 !== p.cmpn(0)) {
-  var m = E.invm(this.n).mul(p.mul(t.getPrivate()).iadd(e));
-  if (0 !== (m = m.umod(this.n)).cmpn(0)) {
-    var I = (f.getY().isOdd() ? 1 : 0) | (0 !== h.cmp(p) ? 2 : 0);
-    return a.canonical && m.cmp(this.nh) > 0 && (m = this.n.sub(m), I ^= 1), new c({
+  var I = E.invm(this.n).mul(p.mul(t.getPrivate()).iadd(e));
+  if (0 !== (I = I.umod(this.n)).cmpn(0)) {
+    var m = (f.getY().isOdd() ? 1 : 0) | (0 !== h.cmp(p) ? 2 : 0);
+    return a.canonical && I.cmp(this.nh) > 0 && (I = this.n.sub(I), m ^= 1), new c({
       r: p,
-      s: m,
-      recoveryParam: I
+      s: I,
+      recoveryParam: m
     });
   }
 }

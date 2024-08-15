@@ -49,10 +49,10 @@ let t = function(e) {
     withoutMarkdown: _
   } = e, E = t.config.messages.gameTitle, f = o.r.build(t.config).defaultReward.messages.nameWithArticle, {
     targetMinutes: h
-  } = n, p = (0, i.zK)(t, l.S7.IN_HOUSE_CONSOLE_QUEST), m = (0, i.Kr)(t.config), I = (0, i.$J)(t) && (0, i.$H)(t), T = (0, s.T)({
+  } = n, p = (0, i.zK)(t, l.S7.IN_HOUSE_CONSOLE_QUEST), I = (0, i.Kr)(t.config), m = (0, i.$J)(t) && (0, i.$H)(t), T = (0, s.T)({
     location: r
   });
-  if (p && null != m)
+  if (p && null != I)
     return function(e) {
       var t;
       let {
@@ -75,7 +75,7 @@ let t = function(e) {
       taskDetails: n,
       withoutMarkdown: _
     });
-  if (I)
+  if (m)
     return function(e) {
       var t;
       let {
@@ -185,11 +185,11 @@ let t = function(e) {
       taskDetails: n,
       withoutMarkdown: _
     });
-  return null != d ? d.description : null != m ? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD[_ ? 'astFormat' : 'format']({
+  return null != d ? d.description : null != I ? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD[_ ? 'astFormat' : 'format']({
     gameTitle: E,
     streamingDurationRequirement: h,
     questReward: f,
-    duration: m
+    duration: I
   }) : a ? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2[_ ? 'astFormat' : 'format']({
     gameTitle: E,
     questReward: f,

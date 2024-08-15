@@ -26,11 +26,11 @@ var r = n(735250),
   f = n(993365),
   h = n(481060),
   p = n(689938),
-  m = n(310761);
-let I = 'data-listbox-item-id',
+  I = n(310761);
+let m = 'data-listbox-item-id',
   T = Object.freeze({
-STANDARD: m.selected,
-BRAND: m.selectedBrand
+STANDARD: I.selected,
+BRAND: I.selectedBrand
   });
 
 function g(e) {
@@ -82,7 +82,7 @@ itemToString: O = A,
 showScrollbar: R = !1
   } = e, [C, y] = i.useState(''), [D] = i.useState(!0), [L, b] = i.useState(null), M = i.useId(), P = i.useRef(null);
   i.useLayoutEffect(() => {
-let e = document.querySelector('['.concat(I, '="').concat(L, '"]')),
+let e = document.querySelector('['.concat(m, '="').concat(L, '"]')),
   t = P.current;
 null != t && null != e && t.scrollIntoViewNode({
   node: e,
@@ -142,7 +142,7 @@ children: (0, r.jsx)(l.SJ, {
       'aria-controls': D ? M : void 0,
       'aria-owns': M,
       'aria-haspopup': 'listbox',
-      className: s()(m.combobox, c),
+      className: s()(I.combobox, c),
       children: [
         (0, r.jsx)(E.E, {
           autoFocus: S,
@@ -154,7 +154,7 @@ children: (0, r.jsx)(l.SJ, {
           onBlur: () => b(null),
           onClear: () => y(''),
           className: s()({
-            [m.searchWithScrollbar]: R
+            [I.searchWithScrollbar]: R
           }),
           inputProps: {
             'aria-multiline': !1,
@@ -163,7 +163,7 @@ children: (0, r.jsx)(l.SJ, {
         }),
         (0, r.jsx)('div', {
           children: D && (w ? (0, r.jsxs)('div', {
-            className: m.empty,
+            className: I.empty,
             children: [
               (0, r.jsx)(d.X, {
                 variant: 'heading-md/semibold',
@@ -190,8 +190,8 @@ children: (0, r.jsx)(l.SJ, {
               'aria-multiselectable': g,
               id: M,
               ref: P,
-              className: s()(m.list, h, {
-                [m.scroller]: R
+              className: s()(I.list, h, {
+                [I.scroller]: R
               }),
               sections: [U.length],
               sectionHeight: 0,
@@ -232,11 +232,11 @@ itemToString: h
 tag: 'li',
 id: p,
 onClick: () => o ? null : f(n),
-[I]: n,
-className: s()(m.item, {
-  [m.focused]: g,
+[m]: n,
+className: s()(I.item, {
+  [I.focused]: g,
   [u]: S,
-  [m.disabled]: o
+  [I.disabled]: o
 }),
 ...A,
 role: 'option',
@@ -253,7 +253,7 @@ R.Colors = T, R.Label = function(e) {
 children: t
   } = e;
   return (0, r.jsx)('span', {
-className: m.itemLabel,
+className: I.itemLabel,
 children: t
   });
 }, R.Icon = function(e) {
@@ -261,7 +261,7 @@ children: t
 children: t
   } = e;
   return (0, r.jsx)('span', {
-className: m.itemCheckbox,
+className: I.itemCheckbox,
 children: t
   });
 }, R.Checkbox = function(e) {
@@ -271,7 +271,7 @@ checked: t
 selected: n
   } = i.useContext(N), a = i.useContext(O);
   return (0, r.jsx)('span', {
-className: m.itemCheckbox,
+className: I.itemCheckbox,
 children: (0, r.jsx)(u.X, {
   displayOnly: !0,
   value: null != t ? t : null != a && n.has(a),
@@ -284,7 +284,7 @@ children: (0, r.jsx)(u.X, {
 selected: e
   } = i.useContext(N), t = i.useContext(O);
   return e.has(t) ? (0, r.jsx)('span', {
-className: m.itemCheckbox,
+className: I.itemCheckbox,
 children: (0, r.jsx)(h.CircleCheckIcon, {
   size: 'custom',
   color: 'currentColor',

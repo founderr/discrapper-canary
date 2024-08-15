@@ -16,8 +16,8 @@ style: t,
 src: n,
 backgroundSrc: h,
 userId: p,
-pulseSpeakingIndicator: m = !1,
-speaking: I = !1,
+pulseSpeakingIndicator: I = !1,
+speaking: m = !1,
 ...T
   } = e, g = null != h ? h : n, S = (0, o.ZP)(g, a.Z.unsafe_rawColors.PRIMARY_800.css), A = (0, l.c)(!0, 'VideoBackground-web').enabled, N = (0, d.ZP)(null != p ? p : E.lds), v = null == N ? void 0 : N.getBannerURL({
 size: 1024,
@@ -41,11 +41,11 @@ R = {
   ...t,
   backgroundColor: S
 };
-  return null != v && I && A && (R.backgroundImage = 'url('.concat(v, ')'), R.backgroundSize = 'cover'), (0, r.jsx)('div', {
+  return null != v && m && A && (R.backgroundImage = 'url('.concat(v, ')'), R.backgroundSize = 'cover'), (0, r.jsx)('div', {
 style: R,
 className: f.background,
-children: m ? (0, r.jsx)(u.Z, {
-  shouldAnimate: I,
+children: I ? (0, r.jsx)(u.Z, {
+  shouldAnimate: m,
   children: O
 }) : O
   });

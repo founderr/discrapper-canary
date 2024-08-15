@@ -130,20 +130,20 @@ let {
 i.allowStickers = i.allowStickers ? h : i.allowStickers;
 let {
   results: p,
-  metadata: m
-} = _.queryResults(this.props.channel, this.props.guild, E, i, f), I = 0;
+  metadata: I
+} = _.queryResults(this.props.channel, this.props.guild, E, i, f), m = 0;
 for (let e of Object.values(p))
-  Array.isArray(e) && (I += e.length);
+  Array.isArray(e) && (m += e.length);
 let T = !0 === p.isLoading,
-  g = this.shouldShow(I, T, _),
+  g = this.shouldShow(m, T, _),
   S = this.state.selectedIndex;
-!g || T ? S = null : null != S && S >= I && (S = I - 1), g && !this.state.isVisible && (0, a.a7)(d, this.props.channel, m), this.setState({
+!g || T ? S = null : null != S && S >= m && (S = m - 1), g && !this.state.isVisible && (0, a.a7)(d, this.props.channel, I), this.setState({
   query: {
     type: d,
     typeInfo: _,
     queryText: E,
     results: p,
-    resultCount: I,
+    resultCount: m,
     options: i,
     isLoading: T
   },

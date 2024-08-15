@@ -118,16 +118,16 @@ bannerVisible: n,
 controller: r,
 className: s,
 onClick: S,
-onContextMenu: Z,
-onMouseDown: v,
+onContextMenu: v,
+onMouseDown: Z,
 disableBannerAnimation: T,
 'aria-expanded': L,
 'aria-controls': A,
 guild: b,
 guildBanner: M,
 animationOverlayHeight: R,
-children: P,
-headerClassName: O,
+children: O,
+headerClassName: P,
 communityInfoVisible: y,
 hasSubheader: j
   } = e, D = b.hasFeature(g.oNc.ANIMATED_BANNER), w = (0, d.Z)(b), U = !w && b.hasCommunityInfoSubheader(), G = (0, p.xR)(M) && D && !T, [k, B] = l.useState(!1), H = l.useRef(), V = l.useRef(null), F = l.useRef(), W = h.QK.getSetting();
@@ -166,12 +166,12 @@ children: [
       [(0, _.Q)(g.BRd.DARK)]: n,
       [I.communityInfoVisible]: !w && y || j && U
     }),
-    onMouseDown: v,
-    onContextMenu: Z,
+    onMouseDown: Z,
+    onContextMenu: v,
     onClick: S,
     children: [
       Y ? null : (0, i.jsxs)('header', {
-        className: a()(I.header, O, {
+        className: a()(I.header, P, {
           [I.themedHeaderMobile]: o.tq
         }),
         children: [
@@ -198,14 +198,14 @@ children: [
                   offset: 4
                 },
                 onClick: S,
-                onContextMenu: Z,
+                onContextMenu: v,
                 'aria-label': C.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({
                   guildName: null !== (t = null == b ? void 0 : b.toString()) && void 0 !== t ? t : ''
                 })
               }),
               (0, i.jsx)('div', {
                 className: I.headerChildren,
-                children: P
+                children: O
               })
             ]
           }),

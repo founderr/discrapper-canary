@@ -17,8 +17,8 @@ var n = t(735250),
   C = t(565138),
   m = t(404203),
   A = t(330181),
-  g = t(374649),
-  O = t(908951),
+  O = t(374649),
+  g = t(908951),
   h = t(777036),
   p = t(255078),
   R = t(853872),
@@ -71,7 +71,7 @@ let {
   disabled: t
 } = e, {
   analyticsLocations: a
-} = (0, I.ZP)(), [i] = (0, g.ED)({
+} = (0, I.ZP)(), [i] = (0, O.ED)({
   subscriptionId: s.id,
   renewal: !0,
   analyticsLocations: a,
@@ -82,7 +82,7 @@ return (0, d.e7)([R.Z], () => R.Z.hasFetchedPaymentSources) ? null == i ? null :
     (0, n.jsx)(_.FormTitle, {
       children: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL
     }),
-    (0, n.jsx)(O.Z, {
+    (0, n.jsx)(g.Z, {
       subscription: s,
       currentInvoicePreview: i,
       dropdownClassName: L.paymentSourceDropdown,
@@ -126,20 +126,20 @@ groupListing: o,
 guild: d,
 expanded: u,
 handleToggleExpanded: T,
-subscriptionInfo: g,
-application: O
+subscriptionInfo: O,
+application: g
   } = (0, f.Z)(s), R = (0, S.Dt)(), [j, B] = a.useState(!1), {
 analyticsLocations: U
   } = (0, I.ZP)();
-  if (null == o || null == i || null == g)
+  if (null == o || null == i || null == O)
 return null;
   let G = () => {
-  l()(null != O, 'Application cannot be null'), (0, _.openModalLazy)(async () => {
+  l()(null != g, 'Application cannot be null'), (0, _.openModalLazy)(async () => {
     let {
       default: e
     } = await t.e('6284').then(t.bind(t, 257514));
     return t => (0, n.jsx)(e, {
-      application: O,
+      application: g,
       listing: i,
       subscription: s,
       guild: d,
@@ -174,7 +174,7 @@ F = async () => {
   subscribedSinceDate: H,
   currentPeriodEndDate: k,
   currentPeriodEndLabel: W
-} = g, K = (0, x.KW)(i.sku_flags), z = (0, x.KK)(i.sku_flags), Q = i.soft_deleted || null == O || (!z || null == d) && !K, X = () => y || V ? (0, n.jsx)(_.TextBadge, {
+} = O, K = (0, x.KW)(i.sku_flags), z = (0, x.KK)(i.sku_flags), Q = i.soft_deleted || null == g || (!z || null == d) && !K, X = () => y || V ? (0, n.jsx)(_.TextBadge, {
   text: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CANCELED
 }) : Y ? (0, n.jsx)(_.Tooltip, {
   text: P.Z.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
@@ -222,10 +222,10 @@ children: [
       } = e;
       return (0, n.jsxs)(n.Fragment, {
         children: [
-          null != O && (0, n.jsx)(M.Z, {
+          null != g && (0, n.jsx)(M.Z, {
             size: M.H.SMALL,
             className: L.applicationIcon,
-            application: O,
+            application: g,
             asset: null != i.image_asset ? (0, N.m)(i.image_asset) : null
           }),
           (0, n.jsxs)('div', {
@@ -234,7 +234,7 @@ children: [
               (0, n.jsx)(_.Text, {
                 variant: 'text-md/medium',
                 className: L.applicationName,
-                children: null != O ? O.name : P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_APPLICATION_NAME_UNAVAILABLE
+                children: null != g ? g.name : P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_APPLICATION_NAME_UNAVAILABLE
               }),
               (0, n.jsxs)('div', {
                 className: L.headerSubtitleContainer,

@@ -28,7 +28,7 @@ let {
   skuIDs: [f],
   paymentSourceId: E,
   isGift: !1
-}), p = (0, u.Ng)(), [m, I] = (0, l.ED)({
+}), p = (0, u.Ng)(), [I, m] = (0, l.ED)({
   items: [{
     planId: e,
     quantity: 1
@@ -37,7 +37,7 @@ let {
   preventFetch: !(null != p),
   paymentSourceId: E,
   currency: h.currency
-}), T = null == m ? void 0 : null === (_ = m.invoiceItems) || void 0 === _ ? void 0 : null === (d = _.find(t => t.subscriptionPlanId === e)) || void 0 === d ? void 0 : null === (n = d.discounts) || void 0 === n ? void 0 : null === (t = n.find(e => e.type === r.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount, g = (0, s.aS)(e, !1, !1, h);
+}), T = null == I ? void 0 : null === (_ = I.invoiceItems) || void 0 === _ ? void 0 : null === (d = _.find(t => t.subscriptionPlanId === e)) || void 0 === d ? void 0 : null === (n = d.discounts) || void 0 === n ? void 0 : null === (t = n.find(e => e.type === r.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount, g = (0, s.aS)(e, !1, !1, h);
 return (0, o.T4)(g.amount - (null != T ? T : 0), g.currency);
   },
   _ = (e, t, n) => {
@@ -54,17 +54,17 @@ let {
   skuIDs: [h],
   paymentSourceId: f,
   isGift: !1
-}), m = null != n, [I, T] = (0, l.ED)({
+}), I = null != n, [m, T] = (0, l.ED)({
   subscriptionId: e.id,
   items: [{
     planId: t,
     quantity: 1
   }],
   renewal: !0,
-  preventFetch: !m,
+  preventFetch: !I,
   paymentSourceId: f,
   currency: p.currency,
   userDiscountOfferId: null == n ? void 0 : n.id
-}), g = null == I ? void 0 : null === (E = I.invoiceItems) || void 0 === E ? void 0 : null === (_ = E.find(e => e.subscriptionPlanId === t)) || void 0 === _ ? void 0 : null === (d = _.discounts) || void 0 === d ? void 0 : null === (u = d.find(e => e.type === r.eW.SUBSCRIPTION_PLAN)) || void 0 === u ? void 0 : u.amount, S = (0, s.aS)(t, !1, !1, p);
+}), g = null == m ? void 0 : null === (E = m.invoiceItems) || void 0 === E ? void 0 : null === (_ = E.find(e => e.subscriptionPlanId === t)) || void 0 === _ ? void 0 : null === (d = _.discounts) || void 0 === d ? void 0 : null === (u = d.find(e => e.type === r.eW.SUBSCRIPTION_PLAN)) || void 0 === u ? void 0 : u.amount, S = (0, s.aS)(t, !1, !1, p);
 return (0, o.T4)(S.amount - (null != g ? g : 0), S.currency);
   };

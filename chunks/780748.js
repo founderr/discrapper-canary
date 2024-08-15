@@ -22,18 +22,18 @@ onEnter: E,
 allowNewLines: f,
 submit: h,
 hideAutocomplete: p,
-moveSelection: m
-  } = e, I = r.useCallback(e => {
+moveSelection: I
+  } = e, m = r.useCallback(e => {
 var r;
 switch (e.which) {
   case l.yXg.ARROW_UP:
-    if (m(-1)) {
+    if (I(-1)) {
       e.preventDefault();
       return;
     }
     break;
   case l.yXg.ARROW_DOWN:
-    if (m(1)) {
+    if (I(1)) {
       e.preventDefault();
       return;
     }
@@ -41,7 +41,7 @@ switch (e.which) {
   case l.yXg.P:
     if ((0, o.E)(e, {
         ctrl: !0
-      }) && m(-1)) {
+      }) && I(-1)) {
       e.preventDefault();
       return;
     }
@@ -49,7 +49,7 @@ switch (e.which) {
   case l.yXg.N:
     if ((0, o.E)(e, {
         ctrl: !0
-      }) && m(1)) {
+      }) && I(1)) {
       e.preventDefault();
       return;
     }
@@ -84,14 +84,14 @@ n.id,
 u,
 t,
 p,
-m,
+I,
 E,
 c,
 _,
 h
   ]);
   return {
-handleKeyDown: I,
+handleKeyDown: m,
 handleKeyUp: r.useCallback(e => {
   null == d || d(e);
 }, [d])

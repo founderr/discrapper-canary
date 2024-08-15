@@ -19,12 +19,12 @@ onChange: d,
 locale: _,
 isDisabled: E,
 isReadOnly: f
-  } = e, [h, p] = (0, r.zk)(u, isNaN(c) ? NaN : c, d), [m, I] = (0, a.useState)(() => isNaN(h) ? '' : new(0, i.e)(_, l).format(h)), T = (0, a.useMemo)(() => new i.d(_, l), [
+  } = e, [h, p] = (0, r.zk)(u, isNaN(c) ? NaN : c, d), [I, m] = (0, a.useState)(() => isNaN(h) ? '' : new(0, i.e)(_, l).format(h)), T = (0, a.useMemo)(() => new i.d(_, l), [
 _,
 l
-  ]), g = (0, a.useMemo)(() => T.getNumberingSystem(m), [
+  ]), g = (0, a.useMemo)(() => T.getNumberingSystem(I), [
 T,
-m
+I
   ]), S = (0, a.useMemo)(() => new i.e(_, {
 ...l,
 numberingSystem: g
@@ -35,10 +35,10 @@ g
   ]), A = (0, a.useMemo)(() => S.resolvedOptions(), [S]), N = (0, a.useCallback)(e => isNaN(e) || null === e ? '' : S.format(e), [S]), v = isNaN(s) ? 1 : s;
   'percent' === A.style && isNaN(s) && (v = 0.01);
   let [O, R] = (0, a.useState)(h), [C, y] = (0, a.useState)(_), [D, L] = (0, a.useState)(l);
-  (!Object.is(h, O) || _ !== C || l !== D) && (I(N(h)), R(h), y(_), L(l));
-  let b = (0, a.useMemo)(() => T.parse(m), [
+  (!Object.is(h, O) || _ !== C || l !== D) && (m(N(h)), R(h), y(_), L(l));
+  let b = (0, a.useMemo)(() => T.parse(I), [
   T,
-  m
+  I
 ]),
 M = (e, i) => {
   if (isNaN(b)) {
@@ -69,14 +69,14 @@ U = (0, a.useMemo)(() => !E && !f && (isNaN(b) || isNaN(t) || (0, r.N4)(b, t, n,
 validate: e => T.isValidPartialNumber(e, t, n),
 increment: () => {
   let e = M('+', t);
-  e === h && I(N(e)), p(e);
+  e === h && m(N(e)), p(e);
 },
 incrementToMax: () => {
   null != n && p((0, r.N4)(n, t, n, v));
 },
 decrement: () => {
   let e = M('-', n);
-  e === h && I(N(e)), p(e);
+  e === h && m(N(e)), p(e);
 },
 decrementToMin: () => {
   null != t && p(t);
@@ -87,19 +87,19 @@ minValue: t,
 maxValue: n,
 numberValue: b,
 setNumberValue: p,
-setInputValue: I,
-inputValue: m,
+setInputValue: m,
+inputValue: I,
 commit: () => {
   let e;
-  if (!m.length) {
-    p(NaN), I(void 0 === u ? '' : N(h));
+  if (!I.length) {
+    p(NaN), m(void 0 === u ? '' : N(h));
     return;
   }
   if (isNaN(b)) {
-    I(N(h));
+    m(N(h));
     return;
   }
-  e = isNaN(s) ? (0, r.uZ)(b, t, n) : (0, r.N4)(b, t, n, s), p(e = T.parse(N(e))), I(N(void 0 === u ? e : h));
+  e = isNaN(s) ? (0, r.uZ)(b, t, n) : (0, r.N4)(b, t, n, s), p(e = T.parse(N(e))), m(N(void 0 === u ? e : h));
 }
   };
 }

@@ -33,8 +33,8 @@ var n = t(470079),
   C = t(977156),
   m = t(237292),
   A = t(314897),
-  g = t(283595),
-  O = t(663389),
+  O = t(283595),
+  g = t(663389),
   h = t(594174),
   p = t(202527),
   R = t(695346),
@@ -138,7 +138,7 @@ function v() {
   var e, s;
   let t = (0, N.YO)().length,
 n = (0, S.U)(),
-r = (0, a.e7)([O.Z], () => O.Z.getProps().impressionSource),
+r = (0, a.e7)([g.Z], () => g.Z.getProps().impressionSource),
 D = (0, I.gU)(),
 P = (0, f.bC)(),
 b = (0, d.Go)(),
@@ -169,7 +169,7 @@ enabled: Y
 location: 'UserSettingsInventory'
   }, {
 autoTrackExposure: !0
-  }), w = (0, a.e7)([g.Z], () => g.Z.hasLibraryApplication()), H = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()), {
+  }), w = (0, a.e7)([O.Z], () => O.Z.hasLibraryApplication()), H = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()), {
 canBroadcast: k
   } = c.Z.useExperiment({
 location: 'user_settings_activity_privacy'

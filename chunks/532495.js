@@ -22,8 +22,8 @@ var a = t(512722),
   C = t(872736),
   m = t(134795),
   A = t(610966),
-  g = t(513901),
-  O = t(451392),
+  O = t(513901),
+  g = t(451392),
   h = t(906364),
   p = t(350327),
   R = t(621853),
@@ -104,7 +104,7 @@ children: [
     user: B,
     sectionTitle: P.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
   }, 'decoration'),
-  (0, n.jsx)(g.Z, {
+  (0, n.jsx)(O.Z, {
     user: B,
     sectionTitle: P.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
   }, 'effect'),
@@ -116,7 +116,7 @@ children: [
         onBannerChange: p.g_,
         forcedDivider: !0
       }, 'banner'),
-      (0, n.jsx)(O.Z, {
+      (0, n.jsx)(g.Z, {
         user: B,
         pendingAvatar: G,
         pendingColors: H,

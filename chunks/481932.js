@@ -24,14 +24,14 @@ user: t,
 friendToken: n,
 profileType: p
   } = e, {
-newestAnalyticsLocation: m
+newestAnalyticsLocation: I
   } = (0, o.ZP)(), {
-trackUserProfileAction: I
+trackUserProfileAction: m
   } = (0, d.KZ)(), T = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)), g = (0, i.e7)([c.Z], () => null != t ? c.Z.getRelationshipType(t.id) : f.OGo.NONE), S = (0, l.Z)({
 user: t,
 color: 'danger',
-location: m,
-onAction: () => I({
+location: I,
+onAction: () => m({
   action: 'REMOVE_FRIEND'
 })
   });
@@ -66,7 +66,7 @@ onClick: () => {
     userId: t.id,
     friendToken: n,
     context: {
-      location: m
+      location: I
     }
   });
 }

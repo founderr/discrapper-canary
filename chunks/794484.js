@@ -48,8 +48,8 @@ t.Z = e => {
   let {
 className: n,
 variant: r = T.R0.PERKS_DISCOVERABILITY,
-noBackground: N = !1,
-leftAlignHeaders: p = !1,
+noBackground: p = !1,
+leftAlignHeaders: N = !1,
 showAllPerksButton: A,
 headerClassname: m,
 isFullScreen: f = !0
@@ -84,11 +84,11 @@ M,
 O,
 P
   ]);
-  let L = (0, I.Op)(O),
-v = (0, E.Z)(),
+  let v = (0, I.Op)(O),
+L = (0, E.Z)(),
 Z = (0, I.mN)(),
 D = (0, I.sP)({
-  perksCards: v,
+  perksCards: L,
   variant: r,
   shopMarketingVariation: x,
   isFullScreen: f,
@@ -101,7 +101,7 @@ B = D.some(e => null != e.pillText),
 G = a.useRef(new l.qA());
   return (0, s.jsxs)(s.Fragment, {
 children: [
-  (null == v ? void 0 : null === (t = v.freeBoost) || void 0 === t ? void 0 : t.name) === E.u.FREE_BOOST && (0, s.jsx)(l.O_, {
+  (null == L ? void 0 : null === (t = L.freeBoost) || void 0 === t ? void 0 : t.name) === E.u.FREE_BOOST && (0, s.jsx)(l.O_, {
     ref: U,
     className: C.confettiCanvas,
     environment: G.current
@@ -109,30 +109,30 @@ children: [
   (0, s.jsxs)('div', {
     ref: S,
     className: i()(C.section, {
-      [C.centerAlignSection]: !p,
-      [C.leftAlignSection]: p
+      [C.centerAlignSection]: !N,
+      [C.leftAlignSection]: N
     }, n),
     children: [
       (0, s.jsx)(g, {
         showAllPerksButton: A,
-        leftAlignHeaders: p,
-        title: L.title,
+        leftAlignHeaders: N,
+        title: v.title,
         headerClassname: m
       }),
       (0, s.jsx)(o.Text, {
         variant: 'text-lg/normal',
         color: 'header-primary',
         className: i()(C.subtitle, {
-          [C.subtitle]: null == A || p,
-          [C.subtitleWithButton]: null != A && !p,
-          [C.fullWidth]: O || p,
+          [C.subtitle]: null == A || N,
+          [C.subtitleWithButton]: null != A && !N,
+          [C.fullWidth]: O || N,
           [C.moreSubtitleMargin]: B,
-          [C.leftAlignSubtitle]: p,
-          [C.centerAlignSubtitle]: !p
+          [C.leftAlignSubtitle]: N,
+          [C.centerAlignSubtitle]: !N
         }),
-        children: L.subtitle
+        children: v.subtitle
       }),
-      !p && null != A && (0, s.jsx)('div', {
+      !N && null != A && (0, s.jsx)('div', {
         className: i()(C.showAllPerksButtonCenter),
         children: A
       }),
@@ -144,7 +144,7 @@ children: [
         children: D.map((e, t) => (0, s.jsx)(R.Z, {
           confettiCanvas: e.name === E.u.FREE_BOOST ? j : void 0,
           ...e,
-          forceShadow: N
+          forceShadow: p
         }, ''.concat(e.name, '_').concat(t)))
       })
     ]

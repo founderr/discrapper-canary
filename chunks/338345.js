@@ -28,10 +28,10 @@ hideInstantInvites: a,
 hidePersonalInformation: C,
 disableSounds: m,
 disableNotifications: A,
-enableContentProtection: g
+enableContentProtection: O
   } = (0, r.cj)([_.Z], () => ({
 ..._.Z.getSettings()
-  })), O = (e, s) => {
+  })), g = (e, s) => {
 l.Z.update({
   [e]: s
 });
@@ -64,7 +64,7 @@ children: [
     children: [
       (0, n.jsx)(o.FormSwitch, {
         value: e,
-        onChange: e => O('enabled', e),
+        onChange: e => g('enabled', e),
         note: T.Z.Messages.ENABLE_STREAMER_MODE_DESCRIPTION.format({
           onClick: () => {
             c.Z.setSection(I.oAB.KEYBINDS);
@@ -76,7 +76,7 @@ children: [
         if (E.isPlatformEmbedded)
           return (0, n.jsx)(o.FormSwitch, {
             value: s,
-            onChange: e => O('autoToggle', e),
+            onChange: e => g('autoToggle', e),
             note: T.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_DESCRIPTION,
             children: T.Z.Messages.AUTO_TOGGLE_STREAMER_MODE_LABEL
           });
@@ -93,7 +93,7 @@ children: [
         setting: u.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
         children: (0, n.jsx)(o.FormSwitch, {
           value: C,
-          onChange: e => O('hidePersonalInformation', e),
+          onChange: e => g('hidePersonalInformation', e),
           note: T.Z.Messages.HIDE_PERSONAL_INFORMATION_DESCRIPTION,
           children: T.Z.Messages.HIDE_PERSONAL_INFORMATION_LABEL
         })
@@ -102,7 +102,7 @@ children: [
         setting: u.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
         children: (0, n.jsx)(o.FormSwitch, {
           value: a,
-          onChange: e => O('hideInstantInvites', e),
+          onChange: e => g('hideInstantInvites', e),
           note: T.Z.Messages.HIDE_INSTANT_INVITES_DESCRIPTION,
           children: T.Z.Messages.HIDE_INSTANT_INVITES_LABEL
         })
@@ -111,7 +111,7 @@ children: [
         setting: u.s6.STREAMER_MODE_DISABLE_SOUNDS,
         children: (0, n.jsx)(o.FormSwitch, {
           value: m,
-          onChange: e => O('disableSounds', e),
+          onChange: e => g('disableSounds', e),
           note: T.Z.Messages.DISABLE_SOUNDS_DESCRIPTION,
           children: T.Z.Messages.DISABLE_SOUNDS_LABEL
         })
@@ -120,7 +120,7 @@ children: [
         setting: u.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
         children: (0, n.jsx)(o.FormSwitch, {
           value: A,
-          onChange: e => O('disableNotifications', e),
+          onChange: e => g('disableNotifications', e),
           note: T.Z.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
           children: T.Z.Messages.DISABLE_NOTIFICATIONS_LABEL
         })
@@ -128,8 +128,8 @@ children: [
       (0, n.jsx)(d.F, {
         setting: u.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
         children: (0, n.jsx)(o.FormSwitch, {
-          value: g,
-          onChange: e => O('enableContentProtection', e),
+          value: O,
+          onChange: e => g('enableContentProtection', e),
           note: T.Z.Messages.HIDE_WINDOW_FROM_STREAM_DESCRIPTION,
           children: T.Z.Messages.HIDE_WINDOW_FROM_STREAM_LABEL
         })

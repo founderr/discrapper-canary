@@ -25,7 +25,7 @@ enabled: g
 location: 'GiftNitro'
   }, {
 autoTrackExposure: C
-  }), N = g && C;
+  }), p = g && C;
   return (0, s.jsx)(l.Gt, {
 value: R,
 children: (0, s.jsxs)('div', {
@@ -38,11 +38,11 @@ children: (0, s.jsxs)('div', {
         (0, s.jsx)(i.Heading, {
           variant: 'heading-lg/extrabold',
           className: _.heading,
-          children: N ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.Z.Messages.GIFT_NITRO
+          children: p ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.Z.Messages.GIFT_NITRO
         }),
         (0, s.jsx)(i.Text, {
           variant: 'text-sm/medium',
-          children: N ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+          children: p ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
         }),
         (0, s.jsx)(c.Z, {
           isGift: !0,
@@ -56,7 +56,7 @@ children: (0, s.jsxs)('div', {
       ]
     }),
     (0, s.jsx)('img', {
-      src: N ? E : u,
+      src: p ? E : u,
       className: r()(_.bannerImage, n),
       alt: 'gift nitro banner'
     })

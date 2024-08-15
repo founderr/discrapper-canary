@@ -24,21 +24,21 @@ var x = t(392750),
   k = t(926976),
   v = t(592197),
   _ = t(860337),
-  j = t(789654),
-  w = t(691867),
-  C = t(916790),
+  w = t(789654),
+  C = t(691867),
+  j = t(916790),
   N = t(912072),
   S = t(246992),
   T = t(442954),
-  E = t(702904),
-  I = t(178821),
+  I = t(702904),
+  E = t(178821),
   Z = t(248526),
   R = t(958328),
   O = t(514866),
-  B = t(678639),
-  A = t(351930),
-  P = t(771751),
-  L = t(596768),
+  A = t(678639),
+  P = t(351930),
+  L = t(771751),
+  B = t(596768),
   D = t(621060),
   M = t(689938),
   G = t(941735),
@@ -73,17 +73,17 @@ function F() {
     {
       id: 'triggers',
       name: 'Triggers',
-      render: () => (0, a.jsx)(L.Z, {})
+      render: () => (0, a.jsx)(B.Z, {})
     },
     {
       id: 'stores',
       name: 'Stores',
-      render: () => (0, a.jsx)(B.Z, {})
+      render: () => (0, a.jsx)(A.Z, {})
     },
     {
       id: 'dispatcher',
       name: 'Dispatcher',
-      render: () => (0, a.jsx)(C.Z, {})
+      render: () => (0, a.jsx)(j.Z, {})
     }
   ];
   return g.Z.isDeveloper && (e.push({
@@ -101,15 +101,15 @@ function F() {
   }), e.push({
     id: 'performance',
     name: 'Performance',
-    render: () => (0, a.jsx)(I.Z, {})
+    render: () => (0, a.jsx)(E.Z, {})
   })), e.push({
     id: 'colors',
     name: 'Colors',
-    render: () => (0, a.jsx)(j.Z, {})
+    render: () => (0, a.jsx)(w.Z, {})
   }), e.push({
     id: 'design_toggles',
     name: 'Design Toggles',
-    render: () => (0, a.jsx)(w.Z, {})
+    render: () => (0, a.jsx)(C.Z, {})
   }), e.push({
     id: 'overlays',
     name: 'Dev Overlays',
@@ -147,15 +147,15 @@ function F() {
   }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') && (e.push({
     id: 'trials',
     name: 'Trials',
-    render: () => (0, a.jsx)(P.Z, {})
+    render: () => (0, a.jsx)(L.Z, {})
   }), e.push({
     id: 'payments',
     name: 'Payments',
-    render: () => (0, a.jsx)(E.Z, {})
+    render: () => (0, a.jsx)(I.Z, {})
   }), e.push({
     id: 'subscriptions',
     name: 'Subscriptions',
-    render: () => (0, a.jsx)(A.Z, {})
+    render: () => (0, a.jsx)(P.Z, {})
   }), e.push({
     id: 'billing',
     name: 'Billing',

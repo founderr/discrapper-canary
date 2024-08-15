@@ -37,22 +37,22 @@ return c.deriveBits({
 return a.from(e);
   });
 }
-e.exports = function(e, t, i, h, p, m) {
-  'function' == typeof p && (m = p, p = void 0);
-  var I = d[(p = p || 'sha1').toLowerCase()];
-  if (!I || 'function' != typeof n.g.Promise) {
+e.exports = function(e, t, i, h, p, I) {
+  'function' == typeof p && (I = p, p = void 0);
+  var m = d[(p = p || 'sha1').toLowerCase()];
+  if (!m || 'function' != typeof n.g.Promise) {
 E()(function() {
   var n;
   try {
     n = l(e, t, i, h, p);
   } catch (e) {
-    return m(e);
+    return I(e);
   }
-  m(null, n);
+  I(null, n);
 });
 return;
   }
-  if (s(i, h), e = u(e, o, 'Password'), t = u(t, o, 'Salt'), 'function' != typeof m)
+  if (s(i, h), e = u(e, o, 'Password'), t = u(t, o, 'Salt'), 'function' != typeof I)
 throw Error('No callback provided to pbkdf2');
   ! function(e, t) {
 e.then(function(e) {
@@ -75,7 +75,7 @@ var t = f(r = r || a.alloc(8), r, 10, 128, e).then(function() {
   return !1;
 });
 return _[e] = t, t;
-  }(I).then(function(n) {
-return n ? f(e, t, i, h, I) : l(e, t, i, h, p);
-  }), m);
+  }(m).then(function(n) {
+return n ? f(e, t, i, h, m) : l(e, t, i, h, p);
+  }), I);
 };

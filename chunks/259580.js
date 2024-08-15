@@ -24,14 +24,14 @@ let {
   ...h
 } = e, {
   enabled: p
-} = (0, s.useRedesignIconContext)(), m = t;
-if (!0 === f ? m = u.DOWN : !1 === f && (m = u.RIGHT), p) {
+} = (0, s.useRedesignIconContext)(), I = t;
+if (!0 === f ? I = u.DOWN : !1 === f && (I = u.RIGHT), p) {
   let e = {
     [u.UP]: s.ChevronSmallUpIcon,
     [u.DOWN]: s.ChevronSmallDownIcon,
     [u.LEFT]: s.ChevronSmallLeftIcon,
     [u.RIGHT]: s.ChevronSmallRightIcon
-  } [m];
+  } [I];
   return (0, r.jsx)(e, {
     ...h,
     className: _,
@@ -43,7 +43,7 @@ if (!0 === f ? m = u.DOWN : !1 === f && (m = u.RIGHT), p) {
   });
 }
 return (0, r.jsx)('svg', {
-  className: a()(_, d, m),
+  className: a()(_, d, I),
   width: n,
   height: i,
   viewBox: '0 0 24 24',

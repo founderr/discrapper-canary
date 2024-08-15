@@ -64,25 +64,25 @@ t.isBigInt64Array = function(e) {
   return 'BigInt64Array' === a(e);
 };
 
-function m(e) {
+function I(e) {
   return '[object Map]' === c(e);
 }
 t.isBigUint64Array = function(e) {
   return 'BigUint64Array' === a(e);
-}, m.working = 'undefined' != typeof Map && m(new Map());
+}, I.working = 'undefined' != typeof Map && I(new Map());
 
-function I(e) {
+function m(e) {
   return '[object Set]' === c(e);
 }
 t.isMap = function(e) {
-  return 'undefined' != typeof Map && (m.working ? m(e) : e instanceof Map);
-}, I.working = 'undefined' != typeof Set && I(new Set());
+  return 'undefined' != typeof Map && (I.working ? I(e) : e instanceof Map);
+}, m.working = 'undefined' != typeof Set && m(new Set());
 
 function T(e) {
   return '[object WeakMap]' === c(e);
 }
 t.isSet = function(e) {
-  return 'undefined' != typeof Set && (I.working ? I(e) : e instanceof Set);
+  return 'undefined' != typeof Set && (m.working ? m(e) : e instanceof Set);
 }, T.working = 'undefined' != typeof WeakMap && T(new WeakMap());
 
 function g(e) {

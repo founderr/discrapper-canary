@@ -17,8 +17,8 @@ var n = t(735250),
   C = t(313201),
   m = t(674180),
   A = t(565138),
-  g = t(374649),
-  O = t(908951),
+  O = t(374649),
+  g = t(908951),
   h = t(703656),
   p = t(853872),
   R = t(245950),
@@ -74,13 +74,13 @@ let {
   subscription: s
 } = e, {
   analyticsLocations: t
-} = (0, T.ZP)(), [a] = (0, g.ED)({
+} = (0, T.ZP)(), [a] = (0, O.ED)({
   subscriptionId: s.id,
   renewal: !0,
   analyticsLocations: t,
   analyticsLocation: I.Z.GUILD_ROLE_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
 }), i = (0, l.e7)([p.Z], () => p.Z.hasFetchedPaymentSources);
-return null != a && i ? (0, n.jsx)(O.Z, {
+return null != a && i ? (0, n.jsx)(g.Z, {
   subscription: s,
   currentInvoicePreview: a,
   dropdownClassName: v.paymentSourceDropdown
@@ -132,13 +132,13 @@ groupListing: i,
 guild: l,
 expanded: I,
 handleToggleExpanded: N,
-subscriptionInfo: g
-  } = (0, R.Z)(s), [O, p] = a.useState(!1), G = (0, C.Dt)(), {
+subscriptionInfo: O
+  } = (0, R.Z)(s), [g, p] = a.useState(!1), G = (0, C.Dt)(), {
 analyticsLocations: F
   } = (0, T.ZP)(), {
 shouldHideGuildPurchaseEntryPoints: y
   } = (0, m.uP)(null == l ? void 0 : l.id), V = (null == s ? void 0 : s.paymentGateway) === P.gg$.APPLE_PARTNER;
-  if (null == i || null == t || null == g)
+  if (null == i || null == t || null == O)
 return null;
   let Y = () => {
   null != l && ((0, h.uL)(P.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)), (0, _.xf)(), E.Z.show(P.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => u.Z.open(P.oAB.SUBSCRIPTIONS, b.cP)));
@@ -165,7 +165,7 @@ H = async () => {
   nextRenewalDate: Q,
   nextRenewalLabel: X,
   isTrial: q
-} = g, J = t.soft_deleted || null == l || V, $ = () => {
+} = O, J = t.soft_deleted || null == l || V, $ = () => {
   if (k)
     return (0, n.jsx)(c.TextBadge, {
       text: Z.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_CANCELLED
@@ -305,7 +305,7 @@ children: [
       !J && (0, n.jsx)(U, {
         isTrial: q,
         isCancelled: k,
-        isResubscribing: O,
+        isResubscribing: g,
         shouldHideRoleSubscriptionEntryPoints: y,
         onCancelSubscriptionClick: w,
         onChangePlanClick: Y,

@@ -29,15 +29,15 @@ function p() {
   return _.clear(), E.clear(), !0;
 }
 
-function m(e) {
+function I(e) {
   let {
 channelId: t,
 command: n
   } = e;
-  I(t, null == n ? void 0 : n.id);
+  m(t, null == n ? void 0 : n.id);
 }
 
-function I(e, t) {
+function m(e, t) {
   let n = c.Z.getActiveOptionName(e),
 r = E.get(e);
   return null != r && (t !== r.commandId || n !== r.optionName) && (null != t && t !== r.commandId && (r.optionNameToLastResults.clear(), r.optionNameToNonce.clear(), r.optionNameToLastQuery.clear(), r.optionNameToAutocompleteQueries.clear()), r.lastErrored = !1, r.commandId = t, r.optionName = n, !0);
@@ -134,13 +134,13 @@ return (0, u.yw)(d.rMx.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANC
   error: !0
 }), f.delete(t), h(n.channelId).lastErrored = !0, !0;
   },
-  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: m,
-  APP_LAUNCHER_SET_ACTIVE_COMMAND: m,
+  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: I,
+  APP_LAUNCHER_SET_ACTIVE_COMMAND: I,
   APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function(e) {
 let {
   channelId: t,
   command: n
 } = e;
-I(t, null == n ? void 0 : n.id);
+m(t, null == n ? void 0 : n.id);
   }
 });

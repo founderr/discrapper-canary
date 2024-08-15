@@ -1,5 +1,5 @@
 let r, i, a, s, o, l, u, c, d, _, E;
-var f, h, p, m, I = n(442837),
+var f, h, p, I, m = n(442837),
   T = n(570140),
   g = n(981631);
 let S = g.QZA.CLOSED,
@@ -16,7 +16,7 @@ function v() {
 function O() {
   s = void 0, o = void 0, l = void 0, c = void 0, a = void 0;
 }
-class R extends(m = I.ZP.Store) {
+class R extends(I = m.ZP.Store) {
   getFormState() {
 return S;
   }

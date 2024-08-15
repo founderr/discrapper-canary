@@ -17,8 +17,8 @@ var n = t(735250),
   C = t(497321),
   m = t(634894),
   A = t(410030),
-  g = t(100527),
-  O = t(906732),
+  O = t(100527),
+  g = t(906732),
   h = t(211242),
   p = t(15640),
   R = t(89057),
@@ -60,7 +60,7 @@ I = a.planIdFromItems === w.Xh.PREMIUM_YEAR_TIER_2,
 S = i || u,
 C = null != a.trialEndsAt ? l()(a.trialEndsAt).diff(l()(), 'd') : 0,
 m = w.GP[a.planIdFromItems],
-g = b.ZP.formatPriceString(b.ZP.getDefaultPrice(m.id), m.interval);
+O = b.ZP.formatPriceString(b.ZP.getDefaultPrice(m.id), m.interval);
   return (0, n.jsxs)('div', {
 className: r()(W.tierCard, {
   [W.withTier2Rim]: S
@@ -88,13 +88,13 @@ children: [
             className: W.trialHeader,
             children: u ? k.Z.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
               remainingTime: C,
-              price: g
+              price: O
             }) : I ? k.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
               percent: null !== (e = null == o ? void 0 : o.percentage) && void 0 !== e ? e : w.Bo,
-              regularPrice: g
+              regularPrice: O
             }) : k.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
               percent: null !== (s = null == o ? void 0 : o.percentage) && void 0 !== s ? s : w.M_,
-              regularPrice: g,
+              regularPrice: O,
               numMonths: null !== (t = null == o ? void 0 : o.duration) && void 0 !== t ? t : w.rt
             })
           })
@@ -219,7 +219,7 @@ s.Z = function() {
   let e = (0, h.Q)(),
 {
   analyticsLocations: s
-} = (0, O.ZP)(g.Z.PREMIUM_SETTINGS),
+} = (0, g.ZP)(O.Z.PREMIUM_SETTINGS),
 t = (0, c.e7)([D.ZP], () => D.ZP.getPremiumTypeSubscription()),
 i = (0, c.e7)([D.ZP], () => D.ZP.hasFetchedSubscriptions()),
 r = (0, p.V)(),
@@ -262,7 +262,7 @@ return (0, n.jsx)(x.Z, {
   if (!i || null == t || !r || o)
 return (0, n.jsx)(E.Spinner, {});
   let Z = null != t.trialId;
-  return (0, n.jsx)(O.Gt, {
+  return (0, n.jsx)(g.Gt, {
 value: s,
 children: (0, n.jsxs)(n.Fragment, {
   children: [

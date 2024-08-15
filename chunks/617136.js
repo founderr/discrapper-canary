@@ -1,12 +1,12 @@
 n.d(t, {
   _3: function() {
-return I;
+return m;
   },
   _b: function() {
 return E;
   },
   dA: function() {
-return m;
+return I;
   },
   jZ: function() {
 return i;
@@ -55,7 +55,7 @@ row_index: n
   };
 }
 
-function m(e) {
+function I(e) {
   let {
 questId: t,
 event: n,
@@ -80,7 +80,7 @@ o.default.track(n, {
   }
 }
 
-function I(e) {
+function m(e) {
   let {
 questId: t,
 questContent: n,
@@ -89,7 +89,7 @@ questContentPosition: i,
 questContentRowIndex: a,
 trackGuildAndChannelMetadata: s = !1
   } = e;
-  m({
+  I({
 questId: t,
 event: d.rMx.QUEST_CONTENT_CLICKED,
 properties: {

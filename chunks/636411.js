@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var r = n(735250);
@@ -18,22 +18,22 @@ var i = n(120356),
   f = n(981631),
   h = n(474936),
   p = n(689938),
-  m = n(604755);
+  I = n(604755);
 
-function I(e) {
+function m(e) {
   var t, n;
   let {
 onDismiss: i
-  } = e, I = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), T = p.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, g = (0, d.N)(), S = (0, c.Ng)(), A = (null == g ? void 0 : g.subscription_trial) != null || null != S, N = {
+  } = e, m = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), T = p.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, g = (0, d.N)(), S = (0, c.Ng)(), A = (null == g ? void 0 : g.subscription_trial) != null || null != S, N = {
 object: f.qAy.BUTTON_CTA,
 section: f.jXE.SUPER_REACTION_PICKER
   };
   return (0, r.jsxs)('div', {
-className: m.wrapper,
+className: I.wrapper,
 children: [
   (0, r.jsx)(o.Clickable, {
     onClick: i,
-    className: m.closeButton,
+    className: I.closeButton,
     'aria-label': p.Z.Messages.DISMISS,
     children: (0, r.jsx)(o.XSmallIcon, {
       size: 'md',
@@ -41,17 +41,17 @@ children: [
     })
   }),
   (0, r.jsxs)('div', {
-    className: m.content,
+    className: I.content,
     children: [
       (0, r.jsx)('div', {
-        className: m.contentFill,
+        className: I.contentFill,
         children: (0, r.jsx)(u.Z, {
-          className: a()(m.banner, {
-            [m.hasTrialOffer]: A
+          className: a()(I.banner, {
+            [I.hasTrialOffer]: A
           }),
           src: 'https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4',
           loop: !0,
-          autoPlay: !I,
+          autoPlay: !m,
           muted: !0,
           controls: !0
         })
@@ -67,29 +67,29 @@ children: [
       }) : (0, r.jsxs)(r.Fragment, {
         children: [
           (0, r.jsxs)('div', {
-            className: m.header,
+            className: I.header,
             children: [
               (0, r.jsx)(o.NitroWheelIcon, {
                 size: 'custom',
                 color: 'currentColor',
-                className: m.nitroWheel,
+                className: I.nitroWheel,
                 width: 32,
                 height: 32
               }),
               (0, r.jsx)(o.Heading, {
-                className: m.headerText,
+                className: I.headerText,
                 variant: 'heading-xl/bold',
                 children: p.Z.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE
               })
             ]
           }),
           (0, r.jsx)(o.Text, {
-            className: m.subheaderText,
+            className: I.subheaderText,
             variant: 'text-md/normal',
             children: T
           }),
           (0, r.jsx)('div', {
-            className: m.ctaActionWrapper,
+            className: I.ctaActionWrapper,
             children: (0, r.jsx)(E.Z, {
               subscriptionTier: h.Si.TIER_2,
               buttonText: p.Z.Messages.UNLOCK_WITH_NITRO

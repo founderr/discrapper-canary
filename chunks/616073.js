@@ -15,7 +15,7 @@ return O;
 return S;
   },
   bU: function() {
-return m;
+return I;
   },
   qb: function() {
 return g;
@@ -94,7 +94,7 @@ e(E);
 }
 let p = r.createContext(null);
 
-function m() {
+function I() {
   let e = function() {
 let e = (0, i.Av)(),
   [t, n] = (0, r.useState)(E);
@@ -107,18 +107,18 @@ return ((0, r.useEffect)(() => (0 === f.size && window.addEventListener('languag
   }();
   return (0, r.useContext)(p) || e;
 }
-let I = new WeakMap();
+let m = new WeakMap();
 
 function T(e, t) {
   var n;
   let r;
-  return t && (0, a.J).getGlobalDictionaryForPackage(t) || (n = e, !(r = I.get(n)) && (r = new a.J(n), I.set(n, r)), r);
+  return t && (0, a.J).getGlobalDictionaryForPackage(t) || (n = e, !(r = m.get(n)) && (r = new a.J(n), m.set(n, r)), r);
 }
 
 function g(e, t) {
   let {
 locale: n
-  } = m(), i = T(e, t);
+  } = I(), i = T(e, t);
   return (0, r.useMemo)(() => new a.E(n, i), [
 n,
 i
@@ -129,7 +129,7 @@ function S(e) {
   e = (0, o.vE)(null != e ? e : {}, A);
   let {
 locale: t
-  } = m();
+  } = I();
   return (0, r.useMemo)(() => new s.CN(t, e), [
 t,
 e
@@ -152,7 +152,7 @@ if (t[r] !== e[r])
 function N(e = {}) {
   let {
 locale: t
-  } = m();
+  } = I();
   return (0, r.useMemo)(() => new l.e(t, e), [
 t,
 e
@@ -163,7 +163,7 @@ let v = new Map();
 function O(e) {
   let {
 locale: t
-  } = m(), n = t + (e ? Object.entries(e).sort((e, t) => e[0] < t[0] ? -1 : 1).join() : '');
+  } = I(), n = t + (e ? Object.entries(e).sort((e, t) => e[0] < t[0] ? -1 : 1).join() : '');
   if (v.has(n))
 return v.get(n);
   let r = new Intl.Collator(t, e);

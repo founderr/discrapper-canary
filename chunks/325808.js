@@ -22,9 +22,9 @@ var a = t(120356),
   C = t(570243),
   m = t(224499);
 let A = !I.isPlatformEmbedded,
-  g = (0, E.hQ)();
+  O = (0, E.hQ)();
 
-function O(e) {
+function g(e) {
   let {
 value: s
   } = e;
@@ -89,7 +89,7 @@ children: [
         children: (0, n.jsxs)(o.FormItem, {
           children: [
             (0, n.jsx)(o.FormTitle, {
-              id: g,
+              id: O,
               tag: o.FormTitleTags.H5,
               className: m.marginBottom8,
               children: N.Z.Messages.INPUT_MODE_PTT_RELEASE_DELAY
@@ -101,7 +101,7 @@ children: [
               }),
               onValueRender: h,
               maxValue: S.qhL,
-              'aria-labelledby': g
+              'aria-labelledby': O
             })
           ]
         })
@@ -130,7 +130,7 @@ children: [
     title: N.Z.Messages.FORM_LABEL_INPUT_MODE,
     className: m.marginBottom20,
     children: (0, n.jsx)(o.RadioGroup, {
-      onChange: O,
+      onChange: g,
       options: s,
       value: e
     })

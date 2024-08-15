@@ -34,11 +34,11 @@ numFrequentlyItems: 20
   p = () => {
 d.Z.isLoaded && h.compute();
   },
-  m = () => {
+  I = () => {
 p();
   };
 
-function I() {
+function m() {
   var e;
   let t = null === (e = u.Z.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
   if (null == t)
@@ -50,7 +50,7 @@ recentUses: e.recentUses.map(Number).filter(e => e > 0)
 }
 class T extends(r = s.ZP.PersistedStore) {
   initialize(e) {
-this.waitFor(d.Z), null != e && (f = e), this.syncWith([d.Z], m), this.syncWith([u.Z], I);
+this.waitFor(d.Z), null != e && (f = e), this.syncWith([d.Z], I), this.syncWith([u.Z], m);
   }
   getState() {
 return f;

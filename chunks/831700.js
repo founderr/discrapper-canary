@@ -25,16 +25,16 @@ var l = n(120356),
   N = n(305325),
   x = n(281956),
   S = n(66999),
-  Z = n(554747),
-  v = n(506936),
+  v = n(554747),
+  Z = n(506936),
   T = n(574176),
   L = n(359110),
   A = n(155409),
   b = n(695346),
   M = n(592125),
   R = n(430824),
-  P = n(607744),
-  O = n(496675),
+  O = n(607744),
+  P = n(496675),
   y = n(306680),
   j = n(9156),
   D = n(979651),
@@ -155,8 +155,8 @@ let {
   hasActiveEvent: N,
   embeddedApps: x,
   isSubscriptionGated: S,
-  isFavoriteSuggestion: Z,
-  withGuildIcon: v
+  isFavoriteSuggestion: v,
+  withGuildIcon: Z
 } = this.props, {
   shouldShowActivities: T,
   shouldShowGuildVerificationPopout: L
@@ -189,7 +189,7 @@ let {
                 [Y.iconLive]: N
               }),
               channel: e,
-              selected: !Z && t,
+              selected: !v && t,
               connected: n,
               unread: n ? l : void 0,
               resolvedUnreadSetting: a,
@@ -203,7 +203,7 @@ let {
                 this.handleContextMenu(e), null == d || d();
               },
               connectDragPreview: m,
-              isFavoriteSuggestion: Z,
+              isFavoriteSuggestion: v,
               'aria-label': (0, f.ZP)({
                 channel: e,
                 unread: l,
@@ -216,15 +216,15 @@ let {
                 channel: e,
                 embeddedApps: x
               }),
-              withGuildIcon: v,
+              withGuildIcon: Z,
               ...h,
               children: [
-                Z && this.renderAcceptSuggestionButton(),
-                Z && this.renderRemoveSuggestionButton(),
-                !Z && this.renderOpenChatButton(),
-                !Z && this.renderInviteButton(),
-                !Z && this.renderEditButton(),
-                !Z && this.renderChannelInfo()
+                v && this.renderAcceptSuggestionButton(),
+                v && this.renderRemoveSuggestionButton(),
+                !v && this.renderOpenChatButton(),
+                !v && this.renderInviteButton(),
+                !v && this.renderEditButton(),
+                !v && this.renderChannelInfo()
               ]
             });
           }
@@ -343,8 +343,8 @@ super(...e), K(this, 'state', {
     });
   }
   if (o)
-    return (0, i.jsx)(v.Z, {
-      type: v.R.VOICE,
+    return (0, i.jsx)(Z.Z, {
+      type: Z.R.VOICE,
       guildId: e.guild_id,
       closePopout: this.closeGuildVerificationPopout
     });
@@ -407,23 +407,23 @@ unread: y.ZP.hasUnread(n.id),
 mentionCount: y.ZP.getMentionCount(n.id)
   })), d = (0, a.e7)([j.ZP], () => j.ZP.resolveUnreadSetting(n)), h = (0, a.cj)([
 M.Z,
-P.Z,
-O.Z
+O.Z,
+P.Z
   ], () => {
 let e = M.Z.getChannel(n.parent_id),
-  i = P.Z.getCheck(n.guild_id);
+  i = O.Z.getCheck(n.guild_id);
 return {
-  canManageChannel: O.Z.can(F.Plq.MANAGE_CHANNELS, n),
-  canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? O.Z.can(F.Plq.MANAGE_CHANNELS, e) : O.Z.can(F.Plq.MANAGE_CHANNELS, t))),
-  canMoveMembers: O.Z.can(F.Plq.MOVE_MEMBERS, n),
-  locked: !O.Z.can(F.Plq.CONNECT, n),
-  bypassLimit: O.Z.can(F.Plq.MOVE_MEMBERS, n),
+  canManageChannel: P.Z.can(F.Plq.MANAGE_CHANNELS, n),
+  canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? P.Z.can(F.Plq.MANAGE_CHANNELS, e) : P.Z.can(F.Plq.MANAGE_CHANNELS, t))),
+  canMoveMembers: P.Z.can(F.Plq.MOVE_MEMBERS, n),
+  locked: !P.Z.can(F.Plq.CONNECT, n),
+  bypassLimit: P.Z.can(F.Plq.MOVE_MEMBERS, n),
   unverifiedAccount: !i.canChat
 };
-  }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), g = (0, m.ZP)(n), C = (0, Z.qY)(n.id), {
+  }), _ = (0, a.e7)([D.Z], () => D.Z.hasVideo(n.id)), f = (0, p.ZP)(n), g = (0, m.ZP)(n), C = (0, v.qY)(n.id), {
 isSubscriptionGated: I,
 needSubscriptionToAccess: N
-  } = (0, S.Z)(n.id), x = (0, E.Z)(), v = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)), L = e.connected || (null == x ? void 0 : x.channelId) === n.id, {
+  } = (0, S.Z)(n.id), x = (0, E.Z)(), Z = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)), L = e.connected || (null == x ? void 0 : x.channelId) === n.id, {
 enableHangStatus: A,
 allowChannelTopic: b
   } = T.n.useExperiment({
@@ -453,7 +453,7 @@ needSubscriptionToAccess: N,
 ...h,
 ...e,
 connected: L,
-isFavoriteSuggestion: r && !v,
+isFavoriteSuggestion: r && !Z,
 forceShowButtons: w,
 channelInfo: R,
 enableHangStatus: A,

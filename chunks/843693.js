@@ -13,8 +13,8 @@ var r, i, a, s, o = n(442837),
   f = n(351780),
   h = n(641033),
   p = n(524484),
-  m = n(981631);
-let I = new Set(),
+  I = n(981631);
+let m = new Set(),
   T = new l.h(function(e) {
 let {
   userId: t,
@@ -168,7 +168,7 @@ let {
 if (!f.Z.isEnabled())
   return !1;
 let o = d.default.getId();
-if (!A(null == a ? void 0 : a.id, o, s, I))
+if (!A(null == a ? void 0 : a.id, o, s, m))
   return !1;
 let l = T.get(S({
   userId: null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : '???',
@@ -176,7 +176,7 @@ let l = T.get(S({
 }));
 if (f.Z.screenshakeEnabled && f.Z.screenshakeEnabledLocations[p.oZ.MENTION] && null != i && null != i.find(e => e.id === o)) {
   let e = null != l ? null !== (n = (0, h.KH)(l, p.qi.LEVEL_4)) && void 0 !== n ? n : 0.001 : 4 * Math.random();
-  return E.S.dispatch(m.CkL.SHAKE_APP, {
+  return E.S.dispatch(I.CkL.SHAKE_APP, {
     duration: 1000,
     intensity: e
   }), !0;

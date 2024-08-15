@@ -17,16 +17,16 @@ var r = n(735250),
   f = n(981631),
   h = n(689938),
   p = n(362214);
-let m = () => [
+let I = () => [
 h.Z.Messages.APP_ICON_PIRATE,
 h.Z.Messages.APP_ICON_PIRATE_1,
 h.Z.Messages.APP_ICON_PIRATE_2,
 h.Z.Messages.APP_ICON_PIRATE_3,
 h.Z.Messages.APP_ICON_PIRATE_4
   ],
-  I = () => {
+  m = () => {
 var e;
-return null !== (e = l().sample(m())) && void 0 !== e ? e : h.Z.Messages.APP_ICON_PIRATE;
+return null !== (e = l().sample(I())) && void 0 !== e ? e : h.Z.Messages.APP_ICON_PIRATE;
   };
 
 function T(e) {
@@ -38,13 +38,13 @@ isSelected: o = !1,
 tabIndex: l,
 children: _,
 locked: h = !1
-  } = e, [m, T] = i.useState(E.QA[t].name), g = t === d.Ru.PIRATE, S = (0, u.useRadioItem)({
-label: m,
+  } = e, [I, T] = i.useState(E.QA[t].name), g = t === d.Ru.PIRATE, S = (0, u.useRadioItem)({
+label: I,
 isSelected: o
   });
   return (0, r.jsx)(u.Tooltip, {
-text: m,
-onTooltipShow: () => g && T(I()),
+text: I,
+onTooltipShow: () => g && T(m()),
 children: e => (0, r.jsxs)('div', {
   className: p.appIconSelectionContainer,
   children: [

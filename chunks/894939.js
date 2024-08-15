@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(63063),
   m = t(581883),
   A = t(918257),
-  g = t(726985),
-  O = t(981631),
+  O = t(726985),
+  g = t(981631),
   h = t(710111),
   p = t(689938),
   R = t(484090),
@@ -69,11 +69,11 @@ titleClassName: x.__invalid_marginBottom16,
 title: p.Z.Messages.SOUNDBOARD,
 children: [
   (0, n.jsx)(_.F, {
-    setting: g.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+    setting: O.s6.VOICE_AND_VIDEO_SOUNDBOARD,
     children: (0, n.jsx)(A.Z, {})
   }),
   (0, n.jsxs)(_.F, {
-    setting: g.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+    setting: O.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
     children: [
       (0, n.jsx)(r.FormDivider, {
         className: R.callSoundsDivider
@@ -88,7 +88,7 @@ children: [
         variant: 'text-sm/medium',
         color: 'header-secondary',
         children: p.Z.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({
-          helpdeskArticle: C.Z.getArticleURL(O.BhN.SOUNDBOARD)
+          helpdeskArticle: C.Z.getArticleURL(g.BhN.SOUNDBOARD)
         })
       }),
       (0, n.jsx)(c.Z, {

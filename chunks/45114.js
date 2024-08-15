@@ -6,13 +6,13 @@ return h;
 return T;
   },
   FT: function() {
-return I;
+return m;
   },
   In: function() {
 return d;
   },
   Ju: function() {
-return m;
+return I;
   },
   U6: function() {
 return _;
@@ -118,7 +118,7 @@ windowId: t
   });
 }
 
-function m(e, t, n) {
+function I(e, t, n) {
   r.Z.dispatch({
 type: 'GUILD_FEATURE_ACK',
 id: e,
@@ -128,7 +128,7 @@ local: !1
   });
 }
 
-function I(e, t) {
+function m(e, t) {
   var n;
   if (null != (null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id))
 r.Z.dispatch({

@@ -21,16 +21,16 @@ var n = t(735250),
   C = t(921813),
   m = t(935147),
   A = t(246946),
-  g = t(25990),
-  O = t(594174),
+  O = t(25990),
+  g = t(594174),
   h = t(74538),
   p = t(695346),
   R = t(265159),
   x = t(532495);
 
 function M() {
-  let e = (0, o.e7)([O.default], () => {
-let e = O.default.getCurrentUser();
+  let e = (0, o.e7)([g.default], () => {
+let e = g.default.getCurrentUser();
 return r()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
   });
   a.useEffect(() => {
@@ -40,7 +40,7 @@ return r()(null != e, 'UserSettingsProfileCustomization: user cannot be undefine
 {
   pendingBio: t,
   ...i
-} = (0, o.cj)([g.Z], () => g.Z.getAllPending()),
+} = (0, o.cj)([O.Z], () => O.Z.getAllPending()),
 M = p.dN.useSetting() && null != t ? S.ZP.parse(void 0, t).content : t,
 f = h.ZP.canUsePremiumProfileCustomization(e),
 {

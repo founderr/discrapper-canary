@@ -18,8 +18,8 @@ var r, i, a = n(735250),
   f = n(906732),
   h = n(385499),
   p = n(979264),
-  m = n(372900),
-  I = n(477734),
+  I = n(372900),
+  m = n(477734),
   T = n(184301),
   g = n(768581),
   S = n(463396),
@@ -56,7 +56,7 @@ function R(e) {
   renderRemixTag: U = !1,
   decorations: w
 } = e,
-x = s.useContext(m.Z),
+x = s.useContext(I.Z),
 G = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : x,
 {
   analyticsLocations: k
@@ -68,7 +68,7 @@ G = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : x,
 } = r,
 H = null != i.messageReference && null != i.webhookId && i.hasFlag(N.iLy.IS_CROSSPOST),
 Z = (0, c.e7)([_.Z], () => _.Z.roleStyle),
-Y = (0, I.X$)(),
+Y = (0, m.X$)(),
 j = s.useMemo(() => ({
   source: N.jXE.CHANNEL,
   messageId: i.id,

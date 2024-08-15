@@ -31,19 +31,19 @@ function _(e) {
 h = (0, l.bp)(),
 p = a ? () => c() : () => s(!e.enabled, h),
 {
-  Component: m,
-  play: I,
+  Component: I,
+  play: m,
   events: T
 } = (0, o.o)(f || n ? 'disable' : 'enable');
-  return i.useEffect(() => () => I(), [
+  return i.useEffect(() => () => m(), [
 n,
-I
+m
   ]), (0, r.jsx)(r.Fragment, {
 children: _({
   onClick: p,
   active: n,
   disabled: !n && (!d || E),
-  iconComponent: m,
+  iconComponent: I,
   label: t,
   unavailable: a,
   onMouseEnter: f ? void 0 : T.onMouseEnter,
@@ -65,8 +65,8 @@ className: E,
 channelLimitReached: f,
 channelLimit: h,
 centerButton: p = !1,
-onPopoutClick: m,
-...I
+onPopoutClick: I,
+...m
   } = e, T = p ? c.d : c.Z;
   return (0, r.jsx)(_, {
 enabled: t,
@@ -87,20 +87,20 @@ children: e => {
   } = e;
   return (0, r.jsx)(T, {
     ...o,
-    ...I,
+    ...m,
     onMouseEnter: e => {
       var t;
-      null === (t = I.onMouseEnter) || void 0 === t || t.call(I, e), null == i || i();
+      null === (t = m.onMouseEnter) || void 0 === t || t.call(m, e), null == i || i();
     },
     onMouseLeave: e => {
       var t;
-      null === (t = I.onMouseLeave) || void 0 === t || t.call(I, e), null == a || a();
+      null === (t = m.onMouseLeave) || void 0 === t || t.call(m, e), null == a || a();
     },
     isActive: t,
     className: s()(E, {
       [d.fauxDisabled]: n
     }),
-    onPopoutClick: m
+    onPopoutClick: I
   });
 }
   });

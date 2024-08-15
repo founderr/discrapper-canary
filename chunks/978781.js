@@ -18,8 +18,8 @@ var r, i, a = n(735250),
   f = n(100527),
   h = n(94795),
   p = n(327943),
-  m = n(539873),
-  I = n(207164),
+  I = n(539873),
+  m = n(207164),
   T = n(238302),
   g = n(514361),
   S = n(572397),
@@ -45,10 +45,10 @@ children: (0, a.jsx)(A.ZP.BasicAndGradient, {
 }
 
 function P() {
-  let e = (0, I.Z)();
+  let e = (0, m.Z)();
   return s.useEffect(() => {
 (0, h.nJ)(), e();
-  }, [e]), (0, a.jsx)(m.Z, {
+  }, [e]), (0, a.jsx)(I.Z, {
 isEditor: !0
   });
 }
@@ -163,22 +163,22 @@ markAsDismissed: n
   name: L.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
   value: 1
 }
-  ], []), l = (0, c.e7)([g.Z], () => g.Z.isPreview), u = (0, c.e7)([p.Z], () => p.Z.isUpsellPreview), _ = l || u, f = (0, S.J)(), m = s.useCallback(() => {
+  ], []), l = (0, c.e7)([g.Z], () => g.Z.isPreview), u = (0, c.e7)([p.Z], () => p.Z.isUpsellPreview), _ = l || u, f = (0, S.J)(), I = s.useCallback(() => {
 l && f(), u && (0, h.O7)();
   }, [
 l,
 u,
 f
-  ]), I = (0, E.Z)(null, _ ? m : C.dG4), A = s.useCallback(() => {
-(0, h.G8)(), (0, T.Mo)(), m(), null == n || n(y.L.DISMISS);
+  ]), m = (0, E.Z)(null, _ ? I : C.dG4), A = s.useCallback(() => {
+(0, h.G8)(), (0, T.Mo)(), I(), null == n || n(y.L.DISMISS);
   }, [
-m,
+I,
 n
   ]);
   return (0, a.jsx)(R.Z, {
 className: b.draggableContainer,
 children: (0, a.jsxs)('div', {
-  ref: I,
+  ref: m,
   className: b.container,
   children: [
     (0, a.jsxs)('div', {

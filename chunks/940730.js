@@ -23,19 +23,19 @@ guildId: f,
 channel: h,
 onClick: p
   } = e, {
-trackUserProfileAction: m
+trackUserProfileAction: I
   } = (0, u.KZ)(), {
-commands: I
-  } = s.Qm(h, t, n), T = i.useMemo(() => null == I ? void 0 : I.filter(e => {
+commands: m
+  } = s.Qm(h, t, n), T = i.useMemo(() => null == m ? void 0 : m.filter(e => {
 let {
   nsfw: t
 } = e;
 return !0 !== t;
-  }), [I]);
+  }), [m]);
   if (null == T || 0 === T.length)
 return null;
   let g = e => {
-null == p || p(), m({
+null == p || p(), I({
   action: 'PRESS_APP_COMMAND'
 }), l.default.track(d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
   application_id: t,

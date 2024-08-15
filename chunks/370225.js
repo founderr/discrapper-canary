@@ -26,8 +26,8 @@ var r = n(488745),
   f = n(311899),
   h = n(831280),
   p = n(221022),
-  m = n(623226),
-  I = n(66099),
+  I = n(623226),
+  m = n(66099),
   T = n(130196),
   g = n(739050),
   S = n(985265),
@@ -135,8 +135,8 @@ Z = {
   'he-IL': f.Z,
   'hr-HR': h.Z,
   'hu-HU': p.Z,
-  'it-IT': m.Z,
-  'ja-JP': I.Z,
+  'it-IT': I.Z,
+  'ja-JP': m.Z,
   'ko-KR': T.Z,
   'lt-LT': g.Z,
   'lv-LV': S.Z,
@@ -211,8 +211,8 @@ onPressChange: E,
 onPressEnd: f,
 onHoverStart: h,
 onHoverChange: p,
-onHoverEnd: m,
-onKeyDown: I,
+onHoverEnd: I,
+onKeyDown: m,
 onKeyUp: T,
 onFocus: g,
 onFocusChange: S,
@@ -272,7 +272,7 @@ onHoverStart(e) {
   !(0, B.E)() && (t.selectionManager.setFocused(!0), t.selectionManager.setFocusedKey(s)), null == h || h(e);
 },
 onHoverChange: p,
-onHoverEnd: m
+onHoverEnd: I
   }), {
 keyboardProps: K
   } = (0, B.v5)({
@@ -289,7 +289,7 @@ onKeyDown: e => {
       !v && !1 !== o && !N && C && C();
       break;
     default:
-      !N && e.continuePropagation(), null == I || I(e);
+      !N && e.continuePropagation(), null == m || m(e);
   }
 },
 onKeyUp: T

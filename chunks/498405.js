@@ -33,12 +33,12 @@ E({
   }, [n]);
   let {
 focusPath: h
-  } = _, [p, m] = r.useState(!1), [I, T] = r.useState(!1), [{
+  } = _, [p, I] = r.useState(!1), [m, T] = r.useState(!1), [{
 onItemFocusMemoizer: g,
 onItemMouseEnterMemoizer: S
   }] = r.useState(() => ({
 onItemFocusMemoizer: new s.$o(e => () => {
-  m(!0), E({
+  I(!0), E({
     type: i.B.SET_FOCUS_PATH,
     path: e.split('--')
   });
@@ -99,17 +99,17 @@ h,
 l,
 c
   ]), N = r.useCallback(() => {
-!p && m(!0);
+!p && I(!0);
   }, [p]), v = r.useCallback(e => {
 if (e.target !== e.currentTarget) {
   if (!e.currentTarget.contains(e.relatedTarget))
-    p && m(!1);
+    p && I(!1);
 }
   }, [p]), O = r.useCallback(() => {
 E({
   type: i.B.SET_FOCUS_PATH,
   path: []
-}), m(!1);
+}), I(!1);
   }, []), R = r.useCallback(e => e.every((e, t) => h[t] === e), [h]), C = r.useCallback(() => ({
 role: 'menu',
 id: t,
@@ -135,14 +135,14 @@ return {
   tabIndex: -1,
   'aria-activedescendant': R(n) ? (0, s.qR)(t, h.join('--')) : void 0,
   focusIndex: _.focusIndex,
-  isUsingKeyboardNavigation: I
+  isUsingKeyboardNavigation: m
 };
   }, [
 t,
 h,
 R,
 _.focusIndex,
-I
+m
   ]), D = r.useCallback(e => {
 let {
   path: n,
@@ -173,13 +173,13 @@ getContainerProps: C,
 getSubmenuProps: y,
 getItemProps: D,
 isFocused: R,
-isUsingKeyboardNavigation: I
+isUsingKeyboardNavigation: m
   }), [
 f,
 C,
 y,
 D,
 R,
-I
+m
   ]);
 }

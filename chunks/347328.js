@@ -23,8 +23,8 @@ user: t,
 activity: n,
 entry: h,
 display: p,
-onAction: m,
-onClose: I
+onAction: I,
+onClose: m
   } = e, T = (0, i.e7)([d.default], () => {
 var e;
 return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
@@ -38,9 +38,9 @@ return (0, r.jsx)(a.MenuItem, {
     platform: o.Z.get(E.ABu.CRUNCHYROLL).name
   }),
   action: () => {
-    null == m || m({
+    null == I || I({
       action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM'
-    }), s.Z.open(E.oAB.CONNECTIONS), null == I || I();
+    }), s.Z.open(E.oAB.CONNECTIONS), null == m || m();
   }
 });
   if (T || 'live' === p || !(0, u.gr)(h))
@@ -50,7 +50,7 @@ return null;
 id: 'watch-on-crunchyroll',
 label: f.Z.Messages.WATCH_ON_CRUNCHYROLL,
 action: () => {
-  null == m || m({
+  null == I || I({
     action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM'
   });
   let e = null;

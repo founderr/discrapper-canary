@@ -17,15 +17,15 @@ var E = e[s],
   f = n[2],
   h = n[3],
   p = n[4],
-  m = n[5],
-  I = n[6],
+  I = n[5],
+  m = n[6],
   T = n[7];
 o && (r.push(o), o = '');
 var g = null != f && null != E && E !== f,
-  S = '+' === I || '*' === I,
-  A = '?' === I || '*' === I,
+  S = '+' === m || '*' === m,
+  A = '?' === m || '*' === m,
   N = n[2] || u,
-  v = p || m;
+  v = p || I;
 r.push({
   name: h || a++,
   prefix: f || '',

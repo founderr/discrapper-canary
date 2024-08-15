@@ -21,8 +21,8 @@ var n = t(735250),
   C = t(710808),
   m = t(625205),
   A = t(325808),
-  g = t(823087),
-  O = t(546997),
+  O = t(823087),
+  g = t(546997),
   h = t(167540),
   p = t(803567),
   R = t(269876),
@@ -97,7 +97,7 @@ children: [
   (0, n.jsxs)(E.F, {
     setting: f.s6.VOICE_AND_VIDEO_MIC_TEST,
     children: [
-      (0, n.jsx)(g.Z, {}),
+      (0, n.jsx)(O.Z, {}),
       (0, n.jsx)(l.FormText, {
         className: b.marginBottom20,
         type: l.FormText.Types.DESCRIPTION,
@@ -241,7 +241,7 @@ children: [
         (0, n.jsxs)(E.F, {
           setting: f.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
           children: [
-            (0, n.jsx)(O.Z, {}),
+            (0, n.jsx)(g.Z, {}),
             (0, n.jsx)(l.FormSection, {
               className: b.marginBottom20,
               title: L.Z.Messages.FORM_LABEL_VOICE_DIAGNOSTICS,

@@ -13,10 +13,10 @@ width: _ = 16,
 height: E = 16,
 color: I = 'currentColor',
 foreground: n,
-...A
+...t
   } = e;
   return (0, s.jsxs)('svg', {
-...(0, T.Z)(A),
+...(0, T.Z)(t),
 width: _,
 height: E,
 viewBox: '0 0 16 16',

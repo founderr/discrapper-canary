@@ -1,6 +1,6 @@
 n.d(t, {
   Xj: function() {
-return I;
+return m;
   },
   fq: function() {
 return T;
@@ -30,9 +30,9 @@ let h = {
   new Date(2023, 1, 18).getTime()
 ]
   ]),
-  m = 30 * d.Z.Millis.DAY;
+  I = 30 * d.Z.Millis.DAY;
 
-function I(e) {
+function m(e) {
   let {
 forUserProfile: t
   } = e, n = (0, s.e7)([c.default], () => c.default.getCurrentUser()), r = l.c.useExperiment({
@@ -52,7 +52,7 @@ return e.type === E.ABu.PLAYSTATION_STAGING ? r : e.type === E.ABu.AMAZON_MUSIC 
 
 function T() {
   let e = (0, s.e7)([u.Z], () => u.Z.getAccounts()),
-t = I({
+t = m({
   forUserProfile: !1
 }),
 n = r.useMemo(() => {
@@ -62,7 +62,7 @@ n = r.useMemo(() => {
   return a().sortBy(o.Z.filter(t), [
 e => {
   var t;
-  return !(p.has(e.type) && Date.now() < (null !== (t = p.get(e.type)) && void 0 !== t ? t : 0) + m);
+  return !(p.has(e.type) && Date.now() < (null !== (t = p.get(e.type)) && void 0 !== t ? t : 0) + I);
 },
 e => n.has(e.type),
 e => e.hasMetadata,
