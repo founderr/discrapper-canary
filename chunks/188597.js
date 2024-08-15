@@ -148,20 +148,6 @@ channelId: n,
 guildId: r,
 data: i
   } = e, s = f.default.fromTimestamp(Date.now()), o = {
-resolve: () => {},
-reject: () => {}
-  }, u = new Promise((e, t) => {
-o.resolve = e, o.reject = t;
-  });
-  (0, h.kz)(s, {
-data: {
-  interactionType: l.B8.APPLICATION_COMMAND,
-  channelId: n
-},
-onSuccess: () => o.resolve(),
-onFailure: () => o.reject()
-  });
-  let c = {
 type: l.B8.APPLICATION_COMMAND,
 nonce: s,
 guild_id: r,
@@ -172,11 +158,11 @@ data: i
   };
   await a.tn.post({
 url: T.ANM.INTERACTIONS,
-body: c,
+body: o,
 timeout: 3000
   }, e => {
 R(s, e, t, n, r);
-  }), await u;
+  });
 }, O = (e, t, n) => {
   null == n && null != t && o.Z.sendClydeError(e, t);
 }, R = (e, t, n, r, i) => {
