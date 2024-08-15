@@ -23,8 +23,8 @@ var i = n(735250),
   S = n(692420),
   f = n(689938),
   C = n(992945);
-let N = 52,
-  A = 84,
+let N = 56,
+  A = 94,
   v = Object.freeze({
 top: 0,
 bottom: 0,
