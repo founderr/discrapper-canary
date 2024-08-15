@@ -7978,6 +7978,7 @@ e.exports = Object.freeze({
   FORM_ERROR_GENERIC_WITH_DETAILS: 'Oops! You\'ve caught an ultra rare error. This is probably our fault, so please try again or check [our status page]({statusPageURL}). ({details})',
   ERROR_GENERIC_TITLE: 'Oops, something went wrong...',
   DATE: 'Date',
+  TIME: 'Time',
   DESCRIPTION: 'Description',
   AMOUNT: 'Amount',
   PENDING: 'Pending',
