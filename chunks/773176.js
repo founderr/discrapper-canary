@@ -133,7 +133,8 @@ children: r.map(e => {
       emojiName: null == e.id ? e.surrogates : e.name,
       animated: e.animated,
       size: 'reaction',
-      alt: ''
+      alt: '',
+      className: $.emoji
     })
   }, ''.concat(null !== (a = e.id) && void 0 !== a ? a : 0, ':').concat(e.name));
 })
