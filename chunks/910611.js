@@ -24,8 +24,8 @@ var i = n(735250),
   _ = n(266076),
   f = n(565138),
   E = n(703656),
-  C = n(699516),
-  g = n(914010),
+  g = n(699516),
+  C = n(914010),
   I = n(594174),
   x = n(768581),
   T = n(63063),
@@ -117,7 +117,7 @@ handleContextMenu: d,
 handleParentClick: p,
 handleParentContextMenu: f,
 renderFollowButton: E
-  } = e, g = (0, m.KS)(t, r), {
+  } = e, C = (0, m.KS)(t, r), {
 prefix: x,
 level: T
   } = function(e, t) {
@@ -210,7 +210,7 @@ case M.d4z.GUILD_FORUM:
 case M.d4z.GUILD_MEDIA:
   return (0, i.jsxs)(a.Fragment, {
     children: [
-      D(g, t.type === M.d4z.GUILD_ANNOUNCEMENT ? R.Z.Messages.NEWS_CHANNEL : R.Z.Messages.TEXT_CHANNEL),
+      D(C, t.type === M.d4z.GUILD_ANNOUNCEMENT ? R.Z.Messages.NEWS_CHANNEL : R.Z.Messages.TEXT_CHANNEL),
       (0, i.jsx)(Z.Z.Title, {
         level: T,
         onContextMenu: d,
@@ -226,7 +226,7 @@ case M.d4z.GUILD_MEDIA:
 case M.d4z.GUILD_VOICE:
   return (0, i.jsxs)(a.Fragment, {
     children: [
-      D(g, R.Z.Messages.VOICE_CHANNEL),
+      D(C, R.Z.Messages.VOICE_CHANNEL),
       (0, i.jsx)(Z.Z.Title, {
         level: T,
         onContextMenu: d,
@@ -238,7 +238,7 @@ case M.d4z.GUILD_VOICE:
 case M.d4z.GUILD_STAGE_VOICE:
   return (0, i.jsxs)(a.Fragment, {
     children: [
-      D(g, R.Z.Messages.STAGE_CHANNEL),
+      D(C, R.Z.Messages.STAGE_CHANNEL),
       (0, i.jsx)(Z.Z.Title, {
         level: T,
         onContextMenu: d,
@@ -261,7 +261,7 @@ case M.d4z.PRIVATE_THREAD:
           onContextMenu: f,
           onClick: p,
           className: l()(j.parentChannelName, j.cursorPointer),
-          children: (0, h.F6)(s, I.default, C.Z)
+          children: (0, h.F6)(s, I.default, g.Z)
         }),
         (0, i.jsx)(Z.Z.Caret, {})
       ]
@@ -271,7 +271,7 @@ case M.d4z.PRIVATE_THREAD:
   return (0, i.jsxs)(a.Fragment, {
     children: [
       S,
-      D(b ? null : g, R.Z.Messages.THREAD),
+      D(b ? null : C, R.Z.Messages.THREAD),
       (0, i.jsx)(Z.Z.Title, {
         level: T,
         onContextMenu: d,
@@ -290,9 +290,9 @@ case M.d4z.GUILD_DIRECTORY:
   }) : n;
   return (0, i.jsxs)(a.Fragment, {
     children: [
-      null !== g ? (0, i.jsx)(Z.Z.Icon, {
+      null !== C ? (0, i.jsx)(Z.Z.Icon, {
         iconClassName: j.__invalid_icon,
-        icon: g,
+        icon: C,
         'aria-hidden': !0
       }) : null,
       (0, i.jsxs)(Z.Z.Title, {
@@ -373,7 +373,7 @@ guild: t,
 channel: n,
 caretPosition: a = 'left'
   } = e;
-  return (0, r.e7)([g.Z], () => g.Z.getGuildId()) !== M.I_8 || null == t ? null : (0, i.jsxs)('div', {
+  return (0, r.e7)([C.Z], () => C.Z.getGuildId()) !== M.I_8 || null == t ? null : (0, i.jsxs)('div', {
 className: j.guildBreadcrumbContainer,
 children: [
   'left' === a && (0, i.jsx)(Z.Z.Caret, {

@@ -16,20 +16,20 @@ E = null !== (o = null !== (s = null == c ? void 0 : c.id) && void 0 !== s ? s :
 f = n.id === t.getId(),
 h = l && !u,
 p = null != E && E === (null == i ? void 0 : i.sync_id),
-m = (null == _ ? void 0 : _.party) != null && (null == i ? void 0 : null === (a = i.party) || void 0 === a ? void 0 : a.id) === _.party.id,
-I = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id;
+I = (null == _ ? void 0 : _.party) != null && (null == i ? void 0 : null === (a = i.party) || void 0 === a ? void 0 : a.id) === _.party.id,
+m = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id;
   return {
 user: n,
 activity: i,
 hasSpotifyAccount: l,
 canPlaySpotify: u,
 notPlayable: h,
-syncingWithParty: m,
-syncingWithUser: I,
+syncingWithParty: I,
+syncingWithUser: m,
 isCurrentUser: f,
 currentUserTrackId: E,
 playingSameTrack: p,
 playDisabled: f || h || p,
-syncDisabled: f || I || m
+syncDisabled: f || m || I
   };
 }

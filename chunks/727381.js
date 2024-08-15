@@ -19,14 +19,14 @@ var a = n(120356),
   _ = n(908474),
   f = n(467014),
   E = n(689938),
-  C = n(446926);
+  g = n(446926);
 
-function g() {
+function C() {
   return (0, i.jsxs)('div', {
-className: C.header,
+className: g.header,
 children: [
   (0, i.jsxs)('div', {
-    className: C.headerTitle,
+    className: g.headerTitle,
     children: [
       (0, i.jsx)(u.Z, {
         width: 16,
@@ -41,8 +41,8 @@ children: [
   (0, i.jsx)('div', {
     children: (0, i.jsx)(r.KeyCombo, {
       shortcut: 'esc',
-      keyClassName: C.keyComboInner,
-      className: C.keyComboContainer
+      keyClassName: g.keyComboInner,
+      className: g.keyComboContainer
     })
   })
 ]
@@ -61,11 +61,11 @@ n,
 t
   ]);
   return null == I || null == x ? null : (0, i.jsxs)('div', {
-className: s()(C.container, u),
+className: s()(g.container, u),
 children: [
-  (0, i.jsx)(g, {}),
+  (0, i.jsx)(C, {}),
   (0, i.jsxs)(r.Scroller, {
-    className: C.innerContainer,
+    className: g.innerContainer,
     children: [
       (0, i.jsx)(_.Z, {
         member: x

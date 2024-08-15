@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(103575),
   f = n(271383),
   E = n(709586),
-  C = n(5192),
-  g = n(590415),
+  g = n(5192),
+  C = n(590415),
   I = n(410370);
 let x = a.memo(function(e) {
 let {
@@ -41,7 +41,7 @@ return (0, i.jsxs)('div', {
       className: I.text,
       variant: 'text-sm/normal',
       color: 'header-primary',
-      children: C.ZP.getName(t, n, a)
+      children: g.ZP.getName(t, n, a)
     }),
     s ? (0, i.jsx)(E.Z, {
       className: I.boost,
@@ -61,7 +61,7 @@ let {
   user: o,
   blocked: c,
   rtsState: u
-} = n, h = u === g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, m = u === g.xO.REQUESTED_TO_SPEAK || h;
+} = n, h = u === C.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, m = u === C.xO.REQUESTED_TO_SPEAK || h;
 return (0, i.jsxs)(i.Fragment, {
   children: [
     (0, i.jsxs)('div', {
@@ -104,7 +104,7 @@ channel: s
   } = e, {
 user: r,
 blocked: u
-  } = t, E = s.getGuildId(), C = (0, m.bp)(), g = (0, c.e7)([f.ZP], () => {
+  } = t, E = s.getGuildId(), g = (0, m.bp)(), C = (0, c.e7)([f.ZP], () => {
 var e;
 return null != E && (null === (e = f.ZP.getMember(E, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null;
   }, [
@@ -132,13 +132,13 @@ r.id
       showChatItems: !1
     });
   }, {
-    context: C
+    context: g
   });
 }, [
   r,
   E,
   s,
-  C
+  g
 ]),
 N = a.useCallback(e => (0, i.jsx)(_.Z, {
   ...e,
@@ -161,8 +161,8 @@ position: 'right',
 spacing: 8,
 children: e => (0, i.jsx)(d.Clickable, {
   className: l()(I.tileContainer, {
-    [I.singleIcon]: g || u,
-    [I.doubleIcon]: g && u
+    [I.singleIcon]: C || u,
+    [I.doubleIcon]: C && u
   }),
   onContextMenu: x,
   ...e,
@@ -170,7 +170,7 @@ children: e => (0, i.jsx)(d.Clickable, {
     participant: t,
     guildId: E,
     channel: s,
-    isPremium: g
+    isPremium: C
   })
 })
   });

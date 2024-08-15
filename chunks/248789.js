@@ -22,12 +22,12 @@ function f(e) {
 channelId: t,
 warningId: f,
 senderId: E
-  } = e, C = a.useCallback(() => {
+  } = e, g = a.useCallback(() => {
 (0, u.T)(t, [f]);
   }, [
 t,
 f
-  ]), g = (0, l.e7)([c.Z], () => c.Z.isBlocked(E)), I = a.useMemo(() => ({
+  ]), C = (0, l.e7)([c.Z], () => c.Z.isBlocked(E)), I = a.useMemo(() => ({
 channelId: t,
 warningId: f,
 senderId: E,
@@ -83,15 +83,15 @@ T = a.useCallback(() => {
   x
 ]),
 N = a.useCallback(() => {
-  C(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
+  g(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
 }, [
-  C,
+  g,
   x
 ]),
 v = a.useCallback(() => {
-  C(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+  g(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
 }, [
-  C,
+  g,
   x
 ]),
 S = a.useCallback(() => {
@@ -131,13 +131,13 @@ senderId: E,
 warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
 header: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
 description: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
-onDismiss: C,
+onDismiss: g,
 buttons: [{
     text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
     color: r.Button.Colors.BRAND,
     onclick: T
   },
-  ...g ? [] : [{
+  ...C ? [] : [{
     text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON,
     color: r.Button.Colors.PRIMARY,
     onclick: S

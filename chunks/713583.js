@@ -20,7 +20,7 @@ function d(e) {
   activeOption: h,
   optionStates: p
 } = e,
-m = i.useCallback(e => {
+I = i.useCallback(e => {
   var t;
   let i = null == f ? void 0 : null === (t = f.rootCommand) || void 0 === t ? void 0 : t.id;
   if (null == i) {
@@ -47,7 +47,7 @@ a = h.displayName, d = h.displayDescription, _ = (null == e ? void 0 : e.success
 a = ''.concat(l.GI).concat(f.displayName), d = f.displayDescription, _ = null;
   return (0, r.jsxs)('div', {
 className: s()(E, c.bar),
-onContextMenu: m,
+onContextMenu: I,
 children: [
   (0, r.jsx)('span', {
     className: c.name,

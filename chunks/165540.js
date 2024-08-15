@@ -13,8 +13,8 @@ var i = n(735250),
   _ = n(827498),
   f = n(663924),
   E = n(998698),
-  C = n(873387),
-  g = n(605236),
+  g = n(873387),
+  C = n(605236),
   I = n(291407),
   x = n(981631),
   T = n(314734),
@@ -28,7 +28,7 @@ animateRef: s
   } = e, m = (0, r.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n), {
 Component: f,
 events: E,
-play: C
+play: g
   } = (0, c.w)();
   a.useImperativeHandle(s, () => ({
 animate: () => {
@@ -36,13 +36,13 @@ animate: () => {
 }
   }), [E]);
   let I = a.useCallback(() => {
-(0, d.yw)(x.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, g.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
+(0, d.yw)(x.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, C.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, {
   dismissAction: N.L.TAKE_ACTION
-}), h._(_._b.TEXT, n)), C();
+}), h._(_._b.TEXT, n)), g();
   }, [
 m,
 n,
-C
+g
   ]);
   return (0, i.jsx)('div', {
 className: l()(S.buttonContainer, T.t4),
@@ -77,7 +77,7 @@ t.Z = a.memo(a.forwardRef(function(e) {
 channel: t,
 type: n,
 animateRef: s
-  } = e, l = a.useRef(null), o = (0, C.g)(t), {
+  } = e, l = a.useRef(null), o = (0, g.g)(t), {
 activeCommand: c
   } = (0, r.cj)([E.Z], () => {
 var e;

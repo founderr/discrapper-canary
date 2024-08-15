@@ -19,8 +19,8 @@ var a = n(512722),
   _ = n(775666),
   f = n(423589),
   E = n(592125),
-  C = n(496675),
-  g = n(881824),
+  g = n(496675),
+  C = n(881824),
   I = n(146085),
   x = n(427679),
   T = n(354459),
@@ -41,10 +41,10 @@ onSelect: v,
 children: [
   function(e) {
     let t = (0, l.e7)([E.Z], () => E.Z.getChannel(e), [e]),
-      n = (0, l.e7)([C.Z], () => C.Z.can(I.yP, t)),
+      n = (0, l.e7)([g.Z], () => g.Z.can(I.yP, t)),
       a = (0, l.e7)([x.Z], () => x.Z.getStageInstanceByChannel(e), [e]),
       s = (0, o.bp)(),
-      c = () => null != t && (0, g.T)(t, s);
+      c = () => null != t && (0, C.T)(t, s);
     return (null == t ? void 0 : t.isGuildStageVoice()) && n ? null != a ? (0, i.jsx)(r.MenuItem, {
       id: 'edit-stage',
       label: N.Z.Messages.EDIT_STAGE_SUBTITLE,

@@ -20,8 +20,8 @@ async function p(e) {
   let t, {
   applicationId: n,
   activityChannelId: p,
-  locationObject: m,
-  analyticsLocations: I,
+  locationObject: I,
+  analyticsLocations: m,
   componentId: T
 } = e,
 g = (0, d.Z)(),
@@ -59,8 +59,8 @@ channelId: p,
 applicationId: n,
 isStart: !1,
 embeddedActivitiesManager: g,
-analyticsLocations: I,
-locationObject: m,
+analyticsLocations: m,
+locationObject: I,
 componentId: T
   });
 }

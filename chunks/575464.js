@@ -25,8 +25,8 @@ hideDiscriminator: a,
 comparator: _,
 selected: f,
 checked: E,
-onClick: C,
-onMouseEnter: g,
+onClick: g,
+onMouseEnter: C,
 'aria-setsize': I,
 'aria-posinset': x
   } = e, T = (0, r.e7)([h.Z], () => h.Z.getStatus(t.id)), N = (0, l.JA)(String(t.id));
@@ -34,10 +34,10 @@ onMouseEnter: g,
 id: 'user-row-'.concat(n),
 className: p.friendWrapper,
 onClick: () => {
-  null != C && C(t.id);
+  null != g && g(t.id);
 },
 onMouseEnter: () => {
-  null != g && g(n);
+  null != C && C(n);
 },
 ...N,
 role: 'option',

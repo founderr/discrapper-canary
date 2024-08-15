@@ -19,8 +19,8 @@ var i, a, s, l, r, o = n(735250),
   _ = n(792125),
   f = n(600164),
   E = n(981631),
-  C = n(689938),
-  g = n(834095);
+  g = n(689938),
+  C = n(834095);
 
 function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -58,43 +58,43 @@ let {
   onClickSkipAll: r
 } = this.props, c = 'left' === t || n, u = 'center' === t || !c;
 return (0, o.jsxs)(m.Dialog, {
-  className: d()(g.popoutRoot, s),
+  className: d()(C.popoutRoot, s),
   children: [
     null != e && (0, o.jsx)(f.Z, {
-      className: g.mediaContainer,
+      className: C.mediaContainer,
       justify: c ? f.Z.Justify.START : f.Z.Justify.CENTER,
       children: e()
     }),
     (0, o.jsx)(m.H, {
       className: d()({
-        [g.titleCenter]: u,
-        [g.titleLeft]: c
+        [C.titleCenter]: u,
+        [C.titleLeft]: c
       }),
       children: i
     }),
     (0, o.jsx)('string' == typeof a ? 'p' : 'div', {
       className: d()({
-        [g.bodyCenter]: u,
-        [g.bodyLeft]: c
+        [C.bodyCenter]: u,
+        [C.bodyLeft]: c
       }),
       children: a
     }),
     (0, o.jsxs)(f.Z, {
-      className: g.buttonContainer,
+      className: C.buttonContainer,
       justify: c ? f.Z.Justify.BETWEEN : f.Z.Justify.CENTER,
       children: [
         (0, o.jsx)(m.Button, {
           size: m.ButtonSizes.SMALL,
           onClick: this.handleDismiss,
-          children: C.Z.Messages.TUTORIAL_CLOSE
+          children: g.Z.Messages.TUTORIAL_CLOSE
         }),
         (0, o.jsx)(m.Button, {
           size: m.ButtonSizes.SMALL,
           look: m.Button.Looks.BLANK,
           onClick: r,
           color: (0, h.ap)(l) ? m.Button.Colors.PRIMARY : m.Button.Colors.WHITE,
-          className: c ? g.buttonSkipLeftAlign : g.buttonSkipCenterAlign,
-          children: C.Z.Messages.SKIP_ALL_TIPS
+          className: c ? C.buttonSkipLeftAlign : C.buttonSkipCenterAlign,
+          children: g.Z.Messages.SKIP_ALL_TIPS
         })
       ]
     })
@@ -162,16 +162,16 @@ super(...e), I(this, 'onClickComplete', e => {
   return (0, o.jsx)(x, {
     ...this.props,
     className: d()({
-      [g.bottom]: 'bottom' === n,
-      [g.contentNarrowNoMedia]: !a && !r,
-      [g.contentNarrowWithMedia]: !a && r,
-      [g.contentWideNoMedia]: a && !r,
-      [g.contentWideWithMedia]: a && r,
-      [g.right]: 'right' === n,
-      [g.top]: 'top' === n,
-      [g.left]: 'left' === n,
-      [g.arrowAlignmentTop]: 'top' === s,
-      [g.arrowAlignmentMiddle]: 'middle' === s,
+      [C.bottom]: 'bottom' === n,
+      [C.contentNarrowNoMedia]: !a && !r,
+      [C.contentNarrowWithMedia]: !a && r,
+      [C.contentWideNoMedia]: a && !r,
+      [C.contentWideWithMedia]: a && r,
+      [C.right]: 'right' === n,
+      [C.top]: 'top' === n,
+      [C.left]: 'left' === n,
+      [C.arrowAlignmentTop]: 'top' === s,
+      [C.arrowAlignmentMiddle]: 'middle' === s,
       'force-theme': null != i
     }, (0, _.Q)(i)),
     onClickComplete: () => this.onClickComplete(t),

@@ -91,9 +91,9 @@ for (var E, f = a[Symbol.iterator](); !(l = (E = f.next()).done); l = !0) {
   var h = E.value,
     p = h.endsWith('?') && h.length > 1;
   p && (h = h.slice(0, -1));
-  var m = _(h),
-    I = i[m];
-  (1 === s || !I) && (n ? r.key = m : r.which = d(h)), I && (r[I] = !p || null);
+  var I = _(h),
+    m = i[I];
+  (1 === s || !m) && (n ? r.key = I : r.which = d(h)), m && (r[m] = !p || null);
 }
   } catch (e) {
 u = !0, c = e;

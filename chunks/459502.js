@@ -21,10 +21,10 @@ var a = n(442837),
 function f(e) {
   let {
 channelId: t
-  } = e, f = (0, a.e7)([o.Z], () => o.Z.getChannel(t), [t]), E = (0, d.sz)(t), C = null != (0, d.qY)(t), {
-canManageGuildEvent: g
+  } = e, f = (0, a.e7)([o.Z], () => o.Z.getChannel(t), [t]), E = (0, d.sz)(t), g = null != (0, d.qY)(t), {
+canManageGuildEvent: C
   } = (0, r.XJ)(f), I = (0, a.cj)([u.ZP], () => E.reduce((e, t) => (e[t.id] = u.ZP.getUserCount(t.id, (0, h.DK)(t)), e), {}));
-  return E.length < 1 || C ? null : (0, i.jsx)(i.Fragment, {
+  return E.length < 1 || g ? null : (0, i.jsx)(i.Fragment, {
 children: E.map(e => (0, i.jsx)(m.Z, {
   icon: (0, i.jsx)(l.CalendarIcon, {
     size: 'custom',
@@ -33,7 +33,7 @@ children: E.map(e => (0, i.jsx)(m.Z, {
     width: 20
   }),
   color: s.Z.unsafe_rawColors.GREEN_360.css,
-  title: (g(e) ? p.Z.Messages.GUILD_EVENT_START_PROMPT : p.Z.Messages.GUILD_EVENT_UPCOMING_PROMPT).format({
+  title: (C(e) ? p.Z.Messages.GUILD_EVENT_START_PROMPT : p.Z.Messages.GUILD_EVENT_UPCOMING_PROMPT).format({
     eventName: e.name
   }),
   description: p.Z.Messages.GUILD_EVENT_START_PROMPT_DESCRIPTION.format({
@@ -41,7 +41,7 @@ children: E.map(e => (0, i.jsx)(m.Z, {
   }),
   onClick: () => {
     var t;
-    g(t = e) ? (0, l.openModalLazy)(async () => {
+    C(t = e) ? (0, l.openModalLazy)(async () => {
       let {
         default: e
       } = await Promise.all([

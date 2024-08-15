@@ -19,7 +19,7 @@ interactionUsernameProfile: d,
 interactionAvatarProfile: h,
 interactionData: m,
 setPopout: p
-  } = e, _ = (0, s.e7)([l.Z], () => l.Z.isBlockedForMessage(n), [n]), f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), E = (0, o.Nk)(n.interaction, c, d, p), C = (0, o.NU)(h, p), g = (0, o.Xn)(m, p), I = a.useCallback(() => p({
+  } = e, _ = (0, s.e7)([l.Z], () => l.Z.isBlockedForMessage(n), [n]), f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id), E = (0, o.Nk)(n.interaction, c, d, p), g = (0, o.NU)(h, p), C = (0, o.Xn)(m, p), I = a.useCallback(() => p({
 interactionUsernameProfile: !1,
 interactionAvatarProfile: !1,
 interactionData: !1
@@ -32,9 +32,9 @@ isInteractionUserBlocked: _,
 showAvatarPopout: h,
 showUsernamePopout: d,
 showDataPopout: m,
-onClickAvatar: C,
+onClickAvatar: g,
 onClickUsername: E,
-onClickCommand: g,
+onClickCommand: C,
 onUserContextMenu: f,
 onPopoutRequestClose: I
   });

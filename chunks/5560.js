@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(819640),
   f = n(451478),
   E = n(21825),
-  C = n(232495),
-  g = n(10401),
+  g = n(232495),
+  C = n(10401),
   I = n(216743);
 
 function x(e, t, n) {
@@ -82,7 +82,7 @@ m.Z.suppressAll();
 let {
   tutorialId: e
 } = this.props;
-return (0, C.k)(e);
+return (0, g.k)(e);
   }
   render() {
 let {
@@ -103,10 +103,10 @@ let {
   popoutPosition: _
 } = s, {
   offsetX: f,
-  offsetY: C
-} = this.state, g = {
+  offsetY: g
+} = this.state, C = {
   left: null != f ? a.x + f : void 0,
-  top: null != C ? a.y + C : void 0
+  top: null != g ? a.y + g : void 0
 }, x = e => {
   let t = n && !e;
   return !0 !== u ? null : (0, i.jsxs)('div', {
@@ -152,7 +152,7 @@ return (0, i.jsx)(p.ZP, {
     return (0, i.jsx)(h.Clickable, {
       ...e,
       className: I.indicator,
-      style: g,
+      style: C,
       children: (0, i.jsxs)('div', {
         className: l()(I.animationContainer, T(n)),
         children: [
@@ -185,13 +185,13 @@ tutorialData: t,
 windowFocused: n,
 shouldShowAny: a
   } = (0, d.cj)([
-g.Z,
+C.Z,
 f.Z,
 _.Z
   ], () => ({
-indicators: g.Z.getIndicators(),
-tutorialData: g.Z.getData(),
-shouldShowAny: g.Z.shouldShowAnyIndicators() && !_.Z.hasLayers(),
+indicators: C.Z.getIndicators(),
+tutorialData: C.Z.getData(),
+shouldShowAny: C.Z.shouldShowAnyIndicators() && !_.Z.hasLayers(),
 windowFocused: f.Z.isFocused()
   }));
   return a ? (0, i.jsx)(i.Fragment, {

@@ -1,7 +1,9 @@
 n.d(t, {
-	Z: function () {
-		return r;
-	}
+  Z: function() {
+return r;
+  }
 });
 var r = {};
-r = { Empty: `Tyhj\xe4` };
+r = {
+  Empty: `Tyhj\xe4`
+};

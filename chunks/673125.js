@@ -10,8 +10,8 @@ var i, a, s, l, r = n(442837),
 let _ = {},
   f = {},
   E = {},
-  C = !0,
-  g = null;
+  g = !0,
+  C = null;
 
 function I(e) {
   if (null == f[e]) {
@@ -25,7 +25,7 @@ i.src = n, f[e] = i;
 }
 class x extends(i = r.ZP.Store) {
   get visibleOverlayCanvas() {
-return C;
+return g;
   }
   getDrawables(e) {
 return null != _[e] ? _[e] : [];
@@ -37,7 +37,7 @@ return f[e];
 return E[e];
   }
   getDrawMode() {
-return g;
+return C;
   }
 }
 l = 'SharedCanvasStore', (s = 'displayName') in(a = x) ? Object.defineProperty(a, s, {
@@ -116,11 +116,11 @@ if (null != _[n]) {
 let {
   drawMode: t
 } = e;
-g = t;
+C = t;
   },
   TOGGLE_OVERLAY_CANVAS: function(e) {
 let {} = e;
-C = !C;
+g = !g;
   }
 });
 t.Z = T;

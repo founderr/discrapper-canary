@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(471445),
   f = n(95398),
   E = n(905405),
-  C = n(255269),
-  g = n(937889),
+  g = n(255269),
+  C = n(937889),
   I = n(703656),
   x = n(359110),
   T = n(695346),
@@ -48,8 +48,8 @@ searchResults: _,
 blockCount: f,
 onChangePage: E
   } = e, {
-offset: C,
-totalResults: g,
+offset: g,
+totalResults: C,
 isSearching: x,
 showBlockedResults: T
   } = n, N = a.useCallback(e => {
@@ -129,11 +129,11 @@ return (0, i.jsx)(U, {
   highlighter: H,
   startIndex: a,
   resultRefs: b,
-  totalResults: g,
+  totalResults: C,
   scrollTo: p,
   searchId: s,
   renderEmbeds: l,
-  offset: C,
+  offset: g,
   jumpToMessage: S,
   listNavigator: k,
   favoriteSearch: B
@@ -175,8 +175,8 @@ children: [
   }) : null,
   !x && !B && (0, i.jsx)(j.Z, {
     changePage: N,
-    offset: C,
-    totalResults: g,
+    offset: g,
+    totalResults: C,
     pageLength: P.vpv
   })
 ]
@@ -244,7 +244,7 @@ if (null != t && !!Z.Z.can(P.Plq.VIEW_CHANNEL, t))
   (0, x.Kh)(t.id);
   }, []), H = null != l ? (0, p.F6)(l, R.default, A.Z, !1) : '???', G = D && null != l.guild_id ? null === (t = S.Z.getGuild(l.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == l ? void 0 : l.parent_id) != null ? v.Z.getChannel(l.parent_id) : null, F = null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : null, W = null !== (s = (0, _.KS)(l)) && void 0 !== s ? s : o.TextIcon, z = Z.Z.can(P.Plq.MANAGE_MESSAGES, l), {
 content: Y
-  } = (0, g.ZP)({
+  } = (0, C.ZP)({
 content: H,
 embeds: []
   }, {
@@ -261,7 +261,7 @@ F,
 G
   ].filter(e => null != e).join(', ');
   return (0, i.jsx)(f.a.Provider, {
-value: (0, C.Z)(U, z),
+value: (0, g.Z)(U, z),
 children: (0, i.jsxs)('ul', {
   role: 'group',
   className: y.searchResultGroup,

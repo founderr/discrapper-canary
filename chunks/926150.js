@@ -19,8 +19,8 @@ var a = n(442837),
   _ = n(681837),
   f = n(91433),
   E = n(900927),
-  C = n(678738),
-  g = n(502762),
+  g = n(678738),
+  C = n(502762),
   I = n(530),
   x = n(7242),
   T = n(827313),
@@ -76,7 +76,7 @@ children: [
       ]
     })
   }),
-  O === S.OGo.PENDING_INCOMING && (0, i.jsx)(g.Z.Overlay, {
+  O === S.OGo.PENDING_INCOMING && (0, i.jsx)(C.Z.Overlay, {
     children: (0, i.jsx)(f.Z, {
       user: t,
       channelId: b.id
@@ -94,10 +94,10 @@ children: [
     channelId: b.id,
     className: A.activity
   }),
-  (0, i.jsxs)(g.Z.Overlay, {
+  (0, i.jsxs)(C.Z.Overlay, {
     className: A.overlay,
     children: [
-      !y && (null == M ? void 0 : M.bio) != null && (null == M ? void 0 : M.bio) !== '' && (0, i.jsx)(C.Z, {
+      !y && (null == M ? void 0 : M.bio) != null && (null == M ? void 0 : M.bio) !== '' && (0, i.jsx)(g.Z, {
         heading: Z.Z.Messages.USER_POPOUT_ABOUT_ME,
         headingColor: 'header-primary',
         children: (0, i.jsx)(h.Z, {
@@ -112,7 +112,7 @@ children: [
         commandIds: D.popularApplicationCommandIds,
         channel: b
       }),
-      (0, i.jsx)(C.Z, {
+      (0, i.jsx)(g.Z, {
         heading: t.bot ? Z.Z.Messages.BOT_PROFILE_CREATED_ON : Z.Z.Messages.USER_PROFILE_MEMBER_SINCE,
         headingColor: 'header-primary',
         children: (0, i.jsx)(E.Z, {

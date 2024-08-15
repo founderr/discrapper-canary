@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(352736),
   f = n(937889),
   E = n(739566),
-  C = n(267128),
-  g = n(507418),
+  g = n(267128),
+  C = n(507418),
   I = n(348238),
   x = n(981631),
   T = n(689938);
@@ -97,7 +97,7 @@ j
 referencedUsernameProfile: !1,
 referencedAvatarProfile: !1
   }), [M]), B = (0, E.Uj)(n);
-  return (0, i.jsx)(C.Z, {
+  return (0, i.jsx)(g.Z, {
 repliedAuthor: R,
 baseMessage: n,
 channel: v,
@@ -108,7 +108,7 @@ compact: S,
 isReplyAuthorBlocked: O,
 showAvatarPopout: A,
 showUsernamePopout: Z,
-renderPopout: g.Z,
+renderPopout: C.Z,
 onClickAvatar: U,
 onClickUsername: k,
 onClickReply: D,

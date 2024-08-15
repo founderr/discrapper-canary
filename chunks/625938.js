@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(768581),
   f = n(906605),
   E = n(106301),
-  C = n(833858),
-  g = n(866071),
+  g = n(833858),
+  C = n(866071),
   I = n(223135),
   x = n(981631),
   T = n(231338),
@@ -46,7 +46,7 @@ return (0, i.jsx)(d.Tooltip, {
 let {
   currentStatus: t,
   channel: s
-} = e, r = a.useRef(E.Z.getRecentCustomStatuses()), Z = a.useRef((0, m.un)(u.z.HANG_STATUS_NEW_BADGE)).current, A = (0, C.V)(), [M, b] = a.useState(null != t ? t : null), R = (0, c.e7)([p.default], () => p.default.getCurrentUser()), j = () => {
+} = e, r = a.useRef(E.Z.getRecentCustomStatuses()), Z = a.useRef((0, m.un)(u.z.HANG_STATUS_NEW_BADGE)).current, A = (0, g.V)(), [M, b] = a.useState(null != t ? t : null), R = (0, c.e7)([p.default], () => p.default.getCurrentUser()), j = () => {
   !Z && (0, m.EW)(u.z.HANG_STATUS_NEW_BADGE);
 }, L = (e, t) => {
   e.stopPropagation(), (0, f.Zx)(t, !0), j();
@@ -190,7 +190,7 @@ return (0, i.jsxs)('div', {
           children: [
             r.current.map((e, n) => {
               let a = e.status === (null == t ? void 0 : t.details) && o().isEqual(e.emoji, null == t ? void 0 : t.emoji),
-                r = null != e.emoji && !(0, g.K)(e.emoji, s);
+                r = null != e.emoji && !(0, C.K)(e.emoji, s);
               return (0, i.jsxs)(d.Clickable, {
                 'aria-label': e.status,
                 onMouseEnter: () => k(e),
