@@ -1,29 +1,46 @@
 let r;
 n(47120), n(724458);
-var i, a, s, o, l = n(442837),
-  u = n(570140),
-  c = n(180335);
-let d = new Map(),
-  _ = new Map(),
-  E = new Map(),
-  f = !1,
-  h = !1;
+var i, a = n(442837),
+  s = n(570140),
+  o = n(180335);
 
-function p(e) {
-  e(d), d = new Map(d);
+function l(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+value: n,
+enumerable: !0,
+configurable: !0,
+writable: !0
+  }) : e[t] = n, e;
 }
-class I extends(i = l.ZP.Store) {
+let u = {
+hidden: !1
+  },
+  c = new Map(),
+  d = new Map(),
+  _ = new Map(),
+  E = !1;
+
+function f(e) {
+  e(c), c = new Map(c);
+}
+class h extends(i = a.ZP.PersistedStore) {
+  initialize(e) {
+null != e && (u = e);
+  }
+  getState() {
+return u;
+  }
   getFeeds() {
-return d;
+return c;
   }
   getFeed(e) {
-return d.get(e);
+return c.get(e);
   }
   getFeedState(e) {
-return _.get(e);
+return d.get(e);
   }
   getLastFeedFetchDate(e) {
-return E.get(e);
+return _.get(e);
   }
   getFilters() {
 return r;
@@ -33,7 +50,7 @@ var t;
 return null === (t = this.getFeed(e)) || void 0 === t ? void 0 : t.request_id;
   }
   getDebugImpressionCappingDisabled() {
-return h;
+return E;
   }
   getMatchingInboxEntry(e) {
 let {
@@ -47,34 +64,29 @@ let a = i.entries.reduce((e, t) => t.content.author_id === n ? [
   ...e,
   t.content
 ] : [...e], []);
-return (0, c.vu)(a, t);
+return (0, o.vu)(a, t);
   }
   get hidden() {
-return f;
+return u.hidden;
   }
 }
-o = 'ContentInventoryStore', (s = 'displayName') in(a = I) ? Object.defineProperty(a, s, {
-  value: o,
-  enumerable: !0,
-  configurable: !0,
-  writable: !0
-}) : a[s] = o, t.Z = new I(u.Z, {
+l(h, 'displayName', 'ContentInventoryStore'), l(h, 'persistKey', 'ContentInventoryStore'), t.Z = new h(s.Z, {
   CONNECTION_OPEN: function() {
-d = new Map(), f = !1;
+c = new Map();
   },
   CONTENT_INVENTORY_SET_FEED: function(e) {
 let {
   feedId: t,
   feed: n
 } = e;
-p(e => e.set(t, n)), E.set(t, new Date());
+f(e => e.set(t, n)), _.set(t, new Date());
   },
   CONTENT_INVENTORY_SET_FEED_STATE: function(e) {
 let {
   feedId: t,
   state: n
 } = e;
-_.set(t, n);
+d.set(t, n);
   },
   CONTENT_INVENTORY_SET_FILTERS: function(e) {
 let {
@@ -86,14 +98,14 @@ r = t;
 let {
   feedId: t
 } = e;
-if (!d.has(t))
+if (!c.has(t))
   return !1;
-p(e => e.delete(t));
+f(e => e.delete(t));
   },
   CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: function() {
-f = !f;
+u.hidden = !u.hidden;
   },
   CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: function() {
-h = !h;
+E = !E;
   }
 });

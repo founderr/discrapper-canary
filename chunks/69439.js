@@ -78,9 +78,9 @@ isEnrolling: M
   } = (0, r.cj)([u.Z], () => ({
 isClaiming: u.Z.isClaimingReward(C.id) || u.Z.isFetchingRewardCode(C.id),
 isEnrolling: u.Z.isEnrolling(C.id)
-  })), D = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = (null === (n = C.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = y && (null === (a = C.userStatus) || void 0 === a ? void 0 : a.claimedAt) == null, U = (0, E.iQ)(C), G = !(0, E.zi)(C), k = (0, d._Q)(C), w = (0, E.zK)(C, I.S7.IN_HOUSE_CONSOLE_QUEST), B = (0, E.Xv)(C.config), H = (0, d.Rf)(C), [V, F, Y] = (0, d.me)(C, H), W = G && V === _.LI.SELECT, z = G && !W && F.length > 1, {
-text: K,
-onClick: q
+  })), D = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, y = (null === (n = C.userStatus) || void 0 === n ? void 0 : n.completedAt) != null, j = y && (null === (a = C.userStatus) || void 0 === a ? void 0 : a.claimedAt) == null, U = (0, E.iQ)(C), G = !(0, E.zi)(C), k = (0, d._Q)(C), w = (0, E.zK)(C, I.S7.IN_HOUSE_CONSOLE_QUEST), B = (0, E.Xv)(C.config), H = (0, d.Rf)(C), [V, F, Y] = (0, d.me)(C, H), W = G && k === d.OH.ACCEPTED, z = W && V === _.LI.SELECT, K = W && !z && F.length > 1, {
+text: q,
+onClick: Q
   } = (0, h.Ks)({
 progressState: k,
 quest: C,
@@ -91,8 +91,8 @@ questContentPosition: v,
 questContentRowIndex: Z,
 inGiftInventory: !0
   }), {
-startingConsoleQuest: Q,
-startConsoleQuest: X
+startingConsoleQuest: X,
+startConsoleQuest: J
   } = (0, d.GI)({
 questId: C.id,
 beforeRequest: () => {
@@ -107,25 +107,25 @@ beforeRequest: () => {
 afterRequest: e => {
   O.stopAnimation(), A(e);
 }
-  }), J = (null === (f = C.userStatus) || void 0 === f ? void 0 : f.claimedAt) != null, $ = null;
-  return (U && j ? $ = (0, i.jsx)(l.Button, {
+  }), $ = (null === (f = C.userStatus) || void 0 === f ? void 0 : f.claimedAt) != null, ee = null;
+  return (U && j ? ee = (0, i.jsx)(l.Button, {
 color: l.ButtonColors.BRAND,
 submitting: P,
-onClick: null != q ? q : void 0,
+onClick: null != Q ? Q : void 0,
 className: p.button,
-children: K
-  }) : y ? $ = (0, i.jsx)(l.Button, {
+children: q
+  }) : y ? ee = (0, i.jsx)(l.Button, {
 color: l.ButtonColors.BRAND,
 className: p.button,
-onClick: null != q ? q : void 0,
-children: K
-  }) : G ? G && j ? $ = (0, i.jsx)(l.Button, {
+onClick: null != Q ? Q : void 0,
+children: q
+  }) : G ? G && j ? ee = (0, i.jsx)(l.Button, {
 color: l.ButtonColors.BRAND,
 submitting: P,
-onClick: null != q ? q : void 0,
+onClick: null != Q ? Q : void 0,
 className: p.button,
-children: K
-  }) : G && D && !J ? $ = W ? (0, i.jsx)(l.Select, {
+children: q
+  }) : G && D && !$ ? ee = z ? (0, i.jsx)(l.Select, {
 className: p.platformSelectorPrimary,
 isSelected: () => !1,
 options: T,
@@ -143,12 +143,12 @@ serialize: e => {
   }) : (0, E.$J)(C) && !x && V !== _.LI.DESKTOP ? R ? (0, i.jsx)(l.Button, {
 color: l.ButtonColors.PRIMARY,
 className: p.button,
-onClick: null != q ? q : void 0,
-children: K
+onClick: null != Q ? Q : void 0,
+children: q
   }) : (0, i.jsx)(l.Button, {
 color: l.ButtonColors.PRIMARY,
-onClick: X,
-disabled: Q,
+onClick: J,
+disabled: X,
 className: p.button,
 children: (0, i.jsxs)('div', {
   className: p.ctaInner,
@@ -162,24 +162,24 @@ color: l.ButtonColors.PRIMARY,
 disabled: !0,
 className: p.button,
 children: g.Z.Messages.QUEST_ACCEPTED
-  }) : G && !D && ($ = (0, i.jsx)(l.Button, {
+  }) : G && !D && (ee = (0, i.jsx)(l.Button, {
 submitting: M,
 color: l.ButtonColors.BRAND,
-onClick: null != q ? q : void 0,
+onClick: null != Q ? Q : void 0,
 className: p.button,
-children: K
-  })) : $ = (0, i.jsx)(l.Button, {
+children: q
+  })) : ee = (0, i.jsx)(l.Button, {
 color: l.ButtonColors.PRIMARY,
 disabled: !0,
 className: p.button,
 children: g.Z.Messages.QUESTS_ENDED_ON_DATE.format({
   expiryDate: b
 })
-  }), null == $) ? null : (0, i.jsxs)('div', {
+  }), null == ee) ? null : (0, i.jsxs)('div', {
 className: p.container,
 children: [
-  $,
-  z && (0, i.jsx)(m.U, {
+  ee,
+  K && (0, i.jsx)(m.U, {
     onSelect: Y,
     quest: C,
     questContent: _.jn.ACTIVITY_PANEL,
