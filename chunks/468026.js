@@ -16,8 +16,8 @@ t.default = e => {
 body: f,
 cancelText: h,
 className: p,
-confirmColor: I,
-confirmText: m = _.Z.Messages.OKAY,
+confirmColor: m,
+confirmText: I = _.Z.Messages.OKAY,
 secondaryConfirmText: T,
 onCancel: g,
 onClose: S,
@@ -36,13 +36,13 @@ onClick: () => {
 },
 className: E.secondaryButton,
 children: h
-  })), null != m && '' !== m && (n = (0, r.jsx)(s.zx, {
+  })), null != I && '' !== I && (n = (0, r.jsx)(s.zx, {
 type: 'submit',
-color: I,
+color: m,
 size: s.zx.Sizes.LARGE,
 className: a()(E.primaryButton, null != t ? E.gutter : null),
 autoFocus: !0,
-children: m
+children: I
   })), null != T && '' !== T && (i = (0, r.jsx)(o.P, {
 onClick: () => {
   null == S || S(), null == N || N();

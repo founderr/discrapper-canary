@@ -16,9 +16,9 @@ var r, i = n(735250),
   f = n(689938),
   h = n(791170),
   p = n(787223),
-  I = n(594402);
+  m = n(594402);
 
-function m(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -126,7 +126,7 @@ let {
   minLength: l,
   maxLength: c,
   allowOverflow: _,
-  spellCheck: m,
+  spellCheck: I,
   resizeable: T,
   className: A,
   id: N,
@@ -150,7 +150,7 @@ return (0, i.jsxs)('div', {
         (0, i.jsx)(u.t, {
           children: (0, i.jsx)(L, {
             type: 'text',
-            className: o()(p.inputDefault, h.textArea, I.scrollbarDefault, A, {
+            className: o()(p.inputDefault, h.textArea, m.scrollbarDefault, A, {
               [p.error]: b,
               [p.disabled]: n,
               [h.resizeable]: T
@@ -168,7 +168,7 @@ return (0, i.jsxs)('div', {
             autoFocus: s,
             minLength: l,
             maxLength: _ ? void 0 : c,
-            spellCheck: m,
+            spellCheck: I,
             required: C,
             onChange: this.onChange,
             onBlur: this.onBlur,
@@ -201,7 +201,7 @@ return (0, i.jsxs)('div', {
   }
   constructor(e) {
 var t;
-super(e), m(this, 'getAriaDescribedBy', () => {
+super(e), I(this, 'getAriaDescribedBy', () => {
   var e;
   let {
     maxLength: t,
@@ -209,7 +209,7 @@ super(e), m(this, 'getAriaDescribedBy', () => {
     error: r
   } = this.props, i = [], a = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
   return null != a && i.push(a), null != r ? i.push(T) : (null != t && i.push(S), null != n && i.push(g)), i.length > 0 ? i.join(' ') : void 0;
-}), m(this, 'onChange', e => {
+}), I(this, 'onChange', e => {
   let {
     onChange: t,
     name: n
@@ -217,19 +217,19 @@ super(e), m(this, 'getAriaDescribedBy', () => {
   null == t || t(e.currentTarget.value, n), this.setState({
     dirty: !0
   });
-}), m(this, 'onFocus', e => {
+}), I(this, 'onFocus', e => {
   let {
     onFocus: t,
     name: n
   } = this.props;
   null == t || t(e, n);
-}), m(this, 'onBlur', e => {
+}), I(this, 'onBlur', e => {
   let {
     onBlur: t,
     name: n
   } = this.props;
   null == t || t(e, n);
-}), m(this, 'onKeyDown', e => {
+}), I(this, 'onKeyDown', e => {
   let {
     onKeyDown: t
   } = this.props;
@@ -239,7 +239,7 @@ super(e), m(this, 'getAriaDescribedBy', () => {
 };
   }
 }
-m(A, 'contextType', c.q3), m(A, 'defaultProps', {
+I(A, 'contextType', c.q3), I(A, 'defaultProps', {
   name: '',
   disabled: !1,
   placeholder: '',

@@ -60,11 +60,11 @@ let [t, n] = e instanceof s.ZP ? [
   o.Z.can(c.Pl.MANAGE_GUILD_EXPRESSIONS, e),
   o.Z.can(t, e),
   o.Z.can(n, e)
-]), p = (0, a.e7)([l.default], () => l.default.getCurrentUser()), I = r.useCallback(e => _(e, p, u, i), [
+]), p = (0, a.e7)([l.default], () => l.default.getCurrentUser()), m = r.useCallback(e => _(e, p, u, i), [
   i,
   u,
   p
-]), m = r.useCallback(e => _(e, p, h, f), [
+]), I = r.useCallback(e => _(e, p, h, f), [
   h,
   f,
   p
@@ -74,8 +74,8 @@ return null == e ? d : {
   canCreateGuildEvent: f,
   canManageAllExpressions: u,
   canManageAllEvents: h,
-  canManageGuildExpression: I,
-  canManageGuildEvent: m
+  canManageGuildExpression: m,
+  canManageGuildEvent: I
 };
   },
   h = function(e) {

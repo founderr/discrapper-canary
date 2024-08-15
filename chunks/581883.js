@@ -19,21 +19,21 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let I = {
+let m = {
 ProtoClass: c.o8,
 proto: c.o8.create(),
 lazyLoaded: !1,
 editInfo: (0, h.JC)()
   },
-  m = {
+  I = {
 ProtoClass: u.ji,
 proto: u.ji.create(),
 lazyLoaded: !0,
 editInfo: (0, h.JC)()
   },
   T = {
-[h.yP.PRELOADED_USER_SETTINGS]: I,
-[h.yP.FRECENCY_AND_FAVORITES_SETTINGS]: m
+[h.yP.PRELOADED_USER_SETTINGS]: m,
+[h.yP.FRECENCY_AND_FAVORITES_SETTINGS]: I
   },
   g = !1;
 
@@ -106,10 +106,10 @@ return o().mapValues(T, e => {
 return T[e].editInfo.loaded;
   }
   get settings() {
-return I.proto;
+return m.proto;
   }
   get frecencyWithoutFetchingLatest() {
-return m.proto;
+return I.proto;
   }
   get wasMostRecentUpdateFromServer() {
 return g;
@@ -119,7 +119,7 @@ return T;
   }
   getGuildFolders() {
 var e;
-let t = null === (e = I.proto.guildFolders) || void 0 === e ? void 0 : e.folders;
+let t = null === (e = m.proto.guildFolders) || void 0 === e ? void 0 : e.folders;
 return null == t ? null : t.map(e => {
   var t, n, r;
   let i = null === (t = e.id) || void 0 === t ? void 0 : t.value,
@@ -175,13 +175,13 @@ return r.editInfo = {
 let {
   userSettingsProto: t
 } = e;
-null != t && (I.proto = t, a()('string' != typeof I.proto, 'UserSettingsProto cannot be a string'));
+null != t && (m.proto = t, a()('string' != typeof m.proto, 'UserSettingsProto cannot be a string'));
 let {
   proto: n,
   isDirty: r,
   cleanupFuncs: i
-} = (0, f.xt)(I.proto, E.Z[h.yP.PRELOADED_USER_SETTINGS]);
-r && N(I), I.proto = n, a()('string' != typeof I.proto, 'UserSettingsProto cannot be a string'), I.editInfo.triggeredMigrations = r, I.editInfo.cleanupFuncs = i, I.editInfo.loaded = !0, Object.values(T).forEach(e => {
+} = (0, f.xt)(m.proto, E.Z[h.yP.PRELOADED_USER_SETTINGS]);
+r && N(m), m.proto = n, a()('string' != typeof m.proto, 'UserSettingsProto cannot be a string'), m.editInfo.triggeredMigrations = r, m.editInfo.cleanupFuncs = i, m.editInfo.loaded = !0, Object.values(T).forEach(e => {
   e.lazyLoaded && (e.editInfo.loaded = !1, e.editInfo.loading = !1);
 }), A();
   },
@@ -191,7 +191,7 @@ r && N(I), I.proto = n, a()('string' != typeof I.proto, 'UserSettingsProto canno
 let {
   userSettingsProto: t
 } = e;
-I.proto = (0, f.ac)(t), a()('string' != typeof I.proto, 'UserSettingsProto cannot be a string');
+m.proto = (0, f.ac)(t), a()('string' != typeof m.proto, 'UserSettingsProto cannot be a string');
   },
   LOGOUT: function() {
 A(), Object.values(T).forEach(e => {

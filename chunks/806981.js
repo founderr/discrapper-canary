@@ -65,14 +65,14 @@ if (1 !== c[h] || 1 !== c[p]) {
   _[h] = a(n[h], c[h], this._bitLength), _[p] = a(n[p], c[p], this._bitLength), E = Math.max(_[h].length, E), E = Math.max(_[p].length, E);
   continue;
 }
-var I = [
+var m = [
   t[h],
   null,
   null,
   t[p]
 ];
-0 === t[h].y.cmp(t[p].y) ? (I[1] = t[h].add(t[p]), I[2] = t[h].toJ().mixedAdd(t[p].neg())) : 0 === t[h].y.cmp(t[p].y.redNeg()) ? (I[1] = t[h].toJ().mixedAdd(t[p]), I[2] = t[h].add(t[p].neg())) : (I[1] = t[h].toJ().mixedAdd(t[p]), I[2] = t[h].toJ().mixedAdd(t[p].neg()));
-var m = [
+0 === t[h].y.cmp(t[p].y) ? (m[1] = t[h].add(t[p]), m[2] = t[h].toJ().mixedAdd(t[p].neg())) : 0 === t[h].y.cmp(t[p].y.redNeg()) ? (m[1] = t[h].toJ().mixedAdd(t[p]), m[2] = t[h].add(t[p].neg())) : (m[1] = t[h].toJ().mixedAdd(t[p]), m[2] = t[h].toJ().mixedAdd(t[p].neg()));
+var I = [
     -3,
     -1,
     -5,
@@ -87,7 +87,7 @@ var m = [
 for (l = 0, E = Math.max(T[0].length, E), _[h] = Array(E), _[p] = Array(E); l < E; l++) {
   var g = 0 | T[0][l],
     S = 0 | T[1][l];
-  _[h][l] = m[(g + 1) * 3 + (S + 1)], _[p][l] = 0, d[h] = I;
+  _[h][l] = I[(g + 1) * 3 + (S + 1)], _[p][l] = 0, d[h] = m;
 }
   }
   var A = this.jpoint(null, null, null),

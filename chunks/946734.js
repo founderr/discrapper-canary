@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(271383),
   f = n(430824),
   E = n(594174),
-  g = n(251625),
-  C = n(823379),
+  C = n(251625),
+  g = n(823379),
   I = n(665149),
   x = n(981631),
   T = n(228168),
@@ -73,7 +73,7 @@ user: t,
 channelId: n,
 analyticsLocations: a
   }) {
-S(this, 'userId', void 0), S(this, 'user', void 0), S(this, 'channelId', void 0), S(this, 'analyticsLocations', void 0), S(this, 'generateNicknameGuildPairs', (0, g.oH)(e => {
+S(this, 'userId', void 0), S(this, 'user', void 0), S(this, 'channelId', void 0), S(this, 'analyticsLocations', void 0), S(this, 'generateNicknameGuildPairs', (0, C.oH)(e => {
   var t;
   return l()(_.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId)).toPairs().map(e => {
     let [t, n] = e;
@@ -82,7 +82,7 @@ S(this, 'userId', void 0), S(this, 'user', void 0), S(this, 'channelId', void 0)
       n.map(e => {
         var t;
         return null === (t = f.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
-      }).filter(C.lm)
+      }).filter(g.lm)
     ];
   }).value();
 })), S(this, 'renderMoreAvatars', () => (0, i.jsx)(o.TooltipContainer, {

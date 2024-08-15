@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(74538),
   h = n(357355),
   p = n(104494),
-  I = n(639119),
-  m = n(165583),
+  m = n(639119),
+  I = n(165583),
   T = n(197115),
   g = n(302945),
   S = n(631771),
@@ -59,7 +59,7 @@ backButtonText: X,
 showEnhancedUpsell: $,
 children: J,
 ...ee
-  } = e, et = null != D, en = (0, I.N)(), er = (0, p.Ng)(), ei = ((null == en ? void 0 : null === (t = en.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === z || (0, p.Wp)(er, z)) && !et, {
+  } = e, et = null != D, en = (0, m.N)(), er = (0, p.Ng)(), ei = ((null == en ? void 0 : null === (t = en.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === z || (0, p.Wp)(er, z)) && !et, {
 analyticsLocations: ea
   } = (0, d.ZP)(c.Z.PREMIUM_UPSELL_MODAL);
   i.useEffect(() => {
@@ -123,7 +123,7 @@ children: [
     className: $ ? O.enhancedContent : O.content,
     children: q ? (0, r.jsx)(l.Spinner, {}) : (0, r.jsx)(r.Fragment, {
       children: ei ? (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsx)(m.ZP, {
+        children: (0, r.jsx)(I.ZP, {
           onClose: F,
           type: y,
           subscriptionTier: null !== (a = null == en ? void 0 : null === (n = en.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : A.Si.TIER_2,

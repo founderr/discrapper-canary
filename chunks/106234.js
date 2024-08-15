@@ -23,14 +23,14 @@ f = t ? [] : E;
   t:
 for (; ++u < d;) {
   var p = e[u],
-    I = t ? t(p) : p;
-  if (p = n || 0 !== p ? p : 0, _ && I == I) {
-    for (var m = f.length; m--;)
-      if (f[m] === I)
+    m = t ? t(p) : p;
+  if (p = n || 0 !== p ? p : 0, _ && m == m) {
+    for (var I = f.length; I--;)
+      if (f[I] === m)
         continue t;
-    t && f.push(I), E.push(p);
+    t && f.push(m), E.push(p);
   } else
-    !c(f, I, n) && (f !== E && f.push(I), E.push(p));
+    !c(f, m, n) && (f !== E && f.push(m), E.push(p));
 }
   return E;
 };

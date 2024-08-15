@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(906732),
   h = n(676035),
   p = n(314897),
-  I = n(158776),
-  m = n(785717),
+  m = n(158776),
+  I = n(785717),
   T = n(277085),
   g = n(228168),
   S = n(981631),
@@ -34,14 +34,14 @@ function C(e) {
 statusActivity: a,
 profileType: h,
 editEnabled: p,
-hasEntered: I = !0,
+hasEntered: m = !0,
 animate: S = !0,
 onClose: C
   } = e, {
 analyticsLocations: y
   } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS), {
 trackUserProfileAction: D
-  } = (0, m.KZ)(), L = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), [b] = i.useState(() => new u.V7()), [M, P] = i.useState(!0), U = i.useRef(null), w = i.useRef(null), x = i.useRef(null), G = i.useRef(null), {
+  } = (0, I.KZ)(), L = (0, l.e7)([_.Z], () => _.Z.useReducedMotion), [b] = i.useState(() => new u.V7()), [M, P] = i.useState(!0), U = i.useRef(null), w = i.useRef(null), x = i.useRef(null), G = i.useRef(null), {
 emoji: k,
 state: B
   } = null != a ? a : {}, F = null != B && '' !== B ? B : null, V = null != F && F.length > 0, H = null != k, Z = H && !V, Y = H ? 1.25 : 0, j = 18 + Y, W = R + Y, K = O + Y, z = H || V, q = p && !z, Q = p && z, [X, $] = i.useState(Z), [J, ee] = i.useState(!Z), [et, en] = i.useState(!1);
@@ -49,14 +49,14 @@ state: B
 if (null == U.current || Z)
   return;
 let e = U.current.getBoundingClientRect().height;
-if ($(Z || e <= j), I) {
+if ($(Z || e <= j), m) {
   var t, n, r, i;
   let e = null !== (r = null === (t = U.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : W,
     a = null !== (i = null === (n = x.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : K;
   ee(!Z && e > a), w.current = e, G.current = a;
 }
   }, [
-I,
+m,
 Z,
 j,
 W,
@@ -261,7 +261,7 @@ function y(e) {
 user: t,
 editEnabled: n,
 ...i
-  } = e, a = (0, l.e7)([p.default], () => p.default.getId() === t.id), s = (0, h.a)(), o = (0, l.e7)([I.Z], () => I.Z.findActivity(t.id, e => {
+  } = e, a = (0, l.e7)([p.default], () => p.default.getId() === t.id), s = (0, h.a)(), o = (0, l.e7)([m.Z], () => m.Z.findActivity(t.id, e => {
 let {
   type: t
 } = e;

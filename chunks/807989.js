@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 }), n(789020), n(315314), n(610138), n(216116), n(78328), n(815648), n(47120);
 var r = n(735250);
@@ -18,7 +18,7 @@ var i = n(120356),
   f = n(981631),
   h = n(689938),
   p = n(359850);
-let I = e => {
+let m = e => {
   switch (e) {
 case u.ZC.IP_LOCATION:
   return l.GlobeEarthIcon;
@@ -29,13 +29,13 @@ default:
   }
 };
 
-function m(e) {
+function I(e) {
   var t;
   let n, {
   application: i,
   scopes: a,
   redirectUri: o,
-  approximateGuildCount: m,
+  approximateGuildCount: I,
   isEmbeddedFlow: g,
   disclosures: S
 } = e,
@@ -69,10 +69,10 @@ children: [
       date: A
     })
   }),
-  a.includes(s.x.BOT) && null != m ? (0, r.jsx)(T, {
+  a.includes(s.x.BOT) && null != I ? (0, r.jsx)(T, {
     icon: l.RobotIcon,
     text: h.Z.Messages.OAUTH2_DETAILS_GUILDS.format({
-      guildCount: m
+      guildCount: I
     })
   }) : null,
   (0, r.jsx)(T, {
@@ -81,7 +81,7 @@ children: [
   }),
   null != S ? S.map(e => {
     let t = (0, u.PM)(e),
-      n = I(e);
+      n = m(e);
     return null != n && null != t ? (0, r.jsx)(T, {
       icon: n,
       text: t

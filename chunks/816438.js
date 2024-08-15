@@ -47,8 +47,8 @@ var f = {
     styles: {}
   },
   p = [],
-  I = !1,
-  m = {
+  m = !1,
+  I = {
     state: f,
     setOptions: function(n) {
       var r = 'function' == typeof n ? n(f.options) : n;
@@ -69,16 +69,16 @@ var f = {
               var i = r({
                 state: f,
                 name: t,
-                instance: m,
+                instance: I,
                 options: void 0 === n ? {} : n
               });
               p.push(i || function() {});
             }
           });
-        }(), m.update();
+        }(), I.update();
     },
     forceUpdate: function() {
-      if (I)
+      if (m)
         return;
       var e = f.elements,
         t = e.reference,
@@ -104,24 +104,24 @@ var f = {
             state: f,
             options: c,
             name: d,
-            instance: m
+            instance: I
           }) || f);
         }
       }
     },
     update: (0, l.Z)(function() {
       return new Promise(function(e) {
-        m.forceUpdate(), e(f);
+        I.forceUpdate(), e(f);
       });
     }),
     destroy: function() {
-      T(), I = !0;
+      T(), m = !0;
     }
   };
 if (!_(e, t))
-  return m;
-m.setOptions(n).then(function(e) {
-  !I && n.onFirstUpdate && n.onFirstUpdate(e);
+  return I;
+I.setOptions(n).then(function(e) {
+  !m && n.onFirstUpdate && n.onFirstUpdate(e);
 });
 
 function T() {
@@ -129,6 +129,6 @@ function T() {
     return e();
   }), p = [];
 }
-return m;
+return I;
   };
 }

@@ -108,24 +108,24 @@ function r(e) {
   }, r._uid = c(), r;
 }
 f = r, p = n, f.prototype = Object.create(p.prototype), f.prototype.constructor = f, o(f, p);
-var f, p, I = r.prototype;
-return I.getInstance = function() {
+var f, p, m = r.prototype;
+return m.getInstance = function() {
   if (e.prototype && !e.prototype.isReactComponent)
     return this;
   var t = this.instanceRef;
   return t.getInstance ? t.getInstance() : t;
-}, I.componentDidMount = function() {
+}, m.componentDidMount = function() {
   if ('undefined' != typeof document && !!document.createElement) {
     var e = this.getInstance();
     if (t && 'function' == typeof t.handleClickOutside && (this.__clickOutsideHandlerProp = t.handleClickOutside(e), 'function' != typeof this.__clickOutsideHandlerProp))
       throw Error('WrappedComponent: ' + E + ' lacks a function for processing outside click events specified by the handleClickOutside config option.');
     this.componentNode = this.__getComponentNode(), !this.props.disableOnClickOutside && this.enableOnClickOutside();
   }
-}, I.componentDidUpdate = function() {
+}, m.componentDidUpdate = function() {
   this.componentNode = this.__getComponentNode();
-}, I.componentWillUnmount = function() {
+}, m.componentWillUnmount = function() {
   this.disableOnClickOutside();
-}, I.render = function() {
+}, m.render = function() {
   var t = this.props;
   t.excludeScrollbar;
   var n = function(e, t) {

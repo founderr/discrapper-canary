@@ -24,10 +24,10 @@ impressions: t
   } = (0, f.Xo)(e => ({
 debugTrackedData: e.debugTrackedData,
 impressions: e.impressions
-  })), n = (0, o.e7)([d.default], () => d.default.isAnalyticsDebuggerEnabled), a = (0, o.e7)([c.Z], () => c.Z.isDeveloper), [p, I] = i.useState(!1), {
-name: m,
+  })), n = (0, o.e7)([d.default], () => d.default.isAnalyticsDebuggerEnabled), a = (0, o.e7)([c.Z], () => c.Z.isDeveloper), [p, m] = i.useState(!1), {
+name: I,
 ...T
-  } = null != e ? e : {}, g = null != m;
+  } = null != e ? e : {}, g = null != I;
   return a && n ? (0, r.jsx)(u.ZP, {
 children: (0, r.jsxs)('div', {
   className: s()(h.container, {
@@ -38,7 +38,7 @@ children: (0, r.jsxs)('div', {
     (0, r.jsx)(l.Clickable, {
       className: h.minimizeButton,
       onClick: () => {
-        I(!p);
+        m(!p);
       },
       children: p ? (0, r.jsx)(_.Z, {}) : (0, r.jsx)(E.Z, {})
     }),
@@ -62,7 +62,7 @@ children: (0, r.jsxs)('div', {
               color: 'currentColor',
               className: h.iconNotTracked
             }),
-            null != m ? m : '(untracked)'
+            null != I ? I : '(untracked)'
           ]
         }),
         (0, r.jsx)('div', {

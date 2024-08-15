@@ -71,8 +71,8 @@ return e[n + (r = t).charAt(0).toUpperCase() + r.substring(1)] = e[t];
   }), e;
 }, f);
 var p = /^(matrix|translate|scale|rotate|skew)/,
-  I = /^(translate)/,
-  m = /^(rotate|skew)/,
+  m = /^(translate)/,
+  I = /^(rotate|skew)/,
   T = function(e, t) {
 return c.is.num(e) && 0 !== e ? e + t : e;
   },
@@ -115,7 +115,7 @@ function t(t) {
     else if (p.test(t)) {
       if (delete s[t], c.is.und(e))
         return;
-      var n = I.test(t) ? 'px' : m.test(t) ? 'deg' : '';
+      var n = m.test(t) ? 'px' : I.test(t) ? 'deg' : '';
       o.push(c.toArray(e)), l.push('rotate3d' === t ? function(e) {
         var t = e[0],
           r = e[1],

@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(607070),
   h = n(258609),
   p = n(382182),
-  I = n(210887),
-  m = n(592125),
+  m = n(210887),
+  I = n(592125),
   T = n(430824),
   g = n(496675),
   S = n(979651),
@@ -45,13 +45,13 @@ applicationStream: S,
 position: G,
 closePopout: k,
 updatePosition: B
-  } = e, F = (0, o.e7)([m.Z], () => {
+  } = e, F = (0, o.e7)([I.Z], () => {
 var e;
-return null !== (e = m.Z.getChannel(null == S ? void 0 : S.channelId)) && void 0 !== e ? e : null;
+return null !== (e = I.Z.getChannel(null == S ? void 0 : S.channelId)) && void 0 !== e ? e : null;
   }), V = (0, y.hf)({
 quest: T,
 location: v.jn.MEMBERS_LIST
-  }), H = (0, N.tP)(T), Z = (null == T ? void 0 : null === (t = T.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Y = (null == T ? void 0 : null === (h = T.userStatus) || void 0 === h ? void 0 : h.enrolledAt) != null, j = (null == T ? void 0 : null === (p = T.userStatus) || void 0 === p ? void 0 : p.completedAt) != null, W = (0, o.e7)([I.Z], () => I.Z.getState().theme), K = (0, l.wj)(W) ? M.BR.DARK : M.BR.LIGHT, z = (0, o.e7)([f.Z], () => f.Z.useReducedMotion), {
+  }), H = (0, N.tP)(T), Z = (null == T ? void 0 : null === (t = T.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null, Y = (null == T ? void 0 : null === (h = T.userStatus) || void 0 === h ? void 0 : h.enrolledAt) != null, j = (null == T ? void 0 : null === (p = T.userStatus) || void 0 === p ? void 0 : p.completedAt) != null, W = (0, o.e7)([m.Z], () => m.Z.getState().theme), K = (0, l.wj)(W) ? M.BR.DARK : M.BR.LIGHT, z = (0, o.e7)([f.Z], () => f.Z.useReducedMotion), {
 ref: q,
 height: Q
   } = (0, _.Z)(), [X, $] = i.useState(z), J = (0, E.Aq)(), ee = (0, s.eg)();

@@ -17,8 +17,8 @@ var t = e.width,
   f = e.hex,
   h = e.renderers,
   p = e.styles,
-  I = e.className,
-  m = e.defaultView,
+  m = e.className,
+  I = e.defaultView,
   T = (0, s.default)((0, o.Z)({
     default: {
       picker: {
@@ -103,7 +103,7 @@ var t = e.width,
   });
 return r.createElement('div', {
   style: T.picker,
-  className: 'chrome-picker ' + (void 0 === I ? '' : I)
+  className: 'chrome-picker ' + (void 0 === m ? '' : m)
 }, r.createElement('div', {
   style: T.saturation
 }, r.createElement(l.OQ, {
@@ -147,7 +147,7 @@ return r.createElement('div', {
   rgb: a,
   hsl: _,
   hex: f,
-  view: m,
+  view: I,
   onChange: n,
   disableAlpha: i
 })));

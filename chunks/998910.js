@@ -14,18 +14,18 @@ var t = '\uD800-\uDFFF',
   f = '(?:' + _ + '|' + u + ')',
   h = '(?:' + s + '(?:d|ll|m|re|s|t|ve))?',
   p = '(?:' + s + '(?:D|LL|M|RE|S|T|VE))?',
-  I = '(?:[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]|\uD83C[\uDFFB-\uDFFF])?',
-  m = '[\\ufe0e\\ufe0f]?',
+  m = '(?:[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]|\uD83C[\uDFFB-\uDFFF])?',
+  I = '[\\ufe0e\\ufe0f]?',
   T = '(?:\\u200d(?:' + [
 '[^' + t + ']',
 c,
 d
-  ].join('|') + ')' + m + I + ')*',
+  ].join('|') + ')' + I + m + ')*',
   g = '(?:' + [
 '[' + n + ']',
 c,
 d
-  ].join('|') + ')' + (m + I + T),
+  ].join('|') + ')' + (I + m + T),
   S = RegExp([
 _ + '?' + l + '+' + h + '(?=' + [
   o,

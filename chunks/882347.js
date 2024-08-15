@@ -1,6 +1,6 @@
 n.d(t, {
   p: function() {
-return m;
+return I;
   }
 }), n(789020);
 var r = n(570140),
@@ -64,7 +64,7 @@ if (null == e || null !== (s = null === (a = e.embeddedActivityConfig) || void 0
   }
   return !0;
 }
-async function I(e) {
+async function m(e) {
   let {
 application: t,
 applicationId: n,
@@ -78,6 +78,6 @@ channel: r
 });
   }));
 }
-async function m(e) {
-  return !!(await h(e) && await p(e) && await I(e)) || !1;
+async function I(e) {
+  return !!(await h(e) && await p(e) && await m(e)) || !1;
 }

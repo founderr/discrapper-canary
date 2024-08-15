@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(691251),
   h = n(536442),
   p = n(912893),
-  I = n(430824),
-  m = n(358085),
+  m = n(430824),
+  I = n(358085),
   T = n(288406),
   g = n(689938),
   S = n(269003);
@@ -33,7 +33,7 @@ let n, {
     isDisabled: E,
     showPulse: h,
     columnIndex: p,
-    rowIndex: m,
+    rowIndex: I,
     size: A,
     surrogateCodePoint: N,
     allowAnimatedEmoji: v,
@@ -41,7 +41,7 @@ let n, {
     inNitroLockedSection: R,
     ...C
   } = e,
-  y = (0, o.e7)([I.Z], () => i.type === _.B.GUILD ? I.Z.getGuild(i.guildId) : void 0, [i]);
+  y = (0, o.e7)([m.Z], () => i.type === _.B.GUILD ? m.Z.getGuild(i.guildId) : void 0, [i]);
 return (0, r.jsx)(l.FocusRing, {
   children: (0, r.jsx)('button', {
     ...C,
@@ -66,7 +66,7 @@ return (0, r.jsx)(l.FocusRing, {
         names: n
       }) : n),
       columnIndex: p,
-      rowIndex: m,
+      rowIndex: I,
       emoji: i,
       size: A,
       surrogateCodePoint: N,
@@ -84,7 +84,7 @@ emojiItemKey: a,
 isInspected: s,
 rowIndex: _,
 channelGuildId: f,
-onInspect: I,
+onInspect: m,
 onSelect: T,
 isScrolling: S,
 isUsingKeyboardNavigation: v,
@@ -115,7 +115,7 @@ n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(Z
   toggleFavorite: n
 });
   }, z = () => {
-!S.current && !v.current && I(t);
+!S.current && !v.current && m(t);
   }, q = e => {
 (0, u.jW)(e, async () => {
   let {
@@ -174,7 +174,7 @@ return (0, i.createElement)('li', {
   };
   return O ? (0, r.jsx)(l.Tooltip, {
 text: g.Z.Messages.EMOJI_FAVORITE_TOOLTIP.format({
-  key: (0, m.isMac)() ? 'Opt' : 'Alt'
+  key: (0, I.isMac)() ? 'Opt' : 'Alt'
 }),
 position: 'top',
 delay: 200,

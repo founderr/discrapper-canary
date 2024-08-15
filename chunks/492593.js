@@ -18,8 +18,8 @@ childrenSystemMessage: E,
 childrenButtons: f,
 childrenMessageContent: h,
 childrenAccessories: p,
-messageRef: I,
-focusProps: m = {
+messageRef: m,
+focusProps: I = {
   offset: {
     left: 4,
     right: 4
@@ -30,7 +30,7 @@ isSystemMessage: g,
 hasReply: S,
 ...A
   } = e, N = (0, r.jsx)(s.FocusRing, {
-...m,
+...I,
 children: (0, r.jsxs)('div', {
   className: a()(t, {
     [o.wrapper]: !0,
@@ -42,7 +42,7 @@ children: (0, r.jsxs)('div', {
     [o.isSystemMessage]: g,
     [o.hasReply]: S
   }),
-  ref: I,
+  ref: m,
   ...A,
   role: 'article',
   children: [

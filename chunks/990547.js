@@ -1,13 +1,13 @@
 let r, i;
 n.r(t), n.d(t, {
   AnalyticsActionHandlers: function() {
-return I.X;
+return m.X;
   },
   Impression: function() {
-return m.Impression;
+return I.Impression;
   },
   ImpressionGroups: function() {
-return m.A;
+return I.A;
   },
   ImpressionNames: function() {
 return T.z;
@@ -16,22 +16,22 @@ return T.z;
 return T.ImpressionSchema;
   },
   ImpressionTypes: function() {
-return m.n;
+return I.n;
   },
   NetworkActionNames: function() {
 return T.a;
   },
   StandardAnalyticsLocation: function() {
-return m.StandardAnalyticsLocation;
+return I.StandardAnalyticsLocation;
   },
   StandardAnalyticsSchemaNameMap: function() {
 return T.StandardAnalyticsSchemaNameMap;
   },
   TypedEventProperties: function() {
-return m.TypedEventProperties;
+return I.TypedEventProperties;
   },
   analyticsTrackingStoreMaker: function() {
-return I.l;
+return m.l;
   },
   encodeProperties: function() {
 return p.Z;
@@ -73,8 +73,8 @@ var a, s = n(348327),
   h = n(979675),
   p = n(947486);
 n(804098);
-var I = n(699407),
-  m = n(20281),
+var m = n(699407),
+  I = n(20281),
   T = n(525769);
 let g = 'deviceProperties',
   S = 'referralProperties',
@@ -284,7 +284,7 @@ M(function() {
   let r = {},
 i = window.GLOBAL_ENV.RELEASE_CHANNEL;
   i && (r.release_channel = i.split('-')[0]);
-  let a = parseInt((n = '318833', '318833'), 10);
+  let a = parseInt((n = '318885', '318885'), 10);
   !isNaN(a) && (r.client_build_number = a);
   let s = null == v ? void 0 : null === (e = (t = v.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
   return !isNaN(s) && (r.native_build_number = s), r.client_event_source = function() {

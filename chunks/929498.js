@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 }), n(47120);
 var r = n(470079),
@@ -17,15 +17,15 @@ var r = n(470079),
   f = n(622058),
   h = n(981631);
 let p = [],
-  I = [];
+  m = [];
 
-function m(e) {
+function I(e) {
   let {
 pastActivityEnabled: t,
 selfPastActivityEnabled: n
   } = (0, E.z)({
 location: 'useUserProfileActivity'
-  }), m = (0, a.e7)([d.default], () => d.default.getId() === e), T = t || n && m, g = (0, a.e7)([_.Z], () => _.Z.getActivities(e)), S = (0, a.e7)([s.Z], () => T ? s.Z.getUserOutbox(e) : void 0), A = (0, a.e7)([c.Z], () => c.Z.getAnyStreamForUser(e)), {
+  }), I = (0, a.e7)([d.default], () => d.default.getId() === e), T = t || n && I, g = (0, a.e7)([_.Z], () => _.Z.getActivities(e)), S = (0, a.e7)([s.Z], () => T ? s.Z.getUserOutbox(e) : void 0), A = (0, a.e7)([c.Z], () => c.Z.getAnyStreamForUser(e)), {
 live: N,
 recent: v
   } = (0, r.useMemo)(() => {
@@ -38,7 +38,7 @@ let e = (0, i.uniqWith)(g.filter(e => {
   t = null == S ? void 0 : S.entries.filter(t => (0, o.y0)(t) ? !e.some(e => null != e && (0, l.RL)(t, e)) : (0, f.R)(t) && !(0, u.kr)(t));
 return {
   live: 0 === e.length ? p : e,
-  recent: null == t || 0 === t.length ? I : t
+  recent: null == t || 0 === t.length ? m : t
 };
   }, [
 g,

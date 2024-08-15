@@ -16,8 +16,8 @@ var r, i = n(735250),
   f = n(952265),
   h = n(40851),
   p = n(314910),
-  I = n(920676),
-  m = n(981631);
+  m = n(920676),
+  I = n(981631);
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -57,12 +57,12 @@ return e;
   setupShowPopout() {
 var e, t, n;
 let r = this.getDomElement();
-null === (e = r.ownerDocument) || void 0 === e || e.addEventListener('mousedown', this.handleDocumentMouseDown, !0), null === (t = r.ownerDocument) || void 0 === t || t.addEventListener('mouseup', this.handleDocumentMouseUp, !0), this.props.closeOnScroll && (null === (n = r.ownerDocument) || void 0 === n || n.addEventListener('scroll', this.close, !0)), this.context.windowDispatch.subscribe(m.CkL.POPOUT_CLOSE, this.close), this.domElementRef.current = r, this.isValidClickStart = !1, this.forceUpdate();
+null === (e = r.ownerDocument) || void 0 === e || e.addEventListener('mousedown', this.handleDocumentMouseDown, !0), null === (t = r.ownerDocument) || void 0 === t || t.addEventListener('mouseup', this.handleDocumentMouseUp, !0), this.props.closeOnScroll && (null === (n = r.ownerDocument) || void 0 === n || n.addEventListener('scroll', this.close, !0)), this.context.windowDispatch.subscribe(I.CkL.POPOUT_CLOSE, this.close), this.domElementRef.current = r, this.isValidClickStart = !1, this.forceUpdate();
   }
   unsubscribe() {
 var e, t, n, r;
 let i = this.domElementRef.current;
-null != i && (null === (t = i.ownerDocument) || void 0 === t || t.removeEventListener('mousedown', this.handleDocumentMouseDown, !0), null === (n = i.ownerDocument) || void 0 === n || n.removeEventListener('mouseup', this.handleDocumentMouseUp, !0), null === (r = i.ownerDocument) || void 0 === r || r.removeEventListener('scroll', this.close, !0)), this.context.windowDispatch.unsubscribe(m.CkL.POPOUT_CLOSE, this.close), null === (e = this.resizeObserver) || void 0 === e || e.disconnect();
+null != i && (null === (t = i.ownerDocument) || void 0 === t || t.removeEventListener('mousedown', this.handleDocumentMouseDown, !0), null === (n = i.ownerDocument) || void 0 === n || n.removeEventListener('mouseup', this.handleDocumentMouseUp, !0), null === (r = i.ownerDocument) || void 0 === r || r.removeEventListener('scroll', this.close, !0)), this.context.windowDispatch.unsubscribe(I.CkL.POPOUT_CLOSE, this.close), null === (e = this.resizeObserver) || void 0 === e || e.disconnect();
   }
   componentWillUnmount() {
 this.unsubscribe(), this.domElementRef.current = null, this.loadingTimeout.stop(), this.validClickTimeout.stop();
@@ -148,9 +148,9 @@ super(...e), T(this, 'domElementRef', a.createRef()), T(this, 'layerRef', a.crea
   isLoading: !1,
   resizeKey: 0
 }), T(this, 'handlePopoutShow', () => {
-  this.context.windowDispatch.dispatch(m.CkL.POPOUT_SHOW);
+  this.context.windowDispatch.dispatch(I.CkL.POPOUT_SHOW);
 }), T(this, 'handlePopoutHide', () => {
-  this.context.windowDispatch.dispatch(m.CkL.POPOUT_HIDE);
+  this.context.windowDispatch.dispatch(I.CkL.POPOUT_HIDE);
 }), T(this, 'handleSetPopoutRef', e => {
   var t;
   let n = null == e ? void 0 : e.ownerDocument.defaultView;
@@ -246,5 +246,5 @@ T(S, 'defaultProps', {
   autoInvert: !1,
   nudgeAlignIntoViewport: !1,
   spacing: 0,
-  loadingComponent: (0, i.jsx)(I.x, {})
+  loadingComponent: (0, i.jsx)(m.x, {})
 }), T(S, 'contextType', h.ZP);

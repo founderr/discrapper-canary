@@ -6,7 +6,7 @@ return E;
 return h;
   },
   Lw: function() {
-return m;
+return I;
   },
   Ry: function() {
 return i;
@@ -24,7 +24,7 @@ return p;
 return u;
   },
   e8: function() {
-return I;
+return m;
   },
   tA: function() {
 return _;
@@ -84,5 +84,5 @@ let p = new Set([
   'playstation'
 ]);
 l.M7m.XBOX, l.M7m.PS5, (s = i || (i = {}))[s.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 270000] = 'CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED', s[s.CONSOLE_DEVICE_UNAVAILABLE = 270001] = 'CONSOLE_DEVICE_UNAVAILABLE', s[s.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002] = 'CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS', s[s.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003] = 'CONSOLE_DEVICE_COMMUNICATION_RESTRICTED', s[s.CONSOLE_DEVICE_INVALID_POWER_MODE = 270004] = 'CONSOLE_DEVICE_INVALID_POWER_MODE', s[s.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR = 270005] = 'CONSOLE_DEVICE_ACCOUNT_LINK_ERROR', s[s.CONSOLE_DEVICE_MAX_MEMBERS_REACHED = 270006] = 'CONSOLE_DEVICE_MAX_MEMBERS_REACHED', s[s.CONSOLE_DEVICE_BAD_COMMAND = 270007] = 'CONSOLE_DEVICE_BAD_COMMAND';
-let I = new Set([270000]),
-  m = 'console error alert';
+let m = new Set([270000]),
+  I = 'console error alert';

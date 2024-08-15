@@ -23,7 +23,7 @@ return function e(t, n, r) {
 return f;
   },
   hY: function() {
-return I;
+return m;
   },
   k1: function() {
 return T;
@@ -32,7 +32,7 @@ return T;
 return E;
   },
   wO: function() {
-return m;
+return I;
   }
 }), n(177593);
 var r = n(544891),
@@ -118,7 +118,7 @@ devices: t.body.devices
   }), t));
 }
 
-function I(e, t, n, r) {
+function m(e, t, n, r) {
   let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
 s = c.C7.PLAYER_OPEN(r, n, !1),
 {
@@ -153,7 +153,7 @@ position: null != l ? l : 0
   }), e));
 }
 
-function m(e, t) {
+function I(e, t) {
   return E.put(e, t, {
 url: c.C7.PLAYER_PAUSE
   }).then(e => (a.Z.dispatch({

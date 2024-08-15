@@ -21,8 +21,8 @@ var i = n(735250),
   _ = n(863908),
   f = n(871118),
   E = n(517525),
-  g = n(352978),
-  C = n(590076),
+  C = n(352978),
+  g = n(590076),
   I = n(507675),
   x = n(199902),
   T = n(314897),
@@ -125,7 +125,7 @@ return (0, i.jsx)(j.Z, {
   else if (null != K && !n && null != H && v.Z.supports(k.AN.VIDEO))
 return (0, i.jsxs)(i.Fragment, {
   children: [
-    null != Y ? (0, i.jsx)(C.Z, {
+    null != Y ? (0, i.jsx)(g.Z, {
       focused: O,
       channelId: Y.id,
       guildId: Y.guild_id,
@@ -133,7 +133,7 @@ return (0, i.jsxs)(i.Fragment, {
       hasScreenMessage: null != $,
       stream: F
     }) : null,
-    (0, i.jsx)(g.Z, {
+    (0, i.jsx)(C.Z, {
       onResize: s,
       wrapperClassName: w.videoWrapper,
       className: w.content,

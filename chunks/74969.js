@@ -22,7 +22,7 @@ var t = e.onChange,
       source: 'hex'
     }, n);
   },
-  I = (0, s.default)((0, o.Z)({
+  m = (0, s.default)((0, o.Z)({
     default: {
       card: {
         width: d,
@@ -81,25 +81,25 @@ var t = e.onChange,
     'hide-triangle': 'hide' === _
   });
 return r.createElement('div', {
-  style: I.card,
+  style: m.card,
   className: 'block-picker ' + (void 0 === f ? '' : f)
 }, r.createElement('div', {
-  style: I.triangle
+  style: m.triangle
 }), r.createElement('div', {
-  style: I.head
+  style: m.head
 }, h && r.createElement(u.QN, {
   borderRadius: '6px 6px 0 0'
 }), r.createElement('div', {
-  style: I.label
+  style: m.label
 }, i)), r.createElement('div', {
-  style: I.body
+  style: m.body
 }, r.createElement(c.Z, {
   colors: a,
   onClick: p,
   onSwatchHover: n
 }), r.createElement(u.Vm, {
   style: {
-    input: I.input
+    input: m.input
   },
   value: i,
   onChange: p

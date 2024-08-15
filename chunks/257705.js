@@ -21,8 +21,8 @@ let {
   paddingFix: f = !0,
   fade: h = !1,
   onScroll: p,
-  style: I,
-  ...m
+  style: m,
+  ...I
 } = a, T = i.useRef(null), g = (0, l.tT)({
   paddingFix: f,
   orientation: E,
@@ -39,9 +39,9 @@ return (0, r.jsx)('div', {
     [e]: !0,
     [t]: h
   }),
-  style: (0, l.uT)(I, E),
+  style: (0, l.uT)(m, E),
   dir: _,
-  ...m,
+  ...I,
   children: (0, r.jsxs)(o.Jc, {
     containerRef: T,
     children: [

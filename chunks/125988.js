@@ -17,10 +17,10 @@ size: E,
 onlyAnimateOnHover: f = !1,
 showPending: h = !1,
 showTryItOut: p = !1,
-avatarDecorationOverride: I
-  } = e, [m, T] = r.useState(!1), {
+avatarDecorationOverride: m
+  } = e, [I, T] = r.useState(!1), {
 canAnimate: g
-  } = (0, a.j)(m, f), S = (0, i.e7)([o.ZP], () => null != _ && null != n ? o.ZP.getMember(_, n.id) : null), [A, N] = (0, i.Wu)([l.default], () => {
+  } = (0, a.j)(I, f), S = (0, i.e7)([o.ZP], () => null != _ && null != n ? o.ZP.getMember(_, n.id) : null), [A, N] = (0, i.Wu)([l.default], () => {
 var e;
 return [
   null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id,
@@ -32,14 +32,14 @@ pendingAvatarDecoration: O
 isTryItOut: p,
 guildId: _
   }), R = h && void 0 !== O && void 0 !== A && A === (null == n ? void 0 : n.id), C = null != _ && null === O, y = (0, c.Z)(R ? C ? null == N ? void 0 : N.avatarDecoration : null != O ? O : v : null != v ? v : null == N ? void 0 : N.avatarDecoration), D = r.useMemo(() => (0, u.NZ)({
-avatarDecoration: void 0 !== I ? I : y,
+avatarDecoration: void 0 !== m ? m : y,
 canAnimate: g,
 size: E
   }), [
 y,
 g,
 E,
-I
+m
   ]), L = r.useCallback(() => T(!0), []);
   return {
 avatarPlaceholderSrc: d,

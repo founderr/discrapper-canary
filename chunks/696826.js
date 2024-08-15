@@ -6,7 +6,7 @@ return S;
 return N;
   },
   QF: function() {
-return m;
+return I;
   },
   Sk: function() {
 return _.Skl;
@@ -15,7 +15,7 @@ return _.Skl;
 return O;
   },
   lm: function() {
-return I;
+return m;
   },
   qb: function() {
 return R;
@@ -69,11 +69,11 @@ r = (0, c.K3)(null != t ? t : n);
   return null != r ? r : void 0;
 }
 
-function I(e, t) {
+function m(e, t) {
   return t === E.VZ.WHITE && e === _.Skl.IDLE ? E.d_.HIGH : E.d_.LOW;
 }
 
-function m(e) {
+function I(e) {
   return (0, l.wj)(e) ? E.VZ.BLACK : E.VZ.WHITE;
 }
 
@@ -241,8 +241,8 @@ cutoutWidth: E,
 cutoutHeight: f,
 cutoutRadius: h,
 polygonScale: p,
-polygonOrigin: I,
-dotY: m,
+polygonOrigin: m,
+dotY: I,
 dotX: T,
 dotRadius: g
   } = e;
@@ -272,13 +272,13 @@ children: [
     fill: 'black',
     transform: p,
     style: {
-      transformOrigin: I
+      transformOrigin: m
     }
   }),
   (0, r.jsx)(o.animated.circle, {
     fill: 'black',
     cx: T,
-    cy: m,
+    cy: I,
     r: g
   })
 ]
@@ -293,14 +293,14 @@ size: a = 8,
 color: l,
 className: c,
 style: d
-  } = e, I = i.useId(), m = t === _.Skl.ONLINE && n, T = i.useMemo(() => S({
+  } = e, m = i.useId(), I = t === _.Skl.ONLINE && n, T = i.useMemo(() => S({
 size: a,
 status: t,
-isMobile: m
+isMobile: I
   }), [
 a,
 t,
-m
+I
   ]), g = (0, u.useSpring)({
 config: h,
 to: T
@@ -317,14 +317,14 @@ viewBox: '0 0 '.concat(a, ' ').concat(O),
 className: s()(f.mask, c),
 style: d,
 children: [
-  A(g, a, I),
+  A(g, a, m),
   (0, r.jsx)(o.animated.rect, {
     x: 0,
     y: 0,
     width: a,
     height: O,
     fill: v,
-    mask: 'url(#'.concat(I, ')')
+    mask: 'url(#'.concat(m, ')')
   })
 ]
   });

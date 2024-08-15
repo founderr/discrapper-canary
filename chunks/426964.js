@@ -12,8 +12,8 @@ var r = n(735250),
   f = n(703656),
   h = n(314897),
   p = n(271383),
-  I = n(594174),
-  m = n(63063),
+  m = n(594174),
+  I = n(63063),
   T = n(970606),
   g = n(645896),
   S = n(905362),
@@ -42,7 +42,7 @@ B
   ]), V = (0, o.e7)([_.Z], () => {
 var e;
 return (null == w ? void 0 : w.id) != null && (null === (e = _.Z.getRequest(w.id)) || void 0 === e ? void 0 : e.applicationStatus) === d.wB.SUBMITTED;
-  }), H = null != w && w.memberCount >= R.Du, Z = (0, c.wE)(a.z.CLAN_TAG_WAITLIST), Y = (0, o.e7)([I.default], () => I.default.getUser(B), [B]), j = (null == F ? void 0 : F.joinedAt) != null, W = (0, A.Z4)(U, null == Y ? void 0 : Y.clan), K = null != (0, E.Z)(U);
+  }), H = null != w && w.memberCount >= R.Du, Z = (0, c.wE)(a.z.CLAN_TAG_WAITLIST), Y = (0, o.e7)([m.default], () => m.default.getUser(B), [B]), j = (null == F ? void 0 : F.joinedAt) != null, W = (0, A.Z4)(U, null == Y ? void 0 : Y.clan), K = null != (0, E.Z)(U);
   i.useEffect(() => {
 null != U && (0, T.u0)({
   guildId: U,
@@ -94,7 +94,7 @@ Q = i.useCallback(e => {
   P
 ]),
 X = i.useCallback(() => {
-  open(m.Z.getArticleURL(C.BhN.CLANS_FAQ));
+  open(I.Z.getArticleURL(C.BhN.CLANS_FAQ));
 }, []),
 $ = i.useCallback(() => {
   if (null != U)

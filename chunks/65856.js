@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 }), n(733860), n(653041), n(411104), n(47120);
 var r = n(512722),
@@ -25,8 +25,8 @@ writable: !0
   }) : e[t] = n, e;
 }
 let p = 'RPC_STORE_WAIT',
-  I = [];
-class m {
+  m = [];
+class I {
   registerTransport(e) {
 e.on('connect', e => this.handleConnect(e)), e.on('request', (e, t) => this.handleRequest(e, t)), e.on('disconnect', (e, t) => this.handleDisconnect(e, t));
   }
@@ -174,7 +174,7 @@ s().remove(this.subscriptions, t => t.socket === e);
   }
   dispatchToSubscriptions(e, t, n, r) {
 var i;
-if (!(null != r && '' !== r && (i = r, I.includes(i) || (I.unshift(i), I.splice(50), 0))))
+if (!(null != r && '' !== r && (i = r, m.includes(i) || (m.unshift(i), m.splice(50), 0))))
   this.subscriptions.forEach(r => {
     var i, a, o;
     if (r.evt !== e)

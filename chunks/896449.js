@@ -27,12 +27,12 @@ onSelect: f
 userId: n.id,
 guildId: m,
 channelId: p.id
-  }), g = (0, l.Z)({
+  }), C = (0, l.Z)({
 id: n.id,
 label: d.Z.Messages.COPY_ID_USER
-  }), C = (0, u.dX)(_), I = (0, o.Z)({
+  }), g = (0, u.dX)(_), I = (0, o.Z)({
 location: 'ContentPopoutContextMenu',
-applicationId: C ? null === (t = _.extra) || void 0 === t ? void 0 : t.application_id : void 0,
+applicationId: g ? null === (t = _.extra) || void 0 === t ? void 0 : t.application_id : void 0,
 source: r.m1.ActivityCardContextMenu,
 trackEntryPointImpression: !0,
 sourceUserId: _.author_id
@@ -65,7 +65,7 @@ renderPopout: e => {
           ]
         }),
         (0, i.jsx)(a.MenuGroup, {
-          children: g
+          children: C
         })
       ]
     })

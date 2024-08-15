@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(695346),
   f = n(768119),
   E = n(944486),
-  g = n(585483),
-  C = n(251285),
+  C = n(585483),
+  g = n(251285),
   I = n(406326),
   x = n(994463),
   T = n(619753),
@@ -90,10 +90,10 @@ children: (0, i.jsx)('div', {
 };
 class b extends a.PureComponent {
   componentDidMount() {
-g.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+C.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
   }
   componentWillUnmount() {
-g.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+C.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
   }
   componentDidUpdate(e) {
 let {
@@ -298,7 +298,7 @@ search: n,
   searchAnalyticsId: f.Z.getAnalyticsId(t),
   searchType: f.Z.getSearchType()
 }), [t]),
-...(0, C.Z)(t),
+...(0, g.Z)(t),
 renderEmbeds: _.NA.useSetting(),
 developerMode: _.Sb.useSetting(),
 ...(0, c.cj)([p.Z], () => {

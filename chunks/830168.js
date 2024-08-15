@@ -16,13 +16,13 @@ function p() {
   return null == i && h.warn('Tried getting Dispatch instance before instantiated'), i;
 }
 
-function I(e) {
+function m(e) {
   let t = JSON.parse(e);
   return h.log('Native Dispatch error', t), new s.Z(t);
 }
 
-function m(e, t) {
-  '' !== e && I(e);
+function I(e, t) {
+  '' !== e && m(e);
 }
 t.Z = {
   init(e) {
@@ -46,7 +46,7 @@ if (null == i)
     var r;
     let d = {
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        build_number: '318833'
+        build_number: '318885'
       },
       _ = l.default.getCurrentUser();
     null != _ && (d.user_id = _.id, d.user_name = _.tag, null != _.email && (d.email = _.email));
@@ -79,7 +79,7 @@ if (null == i)
         } : null
       });
     }, e => {
-      u(I(e));
+      u(m(e));
     }, e => {
       ! function(e) {
         let {
@@ -123,7 +123,7 @@ if (null != l)
     build_id: a,
     manifest_ids: s,
     install_path: o
-  }), m);
+  }), I);
   },
   setCurrentTask(e, t, n, r, i) {
 let a = p();
@@ -134,7 +134,7 @@ return null != a && (a.command(JSON.stringify({
   action: n,
   user_id: r,
   user_token: i
-}), m), !0);
+}), I), !0);
   },
   setCredentials(e, t) {
 let n = p();
@@ -142,7 +142,7 @@ null != n && n.command(JSON.stringify({
   command: 'SetCredentials',
   user_id: e,
   user_token: t
-}), m);
+}), I);
   },
   cancel(e, t) {
 let n = p();
@@ -151,7 +151,7 @@ if (null != n)
     command: 'Cancel',
     application_id: e,
     branch_id: t
-  }), m);
+  }), I);
   },
   uninstall(e, t) {
 let n = p();
@@ -160,21 +160,21 @@ if (null != n)
     command: 'Uninstall',
     application_id: e,
     branch_id: t
-  }), m);
+  }), I);
   },
   pause() {
 let e = p();
 if (null != e)
   e.command(JSON.stringify({
     command: 'Pause'
-  }), m);
+  }), I);
   },
   resume() {
 let e = p();
 if (null != e)
   e.command(JSON.stringify({
     command: 'Resume'
-  }), m);
+  }), I);
   },
   queryDirectory(e, t) {
 let n = p();
@@ -212,7 +212,7 @@ i.command(JSON.stringify({
     a.Z.dispatch({
       type: 'DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE'
     });
-    let t = I(e);
+    let t = m(e);
     a.Z.dispatch({
       type: 'DISPATCH_APPLICATION_ERROR',
       error: t
@@ -249,7 +249,7 @@ s.command(JSON.stringify({
   option_name: n,
   environment: r
 }), function(e, t) {
-  '' !== e ? a(I(e)) : i([JSON.parse(t).pid]);
+  '' !== e ? a(m(e)) : i([JSON.parse(t).pid]);
 });
   })
 };

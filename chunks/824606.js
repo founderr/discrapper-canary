@@ -43,8 +43,8 @@ p = (0, a.default)({
     }, n, E ? void 0 === f ? {} : f : {})
   }
 }),
-I = {};
-  return u && (I.onMouseOver = function(e) {
+m = {};
+  return u && (m.onMouseOver = function(e) {
 return u(t, e);
   }), i.default.createElement('div', r({
 style: p.swatch,
@@ -56,7 +56,7 @@ tabIndex: 0,
 onKeyDown: function(e) {
   return 13 === e.keyCode && l(t, e);
 }
-  }, I), _, h && i.default.createElement(o.default, {
+  }, m), _, h && i.default.createElement(o.default, {
 borderRadius: p.swatch.borderRadius,
 boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
   }));

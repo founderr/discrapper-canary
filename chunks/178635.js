@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 }), n(47120);
 var r = n(392711),
@@ -73,7 +73,7 @@ if (null != t && Date.now() - t < e.cooldown)
   }
   return !0;
 }
-class I extends s.Z {
+class m extends s.Z {
   possiblyShowFeedbackModal(e, t) {
 if (!! function(e) {
     var t;

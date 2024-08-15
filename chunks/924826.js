@@ -26,8 +26,8 @@ onNavigatePreviousAtStart: E,
 onNavigateNextAtEnd: f,
 setFocus: h,
 setFocusOnList: p,
-preserveFocusPosition: I = !0,
-useVirtualFocus: m = !1,
+preserveFocusPosition: m = !0,
+useVirtualFocus: I = !1,
 wrap: T = !1,
 orientation: g = o.hy.VERTICAL,
 disableClickOnSpace: S = !1
@@ -55,10 +55,10 @@ L = r.useCallback(e => {
   A.current = e;
   let n = (0, l.P1)(e),
     r = (0, l.x3)(e);
-  y(n, r), (0, a.h)(t, r, I);
+  y(n, r), (0, a.h)(t, r, m);
 }, [
   t,
-  I,
+  m,
   y
 ]),
 b = r.useMemo(() => (0, i.E)({
@@ -106,7 +106,7 @@ async function i() {
   if (U.current || null == e)
     return;
   let n = A.current;
-  if (I && null !== n) {
+  if (m && null !== n) {
     let t = (0, l.P1)(n),
       r = R(t);
     if (null != r) {
@@ -126,7 +126,7 @@ function a() {
   }, [
 c,
 t,
-I,
+m,
 y,
 p,
 D,
@@ -135,7 +135,7 @@ L
   let w = r.useMemo(() => ({
   wrap: T,
   get from() {
-    if (!m)
+    if (!I)
       return;
     let t = A.current;
     if (null != t) {
@@ -145,7 +145,7 @@ L
     return;
   }
 }), [
-  m,
+  I,
   T
 ]),
 x = r.useCallback(async () => {
@@ -169,7 +169,7 @@ G = r.useCallback(async () => {
   L
 ]),
 k = r.useCallback(e => {
-  if (!O.current || !m && !U.current)
+  if (!O.current || !I && !U.current)
     return;
   let n = g === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
     r = g === o.hy.HORIZONTAL ? o.R8.LEFT : o.R8.UP;
@@ -204,7 +204,7 @@ k = r.useCallback(e => {
         var i;
         let n = R((0, l.P1)(t)),
           r = null !== (i = null == n ? void 0 : n.ownerDocument) && void 0 !== i ? i : document,
-          a = m || n === r.activeElement;
+          a = I || n === r.activeElement;
         null != n && a && (e.preventDefault(), e.stopPropagation(), null == n || n.click());
       }
     }
@@ -217,7 +217,7 @@ k = r.useCallback(e => {
   _,
   d,
   L,
-  m
+  I
 ]),
 B = r.useCallback(e => {
   let n = null != e ? (0, l.jb)(t, e) : null;
@@ -228,7 +228,7 @@ id: t,
 containerProps: {
   onKeyDown: k,
   ref: v,
-  tabIndex: M && I ? -1 : 0
+  tabIndex: M && m ? -1 : 0
 },
 orientation: g,
 setFocus: B,
@@ -253,7 +253,7 @@ t,
 k,
 g,
 M,
-I,
+m,
 B,
 G,
 x,

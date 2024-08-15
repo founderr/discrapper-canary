@@ -19,8 +19,8 @@ var r, i = n(735250),
   f = n(237375),
   h = n(342687),
   p = n(933557),
-  I = n(471445),
-  m = n(511618),
+  m = n(471445),
+  I = n(511618),
   T = n(926491),
   g = n(378233),
   S = n(695346),
@@ -294,7 +294,7 @@ return (0, i.jsxs)(C.RX, {
 let {
   channel: e,
   category: t
-} = this.props, n = e.type === y.d4z.GUILD_CATEGORY ? d.FolderIcon : (0, I.KS)(e);
+} = this.props, n = e.type === y.d4z.GUILD_CATEGORY ? d.FolderIcon : (0, m.KS)(e);
 return (0, i.jsxs)(C.RX, {
   children: [
     null != n && (0, i.jsx)(C.Tw, {
@@ -460,7 +460,7 @@ super(...e), M(this, 'layoutClass', o()(b.autocompleteRowVertical, b.autocomplet
   }
 }), M(G, 'EmojiUpsell', class e extends x {
   renderContent() {
-return (0, i.jsx)(m.Z, {
+return (0, i.jsx)(I.Z, {
   emojis: this.props.emojis
 });
   }

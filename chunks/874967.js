@@ -14,7 +14,7 @@ var r = n(735250),
   h = n(1094),
   p = n(224499);
 
-function I(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -22,7 +22,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let m = l().memoize(e => {
+let I = l().memoize(e => {
   let t = !1;
   if (null != e && (0, u.FX)(e)) {
 let n = (0, u._i)(e);
@@ -38,7 +38,7 @@ let {
   color: n,
   className: i,
   children: a
-} = this.props, o = m(n);
+} = this.props, o = I(n);
 return t ? e = {
   color: o,
   background: null != n ? n : c.Z.unsafe_rawColors.BRAND_500.css
@@ -83,9 +83,9 @@ return t ? e = {
 });
   }
   constructor(...e) {
-super(...e), I(this, 'state', {
-  color: m(this.props.color)
-}), I(this, 'handleKeyUp', e => {
+super(...e), m(this, 'state', {
+  color: I(this.props.color)
+}), m(this, 'handleKeyUp', e => {
   if (e.which === f.yXg.ENTER || e.which === f.yXg.SPACE) {
     let {
       onClick: e,
@@ -93,7 +93,7 @@ super(...e), I(this, 'state', {
     } = this.props;
     e(t);
   }
-}), I(this, 'handleClick', () => {
+}), m(this, 'handleClick', () => {
   let {
     onClick: e,
     ...t

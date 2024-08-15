@@ -26,11 +26,11 @@ let n, {
     color: f,
     tabularNumbers: h = !1,
     scaleFontToUserSetting: p = !1,
-    ...I
+    ...m
   } = e,
-  m = '',
+  I = '',
   T = {};
-if (null != E && (1 === E ? m = c.lineClamp1 : (m = c.lineClamp2Plus, T = {
+if (null != E && (1 === E ? I = c.lineClamp1 : (I = c.lineClamp2Plus, T = {
     lineClamp: E,
     WebkitLineClamp: E
   })), void 0 !== f)
@@ -51,7 +51,7 @@ if (null != E && (1 === E ? m = c.lineClamp1 : (m = c.lineClamp2Plus, T = {
 let S = {
   color: n,
   ...T,
-  ...I.style
+  ...m.style
 };
 return (0, r.jsx)(a, {
   ref: t,
@@ -60,8 +60,8 @@ return (0, r.jsx)(a, {
     [c.selectable]: o,
     [c.tabularNumbers]: h,
     [d.fontScaling]: p
-  }, m, d[i], l),
-  ...I,
+  }, I, d[i], l),
+  ...m,
   style: Object.values(S).filter(Boolean).length > 0 ? S : void 0,
   'data-text-variant': i
 });

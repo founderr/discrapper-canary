@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(197115),
   h = n(626135),
   p = n(74538),
-  I = n(706667),
-  m = n(409673),
+  m = n(706667),
+  I = n(409673),
   T = n(981631),
   g = n(474936),
   S = n(689938),
@@ -41,7 +41,7 @@ section: T.jXE.SOUNDBOARD_SOUND_PICKER
 analyticsLocations: M
   } = (0, _.ZP)(d.Z.PREMIUM_UPSELL), {
 previewSound: P
-  } = (0, I.Z)(O, null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : null), U = (0, m.K_)({
+  } = (0, m.Z)(O, null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : null), U = (0, I.K_)({
 sound: O,
 previewSound: P,
 tooltipPosition: 'left'

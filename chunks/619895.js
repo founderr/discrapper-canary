@@ -13,10 +13,10 @@ var i = n(470079),
   a = n(892814),
   o = n(442837),
   l = n(581364),
-  c = n(768581),
-  d = n(823379),
-  m = n(399654),
-  r = n(844439);
+  d = n(768581),
+  c = n(823379),
+  r = n(399654),
+  m = n(844439);
 let u = {
 '1181475143340539995': {
   imageOption: 'image',
@@ -184,18 +184,18 @@ let {
   n
 ]);
 i.useEffect(() => {
-  (0, m.a)(l);
+  (0, r.a)(l);
 }, [l]);
 let {
-  fetchState: c,
-  recommendationsSections: d
-} = (0, o.cj)([r.ZP], () => ({
-  fetchState: r.ZP.getFetchState(l),
-  recommendationsSections: r.ZP.getRecommendations(l)
+  fetchState: d,
+  recommendationsSections: c
+} = (0, o.cj)([m.ZP], () => ({
+  fetchState: m.ZP.getFetchState(l),
+  recommendationsSections: m.ZP.getRecommendations(l)
 }));
 return {
-  fetchState: c,
-  recommendationsSections: d
+  fetchState: d,
+  recommendationsSections: c
 };
   }({
 channelId: t
@@ -227,14 +227,14 @@ imageRecCommandContexts: i.useMemo(() => {
         ...o,
         name: o.name.split(/[_ ]/).map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
       },
-      applicationImageURL: c.ZP.getApplicationIconURL({
+      applicationImageURL: d.ZP.getApplicationIconURL({
         id: a.id,
         icon: a.icon,
         bot: a.bot
       }),
       application: a
     };
-  }).filter(d.lm);
+  }).filter(c.lm);
 }, [u])
   };
 }

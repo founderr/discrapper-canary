@@ -29,8 +29,8 @@ let {
   background: f,
   icon: h,
   onClick: p,
-  onContextMenu: I,
-  tooltip: m = null,
+  onContextMenu: m,
+  tooltip: I = null,
   tooltipColor: T,
   tooltipPosition: g = 'bottom',
   tooltipDisabled: S,
@@ -52,15 +52,15 @@ let {
   secondaryColorClass: null != f ? f : void 0,
   color: null != c ? c : 'currentColor'
 }), L = v;
-return null == L && 'string' == typeof m && (L = m), (0, r.jsx)(u.Tooltip, {
-  text: m,
+return null == L && 'string' == typeof I && (L = I), (0, r.jsx)(u.Tooltip, {
+  text: I,
   color: T,
   position: g,
   hideOnClick: A,
   shouldShow: !S,
   children: e => {
     let {
-      onMouseEnter: m,
+      onMouseEnter: I,
       onMouseLeave: T,
       onFocus: g,
       onBlur: S
@@ -78,7 +78,7 @@ return null == L && 'string' == typeof m && (L = m), (0, r.jsx)(u.Tooltip, {
         secondaryColorClass: null != f ? f : void 0,
         color: null != c ? c : 'currentColor',
         'aria-hidden': O,
-        onMouseEnter: m,
+        onMouseEnter: I,
         onMouseLeave: T,
         onFocus: g,
         onBlur: S
@@ -86,8 +86,8 @@ return null == L && 'string' == typeof m && (L = m), (0, r.jsx)(u.Tooltip, {
     }) : (0, r.jsxs)(u.Clickable, {
       tag: 'div',
       onClick: o ? void 0 : p,
-      onContextMenu: o ? void 0 : I,
-      onMouseEnter: m,
+      onContextMenu: o ? void 0 : m,
+      onMouseEnter: I,
       onMouseLeave: T,
       onFocus: g,
       onBlur: S,
@@ -135,8 +135,8 @@ let {
   onDoubleClick: f,
   'aria-label': h,
   'aria-labelledby': p,
-  role: I,
-  scrollable: m,
+  role: m,
+  scrollable: I,
   transparent: T = !1
 } = e, g = i.useRef(null), S = i.useContext(c.Z);
 return (0, r.jsx)('section', {
@@ -147,7 +147,7 @@ return (0, r.jsx)('section', {
   }),
   'aria-label': h,
   'aria-labelledby': p,
-  role: I,
+  role: m,
   ref: g,
   children: (0, r.jsxs)(u.FocusRingScope, {
     containerRef: g,
@@ -157,7 +157,7 @@ return (0, r.jsx)('section', {
         children: [
           (0, r.jsxs)('div', {
             className: s()(_.children, n, {
-              [_.scrollable]: m
+              [_.scrollable]: I
             }),
             onDoubleClick: f,
             children: [

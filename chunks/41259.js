@@ -23,8 +23,8 @@ id: t,
 user: n,
 application: h,
 bot: p,
-accountScopes: I,
-showLogout: m,
+accountScopes: m,
+showLogout: I,
 location: T,
 isTrustedName: g
   } = e, S = l.ZP.getApplicationIconURL({
@@ -81,7 +81,7 @@ children: [
       }) : null
     ]
   }),
-  I.length > 0 ? (0, r.jsx)(s.x, {
+  m.length > 0 ? (0, r.jsx)(s.x, {
     variant: 'text-md/normal',
     color: 'header-secondary',
     className: f.label,
@@ -92,7 +92,7 @@ children: [
     className: f.label,
     children: E.Z.Messages.OAUTH2_CONNECT_TO_DISCORD
   }),
-  m ? (0, r.jsx)('div', {
+  I ? (0, r.jsx)('div', {
     className: f.currentUser,
     children: (0, r.jsxs)(s.x, {
       variant: 'text-sm/normal',

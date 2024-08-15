@@ -17,8 +17,8 @@ buttonSubmitting: p,
 onButtonClick: _,
 imageSrc: f,
 animationSrc: E,
-secondaryButtonText: g,
-onSecondaryButtonClick: C,
+secondaryButtonText: C,
+onSecondaryButtonClick: g,
 children: I,
 useReducedMotion: x = !1
   } = e, T = (0, l.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
@@ -64,14 +64,14 @@ children: [
   (0, i.jsxs)('div', {
     className: u.buttonContainer,
     children: [
-      null != g && (0, i.jsx)(r.Button, {
+      null != C && (0, i.jsx)(r.Button, {
         className: u.button,
         size: r.Button.Sizes.SMALL,
-        onClick: C,
+        onClick: g,
         look: r.Button.Looks.LINK,
         color: r.Button.Colors.PRIMARY,
         submitting: p,
-        children: g
+        children: C
       }),
       null != h && (0, i.jsx)(r.Button, {
         className: u.button,

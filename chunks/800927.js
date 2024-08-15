@@ -13,7 +13,7 @@ let o = /\n{2,}$/,
   f = RegExp('^( *)(' + u + ') [\\s\\S]+?(?:\\n(?! )(?!\\1' + u + ' )|$)'),
   h = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
   p = e => e.map(e => ('text' === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, '')), e)),
-  I = {
+  m = {
 ...s().defaultRules.list,
 requiredFirstCharacters: ' *-0123456789'.split(''),
 match: (e, t) => {
@@ -43,15 +43,15 @@ parse: (e, t, n) => {
       u = _;
       let f = n.inline,
         h = n._list,
-        I = n._listLevel;
-      n._list = !0, n._listLevel = (null != I ? I : 0) + 1, _ ? (n.inline = !1, i = o.replace(E, '\n\n')) : (n.inline = !0, i = o.replace(E, ''));
-      let m = p(t(i, {
+        m = n._listLevel;
+      n._list = !0, n._listLevel = (null != m ? m : 0) + 1, _ ? (n.inline = !1, i = o.replace(E, '\n\n')) : (n.inline = !0, i = o.replace(E, ''));
+      let I = p(t(i, {
         ...n,
         allowHeading: !1
       }));
-      return n.inline = f, n._list = h, n._listLevel = I, m;
+      return n.inline = f, n._list = h, n._listLevel = m, I;
     })
   };
 }
   };
-t.Z = I;
+t.Z = m;

@@ -20,7 +20,7 @@ n(464942);
 var f = n(538605),
   h = n(19109),
   p = n(816479),
-  I = function(e, t, n) {
+  m = function(e, t, n) {
 if (e instanceof o) {
   var i = r({}, t),
     a = r({}, t);
@@ -39,8 +39,8 @@ if (e instanceof o) {
 }
 return null;
   },
-  m = function e(t, n) {
-return I(t, n, e) || {
+  I = function e(t, n) {
+return m(t, n, e) || {
   start: function(e) {
     t.stopTracking(), n.toValue instanceof a ? t.track(new _(t, n.toValue, f, n, e)) : t.animate(new f(n), e);
   },
@@ -101,7 +101,7 @@ var n = 0,
 return a;
   },
   S = function(e) {
-return m(new s(0), {
+return I(new s(0), {
   toValue: 0,
   delay: e,
   duration: 0
@@ -111,7 +111,7 @@ e.exports = {
   Value: s,
   ValueXY: o,
   decay: function e(t, n) {
-return I(t, n, e) || {
+return m(t, n, e) || {
   start: function(e) {
     t.stopTracking(), t.animate(new h(n), e);
   },
@@ -120,9 +120,9 @@ return I(t, n, e) || {
   }
 };
   },
-  timing: m,
+  timing: I,
   spring: function e(t, n) {
-return I(t, n, e) || {
+return m(t, n, e) || {
   start: function(e) {
     t.stopTracking(), n.toValue instanceof a ? t.track(new _(t, n.toValue, p, n, e)) : t.animate(new p(n), e);
   },

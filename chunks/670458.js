@@ -50,8 +50,8 @@ if (void 0 === r && (r = t.defaultLocale), this.formatterCache = {
   if (this.message = e, !t.__parse)
     throw TypeError('IntlMessageFormat.__parse must be set to process `message` of type `string`');
   var p = u || {},
-    m = (p.formatters, (0, n._T)(p, ['formatters']));
-  this.ast = t.__parse(e, (0, n.pi)((0, n.pi)({}, m), {
+    d = (p.formatters, (0, n._T)(p, ['formatters']));
+  this.ast = t.__parse(e, (0, n.pi)((0, n.pi)({}, d), {
     locale: this.resolvedLocale
   }));
 } else

@@ -24,8 +24,8 @@ onOpenProfile: n
 mutualFriends: f
   } = (0, l.Z)(t.id), {
 mutualGuilds: h
-  } = (0, u.Z)(t.id), p = null != f && f.length > 0, I = null != h && h.length > 0, m = p && I ? 'text-xs/normal' : 'text-sm/normal';
-  return p || I ? (0, r.jsxs)('div', {
+  } = (0, u.Z)(t.id), p = null != f && f.length > 0, m = null != h && h.length > 0, I = p && m ? 'text-xs/normal' : 'text-sm/normal';
+  return p || m ? (0, r.jsxs)('div', {
 className: E.mutuals,
 children: [
   p ? (0, r.jsxs)(i.Clickable, {
@@ -46,7 +46,7 @@ children: [
       }),
       (0, r.jsx)(i.Text, {
         className: E.text,
-        variant: m,
+        variant: I,
         color: 'interactive-normal',
         children: _.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({
           count: f.length
@@ -54,11 +54,11 @@ children: [
       })
     ]
   }) : null,
-  p && I ? (0, r.jsx)('div', {
+  p && m ? (0, r.jsx)('div', {
     'aria-hidden': 'true',
     className: E.spacer
   }) : null,
-  I ? (0, r.jsxs)(i.Clickable, {
+  m ? (0, r.jsxs)(i.Clickable, {
     className: E.section,
     onClick: () => null == n ? void 0 : n(c.oh.MUTUAL_GUILDS),
     children: [
@@ -76,7 +76,7 @@ children: [
       }),
       (0, r.jsx)(i.Text, {
         className: E.text,
-        variant: m,
+        variant: I,
         color: 'interactive-normal',
         children: _.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
           count: h.length

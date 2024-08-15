@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(144144),
   f = n(607070),
   E = n(100527),
-  g = n(906732),
-  C = n(82295),
+  C = n(906732),
+  g = n(82295),
   I = n(91218),
   x = n(623624),
   T = n(518738),
@@ -59,13 +59,13 @@ let {
 }, [
   t.guild_id,
   u
-]), E = (0, h.e7)([P.default], () => P.default.getUser(l)), g = (0, h.e7)([P.default], () => P.default.getCurrentUser()), C = (null == E ? void 0 : E.id) === (null == g ? void 0 : g.id), I = (0, h.e7)([
+]), E = (0, h.e7)([P.default], () => P.default.getUser(l)), C = (0, h.e7)([P.default], () => P.default.getCurrentUser()), g = (null == E ? void 0 : E.id) === (null == C ? void 0 : C.id), I = (0, h.e7)([
   R.Z,
   j.Z
-], () => C ? j.Z.getStatus() : R.Z.getStatus(l, t.guild_id)), T = (0, h.e7)([R.Z], () => R.Z.isMobileOnline(l)), N = (0, h.e7)([
+], () => g ? j.Z.getStatus() : R.Z.getStatus(l, t.guild_id)), T = (0, h.e7)([R.Z], () => R.Z.isMobileOnline(l)), N = (0, h.e7)([
   R.Z,
   j.Z
-], () => C ? j.Z.getActivities() : R.Z.getActivities(l, t.guild_id)), O = (0, h.e7)([A.Z], () => A.Z.getAnyStreamForUser(l)), y = (0, c.JA)(l), k = (0, h.e7)([v.Z], () => v.Z.canUserViewChannel(t.id, s, l)), w = (null == E ? void 0 : E.id) != null && E.id === r, V = a.useCallback(e => {
+], () => g ? j.Z.getActivities() : R.Z.getActivities(l, t.guild_id)), O = (0, h.e7)([A.Z], () => A.Z.getAnyStreamForUser(l)), y = (0, c.JA)(l), k = (0, h.e7)([v.Z], () => v.Z.canUserViewChannel(t.id, s, l)), w = (null == E ? void 0 : E.id) != null && E.id === r, V = a.useCallback(e => {
   null != E && (0, p.jW)(e, async () => {
     let {
       default: e
@@ -138,7 +138,7 @@ return (0, i.jsx)(m.Popout, {
       onContextMenu: V,
       shouldAnimateStatus: W,
       user: E,
-      currentUser: g,
+      currentUser: C,
       nick: null == u ? void 0 : u.nick,
       status: I,
       activities: N,
@@ -176,7 +176,7 @@ return t === H.Skl.UNKNOWN ? (0, i.jsx)('div', {
   children: (0, i.jsx)('div', {
     className: F.memberGroupsPlaceholder
   })
-}) : (0, i.jsxs)(C.Z, {
+}) : (0, i.jsxs)(g.Z, {
   className: F.membersGroup,
   'aria-label': G.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
     title: n,
@@ -236,9 +236,9 @@ channel: t,
 guild: n
   } = e, s = 'members-'.concat(t.id), {
 analyticsLocations: r
-  } = (0, g.ZP)(E.Z.MEMBER_LIST), d = (0, N.D)(t.id, n), p = d.filter(e => e.userIds.length > 0).reverse()[0], {
+  } = (0, C.ZP)(E.Z.MEMBER_LIST), d = (0, N.D)(t.id, n), p = d.filter(e => e.userIds.length > 0).reverse()[0], {
 navigator: _,
-listRef: C
+listRef: g
   } = function(e, t) {
 let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
   i = a.useRef(null),
@@ -308,7 +308,7 @@ return (0, i.jsx)(Q, {
 });
   let x = o().omit(_.containerProps, ['ref']),
 T = k.iJ(n);
-  return (0, i.jsx)(g.Gt, {
+  return (0, i.jsx)(C.Gt, {
 value: r,
 children: (0, i.jsx)(c.bG, {
   navigator: _,
@@ -316,7 +316,7 @@ children: (0, i.jsx)(c.bG, {
     children: e => (0, i.jsx)('div', {
       className: l()(F.membersWrap, F.hiddenMembers),
       children: (0, i.jsx)(m.List, {
-        ref: C,
+        ref: g,
         className: F.members,
         paddingTop: 0,
         sectionHeight: 40,

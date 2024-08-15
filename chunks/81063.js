@@ -52,8 +52,8 @@ mp: {
   serialize: e => e
 }
   },
-  I = {};
-async function m(e) {
+  m = {};
+async function I(e) {
   let {
 body: t
   } = await a.tn.get({
@@ -95,12 +95,12 @@ async function S(e) {
   function(e) {
 var t;
 let n = o.Z.getApplicationAssets(e);
-return null == n || (t = n.lastUpdated, Date.now() - t > 3600000) ? m(e) : Promise.resolve(n);
+return null == n || (t = n.lastUpdated, Date.now() - t > 3600000) ? I(e) : Promise.resolve(n);
   }(e);
   return null == t ? void 0 : t.assets;
 }
 async function A(e, t) {
-  let n = t.filter(e => null != e && !Object.prototype.hasOwnProperty.call(I, e) && null == I[e]);
+  let n = t.filter(e => null != e && !Object.prototype.hasOwnProperty.call(m, e) && null == m[e]);
   if (0 === n.length)
 return;
   let {
@@ -117,7 +117,7 @@ oldFormErrors: !0
   external_asset_path: t
 }
 of r)
-I[e] = t;
+m[e] = t;
 }
 
 function N(e, t) {
@@ -127,7 +127,7 @@ for (let r = 0; r < e.length; r++) {
   let i = e[r];
   if (null == i)
     continue;
-  let a = Object.prototype.hasOwnProperty.call(I, i) ? I[i] : void 0;
+  let a = Object.prototype.hasOwnProperty.call(m, i) ? m[i] : void 0;
   null != a && (t[r] = T('mp', a), n++);
 }
   return n === e.length;
@@ -162,7 +162,7 @@ i = t.filter(e => (null == e ? void 0 : e.startsWith('http:')) || (null == e ? v
   return (i.length > 0 && await A(e, i), N(t, r)) ? (s.Z.dispatch({
 type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
 applicationId: e
-  }), r) : v(t, r, await S(e), n) ? m(e).then(() => O(e, t, n - 1)) : (s.Z.dispatch({
+  }), r) : v(t, r, await S(e), n) ? I(e).then(() => O(e, t, n - 1)) : (s.Z.dispatch({
 type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
 applicationId: e
   }), r);

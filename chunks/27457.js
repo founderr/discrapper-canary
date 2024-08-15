@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(414910),
   f = n(415635),
   E = n(925329),
-  g = n(649739),
-  C = n(574176),
+  C = n(649739),
+  g = n(574176),
   I = n(833858),
   x = n(223135),
   T = n(37091),
@@ -79,8 +79,8 @@ selected: ep = !1,
 noBorder: e_ = !1,
 noVideoRender: ef = !1,
 focused: eE = !1,
-blocked: eg = !1,
-fit: eC = v.L.CONTAIN,
+blocked: eC = !1,
+fit: eg = v.L.CONTAIN,
 paused: eI = !1,
 pulseSpeakingIndicator: ex = !1
   } = e, eT = a.useContext(O.h9), [eN, ev] = a.useState(!1), eS = (0, o.e7)([k.default], () => k.default.getId()), eZ = (0, o.e7)([H.default], () => H.default.getCurrentUser()), eA = I.type === ee.fO.ACTIVITY ? null : null === (t = I.user) || void 0 === t ? void 0 : t.id, [eM] = (0, p.Z)(I.type === ee.fO.ACTIVITY ? [I.id] : []), eb = (0, o.e7)([T.Z], () => T.Z.getEnabled()), eR = (0, o.e7)([w.Z], () => null != eA && w.Z.isLocalVideoDisabled(eA, (0, _.Z)(I.type)), [
@@ -132,12 +132,12 @@ return {
 hqStreamingState: ew
   } = (0, b.k)(r.q.STREAM_HIGH_QUALITY), eB = (0, j.Z)(), eH = eU && ek && null != eB, eG = (0, M.o)(I, eZ), eV = (0, A.lL)('CallTile', !0, eZ, eG), eF = (0, o.e7)([y.Z], () => null != eA ? y.Z.getEffectForUserId(eA) : null), eW = (0, o.e7)([G.Z], () => G.Z.getVoicePlatformForChannel(ec.id, null != eA ? eA : $.lds)), {
 enableHangStatus: ez
-  } = C.n.useExperiment({
+  } = g.n.useExperiment({
 guildId: ec.guild_id,
 location: 'VoiceUsers'
   }), {
 showGameIcon: eY
-  } = g.ZP.useExperiment({
+  } = C.ZP.useExperiment({
 location: 'voice_users'
   }, {
 autoTrackExposure: !1
@@ -194,7 +194,7 @@ case ee.fO.STREAM:
     participant: I,
     selected: ep,
     width: eu,
-    fit: eC,
+    fit: eg,
     onVideoResize: eh,
     paused: eI,
     inPopout: ed,
@@ -215,12 +215,12 @@ case ee.fO.USER:
     channel: ec,
     inCall: em,
     participant: I,
-    fit: eC,
+    fit: eg,
     onVideoResize: eh,
     paused: eI,
     selected: ep,
     width: eu,
-    blocked: eg,
+    blocked: eC,
     noVideoRender: ef || eL,
     pulseSpeakingIndicator: ex
   }), e6 = (0, i.jsx)(X.T, {
@@ -246,7 +246,7 @@ case ee.fO.HIDDEN_STREAM:
     participant: I,
     selected: ep,
     width: eu,
-    fit: eC,
+    fit: eg,
     onVideoResize: eh,
     paused: eI,
     inPopout: ed,
@@ -332,7 +332,7 @@ children: (0, i.jsx)('div', {
               idle: eT,
               platform: eW,
               title: (0, z.Z)(ec, I),
-              blocked: eg,
+              blocked: eC,
               localVideoDisabled: eR,
               videoToggleState: ej,
               hideAudioIcon: ek,
@@ -413,8 +413,8 @@ title: h,
 width: m,
 hasVideo: p,
 inCall: f,
-localVideoDisabled: g,
-videoToggleState: C,
+localVideoDisabled: C,
+videoToggleState: g,
 focused: T,
 blocked: N,
 hideAudioIcon: v,
@@ -487,7 +487,7 @@ else if (a || S !== ee.fO.STREAM || !p || U || T) {
     }
   });
   }
-  return f && w.Z.supports(en.AN.VIDEO) || !p ? f && p && g && !H && (y = (0, i.jsx)(u.VideoSlashIcon, {
+  return f && w.Z.supports(en.AN.VIDEO) || !p ? f && p && C && !H && (y = (0, i.jsx)(u.VideoSlashIcon, {
 size: 'md',
 color: 'currentColor',
 colorClass: ea.localMuteStrikethrough
@@ -548,7 +548,7 @@ children: [
     className: l()(ea.overlayTop, {
       [ea.small]: m < 195
     }),
-    children: H || C === $.ZUi.AUTO_PROBING ? d ? (0, i.jsx)('div', {
+    children: H || g === $.ZUi.AUTO_PROBING ? d ? (0, i.jsx)('div', {
       className: ea.status,
       children: (0, i.jsx)(u.VideoSlashIcon, {
         size: 'md',

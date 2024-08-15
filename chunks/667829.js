@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(166459),
   h = n(911969),
   p = n(476326),
-  I = n(998698),
-  m = n(710845),
+  m = n(998698),
+  I = n(710845),
   T = n(117530),
   g = n(459273),
   S = n(403182),
@@ -40,7 +40,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-new m.Z('ChannelEditor.tsx');
+new I.Z('ChannelEditor.tsx');
 let M = function() {
 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++)
   t[n] = arguments[n];
@@ -177,8 +177,8 @@ let {
   onResize: f,
   onSubmit: h,
   channel: p,
-  type: I,
-  fontSize: m,
+  type: m,
+  fontSize: I,
   useSlate: T,
   spellcheckEnabled: S,
   useNewSlashCommands: v,
@@ -206,7 +206,7 @@ let {
   accessibilityLabel: k,
   disabled: c || !1,
   submitting: B,
-  isEdit: I === A.I.EDIT,
+  isEdit: m === A.I.EDIT,
   onFocus: this.handleFocus,
   onBlur: this.handleBlur,
   onPaste: this.handlePaste,
@@ -220,16 +220,16 @@ let {
   onResize: f,
   onKeyDown: E,
   onSubmit: h,
-  textAreaPaddingClassName: s()(P[m], {
-    [L.textAreaWithoutAttachmentButton]: I !== A.I.NORMAL && I !== A.I.OVERLAY && I !== A.I.THREAD_CREATION && I !== A.I.SIDEBAR,
-    [L.textAreaForPostCreation]: I === A.I.CREATE_FORUM_POST,
-    [L.textAreaCustomGift]: I === A.I.CUSTOM_GIFT,
-    [L.textAreaForUserProfile]: I === A.I.USER_PROFILE
+  textAreaPaddingClassName: s()(P[I], {
+    [L.textAreaWithoutAttachmentButton]: m !== A.I.NORMAL && m !== A.I.OVERLAY && m !== A.I.THREAD_CREATION && m !== A.I.SIDEBAR,
+    [L.textAreaForPostCreation]: m === A.I.CREATE_FORUM_POST,
+    [L.textAreaCustomGift]: m === A.I.CUSTOM_GIFT,
+    [L.textAreaForUserProfile]: m === A.I.USER_PROFILE
   }),
   spellcheckEnabled: S,
   useNewSlashCommands: v,
-  disableAutoFocus: _.tq || null !== (n = I.disableAutoFocus) && void 0 !== n && n,
-  disableEnterToSubmit: null !== (i = null === (e = I.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== i && i,
+  disableAutoFocus: _.tq || null !== (n = m.disableAutoFocus) && void 0 !== n && n,
+  disableEnterToSubmit: null !== (i = null === (e = m.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== i && i,
   'aria-controls': null !== (a = F.id) && void 0 !== a ? a : void 0,
   'aria-haspopup': 'listbox',
   'aria-expanded': null !== F.id || void 0,
@@ -241,9 +241,9 @@ let {
 }, H = T ? (0, r.jsx)(R.Z, {
   ref: this.ref,
   ...V,
-  type: I,
+  type: m,
   value: c ? (0, N.JM)('') : u,
-  canUseCommands: null === (t = I.commands) || void 0 === t ? void 0 : t.enabled,
+  canUseCommands: null === (t = m.commands) || void 0 === t ? void 0 : t.enabled,
   canOnlyUseTextCommands: C
 }) : (0, r.jsx)(O.Z, {
   ref: this.ref,
@@ -422,7 +422,7 @@ super(e), t = this, b(this, 'ref', i.createRef()), b(this, '_focusBlurQueue', Pr
     }
   })), 0 !== o.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), ((e, n) => {
     var r, a;
-    let o = I.Z.getActiveCommand(t.id);
+    let o = m.Z.getActiveCommand(t.id);
     if (null == o)
       return i(e, t, s.drafts.type, {
         requireConfirm: !0,
@@ -430,7 +430,7 @@ super(e), t = this, b(this, 'ref', i.createRef()), b(this, '_focusBlurQueue', Pr
       });
     let l = null !== (r = s.drafts.commandType) && void 0 !== r ? r : s.drafts.type,
       u = null,
-      c = I.Z.getActiveOption(t.id);
+      c = m.Z.getActiveOption(t.id);
     if (null != (u = (null == c ? void 0 : c.type) === h.jw.ATTACHMENT ? c : null === (a = o.options) || void 0 === a ? void 0 : a.find(e => {
         if (e.type === h.jw.ATTACHMENT)
           return null == T.Z.getUpload(t.id, e.name, l);

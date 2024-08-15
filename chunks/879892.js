@@ -21,8 +21,8 @@ async function p(e) {
   let {
 analyticsLocations: t,
 analyticsLocation: p,
-analyticsSourceLocation: I,
-numberOfBoostsToAdd: m,
+analyticsSourceLocation: m,
+numberOfBoostsToAdd: I,
 onClose: T,
 closeLayer: g,
 onSubscriptionConfirmation: S,
@@ -61,9 +61,9 @@ b = L.length,
 M = e => {
   null == T || T(), null == N || N(e);
 };
-  if (b > 0 && (null == m || b >= m)) {
+  if (b > 0 && (null == I || b >= I)) {
 let e;
-1 === b ? e = L.slice(0, 1) : null != m && (e = L.slice(0, m)), await (0, i.openModalLazy)(async () => {
+1 === b ? e = L.slice(0, 1) : null != I && (e = L.slice(0, I)), await (0, i.openModalLazy)(async () => {
   let {
     default: t
   } = await Promise.all([
@@ -101,7 +101,7 @@ let e;
 (0, E.Z)({
   analyticsLocations: t,
   analyticsLocation: p,
-  analyticsSourceLocation: I,
+  analyticsSourceLocation: m,
   guildId: A.id,
   closeLayer: () => {
     null == T || T(), null == g || g(), d.default.track(f.rMx.MODAL_DISMISSED, {
@@ -109,7 +109,7 @@ let e;
       location_section: p.section
     });
   },
-  totalNumberOfSlotsToAssign: null != m ? m : 1,
+  totalNumberOfSlotsToAssign: null != I ? I : 1,
   onCloseModal: M,
   disablePremiumUpsell: v,
   onSubscriptionConfirmation: S,

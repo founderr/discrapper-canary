@@ -13,8 +13,8 @@ var i, a, s, o, l = n(392711),
   f = n(228392),
   h = n(131704),
   p = n(592125),
-  I = n(306680),
-  m = n(823379),
+  m = n(306680),
+  I = n(823379),
   T = n(709054),
   g = n(569471);
 let S = 25,
@@ -32,7 +32,7 @@ function L() {
 }
 
 function b(e, t) {
-  return t === c.z.LATEST_ACTIVITY ? I.ZP.lastMessageId(e.id) : e.id;
+  return t === c.z.LATEST_ACTIVITY ? m.ZP.lastMessageId(e.id) : e.id;
 }
 
 function M() {
@@ -62,7 +62,7 @@ return !1;
 let U = [];
 class w extends(i = d.ZP.Store) {
   initialize() {
-this.waitFor(p.Z, g.Z, I.ZP);
+this.waitFor(p.Z, g.Z, m.ZP);
   }
   get canLoadMore() {
 return v && !A && !O;
@@ -74,10 +74,10 @@ return D;
 return N;
   }
   isLoading(e, t, n) {
-return R === e && C === t && (0, m.OL)(r, n) ? A : (L(), !1);
+return R === e && C === t && (0, I.OL)(r, n) ? A : (L(), !1);
   }
   getThreads(e, t, n) {
-return R === e && C === t && (0, m.OL)(r, n) ? y : U;
+return R === e && C === t && (0, I.OL)(r, n) ? y : U;
   }
 }
 o = 'ArchivedThreadsStore', (s = 'displayName') in(a = w) ? Object.defineProperty(a, s, {
@@ -105,10 +105,10 @@ if (e.channel.id !== R)
 L();
   },
   LOAD_ARCHIVED_THREADS: function(e) {
-(e.channelId !== R || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) && L(), R = e.channelId, C = e.sortOrder, r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), A = !0, N = !1;
+(e.channelId !== R || e.sortOrder !== C || !(0, I.OL)(e.tagFilter, r)) && L(), R = e.channelId, C = e.sortOrder, r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), A = !0, N = !1;
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
-if (e.channelId !== R || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r))
+if (e.channelId !== R || e.sortOrder !== C || !(0, I.OL)(e.tagFilter, r))
   return !1;
 let t = e.threads.filter(e => h.AW.has(e.type)).map(e => e.id);
 y = y.concat(t);
@@ -123,7 +123,7 @@ null != n && n.isForumLikeChannel() && (0, f.Hr)({
 }), M(), v = e.hasMore, D = e.offset + S, A = !1, N = !1;
   },
   LOAD_ARCHIVED_THREADS_FAIL: function(e) {
-if (e.channelId !== R || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r))
+if (e.channelId !== R || e.sortOrder !== C || !(0, I.OL)(e.tagFilter, r))
   return !1;
 A = !1, O = !0, N = !1;
   },

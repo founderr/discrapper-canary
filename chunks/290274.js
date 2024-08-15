@@ -24,8 +24,8 @@ entry: i,
 display: f,
 className: h,
 onSelect: p,
-onClose: I,
-onRequestOpen: m
+onClose: m,
+onRequestOpen: I
   } = e, {
 newActivityCardsEnabled: T
   } = (0, u.z)({
@@ -45,7 +45,7 @@ entry: i,
 activity: n,
 user: t,
 display: f,
-onClose: I,
+onClose: m,
 onAction: S
   });
   return !T || 0 === A.length || t.bot ? null : (0, r.jsx)(s.Popout, {
@@ -55,7 +55,7 @@ disablePointerEvents: !1,
 onRequestOpen: () => {
   S({
     action: 'OPEN_MENU'
-  }), null == m || m();
+  }), null == I || I();
 },
 renderPopout: e => {
   let {

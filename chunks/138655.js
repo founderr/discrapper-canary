@@ -38,10 +38,10 @@ secondaryColor: i
   } = e, [h, p] = (0, o.Wu)([u.Z], () => [
 u.Z.desaturateUserColors,
 u.Z.syncProfileThemeWithUserTheme
-  ]), I = (0, E.fq)(t), m = (0, E.wu)(t, n, p), T = (0, E.lM)(t, n), g = (0, E.e4)(t, i), S = p ? null == I ? void 0 : I.overlaySyncedWithUserTheme : null == I ? void 0 : I.overlay;
+  ]), m = (0, E.fq)(t), I = (0, E.wu)(t, n, p), T = (0, E.lM)(t, n), g = (0, E.e4)(t, i), S = p ? null == m ? void 0 : m.overlaySyncedWithUserTheme : null == m ? void 0 : m.overlay;
   return {
 profileThemeStyle: (0, r.useMemo)(() => {
-  if (null == n || null == i || null == I || null == m || null == T || null == g || null == S)
+  if (null == n || null == i || null == m || null == I || null == T || null == g || null == S)
     return f;
   let e = (e, t) => (0, s.ho)(e, h, null, t);
   return {
@@ -49,15 +49,15 @@ profileThemeStyle: (0, r.useMemo)(() => {
     '--profile-gradient-secondary-color': e(i),
     '--profile-gradient-overlay-color': S,
     '--profile-gradient-button-color': e((0, E.ZB)(n)),
-    '--profile-avatar-border-color': e(m),
-    '--profile-body-background-color': I.sectionBox,
-    '--profile-body-background-hover': I.profileBodyBackgroundHover,
-    '--profile-body-divider-color': e(T, I.dividerOpacity),
+    '--profile-avatar-border-color': e(I),
+    '--profile-body-background-color': m.sectionBox,
+    '--profile-body-background-hover': m.profileBodyBackgroundHover,
+    '--profile-body-divider-color': e(T, m.dividerOpacity),
     '--profile-body-border-color': e(T, 0.12),
     '--profile-message-input-border-color': e(g),
-    '--profile-note-background-color': I.noteBackgroundColor,
-    '--profile-role-pill-background-color': I.rolePillBackgroundColor,
-    '--profile-role-pill-border-color': I.rolePillBorderColor,
+    '--profile-note-background-color': m.noteBackgroundColor,
+    '--profile-role-pill-background-color': m.rolePillBackgroundColor,
+    '--profile-role-pill-border-color': m.rolePillBorderColor,
     ...(0, c.W4)({
       enabled: !0,
       primaryColor: n,
@@ -69,8 +69,8 @@ profileThemeStyle: (0, r.useMemo)(() => {
 }, [
   n,
   i,
-  I,
   m,
+  I,
   T,
   g,
   S,

@@ -13,8 +13,8 @@ var i = n(735250),
   _ = n(594174),
   f = n(626135),
   E = n(906605),
-  g = n(574176),
-  C = n(833858),
+  C = n(574176),
+  g = n(833858),
   I = n(866071),
   x = n(223135),
   T = n(625938),
@@ -29,7 +29,7 @@ channel: Z,
 previewIsOpen: A
   } = e, {
 enableHangStatus: M
-  } = g.n.useExperiment({
+  } = C.n.useExperiment({
 guildId: Z.guild_id,
 location: 'HangStatusPopout'
   }), b = (0, r.e7)([d.default], () => d.default.getId()), R = (0, r.e7)([_.default], () => _.default.getUser(s)), j = (0, r.e7)([p.Z], () => p.Z.getChannelId() === Z.id), L = (0, r.e7)([m.Z], () => m.Z.can(N.Plq.CONNECT, Z)), P = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, Z), O = (0, r.e7)([h.ZP], () => null != Z.guild_id && null != R ? h.ZP.getMember(Z.guild_id, s) : null), y = a.useMemo(() => null != R ? (0, u.SG)(void 0, O, R, {
@@ -84,7 +84,7 @@ children: (0, i.jsxs)('div', {
               variant: 'text-sm/semibold',
               color: 'text-normal',
               className: S.statusText,
-              children: (0, C.O8)(t)
+              children: (0, g.O8)(t)
             })
           ]
         }),

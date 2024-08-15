@@ -16,8 +16,8 @@ renderRow: E,
 renderSection: f,
 renderSectionHeader: h,
 renderSectionFooter: p,
-renderInspector: I,
-renderEmptySearchState: m,
+renderInspector: m,
+renderEmptySearchState: I,
 rowCount: T,
 rowCountBySection: g,
 rowHeight: S,
@@ -96,7 +96,7 @@ getListDimensions: function() {
   }), []), (0, r.jsxs)('div', {
 className: u.wrapper,
 children: [
-  y.length > 0 && !d && null != m ? m() : (0, r.jsx)(a.Z, {
+  y.length > 0 && !d && null != I ? I() : (0, r.jsx)(a.Z, {
     role: 'none presentation',
     listPadding: _,
     onScroll: P,
@@ -113,7 +113,7 @@ children: [
     ref: C
   }),
   null == v ? void 0 : v(),
-  null == I ? void 0 : I()
+  null == m ? void 0 : m()
 ]
   });
 });

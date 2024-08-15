@@ -117,10 +117,10 @@ var h = Array(60);
 o(h);
 var p = Array(512);
 o(p);
-var I = Array(256);
-o(I);
-var m = Array(29);
+var m = Array(256);
 o(m);
+var I = Array(29);
+o(I);
 var T = Array(30);
 
 function g(e, t, n, r, i) {
@@ -201,7 +201,7 @@ function M(e, t, n) {
   var r, i, a, s, o = 0;
   if (0 !== e.last_lit)
 do
-  r = e.pending_buf[e.d_buf + 2 * o] << 8 | e.pending_buf[e.d_buf + 2 * o + 1], i = e.pending_buf[e.l_buf + o], o++, 0 === r ? O(e, i, t) : (O(e, (a = I[i]) + 256 + 1, t), 0 !== (s = c[a]) && v(e, i -= m[a], s), O(e, a = A(--r), n), 0 !== (s = d[a]) && v(e, r -= T[a], s));
+  r = e.pending_buf[e.d_buf + 2 * o] << 8 | e.pending_buf[e.d_buf + 2 * o + 1], i = e.pending_buf[e.l_buf + o], o++, 0 === r ? O(e, i, t) : (O(e, (a = m[i]) + 256 + 1, t), 0 !== (s = c[a]) && v(e, i -= I[a], s), O(e, a = A(--r), n), 0 !== (s = d[a]) && v(e, r -= T[a], s));
 while (o < e.last_lit);
   O(e, 256, t);
 }
@@ -294,9 +294,9 @@ t._tr_init = function(e) {
   !x && (! function() {
 var e, t, n, s, o, u = Array(16);
 for (s = 0, n = 0; s < 28; s++)
-  for (e = 0, m[s] = n; e < 1 << c[s]; e++)
-    I[n++] = s;
-for (I[n - 1] = s, o = 0, s = 0; s < 16; s++)
+  for (e = 0, I[s] = n; e < 1 << c[s]; e++)
+    m[n++] = s;
+for (m[n - 1] = s, o = 0, s = 0; s < 16; s++)
   for (e = 0, T[s] = o; e < 1 << d[s]; e++)
     p[o++] = s;
 for (o >>= 7; s < 30; s++)
@@ -340,7 +340,7 @@ for (v(e, t - 257, 5), v(e, n - 1, 5), v(e, r - 4, 4), i = 0; i < r; i++)
 w(e, e.dyn_ltree, t - 1), w(e, e.dyn_dtree, n - 1);
   }(e, e.l_desc.max_code + 1, e.d_desc.max_code + 1, s + 1), M(e, e.dyn_ltree, e.dyn_dtree)), y(e), r && D(e);
 }, t._tr_tally = function(e, t, n) {
-  return e.pending_buf[e.d_buf + 2 * e.last_lit] = t >>> 8 & 255, e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t, e.pending_buf[e.l_buf + e.last_lit] = 255 & n, e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[(I[n] + 256 + 1) * 2]++, e.dyn_dtree[2 * A(t)]++), e.last_lit === e.lit_bufsize - 1;
+  return e.pending_buf[e.d_buf + 2 * e.last_lit] = t >>> 8 & 255, e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t, e.pending_buf[e.l_buf + e.last_lit] = 255 & n, e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[(m[n] + 256 + 1) * 2]++, e.dyn_dtree[2 * A(t)]++), e.last_lit === e.lit_bufsize - 1;
 }, t._tr_align = function(e) {
   var t;
   v(e, 2, 3), O(e, 256, f), 16 === (t = e).bi_valid ? (N(t, t.bi_buf), t.bi_buf = 0, t.bi_valid = 0) : t.bi_valid >= 8 && (t.pending_buf[t.pending++] = 255 & t.bi_buf, t.bi_buf >>= 8, t.bi_valid -= 8);

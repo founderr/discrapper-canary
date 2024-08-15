@@ -77,18 +77,18 @@ wrap: E = _.NO_WRAP,
 shrink: f,
 grow: h,
 basis: p,
-style: I,
-...m
+style: m,
+...I
   } = e;
   return (0, r.jsx)('div', {
 style: {
   flexShrink: f,
   flexGrow: h,
   flexBasis: p,
-  ...I
+  ...m
 },
 className: s()(o.flex, i, a, l, E, n),
-...m,
+...I,
 children: t
   });
 };

@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(287746),
   f = n(541716),
   E = n(665149),
-  g = n(910611),
-  C = n(359110),
+  C = n(910611),
+  g = n(359110),
   I = n(592125),
   x = n(703558),
   T = n(430824),
@@ -42,7 +42,7 @@ a.useEffect(() => {
   t && null != e && (o.Z.dispatch({
     type: 'SIDEBAR_CLOSE',
     baseChannelId: e.parent_id
-  }), (0, C.ad)(e, {
+  }), (0, g.ad)(e, {
     source: S.on.VOICE_AUTO_OPEN
   }));
 }, [
@@ -81,7 +81,7 @@ children: [
   (0, i.jsx)(E.ZP, {
     toolbar: O,
     'aria-label': A.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
-    children: (0, g.ud)({
+    children: (0, C.ud)({
       channel: R,
       channelName: L,
       guild: j,
@@ -99,7 +99,7 @@ children: [
       },
       handleClick: function() {
         if (null != R)
-          (0, C.Kh)(R.id);
+          (0, g.Kh)(R.id);
       }
     })
   }),

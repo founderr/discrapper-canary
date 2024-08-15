@@ -30,8 +30,8 @@ let {
   contentClassName: f,
   onScroll: h,
   dir: p = 'ltr',
-  fade: I = !1,
-  customTheme: m = !1,
+  fade: m = !1,
+  customTheme: I = !1,
   style: T,
   ...g
 } = t, S = i.useRef(null), A = i.useRef(null), [N, v] = i.useState(!1), {
@@ -68,11 +68,11 @@ return i.useEffect(() => () => clearTimeout(S.current), []), (0, l.zn)({
 }), (0, r.jsx)('div', {
   ref: O,
   className: s()(_, {
-    [u.fade]: I,
-    [u.customTheme]: m,
+    [u.fade]: m,
+    [u.customTheme]: I,
     [e]: !0,
     [u.managedReactiveScroller]: !0,
-    [u.scrolling]: N && I
+    [u.scrolling]: N && m
   }),
   style: T,
   dir: p,

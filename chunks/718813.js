@@ -34,7 +34,7 @@ writable: !0
 let A = (0, m.Un)({
 createPromise: () => Promise.all([
   n.e('96427'),
-  n.e('44733'),
+  n.e('35728'),
   n.e('52249'),
   n.e('54803'),
   n.e('15685'),

@@ -32,8 +32,8 @@ var r, i, a, s = n(470079),
   f = n(822245),
   h = n(399860),
   p = n(706454),
-  I = n(675478),
-  m = n(592125),
+  m = n(675478),
+  I = n(592125),
   T = n(430824),
   g = n(594174),
   S = n(626135),
@@ -224,7 +224,7 @@ let c = en({
 return c.loading = c.loading || u, c;
   }
   maybeQueryForInstallLessApps(e, t) {
-let n = m.Z.getChannel(t),
+let n = I.Z.getChannel(t),
   r = P.Yq.includes(e) ? e : void 0;
 null != n && null != r && this.query(n, {
   commandTypes: [E.yU.CHAT]
@@ -236,7 +236,7 @@ null != n && null != r && this.query(n, {
 });
   }
   queryInstallOnDemandApp(e, t) {
-let n = m.Z.getChannel(t);
+let n = I.Z.getChannel(t);
 null != n && this.query(n, {
   commandTypes: [E.yU.CHAT]
 }, {
@@ -412,7 +412,7 @@ let {
 }), a = null == i ? void 0 : null === (t = i.result) || void 0 === t ? void 0 : t.sectionIdsByBotId;
 if (null != a)
   for (let e in a) {
-    let t = m.Z.getDMFromUserId(e);
+    let t = I.Z.getDMFromUserId(e);
     null != t && Y({
       type: 'channel',
       channelId: t
@@ -648,7 +648,7 @@ text: _,
 builtIns: E = R.D.ALLOW,
 allowApplicationCommands: h = !0,
 singleApplicationId: p,
-allowEmptySections: m = !1,
+allowEmptySections: I = !1,
 scoreMethod: g = R.p.NONE,
 sortOptions: S = ee,
 installOnDemand: N = !1
@@ -658,7 +658,7 @@ commandTypes: O
 permissionContext: o,
 query: C,
 splitQuery: y,
-allowEmptySections: m,
+allowEmptySections: I,
 scoreMethod: g,
 installOnDemand: N
   }, U = null !== (i = null === (t = u.result) || void 0 === t ? void 0 : t.sections) && void 0 !== i ? i : {}, w = null !== (a = null === (n = c.result) || void 0 === n ? void 0 : n.sections) && void 0 !== a ? a : {}, x = new Set();
@@ -704,7 +704,7 @@ l()(null != t, 'Failed to select application descriptor'), l()(null != n, 'Faile
 let u = er(t, n, s, o, P);
 null != u && M.push(u);
   }
-  if (S.applications.useFrecency && I.DZ.loadIfNecessary(), M.sort((e, t) => {
+  if (S.applications.useFrecency && m.DZ.loadIfNecessary(), M.sort((e, t) => {
   if (S.applications.useScore && g === R.p.APPLICATION_ONLY) {
     var n, r, i, a;
     let s = null !== (i = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== i ? i : Number.MAX_VALUE,
@@ -719,7 +719,7 @@ null != u && M.push(u);
       return r - n;
   }
   return eu(e.section.name, t.section.name);
-}), L.length > 0 || !0 === m) {
+}), L.length > 0 || !0 === I) {
 let e = er(A.Tm[b.bi.BUILT_IN], L, !0, !0, P);
 null != e && M.push(e);
   }
@@ -730,7 +730,7 @@ section: e.section
   if (g === R.p.COMMAND_ONLY || g === R.p.COMMAND_OR_APPLICATION) {
 let e = o.context,
   t = T.Z.getGuild(o.context.guild_id);
-S.commands.useFrecency && I.DZ.loadIfNecessary(), k.sort((n, r) => {
+S.commands.useFrecency && m.DZ.loadIfNecessary(), k.sort((n, r) => {
   if (S.commands.useScore) {
     var i, a;
     let e = null !== (i = n.score) && void 0 !== i ? i : 0,
@@ -777,16 +777,16 @@ function er(e, t, n, r, i) {
   isImpersonating: h
 } = c,
 p = null != _.guild_id ? L.ML(e.permissions, _.guild_id, E, f, h) : null,
-I = null != _.guild_id ? L.ZJ(e.permissions, _, _.guild_id) : null,
-m = [];
+m = null != _.guild_id ? L.ZJ(e.permissions, _, _.guild_id) : null,
+I = [];
   for (let i of t)
 L.Ft(i, c, {
   applicationAllowedForUser: p,
-  applicationAllowedForChannel: I,
+  applicationAllowedForChannel: m,
   commandBotId: e.botId,
   isGuildInstalled: n,
   isUserInstalled: r || d
-}) === L.mF.ALLOWED && m.push(i);
+}) === L.mF.ALLOWED && I.push(i);
   return 0 !== (a = u !== R.p.NONE && null != s && null != o ? function(e, t, n, r, i) {
 let a;
 let s = [];
@@ -833,7 +833,7 @@ for (let t of n) {
   });
 }
 return s;
-  }(s, o, m, e, u) : m).length || l ? ((u === R.p.NONE || u === R.p.APPLICATION_ONLY) && a.sort((e, t) => eu(e.displayName, t.displayName)), {
+  }(s, o, I, e, u) : I).length || l ? ((u === R.p.NONE || u === R.p.APPLICATION_ONLY) && a.sort((e, t) => eu(e.displayName, t.displayName)), {
 section: e,
 data: a
   }) : null;

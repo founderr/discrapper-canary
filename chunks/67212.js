@@ -3,7 +3,7 @@ n.d(t, {
 return f;
   },
   E7: function() {
-return m;
+return I;
   },
   MV: function() {
 return T;
@@ -61,13 +61,13 @@ return;
 p = null != h && h.isBroadcastChannel();
   if (null == h || r !== h.ownerId || !p)
 return;
-  let I = function(e) {
+  let m = function(e) {
 var t;
 let n = f(a.ZP.getGameForPID(e)),
   r = c.Z.getGameByName(n);
 return null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : '0';
   }(t);
-  null != I && ! function(e) {
+  null != m && ! function(e) {
 let t = l.default.getId(),
   n = l.default.getSessionId();
 null != t && null != n && i.Z.dispatch({
@@ -77,7 +77,7 @@ null != t && null != n && i.Z.dispatch({
   }({
 sessionId: E,
 userId: _,
-applicationId: I,
+applicationId: m,
 channelId: h.id,
 streamKey: e
   });
@@ -89,7 +89,7 @@ type: 'BROADCAST_STOP'
   });
 }
 
-function I(e) {
+function m(e) {
   let t = {};
   e.forEach(e => {
 t[e] = -1;
@@ -98,7 +98,7 @@ type: 'BROADCASTER_BUCKETS_RECEIVED',
 data: t
   });
 }
-async function m() {
+async function I() {
   let e = _.Z.getUserIdsToValidate();
   try {
 let t = await r.tn.get({
@@ -117,9 +117,9 @@ if (t.ok && null != t.body) {
     data: n
   });
 } else
-  I(e);
+  m(e);
   } catch (t) {
-I(e);
+m(e);
   }
 }
 async function T() {

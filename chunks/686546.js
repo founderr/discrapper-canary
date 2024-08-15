@@ -88,7 +88,7 @@ strokeMaskRadius: a
   };
 }
 
-function I(e) {
+function m(e) {
   let {
 totalSize: t,
 backAvatarSize: n,
@@ -121,13 +121,13 @@ children: [
   });
 }
 
-function m(e, t) {
+function I(e, t) {
   let n = p((0, u.UC)(t));
   return (0, a.jsx)('mask', {
 id: e,
 maskContentUnits: 'objectBoundingBox',
 viewBox: '0 0 1 1',
-children: I(n)
+children: m(n)
   });
 }
 
@@ -141,7 +141,7 @@ id: e,
 maskContentUnits: 'objectBoundingBox',
 viewBox: '0 0 1 1',
 children: [
-  I(r),
+  m(r),
   (0, a.jsx)('circle', {
     fill: 'black',
     cx: (i - s - n.offset) / i,
@@ -164,7 +164,7 @@ id: e,
 maskContentUnits: 'objectBoundingBox',
 viewBox: '0 0 1 1',
 children: [
-  I(r),
+  m(r),
   (0, a.jsx)('rect', {
     fill: 'black',
     x: o / i,
@@ -396,7 +396,7 @@ children: (0, a.jsx)('foreignObject', {
 }
 y.Masks = i, t.ZP = y;
 let D = s.memo(function() {
-  var e, t, n, r, i, s, o, l, c, _, p, I, y, D, L, b, M, P, U, w, x, G;
+  var e, t, n, r, i, s, o, l, c, _, p, m, y, D, L, b, M, P, U, w, x, G;
   return (0, a.jsxs)('svg', {
 viewBox: '0 0 1 1',
 style: {
@@ -646,31 +646,31 @@ children: [
   C('svg-mask-avatar-decoration-status-mobile-120', u.EF.SIZE_120),
   v('svg-mask-avatar-status-typing-120', u.EF.SIZE_120),
   O('svg-mask-avatar-decoration-status-typing-120', u.EF.SIZE_120),
-  m('svg-mask-diagonal-facepile-16', u.EF.SIZE_16),
+  I('svg-mask-diagonal-facepile-16', u.EF.SIZE_16),
   T('svg-mask-diagonal-facepile-status-16', u.EF.SIZE_16),
   g('svg-mask-diagonal-facepile-typing-16', u.EF.SIZE_16),
-  m('svg-mask-diagonal-facepile-20', u.EF.SIZE_20),
+  I('svg-mask-diagonal-facepile-20', u.EF.SIZE_20),
   T('svg-mask-diagonal-facepile-status-20', u.EF.SIZE_20),
   g('svg-mask-diagonal-facepile-typing-20', u.EF.SIZE_20),
-  m('svg-mask-diagonal-facepile-24', u.EF.SIZE_24),
+  I('svg-mask-diagonal-facepile-24', u.EF.SIZE_24),
   T('svg-mask-diagonal-facepile-status-24', u.EF.SIZE_24),
   g('svg-mask-diagonal-facepile-typing-24', u.EF.SIZE_24),
-  m('svg-mask-diagonal-facepile-32', u.EF.SIZE_32),
+  I('svg-mask-diagonal-facepile-32', u.EF.SIZE_32),
   T('svg-mask-diagonal-facepile-status-32', u.EF.SIZE_32),
   g('svg-mask-diagonal-facepile-typing-32', u.EF.SIZE_32),
-  m('svg-mask-diagonal-facepile-40', u.EF.SIZE_40),
+  I('svg-mask-diagonal-facepile-40', u.EF.SIZE_40),
   T('svg-mask-diagonal-facepile-status-40', u.EF.SIZE_40),
   g('svg-mask-diagonal-facepile-typing-40', u.EF.SIZE_40),
-  m('svg-mask-diagonal-facepile-48', u.EF.SIZE_48),
+  I('svg-mask-diagonal-facepile-48', u.EF.SIZE_48),
   T('svg-mask-diagonal-facepile-status-48', u.EF.SIZE_48),
   g('svg-mask-diagonal-facepile-typing-48', u.EF.SIZE_48),
-  m('svg-mask-diagonal-facepile-56', u.EF.SIZE_56),
+  I('svg-mask-diagonal-facepile-56', u.EF.SIZE_56),
   T('svg-mask-diagonal-facepile-status-56', u.EF.SIZE_56),
   g('svg-mask-diagonal-facepile-typing-56', u.EF.SIZE_56),
-  m('svg-mask-diagonal-facepile-80', u.EF.SIZE_80),
+  I('svg-mask-diagonal-facepile-80', u.EF.SIZE_80),
   T('svg-mask-diagonal-facepile-status-80', u.EF.SIZE_80),
   g('svg-mask-diagonal-facepile-typing-80', u.EF.SIZE_80),
-  m('svg-mask-diagonal-facepile-120', u.EF.SIZE_120),
+  I('svg-mask-diagonal-facepile-120', u.EF.SIZE_120),
   T('svg-mask-diagonal-facepile-status-120', u.EF.SIZE_120),
   g('svg-mask-diagonal-facepile-typing-120', u.EF.SIZE_120),
   function(e) {
@@ -814,8 +814,8 @@ children: [
       })
     ]
   })),
-  (I = 'svg-mask-avatar-voice-call-80', (0, a.jsxs)('mask', {
-    id: I,
+  (m = 'svg-mask-avatar-voice-call-80', (0, a.jsxs)('mask', {
+    id: m,
     maskContentUnits: 'objectBoundingBox',
     viewBox: '0 0 1 1',
     children: [

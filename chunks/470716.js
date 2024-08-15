@@ -59,14 +59,14 @@ STYLE: 'style',
 TITLE: 'title',
 FRAGMENT: 'Symbol(react.fragment)'
   },
-  I = {
+  m = {
 rel: [
   'amphtml',
   'canonical',
   'alternate'
 ]
   },
-  m = {
+  I = {
 type: ['application/ld+json']
   },
   T = {
@@ -291,7 +291,7 @@ var t = e.baseTag,
     }
   };
 if (e.prioritizeSeoTags) {
-  var E, f, h, g, S, A, N, v = (f = (E = e).linkTags, h = E.scriptTags, g = E.encode, S = D(E.metaTags, T), A = D(f, I), N = D(h, m), {
+  var E, f, h, g, S, A, N, v = (f = (E = e).linkTags, h = E.scriptTags, g = E.encode, S = D(E.metaTags, T), A = D(f, m), N = D(h, I), {
     priorityMethods: {
       toComponent: function() {
         return [].concat(w(p.META, S.priority), w(p.LINK, A.priority), w(p.SCRIPT, N.priority));
@@ -441,13 +441,13 @@ var f = {
     styleTags: Y(p.STYLE, d)
   },
   h = {},
-  I = {};
+  m = {};
 Object.keys(f).forEach(function(e) {
   var t = f[e],
     n = t.newTags,
     r = t.oldTags;
-  n.length && (h[e] = n), r.length && (I[e] = f[e].oldTags);
-}), t && t(), u(e, h, I);
+  n.length && (h[e] = n), r.length && (m[e] = f[e].oldTags);
+}), t && t(), u(e, h, m);
   },
   K = null,
   z = function(e) {

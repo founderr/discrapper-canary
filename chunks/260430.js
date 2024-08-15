@@ -65,10 +65,10 @@ requestedScopes: a,
 integrationType: c,
 errors: d,
 isTrustedName: p = !1
-  } = e, I = (0, s.Z)(() => _.ZW[Math.floor(Math.random() * _.ZW.length)]);
+  } = e, m = (0, s.Z)(() => _.ZW[Math.floor(Math.random() * _.ZW.length)]);
   if (0 === i.length)
 return null;
-  let m = I(),
+  let I = m(),
 T = p ? E.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.Z.Messages.OAUTH2_SCOPES_LABEL,
 g = c === o.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
   return (0, r.jsxs)('div', {
@@ -92,7 +92,7 @@ children: [
     text: E.Z.Messages.SCOPE_DM_YOU
   }),
   (0, r.jsx)(h, {
-    text: m,
+    text: I,
     isFake: !0
   })
 ]

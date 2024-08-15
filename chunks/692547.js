@@ -16,9 +16,9 @@ let {
   SemanticColors: h,
   RawColors: p
 } = u.V, {
-  Shadows: I
+  Shadows: m
 } = _.V, {
-  Spacing: m
+  Spacing: I
 } = E.V, {
   Modules: T
 } = c.V, g = l()(p, e => i()(e)), S = {
@@ -45,7 +45,7 @@ return {
   resolve: e => A(n, e.saturation)
 };
   }),
-  shadows: l()(I, (e, t) => ({
+  shadows: l()(m, (e, t) => ({
 css: O(t),
 resolve: t => ({
   boxShadow: e[t.theme].boxShadow,
@@ -54,7 +54,7 @@ resolve: t => ({
 })
   })),
   radii: d.w,
-  spacing: l()(m, e => ''.concat(e, 'px'))
+  spacing: l()(I, e => ''.concat(e, 'px'))
 };
 
 function A(e, t) {

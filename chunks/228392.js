@@ -36,7 +36,7 @@ return P;
 return S;
   },
   P_: function() {
-return m;
+return I;
   },
   Vn: function() {
 return g;
@@ -48,7 +48,7 @@ return N;
 return D;
   },
   e7: function() {
-return I;
+return m;
   },
   lN: function() {
 return x;
@@ -137,7 +137,7 @@ channel_id: n
   });
 }
 
-function I(e) {
+function m(e) {
   let {
 guildId: t,
 channelId: n,
@@ -159,7 +159,7 @@ location: o
   });
 }
 
-function m(e) {
+function I(e) {
   let {
 guildId: t,
 channelId: n
@@ -199,9 +199,9 @@ return;
 f = null === (t = c.template) || void 0 === t ? void 0 : t.trim(),
 h = o.Z.getDraft(u, o.d.FirstThreadMessage),
 p = null == h || 0 === h.length || (null == h ? void 0 : h.trim()) === f,
-I = (null == d ? void 0 : d.appliedTags) == null || (null == d ? void 0 : null === (n = d.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
-m = (null == d ? void 0 : d.name) == null || (null == d ? void 0 : null === (a = d.name) || void 0 === a ? void 0 : null === (i = a.trim()) || void 0 === i ? void 0 : i.length) === 0;
-  if (!p || !I || !m)
+m = (null == d ? void 0 : d.appliedTags) == null || (null == d ? void 0 : null === (n = d.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
+I = (null == d ? void 0 : d.name) == null || (null == d ? void 0 : null === (a = d.name) || void 0 === a ? void 0 : null === (i = a.trim()) || void 0 === i ? void 0 : i.length) === 0;
+  if (!p || !m || !I)
 r.ZP.trackWithMetadata(E.rMx.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
   ...(0, _.xl)({
     channelId: u

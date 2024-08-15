@@ -14,8 +14,8 @@ var i = n(120356),
   f = n(74538),
   h = n(204418),
   p = n(689938),
-  I = n(828136);
-let m = [{
+  m = n(828136);
+let I = [{
   avatarSize: l.AvatarSizes.SIZE_40,
   showStatus: !1
 },
@@ -37,7 +37,7 @@ let {
   purchase: t
 } = e, n = (0, o.e7)([d.default], () => d.default.locale), i = (0, u.qS)(t), a = null != t.expiresAt ? (0, E.TD)(Date.now(), t.expiresAt) : null;
 return (0, r.jsxs)('div', {
-  className: I.purchaseInfo,
+  className: m.purchaseInfo,
   children: [
     (0, r.jsx)(l.Text, {
       variant: 'text-sm/semibold',
@@ -100,10 +100,10 @@ product: g,
 purchase: S
   } = (0, c.Z)(null == i ? void 0 : i.skuId), A = f.ZP.canUseCollectibles(t), N = (0, u.qS)(S), v = (0, u.G1)(g), O = !A && N;
   return null != g && (null == S || O) ? (0, r.jsxs)('div', {
-className: a()(I.modalPreview, I.shopPreviewContainer, d),
+className: a()(m.modalPreview, m.shopPreviewContainer, d),
 children: [
   (0, r.jsx)('div', {
-    className: I.shopPreviewBanner,
+    className: m.shopPreviewBanner,
     children: (0, r.jsx)(h.Z, {
       user: t,
       guildId: n,
@@ -111,7 +111,7 @@ children: [
     })
   }),
   (0, r.jsxs)('div', {
-    className: I.shopPreviewTextContainer,
+    className: m.shopPreviewTextContainer,
     children: [
       (0, r.jsx)(l.Text, {
         variant: 'text-sm/semibold',
@@ -134,13 +134,13 @@ children: [
   })
 ]
   }) : (0, r.jsxs)('div', {
-className: a()(I.modalPreview, d),
+className: a()(m.modalPreview, d),
 children: [
   (0, r.jsxs)('div', {
-    className: I.previewSections,
+    className: m.previewSections,
     children: [
       (0, r.jsx)('div', {
-        className: I.decorationPreview,
+        className: m.decorationPreview,
         children: (0, r.jsx)(h.Z, {
           user: t,
           guildId: n,
@@ -148,14 +148,14 @@ children: [
         })
       }),
       (0, r.jsx)('div', {
-        className: I.smallDecorationPreviewsContainer,
-        children: m.map(e => {
+        className: m.smallDecorationPreviewsContainer,
+        children: I.map(e => {
           let {
             avatarSize: a,
             showStatus: s
           } = e;
           return (0, r.jsx)('div', {
-            className: I.smallDecorationPreview,
+            className: m.smallDecorationPreview,
             children: (0, r.jsx)(h.Z, {
               user: t,
               guildId: n,

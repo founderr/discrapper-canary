@@ -23,8 +23,8 @@ icon: a,
 showIconFirst: f = !1,
 imageUrl: h,
 showImageFirst: p = !1,
-hint: I,
-subtext: m,
+hint: m,
+subtext: I,
 subtextLineClamp: T,
 hasSubmenu: g,
 disabled: S,
@@ -90,19 +90,19 @@ children: [
     className: E.label,
     children: [
       (0, l.I)(n, e),
-      null != m && (0, r.jsx)(d.Text, {
+      null != I && (0, r.jsx)(d.Text, {
         variant: 'text-xs/normal',
         className: s()(E.subtext, {
           [E.subtextLineClamp]: null != T
         }),
         lineClamp: T,
-        children: m
+        children: I
       })
     ]
   }),
-  null != I && (0, r.jsx)('div', {
+  null != m && (0, r.jsx)('div', {
     className: E.hintContainer,
-    children: (0, l.I)(I, e)
+    children: (0, l.I)(m, e)
   }),
   !f && null != a && (0, r.jsx)('div', {
     className: E.iconContainer,

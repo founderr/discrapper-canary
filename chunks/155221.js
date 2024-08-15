@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(765717),
   h = n(663993),
   p = n(329816),
-  I = n(554608),
-  m = n(83949),
+  m = n(554608),
+  I = n(83949),
   T = n(137412),
   g = n(314897),
   S = n(626135),
@@ -282,7 +282,7 @@ let {
   migrationStatus: n,
   skipsSettingDefaultPageTitle: i
 } = this.props;
-return e = n === I.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.jsxs)(s.rs, {
+return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.jsxs)(s.rs, {
   children: [
     (0, r.jsx)(s.AW, {
       exact: !0,
@@ -486,17 +486,17 @@ return e = n === I.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.js
   skipsSettingDefaultPageTitle: i,
   children: [
     e,
-    v.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(m.Z, {}) : null
+    v.isPlatformEmbedded && (n === m.P.NOT_STARTED || n === m.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(I.Z, {}) : null
   ]
 });
   }
 }
 t.Z = d.ZP.connectStores([
   g.default,
-  I.Z
+  m.Z
 ], () => ({
   isAuthenticated: g.default.isAuthenticated(),
-  migrationStatus: I.Z.getMigrationStatus()
+  migrationStatus: m.Z.getMigrationStatus()
 }), {
   forwardRef: !0
 })(function(e) {

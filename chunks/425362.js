@@ -159,20 +159,20 @@ p = (e, t) => {
     return;
   }
 },
-I = {
+m = {
   $pattern: t,
   keyword: n,
   literal: r,
   built_in: l,
   'variable.language': o
 },
-m = '[0-9](_?[0-9])*',
-T = `\\.(${ m })`,
+I = '[0-9](_?[0-9])*',
+T = `\\.(${ I })`,
 g = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
 S = {
   className: 'number',
   variants: [{
-      begin: `(\\b(${ g })((${ T })|\\.)?|(${ T }))[eE][+-]?(${ m })\\b`
+      begin: `(\\b(${ g })((${ T })|\\.)?|(${ T }))[eE][+-]?(${ I })\\b`
     },
     {
       begin: `\\b(${ g })\\b((${ T })\\b|\\.)?|(${ T })\\b`
@@ -199,7 +199,7 @@ A = {
   className: 'subst',
   begin: '\\$\\{',
   end: '\\}',
-  keywords: I,
+  keywords: m,
   contains: []
 },
 N = {
@@ -288,14 +288,14 @@ C = [
   A.contains = C.concat({
 begin: /\{/,
 end: /\}/,
-keywords: I,
+keywords: m,
 contains: ['self'].concat(C)
   });
   let y = [].concat(R, A.contains),
 D = y.concat([{
   begin: /\(/,
   end: /\)/,
-  keywords: I,
+  keywords: m,
   contains: ['self'].concat(y)
 }]),
 L = {
@@ -304,7 +304,7 @@ L = {
   end: /\)/,
   excludeBegin: !0,
   excludeEnd: !0,
-  keywords: I,
+  keywords: m,
   contains: D
 },
 b = {
@@ -392,7 +392,7 @@ aliases: [
   'mjs',
   'cjs'
 ],
-keywords: I,
+keywords: m,
 exports: {
   PARAMS_CONTAINS: D,
   CLASS_REFERENCE: M
@@ -455,7 +455,7 @@ contains: [
               end: /\)/,
               excludeBegin: !0,
               excludeEnd: !0,
-              keywords: I,
+              keywords: m,
               contains: D
             }
           ]

@@ -53,19 +53,19 @@ let {
   type: f = 'spring',
   shouldLoop: h,
   durationMin: p,
-  durationMax: I,
-  ...m
-} = n, T = t._value, g = E(n.duration, p, I), S = E(n.toValue, a, s), A = r[f](t, {
-  ...m,
+  durationMax: m,
+  ...I
+} = n, T = t._value, g = E(n.duration, p, m), S = E(n.toValue, a, s), A = r[f](t, {
+  ...I,
   toValue: S,
   tension: o,
   friction: l,
   duration: g
 }), N = A;
 if (c || d) {
-  let e = E(n.duration, p, I);
+  let e = E(n.duration, p, m);
   i = r[f](t, {
-    ...m,
+    ...I,
     toValue: c ? T : -S,
     tension: o,
     friction: l,

@@ -9,18 +9,18 @@ let E = new Set(),
   f = new Set(),
   h = new Map(),
   p = new Map(),
-  I = new Map();
+  m = new Map();
 
-function m(e) {
+function I(e) {
   h.set(e.id, d.Z.createFromServer(e)), E.delete(e.id), f.delete(e.id), !p.has(e.application_id) && p.set(e.application_id, new Set()), p.get(e.application_id).add(e.id);
 }
 
 function T(e) {
-  m(e);
+  I(e);
 }
 
 function g(e) {
-  m(e.sku), null != e.child_skus && e.child_skus.forEach(e => m(e)), null != e.alternative_skus && e.alternative_skus.forEach(e => m(e));
+  I(e.sku), null != e.child_skus && e.child_skus.forEach(e => I(e)), null != e.alternative_skus && e.alternative_skus.forEach(e => I(e));
 }
 
 function S(e) {
@@ -28,11 +28,11 @@ function S(e) {
 entitlements: t
   } = e;
   for (let e of t)
-null != e.sku && m(e.sku);
+null != e.sku && I(e.sku);
 }
 
 function A() {
-  E = new Set(), f = new Set(), h = new Map(), p = new Map(), I = new Map();
+  E = new Set(), f = new Set(), h = new Map(), p = new Map(), m = new Map();
 }
 
 function N() {
@@ -98,7 +98,7 @@ let {
 } = e;
 if (null == t.store_listing)
   return !1;
-m(t.store_listing.sku);
+I(t.store_listing.sku);
   },
   SKU_FETCH_START: function(e) {
 let {
@@ -110,7 +110,7 @@ E.add(t);
 let {
   sku: t
 } = e;
-m(t);
+I(t);
   },
   SKU_FETCH_FAIL: function(e) {
 let {
@@ -124,8 +124,8 @@ let {
   skus: n
 } = e;
 for (let e of n)
-  m(e);
-null != t && I.set(t, new Set(n.map(e => e.id)));
+  I(e);
+null != t && m.set(t, new Set(n.map(e => e.id)));
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: S,
   APPLICATION_STORE_CLEAR_DATA: A,

@@ -19,8 +19,8 @@ writable: !0
 let f = 'GameStoreReportedGames',
   h = new u.Z(),
   p = {},
-  I = {},
-  m = null !== (i = o.K.get(f)) && void 0 !== i ? i : {},
+  m = {},
+  I = null !== (i = o.K.get(f)) && void 0 !== i ? i : {},
   T = '';
 let g = null;
 
@@ -44,7 +44,7 @@ function A(e) {
 p[n.toLowerCase()] = t;
   if ((0, _.isDesktop)())
 for (let n of e.executables)
-  I[n.name] = t;
+  m[n.name] = t;
 }
 class N extends(a = s.ZP.PersistedStore) {
   initialize(e) {
@@ -85,7 +85,7 @@ return T;
 return g;
   }
   getGameByExecutable(e) {
-return I[e];
+return m[e];
   }
   getGameByGameData(e) {
 var t, n;
@@ -106,11 +106,11 @@ return null !== (n = null !== (t = this.getGameByExecutable(i)) && void 0 !== t 
   }
   shouldReport(e) {
 let t = null != this.getGameByName(e),
-  n = null != m[e];
+  n = null != I[e];
 return c.G6.getSetting() && !r && !(t || n);
   }
   markGameReported(e) {
-m[e] = !0, o.K.set(f, m);
+I[e] = !0, o.K.set(f, I);
   }
 }
 E(N, 'displayName', 'GameStore'), E(N, 'persistKey', 'GameStore'), E(N, 'migrations', [

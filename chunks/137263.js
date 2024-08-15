@@ -22,8 +22,8 @@ t[l] = e.readInt32BE(4 * l);
 t[l] = t[l - 3] ^ t[l - 8] ^ t[l - 14] ^ t[l - 16];
   for (var u = 0; u < 80; ++u) {
 var c, d, _, E, f, h, p = ~~(u / 20);
-var I = ((c = n) << 5 | c >>> 27) + (d = p, _ = r, E = i, f = a, 0 === d ? _ & E | ~_ & f : 2 === d ? _ & E | _ & f | E & f : _ ^ E ^ f) + o + t[u] + s[p] | 0;
-o = a, a = i, i = (h = r) << 30 | h >>> 2, r = n, n = I;
+var m = ((c = n) << 5 | c >>> 27) + (d = p, _ = r, E = i, f = a, 0 === d ? _ & E | ~_ & f : 2 === d ? _ & E | _ & f | E & f : _ ^ E ^ f) + o + t[u] + s[p] | 0;
+o = a, a = i, i = (h = r) << 30 | h >>> 2, r = n, n = m;
   }
   this._a = n + this._a | 0, this._b = r + this._b | 0, this._c = i + this._c | 0, this._d = a + this._d | 0, this._e = o + this._e | 0;
 }, l.prototype._hash = function() {

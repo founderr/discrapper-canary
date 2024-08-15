@@ -15,7 +15,7 @@ return i;
 return E;
   },
   fZ: function() {
-return I;
+return m;
   },
   iN: function() {
 return f;
@@ -69,7 +69,7 @@ o.evJ.EXPLICIT_CONTENT,
 o.evJ.ENTITY_TOO_LARGE,
 o.evJ.EXPLICIT_CONTENT
   ]),
-  I = new Set([
+  m = new Set([
 o.evJ.AUTOMOD_MESSAGE_BLOCKED,
 o.evJ.AUTOMOD_TITLE_BLOCKED
   ]);

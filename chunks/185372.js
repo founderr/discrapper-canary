@@ -6,7 +6,7 @@ return p;
 return h;
   },
   ub: function() {
-return I;
+return m;
   }
 });
 var r = n(735250),
@@ -74,7 +74,7 @@ children: [
 ]
   });
 };
-class I extends i.PureComponent {
+class m extends i.PureComponent {
   render() {
 let {
   children: e,

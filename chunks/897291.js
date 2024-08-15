@@ -18,8 +18,8 @@ disabled: t,
 channel: n
   } = e, {
 analyticsLocations: i
-  } = (0, l.ZP)(o.Z.GIFT_BUTTON), I = (0, d.Ft)(n), {
-Component: m,
+  } = (0, l.ZP)(o.Z.GIFT_BUTTON), m = (0, d.Ft)(n), {
+Component: I,
 events: T,
 play: g
   } = (0, a.$)();
@@ -35,7 +35,7 @@ let {
 });
 (0, u.Z)({
   isGift: !0,
-  giftRecipient: null === I ? void 0 : I,
+  giftRecipient: null === m ? void 0 : m,
   initialPlanId: null,
   subscriptionTier: e ? void 0 : f.Si.TIER_2,
   analyticsLocations: i,
@@ -59,7 +59,7 @@ children: e => (0, r.jsx)(_.Z, {
     S(), g();
   },
   ...T,
-  children: (0, r.jsx)(m, {
+  children: (0, r.jsx)(I, {
     color: 'currentColor'
   })
 })

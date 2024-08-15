@@ -119,8 +119,8 @@ function c(e) {
   users: h,
   ...p
 } = e,
-I = [],
 m = [],
+I = [],
 T = [],
 g = [],
 S = [],
@@ -139,7 +139,7 @@ let {
   guild_scheduled_events: a,
   ...s
 } = e;
-I.push('partial' === e.data_mode ? e.partial_updates.channels : e.channels), m.push('partial' === e.data_mode ? e.partial_updates.roles : e.roles), T.push('partial' === e.data_mode ? e.partial_updates.emojis : e.emojis), g.push(i), S.push('partial' === e.data_mode ? e.partial_updates.stickers : e.stickers), A.push(n), N.push(a), v.push(s, r);
+m.push('partial' === e.data_mode ? e.partial_updates.channels : e.channels), I.push('partial' === e.data_mode ? e.partial_updates.roles : e.roles), T.push('partial' === e.data_mode ? e.partial_updates.emojis : e.emojis), g.push(i), S.push('partial' === e.data_mode ? e.partial_updates.stickers : e.stickers), A.push(n), N.push(a), v.push(s, r);
   }), {
 presences_size: JSON.stringify(null !== (t = null == a ? void 0 : a.friends) && void 0 !== t ? t : []).length,
 users_size: JSON.stringify(h).length,
@@ -150,10 +150,10 @@ experiments_size: JSON.stringify(null != _ ? _ : []).length + JSON.stringify(nul
 user_guild_settings_size: JSON.stringify(u).length,
 relationships_size: JSON.stringify(f).length,
 remaining_data_size: JSON.stringify(null != p ? p : {}).length,
-guild_channels_size: JSON.stringify(I).length,
+guild_channels_size: JSON.stringify(m).length,
 guild_members_size: JSON.stringify(null != s ? s : []).length,
 guild_presences_size: JSON.stringify(null !== (n = null == a ? void 0 : a.guilds) && void 0 !== n ? n : []).length,
-guild_roles_size: JSON.stringify(m).length,
+guild_roles_size: JSON.stringify(I).length,
 guild_emojis_size: JSON.stringify(T).length,
 guild_threads_size: JSON.stringify(g).length,
 guild_stickers_size: JSON.stringify(S).length,

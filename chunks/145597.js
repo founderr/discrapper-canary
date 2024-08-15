@@ -22,10 +22,10 @@ return h;
 return s;
   },
   VS: function() {
-return I;
+return m;
   },
   W2: function() {
-return m;
+return I;
   },
   qU: function() {
 return u;
@@ -61,7 +61,7 @@ return r;
 }
 
 function E(e) {
-  m() && (r = e);
+  I() && (r = e);
 }
 
 function f() {
@@ -76,11 +76,11 @@ function p(e) {
   d = e;
 }
 
-function I() {
+function m() {
   return d;
 }
 
-function m() {
+function I() {
   var e;
   return void 0 !== i ? i : i = (null !== (e = new URLSearchParams(window.location.search).get('oop')) && void 0 !== e ? e : '') === 'true';
 }

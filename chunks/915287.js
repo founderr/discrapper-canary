@@ -29,8 +29,8 @@ E = new a(e => {
 let {
   className: h,
   onScroll: p,
-  onResize: I = null,
-  onContentResize: m = null,
+  onResize: m = null,
+  onContentResize: I = null,
   dir: T = 'ltr',
   sections: g,
   sectionHeight: S,
@@ -92,9 +92,9 @@ let {
   chunkSize: k,
   getScrollerState: ee,
   getAnchorId: P
-}), el = (0, c.t2)($), eu = i.useRef(I), ec = i.useRef(m);
+}), el = (0, c.t2)($), eu = i.useRef(m), ec = i.useRef(I);
 i.useLayoutEffect(() => {
-  eu.current = I, ec.current = m;
+  eu.current = m, ec.current = I;
 });
 let ed = i.useCallback(function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;

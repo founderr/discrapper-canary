@@ -16,8 +16,8 @@ left: 'auto'
 function _(e) {
   var t, n, l, u, _, E, f, h = e.popper,
 p = e.popperRect,
-I = e.placement,
-m = e.variation,
+m = e.placement,
+I = e.variation,
 T = e.offsets,
 g = e.position,
 S = e.gpuAcceleration,
@@ -46,7 +46,7 @@ var w = (0, i.Z)(h),
   x = 'clientHeight',
   G = 'clientWidth';
 w === (0, a.Z)(h) && (w = (0, s.Z)(h), 'static' !== (0, o.Z)(w).position && 'absolute' === g && (x = 'scrollHeight', G = 'scrollWidth'));
-(I === r.we || (I === r.t$ || I === r.F2) && m === r.ut) && (P = r.I, y -= (v && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height, y *= S ? 1 : -1), (I === r.t$ || (I === r.we || I === r.I) && m === r.ut) && (M = r.F2, R -= (v && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width, R *= S ? 1 : -1);
+(m === r.we || (m === r.t$ || m === r.F2) && I === r.ut) && (P = r.I, y -= (v && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height, y *= S ? 1 : -1), (m === r.t$ || (m === r.we || m === r.I) && I === r.ut) && (M = r.F2, R -= (v && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width, R *= S ? 1 : -1);
   }
   var k = Object.assign({
 position: g

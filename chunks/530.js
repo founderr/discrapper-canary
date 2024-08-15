@@ -24,8 +24,8 @@ tags: E,
 nickname: f,
 nicknameIcons: h,
 pronouns: p,
-className: I,
-isTryItOut: m,
+className: m,
+isTryItOut: I,
 onOpenProfile: T,
 nicknameVariant: g = 'heading-lg/bold',
 pronounsVariant: S = 'text-sm/medium'
@@ -41,7 +41,7 @@ children: e
   return (0, r.jsxs)('div', {
 className: a()(_.container, {
   [_.bot]: null != O
-}, I),
+}, m),
 children: [
   (0, r.jsxs)('div', {
     className: _.usernameRow,
@@ -71,7 +71,7 @@ children: [
         user: t,
         usernameIcon: i,
         forceUsername: !0,
-        forcePomelo: m,
+        forcePomelo: I,
         className: _.userTag,
         usernameClass: _.userTagUsername,
         discriminatorClass: _.userTagDiscriminator,

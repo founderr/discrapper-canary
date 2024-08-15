@@ -33,7 +33,7 @@ return L;
 return M;
   },
   _G: function() {
-return m;
+return I;
   },
   _O: function() {
 return A;
@@ -57,7 +57,7 @@ return O;
 return B;
   },
   lX: function() {
-return I;
+return m;
   },
   m_: function() {
 return E;
@@ -119,8 +119,8 @@ let _ = new d(r.q.ANIMATED_EMOJIS),
   f = new d(r.q.STICKERS_EVERYWHERE),
   h = new d(r.q.SOUNDBOARD_EVERYWHERE),
   p = new d(r.q.CUSTOM_CALL_SOUNDS),
-  I = new d(r.q.ANIMATED_AVATAR),
-  m = new d(r.q.CUSTOM_DISCRIMINATOR),
+  m = new d(r.q.ANIMATED_AVATAR),
+  I = new d(r.q.CUSTOM_DISCRIMINATOR),
   T = new d(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
   g = new d('profileBadges'),
   S = new d(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
@@ -155,8 +155,8 @@ let U = new d(r.q.INCREASED_GUILD_LIMIT),
 [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [
   _,
   E,
-  I,
   m,
+  I,
   g,
   O,
   C,
@@ -171,8 +171,8 @@ let U = new d(r.q.INCREASED_GUILD_LIMIT),
   f,
   h,
   p,
-  I,
   m,
+  I,
   T,
   g,
   S,

@@ -253,13 +253,13 @@ p = {
   })(E),
   built_in: h
 },
-I = e => e.map(e => e.replace(/\|\d+$/, '')),
-m = {
+m = e => e.map(e => e.replace(/\|\d+$/, '')),
+I = {
   variants: [{
     match: [
       /new/,
       t.concat(c, '+'),
-      t.concat('(?!', I(h).join('\\b|'), '\\b)'),
+      t.concat('(?!', m(h).join('\\b|'), '\\b)'),
       i
     ],
     scope: {
@@ -337,14 +337,14 @@ A = {
     e.C_BLOCK_COMMENT_MODE,
     d,
     _,
-    m
+    I
   ]
 },
 N = {
   relevance: 0,
   match: [
     /\b/,
-    t.concat('(?!fn\\b|function\\b|', I(f).join('\\b|'), '|', I(h).join('\\b|'), '\\b)'),
+    t.concat('(?!fn\\b|function\\b|', m(f).join('\\b|'), '|', m(h).join('\\b|'), '\\b)'),
     r,
     t.concat(c, '*'),
     t.lookahead(/(?=\()/)
@@ -361,7 +361,7 @@ g,
 e.C_BLOCK_COMMENT_MODE,
 d,
 _,
-m
+I
   ];
   return {
 case_insensitive: !1,
@@ -457,7 +457,7 @@ contains: [{
       3: 'variable.constant'
     }
   },
-  m,
+  I,
   {
     scope: 'function',
     relevance: 0,

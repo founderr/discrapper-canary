@@ -165,14 +165,14 @@ function p(...e) {
   return e.map(e => _(e)).join('');
 }
 
-function I(...e) {
+function m(...e) {
   return '(' + (function(e) {
 let t = e[e.length - 1];
 return 'object' == typeof t && t.constructor === Object ? (e.splice(e.length - 1, 1), t) : {};
   }(e).capture ? '' : '?:') + e.map(e => _(e)).join('|') + ')';
 }
 
-function m(e) {
+function I(e) {
   return RegExp(e.toString() + '|').exec('').length - 1;
 }
 let T = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
@@ -219,7 +219,7 @@ r.contains.push({
   excludeBegin: !0,
   relevance: 0
 });
-let i = I('I', 'a', 'is', 'so', 'us', 'to', 'at', 'if', 'in', 'it', 'on', /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+let i = m('I', 'a', 'is', 'so', 'us', 'to', 'at', 'if', 'in', 'it', 'on', /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
 return r.contains.push({
   begin: p(/[ ]+/, '(', i, /[.]?[:]?([.][ ]|[ ])/, '){3}')
 }), r;
@@ -343,7 +343,7 @@ e.beginKeywords && (e.begin = '\\b(' + e.beginKeywords.split(' ').join('|') + ')
 }
 
 function w(e, t) {
-  Array.isArray(e.illegal) && (e.illegal = I(...e.illegal));
+  Array.isArray(e.illegal) && (e.illegal = m(...e.illegal));
 }
 
 function x(e, t) {
@@ -405,7 +405,7 @@ i = e[n],
 a = {},
 s = {};
   for (let e = 1; e <= t.length; e++)
-s[e + r] = i[e], a[e + r] = !0, r += m(t[e - 1]);
+s[e + r] = i[e], a[e + r] = !0, r += I(t[e - 1]);
   e[n] = s, e[n]._emit = a, e[n]._multi = !0;
 }
 
@@ -558,7 +558,7 @@ function h(e, t) {
 }
 let p = {};
 
-function I(n, i) {
+function m(n, i) {
   let a = i && i[0];
   if (L += n, null == a)
     return E(), 0;
@@ -645,7 +645,7 @@ let A = function(e) {
         t.position = this.position++, this.matchIndexes[this.matchAt] = t, this.regexes.push([
           t,
           e
-        ]), this.matchAt += m(e) + 1;
+        ]), this.matchAt += I(e) + 1;
       }
       compile() {
         0 === this.regexes.length && (this.exec = () => null);
@@ -785,10 +785,10 @@ try {
     if (!e)
       break;
     let n = t.substring(M, e.index),
-      r = I(n, e);
+      r = m(n, e);
     M = e.index + r;
   }
-  return I(t.substring(M)), D.closeAllNodes(), D.finalize(), O = D.toHTML(), {
+  return m(t.substring(M)), D.closeAllNodes(), D.finalize(), O = D.toHTML(), {
     language: e,
     value: O,
     relevance: b,
@@ -991,7 +991,7 @@ o.forEach(function(n) {
 }, e.versionString = '11.7.0', e.regex = {
   concat: p,
   lookahead: E,
-  either: I,
+  either: m,
   optional: h,
   anyNumberOfTimes: f
 }, b))

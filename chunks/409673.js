@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(745510),
   h = n(631771),
   p = n(594174),
-  I = n(208049),
-  m = n(763296),
+  m = n(208049),
+  I = n(763296),
   T = n(697426),
   g = n(242291),
   S = n(706667),
@@ -126,7 +126,7 @@ en = (0, l.e7)([E.Z], () => E.Z.useReducedMotion),
 er = i.useRef(0.01),
 ei = i.useRef(new u.Xp()),
 ea = '1' === D.soundId,
-es = (0, l.e7)([m.Z], () => m.Z.isFavoriteSound(Y), [Y]),
+es = (0, l.e7)([I.Z], () => I.Z.isFavoriteSound(Y), [Y]),
 eo = 'sound-'.concat(D.soundId),
 el = (0, o.JA)(eo),
 eu = null != W || null != K,
@@ -142,7 +142,7 @@ e_ = ec && V,
 });
 
   function ef(e) {
-e.stopPropagation(), e.currentTarget.blur(), es ? (0, I.hs)(Y) : (0, I.TB)(Y);
+e.stopPropagation(), e.currentTarget.blur(), es ? (0, m.hs)(Y) : (0, m.TB)(Y);
   }
 
   function eh() {
@@ -169,7 +169,7 @@ return (0, r.jsx)(R, {
   previewSound: X,
   disabled: ec && !P
 }),
-eI = e => x || ec ? ec && V && eE ? (0, r.jsx)(d.LockIcon, {
+em = e => x || ec ? ec && V && eE ? (0, r.jsx)(d.LockIcon, {
   size: 'xs',
   color: 'currentColor',
   className: s()(O.primaryIcon, e)
@@ -178,12 +178,12 @@ eI = e => x || ec ? ec && V && eE ? (0, r.jsx)(d.LockIcon, {
   color: 'currentColor',
   className: s()(O.primaryIcon, e)
 }),
-em = () => eE && ec && V && !H ? (0, r.jsxs)(r.Fragment, {
+eI = () => eE && ec && V && !H ? (0, r.jsxs)(r.Fragment, {
   children: [
     (0, r.jsx)('div', {
       className: O.buttonOverlayBackground
     }),
-    eI(O.primaryIconTopLevel),
+    em(O.primaryIconTopLevel),
     (0, r.jsx)('div', {
       className: O.buttonOverlay,
       children: (0, r.jsxs)('div', {
@@ -207,7 +207,7 @@ em = () => eE && ec && V && !H ? (0, r.jsxs)(r.Fragment, {
       className: O.buttonOverlayActions,
       children: [
         ed && ep,
-        eI(),
+        em(),
         ed && eh()
       ]
     })
@@ -309,7 +309,7 @@ children: [
             });
           case T.Pb.PLAY:
           default:
-            return em();
+            return eI();
         }
       }()
     ]

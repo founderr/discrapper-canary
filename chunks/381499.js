@@ -15,7 +15,7 @@ return d;
 return E;
   },
   yC: function() {
-return I;
+return m;
   }
 }), n(47120), n(411104), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
 var r = n(36056),
@@ -310,8 +310,8 @@ super('google.protobuf.UInt32Value', [{
 }]);
   }
 }
-let I = new p();
-class m extends o.C {
+let m = new p();
+class I extends o.C {
   internalJsonWrite(e, t) {
 return e.value;
   }
@@ -358,7 +358,7 @@ super('google.protobuf.BoolValue', [{
 }]);
   }
 }
-let T = new m();
+let T = new I();
 class g extends o.C {
   internalJsonWrite(e, t) {
 return e.value;

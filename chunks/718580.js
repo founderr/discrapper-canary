@@ -1,9 +1,9 @@
 n.d(t, {
   H: function() {
-return m;
+return I;
   },
   M: function() {
-return I;
+return m;
   }
 });
 var r = n(735250),
@@ -36,12 +36,12 @@ return i && r && 'left' === e && (a = !0), i && !r && 'right' === e && (a = !0),
   };
 }
 
-function I(e) {
+function m(e) {
   return null;
 }
 
-function m(e) {
-  var t, n, I, m, T;
+function I(e) {
+  var t, n, m, I, T;
   let {
 contentDisplay: g,
 fadeInOut: S = !1,
@@ -59,7 +59,7 @@ N[e.props.id] = {
   });
   let O = A.activeSlide,
 R = (0, d.Z)(A.activeSlide);
-  let C = null !== (t = A.directionOverride) && void 0 !== t ? t : (m = null != R ? N[R] : null, T = N[O], null == m ? null : m.index > T.index ? 'backwards' : m.index < T.index ? 'forwards' : null),
+  let C = null !== (t = A.directionOverride) && void 0 !== t ? t : (I = null != R ? N[R] : null, T = N[O], null == I ? null : I.index > T.index ? 'backwards' : I.index < T.index ? 'forwards' : null),
 {
   reducedMotion: y
 } = i.useContext(l.S),
@@ -118,7 +118,7 @@ top: '50%'
   } : {
 transform: 'scale(1.0, 1.0)'
   }, Y = o.tq ? {} : {
-overflow: null !== (I = A.overflow) && void 0 !== I ? I : 'hidden'
+overflow: null !== (m = A.overflow) && void 0 !== m ? m : 'hidden'
   };
   return (0, r.jsx)(a.animated.div, {
 style: {

@@ -11,11 +11,11 @@ let m = {},
   f = {},
   E = !1;
 
-function g() {
+function C() {
   return d.Z;
 }
 
-function C() {
+function g() {
   if (f = {}, !_)
 for (let [e, t] of Object.entries(d.Z)) {
   let n = !1 !== m[e];
@@ -26,7 +26,7 @@ for (let [e, t] of Object.entries(d.Z)) {
 }
 class I extends(i = o.ZP.Store) {
   initialize() {
-C(), this.mustEmitChanges(e => 'CONNECTION_OPEN' !== e.type), this.waitFor(u.Z);
+g(), this.mustEmitChanges(e => 'CONNECTION_OPEN' !== e.type), this.waitFor(u.Z);
   }
   shouldShow(e) {
 var t;
@@ -59,7 +59,7 @@ l = 'TutorialIndicatorStore', (s = 'displayName') in(a = I) ? Object.definePrope
 let {
   tutorial: t
 } = e;
-E = !0, _ = !0, m = {}, null != t && (_ = t.indicators_suppressed, t.indicators_confirmed.forEach(e => m[e] = !1)), C();
+E = !0, _ = !0, m = {}, null != t && (_ = t.indicators_suppressed, t.indicators_confirmed.forEach(e => m[e] = !1)), g();
   },
   CONNECTION_CLOSED: function() {
 E = !1;
@@ -70,7 +70,7 @@ m = {
   [e.tutorialId]: !1
 }, p = {
   ...p
-}, delete p[e.tutorialId], C();
+}, delete p[e.tutorialId], g();
   },
   TUTORIAL_INDICATOR_SHOW: function(e) {
 p = {

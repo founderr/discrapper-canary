@@ -23,7 +23,7 @@ writable: !0
   }) : e[t] = n, e;
 }
 (a = r || (r = {})).TEXT = 'text', a.ATTACHMENT = 'attachment', a.EMBED = 'embed';
-let I = e => {
+let m = e => {
 let {
   className: t
 } = e;
@@ -32,7 +32,7 @@ return (0, s.jsx)('div', {
   children: f.Z.Messages.SPOILER
 });
   },
-  m = e => {
+  I = e => {
 let {
   className: t,
   isSingleMosaicItem: n,
@@ -64,16 +64,16 @@ let {
 } = e;
 switch (t) {
   case _.wk.SPOILER:
-    return (0, s.jsx)(I, {
+    return (0, s.jsx)(m, {
       className: n
     });
   case _.wk.EXPLICIT_CONTENT:
-    return (0, s.jsx)(m, {
+    return (0, s.jsx)(I, {
       isSingleMosaicItem: r,
       className: n
     });
   case _.wk.POTENTIAL_EXPLICIT_CONTENT:
-    return (0, s.jsx)(m, {
+    return (0, s.jsx)(I, {
       isSingleMosaicItem: r,
       className: n,
       obscureOnly: !0

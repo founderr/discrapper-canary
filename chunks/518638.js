@@ -1,6 +1,6 @@
 n.d(t, {
   A2: function() {
-return m;
+return I;
   },
   BU: function() {
 return T;
@@ -24,7 +24,7 @@ return S;
 return h;
   },
   t8: function() {
-return I;
+return m;
   },
   tq: function() {
 return g;
@@ -79,7 +79,7 @@ claimedAt: e.claimed_at,
 promotion: f(e.promotion)
   };
 }
-async function I() {
+async function m() {
   return (await r.tn.get({
 url: _.ANM.CLAIMED_OUTBOUND_PROMOTION_CODES,
 query: {
@@ -88,7 +88,7 @@ query: {
 oldFormErrors: !0
   })).body.map(p);
 }
-async function m(e) {
+async function I(e) {
   return p((await r.tn.post({
 url: _.ANM.CLAIM_OUTBOUND_PROMOTION_CODE(e)
   })).body);

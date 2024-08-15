@@ -1,6 +1,6 @@
 n.d(t, {
   h: function() {
-return m;
+return I;
   }
 }), n(47120);
 var r, i = n(735250),
@@ -25,7 +25,7 @@ writable: !0
 }
 let p = (0, c.Mg)(l.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
 
-function I(e, t) {
+function m(e, t) {
   let {
 innerWidth: n,
 innerHeight: r
@@ -43,7 +43,7 @@ height: s
   };
 }
 
-function m(e) {
+function I(e) {
   let {
 splash: t,
 children: n
@@ -62,7 +62,7 @@ function e() {
     let {
       naturalWidth: t,
       naturalHeight: n
-    } = e, r = I(t, n);
+    } = e, r = m(t, n);
     return null != r ? r : e;
   });
 }
@@ -77,7 +77,7 @@ children: [
       } = e, {
         naturalWidth: n,
         naturalHeight: r
-      } = t, i = I(n, r);
+      } = t, i = m(n, r);
       null != i && l(i);
     },
     src: t,
@@ -188,7 +188,7 @@ super(...e), h(this, 'state', {
   let {
     naturalWidth: e,
     naturalHeight: t
-  } = this.state, n = I(e, t), r = this.calculateShowWaveAnimation();
+  } = this.state, n = m(e, t), r = this.calculateShowWaveAnimation();
   null != n ? this.setState({
     ...n,
     showWaveAnimation: r
@@ -201,7 +201,7 @@ super(...e), h(this, 'state', {
   } = e, {
     naturalWidth: n,
     naturalHeight: r
-  } = t, i = I(n, r);
+  } = t, i = m(n, r);
   null != i && this.setState(i), this.setState({
     splashLoaded: !0
   }), window.removeEventListener('resize', this.handleResize), window.addEventListener('resize', this.handleResize);

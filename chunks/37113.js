@@ -9,7 +9,7 @@ return r;
 return h;
   },
   WC: function() {
-return I;
+return m;
   },
   aW: function() {
 return _;
@@ -36,7 +36,7 @@ return a;
 return i;
   },
   z8: function() {
-return m;
+return I;
   }
 }), n(411104);
 var r, i, a, s, o, l, u = n(981631),
@@ -206,13 +206,13 @@ get label() {
 }
   };
 }
-let I = [
+let m = [
 p(720),
 p(1080),
 p(1440),
 p(0, () => d.Z.Messages.SCREENSHARE_SOURCE)
   ],
-  m = [
+  I = [
 p(720),
 p(1080),
 p(1440)

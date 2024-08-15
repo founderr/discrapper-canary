@@ -37,7 +37,7 @@ i.Z.sendBotMessage(e, _.Z.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({
   number: 3
 })), a.default.selectVoiceChannel(null);
 }
-class I extends s.Z {
+class m extends s.Z {
   constructor(...e) {
 super(...e), E(this, 'idleTimeout', new r.V7()), E(this, 'handleConnectionClosed', () => {
   this.idleTimeout.stop();
@@ -57,4 +57,4 @@ super(...e), E(this, 'idleTimeout', new r.V7()), E(this, 'handleConnectionClosed
 });
   }
 }
-t.Z = new I();
+t.Z = new m();

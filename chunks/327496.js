@@ -35,8 +35,8 @@ let E = e => {
   icon: f,
   name: h,
   ariaLabel: p,
-  className: I,
-  style: m,
+  className: m,
+  style: I,
   to: T,
   onClick: g,
   selected: S = !1,
@@ -67,12 +67,12 @@ g
   return (0, r.jsxs)(l.Clickable, {
 ...A,
 onClick: O,
-className: s()(I, c.wrapper, {
+className: s()(m, c.wrapper, {
   [c.selected]: S
 }),
 'aria-label': null != p && '' !== p ? p : null != h ? h : '',
 style: {
-  ...m,
+  ...I,
   fontSize: n
 },
 focusProps: {

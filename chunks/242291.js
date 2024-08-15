@@ -38,8 +38,8 @@ var r = n(399606),
   f = n(74538),
   h = n(51144),
   p = n(208049),
-  I = n(763296),
-  m = n(697426),
+  m = n(763296),
+  I = n(697426),
   T = n(641015),
   g = n(893663),
   S = n(710111),
@@ -61,7 +61,7 @@ function O(e, t, n) {
 }
 
 function R(e, t, n) {
-  (0, p.XE)(t, e, m.YQ.SOUNDBOARD), (0, u.kq)(t, e, __OVERLAY__, n);
+  (0, p.XE)(t, e, I.YQ.SOUNDBOARD), (0, u.kq)(t, e, __OVERLAY__, n);
 }
 async function C(e) {
   let t = _.default.getCurrentUser(),
@@ -71,12 +71,12 @@ r = (0, g.k9)(e);
 return;
   await (0, p.w)();
   let i = r.guildId === S.hY ? S.X8 : r.guildId,
-s = I.Z.getSound(i, r.soundId);
+s = m.Z.getSound(i, r.soundId);
   if (null != s) {
 var o, l;
 if (!v(s, n) || !O(t, s, n, !0))
   return null;
-o = s, l = n.id, (0, p.XE)(l, o, m.YQ.JOINED_VOICE_CHANNEL), (0, u.vy)(l, o, __OVERLAY__);
+o = s, l = n.id, (0, p.XE)(l, o, I.YQ.JOINED_VOICE_CHANNEL), (0, u.vy)(l, o, __OVERLAY__);
   }
 }
 
@@ -97,8 +97,8 @@ function D(e, t) {
   (0, o.PS)(e, n => {
 n.joinSound = void 0, b({
   guildId: e,
-  changeType: m.MW.REMOVED,
-  soundType: m.jy.ENTRY,
+  changeType: I.MW.REMOVED,
+  soundType: I.jy.ENTRY,
   location: t
 });
   }, o.fy.INFREQUENT_USER_ACTION);
@@ -107,8 +107,8 @@ n.joinSound = void 0, b({
 function L(e, t, n) {
   (0, o.PS)(e, r => {
 let i = t.guildId === S.X8,
-  a = i ? m.H$.DEFAULT : m.H$.CUSTOM,
-  s = null != r.joinSound ? m.MW.UPDATED : m.MW.ADDED;
+  a = i ? I.H$.DEFAULT : I.H$.CUSTOM,
+  s = null != r.joinSound ? I.MW.UPDATED : I.MW.ADDED;
 r.joinSound = {
   soundId: t.soundId,
   guildId: i ? S.hY : t.guildId
@@ -116,7 +116,7 @@ r.joinSound = {
   guildId: e,
   changeType: s,
   soundSource: a,
-  soundType: m.jy.ENTRY,
+  soundType: I.jy.ENTRY,
   location: n
 });
   }, o.fy.INFREQUENT_USER_ACTION);

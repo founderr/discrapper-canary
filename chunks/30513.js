@@ -88,12 +88,12 @@ return {
   })
 };
   },
-  I = () => ({
+  m = () => ({
 color: r.Z.unsafe_rawColors.PREMIUM_PERK_GOLD.css,
 icon: i.StarIcon,
 description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_VANITY_URL
   }),
-  m = () => ({
+  I = () => ({
 icon: a.Z,
 description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
   }),
@@ -156,14 +156,14 @@ function C() {
   return [
 p(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css),
 N(),
-I(),
+m(),
 A()
   ];
 }
 
 function y() {
   return [
-I(),
+m(),
 E(),
 p(l.Eu4.TIER_3),
 A()
@@ -190,7 +190,7 @@ function b() {
   return [
 T(),
 g(),
-m(),
+I(),
 S()
   ];
 }

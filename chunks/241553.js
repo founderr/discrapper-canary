@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(605236),
   h = n(243778),
   p = n(963249),
-  I = n(646476),
-  m = n(819640),
+  m = n(646476),
+  I = n(819640),
   T = n(594174),
   g = n(965645),
   S = n(362061),
@@ -151,9 +151,9 @@ disabled: t,
 channel: n
   } = e, {
 analyticsLocations: a
-  } = (0, E.ZP)(_.Z.GIFT_BUTTON), [l, d] = i.useState(!1), g = (0, s.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())), S = (0, s.e7)([T.default], () => T.default.getCurrentUser()), A = null != S ? N.default.age(S.id) : 0, M = !t && g && A >= w, {
+  } = (0, E.ZP)(_.Z.GIFT_BUTTON), [l, d] = i.useState(!1), g = (0, s.e7)([I.Z], () => !(null === I.Z || void 0 === I.Z ? void 0 : I.Z.hasLayers())), S = (0, s.e7)([T.default], () => T.default.getCurrentUser()), A = null != S ? N.default.age(S.id) : 0, M = !t && g && A >= w, {
 enabled: P
-  } = I.RO.useExperiment({
+  } = m.RO.useExperiment({
 location: 'ChannelPremiumGiftButton'
   }, {
 autoTrackExposure: M

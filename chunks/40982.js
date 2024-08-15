@@ -24,9 +24,9 @@ var t = e.width,
   f = e.onSwatchHover,
   h = e.disableAlpha,
   p = e.presetColors,
-  I = e.renderers,
-  m = e.styles,
-  T = void 0 === m ? {} : m,
+  m = e.renderers,
+  I = e.styles,
+  T = void 0 === I ? {} : I,
   g = e.className,
   S = (0, s.default)((0, o.Z)({
     default: d({
@@ -130,7 +130,7 @@ return r.createElement('div', {
   style: S.Alpha,
   rgb: n,
   hsl: _,
-  renderers: I,
+  renderers: m,
   onChange: E
 }))), r.createElement('div', {
   style: S.color

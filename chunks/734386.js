@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(933557),
   f = n(605436),
   E = n(185413),
-  g = n(42311),
-  C = n(626786),
+  C = n(42311),
+  g = n(626786),
   I = n(434404),
   x = n(454585),
   T = n(430824),
@@ -170,7 +170,7 @@ children: [
         var a, s;
         let r = null !== (s = e.colorString) && void 0 !== s ? s : (0, u.Rf)(R.p6O),
           o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
-        return w ? (0, i.jsx)(g.Z, {
+        return w ? (0, i.jsx)(C.Z, {
           className: l()(L.role, {
             [L.last]: n === k.length - 1
           }),
@@ -181,7 +181,7 @@ children: [
           onClick: () => {
             I.Z.open(t.guild_id, R.pNK.MEMBERS), I.Z.selectRole(e.id);
           }
-        }, e.id) : (0, i.jsx)(C.Z, {
+        }, e.id) : (0, i.jsx)(g.Z, {
           className: l()(L.role, {
             [L.last]: n === k.length - 1
           }),

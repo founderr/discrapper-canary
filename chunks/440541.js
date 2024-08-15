@@ -31,7 +31,7 @@ return t & r | n & ~r;
 return t ^ (n | ~r);
 }
 r.inherits(c, u), t.ripemd160 = c, c.blockSize = 512, c.outSize = 160, c.hmacStrength = 192, c.padLength = 64, c.prototype._update = function(e, t) {
-  for (var n = this.h[0], r = this.h[1], i = this.h[2], u = this.h[3], c = this.h[4], p = n, I = r, m = i, T = u, g = c, S = 0; S < 80; S++) {
+  for (var n = this.h[0], r = this.h[1], i = this.h[2], u = this.h[3], c = this.h[4], p = n, m = r, I = i, T = u, g = c, S = 0; S < 80; S++) {
 var A = s(a(l(n, d(S, r, i, u), e[_[S] + t], function(e) {
   if (e <= 15)
     return 0;
@@ -44,7 +44,7 @@ var A = s(a(l(n, d(S, r, i, u), e[_[S] + t], function(e) {
   else
     return 2840853838;
 }(S)), f[S]), c);
-n = c, c = u, u = a(i, 10), i = r, r = A, A = s(a(l(p, d(79 - S, I, m, T), e[E[S] + t], function(e) {
+n = c, c = u, u = a(i, 10), i = r, r = A, A = s(a(l(p, d(79 - S, m, I, T), e[E[S] + t], function(e) {
   if (e <= 15)
     return 1352829926;
   if (e <= 31)
@@ -55,9 +55,9 @@ n = c, c = u, u = a(i, 10), i = r, r = A, A = s(a(l(p, d(79 - S, I, m, T), e[E[S
     return 2053994217;
   else
     return 0;
-}(S)), h[S]), g), p = g, g = T, T = a(m, 10), m = I, I = A;
+}(S)), h[S]), g), p = g, g = T, T = a(I, 10), I = m, m = A;
   }
-  A = o(this.h[1], i, T), this.h[1] = o(this.h[2], u, g), this.h[2] = o(this.h[3], c, p), this.h[3] = o(this.h[4], n, I), this.h[4] = o(this.h[0], r, m), this.h[0] = A;
+  A = o(this.h[1], i, T), this.h[1] = o(this.h[2], u, g), this.h[2] = o(this.h[3], c, p), this.h[3] = o(this.h[4], n, m), this.h[4] = o(this.h[0], r, I), this.h[0] = A;
 }, c.prototype._digest = function(e) {
   return 'hex' === e ? r.toHex32(this.h, 'little') : r.split32(this.h, 'little');
 };

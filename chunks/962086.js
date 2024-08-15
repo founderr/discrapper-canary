@@ -6,7 +6,7 @@ return T;
 return v;
   },
   iD: function() {
-return m;
+return I;
   },
   mL: function() {
 return g;
@@ -32,9 +32,9 @@ var r = n(570140),
   f = n(160404),
   h = n(225675),
   p = n(981631),
-  I = n(176505);
+  m = n(176505);
 
-function m(e, t) {
+function I(e, t) {
   E.default.track(p.rMx.VIEW_AS_ROLES_SELECTED, {
 num_roles: Object.keys(t.roles).length,
 ...(0, i.hH)(e),
@@ -72,7 +72,7 @@ guildId: e
 function S(e) {
   let t = d.Z.getChannelId(e),
 n = s.Z.getChannel(t);
-  if (!(null != t && (0, I.AB)(t)) && !c.Z.can(p.Plq.VIEW_CHANNEL, n)) {
+  if (!(null != t && (0, m.AB)(t)) && !c.Z.can(p.Plq.VIEW_CHANNEL, n)) {
 let t = o.ZP.getDefaultChannel(e);
 null != t && (0, a.uL)(p.Z5c.CHANNEL(e, t.id));
   }

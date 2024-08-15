@@ -17,8 +17,8 @@ var r = n(310644),
   f = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
   h = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
   p = /^'([^]*?)'?$/,
-  I = /''/g,
-  m = /[a-zA-Z]/;
+  m = /''/g,
+  I = /[a-zA-Z]/;
 
 function T(e, t, n) {
   (0, d.Z)(2, arguments);
@@ -56,12 +56,12 @@ var i = r[0];
 if ('\'' === i)
   return function(e) {
     var t = e.match(p);
-    return t ? t[1].replace(I, '\'') : e;
+    return t ? t[1].replace(m, '\'') : e;
   }(r);
 var a = s.Z[i];
 if (a)
   return !(null != n && n.useAdditionalWeekYearTokens) && (0, u.Do)(r) && (0, u.qp)(r, t, String(e)), !(null != n && n.useAdditionalDayOfYearTokens) && (0, u.Iu)(r) && (0, u.qp)(r, t, String(e)), a(Y, r, B.localize, j);
-if (i.match(m))
+if (i.match(I))
   throw RangeError('Format string contains an unescaped latin alphabet character `' + i + '`');
 return r;
   }).join('');

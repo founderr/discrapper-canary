@@ -13,8 +13,8 @@ var i = n(266067),
   f = n(38618),
   h = n(897473),
   p = n(131704),
-  I = n(433355),
-  m = n(592125),
+  m = n(433355),
+  I = n(592125),
   T = n(430824),
   g = n(306680),
   S = n(944486),
@@ -55,24 +55,24 @@ return;
 h && L.log('Skipping fetch because channelId is a static route');
 return;
   }
-  let p = m.Z.getChannel(n);
+  let p = I.Z.getChannel(n);
   if ((null == p ? void 0 : p.type) === R.d4z.GUILD_STORE || (null == p ? void 0 : p.type) != null && R.TPd.GUILD_THREADS_ONLY.has(p.type)) {
 h && L.log('Skipping fetch because channel is a forum/store');
 return;
   }
-  let I = _.Z.getOrCreate(n);
+  let m = _.Z.getOrCreate(n);
   v.l.getCurrentConfig({
 location: 'fetch_messages'
-  }).enabled && I.some(O.k5) && (L.log('Found expired attachment link, clearing messages'), _.Z.clear(n), I = _.Z.getOrCreate(n)), null != I.jumpTargetId && null == i && (I = I.mutate({
+  }).enabled && m.some(O.k5) && (L.log('Found expired attachment link, clearing messages'), _.Z.clear(n), m = _.Z.getOrCreate(n)), null != m.jumpTargetId && null == i && (m = m.mutate({
 jumpTargetId: null,
 jumped: !1,
 jumpType: c.SR.ANIMATED
-  }), _.Z.commit(I)), null != I.focusTargetId && null == i && (I = I.mutate({
+  }), _.Z.commit(m)), null != m.focusTargetId && null == i && (m = m.mutate({
 focusTargetId: null
-  }), _.Z.commit(I));
+  }), _.Z.commit(m));
   let S = a;
-  if (!o || f.Z.isConnected() || I.loadingMore ? I.loadingMore || I.ready && !I.cached ? null != i ? S = !0 : h && L.log('Skipping fetch because no other conditions matched') : null == t || null != T.Z.getGuild(t) ? S = !0 : h && L.log('Skipping fetch we are connected and have loaded messages') : S = !0, (0, E.Z)(n) && g.ZP.hasUnread(n) && (S = !0), S) {
-if (_.Z.commit(I.mutate({
+  if (!o || f.Z.isConnected() || m.loadingMore ? m.loadingMore || m.ready && !m.cached ? null != i ? S = !0 : h && L.log('Skipping fetch because no other conditions matched') : null == t || null != T.Z.getGuild(t) ? S = !0 : h && L.log('Skipping fetch we are connected and have loaded messages') : S = !0, (0, E.Z)(n) && g.ZP.hasUnread(n) && (S = !0), S) {
+if (_.Z.commit(m.mutate({
     loadingMore: !0
   })), null != i)
   u.Z.jumpToMessage({
@@ -108,7 +108,7 @@ else if ((null == p ? void 0 : p.isThread()) && function(e) {
     isPreload: o,
     skipLocalFetch: d
   });
-else if ((null == p ? void 0 : p.isThread()) && g.ZP.hasTrackedUnread(p.id) && !I.ready) {
+else if ((null == p ? void 0 : p.isThread()) && g.ZP.hasTrackedUnread(p.id) && !m.ready) {
   let e = g.ZP.getTrackedAckMessageId(p.id);
   L.log('Jumping to most recent message in thread '.concat(p.id, ' - ').concat(e)), u.Z.fetchMessages({
     channelId: n,
@@ -139,7 +139,7 @@ let M = 90 * N.Z.Millis.DAY,
 function U() {
   let e = S.Z.getChannelId();
   if (null != e) {
-let n = m.Z.getChannel(e);
+let n = I.Z.getChannel(e);
 if (null != n) {
   var t;
   let e = (0, i.LX)(location.pathname, {
@@ -162,7 +162,7 @@ skipLocalFetch: t,
 logFailures: n
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, r = S.Z.getChannelId();
   if (null != r) {
-let i = m.Z.getChannel(r);
+let i = I.Z.getChannel(r);
 null != i ? ((0, p.Qm)(i.type) ? b({
   guildId: i.getGuildId(),
   channelId: i.id,
@@ -201,12 +201,12 @@ channelId: n
 }
 
 function k(e, t) {
-  let n = I.ZP.getCurrentSidebarChannelId(t);
+  let n = m.ZP.getCurrentSidebarChannelId(t);
   if (null != n)
 b({
   guildId: e,
   channelId: n,
-  messageId: I.ZP.getCurrentSidebarMessageId(t)
+  messageId: m.ZP.getCurrentSidebarMessageId(t)
 });
 }
 
@@ -215,7 +215,7 @@ function B() {
 t = A.Z.getGuildId();
   if (null == t || null == e)
 return;
-  let n = I.ZP.getSidebarState(e);
+  let n = m.ZP.getSidebarState(e);
   if ((null == n ? void 0 : n.type) !== h.tI.VIEW_CHANNEL)
 k(t, e);
 }
@@ -287,7 +287,7 @@ return;
 return;
   Y[n] = Date.now();
   let o = S.Z.getChannelId(),
-l = I.ZP.getCurrentSidebarChannelId(o),
+l = m.ZP.getCurrentSidebarChannelId(o),
 c = n === o || n === l;
   i && f.Z.isConnected() && c && u.Z.fetchMessages({
 channelId: n,
@@ -329,7 +329,7 @@ o.Z.subscribe('CONNECTION_OPEN', U);
 o.Z.unsubscribe('CONNECTION_OPEN', U);
   }
   constructor(...e) {
-super(...e), D(this, 'fetchMessages', b), D(this, 'loadSelectedChannelIfNecessary', w), D(this, 'stores', new Map().set(I.ZP, B)), D(this, 'actions', {
+super(...e), D(this, 'fetchMessages', b), D(this, 'loadSelectedChannelIfNecessary', w), D(this, 'stores', new Map().set(m.ZP, B)), D(this, 'actions', {
   APP_STATE_UPDATE: K,
   OVERLAY_INITIALIZE: U,
   CHANNEL_SELECT: x,

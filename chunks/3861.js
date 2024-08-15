@@ -13,8 +13,8 @@ var i = n(735250),
   _ = n(430371),
   f = n(236564),
   E = n(981631),
-  g = n(354459),
-  C = n(201614);
+  C = n(354459),
+  g = n(201614);
 t.Z = (0, r.Z)(e => {
   let {
 participants: t,
@@ -44,7 +44,7 @@ d.S.dispatch(E.CkL.REMEASURE_TARGET);
 R,
 j
   ]);
-  let D = a.useMemo(() => n.filter(e => e.type !== g.fO.ACTIVITY || !e.participants.some(e => (0, o.J)(e))), [
+  let D = a.useMemo(() => n.filter(e => e.type !== C.fO.ACTIVITY || !e.participants.some(e => (0, o.J)(e))), [
 n,
 r
   ]);
@@ -62,22 +62,22 @@ return (0, i.jsx)(h.Z, {
 return (0, i.jsx)(c.Z, {
   guildId: v.guild_id,
   width: R,
-  className: C.voiceCallWrapper,
+  className: g.voiceCallWrapper,
   participants: t,
   onContextMenu: T
 });
   if (n = A ? n : t, null == s)
 return 0 === n.length ? (0, i.jsx)(f.Z, {
-  className: l()(C.videoGrid, C.hiddenParticipants),
+  className: l()(g.videoGrid, g.hiddenParticipants),
   channelId: v.id,
   width: R
 }) : (0, i.jsx)(u.Z, {
-  className: C.videoGridWrapper,
+  className: g.videoGridWrapper,
   justify: u.Z.Justify.CENTER,
   align: u.Z.Align.CENTER,
   children: (0, i.jsx)(p.Z, {
     channel: v,
-    className: C.videoGrid,
+    className: g.videoGrid,
     participants: D,
     totalNumberOfParticipants: t.length,
     onClick: x,

@@ -209,7 +209,7 @@ if (s.test(i.stem)) {
 }
 var p = h(i.stem);
 p && (e = (0, n.pi)((0, n.pi)({}, e), p));
-var m = function(t) {
+var d = function(t) {
   var e;
   if ('E' === t[0] && 'E' === t[1] ? (e = {
       notation: 'engineering'
@@ -223,7 +223,7 @@ var m = function(t) {
   }
   return e;
 }(i.stem);
-m && (e = (0, n.pi)((0, n.pi)({}, e), m));
+d && (e = (0, n.pi)((0, n.pi)({}, e), d));
   }
   return e;
 }

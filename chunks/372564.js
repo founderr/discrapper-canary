@@ -14,9 +14,9 @@ var i = n(735250),
   _ = n(984370),
   f = n(981631),
   E = n(689938),
-  g = n(119338);
+  C = n(119338);
 
-function C(e, t, n) {
+function g(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -47,16 +47,16 @@ children: (0, i.jsx)(o.ModalContent, {
       (0, i.jsx)(o.Text, {
         selectable: !0,
         variant: 'text-md/normal',
-        className: g.content,
+        className: C.content,
         children: m.Z.parseTopic(n.topic, !0, {
           channelId: n.id
         })
       }),
       null != r ? (0, i.jsxs)('div', {
-        className: g.linkedLobbyNotice,
+        className: C.linkedLobbyNotice,
         children: [
           (0, i.jsx)(o.RefreshIcon, {
-            className: g.linkedLobbyApplicationIcon
+            className: C.linkedLobbyApplicationIcon
           }),
           (0, i.jsx)(o.Text, {
             variant: 'text-sm/normal',
@@ -65,7 +65,7 @@ children: (0, i.jsx)(o.ModalContent, {
               applicationName: r.name,
               helpdeskArticle: p.Z.getArticleURL(f.BhN.CHANNEL_LINKED_LOBBIES),
               separatorHook: (e, t) => (0, i.jsx)('span', {
-                className: g.linkedLobbyNoticeSeparator,
+                className: C.linkedLobbyNoticeSeparator,
                 children: e
               }, t)
             })
@@ -90,7 +90,7 @@ return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0,
   children: [
     (0, i.jsx)(_.Z.Divider, {}),
     (0, i.jsxs)('div', {
-      className: l()(g.topic, g.expandable),
+      className: l()(C.topic, C.expandable),
       onMouseDown: this.onMouseDown,
       onMouseMove: this.onMouseMove,
       onMouseUp: this.onMouseUp,
@@ -100,7 +100,7 @@ return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0,
         (0, i.jsx)(o.Clickable, {
           onClick: this.handleClick,
           'aria-label': E.Z.Messages.OPEN_CHANNEL_TOPIC,
-          className: g.topicClickTarget
+          className: C.topicClickTarget
         }),
         m.Z.parseTopic(e.topic, !0, {
           channelId: e.id,
@@ -112,7 +112,7 @@ return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length ? null : (0,
 });
   }
   constructor(...e) {
-super(...e), C(this, '_mouseDown', !1), C(this, '_mouseUp', !1), C(this, 'handleOpenTopic', e => {
+super(...e), g(this, '_mouseDown', !1), g(this, '_mouseUp', !1), g(this, 'handleOpenTopic', e => {
   let t = e.target;
   if ((0, r.k)(t)) {
     if (x(t))
@@ -125,13 +125,13 @@ super(...e), C(this, '_mouseDown', !1), C(this, '_mouseUp', !1), C(this, 'handle
     ...e,
     ...this.props
   }));
-}), C(this, 'onMouseDown', () => {
+}), g(this, 'onMouseDown', () => {
   this._mouseDown = !0;
-}), C(this, 'onMouseMove', () => {
+}), g(this, 'onMouseMove', () => {
   this._mouseDown && (this._mouseDown = !1);
-}), C(this, 'onMouseUp', e => {
+}), g(this, 'onMouseUp', e => {
   this._mouseDown && e.button !== f.AeJ.SECONDARY && this.handleOpenTopic(e), this._mouseUp = !0, this._mouseDown = !1;
-}), C(this, 'handleContextMenu', e => {
+}), g(this, 'handleContextMenu', e => {
   let {
     channel: t,
     guild: a
@@ -147,7 +147,7 @@ super(...e), C(this, '_mouseDown', !1), C(this, '_mouseUp', !1), C(this, 'handle
       includeTopic: !0
     });
   });
-}), C(this, 'handleClick', e => {
+}), g(this, 'handleClick', e => {
   if (this._mouseUp) {
     this._mouseUp = !1;
     return;

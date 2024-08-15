@@ -48,12 +48,12 @@ if (null == a ? void 0 : a.banner) {
 }
 return (null == a ? void 0 : a.bio) && s.push(E.cm.BIO), (null == a ? void 0 : a.themeColors) != null && void 0 !== a.themeColors.find(e => null !== e) && s.push(E.cm.THEME), (null == t ? void 0 : t.avatarDecoration) != null && s.push(E.cm.AVATAR_DECORATION), (null == a ? void 0 : a.profileEffectId) != null && s.push(E.cm.PROFILE_EFFECT), s;
   },
-  I = e => {
+  m = e => {
 let t = s.Z.getStatus(e),
   n = s.Z.isMobileOnline(e);
 return t === h.Sk.ONLINE && n ? ''.concat(t, '-mobile') : t === h.Sk.ONLINE ? ''.concat(t, '-desktop') : t;
   },
-  m = e => null == e ? e : Object.keys(f.IIU)[Object.values(f.IIU).indexOf(e)],
+  I = e => null == e ? e : Object.keys(f.IIU)[Object.values(f.IIU).indexOf(e)],
   T = e => {
 var t, n;
 let {
@@ -94,7 +94,7 @@ return {
   }),
   avatar_decoration_sku_id: null === (n = E.avatarDecoration) || void 0 === n ? void 0 : n.skuId,
   profile_effect_sku_id: null == f ? void 0 : f.profileEffectId,
-  user_status: I(E.id),
+  user_status: m(E.id),
   is_guild_profile: (null == f ? void 0 : f.guildId) != null,
   is_bot_profile: E.bot
 };
@@ -153,7 +153,7 @@ u.default.track(f.rMx.USER_PROFILE_ACTIVITY_JOINED, {
   ...T(e),
   ...g(e),
   location_stack: i,
-  activity_type: null != d ? 'VOICE' : m(a),
+  activity_type: null != d ? 'VOICE' : I(a),
   activity_name: s,
   activity_platform: o,
   activity_session_id: l,
@@ -181,7 +181,7 @@ u.default.track(f.rMx.USER_PROFILE_ACTIVITY_ACTION, {
   location_stack: i,
   activity_action: a,
   activity_display: s,
-  activity_type: m(null != l ? f.IIU.STREAMING : null == o ? void 0 : o.type),
+  activity_type: I(null != l ? f.IIU.STREAMING : null == o ? void 0 : o.type),
   activity_name: null == o ? void 0 : o.name,
   activity_platform: null == o ? void 0 : o.platform,
   activity_session_id: null == o ? void 0 : o.session_id,

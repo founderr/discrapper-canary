@@ -23,14 +23,14 @@ function E(e) {
   let {
 channel: t,
 children: E
-  } = e, g = (0, a.e7)([u.Z], () => u.Z.isBlocked(t.getRecipientId()));
+  } = e, C = (0, a.e7)([u.Z], () => u.Z.isBlocked(t.getRecipientId()));
   (0, r.Z)(t.id);
-  let C = (0, o.Z)(t.id),
+  let g = (0, o.Z)(t.id),
 I = t.isSystemDM(),
-x = g && !I && !t.isMultiUserDM(),
+x = C && !I && !t.isMultiUserDM(),
 T = {};
   if (I) {
-let e = C ? (0, i.jsxs)(i.Fragment, {
+let e = g ? (0, i.jsxs)(i.Fragment, {
   children: [
     f.Z.Messages.SYSTEM_DM_OPEN_BLOG,
     (0, i.jsx)(s.WindowLaunchIcon, {
@@ -40,7 +40,7 @@ let e = C ? (0, i.jsxs)(i.Fragment, {
   ]
 }) : f.Z.Messages.LEARN_MORE;
 T.message = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION, T.subtitle = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION_SUBTEXT, T.buttonText = e, T.onButtonClick = () => {
-  if (C) {
+  if (g) {
     open(_.D2), d.default.track(p.rMx.CHANGE_LOG_CTA_CLICKED, {
       cta_type: 'chat_blocker',
       target: _.D2

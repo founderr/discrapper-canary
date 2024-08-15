@@ -3,7 +3,7 @@ n.d(t, {
 return T;
   },
   Fc: function() {
-return m;
+return I;
   },
   Ft: function() {
 return A;
@@ -100,7 +100,7 @@ default:
   }
 }
 
-function I(e, t) {
+function m(e, t) {
   let {
 maxDaysOld: n,
 minDaysOld: r = 0
@@ -111,15 +111,15 @@ return !1;
   return (null == n || !!(i <= 86400000 * n)) && !!(i >= 86400000 * r) || !1;
 }
 
-function m(e) {
-  return !I(e, {
+function I(e) {
+  return !m(e, {
 minDaysOld: 0,
 maxDaysOld: 30
   });
 }
 
 function T(e) {
-  return I(e, {
+  return m(e, {
 minDaysOld: 0,
 maxDaysOld: 7
   });

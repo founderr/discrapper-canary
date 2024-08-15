@@ -1,6 +1,6 @@
 var r;
 r = 0,
-  function(e, t, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P, U, w, x, G, k, B, F, V, H, Z, Y, j, W, K, z, q, Q, X, $, J, ee, et, en, er, ei, ea, es, eo, el, eu) {
+  function(e, t, r, i, a, s, o, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P, U, w, x, G, k, B, F, V, H, Z, Y, j, W, K, z, q, Q, X, $, J, ee, et, en, er, ei, ea, es, eo, el, eu) {
 
 function ec(e) {
   return e && 'object' == typeof e && 'default' in e ? e : {
@@ -13,14 +13,14 @@ var ed = ec(t),
   ef = ec(s),
   eh = ec(o),
   ep = ec(l),
-  eI = ec(u),
-  em = ec(c),
+  em = ec(u),
+  eI = ec(c),
   eT = ec(d),
   eg = ec(_),
   eS = ec(E),
   eA = ec(p),
-  eN = ec(I),
-  ev = ec(m),
+  eN = ec(m),
+  ev = ec(I),
   eO = ec(T),
   eR = ec(g),
   eC = ec(S),
@@ -206,7 +206,7 @@ function tp(e, t) {
   }
 }
 
-function tI(e, t) {
+function tm(e, t) {
   switch (e) {
     case 'p':
       return t.time({
@@ -226,8 +226,8 @@ function tI(e, t) {
       });
   }
 }
-var tm = {
-    p: tI,
+var tI = {
+    p: tm,
     P: function(e, t) {
       var n, r = e.match(/(P+)(p+)?/),
         i = r[1],
@@ -255,7 +255,7 @@ var tm = {
             width: 'full'
           });
       }
-      return n.replace('{{date}}', tp(i, t)).replace('{{time}}', tI(a, t));
+      return n.replace('{{date}}', tp(i, t)).replace('{{time}}', tm(a, t));
     }
   },
   tT = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
@@ -1174,7 +1174,7 @@ var tJ = function(e) {
           5,
           6
         ].map(function(n) {
-          var r = em.default(t, n);
+          var r = eI.default(t, n);
           return ed.default.createElement(t8, {
             ariaLabelPrefixWhenEnabled: e.props.chooseDayAriaLabelPrefix,
             ariaLabelPrefixWhenDisabled: e.props.disabledDayAriaLabelPrefix,
@@ -1292,7 +1292,7 @@ var tJ = function(e) {
         return !(!i || !a) && tL(eF.default(r, t), a);
       }), tl(tE(e), 'isWeekInMonth', function(t) {
         var n = e.props.day,
-          r = em.default(t, 6);
+          r = eI.default(t, 6);
         return tD(t, n) || tD(r, n);
       }), tl(tE(e), 'renderWeeks', function() {
         for (var t = [], n = e.props.fixedHeight, r = 0, i = !1, a = tO(tR(e.props.day), e.props.locale, e.props.calendarStartDay); t.push(ed.default.createElement(ne, {
@@ -1373,12 +1373,12 @@ var tJ = function(e) {
           f = d.endDate,
           h = d.selected,
           p = d.minDate,
-          I = d.maxDate,
-          m = d.preSelection,
+          m = d.maxDate,
+          I = d.preSelection,
           T = d.monthClassName,
           g = T ? T(_) : void 0;
         return e_.default('react-datepicker__month-text', 'react-datepicker__month-'.concat(t), g, {
-          'react-datepicker__month--disabled': (p || I) && function(e) {
+          'react-datepicker__month--disabled': (p || m) && function(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
               n = t.minDate,
               r = t.maxDate,
@@ -1395,7 +1395,7 @@ var tJ = function(e) {
             }) || s && !s(tg(e)) || !1;
           }(eB.default(_, t), e.props),
           'react-datepicker__month--selected': eM.default(_) === t && eU.default(_) === eU.default(h),
-          'react-datepicker__month-text--keyboard-selected': eM.default(m) === t,
+          'react-datepicker__month-text--keyboard-selected': eM.default(I) === t,
           'react-datepicker__month--in-range': (n = E, r = f, i = t, a = _, s = eU.default(n), o = eM.default(n), l = eU.default(r), u = eM.default(r), c = eU.default(a), s === l && s === c ? o <= i && i <= u : s < l ? c === s && o <= i || c === l && u >= i || c < l && c > s : void 0),
           'react-datepicker__month--range-start': e.isRangeStartMonth(t),
           'react-datepicker__month--range-end': e.isRangeEndMonth(t)
@@ -1418,9 +1418,9 @@ var tJ = function(e) {
           f = d.endDate,
           h = d.selected,
           p = d.minDate,
-          I = d.maxDate;
+          m = d.maxDate;
         return e_.default('react-datepicker__quarter-text', 'react-datepicker__quarter-'.concat(t), {
-          'react-datepicker__quarter--disabled': (p || I) && function(e) {
+          'react-datepicker__quarter--disabled': (p || m) && function(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
               n = t.minDate,
               r = t.maxDate,
@@ -1613,7 +1613,7 @@ var tJ = function(e) {
           if (n.push(E), o) {
             var f = function(e, t, n, r, i) {
               for (var a = i.length, s = [], o = 0; o < a; o++) {
-                var l = ep.default(eI.default(e, ey.default(i[o])), eC.default(i[o])),
+                var l = ep.default(em.default(e, ey.default(i[o])), eC.default(i[o])),
                   u = ep.default(e, (n + 1) * r);
                 e4.default(l, t) && e5.default(l, u) && s.push(i[o]);
               }
@@ -1928,7 +1928,7 @@ var ns = [
           5,
           6
         ].map(function(e) {
-          var n = em.default(t, e),
+          var n = eI.default(t, e),
             i = r.formatWeekday(n, r.props.locale),
             a = r.props.weekDayClassName ? r.props.weekDayClassName(n) : void 0;
           return ed.default.createElement('div', {
@@ -2510,7 +2510,7 @@ var ns = [
         r.setState({
           open: e,
           preSelection: e && r.state.open ? r.state.preSelection : r.calcInitialState().preSelection,
-          lastPreSelectChange: nI
+          lastPreSelectChange: nm
         }, function() {
           e || r.setState(function(e) {
             return {
@@ -2566,7 +2566,7 @@ var ns = [
             awareOfUnicodeTokens: !0
           }) : tS(c) || (s = s.match(tT).map(function(e) {
             var t = e[0];
-            return 'p' === t || 'P' === t ? d ? (0, tm[t])(e, d.formatLong) : t : e;
+            return 'p' === t || 'P' === t ? d ? (0, tI[t])(e, d.formatLong) : t : e;
           }).join(''), a.length > 0 && (c = e8.default(a, s.slice(0, a.length), new Date())), tS(c) || (c = new Date(a))), tS(c) && _ ? c : null));
           !E && i.target.value || r.setSelected(E, i, !0);
         }
@@ -2672,7 +2672,7 @@ var ns = [
               }));
             }
             var i = tg(r.state.preSelection);
-            'Enter' === t ? (e.preventDefault(), r.inputOk() && r.state.lastPreSelectChange === nI ? (r.handleSelect(i, e), r.props.shouldCloseOnSelect || r.setPreSelection(i)) : r.setOpen(!1)) : 'Escape' === t && (e.preventDefault(), r.setOpen(!1)), r.inputOk() || r.props.onInputError({
+            'Enter' === t ? (e.preventDefault(), r.inputOk() && r.state.lastPreSelectChange === nm ? (r.handleSelect(i, e), r.props.shouldCloseOnSelect || r.setPreSelection(i)) : r.setOpen(!1)) : 'Escape' === t && (e.preventDefault(), r.setOpen(!1)), r.inputOk() || r.props.onInputError({
               code: 1,
               msg: nf
             });
@@ -2696,7 +2696,7 @@ var ns = [
               t = eA.default(i, 1);
               break;
             case 'ArrowRight':
-              t = em.default(i, 1);
+              t = eI.default(i, 1);
               break;
             case 'ArrowUp':
               t = eN.default(i, 1);
@@ -2722,7 +2722,7 @@ var ns = [
               msg: nf
             }));
           if (e.preventDefault(), r.setState({
-              lastPreSelectChange: nI
+              lastPreSelectChange: nm
             }), r.props.adjustDateOnChange && r.setSelected(t), r.setPreSelection(t), r.props.inline) {
             var a = eM.default(i),
               s = eM.default(t),
@@ -3005,7 +3005,7 @@ var ns = [
     }]), n;
   }(ed.default.Component),
   np = 'input',
-  nI = 'navigate';
+  nm = 'navigate';
 e.CalendarContainer = na, e.default = nh, e.getDefaultLocale = tU, e.registerLocale = function(e, t) {
   var r = 'undefined' != typeof window ? window : n.g;
   r.__localeData__ || (r.__localeData__ = {}), r.__localeData__[e] = t;

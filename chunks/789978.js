@@ -230,7 +230,7 @@ return 0.2126 * (e <= 0.03928 ? e / 12.92 : Math.pow((e + 0.055) / 1.055, 2.4)) 
   }
 }
 
-function I(e, t) {
+function m(e, t) {
   let n = e.alpha,
 r = (1 - n) * t.red + n * e.red,
 i = (1 - n) * t.green + n * e.green,
@@ -238,7 +238,7 @@ a = (1 - n) * t.blue + n * e.blue;
   return new p(r, i, a, e.alpha + t.alpha * (1 - e.alpha));
 }
 
-function m(e) {
+function I(e) {
   if (e)
 return parseInt(e) > 0 ? e : void 0;
 }
@@ -290,10 +290,10 @@ for (let t = 0; t < e.elements.length; t++) {
   }
   getBorderRadius(e) {
 var t, n, r, i, a, s, o, l;
-let u = null != (n = m(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? n : '0',
-  c = null != (i = m(null == (r = e.styles[0]) ? void 0 : r.borderTopRightRadius)) ? i : '0',
-  d = null != (s = m(null == (a = e.styles[0]) ? void 0 : a.borderBottomRightRadius)) ? s : '0',
-  _ = null != (l = m(null == (o = e.styles[0]) ? void 0 : o.borderBottomLeftRadius)) ? l : '0';
+let u = null != (n = I(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? n : '0',
+  c = null != (i = I(null == (r = e.styles[0]) ? void 0 : r.borderTopRightRadius)) ? i : '0',
+  d = null != (s = I(null == (a = e.styles[0]) ? void 0 : a.borderBottomRightRadius)) ? s : '0',
+  _ = null != (l = I(null == (o = e.styles[0]) ? void 0 : o.borderBottomLeftRadius)) ? l : '0';
 if (!('0' === u && '0' === c && '0' === d && '0' === _))
   return `${ u } ${ c } ${ d } ${ _ }`;
   }
@@ -334,7 +334,7 @@ if (null != this.boundingBox && (t = {
         t.push(e);
       }
     }
-    return t.push(new p(255, 255, 255, 1)), t.reduce(I);
+    return t.push(new p(255, 255, 255, 1)), t.reduce(m);
   }(this.targetAncestry);
   t = {
     ...this.makePositionFromDOMRect(this.targetElement.getBoundingClientRect()),
@@ -490,13 +490,13 @@ children: d
   null != a && E(null != s, 'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'), null != r && E(null != s, 'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.');
   let f = o.useRef(!1),
 [h, p] = o.useState(!1),
-I = o.useContext(S),
-m = o.Children.only(d),
+m = o.useContext(S),
+I = o.Children.only(d),
 {
   onBlur: T,
   onFocus: g,
   ...A
-} = m.props,
+} = I.props,
 N = o.useMemo(() => ({
   className: l,
   offset: i
@@ -505,21 +505,21 @@ N = o.useMemo(() => ({
   i
 ]);
   w(() => {
-n && I.invalidate();
+n && m.invalidate();
   }), o.useEffect(() => {
-n || I.hide();
+n || m.hide();
   }, [
 n,
-I
+m
   ]), o.useEffect(() => () => {
-f.current && I.hide();
-  }, [I]), o.useEffect(() => {
+f.current && m.hide();
+  }, [m]), o.useEffect(() => {
 let e = null == s ? void 0 : s.current;
-null == r || null == e || (f.current = r, r ? I.showElement(e, N) : !1 === r && I.hide());
+null == r || null == e || (f.current = r, r ? m.showElement(e, N) : !1 === r && m.hide());
   }, [
 r,
 N,
-I,
+m,
 s
   ]), w(() => {
 if (null != r)
@@ -534,44 +534,44 @@ if (null != e && null != n)
 function i(e) {
   if (null != n) {
     if (e.currentTarget === e.target) {
-      f.current = !0, I.showElement(n, N);
+      f.current = !0, m.showElement(n, N);
       return;
     }
-    p(!0), t && I.showElement(n, N);
+    p(!0), t && m.showElement(n, N);
   }
 }
 
 function o() {
-  I.hide(), f.current = !1, p(!1);
+  m.hide(), f.current = !1, p(!1);
 }
   }, [
 t,
 N,
 r,
-I,
+m,
 a,
 s
   ]);
   let v = o.useCallback(e => {
-  I.hide(), f.current = !1, p(!1), null == T || T(e);
+  m.hide(), f.current = !1, p(!1), null == T || T(e);
 }, [
   T,
-  I
+  m
 ]),
 O = o.useCallback(e => {
   let n = null == s ? void 0 : s.current;
-  e.currentTarget === e.target ? (f.current = !0, I.showElement(null != n ? n : e.currentTarget, N)) : (p(!0), t && I.showElement(null != n ? n : e.currentTarget, N)), null == g || g(e);
+  e.currentTarget === e.target ? (f.current = !0, m.showElement(null != n ? n : e.currentTarget, N)) : (p(!0), t && m.showElement(null != n ? n : e.currentTarget, N)), null == g || g(e);
 }, [
   s,
   t,
   g,
-  I,
+  m,
   N
 ]);
-  return n && null == a && null == r ? o.cloneElement(m, {
+  return n && null == a && null == r ? o.cloneElement(I, {
 ...A,
 className: _(A.className, f.current ? u : void 0, h ? c : void 0),
 onBlur: v,
 onFocus: O
-  }) : m;
+  }) : I;
 }

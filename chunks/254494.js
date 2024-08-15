@@ -43,8 +43,8 @@ className: E,
 listPadding: f,
 rowCount: h,
 getScrollOffsetForIndex: p,
-categoryHeight: I,
-onScroll: m,
+categoryHeight: m,
+onScroll: I,
 renderCategoryListItem: T,
 rowCountBySection: g,
 renderSection: S
@@ -74,16 +74,16 @@ v = i.useCallback(e => T(a[e], e, () => N(e), A === e), [
   N,
   T
 ]),
-O = i.useMemo(() => 'function' == typeof I ? e => I(a[e], e) : I, [
+O = i.useMemo(() => 'function' == typeof m ? e => m(a[e], e) : m, [
   a,
-  I
+  m
 ]);
   return (0, r.jsxs)('div', {
 className: s()(c.wrapper, E),
 children: [
   (0, r.jsx)(o.Z, {
     listPadding: f,
-    onScroll: m,
+    onScroll: I,
     ref: t,
     renderRow: v,
     rowCount: h,

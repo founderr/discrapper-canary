@@ -30,7 +30,7 @@ return h;
 return N;
   },
   b3: function() {
-return m;
+return I;
   },
   cf: function() {
 return C;
@@ -51,7 +51,7 @@ return s;
 return T;
   },
   qm: function() {
-return I;
+return m;
   },
   yZ: function() {
 return v;
@@ -65,8 +65,8 @@ let _ = 100,
   f = 100,
   h = 15,
   p = 12,
-  I = 50,
-  m = 4,
+  m = 50,
+  I = 4,
   T = 7,
   g = 5,
   S = 13;

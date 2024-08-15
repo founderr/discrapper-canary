@@ -12,8 +12,8 @@ var r = n(735250),
   f = n(314884),
   h = n(709586),
   p = n(74538),
-  I = n(678558),
-  m = n(981631),
+  m = n(678558),
+  I = n(981631),
   T = n(474936),
   g = n(689938),
   S = n(837220);
@@ -82,16 +82,16 @@ children: [
         threshold: 0.9,
         children: (0, r.jsx)('div', {
           className: s()(S.guildBoostCta, S.guildBoostCtaBoostWrapper),
-          children: (0, r.jsx)(I.Z, {
+          children: (0, r.jsx)(m.Z, {
             className: S.guildBoostCtaBoost,
             innerClassName: s()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaBoostContent),
             buttonShineClassName: S.guildBoostCtaBoostShine,
             guild: n,
             analyticsLocation: {
-              page: m.ZY5.PREMIUM_GUILD_USER_MODAL,
-              section: m.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-              object: m.qAy.BUTTON_CTA,
-              objectType: m.Qqv.BUY
+              page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+              section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+              object: I.qAy.BUTTON_CTA,
+              objectType: I.Qqv.BUY
             },
             closeLayer: t,
             color: u.Button.Colors.WHITE,
@@ -112,10 +112,10 @@ children: [
             isGift: !0,
             analyticsLocations: v,
             analyticsObject: {
-              page: m.ZY5.PREMIUM_GUILD_USER_MODAL,
-              section: m.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-              object: m.qAy.BUTTON_ICON,
-              objectType: m.Qqv.GIFT
+              page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+              section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+              object: I.qAy.BUTTON_ICON,
+              objectType: I.Qqv.GIFT
             },
             onClose: e => e && t()
           });
@@ -140,10 +140,10 @@ children: [
             subscriptionTier: T.Si.TIER_2,
             analyticsLocations: v,
             analyticsObject: {
-              page: m.ZY5.PREMIUM_GUILD_USER_MODAL,
-              section: m.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-              object: m.qAy.BUTTON_ICON,
-              objectType: m.Qqv.BUY
+              page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+              section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+              object: I.qAy.BUTTON_ICON,
+              objectType: I.Qqv.BUY
             },
             onClose: e => e && t()
           });

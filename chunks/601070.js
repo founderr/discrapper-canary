@@ -9,8 +9,8 @@ var r, i, a, s, o = n(392711),
   f = n(306680),
   h = n(944486),
   p = n(709054),
-  I = n(344185),
-  m = n(569471),
+  m = n(344185),
+  I = n(569471),
   T = n(819168),
   g = n(176505);
 let S = {},
@@ -25,7 +25,7 @@ let S = {},
 function D() {
   for (let e in (S = {}, O = {}, A = {}, N = {}, v = {}, C = h.Z.getChannelId(), y))
 clearTimeout(y[e]);
-  y = {}, I.Z.forEachGuild(e => {
+  y = {}, m.Z.forEachGuild(e => {
 b(e);
   }), M();
 }
@@ -36,14 +36,14 @@ U(e, t);
 }
 
 function b(e) {
-  let t = I.Z.getThreadsForGuild(e);
+  let t = m.Z.getThreadsForGuild(e);
   for (let e in t)
 for (let n in t[e]) {
   Z(n);
   let e = _.Z.getChannel(n);
   if (null == e)
     continue;
-  let t = m.Z.joinTimestamp(n);
+  let t = I.Z.joinTimestamp(n);
   if (null != t) {
     let n = {
         channel: e,
@@ -96,8 +96,8 @@ function w(e, t, n) {
   if (null == t)
 return !1;
   let r = _.Z.getChannel(n),
-i = m.Z.joinTimestamp(n);
-  if (null != r && I.Z.isActive(e, t, n)) {
+i = I.Z.joinTimestamp(n);
+  if (null != r && m.Z.isActive(e, t, n)) {
 if (null != i) {
   let e = {
       channel: r,
@@ -124,7 +124,7 @@ function x(e) {
 
 function G(e) {
   let t = _.Z.getChannel(e.id);
-  return !!(null != t && I.Z.isActive(e.guildId, t.parent_id, e.id)) && w(t.guild_id, t.parent_id, t.id);
+  return !!(null != t && m.Z.isActive(e.guildId, t.parent_id, e.id)) && w(t.guild_id, t.parent_id, t.id);
 }
 
 function k(e) {
@@ -197,7 +197,7 @@ return !1;
 
 function V(e) {
   let t = f.ZP.getMentionCount(e.id) > 0,
-n = f.ZP.hasUnread(e.id) && !m.Z.isMuted(e.id),
+n = f.ZP.hasUnread(e.id) && !I.Z.isMuted(e.id),
 r = e.hasFlag(g.zZ.PINNED),
 i = e.isActiveThread(),
 a = i && (0, T.Z)(e) > Date.now();
@@ -262,7 +262,7 @@ let z = {},
   $ = {};
 class J extends(r = u.ZP.Store) {
   initialize() {
-this.waitFor(I.Z, _.Z, m.Z, f.ZP), this.syncWith([h.Z], F);
+this.waitFor(m.Z, _.Z, I.Z, f.ZP), this.syncWith([h.Z], F);
   }
   hasActiveJoinedUnreadThreads(e, t) {
 return e in A && t in A[e];

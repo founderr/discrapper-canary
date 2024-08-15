@@ -17,7 +17,7 @@ var t = e.onChange,
   f = e.styles,
   h = void 0 === f ? {} : f,
   p = e.className,
-  I = (0, s.default)((0, l.Z)({
+  m = (0, s.default)((0, l.Z)({
     default: {
       Compact: {
         background: '#f6f6f6',
@@ -34,32 +34,32 @@ var t = e.onChange,
       }
     }
   }, h)),
-  m = function(e, n) {
+  I = function(e, n) {
     e.hex ? u.FX(e.hex) && t({
       hex: e.hex,
       source: 'hex'
     }, n) : t(e, n);
   };
 return r.createElement(c.xZ, {
-  style: I.Compact,
+  style: m.Compact,
   styles: h
 }, r.createElement('div', {
-  style: I.compact,
+  style: m.compact,
   className: 'compact-picker ' + (void 0 === p ? '' : p)
 }, r.createElement('div', null, (0, o.Z)(i, function(e) {
   return r.createElement(d.Z, {
     key: e,
     color: e,
     active: e.toLowerCase() === a,
-    onClick: m,
+    onClick: I,
     onSwatchHover: n
   });
 }), r.createElement('div', {
-  style: I.clear
+  style: m.clear
 })), r.createElement(_.Z, {
   hex: a,
   rgb: E,
-  onChange: m
+  onChange: I
 })));
   };
 E.propTypes = {

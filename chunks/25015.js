@@ -21,8 +21,8 @@ isInteracting: E = !1,
 allowHeading: f = !1,
 allowList: h = !1,
 allowLinks: p = !1,
-allowDevLinks: I = !1,
-allowSubtext: m = !1,
+allowDevLinks: m = !1,
+allowSubtext: I = !1,
 previewLinkTarget: T = !1,
 viewingChannelId: g
   } = t, S = (0, i.p)();
@@ -41,8 +41,8 @@ isInteracting: E,
 allowHeading: f,
 allowList: h,
 allowLinks: p,
-allowSubtext: m,
-allowDevLinks: I,
+allowSubtext: I,
+allowDevLinks: m,
 previewLinkTarget: T,
 shouldFilterKeywords: S,
 viewingChannelId: g
@@ -61,7 +61,7 @@ f,
 h,
 p,
 T,
-m,
+I,
 S
   ]);
 }

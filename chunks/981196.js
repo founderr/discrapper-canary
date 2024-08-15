@@ -56,10 +56,10 @@ if ('tzid' !== l[c] && !!(0, i.q9)(u, l[c])) {
     n = e[1];
   return ''.concat(t, '=').concat(n.toString());
 }).join(';'),
-I = '';
-  return '' !== p && (I = 'RRULE:'.concat(p)), [
+m = '';
+  return '' !== p && (m = 'RRULE:'.concat(p)), [
 n,
-I
+m
   ].filter(function(e) {
 return !!e;
   }).join('\n');

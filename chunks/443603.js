@@ -46,8 +46,8 @@ innerClassName: r,
 childClassName: i,
 iconClassName: s,
 icon: o,
-children: I,
-onClick: m,
+children: m,
+onClick: I,
 isActive: T,
 onMouseEnter: g,
 onMouseLeave: S,
@@ -60,7 +60,7 @@ notification: R,
 'aria-expanded': y,
 'aria-haspopup': D,
 'aria-controls': L
-  } = e, b = (0, _.Q)('ChannelTextAreaButton'), M = (0, c.useTransition)(null != I, {
+  } = e, b = (0, _.Q)('ChannelTextAreaButton'), M = (0, c.useTransition)(null != m, {
 ...p,
 keys: e => e ? 'children' : 'icon'
   }), P = e => {
@@ -97,7 +97,7 @@ className: l()(t, {
 innerClassName: l()(h.button, r, {
   [h.pulseButton]: v
 }),
-onClick: m,
+onClick: I,
 onMouseEnter: g,
 onMouseLeave: S,
 onFocus: A,
@@ -117,7 +117,7 @@ children: [
       style: e,
       className: l()(h.buttonWrapper, i),
       children: P({
-        component: I
+        component: m
       })
     }, r) : null != o ? (0, a.jsx)(u.animated.div, {
       style: e,

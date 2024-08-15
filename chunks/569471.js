@@ -10,11 +10,11 @@ let f = {},
   h = new d.ZP(),
   p = new Set();
 
-function I(e) {
+function m(e) {
   f = l()(f).reject(t => t.guildId === e).keyBy('threadId').value();
 }
 
-function m(e) {
+function I(e) {
   var t;
   null === (t = e.threads) || void 0 === t || t.forEach(T);
 }
@@ -88,7 +88,7 @@ s = 'JoinedThreadsStore', (a = 'displayName') in(i = A) ? Object.defineProperty(
 let N = new A(c.Z, {
   CONNECTION_OPEN: function(e) {
 h.reset(), p = new Set(), f = {}, e.guilds.forEach(e => {
-  m(e);
+  I(e);
 });
   },
   OVERLAY_INITIALIZE: function(e) {
@@ -104,13 +104,13 @@ f = l()(t).map(e => ({
 let {
   guild: t
 } = e;
-I(t.id), m(t);
+m(t.id), I(t);
   },
   GUILD_DELETE: function(e) {
 let {
   guild: t
 } = e;
-I(t.id);
+m(t.id);
   },
   THREAD_CREATE: function(e) {
 let {

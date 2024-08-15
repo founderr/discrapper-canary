@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(361291),
   h = n(430824),
   p = n(131951),
-  I = n(594174),
-  m = n(981631),
+  m = n(594174),
+  I = n(981631),
   T = n(37113),
   g = n(65154),
   S = n(689938);
@@ -28,7 +28,7 @@ function A(e, t) {
 preset: A,
 resolution: N,
 fps: v
-  } = (0, s.cj)([f.Z], () => f.Z.getState()), O = (0, s.e7)([p.Z], () => p.Z.getGoLiveSource()), R = (0, s.e7)([I.default], () => I.default.getCurrentUser()), C = (0, s.e7)([h.Z], () => {
+  } = (0, s.cj)([f.Z], () => f.Z.getState()), O = (0, s.e7)([p.Z], () => p.Z.getGoLiveSource()), R = (0, s.e7)([m.default], () => m.default.getCurrentUser()), C = (0, s.e7)([h.Z], () => {
 var t;
 return null === (t = h.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier;
   }), {
@@ -59,7 +59,7 @@ if (e) {
   var u, c;
   u = t, c = {
     ...y,
-    object: m.qAy.RADIO_ITEM,
+    object: I.qAy.RADIO_ITEM,
     objectType: s
   }, (0, o.openModalLazy)(async () => {
     let {
@@ -70,7 +70,7 @@ if (e) {
       analyticsSource: c
     });
   }, {
-    contextKey: u === m.IlC.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
+    contextKey: u === I.IlC.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
   });
 }
   }, [
@@ -92,7 +92,7 @@ P = T.af.map(e => {
     id: 'stream-settings-fps-'.concat(t),
     label: n,
     checked: t === v,
-    action: () => b(i, N, t, m.Qqv.RESOLUTION)
+    action: () => b(i, N, t, I.Qqv.RESOLUTION)
   }, 'stream-settings-fps-'.concat(t));
 }),
 U = T.km.map(e => {
@@ -105,7 +105,7 @@ U = T.km.map(e => {
     id: 'stream-settings-resolution-'.concat(t),
     label: n,
     checked: t === N,
-    action: () => b(i, t, M, m.Qqv.RESOLUTION)
+    action: () => b(i, t, M, I.Qqv.RESOLUTION)
   }, 'stream-settings-resolution-'.concat(t));
 });
   return (0, r.jsxs)(r.Fragment, {

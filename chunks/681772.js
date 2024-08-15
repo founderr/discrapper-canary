@@ -38,8 +38,8 @@ var r = n(793901),
   f = n(705267),
   h = n(533849),
   p = n(640368),
-  I = n(603440),
-  m = n(293352),
+  m = n(603440),
+  I = n(293352),
   T = n(21454),
   g = n(775098),
   S = n(679837),
@@ -103,8 +103,8 @@ X = {
   'he-IL': f.Z,
   'hr-HR': h.Z,
   'hu-HU': p.Z,
-  'it-IT': I.Z,
-  'ja-JP': m.Z,
+  'it-IT': m.Z,
+  'ja-JP': I.Z,
   'ko-KR': T.Z,
   'lt-LT': g.Z,
   'lv-LV': S.Z,
@@ -299,16 +299,16 @@ focusableProps: d
   let h = (0, H.qb)(W(X), '@react-aria/table');
   o && (a = `${ h.format('sortable') }`, E && f && (0, B.Dt)() && (a = `${ a }, ${ h.format(f) }`));
   let p = (0, B.PK)(a),
-I = 0 === t.collection.size;
+m = 0 === t.collection.size;
   return (0, F.useEffect)(() => {
-I && t.selectionManager.focusedKey === s.key && t.selectionManager.setFocusedKey(null);
+m && t.selectionManager.focusedKey === s.key && t.selectionManager.setFocusedKey(null);
   }, [
-I,
+m,
 t.selectionManager,
 s.key
   ]), {
 columnHeaderProps: {
-  ...(0, B.dG)(l, c, d, p, I && {
+  ...(0, B.dG)(l, c, d, p, m && {
     tabIndex: -1
   }),
   role: 'columnheader',

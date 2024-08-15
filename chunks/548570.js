@@ -17,8 +17,8 @@ var r = n(512722),
   f = n(795513),
   h = n(266750),
   p = n(250407),
-  I = n(710845),
-  m = n(797614),
+  m = n(710845),
+  I = n(797614),
   T = n(218543),
   g = n(857192),
   S = n(626135),
@@ -46,7 +46,7 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let k = new I.Z('GatewaySocket'),
+let k = new m.Z('GatewaySocket'),
   B = new D.Z();
 
 function F() {}
@@ -424,7 +424,7 @@ let {
   error: n,
   metricAction: r
 } = e;
-k.error('resetSocketOnError during '.concat(t, ': ').concat(n.message), n.stack), m.Z.increment({
+k.error('resetSocketOnError during '.concat(t, ': ').concat(n.message), n.stack), I.Z.increment({
   name: l.V.SOCKET_CRASHED,
   tags: ['action:'.concat(null != r ? r : t)]
 }, !0), !1 !== e.sentry && O.Z.captureException(n, {

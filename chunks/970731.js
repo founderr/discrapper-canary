@@ -32,17 +32,17 @@ buttonProps: p = {
   color: d.Button.Colors.BRAND,
   look: d.Button.Looks.FILLED
 },
-secondaryButtonProps: I = {
+secondaryButtonProps: m = {
   color: d.Button.Colors.BRAND_INVERTED
 },
-onComponentMount: m,
+onComponentMount: I,
 asset: T,
 markAsDismissed: g,
 caretPosition: S = 'caretTopCenter',
 buttonLayout: A = 0
   } = e;
   l.useEffect(() => {
-null == m || m();
+null == I || I();
   }, []);
   let N = null != u;
   return (0, o.jsxs)('div', {
@@ -67,7 +67,7 @@ children: [
     }),
     children: [
       N ? (0, o.jsx)(d.Button, {
-        ...I,
+        ...m,
         fullWidth: 1 === A,
         onClick: () => {
           null == h || h(), null == g || g(_.L.SECONDARY);

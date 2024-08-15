@@ -8,8 +8,8 @@ var a, s, o, l, u = n(348327),
   f = n(570140),
   h = n(503438),
   p = n(860852),
-  I = n(768419),
-  m = n(695346),
+  m = n(768419),
+  I = n(695346),
   T = n(581883),
   g = n(131704),
   S = n(780570),
@@ -39,14 +39,14 @@ function F(e) {
   switch (e.type) {
 case D.IIU.LISTENING:
   if ((0, h.Z)(e))
-    return I.Z.shouldShowActivity();
+    return m.Z.shouldShowActivity();
   if (null != e.application_id)
     return B(e.application_id);
   return !1;
 case D.IIU.PLAYING:
   return null != e.application_id ? B(e.application_id) : function(e) {
     let t = N.Z.getGameByName(e);
-    return null != t ? B(t.id) : m.G6.getSetting();
+    return null != t ? B(t.id) : I.G6.getSetting();
   }(e.name);
 case D.IIU.STREAMING:
 case D.IIU.WATCHING:
@@ -62,7 +62,7 @@ b = M, H();
   else if (L)
 b = D.Skl.INVISIBLE;
   else {
-let e = m.co.getSetting();
+let e = I.co.getSetting();
 b = e !== D.Skl.UNKNOWN ? e : D.Skl.ONLINE;
   }
   b === D.Skl.ONLINE && P > 0 && (b = D.Skl.IDLE);

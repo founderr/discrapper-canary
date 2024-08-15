@@ -24,11 +24,11 @@ message: n
   }, !0;
 }
 
-function I(e) {
+function m(e) {
   return f[e];
 }
 
-function m(e) {
+function I(e) {
   var t;
   return null === (t = f[e]) || void 0 === t ? void 0 : t.message;
 }
@@ -74,7 +74,7 @@ if (!h(e.message) || e.message.channel_id === e.message.id)
   let n = function(e) {
       return f[e];
     }(e),
-    r = m(e);
+    r = I(e);
   null != n && null != r && (f[e] = {
     ...n,
     message: (0, u.wi)(r, t)
@@ -83,7 +83,7 @@ if (!h(e.message) || e.message.channel_id === e.message.id)
   },
   MESSAGE_DELETE: function(e) {
 return function(e, t) {
-  let n = m(e);
+  let n = I(e);
   return (null == n ? void 0 : n.id) === t && (delete f[e], !0);
 }(e.channelId, e.id);
   },

@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(626135),
   h = n(55935),
   p = n(63063),
-  I = n(281494),
-  m = n(790368),
+  m = n(281494),
+  I = n(790368),
   T = n(474936),
   g = n(981631),
   S = n(689938),
@@ -28,7 +28,7 @@ var r = n(735250),
   O = n(352175),
   R = n(90351);
 let C = async (e, t, n) => {
-  n(!0), await (0, I.Eo)(e).then(() => {
+  n(!0), await (0, m.Eo)(e).then(() => {
 t(), (0, d.Ou)();
   }).finally(() => {
 n(!1);
@@ -116,11 +116,11 @@ referralsRemaining: t,
 channel: n,
 onClose: a,
 isResending: o
-  } = e, [u, d] = i.useState(!1), [I, O] = i.useState(!1), D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
+  } = e, [u, d] = i.useState(!1), [m, O] = i.useState(!1), D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
 analyticsLocations: L
   } = (0, E.ZP)(_.Z.REFERRAL_TRIALS_POPOUT), {
 enabled: b
-  } = m.Z.useExperiment({
+  } = I.Z.useExperiment({
 location: '200c24_1'
   }, {
 autoTrackExposure: !0
@@ -190,7 +190,7 @@ children: [
     className: A.generalButtonContainer,
     children: (0, r.jsx)(c.Button, {
       className: A.generalShareButton,
-      submitting: I,
+      submitting: m,
       onClick: () => {
         o ? C(D, a, O) : (d(!0), f.default.track(g.rMx.SHARE_NITRO_FLOW_STEPS, {
           location_stack: L,

@@ -50,7 +50,7 @@ hideGuildTags: !1
 20: 'font-size-20',
 24: 'font-size-24'
   };
-class I extends(r = i.ZP.DeviceSettingsStore) {
+class m extends(r = i.ZP.DeviceSettingsStore) {
   initialize(e) {
 this.waitFor(u.Z), isNaN((h = {
   ...f,
@@ -168,7 +168,7 @@ return h.hideGuildTags;
 return h;
   }
 }
-E(I, 'displayName', 'AccessibilityStore'), E(I, 'persistKey', 'AccessibilityStore'), E(I, 'migrations', [
+E(m, 'displayName', 'AccessibilityStore'), E(m, 'persistKey', 'AccessibilityStore'), E(m, 'migrations', [
   () => {
 let e = 'a11yFontScale',
   t = 'a11yZoom',
@@ -240,7 +240,7 @@ try {
 return e;
   }
 ]);
-let m = new I(o.Z, {
+let I = new m(o.Z, {
   ACCESSIBILITY_SET_FONT_SIZE: function(e) {
 var t;
 let n = (t = e.fontSize, d.yqN.FONT_SIZES.indexOf(t) >= 0 ? t : d.yqN.FONT_SIZE_DEFAULT);
@@ -398,4 +398,4 @@ h = {
 };
   }
 });
-t.Z = m;
+t.Z = I;

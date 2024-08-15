@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(99690),
   h = n(410030),
   p = n(726542),
-  I = n(367907),
-  m = n(906732),
+  m = n(367907),
+  I = n(906732),
   T = n(385499),
   g = n(171368),
   S = n(598077),
@@ -97,15 +97,15 @@ children: Object.keys(a).map(e => {
     c = u.filter(e => null != e.operator),
     E = u.find(e => null != e.application),
     h = p.Z.get(e),
-    I = null == E ? void 0 : E.application,
-    m = (null == I ? void 0 : I.bot) != null ? new S.Z(I.bot) : null;
-  return v.SJ.includes(null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : '') ? l = (0, r.jsx)(y.Z, {
+    m = null == E ? void 0 : E.application,
+    I = (null == m ? void 0 : m.bot) != null ? new S.Z(m.bot) : null;
+  return v.SJ.includes(null !== (t = null == m ? void 0 : m.id) && void 0 !== t ? t : '') ? l = (0, r.jsx)(y.Z, {
     className: U.botTag,
     color: i,
     size: 16
-  }) : null != m && (l = (0, r.jsx)(T.Z, {
+  }) : null != I && (l = (0, r.jsx)(T.Z, {
     className: U.botTag,
-    verified: m.isVerifiedBot()
+    verified: I.isVerifiedBot()
   })), (0, r.jsxs)('div', {
     className: U.popoutChecksGroup,
     children: [
@@ -117,15 +117,15 @@ children: Object.keys(a).map(e => {
             alt: '',
             className: U.popoutCheckGroupPlatformIcon
           }) : null,
-          null != m ? (0, r.jsx)(f.Z, {
-            user: m,
+          null != I ? (0, r.jsx)(f.Z, {
+            user: I,
             size: _.AvatarSizes.SIZE_20,
             className: U.popoutCheckGroupPlatformIcon
           }) : null,
           (0, r.jsx)(_.Text, {
             variant: 'text-sm/medium',
             color: 'interactive-active',
-            children: null !== (o = null == h ? void 0 : h.name) && void 0 !== o ? o : null == I ? void 0 : I.name
+            children: null !== (o = null == h ? void 0 : h.name) && void 0 !== o ? o : null == m ? void 0 : m.name
           }),
           l
         ]
@@ -166,8 +166,8 @@ guildId: d
 N.default.track(b.rMx.PASSPORT_ROLE_POPOUT_VIEWED, {
   other_user_id: o,
   role_id: l,
-  ...(0, I.JS)(c),
-  ...(0, I.hH)(d)
+  ...(0, m.JS)(c),
+  ...(0, m.hH)(d)
 });
   }, [
 o,
@@ -228,7 +228,7 @@ guild: a,
 channel: o
   } = e, {
 analyticsLocations: l
-  } = (0, m.ZP)(), c = (0, R.Z)(a, t, o.id, !0), d = (0, u.e7)([O.Z], () => O.Z.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)), [f, h] = i.useState(null == d);
+  } = (0, I.ZP)(), c = (0, R.Z)(a, t, o.id, !0), d = (0, u.e7)([O.Z], () => O.Z.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)), [f, h] = i.useState(null == d);
   if (null == c)
 return null;
   async function p() {

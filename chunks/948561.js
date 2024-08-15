@@ -17,8 +17,8 @@ var r = n(952639),
   f = n(433355),
   h = n(592125),
   p = n(375954),
-  I = n(944486),
-  m = n(914010),
+  m = n(944486),
+  I = n(914010),
   T = n(709054),
   g = n(93735),
   S = n(522664),
@@ -196,7 +196,7 @@ return !1;
 let e = null !== (s = null !== (a = p.Z.getMessage(o.channel_id, o.id)) && void 0 !== a ? a : v.Z.getMessage(o.id, o.channel_id)) && void 0 !== s ? s : null === (i = _.Z.getMessage(o.channel_id, o.id)) || void 0 === i ? void 0 : i.message;
 null != e && !(0, g.N7)((0, c.wi)(e, o)) && M(e, N.Pq.UPDATE);
   }
-  let l = I.Z.getChannelId(),
+  let l = m.Z.getChannelId(),
 u = f.ZP.getCurrentSidebarChannelId(l);
   if (!(o.channel_id === l || o.channel_id === u))
 return !1;
@@ -216,7 +216,7 @@ isPushNotification: s
   } = e;
   if (!(0, A.Kh)() || a || s || null == r || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === E.default.getId())
 return !1;
-  let o = I.Z.getChannelId(),
+  let o = m.Z.getChannelId(),
 l = f.ZP.getCurrentSidebarChannelId(o),
 u = r === o || r === l,
 c = h.Z.getChannel(r);
@@ -236,7 +236,7 @@ messages: n
   } = e;
   if (!(0, A.Kh)() || null == t || null == n)
 return !1;
-  let r = I.Z.getChannelId(),
+  let r = m.Z.getChannelId(),
 i = f.ZP.getCurrentSidebarChannelId(r);
   return (t === r || t === i) && x(n);
 }
@@ -256,7 +256,7 @@ function V(e) {
 guildId: t,
 threads: n
   } = e;
-  return !!(null != n && (0, A.Kh)()) && m.Z.getGuildId() === t && x(T.default.keys(n).map(e => n[e].first_message));
+  return !!(null != n && (0, A.Kh)()) && I.Z.getGuildId() === t && x(T.default.keys(n).map(e => n[e].first_message));
 }
 
 function H(e) {
@@ -264,7 +264,7 @@ function H(e) {
 guildId: t,
 firstMessages: n
   } = e;
-  return !!(null != n && (0, A.Kh)()) && m.Z.getGuildId() === t && x(n, {
+  return !!(null != n && (0, A.Kh)()) && I.Z.getGuildId() === t && x(n, {
 forceBatchScan: !0
   });
 }
@@ -273,7 +273,7 @@ function Z(e) {
   let {
 channelId: t
   } = e;
-  return !!(null != t && (0, A.Kh)()) && t === I.Z.getChannelId() && W(t);
+  return !!(null != t && (0, A.Kh)()) && t === m.Z.getChannelId() && W(t);
 }
 
 function Y(e) {
@@ -283,7 +283,7 @@ local: n
   } = e;
   if (!(0, A.Kh)() || !n || t.type !== C.yP.PRELOADED_USER_SETTINGS)
 return !1;
-  let r = I.Z.getChannelId();
+  let r = m.Z.getChannelId();
   return null != r && W(r);
 }
 

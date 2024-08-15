@@ -14,8 +14,8 @@ var i = n(735250),
   _ = n(258609),
   f = n(74299),
   E = n(924301),
-  g = n(459502),
-  C = n(856691),
+  C = n(459502),
+  g = n(856691),
   I = n(889161),
   x = n(923973),
   T = n(829750),
@@ -138,8 +138,8 @@ onSelect: n
 canManageGuildEvent: s
   } = (0, I.XJ)(t), c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]), d = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)), h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), {
 suppress: m
-  } = (0, v.Z)(t), p = j.default.getId(), [_] = (0, X.Z)(t), f = H.ZP.isModerator(p, t.id), g = (0, w.B)(t.id), C = s(d);
-  return h ? (f || C) && null != c ? (0, i.jsx)(o.Popout, {
+  } = (0, v.Z)(t), p = j.default.getId(), [_] = (0, X.Z)(t), f = H.ZP.isModerator(p, t.id), C = (0, w.B)(t.id), g = s(d);
+  return h ? (f || g) && null != c ? (0, i.jsx)(o.Popout, {
 renderPopout: e => {
   let {
     closePopout: s
@@ -185,7 +185,7 @@ children: (e, n) => {
     popoutOpen: l
   });
 }
-  }) : m && !g || _ ? (0, i.jsx)(o.Button, {
+  }) : m && !C || _ ? (0, i.jsx)(o.Button, {
 size: o.Button.Sizes.MEDIUM,
 color: o.Button.Colors.RED,
 className: l()($.buttonSpacing, $.buttonWithTextButton),
@@ -312,8 +312,8 @@ selfMute: a,
 mute: s
   } = (0, v.Z)(t), c = (0, w.B)(t.id), u = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()), {
 cameraUnavailable: E,
-enabled: g
-  } = (0, x.Z)(), C = (0, N.Z)(t), {
+enabled: C
+  } = (0, x.Z)(), g = (0, N.Z)(t), {
 limit: I,
 reachedLimit: M
   } = (0, T.Z)(t), j = (0, r.e7)([y.default], () => y.default.getCurrentUser()), P = (0, r.e7)([L.Z], () => (0, f.Z)(L.Z)), D = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]), U = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]), B = (0, V.PK)(t.id), H = I > 0, G = M && !B || null != U && U.user.id !== (null == j ? void 0 : j.id);
@@ -343,8 +343,8 @@ children: [
       } = t;
       return (0, i.jsx)(R.C, {
         centerButton: !0,
-        hasPermission: C,
-        enabled: g,
+        hasPermission: g,
+        enabled: C,
         cameraUnavailable: E,
         onChange: S.r,
         onCameraUnavailable: Z.Z,
@@ -360,7 +360,7 @@ children: [
     currentUser: j,
     exitFullScreen: () => null,
     canGoLive: P,
-    hasPermission: C,
+    hasPermission: g,
     disabled: G
   })
 ]
@@ -456,13 +456,13 @@ children: [
   (0, i.jsxs)('div', {
     className: $.eventPrompts,
     children: [
-      u ? (0, i.jsx)(g.Z, {
+      u ? (0, i.jsx)(C.Z, {
         channelId: null == t ? void 0 : t.id
       }) : null,
       (0, i.jsx)('div', {
         className: $.separator
       }),
-      u && l ? (0, i.jsx)(C.Z, {
+      u && l ? (0, i.jsx)(g.Z, {
         highlight: !0,
         channel: t
       }) : null,

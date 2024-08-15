@@ -74,7 +74,7 @@ return (0, n.jsx)(A.Tooltip, {
   }
 });
   },
-  Q = () => (0, n.jsxs)('div', {
+  b = () => (0, n.jsxs)('div', {
 className: U.gameBadge,
 children: [
   (0, n.jsx)(A.FireIcon, {
@@ -87,7 +87,7 @@ children: [
   })
 ]
   }),
-  b = [
+  Q = [
 _.z.DESKTOP,
 _.z.XBOX,
 _.z.PLAYSTATION,
@@ -98,7 +98,7 @@ let {
   platforms: s
 } = e, a = [...new Set(s)];
 !a.includes(_.z.DESKTOP) && (a.includes(_.z.MACOS) || a.includes(_.z.LINUX)) && a.push(_.z.DESKTOP);
-let l = (a = a.filter(e => b.includes(e))).map(e => {
+let l = (a = a.filter(e => Q.includes(e))).map(e => {
   switch (e) {
     case _.z.DESKTOP:
       return (0, n.jsx)(A.ScreenIcon, {
@@ -141,13 +141,13 @@ let {
   applicationId: i,
   source: E,
   sourceUserId: _,
-  transitionState: b,
+  transitionState: Q,
   onClose: Y
 } = e, {
   clientThemesClassName: W
 } = (0, O.ZP)(), {
-  width: V,
-  height: z
+  width: z,
+  height: V
 } = (0, M.b)(), [X, J] = l.useState(() => {
   var e;
   return null === (e = d.K.get(w)) || void 0 === e ? void 0 : e[i];
@@ -157,8 +157,8 @@ l.useEffect(() => {
   null != e && ea(e.scrollHeight - e.clientHeight > 1);
 }, [
   en,
-  V,
-  z
+  z,
+  V
 ]), l.useEffect(() => {
   (0, T.Jn)();
 }, []);
@@ -289,7 +289,7 @@ let eL = null !== (s = ed.name) && void 0 !== s ? s : null == eu ? void 0 : eu.n
   ev = c()().diff(c()(eC), 'days') <= F.G,
   eh = eE.some(e => (0, L.ig)(e) === I.o.GLOBAL);
 return (0, n.jsx)(A.ModalRoot, {
-  transitionState: b,
+  transitionState: Q,
   size: A.ModalSize.DYNAMIC,
   className: t()(W, U.gameProfileModal),
   children: (0, n.jsxs)(A.ScrollerNone, {
@@ -349,7 +349,7 @@ return (0, n.jsx)(A.ModalRoot, {
                             variant: 'text-sm/medium',
                             children: ' \xB7 '
                           }),
-                          (0, n.jsx)(Q, {})
+                          (0, n.jsx)(b, {})
                         ]
                       })
                     ]

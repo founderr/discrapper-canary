@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(865427),
   h = n(406128),
   p = n(25779),
-  I = n(797614),
-  m = n(703656),
+  m = n(797614),
+  I = n(703656),
   T = n(626135),
   g = n(960048),
   S = n(998502),
@@ -54,7 +54,7 @@ children: N.Z.Messages.CLEAR_BUILD_OVERRIDE
   });
 }
 let C = s().throttle(e => {
-  I.Z.increment({
+  m.Z.increment({
 name: u.V.APP_CRASHED,
 tags: [
   'reason:'.concat(o.v.UNHANDLED_JS_ERROR),
@@ -70,7 +70,7 @@ class y extends i.PureComponent {
 this.triggerSoftCrash(e, t);
   }
   triggerSoftCrash(e, t) {
-let n = (0, m.s1)().location;
+let n = (0, I.s1)().location;
 this.setState({
   error: e,
   info: t

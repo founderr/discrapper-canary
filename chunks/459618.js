@@ -83,14 +83,14 @@ super(...e), t = this, n = 'pendingMessages', r = new Map(), n in t ? Object.def
 }) : t[n] = r;
   }
 }
-let I = new p(a.Z, {
+let m = new p(a.Z, {
   MESSAGE_CREATE: function(e) {
 let {
   optimistic: t,
   message: n
 } = e, r = n.nonce;
 if (!t && null != r)
-  I.recordGatewayResponse(r);
+  m.recordGatewayResponse(r);
   }
 });
-t.Z = I;
+t.Z = m;

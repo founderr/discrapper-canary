@@ -15,8 +15,8 @@ var i, a, s = n(990547),
   f = n(57132),
   h = n(703656),
   p = n(365007),
-  I = n(314897),
-  m = n(480294),
+  m = n(314897),
+  I = n(480294),
   T = n(573261),
   g = n(572691),
   S = n(981631),
@@ -332,12 +332,12 @@ return T.Z.post({
     }
   }
 }).finally(() => {
-  (null == n || n === I.default.getId()) && R(t);
+  (null == n || n === m.default.getId()) && R(t);
 });
   },
   switchAccountToken(e) {
 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-  n = I.default.getToken();
+  n = m.default.getToken();
 N.log('Switching accounts', {
   wasLoggedIn: null != n,
   tokenHasChanged: e !== n
@@ -345,7 +345,7 @@ N.log('Switching accounts', {
   isSwitchingAccount: !0
 });
 let r = this.loginToken(e, !0).then(() => {
-  let t = I.default.getToken();
+  let t = m.default.getToken();
   N.log('Switched accounts finished', {
     isCorrectToken: e === t
   });
@@ -570,7 +570,7 @@ retries: 2,
 oldFormErrors: !0
   }).then(e => {
 var t, n, i, a, s;
-if (clearTimeout(r), null == m.Z.getAuthenticationConsentRequired()) {
+if (clearTimeout(r), null == I.Z.getAuthenticationConsentRequired()) {
   let t = null === (a = null == e ? void 0 : null === (i = e.body) || void 0 === i ? void 0 : i.consent_required) || void 0 === a || a;
   c.Z.dispatch({
     type: 'SET_CONSENT_REQUIRED',

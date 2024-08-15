@@ -108,8 +108,8 @@ if (t.length > 0 && ! function(e, t) {
   }(e, t))
   return !1;
 if (c.size > 0) {
-  var p, I;
-  if (p = e, !(0 !== (I = c).size && Array.from(I).every(e => p.roles.includes(e))))
+  var p, m;
+  if (p = e, !(0 !== (m = c).size && Array.from(m).every(e => p.roles.includes(e))))
     return !1;
 }
 if (null != d.afterDate && e.joinedAtTimestamp < d.afterDate || null != d.beforeDate && e.joinedAtTimestamp > d.beforeDate || null != E.afterDate && o.default.extractTimestamp(e.userId) < E.afterDate || null != E.beforeDate && o.default.extractTimestamp(e.userId) > E.beforeDate || null != f && e.sourceInviteCode !== f || null != h && e.joinSourceType !== h)

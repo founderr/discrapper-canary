@@ -12,13 +12,13 @@ var r = n(147018),
   f = n(641236),
   h = n(992051),
   p = f('replace'),
-  I = TypeError,
-  m = a(''.indexOf),
+  m = TypeError,
+  I = a(''.indexOf),
   T = a(''.replace),
   g = a(''.slice),
   S = Math.max,
   A = function(e, t, n) {
-return n > e.length ? -1 : '' === t ? n : m(e, t, n);
+return n > e.length ? -1 : '' === t ? n : I(e, t, n);
   };
 r({
   target: 'String',
@@ -30,8 +30,8 @@ var n, r, a, f, N, v, O, R, C = s(this),
   D = 0,
   L = '';
 if (!l(e)) {
-  if ((n = u(e)) && !~m(c(s(_(e))), 'g'))
-    throw I('`.replaceAll` does not allow non-global regexes');
+  if ((n = u(e)) && !~I(c(s(_(e))), 'g'))
+    throw m('`.replaceAll` does not allow non-global regexes');
   if (r = d(e, p))
     return i(r, e, C, t);
   if (h && n)

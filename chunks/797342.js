@@ -13,7 +13,7 @@ var r = n(442837),
   c = n(701488);
 
 function d(e) {
-  var t, n, d, _, E, f, h, p, I, m, T, g, S;
+  var t, n, d, _, E, f, h, p, m, I, T, g, S;
   let A = (0, r.e7)([a.default], () => a.default.getUser(e.author_id)),
 {
   activity: N,
@@ -46,7 +46,7 @@ L = null != v && null != D ? (0, s.getAssetImage)(v.id, D, [
   c.Si.LARGE,
   c.Si.LARGE
 ]) : void 0;
-  let b = null === (E = (null === (m = (I = N).assets) || void 0 === m ? void 0 : m.large_image) != null ? null === (g = I.assets) || void 0 === g ? void 0 : g.large_text : (null === (T = I.assets) || void 0 === T ? void 0 : T.small_image) != null ? null === (S = I.assets) || void 0 === S ? void 0 : S.small_text : void 0) || void 0 === E ? void 0 : E.trim(),
+  let b = null === (E = (null === (I = (m = N).assets) || void 0 === I ? void 0 : I.large_image) != null ? null === (g = m.assets) || void 0 === g ? void 0 : g.large_text : (null === (T = m.assets) || void 0 === T ? void 0 : T.small_image) != null ? null === (S = m.assets) || void 0 === S ? void 0 : S.small_text : void 0) || void 0 === E ? void 0 : E.trim(),
 M = null !== (p = N.name) && void 0 !== p ? p : 'game_name' in e.extra ? e.extra.game_name : void 0,
 P = N.details,
 U = N.state,

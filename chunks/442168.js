@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return C;
+return g;
   }
 });
 var i = n(735250),
@@ -28,16 +28,16 @@ friction: 20,
 precision: 0.0001,
 bounce: 0
   },
-  g = {
+  C = {
 duration: 1000
   };
 
-function C(e) {
+function g(e) {
   let {
 stream: t,
 inPopout: n
   } = e, {
-reducedMotion: C
+reducedMotion: g
   } = a.useContext(r.Sf), I = (0, a.useRef)(null), x = d.n.getState().clipsButtonRef, T = (0, h.V9)(t), N = (0, l.e7)([c.Z], () => c.Z.getActiveAnimation()), v = (0, l.Wu)([c.Z], () => c.Z.getStreamClipAnimations(T)), S = (0, a.useRef)();
   a.useEffect(() => () => {
 (0, u.Gh)(T);
@@ -87,7 +87,7 @@ j = (0, o.useTransition)(v, {
     position: 'fixed',
     visibility: 'hidden',
     opacity: 1,
-    ...C.enabled ? A(e) : Z()
+    ...g.enabled ? A(e) : Z()
   }),
   enter: e => [{
     opacity: 1,
@@ -96,7 +96,7 @@ j = (0, o.useTransition)(v, {
   }],
   leave: {
     opacity: 0,
-    ...!C.enabled && {
+    ...!g.enabled && {
       height: 0,
       width: 0,
       ...(() => {
@@ -108,7 +108,7 @@ j = (0, o.useTransition)(v, {
       })()
     }
   },
-  config: C.enabled ? g : E,
+  config: g.enabled ? C : E,
   onRest: (e, t) => {
     null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, u.Gh)(T, t.item.timestamp);
   }

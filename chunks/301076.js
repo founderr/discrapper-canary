@@ -28,14 +28,14 @@ function o(e) {
 {
   Component: f,
   events: E,
-  play: g
+  play: C
 } = (0, a.s)(),
 {
-  Component: C,
+  Component: g,
   events: I,
   play: x
 } = (0, s.w)();
-  return _ ? (n = C, o = I, c = x) : (n = f, o = E, c = g), (0, i.jsx)(r.d, {
+  return _ ? (n = g, o = I, c = x) : (n = f, o = E, c = C), (0, i.jsx)(r.d, {
 isActive: u,
 color: t,
 iconComponent: n,

@@ -23,9 +23,9 @@ function p(e) {
 user: t,
 guildId: n,
 channelId: p,
-onClose: I
+onClose: m
   } = e, {
-newestAnalyticsLocation: m
+newestAnalyticsLocation: I
   } = (0, s.ZP)(), T = (0, i.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)), g = (0, l.ms)(null != n ? n : null, !0), S = (0, i.e7)([d.Z], () => null != p ? p : d.Z.getChannelId(n, !0), [
 p,
 n
@@ -37,8 +37,8 @@ tooltipText: h.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
 onClick: () => {
   u.Z.close(), (0, o.r)(n, t.id, null != S ? S : E.oC.MEMBER_SAFETY, {
     modViewPanel: f.k.INFO,
-    sourceLocation: m
-  }), null == I || I();
+    sourceLocation: I
+  }), null == m || m();
 }
   });
 }

@@ -25,8 +25,8 @@ writable: !0
 let p = Object.freeze({
 state: 1
   }),
-  I = new Set();
-class m {
+  m = new Set();
+class I {
   handleCacheDisposed(e, t) {
 this._cachedMessageIds.has(e) && (this._cachedMessageIds = new Set(this._cachedMessageIds), this._cachedMessageIds.delete(e));
   }
@@ -60,7 +60,7 @@ return null === (n = this._channelCaches.get(e)) || void 0 === n ? void 0 : n.ge
   }
   set(e, t, n) {
 let r = this._channelCaches.get(e);
-null == r && (r = new m(), this._channelCaches.set(e, r)), r.set(t, n);
+null == r && (r = new I(), this._channelCaches.set(e, r)), r.set(t, n);
   }
   updateExistingMessageIfCached(e) {
 let t = this._channelCaches.get(e.channel_id);
@@ -178,7 +178,7 @@ return null !== (n = T.get(e, t)) && void 0 !== n ? n : p;
   }
   getReplyIdsForChannel(e) {
 let t;
-return null != e && (t = T.getCachedMessageIdsForChannel(e)), null != t ? t : I;
+return null != e && (t = T.getCachedMessageIdsForChannel(e)), null != t ? t : m;
   }
 }
 h(y, 'displayName', 'ReferencedMessageStore'), t.Z = new y(u.Z, {

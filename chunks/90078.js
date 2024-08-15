@@ -23,8 +23,8 @@ E = void 0 === _ ? u : _,
 f = e.referenceElement,
 h = e.onFirstUpdate,
 p = e.innerRef,
-I = e.children,
-m = r.useContext(i.C8),
+m = e.children,
+I = r.useContext(i.C8),
 T = r.useState(null),
 g = T[0],
 S = T[1],
@@ -57,7 +57,7 @@ g
   E,
   N
 ]),
-R = (0, s.D)(f || m, g, O),
+R = (0, s.D)(f || I, g, O),
 C = R.state,
 y = R.styles,
 D = R.forceUpdate,
@@ -85,5 +85,5 @@ b = r.useMemo(function() {
   L,
   D
 ]);
-  return (0, a.$p)(I)(b);
+  return (0, a.$p)(m)(b);
 }

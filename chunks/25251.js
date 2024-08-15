@@ -7,18 +7,18 @@ var a, s, o, l, u = n(392711),
 let f = [],
   h = !1;
 let p = f,
-  I = {},
-  m = null;
+  m = {},
+  I = null;
 let T = 0,
   g = e => {
 p = (0, u.cloneDeep)(e);
 let t = {};
 p.forEach(e => {
   t[e.id] = (0, _.isAndroid)() ? (0, E.QE)(e) : e;
-}), I = t;
+}), m = t;
   },
   S = () => {
-h = !1, g(f), m = null, i = void 0;
+h = !1, g(f), I = null, i = void 0;
   };
 class A extends(l = c.ZP.Store) {
   get isFetching() {
@@ -31,7 +31,7 @@ return r;
 return p;
   }
   get tryItOutId() {
-return m;
+return I;
   }
   canFetch() {
 return null == i || Date.now() >= i;
@@ -40,7 +40,7 @@ return null == i || Date.now() >= i;
 return null != i && null == r;
   }
   getProfileEffectById(e) {
-return null != e ? I[e] : void 0;
+return null != e ? m[e] : void 0;
   }
 }
 o = 'ProfileEffectStore', (s = 'displayName') in(a = A) ? Object.defineProperty(a, s, {
@@ -68,7 +68,7 @@ h = !1, r = t, i = Date.now() + Math.min(60000 * 2 ** T, 3600000), ++T, g(f);
 let {
   id: t
 } = e;
-m = t;
+I = t;
   },
   LOGOUT: e => {
 S();

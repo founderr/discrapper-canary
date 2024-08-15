@@ -6,7 +6,7 @@ return S;
 return g;
   },
   playGiftSound: function() {
-return m;
+return I;
   }
 }), n(47120), n(411104);
 var r, i, a = n(392711),
@@ -33,12 +33,12 @@ async function p(e) {
   let t = await fetch(n(451343)('./'.concat(e, '.mp3'))).then(e => e.arrayBuffer());
   return (0, o.N)().decodeAudioData(t);
 }
-async function I(e) {
+async function m(e) {
   let t = h.get(e);
   return null == t && (t = p(e), h.set(e, t)), await t;
 }
 
-function m(e, t) {
+function I(e, t) {
   let n = new Audio((0, l.Z)(e));
   n.volume = (0, u.Z)(t), n.play();
 }
@@ -162,7 +162,7 @@ if ('stopped' !== this._state)
   async _ensureAudio() {
 if (null == this._ensureAudioPromise) {
   let e = Math.min(c.Z.getOutputVolume() / 100 * this._volume, 1);
-  this._ensureAudioPromise = I(this.name).then(t => null == t ? Promise.reject(Error('Failed to load audio: '.concat(this.name))) : (this._audioContext = (0, o.N)(), this._gain = new GainNode(this._audioContext), this._gain.gain.value = e, d.isPlatformEmbedded && this._audioContext.setSinkId(f), this._buffer = t, this._source = this._audioContext.createBufferSource(), this._source.buffer = t, this._source.connect(this._gain).connect(this._audioContext.destination), this._source.loop = !1, this._source.onended = () => this._destroyAudio(), Promise.resolve({
+  this._ensureAudioPromise = m(this.name).then(t => null == t ? Promise.reject(Error('Failed to load audio: '.concat(this.name))) : (this._audioContext = (0, o.N)(), this._gain = new GainNode(this._audioContext), this._gain.gain.value = e, d.isPlatformEmbedded && this._audioContext.setSinkId(f), this._buffer = t, this._source = this._audioContext.createBufferSource(), this._source.buffer = t, this._source.connect(this._gain).connect(this._audioContext.destination), this._source.loop = !1, this._source.onended = () => this._destroyAudio(), Promise.resolve({
     context: this._audioContext,
     gainNode: this._gain,
     source: this._source

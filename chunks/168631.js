@@ -6,7 +6,7 @@ return h;
 return f;
   },
   ZB: function() {
-return m;
+return I;
   },
   e4: function() {
 return T;
@@ -18,7 +18,7 @@ return E;
 return g;
   },
   wu: function() {
-return I;
+return m;
   }
 }), n(47120);
 var r = n(470079),
@@ -114,11 +114,11 @@ o = r.alpha,
   return (0, a.QT)('rgba('.concat(l, ', ').concat(u, ', ').concat(c, ')'));
 }
 
-function I(e, t, n) {
+function m(e, t, n) {
   let r = E(e);
   return null == r || null == t ? null : p(t, n ? r.overlaySyncedWithUserTheme : r.overlay);
 }
-let m = (0, i.memoize)(e => {
+let I = (0, i.memoize)(e => {
   let t = (0, l.Qg)(e, {
 base: '#ffffff',
 contrastRatio: l.S3.HighContrastText
@@ -133,5 +133,5 @@ function T(e, t) {
 
 function g(e, t) {
   let n = (0, c.Sl)(_.Ilk.WHITE_500).hex;
-  return (0, l.wj)(e) ? (0, a._i)(n) : null != t ? m(t) : null;
+  return (0, l.wj)(e) ? (0, a._i)(n) : null != t ? I(t) : null;
 }

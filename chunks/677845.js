@@ -18,8 +18,8 @@ var i = n(735250),
   _ = n(159300),
   f = n(800329),
   E = n(470956),
-  g = n(430824),
-  C = n(496675),
+  C = n(430824),
+  g = n(496675),
   I = n(434488),
   x = n(27457),
   T = n(251564),
@@ -38,7 +38,7 @@ className: b,
 inCall: R,
 totalNumberOfParticipants: j,
 paused: L = !1
-  } = e, P = (0, c.bp)() === v.IlC.POPOUT, O = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]), {
+  } = e, P = (0, c.bp)() === v.IlC.POPOUT, O = (0, r.e7)([C.Z], () => C.Z.getGuild(M.guild_id), [M.guild_id]), {
 dismissedActivityEntryPointTileChannel: y
   } = (0, T.d)(), D = (0, r.e7)([m.Z], () => m.Z.getUserParticipantCount(M.id), [M]), k = (0, E.bt)(M.id, t), U = a.useCallback(() => {
 (0, l.j)(() => {
@@ -57,7 +57,7 @@ null != y && M.id !== y && (0, l.j)(() => {
 M.id,
 y
   ]);
-  let w = (0, r.e7)([C.Z], () => M.isPrivate() || (0, _.b)(C.Z, O, M), [
+  let w = (0, r.e7)([g.Z], () => M.isPrivate() || (0, _.b)(g.Z, O, M), [
   O,
   M
 ]),

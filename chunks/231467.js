@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(905362),
   h = n(603368),
   p = n(353093),
-  I = n(169559),
-  m = n(114487),
+  m = n(169559),
+  I = n(114487),
   T = n(214715),
   g = n(550271),
   S = n(686546),
@@ -196,7 +196,7 @@ branding: {
 },
 bannerHash: F,
 gameActivity: V
-  } = n, H = (0, d.Z)(n.games), Z = (0, I.Z)('clan_discovery_card'), [Y, j] = i.useState(!1), W = i.useRef(null), [K, z] = i.useState(!1), q = (0, y.GN)(e => e.savedGuildIds.includes(n.id), o.Z), Q = (0, E.iN)('guild_card'), X = i.useCallback(e => {
+  } = n, H = (0, d.Z)(n.games), Z = (0, m.Z)('clan_discovery_card'), [Y, j] = i.useState(!1), W = i.useRef(null), [K, z] = i.useState(!1), q = (0, y.GN)(e => e.savedGuildIds.includes(n.id), o.Z), Q = (0, E.iN)('guild_card'), X = i.useCallback(e => {
 e.stopPropagation(), e.preventDefault(), (0, y.qQ)(n.id, !q);
   }, [
 n.id,
@@ -275,7 +275,7 @@ children: [
                 className: P.clanIconMask,
                 children: (0, r.jsx)('div', {
                   className: P.clanIconInner,
-                  children: (0, r.jsx)(m.b, {
+                  children: (0, r.jsx)(I.b, {
                     guildId: n.id,
                     guildName: n.name,
                     guildIcon: n.icon,
@@ -407,21 +407,21 @@ clan: o,
 affinity: d,
 index: E,
 source: h
-  } = s, p = (0, u.e7)([R.default], () => R.default.getCurrentUser()), I = (0, u.e7)([O.ZP], () => O.ZP.isMember(o.id, null == p ? void 0 : p.id), [
+  } = s, p = (0, u.e7)([R.default], () => R.default.getCurrentUser()), m = (0, u.e7)([O.ZP], () => O.ZP.isMember(o.id, null == p ? void 0 : p.id), [
 o,
 p
-  ]), m = (0, u.e7)([N.Z], () => {
+  ]), I = (0, u.e7)([N.Z], () => {
 var e;
 return (null === (e = N.Z.getRequest(o.id)) || void 0 === e ? void 0 : e.applicationStatus) === A.wB.SUBMITTED;
   }), T = o.memberCount >= b.Du, g = i.useCallback(() => {
 let e = null != N.Z.getRequest(o.id);
 if ((0, _.EK)({
     guildId: o.id,
-    isMember: I,
+    isMember: m,
     hasJoinRequest: e,
     affinity: d,
     index: E
-  }), I) {
+  }), m) {
   (0, v.XU)(o.id);
   return;
 }
@@ -435,7 +435,7 @@ if (e) {
 }, a, E);
   }, [
 o,
-I,
+m,
 d,
 E,
 h,
@@ -458,10 +458,10 @@ style: t,
 onContextMenu: S,
 children: (0, r.jsx)(k, {
   ...s,
-  isMember: I,
+  isMember: m,
   prioritizedGameIds: a,
   showBrandingFooter: !0,
-  hasPendingJoinRequest: m,
+  hasPendingJoinRequest: I,
   atMaxMemberCapacity: T
 })
   });

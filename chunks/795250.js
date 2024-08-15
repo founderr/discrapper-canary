@@ -41,8 +41,8 @@ var i = n(53786),
   f = n(848560),
   h = n(397865),
   p = n(652695),
-  I = n(108760),
-  m = n(658311),
+  m = n(108760),
+  I = n(658311),
   T = n(814878),
   g = n(166305),
   S = n(860223),
@@ -163,9 +163,9 @@ size: f,
 crossSize: h
   } = r, p = {};
   p[E] = e[E], 'center' === d ? p[E] += (e[h] - n[h]) / 2 : d !== E && (p[E] += e[h] - n[h]), p[E] += a;
-  let I = e[E] - n[h] + l + u,
-m = e[E] + e[h] - l - u;
-  if (p[E] = (0, B.uZ)(p[E], I, m), c === _) {
+  let m = e[E] - n[h] + l + u,
+I = e[E] + e[h] - l - u;
+  if (p[E] = (0, B.uZ)(p[E], m, I), c === _) {
 let n = o ? s[f] : t[X[f]];
 p[z[_]] = Math.floor(n - e[_] + i);
   } else
@@ -252,7 +252,7 @@ isOpen: E = !0,
 onClose: f,
 maxHeight: h,
 arrowBoundaryOffset: p = 0
-  } = e, [I, m] = (0, k.useState)({
+  } = e, [m, I] = (0, k.useState)({
 position: {},
 arrowOffsetLeft: void 0,
 arrowOffsetTop: void 0,
@@ -300,10 +300,10 @@ let e = function(e) {
           t = t.parentElement;
       return t || document.documentElement;
     }(s) : document.documentElement,
-    I = p === document.documentElement,
-    m = window.getComputedStyle(p).position,
-    T = I ? ea(a) : es(a, p);
-  if (!I) {
+    m = p === document.documentElement,
+    I = window.getComputedStyle(p).position,
+    T = m ? ea(a) : es(a, p);
+  if (!m) {
     let {
       marginTop: e,
       marginLeft: t
@@ -319,7 +319,7 @@ let e = function(e) {
   });
   return g.width += S.left + S.right, g.height += S.top + S.bottom,
     function(e, t, n, r, i, a, s, o, l, u, c, d, _, E, f, h) {
-      var p, I, m, T, g, S;
+      var p, m, I, T, g, S;
       let A = en(e),
         {
           size: N,
@@ -338,7 +338,7 @@ let e = function(e) {
       }
       let b = et(v, y[v], n[O], o, l, a);
       y[v] += b;
-      let M = (p = y, I = o, m = u, T = t, g = i, S = a, null != p.top ? Math.max(0, I.height + I.top + I.scroll.top - (m.top + p.top) - (g.top + g.bottom + S)) : Math.max(0, T.top + m.top - (I.top + I.scroll.top) - (g.top + g.bottom + S)));
+      let M = (p = y, m = o, I = u, T = t, g = i, S = a, null != p.top ? Math.max(0, m.height + m.top + m.scroll.top - (I.top + p.top) - (g.top + g.bottom + S)) : Math.max(0, T.top + I.top - (m.top + m.scroll.top) - (g.top + g.bottom + S)));
       E && E < M && (M = E), n.height = Math.min(n.height, M), b = et(v, (y = er(t, o, n, A, D, d, u, _, f, h))[v], n[O], o, l, a), y[v] += b;
       let P = {},
         U = t[v] + 0.5 * t[O] - n[v],
@@ -359,7 +359,7 @@ let e = function(e) {
       left: n.scrollLeft,
       width: n.scrollWidth,
       height: n.scrollHeight
-    }, S, l, u, ee(c), ee(p), 'BODY' === c.tagName ? ea(p) : es(p, c), d, _, !!m && 'static' !== m, E, f, h);
+    }, S, l, u, ee(c), ee(p), 'BODY' === c.tagName ? ea(p) : es(p, c), d, _, !!I && 'static' !== I, E, f, h);
 }({
   placement: function(e, t) {
     return 'rtl' === t ? e.replace('start', 'right').replace('end', 'left') : e.replace('start', 'left').replace('end', 'right');
@@ -376,7 +376,7 @@ let e = function(e) {
   arrowSize: n,
   arrowBoundaryOffset: p
 });
-Object.keys(e.position).forEach(t => i.current.style[t] = e.position[t] + 'px'), i.current.style.maxHeight = null != e.maxHeight ? e.maxHeight + 'px' : void 0, m(e);
+Object.keys(e.position).forEach(t => i.current.style[t] = e.position[t] + 'px'), i.current.style.maxHeight = null != e.maxHeight ? e.maxHeight + 'px' : void 0, I(e);
   }, T);
   (0, F.bt)(g, T),
   function(e) {
@@ -438,17 +438,17 @@ overlayProps: {
   style: {
     position: 'absolute',
     zIndex: 100000,
-    ...I.position,
-    maxHeight: I.maxHeight
+    ...m.position,
+    maxHeight: m.maxHeight
   }
 },
-placement: I.placement,
+placement: m.placement,
 arrowProps: {
   'aria-hidden': 'true',
   role: 'presentation',
   style: {
-    left: I.arrowOffsetLeft,
-    top: I.arrowOffsetTop
+    left: m.arrowOffsetLeft,
+    top: m.arrowOffsetTop
   }
 },
 updatePosition: g
@@ -545,7 +545,7 @@ let ef = 'undefined' != typeof document && window.visualViewport,
   ]),
   ep = 0;
 
-function eI(e = {}) {
+function em(e = {}) {
   let {
 isDisabled: t
   } = e;
@@ -561,12 +561,12 @@ if (!t)
           t = window.pageYOffset;
         n = (0, F.tS)(eT(window, 'scroll', () => {
           window.scrollTo(0, 0);
-        }), em(document.documentElement, 'paddingRight', `${ window.innerWidth - document.documentElement.clientWidth }px`), em(document.documentElement, 'overflow', 'hidden'), em(document.body, 'marginTop', `-${ t }px`), () => {
+        }), eI(document.documentElement, 'paddingRight', `${ window.innerWidth - document.documentElement.clientWidth }px`), eI(document.documentElement, 'overflow', 'hidden'), eI(document.body, 'marginTop', `-${ t }px`), () => {
           window.scrollTo(e, t);
         }), window.scrollTo(0, 0);
       },
       i = (0, F.tS)(eT(document, 'touchstart', n => {
-        ((e = (0, F.rP)(n.target, !0)) !== document.documentElement || e !== document.body) && e instanceof HTMLElement && 'auto' === window.getComputedStyle(e).overscrollBehavior && (t = em(e, 'overscrollBehavior', 'contain'));
+        ((e = (0, F.rP)(n.target, !0)) !== document.documentElement || e !== document.body) && e instanceof HTMLElement && 'auto' === window.getComputedStyle(e).overscrollBehavior && (t = eI(e, 'overscrollBehavior', 'contain'));
       }, {
         passive: !1,
         capture: !0
@@ -601,14 +601,14 @@ if (!t)
       null == t || t(), null == n || n(), i();
     };
   }() : function() {
-    return (0, F.tS)(em(document.documentElement, 'paddingRight', `${ window.innerWidth - document.documentElement.clientWidth }px`), em(document.documentElement, 'overflow', 'hidden'));
+    return (0, F.tS)(eI(document.documentElement, 'paddingRight', `${ window.innerWidth - document.documentElement.clientWidth }px`), eI(document.documentElement, 'overflow', 'hidden'));
   }()), () => {
     0 == --ep && r();
   };
   }, [t]);
 }
 
-function em(e, t, n) {
+function eI(e, t, n) {
   let r = e.style[t];
   return e.style[t] = n, () => {
 e.style[t] = r;
@@ -730,8 +730,8 @@ eC = {
   'fr-FR': f.Z,
   'he-IL': h.Z,
   'hr-HR': p.Z,
-  'hu-HU': I.Z,
-  'it-IT': m.Z,
+  'hu-HU': m.Z,
+  'it-IT': I.Z,
   'ja-JP': T.Z,
   'ko-KR': g.Z,
   'lt-LT': S.Z,
@@ -850,7 +850,7 @@ overlayRef: r,
 isOpen: t.isOpen,
 onClose: i ? t.close : null
   });
-  return eI({
+  return em({
 isDisabled: i || !t.isOpen
   }), (0, F.bt)(() => {
 if (t.isOpen && !i && r.current)
@@ -910,7 +910,7 @@ underlayProps: i
 isOpen: t.isOpen,
 onClose: t.close
   }, n);
-  return eI({
+  return em({
 isDisabled: !t.isOpen
   }), ew(), (0, k.useEffect)(() => {
 if (t.isOpen)

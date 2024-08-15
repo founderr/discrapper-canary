@@ -19,8 +19,8 @@ var i, a, s = n(735250),
   _ = n(527805),
   f = n(716600),
   E = n(778569),
-  g = n(563218),
-  C = n(318891),
+  C = n(563218),
+  g = n(318891),
   I = n(884338),
   x = n(719296),
   T = n(958185),
@@ -74,10 +74,10 @@ function k(e) {
 participants: r,
 application: f,
 channel: E,
-width: g
+width: C
   } = e;
-  let C = (i = g) > 400 ? 2 : i > 300 ? 1 : 0;
-  let [I] = (a = g) > 400 ? [
+  let g = (i = C) > 400 ? 2 : i > 300 ? 1 : 0;
+  let [I] = (a = C) > 400 ? [
 u.AvatarSizes.SIZE_56,
 56
   ] : a > 300 ? [
@@ -113,8 +113,8 @@ children: [
   }),
   (0, s.jsx)(u.Text, {
     className: o()(O.subheader, {
-      [O.small]: 0 === C,
-      [O.medium]: 1 === C
+      [O.small]: 0 === g,
+      [O.medium]: 1 === g
     }),
     variant: 'text-sm/normal',
     children: x.length > 1 ? P.Z.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
@@ -126,8 +126,8 @@ children: [
   }),
   (0, s.jsx)(u.Text, {
     className: o()(O.header, {
-      [O.small]: 0 === C,
-      [O.medium]: 1 === C
+      [O.small]: 0 === g,
+      [O.medium]: 1 === g
     }),
     variant: 'text-sm/normal',
     children: f.name
@@ -155,7 +155,7 @@ children: [
           case 0:
             return u.Button.Sizes.SMALL;
         }
-      }(C),
+      }(g),
       className: O.button,
       color: u.Button.Colors.PRIMARY,
       children: P.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
@@ -192,7 +192,7 @@ PopoutWindowStore: A.Z
   return l.useEffect(() => {
 if (_ && null != d && !M) {
   let e = (0, x.Z)(d.channelId, d.applicationId);
-  (0, C.jy)(e);
+  (0, g.jy)(e);
 }
   }, [
 _,
@@ -204,7 +204,7 @@ children: (0, s.jsx)('div', {
   className: O.container,
   children: (0, s.jsxs)(s.Fragment, {
     children: [
-      _ && (0, s.jsx)(g.Z, {
+      _ && (0, s.jsx)(C.Z, {
         className: O.iframe,
         embedId: (0, x.Z)(r.id, u)
       }),

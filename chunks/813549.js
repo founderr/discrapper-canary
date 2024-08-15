@@ -24,7 +24,7 @@ botClass: E,
 botVerified: f = !1,
 style: h,
 useRemSizes: p = !1,
-usernameIcon: I
+usernameIcon: m
   } = e;
   return (0, r.jsxs)('div', {
 className: a()(u, l.nameTag),
@@ -36,7 +36,7 @@ children: [
       color: o
     } : void 0,
     children: [
-      I,
+      m,
       t
     ]
   }),

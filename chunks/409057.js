@@ -18,8 +18,8 @@ var i = n(120356),
   f = n(420660),
   h = n(100527),
   p = n(906732),
-  I = n(314091),
-  m = n(180335),
+  m = n(314091),
+  I = n(180335),
   T = n(810568),
   g = n(168524),
   S = n(833858),
@@ -62,7 +62,7 @@ analyticsLocations: K
 profileType: z
   } = (0, O.z)(), q = {
 [F.fullSize]: z === x.y0.FULL_SIZE
-  }, Q = (0, m.Bq)({
+  }, Q = (0, I.Bq)({
 activity: i,
 user: t
   }), X = (0, g.Z)({
@@ -107,7 +107,7 @@ let o = null === (e = i.assets) || void 0 === e ? void 0 : e.large_image,
   f = null === (t = i.assets) || void 0 === t ? void 0 : t.small_image,
   h = null === (n = i.assets) || void 0 === n ? void 0 : n.large_text,
   p = null === (a = i.assets) || void 0 === a ? void 0 : a.small_text,
-  I = null == X ? void 0 : () => {
+  m = null == X ? void 0 : () => {
     $({
       action: 'PRESS_GAME_IMAGE'
     }), X();
@@ -119,7 +119,7 @@ if (null == o && null == f && (0, E.Z)(i)) {
       src: e,
       alt: B.Z.Messages.XBOX
     },
-    onClick: I
+    onClick: m
   });
 }
 if (null == o && null == f && (0, _.Z)(i)) {
@@ -129,7 +129,7 @@ if (null == o && null == f && (0, _.Z)(i)) {
       src: e,
       alt: B.Z.Messages.PLAYSTATION
     },
-    onClick: I
+    onClick: m
   });
 }
 return null == o && null != H ? (0, r.jsx)(D.ZP, {
@@ -139,14 +139,14 @@ return null == o && null != H ? (0, r.jsx)(D.ZP, {
       applicationName: H.name
     })
   },
-  onClick: I,
+  onClick: m,
   aspectRatio: s
 }) : null == o && null != f ? (0, r.jsx)(D.ZP, {
   image: {
     src: V(i.application_id, f, D.WQ),
     text: p
   },
-  onClick: I,
+  onClick: m,
   aspectRatio: s
 }) : null != f && (0, d.Z)(i) ? (0, r.jsx)(D.ZP, {
   image: {
@@ -157,13 +157,13 @@ return null == o && null != H ? (0, r.jsx)(D.ZP, {
     src: V(i.application_id, f, D.Bp),
     text: p
   },
-  onClick: I
+  onClick: m
 }) : (0, r.jsx)(D.ZP, {
   image: {
     src: V(i.application_id, o, D.WQ),
     text: h
   },
-  onClick: I,
+  onClick: m,
   aspectRatio: s
 });
   }, en = () => {
@@ -325,7 +325,7 @@ children: (0, r.jsx)(M.Z, {
       children: [
         (0, r.jsx)(y.Z, {
           text: ee,
-          platform: (0, I.ZH)(i),
+          platform: (0, m.ZH)(i),
           tags: (0, r.jsx)(P.Z, {
             display: 'live',
             user: t,

@@ -23,8 +23,8 @@ function h(e) {
 user: n,
 entry: h,
 display: p,
-onAction: I,
-onClose: m
+onAction: m,
+onClose: I
   } = e, T = (0, i.e7)([d.default], () => {
 var e;
 return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === n.id;
@@ -38,9 +38,9 @@ return (0, r.jsx)(a.MenuItem, {
     platform: E.ai
   }),
   action: () => {
-    null == I || I({
+    null == m || m({
       action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM'
-    }), s.Z.open(_.oAB.CONNECTIONS), null == m || m();
+    }), s.Z.open(_.oAB.CONNECTIONS), null == I || I();
   }
 });
   if (T)
@@ -50,7 +50,7 @@ return null;
 id: 'play-on-spotify',
 label: f.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
 action: () => {
-  null == I || I({
+  null == m || m({
     action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM'
   }), (0, l.o)(E.Hw.TRACK, S.external_id);
 }

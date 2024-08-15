@@ -18,8 +18,8 @@ emojiListRef: E,
 onKeyDown: f,
 onFocus: h,
 autoFocus: p,
-searchBarRef: I,
-hasTabWrapper: m,
+searchBarRef: m,
+hasTabWrapper: I,
 diversitySurrogate: T,
 isBurstReaction: g,
 onBurstReactionToggle: S,
@@ -31,7 +31,7 @@ children: [
     gridNavigatorId: c.Vr,
     onKeyDown: f,
     className: _.searchBar,
-    ref: I,
+    ref: m,
     isFullRow: !1,
     onFocus: h,
     autoFocus: p,
@@ -45,9 +45,9 @@ children: [
     })
   }) : null,
   null != t ? t : (0, r.jsx)(l.Z, {
-    searchBarRef: I,
+    searchBarRef: m,
     className: _.diversitySelector,
-    hasTabWrapper: m,
+    hasTabWrapper: I,
     selectedSurrogate: T
   })
 ]

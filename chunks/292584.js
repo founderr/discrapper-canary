@@ -7,9 +7,9 @@ var r, i, a, s, o, l, u = n(392711),
   f = n(314897),
   h = n(709054),
   p = n(770471),
-  I = n(860852);
+  m = n(860852);
 (a = r || (r = {}))[a.INVALID = 0] = 'INVALID', a[a.VALID_USER_ONLY = 1] = 'VALID_USER_ONLY', a[a.VALID = 2] = 'VALID';
-let m = new Set(),
+let I = new Set(),
   T = new Set(),
   g = new Set(),
   S = [],
@@ -17,7 +17,7 @@ let m = new Set(),
   N = e => 'channel:'.concat(e),
   v = e => 'validity:'.concat(e),
   O = new d.h(function(e) {
-let t = m.has(e.userId) ? 1 : 0;
+let t = I.has(e.userId) ? 1 : 0;
 return null != e.viewers && (t = 2), [
   A(e.userId),
   N(e.channelId),
@@ -31,17 +31,17 @@ return !1;
   if (null == t) {
 let t = O.get(e);
 return !!(null != t && (0, u.isEqual)(t.source, n)) && (O.delete(e), void 0);
-  }!m.has(e) && !T.has(e) && (g.add(e), S = [...g]);
-  let r = (0, I.tI)(t, e, n);
+  }!I.has(e) && !T.has(e) && (g.add(e), S = [...g]);
+  let r = (0, m.tI)(t, e, n);
   O.set(e, r);
 }
 
 function C(e) {
   return null != e ? {
-type: I.$C.GUILD,
+type: m.$C.GUILD,
 guildId: e
   } : {
-type: I.$C.GLOBAL
+type: m.$C.GLOBAL
   };
 }
 class y extends(i = c.ZP.Store) {
@@ -124,7 +124,7 @@ let {
   data: t
 } = e;
 h.default.keys(t).forEach(e => {
-  p.g.includes(t[e]) ? m.add(e) : T.add(e), g.clear(), S = [...g];
+  p.g.includes(t[e]) ? I.add(e) : T.add(e), g.clear(), S = [...g];
   let n = O.get(e);
   null != n && (O.delete(e), O.set(e, n));
 });
@@ -182,6 +182,6 @@ O.set(r.userId, {
 });
   },
   LOGOUT: function() {
-m.clear(), T.clear(), g.clear(), S = [], O.clear();
+I.clear(), T.clear(), g.clear(), S = [], O.clear();
   }
 });

@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(481060),
   h = n(410030),
   p = n(607070),
-  I = n(238302),
-  m = n(703656),
+  m = n(238302),
+  I = n(703656),
   T = n(483444),
   g = n(599250),
   S = n(424218),
@@ -302,7 +302,7 @@ case L.cd.EMPTY_STICKER_PICKER_UPSELL:
             discountOffer: R,
             children: M.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
               planName: (0, N.jP)(c),
-              onClick: () => (0, m.uL)(b.Z5c.APPLICATION_STORE)
+              onClick: () => (0, I.uL)(b.Z5c.APPLICATION_STORE)
             })
           })
         ]
@@ -340,7 +340,7 @@ case L.cd.STICKER_PICKER_UPSELL:
             discountOffer: R,
             children: M.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
               planName: (0, N.jP)(c),
-              onClick: () => (0, m.uL)(b.Z5c.APPLICATION_STORE)
+              onClick: () => (0, I.uL)(b.Z5c.APPLICATION_STORE)
             })
           })
         ]
@@ -380,7 +380,7 @@ case L.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI:
             discountOffer: R,
             children: M.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL_NO_BOLD_V2.format({
               planName: (0, N.jP)(c),
-              onClick: () => (0, m.uL)(b.Z5c.APPLICATION_STORE)
+              onClick: () => (0, I.uL)(b.Z5c.APPLICATION_STORE)
             })
           })
         ]
@@ -408,7 +408,7 @@ case L.cd.MESSAGE_LENGTH_UPSELL:
         planName: (0, N.jP)(c),
         premiumMaxSize: c === L.Si.TIER_0 ? M.Z.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED : w,
         onClick: () => {
-          (0, m.uL)(b.Z5c.APPLICATION_STORE), null == o || o();
+          (0, I.uL)(b.Z5c.APPLICATION_STORE), null == o || o();
         }
       });
       break;
@@ -416,14 +416,14 @@ case L.cd.MESSAGE_LENGTH_UPSELL:
       H = M.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format({
         planName: (0, N.jP)(c),
         onClick: () => {
-          (0, m.uL)(b.Z5c.APPLICATION_STORE), null == o || o();
+          (0, I.uL)(b.Z5c.APPLICATION_STORE), null == o || o();
         }
       });
       break;
     case L.cd.STREAM_QUALITY_UPSELL:
       H = M.Z.Messages.STREAM_PREMIUM_UPSELL_WITH_ACTION.format({
         onClick: () => {
-          (0, m.uL)(b.Z5c.APPLICATION_STORE), null == o || o(), (0, _.pT)();
+          (0, I.uL)(b.Z5c.APPLICATION_STORE), null == o || o(), (0, _.pT)();
         }
       });
       break;
@@ -431,7 +431,7 @@ case L.cd.MESSAGE_LENGTH_UPSELL:
       H = M.Z.Messages.PREMIUM_CHAT_PERKS_MAX_MESSAGE_LENGTH_UPSELL.format({
         premiumMaxMessageLength: b.en1,
         onClick: () => {
-          (0, m.uL)(b.Z5c.APPLICATION_STORE), null == o || o();
+          (0, I.uL)(b.Z5c.APPLICATION_STORE), null == o || o();
         }
       });
   }
@@ -474,7 +474,7 @@ case L.cd.BURST_REACTION_QUICK_ACTION_UPSELL:
         discountOffer: R,
         children: M.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format({
           planName: (0, N.jP)(c),
-          onClick: () => (0, m.uL)(b.Z5c.APPLICATION_STORE)
+          onClick: () => (0, I.uL)(b.Z5c.APPLICATION_STORE)
         })
       }),
       (0, r.jsx)(G, {
@@ -493,7 +493,7 @@ case L.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
     discountOffer: R,
     children: M.Z.Messages.CLIENT_THEMES_EDITOR_UPSELL.format({
       onClick: () => {
-        (0, m.uL)(b.Z5c.APPLICATION_STORE), (0, I.Mo)();
+        (0, I.uL)(b.Z5c.APPLICATION_STORE), (0, m.Mo)();
       }
     })
   });
@@ -525,7 +525,7 @@ case L.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
         children: M.Z.Messages.PREMIUM_CHAT_PERKS_MAX_MESSAGE_LENGTH_UPSELL.format({
           premiumMaxMessageLength: b.en1,
           onClick: () => {
-            (0, m.uL)(b.Z5c.APPLICATION_STORE), null == o || o();
+            (0, I.uL)(b.Z5c.APPLICATION_STORE), null == o || o();
           }
         })
       }),

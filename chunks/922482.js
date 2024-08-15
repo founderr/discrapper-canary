@@ -1,6 +1,6 @@
 n.d(t, {
   AC: function() {
-return I;
+return m;
   },
   Cq: function() {
 return T;
@@ -9,7 +9,7 @@ return T;
 return g;
   },
   TM: function() {
-return m;
+return I;
   }
 });
 var r = n(749210),
@@ -27,22 +27,22 @@ var r = n(749210),
   h = n(146085),
   p = n(96150);
 
-function I(e, t) {
+function m(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   return new Promise(async i => {
 let a = u.Z.getChannel(t);
 if (null != a)
-  return m(a, n), i(a);
+  return I(a, n), i(a);
 await (0, o.O)([e]), await r.Z.joinGuild(e, {
   lurker: !0
 }), c.Z.addConditionalChangeListener(() => {
   let e = u.Z.getChannel(t);
-  return null == e || (m(e), p.Z.initialize(), i(e), !1);
+  return null == e || (I(e), p.Z.initialize(), i(e), !1);
 });
   });
 }
 
-function m(e) {
+function I(e) {
   var t, n;
   let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 s = _.Z.getVoiceChannelId();
@@ -62,7 +62,7 @@ n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
 i = _.Z.getVoiceChannelId();
   if (!(!r && i !== e.id && (0, s._)(e) && E.Gy(e, () => T(e, t, n, !0))))
-m(e, t) && g(e, i, n);
+I(e, t) && g(e, i, n);
 }
 
 function g(e, t) {

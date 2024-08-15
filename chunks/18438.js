@@ -15,7 +15,7 @@ return c;
 return h;
   },
   IO: function() {
-return m;
+return I;
   },
   It: function() {
 return u;
@@ -45,7 +45,7 @@ return p;
 return _;
   },
   z5: function() {
-return I;
+return m;
   }
 }), n(411104);
 var r = n(544891),
@@ -161,14 +161,14 @@ nickname: e
   });
 }
 
-function I(e) {
+function m(e) {
   i.Z.dispatch({
 type: 'GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS',
 themeColors: e
   });
 }
 
-function m() {
+function I() {
   i.Z.dispatch({
 type: 'GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES'
   });

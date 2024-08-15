@@ -12,8 +12,8 @@ var r, i, a, s, o, l = n(735250),
   f = n(866442),
   h = n(692547),
   p = n(84735),
-  I = n(481060),
-  m = n(981631),
+  m = n(481060),
+  I = n(981631),
   T = n(693297);
 
 function g(e, t, n) {
@@ -122,7 +122,7 @@ return (0, l.jsxs)(E ? 'span' : 'label', {
         className: d()(s, S),
         type: 'checkbox',
         onClick: h,
-        onChange: e || t ? m.dG4 : this.handleChange,
+        onChange: e || t ? I.dG4 : this.handleChange,
         checked: n,
         style: {
           width: u,
@@ -140,7 +140,7 @@ return (0, l.jsxs)(E ? 'span' : 'label', {
         borderColor: _,
         ...this.getStyle()
       },
-      children: (0, l.jsx)(I.CheckmarkLargeIcon, {
+      children: (0, l.jsx)(m.CheckmarkLargeIcon, {
         size: 'sm',
         color: this.getColor(),
         'aria-hidden': !0
@@ -169,6 +169,6 @@ g(N, 'Types', r), g(N, 'Shapes', S), g(N, 'Aligns', i), g(N, 'defaultProps', {
   color: h.Z.unsafe_rawColors.BRAND_500.css,
   shape: S.BOX,
   align: 'center',
-  onChange: m.dG4,
+  onChange: I.dG4,
   reverse: !1
 });

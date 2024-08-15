@@ -12,7 +12,7 @@ return f;
 return p;
   },
   qX: function() {
-return I;
+return m;
   },
   u3: function() {
 return h;
@@ -121,7 +121,7 @@ children: (0, r.jsx)(o.XSmallIcon, {
   });
 }
 
-function I(e) {
+function m(e) {
   let {
 color: t = _.DEFAULT,
 className: n,
