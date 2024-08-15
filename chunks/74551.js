@@ -16,9 +16,9 @@ reminder: a,
 throttledNow: c
   } = e;
   return null == a.saveData.dueAt ? null : (a.saveData.dueAt > c ? (n = 'text-normal', t = l.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
-duration: s().duration(a.saveData.dueAt.getTime() - Date.now(), 'millisecond').humanize()
+duration: s().duration(a.saveData.dueAt.getTime() - c.getTime(), 'millisecond').humanize()
   })) : (n = 'text-danger', t = l.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
-duration: s().duration(Date.now() - a.saveData.dueAt.getTime(), 'millisecond').humanize()
+duration: s().duration(c.getTime() - a.saveData.dueAt.getTime(), 'millisecond').humanize()
   })), (0, i.jsxs)('div', {
 className: o.container,
 children: [

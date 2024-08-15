@@ -506,6 +506,17 @@ children: (0, i.jsxs)('div', {
                       disableTrack: !0
                     }),
                     (0, i.jsx)(p.Z, {
+                      path: ed.Z5c.GLOBAL_DISCOVERY_SERVERS,
+                      render: e => {
+                        let {
+                          location: t
+                        } = e;
+                        return eA(t.search);
+                      },
+                      impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
+                      disableTrack: !0
+                    }),
+                    (0, i.jsx)(p.Z, {
                       path: ed.Z5c.QUEST_HOME,
                       render: e => {
                         let {
