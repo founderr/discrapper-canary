@@ -1,6 +1,6 @@
 let r, i, a, s, o, l, u, c, d, _, E, f, h;
 n(47120);
-var p, I, m, T, g = n(392711),
+var p, m, I, T, g = n(392711),
   S = n(754700),
   A = n(887003),
   N = n(442837),
@@ -94,12 +94,12 @@ var t;
 return null !== (t = h.get(e)) && void 0 !== t ? t : null;
   }
 }
-T = 'QuestsStore', (m = 'displayName') in(I = w) ? Object.defineProperty(I, m, {
+T = 'QuestsStore', (I = 'displayName') in(m = w) ? Object.defineProperty(m, I, {
   value: T,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : I[m] = T, t.Z = new w(v.Z, {
+}) : m[I] = T, t.Z = new w(v.Z, {
   LOGOUT: function() {
 D();
   },

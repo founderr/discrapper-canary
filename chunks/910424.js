@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 }), n(47120);
 var r = n(735250);
@@ -18,13 +18,13 @@ var i = n(442837),
   f = n(915863),
   h = n(981631),
   p = n(689938),
-  I = n(589850);
+  m = n(589850);
 
-function m(e) {
+function I(e) {
   let {
 isCurrentUser: t,
 color: n,
-look: m,
+look: I,
 applicationStream: T,
 onAction: g
   } = e, {
@@ -50,7 +50,7 @@ return null;
   t ? D = p.Z.Messages.WATCH_STREAM_STREAMING : C && (D = p.Z.Messages.WATCH_STREAM_WATCHING);
   let L = {
 color: n,
-look: m
+look: I
   };
   return (0, r.jsxs)(r.Fragment, {
 children: [
@@ -63,7 +63,7 @@ children: [
       (0, r.jsx)(a.ScreenArrowIcon, {
         size: 'md',
         color: 'currentColor',
-        className: I.streamIcon
+        className: m.streamIcon
       }),
       D
     ]
@@ -77,12 +77,12 @@ children: [
         null === (t = e.onClick) || void 0 === t || t.call(e), y(!0);
       },
       ...L,
-      className: I.iconButton,
-      size: I.iconButtonSize,
+      className: m.iconButton,
+      size: m.iconButtonSize,
       children: (0, r.jsx)(a.EyePlusIcon, {
         size: 'xs',
         color: 'currentColor',
-        className: I.iconSize
+        className: m.iconSize
       })
     })
   }) : null

@@ -21,7 +21,7 @@ return l;
 return T;
   },
   yU: function() {
-return I;
+return m;
   },
   zL: function() {
 return _;
@@ -117,7 +117,7 @@ set current(value) {
 }
 'undefined' != typeof document && ('loading' !== document.readyState ? h() : document.addEventListener('DOMContentLoaded', h));
 
-function I(e) {
+function m(e) {
   let {
 ref: t,
 onResize: n
@@ -143,7 +143,7 @@ n,
 t
   ]);
 }
-let m = 'undefined' != typeof document && window.visualViewport;
+let I = 'undefined' != typeof document && window.visualViewport;
 
 function T() {
   let [e, t] = (0, r.useState)(() => g());
@@ -154,16 +154,16 @@ let e = () => {
     return t.width === e.width && t.height === e.height ? e : t;
   });
 };
-return m ? m.addEventListener('resize', e) : window.addEventListener('resize', e), () => {
-  m ? m.removeEventListener('resize', e) : window.removeEventListener('resize', e);
+return I ? I.addEventListener('resize', e) : window.addEventListener('resize', e), () => {
+  I ? I.removeEventListener('resize', e) : window.removeEventListener('resize', e);
 };
   }, []), e;
 }
 
 function g() {
   return {
-width: (null == m ? void 0 : m.width) || window.innerWidth,
-height: (null == m ? void 0 : m.height) || window.innerHeight
+width: (null == I ? void 0 : I.width) || window.innerWidth,
+height: (null == I ? void 0 : I.height) || window.innerHeight
   };
 }
 

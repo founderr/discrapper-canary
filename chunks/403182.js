@@ -12,7 +12,7 @@ return S;
 return p;
   },
   f3: function() {
-return m;
+return I;
   },
   nA: function() {
 return A;
@@ -54,7 +54,7 @@ n && (t += '.'.concat(n));
 type: r
   });
 }
-let I = [{
+let m = [{
 reType: /^image\/vnd.adobe.photoshop/,
 klass: 'photoshop'
   },
@@ -112,14 +112,14 @@ klass: 'audio'
   }
 ];
 
-function m(e) {
+function I(e) {
   return T(e.name, e.type);
 }
 
 function T(e, t) {
   var n;
   e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : '';
-  let r = s().find(I, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e));
+  let r = s().find(m, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e));
   return null != r ? r.klass : 'unknown';
 }
 

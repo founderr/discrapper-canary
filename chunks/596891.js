@@ -13,12 +13,12 @@ var r = n(735250),
   f = n(594174),
   h = n(621600),
   p = n(981631),
-  I = n(689938);
+  m = n(689938);
 t.Z = e => {
   let {
 userId: t,
 reportId: n,
-showBlock: m,
+showBlock: I,
 showMute: T
   } = e, g = d.Z.getDMFromUserId(t), S = (0, a.e7)([E.ZP], () => null == g ? null : E.ZP.isChannelMuted(null, g)), [A, N] = i.useState(null != S && S), [v, O] = i.useState(!1), R = (0, a.e7)([f.default], () => f.default.getUser(t), [t]), C = (0, a.e7)([_.Z], () => _.Z.getRelationshipType(t), [t]) === p.OGo.BLOCKED;
   i.useEffect(() => {
@@ -51,25 +51,25 @@ D = i.useCallback(() => {
   t,
   n
 ]),
-L = T || m;
+L = T || I;
   return null != R && L ? (0, r.jsxs)(r.Fragment, {
 children: [
-  m && (0, r.jsx)(c.Z, {
-    title: I.Z.Messages.IAR_UPSELLS_BLOCK_TITLE.format({
+  I && (0, r.jsx)(c.Z, {
+    title: m.Z.Messages.IAR_UPSELLS_BLOCK_TITLE.format({
       username: R.username
     }),
-    description: I.Z.Messages.IAR_UPSELLS_BLOCK_DESCRIPTION,
-    buttonText: v ? I.Z.Messages.IAR_UPSELLS_BLOCKED_BUTTON : I.Z.Messages.IAR_UPSELLS_BLOCK_BUTTON,
+    description: m.Z.Messages.IAR_UPSELLS_BLOCK_DESCRIPTION,
+    buttonText: v ? m.Z.Messages.IAR_UPSELLS_BLOCKED_BUTTON : m.Z.Messages.IAR_UPSELLS_BLOCK_BUTTON,
     buttonDisabled: v,
     onButtonPress: y,
     buttonColor: s.Button.Colors.RED
   }),
   T && (0, r.jsx)(c.Z, {
-    title: I.Z.Messages.IAR_UPSELLS_MUTE_TITLE.format({
+    title: m.Z.Messages.IAR_UPSELLS_MUTE_TITLE.format({
       username: R.username
     }),
-    description: I.Z.Messages.IAR_UPSELLS_MUTE_DESCRIPTION,
-    buttonText: A ? I.Z.Messages.IAR_UPSELLS_MUTED_BUTTON : I.Z.Messages.IAR_UPSELLS_MUTE_BUTTON,
+    description: m.Z.Messages.IAR_UPSELLS_MUTE_DESCRIPTION,
+    buttonText: A ? m.Z.Messages.IAR_UPSELLS_MUTED_BUTTON : m.Z.Messages.IAR_UPSELLS_MUTE_BUTTON,
     buttonDisabled: A,
     onButtonPress: D
   })

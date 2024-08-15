@@ -23,9 +23,9 @@ t[l] = e.readInt32BE(4 * l);
 t[l] = (c = t[l - 3] ^ t[l - 8] ^ t[l - 14] ^ t[l - 16]) << 1 | c >>> 31;
   }
   for (var u = 0; u < 80; ++u) {
-var c, d, _, E, f, h, p, I = ~~(u / 20);
-var m = ((d = n) << 5 | d >>> 27) + (_ = I, E = r, f = i, h = a, 0 === _ ? E & f | ~E & h : 2 === _ ? E & f | E & h | f & h : E ^ f ^ h) + o + t[u] + s[I] | 0;
-o = a, a = i, i = (p = r) << 30 | p >>> 2, r = n, n = m;
+var c, d, _, E, f, h, p, m = ~~(u / 20);
+var I = ((d = n) << 5 | d >>> 27) + (_ = m, E = r, f = i, h = a, 0 === _ ? E & f | ~E & h : 2 === _ ? E & f | E & h | f & h : E ^ f ^ h) + o + t[u] + s[m] | 0;
+o = a, a = i, i = (p = r) << 30 | p >>> 2, r = n, n = I;
   }
   this._a = n + this._a | 0, this._b = r + this._b | 0, this._c = i + this._c | 0, this._d = a + this._d | 0, this._e = o + this._e | 0;
 }, l.prototype._hash = function() {

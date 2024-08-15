@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(823379),
   h = n(5192),
   p = n(51144),
-  I = n(785717),
-  m = n(790286),
+  m = n(785717),
+  I = n(790286),
   T = n(485216),
   g = n(825801),
   S = n(228168),
@@ -84,9 +84,9 @@ setInteractionSent: L,
 setIsReplyInteraction: b
   } = e, {
 trackUserProfileAction: M
-  } = (0, I.KZ)(), {
+  } = (0, m.KZ)(), {
 sendReply: P
-  } = (0, m.Q)(_), [U, w] = i.useState(''), [x, G] = i.useState((0, c.JM)(U)), k = i.useRef(!1), B = i.useRef(null);
+  } = (0, I.Q)(_), [U, w] = i.useState(''), [x, G] = i.useState((0, c.JM)(U)), k = i.useRef(!1), B = i.useRef(null);
   i.useEffect(() => {
 null == C || C(null == B ? void 0 : B.current);
   }, [

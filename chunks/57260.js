@@ -18,16 +18,16 @@ children: t,
 className: n,
 collapsibleContent: a,
 isExpanded: d
-  } = e, [_, E] = i.useState(!1), [f, h] = i.useState(!0), [p, I] = i.useState(!1), m = null != d ? d : _, {
+  } = e, [_, E] = i.useState(!1), [f, h] = i.useState(!0), [p, m] = i.useState(!1), I = null != d ? d : _, {
 ref: T,
 height: g = 0
   } = (0, u.Z)(), {
 ref: S,
 height: A = 0
   } = (0, u.Z)(), N = (0, l.useSpring)({
-height: m ? g + A : A,
+height: I ? g + A : A,
 config: o.config.stiff,
-onRest: () => I(!0)
+onRest: () => m(!0)
   }, f ? 'animate-never' : 'respect-motion-settings'), v = i.useCallback(() => {
 E(!_);
   }, [
@@ -41,18 +41,18 @@ let e = setTimeout(() => {
 return () => clearTimeout(e);
   }, []), (0, r.jsx)('div', {
 className: s()(c.collapseable, {
-  [c.toggled]: m
+  [c.toggled]: I
 }, n),
 children: (0, r.jsxs)(o.animated.div, {
   className: s()(c.contentExpandContainer, {
-    [c.showOverflow]: m && p
+    [c.showOverflow]: I && p
   }),
   style: N,
   children: [
     (0, r.jsx)('div', {
       ref: S,
       className: s()(c.header, {
-        [c.toggled]: m
+        [c.toggled]: I
       }),
       children: t({
         onClick: v

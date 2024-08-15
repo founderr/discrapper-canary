@@ -12,8 +12,8 @@ var r = n(735250),
   f = n(434404),
   h = n(889161),
   p = n(430824),
-  I = n(267642),
-  m = n(981631),
+  m = n(267642),
+  I = n(981631),
   T = n(30513),
   g = n(689938),
   S = n(685440);
@@ -30,9 +30,9 @@ location: v
 analyticsLocations: O
   } = (0, d.ZP)(), R = (0, o.e7)([p.Z], () => p.Z.getGuild(n)), {
 canManageAllExpressions: C
-  } = (0, h.XJ)(R), y = null != R && 0 === (0, I.A3)(R.premiumTier) && !R.hasFeature(m.oNc.MORE_STICKERS);
+  } = (0, h.XJ)(R), y = null != R && 0 === (0, m.A3)(R.premiumTier) && !R.hasFeature(I.oNc.MORE_STICKERS);
   return (i.useEffect(() => {
-C && y && A && ((0, c.yw)(m.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
+C && y && A && ((0, c.yw)(I.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
   location: v,
   guild_id: null == R ? void 0 : R.id,
   channel_id: null == a ? void 0 : a.id,
@@ -61,7 +61,7 @@ children: [
     className: S.body,
     variant: 'text-sm/normal',
     children: g.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_PREMIUM_SUBSCRIPTIONS_DESCRIPTION.format({
-      count: (0, I.A3)(m.Eu4.TIER_1)
+      count: (0, m.A3)(I.Eu4.TIER_1)
     })
   }),
   (0, r.jsx)(l.Button, {
@@ -98,7 +98,7 @@ children: [
     look: l.Button.Looks.LINK,
     color: l.Button.Colors.LINK,
     onClick: () => {
-      (0, _._Q)(), f.Z.open(n, m.pNK.STICKERS, v);
+      (0, _._Q)(), f.Z.open(n, I.pNK.STICKERS, v);
     },
     children: g.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
   })

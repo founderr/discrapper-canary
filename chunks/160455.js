@@ -630,14 +630,14 @@ beginKeywords: 'and not'
   end: /\}/,
   contains: d
 }),
-I = {
+m = {
   beginKeywords: 'when',
   endsWithParent: !0,
   contains: [{
     beginKeywords: 'and not'
   }].concat(_)
 },
-m = {
+I = {
   begin: c + '\\s*:',
   returnBegin: !0,
   end: /[;}]/,
@@ -676,7 +676,7 @@ T = {
   contains: [
     e.C_LINE_COMMENT_MODE,
     e.C_BLOCK_COMMENT_MODE,
-    I,
+    m,
     f('keyword', 'all\\b'),
     f('variable', '@\\{' + u + '\\}'),
     {
@@ -739,7 +739,7 @@ starts: {
   returnEnd: !0,
   contains: p
 }
-  }, g, m, T, I, l.FUNCTION_DISPATCH), {
+  }, g, I, T, m, l.FUNCTION_DISPATCH), {
 name: 'Less',
 case_insensitive: !0,
 illegal: '[=>\'/<($"]',

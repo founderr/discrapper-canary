@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
 return T;
   },
   isNotSupported: function() {
-return I;
+return m;
   },
   trackToggleSelfMute: function() {
 return g;
@@ -36,7 +36,7 @@ return t => (0, r.jsx)(e, {
   });
 }
 
-function I() {
+function m() {
   return !o.Z.isSupported() && ((0, i.openModal)(e => (0, r.jsx)(i.ConfirmModal, {
 header: f.Z.Messages.UNSUPPORTED_BROWSER,
 confirmText: f.Z.Messages.DOWNLOAD_APP,
@@ -51,7 +51,7 @@ children: (0, r.jsx)(i.Text, {
   })), !0);
 }
 
-function m(e) {
+function I(e) {
   c.default.track(_.rMx.PERMISSIONS_ACKED, {
 type: 'audio',
 action: e
@@ -60,27 +60,27 @@ action: e
 
 function T() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  return I() ? Promise.resolve(!1) : (c.default.track(_.rMx.PERMISSIONS_REQUESTED, {
+  return m() ? Promise.resolve(!1) : (c.default.track(_.rMx.PERMISSIONS_REQUESTED, {
 type: 'audio'
   }), o.Z.getMediaEngine().enable().then(() => {
 a.Z.dispatch({
   type: 'MEDIA_ENGINE_SET_AUDIO_ENABLED',
   enabled: !0,
   unmute: e
-}), m(E.PQ.ACCEPTED);
+}), I(E.PQ.ACCEPTED);
   }, e => {
 switch (e) {
   case _.ETv.NO_DEVICES_FOUND:
-    m(E.PQ.NO_DEVICES);
+    I(E.PQ.NO_DEVICES);
     break;
   case _.ETv.PERMISSION_DENIED:
-    m(E.PQ.DENIED);
+    I(E.PQ.DENIED);
     break;
   case _.ETv.PERMISSION_DISMISSED:
-    m(E.PQ.DISMISSED);
+    I(E.PQ.DISMISSED);
     break;
   default:
-    m(E.PQ.ERROR), h.warn('unknown getUserMedia error: '.concat(e));
+    I(E.PQ.ERROR), h.warn('unknown getUserMedia error: '.concat(e));
 }
   }).then(() => !0));
 }

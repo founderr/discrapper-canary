@@ -18,15 +18,15 @@ let _ = window.matchMedia('(prefers-reduced-motion: reduce)'),
   f = window.matchMedia('(prefers-contrast: less)'),
   h = window.matchMedia('(prefers-color-scheme: dark)'),
   p = window.matchMedia('(prefers-color-scheme: light)'),
-  I = window.matchMedia('(forced-colors: active)'),
-  m = 5;
+  m = window.matchMedia('(forced-colors: active)'),
+  I = 5;
 
 function T() {
   return 'windows' === (0, l.getOS)();
 }
 t.Z = {
   initBasic() {
-_.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(_), h.addListener(this.handleSystemColorPreferencesChanged), p.addListener(this.handleSystemColorPreferencesChanged), I.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), E.addListener(this.handleSystemPrefersContrastChanged), f.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged();
+_.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(_), h.addListener(this.handleSystemColorPreferencesChanged), p.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), E.addListener(this.handleSystemPrefersContrastChanged), f.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged();
   },
   init() {
 this.initBasic(), a.Z.subscribe('ACCESSIBILITY_COLORBLIND_TOGGLE', () => {
@@ -40,10 +40,10 @@ this.initBasic(), a.Z.subscribe('ACCESSIBILITY_COLORBLIND_TOGGLE', () => {
 });
   },
   maybeShowKeyboardNavigationExplainerModal() {
-m = Math.max(m - 1, 0), ! function() {
+I = Math.max(I - 1, 0), ! function() {
   let e = s.default.getCurrentUser();
   return null == e || Date.now() - +e.createdAt < 86400000;
-}() && !c.Z.keyboardNavigationExplainerModalSeen && 0 === m && (0, i.openModalLazy)(async () => {
+}() && !c.Z.keyboardNavigationExplainerModalSeen && 0 === I && (0, i.openModalLazy)(async () => {
   let {
     default: e
   } = await Promise.all([
@@ -63,7 +63,7 @@ a.Z.wait(() => {
   handleSystemColorPreferencesChanged() {
 let e;
 h.matches ? e = d.BRd.DARK : p.matches && (e = d.BRd.LIGHT);
-let t = (!l.isPlatformEmbedded || T()) && I.matches ? 'active' : 'none';
+let t = (!l.isPlatformEmbedded || T()) && m.matches ? 'active' : 'none';
 a.Z.wait(() => {
   u.Ej(e, t);
 });

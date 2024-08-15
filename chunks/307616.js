@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(585483),
   h = n(952265),
   p = n(602091),
-  I = n(981631),
-  m = n(785895);
+  m = n(981631),
+  I = n(785895);
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ let {
 } = this.state;
 return (a === p.Dv.ENTERING || a === p.Dv.ENTERED) && !n && (a = p.Dv.HIDDEN), i && (a = p.Dv.ENTERED), (0, r.jsx)(t, {
   children: (0, r.jsx)('div', {
-    className: s()(m.layer, !n && m.hidden),
+    className: s()(I.layer, !n && I.hidden),
     children: e({
       transitionState: a,
       onClose: this.close
@@ -108,8 +108,8 @@ let e = () => {
   let e = n.current;
   null != e && null != e.onCloseRequest && e.onCloseRequest();
 };
-return f.S.subscribe(I.CkL.MODAL_CLOSE, e), () => {
-  f.S.unsubscribe(I.CkL.MODAL_CLOSE, e);
+return f.S.subscribe(m.CkL.MODAL_CLOSE, e), () => {
+  f.S.unsubscribe(m.CkL.MODAL_CLOSE, e);
 };
   }, [a]);
   let s = i.useCallback(() => {

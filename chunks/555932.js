@@ -25,7 +25,7 @@ let h = [
 function p(e) {
   let {
 guild: t
-  } = e, n = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), [p, I] = i.useState(!1), [m, T] = i.useState(0), g = i.useRef(null), S = Math.min(_.Eu4.TIER_3, t.premiumTier + 1), A = _.oCV[t.premiumTier], N = _.oCV[S], v = (t.premiumSubscriberCount - A) / (N - A), O = d.P[t.premiumTier], R = d.P[S], C = t.premiumTier === _.Eu4.TIER_3, {
+  } = e, n = (0, s.e7)([l.Z], () => l.Z.useReducedMotion), [p, m] = i.useState(!1), [I, T] = i.useState(0), g = i.useRef(null), S = Math.min(_.Eu4.TIER_3, t.premiumTier + 1), A = _.oCV[t.premiumTier], N = _.oCV[S], v = (t.premiumSubscriberCount - A) / (N - A), O = d.P[t.premiumTier], R = d.P[S], C = t.premiumTier === _.Eu4.TIER_3, {
 progressBarFillWidthFactor: y,
 isProgressBarAnimationComplete: D,
 setShouldFireConfetti: L,
@@ -39,7 +39,7 @@ let {
   isRevealed: a,
   useReducedMotion: s
 } = e, [l, u] = i.useState(s ? r : -1), [c, E] = i.useState(0 === n), [f, h] = i.useState(!1), p = i.useRef(!0), {
-  widthFactor: I
+  widthFactor: m
 } = (0, o.useSpring)({
   from: {
     widthFactor: 0
@@ -75,7 +75,7 @@ return i.useEffect(() => () => {
   p.current = !1;
 }, []), {
   isProgressBarAnimationComplete: c,
-  progressBarFillWidthFactor: I,
+  progressBarFillWidthFactor: m,
   setShouldFireConfetti: h,
   shouldFireConfetti: f,
   tierMarkerAnimationPosition: l
@@ -89,7 +89,7 @@ guildBoostCount: t.premiumSubscriberCount
   });
   return i.useEffect(() => {
 let e = window.setTimeout(() => {
-  I(!0);
+  m(!0);
 }, 250);
 return () => {
   window.clearTimeout(e);
@@ -141,7 +141,7 @@ children: [
     children: (0, u.nW)(e)
   }, e)),
   (0, r.jsx)(c.Z, {
-    confettiCount: m,
+    confettiCount: I,
     confettiTriggerRef: g,
     isFiring: b
   })

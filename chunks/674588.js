@@ -1,6 +1,6 @@
 n.d(t, {
   CP: function() {
-return m;
+return I;
   },
   T4: function() {
 return T;
@@ -15,7 +15,7 @@ return A;
 return p;
   },
   i6: function() {
-return I;
+return m;
   },
   yC: function() {
 return g;
@@ -67,7 +67,7 @@ s.Z.dispatch({
 });
   }
 }
-async function I(e) {
+async function m(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
 n = Date.now(),
 r = l.Z.getApplicationFetchState(e),
@@ -100,7 +100,7 @@ try {
 }
   }
 }
-async function m() {
+async function I() {
   let e = Date.now(),
 t = u.Z.getLastFetchTimeMs();
   if (null != t && t + 600000 > e)
@@ -181,8 +181,8 @@ categoryId: _,
 integrationType: E,
 minUserInstallCommandCount: h,
 excludeAppsWithCustomInstallUrl: p,
-excludeNonEmbeddedApps: I,
-excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
+excludeNonEmbeddedApps: m,
+excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
 source: T = i.F.APP_DIRECTORY
   } = null != l ? l : {}, g = Date.now(), S = d.Z.getFetchState({
 query: n,
@@ -209,8 +209,8 @@ s.Z.dispatch({
   integrationType: E,
   minUserInstallCommandCount: h,
   excludeAppsWithCustomInstallUrl: p,
-  excludeNonEmbeddedApps: I,
-  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
+  excludeNonEmbeddedApps: m,
+  excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
   source: T
 });
 try {
@@ -225,8 +225,8 @@ try {
       integration_type: E,
       min_user_install_command_count: h,
       exclude_apps_with_custom_install_url: p,
-      exclude_non_embedded_apps: I,
-      exclude_embedded_apps_without_primary_entry_point_app_command: m,
+      exclude_non_embedded_apps: m,
+      exclude_embedded_apps_without_primary_entry_point_app_command: I,
       source: T
     }
   });
@@ -247,8 +247,8 @@ try {
     },
     minUserInstallCommandCount: h,
     excludeAppsWithCustomInstallUrl: p,
-    excludeNonEmbeddedApps: I,
-    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
+    excludeNonEmbeddedApps: m,
+    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
     source: T
   }), null == u || u(e.body.result_count);
 } catch (e) {
@@ -261,8 +261,8 @@ try {
     integrationType: E,
     minUserInstallCommandCount: h,
     excludeAppsWithCustomInstallUrl: p,
-    excludeNonEmbeddedApps: I,
-    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
+    excludeNonEmbeddedApps: m,
+    excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
     source: T
   });
 }

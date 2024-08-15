@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(359875),
   h = n(124072),
   p = n(695503),
-  I = n(628692),
-  m = n(590956),
+  m = n(628692),
+  I = n(590956),
   T = n(703656),
   g = n(430824),
   S = n(572004),
@@ -151,7 +151,7 @@ react: (e, t, n) => (0, r.jsx)(d.Z, {
 }, n.key)
   },
   soundboard: {
-react: e => (0, r.jsx)(I.Z, {
+react: e => (0, r.jsx)(m.Z, {
   channelId: e.channelId,
   soundId: e.soundId,
   jumbo: e.jumboable
@@ -298,7 +298,7 @@ emoji: function(e) {
       let {
         key: s
       } = a;
-      return e.src ? (0, r.jsx)(m.c, {
+      return e.src ? (0, r.jsx)(I.c, {
         node: e,
         tooltipPosition: t,
         enableClick: n
@@ -327,7 +327,7 @@ customEmoji: function(e) {
           name: t ? ':'.concat(u.name, ':') : u.name
         };
       }
-      return (0, r.jsx)(m.Y, {
+      return (0, r.jsx)(I.Y, {
         isInteracting: l,
         node: e,
         tooltipPosition: t,

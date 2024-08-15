@@ -15,8 +15,8 @@ function l(e) {
 defaultFilter: f,
 menuTrigger: h = 'input',
 allowsEmptyCollection: p = !1,
-allowsCustomValue: I,
-shouldCloseOnBlur: m = !0
+allowsCustomValue: m,
+shouldCloseOnBlur: I = !0
   } = e, [T, g] = (0, a.useState)(!1), [S, A] = (0, a.useState)(!1), {
 collection: N,
 selectionManager: v,
@@ -97,7 +97,7 @@ Y = () => {
     F(), k();
 },
 j = () => {
-  if (I) {
+  if (m) {
     var e, t;
     D === (null !== (t = null === (e = N.getItem(O)) || void 0 === e ? void 0 : e.textValue) && void 0 !== t ? t : '') ? Y() : Z();
   } else
@@ -124,7 +124,7 @@ setSelectedKey: R,
 disabledKeys: y,
 isFocused: S,
 setFocused: e => {
-  e ? 'focus' === h && x(null, 'focus') : m && j(), A(e);
+  e ? 'focus' === h && x(null, 'focus') : I && j(), A(e);
 },
 selectedItem: C,
 collection: W,
@@ -134,7 +134,7 @@ commit: () => {
   w.isOpen && null != v.focusedKey ? O === v.focusedKey ? Y() : R(v.focusedKey) : j();
 },
 revert: () => {
-  I && null == O ? Z() : Y();
+  m && null == O ? Z() : Y();
 }
   };
 }

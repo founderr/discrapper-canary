@@ -104,17 +104,17 @@ function p(e) {
   return null == e || 'object' != typeof e || Object.isFrozen(e);
 }
 
-function I(e) {
+function m(e) {
   var t = W[e];
   return t || r(18, e), t;
 }
 
-function m() {
+function I() {
   return w;
 }
 
 function T(e, t) {
-  t && (I('Patches'), e.u = [], e.s = [], e.v = t);
+  t && (m('Patches'), e.u = [], e.s = [], e.v = t);
 }
 
 function g(e) {
@@ -144,7 +144,7 @@ function v(e, t) {
   t._ = t.p.length;
   var n = t.p[0],
 i = void 0 !== e && e !== n;
-  return t.h.O || I('ES5').S(t, e, i), i ? (n[H].P && (g(t), r(4)), a(e) && (e = O(t, e), t.l || C(t, e)), t.u && I('Patches').M(n[H].t, e, t.u, t.s)) : e = O(t, n, []), g(t), t.u && t.v(t.u, t.s), e !== F ? e : void 0;
+  return t.h.O || m('ES5').S(t, e, i), i ? (n[H].P && (g(t), r(4)), a(e) && (e = O(t, e), t.l || C(t, e)), t.u && m('Patches').M(n[H].t, e, t.u, t.s)) : e = O(t, n, []), g(t), t.u && t.v(t.u, t.s), e !== F ? e : void 0;
 }
 
 function O(e, t, n) {
@@ -166,7 +166,7 @@ var i = 4 === r.i || 5 === r.i ? r.o = E(r.k) : r.o,
   o = !1;
 3 === r.i && (a = new Set(i), i.clear(), o = !0), s(a, function(t, a) {
   return R(e, r, i, t, a, n, o);
-}), C(e, i, !1), n && e.u && I('Patches').N(r, n, e.u, e.s);
+}), C(e, i, !1), n && e.u && m('Patches').N(r, n, e.u, e.s);
   }
   return r.o;
 }
@@ -214,7 +214,7 @@ function b(e) {
 }
 
 function M(e, t, n) {
-  var r, i, a, s, o, l, u, _, E, f = c(t) ? I('MapSet').F(t, n) : d(t) ? I('MapSet').T(t, n) : e.O ? (r = t, i = n, o = s = {
+  var r, i, a, s, o, l, u, _, E, f = c(t) ? m('MapSet').F(t, n) : d(t) ? m('MapSet').T(t, n) : e.O ? (r = t, i = n, o = s = {
 i: (a = Array.isArray(r)) ? 1 : 0,
 A: i ? i.A : w,
 P: !1,
@@ -226,7 +226,7 @@ k: null,
 o: null,
 j: null,
 C: !1
-  }, l = K, a && (o = [s], l = z), _ = (u = Proxy.revocable(o, l)).revoke, E = u.proxy, s.k = E, s.j = _, E) : I('ES5').J(t, n);
+  }, l = K, a && (o = [s], l = z), _ = (u = Proxy.revocable(o, l)).revoke, E = u.proxy, s.k = E, s.j = _, E) : m('ES5').J(t, n);
   return (n ? n.A : w).p.push(f), f;
 }
 
@@ -363,7 +363,7 @@ function e(e) {
       if (void 0 === (s = n(e)) && (s = e), s === F && (s = void 0), t.D && f(s, !0), i) {
         var d = [],
           _ = [];
-        I('Patches').M(e, s, d, _), i(d, _);
+        m('Patches').M(e, s, d, _), i(d, _);
       }
       return s;
     }
@@ -401,7 +401,7 @@ return t.createDraft = function(e) {
     var n, r = t[H],
       i = o(t);
     if (r) {
-      if (!r.P && (r.i < 4 || !I('ES5').K(r)))
+      if (!r.P && (r.i < 4 || !m('ES5').K(r)))
         return r.t;
       r.I = !0, n = P(t, i), r.I = !1;
     } else
@@ -430,7 +430,7 @@ return t.createDraft = function(e) {
     }
   }
   n > -1 && (t = t.slice(n + 1));
-  var a = I('Patches').$;
+  var a = m('Patches').$;
   return i(e) ? a(e, t) : this.produce(e, function(e) {
     return a(e, t);
   });

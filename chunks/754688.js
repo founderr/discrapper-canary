@@ -1,6 +1,6 @@
 n.d(t, {
   Ao: function() {
-return I;
+return m;
   },
   Jv: function() {
 return f;
@@ -15,7 +15,7 @@ return p;
 return T;
   },
   YO: function() {
-return m;
+return I;
   }
 });
 var r = n(592125),
@@ -64,7 +64,7 @@ guildId: a[1]
   } : null;
 }
 
-function I(e) {
+function m(e) {
   if (null == e)
 return null;
   let t = e.match(E);
@@ -75,7 +75,7 @@ recurrenceId: t[3]
   } : null;
 }
 
-function m(e) {
+function I(e) {
   return !!e.isPrivate() || a.Z.can(o.Plq.VIEW_CHANNEL, e);
 }
 
@@ -89,5 +89,5 @@ return !1;
   if (null == n)
 return !0;
   let a = r.Z.getChannel(n);
-  return null != a && m(a);
+  return null != a && I(a);
 }

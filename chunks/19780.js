@@ -8,8 +8,8 @@ var a, s, o, l, u = n(442837),
   f = n(258609),
   h = n(338336),
   p = n(314897),
-  I = n(938475),
-  m = n(981631),
+  m = n(938475),
+  I = n(981631),
   T = n(65154);
 let g = [],
   S = null,
@@ -130,19 +130,19 @@ function b() {
 }
 class M extends(a = u.ZP.Store) {
   initialize() {
-this.waitFor(I.ZP), (0, h.r)(this.getRTCConnectionId, this.getMediaSessionId);
+this.waitFor(m.ZP), (0, h.r)(this.getRTCConnectionId, this.getMediaSessionId);
   }
   getRTCConnection() {
 return r;
   }
   getState() {
-return null != r ? r.state : m.hes.DISCONNECTED;
+return null != r ? r.state : I.hes.DISCONNECTED;
   }
   isConnected() {
-return this.getState() === m.hes.RTC_CONNECTED;
+return this.getState() === I.hes.RTC_CONNECTED;
   }
   isDisconnected() {
-return this.getState() === m.hes.DISCONNECTED;
+return this.getState() === I.hes.DISCONNECTED;
   }
   getRemoteDisconnectVoiceChannelId() {
 return S;
@@ -163,7 +163,7 @@ return null == r ? void 0 : r.channelId;
 return null != r ? r.hostname : '';
   }
   getQuality() {
-return null != r ? r.quality : m.IE4.UNKNOWN;
+return null != r ? r.quality : I.IE4.UNKNOWN;
   }
   getPings() {
 return null != r ? r.getPings() : g;
@@ -225,7 +225,7 @@ return i = e.sessionId, S = null, A = null, y(), !1;
 i = null, S = null, A = null, y();
   },
   RTC_CONNECTION_STATE: function(e) {
-return e.state === m.hes.RTC_CONNECTED && (R = !0), !0;
+return e.state === I.hes.RTC_CONNECTED && (R = !0), !0;
   },
   RTC_CONNECTION_PING: b,
   RTC_CONNECTION_LOSS_RATE: b,
@@ -291,11 +291,11 @@ y();
   },
   APP_STATE_UPDATE: function(e) {
 if (null != r) {
-  let t = e.state === m.$7l.BACKGROUND,
+  let t = e.state === I.$7l.BACKGROUND,
     n = E.Z.isEnabled();
   r.setAppBackgrounded(t, n);
 }
-return e.state === m.$7l.ACTIVE && null != r && r.resetBackoff('App state is active'), !1;
+return e.state === I.$7l.ACTIVE && null != r && r.resetBackoff('App state is active'), !1;
   },
   RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function(e) {
 let {

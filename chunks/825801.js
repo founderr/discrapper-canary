@@ -21,8 +21,8 @@ var i = n(120356),
   f = n(51144),
   h = n(785717),
   p = n(505737),
-  I = n(790286),
-  m = n(485216),
+  m = n(790286),
+  I = n(485216),
   T = n(228168),
   g = n(185923),
   S = n(689938),
@@ -74,7 +74,7 @@ trackUserProfileAction: b
 sendReact: M,
 pressReact: P,
 pressReply: U
-  } = (0, I.Q)(i), w = (0, s.e7)([d.default], () => d.default.getId() === t.id), x = (0, p.Z)(t.id), [G, k] = (0, s.Wu)([l.Z], () => [
+  } = (0, m.Q)(i), w = (0, s.e7)([d.default], () => d.default.getId() === t.id), x = (0, p.Z)(t.id), [G, k] = (0, s.Wu)([l.Z], () => [
 l.Z.useReducedMotion,
 l.Z.keyboardModeEnabled
   ]);
@@ -94,7 +94,7 @@ F = async e => {
     sourceType: i,
     sourceDetails: E
   });
-  L(!1), D(!1), y(!0), await (0, m.Z)({
+  L(!1), D(!1), y(!0), await (0, I.Z)({
     userId: t.id,
     content: r,
     location: 'UserProfileReactReplyBar',

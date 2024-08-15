@@ -23,8 +23,8 @@ preventFocusOnPress: E,
 allowFocusWhenDisabled: f,
 onClick: h,
 href: p,
-target: I,
-rel: m,
+target: m,
+rel: I,
 type: T = 'button'
   } = e;
   n = 'button' === s ? {
@@ -34,11 +34,11 @@ disabled: o
 role: 'button',
 tabIndex: o ? void 0 : 0,
 href: 'a' === s && o ? void 0 : p,
-target: 'a' === s ? I : void 0,
+target: 'a' === s ? m : void 0,
 type: 'input' === s ? T : void 0,
 disabled: 'input' === s ? o : void 0,
 'aria-disabled': o && 'input' !== s ? o : void 0,
-rel: 'a' === s ? m : void 0
+rel: 'a' === s ? I : void 0
   };
   let {
 pressProps: g,

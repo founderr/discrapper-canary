@@ -1,6 +1,6 @@
 n.d(t, {
   I: function() {
-return m;
+return I;
   }
 }), n(47120);
 var r = n(735250),
@@ -17,9 +17,9 @@ var r = n(735250),
   f = n(436660),
   h = n(887490),
   p = n(447525),
-  I = n(30005);
+  m = n(30005);
 
-function m(e) {
+function I(e) {
   var t;
   let {
 editorRef: n,
@@ -28,7 +28,7 @@ iconClassName: a,
 dividerClassName: o
   } = e, u = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor();
   return null == u ? null : (0, r.jsxs)('div', {
-className: I.buttons,
+className: m.buttons,
 children: [
   (0, r.jsx)(T, {
     slateEditor: u,
@@ -36,7 +36,7 @@ children: [
     children: (0, r.jsx)(l.BoldIcon, {
       size: 'md',
       color: 'currentColor',
-      className: s()(I.icon, a)
+      className: s()(m.icon, a)
     })
   }),
   (0, r.jsx)(T, {
@@ -45,7 +45,7 @@ children: [
     children: (0, r.jsx)(l.ItalicIcon, {
       size: 'md',
       color: 'currentColor',
-      className: s()(I.icon, a)
+      className: s()(m.icon, a)
     })
   }),
   (0, r.jsx)(T, {
@@ -54,11 +54,11 @@ children: [
     children: (0, r.jsx)(l.StrikethroughIcon, {
       size: 'md',
       color: 'currentColor',
-      className: s()(I.icon, a)
+      className: s()(m.icon, a)
     })
   }),
   (0, r.jsx)('div', {
-    className: s()(I.divider, o)
+    className: s()(m.divider, o)
   }),
   !(null == i ? void 0 : i.disableBlockQuotes) && (0, r.jsx)(g, {
     slateEditor: u,
@@ -66,7 +66,7 @@ children: [
     children: (0, r.jsx)(l.QuoteIcon, {
       size: 'md',
       color: 'currentColor',
-      className: s()(I.icon, a)
+      className: s()(m.icon, a)
     })
   }),
   (0, r.jsx)(T, {
@@ -77,7 +77,7 @@ children: [
       width: 20,
       height: 20,
       color: 'currentColor',
-      className: s()(I.icon, a)
+      className: s()(m.icon, a)
     })
   }),
   (0, r.jsx)(T, {
@@ -86,7 +86,7 @@ children: [
     children: (0, r.jsx)(l.EyeIcon, {
       size: 'md',
       color: 'currentColor',
-      className: s()(I.icon, a)
+      className: s()(m.icon, a)
     })
   })
 ]
@@ -105,7 +105,7 @@ a = null != (0, E.U4)(t, e, r).before[n];
   }
   return (0, r.jsx)('button', {
 'aria-pressed': a,
-className: I.button,
+className: m.button,
 onClick: () => {
   null != t && _.T.withSingleEntry(t, () => (0, E.py)(t, n));
 },
@@ -121,7 +121,7 @@ children: i
   } = e, a = null != n ? h.bN.getCurrentBlock(n) : null, s = null != a && h.aj.isType(a[0], t);
   return (0, r.jsx)('button', {
 'aria-pressed': s,
-className: I.button,
+className: m.button,
 onClick: () => {
   null != n && _.T.withSingleEntry(n, () => (0, E.hm)(n, t));
 },
@@ -227,10 +227,10 @@ _.setStart(u.anchorNode, u.anchorOffset), _.setEnd(u.anchorNode, u.anchorOffset)
 let f = _.getBoundingClientRect(),
   p = l.createRange();
 p.setStart(u.anchorNode, u.anchorOffset), p.setEnd(u.focusNode, u.focusOffset);
-let I = p.getBoundingClientRect(),
-  m = d.x === f.x,
-  T = m ? I.x : Math.min(d.x, f.x),
-  g = m ? I.x + I.width : Math.max(d.x, f.x),
+let m = p.getBoundingClientRect(),
+  I = d.x === f.x,
+  T = I ? m.x : Math.min(d.x, f.x),
+  g = I ? m.x + m.width : Math.max(d.x, f.x),
   S = null !== (r = null === (n = s.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== r ? r : 0;
 return {
   x: T + (g - T) / 2,
@@ -256,7 +256,7 @@ return null;
 children: (0, r.jsxs)('div', {
   id: 'slate-toolbar',
   ref: _,
-  className: I.toolbar,
+  className: m.toolbar,
   style: {
     top: O - R,
     left: v - y
@@ -271,7 +271,7 @@ children: (0, r.jsxs)('div', {
     (0, r.jsx)(S, {
       slateEditor: L
     }),
-    (0, r.jsx)(m, {
+    (0, r.jsx)(I, {
       editorRef: a,
       options: l
     })

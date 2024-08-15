@@ -109,20 +109,20 @@ referralsRemaining: E,
 isResending: f,
 hovered: h,
 shouldShowBirthdayUX: p,
-isLightTheme: I,
-...m
+isLightTheme: m,
+...I
   } = e, [T, g] = i.useState(o), S = null !== (t = l.get(T)) && void 0 !== t ? t : null;
   return i.useEffect(() => {
-h ? g(e => _(h, p, I, f, e)) : f && g(o);
+h ? g(e => _(h, p, m, f, e)) : f && g(o);
   }, [
 h,
 p,
-I,
+m,
 f
   ]), (0, r.jsxs)('svg', {
 width: n,
 height: u,
-...(0, s.Z)(m),
+...(0, s.Z)(I),
 xmlns: 'http://www.w3.org/2000/svg',
 children: [
   f ? (0, r.jsx)(d, {

@@ -1,6 +1,6 @@
 n.d(t, {
   $w: function() {
-return I;
+return m;
   },
   Bh: function() {
 return h;
@@ -18,7 +18,7 @@ return f;
 return p;
   },
   i7: function() {
-return m;
+return I;
   },
   rD: function() {
 return c;
@@ -110,13 +110,13 @@ is_from_tenor: n
   });
 }
 
-function I(e) {
+function m(e) {
   s.default.track(u.rMx.VIDEO_BACKGROUND_DELETED, {
 is_animated: _(e)
   });
 }
 
-function m(e) {
+function I(e) {
   if (null == e)
 return {
   oneofKind: void 0

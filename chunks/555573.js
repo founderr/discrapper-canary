@@ -1,6 +1,6 @@
 n.d(t, {
   GV: function() {
-return m;
+return I;
   },
   Po: function() {
 return E;
@@ -12,7 +12,7 @@ return f;
 return p;
   },
   dh: function() {
-return I;
+return m;
   },
   g7: function() {
 return h;
@@ -89,7 +89,7 @@ return [
   })));
 }
 
-function I(e, t, n, r) {
+function m(e, t, n, r) {
   return a.tn.put({
 body: {
   permissions: r
@@ -98,7 +98,7 @@ url: _.ANM.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
   });
 }
 
-function m(e, t, n) {
+function I(e, t, n) {
   var r;
   i()(null != t.autocomplete, 'Missing autocomplete context');
   let {

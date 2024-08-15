@@ -17,7 +17,7 @@ var r = n(512722),
   f = n(70956),
   h = n(40786),
   p = n(362092);
-let I = {
+let m = {
 link: {
   type: 'skip'
 },
@@ -162,7 +162,7 @@ subtext: {
   after: ''
 }
   },
-  m = new Set([
+  I = new Set([
 '*',
 '_',
 '\\'
@@ -170,9 +170,9 @@ subtext: {
   T = {},
   g = {};
 for (let e in d.Z.RULES) {
-  if (!(e in I))
+  if (!(e in m))
 throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
-  let t = I[e];
+  let t = m[e];
   'skip' !== t.type && (T[e] = S(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (g[e] = S('text' === e ? _.ZP : d.Z.RULES[e]));
 }
 
@@ -423,7 +423,7 @@ case 'subtext': {
         before: N.exec(r.input)[1],
         after: ''
       };
-    let i = I['link' === t ? 'url' : t];
+    let i = m['link' === t ? 'url' : t];
     if ('inlineStyle' === i.type)
       return i;
     throw Error('Slate: rule must be an inlineStyle');
@@ -501,7 +501,7 @@ t++;
 
 function G(e, t, n, r) {
   for (; n < r;)
-if (m.has(t[n]))
+if (I.has(t[n]))
   n = U(e, t, t[n], n, 'syntaxBefore'), n = x(t, n);
 else
   break;

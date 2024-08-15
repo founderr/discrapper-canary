@@ -25,7 +25,7 @@ p = function(e, t) {
   var r = f(e, t + 1);
   return r < 56320 || r > 57343 ? t + 1 : t + 2;
 },
-I = function(e) {
+m = function(e) {
   var t = 0;
   return {
     next: function() {
@@ -37,9 +37,9 @@ I = function(e) {
     }
   };
 },
-m = function(e, t) {
+I = function(e, t) {
   if (o(e) || i(e))
-    return I(e);
+    return m(e);
   if (l(e)) {
     var n = 0;
     return {
@@ -80,7 +80,7 @@ var O = _('Map.prototype.@@iterator', !0) || _('Map.prototype._es6-shim iterator
             n,
             e
           ]);
-        }), I(t);
+        }), m(t);
       }
     }
     if (g(e)) {
@@ -92,16 +92,16 @@ var O = _('Map.prototype.@@iterator', !0) || _('Map.prototype._es6-shim iterator
         var n = [];
         return A(e, function(e) {
           E(n, e);
-        }), I(n);
+        }), m(n);
       }
     }
   };
 e.exports = function(e) {
-  return C(e) || m(e);
+  return C(e) || I(e);
 };
   } else
 e.exports = function(e) {
   if (null != e)
-    return m(e, !0);
+    return I(e, !0);
 };
 }

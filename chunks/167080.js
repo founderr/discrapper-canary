@@ -16,14 +16,14 @@ mimeType: E,
 fileName: f,
 focusProps: h,
 onClick: p,
-...I
-  } = e, m = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]), T = i.useCallback(e => {
+...m
+  } = e, I = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]), T = i.useCallback(e => {
 o.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
   attachment_type: null == E ? void 0 : E[0],
   attachment_subtype: null == E ? void 0 : E[1]
-}), null == p || p(), null == m || m(e);
+}), null == p || p(), null == I || I(e);
   }, [
-m,
+I,
 E,
 p
   ]);
@@ -35,7 +35,7 @@ rel: d,
 className: n,
 'aria-label': u.Z.Messages.DOWNLOAD,
 focusProps: h,
-...I,
+...m,
 children: f
   }) : (0, r.jsx)(s.Anchor, {
 href: t,
@@ -45,7 +45,7 @@ rel: d,
 className: n,
 'aria-label': u.Z.Messages.DOWNLOAD,
 focusProps: h,
-...I,
+...m,
 children: (0, r.jsx)(s.DownloadIcon, {
   size: 'md',
   color: 'currentColor',

@@ -38,8 +38,8 @@ let {
   onChange: n,
   checked: a,
   disabled: p,
-  className: I,
-  focusProps: m,
+  className: m,
+  focusProps: I,
   innerRef: T
 } = e, {
   reducedMotion: g
@@ -52,11 +52,11 @@ let {
   state: A ? a ? 0.7 : 0.3 : a ? 1 : 0
 }, 'animate-always');
 return (0, r.jsx)(c.t, {
-  ...m,
+  ...I,
   within: !0,
   offset: -2,
   children: (0, r.jsxs)(o.animated.div, {
-    className: s()(E.container, I, {
+    className: s()(E.container, m, {
       [E.checked]: a,
       [E.disabled]: p
     }),

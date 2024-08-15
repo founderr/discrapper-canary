@@ -8,8 +8,8 @@ var a, s, o, l, u = n(392711),
   f = n(981631),
   h = n(354459);
 let p = 0,
-  I = 0,
-  m = {},
+  m = 0,
+  I = {},
   T = new Set(),
   g = new Map(),
   S = {},
@@ -28,11 +28,11 @@ function R(e, t) {
 
 function C(e) {
   var t;
-  let n = null !== (t = m[f.ME]) && void 0 !== t ? t : {},
+  let n = null !== (t = I[f.ME]) && void 0 !== t ? t : {},
 r = {};
   c().each(n, (t, n) => {
 t.channelId !== e && (r[n] = t);
-  }), m[f.ME] = r;
+  }), I[f.ME] = r;
 }
 
 function y(e) {
@@ -41,7 +41,7 @@ function y(e) {
 }
 
 function D(e, t, n) {
-  let r = R(m, null != e ? e : f.ME),
+  let r = R(I, null != e ? e : f.ME),
 i = r[t],
 a = n(i);
   return i === a ? [
@@ -90,19 +90,19 @@ function b(e) {
   let {
 guild: t
   } = e;
-  c().forEach(m[t.id], e => {
+  c().forEach(I[t.id], e => {
 D(t.id, e.userId, () => null);
-  }), delete m[t.id];
+  }), delete I[t.id];
 }
 class M extends(a = d.ZP.Store) {
   getAllVoiceStates() {
-return m;
-  }
-  getVoiceStateVersion() {
 return I;
   }
+  getVoiceStateVersion() {
+return m;
+  }
   getVoiceStates(e) {
-return R(m, null != e ? e : f.ME);
+return R(I, null != e ? e : f.ME);
   }
   getVoiceStatesForChannel(e) {
 return R(S, e);
@@ -171,10 +171,10 @@ let {
   user: t,
   sessionId: n
 } = e, a = null != r && r !== t.id;
-return a && (m = {}, S = {}, N = {}, A = {}, g.clear()), r = t.id, i = n, a;
+return a && (I = {}, S = {}, N = {}, A = {}, g.clear()), r = t.id, i = n, a;
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function() {
-m = {}, S = {}, N = {}, A = {}, g.clear();
+I = {}, S = {}, N = {}, A = {}, g.clear();
   },
   OVERLAY_INITIALIZE: function(e) {
 let {
@@ -182,7 +182,7 @@ let {
   user: n,
   sessionId: a
 } = e;
-for (let [e, n] of(m = {}, S = {}, N = {}, A = {}, Object.entries(t)))
+for (let [e, n] of(I = {}, S = {}, N = {}, A = {}, Object.entries(t)))
   for (let [t, r] of Object.entries(n))
     D(e, t, () => new E.Z(r));
 r = n.id, i = a;
@@ -200,7 +200,7 @@ let {
 } = e;
 return t.reduce((e, t) => {
   let [n, r, a] = L(t.guildId, t);
-  return n ? (t.sessionId === i && null != r && null != a && a.channelId !== r.channelId && (p += 1), I++, !0) : e;
+  return n ? (t.sessionId === i && null != r && null != a && a.channelId !== r.channelId && (p += 1), m++, !0) : e;
 }, !1);
   },
   GUILD_DELETE: b,
@@ -225,7 +225,7 @@ for (let n of e.voiceStates) {
 }
 for (let n of e.removedVoiceStateUsers)
   D(e.guildId, n, () => null), t = !0;
-return t && I++, t;
+return t && m++, t;
   },
   RTC_CONNECTION_PLATFORM: function(e) {
 let {

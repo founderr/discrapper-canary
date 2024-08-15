@@ -3,7 +3,7 @@ n.d(t, {
 return g;
   },
   kC: function() {
-return m;
+return I;
   },
   l3: function() {
 return S;
@@ -37,7 +37,7 @@ height: n
   return t > 0 && n > 0;
 }
 
-function I(e) {
+function m(e) {
   let {
 url: t,
 proxy_url: n,
@@ -56,7 +56,7 @@ placeholderVersion: s
   };
 }
 
-function m(e, t, n) {
+function I(e, t, n) {
   let r = {
 id: i().uniqueId('embed_'),
 url: n.url,
@@ -83,12 +83,12 @@ contentScanVersion: n.content_scan_version
 switch (r.type) {
   case u.hBH.ARTICLE:
   case u.hBH.IMAGE:
-    r.image = I(n.thumbnail);
+    r.image = m(n.thumbnail);
     break;
   default:
-    r.thumbnail = I(n.thumbnail);
+    r.thumbnail = m(n.thumbnail);
 }
-  if (null != n.image && p(n.image) && (r.image = I(n.image)), null != n.video && (null == r.thumbnail && null != n.video.proxy_url && p(n.video) && (r.thumbnail = {
+  if (null != n.image && p(n.image) && (r.image = m(n.image)), null != n.video && (null == r.thumbnail && null != n.video.proxy_url && p(n.video) && (r.thumbnail = {
   width: n.video.width,
   height: n.video.height,
   url: function(e, t) {
@@ -104,7 +104,7 @@ switch (r.type) {
     return !1;
   let r = null != n.proxy_url || /^https:/i.test(n.url);
   return null != e && 1492472454139 > l.default.extractTimestamp(e) && (r = r && null != t && E.test(t.name)), r;
-}(t, n.provider, n.video) && (r.video = I(n.video))), c.k.has(r.type)) {
+}(t, n.provider, n.video) && (r.video = m(n.video))), c.k.has(r.type)) {
 var a;
 let e = null !== (a = n.fields) && void 0 !== a ? a : [];
 r.fields = e.map(e => {

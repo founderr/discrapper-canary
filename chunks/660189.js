@@ -51,7 +51,7 @@ return !1;
 ...l
   }, 'MESSAGE_REACTION_ADD' === t ? E[n].firstMessage = l.firstMessage.addReaction(a, c, e.colors, o) : E[n].firstMessage = l.firstMessage.removeReaction(a, c, o);
 }
-class I extends(r = o.ZP.Store) {
+class m extends(r = o.ZP.Store) {
   initialize() {
 this.waitFor(c.Z, d.default);
   }
@@ -66,12 +66,12 @@ return !(e in E) && (E[e] = {
 }), E[e];
   }
 }
-s = 'ForumPostMessagesStore', (a = 'displayName') in(i = I) ? Object.defineProperty(i, a, {
+s = 'ForumPostMessagesStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new I(l.Z, {
+}) : i[a] = s, t.Z = new m(l.Z, {
   CONNECTION_OPEN: function() {
 E = {};
   },

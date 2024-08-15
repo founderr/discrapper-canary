@@ -20,8 +20,8 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let I = {},
-  m = {},
+let m = {},
+  I = {},
   T = {},
   g = {},
   S = {},
@@ -31,12 +31,12 @@ let I = {},
 
 function O(e) {
   let t = T[e];
-  null != t && !t.closed && (I[e] = {
+  null != t && !t.closed && (m[e] = {
 x: t.screenX,
 y: t.screenY,
 width: t.innerWidth,
 height: t.innerHeight,
-alwaysOnTop: !!_.isPlatformEmbedded && m[e]
+alwaysOnTop: !!_.isPlatformEmbedded && I[e]
   });
 }
 
@@ -59,7 +59,7 @@ function C(e) {
 let t = T[e];
 a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', N), t.removeEventListener('blur', N), t.removeEventListener('resize', v);
 let n = g[e];
-a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete T[e], delete m[e], delete S[e], delete g[e];
+a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete T[e], delete I[e], delete S[e], delete g[e];
   }(e), b.emitChange());
 }
 
@@ -102,13 +102,13 @@ null != t && t.close();
 }
 class L extends(r = u.ZP.PersistedStore) {
   initialize(e) {
-window.addEventListener('message', y), window.addEventListener('beforeunload', D), I = null != e ? e : {};
+window.addEventListener('message', y), window.addEventListener('beforeunload', D), m = null != e ? e : {};
   }
   getWindow(e) {
 return T[e];
   }
   getWindowState(e) {
-return I[e];
+return m[e];
   }
   getWindowKeys() {
 return Object.keys(T);
@@ -118,7 +118,7 @@ let t = T[e];
 return null != t && !t.closed;
   }
   getIsAlwaysOnTop(e) {
-return !!m[e];
+return !!I[e];
   }
   getWindowFocused(e) {
 var t, n;
@@ -131,7 +131,7 @@ let n = T[e];
 return (null == n ? void 0 : null === (t = n.document) || void 0 === t ? void 0 : t.visibilityState) === 'visible';
   }
   getState() {
-return I;
+return m;
   }
   unmountWindow(e) {
 return C(e);
@@ -155,7 +155,7 @@ let {
   defaultHeight: s,
   defaultAlwaysOnTop: o = !1,
   ...l
-} = n, u = l, c = o, d = I[t];
+} = n, u = l, c = o, d = m[t];
 if (null != d) {
   let {
     width: e,
@@ -180,7 +180,7 @@ let f = window.open(h.Z5c.POPOUT_WINDOW, t, function(e) {
   }
   return t;
 }(u));
-f.windowKey = t, null == f || f.focus(), T[t] = f, S[t] = r, _.isPlatformEmbedded && (E.ZP.setAlwaysOnTop(t, c), m[t] = c, E.ZP.isAlwaysOnTop(t).then(e => m[t] = e)), A.add(t);
+f.windowKey = t, null == f || f.focus(), T[t] = f, S[t] = r, _.isPlatformEmbedded && (E.ZP.setAlwaysOnTop(t, c), I[t] = c, E.ZP.isAlwaysOnTop(t).then(e => I[t] = e)), A.add(t);
   },
   POPOUT_WINDOW_ADD_STYLESHEET: function(e) {
 let {
@@ -201,7 +201,7 @@ let {
   key: t,
   alwaysOnTop: n
 } = e;
-_.isPlatformEmbedded && (E.ZP.setAlwaysOnTop(t, n), m[t] = n, E.ZP.isAlwaysOnTop(t).then(e => m[t] = e));
+_.isPlatformEmbedded && (E.ZP.setAlwaysOnTop(t, n), I[t] = n, E.ZP.isAlwaysOnTop(t).then(e => I[t] = e));
   },
   LOGOUT: D
 });

@@ -17,8 +17,8 @@ var r = n(235003),
   f = n(726249),
   h = n(395861),
   p = n(953523),
-  I = n(706440),
-  m = n(788675),
+  m = n(706440),
+  I = n(788675),
   T = n(591995),
   g = n(885723),
   S = n(580917),
@@ -80,7 +80,7 @@ id: h.id
   l
 ]),
 {
-  collectionProps: I
+  collectionProps: m
 } = (0, Z.gq)({
   selectionManager: t.selectionManager,
   keyboardDelegate: p,
@@ -90,7 +90,7 @@ id: h.id
   ref: o,
   isVirtualized: !0
 }),
-m = (0, F.tv)(),
+I = (0, F.tv)(),
 {
   isInvalid: T,
   validationErrors: g,
@@ -104,14 +104,14 @@ m = (0, F.tv)(),
 } = (0, K.E)({
   ...e,
   onChange: t.setInputValue,
-  onKeyDown: d ? e.onKeyDown : (0, F.tS)(t.isOpen && I.onKeyDown, n => {
+  onKeyDown: d ? e.onKeyDown : (0, F.tS)(t.isOpen && m.onKeyDown, n => {
     switch (n.key) {
       case 'Enter':
       case 'Tab':
         if (t.isOpen && 'Enter' === n.key && n.preventDefault(), t.isOpen && null != t.selectionManager.focusedKey && t.selectionManager.isLink(t.selectionManager.focusedKey)) {
           if ('Enter' === n.key) {
             let e = l.current.querySelector(`[data-key="${ CSS.escape(t.selectionManager.focusedKey.toString()) }"]`);
-            e instanceof HTMLAnchorElement && m.open(e, n);
+            e instanceof HTMLAnchorElement && I.open(e, n);
           }
           t.close();
         } else
@@ -273,8 +273,8 @@ z = {
   'he-IL': f.Z,
   'hr-HR': h.Z,
   'hu-HU': p.Z,
-  'it-IT': I.Z,
-  'ja-JP': m.Z,
+  'it-IT': m.Z,
+  'ja-JP': I.Z,
   'ko-KR': T.Z,
   'lt-LT': g.Z,
   'lv-LV': S.Z,

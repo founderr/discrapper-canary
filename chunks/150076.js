@@ -19,20 +19,20 @@ u = t.freq,
 _ = t.interval,
 h = t.until,
 p = t.bysetpos,
-I = t.count;
-  if (0 === I || 0 === _)
+m = t.count;
+  if (0 === m || 0 === _)
 return f(e);
-  var m = d.o.fromDate(n),
+  var I = d.o.fromDate(n),
 T = new a.Z(t);
-  T.rebuild(m.year, m.month);
+  T.rebuild(I.year, I.month);
   for (var g = function(e, t, n) {
   var i = n.freq,
     a = n.byhour,
     u = n.byminute,
     c = n.bysecond;
   return (0, r.e)(i) ? (0, o.hl)(n) : i >= s.Ci.HOURLY && (0, l.Dw)(a) && !(0, l.q9)(a, t.hour) || i >= s.Ci.MINUTELY && (0, l.Dw)(u) && !(0, l.q9)(u, t.minute) || i >= s.Ci.SECONDLY && (0, l.Dw)(c) && !(0, l.q9)(c, t.second) ? [] : e.gettimeset(i)(t.hour, t.minute, t.second, t.millisecond);
-}(T, m, t);;) {
-var S = T.getdayset(u)(m.year, m.month, m.day),
+}(T, I, t);;) {
+var S = T.getdayset(u)(I.year, I.month, I.day),
   A = S[0],
   N = S[1],
   v = S[2],
@@ -59,7 +59,7 @@ if ((0, l.Dw)(p)) {
       return f(e);
     if (y >= n) {
       var D = E(y, t);
-      if (!e.accept(D) || I && !--I)
+      if (!e.accept(D) || m && !--m)
         return f(e);
     }
   }
@@ -74,16 +74,16 @@ if ((0, l.Dw)(p)) {
           return f(e);
         if (y >= n) {
           var D = E(y, t);
-          if (!e.accept(D) || I && !--I)
+          if (!e.accept(D) || m && !--m)
             return f(e);
         }
       }
   }
 if (0 === t.interval)
   return f(e);
-if (m.add(t, O), m.year > i.VQ)
+if (I.add(t, O), I.year > i.VQ)
   return f(e);
-!(0, r.e)(u) && (g = T.gettimeset(u)(m.hour, m.minute, m.second, 0)), T.rebuild(m.year, m.month);
+!(0, r.e)(u) && (g = T.gettimeset(u)(I.hour, I.minute, I.second, 0)), T.rebuild(I.year, I.month);
   }
 }
 

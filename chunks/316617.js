@@ -12,11 +12,11 @@ var r = n(735250),
   f = n(592125),
   h = n(217702),
   p = n(689938),
-  I = n(644830);
+  m = n(644830);
 t.Z = e => {
   let {
 message: t
-  } = e, n = (0, l.ZP)(t), m = (0, a.e7)([f.Z], () => f.Z.getChannel(t.channel_id)), T = i.useMemo(() => (0, o.Z)(t), [t]), {
+  } = e, n = (0, l.ZP)(t), I = (0, a.e7)([f.Z], () => f.Z.getChannel(t.channel_id)), T = i.useMemo(() => (0, o.Z)(t), [t]), {
 content: g
   } = (0, E.Z)(T, {
 hideSimpleEmbedContent: !1
@@ -25,12 +25,12 @@ let {
   leadingIcon: e,
   trailingIcon: n
 } = (0, _.f)(t, g, !1, '', {
-  leadingIconClass: I.attachmentIcon,
-  trailingIconClass: I.attachmentIcon,
+  leadingIconClass: m.attachmentIcon,
+  trailingIconClass: m.attachmentIcon,
   iconSize: h.WW
 });
 return (0, r.jsxs)('div', {
-  className: I.contentContainer,
+  className: m.contentContainer,
   children: [
     e,
     (0, r.jsx)(c.ZP, {
@@ -44,23 +44,23 @@ return (0, r.jsxs)('div', {
 t,
 g
   ]);
-  return null == m ? null : (0, r.jsxs)('div', {
-className: I.container,
+  return null == I ? null : (0, r.jsxs)('div', {
+className: m.container,
 children: [
   (0, r.jsx)(s.Heading, {
-    className: I.header,
+    className: m.header,
     variant: 'heading-sm/semibold',
     children: p.Z.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
   }),
   (0, r.jsx)(s.Scroller, {
-    className: I.messagePreviewContainer,
+    className: m.messagePreviewContainer,
     children: (0, r.jsx)(u.Z, {
       childrenMessageContent: S(),
       childrenHeader: (0, r.jsx)(d.ZP, {
         message: t,
-        channel: m,
+        channel: I,
         author: n,
-        guildId: m.guild_id
+        guildId: I.guild_id
       }),
       disableInteraction: !0
     })

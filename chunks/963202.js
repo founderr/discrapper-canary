@@ -136,7 +136,7 @@ autoTrackExposure: !1
   });
 }
 
-function I(e) {
+function m(e) {
   var t, n;
   let {
 valorantConfig: r,
@@ -145,7 +145,7 @@ genshinConfig: i
   return null !== (n = null !== (t = null == i ? void 0 : i.defaultGameId) && void 0 !== t ? t : null == r ? void 0 : r.defaultGameId) && void 0 !== n ? n : null;
 }
 
-function m(e) {
+function I(e) {
   let {
 guilds: t,
 valorantConfig: n,
@@ -166,11 +166,11 @@ return null != e && e.hasFeature(u.oNc.RAPIDASH_TEST) && c.getCurrentConfig({
 }, {
   autoTrackExposure: !1
 }).enableClanCreation && (t || !e.hasFeature(u.oNc.CLAN));
-  }(e, s)) : l, f = d.length > 0 && r.enableClanCreation, h = _.length > 0 && n.enableClanCreation, p = E.length > 0 && a.enableClanCreation, m = [];
-  return f && d.forEach(e => m.push(e)), h && _.forEach(e => m.push(e)), p && E.forEach(e => m.push(e)), {
-guilds: m,
+  }(e, s)) : l, f = d.length > 0 && r.enableClanCreation, h = _.length > 0 && n.enableClanCreation, p = E.length > 0 && a.enableClanCreation, I = [];
+  return f && d.forEach(e => I.push(e)), h && _.forEach(e => I.push(e)), p && E.forEach(e => I.push(e)), {
+guilds: I,
 enableClanCreation: f || h || p,
-defaultGameId: I({
+defaultGameId: m({
   genshinConfig: f ? r : void 0,
   valorantConfig: h ? n : void 0
 })
@@ -209,7 +209,7 @@ o,
 t,
 a
   ]);
-  return m({
+  return I({
 guilds: o,
 valorantConfig: l,
 genshinConfig: u,
@@ -238,7 +238,7 @@ location: n
   }, {
 autoTrackExposure: i
   });
-  return m({
+  return I({
 guilds: [t],
 valorantConfig: a,
 genshinConfig: s,
@@ -256,7 +256,7 @@ location: t
   }, {
 autoTrackExposure: n
   });
-  return I({
+  return m({
 valorantConfig: r,
 genshinConfig: f.useExperiment({
   location: t

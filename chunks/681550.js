@@ -87,8 +87,8 @@ var _ = [
       configurable: !0
     }
   }), t && l(e, t);
-}(I, e);
-var t, n, i, f, h, p = (t = I, n = function() {
+}(m, e);
+var t, n, i, f, h, p = (t = m, n = function() {
   if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham)
     return !1;
   if ('function' == typeof Proxy)
@@ -106,12 +106,12 @@ var t, n, i, f, h, p = (t = I, n = function() {
     }(this, e);
 });
 
-function I() {
+function m() {
   var e;
   ! function(e, t) {
     if (!(e instanceof t))
       throw TypeError('Cannot call a class as a function');
-  }(this, I);
+  }(this, m);
   for (var t = arguments.length, n = Array(t), r = 0; r < t; r++)
     n[r] = arguments[r];
   return d(u(e = p.call.apply(p, [this].concat(n))), 'priority', 90), d(u(e), 'subPriority', 1), d(u(e), 'incompatibleTokens', [
@@ -129,7 +129,7 @@ function I() {
     'T'
   ]), e;
 }
-return i = I, f = [{
+return i = m, f = [{
     key: 'parse',
     value: function(e, t, n) {
       switch (t) {
@@ -159,5 +159,5 @@ return i = I, f = [{
       return e.setUTCDate(n), e.setUTCHours(0, 0, 0, 0), e;
     }
   }
-], o(i.prototype, f), I;
+], o(i.prototype, f), m;
   }(i._);

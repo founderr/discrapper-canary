@@ -1,6 +1,6 @@
 n.d(t, {
   Hf: function() {
-return I;
+return m;
   },
   JT: function() {
 return T;
@@ -21,7 +21,7 @@ return f;
 return g;
   },
   wi: function() {
-return m;
+return I;
   }
 }), n(47120), n(724458), n(653041);
 var r = n(470079),
@@ -82,7 +82,7 @@ sections: r.descriptors
   };
 }
 
-function I(e) {
+function m(e) {
   let t = l.ZP.getUserState(),
 n = l.ZP.getContextState(e);
   return [
@@ -91,7 +91,7 @@ null == n ? void 0 : n.result
   ];
 }
 
-function m(e, t, n) {
+function I(e, t, n) {
   let s = (0, i.e7)([a.Z], () => a.Z.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
 {
   descriptors: u,
@@ -103,9 +103,9 @@ function m(e, t, n) {
   allowFetch: !0
 }),
 [h, p] = r.useState(null),
-I = r.useRef(!1);
-  I.current = f;
-  let m = r.useMemo(() => {
+m = r.useRef(!1);
+  m.current = f;
+  let I = r.useMemo(() => {
 var e;
 return N(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
   }, [
@@ -114,13 +114,13 @@ n.placeholderCount
   ]);
   return r.useMemo(() => {
 let e = {
-  loading: I,
+  loading: m,
   commands: c,
   activeSections: u,
   commandsByActiveSection: d,
   filteredSectionId: h,
   hasMoreAfter: !1,
-  placeholders: f ? m : [],
+  placeholders: f ? I : [],
   sectionDescriptors: u,
   filterSection: e => {
     p(e);
@@ -138,7 +138,7 @@ if (f) {
         section: t.section,
         data: [
           ...t.data,
-          ...m
+          ...I
         ]
       },
       ...d.slice(1)
@@ -147,12 +147,12 @@ if (f) {
     let t = o.Tm[_.bi.BUILT_IN];
     e.activeSections = [t], e.commandsByActiveSection = [{
       section: t,
-      data: m
+      data: I
     }];
   }
   e.commands = [
     ...c,
-    ...m
+    ...I
   ];
 }
 return e;
@@ -162,7 +162,7 @@ u,
 h,
 d,
 f,
-m
+I
   ]);
 }
 

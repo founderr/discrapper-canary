@@ -17,8 +17,8 @@ var r = n(939421),
   f = n(674360),
   h = n(918203),
   p = n(620018),
-  I = n(519718),
-  m = n(648980),
+  m = n(519718),
+  I = n(648980),
   T = n(576094),
   g = n(397250),
   S = n(617451),
@@ -61,8 +61,8 @@ function j(e, t, n) {
   label: f,
   formatOptions: h,
   onBlur: p = () => {},
-  onFocus: I,
-  onFocusChange: m,
+  onFocus: m,
+  onFocusChange: I,
   onKeyDown: T,
   onKeyUp: g,
   description: S,
@@ -177,8 +177,8 @@ ea = (0, k.useCallback)(e => {
     t.validate(e) && t.setInputValue(e);
   },
   onBlur: p,
-  onFocus: I,
-  onFocusChange: m,
+  onFocus: m,
+  onFocusChange: I,
   onKeyDown: (0, k.useMemo)(() => (0, G.tS)(ea, T), [
     ea,
     T
@@ -205,8 +205,8 @@ spellCheck: 'false'
 eh = e['aria-label'] || ('string' == typeof e.label ? e.label : '');
   !eh && (i = null != e.label ? eu.id : e['aria-labelledby']);
   let ep = (0, G.Me)(),
-eI = (0, G.Me)(),
-em = (0, G.dG)(z, {
+em = (0, G.Me)(),
+eI = (0, G.dG)(z, {
   'aria-label': o || M.format('increase', {
     fieldLabel: eh
   }).trim(),
@@ -223,8 +223,8 @@ eT = (0, G.dG)(q, {
   'aria-label': s || M.format('decrease', {
     fieldLabel: eh
   }).trim(),
-  id: i && !s ? eI : null,
-  'aria-labelledby': i && !s ? `${ eI } ${ i }` : null,
+  id: i && !s ? em : null,
+  'aria-labelledby': i && !s ? `${ em } ${ i }` : null,
   'aria-controls': P,
   excludeFromTabOrder: !0,
   preventFocusOnPress: !0,
@@ -241,7 +241,7 @@ groupProps: {
 },
 labelProps: eu,
 inputProps: eE,
-incrementButtonProps: em,
+incrementButtonProps: eI,
 decrementButtonProps: eT,
 errorMessageProps: e_,
 descriptionProps: ed,
@@ -265,8 +265,8 @@ Y = {
   'he-IL': f.Z,
   'hr-HR': h.Z,
   'hu-HU': p.Z,
-  'it-IT': I.Z,
-  'ja-JP': m.Z,
+  'it-IT': m.Z,
+  'ja-JP': I.Z,
   'ko-KR': T.Z,
   'lt-LT': g.Z,
   'lv-LV': S.Z,

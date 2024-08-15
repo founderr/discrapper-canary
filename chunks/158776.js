@@ -9,8 +9,8 @@ var r, i, a, s, o = n(348327),
   f = n(106301),
   h = n(709054),
   p = n(314897),
-  I = n(594174),
-  m = n(981631);
+  m = n(594174),
+  I = n(981631);
 let T = Object.freeze([]),
   g = {},
   S = {},
@@ -24,13 +24,13 @@ function O(e, t) {
 }
 let R = e => {
 switch (e.type) {
-  case m.IIU.CUSTOM_STATUS:
+  case I.IIU.CUSTOM_STATUS:
     return 4;
-  case m.IIU.COMPETING:
+  case I.IIU.COMPETING:
     return 3;
-  case m.IIU.STREAMING:
+  case I.IIU.STREAMING:
     return 2;
-  case m.IIU.PLAYING:
+  case I.IIU.PLAYING:
     return 1;
   default:
     return 0;
@@ -47,7 +47,7 @@ function D(e) {
   if (delete S[e], delete A[e], delete N[e], null == g[e])
 return;
   let [t] = c().sortBy(g[e], e => -e.timestamp);
-  t.status !== m.Skl.OFFLINE ? (S[e] = t.status, A[e] = t.activities, null != t.clientStatus && (N[e] = t.clientStatus)) : c().every(g[e], e => e.status === m.Skl.OFFLINE) && delete g[e];
+  t.status !== I.Skl.OFFLINE ? (S[e] = t.status, A[e] = t.activities, null != t.clientStatus && (N[e] = t.clientStatus)) : c().every(g[e], e => e.status === I.Skl.OFFLINE) && delete g[e];
 }
 
 function L(e) {
@@ -55,7 +55,7 @@ function L(e) {
   if (null == t)
 return;
   let n = c().maxBy(Object.values(t), e => e.timestamp);
-  n.status !== m.Skl.OFFLINE && (S[e] = n.status, A[e] = n.activities, null != n.clientStatus && (N[e] = n.clientStatus));
+  n.status !== I.Skl.OFFLINE && (S[e] = n.status, A[e] = n.activities, null != n.clientStatus && (N[e] = n.clientStatus));
 }
 
 function b(e) {
@@ -70,11 +70,11 @@ activities: a
 return !1;
   let s = g[n];
   if (null == s) {
-if (r === m.Skl.OFFLINE)
+if (r === I.Skl.OFFLINE)
   return !1;
 s = g[n] = {};
   }
-  if (r === m.Skl.OFFLINE)
+  if (r === I.Skl.OFFLINE)
 s[t] = {
   status: r,
   clientStatus: i,
@@ -107,11 +107,11 @@ timestamp: s
 return;
   let o = g[n];
   if (null == o) {
-if (r === m.Skl.OFFLINE)
+if (r === I.Skl.OFFLINE)
   return;
 o = g[n] = {};
   }
-  if (r === m.Skl.OFFLINE)
+  if (r === I.Skl.OFFLINE)
 o[t] = {
   status: r,
   clientStatus: i,
@@ -152,10 +152,10 @@ S[p.default.getId()] = e, A[p.default.getId()] = t;
   getStatus(e) {
 var t, n;
 let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-  i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m.Skl.OFFLINE,
-  a = I.default.getUser(e);
-if (null != a && a.hasFlag(m.xW$.BOT_HTTP_INTERACTIONS) && (i = m.Skl.UNKNOWN), null == a ? void 0 : a.isClyde())
-  return m.Skl.ONLINE;
+  i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : I.Skl.OFFLINE,
+  a = m.default.getUser(e);
+if (null != a && a.hasFlag(I.xW$.BOT_HTTP_INTERACTIONS) && (i = I.Skl.UNKNOWN), null == a ? void 0 : a.isClyde())
+  return I.Skl.ONLINE;
 if (null == r)
   return null !== (t = S[e]) && void 0 !== t ? t : i;
 let s = O(e, r);
@@ -172,7 +172,7 @@ return null == r || null == r.activities ? T : r.activities;
   }
   getPrimaryActivity(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-return this.getActivities(e, t).filter(e => e.type !== m.IIU.HANG_STATUS)[0];
+return this.getActivities(e, t).filter(e => e.type !== I.IIU.HANG_STATUS)[0];
   }
   getAllApplicationActivities(e) {
 let t = [];
@@ -200,7 +200,7 @@ return h.default.keys(A);
   }
   isMobileOnline(e) {
 let t = N[e];
-return null != t && t[m.X5t.MOBILE] === m.Skl.ONLINE && t[m.X5t.DESKTOP] !== m.Skl.ONLINE;
+return null != t && t[I.X5t.MOBILE] === I.Skl.ONLINE && t[I.X5t.DESKTOP] !== I.Skl.ONLINE;
   }
   getClientStatus(e) {
 return N[e];
@@ -263,7 +263,7 @@ t.forEach(e => {
     activities: s
   } = e;
   null != t && (M({
-    guildId: m.ME,
+    guildId: I.ME,
     userId: t.id,
     status: n,
     clientStatus: r,
@@ -324,7 +324,7 @@ return t.map(e => {
     activities: a
   } = e;
   return b({
-    guildId: null != t ? t : m.ME,
+    guildId: null != t ? t : I.ME,
     userId: n.id,
     status: r,
     clientStatus: i,
@@ -336,7 +336,7 @@ return t.map(e => {
 let {
   presences: t
 } = e;
-U(m.ME), t.forEach(e => {
+U(I.ME), t.forEach(e => {
   let {
     user: t,
     status: n,
@@ -344,7 +344,7 @@ U(m.ME), t.forEach(e => {
     activities: i
   } = e;
   null != t && b({
-    guildId: m.ME,
+    guildId: I.ME,
     userId: t.id,
     status: n,
     clientStatus: r,

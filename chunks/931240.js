@@ -1,6 +1,6 @@
 n.d(t, {
   Ii: function() {
-return m;
+return I;
   },
   LX: function() {
 return E;
@@ -15,7 +15,7 @@ return g;
 return f;
   },
   aH: function() {
-return I;
+return m;
   },
   mf: function() {
 return h;
@@ -147,7 +147,7 @@ brandPrimaryColor: e.brand_color_primary,
 brandSecondaryColor: e.brand_color_secondary
   };
 };
-async function I(e) {
+async function m(e) {
   i.Z.dispatch({
 type: 'CLAN_SETTINGS_FETCH_START'
   });
@@ -160,7 +160,7 @@ guildId: e,
 settings: p(t.body)
   });
 }
-async function m(e, t) {
+async function I(e, t) {
   i.Z.dispatch({
 type: 'CLAN_SETTINGS_SUBMIT',
 guildId: e

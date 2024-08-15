@@ -13,8 +13,8 @@ var i = n(120356),
   f = n(592125),
   h = n(594174),
   p = n(979651),
-  I = n(374129),
-  m = n(639351),
+  m = n(374129),
+  I = n(639351),
   T = n(503438),
   g = n(802856),
   S = n(387903),
@@ -68,7 +68,7 @@ children: (() => {
       look: k,
       color: G,
       onAction: F,
-      Icon: m.Z
+      Icon: I.Z
     }, 'ConnectPlatformActivityButton');
   if ((null == t ? void 0 : t.platform) === M.M7m.PS4 || (null == t ? void 0 : t.platform) === M.M7m.PS5)
     return (0, r.jsx)(A.Z, {
@@ -76,7 +76,7 @@ children: (() => {
       color: G,
       platform: d.Z.get(M.ABu.PLAYSTATION),
       onAction: F,
-      Icon: I.Z
+      Icon: m.Z
     }, 'ConnectPlatformActivityButton');
   if (W) {
     let e = (0, r.jsx)(D.Z, {

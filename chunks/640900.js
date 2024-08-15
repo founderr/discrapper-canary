@@ -23,15 +23,15 @@ isReadOnly: _ = !1,
 type: E = 'text',
 validationBehavior: f = 'aria'
   } = e, [h, p] = (0, a.zk)(e.value, e.defaultValue || '', e.onChange), {
-focusableProps: I
-  } = (0, o.kc)(e, t), m = (0, u.Q3)({
+focusableProps: m
+  } = (0, o.kc)(e, t), I = (0, u.Q3)({
 ...e,
 value: h
   }), {
 isInvalid: T,
 validationErrors: g,
 validationDetails: S
-  } = m.displayValidation, {
+  } = I.displayValidation, {
 labelProps: A,
 fieldProps: N,
 descriptionProps: v,
@@ -46,7 +46,7 @@ labelable: !0
 type: E,
 pattern: e.pattern
   };
-  return (0, i.y$)(t, h, p), (0, l.Q)(e, m, t), (0, r.useEffect)(() => {
+  return (0, i.y$)(t, h, p), (0, l.Q)(e, I, t), (0, r.useEffect)(() => {
 if (t.current instanceof(0, i.kR)(t.current).HTMLTextAreaElement) {
   let e = t.current;
   Object.defineProperty(e, 'defaultValue', {
@@ -85,7 +85,7 @@ inputProps: (0, i.dG)(R, 'input' === n && C, {
   onSelect: e.onSelect,
   onBeforeInput: e.onBeforeInput,
   onInput: e.onInput,
-  ...I,
+  ...m,
   ...N
 }),
 descriptionProps: v,

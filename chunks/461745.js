@@ -1,6 +1,6 @@
 n.d(t, {
   BK: function() {
-return m;
+return I;
   },
   Fj: function() {
 return r;
@@ -25,19 +25,19 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let I = Object.freeze({
+let m = Object.freeze({
   SMALL: h.small,
   MEDIUM: h.medium,
   LARGE: h.large
 });
 (a = r || (r = {})).MEMBER = 'MEMBER', a.ROLE = 'ROLE', a.CHANNEL = 'CHANNEL', a.GUILD = 'GUILD', a.USER = 'USER';
-let m = e => {
+let I = e => {
   let {
 hasContent: t,
 onClear: n,
 className: r,
 themeOverride: i,
-size: a = I.SMALL
+size: a = m.SMALL
   } = e;
   return (0, s.jsx)(c.Clickable, {
 className: u()(r, h.iconLayout, a, (0, _.Q)(i), {
@@ -175,7 +175,7 @@ let {
   maxHeight: l,
   tags: E,
   onActivate: p,
-  className: I,
+  className: m,
   inputProps: T,
   focusAfterReady: g
 } = this.props, S = null != t && t.length > 0, A = !1, N = [];
@@ -230,7 +230,7 @@ return null != E && E.length > 0 && ('string' == typeof E[0] ? E.forEach((e, t) 
   ringTarget: this.containerRef,
   children: (0, s.jsx)('div', {
     ref: this.containerRef,
-    className: u()(I, h.container, o, (0, _.Q)(r), {
+    className: u()(m, h.container, o, (0, _.Q)(r), {
       [h.disabled]: i
     }),
     children: (0, s.jsxs)(c.ScrollerThin, {
@@ -259,7 +259,7 @@ return null != E && E.length > 0 && ('string' == typeof E[0] ? E.forEach((e, t) 
           ...this.defaultInputProps,
           ...T
         }),
-        null != a ? (0, s.jsx)(m, {
+        null != a ? (0, s.jsx)(I, {
           size: o,
           themeOverride: r,
           hasContent: S,
@@ -325,8 +325,8 @@ super(...e), p(this, 'defaultInputProps', {
 });
   }
 }
-p(T, 'Sizes', I), p(T, 'defaultProps', {
-  size: I.SMALL,
+p(T, 'Sizes', m), p(T, 'defaultProps', {
+  size: m.SMALL,
   query: '',
   sections: [],
   selectedSection: 0,

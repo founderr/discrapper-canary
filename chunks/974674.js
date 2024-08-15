@@ -23,8 +23,8 @@ var r = n(735250),
   f = n(51144),
   h = n(182294),
   p = n(981631),
-  I = n(419061),
-  m = n(689938),
+  m = n(419061),
+  I = n(689938),
   T = n(681539);
 let g = {
   tension: 1200,
@@ -152,11 +152,11 @@ width: (0, h.px)(n),
 height: (0, h.px)(n)
   }, D = null == g || S ? void 0 : function(e, t) {
 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-return null != t ? m.Z.Messages.LABEL_WITH_ONLINE_STATUS.format({
+return null != t ? I.Z.Messages.LABEL_WITH_ONLINE_STATUS.format({
   label: e,
   status: (0, f.u5)(t, n)
 }) : e;
-  }(g, A, N), L = C.size * I.hs, b = function(e, t, n, r) {
+  }(g, A, N), L = C.size * m.hs, b = function(e, t, n, r) {
 if (null == e)
   return null;
 if (r)
@@ -302,8 +302,8 @@ statusColor: a,
 isMobile: o = !1,
 isTyping: l = !1,
 typingIndicatorRef: _,
-isSpeaking: I = !1,
-statusTooltip: m = !1,
+isSpeaking: m = !1,
+statusTooltip: I = !1,
 statusTooltipDelay: g,
 statusBackdropColor: S,
 'aria-hidden': v = !1,
@@ -398,13 +398,13 @@ children: (0, r.jsxs)('svg', {
       }(D, i, o, l), ')'),
       children: (0, r.jsx)(R, {
         src: t,
-        isSpeaking: I,
+        isSpeaking: m,
         className: y
       })
     }),
     null != D && null != S ? N(S, o, L, D) : null,
     null != D ? (0, r.jsx)(d.u, {
-      text: m ? (0, f.u5)(D) : null,
+      text: I ? (0, f.u5)(D) : null,
       'aria-label': !1,
       position: 'top',
       spacing: 5 + 1.5 * L.stroke,
@@ -440,8 +440,8 @@ fromColor: a,
 isMobile: l = !1,
 isTyping: E = !1,
 typingIndicatorRef: p,
-isSpeaking: I = !1,
-size: m,
+isSpeaking: m = !1,
+size: I,
 src: A,
 status: C,
 statusColor: y,
@@ -454,7 +454,7 @@ imageClassName: U
   } = e, w = (0, c.vj)(C, y), x = i.useId(), G = i.useId(), [k] = i.useState(() => ({
 fill: a,
 ...v({
-  size: m,
+  size: I,
   status: n,
   isMobile: t,
   isTyping: !1
@@ -462,14 +462,14 @@ fill: a,
   })), B = i.useMemo(() => ({
 fill: w,
 ...v({
-  size: m,
+  size: I,
   status: C,
   isMobile: l,
   isTyping: E
 })
   }), [
 w,
-m,
+I,
 C,
 l,
 E
@@ -485,7 +485,7 @@ fill: j,
 config: g,
 from: k,
 to: B
-  }, document.hasFocus() ? 'animate-always' : 'animate-never'), K = (0, h.px)(m), z = (0, h.UC)(m), q = z.status * h.D6, Q = z.status * h.EW, X = null != C ? (z.status * h.D6 - z.status) / 2 : 0, $ = z.size - z.status - X - z.offset, J = z.size - Q - z.offset, ee = z.size + Math.ceil(X);
+  }, document.hasFocus() ? 'animate-always' : 'animate-never'), K = (0, h.px)(I), z = (0, h.UC)(I), q = z.status * h.D6, Q = z.status * h.EW, X = null != C ? (z.status * h.D6 - z.status) / 2 : 0, $ = z.size - z.status - X - z.offset, J = z.size - Q - z.offset, ee = z.size + Math.ceil(X);
   return (0, r.jsx)(O, {
 ...e,
 ariaLabel: P,
@@ -530,7 +530,7 @@ children: (0, r.jsxs)('svg', {
       mask: 'url(#'.concat(x, ')'),
       children: (0, r.jsx)(R, {
         src: A,
-        isSpeaking: I,
+        isSpeaking: m,
         className: U
       })
     }),
@@ -571,7 +571,7 @@ children: (0, r.jsxs)('svg', {
             ]
           }),
           (0, r.jsx)(S, {
-            size: m,
+            size: I,
             isMobile: l,
             isTyping: E,
             className: T.pointerEvents,
@@ -593,25 +593,25 @@ status: u,
   } = e, {
 isMobile: _ = !1,
 isTyping: E = !1
-  } = d, f = i.useRef(u), h = i.useRef(_), I = (0, c.vj)(u, l), m = i.useRef(I), T = i.useRef(!1);
+  } = d, f = i.useRef(u), h = i.useRef(_), m = (0, c.vj)(u, l), I = i.useRef(m), T = i.useRef(!1);
   let g = T.current || (t = E, n = u, a = f.current, s = _, o = h.current, null != a && null != n && (!!t || n !== a || n === p.Skl.ONLINE && s !== o || !1));
   return i.useLayoutEffect(() => {
-T.current = g, f.current = u, h.current = _, m.current = I;
+T.current = g, f.current = u, h.current = _, I.current = m;
   }, [
 u,
 _,
-I,
+m,
 g
   ]), null != u && null != f.current && g ? (0, r.jsx)(y, {
 ...d,
 status: u,
-statusColor: I,
+statusColor: m,
 fromStatus: f.current,
 fromIsMobile: h.current,
-fromColor: m.current
+fromColor: I.current
   }) : (0, r.jsx)(C, {
 ...d,
 status: u,
-statusColor: I
+statusColor: m
   });
 });

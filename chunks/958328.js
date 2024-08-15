@@ -55,8 +55,8 @@ k = (0, l.e7)([h.Z], () => h.Z.computePermissions(t)),
 v = (0, l.e7)([h.Z], () => h.Z.computePermissions(n)),
 _ = (0, s.ZP)(t, !0),
 w = null != t ? (0, b.IG)(t, !1, !0) : null,
-C = null != n ? p.Z.getGuildPermissionSpecMap(n) : null,
-j = Object.values(null != w ? w : {}).map(e => {
+j = null != n ? p.Z.getGuildPermissionSpecMap(n) : null,
+C = Object.values(null != w ? w : {}).map(e => {
   let {
     title: r,
     flag: t
@@ -66,7 +66,7 @@ j = Object.values(null != w ? w : {}).map(e => {
     can: n
   }, r);
 }),
-N = Object.values(null != C ? C : {}).map(e => {
+N = Object.values(null != j ? j : {}).map(e => {
   let {
     title: r,
     flag: t
@@ -88,7 +88,7 @@ children: (0, a.jsxs)('div', {
           variant: 'heading-md/semibold',
           children: null != _ ? 'Permissions in '.concat(_) : 'No channel selected'
         }),
-        j
+        C
       ]
     }),
     (0, a.jsxs)('section', {

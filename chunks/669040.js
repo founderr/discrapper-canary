@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(2052),
   h = n(906732),
   p = n(218867),
-  I = n(806966),
-  m = n(28546),
+  m = n(806966),
+  I = n(28546),
   T = n(691251),
   g = n(98528),
   S = n(551058),
@@ -60,7 +60,7 @@ let {
   sectionDescriptors: E,
   setCollapsedSections: h,
   getEmojiItemProps: p,
-  getEmojiRowProps: m,
+  getEmojiRowProps: I,
   isScrolling: g,
   isUsingKeyboardNavigation: N,
   allowAnimatedEmoji: v,
@@ -100,7 +100,7 @@ let {
     visibleRowIndex: n
   } = e, r = e.type === G.ld.EMOJI ? e.emoji.allNamesString : e.name;
   H.current !== F.xAR && window.cancelAnimationFrame(H.current), H.current = window.requestAnimationFrame(() => {
-    I.kJ.setInspectedExpressionPosition(t, n, T.u.MOUSE_EVENT), I.kJ.setSearchPlaceholder(r), H.current = F.xAR;
+    m.kJ.setInspectedExpressionPosition(t, n, T.u.MOUSE_EVENT), m.kJ.setSearchPlaceholder(r), H.current = F.xAR;
   });
 }, []), et = (0, c.e7)([A.qc], () => A.qc.hasHotspot(A.v6.FAVORITE_EMOJI_TOOLTIP), []), en = i.useMemo(() => l().memoize((e, t) => {
   let n = a[e],
@@ -112,7 +112,7 @@ let {
     onInspect: ee,
     onSelect: u,
     getEmojiItemProps: p,
-    getEmojiRowProps: m,
+    getEmojiRowProps: I,
     isScrolling: g,
     isUsingKeyboardNavigation: N,
     rowIndex: e,
@@ -133,7 +133,7 @@ let {
   ee,
   u,
   p,
-  m,
+  I,
   g,
   N,
   v,
@@ -269,7 +269,7 @@ let {
   messageId: x,
   isBurstReaction: k,
   listHeaderClassName: B
-} = e, V = i.useRef(!1), j = I.kJ.useStore(e => e.activeCategoryIndex), W = (0, m.Iu)(e => e.searchQuery), K = y.Yk.useSetting(), z = (0, c.e7)([D.default], () => D.default.getCurrentUser()), q = (0, b.I5)(z), {
+} = e, V = i.useRef(!1), j = m.kJ.useStore(e => e.activeCategoryIndex), W = (0, I.Iu)(e => e.searchQuery), K = y.Yk.useSetting(), z = (0, c.e7)([D.default], () => D.default.getCurrentUser()), q = (0, b.I5)(z), {
   location: Q
 } = (0, f.O)(), {
   analyticsLocations: X
@@ -288,7 +288,7 @@ let {
   renderSectionFooter: ef,
   sectionMarginBottom: eh,
   sectionHeaderHeight: ep,
-  sectionFooterHeight: eI
+  sectionFooterHeight: em
 } = J({
   collapsedSections: T,
   diversitySurrogate: t,
@@ -309,7 +309,7 @@ let {
   listHeaderClassName: B,
   activeSectionIndex: ee,
   upsellGlowOpacity: ei
-}), em = (0, g.Uf)({
+}), eI = (0, g.Uf)({
   listRef: a,
   searchQuery: W,
   nitroLockedSectionStates: d,
@@ -320,7 +320,7 @@ let {
   isScrolling: V,
   listRef: a,
   onActiveCategoryIndexChange: e => {
-    et(e), '' === W && I.kJ.setActiveCategoryIndex(e);
+    et(e), '' === W && m.kJ.setActiveCategoryIndex(e);
   },
   scrollOffset: 0,
   searchQuery: W,
@@ -332,9 +332,9 @@ let {
   listRef: a
 });
 let eg = i.useCallback(e => {
-    em(e), eT(e);
+    eI(e), eT(e);
   }, [
-    em,
+    eI,
     eT
   ]),
   eS = d.length > 0;
@@ -367,7 +367,7 @@ return i.useEffect(() => {
       rowHeight: $(s),
       sectionHeaderHeight: ep,
       sectionMarginBottom: eh,
-      sectionFooterHeight: eI,
+      sectionFooterHeight: em,
       stickyHeaders: !0,
       ref: a
     }) : (0, r.jsx)(E.Z, {

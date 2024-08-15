@@ -54,9 +54,9 @@ var i = n(654861),
 let h = (r = n(426563).Z).DEFAULT_AVATARS;
 r.DEFAULT_GROUP_DM_AVATARS;
 let p = r.canUseWebp(),
-  I = (0, c.isAndroid)();
+  m = (0, c.isAndroid)();
 
-function m(e) {
+function I(e) {
   let t, {
 endpoint: n,
 path: r,
@@ -85,7 +85,7 @@ animated: n,
 size: r,
 forcePNG: i = !1
   } = e, a = p && !i ? 'webp' : 'png';
-  return null != window.GLOBAL_ENV.CDN_HOST ? ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/emojis/').concat(t, '.').concat(n ? 'gif' : a, '?size=').concat((0, l.oO)(r * (0, l.x_)(), I)).concat(p && !I ? '&quality=lossless' : '') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + _.ANM.EMOJI(t, n ? 'gif' : a);
+  return null != window.GLOBAL_ENV.CDN_HOST ? ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/emojis/').concat(t, '.').concat(n ? 'gif' : a, '?size=').concat((0, l.oO)(r * (0, l.x_)(), m)).concat(p && !m ? '&quality=lossless' : '') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + _.ANM.EMOJI(t, n ? 'gif' : a);
 }
 
 function g(e, t) {
@@ -109,7 +109,7 @@ if (e)
 if (null == n && '0000' === i)
   return h[0];
   }
-  return m({
+  return I({
 endpoint: _.ANM.AVATAR,
 path: 'avatars',
 id: t,
@@ -265,7 +265,7 @@ icon: n,
 size: r,
 canAnimate: i = !1
   } = e;
-  return m({
+  return I({
 endpoint: _.ANM.GUILD_ICON,
 path: 'icons',
 id: t,
@@ -282,7 +282,7 @@ icon: n,
 size: r = _.IXf,
 canAnimate: i = !1
   } = e;
-  return m({
+  return I({
 endpoint: _.ANM.GUILD_TEMPLATE_ICON,
 path: 'guild-templates',
 id: t,
@@ -307,7 +307,7 @@ if (null != e)
   return e;
   }
   if (null != n)
-return m({
+return I({
   endpoint: _.ANM.APPLICATION_ICON,
   path: 'app-icons',
   id: t,
@@ -332,7 +332,7 @@ size: r = _.IXf,
 keepAspectRatio: i = !1,
 format: a
   } = e;
-  return m({
+  return I({
 endpoint: _.ANM.APPLICATION_ICON,
 path: 'app-icons',
 id: t,
@@ -352,7 +352,7 @@ assetHash: r,
 size: i,
 canAnimate: a = !0
   } = e;
-  return m({
+  return I({
 endpoint: (e, i, a) => _.ANM.VIDEO_FILTER_ASSET_STORAGE(t, n, r, a),
 path: 'video-filter-assets/'.concat(t),
 id: n,
@@ -376,7 +376,7 @@ return null !== (t = U({
   icon: s,
   size: l
 })) && void 0 !== t ? t : r.DEFAULT_CHANNEL_ICON;
-  return null !== (n = m({
+  return null !== (n = I({
 endpoint: _.ANM.CHANNEL_ICON,
 path: 'channel-icons',
 id: a,
@@ -444,7 +444,7 @@ let {
   channelId: t,
   icon: n
 } = e;
-return null == n ? null : m({
+return null == n ? null : I({
   endpoint: _.ANM.GUILD_RESOURCE_CHANNELS_ICON,
   path: 'resource-channels',
   id: t,
@@ -458,7 +458,7 @@ let {
   channelId: t,
   icon: n
 } = e;
-return null == n ? null : m({
+return null == n ? null : I({
   endpoint: _.ANM.GUILD_NEW_MEMBER_ACTIONS_ICON,
   path: 'new-member-actions',
   id: t,

@@ -24,8 +24,8 @@ var a = t(735250),
   v = t(621060),
   _ = t(689938),
   w = t(408126),
-  C = t(535271);
-let j = [{
+  j = t(535271);
+let C = [{
   key: 'id',
   cellClassName: w.eventColumn,
   render(e) {
@@ -74,7 +74,7 @@ render: e => {
   return (0, a.jsxs)(a.Fragment, {
     children: [
       (0, a.jsxs)(g.ZP, {
-        className: o()(C.headerBar, w.subPanelHeaderBar),
+        className: o()(j.headerBar, w.subPanelHeaderBar),
         children: [
           (0, a.jsx)(g.ZP.Icon, {
             icon: h.AnalyticsIcon,
@@ -168,7 +168,7 @@ m.Z.dispatch({
   }, []);
   return (0, a.jsxs)('div', {
 ref: t,
-className: o()(C.panel, w.panel),
+className: o()(j.panel, w.panel),
 children: [
   (0, a.jsxs)('div', {
     className: w.toolbar,
@@ -208,7 +208,7 @@ children: [
   (0, a.jsx)(h.ScrollerThin, {
     className: w.tableContainer,
     children: (0, a.jsx)(k.Z, {
-      columns: j,
+      columns: C,
       data: l,
       selectedRowKey: s,
       onClickRow: d

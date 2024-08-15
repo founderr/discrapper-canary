@@ -49,14 +49,14 @@ function w() {
 return e;
   }, e;
 }
-let C = {
+let j = {
 ...b.K,
 ...m.J,
 ...g.c
   },
-  j = {
-...I(b.K),
-...I(m.J)
+  C = {
+...E(b.K),
+...E(m.J)
   },
   N = [
 '100',
@@ -101,13 +101,13 @@ function T(e) {
   return 'name' in e;
 }
 
-function I(e) {
+function E(e) {
   let r = {};
   return Object.keys(e).forEach(t => {
 let a = e[t];
 if ('name' in a)
   a = function e(r) {
-    let t = C[r.name];
+    let t = j[r.name];
     return 'name' in t ? e(t) : t;
   }(a);
 r[t] = {
@@ -119,7 +119,7 @@ r[t] = {
   }), r;
 }
 
-function E(e, r) {
+function I(e, r) {
   let [t, a] = n.useState(() => {
 let t = h.K.get(e);
 return null != t ? t : r;
@@ -141,7 +141,7 @@ function Z() {
   rawPalette: r,
   semanticTokens: t
 }, i, l, s, h, m] = function(e, r) {
-  let [t, a] = E(''.concat(e, '-states'), [r]), [i, o] = E(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
+  let [t, a] = I(''.concat(e, '-states'), [r]), [i, o] = I(''.concat(e, '-index'), 0), l = t[i], c = n.useCallback(e => {
     a([
       e,
       ...t
@@ -172,12 +172,12 @@ function Z() {
   ];
 }('color-override-03-03-23', {
   rawPalette: p.b,
-  semanticTokens: j
+  semanticTokens: C
 }),
 [g, b] = n.useState(''),
-[v, C] = n.useState({}),
+[v, j] = n.useState({}),
 [S, T] = n.useState({}),
-I = n.useMemo(() => Object.keys(r).reduce((e, r) => [
+E = n.useMemo(() => Object.keys(r).reduce((e, r) => [
   ...e,
   {
     value: r,
@@ -274,7 +274,7 @@ O = n.useCallback(e => {
   }).join(',\n'));
 }, []),
 A = n.useCallback(e => c()(w(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
-P = n.useCallback(e => {
+L = n.useCallback(e => {
   let r = {};
   Object.keys(e).forEach(t => {
     Object.keys(e[t]).map(a => {
@@ -336,7 +336,7 @@ children: [
             size: f.Button.Sizes.MIN,
             onClick: () => {
               navigator.clipboard.readText().then(e => {
-                P(JSON.parse(e));
+                L(JSON.parse(e));
               });
             },
             children: 'Import'
@@ -381,7 +381,7 @@ children: [
           onClick: () => {
             i({
               rawPalette: p.b,
-              semanticTokens: j
+              semanticTokens: C
             });
           },
           children: 'Reset all'
@@ -418,9 +418,9 @@ children: [
         margin: 8,
         alignItems: 'center'
       },
-      children: Object.keys(j).filter(e => '' === g || e.toLowerCase().includes(g)).map(r => {
+      children: Object.keys(C).filter(e => '' === g || e.toLowerCase().includes(g)).map(r => {
         var i;
-        let o = j[r][e],
+        let o = C[r][e],
           l = null == t[r] ? {
             ...o
           } : t[r][e],
@@ -443,7 +443,7 @@ children: [
               children: (0, a.jsx)(f.Checkbox, {
                 value: v[r],
                 onChange: () => {
-                  C(e => ({
+                  j(e => ({
                     ...e,
                     [r]: !e[r]
                   }));
@@ -455,7 +455,7 @@ children: [
             }),
             (0, a.jsx)(f.SearchableSelect, {
               value: l.color,
-              options: I,
+              options: E,
               onChange: t => {
                 Z(r, e, t, l.opacity);
               },

@@ -1,9 +1,9 @@
 n.d(t, {
   Wc: function() {
-return I;
+return m;
   },
   Ye: function() {
-return m;
+return I;
   },
   bp: function() {
 return p;
@@ -59,14 +59,14 @@ fps: e
   });
 }
 
-function I(e) {
+function m(e) {
   return null == e.maxResolution || null == e.maxFrameRate ? null : {
 maxFrameRate: e.maxFrameRate,
 maxResolution: e.maxResolution
   };
 }
 
-function m(e, t, n) {
+function I(e, t, n) {
   var c, d, _;
   let E = (c = e, d = t, _ = n, l.ND.find(e => (null == e.preset || e.preset === c) && e.resolution === d && e.fps === _)),
 f = a.default.getCurrentUser(),

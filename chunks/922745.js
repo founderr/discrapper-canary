@@ -21,8 +21,8 @@ var i = n(120356),
   f = n(19780),
   h = n(540028),
   p = n(507675),
-  I = n(273716),
-  m = n(689938),
+  m = n(273716),
+  I = n(689938),
   T = n(582920);
 
 function g(e) {
@@ -50,7 +50,7 @@ children: [
       (0, r.jsx)(u.ArrowSmallLeftIcon, {
         size: 'custom',
         color: 'currentColor',
-        'aria-label': m.Z.Messages.OPEN_IN_THEATER,
+        'aria-label': I.Z.Messages.OPEN_IN_THEATER,
         className: T.backButton,
         width: 20,
         height: 20
@@ -63,9 +63,9 @@ children: [
       })
     ]
   }),
-  p && null != i ? (0, r.jsx)(I.Z, {
+  p && null != i ? (0, r.jsx)(m.Z, {
     onClick: i,
-    label: m.Z.Messages.PICTURE_IN_PICTURE_CLOSE_PIP
+    label: I.Z.Messages.PICTURE_IN_PICTURE_CLOSE_PIP
   }) : null,
   E
 ]
@@ -84,8 +84,8 @@ onForceIdle: d,
 renderBottomLeftControls: _,
 renderBottomRightControls: f,
 screenMessage: h,
-hideControls: I = !1,
-className: m,
+hideControls: m = !1,
+className: I,
 innerClassName: S,
 ...A
   } = e;
@@ -95,7 +95,7 @@ onMouseDown: u,
 onMouseLeave: d,
 className: a()(T.pictureInPictureVideo, {
   [T.idle]: n
-}, m),
+}, I),
 onDoubleClick: i,
 children: [
   (0, r.jsx)(l.W, {
@@ -108,7 +108,7 @@ children: [
     size: 'small',
     ...h
   }) : null,
-  !I && (0, r.jsxs)('div', {
+  !m && (0, r.jsxs)('div', {
     className: a()(T.videoControls, 'theme-dark'),
     children: [
       (0, r.jsx)('div', {

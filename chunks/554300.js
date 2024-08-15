@@ -17,8 +17,8 @@ onClick: E,
 selected: f,
 muted: h,
 to: p,
-avatarClassName: I,
-selectedClassName: m,
+avatarClassName: m,
+selectedClassName: I,
 innerClassName: T,
 wrapContent: g,
 highlighted: S,
@@ -28,7 +28,7 @@ focusProps: A,
   N.className = s()(N.className, u.container, {
 [u.selected]: f,
 [u.highlighted]: S,
-[null != m ? m : '']: f,
+[null != I ? I : '']: f,
 [u.clickable]: !f && (null != p || null != E)
   }), N['aria-selected'] = null !== (n = N['aria-selected']) && void 0 !== n ? n : f;
   let v = (0, r.jsxs)('div', {
@@ -38,7 +38,7 @@ className: s()(T, u.layout, {
 }),
 children: [
   (0, r.jsx)('div', {
-    className: s()(u.avatar, I),
+    className: s()(u.avatar, m),
     children: i
   }),
   (0, r.jsxs)('div', {

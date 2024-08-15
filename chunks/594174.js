@@ -9,7 +9,7 @@ return v;
 return A;
   },
   users: function() {
-return I;
+return m;
   }
 }), n(47120), n(789020), n(724458), n(51350), n(653041);
 var r = n(392711),
@@ -34,23 +34,23 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let I = {},
-  m = 0,
+let m = {},
+  I = 0,
   T = '47835198259242069';
 
 function g(e, t, n) {
-  let r = I[e];
+  let r = m[e];
   if (null == r)
 return !1;
   let i = r;
-  i = null == n ? r.removeGuildAvatarHash(t) : r.addGuildAvatarHash(t, n), I[r.id] = i;
+  i = null == n ? r.removeGuildAvatarHash(t) : r.addGuildAvatarHash(t, n), m[r.id] = i;
   let a = r !== i;
-  return a && m++, a;
+  return a && I++, a;
 }
 
 function S(e, t) {
-  let n = I[e];
-  return !(null == n || (0, f.Dd)(n.clan, t.clan)) && (null == n.clan || null != t.clan) && (n.clan = (0, f.yi)(t.clan), I[n.id] = n, m++, !0);
+  let n = m[e];
+  return !(null == n || (0, f.Dd)(n.clan, t.clan)) && (null == n.clan || null != t.clan) && (n.clan = (0, f.yi)(t.clan), m[n.id] = n, I++, !0);
 }
 
 function A(e) {
@@ -80,7 +80,7 @@ function N(e) {
 
 function v(e) {
   let t, n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-r = I[e.id],
+r = m[e.id],
 i = void 0 !== e.id && e.id === d.default.getId();
   if (null == r)
 void 0 !== (t = (r = new l.Z(e)).premiumType) && i && (r.premiumType = O((0, o.QI)(r), r.premiumType));
@@ -107,8 +107,8 @@ void 0 !== (t = null !== (a = n.premium_type) && void 0 !== a ? a : n.premiumTyp
 }(r, n), r = r.merge(n);
   }
   (0, o.jX)((0, o.QI)(r), t, r.premiumType);
-  let s = I[e.id] !== r;
-  return I[e.id] = r, s && m++, s;
+  let s = m[e.id] !== r;
+  return m[e.id] = r, s && I++, s;
 }
 
 function O(e, t) {
@@ -151,7 +151,7 @@ v(e);
 e.members.forEach(t => {
   g(t.user.id, e.id, t.avatar), S(t.user.id, t.user);
 });
-  }), null != I[d.default.getId()] && (I[T] = new l.Z({
+  }), null != m[d.default.getId()] && (m[T] = new l.Z({
 id: T,
 username: 'Wumpus',
 discriminator: '0',
@@ -184,8 +184,8 @@ function L(e) {
 function b(e) {
   if (null != e.users)
 for (let t of e.users) {
-  if (!(t.id in I && L(t)))
-    I[t.id] = new l.Z(t);
+  if (!(t.id in m && L(t)))
+    m[t.id] = new l.Z(t);
 }
 }
 
@@ -306,8 +306,8 @@ function Y(e) {
 message: t
   } = e;
   if (R(t, !0), null != t.flags && u.yE(t.flags, E.iLy.URGENT)) {
-let e = I[d.default.getId()];
-return null != e && (I[d.default.getId()] = e.set('flags', u.mB(e.flags, E.xW$.HAS_UNREAD_URGENT_MESSAGES, !0)), !0);
+let e = m[d.default.getId()];
+return null != e && (m[d.default.getId()] = e.set('flags', u.mB(e.flags, E.xW$.HAS_UNREAD_URGENT_MESSAGES, !0)), !0);
   }
   return !1;
 }
@@ -346,7 +346,7 @@ function z(e) {
 updates: t
   } = e;
   return t.map(e => {
-let t = I[e.user.id];
+let t = m[e.user.id];
 if (null == t)
   return !1;
 let n = K.reduce((n, i) => {
@@ -356,7 +356,7 @@ let n = K.reduce((n, i) => {
   }
   return n;
 }, !1);
-return !!n && (I[t.id] = t, n);
+return !!n && (m[t.id] = t, n);
   }).some(e => e);
 }
 
@@ -425,7 +425,7 @@ function er(e) {
   var t;
   let n = !1;
   for (let r of null !== (t = e.users) && void 0 !== t ? t : [])
-!Object.hasOwn(I, r.id) && (n = v(r) || n);
+!Object.hasOwn(m, r.id) && (n = v(r) || n);
   return n;
 }
 
@@ -499,7 +499,7 @@ function ed(e) {
 users: t
   } = e;
   t.forEach(e => {
-null == I[e.id] && (I[e.id] = new l.Z(e));
+null == m[e.id] && (m[e.id] = new l.Z(e));
   });
 }
 
@@ -547,14 +547,14 @@ integration: t
   C((0, s.F)(t));
 }
 
-function eI(e) {
+function em(e) {
   let {
 integration: t
   } = e;
   C((0, s.F)(t));
 }
 
-function em(e) {
+function eI(e) {
   let {
 users: t,
 familyCenterTeenActivity: n
@@ -634,11 +634,11 @@ return {
 let t = this.readSnapshot(eO.LATEST_SNAPSHOT_VERSION);
 if (null != t)
   for (let e of t.users)
-    I[e.id] = new l.Z(e);
+    m[e.id] = new l.Z(e);
 if (null != e.users)
   for (let t of e.users) {
-    if (!(t.id in I && L(t)))
-      I[t.id] = new l.Z(t);
+    if (!(t.id in m && L(t)))
+      m[t.id] = new l.Z(t);
   }
 for (let t of [
     e.privateChannels,
@@ -650,23 +650,23 @@ for (let t of [
   }
   }
   getUserStoreVersion() {
-return m;
+return I;
   }
   getUser(e) {
 if (null != e)
-  return I[e];
+  return m[e];
   }
   getUsers() {
-return I;
+return m;
   }
   forEach(e) {
-for (let t in I)
-  if (!1 === e(I[t]))
+for (let t in m)
+  if (!1 === e(m[t]))
     break;
   }
   findByTag(e, t) {
-for (let n in I) {
-  let r = I[n];
+for (let n in m) {
+  let r = m[n];
   if (null != t && r.username === e && r.discriminator === t)
     return r;
   if (null == t && r.username === e && r.isPomelo())
@@ -676,14 +676,14 @@ for (let n in I) {
   filter(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
   n = [];
-for (let t in I) {
-  let r = I[t];
+for (let t in m) {
+  let r = m[t];
   e(r) && n.push(r);
 }
 return t && n.sort((e, t) => e.username > t.username ? 1 : e.username < t.username ? -1 : 0), n;
   }
   getCurrentUser() {
-return I[d.default.getId()];
+return m[d.default.getId()];
   }
   constructor() {
 super({
@@ -740,8 +740,8 @@ super({
   LOCAL_MESSAGES_LOADED: er,
   FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS: eh,
   PRIVATE_CHANNEL_INTEGRATION_CREATE: ep,
-  PRIVATE_CHANNEL_INTEGRATION_UPDATE: eI,
-  FAMILY_CENTER_INITIAL_LOAD: em,
+  PRIVATE_CHANNEL_INTEGRATION_UPDATE: em,
+  FAMILY_CENTER_INITIAL_LOAD: eI,
   FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eT,
   FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eS,
   FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eA,

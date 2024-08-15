@@ -63,8 +63,8 @@ var r, i, a = n(735250),
   f = n(904245),
   h = n(45114),
   p = n(431279),
-  I = n(794295),
-  m = n(593472),
+  m = n(794295),
+  I = n(593472),
   T = n(110924),
   g = n(858644),
   S = n(249458),
@@ -183,7 +183,7 @@ disableAltTextDisplay: u = !1,
 mediaLayoutType: c,
 imageContainerStyle: d,
 renderForwardComponent: _
-  } = e, f = c === B.hV.MOSAIC, h = !u && L.H1.getSetting() && null != t && '' !== t && !0 !== n, I = e => {
+  } = e, f = c === B.hV.MOSAIC, h = !u && L.H1.getSetting() && null != t && '' !== t && !0 !== n, m = e => {
 let {
   altText: t
 } = e;
@@ -193,7 +193,7 @@ return (0, a.jsxs)(E.Dialog, {
   onKeyDown: e => {
     e.key === V.mR.Escape && setTimeout(() => {
       var e;
-      return null === (e = m.current) || void 0 === e ? void 0 : e.focus();
+      return null === (e = I.current) || void 0 === e ? void 0 : e.focus();
     }, 0);
   },
   children: [
@@ -207,7 +207,7 @@ return (0, a.jsxs)(E.Dialog, {
     })
   ]
 });
-  }, m = s.createRef();
+  }, I = s.createRef();
   return (0, a.jsxs)('div', {
 className: l()(Y.imageContent, i),
 children: [
@@ -227,7 +227,7 @@ children: [
     className: Y.mediaMosaicAltTextContainer,
     children: (0, a.jsx)(E.Popout, {
       animation: E.Popout.Animation.FADE,
-      renderPopout: () => (0, a.jsx)(I, {
+      renderPopout: () => (0, a.jsx)(m, {
         altText: t
       }),
       children: e => (0, a.jsx)(E.FocusRing, {
@@ -235,7 +235,7 @@ children: [
         children: (0, a.jsx)('button', {
           ...e,
           type: 'button',
-          ref: m,
+          ref: I,
           'aria-label': Z.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE,
           className: Y.mediaMosaicAltText,
           children: Z.Z.Messages.MEDIA_MOSAIC_ALT_TEXT_CTA
@@ -252,7 +252,7 @@ children: [
 }
 
 function $(e) {
-  return (0, a.jsx)(I.Z, {
+  return (0, a.jsx)(m.Z, {
 ...e
   });
 }
@@ -441,7 +441,7 @@ content: o,
 scrollManager: u
   } = e, {
 disableInteractions: p
-  } = s.useContext(S.G), [I, g] = s.useState(null), A = s.useRef(null), [v, O] = s.useState(null), R = s.useRef(null), L = (0, _.Wu)([y.Z], () => {
+  } = s.useContext(S.G), [m, g] = s.useState(null), A = s.useRef(null), [v, O] = s.useState(null), R = s.useRef(null), L = (0, _.Wu)([y.Z], () => {
 var e;
 return null !== (e = y.Z.summaries(i.id)) && void 0 !== e ? e : [];
   }, [i]), b = (0, T.Z)(L);
@@ -475,7 +475,7 @@ i.type
 }, [L], ea),
 B = null !== (n = (0, _.e7)([y.Z], () => y.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
 V = null == L ? void 0 : null === (t = L[B]) || void 0 === t ? void 0 : t.topic;
-  null == V && null == I && (null == L ? void 0 : L.length) >= 1 && (V = null === (r = L[0]) || void 0 === r ? void 0 : r.topic);
+  null == V && null == m && (null == L ? void 0 : L.length) >= 1 && (V = null === (r = L[0]) || void 0 === r ? void 0 : r.topic);
   let j = s.useMemo(() => c().debounce(e => {
   var t;
   g(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null);
@@ -532,7 +532,7 @@ X = s.useCallback(function(e) {
     messageId: n.startId,
     flash: !0,
     offset: 0,
-    jumpType: m.SR.ANIMATED,
+    jumpType: I.SR.ANIMATED,
     context: 'Summary Jump'
   });
 }, [
@@ -739,7 +739,7 @@ channel: i,
 scrollManager: o
   } = e, {
 disableInteractions: u
-  } = s.useContext(S.G), [h, p] = s.useState(null), I = s.useRef(null), [g, A] = s.useState(null), v = s.useRef(null), O = (0, _.Wu)([y.Z], () => {
+  } = s.useContext(S.G), [h, p] = s.useState(null), m = s.useRef(null), [g, A] = s.useState(null), v = s.useRef(null), O = (0, _.Wu)([y.Z], () => {
 var e;
 return null !== (e = y.Z.summaries(i.id)) && void 0 !== e ? e : [];
   }, [i]), R = (0, T.Z)(O);
@@ -838,7 +838,7 @@ q = s.useCallback(function(e) {
     messageId: n.startId,
     flash: !0,
     offset: 0,
-    jumpType: m.SR.ANIMATED,
+    jumpType: I.SR.ANIMATED,
     context: 'Summary Jump'
   });
 }, [
@@ -878,7 +878,7 @@ W
   ]);
   let J = s.useCallback(e => {
 var t;
-if (!((0, d.k)(e.target) && (null === (t = I.current) || void 0 === t ? void 0 : t.contains(e.target))))
+if (!((0, d.k)(e.target) && (null === (t = m.current) || void 0 === t ? void 0 : t.contains(e.target))))
   W && w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
     topics_dropdown_open: !1,
     num_summaries: O.length,
@@ -923,7 +923,7 @@ i
 return null;
   let et = Z.Z.Messages.SUMMARIES_NO_SUMMARIES;
   return O.length > 0 && (et = '' === M || null == M ? Z.Z.Messages.SUMMARIES_VIEW_ALL : M), u ? null : (0, a.jsxs)('div', {
-ref: I,
+ref: m,
 className: l()(Y.topicsPillContainer, Y.containerMarginTop),
 children: [
   (0, a.jsxs)('div', {

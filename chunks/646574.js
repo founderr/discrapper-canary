@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(74538),
   h = n(921944),
   p = n(689938),
-  I = n(840587);
-let m = {
+  m = n(840587);
+let I = {
   tension: 750,
   mass: 2.5,
   friction: 70
@@ -31,15 +31,15 @@ headingText: n,
 textColor: i
   } = e, a = null != n;
   return (0, r.jsxs)('span', {
-className: a ? void 0 : I.tooltipContainer,
+className: a ? void 0 : m.tooltipContainer,
 children: [
   (0, r.jsxs)('span', {
-    className: I.tooltipContainer,
+    className: m.tooltipContainer,
     children: [
       (0, r.jsx)(c.NitroWheelIcon, {
         size: 'md',
         color: 'currentColor',
-        className: I.nitroWheel
+        className: m.nitroWheel
       }),
       a ? (0, r.jsx)(c.Heading, {
         color: null != i ? i : 'text-normal',
@@ -82,10 +82,10 @@ text: (0, r.jsx)(T, {
 color: c.Tooltip.Colors.BRAND,
 forceOpen: O,
 'aria-label': L,
-tooltipClassName: I.tooltip,
+tooltipClassName: m.tooltip,
 children: [
   (0, r.jsx)('input', {
-    className: I.visuallyHidden,
+    className: m.visuallyHidden,
     checked: t,
     onChange: function() {
       y({
@@ -95,7 +95,7 @@ children: [
         to: {
           rotate: t ? '0deg' : '360deg'
         },
-        config: m
+        config: I
       }), null == n || n(), R(!1);
     },
     id: a,
@@ -103,12 +103,12 @@ children: [
   }),
   (0, r.jsxs)('label', {
     htmlFor: a,
-    className: s()(I.label, {
-      [I.labelChecked]: t
+    className: s()(m.label, {
+      [m.labelChecked]: t
     }),
     children: [
       t ? (0, r.jsx)(c.Shine, {
-        className: I.shine,
+        className: m.shine,
         shinePaused: g
       }) : null,
       (0, r.jsx)(D, {
@@ -117,11 +117,11 @@ children: [
         width: 20,
         height: 20,
         color: t ? 'white' : 'currentColor',
-        className: I.icon
+        className: m.icon
       }),
       (0, r.jsx)('span', {
         children: (0, r.jsx)(c.Text, {
-          className: I.visuallyHidden,
+          className: m.visuallyHidden,
           variant: 'text-sm/semibold',
           children: p.Z.Messages.SUPER_REACTION_TOGGLE_DISABLED
         })

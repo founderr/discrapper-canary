@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   }
 }), n(411104), n(47120);
 var r, i, a, s, o, l = n(735250),
@@ -81,10 +81,10 @@ right: i
   };
 }
 
-function I(e) {
+function m(e) {
   return null != e ? ''.concat(e, 'px') : 'auto';
 }
-class m extends(a = u.PureComponent) {
+class I extends(a = u.PureComponent) {
   componentDidMount() {
 this.checkBounds(), this.setDOMPositions(this.position);
   }
@@ -124,7 +124,7 @@ if (this.position = {
     bottom: r,
     right: i
   }, null != a)
-  a.style.top = I(t), a.style.bottom = I(r), a.style.left = I(n), a.style.right = I(i);
+  a.style.top = m(t), a.style.bottom = m(r), a.style.left = m(n), a.style.right = m(i);
   }
   render() {
 let {
@@ -222,17 +222,17 @@ super(e), d(this, 'draggableRef', u.createRef()), d(this, '_dragStart', {
     onFlip: c,
     snapOrientation: d
   } = this.props, {
-    dragging: I,
     dragging: m,
+    dragging: I,
     verticalOrientation: T,
     horizontalOrientation: g
   } = this.state, S = !1;
-  if (null == r || !I && 9 > _(this._dragStart, {
+  if (null == r || !m && 9 > _(this._dragStart, {
       x: t,
       y: n
     }))
     return;
-  I = !0;
+  m = !0;
   let {
     clientWidth: A,
     clientHeight: N
@@ -248,11 +248,11 @@ super(e), d(this, 'draggableRef', u.createRef()), d(this, '_dragStart', {
       top: O.top,
       left: O.left
     };
-  2 === o && g !== this.state.horizontalOrientation && (this._offsetX = A - this._offsetX, S = !0), 2 === s && T !== this.state.verticalOrientation && (this._offsetY = N - this._offsetY, S = !0), this.setDOMPositions(O), !m && (null == l || l(O, r)), null == u || u(O, r), S && (null == c || c([
+  2 === o && g !== this.state.horizontalOrientation && (this._offsetX = A - this._offsetX, S = !0), 2 === s && T !== this.state.verticalOrientation && (this._offsetY = N - this._offsetY, S = !0), this.setDOMPositions(O), !I && (null == l || l(O, r)), null == u || u(O, r), S && (null == c || c([
     T,
     g
   ])), this.setState({
-    dragging: I,
+    dragging: m,
     verticalOrientation: T,
     horizontalOrientation: g,
     atTopEdge: 0 === O.top
@@ -307,11 +307,11 @@ super(e), d(this, 'draggableRef', u.createRef()), d(this, '_dragStart', {
   if (t.left === e.left && t.right === e.right && t.top === e.top && t.bottom === e.bottom)
     return;
   null == s || s(e, r), this.setDOMPositions(e);
-  let I = 0 === e.top;
-  (l !== n.verticalOrientation || u !== n.horizontalOrientation || I !== n.atTopEdge) && this.setState({
+  let m = 0 === e.top;
+  (l !== n.verticalOrientation || u !== n.horizontalOrientation || m !== n.atTopEdge) && this.setState({
     verticalOrientation: l,
     horizontalOrientation: u,
-    atTopEdge: I
+    atTopEdge: m
   });
 });
 let [t, n] = f(e.initialPosition);
@@ -336,7 +336,7 @@ this.position = function(e) {
 };
   }
 }
-d(m, 'FlipTypes', r), d(m, 'defaultProps', {
+d(I, 'FlipTypes', r), d(I, 'defaultProps', {
   snapOrientation: !1,
   maxX: 0,
   maxY: 0,

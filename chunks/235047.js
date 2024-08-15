@@ -41,7 +41,7 @@ children: [
   t ? (0, i.jsx)(s.MenuItem, {
     id: 'remove-reminder',
     label: E.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
-    action: () => (0, o.z)({
+    action: () => (0, o.x)({
       channelId: e.channel_id,
       messageId: e.id,
       displayToast: !0

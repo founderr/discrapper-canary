@@ -154,7 +154,7 @@ getTier3Value: () => !0
   }
 ];
 
-function I(e) {
+function m(e) {
   let {
 children: t,
 className: n,
@@ -180,7 +180,7 @@ children: [
   });
 }
 
-function m(e) {
+function I(e) {
   let t;
   let {
 className: n,
@@ -276,23 +276,23 @@ children: [
             children: (0, r.jsxs)('tr', {
               className: h.__invalid_tableRow,
               children: [
-                (0, r.jsx)(I, {
+                (0, r.jsx)(m, {
                   className: h.tableRowHeading,
                   children: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_COLUMN_HEADING_PERKS
                 }),
-                !g && (0, r.jsx)(I, {
+                !g && (0, r.jsx)(m, {
                   tier: _.Eu4.NONE,
                   children: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME
                 }),
-                (0, r.jsx)(I, {
+                (0, r.jsx)(m, {
                   tier: _.Eu4.TIER_1,
                   children: f.Z.Messages.PREMIUM_GUILD_TIER_1
                 }),
-                (0, r.jsx)(I, {
+                (0, r.jsx)(m, {
                   tier: _.Eu4.TIER_2,
                   children: f.Z.Messages.PREMIUM_GUILD_TIER_2
                 }),
-                (0, r.jsx)(I, {
+                (0, r.jsx)(m, {
                   tier: _.Eu4.TIER_3,
                   children: f.Z.Messages.PREMIUM_GUILD_TIER_3
                 })
@@ -338,17 +338,17 @@ children: [
                       })
                     })
                   }),
-                  !g && (0, r.jsx)(m, {
+                  !g && (0, r.jsx)(I, {
                     textVariant: 'text-md/normal',
                     value: e.getTier0Value()
                   }),
-                  (0, r.jsx)(m, {
+                  (0, r.jsx)(I, {
                     value: e.getTier1Value()
                   }),
-                  (0, r.jsx)(m, {
+                  (0, r.jsx)(I, {
                     value: e.getTier2Value()
                   }),
-                  (0, r.jsx)(m, {
+                  (0, r.jsx)(I, {
                     value: e.getTier3Value()
                   })
                 ]

@@ -26,8 +26,8 @@ E
 d(e, t, s.u.GRID_NAVIGATOR_EVENT);
   }, [d]), {
 gridDispatch: p,
-getItemProps: I,
-getRowProps: m,
+getItemProps: m,
+getRowProps: I,
 gridContainerProps: T,
 handleGridContainerKeyDown: g,
 isUsingKeyboardNavigation: S
@@ -56,8 +56,8 @@ r !== s.u.GRID_NAVIGATOR_EVENT && p({
 p,
 u
   ]), {
-getItemProps: I,
-getRowProps: m,
+getItemProps: m,
+getRowProps: I,
 gridContainerProps: T,
 handleGridContainerKeyDown: g,
 isUsingKeyboardNavigation: S

@@ -19,14 +19,14 @@ createdAt: t,
 participantIds: n,
 applicationId: i,
 title: s,
-guildId: I,
-className: m
+guildId: m,
+className: I
   } = e, T = (0, c.q)(i), g = (0, l.Wu)([E.default], () => {
 var e;
 return null !== (e = n.map(e => E.default.getUser(e)).filter(f.lm)) && void 0 !== e ? e : [];
   }), S = null == T ? void 0 : T.name, A = o()(t).fromNow();
   return null == t ? null : (0, r.jsxs)('div', {
-className: a()(m, p.container),
+className: a()(I, p.container),
 children: [
   (0, r.jsx)(_.Z, {
     game: T
@@ -63,7 +63,7 @@ children: [
     maxUsers: 4,
     users: g,
     className: p.__invalid_facePile,
-    guildId: I
+    guildId: m
   })
 ]
   });

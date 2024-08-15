@@ -29,8 +29,8 @@ let {
   onScroll: f,
   dir: h = 'ltr',
   sections: p,
-  columns: I,
-  getItemKey: m,
+  columns: m,
+  getItemKey: I,
   getItemHeight: T,
   getSectionHeight: g,
   chunkSize: S,
@@ -71,8 +71,8 @@ let {
   masonryComputer: Q
 } = (0, l.QB)({
   sections: p,
-  columns: I,
-  getItemKey: m,
+  columns: m,
+  getItemKey: I,
   getItemHeight: T,
   getSectionHeight: g,
   chunkSize: S,

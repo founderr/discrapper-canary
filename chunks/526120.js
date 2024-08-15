@@ -1,9 +1,9 @@
 n.d(t, {
   C3: function() {
-return m;
+return I;
   },
   Fg: function() {
-return I;
+return m;
   },
   Oh: function() {
 return g;
@@ -50,7 +50,7 @@ i.Z.dispatch({
   guildId: e
 });
   }
-}, I = async e => {
+}, m = async e => {
   if (!o.Z.isFullServerPreview(e)) {
 i.Z.dispatch({
   type: 'GUILD_NEW_MEMBER_ACTIONS_FETCH_START',
@@ -74,7 +74,7 @@ try {
   });
 }
   }
-}, m = function(e, t) {
+}, I = function(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
   if (i.Z.dispatch({
   type: 'SELECT_HOME_RESOURCE_CHANNEL',

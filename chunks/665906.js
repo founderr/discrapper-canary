@@ -15,7 +15,7 @@ return x;
 return v;
   },
   NE: function() {
-return m;
+return I;
   },
   RG: function() {
 return b;
@@ -39,7 +39,7 @@ return T;
 return D;
   },
   tM: function() {
-return I;
+return m;
   },
   tc: function() {
 return y;
@@ -62,7 +62,7 @@ var r = n(392711),
   f = n(709054),
   h = n(601070),
   p = n(981631);
-let I = (0, o.Z)({
+let m = (0, o.Z)({
   id: '2022-07_voice_in_threads',
   label: 'Voice in Threads',
   kind: 'guild',
@@ -78,7 +78,7 @@ config: {
   }]
 });
 
-function m(e, t) {
+function I(e, t) {
   return A((0, s.e7)([E.Z], () => {
 let t = e.isForumLikeChannel() ? p.Plq.SEND_MESSAGES : a.$e(p.Plq.CREATE_PUBLIC_THREADS, p.Plq.READ_MESSAGE_HISTORY);
 return E.Z.can(t, e);
@@ -96,7 +96,7 @@ function g(e) {
 }
 
 function S(e) {
-  let t = m(e),
+  let t = I(e),
 n = g(e);
   return t || n;
 }
@@ -188,7 +188,7 @@ function w(e) {
   let t = (0, l.Z)(),
 n = (0, s.e7)([E.Z], () => E.Z.can(p.Plq.CONNECT, e)),
 r = L(e),
-i = I.useExperiment({
+i = m.useExperiment({
   guildId: e.guild_id,
   location: 'e791ea_1'
 }, {

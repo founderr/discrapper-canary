@@ -61,8 +61,8 @@ e.prototype = Object.create(t && t.prototype, {
     configurable: !0
   }
 }), t && c(e, t);
-  }(I, e);
-  var t, n, r, f, h, p = (t = I, n = function() {
+  }(m, e);
+  var t, n, r, f, h, p = (t = m, n = function() {
 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham)
   return !1;
 if ('function' == typeof Proxy)
@@ -80,12 +80,12 @@ return e = n ? Reflect.construct(r, arguments, _(this).constructor) : r.apply(th
   }(this, e);
   });
 
-  function I() {
+  function m() {
 var e;
 ! function(e, t) {
   if (!(e instanceof t))
     throw TypeError('Cannot call a class as a function');
-}(this, I);
+}(this, m);
 for (var t = arguments.length, n = Array(t), r = 0; r < t; r++)
   n[r] = arguments[r];
 return E(d(e = p.call.apply(p, [this].concat(n))), 'priority', 100), E(d(e), 'incompatibleTokens', [
@@ -104,7 +104,7 @@ return E(d(e = p.call.apply(p, [this].concat(n))), 'priority', 100), E(d(e), 'in
   'T'
 ]), e;
   }
-  return r = I, f = [{
+  return r = m, f = [{
   key: 'parse',
   value: function(e, t, n) {
     switch (t) {
@@ -131,5 +131,5 @@ return E(d(e = p.call.apply(p, [this].concat(n))), 'priority', 100), E(d(e), 'in
     return (0, o.Z)((0, s.Z)(e, n, r), r);
   }
 }
-  ], u(r.prototype, f), I;
+  ], u(r.prototype, f), m;
 }(r._);

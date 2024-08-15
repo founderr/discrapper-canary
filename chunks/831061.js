@@ -159,14 +159,14 @@ p = {
   ]
 };
   h.contains.push(p);
-  let I = [
+  let m = [
   ...r,
   ...a,
   ...i
 ],
-m = {
+I = {
   relevance: 0,
-  match: t.concat('\\b(?!', I.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
+  match: t.concat('\\b(?!', m.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
   className: 'variable'
 };
   return {
@@ -254,7 +254,7 @@ contains: [{
   u,
   d,
   c,
-  m
+  I
 ]
   };
 };

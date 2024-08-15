@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(524444),
   h = n(981631),
   p = n(185923),
-  I = n(474936),
-  m = n(436547);
+  m = n(474936),
+  I = n(436547);
 let T = e => {
 var t;
 let {
@@ -35,7 +35,7 @@ let {
   src: n.src,
   alt: c,
   animated: !1
-}), I = e => (0, r.jsx)(l.Tooltip, {
+}), m = e => (0, r.jsx)(l.Tooltip, {
   text: (0, f.Y)(n.name, o),
   'aria-label': d,
   ...f.b_,
@@ -54,8 +54,8 @@ let {
       var n;
       h(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
     },
-    className: s()(m.emojiContainer, {
-      [m.emojiContainerClickable]: o
+    className: s()(I.emojiContainer, {
+      [I.emojiContainerClickable]: o
     }),
     children: p(t)
   })
@@ -73,8 +73,8 @@ return o ? (0, r.jsx)(l.Popout, {
     ...e,
     node: n
   }),
-  children: I
-}) : I();
+  children: m
+}) : m();
   },
   g = e => {
 let {
@@ -82,7 +82,7 @@ let {
   isInteracting: n,
   tooltipPosition: a = f.b_.position,
   enableClick: c = !0
-} = e, [I, T] = i.useState(String(Date.now())), [g, A] = i.useState(!1), [N, v] = i.useState(!1), O = function() {
+} = e, [m, T] = i.useState(String(Date.now())), [g, A] = i.useState(!1), [N, v] = i.useState(!1), O = function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   return (0, r.jsx)(u.Z, {
     ...e,
@@ -121,8 +121,8 @@ let {
       }), A(!1));
     },
     tag: 'span',
-    className: s()(m.emojiContainer, {
-      [m.emojiContainerClickable]: c
+    className: s()(I.emojiContainer, {
+      [I.emojiContainerClickable]: c
     }),
     children: O(t)
   })
@@ -144,7 +144,7 @@ return c ? (0, r.jsx)(l.Popout, {
     refreshPositionKey: () => T(String(Date.now())),
     nonce: R
   }),
-  positionKey: I,
+  positionKey: m,
   children: C
 }) : C();
   },
@@ -155,7 +155,7 @@ let {
   nonce: r
 } = e;
 c.ZP.trackWithMetadata(h.rMx.EXPRESSION_TOOLTIP_VIEWED, {
-  type: I.cd.EMOJI_IN_MESSAGE_HOVER,
+  type: m.cd.EMOJI_IN_MESSAGE_HOVER,
   expression_id: t.emojiId,
   expression_name: t.name,
   is_animated: t.animated,

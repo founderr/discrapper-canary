@@ -3,7 +3,7 @@ n.d(t, {
 return p;
   },
   tR: function() {
-return m;
+return I;
   },
   tj: function() {
 return f;
@@ -38,8 +38,8 @@ if (n.length > 0) {
   },
   h = i()('2021-04-12T00:00:00'),
   p = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
-  I = (e, t) => e.value.unix() - t.value.unix();
-class m {
+  m = (e, t) => e.value.unix() - t.value.unix();
+class I {
   lookupByValue(e) {
 if (null == e)
   return;
@@ -72,7 +72,7 @@ let t = p(h, e),
 return this._index[t.unix()] = t, this.options.push({
   label: n,
   value: t
-}), this.options.sort(I), e;
+}), this.options.sort(m), e;
   }
   _guessOptions(e) {
 let t = [];
@@ -98,7 +98,7 @@ if (!(t.length > 0))
   let e = [...this.options];
   return t.forEach(t => {
     null == this.lookupByValue(t) && e.push(this._createNewOption(t));
-  }), e.sort(I), e;
+  }), e.sort(m), e;
 }
   }
   selectValue(e) {

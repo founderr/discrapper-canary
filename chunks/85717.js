@@ -11,8 +11,8 @@ var s = n(493683),
   f = n(592125),
   h = n(77498),
   p = n(944486),
-  I = n(885110),
-  m = n(67212),
+  m = n(885110),
+  I = n(67212),
   T = n(770471),
   g = n(757454),
   S = n(158631),
@@ -29,7 +29,7 @@ let {
   location: 'handle_running_games_change'
 }, {
   autoTrackExposure: !1
-}), n = I.Z.getBroadcast(), r = (0, m.Ds)(e), i = null != h.Z.getGameByName(r), a = (0, S.dD)();
+}), n = m.Z.getBroadcast(), r = (0, I.Ds)(e), i = null != h.Z.getGameByName(r), a = (0, S.dD)();
 if (!t || null != n || !_.xd.getSetting() || !i || !a || null != N.find(t => t.pid === e.pid))
   return;
 if (N = c.ZP.getRunningGames(), !(0, g.Q)())
@@ -44,7 +44,7 @@ let s = p.Z.getVoiceChannelId();
 let {
   streamKey: t
 } = e;
-(0, m.v$)(t, r);
+(0, I.v$)(t, r);
   }
   handleStreamStop(e) {
 let {
@@ -60,7 +60,7 @@ if (null == n || null == s || n !== E.default.getId())
   return;
 let o = f.Z.getChannel(s),
   l = null != o && o.isBroadcastChannel();
-null != o && n === o.ownerId && l && (r = null, i = null, a = null, (0, m.b_)());
+null != o && n === o.ownerId && l && (r = null, i = null, a = null, (0, I.b_)());
   }
   handleStartBroadcastStream(e) {
 let {
@@ -94,14 +94,14 @@ let r = p.Z.getChannelId(),
 if (null == i || !i.isBroadcastChannel())
   return;
 s.Z.closePrivateChannel(t, r === t, !0);
-let a = I.Z.getBroadcast();
-null != a && i.id === a.channelId && (0, m.b_)();
+let a = m.Z.getBroadcast();
+null != a && i.id === a.channelId && (0, I.b_)();
   }
   handleChannelDelete(e) {
 let {
   channel: t
-} = e, n = I.Z.getBroadcast();
-null != n && t.id === n.channelId && (0, m.b_)();
+} = e, n = m.Z.getBroadcast();
+null != n && t.id === n.channelId && (0, I.b_)();
   }
   handleMessageCreate(e) {
 let {

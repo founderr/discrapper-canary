@@ -32,13 +32,13 @@ type: n,
 children: r
   } = e, {
 reducedMotion: i
-  } = s.useContext(c.S), o = i.enabled ? 3 : n, [f, h] = s.useState(null != t), [p] = s.useState(() => new u.V7()), [I, m] = s.useState(!0), T = s.useRef(null);
+  } = s.useContext(c.S), o = i.enabled ? 3 : n, [f, h] = s.useState(null != t), [p] = s.useState(() => new u.V7()), [m, I] = s.useState(!0), T = s.useRef(null);
   return s.useLayoutEffect(() => {
 var e;
 null === (e = T.current) || void 0 === e || e.addEventListener('transitionend', () => {
-  m(!1);
+  I(!1);
 }), setTimeout(() => {
-  m(!1);
+  I(!1);
 }, 200);
   }, []), s.useEffect(() => () => p.stop(), [p]), s.useEffect(() => {
 null != t && p.start(10, () => h(!0));
@@ -46,7 +46,7 @@ null != t && p.start(10, () => h(!0));
 t,
 p
   ]), (0, a.jsx)('div', {
-'data-popout-animating': I,
+'data-popout-animating': m,
 className: l()(null != t ? E[t] : null, {
   [_[o]]: null != t,
   [d.didRender]: f

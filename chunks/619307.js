@@ -38,8 +38,8 @@ var r = n(735250),
   f = n(393238),
   h = n(434650),
   p = n(98650),
-  I = n(748585),
-  m = n(689938),
+  m = n(748585),
+  I = n(689938),
   T = n(110838);
 
 function g(e) {
@@ -140,14 +140,14 @@ function C(e) {
 function y(e) {
   let {
 options: t,
-placeholder: n = m.Z.Messages.SELECT,
+placeholder: n = I.Z.Messages.SELECT,
 className: a,
 isDisabled: o = !1,
 maxVisibleItems: l = 7,
 autoFocus: c = !1,
 popoutWidth: _,
 clearable: p = !1,
-look: g = I.q.FILLED,
+look: g = m.q.FILLED,
 onClose: S,
 onOpen: A,
 renderOptionLabel: N = R,
@@ -259,7 +259,7 @@ children: (e, t) => {
       [T.open]: d,
       [T.disabled]: o,
       [T.selectPositionTop]: 'top' === _,
-      [T.lookFilled]: g === I.q.FILLED
+      [T.lookFilled]: g === m.q.FILLED
     }),
     'aria-haspopup': 'listbox',
     'aria-expanded': d,
@@ -280,7 +280,7 @@ children: (e, t) => {
             role: 'button',
             'aria-disabled': o,
             onClick: q,
-            'aria-label': m.Z.Messages.CLEAR,
+            'aria-label': I.Z.Messages.CLEAR,
             children: (0, r.jsx)(E.XSmallIcon, {
               size: 'xs',
               color: 'currentColor',
@@ -311,8 +311,8 @@ isSelected: d,
 options: E,
 width: f,
 maxVisibleItems: h,
-renderOptionLabel: I,
-serialize: m,
+renderOptionLabel: m,
+serialize: I,
 optionClassName: g,
 buttonHeight: S,
 updatePosition: A,
@@ -354,11 +354,11 @@ M = E.map((e, t) => {
   return (0, r.jsx)(L, {
     isSelected: d(e.value),
     value: e.value,
-    label: I(e),
+    label: m(e),
     onSelect: b,
     className: g,
     isDisabled: e.disabled,
-    serialize: m
+    serialize: I
   }, null !== (n = e.key) && void 0 !== n ? n : t);
 }),
 P = E.length <= h ? _.xV : _.h2;

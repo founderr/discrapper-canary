@@ -3,7 +3,7 @@ n.d(t, {
 return p;
   },
   Pn: function() {
-return I;
+return m;
   },
   RS: function() {
 return f;
@@ -57,5 +57,5 @@ i.QJ.PARAGRAPH
   f = 1000,
   h = 300,
   p = 'Membership Gating',
-  I = 'in-app-member-verification';
+  m = 'in-app-member-verification';
 (r || (r = {})).VERIFICATION_INFO = 'VERIFICATION_INFO';

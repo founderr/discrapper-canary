@@ -22,9 +22,9 @@ var r, i = n(735250),
   f = n(186523),
   h = n(553826),
   p = n(981631),
-  I = n(19562);
+  m = n(19562);
 
-function m(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -51,7 +51,7 @@ infoClassName: c,
 titleClassName: d,
 radioItemClassName: E,
 radioItemIconClassName: p,
-radioBarClassName: m,
+radioBarClassName: I,
 hasSelection: T,
 radioPosition: g = 'left',
 icon: S,
@@ -60,10 +60,10 @@ withTransparentBackground: A
 className: p,
 children: [
   r ? (0, i.jsx)(h.Z, {
-    foreground: I.radioIconForeground
+    foreground: m.radioIconForeground
   }) : (0, i.jsx)(f.Z, {}),
   null != S && (0, i.jsx)(S, {
-    className: I.icon,
+    className: m.icon,
     size: 'md',
     color: 'currentColor'
   })
@@ -74,23 +74,23 @@ role: 'radio',
 'aria-checked': r,
 onClick: n ? void 0 : l,
 tabIndex: !n && v ? 0 : -1,
-className: o()(null != a.collapsibleContent ? I.collapsibleItem : I.item, {
-  [I.disabled]: n,
-  [I.itemFilled]: !A
+className: o()(null != a.collapsibleContent ? m.collapsibleItem : m.item, {
+  [m.disabled]: n,
+  [m.itemFilled]: !A
 }, E),
 children: (0, i.jsxs)('div', {
   style: {
     '--radio-bar-accent-color': N,
     padding: s
   },
-  className: o()(I.radioBar, {
-    [I.radioPositionLeft]: 'left' === g,
-    [I.radioPositionRight]: 'right' === g
-  }, m),
+  className: o()(m.radioBar, {
+    [m.radioPositionLeft]: 'left' === g,
+    [m.radioPositionRight]: 'right' === g
+  }, I),
   children: [
     'left' === g ? O : null,
     (0, i.jsxs)('div', {
-      className: o()(I.info, c),
+      className: o()(m.info, c),
       children: [
         (0, i.jsx)(_.x, {
           variant: 'text-md/medium',
@@ -127,7 +127,7 @@ let {
   withTransparentBackground: f,
   radioPosition: h
 } = this.props, p = t || n.disabled, {
-  tooltipText: m,
+  tooltipText: I,
   tooltipPosition: T,
   icon: S
 } = n, A = null != n.collapsibleContent ? (0, i.jsx)(c.z, {
@@ -173,18 +173,18 @@ let {
   icon: S,
   withTransparentBackground: f
 });
-return null != m ? (0, i.jsx)(E.u, {
-  text: m,
+return null != I ? (0, i.jsx)(E.u, {
+  text: I,
   position: null != T ? T : 'top',
   children: e => (0, i.jsx)('div', {
     ...e,
-    className: I.tooltipWrapper,
+    className: m.tooltipWrapper,
     children: A
   })
 }) : A;
   }
   constructor(...e) {
-super(...e), m(this, 'handleClick', e => {
+super(...e), I(this, 'handleClick', e => {
   e.preventDefault();
   let {
     onClick: t,
@@ -272,9 +272,9 @@ disabled: _ = !1,
 options: E = [],
 'aria-labelledby': f,
 orientation: h,
-withTransparentBackground: I
-  } = e, m = (0, d.Gc)(), g = A({
-labelledBy: null != f ? f : m.titleId,
+withTransparentBackground: m
+  } = e, I = (0, d.Gc)(), g = A({
+labelledBy: null != f ? f : I.titleId,
 orientation: h,
 isDisabled: _
   }), N = E.some(e => e.value === o);
@@ -295,11 +295,11 @@ children: E.map(e => (0, i.jsx)(S, {
   radioItemIconClassName: e.radioItemIconClassName,
   collapsibleClassName: a,
   radioBarClassName: e.radioBarClassName,
-  withTransparentBackground: I
+  withTransparentBackground: m
 }, e.value))
   });
 }
-m(S, 'defaultProps', {
+I(S, 'defaultProps', {
   withTransparentBackground: !1,
   radioPosition: 'left'
 }), v.Sizes = T;

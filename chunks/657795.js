@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(626135),
   h = n(453070),
   p = n(926491),
-  I = n(419922),
-  m = n(27733),
+  m = n(419922),
+  I = n(27733),
   T = n(611480),
   g = n(981631),
   S = n(474936),
@@ -75,7 +75,7 @@ children: [
       }),
       (0, r.jsx)('div', {
         className: N.stickersRow,
-        children: C.filter(e => null != e).map(e => (0, r.jsx)(I.ZP, {
+        children: C.filter(e => null != e).map(e => (0, r.jsx)(m.ZP, {
           sticker: e,
           className: N.sticker,
           size: 80
@@ -83,7 +83,7 @@ children: [
       })
     ]
   }),
-  !L && (0, r.jsx)(m.Z, {
+  !L && (0, r.jsx)(I.Z, {
     analyticsSection: g.jXE.EXPRESSION_PICKER,
     buttonText: L ? b ? A.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : A.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
   })

@@ -17,7 +17,7 @@ function p(e) {
 return !1;
   f.delete(e.guild.id), E.info('Guild has become available: '.concat(e.guild.id));
 }
-class I extends(r = u.ZP.Store) {
+class m extends(r = u.ZP.Store) {
   initialize() {
 this.waitFor(_.Z);
   }
@@ -34,12 +34,12 @@ return f.size;
 return Array.from(f);
   }
 }
-s = 'GuildAvailabilityStore', (a = 'displayName') in(i = I) ? Object.defineProperty(i, a, {
+s = 'GuildAvailabilityStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[a] = s, t.Z = new I(c.Z, {
+}) : i[a] = s, t.Z = new m(c.Z, {
   CONNECTION_OPEN: h,
   OVERLAY_INITIALIZE: h,
   GUILD_UNAVAILABLE: function(e) {

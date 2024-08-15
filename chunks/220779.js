@@ -20,12 +20,12 @@ var r = n(735250),
   f = n(131704),
   h = n(792125),
   p = n(142550),
-  I = n(981631),
-  m = n(689938),
+  m = n(981631),
+  I = n(689938),
   T = n(763072);
 let g = (0, f.kt)({
 id: '1',
-type: I.d4z.DM
+type: m.d4z.DM
   }),
   S = i.forwardRef(function(e, t) {
 let {
@@ -55,14 +55,14 @@ return (0, r.jsx)(o.Popout, {
           (0, r.jsx)(o.Text, {
             variant: 'text-xs/bold',
             className: T.replyHeader,
-            children: null != i ? i : m.Z.Messages.CHAT
+            children: null != i ? i : I.Z.Messages.CHAT
           }),
           d,
           (0, r.jsx)(A, {
             onEnter: e => {
               a(e), _();
             },
-            placeholder: null != n ? n : m.Z.Messages.CHAT
+            placeholder: null != n ? n : I.Z.Messages.CHAT
           })
         ]
       })
@@ -83,8 +83,8 @@ autoFocus: _ = !0,
 onFocus: E,
 channel: f,
 className: h
-  } = e, [I, m] = i.useState(''), [S, A] = i.useState((0, c.JM)('')), N = () => {
-m(''), A((0, c.JM)(''));
+  } = e, [m, I] = i.useState(''), [S, A] = i.useState((0, c.JM)('')), N = () => {
+I(''), A((0, c.JM)(''));
   }, v = u.I.ATOMIC_REACTOR_REPLY_INPUT, O = i.useRef(null);
   return (0, r.jsx)(d.Z, {
 ref: O,
@@ -96,7 +96,7 @@ allowNewLines: !1,
 maxCharacterCount: p.z,
 channel: null != f ? f : g,
 onChange: (e, t, n) => {
-  m(t), A(n);
+  I(t), A(n);
 },
 type: o ? {
   ...v,
@@ -104,7 +104,7 @@ type: o ? {
     button: !0
   }
 } : v,
-textValue: I,
+textValue: m,
 richValue: S,
 onSubmit: e => {
   let {
@@ -165,7 +165,7 @@ return N(() => u(!1), c), (0, r.jsx)(o.Popout, {
     className: (0, h.Q)(a),
     ref: c,
     children: (0, r.jsx)(E.$, {
-      messageId: I.lds,
+      messageId: m.lds,
       channel: g,
       closePopout: () => {
         u(!1);
@@ -176,7 +176,7 @@ return N(() => u(!1), c), (0, r.jsx)(o.Popout, {
     })
   }),
   children: () => (0, r.jsx)(o.Tooltip, {
-    text: m.Z.Messages.ADD_REACTION,
+    text: I.Z.Messages.ADD_REACTION,
     children: e => (0, r.jsx)('div', {
       ...e,
       className: T.reaction,
@@ -237,7 +237,7 @@ children: (0, r.jsxs)('div', {
         });
       },
       children: (0, r.jsx)(o.Tooltip, {
-        text: m.Z.Messages.MESSAGE_ACTION_REPLY,
+        text: I.Z.Messages.MESSAGE_ACTION_REPLY,
         children: e => (0, r.jsx)('button', {
           ...e,
           className: s()(T.reaction, T.emojiButton),

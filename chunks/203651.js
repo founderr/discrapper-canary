@@ -28,9 +28,9 @@ t.Request = A, p.getXHR = () => {
 return new r.XMLHttpRequest();
   throw Error('Browser-only version of superagent could not find XHR');
 };
-let I = ''.trim ? e => e.trim() : e => e.replace(/(^\s*|\s*$)/g, '');
+let m = ''.trim ? e => e.trim() : e => e.replace(/(^\s*|\s*$)/g, '');
 
-function m(e) {
+function I(e) {
   if (!c(e))
 return e;
   let t = [];
@@ -129,7 +129,7 @@ i = e.split('&');
 1 === (n = (t = i[e]).indexOf('=')) ? r[decodeURIComponent(t)] = '' : r[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1));
   return r;
 }
-p.serializeObject = m, p.parseString = T, p.types = {
+p.serializeObject = I, p.parseString = T, p.types = {
   html: 'text/html',
   json: 'application/json',
   xml: 'text/xml',
@@ -157,7 +157,7 @@ let a = e.split(/\r?\n/),
   s = {};
 for (let e = 0, o = a.length; e < o; ++e) {
   if (-1 !== (t = (n = a[e]).indexOf(':')))
-    r = n.slice(0, t).toLowerCase(), i = I(n.slice(t + 1)), s[r] = i;
+    r = n.slice(0, t).toLowerCase(), i = m(n.slice(t + 1)), s[r] = i;
 }
 return s;
   }(this.xhr.getAllResponseHeaders()), this.header = this.headers, this.header['content-type'] = this.xhr.getResponseHeader('content-type'), this._setHeaderProperties(this.header), null === this.text && e._responseType ? this.body = this.xhr.response : this.body = 'HEAD' === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response);
@@ -206,7 +206,7 @@ throw Error('Cannot use basic auth, btoa is not a function');
   };
   return this._auth(e, t, n, r);
 }, A.prototype.query = function(e) {
-  return 'string' != typeof e && (e = m(e)), e && this._query.push(e), this;
+  return 'string' != typeof e && (e = I(e)), e && this._query.push(e), this;
 }, A.prototype.attach = function(e, t, n) {
   if (t) {
 if (this._data)

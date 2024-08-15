@@ -16,16 +16,16 @@ t.Z = e => {
 f = i.useRef(null),
 h = null != n && 'cancel' !== n.type,
 p = _ && (null == n ? void 0 : n.type) !== 'done',
-I = h || p;
+m = h || p;
   if (i.useEffect(() => {
   if ((null == n ? void 0 : n.type) === 'submit' || (null == n ? void 0 : n.type) === 'done') {
     var e;
     null === (e = f.current) || void 0 === e || e.focus();
   }
-}, [null == n ? void 0 : n.type]), !I)
+}, [null == n ? void 0 : n.type]), !m)
 return null;
-  let m = o.Z.Messages.DONE;
-  return (null == n ? void 0 : n.type) === 'submit' ? (m = o.Z.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = a.Button.Colors.RED) : (null == n ? void 0 : n.type) === 'next' ? m = o.Z.Messages.NEXT : (null == n ? void 0 : n.type) === 'cancel' && (m = o.Z.Messages.CANCEL, t = a.Button.Colors.TRANSPARENT), (0, r.jsxs)(a.ModalFooter, {
+  let I = o.Z.Messages.DONE;
+  return (null == n ? void 0 : n.type) === 'submit' ? (I = o.Z.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = a.Button.Colors.RED) : (null == n ? void 0 : n.type) === 'next' ? I = o.Z.Messages.NEXT : (null == n ? void 0 : n.type) === 'cancel' && (I = o.Z.Messages.CANCEL, t = a.Button.Colors.TRANSPARENT), (0, r.jsxs)(a.ModalFooter, {
 direction: s.Z.Direction.HORIZONTAL,
 children: [
   p && (0, r.jsx)(a.Button, {
@@ -43,7 +43,7 @@ children: [
     className: l.actionButton,
     disabled: u || c,
     buttonRef: f,
-    children: m
+    children: I
   })
 ]
   });

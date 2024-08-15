@@ -23,8 +23,8 @@ checked: a,
 subtext: f,
 disabled: h,
 isFocused: p,
-menuItemProps: I,
-action: m
+menuItemProps: m,
+action: I
   } = e, T = i.useRef(null);
   return i.useEffect(() => {
 p && (0, u.F)(T);
@@ -34,8 +34,8 @@ className: s()(E.item, E.labelContainer, _._[t], {
   [E.disabled]: h,
   [E.focused]: p
 }),
-onClick: h ? void 0 : m,
-...I,
+onClick: h ? void 0 : I,
+...m,
 'aria-checked': a,
 'aria-disabled': h,
 children: [

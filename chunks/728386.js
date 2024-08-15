@@ -18,7 +18,7 @@ type: a
   } = e, [h, p] = (0, c.Iu)(e => [
 e.activeView,
 e.pickerId
-  ], o.Z), I = i.useContext(u.ZP), [m, T] = i.useState(!1), g = h === _.X1.STICKER, S = i.useCallback(() => {
+  ], o.Z), m = i.useContext(u.ZP), [I, T] = i.useState(!1), g = h === _.X1.STICKER, S = i.useCallback(() => {
 (0, c.RO)(_.X1.STICKER, a);
   }, [a]);
   i.useEffect(() => {
@@ -32,10 +32,10 @@ let e = () => {
       T(!1);
     });
   };
-return I.addListener('sticker-suggestions-shown', e), I.addListener('sticker-suggestions-hidden', t), () => {
-  I.removeListener('sticker-suggestions-shown', e), I.removeListener('sticker-suggestions-hidden', t);
+return m.addListener('sticker-suggestions-shown', e), m.addListener('sticker-suggestions-hidden', t), () => {
+  m.removeListener('sticker-suggestions-shown', e), m.removeListener('sticker-suggestions-hidden', t);
 };
-  }, [I]);
+  }, [m]);
   let {
 Component: A,
 events: N,
@@ -46,7 +46,7 @@ className: s()(_.CT, f.buttonContainer),
 ref: t,
 children: (0, r.jsx)(d.Z, {
   innerClassName: s()(f.button, f.stickerButton, {
-    [f.stickerButtonTilted]: m && !g
+    [f.stickerButtonTilted]: I && !g
   }),
   ...N,
   onClick: () => {

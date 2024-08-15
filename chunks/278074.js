@@ -62,7 +62,7 @@ function d(e) {
 optional: () => _(e),
 and: t => h(e, t),
 or: t => p(e, t),
-select: t => void 0 === t ? m(e) : m(t, e)
+select: t => void 0 === t ? I(e) : I(t, e)
   });
 }
 
@@ -138,7 +138,7 @@ function p(...e) {
   });
 }
 
-function I(e) {
+function m(e) {
   return {
 [r]: () => ({
   match: t => ({
@@ -148,7 +148,7 @@ function I(e) {
   };
 }
 
-function m(...e) {
+function I(...e) {
   let t = 'string' == typeof e[0] ? e[0] : void 0,
 n = 2 === e.length ? e[1] : 'string' == typeof e[0] ? void 0 : e[0];
   return d({
@@ -180,33 +180,33 @@ function g(e) {
 function S(e) {
   return 'bigint' == typeof e;
 }
-let A = d(I(function(e) {
+let A = d(m(function(e) {
 return !0;
   })),
   N = e => Object.assign(d(e), {
-startsWith: t => N(h(e, I(e => g(e) && e.startsWith(t)))),
-endsWith: t => N(h(e, I(e => g(e) && e.endsWith(t)))),
+startsWith: t => N(h(e, m(e => g(e) && e.startsWith(t)))),
+endsWith: t => N(h(e, m(e => g(e) && e.endsWith(t)))),
 minLength: t => {
   let n;
-  return N(h(e, (n = t, I(e => g(e) && e.length >= n))));
+  return N(h(e, (n = t, m(e => g(e) && e.length >= n))));
 },
 maxLength: t => {
   let n;
-  return N(h(e, (n = t, I(e => g(e) && e.length <= n))));
+  return N(h(e, (n = t, m(e => g(e) && e.length <= n))));
 },
-includes: t => N(h(e, I(e => g(e) && e.includes(t)))),
-regex: t => N(h(e, I(e => g(e) && !!e.match(t))))
+includes: t => N(h(e, m(e => g(e) && e.includes(t)))),
+regex: t => N(h(e, m(e => g(e) && !!e.match(t))))
   }),
-  v = N(I(g)),
-  O = (e, t) => I(n => T(n) && e <= n && t >= n),
-  R = e => I(t => T(t) && t < e),
-  C = e => I(t => T(t) && t > e),
-  y = e => I(t => T(t) && t <= e),
-  D = e => I(t => T(t) && t >= e),
-  L = () => I(e => T(e) && Number.isInteger(e)),
-  b = () => I(e => T(e) && Number.isFinite(e)),
-  M = () => I(e => T(e) && e > 0),
-  P = () => I(e => T(e) && e < 0),
+  v = N(m(g)),
+  O = (e, t) => m(n => T(n) && e <= n && t >= n),
+  R = e => m(t => T(t) && t < e),
+  C = e => m(t => T(t) && t > e),
+  y = e => m(t => T(t) && t <= e),
+  D = e => m(t => T(t) && t >= e),
+  L = () => m(e => T(e) && Number.isInteger(e)),
+  b = () => m(e => T(e) && Number.isFinite(e)),
+  M = () => m(e => T(e) && e > 0),
+  P = () => m(e => T(e) && e < 0),
   U = e => Object.assign(d(e), {
 between: (t, n) => U(h(e, O(t, n))),
 lt: t => U(h(e, R(t))),
@@ -218,14 +218,14 @@ finite: () => U(h(e, b())),
 positive: () => U(h(e, M())),
 negative: () => U(h(e, P()))
   }),
-  w = U(I(T)),
-  x = (e, t) => I(n => S(n) && e <= n && t >= n),
-  G = e => I(t => S(t) && t < e),
-  k = e => I(t => S(t) && t > e),
-  B = e => I(t => S(t) && t <= e),
-  F = e => I(t => S(t) && t >= e),
-  V = () => I(e => S(e) && e > 0),
-  H = () => I(e => S(e) && e < 0),
+  w = U(m(T)),
+  x = (e, t) => m(n => S(n) && e <= n && t >= n),
+  G = e => m(t => S(t) && t < e),
+  k = e => m(t => S(t) && t > e),
+  B = e => m(t => S(t) && t <= e),
+  F = e => m(t => S(t) && t >= e),
+  V = () => m(e => S(e) && e > 0),
+  H = () => m(e => S(e) && e < 0),
   Z = e => Object.assign(d(e), {
 between: (t, n) => Z(h(e, x(t, n))),
 lt: t => Z(h(e, G(t))),
@@ -235,14 +235,14 @@ gte: t => Z(h(e, F(t))),
 positive: () => Z(h(e, V())),
 negative: () => Z(h(e, H()))
   }),
-  Y = Z(I(S)),
-  j = d(I(function(e) {
+  Y = Z(m(S)),
+  j = d(m(function(e) {
 return 'boolean' == typeof e;
   })),
-  W = d(I(function(e) {
+  W = d(m(function(e) {
 return 'symbol' == typeof e;
   })),
-  K = d(I(function(e) {
+  K = d(m(function(e) {
 return null == e;
   }));
 var z = {
@@ -260,7 +260,7 @@ return function e(t) {
     }
   }), {
     optional: () => e(_(t)),
-    select: n => e(void 0 === n ? m(t) : m(n, t))
+    select: n => e(void 0 === n ? I(t) : I(n, t))
   });
 }({
   [r]: () => ({
@@ -379,8 +379,8 @@ return d({
   })
 });
   },
-  when: I,
-  select: m,
+  when: m,
+  select: I,
   any: A,
   _: A,
   string: v,
@@ -407,10 +407,10 @@ return d({
   nullish: K,
   instanceOf: function(e) {
 var t;
-return d(I((t = e, e => e instanceof t)));
+return d(m((t = e, e => e instanceof t)));
   },
   shape: function(e) {
-return d(I(function(...e) {
+return d(m(function(...e) {
   if (1 === e.length) {
     let [t] = e;
     return e => l(t, e, () => {});

@@ -1,6 +1,6 @@
 n.d(t, {
   $1: function() {
-return I;
+return m;
   },
   YT: function() {
 return T;
@@ -47,14 +47,14 @@ let p = {
   ]
 };
 
-function I() {
+function m() {
   var e;
   return !(null === E.ZP || void 0 === E.ZP ? void 0 : null === (e = E.ZP.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(E.ZP, 'discord_hook', p));
 }
-async function m() {
+async function I() {
 if (!(0, _.isWindows)())
   return Promise.reject(Error('Hook is only available on Windows'));
-if (I())
+if (m())
   return Promise.reject(Error('Hook module is too old'));
 await E.ZP.ensureModule('discord_hook');
 let e = await E.ZP.requireModule('discord_hook');
@@ -75,7 +75,7 @@ return function(e) {
   (i = r || (r = {}))[i.None = 0] = 'None', i[i.EnableCrashReporting = 1] = 'EnableCrashReporting', i[i.EnableCrashTrigger = 2] = 'EnableCrashTrigger';
 
 function T(e, t) {
-  return m().then(n => {
+  return I().then(n => {
 var r;
 let i = null === (r = l.ZP.getGameForPID(e)) || void 0 === r ? void 0 : r.name,
   c = u.Z.getGameByName(i),
@@ -104,7 +104,7 @@ return new Promise(r => {
 }
 
 function g(e) {
-  return m().then(t => {
+  return I().then(t => {
 t.cancelAttachToProcess(e);
   });
 }

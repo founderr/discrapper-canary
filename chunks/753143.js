@@ -30,7 +30,7 @@ paddingTop: E = 0,
 paddingBottom: f = 0,
 getScrollerState: h,
 getAnchorId: p
-  } = e, I = (0, a.Z)(), m = (0, r.useRef)(o), [T] = (0, r.useState)(() => new i.Z()), {
+  } = e, m = (0, a.Z)(), I = (0, r.useRef)(o), [T] = (0, r.useState)(() => new i.Z()), {
 dirty: g,
 chunkStart: S,
 chunkEnd: A,
@@ -38,10 +38,10 @@ forceUpdateOnChunkChange: N
   } = (0, s.Z)({
 chunkSize: _,
 getScrollerState: h,
-forceUpdate: I
+forceUpdate: m
   }), {
 items: v
-  } = m.current, O = null, {
+  } = I.current, O = null, {
 scrollTop: R
   } = h();
   for (let e of v) {
@@ -68,7 +68,7 @@ if (e.offsetTop >= R) {
   S,
   c
 ]),
-y = (0, r.useMemo)(() => g > 0 ? m.current : (T.mergeProps({
+y = (0, r.useMemo)(() => g > 0 ? I.current : (T.mergeProps({
   sectionHeight: n,
   rowHeight: l,
   footerHeight: u,
@@ -92,7 +92,7 @@ y = (0, r.useMemo)(() => g > 0 ? m.current : (T.mergeProps({
   _,
   p
 ]);
-  return (0, r.useLayoutEffect)(() => void(m.current = y)), {
+  return (0, r.useLayoutEffect)(() => void(I.current = y)), {
 ...y,
 listComputer: T,
 forceUpdateOnChunkChange: N,

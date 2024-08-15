@@ -9,8 +9,8 @@ var r, i, a, s, o = n(392711),
   f = n(163268),
   h = n(723352),
   p = n(160404),
-  I = n(786761),
-  m = n(418476),
+  m = n(786761),
+  I = n(418476),
   T = n(739566),
   g = n(995774),
   S = n(706454),
@@ -103,7 +103,7 @@ return d.Z.getOrCreate(e).get(t);
   }
   getLastEditableMessage(e) {
 let t = U.default.getCurrentUser();
-return l()(this.getMessages(e).toArray()).reverse().find(e => (0, m.Z)(e, null == t ? void 0 : t.id));
+return l()(this.getMessages(e).toArray()).reverse().find(e => (0, I.Z)(e, null == t ? void 0 : t.id));
   }
   getLastCommandMessage(e) {
 let t = U.default.getCurrentUser();
@@ -282,7 +282,7 @@ let t = e.message.id,
   r = d.Z.getOrCreate(n);
 if (null == r || !r.has(t))
   return !1;
-r = r.update(t, t => (0, I.wi)(t, e.message)), d.Z.commit(r);
+r = r.update(t, t => (0, m.wi)(t, e.message)), d.Z.commit(r);
   },
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
 let {

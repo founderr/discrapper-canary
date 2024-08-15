@@ -19,7 +19,7 @@ for (var n, r = e; null !== (n = r.next); r = n)
 var n = h(e, t);
 return n && n.value;
   },
-  I = function(e, t, n) {
+  m = function(e, t, n) {
 var r = h(e, t);
 r ? r.value = n : e.next = {
   key: t,
@@ -58,7 +58,7 @@ set: function(r, i) {
   o && r && ('object' == typeof r || 'function' == typeof r) ? (!e && (e = new o()), c(e, r, i)) : l ? (!t && (t = new l()), E(t, r, i)) : (!n && (n = {
     key: {},
     next: null
-  }), I(n, r, i));
+  }), m(n, r, i));
 }
   };
   return r;

@@ -22,8 +22,8 @@ user: t,
 context: f,
 label: h,
 joinCallVideo: p,
-id: I,
-onCall: m
+id: m,
+onCall: I
   } = e, T = l.default.getId(), g = f === _.IlC.POPOUT, S = (0, i.e7)([
 d.Z,
 u.Z
@@ -31,11 +31,11 @@ u.Z
   if (T === t.id || g || S || t.bot)
 return null;
   let N = () => {
-  null == m || m(), s.Z.openPrivateChannel(t.id, !0, p);
+  null == I || I(), s.Z.openPrivateChannel(t.id, !0, p);
 },
 v = !o.ZP.disableCallUserConfirmationPrompt;
   return (0, r.jsx)(a.MenuItem, {
-id: null != I ? I : 'call',
+id: null != m ? m : 'call',
 label: null != h ? h : E.Z.Messages.CALL,
 action: v ? () => {
   (0, a.openModalLazy)(async () => {

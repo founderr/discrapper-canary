@@ -12,7 +12,7 @@ let f = {},
 function p() {
   f = {}, h = {};
 }
-class I extends(i = l.ZP.Store) {
+class m extends(i = l.ZP.Store) {
   getFpMessageInfo(e) {
 return f[e];
   }
@@ -28,12 +28,12 @@ return null != t && !t.reportSubmit && d.default.age(t.messageId) < _;
 return r;
   }
 }
-o = 'FalsePositiveStore', (s = 'displayName') in(a = I) ? Object.defineProperty(a, s, {
+o = 'FalsePositiveStore', (s = 'displayName') in(a = m) ? Object.defineProperty(a, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[s] = o, t.Z = new I(u.Z, {
+}) : a[s] = o, t.Z = new m(u.Z, {
   LOGOUT: function() {
 (function() {
   f = {}, h = {};

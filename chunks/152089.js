@@ -31,8 +31,8 @@ canOnlyUseTextCommands: E,
 canSendStickers: f,
 hideMentionDescription: h,
 hidePersonalInformation: p,
-type: I,
-emojiIntention: m,
+type: m,
+emojiIntention: I,
 editorRef: T,
 onSendMessage: g,
 onSendSticker: S,
@@ -50,8 +50,8 @@ allowStickers: !0 === f,
 forNonStringCommandOption: null != n && n.type !== r.jw.STRING,
 hideMentionDescription: !0 === h,
 hidePersonalInformation: !0 === p,
-chatInputType: I,
-emojiIntention: m,
+chatInputType: m,
+emojiIntention: I,
 sendMessage: g,
 sendSticker: S,
 insertText: (e, t) => {
@@ -71,7 +71,7 @@ let e = (0, i.$z)(n);
 e.canMentionChannels && (N.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (N.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (N.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (N.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), N.hideMentionDescription = !0;
   } else
 u && (N.mentions.channel = l.nS.ALLOW_SELECTABLE), o && (N.mentions.role = l.Fw.ALLOW_MENTIONABLE), s && (N.mentions.user = l.h3.ALLOW_CHANNEL), c && (N.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), d && (N.mentions.clyde = l.cz.ALLOW);
-  return (null === (t = I.commands) || void 0 === t ? void 0 : t.enabled) && (_ ? N.commands = E ? l.L8.NEW_TEXT_ONLY : l.L8.NEW : N.commands = l.L8.OLD_BUILT_INS), null != n && null != n.channelTypes && (N.allowedChannelTypes = n.channelTypes), N;
+  return (null === (t = m.commands) || void 0 === t ? void 0 : t.enabled) && (_ ? N.commands = E ? l.L8.NEW_TEXT_ONLY : l.L8.NEW : N.commands = l.L8.OLD_BUILT_INS), null != n && null != n.channelTypes && (N.allowedChannelTypes = n.channelTypes), N;
 }
 
 function d(e) {
@@ -102,7 +102,7 @@ textValue: c,
 optionText: _
   } = e, E = null;
   for (let e of o.R) {
-var f, h, p, I, m, T;
+var f, h, p, m, I, T;
 let g = o.W[e];
 if (e === l.eq.GIFS || e === l.eq.CHOICES) {
   if (r.commands === l.L8.OLD_BUILT_INS) {
@@ -192,7 +192,7 @@ if (e === l.eq.GIFS || e === l.eq.CHOICES) {
     E = {
       type: e,
       typeInfo: g,
-      query: i.substring(null !== (I = null === (p = g.sentinel) || void 0 === p ? void 0 : p.length) && void 0 !== I ? I : 0)
+      query: i.substring(null !== (m = null === (p = g.sentinel) || void 0 === p ? void 0 : p.length) && void 0 !== m ? m : 0)
     };
     break;
   }
@@ -207,7 +207,7 @@ if (e === l.eq.GIFS || e === l.eq.CHOICES) {
   E = {
     type: e,
     typeInfo: g,
-    query: i.substring(null !== (T = null === (m = g.sentinel) || void 0 === m ? void 0 : m.length) && void 0 !== T ? T : 0)
+    query: i.substring(null !== (T = null === (I = g.sentinel) || void 0 === I ? void 0 : I.length) && void 0 !== T ? T : 0)
   };
   break;
 }

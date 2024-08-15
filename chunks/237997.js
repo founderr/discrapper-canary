@@ -12,8 +12,8 @@ var r, i = n(442837),
   f = n(355863),
   h = n(914010),
   p = n(358085),
-  I = n(998502),
-  m = n(145597),
+  m = n(998502),
+  I = n(145597),
   T = n(451478),
   g = n(981631),
   S = n(987650);
@@ -153,19 +153,19 @@ let w = {
 function k() {
   if (!__OVERLAY__)
 return !1;
-  let e = v === (0, m.QF)(),
-t = C.has((0, m.QF)()) || M.size > 0;
+  let e = v === (0, I.QF)(),
+t = C.has((0, I.QF)()) || M.size > 0;
   e && t ? (0, o.T_)(window, !0) : (0, o.T_)(window, !1);
 }
 
 function B() {
-  if (v !== (0, m.QF)())
+  if (v !== (0, I.QF)())
 return !1;
   M.clear();
 }
 
 function F(e) {
-  let t = (0, m.QF)();
+  let t = (0, I.QF)();
   if (null == e.pid || e.pid === t)
 switch (e.type) {
   case g.BmY.STORAGE_SYNC:
@@ -174,7 +174,7 @@ switch (e.type) {
   case g.BmY.DISPATCH:
     null != e.payloads && (L = !0, e.payloads.forEach(e => function(e) {
       var t, n, r, i, a, o;
-      if ('OVERLAY_INITIALIZE' === e.type && (null == (t = e).version && 1 === m.Tq || t.version === m.Tq || (s.Z.dispatch({
+      if ('OVERLAY_INITIALIZE' === e.type && (null == (t = e).version && 1 === I.Tq || t.version === I.Tq || (s.Z.dispatch({
           type: 'OVERLAY_INCOMPATIBLE_APP'
         }), (0, l.zP)(), 0)))
         b = !0;
@@ -240,7 +240,7 @@ if (this.waitFor(d.default), this.syncWith([d.default], () => {
     w = null != e ? U(e) : {
       ...N
     };
-  }), __OVERLAY__ && (p.isPlatformEmbedded && I.ZP.requireModule('discord_overlay2'), C.delete((0, m.QF)())), null != e) {
+  }), __OVERLAY__ && (p.isPlatformEmbedded && m.ZP.requireModule('discord_overlay2'), C.delete((0, I.QF)())), null != e) {
   O = e;
   let t = d.default.getId();
   null != t && (null == (w = U(t)).textChatNotifications && (w.textChatNotifications = N.textChatNotifications), null == w.textWidgetOpacity && (w.textWidgetOpacity = N.textWidgetOpacity));
@@ -255,18 +255,18 @@ return !C.has(e);
   isInstanceUILocked() {
 if (!__OVERLAY__)
   throw Error('OverlayStore: App instance should never call .isInstanceUILocked()');
-return !C.has((0, m.QF)());
+return !C.has((0, I.QF)());
   }
   isInstanceFocused() {
 if (!__OVERLAY__)
   throw Error('OverlayStore: App instance should never call .isInstanceFocused()');
-return v === (0, m.QF)();
+return v === (0, I.QF)();
   }
   isFocused(e) {
 return v === e;
   }
   isPinned(e) {
-let t = f.Z.getLayout(m.qU);
+let t = f.Z.getLayout(I.qU);
 return null != t && null != t.widgets.find(t => {
   let n = f.Z.getWidget(t);
   return null != n && n.type === e && !!n.pinned || !1;
@@ -366,8 +366,8 @@ s.Z.addInterceptor(e => {
     } = e;
     return null != n && ((0, l.lW)({
       type: g.BmY.DISPATCH,
-      pid: (0, m.QF)(),
-      token: (0, m.Ht)(),
+      pid: (0, I.QF)(),
+      token: (0, I.Ht)(),
       payloads: [{
           type: 'CHANNEL_PRELOAD',
           guildId: t === g.ME ? null : t,
@@ -384,14 +384,14 @@ s.Z.addInterceptor(e => {
   }
   return (0, l.lW)({
     type: g.BmY.DISPATCH,
-    pid: (0, m.QF)(),
-    token: (0, m.Ht)(),
+    pid: (0, I.QF)(),
+    token: (0, I.Ht)(),
     payloads: [e]
   }), !x.has(e.type);
-}), (0, l.Ty)(F, (0, m.Ht)()), (0, l.$j)(), (0, l.lW)({
+}), (0, l.Ty)(F, (0, I.Ht)()), (0, l.$j)(), (0, l.lW)({
   type: g.BmY.CONNECT,
-  pid: (0, m.QF)(),
-  token: (0, m.Ht)()
+  pid: (0, I.QF)(),
+  token: (0, I.Ht)()
 });
   },
   OVERLAY_INITIALIZE: function(e) {
@@ -491,7 +491,7 @@ t ? C.delete(n) : C.add(n), B(), k(), P = !1;
 let {
   region: t
 } = e;
-if (v !== (0, m.QF)() || M.has(t))
+if (v !== (0, I.QF)() || M.has(t))
   return !1;
 M.add(t);
   },
@@ -502,7 +502,7 @@ P = e.isPreviewingInGame;
   WINDOW_RESIZED: function() {
 if (__OVERLAY__) {
   let e = T.Z.windowSize();
-  !(0, m.Te)(e) && (P = !1);
+  !(0, I.Te)(e) && (P = !1);
 }
   },
   OVERLAY_SET_ASSOCIATED_GAME: function(e) {

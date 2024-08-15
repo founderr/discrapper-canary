@@ -26,8 +26,8 @@ isPressed: p
   } = (0, a.r7)({
 isDisabled: s
   }), {
-pressProps: I,
-isPressed: m
+pressProps: m,
+isPressed: I
   } = (0, a.r7)({
 isDisabled: s || o,
 onPress() {
@@ -39,7 +39,7 @@ focusableProps: T
 labelable: !0
   });
   return (0, r.y$)(n, t.isSelected, t.setSelected), {
-labelProps: (0, r.dG)(I, {
+labelProps: (0, r.dG)(m, {
   onClick: e => e.preventDefault()
 }),
 inputProps: (0, r.dG)(S, {
@@ -59,7 +59,7 @@ inputProps: (0, r.dG)(S, {
   ...g
 }),
 isSelected: t.isSelected,
-isPressed: p || m,
+isPressed: p || I,
 isDisabled: s,
 isReadOnly: o,
 isInvalid: f || 'invalid' === E

@@ -18,8 +18,8 @@ var i = n(120356),
   f = n(221292),
   h = n(290421),
   p = n(228168),
-  I = n(981631),
-  m = n(689938),
+  m = n(981631),
+  I = n(689938),
   T = n(498799);
 
 function g(e) {
@@ -36,7 +36,7 @@ trackUserProfileAction: N
   } = (0, E.KZ)();
   return (0, r.jsx)('div', {
 className: a()(T.container, n),
-'aria-label': m.Z.Messages.PROFILE_USER_BADGES,
+'aria-label': I.Z.Messages.PROFILE_USER_BADGES,
 role: 'group',
 children: t.map(e => (0, r.jsx)(s.TooltipContainer, {
   text: e.description,
@@ -57,7 +57,7 @@ children: t.map(e => (0, r.jsx)(s.TooltipContainer, {
         return null == g || g(), n(t);
     },
     onMouseEnter: () => {
-      e.id === h.i && _.default.track(I.rMx.QUEST_CONTENT_VIEWED, {
+      e.id === h.i && _.default.track(m.rMx.QUEST_CONTENT_VIEWED, {
         ...(0, c.mH)(d.jn.QUEST_BADGE)
       }), N({
         action: 'HOVER_BADGE'

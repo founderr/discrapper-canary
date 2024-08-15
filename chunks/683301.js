@@ -12,8 +12,8 @@ var i, a, s, o, l, u, c = n(512722),
 n(902704);
 var h = n(570140),
   p = n(117496),
-  I = n(314897),
-  m = n(230307),
+  m = n(314897),
+  I = n(230307),
   T = n(981631),
   g = n(731455);
 (s = i || (i = {})).UNSET = 'unset', s.FETCHING = 'fetching', s.FAILED = 'failed', s.SUCCEEDED = 'succeeded';
@@ -71,10 +71,10 @@ keywords: e.keywords
 }
 class P extends(a = f.ZP.Store) {
   initialize() {
-this.waitFor(I.default);
+this.waitFor(m.default);
   }
   isFetching() {
-return v || null == R || null == m.Z.lastFetched;
+return v || null == R || null == I.Z.lastFetched;
   }
   isFetchingSearch() {
 return 'fetching' === O;

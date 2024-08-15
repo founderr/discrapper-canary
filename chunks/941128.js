@@ -5,8 +5,8 @@ var r, i, a, s, o, l, u, c, d = n(392711),
   f = n(433517),
   h = n(570140),
   p = n(51025),
-  I = n(594190),
-  m = n(314897),
+  m = n(594190),
+  I = n(314897),
   T = n(173747),
   g = n(780570),
   S = n(830168),
@@ -51,8 +51,8 @@ let {
   branchId: s
 } = (0, g.CP)(r);
 if (t = a, n = s, (null == b || b.applicationId !== t || b.branchId !== n) && (null == M || M.applicationId !== t || M.branchId !== n)) {
-  let e = m.default.getToken(),
-    t = m.default.getId();
+  let e = I.default.getToken(),
+    t = I.default.getId();
   if (null == e)
     throw Error('missing user token');
   w = !S.Z.setCurrentTask(a, s, i, t, e);
@@ -102,16 +102,16 @@ branchId: n
 }
 
 function Y() {
-  let e = m.default.getToken(),
-t = m.default.getId();
+  let e = I.default.getToken(),
+t = I.default.getId();
   if (null != e)
 S.Z.setCredentials(t, e);
 }
 
 function j() {
-  for (let e of I.ZP.getRunningDiscordApplicationIds())
+  for (let e of m.ZP.getRunningDiscordApplicationIds())
 p.al(e, e);
-  let e = I.ZP.getVisibleGame();
+  let e = m.ZP.getVisibleGame();
   return !L && null != e && e.pid !== x && p.wO(), x = null == e ? null : e.pid, !1;
 }
 class W extends(a = E.ZP.Store) {
@@ -127,7 +127,7 @@ if (null != t.queue)
     comboId: e,
     action: 'Patch'
   } : e);
-null != t.paused && (L = t.paused), null != t.userActions && (U = new Map(Array.from(t.userActions))), this.waitFor(N.Z, I.ZP), this.syncWith([I.ZP], j), this.waitFor(N.Z);
+null != t.paused && (L = t.paused), null != t.userActions && (U = new Map(Array.from(t.userActions))), this.waitFor(N.Z, m.ZP), this.syncWith([m.ZP], j), this.waitFor(N.Z);
   }
   get activeItems() {
 return y.map(e => {

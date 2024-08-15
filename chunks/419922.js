@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(134432),
   h = n(314910),
   p = n(506071),
-  I = n(453070),
-  m = n(373228),
+  m = n(453070),
+  I = n(373228),
   T = n(378233),
   g = n(689938),
   S = n(310512);
@@ -100,21 +100,21 @@ let {
   positionRef: E,
   withLoadingIndicator: h,
   onError: p
-} = e, I = i.useRef(null), m = i.useRef(null), [A, N] = i.useState(!0), [v, y] = i.useState(!1), D = i.useRef(!1);
+} = e, m = i.useRef(null), I = i.useRef(null), [A, N] = i.useState(!0), [v, y] = i.useState(!1), D = i.useRef(!1);
 D.current = t && c;
 let L = null == o ? (0, T.Q6)(s) : o;
 return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.concat(s.id)), i.useEffect(() => {
-  if (null == I.current || null == L)
+  if (null == m.current || null == L)
     return;
   let e = Math.min(2, (0, f.x_)());
-  I.current.width = a * e, I.current.height = a * e;
+  m.current.width = a * e, m.current.height = a * e;
   let t = !1;
   return (async () => {
     let {
       default: e
     } = await n.e('21617').then(n.bind(n, 186952));
-    null != I.current && (m.current = new e({
-      canvas: I.current,
+    null != m.current && (I.current = new e({
+      canvas: m.current,
       animationId: s.id,
       assetUrl: L,
       assetData: u,
@@ -124,10 +124,10 @@ return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.con
       onError: () => {
         !t && (N(!1), y(!0), null == p || p());
       }
-    }), D.current && m.current.setState(!0));
+    }), D.current && I.current.setState(!0));
   })(), () => {
     var e;
-    null === (e = m.current) || void 0 === e || e.drop(), m.current = null, t = !0;
+    null === (e = I.current) || void 0 === e || e.drop(), I.current = null, t = !0;
   };
 }, [
   L,
@@ -138,7 +138,7 @@ return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.con
 ]), i.useEffect(() => {
   var e;
   let n;
-  !t && (n = 0), null === (e = m.current) || void 0 === e || e.setState(t && c, n);
+  !t && (n = 0), null === (e = I.current) || void 0 === e || e.setState(t && c, n);
 }, [
   s,
   t,
@@ -156,7 +156,7 @@ return (l()(null != L, 'Unable to determine sticker asset URL. Sticker ID: '.con
     withLoadingIndicator: h,
     children: O((0, r.jsx)('canvas', {
       className: S.lottieCanvas,
-      ref: I
+      ref: m
     }), s.id)
   })
 });
@@ -172,11 +172,11 @@ let {
   positionRef: c,
   withLoadingIndicator: _,
   fileUri: E
-} = e, [f, h] = i.useState(!1), [p, I] = i.useState(!0), [m, g] = i.useState(!1), N = i.useRef(null), v = i.useRef(null), y = null != E ? E : (0, T.Q6)(n, {
+} = e, [f, h] = i.useState(!1), [p, m] = i.useState(!0), [I, g] = i.useState(!1), N = i.useRef(null), v = i.useRef(null), y = null != E ? E : (0, T.Q6)(n, {
   isPreview: !t || !f || !a,
   size: o
 }), D = i.useCallback(() => {
-  I(!1);
+  m(!1);
 }, []), L = i.useCallback(() => {
   g(!0);
 }, []);
@@ -189,7 +189,7 @@ return (i.useEffect(() => {
   }
 }, []), i.useLayoutEffect(() => {
   var e;
-  (null === (e = v.current) || void 0 === e ? void 0 : e.complete) === !0 && I(!1);
+  (null === (e = v.current) || void 0 === e ? void 0 : e.complete) === !0 && m(!1);
 }, []), null == y) ? null : (0, r.jsx)(d.$, {
   ref: N,
   onChange: h,
@@ -198,7 +198,7 @@ return (i.useEffect(() => {
     className: s()(l, S.__invalid_pngImageWrapper),
     ref: c,
     children: (0, r.jsx)(C, {
-      hasError: m,
+      hasError: I,
       isLoading: p,
       maskAsset: u,
       size: o,
@@ -226,17 +226,17 @@ let {
   positionRef: o,
   size: l,
   sticker: d
-} = e, f = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), p = i.useRef(null), I = {
+} = e, f = (0, c.e7)([E.Z], () => E.Z.useReducedMotion), p = i.useRef(null), m = {
   transform: 'scale('.concat(f ? 1 : 1 / n, ')'),
   opacity: 0
-}, m = (0, _.useTransition)(s, {
+}, I = (0, _.useTransition)(s, {
   ref: p,
-  from: I,
+  from: m,
   enter: {
     transform: 'scale(1)',
     opacity: 1
   },
-  leave: I,
+  leave: m,
   config: N
 }), T = i.useRef(null), g = (0, _.useSpring)({
   ref: T,
@@ -256,7 +256,7 @@ return (0, u.useChain)(s ? [
 ] : [
   0,
   0
-]), m((e, i) => i && (0, r.jsx)(h.W5, {
+]), I((e, i) => i && (0, r.jsx)(h.W5, {
   className: S.positionedLayer,
   fixed: !0,
   align: 'center',
@@ -307,10 +307,10 @@ let {
   assetData: E,
   fileUri: f,
   onError: h
-} = e, T = (0, p.n)(), g = (0, I.t$)(t) && !n, S = i.useRef(null);
+} = e, T = (0, p.n)(), g = (0, m.t$)(t) && !n, S = i.useRef(null);
 if (null == c)
   return null;
-let A = c.format_type === m.u3.LOTTIE ? y : D;
+let A = c.format_type === I.u3.LOTTIE ? y : D;
 return (0, r.jsxs)(i.Fragment, {
   children: [
     (0, r.jsx)(A, {

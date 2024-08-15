@@ -10,8 +10,8 @@ var r, i, a, s = n(392711),
   f = n(287328),
   h = n(86670),
   p = n(489033),
-  I = n(188742),
-  m = n(353926),
+  m = n(188742),
+  I = n(353926),
   T = n(973542),
   g = n(889564),
   S = n(687476),
@@ -286,7 +286,7 @@ return o()(this.getDisambiguatedEmoji()).filter(t => {
     id: n,
     names: r,
     name: i
-  } = t, a = null != r && o().some(r, e), s = null != i && e(i), l = null != i && o().some(I.Z.getTermsForEmoji(i), e), u = null != n && o().some(B.Z.getCaptionsForEmojiById({
+  } = t, a = null != r && o().some(r, e), s = null != i && e(i), l = null != i && o().some(m.Z.getTermsForEmoji(i), e), u = null != n && o().some(B.Z.getCaptionsForEmojiById({
     emojiId: n
   }), e);
   return a || s || l || u;
@@ -447,7 +447,7 @@ null != e && (eu.track(e), z.pendingUsages.push({
   return r && (3 === $ || 1 === $) && eu.compute(), r;
 }
 
-function eI(e) {
+function em(e) {
   let {
 guildId: t,
 role: n
@@ -459,9 +459,9 @@ let e = ee[t];
 ef(t, null == e ? void 0 : e.emojis), eE();
   }
 }
-class em extends(i = d.ZP.PersistedStore) {
+class eI extends(i = d.ZP.PersistedStore) {
   initialize(e) {
-this.waitFor(f.Z, C.Z, R.ZP, y.Z, v.default, S.Z, F.Z, L.default, m.Z), null != e && (null != e.pendingUsages && (z.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (z.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (z.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([O.Z], eh);
+this.waitFor(f.Z, C.Z, R.ZP, y.Z, v.default, S.Z, F.Z, L.default, I.Z), null != e && (null != e.pendingUsages && (z.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (z.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (z.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([O.Z], eh);
   }
   getState() {
 return z;
@@ -621,9 +621,9 @@ let t = el.get(e);
 return null != t && t.favoriteEmojisWithoutFetchingLatest.length > 0;
   }
 }
-W(em, 'displayName', 'EmojiStore'), W(em, 'persistKey', 'EmojiStoreV2'), W(em, 'migrations', [e => ({
+W(eI, 'displayName', 'EmojiStore'), W(eI, 'persistKey', 'EmojiStoreV2'), W(eI, 'migrations', [e => ({
   ...e
-})]), t.ZP = new em(_.Z, {
+})]), t.ZP = new eI(_.Z, {
   LOGOUT: function() {
 z.pendingUsages = [], z.emojiReactionPendingUsages = [];
   },
@@ -707,12 +707,12 @@ let {
   },
   wasSaved: n
 } = e;
-if (I.Z.setEmojiLocale(v.default.locale), t !== j.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n)
+if (m.Z.setEmojiLocale(v.default.locale), t !== j.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n)
   return !1;
 z.pendingUsages = [], z.emojiReactionPendingUsages = [];
   },
-  GUILD_ROLE_CREATE: eI,
-  GUILD_ROLE_UPDATE: eI,
+  GUILD_ROLE_CREATE: em,
+  GUILD_ROLE_UPDATE: em,
   TOP_EMOJIS_FETCH_SUCCESS: function(e) {
 let {
   guildId: t,

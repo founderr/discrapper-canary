@@ -23,10 +23,10 @@ activeCommandOptionStates: p
   } = (0, o.cj)([l.Z], () => ({
 activeCommandOption: l.Z.getActiveOption(t.id),
 activeCommandOptionStates: l.Z.getOptionStates(t.id)
-  })), I = (0, _.e)(t), m = (0, u.__)(i, t, {
+  })), m = (0, _.e)(t), I = (0, u.__)(i, t, {
 location: 'ChannelTextAreaBars'
   }), T = [];
-  return (null != i && (m && T.push((0, r.jsx)(d.Z, {
+  return (null != i && (I && T.push((0, r.jsx)(d.Z, {
 activeCommand: i
   })), T.push((0, r.jsx)(c.Z, {
 activeCommand: i,
@@ -35,7 +35,7 @@ optionStates: p
   }))), null != a && T.push((0, r.jsx)(E.Z, {
 reply: a,
 chatInputType: n
-  })), I && T.push((0, r.jsx)(_.V, {})), 0 === (T = T.map((e, t) => {
+  })), m && T.push((0, r.jsx)(_.V, {})), 0 === (T = T.map((e, t) => {
 let n = t === T.length - 1;
 return (0, r.jsx)('div', {
   className: s()({

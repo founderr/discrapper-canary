@@ -12,8 +12,8 @@ var r = n(546299),
   f = r.sum64_4_lo,
   h = r.sum64_5_hi,
   p = r.sum64_5_lo,
-  I = i.BlockHash,
-  m = [
+  m = i.BlockHash,
+  I = [
 1116352408,
 3609767458,
 1899447441,
@@ -179,7 +179,7 @@ var r = n(546299),
 function T() {
   if (!(this instanceof T))
 return new T();
-  I.call(this), this.h = [
+  m.call(this), this.h = [
 1779033703,
 4089235720,
 3144134277,
@@ -196,9 +196,9 @@ return new T();
 4215389547,
 1541459225,
 327033209
-  ], this.k = m, this.W = Array(160);
+  ], this.k = I, this.W = Array(160);
 }
-r.inherits(T, I), e.exports = T, T.blockSize = 1024, T.outSize = 512, T.hmacStrength = 192, T.padLength = 128, T.prototype._prepareBlock = function(e, t) {
+r.inherits(T, m), e.exports = T, T.blockSize = 1024, T.outSize = 512, T.hmacStrength = 192, T.padLength = 128, T.prototype._prepareBlock = function(e, t) {
   for (var n = this.W, r = 0; r < 32; r++)
 n[r] = e[t + r];
   for (; r < n.length; r += 2) {
@@ -221,8 +221,8 @@ var i = function(e, t) {
     return n < 0 && (n += 4294967296), n;
   }(n[r - 30], n[r - 29]),
   p = n[r - 32],
-  I = n[r - 31];
-n[r] = E(i, a, c, d, _, h, p, I), n[r + 1] = f(i, a, c, d, _, h, p, I);
+  m = n[r - 31];
+n[r] = E(i, a, c, d, _, h, p, m), n[r + 1] = f(i, a, c, d, _, h, p, m);
   }
 }, T.prototype._update = function(e, t) {
   this._prepareBlock(e, t);
@@ -233,8 +233,8 @@ l = this.h[2],
 u = this.h[3],
 E = this.h[4],
 f = this.h[5],
-I = this.h[6],
-m = this.h[7],
+m = this.h[6],
+I = this.h[7],
 T = this.h[8],
 g = this.h[9],
 S = this.h[10],
@@ -284,9 +284,9 @@ var F = d(y, D, L, b = function(e, t, n, r, i, a) {
     return s < 0 && (s += 4294967296), s;
   }(r, i, l, u, E, f)),
   V = _(y, D, L, b);
-O = N, R = v, N = S, v = A, S = T, A = g, T = d(I, m, k, B), g = _(m, m, k, B), I = E, m = f, E = l, f = u, l = r, u = i, r = d(k, B, F, V), i = _(k, B, F, V);
+O = N, R = v, N = S, v = A, S = T, A = g, T = d(m, I, k, B), g = _(I, I, k, B), m = E, I = f, E = l, f = u, l = r, u = i, r = d(k, B, F, V), i = _(k, B, F, V);
   }
-  c(this.h, 0, r, i), c(this.h, 2, l, u), c(this.h, 4, E, f), c(this.h, 6, I, m), c(this.h, 8, T, g), c(this.h, 10, S, A), c(this.h, 12, N, v), c(this.h, 14, O, R);
+  c(this.h, 0, r, i), c(this.h, 2, l, u), c(this.h, 4, E, f), c(this.h, 6, m, I), c(this.h, 8, T, g), c(this.h, 10, S, A), c(this.h, 12, N, v), c(this.h, 14, O, R);
 }, T.prototype._digest = function(e) {
   return 'hex' === e ? r.toHex32(this.h, 'big') : r.split32(this.h, 'big');
 };

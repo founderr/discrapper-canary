@@ -41,15 +41,15 @@ commandOrigin: h
   if ((null == r ? void 0 : r.id) === (null === (t = p.activeCommand) || void 0 === t ? void 0 : t.id))
 return !1;
   p.activeCommand = r, p.activeCommandSection = i, p.activeOptionName = null, p.preferredCommandId = null, p.initialValues = null != a ? a : {}, p.commandOrigin = null != h ? h : null;
-  let I = {};
+  let m = {};
   return (null == r ? void 0 : r.options) != null && r.options.forEach(e => {
-I[e.name] = {
+m[e.name] = {
   isActive: !1,
   hasValue: !1,
   lastValidationResult: null,
   optionValue: null
 };
-  }), p.optionStates = I, null != r && (0, d.qJ)({
+  }), p.optionStates = m, null != r && (0, d.qJ)({
 command: r,
 location: s,
 triggerSection: o,
@@ -70,7 +70,7 @@ commandId: i
   return i !== a.preferredCommandId && (null !== a.preferredCommandId || i !== (null !== (n = null === (t = a.activeCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null)) && (a.activeCommand = null, a.activeOptionName = null, a.preferredCommandId = i, a.optionStates = {}, !0);
 }
 
-function I(e) {
+function m(e) {
   let {
 channelId: t,
 changedOptionStates: n
@@ -106,7 +106,7 @@ i[e] = {
   }
   return r.optionStates = i, !0;
 }
-class m extends(r = o.ZP.Store) {
+class I extends(r = o.ZP.Store) {
   initialize() {
 u.ZP.addChangeListener(() => {
   let e = c.Z.getChannelId();
@@ -156,19 +156,19 @@ return {
 };
   }
 }
-s = 'ApplicationCommandStore', (a = 'displayName') in(i = m) ? Object.defineProperty(i, a, {
+s = 'ApplicationCommandStore', (a = 'displayName') in(i = I) ? Object.defineProperty(i, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
 }) : i[a] = s;
-let T = new m(l.Z, {
+let T = new I(l.Z, {
   CONNECTION_OPEN: E,
   CHANNEL_SELECT: E,
   LOGOUT: E,
   APPLICATION_COMMAND_SET_ACTIVE_COMMAND: h,
   APPLICATION_COMMAND_SET_PREFERRED_COMMAND: p,
-  APPLICATION_COMMAND_UPDATE_OPTIONS: I,
+  APPLICATION_COMMAND_UPDATE_OPTIONS: m,
   APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function(e) {
 let {
   channelId: t,
@@ -187,7 +187,7 @@ let {
   type: 'APPLICATION_COMMAND_SET_PREFERRED_COMMAND',
   channelId: t,
   commandId: n
-}), u = I({
+}), u = m({
   type: 'APPLICATION_COMMAND_UPDATE_OPTIONS',
   channelId: t,
   changedOptionStates: s

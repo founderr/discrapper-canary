@@ -35,10 +35,10 @@ opacity: 0
   }), p = {
 background: h,
 backdropFilter: 'blur(0px)'
-  }, I = (0, d.Z)(r), m = (0, c.useTransition)(o, {
+  }, m = (0, d.Z)(r), I = (0, c.useTransition)(o, {
 keys: e => e ? 'backdrop' : 'empty',
 config: {
-  duration: r || I ? 0 : 300
+  duration: r || m ? 0 : 300
 },
 from: p,
 enter: {
@@ -51,7 +51,7 @@ leave: p
 let e = {
   zIndex: 1000 + i
 };
-return m((t, n) => n ? (0, a.jsx)(u.animated.div, {
+return I((t, n) => n ? (0, a.jsx)(u.animated.div, {
   className: _.backdrop,
   style: {
     ...t,
@@ -61,7 +61,7 @@ return m((t, n) => n ? (0, a.jsx)(u.animated.div, {
 }) : null);
   }
   return (0, a.jsx)(s, {
-children: m((e, t) => t ? (0, a.jsx)(u.animated.div, {
+children: I((e, t) => t ? (0, a.jsx)(u.animated.div, {
   className: l()(_.backdrop, _.withLayer),
   style: e,
   onClick: E

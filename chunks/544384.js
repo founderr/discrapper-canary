@@ -20,8 +20,8 @@ var r = n(735250),
   f = n(361291),
   h = n(199902),
   p = n(131951),
-  I = n(594174),
-  m = n(5192),
+  m = n(594174),
+  I = n(5192),
   T = n(358085),
   g = n(521147),
   S = n(981631),
@@ -31,10 +31,10 @@ var r = n(735250),
 function v(e, t, n) {
   let r = (0, a.e7)([c.Z], () => c.Z.getSelectedParticipantId(e.id)),
 i = (0, a.e7)([h.Z], () => null != r ? h.Z.getActiveStreamForStreamKey(r) : null, [r]);
-  return (0, a.Wu)([I.default], () => {
+  return (0, a.Wu)([m.default], () => {
 let r = n.filter(e => e.ownerId !== (null == t ? void 0 : t.id)).map(t => ({
   stream: t,
-  username: m.ZP.getName(e.getGuildId(), e.id, I.default.getUser(t.ownerId))
+  username: I.ZP.getName(e.getGuildId(), e.id, m.default.getUser(t.ownerId))
 }));
 return 1 === r.length && r[0].stream.ownerId === (null == i ? void 0 : i.ownerId) ? [] : r;
   }, [
@@ -49,15 +49,15 @@ function O(e) {
   var t, n, c;
   let {
 channel: h,
-currentUser: I,
-activeStreams: m,
+currentUser: m,
+activeStreams: I,
 hideSelfOptions: O = !1,
 showReportOption: R = !1,
 handleGoLive: C,
 onClose: y,
 onSelect: D,
 appContext: L = S.IlC.APP
-  } = e, b = (0, a.e7)([p.Z], () => p.Z.getGoLiveSource()), M = (0, a.e7)([f.Z], () => f.Z.getState().soundshareEnabled), P = p.Z.supports(A.AN.DESKTOP_CAPTURE_APPLICATIONS), U = null !== (c = m.find(e => e.ownerId === (null == I ? void 0 : I.id))) && void 0 !== c ? c : null, w = v(h, I, m), x = (0, _.Z)(U, L), G = (0, d.Z)(U, L, S.VqG), k = (0, a.e7)([p.Z], () => p.Z.supports(A.AN.SOUNDSHARE)), B = (0, a.e7)([p.Z], () => p.Z.supportsScreenSoundshare()), F = (null == b ? void 0 : b.desktopSource) != null, V = null == b ? void 0 : null === (n = b.desktopSource) || void 0 === n ? void 0 : null === (t = n.id) || void 0 === t ? void 0 : t.startsWith('screen'), H = g.Z.useExperiment({
+  } = e, b = (0, a.e7)([p.Z], () => p.Z.getGoLiveSource()), M = (0, a.e7)([f.Z], () => f.Z.getState().soundshareEnabled), P = p.Z.supports(A.AN.DESKTOP_CAPTURE_APPLICATIONS), U = null !== (c = I.find(e => e.ownerId === (null == m ? void 0 : m.id))) && void 0 !== c ? c : null, w = v(h, m, I), x = (0, _.Z)(U, L), G = (0, d.Z)(U, L, S.VqG), k = (0, a.e7)([p.Z], () => p.Z.supports(A.AN.SOUNDSHARE)), B = (0, a.e7)([p.Z], () => p.Z.supportsScreenSoundshare()), F = (null == b ? void 0 : b.desktopSource) != null, V = null == b ? void 0 : null === (n = b.desktopSource) || void 0 === n ? void 0 : null === (t = n.id) || void 0 === t ? void 0 : t.startsWith('screen'), H = g.Z.useExperiment({
 location: 'ManageStreamsMenu'
   }, {
 disable: !(F && k && (!V || B)),

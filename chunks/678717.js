@@ -1,6 +1,6 @@
 t.r(r), t.d(r, {
   default: function() {
-return Y;
+return W;
   }
 }), t(653041), t(47120);
 var a = t(735250),
@@ -25,24 +25,24 @@ var x = t(392750),
   v = t(592197),
   _ = t(860337),
   w = t(789654),
-  C = t(691867),
-  j = t(916790),
+  j = t(691867),
+  C = t(916790),
   N = t(912072),
   S = t(246992),
   T = t(442954),
-  I = t(702904),
-  E = t(178821),
+  E = t(702904),
+  I = t(178821),
   Z = t(248526),
   R = t(958328),
   O = t(514866),
   A = t(678639),
-  P = t(351930),
-  L = t(771751),
-  B = t(596768),
+  L = t(351930),
+  B = t(771751),
+  P = t(596768),
   D = t(621060),
   M = t(689938),
-  G = t(941735),
-  U = t(535271);
+  U = t(941735),
+  G = t(535271);
 
 function H(e) {
   let {
@@ -58,7 +58,7 @@ orientation: d.y.HORIZONTAL_LEFT
   });
   return (0, a.jsx)('div', {
 onMouseDown: i,
-className: G.resizeHandle
+className: U.resizeHandle
   });
 }
 
@@ -73,7 +73,7 @@ function F() {
     {
       id: 'triggers',
       name: 'Triggers',
-      render: () => (0, a.jsx)(B.Z, {})
+      render: () => (0, a.jsx)(P.Z, {})
     },
     {
       id: 'stores',
@@ -83,7 +83,7 @@ function F() {
     {
       id: 'dispatcher',
       name: 'Dispatcher',
-      render: () => (0, a.jsx)(j.Z, {})
+      render: () => (0, a.jsx)(C.Z, {})
     }
   ];
   return g.Z.isDeveloper && (e.push({
@@ -101,7 +101,7 @@ function F() {
   }), e.push({
     id: 'performance',
     name: 'Performance',
-    render: () => (0, a.jsx)(E.Z, {})
+    render: () => (0, a.jsx)(I.Z, {})
   })), e.push({
     id: 'colors',
     name: 'Colors',
@@ -109,7 +109,7 @@ function F() {
   }), e.push({
     id: 'design_toggles',
     name: 'Design Toggles',
-    render: () => (0, a.jsx)(C.Z, {})
+    render: () => (0, a.jsx)(j.Z, {})
   }), e.push({
     id: 'overlays',
     name: 'Dev Overlays',
@@ -147,15 +147,15 @@ function F() {
   }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') && (e.push({
     id: 'trials',
     name: 'Trials',
-    render: () => (0, a.jsx)(L.Z, {})
+    render: () => (0, a.jsx)(B.Z, {})
   }), e.push({
     id: 'payments',
     name: 'Payments',
-    render: () => (0, a.jsx)(I.Z, {})
+    render: () => (0, a.jsx)(E.Z, {})
   }), e.push({
     id: 'subscriptions',
     name: 'Subscriptions',
-    render: () => (0, a.jsx)(P.Z, {})
+    render: () => (0, a.jsx)(L.Z, {})
   }), e.push({
     id: 'billing',
     name: 'Billing',
@@ -184,7 +184,7 @@ properties: {
   }), (0, a.jsxs)(S.Gk, {
 children: [
   (0, a.jsxs)(m.ZP, {
-    className: U.headerBar,
+    className: G.headerBar,
     toolbar: (0, a.jsx)(m.ZP.Icon, {
       icon: s.XSmallIcon,
       tooltip: M.Z.Messages.CLOSE,
@@ -203,7 +203,7 @@ children: [
   (0, a.jsx)(t, {}),
   i(),
   (0, a.jsx)(S.Br, {
-    className: G.layerContainer
+    className: U.layerContainer
   })
 ]
   });
@@ -223,7 +223,7 @@ r,
 t
   ]), null === t) ? null : (0, a.jsxs)('div', {
 ref: e,
-className: o()(G.container),
+className: o()(U.container),
 style: {
   minWidth: f.h,
   width: t
@@ -235,7 +235,7 @@ children: [
     onResizeEnd: l
   }),
   (0, a.jsx)('div', {
-    className: G.sidebarContent,
+    className: U.sidebarContent,
     children: (0, a.jsx)(F, {})
   })
 ]
@@ -245,17 +245,17 @@ children: [
 function V() {
   let e = (0, c.e7)([f.Z], () => f.Z.displayTools);
   return e ? (0, a.jsx)('div', {
-className: o()(G.container, G.mobileContainerExpanded),
+className: o()(U.container, U.mobileContainerExpanded),
 children: (0, a.jsx)('div', {
-  className: G.sidebarContent,
+  className: U.sidebarContent,
   children: (0, a.jsx)(F, {})
 })
   }) : (0, a.jsx)('div', {
-className: G.container,
+className: U.container,
 children: (0, a.jsx)(s.Clickable, {
   onClick: b.SO,
   children: (0, a.jsxs)(m.ZP, {
-    className: o()(U.headerBar, G.mobileHeaderCollapsed),
+    className: o()(G.headerBar, U.mobileHeaderCollapsed),
     toolbar: (0, a.jsx)(p.Z, {
       direction: p.Z.Directions.UP
     }),
@@ -273,7 +273,7 @@ children: (0, a.jsx)(s.Clickable, {
   });
 }
 
-function Y(e) {
+function W(e) {
   let {
 mobile: r
   } = e;

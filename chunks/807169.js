@@ -1,6 +1,6 @@
 n.d(t, {
   Hs: function() {
-return I;
+return m;
   },
   Vh: function() {
 return g;
@@ -31,9 +31,9 @@ function p(e, t) {
   let E;
   let h = S(E = e instanceof u.Sf && e.isThread() ? null !== (i = d.Z.getChannel(e.parent_id)) && void 0 !== i ? i : e : e),
 p = l.xM.getSetting(),
-I = c.default.getId(),
+m = c.default.getId(),
 g = null !== (a = null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== a && a,
-A = null != h && null !== (s = null === (r = _.ZP.getMember(h, I)) || void 0 === r ? void 0 : r.roles) && void 0 !== s ? s : [],
+A = null != h && null !== (s = null === (r = _.ZP.getMember(h, m)) || void 0 === r ? void 0 : r.roles) && void 0 !== s ? s : [],
 N = o.Z.isViewingRoles(h),
 {
   computedPermissions: v,
@@ -42,18 +42,18 @@ N = o.Z.isViewingRoles(h),
 } = T(E, e instanceof u.Sf && e.isThread());
   return {
 context: E,
-userId: I,
+userId: m,
 roleIds: A,
 isImpersonating: N,
 commandTypes: t,
 computedPermissions: v,
 hasBaseAccessPermissions: O,
 hasSendMessagesPermission: R,
-allowNsfw: m(E, g, p)
+allowNsfw: I(E, g, p)
   };
 }
 
-function I(e, t) {
+function m(e, t) {
   let n = r.useMemo(() => {
   if (e instanceof u.Sf && e.isThread()) {
     var t;
@@ -72,7 +72,7 @@ p = (0, a.Wu)([_.ZP], () => {
   var e, t;
   return null != i && null !== (t = null === (e = _.ZP.getMember(i, E)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : [];
 }),
-I = (0, a.e7)([o.Z], () => o.Z.isViewingRoles(i));
+m = (0, a.e7)([o.Z], () => o.Z.isViewingRoles(i));
   return r.useMemo(() => {
 let {
   computedPermissions: r,
@@ -84,16 +84,16 @@ return {
   userId: E,
   roleIds: p,
   commandTypes: t,
-  isImpersonating: I,
+  isImpersonating: m,
   computedPermissions: r,
   hasBaseAccessPermissions: i,
   hasSendMessagesPermission: a,
-  allowNsfw: m(n, h, s)
+  allowNsfw: I(n, h, s)
 };
   }, [
 t,
 n,
-I,
+m,
 p,
 E,
 h,
@@ -102,7 +102,7 @@ e
   ]);
 }
 
-function m(e, t, n) {
+function I(e, t, n) {
   return !!t && (!(e instanceof u.Sf) || (null != e.guild_id ? e.nsfw : n));
 }
 

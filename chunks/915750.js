@@ -3,7 +3,7 @@ n.d(t, {
 return p;
   },
   u: function() {
-return m;
+return I;
   }
 });
 var r = n(735250),
@@ -94,13 +94,13 @@ let p = (e, t) => {
 let n = Array.isArray(e) ? e.sort().map(e => e.id).join('_') : e.id;
 return ''.concat(n, '_').concat(t);
   },
-  I = e => {
+  m = e => {
 let t = Array.isArray(e) ? null : (0, u.uk)(e),
   n = (0, o.Z)(t);
 return t !== n;
   };
 
-function m(e) {
+function I(e) {
   let {
 visible: t,
 visibleChanged: n,
@@ -108,7 +108,7 @@ reference: a,
 focused: s,
 focusedChanged: o,
 impression: l
-  } = e, u = I(e.questOrQuests);
+  } = e, u = m(e.questOrQuests);
   return i.useEffect(() => () => {
 null != l.current && l.current.stop();
   }, [l]), i.useEffect(() => {

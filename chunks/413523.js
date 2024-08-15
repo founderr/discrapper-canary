@@ -21,8 +21,8 @@ var r, i, a = n(392711),
   f = n(131951),
   h = n(606304),
   p = n(594174),
-  I = n(33039),
-  m = n(979651),
+  m = n(33039),
+  I = n(979651),
   T = n(5192),
   g = n(933546),
   S = n(354459),
@@ -69,7 +69,7 @@ if (null == e || e.type === A.d4z.GUILD_TEXT)
   return !1;
 if (this.call = _.Z.getCall(this.channelId), e.isPrivate() && (null == this.call || this.call.unavailable))
   return !1;
-let t = new Set(e.isGuildVocalOrThread() ? Object.keys(m.Z.getVoiceStatesForChannel(e.id)) : e.recipients);
+let t = new Set(e.isGuildVocalOrThread() ? Object.keys(I.Z.getVoiceStatesForChannel(e.id)) : e.recipients);
 return t.add(d.default.getId()), c.Z.getAllActiveStreamsForChannel(this.channelId).forEach(e => {
   let {
     ownerId: n
@@ -152,13 +152,13 @@ let g = [],
   A = p.default.getUser(e);
 if (null == A)
   return g;
-let v = m.Z.getVoiceStateForChannel(this.channelId, e),
-  O = m.Z.getVoicePlatformForChannel(this.channelId, e),
+let v = I.Z.getVoiceStateForChannel(this.channelId, e),
+  O = I.Z.getVoicePlatformForChannel(this.channelId, e),
   R = E.Z.getChannel(this.channelId),
   C = null !== (r = null === (n = this.call) || void 0 === n ? void 0 : null === (t = n.ringing) || void 0 === t ? void 0 : t.includes(e)) && void 0 !== r && r;
 (null != v || C) && (l = {
   type: S.fO.USER,
-  ...I.Z.getUserStreamData(e, null == R ? void 0 : R.getGuildId()),
+  ...m.Z.getUserStreamData(e, null == R ? void 0 : R.getGuildId()),
   user: A,
   id: A.id,
   voiceState: v,
@@ -185,7 +185,7 @@ if (null != y && y.channelId === this.channelId) {
       maxFrameRate: n.maxFrameRate
     } : null;
   _ = {
-    ...I.Z.getUserStreamData(e, null == R ? void 0 : R.getGuildId(), N.Yn.STREAM),
+    ...m.Z.getUserStreamData(e, null == R ? void 0 : R.getGuildId(), N.Yn.STREAM),
     ...i,
     type: r ? S.fO.HIDDEN_STREAM : S.fO.STREAM,
     id: t,

@@ -15,6 +15,6 @@ h = (0, a.Z)(null !== (n = null !== (o = null !== (l = null !== (u = null == t ?
   if (!(h >= 0 && h <= 6))
 throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
   var p = (0, i.default)(e),
-I = p.getDay();
-  return p.setDate(p.getDate() + ((I < h ? -7 : 0) + 6 - (I - h))), p.setHours(23, 59, 59, 999), p;
+m = p.getDay();
+  return p.setDate(p.getDate() + ((m < h ? -7 : 0) + 6 - (m - h))), p.setHours(23, 59, 59, 999), p;
 }

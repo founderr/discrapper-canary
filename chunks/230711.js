@@ -90,9 +90,9 @@ let {
   password: f,
   avatar: h,
   newPassword: p,
-  discriminator: I
+  discriminator: m
 } = e, {
-  close: m
+  close: I
 } = t;
 return (0, u.Z)(e => {
   let t = {
@@ -103,7 +103,7 @@ return (0, u.Z)(e => {
       avatar: h,
       new_password: p,
       ...e,
-      discriminator: null != I && '' !== I ? I : void 0
+      discriminator: null != m && '' !== m ? m : void 0
     },
     a = i.K.get(d.JkL),
     o = (0, _.xJ)();
@@ -144,7 +144,7 @@ return (0, u.Z)(e => {
   }), null != f && null != p && a.Z.dispatch({
     type: 'PASSWORD_UPDATED',
     userId: t.id
-  }), m ? this.close() : this.submitComplete(), e;
+  }), I ? this.close() : this.submitComplete(), e;
 }, e => (a.Z.dispatch({
   type: 'USER_SETTINGS_MODAL_SUBMIT_FAILURE',
   errors: e.body

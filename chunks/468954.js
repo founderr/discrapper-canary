@@ -22,8 +22,8 @@ onSearchExpressions: E,
 hasSearchResults: f,
 defaultSearchPlaceholder: h,
 emptySearchPlaceholder: p,
-renderEmptyState: I,
-renderRow: m,
+renderEmptyState: m,
+renderRow: I,
 renderSection: T,
 renderSectionHeader: g,
 renderSectionFooter: S,
@@ -73,7 +73,7 @@ expressionsGrid: j,
 onSelectItem: _,
 store: d,
 gridNavigatorId: P
-  }), et = i.useCallback((e, t) => m(j[e], X(e), {
+  }), et = i.useCallback((e, t) => I(j[e], X(e), {
 isUsingKeyboardNavigation: ee.current,
 gutterWidth: q,
 rowIndex: e,
@@ -85,7 +85,7 @@ Q,
 X,
 q,
 ee,
-m,
+I,
 d,
 W
   ]), en = i.useCallback(e => null == T ? void 0 : T(t[e]), [
@@ -140,7 +140,7 @@ children: [
       ' '
     ]
   }),
-  V && null != I ? I(u.emptyState) : (0, r.jsxs)(r.Fragment, {
+  V && null != m ? m(u.emptyState) : (0, r.jsxs)(r.Fragment, {
     children: [
       v(B),
       null != U && (0, r.jsx)('div', {

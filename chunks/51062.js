@@ -17,8 +17,8 @@ var r = n(470079),
   f = n(106824),
   h = n(691841),
   p = n(981631),
-  I = n(377668),
-  m = n(185923);
+  m = n(377668),
+  I = n(185923);
 
 function T(e, t, n) {
   var T, g, S, A, N, v, O;
@@ -28,7 +28,7 @@ type: C
   } = e, [y, D] = r.useState(() => (0, f.P)()), L = (0, i.Z)(), b = (0, a.e7)([c.ZP], () => {
 if (null != e.guild) {
   var t;
-  return null != c.ZP.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, I.fL);
+  return null != c.ZP.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, m.fL);
 }
 return !1;
   }), M = (0, u.Ib)(e.guild, e.channel) && !b && !(0, u.g0)(e.guild), P = (0, a.e7)([
@@ -72,7 +72,7 @@ canMentionEveryone: U,
 canMentionClyde: M,
 hidePersonalInformation: w,
 hideMentionDescription: C === l.I.RULES_INPUT,
-emojiIntention: C === l.I.RULES_INPUT ? m.Hz.COMMUNITY_CONTENT : m.Hz.CHAT,
+emojiIntention: C === l.I.RULES_INPUT ? I.Hz.COMMUNITY_CONTENT : I.Hz.CHAT,
 currentWord: null !== (v = null == B ? void 0 : B.word) && void 0 !== v ? v : '',
 currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
 optionText: null != G ? (0, s.KF)({

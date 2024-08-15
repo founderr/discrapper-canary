@@ -23,13 +23,13 @@ function p(e) {
 guild: t,
 guildMember: n,
 numRoles: p,
-highestRole: I,
-onAddRole: m,
+highestRole: m,
+onAddRole: I,
 buttonRef: T
   } = e, g = (0, i.e7)([u.Z], () => u.Z.roleStyle);
   if (!(0, i.e7)([d.Z], () => d.Z.can(E.Plq.MANAGE_ROLES, t)))
 return null;
-  let S = e => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, I, e) && -1 === n.roles.indexOf(e.id);
+  let S = e => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, m, e) && -1 === n.roles.indexOf(e.id);
   return (0, r.jsx)(s.y, {
 position: 'bottom',
 align: 'center',
@@ -41,7 +41,7 @@ renderPopout: e => {
     guild: t,
     roleStyle: g,
     roleFilter: S,
-    onSelect: m,
+    onSelect: I,
     onClose: n
   });
 },

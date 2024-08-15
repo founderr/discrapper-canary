@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(318661),
   h = n(78675),
   p = n(899007),
-  I = n(438163),
-  m = n(502762),
+  m = n(438163),
+  I = n(502762),
   T = n(437758),
   g = n(544989),
   S = n(171368),
@@ -74,7 +74,7 @@ children: (0, r.jsx)(_.Mt, {
   children: (0, r.jsx)(s.Dialog, {
     ref: F,
     'aria-label': t.username,
-    children: (0, r.jsxs)(m.Z, {
+    children: (0, r.jsxs)(I.Z, {
       user: t,
       displayProfile: G,
       profileType: v.y0.BITE_SIZE,
@@ -115,7 +115,7 @@ children: (0, r.jsx)(_.Mt, {
               profileType: v.y0.BITE_SIZE,
               onOpenProfile: P ? void 0 : H
             }),
-            (0, r.jsx)(I.Z, {
+            (0, r.jsx)(m.Z, {
               user: t,
               profileType: v.y0.BITE_SIZE,
               onClose: b

@@ -14,8 +14,8 @@ var r, i, a, s, o, l, u = n(392711),
   f = n(710845),
   h = n(69882),
   p = n(134049),
-  I = n(160404),
-  m = n(630388),
+  m = n(160404),
+  I = n(630388),
   T = n(823379),
   g = n(709054),
   S = n(314897),
@@ -120,7 +120,7 @@ flags: f
   } = e, {
 colorString: h,
 colorRoleId: p,
-iconRoleId: m,
+iconRoleId: I,
 hoistRoleId: T,
 highestRoleId: A
   } = H(s, o), N = {
@@ -132,7 +132,7 @@ avatarDecoration: a,
 roles: o,
 colorString: h,
 colorRoleId: p,
-iconRoleId: m,
+iconRoleId: I,
 hoistRoleId: T,
 highestRoleId: A,
 premiumSince: l,
@@ -146,11 +146,11 @@ flags: f
   if (null == R[r])
 return N;
   if (t === S.default.getId()) {
-if (I.Z.isViewingRoles(r) || I.Z.isFullServerPreview(r)) {
-  let e = I.Z.getViewingRoles(r);
+if (m.Z.isViewingRoles(r) || m.Z.isFullServerPreview(r)) {
+  let e = m.Z.getViewingRoles(r);
   C[r] = {
     ...N,
-    ...I.Z.getMemberOptions(r),
+    ...m.Z.getMemberOptions(r),
     roles: null != e ? g.default.keys(e) : []
   };
 } else
@@ -383,7 +383,7 @@ messages: e
 }
 class ee extends(i = _.ZP.Store) {
   initialize() {
-this.waitFor(N.Z, S.default, I.Z);
+this.waitFor(N.Z, S.default, m.Z);
   }
   getMutableAllGuildsAndMembers() {
 return R;
@@ -431,7 +431,7 @@ let t = S.default.getId(),
 if (null == n || null == n[t])
   return !1;
 let r = n[t].flags;
-return null != r && (0, m.yE)(r, v.q.IS_GUEST);
+return null != r && (0, I.yE)(r, v.q.IS_GUEST);
   }
   getMemberIds(e) {
 if (null == e)
@@ -451,7 +451,7 @@ return null != n ? n[t] : null;
   }
   getMember(e, t) {
 let n = this.getTrueMember(e, t);
-if (null != n && t === S.default.getId() && (I.Z.isViewingRoles(e) || I.Z.isFullServerPreview(e))) {
+if (null != n && t === S.default.getId() && (m.Z.isViewingRoles(e) || m.Z.isFullServerPreview(e))) {
   var r;
   return null !== (r = C[e]) && void 0 !== r ? r : n;
 }

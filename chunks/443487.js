@@ -3,10 +3,10 @@ n.d(t, {
 return g;
   },
   Zb: function() {
-return I;
+return m;
   },
   e$: function() {
-return m;
+return I;
   },
   ll: function() {
 return S;
@@ -28,7 +28,7 @@ var i = n(120356),
   h = n(689938),
   p = n(182022);
 
-function I(e) {
+function m(e) {
   let {
 children: t,
 selected: n
@@ -58,7 +58,7 @@ children: [
   });
 }
 
-function m(e) {
+function I(e) {
   let {
 children: t
   } = e;
@@ -104,8 +104,8 @@ channelId: n,
 entry: i,
 maxAvatars: a = 3
   } = e, l = i.author_id, f = (0, s.e7)([d.default], () => d.default.getUser(l)), {
-displayParticipants: I,
-participant1: m,
+displayParticipants: m,
+participant1: I,
 participant2: g,
 numOtherParticipants: S
   } = (0, E.Z)(i, a), A = (0, s.e7)([u.ZP], () => u.ZP.getMember(t, l)), N = (0, s.e7)([c.Z], () => {
@@ -123,7 +123,7 @@ O = _.ZP.getName(t, n, f);
 className: p.userSection,
 children: [
   (0, r.jsx)(T, {
-    users: I,
+    users: m,
     guildId: t,
     'aria-hidden': !0
   }),
@@ -149,7 +149,7 @@ children: [
   }) : null,
   (0, r.jsx)(o.HiddenVisually, {
     children: h.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS.format({
-      user1: _.ZP.getName(t, n, m),
+      user1: _.ZP.getName(t, n, I),
       user2: _.ZP.getName(t, n, g),
       countOthers: S,
       nameHook: (e, t) => (0, r.jsx)('span', {

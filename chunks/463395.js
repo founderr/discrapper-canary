@@ -9,12 +9,12 @@ let E = 'CertifiedDeviceStore',
   h = {},
   p = 0;
 
-function I(e, t, n) {
+function m(e, t, n) {
   let r = h[e];
   return null != r ? n(r) : t;
 }
 
-function m(e, t) {
+function I(e, t) {
   let n = f[e];
   null != n && n.forEach(e => delete h[e.id]), f[e] = t, t.forEach(e => h[e.id] = e);
 }
@@ -24,7 +24,7 @@ let e = c.K.get(E);
 null != e && l().forEach(e, (e, t) => {
   e.forEach(e => {
     'audioinput' === e.type && e.hardwareMute && (e.hardwareMute = !1);
-  }), m(t, e);
+  }), I(t, e);
 });
   }
   isCertified(e) {
@@ -41,22 +41,22 @@ return null != n ? ''.concat(n.vendor.name, ' ').concat(n.model.name) : t;
 return l().find(h, t => t.type === e);
   }
   isHardwareMute(e) {
-return I(e, !1, e => e.type === _.h7.AUDIO_INPUT && e.hardwareMute);
+return m(e, !1, e => e.type === _.h7.AUDIO_INPUT && e.hardwareMute);
   }
   hasEchoCancellation(e) {
-return I(e, !1, e => e.type === _.h7.AUDIO_INPUT && e.echoCancellation);
+return m(e, !1, e => e.type === _.h7.AUDIO_INPUT && e.echoCancellation);
   }
   hasNoiseSuppression(e) {
-return I(e, !1, e => e.type === _.h7.AUDIO_INPUT && e.noiseSuppression);
+return m(e, !1, e => e.type === _.h7.AUDIO_INPUT && e.noiseSuppression);
   }
   hasAutomaticGainControl(e) {
-return I(e, !1, e => e.type === _.h7.AUDIO_INPUT && e.automaticGainControl);
+return m(e, !1, e => e.type === _.h7.AUDIO_INPUT && e.automaticGainControl);
   }
   getVendor(e) {
-return I(e, null, e => e.vendor);
+return m(e, null, e => e.vendor);
   }
   getModel(e) {
-return I(e, null, e => e.model);
+return m(e, null, e => e.model);
   }
   getRevision() {
 return p;
@@ -73,6 +73,6 @@ let {
   applicationId: t,
   devices: n
 } = e;
-m(t, n), c.K.set(E, f), p++;
+I(t, n), c.K.set(E, f), p++;
   }
 });

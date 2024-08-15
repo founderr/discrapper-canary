@@ -12,7 +12,7 @@ E = 125,
 f = 0,
 h = 0,
 p = 0,
-I = {
+m = {
   get didTimeout() {
     return !1;
   },
@@ -21,7 +21,7 @@ I = {
     return e < 0 ? 0 : e;
   }
 },
-m = function(e) {
+I = function(e) {
   var t, n, r = function() {
     var i = Date.now() - n;
     i < 99 ? t = setTimeout(r, 99 - i) : (t = null, e());
@@ -34,7 +34,7 @@ m = function(e) {
 });
 
   function T() {
-125 != E && (d = 7, E = 125, _ = 35, c && (c && (i && o(i), r && clearTimeout(r), c = !1), A())), m();
+125 != E && (d = 7, E = 125, _ = 35, c && (c && (i && o(i), r && clearTimeout(r), c = !1), A())), I();
   }
 
   function g() {
@@ -53,8 +53,8 @@ if (!c)
   function N() {
 var n, i, a, s = d > 9 ? 9 : 1;
 if (h = Date.now(), c = !1, r = null, u > 2 || h - t - 50 < e)
-  for (i = 0, a = l.length; i < a && I.timeRemaining() > s; i++)
-    n = l.shift(), p++, n && n(I);
+  for (i = 0, a = l.length; i < a && m.timeRemaining() > s; i++)
+    n = l.shift(), p++, n && n(m);
 l.length ? A() : u = 0;
   }
 

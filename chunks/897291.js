@@ -18,8 +18,8 @@ channel: n
 analyticsLocations: i
   } = (0, l.ZP)(o.Z.GIFT_BUTTON), h = (0, c.Ft)(n), {
 Component: p,
-events: I,
-play: m
+events: m,
+play: I
   } = (0, a.$)();
   if (t)
 return null;
@@ -46,9 +46,9 @@ children: e => (0, r.jsx)(d.Z, {
   'aria-label': E.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
   'aria-haspopup': 'dialog',
   onClick: () => {
-    T(), m();
+    T(), I();
   },
-  ...I,
+  ...m,
   children: (0, r.jsx)(p, {
     color: 'currentColor'
   })

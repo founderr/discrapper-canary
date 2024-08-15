@@ -14,8 +14,8 @@ var i, a, s, o = n(512722),
   f = n(846519),
   h = n(283693),
   p = n(570140),
-  I = n(317381),
-  m = n(358221),
+  m = n(317381),
+  I = n(358221),
   T = n(702321),
   g = n(430198),
   S = n(710845),
@@ -77,8 +77,8 @@ let ec = er.S7T.VIEW_CHANNEL | er.S7T.READ_MESSAGE_HISTORY,
   ef = !1,
   eh = [],
   ep = !1,
-  eI = null,
-  em = {},
+  em = null,
+  eI = {},
   eT = 30 * k.Z.Millis.DAY;
 
 function eg() {
@@ -147,10 +147,10 @@ function eL(e) {
 return !1;
   let t = j.Z.getChannel(e.channelId),
 n = null != t && t.isForumPost();
-  if (null != I.ZP.getConnectedActivityChannelId() && I.ZP.getActivityPanelMode() === ei.Ez.PANEL && I.ZP.getFocusedLayout() === ei.MI.NO_CHAT || q.Z.isIdle() || !e.canTrackUnreads())
+  if (null != m.ZP.getConnectedActivityChannelId() && m.ZP.getActivityPanelMode() === ei.Ez.PANEL && m.ZP.getFocusedLayout() === ei.MI.NO_CHAT || q.Z.isIdle() || !e.canTrackUnreads())
 return !1;
   if ((null == t ? void 0 : t.isForumLikeChannel()) !== !0) {
-let t = em[e.channelId],
+let t = eI[e.channelId],
   n = null != t && en.Z.isFocused(t),
   i = null != r && r.isInstanceFocused() && r.isPinned(er.Odu.TEXT);
 if (!n && !i)
@@ -160,9 +160,9 @@ if (!n && !i)
 return !0;
   if (!e.hasUnreadOrMentions() || (null == t ? void 0 : t.isForumLikeChannel()) === !0 || !(n && !e._isJoinedThread) && !W.Z.isAtBottom(e.channelId))
 return !1;
-  let i = m.Z.getLayout(e.channelId),
-a = m.Z.getChatOpen(e.channelId);
-  if (!a && (i === er.AEg.NO_CHAT || i === er.AEg.FULL_SCREEN) || null == em[e.channelId])
+  let i = I.Z.getLayout(e.channelId),
+a = I.Z.getChatOpen(e.channelId);
+  if (!a && (i === er.AEg.NO_CHAT || i === er.AEg.FULL_SCREEN) || null == eI[e.channelId])
 return !1;
   let s = Q.Z.getMessages(e.channelId);
   return !!(null != s && s.ready && !s.loadingMore && ((0, b.Z)() || a)) || !1;
@@ -239,8 +239,8 @@ let {
   isManualAck: f,
   lastPinTimestamp: h,
   _oldestUnreadMessageId: p,
-  oldestUnreadMessageIdStale: I,
-  estimated: m,
+  oldestUnreadMessageIdStale: m,
+  estimated: I,
   _mentionCount: T,
   flags: g,
   lastViewed: S
@@ -263,8 +263,8 @@ if (e)
     isManualAck: f,
     lastPinTimestamp: h,
     _oldestUnreadMessageId: p,
-    oldestUnreadMessageIdStale: I,
-    estimated: m,
+    oldestUnreadMessageIdStale: m,
+    estimated: I,
     _mentionCount: T,
     flags: g,
     lastViewed: S
@@ -303,15 +303,15 @@ let {
   ackPinTimestamp: f,
   isManualAck: h,
   lastPinTimestamp: p,
-  _oldestUnreadMessageId: I,
-  oldestUnreadMessageIdStale: m,
+  _oldestUnreadMessageId: m,
+  oldestUnreadMessageIdStale: I,
   estimated: T,
   _unreadCount: g,
   _mentionCount: S,
   flags: A,
   lastViewed: N
 } = e;
-this.channelId = t, this.type = null != n ? n : eo.W.CHANNEL, this._guildId = r, this._isThread = null != i && i, null != a ? (this._isActiveThread = a, this._isJoinedThread = a) : (this._isActiveThread = null != s && s, this._isJoinedThread = null != o && o), this._persisted = !1 !== l, this.loadedMessages = null != u && u, this._lastMessageId = c, this._lastMessageTimestamp = d, this._ackMessageId = _, this._ackMessageTimestamp = E, this.ackPinTimestamp = f, this.isManualAck = null != h && h, this.lastPinTimestamp = p, this._oldestUnreadMessageId = I, this.oldestUnreadMessageIdStale = null != m && m, this.estimated = null != T && T, this._unreadCount = null != g ? g : 0, this._mentionCount = S, this.flags = A, this.lastViewed = N, eb._mentionChannels.delete(this.channelId), this._mentionCount > 0 && this.canHaveMentions() && eb._mentionChannels.add(this.channelId);
+this.channelId = t, this.type = null != n ? n : eo.W.CHANNEL, this._guildId = r, this._isThread = null != i && i, null != a ? (this._isActiveThread = a, this._isJoinedThread = a) : (this._isActiveThread = null != s && s, this._isJoinedThread = null != o && o), this._persisted = !1 !== l, this.loadedMessages = null != u && u, this._lastMessageId = c, this._lastMessageTimestamp = d, this._ackMessageId = _, this._ackMessageTimestamp = E, this.ackPinTimestamp = f, this.isManualAck = null != h && h, this.lastPinTimestamp = p, this._oldestUnreadMessageId = m, this.oldestUnreadMessageIdStale = null != I && I, this.estimated = null != T && T, this._unreadCount = null != g ? g : 0, this._mentionCount = S, this.flags = A, this.lastViewed = N, eb._mentionChannels.delete(this.channelId), this._mentionCount > 0 && this.canHaveMentions() && eb._mentionChannels.add(this.channelId);
   }
   incrementGuildUnreadsSentinel() {
 if (null != this._guildId)
@@ -802,7 +802,7 @@ if (eL(t))
 }
 
 function eB() {
-  null != eI && clearTimeout(eI);
+  null != em && clearTimeout(em);
 }
 let eF = (0, u.throttle)(e => {
   e.delete();
@@ -921,7 +921,7 @@ let e = [
   J.Z,
   Q.Z,
   X.Z,
-  m.Z,
+  I.Z,
   M.Z,
   P.Z,
   Y.ZP,
@@ -1122,7 +1122,7 @@ for (let e of (null != o && (eb.get(o, eo.W.NOTIFICATION_CENTER).lastMessageId =
     });
   }(i), eM(a), r))
   eM(null !== (n = e.channels) && void 0 !== n ? n : []), eV(e), eU(e);
-eB(), eI = setTimeout(() => function(e) {
+eB(), em = setTimeout(() => function(e) {
   let t = eg();
   for (let r of e) {
     var n;
@@ -1197,7 +1197,7 @@ if (null != a.author && null != l && a.author.id === l.id && !er.V$x.SELF_MENTIO
 let c = (0, v.PP)();
 if ((null == c ? void 0 : c.isReady()) === !0) {
   let e = c.getCurrentRoute();
-  if (m.Z.getChatOpen(o.channelId))
+  if (I.Z.getChatOpen(o.channelId))
     t = o.channelId;
   else if ((null == e ? void 0 : e.name) === 'channel')
     t = e.params.channelId;
@@ -1363,7 +1363,7 @@ return (0, U.s)(e) && eb.get(e.id).syncThreadSettings();
   THREAD_DELETE: eW,
   WINDOW_FOCUS: function(e) {
 let t = !1;
-for (let [n, r] of H.default.entries(em))
+for (let [n, r] of H.default.entries(eI))
   r === e.windowId && (t = function(e, t) {
     if (null == e)
       return !1;
@@ -1422,13 +1422,13 @@ let {
   channelId: t,
   windowId: n
 } = e;
-return em[t] !== n && (l()(void 0 === em[t], 'handleEnableAutomaticAck: channel already visible in another window'), em[t] = n, ek(t));
+return eI[t] !== n && (l()(void 0 === eI[t], 'handleEnableAutomaticAck: channel already visible in another window'), eI[t] = n, ek(t));
   },
   DISABLE_AUTOMATIC_ACK: function(e) {
 let {
   channelId: t
 } = e;
-return em[t] = void 0, !1;
+return eI[t] = void 0, !1;
   },
   GUILD_FEATURE_ACK: eX,
   GUILD_SCHEDULED_EVENT_CREATE: function(e) {

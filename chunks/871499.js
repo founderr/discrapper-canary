@@ -32,8 +32,8 @@ wrapperClassName: _,
 iconClassName: f,
 iconComponent: h,
 themeable: p = !1,
-disabled: I = !1,
-isActive: m = !1,
+disabled: m = !1,
+isActive: I = !1,
 tooltipPosition: T = 'top',
 shouldShowTooltip: g = !0,
 forceTooltipOpen: S = !1,
@@ -80,10 +80,10 @@ children: (0, r.jsx)(s.Tooltip, {
       onBlur: e => {
         null == g || g(), null == l || l(e);
       },
-      disabled: I,
+      disabled: m,
       innerClassName: E.lineHeightReset,
       className: a()({
-        [E.active]: m
+        [E.active]: I
       }, d),
       wrapperClassName: _,
       buttonRef: A,
@@ -93,7 +93,7 @@ children: (0, r.jsx)(s.Tooltip, {
       children: (0, r.jsx)(h, {
         className: a()(E.controlIcon, f, {
           [E.themeable]: p,
-          [E.active]: m
+          [E.active]: I
         }),
         color: 'currentColor'
       })
@@ -118,14 +118,14 @@ color: t,
 isActive: n = !1,
 className: i,
 iconClassName: p,
-onPopoutClick: I,
-popoutOpen: m = !1,
+onPopoutClick: m,
+popoutOpen: I = !1,
 premiumGlow: T = !1,
 ...g
   } = e, S = (0, d.Z)(t, n), A = (0, o.Z)('(max-width: 456px)'), N = (0, r.jsx)(f, {
 ...g,
 grow: !1,
-onContextMenu: I,
+onContextMenu: m,
 iconClassName: a()(p, E.centerIcon),
 className: a()(A ? i : null, E.staticButton, E.centerButton, h[S])
   });
@@ -136,22 +136,22 @@ children: [
     className: a()(E.buttonMask, {
       [E.buttonPremiumGlow]: T
     }),
-    mask: null == I ? null : l.QS.CHANNEL_CALL_CONTROL_BUTTON,
+    mask: null == m ? null : l.QS.CHANNEL_CALL_CONTROL_BUTTON,
     width: 56,
     height: 56,
     children: N
   }),
-  null != I ? (0, r.jsx)(c.Z, {
+  null != m ? (0, r.jsx)(c.Z, {
     children: (0, r.jsx)(s.Clickable, {
       'aria-label': _.Z.Messages.MORE_OPTIONS,
-      onClick: I,
-      onContextMenu: I,
+      onClick: m,
+      onContextMenu: m,
       className: a()(E.contextMenuNub, h[S], {
-        [E.active]: m
+        [E.active]: I
       }),
       children: (0, r.jsx)(u.Z, {
         className: a()(E.contextMenuCaret, {
-          [E.open]: m
+          [E.open]: I
         })
       })
     })

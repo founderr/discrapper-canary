@@ -39,20 +39,20 @@ p,
 e,
 E
   ]);
-  let I = (0, a.e7)([u.Z], () => u.Z.getUserAffinitiesMap()),
-m = (0, r.useMemo)(() => null == n ? null : n.length < 2 ? n : (0, i.sortBy)(n, e => {
+  let m = (0, a.e7)([u.Z], () => u.Z.getUserAffinitiesMap()),
+I = (0, r.useMemo)(() => null == n ? null : n.length < 2 ? n : (0, i.sortBy)(n, e => {
   var t, n;
   let {
     user: r
   } = e;
-  return -((null !== (n = null === (t = I.get(r.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : -1) * 1);
+  return -((null !== (n = null === (t = m.get(r.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : -1) * 1);
 }), [
   n,
-  I
+  m
 ]),
-T = (0, o.Z)(m);
+T = (0, o.Z)(I);
   return {
-mutualFriends: null != m ? m : T,
+mutualFriends: null != I ? I : T,
 isFetching: _
   };
 }

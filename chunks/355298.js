@@ -51,7 +51,7 @@ channel: t
   return _(t);
 }
 
-function I(e) {
+function m(e) {
   let {
 channels: t
   } = e;
@@ -59,7 +59,7 @@ channels: t
 _(e);
 }
 
-function m(e) {
+function I(e) {
   let {
 channel: t
   } = e;
@@ -118,8 +118,8 @@ super({
   CACHE_LOADED_LAZY: () => this.loadCache(),
   OVERLAY_INITIALIZE: T,
   CHANNEL_CREATE: p,
-  CHANNEL_UPDATES: I,
-  CHANNEL_DELETE: m,
+  CHANNEL_UPDATES: m,
+  CHANNEL_DELETE: I,
   SET_LOCATION_METADATA: g,
   MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
 });

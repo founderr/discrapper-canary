@@ -19,8 +19,8 @@ var r, i = n(392711),
   f = n(709054),
   h = n(592125),
   p = n(430824),
-  I = n(594174),
-  m = n(981631),
+  m = n(594174),
+  I = n(981631),
   T = n(468788),
   g = n(490897),
   S = n(526761);
@@ -48,22 +48,22 @@ suppress_roles: !1,
 mute_scheduled_events: !1,
 mobile_push: !0,
 muted: !1,
-message_notifications: m.bL.ALL_MESSAGES,
+message_notifications: I.bL.ALL_MESSAGES,
 flags: 0,
 channel_overrides: {},
-notify_highlights: m.gLR.NULL,
+notify_highlights: I.gLR.NULL,
 hide_muted_channels: !1,
 version: -1,
 mute_config: null
   },
   b = {
-[m.bL.ALL_MESSAGES]: {
+[I.bL.ALL_MESSAGES]: {
   ...L,
-  message_notifications: m.bL.ALL_MESSAGES
+  message_notifications: I.bL.ALL_MESSAGES
 },
-[m.bL.ONLY_MENTIONS]: {
+[I.bL.ONLY_MENTIONS]: {
   ...L,
-  message_notifications: m.bL.ONLY_MENTIONS
+  message_notifications: I.bL.ONLY_MENTIONS
 }
   },
   M = {},
@@ -185,7 +185,7 @@ muted: !1,
 
 function j(e) {
   let t = p.Z.getGuild(e);
-  return b[null != t ? t.defaultMessageNotifications : m.bL.ALL_MESSAGES];
+  return b[null != t ? t.defaultMessageNotifications : I.bL.ALL_MESSAGES];
 }
 
 function W() {
@@ -219,7 +219,7 @@ autoTrackExposure: !1
 }
 class $ extends(r = s.ZP.PersistedStore) {
   initialize(e) {
-if (this.waitFor(I.default, p.Z, u.Z, d.Z), null != e) {
+if (this.waitFor(m.default, p.Z, u.Z, d.Z), null != e) {
   var t, n;
   O = null !== (t = e.useNewNotifications) && void 0 !== t && t, 'userGuildSettings' in e && (N = e.userGuildSettings, P = a().mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), a().forEach(N, (e, t) => {
     M[t] = q(e);
@@ -272,7 +272,7 @@ return K(e).flags;
   }
   getChannelMessageNotifications(e, t) {
 let n = this.getChannelOverrides(e)[t];
-return null == n || null == n.message_notifications ? m.bL.NULL : n.message_notifications;
+return null == n || null == n.message_notifications ? I.bL.NULL : n.message_notifications;
   }
   getChannelMuteConfig(e, t) {
 let n = this.getChannelOverrides(e)[t];
@@ -296,11 +296,11 @@ return null != r && this.getMutedChannels(e).has(r);
   }
   resolvedMessageNotifications(e) {
 let t = this.getChannelMessageNotifications(e.guild_id, e.id);
-if (t !== m.bL.NULL)
+if (t !== I.bL.NULL)
   return t;
 if (null != e.parent_id) {
   let t = this.getChannelMessageNotifications(e.guild_id, e.parent_id);
-  if (t !== m.bL.NULL)
+  if (t !== I.bL.NULL)
     return t;
 }
 return this.getMessageNotifications(e.guild_id);
@@ -317,16 +317,16 @@ if (null != e.parent_id) {
     return t;
 }
 let n = this.getGuildUnreadSetting(e.guild_id);
-return n !== g.i.UNSET ? n : this.resolvedMessageNotifications(e) === m.bL.ALL_MESSAGES ? g.i.ALL_MESSAGES : g.i.ONLY_MENTIONS;
+return n !== g.i.UNSET ? n : this.resolvedMessageNotifications(e) === I.bL.ALL_MESSAGES ? g.i.ALL_MESSAGES : g.i.ONLY_MENTIONS;
   }
   isGuildOrCategoryOrChannelMuted(e, t) {
 return this.isMuted(e) || this.isCategoryMuted(e, t) || this.isChannelMuted(e, t);
   }
   allowNoMessages(e) {
-return this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) || this.resolvedMessageNotifications(e) === m.bL.NO_MESSAGES || this.isOptInEnabled(e.guild_id) && !this.isChannelRecordOrParentOptedIn(e);
+return this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) || this.resolvedMessageNotifications(e) === I.bL.NO_MESSAGES || this.isOptInEnabled(e.guild_id) && !this.isChannelRecordOrParentOptedIn(e);
   }
   allowAllMessages(e) {
-return !this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) && this.resolvedMessageNotifications(e) === m.bL.ALL_MESSAGES && (!this.isOptInEnabled(e.guild_id) || this.isChannelRecordOrParentOptedIn(e));
+return !this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) && this.resolvedMessageNotifications(e) === I.bL.ALL_MESSAGES && (!this.isOptInEnabled(e.guild_id) || this.isChannelRecordOrParentOptedIn(e));
   }
   isGuildCollapsed(e) {
 var t;
@@ -355,7 +355,7 @@ if (null != t && null != t.flags) {
   if (E.yE(t.flags, S.ic.NEW_FORUM_THREADS_OFF))
     return !1;
 }
-return this.resolvedMessageNotifications(e) === m.bL.ALL_MESSAGES;
+return this.resolvedMessageNotifications(e) === I.bL.ALL_MESSAGES;
   }
   isOptInEnabled(e) {
 return null != e && (u.Z.isFullServerPreview(e) ? u.Z.isOptInEnabled(e) : E.yE(this.getGuildFlags(e), S.vc.OPT_IN_CHANNELS_ON));
@@ -432,7 +432,7 @@ return E.yE(t, S.vc.UNREADS_ALL_MESSAGES) ? g.i.ALL_MESSAGES : E.yE(t, S.vc.UNRE
   }
   resolveGuildUnreadSetting(e) {
 let t = this.getGuildFlags(e.id);
-return !X() || E.yE(t, S.vc.UNREADS_ALL_MESSAGES) ? g.i.ALL_MESSAGES : E.yE(t, S.vc.UNREADS_ONLY_MENTIONS) ? g.i.ONLY_MENTIONS : e.defaultMessageNotifications === m.bL.ALL_MESSAGES ? g.i.ALL_MESSAGES : g.i.ONLY_MENTIONS;
+return !X() || E.yE(t, S.vc.UNREADS_ALL_MESSAGES) ? g.i.ALL_MESSAGES : E.yE(t, S.vc.UNREADS_ONLY_MENTIONS) ? g.i.ONLY_MENTIONS : e.defaultMessageNotifications === I.bL.ALL_MESSAGES ? g.i.ALL_MESSAGES : g.i.ONLY_MENTIONS;
   }
   getChannelRecordUnreadSetting(e) {
 return this.getChannelUnreadSetting(e.guild_id, e.id);

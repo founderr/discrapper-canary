@@ -239,9 +239,9 @@ return 'string' == typeof e ? {
 };
   }
   var p = 'DELETE',
-I = 'POST';
+m = 'POST';
 
-  function m(e, n, r, a) {
+  function I(e, n, r, a) {
 var s, o, l, u, c, d, _ = [],
   E = function(e, n) {
     if ('GET' !== e.method && (void 0 !== e.data || void 0 !== n.data))
@@ -251,11 +251,11 @@ var s, o, l, u, c, d, _ = [],
     var t = l[e];
     u[e.toLowerCase()] = t;
   }), u),
-  I = r.method,
-  m = 'GET' !== r.method ? {} : t(t({}, r.data), a.data),
+  m = r.method,
+  I = 'GET' !== r.method ? {} : t(t({}, r.data), a.data),
   T = t(t(t({
     'x-algolia-agent': e.userAgent.value
-  }, e.queryParameters), m), a.queryParameters),
+  }, e.queryParameters), I), a.queryParameters),
   N = 0,
   v = function t(n, i) {
     var s = n.pop();
@@ -268,7 +268,7 @@ var s, o, l, u, c, d, _ = [],
     var o = {
         data: E,
         headers: p,
-        method: I,
+        method: m,
         url: function(e, t, n) {
           var r = g(n),
             i = ''.concat(e.protocol, '://').concat(e.url, '/').concat('/' === t.charAt(0) ? t.substr(1) : t);
@@ -386,7 +386,7 @@ var t = e.hostsCache,
     read: function(e, t) {
       var n = _(t, d.timeouts.read),
         i = function() {
-          return m(d, d.hosts.filter(function(e) {
+          return I(d, d.hosts.filter(function(e) {
             return 0 != (e.accept & E.Read);
           }), e, n);
         };
@@ -424,7 +424,7 @@ var t = e.hostsCache,
       });
     },
     write: function(e, t) {
-      return m(d, d.hosts.filter(function(e) {
+      return I(d, d.hosts.filter(function(e) {
         return 0 != (e.accept & E.Write);
       }), e, _(t, d.timeouts.write));
     }
@@ -458,7 +458,7 @@ return t(t({}, e), {}, {
   var N = function(e) {
   return function(t, n) {
     return e.transporter.write({
-      method: I,
+      method: m,
       path: '2/abtests',
       data: t
     }, n);
@@ -491,7 +491,7 @@ R = function(e) {
 C = function(e) {
   return function(t, n) {
     return e.transporter.write({
-      method: I,
+      method: m,
       path: c('2/abtests/%s/stop', t)
     }, n);
   };
@@ -507,7 +507,7 @@ y = function(e) {
 D = function(e) {
   return function(t, n) {
     return e.transporter.write({
-      method: I,
+      method: m,
       path: '1/strategies/personalization',
       data: t
     }, n);
@@ -537,7 +537,7 @@ return function t(n) {
         queryParameters: s
       } : {});
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: '1/keys',
       data: c
     }, u), function(t, n) {
@@ -555,7 +555,7 @@ M = function(e) {
   return function(t, n, r) {
     var i = _(r);
     return i.queryParameters['X-Algolia-User-ID'] = t, e.transporter.write({
-      method: I,
+      method: m,
       path: '1/clusters/mapping',
       data: {
         cluster: n
@@ -566,7 +566,7 @@ M = function(e) {
 P = function(e) {
   return function(t, n, r) {
     return e.transporter.write({
-      method: I,
+      method: m,
       path: '1/clusters/mapping/batch',
       data: {
         users: t,
@@ -578,7 +578,7 @@ P = function(e) {
 U = function(e) {
   return function(t, n) {
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('/1/dictionaries/%s/batch', t),
       data: {
         clearExistingDictionaryEntries: !0,
@@ -595,7 +595,7 @@ U = function(e) {
 w = function(e) {
   return function(t, n, r) {
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/operation', t),
       data: {
         operation: 'copy',
@@ -662,7 +662,7 @@ V = function(e) {
       };
     });
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('/1/dictionaries/%s/batch', t),
       data: {
         clearExistingDictionaryEntries: !1,
@@ -777,7 +777,7 @@ J = function(e) {
 ee = function(e) {
   return function(t, n, r) {
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/operation', t),
       data: {
         operation: 'move',
@@ -795,7 +795,7 @@ ee = function(e) {
 et = function(e) {
   return function(t, n) {
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: '1/indexes/*/batch',
       data: {
         requests: t
@@ -814,7 +814,7 @@ et = function(e) {
 en = function(e) {
   return function(t, n) {
     return e.transporter.read({
-      method: I,
+      method: m,
       path: '1/indexes/*/objects',
       data: {
         requests: t
@@ -830,7 +830,7 @@ er = function(e) {
       });
     });
     return e.transporter.read({
-      method: I,
+      method: m,
       path: '1/indexes/*/queries',
       data: {
         requests: i
@@ -875,7 +875,7 @@ es = function(e) {
       };
     });
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('/1/dictionaries/%s/batch', t),
       data: {
         clearExistingDictionaryEntries: !0,
@@ -889,7 +889,7 @@ es = function(e) {
 eo = function(e) {
   return function(t, n) {
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('1/keys/%s/restore', t)
     }, n), function(n, r) {
       return o(function(n) {
@@ -911,7 +911,7 @@ el = function(e) {
       };
     });
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('/1/dictionaries/%s/batch', t),
       data: {
         clearExistingDictionaryEntries: !1,
@@ -925,7 +925,7 @@ el = function(e) {
 eu = function(e) {
   return function(t, n, r) {
     return e.transporter.read({
-      method: I,
+      method: m,
       path: c('/1/dictionaries/%s/search', t),
       data: {
         query: n
@@ -937,7 +937,7 @@ eu = function(e) {
 ec = function(e) {
   return function(t, n) {
     return e.transporter.read({
-      method: I,
+      method: m,
       path: '1/clusters/mapping/search',
       data: {
         query: t
@@ -1010,7 +1010,7 @@ eE = function(e) {
 ef = function(e) {
   return function(t, n) {
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/batch', e.indexName),
       data: {
         requests: t
@@ -1029,7 +1029,7 @@ eh = function(e) {
     }, n), {}, {
       request: function(t) {
         return e.transporter.read({
-          method: I,
+          method: m,
           path: c('1/indexes/%s/browse', e.indexName),
           data: t
         }, n);
@@ -1059,7 +1059,7 @@ ep = function(e) {
     }));
   };
 },
-eI = function(e) {
+em = function(e) {
   return function(n) {
     var r = t({
       hitsPerPage: 1000
@@ -1081,7 +1081,7 @@ eI = function(e) {
     }));
   };
 },
-em = function(e) {
+eI = function(e) {
   return function(t, r, i) {
     var a = i || {},
       s = a.batchSize,
@@ -1112,7 +1112,7 @@ em = function(e) {
 eT = function(e) {
   return function(t) {
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/clear', e.indexName)
     }, t), function(t, n) {
       return eJ(e)(t.taskID, n);
@@ -1125,7 +1125,7 @@ eg = function(e) {
       i = r.forwardToReplicas,
       a = _(n(r, ['forwardToReplicas']));
     return i && (a.queryParameters.forwardToReplicas = 1), l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/rules/clear', e.indexName)
     }, a), function(t, n) {
       return eJ(e)(t.taskID, n);
@@ -1138,7 +1138,7 @@ eS = function(e) {
       i = r.forwardToReplicas,
       a = _(n(r, ['forwardToReplicas']));
     return i && (a.queryParameters.forwardToReplicas = 1), l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/synonyms/clear', e.indexName)
     }, a), function(t, n) {
       return eJ(e)(t.taskID, n);
@@ -1148,7 +1148,7 @@ eS = function(e) {
 eA = function(e) {
   return function(t, n) {
     return l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/deleteByQuery', e.indexName),
       data: t
     }, n), function(t, n) {
@@ -1184,7 +1184,7 @@ eO = function(e) {
         objectID: e
       };
     });
-    return em(e)(r, e0.DeleteObject, n);
+    return eI(e)(r, e0.DeleteObject, n);
   };
 },
 eR = function(e) {
@@ -1227,7 +1227,7 @@ ey = function(e) {
 eD = function(e) {
   return function(t, n, r) {
     return e.transporter.read({
-      method: I,
+      method: m,
       path: c('1/answers/%s/prediction', e.indexName),
       data: {
         query: t,
@@ -1305,7 +1305,7 @@ eP = function(e) {
         } : {});
       });
     return e.transporter.read({
-      method: I,
+      method: m,
       path: '1/indexes/*/objects',
       data: {
         requests: l
@@ -1358,7 +1358,7 @@ ek = function(e) {
       a = i.createIfNotExists,
       s = n(i, ['createIfNotExists']),
       o = a ? e0.PartialUpdateObject : e0.PartialUpdateObjectNoCreate;
-    return em(e)(t, o, s);
+    return eI(e)(t, o, s);
   };
 },
 eB = function(e) {
@@ -1374,7 +1374,7 @@ eB = function(e) {
       ]),
       f = function(t, n, r, i) {
         return l(e.transporter.write({
-          method: I,
+          method: m,
           path: c('1/indexes/%s/operation', t),
           data: {
             operation: r,
@@ -1386,7 +1386,7 @@ eB = function(e) {
       },
       h = Math.random().toString(36).substring(7),
       p = ''.concat(e.indexName, '_tmp_').concat(h),
-      m = eZ({
+      I = eZ({
         appId: e.appId,
         transporter: e.transporter,
         indexName: p
@@ -1400,7 +1400,7 @@ eB = function(e) {
         ]
       }));
     return T.push(g), l((u ? g.wait(E) : g).then(function() {
-      var e = m(a, t(t({}, E), {}, {
+      var e = I(a, t(t({}, E), {}, {
         autoGenerateObjectIDIfNotExist: d,
         batchSize: _
       }));
@@ -1480,7 +1480,7 @@ eZ = function(e) {
         }
       }
     }
-    return em(e)(t, o, s);
+    return eI(e)(t, o, s);
   };
 },
 eY = function(e) {
@@ -1498,7 +1498,7 @@ ej = function(e) {
         'clearExistingRules'
       ]));
     return a && (o.queryParameters.forwardToReplicas = 1), s && (o.queryParameters.clearExistingRules = 1), l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/rules/batch', e.indexName),
       data: t
     }, o), function(t, n) {
@@ -1523,7 +1523,7 @@ eK = function(e) {
         'replaceExistingSynonyms'
       ]));
     return a && (u.queryParameters.forwardToReplicas = 1), (o || s) && (u.queryParameters.replaceExistingSynonyms = 1), l(e.transporter.write({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/synonyms/batch', e.indexName),
       data: t
     }, u), function(t, n) {
@@ -1534,7 +1534,7 @@ eK = function(e) {
 ez = function(e) {
   return function(t, n) {
     return e.transporter.read({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/query', e.indexName),
       data: {
         query: t
@@ -1546,7 +1546,7 @@ ez = function(e) {
 eq = function(e) {
   return function(t, n, r) {
     return e.transporter.read({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/facets/%s/query', e.indexName, t),
       data: {
         facetQuery: n
@@ -1558,7 +1558,7 @@ eq = function(e) {
 eQ = function(e) {
   return function(t, n) {
     return e.transporter.read({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/rules/search', e.indexName),
       data: {
         query: t
@@ -1569,7 +1569,7 @@ eQ = function(e) {
 eX = function(e) {
   return function(t, n) {
     return e.transporter.read({
-      method: I,
+      method: m,
       path: c('1/indexes/%s/synonyms/search', e.indexName),
       data: {
         query: t
@@ -1626,7 +1626,7 @@ e2 = function(e) {
       });
     });
     return e.transporter.read({
-      method: I,
+      method: m,
       path: '1/indexes/*/recommendations',
       data: {
         requests: i
@@ -1663,7 +1663,7 @@ e5 = function(e) {
       });
     });
     return e.transporter.read({
-      method: I,
+      method: m,
       path: '1/indexes/*/recommendations',
       data: {
         requests: i
@@ -1681,7 +1681,7 @@ e6 = function(e) {
       });
     });
     return e.transporter.read({
-      method: I,
+      method: m,
       path: '1/indexes/*/recommendations',
       data: {
         requests: i
@@ -1708,7 +1708,7 @@ e8 = function(e) {
       });
     });
     return e.transporter.read({
-      method: I,
+      method: m,
       path: '1/indexes/*/recommendations',
       data: {
         requests: i
@@ -1719,7 +1719,7 @@ e8 = function(e) {
 };
 
   function e9(e, n, o) {
-var l, c, _, f, h, p, I, m, g, S, A, L, em = {
+var l, c, _, f, h, p, m, I, g, S, A, L, eI = {
     appId: e,
     apiKey: n,
     timeouts: {
@@ -1850,7 +1850,7 @@ var l, c, _, f, h, p, I, m, g, S, A, L, em = {
           return JSON.parse(f().getItem(_) || '{}');
         }, p = function(e) {
           f().setItem(_, JSON.stringify(e));
-        }, I = function() {
+        }, m = function() {
           var e = l.timeToLive ? 1000 * l.timeToLive : null,
             t = Object.fromEntries(Object.entries(h()).filter(function(e) {
               return void 0 !== r(e, 2)[1].timestamp;
@@ -1868,7 +1868,7 @@ var l, c, _, f, h, p, I, m, g, S, A, L, em = {
               }
             };
             return Promise.resolve().then(function() {
-              I();
+              m();
               var t = JSON.stringify(e);
               return h()[t];
             }).then(function(e) {
@@ -1911,21 +1911,21 @@ var l, c, _, f, h, p, I, m, g, S, A, L, em = {
         a()
       ]
     }),
-    userAgent: (m = {
+    userAgent: (I = {
       value: 'Algolia for JavaScript ('.concat('4.23.3', ')'),
       add: function(e) {
         var t = '; '.concat(e.segment).concat(void 0 !== e.version ? ' ('.concat(e.version, ')') : '');
-        return -1 === m.value.indexOf(t) && (m.value = ''.concat(m.value).concat(t)), m;
+        return -1 === I.value.indexOf(t) && (I.value = ''.concat(I.value).concat(t)), I;
       }
     }).add({
       segment: 'Browser'
     })
   },
-  e0 = t(t({}, em), o),
+  e0 = t(t({}, eI), o),
   e1 = function() {
     return function(e) {
       var n, r, i, a;
-      return r = (n = t(t(t({}, em), e), {}, {
+      return r = (n = t(t(t({}, eI), e), {}, {
         methods: {
           getPersonalizationStrategy: y,
           setPersonalizationStrategy: D
@@ -2015,7 +2015,7 @@ return S = (g = t(t({}, e0), {}, {
             saveSynonyms: eK,
             getSynonym: ex,
             searchSynonyms: eX,
-            browseSynonyms: eI,
+            browseSynonyms: em,
             deleteSynonym: eC,
             clearSynonyms: eS,
             replaceAllObjects: eB,
@@ -2035,7 +2035,7 @@ return S = (g = t(t({}, e0), {}, {
     initAnalytics: function() {
       return function(e) {
         var n, r, i, a;
-        return r = (n = t(t(t({}, em), e), {}, {
+        return r = (n = t(t(t({}, eI), e), {}, {
           methods: {
             addABTest: N,
             getABTest: O,

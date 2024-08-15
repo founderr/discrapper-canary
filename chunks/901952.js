@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(785717),
   h = n(910128),
   p = n(485216),
-  I = n(261253),
-  m = n(7242),
+  m = n(261253),
+  I = n(7242),
   T = n(934861),
   g = n(981631),
   S = n(689938),
@@ -46,7 +46,7 @@ persistentCallCtaEnabled: C
 location: 'BiteSizeProfileDirectMessageSection'
   }), [y, D] = i.useState(''), [L, b] = i.useState((0, c.JM)(y)), M = i.useRef(!1);
   if (O) {
-let e = (0, r.jsx)(m.Z, {
+let e = (0, r.jsx)(I.Z, {
   user: t,
   className: A.biteSizeButton
 });
@@ -73,7 +73,7 @@ return R && null != e ? (0, r.jsxs)('div', {
       className: A.biteSizeButton,
       onClose: _
     }),
-    (0, r.jsx)(I.Z, {
+    (0, r.jsx)(m.Z, {
       user: t,
       onClose: _,
       className: s()(A.engagementExpButton, A.biteSizeIconButton)

@@ -31,7 +31,7 @@ return t.join(' ');
       return e;
   }
 }), o = r[n]; n < i; o = r[++n])
-I(o) || !A(o) ? s += ' ' + o : s += ' ' + u(o);
+m(o) || !A(o) ? s += ' ' + o : s += ' ' + u(o);
   return s;
 }, t.deprecate = function(e, n) {
   if (void 0 !== r && !0 === r.noDeprecation)
@@ -162,7 +162,7 @@ if (T(t)) {
   var n = '\'' + JSON.stringify(t).replace(/^"|"$/g, '').replace(/'/g, '\\\'').replace(/\\"/g, '"') + '\'';
   return e.stylize(n, 'string');
 }
-return m(t) ? e.stylize('' + t, 'number') : p(t) ? e.stylize('' + t, 'boolean') : I(t) ? e.stylize('null', 'null') : void 0;
+return I(t) ? e.stylize('' + t, 'number') : p(t) ? e.stylize('' + t, 'boolean') : m(t) ? e.stylize('null', 'null') : void 0;
   }(e, n);
   if (o)
 return o;
@@ -222,7 +222,7 @@ function f(e, t, n, r, i, a) {
   var s, o, l;
   if ((l = Object.getOwnPropertyDescriptor(t, i) || {
   value: t[i]
-}).get ? o = l.set ? e.stylize('[Getter/Setter]', 'special') : e.stylize('[Getter]', 'special') : l.set && (o = e.stylize('[Setter]', 'special')), !D(r, i) && (s = '[' + i + ']'), !o && (0 > e.seen.indexOf(l.value) ? (o = I(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf('\n') > -1 && (o = a ? o.split('\n').map(function(e) {
+}).get ? o = l.set ? e.stylize('[Getter/Setter]', 'special') : e.stylize('[Getter]', 'special') : l.set && (o = e.stylize('[Setter]', 'special')), !D(r, i) && (s = '[' + i + ']'), !o && (0 > e.seen.indexOf(l.value) ? (o = m(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf('\n') > -1 && (o = a ? o.split('\n').map(function(e) {
   return '  ' + e;
 }).join('\n').slice(2) : '\n' + o.split('\n').map(function(e) {
   return '   ' + e;
@@ -242,12 +242,12 @@ function p(e) {
   return 'boolean' == typeof e;
 }
 
-function I(e) {
+function m(e) {
   return null === e;
 }
-t.types = n(842406), t.isArray = h, t.isBoolean = p, t.isNull = I;
+t.types = n(842406), t.isArray = h, t.isBoolean = p, t.isNull = m;
 
-function m(e) {
+function I(e) {
   return 'number' == typeof e;
 }
 
@@ -256,7 +256,7 @@ function T(e) {
 }
 t.isNullOrUndefined = function(e) {
   return null == e;
-}, t.isNumber = m, t.isString = T;
+}, t.isNumber = I, t.isString = T;
 
 function g(e) {
   return void 0 === e;

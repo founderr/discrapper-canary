@@ -32,18 +32,18 @@ try {
 }
   }() : f,
   p = n(322499)(),
-  I = n(79536)(),
-  m = Object.getPrototypeOf || (I ? function(e) {
+  m = n(79536)(),
+  I = Object.getPrototypeOf || (m ? function(e) {
 return e.__proto__;
   } : null),
   T = {},
-  g = 'undefined' != typeof Uint8Array && m ? m(Uint8Array) : r,
+  g = 'undefined' != typeof Uint8Array && I ? I(Uint8Array) : r,
   S = {
 __proto__: null,
 '%AggregateError%': 'undefined' == typeof AggregateError ? r : AggregateError,
 '%Array%': Array,
 '%ArrayBuffer%': 'undefined' == typeof ArrayBuffer ? r : ArrayBuffer,
-'%ArrayIteratorPrototype%': p && m ? m([][Symbol.iterator]()) : r,
+'%ArrayIteratorPrototype%': p && I ? I([][Symbol.iterator]()) : r,
 '%AsyncFromSyncIteratorPrototype%': r,
 '%AsyncFunction%': T,
 '%AsyncGenerator%': T,
@@ -73,10 +73,10 @@ __proto__: null,
 '%Int32Array%': 'undefined' == typeof Int32Array ? r : Int32Array,
 '%isFinite%': isFinite,
 '%isNaN%': isNaN,
-'%IteratorPrototype%': p && m ? m(m([][Symbol.iterator]())) : r,
+'%IteratorPrototype%': p && I ? I(I([][Symbol.iterator]())) : r,
 '%JSON%': 'object' == typeof JSON ? JSON : r,
 '%Map%': 'undefined' == typeof Map ? r : Map,
-'%MapIteratorPrototype%': 'undefined' != typeof Map && p && m ? m(new Map()[Symbol.iterator]()) : r,
+'%MapIteratorPrototype%': 'undefined' != typeof Map && p && I ? I(new Map()[Symbol.iterator]()) : r,
 '%Math%': Math,
 '%Number%': Number,
 '%Object%': Object,
@@ -89,10 +89,10 @@ __proto__: null,
 '%Reflect%': 'undefined' == typeof Reflect ? r : Reflect,
 '%RegExp%': RegExp,
 '%Set%': 'undefined' == typeof Set ? r : Set,
-'%SetIteratorPrototype%': 'undefined' != typeof Set && p && m ? m(new Set()[Symbol.iterator]()) : r,
+'%SetIteratorPrototype%': 'undefined' != typeof Set && p && I ? I(new Set()[Symbol.iterator]()) : r,
 '%SharedArrayBuffer%': 'undefined' == typeof SharedArrayBuffer ? r : SharedArrayBuffer,
 '%String%': String,
-'%StringIteratorPrototype%': p && m ? m('' [Symbol.iterator]()) : r,
+'%StringIteratorPrototype%': p && I ? I('' [Symbol.iterator]()) : r,
 '%Symbol%': p ? Symbol : r,
 '%SyntaxError%': l,
 '%ThrowTypeError%': h,
@@ -107,11 +107,11 @@ __proto__: null,
 '%WeakRef%': 'undefined' == typeof WeakRef ? r : WeakRef,
 '%WeakSet%': 'undefined' == typeof WeakSet ? r : WeakSet
   };
-if (m)
+if (I)
   try {
 null.error;
   } catch (e) {
-var A = m(m(e));
+var A = I(I(e));
 S['%Error.prototype%'] = A;
   }
 var N = function e(t) {
@@ -127,7 +127,7 @@ else if ('%AsyncGenerator%' === t) {
   r && (n = r.prototype);
 } else if ('%AsyncIteratorPrototype%' === t) {
   var i = e('%AsyncGenerator%');
-  i && m && (n = m(i.prototype));
+  i && I && (n = I(i.prototype));
 }
 return S[t] = n, n;
   },
@@ -415,8 +415,8 @@ else if (null != s) {
     return;
   }
   if (E && d + 1 >= n.length) {
-    var I = E(s, f);
-    s = (_ = !!I) && 'get' in I && !('originalValue' in I.get) ? I.get : s[f];
+    var m = E(s, f);
+    s = (_ = !!m) && 'get' in m && !('originalValue' in m.get) ? m.get : s[f];
   } else
     _ = R(s, f), s = s[f];
   _ && !o && (S[a] = s);

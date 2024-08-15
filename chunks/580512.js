@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 });
 var r = n(735250);
@@ -19,13 +19,13 @@ var i = n(120356),
   h = n(981631),
   p = n(646909);
 
-function I(e) {
+function m(e) {
   let {
 user: t,
 guild: n,
 channelId: i,
-className: I,
-onClose: m
+className: m,
+onClose: I
   } = e, {
 analyticsLocations: T,
 newestAnalyticsLocation: g
@@ -62,12 +62,12 @@ return {
   return (0, r.jsx)(o.Z, {
 type: o.P.BITE_SIZE_POPOUT,
 activity: R,
-className: a()(p.activity, I),
+className: a()(p.activity, m),
 source: g,
 user: t,
 guildId: null == n ? void 0 : n.id,
 channelId: i,
-onClose: m,
+onClose: I,
 onAction: () => {
   A({
     action: 'JOIN_ACTIVITY'
@@ -79,7 +79,7 @@ onAction: () => {
     applicationId: null == R ? void 0 : R.application_id,
     analyticsLocations: T,
     ...S
-  }), null == m || m();
+  }), null == I || I();
 },
 showActions: t.id !== (null == N ? void 0 : N.id),
 actionColor: a()(p.buttonColor, v ? p.engagementExpButtonColor : void 0),

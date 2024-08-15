@@ -17,8 +17,8 @@ let p = i.forwardRef(function(e, t) {
 emojiListRef: n,
 gridNavigatorId: a,
 isFullRow: p,
-onKeyDown: I,
-onFocus: m,
+onKeyDown: m,
+onFocus: I,
 autoFocus: T,
 className: g,
 defaultSearchPlaceholder: S
@@ -51,9 +51,9 @@ onKeyDown: e => {
     case E.yXg.ARROW_DOWN:
       document.activeElement !== e.target && e.preventDefault();
   }
-  I(e);
+  m(e);
 },
-onFocus: m,
+onFocus: I,
 onQueryChange: R,
 className: s()(g, {
   [h.searchBarFullRow]: p

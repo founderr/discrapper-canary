@@ -47,9 +47,9 @@ if (null == f)
   return;
 let p = _.document.createRange();
 p.setStart(f, h), p.setEnd(f, h);
-let I = p.getBoundingClientRect();
-if ((null == I ? void 0 : I.height) !== 0)
-  u(null != I ? I : null);
+let m = p.getBoundingClientRect();
+if ((null == m ? void 0 : m.height) !== 0)
+  u(null != m ? m : null);
   }, [
 o,
 _.document,

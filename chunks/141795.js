@@ -18,8 +18,8 @@ var r, i, a = n(392711),
   f = n(626135),
   h = n(510990),
   p = n(70956),
-  I = n(960048),
-  m = n(861990),
+  m = n(960048),
+  I = n(861990),
   T = n(476326),
   g = n(983544),
   S = n(981631);
@@ -100,9 +100,9 @@ if (this.item.platform === T.ow.REACT_NATIVE) {
   let r = this.item;
   if (e = null != r.mimeType && '' !== r.mimeType ? r.mimeType : 'application/octet-stream', null == r.size || 0 === r.size || isNaN(r.size))
     try {
-      t = await (0, m.Fm)(r.uri);
+      t = await (0, I.Fm)(r.uri);
     } catch (e) {
-      N.warn('Failed to peek content length for file id '.concat(this.id, ', reading whole file instead: ').concat(e)), t = (n = await (0, m.Lc)(r.uri)).size;
+      N.warn('Failed to peek content length for file id '.concat(this.id, ', reading whole file instead: ').concat(e)), t = (n = await (0, I.Lc)(r.uri)).size;
     }
   else
     t = r.size;
@@ -115,7 +115,7 @@ return {
 };
   }
   async getChunk(e, t, n) {
-return this.item.platform !== T.ow.REACT_NATIVE ? this.item.file.slice(e, t) : null != n ? n.slice(e, t) : await (0, m.U4)(this.item.uri, e, t);
+return this.item.platform !== T.ow.REACT_NATIVE ? this.item.file.slice(e, t) : null != n ? n.slice(e, t) : await (0, I.U4)(this.item.uri, e, t);
   }
   async uploadChunk(e) {
 let t = {
@@ -230,7 +230,7 @@ try {
   this.setResponseUrl(e.body.attachments[0].upload_url), this.setUploadedFilename(e.body.attachments[0].upload_filename);
 } catch (r) {
   let e = null !== (n = null == r ? void 0 : null === (t = r.body) || void 0 === t ? void 0 : t.code) && void 0 !== n ? n : r.status;
-  e !== S.evJ.ENTITY_TOO_LARGE && (N.error('Requesting upload url failed with code '.concat(null != e ? e : JSON.stringify(r.body), ' for ').concat(this.id)), I.Z.captureException(r)), this.handleError(e);
+  e !== S.evJ.ENTITY_TOO_LARGE && (N.error('Requesting upload url failed with code '.concat(null != e ? e : JSON.stringify(r.body), ' for ').concat(this.id)), m.Z.captureException(r)), this.handleError(e);
   return;
 }
 try {
@@ -271,7 +271,7 @@ if ((0, T.rG)(t.file) && (this.uploadAnalytics.imageCompressionQuality = t.file.
     uri: n,
     mimeType: i
   }));
-let a = null !== (e = t.fileSize) && void 0 !== e ? e : (await (0, m.Lc)(n)).size;
+let a = null !== (e = t.fileSize) && void 0 !== e ? e : (await (0, I.Lc)(n)).size;
 if (this.postCompressionSize = a, this.currentSize = a, null == a)
   throw N.error('Size missing from file data for '.concat(this.id)), Error('Size missing from file data');
 return N.log('Completed compression and conversion. Output size='.concat(a, ' bytes; filename=').concat(r, ' for ').concat(this.id)), this.item = {

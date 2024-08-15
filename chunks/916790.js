@@ -61,7 +61,7 @@ children: (0, a.jsx)(f.Z, {
 })
   });
 }
-let C = [{
+let j = [{
 id: 'action',
 name: 'Action',
 render(e) {
@@ -115,12 +115,12 @@ render(e) {
   }
 ];
 
-function j(e) {
+function C(e) {
   let {
 actionLog: r,
 initialHeight: t
   } = e, i = n.useMemo(() => r.error ? [
-...C,
+...j,
 {
   id: 'error',
   name: (0, a.jsxs)(a.Fragment, {
@@ -159,7 +159,7 @@ initialHeight: t
     });
   }
 }
-  ] : C, [r]), {
+  ] : j, [r]), {
 TabBar: l,
 renderSelectedTab: c
   } = (0, y.Z)({
@@ -248,7 +248,7 @@ children: [
       onClickRow: e => l(Number.parseInt(e, 10))
     })
   }),
-  null != c && (0, a.jsx)(j, {
+  null != c && (0, a.jsx)(C, {
     actionLog: c,
     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
   })

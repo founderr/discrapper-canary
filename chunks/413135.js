@@ -227,7 +227,7 @@ function p(e, t, n) {
   e[t] = e[n], e[n] = r;
 }
 
-function I(e, t, n, r, i) {
+function m(e, t, n, r, i) {
   if (0 === e.length)
 return -1;
   if ('string' == typeof n ? (r = n, n = 0) : n > 2147483647 ? n = 2147483647 : n < -2147483648 && (n = -2147483648), function(e) {
@@ -242,16 +242,16 @@ if (!i)
 n = 0;
   }
   if ('string' == typeof t && (t = o.from(t, r)), o.isBuffer(t))
-return 0 === t.length ? -1 : m(e, t, n, r, i);
+return 0 === t.length ? -1 : I(e, t, n, r, i);
   if ('number' == typeof t) {
 if (t &= 255, 'function' == typeof Uint8Array.prototype.indexOf)
   return i ? Uint8Array.prototype.indexOf.call(e, t, n) : Uint8Array.prototype.lastIndexOf.call(e, t, n);
-return m(e, [t], n, r, i);
+return I(e, [t], n, r, i);
   }
   throw TypeError('val must be string, number or Buffer');
 }
 
-function m(e, t, n, r, i) {
+function I(e, t, n, r, i) {
   var a, s = 1,
 o = e.length,
 l = t.length;
@@ -386,9 +386,9 @@ if (u[d] !== c[d]) {
 }, o.prototype.includes = function(e, t, n) {
   return -1 !== this.indexOf(e, t, n);
 }, o.prototype.indexOf = function(e, t, n) {
-  return I(this, e, t, n, !0);
+  return m(this, e, t, n, !0);
 }, o.prototype.lastIndexOf = function(e, t, n) {
-  return I(this, e, t, n, !1);
+  return m(this, e, t, n, !1);
 };
 
 function T(e, t, n, r) {
@@ -403,7 +403,7 @@ r = t, n = this.length, t = 0;
 t >>>= 0, isFinite(n) ? (n >>>= 0, void 0 === r && (r = 'utf8')) : (r = n, n = void 0);
   else
 throw Error('Buffer.write(string, encoding, offset[, length]) is no longer supported');
-  var i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, g = this.length - t;
+  var i, a, s, o, l, u, c, d, _, E, f, h, p, m, I, T, g = this.length - t;
   if ((void 0 === n || n > g) && (n = g), e.length > 0 && (n < 0 || t < 0) || t > this.length)
 throw RangeError('Attempt to write outside buffer bounds');
   !r && (r = 'utf8');
@@ -447,11 +447,11 @@ switch (r) {
   case 'utf16le':
   case 'utf-16le':
     ;
-    return p = this, I = e, m = t, T = n, L(function(e, t) {
+    return p = this, m = e, I = t, T = n, L(function(e, t) {
       for (var n, r, i, a = [], s = 0; s < e.length && !((t -= 2) < 0); ++s)
         r = (n = e.charCodeAt(s)) >> 8, i = n % 256, a.push(i), a.push(r);
       return a;
-    }(I, p.length - m), p, m, T);
+    }(m, p.length - I), p, I, T);
   default:
     if (S)
       throw TypeError('Unknown encoding: ' + r);

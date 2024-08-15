@@ -1,6 +1,6 @@
 n.d(t, {
   k: function() {
-return I;
+return m;
   }
 });
 var r = n(668781),
@@ -17,15 +17,15 @@ var r = n(668781),
   f = n(782769),
   h = n(527805),
   p = n(689938);
-async function I(e) {
+async function m(e) {
   let {
 channelId: t,
 applicationId: n,
-launchId: I,
-inputApplication: m,
+launchId: m,
+inputApplication: I,
 analyticsLocations: T,
 launchingComponentId: g
-  } = e, S = _.ZP.getEmbeddedActivitiesForChannel(t).find(e => e.applicationId === n && (null == I || e.launchId === I)), A = m;
+  } = e, S = _.ZP.getEmbeddedActivitiesForChannel(t).find(e => e.applicationId === n && (null == m || e.launchId === m)), A = I;
   if (null == A) {
 let e = await i.Z.fetchApplication(n);
 A = s.Z.createFromServer(e);

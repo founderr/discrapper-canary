@@ -17,7 +17,7 @@ var t = e.width,
   f = e.header,
   h = e.styles,
   p = e.className,
-  I = (0, s.default)((0, o.Z)({
+  m = (0, s.default)((0, o.Z)({
     default: {
       picker: {
         width: t,
@@ -77,28 +77,28 @@ var t = e.width,
     }
   }, void 0 === h ? {} : h));
 return r.createElement('div', {
-  style: I.picker,
+  style: m.picker,
   className: 'google-picker ' + (void 0 === p ? '' : p)
 }, r.createElement('div', {
-  style: I.head
+  style: m.head
 }, f), r.createElement('div', {
-  style: I.swatch
+  style: m.swatch
 }), r.createElement('div', {
-  style: I.saturation
+  style: m.saturation
 }, r.createElement(l.OQ, {
   hsl: a,
   hsv: _,
   pointer: u.C,
   onChange: n
 })), r.createElement('div', {
-  style: I.body
+  style: m.body
 }, r.createElement('div', {
-  style: I.controls,
+  style: m.controls,
   className: 'flexbox-fix'
 }, r.createElement('div', {
-  style: I.hue
+  style: m.hue
 }, r.createElement(l.PS, {
-  style: I.Hue,
+  style: m.Hue,
   hsl: a,
   radius: '4px',
   pointer: c.Z,

@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return I;
+return m;
   }
 }), n(47120), n(411104);
 var r = n(264344),
@@ -28,7 +28,7 @@ writable: !0
 function p(e) {
   return (null != e ? e : f.Qx) / f.Qx;
 }
-class I extends s.Z {
+class m extends s.Z {
   destroy() {
 this.eachConnection(e => e.destroy()), this.emit(o.aB.Destroy), this.removeAllListeners();
   }
@@ -251,12 +251,12 @@ n.setOnClipsRecordingEvent(t => {
   width: i <= 480 ? i / 3 * 4 : i / 9 * 16,
   height: i
 });
-let [p, I] = null != a ? a.split(':') : [
+let [p, m] = null != a ? a.split(':') : [
   '',
   ''
 ];
 n.setClipsSource({
-  id: I,
+  id: m,
   soundshareId: null != s ? s : 0
 });
   }
@@ -549,8 +549,8 @@ if (r.setDeviceChangeCallback(this.handleDeviceChange), r.setVolumeChangeCallbac
     ducking: !1
   }), null === (n = r.setNativeScreenSharePickerCallbacks) || void 0 === n || n.call(r, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError), this.on('removeListener', this.handleRemoveListener), this.on('newListener', this.handleNewListener), null != (0, d.zS)().getAudioSubsystem ? (0, d.zS)().getAudioSubsystem((e, t) => {
     this.audioSubsystem = e, this.audioLayer = t;
-  }) : null != (0, d.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? f.iA.LEGACY : f.iA.STANDARD), null != r.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(), this.getDebugLogging() && !I.installedLogHooks)
-  for (let e of (I.installedLogHooks = !0, [
+  }) : null != (0, d.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? f.iA.LEGACY : f.iA.STANDARD), null != r.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(), this.getDebugLogging() && !m.installedLogHooks)
+  for (let e of (m.installedLogHooks = !0, [
       'trace',
       'debug',
       'info',
@@ -571,4 +571,4 @@ if (r.setDeviceChangeCallback(this.handleDeviceChange), r.setVolumeChangeCallbac
 null != r.setActiveSinksChangeCallback && r.setActiveSinksChangeCallback(this.handleActiveSinksChange), (0, l.Z)(this);
   }
 }
-h(I, 'installedLogHooks', !1);
+h(m, 'installedLogHooks', !1);

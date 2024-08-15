@@ -23,8 +23,8 @@ onClose: E
 live: f,
 recent: h,
 stream: p
-  } = (0, l.Z)(t.id), [I] = f, {
-mostRecentActivityEnabled: m
+  } = (0, l.Z)(t.id), [m] = f, {
+mostRecentActivityEnabled: I
   } = (0, o.z)({
 location: 'UserProfileFeaturedActivity'
   }), T = i.useMemo(() => h.find(e => s.default.age(e.id) / a.Z.Millis.HOUR < 24), [h]);
@@ -34,13 +34,13 @@ currentUser: n,
 stream: p,
 className: _,
 onClose: E
-  }) : null != I ? (0, r.jsx)(u.Z, {
+  }) : null != m ? (0, r.jsx)(u.Z, {
 user: t,
 currentUser: n,
-activity: I,
+activity: m,
 className: _,
 onClose: E
-  }) : m && null != T ? (0, r.jsx)(c.Z, {
+  }) : I && null != T ? (0, r.jsx)(c.Z, {
 user: t,
 entry: T,
 className: _,

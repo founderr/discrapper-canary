@@ -12,7 +12,7 @@ var r = n(546299),
   f = a.g0_256,
   h = a.g1_256,
   p = i.BlockHash,
-  I = [
+  m = [
 1116352408,
 1899447441,
 3049323471,
@@ -79,9 +79,9 @@ var r = n(546299),
 3329325298
   ];
 
-function m() {
-  if (!(this instanceof m))
-return new m();
+function I() {
+  if (!(this instanceof I))
+return new I();
   p.call(this), this.h = [
 1779033703,
 3144134277,
@@ -91,9 +91,9 @@ return new m();
 2600822924,
 528734635,
 1541459225
-  ], this.k = I, this.W = Array(64);
+  ], this.k = m, this.W = Array(64);
 }
-r.inherits(m, p), e.exports = m, m.blockSize = 512, m.outSize = 256, m.hmacStrength = 192, m.padLength = 64, m.prototype._update = function(e, t) {
+r.inherits(I, p), e.exports = I, I.blockSize = 512, I.outSize = 256, I.hmacStrength = 192, I.padLength = 64, I.prototype._update = function(e, t) {
   for (var n = this.W, r = 0; r < 16; r++)
 n[r] = e[t + r];
   for (; r < n.length; r++)
@@ -101,17 +101,17 @@ n[r] = l(h(n[r - 2]), n[r - 7], f(n[r - 15]), n[r - 16]);
   var i = this.h[0],
 a = this.h[1],
 p = this.h[2],
-I = this.h[3],
-m = this.h[4],
+m = this.h[3],
+I = this.h[4],
 T = this.h[5],
 g = this.h[6],
 S = this.h[7];
   for (s(this.k.length === n.length), r = 0; r < n.length; r++) {
-var A = u(S, E(m), c(m, T, g), this.k[r], n[r]),
+var A = u(S, E(I), c(I, T, g), this.k[r], n[r]),
   N = o(_(i), d(i, a, p));
-S = g, g = T, T = m, m = o(I, A), I = p, p = a, a = i, i = o(A, N);
+S = g, g = T, T = I, I = o(m, A), m = p, p = a, a = i, i = o(A, N);
   }
-  this.h[0] = o(this.h[0], i), this.h[1] = o(this.h[1], a), this.h[2] = o(this.h[2], p), this.h[3] = o(this.h[3], I), this.h[4] = o(this.h[4], m), this.h[5] = o(this.h[5], T), this.h[6] = o(this.h[6], g), this.h[7] = o(this.h[7], S);
-}, m.prototype._digest = function(e) {
+  this.h[0] = o(this.h[0], i), this.h[1] = o(this.h[1], a), this.h[2] = o(this.h[2], p), this.h[3] = o(this.h[3], m), this.h[4] = o(this.h[4], I), this.h[5] = o(this.h[5], T), this.h[6] = o(this.h[6], g), this.h[7] = o(this.h[7], S);
+}, I.prototype._digest = function(e) {
   return 'hex' === e ? r.toHex32(this.h, 'big') : r.split32(this.h, 'big');
 };

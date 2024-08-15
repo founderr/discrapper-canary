@@ -3,7 +3,7 @@ n.d(t, {
 return T;
   },
   FZ: function() {
-return m;
+return I;
   },
   Je: function() {
 return A;
@@ -97,13 +97,13 @@ Object.freeze({
   9: 24
 });
 (i = r || (r = {}))[i.EMOJI = 1] = 'EMOJI', i[i.AUDIO = 2] = 'AUDIO', i[i.ANIMATED = 3] = 'ANIMATED', i[i.CUSTOMIZATION = 4] = 'CUSTOMIZATION', i[i.UPLOAD = 5] = 'UPLOAD', i[i.VANITY = 6] = 'VANITY', i[i.STREAM = 7] = 'STREAM', i[i.STICKER = 8] = 'STICKER', i[i.CUSTOM_ROLE_ICON = 11] = 'CUSTOM_ROLE_ICON', i[i.STAGE_VIDEO = 12] = 'STAGE_VIDEO', i[i.SOUNDBOARD = 13] = 'SOUNDBOARD';
-let I = [
+let m = [
 f.Eu4.NONE,
 f.Eu4.TIER_1,
 f.Eu4.TIER_2,
 f.Eu4.TIER_3
   ],
-  m = (e, t) => {
+  I = (e, t) => {
 var n;
 return e === f.Eu4.NONE ? f.Eu4.TIER_1 : null === (n = x(t).find(t => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
   },
@@ -113,7 +113,7 @@ return e === f.Eu4.NONE ? f.Eu4.TIER_1 : null === (n = x(t).find(t => t.tier ===
   A = e => {
 if (e === f.Eu4.NONE)
   return h._k[e];
-let t = I[I.indexOf(e) - 1];
+let t = m[m.indexOf(e) - 1];
 return h._k[e] - h._k[t];
   },
   N = e => [{
@@ -440,17 +440,17 @@ return t[t.length - n].endsAt;
 
 function k(e, t) {
   let n = g(t),
-r = I.indexOf(t);
+r = m.indexOf(t);
   if (-1 === r)
 return 0;
-  let i = I[r - 1],
+  let i = m[r - 1],
 a = null != i ? T(i) : 0,
 s = T(t);
   return Math.max(0, n - e.slice(a, s).length);
 }
 
 function B(e, t, n) {
-  return -1 === I.indexOf(n) ? 0 : Math.max(0, S(n, e) - t.length);
+  return -1 === m.indexOf(n) ? 0 : Math.max(0, S(n, e) - t.length);
 }
 
 function F(e, t) {

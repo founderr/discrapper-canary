@@ -40,7 +40,7 @@ function h() {
 function p() {
   return 0.2 * (u - l);
 }
-class I extends a.Z {
+class m extends a.Z {
   constructor(...e) {
 var t, n, r;
 super(...e), t = this, n = 'actions', r = {
@@ -55,4 +55,4 @@ super(...e), t = this, n = 'actions', r = {
 }) : t[n] = r;
   }
 }
-t.Z = new I();
+t.Z = new m();

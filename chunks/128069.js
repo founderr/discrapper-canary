@@ -37,13 +37,13 @@ line_2: 'line2',
 postal_code: 'postalCode'
   });
 (c = s || (s = {})).CARD = 'card', c.ADDRESS = 'address';
-let I = new Set([
+let m = new Set([
 'cardNumber',
 'cvc',
 'expirationDate',
 'name'
   ]),
-  m = new Set([
+  I = new Set([
 'name',
 'line1',
 'line2',
@@ -74,10 +74,10 @@ for (let t in this.fields)
     return !0;
   }
   hasCardError() {
-return this._isInFieldSet(I);
+return this._isInFieldSet(m);
   }
   hasAddressError() {
-return this._isInFieldSet(m);
+return this._isInFieldSet(I);
   }
   constructor(e, t) {
 for (let n in (super(e, t), f(this, 'paymentId', null), 100027 === this.code ? this.message = E.Z.Messages.BILLING_ERROR_NEGATIVE_INVOICE_AMOUNT : 50048 === this.code ? this.message = E.Z.Messages.BILLING_PAYMENT_SOURCE_INVALID : 100002 === this.code ? this.message = E.Z.Messages.BILLING_ERROR_UNKNOWN_PAYMENT_SOURCE : 100042 === this.code ? this.message = E.Z.Messages.BILLING_ERROR_PENDING_PAYMENT : 100078 === this.code ? this.message = E.Z.Messages.BILLING_TRIAL_REDEMPTION_DISABLED : 100096 === this.code ? this.message = E.Z.Messages.BILLING_BUNDLE_ALREADY_PURCHASED : 100097 === this.code ? this.message = E.Z.Messages.BILLING_BUNDLE_PARTIALLY_OWNED : 429 === this.status ? this.message = E.Z.Messages.BILLING_ERROR_RATE_LIMIT : 0 === this.code ? this.message = E.Z.Messages.BILLING_ERROR_GENERIC : 400 === this.status && null != this.fields.captcha_key && (this.message = E.Z.Messages.BILLING_ERROR_INVALID_CAPTCHA_RESPONSE), this.fields)) {
@@ -90,4 +90,4 @@ for (let n in (super(e, t), f(this, 'paymentId', null), 100027 === this.code ? t
 null != e.body && 'string' == typeof e.body.payment_id && (this.paymentId = e.body.payment_id);
   }
 }
-f(g, 'ErrorCodes', r), f(g, 'Fields', i), f(g, 'Sections', s), f(g, 'CARD_ERRORS', I), f(g, 'ADDRESS_ERRORS', m), t.ZP = g;
+f(g, 'ErrorCodes', r), f(g, 'Fields', i), f(g, 'Sections', s), f(g, 'CARD_ERRORS', m), f(g, 'ADDRESS_ERRORS', I), t.ZP = g;

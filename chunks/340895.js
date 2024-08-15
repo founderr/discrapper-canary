@@ -9,11 +9,11 @@ var r, i, a, s, o = n(442837),
   f = n(885110),
   h = n(981631);
 let p = 'IncomingCallStore',
-  I = {
+  m = {
 width: 232,
 height: 315
   },
-  m = new Set(),
+  I = new Set(),
   T = [],
   g = new Map(),
   S = new Set(),
@@ -53,7 +53,7 @@ O(t);
 A = +e.x, N = +e.y;
   else {
 let e = n(451478).Z.windowSize();
-A = e.width / 2 - I.width / 2, N = e.height / 2 - I.height / 2;
+A = e.width / 2 - m.width / 2, N = e.height / 2 - m.height / 2;
   }
 }();
 
@@ -68,7 +68,7 @@ this.waitFor(E.Z, f.Z), this.syncWith([f.Z], C), this.syncWith([d.Z], C);
 return v ? T : Array.from(g.values());
   }
   getIncomingCallChannelIds() {
-return v ? m : S;
+return v ? I : S;
   }
   getFirstIncomingCallId() {
 return v ? null : S.values().next().value;

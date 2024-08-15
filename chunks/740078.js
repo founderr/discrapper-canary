@@ -39,7 +39,7 @@ return c;
 return r;
   },
   xs: function() {
-return I;
+return m;
   },
   zV: function() {
 return d;
@@ -75,7 +75,7 @@ return e.concat([
   t + '-' + c
 ]);
   }, []),
-  I = [
+  m = [
 'beforeRead',
 'read',
 'afterRead',

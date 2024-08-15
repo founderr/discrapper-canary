@@ -1,5 +1,5 @@
 let r, i, a, s, o, l, u, c, d, _, E, f, h, p;
-var I, m, T, g, S = n(979554),
+var m, I, T, g, S = n(979554),
   A = n(442837),
   N = n(570140),
   v = n(981631);
@@ -107,12 +107,12 @@ return {
 };
   }
 }
-T = 'UserSettingsAccountStore', (m = 'displayName') in(I = P) ? Object.defineProperty(I, m, {
+T = 'UserSettingsAccountStore', (I = 'displayName') in(m = P) ? Object.defineProperty(m, I, {
   value: T,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : I[m] = T, t.Z = new P(N.Z, {
+}) : m[I] = T, t.Z = new P(N.Z, {
   USER_SETTINGS_ACCOUNT_INIT: C,
   USER_SETTINGS_MODAL_INIT: C,
   USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: C,

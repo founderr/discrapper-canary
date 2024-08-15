@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(927723),
   h = n(124072),
   p = n(184301),
-  I = n(103575),
-  m = n(592125),
+  m = n(103575),
+  I = n(592125),
   T = n(271383),
   g = n(430824),
   S = n(699516),
@@ -67,7 +67,7 @@ inlinePreview: y = !1,
 viewingChannelId: D
   } = e, {
 analyticsLocations: L
-  } = (0, _.ZP)(d.Z.USER_MENTION), b = (0, l.e7)([A.default], () => A.default.getUser(i)), M = (0, l.e7)([m.Z], () => m.Z.getChannel(a)), P = null != M ? M.getGuildId() : null, U = y || null == b || null == P || null == a ? void 0 : e => {
+  } = (0, _.ZP)(d.Z.USER_MENTION), b = (0, l.e7)([A.default], () => A.default.getUser(i)), M = (0, l.e7)([I.Z], () => I.Z.getChannel(a)), P = null != M ? M.getGuildId() : null, U = y || null == b || null == P || null == a ? void 0 : e => {
 null != M && (0, c.jW)(e, async () => {
   let {
     default: e
@@ -86,7 +86,7 @@ null != M && (0, c.jW)(e, async () => {
   });
 });
   }, w = v.ZP.useName(b), x = (0, l.e7)([
-m.Z,
+I.Z,
 T.ZP,
 S.Z
   ], () => N.ZP.getNickname(P, a, b)), G = g.Z.getGuild(P), k = (0, E.Ib)(G, M) && i === O.fL ? O.jM : null;
@@ -113,7 +113,7 @@ children: (0, r.jsx)(u.Popout, {
     guildId: null != P ? P : void 0,
     channelId: null != a ? a : void 0
   }),
-  renderPopout: e => (s()(null != b, 'Unexpected missing user'), (0, r.jsx)(I.Z, {
+  renderPopout: e => (s()(null != b, 'Unexpected missing user'), (0, r.jsx)(m.Z, {
     location: 'UserMention',
     userId: b.id,
     guildId: null != P ? P : void 0,

@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return E;
+return I;
   }
 }), t(47120);
 var a = t(735250),
@@ -24,8 +24,8 @@ var a = t(735250),
   v = t(71585),
   _ = t(146282),
   w = t(650613),
-  C = t(789086),
-  j = t(206583),
+  j = t(789086),
+  C = t(206583),
   N = t(787524),
   S = t(535271);
 let T = [{
@@ -63,14 +63,14 @@ render(e) {
   let {
     type: r
   } = e;
-  return (0, a.jsx)(I, {
+  return (0, a.jsx)(E, {
     type: r
   });
 }
   }
 ];
 
-function I(e) {
+function E(e) {
   var r, t;
   let {
 type: n
@@ -91,9 +91,9 @@ onClick: function() {
   });
 }
 
-function E() {
+function I() {
   var e, r;
-  let t = (0, d.e7)([_.Z], () => _.Z.getFeed(j.YN.GLOBAL_FEED)),
+  let t = (0, d.e7)([_.Z], () => _.Z.getFeed(C.YN.GLOBAL_FEED)),
 i = (0, d.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
 l = (0, d.e7)([v.Z], () => v.Z.getDebugFastImpressionCappingEnabled()),
 s = function(e) {
@@ -107,31 +107,31 @@ s = function(e) {
     };
   });
 }(null == t ? void 0 : null === (e = t.entries) || void 0 === e ? void 0 : e.map(e => e.content)),
-I = (0, d.e7)([_.Z], () => {
+E = (0, d.e7)([_.Z], () => {
   var e;
-  return (null === (e = _.Z.getFeedState(j.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+  return (null === (e = _.Z.getFeedState(C.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
 }),
-[E, R] = n.useState(''),
+[I, R] = n.useState(''),
 O = (0, d.e7)([
   x.Z,
   g.Z
 ], () => {
   var e, r, t;
-  return parseInt(E) > 0 ? E : null !== (t = null === (e = x.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = g.Z.getApplicationByName(E)) || void 0 === r ? void 0 : r.id;
-}, [E]),
+  return parseInt(I) > 0 ? I : null !== (t = null === (e = x.Z.getGameByName(I)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = g.Z.getApplicationByName(I)) || void 0 === r ? void 0 : r.id;
+}, [I]),
 A = (0, y.Z)({
   applicationId: O,
   location: 'DevToolsContentInventory',
   source: f.m1.DevTools
 }),
-P = Object.entries(null !== (r = u.K.get('GameProfileModal')) && void 0 !== r ? r : {}).filter(e => {
+L = Object.entries(null !== (r = u.K.get('GameProfileModal')) && void 0 !== r ? r : {}).filter(e => {
   let [r, t] = e;
   return t;
 }).map(e => {
   let [r] = e;
   return r;
 }),
-L = (0, p.Z)(P).filter(k.lm);
+B = (0, p.Z)(L).filter(k.lm);
   return (0, a.jsx)('div', {
 className: o()(S.panel),
 children: (0, a.jsxs)(h.ScrollerThin, {
@@ -149,16 +149,16 @@ children: (0, a.jsxs)(h.ScrollerThin, {
         (0, a.jsx)(h.Spacer, {
           size: 8
         }),
-        (0, a.jsx)(C.Z, {}),
+        (0, a.jsx)(j.Z, {}),
         (0, a.jsx)(h.Button, {
           fullWidth: !0,
           onClick: function() {
             m.Z.dispatch({
               type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-              feedId: j.YN.GLOBAL_FEED
+              feedId: C.YN.GLOBAL_FEED
             });
           },
-          submitting: I,
+          submitting: E,
           children: 'Refresh Now'
         })
       ]
@@ -226,15 +226,15 @@ children: (0, a.jsxs)(h.ScrollerThin, {
           placeholder: 'App ID or full name',
           onChange: e => (0 === e.length || e.length >= 18) && R(e),
           onKeyDown: e => {
-            'Enter' === e.key && (E === e.currentTarget.value ? null == A || A() : R(e.currentTarget.value));
+            'Enter' === e.key && (I === e.currentTarget.value ? null == A || A() : R(e.currentTarget.value));
           },
-          error: E.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
+          error: I.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : I + ' - try by id', '.') : void 0,
           style: null != A ? {
             border: '1px solid green'
           } : {}
         }),
         (0, a.jsx)('ul', {
-          children: L.map(e => (0, a.jsx)('li', {
+          children: B.map(e => (0, a.jsx)('li', {
             children: (0, a.jsx)(Z, {
               application: e
             })

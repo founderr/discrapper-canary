@@ -11,8 +11,8 @@ var r, i, a = n(259443),
   f = n(808506),
   h = n(237997),
   p = n(626135),
-  I = n(998502),
-  m = n(830917),
+  m = n(998502),
+  I = n(830917),
   T = n(554174),
   g = n(938038),
   S = n(981631),
@@ -174,7 +174,7 @@ N(this, 'types', {
 class y {
   update() {
 let e = this.game,
-  t = I.ZP.GetWindowFullscreenTypeByPid(e.pid, e.name, e.fullscreenType);
+  t = m.ZP.GetWindowFullscreenTypeByPid(e.pid, e.name, e.fullscreenType);
 if (t !== this.lastscreenType) {
   if (!(t in this.counters)) {
     v.error('ScreenTypeAnalytics: Unknown screen type: '.concat(t), t);
@@ -218,7 +218,7 @@ return {
   screentype_initial: l.Jx[this.game.fullscreenType],
   screentype_most_used: l.Jx[s],
   screentype_most_used_previous: null == o ? null : l.Jx[o],
-  game_display_mode_is_adjustment_supported: I.ZP.GameDisplayModeIsGameSupported(this.game.name)
+  game_display_mode_is_adjustment_supported: m.ZP.GameDisplayModeIsGameSupported(this.game.name)
 };
   }
   destroy() {
@@ -477,7 +477,7 @@ function B(e) {
 
 function F(e) {
   v.verbose('WINDOW_FOCUS', e);
-  let t = (0, m.UU)();
+  let t = (0, I.UU)();
   if (e.windowId !== t) {
 v.verbose('WINDOW_FOCUS: Not main window', {
   action: e,

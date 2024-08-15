@@ -9,8 +9,8 @@ var r, i, a, s, o = n(442837),
 let f = {},
   h = {},
   p = null,
-  I = null,
   m = null,
+  I = null,
   T = 'lastChangeLogDate',
   g = null,
   S = null,
@@ -42,13 +42,13 @@ var n, r;
 return null !== (r = null === (n = h[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : E.LU.NOT_LOADED;
   }
   hasLoadedConfig() {
-return null != m;
+return null != I;
   }
   getConfig() {
-return m;
+return I;
   }
   overrideId() {
-return I;
+return m;
   }
   lastSeenChangelogId() {
 return g;
@@ -58,7 +58,7 @@ return S;
   }
   getStateForDebugging() {
 return {
-  changelogConfig: m,
+  changelogConfig: I,
   loadedChangelogs: h,
   lastSeenChangelogId: g,
   lastSeenChangelogDate: S
@@ -95,7 +95,7 @@ let {
   config: t,
   latestChangelogId: n
 } = e;
-p = n, m = t;
+p = n, I = t;
   },
   CHANGE_LOG_FETCH_SUCCESS: function(e) {
 let {
@@ -124,7 +124,7 @@ null == h[t] && (h[t] = {}), h[t][n] = E.LU.LOADED_FAILURE;
 let {
   id: t
 } = e;
-I = t;
+m = t;
   },
   CHANGE_LOG_MARK_SEEN: function(e) {
 let {

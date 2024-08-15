@@ -15,11 +15,11 @@ f = !0,
 h = 2 & n ? new r() : void 0;
   for (l.set(e, t), l.set(t, e); ++E < c;) {
 var p = e[E],
-  I = t[E];
+  m = t[E];
 if (s)
-  var m = u ? s(I, p, E, t, e, l) : s(p, I, E, e, t, l);
-if (void 0 !== m) {
-  if (m)
+  var I = u ? s(m, p, E, t, e, l) : s(p, m, E, e, t, l);
+if (void 0 !== I) {
+  if (I)
     continue;
   f = !1;
   break;
@@ -32,7 +32,7 @@ if (h) {
     f = !1;
     break;
   }
-} else if (!(p === I || o(p, I, n, s, l))) {
+} else if (!(p === m || o(p, m, n, s, l))) {
   f = !1;
   break;
 }

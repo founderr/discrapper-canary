@@ -12,7 +12,7 @@ return T;
 return D;
   },
   S2: function() {
-return m;
+return I;
   },
   UZ: function() {
 return N;
@@ -39,7 +39,7 @@ return g;
 return C;
   },
   ss: function() {
-return I;
+return m;
   },
   xn: function() {
 return O;
@@ -70,7 +70,7 @@ type: 'USER_SETTINGS_ACCOUNT_CLOSE'
   });
 }
 
-function I(e, t) {
+function m(e, t) {
   let n = t ? f.Z.Messages.DELETE_ACCOUNT : f.Z.Messages.DISABLE_ACCOUNT,
 i = t ? _.ANM.DELETE_ACCOUNT : _.ANM.DISABLE_ACCOUNT;
   return (0, c.Z)(t => r.tn.post({
@@ -89,7 +89,7 @@ checkEnabled: !1
 d.Z.logoutInternal(), (0, o.uL)(_.Z5c.DEFAULT_LOGGED_OUT);
   });
 }
-async function m(e) {
+async function I(e) {
   let t = await r.tn.patch({
   url: _.ANM.ME,
   oldFormErrors: !0,
@@ -123,7 +123,7 @@ password: o,
 avatar: d,
 avatarDecoration: h,
 newPassword: p,
-globalName: I
+globalName: m
   } = e;
   return s.Z.dispatch({
 type: 'USER_SETTINGS_ACCOUNT_SUBMIT'
@@ -135,7 +135,7 @@ let s = {
   password: o,
   avatar: d,
   discriminator: n,
-  global_name: I,
+  global_name: m,
   new_password: p,
   ...e
 };
@@ -144,7 +144,7 @@ let l = i.K.get(_.JkL),
   u = (0, E.xJ)();
 null != u && null != l && (s.push_provider = u, s.push_token = l);
 let c = i.K.get(_.scU);
-return null != E.mv && null != c && (s.push_voip_provider = E.mv, s.push_voip_token = c), m(s);
+return null != E.mv && null != c && (s.push_voip_provider = E.mv, s.push_voip_token = c), I(s);
   }, {
 checkEnabled: !1,
 modalProps: {

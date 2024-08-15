@@ -15,10 +15,10 @@ return h;
 return T;
   },
   setEntrypoint: function() {
-return I;
+return m;
   },
   setGuildId: function() {
-return m;
+return I;
   },
   setTrackedOpenedFromExternalEntrypoint: function() {
 return g;
@@ -91,13 +91,13 @@ return {
   }
 }
 
-function I(e) {
+function m(e) {
   (0, u.j)(() => E.setState({
 entrypoint: e
   }));
 }
 
-function m(e) {
+function I(e) {
   (0, u.j)(() => E.setState({
 guildId: e
   }));

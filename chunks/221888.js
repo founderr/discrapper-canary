@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(751688),
   h = n(199902),
   p = n(594174),
-  I = n(823379),
-  m = n(5192),
+  m = n(823379),
+  I = n(5192),
   T = n(354459),
   g = n(981631),
   S = n(689938),
@@ -68,7 +68,7 @@ children: (0, r.jsxs)(d.Scroller, {
         textClassName: A.memberListItemText,
         user: e,
         disablePopout: n,
-        nick: m.ZP.getNickname(i, o, e),
+        nick: I.ZP.getNickname(i, o, e),
         onContextMenu: t => n ? null : l(t, e)
       }, e.id))
     })
@@ -87,7 +87,7 @@ className: o,
 participantType: l
   } = e, u = N(l, t.length), c = t.length < a ? t.map(e => (0, r.jsx)('div', {
 className: A.viewersTooltipItem,
-children: m.ZP.getName(n, i, e)
+children: I.ZP.getName(n, i, e)
   }, e.id)) : u;
   return (0, r.jsx)(d.TooltipContainer, {
 text: c,
@@ -116,7 +116,7 @@ channelId: t,
 guildId: a,
 participant: o,
 className: f,
-compact: m = !1,
+compact: I = !1,
 disableInteraction: S = !1,
 maxVisibleUsers: N = 3
   } = e, [C, y] = i.useState(!1), D = i.useRef(new c.sW(150, () => y(!1))), L = (0, u.Wu)([
@@ -125,9 +125,9 @@ p.default
   ], () => {
 if (o.type === T.fO.STREAM) {
   let e = h.Z.getViewerIds(o.id);
-  return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(I.lm) : R;
+  return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(m.lm) : R;
 }
-return o.type === T.fO.ACTIVITY ? o.participants.length > 0 ? Array.from(o.participants).map(e => p.default.getUser(e.userId)).filter(I.lm) : R : R;
+return o.type === T.fO.ACTIVITY ? o.participants.length > 0 ? Array.from(o.participants).map(e => p.default.getUser(e.userId)).filter(m.lm) : R : R;
   }, [o]), b = i.useCallback(() => {
 D.current.cancel(), y(!0);
   }, []), M = i.useCallback(() => {
@@ -154,7 +154,7 @@ b
   ]);
   if (0 === L.length)
 return null;
-  if (m)
+  if (I)
 return (0, r.jsx)(O, {
   maxVisibleUsers: N,
   users: L,

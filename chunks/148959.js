@@ -1,6 +1,6 @@
 n.d(t, {
   Z: function() {
-return m;
+return I;
   },
   y: function() {
 return r;
@@ -22,9 +22,9 @@ writable: !0
   }) : e[t] = n, e;
 }
 let p = 10 * E.Z.Millis.SECOND,
-  I = 10 * E.Z.Millis.SECOND;
+  m = 10 * E.Z.Millis.SECOND;
 (s = r || (r = {})).RequestedSSRCsUpdate = 'requested-ssrcs-update', s.RequestedStreamsUpdate = 'requested-streams-update', (o = i || (i = {}))[o.Ready = 0] = 'Ready', o[o.Pending = 1] = 'Pending', o[o.PendingSeamless = 2] = 'PendingSeamless', o[o.Finalizing = 3] = 'Finalizing', (l = a || (a = {}))[l.None = 0] = 'None', l[l.Low = 60] = 'Low', l[l.High = 100] = 'High';
-class m extends d.Z {
+class I extends d.Z {
   setUserID(e) {
 this.userId = e;
   }
@@ -128,7 +128,7 @@ return this.currentSSRC === this.lqSSRC;
 return -1 !== this.currentSSRC;
   }
   isDowngradeChangeAllowed(e) {
-return !this.throttleDowngradeChanges || void 0 === this.lastDowngradeChangeTime || (e ? Date.now() - this.lastDowngradeChangeTime >= I : Date.now() - this.lastDowngradeChangeTime >= p);
+return !this.throttleDowngradeChanges || void 0 === this.lastDowngradeChangeTime || (e ? Date.now() - this.lastDowngradeChangeTime >= m : Date.now() - this.lastDowngradeChangeTime >= p);
   }
   isOneToOneCall() {
 return 1 === this.otherUsers.size;

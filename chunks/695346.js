@@ -51,7 +51,7 @@ return b;
 return eg;
   },
   QZ: function() {
-return m;
+return I;
   },
   R$: function() {
 return E;
@@ -66,7 +66,7 @@ return eD;
 return ev;
   },
   Sb: function() {
-return em;
+return eI;
   },
   Sh: function() {
 return eL;
@@ -183,7 +183,7 @@ return y;
 return f;
   },
   vF: function() {
-return I;
+return m;
   },
   x4: function() {
 return ed;
@@ -240,7 +240,7 @@ return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : c.A2N.O
   }, e => a.Gm.create({
 value: e
   })),
-  I = (0, o.Zc)('textAndImages', 'useThreadSidebar', e => {
+  m = (0, o.Zc)('textAndImages', 'useThreadSidebar', e => {
 var t;
 return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
   }, e => a.D5.create({
@@ -252,7 +252,7 @@ value: e
 }, e => a.D5.create({
   value: e
 }));
-let m = (0, o.Zc)('notifications', 'quietMode', e => {
+let I = (0, o.Zc)('notifications', 'quietMode', e => {
 var t;
 return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
   }, e => a.D5.create({
@@ -500,15 +500,15 @@ s.l.COMPACT
 (0, o.Zc)('appearance', 'channelListLayout', e => null != e && ep.has(e.value) ? e.value : s.l.COZY, e => a.Gm.create({
   value: e
 }));
-let eI = new Set([
+let em = new Set([
   s.Z.ALL,
   s.Z.UNREADS,
   s.Z.NONE
 ]);
-(0, o.Zc)('appearance', 'messagePreviews', e => null != e && eI.has(e.value) ? e.value : s.Z.ALL, e => a.Gm.create({
+(0, o.Zc)('appearance', 'messagePreviews', e => null != e && em.has(e.value) ? e.value : s.Z.ALL, e => a.Gm.create({
   value: e
 }));
-let em = (0, o.KM)((0, o.Zc)('appearance', 'developerMode', e => null != e && e, e => e), 'appearance', 'developerMode'),
+let eI = (0, o.KM)((0, o.Zc)('appearance', 'developerMode', e => null != e && e, e => e), 'appearance', 'developerMode'),
   eT = (0, o.Zc)('appearance', 'clientThemeSettings', e => {
 var t;
 return {

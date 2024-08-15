@@ -49,8 +49,8 @@ null !== n && (e[d] = null, e[o] = null, e[l] = null, t(f(n, !1)));
 function p(e) {
   i.nextTick(h, e);
 }
-var I = Object.getPrototypeOf(function() {}),
-  m = Object.setPrototypeOf((a(r = {
+var m = Object.getPrototypeOf(function() {}),
+  I = Object.setPrototypeOf((a(r = {
 get stream() {
   return this[E];
 },
@@ -100,9 +100,9 @@ return new Promise(function(t, n) {
     t(f(void 0, !0));
   });
 });
-  }), r), I);
+  }), r), m);
 e.exports = function(e) {
-  var t, n = Object.create(m, (a(t = {}, E, {
+  var t, n = Object.create(I, (a(t = {}, E, {
 value: e,
 writable: !0
   }), a(t, o, {

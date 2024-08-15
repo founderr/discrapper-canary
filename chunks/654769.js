@@ -20,14 +20,14 @@ configurable: !0,
 writable: !0
   }) : e[t] = n, e;
 }
-let I = _.isPlatformEmbedded && (0, _.isWindows)(),
-  m = I && 10 > parseFloat(l.Z.os.release),
+let m = _.isPlatformEmbedded && (0, _.isWindows)(),
+  I = m && 10 > parseFloat(l.Z.os.release),
   T = !0;
-if (I && !m) {
+if (m && !I) {
   let [e, , t] = l.Z.os.release.split('.');
   T = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
-let g = I && T || 'Chrome' === o().name && 47 > parseFloat(o().version) || 'Firefox' === o().name && 52 > parseFloat(o().version),
+let g = m && T || 'Chrome' === o().name && 47 > parseFloat(o().version) || 'Firefox' === o().name && 52 > parseFloat(o().version),
   S = a().throttle(E.GN, 1000, {
 leading: !0
   });
@@ -35,9 +35,9 @@ leading: !0
 function A() {
   f.ZP.flashFrame(!1);
 }
-I && (window.addEventListener('focus', A), f.ZP.on('MAIN_WINDOW_FOCUS', A));
+m && (window.addEventListener('focus', A), f.ZP.on('MAIN_WINDOW_FOCUS', A));
 let N = window.Notification;
-m && (f.ZP.on('NOTIFICATION_CLICK', (e, t) => {
+I && (f.ZP.on('NOTIFICATION_CLICK', (e, t) => {
   let n = null[t];
   null != n && (n.onclick(), n.close());
 }), f.ZP.send('NOTIFICATIONS_CLEAR'), r = class {
@@ -90,15 +90,15 @@ if (R(i)) {
 null != i.sound && O(i.sound, null !== (l = i.volume) && void 0 !== l ? l : 1, i.soundpack);
 let p = null !== (c = null == i ? void 0 : i.tag) && void 0 !== c ? c : null;
 (0, _.isLinux)() && (n = a().escape(n));
-let m = {
+let I = {
   icon: e,
   body: n,
   tag: p,
   silent: !0
 };
-I && u.Z.taskbarFlash && f.ZP.flashFrame(!0);
+m && u.Z.taskbarFlash && f.ZP.flashFrame(!0);
 try {
-  E = new N(t, m);
+  E = new N(t, I);
 } catch (e) {
   return null;
 }

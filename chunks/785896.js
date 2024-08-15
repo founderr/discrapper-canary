@@ -32,13 +32,13 @@ let {
 } = (0, i.cj)([
   s.ZP,
   a.Z
-], () => c(s.ZP, a.Z, t)), _ = null != o, E = null != o && o.hasFeature(u.oNc.DISCOVERABLE), f = (!_ || E) && null != t, [h, p] = r.useState(f), [I, m] = r.useState(null), T = null != o ? l.JO.createFromGuildRecord(o) : null, [g, S] = r.useState(T), [A, N] = r.useState(null);
+], () => c(s.ZP, a.Z, t)), _ = null != o, E = null != o && o.hasFeature(u.oNc.DISCOVERABLE), f = (!_ || E) && null != t, [h, p] = r.useState(f), [m, I] = r.useState(null), T = null != o ? l.JO.createFromGuildRecord(o) : null, [g, S] = r.useState(T), [A, N] = r.useState(null);
 return r.useEffect(() => {
   null == n || n();
   let e = async () => {
     let e = null != t ? await (0, l.Fi)(t) : null;
     if (null != e)
-      switch (m(e.type), e.type) {
+      switch (I(e.type), e.type) {
         case l.w6.APPLICATION:
           N(e.application);
           break;
@@ -58,7 +58,7 @@ return r.useEffect(() => {
 ]), {
   expressionSourceGuild: g,
   expressionSourceApplication: A,
-  sourceType: I,
+  sourceType: m,
   joinedEmojiSourceGuildRecord: o,
   hasJoinedEmojiSourceGuild: _,
   emoji: d,

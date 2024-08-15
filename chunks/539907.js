@@ -19,9 +19,9 @@ var r, i = n(735250),
   f = n(872801),
   h = n(302901),
   p = n(981631),
-  I = n(20593);
+  m = n(20593);
 
-function m(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
 value: n,
 enumerable: !0,
@@ -34,14 +34,14 @@ let T = new WeakMap();
 function g(e, t) {
   if (e.contains(t))
 return !0;
-  let n = (0, f.Z)(t, I.layer);
+  let n = (0, f.Z)(t, m.layer);
   for (; null != n;) {
 let t = T.get(n);
 if (null == t)
   break;
 if (e.contains(t))
   return !0;
-n = (0, f.Z)(t, I.layer);
+n = (0, f.Z)(t, m.layer);
   }
   return !1;
 }
@@ -355,10 +355,10 @@ return (0, i.jsx)(d.C1, {
     } = d;
     return (0, i.jsx)('div', {
       id: e,
-      className: o()(t, (0, E.Q)(f), I.layer, {
-        [I.emptyError]: !1,
-        [I.layerHidden]: u,
-        [I.disabledPointerEvents]: a
+      className: o()(t, (0, E.Q)(f), m.layer, {
+        [m.emptyError]: !1,
+        [m.layerHidden]: u,
+        [m.disabledPointerEvents]: a
       }),
       style: {
         position: r ? 'fixed' : 'absolute',
@@ -378,28 +378,28 @@ return (0, i.jsx)(d.C1, {
 });
   }
   constructor(...e) {
-super(...e), m(this, 'elementRef', a.createRef()), m(this, 'state', {
+super(...e), I(this, 'elementRef', a.createRef()), I(this, 'state', {
   style: Object.freeze({}),
   position: this.props.autoInvert ? null : this.props.position,
   nudge: 0,
   isPositioned: !1,
   isSettingsLayerTransitioning: !1
-}), m(this, 'handleLayerPopStart', () => {
+}), I(this, 'handleLayerPopStart', () => {
   this.setState({
     isSettingsLayerTransitioning: !0
   });
-}), m(this, 'handleLayerPopComplete', () => {
+}), I(this, 'handleLayerPopComplete', () => {
   let e = this.calculateState();
   this.setState({
     ...e,
     isSettingsLayerTransitioning: !1
   });
-}), m(this, 'updatePosition', () => {
+}), I(this, 'updatePosition', () => {
   this.setState(this.calculateState());
 });
   }
 }
-m(O, 'defaultProps', {
+I(O, 'defaultProps', {
   nudgeAlignIntoViewport: !1,
   spacing: 0,
   autoInvert: !1,

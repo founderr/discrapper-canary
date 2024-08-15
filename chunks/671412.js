@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(158776),
   h = n(74538),
   p = n(998502),
-  I = n(785717),
-  m = n(204197),
+  m = n(785717),
+  I = n(204197),
   T = n(825801),
   g = n(215105),
   S = n(652853),
@@ -50,7 +50,7 @@ theme: G
 analyticsLocations: k
   } = (0, d.ZP)(c.Z.AVATAR), {
 trackUserProfileAction: B
-  } = (0, I.KZ)(), F = y === N.y0.FULL_SIZE ? (0, A.z)(t.id, null == n ? void 0 : n.guildId) : void 0, V = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2), H = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
+  } = (0, m.KZ)(), F = y === N.y0.FULL_SIZE ? (0, A.z)(t.id, null == n ? void 0 : n.guildId) : void 0, V = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2), H = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [
 t,
 p
   ]), [Z, Y] = i.useState(!1), j = () => {
@@ -84,7 +84,7 @@ return {
 avatarDecorationSrc: X,
 avatarSrc: $,
 eventHandlers: J
-  } = (0, m.Z)({
+  } = (0, I.Z)({
 user: t,
 guildId: null != n ? n.guildId : a,
 size: q,

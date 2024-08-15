@@ -1,6 +1,6 @@
 t.d(r, {
   Z: function() {
-return I;
+return E;
   }
 }), t(47120);
 var a = t(735250),
@@ -24,7 +24,7 @@ var a = t(735250),
   v = t(689938),
   _ = t(408126),
   w = t(535271);
-let C = [{
+let j = [{
 key: 'event',
 cellClassName: _.eventColumn,
 render(e) {
@@ -46,7 +46,7 @@ render(e) {
   }
 ];
 
-function j(e) {
+function C(e) {
   let {
 children: r
   } = e;
@@ -127,7 +127,7 @@ render: e => {
           })
         ]
       }),
-      (0, a.jsx)(j, {
+      (0, a.jsx)(C, {
         children: Object.entries(t).map(e => {
           let [r, t] = e;
           return (0, a.jsx)(N, {
@@ -175,7 +175,7 @@ networkActions: {
 }
   };
 
-function I() {
+function E() {
   let e = n.useRef(null),
 r = (0, s.e7)([p.Z], () => p.Z.loggedEvents),
 [t, i] = n.useState(Object.keys(T)),
@@ -239,7 +239,7 @@ children: [
   (0, a.jsx)(d.ScrollerThin, {
     className: _.tableContainer,
     children: (0, a.jsx)(x.Z, {
-      columns: C,
+      columns: j,
       data: l,
       selectedRowKey: c,
       onClickRow: u

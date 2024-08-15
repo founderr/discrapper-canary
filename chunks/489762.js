@@ -13,8 +13,8 @@ var r = n(735250),
   f = n(880949),
   h = n(806966),
   p = n(28546),
-  I = n(691251),
-  m = n(98528),
+  m = n(691251),
+  I = n(98528),
   T = n(551058),
   g = n(695346),
   S = n(430824),
@@ -106,7 +106,7 @@ let {
     columnIndex: n,
     gridSectionIndex: r
   } = e;
-  h.ZN.setActiveCategoryIndex(r), h.ZN.setInspectedExpressionPosition(n, t, I.u.MOUSE_EVENT), e.type === y.al.STICKER && h.ZN.setSearchPlaceholder(e.sticker.name);
+  h.ZN.setActiveCategoryIndex(r), h.ZN.setInspectedExpressionPosition(n, t, m.u.MOUSE_EVENT), e.type === y.al.STICKER && h.ZN.setSearchPlaceholder(e.sticker.name);
 }, []);
 return {
   handleStickerInspect: l,
@@ -160,8 +160,8 @@ let {
   isScrolling: E,
   isUsingKeyboardNavigation: h,
   stickersGrid: p,
-  stickersCategories: I,
-  filteredStickers: m,
+  stickersCategories: m,
+  filteredStickers: I,
   ownedStickerPacks: v,
   channel: O
 } = e, R = (0, c.O)(), M = (0, s.e7)([A.default], () => A.default.getCurrentUser()), {
@@ -225,12 +225,12 @@ let {
   t,
   Y
 ]), $ = i.useCallback(e => {
-  let n = I[e];
-  if (null != m) {
+  let n = m[e];
+  if (null != I) {
     let {
       sendable: t,
       sendableWithPremium: n
-    } = m;
+    } = I;
     if (0 === e && t.length > 0)
       return null;
     let i = t.length > 0 && n.length > 0;
@@ -323,22 +323,22 @@ let {
   }
 }, [
   t,
-  I,
+  m,
   X,
-  m
+  I
 ]), J = i.useCallback(e => {
-  if (null != m) {
+  if (null != I) {
     let {
       sendable: t,
       sendableWithPremium: n
-    } = m;
+    } = I;
     return 0 === e && t.length > 0 ? 0 : z + (t.length > 0 && n.length > 0 ? K : 0);
   }
   return z;
-}, [m]), ee = i.useCallback(e => {
-  let n = I[e],
+}, [I]), ee = i.useCallback(e => {
+  let n = m[e],
     i = t.has(n.id);
-  return n.type !== y.Ih.EMPTY_GUILD_UPSELL || null != m || i ? null : (0, r.jsx)(b.Z, {
+  return n.type !== y.Ih.EMPTY_GUILD_UPSELL || null != I || i ? null : (0, r.jsx)(b.Z, {
     className: k.emptyGuildUpsell,
     guildId: n.id,
     channel: O,
@@ -346,9 +346,9 @@ let {
     setTrackedUpsellViewed: Z
   }, 'sticker-picker-empty-guild-inline-upsell-'.concat(n.id));
 }, [
-  I,
-  t,
   m,
+  t,
+  I,
   O,
   H
 ]);
@@ -359,11 +359,11 @@ return {
   sectionHeaderHeight: J,
   renderSectionFooter: ee,
   sectionFooterHeight: i.useCallback(e => {
-    let n = I[e],
+    let n = m[e],
       r = t.has(n.id);
     return n.type !== y.Ih.EMPTY_GUILD_UPSELL || r ? 0 : er;
   }, [
-    I,
+    m,
     t
   ])
 };
@@ -375,7 +375,7 @@ let {
   filteredStickers: l,
   getStickerItemProps: c,
   getStickerRowProps: f,
-  gutterWidth: I,
+  gutterWidth: m,
   isUsingKeyboardNavigation: T,
   onSelectSticker: g,
   rowCount: S,
@@ -405,12 +405,12 @@ let {
   onSelectSticker: g,
   getStickerItemProps: c,
   getStickerRowProps: f,
-  gutterWidth: I,
+  gutterWidth: m,
   inspectedStickerPosition: L,
   filteredStickers: l,
   ownedStickerPacks: i.useMemo(() => new Set(U.map(e => e.id)), [U]),
   channel: O
-}), j = (0, m.Qs)({
+}), j = (0, I.Qs)({
   activeCategoryIndex: D,
   isScrolling: R,
   listRef: y,
@@ -418,7 +418,7 @@ let {
   scrollOffset: 20,
   searchQuery: P
 });
-return (0, m.Xs)({
+return (0, I.Xs)({
   searchQuery: P,
   activeCategoryIndex: D,
   listRef: y

@@ -62,7 +62,7 @@ forcePomelo: l,
 hideBotTag: _ = !1,
 hideDiscriminator: E = !1,
 ...h
-  } = e, p = (0, s.e7)([c.Z], () => c.Z.hidePersonalInformation), I = p || E || t.isNonUserBot(), m = t.toString(), T = _ ? null : function(e) {
+  } = e, p = (0, s.e7)([c.Z], () => c.Z.hidePersonalInformation), m = p || E || t.isNonUserBot(), I = t.toString(), T = _ ? null : function(e) {
 if (e.isSystemUser())
   return u.J.SYSTEM_DM;
 if (e.isClyde())
@@ -70,12 +70,12 @@ if (e.isClyde())
 if (e.bot)
   return u.J.BOT;
 return null;
-  }(t), g = t.isVerifiedBot(), S = d.ZP.getName(t), A = i ? m : null != n ? n : S, N = t.isPomelo() || l;
-  if (N || A !== m) {
-let e = A === m && N && i ? d.ZP.getUserTag(t, {
+  }(t), g = t.isVerifiedBot(), S = d.ZP.getName(t), A = i ? I : null != n ? n : S, N = t.isPomelo() || l;
+  if (N || A !== I) {
+let e = A === I && N && i ? d.ZP.getUserTag(t, {
     forcePomelo: l
   }) : A,
-  n = a && e !== '@'.concat(m) ? d.ZP.getUserTag(t) : void 0;
+  n = a && e !== '@'.concat(I) ? d.ZP.getUserTag(t) : void 0;
 return (0, r.jsx)(f, {
   primary: e,
   secondary: n,
@@ -89,7 +89,7 @@ return (0, r.jsx)(f, {
 name: A,
 botType: T,
 botVerified: g,
-discriminator: I || A !== m ? null : null != o ? o : t.discriminator,
+discriminator: m || A !== I ? null : null != o ? o : t.discriminator,
 ...h
   });
 };

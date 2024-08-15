@@ -17,8 +17,8 @@ var r, i, a, s = n(735250),
   f = n(134432),
   h = n(797614),
   p = n(740492),
-  I = n(866960),
-  m = n(626135),
+  m = n(866960),
+  I = n(626135),
   T = n(768581),
   g = n(956664),
   S = n(981631),
@@ -153,8 +153,8 @@ let {
   shouldAnimate: f,
   width: h,
   height: p,
-  minWidth: I,
-  minHeight: m,
+  minWidth: m,
+  minHeight: I,
   maxWidth: T,
   maxHeight: g,
   onClick: A,
@@ -169,15 +169,15 @@ let {
   readyState: b,
   hasMouseOver: M,
   hasFocus: P
-} = this.state, U = null != n, w = this.getRatio(), x = (0, l.clamp)(Math.round(h * w), null != I ? I : 0, null != T ? T : 1 / 0), G = (0, l.clamp)(Math.round(p * w), null != m ? m : 0, null != g ? g : 1 / 0), k = {
+} = this.state, U = null != n, w = this.getRatio(), x = (0, l.clamp)(Math.round(h * w), null != m ? m : 0, null != T ? T : 1 / 0), G = (0, l.clamp)(Math.round(p * w), null != I ? I : 0, null != g ? g : 1 / 0), k = {
   alt: e,
   readyState: b,
   onContextMenu: null != i ? i : void 0,
   zoomable: U,
   className: u,
   imageClassName: c,
-  minWidth: I,
-  minHeight: m,
+  minWidth: m,
+  minHeight: I,
   mediaLayoutType: this.getType(),
   limitResponsiveWidth: O,
   useFullWidth: C,
@@ -253,7 +253,7 @@ let i = await fetch(t.url).catch(() => void 0),
     format: l,
     quality: c
   } = this.getFormatQuality();
-m.default.track(S.rMx.IMAGE_LOADING_COMPLETED, {
+I.default.track(S.rMx.IMAGE_LOADING_COMPLETED, {
   duration_ms: o,
   requested_height: t.height,
   requested_width: t.width,
@@ -269,9 +269,9 @@ m.default.track(S.rMx.IMAGE_LOADING_COMPLETED, {
   low_quality_image_mode: p.ZP.dataSavingMode,
   trigger: n,
   size: s,
-  connection_type: I.Z.getType(),
-  effective_connection_speed: I.Z.getEffectiveConnectionSpeed(),
-  service_provider: I.Z.getServiceProvider()
+  connection_type: m.Z.getType(),
+  effective_connection_speed: m.Z.getEffectiveConnectionSpeed(),
+  service_provider: m.Z.getServiceProvider()
 });
   }
   constructor(e) {
