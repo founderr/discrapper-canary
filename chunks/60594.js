@@ -295,8 +295,8 @@ eX = (0, a.jsxs)(d.Slides, {
           variant: 'text-md/normal',
           color: 'text-danger',
           children: null != em && em.length > 0 ? em : H.Z.Messages.ERROR_ANOTHER_TRY
-        }) : (0, a.jsx)(d.Spinner, {
-          className: W.sourceSpinner
+        }) : (0, a.jsx)('div', {
+          className: W.nativePickerSpacing
         })
       })
     }),

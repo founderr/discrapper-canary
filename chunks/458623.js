@@ -9,6 +9,7 @@ n.r(e.exports = {
   marginBottom: 'marginBottom_e1cc86',
   sourceSpinner: 'sourceSpinner_e1cc86',
   errorMessage: 'errorMessage_e1cc86',
+  nativePickerSpacing: 'nativePickerSpacing_e1cc86',
   formItemTitle: 'formItemTitle_e1cc86',
   headerText: 'headerText_e1cc86',
   headerDescription: 'headerDescription_e1cc86',
