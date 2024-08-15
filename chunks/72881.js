@@ -1,48 +1,50 @@
 n.d(t, {
   X: function() {
-return d;
+return u;
   },
   y: function() {
-return u;
+return _;
   }
 });
 var i = n(731965),
   a = n(212093),
-  s = n(706454),
-  r = n(683301),
-  l = n(900849),
-  o = n(540742),
-  c = n(731455);
+  s = n(878727),
+  r = n(706454),
+  l = n(683301),
+  o = n(900849),
+  c = n(540742),
+  d = n(731455);
 
-function d() {
+function u() {
   var e;
-  let t = c.dU,
-n = s.default.locale;
+  let t = d.dU,
+n = r.default.locale;
   return (null !== (e = t.find(e => e.code === n)) && void 0 !== e ? e : t[0]).code;
 }
 
-function u(e) {
+function _(e) {
   let {
 loadId: t,
 categoryId: n,
-offset: s,
-searchQuery: c,
-languageCode: d
+offset: r,
+searchQuery: d,
+languageCode: u
   } = e;
-  (0, i.j)(() => o.B.setState({
-searchResultsQuery: c,
-isSearchVisible: !0,
-searchCategoryId: n,
-searchLanguageCode: d
-  })), l.tI(t, n), null == r.ZP.getTopCategoryCounts(c) && a.G7(c, {
-approximate_member_count: l.sq
-  }), a.bR(c, {
-categoryId: n,
-preferredLocale: d,
-offset: s,
-length: 12,
-filters: {
-  approximate_member_count: l.sq
-}
-  }, !1);
+  if ('' !== d.trim())
+!(0, s.x)(d) && ((0, i.j)(() => c.B.setState({
+  searchResultsQuery: d,
+  isSearchVisible: !0,
+  searchCategoryId: n,
+  searchLanguageCode: u
+})), o.tI(t, n), null == l.ZP.getTopCategoryCounts(d) && a.G7(d, {
+  approximate_member_count: o.sq
+}), a.bR(d, {
+  categoryId: n,
+  preferredLocale: u,
+  offset: r,
+  length: 12,
+  filters: {
+    approximate_member_count: o.sq
+  }
+}, !1));
 }

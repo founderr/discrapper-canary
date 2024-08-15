@@ -109,16 +109,15 @@ onClearSearch: h,
 onSearchSubmit: i.useCallback(() => {
   var e;
   let n = u.B.getState();
-  if (n.searchQuery !== n.searchResultsQuery)
-    '' !== n.searchQuery.trim() && ((0, s.j)(() => u.B.setState({
-      initialSearchCategoryId: n.searchCategoryId
-    })), (0, E.y)({
-      loadId: t,
-      categoryId: n.searchCategoryId,
-      offset: 0,
-      searchQuery: n.searchQuery,
-      languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, E.X)()
-    }));
+  n.searchQuery !== n.searchResultsQuery && ((0, s.j)(() => u.B.setState({
+    initialSearchCategoryId: n.searchCategoryId
+  })), (0, E.y)({
+    loadId: t,
+    categoryId: n.searchCategoryId,
+    offset: 0,
+    searchQuery: n.searchQuery,
+    languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, E.X)()
+  }));
 }, [t]),
 isSearchVisible: n
   };
