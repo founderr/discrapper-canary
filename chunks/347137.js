@@ -40,19 +40,26 @@ default:
 t.Z = function() {
   let {
 currentCategoryId: e,
-isViewingSearchResults: t
+isViewingSearchResults: t,
+currentHomepageCategoryId: n
   } = (0, l.cj)([I.ZP], () => ({
 currentCategoryId: I.ZP.getCurrentCategoryId(),
-isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
-  })), n = (0, h.Z)(N.dr.QUEST_HOME_DESKTOP), L = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), O = null == L ? void 0 : L.map(e => ({
+isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0,
+currentHomepageCategoryId: I.ZP.getCurrentHomepageCategoryId()
+  })), L = (0, h.Z)(N.dr.QUEST_HOME_DESKTOP), O = (0, E.OG)(), R = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j), x = null == R ? void 0 : R.map(e => ({
 ...e,
 icon: Z(e.categoryId)
-  })), R = e => {
+  })), b = e => {
 (0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, E.OG)() && e !== f.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === f.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
   };
   return a.useEffect(() => {
 (0, g.le)(!1, !0);
-  }, [e]), (0, i.jsxs)(r.Scroller, {
+  }, [e]), a.useEffect(() => {
+!O && null == n && (0, o.uY)(f.Gj.Clans, !0);
+  }, [
+O,
+n
+  ]), (0, i.jsxs)(r.Scroller, {
 children: [
   (0, i.jsx)(S.V, {
     text: A.Z.Messages.DISCOVER
@@ -67,7 +74,7 @@ children: [
         bottom: 1
       }
     },
-    onClick: () => R(f.Gj.Clans),
+    onClick: () => b(f.Gj.Clans),
     wrapContent: !0,
     selected: e === f.Gj.Clans,
     className: v.categoryItem,
@@ -75,18 +82,18 @@ children: [
     innerClassName: v.itemInner
   }, 'clan-discovery-home'),
   (0, i.jsx)(T.Z, {
-    categories: O,
-    handleCategorySelect: R,
+    categories: x,
+    handleCategorySelect: b,
     currentCategoryId: e,
     shouldDisplaySelectedCategory: !t
   }),
   (0, i.jsx)(u.Z, {
-    handleCategorySelect: R,
+    handleCategorySelect: b,
     currentCategoryId: e,
     shouldDisplaySelectedCategory: !t
   }),
-  n && (0, i.jsx)(m.Z, {
-    onClick: () => R(f.Gj.Quests),
+  L && (0, i.jsx)(m.Z, {
+    onClick: () => b(f.Gj.Quests),
     isSelected: e === f.Gj.Quests
   })
 ]
