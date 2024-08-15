@@ -71,10 +71,10 @@ location: 'app_launcher_home'
   }).enabled, C = !!_ || t === b._b.TEXT, f = t === b._b.TEXT && !n.isPrivate(), h = _ || t === b._b.TEXT, A = !_ && t === b._b.VOICE, E = t === b._b.TEXT, [N, v] = $(C), [x, I] = $(f), [g, L] = $(h), [R, S] = $(A), T = N && x && g && R, M = (h || f) && !T, y = A && u;
   a.useEffect(() => {
 (0, p.w1)({
-  guildId: n.getGuildId(),
+  guildId: n.guild_id,
   force: !0
 });
-  }, [n]), a.useEffect(() => {
+  }, [n.guild_id]), a.useEffect(() => {
 t === b._b.VOICE && p.ux();
   }, [t]);
   let j = l.length > 0;
