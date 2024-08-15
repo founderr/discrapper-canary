@@ -603,6 +603,8 @@ percentComplete: 0
   }, () => null).with({
 taskType: d.X.PLAY_ON_DESKTOP
   }, () => M.cd.DESKTOP).with({
+taskType: d.X.PLAY_ON_DESKTOP_V2
+  }, () => M.cd.DESKTOP).with({
 taskType: d.X.STREAM_ON_DESKTOP
   }, () => M.cd.DESKTOP).with({
 taskType: d.X.PLAY_ON_XBOX

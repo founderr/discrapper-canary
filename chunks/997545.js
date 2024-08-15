@@ -445,7 +445,13 @@ let {
   frameRate: n
 } = e.quality, r = t <= 480 ? t / 3 * 4 : t / 9 * 16, i = null;
 if (null != e.desktopDescription ? i = e.desktopDescription.id : null != e.cameraDescription && (i = ''.concat(e.cameraDescription.videoDeviceGuid, ':').concat(e.cameraDescription.audioDeviceGuid)), this.goLiveSourceIdentifier === i) {
-  this.setDesktopEncodingOptions(r, t, n);
+  if (this.setDesktopEncodingOptions(r, t, n), null != e.desktopDescription) {
+    let {
+      soundshareId: t,
+      useLoopback: n
+    } = e.desktopDescription;
+    this.soundshareId !== t && this.setSoundshareSource(t, n);
+  }
   return;
 }
 if (this.videoQualityManager.configGoliveSimulcast(this.experimentFlags), this.goLiveSourceIdentifier = i, null != this.conn.setDesktopSource) {

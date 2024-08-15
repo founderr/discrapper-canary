@@ -1557,7 +1557,7 @@ if ((null == s ? void 0 : s.desktopSettings) != null) {
       resolution: 720,
       frameRate: 30
     },
-    c = J.Z.getPidFromDesktopSource(i);
+    c = !1 === o ? null : J.Z.getPidFromDesktopSource(i);
   et.isPlatformEmbedded && !0 === o && ({
     soundshareId: e,
     soundshareSession: r
