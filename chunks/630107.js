@@ -1,6 +1,6 @@
 n.r(t), n.d(t, {
   default: function() {
-return v;
+return T;
   }
 });
 var a = n(735250),
@@ -15,51 +15,54 @@ var a = n(735250),
   p = n(362762),
   m = n(353926),
   x = n(703656),
-  b = n(314897),
-  _ = n(471985),
-  E = n(46140),
-  N = n(981631),
-  g = n(186901),
+  _ = n(314897),
+  b = n(626135),
+  E = n(471985),
+  N = n(46140),
+  g = n(981631),
+  I = n(186901),
   f = n(689938),
   h = n(309687),
-  I = n(821744);
+  j = n(821744);
 r.ZP.initialize();
-let j = i.tq || i.Em,
-  A = 'inventory';
+let A = i.tq || i.Em,
+  v = 'inventory';
 
-function v(e) {
+function T(e) {
   let {
 match: t
-  } = e, n = (0, r.e7)([p.Z], () => p.Z.getState('quests')), i = (0, r.e7)([m.Z], () => m.Z.hasLoadedExperiments), v = t.params.questId, T = (0, _.Z)(E.dr.CODED_LINK), O = (0, r.e7)([b.default], () => b.default.isAuthenticated());
+  } = e, n = (0, r.e7)([p.Z], () => p.Z.getState('quests')), i = (0, r.e7)([m.Z], () => m.Z.hasLoadedExperiments), T = t.params.questId, O = (0, E.Z)(N.dr.CODED_LINK), L = (0, r.e7)([_.default], () => _.default.isAuthenticated());
   if (s.useEffect(() => {
-  O && !i && o.Z.getExperiments();
+  L && !i && o.Z.getExperiments();
 }, [
-  O,
+  L,
   i
 ]), s.useEffect(() => {
-  if (!j)
-    null == n && i ? T ? d.Z.openNativeAppModal('quests', N.Etm.DEEP_LINK, {
-      type: g.jE.QUEST_HOME,
+  if (!A)
+    null == n && i ? (b.default.track(g.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT, {
+      quest_id: T
+    }), O ? d.Z.openNativeAppModal('quests', g.Etm.DEEP_LINK, {
+      type: I.jE.QUEST_HOME,
       params: {
-        questId: v
+        questId: T
       }
-    }) : d.Z.openNativeAppModal('quests', N.Etm.DEEP_LINK, {
-      type: g.jE.USER_SETTINGS,
+    }) : d.Z.openNativeAppModal('quests', g.Etm.DEEP_LINK, {
+      type: I.jE.USER_SETTINGS,
       params: {
-        section: A
+        section: v
       }
-    }) : n === N.kEZ.OPEN_FAIL && (T ? (0, x.dL)(N.Z5c.QUEST_HOME) : (0, x.dL)(N.Z5c.SETTINGS(A)));
+    })) : n === g.kEZ.OPEN_FAIL && (O ? (0, x.dL)(g.Z5c.QUEST_HOME) : (0, x.dL)(g.Z5c.SETTINGS(v)));
 }, [
   n,
   i,
-  T,
-  v
-]), j)
+  O,
+  T
+]), A)
 return (0, a.jsxs)('div', {
   className: h.mobileWebContainer,
   children: [
     (0, a.jsx)('img', {
-      src: I,
+      src: j,
       alt: '',
       className: h.mobileWebImage
     }),
@@ -75,7 +78,7 @@ return (0, a.jsxs)('div', {
     })
   ]
 });
-  let L = null == n || n === N.kEZ.OPENING || n === N.kEZ.OPEN_FAIL;
+  let S = null == n || n === g.kEZ.OPENING || n === g.kEZ.OPEN_FAIL;
   return (0, a.jsxs)(a.Fragment, {
 children: [
   (0, a.jsx)(c.Z, {
@@ -85,7 +88,7 @@ children: [
   (0, a.jsx)('div', {
     className: h.container,
     children: (0, a.jsx)(u.ZP, {
-      children: L ? (0, a.jsxs)(a.Fragment, {
+      children: S ? (0, a.jsxs)(a.Fragment, {
         children: [
           (0, a.jsx)(u.Dx, {
             children: f.Z.Messages.APP_OPENING
