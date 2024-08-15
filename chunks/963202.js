@@ -152,22 +152,27 @@ valorantConfig: n,
 genshinConfig: r,
 m3GuildConfig: a,
 includeConverted: s
-  } = e, l = (0, i.Wu)([o.Z], () => t.filter(e => o.Z.can(u.Plq.ADMINISTRATOR, e))), c = l.filter(e => function(e) {
+  } = e, l = (0, i.Wu)([o.Z], () => t.filter(e => o.Z.can(u.Plq.ADMINISTRATOR, e))), d = l.filter(e => function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 return null != e && e.hasFeature(u.oNc.CLAN_PILOT_GENSHIN) && (t || !e.hasFeature(u.oNc.CLAN));
-  }(e, s)), d = l.filter(e => function(e) {
+  }(e, s)), _ = l.filter(e => function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 return null != e && e.hasFeature(u.oNc.CLAN_PILOT_VALORANT) && (t || !e.hasFeature(u.oNc.CLAN));
-  }(e, s)), _ = a.requireTargeting ? l.filter(e => function(e) {
+  }(e, s)), E = a.requireTargeting ? l.filter(e => function(e) {
 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-return null != e && e.hasFeature(u.oNc.RAPIDASH_TEST) && (t || !e.hasFeature(u.oNc.CLAN));
-  }(e, s)) : l, E = c.length > 0 && r.enableClanCreation, f = d.length > 0 && n.enableClanCreation, h = _.length > 0 && a.enableClanCreation, p = [];
-  return E && c.forEach(e => p.push(e)), f && d.forEach(e => p.push(e)), h && _.forEach(e => p.push(e)), {
-guilds: p,
-enableClanCreation: E || f || h,
+return null != e && e.hasFeature(u.oNc.RAPIDASH_TEST) && c.getCurrentConfig({
+  guildId: e.id,
+  location: 'isM3TargetedGuild'
+}, {
+  autoTrackExposure: !1
+}).enableClanCreation && (t || !e.hasFeature(u.oNc.CLAN));
+  }(e, s)) : l, f = d.length > 0 && r.enableClanCreation, h = _.length > 0 && n.enableClanCreation, p = E.length > 0 && a.enableClanCreation, I = [];
+  return f && d.forEach(e => I.push(e)), h && _.forEach(e => I.push(e)), p && E.forEach(e => I.push(e)), {
+guilds: I,
+enableClanCreation: f || h || p,
 defaultGameId: m({
-  genshinConfig: E ? r : void 0,
-  valorantConfig: f ? n : void 0
+  genshinConfig: f ? r : void 0,
+  valorantConfig: h ? n : void 0
 })
   };
 }
