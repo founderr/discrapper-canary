@@ -57,7 +57,8 @@ hasError: i,
 hasContextMessage: a,
 numDestinations: l,
 numDestinationChanges: o,
-numQueryChanges: c
+numQueryChanges: c,
+anyDestinationHasSlowmode: u
   } = e;
   s.default.track(r.rMx.FORWARD_MESSAGE_SENT, {
 channel_id: t,
@@ -66,7 +67,8 @@ has_error: i,
 has_context_message: a,
 num_destinations: l,
 num_destination_changes: o,
-num_query_changes: c
+num_query_changes: c,
+any_destination_has_slowmode: u
   });
 }
 

@@ -24,8 +24,8 @@ var l = n(735250),
   p = n(859155),
   C = n(822869),
   N = n(346610),
-  b = n(895442),
-  L = n(757853),
+  L = n(895442),
+  b = n(757853),
   v = n(912332),
   T = n(646746),
   x = n(819727),
@@ -43,19 +43,19 @@ selectedDestinations: f,
 isSending: m,
 onSend: S,
 showPreview: I
-  } = e, p = f.map(_.hl).find(A.lm), N = (0, r.e7)([g.Z], () => g.Z.getChannel(p), [p]), b = a.useMemo(() => null != N ? N : (0, E.kt)({
+  } = e, p = f.map(_.hl).find(A.lm), N = (0, r.e7)([g.Z], () => g.Z.getChannel(p), [p]), L = a.useMemo(() => null != N ? N : (0, E.kt)({
 id: '1',
 type: i.d.DM
-  }), [N]), L = (0, C.Ad)(), [x, M] = a.useState(() => (0, u.H2)()), {
+  }), [N]), b = (0, C.Ad)(), [x, M] = a.useState(() => (0, u.H2)()), {
 textValue: R,
 richValue: P
   } = x, [O, D] = a.useState(!1), w = a.useCallback(() => D(!0), []), j = a.useCallback(() => D(!1), []), G = a.useCallback((e, n, l) => {
 M({
   textValue: n,
   richValue: l
-}), L(t.channel_id, t.id);
+}), b(t.channel_id, t.id);
   }, [
-L,
+b,
 t
   ]), k = a.useCallback(() => {
 S(R);
@@ -83,7 +83,7 @@ children: [
         innerClassName: y.messageInput,
         onChange: G,
         placeholder: Z.Z.Messages.MESSAGE_FORWARD_MESSAGE_PLACEHOLDER,
-        channel: b,
+        channel: L,
         textValue: R,
         richValue: P,
         type: c.I.FORWARD_MESSAGE_INPUT,
@@ -209,7 +209,7 @@ ei = a.useCallback(async function(e) {
   }
   k(!0);
   let d = (await Promise.all(e.map(_.qx))).filter(A.lm);
-  if ((0, b.Z)(c, d) && !await new Promise(e => {
+  if ((0, L.Z)(c, d) && !await new Promise(e => {
       (0, o.openModalLazy)(async () => {
         let {
           default: t
@@ -226,9 +226,13 @@ ei = a.useCallback(async function(e) {
   }
   r && (0, v.mc)(), null == E || E(), s && (0, h.Kh)(d[0]);
   let f = await p.Z.sendForwards(c, d, {
-    ...u,
-    withMessage: a
-  });
+      ...u,
+      withMessage: a
+    }),
+    S = d.some(e => {
+      let t = g.Z.getChannel(e);
+      return null != t && t.rateLimitPerUser > 0;
+    });
   if (f.every(e => {
       let {
         status: t
@@ -242,7 +246,8 @@ ei = a.useCallback(async function(e) {
       hasContextMessage: null != a && '' !== a,
       numDestinations: d.length,
       numDestinationChanges: B.current,
-      numQueryChanges: z.current
+      numQueryChanges: z.current,
+      anyDestinationHasSlowmode: S
     }), ea();
     return;
   }
@@ -253,13 +258,14 @@ ei = a.useCallback(async function(e) {
     hasContextMessage: null != a && '' !== a,
     numDestinations: d.length,
     numDestinationChanges: B.current,
-    numQueryChanges: z.current
+    numQueryChanges: z.current,
+    anyDestinationHasSlowmode: S
   });
-  let g = e.filter((e, t) => 'rejected' === f[t].status);
+  let I = e.filter((e, t) => 'rejected' === f[t].status);
   (0, v.Np)({
     messageId: i,
     channelId: t,
-    failedDestinations: g,
+    failedDestinations: I,
     forwardOptions: u
   });
 }, [
@@ -292,11 +298,11 @@ ec = a.useCallback(function(e) {
 }, [ei]);
   if (null == F || null == U)
 return null;
-  let eu = $.length > 0 ? (0, l.jsx)(L.F, {
+  let eu = $.length > 0 ? (0, l.jsx)(b.F, {
   paddingBottom: 16,
   paddingTop: 16,
   rowData: $,
-  rowMode: O ? L.G.SEND : L.G.TOGGLE,
+  rowMode: O ? b.G.SEND : b.G.TOGGLE,
   message: F,
   originChannel: U,
   handleToggleDestination: O ? ec : es,
