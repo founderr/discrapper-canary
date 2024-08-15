@@ -1,3 +1,3 @@
 e.exports = {
-  textarea: 'textarea_dde0a8 ' + n('787223').inputDefault
+  textarea: 'textarea_dde0a8 ' + t('787223').inputDefault
 };

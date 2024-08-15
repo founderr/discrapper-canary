@@ -17,8 +17,8 @@ var r = n(729594),
   f = n(543842),
   h = n(754688),
   p = n(336197),
-  m = n(977156),
-  I = n(540709),
+  I = n(977156),
+  m = n(540709),
   T = n(881706),
   g = n(701190),
   S = n(944486),
@@ -80,7 +80,7 @@ return e => {
     device_platform: i.tq ? 'mobile_web' : 'desktop_web',
     guild_id: a,
     channel_id: S.Z.getChannelId()
-  }), Promise.resolve().then(n.bind(n, 147890)).then(e => {
+  }), n.e('56630').then(n.bind(n, 147890)).then(e => {
     let {
       goToAppDirectory: t
     } = e, {
@@ -107,7 +107,7 @@ return e => {
     n(t, r);
   }), !0;
 };
-  if (null != s && s.type === c.g.QUESTS_EMBED && (0, m.cB)({
+  if (null != s && s.type === c.g.QUESTS_EMBED && (0, I.cB)({
   location: C.dr.EMBED_MOBILE
 }))
 return e => (null == e || e.preventDefault(), Promise.resolve().then(n.bind(n, 341907)).then(e => {
@@ -142,7 +142,7 @@ return t => {
     device_platform: i.tq ? 'mobile_web' : 'desktop_web',
     guild_id: d,
     channel_id: S.Z.getChannelId()
-  })), Promise.resolve().then(n.bind(n, 147890)).then(t => {
+  })), n.e('56630').then(n.bind(n, 147890)).then(t => {
     let {
       goToAppDirectory: n
     } = t;
@@ -194,5 +194,5 @@ if (null != t)
   }), !0);
   }
   if (!t && null != (0, T.v)(e))
-return t => (null == t || t.preventDefault(), I.Z.show(e), !0);
+return t => (null == t || t.preventDefault(), m.Z.show(e), !0);
 }

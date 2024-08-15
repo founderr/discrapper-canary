@@ -1,6 +1,6 @@
 n.d(t, {
   z: function() {
-return m;
+return I;
   }
 });
 var r = n(735250);
@@ -19,11 +19,11 @@ var i = n(481060),
   h = n(616922);
 let p = null;
 
-function m(e, t) {
+function I(e, t) {
   return 'USER_PROFILE_MODAL_KEY:'.concat(e, ':').concat(null == t || t === f.ME ? '' : t);
 }
-async function I(e) {
-  var t, a, s, I;
+async function m(e) {
+  var t, a, s, m;
   let {
 userId: T,
 section: g,
@@ -52,7 +52,10 @@ k = b === f.Skl.ONLINE ? G : b;
   p = await (0, i.openModalLazy)(async () => {
 let {
   default: e
-} = await n.e('824').then(n.bind(n, 304113));
+} = await Promise.all([
+  n.e('12661'),
+  n.e('17373')
+]).then(n.bind(n, 304113));
 return t => (0, r.jsx)(e, {
   location: 'handleOpenUserProfileModal',
   user: y,
@@ -66,7 +69,7 @@ return t => (0, r.jsx)(e, {
   ...C
 });
   }, {
-modalKey: m(T, R ? A : void 0)
+modalKey: I(T, R ? A : void 0)
   }), _.default.track(f.rMx.OPEN_MODAL, {
 type: 'Profile Modal',
 guild_id: A !== f.ME ? A : null,
@@ -76,7 +79,7 @@ application_id: null !== (a = null == L ? void 0 : L.application_id) && void 0 !
 application_name: null == L ? void 0 : L.name,
 sku_id: null !== (s = null == x ? void 0 : x.primarySkuId) && void 0 !== s ? s : null,
 is_friend: c.Z.isFriend(T),
-has_images: !!(null !== (I = null == U ? void 0 : U.large_image) && void 0 !== I ? I : null == U ? void 0 : U.small_image),
+has_images: !!(null !== (m = null == U ? void 0 : U.large_image) && void 0 !== m ? m : null == U ? void 0 : U.small_image),
 party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
 party_id: null == P ? void 0 : P.id,
 party_platform: (0, h.Ps)(null == P ? void 0 : P.id) ? f.ABu.SPOTIFY : null,
@@ -93,10 +96,10 @@ function T() {
 }
 class g extends s.Z {
   _initialize() {
-a.Z.subscribe('USER_PROFILE_MODAL_OPEN', I), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', T);
+a.Z.subscribe('USER_PROFILE_MODAL_OPEN', m), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', T);
   }
   _terminate() {
-a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', I), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', T);
+a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', m), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', T);
   }
 }
 t.Z = new g();

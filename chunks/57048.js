@@ -1,9 +1,6 @@
 t.d(n, {
-  U: function() {
-return o;
-  },
   a: function() {
-return u;
+return o;
   }
 });
 var l = t(199902),
@@ -11,33 +8,13 @@ var l = t(199902),
   a = t(699516),
   r = t(626135),
   s = t(981631);
-let o = e => {
-let {
-  displayProfile: n,
-  isMobile: t,
-  loadDurationMs: l,
-  activity: i,
-  customStatusActivity: a,
-  status: o
-} = e;
-r.default.track(s.rMx.DM_PROFILE_VIEWED, {
-  has_mobile_indicator: t,
-  has_activity: null != i && (null == i ? void 0 : i.type) !== s.IIU.CUSTOM_STATUS,
-  has_game_activity: (null == i ? void 0 : i.type) === s.IIU.PLAYING,
-  load_duration_ms: l,
-  profile_user_status: o,
-  has_custom_status: null != a,
-  has_profile_effect: null != n.profileEffectId,
-  ...c(n)
-});
-  },
-  u = (e, n) => {
+let o = (e, n) => {
 r.default.track(s.rMx.DM_PROFILE_TOGGLED, {
   is_profile_open: n,
-  ...c(e)
+  ...u(e)
 });
   },
-  c = e => {
+  u = e => {
 var n;
 if (null == e)
   return {};

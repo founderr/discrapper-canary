@@ -1,7 +1,4 @@
 e.exports = {
-  warningCircleIcon: 'warningCircleIcon_f89da9',
-  profileBadges: 'profileBadges_f89da9',
-  profileBadgesCompactNoTouch: 'profileBadgesCompactNoTouch_f89da9 profileBadges_f89da9',
   avatarHint: 'avatarHint_f89da9',
   avatarDecorationHint: 'avatarDecorationHint_f89da9',
   avatarHintInner: 'avatarHintInner_f89da9',

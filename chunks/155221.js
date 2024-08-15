@@ -17,8 +17,8 @@ var r = n(735250),
   f = n(765717),
   h = n(663993),
   p = n(329816),
-  m = n(554608),
-  I = n(83949),
+  I = n(554608),
+  m = n(83949),
   T = n(137412),
   g = n(314897),
   S = n(626135),
@@ -105,10 +105,10 @@ createPromise: () => Promise.all([
   n.e('59743'),
   n.e('26138'),
   n.e('93414'),
-  n.e('20368'),
+  n.e('59217'),
   n.e('54535'),
   n.e('1187'),
-  n.e('89452'),
+  n.e('71661'),
   n.e('22036'),
   n.e('92557'),
   n.e('29975'),
@@ -128,7 +128,7 @@ createPromise: () => Promise.all([
   n.e('95437'),
   n.e('20822'),
   n.e('4775'),
-  n.e('5851'),
+  n.e('84921'),
   n.e('95468'),
   n.e('11256'),
   n.e('36859')
@@ -206,7 +206,7 @@ createPromise: () => Promise.all([
   n.e('59743'),
   n.e('26138'),
   n.e('93414'),
-  n.e('20368'),
+  n.e('59217'),
   n.e('1187'),
   n.e('22036'),
   n.e('92557'),
@@ -224,7 +224,7 @@ createPromise: () => Promise.all([
   n.e('51182'),
   n.e('95437'),
   n.e('20822'),
-  n.e('5851'),
+  n.e('84921'),
   n.e('41916')
 ]).then(n.bind(n, 290161)),
 webpackId: 290161,
@@ -282,7 +282,7 @@ let {
   migrationStatus: n,
   skipsSettingDefaultPageTitle: i
 } = this.props;
-return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.jsxs)(s.rs, {
+return e = n === I.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.jsxs)(s.rs, {
   children: [
     (0, r.jsx)(s.AW, {
       exact: !0,
@@ -486,17 +486,17 @@ return e = n === m.P.IN_PROGRESS ? null : y.KO ? v.isPlatformEmbedded ? (0, r.js
   skipsSettingDefaultPageTitle: i,
   children: [
     e,
-    v.isPlatformEmbedded && (n === m.P.NOT_STARTED || n === m.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(I.Z, {}) : null
+    v.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(m.Z, {}) : null
   ]
 });
   }
 }
 t.Z = d.ZP.connectStores([
   g.default,
-  m.Z
+  I.Z
 ], () => ({
   isAuthenticated: g.default.isAuthenticated(),
-  migrationStatus: m.Z.getMigrationStatus()
+  migrationStatus: I.Z.getMigrationStatus()
 }), {
   forwardRef: !0
 })(function(e) {

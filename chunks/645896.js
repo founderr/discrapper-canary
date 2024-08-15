@@ -6,9 +6,6 @@ return d;
 return _;
   },
   L_: function() {
-return f;
-  },
-  _S: function() {
 return E;
   }
 }), n(47120);
@@ -85,19 +82,8 @@ function d(e) {
 function _(e) {
   return c(t => null != e && t.isFetchingGuild(e));
 }
-async function E(e) {
-  var t;
-  if (null == e)
-return Promise.resolve(null);
-  let {
-isFetchingGuild: n,
-fetchClanInfo: r,
-clans: i
-  } = c.getState();
-  return n(e) ? null !== (t = i[e]) && void 0 !== t ? t : null : await r(e);
-}
 
-function f(e) {
+function E(e) {
   let [t, n] = c(e => [
 e.fetchClanInfo,
 e.isFetchingGuild

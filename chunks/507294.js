@@ -130,7 +130,10 @@ children: [
               return r = e, o = l, void(0, d.openModalLazy)(async () => {
                 let {
                   default: e
-                } = await i.e('38413').then(i.bind(i, 107807));
+                } = await Promise.all([
+                  i.e('12661'),
+                  i.e('90537')
+                ]).then(i.bind(i, 107807));
                 return l => (0, a.jsx)(e, {
                   role: r,
                   guildId: o,
