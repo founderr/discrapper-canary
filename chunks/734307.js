@@ -2,22 +2,22 @@ t(47120);
 var i, l, a, E, r = t(392711),
   o = t.n(r),
   d = t(442837),
-  u = t(570140),
-  _ = t(317381),
+  _ = t(570140),
+  u = t(317381),
   s = t(430198),
   c = t(924301),
   C = t(601070),
-  A = t(569471),
-  S = t(581883),
+  S = t(569471),
+  A = t(581883),
   T = t(314897),
   I = t(680089),
   L = t(592125),
   D = t(58468),
   N = t(77498),
-  U = t(496675),
-  h = t(306680),
-  P = t(944486),
-  R = t(9156),
+  h = t(496675),
+  U = t(306680),
+  R = t(944486),
+  P = t(9156),
   f = t(823379),
   g = t(709054),
   O = t(540126),
@@ -27,8 +27,8 @@ let m = null,
   Z = new O.ZP();
 
 function v() {
-  let e = P.Z.getChannelId(),
-n = P.Z.getVoiceChannelId();
+  let e = R.Z.getChannelId(),
+n = R.Z.getVoiceChannelId();
   return m = e, H = n, Z.clear();
 }
 
@@ -83,8 +83,8 @@ id: n
 }
 
 function F() {
-  let e = P.Z.getChannelId(),
-n = P.Z.getVoiceChannelId(),
+  let e = R.Z.getChannelId(),
+n = R.Z.getVoiceChannelId(),
 t = m !== e || H !== n;
   return !!t && (o()([
 m,
@@ -122,7 +122,7 @@ guildScheduledEvent: n
 }
 class K extends(i = d.ZP.Store) {
   initialize() {
-this.waitFor(C.Z, T.default, I.Z, L.Z, D.Z, _.ZP, N.Z, s.Z, c.ZP, A.Z, U.Z, h.ZP, P.Z, R.ZP, S.Z);
+this.waitFor(C.Z, T.default, I.Z, L.Z, D.Z, u.ZP, N.Z, s.Z, c.ZP, S.Z, h.Z, U.ZP, R.Z, P.ZP, A.Z);
   }
   getGuild(e, n) {
 var t, i;
@@ -151,7 +151,7 @@ E = 'ChannelListStore', (a = 'displayName') in(l = K) ? Object.defineProperty(l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : l[a] = E, n.Z = new K(u.Z, {
+}) : l[a] = E, n.Z = new K(_.Z, {
   APPLICATION_FETCH_FAIL: Y,
   APPLICATION_FETCH_SUCCESS: Y,
   APPLICATION_FETCH: Y,
@@ -215,13 +215,6 @@ return Z.nonPositionalChannelIdUpdate(n);
   },
   DRAWER_CLOSE: B,
   DRAWER_OPEN: B,
-  EMBEDDED_ACTIVITY_UPDATE: function(e) {
-let {
-  guildId: n,
-  channelId: t
-} = e;
-return Z.updateSubtitles(n, t);
-  },
   EMBEDDED_ACTIVITY_UPDATE_V2: function(e) {
 let {
   location: n

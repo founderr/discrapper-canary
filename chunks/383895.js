@@ -85,6 +85,9 @@ children: [
         user: R,
         channel: A
       }),
+      (0, n.jsx)(c.Spacer, {
+        size: 10
+      }),
       (0, n.jsx)('div', {
         className: t()(f.playerInfo),
         children: (0, n.jsxs)('div', {
