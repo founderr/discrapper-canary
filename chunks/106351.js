@@ -261,6 +261,12 @@ let o = {
 15
   ]),
   SUMMARIZEABLE: new Set([0]),
+  CONTENT_ENTRY_EMBEDS: new Set([
+0,
+1,
+3,
+5
+  ]),
   POLLS: new Set([
 0,
 1,
