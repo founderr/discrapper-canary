@@ -95,12 +95,13 @@ autoTrackExposure: !0
   return (0, i.jsx)(i.Fragment, {
 children: r.map(e => {
   var a;
-  let s = o.find(t => (0, S.ir)(t.emoji, e)),
+  let s = o.find(t => (0, S.ir)(t.emoji, (0, S.g1)(e))),
     l = null != s ? J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE : J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD,
-    r = null != s ? J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE_ALLY.format({
-      emojiName: e.name
+    r = null == e.id ? e.uniqueName : e.name,
+    c = null != s ? J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE_ALLY.format({
+      emojiName: r
     }) : J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD_ALLY.format({
-      emojiName: e.name
+      emojiName: r
     });
   return (0, i.jsx)(W.sF, {
     tooltipText: (0, i.jsxs)(i.Fragment, {
@@ -119,7 +120,7 @@ children: r.map(e => {
         })
       ]
     }),
-    label: r,
+    label: c,
     onClick: () => el({
       type: null != s ? 'remove' : 'add',
       emoji: e,
