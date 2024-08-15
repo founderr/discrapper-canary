@@ -34,9 +34,11 @@ h = (0, a.e7)([
   if (null == s)
     return !1;
   let u = i.getMember(e, s.id);
+  if (null == u || u.isPending)
+    return !1;
   if (null == s.clan)
     return !0;
-  let d = (null == u ? void 0 : u.joinedAt) != null ? new Date(u.joinedAt) : null,
+  let d = null != u.joinedAt ? new Date(u.joinedAt) : null,
     h = null != d && Date.now() - d.getTime() > 259200000,
     {
       identityGuildId: m,
