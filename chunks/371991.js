@@ -52,8 +52,10 @@ scaleFontToUserSetting: c = !1
   } = e, d = h(t, o), _ = i.useMemo(() => (0, E.T_)(t, d), [
 t,
 d
-  ]);
-  return (0, r.jsx)(u.Text, {
+  ]), p = i.useRef(_);
+  return i.useEffect(() => {
+p.current = _;
+  }, [t]), (0, r.jsx)(u.Text, {
 className: s()(f.timestamp, {
   [f.inlineTimestamp]: n,
   [f.bold]: l
@@ -62,6 +64,7 @@ variant: 'text-xs/medium',
 tabularNumbers: !0,
 color: a,
 scaleFontToUserSetting: c,
+'aria-label': p.current,
 children: _
   });
 };
