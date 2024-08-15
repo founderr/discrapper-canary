@@ -21,63 +21,62 @@ var i = n(735250),
   T = n(51144),
   N = n(785717),
   v = n(221292),
-  S = n(310427),
-  Z = n(318661),
-  A = n(57048),
-  M = n(726059),
-  b = n(162267),
-  R = n(502762),
-  j = n(171368),
-  L = n(944546),
-  P = n(470900),
-  O = n(421486),
-  y = n(240328),
-  D = n(436478),
-  k = n(138394),
-  U = n(248345),
-  w = n(19836),
-  B = n(538564),
-  H = n(319300),
-  G = n(591600),
-  V = n(584045),
-  F = n(664202),
-  W = n(772056),
-  z = n(747711),
-  Y = n(228168),
-  K = n(981631),
-  q = n(689938),
-  X = n(849570);
+  S = n(318661),
+  Z = n(57048),
+  A = n(726059),
+  M = n(162267),
+  b = n(502762),
+  R = n(171368),
+  j = n(944546),
+  L = n(470900),
+  P = n(421486),
+  O = n(240328),
+  y = n(436478),
+  D = n(138394),
+  k = n(248345),
+  U = n(19836),
+  w = n(538564),
+  B = n(319300),
+  H = n(591600),
+  G = n(584045),
+  V = n(664202),
+  F = n(772056),
+  W = n(747711),
+  z = n(228168),
+  Y = n(981631),
+  K = n(689938),
+  q = n(849570);
 t.Z = e => {
   var t;
   let {
 user: n,
 channel: s
-  } = e, [Q, J] = a.useState(!1), $ = a.useRef(0), {
-analyticsLocations: ee
-  } = (0, d.ZP)(u.Z.PROFILE_PANEL), et = (0, N.ZB)({
+  } = e, [X, Q] = a.useState(!1), J = a.useRef(0), {
+analyticsLocations: $
+  } = (0, d.ZP)(u.Z.PROFILE_PANEL), ee = (0, N.ZB)({
 layout: 'DM_PANEL',
 userId: n.id,
 channelId: s.id
-  }), en = null == n ? void 0 : n.isNonUserBot(), ei = (0, Z.ZP)(n.id), ea = (0, r.e7)([
+  }), et = null == n ? void 0 : n.isNonUserBot(), en = (0, S.ZP)(n.id), ei = (0, r.e7)([
 I.Z,
 f.Z
   ], () => {
 var e;
 return null != n ? f.Z.getChannel(null === (e = I.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId) : null;
   }), {
-enableHangStatus: es
+enableHangStatus: ea
   } = h.n.useExperiment({
-guildId: null == ea ? void 0 : ea.guild_id,
+guildId: null == ei ? void 0 : ei.guild_id,
 location: 'ActivityStatus'
   }, {
 autoTrackExposure: !1
   }), {
-activity: el,
-customStatusActivity: er,
-isApplicationStreaming: eo,
-isMobile: ec,
-status: eu,
-hangStatusActivity: ed
+activity: es,
+customStatusActivity: el,
+isApplicationStreaming: er,
+isMobile: eo,
+status: ec,
+hangStatusActivity: eu
   } = (0, r.cj)([
 p.Z,
 g.Z,
@@ -89,219 +88,212 @@ return {
     let {
       type: n
     } = t;
-    return e ? n === K.IIU.PLAYING : n !== K.IIU.CUSTOM_STATUS && n !== K.IIU.HANG_STATUS;
+    return e ? n === Y.IIU.PLAYING : n !== Y.IIU.CUSTOM_STATUS && n !== Y.IIU.HANG_STATUS;
   }),
   customStatusActivity: g.Z.findActivity(n.id, e => {
     let {
       type: t
     } = e;
-    return t === K.IIU.CUSTOM_STATUS;
+    return t === Y.IIU.CUSTOM_STATUS;
   }),
   isApplicationStreaming: e,
   isMobile: g.Z.isMobileOnline(n.id),
-  status: en ? null : g.Z.getStatus(n.id),
-  hangStatusActivity: es && null != ea && E.Z.can(K.Plq.CONNECT, ea) ? g.Z.findActivity(n.id, e => {
+  status: et ? null : g.Z.getStatus(n.id),
+  hangStatusActivity: ea && null != ei && E.Z.can(Y.Plq.CONNECT, ei) ? g.Z.findActivity(n.id, e => {
     let {
       type: t
     } = e;
-    return t === K.IIU.HANG_STATUS;
+    return t === Y.IIU.HANG_STATUS;
   }) : null
 };
-  }), eh = null != el || null != ed || eo, em = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), ep = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
-mutualFriends: e_,
-isFetching: ef
-  } = (0, M.Z)(n.id, !n.bot), {
-mutualGuilds: eE,
-isFetching: eg
-  } = (0, b.Z)(n.id, !n.bot), eC = !n.bot && null != e_ && e_.length > 0, eI = !n.bot && null != eE && eE.length > 0, ex = (0, F.J)({
+  }), ed = null != es || null != eu || er, eh = null !== (t = x.ZP.getNickname(null, s.id, n)) && void 0 !== t ? t : T.ZP.getName(n), em = (0, r.e7)([C.Z], () => C.Z.hidePersonalInformation), {
+mutualFriends: ep,
+isFetching: e_
+  } = (0, A.Z)(n.id, !n.bot), {
+mutualGuilds: ef,
+isFetching: eE
+  } = (0, M.Z)(n.id, !n.bot), eg = !n.bot && null != ep && ep.length > 0, eC = !n.bot && null != ef && ef.length > 0, eI = (0, V.J)({
 popoutUser: n,
-source: D.m.PROFILE_PANEL
-  }), eT = (0, c.ZP)();
+source: y.m.PROFILE_PANEL
+  }), ex = (0, c.ZP)();
   a.useEffect(() => {
-$.current = Date.now();
+J.current = Date.now();
   }, []), a.useEffect(() => {
-null != ei && (0, A.U)({
-  displayProfile: ei,
-  isMobile: ec,
-  loadDurationMs: Date.now() - $.current,
-  activity: el,
-  customStatusActivity: er,
-  status: eu
+null != en && (0, Z.U)({
+  displayProfile: en,
+  isMobile: eo,
+  loadDurationMs: Date.now() - J.current,
+  activity: es,
+  customStatusActivity: el,
+  status: ec
 });
   }, [
-ei,
-ec,
+en,
+eo,
+es,
 el,
-er,
-eu
+ec
   ]);
-  let eN = null == eE ? void 0 : eE.map(e => {
+  let eT = null == ef ? void 0 : ef.map(e => {
   let {
     guild: t,
     nick: a
   } = e;
-  return (0, i.jsx)(P.D, {
+  return (0, i.jsx)(L.D, {
     user: n,
     guild: t,
     nick: a,
-    theme: eT,
+    theme: ex,
     onSelect: () => (0, m.X)(t.id)
   }, t.id);
 }),
-ev = null == e_ ? void 0 : e_.map(e => {
+eN = null == ep ? void 0 : ep.map(e => {
   let {
     key: t,
     user: n,
     status: a
   } = e;
-  return (0, i.jsx)(L.T, {
+  return (0, i.jsx)(j.T, {
     user: n,
     status: a,
     onSelect: () => {
-      (0, j.openUserProfileModal)({
-        sourceAnalyticsLocations: ee,
+      (0, R.openUserProfileModal)({
+        sourceAnalyticsLocations: $,
         analyticsLocation: {
-          section: K.jXE.DM_PROFILE
+          section: Y.jXE.DM_PROFILE
         },
-        ...et
+        ...ee
       });
     }
   }, t);
 }),
-eS = a.useCallback(() => J(!0), []),
-eZ = a.useCallback(() => J(!1), []),
-eA = (0, r.e7)([_.default], () => _.default.getId()),
-eM = n.id === eA,
-eb = n.bot || eM,
-{
-  enabled: eR
-} = (0, S.qI)({
-  autoTrackExposure: !0,
-  location: u.Z.PROFILE,
-  disable: eb
-});
+ev = a.useCallback(() => Q(!0), []),
+eS = a.useCallback(() => Q(!1), []),
+eZ = (0, r.e7)([_.default], () => _.default.getId()),
+eA = n.id === eZ,
+eM = n.bot || eA;
   return (0, i.jsx)(d.Gt, {
-value: ee,
+value: $,
 children: (0, i.jsx)(N.Mt, {
-  value: et,
+  value: ee,
   children: (0, i.jsx)('aside', {
-    className: X.profilePanel,
-    onMouseEnter: eS,
-    onMouseLeave: eZ,
-    children: (0, i.jsxs)(R.Z, {
+    className: q.profilePanel,
+    onMouseEnter: ev,
+    onMouseLeave: eS,
+    children: (0, i.jsxs)(b.Z, {
       user: n,
-      displayProfile: ei,
-      profileType: Y.y0.PANEL,
-      themeOverride: eT,
+      displayProfile: en,
+      profileType: z.y0.PANEL,
+      themeOverride: ex,
       children: [
-        ex.shouldShow && (0, i.jsx)(y.ZP, {
+        eI.shouldShow && (0, i.jsx)(O.ZP, {
           user: n,
-          upsellSource: D.m.PROFILE_PANEL,
-          displayProfile: ei,
+          upsellSource: y.m.PROFILE_PANEL,
+          displayProfile: en,
           isInSidebar: !0,
-          ...ex
+          ...eI
         }, n.id),
         (0, i.jsxs)(o.ScrollerNone, {
           children: [
-            (0, i.jsx)(z.Z, {
+            (0, i.jsx)(W.Z, {
               user: n,
-              displayProfile: ei,
+              displayProfile: en,
               channel: s,
-              animateAssets: Q,
-              forceShowPremiumBadge: Q
+              animateAssets: X,
+              forceShowPremiumBadge: X
             }),
-            (0, i.jsxs)(R.Z.Overlay, {
-              className: X.overlay,
+            (0, i.jsxs)(b.Z.Overlay, {
+              className: q.overlay,
               children: [
-                (0, i.jsx)(V.Z, {
+                (0, i.jsx)(G.Z, {
                   user: n,
-                  nickname: em,
-                  pronouns: null == ei ? void 0 : ei.pronouns
+                  nickname: eh,
+                  pronouns: null == en ? void 0 : en.pronouns
                 }),
-                (0, i.jsx)(B.Z, {
-                  customStatusActivity: er,
-                  animate: Q
-                }),
-                (0, i.jsx)(k.Z, {}),
                 (0, i.jsx)(w.Z, {
-                  bio: null == ei ? void 0 : ei.bio,
-                  hidePersonalInformation: ep,
+                  customStatusActivity: el,
+                  animate: X
+                }),
+                (0, i.jsx)(D.Z, {}),
+                (0, i.jsx)(U.Z, {
+                  bio: null == en ? void 0 : en.bio,
+                  hidePersonalInformation: em,
                   animateOnHover: !0,
-                  isHovering: Q,
+                  isHovering: X,
                   userId: n.id
                 }),
-                eR && (0, i.jsx)(O.ZP, {
-                  className: X.profileMutuals,
+                !eM && (0, i.jsx)(P.ZP, {
+                  className: q.profileMutuals,
                   user: n
                 }),
                 !n.isSystemUser() && (0, i.jsxs)(i.Fragment, {
                   children: [
-                    (0, i.jsx)(H.Z, {
+                    (0, i.jsx)(B.Z, {
                       userId: n.id
                     }),
-                    (0, i.jsx)(k.Z, {})
+                    (0, i.jsx)(D.Z, {})
                   ]
                 }),
-                !n.isSystemUser() && (0, i.jsx)(G.Z, {
+                !n.isSystemUser() && (0, i.jsx)(H.Z, {
                   user: n,
                   setNote: !1
                 })
               ]
             }),
-            eh ? (0, i.jsx)(R.Z.Overlay, {
-              className: X.overlay,
-              children: (0, i.jsx)(U.Z, {
-                activity: null != el || eo ? el : ed,
+            ed ? (0, i.jsx)(b.Z.Overlay, {
+              className: q.overlay,
+              children: (0, i.jsx)(k.Z, {
+                activity: null != es || er ? es : eu,
                 user: n,
                 channelId: s.id,
                 analyticsParams: {
                   location: {
-                    page: K.ZY5.USER_PROFILE,
-                    section: K.jXE.DM_PROFILE
+                    page: Y.ZY5.USER_PROFILE,
+                    section: Y.jXE.DM_PROFILE
                   }
                 }
               })
             }) : null,
-            (eI || eC) && (0, i.jsxs)(R.Z.Overlay, {
-              className: X.profilePanelConnections,
+            (eC || eg) && (0, i.jsxs)(b.Z.Overlay, {
+              className: q.profilePanelConnections,
               children: [
-                eI ? (0, i.jsx)(W.Z, {
-                  className: X.mutualGuildsList,
-                  header: q.Z.Messages.MUTUAL_GUILDS_COUNT.format({
-                    count: eE.length
+                eC ? (0, i.jsx)(F.Z, {
+                  className: q.mutualGuildsList,
+                  header: K.Z.Messages.MUTUAL_GUILDS_COUNT.format({
+                    count: ef.length
                   }),
-                  isLoadingHeader: eg,
-                  loadingContentsCount: eE.length,
-                  itemType: W.R.MutualGuildList,
+                  isLoadingHeader: eE,
+                  loadingContentsCount: ef.length,
+                  itemType: F.R.MutualGuildList,
                   onExpand: () => {
                     (0, v.pQ)({
                       action: 'PRESS_SECTION',
                       section: 'MUTUAL_GUILDS',
-                      analyticsLocations: ee,
-                      ...et
+                      analyticsLocations: $,
+                      ...ee
                     });
                   },
-                  children: eN
+                  children: eT
                 }) : null,
-                eC ? (0, i.jsx)(W.Z, {
-                  className: l()(X.mutualFriendsList, {
-                    [X.mutualFriendsDivider]: eI
+                eg ? (0, i.jsx)(F.Z, {
+                  className: l()(q.mutualFriendsList, {
+                    [q.mutualFriendsDivider]: eC
                   }),
-                  header: q.Z.Messages.MUTUAL_FRIENDS_COUNT.format({
-                    count: e_.length
+                  header: K.Z.Messages.MUTUAL_FRIENDS_COUNT.format({
+                    count: ep.length
                   }),
-                  isLoadingHeader: ef,
-                  loadingContentsCount: e_.length,
-                  itemType: W.R.MutualFriendsList,
+                  isLoadingHeader: e_,
+                  loadingContentsCount: ep.length,
+                  itemType: F.R.MutualFriendsList,
                   onExpand: () => {
                     (0, v.pQ)({
                       action: 'PRESS_SECTION',
                       section: 'MUTUAL_FRIENDS',
-                      analyticsLocations: ee,
-                      ...et
+                      analyticsLocations: $,
+                      ...ee
                     });
                   },
-                  children: ev
+                  children: eN
                 }) : null
               ]
             })

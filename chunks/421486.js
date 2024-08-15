@@ -3,38 +3,35 @@ var r, i, a = n(735250),
   s = n(470079),
   o = n(120356),
   l = n.n(o),
-  u = n(442837),
-  c = n(481060),
-  d = n(906732),
-  _ = n(318374),
-  E = n(522289),
-  f = n(565138),
-  h = n(314897);
+  u = n(481060),
+  c = n(906732),
+  d = n(318374),
+  _ = n(522289),
+  E = n(565138);
 n(5192);
-var p = n(785717),
-  m = n(310427),
-  I = n(726059),
-  T = n(162267),
-  g = n(171368),
-  S = n(228168),
-  A = n(689938),
-  N = n(500462);
+var f = n(785717),
+  h = n(726059),
+  p = n(162267),
+  m = n(171368),
+  I = n(228168),
+  T = n(689938),
+  g = n(500462);
 (i = r || (r = {}))[i.NOT_CHECKED = 0] = 'NOT_CHECKED', i[i.NOT_OVERFLOWING = 1] = 'NOT_OVERFLOWING', i[i.OVERFLOWING_LARGE_ONLY = 2] = 'OVERFLOWING_LARGE_ONLY', i[i.OVERFLOWING_ALL = 3] = 'OVERFLOWING_ALL';
-let v = s.memo(function(e) {
+let S = s.memo(function(e) {
   let {
 user: t,
 mutualFriends: n,
 mutualGuilds: r,
 onClose: i,
 analyticsLocation: o,
-maxIcons: u = 3,
-underlineTextOnHover: h = !1,
-showTooltips: m = !0
+maxIcons: h = 3,
+underlineTextOnHover: p = !1,
+showTooltips: S = !0
   } = e, {
-analyticsLocations: I
-  } = (0, d.ZP)(), {
-context: T
-  } = (0, p.KZ)(), v = s.useMemo(() => {
+analyticsLocations: A
+  } = (0, c.ZP)(), {
+context: N
+  } = (0, f.KZ)(), v = s.useMemo(() => {
 var e;
 return null !== (e = null == n ? void 0 : n.map(e => {
   let {
@@ -50,9 +47,9 @@ return null !== (e = null == r ? void 0 : r.map(e => {
   } = e;
   return t;
 })) && void 0 !== e ? e : [];
-  }, [r]), R = s.useMemo(() => A.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
+  }, [r]), R = s.useMemo(() => T.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_SHORT.format({
 count: v.length
-  }), [v]), C = s.useMemo(() => A.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
+  }), [v]), C = s.useMemo(() => T.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_SHORT.format({
 count: O.length
   }), [O]), y = s.useRef(null), [D, L] = s.useState(!1), [b, M] = s.useState(!1), P = s.useCallback(() => {
 if (null != y.current) {
@@ -60,19 +57,19 @@ if (null != y.current) {
   M((null === (e = y.current) || void 0 === e ? void 0 : e.clientHeight) > 19), L(!0);
 }
   }, []), U = s.useCallback(e => () => {
-(0, g.openUserProfileModal)({
-  ...T,
+(0, m.openUserProfileModal)({
+  ...N,
   userId: t.id,
-  sourceAnalyticsLocations: I,
+  sourceAnalyticsLocations: A,
   section: e,
   analyticsLocation: o
 }), null == i || i();
   }, [
 o,
-I,
+A,
 i,
 t.id,
-T
+N
   ]);
   s.useEffect(() => {
 P();
@@ -83,66 +80,66 @@ R
   let w = v.length > 0,
 x = O.length > 0;
   return (0, a.jsxs)('div', {
-className: l()(N.compactItemContainer, !D && N.hideElement),
+className: l()(g.compactItemContainer, !D && g.hideElement),
 ref: y,
 children: [
   w && (() => {
-    let e = (0, a.jsxs)(c.Clickable, {
-      onClick: U(S.oh.MUTUAL_FRIENDS),
-      className: l()(N.avatarAndTextContainer, N.__invalid_friendsContainer),
+    let e = (0, a.jsxs)(u.Clickable, {
+      onClick: U(I.oh.MUTUAL_FRIENDS),
+      className: l()(g.avatarAndTextContainer, g.__invalid_friendsContainer),
       children: [
         (0, a.jsx)('div', {
-          className: N.__invalid_avatars,
-          children: (0, a.jsx)(_.Z, {
-            maxUsers: u,
+          className: g.__invalid_avatars,
+          children: (0, a.jsx)(d.Z, {
+            maxUsers: h,
             users: v,
-            size: c.AvatarSizes.SIZE_16,
+            size: u.AvatarSizes.SIZE_16,
             hideOverflowCount: !0,
             disableUsernameTooltip: !0
           })
         }),
-        (0, a.jsx)(c.Text, {
-          className: l()(N.itemizedListText, h && N.underlineOnHover),
+        (0, a.jsx)(u.Text, {
+          className: l()(g.itemizedListText, p && g.underlineOnHover),
           variant: 'text-sm/normal',
           color: 'interactive-normal',
           children: R
         })
       ]
     });
-    return m ? (0, a.jsx)(c.TooltipContainer, {
-      text: A.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
+    return S ? (0, a.jsx)(u.TooltipContainer, {
+      text: T.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
       children: e
     }) : e;
   })(),
   w && x && (0, a.jsx)('div', {
     'aria-hidden': 'true',
-    className: N.dotSpacer
+    className: g.dotSpacer
   }),
   x && (() => {
-    let e = (0, a.jsxs)(c.Clickable, {
-      onClick: U(S.oh.MUTUAL_GUILDS),
-      className: l()(N.avatarAndTextContainer, N.serverContainer),
+    let e = (0, a.jsxs)(u.Clickable, {
+      onClick: U(I.oh.MUTUAL_GUILDS),
+      className: l()(g.avatarAndTextContainer, g.serverContainer),
       children: [
         !b && (0, a.jsx)('div', {
-          className: N.__invalid_avatars,
-          children: (0, a.jsx)(E.Z, {
-            maxGuilds: u,
+          className: g.__invalid_avatars,
+          children: (0, a.jsx)(_.Z, {
+            maxGuilds: h,
             guilds: O,
-            size: f.Z.Sizes.SMOL,
+            size: E.Z.Sizes.SMOL,
             hideOverflowCount: !0,
             disableGuildNameTooltip: !0
           })
         }),
-        (0, a.jsx)(c.Text, {
-          className: l()(N.itemizedListText, h && N.underlineOnHover),
+        (0, a.jsx)(u.Text, {
+          className: l()(g.itemizedListText, p && g.underlineOnHover),
           variant: 'text-sm/normal',
           color: 'interactive-normal',
           children: C
         })
       ]
     });
-    return m ? (0, a.jsx)(c.TooltipContainer, {
-      text: A.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
+    return S ? (0, a.jsx)(u.TooltipContainer, {
+      text: T.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
       children: e
     }) : e;
   })()
@@ -150,38 +147,28 @@ children: [
   });
 });
 t.ZP = s.memo(function(e) {
-  var t, n;
   let {
-user: r,
-onClose: i,
-className: s,
-sourceAnaylticsLocations: o
+user: t,
+onClose: n,
+className: r
   } = e, {
-analyticsLocations: _
-  } = (0, d.ZP)(), E = null !== (n = null !== (t = null == o ? void 0 : o[0]) && void 0 !== t ? t : null == _ ? void 0 : _[0]) && void 0 !== n ? n : null, f = (0, u.e7)([h.default], () => h.default.getId()), p = r.id === f, g = r.bot || p, {
-enabled: S
-  } = (0, m.qI)({
-autoTrackExposure: !1,
-location: E,
-disable: g
-  }), {
-mutualGuilds: O
-  } = (0, T.Z)(r.id), {
-mutualFriends: R
-  } = (0, I.Z)(r.id);
-  return !S || g || (null == R || 0 === R.length) && (null == O || 0 === O.length) ? null : (0, a.jsxs)('div', {
-className: l()(N.mainContainer, s),
+mutualGuilds: i
+  } = (0, p.Z)(t.id), {
+mutualFriends: s
+  } = (0, h.Z)(t.id);
+  return (null == s || 0 === s.length) && (null == i || 0 === i.length) ? null : (0, a.jsxs)('div', {
+className: l()(g.mainContainer, r),
 children: [
-  (0, a.jsx)(c.Heading, {
+  (0, a.jsx)(u.Heading, {
     variant: 'eyebrow',
-    className: N.__invalid_title,
-    children: A.Z.Messages.USER_PROFILE_MUTUALS_TITLE
+    className: g.__invalid_title,
+    children: T.Z.Messages.USER_PROFILE_MUTUALS_TITLE
   }),
-  (0, a.jsx)(v, {
-    user: r,
-    mutualFriends: R,
-    mutualGuilds: O,
-    onClose: i
+  (0, a.jsx)(S, {
+    user: t,
+    mutualFriends: s,
+    mutualGuilds: i,
+    onClose: n
   })
 ]
   });
