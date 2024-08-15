@@ -183,12 +183,12 @@ return a().forEach(this.outboundStats, (t, n) => {
     E = t.vmafHistogram.getReport(c),
     h = t.psnrHistogram.getReport(c),
     p = t.targetBitrateHistogram.getReport(d),
-    I = t.outboundBandwidthSurplus.getReport(d),
-    m = t.aggregationDuration / 1000;
+    m = t.outboundBandwidthSurplus.getReport(d),
+    I = t.aggregationDuration / 1000;
   e.push({
     ...this.getStats(t),
-    target_fps: m > 0 ? Math.round((null !== (i = t.targetFrames) && void 0 !== i ? i : 0) / m) : 0,
-    target_bitrate_network: m > 0 ? Math.round((null !== (a = t.targetBytesNetwork) && void 0 !== a ? a : 0) * 8 / m) : 0,
+    target_fps: I > 0 ? Math.round((null !== (i = t.targetFrames) && void 0 !== i ? i : 0) / I) : 0,
+    target_bitrate_network: I > 0 ? Math.round((null !== (a = t.targetBytesNetwork) && void 0 !== a ? a : 0) * 8 / I) : 0,
     target_bitrate_network_percentile1: p.count > 0 ? p.percentiles[1] : null,
     target_bitrate_network_percentile5: p.count > 0 ? p.percentiles[5] : null,
     target_bitrate_network_percentile10: p.count > 0 ? p.percentiles[10] : null,
@@ -196,15 +196,15 @@ return a().forEach(this.outboundStats, (t, n) => {
     target_bitrate_network_percentile50: p.count > 0 ? p.percentiles[50] : null,
     target_bitrate_network_percentile75: p.count > 0 ? p.percentiles[75] : null,
     target_bitrate_network_percentile99: p.count > 0 ? p.percentiles[99] : null,
-    target_bitrate_max: m > 0 ? Math.round((null !== (s = t.targetBytesMax) && void 0 !== s ? s : 0) * 8 / m) : 0,
-    outbound_bandwidth_estimate: m > 0 ? Math.round((null !== (o = t.outboundBytesAvailable) && void 0 !== o ? o : 0) * 8 / m) : 0,
-    outbound_bandwidth_surplus_percentile1: I.count > 0 ? I.percentiles[1] : null,
-    outbound_bandwidth_surplus_percentile5: I.count > 0 ? I.percentiles[5] : null,
-    outbound_bandwidth_surplus_percentile10: I.count > 0 ? I.percentiles[10] : null,
-    outbound_bandwidth_surplus_percentile25: I.count > 0 ? I.percentiles[25] : null,
-    outbound_bandwidth_surplus_percentile50: I.count > 0 ? I.percentiles[50] : null,
-    outbound_bandwidth_surplus_percentile75: I.count > 0 ? I.percentiles[75] : null,
-    outbound_bandwidth_surplus_percentile99: I.count > 0 ? I.percentiles[99] : null,
+    target_bitrate_max: I > 0 ? Math.round((null !== (s = t.targetBytesMax) && void 0 !== s ? s : 0) * 8 / I) : 0,
+    outbound_bandwidth_estimate: I > 0 ? Math.round((null !== (o = t.outboundBytesAvailable) && void 0 !== o ? o : 0) * 8 / I) : 0,
+    outbound_bandwidth_surplus_percentile1: m.count > 0 ? m.percentiles[1] : null,
+    outbound_bandwidth_surplus_percentile5: m.count > 0 ? m.percentiles[5] : null,
+    outbound_bandwidth_surplus_percentile10: m.count > 0 ? m.percentiles[10] : null,
+    outbound_bandwidth_surplus_percentile25: m.count > 0 ? m.percentiles[25] : null,
+    outbound_bandwidth_surplus_percentile50: m.count > 0 ? m.percentiles[50] : null,
+    outbound_bandwidth_surplus_percentile75: m.count > 0 ? m.percentiles[75] : null,
+    outbound_bandwidth_surplus_percentile99: m.count > 0 ? m.percentiles[99] : null,
     duration_encoder_nvidia_cuda: f(t.encoderBuckets[_.Su.NVIDIA_CUDA]),
     duration_encoder_nvidia_direct3d: f(t.encoderBuckets[_.Su.NVIDIA_DIRECT_3D]),
     duration_encoder_openh264: f(t.encoderBuckets[_.Su.OPENH264]),
@@ -377,8 +377,8 @@ let t = Number(this.streamStart),
     framesDropped: E,
     framesCodecError: h,
     framesCodec: p,
-    framesNetwork: I,
-    packets: m,
+    framesNetwork: m,
+    packets: I,
     packetsLost: T,
     nackCount: g,
     pliCount: S,
@@ -406,8 +406,8 @@ return {
   avg_fps: r > 0 ? Math.round((null != p ? p : 0) / r) : 0,
   num_bytes: d,
   num_packets_lost: T,
-  num_packets: m,
-  num_frames: I,
+  num_packets: I,
+  num_frames: m,
   num_frames_codec_error: h,
   time_to_first_frame_ms: e.timeToFirstFrame,
   num_frames_dropped: E,
@@ -438,17 +438,23 @@ let l = t.transport,
   c = (0, u.isWeb)() ? 1 : null !== (i = null === (r = l.receiverReports) || void 0 === r ? void 0 : r.length) && void 0 !== i ? i : 0,
   d = new Set(),
   E = new Set();
-if (this.updateSendState({
-    receivers: c
-  }), t.rtp.outbound.filter(e => 'video' === e.type).forEach(t => {
+this.updateSendState({
+  receivers: c
+});
+let f = a().max(n.map(e => e.quality));
+if (t.rtp.outbound.filter(e => 'video' === e.type).forEach(t => {
     if (null != t) {
-      var r, i, a, s, o, u, c, E, f, h, p;
-      let I = t.ssrc,
-        m = this.outboundStats[I];
-      if (null == m && (console.warn('Unknown outbound video stream with SSRC: '.concat(I)), m = new _.nt(this.timestampProducer), this.outboundStats[I] = m), null == m.timeToFirstFrame && (t.framesEncoded > 0 || (null !== (r = t.frameRateInput) && void 0 !== r ? r : 0) > 0) && (m.timeToFirstFrame = Math.max(0, e - m.startTime)), !this.videoStopped.value) {
-        m.appendAndIncrementStats(_.z4.parseOutboundStats(t, e)), m.encoderCodec !== _.u7.UNKNOWN && d.add(m.encoderCodec);
-        let r = null === (i = n.find(e => e.ssrc === I)) || void 0 === i ? void 0 : i.maxBitrate;
-        m.appendTargetRates(null === (a = n.find(e => e.ssrc === I)) || void 0 === a ? void 0 : a.maxFrameRate, null !== (o = t.bitrateTarget) && void 0 !== o ? o : Math.min(null !== (s = l.availableOutgoingBitrate) && void 0 !== s ? s : 0, null != r ? r : 0), r, l.availableOutgoingBitrate), m.averageEncodeTime = null !== (u = t.averageEncodeTime) && void 0 !== u ? u : 0, m.framesDroppedRateLimiter = null !== (c = t.framesDroppedRateLimiter) && void 0 !== c ? c : null, m.framesDroppedEncoderQueue = null !== (E = t.framesDroppedEncoderQueue) && void 0 !== E ? E : null, m.framesDroppedCongestionWindow = null !== (f = t.framesDroppedCongestionWindow) && void 0 !== f ? f : null, this.hqSimulcastStreamEncoded.value = null !== (h = t.hqSimulcastStreamEncoded) && void 0 !== h && h, this.lqSimulcastStreamEncoded.value = null !== (p = t.lqSimulcastStreamEncoded) && void 0 !== p && p, this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value;
+      let m = t.ssrc,
+        I = this.outboundStats[m];
+      null == I && (console.warn('Unknown outbound video stream with SSRC: '.concat(m)), I = new _.nt(this.timestampProducer), this.outboundStats[m] = I), null == I.timeToFirstFrame && (t.framesEncoded > 0 || (null !== (r = t.frameRateInput) && void 0 !== r ? r : 0) > 0) && (I.timeToFirstFrame = Math.max(0, e - I.startTime));
+      let T = n.find(e => e.ssrc === m);
+      var r, i, a, s, o, u, c, E, h, p = this.connection.getRemoteVideoSinkWants(m);
+      null == p && (null == T ? void 0 : T.quality) === f && (p = this.connection.getRemoteVideoSinkWants('any'));
+      let g = (null != p ? p : 0) > 0;
+      if (!this.videoStopped.value && g) {
+        I.appendAndIncrementStats(_.z4.parseOutboundStats(t, e)), I.encoderCodec !== _.u7.UNKNOWN && d.add(I.encoderCodec);
+        let n = null == T ? void 0 : T.maxBitrate;
+        I.appendTargetRates(null == T ? void 0 : T.maxFrameRate, null !== (a = t.bitrateTarget) && void 0 !== a ? a : Math.min(null !== (i = l.availableOutgoingBitrate) && void 0 !== i ? i : 0, null != n ? n : 0), n, l.availableOutgoingBitrate), I.averageEncodeTime = null !== (s = t.averageEncodeTime) && void 0 !== s ? s : 0, I.framesDroppedRateLimiter = null !== (o = t.framesDroppedRateLimiter) && void 0 !== o ? o : null, I.framesDroppedEncoderQueue = null !== (u = t.framesDroppedEncoderQueue) && void 0 !== u ? u : null, I.framesDroppedCongestionWindow = null !== (c = t.framesDroppedCongestionWindow) && void 0 !== c ? c : null, this.hqSimulcastStreamEncoded.value = null !== (E = t.hqSimulcastStreamEncoded) && void 0 !== E && E, this.lqSimulcastStreamEncoded.value = null !== (h = t.lqSimulcastStreamEncoded) && void 0 !== h && h, this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value;
       }
     }
   }), !this.paused.value && a().forEach(t.rtp.inbound, (t, n) => {

@@ -137,6 +137,9 @@ if (null != r && r > 0)
 let i = this.remoteVideoSinkWants.any;
 return null != i && i > 0 ? i : 100;
   }
+  getRemoteVideoSinkWants(e) {
+return this.remoteVideoSinkWants[e];
+  }
   async emitStats() {
 let e = await this.getStats();
 return null != e && this.emit(s.S.Stats, e), e;
