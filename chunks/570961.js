@@ -78,15 +78,21 @@ return;
   null != n && n.ignoreDefaultPrompt && 1 === s.length && (0, u.RF)(s[0]) && (s = []);
   let _ = s.map(n => {
   let s = n.options.map(n => {
-    var t;
-    let s = null == n.roleIds ? n.roleIds : n.roleIds.filter(n => null != d.Z.getRole(e.id, n)),
-      l = null == n.channelIds ? n.channelIds : n.channelIds.filter(e => null != c.Z.getChannel(e)),
-      a = (null == n ? void 0 : null === (t = n.emoji) || void 0 === t ? void 0 : t.id) == null || null == r.ZP.getCustomEmojiById(n.emoji.id) ? void 0 : n.emoji;
+    let t = null == n.roleIds ? n.roleIds : n.roleIds.filter(n => null != d.Z.getRole(e.id, n)),
+      s = null == n.channelIds ? n.channelIds : n.channelIds.filter(e => null != c.Z.getChannel(e));
     return {
       ...n,
-      roleIds: s,
-      channelIds: l,
-      emoji: a
+      roleIds: t,
+      channelIds: s,
+      emoji: function(e) {
+        var n;
+        if (null == e)
+          return;
+        if ((null === (n = e.emoji) || void 0 === n ? void 0 : n.id) == null)
+          return e.emoji;
+        if (null != r.ZP.getCustomEmojiById(e.emoji.id))
+          return e.emoji;
+      }(n)
     };
   });
   return {
