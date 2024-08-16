@@ -278,7 +278,9 @@ function ta() {
 }
 function ts() {
     var e;
-    return (null === (e = el.Z.getChannel(eQ)) || void 0 === e ? void 0 : e.type) !== eE.d4z.GUILD_STAGE_VOICE && G.Z.supportsSimulcast();
+    let t = (null === (e = el.Z.getChannel(eQ)) || void 0 === e ? void 0 : e.type) === eE.d4z.GUILD_STAGE_VOICE,
+        n = r.getHardwareH264();
+    return !t && n && G.Z.supportsSimulcast();
 }
 let to = new (class {
     start() {
