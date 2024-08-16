@@ -72,7 +72,7 @@ children: (0, i.jsx)(u.Button, {
 })
   });
 });
-t.Z = a.memo(a.forwardRef(function(e) {
+t.Z = a.memo(function(e) {
   let {
 channel: t,
 type: n,
@@ -112,4 +112,4 @@ children: [
   }) : null
 ]
   }) : null;
-}));
+});

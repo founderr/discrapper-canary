@@ -66,11 +66,11 @@ if (e instanceof URIError)
   throw URIError('Pathname "' + s.pathname + '" could not be decoded. This is likely caused by an invalid percent-encoding.');
 throw e;
   }
-  return n && (s.key = n), a ? s.pathname ? '/' !== s.pathname.charAt(0) && (s.pathname = (0, i.default)(s.pathname, a.pathname)) : s.pathname = a.pathname : !s.pathname && (s.pathname = '/'), s;
+  return n && (s.key = n), a ? s.pathname ? '/' !== s.pathname.charAt(0) && (s.pathname = (0, i.Z)(s.pathname, a.pathname)) : s.pathname = a.pathname : !s.pathname && (s.pathname = '/'), s;
 }
 
 function E(e, t) {
-  return e.pathname === t.pathname && e.search === t.search && e.hash === t.hash && e.key === t.key && (0, a.default)(e.state, t.state);
+  return e.pathname === t.pathname && e.search === t.search && e.hash === t.hash && e.key === t.key && (0, a.Z)(e.state, t.state);
 }
 
 function f() {

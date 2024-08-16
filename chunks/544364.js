@@ -913,10 +913,10 @@ return t.get = function(e) {
   var t = this.sheets.get(e);
   if (t)
     return 0 === t.refs && t.sheet.attach(), t.refs++, t.sheet;
-  (0, o.default)(!1, '[JSS] SheetsManager: can\'t find sheet to manage');
+  (0, o.Z)(!1, '[JSS] SheetsManager: can\'t find sheet to manage');
 }, t.unmanage = function(e) {
   var t = this.sheets.get(e);
-  t ? t.refs > 0 && (t.refs--, 0 === t.refs && t.sheet.detach()) : (0, o.default)(!1, 'SheetsManager: can\'t find sheet to unmanage');
+  t ? t.refs > 0 && (t.refs--, 0 === t.refs && t.sheet.detach()) : (0, o.Z)(!1, 'SheetsManager: can\'t find sheet to unmanage');
 }, (0, s.Z)(e, [{
   key: 'size',
   get: function() {
