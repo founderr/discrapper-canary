@@ -1,12 +1,12 @@
 n.d(t, {
   Z: function() {
-return i;
+return a;
   }
 });
 var s = n(831565),
   o = n(282421);
 
-function i(e) {
+function a(e) {
   let t = (0, s.v)({
   location: e,
   autoTrackExposure: !1

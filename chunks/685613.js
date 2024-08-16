@@ -3,10 +3,10 @@ n.d(t, {
 return o;
   }
 });
-var s, o, i = n(735250);
+var s, o, a = n(735250);
 n(470079);
-var a = n(120356),
-  r = n.n(a),
+var i = n(120356),
+  r = n.n(i),
   l = n(780384),
   u = n(918701),
   c = n(302245),
@@ -21,14 +21,14 @@ className: t,
 gameTileSize: n = 24,
 quest: s,
 theme: o = C.BRd.DARK,
-withGameTile: a = !0
+withGameTile: i = !0
   } = e, p = (0, l.wj)(o) ? C.BRd.DARK : C.BRd.LIGHT, x = (0, c.vI)(s, E.dr.QUESTS_BAR);
-  return (0, i.jsxs)('div', {
+  return (0, a.jsxs)('div', {
 className: r()(m.partnerBranding, t),
 children: [
-  a && (0, i.jsx)(d.Fl, {
+  i && (0, a.jsx)(d.Fl, {
     id: 'QuestPartnerBranding_gameTile',
-    children: e => (0, i.jsx)('img', {
+    children: e => (0, a.jsx)('img', {
       ref: e,
       className: m.partnerBrandingGameTile,
       alt: '',
@@ -47,9 +47,9 @@ children: [
       }
     })
   }),
-  (0, i.jsx)(d.Fl, {
+  (0, a.jsx)(d.Fl, {
     id: 'QuestPartnerBranding_gameLogotype',
-    children: e => (0, i.jsx)('img', {
+    children: e => (0, a.jsx)('img', {
       ref: e,
       className: r()(m.partnerBrandingLogotype, {
         [m.rewardHighlightLogotype]: x
