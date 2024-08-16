@@ -112,8 +112,8 @@ function v() {
         V = (0, C.Zy)({ location: L.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: Y } = T.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
         w = (0, a.e7)([O.Z], () => O.Z.hasLibraryApplication()),
-        k = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()),
-        { canBroadcast: H } = c.Z.useExperiment({ location: 'user_settings_activity_privacy' }, { autoTrackExposure: !0 }),
+        H = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()),
+        { canBroadcast: k } = c.Z.useExperiment({ location: 'user_settings_activity_privacy' }, { autoTrackExposure: !0 }),
         W = R.Sb.useSetting(),
         K = (0, u.Z)();
     return (0, x.i)({
@@ -133,8 +133,8 @@ function v() {
         showGiftNitro: Y,
         isStricterMessageRequestsEnabled: K,
         hasLibraryApplication: w,
-        hasTOTPEnabled: k,
-        canBroadcastActivity: H,
+        hasTOTPEnabled: H,
+        canBroadcastActivity: k,
         developerMode: W
     });
 }

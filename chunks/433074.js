@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(873546),
+    s = n(470079),
+    a = n(873546),
     r = n(399606),
     l = n(481060),
     o = n(434650),
@@ -34,30 +34,30 @@ function S(e) {
             return null !== (e = _.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
         L = (0, r.e7)([E.default], () => E.default.getCurrentUser()),
-        [Z, P] = a.useState(!1),
-        b = a.useCallback((e) => {
+        [Z, P] = s.useState(!1),
+        b = s.useCallback((e) => {
             e && P(!0);
         }, []),
         D = (0, o.O)(b);
-    a.useEffect(() => {
+    s.useEffect(() => {
         (0, T.gZ)(S);
     }, [S]),
-        a.useEffect(() => {
+        s.useEffect(() => {
             Z &&
                 O === h.M.FETCHED &&
                 I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: S,
-                    device_platform: s.tq ? 'mobile_web' : 'desktop_web',
+                    device_platform: a.tq ? 'mobile_web' : 'desktop_web',
                     sender_user_id: A.author.id,
                     guild_id: v,
                     channel_id: A.channel_id
                 });
         }, [Z, S, null == L ? void 0 : L.id, A.channel_id, v, A.author.id, O]),
-        a.useEffect(() => {
+        s.useEffect(() => {
             Z &&
                 x &&
                 I.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
-                    device_platform: s.tq ? 'mobile_web' : 'desktop_web',
+                    device_platform: a.tq ? 'mobile_web' : 'desktop_web',
                     sender_user_id: A.author.id,
                     guild_id: v,
                     channel_id: A.channel_id
@@ -66,7 +66,7 @@ function S(e) {
     let j = (e) => {
         I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
             application_id: S,
-            device_platform: s.tq ? 'mobile_web' : 'desktop_web',
+            device_platform: a.tq ? 'mobile_web' : 'desktop_web',
             clicked_section: e,
             guild_id: v,
             channel_id: A.channel_id

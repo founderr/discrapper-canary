@@ -1,6 +1,6 @@
 n.d(t, {
     j: function () {
-        return a;
+        return s;
     }
 });
 let i = (0, n(818083).B)({
@@ -21,7 +21,7 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    a = () => {
+    s = () => {
         let { enabled: e } = i.getCurrentConfig({ location: 'cash_app_pay_awareness_nagbar' });
         return e;
     };

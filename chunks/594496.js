@@ -64,8 +64,8 @@ function D(e) {
     let V = (0, l.gS)(y.id),
         Y = (0, r.e7)([C.ZP], () => (null == y.id ? null : C.ZP.getMember(y.id, L.id))),
         w = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(L.id, y.id)),
-        k = A.ZP.canUsePremiumProfileCustomization(L),
-        H = (0, c.gd)(b, null == Y ? void 0 : Y.avatar),
+        H = A.ZP.canUsePremiumProfileCustomization(L),
+        k = (0, c.gd)(b, null == Y ? void 0 : Y.avatar),
         W = (0, c.f$)(v, null == w ? void 0 : w.banner),
         K = (0, p.p)(U, null == w ? void 0 : w.themeColors),
         z = null !== (s = null == w ? void 0 : w.bio) && void 0 !== s ? s : '',
@@ -102,7 +102,7 @@ function D(e) {
             ),
             (0, n.jsxs)(x.Z, {
                 user: L,
-                showOverlay: !k,
+                showOverlay: !H,
                 children: [
                     (0, n.jsx)(
                         E.Z,
@@ -122,11 +122,11 @@ function D(e) {
                                     })
                                 ]
                             }),
-                            showRemoveAvatarButton: H,
+                            showRemoveAvatarButton: k,
                             onAvatarChange: (e) => X(e, null == Y ? void 0 : Y.avatar, g.I5),
                             errors: null == G ? void 0 : G.avatar,
                             guildId: y.id,
-                            disabled: !k
+                            disabled: !H
                         },
                         'avatar'
                     ),
@@ -183,7 +183,7 @@ function D(e) {
                             errors: null == G ? void 0 : G.banner,
                             onBannerChange: (e) => X(e, null == w ? void 0 : w.banner, g.g_),
                             guildId: null == y ? void 0 : y.id,
-                            disabled: !k
+                            disabled: !H
                         },
                         'banner'
                     ),
@@ -220,7 +220,7 @@ function D(e) {
                             errors: null !== (D = null == G ? void 0 : G.bio) && void 0 !== D ? D : null == V ? void 0 : V.bio,
                             pendingBio: j,
                             currentBio: z,
-                            disabled: !k
+                            disabled: !H
                         },
                         'about'
                     )

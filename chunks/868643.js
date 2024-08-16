@@ -8,8 +8,8 @@ n.d(t, {
 }),
     n(789020);
 var i = n(470079),
-    a = n(442837),
-    s = n(430198),
+    s = n(442837),
+    a = n(430198),
     r = n(592125),
     l = n(630388),
     o = n(981631);
@@ -21,14 +21,14 @@ function d(e) {
     var t;
     if (!u(e)) return !1;
     let n = null === (t = r.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id;
-    return !(null != n && s.Z.isChannelOrThreadParentGated(n, e.channel_id)) && !0;
+    return !(null != n && a.Z.isChannelOrThreadParentGated(n, e.channel_id)) && !0;
 }
 function _(e) {
-    let t = (0, a.e7)([s.Z, r.Z], () => {
+    let t = (0, s.e7)([a.Z, r.Z], () => {
         var t;
         if (null == e) return !1;
         let n = null === (t = r.Z.getChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id;
-        return null != n && s.Z.isChannelOrThreadParentGated(n, e.channel_id);
+        return null != n && a.Z.isChannelOrThreadParentGated(n, e.channel_id);
     });
     return i.useMemo(() => null != e && u(e), [e]) && !t;
 }

@@ -45,8 +45,8 @@ function j(e) {
             pendingBanner: V,
             pendingThemeColors: Y,
             pendingPronouns: w,
-            pendingBio: k,
-            tryItOutThemeColors: H,
+            pendingBio: H,
+            tryItOutThemeColors: k,
             tryItOutAvatar: W,
             tryItOutBanner: K,
             tryItOutAvatarDecoration: z,
@@ -110,10 +110,10 @@ function j(e) {
                         profilePreview: (0, n.jsx)(h.Z, {
                             user: U,
                             pendingPronouns: w,
-                            pendingBio: k,
+                            pendingBio: H,
                             pendingBanner: null !== (B = null != K ? K : V) && void 0 !== B ? B : t(466045),
                             pendingAvatar: null != W ? W : y,
-                            pendingThemeColors: null != H ? H : Y,
+                            pendingThemeColors: null != k ? k : Y,
                             pendingAvatarDecoration: X,
                             pendingProfileEffectId: q,
                             avatarClassName: null != W || null != y || G.enabled ? void 0 : v.spinningAvatar,
@@ -141,7 +141,7 @@ function j(e) {
                                     className: v.customizationSection,
                                     user: U,
                                     pendingAvatar: null != W ? W : y,
-                                    pendingColors: null != H ? H : Y,
+                                    pendingColors: null != k ? k : Y,
                                     onThemeColorsChange: N.rf,
                                     showPremiumIcon: !1,
                                     preventDisabled: !0
@@ -192,7 +192,7 @@ function j(e) {
                                             }),
                                             (0, n.jsx)(S.Z, {
                                                 onSubscribeModalClose: (e) => {
-                                                    e && ((0, o.I5)(W), (0, N.g_)(K), (0, N.z5)(H));
+                                                    e && ((0, o.I5)(W), (0, N.g_)(K), (0, N.z5)(k));
                                                 },
                                                 subscriptionTier: L.Si.TIER_2,
                                                 className: v.premiumSubscribeButton,

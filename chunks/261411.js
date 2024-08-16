@@ -39,7 +39,7 @@ function s(e, t, r) {
             l = [],
             b = !0,
             f = 'function' == typeof t.set,
-            d = (function (e, t) {
+            h = (function (e, t) {
                 var r = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
                 if (!r) {
                     if (
@@ -98,36 +98,36 @@ function s(e, t, r) {
                 };
             })(t);
         try {
-            for (d.s(); !(c = d.n()).done; ) {
-                var h = c.value;
+            for (h.s(); !(c = h.n()).done; ) {
+                var d = c.value;
                 if (u > s) {
                     b = !1;
                     break;
                 }
                 a <= u &&
-                    (f && Array.isArray(h)
-                        ? 'string' == typeof h[0] || 'number' == typeof h[0]
+                    (f && Array.isArray(d)
+                        ? 'string' == typeof d[0] || 'number' == typeof d[0]
                             ? l.push({
-                                  key: h[0],
-                                  value: h[1]
+                                  key: d[0],
+                                  value: d[1]
                               })
                             : l.push({
                                   key: '[entry '.concat(u, ']'),
                                   value: {
-                                      '[key]': h[0],
-                                      '[value]': h[1]
+                                      '[key]': d[0],
+                                      '[value]': d[1]
                                   }
                               })
                         : l.push({
                               key: u,
-                              value: h
+                              value: d
                           })),
                     u++;
             }
         } catch (e) {
-            d.e(e);
+            h.e(e);
         } finally {
-            d.f();
+            h.f();
         }
         i = {
             hasMore: !b,
@@ -153,16 +153,16 @@ function i(e, t, r, n) {
         b = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1 / 0,
         f = s.bind(null, e, t, r);
     if (!n) return f().entries;
-    var d = b < 1 / 0;
-    var h = Math.min(b - l, ((i = e), (c = t), 'Object' === i ? Object.keys(c).length : 'Array' === i ? c.length : 1 / 0));
+    var h = b < 1 / 0;
+    var d = Math.min(b - l, ((i = e), (c = t), 'Object' === i ? Object.keys(c).length : 'Array' === i ? c.length : 1 / 0));
     if ('Iterable' !== e) {
-        if (h <= n || n < 7) return f(l, b).entries;
-    } else if (h <= n && !d) return f(l, b).entries;
+        if (d <= n || n < 7) return f(l, b).entries;
+    } else if (d <= n && !h) return f(l, b).entries;
     if ('Iterable' === e) {
         var p = f(l, l + n - 1),
             y = p.hasMore,
             g = p.entries;
         u = y ? [].concat((0, a.Z)(g), (0, a.Z)(o(l + n, l + 2 * n - 1, n))) : g;
-    } else u = d ? o(l, b, n) : [].concat((0, a.Z)(f(0, n - 5).entries), (0, a.Z)(o(n - 4, h - 5, n)), (0, a.Z)(f(h - 4, h - 1).entries));
+    } else u = h ? o(l, b, n) : [].concat((0, a.Z)(f(0, n - 5).entries), (0, a.Z)(o(n - 4, d - 5, n)), (0, a.Z)(f(d - 4, d - 1).entries));
     return u;
 }

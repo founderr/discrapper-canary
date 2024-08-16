@@ -1,6 +1,6 @@
 var i,
-    a,
     s,
+    a,
     r,
     l = n(442837),
     o = n(570140);
@@ -13,15 +13,15 @@ class d extends (r = l.ZP.Store) {
         return c;
     }
 }
-(s = 'AutoUpdateStore'),
-    (a = 'displayName') in (i = d)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(a = 'AutoUpdateStore'),
+    (s = 'displayName') in (i = d)
+        ? Object.defineProperty(i, s, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
+        : (i[s] = a),
     (t.Z = new d(o.Z, {
         CHECKING_FOR_UPDATES: u,
         UPDATE_NOT_AVAILABLE: u,

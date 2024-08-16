@@ -6,8 +6,8 @@ n.d(t, {
     n(47120),
     n(653041);
 var i,
-    a,
     s,
+    a,
     r,
     l,
     o,
@@ -15,13 +15,13 @@ var i,
     u = n(570140),
     d = n(973616),
     _ = n(911955);
-((s = i || (i = {}))[(s.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (s[(s.FETCHING = 1)] = 'FETCHING'), (s[(s.FETCHED = 2)] = 'FETCHED'), (s[(s.FETCH_FAILED = 3)] = 'FETCH_FAILED');
+((a = i || (i = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCHED = 2)] = 'FETCHED'), (a[(a.FETCH_FAILED = 3)] = 'FETCH_FAILED');
 let E = new Map(),
     I = new Map(),
     m = [],
     T = 0,
     h = [];
-class N extends (a = c.ZP.Store) {
+class N extends (s = c.ZP.Store) {
     getIntegrations(e) {
         var t;
         return null !== (t = E.get(e)) && void 0 !== t ? t : h;
@@ -101,9 +101,9 @@ let C = new N(u.Z, {
             n = E.get(t.channel_id);
         if (null == n) return !1;
         let i = (0, _.F)(t),
-            a = n.findIndex((e) => e.application.id === i.application.id),
-            s = [...n];
-        -1 === a ? s.push(i) : (s[a] = i), E.set(i.channel_id, f(s));
+            s = n.findIndex((e) => e.application.id === i.application.id),
+            a = [...n];
+        -1 === s ? a.push(i) : (a[s] = i), E.set(i.channel_id, f(a));
     },
     PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
         let { channelId: t, applicationId: n } = e,

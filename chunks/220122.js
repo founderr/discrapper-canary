@@ -52,7 +52,7 @@ class h extends u.Z {
                 quality: t.clipsQuality
             });
     }
-    handleMediaEngineSetHardwareEncoding(e) {
+    handleMediaEngineSetHardwareH264(e) {
         let { enabled: t } = e;
         if (!t) {
             let { clipsEnabled: e } = c.Z.getSettings();

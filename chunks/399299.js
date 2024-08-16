@@ -212,7 +212,7 @@ function J(e) {
         ea = !!(null == n ? void 0 : n.id.startsWith('camera')),
         er = null != ee && ee.verified && !ee.bot,
         ei = null != z && !(0, d.Yk)(z),
-        eo = !(0, i.e7)([R.Z], () => R.Z.getHardwareEncoding());
+        eo = !(0, i.e7)([R.Z], () => R.Z.getHardwareH264());
     return (0, l.jsxs)(s.Fragment, {
         children: [
             ea

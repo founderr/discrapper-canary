@@ -7,8 +7,8 @@ n.d(t, {
     n(653041);
 var i = n(735250);
 n(470079);
-var a = n(512722),
-    s = n.n(a),
+var s = n(512722),
+    a = n.n(s),
     r = n(442837),
     l = n(955415),
     o = n(131704),
@@ -21,11 +21,11 @@ var a = n(512722),
     m = n(29062);
 function T(e) {
     let t,
-        { invite: n, author: a, currentUserId: T, onTransitionToInviteChannel: h, onAcceptInstantInvite: N } = e,
-        f = T === a.id,
+        { invite: n, author: s, currentUserId: T, onTransitionToInviteChannel: h, onAcceptInstantInvite: N } = e,
+        f = T === s.id,
         C = n.state === E.r2o.ACCEPTING,
         p = (0, r.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
-    s()(null == p || p.isPrivate(), 'must be a private channel');
+    a()(null == p || p.isPrivate(), 'must be a private channel');
     let g = null != p;
     if (null == p) {
         if (null == n.channel) return (0, i.jsx)(_.Z, {});

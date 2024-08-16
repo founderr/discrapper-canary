@@ -20,14 +20,14 @@ function u(e, t) {
         (this.model = b.model), (l = n[this.model].channels), (this.color = b.value.slice(0, l)), (this.valpha = 'number' == typeof b.value[l] ? b.value[l] : 1);
     } else if (e.length) {
         (this.model = t || 'rgb'), (l = n[this.model].channels);
-        var d = s.call(e, 0, l);
-        (this.color = f(d, l)), (this.valpha = 'number' == typeof e[l] ? e[l] : 1);
+        var h = s.call(e, 0, l);
+        (this.color = f(h, l)), (this.valpha = 'number' == typeof e[l] ? e[l] : 1);
     } else if ('number' == typeof e) (e &= 16777215), (this.model = 'rgb'), (this.color = [(e >> 16) & 255, (e >> 8) & 255, 255 & e]), (this.valpha = 1);
     else {
         this.valpha = 1;
-        var h = Object.keys(e);
-        'alpha' in e && (h.splice(h.indexOf('alpha'), 1), (this.valpha = 'number' == typeof e.alpha ? e.alpha : 0));
-        var p = h.sort().join('');
+        var d = Object.keys(e);
+        'alpha' in e && (d.splice(d.indexOf('alpha'), 1), (this.valpha = 'number' == typeof e.alpha ? e.alpha : 0));
+        var p = d.sort().join('');
         if (!(p in i)) throw Error('Unable to parse color from object: ' + JSON.stringify(e));
         this.model = i[p];
         var y = n[this.model].labels,

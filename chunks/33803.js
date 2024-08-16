@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    r = n.n(a),
     l = n(913527),
     o = n.n(l),
     c = n(91192),
@@ -42,26 +42,26 @@ var i = n(735250),
     k = n(689938),
     G = n(735612);
 function F(e, t) {
-    let { popouts: n, selected: i, setPopout: s } = (0, P.Z)(e.id, j.d$),
+    let { popouts: n, selected: i, setPopout: a } = (0, P.Z)(e.id, j.d$),
         { usernameProfile: r, avatarProfile: l } = n,
         o = (0, Z.wq)(e.author.id, t.id),
         c = (0, Z.RN)(e.author.id, t.id, e.id),
-        u = (0, Z.XO)(e, t, r, s),
-        d = (0, Z.R9)(l, s);
+        u = (0, Z.XO)(e, t, r, a),
+        d = (0, Z.R9)(l, a);
     return {
         selected: i,
         onContextMenu: o,
         onContextMenuModerateUser: c,
         onClickUsername: u,
         onClickAvatar: d,
-        onPopoutRequestClose: a.useCallback(
+        onPopoutRequestClose: s.useCallback(
             () =>
-                s({
+                a({
                     usernameProfile: !1,
                     avatarProfile: !1,
                     referencedUsernameProfile: !1
                 }),
-            [s]
+            [a]
         ),
         renderPopout: L.Z,
         showAvatarPopout: l,
@@ -69,7 +69,7 @@ function F(e, t) {
     };
 }
 function w(e, t) {
-    return a.useMemo(() => {
+    return s.useMemo(() => {
         if (null != t)
             return (n) =>
                 (0, i.jsx)(C.Z, {
@@ -83,9 +83,9 @@ function w(e, t) {
     }, [e, t]);
 }
 function V(e) {
-    let { children: t, className: n, compact: a } = e;
+    let { children: t, className: n, compact: s } = e;
     return (0, i.jsx)('div', {
-        className: r()(G.footerContainer, n, { [G.compact]: a }),
+        className: r()(G.footerContainer, n, { [G.compact]: s }),
         children: t
     });
 }
@@ -125,31 +125,31 @@ function Y(e, t) {
 }
 function W(e) {
     let { alertAction: t, guildId: n } = e,
-        a = (0, d.e7)([g.default], () => g.default.getUser(t.actor), [t.actor]);
+        s = (0, d.e7)([g.default], () => g.default.getUser(t.actor), [t.actor]);
     try {
         let e = parseInt(t.actionType);
-        if (null == a) return Y(e, {});
-        let s = (function (e, t, n) {
+        if (null == s) return Y(e, {});
+        let a = (function (e, t, n) {
             var i;
-            let a = null !== (i = S.ZP.getNickname(n, null, t)) && void 0 !== i ? i : A.ZP.getUserTag(t),
-                s = o()(e.ts),
-                r = ''.concat(a, ' ').concat(s.fromNow());
+            let s = null !== (i = S.ZP.getNickname(n, null, t)) && void 0 !== i ? i : A.ZP.getUserTag(t),
+                a = o()(e.ts),
+                r = ''.concat(s, ' ').concat(a.fromNow());
             try {
                 switch (parseInt(e.actionType)) {
                     case m.d.DELETE_USER_MESSAGE:
                         return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_DELETE_MESSAGE.format({
-                            userName: a,
-                            timestamp: s.fromNow()
+                            userName: s,
+                            timestamp: a.fromNow()
                         });
                     case m.d.SET_COMPLETED:
                         return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SET_COMPLETED.format({
-                            userName: a,
-                            timestamp: s.fromNow()
+                            userName: s,
+                            timestamp: a.fromNow()
                         });
                     case m.d.SUBMIT_FEEDBACK:
                         return k.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SUBMIT_FEEDBACK.format({
-                            userName: a,
-                            timestamp: s.fromNow()
+                            userName: s,
+                            timestamp: a.fromNow()
                         });
                     default:
                         return r;
@@ -157,9 +157,9 @@ function W(e) {
             } catch (e) {
                 return r;
             }
-        })(t, a, n);
+        })(t, s, n);
         return (0, i.jsx)(_.Tooltip, {
-            text: s,
+            text: a,
             children: (t) => Y(e, t)
         });
     } catch (e) {
@@ -168,10 +168,10 @@ function W(e) {
 }
 function K(e) {
     let { alertActionsExecution: t, guildId: n } = e,
-        a = Object.values(t.actions).sort((e, t) => (e.actionType < t.actionType ? 1 : -1));
+        s = Object.values(t.actions).sort((e, t) => (e.actionType < t.actionType ? 1 : -1));
     return (0, i.jsx)('div', {
         className: G.alertActionsIconContainer,
-        children: a.map((e) =>
+        children: s.map((e) =>
             (0, i.jsx)(
                 W,
                 {
@@ -183,34 +183,34 @@ function K(e) {
         )
     });
 }
-let z = a.memo(function (e) {
+let z = s.memo(function (e) {
     let t,
-        { message: n, channel: a, embedChannel: s, compact: r, interactionUserId: l } = e,
-        o = F(n, a),
-        c = w(a, n.author),
+        { message: n, channel: s, embedChannel: a, compact: r, interactionUserId: l } = e,
+        o = F(n, s),
+        c = w(s, n.author),
         u = (0, x.ZP)(n),
         d = (0, v.CF)(
             {
                 message: n,
-                channel: a,
+                channel: s,
                 author: u,
-                guildId: null == a ? void 0 : a.guild_id,
+                guildId: null == s ? void 0 : s.guild_id,
                 compact: r,
                 ...o
             },
             c
         ),
         E = g.default.getUser(l),
-        I = F(n, a),
-        m = w(a, E);
+        I = F(n, s),
+        m = w(s, E);
     if (null != E) {
-        let e = (0, x.ij)(E, a),
+        let e = (0, x.ij)(E, s),
             i = (0, v.CF)(
                 {
                     message: n,
-                    channel: a,
+                    channel: s,
                     author: e,
-                    guildId: null == a ? void 0 : a.guild_id,
+                    guildId: null == s ? void 0 : s.guild_id,
                     compact: r,
                     ...I
                 },
@@ -225,12 +225,12 @@ let z = a.memo(function (e) {
         className: G.spanCorrection,
         children: (0, T.Mq)(
             n,
-            s,
+            a,
             () =>
                 (0, i.jsx)('div', {
                     className: G.channelNameContainer,
                     children: (0, i.jsx)(O.Z, {
-                        channel: s,
+                        channel: a,
                         className: G.channelName,
                         openChatWithoutConnecting: !0
                     })
@@ -241,7 +241,7 @@ let z = a.memo(function (e) {
     });
 });
 function Q(e) {
-    let { id: t, compact: n, message: s, channel: l } = e,
+    let { id: t, compact: n, message: a, channel: l } = e,
         {
             avatarSrc: o,
             eventHandlers: { onMouseEnter: C, onMouseLeave: g }
@@ -250,21 +250,21 @@ function Q(e) {
         { isFocused: x, handleFocus: O, handleBlur: L } = (0, Z.bb)(S),
         P = (0, d.e7)([E.Z], () => E.Z.keyboardModeEnabled),
         j = (0, d.e7)([p.Z], () => p.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]),
-        { ruleName: w, embedChannel: Y, decisionId: W, keywordMatchedContent: Q, keyword: q, content: X, flaggedMessageId: J, timeoutDuration: $, decisionReason: ee, alertActionsExecution: et, quarantineType: en, interactionUserId: ei } = (0, T.ZP)(s),
-        ea = a.useMemo(() => (0, R.k$)(X, Q, l.id), [X, Q, l]),
-        { selected: es, ...er } = F(s, l),
-        el = a.useCallback(() => {
-            (0, h._s)(s.id, X, W, l);
-        }, [s.id, X, W, l]),
-        eo = a.useCallback(
+        { ruleName: w, embedChannel: Y, decisionId: W, keywordMatchedContent: Q, keyword: q, content: X, flaggedMessageId: J, timeoutDuration: $, decisionReason: ee, alertActionsExecution: et, quarantineType: en, interactionUserId: ei } = (0, T.ZP)(a),
+        es = s.useMemo(() => (0, R.k$)(X, Q, l.id), [X, Q, l]),
+        { selected: ea, ...er } = F(a, l),
+        el = s.useCallback(() => {
+            (0, h._s)(a.id, X, W, l);
+        }, [a.id, X, W, l]),
+        eo = s.useCallback(
             (e) => {
                 if (null != J && null != Y) e.stopPropagation(), e.preventDefault(), (0, f.Z)(U.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, J));
             },
             [Y, J]
         ),
-        ec = a.useCallback(() => {
-            (0, N.Xx)(s.id, l, m.d.DELETE_USER_MESSAGE);
-        }, [l, s.id]),
+        ec = s.useCallback(() => {
+            (0, N.Xx)(a.id, l, m.d.DELETE_USER_MESSAGE);
+        }, [l, a.id]),
         eu = (0, B.L9)(Number($)),
         ed = null != ee,
         e_ = j && null != J && (null == et || !et.actions.hasOwnProperty(m.d.DELETE_USER_MESSAGE));
@@ -280,7 +280,7 @@ function Q(e) {
                 className: r()(G.content, { [G.compact]: n }),
                 children: [
                     (0, i.jsx)(v.nD, {
-                        message: s,
+                        message: a,
                         messageClassname: G.spanCorrection,
                         className: r()(G.usernameContainer, G.spanCorrection, { [G.compact]: n }),
                         username: (0, i.jsxs)('div', {
@@ -298,7 +298,7 @@ function Q(e) {
                                     className: G.systemTag
                                 }),
                                 (0, i.jsx)(z, {
-                                    message: s,
+                                    message: a,
                                     channel: l,
                                     embedChannel: Y,
                                     compact: n,
@@ -313,15 +313,15 @@ function Q(e) {
                         className: r()(G.messageContent, { [G.compact]: n }),
                         children: (0, i.jsx)(M.Z, {
                             ...A,
-                            message: s,
+                            message: a,
                             channel: Y,
-                            content: ea,
+                            content: es,
                             compact: n,
                             withFooter: !0,
                             hideTimestamp: !0,
                             className: r()(G.embedCard, {
                                 [G.compact]: n,
-                                [G.selected]: es || (P && x),
+                                [G.selected]: ea || (P && x),
                                 [G.isClickable]: null != J && null != Y
                             }),
                             childrenAccessories: (0, i.jsxs)(i.Fragment, {

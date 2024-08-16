@@ -161,8 +161,8 @@ s.Z = function (e) {
     (!f.pj.has(r.planId) || !D.JwP.ALL_PAUSEABLE.has(r.status)) && (V = !1);
     let Y = (0, p.Ng)(),
         w = null == Y ? void 0 : null === (s = Y.discount) || void 0 === s ? void 0 : s.amount,
-        k = (0, g.t7)(),
-        H = (0, g.lr)(),
+        H = (0, g.t7)(),
+        k = (0, g.lr)(),
         W = () => {
             if (r.status === D.O0b.ACTIVE || r.status === D.O0b.PAST_DUE || r.status === D.O0b.PAUSED) Q(x.Steps.PAUSE_SELECT);
         },
@@ -283,8 +283,8 @@ s.Z = function (e) {
                     planId: a,
                     subscription: r,
                     renewalInvoicePreview: E,
-                    hasDiscountApplied: k,
-                    activeDiscountInfo: H
+                    hasDiscountApplied: H,
+                    activeDiscountInfo: k
                 })
             })),
         buttons: (() => {
@@ -434,7 +434,7 @@ s.Z = function (e) {
             }
         })(),
         statusClasses: en,
-        shouldUseDiscountMarketing: k,
+        shouldUseDiscountMarketing: H,
         discountAmount: w
     });
 };

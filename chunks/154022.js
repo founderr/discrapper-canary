@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return H;
+        return k;
     }
 }),
     t(47120);
@@ -47,10 +47,10 @@ let y = (0, N.hQ)(),
     w = l().debounce((e) => {
         (0, u.o2)(e);
     }, 250),
-    k = l().debounce((e) => {
+    H = l().debounce((e) => {
         (0, p.Ct)(e);
     }, 250);
-function H(e) {
+function k(e) {
     return (0, n.jsxs)(d.FormSection, {
         tag: d.FormTitleTags.H1,
         title: B.Z.Messages.ACCESSIBILITY,
@@ -537,7 +537,7 @@ function et() {
                               initialValue: s,
                               defaultValue: 1,
                               stickToMarkers: !0,
-                              onValueChange: k,
+                              onValueChange: H,
                               onValueRender: (e) => 'x'.concat(e.toFixed(2)),
                               onMarkerRender: (e) =>
                                   0 === e

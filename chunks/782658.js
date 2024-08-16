@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     r = n(447543),
     l = n(410575),
     o = n(906732),
@@ -29,7 +29,7 @@ var i = n(735250),
     x = n(981631);
 function O(e) {
     let { code: t, author: n, getAcceptInviteContext: O } = e,
-        { invite: M, inviteError: v } = (0, s.cj)(
+        { invite: M, inviteError: v } = (0, a.cj)(
             [T.Z],
             () => ({
                 invite: T.Z.getInvite(t),
@@ -37,7 +37,7 @@ function O(e) {
             }),
             [t]
         );
-    a.useEffect(() => {
+    s.useEffect(() => {
         null == M && r.Z.resolveInvite(t);
     }, [t]);
     let L =
@@ -48,9 +48,9 @@ function O(e) {
                       code: ''
                   },
         { analyticsLocations: Z } = (0, o.ZP)(),
-        P = (0, s.e7)([m.Z], () => ((null == M ? void 0 : M.guild) != null ? m.Z.getGuild(M.guild.id) : null), [M]),
-        b = (0, s.e7)([I.default], () => I.default.getId()),
-        D = (0, s.e7)(
+        P = (0, a.e7)([m.Z], () => ((null == M ? void 0 : M.guild) != null ? m.Z.getGuild(M.guild.id) : null), [M]),
+        b = (0, a.e7)([I.default], () => I.default.getId()),
+        D = (0, a.e7)(
             [c.ZP],
             () => {
                 var e;

@@ -3,10 +3,10 @@ t.d(s, {
         return V;
     },
     Yn: function () {
-        return k;
+        return H;
     },
     ZP: function () {
-        return H;
+        return k;
     },
     eS: function () {
         return w;
@@ -327,7 +327,7 @@ function Y(e) {
           });
 }
 let w = new Set([Z.O0b.ACTIVE, Z.O0b.PAST_DUE, Z.O0b.CANCELED, Z.O0b.PAUSE_PENDING, Z.O0b.PAUSED]);
-function k() {
+function H() {
     return (
         a.useEffect(() => {
             h.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_duplicate_subscriptions' });
@@ -350,7 +350,7 @@ function k() {
         })
     );
 }
-function H(e) {
+function k(e) {
     var s;
     let t,
         { subscription: a, subscriptions: i, paymentSource: r, busy: o, className: l, fromStandaloneBillingPage: c = !0, analyticsLocation: E } = e;

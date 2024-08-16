@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     r = n(987909),
     l = n(430824),
     o = n(630388),
@@ -17,7 +17,7 @@ function _(e) {
     let { channel: _, message: E } = e,
         I = null !== (n = null === (t = E.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n ? (0, u.Md)() : (0, u.Q8)(),
         m = _.guild_id,
-        T = (0, s.e7)(
+        T = (0, a.e7)(
             [l.Z],
             () => {
                 var e;
@@ -26,7 +26,7 @@ function _(e) {
             [m]
         ),
         h = null != T && (0, o.yE)(T, d.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
-        N = a.useMemo(() => (0, c._i)(_, E), [_, E]);
+        N = s.useMemo(() => (0, c._i)(_, E), [_, E]);
     return h
         ? null
         : (0, i.jsx)(r.Z, {

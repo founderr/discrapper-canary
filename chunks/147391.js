@@ -20,14 +20,14 @@ function c(e) {
         source: M
     });
     let A = l.Z.getApplication(s),
-        C = i.Y.USER_INSTALL,
-        I = null == A ? void 0 : null === (u = A.integrationTypesConfig) || void 0 === u ? void 0 : null === (m = u[C]) || void 0 === m ? void 0 : null === (c = m.oauth2InstallParams) || void 0 === c ? void 0 : c.scopes;
+        I = i.Y.USER_INSTALL,
+        C = null == A ? void 0 : null === (u = A.integrationTypesConfig) || void 0 === u ? void 0 : null === (m = u[I]) || void 0 === m ? void 0 : null === (c = m.oauth2InstallParams) || void 0 === c ? void 0 : c.scopes;
     return new Promise((e) => {
         (0, o.openOAuth2Modal)(
             {
                 clientId: s,
-                integrationType: C,
-                scopes: I,
+                integrationType: I,
+                scopes: C,
                 callback: (t) => {
                     let { location: n } = t;
                     null != n

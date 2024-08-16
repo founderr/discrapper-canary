@@ -1,8 +1,8 @@
 n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    r = n.n(a),
     l = n(442837),
     o = n(481060),
     c = n(911969),
@@ -34,15 +34,15 @@ function R(e) {
         })
     });
 }
-t.Z = a.memo(function (e) {
-    var t, n, s, r, x, O;
+t.Z = s.memo(function (e) {
+    var t, n, a, r, x, O;
     let M,
         { channel: v, messageId: L, interactionData: Z } = e,
         { analyticsLocations: P } = (0, u.ZP)(),
         { onCopy: b, copyRef: D } = (0, d.Z)(v, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
         j = (0, l.e7)([T.Z], () => T.Z.getGuild(v.guild_id), [v.guild_id]);
     if (
-        (a.useEffect(() => {
+        (s.useEffect(() => {
             (null == Z || (Z.type === c.yU.CHAT && void 0 === Z.application_command)) && _.OG(v.id, L);
         }, [v.id, L, Z]),
         null == Z)
@@ -57,20 +57,20 @@ t.Z = a.memo(function (e) {
         for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
             e = e.concat(
                 (function e(t) {
-                    var n, s, r, l, u, d, _;
+                    var n, a, r, l, u, d, _;
                     let g,
                         { option: x, channel: O, guild: M, messageId: v, parentOptionKey: L, commandOptionSpec: Z, sourceAnalyticsLocations: P } = t,
                         b = null != L ? L + ' ' + x.name : x.name;
                     if (x.type === c.jw.SUB_COMMAND || x.type === c.jw.SUB_COMMAND_GROUP) {
                         let t = [
                                 (0, i.jsxs)(
-                                    a.Fragment,
+                                    s.Fragment,
                                     {
                                         children: [
                                             ' ',
                                             (0, i.jsx)(o.Text, {
                                                 ...S,
-                                                children: null !== (s = null == Z ? void 0 : Z.name_localized) && void 0 !== s ? s : x.name
+                                                children: null !== (a = null == Z ? void 0 : Z.name_localized) && void 0 !== a ? a : x.name
                                             })
                                         ]
                                     },
@@ -173,7 +173,7 @@ t.Z = a.memo(function (e) {
                         null == g && (g = R(null == D ? void 0 : D.toString())),
                         [
                             (0, i.jsxs)(
-                                a.Fragment,
+                                s.Fragment,
                                 {
                                     children: [
                                         (0, i.jsxs)(o.Text, {
@@ -201,7 +201,7 @@ t.Z = a.memo(function (e) {
             children: [
                 (0, i.jsxs)(o.Text, {
                     ...S,
-                    children: ['/', null !== (O = null === (s = Z.application_command) || void 0 === s ? void 0 : s.name_localized) && void 0 !== O ? O : Z.name]
+                    children: ['/', null !== (O = null === (a = Z.application_command) || void 0 === a ? void 0 : a.name_localized) && void 0 !== O ? O : Z.name]
                 }),
                 e
             ]
@@ -211,8 +211,8 @@ t.Z = a.memo(function (e) {
         className: g.container,
         onCopy: (e) => {
             var t, n, i;
-            let a = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
-            a.startsWith('/') && a.endsWith('\n') && b(e, Z);
+            let s = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
+            s.startsWith('/') && s.endsWith('\n') && b(e, Z);
         },
         children: [
             (0, i.jsx)('div', {

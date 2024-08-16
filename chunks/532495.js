@@ -47,8 +47,8 @@ function b() {
             pendingBio: V,
             pendingPronouns: Y,
             pendingAccentColor: w,
-            pendingThemeColors: k,
-            errors: H
+            pendingThemeColors: H,
+            errors: k
         } = (0, r.cj)([M.Z], () => {
             let e = M.Z.getAllPending(),
                 s = M.Z.getErrors();
@@ -72,8 +72,8 @@ function b() {
         });
     let q = (0, x.ZP)(B.id),
         J = null == q ? void 0 : q.getLegacyUsername(),
-        $ = (null !== (t = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0) > 0 ? H.global_name : null !== (a = null == W ? void 0 : W.nick) && void 0 !== a ? a : [],
-        ee = (null !== (b = null === (s = H.bio) || void 0 === s ? void 0 : s.length) && void 0 !== b ? b : 0) > 0 ? H.bio : null !== (Z = null == W ? void 0 : W.bio) && void 0 !== Z ? Z : [],
+        $ = (null !== (t = null === (e = k.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0) > 0 ? k.global_name : null !== (a = null == W ? void 0 : W.nick) && void 0 !== a ? a : [],
+        ee = (null !== (b = null === (s = k.bio) || void 0 === s ? void 0 : s.length) && void 0 !== b ? b : 0) > 0 ? k.bio : null !== (Z = null == W ? void 0 : W.bio) && void 0 !== Z ? Z : [],
         es = (0, c.Z)('user_profile'),
         et = (0, d.V)();
     return (0, n.jsxs)('div', {
@@ -90,7 +90,7 @@ function b() {
                 h.Z,
                 {
                     sectionTitle: P.Z.Messages.USER_SETTINGS_PRONOUNS,
-                    errors: H.pronouns,
+                    errors: k.pronouns,
                     onPronounsChange: p.ID,
                     pendingPronouns: Y,
                     currentPronouns: null !== (v = null == U ? void 0 : U.pronouns) && void 0 !== v ? v : ''
@@ -102,7 +102,7 @@ function b() {
                 {
                     onAvatarChange: o.I5,
                     showRemoveAvatarButton: z,
-                    errors: H.avatar,
+                    errors: k.avatar,
                     sectionTitle: P.Z.Messages.USER_SETTINGS_AVATAR,
                     forcedDivider: !0
                 },
@@ -131,7 +131,7 @@ function b() {
                               m.Z,
                               {
                                   showRemoveBannerButton: Q,
-                                  errors: H.banner,
+                                  errors: k.banner,
                                   onBannerChange: p.g_,
                                   forcedDivider: !0
                               },
@@ -140,7 +140,7 @@ function b() {
                           (0, n.jsx)(g.Z, {
                               user: B,
                               pendingAvatar: G,
-                              pendingColors: k,
+                              pendingColors: H,
                               onThemeColorsChange: p.z5,
                               forcedDivider: !0
                           })

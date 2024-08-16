@@ -181,7 +181,7 @@ class A extends a.Z {
                 CLIPS_RESTART: () => this.fireClipsInitEvent(),
                 RTC_CONNECTION_VIDEO: (e) => this.handleRTCConnectionVideo(e),
                 RTC_CONNECTION_STATE: (e) => this.handleRTCConnectionState(e),
-                MEDIA_ENGINE_SET_HARDWARE_ENCODING: (e) => this.handleMediaEngineSetHardwareEncoding(e)
+                MEDIA_ENGINE_SET_HARDWARE_H264: (e) => this.handleMediaEngineSetHardwareH264(e)
             }),
             n in t
                 ? Object.defineProperty(t, n, {

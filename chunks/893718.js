@@ -467,7 +467,7 @@ t.Z = i.memo(
                                             [ea.innerDisabled]: tF,
                                             [ea.sansAttachButton]: eL !== W.I.EDIT && (null != tV || (tF && null == tV) || tn),
                                             [ea.sansAttachButtonCreateThread]: eL === W.I.THREAD_CREATION,
-                                            [ea.sansAttachButtonCreatePost]: eL === W.I.CREATE_FORUM_POST,
+                                            [ea.sansAttachButtonCreatePost]: eL === W.I.CREATE_FORUM_POST || eL === W.I.FORWARD_MESSAGE_INPUT,
                                             [ea.sansAttachButtonUserProfileReply]: eL === W.I.USER_PROFILE_REPLY
                                         }),
                                         children: [

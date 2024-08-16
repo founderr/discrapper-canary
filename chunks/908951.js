@@ -44,7 +44,7 @@ function D(e) {
             if (null == s) throw Error('missing subscription and paymentSource');
             null == e ? await E.fG(s, t, U, D) : await E.tq(s, e, t, U, D), y(!1), Y(t);
         },
-        k = async (e, t, n) => {
+        H = async (e, t, n) => {
             y(!0);
             let a = await (0, p.hz)({
                 subscriptionId: s.id,
@@ -66,18 +66,18 @@ function D(e) {
                   )
                 : n(e, t);
         },
-        H = (e) => {
+        k = (e) => {
             let t = A.Z.get(s.planIdForCurrencies);
             l()(null != e, 'paymentSource not specified for change'), l()(null != t, 'Unable to fetch plan');
             let n = (0, g.DE)(t.id, e.id, !1);
             return n.length > 0 ? n[0] : R.pKx.USD;
         },
         W = (e) => {
-            null != e && k(e, H(e), w);
+            null != e && H(e, k(e), w);
         },
         K = (e) => {
             (0, g.i1)(e.id, (0, h.yb)(s)).then(() => {
-                k(e, H(e), w);
+                H(e, k(e), w);
             }),
                 'function' == typeof t && t(e.id);
         },
@@ -160,7 +160,7 @@ function D(e) {
                                       selectedCurrency: V,
                                       currencies: t,
                                       onChange: (e) => {
-                                          k(void 0, e, w);
+                                          H(void 0, e, w);
                                       }
                                   })
                               ]

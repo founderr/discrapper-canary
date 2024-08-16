@@ -67,8 +67,8 @@ s.Z = function () {
         [G, F] = a.useState(P.length > 0 ? P[0].value : null),
         { analyticsLocations: y } = (0, E.ZP)(_.Z.PAYMENT_FLOW_TEST_PAGE),
         [V, Y] = a.useState(''),
-        [w, k] = a.useState(R.lds),
-        [H, W] = a.useState(''),
+        [w, H] = a.useState(R.lds),
+        [k, W] = a.useState(''),
         [K, z] = a.useState(R.lds),
         [Q, X] = a.useState(R.lds);
     return (0, n.jsx)(E.Gt, {
@@ -298,7 +298,7 @@ s.Z = function () {
                         (0, n.jsx)(o.TextInput, {
                             placeholder: 'Sku Id',
                             value: w,
-                            onChange: (e) => k(e)
+                            onChange: (e) => H(e)
                         }),
                         (0, n.jsx)(o.Button, {
                             onClick: () =>
@@ -321,7 +321,7 @@ s.Z = function () {
                     children: [
                         (0, n.jsx)(o.TextInput, {
                             placeholder: 'Application Id',
-                            value: H,
+                            value: k,
                             onChange: W
                         }),
                         (0, n.jsx)(o.TextInput, {
@@ -332,7 +332,7 @@ s.Z = function () {
                         (0, n.jsx)(o.Button, {
                             onClick: () =>
                                 (0, A.Z)({
-                                    applicationId: H,
+                                    applicationId: k,
                                     skuId: K,
                                     analyticsLocations: y
                                 }),

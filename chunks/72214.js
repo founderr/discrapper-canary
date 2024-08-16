@@ -27,7 +27,7 @@ function _(e) {
             }),
             [g]
         ),
-        { search: S, query: I, results: A } = (0, d.Z)(m),
+        { search: S, query: A, results: I } = (0, d.Z)(m),
         p = l.useMemo(
             () =>
                 (function (e) {
@@ -58,11 +58,11 @@ function _(e) {
         (0, r.D)();
     let b = (0, a.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
         v = (0, a.e7)([s.Z], () => s.Z.isConnected()),
-        T = '' !== I;
+        T = '' !== A;
     return l.useMemo(
         () =>
             (0, u.ZP)({
-                results: A,
+                results: I,
                 hasQuery: T,
                 queryMode: C,
                 targetDestination: n,
@@ -73,6 +73,6 @@ function _(e) {
                 includeMissingDMs: E,
                 isConnected: v
             }),
-        [A, T, C, n, b, _, N, f, E, v]
+        [I, T, C, n, b, _, N, f, E, v]
     );
 }

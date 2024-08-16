@@ -61,10 +61,10 @@ let Y = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios'
             label: 'Build ID'
         }
     ];
-function k(e) {
+function H(e) {
     return 'discord_ios' in e || 'discord_android' in e;
 }
-class H extends a.Component {
+class k extends a.Component {
     render() {
         let { project: e, overrideType: s, overrideId: t, disabled: a, error: i } = this.props;
         return (0, n.jsxs)(h.Z, {
@@ -186,7 +186,7 @@ class W extends a.Component {
             ? null
             : l().map(e, (e, a) =>
                   (0, n.jsx)(
-                      H,
+                      k,
                       {
                           project: a,
                           overrideType: e.type,
@@ -243,7 +243,7 @@ class W extends a.Component {
                 (0, n.jsx)(h.Z.Child, {
                     grow: 0,
                     children: (0, n.jsx)(E.Button, {
-                        disabled: k(null != s ? s : {}),
+                        disabled: H(null != s ? s : {}),
                         onClick: this.handleSaveChanges,
                         submitting: e,
                         color: E.Button.Colors.GREEN,
@@ -268,7 +268,7 @@ class W extends a.Component {
         e = s ? (0, n.jsx)(E.Spinner, { className: F.marginTop20 }) : null != a && 0 === Object.keys(a).length ? this.renderEmpty() : this.renderItems();
         let i = !t && !s && this.getAvailableProjects().length > 0,
             r =
-                k(null != a ? a : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL
+                H(null != a ? a : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL
                     ? (0, n.jsx)(E.Text, {
                           color: 'text-danger',
                           variant: 'text-md/normal',
@@ -449,7 +449,7 @@ class W extends a.Component {
 class K extends a.Component {
     isMobile() {
         var e;
-        return k(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
+        return H(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
     }
     renderSettingsForm() {
         let { ttlSeconds: e, releaseChannel: s, userIdEntry: t, userIdEntryError: a, allowedVersions: i, allowedVersionEntry: r, allowedVersionEntryError: o, allowLoggedOut: l, experiments: c, experimentsError: d } = this.state,

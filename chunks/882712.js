@@ -25,7 +25,7 @@ function I(e) {
 function d() {
     (A = 0), (c = null), (T = null);
 }
-class R extends (E = a.ZP.Store) {
+class C extends (E = a.ZP.Store) {
     get purchaseTokenAuthState() {
         return A;
     }
@@ -37,7 +37,7 @@ class R extends (E = a.ZP.Store) {
     }
 }
 (l = 'PurchaseTokenAuthStore'),
-    (u = 'displayName') in (i = R)
+    (u = 'displayName') in (i = C)
         ? Object.defineProperty(i, u, {
               value: l,
               enumerable: !0,
@@ -45,7 +45,7 @@ class R extends (E = a.ZP.Store) {
               writable: !0
           })
         : (i[u] = l),
-    (t.Z = new R(_.Z, {
+    (t.Z = new C(_.Z, {
         SKU_PURCHASE_FAIL: I,
         PREMIUM_PAYMENT_SUBSCRIBE_FAIL: I,
         USER_PAYMENT_CLIENT_ADD: function (e) {

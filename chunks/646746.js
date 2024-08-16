@@ -18,10 +18,10 @@ var l = n(735250),
     E = n(480532);
 function g(e) {
     var t, n, s, g, m, S;
-    let { message: I, forwardOptions: A } = e,
-        p = null == A ? void 0 : A.onlyAttachmentIds,
-        C = null == A ? void 0 : A.onlyEmbedIndices,
-        N = null !== (n = null === (t = I.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : I,
+    let { message: A, forwardOptions: I } = e,
+        p = null == I ? void 0 : I.onlyAttachmentIds,
+        C = null == I ? void 0 : I.onlyEmbedIndices,
+        N = null !== (n = null === (t = A.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : A,
         L = N.attachments;
     null != p ? (L = N.attachments.filter((e) => p.includes(e.id))) : null != C && (L = []);
     let b = N.embeds;
@@ -30,7 +30,7 @@ function g(e) {
         T = a.useMemo(
             () =>
                 v
-                    ? (0, d.ZP)(I, {
+                    ? (0, d.ZP)(A, {
                           formatInline: !0,
                           allowLinks: !0,
                           allowHeading: !0,
@@ -39,7 +39,7 @@ function g(e) {
                           contentMessage: N
                       }).content
                     : null,
-            [N, v, I]
+            [N, v, A]
         ),
         x = L.length,
         Z = null,
@@ -126,7 +126,7 @@ function g(e) {
                         v &&
                             (0, l.jsx)(h.ZP, {
                                 className: i()(E.forwardPreviewMessage, x > 0 && E.hasAttachments),
-                                message: I,
+                                message: A,
                                 content: T
                             }),
                         x > 0 &&

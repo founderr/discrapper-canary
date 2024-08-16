@@ -242,10 +242,10 @@ t.Z = {
                 enabled: e
             });
     },
-    setHardwareEncoding(e) {
+    setHardwareH264(e) {
         !I() &&
             r.Z.dispatch({
-                type: 'MEDIA_ENGINE_SET_HARDWARE_ENCODING',
+                type: 'MEDIA_ENGINE_SET_HARDWARE_H264',
                 enabled: e
             });
     },

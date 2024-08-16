@@ -1,6 +1,6 @@
 r.d(t, {
     Z: function () {
-        return k;
+        return w;
     }
 });
 var a = r(521464),
@@ -13,8 +13,8 @@ var a = r(521464),
     l = r(870271),
     b = r(599295),
     f = r(470079),
-    d = r(639519),
-    h = r.n(d),
+    h = r(639519),
+    d = r.n(h),
     p = r(949179),
     y = r(261411),
     g = r(852153),
@@ -46,15 +46,15 @@ function O(e) {
     }
     return e;
 }
-function w(e) {
+function k(e) {
     return { expanded: !e.isCircular && e.shouldExpandNode(e.keyPath, e.data, e.level) };
 }
-var k = (function (e) {
-    (0, o.Z)(h, e);
+var w = (function (e) {
+    (0, o.Z)(d, e);
     var t,
         r,
-        d =
-            ((t = h),
+        h =
+            ((t = d),
             (r = (function () {
                 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                 if ('function' == typeof Proxy) return !0;
@@ -69,25 +69,25 @@ var k = (function (e) {
                     a = (0, c.Z)(t);
                 return (e = r ? Reflect.construct(a, arguments, (0, c.Z)(this).constructor) : a.apply(this, arguments)), (0, i.Z)(this, e);
             });
-    function h(e) {
+    function d(e) {
         var t;
         return (
-            (0, a.Z)(this, h),
-            (t = d.call(this, e)),
+            (0, a.Z)(this, d),
+            (t = h.call(this, e)),
             (0, u.Z)((0, s.Z)(t), 'handleClick', function () {
                 t.props.expandable && t.setState({ expanded: !t.state.expanded });
             }),
-            (t.state = w(e)),
+            (t.state = k(e)),
             t
         );
     }
     return (
-        (0, n.Z)(h, [
+        (0, n.Z)(d, [
             {
                 key: 'UNSAFE_componentWillReceiveProps',
                 value: function (e) {
-                    var t = w(e);
-                    w(this.props).expanded !== t.expanded && this.setState(t);
+                    var t = k(e);
+                    k(this.props).expanded !== t.expanded && this.setState(t);
                 }
             },
             {
@@ -114,10 +114,10 @@ var k = (function (e) {
                         i = e.styling,
                         c = e.collectionLimit,
                         u = e.keyPath,
-                        d = e.labelRenderer,
-                        h = e.expandable,
+                        h = e.labelRenderer,
+                        d = e.expandable,
                         m = this.state.expanded,
-                        w =
+                        k =
                             m || (s && 0 === this.props.level)
                                 ? (function e(t, r, a) {
                                       var n = t.nodeType,
@@ -126,12 +126,12 @@ var k = (function (e) {
                                           i = t.circularCache,
                                           c = t.keyPath,
                                           u = t.postprocessValue,
-                                          d = t.sortObjectKeys,
-                                          h = [];
+                                          h = t.sortObjectKeys,
+                                          d = [];
                                       return (
-                                          (0, y.Z)(n, s, d, o, r, a).forEach(function (r) {
+                                          (0, y.Z)(n, s, h, o, r, a).forEach(function (r) {
                                               if (void 0 !== r.to)
-                                                  h.push(
+                                                  d.push(
                                                       f.createElement(
                                                           v.Z,
                                                           (0, b.Z)({}, t, {
@@ -146,7 +146,7 @@ var k = (function (e) {
                                                   var a = r.key,
                                                       n = r.value,
                                                       s = -1 !== i.indexOf(n);
-                                                  h.push(
+                                                  d.push(
                                                       f.createElement(
                                                           g.Z,
                                                           (0, b.Z)({}, t, {
@@ -163,52 +163,52 @@ var k = (function (e) {
                                                   );
                                               }
                                           }),
-                                          h
+                                          d
                                       );
                                   })(O(O({}, this.props), {}, { level: this.props.level + 1 }))
                                 : null,
-                        k = t(a, n, f.createElement('span', i('nestedNodeItemType', m), r), o(n, c), u),
-                        E = [u, a, m, h];
+                        w = t(a, n, f.createElement('span', i('nestedNodeItemType', m), r), o(n, c), u),
+                        E = [u, a, m, d];
                     return s
-                        ? f.createElement('li', i.apply(void 0, ['rootNode'].concat(E)), f.createElement('ul', i.apply(void 0, ['rootNodeChildren'].concat(E)), w))
+                        ? f.createElement('li', i.apply(void 0, ['rootNode'].concat(E)), f.createElement('ul', i.apply(void 0, ['rootNodeChildren'].concat(E)), k))
                         : f.createElement(
                               'li',
                               i.apply(void 0, ['nestedNode'].concat(E)),
-                              h &&
+                              d &&
                                   f.createElement(p.Z, {
                                       styling: i,
                                       nodeType: a,
                                       expanded: m,
                                       onClick: this.handleClick
                                   }),
-                              f.createElement('label', (0, b.Z)({}, i.apply(void 0, [['label', 'nestedNodeLabel']].concat(E)), { onClick: this.handleClick }), d.apply(void 0, E)),
-                              f.createElement('span', (0, b.Z)({}, i.apply(void 0, ['nestedNodeItemString'].concat(E)), { onClick: this.handleClick }), k),
-                              f.createElement('ul', i.apply(void 0, ['nestedNodeChildren'].concat(E)), w)
+                              f.createElement('label', (0, b.Z)({}, i.apply(void 0, [['label', 'nestedNodeLabel']].concat(E)), { onClick: this.handleClick }), h.apply(void 0, E)),
+                              f.createElement('span', (0, b.Z)({}, i.apply(void 0, ['nestedNodeItemString'].concat(E)), { onClick: this.handleClick }), w),
+                              f.createElement('ul', i.apply(void 0, ['nestedNodeChildren'].concat(E)), k)
                           );
                 }
             }
         ]),
-        h
+        d
     );
 })(f.Component);
-(0, u.Z)(k, 'propTypes', {
-    getItemString: h().func.isRequired,
-    nodeTypeIndicator: h().any,
-    nodeType: h().string.isRequired,
-    data: h().any,
-    hideRoot: h().bool.isRequired,
-    createItemString: h().func.isRequired,
-    styling: h().func.isRequired,
-    collectionLimit: h().number,
-    keyPath: h().arrayOf(h().oneOfType([h().string, h().number])).isRequired,
-    labelRenderer: h().func.isRequired,
-    shouldExpandNode: h().func,
-    level: h().number.isRequired,
-    sortObjectKeys: h().oneOfType([h().func, h().bool]),
-    isCircular: h().bool,
-    expandable: h().bool
+(0, u.Z)(w, 'propTypes', {
+    getItemString: d().func.isRequired,
+    nodeTypeIndicator: d().any,
+    nodeType: d().string.isRequired,
+    data: d().any,
+    hideRoot: d().bool.isRequired,
+    createItemString: d().func.isRequired,
+    styling: d().func.isRequired,
+    collectionLimit: d().number,
+    keyPath: d().arrayOf(d().oneOfType([d().string, d().number])).isRequired,
+    labelRenderer: d().func.isRequired,
+    shouldExpandNode: d().func,
+    level: d().number.isRequired,
+    sortObjectKeys: d().oneOfType([d().func, d().bool]),
+    isCircular: d().bool,
+    expandable: d().bool
 }),
-    (0, u.Z)(k, 'defaultProps', {
+    (0, u.Z)(w, 'defaultProps', {
         data: [],
         circularCache: [],
         level: 0,

@@ -26,23 +26,23 @@ var r = n(735250),
     g = n(665692),
     S = n(689938),
     A = n(864066);
-function N(e, t, n, i) {
+function N(e, t, n, i, a) {
     if (null == e) return;
-    let a = () => {
+    let c = () => {
         let r = E.Z.getChannel(e);
         if (null == r) return;
-        let { command: a, application: s } = l.Xq(r, n);
-        if (null != a && a.name === t) {
-            var c, d;
+        let { command: s, application: c } = l.Xq(r, n, a);
+        if (null != s && s.name === t) {
+            var d, _;
             I.S.dispatch(m.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
             let t =
-                null != s
+                null != c
                     ? {
                           type: u.Qi.APPLICATION,
-                          id: s.id,
-                          icon: s.icon,
-                          name: null !== (d = null == s ? void 0 : null === (c = s.bot) || void 0 === c ? void 0 : c.username) && void 0 !== d ? d : s.name,
-                          application: s
+                          id: c.id,
+                          icon: c.icon,
+                          name: null !== (_ = null == c ? void 0 : null === (d = c.bot) || void 0 === d ? void 0 : d.username) && void 0 !== _ ? _ : c.name,
+                          application: c
                       }
                     : null;
             o.Po({
@@ -52,7 +52,7 @@ function N(e, t, n, i) {
             }),
                 o.Po({
                     channelId: e,
-                    command: a,
+                    command: s,
                     section: t,
                     location: i
                 });
@@ -64,7 +64,7 @@ function N(e, t, n, i) {
                   header: S.Z.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_HEADER,
                   confirmText: S.Z.Messages.CLEAR,
                   cancelText: S.Z.Messages.CANCEL,
-                  onConfirm: () => a(),
+                  onConfirm: () => c(),
                   confirmButtonColor: s.Button.Colors.BRAND,
                   onCloseCallback: () => {
                       I.S.dispatch(m.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
@@ -76,7 +76,7 @@ function N(e, t, n, i) {
                   })
               })
           )
-        : a();
+        : c();
 }
 function v(e) {
     var t;
@@ -139,10 +139,10 @@ function v(e) {
           });
 }
 function O(e) {
-    let { commandId: t, commandName: n, commandDescription: i, onClick: o } = e,
-        l = (0, a.e7)([p.Z], () => p.Z.getChannelId()),
-        c = (e) => {
-            null == e || e.stopPropagation(), N(l, n, t, u.Vh.POPULAR_COMMANDS), null == o || o(t);
+    let { commandId: t, commandName: n, commandDescription: i, applicationId: o, onClick: l } = e,
+        c = (0, a.e7)([p.Z], () => p.Z.getChannelId()),
+        d = (e) => {
+            null == e || e.stopPropagation(), N(c, n, t, u.Vh.POPULAR_COMMANDS, o), null == l || l(t);
         };
     return (0, r.jsx)(s.Tooltip, {
         text: i,
@@ -153,7 +153,7 @@ function O(e) {
             return (0, r.jsxs)(s.Button, {
                 color: s.ButtonColors.PRIMARY,
                 size: s.ButtonSizes.ICON,
-                onClick: c,
+                onClick: d,
                 onMouseEnter: t,
                 onMouseLeave: i,
                 children: ['/', n]

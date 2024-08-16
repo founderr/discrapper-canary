@@ -1,6 +1,6 @@
 var i,
-    a,
     s,
+    a,
     r,
     l = n(913527),
     o = n.n(l),
@@ -27,8 +27,8 @@ let f = null,
         retries: 0
     },
     x = (e) => {
-        let { dropsQuestId: t, streamKey: n, game: i, completed: a, gameTitle: s } = R;
-        if (!(null == t || null == s || a || null == i || null == n || A.isStarted()))
+        let { dropsQuestId: t, streamKey: n, game: i, completed: s, gameTitle: a } = R;
+        if (!(null == t || null == a || s || null == i || null == n || A.isStarted()))
             e
                 ? (0, T.m0)(t, n, i.pid)
                 : A.start(1 * m.Z.Millis.MINUTE, () => {
@@ -89,15 +89,15 @@ class v extends (r = c.ZP.Store) {
         return null == t ? 0 : t.percent;
     }
 }
-(s = 'DropsStore'),
-    (a = 'displayName') in (i = v)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(a = 'DropsStore'),
+    (s = 'displayName') in (i = v)
+        ? Object.defineProperty(i, s, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
+        : (i[s] = a),
     (t.Z = new v(d.Z, {
         DROPS_ELIGIBILITY_FETCH_SUCCESS: (e) => {
             p[e.dropsQuestId] = e.isEligible;
@@ -152,15 +152,15 @@ class v extends (r = c.ZP.Store) {
         },
         STREAM_START: function (e) {
             var t;
-            let { streamType: n, guildId: i, channelId: a, pid: s } = e,
+            let { streamType: n, guildId: i, channelId: s, pid: a } = e,
                 r = (0, E.V9)({
                     streamType: n,
                     guildId: i,
-                    channelId: a,
+                    channelId: s,
                     ownerId: I.default.getId()
                 });
-            if (null == s) return;
-            let l = _.ZP.getGameForPID(s);
+            if (null == a) return;
+            let l = _.ZP.getGameForPID(a);
             if (null == l) return;
             let o = Object.values(N.Zv).find((e) =>
                 e.gameSearchTerm.find((e) => {

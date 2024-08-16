@@ -272,7 +272,7 @@ class L extends o.Z {
                     reason: e,
                     max_viewers: this.analyticsContext.maxViewers,
                     hostname: this.hostname,
-                    hardware_enabled: I.Z.getHardwareEncoding(),
+                    hardware_enabled: I.Z.getHardwareH264(),
                     device_performance_class: this.isOwner ? (0, d.R)() : null
                 });
         }),
@@ -293,7 +293,7 @@ class L extends o.Z {
                         reason: e,
                         max_viewers: this.analyticsContext.maxViewers,
                         hostname: this.hostname,
-                        hardware_enabled: I.Z.getHardwareEncoding(),
+                        hardware_enabled: I.Z.getHardwareH264(),
                         device_performance_class: this.isOwner ? (0, d.R)() : null
                     });
             });

@@ -1,9 +1,9 @@
 r.d(t, {
     t7: function () {
-        return k;
+        return w;
     },
     y7: function () {
-        return j;
+        return x;
     }
 });
 var a = r(693598),
@@ -27,7 +27,7 @@ function f(e, t) {
     }
     return r;
 }
-function d(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
@@ -42,8 +42,8 @@ function d(e) {
     }
     return e;
 }
-var h = o.default,
-    p = Object.keys(h),
+var d = o.default,
+    p = Object.keys(d),
     y = function (e) {
         var t,
             r = c()(e),
@@ -60,7 +60,7 @@ var h = o.default,
         return function (t) {
             return {
                 className: [t.className, e.className].filter(Boolean).join(' '),
-                style: d(d({}, t.style || {}), e.style || {})
+                style: h(h({}, t.style || {}), e.style || {})
             };
         };
     },
@@ -94,7 +94,7 @@ var h = o.default,
                             style: e
                         });
                     case 'object':
-                        return d(d({}, t), e);
+                        return h(h({}, t), e);
                     case 'function':
                         return function (r) {
                             for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
@@ -140,7 +140,7 @@ var h = o.default,
             .filter(Boolean)
             .reduce(
                 function (e, t) {
-                    return 'string' == typeof t ? (e.className = [e.className, t].filter(Boolean).join(' ')) : 'object' === (0, a.Z)(t) ? (e.style = d(d({}, e.style), t)) : 'function' == typeof t && (e = d(d({}, e), t.apply(void 0, [e].concat(n)))), e;
+                    return 'string' == typeof t ? (e.className = [e.className, t].filter(Boolean).join(' ')) : 'object' === (0, a.Z)(t) ? (e.style = h(h({}, e.style), t)) : 'function' == typeof t && (e = h(h({}, e), t.apply(void 0, [e].concat(n)))), e;
                 },
                 {
                     className: '',
@@ -149,19 +149,19 @@ var h = o.default,
             );
         return !o.className && delete o.className, 0 === Object.keys(o.style).length && delete o.style, o;
     },
-    w = function (e) {
+    k = function (e) {
         return Object.keys(e).reduce(function (t, r) {
             return (t[r] = /^base/.test(r) ? y(e[r]) : 'scheme' === r ? e[r] + ':inverted' : e[r]), t;
         }, {});
     },
-    k = l()(function (e) {
+    w = l()(function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             a = t.defaultBase16,
-            n = void 0 === a ? h : a,
+            n = void 0 === a ? d : a,
             s = t.base16Themes,
-            o = x(r, void 0 === s ? null : s);
-        o && (r = d(d({}, o), r));
+            o = j(r, void 0 === s ? null : s);
+        o && (r = h(h({}, o), r));
         for (
             var i = p.reduce(function (e, t) {
                     return (e[t] = r[t] || n[t]), e;
@@ -184,18 +184,18 @@ var h = o.default,
     E = function (e) {
         return !!e.extend;
     },
-    x = function (e, t) {
+    j = function (e, t) {
         if ((e && E(e) && e.extend && (e = e.extend), 'string' == typeof e)) {
             var r = e.split(':'),
                 a = (0, s.Z)(r, 2),
                 n = a[0],
                 i = a[1];
-            (e = t ? t[n] : o[n]), 'inverted' === i && (e = w(e));
+            (e = t ? t[n] : o[n]), 'inverted' === i && (e = k(e));
         }
         return e && Object.prototype.hasOwnProperty.call(e, 'base00') ? e : void 0;
     },
-    j = function (e) {
+    x = function (e) {
         if ('string' == typeof e) return ''.concat(e, ':inverted');
-        if (e && E(e) && e.extend) return 'string' == typeof e.extend ? d(d({}, e), {}, { extend: ''.concat(e.extend, ':inverted') }) : d(d({}, e), {}, { extend: w(e.extend) });
-        return e ? w(e) : e;
+        if (e && E(e) && e.extend) return 'string' == typeof e.extend ? h(h({}, e), {}, { extend: ''.concat(e.extend, ':inverted') }) : h(h({}, e), {}, { extend: k(e.extend) });
+        return e ? k(e) : e;
     };

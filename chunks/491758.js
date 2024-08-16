@@ -32,7 +32,7 @@ var n = t(735250),
     D = t(992133),
     P = t(224499);
 function L() {
-    let e = (0, o.e7)([T.Z], () => T.Z.getHardwareEncoding()),
+    let e = (0, o.e7)([T.Z], () => T.Z.getHardwareH264()),
         { clipsEnabled: s, remindersEnabled: t, decoupledClipsEnabled: i, clipsLength: L, clipsQuality: b } = (0, o.cj)([C.Z], () => C.Z.getSettings()),
         Z = (0, o.e7)([C.Z], () => C.Z.getHardwareClassification()),
         v = (0, o.e7)([S.Z], () => S.Z.getKeybindForAction(p.kg4.SAVE_CLIP, !0)),

@@ -138,17 +138,17 @@ s.Z = (e) => {
                     subscription: s
                 });
         },
-        k = async () => {
+        H = async () => {
             try {
                 p(!0), await d.pl(s, F), (0, D.h)();
             } finally {
                 p(!1);
             }
         },
-        { isCancelled: H, isPastDue: W, subscriptionPrice: K, memberSince: z, nextRenewalDate: Q, nextRenewalLabel: X, isTrial: q } = O,
+        { isCancelled: k, isPastDue: W, subscriptionPrice: K, memberSince: z, nextRenewalDate: Q, nextRenewalLabel: X, isTrial: q } = O,
         J = t.soft_deleted || null == l || V,
         $ = () => {
-            if (H) return (0, n.jsx)(c.TextBadge, { text: Z.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_CANCELLED });
+            if (k) return (0, n.jsx)(c.TextBadge, { text: Z.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_CANCELLED });
             if (q)
                 return (0, n.jsx)(c.TextBadge, {
                     text: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TITLE,
@@ -267,7 +267,7 @@ s.Z = (e) => {
                               ]
                           }),
                           (0, n.jsx)(c.Spacer, { size: 16 }),
-                          !H &&
+                          !k &&
                               !V &&
                               (0, n.jsxs)(n.Fragment, {
                                   children: [(0, n.jsx)(c.FormTitle, { children: Z.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL }), (0, n.jsx)(B, { subscription: s })]
@@ -275,12 +275,12 @@ s.Z = (e) => {
                           !J &&
                               (0, n.jsx)(U, {
                                   isTrial: q,
-                                  isCancelled: H,
+                                  isCancelled: k,
                                   isResubscribing: g,
                                   shouldHideRoleSubscriptionEntryPoints: y,
                                   onCancelSubscriptionClick: w,
                                   onChangePlanClick: Y,
-                                  onResubscribeClick: k
+                                  onResubscribeClick: H
                               })
                       ]
                   })

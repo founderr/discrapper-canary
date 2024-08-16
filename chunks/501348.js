@@ -60,8 +60,8 @@ let Y = {
         COMPACT: 'compact'
     },
     w = (0, m.hQ)(),
-    k = (0, m.hQ)(),
     H = (0, m.hQ)(),
+    k = (0, m.hQ)(),
     W = '1337',
     K = (e) => {
         let s = 0;
@@ -165,7 +165,7 @@ class Q extends a.Component {
             className: y.marginTop20,
             children: [
                 (0, n.jsx)(d.FormTitle, {
-                    id: k,
+                    id: H,
                     tag: d.FormTitleTags.H5,
                     className: y.marginBottom8,
                     children: G.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
@@ -182,7 +182,7 @@ class Q extends a.Component {
                         onValueRender: this.handleSliderRenderPX,
                         onMarkerRender: this.handleSliderRenderPX,
                         getAriaValueText: this.handleSliderValueText,
-                        'aria-labelledby': k
+                        'aria-labelledby': H
                     })
                 })
             ]
@@ -194,7 +194,7 @@ class Q extends a.Component {
             className: y.marginTop20,
             children: [
                 (0, n.jsx)(d.FormTitle, {
-                    id: H,
+                    id: k,
                     tag: d.FormTitleTags.H5,
                     className: y.marginBottom8,
                     children: G.Z.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
@@ -209,7 +209,7 @@ class Q extends a.Component {
                     onValueRender: this.handleSliderRenderPX,
                     onMarkerRender: this.handleSliderRenderPX,
                     getAriaValueText: this.handleSliderValueText,
-                    'aria-labelledby': H
+                    'aria-labelledby': k
                 })
             ]
         });

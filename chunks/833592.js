@@ -16,8 +16,8 @@ n.d(t, {
     }
 });
 var i = n(990547),
-    a = n(544891),
-    s = n(283693),
+    s = n(544891),
+    a = n(283693),
     r = n(570140),
     l = n(695346),
     o = n(573261),
@@ -38,14 +38,14 @@ async function I(e, t) {
     await r.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
     let n = Math.ceil(c.Z.items.length / e.limit);
     try {
-        let a = await o.Z.get({
+        let s = await o.Z.get({
             url: d.ANM.NOTIF_CENTER_ITEMS(),
             trackedActionData: {
                 event: i.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
                 properties: (e) => {
                     var t;
                     let i = ((null === (t = e.body) || void 0 === t ? void 0 : t.items) || []).map((e) => e.type);
-                    return (0, s.iG)({
+                    return (0, a.iG)({
                         page: n,
                         items: i,
                         item_count: i.length
@@ -57,9 +57,9 @@ async function I(e, t) {
         null == t || t(),
             await r.Z.dispatch({
                 type: 'LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS',
-                items: a.body.items,
-                cursor: a.body.cursor,
-                hasMore: a.body.has_more
+                items: s.body.items,
+                cursor: s.body.cursor,
+                hasMore: s.body.has_more
             });
     } catch (e) {
         null == t || t(), await r.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' });
@@ -90,7 +90,7 @@ async function T(e) {
             optimistic: !0,
             ids: [e]
         }),
-            await a.tn.post({ url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e) });
+            await s.tn.post({ url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e) });
     } catch (t) {
         r.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK_FAILURE',

@@ -40,8 +40,8 @@ var n = t(735250),
     V = t(938736),
     Y = t(386733),
     w = t(474936),
-    k = t(981631),
-    H = t(689938),
+    H = t(981631),
+    k = t(689938),
     W = t(374912),
     K = t(881188),
     z = t(520314),
@@ -71,7 +71,7 @@ function X() {
                               children: [
                                   (u || !I) &&
                                       (0, n.jsx)(G.Cy, {
-                                          text: u ? H.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : H.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
+                                          text: u ? k.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : k.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
                                           className: W.topRimPill,
                                           colorOptions: (0, _.wj)(d) ? G.VE.PREMIUM_TIER_2_WHITE_FILL : G.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                       }),
@@ -81,16 +81,16 @@ function X() {
                                       color: 'always-white',
                                       className: W.trialHeader,
                                       children: u
-                                          ? H.Z.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
+                                          ? k.Z.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
                                                 remainingTime: C,
                                                 price: O
                                             })
                                           : I
-                                            ? H.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
+                                            ? k.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
                                                   percent: null !== (e = null == o ? void 0 : o.percentage) && void 0 !== e ? e : w.Bo,
                                                   regularPrice: O
                                               })
-                                            : H.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
+                                            : k.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
                                                   percent: null !== (s = null == o ? void 0 : o.percentage) && void 0 !== s ? s : w.M_,
                                                   regularPrice: O,
                                                   numMonths: null !== (t = null == o ? void 0 : o.duration) && void 0 !== t ? t : w.rt
@@ -108,17 +108,17 @@ function X() {
                         className: W.tierCardButton,
                         color: E.Button.Colors.WHITE,
                         onClick: () => {
-                            L.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            L.default.track(H.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_premium_home_button',
                                 target: 'premium home page'
                             }),
                                 (0, T.xf)(),
-                                (0, M.uL)(k.Z5c.APPLICATION_STORE);
+                                (0, M.uL)(H.Z5c.APPLICATION_STORE);
                         },
                         children: (0, n.jsx)(E.Text, {
                             className: W.tierCardButtonCTA,
                             variant: 'text-sm/medium',
-                            children: H.Z.Messages.PREMIUM_SETTINGS_NAVIGATE_TO_HOME_CTA_V2
+                            children: k.Z.Messages.PREMIUM_SETTINGS_NAVIGATE_TO_HOME_CTA_V2
                         })
                     }),
                     (0, n.jsx)(E.Button, {
@@ -126,17 +126,17 @@ function X() {
                         look: E.Button.Looks.OUTLINED,
                         color: E.Button.Colors.WHITE,
                         onClick: () => {
-                            L.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            L.default.track(H.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_subscriptions_button',
                                 target: 'subscriptions settings'
                             }),
-                                N.Z.open(k.oAB.SUBSCRIPTIONS);
+                                N.Z.open(H.oAB.SUBSCRIPTIONS);
                         },
                         children: (0, n.jsx)(E.Text, {
                             className: W.__invalid_managePlanButtonCTA,
                             variant: 'text-sm/medium',
                             color: 'always-white',
-                            children: H.Z.Messages.PREMIUM_SETTINGS_NATIGATE_TO_SUBSCRIPTIONS_CTA
+                            children: k.Z.Messages.PREMIUM_SETTINGS_NATIGATE_TO_SUBSCRIPTIONS_CTA
                         })
                     })
                 ]
@@ -177,22 +177,22 @@ function q() {
                     (0, n.jsx)(E.Heading, {
                         className: r()(W.giftTitle, { [W.seasonalColor]: t }),
                         variant: 'heading-xl/extrabold',
-                        children: t ? H.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : H.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING
+                        children: t ? k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING
                     }),
                     (0, n.jsx)(E.Text, {
                         className: r()(W.giftText, { [W.seasonalColor]: t }),
                         variant: 'text-sm/normal',
-                        children: t ? H.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : H.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+                        children: t ? k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
                     }),
                     (0, n.jsx)(U.Z, {
                         isGift: !0,
                         className: r()(W.giftCardButton, t ? W.seasonalColor : W.giftCardButtonColor),
                         look: E.Button.Looks.OUTLINED,
-                        buttonText: H.Z.Messages.GIFT_NITRO,
+                        buttonText: k.Z.Messages.GIFT_NITRO,
                         buttonTextClassName: W.giftButtonCTA,
                         color: E.Button.Colors.CUSTOM,
                         onClick: () => {
-                            L.default.track(k.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            L.default.track(H.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'gifting_button',
                                 target: 'payment modal'
                             });
@@ -226,7 +226,7 @@ s.Z = function () {
     let M = (0, V.bD)('PremiumManagementSettings');
     a.useEffect(() => {
         u.Z.wait(async () => {
-            !N && !e && (await Promise.all([I.jg(), I.tZ(), (0, S.Y2)(T, null, k.JjL.DISCOVERY)])), l(!1);
+            !N && !e && (await Promise.all([I.jg(), I.tZ(), (0, S.Y2)(T, null, H.JjL.DISCOVERY)])), l(!1);
         });
     }, [T, N, e]);
     let [P, b] = a.useState(!1);
@@ -234,7 +234,7 @@ s.Z = function () {
     if (e) return (0, n.jsx)(R.c8, {});
     if ((!i || null == t || !r) && !o)
         return (0, n.jsx)(x.Z, {
-            title: H.Z.Messages.REDIRECTED_CALLBACK_ERROR,
+            title: k.Z.Messages.REDIRECTED_CALLBACK_ERROR,
             note: null
         });
     if (!i || null == t || !r || o) return (0, n.jsx)(E.Spinner, {});
@@ -252,7 +252,7 @@ s.Z = function () {
                         (0, n.jsx)(y.Z, {
                             className: W.__invalid_planComparisonTable,
                             hideCTAs: !0,
-                            headingOverride: H.Z.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,
+                            headingOverride: k.Z.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,
                             hidePill: !Z,
                             selectedPlanColumnClassName: W.tier2PlanComparisonTableBackground,
                             selectedPlanTier: w.p9.TIER_2
@@ -261,7 +261,7 @@ s.Z = function () {
                 }),
                 (0, n.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !P && (L.default.track(k.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), b(!0));
+                        e && !P && (L.default.track(H.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), b(!0));
                     },
                     children: (0, n.jsx)('div', { className: W.bottomOfPageVisibilitySensor })
                 })

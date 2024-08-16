@@ -1,31 +1,31 @@
-var i,
-    a,
-    s,
+var o,
     r,
-    l = n(442837),
-    o = n(570140);
-let c = null;
-class u extends (r = l.ZP.Store) {
+    s,
+    a,
+    i = n(442837),
+    l = n(570140);
+let d = null;
+class c extends (a = i.ZP.Store) {
     hasAction() {
-        return null != c;
+        return null != d;
     }
     getAction() {
-        return c;
+        return d;
     }
 }
-function d(e) {
-    c = e.requiredAction;
+function E(e) {
+    d = e.requiredAction;
 }
 (s = 'UserRequiredActionStore'),
-    (a = 'displayName') in (i = u)
-        ? Object.defineProperty(i, a, {
+    (r = 'displayName') in (o = c)
+        ? Object.defineProperty(o, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    (t.Z = new u(o.Z, {
-        CONNECTION_OPEN: d,
-        USER_REQUIRED_ACTION_UPDATE: d
+        : (o[r] = s),
+    (t.Z = new c(l.Z, {
+        CONNECTION_OPEN: E,
+        USER_REQUIRED_ACTION_UPDATE: E
     }));

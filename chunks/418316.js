@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(924301);
 n(57132);
-var a = n(430824),
-    s = n(699516),
+var s = n(430824),
+    a = n(699516),
     r = n(594174),
     l = n(624138),
     o = n(51144),
@@ -33,13 +33,13 @@ function _(e) {
             let L = null !== (C = null === (f = e.local_id) || void 0 === f ? void 0 : f.split('_').pop()) && void 0 !== C ? C : 'unknown';
             return 'Update to build '.concat(L, ' available!');
         case c.DY.FRIEND_SUGGESTION_CREATED:
-            let Z = s.Z.getRelationshipType(R) === u.OGo.PENDING_OUTGOING;
+            let Z = a.Z.getRelationshipType(R) === u.OGo.PENDING_OUTGOING;
             return null !== (p = e.body) && void 0 !== p ? p : '';
         case c.DY.GUILD_SCHEDULED_EVENT_STARTED:
             let P = e.guild_scheduled_event_id,
                 b = null != P ? i.ZP.getGuildScheduledEvent(P) : null,
                 D = null == b ? void 0 : b.name,
-                j = null === (g = a.Z.getGuild(null == b ? void 0 : b.guild_id)) || void 0 === g ? void 0 : g.name,
+                j = null === (g = s.Z.getGuild(null == b ? void 0 : b.guild_id)) || void 0 === g ? void 0 : g.name,
                 U = (0, i.Z2)(null != b ? b : void 0);
             return (0, l.Ew)(j) || (0, l.Ew)(D) || !U
                 ? null !== (S = e.body) && void 0 !== S

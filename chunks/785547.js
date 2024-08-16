@@ -6,8 +6,8 @@ n.d(t, {
     n(411104),
     n(47120);
 var i,
-    a,
     s,
+    a,
     r = n(735250),
     l = n(470079),
     o = n(442837),
@@ -43,7 +43,7 @@ function M(e, t, n) {
         e
     );
 }
-((s = i || (i = {})).PLAY = 'play'), (s.NOW_PLAYING = 'now_playing'), (s.INSTALL = 'install'), (s.UPDATE = 'update'), (s.PAUSED = 'paused'), (s.LOCATE = 'locate'), (s.UNINSTALLING = 'uninstalling'), (s.QUEUED = 'queued'), (s.DOWNLOADING = 'downloading'), (s.UNSUPPORTED_OS = 'unsupported_os'), (s.ADD_TO_LIBRARY = 'add_to_library'), (s.PREORDER_WAIT = 'preorder_wait');
+((a = i || (i = {})).PLAY = 'play'), (a.NOW_PLAYING = 'now_playing'), (a.INSTALL = 'install'), (a.UPDATE = 'update'), (a.PAUSED = 'paused'), (a.LOCATE = 'locate'), (a.UNINSTALLING = 'uninstalling'), (a.QUEUED = 'queued'), (a.DOWNLOADING = 'downloading'), (a.UNSUPPORTED_OS = 'unsupported_os'), (a.ADD_TO_LIBRARY = 'add_to_library'), (a.PREORDER_WAIT = 'preorder_wait');
 let v = Object.freeze({
         [R.apO.PLAY]: 'play',
         [R.apO.INSTALL]: 'install',
@@ -53,7 +53,7 @@ let v = Object.freeze({
         [R.apO.RESUME]: 'paused'
     }),
     L = () => [x.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, x.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, x.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, x.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, x.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, x.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, x.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, x.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, x.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, x.Z.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
-class Z extends (a = l.Component) {
+class Z extends (s = l.Component) {
     get analyticsLocation() {
         return {
             ...this.props.analyticsContext.location,
@@ -94,15 +94,15 @@ class Z extends (a = l.Component) {
         return null != i ? i : null != t && t.type === R.vxO.UNINSTALLING ? 'uninstalling' : (0, p.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {
-        let { libraryApplication: e, fullWidth: t, size: n, color: i, customDisabledColor: a, isPlayShiny: s, onDropdownOpen: l, onDropdownClose: o, analyticsListSort: c, analyticsListIndex: u } = this.props;
+        let { libraryApplication: e, fullWidth: t, size: n, color: i, customDisabledColor: s, isPlayShiny: a, onDropdownOpen: l, onDropdownClose: o, analyticsListSort: c, analyticsListIndex: u } = this.props;
         return (0, r.jsx)(A.Z, {
             applicationId: e.id,
             libraryApplication: e,
             fullWidth: t,
             size: n,
             color: i,
-            customDisabledColor: a,
-            isShiny: s,
+            customDisabledColor: s,
+            isShiny: a,
             onDropdownOpen: l,
             onDropdownClose: o,
             analyticsListSort: c,
@@ -110,15 +110,15 @@ class Z extends (a = l.Component) {
         });
     }
     renderDisabledButton(e, t) {
-        let { className: n, fullWidth: i, size: a, customDisabledColor: s, tooltipPosition: l } = this.props;
+        let { className: n, fullWidth: i, size: s, customDisabledColor: a, tooltipPosition: l } = this.props;
         return (0, r.jsxs)('div', {
             className: O.disabledButtonWrapper,
             children: [
                 (0, r.jsxs)(u.Button, {
                     className: n,
                     fullWidth: i,
-                    size: a,
-                    color: null != s ? s : O.disabledButtonColor,
+                    size: s,
+                    color: null != a ? a : O.disabledButtonColor,
                     disabled: !0,
                     children: [this.getText(e), this.renderProgressBar()]
                 }),
@@ -149,12 +149,12 @@ class Z extends (a = l.Component) {
         });
     }
     renderActionButton(e, t) {
-        let { className: n, fullWidth: i, size: a, color: s, isCloudSyncing: l } = this.props;
+        let { className: n, fullWidth: i, size: s, color: a, isCloudSyncing: l } = this.props;
         return (0, r.jsxs)(u.Button, {
             className: n,
             fullWidth: i,
-            size: a,
-            color: null != s ? s : u.Button.Colors.GREEN,
+            size: s,
+            color: null != a ? a : u.Button.Colors.GREEN,
             submitting: 'uninstalling' === e || l,
             onClick: (e) => this.handleClick(e, t),
             children: [this.getText(e), this.renderProgressBar()]
@@ -210,15 +210,15 @@ class Z extends (a = l.Component) {
 function P(e) {
     let { libraryApplication: t } = e,
         n = (0, _.O)(),
-        [i, a] = (0, o.Wu)([N.Z, f.Z], () => [(0, T.i)(t, N.Z, f.Z), N.Z.getState(t.id, t.branchId)], [t]),
-        s = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]),
+        [i, s] = (0, o.Wu)([N.Z, f.Z], () => [(0, T.i)(t, N.Z, f.Z), N.Z.getState(t.id, t.branchId)], [t]),
+        a = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]),
         l = (0, o.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, r.jsx)(Z, {
         ...e,
         analyticsContext: n,
         actionState: i,
-        dispatchState: a,
-        isCloudSyncing: s,
+        dispatchState: s,
+        isCloudSyncing: a,
         hasNoBuild: l
     });
 }

@@ -162,7 +162,7 @@ s.Z = function () {
     }, [g]);
     let p = b.bh.useSetting(),
         y = null != O || !g,
-        { promotionsLoaded: V, activeOutboundPromotions: Y, claimedEndedOutboundPromotions: w, claimedOutboundPromotionCodeMap: k, addClaimedOutboundPromotionCode: H } = (0, h.lG)(),
+        { promotionsLoaded: V, activeOutboundPromotions: Y, claimedEndedOutboundPromotions: w, claimedOutboundPromotionCodeMap: H, addClaimedOutboundPromotionCode: k } = (0, h.lG)(),
         W = Y.length + w.length > 0,
         K =
             A.g.useExperiment(
@@ -242,7 +242,7 @@ s.Z = function () {
                                           {
                                               outboundPromotion: t,
                                               code: s,
-                                              addClaimedOutboundPromotionCode: H,
+                                              addClaimedOutboundPromotionCode: k,
                                               disabled: !i
                                           },
                                           t.id
@@ -253,8 +253,8 @@ s.Z = function () {
                                           F,
                                           {
                                               outboundPromotion: e,
-                                              code: k[e.id],
-                                              addClaimedOutboundPromotionCode: H,
+                                              code: H[e.id],
+                                              addClaimedOutboundPromotionCode: k,
                                               disabled: !i
                                           },
                                           e.id

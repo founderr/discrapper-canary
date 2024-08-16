@@ -51,7 +51,7 @@ var n,
     Y = t(689938),
     w = t(758294);
 ((a = n || (n = {}))[(a.WHAT_YOU_LOSE = 1)] = 'WHAT_YOU_LOSE'), (a[(a.CONFIRM = 2)] = 'CONFIRM'), (a[(a.PREVIEW = 3)] = 'PREVIEW'), (a[(a.CONFIRM_DISCOUNT = 4)] = 'CONFIRM_DISCOUNT'), (a[(a.DISCOUNT_APPLIED = 5)] = 'DISCOUNT_APPLIED'), (a[(a.PAUSE_SELECT = 6)] = 'PAUSE_SELECT'), (a[(a.PAUSE_CONFIRM = 7)] = 'PAUSE_CONFIRM');
-async function k(e) {
+async function H(e) {
     let { premiumSubscription: s, onClose: t, setHasError: n, setIsCancelling: a, analyticsLocations: i, analyticsLocation: r } = e;
     try {
         if ((a(!0), n(!1), [V.O0b.PAST_DUE, V.O0b.PAUSED, V.O0b.BILLING_RETRY].includes(s.status))) await (0, T.EO)(s.id, i, r);
@@ -65,7 +65,7 @@ async function k(e) {
         n(!0), a(!1);
     }
 }
-function H(e) {
+function k(e) {
     var s;
     let { premiumSubscription: t, premiumType: n, setStep: a, onClose: o, whatYouLoseExperienceEnabled: l, analyticsLocation: c } = e,
         d = (0, m.Q)(),
@@ -128,7 +128,7 @@ function H(e) {
                   color: I.Button.Colors.RED,
                   disabled: _,
                   onClick: async () => {
-                      await k({
+                      await H({
                           setHasError: N,
                           onClose: o,
                           premiumSubscription: t,
@@ -260,7 +260,7 @@ function K(e) {
                         color: I.Button.Colors.RED,
                         disabled: c,
                         onClick: async () => {
-                            await k({
+                            await H({
                                 setHasError: E,
                                 onClose: a,
                                 premiumSubscription: s,
@@ -314,7 +314,7 @@ function X(e) {
     let j = M === y.p9.TIER_0 || M === y.p9.TIER_1 || M === y.p9.TIER_2;
     null == E && (E = j ? 1 : 2);
     let { analyticsLocations: B } = (0, C.ZP)(l, N.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
-        [U, k, W, X] = (function (e, s, t) {
+        [U, H, W, X] = (function (e, s, t) {
             let [n, a] = r.useState(e),
                 [i, o] = r.useState(Date.now()),
                 [l] = r.useState(Date.now()),
@@ -355,7 +355,7 @@ function X(e) {
             t = (0, i.jsx)(Z.of, {
                 premiumSubscription: n,
                 premiumType: M,
-                setStep: k,
+                setStep: H,
                 onClose: () => $(U),
                 pauseDuration: q,
                 setPauseDuration: J,
@@ -365,7 +365,7 @@ function X(e) {
                         (0, i.jsx)(I.Button, {
                             disabled: null === q,
                             onClick: () => {
-                                0 === q ? k(1) : k(7);
+                                0 === q ? H(1) : H(7);
                             },
                             children: Y.Z.Messages.CONTINUE
                         }),
@@ -396,7 +396,7 @@ function X(e) {
             t = (0, i.jsx)(Z.Sz, {
                 premiumSubscription: n,
                 premiumType: M,
-                setStep: k,
+                setStep: H,
                 onClose: () => $(U),
                 analyticsLocation: d,
                 pauseDuration: q
@@ -425,7 +425,7 @@ function X(e) {
                     className: w.whatYouLoseButtonContainer,
                     children: [
                         (0, i.jsx)(I.Button, {
-                            onClick: () => k(2),
+                            onClick: () => H(2),
                             children: Y.Z.Messages.CONTINUE
                         }),
                         (0, i.jsx)(I.Button, {
@@ -437,18 +437,18 @@ function X(e) {
                     ]
                 }),
                 onClose: () => $(U),
-                onDiscountClaim: () => k(4),
-                onContinue: () => k(2),
+                onDiscountClaim: () => H(4),
+                onContinue: () => H(2),
                 isLoading: ee && et,
                 churnUserDiscountOffer: es,
                 analyticsLocations: B
             });
             break;
         case 2:
-            t = (0, i.jsx)(H, {
+            t = (0, i.jsx)(k, {
                 premiumSubscription: n,
                 premiumType: M,
-                setStep: k,
+                setStep: H,
                 onClose: () => $(U),
                 whatYouLoseExperienceEnabled: j,
                 analyticsLocation: d
@@ -458,7 +458,7 @@ function X(e) {
             t = (0, i.jsx)(K, {
                 premiumSubscription: n,
                 premiumType: M,
-                onBack: () => k(2),
+                onBack: () => H(2),
                 onClose: () => $(U),
                 analyticsLocation: d
             });
@@ -468,7 +468,7 @@ function X(e) {
                 premiumSubscription: n,
                 premiumType: M,
                 onClose: () => $(U),
-                onConfirm: () => k(5),
+                onConfirm: () => H(5),
                 userDiscountOffer: es
             });
             break;

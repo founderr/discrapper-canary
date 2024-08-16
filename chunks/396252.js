@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     r = n(442837),
     l = n(481060),
     o = n(385499),
@@ -20,7 +20,7 @@ var a = n(120356),
     T = n(549766);
 function h(e) {
     var t;
-    let { message: n, compact: a, usernameHook: h, channel: N } = e,
+    let { message: n, compact: s, usernameHook: h, channel: N } = e,
         f = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)),
         C = (0, u.ZP)(n),
         p = h(C),
@@ -32,17 +32,17 @@ function h(e) {
         onMouseEnter: S,
         onMouseLeave: A,
         children: (0, i.jsx)(E.Z, {
-            className: s()(T.mainContainer, { [T.compact]: a }),
-            iconNode: a ? null : (0, i.jsx)(_.S, { src: g }),
+            className: a()(T.mainContainer, { [T.compact]: s }),
+            iconNode: s ? null : (0, i.jsx)(_.S, { src: g }),
             iconContainerClassName: T.iconContainer,
-            compact: a,
+            compact: s,
             children: (0, i.jsxs)('div', {
-                className: s()(T.content, { [T.compact]: a }),
+                className: a()(T.content, { [T.compact]: s }),
                 children: [
                     (0, i.jsx)(d.nD, {
                         message: n,
                         messageClassname: T.spanCorrection,
-                        className: s()(T.usernameContainer, T.spanCorrection, { [T.compact]: a }),
+                        className: a()(T.usernameContainer, T.spanCorrection, { [T.compact]: s }),
                         username: (0, i.jsxs)('div', {
                             className: T.spanCorrection,
                             children: [
@@ -59,11 +59,11 @@ function h(e) {
                                 })
                             ]
                         }),
-                        compact: a,
+                        compact: s,
                         showTimestamp: !0
                     }),
                     (0, i.jsx)('div', {
-                        className: s()(T.__invalid_messageContent, { [T.compact]: a }),
+                        className: a()(T.__invalid_messageContent, { [T.compact]: s }),
                         children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
                             username: C.nick,
                             usernameHook: p,

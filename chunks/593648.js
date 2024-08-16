@@ -46,7 +46,7 @@ var n = t(735250),
     V = t(689938),
     Y = t(426514),
     w = t(224499);
-function k(e, s, t) {
+function H(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -59,7 +59,7 @@ function k(e, s, t) {
         e
     );
 }
-function H(e) {
+function k(e) {
     let { label: s, enabled: t, disabled: a, onPreview: i, onChange: r, tooltip: o } = e;
     return (0, n.jsx)(d.FormSwitch, {
         className: Y.soundRow,
@@ -250,7 +250,7 @@ function W(e) {
                 T.map((e) => {
                     let { label: a, sound: i, disabled: r, focusModeDisabled: o } = e;
                     return (0, n.jsx)(
-                        H,
+                        k,
                         {
                             label: a,
                             disabled: t || !0 === r || !0 === o,
@@ -456,13 +456,13 @@ class z extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            k(this, 'handleToggleShowUnreadBadge', () => {
+            H(this, 'handleToggleShowUnreadBadge', () => {
                 E.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
             }),
-            k(this, 'handleToggleShowFlash', () => {
+            H(this, 'handleToggleShowFlash', () => {
                 E.default.setTaskbarFlash(!this.props.taskbarFlash);
             }),
-            k(this, 'renderTTS', () => {
+            H(this, 'renderTTS', () => {
                 if (!I.Zh) return null;
                 let e = [
                     {

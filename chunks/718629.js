@@ -1,19 +1,19 @@
 var r = n(570140),
     i = n(668781),
     a = n(881052),
-    s = n(352954),
-    o = n(630759),
-    E = n(651941),
-    u = n(760373),
+    o = n(352954),
+    s = n(630759),
+    u = n(651941),
+    l = n(760373),
     c = n(689938);
-async function l(e) {
+async function E(e) {
     if (e) {
         r.Z.dispatch({
             type: 'SECURE_FRAMES_SETTINGS_UPDATE',
             persistentCodesEnabled: e
         });
         try {
-            await (0, o.om)(u.GB);
+            await (0, s.om)(l.GB);
         } catch (n) {
             var t;
             let e = new a.Hx(n);
@@ -34,8 +34,8 @@ async function l(e) {
             }),
                 r.Z.dispatch({ type: 'SECURE_FRAMES_ALL_VERIFIED_KEYS_DELETE' });
         };
-        E.Z.getUserIds().length > 0
-            ? s.Z.openSecureFramesUpdateConfirmation({
+        u.Z.getUserIds().length > 0
+            ? o.Z.openSecureFramesUpdateConfirmation({
                   title: c.Z.Messages.E2EE_DISABLE_PERSISTENT_KEYS_CONFIRM_TITLE,
                   subtitle: c.Z.Messages.E2EE_DISABLE_PERSISTENT_KEYS_CONFIRM_SUBTITLE,
                   onConfirm: t
@@ -44,7 +44,7 @@ async function l(e) {
     }
 }
 t.Z = {
-    updatePersistentCodesEnabled: l,
+    updatePersistentCodesEnabled: E,
     addCurrentUserUploadedKeyVersionCached: function (e) {
         r.Z.dispatch({
             type: 'SECURE_FRAMES_UPLOAD_PUBLIC_KEY_SUCCESS',

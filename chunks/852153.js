@@ -8,8 +8,8 @@ var a = r(599295),
     l = r(3339),
     b = r(652621),
     f = r(398420),
-    d = r(893361),
-    h = ['getItemString', 'keyPath', 'labelRenderer', 'styling', 'value', 'valueRenderer', 'isCustomNode'];
+    h = r(893361),
+    d = ['getItemString', 'keyPath', 'labelRenderer', 'styling', 'value', 'valueRenderer', 'isCustomNode'];
 function p(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -45,7 +45,7 @@ var g = function (e) {
         c = e.value,
         p = e.valueRenderer,
         g = e.isCustomNode,
-        v = (0, s.Z)(e, h),
+        v = (0, s.Z)(e, d),
         m = g(c) ? 'Custom' : (0, u.Z)(c),
         O = {
             getItemString: t,
@@ -57,7 +57,7 @@ var g = function (e) {
             value: c,
             valueRenderer: p
         },
-        w = y(
+        k = y(
             y(y({}, v), O),
             {},
             {
@@ -70,16 +70,16 @@ var g = function (e) {
         case 'Error':
         case 'WeakMap':
         case 'WeakSet':
-            return o.createElement(l.Z, w);
+            return o.createElement(l.Z, k);
         case 'Array':
-            return o.createElement(b.Z, w);
+            return o.createElement(b.Z, k);
         case 'Iterable':
         case 'Map':
         case 'Set':
-            return o.createElement(f.Z, w);
+            return o.createElement(f.Z, k);
         case 'String':
             return o.createElement(
-                d.Z,
+                h.Z,
                 (0, a.Z)({}, O, {
                     valueGetter: function (e) {
                         return '"'.concat(e, '"');
@@ -88,10 +88,10 @@ var g = function (e) {
             );
         case 'Number':
         case 'Custom':
-            return o.createElement(d.Z, O);
+            return o.createElement(h.Z, O);
         case 'Boolean':
             return o.createElement(
-                d.Z,
+                h.Z,
                 (0, a.Z)({}, O, {
                     valueGetter: function (e) {
                         return e ? 'true' : 'false';
@@ -100,7 +100,7 @@ var g = function (e) {
             );
         case 'Date':
             return o.createElement(
-                d.Z,
+                h.Z,
                 (0, a.Z)({}, O, {
                     valueGetter: function (e) {
                         return e.toISOString();
@@ -109,7 +109,7 @@ var g = function (e) {
             );
         case 'Null':
             return o.createElement(
-                d.Z,
+                h.Z,
                 (0, a.Z)({}, O, {
                     valueGetter: function () {
                         return 'null';
@@ -118,7 +118,7 @@ var g = function (e) {
             );
         case 'Undefined':
             return o.createElement(
-                d.Z,
+                h.Z,
                 (0, a.Z)({}, O, {
                     valueGetter: function () {
                         return 'undefined';
@@ -128,7 +128,7 @@ var g = function (e) {
         case 'Function':
         case 'Symbol':
             return o.createElement(
-                d.Z,
+                h.Z,
                 (0, a.Z)({}, O, {
                     valueGetter: function (e) {
                         return e.toString();
@@ -137,7 +137,7 @@ var g = function (e) {
             );
         default:
             return o.createElement(
-                d.Z,
+                h.Z,
                 (0, a.Z)({}, O, {
                     valueGetter: function () {
                         return '<'.concat(m, '>');

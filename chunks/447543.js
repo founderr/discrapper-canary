@@ -399,23 +399,23 @@ t.Z = {
         });
     },
     transitionToInvite(e, t) {
-        var n, r, i;
-        let { channel: a, guild: s } = e;
-        if (null != s && (null === (n = s.features) || void 0 === n ? void 0 : n.includes(j.oNc.HUB))) {
+        var n, r;
+        let { channel: i, guild: a } = e;
+        if (null != a && (null === (n = a.features) || void 0 === n ? void 0 : n.includes(j.oNc.HUB))) {
             A.Z.onOpenHubInvite(e);
             return;
         }
-        if (null != s && (null === (r = s.features) || void 0 === r ? void 0 : r.includes(j.oNc.COMMUNITY)) && (null === (i = s.features) || void 0 === i ? void 0 : i.includes(j.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && !s.features.includes(j.oNc.PREVIEW_ENABLED)) {
-            (0, C.uL)(j.Z5c.GUILD_MEMBER_VERIFICATION(s.id, e.code));
+        if (null != a && (null === (r = a.features) || void 0 === r ? void 0 : r.includes(j.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && !a.features.includes(j.oNc.PREVIEW_ENABLED)) {
+            (0, I.hk)(a.id);
             return;
         }
-        if (null == a) return;
-        let o = $(e);
-        null != t && (o.transitionTo = t),
+        if (null == i) return;
+        let s = $(e);
+        null != t && (s.transitionTo = t),
             J({
-                guildId: null != s ? s.id : j.ME,
-                channel: a,
-                options: o
+                guildId: null != a ? a.id : j.ME,
+                channel: i,
+                options: s
             });
     },
     transitionToInviteSync(e, t, n) {

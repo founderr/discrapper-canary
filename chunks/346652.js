@@ -13,8 +13,8 @@ var a = r(599295),
     l = r(692378),
     b = r(922474),
     f = r(470079),
-    d = r(639519),
-    h = r.n(d),
+    h = r(639519),
+    d = r.n(h),
     p = r(852153),
     y = r(140201),
     g = r(667929),
@@ -46,10 +46,10 @@ function O(e) {
     }
     return e;
 }
-var w = function (e) {
+var k = function (e) {
     return e;
 };
-function k(e) {
+function w(e) {
     var t,
         r,
         a,
@@ -101,7 +101,7 @@ var E = (function (e) {
             });
     function b(e) {
         var t;
-        return (0, s.Z)(this, b), ((t = l.call(this, e)).state = k(e)), t;
+        return (0, s.Z)(this, b), ((t = l.call(this, e)).state = w(e)), t;
     }
     return (
         (0, o.Z)(b, [
@@ -111,7 +111,7 @@ var E = (function (e) {
                     var t = this;
                     ['theme', 'invertTheme'].find(function (r) {
                         return e[r] !== t.props[r];
-                    }) && this.setState(k(e));
+                    }) && this.setState(w(e));
                 }
             },
             {
@@ -162,13 +162,13 @@ var E = (function (e) {
     );
 })(f.Component);
 (0, l.Z)(E, 'propTypes', {
-    data: h().any,
-    hideRoot: h().bool,
-    theme: h().oneOfType([h().object, h().string]),
-    invertTheme: h().bool,
-    keyPath: h().arrayOf(h().oneOfType([h().string, h().number])),
-    postprocessValue: h().func,
-    sortObjectKeys: h().oneOfType([h().func, h().bool])
+    data: d().any,
+    hideRoot: d().bool,
+    theme: d().oneOfType([d().object, d().string]),
+    invertTheme: d().bool,
+    keyPath: d().arrayOf(d().oneOfType([d().string, d().number])),
+    postprocessValue: d().func,
+    sortObjectKeys: d().oneOfType([d().func, d().bool])
 }),
     (0, l.Z)(E, 'defaultProps', {
         shouldExpandNode: function (e, t, r) {
@@ -183,8 +183,8 @@ var E = (function (e) {
             var t = (0, b.Z)(e, 1)[0];
             return f.createElement('span', null, t, ':');
         },
-        valueRenderer: w,
-        postprocessValue: w,
+        valueRenderer: k,
+        postprocessValue: k,
         isCustomNode: function () {
             return !1;
         },

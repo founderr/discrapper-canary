@@ -1,7 +1,7 @@
 n(653041), n(724458);
 var i,
-    a,
     s,
+    a,
     r,
     l = n(442837),
     o = n(570140),
@@ -20,7 +20,7 @@ var i,
 let p = {},
     g = {};
 function S(e) {
-    let { searchId: t, query: n, mode: i, tokens: a, cursorScope: s, autocompletes: r } = e,
+    let { searchId: t, query: n, mode: i, tokens: s, cursorScope: a, autocompletes: r } = e,
         l = g[t];
     return (
         null == l &&
@@ -39,8 +39,8 @@ function S(e) {
                           filter: null,
                           token: null
                       },
-            tokens: null != a ? a : [],
-            cursorScope: null != s ? s : null,
+            tokens: null != s ? s : [],
+            cursorScope: null != a ? a : null,
             autocompletes: null != r ? r : []
         }
     );
@@ -48,12 +48,12 @@ function S(e) {
 function A(e, t) {
     let { results: n } = t,
         i = g[e],
-        a = p[e];
-    if (null == i || null == a) return;
-    let { type: s, filter: r } = a.mode;
-    if (s === C.Sap.EMPTY || (s === C.Sap.FILTER && r !== C.dCx.FILTER_FROM && r !== C.dCx.FILTER_MENTIONS)) return;
+        s = p[e];
+    if (null == i || null == s) return;
+    let { type: a, filter: r } = s.mode;
+    if (a === C.Sap.EMPTY || (a === C.Sap.FILTER && r !== C.dCx.FILTER_FROM && r !== C.dCx.FILTER_MENTIONS)) return;
     let l = 3;
-    a.mode.type === C.Sap.FILTER && (l = 10),
+    s.mode.type === C.Sap.FILTER && (l = 10),
         (i.results = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
             return (
@@ -71,8 +71,8 @@ function A(e, t) {
                 e
             );
         })(n, l));
-    let { query: o, mode: c, tokens: u, cursorScope: d } = a,
-        { autocompletes: _ } = a;
+    let { query: o, mode: c, tokens: u, cursorScope: d } = s,
+        { autocompletes: _ } = s;
     (_ = O(e, c)),
         (p[e] = S({
             searchId: e,
@@ -86,7 +86,7 @@ function A(e, t) {
 }
 function R(e, t, n) {
     let i,
-        a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10;
+        s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10;
     if (null == e || '' === e) return null;
     if (h.Z.getSearchType(n) === C.aib.GUILD && (e === C.dCx.FILTER_FROM || e === C.dCx.FILTER_MENTIONS)) {
         let e = g[n];
@@ -102,10 +102,10 @@ function R(e, t, n) {
                   })),
               (i = e.results));
     } else {
-        var s;
-        let r = null === (s = c.ZP[e]) || void 0 === s ? void 0 : s.getAutocompletions,
+        var a;
+        let r = null === (a = c.ZP[e]) || void 0 === a ? void 0 : a.getAutocompletions,
             l = (null != t ? t.getFullMatch() : '').trim();
-        i = null != r ? r(l, n, null != a ? a : 10) : [];
+        i = null != r ? r(l, n, null != s ? s : 10) : [];
     }
     return null == i || 0 === i.length
         ? null
@@ -153,17 +153,17 @@ function O(e, t) {
                                 return !N.Z.hidePersonalInformation && (n.push(C.dCx.FILTER_FROM), n.push(C.dCx.FILTER_MENTIONS)), t === C.aib.GUILD && n.push(C.dCx.FILTER_IN), n;
                             })(t).forEach((n) => {
                                 if (null == n) return;
-                                let a = R(n, e, t, 3);
-                                null != a && i.push(a);
+                                let s = R(n, e, t, 3);
+                                null != s && i.push(s);
                             }),
                             i.push(
                                 (function (e, t) {
                                     let n = (null != e ? e.getFullMatch() : '').trim();
                                     if (null != n && '' !== n) {
-                                        var i, a, s;
+                                        var i, s, a;
                                         let e = null === (i = c.ZP[C.dCx.FILTER_BEFORE]) || void 0 === i ? void 0 : i.getAutocompletions(n, t, 1)[0],
-                                            r = null === (a = c.ZP[C.dCx.FILTER_ON]) || void 0 === a ? void 0 : a.getAutocompletions(n, t, 1)[0],
-                                            l = null === (s = c.ZP[C.dCx.FILTER_AFTER]) || void 0 === s ? void 0 : s.getAutocompletions(n, t, 1)[0];
+                                            r = null === (s = c.ZP[C.dCx.FILTER_ON]) || void 0 === s ? void 0 : s.getAutocompletions(n, t, 1)[0],
+                                            l = null === (a = c.ZP[C.dCx.FILTER_AFTER]) || void 0 === a ? void 0 : a.getAutocompletions(n, t, 1)[0];
                                         return null == e
                                             ? null
                                             : {
@@ -201,26 +201,26 @@ function M() {
 function v(e) {
     let t = p[e];
     if (null == t) return;
-    let { query: n, mode: i, tokens: a, cursorScope: s, autocompletes: r } = t;
+    let { query: n, mode: i, tokens: s, cursorScope: a, autocompletes: r } = t;
     p[e] = S({
         searchId: e,
         query: n,
         mode: i,
-        tokens: a,
-        cursorScope: s,
+        tokens: s,
+        cursorScope: a,
         autocompletes: r.map((e) => ((null == e ? void 0 : e.group) === C.rtL.HISTORY ? null : e))
     });
 }
 function L() {
     let e = h.Z.getCurrentSearchId();
     if (null == e || null == p[e]) return;
-    let { query: t, mode: n, tokens: i, cursorScope: a } = p[e];
+    let { query: t, mode: n, tokens: i, cursorScope: s } = p[e];
     p[e] = S({
         searchId: e,
         query: t,
         mode: n,
         tokens: i,
-        cursorScope: a,
+        cursorScope: s,
         autocompletes: O(e, n)
     });
 }
@@ -234,21 +234,21 @@ class Z extends (i = l.ZP.Store) {
     }
 }
 (r = 'SearchAutocompleteStore'),
-    (s = 'displayName') in (a = Z)
-        ? Object.defineProperty(a, s, {
+    (a = 'displayName') in (s = Z)
+        ? Object.defineProperty(s, a, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = r);
+        : (s[a] = r);
 let P = new Z(o.Z, {
     SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function (e) {
         var t;
         let n,
-            { searchId: i, tokens: a, cursorScope: s } = e,
-            r = (0, I.cl)(a),
-            l = (0, I.qc)(s, a),
+            { searchId: i, tokens: s, cursorScope: a } = e,
+            r = (0, I.cl)(s),
+            l = (0, I.qc)(a, s),
             o = null !== (t = p[i]) && void 0 !== t ? t : {},
             c = g[i],
             u = !0;
@@ -263,8 +263,8 @@ let P = new Z(o.Z, {
                 searchId: i,
                 query: r,
                 mode: l,
-                tokens: a,
-                cursorScope: s,
+                tokens: s,
+                cursorScope: a,
                 autocompletes: n
             })),
             u

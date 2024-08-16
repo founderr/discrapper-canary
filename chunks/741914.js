@@ -1,17 +1,17 @@
 var i = n(392711),
-    a = n.n(i),
-    s = n(723454),
+    s = n.n(i),
+    a = n(723454),
     r = n(428595),
     l = n(454585);
-let o = a().omit(r.Z.RULES, ['codeBlock', 'heading']),
+let o = s().omit(r.Z.RULES, ['codeBlock', 'heading']),
     c = {
-        ...s.Z,
+        ...a.Z,
         parse: function (e, t, n) {
             var i;
-            let a = s.Z.parse(e, t, n),
-                r = Math.min(6, (null !== (i = n.initialHeaderLevel) && void 0 !== i ? i : 3) + a.level);
+            let s = a.Z.parse(e, t, n),
+                r = Math.min(6, (null !== (i = n.initialHeaderLevel) && void 0 !== i ? i : 3) + s.level);
             return {
-                ...a,
+                ...s,
                 level: r
             };
         }

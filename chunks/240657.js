@@ -4,17 +4,17 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    r = n.n(a),
     l = n(481060),
     o = n(741914),
     c = n(40509),
     u = n(910212);
 function d(e) {
-    let { color: t, className: n, variant: s, text: d, lineClamp: _ } = e,
+    let { color: t, className: n, variant: a, text: d, lineClamp: _ } = e,
         E = (0, l.usePrivateHeadingLevel)(),
-        I = a.useMemo(
+        I = s.useMemo(
             () =>
                 null == d
                     ? null
@@ -31,7 +31,7 @@ function d(e) {
             [c.lineClamp1]: 1 === _
         }),
         color: t,
-        variant: s,
+        variant: a,
         lineClamp: _,
         children: I
     });

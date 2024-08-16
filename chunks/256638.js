@@ -7,9 +7,9 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(913527),
-    r = n.n(s),
+    s = n(470079),
+    a = n(913527),
+    r = n.n(a),
     l = n(613828),
     o = n(442837),
     c = n(481060),
@@ -61,8 +61,8 @@ var i = n(735250),
     et = n(594174),
     en = n(55563),
     ei = n(695103),
-    ea = n(933429),
-    es = n(626135),
+    es = n(933429),
+    ea = n(626135),
     er = n(63063),
     el = n(72924),
     eo = n(69499),
@@ -112,23 +112,23 @@ function eN(e) {
 }
 let ef =
     12633 == n.j
-        ? a.memo(function () {
-              var e, t, s;
+        ? s.memo(function () {
+              var e, t, a;
               let I = (0, o.e7)([et.default], () => et.default.getCurrentUser()),
                   A = (0, o.e7)([ee.Z], () => ee.Z.getGuildId()),
-                  ec = (0, o.e7)([ea.Z], () => ea.Z.getNotice()),
+                  ec = (0, o.e7)([es.Z], () => es.Z.getNotice()),
                   ef = (0, o.e7)([X.Z], () => X.Z.getGuild(A)),
                   { analyticsLocations: eC } = (0, R.ZP)(),
                   ep = null == ec ? void 0 : ec.type,
                   eg = (0, y.J)(A);
-              a.useEffect(() => {
+              s.useEffect(() => {
                   null != ep &&
                       !(function (e, t) {
                           let n = { notice_type: e };
-                          null != t && (n.guild_id = t), es.default.track(eu.rMx.APP_NOTICE_VIEWED, n);
+                          null != t && (n.guild_id = t), ea.default.track(eu.rMx.APP_NOTICE_VIEWED, n);
                       })(ep, A);
               }, [ep, A]),
-                  a.useEffect(() => {
+                  s.useEffect(() => {
                       if (null != ec && ec.type === eu.kVF.SURVEY && null != ec.metadata) {
                           let { metadata: e } = ec,
                               t = P.Z.getUserExperimentDescriptor(e.id);
@@ -141,7 +141,7 @@ let ef =
                   }, [ec]);
               let eS = (function (e) {
                   let { enabled: t } = (0, H.ZP)(!0, e !== eu.kVF.PREMIUM_TIER_2_TRIAL_ENDING);
-                  return t || null == e ? null : ea.m[e];
+                  return t || null == e ? null : es.m[e];
               })(ep);
               if (null == ec) return null;
               if (null != eS)
@@ -454,8 +454,8 @@ let ef =
                       if (null == ec.metadata) return null;
                       let { skuId: e, applicationId: t } = ec.metadata,
                           n = en.Z.get(e),
-                          a = x.Z.getApplication(t);
-                      if (null == n || null == a) return null;
+                          s = x.Z.getApplication(t);
+                      if (null == n || null == s) return null;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.PREMIUM_TIER_1,
                           children: [
@@ -469,7 +469,7 @@ let ef =
                                   className: em.premiumIcon
                               }),
                               eI.Z.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
-                                  applicationName: a.name,
+                                  applicationName: s.name,
                                   skuName: n.name
                               }),
                               (0, i.jsx)(c.NoticeButton, {
@@ -488,7 +488,7 @@ let ef =
                   case eu.kVF.SURVEY: {
                       let e = ec.metadata;
                       if (null == e) return null;
-                      let { key: t, prompt: n, cta: a, url: s } = e;
+                      let { key: t, prompt: n, cta: s, url: a } = e;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.CUSTOM,
                           children: [
@@ -502,9 +502,9 @@ let ef =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eu.kVF.SURVEY,
                                   onClick: () => {
-                                      window.open(s, '_blank'), (0, C.hZ)(t, !1);
+                                      window.open(a, '_blank'), (0, C.hZ)(t, !1);
                                   },
-                                  children: a
+                                  children: s
                               })
                           ]
                       });
@@ -799,7 +799,7 @@ let ef =
                       });
                   case eu.kVF.BACK_TO_PREVIOUS_SCREEN:
                       return (0, i.jsx)(k.h, {
-                          buttonText: null !== (s = ec.buttonText) && void 0 !== s ? s : eI.Z.Messages.GO_BACK,
+                          buttonText: null !== (a = ec.buttonText) && void 0 !== a ? a : eI.Z.Messages.GO_BACK,
                           onGoBack: ec.callback,
                           onDismiss: () => eN(),
                           showCloseButton: !0
@@ -915,7 +915,7 @@ let ef =
                       let eY = r()().add(5, 'days').toDate();
                       return (0, i.jsx)(W.Z, {
                           dismissCurrentNotice: () => {
-                              (0, v.EW)(ea.m[eu.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eN(eY);
+                              (0, v.EW)(es.m[eu.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eN(eY);
                           },
                           subscriptionTier: ed.Si.TIER_2
                       });

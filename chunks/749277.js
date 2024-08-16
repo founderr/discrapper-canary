@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-    s = n(704215),
+var s = n(442837),
+    a = n(704215),
     r = n(481060),
     l = n(232567),
     o = n(230711),
@@ -37,19 +37,19 @@ var a = n(442837),
     b = n(66740);
 let D = (e) => {
     let { dismissibleContent: t, noticeType: D } = e,
-        j = (0, a.e7)([A.Z], () => A.Z.getNotice()),
-        U = (0, a.e7)([S.default], () => S.default.locale);
+        j = (0, s.e7)([A.Z], () => A.Z.getNotice()),
+        U = (0, s.e7)([S.default], () => S.default.locale);
     return (0, i.jsx)(O.ZP, {
         contentTypes: [t],
         groupName: M.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
-            var t, a;
+            var t, s;
             let { visibleContent: S, markAsDismissed: A } = e;
             switch (S) {
-                case s.z.GUILD_ONBOARDING_UPSELL_NAGBAR:
+                case a.z.GUILD_ONBOARDING_UPSELL_NAGBAR:
                     return (0, i.jsx)(m.Z, { dismissCurrentNotice: () => A(M.L.UNKNOWN) });
-                case s.z.NAGBAR_NOTICE_DOWNLOAD:
+                case a.z.NAGBAR_NOTICE_DOWNLOAD:
                     return (0, i.jsxs)(r.Notice, {
                         color: r.NoticeColors.DEFAULT,
                         children: [
@@ -77,7 +77,7 @@ let D = (e) => {
                             })
                         ]
                     });
-                case s.z.NAGBAR_NOTICE_CONNECT_SPOTIFY:
+                case a.z.NAGBAR_NOTICE_CONNECT_SPOTIFY:
                     return (0, i.jsxs)(r.Notice, {
                         color: r.NoticeColors.SPOTIFY,
                         children: [
@@ -98,7 +98,7 @@ let D = (e) => {
                             })
                         ]
                     });
-                case s.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION:
+                case a.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION:
                     return (0, i.jsxs)(r.Notice, {
                         color: r.NoticeColors.PLAYSTATION,
                         children: [
@@ -119,7 +119,7 @@ let D = (e) => {
                             })
                         ]
                     });
-                case s.z.NAGBAR_NOTICE_MFA_SMS_BACKUP:
+                case a.z.NAGBAR_NOTICE_MFA_SMS_BACKUP:
                     return (0, i.jsxs)(r.Notice, {
                         color: r.NoticeColors.DEFAULT,
                         children: [
@@ -135,7 +135,7 @@ let D = (e) => {
                             })
                         ]
                     });
-                case s.z.NAGBAR_NOTICE_PREMIUM_PROMO:
+                case a.z.NAGBAR_NOTICE_PREMIUM_PROMO:
                     return (0, i.jsxs)(r.Notice, {
                         color: r.NoticeColors.PREMIUM_TIER_2,
                         children: [
@@ -164,17 +164,17 @@ let D = (e) => {
                             })
                         ]
                     });
-                case s.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
+                case a.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
                     return (0, i.jsx)(p.Z, {
                         dismissCurrentNotice: () => A(M.L.UNKNOWN),
                         subscriptionTier: Z.Si.TIER_2
                     });
-                case s.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
+                case a.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
                     return (0, i.jsx)(p.Z, {
                         dismissCurrentNotice: () => A(M.L.UNKNOWN),
                         subscriptionTier: Z.Si.TIER_0
                     });
-                case s.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
+                case a.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
                     return (0, i.jsxs)(r.Notice, {
                         color: r.NoticeColors.PREMIUM_TIER_2,
                         children: [
@@ -192,27 +192,27 @@ let D = (e) => {
                             })
                         ]
                     });
-                case s.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
+                case a.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
                     return (0, i.jsx)(C.Z, {
                         notice: j,
                         noticeType: D,
                         dismissCurrentNotice: () => A(M.L.UNKNOWN)
                     });
-                case s.z.QUEST_1_GO_LIVE_BANNER:
+                case a.z.QUEST_1_GO_LIVE_BANNER:
                     let O = null == j ? void 0 : null === (t = j.metadata) || void 0 === t ? void 0 : t.partnerGame;
                     return (0, i.jsx)(I.Z, {
                         noticeType: D,
                         markAsDismissed: () => A(M.L.UNKNOWN),
                         partnerGame: O
                     });
-                case s.z.QUEST_1_ENDED_INCOMPLETE:
-                    let y = null == j ? void 0 : null === (a = j.metadata) || void 0 === a ? void 0 : a.partnerGame;
+                case a.z.QUEST_1_ENDED_INCOMPLETE:
+                    let y = null == j ? void 0 : null === (s = j.metadata) || void 0 === s ? void 0 : s.partnerGame;
                     return (0, i.jsx)(E.Z, {
                         noticeType: D,
                         markAsDismissed: () => A(M.L.UNKNOWN),
                         partnerGame: y
                     });
-                case s.z.NAGBAR_BOUNCED_EMAIL_NOTICE:
+                case a.z.NAGBAR_BOUNCED_EMAIL_NOTICE:
                     return (0, i.jsxs)(r.Notice, {
                         color: r.NoticeColors.DANGER,
                         children: [
@@ -230,7 +230,7 @@ let D = (e) => {
                             })
                         ]
                     });
-                case s.z.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
+                case a.z.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
                     let B = _.Z.getEligibleGuildsForNagActivate();
                     return (0, i.jsxs)(r.Notice, {
                         color: r.NoticeColors.DEFAULT,
@@ -249,7 +249,7 @@ let D = (e) => {
                             })
                         ]
                     });
-                case s.z.NAGBAR_NOTICE_POMELO:
+                case a.z.NAGBAR_NOTICE_POMELO:
                     return (0, i.jsxs)(r.Notice, {
                         color: r.NoticeColors.WARNING,
                         children: [
@@ -265,7 +265,7 @@ let D = (e) => {
                             })
                         ]
                     });
-                case s.z.UU_MIGRATION_NOTICE:
+                case a.z.UU_MIGRATION_NOTICE:
                     return (0, i.jsxs)(r.Notice, {
                         color: r.NoticeColors.WARNING,
                         children: [
@@ -281,7 +281,7 @@ let D = (e) => {
                             })
                         ]
                     });
-                case s.z.CHECKOUT_RECOVERY_NAGBAR:
+                case a.z.CHECKOUT_RECOVERY_NAGBAR:
                     return (0, i.jsxs)(r.Notice, {
                         color: r.NoticeColors.PREMIUM_TIER_2,
                         children: [
@@ -304,7 +304,7 @@ let D = (e) => {
                             })
                         ]
                     });
-                case s.z.CASH_APP_PAY_AWARENESS_NAGBAR:
+                case a.z.CASH_APP_PAY_AWARENESS_NAGBAR:
                     return (0, i.jsx)(f.Z, { onClose: () => A(M.L.TAKE_ACTION) });
             }
         }

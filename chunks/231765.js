@@ -385,7 +385,7 @@ let w = () =>
             let { default: s } = e;
             return s;
         });
-function k(e) {
+function H(e) {
     let { onChangePage: s, setShowEnableAnimation: t } = e,
         n = (0, d.cj)([O.Z], () => O.Z.getState()),
         [a, i] = l.useState({
@@ -457,13 +457,13 @@ function k(e) {
         })
     );
 }
-let H = (e, s, t) => {
+let k = (e, s, t) => {
         let n = (e) => () => {
             s(e);
         };
         switch (e) {
             case 0:
-                return (0, o.jsx)(k, {
+                return (0, o.jsx)(H, {
                     onChangePage: n(1),
                     setShowEnableAnimation: t
                 });
@@ -496,7 +496,7 @@ function K() {
                     className: M.slideAnimator,
                     step: e,
                     direction: t,
-                    children: H(e, s, i)
+                    children: k(e, s, i)
                 }),
                 (0, o.jsx)('div', {
                     className: c ? M.enableAnimationOverlayVisible : M.enableAnimationOverlayHidden,

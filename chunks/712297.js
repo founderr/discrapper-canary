@@ -46,7 +46,7 @@ function S(e) {
     r.useEffect(() => {
         for (let e of A) !a.Z.isFetching(e) && null == a.Z.get(e) && (0, u.$N)(t, e);
     }, [t, A]);
-    let R = (0, i.cj)(
+    let C = (0, i.cj)(
         [E.Z],
         () => {
             let e = {};
@@ -69,7 +69,7 @@ function S(e) {
         {
             hasFetchedSkus: c,
             skusById: d,
-            skuPricePreviewsById: R,
+            skuPricePreviewsById: C,
             previewErrorsById: T
         }
     );

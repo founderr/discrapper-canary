@@ -47,8 +47,8 @@ var n,
     V = t(663389),
     Y = t(594174),
     w = t(626135),
-    k = t(63063),
-    H = t(78451),
+    H = t(63063),
+    k = t(78451),
     W = t(709054),
     K = t(88658),
     z = t(695346),
@@ -139,7 +139,7 @@ function e_() {
                               }),
                               (0, i.jsx)(T.FormSwitch, {
                                   value: n,
-                                  note: er.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({ learnMoreLink: k.Z.getArticleURL(ea.BhN.SAFETY_ALERTS) }),
+                                  note: er.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({ learnMoreLink: H.Z.getArticleURL(ea.BhN.SAFETY_ALERTS) }),
                                   onChange: U.Q,
                                   hideBorder: !0,
                                   children: er.Z.Messages.SAFETY_ALERTS_SETTING_TITLE
@@ -174,7 +174,7 @@ function eu() {
                         ref: t,
                         children: (0, i.jsx)(T.FormSwitch, {
                             value: !s,
-                            note: er.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_CAPTION.format({ helpdeskArticle: k.Z.getArticleURL(ea.BhN.MESSAGE_REQUESTS) }),
+                            note: er.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_CAPTION.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.MESSAGE_REQUESTS) }),
                             disabled: e,
                             onChange: () => {
                                 var e;
@@ -250,7 +250,7 @@ function eI() {
                         (0, i.jsx)(T.FormText, {
                             type: T.FormTextTypes.DESCRIPTION,
                             className: el.marginBottom8,
-                            children: er.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: k.Z.getArticleURL(ea.BhN.EXPLICIT_MEDIA_REDACTION) })
+                            children: er.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: H.Z.getArticleURL(ea.BhN.EXPLICIT_MEDIA_REDACTION) })
                         }),
                         (0, i.jsx)(T.FormItem, {
                             ref: r,
@@ -466,11 +466,11 @@ class eC extends r.PureComponent {
                     (0, i.jsx)(T.FormText, {
                         type: T.FormTextTypes.DESCRIPTION,
                         className: el.marginBottom8,
-                        children: er.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({ appealLink: k.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING) })
+                        children: er.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({ appealLink: H.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING) })
                     }),
                     (0, i.jsx)(T.RadioGroup, {
                         value: this.props.explicitContentFilter,
-                        options: (0, H.X7)(),
+                        options: (0, k.X7)(),
                         onChange: (s) => {
                             let { value: t } = s;
                             this.props.dmSpamFilter === I.Xr.DEFAULT_UNSET
@@ -509,11 +509,11 @@ class eC extends r.PureComponent {
                                               (0, i.jsx)(T.FormText, {
                                                   type: T.FormTextTypes.DESCRIPTION,
                                                   className: el.marginBottom8,
-                                                  children: er.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: k.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING) })
+                                                  children: er.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: H.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING) })
                                               }),
                                               (0, i.jsx)(T.RadioGroup, {
                                                   value: s,
-                                                  options: (0, H.c7)(),
+                                                  options: (0, k.c7)(),
                                                   onChange: (e) => {
                                                       let { value: s } = e;
                                                       return z.Xr.updateSetting(s);
@@ -545,11 +545,11 @@ class eC extends r.PureComponent {
                                       (0, i.jsx)(T.FormText, {
                                           type: T.FormTextTypes.DESCRIPTION,
                                           className: el.marginBottom8,
-                                          children: er.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: k.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING) })
+                                          children: er.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: H.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING) })
                                       }),
                                       (0, i.jsx)(T.RadioGroup, {
                                           value: s,
-                                          options: (0, H.c7)(),
+                                          options: (0, k.c7)(),
                                           onChange: (e) => {
                                               let { value: s } = e;
                                               return z.Xr.updateSetting(s);
@@ -578,7 +578,7 @@ class eC extends r.PureComponent {
                     setting: en.s6.PRIVACY_KEYWORD_FILTER,
                     children: (0, i.jsx)(T.FormSwitch, {
                         value: this.props.keywordFilter,
-                        note: er.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({ learnMoreLink: k.Z.getArticleURL(ea.BhN.KEYWORD_FILTERS) }),
+                        note: er.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({ learnMoreLink: H.Z.getArticleURL(ea.BhN.KEYWORD_FILTERS) }),
                         onChange: (e) =>
                             z.gw.updateSetting({
                                 profanity: e,
@@ -653,7 +653,7 @@ class eC extends r.PureComponent {
                     setting: en.s6.PRIVACY_DATA_IMPROVE_DISCORD,
                     children: (0, i.jsx)(T.FormSwitch, {
                         value: e,
-                        note: er.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({ helpdeskArticle: k.Z.getArticleURL(ea.BhN.DATA_USED_TO_IMPROVE_DISCORD) }),
+                        note: er.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.DATA_USED_TO_IMPROVE_DISCORD) }),
                         onChange: this.handleUsageStatisticsChange,
                         children: er.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE
                     })
@@ -662,7 +662,7 @@ class eC extends r.PureComponent {
                     setting: en.s6.PRIVACY_DATA_PERSONALIZE,
                     children: (0, i.jsx)(T.FormSwitch, {
                         value: s,
-                        note: er.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({ helpdeskArticle: k.Z.getArticleURL(ea.BhN.DATA_USED_FOR_RECOMMENDED) }),
+                        note: er.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.DATA_USED_FOR_RECOMMENDED) }),
                         onChange: this.handlePersonalizationChange,
                         children: er.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE
                     })
@@ -671,7 +671,7 @@ class eC extends r.PureComponent {
                     setting: en.s6.PRIVACY_DATA_QUESTS,
                     children: (0, i.jsx)(T.FormSwitch, {
                         value: !t,
-                        note: er.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({ helpdeskArticle: k.Z.getArticleURL(ea.BhN.DATA_PRIVACY_CONTROLS) }),
+                        note: er.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.DATA_PRIVACY_CONTROLS) }),
                         onChange: this.handleChangeDropsOptedOut,
                         children: (0, i.jsx)('div', { children: er.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT })
                     })
@@ -745,7 +745,7 @@ class eC extends r.PureComponent {
                     (0, i.jsx)(T.FormText, {
                         type: T.FormTextTypes.DESCRIPTION,
                         className: el.marginBottom20,
-                        children: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({ helpdeskArticle: k.Z.getArticleURL(ea.BhN.GDPR_REQUEST_DATA) })
+                        children: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.GDPR_REQUEST_DATA) })
                     }),
                     e,
                     o
@@ -898,7 +898,7 @@ class eC extends r.PureComponent {
                 var e;
                 (e = {
                     header: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
-                    body: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({ helpdeskArticle: k.Z.getArticleURL(ea.BhN.GDPR_PACKAGE_CONTENTS) }),
+                    body: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.GDPR_PACKAGE_CONTENTS) }),
                     confirmText: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
                     cancelText: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CANCEL,
                     confirmButtonColor: T.Button.Colors.BRAND,

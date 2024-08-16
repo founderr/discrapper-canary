@@ -9,9 +9,9 @@ n.d(t, {
     n(653041),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(512722),
-    r = n.n(s),
+    s = n(470079),
+    a = n(512722),
+    r = n.n(a),
     l = n(399606),
     o = n(704215),
     c = n(367907),
@@ -29,14 +29,14 @@ var i = n(735250),
     p = n(333866),
     g = n(629481),
     S = n(981631);
-let A = a.createContext(void 0);
+let A = s.createContext(void 0);
 function R() {
-    let e = a.useContext(A);
+    let e = s.useContext(A);
     return r()(null != e, 'must use useGuildShopDisplayContext within a GuildShopDisplayContextProvider'), e;
 }
 function x(e) {
     var t;
-    let { children: n, initialTab: s, guildId: r } = e,
+    let { children: n, initialTab: a, guildId: r } = e,
         R = (0, l.e7)([T.Z], () => T.Z.getGuild(r)),
         x = (0, l.e7)([E.Z], () => E.Z.isViewingServerShop(r)),
         O = (0, f.g)(R, 'guild_shop_page'),
@@ -46,13 +46,13 @@ function x(e) {
         Z = null === (t = (0, d.YB)(r)) || void 0 === t ? void 0 : t.server_shop_tab_order,
         P = [],
         b = C.y.GUILD_SHOP_FULL_PREVIEW;
-    x || (v && L) ? (P.push(Z === p.a3.PRODUCTS_FIRST ? C.y.GUILD_PRODUCTS : C.y.GUILD_ROLE_SUBSCRIPTIONS), P.push(Z === p.a3.PRODUCTS_FIRST ? C.y.GUILD_ROLE_SUBSCRIPTIONS : C.y.GUILD_PRODUCTS), (b = P[0])) : v && !L ? (P.push(C.y.GUILD_PRODUCTS), (b = C.y.GUILD_PRODUCTS)) : !v && L && (P.push(C.y.GUILD_ROLE_SUBSCRIPTIONS), (b = C.y.GUILD_ROLE_SUBSCRIPTIONS), O && P.push(C.y.GUILD_PRODUCTS_PREVIEW)), (s = null != s ? s : b);
-    let [D, j] = a.useState(s),
+    x || (v && L) ? (P.push(Z === p.a3.PRODUCTS_FIRST ? C.y.GUILD_PRODUCTS : C.y.GUILD_ROLE_SUBSCRIPTIONS), P.push(Z === p.a3.PRODUCTS_FIRST ? C.y.GUILD_ROLE_SUBSCRIPTIONS : C.y.GUILD_PRODUCTS), (b = P[0])) : v && !L ? (P.push(C.y.GUILD_PRODUCTS), (b = C.y.GUILD_PRODUCTS)) : !v && L && (P.push(C.y.GUILD_ROLE_SUBSCRIPTIONS), (b = C.y.GUILD_ROLE_SUBSCRIPTIONS), O && P.push(C.y.GUILD_PRODUCTS_PREVIEW)), (a = null != a ? a : b);
+    let [D, j] = s.useState(a),
         U = (O && !(L && M)) || D === C.y.GUILD_PRODUCTS_PREVIEW;
     return (
-        a.useEffect(() => {
-            j(s);
-        }, [s]),
+        s.useEffect(() => {
+            j(a);
+        }, [a]),
         (0, i.jsx)(A.Provider, {
             value: {
                 selectedTab: D,

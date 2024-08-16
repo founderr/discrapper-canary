@@ -110,7 +110,7 @@ let w = (e) => {
         })
     );
 };
-function k(e) {
+function H(e) {
     var s, t, i;
     let r,
         o,
@@ -121,7 +121,7 @@ function k(e) {
         [f, D] = a.useState(I.metadataVisibility),
         [P, b] = a.useState(I.showActivity),
         [F, Y] = a.useState(null),
-        [k, H] = a.useState(null),
+        [H, k] = a.useState(null),
         [W, K] = a.useState(!1),
         [z, Q] = a.useState([]),
         X = (0, m.rR)(I.type),
@@ -130,7 +130,7 @@ function k(e) {
         p(I.friendSync), M(I.visibility), D(I.metadataVisibility), b(I.showActivity);
     }, [I]),
         a.useEffect(() => {
-            if (!1 !== I.verified) null != F && (M(F), u.Z.setVisibility(I.type, I.id, F), Y(null)), null != k && (D(k), u.Z.setMetadataVisibility(I.type, I.id, k), H(null));
+            if (!1 !== I.verified) null != F && (M(F), u.Z.setVisibility(I.type, I.id, F), Y(null)), null != H && (D(H), u.Z.setMetadataVisibility(I.type, I.id, H), k(null));
         }, [I]);
     function J() {
         (0, O.Z)({
@@ -179,7 +179,7 @@ function k(e) {
         let { verified: s } = I,
             t = e ? 1 : 0;
         if (e && !s) {
-            H(t),
+            k(t),
                 (0, O.Z)({
                     platformType: I.type,
                     location: 'User Settings'
@@ -466,7 +466,7 @@ function k(e) {
         ]
     });
 }
-function H() {
+function k() {
     return (
         a.useEffect(
             () => () => {
@@ -584,7 +584,7 @@ function z(e) {
                     .filter((e) => C.Z.isSupported(e.type))
                     .map((e, s) =>
                         (0, n.jsx)(
-                            k,
+                            H,
                             {
                                 theme: r,
                                 account: e,
@@ -621,7 +621,7 @@ s.Z = () => {
               tag: _.FormTitleTags.H1,
               title: y.Z.Messages.CONNECTIONS,
               children: [
-                  (0, n.jsx)(H, {}),
+                  (0, n.jsx)(k, {}),
                   (0, n.jsx)(z, {
                       fetching: s,
                       accounts: t,
