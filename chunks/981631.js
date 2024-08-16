@@ -4558,6 +4558,7 @@ let o8 = Object.freeze({
     (nN.IAR_MODAL_CLOSE = 'iar_modal_close'),
     (nN.IAR_FEEDBACK_MODAL_VIEWED = 'iar_feedback_modal_viewed'),
     (nN.IAR_FEEDBACK_SUBMITTED = 'iar_feedback_submitted'),
+    (nN.IAR_SETTINGS_UPSELLS_ACTION = 'iar_settings_upsells_action'),
     (nN.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED = 'emoji_upload_file_size_limit_exceeded'),
     (nN.EMOJI_UPLOAD_STARTED = 'emoji_upload_started'),
     (nN.EMOJI_UPLOAD_COMPLETED = 'emoji_upload_completed'),
