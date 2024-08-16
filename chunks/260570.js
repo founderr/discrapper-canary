@@ -225,7 +225,7 @@ function b(e) {
                     H({ action: 'HOVER_CUSTOM_STATUS' }), eh(!0), eT(!0);
                 },
                 onMouseLeave: () => {
-                    eh(!1), eT(!1);
+                    !x && (eh(!1), eT(!1));
                 },
                 children: [
                     (0, r.jsx)('div', {
@@ -236,6 +236,7 @@ function b(e) {
                         })
                     }),
                     eo &&
+                        !x &&
                         (0, r.jsx)(S.Z, {
                             user: a,
                             sourceDetails: eU(),
@@ -245,7 +246,10 @@ function b(e) {
                             onInteraction: U,
                             setInteractionToastShown: k,
                             setInteractionSent: B,
-                            setIsReplyInteraction: F
+                            setIsReplyInteraction: F,
+                            onClose: () => {
+                                eh(!1), eT(!1);
+                            }
                         }),
                     eu &&
                         (0, r.jsx)(g.Z, {
@@ -282,12 +286,15 @@ function b(e) {
                         onInteraction: U,
                         setInteractionToastShown: k,
                         setInteractionSent: B,
-                        setIsReplyInteraction: F
+                        setIsReplyInteraction: F,
+                        onClose: () => {
+                            eh(!1), eT(!1);
+                        }
                     });
                 },
                 animationPosition: 'top',
                 position: 'bottom',
-                align: 'center',
+                align: O === v.y0.FULL_SIZE ? 'center' : 'left',
                 spacing: 6,
                 shouldShow: x,
                 children: () => ew()
