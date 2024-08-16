@@ -2982,7 +2982,6 @@ let oW = 'help_center_cta';
     (rZ.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_POPOUT = 'Voice Channel Effect Emoji Picker Popout'),
     (rZ.FILE_UPLOAD_POPOUT = 'File Upload Popout'),
     (rZ.GUILD_POPOUT = 'Guild Popout'),
-    (rZ.PROFILE_POPOUT = 'Profile Popout'),
     (rZ.BITE_SIZE_PROFILE_POPOUT = 'Bite Size Profile Popout'),
     (rZ.ROLE_ICON_POPOUT = 'Role Icon Popout'),
     (rZ.GAME_MODAL = 'Game Modal'),

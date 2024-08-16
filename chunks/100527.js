@@ -121,7 +121,6 @@ var n, r;
     (r.PROFILE_MODAL = 'profile modal'),
     (r.SIMPLIFIED_PROFILE_MODAL = 'simplified profile modal'),
     (r.BLOCKED_PROFILE_MODAL = 'blocked profile modal'),
-    (r.PROFILE_POPOUT = 'profile popout'),
     (r.BITE_SIZE_PROFILE_POPOUT = 'bite size profile popout'),
     (r.BLOCKED_PROFILE_POPOUT = 'blocked profile popout'),
     (r.BLOCKED_PROFILE_ACTION_SHEET = 'blocked profile action sheet'),
