@@ -140,19 +140,11 @@ function G(e) {
     let { quests: t, isFetchingCurrentQuests: n } = w({ fetchPolicy: 'cache-and-network' }),
         r = new Map(t.map((e) => [e.id, e])),
         i = (function (e) {
-            let t = u.useMemo(
-                    () =>
-                        e.filter((e) => {
-                            var t;
-                            return !((null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null);
-                        }),
-                    [e]
-                ),
-                n = u.useRef([]);
+            let t = u.useRef([]);
             return u.useMemo(() => {
-                if (0 === t.length) return [];
-                if (n.current.length > 0 && n.current.length === t.length) return n.current;
-                let e = t
+                if (0 === e.length) return [];
+                if (t.current.length > 0 && t.current.length === e.length) return t.current;
+                let n = e
                     .sort((e, t) => {
                         var n, r, i, a, s, o;
                         let l = !(0, O.zi)(e),
@@ -166,8 +158,8 @@ function G(e) {
                         return l !== u ? (l ? -1 : 1) : c !== d && l && u ? (c ? -1 : 1) : _ !== E ? (_ ? -1 : 1) : f !== h ? (f ? -1 : 1) : l && u ? x(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : x(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
                     })
                     .map((e) => e.id);
-                return (n.current = e), e;
-            }, [t]);
+                return (t.current = n), n;
+            }, [e]);
         })(t),
         a = (function (e) {
             let t = u.useMemo(
@@ -198,7 +190,7 @@ function G(e) {
         })(t),
         s = [],
         o = [];
-    for (let t of (s = 'unclaimed' === e ? i : a)) {
+    for (let t of (s = 'all' === e ? i : a)) {
         let e = r.get(t);
         null != e && o.push(e);
     }
@@ -257,7 +249,7 @@ function Z(e) {
         n = H(e);
     return t || n;
 }
-((o = i || (i = {})).UNCLAIMED = 'unclaimed'), (o.CLAIMED = 'claimed');
+((o = i || (i = {})).ALL = 'all'), (o.CLAIMED = 'claimed');
 let Y = (e) => {
     let t = u.useCallback(() => (0, O.il)(e), [e]),
         [n, r] = u.useState(t()),
