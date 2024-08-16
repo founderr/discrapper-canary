@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return R;
     }
 }),
     n(47120);
@@ -9,8 +9,8 @@ var i = n(735250),
     o = n(442837),
     l = n(481060),
     d = n(166459),
-    c = n(911969),
-    r = n(476326),
+    r = n(911969),
+    c = n(476326),
     m = n(827498),
     u = n(555573),
     s = n(213459),
@@ -19,32 +19,31 @@ var i = n(735250),
     E = n(581364),
     g = n(667204),
     M = n(873387),
-    C = n(147391),
-    A = n(978983),
+    A = n(147391),
+    C = n(978983),
     I = n(592125),
     x = n(703558),
-    f = n(430824),
-    h = n(626135),
-    P = n(585483),
-    N = n(162609),
-    b = n(619895),
-    R = n(844439),
-    v = n(981631),
-    T = n(689938),
-    O = n(834033);
-function y(e) {
-    let { toggleShowMenu: t, showMenu: n, className: a, channelId: d, imageUrl: c, mimeType: r } = e,
+    h = n(430824),
+    f = n(626135),
+    N = n(585483),
+    P = n(619895),
+    v = n(844439),
+    T = n(981631),
+    O = n(689938),
+    b = n(834033);
+function R(e) {
+    let { toggleShowMenu: t, showMenu: n, className: a, channelId: d, imageUrl: r, mimeType: c } = e,
         m = (0, o.e7)([I.Z], () => I.Z.getChannel(d));
     return null == m
         ? null
         : (0, i.jsx)(l.Popout, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, i.jsx)(S, {
+                  return (0, i.jsx)(y, {
                       onClose: t,
                       channel: m,
-                      imageUrl: c,
-                      mimeType: r
+                      imageUrl: r,
+                      mimeType: c
                   });
               },
               position: 'right',
@@ -55,14 +54,14 @@ function y(e) {
               children: (e) => {
                   let { onClick: n } = e;
                   return (0, i.jsx)(l.Tooltip, {
-                      text: T.Z.Messages.APP_IMAGE_REC_MENU_HEADER,
+                      text: O.Z.Messages.APP_IMAGE_REC_MENU_HEADER,
                       children: (e) =>
                           (0, i.jsx)(l.Clickable, {
                               ...e,
                               className: a,
                               focusProps: { offset: 2 },
                               onClick: t,
-                              'aria-label': T.Z.Messages.APP_IMAGE_REC_MENU_HEADER,
+                              'aria-label': O.Z.Messages.APP_IMAGE_REC_MENU_HEADER,
                               children: (0, i.jsx)(l.AppsIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
@@ -74,53 +73,52 @@ function y(e) {
               }
           });
 }
-function S(e) {
-    let { onSelect: t, onClose: n, channel: I, imageUrl: y, mimeType: S } = e,
-        U = (0, o.e7)([f.Z], () => f.Z.getGuild(I.guild_id)),
-        { fetchState: Z, imageRecCommandContexts: F } = (0, b.hR)({ channelId: I.id }),
-        w = Z === R.M.FETCHING,
+function y(e) {
+    let { onSelect: t, onClose: n, channel: I, imageUrl: R, mimeType: y } = e,
+        S = (0, o.e7)([h.Z], () => h.Z.getGuild(I.guild_id)),
+        { fetchState: U, imageRecCommandContexts: Z } = (0, P.hR)({ channelId: I.id }),
+        F = U === v.M.FETCHING,
         D = (0, M.g)(I),
         L = (0, s.PL)(!0, !0),
-        j = (0, s.LD)(I.guild_id, !0),
-        k = N.P.useExperiment({ location: 'ContextualImageRecsMenu' }).optionsEnabled;
+        w = (0, s.LD)(I.guild_id, !0);
     a.useEffect(() => {
-        (Z === R.M.ERROR || (Z === R.M.FETCHED && 0 === F.length)) && n();
-    }, [Z, F.length, n]),
+        (U === v.M.ERROR || (U === v.M.FETCHED && 0 === Z.length)) && n();
+    }, [U, Z.length, n]),
         a.useEffect(() => {
             var e, t;
-            if (!w && 0 !== F.length)
-                h.default.track(v.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
+            if (!F && 0 !== Z.length)
+                f.default.track(T.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
                     guild_id: null !== (e = null == I ? void 0 : I.guild_id) && void 0 !== e ? e : '',
                     channel_id: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : '',
-                    application_ids: [...F.map((e) => Number(e.application.id))],
-                    command_ids: [...F.map((e) => Number(e.command.id))]
+                    application_ids: [...Z.map((e) => Number(e.application.id))],
+                    command_ids: [...Z.map((e) => Number(e.command.id))]
                 });
-        }, [F, I, w]);
-    let H = a.useCallback(
+        }, [Z, I, F]);
+    let j = a.useCallback(
             async (e) => {
-                let t = await fetch(y),
+                let t = await fetch(R),
                     n = await t.arrayBuffer(),
-                    i = S.join('/'),
-                    a = new File([n], 'image'.concat((0, b.Qm)({ contentType: i })), { type: i });
+                    i = y.join('/'),
+                    a = new File([n], 'image'.concat((0, P.Qm)({ contentType: i })), { type: i });
                 d.Z.setFile({
                     channelId: I.id,
                     id: e,
                     file: {
                         id: e,
                         file: a,
-                        platform: r.ow.WEB
+                        platform: c.ow.WEB
                     },
                     draftType: x.d.SlashCommand
                 });
             },
-            [y, I.id, S]
+            [R, I.id, y]
         ),
-        G = a.useCallback(
+        H = a.useCallback(
             async (e, t, n) => {
                 var i, a;
                 if (!D) return;
-                let o = b.Id[e.id];
-                await H(o.imageOption),
+                let o = P.Id[e.id];
+                await j(o.imageOption),
                     null != p.Z.getActiveCommand(I.id) &&
                         u.Po({
                             channelId: I.id,
@@ -142,28 +140,28 @@ function S(e) {
                     source: m._b.TEXT,
                     initialValues: {
                         [o.imageOption]: {
-                            type: c.jw.ATTACHMENT,
+                            type: r.jw.ATTACHMENT,
                             name: o.imageOption,
                             value: 'image'
                         }
                     },
                     commandOrigin: _.bB.APPLICATION_LAUNCHER
                 }),
-                    P.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: I.id });
+                    N.S.dispatch(T.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: I.id });
             },
-            [I.id, H, D]
+            [I.id, j, D]
         ),
-        B = a.useCallback(
+        k = a.useCallback(
             async (e, t) => {
                 var n, i;
                 let a = e.applicationId,
                     o = (null === (n = L.result) || void 0 === n ? void 0 : n.sections[a]) != null,
-                    l = (null === (i = j.result) || void 0 === i ? void 0 : i.sections[a]) != null;
+                    l = (null === (i = w.result) || void 0 === i ? void 0 : i.sections[a]) != null;
                 o || l || s.ZP.queryInstallOnDemandApp(e.applicationId, I.id);
-                let d = await (0, C.L)({
+                let d = await (0, A.L)({
                     applicationId: a,
                     userIndexState: L,
-                    guildIndexState: j,
+                    guildIndexState: w,
                     location: t,
                     source: m._b.TEXT
                 });
@@ -175,9 +173,9 @@ function S(e) {
                     }),
                     d)
                 ) {
-                    let t = b.Id[e.id],
+                    let t = P.Id[e.id],
                         n = t.additionalOptions;
-                    await H(t.imageOption),
+                    await j(t.imageOption),
                         await (0, g.Z)({
                             command: { ...e },
                             optionValues: {
@@ -191,19 +189,19 @@ function S(e) {
                             },
                             context: {
                                 channel: I,
-                                guild: U
+                                guild: S
                             },
                             commandOrigin: _.bB.IMAGE_RECS_MENU
                         });
                 }
             },
-            [I, U, L, j, H]
+            [I, S, L, w, j]
         );
     return (0, i.jsxs)(l.Menu, {
         onSelect: t,
         navId: 'image-context-commands-popout',
         onClose: n,
-        'aria-label': T.Z.Messages.APP_IMAGE_REC_MENU_ARIA_LABEL,
+        'aria-label': O.Z.Messages.APP_IMAGE_REC_MENU_ARIA_LABEL,
         children: [
             (0, i.jsx)(
                 l.MenuItem,
@@ -211,10 +209,10 @@ function S(e) {
                     id: 'menu-image-rec-header',
                     render: () =>
                         (0, i.jsx)(l.Text, {
-                            className: O.title,
+                            className: b.title,
                             variant: 'text-md/bold',
                             color: 'header-primary',
-                            children: T.Z.Messages.APP_IMAGE_REC_MENU_HEADER
+                            children: O.Z.Messages.APP_IMAGE_REC_MENU_HEADER
                         }),
                     navigable: !1,
                     disabled: !0
@@ -222,35 +220,35 @@ function S(e) {
                 'menu-image-rec-header'
             ),
             (0, i.jsx)(l.MenuSeparator, {}),
-            w
+            F
                 ? (0, i.jsx)(
                       l.MenuItem,
                       {
                           id: 'menu-image-recs-placeholder',
-                          render: () => (0, i.jsx)(A.Z, {}),
+                          render: () => (0, i.jsx)(C.Z, {}),
                           navigable: !1,
                           disabled: !0
                       },
                       'menu-image-recs-placeholder'
                   )
                 : (0, i.jsx)(i.Fragment, {
-                      children: F.map((e) => {
+                      children: Z.map((e) => {
                           var t;
-                          let n = k && null != b.Id[e.command.id].additionalOptions,
-                              a = b.Id[e.command.id].onlyAllowEdit;
+                          let n = null != P.Id[e.command.id].additionalOptions,
+                              a = P.Id[e.command.id].onlyAllowEdit;
                           return (0, i.jsx)(
                               l.MenuItem,
                               {
                                   id: e.command.id,
                                   action: () => {
-                                      a ? G(e.command, e.application, _.Vh.IMAGE_RECS_MENU) : B(e.command, _.Vh.IMAGE_RECS_MENU);
+                                      a ? H(e.command, e.application, _.Vh.IMAGE_RECS_MENU) : k(e.command, _.Vh.IMAGE_RECS_MENU);
                                   },
-                                  label: null !== (t = b.Id[e.command.id].overrideCommandName) && void 0 !== t ? t : e.command.name,
+                                  label: null !== (t = P.Id[e.command.id].overrideCommandName) && void 0 !== t ? t : e.command.name,
                                   subtext: e.command.description,
                                   subtextLineClamp: 1,
                                   icon: a ? l.PencilIcon : n ? void 0 : l.SendMessageIcon,
                                   imageUrl: e.applicationImageURL,
-                                  imageClassName: O.appIcon,
+                                  imageClassName: b.appIcon,
                                   showImageFirst: !0,
                                   disabled: !D && a,
                                   children:
@@ -261,9 +259,9 @@ function S(e) {
                                                         l.MenuItem,
                                                         {
                                                             id: ''.concat(e.command.id, '-send'),
-                                                            label: T.Z.Messages.APP_IMAGE_REC_MENU_SEND_LABEL,
-                                                            subtext: T.Z.Messages.APP_IMAGE_REC_MENU_SEND_SUBTEXT,
-                                                            action: () => B(e.command, _.Vh.IMAGE_RECS_SUBMENU),
+                                                            label: O.Z.Messages.APP_IMAGE_REC_MENU_SEND_LABEL,
+                                                            subtext: O.Z.Messages.APP_IMAGE_REC_MENU_SEND_SUBTEXT,
+                                                            action: () => k(e.command, _.Vh.IMAGE_RECS_SUBMENU),
                                                             icon: l.SendMessageIcon
                                                         },
                                                         ''.concat(e.command.id, '-send')
@@ -272,9 +270,9 @@ function S(e) {
                                                         l.MenuItem,
                                                         {
                                                             id: ''.concat(e.command.id, '-edit'),
-                                                            label: T.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_LABEL,
-                                                            subtext: T.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_SUBTEXT,
-                                                            action: () => G(e.command, e.application, _.Vh.IMAGE_RECS_SUBMENU),
+                                                            label: O.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_LABEL,
+                                                            subtext: O.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_SUBTEXT,
+                                                            action: () => H(e.command, e.application, _.Vh.IMAGE_RECS_SUBMENU),
                                                             icon: l.PencilIcon,
                                                             disabled: !D
                                                         },
