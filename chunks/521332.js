@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return p;
     }
 }),
     n(47120);
@@ -8,59 +8,72 @@ var r = n(735250),
     i = n(470079),
     a = n(442837),
     s = n(481060),
-    o = n(138201),
-    l = n(592125),
-    u = n(155647),
-    c = n(185625),
-    d = n(689938),
-    _ = n(229223);
-function E(e) {
+    o = n(230711),
+    l = n(138201),
+    u = n(592125),
+    c = n(155647),
+    d = n(185625),
+    _ = n(981631),
+    E = n(689938),
+    f = n(229223);
+function h(e) {
     let { title: t, description: n, onButtonClick: a, trackSettingsUpsellsAction: s } = e,
-        [l, u] = i.useState(!1);
+        [o, u] = i.useState(!1);
     return (
         i.useEffect(() => {
-            s(c.M4.SETTINGS_UPSELLS_VIEWED);
+            s(d.M4.SETTINGS_UPSELLS_VIEWED);
         }, []),
-        (0, r.jsx)(o.Z, {
+        (0, r.jsx)(l.Z, {
             title: t,
             description: n,
-            buttonText: l ? d.Z.Messages.IAR_UPSELLS_APPLIED_BUTTON : d.Z.Messages.IAR_UPSELLS_APPLY_BUTTON,
-            buttonDisabled: l,
+            buttonText: o ? E.Z.Messages.IAR_UPSELLS_APPLIED_BUTTON : E.Z.Messages.IAR_UPSELLS_APPLY_BUTTON,
+            buttonDisabled: o,
             onButtonPress: () => {
-                a(), u(!0), s(c.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
+                a(), u(!0), s(d.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
             }
         })
     );
 }
-function f(e) {
-    let { settingsUpsells: t, channelId: n, reportId: i, reportType: o, reportSubType: f } = e,
-        h = (0, a.e7)([l.Z], () => l.Z.getChannel(n)),
-        p = (0, u.jc)(t, null == h ? void 0 : h.type),
-        I = (0, c.i_)(o, f, i);
-    return 0 === p.length
+function p(e) {
+    let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: l, reportType: p, reportSubType: I } = e,
+        m = (0, a.e7)([u.Z], () => u.Z.getChannel(n)),
+        T = (0, c.jc)(t, null == m ? void 0 : m.type),
+        g = (0, d.i_)(p, I, l);
+    return 0 === T.length
         ? null
         : (0, r.jsxs)('div', {
-              className: _.container,
+              className: f.container,
               children: [
                   (0, r.jsx)(s.Heading, {
                       variant: 'heading-sm/semibold',
-                      className: _.header,
-                      children: d.Z.Messages.IAR_UPSELLS_SECTION_TITLE
+                      className: f.header,
+                      children: E.Z.Messages.IAR_UPSELLS_SECTION_TITLE
                   }),
                   (0, r.jsx)('div', {
-                      className: _.upsellsContainer,
-                      children: p.map((e, n) => {
+                      className: f.upsellsContainer,
+                      children: T.map((e, n) => {
                           let { getTitle: i, getDescription: a, onApply: s } = e;
                           return (0, r.jsx)(
-                              E,
+                              h,
                               {
                                   title: i(),
                                   description: a(),
                                   onButtonClick: s,
-                                  trackSettingsUpsellsAction: I(t[n])
+                                  trackSettingsUpsellsAction: g(t[n])
                               },
                               n
                           );
+                      })
+                  }),
+                  (0, r.jsx)('div', {
+                      className: f.navLinkContainer,
+                      children: (0, r.jsx)(s.Button, {
+                          onClick: () => {
+                              o.Z.open(_.oAB.PRIVACY_AND_SAFETY), i();
+                          },
+                          look: s.Button.Looks.LINK,
+                          color: s.Button.Colors.PRIMARY,
+                          children: E.Z.Messages.IAR_UPSELLS_GO_TO_SAFETY_SETTINGS
                       })
                   })
               ]

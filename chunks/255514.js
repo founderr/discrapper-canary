@@ -178,6 +178,7 @@ t.Z = (e) => {
                         (0, r.jsx)(y.Z, {
                             settingsUpsells: ef,
                             channelId: n.record.channel_id,
+                            onModalClose: H,
                             reportId: j,
                             reportType: n,
                             reportSubType: B
