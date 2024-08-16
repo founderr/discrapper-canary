@@ -12,7 +12,7 @@ n.d(t, {
         return D;
     },
     S2: function () {
-        return I;
+        return m;
     },
     UZ: function () {
         return N;
@@ -39,7 +39,7 @@ n.d(t, {
         return C;
     },
     ss: function () {
-        return m;
+        return I;
     },
     xn: function () {
         return O;
@@ -63,7 +63,7 @@ function h() {
 function p() {
     s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
 }
-function m(e, t) {
+function I(e, t) {
     let n = t ? f.Z.Messages.DELETE_ACCOUNT : f.Z.Messages.DISABLE_ACCOUNT,
         i = t ? _.ANM.DELETE_ACCOUNT : _.ANM.DISABLE_ACCOUNT;
     return (0, c.Z)(
@@ -84,7 +84,7 @@ function m(e, t) {
         d.Z.logoutInternal(), (0, o.uL)(_.Z5c.DEFAULT_LOGGED_OUT);
     });
 }
-async function I(e) {
+async function m(e) {
     let t = await r.tn.patch({
             url: _.ANM.ME,
             oldFormErrors: !0,
@@ -115,7 +115,7 @@ async function I(e) {
     );
 }
 function T(e) {
-    let { username: t, discriminator: n, email: r, emailToken: a, password: o, avatar: d, avatarDecoration: h, newPassword: p, globalName: m } = e;
+    let { username: t, discriminator: n, email: r, emailToken: a, password: o, avatar: d, avatarDecoration: h, newPassword: p, globalName: I } = e;
     return (
         s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, c.Z)(
@@ -127,7 +127,7 @@ function T(e) {
                     password: o,
                     avatar: d,
                     discriminator: n,
-                    global_name: m,
+                    global_name: I,
                     new_password: p,
                     ...e
                 };
@@ -136,7 +136,7 @@ function T(e) {
                     u = (0, E.xJ)();
                 null != u && null != l && ((s.push_provider = u), (s.push_token = l));
                 let c = i.K.get(_.scU);
-                return null != E.mv && null != c && ((s.push_voip_provider = E.mv), (s.push_voip_token = c)), I(s);
+                return null != E.mv && null != c && ((s.push_voip_provider = E.mv), (s.push_voip_token = c)), m(s);
             },
             {
                 checkEnabled: !1,

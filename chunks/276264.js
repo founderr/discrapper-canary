@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(33934),
     h = n(736144),
     p = n(113434),
-    m = n(918701),
-    I = n(553393),
+    I = n(918701),
+    m = n(553393),
     T = n(204197),
     g = n(594174),
     S = n(709586),
@@ -58,12 +58,12 @@ t.Z = function (e) {
             }),
             [ei]
         ),
-        [ep, em] = i.useState(!1);
+        [ep, eI] = i.useState(!1);
     i.useEffect(() => {
-        n && em(!1);
+        n && eI(!1);
     }, [n]);
-    let eI = (0, p.Fr)(x),
-        eT = null != eI && !es && n && !ep && (0, m.dl)(eI),
+    let em = (0, p.Fr)(x),
+        eT = null != em && !es && n && !ep && (0, I.dl)(em),
         eg = () => {
             eu(!0);
         },
@@ -86,7 +86,7 @@ t.Z = function (e) {
                 hideEmoji: !t,
                 hideTooltip: !0,
                 user: U,
-                hasQuest: null != eI && (0, m.dl)(eI)
+                hasQuest: null != em && (0, I.dl)(em)
             });
         },
         ev = () =>
@@ -186,12 +186,12 @@ t.Z = function (e) {
           })
         : (0, r.jsx)(l.Popout, {
               renderPopout: (e) =>
-                  (0, r.jsx)(I.Z, {
-                      quest: eI,
+                  (0, r.jsx)(m.Z, {
+                      quest: em,
                       memberListItemRef: eo,
                       applicationStream: G,
                       ...e,
-                      closePopout: () => em(!0)
+                      closePopout: () => eI(!0)
                   }),
               position: 'bottom',
               shouldShow: eT,

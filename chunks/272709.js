@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(924301),
     h = n(454585),
     p = n(565799),
-    m = n(501655),
-    I = n(427679),
+    I = n(501655),
+    m = n(427679),
     T = n(543882),
     g = n(592125),
     S = n(496675),
@@ -228,7 +228,7 @@ function B(e) {
                     let n = (0, R.K6)(_.length > 0 ? _ : a.length > 0 ? a : i, t);
                     if (e.isStage) {
                         var h, p;
-                        return null !== (p = null === (h = I.Z.getStageInstanceByChannel(e.channelId)) || void 0 === h ? void 0 : h.topic) && void 0 !== p ? p : n;
+                        return null !== (p = null === (h = m.Z.getStageInstanceByChannel(e.channelId)) || void 0 === h ? void 0 : h.topic) && void 0 !== p ? p : n;
                     }
                     return n;
                 }
@@ -276,10 +276,10 @@ function B(e) {
                         ]
                     });
                 case M.L.EVENT:
-                    let { event: m } = e,
-                        I = (0, R.NZ)(m),
-                        T = null == I ? void 0 : I.IconComponent,
-                        S = null == I ? void 0 : I.locationName;
+                    let { event: I } = e,
+                        m = (0, R.NZ)(I),
+                        T = null == m ? void 0 : m.IconComponent,
+                        S = null == m ? void 0 : m.locationName;
                     if (null != T && null != S)
                         return (0, r.jsxs)(r.Fragment, {
                             children: [
@@ -414,7 +414,7 @@ function B(e) {
                         return [
                             {
                                 icon: u.HeadphonesIcon,
-                                count: null !== (l = p.Z.getParticipantCount(s, m.pV.AUDIENCE)) && void 0 !== l ? l : 0
+                                count: null !== (l = p.Z.getParticipantCount(s, I.pV.AUDIENCE)) && void 0 !== l ? l : 0
                             }
                         ];
                     }

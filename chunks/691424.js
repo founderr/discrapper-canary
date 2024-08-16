@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(359875),
     h = n(124072),
     p = n(695503),
-    m = n(628692),
-    I = n(590956),
+    I = n(628692),
+    m = n(590956),
     T = n(703656),
     g = n(430824),
     S = n(572004),
@@ -154,7 +154,7 @@ let x = {
     },
     soundboard: {
         react: (e) =>
-            (0, r.jsx)(m.Z, {
+            (0, r.jsx)(I.Z, {
                 channelId: e.channelId,
                 soundId: e.soundId,
                 jumbo: e.jumboable
@@ -291,7 +291,7 @@ function G(e) {
                     let { key: s } = a;
                     return e.src
                         ? (0, r.jsx)(
-                              I.c,
+                              m.c,
                               {
                                   node: e,
                                   tooltipPosition: t,
@@ -317,7 +317,7 @@ function G(e) {
                         };
                     }
                     return (0, r.jsx)(
-                        I.Y,
+                        m.Y,
                         {
                             isInteracting: l,
                             node: e,

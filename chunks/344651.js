@@ -22,8 +22,8 @@ var a = n(442837),
     f = n(952537),
     h = n(218543),
     p = n(48481),
-    m = n(131704),
-    I = n(209747),
+    I = n(131704),
+    m = n(209747),
     T = n(598077),
     g = n(592125),
     S = n(271383),
@@ -48,7 +48,7 @@ let b = new d.Z('ConnectionStore'),
                           type: 'CHANNEL_UPDATES',
                           channels: []
                       };
-            let r = (0, m.q_)(t),
+            let r = (0, I.q_)(t),
                 i = g.Z.getChannel(t.id),
                 a =
                     null == i
@@ -251,7 +251,7 @@ k(
                     e.presences = r(e.presences || []);
                 });
                 let a = e.presences ? r(e.presences) : [],
-                    s = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map((e) => (0, m.q_)(e)),
+                    s = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map((e) => (0, I.q_)(e)),
                     o = null !== (n = e.game_invites) && void 0 !== n ? n : [];
                 h.Z.dispatchReadySupplemental.measure(() => {
                     F({
@@ -315,7 +315,7 @@ k(
             }
             h.Z.ready.measure(() => {
                 a.ZP.Emitter.batched(() => {
-                    let t = (e = h.Z.hydrateReady.measure(() => y.IM(e, L.Wb.identifyStartTime, n))).private_channels.map((e) => (0, m.q_)(e)),
+                    let t = (e = h.Z.hydrateReady.measure(() => y.IM(e, L.Wb.identifyStartTime, n))).private_channels.map((e) => (0, I.q_)(e)),
                         r = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
                         i = e.guilds.filter((e) => !0 !== e.unavailable),
                         a = e.guilds.filter((e) => !0 === e.geo_restricted);
@@ -509,7 +509,7 @@ k(
         (e, t) => {
             F({
                 type: t,
-                channel: (0, m.q_)(e)
+                channel: (0, I.q_)(e)
             });
         }
     ),
@@ -543,7 +543,7 @@ k(
             F({
                 type: t,
                 isNewlyCreated: n,
-                channel: (0, m.q_)(r)
+                channel: (0, I.q_)(r)
             });
         }
     ),
@@ -556,7 +556,7 @@ k(
                 guildId: e.guild_id,
                 threads: e.threads.map((e) => {
                     let t = g.Z.getChannel(e.parent_id);
-                    return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, m.q_)(e);
+                    return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, I.q_)(e);
                 }),
                 mostRecentMessages: e.most_recent_messages,
                 members: e.members ? i().map(e.members, f.Z) : void 0,
@@ -1081,13 +1081,13 @@ k(
     G(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE'], (e) => {
         F({
             type: 'GUILD_BOOST_SLOT_CREATE',
-            guildBoostSlot: I.Z.createFromServer(e, R.ZP.getSubscriptionById(e.subscription_id))
+            guildBoostSlot: m.Z.createFromServer(e, R.ZP.getSubscriptionById(e.subscription_id))
         });
     }),
     G(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE'], (e) => {
         F({
             type: 'GUILD_BOOST_SLOT_UPDATE',
-            guildBoostSlot: I.Z.createFromServer(e, R.ZP.getSubscriptionById(e.subscription_id))
+            guildBoostSlot: m.Z.createFromServer(e, R.ZP.getSubscriptionById(e.subscription_id))
         });
     }),
     G(['BILLING_POPUP_BRIDGE_CALLBACK'], (e) => {

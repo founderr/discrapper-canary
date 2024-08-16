@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return m;
     }
 }),
     n(789020),
@@ -25,7 +25,7 @@ var i = n(120356),
     f = n(981631),
     h = n(689938),
     p = n(359850);
-let m = (e) => {
+let I = (e) => {
     switch (e) {
         case u.ZC.IP_LOCATION:
             return l.GlobeEarthIcon;
@@ -35,10 +35,10 @@ let m = (e) => {
             return null;
     }
 };
-function I(e) {
+function m(e) {
     var t;
     let n,
-        { application: i, scopes: a, redirectUri: o, approximateGuildCount: I, isEmbeddedFlow: g, disclosures: S } = e,
+        { application: i, scopes: a, redirectUri: o, approximateGuildCount: m, isEmbeddedFlow: g, disclosures: S } = e,
         A = new Date(d.default.extractTimestamp(i.id)),
         N = (0, E.W3)(a),
         v = (0, c.yE)(null !== (t = i.flags) && void 0 !== t ? t : 0, f.udG.EMBEDDED);
@@ -67,10 +67,10 @@ function I(e) {
                 icon: l.ClockIcon,
                 text: h.Z.Messages.OAUTH2_DETAILS_CREATION_DATE.format({ date: A })
             }),
-            a.includes(s.x.BOT) && null != I
+            a.includes(s.x.BOT) && null != m
                 ? (0, r.jsx)(T, {
                       icon: l.RobotIcon,
-                      text: h.Z.Messages.OAUTH2_DETAILS_GUILDS.format({ guildCount: I })
+                      text: h.Z.Messages.OAUTH2_DETAILS_GUILDS.format({ guildCount: m })
                   })
                 : null,
             (0, r.jsx)(T, {
@@ -80,7 +80,7 @@ function I(e) {
             null != S
                 ? S.map((e) => {
                       let t = (0, u.PM)(e),
-                          n = m(e);
+                          n = I(e);
                       return null != n && null != t
                           ? (0, r.jsx)(T, {
                                 icon: n,

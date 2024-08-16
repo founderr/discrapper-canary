@@ -17,8 +17,8 @@ var r = n(939421),
     f = n(674360),
     h = n(918203),
     p = n(620018),
-    m = n(519718),
-    I = n(648980),
+    I = n(519718),
+    m = n(648980),
     T = n(576094),
     g = n(397250),
     S = n(617451),
@@ -48,7 +48,7 @@ var r = n(939421),
 function j(e, t, n) {
     var r;
     let i,
-        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: _, autoFocus: E, label: f, formatOptions: h, onBlur: p = () => {}, onFocus: m, onFocusChange: I, onKeyDown: T, onKeyUp: g, description: S, errorMessage: A, ...N } = e,
+        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: _, autoFocus: E, label: f, formatOptions: h, onBlur: p = () => {}, onFocus: I, onFocusChange: m, onKeyDown: T, onKeyUp: g, description: S, errorMessage: A, ...N } = e,
         { increment: v, incrementToMax: O, decrement: R, decrementToMin: C, numberValue: y, inputValue: D, commit: L, commitValidation: b } = t;
     let M = (0, H.qb)((r = Y) && r.__esModule ? r.default : r, '@react-aria/numberfield'),
         P = (0, G.Me)(a),
@@ -141,8 +141,8 @@ function j(e, t, n) {
                     t.validate(e) && t.setInputValue(e);
                 },
                 onBlur: p,
-                onFocus: m,
-                onFocusChange: I,
+                onFocus: I,
+                onFocusChange: m,
                 onKeyDown: (0, k.useMemo)(() => (0, G.tS)(ea, T), [ea, T]),
                 onKeyUp: g,
                 description: S,
@@ -169,8 +169,8 @@ function j(e, t, n) {
         eh = e['aria-label'] || ('string' == typeof e.label ? e.label : '');
     !eh && (i = null != e.label ? eu.id : e['aria-labelledby']);
     let ep = (0, G.Me)(),
-        em = (0, G.Me)(),
-        eI = (0, G.dG)(z, {
+        eI = (0, G.Me)(),
+        em = (0, G.dG)(z, {
             'aria-label': o || M.format('increase', { fieldLabel: eh }).trim(),
             id: i && !o ? ep : null,
             'aria-labelledby': i && !o ? `${ep} ${i}` : null,
@@ -183,8 +183,8 @@ function j(e, t, n) {
         }),
         eT = (0, G.dG)(q, {
             'aria-label': s || M.format('decrease', { fieldLabel: eh }).trim(),
-            id: i && !s ? em : null,
-            'aria-labelledby': i && !s ? `${em} ${i}` : null,
+            id: i && !s ? eI : null,
+            'aria-labelledby': i && !s ? `${eI} ${i}` : null,
             'aria-controls': P,
             excludeFromTabOrder: !0,
             preventFocusOnPress: !0,
@@ -201,7 +201,7 @@ function j(e, t, n) {
         },
         labelProps: eu,
         inputProps: eE,
-        incrementButtonProps: eI,
+        incrementButtonProps: em,
         decrementButtonProps: eT,
         errorMessageProps: e_,
         descriptionProps: ed,
@@ -225,8 +225,8 @@ Y = {
     'he-IL': f.Z,
     'hr-HR': h.Z,
     'hu-HU': p.Z,
-    'it-IT': m.Z,
-    'ja-JP': I.Z,
+    'it-IT': I.Z,
+    'ja-JP': m.Z,
     'ko-KR': T.Z,
     'lt-LT': g.Z,
     'lv-LV': S.Z,

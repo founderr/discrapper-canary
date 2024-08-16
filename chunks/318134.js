@@ -15,14 +15,14 @@ function c(e) {
     let { user: t, display: n, activity: c, entry: d, stream: _, analyticsLocations: E } = e,
         { context: f, trackUserProfileAction: h } = (0, l.KZ)(),
         { analyticsLocations: p } = (0, s.ZP)(),
-        m = null != E ? E : p,
-        [I, T] = (0, i.Wu)([o.Z], () => [o.Z.getUserOutbox(t.id), o.Z.isFetchingUserOutbox(t.id)]),
+        I = null != E ? E : p,
+        [m, T] = (0, i.Wu)([o.Z], () => [o.Z.getUserOutbox(t.id), o.Z.isFetchingUserOutbox(t.id)]),
         g = (0, r.useCallback)(
             (e) => {
                 let { action: t } = e;
                 h({
                     action: t,
-                    analyticsLocations: m
+                    analyticsLocations: I
                 }),
                     (0, u.z7)({
                         action: t,
@@ -30,12 +30,12 @@ function c(e) {
                         activity: c,
                         entry: d,
                         stream: _,
-                        outbox: I,
-                        analyticsLocations: m,
+                        outbox: m,
+                        analyticsLocations: I,
                         ...f
                     });
             },
-            [h, f, n, c, _, d, I, m]
+            [h, f, n, c, _, d, m, I]
         ),
         [S, A] = (0, r.useState)(!1),
         N = (0, r.useCallback)(

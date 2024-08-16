@@ -88,15 +88,15 @@ var c = (function (e) {
                         var h = (r = t + (f * l) / 2),
                             p = this._tension * (this._toValue - n) - this._friction * r;
                         (n = e + (E * l) / 2), (r = t + (f * l) / 2);
-                        var m = (c + 2 * (_ + f) + p) / 6;
-                        (e += ((u + 2 * (d + E) + h) / 6) * l), (t += m * l);
+                        var I = (c + 2 * (_ + f) + p) / 6;
+                        (e += ((u + 2 * (d + E) + h) / 6) * l), (t += I * l);
                     }
                     if (((this._lastTime = i), (this._lastPosition = e), (this._lastVelocity = t), this._onUpdate(e), !!this.__active)) {
-                        var I = !1;
-                        this._overshootClamping && 0 !== this._tension && (I = this._startPosition < this._toValue ? e > this._toValue : e < this._toValue);
+                        var m = !1;
+                        this._overshootClamping && 0 !== this._tension && (m = this._startPosition < this._toValue ? e > this._toValue : e < this._toValue);
                         var T = Math.abs(t) <= this._restSpeedThreshold,
                             g = !0;
-                        if ((0 !== this._tension && (g = Math.abs(this._toValue - e) <= this._restDisplacementThreshold), I || (T && g))) {
+                        if ((0 !== this._tension && (g = Math.abs(this._toValue - e) <= this._restDisplacementThreshold), m || (T && g))) {
                             0 !== this._tension && this._onUpdate(this._toValue), this.__debouncedOnEnd({ finished: !0 });
                             return;
                         }

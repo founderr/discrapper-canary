@@ -16,7 +16,7 @@ var r;
         f = 0,
         h = 0,
         p = 0,
-        m = {
+        I = {
             get didTimeout() {
                 return !1;
             },
@@ -25,7 +25,7 @@ var r;
                 return e < 0 ? 0 : e;
             }
         },
-        I = (function (e) {
+        m = (function (e) {
             var t,
                 n,
                 r = function () {
@@ -39,7 +39,7 @@ var r;
             (d = 22), (E = 66), (_ = 0);
         });
     function T() {
-        125 != E && ((d = 7), (E = 125), (_ = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), A())), I();
+        125 != E && ((d = 7), (E = 125), (_ = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), A())), m();
     }
     function g() {
         (i = null), (r = setTimeout(N, 0));
@@ -55,7 +55,7 @@ var r;
             i,
             a,
             s = d > 9 ? 9 : 1;
-        if (((h = Date.now()), (c = !1), (r = null), u > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && m.timeRemaining() > s; i++) (n = l.shift()), p++, n && n(m);
+        if (((h = Date.now()), (c = !1), (r = null), u > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && I.timeRemaining() > s; i++) (n = l.shift()), p++, n && n(I);
         l.length ? A() : (u = 0);
     }
     function v(e) {

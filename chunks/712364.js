@@ -24,7 +24,7 @@ class _ extends (r = a.PureComponent) {
     render() {
         var e;
         let { title: t, actionText: n, children: r, error: s, isLoading: d, maxLength: _, transitionState: E, helpMessage: f, retryPrompt: h, retrySuccessMessage: p } = this.props,
-            { code: m, errorMessage: I, retrySuccess: T } = this.state,
+            { code: I, errorMessage: m, retrySuccess: T } = this.state,
             g =
                 a.Children.count(r) > 0
                     ? (0, i.jsx)(l.Card, {
@@ -94,7 +94,7 @@ class _ extends (r = a.PureComponent) {
                                         onChange: this.handleCodeChange,
                                         placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
                                         maxLength: null != _ ? _ : 10,
-                                        value: m,
+                                        value: I,
                                         autoComplete: 'one-time-code',
                                         autoFocus: !0
                                     }),
@@ -103,7 +103,7 @@ class _ extends (r = a.PureComponent) {
                                               color: 'text-danger',
                                               variant: 'text-xs/normal',
                                               className: c.error,
-                                              children: null != s ? s : I
+                                              children: null != s ? s : m
                                           })
                                         : null,
                                     S
@@ -115,7 +115,7 @@ class _ extends (r = a.PureComponent) {
                         children: [
                             (0, i.jsx)(l.Button, {
                                 type: 'submit',
-                                disabled: d || 0 === m.length,
+                                disabled: d || 0 === I.length,
                                 children: null != n ? n : u.Z.Messages.CONFIRM
                             }),
                             (0, i.jsx)(l.Button, {

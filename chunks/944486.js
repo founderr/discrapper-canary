@@ -13,8 +13,8 @@ var c,
     f = n(392711),
     h = n.n(f),
     p = n(442837),
-    m = n(433517),
-    I = n(570140),
+    I = n(433517),
+    m = n(570140),
     T = n(57132),
     g = n(703656),
     S = n(131704),
@@ -37,7 +37,7 @@ function x(e) {
 }
 function G() {
     !__OVERLAY__ &&
-        m.K.set(b, {
+        I.K.set(b, {
             selectedChannelId: a,
             selectedVoiceChannelId: o,
             lastChannelFollowingDestination: s,
@@ -112,7 +112,7 @@ class Y extends (c = p.ZP.Store) {
         if (!__OVERLAY__) {
             var e, t;
             let n =
-                null !== (e = m.K.get(b)) && void 0 !== e
+                null !== (e = I.K.get(b)) && void 0 !== e
                     ? e
                     : {
                           selectedChannelId: a,
@@ -170,7 +170,7 @@ class Y extends (c = p.ZP.Store) {
               writable: !0
           })
         : (d[_] = E),
-    (t.Z = new Y(I.Z, {
+    (t.Z = new Y(m.Z, {
         CONNECTION_OPEN: function (e) {
             (r = e.sessionId), null != o && null == v.Z.getChannel(o) && (o = null), V() && G();
         },
@@ -258,6 +258,6 @@ class Y extends (c = p.ZP.Store) {
                 G());
         },
         LOGOUT: function () {
-            (M = {}), (a = null), (i = void 0), (U = {}), (s = {}), (o = null), m.K.remove(b);
+            (M = {}), (a = null), (i = void 0), (U = {}), (s = {}), (o = null), I.K.remove(b);
         }
     }));

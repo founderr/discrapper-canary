@@ -10,7 +10,7 @@ var r = n(275857),
     o = n(345926);
 function l(e) {
     var t, n, l, u, c, d, _, E;
-    let { defaultFilter: f, menuTrigger: h = 'input', allowsEmptyCollection: p = !1, allowsCustomValue: m, shouldCloseOnBlur: I = !0 } = e,
+    let { defaultFilter: f, menuTrigger: h = 'input', allowsEmptyCollection: p = !1, allowsCustomValue: I, shouldCloseOnBlur: m = !0 } = e,
         [T, g] = (0, a.useState)(!1),
         [S, A] = (0, a.useState)(!1),
         {
@@ -100,7 +100,7 @@ function l(e) {
             } else F(), k();
         },
         j = () => {
-            if (m) {
+            if (I) {
                 var e, t;
                 D === (null !== (t = null === (e = N.getItem(O)) || void 0 === e ? void 0 : e.textValue) && void 0 !== t ? t : '') ? Y() : Z();
             } else Y();
@@ -120,7 +120,7 @@ function l(e) {
         disabledKeys: y,
         isFocused: S,
         setFocused: (e) => {
-            e ? 'focus' === h && x(null, 'focus') : I && j(), A(e);
+            e ? 'focus' === h && x(null, 'focus') : m && j(), A(e);
         },
         selectedItem: C,
         collection: W,
@@ -130,7 +130,7 @@ function l(e) {
             w.isOpen && null != v.focusedKey ? (O === v.focusedKey ? Y() : R(v.focusedKey)) : j();
         },
         revert: () => {
-            m && null == O ? Z() : Y();
+            I && null == O ? Z() : Y();
         }
     };
 }

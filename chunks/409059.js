@@ -37,7 +37,7 @@ function p(e) {
         e.state = c.Rj.EXPIRED;
     });
 }
-class m extends (s = o.ZP.Store) {
+class I extends (s = o.ZP.Store) {
     getGuildTemplate(e) {
         return null != e ? d[e] : null;
     }
@@ -55,7 +55,7 @@ class m extends (s = o.ZP.Store) {
     }
 }
 (a = 'GuildTemplateStore'),
-    (i = 'displayName') in (r = m)
+    (i = 'displayName') in (r = I)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -63,7 +63,7 @@ class m extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new m(l.Z, {
+    (t.Z = new I(l.Z, {
         GUILD_TEMPLATE_RESOLVE: function (e) {
             let { code: t } = e;
             d = {

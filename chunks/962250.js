@@ -1,13 +1,13 @@
 a.d(s, {
     b: function () {
-        return l;
+        return r;
     }
 }),
     a(47120);
 var n = a(470079);
-function l() {
+function r() {
     var e, s;
-    let [a, l] = n.useState({
+    let [a, r] = n.useState({
         width: null !== (e = window.innerWidth) && void 0 !== e ? e : 1080,
         height: null !== (s = window.innerHeight) && void 0 !== s ? s : 1080
     });
@@ -15,7 +15,7 @@ function l() {
         n.useLayoutEffect(() => {
             function e() {
                 let e = window.innerWidth;
-                l({
+                r({
                     width: e,
                     height: window.innerHeight
                 });

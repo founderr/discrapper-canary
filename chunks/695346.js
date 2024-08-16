@@ -51,7 +51,7 @@ n.d(t, {
         return eg;
     },
     QZ: function () {
-        return I;
+        return m;
     },
     R$: function () {
         return E;
@@ -66,7 +66,7 @@ n.d(t, {
         return ev;
     },
     Sb: function () {
-        return eI;
+        return em;
     },
     Sh: function () {
         return eL;
@@ -183,7 +183,7 @@ n.d(t, {
         return f;
     },
     vF: function () {
-        return m;
+        return I;
     },
     x4: function () {
         return ed;
@@ -256,7 +256,7 @@ let _ = (0, o.Zc)(
         },
         (e) => a.Gm.create({ value: e })
     ),
-    m = (0, o.Zc)(
+    I = (0, o.Zc)(
         'textAndImages',
         'useThreadSidebar',
         (e) => {
@@ -274,7 +274,7 @@ let _ = (0, o.Zc)(
     },
     (e) => a.D5.create({ value: e })
 );
-let I = (0, o.Zc)(
+let m = (0, o.Zc)(
         'notifications',
         'quietMode',
         (e) => {
@@ -725,14 +725,14 @@ let et = new Set(Object.values(c.Skl)),
     (e) => (null != e && ep.has(e.value) ? e.value : s.l.COZY),
     (e) => a.Gm.create({ value: e })
 );
-let em = new Set([s.Z.ALL, s.Z.UNREADS, s.Z.NONE]);
+let eI = new Set([s.Z.ALL, s.Z.UNREADS, s.Z.NONE]);
 (0, o.Zc)(
     'appearance',
     'messagePreviews',
-    (e) => (null != e && em.has(e.value) ? e.value : s.Z.ALL),
+    (e) => (null != e && eI.has(e.value) ? e.value : s.Z.ALL),
     (e) => a.Gm.create({ value: e })
 );
-let eI = (0, o.KM)(
+let em = (0, o.KM)(
         (0, o.Zc)(
             'appearance',
             'developerMode',

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return I;
     }
 });
 var r = n(735250),
@@ -77,7 +77,7 @@ function p(e) {
                       ]
                   })
                 : null,
-        m =
+        I =
             c.length > 0
                 ? (0, r.jsx)(o.Tooltip, {
                       text: d,
@@ -95,26 +95,26 @@ function p(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             _,
-            null != p || null != m
+            null != p || null != I
                 ? (0, r.jsxs)('div', {
                       className: f.optionals,
-                      children: [p, m]
+                      children: [p, I]
                   })
                 : null
         ]
     });
 }
-function m(e) {
+function I(e) {
     var t, n, a;
     let o,
-        { command: u, activeOptionName: c, channel: E, showOptions: h, showImage: m, optionStates: I, onOptionClick: T, section: g, isSelectable: S = !0 } = e,
+        { command: u, activeOptionName: c, channel: E, showOptions: h, showImage: I, optionStates: m, onOptionClick: T, section: g, isSelectable: S = !0 } = e,
         A = i.useMemo(() => {
             var e;
             return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find((e) => e.name === c);
         }, [c, u]),
-        N = null != c ? (null == I ? void 0 : I[c]) : null;
+        N = null != c ? (null == m ? void 0 : m[c]) : null;
     o = null != N && (null === (t = N.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? (null !== (n = N.lastValidationResult.error) && void 0 !== n ? n : '') : null;
-    let v = m && null != g ? (0, d.ky)(g) : null;
+    let v = I && null != g ? (0, d.ky)(g) : null;
     return (0, r.jsxs)('div', {
         className: s()(f.wrapper, S ? null : f.disabled),
         children: [
@@ -140,7 +140,7 @@ function m(e) {
                             h
                                 ? (0, r.jsx)(p, {
                                       command: u,
-                                      optionStates: I,
+                                      optionStates: m,
                                       onOptionClick: T
                                   })
                                 : null

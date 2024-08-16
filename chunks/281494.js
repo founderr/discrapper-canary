@@ -1,6 +1,6 @@
 n.d(t, {
     C$: function () {
-        return m;
+        return I;
     },
     Eo: function () {
         return g;
@@ -15,7 +15,7 @@ n.d(t, {
         return S;
     },
     Ve: function () {
-        return I;
+        return m;
     },
     iF: function () {
         return p;
@@ -91,7 +91,7 @@ async function p(e, t) {
         };
     return h.set(n, a), a;
 }
-let m = () => (
+let I = () => (
         l.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_START' }),
         o.tn
             .get({
@@ -123,7 +123,7 @@ let m = () => (
                 }
             )
     ),
-    I = (e) => (
+    m = (e) => (
         l.Z.dispatch({
             type: 'BILLING_CREATE_REFERRAL_PREVIEW_START',
             recipientId: e

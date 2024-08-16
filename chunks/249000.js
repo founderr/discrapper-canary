@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return m;
     }
 }),
     n(411104),
@@ -73,10 +73,10 @@ function p(e) {
         }
     );
 }
-function m(e) {
+function I(e) {
     return null != e ? ''.concat(e, 'px') : 'auto';
 }
-class I extends (a = u.PureComponent) {
+class m extends (a = u.PureComponent) {
     componentDidMount() {
         this.checkBounds(), this.setDOMPositions(this.position);
     }
@@ -104,7 +104,7 @@ class I extends (a = u.PureComponent) {
             }),
             null != a)
         )
-            (a.style.top = m(t)), (a.style.bottom = m(r)), (a.style.left = m(n)), (a.style.right = m(i));
+            (a.style.top = I(t)), (a.style.bottom = I(r)), (a.style.left = I(n)), (a.style.right = I(i));
     }
     render() {
         let { children: e, className: t } = this.props,
@@ -181,11 +181,11 @@ class I extends (a = u.PureComponent) {
                 let { clientX: t, clientY: n } = e,
                     { current: r } = this.draggableRef,
                     { maxX: i, maxY: a, flipVertical: s, flipHorizontal: o, onDragStart: l, onDrag: u, onFlip: c, snapOrientation: d } = this.props,
-                    { dragging: m, dragging: I, verticalOrientation: T, horizontalOrientation: g } = this.state,
+                    { dragging: I, dragging: m, verticalOrientation: T, horizontalOrientation: g } = this.state,
                     S = !1;
                 if (
                     null == r ||
-                    (!m &&
+                    (!I &&
                         9 >
                             _(this._dragStart, {
                                 x: t,
@@ -193,7 +193,7 @@ class I extends (a = u.PureComponent) {
                             }))
                 )
                     return;
-                m = !0;
+                I = !0;
                 let { clientWidth: A, clientHeight: N } = r,
                     v = n - this._offsetY,
                     O = p(
@@ -219,11 +219,11 @@ class I extends (a = u.PureComponent) {
                 2 === o && g !== this.state.horizontalOrientation && ((this._offsetX = A - this._offsetX), (S = !0)),
                     2 === s && T !== this.state.verticalOrientation && ((this._offsetY = N - this._offsetY), (S = !0)),
                     this.setDOMPositions(O),
-                    !I && (null == l || l(O, r)),
+                    !m && (null == l || l(O, r)),
                     null == u || u(O, r),
                     S && (null == c || c([T, g])),
                     this.setState({
-                        dragging: m,
+                        dragging: I,
                         verticalOrientation: T,
                         horizontalOrientation: g,
                         atTopEdge: 0 === O.top
@@ -267,12 +267,12 @@ class I extends (a = u.PureComponent) {
                     };
                 if (t.left === e.left && t.right === e.right && t.top === e.top && t.bottom === e.bottom) return;
                 null == s || s(e, r), this.setDOMPositions(e);
-                let m = 0 === e.top;
-                (l !== n.verticalOrientation || u !== n.horizontalOrientation || m !== n.atTopEdge) &&
+                let I = 0 === e.top;
+                (l !== n.verticalOrientation || u !== n.horizontalOrientation || I !== n.atTopEdge) &&
                     this.setState({
                         verticalOrientation: l,
                         horizontalOrientation: u,
-                        atTopEdge: m
+                        atTopEdge: I
                     });
             });
         let [t, n] = f(e.initialPosition);
@@ -299,8 +299,8 @@ class I extends (a = u.PureComponent) {
             });
     }
 }
-d(I, 'FlipTypes', r),
-    d(I, 'defaultProps', {
+d(m, 'FlipTypes', r),
+    d(m, 'defaultProps', {
         snapOrientation: !1,
         maxX: 0,
         maxY: 0,

@@ -17,8 +17,8 @@ var r = n(735250),
     f = n(202458),
     h = n(220779),
     p = n(142550),
-    m = n(954017),
-    I = n(314091),
+    I = n(954017),
+    m = n(314091),
     T = n(159244),
     g = n(574176),
     S = n(952164),
@@ -126,22 +126,22 @@ t.Z = function (e) {
                                             }),
                                                 r === p.L.ReactSubmit &&
                                                     null != i &&
-                                                    (0, m.sendReactionToActivity)({
+                                                    (0, I.sendReactionToActivity)({
                                                         reaction: i,
                                                         user: n,
                                                         activity: t,
                                                         application: V,
-                                                        altText: (0, I.xC)(n, t),
+                                                        altText: (0, m.xC)(n, t),
                                                         stream: x
                                                     }),
                                                 r === p.L.ReplySubmit &&
                                                     null != a &&
-                                                    (0, m.sendReplyToActivity)({
+                                                    (0, I.sendReplyToActivity)({
                                                         reply: a,
                                                         user: n,
                                                         activity: t,
                                                         application: V,
-                                                        altText: (0, I.xC)(n, t),
+                                                        altText: (0, m.xC)(n, t),
                                                         stream: x
                                                     });
                                         }

@@ -18,8 +18,8 @@ var r = n(525654),
     f = n(839426),
     h = n(625128),
     p = n(972830),
-    m = n(305325),
-    I = n(281956),
+    I = n(305325),
+    m = n(281956),
     T = n(931261),
     g = n(15274),
     S = n(924301),
@@ -104,7 +104,7 @@ function J(e) {
                                       }),
                                   c === z.Iq.EMBEDDED_APPLICATION && null != d && ((0, C.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, f.Z)(l, d, a, null == i ? void 0 : i.intent));
                           };
-                      (0, I.n)(t, [U.Z, w.Z, k.default, P.ZP]) ? (0, m.hk)(t, s) : s();
+                      (0, m.n)(t, [U.Z, w.Z, k.default, P.ZP]) ? (0, I.hk)(t, s) : s();
                   });
           })
         : (0, E.l5)(o) && c === z.Iq.EMBEDDED_APPLICATION && null != d && ((0, C.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, f.Z)(l, d, a, null == i ? void 0 : i.intent)),

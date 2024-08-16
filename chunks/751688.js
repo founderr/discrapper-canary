@@ -25,7 +25,7 @@ function p(e, t, n) {
         e
     );
 }
-class m extends (r = a.Component) {
+class I extends (r = a.Component) {
     render() {
         let { popoutOpen: e } = this.state,
             { user: t, analyticsContext: n, disablePopout: r, ignoreModalClicks: a, guildId: s, channelId: o } = this.props,
@@ -100,4 +100,4 @@ class m extends (r = a.Component) {
             });
     }
 }
-p(m, 'defaultProps', { disablePopout: !1 }), (t.Z = (0, c.Z)(m));
+p(I, 'defaultProps', { disablePopout: !1 }), (t.Z = (0, c.Z)(I));

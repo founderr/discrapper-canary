@@ -17,7 +17,7 @@ var a = n(512722),
     m = n(689938);
 function p(e) {
     var t, a;
-    let { applicationId: p, stream: _, channel: f, exitFullScreen: E, appContext: g, analyticsLocation: C, guildScheduledEvent: I, ...x } = e,
+    let { applicationId: p, stream: _, channel: f, exitFullScreen: E, appContext: C, analyticsLocation: g, guildScheduledEvent: I, ...x } = e,
         T = (0, o.bp)(),
         N = null == f ? void 0 : f.getGuildId(),
         v = (0, l.e7)([c.Z], () => (null != N ? c.Z.getGuild(N) : null), [N]);
@@ -54,9 +54,9 @@ function p(e) {
                           channel: f,
                           streamUserId: null == _ ? void 0 : _.ownerId,
                           applicationId: p,
-                          appContext: null != g ? g : T,
+                          appContext: null != C ? C : T,
                           exitFullScreen: E,
-                          analyticsLocation: C,
+                          analyticsLocation: g,
                           guildScheduledEvent: I
                       });
               },

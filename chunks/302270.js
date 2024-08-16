@@ -18,8 +18,8 @@ var i = n(735250),
     _ = n(236091),
     f = n(623624),
     E = n(665149),
-    g = n(984370),
-    C = n(141321),
+    C = n(984370),
+    g = n(141321),
     I = n(618158),
     x = n(390322),
     T = n(616286),
@@ -45,7 +45,7 @@ function B(e) {
         m = (0, d.bp)(),
         f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
         E = (0, R.B)(n.id),
-        g = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY),
+        C = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY),
         { preventIdle: v, allowIdle: S } = (0, I.Y)('popup');
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -80,7 +80,7 @@ function B(e) {
             ),
             !t && (0, i.jsx)(p.Z, { className: w.button }, 'clips'),
             (0, i.jsx)(
-                C.Z,
+                g.Z,
                 {
                     onOpen: v,
                     onClose: S,
@@ -96,7 +96,7 @@ function B(e) {
                               f && u.Z.updateChatOpen(n.id, !1), s();
                           },
                           showRequestToSpeakSidebar: o,
-                          numRequestToSpeak: g
+                          numRequestToSpeak: C
                       })
                   })
                 : null,
@@ -117,7 +117,7 @@ function H(e) {
     var t, n;
     let { inPopout: s, channel: d, toggleRequestToSpeakSidebar: h, showRequestToSpeakSidebar: p } = e,
         _ = (0, m.ZP)(d),
-        C = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(d.id)),
+        g = (0, r.e7)([L.Z], () => L.Z.getStageInstanceByChannel(d.id)),
         I = (0, M.Io)(d.id),
         x = (0, M.Rk)(d.id, b.pV.AUDIENCE),
         T = (0, r.e7)([v.Z], () => v.Z.getGuild(d.guild_id), [d.guild_id]),
@@ -150,7 +150,7 @@ function H(e) {
             showRequestToSpeakSidebar: p,
             channel: d
         }),
-        onDoubleClick: g.O,
+        onDoubleClick: C.O,
         transparent: !0,
         className: l()((0, A.Q)(D.BRd.DARK), w.participants),
         children: [
@@ -159,12 +159,12 @@ function H(e) {
                 disabled: !0,
                 'aria-label': U.Z.Messages.STAGE_CHANNEL,
                 className: w.icon,
-                color: null != C ? o.Z.unsafe_rawColors.GREEN_360.css : void 0
+                color: null != g ? o.Z.unsafe_rawColors.GREEN_360.css : void 0
             }),
             (0, i.jsx)(E.ZP.Title, {
                 className: w.channelName,
                 wrapperClassName: w.channelNameWrapper,
-                children: null !== (n = null == C ? void 0 : C.topic) && void 0 !== n ? n : _
+                children: null !== (n = null == g ? void 0 : g.topic) && void 0 !== n ? n : _
             }),
             (0, i.jsx)(E.ZP.Divider, { className: w.divider }),
             (0, i.jsxs)(E.ZP.Title, {

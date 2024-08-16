@@ -27,8 +27,8 @@ var r = n(392711),
     f = n(699516),
     h = n(594174),
     p = n(483360),
-    m = n(892880),
-    I = n(591759),
+    I = n(892880),
+    m = n(591759),
     T = n(279779),
     g = n(620490),
     S = n(727785),
@@ -193,7 +193,7 @@ class R {
         let { userSearchContext: r } = this;
         if (null == r || !this._include(S.h8.USER)) return;
         let { userFilters: i } = this.options;
-        void 0 !== t && m.Z.requestMembers(t, e, 100), r.setLimit(n), r.setQuery(e, i, this._userBlacklist, O(S.h8.USER, this.options));
+        void 0 !== t && I.Z.requestMembers(t, e, 100), r.setLimit(n), r.setQuery(e, i, this._userBlacklist, O(S.h8.USER, this.options));
     }
     queryGroupDMs(e, t) {
         if (!this._include(S.h8.GROUP_DM)) return [];
@@ -227,8 +227,8 @@ class R {
             return [];
         }
         let { pathname: i, hostname: a = '', host: o } = n,
-            l = I.Z.isDiscordHostname(a) || window.location.host === o;
-        return null !== i && l && I.Z.isAppRoute(i)
+            l = m.Z.isDiscordHostname(a) || window.location.host === o;
+        return null !== i && l && m.Z.isAppRoute(i)
             ? [
                   {
                       type: S.h8.LINK,

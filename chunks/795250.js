@@ -41,8 +41,8 @@ var i = n(53786),
     f = n(848560),
     h = n(397865),
     p = n(652695),
-    m = n(108760),
-    I = n(658311),
+    I = n(108760),
+    m = n(658311),
     T = n(814878),
     g = n(166305),
     S = n(860223),
@@ -151,9 +151,9 @@ function er(e, t, n, r, i, a, s, o, l, u) {
     let { placement: c, crossPlacement: d, axis: _, crossAxis: E, size: f, crossSize: h } = r,
         p = {};
     (p[E] = e[E]), 'center' === d ? (p[E] += (e[h] - n[h]) / 2) : d !== E && (p[E] += e[h] - n[h]), (p[E] += a);
-    let m = e[E] - n[h] + l + u,
-        I = e[E] + e[h] - l - u;
-    if (((p[E] = (0, B.uZ)(p[E], m, I)), c === _)) {
+    let I = e[E] - n[h] + l + u,
+        m = e[E] + e[h] - l - u;
+    if (((p[E] = (0, B.uZ)(p[E], I, m)), c === _)) {
         let n = o ? s[f] : t[X[f]];
         p[z[_]] = Math.floor(n - e[_] + i);
     } else p[_] = Math.floor(e[_] + e[f] + i);
@@ -201,7 +201,7 @@ let el = new WeakMap(),
 function ec(e) {
     let { direction: t } = (0, V.bU)(),
         { arrowSize: n = 0, targetRef: r, overlayRef: i, scrollRef: a = i, placement: s = 'bottom', containerPadding: o = 12, shouldFlip: l = !0, boundaryElement: u = 'undefined' != typeof document ? document.body : null, offset: c = 0, crossOffset: d = 0, shouldUpdatePosition: _ = !0, isOpen: E = !0, onClose: f, maxHeight: h, arrowBoundaryOffset: p = 0 } = e,
-        [m, I] = (0, k.useState)({
+        [I, m] = (0, k.useState)({
             position: {},
             arrowOffsetLeft: void 0,
             arrowOffsetTop: void 0,
@@ -223,10 +223,10 @@ function ec(e) {
                                   return t || document.documentElement;
                               })(s)
                             : document.documentElement,
-                    m = p === document.documentElement,
-                    I = window.getComputedStyle(p).position,
-                    T = m ? ea(a) : es(a, p);
-                if (!m) {
+                    I = p === document.documentElement,
+                    m = window.getComputedStyle(p).position,
+                    T = I ? ea(a) : es(a, p);
+                if (!I) {
                     let { marginTop: e, marginLeft: t } = window.getComputedStyle(a);
                     (T.top += parseInt(e, 10) || 0), (T.left += parseInt(t, 10) || 0);
                 }
@@ -243,7 +243,7 @@ function ec(e) {
                     (g.width += S.left + S.right),
                     (g.height += S.top + S.bottom),
                     (function (e, t, n, r, i, a, s, o, l, u, c, d, _, E, f, h) {
-                        var p, m, I, T, g, S;
+                        var p, I, m, T, g, S;
                         let A = en(e),
                             { size: N, crossAxis: v, crossSize: O, placement: R, crossPlacement: C } = A,
                             y = er(t, o, n, A, c, d, u, _, f, h),
@@ -256,7 +256,7 @@ function ec(e) {
                         }
                         let b = et(v, y[v], n[O], o, l, a);
                         y[v] += b;
-                        let M = ((p = y), (m = o), (I = u), (T = t), (g = i), (S = a), null != p.top ? Math.max(0, m.height + m.top + m.scroll.top - (I.top + p.top) - (g.top + g.bottom + S)) : Math.max(0, T.top + I.top - (m.top + m.scroll.top) - (g.top + g.bottom + S)));
+                        let M = ((p = y), (I = o), (m = u), (T = t), (g = i), (S = a), null != p.top ? Math.max(0, I.height + I.top + I.scroll.top - (m.top + p.top) - (g.top + g.bottom + S)) : Math.max(0, T.top + m.top - (I.top + I.scroll.top) - (g.top + g.bottom + S)));
                         E && E < M && (M = E), (n.height = Math.min(n.height, M)), (b = et(v, (y = er(t, o, n, A, D, d, u, _, f, h))[v], n[O], o, l, a)), (y[v] += b);
                         let P = {},
                             U = t[v] + 0.5 * t[O] - n[v],
@@ -293,7 +293,7 @@ function ec(e) {
                         'BODY' === c.tagName ? ea(p) : es(p, c),
                         d,
                         _,
-                        !!I && 'static' !== I,
+                        !!m && 'static' !== m,
                         E,
                         f,
                         h
@@ -315,7 +315,7 @@ function ec(e) {
                 arrowSize: n,
                 arrowBoundaryOffset: p
             });
-            Object.keys(e.position).forEach((t) => (i.current.style[t] = e.position[t] + 'px')), (i.current.style.maxHeight = null != e.maxHeight ? e.maxHeight + 'px' : void 0), I(e);
+            Object.keys(e.position).forEach((t) => (i.current.style[t] = e.position[t] + 'px')), (i.current.style.maxHeight = null != e.maxHeight ? e.maxHeight + 'px' : void 0), m(e);
         }, T);
     (0, F.bt)(g, T),
         (function (e) {
@@ -383,17 +383,17 @@ function ec(e) {
                 style: {
                     position: 'absolute',
                     zIndex: 100000,
-                    ...m.position,
-                    maxHeight: m.maxHeight
+                    ...I.position,
+                    maxHeight: I.maxHeight
                 }
             },
-            placement: m.placement,
+            placement: I.placement,
             arrowProps: {
                 'aria-hidden': 'true',
                 role: 'presentation',
                 style: {
-                    left: m.arrowOffsetLeft,
-                    top: m.arrowOffsetTop
+                    left: I.arrowOffsetLeft,
+                    top: I.arrowOffsetTop
                 }
             },
             updatePosition: g
@@ -470,7 +470,7 @@ function eE(e, t, n) {
 let ef = 'undefined' != typeof document && window.visualViewport,
     eh = new Set(['checkbox', 'radio', 'range', 'color', 'file', 'image', 'button', 'submit', 'reset']),
     ep = 0;
-function em(e = {}) {
+function eI(e = {}) {
     let { isDisabled: t } = e;
     (0, F.bt)(() => {
         if (!t)
@@ -488,9 +488,9 @@ function em(e = {}) {
                                           eT(window, 'scroll', () => {
                                               window.scrollTo(0, 0);
                                           }),
-                                          eI(document.documentElement, 'paddingRight', `${window.innerWidth - document.documentElement.clientWidth}px`),
-                                          eI(document.documentElement, 'overflow', 'hidden'),
-                                          eI(document.body, 'marginTop', `-${t}px`),
+                                          em(document.documentElement, 'paddingRight', `${window.innerWidth - document.documentElement.clientWidth}px`),
+                                          em(document.documentElement, 'overflow', 'hidden'),
+                                          em(document.body, 'marginTop', `-${t}px`),
                                           () => {
                                               window.scrollTo(e, t);
                                           }
@@ -502,7 +502,7 @@ function em(e = {}) {
                                           document,
                                           'touchstart',
                                           (n) => {
-                                              ((e = (0, F.rP)(n.target, !0)) !== document.documentElement || e !== document.body) && e instanceof HTMLElement && 'auto' === window.getComputedStyle(e).overscrollBehavior && (t = eI(e, 'overscrollBehavior', 'contain'));
+                                              ((e = (0, F.rP)(n.target, !0)) !== document.documentElement || e !== document.body) && e instanceof HTMLElement && 'auto' === window.getComputedStyle(e).overscrollBehavior && (t = em(e, 'overscrollBehavior', 'contain'));
                                           },
                                           {
                                               passive: !1,
@@ -571,7 +571,7 @@ function em(e = {}) {
                               };
                           })()
                         : (function () {
-                              return (0, F.tS)(eI(document.documentElement, 'paddingRight', `${window.innerWidth - document.documentElement.clientWidth}px`), eI(document.documentElement, 'overflow', 'hidden'));
+                              return (0, F.tS)(em(document.documentElement, 'paddingRight', `${window.innerWidth - document.documentElement.clientWidth}px`), em(document.documentElement, 'overflow', 'hidden'));
                           })()),
                 () => {
                     0 == --ep && r();
@@ -579,7 +579,7 @@ function em(e = {}) {
             );
     }, [t]);
 }
-function eI(e, t, n) {
+function em(e, t, n) {
     let r = e.style[t];
     return (
         (e.style[t] = n),
@@ -692,8 +692,8 @@ eC = {
     'fr-FR': f.Z,
     'he-IL': h.Z,
     'hr-HR': p.Z,
-    'hu-HU': m.Z,
-    'it-IT': I.Z,
+    'hu-HU': I.Z,
+    'it-IT': m.Z,
     'ja-JP': T.Z,
     'ko-KR': g.Z,
     'lt-LT': S.Z,
@@ -797,7 +797,7 @@ function eM(e, t) {
             onClose: i ? t.close : null
         });
     return (
-        em({ isDisabled: i || !t.isOpen }),
+        eI({ isDisabled: i || !t.isOpen }),
         (0, F.bt)(() => {
             if (t.isOpen && !i && r.current) return eb([r.current]);
         }, [i, t.isOpen, r]),
@@ -854,7 +854,7 @@ function ex(e, t, n) {
         n
     );
     return (
-        em({ isDisabled: !t.isOpen }),
+        eI({ isDisabled: !t.isOpen }),
         ew(),
         (0, k.useEffect)(() => {
             if (t.isOpen) return eb([n.current]);

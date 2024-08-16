@@ -19,8 +19,8 @@ var i = n(735250),
     _ = n(871499),
     f = n(402113),
     E = n(592125),
-    g = n(271383),
-    C = n(944486),
+    C = n(271383),
+    g = n(944486),
     I = n(594174),
     x = n(585483),
     T = n(792125),
@@ -87,12 +87,12 @@ function w(e) {
         en ? ((t = ee.width / P.I0) > ee.height && (e = (t = ee.height) * P.I0), (ea = (ee.height - t) / 2)) : ((e = Math.min(ee.height * P.I0)) > ee.width && (t = (e = ee.width) / P.I0), (ei = (ee.width - e) / 2));
     }
     let el = W.get(null !== (n = null == H ? void 0 : H.id) && void 0 !== n ? n : ''),
-        er = (0, r.e7)([C.Z], () => C.Z.getChannelId()),
+        er = (0, r.e7)([g.Z], () => g.Z.getChannelId()),
         eo = (0, r.Wu)(
-            [g.ZP],
+            [C.ZP],
             () => {
                 var e;
-                return null == V ? [] : Array.from(null !== (e = null == el ? void 0 : el.embeddedActivity.userIds) && void 0 !== e ? e : []).map((e) => g.ZP.getMember(V.guild_id, e));
+                return null == V ? [] : Array.from(null !== (e = null == el ? void 0 : el.embeddedActivity.userIds) && void 0 !== e ? e : []).map((e) => C.ZP.getMember(V.guild_id, e));
             },
             [el, V]
         ),

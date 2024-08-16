@@ -32,7 +32,7 @@ function p(e) {
         interviewChannelId: e.interview_channel_id
     };
 }
-function m(e) {
+function I(e) {
     let { guildId: t, request: n } = e;
     if (null == n) return;
     let r = p(n),
@@ -40,7 +40,7 @@ function m(e) {
     if (null != i && r.userId !== i.id) return !1;
     (0, d.d3)(r) ? delete E[t] : (E[t] = r);
 }
-class I extends (s = o.ZP.Store) {
+class m extends (s = o.ZP.Store) {
     getRequest(e) {
         return E[e];
     }
@@ -60,7 +60,7 @@ class I extends (s = o.ZP.Store) {
     }
 }
 (a = 'UserGuildJoinRequestStore'),
-    (i = 'displayName') in (r = I)
+    (i = 'displayName') in (r = m)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -68,7 +68,7 @@ class I extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new I(l.Z, {
+    (t.Z = new m(l.Z, {
         CONNECTION_OPEN: function (e) {
             let { guildJoinRequests: t } = e;
             (f = !1),
@@ -79,8 +79,8 @@ class I extends (s = o.ZP.Store) {
                     null != t && (E[t] = p(e));
                 });
         },
-        GUILD_JOIN_REQUEST_UPDATE: m,
-        GUILD_JOIN_REQUEST_CREATE: m,
+        GUILD_JOIN_REQUEST_UPDATE: I,
+        GUILD_JOIN_REQUEST_CREATE: I,
         USER_GUILD_JOIN_REQUEST_UPDATE: function (e) {
             let { request: t, guildId: n } = e;
             if (null == t) {

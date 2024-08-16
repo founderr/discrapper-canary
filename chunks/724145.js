@@ -19,8 +19,8 @@ var r = n(735250),
     f = n(607070),
     h = n(100527),
     p = n(906732),
-    m = n(639119),
-    I = n(197115),
+    I = n(639119),
+    m = n(197115),
     T = n(587446),
     g = n(594174),
     S = n(626135),
@@ -78,12 +78,12 @@ let M = () =>
         let { onSubscribeSuccess: a, markAsDismissed: s } = e,
             { analyticsLocations: o } = (0, p.ZP)(h.Z.CLIENT_THEMES_EDITOR),
             [_, E] = (0, l.Wu)([g.default, v.Z], () => [v.Z.gradientPreset, A.ZP.isPremium(g.default.getCurrentUser())]),
-            f = (0, m.N)(),
+            f = (0, I.N)(),
             T = (0, A.Rt)({
                 intervalType: null == f ? void 0 : null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.interval,
                 intervalCount: null == f ? void 0 : null === (n = f.subscription_trial) || void 0 === n ? void 0 : n.interval_count
             });
-        return (0, r.jsx)(I.Z, {
+        return (0, r.jsx)(m.Z, {
             size: c.Button.Sizes.MEDIUM,
             buttonText: E ? L.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == f ? void 0 : null === (i = f.subscription_trial) || void 0 === i ? void 0 : i.sku_id) === D.Si.TIER_2 ? T : L.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
             subscriptionTier: D.Si.TIER_2,
@@ -163,16 +163,16 @@ function x(e) {
                     location_stack: n
                 });
         }, [a, n]);
-    let m = (0, O.J)(),
-        I = (0, E.Z)(null, a ? m : C.dG4);
+    let I = (0, O.J)(),
+        m = (0, E.Z)(null, a ? I : C.dG4);
     return (
         i.useEffect(() => {
-            if (!!a && !u) return m;
-        }, [a, u, m]),
+            if (!!a && !u) return I;
+        }, [a, u, I]),
         (0, r.jsx)(p.Gt, {
             value: n,
             children: (0, r.jsx)('div', {
-                ref: I,
+                ref: m,
                 className: s()(b.themeEditor, d ? b.editorAnimate : null),
                 children: (0, r.jsxs)(c.HeadingLevel, {
                     children: [

@@ -22,8 +22,8 @@ var r = n(735250),
     f = n(626135),
     h = n(981631),
     p = n(596401);
-let m = l().defaultRules.link,
-    I = { section: h.jXE.SETTINGS_CHANGELOG },
+let I = l().defaultRules.link,
+    m = { section: h.jXE.SETTINGS_CHANGELOG },
     T = (e) => {
         var t, n;
         let { level: r, children: a, className: o = null, styleSheet: l = {} } = e,
@@ -45,7 +45,7 @@ let m = l().defaultRules.link,
                     (r =
                         a || s
                             ? (e) => {
-                                  f.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: I }), a ? d.Z.open(h.oAB.PREMIUM) : s && d.Z.open(h.oAB.HYPESQUAD_ONLINE), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, u.closeModal)(p.Xd), e.preventDefault();
+                                  f.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: m }), a ? d.Z.open(h.oAB.PREMIUM) : s && d.Z.open(h.oAB.HYPESQUAD_ONLINE), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, u.closeModal)(p.Xd), e.preventDefault();
                               }
                             : o
                               ? (e) => {
@@ -60,7 +60,7 @@ let m = l().defaultRules.link,
                                         });
                                 }),
                     {
-                        ...m.parse(e, t, n),
+                        ...I.parse(e, t, n),
                         callToAction: r
                     }
                 );

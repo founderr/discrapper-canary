@@ -1,9 +1,9 @@
 l.d(n, {
     ZP: function () {
-        return _;
+        return T;
     },
     xX: function () {
-        return x;
+        return _;
     }
 });
 var t = l(735250);
@@ -23,7 +23,7 @@ var r = l(120356),
     v = l(770009),
     C = l(889515),
     h = l(751319);
-function x(e) {
+function _(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
@@ -32,7 +32,7 @@ function x(e) {
                         C.Z,
                         {
                             ...e,
-                            renderComponents: x
+                            renderComponents: _
                         },
                         n
                     );
@@ -60,7 +60,7 @@ function x(e) {
         })(e, n.toString())
     );
 }
-function _(e) {
+function T(e) {
     let { message: n } = e,
         { components: l } = n;
     return 0 === l.length
@@ -69,7 +69,7 @@ function _(e) {
               className: i()([h.container, { [h.containerUikit]: n.isUIKitComponents() }]),
               children: (0, t.jsx)(u.Il, {
                   message: n,
-                  children: x(l)
+                  children: _(l)
               })
           });
 }

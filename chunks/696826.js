@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     },
     QF: function () {
-        return I;
+        return m;
     },
     Sk: function () {
         return _.Skl;
@@ -15,7 +15,7 @@ n.d(t, {
         return O;
     },
     lm: function () {
-        return m;
+        return I;
     },
     qb: function () {
         return R;
@@ -70,10 +70,10 @@ function p(e, t) {
         r = (0, c.K3)(null != t ? t : n);
     return null != r ? r : void 0;
 }
-function m(e, t) {
+function I(e, t) {
     return t === E.VZ.WHITE && e === _.Skl.IDLE ? E.d_.HIGH : E.d_.LOW;
 }
-function I(e) {
+function m(e) {
     return (0, l.wj)(e) ? E.VZ.BLACK : E.VZ.WHITE;
 }
 function T(e, t, n, r) {
@@ -223,7 +223,7 @@ function S(e) {
 }
 function A(e, t, n) {
     var i;
-    let { bgRadius: a, bgY: s, bgX: l, bgHeight: u, bgWidth: c, cutoutX: d, cutoutY: _, cutoutWidth: E, cutoutHeight: f, cutoutRadius: h, polygonScale: p, polygonOrigin: m, dotY: I, dotX: T, dotRadius: g } = e;
+    let { bgRadius: a, bgY: s, bgX: l, bgHeight: u, bgWidth: c, cutoutX: d, cutoutY: _, cutoutWidth: E, cutoutHeight: f, cutoutRadius: h, polygonScale: p, polygonOrigin: I, dotY: m, dotX: T, dotRadius: g } = e;
     return (0, r.jsxs)('mask', {
         id: n,
         children: [
@@ -256,12 +256,12 @@ function A(e, t, n) {
                         .concat(0.25 * i)),
                 fill: 'black',
                 transform: p,
-                style: { transformOrigin: m }
+                style: { transformOrigin: I }
             }),
             (0, r.jsx)(o.animated.circle, {
                 fill: 'black',
                 cx: T,
-                cy: I,
+                cy: m,
                 r: g
             })
         ]
@@ -269,16 +269,16 @@ function A(e, t, n) {
 }
 function N(e) {
     let { status: t, isMobile: n = !1, size: a = 8, color: l, className: c, style: d } = e,
-        m = i.useId(),
-        I = t === _.Skl.ONLINE && n,
+        I = i.useId(),
+        m = t === _.Skl.ONLINE && n,
         T = i.useMemo(
             () =>
                 S({
                     size: a,
                     status: t,
-                    isMobile: I
+                    isMobile: m
                 }),
-            [a, t, I]
+            [a, t, m]
         ),
         g = (0, u.useSpring)(
             {
@@ -304,14 +304,14 @@ function N(e) {
         className: s()(f.mask, c),
         style: d,
         children: [
-            A(g, a, m),
+            A(g, a, I),
             (0, r.jsx)(o.animated.rect, {
                 x: 0,
                 y: 0,
                 width: a,
                 height: O,
                 fill: v,
-                mask: 'url(#'.concat(m, ')')
+                mask: 'url(#'.concat(I, ')')
             })
         ]
     });

@@ -18,8 +18,8 @@ var i = n(735250),
     _ = n(569545),
     f = n(382182),
     E = n(352978),
-    g = n(184301),
-    C = n(103575),
+    C = n(184301),
+    g = n(103575),
     I = n(199902),
     x = n(430824),
     T = n(496675),
@@ -40,12 +40,12 @@ let R = 16 / 9,
                 null == n
                     ? void 0
                     : () =>
-                          (0, g.Z)(n.user, {
+                          (0, C.Z)(n.user, {
                               guildId: s.guild_id,
                               channelId: s.id
                           }),
             renderPopout: (e) =>
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(g.Z, {
                     ...e,
                     location: 'StageTile',
                     guildId: l,
@@ -79,8 +79,8 @@ let R = 16 / 9,
         });
     },
     L = (e) => {
-        let { stageParticipant: t, rtcParticipant: n, channel: s, width: l, isModerator: u, onContextMenu: h, inPopout: g } = e,
-            { reducedMotion: C } = a.useContext(o.AccessibilityPreferencesContext),
+        let { stageParticipant: t, rtcParticipant: n, channel: s, width: l, isModerator: u, onContextMenu: h, inPopout: C } = e,
+            { reducedMotion: g } = a.useContext(o.AccessibilityPreferencesContext),
             { id: v, blocked: j } = t,
             L = (0, r.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
             { selectedParticipant: P, largeStream: O } = (0, r.cj)([m.Z], () => ({
@@ -107,11 +107,11 @@ let R = 16 / 9,
                 channel: s,
                 className: b.tile,
                 inCall: !0,
-                inPopout: g,
+                inPopout: C,
                 onClick: y,
                 onContextMenu: h,
                 paused: !1,
-                pulseSpeakingIndicator: !C.enabled,
+                pulseSpeakingIndicator: !g.enabled,
                 width: l,
                 children: u && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
             },
@@ -168,9 +168,9 @@ t.Z = a.memo(function (e) {
                     );
             }
         },
-        g = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+        C = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
     return (0, i.jsx)(i.Fragment, {
-        children: g
+        children: C
             ? (0, i.jsx)(j, {
                   stageParticipant: a,
                   rtcParticipant: _,

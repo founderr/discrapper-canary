@@ -46,8 +46,8 @@ var n = (function () {
                                       f,
                                       h,
                                       p,
-                                      m,
                                       I,
+                                      m,
                                       T = (function e(t, n) {
                                           for (var r, i, a = t.childNodes, o = a.length; o--; ) 3 === (i = (r = a[o]).nodeType) ? n.push(r) : 1 === i && !('ownerSVGElement' in r) && !s.test(r.nodeName.toLowerCase()) && e(r, n);
                                           return n;
@@ -57,9 +57,9 @@ var n = (function () {
 
                               ) {
                                   for (a = !1, o = document.createDocumentFragment(), d = (u = T[g]).nodeValue, E = 0; (_ = n.exec(d)); ) {
-                                      if (((f = _.index) !== E && o.appendChild(l(d.slice(E, f), !0)), (m = c((p = _[0]))), (E = f + p.length), (I = t.callback(m, t)), m && I)) {
-                                          for (i in (((h = new Image()).onerror = t.onerror), h.setAttribute('draggable', 'false'), (r = t.attributes(p, m)))) r.hasOwnProperty(i) && 0 !== i.indexOf('on') && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
-                                          (h.className = t.className), (h.alt = p), (h.src = I), (a = !0), o.appendChild(h);
+                                      if (((f = _.index) !== E && o.appendChild(l(d.slice(E, f), !0)), (I = c((p = _[0]))), (E = f + p.length), (m = t.callback(I, t)), I && m)) {
+                                          for (i in (((h = new Image()).onerror = t.onerror), h.setAttribute('draggable', 'false'), (r = t.attributes(p, I)))) r.hasOwnProperty(i) && 0 !== i.indexOf('on') && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
+                                          (h.className = t.className), (h.alt = p), (h.src = m), (a = !0), o.appendChild(h);
                                       }
                                       !h && o.appendChild(l(p, !1)), (h = null);
                                   }

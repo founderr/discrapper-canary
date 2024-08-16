@@ -17,13 +17,13 @@ var i = n(735250),
     m = n(282794),
     p = n(910212);
 function _(e) {
-    let { onClose: t, onConfirm: _, onCancel: f, channel: E, analyticsType: g, popoutText: C, animation: I } = e;
+    let { onClose: t, onConfirm: _, onCancel: f, channel: E, analyticsType: C, popoutText: g, animation: I } = e;
     a.useEffect(() => {
         u.default.track(d.rMx.OPEN_POPOUT, {
-            type: g,
+            type: C,
             ...(0, o.v_)(E)
         });
-    }, [g, E]);
+    }, [C, E]);
     let x = a.useCallback(() => {
             null == _ || _(), t();
         }, [_, t]),
@@ -80,7 +80,7 @@ function _(e) {
                                         id: 'content-warning-popout-label',
                                         className: p.markup,
                                         variant: 'text-sm/normal',
-                                        children: C.body
+                                        children: g.body
                                     }),
                                     (0, i.jsxs)('div', {
                                         className: m.buttonWrapper,
@@ -124,7 +124,7 @@ function _(e) {
                             })
                         ]
                     }),
-                    null != C.footer && '' !== C.footer
+                    null != g.footer && '' !== g.footer
                         ? (0, i.jsxs)('div', {
                               className: m.footer,
                               children: [
@@ -135,7 +135,7 @@ function _(e) {
                                   }),
                                   (0, i.jsx)(r.Text, {
                                       variant: 'text-sm/normal',
-                                      children: C.footer
+                                      children: g.footer
                                   })
                               ]
                           })

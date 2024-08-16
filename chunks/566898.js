@@ -1,6 +1,6 @@
 n.d(t, {
     M9: function () {
-        return g;
+        return C;
     },
     Pb: function () {
         return E;
@@ -9,7 +9,7 @@ n.d(t, {
         return _;
     },
     ZP: function () {
-        return C;
+        return g;
     },
     ZT: function () {
         return h;
@@ -137,8 +137,8 @@ let p = 44,
     _ = 22,
     f = 26,
     E = 26,
-    g = 6;
-function C(e) {
+    C = 6;
+function g(e) {
     let { messages: t, groupSpacing: n = 0, compact: a = !1, attachmentSpecs: s, className: l } = e,
         o = null != s ? (s.last ? t - 1 : r().random(0, t - 1)) : -1,
         c = r().random(80, 120),

@@ -21,7 +21,7 @@ function f(e) {
 ((r = o || (o = {}))[(r.FETCHING = 0)] = 'FETCHING'), (r[(r.FETCHED = 1)] = 'FETCHED'), (r[(r.ERROR = 2)] = 'ERROR');
 let h = new (c())({ max: 20 }),
     p = {};
-class m extends (l = _.ZP.Store) {
+class I extends (l = _.ZP.Store) {
     getSearchResults(e) {
         let { query: t, guildId: n, page: r, categoryId: i, integrationType: a, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: o, excludeNonEmbeddedApps: l, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u, source: c } = e,
             d = f({
@@ -57,7 +57,7 @@ class m extends (l = _.ZP.Store) {
     }
 }
 (s = 'ApplicationDirectorySearchStore'),
-    (a = 'displayName') in (i = m)
+    (a = 'displayName') in (i = I)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -65,7 +65,7 @@ class m extends (l = _.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new m(E.Z, {
+    (t.Z = new I(E.Z, {
         APPLICATION_DIRECTORY_FETCH_SEARCH: function (e) {
             let { query: t, guildId: n, page: r, categoryId: i, integrationType: a, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: o, excludeNonEmbeddedApps: l, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u, source: c } = e,
                 d = f({

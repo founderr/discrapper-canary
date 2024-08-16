@@ -85,11 +85,11 @@ class p extends i.ZP.Store {
                 : (t[n] = r);
     }
 }
-let m = new p(a.Z, {
+let I = new p(a.Z, {
     MESSAGE_CREATE: function (e) {
         let { optimistic: t, message: n } = e,
             r = n.nonce;
-        if (!t && null != r) m.recordGatewayResponse(r);
+        if (!t && null != r) I.recordGatewayResponse(r);
     }
 });
-t.Z = m;
+t.Z = I;

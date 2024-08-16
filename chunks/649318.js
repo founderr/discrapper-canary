@@ -44,8 +44,8 @@ var r,
     f = n.n(E),
     h = n(988367),
     p = n(259443),
-    m = n(65154),
-    I = n(436620);
+    I = n(65154),
+    m = n(436620);
 let T = new p.Y('SDP');
 ((a = r || (r = {})).AUDIO = 'a'), (a.VIDEO = 'v'), ((s = i || (i = {})).SENDRECV = 'sendrecv'), (s.SENDONLY = 'sendonly'), (s.RECVONLY = 'recvonly'), (s.INACTIVE = 'inactive');
 let g = 'UDP/TLS/RTP/SAVPF';
@@ -121,7 +121,7 @@ function N(e) {
 }
 function v(e) {
     let { mid: t, type: n, setup: r, direction: i, baseSDP: a, codec: s, payload: o, bitrate: u, ssrcs: c, extensions: d, rtxPayload: _, sendingVideo: E } = e;
-    if ('inactive' === i && !I.WS)
+    if ('inactive' === i && !m.WS)
         return {
             connection: {
                 ip: '0.0.0.0',
@@ -169,7 +169,7 @@ function v(e) {
                         return [...e, ...t];
                     })
                     .flat())),
-            I.WS || 'Firefox' === f().name))
+            m.WS || 'Firefox' === f().name))
     ) {
         let e = c.find((e) => 'msid' === e.attribute);
         if (null == e) throw Error('msid missing');
@@ -192,7 +192,7 @@ function v(e) {
                     payload: o,
                     rate: 48000
                 }),
-                s === m.ad.OPUS &&
+                s === I.ad.OPUS &&
                     p.fmtp.push({
                         config: 'minptime=10;useinbandfec=1;usedtx='.concat(E ? '0' : '1'),
                         payload: o
@@ -207,7 +207,7 @@ function v(e) {
                     rate: 90000
                 });
             let T = 'x-google-max-bitrate='.concat(u);
-            s === m.ad.H264 && (T += ';level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f'),
+            s === I.ad.H264 && (T += ';level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f'),
                 p.fmtp.push({
                     config: T,
                     payload: o
@@ -339,14 +339,14 @@ function R(e) {
     return (
         d.forEach((e) => {
             let t,
-                { ssrc: d, cname: h, type: p, direction: m, mid: I } = e;
-            '' !== h ? (t = A(h, d, 'audio' === p ? 'a' : 'v')) : ((t = []), 'sendonly' === m ? (m = 'inactive') : 'sendrecv' === m && (m = 'recvonly'));
+                { ssrc: d, cname: h, type: p, direction: I, mid: m } = e;
+            '' !== h ? (t = A(h, d, 'audio' === p ? 'a' : 'v')) : ((t = []), 'sendonly' === I ? (I = 'inactive') : 'sendrecv' === I && (I = 'recvonly'));
             E.push(
                 v({
-                    mid: I,
+                    mid: m,
                     type: p,
                     setup: f,
-                    direction: m,
+                    direction: I,
                     baseSDP: n,
                     codec: 'audio' === p ? r : s,
                     payload: 'audio' === p ? i : o,
@@ -370,7 +370,7 @@ function C(e, t, n, r, i) {
     let s = t.find((e) => RegExp('^apt='.concat(a.payload)).test(e.config)),
         o = null;
     if (null != s) {
-        let t = e.find((e) => e.codec === m.ad.RTX && e.payload === s.payload);
+        let t = e.find((e) => e.codec === I.ad.RTX && e.payload === s.payload);
         null != t && (o = t.payload);
     }
     return {
@@ -395,14 +395,14 @@ function y(e) {
                 r)
             ) {
                 case 'audio':
-                    [m.ad.OPUS].forEach((t, n) => {
+                    [I.ad.OPUS].forEach((t, n) => {
                         let a = C(i, s, r, t, n);
                         null != a && e.codecs.push(a);
                     }),
                         'sendrecv' === o && null != (n = null == a ? void 0 : a.find((e) => 'cname' === e.attribute)) && (e.audioSSRC = n.id);
                     break;
                 case 'video':
-                    [m.ad.H264, m.ad.VP8, m.ad.VP9].forEach((t, n) => {
+                    [I.ad.H264, I.ad.VP8, I.ad.VP9].forEach((t, n) => {
                         let a = C(i, s, r, t, n);
                         null != a && e.codecs.push(a);
                     }),
@@ -423,7 +423,7 @@ function y(e) {
 function D(e) {
     var t;
     let { codecs: n } = y(e),
-        r = n.find((e) => e.name === m.ad.VP8),
+        r = n.find((e) => e.name === I.ad.VP8),
         i = RegExp('^a=ice|a=extmap|a=fingerprint|opus|VP8|'.concat(null !== (t = null == r ? void 0 : r.rtxPayloadType) && void 0 !== t ? t : 0, ' rtx'), 'i');
     return {
         sdp: [...new Set(e.split(/\r\n/).filter((e) => i.test(e)))].join('\n'),

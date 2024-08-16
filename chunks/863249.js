@@ -12,7 +12,7 @@ var r = n(544891),
     f = n(626135),
     h = n(981631),
     p = n(689938);
-let m = async (e, t) => {
+let I = async (e, t) => {
         let n = null != t ? t : _.Z.getInviteKeyForGuildId(e),
             a = E.default.getCurrentUser(),
             s = !d.ZP.isMember(e, null == a ? void 0 : a.id);
@@ -47,7 +47,7 @@ let m = async (e, t) => {
             });
         }
     },
-    I = async (e, t) => {
+    m = async (e, t) => {
         let { body: n } = await r.tn.patch({
             url: h.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { form_fields: t },
@@ -142,8 +142,8 @@ function A() {
     i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW' });
 }
 t.Z = {
-    fetchVerificationForm: m,
-    updateVerificationForm: I,
+    fetchVerificationForm: I,
+    updateVerificationForm: m,
     updateVerificationFormFieldsLocal: (e, t) => {
         i.Z.dispatch({
             type: 'MEMBER_VERIFICATION_FORM_UPDATE',

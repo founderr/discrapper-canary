@@ -1,8 +1,8 @@
 let r, i, a, s, o, l, u, c, d, _, E, f, h;
 n(47120);
 var p,
-    m,
     I,
+    m,
     T,
     g = n(392711),
     S = n(754700),
@@ -92,14 +92,14 @@ class w extends (p = N.ZP.Store) {
     }
 }
 (T = 'QuestsStore'),
-    (I = 'displayName') in (m = w)
-        ? Object.defineProperty(m, I, {
+    (m = 'displayName') in (I = w)
+        ? Object.defineProperty(I, m, {
               value: T,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (m[I] = T),
+        : (I[m] = T),
     (t.Z = new w(v.Z, {
         LOGOUT: function () {
             D();

@@ -23,10 +23,10 @@ function o(e) {
         [, f] = (0, i.useState)(null),
         h = (0, i.useMemo)(() => l(e.selectedKeys), [e.selectedKeys]),
         p = (0, i.useMemo)(() => l(e.defaultSelectedKeys, new s()), [e.defaultSelectedKeys]),
-        [m, I] = (0, r.zk)(h, p, e.onSelectionChange),
+        [I, m] = (0, r.zk)(h, p, e.onSelectionChange),
         T = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
         [g, S] = (0, i.useState)(o);
-    'replace' === o && 'toggle' === g && 'object' == typeof m && 0 === m.size && S('replace');
+    'replace' === o && 'toggle' === g && 'object' == typeof I && 0 === I.size && S('replace');
     let A = (0, i.useRef)(o);
     return (
         (0, i.useEffect)(() => {
@@ -52,15 +52,15 @@ function o(e) {
             setFocusedKey(e, t = 'first') {
                 (_.current = e), (E.current = t), f(e);
             },
-            selectedKeys: m,
+            selectedKeys: I,
             setSelectedKeys(e) {
                 (a ||
                     !(function (e, t) {
                         if (e.size !== t.size) return !1;
                         for (let n of e) if (!t.has(n)) return !1;
                         return !0;
-                    })(e, m)) &&
-                    I(e);
+                    })(e, I)) &&
+                    m(e);
             },
             disabledKeys: T,
             disabledBehavior: u

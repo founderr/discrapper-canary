@@ -40,8 +40,8 @@ var r = n(434179),
     f = n(258609),
     h = n(893387),
     p = n(981631),
-    m = n(689938);
-function I(e, t) {
+    I = n(689938);
+function m(e, t) {
     var n, r;
     d.default.track(p.rMx.REMOTE_COMMAND_SENT, {
         command_type: e,
@@ -64,8 +64,8 @@ async function T() {
         await Promise.all(n);
     } catch (e) {
         o.Z.show({
-            title: m.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_TITLE,
-            body: m.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_BODY
+            title: I.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_TITLE,
+            body: I.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_BODY
         });
     }
 }
@@ -86,7 +86,7 @@ function S(e, t) {
             self_deaf: r
         }
     }),
-        I('VOICE_STATE_UPDATE', e);
+        m('VOICE_STATE_UPDATE', e);
 }
 function A(e) {
     s.Z.dispatch({
@@ -94,7 +94,7 @@ function A(e) {
         sessionId: e,
         payload: { type: 'DISCONNECT' }
     }),
-        I('DISCONNECT', e),
+        m('DISCONNECT', e),
         T();
 }
 function N(e, t, n, r) {
@@ -110,7 +110,7 @@ function N(e, t, n, r) {
                 ...r
             }
         }),
-        I('AUDIO_SETTINGS_UPDATE', e));
+        m('AUDIO_SETTINGS_UPDATE', e));
 }
 async function v() {
     let e;

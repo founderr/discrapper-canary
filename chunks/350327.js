@@ -1,12 +1,12 @@
 n.d(t, {
     CM: function () {
-        return I;
+        return m;
     },
     Cf: function () {
         return p;
     },
     ID: function () {
-        return m;
+        return I;
     },
     Xz: function () {
         return S;
@@ -109,13 +109,13 @@ function p(e) {
         bio: e
     });
 }
-function m(e) {
+function I(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS',
         pronouns: e
     });
 }
-function I(e) {
+function m(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR',
         color: e

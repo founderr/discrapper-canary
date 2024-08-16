@@ -18,8 +18,8 @@ var r,
     f = n(689938),
     h = n(791170),
     p = n(787223),
-    m = n(594402);
-function I(e, t, n) {
+    I = n(594402);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -100,7 +100,7 @@ class A extends (r = a.Component) {
     }
     render() {
         var e, t;
-        let { disabled: n, value: r, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: _, spellCheck: I, resizeable: T, className: A, id: N, rows: v, flex: O, autosize: R, required: C, onInvalid: y, inputRef: D } = this.props,
+        let { disabled: n, value: r, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: _, spellCheck: m, resizeable: T, className: A, id: N, rows: v, flex: O, autosize: R, required: C, onInvalid: y, inputRef: D } = this.props,
             L = R ? E.l : 'textarea',
             b = this.hasError(),
             M = null !== (t = this.props['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId,
@@ -114,7 +114,7 @@ class A extends (r = a.Component) {
                         (0, i.jsx)(u.t, {
                             children: (0, i.jsx)(L, {
                                 type: 'text',
-                                className: o()(p.inputDefault, h.textArea, m.scrollbarDefault, A, {
+                                className: o()(p.inputDefault, h.textArea, I.scrollbarDefault, A, {
                                     [p.error]: b,
                                     [p.disabled]: n,
                                     [h.resizeable]: T
@@ -130,7 +130,7 @@ class A extends (r = a.Component) {
                                 autoFocus: s,
                                 minLength: l,
                                 maxLength: _ ? void 0 : c,
-                                spellCheck: I,
+                                spellCheck: m,
                                 required: C,
                                 onChange: this.onChange,
                                 onBlur: this.onBlur,
@@ -162,34 +162,34 @@ class A extends (r = a.Component) {
     constructor(e) {
         var t;
         super(e),
-            I(this, 'getAriaDescribedBy', () => {
+            m(this, 'getAriaDescribedBy', () => {
                 var e;
                 let { maxLength: t, minLength: n, error: r } = this.props,
                     i = [],
                     a = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
                 return null != a && i.push(a), null != r ? i.push(T) : (null != t && i.push(S), null != n && i.push(g)), i.length > 0 ? i.join(' ') : void 0;
             }),
-            I(this, 'onChange', (e) => {
+            m(this, 'onChange', (e) => {
                 let { onChange: t, name: n } = this.props;
                 null == t || t(e.currentTarget.value, n), this.setState({ dirty: !0 });
             }),
-            I(this, 'onFocus', (e) => {
+            m(this, 'onFocus', (e) => {
                 let { onFocus: t, name: n } = this.props;
                 null == t || t(e, n);
             }),
-            I(this, 'onBlur', (e) => {
+            m(this, 'onBlur', (e) => {
                 let { onBlur: t, name: n } = this.props;
                 null == t || t(e, n);
             }),
-            I(this, 'onKeyDown', (e) => {
+            m(this, 'onKeyDown', (e) => {
                 let { onKeyDown: t } = this.props;
                 null == t || t(e);
             }),
             (this.state = { dirty: null !== (t = e.defaultDirty) && void 0 !== t && t });
     }
 }
-I(A, 'contextType', c.q3),
-    I(A, 'defaultProps', {
+m(A, 'contextType', c.q3),
+    m(A, 'defaultProps', {
         name: '',
         disabled: !1,
         placeholder: '',

@@ -12,8 +12,8 @@ var a,
     f = n(592125),
     h = n(70956),
     p = n(622449);
-let m = 5 * h.Z.Millis.MINUTE,
-    I = 10 * h.Z.Millis.SECOND,
+let I = 5 * h.Z.Millis.MINUTE,
+    m = 10 * h.Z.Millis.SECOND,
     T = {},
     g = {},
     S = {};
@@ -83,8 +83,8 @@ class O extends (a = u.ZP.Store) {
                 (A = {}),
                 setInterval(() => {
                     let e = Date.now();
-                    for (let [t, n] of Object.entries(A)) e - n.insertedAt > I && delete A[t];
-                }, m);
+                    for (let [t, n] of Object.entries(A)) e - n.insertedAt > m && delete A[t];
+                }, I);
         },
         INTERACTION_QUEUE: function (e) {
             let { nonce: t, messageId: n, data: r, onCreate: i, onCancel: a, onSuccess: s, onFailure: o } = e;

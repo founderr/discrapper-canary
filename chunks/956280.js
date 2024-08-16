@@ -17,7 +17,7 @@ var r = n(470079),
             f = e.styles,
             h = void 0 === f ? {} : f,
             p = e.className,
-            m = (0, s.default)(
+            I = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -37,7 +37,7 @@ var r = n(470079),
                     h
                 )
             ),
-            I = function (e, n) {
+            m = function (e, n) {
                 e.hex
                     ? u.FX(e.hex) &&
                       t(
@@ -52,13 +52,13 @@ var r = n(470079),
         return r.createElement(
             c.xZ,
             {
-                style: m.Compact,
+                style: I.Compact,
                 styles: h
             },
             r.createElement(
                 'div',
                 {
-                    style: m.compact,
+                    style: I.compact,
                     className: 'compact-picker ' + (void 0 === p ? '' : p)
                 },
                 r.createElement(
@@ -69,16 +69,16 @@ var r = n(470079),
                             key: e,
                             color: e,
                             active: e.toLowerCase() === a,
-                            onClick: I,
+                            onClick: m,
                             onSwatchHover: n
                         });
                     }),
-                    r.createElement('div', { style: m.clear })
+                    r.createElement('div', { style: I.clear })
                 ),
                 r.createElement(_.Z, {
                     hex: a,
                     rgb: E,
-                    onChange: I
+                    onChange: m
                 })
             )
         );

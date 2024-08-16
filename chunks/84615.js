@@ -27,8 +27,8 @@ var r,
     f = n(481060),
     h = n(714338),
     p = n(624138),
-    m = n(314910),
-    I = n(898770);
+    I = n(314910),
+    m = n(898770);
 let T = (0, p.Mg)(E.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION);
 ((i = r || (r = {}))[(i.ENTERING = 1)] = 'ENTERING'), (i[(i.ENTERED = 2)] = 'ENTERED'), (i[(i.EXITING = 3)] = 'EXITING'), (i[(i.EXITED = 4)] = 'EXITED');
 let g = (0, d.Z)((e) => ({
@@ -72,10 +72,10 @@ function S(e) {
         ),
         (0, a.jsx)(t.LayerComponent, {
             children: (0, a.jsxs)('div', {
-                className: I.root,
+                className: m.root,
                 ref: n,
                 children: [
-                    (0, a.jsx)('div', { className: I.drag }),
+                    (0, a.jsx)('div', { className: m.drag }),
                     t.render({
                         transitionState: null != t ? t.transitionState : 3,
                         closeLayer: () => R(t.key)
@@ -86,20 +86,20 @@ function S(e) {
     );
 }
 let A = {
-        enter: I.enter,
-        enterActive: I.enterActive,
-        enterDone: I.enterDone,
-        exit: I.exit,
-        exitActive: I.exitActive,
-        exitDone: I.exitDone
+        enter: m.enter,
+        enterActive: m.enterActive,
+        enterDone: m.enterDone,
+        exit: m.exit,
+        exitActive: m.exitActive,
+        exitDone: m.exitDone
     },
     N = {
-        enter: I.enterReducedMotion,
-        enterActive: I.enterActiveReducedMotion,
-        enterDone: I.enterDoneReducedMotion,
-        exit: I.exitReducedMotion,
-        exitActive: I.exitActiveReducedMotion,
-        exitDone: I.exitDoneReducedMotion
+        enter: m.enterReducedMotion,
+        enterActive: m.enterActiveReducedMotion,
+        enterDone: m.enterDoneReducedMotion,
+        exit: m.exitReducedMotion,
+        exitActive: m.exitActiveReducedMotion,
+        exitDone: m.exitDoneReducedMotion
     };
 function v() {
     let { reducedMotion: e } = s.useContext(f.AccessibilityPreferencesContext),
@@ -146,7 +146,7 @@ function O(e) {
                     {
                         key: i,
                         transitionState: 1,
-                        LayerComponent: null != r ? r : m.ZP,
+                        LayerComponent: null != r ? r : I.ZP,
                         render: e
                     }
                 ]

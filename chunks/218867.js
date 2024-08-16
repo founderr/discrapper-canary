@@ -7,7 +7,7 @@ var r = n(735250),
     l = n(315983);
 let u = i.memo(
     i.forwardRef((e, t) => {
-        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: _, renderSectionFooter: E, renderListHeader: f, rowCount: h, rowCountBySection: p, rowHeight: m, sectionMarginBottom: I, sectionHeaderHeight: T, sectionFooterHeight: g, listHeaderHeight: S, stickyHeaders: A = !1, className: N, hideScrollbar: v = !1, fade: O = !1, initialScrollTop: R = 0, role: C = 'list' } = e,
+        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: _, renderSectionFooter: E, renderListHeader: f, rowCount: h, rowCountBySection: p, rowHeight: I, sectionMarginBottom: m, sectionHeaderHeight: T, sectionFooterHeight: g, listHeaderHeight: S, stickyHeaders: A = !1, className: N, hideScrollbar: v = !1, fade: O = !1, initialScrollTop: R = 0, role: C = 'list' } = e,
             [y, D] = i.useState(-1),
             [L, b] = i.useState(-1),
             M = i.useRef(null),
@@ -24,13 +24,13 @@ let u = i.memo(
             }, [S]),
             x = i.useCallback(
                 (e, t, n) =>
-                    'function' == typeof m
-                        ? m(n, {
+                    'function' == typeof I
+                        ? I(n, {
                               sectionIndex: e,
                               sectionRowIndex: t
                           })
-                        : m,
-                [m]
+                        : I,
+                [I]
             ),
             G = i.useCallback(
                 (e) => {
@@ -48,10 +48,10 @@ let u = i.memo(
             ),
             B = i.useCallback(
                 (e) => {
-                    let t = 'function' == typeof I ? I(e) : I;
+                    let t = 'function' == typeof m ? m(e) : m;
                     return null == t ? 0 : t;
                 },
-                [I]
+                [m]
             ),
             F = i.useRef([]),
             V = i.useRef([]),
@@ -241,10 +241,10 @@ let u = i.memo(
                         t = a;
                         let o = [],
                             p = 0,
-                            m = 0,
-                            I = s + u >= y && s <= e;
-                        for (null != _ && (A || I) && o.push(_(i)), !I && !A && (n += u); p + u + f < l - h; ) {
-                            let r = x(i, m, t),
+                            I = 0,
+                            m = s + u >= y && s <= e;
+                        for (null != _ && (A || m) && o.push(_(i)), !m && !A && (n += u); p + u + f < l - h; ) {
+                            let r = x(i, I, t),
                                 a = s + p + u,
                                 l = a + r;
                             if (l <= y) n = l - (A ? u : 0);
@@ -252,11 +252,11 @@ let u = i.memo(
                                 o.push(
                                     c(t, {
                                         sectionIndex: i,
-                                        sectionRowIndex: m
+                                        sectionRowIndex: I
                                     })
                                 );
                             else break;
-                            (p += r), m++, t++;
+                            (p += r), I++, t++;
                         }
                         let T = s + u + p,
                             g = T + f >= y && T <= e;

@@ -37,8 +37,8 @@ var r = n(392711),
     f = n(486472),
     h = n(823379),
     p = n(668781),
-    m = n(981631),
-    I = n(526761),
+    I = n(981631),
+    m = n(526761),
     T = n(689938);
 function g(e) {
     E.hW.updateAsync(
@@ -46,7 +46,7 @@ function g(e) {
         (t) => {
             (t.diversitySurrogate = s.Gm.create()), (t.diversitySurrogate.value = e);
         },
-        I.fy.FREQUENT_USER_ACTION
+        m.fy.FREQUENT_USER_ACTION
     );
 }
 function S(e) {
@@ -56,7 +56,7 @@ function S(e) {
     }),
         a.tn
             .get({
-                url: m.ANM.GUILD_EMOJIS(e),
+                url: I.ANM.GUILD_EMOJIS(e),
                 oldFormErrors: !0
             })
             .then(
@@ -82,7 +82,7 @@ function A(e) {
         }),
         a.tn
             .post({
-                url: m.ANM.GUILD_EMOJIS(t),
+                url: I.ANM.GUILD_EMOJIS(t),
                 body: {
                     image: n,
                     name: r,
@@ -114,7 +114,7 @@ function N(e, t) {
             emojiId: t
         }),
         a.tn.del({
-            url: m.ANM.GUILD_EMOJI(e, t),
+            url: I.ANM.GUILD_EMOJI(e, t),
             oldFormErrors: !0
         })
     );
@@ -123,7 +123,7 @@ async function v(e) {
     let { guildId: t, emojiId: n, name: r, roles: i } = e;
     try {
         return await a.tn.patch({
-            url: m.ANM.GUILD_EMOJI(t, n),
+            url: I.ANM.GUILD_EMOJI(t, n),
             body: {
                 name: r,
                 roles: i
@@ -154,14 +154,14 @@ function C(e) {
         E.DZ.updateAsync(
             'favoriteEmojis',
             (e) =>
-                ((e.emojis = O(e.emojis)), i().size(e.emojis) >= I.oX)
+                ((e.emojis = O(e.emojis)), i().size(e.emojis) >= m.oX)
                     ? (p.Z.show({
                           title: T.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-                          body: T.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({ count: I.oX })
+                          body: T.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({ count: m.oX })
                       }),
                       !1)
                     : !e.emojis.includes(t) && void e.emojis.push(t),
-            I.fy.INFREQUENT_USER_ACTION
+            m.fy.INFREQUENT_USER_ACTION
         );
 }
 function y(e) {
@@ -173,6 +173,6 @@ function y(e) {
                 if (((e.emojis = O(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
-            I.fy.INFREQUENT_USER_ACTION
+            m.fy.INFREQUENT_USER_ACTION
         );
 }

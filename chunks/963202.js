@@ -127,12 +127,12 @@ let E = (0, a.B)({
 function p(e) {
     return h.useExperiment({ location: e }, { autoTrackExposure: !1 });
 }
-function m(e) {
+function I(e) {
     var t, n;
     let { valorantConfig: r, genshinConfig: i } = e;
     return null !== (n = null !== (t = null == i ? void 0 : i.defaultGameId) && void 0 !== t ? t : null == r ? void 0 : r.defaultGameId) && void 0 !== n ? n : null;
 }
-function I(e) {
+function m(e) {
     let { guilds: t, valorantConfig: n, genshinConfig: r, m3GuildConfig: a, includeConverted: s } = e,
         l = (0, i.Wu)([o.Z], () => t.filter((e) => o.Z.can(u.Plq.ADMINISTRATOR, e))),
         d = l.filter((e) =>
@@ -169,15 +169,15 @@ function I(e) {
         f = d.length > 0 && r.enableClanCreation,
         h = _.length > 0 && n.enableClanCreation,
         p = E.length > 0 && a.enableClanCreation,
-        I = [];
+        m = [];
     return (
-        f && d.forEach((e) => I.push(e)),
-        h && _.forEach((e) => I.push(e)),
-        p && E.forEach((e) => I.push(e)),
+        f && d.forEach((e) => m.push(e)),
+        h && _.forEach((e) => m.push(e)),
+        p && E.forEach((e) => m.push(e)),
         {
-            guilds: I,
+            guilds: m,
             enableClanCreation: f || h || p,
-            defaultGameId: m({
+            defaultGameId: I({
                 genshinConfig: f ? r : void 0,
                 valorantConfig: h ? n : void 0
             })
@@ -208,7 +208,7 @@ function T(e) {
                 e
             );
         }, [o, t, a]);
-    return I({
+    return m({
         guilds: o,
         valorantConfig: l,
         genshinConfig: u,
@@ -227,7 +227,7 @@ function g(e) {
             },
             { autoTrackExposure: i }
         );
-    return I({
+    return m({
         guilds: [t],
         valorantConfig: a,
         genshinConfig: s,
@@ -238,7 +238,7 @@ function g(e) {
 function S(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = E.useExperiment({ location: t }, { autoTrackExposure: n });
-    return m({
+    return I({
         valorantConfig: r,
         genshinConfig: f.useExperiment({ location: t }, { autoTrackExposure: n })
     });

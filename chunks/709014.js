@@ -16,7 +16,7 @@ var r = n(735250),
     _ = n(580747),
     E = n(549738);
 let f = i.forwardRef(function (e, t) {
-    let { color: a, src: o, size: f = 'md', width: h, height: p, className: m, initialAnimation: I, markers: T } = e,
+    let { color: a, src: o, size: f = 'md', width: h, height: p, className: I, initialAnimation: m, markers: T } = e,
         [g, S] = i.useState(null),
         A = i.useRef(null),
         N = i.useRef(null),
@@ -65,7 +65,7 @@ let f = i.forwardRef(function (e, t) {
                         var t;
                         let n,
                             { default: r } = e,
-                            i = null !== (t = N.current) && void 0 !== t ? t : I;
+                            i = null !== (t = N.current) && void 0 !== t ? t : m;
                         if (null != i && null != T[i]) {
                             let e = T[i];
                             n = [e.start, e.start + e.duration];
@@ -85,7 +85,7 @@ let f = i.forwardRef(function (e, t) {
                     null === (e = v.current) || void 0 === e || e.destroy();
                 }
             ),
-            [g, I, T]
+            [g, m, T]
         ),
         (0, r.jsx)('div', {
             style: {
@@ -93,7 +93,7 @@ let f = i.forwardRef(function (e, t) {
                 display: 'flex',
                 ...O
             },
-            className: s()(E.lottieIcon, m),
+            className: s()(E.lottieIcon, I),
             ref: A
         })
     );

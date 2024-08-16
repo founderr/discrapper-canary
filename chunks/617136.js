@@ -1,12 +1,12 @@
 n.d(t, {
     _3: function () {
-        return I;
+        return m;
     },
     _b: function () {
         return E;
     },
     dA: function () {
-        return m;
+        return I;
     },
     jZ: function () {
         return i;
@@ -52,7 +52,7 @@ function p(e, t, n) {
         row_index: n
     };
 }
-function m(e) {
+function I(e) {
     let { questId: t, event: n, properties: r, trackGuildAndChannelMetadata: i = !1 } = e,
         u = l.Z.quests.get(t);
     if (null != u) {
@@ -76,9 +76,9 @@ function m(e) {
         });
     }
 }
-function I(e) {
+function m(e) {
     let { questId: t, questContent: n, questContentCTA: r, questContentPosition: i, questContentRowIndex: a, trackGuildAndChannelMetadata: s = !1 } = e;
-    m({
+    I({
         questId: t,
         event: d.rMx.QUEST_CONTENT_CLICKED,
         properties: {

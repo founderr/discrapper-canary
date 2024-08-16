@@ -1,6 +1,6 @@
 let r, i, a, s, o, l, u, c, d, _, E, f, h, p;
-var m,
-    I,
+var I,
+    m,
     T,
     g,
     S = n(979554),
@@ -106,14 +106,14 @@ class P extends (g = A.ZP.Store) {
     }
 }
 (T = 'UserSettingsAccountStore'),
-    (I = 'displayName') in (m = P)
-        ? Object.defineProperty(m, I, {
+    (m = 'displayName') in (I = P)
+        ? Object.defineProperty(I, m, {
               value: T,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (m[I] = T),
+        : (I[m] = T),
     (t.Z = new P(N.Z, {
         USER_SETTINGS_ACCOUNT_INIT: C,
         USER_SETTINGS_MODAL_INIT: C,

@@ -11,7 +11,7 @@ var r = n(735250),
     l = n(810462),
     u = n(40261);
 function c(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: _, onSearchExpressions: E, hasSearchResults: f, defaultSearchPlaceholder: h, emptySearchPlaceholder: p, renderEmptyState: m, renderRow: I, renderSection: T, renderSectionHeader: g, renderSectionFooter: S, renderInspector: A, renderEmptySearchState: N, renderCategoryList: v, renderHeaderAccessories: O, rowHeight: R, sectionHeaderHeight: C, sectionFooterHeight: y, itemNodeWidth: D, listPaddingRight: L, itemNodeMargin: b, listPadding: M, gridNavigatorId: P, gridNotice: U, renderHeader: w, renderUpsell: x, setShowUpsell: G } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: _, onSearchExpressions: E, hasSearchResults: f, defaultSearchPlaceholder: h, emptySearchPlaceholder: p, renderEmptyState: I, renderRow: m, renderSection: T, renderSectionHeader: g, renderSectionFooter: S, renderInspector: A, renderEmptySearchState: N, renderCategoryList: v, renderHeaderAccessories: O, rowHeight: R, sectionHeaderHeight: C, sectionFooterHeight: y, itemNodeWidth: D, listPaddingRight: L, itemNodeMargin: b, listPadding: M, gridNavigatorId: P, gridNotice: U, renderHeader: w, renderUpsell: x, setShowUpsell: G } = e,
         k = i.useRef(null),
         B = i.useRef(null),
         F = i.useRef(null),
@@ -53,7 +53,7 @@ function c(e) {
         }),
         et = i.useCallback(
             (e, t) =>
-                I(
+                m(
                     j[e],
                     X(e),
                     {
@@ -66,7 +66,7 @@ function c(e) {
                     (t) => Q(e, t),
                     (t) => d.setInspectedExpressionPosition(t, e)
                 ),
-            [j, Q, X, q, ee, I, d, W]
+            [j, Q, X, q, ee, m, d, W]
         ),
         en = i.useCallback((e) => (null == T ? void 0 : T(t[e])), [t, T]),
         er = i.useCallback((e) => (null == g ? void 0 : g(t[e], e)), [t, g]),
@@ -106,8 +106,8 @@ function c(e) {
                       className: u.header,
                       children: [' ', es, ' ']
                   }),
-            V && null != m
-                ? m(u.emptyState)
+            V && null != I
+                ? I(u.emptyState)
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           v(B),

@@ -1,6 +1,6 @@
 n.d(t, {
     Yy: function () {
-        return m;
+        return I;
     },
     ZP: function () {
         return S;
@@ -37,8 +37,8 @@ function p(e, t, n) {
         e
     );
 }
-let m = { any: 100 },
-    I = 30 * d.Z.Millis.SECOND,
+let I = { any: 100 },
+    m = 30 * d.Z.Millis.SECOND,
     T = 120 * d.Z.Millis.SECOND,
     g = -1 !== (0, c.hY)();
 ((i = r || (r = {})).UserSSRCUpdate = 'user-ssrc-update'), (i.Update = 'update');
@@ -96,7 +96,7 @@ class S extends a.Z {
         return delete this.audioSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), delete this.streamIds[e], this.update(Array.from(this.participants));
     }
     reset() {
-        this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.latestWants = m);
+        this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.latestWants = I);
     }
     setSelectedParticipant(e) {
         if (e === this.selectedParticipantId) return this.latestWants;
@@ -143,7 +143,7 @@ class S extends a.Z {
         return e;
     }
     getOffscreenTimeoutMs() {
-        return this.isStageChannel ? T : I;
+        return this.isStageChannel ? T : m;
     }
     getSimulcastOverrideQuality(e) {
         return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : h.Z.NO_OVERRIDE;
@@ -190,7 +190,7 @@ class S extends a.Z {
             (this.streamIds = {}),
             (this.offscreenUsers = {}),
             (this.offscreenDisabledUsers = {}),
-            (this.latestWants = m),
+            (this.latestWants = I),
             (this.participants = new Set()),
             (this.selectedParticipantId = null),
             (this.pipOpen = !1),

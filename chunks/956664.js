@@ -21,7 +21,7 @@ n.d(t, {
         return A;
     },
     fD: function () {
-        return I;
+        return m;
     },
     kD: function () {
         return S;
@@ -107,8 +107,8 @@ function h(e, t, n) {
         u = l()(o, t);
     return 'boolean' == typeof u ? f : u.palette();
 }
-let p = (e) => ('number' == typeof e ? null : m(e)),
-    m = s().memoize(
+let p = (e) => ('number' == typeof e ? null : I(e)),
+    I = s().memoize(
         (e) =>
             new Promise((t, n) => {
                 let r = new Image();
@@ -122,7 +122,7 @@ let p = (e) => ('number' == typeof e ? null : m(e)),
                     (r.src = e);
             })
     );
-function I(e) {
+function m(e) {
     return new Promise((t, n) => {
         let r = new FileReader();
         r.readAsDataURL(e),

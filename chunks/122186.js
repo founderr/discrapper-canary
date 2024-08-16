@@ -10,17 +10,17 @@ var s = t(120356),
     r = t(848246),
     i = t(481060),
     o = t(436774),
-    c = t(1163),
-    u = t(846401),
-    d = t(197115),
-    m = t(74538),
+    c = t(933843),
+    u = t(1163),
+    d = t(846401),
+    m = t(197115),
     E = t(981631),
     _ = t(474936),
     S = t(689938),
     g = t(304095);
 function h(e) {
     let { location: n, ...t } = e;
-    return (0, l.jsx)(d.Z, {
+    return (0, l.jsx)(m.Z, {
         className: a()(g.enhancedCTA, g.ctaGradientBackground),
         iconClassName: g.premiumIcon,
         subscriptionTier: _.Si.TIER_2,
@@ -31,7 +31,7 @@ function h(e) {
     });
 }
 function C() {
-    let e = (0, u.Z)();
+    let e = (0, d.Z)();
     return (0, l.jsxs)('div', {
         className: g.extendedDemoContainer,
         children: [
@@ -66,16 +66,16 @@ function C() {
     });
 }
 function I(e) {
-    let { message: n, onClose: t, openStreamUpsellModal: s, glow: u = !1 } = e,
-        d = {
+    let { message: n, onClose: t, openStreamUpsellModal: s, glow: d = !1 } = e,
+        m = {
             section: E.jXE.STREAM_SETTINGS,
             object: E.qAy.PREMIUM_UPSELL_BANNER,
             objectType: E.Qqv.BUY
         },
-        _ = (0, m.So)(r.q.STREAM_HIGH_QUALITY),
-        I = c.Z.useExperiment({ location: 'StreamSettingsUpsellBanner' }, { autoTrackExposure: !1 }).extendedDemoDuration;
+        _ = (0, c.So)(r.q.STREAM_HIGH_QUALITY),
+        I = u.Z.useExperiment({ location: 'StreamSettingsUpsellBanner' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, l.jsx)('div', {
-        className: a()(g.upsellBanner, g.enhancedBanner, { [g.gradientGlow]: u }),
+        className: a()(g.upsellBanner, g.enhancedBanner, { [g.gradientGlow]: d }),
         children:
             _ && I
                 ? (0, l.jsx)(C, {})
@@ -102,7 +102,7 @@ function I(e) {
                                                           S.Z.Messages.LEARN_MORE_CLICK.format({
                                                               onClick: () =>
                                                                   s({
-                                                                      analyticsLocation: d,
+                                                                      analyticsLocation: m,
                                                                       onClose: t
                                                                   })
                                                           })
@@ -111,7 +111,7 @@ function I(e) {
                                                 : S.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
                                                       onClick: () =>
                                                           s({
-                                                              analyticsLocation: d,
+                                                              analyticsLocation: m,
                                                               onClose: t
                                                           })
                                                   })

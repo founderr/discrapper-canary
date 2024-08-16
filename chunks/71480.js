@@ -15,8 +15,8 @@ var r = n(566885),
     h = f.prototype;
 e.exports = function (e, t, n) {
     var p,
-        m,
         I,
+        m,
         T,
         g,
         S,
@@ -36,12 +36,12 @@ e.exports = function (e, t, n) {
     if (O) p = e.iterator;
     else if (R) p = e;
     else {
-        if (!(m = d(e))) throw E(s(e) + ' is not iterable');
-        if (o(m)) {
-            for (I = 0, T = l(e); T > I; I++) if ((g = L(e[I])) && u(h, g)) return g;
+        if (!(I = d(e))) throw E(s(e) + ' is not iterable');
+        if (o(I)) {
+            for (m = 0, T = l(e); T > m; m++) if ((g = L(e[m])) && u(h, g)) return g;
             return new f(!1);
         }
-        p = c(e, m);
+        p = c(e, I);
     }
     for (S = O ? e.next : p.next; !(A = i(S, p)).done; ) {
         try {

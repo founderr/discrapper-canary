@@ -32,20 +32,20 @@ function _(e) {
                 }
             })();
     }, [p, e, E]);
-    let m = (0, a.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
-        I = (0, r.useMemo)(() => {
+    let I = (0, a.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
+        m = (0, r.useMemo)(() => {
             if (null == n) return null;
             if (n.length < 2) return n;
-            let e = Object.fromEntries(m.map((e, t) => [e, t]));
+            let e = Object.fromEntries(I.map((e, t) => [e, t]));
             return (0, i.sortBy)(n, (t) => {
                 var n;
                 let { guild: r } = t;
-                return null !== (n = e[r.id]) && void 0 !== n ? n : m.length;
+                return null !== (n = e[r.id]) && void 0 !== n ? n : I.length;
             });
-        }, [n, m]),
-        T = (0, o.Z)(I);
+        }, [n, I]),
+        T = (0, o.Z)(m);
     return {
-        mutualGuilds: null != I ? I : T,
+        mutualGuilds: null != m ? m : T,
         isFetching: _
     };
 }

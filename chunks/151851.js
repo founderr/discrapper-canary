@@ -18,8 +18,8 @@ var i = n(120356),
     f = n(718759),
     h = n(679219),
     p = n(835225),
-    m = n(939039),
-    I = n(117795),
+    I = n(939039),
+    m = n(117795),
     T = n(358085),
     g = n(792125),
     S = n(998502),
@@ -58,7 +58,7 @@ let v = (e) => S.ZP.close(e),
                     onClick: () => O(t),
                     'aria-label': A.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                     tabIndex: -1,
-                    children: (0, r.jsx)(m.Z, {})
+                    children: (0, r.jsx)(I.Z, {})
                 })
             ]
         });
@@ -87,7 +87,7 @@ let v = (e) => S.ZP.close(e),
                                   onClick: () => O(n),
                                   'aria-label': A.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                                   tabIndex: -1,
-                                  children: (0, r.jsx)(I.Z, { color: '#975500' })
+                                  children: (0, r.jsx)(m.Z, { color: '#975500' })
                               }),
                               (0, r.jsx)(o.Clickable, {
                                   className: N.macButtonMaximize,

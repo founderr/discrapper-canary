@@ -18,10 +18,10 @@ function p(e) {
         parentId: e.parent_id
     };
 }
-function m(e) {
+function I(e) {
     e in f && delete f[e];
 }
-function I(e) {
+function m(e) {
     null != e.threads && e.threads.length > 0 && ((f[e.id] = {}), e.threads.filter((e) => d.AW.has(e.type)).forEach((t) => T(e.id, t))), e.hasThreadsSubscription && h.add(e.id);
 }
 function T(e, t) {
@@ -97,7 +97,7 @@ class N extends (r = u.ZP.Store) {
             (f = {}),
                 h.clear(),
                 e.guilds.forEach((e) => {
-                    I(e);
+                    m(e);
                 });
         },
         OVERLAY_INITIALIZE: function (e) {
@@ -112,11 +112,11 @@ class N extends (r = u.ZP.Store) {
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            m(t.id), I(t);
+            I(t.id), m(t);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            m(t.id);
+            I(t.id);
         },
         THREAD_CREATE: g,
         THREAD_UPDATE: g,

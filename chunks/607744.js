@@ -20,11 +20,11 @@ let p = {
         newMember: !1,
         canChat: !0
     },
-    m = new Set(),
-    I = {};
+    I = new Set(),
+    m = {};
 function T(e) {
     let t;
-    g(e), m.add(e);
+    g(e), I.add(e);
     let n = _.Z.getGuild(e),
         r = E.default.getCurrentUser();
     if (null == n || n.verificationLevel === f.sFg.NONE || null == r || n.isOwner(r) || r.isPhoneVerified()) return;
@@ -61,7 +61,7 @@ function T(e) {
                     }),
                 Math.max(...N)
             )),
-        (I[e] = {
+        (m[e] = {
             notClaimed: c,
             notEmailVerified: p,
             notPhoneVerified: T,
@@ -74,11 +74,11 @@ function T(e) {
         });
 }
 function g(e) {
-    let t = I[e];
-    null != t && clearTimeout(t.timeoutRef), delete I[e];
+    let t = m[e];
+    null != t && clearTimeout(t.timeoutRef), delete m[e];
 }
 function S(e) {
-    m.delete(e.guild.id), T(e.guild.id);
+    I.delete(e.guild.id), T(e.guild.id);
 }
 class A extends (r = o.ZP.Store) {
     initialize() {
@@ -86,7 +86,7 @@ class A extends (r = o.ZP.Store) {
     }
     getCheck(e) {
         var t;
-        return !m.has(e) && T(e), null !== (t = I[e]) && void 0 !== t ? t : p;
+        return !I.has(e) && T(e), null !== (t = m[e]) && void 0 !== t ? t : p;
     }
     canChatInGuild(e) {
         return this.getCheck(e).canChat;
@@ -103,13 +103,13 @@ class A extends (r = o.ZP.Store) {
         : (i[a] = s),
     (t.Z = new A(l.Z, {
         CONNECTION_OPEN: function () {
-            for (let e in (m.clear(), I)) g(e);
+            for (let e in (I.clear(), m)) g(e);
         },
         CONNECTION_CLOSED: function () {
-            c.default.keys(I).forEach(g);
+            c.default.keys(m).forEach(g);
         },
         CURRENT_USER_UPDATE: function () {
-            m.clear();
+            I.clear();
         },
         GUILD_CREATE: S,
         GUILD_UPDATE: S,
@@ -121,7 +121,7 @@ class A extends (r = o.ZP.Store) {
             var t;
             let { guildId: n, user: r } = e;
             if (r.id !== (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-            m.delete(n);
+            I.delete(n);
         },
         GUILD_VERIFICATION_CHECK: function (e) {
             let { guildId: t } = e;

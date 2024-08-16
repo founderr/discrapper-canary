@@ -23,8 +23,8 @@ function l(e) {
             avatarOverride: E
         }),
         {
-            avatarPlaceholderSrc: m,
-            avatarDecorationSrc: I,
+            avatarPlaceholderSrc: I,
+            avatarDecorationSrc: m,
             eventHandlers: T
         } = (0, s.Z)({
             user: t,
@@ -39,8 +39,8 @@ function l(e) {
             p.onMouseEnter(), T.onMouseEnter();
         }, [p, T]);
     return {
-        avatarPlaceholderSrc: m,
-        avatarDecorationSrc: I,
+        avatarPlaceholderSrc: I,
+        avatarDecorationSrc: m,
         avatarSrc: f,
         isAnimating: h,
         eventHandlers: {

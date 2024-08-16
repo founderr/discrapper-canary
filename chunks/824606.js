@@ -43,10 +43,10 @@ var u = (t.Swatch = function (e) {
                 )
             }
         }),
-        m = {};
+        I = {};
     return (
         u &&
-            (m.onMouseOver = function (e) {
+            (I.onMouseOver = function (e) {
                 return u(t, e);
             }),
         i.default.createElement(
@@ -63,7 +63,7 @@ var u = (t.Swatch = function (e) {
                         return 13 === e.keyCode && l(t, e);
                     }
                 },
-                m
+                I
             ),
             _,
             h &&

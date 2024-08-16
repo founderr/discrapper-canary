@@ -19,8 +19,8 @@ var i = n(735250),
     _ = n(906732),
     f = n(541716),
     E = n(752305),
-    g = n(893718),
-    C = n(303628),
+    C = n(893718),
+    g = n(303628),
     I = n(313201),
     x = n(967128),
     T = n(665149),
@@ -122,7 +122,7 @@ function z(e) {
                 updateThreadSettings: s
             };
         })(t, n),
-        { textAreaState: g, setTextAreaState: C } = (function (e, t) {
+        { textAreaState: C, setTextAreaState: g } = (function (e, t) {
             let [n, i] = a.useState((0, E.H2)());
             return (
                 a.useEffect(() => {
@@ -219,7 +219,7 @@ function z(e) {
             parentMessageId: n,
             threadSettings: p,
             privateThreadMode: I,
-            textAreaState: g,
+            textAreaState: C,
             location: s
         }),
         A = (0, D.oD)(p, I) ? o.ThreadLockIcon : o.ThreadIcon;
@@ -277,8 +277,8 @@ function z(e) {
                         children: [
                             (0, i.jsx)(q, {
                                 parentChannel: t,
-                                textAreaState: g,
-                                setTextAreaState: C,
+                                textAreaState: C,
+                                setTextAreaState: g,
                                 submit: Z,
                                 error: N
                             }),
@@ -401,7 +401,7 @@ function q(e) {
         T = (0, y.Op)(h, { content: n.textValue });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(g.Z, {
                 channelId: t.id,
                 type: F,
                 canAttachFiles: x
@@ -410,7 +410,7 @@ function q(e) {
                 className: G.starterMessageError,
                 children: (0, i.jsx)(o.InputError, { error: T })
             }),
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(C.Z, {
                 type: F,
                 channel: t,
                 placeholder: H.Z.Messages.FORM_THREAD_STARTER_MESSAGE_PLACEHOLDER,

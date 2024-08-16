@@ -21,8 +21,8 @@ var i = n(735250),
     _ = n(736052),
     f = n(359110),
     E = n(359119),
-    g = n(13279),
-    C = n(248789),
+    C = n(13279),
+    g = n(248789),
     I = n(88101),
     x = n(576954),
     T = n(280006),
@@ -96,9 +96,9 @@ function et(e) {
         ep = (0, o.ts)(r),
         e_ = (0, s.e7)([v.Z], () => v.Z.shouldShowTopicsBar() && !ec),
         ef = (0, I.P)(r.id, Q.zr),
-        eE = (0, g.z)(r.id, Q.zr),
-        eg = (0, U.Z)(),
-        eC = (function (e, t) {
+        eE = (0, C.z)(r.id, Q.zr),
+        eC = (0, U.Z)(),
+        eg = (function (e, t) {
             return e.isDM() && null != t
                 ? t.type === E.pj.STRANGER_DANGER
                     ? (0, i.jsx)(x.M, {
@@ -106,7 +106,7 @@ function et(e) {
                           warningId: t.id,
                           senderId: e.getRecipientId()
                       })
-                    : (0, i.jsx)(C.Y, {
+                    : (0, i.jsx)(g.Y, {
                           channelId: e.id,
                           warningId: t.id,
                           senderId: e.getRecipientId()
@@ -279,7 +279,7 @@ function et(e) {
         let a = b.ZP.getOldestUnreadTimestamp(r.id),
             s = 0 !== a ? a : O.default.extractTimestamp(r.id),
             l = (0, L.KC)(new Date(), new Date(s));
-        if ((b.ZP.isEstimated(r.id) ? ((e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE), (t = J.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES)) : ((e = l ? J.Z.Messages.NEW_MESSAGES : J.Z.Messages.NEW_MESSAGES_WITH_DATE), (t = J.Z.Messages.NEW_MESSAGES_SUMMARIES)), ep && (0, o.tW)(r) && eg.includes(K.E.SUMMARIES))) {
+        if ((b.ZP.isEstimated(r.id) ? ((e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE), (t = J.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES)) : ((e = l ? J.Z.Messages.NEW_MESSAGES : J.Z.Messages.NEW_MESSAGES_WITH_DATE), (t = J.Z.Messages.NEW_MESSAGES_SUMMARIES)), ep && (0, o.tW)(r) && eC.includes(K.E.SUMMARIES))) {
             let a = b.ZP.ackMessageId(r.id),
                 l = (0, S.q)(r.id, b.ZP.getOldestUnreadMessageId(r.id));
             if (
@@ -369,7 +369,7 @@ function et(e) {
                 }
             }
         } else
-            eg.includes(K.E.NEW_MESSAGES) &&
+            eC.includes(K.E.NEW_MESSAGES) &&
                 (n = (0, i.jsx)(F.LE, {
                     content: e.format({
                         count: B,
@@ -382,7 +382,7 @@ function et(e) {
         (null == n &&
             (0, o.Lp)(r) &&
             e_ &&
-            eg.includes(K.E.SUMMARIES) &&
+            eC.includes(K.E.SUMMARIES) &&
             (n = (0, i.jsx)(F.BO, {
                 channel: r,
                 scrollManager: es
@@ -438,6 +438,6 @@ function et(e) {
         newMessagesBar: n,
         jumpToPresentBar: a,
         forumPostActionBar: eI,
-        safetyWarningBanner: eC
+        safetyWarningBanner: eg
     };
 }

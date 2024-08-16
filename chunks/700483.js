@@ -14,8 +14,8 @@ var i = n(735250),
     _ = n(258609),
     f = n(74299),
     E = n(924301),
-    g = n(459502),
-    C = n(856691),
+    C = n(459502),
+    g = n(856691),
     I = n(889161),
     x = n(923973),
     T = n(829750),
@@ -122,10 +122,10 @@ function ea(e) {
         p = j.default.getId(),
         [_] = (0, X.Z)(t),
         f = H.ZP.isModerator(p, t.id),
-        g = (0, w.B)(t.id),
-        C = s(d);
+        C = (0, w.B)(t.id),
+        g = s(d);
     return h
-        ? (f || C) && null != c
+        ? (f || g) && null != c
             ? (0, i.jsx)(o.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: s } = e;
@@ -170,7 +170,7 @@ function ea(e) {
                       });
                   }
               })
-            : (m && !g) || _
+            : (m && !C) || _
               ? (0, i.jsx)(o.Button, {
                     size: o.Button.Sizes.MEDIUM,
                     color: o.Button.Colors.RED,
@@ -304,8 +304,8 @@ let er = a.memo(function (e) {
         { suppress: n, selfMute: a, mute: s } = (0, v.Z)(t),
         c = (0, w.B)(t.id),
         u = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: E, enabled: g } = (0, x.Z)(),
-        C = (0, N.Z)(t),
+        { cameraUnavailable: E, enabled: C } = (0, x.Z)(),
+        g = (0, N.Z)(t),
         { limit: I, reachedLimit: M } = (0, T.Z)(t),
         j = (0, r.e7)([y.default], () => y.default.getCurrentUser()),
         P = (0, r.e7)([L.Z], () => (0, f.Z)(L.Z)),
@@ -330,8 +330,8 @@ let er = a.memo(function (e) {
                         { isShown: a } = t;
                     return (0, i.jsx)(R.C, {
                         centerButton: !0,
-                        hasPermission: C,
-                        enabled: g,
+                        hasPermission: g,
+                        enabled: C,
                         cameraUnavailable: E,
                         onChange: S.r,
                         onCameraUnavailable: Z.Z,
@@ -347,7 +347,7 @@ let er = a.memo(function (e) {
                 currentUser: j,
                 exitFullScreen: () => null,
                 canGoLive: P,
-                hasPermission: C,
+                hasPermission: g,
                 disabled: G
             })
         ]
@@ -424,10 +424,10 @@ t.Z = a.memo(function (e) {
                     (0, i.jsxs)('div', {
                         className: $.eventPrompts,
                         children: [
-                            u ? (0, i.jsx)(g.Z, { channelId: null == t ? void 0 : t.id }) : null,
+                            u ? (0, i.jsx)(C.Z, { channelId: null == t ? void 0 : t.id }) : null,
                             (0, i.jsx)('div', { className: $.separator }),
                             u && l
-                                ? (0, i.jsx)(C.Z, {
+                                ? (0, i.jsx)(g.Z, {
                                       highlight: !0,
                                       channel: t
                                   })

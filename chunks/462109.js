@@ -25,8 +25,8 @@ let l = (e) => {
         ),
         {
             gridDispatch: p,
-            getItemProps: m,
-            getRowProps: I,
+            getItemProps: I,
+            getRowProps: m,
             gridContainerProps: T,
             handleGridContainerKeyDown: g,
             isUsingKeyboardNavigation: S
@@ -57,8 +57,8 @@ let l = (e) => {
             [p, u]
         ),
         {
-            getItemProps: m,
-            getRowProps: I,
+            getItemProps: I,
+            getRowProps: m,
             gridContainerProps: T,
             handleGridContainerKeyDown: g,
             isUsingKeyboardNavigation: S

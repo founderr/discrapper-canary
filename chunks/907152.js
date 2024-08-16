@@ -1,6 +1,6 @@
 n.d(t, {
     C4: function () {
-        return g;
+        return C;
     }
 }),
     n(653041),
@@ -179,7 +179,7 @@ let _ = (e, t) => ({
             maxWidth: m.kC
         });
     },
-    g = async (e) => {
+    C = async (e) => {
         let { applicationImageSrc: t, entry: n, avatarSrcs: i, description: a, timestamp: s, colors: l, channelId: c } = e,
             u = n.extra.activity_name,
             d = _(i, t);

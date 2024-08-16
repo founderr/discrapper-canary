@@ -29,7 +29,7 @@ function h() {
 function p(e) {
     if (null != e) f[e] = Date.now();
 }
-function m(e) {
+function I(e) {
     let t = !1;
     if ((delete f[e], E === e && ((E = null), (t = !0)), _ === e)) {
         Object.values(u.Z.getGuilds()).find((t) => t.id !== e);
@@ -37,7 +37,7 @@ function m(e) {
     }
     return t;
 }
-class I extends (r = i.ZP.PersistedStore) {
+class m extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t, n, r;
         this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(u.Z, l.default), (f = null !== (t = null == e ? void 0 : e.selectedGuildTimestampMillis) && void 0 !== t ? t : {}), (_ = null !== (n = null == e ? void 0 : e.selectedGuildId) && void 0 !== n ? n : null), (E = null !== (r = null == e ? void 0 : e.lastSelectedGuildId) && void 0 !== r ? r : null);
@@ -59,9 +59,9 @@ class I extends (r = i.ZP.PersistedStore) {
         return _ === e ? -1 : f[e];
     }
 }
-d(I, 'displayName', 'SelectedGuildStore'),
-    d(I, 'persistKey', 'SelectedGuildStore'),
-    (t.Z = new I(a.Z, {
+d(m, 'displayName', 'SelectedGuildStore'),
+    d(m, 'persistKey', 'SelectedGuildStore'),
+    (t.Z = new m(a.Z, {
         CONNECTION_OPEN: h,
         OVERLAY_INITIALIZE: function (e) {
             (_ = e.selectedGuildId), (E = void 0), h();
@@ -73,13 +73,13 @@ d(I, 'displayName', 'SelectedGuildStore'),
         },
         GUILD_MEMBER_REMOVE: function (e) {
             let { guildId: t, user: n } = e;
-            return n.id === l.default.getId() && m(t);
+            return n.id === l.default.getId() && I(t);
         },
         GUILD_DELETE: function (e) {
             let {
                 guild: { id: t, unavailable: n }
             } = e;
-            return !0 !== n && m(t);
+            return !0 !== n && I(t);
         },
         LOGOUT: function () {
             (_ = null), (E = null);

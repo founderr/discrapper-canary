@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         closeUserProfileModal: function () {
-            return m;
+            return I;
         },
         openUserProfileModal: function () {
             return p;
@@ -32,19 +32,19 @@ let E = (0, i.getAvatarSize)(i.AvatarSizes.SIZE_120),
             }
     };
 async function p(e) {
-    let { userId: t, guildId: n = _.ME, channelId: r, messageId: i, roleId: o, sessionId: l, section: c, subsection: f, friendToken: p, showGuildProfile: m, analyticsLocation: I, sourceAnalyticsLocations: T } = e,
+    let { userId: t, guildId: n = _.ME, channelId: r, messageId: i, roleId: o, sessionId: l, section: c, subsection: f, friendToken: p, showGuildProfile: I, analyticsLocation: m, sourceAnalyticsLocations: T } = e,
         g = null != n && n !== _.ME ? n : void 0,
         S = u.default.getUser(t);
     h(t),
         null == S
             ? await (0, s.In)(t, {
-                  guildId: m ? g : void 0,
+                  guildId: I ? g : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,
                   friendToken: p
               })
             : (0, d.Z)(S.id, S.getAvatarURL(void 0, E), {
-                  guildId: m ? g : void 0,
+                  guildId: I ? g : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,
                   friendToken: p
@@ -60,11 +60,11 @@ async function p(e) {
             section: c,
             subsection: f,
             friendToken: p,
-            showGuildProfile: m,
-            analyticsLocation: I,
+            showGuildProfile: I,
+            analyticsLocation: m,
             sourceAnalyticsLocations: T
         });
 }
-function m() {
+function I() {
     a.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
 }

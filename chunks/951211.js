@@ -18,7 +18,7 @@ var i,
     d = n(981631),
     h = n(689938);
 function m(e) {
-    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: a, hasClips: m, channel: p, activities: _, newClipsCount: f, canPostPolls: E, canLaunchActivities: g, appContext: C } = e,
+    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: a, hasClips: m, channel: p, activities: _, newClipsCount: f, canPostPolls: E, canLaunchActivities: C, appContext: g } = e,
         I = [];
     return (
         t &&
@@ -34,7 +34,7 @@ function m(e) {
             })),
         m &&
             t &&
-            C !== d.IlC.POPOUT &&
+            g !== d.IlC.POPOUT &&
             I.push({
                 type: 'CLIPS',
                 icon: s.ClipsIcon,
@@ -61,7 +61,7 @@ function m(e) {
                 icon: s.AppsIcon,
                 display: h.Z.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
             }),
-        g &&
+        C &&
             I.push({
                 type: 'ACTIVITY',
                 icon: s.ActivitiesIcon,

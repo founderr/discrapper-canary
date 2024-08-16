@@ -25,8 +25,8 @@ function p(e, t, n) {
         e
     );
 }
-let m = 1 * E.Z.Millis.MINUTE;
-class I extends i.Z {
+let I = 1 * E.Z.Millis.MINUTE;
+class m extends i.Z {
     _initialize() {
         __OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(d.Z, () => this._handleSpeakingStoreChanged()).set(u.Z, () => this._handleRTCConnectionStoreChanged())), this._reset());
     }
@@ -103,7 +103,7 @@ class I extends i.Z {
                     }
                     null == this._reportInterval &&
                         ((this._reportInterval = new r.Xp()),
-                        this._reportInterval.start(m, () => {
+                        this._reportInterval.start(I, () => {
                             this._trackStartSpeaking(), this._trackStartListening();
                         }));
                 }
@@ -116,4 +116,4 @@ class I extends i.Z {
             });
     }
 }
-t.Z = new I();
+t.Z = new m();

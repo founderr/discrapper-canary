@@ -38,7 +38,7 @@ let E = Object.freeze({
 });
 class f extends (i = o.Component) {
     render() {
-        let { children: e, shouldShow: t, position: n, onRequestOpen: r, onRequestClose: i, align: a, autoInvert: o, fixed: l, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: _, onShiftClick: E, positionKey: f, preload: h, disablePointerEvents: p, ignoreModalClicks: m, closeOnScroll: I, useMouseEnter: T, renderPopout: g, layerContext: S } = this.props;
+        let { children: e, shouldShow: t, position: n, onRequestOpen: r, onRequestClose: i, align: a, autoInvert: o, fixed: l, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: _, onShiftClick: E, positionKey: f, preload: h, disablePointerEvents: p, ignoreModalClicks: I, closeOnScroll: m, useMouseEnter: T, renderPopout: g, layerContext: S } = this.props;
         return (0, s.jsx)(u.H, {
             ref: this.ref,
             preload: h,
@@ -72,8 +72,8 @@ class f extends (i = o.Component) {
             onShiftClick: E,
             positionKey: f,
             disablePointerEvents: p,
-            ignoreModalClicks: m,
-            closeOnScroll: I,
+            ignoreModalClicks: I,
+            closeOnScroll: m,
             useMouseEnter: T,
             layerContext: S,
             children: e

@@ -8,11 +8,11 @@ var i = n(470079),
     a = n(113434),
     s = n(689938);
 function r() {
-    let [e, t] = i.useState(a.e5.UNCLAIMED),
+    let [e, t] = i.useState(a.e5.ALL),
         n = i.useMemo(
             () => [
                 {
-                    id: a.e5.UNCLAIMED,
+                    id: a.e5.ALL,
                     label: s.Z.Messages.QUESTS_ALL
                 },
                 {

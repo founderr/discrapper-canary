@@ -13,7 +13,7 @@ var r,
     f = n(70956),
     h = n(960048),
     p = n(981631);
-let m = (() => {
+let I = (() => {
         let e = ''.concat(location.protocol, '//').concat(location.host, '/__development/source_maps'),
             t = null,
             n = new o.Z(5 * f.Z.Millis.SECOND, 1 * f.Z.Millis.MINUTE, !0),
@@ -48,7 +48,7 @@ let m = (() => {
             }
         };
     })(),
-    I = 'DeveloperOptionsStore',
+    m = 'DeveloperOptionsStore',
     T = {
         trace: !1,
         canary: !1,
@@ -71,12 +71,12 @@ function S(e) {
         ...g,
         ...e
     }),
-        m.set(g.sourceMapsEnabled),
-        d.K.set(I, g);
+        I.set(g.sourceMapsEnabled),
+        d.K.set(m, g);
 }
 class A extends (r = u.ZP.Store) {
     initialize() {
-        let e = d.K.get(I);
+        let e = d.K.get(m);
         null != e &&
             (g = {
                 ...T,
@@ -148,7 +148,7 @@ class A extends (r = u.ZP.Store) {
             var t;
             let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & p.xW$.STAFF) === p.xW$.STAFF,
                 r = n || null != e.user.personal_connection_id;
-            n && m.set(g.sourceMapsEnabled), h.Z.setTags({ isStaff: r.toString() });
+            n && I.set(g.sourceMapsEnabled), h.Z.setTags({ isStaff: r.toString() });
         },
         DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
             let { settings: t } = e;

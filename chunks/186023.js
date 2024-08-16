@@ -10,8 +10,8 @@ var r = n(735250),
     d = n(981631),
     _ = n(182450);
 t.Z = (e) => {
-    let { reportType: t, menu: n, modalProps: E, onSubmit: f, onNavigate: h, emailToken: p, isAuthenticated: m = !0 } = e,
-        I = (0, o.Dt)(),
+    let { reportType: t, menu: n, modalProps: E, onSubmit: f, onNavigate: h, emailToken: p, isAuthenticated: I = !0 } = e,
+        m = (0, o.Dt)(),
         { nodes: T, root_node_id: g, success_node_id: S, fail_node_id: A } = n,
         [N, v] = i.useState(g),
         [O, R] = i.useState(void 0),
@@ -43,7 +43,7 @@ t.Z = (e) => {
         },
         x = async (e) => {
             var r;
-            let i = m ? await (0, u.ZD)(n, t, [...D, e]) : await (0, u.fw)(n, t, [...D, e], p),
+            let i = I ? await (0, u.ZD)(n, t, [...D, e]) : await (0, u.fw)(n, t, [...D, e], p),
                 a = null == i ? void 0 : null === (r = i.body) || void 0 === r ? void 0 : r.report_id;
             null != a && M(a), U(T[e.nodeRef].report_type), null == f || f(a);
         },
@@ -87,7 +87,7 @@ t.Z = (e) => {
         }, [T, g, A, S]);
     return (0, r.jsx)(a.ModalRoot, {
         transitionState: E.transitionState,
-        'aria-labelledby': I,
+        'aria-labelledby': m,
         children: (0, r.jsx)(a.Slides, {
             width: 440,
             activeSlide: N,

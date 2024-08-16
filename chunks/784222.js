@@ -31,8 +31,8 @@ var r,
     f = n(80932),
     h = n(339085),
     p = n(906411),
-    m = n(689789),
-    I = n(633302),
+    I = n(689789),
+    m = n(633302),
     T = n(806966),
     g = n(28546),
     S = n(889161),
@@ -61,7 +61,7 @@ let G = (e) => {
         G = (0, b.NJ)(T),
         k = (0, b.wC)(T),
         B = (0, b.q5)(T),
-        { canSplitFrecencyList: F } = (0, m.S)({
+        { canSplitFrecencyList: F } = (0, I.S)({
             location: 'useEmojiGrid',
             autoTrackExposure: !0
         }),
@@ -96,7 +96,7 @@ let G = (e) => {
             E = [],
             h = [],
             p = 0,
-            m = 0;
+            I = 0;
         if (null != g && null != s) {
             let T = Math.floor(s / (l + 2 * o)),
                 g = 3 * T,
@@ -111,33 +111,33 @@ let G = (e) => {
                             });
                             return o.set(e, n), !n;
                         }),
-                        I = _.concat(f),
+                        m = _.concat(f),
                         S = s.guild,
                         A = v.Z.getGuildId(),
                         N = s.sectionId === U.En.TOP_GUILD_EMOJI,
-                        O = !N && null != S && A === S.id && I.length < S.getMaxEmojiSlots(),
-                        R = N && I.length < T && !X,
+                        O = !N && null != S && A === S.id && m.length < S.getMaxEmojiSlots(),
+                        R = N && m.length < T && !X,
                         y = null != S && N && X && $ === L.B.WITH_TOP_LIST && Q[S.id].length < S.getMaxEmojiSlots(),
                         D = r && j && null != S && (O || R || y);
-                    D && y && I.length === T && I.shift();
-                    let M = I.length > g,
-                        P = J && M && null != S && !Y.has(S.id);
-                    P && I.splice(g - 1);
+                    D && y && m.length === T && m.shift();
+                    let M = m.length > g && null != S && S.id !== A,
+                        P = J && M && !Y.has(S.id);
+                    P && m.splice(g - 1);
                     let w = X && D && !c,
-                        G = Math.ceil((D ? I.length + 1 : I.length) / T),
+                        G = Math.ceil((D ? m.length + 1 : m.length) / T),
                         k = [];
                     for (let e = 0; e < G; e++) {
                         let t = 0 === e,
                             n = e * T - (w && e > 0 ? 1 : 0),
                             r = n + T - (w && t ? 1 : 0),
-                            i = I.slice(n, r).map((e, n) => {
+                            i = m.slice(n, r).map((e, n) => {
                                 var r, i;
                                 return {
                                     type: 0,
                                     emoji: e,
                                     size: l,
                                     isDisabled: o.get(e),
-                                    rowIndex: m,
+                                    rowIndex: I,
                                     columnIndex: w && t ? n + 1 : n,
                                     visibleRowIndex: p,
                                     category: s.type,
@@ -154,7 +154,7 @@ let G = (e) => {
                                         guildId: S.id,
                                         name: x.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                                         size: l,
-                                        rowIndex: m,
+                                        rowIndex: I,
                                         columnIndex: 0,
                                         visibleRowIndex: p
                                     },
@@ -175,7 +175,7 @@ let G = (e) => {
                                     visibleRowIndex: p
                                 });
                             }
-                            if (J && e === G - 1 && null != S) {
+                            if (J && e === G - 1 && M) {
                                 let t = k[e];
                                 t.push({
                                     type: 2,
@@ -190,7 +190,7 @@ let G = (e) => {
                             }
                             h.push(i.length), E.push(i), p++;
                         }
-                        m++;
+                        I++;
                     }
                     let B = {
                         ...s,
@@ -297,7 +297,7 @@ let G = (e) => {
                                 isNitroLocked: !1
                             });
                     } else {
-                        let t = I.ZP.getByCategory(e);
+                        let t = m.ZP.getByCategory(e);
                         null != t &&
                             S(t, {
                                 categoryId: e,

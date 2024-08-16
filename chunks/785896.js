@@ -30,7 +30,7 @@ let c = (e, t, n) => {
             E = null != o && o.hasFeature(u.oNc.DISCOVERABLE),
             f = (!_ || E) && null != t,
             [h, p] = r.useState(f),
-            [m, I] = r.useState(null),
+            [I, m] = r.useState(null),
             T = null != o ? l.JO.createFromGuildRecord(o) : null,
             [g, S] = r.useState(T),
             [A, N] = r.useState(null);
@@ -40,7 +40,7 @@ let c = (e, t, n) => {
                 let e = async () => {
                     let e = null != t ? await (0, l.Fi)(t) : null;
                     if (null != e)
-                        switch ((I(e.type), e.type)) {
+                        switch ((m(e.type), e.type)) {
                             case l.w6.APPLICATION:
                                 N(e.application);
                                 break;
@@ -58,7 +58,7 @@ let c = (e, t, n) => {
             {
                 expressionSourceGuild: g,
                 expressionSourceApplication: A,
-                sourceType: m,
+                sourceType: I,
                 joinedEmojiSourceGuildRecord: o,
                 hasJoinedEmojiSourceGuild: _,
                 emoji: d,

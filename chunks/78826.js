@@ -33,13 +33,13 @@ function d(e) {
 function _(e) {
     let { children: t, isPreview: n = !1, source: _, questId: E } = e,
         [f, h] = i.useState(!1),
-        [p, m] = i.useState(new Set()),
-        [I, T] = i.useState(!1),
+        [p, I] = i.useState(new Set()),
+        [m, T] = i.useState(!1),
         g = i.useRef(!1);
     i.useEffect(() => {
         let e = new Set();
         for (let t of p) !c(t) && e.add(t);
-        e.size !== p.size && m(e);
+        e.size !== p.size && I(e);
     }, [p]);
     let S = i.useCallback(
             (e) => {
@@ -66,7 +66,7 @@ function _(e) {
             [n, _, E]
         ),
         A = i.useCallback((e) => {
-            m((t) => {
+            I((t) => {
                 let n = new Set(t);
                 return n.delete(e), n;
             });
@@ -75,7 +75,7 @@ function _(e) {
             (e, t) => {
                 var n;
                 if ((T(!0), c(e))) return;
-                m((t) => {
+                I((t) => {
                     let n = new Set(t);
                     return n.add(e), n;
                 });
@@ -96,7 +96,7 @@ function _(e) {
             },
             [S, A]
         ),
-        v = i.useMemo(() => p.size > 0 || !I, [I, p]);
+        v = i.useMemo(() => p.size > 0 || !m, [m, p]);
     i.useEffect(() => {
         !v && (g.current = !0);
     }, [v]);

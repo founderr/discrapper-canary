@@ -17,8 +17,8 @@ var r = n(735250),
     f = n(483424),
     h = n(681837),
     p = n(91433),
-    m = n(502762),
-    I = n(530),
+    I = n(502762),
+    m = n(530),
     T = n(827313),
     g = n(790711),
     S = n(580512),
@@ -46,7 +46,7 @@ function y(e) {
         fade: !0,
         className: C.body,
         children: [
-            (0, r.jsx)(I.Z, {
+            (0, r.jsx)(m.Z, {
                 user: t,
                 profileType: O.y0.BITE_SIZE,
                 onOpenProfile: b,
@@ -76,7 +76,7 @@ function y(e) {
                 })
             }),
             w === R.OGo.PENDING_INCOMING &&
-                (0, r.jsx)(m.Z.Overlay, {
+                (0, r.jsx)(I.Z.Overlay, {
                     children: (0, r.jsx)(p.Z, {
                         user: t,
                         guildId: null == D ? void 0 : D.id,

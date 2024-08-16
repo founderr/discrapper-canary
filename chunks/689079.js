@@ -18,7 +18,7 @@ n.d(t, {
         return u;
     },
     al: function () {
-        return I;
+        return m;
     },
     bi: function () {
         return i;
@@ -36,7 +36,7 @@ n.d(t, {
         return c;
     },
     um: function () {
-        return m;
+        return I;
     }
 });
 var r,
@@ -66,8 +66,8 @@ let c = 10,
     h = 10,
     p = 500;
 Object.freeze([]), Object.freeze([]);
-let m = 200;
-function I(e) {
+let I = 200;
+function m(e) {
     if (null != e.choices) return s.Z.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
     switch (e.type) {
         case a.jw.BOOLEAN:

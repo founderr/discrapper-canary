@@ -32,8 +32,8 @@ function h(e, t, n) {
 }
 ((a = r || (r = {}))[(a.LOADED = 0)] = 'LOADED'), (a[(a.NOT_LOADED = 1)] = 'NOT_LOADED'), (a[(a.DELETED = 2)] = 'DELETED');
 let p = Object.freeze({ state: 1 }),
-    m = new Set();
-class I {
+    I = new Set();
+class m {
     handleCacheDisposed(e, t) {
         this._cachedMessageIds.has(e) && ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.delete(e));
     }
@@ -72,7 +72,7 @@ let T = new (class e {
     }
     set(e, t, n) {
         let r = this._channelCaches.get(e);
-        null == r && ((r = new I()), this._channelCaches.set(e, r)), r.set(t, n);
+        null == r && ((r = new m()), this._channelCaches.set(e, r)), r.set(t, n);
     }
     updateExistingMessageIfCached(e) {
         let t = this._channelCaches.get(e.channel_id);
@@ -175,7 +175,7 @@ class y extends (i = l.ZP.Store) {
     }
     getReplyIdsForChannel(e) {
         let t;
-        return null != e && (t = T.getCachedMessageIdsForChannel(e)), null != t ? t : m;
+        return null != e && (t = T.getCachedMessageIdsForChannel(e)), null != t ? t : I;
     }
 }
 h(y, 'displayName', 'ReferencedMessageStore'),

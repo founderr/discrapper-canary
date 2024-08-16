@@ -43,7 +43,7 @@ let f = {
         lastMessage: null
     },
     E = (0, l.Z)(() => new Map()),
-    g = (e, t) => {
+    C = (e, t) => {
         (0, o.j)(() => {
             E.setState((n) => {
                 let i = n.get(e);
@@ -62,7 +62,7 @@ let f = {
             });
         });
     },
-    C = (e) => E((t) => t.get(e), r.Z);
+    g = (e) => E((t) => t.get(e), r.Z);
 function I(e, t, n) {
     let i = null != n ? n : {};
     switch (t) {
@@ -96,7 +96,7 @@ function x(e, t, n) {
     return (function (e, t, n, i) {
         let { addtionalQuery: a, shouldDispatch: l = !1 } = i,
             r = s.useMemo(() => _(e, t, n, a), [e, t, n, a]),
-            o = C(r),
+            o = g(r),
             E = (0, u.Z)(r),
             [x, T] = s.useState({});
         return (
@@ -104,7 +104,7 @@ function x(e, t, n) {
                 if (E !== r) {
                     let i = I(e, n, a),
                         s = new d.ZP(t, m.aib.GUILD, i);
-                    g(r, {
+                    C(r, {
                         searchFetcher: s,
                         messageCount: p,
                         lastMessage: null
@@ -115,7 +115,7 @@ function x(e, t, n) {
                                     let n = e.body,
                                         i = n.messages[0];
                                     if (
-                                        (g(r, {
+                                        (C(r, {
                                             searchFetcher: s,
                                             result: n,
                                             messageCount: n.total_results,
@@ -143,7 +143,7 @@ function x(e, t, n) {
                                 },
                                 (e) => {},
                                 (e) => {
-                                    g(r, {
+                                    C(r, {
                                         messageCount: 0,
                                         lastMessage: null
                                     }),
@@ -160,7 +160,7 @@ function x(e, t, n) {
 }
 function T(e, t, n, i) {
     let a = s.useMemo(() => _(e, t, n, i, !0), [e, t, n, i]),
-        l = C(a),
+        l = g(a),
         r = (0, u.Z)(a);
     return {
         key: a,
@@ -185,24 +185,24 @@ function N(e, t, n) {
             }),
             [e, f]
         ),
-        C = s.useCallback(
+        g = s.useCallback(
             (e) => {
                 let t = e.messages,
                     n = e.links,
                     i = e.media;
-                g(r, t), g(c, n), g(h, i);
+                C(r, t), C(c, n), C(h, i);
             },
             [c, h, r]
         ),
         x = s.useCallback(
             (e) => {
-                C({
+                g({
                     messages: e,
                     links: e,
                     media: e
                 });
             },
-            [C]
+            [g]
         );
     s.useEffect(() => {
         let e = new d.tJ(t, m.aib.GUILD, f, E);
@@ -229,7 +229,7 @@ function N(e, t, n) {
                 let e = t.tabs.messages,
                     o = t.tabs.links,
                     c = t.tabs.media;
-                C({
+                g({
                     messages: {
                         messageCount: null !== (n = null == e ? void 0 : e.total_results) && void 0 !== n ? n : 0,
                         lastMessage: null !== (i = null == e ? void 0 : e.messages[0]) && void 0 !== i ? i : null
@@ -249,7 +249,7 @@ function N(e, t, n) {
         return () => {
             e.cancel(), clearTimeout(n);
         };
-    }, [e, t, f, E, x, C]);
+    }, [e, t, f, E, x, g]);
     let [N, v] = s.useState({});
     return {
         messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : p,

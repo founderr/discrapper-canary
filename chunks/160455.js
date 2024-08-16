@@ -459,12 +459,12 @@ e.exports = function (e) {
             end: /\}/,
             contains: d
         }),
-        m = {
+        I = {
             beginKeywords: 'when',
             endsWithParent: !0,
             contains: [{ beginKeywords: 'and not' }].concat(_)
         },
-        I = {
+        m = {
             begin: c + '\\s*:',
             returnBegin: !0,
             end: /[;}]/,
@@ -503,7 +503,7 @@ e.exports = function (e) {
             contains: [
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
-                m,
+                I,
                 f('keyword', 'all\\b'),
                 f('variable', '@\\{' + u + '\\}'),
                 {
@@ -570,9 +570,9 @@ e.exports = function (e) {
                 }
             },
             g,
-            I,
-            T,
             m,
+            T,
+            I,
             l.FUNCTION_DISPATCH
         ),
         {

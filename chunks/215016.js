@@ -21,8 +21,8 @@ var r = n(735250),
     f = n(40851),
     h = n(29909),
     p = n(132748),
-    m = n(981631),
-    I = n(689938),
+    I = n(981631),
+    m = n(689938),
     T = n(891883);
 function g(e, t, n) {
     return (
@@ -157,7 +157,7 @@ class D extends i.PureComponent {
 class L extends i.PureComponent {
     componentDidMount() {
         let { resultType: e, data: t } = this.props;
-        e === m.wI2.FAVORITES && ((0, d.t1)(m.wI2.FAVORITES), (0, d.hM)(t, m.wI2.FAVORITES, { limit: null }));
+        e === I.wI2.FAVORITES && ((0, d.t1)(I.wI2.FAVORITES), (0, d.hM)(t, I.wI2.FAVORITES, { limit: null }));
     }
     selectItem(e, t) {
         let { onSelectGIF: n, resultType: r, data: i, resultQuery: a } = this.props;
@@ -207,17 +207,17 @@ class L extends i.PureComponent {
             fade: !0,
             children: (0, r.jsxs)('div', {
                 className: T.emptyHints,
-                children: [this.renderEmptyFavorite(I.Z.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE, !0), this.renderEmptyFavorite(I.Z.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE), this.renderEmptyFavorite(I.Z.Messages.NO_GIF_FAVORITES_GO_FAVORITE), Array.from({ length: 15 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(I.Z.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE), Array.from({ length: 16 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(I.Z.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE)]
+                children: [this.renderEmptyFavorite(m.Z.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE, !0), this.renderEmptyFavorite(m.Z.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE), this.renderEmptyFavorite(m.Z.Messages.NO_GIF_FAVORITES_GO_FAVORITE), Array.from({ length: 15 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(m.Z.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE), Array.from({ length: 16 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(m.Z.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE)]
             })
         });
     }
     render() {
         let { data: e, resultQuery: t, query: n, resultType: i } = this.props;
-        return 0 === e.length && t === n && i !== m.wI2.TRENDING_GIFS
-            ? i === m.wI2.FAVORITES
+        return 0 === e.length && t === n && i !== I.wI2.TRENDING_GIFS
+            ? i === I.wI2.FAVORITES
                 ? this.renderEmptyFavorites()
                 : (0, r.jsx)(E.Z, {
-                      message: I.Z.Messages.NO_GIF_SEARCH_RESULTS,
+                      message: m.Z.Messages.NO_GIF_SEARCH_RESULTS,
                       className: T.noResults
                   })
             : (0, r.jsx)(
@@ -320,7 +320,7 @@ class L extends i.PureComponent {
                                             children: [
                                                 (0, r.jsx)('div', {
                                                     className: T.endText,
-                                                    children: I.Z.Messages.GIF_PICKER_RELATED_SEARCH
+                                                    children: m.Z.Messages.GIF_PICKER_RELATED_SEARCH
                                                 }),
                                                 (0, r.jsx)('div', {
                                                     className: T.searchSuggestions,
@@ -351,7 +351,7 @@ class L extends i.PureComponent {
             }),
             g(this, 'renderContent', (e, t, n) => {
                 let { data: i, resultQuery: a, query: s, resultType: o } = this.props;
-                return 0 === i.length && (a !== s || o === m.wI2.TRENDING_GIFS)
+                return 0 === i.length && (a !== s || o === I.wI2.TRENDING_GIFS)
                     ? (0, r.jsx)(
                           c.MasonryList,
                           {

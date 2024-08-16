@@ -23,10 +23,10 @@ var r = n(735250),
     h = n(785792),
     C = n(190054),
     A = n(760373),
-    T = n(981631),
-    g = n(689938),
+    g = n(981631),
+    y = n(689938),
     M = n(958153);
-function y(e) {
+function T(e) {
     let { badgeText: t, badgeColor: n } = e,
         a = i.useRef(t),
         o = i.useRef(n);
@@ -37,13 +37,13 @@ function y(e) {
 }
 function Z(e) {
     let { transitionState: t, userId: n, channelId: Z, onClose: p } = e,
-        N = (0, E.Dt)(),
-        m = (0, a.e7)([c.default], () => c.default.getUser(n)),
+        m = (0, E.Dt)(),
+        N = (0, a.e7)([c.default], () => c.default.getUser(n)),
         U = (0, a.e7)([u.Z], () => {
             var e;
             return null === (e = u.Z.getChannel(Z)) || void 0 === e ? void 0 : e.getGuildId();
         }),
-        D = l.ZP.useName(U, null, m),
+        D = l.ZP.useName(U, null, N),
         { fingerprint: F, userKey: L, loading: b } = (0, R.q)({ userId: n }),
         x = (0, S.W)({
             fingerprintBase64: F,
@@ -62,13 +62,13 @@ function Z(e) {
             location: 'WebSecureFramesUserVerificationModal'
         }),
         { isPersistentCode: O, isCurrentUserPersistent: k, isOtherUserPersistent: K, loading: w } = (0, f.y)({ userId: n }),
-        P = i.useCallback(() => {
-            null != L && ((0, _.TQ)(n, L, O, Z, T.Sbl.E2EE_USER_VERIFY_MODAL), p());
-        }, [L, n, O, Z, p]),
         B = i.useCallback(() => {
+            null != L && ((0, _.TQ)(n, L, O, Z, g.Sbl.E2EE_USER_VERIFY_MODAL), p());
+        }, [L, n, O, Z, p]),
+        P = i.useCallback(() => {
             null != L && ((0, _.LO)(n, L, O), p());
         }, [L, n, O, p]),
-        [Y, j] = i.useMemo(() => (v ? [g.Z.Messages.E2EE_VERIFIED, o.Z.BG_BRAND] : O ? [g.Z.Messages.E2EE_PERSISTENT, o.Z.STATUS_DANGER] : [g.Z.Messages.NEW, o.Z.STATUS_DANGER]), [O, v]),
+        [Y, j] = i.useMemo(() => (v ? [y.Z.Messages.E2EE_VERIFIED, o.Z.BG_BRAND] : [y.Z.Messages.NEW, o.Z.STATUS_DANGER]), [v]),
         G = i.useMemo(
             () =>
                 (0, _.kK)({
@@ -87,7 +87,7 @@ function Z(e) {
         }, [Z, n]),
         (0, r.jsxs)(s.ModalRoot, {
             transitionState: t,
-            'aria-labelledby': N,
+            'aria-labelledby': m,
             children: [
                 (0, r.jsx)('div', {
                     className: M.shieldIconContainer,
@@ -108,13 +108,13 @@ function Z(e) {
                             className: M.title,
                             variant: 'heading-lg/bold',
                             color: 'header-primary',
-                            children: g.Z.Messages.E2EE_VERIFICATION_CODE
+                            children: y.Z.Messages.E2EE_VERIFICATION_CODE
                         }),
                         (0, r.jsx)(s.Text, {
                             className: M.subtitle,
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: g.Z.Messages.E2EE_USER_VERIFICATION_SUBTITLE.format({ username: D })
+                            children: y.Z.Messages.E2EE_USER_VERIFICATION_SUBTITLE.format({ username: D })
                         }),
                         (0, r.jsxs)('div', {
                             className: M.verification,
@@ -125,7 +125,7 @@ function Z(e) {
                                         (0, r.jsx)(s.Heading, {
                                             variant: 'text-sm/bold',
                                             color: 'header-primary',
-                                            children: g.Z.Messages.E2EE_VOICE_PRIVACY_CODE
+                                            children: y.Z.Messages.E2EE_VERIFICATION_CODE
                                         }),
                                         null != x &&
                                             (0, r.jsx)(C.H, {
@@ -139,7 +139,7 @@ function Z(e) {
                                                   className: M.spinner,
                                                   type: s.SpinnerTypes.SPINNING_CIRCLE
                                               })
-                                            : (0, r.jsx)(y, {
+                                            : (0, r.jsx)(T, {
                                                   badgeText: Y,
                                                   badgeColor: j
                                               })
@@ -165,8 +165,8 @@ function Z(e) {
                             size: s.ButtonSizes.MEDIUM,
                             look: s.ButtonLooks.FILLED,
                             disabled: null == F || w || b,
-                            onClick: v ? B : P,
-                            children: v ? g.Z.Messages.E2EE_CLEAR_VERIFICATION : g.Z.Messages.E2EE_MARK_AS_VERIFIED
+                            onClick: v ? P : B,
+                            children: v ? y.Z.Messages.E2EE_CLEAR_VERIFICATION : y.Z.Messages.E2EE_MARK_AS_VERIFIED
                         }),
                         (0, r.jsx)(s.Button, {
                             fullWidth: !0,
@@ -174,7 +174,7 @@ function Z(e) {
                             size: s.ButtonSizes.MEDIUM,
                             look: s.ButtonLooks.FILLED,
                             onClick: p,
-                            children: g.Z.Messages.CANCEL
+                            children: y.Z.Messages.CANCEL
                         })
                     ]
                 })

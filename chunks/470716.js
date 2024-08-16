@@ -58,10 +58,10 @@ var p = {
         TITLE: 'title',
         FRAGMENT: 'Symbol(react.fragment)'
     },
-    m = {
+    I = {
         rel: ['amphtml', 'canonical', 'alternate']
     },
-    I = { type: ['application/ld+json'] },
+    m = { type: ['application/ld+json'] },
     T = {
         charset: '',
         name: ['robots', 'description'],
@@ -295,8 +295,8 @@ var p = {
                     (h = E.scriptTags),
                     (g = E.encode),
                     (S = D(E.metaTags, T)),
-                    (A = D(f, m)),
-                    (N = D(h, I)),
+                    (A = D(f, I)),
+                    (N = D(h, m)),
                     {
                         priorityMethods: {
                             toComponent: function () {
@@ -469,15 +469,15 @@ var Y = function (e, t) {
                 styleTags: Y(p.STYLE, d)
             },
             h = {},
-            m = {};
+            I = {};
         Object.keys(f).forEach(function (e) {
             var t = f[e],
                 n = t.newTags,
                 r = t.oldTags;
-            n.length && (h[e] = n), r.length && (m[e] = f[e].oldTags);
+            n.length && (h[e] = n), r.length && (I[e] = f[e].oldTags);
         }),
             t && t(),
-            u(e, h, m);
+            u(e, h, I);
     },
     K = null,
     z = (function (e) {

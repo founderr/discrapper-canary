@@ -34,17 +34,17 @@ function C(e) {
 }
 function h(e) {
     let { selectActionComponent: n, queryOptions: l, renderIcon: t, renderOptionLabel: r, defaultValues: u } = e,
-        { type: h, placeholder: x, maxValues: _, disabled: N } = n,
-        [T, I] = a.useState(!1),
+        { type: h, placeholder: _, maxValues: T, disabled: N } = n,
+        [x, I] = a.useState(!1),
         [g, S] = a.useState(!1),
         [O, Z] = a.useState(new Map(null == u ? void 0 : u.map((e) => [e.value, e]))),
         [j, L] = a.useState(new Set(O.keys())),
-        [A, M] = a.useState(() => (null != u ? u : []).map((e) => e.value)),
-        [R, P] = a.useState(0);
+        [A, R] = a.useState(() => (null != u ? u : []).map((e) => e.value)),
+        [M, P] = a.useState(0);
     a.useEffect(() => {
         let e = (null != u ? u : []).map((e) => e.value);
         if (e.every((e) => A.includes(e)) && A.every((n) => e.includes(n))) return;
-        M(e);
+        R(e);
         let n = new Map(null == u ? void 0 : u.map((e) => [e.value, e]));
         Z(n), L(new Set(n.keys())), P((e) => e + 1);
     }, [u, A]);
@@ -58,23 +58,23 @@ function h(e) {
             type: h,
             selectedOptions: Array.from(O.values())
         }),
-        w = U === f.gH.LOADING;
+        B = U === f.gH.LOADING;
     a.useEffect(() => {
         if ((null == b ? void 0 : b.type) === c.re.USER_SELECT || (null == b ? void 0 : b.type) === c.re.ROLE_SELECT || (null == b ? void 0 : b.type) === c.re.MENTIONABLE_SELECT || (null == b ? void 0 : b.type) === c.re.CHANNEL_SELECT) {
             let e = new Map(b.selectedOptions.map((e) => [e.value, e]));
             Z(e), L(new Set(e.keys()));
         }
     }, [b]);
-    let B = a.useCallback(() => {
+    let w = a.useCallback(() => {
         y({
             type: h,
             selectedOptions: Array.from(O.values())
         }) && L(new Set(O.keys()));
     }, [y, h, O]);
     a.useEffect(() => {
-        if (!(T || g || (O.size === j.size && Array.from(O.keys()).every((e) => j.has(e))))) B();
-    }, [T, g, j, O, B]);
-    let G = 0 === O.size || T,
+        if (!(x || g || (O.size === j.size && Array.from(O.keys()).every((e) => j.has(e))))) w();
+    }, [x, g, j, O, w]);
+    let G = 0 === O.size || x,
         H = {
             isDisabled: N || k,
             wrapperClassName: E.select,
@@ -82,7 +82,7 @@ function h(e) {
                 new Promise((n) => {
                     n(l(e));
                 }),
-            placeholder: G ? (null != x ? x : p.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
+            placeholder: G ? (null != _ ? _ : p.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
             onClose: () => I(!1),
             onOpen: () => I(!0),
             onBlur: () => S(!1),
@@ -106,14 +106,14 @@ function h(e) {
             (0, i.jsxs)('div', {
                 className: E.container,
                 children: [
-                    _ > 1
+                    T > 1
                         ? (0, i.jsx)(
                               o.SearchableSelect,
                               {
                                   className: E.badges,
                                   value: Array.from(O.values()),
                                   onChange: (e) => {
-                                      !T && S(!0), Z(new Map(e.map((e) => [e.value, e])));
+                                      !x && S(!0), Z(new Map(e.map((e) => [e.value, e])));
                                   },
                                   multi: !0,
                                   inputClassNames: s()({
@@ -125,7 +125,7 @@ function h(e) {
                                   centerCaret: !0,
                                   ...H
                               },
-                              R
+                              M
                           )
                         : (0, i.jsx)(
                               o.SearchableSelect,
@@ -137,9 +137,9 @@ function h(e) {
                                   centerCaret: !0,
                                   ...H
                               },
-                              R
+                              M
                           ),
-                    w
+                    B
                         ? (0, i.jsx)('div', {
                               className: E.loading,
                               children: (0, i.jsx)(o.Dots, {

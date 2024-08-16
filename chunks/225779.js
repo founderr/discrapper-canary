@@ -12,7 +12,7 @@ n.d(t, {
         return p;
     },
     qX: function () {
-        return m;
+        return I;
     },
     u3: function () {
         return h;
@@ -97,7 +97,7 @@ function p(e) {
         })
     });
 }
-function m(e) {
+function I(e) {
     let { color: t = _.DEFAULT, className: n, style: i, children: o } = e;
     return (0, r.jsx)('div', {
         className: a()(d.notice, { [d.isMobile]: s.tq }, n, t),

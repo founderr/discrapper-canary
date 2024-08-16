@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(592125),
     h = n(757266),
     p = n(650774),
-    m = n(430824),
-    I = n(283595),
+    I = n(430824),
+    m = n(283595),
     T = n(496675),
     g = n(699516),
     S = n(944486),
@@ -55,12 +55,12 @@ function F(e) {
             activity: F
         }),
         ee = (0, a.e7)(
-            [I.Z, E.Z, O.Z, h.Z],
+            [m.Z, E.Z, O.Z, h.Z],
             () =>
                 Y ||
                 (null != $ &&
                     (0, C.t)({
-                        LibraryApplicationStore: I.Z,
+                        LibraryApplicationStore: m.Z,
                         LaunchableGameStore: E.Z,
                         DispatchApplicationStore: O.Z,
                         ConnectedAppsStore: h.Z,
@@ -81,7 +81,7 @@ function F(e) {
             channelId: J,
             application: er
         }),
-        ea = (0, a.e7)([f.Z, m.Z, p.Z, g.Z, S.Z, N.Z, T.Z], () =>
+        ea = (0, a.e7)([f.Z, I.Z, p.Z, g.Z, S.Z, N.Z, T.Z], () =>
             null != V
                 ? ei === P.Fw.CAN_JOIN
                 : null != F
@@ -93,7 +93,7 @@ function F(e) {
                         currentUser: Q,
                         isEmbedded: Y,
                         ChannelStore: f.Z,
-                        GuildStore: m.Z,
+                        GuildStore: I.Z,
                         GuildMemberCountStore: p.Z,
                         RelationshipStore: g.Z,
                         SelectedChannelStore: S.Z,

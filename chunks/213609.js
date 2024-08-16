@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return m;
     },
     h: function () {
-        return m;
+        return I;
     }
 });
 var r = n(470079),
@@ -24,7 +24,7 @@ let p = (0, l.trackMaker)({
     dispatcher: u.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function m(e) {
+function I(e) {
     var t, n;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { name: i, type: a, properties: s } = e;
@@ -40,7 +40,7 @@ function m(e) {
     (0, h.Ps)(e);
     let o = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : _.Z.getGuildId(),
         u = null !== (n = null == s ? void 0 : s.channel_id) && void 0 !== n ? n : d.Z.getChannelId(o),
-        m = (0, E.expandEventProperties)({
+        I = (0, E.expandEventProperties)({
             impression_type: a,
             location: (0, h.k$)(),
             ...(0, f.hH)(o),
@@ -51,9 +51,9 @@ function m(e) {
         (0, h.dT)(null, null);
         return;
     }
-    null != i && null != a && ((0, E.debugLogEvent)(i, m), p(i, m)), (0, h.dT)(i, m);
+    null != i && null != a && ((0, E.debugLogEvent)(i, I), p(i, I)), (0, h.dT)(i, I);
 }
-function I(e) {
+function m(e) {
     let t =
             arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
@@ -75,7 +75,7 @@ function I(e) {
                 sequenceId: o()('impression_')
             };
             return (
-                m(u, t.disableTrack),
+                I(u, t.disableTrack),
                 () => {
                     null != u && (0, h.dw)(u);
                 }

@@ -1,28 +1,28 @@
 a(47120);
 var n = a(735250),
-    l = a(470079),
-    r = a(120356),
-    t = a.n(r),
+    r = a(470079),
+    l = a(120356),
+    t = a.n(l),
     i = a(643872),
     o = a(481060),
     E = a(570140),
     c = a(652898),
     _ = a(93093),
-    I = a(768581),
-    u = a(810568),
+    u = a(768581),
+    I = a(810568),
     d = a(981631),
     A = a(689938),
     R = a(707443);
 let N = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE],
     O = (e) => {
         let { invite: s, trackClick: a } = e,
-            { approximate_member_count: l, guild: r } = s;
-        if (null == r) return null;
-        let i = _.Z.isMember(r.id);
-        if (!(null == r ? void 0 : r.features.includes('VERIFIED')) && !(null == r ? void 0 : r.features.includes('PARTNER'))) return null;
-        let c = I.ZP.getGuildIconURL({
-            id: r.id,
-            icon: r.icon,
+            { approximate_member_count: r, guild: l } = s;
+        if (null == l) return null;
+        let i = _.Z.isMember(l.id);
+        if (!(null == l ? void 0 : l.features.includes('VERIFIED')) && !(null == l ? void 0 : l.features.includes('PARTNER'))) return null;
+        let c = u.ZP.getGuildIconURL({
+            id: l.id,
+            icon: l.icon,
             size: 32
         });
         return (0, n.jsxs)('div', {
@@ -39,19 +39,19 @@ let N = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE],
                         (0, n.jsx)('img', {
                             className: R.icon,
                             src: c,
-                            alt: A.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({ guildName: r.name })
+                            alt: A.Z.Messages.GAME_PROFILE_GUILD_ICON_ALT.format({ guildName: l.name })
                         }),
                         (0, n.jsxs)('div', {
                             className: t()(R.gapNone),
                             children: [
                                 (0, n.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
-                                    children: r.name
+                                    children: l.name
                                 }),
-                                null != l &&
+                                null != r &&
                                     (0, n.jsx)(o.Text, {
                                         variant: 'text-xxs/normal',
-                                        children: A.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: l })
+                                        children: A.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: r })
                                     })
                             ]
                         })
@@ -60,7 +60,7 @@ let N = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE],
                 (0, n.jsx)(o.Button, {
                     color: o.ButtonColors.PRIMARY,
                     onClick: () => {
-                        a(u.as.JoinOfficialServer),
+                        a(I.as.JoinOfficialServer),
                             E.Z.dispatch({
                                 type: 'INVITE_MODAL_OPEN',
                                 invite: s,
@@ -75,16 +75,16 @@ let N = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE],
     };
 s.Z = (e) => {
     let { websites: s, trackClick: a } = e,
-        r =
+        l =
             null == s
                 ? void 0
                 : s.find((e) => {
                       let { category: s } = e;
                       return s === i.p.DISCORD;
                   }),
-        [E, _] = l.useState();
+        [E, _] = r.useState();
     if (
-        (l.useEffect(() => {
+        (r.useEffect(() => {
             let e = async (e) => {
                 let s = e.split('/').pop();
                 if (null != s) {
@@ -92,12 +92,12 @@ s.Z = (e) => {
                     !0 !== e.banned && _(e.invite);
                 }
             };
-            null != r && e(r.url);
-        }, [r]),
+            null != l && e(l.url);
+        }, [l]),
         null == s || 0 === s.length)
     )
         return null;
-    let I = s
+    let u = s
         .filter((e) => {
             let { category: s } = e;
             return N.includes(s);
@@ -121,20 +121,20 @@ s.Z = (e) => {
                     }),
                     (0, n.jsx)('div', {
                         className: R.row,
-                        children: I.map((e) => {
+                        children: u.map((e) => {
                             let s,
-                                l,
-                                { category: r, url: t } = e,
+                                r,
+                                { category: l, url: t } = e,
                                 E = null;
-                            switch (r) {
+                            switch (l) {
                                 case i.p.OFFICIAL:
-                                    (E = (0, n.jsx)(o.GlobeEarthIcon, { colorClass: R.linkIcon })), (l = u.as.WebsiteLink), (s = A.Z.Messages.GAME_PROFILE_LINK_OFFICIAL);
+                                    (E = (0, n.jsx)(o.GlobeEarthIcon, { colorClass: R.linkIcon })), (r = I.as.WebsiteLink), (s = A.Z.Messages.GAME_PROFILE_LINK_OFFICIAL);
                                     break;
                                 case i.p.TWITTER:
-                                    (E = (0, n.jsx)(o.XNeutralIcon, { colorClass: R.linkIcon })), (l = u.as.XLink), (s = A.Z.Messages.GAME_PROFILE_LINK_TWITTER);
+                                    (E = (0, n.jsx)(o.XNeutralIcon, { colorClass: R.linkIcon })), (r = I.as.XLink), (s = A.Z.Messages.GAME_PROFILE_LINK_TWITTER);
                                     break;
                                 case i.p.YOUTUBE:
-                                    (l = u.as.YouTubeLink), (E = (0, n.jsx)(o.YoutubeNeutralIcon, { colorClass: R.linkIcon })), (s = A.Z.Messages.GAME_PROFILE_LINK_YOUTUBE);
+                                    (r = I.as.YouTubeLink), (E = (0, n.jsx)(o.YoutubeNeutralIcon, { colorClass: R.linkIcon })), (s = A.Z.Messages.GAME_PROFILE_LINK_YOUTUBE);
                             }
                             return null != E
                                 ? (0, n.jsx)(
@@ -144,7 +144,7 @@ s.Z = (e) => {
                                           title: s,
                                           href: t,
                                           onClick: () => {
-                                              a(l);
+                                              a(r);
                                           },
                                           target: '_blank',
                                           children: E

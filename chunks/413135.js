@@ -198,7 +198,7 @@ function p(e, t, n) {
     var r = e[t];
     (e[t] = e[n]), (e[n] = r);
 }
-function m(e, t, n, r, i) {
+function I(e, t, n, r, i) {
     if (0 === e.length) return -1;
     if (
         ('string' == typeof n ? ((r = n), (n = 0)) : n > 2147483647 ? (n = 2147483647) : n < -2147483648 && (n = -2147483648),
@@ -214,14 +214,14 @@ function m(e, t, n, r, i) {
         if (!i) return -1;
         n = 0;
     }
-    if (('string' == typeof t && (t = o.from(t, r)), o.isBuffer(t))) return 0 === t.length ? -1 : I(e, t, n, r, i);
+    if (('string' == typeof t && (t = o.from(t, r)), o.isBuffer(t))) return 0 === t.length ? -1 : m(e, t, n, r, i);
     if ('number' == typeof t) {
         if (((t &= 255), 'function' == typeof Uint8Array.prototype.indexOf)) return i ? Uint8Array.prototype.indexOf.call(e, t, n) : Uint8Array.prototype.lastIndexOf.call(e, t, n);
-        return I(e, [t], n, r, i);
+        return m(e, [t], n, r, i);
     }
     throw TypeError('val must be string, number or Buffer');
 }
-function I(e, t, n, r, i) {
+function m(e, t, n, r, i) {
     var a,
         s = 1,
         o = e.length,
@@ -354,10 +354,10 @@ function I(e, t, n, r, i) {
         return -1 !== this.indexOf(e, t, n);
     }),
     (o.prototype.indexOf = function (e, t, n) {
-        return m(this, e, t, n, !0);
+        return I(this, e, t, n, !0);
     }),
     (o.prototype.lastIndexOf = function (e, t, n) {
-        return m(this, e, t, n, !1);
+        return I(this, e, t, n, !1);
     });
 function T(e, t, n, r) {
     return L(y(t), e, n, r);
@@ -380,8 +380,8 @@ function T(e, t, n, r) {
         f,
         h,
         p,
-        m,
         I,
+        m,
         T,
         g = this.length - t;
     if (((void 0 === n || n > g) && (n = g), (e.length > 0 && (n < 0 || t < 0)) || t > this.length)) throw RangeError('Attempt to write outside buffer bounds');
@@ -426,16 +426,16 @@ function T(e, t, n, r) {
             case 'utf-16le':
                 return (
                     (p = this),
-                    (m = e),
-                    (I = t),
+                    (I = e),
+                    (m = t),
                     (T = n),
                     L(
                         (function (e, t) {
                             for (var n, r, i, a = [], s = 0; s < e.length && !((t -= 2) < 0); ++s) (r = (n = e.charCodeAt(s)) >> 8), (i = n % 256), a.push(i), a.push(r);
                             return a;
-                        })(m, p.length - I),
+                        })(I, p.length - m),
                         p,
-                        I,
+                        m,
                         T
                     )
                 );

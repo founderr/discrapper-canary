@@ -27,8 +27,8 @@ var o = { deprecate: n(220342) },
     f = E.ERR_INVALID_ARG_TYPE,
     h = E.ERR_METHOD_NOT_IMPLEMENTED,
     p = E.ERR_MULTIPLE_CALLBACK,
-    m = E.ERR_STREAM_CANNOT_PIPE,
-    I = E.ERR_STREAM_DESTROYED,
+    I = E.ERR_STREAM_CANNOT_PIPE,
+    m = E.ERR_STREAM_DESTROYED,
     T = E.ERR_STREAM_NULL_VALUES,
     g = E.ERR_STREAM_WRITE_AFTER_END,
     S = E.ERR_UNKNOWN_ENCODING,
@@ -110,7 +110,7 @@ n(689118)(O, l),
               return e instanceof this;
           }),
     (O.prototype.pipe = function () {
-        A(this, new m());
+        A(this, new I());
     });
 (O.prototype.write = function (e, t, n) {
     var r,
@@ -123,18 +123,18 @@ n(689118)(O, l),
         E,
         h,
         p,
-        m = this._writableState,
-        I = !1;
-    var S = !m.objectMode && ((r = e), u.isBuffer(r) || r instanceof c);
+        I = this._writableState,
+        m = !1;
+    var S = !I.objectMode && ((r = e), u.isBuffer(r) || r instanceof c);
     if (S && !u.isBuffer(e)) {
         (i = e), (e = u.from(i));
     }
-    if (('function' == typeof t && ((n = t), (t = null)), S ? (t = 'buffer') : !t && (t = m.defaultEncoding), 'function' != typeof n && (n = N), m.ending)) {
+    if (('function' == typeof t && ((n = t), (t = null)), S ? (t = 'buffer') : !t && (t = I.defaultEncoding), 'function' != typeof n && (n = N), I.ending)) {
         (s = this), (o = n), A(s, (l = new g())), a.nextTick(o, l);
     } else {
-        if (S || ((d = this), (_ = m), (E = e), (h = n), null === E ? (p = new T()) : 'string' != typeof E && !_.objectMode && (p = new f('chunk', ['string', 'Buffer'], E)), !p || (A(d, p), a.nextTick(h, p), 0)))
-            m.pendingcb++,
-                (I = (function (e, t, n, r, i, a) {
+        if (S || ((d = this), (_ = I), (E = e), (h = n), null === E ? (p = new T()) : 'string' != typeof E && !_.objectMode && (p = new f('chunk', ['string', 'Buffer'], E)), !p || (A(d, p), a.nextTick(h, p), 0)))
+            I.pendingcb++,
+                (m = (function (e, t, n, r, i, a) {
                     if (!n) {
                         var s,
                             o,
@@ -158,9 +158,9 @@ n(689118)(O, l),
                             (t.bufferedRequestCount += 1);
                     } else R(e, t, !1, d, r, i, a);
                     return _;
-                })(this, m, S, e, t, n));
+                })(this, I, S, e, t, n));
     }
-    return I;
+    return m;
 }),
     (O.prototype.cork = function () {
         this._writableState.corked++;
@@ -186,7 +186,7 @@ Object.defineProperty(O.prototype, 'writableHighWaterMark', {
     }
 });
 function R(e, t, n, r, i, a, s) {
-    (t.writelen = r), (t.writecb = s), (t.writing = !0), (t.sync = !0), t.destroyed ? t.onwrite(new I('write')) : n ? e._writev(i, t.onwrite) : e._write(i, a, t.onwrite), (t.sync = !1);
+    (t.writelen = r), (t.writecb = s), (t.writing = !0), (t.sync = !0), t.destroyed ? t.onwrite(new m('write')) : n ? e._writev(i, t.onwrite) : e._write(i, a, t.onwrite), (t.sync = !1);
 }
 function C(e, t, n, r) {
     !n &&

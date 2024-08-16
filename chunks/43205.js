@@ -16,10 +16,10 @@ function d(e) {
     let { src: t, size: n, constrain: a = 'height', className: d, alt: _, fallbackSrc: E, showTooltip: f = !1 } = e,
         h = (0, l.ZP)(),
         p = ''.concat(n, 'px'),
-        [m, I] = i.useState(!1),
+        [I, m] = i.useState(!1),
         [T, g] = i.useState(!1),
         S = null == E || T;
-    if (null == t || (m && S))
+    if (null == t || (I && S))
         return (0, r.jsx)(o.UnknownGameIcon, {
             size: 'custom',
             width: '100%',
@@ -49,9 +49,9 @@ function d(e) {
                     ...e,
                     style: A,
                     className: s()(c.contentImage, d),
-                    src: m && null != E ? E : t,
+                    src: I && null != E ? E : t,
                     alt: null != _ ? _ : u.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
-                    onError: (e) => (m ? g(!0) : I(!0))
+                    onError: (e) => (I ? g(!0) : m(!0))
                 })
         },
         'voice-preview'

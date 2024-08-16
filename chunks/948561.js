@@ -19,8 +19,8 @@ var r = n(952639),
     f = n(433355),
     h = n(592125),
     p = n(375954),
-    m = n(944486),
-    I = n(914010),
+    I = n(944486),
+    m = n(914010),
     T = n(709054),
     g = n(93735),
     S = n(522664),
@@ -205,7 +205,7 @@ function G(e) {
         let e = null !== (s = null !== (a = p.Z.getMessage(o.channel_id, o.id)) && void 0 !== a ? a : v.Z.getMessage(o.id, o.channel_id)) && void 0 !== s ? s : null === (i = _.Z.getMessage(o.channel_id, o.id)) || void 0 === i ? void 0 : i.message;
         null != e && !(0, g.N7)((0, c.wi)(e, o)) && M(e, N.Pq.UPDATE);
     }
-    let l = m.Z.getChannelId(),
+    let l = I.Z.getChannelId(),
         u = f.ZP.getCurrentSidebarChannelId(l);
     if (!(o.channel_id === l || o.channel_id === u)) return !1;
     let d = p.Z.getMessage(o.channel_id, o.id);
@@ -215,7 +215,7 @@ function k(e) {
     var t, n;
     let { channelId: r, message: i, optimistic: a, isPushNotification: s } = e;
     if (!(0, A.Kh)() || a || s || null == r || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === E.default.getId()) return !1;
-    let o = m.Z.getChannelId(),
+    let o = I.Z.getChannelId(),
         l = f.ZP.getCurrentSidebarChannelId(o),
         u = r === o || r === l,
         c = h.Z.getChannel(r);
@@ -227,7 +227,7 @@ function k(e) {
 function B(e) {
     let { channelId: t, messages: n } = e;
     if (!(0, A.Kh)() || null == t || null == n) return !1;
-    let r = m.Z.getChannelId(),
+    let r = I.Z.getChannelId(),
         i = f.ZP.getCurrentSidebarChannelId(r);
     return (t === r || t === i) && x(n);
 }
@@ -239,20 +239,20 @@ function F(e) {
 }
 function V(e) {
     let { guildId: t, threads: n } = e;
-    return !!(null != n && (0, A.Kh)()) && I.Z.getGuildId() === t && x(T.default.keys(n).map((e) => n[e].first_message));
+    return !!(null != n && (0, A.Kh)()) && m.Z.getGuildId() === t && x(T.default.keys(n).map((e) => n[e].first_message));
 }
 function H(e) {
     let { guildId: t, firstMessages: n } = e;
-    return !!(null != n && (0, A.Kh)()) && I.Z.getGuildId() === t && x(n, { forceBatchScan: !0 });
+    return !!(null != n && (0, A.Kh)()) && m.Z.getGuildId() === t && x(n, { forceBatchScan: !0 });
 }
 function Z(e) {
     let { channelId: t } = e;
-    return !!(null != t && (0, A.Kh)()) && t === m.Z.getChannelId() && W(t);
+    return !!(null != t && (0, A.Kh)()) && t === I.Z.getChannelId() && W(t);
 }
 function Y(e) {
     let { settings: t, local: n } = e;
     if (!(0, A.Kh)() || !n || t.type !== C.yP.PRELOADED_USER_SETTINGS) return !1;
-    let r = m.Z.getChannelId();
+    let r = I.Z.getChannelId();
     return null != r && W(r);
 }
 function j(e) {

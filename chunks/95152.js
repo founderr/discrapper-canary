@@ -24,8 +24,8 @@ var r = n(735250),
     f = n(358085),
     h = n(998502),
     p = n(981631),
-    m = n(689938),
-    I = n(981429),
+    I = n(689938),
+    m = n(981429),
     T = n(224499);
 function g(e, t, n) {
     return (
@@ -83,7 +83,7 @@ function S(e) {
     return (0, r.jsx)('img', {
         ref: h,
         src: u,
-        className: s()(I.icon, { [I.image]: !d }),
+        className: s()(m.icon, { [m.image]: !d }),
         'aria-hidden': !0,
         alt: '',
         style: {
@@ -100,7 +100,7 @@ class A extends i.Component {
         var e;
         if (this.props.upload.item.platform !== u.ow.WEB) return null;
         if (this.props.upload.isImage) return (0, r.jsx)(S, { file: this.props.upload.item.file });
-        return (0, r.jsx)('div', { className: s()(I.icon, { [I[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0 }) });
+        return (0, r.jsx)('div', { className: s()(m.icon, { [m[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0 }) });
     }
 }
 class N extends i.Component {
@@ -125,29 +125,29 @@ class N extends i.Component {
         let { upload: e, transitionState: t, messageMaxLength: n, disableSpoiler: a } = this.props,
             { hasSpoiler: l } = this.state;
         return (0, r.jsxs)(o.ModalRoot, {
-            'aria-label': m.Z.Messages.ATTACH_FILES,
+            'aria-label': I.Z.Messages.ATTACH_FILES,
             size: o.ModalSize.DYNAMIC,
             transitionState: t,
-            className: s()(I.uploadModal),
+            className: s()(m.uploadModal),
             children: [
                 (0, r.jsxs)('div', {
-                    className: I.inner,
+                    className: m.inner,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: s()(I.file, { [I.expandable]: e.isImage }),
+                            className: s()(m.file, { [m.expandable]: e.isImage }),
                             children: [
                                 (0, r.jsx)(A, { upload: e }),
                                 (0, r.jsxs)('div', {
-                                    className: I.description,
+                                    className: m.description,
                                     children: [
                                         (0, r.jsx)('div', {
-                                            className: I.filename,
-                                            children: e.showLargeMessageDialog ? m.Z.Messages.LARGE_MESSAGE_UPLOAD_TITLE_MAX_LENGTH.format({ maxLength: n }) : e.filename
+                                            className: m.filename,
+                                            children: e.showLargeMessageDialog ? I.Z.Messages.LARGE_MESSAGE_UPLOAD_TITLE_MAX_LENGTH.format({ maxLength: n }) : e.filename
                                         }),
                                         e.showLargeMessageDialog
                                             ? (0, r.jsx)('div', {
-                                                  className: I.subtitle,
-                                                  children: m.Z.Messages.LARGE_MESSAGE_UPLOAD_SUBTITLE
+                                                  className: m.subtitle,
+                                                  children: I.Z.Messages.LARGE_MESSAGE_UPLOAD_SUBTITLE
                                               })
                                             : null
                                     ]
@@ -155,15 +155,15 @@ class N extends i.Component {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: I.comment,
+                            className: m.comment,
                             children: (0, r.jsxs)(i.Fragment, {
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: I.label,
-                                        children: (0, r.jsx)('span', { children: m.Z.Messages.UPLOAD_AREA_FILENAME })
+                                        className: m.label,
+                                        children: (0, r.jsx)('span', { children: I.Z.Messages.UPLOAD_AREA_FILENAME })
                                     }),
                                     (0, r.jsx)(o.TextInput, {
-                                        className: s()(I.channelTextAreaUpload, T.marginTop8),
+                                        className: s()(m.channelTextAreaUpload, T.marginTop8),
                                         value: this.state.filename,
                                         onChange: (e) => this.setState({ filename: e }),
                                         onKeyDown: (e) => {
@@ -174,12 +174,12 @@ class N extends i.Component {
                                         ? (0, r.jsxs)(i.Fragment, {
                                               children: [
                                                   (0, r.jsx)('div', {
-                                                      className: I.label,
-                                                      children: (0, r.jsx)('span', { children: m.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL })
+                                                      className: m.label,
+                                                      children: (0, r.jsx)('span', { children: I.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL })
                                                   }),
                                                   (0, r.jsx)(o.TextInput, {
-                                                      className: s()(I.channelTextAreaUpload, T.marginTop8),
-                                                      placeholder: m.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
+                                                      className: s()(m.channelTextAreaUpload, T.marginTop8),
+                                                      placeholder: I.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
                                                       value: this.state.description,
                                                       onChange: (e) => this.setState({ description: e }),
                                                       onKeyDown: (e) => {
@@ -196,7 +196,7 @@ class N extends i.Component {
                                             onChange: (e, t) => this.setState({ hasSpoiler: t }),
                                             children: (0, r.jsx)(o.Text, {
                                                 variant: 'text-sm/normal',
-                                                children: m.Z.Messages.SPOILER_MARK_SELECTED
+                                                children: I.Z.Messages.SPOILER_MARK_SELECTED
                                             })
                                         })
                                 ]
@@ -205,21 +205,21 @@ class N extends i.Component {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: I.footer,
+                    className: m.footer,
                     children: (0, r.jsxs)('div', {
-                        className: s()(I.hasSpoilers, I.footerRightAlign),
+                        className: s()(m.hasSpoilers, m.footerRightAlign),
                         children: [
                             (0, r.jsx)(o.Button, {
                                 type: 'button',
                                 look: o.Button.Looks.LINK,
                                 color: o.Button.Colors.PRIMARY,
                                 onClick: this.cancel,
-                                children: (0, r.jsx)('span', { children: m.Z.Messages.CANCEL })
+                                children: (0, r.jsx)('span', { children: I.Z.Messages.CANCEL })
                             }),
                             (0, r.jsx)(o.Button, {
                                 type: 'submit',
                                 onClick: this.handleSubmit,
-                                children: (0, r.jsx)('span', { children: m.Z.Messages.ATTACHMENT_MODAL_SAVE })
+                                children: (0, r.jsx)('span', { children: I.Z.Messages.ATTACHMENT_MODAL_SAVE })
                             })
                         ]
                     })

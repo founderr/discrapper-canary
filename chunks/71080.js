@@ -1,6 +1,6 @@
 n.d(t, {
     EQ: function () {
-        return m;
+        return I;
     },
     IG: function () {
         return T;
@@ -9,7 +9,7 @@ n.d(t, {
         return o;
     },
     kf: function () {
-        return I;
+        return m;
     },
     m$: function () {
         return l;
@@ -30,8 +30,8 @@ var r,
     h = n(981631),
     p = n(689938);
 ((r = o || (o = {}))[(r.EMPTY_STATE = 0)] = 'EMPTY_STATE'), (r[(r.ADMINISTRATOR = 1)] = 'ADMINISTRATOR'), (r[(r.ROLE = 2)] = 'ROLE'), (r[(r.OWNER = 3)] = 'OWNER'), (r[(r.MEMBER = 4)] = 'MEMBER'), (r[(r.USER = 5)] = 'USER'), (r[(r.GUILD = 6)] = 'GUILD'), ((i = l || (l = {}))[(i.ROLES = 0)] = 'ROLES'), (i[(i.MEMBERS = 1)] = 'MEMBERS'), (i[(i.USERS = 2)] = 'USERS'), (i[(i.GUILDS = 3)] = 'GUILDS');
-let m = 20,
-    I = 'channelPermissionSettingsAdvancedModeOn';
+let I = 20,
+    m = 'channelPermissionSettingsAdvancedModeOn';
 function T(e, t, n, r) {
     let i = e.type;
     return {

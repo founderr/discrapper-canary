@@ -21,8 +21,8 @@ var r = n(595182),
     f = n(198274),
     h = n(701597),
     p = n(46973),
-    m = n(829839),
-    I = n(916057),
+    I = n(829839),
+    m = n(916057),
     T = n(992774),
     g = n(158466),
     S = n(650886),
@@ -70,7 +70,7 @@ class C extends E.Z {
                 n.on(p.Sh.Stats, n.handleStats),
                     n.conn.setOnVideoCallback(n.handleVideo),
                     a((t) => {
-                        let r = (0, m.DY)(n.experimentFlags);
+                        let r = (0, I.DY)(n.experimentFlags);
                         (n.codecs = [
                             {
                                 type: 'audio',
@@ -78,7 +78,7 @@ class C extends E.Z {
                                 priority: 1,
                                 payloadType: 120
                             },
-                            ...(0, m.yQ)(t, r).map((e, t) => {
+                            ...(0, I.yQ)(t, r).map((e, t) => {
                                 let n = 101 + 2 * t;
                                 return {
                                     type: 'video',
@@ -138,7 +138,7 @@ class C extends E.Z {
                     this.logger.info('Connected with local address '.concat(o, ':').concat(l, ' and protocol: ').concat(s)),
                         r((r) => {
                             this.logger.info('Available codecs: '.concat(JSON.stringify(r)));
-                            let i = (0, m.DY)(this.experimentFlags);
+                            let i = (0, I.DY)(this.experimentFlags);
                             this.logger.info('Experimental codecs: '.concat(JSON.stringify(i))),
                                 (this.codecs = [
                                     {
@@ -147,7 +147,7 @@ class C extends E.Z {
                                         priority: 1,
                                         payloadType: 120
                                     },
-                                    ...(0, m.yQ)(r, i).map((e, t) => {
+                                    ...(0, I.yQ)(r, i).map((e, t) => {
                                         let n = 101 + 2 * t;
                                         return {
                                             type: 'video',
@@ -163,7 +163,7 @@ class C extends E.Z {
                                 this.logger.info('Audio codecs: '.concat(this.codecs.filter((e) => 'audio' === e.type).map((e) => e.name))),
                                 this.logger.info('Video codecs: '.concat(this.codecs.filter((e) => 'video' === e.type).map((e) => e.name + '[encode: ' + e.encode + ', decode: ' + e.decode + ']'))),
                                 t.getEncryptionModes((r) => {
-                                    var i, a, u, c, d, _, E, f, h, m, I, T;
+                                    var i, a, u, c, d, _, E, f, h, I, m, T;
                                     this.logger.info('Encryption modes: '.concat(r)),
                                         t.setTransportOptions(this.getConnectionTransportOptions()),
                                         t.setSelfMute(this.selfMute || this.context === N.Yn.STREAM),
@@ -185,7 +185,7 @@ class C extends E.Z {
                                         }),
                                         n.setNoInputThreshold(-100),
                                         n.setNoInputCallback(this.handleNoInput),
-                                        this.videoSupported && (t.setOnVideoCallback(this.handleVideo), null === (f = t.setOnFirstFrameCallback) || void 0 === f || f.call(t, this.handleFirstFrame), null === (h = t.setOnDesktopSourceEnded) || void 0 === h || h.call(t, this.handleDesktopSourceEnded), null === (m = t.setOnSoundshare) || void 0 === m || m.call(t, this.handleSoundshare), null === (I = t.setOnSoundshareEnded) || void 0 === I || I.call(t, this.handleSoundshareEnded), null === (T = t.setOnSoundshareFailed) || void 0 === T || T.call(t, this.handleSoundshareFailed)),
+                                        this.videoSupported && (t.setOnVideoCallback(this.handleVideo), null === (f = t.setOnFirstFrameCallback) || void 0 === f || f.call(t, this.handleFirstFrame), null === (h = t.setOnDesktopSourceEnded) || void 0 === h || h.call(t, this.handleDesktopSourceEnded), null === (I = t.setOnSoundshare) || void 0 === I || I.call(t, this.handleSoundshare), null === (m = t.setOnSoundshareEnded) || void 0 === m || m.call(t, this.handleSoundshareEnded), null === (T = t.setOnSoundshareFailed) || void 0 === T || T.call(t, this.handleSoundshareFailed)),
                                         null === (E = t.setOnMLSFailureCallback) || void 0 === E || E.call(t, this.handleMLSFailure),
                                         this.setConnectionState(N.$j.CONNECTED),
                                         this.emit(p.Sh.Connected, s, {
@@ -670,7 +670,7 @@ class C extends E.Z {
             case N.pM.VOICE_ACTIVITY:
                 return {
                     vadThreshold: this.vadThreshold,
-                    vadAutoThreshold: this.vadAutoThreshold ? I.a.VERY_AGGRESSIVE : I.a.DISABLED,
+                    vadAutoThreshold: this.vadAutoThreshold ? m.a.VERY_AGGRESSIVE : m.a.DISABLED,
                     vadUseKrisp: this.vadUseKrisp,
                     vadLeading: this.vadLeading,
                     vadTrailing: this.vadTrailing
@@ -738,7 +738,7 @@ class C extends E.Z {
         for (o of this.codecs) {
             if (o.name === e) continue;
             let n = {
-                name: (0, m.AQ)(o.name),
+                name: (0, I.AQ)(o.name),
                 type: null !== (a = null == o ? void 0 : o.payloadType) && void 0 !== a ? a : 0,
                 rtxType: null !== (s = null == o ? void 0 : o.rtxPayloadType) && void 0 !== s ? s : 0,
                 params: this.getCodecParams(o.name, !0)

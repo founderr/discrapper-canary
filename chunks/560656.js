@@ -57,7 +57,7 @@ var i = n(698091),
             t
         );
     })(h),
-    m = (function (e) {
+    I = (function (e) {
         function t(t, n) {
             var r;
             return (
@@ -99,7 +99,7 @@ var i = n(698091),
             t
         );
     })(p),
-    I = { current: null },
+    m = { current: null },
     T = (function (e) {
         function t(t) {
             var n;
@@ -139,7 +139,7 @@ var i = n(698091),
             }),
             (n._addToPayload = function (e) {
                 var t = this;
-                i.getFluidConfig(e) && I.current && I.current.dependencies.add(e);
+                i.getFluidConfig(e) && m.current && m.current.dependencies.add(e);
                 var n = f(e);
                 n &&
                     i.each(n, function (e) {
@@ -178,7 +178,7 @@ var i = n(698091),
                     void 0 === t && (t = e),
                     e
                         ? e.map(function (e, n) {
-                              return (i.isAnimatedString(e) ? m : p).create(e, t[n]);
+                              return (i.isAnimatedString(e) ? I : p).create(e, t[n]);
                           })
                         : []
                 );
@@ -196,11 +196,11 @@ var i = n(698091),
         return (
             (n.setValue = function (t, n) {
                 if (t) {
-                    if (n && ((I.current = n), t.style)) {
+                    if (n && ((m.current = n), t.style)) {
                         var r = n.host.createAnimatedStyle;
                         t = o(o({}, t), {}, { style: r(t.style) });
                     }
-                    e.prototype.setValue.call(this, t), (I.current = null);
+                    e.prototype.setValue.call(this, t), (m.current = null);
                 }
             }),
             (n.onParentChange = function (e) {
@@ -266,7 +266,7 @@ var i = n(698091),
     (t.AnimatedArray = g),
     (t.AnimatedObject = T),
     (t.AnimatedProps = S),
-    (t.AnimatedString = m),
+    (t.AnimatedString = I),
     (t.AnimatedValue = p),
     (t.createHost = function (e, t) {
         var n = void 0 === t ? {} : t,

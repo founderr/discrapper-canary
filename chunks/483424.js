@@ -16,8 +16,8 @@ var r = n(735250),
 function _(e) {
     let { user: t, currentUser: n, className: _, onClose: E } = e,
         { live: f, recent: h, stream: p } = (0, l.Z)(t.id),
-        [m] = f,
-        { mostRecentActivityEnabled: I } = (0, o.z)({ location: 'UserProfileFeaturedActivity' }),
+        [I] = f,
+        { mostRecentActivityEnabled: m } = (0, o.z)({ location: 'UserProfileFeaturedActivity' }),
         T = i.useMemo(() => h.find((e) => s.default.age(e.id) / a.Z.Millis.HOUR < 24), [h]);
     return null != p
         ? (0, r.jsx)(d.Z, {
@@ -27,15 +27,15 @@ function _(e) {
               className: _,
               onClose: E
           })
-        : null != m
+        : null != I
           ? (0, r.jsx)(u.Z, {
                 user: t,
                 currentUser: n,
-                activity: m,
+                activity: I,
                 className: _,
                 onClose: E
             })
-          : I && null != T
+          : m && null != T
             ? (0, r.jsx)(c.Z, {
                   user: t,
                   entry: T,

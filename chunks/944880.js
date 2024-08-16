@@ -13,8 +13,8 @@ var r = n(913527),
     f = n(106255),
     h = n(474936),
     p = n(735825);
-let m = null,
-    I = !1;
+let I = null,
+    m = !1;
 function T(e) {
     let t = o.Z.createFromServer(e.entitlement);
     (0, f._k)(t)
@@ -73,23 +73,23 @@ function g() {
         }
 }
 async function S() {
-    if (!I)
-        (I = !0),
+    if (!m)
+        (m = !0),
             await d.V(),
-            (I = !1),
+            (m = !1),
             a.Z.wait(() =>
                 (function () {
                     var e;
-                    if ((A(), E.Z.getFetchState() !== E.M.FETCHED || I)) return;
+                    if ((A(), E.Z.getFetchState() !== E.M.FETCHED || m)) return;
                     let t = null !== (e = E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_3_MONTHS);
                     if ((null == t ? void 0 : t.redeemable_at) == null) return;
                     let n = (null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
-                    null != n && n > 0 && (m = setTimeout(g, n));
+                    null != n && n > 0 && (I = setTimeout(g, n));
                 })()
             );
 }
 function A() {
-    clearTimeout(m), (m = null);
+    clearTimeout(I), (I = null);
 }
 function N() {
     A();

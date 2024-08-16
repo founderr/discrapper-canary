@@ -24,16 +24,16 @@ function m(e) {
             type: o.kG.CRUNCHYROLL,
             'aria-label': d.Z.Messages.CRUNCHYROLL
         },
-        x = t.useMemo(() => {
+        _ = t.useMemo(() => {
             if (null == l.extra.url) return;
             let e = u.Z.safeParseWithQuery(l.extra.url);
             if (null != e && null != e.protocol && null != e.hostname) return e;
         }, [l.extra.url]);
     return (
-        null != x &&
+        null != _ &&
             (n = () =>
                 (0, a.q)({
-                    href: u.Z.format(x),
+                    href: u.Z.format(_),
                     trusted: !0
                 })),
         {

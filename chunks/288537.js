@@ -24,10 +24,10 @@ function h(e) {
 function p(e, t) {
     a._tr_flush_block(e, e.block_start >= 0 ? e.block_start : -1, e.strstart - e.block_start, t), (e.block_start = e.strstart), h(e.strm);
 }
-function m(e, t) {
+function I(e, t) {
     e.pending_buf[e.pending++] = t;
 }
-function I(e, t) {
+function m(e, t) {
     (e.pending_buf[e.pending++] = (t >>> 8) & 255), (e.pending_buf[e.pending++] = 255 & t);
 }
 function T(e, t) {
@@ -187,7 +187,7 @@ function C(e, t, n, r, a, s) {
         if (!e || !e.state || t > 5 || t < 0) return e ? _(e, -2) : -2;
         if (((i = e.state), !e.output || (!e.input && 0 !== e.avail_in) || (666 === i.status && 4 !== t))) return _(e, 0 === e.avail_out ? -5 : -2);
         if (((i.strm = e), (n = i.last_flush), (i.last_flush = t), 42 === i.status)) {
-            if (2 === i.wrap) (e.adler = 0), m(i, 31), m(i, 139), m(i, 8), i.gzhead ? (m(i, (i.gzhead.text ? 1 : 0) + (i.gzhead.hcrc ? 2 : 0) + (i.gzhead.extra ? 4 : 0) + (i.gzhead.name ? 8 : 0) + (i.gzhead.comment ? 16 : 0)), m(i, 255 & i.gzhead.time), m(i, (i.gzhead.time >> 8) & 255), m(i, (i.gzhead.time >> 16) & 255), m(i, (i.gzhead.time >> 24) & 255), m(i, 9 === i.level ? 2 : i.strategy >= 2 || i.level < 2 ? 4 : 0), m(i, 255 & i.gzhead.os), i.gzhead.extra && i.gzhead.extra.length && (m(i, 255 & i.gzhead.extra.length), m(i, (i.gzhead.extra.length >> 8) & 255)), i.gzhead.hcrc && (e.adler = o(e.adler, i.pending_buf, i.pending, 0)), (i.gzindex = 0), (i.status = 69)) : (m(i, 0), m(i, 0), m(i, 0), m(i, 0), m(i, 0), m(i, 9 === i.level ? 2 : i.strategy >= 2 || i.level < 2 ? 4 : 0), m(i, 3), (i.status = 113));
+            if (2 === i.wrap) (e.adler = 0), I(i, 31), I(i, 139), I(i, 8), i.gzhead ? (I(i, (i.gzhead.text ? 1 : 0) + (i.gzhead.hcrc ? 2 : 0) + (i.gzhead.extra ? 4 : 0) + (i.gzhead.name ? 8 : 0) + (i.gzhead.comment ? 16 : 0)), I(i, 255 & i.gzhead.time), I(i, (i.gzhead.time >> 8) & 255), I(i, (i.gzhead.time >> 16) & 255), I(i, (i.gzhead.time >> 24) & 255), I(i, 9 === i.level ? 2 : i.strategy >= 2 || i.level < 2 ? 4 : 0), I(i, 255 & i.gzhead.os), i.gzhead.extra && i.gzhead.extra.length && (I(i, 255 & i.gzhead.extra.length), I(i, (i.gzhead.extra.length >> 8) & 255)), i.gzhead.hcrc && (e.adler = o(e.adler, i.pending_buf, i.pending, 0)), (i.gzindex = 0), (i.status = 69)) : (I(i, 0), I(i, 0), I(i, 0), I(i, 0), I(i, 0), I(i, 9 === i.level ? 2 : i.strategy >= 2 || i.level < 2 ? 4 : 0), I(i, 3), (i.status = 113));
             else {
                 var n,
                     i,
@@ -195,13 +195,13 @@ function C(e, t, n, r, a, s) {
                     l,
                     u = (8 + ((i.w_bits - 8) << 4)) << 8,
                     c = -1;
-                (u |= (c = i.strategy >= 2 || i.level < 2 ? 0 : i.level < 6 ? 1 : 6 === i.level ? 2 : 3) << 6), 0 !== i.strstart && (u |= 32), (u += 31 - (u % 31)), (i.status = 113), I(i, u), 0 !== i.strstart && (I(i, e.adler >>> 16), I(i, 65535 & e.adler)), (e.adler = 1);
+                (u |= (c = i.strategy >= 2 || i.level < 2 ? 0 : i.level < 6 ? 1 : 6 === i.level ? 2 : 3) << 6), 0 !== i.strstart && (u |= 32), (u += 31 - (u % 31)), (i.status = 113), m(i, u), 0 !== i.strstart && (m(i, e.adler >>> 16), m(i, 65535 & e.adler)), (e.adler = 1);
             }
         }
         if (69 === i.status) {
             if (i.gzhead.extra) {
                 for (s = i.pending; i.gzindex < (65535 & i.gzhead.extra.length) && (i.pending !== i.pending_buf_size || (i.gzhead.hcrc && i.pending > s && (e.adler = o(e.adler, i.pending_buf, i.pending - s, s)), h(e), (s = i.pending), i.pending !== i.pending_buf_size)); ) {
-                    m(i, 255 & i.gzhead.extra[i.gzindex]), i.gzindex++;
+                    I(i, 255 & i.gzhead.extra[i.gzindex]), i.gzindex++;
                 }
                 i.gzhead.hcrc && i.pending > s && (e.adler = o(e.adler, i.pending_buf, i.pending - s, s)), i.gzindex === i.gzhead.extra.length && ((i.gzindex = 0), (i.status = 73));
             } else i.status = 73;
@@ -214,7 +214,7 @@ function C(e, t, n, r, a, s) {
                         l = 1;
                         break;
                     }
-                    (l = i.gzindex < i.gzhead.name.length ? 255 & i.gzhead.name.charCodeAt(i.gzindex++) : 0), m(i, l);
+                    (l = i.gzindex < i.gzhead.name.length ? 255 & i.gzhead.name.charCodeAt(i.gzindex++) : 0), I(i, l);
                 } while (0 !== l);
                 i.gzhead.hcrc && i.pending > s && (e.adler = o(e.adler, i.pending_buf, i.pending - s, s)), 0 === l && ((i.gzindex = 0), (i.status = 91));
             } else i.status = 91;
@@ -227,12 +227,12 @@ function C(e, t, n, r, a, s) {
                         l = 1;
                         break;
                     }
-                    (l = i.gzindex < i.gzhead.comment.length ? 255 & i.gzhead.comment.charCodeAt(i.gzindex++) : 0), m(i, l);
+                    (l = i.gzindex < i.gzhead.comment.length ? 255 & i.gzhead.comment.charCodeAt(i.gzindex++) : 0), I(i, l);
                 } while (0 !== l);
                 i.gzhead.hcrc && i.pending > s && (e.adler = o(e.adler, i.pending_buf, i.pending - s, s)), 0 === l && (i.status = 103);
             } else i.status = 103;
         }
-        if ((103 === i.status && (i.gzhead.hcrc ? (i.pending + 2 > i.pending_buf_size && h(e), i.pending + 2 <= i.pending_buf_size && (m(i, 255 & e.adler), m(i, (e.adler >> 8) & 255), (e.adler = 0), (i.status = 113))) : (i.status = 113)), 0 !== i.pending)) {
+        if ((103 === i.status && (i.gzhead.hcrc ? (i.pending + 2 > i.pending_buf_size && h(e), i.pending + 2 <= i.pending_buf_size && (I(i, 255 & e.adler), I(i, (e.adler >> 8) & 255), (e.adler = 0), (i.status = 113))) : (i.status = 113)), 0 !== i.pending)) {
             if ((h(e), 0 === e.avail_out)) return (i.last_flush = -1), 0;
         } else if (0 === e.avail_in && E(t) <= E(n) && 4 !== t) return _(e, -5);
         if (666 === i.status && 0 !== e.avail_in) return _(e, -5);
@@ -272,7 +272,7 @@ function C(e, t, n, r, a, s) {
             if (((3 === d || 4 === d) && (i.status = 666), 1 === d || 3 === d)) return 0 === e.avail_out && (i.last_flush = -1), 0;
             if (2 === d && (1 === t ? a._tr_align(i) : 5 !== t && (a._tr_stored_block(i, 0, 0, !1), 3 === t && (f(i.head), 0 === i.lookahead && ((i.strstart = 0), (i.block_start = 0), (i.insert = 0)))), h(e), 0 === e.avail_out)) return (i.last_flush = -1), 0;
         }
-        return 4 !== t ? 0 : i.wrap <= 0 ? 1 : (2 === i.wrap ? (m(i, 255 & e.adler), m(i, (e.adler >> 8) & 255), m(i, (e.adler >> 16) & 255), m(i, (e.adler >> 24) & 255), m(i, 255 & e.total_in), m(i, (e.total_in >> 8) & 255), m(i, (e.total_in >> 16) & 255), m(i, (e.total_in >> 24) & 255)) : (I(i, e.adler >>> 16), I(i, 65535 & e.adler)), h(e), i.wrap > 0 && (i.wrap = -i.wrap), 0 !== i.pending ? 0 : 1);
+        return 4 !== t ? 0 : i.wrap <= 0 ? 1 : (2 === i.wrap ? (I(i, 255 & e.adler), I(i, (e.adler >> 8) & 255), I(i, (e.adler >> 16) & 255), I(i, (e.adler >> 24) & 255), I(i, 255 & e.total_in), I(i, (e.total_in >> 8) & 255), I(i, (e.total_in >> 16) & 255), I(i, (e.total_in >> 24) & 255)) : (m(i, e.adler >>> 16), m(i, 65535 & e.adler)), h(e), i.wrap > 0 && (i.wrap = -i.wrap), 0 !== i.pending ? 0 : 1);
     }),
     (t.deflateEnd = function (e) {
         var t;

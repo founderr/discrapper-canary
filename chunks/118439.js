@@ -126,27 +126,27 @@ t.default = function (e, t) {
                 (f = r), (p = n), (f.prototype = Object.create(p.prototype)), (f.prototype.constructor = f), o(f, p);
                 var f,
                     p,
-                    m = r.prototype;
+                    I = r.prototype;
                 return (
-                    (m.getInstance = function () {
+                    (I.getInstance = function () {
                         if (e.prototype && !e.prototype.isReactComponent) return this;
                         var t = this.instanceRef;
                         return t.getInstance ? t.getInstance() : t;
                     }),
-                    (m.componentDidMount = function () {
+                    (I.componentDidMount = function () {
                         if ('undefined' != typeof document && !!document.createElement) {
                             var e = this.getInstance();
                             if (t && 'function' == typeof t.handleClickOutside && ((this.__clickOutsideHandlerProp = t.handleClickOutside(e)), 'function' != typeof this.__clickOutsideHandlerProp)) throw Error('WrappedComponent: ' + E + ' lacks a function for processing outside click events specified by the handleClickOutside config option.');
                             (this.componentNode = this.__getComponentNode()), !this.props.disableOnClickOutside && this.enableOnClickOutside();
                         }
                     }),
-                    (m.componentDidUpdate = function () {
+                    (I.componentDidUpdate = function () {
                         this.componentNode = this.__getComponentNode();
                     }),
-                    (m.componentWillUnmount = function () {
+                    (I.componentWillUnmount = function () {
                         this.disableOnClickOutside();
                     }),
-                    (m.render = function () {
+                    (I.render = function () {
                         var t = this.props;
                         t.excludeScrollbar;
                         var n = (function (e, t) {

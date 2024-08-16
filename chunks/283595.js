@@ -13,10 +13,10 @@ var r,
     f = n(780570),
     h = n(314897),
     p = n(981631);
-let m = 'LibraryApplicationStore';
-function I() {
+let I = 'LibraryApplicationStore';
+function m() {
     var e;
-    return null !== (e = c.K.get(m)) && void 0 !== e ? e : {};
+    return null !== (e = c.K.get(I)) && void 0 !== e ? e : {};
 }
 let T = !1,
     g = {},
@@ -26,14 +26,14 @@ let T = !1,
     v = {},
     O = !1;
 function R() {
-    c.K.set(m, {
-        ...I(),
+    c.K.set(I, {
+        ...m(),
         activeLaunchOptionIds: v
     });
 }
 function C() {
-    c.K.set(m, {
-        ...I(),
+    c.K.set(I, {
+        ...m(),
         activeLibraryApplicationBranchIds: N
     });
 }
@@ -63,7 +63,7 @@ function b() {
 class M extends (r = u.ZP.Store) {
     initialize() {
         this.waitFor(h.default);
-        let e = c.K.get(m);
+        let e = c.K.get(I);
         null != e && (null == e.activeLaunchOptionIds ? R() : (v = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (N = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {

@@ -17,8 +17,8 @@ var r = n(735250),
     f = n(927723),
     h = n(124072),
     p = n(184301),
-    m = n(103575),
-    I = n(592125),
+    I = n(103575),
+    m = n(592125),
     T = n(271383),
     g = n(430824),
     S = n(699516),
@@ -56,7 +56,7 @@ function C(e) {
     let { className: t, userId: i, channelId: a, parsedUserId: f, content: C, inlinePreview: y = !1, viewingChannelId: D } = e,
         { analyticsLocations: L } = (0, _.ZP)(d.Z.USER_MENTION),
         b = (0, l.e7)([A.default], () => A.default.getUser(i)),
-        M = (0, l.e7)([I.Z], () => I.Z.getChannel(a)),
+        M = (0, l.e7)([m.Z], () => m.Z.getChannel(a)),
         P = null != M ? M.getGuildId() : null,
         U =
             y || null == b || null == P || null == a
@@ -76,7 +76,7 @@ function C(e) {
                           });
                   },
         w = v.ZP.useName(b),
-        x = (0, l.e7)([I.Z, T.ZP, S.Z], () => N.ZP.getNickname(P, a, b)),
+        x = (0, l.e7)([m.Z, T.ZP, S.Z], () => N.ZP.getNickname(P, a, b)),
         G = g.Z.getGuild(P),
         k = (0, E.Ib)(G, M) && i === O.fL ? O.jM : null;
     if (null == b)
@@ -111,7 +111,7 @@ function C(e) {
                                 }),
                   renderPopout: (e) => (
                       s()(null != b, 'Unexpected missing user'),
-                      (0, r.jsx)(m.Z, {
+                      (0, r.jsx)(I.Z, {
                           location: 'UserMention',
                           userId: b.id,
                           guildId: null != P ? P : void 0,

@@ -13,8 +13,8 @@ var r,
     f = n(710845),
     h = n(258609),
     p = n(569545),
-    m = n(199902),
-    I = n(314897),
+    I = n(199902),
+    m = n(314897),
     T = n(523746),
     g = n(592125),
     S = n(944486),
@@ -54,14 +54,14 @@ function Z(e) {
                       n === y.WtW.VOICE ? (delete w[e], delete x[e]) : (w[e] = n);
                   })(n),
                   (function (e) {
-                      let t = I.default.getId(),
+                      let t = m.default.getId(),
                           n = H(e);
                       if (0 === n.size() || S.Z.getVoiceChannelId() !== e) {
                           z(e, null);
                           return;
                       }
                       let r = C.dF.NONE,
-                          i = n.toArray(R.sI.STREAM).find((e) => e.type === C.fO.STREAM && m.Z.getActiveStreamForStreamKey(e.id));
+                          i = n.toArray(R.sI.STREAM).find((e) => e.type === C.fO.STREAM && I.Z.getActiveStreamForStreamKey(e.id));
                       if (null != i) l()(i.type === C.fO.STREAM, 'Impossible condition'), (r = i.id);
                       else if (1 === n.size()) r = t;
                       else if (1 === n.size(R.sI.VIDEO)) {
@@ -75,7 +75,7 @@ function Z(e) {
                       let [s] = j(e);
                       if (s !== C.dF.AUTO && s !== C.dF.NONE) {
                           let e = n.getParticipant(s);
-                          (null == e || (e.type === C.fO.STREAM && null == m.Z.getActiveStreamForStreamKey(e.id))) && (s = C.dF.NONE);
+                          (null == e || (e.type === C.fO.STREAM && null == I.Z.getActiveStreamForStreamKey(e.id))) && (s = C.dF.NONE);
                       }
                       z(e, [s, r]);
                   })(n),
@@ -137,7 +137,7 @@ function X() {
             let n = S.Z.getVoiceChannelId();
             null != n && !e.includes(n) && e.push(n);
             let r = h.Z.getRemoteSessionId(),
-                i = O.Z.getVoiceStateForSession(I.default.getId(), r);
+                i = O.Z.getVoiceStateForSession(m.default.getId(), r);
             (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), c().difference(b, e).forEach(Q);
             let a = c().difference(e, b);
             return (b = e), a;
@@ -176,7 +176,7 @@ function ei(e) {
 }
 class ea extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, I.default, T.Z, g.Z, E.ZP, S.Z, A.Z, N.default, v.Z, O.Z), this.syncWith([E.ZP], $), this.syncWith([h.Z], X);
+        this.waitFor(I.Z, m.default, T.Z, g.Z, E.ZP, S.Z, A.Z, N.default, v.Z, O.Z), this.syncWith([E.ZP], $), this.syncWith([h.Z], X);
     }
     getParticipantsVersion(e) {
         return H(e).version;
@@ -330,7 +330,7 @@ class ea extends (r = d.ZP.Store) {
             if ((z(t, [null != n ? n : C.dF.NONE, i]), (0, p.DB)(n))) {
                 try {
                     let { ownerId: e } = (0, p.my)(n);
-                    e === I.default.getId() && Y(e, [t]);
+                    e === m.default.getId() && Y(e, [t]);
                 } catch (e) {
                     D.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
                 }
@@ -362,7 +362,7 @@ class ea extends (r = d.ZP.Store) {
         },
         STREAM_UPDATE_SELF_HIDDEN: function (e) {
             let { channelId: t, selfStreamHidden: n } = e,
-                r = I.default.getId();
+                r = m.default.getId();
             if (n) {
                 let [e] = j(t);
                 (0, p.DB)(e) && e.includes(r) && z(t, null);

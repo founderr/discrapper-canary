@@ -1,6 +1,6 @@
 n.d(t, {
     Hf: function () {
-        return m;
+        return I;
     },
     JT: function () {
         return T;
@@ -21,7 +21,7 @@ n.d(t, {
         return g;
     },
     wi: function () {
-        return I;
+        return m;
     }
 }),
     n(47120),
@@ -85,12 +85,12 @@ function p(e, t, n) {
         sections: r.descriptors
     };
 }
-function m(e) {
+function I(e) {
     let t = l.ZP.getUserState(),
         n = l.ZP.getContextState(e);
     return [null == t ? void 0 : t.result, null == n ? void 0 : n.result];
 }
-function I(e, t, n) {
+function m(e, t, n) {
     let s = (0, i.e7)([a.Z], () => a.Z.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
         {
             descriptors: u,
@@ -102,21 +102,21 @@ function I(e, t, n) {
             allowFetch: !0
         }),
         [h, p] = r.useState(null),
-        m = r.useRef(!1);
-    m.current = f;
-    let I = r.useMemo(() => {
+        I = r.useRef(!1);
+    I.current = f;
+    let m = r.useMemo(() => {
         var e;
         return N(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
     }, [t.commandTypes, n.placeholderCount]);
     return r.useMemo(() => {
         let e = {
-            loading: m,
+            loading: I,
             commands: c,
             activeSections: u,
             commandsByActiveSection: d,
             filteredSectionId: h,
             hasMoreAfter: !1,
-            placeholders: f ? I : [],
+            placeholders: f ? m : [],
             sectionDescriptors: u,
             filterSection: (e) => {
                 p(e);
@@ -133,7 +133,7 @@ function I(e, t, n) {
                 e.commandsByActiveSection = [
                     {
                         section: t.section,
-                        data: [...t.data, ...I]
+                        data: [...t.data, ...m]
                     },
                     ...d.slice(1)
                 ];
@@ -143,14 +143,14 @@ function I(e, t, n) {
                     (e.commandsByActiveSection = [
                         {
                             section: t,
-                            data: I
+                            data: m
                         }
                     ]);
             }
-            e.commands = [...c, ...I];
+            e.commands = [...c, ...m];
         }
         return e;
-    }, [c, u, h, d, f, I]);
+    }, [c, u, h, d, f, m]);
 }
 function T(e, t, n) {
     var r;

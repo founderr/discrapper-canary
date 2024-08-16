@@ -35,7 +35,7 @@ function C(e) {
         };
     switch (n.content_type) {
         case u.s.TOP_ARTIST:
-            return (0, t.jsx)(_, {
+            return (0, t.jsx)(T, {
                 entry: n,
                 ...r
             });
@@ -45,7 +45,7 @@ function C(e) {
                 ...r
             });
         case u.s.PLAYED_GAME:
-            return (0, t.jsx)(T, {
+            return (0, t.jsx)(x, {
                 entry: n,
                 ...r
             });
@@ -60,7 +60,7 @@ function C(e) {
                 ...r
             });
         case u.s.LAUNCHED_ACTIVITY:
-            return (0, t.jsx)(x, {
+            return (0, t.jsx)(_, {
                 entry: n,
                 ...r
             });
@@ -75,7 +75,7 @@ function h(e) {
         children: (0, t.jsx)(C, { ...l })
     });
 }
-function x(e) {
+function _(e) {
     let { entry: n, children: l, ...r } = e,
         i = (0, o.Z)({
             entry: n,
@@ -89,7 +89,7 @@ function x(e) {
         children: l
     });
 }
-function _(e) {
+function T(e) {
     let { entry: n, children: l, ...r } = e,
         i = (0, f.Z)({
             entry: n,
@@ -117,7 +117,7 @@ function N(e) {
         children: l
     });
 }
-function T(e) {
+function x(e) {
     let { entry: n, children: l, ...r } = e,
         i = (0, d.Z)({
             entry: n,

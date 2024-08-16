@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return m;
     }
 }),
     n(653041),
@@ -21,8 +21,8 @@ var r = n(392711),
     f = n(823379),
     h = n(789662),
     p = n(981631),
-    m = n(526761);
-function I(e, t, n, r, E) {
+    I = n(526761);
+function m(e, t, n, r, E) {
     if (t !== h.AR.UseGreyDot)
         return [
             {
@@ -32,10 +32,10 @@ function I(e, t, n, r, E) {
                 }
             }
         ];
-    let m = [],
-        I = Object.values(o.Z.getMutableGuildChannelsForGuild(e.id)).filter((e) => c.Z.can(p.Plq.VIEW_CHANNEL, e));
+    let I = [],
+        m = Object.values(o.Z.getMutableGuildChannelsForGuild(e.id)).filter((e) => c.Z.can(p.Plq.VIEW_CHANNEL, e));
     return (
-        m.push(
+        I.push(
             ...(function (e, t) {
                 if (!(d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id))) return [];
                 let n = [
@@ -62,9 +62,9 @@ function I(e, t, n, r, E) {
                         }),
                     n
                 );
-            })(e, I)
+            })(e, m)
         ),
-        m.push(
+        I.push(
             (function (e) {
                 if (d.ZP.getMessageNotifications(e.id) === p.bL.ALL_MESSAGES)
                     return {
@@ -75,7 +75,7 @@ function I(e, t, n, r, E) {
                     };
             })(e)
         ),
-        m.push(
+        I.push(
             (function () {
                 return {
                     label: 'Setting the guild to a grey dot unread',
@@ -85,7 +85,7 @@ function I(e, t, n, r, E) {
                 };
             })()
         ),
-        m.push(
+        I.push(
             ...(function (e) {
                 let t = [],
                     [n, r] = i()(e)
@@ -108,9 +108,9 @@ function I(e, t, n, r, E) {
                         }),
                     t
                 );
-            })(I)
+            })(m)
         ),
-        m.push(
+        I.push(
             ...(function (e) {
                 let t = [],
                     n = [];
@@ -130,9 +130,9 @@ function I(e, t, n, r, E) {
                         }),
                     t
                 );
-            })(I)
+            })(m)
         ),
-        m.push(
+        I.push(
             ...(function (e) {
                 let t = [],
                     n = [],
@@ -161,10 +161,10 @@ function I(e, t, n, r, E) {
                         }),
                     t
                 );
-            })(I)
+            })(m)
         ),
         l.Z.hasConsented(p.pjP.PERSONALIZATION)
-            ? m.push(
+            ? I.push(
                   ...(function (e, t, n, r, a) {
                       if (d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id)) return [];
                       let s = new Set(t.map((e) => e.id)),
@@ -208,9 +208,9 @@ function I(e, t, n, r, E) {
                               }),
                           f
                       );
-                  })(e, I, n, r, E)
+                  })(e, m, n, r, E)
               )
-            : m.push(
+            : I.push(
                   ...(function (e, t) {
                       if (d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id)) return [];
                       let n = [],
@@ -234,14 +234,14 @@ function I(e, t, n, r, E) {
                               }),
                           n
                       );
-                  })(e, I)
+                  })(e, m)
               ),
-        m.filter(f.lm)
+        I.filter(f.lm)
     );
 }
 function T(e, t, n) {
     var r, i;
-    (e.flags = (0, E.mB)(null !== (i = null !== (r = e.flags) && void 0 !== r ? r : t.flags) && void 0 !== i ? i : 0, m.vc.UNREADS_ALL_MESSAGES, n)), (e.flags = (0, E.mB)(e.flags, m.vc.UNREADS_ONLY_MENTIONS, !n));
+    (e.flags = (0, E.mB)(null !== (i = null !== (r = e.flags) && void 0 !== r ? r : t.flags) && void 0 !== i ? i : 0, I.vc.UNREADS_ALL_MESSAGES, n)), (e.flags = (0, E.mB)(e.flags, I.vc.UNREADS_ONLY_MENTIONS, !n));
 }
 function g(e, t, n, r) {
     var a, s, o, l;
@@ -251,6 +251,6 @@ function g(e, t, n, r) {
 function S(e, t, n, r) {
     g(e, t, n, (e, t) => {
         var n, i;
-        (e.flags = (0, E.mB)(null !== (i = null !== (n = e.flags) && void 0 !== n ? n : t.flags) && void 0 !== i ? i : 0, m.ic.UNREADS_ALL_MESSAGES, r)), (e.flags = (0, E.mB)(e.flags, m.ic.UNREADS_ONLY_MENTIONS, !r));
+        (e.flags = (0, E.mB)(null !== (i = null !== (n = e.flags) && void 0 !== n ? n : t.flags) && void 0 !== i ? i : 0, I.ic.UNREADS_ALL_MESSAGES, r)), (e.flags = (0, E.mB)(e.flags, I.ic.UNREADS_ONLY_MENTIONS, !r));
     });
 }

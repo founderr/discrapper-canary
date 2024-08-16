@@ -74,8 +74,8 @@ e.exports = function (e) {
             };
         },
         p = h(/:/, 'operator'),
-        m = h(/\bof\b/, 'keyword'),
-        I = {
+        I = h(/\bof\b/, 'keyword'),
+        m = {
             begin: [/(^|\s+)/, /type/, /\s+/, /[a-zA-Z_](\w|')*/],
             beginScope: {
                 2: 'keyword',
@@ -175,7 +175,7 @@ e.exports = function (e) {
                 },
                 l,
                 u,
-                I,
+                m,
                 {
                     scope: 'meta',
                     begin: /\[</,
@@ -183,7 +183,7 @@ e.exports = function (e) {
                     relevance: 2,
                     contains: [u, v, N, A, y, S]
                 },
-                m,
+                I,
                 p,
                 T,
                 g,

@@ -13,13 +13,13 @@ var r,
 let f = {},
     h = new d.ZP(),
     p = new Set();
-function m(e) {
+function I(e) {
     f = l()(f)
         .reject((t) => t.guildId === e)
         .keyBy('threadId')
         .value();
 }
-function I(e) {
+function m(e) {
     var t;
     null === (t = e.threads) || void 0 === t || t.forEach(T);
 }
@@ -103,7 +103,7 @@ let N = new A(c.Z, {
             (p = new Set()),
             (f = {}),
             e.guilds.forEach((e) => {
-                I(e);
+                m(e);
             });
     },
     OVERLAY_INITIALIZE: function (e) {
@@ -118,11 +118,11 @@ let N = new A(c.Z, {
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        m(t.id), I(t);
+        I(t.id), m(t);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        m(t.id);
+        I(t.id);
     },
     THREAD_CREATE: function (e) {
         let { channel: t } = e;

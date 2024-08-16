@@ -13,8 +13,8 @@ var r,
     f = n(427679),
     h = n(569471),
     p = n(195663),
-    m = n(131704),
-    I = n(601964),
+    I = n(131704),
+    m = n(601964),
     T = n(598077),
     g = n(386438),
     S = n(700785),
@@ -129,13 +129,13 @@ function j(e) {
 }
 function W(e, t, n, r) {
     let i = S.Hn;
-    if (e instanceof m.Sf) {
-        if (m.Ec.has(e.type)) {
+    if (e instanceof I.Sf) {
+        if (I.Ec.has(e.type)) {
             let i = A.Z.getChannel(e.parent_id);
             return null == i ? S.Hn : S.Og(e, W(i, t, n, r), h.Z.hasJoined(e.id));
         }
         i = w(e.id);
-    } else e instanceof I.ZP && (i = P(e.id));
+    } else e instanceof m.ZP && (i = P(e.id));
     return void 0 !== t || void 0 !== n || void 0 !== r
         ? S.uB({
               user: R.default.getCurrentUser(),
@@ -152,7 +152,7 @@ class K extends (r = c.ZP.Store) {
         this.waitFor(R.default, O.Z, A.Z, v.ZP, N.ZP, h.Z, f.Z, _.Z);
     }
     getChannelPermissions(e) {
-        return m.Ec.has(e.type) ? U(e.id) : w(e.id);
+        return I.Ec.has(e.type) ? U(e.id) : w(e.id);
     }
     getGuildPermissions(e) {
         return P(e.id);

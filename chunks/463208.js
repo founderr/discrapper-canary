@@ -1,9 +1,9 @@
 n.d(t, {
     o: function () {
-        return I;
+        return m;
     },
     p: function () {
-        return m;
+        return I;
     }
 });
 var r,
@@ -35,7 +35,7 @@ let p = {
     DEFAULT: f.inputDefault,
     MINI: f.inputMini
 };
-function m(e) {
+function I(e) {
     let { error: t } = e,
         n = (0, d.useTransition)(t, {
             config: {
@@ -89,7 +89,7 @@ function m(e) {
         })
     });
 }
-class I extends (r = a.Component) {
+class m extends (r = a.Component) {
     render() {
         var e, t;
         let { className: n, inputClassName: r, inputPrefix: a, disabled: s, size: l, editable: c, inputRef: d, prefixElement: _, focusProps: E, ...h } = this.props,
@@ -122,7 +122,7 @@ class I extends (r = a.Component) {
                         ref: d
                     })
                 }),
-                (0, i.jsx)(m, { error: this.getError() })
+                (0, i.jsx)(I, { error: this.getError() })
             ]
         });
     }
@@ -161,9 +161,9 @@ class I extends (r = a.Component) {
             (this.state = { dirty: null !== (t = e.defaultDirty) && void 0 !== t && t });
     }
 }
-h(I, 'Sizes', p),
-    h(I, 'contextType', c.q3),
-    h(I, 'defaultProps', {
+h(m, 'Sizes', p),
+    h(m, 'contextType', c.q3),
+    h(m, 'defaultProps', {
         name: '',
         size: p.DEFAULT,
         disabled: !1,

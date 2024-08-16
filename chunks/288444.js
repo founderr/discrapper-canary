@@ -34,7 +34,7 @@ function p() {
     let e = c.Z.getCurrentClientVoiceChannelId(null);
     if (null != e) i.Z.sendBotMessage(e, _.Z.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({ number: 3 })), a.default.selectVoiceChannel(null);
 }
-class m extends s.Z {
+class I extends s.Z {
     constructor(...e) {
         super(...e),
             E(this, 'idleTimeout', new r.V7()),
@@ -58,4 +58,4 @@ class m extends s.Z {
             });
     }
 }
-t.Z = new m();
+t.Z = new I();

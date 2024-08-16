@@ -1,6 +1,6 @@
 n.d(t, {
     Hs: function () {
-        return m;
+        return I;
     },
     Vh: function () {
         return g;
@@ -30,24 +30,24 @@ function p(e, t) {
     let E;
     let h = S((E = e instanceof u.Sf && e.isThread() ? (null !== (i = d.Z.getChannel(e.parent_id)) && void 0 !== i ? i : e) : e)),
         p = l.xM.getSetting(),
-        m = c.default.getId(),
+        I = c.default.getId(),
         g = null !== (a = null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== a && a,
-        A = null != h && null !== (s = null === (r = _.ZP.getMember(h, m)) || void 0 === r ? void 0 : r.roles) && void 0 !== s ? s : [],
+        A = null != h && null !== (s = null === (r = _.ZP.getMember(h, I)) || void 0 === r ? void 0 : r.roles) && void 0 !== s ? s : [],
         N = o.Z.isViewingRoles(h),
         { computedPermissions: v, hasBaseAccessPermissions: O, hasSendMessagesPermission: R } = T(E, e instanceof u.Sf && e.isThread());
     return {
         context: E,
-        userId: m,
+        userId: I,
         roleIds: A,
         isImpersonating: N,
         commandTypes: t,
         computedPermissions: v,
         hasBaseAccessPermissions: O,
         hasSendMessagesPermission: R,
-        allowNsfw: I(E, g, p)
+        allowNsfw: m(E, g, p)
     };
 }
-function m(e, t) {
+function I(e, t) {
     let n = r.useMemo(() => {
             if (e instanceof u.Sf && e.isThread()) {
                 var t;
@@ -66,7 +66,7 @@ function m(e, t) {
             var e, t;
             return null != i && null !== (t = null === (e = _.ZP.getMember(i, E)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : [];
         }),
-        m = (0, a.e7)([o.Z], () => o.Z.isViewingRoles(i));
+        I = (0, a.e7)([o.Z], () => o.Z.isViewingRoles(i));
     return r.useMemo(() => {
         let { computedPermissions: r, hasBaseAccessPermissions: i, hasSendMessagesPermission: a } = T(n, e instanceof u.Sf && e.isThread());
         return {
@@ -74,15 +74,15 @@ function m(e, t) {
             userId: E,
             roleIds: p,
             commandTypes: t,
-            isImpersonating: m,
+            isImpersonating: I,
             computedPermissions: r,
             hasBaseAccessPermissions: i,
             hasSendMessagesPermission: a,
-            allowNsfw: I(n, h, s)
+            allowNsfw: m(n, h, s)
         };
-    }, [t, n, m, p, E, h, s, e]);
+    }, [t, n, I, p, E, h, s, e]);
 }
-function I(e, t, n) {
+function m(e, t, n) {
     return !!t && (!(e instanceof u.Sf) || (null != e.guild_id ? e.nsfw : n));
 }
 function T(e, t) {

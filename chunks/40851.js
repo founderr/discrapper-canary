@@ -1,6 +1,6 @@
 n.d(t, {
     Aq: function () {
-        return m;
+        return I;
     },
     GB: function () {
         return f;
@@ -82,7 +82,7 @@ function h(e) {
 function p() {
     return i.useContext(c).appContext;
 }
-function m() {
+function I() {
     return i.useContext(c).windowDispatch;
 }
 t.ZP = c;

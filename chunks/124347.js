@@ -21,8 +21,8 @@ var r,
     f = n(134432),
     h = n(797614),
     p = n(740492),
-    m = n(866960),
-    I = n(626135),
+    I = n(866960),
+    m = n(626135),
     T = n(768581),
     g = n(956664),
     S = n(981631),
@@ -119,12 +119,12 @@ class R extends (i = o.Component) {
         null != i && this._cancellers.add(i);
     }
     render() {
-        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: m, minHeight: I, maxWidth: T, maxHeight: g, onClick: A, renderAccessory: N, tabIndex: v, limitResponsiveWidth: O, useFullWidth: C, placeholder: y, placeholderVersion: D, dataSafeSrc: L } = this.props,
+        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: I, minHeight: m, maxWidth: T, maxHeight: g, onClick: A, renderAccessory: N, tabIndex: v, limitResponsiveWidth: O, useFullWidth: C, placeholder: y, placeholderVersion: D, dataSafeSrc: L } = this.props,
             { readyState: b, hasMouseOver: M, hasFocus: P } = this.state,
             U = null != n,
             w = this.getRatio(),
-            x = (0, l.clamp)(Math.round(h * w), null != m ? m : 0, null != T ? T : 1 / 0),
-            G = (0, l.clamp)(Math.round(p * w), null != I ? I : 0, null != g ? g : 1 / 0),
+            x = (0, l.clamp)(Math.round(h * w), null != I ? I : 0, null != T ? T : 1 / 0),
+            G = (0, l.clamp)(Math.round(p * w), null != m ? m : 0, null != g ? g : 1 / 0),
             k = {
                 alt: e,
                 readyState: b,
@@ -132,8 +132,8 @@ class R extends (i = o.Component) {
                 zoomable: U,
                 className: u,
                 imageClassName: c,
-                minWidth: m,
-                minHeight: I,
+                minWidth: I,
+                minHeight: m,
                 mediaLayoutType: this.getType(),
                 limitResponsiveWidth: O,
                 useFullWidth: C,
@@ -194,7 +194,7 @@ class R extends (i = o.Component) {
             s = null != a ? Number(a) : null,
             o = Date.now() - this.startLoadingTime,
             { format: l, quality: c } = this.getFormatQuality();
-        I.default.track(S.rMx.IMAGE_LOADING_COMPLETED, {
+        m.default.track(S.rMx.IMAGE_LOADING_COMPLETED, {
             duration_ms: o,
             requested_height: t.height,
             requested_width: t.width,
@@ -210,9 +210,9 @@ class R extends (i = o.Component) {
             low_quality_image_mode: p.ZP.dataSavingMode,
             trigger: n,
             size: s,
-            connection_type: m.Z.getType(),
-            effective_connection_speed: m.Z.getEffectiveConnectionSpeed(),
-            service_provider: m.Z.getServiceProvider()
+            connection_type: I.Z.getType(),
+            effective_connection_speed: I.Z.getEffectiveConnectionSpeed(),
+            service_provider: I.Z.getServiceProvider()
         });
     }
     constructor(e) {

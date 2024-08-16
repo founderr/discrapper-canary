@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return I;
     }
 }),
     n(47120),
@@ -33,7 +33,7 @@ function h(e, t, n) {
 function p(e) {
     return (null != e ? e : f.Qx) / f.Qx;
 }
-class m extends s.Z {
+class I extends s.Z {
     destroy() {
         this.eachConnection((e) => e.destroy()), this.emit(o.aB.Destroy), this.removeAllListeners();
     }
@@ -257,9 +257,9 @@ class m extends s.Z {
                     width: i <= 480 ? (i / 3) * 4 : (i / 9) * 16,
                     height: i
                 });
-        let [p, m] = null != a ? a.split(':') : ['', ''];
+        let [p, I] = null != a ? a.split(':') : ['', ''];
         n.setClipsSource({
-            id: m,
+            id: I,
             soundshareId: null != s ? s : 0
         });
     }
@@ -617,9 +617,9 @@ class m extends s.Z {
                   })
                 : null != (0, d.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? f.iA.LEGACY : f.iA.STANDARD),
             null != r.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
-            this.getDebugLogging() && !m.installedLogHooks)
+            this.getDebugLogging() && !I.installedLogHooks)
         )
-            for (let e of ((m.installedLogHooks = !0), ['trace', 'debug', 'info', 'warn', 'error', 'log'])) {
+            for (let e of ((I.installedLogHooks = !0), ['trace', 'debug', 'info', 'warn', 'error', 'log'])) {
                 let t = console,
                     n = t[e];
                 null != n &&
@@ -637,4 +637,4 @@ class m extends s.Z {
         null != r.setActiveSinksChangeCallback && r.setActiveSinksChangeCallback(this.handleActiveSinksChange), (0, l.Z)(this);
     }
 }
-h(m, 'installedLogHooks', !1);
+h(I, 'installedLogHooks', !1);

@@ -45,12 +45,12 @@ t.Z = {
     },
     animate: function e(t, n) {
         let i;
-        let { toValueMin: a, toValueMax: s, tension: o = 0, friction: l = 0, loop: u, reverse: c, invert: d, callback: _, type: f = 'spring', shouldLoop: h, durationMin: p, durationMax: m, ...I } = n,
+        let { toValueMin: a, toValueMax: s, tension: o = 0, friction: l = 0, loop: u, reverse: c, invert: d, callback: _, type: f = 'spring', shouldLoop: h, durationMin: p, durationMax: I, ...m } = n,
             T = t._value,
-            g = E(n.duration, p, m),
+            g = E(n.duration, p, I),
             S = E(n.toValue, a, s),
             A = r[f](t, {
-                ...I,
+                ...m,
                 toValue: S,
                 tension: o,
                 friction: l,
@@ -58,9 +58,9 @@ t.Z = {
             }),
             N = A;
         if (c || d) {
-            let e = E(n.duration, p, m);
+            let e = E(n.duration, p, I);
             (i = r[f](t, {
-                ...I,
+                ...m,
                 toValue: c ? T : -S,
                 tension: o,
                 friction: l,

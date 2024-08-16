@@ -42,16 +42,16 @@ let E = {
                 channel: f,
                 query: h,
                 options: p,
-                onHover: m,
-                onClick: I
+                onHover: I,
+                onClick: m
             } = e,
             T = s.map((e, t) =>
                 (0, r.jsx)(
                     a.ZP.User,
                     {
                         guildId: f.guild_id,
-                        onClick: I,
-                        onHover: m,
+                        onClick: m,
+                        onHover: I,
                         selected: E === t,
                         index: t,
                         user: e.user,
@@ -66,8 +66,8 @@ let E = {
                 (0, r.jsx)(
                     a.ZP.Generic,
                     {
-                        onClick: I,
-                        onHover: m,
+                        onClick: m,
+                        onHover: I,
                         selected: E === t + s.length,
                         index: s.length + t,
                         text: e.text,
@@ -81,8 +81,8 @@ let E = {
                 (0, r.jsx)(
                     a.ZP.Role,
                     {
-                        onClick: I,
-                        onHover: m,
+                        onClick: m,
+                        onHover: I,
                         selected: E === t + s.length + o.length,
                         index: s.length + o.length + t,
                         role: e,

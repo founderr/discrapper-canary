@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return m;
     }
 }),
     n(47120);
@@ -18,10 +18,10 @@ var r = n(735250),
     f = n(898463),
     h = n(981631),
     p = n(277263),
-    m = n(451328);
-function I(e) {
+    I = n(451328);
+function m(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,
-        I = i.useRef(null),
+        m = i.useRef(null),
         [T, g] = i.useState(!1),
         S = _.Z.getUpload(t, n.name, d.d.SlashCommand),
         A = i.useRef(null),
@@ -88,7 +88,7 @@ function I(e) {
               onKeyDown: (e) => {
                   if (e.which === h.yXg.ENTER) {
                       var t;
-                      e.preventDefault(), null === (t = I.current) || void 0 === t || t.activateUploadDialogue();
+                      e.preventDefault(), null === (t = m.current) || void 0 === t || t.activateUploadDialogue();
                   }
               },
               className: s()(p.emptyOption, { [p.emptyOptionActive]: T }),
@@ -103,13 +103,13 @@ function I(e) {
                       className: p.clickContainer,
                       onClick: () => {
                           var e;
-                          return null === (e = I.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
+                          return null === (e = m.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
                       },
                       children: (0, r.jsxs)('div', {
                           className: p.commandOptionContainer,
                           children: [
                               (0, r.jsx)('img', {
-                                  src: m,
+                                  src: I,
                                   className: p.optionIcon,
                                   alt: ''
                               }),
@@ -119,7 +119,7 @@ function I(e) {
                                   children: 'Drag and drop or click to upload file'
                               }),
                               (0, r.jsx)(u.Z, {
-                                  ref: I,
+                                  ref: m,
                                   onChange: (e) => {
                                       var r, i;
                                       if (null != t && (null === (i = e.currentTarget) || void 0 === i ? void 0 : null === (r = i.files) || void 0 === r ? void 0 : r[0]) != null) {

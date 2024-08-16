@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     },
     G1: function () {
-        return I;
+        return m;
     },
     JR: function () {
         return A;
@@ -35,7 +35,7 @@ var r = n(470079),
     f = n(765104),
     h = n(981631);
 let p = 30 * E.Z.Millis.SECOND;
-async function m(e, t) {
+async function I(e, t) {
     let n, r;
     if (!f.Z.shouldFetch(e, t)) return;
     let i = Date.now();
@@ -60,7 +60,7 @@ async function m(e, t) {
         receivedAt: Date.now()
     });
 }
-async function I(e) {
+async function m(e) {
     var t, n;
     let r, i;
     if (!f.Z.shouldFetch(e)) return;
@@ -97,7 +97,7 @@ function g() {
     l.Z.dispatch({ type: 'TOGGLE_TOPICS_BAR' });
 }
 function S(e, t) {
-    null != e && null != t && m(e, t),
+    null != e && null != t && I(e, t),
         l.Z.dispatch({
             type: 'SET_SELECTED_SUMMARY',
             channelId: e,
@@ -216,7 +216,7 @@ t.ZP = {
         });
     },
     setHighlightedSummary: T,
-    fetchSummaries: I,
+    fetchSummaries: m,
     fetchSummariesBulk: O,
     useChannelSummaries: function (e) {
         let { channelIds: t = [] } = e;

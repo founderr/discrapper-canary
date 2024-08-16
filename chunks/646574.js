@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(74538),
     h = n(921944),
     p = n(689938),
-    m = n(840587);
-let I = {
+    I = n(840587);
+let m = {
     tension: 750,
     mass: 2.5,
     friction: 70
@@ -28,15 +28,15 @@ function T(e) {
     let { tooltipText: t, headingText: n, textColor: i } = e,
         a = null != n;
     return (0, r.jsxs)('span', {
-        className: a ? void 0 : m.tooltipContainer,
+        className: a ? void 0 : I.tooltipContainer,
         children: [
             (0, r.jsxs)('span', {
-                className: m.tooltipContainer,
+                className: I.tooltipContainer,
                 children: [
                     (0, r.jsx)(c.NitroWheelIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: m.nitroWheel
+                        className: I.nitroWheel
                     }),
                     a
                         ? (0, r.jsx)(c.Heading, {
@@ -80,16 +80,16 @@ function g(e) {
         color: c.Tooltip.Colors.BRAND,
         forceOpen: O,
         'aria-label': L,
-        tooltipClassName: m.tooltip,
+        tooltipClassName: I.tooltip,
         children: [
             (0, r.jsx)('input', {
-                className: m.visuallyHidden,
+                className: I.visuallyHidden,
                 checked: t,
                 onChange: function () {
                     y({
                         from: { rotate: t ? '360deg' : '0deg' },
                         to: { rotate: t ? '0deg' : '360deg' },
-                        config: I
+                        config: m
                     }),
                         null == n || n(),
                         R(!1);
@@ -99,11 +99,11 @@ function g(e) {
             }),
             (0, r.jsxs)('label', {
                 htmlFor: a,
-                className: s()(m.label, { [m.labelChecked]: t }),
+                className: s()(I.label, { [I.labelChecked]: t }),
                 children: [
                     t
                         ? (0, r.jsx)(c.Shine, {
-                              className: m.shine,
+                              className: I.shine,
                               shinePaused: g
                           })
                         : null,
@@ -113,11 +113,11 @@ function g(e) {
                         width: 20,
                         height: 20,
                         color: t ? 'white' : 'currentColor',
-                        className: m.icon
+                        className: I.icon
                     }),
                     (0, r.jsx)('span', {
                         children: (0, r.jsx)(c.Text, {
-                            className: m.visuallyHidden,
+                            className: I.visuallyHidden,
                             variant: 'text-sm/semibold',
                             children: p.Z.Messages.SUPER_REACTION_TOGGLE_DISABLED
                         })

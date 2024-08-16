@@ -13,8 +13,8 @@ var r = n(392711),
     f = n(271383),
     h = n(594174),
     p = n(626135),
-    m = n(630388),
-    I = n(823379),
+    I = n(630388),
+    m = n(823379),
     T = n(960048),
     g = n(709054),
     S = n(45966),
@@ -115,7 +115,7 @@ t.Z = {
             s = S.Z.getEnabled(e) ? S.Z.getDefaultChannelIds(e) : [],
             [u, _] = (0, A.Ee)(e, t, s),
             T = [...a, ...s],
-            y = T.map((e) => E.Z.getChannel(e)).filter(I.lm),
+            y = T.map((e) => E.Z.getChannel(e)).filter(m.lm),
             D = (0, N.v)(e, new Set(T), y, !0).length,
             L = null == n ? [] : n.options.map((e) => e.id);
         if (
@@ -141,7 +141,7 @@ t.Z = {
             if (null != t) {
                 var b, M;
                 let n = null !== (M = null === (b = f.ZP.getMember(e, t.id)) || void 0 === b ? void 0 : b.flags) && void 0 !== M ? M : 0;
-                (0, c.aq)(e, { memberOptions: { flags: (0, m.mB)(n, O.q.COMPLETED_ONBOARDING, !0) } });
+                (0, c.aq)(e, { memberOptions: { flags: (0, I.mB)(n, O.q.COMPLETED_ONBOARDING, !0) } });
             }
         }
     },
@@ -167,7 +167,7 @@ t.Z = {
         if (null != t) {
             var n, r;
             let i = null !== (r = null === (n = f.ZP.getMember(e, t.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== r ? r : 0;
-            await (0, u.e)(e, { flags: (0, m.mB)(i, O.q.COMPLETED_ONBOARDING, !1) });
+            await (0, u.e)(e, { flags: (0, I.mB)(i, O.q.COMPLETED_ONBOARDING, !1) });
         }
     }
 };

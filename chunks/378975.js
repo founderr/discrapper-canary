@@ -113,48 +113,48 @@ function C(e) {
     });
 }
 function h(e) {
-    let { type: n, options: l, id: i, placeholder: a, maxValues: s, minValues: h, disabled: x } = e,
-        _ = r.useMemo(() => l.filter((e) => e.default).map((e) => e.value), [l]),
+    let { type: n, options: l, id: i, placeholder: a, maxValues: s, minValues: h, disabled: _ } = e,
+        T = r.useMemo(() => l.filter((e) => e.default).map((e) => e.value), [l]),
         {
             state: N,
-            executeStateUpdate: T,
+            executeStateUpdate: x,
             visualState: I,
             isDisabled: g,
             error: S
         } = (0, d.Ee)(e, {
             type: n,
-            values: _
+            values: T
         }),
         O = s > 1,
         Z = I === m.gH.LOADING,
         [j, L] = r.useState(!1),
-        [A, M] = r.useState(() => new Set(l.filter((e) => e.default).map((e) => e.value))),
-        [R, P] = r.useState(A),
+        [A, R] = r.useState(() => new Set(l.filter((e) => e.default).map((e) => e.value))),
+        [M, P] = r.useState(A),
         b = r.useMemo(() => l.some((e) => null != e.emoji), [l]);
     r.useEffect(() => {
         if ((null == N ? void 0 : N.type) === o.re.STRING_SELECT) {
             let e = new Set(N.values);
-            M(e), P(e);
+            R(e), P(e);
         } else {
-            let e = new Set(_);
-            M(e), P(e);
+            let e = new Set(T);
+            R(e), P(e);
         }
-    }, [i, _, N]);
+    }, [i, T, N]);
     let y = r.useCallback(() => {
-        if (R !== A)
-            T({
+        if (M !== A)
+            x({
                 type: o.re.STRING_SELECT,
                 values: Array.from(A)
             }) && P(A);
-    }, [A, R, P, T]);
+    }, [A, M, P, x]);
     r.useEffect(() => {
-        if (!(j || (A.size === R.size && Array.from(R).every((e) => A.has(e))))) y();
-    }, [j, A, R, y]);
+        if (!(j || (A.size === M.size && Array.from(M).every((e) => A.has(e))))) y();
+    }, [j, A, M, y]);
     let U = u.singleSelect;
     O ? (U = u.multiSelect) : 0 === h && (U = u.toggleSelect);
     let k = (0, u.useVariableSelect)({
         value: A,
-        onChange: (e) => M(e),
+        onChange: (e) => R(e),
         onSelectInteraction: U
     });
     return (0, t.jsxs)(r.Fragment, {
@@ -163,7 +163,7 @@ function h(e) {
                 className: p.container,
                 children: [
                     (0, t.jsx)(u.Select, {
-                        isDisabled: x || g,
+                        isDisabled: _ || g,
                         className: p.select,
                         options: l.map((e) => ({
                             ...e,

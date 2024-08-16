@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(318661),
     h = n(78675),
     p = n(741308),
-    m = n(588822),
-    I = n(899007),
+    I = n(588822),
+    m = n(899007),
     T = n(502762),
     g = n(530),
     S = n(256059),
@@ -97,7 +97,7 @@ function y(e) {
                                         profileType: O.y0.BITE_SIZE,
                                         hasProfileEffect: (null == w ? void 0 : w.profileEffectId) != null
                                     }),
-                                    (0, r.jsx)(I.Z, {
+                                    (0, r.jsx)(m.Z, {
                                         user: t,
                                         displayProfile: w,
                                         guildId: n,
@@ -123,7 +123,7 @@ function y(e) {
                                             onClose: M
                                         })
                                     }),
-                                    (0, r.jsx)(m.Z, {
+                                    (0, r.jsx)(I.Z, {
                                         userId: t.id,
                                         userBio: null == w ? void 0 : w.bio,
                                         setLineClamp: !1,

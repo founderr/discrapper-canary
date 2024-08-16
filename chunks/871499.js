@@ -19,7 +19,7 @@ var i = n(120356),
     _ = n(689938),
     E = n(239527);
 function f(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: l, onContextMenu: u, className: d, wrapperClassName: _, iconClassName: f, iconComponent: h, themeable: p = !1, disabled: m = !1, isActive: I = !1, tooltipPosition: T = 'top', shouldShowTooltip: g = !0, forceTooltipOpen: S = !1, buttonRef: A, grow: N, 'aria-label': v } = e;
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: l, onContextMenu: u, className: d, wrapperClassName: _, iconClassName: f, iconComponent: h, themeable: p = !1, disabled: I = !1, isActive: m = !1, tooltipPosition: T = 'top', shouldShowTooltip: g = !0, forceTooltipOpen: S = !1, buttonRef: A, grow: N, 'aria-label': v } = e;
     return (0, r.jsx)(c.Z, {
         children: (0, r.jsx)(s.Tooltip, {
             position: T,
@@ -53,9 +53,9 @@ function f(e) {
                     onBlur: (e) => {
                         null == g || g(), null == l || l(e);
                     },
-                    disabled: m,
+                    disabled: I,
                     innerClassName: E.lineHeightReset,
-                    className: a()({ [E.active]: I }, d),
+                    className: a()({ [E.active]: m }, d),
                     wrapperClassName: _,
                     buttonRef: A,
                     grow: N,
@@ -64,7 +64,7 @@ function f(e) {
                     children: (0, r.jsx)(h, {
                         className: a()(E.controlIcon, f, {
                             [E.themeable]: p,
-                            [E.active]: I
+                            [E.active]: m
                         }),
                         color: 'currentColor'
                     })
@@ -83,13 +83,13 @@ let h = {
     activeLight: E.activeLight
 };
 function p(e) {
-    let { color: t, isActive: n = !1, className: i, iconClassName: p, onPopoutClick: m, popoutOpen: I = !1, premiumGlow: T = !1, ...g } = e,
+    let { color: t, isActive: n = !1, className: i, iconClassName: p, onPopoutClick: I, popoutOpen: m = !1, premiumGlow: T = !1, ...g } = e,
         S = (0, d.Z)(t, n),
         A = (0, o.Z)('(max-width: 456px)'),
         N = (0, r.jsx)(f, {
             ...g,
             grow: !1,
-            onContextMenu: m,
+            onContextMenu: I,
             iconClassName: a()(p, E.centerIcon),
             className: a()(A ? i : null, E.staticButton, E.centerButton, h[S])
         });
@@ -100,19 +100,19 @@ function p(e) {
               children: [
                   (0, r.jsx)(l.ZP, {
                       className: a()(E.buttonMask, { [E.buttonPremiumGlow]: T }),
-                      mask: null == m ? null : l.QS.CHANNEL_CALL_CONTROL_BUTTON,
+                      mask: null == I ? null : l.QS.CHANNEL_CALL_CONTROL_BUTTON,
                       width: 56,
                       height: 56,
                       children: N
                   }),
-                  null != m
+                  null != I
                       ? (0, r.jsx)(c.Z, {
                             children: (0, r.jsx)(s.Clickable, {
                                 'aria-label': _.Z.Messages.MORE_OPTIONS,
-                                onClick: m,
-                                onContextMenu: m,
-                                className: a()(E.contextMenuNub, h[S], { [E.active]: I }),
-                                children: (0, r.jsx)(u.Z, { className: a()(E.contextMenuCaret, { [E.open]: I }) })
+                                onClick: I,
+                                onContextMenu: I,
+                                className: a()(E.contextMenuNub, h[S], { [E.active]: m }),
+                                children: (0, r.jsx)(u.Z, { className: a()(E.contextMenuCaret, { [E.open]: m }) })
                             })
                         })
                       : null

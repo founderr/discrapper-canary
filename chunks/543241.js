@@ -78,8 +78,8 @@ var c = n(558217),
     f = n(594174),
     h = n(626135),
     p = n(70956),
-    m = n(176354),
-    I = n(111361);
+    I = n(176354),
+    m = n(111361);
 n(709054);
 var T = n(304852),
     g = n(199257),
@@ -111,13 +111,13 @@ let C = function (e, t) {
                 return null === (e = _.Z.getGuild(n)) || void 0 === e ? void 0 : e.name;
             }),
             y = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
-            D = (0, I.I5)(y);
+            D = (0, m.I5)(y);
         return r.useMemo(() => {
             let r = O.getGroupedCustomEmoji(),
                 s = E.ZP.getFlattenedGuildIds(),
                 u = [],
                 c = (r, i) =>
-                    m.ZP.getEmojiUnavailableReasons({
+                    I.ZP.getEmojiUnavailableReasons({
                         categoryEmojis: r,
                         channel: t,
                         guildId: n,

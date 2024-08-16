@@ -124,7 +124,7 @@ n.d(t, {
         return B;
     },
     mN: function () {
-        return eI;
+        return em;
     },
     nP: function () {
         return eh;
@@ -190,8 +190,8 @@ n(597688);
 var h = n(231757);
 n(706454);
 var p = n(572004),
-    m = n(70956),
-    I = n(630388),
+    I = n(70956),
+    m = n(630388),
     T = n(823379),
     g = n(49012),
     S = n(358085),
@@ -398,7 +398,7 @@ function ea(e) {
 function es(e, t) {
     if (!ea(t)) return !1;
     let n = O.jn[t];
-    return (0, I.yE)(e.dismissedQuestContent, y.a_[n]);
+    return (0, m.yE)(e.dismissedQuestContent, y.a_[n]);
 }
 function eo(e) {
     return (0, o.EQ)(e)
@@ -463,10 +463,10 @@ function eh(e) {
     return e.endsWith('.webm') || e.endsWith('.mp4') || e.startsWith('data:video');
 }
 let ep = /\.([a-zA-Z0-9]+)$/,
-    em = /^data:video\/([a-zA-Z0-9]+)\;/;
-function eI(e) {
+    eI = /^data:video\/([a-zA-Z0-9]+)\;/;
+function em(e) {
     var t, n, r, i, a;
-    switch (null !== (a = null === (n = ep.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== a ? a : null === (i = em.exec(e)) || void 0 === i ? void 0 : null === (r = i[1]) || void 0 === r ? void 0 : r.toLowerCase()) {
+    switch (null !== (a = null === (n = ep.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== a ? a : null === (i = eI.exec(e)) || void 0 === i ? void 0 : null === (r = i[1]) || void 0 === r ? void 0 : r.toLowerCase()) {
         case 'webm':
             return 'video/webm';
         case 'mp4':
@@ -550,7 +550,7 @@ let eD = (e, t) => {
         let o = null === (s = e.userStatus) || void 0 === s ? void 0 : null === (i = s.progress) || void 0 === i ? void 0 : null === (r = i[t.eventName]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.lastBeatAt;
         if (null == o || !eb(e)) return 0;
         let l = Date.now() - new Date(o).valueOf();
-        return (0, a.floor)(l / m.Z.Millis.SECOND, 2);
+        return (0, a.floor)(l / I.Z.Millis.SECOND, 2);
     },
     eP = (e, t) => {
         var n, r, i;
@@ -576,7 +576,7 @@ let eD = (e, t) => {
         return {
             progressSeconds: _,
             targetSeconds: c,
-            targetMinutes: Math.round(c / m.Z.Seconds.MINUTE),
+            targetMinutes: Math.round(c / I.Z.Seconds.MINUTE),
             percentComplete: eL(c, _),
             taskType: o
         };

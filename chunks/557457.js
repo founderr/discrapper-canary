@@ -1,9 +1,9 @@
 n.d(t, {
     Wc: function () {
-        return m;
+        return I;
     },
     Ye: function () {
-        return I;
+        return m;
     },
     bp: function () {
         return p;
@@ -47,7 +47,7 @@ function h(e) {
 function p(e) {
     return d.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({ fps: e });
 }
-function m(e) {
+function I(e) {
     return null == e.maxResolution || null == e.maxFrameRate
         ? null
         : {
@@ -55,7 +55,7 @@ function m(e) {
               maxResolution: e.maxResolution
           };
 }
-function I(e, t, n) {
+function m(e, t, n) {
     var c, d, _;
     let E = ((c = e), (d = t), (_ = n), l.ND.find((e) => (null == e.preset || e.preset === c) && e.resolution === d && e.fps === _)),
         f = a.default.getCurrentUser(),

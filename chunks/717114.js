@@ -16,15 +16,15 @@ t.Z = () => {
         n = (0, a.e7)([d.Z], () => d.Z.isConnected(), []),
         h = (0, a.e7)([c.Z], () => c.Z.getMode() === E.pM4.PUSH_TO_TALK, []),
         p = null != t && t.elevated && n && h && e,
-        m = i.useRef(null);
-    function I() {
-        null !== m.current && ((0, s.closeModal)(m.current), (m.current = null));
+        I = i.useRef(null);
+    function m() {
+        null !== I.current && ((0, s.closeModal)(I.current), (I.current = null));
     }
     return (
         i.useEffect(
             () => (
                 p
-                    ? (m.current = (0, s.openModal)((e) =>
+                    ? (I.current = (0, s.openModal)((e) =>
                           (0, r.jsx)(l.default, {
                               title: f.Z.Messages.PTT_PERMISSION_TITLE,
                               body: f.Z.Messages.PTT_PERMISSION_BODY.format({ game: null == t ? void 0 : t.name }),
@@ -35,9 +35,9 @@ t.Z = () => {
                               ...e
                           })
                       ))
-                    : I(),
+                    : m(),
                 () => {
-                    I();
+                    m();
                 }
             ),
             [t, p]

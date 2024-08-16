@@ -12,8 +12,8 @@ var r = n(735250),
     f = n(285651),
     h = n(373228),
     p = n(378233),
-    m = n(419922),
-    I = n(490095),
+    I = n(419922),
+    m = n(490095),
     T = n(981631),
     g = n(689938),
     S = n(323276);
@@ -128,12 +128,12 @@ let A = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
                                 'data-type': _.S.STICKER,
                                 'data-id': e.sticker.id,
                                 children: [
-                                    (0, r.jsx)(u.HiddenVisually, { children: (0, m.Co)(e.sticker) }),
+                                    (0, r.jsx)(u.HiddenVisually, { children: (0, I.Co)(e.sticker) }),
                                     (0, r.jsxs)('div', {
                                         'aria-hidden': !0,
                                         children: [
                                             !G && (0, r.jsx)('div', { className: S.inspectedIndicator }),
-                                            (0, r.jsx)(m.ZP, {
+                                            (0, r.jsx)(I.ZP, {
                                                 className: s()(S.stickerNode, {
                                                     [S.stickerNodeDimmed]: G && !A && null != R && -1 !== R.rowIndex && -1 !== R.columnIndex,
                                                     [S.stickerNodeHidden]: N,
@@ -146,7 +146,7 @@ let A = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
                                                 sticker: e.sticker,
                                                 size: w
                                             }),
-                                            o ? (0, r.jsx)(I.Z, { size: 20 }) : null
+                                            o ? (0, r.jsx)(m.Z, { size: 20 }) : null
                                         ]
                                     })
                                 ]

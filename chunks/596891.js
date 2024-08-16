@@ -13,9 +13,9 @@ var r = n(735250),
     f = n(594174),
     h = n(621600),
     p = n(981631),
-    m = n(689938);
+    I = n(689938);
 t.Z = (e) => {
-    let { userId: t, reportId: n, showBlock: I, showMute: T } = e,
+    let { userId: t, reportId: n, showBlock: m, showMute: T } = e,
         g = d.Z.getDMFromUserId(t),
         S = (0, a.e7)([E.ZP], () => (null == g ? null : E.ZP.isChannelMuted(null, g))),
         [A, N] = i.useState(null != S && S),
@@ -46,24 +46,24 @@ t.Z = (e) => {
                 }),
                 o.Z.updateChannelOverrideSettings(null, g, { muted: !0 }, h.ZB.Muted));
         }, [g, t, n]),
-        L = T || I;
+        L = T || m;
     return null != R && L
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  I &&
+                  m &&
                       (0, r.jsx)(c.Z, {
-                          title: m.Z.Messages.IAR_UPSELLS_BLOCK_TITLE.format({ username: R.username }),
-                          description: m.Z.Messages.IAR_UPSELLS_BLOCK_DESCRIPTION,
-                          buttonText: v ? m.Z.Messages.IAR_UPSELLS_BLOCKED_BUTTON : m.Z.Messages.IAR_UPSELLS_BLOCK_BUTTON,
+                          title: I.Z.Messages.IAR_UPSELLS_BLOCK_TITLE.format({ username: R.username }),
+                          description: I.Z.Messages.IAR_UPSELLS_BLOCK_DESCRIPTION,
+                          buttonText: v ? I.Z.Messages.IAR_UPSELLS_BLOCKED_BUTTON : I.Z.Messages.IAR_UPSELLS_BLOCK_BUTTON,
                           buttonDisabled: v,
                           onButtonPress: y,
                           buttonColor: s.Button.Colors.RED
                       }),
                   T &&
                       (0, r.jsx)(c.Z, {
-                          title: m.Z.Messages.IAR_UPSELLS_MUTE_TITLE.format({ username: R.username }),
-                          description: m.Z.Messages.IAR_UPSELLS_MUTE_DESCRIPTION,
-                          buttonText: A ? m.Z.Messages.IAR_UPSELLS_MUTED_BUTTON : m.Z.Messages.IAR_UPSELLS_MUTE_BUTTON,
+                          title: I.Z.Messages.IAR_UPSELLS_MUTE_TITLE.format({ username: R.username }),
+                          description: I.Z.Messages.IAR_UPSELLS_MUTE_DESCRIPTION,
+                          buttonText: A ? I.Z.Messages.IAR_UPSELLS_MUTED_BUTTON : I.Z.Messages.IAR_UPSELLS_MUTE_BUTTON,
                           buttonDisabled: A,
                           onButtonPress: D
                       })

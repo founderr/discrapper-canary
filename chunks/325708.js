@@ -53,7 +53,7 @@ function E(e) {
                     return 'homeSidebarWidth';
             }
         })(t),
-        [g, C] = l.useState(m.ZP[E]),
+        [C, g] = l.useState(m.ZP[E]),
         I = l.useCallback(
             (e) => {
                 d.ZP.updatedUnsyncedSettings({ [E]: e });
@@ -61,7 +61,7 @@ function E(e) {
             [E]
         ),
         x = (0, p.W)({ maxWidth: n }),
-        T = (0, c.clamp)(g, p.C, n),
+        T = (0, c.clamp)(C, p.C, n),
         N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
     l.useEffect(() => {
         null == i || i(T, x);
@@ -85,7 +85,7 @@ function E(e) {
                             (0, s.jsx)(f, {
                                 maxWidth: n,
                                 resizableNode: h,
-                                onResize: C,
+                                onResize: g,
                                 onResizeEnd: I
                             }),
                         (0, s.jsx)('div', {

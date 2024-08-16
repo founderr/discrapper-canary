@@ -5,24 +5,24 @@ a.d(s, {
 }),
     a(47120);
 var n = a(470079),
-    l = a(392711),
-    r = a.n(l),
+    r = a(392711),
+    l = a.n(r),
     t = a(876215),
     i = a(442837),
     o = a(146282),
     E = a(897674),
     c = a(709054),
     _ = a(206583);
-let I = new Set([t.s.PLAYED_GAME]),
-    u = (e) => I.has(e.content_type);
+let u = new Set([t.s.PLAYED_GAME]),
+    I = (e) => u.has(e.content_type);
 function d() {
     let e = (0, E.Z)(_.YN.GAME_PROFILE_FEED),
         s = (0, E.Z)(_.YN.GLOBAL_FEED),
         a = n.useMemo(
             () =>
-                r()(s)
+                l()(s)
                     .unionBy(e, (e) => e.id)
-                    .filter(u)
+                    .filter(I)
                     .orderBy((e) => c.default.extractTimestamp(e.id), 'desc')
                     .uniqWith((e, s) => e.author_id === s.author_id && e.extra.application_id === s.extra.application_id)
                     .value(),

@@ -4,20 +4,20 @@ a.d(s, {
     }
 });
 var n = a(544891),
-    l = a(570140),
-    r = a(881052),
+    r = a(570140),
+    l = a(881052),
     t = a(981631);
 let i = async (e) => {
     try {
         var s;
         let a = await n.tn.get({ url: t.ANM.SIMILAR_GAMES(e) }),
-            r = (null !== (s = a.body.similar_games) && void 0 !== s ? s : []).filter((s) => s !== e);
-        l.Z.dispatch({
+            l = (null !== (s = a.body.similar_games) && void 0 !== s ? s : []).filter((s) => s !== e);
+        r.Z.dispatch({
             type: 'GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS',
             applicationId: e,
-            games: r
+            games: l
         });
     } catch (e) {
-        throw new r.Hx(e);
+        throw new l.Hx(e);
     }
 };

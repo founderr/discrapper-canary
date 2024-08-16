@@ -13,7 +13,7 @@ var r = n(735250),
     f = n(689938),
     h = n(48182),
     p = n(594402);
-function m(e) {
+function I(e) {
     let { text: t, language: i } = e,
         a = () =>
             (0, r.jsx)('pre', {
@@ -40,7 +40,7 @@ function m(e) {
         renderFallback: () => a()
     });
 }
-function I(e) {
+function m(e) {
     let { expanded: t, setExpanded: n, isWholeFile: i, numLines: a } = e,
         s = (i ? f.Z.Messages.PREVIEW_NUM_LINES : f.Z.Messages.PREVIEW_NUM_LINES_AT_LEAST).format({ lines: a });
     return (0, r.jsx)(l.Tooltip, {
@@ -187,7 +187,7 @@ function A(e) {
                 children:
                     null == o
                         ? (0, r.jsx)(l.Spinner, { className: h.spinner })
-                        : (0, r.jsx)(m, {
+                        : (0, r.jsx)(I, {
                               text: L,
                               language: _
                           })
@@ -200,7 +200,7 @@ function A(e) {
                     b
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(I, {
+                                  (0, r.jsx)(m, {
                                       expanded: u,
                                       setExpanded: d,
                                       isWholeFile: C,
@@ -251,7 +251,7 @@ function N(e) {
                         children:
                             null == u
                                 ? (0, r.jsx)(l.Spinner, { className: h.spinner })
-                                : (0, r.jsx)(m, {
+                                : (0, r.jsx)(I, {
                                       text: p,
                                       language: d
                                   })
@@ -284,8 +284,8 @@ t.Z = i.memo(
             [_, E] = i.useState(!1),
             [f, p] = i.useState(n.split('.').slice(-1)[0]),
             {
-                fileContents: m,
-                bytesLeft: I,
+                fileContents: I,
+                bytesLeft: m,
                 hadError: T
             } = (function (e, t) {
                 let [n, r] = i.useState(!1),
@@ -342,8 +342,8 @@ t.Z = i.memo(
                   url: t,
                   fileName: n,
                   fileSize: a,
-                  fileContents: m,
-                  bytesLeft: I,
+                  fileContents: I,
+                  bytesLeft: m,
                   expanded: _,
                   setExpanded: E,
                   language: f,

@@ -13,8 +13,8 @@ var r = n(274616),
     f = n(998502),
     h = n(981631);
 let p = new i.Z('Games'),
-    m = {},
-    I = 0,
+    I = {},
+    m = 0,
     T = null;
 function g() {
     return null != T
@@ -59,13 +59,13 @@ async function N(e) {
     )
         throw Error('No remaining launchable queries');
     let t = Date.now();
-    t > I && ((I = t + 3600000), (m = {}));
+    t > m && ((m = t + 3600000), (I = {}));
     let n = await g();
     for (let t of e) {
-        let e = m[t.id];
+        let e = I[t.id];
         if (null != e) return e;
         let r = await new Promise((e) => n.findLaunchable(t, e));
-        if (null != r) return (m[t.id] = r), r;
+        if (null != r) return (I[t.id] = r), r;
     }
     throw Error('could not find launchable');
 }
@@ -98,17 +98,17 @@ t.Z = {
             .catch(() => !1),
     launch: (e) => N(S(e)).then(O),
     launchDispatchApplication(e, t, n, i, s) {
-        let { launchOptions: l, defaultLaunchOptionId: u, installPath: _, applicationId: E, branchId: f, buildId: p, shouldPatch: m } = e;
+        let { launchOptions: l, defaultLaunchOptionId: u, installPath: _, applicationId: E, branchId: f, buildId: p, shouldPatch: I } = e;
         if (null == l || null == u || null == _) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
         null == s && (s = u);
-        let I = l[s];
-        if (null == I) throw Error("Couldn't construct launchable for ".concat(e.applicationId, '. No launch option.'));
+        let m = l[s];
+        if (null == m) throw Error("Couldn't construct launchable for ".concat(e.applicationId, '. No launch option.'));
         return (0, r.o)([f])
             .then((e) => {
                 let t = e[0];
                 if (null == t) return Promise.reject(Error('branch is null'));
                 let { liveBuildId: n } = t;
-                if (m && n !== p) return Promise.reject(Error('live build id changed'));
+                if (I && n !== p) return Promise.reject(Error('live build id changed'));
             })
             .then(() => d.Z.runLaunchSetup(E, f))
             .then(() => {
@@ -120,7 +120,7 @@ t.Z = {
                         DISCORD_CURRENT_BRANCH: i,
                         DISCORD_STORAGE_PATH: h.SRg.ROOT_STORAGE_PATH(e, o.default.getId())
                     };
-                return d.Z.launch(E, f, I.name, r);
+                return d.Z.launch(E, f, m.name, r);
             });
     },
     removeShortcuts: (e) =>

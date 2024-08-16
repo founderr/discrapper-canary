@@ -30,8 +30,8 @@ var r = n(735250),
     f = n(906732),
     h = n(213609),
     p = n(600164),
-    m = n(686546),
-    I = n(111028),
+    I = n(686546),
+    m = n(111028),
     T = n(738774),
     g = n(785896),
     S = n(231053),
@@ -90,7 +90,7 @@ let W = () => ({
                                 (0, r.jsx)(c.Text, {
                                     className: j.__invalid_emojiName,
                                     variant: 'text-md/semibold',
-                                    children: (0, r.jsx)(I.Z, { children: n })
+                                    children: (0, r.jsx)(m.Z, { children: n })
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-sm/normal',
@@ -148,8 +148,8 @@ let W = () => ({
         return (0, r.jsxs)(p.Z, {
             align: p.Z.Align.CENTER,
             children: [
-                (0, r.jsx)(m.ZP, {
-                    mask: m.ZP.Masks.SQUIRCLE,
+                (0, r.jsx)(I.ZP, {
+                    mask: I.ZP.Masks.SQUIRCLE,
                     width: 32,
                     height: 32,
                     className: j.__invalid_guildIconContainer,
@@ -191,12 +191,12 @@ let W = () => ({
                                           children: (0, r.jsx)(c.Heading, {
                                               className: j.guildName,
                                               variant: 'heading-md/semibold',
-                                              children: (0, r.jsx)(I.Z, { children: l })
+                                              children: (0, r.jsx)(m.Z, { children: l })
                                           })
                                       })
                                     : (0, r.jsx)(c.Heading, {
                                           variant: 'heading-md/semibold',
-                                          children: (0, r.jsx)(I.Z, { children: l })
+                                          children: (0, r.jsx)(m.Z, { children: l })
                                       })
                             ]
                         }),
@@ -248,7 +248,7 @@ let W = () => ({
     },
     Q = (e) => {
         var t, n, a;
-        let { node: u, sourceType: m, expressionSourceApplication: g, expressionSourceGuild: N, joinedEmojiSourceGuildRecord: v, closePopout: y, onToggleShowMoreEmojis: b, guildEmoji: M, demoMode: x = !1, nonce: G } = e,
+        let { node: u, sourceType: I, expressionSourceApplication: g, expressionSourceGuild: N, joinedEmojiSourceGuildRecord: v, closePopout: y, onToggleShowMoreEmojis: b, guildEmoji: M, demoMode: x = !1, nonce: G } = e,
             K = (0, l.e7)([U.default], () => U.default.getCurrentUser()),
             q = (0, l.e7)([P.Z], () => P.Z.getGuildId()),
             Q = k.ZP.isPremium(K),
@@ -292,7 +292,7 @@ let W = () => ({
         );
         let eo = P.Z.getGuildId(),
             el = (0, B.a)({
-                sourceType: m,
+                sourceType: I,
                 expressionSourceApplication: g,
                 isPremium: Q,
                 hasJoinedEmojiSourceGuild: J,
@@ -357,7 +357,7 @@ let W = () => ({
                                         children: [
                                             (0, r.jsx)(c.Text, {
                                                 variant: 'text-md/semibold',
-                                                children: (0, r.jsx)(I.Z, { children: u.name })
+                                                children: (0, r.jsx)(m.Z, { children: u.name })
                                             }),
                                             null != ec &&
                                                 (0, r.jsx)(c.Text, {
