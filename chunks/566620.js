@@ -56,8 +56,8 @@ var r = n(990547),
     f = n(213459),
     h = n(812236),
     p = n(812206),
-    m = n(358221),
-    I = n(233764),
+    I = n(358221),
+    m = n(233764),
     T = n(188597),
     g = n(835873),
     S = n(973616),
@@ -76,7 +76,7 @@ var r = n(990547),
     U = n(363522),
     w = n(672181),
     x = n(882347),
-    G = n(307091),
+    G = n(224189),
     k = n(374065),
     B = n(917107),
     F = n(89425),
@@ -102,9 +102,9 @@ function K(e, t) {
 async function z(e) {
     var t, n;
     let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c } = e,
-        m = N.Z.getChannel(r),
-        g = null !== (t = null == m ? void 0 : m.getGuildId()) && void 0 !== t ? t : void 0;
-    if (null == g && !(null !== (n = null == m ? void 0 : m.isPrivate()) && void 0 !== n && n)) return !1;
+        I = N.Z.getChannel(r),
+        g = null !== (t = null == I ? void 0 : I.getGuildId()) && void 0 !== t ? t : void 0;
+    if (null == g && !(null !== (n = null == I ? void 0 : I.isPrivate()) && void 0 !== n && n)) return !1;
     try {
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
@@ -167,11 +167,11 @@ async function z(e) {
                     );
                 },
                 n = Y.Yq.includes(i),
-                a = (null == m ? void 0 : m.type) === Z.d4z.GUILD_VOICE,
+                a = (null == I ? void 0 : I.type) === Z.d4z.GUILD_VOICE,
                 s = p.Z.getApplication(i),
                 o = null != s && (0, D.yE)(s.flags, Z.udG.EMBEDDED),
                 l = null != s && (0, D.yE)(s.flags, Z.udG.EMBEDDED_RELEASED),
-                u = (0, M.l5)(m);
+                u = (0, M.l5)(I);
             if (n) {
                 if (((t = !1), !(await e({ canSendFakeCommand: !1 })))) throw Error();
             } else if (a) {
@@ -180,13 +180,13 @@ async function z(e) {
                     U.j.trackExposure({ location: 'EmbeddedActivitiesActionCreators.launchEmbeddedActivity' });
                     let { enabled: n } = U.j.getCurrentConfig({ location: 'EmbeddedActivitiesActionCreators.launchEmbeddedActivity' });
                     if (n) {
-                        if (!(await e({ canSendFakeCommand: !1 }))) throw new I.Z(I.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+                        if (!(await e({ canSendFakeCommand: !1 }))) throw new m.Z(m.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
                         t = !1;
                     } else t = !0;
                 }
             } else if (u) {
                 let n = await e({ canSendFakeCommand: o && l });
-                if (((t = !n), o && !n)) throw new I.Z(I.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+                if (((t = !n), o && !n)) throw new m.Z(m.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
             }
         }
         if (
@@ -198,7 +198,7 @@ async function z(e) {
                 guildId: g
             }))
         )
-            throw new I.Z(I.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
+            throw new m.Z(m.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
             applicationId: i,
@@ -211,7 +211,7 @@ async function z(e) {
                 guildId: g,
                 applicationId: i,
                 channelId: r,
-                error: e instanceof I.Z ? e : new d.Z(e)
+                error: e instanceof m.Z ? e : new d.Z(e)
             }),
             !1
         );
@@ -219,31 +219,30 @@ async function z(e) {
     return !0;
 }
 async function q(e) {
-    var t;
-    let n;
-    let { applicationId: i, channelId: a, embeddedActivitiesManager: o, guildId: l } = e,
-        u = A.default.getSessionId(),
-        c = R.default.getCurrentUser();
-    if (null == i) return !1;
-    let d = null !== (t = p.Z.getApplication(i)) && void 0 !== t ? t : await (0, G.Z)(i, a);
-    if (null == a) return y.S.dispatch(Z.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: i }), !1;
-    let _ = N.Z.getChannel(a);
-    if (null == _ || null == c || null == d) return !1;
-    let E =
-        null != a
+    let t,
+        { applicationId: n, channelId: i, embeddedActivitiesManager: a, guildId: o } = e,
+        l = A.default.getSessionId(),
+        u = R.default.getCurrentUser();
+    if (null == n) return !1;
+    let c = await (0, G.Z)(n, i);
+    if (null == i) return y.S.dispatch(Z.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
+    let d = N.Z.getChannel(i);
+    if (null == d || null == u || null == c) return !1;
+    let _ =
+        null != i
             ? (0, k.e4)({
-                  channelId: a,
+                  channelId: i,
                   ChannelStore: N.Z,
                   GuildStore: v.Z,
                   PermissionStore: O.Z,
                   VoiceStateStore: C.Z
               })
             : k.jy.NO_CHANNEL;
-    if (E !== k.jy.CAN_LAUNCH)
+    if (_ !== k.jy.CAN_LAUNCH)
         return (
-            E === k.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
+            _ === k.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
                 ? (0, g.w)()
-                : E === k.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
+                : _ === k.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   s.Z.show({
                       title: W.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
                       body: W.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
@@ -251,44 +250,44 @@ async function q(e) {
                   }),
             !1
         );
-    let f = P.ZP.getCurrentEmbeddedActivity();
+    let E = P.ZP.getCurrentEmbeddedActivity();
     if (
-        ((null == f ? void 0 : f.applicationId) != null && (n = p.Z.getApplication(null == f ? void 0 : f.applicationId)),
+        ((null == E ? void 0 : E.applicationId) != null && (t = p.Z.getApplication(null == E ? void 0 : E.applicationId)),
         !(await (0, x.p)({
-            applicationId: i,
-            application: d,
-            channel: _,
-            currentEmbeddedApplication: n,
-            embeddedActivitiesManager: o,
-            user: c
+            applicationId: n,
+            application: c,
+            channel: d,
+            currentEmbeddedApplication: t,
+            embeddedActivitiesManager: a,
+            user: u
         })))
     )
         return !1;
-    let h = (0, B.Z)(a),
-        m = H.wP.includes(_.type);
-    if (h) {
+    let f = (0, B.Z)(i),
+        h = H.wP.includes(d.type);
+    if (f) {
         if (
             !(await (0, F.Z)({
-                channelId: a,
-                bypassChangeModal: null != n
+                channelId: i,
+                bypassChangeModal: null != t
             }))
         )
             return !1;
-    } else if (!(0, M.WS)(_, !0) || !m) return !1;
+    } else if (!(0, M.WS)(d, !0) || !h) return !1;
     return (
         await b.Z.post({
-            url: Z.ANM.ACTIVITY_CHANNEL_LAUNCH(a, i),
+            url: Z.ANM.ACTIVITY_CHANNEL_LAUNCH(i, n),
             body: {
-                session_id: u,
-                guild_id: null != l ? l : void 0
+                session_id: l,
+                guild_id: null != o ? o : void 0
             },
             trackedActionData: {
                 event: r.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
                 properties: {
-                    guild_id: l,
-                    channel_id: a,
-                    application_id: i,
-                    session_id: u
+                    guild_id: o,
+                    channel_id: i,
+                    application_id: n,
+                    session_id: l
                 }
             },
             retries: 3,
@@ -309,7 +308,7 @@ function Q(e) {
         instanceId: null == o ? void 0 : o.launchId,
         showFeedback: s
     });
-    let u = m.Z.getSelectedParticipantId(r),
+    let u = I.Z.getSelectedParticipantId(r),
         c = null === (n = R.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
     if (null != P.ZP.getEmbeddedActivitiesForChannel(r).find((e) => e.applicationId === i) && null != c && '' !== c) u === i && l.Z.selectParticipant(r, null);
 }
