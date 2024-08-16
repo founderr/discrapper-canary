@@ -21,12 +21,12 @@ function _(e, t, n) {
         e
     );
 }
-let E = new Set(),
-    h = new Set(),
+let h = new Set(),
+    E = new Set(),
     m = null;
 function I() {
-    for (let e of E) a.Z.setDisableLocalVideo(e, d.ZUi.MANUAL_ENABLED, u.Yn.DEFAULT, !1);
-    h.clear(), E.clear();
+    for (let e of h) a.Z.setDisableLocalVideo(e, d.ZUi.MANUAL_ENABLED, u.Yn.DEFAULT, !1);
+    E.clear(), h.clear();
 }
 class g extends s.Z {
     _initialize() {
@@ -42,12 +42,12 @@ class g extends s.Z {
             _ = c.Z.isVisible(),
             m = l.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT),
             I = o.Z.isLocalVideoDisabled(t, n),
-            g = h.has(t);
-        s && !_ && !m && !I && !g && (E.add(t), a.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
+            g = E.has(t);
+        s && !_ && !m && !I && !g && (h.add(t), a.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
     }
     handleManualLocalVideoToggle(e) {
         let { userId: t, persist: n } = e;
-        n && (h.add(t), E.delete(t));
+        n && (E.add(t), h.delete(t));
     }
     constructor(...e) {
         super(...e),

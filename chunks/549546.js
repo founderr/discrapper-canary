@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
 var i = n(735250);
@@ -14,7 +14,7 @@ var a = n(120356),
     d = n(785717),
     u = n(689938),
     _ = n(40742);
-function E(e) {
+function h(e) {
     let { user: t, isHovering: n } = e,
         { trackUserProfileAction: a } = (0, d.KZ)();
     return o.wS

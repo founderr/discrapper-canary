@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(943094),
     u = n(749210),
     _ = n(287734),
-    E = n(401430),
-    h = n(230711),
+    h = n(401430),
+    E = n(230711),
     m = n(607070),
     I = n(627845),
     g = n(185666),
@@ -63,8 +63,8 @@ var i = n(735250),
     ed = n(489977),
     eu = n(329557),
     e_ = n(304445),
-    eE = n(893607),
-    eh = n(703656),
+    eh = n(893607),
+    eE = n(703656),
     em = n(298969),
     eI = n(719256),
     eg = n(6025),
@@ -122,7 +122,7 @@ let e$ = !1;
     em.Z.loadServer(),
     eW.isPlatformEmbedded &&
         (ez.ZP.on('USER_SETTINGS_OPEN', () => {
-            !eU.Z.getLayers().includes(eq.S9g.USER_SETTINGS) && h.Z.open(eq.oAB.ACCOUNT);
+            !eU.Z.getLayers().includes(eq.S9g.USER_SETTINGS) && E.Z.open(eq.oAB.ACCOUNT);
         }),
         ez.ZP.on('LAUNCH_APPLICATION', (e, t) => {
             let n = eG.Z.getActiveLibraryApplication(t);
@@ -226,7 +226,7 @@ let e2 = [
                                 break;
                             }
                             case 'test-mode':
-                                eB.Z.whenInitialized(() => E.Wt(n));
+                                eB.Z.whenInitialized(() => h.Wt(n));
                                 break;
                             case 'uninstall': {
                                 let e = eG.Z.getActiveLibraryApplication(n);
@@ -273,7 +273,7 @@ let e2 = [
             return (
                 null != n &&
                     (0, H.h)(() =>
-                        h.Z.open(n.section, n.subsection, {
+                        E.Z.open(n.section, n.subsection, {
                             openWithoutBackstack: !1,
                             impressionSource: n.source
                         })
@@ -307,7 +307,7 @@ let e2 = [
     {
         path: [eq.Z5c.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
-            return (0, H.h)(() => h.Z.open(eq.oAB.INVENTORY)), (0, i.jsx)(r.l_, { to: ey.Z.defaultRoute });
+            return (0, H.h)(() => E.Z.open(eq.oAB.INVENTORY)), (0, i.jsx)(r.l_, { to: ey.Z.defaultRoute });
         },
         isSessionRequired: !0
     },
@@ -374,8 +374,8 @@ function e3(e) {
 function e9(e) {
     let { channelId: t, guildId: n, pathname: i } = e;
     if (!B.Z.isConnected()) return;
-    let { location: a } = (0, eh.s1)();
-    if (a.pathname === i) null == eD.Z.getChannel(t) ? (0, eh.dL)(eq.Z5c.CHANNEL(n)) : (0, eh.dL)(i);
+    let { location: a } = (0, eE.s1)();
+    if (a.pathname === i) null == eD.Z.getChannel(t) ? (0, eE.dL)(eq.Z5c.CHANNEL(n)) : (0, eE.dL)(i);
 }
 class e6 extends a.PureComponent {
     componentDidMount() {
@@ -459,13 +459,13 @@ class e6 extends a.PureComponent {
                 let n = e3(e);
                 if (null == n) return;
                 let { guildId: i, channelId: a, messageId: l, threadId: o } = e5(n),
-                    c = (0, eE.S)(i),
-                    d = (0, eE.c)(a),
-                    E = (0, eE.c)(o),
-                    h = ew.Z.getGuildId(),
-                    m = h !== i;
+                    c = (0, eh.S)(i),
+                    d = (0, eh.c)(a),
+                    h = (0, eh.c)(o),
+                    E = ew.Z.getGuildId(),
+                    m = E !== i;
                 if ((c && m && u.Z.selectGuild(i), c && d)) {
-                    let n = ek.Z.getChannelId(h),
+                    let n = ek.Z.getChannelId(E),
                         r = n !== a;
                     if (!e$ || m || r || null != l) {
                         (e$ = !0),
@@ -477,11 +477,11 @@ class e6 extends a.PureComponent {
                         let { summaryId: e } = (0, s.parse)(t);
                         null != e && eC.ZP.setSelectedSummary(a, e);
                     }
-                    if (null != o && E) {
+                    if (null != o && h) {
                         let e = eM.ZP.getCurrentSidebarChannelId(n) !== o,
                             t = null != eM.ZP.getGuildSidebarState(i);
                         if (null != a && null != o && e) {
-                            if (t) (0, eh.dL)(eq.Z5c.CHANNEL(i, o, l));
+                            if (t) (0, eE.dL)(eq.Z5c.CHANNEL(i, o, l));
                             else {
                                 let e = { type: ep.Ff.THREAD };
                                 null != l && (e.initialMessageId = l),
@@ -497,7 +497,7 @@ class e6 extends a.PureComponent {
                     let c = ee.Z.getIsOpen();
                     if (a === eQ.oC.ROLE_SUBSCRIPTIONS) $.Z.closeSidebar();
                     else if (m && c) {
-                        let t = null == h && i === eq.ME,
+                        let t = null == E && i === eq.ME,
                             n = e === eq.Z5c.GUILD_DISCOVERY;
                         t || n ? $.Z.closeSidebar() : $.Z.openSidebar();
                     } else ((r && c) || (!m && !r)) && $.Z.closeSidebar();
@@ -510,7 +510,7 @@ class e6 extends a.PureComponent {
                             return (null === (t = (0, r.LX)(I, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))
                     )
-                        (0, eh.dL)(ey.Z.fallbackRoute);
+                        (0, eE.dL)(ey.Z.fallbackRoute);
                 }
             })(t, n);
     }
@@ -520,8 +520,8 @@ class e6 extends a.PureComponent {
             n = e3(t);
         if (null == n) return null;
         let { guildId: i, channelId: a, threadId: s } = e5(n),
-            r = (0, eE.S)(i) && i !== eq.ME && i !== eq.I_8;
-        if (null != a && (0, eE.c)(a) && !(0, eQ.AB)(a) && r) {
+            r = (0, eh.S)(i) && i !== eq.ME && i !== eq.I_8;
+        if (null != a && (0, eh.c)(a) && !(0, eQ.AB)(a) && r) {
             let n = eD.Z.getChannel(a);
             if (null == n)
                 eN.Z.loadThread(a).then(() =>
@@ -537,7 +537,7 @@ class e6 extends a.PureComponent {
                     state: e.state
                 };
             if (null != s) {
-                if (!((0, eE.c)(s) && !(0, eQ.AB)(a))) return null;
+                if (!((0, eh.c)(s) && !(0, eQ.AB)(a))) return null;
                 let n = eD.Z.getChannel(s);
                 if (null == n)
                     eN.Z.loadThread(s).then(() =>

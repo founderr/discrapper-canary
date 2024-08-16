@@ -9,8 +9,8 @@ var i,
     d = n(481060),
     u = n(393238),
     _ = n(963202),
-    E = n(353093),
-    h = n(605236),
+    h = n(353093),
+    E = n(605236),
     m = n(931515),
     I = n(807933),
     g = n(702646),
@@ -36,11 +36,11 @@ let N = new Set([p.v0.ADMIN_UPSELL, p.v0.DISCOVERY]),
                 delay: 500,
                 onRest: () => a(!1)
             }),
-            u = (0, h.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
+            u = (0, E.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
         switch (
             (r.useEffect(() => {
                 !u &&
-                    (0, h.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
+                    (0, E.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
                         dismissAction: f.L.TAKE_ACTION,
                         forceTrack: !0
                     });
@@ -117,7 +117,7 @@ function Z(e) {
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0
         }),
-        c = r.useMemo(() => l.filter((e) => !(0, E.EJ)(e)), [l]),
+        c = r.useMemo(() => l.filter((e) => !(0, h.EJ)(e)), [l]),
         { enableApplication: d } = (0, _.Fg)('ClanDiscoveryAdminContainer');
     return (
         r.useEffect(() => {

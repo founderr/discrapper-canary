@@ -15,8 +15,8 @@ var i,
     d = n(846519),
     u = n(477690),
     _ = n(481060),
-    E = n(570140),
-    h = n(239091),
+    h = n(570140),
+    E = n(239091),
     m = n(287259),
     I = n(785547),
     g = n(600164),
@@ -226,7 +226,7 @@ class U extends (i = s.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (E.Z.wait(h.Zy), this.props.scrollToRow(e, b));
+            null != e && (h.Z.wait(E.Zy), this.props.scrollToRow(e, b));
         }
     }
     handleHighlightedApplicationKey() {
@@ -388,7 +388,7 @@ class U extends (i = s.PureComponent) {
             x(this, 'handleApplicationContextMenu', (e, t) => {
                 this.setActiveRowKey(t);
                 let { analyticsContext: i } = this.props;
-                (0, h.jW)(
+                (0, E.jW)(
                     e,
                     async () => {
                         let { default: e } = await n.e('98335').then(n.bind(n, 485292));
@@ -421,7 +421,7 @@ function G(e) {
             sortKey: d,
             sortDirection: u,
             activeRowKey: _,
-            isNavigatingByKeyboard: E
+            isNavigatingByKeyboard: h
         } = (0, c.cj)([C.Z], () => ({
             sortKey: C.Z.sortKey,
             sortDirection: C.Z.sortDirection,
@@ -438,7 +438,7 @@ function G(e) {
         sortKey: d,
         sortDirection: u,
         activeRowKey: _,
-        isNavigatingByKeyboard: E
+        isNavigatingByKeyboard: h
     });
 }
 x(U, 'defaultProps', { stickyHeader: !1 });

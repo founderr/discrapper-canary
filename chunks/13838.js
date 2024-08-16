@@ -9,8 +9,8 @@ var i = n(392711),
     d = n(592125),
     u = n(271383),
     _ = n(430824),
-    E = n(131951),
-    h = n(19780),
+    h = n(131951),
+    E = n(19780),
     m = n(594174),
     I = n(979651),
     g = n(996106),
@@ -155,11 +155,11 @@ let x = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = {
-                    state: (0, p.zy)(h.Z.getState()),
-                    hostname: h.Z.getHostname(),
-                    pings: h.Z.getPings(),
-                    average_ping: h.Z.getAveragePing(),
-                    last_ping: h.Z.getLastPing()
+                    state: (0, p.zy)(E.Z.getState()),
+                    hostname: E.Z.getHostname(),
+                    pings: E.Z.getPings(),
+                    average_ping: E.Z.getAveragePing(),
+                    last_ping: E.Z.getLastPing()
                 };
             return !a().isEqual(i, t) && n(i), i;
         }
@@ -324,13 +324,13 @@ let x = {
                 d = (null == r ? void 0 : r.pid) != null ? o.ZP.getGameForPID(r.pid) : null,
                 u = (null == d ? void 0 : d.id) != null ? l.Z.getApplication(d.id) : null,
                 _ = null != u ? (0, f.Z)(u) : null,
-                E = null == r ? void 0 : r.sourceName,
-                h = {
+                h = null == r ? void 0 : r.sourceName,
+                E = {
                     active: null != r,
                     pid: null !== (t = null == r ? void 0 : r.pid) && void 0 !== t ? t : null,
-                    application: ((n = null != _), n) ? { name: E } : null
+                    application: ((n = null != _), n) ? { name: h } : null
                 };
-            return !a().isEqual(h, i) && s(h), h;
+            return !a().isEqual(E, i) && s(E), E;
         }
     },
     [v.zMe.VIDEO_STATE_UPDATE]: {
@@ -339,7 +339,7 @@ let x = {
         },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                i = { active: E.Z.isVideoEnabled() };
+                i = { active: h.Z.isVideoEnabled() };
             return !a().isEqual(i, t) && n(i), i;
         }
     }

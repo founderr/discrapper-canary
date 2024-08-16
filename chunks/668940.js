@@ -9,8 +9,8 @@ var a = n(442837),
     d = n(918701),
     u = n(471985),
     _ = n(702428),
-    E = n(703656),
-    h = n(683301),
+    h = n(703656),
+    E = n(683301),
     m = n(150192),
     I = n(889010),
     g = n(488905),
@@ -37,9 +37,9 @@ let A = (e) => {
         }
     },
     v = () => {
-        let { currentCategoryId: e, isViewingSearchResults: t } = (0, a.cj)([h.ZP], () => ({
-                currentCategoryId: h.ZP.getCurrentCategoryId(),
-                isViewingSearchResults: h.ZP.getMostRecentQuery().length > 0
+        let { currentCategoryId: e, isViewingSearchResults: t } = (0, a.cj)([E.ZP], () => ({
+                currentCategoryId: E.ZP.getCurrentCategoryId(),
+                isViewingSearchResults: E.ZP.getMostRecentQuery().length > 0
             })),
             n = (0, u.Z)(f.dr.QUEST_HOME_DESKTOP),
             l = (0, a.e7)([m.Z], () => m.Z.getDiscoveryCategories(), [], m.j),
@@ -51,7 +51,7 @@ let A = (e) => {
                           icon: A(e.categoryId)
                       })),
             v = (e) => {
-                (0, r.uY)(e, !0), c.Z.closeSidebar(), t && (0, r.AQ)(), (0, d.OG)() && e !== T.Gj.Quests && (0, E.uL)(S.Z5c.GUILD_DISCOVERY), !(0, d.OG)() && e === T.Gj.Quests && (0, E.uL)(S.Z5c.QUEST_HOME);
+                (0, r.uY)(e, !0), c.Z.closeSidebar(), t && (0, r.AQ)(), (0, d.OG)() && e !== T.Gj.Quests && (0, h.uL)(S.Z5c.GUILD_DISCOVERY), !(0, d.OG)() && e === T.Gj.Quests && (0, h.uL)(S.Z5c.QUEST_HOME);
             };
         return (0, i.jsxs)(s.Scroller, {
             className: N.sidebarContainer,

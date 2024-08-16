@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(554300),
     u = n(677277),
     _ = n(285865),
-    E = n(918701),
-    h = n(471985),
+    h = n(918701),
+    E = n(471985),
     m = n(702428),
     I = n(683301),
     g = n(296386),
@@ -47,8 +47,8 @@ t.Z = function () {
             isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0,
             currentHomepageCategoryId: I.ZP.getCurrentHomepageCategoryId()
         })),
-        L = (0, h.Z)(N.dr.QUEST_HOME_DESKTOP),
-        O = (0, E.OG)(),
+        L = (0, E.Z)(N.dr.QUEST_HOME_DESKTOP),
+        O = (0, h.OG)(),
         R = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j),
         x =
             null == R
@@ -58,7 +58,7 @@ t.Z = function () {
                       icon: Z(e.categoryId)
                   })),
         b = (e) => {
-            (0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, E.OG)() && e !== f.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === f.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
+            (0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, h.OG)() && e !== f.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY), !(0, h.OG)() && e === f.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
         };
     return (
         a.useEffect(() => {

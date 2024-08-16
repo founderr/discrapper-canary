@@ -17,8 +17,8 @@ var i = n(735250),
     d = n(481060),
     u = n(393238),
     _ = n(410030),
-    E = n(963202),
-    h = n(353093),
+    h = n(963202),
+    E = n(353093),
     m = n(702646),
     I = n(207796),
     g = n(497189),
@@ -43,8 +43,8 @@ function v(e) {
         n = (0, I.GN)((e) => e.game, o.Z),
         s = (0, I.GN)((e) => e.mode, o.Z),
         c = (0, I.GN)((e) => e.userUpsellScreen, o.Z),
-        E = (0, I.GN)((e) => e.setUserUpsellScreen, o.Z),
-        { ref: h, width: g } = (0, u.Z)(),
+        h = (0, I.GN)((e) => e.setUserUpsellScreen, o.Z),
+        { ref: E, width: g } = (0, u.Z)(),
         [S, C] = a.useState(0),
         v = (0, d.useSpring)({
             from: { scrollHeight: 0 },
@@ -71,7 +71,7 @@ function v(e) {
     switch (c) {
         case I.o2.USER_UPSELL:
             return (0, i.jsxs)('div', {
-                ref: h,
+                ref: E,
                 className: N.container,
                 children: [
                     (0, i.jsx)('div', {
@@ -111,7 +111,7 @@ function v(e) {
                         (0, i.jsx)('div', { className: N.backgroundImageBlur }),
                         (0, i.jsx)('div', {
                             className: N.backgroundImageContent,
-                            children: (0, i.jsx)(p.Z, { setScreen: E })
+                            children: (0, i.jsx)(p.Z, { setScreen: h })
                         })
                     ]
                 })
@@ -120,11 +120,11 @@ function v(e) {
 }
 function Z() {
     let e = (0, I.GN)((e) => e.game, o.Z),
-        { guilds: t } = (0, E.C3)({
+        { guilds: t } = (0, h.C3)({
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0
         }),
-        n = a.useMemo(() => t.filter((e) => !(0, h.EJ)(e)), [t]),
+        n = a.useMemo(() => t.filter((e) => !(0, E.EJ)(e)), [t]),
         s = (0, _.ZP)(),
         l = a.useMemo(() => A(e, s), [e, s]);
     return 0 === t.length

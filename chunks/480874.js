@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(183126),
     u = n(209613),
     _ = n(82295),
-    E = n(797614),
-    h = n(626135),
+    h = n(797614),
+    E = n(626135),
     m = n(26373),
     I = n(486622),
     g = n(922409),
@@ -42,7 +42,7 @@ function Z() {
             x(t.map((e) => e.channel.id));
         }, [t, x]);
     a.useEffect(() => {
-        h.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), E.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+        E.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), h.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
     let P = a.useCallback(
             (e) => {

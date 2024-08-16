@@ -14,14 +14,14 @@ var a = n(120356),
     d = n(689938),
     u = n(684351);
 function _(e) {
-    let { customStatus: t, focusedClassName: a, analyticsLocations: _, trackUserProfileAction: E } = e,
-        h = (0, o.O)(),
+    let { customStatus: t, focusedClassName: a, analyticsLocations: _, trackUserProfileAction: h } = e,
+        E = (0, o.O)(),
         m = () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                 return (t) =>
                     (0, i.jsx)(e, {
-                        sourceAnalyticsContext: h,
+                        sourceAnalyticsContext: E,
                         sourceAnalyticsLocations: _,
                         ...t
                     });
@@ -50,7 +50,7 @@ function _(e) {
                       ...e,
                       onClick: (e) => {
                           e.stopPropagation(),
-                              E({
+                              h({
                                   action: 'PRESS_CLEAR_CUSTOM_STATUS',
                                   analyticsLocations: _
                               }),
@@ -63,7 +63,7 @@ function _(e) {
                       })
                   }),
               action: () => {
-                  E({
+                  h({
                       action: 'PRESS_EDIT_CUSTOM_STATUS',
                       analyticsLocations: _
                   }),
@@ -77,7 +77,7 @@ function _(e) {
               icon: (e) => (0, i.jsx)('div', { className: s()(u.customEmojiPlaceholder, e) }),
               showIconFirst: !0,
               action: () => {
-                  E({
+                  h({
                       action: 'PRESS_ADD_CUSTOM_STATUS',
                       analyticsLocations: _
                   }),

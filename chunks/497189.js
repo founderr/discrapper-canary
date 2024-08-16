@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(481060),
     u = n(749210),
     _ = n(607070),
-    E = n(100527),
-    h = n(931240),
+    h = n(100527),
+    E = n(931240),
     m = n(970606),
     I = n(650461),
     g = n(353093),
@@ -74,8 +74,8 @@ function P(e) {
 }
 function M(e) {
     let { selectedGuildId: t, setSelectedGuildId: n, eligibleGuilds: s, onButtonClick: l, buttonText: c, hasCompletedUpsell: u, preventBack: _ } = e,
-        E = (0, C.GN)((e) => e.started, o.Z),
-        h = a.useMemo(
+        h = (0, C.GN)((e) => e.started, o.Z),
+        E = a.useMemo(
             () =>
                 s.map((e) => ({
                     value: e.id,
@@ -138,7 +138,7 @@ function M(e) {
                         (0, i.jsx)(d.SearchableSelect, {
                             className: L.upsellSelect,
                             value: t,
-                            options: h,
+                            options: E,
                             onChange: n
                         }),
                     !u &&
@@ -156,7 +156,7 @@ function M(e) {
                         })
                 ]
             }),
-            E &&
+            h &&
                 !_ &&
                 (0, i.jsx)('div', {
                     className: L.upsellStaticHeader,
@@ -185,7 +185,7 @@ t.Z = a.memo(function (e) {
         !r &&
             (0, m.TE)({
                 guildId: o,
-                location: E.Z.CLAN_DISCOVERY
+                location: h.Z.CLAN_DISCOVERY
             });
     }, [r, o]);
     let O = (0, c.e7)([S.Z], () => S.Z.getGuild(o)),
@@ -194,7 +194,7 @@ t.Z = a.memo(function (e) {
             !r &&
                 ((0, m._9)({
                     guildId: o,
-                    location: E.Z.CLAN_DISCOVERY
+                    location: h.Z.CLAN_DISCOVERY
                 }),
                 (0, T.q4)(
                     (e) => {
@@ -288,7 +288,7 @@ t.Z = a.memo(function (e) {
         ),
         W = a.useMemo(() => (null == R ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [R]),
         z = a.useCallback(async () => {
-            await (0, h.Zx)(o), u.Z.transitionToGuildSync('936317138904440892');
+            await (0, E.Zx)(o), u.Z.transitionToGuildSync('936317138904440892');
         }, [o]),
         K = a.useCallback(
             (e) =>

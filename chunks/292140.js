@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(244080),
     u = n(247530),
     _ = n(260889),
-    E = n(981631),
-    h = n(674563),
+    h = n(981631),
+    E = n(674563),
     m = n(689938);
 function I(e) {
     let { party: t, close: n, onSelect: I } = e,
@@ -29,10 +29,10 @@ function I(e) {
             let e = t.currentActivities
                 .filter((e) => {
                     var t, n;
-                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === h.wW.GAME;
+                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === E.wW.GAME;
                 })
                 .map((e) => e.game.name);
-            r.default.track(E.rMx.OPEN_POPOUT, {
+            r.default.track(h.rMx.OPEN_POPOUT, {
                 type: 'Now Playing Card Popout',
                 games_detected: e
             });

@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return E;
+        return h;
     }
 });
 var i = n(735250),
@@ -39,7 +39,7 @@ let d = 'url(#dark-purple-gradient)',
                 })
             ]
         }),
-    E = (e) => {
+    h = (e) => {
         let { children: t } = e,
             n = (0, i.jsxs)('div', {
                 className: c.coachTipContainer,

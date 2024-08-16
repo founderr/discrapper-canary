@@ -39,13 +39,13 @@ function d(e) {
             }
         );
     }, []);
-    let E = (t = u) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
+    let h = (t = u) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
     return (0, i.jsx)(
         'div',
         {
             className: c.container,
             children: n.map((e, t) => {
-                let n = Math.floor(t / E);
+                let n = Math.floor(t / h);
                 return (0, i.jsx)(
                     o.Z,
                     {

@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(703656),
     u = n(836768),
     _ = n(766219),
-    E = n(49898),
-    h = n(981631),
+    h = n(49898),
+    E = n(981631),
     m = n(689938),
     I = n(671590);
 function g(e) {
@@ -24,9 +24,9 @@ function g(e) {
             () =>
                 (function (e) {
                     switch (e) {
-                        case E.F$.SERVERS:
+                        case h.F$.SERVERS:
                             return (0, i.jsx)(c.ServerIcon, { color: 'currentColor' });
-                        case E.F$.QUESTS:
+                        case h.F$.QUESTS:
                             return (0, i.jsx)(c.QuestsIcon, { color: 'currentColor' });
                     }
                 })(t),
@@ -35,10 +35,10 @@ function g(e) {
         m = a.useMemo(() => (0, _.sm)(t), [t]),
         g = a.useCallback(() => {
             switch (((0, o.j)(() => u.d.setState({ selectedPage: t })), t)) {
-                case E.F$.QUESTS:
-                    return (0, d.uL)(h.Z5c.QUEST_HOME);
-                case E.F$.SERVERS:
-                    return (0, d.uL)(h.Z5c.GLOBAL_DISCOVERY_SERVERS);
+                case h.F$.QUESTS:
+                    return (0, d.uL)(E.Z5c.QUEST_HOME);
+                case h.F$.SERVERS:
+                    return (0, d.uL)(E.Z5c.GLOBAL_DISCOVERY_SERVERS);
             }
         }, [t]);
     return (0, i.jsxs)(c.Clickable, {
@@ -70,7 +70,7 @@ function p() {
             }),
             (0, i.jsx)('nav', {
                 className: I.nav,
-                children: E.mc.map((e) => (0, i.jsx)(g, { tab: e }, e))
+                children: h.mc.map((e) => (0, i.jsx)(g, { tab: e }, e))
             })
         ]
     });

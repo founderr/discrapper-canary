@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(481060),
     u = n(393238),
     _ = n(410030),
-    E = n(70097),
-    h = n(113434),
+    h = n(70097),
+    E = n(113434),
     m = n(497505),
     I = n(918701),
     g = n(78826),
@@ -28,11 +28,11 @@ function N(e) {
     let { quest: n, errorHints: a, warningHints: s } = e,
         { ref: r, height: o = 0 } = (0, u.Z)([a]),
         c = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        _ = (0, h.z)(n),
-        E = !c && !_ && a.length > 0,
+        _ = (0, E.z)(n),
+        h = !c && !_ && a.length > 0,
         m = (0, d.useSpring)({
-            opacity: E ? 1 : 0,
-            height: E ? o : 0,
+            opacity: h ? 1 : 0,
+            height: h ? o : 0,
             config: T.Y
         });
     return (0, i.jsxs)(i.Fragment, {
@@ -90,11 +90,11 @@ function A(e) {
         x = a.useMemo(() => (0, I.nP)(n.config.assets.hero), [n]),
         b = a.useContext(o.S).reducedMotion.enabled,
         P = (0, I.Mi)(n, m.jn.GIFT_INVENTORY_FOR_YOU),
-        M = (0, h.tP)(n),
+        M = (0, E.tP)(n),
         D = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         y = a.useRef(s),
         j = a.useRef(null),
-        U = (0, h.B6)(n.config.expiresAt, {
+        U = (0, E.B6)(n.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         });
@@ -121,7 +121,7 @@ function A(e) {
                                   id: 'QuestTileBanner_heroAnimated',
                                   children: (e) => (
                                       null != e.current && (j.current = e.current),
-                                      (0, i.jsx)(E.Z, {
+                                      (0, i.jsx)(h.Z, {
                                           ref: e,
                                           autoPlay: !b && s,
                                           loop: !0,

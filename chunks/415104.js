@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(602667),
     u = n(439826),
     _ = n(43779),
-    E = n(981631),
-    h = n(882442);
+    h = n(981631),
+    E = n(882442);
 function m(e) {
     let { quest: t, className: n, questContent: s, contentPosition: m, rowIndex: I } = e,
         [g, p] = a.useState(!1),
@@ -25,7 +25,7 @@ function m(e) {
             p(!0),
                 (0, l.dA)({
                     questId: t.id,
-                    event: E.rMx.QUEST_HOVER,
+                    event: h.rMx.QUEST_HOVER,
                     properties: (0, l.mH)(s)
                 });
         }, [p, s, t.id]),
@@ -44,7 +44,7 @@ function m(e) {
                 ref: (t) => {
                     e.current = t;
                 },
-                className: r()(h.container, n),
+                className: r()(E.container, n),
                 onMouseEnter: C,
                 onMouseLeave: N,
                 children: [
