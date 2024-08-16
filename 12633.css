@@ -20660,7 +20660,8 @@ span.clanTag_a31c43 {
     object-fit: contain;
     -o-object-position: top;
     object-position: top;
-    opacity: .2
+    opacity: .3;
+    filter: blur(5px)
 }
 
 .container_b9cd33 {
