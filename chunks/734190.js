@@ -74,8 +74,8 @@ t.Z = l.memo(function (e) {
             [t.id]
         ),
         k = null == O ? 0 : O.length,
-        { role: B, ...H } = (0, s.JA)(t.id),
-        V = l.useRef(null),
+        { role: B, ...V } = (0, s.JA)(t.id),
+        H = l.useRef(null),
         F =
             j > 0
                 ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
@@ -97,8 +97,8 @@ t.Z = l.memo(function (e) {
                       style: { transform: 'rotateX(180deg) translateY(-9px)' }
                   }),
             (0, i.jsx)(c.FocusRing, {
-                focusTarget: V,
-                ringTarget: V,
+                focusTarget: H,
+                ringTarget: H,
                 offset: {
                     top: 2,
                     bottom: 2,
@@ -116,8 +116,8 @@ t.Z = l.memo(function (e) {
                     children: [
                         !y || D || r ? null : (0, i.jsx)('div', { className: a()(L.unread, L.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {
-                            ...H,
-                            innerRef: V,
+                            ...V,
+                            innerRef: H,
                             className: L.link,
                             onClick: w,
                             'aria-label': F,

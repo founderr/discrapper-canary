@@ -14,8 +14,8 @@ var i = n(470079),
     o = n(442837),
     l = n(581364),
     d = n(768581),
-    c = n(823379),
-    r = n(399654),
+    r = n(823379),
+    c = n(399654),
     m = n(844439);
 let u = {
         '1181475143340539995': {
@@ -215,15 +215,15 @@ function _(e) {
                     [t, n]
                 );
             i.useEffect(() => {
-                (0, r.a)(l);
+                (0, c.a)(l);
             }, [l]);
-            let { fetchState: d, recommendationsSections: c } = (0, o.cj)([m.ZP], () => ({
+            let { fetchState: d, recommendationsSections: r } = (0, o.cj)([m.ZP], () => ({
                 fetchState: m.ZP.getFetchState(l),
                 recommendationsSections: m.ZP.getRecommendations(l)
             }));
             return {
                 fetchState: d,
-                recommendationsSections: c
+                recommendationsSections: r
             };
         })({ channelId: t });
     return {
@@ -263,7 +263,7 @@ function _(e) {
                               application: a
                           };
                       })
-                      .filter(c.lm);
+                      .filter(r.lm);
         }, [u])
     };
 }

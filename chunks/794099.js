@@ -1,12 +1,12 @@
-a.d(t, {
+s.d(t, {
     F4: function () {
-        return s;
+        return i;
     },
     vc: function () {
-        return i;
+        return a;
     }
 });
-let n = (0, a(818083).B)({
+let n = (0, s(818083).B)({
         kind: 'user',
         id: '2023-06_unique_username_registration',
         label: 'Unique Username Registration',
@@ -49,5 +49,5 @@ let n = (0, a(818083).B)({
             }
         ]
     }),
-    s = () => n.useExperiment({ location: '83ca1a_3' }, { autoTrackExposure: !1 }),
-    i = () => n.getCurrentConfig({ location: '83ca1a_4' }, { autoTrackExposure: !1 }).suggestions;
+    i = () => n.useExperiment({ location: '83ca1a_3' }, { autoTrackExposure: !1 }),
+    a = () => n.getCurrentConfig({ location: '83ca1a_4' }, { autoTrackExposure: !1 }).suggestions;

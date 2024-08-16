@@ -47,8 +47,8 @@ var i,
     G = n(301342),
     k = n(471995),
     B = n(906817),
-    H = n(429122),
-    V = n(285573),
+    V = n(429122),
+    H = n(285573),
     F = n(995993),
     W = n(910595),
     z = n(466935),
@@ -389,7 +389,7 @@ class ed extends (i = r.PureComponent) {
             }),
             eu(this, 'getSectionFooterHeight', (e) => {
                 let { guildChannels: t, voiceStates: n, selectedVoiceChannelId: i, selectedChannelId: l, optInEnabled: r, guildChannelsVersion: a } = this.props;
-                return (0, H.dt)({
+                return (0, V.dt)({
                     sectionIndex: e,
                     guildChannels: t,
                     guildChannelsVersion: a,
@@ -555,7 +555,7 @@ class ed extends (i = r.PureComponent) {
                             );
                         case el.z.GUILD_DIRECTORY:
                             return (0, l.jsx)(
-                                V.Z,
+                                H.Z,
                                 {
                                     guild: i,
                                     selectedChannelId: s,
@@ -697,7 +697,7 @@ class ed extends (i = r.PureComponent) {
                 let { section: t } = e,
                     { guildChannels: n, guildChannelsVersion: i, voiceStates: r, selectedChannelId: a, selectedVoiceChannelId: s, optInEnabled: o, guildId: c } = this.props;
                 return (0, l.jsx)(
-                    H.ZP,
+                    V.ZP,
                     {
                         guildId: c,
                         guildChannels: n,
@@ -708,7 +708,7 @@ class ed extends (i = r.PureComponent) {
                         selectedVoiceChannelId: s,
                         optInEnabled: o
                     },
-                    (0, H.eo)(t, n, o)
+                    (0, V.eo)(t, n, o)
                 );
             }),
             eu(this, 'getAnchorId', (e, t) => {

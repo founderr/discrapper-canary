@@ -8,8 +8,8 @@ var i,
     o,
     l,
     d,
-    c,
-    r = n(442837),
+    r,
+    c = n(442837),
     m = n(570140);
 ((i = d || (d = {}))[(i.FETCHING = 0)] = 'FETCHING'), (i[(i.FETCHED = 1)] = 'FETCHED'), (i[(i.ERROR = 2)] = 'ERROR');
 let u = {},
@@ -20,7 +20,7 @@ function _(e) {
     return 'location:'.concat(t, ' channelId:').concat('0', ' withCommands:').concat(i);
 }
 let E = Object.freeze([]);
-class g extends (c = r.ZP.Store) {
+class g extends (r = c.ZP.Store) {
     getLastFetchTimeMs(e) {
         let { location: t, channelId: n, withCommands: i } = e;
         return p[

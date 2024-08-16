@@ -2,16 +2,16 @@ t(47120);
 var a = t(735250),
     r = t(470079),
     i = t(481060),
-    s = t(467138),
-    o = t(246364),
-    l = t(983736),
-    c = t(5056),
-    d = t(565321),
-    u = t(297619),
-    m = t(456935),
-    _ = t(446945),
-    f = t(700833),
-    C = t(592286),
+    s = t(246364),
+    o = t(983736),
+    l = t(5056),
+    c = t(565321),
+    d = t(297619),
+    u = t(456935),
+    m = t(446945),
+    _ = t(700833),
+    f = t(592286),
+    C = t(981631),
     h = t(689938);
 n.Z = function (e) {
     let { guild: n, submittedGuildJoinRequestsCount: t, onFormFieldUpdate: x, hideVerificationLevelField: p, isClanContext: g, formDescription: T, onFieldsSave: E, onDescriptionSave: I } = e,
@@ -20,21 +20,21 @@ n.Z = function (e) {
         [y, S] = r.useState(e.formFields);
     r.useEffect(() => S(e.formFields), [e.formFields]);
     let A = r.useRef(e.formFields),
-        M = r.useMemo(() => y.filter(l.kT), [y]),
-        j = r.useMemo(() => y.filter(l._C), [y]),
+        M = r.useMemo(() => y.filter(o.kT), [y]),
+        j = r.useMemo(() => y.filter(o._C), [y]),
         R = j.length,
-        L = r.useMemo(() => y.length === C.nx, [y]),
-        O = r.useMemo(() => y.some(o.J), [y]),
-        Z = r.useMemo(() => y.some((e) => !(0, o.J)(e)), [y]),
+        L = r.useMemo(() => y.length === f.nx, [y]),
+        O = r.useMemo(() => y.some(s.J), [y]),
+        Z = r.useMemo(() => y.some((e) => !(0, s.J)(e)), [y]),
         k = R > 0,
-        D = (0, s.e)(n.id) || g,
+        D = n.hasFeature(C.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || g,
         P = r.useCallback(() => {
             (0, i.showToast)((0, i.createToast)(h.Z.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE));
         }, []),
         w = r.useCallback(
             async (e) => {
                 if (!b.current) {
-                    (b.current = !0), g && (e = e.filter((e) => e.field_type !== o.QJ.TERMS));
+                    (b.current = !0), g && (e = e.filter((e) => e.field_type !== s.QJ.TERMS));
                     try {
                         await E(n.id, e), x(), S(e), (A.current = e);
                     } catch (e) {
@@ -48,7 +48,7 @@ n.Z = function (e) {
         ),
         F = r.useCallback(
             async (e) => {
-                let n = e.field_type === o.QJ.TERMS ? [e, ...y] : [...y, e];
+                let n = e.field_type === s.QJ.TERMS ? [e, ...y] : [...y, e];
                 await w(n);
             },
             [y, w]
@@ -87,20 +87,20 @@ n.Z = function (e) {
         ),
         H = (0, a.jsxs)(a.Fragment, {
             children: [
-                !p && (0, a.jsx)(m.ZP, { guild: n }),
-                (0, a.jsx)(d.Z, {
+                !p && (0, a.jsx)(u.ZP, { guild: n }),
+                (0, a.jsx)(c.Z, {
                     formDescription: T,
                     guildId: n.id,
                     onSave: I
                 }),
                 !O &&
                     !L &&
-                    (0, a.jsx)(u.Z, {
+                    (0, a.jsx)(d.Z, {
                         addFormField: F,
                         guild: n
                     }),
                 M.map((e) =>
-                    (0, f.a0)({
+                    (0, _.a0)({
                         dropHoveredIndex: N,
                         formField: e,
                         guild: n,
@@ -121,14 +121,14 @@ n.Z = function (e) {
               children: [
                   !g && H,
                   !Z &&
-                      (0, a.jsx)(c.Z, {
+                      (0, a.jsx)(l.Z, {
                           addFormField: F,
                           showManualApprovalWarning: !g && !k,
                           guild: n,
                           showHeader: !g
                       }),
                   j.map((e) =>
-                      (0, f.a0)({
+                      (0, _.a0)({
                           dropHoveredIndex: N,
                           formField: e,
                           guild: n,
@@ -144,7 +144,7 @@ n.Z = function (e) {
                   ),
                   Z &&
                       !L &&
-                      (0, a.jsx)(_.Z, {
+                      (0, a.jsx)(m.Z, {
                           addFormField: F,
                           guild: n
                       })

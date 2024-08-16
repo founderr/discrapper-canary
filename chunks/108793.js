@@ -1,67 +1,67 @@
-a.d(t, {
+s.d(t, {
     Z: function () {
-        return f;
+        return S;
     }
 }),
-    a(47120);
-var n = a(735250),
-    s = a(470079),
-    i = a(338545),
-    r = a(481060),
-    o = a(230711),
-    l = a(318661),
-    u = a(63063),
-    d = a(51144),
-    c = a(544508),
-    E = a(801461),
-    _ = a(981631),
-    m = a(689938),
-    g = a(740080);
-function f(e) {
-    let { userRef: t, usernameSuggestionLoading: a = !1, oneClickFlow: f = !1, ...S } = e,
-        { user: I, editState: T, onClose: N } = S,
-        h = (0, l.ZP)(I.id),
-        O = (function (e, t, a) {
+    s(47120);
+var n = s(735250),
+    i = s(470079),
+    a = s(338545),
+    r = s(481060),
+    o = s(230711),
+    l = s(318661),
+    u = s(63063),
+    c = s(51144),
+    d = s(544508),
+    E = s(801461),
+    _ = s(981631),
+    g = s(689938),
+    m = s(740080);
+function S(e) {
+    let { userRef: t, usernameSuggestionLoading: s = !1, oneClickFlow: S = !1, ...I } = e,
+        { user: T, editState: N, onClose: O } = I,
+        h = (0, l.ZP)(T.id),
+        f = (function (e, t, s) {
             switch (e) {
                 case E.Wq.EDIT_USERNAME:
                     return {
-                        header: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
-                        subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
+                        header: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
+                        subtitle: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
                     };
                 case E.Wq.EDIT_DISPLAY_NAME:
                     return {
-                        header: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_1_TITLE,
-                        subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_1_SUBTITLE
+                        header: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_1_TITLE,
+                        subtitle: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_1_SUBTITLE
                     };
                 case E.Wq.PREVIEW:
                     return {
-                        header: m.Z.Messages.POMELO_EXISTING_FLOW_COMPLETION_TITLE.format({ displayName: t }),
-                        subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_2.format({
+                        header: g.Z.Messages.POMELO_EXISTING_FLOW_COMPLETION_TITLE.format({ displayName: t }),
+                        subtitle: g.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_2.format({
                             onClick: () => {
-                                a(), o.Z.open(_.oAB.ACCOUNT);
+                                s(), o.Z.open(_.oAB.ACCOUNT);
                             }
                         })
                     };
                 case E.Wq.SUGGESTION:
                     return {
-                        header: m.Z.Messages.POMELO_ACTION_LABEL_OCF,
-                        subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_OCF.format(),
-                        link: m.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({ helpdeskArticle: u.Z.getArticleURL(_.BhN.POMELO_FAQ) })
+                        header: g.Z.Messages.POMELO_ACTION_LABEL_OCF,
+                        subtitle: g.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_OCF.format(),
+                        link: g.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({ helpdeskArticle: u.Z.getArticleURL(_.BhN.POMELO_FAQ) })
                     };
                 default:
                     return {
-                        header: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
-                        subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
+                        header: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
+                        subtitle: g.Z.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
                     };
             }
-        })(T, d.ZP.getName(I), N),
-        [M, v] = (0, r.useSpring)(() => ({
+        })(N, c.ZP.getName(T), O),
+        [M, L] = (0, r.useSpring)(() => ({
             opacity: 0,
             y: 10
         }));
     return (
-        s.useEffect(() => {
-            v({
+        i.useEffect(() => {
+            L({
                 y: 0,
                 opacity: 1,
                 from: {
@@ -69,47 +69,47 @@ function f(e) {
                     opacity: 0
                 }
             });
-        }, [v, T]),
+        }, [L, N]),
         (0, n.jsxs)('div', {
-            className: g.displayNameContainer,
+            className: m.displayNameContainer,
             children: [
-                (0, n.jsxs)(i.animated.div, {
+                (0, n.jsxs)(a.animated.div, {
                     style: {
                         opacity: M.opacity,
                         y: M.y
                     },
                     children: [
                         (0, n.jsx)(r.Heading, {
-                            className: g.title,
+                            className: m.title,
                             color: 'header-primary',
                             variant: 'heading-xl/extrabold',
-                            children: O.header
+                            children: f.header
                         }),
                         (0, n.jsxs)('div', {
-                            className: g.subtitle,
+                            className: m.subtitle,
                             children: [
                                 (0, n.jsx)(r.Heading, {
                                     color: 'header-secondary',
                                     variant: 'heading-sm/medium',
-                                    children: O.subtitle
+                                    children: f.subtitle
                                 }),
-                                null != O.link &&
+                                null != f.link &&
                                     (0, n.jsx)(r.Text, {
-                                        className: g.link,
+                                        className: m.link,
                                         color: 'header-secondary',
                                         variant: 'text-sm/medium',
-                                        children: O.link
+                                        children: f.link
                                     })
                             ]
                         })
                     ]
                 }),
-                (0, n.jsx)(c.Z, {
-                    ...S,
+                (0, n.jsx)(d.Z, {
+                    ...I,
                     displayProfile: h,
                     ref: t,
-                    usernameSuggestionLoading: a,
-                    oneClickFlow: f
+                    usernameSuggestionLoading: s,
+                    oneClickFlow: S
                 })
             ]
         })

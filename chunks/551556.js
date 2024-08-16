@@ -1,18 +1,18 @@
-a.d(t, {
+s.d(t, {
     Z: function () {
         return r;
     }
 });
-var n = a(735250);
-a(470079);
-var s = a(692547),
-    i = a(325767);
+var n = s(735250);
+s(470079);
+var i = s(692547),
+    a = s(325767);
 function r(e) {
-    let { width: t = 24, height: a = 24, color: r = s.Z.unsafe_rawColors.WHITE_500.css, backgroundColor: o = s.Z.unsafe_rawColors.BRAND_500.css, ...l } = e;
+    let { width: t = 24, height: s = 24, color: r = i.Z.unsafe_rawColors.WHITE_500.css, backgroundColor: o = i.Z.unsafe_rawColors.BRAND_500.css, ...l } = e;
     return (0, n.jsxs)('svg', {
-        ...(0, i.Z)(l),
+        ...(0, a.Z)(l),
         width: t,
-        height: a,
+        height: s,
         viewBox: '0 0 14 14',
         children: [
             (0, n.jsx)('path', {

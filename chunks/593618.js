@@ -256,7 +256,7 @@ function j(e) {
 function W(e) {
     let { guild: t, includeActivity: n = !0 } = e,
         i = (0, E.Z)(t),
-        a = (0, I.E)(t.id),
+        a = (0, I.E)(t),
         o = null != a ? (0, r.jsx)(j, { guildJoinRequestStatus: a }) : null,
         l = n ? (0, r.jsx)(Y, { guild: t }) : null,
         d = (0, u.e7)([T.Z], () => T.Z.isViewingRoles(t.id)),

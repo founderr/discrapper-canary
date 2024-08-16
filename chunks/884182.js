@@ -27,11 +27,11 @@ function j(e) {
             footer: t
         });
     if (2 === o) return (0, i.jsx)(T, { itemsForLayout: n });
-    if (3 === o) return (0, i.jsx)(v, { itemsForLayout: n });
-    if (4 === o) return (0, i.jsx)(y, { itemsForLayout: n });
+    if (3 === o) return (0, i.jsx)(E, { itemsForLayout: n });
+    if (4 === o) return (0, i.jsx)(v, { itemsForLayout: n });
     let l = o % 3;
     return (0, i.jsxs)(i.Fragment, {
-        children: [1 === l && (0, i.jsx)(M, { itemsForLayout: n.slice(0, l) }), 2 === l && (0, i.jsx)(T, { itemsForLayout: n.slice(0, l) }), 0 === l ? (0, i.jsx)(E, { itemsForLayout: n }) : (0, i.jsx)(E, { itemsForLayout: n.slice(l) })]
+        children: [1 === l && (0, i.jsx)(M, { itemsForLayout: n.slice(0, l) }), 2 === l && (0, i.jsx)(T, { itemsForLayout: n.slice(0, l) }), 0 === l ? (0, i.jsx)(y, { itemsForLayout: n }) : (0, i.jsx)(y, { itemsForLayout: n.slice(l) })]
     });
 }
 function M(e) {
@@ -43,7 +43,7 @@ function M(e) {
             [I.oneByOneGridMosaic]: !t,
             [I.hasFooter]: null != o
         }),
-        children: (0, i.jsx)(w, {
+        children: (0, i.jsx)(O, {
             props: l,
             useFullWidth: !t,
             isSingleItem: !0,
@@ -60,7 +60,7 @@ function T(e) {
                 'div',
                 {
                     className: I.oneByTwoGridItem,
-                    children: (0, i.jsx)(w, {
+                    children: (0, i.jsx)(O, {
                         props: e,
                         maxWidth: p,
                         maxHeight: p
@@ -71,14 +71,14 @@ function T(e) {
         )
     });
 }
-function v(e) {
+function E(e) {
     let { itemsForLayout: n } = e;
     return (0, i.jsxs)('div', {
         className: s()(I.oneByTwoGrid, I.oneByTwoLayoutThreeGrid),
         children: [
             (0, i.jsx)('div', {
                 className: I.oneByTwoSoloItem,
-                children: (0, i.jsx)(w, {
+                children: (0, i.jsx)(O, {
                     props: n[0],
                     maxWidth: C
                 })
@@ -92,7 +92,7 @@ function v(e) {
                             'div',
                             {
                                 className: I.twoByOneGridItem,
-                                children: (0, i.jsx)(w, {
+                                children: (0, i.jsx)(O, {
                                     props: e,
                                     maxWidth: f,
                                     maxHeight: g
@@ -106,13 +106,13 @@ function v(e) {
         ]
     });
 }
-function y(e) {
+function v(e) {
     let { itemsForLayout: n } = e;
     return (0, i.jsx)('div', {
         className: I.twoByTwoGrid,
         children: n.map((e) =>
             (0, i.jsx)(
-                w,
+                O,
                 {
                     props: e,
                     maxWidth: p,
@@ -123,13 +123,13 @@ function y(e) {
         )
     });
 }
-function E(e) {
+function y(e) {
     let { itemsForLayout: n } = e;
     return (0, i.jsx)('div', {
         className: I.threeByThreeGrid,
         children: n.map((e) =>
             (0, i.jsx)(
-                w,
+                O,
                 {
                     props: e,
                     maxWidth: x,
@@ -145,14 +145,14 @@ let N = (e) => ({
         imgContainerClassName: I.lazyImgContainer,
         imgClassName: I.lazyImg
     }),
-    O = (e) => ({ className: s()(e, I.lazyImg) });
-function w(e) {
+    w = (e) => ({ className: s()(e, I.lazyImg) });
+function O(e) {
     let { props: n, maxWidth: t = h.mT, maxHeight: o = h.Jj, useFullWidth: l = !0, isSingleItem: s = !1, footer: a } = e,
         r = n.item.type,
         u = {
             ...n,
             ...('IMAGE' === r && N(n.className)),
-            ...('VIDEO' === r && O(n.className)),
+            ...('VIDEO' === r && w(n.className)),
             mediaLayoutType: h.hV.MOSAIC,
             maxWidth: t,
             maxHeight: o,
@@ -228,7 +228,7 @@ n.Z = function (e) {
                             'div',
                             {
                                 className: I.nonVisualMediaItem,
-                                children: (0, i.jsx)(w, { props: e })
+                                children: (0, i.jsx)(O, { props: e })
                             },
                             e.item.uniqueId
                         )

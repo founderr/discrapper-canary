@@ -16,7 +16,7 @@ t.Z = l.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
         m = t.id,
         C = (0, r.e7)([h.Z], () => h.Z.getGuild(m)),
-        I = (0, s.E)(m),
+        I = (0, s.E)(C),
         E = (0, r.e7)([p.Z], () => p.Z.isFocused()),
         N = (0, r.e7)([u.Z], () => u.Z.isUnavailable(m)),
         x = (0, c.Z)((e) => e.guildId),

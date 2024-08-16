@@ -1,21 +1,21 @@
-a.d(t, {
+s.d(t, {
     Z: function () {
-        return m;
+        return g;
     }
 });
-var n = a(735250);
-a(470079);
-var s = a(120356),
-    i = a.n(s),
-    r = a(481060),
-    o = a(63063),
-    l = a(773446),
-    u = a(572264),
-    d = a(981631),
-    c = a(689938),
-    E = a(740080),
-    _ = a(849399);
-function m(e) {
+var n = s(735250);
+s(470079);
+var i = s(120356),
+    a = s.n(i),
+    r = s(481060),
+    o = s(63063),
+    l = s(773446),
+    u = s(572264),
+    c = s(981631),
+    d = s(689938),
+    E = s(740080),
+    _ = s(849399);
+function g(e) {
     let { user: t } = e;
     return (0, n.jsxs)('div', {
         className: E.infoContainer,
@@ -29,22 +29,22 @@ function m(e) {
                 className: E.title,
                 color: 'header-primary',
                 variant: 'heading-xl/bold',
-                children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_TITLE.format({ n: t.tag })
+                children: d.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_TITLE.format({ n: t.tag })
             }),
             (0, n.jsx)(r.Text, {
                 className: E.subtitleInfo,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_1.format()
+                children: d.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_1.format()
             }),
             (0, n.jsx)(r.Text, {
                 className: E.prompt,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({ helpdeskArticle: o.Z.getArticleURL(d.BhN.POMELO_FAQ) })
+                children: d.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({ helpdeskArticle: o.Z.getArticleURL(c.BhN.POMELO_FAQ) })
             }),
             (0, n.jsxs)('div', {
-                className: i()([E.infoItem, E.infoItemSpacing]),
+                className: a()([E.infoItem, E.infoItemSpacing]),
                 children: [
                     (0, n.jsx)('div', {
                         className: E.infoIcon,
@@ -58,12 +58,12 @@ function m(e) {
                     (0, n.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
-                        children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_ITEM_1.format()
+                        children: d.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_ITEM_1.format()
                     })
                 ]
             }),
             (0, n.jsxs)('div', {
-                className: i()([E.infoItem, E.infoItemSpacing]),
+                className: a()([E.infoItem, E.infoItemSpacing]),
                 children: [
                     (0, n.jsx)('div', {
                         className: E.infoIcon,
@@ -75,7 +75,7 @@ function m(e) {
                     (0, n.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
-                        children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_ITEM_2.format()
+                        children: d.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_ITEM_2.format()
                     })
                 ]
             }),
@@ -92,7 +92,7 @@ function m(e) {
                     (0, n.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
-                        children: c.Z.Messages.UNIQUE_USERNAME_EXISTING_FLOW_PROMPT_ITEM_3.format({ username: t.tag })
+                        children: d.Z.Messages.UNIQUE_USERNAME_EXISTING_FLOW_PROMPT_ITEM_3.format({ username: t.tag })
                     })
                 ]
             })

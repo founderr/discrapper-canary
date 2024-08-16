@@ -38,8 +38,8 @@ var i,
     G = n(981631);
 let k = !1,
     B = !1,
-    H = [],
     V = [],
+    H = [],
     F = {},
     W = {},
     z = new Set(),
@@ -166,14 +166,14 @@ function en(e, t, n) {
     }
     let k = 1 === m.length,
         B = [],
-        H = new Set(),
-        V = new Set();
+        V = new Set(),
+        H = new Set();
     for (let e of t) {
         let n = ee(e.id),
             i = A.Z.getChannel(n),
             l = null != i ? i.getGuildId() : null,
             r = O.Z.getGuild(l);
-        if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (k = !0));
+        if ((H.has(l) && V.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (k = !0));
         else {
             let e = o()(w.Z.getVoiceStatesForChannel(i.id))
                 .map((e) => {
@@ -184,9 +184,9 @@ function en(e, t, n) {
                 .orderBy([et], ['desc'])
                 .value();
             e.filter((e) => !g.includes(e.id)).forEach((e) => t.push(e)),
-                k ? !V.has(l) && (u = null) : ((u = r), (k = !0)),
-                V.add(l),
-                H.add(n),
+                k ? !H.has(l) && (u = null) : ((u = r), (k = !0)),
+                H.add(l),
+                V.add(n),
                 B.push({
                     channel: i,
                     guild: r,
@@ -222,7 +222,7 @@ let el = o().throttle(() => {
         var e;
         if (!ei()) return;
         z.clear(),
-            (V = (H = (function (e) {
+            (H = (V = (function (e) {
                 let t = K(),
                     n = en.bind(null, t);
                 return o()(e).mapValues(n);
@@ -263,10 +263,10 @@ class ea extends (i = c.ZP.Store) {
         this.syncWith([D.default, C.Z, y.Z, M.Z, w.Z, L.Z, j.Z, b.Z, S.Z], er), this.waitFor(E.Z, O.Z, C.Z, D.default, S.Z);
     }
     get currentActivityParties() {
-        return H;
+        return V;
     }
     get nowPlayingCards() {
-        return V;
+        return H;
     }
     get isMounted() {
         return k;
@@ -286,7 +286,7 @@ class ea extends (i = c.ZP.Store) {
         : (l[r] = a);
 let es = new ea(u.Z, {
     LOGOUT: function () {
-        (k = !1), (H = []), (V = []), z.clear();
+        (k = !1), (V = []), (H = []), z.clear();
     },
     NOW_PLAYING_MOUNTED: function () {
         (k = !0), el();
