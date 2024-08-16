@@ -20,8 +20,8 @@ var i = n(735250),
     g = n(667204),
     M = n(873387),
     A = n(147391),
-    C = n(978983),
-    I = n(592125),
+    I = n(978983),
+    C = n(592125),
     x = n(703558),
     h = n(430824),
     f = n(626135),
@@ -33,7 +33,7 @@ var i = n(735250),
     b = n(834033);
 function R(e) {
     let { toggleShowMenu: t, showMenu: n, className: a, channelId: d, imageUrl: r, mimeType: c } = e,
-        m = (0, o.e7)([I.Z], () => I.Z.getChannel(d));
+        m = (0, o.e7)([C.Z], () => C.Z.getChannel(d));
     return null == m
         ? null
         : (0, i.jsx)(l.Popout, {
@@ -74,13 +74,13 @@ function R(e) {
           });
 }
 function y(e) {
-    let { onSelect: t, onClose: n, channel: I, imageUrl: R, mimeType: y } = e,
-        S = (0, o.e7)([h.Z], () => h.Z.getGuild(I.guild_id)),
-        { fetchState: U, imageRecCommandContexts: Z } = (0, P.hR)({ channelId: I.id }),
+    let { onSelect: t, onClose: n, channel: C, imageUrl: R, mimeType: y } = e,
+        S = (0, o.e7)([h.Z], () => h.Z.getGuild(C.guild_id)),
+        { fetchState: U, imageRecCommandContexts: Z } = (0, P.hR)({ channelId: C.id }),
         F = U === v.M.FETCHING,
-        D = (0, M.g)(I),
+        D = (0, M.g)(C),
         L = (0, s.PL)(!0, !0),
-        w = (0, s.LD)(I.guild_id, !0);
+        w = (0, s.LD)(C.guild_id, !0);
     a.useEffect(() => {
         (U === v.M.ERROR || (U === v.M.FETCHED && 0 === Z.length)) && n();
     }, [U, Z.length, n]),
@@ -88,12 +88,12 @@ function y(e) {
             var e, t;
             if (!F && 0 !== Z.length)
                 f.default.track(T.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
-                    guild_id: null !== (e = null == I ? void 0 : I.guild_id) && void 0 !== e ? e : '',
-                    channel_id: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : '',
+                    guild_id: null !== (e = null == C ? void 0 : C.guild_id) && void 0 !== e ? e : '',
+                    channel_id: null !== (t = null == C ? void 0 : C.id) && void 0 !== t ? t : '',
                     application_ids: [...Z.map((e) => Number(e.application.id))],
                     command_ids: [...Z.map((e) => Number(e.command.id))]
                 });
-        }, [Z, I, F]);
+        }, [Z, C, F]);
     let j = a.useCallback(
             async (e) => {
                 let t = await fetch(R),
@@ -101,7 +101,7 @@ function y(e) {
                     i = y.join('/'),
                     a = new File([n], 'image'.concat((0, P.Qm)({ contentType: i })), { type: i });
                 d.Z.setFile({
-                    channelId: I.id,
+                    channelId: C.id,
                     id: e,
                     file: {
                         id: e,
@@ -111,45 +111,49 @@ function y(e) {
                     draftType: x.d.SlashCommand
                 });
             },
-            [R, I.id, y]
+            [R, C.id, y]
         ),
         H = a.useCallback(
             async (e, t, n) => {
-                var i, a;
+                var i, a, o, l;
                 if (!D) return;
-                let o = P.Id[e.id];
-                await j(o.imageOption),
-                    null != p.Z.getActiveCommand(I.id) &&
+                let d = P.Id[e.id],
+                    c = e.applicationId,
+                    E = (null === (i = L.result) || void 0 === i ? void 0 : i.sections[c]) != null,
+                    g = (null === (a = w.result) || void 0 === a ? void 0 : a.sections[c]) != null;
+                await j(d.imageOption),
+                    null != p.Z.getActiveCommand(C.id) &&
                         u.Po({
-                            channelId: I.id,
+                            channelId: C.id,
                             command: null,
                             section: null
                         });
-                let l = {
+                let M = {
                     type: _.Qi.APPLICATION,
                     id: t.id,
                     icon: t.icon,
-                    name: null !== (a = null == t ? void 0 : null === (i = t.bot) || void 0 === i ? void 0 : i.username) && void 0 !== a ? a : t.name,
+                    name: null !== (l = null == t ? void 0 : null === (o = t.bot) || void 0 === o ? void 0 : o.username) && void 0 !== l ? l : t.name,
                     application: t
                 };
-                u.Po({
-                    channelId: I.id,
-                    command: e,
-                    section: l,
-                    location: n,
-                    source: m._b.TEXT,
-                    initialValues: {
-                        [o.imageOption]: {
-                            type: r.jw.ATTACHMENT,
-                            name: o.imageOption,
-                            value: 'image'
-                        }
-                    },
-                    commandOrigin: _.bB.APPLICATION_LAUNCHER
-                }),
-                    N.S.dispatch(T.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: I.id });
+                E || g || s.ZP.queryInstallOnDemandApp(e.applicationId, C.id),
+                    u.Po({
+                        channelId: C.id,
+                        command: e,
+                        section: M,
+                        location: n,
+                        source: m._b.TEXT,
+                        initialValues: {
+                            [d.imageOption]: {
+                                type: r.jw.ATTACHMENT,
+                                name: d.imageOption,
+                                value: 'image'
+                            }
+                        },
+                        commandOrigin: _.bB.APPLICATION_LAUNCHER
+                    }),
+                    N.S.dispatch(T.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: C.id });
             },
-            [I.id, j, D]
+            [C.id, j, D, L, w]
         ),
         k = a.useCallback(
             async (e, t) => {
@@ -157,7 +161,7 @@ function y(e) {
                 let a = e.applicationId,
                     o = (null === (n = L.result) || void 0 === n ? void 0 : n.sections[a]) != null,
                     l = (null === (i = w.result) || void 0 === i ? void 0 : i.sections[a]) != null;
-                o || l || s.ZP.queryInstallOnDemandApp(e.applicationId, I.id);
+                o || l || s.ZP.queryInstallOnDemandApp(e.applicationId, C.id);
                 let d = await (0, A.L)({
                     applicationId: a,
                     userIndexState: L,
@@ -188,14 +192,14 @@ function y(e) {
                                 ...(null == n ? {} : n[Math.floor(Math.random() * n.length)])
                             },
                             context: {
-                                channel: I,
+                                channel: C,
                                 guild: S
                             },
                             commandOrigin: _.bB.IMAGE_RECS_MENU
                         });
                 }
             },
-            [I, S, L, w, j]
+            [C, S, L, w, j]
         );
     return (0, i.jsxs)(l.Menu, {
         onSelect: t,
@@ -225,7 +229,7 @@ function y(e) {
                       l.MenuItem,
                       {
                           id: 'menu-image-recs-placeholder',
-                          render: () => (0, i.jsx)(C.Z, {}),
+                          render: () => (0, i.jsx)(I.Z, {}),
                           navigable: !1,
                           disabled: !0
                       },

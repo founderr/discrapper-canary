@@ -31714,7 +31714,13 @@ h3.improved_f017d0:after {
 
 .upsellsContainer_c07bcc {
     border-radius: var(--spacing-8);
-    border: 1px solid var(--background-modifier-accent)
+    border: 1px solid var(--background-modifier-accent);
+    margin-bottom: 8px
+}
+
+.navLinkContainer_c07bcc {
+    display: flex;
+    justify-content: center
 }
 
 .container_bdd4e2 {
