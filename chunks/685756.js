@@ -281,7 +281,7 @@ let t = this.webSocket;
 this.webSocket = null, null != t && (t.onopen = S, t.onmessage = S, t.onerror = S, t.onclose = S, null == e || e(t)), this.backoff.cancel();
   }
   cleanupState() {
-this.serverId = null, this.sessionId = null, this.token = null, this.resumable = !1;
+this.serverId = null, this.sessionId = null, this.token = null, this.resumable = !1, this.lastRecvSeqNum = null;
   }
   parseWebSocketMessage(e) {
 if (!(e.data instanceof ArrayBuffer))
