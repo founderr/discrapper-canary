@@ -66,7 +66,6 @@ function C(e) {
     (a.SETTINGS = 'SETTINGS'),
     (a.PANEL = 'PANEL'),
     (a.CARD = 'CARD'),
-    (a.POMELO_POPOUT = 'POMELO_POPOUT'),
     (a.CANCEL_MODAL = 'CANCEL_MODAL'),
     (a.BITE_SIZE = 'BITE_SIZE'),
     (a.FULL_SIZE = 'FULL_SIZE'),
