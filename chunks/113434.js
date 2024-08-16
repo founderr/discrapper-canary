@@ -59,6 +59,9 @@ return $;
   me: function() {
 return es;
   },
+  qb: function() {
+return eo;
+  },
   t5: function() {
 return K;
   },
@@ -655,4 +658,9 @@ u.useMemo(() => {
 ]),
 r
   ];
+}
+
+function eo(e) {
+  let t = [];
+  return (0, O.rV)(e) && t.push(U.Z.Messages.QUESTS_PROGRESS_WEB_TIP), t;
 }

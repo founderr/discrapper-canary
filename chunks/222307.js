@@ -14,6 +14,6 @@ e.exports = {
   submenuIcon: 'submenuIcon_f2bc91',
   partnerBranding: 'partnerBranding_f2bc91',
   bottomRow: 'bottomRow_f2bc91',
-  defibrillatorHints: 'defibrillatorHints_f2bc91',
+  hints: 'hints_f2bc91',
   hintsContainer: 'hintsContainer_f2bc91'
 };

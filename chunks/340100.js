@@ -1,25 +1,25 @@
 var s = n(735250);
 n(470079);
 var o = n(120356),
-  i = n.n(o),
-  a = n(692547),
+  a = n.n(o),
+  i = n(692547),
   r = n(481060),
   l = n(113434),
-  u = n(524824),
+  u = n(918701),
   c = n(330039),
   d = n(601084);
 t.Z = function(e) {
   let {
 className: t,
-color: n = a.Z.colors.WHITE,
+color: n = i.Z.colors.WHITE,
 quest: o,
 isInventory: E
-  } = e, C = (0, u.r)(o), {
+  } = e, C = (0, u.rV)(o), {
 percentComplete: m,
 completedRatioDisplay: p
   } = (0, l.I)(o);
   return C && !E ? (0, s.jsx)(c.Z, {}) : (0, s.jsxs)('div', {
-className: i()(d.wrapper, t),
+className: a()(d.wrapper, t),
 style: {
   color: n.css
 },
