@@ -78,8 +78,8 @@ var r,
     S = n(22211),
     A = n(561308),
     N = n(797342),
-    v = n(371991),
-    O = n(206583),
+    O = n(371991),
+    v = n(206583),
     R = n(689938),
     C = n(119369);
 let y = {
@@ -153,7 +153,7 @@ function U(e) {
                       size: 'xxs',
                       color: l
                   }),
-            (0, a.jsx)(v.ZP, {
+            (0, a.jsx)(O.ZP, {
                 entry: t,
                 textColor: o ? 'text-positive' : r,
                 hovered: n,
@@ -202,7 +202,7 @@ function x(e) {
                 size: 'xxs',
                 color: c
             }),
-            (0, a.jsx)(v.x3, {
+            (0, a.jsx)(O.x3, {
                 entry: null != d ? { start: d } : n,
                 textColor: u ? 'text-positive' : i,
                 hovered: r,
@@ -229,12 +229,14 @@ function k(e) {
     if (!(0, A.V5)(t)) return null;
     let r = (0, A.kr)(t),
         { text: i, tooltipText: s } = (0, A.zo)(t);
-    return (0, a.jsx)(M, {
-        Icon: h.TimerIcon,
-        text: i,
-        tooltipText: s,
-        showTooltip: 0 === n && !r
-    });
+    return null == i
+        ? null
+        : (0, a.jsx)(M, {
+              Icon: h.TimerIcon,
+              text: i,
+              tooltipText: s,
+              showTooltip: 0 === n && !r
+          });
 }
 function B(e) {
     let { entry: t } = e,
@@ -306,7 +308,7 @@ function Y(e) {
         { location: n } = L();
     if (2 === n) return null;
     let r = m.default.extractTimestamp(t.extra.application_id);
-    return c()().diff(c()(r), 'days') > O.G
+    return c()().diff(c()(r), 'days') > v.G
         ? null
         : (0, a.jsx)(M, {
               Icon: h.StarShootingIcon,
@@ -325,7 +327,7 @@ function j(e) {
                 size: 'xxs',
                 color: l
             }),
-            (0, a.jsx)(v.ZP, {
+            (0, a.jsx)(O.ZP, {
                 entry: t,
                 textColor: o ? 'text-positive' : r,
                 hovered: n,
