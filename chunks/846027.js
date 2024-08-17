@@ -199,6 +199,13 @@ t.Z = {
                 enabled: e
             });
     },
+    setSidechainCompressionStrength(e) {
+        !I() &&
+            r.Z.dispatch({
+                type: 'AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH',
+                strength: e
+            });
+    },
     setLoopback(e) {
         !I() &&
             r.Z.dispatch({

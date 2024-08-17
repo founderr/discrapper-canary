@@ -134,7 +134,8 @@ function ev() {
         vadThrehsoldMigrated: !1,
         aecDumpEnabled: !1,
         sidechainCompression: !1,
-        sidechainCompressionSettingVersion: 0
+        sidechainCompressionSettingVersion: 0,
+        sidechainCompressionStrength: 50
     };
 }
 let eO = (0, I.Mt)((0, I.jj)()),
@@ -777,7 +778,7 @@ class tN extends (l = p.ZP.Store) {
                     }),
                     (function () {
                         let e = e7();
-                        eO.setAudioInputDevice(e.inputDeviceId), eO.setAudioOutputDevice(e.outputDeviceId), tt(), eO.setInputVolume(e.inputVolume), eO.setOutputVolume(e.outputVolume), eO.setH264Enabled(e.openH264), eO.setAv1Enabled(e.hardwareH264), eO.setH265Enabled(e.hardwareH264), eO.setAecDump(e.aecDumpEnabled), eO.setSidechainCompression(e.sidechainCompression);
+                        eO.setAudioInputDevice(e.inputDeviceId), eO.setAudioOutputDevice(e.outputDeviceId), tt(), eO.setInputVolume(e.inputVolume), eO.setOutputVolume(e.outputVolume), eO.setH264Enabled(e.openH264), eO.setAv1Enabled(e.hardwareH264), eO.setH265Enabled(e.hardwareH264), eO.setAecDump(e.aecDumpEnabled), eO.setSidechainCompression(e.sidechainCompression), eO.setSidechainCompressionStrength(e.sidechainCompressionStrength);
                     })();
             })(),
             ((0, et.isWindows)() || (0, et.isLinux)() || ((0, et.isMac)() && h().satisfies(null === S.Z || void 0 === S.Z ? void 0 : S.Z.os.release, '>=21.0.0'))) && !__OVERLAY__ && !ez && !eq ? ((ez = !0), tS()) : (0, et.isWeb)() && eO.supports(eI.AN.NOISE_CANCELLATION) ? ((eq = !0), r.emitChange()) : (0, et.isWeb)() && tl({ noiseCancellation: !1 }),
@@ -986,6 +987,9 @@ class tN extends (l = p.ZP.Store) {
     }
     getSidechainCompression() {
         return e7().sidechainCompression;
+    }
+    getSidechainCompressionStrength() {
+        return e7().sidechainCompressionStrength;
     }
     getH265Enabled() {
         return e7().h265Enabled;
@@ -1301,6 +1305,10 @@ eT(tN, 'displayName', 'MediaEngineStore'),
         },
         AUDIO_SET_SIDECHAIN_COMPRESSION: function (e) {
             tm(e.enabled);
+        },
+        AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH: function (e) {
+            let t = tl({ sidechainCompressionStrength: e.strength });
+            eO.setSidechainCompressionStrength(t.sidechainCompressionStrength);
         },
         AUDIO_SET_LOOPBACK: function (e) {
             let { enabled: t } = e;
