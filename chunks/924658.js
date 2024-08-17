@@ -496,7 +496,6 @@ e.exports = Object.freeze({
     CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA: 'Apply To Join',
     CLAN_USER_GO_TO_CLAN_CTA: 'Go to Guild',
     CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA: 'View Application',
-    CLAN_USER_PROFILE_USE_CLAN_TAG: 'Would you like to adopt the {guildName} guild tag as part of your identity?',
     CLAN_DISCOVERY_ANY_PLAYSTYLE: 'Any Playstyle',
     USER_SETTINGS_PRIMARY_GUILD_TAG_LABEL: 'Primary Guild',
     USER_SETTINGS_PRIMARY_GUILD_TAG_PLACEHOLDER: 'Select a Guild Tag',
