@@ -74,7 +74,6 @@ function C(e) {
     ((o = m || (m = {})).BITE_SIZE_POPOUT = 'BITE_SIZE_POPOUT'),
     (o.MODAL = 'MODAL'),
     (o.SIMPLIFIED_MODAL = 'SIMPLIFIED_MODAL'),
-    (o.DM_PANEL = 'DM_PANEL'),
     (o.SIMPLIFIED_DM_PANEL = 'SIMPLIFIED_DM_PANEL'),
     (o.ACCOUNT_POPOUT = 'ACCOUNT_POPOUT'),
     (o.ACTION_SHEET = 'ACTION_SHEET'),

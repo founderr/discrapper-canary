@@ -275,7 +275,6 @@ var n, r;
     (r.COLLECTIBLES_PROFILE_SETTINGS_UPSELL = 'collectibles profile settings upsell'),
     (r.COLLECTIBLES_PAYMENT_MODAL = 'collectibles payment modal'),
     (r.COLLECTIBLES_COLLECTED_MODAL = 'collectibles collected modal'),
-    (r.COLLECTIBLES_USER_POPOUT_UPSELL = 'collectibles user popout upsell'),
     (r.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP = 'collectibles feature education tooltip'),
     (r.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL = 'premium subscription april campaign modal'),
     (r.PREMIUM_BILLING_INFO = 'premium billing info'),
