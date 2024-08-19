@@ -1,5 +1,6 @@
 e.exports = {
     container: 'container_e80fe9',
+    monetizationDisclosureContainerStyle: 'monetizationDisclosureContainerStyle_e80fe9',
     profileAndVideoContainer: 'profileAndVideoContainer_e80fe9',
     videoContainer: 'videoContainer_e80fe9',
     videoCover: 'videoCover_e80fe9',
@@ -15,5 +16,6 @@ e.exports = {
     expandableDescriptionClickable: 'expandableDescriptionClickable_e80fe9',
     overflowHidden: 'overflowHidden_e80fe9',
     developerShelfControlsContainer: 'developerShelfControlsContainer_e80fe9',
-    developerShelfControls: 'developerShelfControls_e80fe9'
+    developerShelfControls: 'developerShelfControls_e80fe9',
+    monetizationDisclosureStyle: 'monetizationDisclosureStyle_e80fe9'
 };

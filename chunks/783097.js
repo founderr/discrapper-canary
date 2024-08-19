@@ -5,6 +5,12 @@ t.d(n, {
     BQ: function () {
         return C;
     },
+    Cb: function () {
+        return x;
+    },
+    Hu: function () {
+        return I;
+    },
     Wx: function () {
         return _;
     },
@@ -105,4 +111,11 @@ function v(e) {
               name: p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
               description: p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
           };
+}
+function x(e) {
+    return !!C(e) && ('is_monetized' in e ? e.is_monetized : e.isMonetized);
+}
+function I(e) {
+    let n = E(e);
+    return null != n && n.displays_advertisements;
 }

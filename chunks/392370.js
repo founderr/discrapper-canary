@@ -1,9 +1,9 @@
 t.d(n, {
     Q2: function () {
-        return R;
+        return b;
     },
     pe: function () {
-        return b;
+        return S;
     }
 }),
     t(47120),
@@ -42,7 +42,7 @@ function P(e, n) {
 function L(e, n) {
     return (0, m.un)(e.displayName, n.displayName);
 }
-function b(e) {
+function S(e) {
     let { channel: n, query: t, commandLimit: a, applicationLimit: o, searchesCommands: r = !0, searchesBots: s = !0, searchesActivities: C = !0 } = e;
     t.startsWith(''.concat(I.GI)) && (t = t.substring(1));
     let {
@@ -118,8 +118,8 @@ function b(e) {
             includeEmbeddedApps: C,
             includeNonEmbeddedApps: s
         }),
-        b = (0, d.Z)({ guildId: n.getGuildId() }),
-        R = i.useMemo(() => {
+        S = (0, d.Z)({ guildId: n.getGuildId() }),
+        b = i.useMemo(() => {
             var e;
             if (!r) return [];
             return (0, A.N)(f, {
@@ -206,11 +206,11 @@ function b(e) {
                 ]
             });
         }, [r, f, a, n, t]),
-        S = i.useMemo(() => {
-            if (0 === R.length) return [];
+        R = i.useMemo(() => {
+            if (0 === b.length) return [];
             let e = new Map(N.map((e) => [e.id, e]));
             return l().compact(
-                R.map((n) => {
+                b.map((n) => {
                     var t;
                     let i = e.get(n.applicationId);
                     if (null == i) return null;
@@ -222,7 +222,7 @@ function b(e) {
                     };
                 })
             );
-        }, [N, R, h]),
+        }, [N, b, h]),
         T = i.useMemo(() => {
             var e;
             let i = [];
@@ -235,17 +235,15 @@ function b(e) {
                 );
                 i.push(...N),
                     i.push(
-                        ...b
-                            .filter((n) => {
-                                let {
-                                    application: { id: t }
-                                } = n;
-                                return !e.has(t);
-                            })
-                            .map((e) => {
-                                let { application: n } = e;
-                                return n;
-                            })
+                        ...S.filter((n) => {
+                            let {
+                                application: { id: t }
+                            } = n;
+                            return !e.has(t);
+                        }).map((e) => {
+                            let { application: n } = e;
+                            return n;
+                        })
                     );
             } else s && (i = N);
             return (0, A.N)(i, {
@@ -299,11 +297,11 @@ function b(e) {
                 ],
                 sortComparers: [g, P]
             });
-        }, [s, C, o, n, t, N, b]),
-        M = S.length > 0,
+        }, [s, C, o, n, t, N, S]),
+        M = R.length > 0,
         y = T.length > 0;
     return {
-        commandResults: S,
+        commandResults: R,
         hasCommandResults: M,
         applicationResults: T,
         hasApplicationResults: y,
@@ -311,7 +309,7 @@ function b(e) {
         loading: E && r
     };
 }
-function R(e) {
+function b(e) {
     let { channel: n, query: t, fetches: a = !0, pageLimit: l = 1 / 0, entrypoint: c } = e;
     t.startsWith(''.concat(I.GI)) && (t = t.substring(1));
     let { enabled: d } = E.nS.useExperiment({ location: 'App Launcher Search Utils' }, { autoTrackExposure: !1 }),
