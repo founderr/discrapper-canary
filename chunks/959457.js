@@ -12,8 +12,8 @@ var a,
     f = n(46973),
     h = n(570140),
     p = n(594190),
-    I = n(444852),
-    m = n(569545),
+    m = n(444852),
+    I = n(569545),
     T = n(687516),
     g = n(139656),
     S = n(358085),
@@ -145,6 +145,10 @@ class F extends (a = E.ZP.Store) {
     getStreamSourceId(e) {
         return P[e];
     }
+    getSecureFramesState(e) {
+        let t = w[e];
+        return null == t ? void 0 : t.getSecureFramesState();
+    }
 }
 (l = 'StreamRTCConnectionStore'),
     (o = 'displayName') in (s = F)
@@ -172,9 +176,10 @@ class F extends (a = E.ZP.Store) {
                   RTC_CONNECTION_UPDATE_ID: function (e) {
                       return _().some(w, (t) => t === e.connection);
                   },
+                  RTC_CONNECTION_SECURE_FRAMES_UPDATE: B,
                   STREAM_START: function (e) {
                       let { streamType: t, guildId: n, channelId: r, appContext: i, pid: a, sourceId: s } = e,
-                          o = (0, m.V9)({
+                          o = (0, I.V9)({
                               streamType: t,
                               guildId: n,
                               channelId: r,
@@ -217,11 +222,11 @@ class F extends (a = E.ZP.Store) {
                       if (null == o && null != n) {
                           var l, u, d;
                           null == M[t] && (b[t] = null);
-                          let e = (0, m.my)(t);
+                          let e = (0, I.my)(t);
                           null == b[t] && null == P[t] && (b[t] = (0, T.L2)(e, R.Z));
                           let i = v.Z.getChannel(e.channelId),
                               _ = null != i && i.isBroadcastChannel(),
-                              E = new I.A({
+                              E = new m.A({
                                   streamRegion: a,
                                   streamApplication: b[t],
                                   streamSourceType: (function (e) {
@@ -243,7 +248,7 @@ class F extends (a = E.ZP.Store) {
                               (u = n),
                               (d = E),
                               c()(null != r, 'Creating RTCConnection without session.'),
-                              (o = new I.Z({
+                              (o = new m.Z({
                                   sessionId: r,
                                   streamKey: l,
                                   serverId: u,

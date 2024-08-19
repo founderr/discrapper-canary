@@ -1,84 +1,94 @@
-n.d(t, {
+r.d(t, {
     DF: function () {
-        return _;
-    },
-    KA: function () {
         return y;
     },
-    M1: function () {
-        return E;
+    KA: function () {
+        return w;
     },
-    PM: function () {
+    M1: function () {
         return f;
     },
-    Pn: function () {
+    PM: function () {
         return h;
     },
+    Pn: function () {
+        return E;
+    },
     Rq: function () {
-        return c;
+        return s;
+    },
+    ih: function () {
+        return g;
     },
     s$: function () {
         return d;
     },
     sN: function () {
-        return l;
+        return c;
     }
 });
-var r = n(367907),
-    i = n(221292),
-    a = n(592125),
-    o = n(626135),
-    s = n(981631);
+var n = r(367907),
+    i = r(221292),
+    o = r(592125),
+    a = r(626135),
+    l = r(981631);
 function u(e) {
     var t;
-    return null === (t = a.Z.getChannel(e)) || void 0 === t ? void 0 : t.guild_id;
-}
-function l(e) {
-    let { channelId: t, selectedTab: n } = e;
-    r.ZP.trackWithMetadata(s.rMx.RTC_PANEL_VIEWED, {
-        channel_id: t,
-        guild_id: u(t),
-        selected_tab: n
-    });
+    return null === (t = o.Z.getChannel(e)) || void 0 === t ? void 0 : t.guild_id;
 }
 function c(e) {
-    let { channelId: t, userId: n } = e;
-    r.ZP.trackWithMetadata(s.rMx.E2EE_USER_VERIFICATION_VIEWED, {
+    let { channelId: t, selectedTab: r } = e;
+    n.ZP.trackWithMetadata(l.rMx.RTC_PANEL_VIEWED, {
         channel_id: t,
         guild_id: u(t),
-        ...(0, i.QN)({ userId: n })
+        selected_tab: r
     });
 }
-function E(e) {
-    let { channelId: t, userId: n, analyticsLocation: a } = e;
-    r.ZP.trackWithMetadata(s.rMx.E2EE_USER_VERIFIED, {
+function s(e) {
+    let { channelId: t, userId: r } = e;
+    n.ZP.trackWithMetadata(l.rMx.E2EE_USER_VERIFICATION_VIEWED, {
         channel_id: t,
         guild_id: u(t),
-        location: a,
-        ...(0, i.QN)({ userId: n })
-    });
-}
-function d(e) {
-    let { channelId: t, userId: n } = e;
-    r.ZP.trackWithMetadata(s.rMx.E2EE_USER_VERIFICATION_CODE_COPIED, {
-        channel_id: t,
-        guild_id: u(t),
-        ...(0, i.QN)({ userId: n })
+        ...(0, i.QN)({ userId: r })
     });
 }
 function f(e) {
+    let { channelId: t, userId: r, analyticsLocation: o } = e;
+    n.ZP.trackWithMetadata(l.rMx.E2EE_USER_VERIFIED, {
+        channel_id: t,
+        guild_id: u(t),
+        location: o,
+        ...(0, i.QN)({ userId: r })
+    });
+}
+function d(e) {
+    let { channelId: t, userId: r } = e;
+    n.ZP.trackWithMetadata(l.rMx.E2EE_USER_VERIFICATION_CODE_COPIED, {
+        channel_id: t,
+        guild_id: u(t),
+        ...(0, i.QN)({ userId: r })
+    });
+}
+function h(e) {
     let { channelId: t } = e;
-    r.ZP.trackWithMetadata(s.rMx.E2EE_CALL_VERIFICATION_CODE_COPIED, {
+    n.ZP.trackWithMetadata(l.rMx.E2EE_CALL_VERIFICATION_CODE_COPIED, {
         channel_id: t,
         guild_id: u(t)
     });
 }
-function _() {
-    o.default.track(s.rMx.E2EE_SETTINGS_USER_DELETE);
+function g(e) {
+    let { channelId: t } = e;
+    n.ZP.trackWithMetadata(l.rMx.E2EE_STREAM_VERIFICATION_CODE_COPIED, {
+        channel_id: t,
+        guild_id: u(t)
+    });
 }
-function h() {
-    o.default.track(s.rMx.E2EE_SETTINGS_DEVICE_DELETE);
+function y() {
+    a.default.track(l.rMx.E2EE_SETTINGS_USER_DELETE);
 }
-function y(e) {
-    o.default.track(s.rMx.E2EE_PUBLIC_KEY_MISMATCH, { key_version: ''.concat(e) });
+function E() {
+    a.default.track(l.rMx.E2EE_SETTINGS_DEVICE_DELETE);
+}
+function w(e) {
+    a.default.track(l.rMx.E2EE_PUBLIC_KEY_MISMATCH, { key_version: ''.concat(e) });
 }

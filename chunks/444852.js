@@ -22,8 +22,8 @@ var r = n(392711),
     f = n(695346),
     h = n(314897),
     p = n(592125),
-    I = n(131951),
-    m = n(866960),
+    m = n(131951),
+    I = n(866960),
     T = n(19780),
     g = n(936349),
     S = n(704806),
@@ -128,8 +128,8 @@ class L extends o.Z {
                 var r;
                 null === (r = this._connection) ||
                     void 0 === r ||
-                    r.on(a.Sh.ScreenshareFinish, (e, t, n, r, i, a, s, o, l, u, c, d, f, h, p, I) => {
-                        let m = this.getMediaSessionId(),
+                    r.on(a.Sh.ScreenshareFinish, (e, t, n, r, i, a, s, o, l, u, c, d, f, h, p, m) => {
+                        let I = this.getMediaSessionId(),
                             T = this.getRTCConnectionId(),
                             g = this.getGoLiveSource();
                         (0, S.q)().then((S) => {
@@ -145,7 +145,7 @@ class L extends o.Z {
                                     gpu_memory: i
                                 };
                             }
-                            let D = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != I ? I : 0) + (null != p ? p : 0),
+                            let D = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != m ? m : 0) + (null != p ? p : 0),
                                 L = (null == g ? void 0 : null === (N = g.desktopSource) || void 0 === N ? void 0 : N.sourcePid) != null ? E.ZP.getGameForPID(g.desktopSource.sourcePid) : null,
                                 { gameName: b, gameId: M, exe: P, distributor: U } = (0, _.G8)(L);
                             A.default.track(R.rMx.SCREENSHARE_FINISHED, {
@@ -159,11 +159,11 @@ class L extends o.Z {
                                 hybrid_gdi_bitblt_frames: o,
                                 hybrid_gdi_printwindow_frames: l,
                                 quartz_frames: u,
-                                screencapturekit_frames: I,
+                                screencapturekit_frames: m,
                                 go_live_camera_frames: p,
                                 total_frames: D,
                                 desktop_capturer_type: c,
-                                media_session_id: m,
+                                media_session_id: I,
                                 rtc_connection_id: T,
                                 context: C.Yn.STREAM,
                                 screens: d,
@@ -196,6 +196,11 @@ class L extends o.Z {
                         context: a
                     })
                 );
+            }),
+            this.on(l.z.SecureFramesUpdate, () => {
+                s.Z.wait(() => {
+                    s.Z.dispatch({ type: 'RTC_CONNECTION_SECURE_FRAMES_UPDATE' });
+                });
             });
     }
     _getStreamAnalyticsProperties() {
@@ -233,9 +238,9 @@ class L extends o.Z {
         A.default.track(R.rMx.VIDEO_STREAM_STARTED, {
             ...this._getStreamAnalyticsProperties(),
             ...e,
-            connection_type: m.Z.getType(),
-            effective_connection_speed: m.Z.getEffectiveConnectionSpeed(),
-            service_provider: m.Z.getServiceProvider()
+            connection_type: I.Z.getType(),
+            effective_connection_speed: I.Z.getEffectiveConnectionSpeed(),
+            service_provider: I.Z.getServiceProvider()
         });
     }
     _trackVideoEndStats(e) {
@@ -272,7 +277,7 @@ class L extends o.Z {
                     reason: e,
                     max_viewers: this.analyticsContext.maxViewers,
                     hostname: this.hostname,
-                    hardware_enabled: I.Z.getHardwareH264(),
+                    hardware_enabled: m.Z.getHardwareH264(),
                     device_performance_class: this.isOwner ? (0, d.R)() : null
                 });
         }),
@@ -293,7 +298,7 @@ class L extends o.Z {
                         reason: e,
                         max_viewers: this.analyticsContext.maxViewers,
                         hostname: this.hostname,
-                        hardware_enabled: I.Z.getHardwareH264(),
+                        hardware_enabled: m.Z.getHardwareH264(),
                         device_performance_class: this.isOwner ? (0, d.R)() : null
                     });
             });

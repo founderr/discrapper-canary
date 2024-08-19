@@ -4,9 +4,20 @@ t(470079);
 var i = t(481060),
     s = t(689938);
 n.Z = {
+    openSecureFramesStreamVerification: function (e, n) {
+        (0, i.openModalLazy)(async () => {
+            let i = (await Promise.all([t.e('36034'), t.e('98330')]).then(t.bind(t, 660250))).default;
+            return (t) =>
+                (0, a.jsx)(i, {
+                    streamKey: e,
+                    channelId: n,
+                    ...t
+                });
+        });
+    },
     openSecureFramesUserVerificationModal: function (e, n) {
         (0, i.openModalLazy)(async () => {
-            let i = (await Promise.all([t.e('95437'), t.e('33397')]).then(t.bind(t, 963410))).default;
+            let i = (await Promise.all([t.e('95437'), t.e('36034'), t.e('3708')]).then(t.bind(t, 963410))).default;
             return (t) =>
                 (0, a.jsx)(i, {
                     userId: e,
