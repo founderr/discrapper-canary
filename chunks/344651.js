@@ -864,7 +864,8 @@ B(
                 type: e.type,
                 user: e.user,
                 since: e.since,
-                nickname: e.nickname
+                nickname: e.nickname,
+                isSpamRequest: e.is_spam_request || !1
             },
             shouldNotify: !0 === e.should_notify
         });
