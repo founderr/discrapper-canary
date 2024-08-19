@@ -6,7 +6,7 @@ n.d(t, {
     n(47120);
 var i = n(735250),
     a = n(470079),
-    s = n(338545),
+    s = n(567526),
     r = n(143927),
     l = n(481060),
     o = n(393238),
@@ -42,8 +42,7 @@ function T(e) {
                             className: p.backgroundImageContent,
                             children: (0, i.jsx)(E.Z, {
                                 eligibleGuilds: s,
-                                eligibleGuildsIncludingConverted: n,
-                                preventBack: !0
+                                eligibleGuildsIncludingConverted: n
                             })
                         })
                     ]

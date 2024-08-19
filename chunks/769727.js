@@ -3,7 +3,7 @@ var i,
     a,
     s = n(735250),
     r = n(470079),
-    l = n(338545),
+    l = n(567526),
     o = n(143927),
     c = n(704215),
     d = n(481060),
@@ -113,29 +113,25 @@ function Z(e) {
     let { mode: t, children: n } = e,
         i = (0, p.GN)((e) => e.userUpsellScreen, o.Z),
         a = (0, p.GN)((e) => e.started, o.Z),
-        { guilds: l } = (0, _.C3)({
+        { guilds: l, enableClanCreation: c } = (0, _.C3)({
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0
         }),
-        c = r.useMemo(() => l.filter((e) => !(0, h.EJ)(e)), [l]),
-        { enableApplication: d } = (0, _.Fg)('ClanDiscoveryAdminContainer');
+        d = r.useMemo(() => l.filter((e) => !(0, h.EJ)(e)), [l]),
+        u = (0, _.iN)('ClanDiscoveryAdminContainer');
     return (
         r.useEffect(() => {
-            let e = l.length > 0;
-            if (e && !d && i === p.o2.USER_UPSELL) {
-                (0, p.fH)(p.v0.ADMIN_UPSELL);
-                return;
-            }
-            let n = N.has(t);
-            if (!e && d && !a && n) {
+            let e = l.length > 0,
+                n = N.has(t);
+            if (!e && !a && n) {
                 (0, p.fH)(p.v0.GET_STARTED);
                 return;
             }
-            if (d && t === p.v0.ADMIN_UPSELL && 0 === c.length) {
-                (0, p.fH)(p.v0.GET_STARTED), p.GN.getState().setUserUpsellScreen(p.o2.USER_UPSELL);
+            if (c && !u && t !== p.v0.ADMIN_UPSELL) {
+                (0, p.fH)(p.v0.ADMIN_UPSELL);
                 return;
             }
-        }, [c.length, l.length, a, d, t, i]),
+        }, [d.length, l.length, a, t, i, c, u]),
         (0, s.jsx)(s.Fragment, { children: n })
     );
 }
