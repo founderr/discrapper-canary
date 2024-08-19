@@ -754,11 +754,9 @@ function eG(e, t) {
     return !!(e.mentionCount > 0) || (!(H.default.compare(e.channelId, t) > 0 || (null != e._ackMessageId && H.default.compare(e._ackMessageId, t) > 0) || (null != e._lastMessageId && H.default.compare(e._lastMessageId, t) > 0)) && !0);
 }
 function ek(e) {
-    if (null != e) {
-        let t = eb.get(e);
-        if (eL(t)) return t.ack({});
-    }
-    return !1;
+    if (null == e) return !1;
+    let t = eb.get(e);
+    return !!eL(t) && t.ack({});
 }
 function eB() {
     null != em && clearTimeout(em);

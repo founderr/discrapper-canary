@@ -16,11 +16,9 @@ function E(e) {
     };
 }
 function f(e) {
-    if (null != c[e]) {
-        let { scrollTop: t, scrollHeight: n, offsetHeight: r } = c[e];
-        return t === n - r;
-    }
-    return !0;
+    if (null == c[e]) return;
+    let { scrollTop: t, scrollHeight: n, offsetHeight: r } = c[e];
+    return t === n - r;
 }
 class h extends (s = o.ZP.Store) {
     percentageScrolled(e) {
