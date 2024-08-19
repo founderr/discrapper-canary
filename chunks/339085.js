@@ -387,9 +387,10 @@ function em() {
             Q.emojiReactionPendingUsages
         ),
         !(function (e, t) {
-            let { canSplitFrecencyList: n } = G.Z.getCurrentConfig({ location: 'populateInitialFrecencyData' }, { autoTrackExposure: !0 });
+            let { canSplitFrecencyList: n } = G.Z.getCurrentConfig({ location: 'populateInitialFrecencyData' }, { autoTrackExposure: !0 }),
+                { canShowReactionsOnMessageHover: r } = N.Z.getCurrentConfig({ location: 'getEmojiInPriorityOrderWithoutFetchingLatest' }, { autoTrackExposure: !0 });
             if (o().isEmpty(e) && o().isEmpty(Q.pendingUsages) && O.Z.hasLoaded(W.yP.FRECENCY_AND_FAVORITES_SETTINGS)) for (let e of ['thumbsup', 'thumbsup', 'eyes', 'eyes', 'laughing', 'laughing', 'watermelon', 'fork_and_knife', 'yum', 'weary', 'tired_face', 'poop', '100']) ed.track(e);
-            if (n && o().isEmpty(t) && o().isEmpty(Q.emojiReactionPendingUsages) && O.Z.hasLoaded(W.yP.FRECENCY_AND_FAVORITES_SETTINGS)) for (let e of ['100', '100', 'thumbsup', 'thumbsup', 'thumbsdown', 'thumbsdown', 'heart', 'point_up', 'eyes', 'weary', 'laughing', 'white_check_mark', 'x']) e_.track(e);
+            if ((n || r) && o().isEmpty(t) && o().isEmpty(Q.emojiReactionPendingUsages) && O.Z.hasLoaded(W.yP.FRECENCY_AND_FAVORITES_SETTINGS)) for (let e of ['100', '100', 'thumbsup', 'thumbsup', 'thumbsdown', 'thumbsdown', 'heart', 'point_up', 'eyes', 'weary', 'laughing', 'white_check_mark', 'x']) e_.track(e);
         })(u, c);
 }
 function eI() {
@@ -472,21 +473,22 @@ class eS extends (i = d.ZP.PersistedStore) {
     getSearchResultsOrder(e, t, n, r) {
         let i = t.toLowerCase(),
             a = U.Z.escape(i),
-            { canSplitFrecencyList: s } = G.Z.getCurrentConfig({ location: 'getSearchResultsOrder' }, { autoTrackExposure: !0 });
+            { canSplitFrecencyList: s } = G.Z.getCurrentConfig({ location: 'getSearchResultsOrder' }, { autoTrackExposure: !0 }),
+            { canShowReactionsOnMessageHover: l } = N.Z.getCurrentConfig({ location: 'getEmojiInPriorityOrderWithoutFetchingLatest' }, { autoTrackExposure: !0 });
         if (e.length > 0) {
             let t = RegExp('^'.concat(a), 'i'),
                 n = new RegExp('(^|_|[A-Z])'.concat(a, 's?([A-Z]|_|$)')),
-                l = n.test.bind(n),
-                u = t.test.bind(t),
-                c = function (e) {
+                u = n.test.bind(n),
+                c = t.test.bind(t),
+                d = function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e;
                     if (null == e || null == t) return 0;
                     let n = e.toLowerCase(),
-                        a = 1 + (n === i ? 4 : 0) + (l(n) || l(e) ? 2 : 0) + (u(e) ? 1 : 0),
-                        o = r === Z.Hz.REACTION && s ? e_.getScore(t) : ed.getScore(t);
+                        a = 1 + (n === i ? 4 : 0) + (u(n) || u(e) ? 2 : 0) + (c(e) ? 1 : 0),
+                        o = r === Z.Hz.REACTION && (s || l) ? e_.getScore(t) : ed.getScore(t);
                     return null != o && (a *= o / 100), a;
                 };
-            e = o().orderBy(e, [(e) => (null != e.names ? c(e.names[0]) : c(e.name, e.id)), (e) => (null != e.names ? e.names[0] : e.name)], ['desc', 'asc']);
+            e = o().orderBy(e, [(e) => (null != e.names ? d(e.names[0]) : d(e.name, e.id)), (e) => (null != e.names ? e.names[0] : e.name)], ['desc', 'asc']);
         }
         return n > 0 && (e = e.slice(0, n)), e;
     }
