@@ -178,7 +178,22 @@ function y(e) {
             var e;
             return null != r.image_asset && null !== (e = b.Z.toURLSafe((0, _._W)(n, r.image_asset, 256))) && void 0 !== e ? e : void 0;
         }, [n, r.image_asset]),
-        v = r.subscription_plans.length > 0 ? r.subscription_plans[0] : null;
+        v = r.subscription_plans.length > 0 ? r.subscription_plans[0] : null,
+        h = t.useCallback(
+            (e) =>
+                null == v
+                    ? null
+                    : (0, l.jsx)(P.p, {
+                          ...e,
+                          appId: n,
+                          groupListingId: i,
+                          groupListingType: o,
+                          guildId: s,
+                          skuId: r.id,
+                          subPlan: v
+                      }),
+            [n, i, o, s, r.id, v]
+        );
     return null === v
         ? null
         : (0, l.jsx)(a.U, {
@@ -187,16 +202,7 @@ function y(e) {
               imgSrc: m,
               subscriptionType: o,
               onPurchase: c,
-              PurchaseButton: (e) =>
-                  (0, l.jsx)(P.p, {
-                      ...e,
-                      appId: n,
-                      groupListingId: i,
-                      groupListingType: o,
-                      guildId: s,
-                      skuId: r.id,
-                      subPlan: v
-                  }),
+              PurchaseButton: h,
               benefitItems:
                   null != p
                       ? p.map((e) =>
