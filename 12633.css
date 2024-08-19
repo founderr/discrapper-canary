@@ -26201,6 +26201,10 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     flex: 1
 }
 
+.lockIcon_f40049 {
+    pointer-events: none
+}
+
 .primaryIconTopLevel_f40049 {
     position: absolute;
     z-index: 9999
