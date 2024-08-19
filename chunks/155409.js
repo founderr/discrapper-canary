@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var i,
@@ -16,7 +16,7 @@ var i,
     m = n(451478),
     p = n(5560),
     _ = n(10401);
-class E extends (l = o.Component) {
+class f extends (l = o.Component) {
     componentDidMount() {
         let { visible: e, inlineSpecs: t } = this.props;
         null == t && this.show(e);
@@ -72,12 +72,12 @@ class E extends (l = o.Component) {
             : o.Children.only(n);
     }
 }
-function f(e) {
+function E(e) {
     let { tutorialId: t } = e,
         n = (0, d.e7)([_.Z], () => _.Z.shouldShow(t), [t]),
         i = (0, d.e7)([m.Z], () => m.Z.isFocused()),
         a = (0, d.e7)([m.Z], () => m.Z.windowSize(), []);
-    return (0, r.jsx)(E, {
+    return (0, r.jsx)(f, {
         ...e,
         visible: n,
         windowFocused: i,
@@ -90,7 +90,7 @@ function f(e) {
     offsetY: 0,
     autoInvert: !0
 }),
-    (a = 'defaultProps') in (i = E)
+    (a = 'defaultProps') in (i = f)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,

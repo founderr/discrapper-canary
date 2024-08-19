@@ -12,8 +12,8 @@ var i,
     m = n(481060),
     p = n(490173),
     _ = n(40851),
-    E = n(607070),
-    f = n(899663),
+    f = n(607070),
+    E = n(899663),
     C = n(317381),
     g = n(496616),
     I = n(100527),
@@ -113,7 +113,7 @@ class F extends (i = s.Component) {
         n.document.documentElement.classList.toggle('disable-forced-colors', !e && 'active' === t);
     }
     render() {
-        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: s, windowKey: l, mouseModeEnabled: o, keyboardModeEnabled: c, reducedMotionEnabled: d, fontScaleClass: h, saturation: E, withTitleBar: C, guestWindow: g, clientThemesClassName: I, contentClassName: x } = this.props,
+        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: s, windowKey: l, mouseModeEnabled: o, keyboardModeEnabled: c, reducedMotionEnabled: d, fontScaleClass: h, saturation: f, withTitleBar: C, guestWindow: g, clientThemesClassName: I, contentClassName: x } = this.props,
             T = (0, y.getPlatform)(),
             A = r()(h, {
                 'mouse-mode': o,
@@ -121,7 +121,7 @@ class F extends (i = s.Component) {
                 'full-motion': !d,
                 'keyboard-mode': c,
                 'app-focused': n || i,
-                'low-saturation': E <= 0.4
+                'low-saturation': f <= 0.4
             });
         return (0, a.jsx)(u.VK, {
             children: (0, a.jsx)(
@@ -136,7 +136,7 @@ class F extends (i = s.Component) {
                                 className: r()((0, D.Q)(e), (0, N.Z)(), A, I),
                                 children: (0, a.jsx)(m.FocusRingScope, {
                                     containerRef: this.rootRef,
-                                    children: (0, a.jsx)(f.Z, {
+                                    children: (0, a.jsx)(E.Z, {
                                         children: (0, a.jsxs)(v.Z, {
                                             children: [
                                                 (0, a.jsx)(S.Co, {}),
@@ -213,23 +213,23 @@ let W = s.forwardRef(function (e, t) {
             locale: j.default.locale,
             theme: L.Z.theme
         })),
-        o = (0, h.e7)([E.Z], () => (E.Z.useForcedColors ? 'yes' : 'no')),
+        o = (0, h.e7)([f.Z], () => (f.Z.useForcedColors ? 'yes' : 'no')),
         {
             fontScale: u,
             keyboardModeEnabled: d,
             reducedMotionEnabled: p,
             fontScaleClass: _,
-            saturation: f,
+            saturation: E,
             systemForcedColors: g,
             useForcedColors: N
-        } = (0, h.cj)([E.Z], () => ({
-            fontScale: E.Z.fontScale,
-            keyboardModeEnabled: E.Z.keyboardModeEnabled,
-            reducedMotionEnabled: E.Z.useReducedMotion,
-            fontScaleClass: E.Z.fontScaleClass,
-            saturation: E.Z.saturation,
-            systemForcedColors: E.Z.systemForcedColors,
-            useForcedColors: E.Z.useForcedColors
+        } = (0, h.cj)([f.Z], () => ({
+            fontScale: f.Z.fontScale,
+            keyboardModeEnabled: f.Z.keyboardModeEnabled,
+            reducedMotionEnabled: f.Z.useReducedMotion,
+            fontScaleClass: f.Z.fontScaleClass,
+            saturation: f.Z.saturation,
+            systemForcedColors: f.Z.systemForcedColors,
+            useForcedColors: f.Z.useForcedColors
         })),
         v = (0, h.e7)([C.ZP], () => null != e.channelId && null !== C.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, A.Z)(n, !1);
@@ -258,7 +258,7 @@ let W = s.forwardRef(function (e, t) {
                       reducedMotionEnabled: p,
                       connectedToEmbeddedActivity: v,
                       fontScaleClass: _,
-                      saturation: f,
+                      saturation: E,
                       clientThemesClassName: b,
                       clientThemesCSS: R
                   })

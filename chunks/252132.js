@@ -9,7 +9,7 @@ var a = n(27457),
     s = n(131951),
     l = n(665367);
 function r(e) {
-    let { aspectRatio: t, blocked: n, channel: r, className: o, focused: c, children: u, inCall: d, inPopout: h, noBorder: m, onClick: p, onContextMenu: _, onDoubleClick: E, onVideoResize: f, paused: C, pulseSpeakingIndicator: g, participant: I, width: x, ...T } = e,
+    let { aspectRatio: t, blocked: n, channel: r, className: o, focused: c, children: u, inCall: d, inPopout: h, noBorder: m, onClick: p, onContextMenu: _, onDoubleClick: f, onVideoResize: E, paused: C, pulseSpeakingIndicator: g, participant: I, width: x, ...T } = e,
         N = s.Z.getVideoComponent();
     return (0, i.jsx)('div', {
         style: { width: x },
@@ -28,8 +28,8 @@ function r(e) {
                     noBorder: m,
                     onClick: p,
                     onContextMenu: _,
-                    onDoubleClick: E,
-                    onVideoResize: f,
+                    onDoubleClick: f,
+                    onVideoResize: E,
                     participant: I,
                     paused: C,
                     pulseSpeakingIndicator: g,

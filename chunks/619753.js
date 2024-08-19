@@ -19,8 +19,8 @@ var i = n(735250),
     m = n(607070),
     p = n(933557),
     _ = n(471445),
-    E = n(95398),
-    f = n(905405),
+    f = n(95398),
+    E = n(905405),
     C = n(255269),
     g = n(937889),
     I = n(703656),
@@ -41,15 +41,15 @@ var i = n(735250),
     y = n(647146);
 function D(e) {
     var t;
-    let { search: n, searchId: s, renderEmbeds: l, scrollTo: p, searchResults: _, blockCount: E, onChangePage: f } = e,
+    let { search: n, searchId: s, renderEmbeds: l, scrollTo: p, searchResults: _, blockCount: f, onChangePage: E } = e,
         { offset: C, totalResults: g, isSearching: x, showBlockedResults: T } = n,
         N = a.useCallback(
             (e) => {
                 if (x) return;
                 let t = e - 1;
-                null == f || f(t), d.oO(s, t);
+                null == E || E(t), d.oO(s, t);
             },
-            [s, x, f]
+            [s, x, E]
         ),
         S = a.useCallback(
             (e) => {
@@ -157,7 +157,7 @@ function D(e) {
                 'aria-busy': x,
                 children: G
             }),
-            E > 0
+            f > 0
                 ? (0, i.jsxs)(o.Clickable, {
                       tag: 'div',
                       className: y.resultsBlocked,
@@ -166,7 +166,7 @@ function D(e) {
                           (0, i.jsx)('div', { className: y.resultsBlockedImage }),
                           (0, i.jsx)('div', {
                               className: y.__invalid_resultsBlockedText,
-                              children: T ? O.Z.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({ count: E }) : O.Z.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({ count: E })
+                              children: T ? O.Z.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({ count: f }) : O.Z.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({ count: f })
                           })
                       ]
                   })
@@ -219,7 +219,7 @@ function U(e) {
     var t, n, s;
     let { channel: l, results: r, highlighter: c, startIndex: u, resultRefs: d, totalResults: h, scrollTo: m, searchId: I, renderEmbeds: N, offset: M, jumpToMessage: j, listNavigator: O, favoriteSearch: D } = e,
         U = T.cC.useSetting(),
-        w = (0, f.p)(),
+        w = (0, E.p)(),
         B = a.useCallback((e) => {
             if (e === b.Z.getChannelId()) return;
             let t = v.Z.getChannel(e);
@@ -248,7 +248,7 @@ function U(e) {
         null != e && null != e.offsetWidth && null != e.scrollWidth && X(e.offsetWidth < e.scrollWidth);
     }, []);
     let Q = [H, F, G].filter((e) => null != e).join(', ');
-    return (0, i.jsx)(E.a.Provider, {
+    return (0, i.jsx)(f.a.Provider, {
         value: (0, C.Z)(U, z),
         children: (0, i.jsxs)('ul', {
             role: 'group',

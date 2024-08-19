@@ -20,8 +20,8 @@ var i,
     m = n(287734),
     p = n(872810),
     _ = n(888651),
-    E = n(100527),
-    f = n(258609),
+    f = n(100527),
+    E = n(258609),
     C = n(257115),
     g = n(569545),
     I = n(382182),
@@ -89,7 +89,7 @@ function U(e) {
 class w extends (i = s.PureComponent) {
     get canWatchStream() {
         let { channel: e, isStreaming: t } = this.props;
-        return t && (0, I.p9)(e, R.Z, M.Z, b.Z, f.Z)[0];
+        return t && (0, I.p9)(e, R.Z, M.Z, b.Z, E.Z)[0];
     }
     render() {
         let { userPopoutOpen: e } = this.state,
@@ -187,7 +187,7 @@ class w extends (i = s.PureComponent) {
                     userId: n.id,
                     guildId: null != i ? i : void 0,
                     channelId: t.id,
-                    newAnalyticsLocations: [E.Z.VOICE_USER],
+                    newAnalyticsLocations: [f.Z.VOICE_USER],
                     ...e
                 });
             }),
@@ -211,7 +211,7 @@ class w extends (i = s.PureComponent) {
                 });
             }),
             D(this, 'renderUser', (e) => {
-                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: s, mute: l, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: m, deaf: p, priority: _, collapsed: E, isStreaming: f, isGuest: g, nick: I, video: x, serverMute: T, serverDeaf: N, tabIndex: v, embeddedApplication: S, channel: A, hangStatusActivity: M, showHangStatus: b, isSelf: R, application: j } = this.props,
+                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: s, mute: l, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: m, deaf: p, priority: _, collapsed: f, isStreaming: E, isGuest: g, nick: I, video: x, serverMute: T, serverDeaf: N, tabIndex: v, embeddedApplication: S, channel: A, hangStatusActivity: M, showHangStatus: b, isSelf: R, application: j } = this.props,
                     { userPopoutOpen: P, isHoveringHangStatus: D } = this.state,
                     k = L.al.has(null != n ? n : ''),
                     U = {
@@ -221,14 +221,14 @@ class w extends (i = s.PureComponent) {
                         mute: l,
                         localMute: o,
                         localVideoDisabled: c,
-                        isStreaming: f,
+                        isStreaming: E,
                         isGuest: g,
                         video: x,
                         priority: _,
                         deaf: p,
                         nick: I,
-                        collapsed: E,
-                        overlap: E,
+                        collapsed: f,
+                        overlap: f,
                         serverMute: T,
                         serverDeaf: N,
                         tabIndex: v,
@@ -263,7 +263,7 @@ class w extends (i = s.PureComponent) {
                 }
                 return (0, a.jsx)(u.Popout, {
                     position: 'right',
-                    renderPopout: (b && D) || !f ? this.renderHangStatusPopout : this.renderStreamPopout,
+                    renderPopout: (b && D) || !E ? this.renderHangStatusPopout : this.renderStreamPopout,
                     shouldShow: s && !P,
                     onRequestClose: this.handleHidePreview,
                     spacing: 0,

@@ -7,21 +7,21 @@ var i = n(735250),
     c = n(433355),
     u = n(841829);
 t.Z = a.memo(function (e) {
-    let { message: t, subtitle: n, countdown: d, buttonText: h, buttonColor: m, buttonSubmitting: p, onButtonClick: _, imageSrc: E, animationSrc: f, secondaryButtonText: C, onSecondaryButtonClick: g, children: I, useReducedMotion: x = !1 } = e,
+    let { message: t, subtitle: n, countdown: d, buttonText: h, buttonColor: m, buttonSubmitting: p, onButtonClick: _, imageSrc: f, animationSrc: E, secondaryButtonText: C, onSecondaryButtonClick: g, children: I, useReducedMotion: x = !1 } = e,
         T = (0, l.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
     if (s.tq && T) return null;
     if (null == t) return (0, i.jsx)(i.Fragment, { children: a.Children.only(I) });
     let N = null;
     return (
-        null != E
+        null != f
             ? (N = (0, i.jsx)('img', {
                   alt: '',
-                  src: E,
+                  src: f,
                   className: u.image
               }))
-            : null != f &&
+            : null != E &&
               (N = (0, i.jsx)(r.LottieAnimation, {
-                  importData: f,
+                  importData: E,
                   shouldAnimate: !x,
                   className: u.animation
               })),

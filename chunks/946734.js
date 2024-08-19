@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(150039),
     p = n(171368),
     _ = n(271383),
-    E = n(430824),
-    f = n(594174),
+    f = n(430824),
+    E = n(594174),
     C = n(251625),
     g = n(823379),
     I = n(665149),
@@ -92,7 +92,7 @@ class Z {
                                 n
                                     .map((e) => {
                                         var t;
-                                        return null === (t = E.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
+                                        return null === (t = f.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
                                     })
                                     .filter(g.lm)
                             ];
@@ -142,7 +142,7 @@ function A(e) {
         { analyticsLocations: p } = (0, d.ZP)(u.Z.AKA),
         _ = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: i } = e,
-                s = (0, r.e7)([f.default], () => f.default.getUser(t), [t]),
+                s = (0, r.e7)([E.default], () => E.default.getUser(t), [t]),
                 [l] = a.useState(
                     () =>
                         new Z({
@@ -191,7 +191,7 @@ function A(e) {
                                     : (0, i.jsx)(
                                           o.TooltipContainer,
                                           {
-                                              text: null === (a = E.Z.getGuild(r)) || void 0 === a ? void 0 : a.name,
+                                              text: null === (a = f.Z.getGuild(r)) || void 0 === a ? void 0 : a.name,
                                               position: 'bottom',
                                               children: (0, i.jsx)('img', {
                                                   alt: '',

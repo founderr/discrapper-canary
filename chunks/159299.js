@@ -12,8 +12,8 @@ var i,
     m = n(594174),
     p = n(823379),
     _ = n(700785),
-    E = n(709054),
-    f = n(51144),
+    f = n(709054),
+    E = n(51144),
     C = n(981631);
 function g(e, t, n) {
     return (
@@ -43,7 +43,7 @@ class x {
                     canViewChannel: a
                 };
             })
-            .sort((e, t) => E.default.compare(e.userId, t.userId))
+            .sort((e, t) => f.default.compare(e.userId, t.userId))
             .sortBy((e) => e.displayName)
             .forEach((e) => {
                 this.addUser(e.userId, e.sectionId, e.displayName, e.canViewChannel, !0);
@@ -135,7 +135,7 @@ class x {
                     context: t
                 }),
             u = r !== C.Skl.OFFLINE && r !== C.Skl.INVISIBLE && r !== C.Skl.UNKNOWN ? (null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : 'online') : 'offline',
-            p = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : f.ZP.getName(s);
+            p = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : E.ZP.getName(s);
         return [u, null == p ? void 0 : p.toLowerCase(), o];
     }
     constructor(e, t, n) {

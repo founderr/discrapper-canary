@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 }),
     n(653041);
@@ -17,8 +17,8 @@ var i = n(470079),
     m = n(262433),
     p = n(400321),
     _ = n(813900);
-let E = 1000 / 60;
-function f(e, t, n, f) {
+let f = 1000 / 60;
+function E(e, t, n, E) {
     let C = (0, l.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
         g = (0, l.useToken)(s.Z.unsafe_rawColors.BLACK_500).hex(),
         I = (0, l.useToken)(s.Z.unsafe_rawColors.WHITE_500).hex(),
@@ -35,7 +35,7 @@ function f(e, t, n, f) {
                         if (null == h) return;
                         let _ = h.getContext('2d');
                         if (null == _) return;
-                        let { width: E, height: f } = h.getBoundingClientRect(),
+                        let { width: f, height: E } = h.getBoundingClientRect(),
                             C = [];
                         n.forEach((e) => {
                             if (!(null != o.Z.getVoiceStateForChannel(l, e.userId))) {
@@ -73,8 +73,8 @@ function f(e, t, n, f) {
                             })({
                                 drawable: e,
                                 context: _,
-                                canvasWidth: E,
-                                canvasHeight: f,
+                                canvasWidth: f,
+                                canvasHeight: E,
                                 fallbackColor: i,
                                 outlineColorDark: r,
                                 outlineColorLight: u,
@@ -92,10 +92,10 @@ function f(e, t, n, f) {
                         streamerId: t,
                         outlineColorDark: g,
                         outlineColorLight: I,
-                        channelId: f
+                        channelId: E
                     });
             },
-            [e, f, C, g, I]
+            [e, E, C, g, I]
         );
     i.useEffect(() => {
         let t = new ResizeObserver(() => {
@@ -110,7 +110,7 @@ function f(e, t, n, f) {
         let t = u.Z.getDrawables(n),
             i = m.U.getState().particles,
             a = t.length > 0 || Object.keys(i).length > 0;
-        a && null == T.current._ref && (null == T.current._ref ? (N(n), T.current.start(E, () => N(n))) : !a && null != T.current._ref && (T.current.stop(), (0, h.UN)(e)));
+        a && null == T.current._ref && (null == T.current._ref ? (N(n), T.current.start(f, () => N(n))) : !a && null != T.current._ref && (T.current.stop(), (0, h.UN)(e)));
     }, [e, N, n]);
     i.useEffect(() => {
         let e = T.current;

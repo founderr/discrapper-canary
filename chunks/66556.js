@@ -26,10 +26,10 @@ function p(e) {
             },
             [t]
         ),
-        E = a.useCallback(() => {
+        f = a.useCallback(() => {
             p(!1);
         }, []),
-        f = a.useCallback(() => {
+        E = a.useCallback(() => {
             !n && (0, u.U4)('Popout'), p(!n);
         }, [n]);
     return (0, i.jsx)(l.Popout, {
@@ -38,13 +38,13 @@ function p(e) {
         align: 'right',
         autoInvert: !1,
         shouldShow: n,
-        onRequestClose: E,
+        onRequestClose: f,
         renderPopout: function () {
             return (0, i.jsx)(l.Dialog, {
                 children: (0, i.jsx)(d.Z, {
                     className: m.browser,
                     channel: t,
-                    onClose: E
+                    onClose: f
                 })
             });
         },
@@ -53,7 +53,7 @@ function p(e) {
             return (0, i.jsx)(r.JO, {
                 ...e,
                 className: m.icon,
-                onClick: f,
+                onClick: E,
                 icon: l.ThreadIcon,
                 'aria-label': h.Z.Messages.THREADS,
                 tooltip: n ? null : h.Z.Messages.THREADS,

@@ -18,8 +18,8 @@ var i = n(735250),
     m = n(607070),
     p = n(361291),
     _ = n(131951),
-    E = n(626135),
-    f = n(120522),
+    f = n(626135),
+    E = n(120522),
     C = n(386542),
     g = n(933843),
     I = n(746599),
@@ -54,12 +54,12 @@ function R(e) {
         C = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()),
         x = a.useCallback(() => {
             l(!0),
-                (0, f.S)(r.q.STREAM_HIGH_QUALITY)
+                (0, E.S)(r.q.STREAM_HIGH_QUALITY)
                     .then((e) => {
                         if (e) {
                             if (
                                 ((0, I.J1)(!(0, g.mc)(M, b)),
-                                E.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
+                                f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
                                     perk_type: r.q.STREAM_HIGH_QUALITY,
@@ -155,7 +155,7 @@ function L(e) {
             l &&
             !o.current &&
             ((o.current = !0),
-            E.default.track(N.rMx.PERK_DEMO_OFFER_VIEWED, {
+            f.default.track(N.rMx.PERK_DEMO_OFFER_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
                 perk_type: r.q.STREAM_HIGH_QUALITY

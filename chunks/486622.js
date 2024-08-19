@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return f;
+        return E;
     }
 }),
     n(47120);
@@ -17,9 +17,9 @@ var i = n(470079),
     m = n(268699),
     p = n(9389),
     _ = n(687683),
-    E = n(981631);
-function f(e) {
-    let { user: t, onAcceptSuccess: n, onRejectSuccess: a, onError: f } = e,
+    f = n(981631);
+function E(e) {
+    let { user: t, onAcceptSuccess: n, onRejectSuccess: a, onError: E } = e,
         C = (0, p.Z)(),
         [g, I] = i.useState(!1),
         [x, T] = i.useState(!1),
@@ -35,13 +35,13 @@ function f(e) {
                         await (0, h.e4)(e), Z(!0), null == n || n();
                     } catch (t) {
                         let e = new l.Hx(t);
-                        null == f || f(e);
+                        null == E || E(e);
                     } finally {
                         I(!1);
                     }
                 }
             },
-            [b, n, f]
+            [b, n, E]
         ),
         j = i.useCallback(
             async (e) => {
@@ -51,13 +51,13 @@ function f(e) {
                         await (0, h.gN)(e), M(!0), null == a || a();
                     } catch (t) {
                         let e = new l.Hx(t);
-                        null == f || f(e);
+                        null == E || E(e);
                     } finally {
                         T(!1);
                     }
                 }
             },
-            [b, a, f]
+            [b, a, E]
         ),
         L = i.useCallback(
             async (e) => {
@@ -69,12 +69,12 @@ function f(e) {
                     M(!0), null == a || a();
                 } catch (t) {
                     let e = new l.Hx(t);
-                    null == f || f(e);
+                    null == E || E(e);
                 } finally {
                     T(!1);
                 }
             },
-            [b, a, f]
+            [b, a, E]
         ),
         P = i.useCallback(
             async (e) => {
@@ -94,7 +94,7 @@ function f(e) {
                 let n = async () => {
                     var n;
                     let i = null != t ? (null === (n = o.Z.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map((e) => e.guild.id)) : [];
-                    d.default.track(E.rMx.MESSAGE_REQUEST_ACTION, {
+                    d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
                         action: _.cl.ACCEPT_CONFIRMATION_PROMPT,
                         channel_id: e,
                         mutual_guild_ids: null != i ? i : [],
@@ -108,7 +108,7 @@ function f(e) {
                     onCancel: () => {
                         var n;
                         let i = null != t ? (null === (n = o.Z.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map((e) => e.guild.id)) : [];
-                        d.default.track(E.rMx.MESSAGE_REQUEST_ACTION, {
+                        d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
                             action: _.cl.DISMISS_CONFIRMATION_PROMPT,
                             channel_id: e,
                             mutual_guild_ids: null != i ? i : [],
@@ -125,7 +125,7 @@ function f(e) {
                         a && u.kJ.updateSetting(i),
                             i && null != t && (0, r.zd)(t),
                             R(e.id),
-                            d.default.track(E.rMx.MESSAGE_REQUEST_ACTION, {
+                            d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
                                 action: _.cl.ACCEPT_HAM_CONFIRMATION_PROMPT,
                                 channel_id: e.id,
                                 is_dont_show_again_checked: a,
@@ -139,7 +139,7 @@ function f(e) {
                           channel: e,
                           onConfirm: i,
                           onCancel: () => {
-                              d.default.track(E.rMx.MESSAGE_REQUEST_ACTION, {
+                              d.default.track(f.rMx.MESSAGE_REQUEST_ACTION, {
                                   action: _.cl.DISMISS_HAM_CONFIRMATION_PROMPT,
                                   channel_id: e.id
                               });

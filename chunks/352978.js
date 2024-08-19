@@ -16,12 +16,12 @@ var i,
     h = n(542590);
 ((a = i || (i = {})).CONTAIN = 'contain'), (a.COVER = 'cover');
 let m = l.memo(function (e) {
-    let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: a, className: r, fit: m = 'contain', mirror: p = !1, paused: _ = !1, streamPreviewURL: E, videoSpinnerContext: f, userId: C } = e,
+    let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: a, className: r, fit: m = 'contain', mirror: p = !1, paused: _ = !1, streamPreviewURL: f, videoSpinnerContext: E, userId: C } = e,
         [g, I] = l.useState(!0),
         [x] = l.useState(() => new u.o('VideoStream'));
     l.useEffect(() => {
-        !_ && (g ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(f, C, t));
-    }, [g, _, t, x, f, C]);
+        !_ && (g ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(E, C, t));
+    }, [g, _, t, x, E, C]);
     let T = l.useCallback(() => {
         I(!1);
     }, []);
@@ -44,9 +44,9 @@ let m = l.memo(function (e) {
                           g &&
                           (0, s.jsxs)(l.Fragment, {
                               children: [
-                                  null != E
+                                  null != f
                                       ? (0, s.jsx)('img', {
-                                            src: E,
+                                            src: f,
                                             alt: '',
                                             className: h.previewImage
                                         })

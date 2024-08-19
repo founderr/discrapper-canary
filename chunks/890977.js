@@ -16,7 +16,7 @@ var i,
     m = n(484334),
     p = n(158877),
     _ = n(178408);
-function E(e) {
+function f(e) {
     let t = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         n = l.useRef(null);
     return (
@@ -39,17 +39,17 @@ function E(e) {
         n
     );
 }
-function f(e) {
+function E(e) {
     let { className: t } = e;
     return (0, s.jsx)('div', {
-        ref: E(i || (i = n.t(m, 2))),
+        ref: f(i || (i = n.t(m, 2))),
         className: o()(_.glow, t)
     });
 }
 function C(e) {
     let { className: t } = e;
     return (0, s.jsx)('div', {
-        ref: E(a || (a = n.t(p, 2))),
+        ref: f(a || (a = n.t(p, 2))),
         className: o()(_.trinkets, t)
     });
 }
@@ -62,7 +62,7 @@ let g = (e) => {
         (0, s.jsxs)('div', {
             className: n,
             children: [
-                (0, s.jsx)(f, { className: i }),
+                (0, s.jsx)(E, { className: i }),
                 (0, s.jsx)('div', { className: _.circleLayer }),
                 (0, s.jsx)('div', {
                     className: _.entrypoint,

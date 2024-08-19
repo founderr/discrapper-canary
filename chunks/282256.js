@@ -12,13 +12,13 @@ t.Z = a.memo(function (e) {
     let { children: t, isOverlay: n, contextGuildId: s, ...h } = e,
         m = a.useRef(null),
         [p, _] = a.useState({ maskImage: 'none' }),
-        E = a.useCallback(() => {
+        f = a.useCallback(() => {
             var e, t;
             if (n) {
                 _({ maskImage: 'none' });
                 return;
             }
-            let i = null === (e = f.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
+            let i = null === (e = E.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
                 a = null === (t = m.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
             if (null == i || null == a) {
                 _({ maskImage: 'none' });
@@ -32,15 +32,15 @@ t.Z = a.memo(function (e) {
             }
             _({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(l, 'px)') });
         }, []),
-        f = (0, o.y)(E),
+        E = (0, o.y)(f),
         C = (0, c.p0)(h.userId, s);
     a.useEffect(() => {
-        if (null != f.current) E();
+        if (null != E.current) f();
     }, [C]);
-    let g = (0, r.O)(E);
+    let g = (0, r.O)(f);
     return (0, i.jsxs)('div', {
         className: l()(d.container, n && d.isOverlayContainer),
-        ref: f,
+        ref: E,
         children: [
             (0, i.jsx)('div', {
                 className: d.usernameContainer,

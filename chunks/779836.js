@@ -17,8 +17,8 @@ var a = n(120356),
     m = n(477291),
     p = n(531578),
     _ = n(959517),
-    E = n(689938),
-    f = n(774103);
+    f = n(689938),
+    E = n(774103);
 function C(e) {
     let { summary: t, channel: n } = e,
         a = (0, r.e7)([h.Z], () => h.Z.summaryFeedback(t)),
@@ -51,20 +51,20 @@ function C(e) {
         children: c((e, t) =>
             t
                 ? (0, i.jsx)('div', {
-                      className: f.summaryFeedbackWrapper,
+                      className: E.summaryFeedbackWrapper,
                       children: (0, i.jsxs)(l.animated.div, {
                           style: e,
-                          className: f.summaryFeedback,
+                          className: E.summaryFeedback,
                           children: [
                               (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'interactive-normal',
-                                  children: E.Z.Messages.SUMMARY_FEEDBACK
+                                  children: f.Z.Messages.SUMMARY_FEEDBACK
                               }),
                               (0, i.jsx)(o.Clickable, {
                                   onClick: (e) => s(e, p.aZ.GOOD),
                                   children: (0, i.jsx)(d.Z, {
-                                      className: f.thumbIcon,
+                                      className: E.thumbIcon,
                                       width: 12,
                                       height: 12
                                   })
@@ -72,7 +72,7 @@ function C(e) {
                               (0, i.jsx)(o.Clickable, {
                                   onClick: (e) => s(e, p.aZ.BAD),
                                   children: (0, i.jsx)(u.Z, {
-                                      className: f.thumbIcon,
+                                      className: E.thumbIcon,
                                       width: 12,
                                       height: 12
                                   })
@@ -91,15 +91,15 @@ function g(e) {
         m = (0, r.e7)([h.Z], () => h.Z.selectedSummary(u.id));
     if (null == m) return null;
     let p = null != l.unreadId,
-        E = null != l.content;
+        f = null != l.content;
     return (
-        (a = E
+        (a = f
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(o.TopicsIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: f.summaryStartIcon
+                          className: E.summaryStartIcon
                       }),
                       l.content
                   ]
@@ -113,15 +113,15 @@ function g(e) {
                       (0, i.jsx)(o.TopicsIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: f.summaryEndIcon
+                          className: E.summaryEndIcon
                       })
                   ]
               })),
         (0, i.jsx)(
             c.Z,
             {
-                className: s()(f.summaryDivider, E ? f.summaryDividerStart : f.summaryDividerEnd),
-                contentClassName: E ? f.summaryStartContent : f.summaryEndContent,
+                className: s()(E.summaryDivider, f ? E.summaryDividerStart : E.summaryDividerEnd),
+                contentClassName: f ? E.summaryStartContent : E.summaryEndContent,
                 isUnread: p,
                 id: p ? _.j1 : void 0,
                 children: a

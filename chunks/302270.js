@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(933557),
     p = n(320007),
     _ = n(236091),
-    E = n(623624),
-    f = n(665149),
+    f = n(623624),
+    E = n(665149),
     C = n(984370),
     g = n(141321),
     I = n(618158),
@@ -43,8 +43,8 @@ var i = n(735250),
 function B(e) {
     let { inPopout: t, channel: n, toggleRequestToSpeakSidebar: s, showRequestToSpeakSidebar: o } = e,
         m = (0, d.bp)(),
-        E = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
-        f = (0, R.B)(n.id),
+        f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
+        E = (0, R.B)(n.id),
         C = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY),
         { preventIdle: v, allowIdle: S } = (0, I.Y)('popup');
     return (0, i.jsxs)(i.Fragment, {
@@ -88,19 +88,19 @@ function B(e) {
                 },
                 'recents'
             ),
-            !o && f
+            !o && E
                 ? (0, i.jsx)('div', {
                       className: w.button,
                       children: (0, i.jsx)(P.Z, {
                           toggleRequestToSpeakSidebar: () => {
-                              E && u.Z.updateChatOpen(n.id, !1), s();
+                              f && u.Z.updateChatOpen(n.id, !1), s();
                           },
                           showRequestToSpeakSidebar: o,
                           numRequestToSpeak: C
                       })
                   })
                 : null,
-            !E &&
+            !f &&
                 (0, i.jsx)('div', {
                     className: l()(w.button, { [w.sidebarOpen]: o }),
                     children: (0, i.jsx)(T.T, {
@@ -143,7 +143,7 @@ function H(e) {
                 listener_count: I + x
             });
     }, [P]);
-    let V = (0, i.jsxs)(f.ZP, {
+    let V = (0, i.jsxs)(E.ZP, {
         toolbar: (0, i.jsx)(B, {
             inPopout: s,
             toggleRequestToSpeakSidebar: h,
@@ -154,20 +154,20 @@ function H(e) {
         transparent: !0,
         className: l()((0, A.Q)(D.BRd.DARK), w.participants),
         children: [
-            (0, i.jsx)(f.ZP.Icon, {
+            (0, i.jsx)(E.ZP.Icon, {
                 icon: c.StageIcon,
                 disabled: !0,
                 'aria-label': U.Z.Messages.STAGE_CHANNEL,
                 className: w.icon,
                 color: null != g ? o.Z.unsafe_rawColors.GREEN_360.css : void 0
             }),
-            (0, i.jsx)(f.ZP.Title, {
+            (0, i.jsx)(E.ZP.Title, {
                 className: w.channelName,
                 wrapperClassName: w.channelNameWrapper,
                 children: null !== (n = null == g ? void 0 : g.topic) && void 0 !== n ? n : _
             }),
-            (0, i.jsx)(f.ZP.Divider, { className: w.divider }),
-            (0, i.jsxs)(f.ZP.Title, {
+            (0, i.jsx)(E.ZP.Divider, { className: w.divider }),
+            (0, i.jsxs)(E.ZP.Title, {
                 children: [
                     (0, i.jsx)(c.MicrophoneIcon, {
                         size: 'xs',
@@ -231,7 +231,7 @@ function H(e) {
                                             (0, i.jsx)(c.ShinyButton, {
                                                 size: c.Button.Sizes.SMALL,
                                                 onClick: () => {
-                                                    (0, E.f)({
+                                                    (0, f.f)({
                                                         guildId: d.guild_id,
                                                         location: { section: D.jXE.STAGE_VIDEO_LIMIT }
                                                     }),

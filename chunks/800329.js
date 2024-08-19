@@ -26,13 +26,13 @@ function d(e, t, n) {
 function h(e) {
     var t;
     let { className: n, children: s, keyExtractor: h, paddingTop: m = 0, paddingBottom: p = 0 } = e,
-        [_, E] = a.useState({
+        [_, f] = a.useState({
             width: 0,
             height: 0
         }),
-        { width: f, height: C } = _,
+        { width: E, height: C } = _,
         g = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0,
-        I = f - 16,
+        I = E - 16,
         x = C - (m + p),
         {
             tileStyle: T,
@@ -85,7 +85,7 @@ function h(e) {
             [g, I, x]
         ),
         Z = S + 1,
-        A = Z * N + (Z - 1) * 8 <= f,
+        A = Z * N + (Z - 1) * 8 <= E,
         M = Math.floor(N / c) + 8,
         b = Math.max(0, x - M * v) / 2;
     return (0, i.jsx)(r.Z, {
@@ -131,6 +131,6 @@ function h(e) {
         rowCount: v,
         rowCountBySection: [v],
         rowHeight: M,
-        onResize: E
+        onResize: f
     });
 }

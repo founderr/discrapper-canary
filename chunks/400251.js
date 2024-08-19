@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(565138),
     p = n(372769),
     _ = n(134432),
-    E = n(769654),
-    f = n(601964),
+    f = n(769654),
+    E = n(601964),
     C = n(430824),
     g = n(768581),
     I = n(683818),
@@ -124,7 +124,7 @@ t.Z = (e) => {
         x = async () => {
             h(!0);
             try {
-                I ? (0, E.X)(s.guildId) : await u.Z.joinGuild(s.guildId, { source: T.vtS.DIRECTORY_ENTRY });
+                I ? (0, f.X)(s.guildId) : await u.Z.joinGuild(s.guildId, { source: T.vtS.DIRECTORY_ENTRY });
             } finally {
                 h(!1);
             }
@@ -183,7 +183,7 @@ t.Z = (e) => {
                                     children: (0, i.jsx)(m.Z, {
                                         className: v.icon,
                                         iconSrc: Z,
-                                        guild: new f.ZP(s),
+                                        guild: new E.ZP(s),
                                         size: m.Z.Sizes.MEDIUM,
                                         active: !0
                                     })

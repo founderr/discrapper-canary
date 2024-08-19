@@ -17,8 +17,8 @@ var a = n(442837),
     m = n(246364),
     p = n(360328),
     _ = n(981631),
-    E = n(689938),
-    f = n(617803);
+    f = n(689938),
+    E = n(617803);
 function C(e) {
     let { channelId: t, showProfile: n = !1, showTrailingDivider: C = !1 } = e,
         g = d.default.cast(t),
@@ -42,10 +42,10 @@ function C(e) {
         { approveRequest: Z, rejectRequest: A, submitting: M } = (0, p.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId);
     return null != I && I.applicationStatus === m.wB.SUBMITTED && x
         ? (0, i.jsxs)('div', {
-              className: f.buttons,
+              className: E.buttons,
               children: [
                   (0, i.jsx)(s.Tooltip, {
-                      text: E.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
+                      text: f.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
                       shouldShow: S,
                       children: (e) =>
                           (0, i.jsx)(s.Button, {
@@ -55,7 +55,7 @@ function C(e) {
                               onClick: Z,
                               size: s.ButtonSizes.SMALL,
                               disabled: S,
-                              children: E.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
+                              children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
                           })
                   }),
                   (0, i.jsx)(s.Button, {
@@ -63,7 +63,7 @@ function C(e) {
                       onClick: A,
                       size: s.ButtonSizes.SMALL,
                       disabled: M || I.applicationStatus !== m.wB.SUBMITTED,
-                      children: E.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
+                      children: f.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
                   }),
                   n &&
                       (0, i.jsx)(s.Button, {
@@ -79,7 +79,7 @@ function C(e) {
                               });
                           },
                           size: s.ButtonSizes.SMALL,
-                          children: E.Z.Messages.VIEW_PROFILE
+                          children: f.Z.Messages.VIEW_PROFILE
                       }),
                   C && (0, i.jsx)(l.ZP.Divider, {})
               ]

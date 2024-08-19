@@ -11,8 +11,8 @@ var i = n(735250),
     m = n(424602),
     p = n(541099),
     _ = n(827498),
-    E = n(663924),
-    f = n(998698),
+    f = n(663924),
+    E = n(998698),
     C = n(873387),
     g = n(605236),
     I = n(291407),
@@ -24,15 +24,15 @@ var i = n(735250),
 let Z = a.forwardRef(function (e, t) {
     let { type: n, animateRef: s } = e,
         m = (0, r.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
-        { Component: E, events: f, play: C } = (0, c.w)();
+        { Component: f, events: E, play: C } = (0, c.w)();
     a.useImperativeHandle(
         s,
         () => ({
             animate: () => {
-                f.onMouseEnter();
+                E.onMouseEnter();
             }
         }),
-        [f]
+        [E]
     );
     let I = a.useCallback(() => {
         (0, d.yw)(x.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, g.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h._(_._b.TEXT, n)), C();
@@ -56,8 +56,8 @@ let Z = a.forwardRef(function (e, t) {
                 }
             },
             innerClassName: S.buttonContents,
-            ...f,
-            children: (0, i.jsx)(E, { color: 'currentColor' })
+            ...E,
+            children: (0, i.jsx)(f, { color: 'currentColor' })
         })
     });
 });
@@ -65,9 +65,9 @@ t.Z = a.memo(function (e) {
     let { channel: t, type: n, animateRef: s } = e,
         l = a.useRef(null),
         o = (0, C.g)(t),
-        { activeCommand: c } = (0, r.cj)([f.Z], () => {
+        { activeCommand: c } = (0, r.cj)([E.Z], () => {
             var e;
-            return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? f.Z.getActiveCommand(t.id) : null };
+            return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? E.Z.getActiveCommand(t.id) : null };
         }),
         u = m.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
         d = (0, r.e7)(
@@ -94,7 +94,7 @@ t.Z = a.memo(function (e) {
                       })
                   }),
                   d
-                      ? (0, i.jsx)(E.Z, {
+                      ? (0, i.jsx)(f.Z, {
                             positionTargetRef: l,
                             channel: t
                         })

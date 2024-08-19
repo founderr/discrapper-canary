@@ -23,8 +23,8 @@ var i = n(735250),
     m = n(471445),
     p = n(243778),
     _ = n(266076),
-    E = n(565138),
-    f = n(703656),
+    f = n(565138),
+    E = n(703656),
     C = n(699516),
     g = n(914010),
     I = n(594174),
@@ -111,7 +111,7 @@ function L(e) {
     );
 }
 function P(e) {
-    let { channel: t, channelName: n, parentChannel: s, guild: r, inSidebar: o = !1, handleClick: u, handleContextMenu: d, handleParentClick: p, handleParentContextMenu: E, renderFollowButton: f } = e,
+    let { channel: t, channelName: n, parentChannel: s, guild: r, inSidebar: o = !1, handleClick: u, handleContextMenu: d, handleParentClick: p, handleParentContextMenu: f, renderFollowButton: E } = e,
         g = (0, m.KS)(t, r),
         { prefix: x, level: T } = (function (e, t) {
             var n, i;
@@ -206,7 +206,7 @@ function P(e) {
                         children: N
                     }),
                     null != t.linkedLobby ? (0, i.jsx)(L, { channel: t }) : null,
-                    null != f ? f() : null
+                    null != E ? E() : null
                 ]
             });
         case M.d4z.GUILD_VOICE:
@@ -244,7 +244,7 @@ function P(e) {
                         D(e, R.Z.Messages.TEXT_CHANNEL),
                         (0, i.jsx)(Z.Z.Title, {
                             level: T,
-                            onContextMenu: E,
+                            onContextMenu: f,
                             onClick: p,
                             className: l()(j.parentChannelName, j.cursorPointer),
                             children: (0, h.F6)(s, I.default, C.Z)
@@ -353,15 +353,15 @@ function k(e) {
               className: j.guildBreadcrumbContainer,
               children: [
                   'left' === a && (0, i.jsx)(Z.Z.Caret, { direction: 'left' }),
-                  (0, i.jsx)(E.Z, {
+                  (0, i.jsx)(f.Z, {
                       guild: t,
-                      size: E.Z.Sizes.SMALLER,
+                      size: f.Z.Sizes.SMALLER,
                       className: j.guildBreadcrumbIcon,
                       active: !0
                   }),
                   (0, i.jsx)(Z.Z.Title, {
                       onClick: () => {
-                          (0, f.XU)(t.id, n.id);
+                          (0, E.XU)(t.id, n.id);
                       },
                       className: l()(j.parentChannelName, j.cursorPointer),
                       children: t.name

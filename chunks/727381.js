@@ -17,8 +17,8 @@ var a = n(120356),
     m = n(477718),
     p = n(791176),
     _ = n(908474),
-    E = n(467014),
-    f = n(689938),
+    f = n(467014),
+    E = n(689938),
     C = n(446926);
 function g() {
     return (0, i.jsxs)('div', {
@@ -33,7 +33,7 @@ function g() {
                     }),
                     (0, i.jsx)(r.Heading, {
                         variant: 'heading-md/semibold',
-                        children: f.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE
+                        children: E.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE
                     })
                 ]
             }),
@@ -48,7 +48,7 @@ function g() {
     });
 }
 function I(e) {
-    let { userId: t, guildId: n, location: a, className: u, onNavigate: f } = e,
+    let { userId: t, guildId: n, location: a, className: u, onNavigate: E } = e,
         I = (0, l.e7)([c.default], () => c.default.getUser(t), [t]),
         x = (0, l.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
     return null == I || null == x
@@ -61,13 +61,13 @@ function I(e) {
                       className: C.innerContainer,
                       children: [
                           (0, i.jsx)(_.Z, { member: x }),
-                          (0, i.jsx)(E.Z, {
+                          (0, i.jsx)(f.Z, {
                               userId: t,
                               guildId: n
                           }),
                           (0, i.jsx)(p.Z, {
                               member: x,
-                              onNavigate: f
+                              onNavigate: E
                           }),
                           (0, i.jsx)(h.Z, { member: x }),
                           (0, i.jsx)(d.Z, { member: x }),

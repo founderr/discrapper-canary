@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 }),
     n(47120);
@@ -98,7 +98,7 @@ function _(e) {
         ]
     });
 }
-function E(e) {
+function f(e) {
     let { paperColor: t, paperColorAlt: n, className: a } = e;
     return (0, i.jsxs)('svg', {
         className: l()(h.bottom, a),
@@ -159,9 +159,9 @@ function E(e) {
         ]
     });
 }
-function f(e) {
+function E(e) {
     let { children: t, fullHeight: n = !1 } = e,
-        [s, f] = a.useState(!1),
+        [s, E] = a.useState(!1),
         { height: C, ref: g } = (0, c.Z)(),
         { height: I, ref: x } = (0, c.Z)(),
         T = n ? I : 59 + (null != C ? C : 100) + 101,
@@ -170,7 +170,7 @@ function f(e) {
             to: { height: T },
             config: m,
             delay: s ? 0 : 800,
-            onRest: () => f(!0)
+            onRest: () => E(!0)
         }),
         v = (0, o.useSpring)({
             from: { opacity: 0 },
@@ -211,7 +211,7 @@ function f(e) {
                         })
                     })
                 }),
-                (0, i.jsx)(E, {
+                (0, i.jsx)(f, {
                     className: h.scrollSvg,
                     paperColor: Z,
                     paperColorAlt: A

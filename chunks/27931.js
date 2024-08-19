@@ -60,8 +60,8 @@ function _(e, t, n) {
             }, [i, t, a, n, e]);
         })(e, t, i),
         [h, p] = a,
-        [_, E] = (0, o.T)(a, n, [t[m.pV.AUDIENCE]]),
-        f = [h[i ? 3 : 0], h[1], _[2]];
-    return [f, [p[i ? 3 : 0], p[1], E[2]]];
+        [_, f] = (0, o.T)(a, n, [t[m.pV.AUDIENCE]]),
+        E = [h[i ? 3 : 0], h[1], _[2]];
+    return [E, [p[i ? 3 : 0], p[1], f[2]]];
 }
 ((a = i || (i = {}))[(a.SELECTED = 0)] = 'SELECTED'), (a[(a.SPEAKER = 1)] = 'SPEAKER'), (a[(a.AUDIENCE = 2)] = 'AUDIENCE'), (a[(a.MEDIA = 3)] = 'MEDIA');

@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(884737),
     p = n(376923),
     _ = n(472596),
-    E = n(987707),
-    f = n(501801),
+    f = n(987707),
+    E = n(501801),
     C = n(271383),
     g = n(430824),
     I = n(274730),
@@ -31,7 +31,7 @@ function A(e) {
     let { log: t, member: n, guild: s } = e,
         { analyticsLocations: r } = (0, h.ZP)(),
         d = m.nm(t),
-        E = m.QM(t),
+        f = m.QM(t),
         g = m.of(t),
         I = m.J5(t),
         T = (0, p.LJ)(t.id),
@@ -88,11 +88,11 @@ function A(e) {
                                     color: 'header-primary',
                                     children: d
                                 }),
-                            null != E &&
+                            null != f &&
                                 (0, i.jsxs)(u.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    children: ['(', 'string' == typeof E ? E : o()(E).fromNow(), ')']
+                                    children: ['(', 'string' == typeof f ? f : o()(f).fromNow(), ')']
                                 })
                         ]
                     }),
@@ -149,7 +149,7 @@ function A(e) {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
                             tag: 'span',
-                            children: (0, i.jsx)(f.tP, {
+                            children: (0, i.jsx)(E.tP, {
                                 log: t,
                                 guild: s,
                                 onContentClick: () => {},
@@ -165,9 +165,9 @@ function M(e) {
     let { member: t } = e,
         n = (0, c.e7)([g.Z], () => g.Z.getGuild(t.guildId), [t.guildId]),
         s = (0, c.e7)(
-            [E.Z],
+            [f.Z],
             () => {
-                let e = E.Z.logs;
+                let e = f.Z.logs;
                 return null == e || null == n ? [] : I._$(e, n);
             },
             [n]

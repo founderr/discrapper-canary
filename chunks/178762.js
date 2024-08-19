@@ -20,8 +20,8 @@ var i = n(735250),
     m = n(439170),
     p = n(594174),
     _ = n(687694),
-    E = n(69259),
-    f = n(370370),
+    f = n(69259),
+    E = n(370370),
     C = n(107062),
     g = n(91140),
     I = n(227172),
@@ -41,7 +41,7 @@ function L(e) {
 }
 let P = l().throttle(
         (e) => {
-            (0, E.L)(R.xP.CARD_HOVER, e);
+            (0, f.L)(R.xP.CARD_HOVER, e);
         },
         5000,
         {
@@ -78,7 +78,7 @@ let P = l().throttle(
                     entry: t
                 });
             case o.s.LAUNCHED_ACTIVITY:
-                return (0, i.jsx)(f.Z, {
+                return (0, i.jsx)(E.Z, {
                     ...n,
                     entry: t
                 });
@@ -127,7 +127,7 @@ t.ZP = a.memo((e) => {
     var t;
     let { index: s, ...l } = e,
         [o, m] = a.useState('default'),
-        f = (0, r.JA)(''.concat(s)),
+        E = (0, r.JA)(''.concat(s)),
         C = null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
         { isRich: g, appName: I } = (0, b.n)(l.entry),
         x = {
@@ -173,7 +173,7 @@ t.ZP = a.memo((e) => {
         onMouseEnter: () => {
             (N.current = !0),
                 setTimeout(() => {
-                    N.current && S(!0), T && (0, E.L)(R.xP.CARD_CLICK, x);
+                    N.current && S(!0), T && (0, f.L)(R.xP.CARD_CLICK, x);
                 }, 100);
         },
         onMouseLeave: U,
@@ -189,7 +189,7 @@ t.ZP = a.memo((e) => {
             position: 'left',
             shouldShow: T ? v : Z,
             positionKey: o,
-            onRequestOpen: () => (0, E.L)(R.xP.CARD_CLICK, x),
+            onRequestOpen: () => (0, f.L)(R.xP.CARD_CLICK, x),
             onRequestClose: () => {
                 M && U(), !T && (S(!1), A(!1));
             },
@@ -198,7 +198,7 @@ t.ZP = a.memo((e) => {
                 let { isShown: n } = t;
                 return (0, i.jsx)(u.Clickable, {
                     ...e,
-                    ...f,
+                    ...E,
                     focusProps: {
                         offset: {
                             top: 4,

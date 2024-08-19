@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 }),
     n(47120);
@@ -17,10 +17,10 @@ var i = n(735250),
     m = n(87728),
     p = n(705816),
     _ = n(792379),
-    E = n(402777);
-function f(e) {
+    f = n(402777);
+function E(e) {
     let { location: t, channel: n, ...s } = e,
-        f = (0, m.Z)();
+        E = (0, m.Z)();
     (0, o.t)();
     let [C] = n.recipients,
         g = (0, r.e7)([u.default], () => u.default.getUser(C));
@@ -40,7 +40,7 @@ function f(e) {
     return (a.useEffect(() => {
         N(x);
     }, [x]),
-    f)
+    E)
         ? null
         : T && v
           ? (0, i.jsx)(p.Z, {
@@ -55,7 +55,7 @@ function f(e) {
                   channel: n,
                   ...s
               })
-            : (0, i.jsx)(E.Z, {
+            : (0, i.jsx)(f.Z, {
                   user: g,
                   currentUser: I,
                   channel: n,

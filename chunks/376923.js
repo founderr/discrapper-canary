@@ -1,6 +1,6 @@
 n.d(t, {
     LD: function () {
-        return f;
+        return E;
     },
     LJ: function () {
         return C;
@@ -9,7 +9,7 @@ n.d(t, {
         return _;
     },
     mh: function () {
-        return E;
+        return f;
     },
     qc: function () {
         return i;
@@ -40,7 +40,7 @@ function _(e, t) {
         l = (0, o.e7)([u.Z], () => u.Z.getGuild(t), [t]);
     return (null == l ? void 0 : l.hasVerificationGate()) ? (null == a || null == s || null == l ? 1 : (0, h.yE)(null !== (n = s.flags) && void 0 !== n ? n : 0, p.q.BYPASSES_VERIFICATION) || (0, h.yE)(null !== (i = s.flags) && void 0 !== i ? i : 0, p.q.COMPLETED_ONBOARDING) ? 2 : 1) : 0;
 }
-function E(e, t) {
+function f(e, t) {
     var n;
     let i = (0, o.e7)([d.default], () => d.default.getUser(e), [e]),
         a = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]);
@@ -50,7 +50,7 @@ function E(e, t) {
         r = (null == a ? void 0 : a.joinedAt) != null;
     return i.verified || l || r || s;
 }
-function f(e) {
+function E(e) {
     return s.useMemo(() => {
         let t = m.default.extractTimestamp(e);
         return r()(new Date(t)).format('MMM DD, YYYY');

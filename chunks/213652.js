@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var i = n(735250),
@@ -16,12 +16,12 @@ var i = n(735250),
     m = n(358221),
     p = n(354459),
     _ = n(689938),
-    E = n(212374);
-function f(e) {
+    f = n(212374);
+function E(e) {
     let { channel: t } = e,
         n = (0, s.e7)([m.Z], () => m.Z.getSelectedParticipant(t.id)),
-        f = (null == n ? void 0 : n.type) === p.fO.STREAM,
-        C = (0, s.e7)([d.Z], () => (f ? d.Z.getActiveStreamForStreamKey(n.id) : null)),
+        E = (null == n ? void 0 : n.type) === p.fO.STREAM,
+        C = (0, s.e7)([d.Z], () => (E ? d.Z.getActiveStreamForStreamKey(n.id) : null)),
         { ignoreSenderPreference: g } = c.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
         { viewerClippingAllowed: I, isAtMaxSavingClipOperations: x } = (0, s.cj)([r.Z], () => ({
             viewerClippingAllowed: null != C && (r.Z.isViewerClippingAllowedForUser(C.ownerId) || g),
@@ -39,7 +39,7 @@ function f(e) {
             []
         );
     return (0, i.jsx)(u.Z, {
-        className: E.actionBarButton,
+        className: f.actionBarButton,
         onClick: () => {
             !v && (N ? (0, o.C1)() : (0, o.C1)(n.id));
         },

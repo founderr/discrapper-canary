@@ -56,12 +56,12 @@ function p(e) {
 }
 async function _() {
     try {
-        for (; !a().isEmpty(h); ) await E();
+        for (; !a().isEmpty(h); ) await f();
     } finally {
         m = null;
     }
 }
-async function E() {
+async function f() {
     let e = Array.from(h).slice(0, 25);
     try {
         let t = await l.tn.get({

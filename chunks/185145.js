@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return E;
+        return f;
     }
 }),
     n(47120);
@@ -18,17 +18,17 @@ var a = n(442837),
     m = n(590433),
     p = n(689938),
     _ = n(679061);
-function E(e) {
+function f(e) {
     let { guild: t, disabledUntil: n } = e,
-        [E, f] = (0, d.i)(t.id),
+        [f, E] = (0, d.i)(t.id),
         C = (0, a.e7)([c.ZP, o.default], () => c.ZP.getMember(t.id, o.default.getId()), [t.id]);
     return (
         (0, u.$)(C),
         (0, i.jsxs)('div', {
             children: [
-                E
+                f
                     ? (0, i.jsx)(h.Z, {
-                          onClose: () => f(t.id),
+                          onClose: () => E(t.id),
                           guildName: t.name
                       })
                     : null,

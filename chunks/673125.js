@@ -12,17 +12,17 @@ var i,
     m = n(88315),
     p = n(813900);
 let _ = {},
-    E = {},
     f = {},
+    E = {},
     C = !0,
     g = null;
 function I(e) {
-    if (null == E[e]) {
+    if (null == f[e]) {
         let t = u.default.getUser(e);
         if (null == t) return;
         let n = t.getAvatarURL(null, p.Ks),
             i = new Image();
-        (i.src = n), (E[e] = i);
+        (i.src = n), (f[e] = i);
     }
 }
 class x extends (i = r.ZP.Store) {
@@ -33,10 +33,10 @@ class x extends (i = r.ZP.Store) {
         return null != _[e] ? _[e] : [];
     }
     getAvatarImage(e) {
-        return E[e];
+        return f[e];
     }
     getEmojiImage(e) {
-        return f[e];
+        return E[e];
     }
     getDrawMode() {
         return g;
@@ -95,10 +95,10 @@ let T = new x(o.Z, {
                 : _[s].push(r);
         }
         let o = null !== (n = null !== (t = a.emojiId) && void 0 !== t ? t : a.emojiName) && void 0 !== n ? n : '';
-        if (null == f[o]) {
+        if (null == E[o]) {
             let e = null != a.emojiName ? c.ZP.convertNameToSurrogate(a.emojiName) : null;
-            (f[o] = new Image()),
-                (f[o].src = (0, d.qc)(
+            (E[o] = new Image()),
+                (E[o].src = (0, d.qc)(
                     {
                         id: a.emojiId,
                         name: null !== (i = null != e ? e : a.emojiName) && void 0 !== i ? i : '',

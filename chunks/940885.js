@@ -17,8 +17,8 @@ var a = n(410030),
     m = n(944546),
     p = n(470900),
     _ = n(772056),
-    E = n(689938),
-    f = n(409931);
+    f = n(689938),
+    E = n(409931);
 function C(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, s.ZP)(),
@@ -30,12 +30,12 @@ function C(e) {
         Z = null != N && N.length > 0;
     return S || Z
         ? (0, i.jsxs)(d.Z.Overlay, {
-              className: f.overlay,
+              className: E.overlay,
               children: [
                   Z &&
                       (0, i.jsx)(_.Z, {
-                          className: f.list,
-                          header: E.Z.Messages.MUTUAL_GUILDS_COUNT.format({ count: N.length }),
+                          className: E.list,
+                          header: f.Z.Messages.MUTUAL_GUILDS_COUNT.format({ count: N.length }),
                           isLoadingHeader: v,
                           loadingContentsCount: N.length,
                           itemType: _.R.MutualGuildList,
@@ -59,11 +59,11 @@ function C(e) {
                               );
                           })
                       }),
-                  Z && S && (0, i.jsx)(u.Z, { className: f.divider }),
+                  Z && S && (0, i.jsx)(u.Z, { className: E.divider }),
                   S &&
                       (0, i.jsx)(_.Z, {
-                          className: f.list,
-                          header: E.Z.Messages.MUTUAL_FRIENDS_COUNT.format({ count: x.length }),
+                          className: E.list,
+                          header: f.Z.Messages.MUTUAL_FRIENDS_COUNT.format({ count: x.length }),
                           isLoadingHeader: T,
                           loadingContentsCount: x.length,
                           itemType: _.R.MutualFriendsList,

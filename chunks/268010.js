@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(206295),
     p = n(335326),
     _ = n(297781),
-    E = n(591853),
-    f = n(410441),
+    f = n(591853),
+    E = n(410441),
     C = n(689938);
 let g = (e, t, n) => {
         let i = C.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
@@ -64,16 +64,16 @@ t.Z = (e) => {
         };
     return null == T
         ? null
-        : (0, i.jsxs)(E.yR, {
+        : (0, i.jsxs)(f.yR, {
               children: [
-                  (0, i.jsx)(E.wG, {
+                  (0, i.jsx)(f.wG, {
                       thumbnailSrc: N,
                       channel: t,
                       entry: n,
                       userDescription: (0, d.kr)(n) ? C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
                       title: n.extra.media_title,
                       subtitle: n.extra.media_subtitle,
-                      headerIcons: (0, i.jsx)(f.Z, {
+                      headerIcons: (0, i.jsx)(E.Z, {
                           Icon: l.CrunchyrollNeutralIcon,
                           'aria-label': C.Z.Messages.CRUNCHYROLL
                       }),
@@ -84,8 +84,8 @@ t.Z = (e) => {
                       onClickTitle: b,
                       onClickThumbnail: b
                   }),
-                  (0, i.jsx)(E.St, {
-                      children: (0, i.jsx)(E.WT, {
+                  (0, i.jsx)(f.St, {
+                      children: (0, i.jsx)(f.WT, {
                           closePopout: x,
                           user: T,
                           channel: t,

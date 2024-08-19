@@ -12,8 +12,8 @@ var a,
     m = n(353926),
     p = n(60349),
     _ = n(814443),
-    E = n(428598),
-    f = n(131704),
+    f = n(428598),
+    E = n(131704),
     C = n(624138),
     g = n(51144),
     I = n(592125),
@@ -62,7 +62,7 @@ function O() {
                 { friends: !0 },
                 t,
                 (function () {
-                    let e = x.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof f.mn && e.isDM()),
+                    let e = x.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof E.mn && e.isDM()),
                         t = Math.max(
                             ...e.map((e) => {
                                 let { id: t } = e;
@@ -96,14 +96,14 @@ function D(e, t) {
         if (n.useV2Communication)
             return (function (e, t) {
                 var n, i, a, s;
-                let l = null !== (a = null === (n = E.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== a ? a : 0;
-                return (null !== (s = null === (i = E.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== s ? s : 0) - l;
+                let l = null !== (a = null === (n = f.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== a ? a : 0;
+                return (null !== (s = null === (i = f.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== s ? s : 0) - l;
             })(e, t);
         if (n.useV2Dm)
             return (function (e, t) {
                 var n, i, a, s;
-                let l = null !== (a = null === (n = E.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.dmProbability) && void 0 !== a ? a : 0;
-                return (null !== (s = null === (i = E.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.dmProbability) && void 0 !== s ? s : 0) - l;
+                let l = null !== (a = null === (n = f.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.dmProbability) && void 0 !== a ? a : 0;
+                return (null !== (s = null === (i = f.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.dmProbability) && void 0 !== s ? s : 0) - l;
             })(e, t);
         if (n.useV1)
             return (function (e, t) {

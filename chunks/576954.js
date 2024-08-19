@@ -1,6 +1,6 @@
 n.d(t, {
     M: function () {
-        return E;
+        return f;
     }
 });
 var i = n(735250),
@@ -16,15 +16,15 @@ var i = n(735250),
     m = n(134612),
     p = n(981631),
     _ = n(689938);
-function E(e) {
-    let { channelId: t, warningId: E, senderId: f } = e,
+function f(e) {
+    let { channelId: t, warningId: f, senderId: E } = e,
         C = a.useCallback(() => {
-            (0, c.T)(t, [E]);
-        }, [t, E]),
+            (0, c.T)(t, [f]);
+        }, [t, f]),
         g = a.useCallback(
             (e) => () => {
                 r.Z.addRelationship({
-                    userId: f,
+                    userId: E,
                     context: { location: m.zr },
                     type: p.OGo.BLOCKED
                 }),
@@ -32,23 +32,23 @@ function E(e) {
                     (0, l.showToast)((0, l.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, l.ToastType.SUCCESS)),
                     (0, d.qc)({
                         channelId: t,
-                        warningId: E,
-                        senderId: f,
+                        warningId: f,
+                        senderId: E,
                         warningType: u.pj.STRANGER_DANGER,
                         cta: e
                     });
             },
-            [C, t, E, f]
+            [C, t, f, E]
         );
     a.useEffect(() => {
         (0, d.MC)(p.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
-            warningId: E,
-            senderId: f,
+            warningId: f,
+            senderId: E,
             warningType: u.pj.STRANGER_DANGER
         }),
             o.Z.increment({ name: s.V.SAFETY_WARNING_VIEW });
-    }, [t, E, f]);
+    }, [t, f, E]);
     let I = () => {
             (0, l.openModalLazy)(async () => {
                 let { default: e } = await n.e('95226').then(n.bind(n, 816960));
@@ -58,8 +58,8 @@ function E(e) {
                         transitionState: a,
                         onClose: s,
                         channelId: t,
-                        warningId: E,
-                        senderId: f,
+                        warningId: f,
+                        senderId: E,
                         handleBlock: () => {
                             x(d.NM.USER_MODAL_BLOCK_CONFIRM, d.NM.USER_MODAL_BLOCK_CANCEL, I);
                         }
@@ -73,14 +73,14 @@ function E(e) {
                 return (n) =>
                     (0, i.jsx)(l, {
                         ...n,
-                        userId: f,
+                        userId: E,
                         confirmBlock: g(e),
                         onCancel: () => {
                             null == s || s(),
                                 (0, d.qc)({
                                     channelId: t,
-                                    warningId: E,
-                                    senderId: f,
+                                    warningId: f,
+                                    senderId: E,
                                     warningType: u.pj.STRANGER_DANGER,
                                     cta: a
                                 });
@@ -90,8 +90,8 @@ function E(e) {
         };
     return (0, i.jsx)(h.Q, {
         channelId: t,
-        warningId: E,
-        senderId: f,
+        warningId: f,
+        senderId: E,
         warningType: u.pj.STRANGER_DANGER,
         header: _.Z.Messages.STRANGER_DANGER_BANNER_HEADER,
         description: _.Z.Messages.STRANGER_DANGER_BANNER_DESCRIPTION,
@@ -104,8 +104,8 @@ function E(e) {
                     I(),
                         (0, d.qc)({
                             channelId: t,
-                            warningId: E,
-                            senderId: f,
+                            warningId: f,
+                            senderId: E,
                             warningType: u.pj.STRANGER_DANGER,
                             cta: d.NM.OPEN_MORE_TIPS
                         });

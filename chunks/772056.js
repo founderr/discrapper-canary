@@ -16,7 +16,7 @@ var i,
     h = n(722326);
 ((a = i || (i = {}))[(a.MutualFriendsList = 0)] = 'MutualFriendsList'), (a[(a.MutualGuildList = 1)] = 'MutualGuildList');
 t.Z = (e) => {
-    let { header: t, children: n, itemType: i = 1, isLoadingHeader: a, isLoadingContents: r, loadingContentsCount: m = 0, className: p, onExpand: _, onHover: E, onFocus: f } = e,
+    let { header: t, children: n, itemType: i = 1, isLoadingHeader: a, isLoadingContents: r, loadingContentsCount: m = 0, className: p, onExpand: _, onHover: f, onFocus: E } = e,
         [C, g] = l.useState(!0),
         I = (0, s.jsx)('div', {
             className: h.iconWrapper,
@@ -29,8 +29,8 @@ t.Z = (e) => {
                 className: h.collapseBtn,
                 innerClassName: h.collapseBtnContent,
                 color: c.ButtonColors.CUSTOM,
-                onMouseEnter: E,
-                onFocus: f,
+                onMouseEnter: f,
+                onFocus: E,
                 onClick: () => {
                     g(!C), C && (null == _ || _());
                 },

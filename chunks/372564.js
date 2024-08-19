@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(454585),
     p = n(63063),
     _ = n(984370),
-    E = n(981631),
-    f = n(689938),
+    f = n(981631),
+    E = n(689938),
     C = n(119338);
 function g(e, t, n) {
     return (
@@ -35,7 +35,7 @@ function I(e) {
         r = (0, d.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
     return (0, i.jsx)(o.ModalRoot, {
         transitionState: s,
-        'aria-label': f.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
+        'aria-label': E.Z.Messages.FORM_LABEL_CHANNEL_TOPIC,
         children: (0, i.jsx)(o.ModalContent, {
             children: (0, i.jsxs)(u.Z, {
                 selectable: !0,
@@ -60,9 +60,9 @@ function I(e) {
                                   (0, i.jsx)(o.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
-                                      children: f.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_TOPIC_NOTICE.format({
+                                      children: E.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_TOPIC_NOTICE.format({
                                           applicationName: r.name,
-                                          helpdeskArticle: p.Z.getArticleURL(E.BhN.CHANNEL_LINKED_LOBBIES),
+                                          helpdeskArticle: p.Z.getArticleURL(f.BhN.CHANNEL_LINKED_LOBBIES),
                                           separatorHook: (e, t) =>
                                               (0, i.jsx)(
                                                   'span',
@@ -103,7 +103,7 @@ class T extends a.Component {
                           children: [
                               (0, i.jsx)(o.Clickable, {
                                   onClick: this.handleClick,
-                                  'aria-label': f.Z.Messages.OPEN_CHANNEL_TOPIC,
+                                  'aria-label': E.Z.Messages.OPEN_CHANNEL_TOPIC,
                                   className: C.topicClickTarget
                               }),
                               m.Z.parseTopic(e.topic, !0, {
@@ -140,7 +140,7 @@ class T extends a.Component {
                 this._mouseDown && (this._mouseDown = !1);
             }),
             g(this, 'onMouseUp', (e) => {
-                this._mouseDown && e.button !== E.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
+                this._mouseDown && e.button !== f.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
             }),
             g(this, 'handleContextMenu', (e) => {
                 let { channel: t, guild: a } = this.props;

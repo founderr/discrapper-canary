@@ -19,19 +19,19 @@ function p(e) {
     let { channel: t, showCallOrActivityPanel: n } = e,
         p = (0, a.e7)([u.ZP], () => u.ZP.getSection(t.id, null == t ? void 0 : t.isDM())),
         _ = (0, o.ZP)(t.getRecipientId()),
-        E = (0, c.Z)(),
-        f = p === h.ULH.PROFILE && !E;
+        f = (0, c.Z)(),
+        E = p === h.ULH.PROFILE && !f;
     return (0, i.jsx)(d.JO, {
-        disabled: E || n,
-        tooltip: E || n ? m.Z.Messages.SHOW_USER_PROFILE_UNAVAILABLE : f ? m.Z.Messages.HIDE_USER_PROFILE : m.Z.Messages.SHOW_USER_PROFILE,
+        disabled: f || n,
+        tooltip: f || n ? m.Z.Messages.SHOW_USER_PROFILE_UNAVAILABLE : E ? m.Z.Messages.HIDE_USER_PROFILE : m.Z.Messages.SHOW_USER_PROFILE,
         icon: s.UserCircleStatusIcon,
         onClick: () => {
             (0, r.TY)({
                 displayProfile: _,
-                isProfileOpen: !f
+                isProfileOpen: !E
             }),
                 l.Z.toggleProfilePanelSection();
         },
-        selected: f && !E && !n
+        selected: E && !f && !n
     });
 }

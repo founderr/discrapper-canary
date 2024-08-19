@@ -20,20 +20,20 @@ function _(e) {
     let { onDismiss: t, onAccept: n, popoutPosition: a, gameConsoleAccounts: l } = e;
     s()(l.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == p || null == l.find((e) => e.type === p)) && (p = r().shuffle(l)[0].type);
     let _ = null,
-        E = null;
+        f = null;
     switch (p) {
         case c.ABu.XBOX:
-            (_ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX), (E = m);
+            (_ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX), (f = m);
             break;
         case c.ABu.PLAYSTATION:
         case c.ABu.PLAYSTATION_STAGING:
-            (_ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5), (E = h);
+            (_ = u.Z.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5), (f = h);
     }
     return (0, i.jsx)(o.ZP, {
         header: u.Z.Messages.CONSOLE_NUX_TOOLTIP_HEADER,
         content: _,
         asset: (0, i.jsx)('img', {
-            src: E,
+            src: f,
             alt: '',
             className: d.art
         }),

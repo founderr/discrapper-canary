@@ -17,8 +17,8 @@ var a = n(512722),
     m = n(673539),
     p = n(218035),
     _ = n(775666),
-    E = n(423589),
-    f = n(592125),
+    f = n(423589),
+    E = n(592125),
     C = n(496675),
     g = n(881824),
     I = n(146085),
@@ -37,7 +37,7 @@ function v(e) {
         onSelect: v,
         children: [
             (function (e) {
-                let t = (0, l.e7)([f.Z], () => f.Z.getChannel(e), [e]),
+                let t = (0, l.e7)([E.Z], () => E.Z.getChannel(e), [e]),
                     n = (0, l.e7)([C.Z], () => C.Z.can(I.yP, t)),
                     a = (0, l.e7)([x.Z], () => x.Z.getStageInstanceByChannel(e), [e]),
                     s = (0, o.bp)(),
@@ -57,9 +57,9 @@ function v(e) {
                     : null;
             })(t),
             (function (e) {
-                let t = (0, l.e7)([f.Z], () => f.Z.getChannel(e), [e]);
+                let t = (0, l.e7)([E.Z], () => E.Z.getChannel(e), [e]);
                 s()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
-                let n = (0, E.Mn)('StageChannelCallOverflowMenu'),
+                let n = (0, f.Mn)('StageChannelCallOverflowMenu'),
                     i = (0, _.ZP)(t),
                     a = (0, p.Z)(t);
                 return n ? i : a;

@@ -18,8 +18,8 @@ var a = n(120356),
     m = n(933557),
     p = n(471445),
     _ = n(925329),
-    E = n(554747),
-    f = n(854698),
+    f = n(554747),
+    E = n(854698),
     C = n(897669),
     g = n(665149),
     I = n(984370),
@@ -83,8 +83,8 @@ function G(e) {
     let t,
         { focusedApplication: n, focusedParticipant: a, channel: s } = e,
         l = (0, R.Z)(s, !0),
-        o = (0, E.qY)(s.id),
-        c = null != o ? (0, f.DK)(o) : null,
+        o = (0, f.qY)(s.id),
+        c = null != o ? (0, E.DK)(o) : null,
         d = null != o;
     if ((null == a ? void 0 : a.type) === O.fO.ACTIVITY)
         null != n &&
@@ -140,7 +140,7 @@ function G(e) {
 }
 function V(e) {
     let { channel: t, guild: a, appContext: o, inCall: c, isChatOpen: u, exitFullScreen: _ } = e,
-        { focusedParticipant: E } = (0, l.cj)(
+        { focusedParticipant: f } = (0, l.cj)(
             [M.Z],
             () => ({
                 focusedParticipant: M.Z.getSelectedParticipant(t.id),
@@ -148,9 +148,9 @@ function V(e) {
             }),
             [t.id]
         ),
-        f = (0, m.ZP)(t),
+        E = (0, m.ZP)(t),
         C = (0, p.KS)(t),
-        [S] = (0, d.Z)((null == E ? void 0 : E.type) === O.fO.ACTIVITY ? [E.id] : []),
+        [S] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []),
         Z = k.Z.Messages.VOICE_CHANNEL;
     t.isDM() ? (Z = k.Z.Messages.DM) : t.isGroupDM() && (Z = k.Z.Messages.GROUP_DM);
     let R = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)),
@@ -229,7 +229,7 @@ function V(e) {
                     (0, i.jsx)(g.ZP.Title, {
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                f,
+                                E,
                                 F &&
                                     (0, i.jsx)(r.Tooltip, {
                                         text: k.Z.Messages.E2EE_CALL_VERIFIED_TOOLTIP,
@@ -251,7 +251,7 @@ function V(e) {
                     }),
                     (0, i.jsx)(G, {
                         focusedApplication: S,
-                        focusedParticipant: E,
+                        focusedParticipant: f,
                         channel: t
                     })
                 ]

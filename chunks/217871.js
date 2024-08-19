@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(314897),
     p = n(111583),
     _ = n(889901),
-    E = n(64078),
-    f = n(351780),
+    f = n(64078),
+    E = n(351780),
     C = n(843693),
     g = n(641033),
     I = n(989830),
@@ -31,7 +31,7 @@ let N = a.memo(function (e) {
                     h((null != l ? (0, g.Eo)(l.combo) : 0) > 0);
                 });
             let e = setTimeout(() => {
-                h(!1), null != l && (0, E.ew)(l);
+                h(!1), null != l && (0, f.ew)(l);
             }, 2000);
             return () => clearTimeout(e);
         }, [l]);
@@ -128,10 +128,10 @@ t.Z = a.memo(function (e) {
     let { channelId: t } = e,
         n = (0, o.e7)([m.default], () => m.default.getId()),
         s = (0, o.e7)([p.Z], () => p.Z.isTyping(t, n), [t, n]),
-        l = (0, o.e7)([f.Z], () => f.Z.isEnabled()),
+        l = (0, o.e7)([E.Z], () => E.Z.isEnabled()),
         d = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [t, n]),
         { ref: h, width: _ = 0 } = (0, u.Z)(),
-        [E, g] = a.useState(!1),
+        [f, g] = a.useState(!1),
         x = (0, I.Z)(t),
         S = l && d && s;
     a.useEffect(() => {
@@ -140,8 +140,8 @@ t.Z = a.memo(function (e) {
         return () => clearTimeout(e);
     }, [S]);
     let Z = (0, c.useSpring)({
-            opacity: E ? 1 : 0,
-            transform: E ? 'translateY(0)' : 'translateY(100%)',
+            opacity: f ? 1 : 0,
+            transform: f ? 'translateY(0)' : 'translateY(100%)',
             pointerEvents: 'none',
             config: r.config.stiff
         }),

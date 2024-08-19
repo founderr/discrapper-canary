@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(607070),
     p = n(100527),
     _ = n(906732),
-    E = n(703656),
-    f = n(210887),
+    f = n(703656),
+    E = n(210887),
     C = n(390322),
     g = n(626135),
     I = n(348600),
@@ -40,7 +40,7 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
         let { channel: n, isHovered: s, closePopout: o, onMouseEnter: y, onMouseLeave: D, onClick: k, className: U } = e,
             { enabled: w } = I.Z.useExperiment({ location: '8009ca_3' }),
             { enableAmazonMusicShelfPoster: B } = T.p.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
-            H = (0, c.e7)([f.Z], () => f.Z.getState().theme),
+            H = (0, c.e7)([E.Z], () => E.Z.getState().theme),
             G = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
             { id: V, guild_id: F } = n;
         a.useEffect(() => {
@@ -103,7 +103,7 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
                   ? (0, i.jsxs)(u.Clickable, {
                         className: l()(R.clickableBanner),
                         onClick: () => {
-                            k(), o(), (0, E.uL)(M.Z5c.ACTIVITY_DETAILS(A.Fu), { sourceLocationStack: Y });
+                            k(), o(), (0, f.uL)(M.Z5c.ACTIVITY_DETAILS(A.Fu), { sourceLocationStack: Y });
                         },
                         children: [
                             (0, i.jsx)('img', {

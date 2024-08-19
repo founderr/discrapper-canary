@@ -16,10 +16,10 @@ function o(e) {
         c,
         { isActivityActive: u, onMouseEnter: d, onMouseLeave: h, onClick: m, ...p } = e,
         { enabled: _ } = l.nS.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
-        { Component: E, events: f, play: C } = (0, a.s)(),
+        { Component: f, events: E, play: C } = (0, a.s)(),
         { Component: g, events: I, play: x } = (0, s.w)();
     return (
-        _ ? ((n = g), (o = I), (c = x)) : ((n = E), (o = f), (c = C)),
+        _ ? ((n = g), (o = I), (c = x)) : ((n = f), (o = E), (c = C)),
         (0, i.jsx)(r.d, {
             isActive: u,
             color: t,

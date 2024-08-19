@@ -12,7 +12,7 @@ var a = n(481060),
     o = n(718538),
     c = n(689938);
 function u(e) {
-    let { otherUserId: t, channel: n, buttonSize: u = a.ButtonSizes.TINY, className: d, buttonText: h, navigateAwayOnReportSuccess: m = !0, onReportClick: p, onReportSubmit: _, onMouseEnter: E, onMouseLeave: f } = e,
+    let { otherUserId: t, channel: n, buttonSize: u = a.ButtonSizes.TINY, className: d, buttonText: h, navigateAwayOnReportSuccess: m = !0, onReportClick: p, onReportSubmit: _, onMouseEnter: f, onMouseLeave: E } = e,
         C = (0, r.Q)(t),
         g = (0, o.V)(n.id, t);
     if (!C || null == g) return null;
@@ -27,8 +27,8 @@ function u(e) {
         onClick: () => {
             null == p || p(), (0, l.WL)(g, I);
         },
-        onMouseEnter: E,
-        onMouseLeave: f,
+        onMouseEnter: f,
+        onMouseLeave: E,
         children: null != h ? h : c.Z.Messages.REPORT_SPAM
     });
 }

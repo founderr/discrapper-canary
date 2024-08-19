@@ -13,8 +13,8 @@ let c = a.memo(function (e) {
     var t;
     let { message: n, channel: c, compact: u = !1, interactionUsernameProfile: d, interactionAvatarProfile: h, interactionData: m, setPopout: p } = e,
         _ = (0, s.e7)([l.Z], () => l.Z.isBlockedForMessage(n), [n]),
-        E = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id),
-        f = (0, o.Nk)(n.interaction, c, d, p),
+        f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id),
+        E = (0, o.Nk)(n.interaction, c, d, p),
         C = (0, o.NU)(h, p),
         g = (0, o.Xn)(m, p),
         I = a.useCallback(
@@ -35,9 +35,9 @@ let c = a.memo(function (e) {
         showUsernamePopout: d,
         showDataPopout: m,
         onClickAvatar: C,
-        onClickUsername: f,
+        onClickUsername: E,
         onClickCommand: g,
-        onUserContextMenu: E,
+        onUserContextMenu: f,
         onPopoutRequestClose: I
     });
 });

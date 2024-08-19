@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var i = n(735250),
@@ -16,12 +16,12 @@ var i = n(735250),
     m = n(494404),
     p = n(257559),
     _ = n(689938);
-let E = [];
-function f(e) {
-    let { channel: t, onJump: f } = e,
+let f = [];
+function E(e) {
+    let { channel: t, onJump: E } = e,
         { messages: C, loading: g } = (0, s.cj)([d.Z], () => {
             let e = d.Z.getPinnedMessages(t.id),
-                n = null != e ? e.messages : E;
+                n = null != e ? e.messages : f;
             return {
                 messages: n,
                 loading: null == n || (null != e && e.loading)
@@ -48,7 +48,7 @@ function f(e) {
                 onCloseMessage: function (e, n) {
                     null != e && (n.shiftKey ? o.Z.unpinMessage(t, e.id) : p.Z.confirmUnpin(t, e));
                 },
-                onJump: f,
+                onJump: E,
                 getProTip: function () {
                     return t.isPrivate() ? _.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : _.Z.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL;
                 },

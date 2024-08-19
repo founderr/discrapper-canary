@@ -18,8 +18,8 @@ var i = n(735250),
     m = n(111583),
     p = n(459273),
     _ = n(880831),
-    E = n(774168),
-    f = n(871499),
+    f = n(774168),
+    E = n(871499),
     C = n(981631),
     g = n(689938);
 function I(e) {
@@ -43,7 +43,7 @@ function I(e) {
 function x(e) {
     let { className: t, channelId: n } = e,
         { unreadCount: a, mentionCount: s, isTyping: l, voiceChannelIsSelected: r } = I(n);
-    return (0, i.jsx)(E.Z, {
+    return (0, i.jsx)(f.Z, {
         className: t,
         unreadCount: a,
         mentionCount: s,
@@ -53,7 +53,7 @@ function x(e) {
 }
 function T(e) {
     let t,
-        { channelId: n, className: s, showingClassName: r, onClick: d, inPopout: h, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: E, ...T } = e,
+        { channelId: n, className: s, showingClassName: r, onClick: d, inPopout: h, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: f, ...T } = e,
         { disabled: N } = T,
         v = a.useRef(null),
         S = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
@@ -82,8 +82,8 @@ function T(e) {
             );
         })(n),
         b = a.useCallback(() => {
-            null == d || d(), !S && m && (null == E || E()), c.Z.updateChatOpen(n, !S);
-        }, [n, S, d, m, E]),
+            null == d || d(), !S && m && (null == f || f()), c.Z.updateChatOpen(n, !S);
+        }, [n, S, d, m, f]),
         R = a.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -126,7 +126,7 @@ function T(e) {
     return (
         M > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })),
         A > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
-        (0, i.jsx)(f.Z, {
+        (0, i.jsx)(E.Z, {
             buttonRef: v,
             onClick: b,
             label: t,

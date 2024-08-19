@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(131951),
     p = n(585483),
     _ = n(807705),
-    E = n(27457),
-    f = n(111248),
+    f = n(27457),
+    E = n(111248),
     C = n(312703),
     g = n(796638),
     I = n(981631),
@@ -109,7 +109,7 @@ function Z(e) {
             },
             'animate-always'
         ),
-        eE = (0, o.useTransition)(
+        ef = (0, o.useTransition)(
             P,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
@@ -124,7 +124,7 @@ function Z(e) {
             },
             'animate-always'
         ),
-        ef = a.useCallback((e) => {
+        eE = a.useCallback((e) => {
             W(e), Y(!1);
         }, []),
         eC = ee || D ? [] : (0, C.n3)(M, P, V),
@@ -146,7 +146,7 @@ function Z(e) {
                                 children: (0, i.jsx)('div', {
                                     className: l()(T.videoSizer),
                                     style: { aspectRatio: er },
-                                    children: eE((e, t, n) => {
+                                    children: ef((e, t, n) => {
                                         let { key: a } = n;
                                         return null != t
                                             ? (0, i.jsx)(
@@ -154,7 +154,7 @@ function Z(e) {
                                                   {
                                                       className: T.videoWrapperAnimated,
                                                       style: e,
-                                                      children: (0, i.jsx)(E.ZP, {
+                                                      children: (0, i.jsx)(f.ZP, {
                                                           focused: !0,
                                                           noBorder: ec >= k || eo >= U,
                                                           channel: L,
@@ -166,7 +166,7 @@ function Z(e) {
                                                           onClick: s,
                                                           onDoubleClick: A,
                                                           onContextMenu: Z,
-                                                          onVideoResize: ef,
+                                                          onVideoResize: eE,
                                                           inCall: j,
                                                           inPopout: H
                                                       })
@@ -213,7 +213,7 @@ function Z(e) {
                 ]
             }),
             eC.length > 0
-                ? (0, i.jsx)(f.Z, {
+                ? (0, i.jsx)(E.Z, {
                       onContextMenuParticipant: Z,
                       width: k,
                       height: U,

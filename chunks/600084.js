@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(484459),
     p = n(131704),
     _ = n(984933),
-    E = n(496675),
-    f = n(594174),
+    f = n(496675),
+    E = n(594174),
     C = n(51144),
     g = n(7782),
     I = n(967128),
@@ -49,11 +49,11 @@ function O(e) {
     let { channel: n, showingBanner: c } = e,
         u = (0, o.ZP)(n),
         { type: p } = n,
-        _ = (0, s.e7)([f.default], () => (n.isPrivate() ? f.default.getUser(n.getRecipientId()) : null)),
+        _ = (0, s.e7)([E.default], () => (n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null)),
         x = C.ZP.useUserTag(_),
-        { canManageRoles: v, canReadMessageHistory: Z } = (0, s.cj)([E.Z], () => ({
-            canManageRoles: E.Z.can(b.Plq.MANAGE_ROLES, n),
-            canReadMessageHistory: E.Z.can(b.Plq.READ_MESSAGE_HISTORY, n)
+        { canManageRoles: v, canReadMessageHistory: Z } = (0, s.cj)([f.Z], () => ({
+            canManageRoles: f.Z.can(b.Plq.MANAGE_ROLES, n),
+            canReadMessageHistory: f.Z.can(b.Plq.READ_MESSAGE_HISTORY, n)
         })),
         A = (0, s.e7)([h.Z], () => (p === b.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null), [n, p]),
         { systemDMRedesignEnabled: M } = d.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t });

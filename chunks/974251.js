@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(595519),
     p = n(620662),
     _ = n(424602),
-    E = n(924557),
-    f = n(435064),
+    f = n(924557),
+    E = n(435064),
     C = n(712114),
     g = n(605236),
     I = n(536442),
@@ -46,25 +46,25 @@ t.Z = a.memo(function (e) {
         X = (0, h.bp)(),
         Q = a.useRef(null),
         J = (0, r.e7)([b.Z], () => b.Z.getActivities()),
-        $ = (0, r.e7)([f.Z], () => f.Z.getSettings().clipsEnabled),
-        ee = (0, r.e7)([f.Z], () => f.Z.getLastClipsSession()),
-        et = (0, r.Wu)([f.Z], () => f.Z.getNewClipIds()),
+        $ = (0, r.e7)([E.Z], () => E.Z.getSettings().clipsEnabled),
+        ee = (0, r.e7)([E.Z], () => E.Z.getLastClipsSession()),
+        et = (0, r.Wu)([E.Z], () => E.Z.getNewClipIds()),
         en = (0, r.e7)([S.ZP], () => null == S.ZP.getCurrentSidebarChannelId(W.id)),
-        { showClipsHeaderEntrypoint: ei } = E.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
+        { showClipsHeaderEntrypoint: ei } = f.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         { enabled: ea } = _.T.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         es = (0, r.e7)([I.qc], () => I.qc.hasHotspot(I.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
         el = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, w.Qr)),
         er = (0, r.e7)([Z.Z], () => Z.Z.hasLayers()),
-        eo = (0, r.e7)([f.Z], () => f.Z.hasClips()),
+        eo = (0, r.e7)([E.Z], () => E.Z.hasClips()),
         [ec, eu] = a.useState(null),
-        ed = (0, E.Go)() && ($ || eo),
+        ed = (0, f.Go)() && ($ || eo),
         eh = W.isPrivate(),
         em = (0, r.e7)([M.Z], () => eh || (M.Z.can(U.Plq.ATTACH_FILES, W) && M.Z.can(U.Plq.SEND_MESSAGES, W))),
         ep = (0, r.e7)([N.default], () => N.default.locale),
         e_ = ['en-US', 'en-GB'].includes(ep) ? H.Z.Messages.CHAT_ATTACH_PLUS_BUTTON_A11Y_LABEL : H.Z.Messages.MORE_OPTIONS,
-        eE = (0, d.Z)(ee);
-    (null == eE ? void 0 : eE.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && es && en && !el && !ei && !er && eu('recentClips');
-    let ef = (e, t, n) => {
+        ef = (0, d.Z)(ee);
+    (null == ef ? void 0 : ef.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && es && en && !el && !ei && !er && eu('recentClips');
+    let eE = (e, t, n) => {
             null != t && 'ETOOLARGE' === t.code
                 ? (0, O.G)(W, [])
                 : (0, O.d)(e, W, z, {
@@ -213,7 +213,7 @@ t.Z = a.memo(function (e) {
                 children: (0, i.jsx)(u.Z, {
                     ref: Q,
                     onChange: (e) => {
-                        ef(e.currentTarget.files, e.currentTarget.err), (e.currentTarget.value = '');
+                        eE(e.currentTarget.files, e.currentTarget.err), (e.currentTarget.value = '');
                     },
                     multiple: W.rateLimitPerUser <= 0,
                     tabIndex: -1,

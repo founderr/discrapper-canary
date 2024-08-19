@@ -1,6 +1,6 @@
 n.d(t, {
     B2: function () {
-        return E;
+        return f;
     },
     Ov: function () {
         return _;
@@ -37,7 +37,7 @@ let d = [c.Plq.USE_CLYDE_AI],
 function _(e, t) {
     return e === t;
 }
-function E(e, t, n) {
+function f(e, t, n) {
     let u = (0, a.e7)([l.Z], () => l.Z.getGuild(t), [t]);
     return (0, a.e7)(
         [s.ZP, r.default, l.Z],

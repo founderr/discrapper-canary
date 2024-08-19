@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(605236),
     p = n(594174),
     _ = n(768581),
-    E = n(906605),
-    f = n(106301),
+    f = n(906605),
+    E = n(106301),
     C = n(833858),
     g = n(866071),
     I = n(223135),
@@ -41,7 +41,7 @@ let S = (e) => {
     },
     Z = (e) => {
         let { currentStatus: t, channel: s } = e,
-            r = a.useRef(f.Z.getRecentCustomStatuses()),
+            r = a.useRef(E.Z.getRecentCustomStatuses()),
             Z = a.useRef((0, m.un)(u.z.HANG_STATUS_NEW_BADGE)).current,
             A = (0, C.V)(),
             [M, b] = a.useState(null != t ? t : null),
@@ -50,13 +50,13 @@ let S = (e) => {
                 !Z && (0, m.EW)(u.z.HANG_STATUS_NEW_BADGE);
             },
             L = (e, t) => {
-                e.stopPropagation(), (0, E.Zx)(t, !0), j();
+                e.stopPropagation(), (0, f.Zx)(t, !0), j();
             },
             P = (e, t) => {
-                e.stopPropagation(), (0, E._s)(t.status, t.emoji, !0), j();
+                e.stopPropagation(), (0, f._s)(t.status, t.emoji, !0), j();
             },
             O = a.useCallback((e) => {
-                e.stopPropagation(), (0, E.Sc)(!0);
+                e.stopPropagation(), (0, f.Sc)(!0);
             }, []),
             y = (e) => {
                 e.stopPropagation(),

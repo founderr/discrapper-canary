@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(869765),
     p = n(699516),
     _ = n(352736),
-    E = n(937889),
-    f = n(739566),
+    f = n(937889),
+    E = n(739566),
     C = n(267128),
     g = n(507418),
     I = n(348238),
@@ -27,7 +27,7 @@ let N = a.memo(function (e) {
     var t;
     let { baseMessage: n, referencedMessage: N, channel: v, compact: S = !1, referencedUsernameProfile: Z, referencedAvatarProfile: A, setPopout: M } = e,
         b = N.state === m.Y.LOADED ? N.message : void 0,
-        R = (0, f.Uj)(b),
+        R = (0, E.Uj)(b),
         j = (0, c.p)(),
         L = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
         P = a.useMemo(() => {
@@ -91,7 +91,7 @@ let N = a.memo(function (e) {
                               allowHeading: L,
                               allowList: L
                           };
-                return (0, E.ZP)(e, n).content;
+                return (0, f.ZP)(e, n).content;
             }
             return null;
         }, [b, R, v, L, j]),
@@ -108,7 +108,7 @@ let N = a.memo(function (e) {
                 }),
             [M]
         ),
-        B = (0, f.Uj)(n);
+        B = (0, E.Uj)(n);
     return (0, i.jsx)(C.Z, {
         repliedAuthor: R,
         baseMessage: n,

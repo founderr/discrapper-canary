@@ -19,8 +19,8 @@ function h(e) {
         p = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
         _ = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : '',
         {
-            avatarDecorationSrc: E,
-            eventHandlers: f,
+            avatarDecorationSrc: f,
+            eventHandlers: E,
             isAnimating: C
         } = (0, u.Z)({
             user: m,
@@ -29,7 +29,7 @@ function h(e) {
         });
     return (0, i.jsxs)(d.ZP, {
         channelId: n.id,
-        ...f,
+        ...E,
         children: [
             (() => {
                 let e = !p && C;
@@ -45,7 +45,7 @@ function h(e) {
                           'aria-label': _,
                           size: s.AvatarSizes.SIZE_80,
                           src: (0, r.x)(n, 80, e),
-                          avatarDecoration: E
+                          avatarDecoration: f
                       });
             })(),
             (0, i.jsx)(d.Ot, { children: _ }),

@@ -241,9 +241,9 @@ class R {
     }
     handleRelationshipAdd(e) {
         let {
-            relationship: { id: t, type: n }
+            relationship: { id: t, type: n, isSpamRequest: i }
         } = e;
-        if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(n, t));
+        if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(v.zMe.RELATIONSHIP_UPDATE, {}, (0, C.cD)(n, t, i));
     }
     handleRelationshipRemove(e) {
         let {

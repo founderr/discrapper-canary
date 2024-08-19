@@ -17,17 +17,17 @@ var a = n(120356),
     m = n(103575),
     p = n(271383),
     _ = n(594174),
-    E = n(51144),
-    f = n(967128),
+    f = n(51144),
+    E = n(967128),
     C = n(981631),
     g = n(689938),
     I = n(664753);
 function x(e) {
     var t, a;
-    let { userId: d, channel: f } = e,
+    let { userId: d, channel: E } = e,
         { analyticsLocations: C } = (0, u.ZP)(c.Z.USERNAME),
         g = (0, l.e7)([_.default], () => _.default.getUser(d)),
-        x = (0, l.e7)([p.ZP], () => (null != d ? p.ZP.getMember(f.guild_id, d) : null));
+        x = (0, l.e7)([p.ZP], () => (null != d ? p.ZP.getMember(E.guild_id, d) : null));
     function T(e) {
         if (null == g) return null;
         (0, o.jW)(e, async () => {
@@ -36,12 +36,12 @@ function x(e) {
                 (0, i.jsx)(e, {
                     ...t,
                     user: g,
-                    guildId: f.guild_id,
-                    channel: f
+                    guildId: E.guild_id,
+                    channel: E
                 });
         });
     }
-    let N = null !== (a = null !== (t = null == x ? void 0 : x.nick) && void 0 !== t ? t : E.ZP.getName(g)) && void 0 !== a ? a : '???',
+    let N = null !== (a = null !== (t = null == x ? void 0 : x.nick) && void 0 !== t ? t : f.ZP.getName(g)) && void 0 !== a ? a : '???',
         v = null == x ? void 0 : x.colorString;
     return null == g
         ? (0, i.jsx)('span', {
@@ -53,15 +53,15 @@ function x(e) {
               children: (0, i.jsx)(r.Popout, {
                   preload: () =>
                       (0, h.Z)(g, {
-                          guildId: f.guild_id,
-                          channelId: f.id
+                          guildId: E.guild_id,
+                          channelId: E.id
                       }),
                   renderPopout: (e) =>
                       (0, i.jsx)(m.Z, {
                           location: 'ThreadEmptyMessage',
                           userId: g.id,
-                          guildId: f.guild_id,
-                          channelId: f.id,
+                          guildId: E.guild_id,
+                          channelId: E.id,
                           roleId: null == x ? void 0 : x.colorRoleId,
                           ...e
                       }),
@@ -119,14 +119,14 @@ function N(e) {
     var t;
     let { channel: n } = e,
         a = null !== (t = (0, d.KS)(n)) && void 0 !== t ? t : r.ThreadIcon;
-    return (0, i.jsxs)(f.ZP, {
+    return (0, i.jsxs)(E.ZP, {
         channelId: n.id,
         children: [
             (0, i.jsx)('div', {
                 className: I.iconWrapper,
                 children: (0, i.jsx)(a, { className: I.icon })
             }),
-            (0, i.jsx)(f.Ot, { children: n.name }),
+            (0, i.jsx)(E.Ot, { children: n.name }),
             (0, i.jsx)(T, { channel: n })
         ]
     });

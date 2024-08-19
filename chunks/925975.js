@@ -1,6 +1,6 @@
 n.d(t, {
     g: function () {
-        return f;
+        return E;
     }
 }),
     n(47120),
@@ -56,20 +56,20 @@ let p = /\\([*?+/])/g,
         },
         spoiler: { action: (e) => ({ content: (0, m.XmY)(e).trim() }) }
     };
-function E(e, t, n, i) {
+function f(e, t, n, i) {
     return r.ZP.trackWithMetadata(m.rMx.SLASH_COMMAND_USED, { command: e }), t.action(n, i);
 }
-function f(e, t) {
+function E(e, t) {
     for (let i in _) {
         let a = _[i];
         if (null != a.match) {
             var n;
-            if (null === (n = a.match.regex) || void 0 === n ? void 0 : n.test(e)) return E(i, a, e, t);
+            if (null === (n = a.match.regex) || void 0 === n ? void 0 : n.test(e)) return f(i, a, e, t);
             continue;
         }
         if (d.dN.getSetting() && '/' === e[0]) {
             let n = e.split(' ');
-            if (i === n[0].slice(1) && null != a.action) return E(i, a, n.slice(1).join(' '), t);
+            if (i === n[0].slice(1) && null != a.action) return f(i, a, n.slice(1).join(' '), t);
         }
     }
 }

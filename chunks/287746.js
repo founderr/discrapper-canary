@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(144144),
     p = n(166459),
     _ = n(966390),
-    E = n(738619),
-    f = n(410575),
+    f = n(738619),
+    E = n(410575),
     C = n(744061),
     g = n(857595),
     I = n(607070),
@@ -66,8 +66,8 @@ var i = n(735250),
     em = n(496675),
     ep = n(944486),
     e_ = n(117530),
-    eE = n(594174),
-    ef = n(626135),
+    ef = n(594174),
+    eE = n(626135),
     eC = n(459273),
     eg = n(585483),
     eI = n(709054),
@@ -128,7 +128,7 @@ class eU extends a.PureComponent {
             let e = ec.Z.getDraft(n.id, ec.d.ChannelMessage);
             e !== i && this.setState((0, P.eK)(e));
         }
-        t.textValue.length < ej.J6R && i.length >= ej.J6R && ef.default.track(ej.rMx.MESSAGE_LENGTH_LIMIT_REACHED, {});
+        t.textValue.length < ej.J6R && i.length >= ej.J6R && eE.default.track(ej.rMx.MESSAGE_LENGTH_LIMIT_REACHED, {});
     }
     handleEditLastMessage(e) {
         let { channel: t } = this.props;
@@ -162,8 +162,8 @@ class eU extends a.PureComponent {
     }
     render() {
         let { channel: e, focused: t, onBlur: n, onFocus: a, onResize: s, highlighted: r, pendingReply: o, chatInputType: c, placeholder: d, accessibilityLabel: h, shakeIntensity: m, poggermodeEnabled: p, onCommandSentinelTyped: _ } = this.props,
-            { contentWarningProps: E } = this.state,
-            f = (0, i.jsx)(D.Z, {
+            { contentWarningProps: f } = this.state,
+            E = (0, i.jsx)(D.Z, {
                 textValue: this.state.textValue,
                 richValue: this.state.richValue,
                 focused: t,
@@ -190,16 +190,16 @@ class eU extends a.PureComponent {
             position: 'top',
             onRequestClose: () => {
                 var e;
-                null == E || null === (e = E.onCancel) || void 0 === e || e.call(E), this.setState({ contentWarningProps: null });
+                null == f || null === (e = f.onCancel) || void 0 === e || e.call(f), this.setState({ contentWarningProps: null });
             },
-            shouldShow: null != E,
+            shouldShow: null != f,
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (
-                    l()(null != E, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'),
+                    l()(null != f, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'),
                     (0, i.jsx)(C.Z, {
                         onClose: t,
-                        ...E
+                        ...f
                     })
                 );
             },
@@ -209,9 +209,9 @@ class eU extends a.PureComponent {
                           isShaking: m > 0,
                           intensity: m,
                           className: eP.shaker,
-                          children: f
+                          children: E
                       })
-                    : f
+                    : E
         });
     }
     constructor(...e) {
@@ -385,12 +385,12 @@ class eU extends a.PureComponent {
                         isEdit: !1
                     });
                     null != m && (null != m.content && (t = m.content), null != m.tts && (d = m.tts));
-                    let E = q.ZP.parse(o, t);
-                    E.tts = E.tts || d;
-                    let f = h.Z.getSendMessageOptionsForReply(c);
+                    let f = q.ZP.parse(o, t);
+                    f.tts = f.tts || d;
+                    let E = h.Z.getSendMessageOptionsForReply(c);
                     if (l)
                         return (
-                            h.Z.sendMessage(o.id, E, void 0, f),
+                            h.Z.sendMessage(o.id, f, void 0, E),
                             (0, ei.A6)(o.id),
                             {
                                 shouldClear: !1,
@@ -411,9 +411,9 @@ class eU extends a.PureComponent {
                             channelId: o.id,
                             uploads: n,
                             draftType: ec.d.ChannelMessage,
-                            parsedMessage: E,
+                            parsedMessage: f,
                             options: {
-                                ...f,
+                                ...E,
                                 stickerIds: i
                             }
                         }),
@@ -421,12 +421,12 @@ class eU extends a.PureComponent {
                     } else
                         null != i && i.length > 0
                             ? '' !== t
-                                ? h.Z.sendMessage(o.id, E, void 0, {
-                                      ...f,
+                                ? h.Z.sendMessage(o.id, f, void 0, {
+                                      ...E,
                                       stickerIds: i
                                   })
-                                : h.Z.sendStickers(o.id, i, t, f, E.tts)
-                            : h.Z.sendMessage(o.id, E, void 0, f);
+                                : h.Z.sendStickers(o.id, i, t, E, f.tts)
+                            : h.Z.sendMessage(o.id, f, void 0, E);
                     return (
                         this.setState((0, P.H2)()),
                         (0, ei.A6)(o.id),
@@ -524,7 +524,7 @@ class ew extends a.PureComponent {
             ]
         });
         return (0, i.jsx)(
-            f.Z,
+            E.Z,
             {
                 page: this.getAnalyticsPage(),
                 children: (0, i.jsx)(Y.sW, {
@@ -597,7 +597,7 @@ class ew extends a.PureComponent {
                                                                       channel: n,
                                                                       children: S
                                                                   }),
-                                                            (0, i.jsx)(E.Z, {
+                                                            (0, i.jsx)(f.Z, {
                                                                 channel: n,
                                                                 poggermodeEnabled: g
                                                             }),
@@ -637,10 +637,10 @@ class ew extends a.PureComponent {
                     case ej.d4z.GUILD_TEXT:
                     case ej.d4z.GUILD_FORUM:
                     case ej.d4z.GUILD_MEDIA:
-                        return f.Z.Pages.GUILD_CHANNEL;
+                        return E.Z.Pages.GUILD_CHANNEL;
                     case ej.d4z.GROUP_DM:
                     case ej.d4z.DM:
-                        return f.Z.Pages.DM_CHANNEL;
+                        return E.Z.Pages.DM_CHANNEL;
                     default:
                         return null;
                 }
@@ -710,17 +710,17 @@ class ew extends a.PureComponent {
 t.Z = a.memo(function (e) {
     let { channel: t, guild: n, chatInputType: a, filterAfterTimestamp: s } = e,
         { placeholder: l, accessibilityLabel: r } = (0, eS.Z)(t),
-        o = (0, en.S)(eE.default.getCurrentUser(), t),
+        o = (0, en.S)(ef.default.getCurrentUser(), t),
         [d] = (0, V.AB)(null == n ? void 0 : n.id),
         h = (0, B.Ux)(null == n ? void 0 : n.id),
-        m = (0, c.e7)([eE.default], () => eE.default.getCurrentUser()),
+        m = (0, c.e7)([ef.default], () => ef.default.getCurrentUser()),
         p = (0, c.e7)([ed.ZP], () => {
             var e, t, i;
             return null != m && null !== (i = null === (e = ed.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : ej.lds, null == m ? void 0 : m.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
         }),
         _ = (0, c.e7)([J.Z], () => J.Z.isEnabled()),
-        E = (0, et.Z)(t.id),
-        f = (0, W.Z)(t.id);
+        f = (0, et.Z)(t.id),
+        E = (0, W.Z)(t.id);
     return (0, i.jsx)(ew, {
         channel: t,
         isEditing: null != (0, c.e7)([eu.Z], () => eu.Z.getEditingMessageId(t.id)),
@@ -734,9 +734,9 @@ t.Z = a.memo(function (e) {
         filterAfterTimestamp: s,
         showQuarantinedUserBanner: o,
         communicationDisabledUntil: d,
-        shakeIntensity: E,
+        shakeIntensity: f,
         poggermodeEnabled: _,
-        isSelectedResourceChannel: f,
+        isSelectedResourceChannel: E,
         showAutomodUserProfileChatBlocker: h && !p
     });
 });

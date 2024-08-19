@@ -11,20 +11,20 @@ var i = n(735250),
     m = n(226409);
 t.Z = function (e) {
     var t, n;
-    let { participants: p, channel: _, hasConnectPermission: E } = e,
-        f = p.filter(d.Io),
+    let { participants: p, channel: _, hasConnectPermission: f } = e,
+        E = p.filter(d.Io),
         C = (0, o.J)(_.guild_id),
         g = a.useCallback(() => {
             C ? (0, r.hk)(_.guild_id, () => l.default.selectVoiceChannel(_.id)) : l.default.selectVoiceChannel(_.id);
         }, [_.id, _.guild_id, C]),
-        I = 4 === f.length ? 2 : 3;
+        I = 4 === E.length ? 2 : 3;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
             (0, i.jsx)('div', {
                 className: m.tiles,
                 style: { maxWidth: 168 * I },
-                children: f.slice(0, 5).map((e) =>
+                children: E.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         u.ZP,
                         {
@@ -53,7 +53,7 @@ t.Z = function (e) {
                     variant: 'text-sm/normal',
                     children:
                         ((t = _),
-                        0 === (n = f).length
+                        0 === (n = E).length
                             ? h.Z.Messages.CURRENTLY_IN_VOICE_EMPTY
                             : 1 === n.length
                               ? h.Z.Messages.CURRENTLY_IN_VOICE_1.format({ a: (0, c.Z)(t, n[0]) })
@@ -72,12 +72,12 @@ t.Z = function (e) {
                 })
             }),
             (0, i.jsx)(s.Button, {
-                disabled: !E,
+                disabled: !f,
                 className: m.joinButton,
-                color: E ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
+                color: f ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
                 onClick: g,
                 size: s.Button.Sizes.MEDIUM,
-                children: E ? h.Z.Messages.JOIN_VOICE : h.Z.Messages.CHANNEL_LOCKED_SHORT
+                children: f ? h.Z.Messages.JOIN_VOICE : h.Z.Messages.CHANNEL_LOCKED_SHORT
             })
         ]
     });

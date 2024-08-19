@@ -19,8 +19,8 @@ var i = n(735250),
     m = n(62764),
     p = n(79712),
     _ = n(736052),
-    E = n(359110),
-    f = n(359119),
+    f = n(359110),
+    E = n(359119),
     C = n(13279),
     g = n(248789),
     I = n(88101),
@@ -95,12 +95,12 @@ function et(e) {
         em = d.length > 0 && (null === (t = d.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(r)),
         ep = (0, o.ts)(r),
         e_ = (0, s.e7)([v.Z], () => v.Z.shouldShowTopicsBar() && !ec),
-        eE = (0, I.P)(r.id, Q.zr),
-        ef = (0, C.z)(r.id, Q.zr),
+        ef = (0, I.P)(r.id, Q.zr),
+        eE = (0, C.z)(r.id, Q.zr),
         eC = (0, U.Z)(),
         eg = (function (e, t) {
             return e.isDM() && null != t
-                ? t.type === f.pj.STRANGER_DANGER
+                ? t.type === E.pj.STRANGER_DANGER
                     ? (0, i.jsx)(x.M, {
                           channelId: e.id,
                           warningId: t.id,
@@ -114,7 +114,7 @@ function et(e) {
                 : e.isGroupDM() && (0, T.f)({ location: 'blocked_user_banner' })
                   ? (0, i.jsx)(N.e, { channel: e })
                   : null;
-        })(r, null != eE ? eE : ef),
+        })(r, null != ef ? ef : eE),
         eI = r.isForumPost() && !em ? (0, i.jsx)(m.Z, { postId: r.id }) : null,
         ex = (0, _.Z)(r.id);
     (0, Y.Z)();
@@ -429,7 +429,7 @@ function et(e) {
                             (function (e) {
                                 l.Z.jumpToPresent(e.id, X.AQB);
                                 let t = R.Z.getChannelId();
-                                e.id === t && (0, E.Kh)(e.id);
+                                e.id === t && (0, f.Kh)(e.id);
                             })(r)
                     });
     }

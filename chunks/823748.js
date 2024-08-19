@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(442837),
     p = n(704215),
     _ = n(952265),
-    E = n(481060),
-    f = n(239091),
+    f = n(481060),
+    E = n(239091),
     C = n(377993),
     g = n(457868),
     I = n(561472),
@@ -66,8 +66,8 @@ var i = n(735250),
     em = n(703656),
     ep = n(359110),
     e_ = n(854709),
-    eE = n(14091),
-    ef = n(6025),
+    ef = n(14091),
+    eE = n(6025),
     eC = n(897473),
     eg = n(922482),
     eI = n(504185),
@@ -130,7 +130,7 @@ let e9 = (0, P.Un)({
     renderLoader: () =>
         (0, i.jsx)('div', {
             className: e5.loader,
-            children: (0, i.jsx)(E.Spinner, {})
+            children: (0, i.jsx)(f.Spinner, {})
         }),
     name: 'ForumChannel'
 });
@@ -145,7 +145,7 @@ class e8 extends a.PureComponent {
         let { guild: a } = this.props;
         o()(null != t, 'Missing channel in Channel.openChannelContextMenu'),
             o()(null != a, 'Missing guild in Channel.openChannelContextMenu'),
-            (0, f.jW)(e, async () => {
+            (0, E.jW)(e, async () => {
                 let { default: e } = await n.e('24783').then(n.bind(n, 439635));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -157,7 +157,7 @@ class e8 extends a.PureComponent {
     }
     openThreadContextMenu(e, t) {
         o()(null != t, 'Missing channel in Channel.openChannelContextMenu'),
-            (0, f.jW)(e, async () => {
+            (0, E.jW)(e, async () => {
                 let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -170,7 +170,7 @@ class e8 extends a.PureComponent {
         o()(null != t, 'Missing channel in Channel.openDMContextMenu');
         let a = eG.default.getUser(t.getRecipientId());
         o()(null != a, 'Missing user in Channel.openDMContextMenu'),
-            (0, f.jW)(e, async () => {
+            (0, E.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('22036'), n.e('56826'), n.e('30295')]).then(n.bind(n, 131404));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -307,7 +307,7 @@ class e8 extends a.PureComponent {
                             'channel-members-'.concat(t.id)
                         );
             }
-        else if (l === e$.ULH.SEARCH && null != e) return (0, i.jsx)(eE.Z, { searchId: e });
+        else if (l === e$.ULH.SEARCH && null != e) return (0, i.jsx)(ef.Z, { searchId: e });
         return null;
     }
     openChannelModal() {
@@ -315,7 +315,7 @@ class e8 extends a.PureComponent {
         return null == e || null == t || r || a
             ? null
             : (o &&
-                  (0, E.openModalLazy)(
+                  (0, f.openModalLazy)(
                       async () => {
                           let { default: e } = await n.e('53900').then(n.bind(n, 784280));
                           return (n) =>
@@ -330,7 +330,7 @@ class e8 extends a.PureComponent {
                       }
                   ),
               s &&
-                  (0, E.openModalLazy)(
+                  (0, f.openModalLazy)(
                       async () => {
                           let { default: e } = await n.e('77578').then(n.bind(n, 184782));
                           return (n) =>
@@ -380,7 +380,7 @@ class e8 extends a.PureComponent {
                     children: (0, i.jsx)(H.Z, {
                         guildId: e,
                         userId: t,
-                        onClose: () => ef.Z.closeGuildSidebar(e)
+                        onClose: () => eE.Z.closeGuildSidebar(e)
                     })
                 });
             }
@@ -404,12 +404,12 @@ class e8 extends a.PureComponent {
         if (null == e) return (0, i.jsx)(eX.Z, { channelId: this.props.channelId });
         let p = r === e$.ULH.SIDEBAR_CHAT,
             _ = null != c && !p,
-            E = !e.isForumLikeChannel() && !o,
-            f = null == t ? void 0 : t.name;
+            f = !e.isForumLikeChannel() && !o,
+            E = null == t ? void 0 : t.name;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(O.yY, {
-                    location: f,
+                    location: E,
                     subsection: null != n ? n : void 0
                 }),
                 (0, i.jsxs)('div', {
@@ -418,7 +418,7 @@ class e8 extends a.PureComponent {
                         [e5.threadSidebarFloating]: p && h
                     }),
                     children: [
-                        E
+                        f
                             ? (0, i.jsx)(I.Z, {
                                   style: { right: p ? d : void 0 },
                                   className: e5.uploadArea,
@@ -619,12 +619,12 @@ class e8 extends a.PureComponent {
             e6(this, 'renderFollowButton', () => {
                 let { showFollowButton: e, channel: t } = this.props;
                 return e
-                    ? (0, i.jsx)(E.Button, {
-                          size: E.Button.Sizes.MIN,
-                          color: E.Button.Colors.PRIMARY,
+                    ? (0, i.jsx)(f.Button, {
+                          size: f.Button.Sizes.MIN,
+                          color: f.Button.Colors.PRIMARY,
                           className: e5.followButton,
                           onClick: () =>
-                              (0, E.openModalLazy)(async () => {
+                              (0, f.openModalLazy)(async () => {
                                   let { default: e } = await n.e('54642').then(n.bind(n, 720589));
                                   return (n) =>
                                       (0, i.jsx)(e, {
@@ -701,9 +701,9 @@ t.Z = a.memo(function (e) {
         r = (0, m.e7)([eB.Z], () => eB.Z.getChannelId()),
         o = (0, m.e7)([eB.Z], () => eB.Z.getVoiceChannelId()),
         c = (0, m.e7)([eP.Z], () => (null != n ? n : eP.Z.getChannel(r)), [r, n]),
-        E = (0, m.e7)([eP.Z], () => eP.Z.getChannel(o), [o]),
-        f = null == c ? void 0 : c.parent_id,
-        C = (0, m.e7)([eP.Z], () => eP.Z.getChannel(f), [f]),
+        f = (0, m.e7)([eP.Z], () => eP.Z.getChannel(o), [o]),
+        E = null == c ? void 0 : c.parent_id,
+        C = (0, m.e7)([eP.Z], () => eP.Z.getChannel(E), [E]),
         g = (0, m.e7)([ek.Z], () => ek.Z.getGuild(null == c ? void 0 : c.guild_id), [c]),
         { needSubscriptionToAccess: I } = (0, F.Z)(null !== (t = null == c ? void 0 : c.id) && void 0 !== t ? t : void 0),
         x = (0, m.e7)(
@@ -779,7 +779,7 @@ t.Z = a.memo(function (e) {
         channelName: J,
         formattedChannelName: $,
         parentChannel: C,
-        voiceChannel: E,
+        voiceChannel: f,
         layout: U,
         needSubscriptionToAccess: I,
         isLurking: y,

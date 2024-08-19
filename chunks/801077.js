@@ -241,7 +241,7 @@ let el = o().throttle(() => {
                 .values()
                 .orderBy([(e) => e.partiedMembers.length > 1, (e) => e.applicationStreams.length > 0, (e) => e.voiceChannels.length > 0, (e) => e.currentActivities.length > 0, (e) => e.isSpotifyActivity, (e) => e.priorityMembers.map((e) => e.user.username.toLowerCase()).join(' ')], ['desc', 'desc', 'desc', 'desc', 'asc', 'asc'])
                 .value()
-                .filter((e) => e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0)).map((e) => ({
+                .filter((e) => (e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0) && !e.partiedMembers.some((e) => j.Z.isBlocked(e.id)))).map((e) => ({
                 type: G.GOo.USER,
                 party: e
             }))),

@@ -17,8 +17,8 @@ var i,
     m = n(434650),
     p = n(607070),
     _ = n(594174),
-    E = n(5192),
-    f = n(603368),
+    f = n(5192),
+    E = n(603368),
     C = n(856682),
     g = n(284019),
     I = n(689938),
@@ -105,7 +105,7 @@ t.Z = l.memo(function (e) {
         z = (0, d.useToken)(d.tokens.colors.BG_SURFACE_OVERLAY),
         Y = (0, d.useToken)(d.tokens.colors.BG_BRAND),
         K = null != n ? n : Y.hex(),
-        q = (0, f.j1)(K, z.hex()),
+        q = (0, E.j1)(K, z.hex()),
         { height: X = 87, ref: Q } = (0, h.Z)(a),
         J = (0, d.useTransition)(a, {
             from: {
@@ -204,7 +204,7 @@ t.Z = l.memo(function (e) {
                                                               variant: 'text-lg/normal',
                                                               color: 'header-primary',
                                                               className: x.signatureText,
-                                                              children: E.ZP.getName(t, null, B)
+                                                              children: f.ZP.getName(t, null, B)
                                                           })
                                                         : (0, s.jsx)(d.Text, {
                                                               variant: 'text-lg/normal',

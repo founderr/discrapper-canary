@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(314897),
     p = n(375954),
     _ = n(594174),
-    E = n(626135),
-    f = n(51144),
+    f = n(626135),
+    E = n(51144),
     C = n(901461),
     g = n(981631),
     I = n(689938),
@@ -39,13 +39,13 @@ function N(e) {
                     .find((e) => e.author.id !== m.default.getId() && e.state === g.yb.SENT && !(0, C.Z)(e))
         ),
         S = (0, r.e7)([_.default], () => _.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        Z = null !== (t = f.ZP.useName(S)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
+        Z = null !== (t = E.ZP.useName(S)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
         A = (0, r.e7)([d.Z], () => d.Z.getStickerById(T)),
         M = a.useCallback(async () => {
             if (null == s || '' === s)
                 try {
                     await c.Z.sendGreetMessage(n.id, T),
-                        E.default.track(g.rMx.DM_EMPTY_ACTION, {
+                        f.default.track(g.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
                             source: 'Wave',

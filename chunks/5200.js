@@ -17,8 +17,8 @@ var i,
     m = n(182906),
     p = n(556505),
     _ = n(513202),
-    E = n(981631),
-    f = n(689938),
+    f = n(981631),
+    E = n(689938),
     C = n(774867);
 let g = ['embedded_cover'],
     I = {
@@ -73,7 +73,7 @@ function x(e) {
                             children: (0, s.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: f.Z.Messages.JOIN
+                                children: E.Z.Messages.JOIN
                             })
                         })
                     });
@@ -85,7 +85,7 @@ function x(e) {
                             children: (0, s.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: f.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE
+                                children: E.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE
                             })
                         })
                     });
@@ -111,7 +111,7 @@ function x(e) {
             children: (e) => {
                 let { value: t } = e;
                 return (0, s.jsx)(c.animated.div, {
-                    className: o()((0, d.Q)(E.BRd.DARK), C.activityItem, x, {
+                    className: o()((0, d.Q)(f.BRd.DARK), C.activityItem, x, {
                         [C.activityItem_13_11]: 0 === r,
                         [C.activityItem_16_9]: 1 === r
                     }),

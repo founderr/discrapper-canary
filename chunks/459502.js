@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return f;
     }
 }),
     n(724458);
@@ -18,17 +18,17 @@ var a = n(442837),
     m = n(688641),
     p = n(689938),
     _ = n(572563);
-function E(e) {
+function f(e) {
     let { channelId: t } = e,
-        E = (0, a.e7)([o.Z], () => o.Z.getChannel(t), [t]),
-        f = (0, d.sz)(t),
+        f = (0, a.e7)([o.Z], () => o.Z.getChannel(t), [t]),
+        E = (0, d.sz)(t),
         C = null != (0, d.qY)(t),
-        { canManageGuildEvent: g } = (0, r.XJ)(E),
-        I = (0, a.cj)([u.ZP], () => f.reduce((e, t) => ((e[t.id] = u.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}));
-    return f.length < 1 || C
+        { canManageGuildEvent: g } = (0, r.XJ)(f),
+        I = (0, a.cj)([u.ZP], () => E.reduce((e, t) => ((e[t.id] = u.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}));
+    return E.length < 1 || C
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: f.map((e) =>
+              children: E.map((e) =>
                   (0, i.jsx)(
                       m.Z,
                       {

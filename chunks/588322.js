@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(703656),
     p = n(664342),
     _ = n(592125),
-    E = n(703558),
-    f = n(430824),
+    f = n(703558),
+    E = n(430824),
     C = n(228392),
     g = n(689938),
     I = n(146238);
@@ -25,7 +25,7 @@ function x(e) {
     let { channelId: t } = e,
         x = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
         T = (0, s.e7)([_.Z], () => _.Z.getChannel(null == x ? void 0 : x.parent_id)),
-        N = (0, s.e7)([f.Z], () => f.Z.getGuild(null == x ? void 0 : x.getGuildId())),
+        N = (0, s.e7)([E.Z], () => E.Z.getGuild(null == x ? void 0 : x.getGuildId())),
         v = (0, o.ZP)(x),
         S = a.useRef(!1);
     if (
@@ -40,7 +40,7 @@ function x(e) {
         children: [
             (0, i.jsx)(r.Z, {
                 channel: x,
-                draftType: E.d.ChannelMessage
+                draftType: f.d.ChannelMessage
             }),
             (0, i.jsx)(d.ZP, {
                 toolbar: Z,

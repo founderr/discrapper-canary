@@ -11,8 +11,8 @@ var i = n(735250),
     m = n(496675),
     p = n(19780),
     _ = n(594174),
-    E = n(626135),
-    f = n(906605),
+    f = n(626135),
+    E = n(906605),
     C = n(574176),
     g = n(833858),
     I = n(866071),
@@ -35,7 +35,7 @@ t.Z = (e) => {
         O = (0, r.e7)([h.ZP], () => (null != Z.guild_id && null != R ? h.ZP.getMember(Z.guild_id, s) : null)),
         y = a.useMemo(() => (null != R ? (0, u.SG)(void 0, O, R, { size: 40 }) : void 0), [O, R]);
     return (a.useEffect(() => {
-        (0, f.UP)();
+        (0, E.UP)();
     }, []),
     a.useEffect(() => {
         M &&
@@ -43,7 +43,7 @@ t.Z = (e) => {
             A &&
             null != R &&
             b !== s &&
-            E.default.track(N.rMx.VIEW_HANG_STATUS, {
+            f.default.track(N.rMx.VIEW_HANG_STATUS, {
                 source: 'HangStatusPopout',
                 guild_id: Z.guild_id,
                 channel_id: Z.id
@@ -115,7 +115,7 @@ t.Z = (e) => {
                                           !j &&
                                               L &&
                                               (c.default.selectVoiceChannel(Z.id),
-                                              E.default.track(N.rMx.HANG_STATUS_CTA_CLICKED, {
+                                              f.default.track(N.rMx.HANG_STATUS_CTA_CLICKED, {
                                                   source: 'HangStatusPopout',
                                                   guild_id: Z.guild_id,
                                                   channel_id: Z.id
@@ -140,8 +140,8 @@ t.Z = (e) => {
                                                             startingEmoji: t.emoji
                                                         });
                                                 })
-                                              : (0, f.Zx)(e, !0),
-                                              E.default.track(N.rMx.SWIPE_HANG_STATUS, {
+                                              : (0, E.Zx)(e, !0),
+                                              f.default.track(N.rMx.SWIPE_HANG_STATUS, {
                                                   guild_id: Z.guild_id,
                                                   channel_id: Z.id,
                                                   media_session_id: p.Z.getMediaSessionId()

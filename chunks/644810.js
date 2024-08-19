@@ -32,10 +32,10 @@ let o = (e, t, n) => ({
     },
     u = async (e) => {
         let { mediaImageSrc: t, entry: n, avatarSrc: u, description: d, timestamp: h, episodeDescription: m, colors: p, channelId: _ } = e,
-            E = n.extra.media_title,
-            f = o(u, t);
+            f = n.extra.media_title,
+            E = o(u, t);
         return await (0, s.f)({
-            assetsToLoad: f,
+            assetsToLoad: E,
             drawImage: (e) => {
                 let t = p.map((e, t) => ({
                     color: e,
@@ -142,7 +142,7 @@ let o = (e, t, n) => ({
             exportConfigs: {
                 format: a.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(E, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(f, '.png').toLowerCase(),
                 fileType: 'png',
                 channelId: _
             }

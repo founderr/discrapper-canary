@@ -21,8 +21,8 @@ var i = n(735250),
     m = n(367907),
     p = n(812206),
     _ = n(644914),
-    E = n(434404),
-    f = n(330010),
+    f = n(434404),
+    E = n(330010),
     C = n(314897),
     g = n(430824),
     I = n(594174),
@@ -124,7 +124,7 @@ function L(e) {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.PERSONALIZE_SERVER
                     }),
-                        null != e && E.Z.open(e.id, A.pNK.OVERVIEW, { section: A.jXE.CHANNEL_WELCOME_CTA });
+                        null != e && f.Z.open(e.id, A.pNK.OVERVIEW, { section: A.jXE.CHANNEL_WELCOME_CTA });
                 }, [e]),
                 r = a.useCallback(() => {
                     m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
@@ -229,7 +229,7 @@ function L(e) {
     if (
         (a.useEffect(() => {
             var e;
-            (0, f.i)(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : A.lds);
+            (0, E.i)(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : A.lds);
         }, [s]),
         null == s)
     )

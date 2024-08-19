@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return E;
+        return f;
     },
     s: function () {
         return _;
@@ -59,7 +59,7 @@ function _(e) {
         })
     );
 }
-function E(e) {
+function f(e) {
     let { channel: t, narrow: n } = e,
         s = (0, d.Xb)(t);
     return (

@@ -11,14 +11,14 @@ var i = n(735250),
     m = n(171277),
     p = n(677845),
     _ = n(430371),
-    E = n(236564),
-    f = n(981631),
+    f = n(236564),
+    E = n(981631),
     C = n(354459),
     g = n(201614);
 t.Z = (0, r.Z)((e) => {
     let { participants: t, filteredParticipants: n, selectedParticipant: s, participantsVersion: r, layout: I, onSelectParticipant: x, onContextMenuParticipant: T, onFullscreenParticipant: N, channel: v, hasConnectPermission: S, className: Z, inCall: A, showParticipants: M = !0, paused: b = !1, width: R, height: j, idle: L, mode: P, popoutWindow: O, awaitingRemoteSessionInfo: y } = e;
     a.useEffect(() => {
-        d.S.dispatch(f.CkL.REMEASURE_TARGET);
+        d.S.dispatch(E.CkL.REMEASURE_TARGET);
     }, [R, j]);
     let D = a.useMemo(() => n.filter((e) => e.type !== C.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, r]);
     if ((null == y ? void 0 : y.channelId) === v.id) return (0, i.jsx)(m.Z, { height: j });
@@ -28,7 +28,7 @@ t.Z = (0, r.Z)((e) => {
             participants: t,
             hasConnectPermission: S
         });
-    if (P === f.WtW.VOICE)
+    if (P === E.WtW.VOICE)
         return (0, i.jsx)(c.Z, {
             guildId: v.guild_id,
             width: R,
@@ -38,7 +38,7 @@ t.Z = (0, r.Z)((e) => {
         });
     if (((n = A ? n : t), null == s))
         return 0 === n.length
-            ? (0, i.jsx)(E.Z, {
+            ? (0, i.jsx)(f.Z, {
                   className: l()(g.videoGrid, g.hiddenParticipants),
                   channelId: v.id,
                   width: R

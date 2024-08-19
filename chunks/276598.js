@@ -18,8 +18,8 @@ var i = n(735250),
     m = n(797258),
     p = n(446226),
     _ = n(937393),
-    E = n(43982),
-    f = n(721351),
+    f = n(43982),
+    E = n(721351),
     C = n(420529),
     g = n(927923),
     I = n(981631),
@@ -73,7 +73,7 @@ function S(e) {
                                 let { closePopout: n } = e;
                                 return (0, i.jsx)(u.Z, {
                                     children: o
-                                        ? (0, i.jsx)(E.Z, {
+                                        ? (0, i.jsx)(f.Z, {
                                               popoutPosition: y,
                                               onDismiss: () => s(x.L.UNKNOWN),
                                               onAccept: () => {
@@ -96,7 +96,7 @@ function S(e) {
                                     ...C,
                                     onClick: () => O(!0),
                                     label: null != (t = Z) ? (t === g.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
-                                    iconComponent: (0, f.Z)(Z)
+                                    iconComponent: (0, E.Z)(Z)
                                 });
                             }
                         })

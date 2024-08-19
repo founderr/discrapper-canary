@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(2052),
     p = n(906732),
     _ = n(194082),
-    E = n(484459),
-    f = n(594174),
+    f = n(484459),
+    E = n(594174),
     C = n(626135),
     g = n(74538),
     I = n(557457),
@@ -44,7 +44,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     O = (e) => {
         let t,
             s,
-            { participant: r, isUpsellEnabled: o, shape: d, size: E, didTrackUpsellViewed: Z, setDidTrackUpsellViewed: A, className: M, premiumIndicator: b } = e,
+            { participant: r, isUpsellEnabled: o, shape: d, size: f, didTrackUpsellViewed: Z, setDidTrackUpsellViewed: A, className: M, premiumIndicator: b } = e,
             R = (0, I.Wc)(r),
             { analyticsLocations: j } = (0, p.ZP)(),
             L = null != (0, x.Z)(r);
@@ -60,7 +60,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         }
         let P = t || s,
             { location: O } = (0, m.O)(),
-            y = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
+            y = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
             D = o && !g.ZP.isPremium(y, N.p9.TIER_1) && !g.ZP.canStreamQuality(g.ZP.StreamQuality.MID, y),
             k = a.useCallback(() => {
                 D &&
@@ -97,7 +97,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 (0, i.jsxs)(h.Clickable, {
                     ...e,
                     onClick: k,
-                    className: l()(S.qualityIndicator, E, _.eE[d], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, { [S.clickable]: D && P }),
+                    className: l()(S.qualityIndicator, f, _.eE[d], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, { [S.clickable]: D && P }),
                     children: [
                         P
                             ? (0, i.jsx)(h.NitroWheelIcon, {
@@ -125,19 +125,19 @@ t.Z = (e) => {
     let { participant: t, showQuality: n, isUpsellEnabled: s = !0, size: o, className: c, premiumIndicator: u } = e,
         [d, m] = a.useState(!1),
         p = (0, I.Wc)(t),
-        { reducedMotion: f } = a.useContext(h.AccessibilityPreferencesContext),
+        { reducedMotion: E } = a.useContext(h.AccessibilityPreferencesContext),
         C = n && null != p;
     a.useEffect(() => {
-        (0, E.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
+        (0, f.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
     }, [t]);
     let g = (0, h.useTransition)(
             C,
             {
                 enter: {
-                    from: f.enabled ? b : A,
-                    to: f.enabled ? R : M
+                    from: E.enabled ? b : A,
+                    to: E.enabled ? R : M
                 },
-                leave: f.enabled ? b : A,
+                leave: E.enabled ? b : A,
                 config: P
             },
             'animate-always'

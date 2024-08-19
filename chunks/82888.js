@@ -28,13 +28,13 @@ function m(e) {
                 activityPanelMode: c.ZP.getActivityPanelMode()
             };
         }),
-        E = (0, r.NX)(m, !1),
-        f = (0, l.Z)(m);
+        f = (0, r.NX)(m, !1),
+        E = (0, l.Z)(m);
     if (
         (a.useEffect(() => {
-            null != m && null == f && (0, o.gC)(h.MI.RESIZABLE);
-        }, [m, f]),
-        !E)
+            null != m && null == E && (0, o.gC)(h.MI.RESIZABLE);
+        }, [m, E]),
+        !f)
     )
         return null;
     let C = null == p ? void 0 : p.applicationId;

@@ -55,7 +55,7 @@ function d(e) {
     });
 }
 function h(e) {
-    let { screenMessage: t, onDoubleClick: n, onActive: i, onForceIdle: a, idle: l, children: o, renderChatButton: h, renderChatToasts: m, renderVoiceChannelEffects: p, style: _, ...E } = e;
+    let { screenMessage: t, onDoubleClick: n, onActive: i, onForceIdle: a, idle: l, children: o, renderChatButton: h, renderChatToasts: m, renderVoiceChannelEffects: p, style: _, ...f } = e;
     return (0, s.jsxs)('div', {
         className: r()(u.root, { [u.idle]: l }),
         style: _,
@@ -71,7 +71,7 @@ function h(e) {
                       ...t
                   })
                 : null,
-            (0, s.jsx)(d, { ...E }),
+            (0, s.jsx)(d, { ...f }),
             null == h
                 ? void 0
                 : h({

@@ -17,8 +17,8 @@ var a = n(512722),
     m = n(594174),
     p = n(700785),
     _ = n(213652),
-    E = n(320427),
-    f = n(145010),
+    f = n(320427),
+    E = n(145010),
     C = n(933686),
     g = n(997614),
     I = n(159909),
@@ -54,8 +54,8 @@ function N(e) {
                 }),
             b && (0, i.jsx)(C.Z, { channel: t }),
             Z && A && (0, i.jsx)(_.Z, { channel: t }),
-            S && n && (0, i.jsx)(E.Z, {}),
-            S && n && (0, i.jsx)(f.Z, { channel: t }),
+            S && n && (0, i.jsx)(f.Z, {}),
+            S && n && (0, i.jsx)(E.Z, { channel: t }),
             S && n && (0, i.jsx)(I.Z, {})
         ]
     });

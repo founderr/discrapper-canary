@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(358221),
     p = n(258609),
     _ = n(569545),
-    E = n(382182),
-    f = n(352978),
+    f = n(382182),
+    E = n(352978),
     C = n(184301),
     g = n(103575),
     I = n(199902),
@@ -90,7 +90,7 @@ let R = 16 / 9,
             y = a.useCallback(
                 (e, t) => {
                     if (e.type === M.fO.STREAM && 0 === L.filter((t) => (0, _.V9)(t) === e.id && t.state !== A.jm8.ENDED).length) {
-                        if (!(0, E.p9)(s, N.Z, x.Z, T.Z, p.Z)[0]) return;
+                        if (!(0, f.p9)(s, N.Z, x.Z, T.Z, p.Z)[0]) return;
                         (0, d.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == P ? void 0 : P.id) === e.id ? (O ? (c.Z.selectParticipant(s.id, null), c.Z.updateStageStreamSize(s.id, !1)) : c.Z.updateStageStreamSize(s.id, !0)) : (c.Z.updateStageStreamSize(s.id, !1), c.Z.selectParticipant(s.id, e.id));
@@ -102,7 +102,7 @@ let R = 16 / 9,
             {
                 participant: n,
                 aspectRatio: R,
-                fit: n.type === M.fO.USER ? f.L.COVER : void 0,
+                fit: n.type === M.fO.USER ? E.L.COVER : void 0,
                 blocked: j,
                 channel: s,
                 className: b.tile,
@@ -126,9 +126,9 @@ t.Z = a.memo(function (e) {
     l()(null != d, 'Channel cannot be guildless');
     let { user: p } = a,
         _ = (0, r.e7)([m.Z], () => m.Z.getParticipant(s.id, a.id), [s.id, a.id]),
-        E = (0, r.e7)([v.ZP], () => v.ZP.isModerator(p.id, s.id), [s.id, p.id]);
+        f = (0, r.e7)([v.ZP], () => v.ZP.isModerator(p.id, s.id), [s.id, p.id]);
     if (null == _ || _.type === M.fO.ACTIVITY) return null;
-    let f = (e, t) => {
+    let E = (e, t) => {
             switch (e.type) {
                 case M.fO.HIDDEN_STREAM:
                 case M.fO.STREAM:
@@ -178,8 +178,8 @@ t.Z = a.memo(function (e) {
                   guildId: d,
                   user: p,
                   width: o,
-                  isModerator: E,
-                  onContextMenu: f,
+                  isModerator: f,
+                  onContextMenu: E,
                   inPopout: c === A.IlC.POPOUT
               })
             : (0, i.jsx)(L, {
@@ -189,8 +189,8 @@ t.Z = a.memo(function (e) {
                   guildId: d,
                   user: p,
                   width: o,
-                  isModerator: E,
-                  onContextMenu: f,
+                  isModerator: f,
+                  onContextMenu: E,
                   inPopout: c === A.IlC.POPOUT
               })
     });

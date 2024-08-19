@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(358221),
     p = n(381586),
     _ = n(159300),
-    E = n(800329),
-    f = n(470956),
+    f = n(800329),
+    E = n(470956),
     C = n(430824),
     g = n(496675),
     I = n(434488),
@@ -33,7 +33,7 @@ function Z(e) {
         O = (0, r.e7)([C.Z], () => C.Z.getGuild(M.guild_id), [M.guild_id]),
         { dismissedActivityEntryPointTileChannel: y } = (0, T.d)(),
         D = (0, r.e7)([m.Z], () => m.Z.getUserParticipantCount(M.id), [M]),
-        k = (0, f.bt)(M.id, t),
+        k = (0, E.bt)(M.id, t),
         U = a.useCallback(() => {
             (0, l.j)(() => {
                 T.d.setState({ dismissedActivityEntryPointTileChannel: M.id });
@@ -128,7 +128,7 @@ function Z(e) {
         },
         [k]
     );
-    return (0, i.jsx)(E.Z, {
+    return (0, i.jsx)(f.Z, {
         className: b,
         keyExtractor: Y,
         paddingTop: 64,

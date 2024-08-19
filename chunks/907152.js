@@ -30,7 +30,7 @@ let _ = (e, t) => ({
         ...(null != e[2] && { AvatarImage3: e[2] }),
         ...(null != t && { ApplicationImage: t })
     }),
-    E = (e, t) => {
+    f = (e, t) => {
         let n = [
                 {
                     iconPath: m.NM,
@@ -92,7 +92,7 @@ let _ = (e, t) => ({
         }
         return n;
     },
-    f = (e, t) => {
+    E = (e, t) => {
         let { timestamp: n, colors: i, description: a, entry: s, numAvatars: o } = t,
             c = i.map((e, t) => ({
                 color: e,
@@ -171,7 +171,7 @@ let _ = (e, t) => ({
                 },
                 !0
             );
-        let u = E(s, n);
+        let u = f(s, n);
         (0, h.J)({
             canvas: e,
             badges: u,
@@ -186,7 +186,7 @@ let _ = (e, t) => ({
         return await (0, o.f)({
             assetsToLoad: d,
             drawImage: (e) =>
-                f(e, {
+                E(e, {
                     timestamp: s,
                     colors: l,
                     description: a,

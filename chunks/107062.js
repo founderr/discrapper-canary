@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(522474),
     p = n(706454),
     _ = n(823379),
-    E = n(5192),
-    f = n(192918),
+    f = n(5192),
+    E = n(192918),
     C = n(561308),
     g = n(907152),
     I = n(206295),
@@ -30,7 +30,7 @@ let A = (e, t) =>
         }),
     M = (e, t, n) => {
         let i = Z.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME,
-            a = E.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+            a = f.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
             s = e.extra.activity_name;
         return i
             .plainFormat({
@@ -43,18 +43,18 @@ let A = (e, t) =>
         let { entry: t, channel: n, users: i, countOthers: a } = e;
         return Z.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED.plainFormat({
             gameName: t.extra.activity_name,
-            user1: E.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[0]),
-            user2: E.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[1]),
+            user1: f.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[0]),
+            user2: f.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[1]),
             countOthers: a
         }).replaceAll('*', '');
     };
 t.ZP = (e) => {
     var t;
-    let { channel: n, entry: E, requestId: R, closePopout: j } = e,
-        { iconUrl: L, iconTitle: P, user: O, details: y, activity: D, coverImageUrl: k, richIcon: U } = (0, N.n)(E),
+    let { channel: n, entry: f, requestId: R, closePopout: j } = e,
+        { iconUrl: L, iconTitle: P, user: O, details: y, activity: D, coverImageUrl: k, richIcon: U } = (0, N.n)(f),
         { primaryColor: w, secondaryColor: B } = (0, I.Z)(L),
         H = (0, s.e7)([p.default], () => p.default.locale),
-        { displayParticipants: G, participant1: V, participant2: F, numOtherParticipants: W } = (0, f.Z)(E, 3),
+        { displayParticipants: G, participant1: V, participant2: F, numOtherParticipants: W } = (0, E.Z)(f, 3),
         z = (0, r.O)(),
         { analyticsLocations: Y } = (0, h.ZP)(),
         K = m.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
@@ -63,7 +63,7 @@ t.ZP = (e) => {
                 guildId: n.guild_id,
                 locationObject: z.location,
                 openInPopout: K,
-                initialSelectedApplicationId: E.extra.application_id,
+                initialSelectedApplicationId: f.extra.application_id,
                 initialSlide: S.ag.SELECT_CHANNEL,
                 analyticsLocations: Y
             });
@@ -74,38 +74,38 @@ t.ZP = (e) => {
                 let t =
                     W > 0
                         ? b({
-                              entry: E,
+                              entry: f,
                               channel: n,
                               users: [V, F],
                               countOthers: W
                           })
-                        : M(E, n, O);
+                        : M(f, n, O);
                 return (0, g.C4)({
-                    entry: E,
+                    entry: f,
                     applicationImageSrc: L,
                     avatarSrcs: G.map((e) => e.getAvatarURL(n.guild_id, 128)),
                     description: t,
-                    timestamp: (0, C.yh)(E, H),
+                    timestamp: (0, C.yh)(f, H),
                     colors: [w, B],
                     channelId: e
                 });
             },
-            [L, n, G, E, H, W, V, F, w, B, O]
+            [L, n, G, f, H, W, V, F, w, B, O]
         );
     if (null == O) return null;
     let Q = (0, i.jsx)(x.PZ, {
             location: x.Gt.POPOUT,
-            entry: E
+            entry: f
         }),
         J = (0, i.jsx)(T.wG, {
             thumbnailSrc: null !== (t = null != U ? U : k) && void 0 !== t ? t : L,
             thumbnailTitle: P,
             channel: n,
-            userDescription: (0, C.kr)(E) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-            title: E.extra.activity_name,
+            userDescription: (0, C.kr)(f) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+            title: f.extra.activity_name,
             subtitle: y,
             badges: Q,
-            entry: E,
+            entry: f,
             onClickTitle: q,
             onClickSubtitle: q,
             onClickThumbnail: q
@@ -139,8 +139,8 @@ t.ZP = (e) => {
                     user: O,
                     channel: n,
                     generateReactionImage: X,
-                    reactionImageAltText: A(E, O),
-                    entry: E,
+                    reactionImageAltText: A(f, O),
+                    entry: f,
                     requestId: R,
                     buttons: ee
                 })

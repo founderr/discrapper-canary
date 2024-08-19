@@ -13,7 +13,7 @@ var i = n(735250),
     u = n(348238),
     d = n(981631);
 let h = a.memo(function (e) {
-        let { message: t, channel: n, compact: s = !1, groupId: l, isGroupStart: o, usernameProfile: h, avatarProfile: m, setPopout: p, author: _, repliedMessage: E, roleIcon: f } = e,
+        let { message: t, channel: n, compact: s = !1, groupId: l, isGroupStart: o, usernameProfile: h, avatarProfile: m, setPopout: p, author: _, repliedMessage: f, roleIcon: E } = e,
             C = (0, u.wq)(t.author.id, n.id),
             g = (0, u.XO)(t, n, h, p),
             I = (0, u.R9)(m, p),
@@ -30,7 +30,7 @@ let h = a.memo(function (e) {
             guildId: n.guild_id,
             message: t,
             channel: n,
-            repliedMessage: E,
+            repliedMessage: f,
             author: _,
             compact: s,
             subscribeToGroupId: l,
@@ -42,26 +42,26 @@ let h = a.memo(function (e) {
             onClickUsername: g,
             onContextMenu: C,
             onPopoutRequestClose: x,
-            roleIcon: f
+            roleIcon: E
         });
     }),
     m = a.memo(o.Z);
 function p(e) {
     let { messageProps: t, setPopout: n, messagePopouts: a, replyReference: r, author: o, repliedMessage: c, roleIcon: u } = e,
-        { message: d, compact: p, channel: _, groupId: E } = t,
-        { usernameProfile: f, avatarProfile: C } = a;
+        { message: d, compact: p, channel: _, groupId: f } = t,
+        { usernameProfile: E, avatarProfile: C } = a;
     if ((0, s.Z)(d)) return null;
-    let g = d.id === E;
+    let g = d.id === f;
     return g || p || null != r
         ? (0, i.jsx)(h, {
               message: d,
               channel: _,
               compact: p,
-              subscribeToGroupId: E,
+              subscribeToGroupId: f,
               isGroupStart: g,
-              groupId: E,
+              groupId: f,
               setPopout: n,
-              usernameProfile: f,
+              usernameProfile: E,
               avatarProfile: C,
               author: o,
               repliedMessage: c,

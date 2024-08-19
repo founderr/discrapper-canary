@@ -19,7 +19,7 @@ function p(e) {
     let { channel: t } = e,
         n = (0, o.B)(t),
         [p, _] = a.useState(!1),
-        E = (0, s.useRedesignIconContext)().enabled;
+        f = (0, s.useRedesignIconContext)().enabled;
     a.useEffect(() => {
         let e = () => _(!0);
         return (
@@ -29,7 +29,7 @@ function p(e) {
             }
         );
     }, []);
-    let f = h.Z.Messages.NOTIFICATION_SETTINGS;
+    let E = h.Z.Messages.NOTIFICATION_SETTINGS;
     return (0, i.jsx)(s.Popout, {
         shouldShow: p,
         animation: s.Popout.Animation.NONE,
@@ -49,10 +49,10 @@ function p(e) {
             return (0, i.jsx)(l.ZP.Icon, {
                 ...e,
                 onClick: () => _((e) => !e),
-                tooltip: a ? null : f,
+                tooltip: a ? null : E,
                 icon: n === u.iN.NO_MESSAGES ? s.BellSlashIcon : s.BellIcon,
-                foreground: n !== u.iN.NO_MESSAGES || E ? null : m.strikethrough,
-                'aria-label': f,
+                foreground: n !== u.iN.NO_MESSAGES || f ? null : m.strikethrough,
+                'aria-label': E,
                 selected: a
             });
         }

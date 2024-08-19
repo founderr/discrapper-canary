@@ -11,8 +11,8 @@ var i = n(735250),
     m = n(827498),
     p = n(421591),
     _ = n(314734),
-    E = n(981631),
-    f = n(689938),
+    f = n(981631),
+    E = n(689938),
     C = n(1966);
 let g = { height: _.lv };
 function I() {
@@ -21,7 +21,7 @@ function I() {
 function x(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: c } = e,
         h = a.useRef(null),
-        { renderWindow: f, windowDispatch: C } = a.useContext(o.ZP),
+        { renderWindow: E, windowDispatch: C } = a.useContext(o.ZP),
         g = null != c,
         x = (0, l.Jw)(null != c ? c : ''),
         T = a.useCallback(
@@ -40,21 +40,21 @@ function x(e) {
                 }
                 I();
                 let a = null === (t = (0, d.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-                (null == a || 'BODY' === a.tagName) && u.S.dispatchToLastSubscribed(E.CkL.TEXTAREA_FOCUS);
+                (null == a || 'BODY' === a.tagName) && u.S.dispatchToLastSubscribed(f.CkL.TEXTAREA_FOCUS);
             },
             [n, x, g]
         );
     return (
         a.useLayoutEffect(
             () => (
-                f.addEventListener('mousedown', T),
-                f.addEventListener('contextmenu', T),
-                C.subscribe(E.CkL.POPOUT_CLOSE, I),
+                E.addEventListener('mousedown', T),
+                E.addEventListener('contextmenu', T),
+                C.subscribe(f.CkL.POPOUT_CLOSE, I),
                 () => {
-                    f.removeEventListener('mousedown', T), f.removeEventListener('contextmenu', T), C.unsubscribe(E.CkL.POPOUT_CLOSE, I);
+                    E.removeEventListener('mousedown', T), E.removeEventListener('contextmenu', T), C.unsubscribe(f.CkL.POPOUT_CLOSE, I);
                 }
             ),
-            [T, f, C]
+            [T, E, C]
         ),
         (0, r.useFocusLock)(h),
         a.useEffect(() => {
@@ -84,7 +84,7 @@ t.Z = a.memo(function (e) {
                     className: C.positionContainer,
                     role: 'dialog',
                     style: g,
-                    'aria-label': f.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_LAUNCHER_ARIA_LABEL,
+                    'aria-label': E.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_LAUNCHER_ARIA_LABEL,
                     children: t && (0, i.jsx)(x, { ...n })
                 });
             }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var i = n(735250);
@@ -17,10 +17,10 @@ var a = n(442837),
     m = n(389303),
     p = n(554747),
     _ = n(689938),
-    E = n(513128);
-function f(e) {
+    f = n(513128);
+function E(e) {
     let { channelId: t, onClick: n } = e,
-        f = (0, l.bp)(),
+        E = (0, l.bp)(),
         C = (0, p.qY)(t),
         g = (0, a.e7)([u.Z], () => u.Z.getChannel(t), [t]),
         { canManageGuildEvent: I } = (0, r.XJ)(g),
@@ -28,7 +28,7 @@ function f(e) {
     if (null == C) return null;
     let T = () => {
             if (null != g && (0, m.Z)(g)) {
-                (0, d.lC)(g, f);
+                (0, d.lC)(g, E);
                 return;
             }
             n();
@@ -67,12 +67,12 @@ function f(e) {
                       iconComponent: s.PhoneHangUpIcon,
                       onClick: T,
                       onPopoutClick: t,
-                      className: E.buttonSpacing
+                      className: f.buttonSpacing
                   });
               }
           })
         : (0, i.jsx)(c.d, {
-              className: E.buttonSpacing,
+              className: f.buttonSpacing,
               label: _.Z.Messages.DISCONNECT_SELF,
               color: 'red',
               iconComponent: s.PhoneHangUpIcon,

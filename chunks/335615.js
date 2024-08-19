@@ -18,8 +18,8 @@ var i = n(735250),
     m = n(902704),
     p = n(481060),
     _ = n(239091),
-    E = n(941028),
-    f = n(144144),
+    f = n(941028),
+    E = n(144144),
     C = n(276264),
     g = n(607070),
     I = n(100527),
@@ -81,8 +81,8 @@ class Q extends a.Component {
         return !(0, m.Z)(this.props, e, ['channelId']);
     }
     render() {
-        let { colorString: e, colorRoleName: t, isOwner: n, nick: a, user: s, currentUser: l, activities: r, applicationStream: o, status: c, channel: u, guildId: h, isTyping: m, isMobileOnline: _, premiumSince: E, ...f } = this.props,
-            g = null != E ? new Date(E) : null;
+        let { colorString: e, colorRoleName: t, isOwner: n, nick: a, user: s, currentUser: l, activities: r, applicationStream: o, status: c, channel: u, guildId: h, isTyping: m, isMobileOnline: _, premiumSince: f, ...E } = this.props,
+            g = null != f ? new Date(f) : null;
         return (0, i.jsx)(p.Popout, {
             preload: () =>
                 (0, O.Z)(s, {
@@ -94,7 +94,7 @@ class Q extends a.Component {
             spacing: 16,
             onShiftClick: this.handleShiftClick,
             children: (d, p) => {
-                let { isShown: E } = p;
+                let { isShown: f } = p;
                 return (0, i.jsx)(C.Z, {
                     className: z.member,
                     onContextMenu: this.renderUserContextMenu,
@@ -114,8 +114,8 @@ class Q extends a.Component {
                     guildId: h,
                     isMobile: _,
                     onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
-                    selected: E,
-                    itemProps: f,
+                    selected: f,
+                    itemProps: E,
                     ...d
                 });
             }
@@ -144,7 +144,7 @@ class Q extends a.Component {
                     plainText: n,
                     rawText: i
                 }),
-                    f.Z.startTyping(t.id);
+                    E.Z.startTyping(t.id);
             }),
             Y(this, 'openGuildSubscriptionModal', (e) => {
                 let { guildId: t } = this.props;
@@ -464,7 +464,7 @@ class et extends a.Component {
                     if (null == this._list) return;
                     let { channel: e } = this.props,
                         { rowHeight: t, y: n, height: i } = this.getDimensions();
-                    (0, E.TV)({
+                    (0, f.TV)({
                         guildId: e.guild_id,
                         channelId: e.id,
                         y: n,
@@ -511,9 +511,9 @@ function en(e) {
             channelId: t.id,
             guildId: t.guild_id
         }),
-        E = a.useRef(null),
-        f = a.useCallback((e, t) => {
-            let n = E.current;
+        f = a.useRef(null),
+        E = a.useCallback((e, t) => {
+            let n = f.current;
             if (null == n) return;
             let i = parseInt(t, 10),
                 [a, s] = n.getSectionRowFromIndex(i),
@@ -533,7 +533,7 @@ function en(e) {
         C = a.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = E.current;
+                    let t = f.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -542,7 +542,7 @@ function en(e) {
         x = a.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = E.current;
+                    let t = f.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -554,7 +554,7 @@ function en(e) {
         ),
         N = (0, u.ZP)({
             id: 'members-'.concat(t.id),
-            setFocus: f,
+            setFocus: E,
             isEnabled: r,
             scrollToStart: C,
             scrollToEnd: x
@@ -571,7 +571,7 @@ function en(e) {
                     version: p,
                     groups: m,
                     rows: d,
-                    listRef: E,
+                    listRef: f,
                     updateMaxContentFeedRowSeen: _
                 })
             })

@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(5192),
     p = n(785717),
     _ = n(221292),
-    E = n(318661),
-    f = n(78675),
+    f = n(318661),
+    E = n(78675),
     C = n(741308),
     g = n(588822),
     I = n(899007),
@@ -36,7 +36,7 @@ var i = n(735250),
 function P(e) {
     let { user: t, channel: n } = e,
         P = __OVERLAY__ || !(0, d.Z)(t.id),
-        O = (0, E.ZP)(t.id),
+        O = (0, f.ZP)(t.id),
         y = (0, o.ZP)(),
         { analyticsLocations: D } = (0, u.ZP)(c.Z.PROFILE_PANEL),
         k = (0, p.ZB)({
@@ -74,7 +74,7 @@ function P(e) {
                             (0, i.jsxs)('header', {
                                 className: j.header,
                                 children: [
-                                    (0, i.jsx)(f.Z, {
+                                    (0, i.jsx)(E.Z, {
                                         user: t,
                                         displayProfile: O,
                                         profileType: b.y0.PANEL,

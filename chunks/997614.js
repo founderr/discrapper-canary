@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(294629),
     p = n(390322),
     _ = n(871499),
-    E = n(131951),
-    f = n(459273),
+    f = n(131951),
+    E = n(459273),
     C = n(304388),
     g = n(981631),
     I = n(689938);
@@ -26,7 +26,7 @@ function x(e) {
     let { channel: t, themeable: x } = e,
         T = t.getGuildId(),
         { mute: N, suppress: v } = (0, m.Z)(t),
-        S = (0, s.e7)([E.Z], () => E.Z.isDeaf()),
+        S = (0, s.e7)([f.Z], () => f.Z.isDeaf()),
         Z = N || v || S,
         A = (0, u.sR)({ isSoundboardButtonDisabled: Z }),
         [M, b] = (0, c.cv)(A);
@@ -47,7 +47,7 @@ function x(e) {
             null === (e = j.current) || void 0 === e || e.hidePopout();
         }, []);
     return (
-        (0, f.yp)({
+        (0, E.yp)({
             event: g.CkL.TOGGLE_SOUNDBOARD,
             handler: L
         }),

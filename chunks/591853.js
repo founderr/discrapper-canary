@@ -33,8 +33,8 @@ var c = n(442837),
     m = n(493683),
     p = n(475179),
     _ = n(287734),
-    E = n(872810),
-    f = n(607070),
+    f = n(872810),
+    E = n(607070),
     C = n(220779),
     g = n(201133),
     I = n(557135),
@@ -128,7 +128,7 @@ function ep(e) {
     });
 }
 function e_(e) {
-    let { channel: t, user: n, generateReactionImage: s, reactionImageAltText: l, closePopout: r, entry: _, requestId: E, buttons: f = [], header: x } = e,
+    let { channel: t, user: n, generateReactionImage: s, reactionImageAltText: l, closePopout: r, entry: _, requestId: f, buttons: E = [], header: x } = e,
         [N, v] = a.useState(!1),
         [S, Z] = a.useState(null),
         A = (0, c.e7)([w.Z], () => w.Z.can(eo.Plq.SEND_MESSAGES, t)),
@@ -141,17 +141,17 @@ function e_(e) {
                 { isRich: o, appName: u } = (0, ei.n)(n),
                 { needSubscriptionToAccess: m } = (0, j.Z)(t.id),
                 _ = (0, c.e7)([U.Z], () => (null != r ? U.Z.getGuild(r.guild_id) : void 0)),
-                E = (0, c.Wu)([F.ZP], () => (null != r ? F.ZP.getVoiceStatesForChannel(r) : []), [r]),
-                f = (0, c.e7)([V.Z], () => V.Z.isInChannel(null == r ? void 0 : r.id)),
+                f = (0, c.Wu)([F.ZP], () => (null != r ? F.ZP.getVoiceStatesForChannel(r) : []), [r]),
+                E = (0, c.e7)([V.Z], () => V.Z.isInChannel(null == r ? void 0 : r.id)),
                 C = a.useMemo(() => {
-                    for (let e of E) {
+                    for (let e of f) {
                         let t = k.Z.getDMFromUserId(e.user.id),
                             n = null != t && H.ZP.isChannelMuted(null, t),
                             i = B.Z.isBlocked(e.user.id);
                         if (n || i) return !0;
                     }
                     return !1;
-                }, [E]);
+                }, [f]);
             if (null == r || null == _)
                 return {
                     voiceBar: void 0,
@@ -174,7 +174,7 @@ function e_(e) {
                 T = () => {
                     I.Z.handleVoiceConnect({
                         channel: r,
-                        connected: f,
+                        connected: E,
                         needSubscriptionToAccess: m,
                         routeDirectlyToChannel: !0
                     });
@@ -246,7 +246,7 @@ function e_(e) {
                                 }),
                                 (0, i.jsx)(D.Z, {
                                     guildId: _.id,
-                                    users: E,
+                                    users: f,
                                     max: 3,
                                     renderUser: (e, t) =>
                                         (0, i.jsx)(h.Avatar, {
@@ -272,7 +272,7 @@ function e_(e) {
                 });
             return {
                 voiceBar: v,
-                joinVoiceButton: f
+                joinVoiceButton: E
                     ? null
                     : (0, i.jsx)(N, {
                           hasBlockedOrMutedVCParticipant: C,
@@ -289,9 +289,9 @@ function e_(e) {
         })({
             channel: t,
             entry: _,
-            requestId: E
+            requestId: f
         }),
-        q = null != K && 0 === f.length ? [K] : f,
+        q = null != K && 0 === E.length ? [K] : E,
         Q = q.length > 0,
         et = q.length >= 2,
         [ea, es] = a.useState(!Q),
@@ -317,7 +317,7 @@ function e_(e) {
                     }
                     return (
                         o()(null != a, 'Send channel must be defined'),
-                        ef({
+                        eE({
                             reply: ':'.concat(e.name, ':'),
                             sendToChannel: a,
                             onComplete: () => {
@@ -342,14 +342,14 @@ function e_(e) {
                 o()(null != t, 'DM channel must be defined'), (i = t);
             }
             let a = i.type === eo.d4z.DM ? er.xP.DM_REACTION_MESSAGE_SENT : er.xP.CHANNEL_REACTION_MESSAGE_SENT;
-            return ef({
+            return eE({
                 reply: e,
                 sendToChannel: i,
                 onComplete: r,
                 interactionType: a
             });
         },
-        ef = async (e) => {
+        eE = async (e) => {
             let { reply: n, sendToChannel: i, onComplete: a, interactionType: r } = e;
             if ((0, L.Io)('ContentPopout Reactor'))
                 await (0, X.p)({
@@ -380,7 +380,7 @@ function e_(e) {
                 entry: _,
                 channelId: t.id,
                 guildId: t.guild_id,
-                requestId: E,
+                requestId: f,
                 destinationChannelId: i.id,
                 destinationGuildId: i.guild_id
             }),
@@ -402,7 +402,7 @@ function e_(e) {
                         children: (0, i.jsxs)('div', {
                             className: eu.emojiHotrailShareToChannel,
                             children: [
-                                (0, i.jsx)(eE, {
+                                (0, i.jsx)(ef, {
                                     channel: t,
                                     onClickSuggestion: ep
                                 }),
@@ -412,7 +412,7 @@ function e_(e) {
                     })
                   : (0, i.jsx)('div', {
                         className: eu.emojiHotrailShareToChannel,
-                        children: (0, i.jsx)(eE, {
+                        children: (0, i.jsx)(ef, {
                             channel: t,
                             onClickSuggestion: ep
                         })
@@ -498,13 +498,13 @@ function e_(e) {
         ]
     });
 }
-let eE = (e) => {
+let ef = (e) => {
     let { channel: t, onClickSuggestion: n } = e,
         [s, l] = a.useState(!1);
     a.useEffect(() => {
         l(!0);
     }, []);
-    let r = !!f.Z.keyboardModeEnabled && !s,
+    let r = !!E.Z.keyboardModeEnabled && !s,
         o = (0, N.wC)(t.guild_id)
             .slice(0, 5)
             .map((e) =>
@@ -549,7 +549,7 @@ let eE = (e) => {
         })
     });
 };
-function ef(e) {
+function eE(e) {
     let { channel: t, userDescription: n, entry: a } = e,
         s = t.guild_id,
         { displayParticipants: r, participant1: o, participant2: u, numOtherParticipants: d } = (0, Q.Z)(a, 3),
@@ -623,21 +623,21 @@ function eC(e) {
 }
 function eg(e) {
     var t;
-    let { thumbnailSrc: n, thumbnailFallbackSrc: a, thumbnailTitle: s, title: r, subtitle: o, badges: c, children: u, onClickThumbnail: d, onClickTitle: m, onClickSubtitle: p, headerIcons: _, ...E } = e,
-        { entry: f } = E,
-        C = (0, q.dX)(f),
+    let { thumbnailSrc: n, thumbnailFallbackSrc: a, thumbnailTitle: s, title: r, subtitle: o, badges: c, children: u, onClickThumbnail: d, onClickTitle: m, onClickSubtitle: p, headerIcons: _, ...f } = e,
+        { entry: E } = f,
+        C = (0, q.dX)(E),
         g = (0, A.Z)({
             location: 'ContentPopout',
-            applicationId: C ? (null === (t = f.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: C ? (null === (t = E.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: Z.m1.ActivityCard,
             trackEntryPointImpression: !0,
-            sourceUserId: f.author_id
+            sourceUserId: E.author_id
         }),
         I = C ? g : void 0;
     return (0, i.jsxs)('div', {
         className: eu.popoutContentWrapper,
         children: [
-            (0, i.jsx)(ef, { ...E }),
+            (0, i.jsx)(eE, { ...f }),
             (0, i.jsxs)(eh, {
                 backgroundImgSrc: n,
                 children: [
@@ -699,7 +699,7 @@ function eg(e) {
 }
 function eI(e) {
     var t;
-    let { title: n, subtitle: s, badges: l, stream: r, thumbnailSrc: o, thumbnailFallbackSrc: u, thumbnailTitle: d, onClickThumbnail: m, onClickTitle: p, onClickSubtitle: f, ...C } = e,
+    let { title: n, subtitle: s, badges: l, stream: r, thumbnailSrc: o, thumbnailFallbackSrc: u, thumbnailTitle: d, onClickThumbnail: m, onClickTitle: p, onClickSubtitle: E, ...C } = e,
         g = (0, c.e7)([k.Z], () => k.Z.getChannel(null == r ? void 0 : r.channelId)),
         [I] = a.useMemo(() => (0, M.p9)(g, V.Z, U.Z, w.Z, S.Z), [g]),
         { entry: x } = C,
@@ -717,7 +717,7 @@ function eI(e) {
         : (0, i.jsxs)('div', {
               className: eu.popoutContentWrapper,
               children: [
-                  (0, i.jsx)(ef, { ...C }),
+                  (0, i.jsx)(eE, { ...C }),
                   (0, i.jsxs)('div', {
                       className: eu.streamingPopoutHero,
                       children: [
@@ -753,7 +753,7 @@ function eI(e) {
                                           }),
                                           null != s
                                               ? (0, i.jsx)(eC, {
-                                                    onClick: null != f ? f : v,
+                                                    onClick: null != E ? E : v,
                                                     children: (0, i.jsx)(h.Text, {
                                                         variant: 'text-sm/normal',
                                                         className: eu.popoutHeroTextSecondary,
@@ -770,7 +770,7 @@ function eI(e) {
                           (0, i.jsx)(eC, {
                               onClick: I
                                   ? () => {
-                                        _.default.selectVoiceChannel(r.channelId), (0, E.iV)(r);
+                                        _.default.selectVoiceChannel(r.channelId), (0, f.iV)(r);
                                     }
                                   : void 0,
                               children: (0, i.jsxs)('div', {

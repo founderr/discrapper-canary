@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return f;
     }
 }),
     n(47120);
@@ -33,7 +33,7 @@ let p = [m.emoji1, m.emoji2, m.emoji3, m.emoji4],
             })
         });
     });
-function E(e) {
+function f(e) {
     let { channelId: t, callHeight: n } = e,
         s = (0, c.e7)([h.Z], () => h.Z.useReducedMotion),
         [l, r] = a.useState([]);

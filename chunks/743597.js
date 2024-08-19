@@ -73,14 +73,14 @@ function h(e, t, n) {
             },
             [t, n, e]
         ),
-        E = i.useCallback((e, t, n) => p(e, t, n), [p]);
+        f = i.useCallback((e, t, n) => p(e, t, n), [p]);
     return i.useMemo(
         () => ({
             handleMouseDown: m,
             handleMouseMove: p,
             handleMouseUp: _,
-            handleMouseEnter: E
+            handleMouseEnter: f
         }),
-        [m, E, p, _]
+        [m, f, p, _]
     );
 }

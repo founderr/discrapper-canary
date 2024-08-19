@@ -20,8 +20,8 @@ function p(e) {
         n = e.channel.isSystemDM(),
         p = (0, a.e7)([c.default], () => c.default.getUser(t)),
         _ = (0, a.e7)([r.Z], () => r.Z.getStatus(t)),
-        E = (0, a.e7)([r.Z], () => r.Z.isMobileOnline(t)),
-        f = (0, a.e7)([o.Z], () => o.Z.getNickname(t)),
+        f = (0, a.e7)([r.Z], () => r.Z.isMobileOnline(t)),
+        E = (0, a.e7)([o.Z], () => o.Z.getNickname(t)),
         C = u.ZP.useUserTag(p),
         g = (0, l.m$)({
             channelId: e.channel.id,
@@ -35,7 +35,7 @@ function p(e) {
                 (0, i.jsx)('div', {
                     children: (0, i.jsx)(s.Avatar, {
                         status: _,
-                        isMobile: E,
+                        isMobile: f,
                         className: m.avatar,
                         size: s.AvatarSizes.SIZE_24,
                         'aria-label': u.ZP.getName(p),
@@ -52,7 +52,7 @@ function p(e) {
                         (0, i.jsx)(s.TooltipContainer, {
                             text: C,
                             position: 'bottom',
-                            children: null != f ? f : u.ZP.getName(p)
+                            children: null != E ? E : u.ZP.getName(p)
                         }),
                         g &&
                             (0, i.jsx)(s.Tooltip, {

@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(400251),
     p = n(486527),
     _ = n(981631),
-    E = n(689938),
-    f = n(125803),
+    f = n(689938),
+    E = n(125803),
     C = n(703959),
     g = n(584354),
     I = n(725060);
@@ -36,12 +36,12 @@ let x = (0, c.Z)((e) => {
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-xl/semibold',
                             className: C.searchTitle,
-                            children: E.Z.Messages.HUB_DIRECTORY_SEARCH_TITLE
+                            children: f.Z.Messages.HUB_DIRECTORY_SEARCH_TITLE
                         }),
                         (0, i.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             className: C.searchSubtitle,
-                            children: E.Z.Messages.HUB_DIRECTORY_SEARCH_SUBTITLE
+                            children: f.Z.Messages.HUB_DIRECTORY_SEARCH_SUBTITLE
                         }),
                         (0, i.jsx)(o.SearchBox, {
                             searchTerm: t,
@@ -49,12 +49,12 @@ let x = (0, c.Z)((e) => {
                             inputClassName: C.searchBoxInput,
                             closeIconClassName: C.closeIcon,
                             searchIconClassName: C.searchIcon,
-                            label: E.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
-                            placeholder: E.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
+                            label: f.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
+                            placeholder: f.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                             onChange: n,
                             onClear: a,
                             onKeyPress: s,
-                            cta: null != t && t.length > 0 ? E.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+                            cta: null != t && t.length > 0 ? f.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
                         })
                     ]
                 })
@@ -79,9 +79,9 @@ function T(e) {
         splash: t.splash
     });
     return (0, i.jsx)('div', {
-        className: f.pageContainer,
+        className: E.pageContainer,
         children: (0, i.jsxs)(o.AdvancedScrollerAuto, {
-            className: f.scroller,
+            className: E.scroller,
             children: [
                 (0, i.jsxs)('div', {
                     className: C.header,
@@ -101,16 +101,16 @@ function T(e) {
                                 children: (0, i.jsx)(o.Heading, {
                                     variant: 'heading-xl/semibold',
                                     color: 'always-white',
-                                    children: E.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({ categoryName: 'Midjourney' })
+                                    children: f.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({ categoryName: 'Midjourney' })
                                 })
                             })
                         })
                     ]
                 }),
                 s && null == n
-                    ? (0, i.jsx)(o.Spinner, { className: f.spinner })
+                    ? (0, i.jsx)(o.Spinner, { className: E.spinner })
                     : (0, i.jsxs)('div', {
-                          className: f.cardsContainer,
+                          className: E.cardsContainer,
                           children: [u.map((e) => (0, i.jsx)(m.Z, { entry: e }, e.guildId)), c && null != a ? (0, i.jsx)(m.m, { onClick: a }) : null]
                       })
             ]
@@ -128,9 +128,9 @@ t.Z = (e) => {
               isLoading: S
           })
         : (0, i.jsx)('div', {
-              className: f.pageContainer,
+              className: E.pageContainer,
               children: (0, i.jsxs)(o.AdvancedScrollerAuto, {
-                  className: f.scroller,
+                  className: E.scroller,
                   children: [
                       (0, i.jsx)(x, {
                           searchQuery: l,
@@ -154,7 +154,7 @@ t.Z = (e) => {
                                       {
                                           className: C.tabBarItem,
                                           id: p.AR.ALL,
-                                          children: ''.concat(E.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(v, ')')
+                                          children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(v, ')')
                                       },
                                       p.AR.ALL
                                   ),
@@ -174,7 +174,7 @@ t.Z = (e) => {
                           })
                       }),
                       S && null == n
-                          ? (0, i.jsx)(o.Spinner, { className: f.spinner })
+                          ? (0, i.jsx)(o.Spinner, { className: E.spinner })
                           : null == n
                             ? void 0
                             : n.map((e, t) =>
@@ -190,7 +190,7 @@ t.Z = (e) => {
                                                     })
                                                   : null,
                                               (0, i.jsxs)('div', {
-                                                  className: f.cardsContainer,
+                                                  className: E.cardsContainer,
                                                   children: [e.entries.map((e) => (0, i.jsx)(m.Z, { entry: e }, e.guildId)), e.appendEndCard && null != s ? (0, i.jsx)(m.m, { onClick: s }) : null]
                                               })
                                           ]

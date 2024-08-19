@@ -18,13 +18,13 @@ t.Z = a.memo(function () {
             let e = (0, s.e7)([u.Z], () => u.Z.isConnected()) ? [] : [],
                 [t, p] = (0, c.US)(e, h.R.GUILD_TAKEOVER_MODAL),
                 _ = (0, r.f9)(),
-                E = a.useRef(null);
+                f = a.useRef(null);
             a.useEffect(() => {
                 if (null == t) {
-                    E.current = null;
+                    f.current = null;
                     return;
                 }
-                if (!_ && E.current !== t)
+                if (!_ && f.current !== t)
                     !(function (e) {
                         let { dismissibleContent: t, markAsDismissed: a } = e,
                             s = {
@@ -47,7 +47,7 @@ t.Z = a.memo(function () {
                         dismissibleContent: t,
                         markAsDismissed: p
                     }),
-                        (E.current = t);
+                        (f.current = t);
             }, [t, _, p]),
                 a.useEffect(
                     () => () => {

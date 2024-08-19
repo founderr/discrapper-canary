@@ -17,12 +17,12 @@ var a = n(399606),
     m = n(91941);
 function p(e) {
     let { userId: t, guildId: n, textClassName: p, tooltipDelay: _ } = e,
-        E = (0, a.e7)([o.default], () => o.default.locale),
-        f = (0, a.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
+        f = (0, a.e7)([o.default], () => o.default.locale),
+        E = (0, a.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
         C = (0, a.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
-        g = (0, l.FI)(d.default.extractTimestamp(t), E),
-        I = (0, l.FI)(null == C ? void 0 : C.joinedAt, E);
-    return null == f || null == C
+        g = (0, l.FI)(d.default.extractTimestamp(t), f),
+        I = (0, l.FI)(null == C ? void 0 : C.joinedAt, f);
+    return null == E || null == C
         ? (0, i.jsx)(s.Text, {
               variant: 'text-sm/normal',
               className: p,
@@ -59,12 +59,12 @@ function p(e) {
                       className: m.memberSince,
                       children: [
                           (0, i.jsx)(s.Tooltip, {
-                              text: f.name,
+                              text: E.name,
                               delay: _,
                               children: (e) =>
                                   (0, i.jsx)(r.Z, {
                                       ...e,
-                                      guild: f,
+                                      guild: E,
                                       size: r.Z.Sizes.SMOL
                                   })
                           }),

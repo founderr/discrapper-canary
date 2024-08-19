@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     Z: function () {
-        return f;
+        return E;
     }
 }),
     n(653041);
@@ -34,23 +34,23 @@ let p = {
         particles: {},
         lastSpawned: {}
     }));
-function E(e, t) {
+function f(e, t) {
     var n;
     a()(null !== (n = _.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t);
 }
-function f(e) {
+function E(e) {
     var t, n, i, l;
-    let { emojiHose: f, context: C, canvasWidth: g, canvasHeight: I, fallbackColor: x, outlineColorDark: T, outlineColorLight: N, streamerId: v, deadDrawables: S } = e;
+    let { emojiHose: E, context: C, canvasWidth: g, canvasHeight: I, fallbackColor: x, outlineColorDark: T, outlineColorLight: N, streamerId: v, deadDrawables: S } = e;
     C.save();
-    let Z = c.Z.getEmojiImage(null !== (n = null !== (t = f.emojiId) && void 0 !== t ? t : f.emojiName) && void 0 !== n ? n : ''),
-        A = (0, d.np)(f.x, g),
-        M = (0, d.np)(f.y, I),
-        { outlineColor: b } = (0, d.bg)(f.userId, T, N, x);
+    let Z = c.Z.getEmojiImage(null !== (n = null !== (t = E.emojiId) && void 0 !== t ? t : E.emojiName) && void 0 !== n ? n : ''),
+        A = (0, d.np)(E.x, g),
+        M = (0, d.np)(E.y, I),
+        { outlineColor: b } = (0, d.bg)(E.userId, T, N, x);
     if (
-        (E(f, (e) => {
+        (f(E, (e) => {
             var t, n;
             return (
-                (t = f),
+                (t = E),
                 (n = e),
                 void ((n.x += n.xSpeed * window.devicePixelRatio),
                 (n.y += n.ySpeed * window.devicePixelRatio),
@@ -90,10 +90,10 @@ function f(e) {
                         return (i.particles[e.id] = c), (i.lastSpawned[e.id] = Date.now()), i;
                     });
                 });
-        })(f, A, M),
+        })(E, A, M),
         (0, h.I)(C, A, M, b, m.q2),
-        (0, h.T)(C, A, M, f.userId),
-        E(f, (e) =>
+        (0, h.T)(C, A, M, E.userId),
+        f(E, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
                 let i = n.size * window.devicePixelRatio,
@@ -102,9 +102,9 @@ function f(e) {
                 (e.globalAlpha = n.opacity), e.drawImage(t, i / 2 + a, i / 2 + s, i, i);
             })(C, Z, e)
         ),
-        f.lastUpdatedAt + m.FO < Date.now() && (0, o.ZZ)(v, f),
-        f.state === u.f.STOP && ((i = f), !(Object.keys(null !== (l = _.getState().particles[i.id]) && void 0 !== l ? l : {}).length > 0)))
+        E.lastUpdatedAt + m.FO < Date.now() && (0, o.ZZ)(v, E),
+        E.state === u.f.STOP && ((i = E), !(Object.keys(null !== (l = _.getState().particles[i.id]) && void 0 !== l ? l : {}).length > 0)))
     )
-        S.push(f);
+        S.push(E);
     C.restore();
 }
