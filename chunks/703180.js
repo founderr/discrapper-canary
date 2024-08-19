@@ -18,7 +18,6 @@ let u = (e) => {
     return (0, i.jsx)(s.Menu, {
         onSelect: () => {},
         navId: 'member-list-settings-menu',
-        variant: 'fixed',
         onClose: null != t ? t : o.dG4,
         'aria-label': c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ALT,
         children: (0, i.jsxs)(s.MenuGroup, {
