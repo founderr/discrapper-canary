@@ -17,8 +17,8 @@ var a = n(442837),
     m = n(940730),
     p = n(483424),
     _ = n(681837),
-    f = n(91433),
-    E = n(900927),
+    E = n(91433),
+    f = n(900927),
     C = n(678738),
     g = n(502762),
     I = n(530),
@@ -66,7 +66,7 @@ function M(e) {
             }),
             O === S.OGo.PENDING_INCOMING &&
                 (0, i.jsx)(g.Z.Overlay, {
-                    children: (0, i.jsx)(f.Z, {
+                    children: (0, i.jsx)(E.Z, {
                         user: t,
                         channelId: b.id
                     })
@@ -108,7 +108,7 @@ function M(e) {
                     (0, i.jsx)(C.Z, {
                         heading: t.bot ? Z.Z.Messages.BOT_PROFILE_CREATED_ON : Z.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                         headingColor: 'header-primary',
-                        children: (0, i.jsx)(E.Z, { userId: t.id })
+                        children: (0, i.jsx)(f.Z, { userId: t.id })
                     })
                 ]
             })

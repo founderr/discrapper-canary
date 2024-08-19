@@ -18,8 +18,8 @@ var i = n(735250),
     m = n(728345),
     p = n(812206),
     _ = n(541716),
-    f = n(752305),
-    E = n(893718),
+    E = n(752305),
+    f = n(893718),
     C = n(957730),
     g = n(789407),
     I = n(300429),
@@ -66,12 +66,12 @@ class A extends a.PureComponent {
     }
     render() {
         let { textValue: e, richValue: t, textFocused: n, contentWarningProps: a } = this.state,
-            { activity: s, analyticsLocations: r, channel: c, activityActionType: h, cooldown: m, application: p, transitionState: f, onClose: C } = this.props,
+            { activity: s, analyticsLocations: r, channel: c, activityActionType: h, cooldown: m, application: p, transitionState: E, onClose: C } = this.props,
             g = m > 0,
             I = g ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((m + 1000) / 1000) }) : null;
         return (0, i.jsxs)(o.ModalRoot, {
             size: o.ModalSize.SMALL,
-            transitionState: f,
+            transitionState: E,
             'aria-label': this.renderTitle(),
             children: [
                 (0, i.jsx)(o.ModalHeader, {
@@ -118,7 +118,7 @@ class A extends a.PureComponent {
                                 );
                             },
                             children: () =>
-                                (0, i.jsx)(E.Z, {
+                                (0, i.jsx)(f.Z, {
                                     className: v.textArea,
                                     textValue: e,
                                     richValue: t,
@@ -161,7 +161,7 @@ class A extends a.PureComponent {
     constructor(...e) {
         super(...e),
             S(this, 'state', {
-                ...(0, f.H2)(),
+                ...(0, E.H2)(),
                 textFocused: !0,
                 contentWarningProps: null
             }),

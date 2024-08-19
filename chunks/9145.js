@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(900211),
     p = n(740492),
     _ = n(871499),
-    f = n(402113),
-    E = n(592125),
+    E = n(402113),
+    f = n(592125),
     C = n(271383),
     g = n(944486),
     I = n(594174),
@@ -48,7 +48,7 @@ function w(e) {
     let { maxHeight: s, connectedChannelId: w, renderExternalHeader: B } = e,
         H = (0, M.Z)(),
         G = (0, r.Wu)([S.ZP], () => (null != w ? S.ZP.getEmbeddedActivitiesForChannel(w) : []), [w]),
-        V = (0, r.e7)([E.Z], () => E.Z.getChannel(w)),
+        V = (0, r.e7)([f.Z], () => f.Z.getChannel(w)),
         F = (0, Z.gb)(G),
         W = (0, Z.uF)(F),
         z = a.useCallback(() => {
@@ -217,7 +217,7 @@ function w(e) {
                                           }),
                                           (0, i.jsx)('div', {
                                               className: D.leaveButtonContainer,
-                                              children: (0, i.jsx)(f.Z, {
+                                              children: (0, i.jsx)(E.Z, {
                                                   applicationId: H.id,
                                                   channelId: w,
                                                   centerButton: !0,

@@ -26,7 +26,7 @@ function T() {
         t = (0, a.e7)([o.Z], () => o.Z.hidePersonalInformation),
         { multiAccountUsers: n } = (0, E.L)(),
         T = (t) => {
-            if (t !== (null == e ? void 0 : e.id)) d.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.PROFILE_POPOUT } }), _.yD(t);
+            if (t !== (null == e ? void 0 : e.id)) d.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.USER_PROFILE } }), _.yD(t);
         },
         S = n.map((n) => {
             let a = new l.Z(n),

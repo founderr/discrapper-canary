@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(481060),
     p = n(239091),
     _ = n(144144),
-    f = n(607070),
-    E = n(100527),
+    E = n(607070),
+    f = n(100527),
     C = n(906732),
     g = n(82295),
     I = n(91218),
@@ -52,7 +52,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
         let { channel: t, sectionId: s, userId: l, guildOwnerId: r } = e,
             o = (0, h.e7)([L.Z], () => L.Z.isTyping(t.id, l)),
             u = (0, h.e7)([M.ZP], () => M.ZP.getMember(t.guild_id, l)),
-            f = (0, h.e7)(
+            E = (0, h.e7)(
                 [b.Z],
                 () => {
                     var e;
@@ -60,42 +60,42 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id, u]
             ),
-            E = (0, h.e7)([P.default], () => P.default.getUser(l)),
+            f = (0, h.e7)([P.default], () => P.default.getUser(l)),
             C = (0, h.e7)([P.default], () => P.default.getCurrentUser()),
-            g = (null == E ? void 0 : E.id) === (null == C ? void 0 : C.id),
+            g = (null == f ? void 0 : f.id) === (null == C ? void 0 : C.id),
             I = (0, h.e7)([R.Z, j.Z], () => (g ? j.Z.getStatus() : R.Z.getStatus(l, t.guild_id))),
             T = (0, h.e7)([R.Z], () => R.Z.isMobileOnline(l)),
             N = (0, h.e7)([R.Z, j.Z], () => (g ? j.Z.getActivities() : R.Z.getActivities(l, t.guild_id))),
             O = (0, h.e7)([A.Z], () => A.Z.getAnyStreamForUser(l)),
             y = (0, c.JA)(l),
             k = (0, h.e7)([v.Z], () => v.Z.canUserViewChannel(t.id, s, l)),
-            w = (null == E ? void 0 : E.id) != null && E.id === r,
+            w = (null == f ? void 0 : f.id) != null && f.id === r,
             V = a.useCallback(
                 (e) => {
-                    null != E &&
+                    null != f &&
                         (0, p.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,
-                                    user: E,
+                                    user: f,
                                     guildId: t.guild_id,
                                     channel: t
                                 });
                         });
                 },
-                [E, t]
+                [f, t]
             ),
             F = a.useCallback(() => {
-                if (null == E) return;
-                let e = '@'.concat(U.ZP.getUserTag(E, { decoration: 'never' })),
-                    n = '<@'.concat(E.id, '>');
+                if (null == f) return;
+                let e = '@'.concat(U.ZP.getUserTag(f, { decoration: 'never' })),
+                    n = '<@'.concat(f.id, '>');
                 D.S.dispatchToLastSubscribed(H.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n
                 }),
                     _.Z.startTyping(t.id);
-            }, [E, t]),
+            }, [f, t]),
             z = a.useCallback(
                 (e) => {
                     e.stopPropagation(),
@@ -109,11 +109,11 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id]
             );
-        if (null == E) return null;
+        if (null == f) return null;
         let Y = null == u ? void 0 : u.premiumSince;
         return (0, i.jsx)(m.Popout, {
             preload: () =>
-                (0, S.Z)(E, {
+                (0, S.Z)(f, {
                     guildId: t.guild_id,
                     channelId: t.id
                 }),
@@ -121,7 +121,7 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                 (0, i.jsx)(Z.Z, {
                     ...e,
                     location: 'ThreadMembers',
-                    userId: E.id,
+                    userId: f.id,
                     guildId: t.guild_id,
                     channelId: t.id,
                     analyticsParams: {
@@ -139,13 +139,13 @@ let W = w.ZP.getEnableHardwareAcceleration(),
                 return (0, i.jsx)(B.Z, {
                     onContextMenu: V,
                     shouldAnimateStatus: W,
-                    user: E,
+                    user: f,
                     currentUser: C,
                     nick: null == u ? void 0 : u.nick,
                     status: I,
                     activities: N,
                     colorString: null == u ? void 0 : u.colorString,
-                    colorRoleName: f,
+                    colorRoleName: E,
                     isTyping: o,
                     channel: t,
                     guildId: t.guild_id,
@@ -226,11 +226,11 @@ let W = w.ZP.getEnableHardwareAcceleration(),
 function X(e) {
     let { channel: t, guild: n } = e,
         s = 'members-'.concat(t.id),
-        { analyticsLocations: r } = (0, C.ZP)(E.Z.MEMBER_LIST),
+        { analyticsLocations: r } = (0, C.ZP)(f.Z.MEMBER_LIST),
         d = (0, N.D)(t.id, n),
         p = d.filter((e) => e.userIds.length > 0).reverse()[0],
         { navigator: _, listRef: g } = (function (e, t) {
-            let n = (0, h.e7)([f.Z], () => f.Z.keyboardModeEnabled),
+            let n = (0, h.e7)([E.Z], () => E.Z.keyboardModeEnabled),
                 i = a.useRef(null),
                 s = a.useCallback(
                     (e, n) => {

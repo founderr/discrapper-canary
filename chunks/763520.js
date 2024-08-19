@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     o: function () {
-        return f;
+        return E;
     }
 }),
     n(47120);
@@ -33,7 +33,7 @@ function p(e, t, n) {
 }
 ((a = i || (i = {})).SELF_VIDEO = 'self_video'), (a.SELF_STREAM = 'self_stream'), (a.REMOTE_VIDEO = 'remote_video'), (a.REMOTE_STREAM = 'remote_stream'), (a.CHANGE_VIDEO_BACKGROUND = 'change_video_background'), (a.VIDEO_PLAYER = 'video_player'), (a.REPLAY_VIDEO_STREAM = 'replay_video_stream');
 let _ = new Map();
-class f {
+class E {
     onSpinnerStarted() {
         null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, l.zO)());
     }
@@ -52,7 +52,7 @@ class f {
         this.logger.info('spinner visible for '.concat(a, ' ms\n      [').concat(e, ', count for stream: ').concat(i, ']'));
         let s = u.Z.getGuildId(),
             p = d.Z.getUserVoiceChannelId(s, r.default.getId()),
-            f = (function (e) {
+            E = (function (e) {
                 if (null != e) {
                     if (e.isGuildVoice()) return 'guild_voice';
                     if (e.isGuildStageVoice()) return 'is_stage_channel';
@@ -69,7 +69,7 @@ class f {
             event_count_for_stream: i,
             guild_id: s,
             channel_id: p,
-            channel_type: f,
+            channel_type: E,
             spinning_user_id: t,
             connection_type: c.Z.getType(),
             effective_connection_speed: c.Z.getEffectiveConnectionSpeed(),

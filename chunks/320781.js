@@ -21,14 +21,14 @@ function m(e) {
         m = (0, r.eV)(n),
         { firstMessage: p } = (0, a.cj)([o.Z], () => o.Z.getMessage(n.id)),
         _ = new Set((0, r.kn)(n, m)),
-        f = null !== (t = (0, l.KS)(n)) && void 0 !== t ? t : s.ChatIcon;
+        E = null !== (t = (0, l.KS)(n)) && void 0 !== t ? t : s.ChatIcon;
     return (0, i.jsxs)(u.ZP, {
         channelId: n.id,
         className: h.container,
         children: [
             (0, i.jsx)('div', {
                 className: h.iconWrapper,
-                children: (0, i.jsx)(f, {
+                children: (0, i.jsx)(E, {
                     className: h.icon,
                     strokeWidth: 1.75
                 })

@@ -78,11 +78,11 @@ let I = (e) => {
             { trackSlideView: T, trackPagination: N } = (0, h.X)(t, L),
             [O, k] = (0, i.useState)(0),
             [j, P] = (0, i.useState)(!1),
-            [B, R] = (0, i.useState)(!1),
-            A = i.useCallback(() => R(!0), []),
-            Z = i.useCallback(() => R(!1), []),
+            [R, A] = (0, i.useState)(!1),
+            B = i.useCallback(() => A(!0), []),
+            Z = i.useCallback(() => A(!1), []),
             M = (0, g.e7)([_.Z], () => _.Z.isFocused()),
-            y = null != b && !v && !B && M,
+            y = null != b && !v && !R && M,
             w = i.useCallback((e) => (n.length + O + e) % n.length, [n, O]),
             D = i.useCallback(
                 d()((e, t, s) => {
@@ -103,7 +103,7 @@ let I = (e) => {
             }, [y, b, O, w, D]),
             (0, a.jsxs)('div', {
                 className: c()(x.carouselContainer, u),
-                onMouseEnter: A,
+                onMouseEnter: B,
                 onMouseLeave: Z,
                 children: [
                     (0, a.jsx)(C.Slides, {

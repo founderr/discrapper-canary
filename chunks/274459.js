@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(456631),
     p = n(245285);
 let _ = 6 * h.Z.Millis.SECOND,
-    f = 2 * h.Z.Millis.SECOND,
     E = 2 * h.Z.Millis.SECOND,
+    f = 2 * h.Z.Millis.SECOND,
     C = (e) => 'scale('.concat(1 - -(e / 120), ') rotate(').concat(e, 'deg)');
 function g(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: s } = e,
@@ -39,13 +39,13 @@ function g(e) {
     return (a.useEffect(() => {
         let e;
         return (
-            Date.now() - g >= E
+            Date.now() - g >= f
                 ? (0, m.H)(t)
                 : (e = setTimeout(
                       () => {
                           T(!1), N && (0, m.H)(t);
                       },
-                      N ? f : _
+                      N ? E : _
                   )),
             () => {
                 null != e && clearTimeout(e);

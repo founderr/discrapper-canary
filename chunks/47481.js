@@ -16,8 +16,8 @@ function u(e) {
     let t,
         n,
         u,
-        { channel: d, messages: h, oldestUnreadMessageId: m, treatSpam: p, summaries: _, selectedSummary: f } = e,
-        E = [],
+        { channel: d, messages: h, oldestUnreadMessageId: m, treatSpam: p, summaries: _, selectedSummary: E } = e,
+        f = [],
         C = !1,
         g = null != m ? l.default.extractTimestamp(m) : null,
         I = null;
@@ -32,7 +32,7 @@ function u(e) {
                         i = l.default.extractTimestamp(_[e].endId);
                     if (t >= n && t <= i) {
                         if (I === _[e].id) break;
-                        E.push({
+                        f.push({
                             type: c.ys_.DIVIDER,
                             content: _[e].topic,
                             contentKey: _[e].id
@@ -45,13 +45,13 @@ function u(e) {
             let M = (0, s.vc)(e.timestamp, 'LL');
             M !== t &&
                 null == I &&
-                (E.push({
+                (f.push({
                     type: c.ys_.DIVIDER,
                     content: M,
                     contentKey: M
                 }),
                 (t = M));
-            let b = E[E.length - 1],
+            let b = f[f.length - 1],
                 R = null,
                 j = (0, o.DQ)(e);
             C = C || j;
@@ -64,7 +64,7 @@ function u(e) {
             if (null !== L) {
                 let t, n;
                 [R, b] =
-                    ((x = E),
+                    ((x = f),
                     (T = e),
                     (N = L),
                     (n = v = b),
@@ -92,7 +92,7 @@ function u(e) {
                         (g = null);
                 } else
                     !e.isFirstMessageInForumPost(d) &&
-                        E.push({
+                        f.push({
                             type: c.ys_.DIVIDER,
                             unreadId: e.id
                         }),
@@ -101,7 +101,7 @@ function u(e) {
                 null != g &&
                     l.default.extractTimestamp(e.id) > g &&
                     (!e.isFirstMessageInForumPost(d) &&
-                        E.push({
+                        f.push({
                             type: c.ys_.DIVIDER,
                             unreadId: e.id
                         }),
@@ -117,27 +117,27 @@ function u(e) {
             let { jumpSequenceId: y, jumpFlash: D, jumpTargetId: k } = h;
             D && e.id === k && null != y && (O.flashKey = y),
                 h.jumpTargetId === e.id && (O.jumpTarget = !0),
-                null != f &&
-                    e.id === f.startId &&
-                    f.count > 1 &&
-                    E.push({
+                null != E &&
+                    e.id === E.startId &&
+                    E.count > 1 &&
+                    f.push({
                         type: c.ys_.DIVIDER,
-                        content: f.topic,
-                        contentKey: f.startId,
+                        content: E.topic,
+                        contentKey: E.startId,
                         isSummaryDivider: !0
                     }),
-                null !== R ? (R.content.push(O), O.jumpTarget && (R.hasJumpTarget = !0)) : E.push(O),
-                e.isFirstMessageInForumPost(d) && E.push({ type: c.ys_.FORUM_POST_ACTION_BAR }),
-                null != f &&
-                    e.id === f.endId &&
-                    f.count > 1 &&
-                    E.push({
+                null !== R ? (R.content.push(O), O.jumpTarget && (R.hasJumpTarget = !0)) : f.push(O),
+                e.isFirstMessageInForumPost(d) && f.push({ type: c.ys_.FORUM_POST_ACTION_BAR }),
+                null != E &&
+                    e.id === E.endId &&
+                    E.count > 1 &&
+                    f.push({
                         type: c.ys_.DIVIDER,
-                        contentKey: f.endId,
+                        contentKey: E.endId,
                         isSummaryDivider: !0
                     });
         }),
         C && (0, o.P1)(d) && a.Z.trackExposure({ location: '416cc9_1' }),
-        E
+        f
     );
 }

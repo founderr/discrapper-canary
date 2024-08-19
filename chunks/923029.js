@@ -21,10 +21,10 @@ function _(e) {
     a.useEffect(() => {
         c.Z.loadThread(_);
     });
-    let f = (0, l.e7)([d.Z], () => d.Z.getGuildId()) === h.I_8,
-        E = (0, l.e7)([u.Z], () => u.Z.theme);
+    let E = (0, l.e7)([d.Z], () => d.Z.getGuildId()) === h.I_8,
+        f = (0, l.e7)([u.Z], () => u.Z.theme);
     return (
-        (t = f
+        (t = E
             ? (0, i.jsx)(r.EmptyStateText, {
                   note: m.Z.Messages.FAVORITES_EMPTY_BODY,
                   children: m.Z.Messages.FAVORITES_EMPTY_TITLE
@@ -40,11 +40,11 @@ function _(e) {
             children: [
                 s.tq && (0, i.jsx)(o.ZP, { children: (0, i.jsx)(a.Fragment, {}) }),
                 (0, i.jsxs)(r.EmptyState, {
-                    theme: E,
+                    theme: f,
                     children: [
                         (0, i.jsx)(r.EmptyStateImage, {
-                            darkSrc: f ? n(691270) : n(625065),
-                            lightSrc: f ? n(704139) : n(875184),
+                            darkSrc: E ? n(691270) : n(625065),
+                            lightSrc: E ? n(704139) : n(875184),
                             width: 272,
                             height: 222
                         }),

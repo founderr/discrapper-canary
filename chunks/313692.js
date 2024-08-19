@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(937889),
     p = n(619753),
     _ = n(433355),
-    f = n(271383),
-    E = n(594174),
+    E = n(271383),
+    f = n(594174),
     C = n(189432),
     g = n(356778),
     I = n(370595),
@@ -36,8 +36,8 @@ function v(e) {
             addtionalQuery: j,
             shouldDispatch: !0
         }),
-        O = (0, o.e7)([E.default], () => E.default.getUser(s), [s]),
-        y = (0, o.e7)([f.ZP], () => f.ZP.getMember(v, s), [v, s]);
+        O = (0, o.e7)([f.default], () => f.default.getUser(s), [s]),
+        y = (0, o.e7)([E.ZP], () => E.ZP.getMember(v, s), [v, s]);
     a.useLayoutEffect(() => {
         let e = null == b ? void 0 : b.details.scrollOffset;
         if (null != e) {

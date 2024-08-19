@@ -123,7 +123,7 @@ if (null != v) {
     ) {
         let e = v.crashReporter.getMetadata();
         (r.window_manager = e.wm), (r.distro = e.distro);
-    }
+    } else 'darwin' === n ? (r.os_sdk_version = null == i ? void 0 : i.split('.')[0]) : 'win32' === n && (r.os_sdk_version = null == i ? void 0 : i.split('.')[2]);
 }
 let O = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ');
 function R(e, t) {
@@ -270,7 +270,7 @@ M(
         let r = {},
             i = window.GLOBAL_ENV.RELEASE_CHANNEL;
         i && (r.release_channel = i.split('-')[0]);
-        let a = parseInt(((n = '319574'), '319574'), 10);
+        let a = parseInt(((n = '319687'), '319687'), 10);
         !isNaN(a) && (r.client_build_number = a);
         let s = null == v ? void 0 : null === (e = (t = v.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return (

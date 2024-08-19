@@ -1,18 +1,18 @@
-var l,
-    i = t(442837),
-    a = t(433517),
-    r = t(570140),
-    s = t(981631);
-function o(e, n, t) {
+var r,
+    a = n(442837),
+    i = n(433517),
+    l = n(570140),
+    s = n(981631);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = t),
+            : (e[t] = n),
         e
     );
 }
@@ -22,7 +22,7 @@ let u = {
     },
     c = u,
     d = 'LAST_VIEWED_PATH';
-class p extends (l = i.ZP.PersistedStore) {
+class I extends (r = a.ZP.PersistedStore) {
     initialize() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
         c = null != e ? e : u;
@@ -41,21 +41,21 @@ class p extends (l = i.ZP.PersistedStore) {
         return c;
     }
 }
-o(p, 'displayName', 'DefaultRouteStore'),
-    o(p, 'persistKey', 'DefaultRouteStore'),
-    o(p, 'migrations', [
+o(I, 'displayName', 'DefaultRouteStore'),
+    o(I, 'persistKey', 'DefaultRouteStore'),
+    o(I, 'migrations', [
         () => {
-            let e = a.K.get(d, null);
-            return a.K.remove(d), { lastViewedPath: e };
+            let e = i.K.get(d, null);
+            return i.K.remove(d), { lastViewedPath: e };
         }
     ]),
-    (n.Z = new p(r.Z, {
+    (t.Z = new I(l.Z, {
         SAVE_LAST_ROUTE: function (e) {
-            let { path: n } = e;
-            return (c.lastViewedPath = n), !0;
+            let { path: t } = e;
+            return (c.lastViewedPath = t), !0;
         },
         SAVE_LAST_NON_VOICE_ROUTE: function (e) {
-            let { path: n } = e;
-            return (c.lastViewedNonVoicePath = n), !0;
+            let { path: t } = e;
+            return (c.lastViewedNonVoicePath = t), !0;
         }
     }));

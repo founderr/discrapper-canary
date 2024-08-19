@@ -164,7 +164,7 @@ function B(e) {
         en = (0, T.Z)({
             analyticsLocation: {
                 page: Z.ZY5.USER_POPOUT,
-                section: Z.jXE.PROFILE_POPOUT
+                section: Z.jXE.USER_PROFILE
             }
         });
     return (0, t.jsx)(f.Z, {

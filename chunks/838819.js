@@ -28,9 +28,9 @@ var s = n(735250),
     k = n(626135),
     j = n(74538),
     P = n(335131),
-    B = n(372047),
-    R = n(328347),
-    A = n(280773),
+    R = n(372047),
+    A = n(328347),
+    B = n(280773),
     Z = n(617452),
     M = n(223143),
     y = n(675052),
@@ -101,14 +101,14 @@ function ec(e) {
 function el(e) {
     let { category: t, initialItemCardRef: n, includeBundles: a = !1, ...i } = e,
         u = (0, D.l)(t.products),
-        f = (0, d.e7)([R.Z], () => R.Z.initialProductSkuId),
+        f = (0, d.e7)([A.Z], () => A.Z.initialProductSkuId),
         p = r.useCallback(
             (e) => (t) => {
                 e.skuId === f && (n.current = t.current);
             },
             [f, n]
         ),
-        { unifiedProductCatalogEnabled: g } = (0, A.n)('CollectiblesShop'),
+        { unifiedProductCatalogEnabled: g } = (0, B.n)('CollectiblesShop'),
         { revealed: C } = (0, J.R)('CollectiblesShop'),
         _ = !C && t.skuId === c.T.STORM && u.length <= 15;
     if (g || a)
@@ -196,13 +196,13 @@ t.default = function (e) {
     r.useEffect(() => {
         I.f.trigger();
     });
-    let { analyticsSource: n, analyticsLocations: a } = (0, d.cj)([R.Z], () => R.Z.getAnalytics()),
+    let { analyticsSource: n, analyticsLocations: a } = (0, d.cj)([A.Z], () => A.Z.getAnalytics()),
         { analyticsLocations: o } = (0, h.ZP)([...a, m.Z.COLLECTIBLES_SHOP]),
         c = (0, d.e7)([N.Z], () => N.Z.getLayers().includes(en.S9g.COLLECTIBLES_SHOP)),
         _ = (0, f.f9)(),
         { onClose: v } = (0, Y.Db)(),
         S = (0, d.e7)([O.default], () => O.default.getCurrentUser()),
-        A = j.ZP.canUseCollectibles(S),
+        B = j.ZP.canUseCollectibles(S),
         { categories: D, isFetchingCategories: H, error: U, refreshCategories: K } = (0, M.Z)();
     (0, L.P)();
     let q = (0, w.O)(D),
@@ -223,12 +223,12 @@ t.default = function (e) {
             source: n,
             page_session_id: ep
         }),
-            !A &&
+            !B &&
                 k.default.track(en.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: ea.cd.COLLECTIBLES_SHOP,
                     location_stack: o
                 });
-    }, [A, o, n, ep]);
+    }, [B, o, n, ep]);
     let { dismissCollectiblesShopTabNewBadge: e_ } = (0, ee.Z)();
     r.useEffect(() => {
         if ((e_(), !(0, E.un)(u.z.COLLECTIBLES_GIFTING_COACHMARK)))
@@ -272,7 +272,7 @@ t.default = function (e) {
         })(),
         { setCategoryRef: eb, handleScrollToCategory: ex } = (0, F.xV)(eg.current),
         { condensedBannersAndDynamicHeadersEnabled: eE } = (0, Q.O)({ location: 'CollectiblesShop' }),
-        { enabled: eI } = (0, B.Z)({ location: 'CollectiblesShop' }),
+        { enabled: eI } = (0, R.Z)({ location: 'CollectiblesShop' }),
         ev = (0, d.e7)([x.Z], () => x.Z.gradientPreset),
         eS = !(0, d.e7)([T.Z], () => (0, p.wj)(T.Z.theme)) && null == ev;
     return (0, s.jsxs)(h.Gt, {
@@ -336,7 +336,7 @@ t.default = function (e) {
                                                             {
                                                                 ref: (t) => eb(e.skuId, t),
                                                                 children: (0, s.jsx)(ed, {
-                                                                    isPremiumUser: A,
+                                                                    isPremiumUser: B,
                                                                     category: e,
                                                                     initialItemCardRef: el,
                                                                     setIsGiftEasterEggEnabled: ef,

@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(99325),
     p = n(866112),
     _ = n(273387),
-    f = n(683818),
-    E = n(102888),
+    E = n(683818),
+    f = n(102888),
     C = n(65839),
     g = n(453879),
     I = n(408310),
@@ -84,7 +84,7 @@ t.Z = (e) => {
                 primary_category_id: Z
             });
         }, [v.id, S.id, Z]);
-    let w = (0, f.G)(v)
+    let w = (0, E.G)(v)
             ? () => {
                   (0, l.openModalLazy)(async () => {
                       let { default: e } = await n.e('79764').then(n.bind(n, 533202));
@@ -130,7 +130,7 @@ t.Z = (e) => {
           : (null == j ? void 0 : j.length) === 0 && null == Z
             ? (0, i.jsx)('div', {
                   className: N.pageContainer,
-                  children: (0, i.jsx)(E.Z, {
+                  children: (0, i.jsx)(f.Z, {
                       guild: S,
                       onAddGuild: w
                   })

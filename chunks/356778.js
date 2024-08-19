@@ -35,22 +35,22 @@ function _(e, t, n) {
         s = JSON.stringify(i);
     return a ? 'guild_'.concat(t, '_search_tab_').concat(n, '_for_').concat(e, '_with_additonal_').concat(s) : 'guild_'.concat(t, '_search_').concat(n, '_for_').concat(e, '_with_additonal_').concat(s);
 }
-let f = {
+let E = {
         searchFetcher: null,
         searchTabFetcher: null,
         result: null,
         messageCount: p,
         lastMessage: null
     },
-    E = (0, l.Z)(() => new Map()),
+    f = (0, l.Z)(() => new Map()),
     C = (e, t) => {
         (0, o.j)(() => {
-            E.setState((n) => {
+            f.setState((n) => {
                 let i = n.get(e);
                 return (
                     null == i
                         ? n.set(e, {
-                              ...f,
+                              ...E,
                               ...t
                           })
                         : n.set(e, {
@@ -62,7 +62,7 @@ let f = {
             });
         });
     },
-    g = (e) => E((t) => t.get(e), r.Z);
+    g = (e) => f((t) => t.get(e), r.Z);
 function I(e, t, n) {
     let i = null != n ? n : {};
     switch (t) {
@@ -97,11 +97,11 @@ function x(e, t, n) {
         let { addtionalQuery: a, shouldDispatch: l = !1 } = i,
             r = s.useMemo(() => _(e, t, n, a), [e, t, n, a]),
             o = g(r),
-            E = (0, u.Z)(r),
+            f = (0, u.Z)(r),
             [x, T] = s.useState({});
         return (
             s.useEffect(() => {
-                if (E !== r) {
+                if (f !== r) {
                     let i = I(e, n, a),
                         s = new d.ZP(t, m.aib.GUILD, i);
                     C(r, {
@@ -154,7 +154,7 @@ function x(e, t, n) {
                 }
                 return () => {};
             }, [e, t, o, r, n, a]),
-            null != o ? o : f
+            null != o ? o : E
         );
     })(e, t, 'messages', n);
 }
@@ -173,17 +173,17 @@ function N(e, t, n) {
     let { key: r, state: o } = T(e, t, 'messages', n),
         { key: c, state: u } = T(e, t, 'links', n),
         { key: h, state: _ } = T(e, t, 'media', n),
-        f = s.useMemo(() => I(e, 'all_counts', n), [e, n]),
-        E = s.useMemo(
+        E = s.useMemo(() => I(e, 'all_counts', n), [e, n]),
+        f = s.useMemo(
             () => ({
                 tabs: {
-                    messages: I(e, 'messages', f),
-                    links: I(e, 'links', f),
-                    media: I(e, 'media', f)
+                    messages: I(e, 'messages', E),
+                    links: I(e, 'links', E),
+                    media: I(e, 'media', E)
                 },
                 track_exact_total_hits: !0
             }),
-            [e, f]
+            [e, E]
         ),
         g = s.useCallback(
             (e) => {
@@ -205,7 +205,7 @@ function N(e, t, n) {
             [g]
         );
     s.useEffect(() => {
-        let e = new d.tJ(t, m.aib.GUILD, f, E);
+        let e = new d.tJ(t, m.aib.GUILD, E, f);
         x({
             searchTabFetcher: e,
             messageCount: p,
@@ -249,7 +249,7 @@ function N(e, t, n) {
         return () => {
             e.cancel(), clearTimeout(n);
         };
-    }, [e, t, f, E, x, g]);
+    }, [e, t, E, f, x, g]);
     let [N, v] = s.useState({});
     return {
         messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : p,

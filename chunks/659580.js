@@ -18,7 +18,7 @@ var a = n(481060),
     m = n(689938),
     p = n(560353);
 function _(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: _ = !1, renderInputModes: f = !1, renderInputVolume: E = !1, renderOutputVolume: C = !1, onSelect: g } = e,
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: _ = !1, renderInputModes: E = !1, renderInputVolume: f = !1, renderOutputVolume: C = !1, onSelect: g } = e,
         I = (0, d.Z)(),
         x = (0, c.Z)(),
         T = (0, u.Z)(),
@@ -46,14 +46,14 @@ function _(e) {
                           children: T
                       })
                     : null,
-                f
+                E
                     ? (0, i.jsx)(a.MenuGroup, {
                           label: m.Z.Messages.FORM_LABEL_INPUT_MODE,
                           children: N
                       })
                     : null,
                 (0, i.jsxs)(a.MenuGroup, {
-                    children: [E ? v : null, C ? S : null, I]
+                    children: [f ? v : null, C ? S : null, I]
                 })
             ]
         })

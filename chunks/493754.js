@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return f;
     }
 });
 var i = n(735250);
@@ -17,10 +17,10 @@ var a = n(120356),
     m = n(496675),
     p = n(981631),
     _ = n(689938),
-    f = n(271590);
-function E(e) {
+    E = n(271590);
+function f(e) {
     var t, a;
-    let { stream: l, applicationId: E, channel: C, exitFullScreen: g, appContext: I, analyticsLocation: x, className: T, ...N } = e,
+    let { stream: l, applicationId: f, channel: C, exitFullScreen: g, appContext: I, analyticsLocation: x, className: T, ...N } = e,
         v = null == C ? void 0 : C.getGuildId(),
         S = null == C ? void 0 : C.id,
         Z = (0, o.e7)([h.Z], () => (null != v ? h.Z.getGuild(v) : null), [v]),
@@ -28,12 +28,12 @@ function E(e) {
     if (((t = Z), (a = C), !(null != t && null != a && m.Z.can(p.Plq.CREATE_INSTANT_INVITE, a)))) return null;
     let M = _.Z.Messages.INSTANT_INVITE;
     return (
-        null != l ? (M = _.Z.Messages.INVITE_STREAM_HEADER) : null != E && (M = _.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY),
+        null != l ? (M = _.Z.Messages.INVITE_STREAM_HEADER) : null != f && (M = _.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.Button, {
                     size: c.Button.Sizes.SMALL,
-                    color: f.buttonColor,
+                    color: E.buttonColor,
                     onClick: () => {
                         r()(null != Z, 'guild cannot be null'),
                             r()(null != C, 'channel cannot be null'),
@@ -64,14 +64,14 @@ function E(e) {
                                 guild: Z,
                                 channel: C,
                                 streamUserId: null == l ? void 0 : l.ownerId,
-                                applicationId: E,
+                                applicationId: f,
                                 appContext: I,
                                 exitFullScreen: g,
                                 analyticsLocation: x,
                                 guildScheduledEvent: A
                             });
                     },
-                    className: s()(T, f.textButton),
+                    className: s()(T, E.textButton),
                     ...N,
                     children: M
                 }),
@@ -79,7 +79,7 @@ function E(e) {
                     channel: C,
                     stream: l,
                     appContext: I,
-                    className: s()(T, f.iconButton),
+                    className: s()(T, E.iconButton),
                     exitFullScreen: g,
                     analyticsLocation: x,
                     guildScheduledEvent: A

@@ -11,8 +11,8 @@ var i = n(735250),
     m = n(223606),
     p = n(63063),
     _ = n(530472),
-    f = n(453687),
-    E = n(930282),
+    E = n(453687),
+    f = n(930282),
     C = n(318713),
     g = n(981631),
     I = n(689938),
@@ -75,7 +75,7 @@ t.Z = a.memo(function (e) {
             Z.current ? null != g && g() : (Z.current = !0);
         }, [g, u.content, _, S, p]),
         (0, i.jsxs)('div', {
-            id: (0, f.ut)(u),
+            id: (0, E.ut)(u),
             className: l()(s, N.markup, {
                 [T.messageContent]: !0,
                 [T.markupRtl]: 'rtl' === o()(u.content),
@@ -83,7 +83,7 @@ t.Z = a.memo(function (e) {
                 [x.blockedSend]: !(null == A ? void 0 : A.isBlockedEdit)
             }),
             children: [
-                null != p ? p : (0, E.L5)(u, _),
+                null != p ? p : (0, f.L5)(u, _),
                 (null == A ? void 0 : A.isBlockedEdit) &&
                     null != u.timestamp &&
                     (0, i.jsxs)(i.Fragment, {
@@ -109,4 +109,4 @@ t.Z = a.memo(function (e) {
             ]
         })
     );
-}, E.HR);
+}, f.HR);

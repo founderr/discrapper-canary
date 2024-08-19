@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(561308),
     p = n(256726),
     _ = n(206295),
-    f = n(278399),
-    E = n(297781),
+    E = n(278399),
+    f = n(297781),
     C = n(591853),
     g = n(410441),
     I = n(616922),
@@ -44,7 +44,7 @@ t.Z = (e) => {
         { primaryColor: b, secondaryColor: R } = (0, _.Z)(Z),
         j = (0, m.Nq)(n),
         L = a.useCallback(() => {
-            if (null == M || !(0, d.Hi)(j, f.y9)) return;
+            if (null == M || !(0, d.Hi)(j, E.y9)) return;
             let e = T(n, t, M, j);
             return (0, p.CR)({
                 user: M,
@@ -56,7 +56,7 @@ t.Z = (e) => {
                 badges: (0, p.UU)(n)
             });
         }, [Z, A, t, n, b, j, R, M]);
-    if (null == M || !(0, d.Hi)(j, f.y9)) return null;
+    if (null == M || !(0, d.Hi)(j, E.y9)) return null;
     let P = () => {
         let e = I.Hw.ALBUM,
             t = o.Z.isProtocolRegistered() ? I.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : I.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
@@ -85,9 +85,9 @@ t.Z = (e) => {
                 userDescription: x.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
                 title: v,
                 subtitle: A,
-                badges: (0, i.jsx)(E.Gk, {
-                    location: E.Gt.POPOUT,
-                    children: f.Ho.map((e, t) => (0, i.jsx)(e, { entry: n }, t))
+                badges: (0, i.jsx)(f.Gk, {
+                    location: f.Gt.POPOUT,
+                    children: E.Ho.map((e, t) => (0, i.jsx)(e, { entry: n }, t))
                 })
             }),
             (0, i.jsx)(C.St, {

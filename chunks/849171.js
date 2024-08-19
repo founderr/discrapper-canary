@@ -20,8 +20,8 @@ var i,
     m = n(638880),
     p = n(613611),
     _ = n(527805),
-    f = n(716600),
-    E = n(778569),
+    E = n(716600),
+    f = n(778569),
     C = n(563218),
     g = n(318891),
     I = n(884338),
@@ -75,7 +75,7 @@ function D(e) {
 }
 function k(e) {
     var t, n, i, a;
-    let { participants: r, application: f, channel: E, width: C } = e;
+    let { participants: r, application: E, channel: f, width: C } = e;
     let g = (i = C) > 400 ? 2 : i > 300 ? 1 : 0;
     let [I] = (a = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : a > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24],
         x = (0, c.Wu)([R.default, M.default], () =>
@@ -83,20 +83,20 @@ function k(e) {
                 .map((e) => ((0, p.J)(e, M.default) ? null : R.default.getUser(e.userId)))
                 .filter(j.lm)
         ),
-        T = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(E.id).find((e) => e.applicationId === f.id)),
+        T = (0, c.e7)([h.ZP], () => h.ZP.getEmbeddedActivitiesForChannel(f.id).find((e) => e.applicationId === E.id)),
         { analyticsLocations: N } = (0, v.ZP)(),
         Z = (0, d.O)(),
-        A = L.ZP.getName(E.getGuildId(), E.id, null == x ? void 0 : x[0]),
+        A = L.ZP.getName(f.getGuildId(), f.id, null == x ? void 0 : x[0]),
         b =
             (0, _.s5)({
                 userId: null === (t = R.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
-                channelId: E.id,
-                application: f
+                channelId: f.id,
+                application: E
             }) === _.Fw.CAN_JOIN,
-        y = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0,
+        y = null !== (n = f.getGuildId()) && void 0 !== n ? n : void 0,
         k = l.useId(),
-        U = E.id,
-        w = f.id,
+        U = f.id,
+        w = E.id,
         { submitting: B } = (0, S.Z)({
             applicationId: w,
             channelId: U,
@@ -108,7 +108,7 @@ function k(e) {
             (0, s.jsx)(D, {
                 avatarSize: I,
                 guildId: y,
-                channelId: E.id,
+                channelId: f.id,
                 users: x
             }),
             (0, s.jsx)(u.Text, {
@@ -131,7 +131,7 @@ function k(e) {
                     [O.medium]: 1 === g
                 }),
                 variant: 'text-sm/normal',
-                children: f.name
+                children: E.name
             }),
             (0, s.jsx)('div', {
                 className: O.buttons,
@@ -141,7 +141,7 @@ function k(e) {
                               if ((e.stopPropagation(), null != T))
                                   (0, m.Z)({
                                       applicationId: T.applicationId,
-                                      activityChannelId: E.id,
+                                      activityChannelId: f.id,
                                       locationObject: Z.location,
                                       analyticsLocations: N,
                                       componentId: k
@@ -171,10 +171,10 @@ function U(e) {
     let { participant: t, width: n, selected: i, interactible: a, channel: r } = e,
         { analyticsLocations: o } = (0, v.ZP)(N.Z.ACTIVITY_TILE),
         { id: u } = t,
-        d = (0, f.Z)(),
+        d = (0, E.Z)(),
         h = (null == d ? void 0 : d.channelId) === r.id && d.applicationId === u,
         [m] = (0, Z.Z)([u]),
-        { url: p } = (0, E.Z)({
+        { url: p } = (0, f.Z)({
             applicationId: u,
             names: y,
             size: 1024

@@ -30,17 +30,17 @@ function u(e) {
                 return (m += c * u + d * u + (e - 1) * h * u), e;
             }),
         _ = p.map((e, t) => t),
-        f = [];
-    for (; f.length < a; ) {
+        E = [];
+    for (; E.length < a; ) {
         let e = {
             width: l().random(140, 400),
             height: l().random(100, 320)
         };
-        f.push([_.splice(l().random(0, _.length - 1), 1)[0], e]), (m += e.height + r.M9 * u);
+        E.push([_.splice(l().random(0, _.length - 1), 1)[0], e]), (m += e.height + r.M9 * u);
     }
     return {
         messages: p,
-        attachmentSpecs: f,
+        attachmentSpecs: E,
         totalHeight: m,
         groupSpacing: c
     };

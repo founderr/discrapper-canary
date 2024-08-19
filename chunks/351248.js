@@ -18,8 +18,8 @@ var i = n(735250),
     m = n(451478),
     p = n(584511),
     _ = n(354459),
-    f = n(817632),
-    E = n(257995),
+    E = n(817632),
+    f = n(257995),
     C = n(658371);
 function g(e, t, n) {
     return (
@@ -129,16 +129,16 @@ class v extends a.PureComponent {
     render() {
         let { theme: e, children: t, className: n } = this.props,
             a = (0, u.wj)(e),
-            s = l()(f.sprite, {
+            s = l()(E.sprite, {
                 [C.crossWhite]: a,
                 [C.crossGrey]: !a
             });
         return (0, i.jsxs)(r.Z.div, {
-            className: l()(f.transition, n),
+            className: l()(E.transition, n),
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)('div', {
-                    className: l()(f.spriteWrapper, E.horizontal, E.justifyCenter, E.alignCenter),
+                    className: l()(E.spriteWrapper, f.horizontal, f.justifyCenter, f.alignCenter),
                     children: (0, i.jsx)(r.Z.div, {
                         className: s,
                         style: this.getSpriteStyle()
@@ -157,9 +157,9 @@ class v extends a.PureComponent {
 }
 function S(e) {
     var t, n;
-    let { participants: a, onContextMenu: s, className: r, onClick: u, width: E, guildId: C } = e,
+    let { participants: a, onContextMenu: s, className: r, onClick: u, width: f, guildId: C } = e,
         g = (0, h.ZP)();
-    let I = ((t = E), (n = a.length), ((0, d.getAvatarSize)(d.AvatarSizes.SIZE_80) + 16) * n > t ? d.AvatarSizes.SIZE_40 : d.AvatarSizes.SIZE_80),
+    let I = ((t = f), (n = a.length), ((0, d.getAvatarSize)(d.AvatarSizes.SIZE_80) + 16) * n > t ? d.AvatarSizes.SIZE_40 : d.AvatarSizes.SIZE_80),
         x = (0, o.e7)([m.Z], () => m.Z.isFocused()),
         T = a.map((e) => {
             var t, n;
@@ -168,7 +168,7 @@ function S(e) {
             return (0, i.jsx)(
                 v,
                 {
-                    className: f.participant,
+                    className: E.participant,
                     width: (0, d.getAvatarSize)(I),
                     theme: g,
                     children: (0, i.jsx)(
@@ -191,7 +191,7 @@ function S(e) {
         });
     return (0, i.jsx)(c.W, {
         component: 'div',
-        className: l()(f.root, r),
+        className: l()(E.root, r),
         children: T
     });
 }

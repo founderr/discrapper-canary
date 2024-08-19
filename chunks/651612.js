@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(566620),
     p = n(317381),
     _ = n(918559),
-    f = n(981631),
-    E = n(689938),
+    E = n(981631),
+    f = n(689938),
     C = n(225029);
 function g(e) {
     let { channelId: t, className: n, ...g } = e,
@@ -49,12 +49,12 @@ function g(e) {
             null === (e = I.current) || void 0 === e || e.focus();
         }, []);
     (0, h.yp)({
-        event: f.CkL.FOCUS_CHAT_BUTTON,
+        event: E.CkL.FOCUS_CHAT_BUTTON,
         handler: S
     });
-    let Z = x ? E.Z.Messages.HIDE_CHAT : E.Z.Messages.SHOW_CHAT,
+    let Z = x ? f.Z.Messages.HIDE_CHAT : f.Z.Messages.SHOW_CHAT,
         A = [Z];
-    v > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: v })), N > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+    v > 0 && A.push(f.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: v })), N > 0 && A.push(f.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
     let M = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout()),
         b = v > 0 ? v : N,
         R = b > 0;

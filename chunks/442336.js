@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 }),
     n(47120);
@@ -17,10 +17,10 @@ var i = n(735250),
     m = n(981631),
     p = n(689938),
     _ = n(299834);
-function f(e) {
+function E(e) {
     let { channel: t } = e,
         n = (0, l.useRedesignIconContext)().enabled,
-        [f, E] = (0, s.Wu)([o.ZP], () => [o.ZP.isChannelMuted(t.getGuildId(), t.id), o.ZP.resolvedMessageNotifications(t)], [t]),
+        [E, f] = (0, s.Wu)([o.ZP], () => [o.ZP.isChannelMuted(t.getGuildId(), t.id), o.ZP.resolvedMessageNotifications(t)], [t]),
         [C, g] = a.useState(!1);
     a.useEffect(() => {
         let e = () => g(!0);
@@ -32,7 +32,7 @@ function f(e) {
         );
     }, []);
     let I = (e) => {
-            e.shiftKey ? r.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !f }, u.UE.muted(!f)) : g((e) => !e);
+            e.shiftKey ? r.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !E }, u.UE.muted(!E)) : g((e) => !e);
         },
         x = p.Z.Messages.NOTIFICATION_SETTINGS;
     return (0, i.jsx)(l.Popout, {
@@ -55,8 +55,8 @@ function f(e) {
                 ...e,
                 onClick: I,
                 tooltip: a ? null : x,
-                icon: f || E !== m.bL.ALL_MESSAGES ? l.BellSlashIcon : l.BellIcon,
-                foreground: f && !n ? _.strikethrough : null,
+                icon: E || f !== m.bL.ALL_MESSAGES ? l.BellSlashIcon : l.BellIcon,
+                foreground: E && !n ? _.strikethrough : null,
                 'aria-label': x,
                 selected: a
             });

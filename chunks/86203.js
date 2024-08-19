@@ -13,10 +13,10 @@ var a = n(481060),
     c = n(689938);
 function u(e) {
     let { channel: t, buttonSize: n = a.ButtonSizes.TINY, className: u, onReportClick: d, onReportSubmit: h, onMouseEnter: m, onMouseLeave: p } = e,
-        { error: _, loaded: f } = (0, o.a)(t),
-        E = t.isDM() ? t.getRecipientId() : null,
-        C = (0, r.V)(t.id, E);
-    if (null == C && (f || _)) return null;
+        { error: _, loaded: E } = (0, o.a)(t),
+        f = t.isDM() ? t.getRecipientId() : null,
+        C = (0, r.V)(t.id, f);
+    if (null == C && (E || _)) return null;
     let g = () => {
         null == h || h(), s.Z.closePrivateChannel(t.id);
     };

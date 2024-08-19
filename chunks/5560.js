@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(260300),
     p = n(997638),
     _ = n(819640),
-    f = n(451478),
-    E = n(21825),
+    E = n(451478),
+    f = n(21825),
     C = n(232495),
     g = n(10401),
     I = n(216743);
@@ -83,12 +83,12 @@ class T extends a.PureComponent {
     }
     render() {
         let { tutorialId: e, autoInvert: t, focused: n, origin: a } = this.props,
-            s = (0, E.S)(e);
+            s = (0, f.S)(e);
         if (null == s) return null;
         let { media: r, textAlign: o, isLongText: c, highPriority: u, spacing: d, arrowAlignment: m = p.cy.TOP, popoutPosition: _ } = s,
-            { offsetX: f, offsetY: C } = this.state,
+            { offsetX: E, offsetY: C } = this.state,
             g = {
-                left: null != f ? a.x + f : void 0,
+                left: null != E ? a.x + E : void 0,
                 top: null != C ? a.y + C : void 0
             },
             x = (e) => {
@@ -166,11 +166,11 @@ t.Z =
                   tutorialData: t,
                   windowFocused: n,
                   shouldShowAny: a
-              } = (0, d.cj)([g.Z, f.Z, _.Z], () => ({
+              } = (0, d.cj)([g.Z, E.Z, _.Z], () => ({
                   indicators: g.Z.getIndicators(),
                   tutorialData: g.Z.getData(),
                   shouldShowAny: g.Z.shouldShowAnyIndicators() && !_.Z.hasLayers(),
-                  windowFocused: f.Z.isFocused()
+                  windowFocused: E.Z.isFocused()
               }));
               return a
                   ? (0, i.jsx)(i.Fragment, {

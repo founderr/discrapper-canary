@@ -20,26 +20,26 @@ function p(e) {
     let { entries: t, channelId: n } = e,
         p = (0, s.e7)([r.Z], () => r.Z.getChannel(n)),
         _ = null == p ? void 0 : p.guild_id,
-        f = i.useRef(new Set()),
-        E = i.useMemo(() => {
+        E = i.useRef(new Set()),
+        f = i.useMemo(() => {
             let e = new Set(null == t ? void 0 : t.map((e) => e.author_id));
-            return !(0, l.E)([...f.current], [...e]) && (f.current = e), f.current;
+            return !(0, l.E)([...E.current], [...e]) && (E.current = e), E.current;
         }, [t]);
     i.useEffect(() => {
         if (null != _)
-            Array.from(E).forEach((e) => {
+            Array.from(f).forEach((e) => {
                 o.Z.requestMember(_, e);
             });
-    }, [E, _]);
+    }, [f, _]);
     let C = (0, s.Wu)(
             [c.ZP],
             () => {
                 if (null == _) return h;
                 let e = [];
-                for (let t of E) c.ZP.isMember(_, t) && e.push(t);
+                for (let t of f) c.ZP.isMember(_, t) && e.push(t);
                 return e;
             },
-            [E, _]
+            [f, _]
         ),
         g = i.useMemo(() => {
             if (null == p || 0 === C.length) return m;

@@ -36,7 +36,7 @@ function y(e) {
         G = (0, o.Z)('username'),
         k = i.useMemo(
             () => ({
-                source: R.jXE.PROFILE_POPOUT,
+                source: R.jXE.BITE_SIZE_PROFILE_POPOUT,
                 tagUserId: t.id
             }),
             [t.id]

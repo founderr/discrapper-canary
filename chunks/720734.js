@@ -60,24 +60,24 @@ var i = n(735250),
     et = n(763296),
     en = n(640806),
     ei = n(184301),
-    ea = n(584427),
-    es = n(52538),
-    er = n(331187),
-    el = n(879815),
-    eo = n(294629),
-    ec = n(314897),
-    ed = n(592125),
-    eu = n(819640),
-    e_ = n(131951),
-    eh = n(19780),
-    eE = n(885110),
-    em = n(246946),
-    eI = n(594174),
-    eg = n(78839),
-    ep = n(626135),
-    eT = n(768581),
-    eS = n(572004),
-    ef = n(70956),
+    ea = n(52538),
+    es = n(331187),
+    er = n(879815),
+    el = n(294629),
+    eo = n(314897),
+    ec = n(592125),
+    ed = n(819640),
+    eu = n(131951),
+    e_ = n(19780),
+    eh = n(885110),
+    eE = n(246946),
+    em = n(594174),
+    eI = n(78839),
+    eg = n(626135),
+    ep = n(768581),
+    eT = n(572004),
+    eS = n(70956),
+    ef = n(74538),
     eC = n(374023),
     eN = n(51144),
     eA = n(998502),
@@ -103,11 +103,11 @@ function eM(e, t, n) {
     );
 }
 let eD = eA.ZP.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
-    ey = 30 * ef.Z.Millis.DAY;
+    ey = 30 * eS.Z.Millis.DAY;
 function ej(e) {
     let { speaking: t, streaming: n, currentUser: a, status: s, handleMouseLeave: l, renderNameTag: o } = e,
         c = (0, N.Z)(null == a ? void 0 : a.avatarDecoration),
-        d = (0, eT.NZ)({
+        d = (0, ep.NZ)({
             avatarDecoration: c,
             size: (0, A.y9)(h.AvatarSizes.SIZE_32)
         });
@@ -155,7 +155,7 @@ function ej(e) {
                                   className: eP.avatar
                               }),
                               (0, i.jsx)('div', {
-                                  className: r()(eP.nameTag, { [eP.canCopy]: eS.wS }),
+                                  className: r()(eP.nameTag, { [eP.canCopy]: eT.wS }),
                                   children: o()
                               })
                           ]
@@ -323,7 +323,7 @@ class eU extends a.PureComponent {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
-                                                  renderPopout: () => (0, i.jsx)(er.Z, { markAsDismissed: n }),
+                                                  renderPopout: () => (0, i.jsx)(es.Z, { markAsDismissed: n }),
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK:
@@ -363,7 +363,7 @@ class eU extends a.PureComponent {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
-                                                  renderPopout: () => (0, i.jsx)(es.Z, {}),
+                                                  renderPopout: () => (0, i.jsx)(ea.Z, {}),
                                                   children: this.renderSettingsGear
                                               });
                                           default:
@@ -463,13 +463,13 @@ class eU extends a.PureComponent {
                 let { currentUser: e } = this.props,
                     { shouldShowNametagTooltip: t, copiedStreak: n } = this.state;
                 if (null == e) return;
-                (0, eS.JG)(
+                (0, eT.JG)(
                     eN.ZP.getUserTag(e, {
                         decoration: 'never',
                         identifiable: 'always'
                     })
                 ),
-                    ep.default.track(eO.rMx.TEXT_COPIED, { type: 'User Tag' });
+                    eg.default.track(eO.rMx.TEXT_COPIED, { type: 'User Tag' });
                 let i = {
                     shouldShowCopiedFeedback: !0,
                     shouldShowNametagTooltip: !0
@@ -513,30 +513,30 @@ class eU extends a.PureComponent {
 }
 function eG() {
     var e, t;
-    let n = (0, l.e7)([eI.default], () => eI.default.getCurrentUser()),
+    let n = (0, l.e7)([em.default], () => em.default.getCurrentUser()),
         s = (0, G._g)(ex.X2.FORTNITE),
-        r = (0, l.e7)([ec.default], () => ec.default.getId()),
+        r = (0, l.e7)([eo.default], () => eo.default.getId()),
         c = (0, D.a)(),
-        { streaming: d, status: u } = (0, l.cj)([eE.Z], () => ({
-            streaming: null != eE.Z.findActivity((e) => e.type === eO.IIU.STREAMING),
-            status: eE.Z.getStatus()
+        { streaming: d, status: u } = (0, l.cj)([eh.Z], () => ({
+            streaming: null != eh.Z.findActivity((e) => e.type === eO.IIU.STREAMING),
+            status: eh.Z.getStatus()
         })),
         _ = (0, f.Z)({ userId: r }),
         m = eN.ZP.useUserTag(n, { decoration: 'never' }),
-        I = (0, l.e7)([em.Z], () => em.Z.hidePersonalInformation),
-        g = (0, l.e7)([eh.Z, ed.Z], () => {
-            let e = eh.Z.getChannelId();
-            return null != e ? ed.Z.getChannel(e) : null;
+        I = (0, l.e7)([eE.Z], () => eE.Z.hidePersonalInformation),
+        g = (0, l.e7)([e_.Z, ec.Z], () => {
+            let e = e_.Z.getChannelId();
+            return null != e ? ec.Z.getChannel(e) : null;
         }),
-        { mute: C, selfMute: N, suppress: A } = (0, eo.Z)(g),
-        { selfDeaf: L, deaf: O } = (0, el.Z)(g),
+        { mute: C, selfMute: N, suppress: A } = (0, el.Z)(g),
+        { selfDeaf: L, deaf: O } = (0, er.Z)(g),
         R = (0, l.e7)([v.C], () => {
             var e;
             return (0, Z.fD)() ? (null === (e = v.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
-        x = (0, l.e7)([eg.ZP], () => eg.ZP.getPremiumTypeSubscription()),
-        b = (0, l.e7)([e_.Z], () => e_.Z.getEverSpeakingWhileMuted()),
-        P = (0, l.e7)([eu.Z], () => eu.Z.hasLayers()),
+        x = (0, l.e7)([eI.ZP], () => eI.ZP.getPremiumTypeSubscription()),
+        b = (0, l.e7)([eu.Z], () => eu.Z.getEverSpeakingWhileMuted()),
+        P = (0, l.e7)([ed.Z], () => ed.Z.hasLayers()),
         M = (0, h.useModalsStore)(h.hasAnyModalOpenSelector) || P || eC.s.isDisallowPopupsSet(),
         y = (0, W.b)(),
         U = (0, l.e7)([V.Z], () => null != V.Z.getAwaitingRemoteSessionInfo()),
@@ -547,23 +547,23 @@ function eG() {
         J = (0, Q.D)(),
         $ = (0, p.u)(),
         ee = (0, X.t)(),
-        en = (0, ea.Z)(n),
+        en = ef.ZP.canUsePremiumGuildMemberProfile(n),
         ei = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eR.rL,
-        es = 'account';
+        ea = 'account';
     (0, S.j)({
-        location: es + ' auto on',
+        location: ea + ' auto on',
         autoTrackExposure: !0
     }),
         (0, S.j)({
-            location: es + ' auto off',
+            location: ea + ' auto off',
             autoTrackExposure: !1
         }),
         (0, Q.o)();
-    let er = (0, l.e7)([et.Z], () => et.Z.hasHadOtherUserPlaySoundInSession()),
-        ep = (function () {
+    let es = (0, l.e7)([et.Z], () => et.Z.hasHadOtherUserPlaySoundInSession()),
+        eg = (function () {
             let e = (0, j.wE)(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
                 [t, n] = (0, l.Wu)([z.Z], () => [z.Z.hasFetchedRelevance, z.Z.profileThemesRelevanceExceeded]),
-                [i, s] = (0, l.Wu)([eg.ZP], () => [eg.ZP.hasFetchedMostRecentPremiumTypeSubscription(), eg.ZP.getMostRecentPremiumTypeSubscription()]),
+                [i, s] = (0, l.Wu)([eI.ZP], () => [eI.ZP.hasFetchedMostRecentPremiumTypeSubscription(), eI.ZP.getMostRecentPremiumTypeSubscription()]),
                 { enabled: r } = K.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = a.useMemo(() => {
                     let e = new Date().getTime();
@@ -583,16 +583,16 @@ function eG() {
                 !e && !!r && !c && null != n && n
             );
         })(),
-        eT = {
+        ep = {
             avatar: [],
             settings: []
         };
     return (
-        !M && (ep && eT.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), s && (eT.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), B && H === (null === (t = (0, w.BS)(ex.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && eT.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), Y && q && eT.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), J && (1 === $ ? eT.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eT.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), er && eT.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), ee && eT.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), en && eT.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), ei && eT.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
+        !M && (eg && ep.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), s && (ep.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), B && H === (null === (t = (0, w.BS)(ex.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && ep.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), Y && q && ep.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), J && (1 === $ ? ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), es && ep.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), ee && ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), en && ep.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), ei && ep.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
         (0, i.jsx)(eU, {
             currentUser: n,
             customStatusActivity: c,
-            dismissibleContents: eT,
+            dismissibleContents: ep,
             userTag: m,
             hidePrivateData: I,
             occluded: M,

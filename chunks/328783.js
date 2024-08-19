@@ -8,7 +8,7 @@ var n = t(735250),
     c = t(594174),
     d = t(931240),
     _ = t(353093),
-    E = t(369077),
+    E = t(732783),
     u = t(981631),
     I = t(689938),
     T = t(714264);
@@ -44,7 +44,7 @@ s.Z = a.memo(function (e) {
                 let r = null === (s = i.clan) || void 0 === s ? void 0 : s.tag;
                 return null == r
                     ? null
-                    : (0, n.jsx)(E.Dh, {
+                    : (0, n.jsx)(E.Z, {
                           clanTag: r,
                           clanBadge: null === (a = i.clan) || void 0 === a ? void 0 : a.badge,
                           guildId: i.id,

@@ -17,8 +17,8 @@ var a = n(120356),
     m = n(910693),
     p = n(314897),
     _ = n(271383),
-    f = n(430824),
-    E = n(496675),
+    E = n(430824),
+    f = n(496675),
     C = n(158776),
     g = n(885110),
     I = n(594174),
@@ -94,17 +94,17 @@ function M(e) {
 }
 function b(e) {
     let { user: t, member: a, guildId: s } = e,
-        _ = (0, l.e7)([f.Z], () => f.Z.getGuild(s)),
+        _ = (0, l.e7)([E.Z], () => E.Z.getGuild(s)),
         {
             canKickUser: C,
             canBanUser: g,
             canModerateMembers: T
         } = (0, l.cj)(
-            [E.Z, I.default, f.Z],
+            [f.Z, I.default, E.Z],
             () => ({
-                canKickUser: null != _ && E.Z.canManageUser(v.Plq.KICK_MEMBERS, t, _),
-                canBanUser: null != _ && E.Z.canManageUser(v.Plq.BAN_MEMBERS, t, _),
-                canModerateMembers: null != _ && (0, h.F)(_.id, t.id, [I.default, f.Z, E.Z])
+                canKickUser: null != _ && f.Z.canManageUser(v.Plq.KICK_MEMBERS, t, _),
+                canBanUser: null != _ && f.Z.canManageUser(v.Plq.BAN_MEMBERS, t, _),
+                canModerateMembers: null != _ && (0, h.F)(_.id, t.id, [I.default, E.Z, f.Z])
             }),
             [t, _]
         ),

@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return E;
+        return f;
     },
     Z: function () {
         return C;
@@ -20,8 +20,8 @@ var a = n(442837),
     m = n(981631),
     p = n(689938),
     _ = n(431776);
-let f = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_40);
-function E(e) {
+let E = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_40);
+function f(e) {
     let { user: t, status: o, onSelect: u } = e,
         d = (0, a.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
     return (0, i.jsxs)(s.Clickable, {
@@ -39,7 +39,7 @@ function E(e) {
         },
         children: [
             (0, i.jsx)(s.Avatar, {
-                src: t.getAvatarURL(void 0, f),
+                src: t.getAvatarURL(void 0, E),
                 'aria-label': t.username,
                 size: s.AvatarSizes.SIZE_40,
                 status: o,
@@ -91,7 +91,7 @@ function C(e) {
                   : a.map((e) => {
                         let { key: t, user: n, status: a } = e;
                         return (0, i.jsx)(
-                            E,
+                            f,
                             {
                                 user: n,
                                 status: a,

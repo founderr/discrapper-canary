@@ -17,8 +17,8 @@ var a = n(442837),
     m = n(496675),
     p = n(146085),
     _ = n(979339),
-    f = n(643632),
-    E = n(939863),
+    E = n(643632),
+    f = n(939863),
     C = n(689938),
     g = n(625229);
 function I(e) {
@@ -77,11 +77,11 @@ function T(e) {
         s = (0, a.e7)([m.Z], () => m.Z.can(p.yP, t), [t]),
         r = t.guild_id,
         { canCreateGuildEvent: o } = (0, h.XJ)(t),
-        T = (0, f.Z)(t.id),
+        T = (0, E.Z)(t.id),
         { usersInSummary: N } = (0, _.Z)(t.id);
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(f.Z, {
                 children: (0, i.jsx)('div', {
                     className: g.iconBackground,
                     children: (0, i.jsx)(l.StageIcon, {

@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(299261),
     p = n(502762),
     _ = n(475413),
-    f = n(228168),
-    E = n(689938),
+    E = n(228168),
+    f = n(689938),
     C = n(640873),
     g = n(321975);
 function I(e) {
@@ -39,7 +39,7 @@ function I(e) {
                 ref: S,
                 user: t,
                 displayProfile: x,
-                profileType: f.y0.PANEL,
+                profileType: E.y0.PANEL,
                 themeOverride: T,
                 className: C.container,
                 children: (0, i.jsx)(s.u2, {
@@ -62,20 +62,20 @@ function I(e) {
                                     (0, i.jsx)(l.Heading, {
                                         variant: 'heading-lg/bold',
                                         className: C.header,
-                                        children: E.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
+                                        children: f.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
                                     }),
                                     (0, i.jsx)(l.Text, {
                                         variant: 'text-sm/medium',
-                                        children: E.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({ username: t.username })
+                                        children: f.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({ username: t.username })
                                     }),
                                     (0, i.jsx)(l.Text, {
                                         variant: 'text-sm/medium',
-                                        children: E.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_CONFIRMATION
+                                        children: f.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_CONFIRMATION
                                     }),
                                     (0, i.jsx)(_.tG, {
                                         className: C.centeredButton,
                                         action: 'VIEW_BLOCKED_PROFILE',
-                                        text: E.Z.Messages.VIEW_PROFILE,
+                                        text: f.Z.Messages.VIEW_PROFILE,
                                         autoFocus: !0,
                                         fullWidth: !1,
                                         onClick: () => {

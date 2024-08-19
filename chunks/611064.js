@@ -1,6 +1,6 @@
 n.d(t, {
     R: function () {
-        return E;
+        return f;
     }
 });
 var i = n(735250),
@@ -16,13 +16,13 @@ var i = n(735250),
     m = n(981631),
     p = n(689938),
     _ = n(927744),
-    f = n(460356);
-function E(e) {
+    E = n(460356);
+function f(e) {
     return (null == e ? void 0 : e.id) === h.G;
 }
 t.Z = a.memo(function (e) {
     let t,
-        { title: h, onToggleExpand: E, expanded: C, expandedCount: g } = e,
+        { title: h, onToggleExpand: f, expanded: C, expandedCount: g } = e,
         I = (0, s.e7)([u.Z], () => u.Z.hidden),
         x = a.useCallback((e) => {
             (0, r.jW)(e, async () => {
@@ -31,7 +31,7 @@ t.Z = a.memo(function (e) {
             });
         }, []);
     return (0, i.jsxs)(o.Z, {
-        className: f.membersGroup,
+        className: E.membersGroup,
         children: [
             (0, i.jsx)(l.HiddenVisually, {
                 children: p.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
@@ -41,7 +41,7 @@ t.Z = a.memo(function (e) {
             }),
             (0, i.jsxs)(l.Clickable, {
                 onClick: (e) => {
-                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return I ? (0, c.lY)() : g > 3 ? E() : (0, m.dG4)();
+                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return I ? (0, c.lY)() : g > 3 ? f() : (0, m.dG4)();
                 },
                 onContextMenu: x,
                 tag: 'span',

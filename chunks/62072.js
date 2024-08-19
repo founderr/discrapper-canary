@@ -11,8 +11,8 @@ var i = n(470079),
     m = n(314897),
     p = n(592125),
     _ = n(323873),
-    f = n(271383),
-    E = n(607744),
+    E = n(271383),
+    f = n(607744),
     C = n(375954),
     g = n(496675),
     I = n(572004),
@@ -64,7 +64,7 @@ t.Z = function (e, t, n) {
                     case '+':
                         (y || w) &&
                             (function (e) {
-                                let t = null == e.guild_id || E.Z.canChatInGuild(e.guild_id),
+                                let t = null == e.guild_id || f.Z.canChatInGuild(e.guild_id),
                                     n = h.nc.getSetting(),
                                     { disableReactionCreates: i } = (0, Z.Z)({
                                         channel: e,
@@ -72,7 +72,7 @@ t.Z = function (e, t, n) {
                                         renderReactions: n,
                                         canAddNewReactions: t && g.Z.can(M.Plq.ADD_REACTIONS, e),
                                         isLurking: null != e.guild_id && o.Z.isLurking(e.guild_id),
-                                        isGuest: null != e.guild_id && f.ZP.isCurrentUserGuest(e.guild_id),
+                                        isGuest: null != e.guild_id && E.ZP.isCurrentUserGuest(e.guild_id),
                                         isActiveChannelOrUnarchivableThread: (0, u.RG)(e)
                                     });
                                 return !i && n;

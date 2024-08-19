@@ -19,8 +19,8 @@ var i = n(735250),
     m = n(894344),
     p = n(314897),
     _ = n(908841),
-    f = n(5192),
-    E = n(561308),
+    E = n(5192),
+    f = n(561308),
     C = n(256726),
     g = n(206295),
     I = n(551228),
@@ -35,7 +35,7 @@ var i = n(735250),
 let b = (e, t, n) => {
     let { artist: i, media: a } = e,
         s = Z.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_LISTENING_TO_MEDIA_ARTIST,
-        l = f.ZP.getName(t.guild_id, t.id, n);
+        l = E.ZP.getName(t.guild_id, t.id, n);
     return s
         .plainFormat({
             artist: i,
@@ -57,7 +57,7 @@ function R(e) {
                 r = Math.floor((Math.max(a - n, 0) / l) * 100);
             return {
                 seekBarStyles: { width: ''.concat(r, '%') },
-                durationTimestamp: (0, E.T_)({ start: 0 }, l)
+                durationTimestamp: (0, f.T_)({ start: 0 }, l)
             };
         }, [t, s]);
     return null == r
@@ -84,7 +84,7 @@ function R(e) {
           });
 }
 function j(e) {
-    var t, n, f;
+    var t, n, E;
     let T,
         A,
         j,
@@ -96,7 +96,7 @@ function j(e) {
             var e;
             if (null == L || null == H) return;
             let t = null === (e = D.timestamps) || void 0 === e ? void 0 : e.start,
-                n = (0, E.T_)(null != t ? { start: t } : P, Date.now());
+                n = (0, f.T_)(null != t ? { start: t } : P, Date.now());
             return (0, C.CR)({
                 user: H,
                 channel: L,
@@ -163,7 +163,7 @@ function j(e) {
                       Icon: _.Z
                   })
                 : null,
-        userDescription: (0, E.kr)(P) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
+        userDescription: (0, f.kr)(P) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
         title: B,
         onClickTitle: A,
         subtitle: z,
@@ -181,9 +181,9 @@ function j(e) {
                     generateReactionImage: W,
                     reactionImageAltText:
                         ((n = U),
-                        (f = H),
+                        (E = H),
                         Z.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
-                            username: f.username,
+                            username: E.username,
                             activity: n
                         })),
                     entry: P,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return f;
     },
     y: function () {
         return i;
@@ -21,7 +21,7 @@ var i,
     p = n(36645),
     _ = n(589958);
 ((a = i || (i = {}))[(a.PostSidebar = 0)] = 'PostSidebar'), (a[(a.ThreadSidebar = 1)] = 'ThreadSidebar'), (a[(a.CallChatSidebar = 2)] = 'CallChatSidebar'), (a[(a.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (a[(a.HomeSidebar = 4)] = 'HomeSidebar');
-function f(e) {
+function E(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: a } = e,
         l = (0, h.Z)({
             minDimension: p.C,
@@ -36,10 +36,10 @@ function f(e) {
         className: _.resizeHandle
     });
 }
-function E(e) {
+function f(e) {
     let { sidebarType: t, maxWidth: n, onWidthChange: i, children: a, floatingLayer: r } = e,
         h = l.useRef(null),
-        E = (function (e) {
+        f = (function (e) {
             switch (e) {
                 case 0:
                     return 'postSidebarWidth';
@@ -53,12 +53,12 @@ function E(e) {
                     return 'homeSidebarWidth';
             }
         })(t),
-        [C, g] = l.useState(m.ZP[E]),
+        [C, g] = l.useState(m.ZP[f]),
         I = l.useCallback(
             (e) => {
-                d.ZP.updatedUnsyncedSettings({ [E]: e });
+                d.ZP.updatedUnsyncedSettings({ [f]: e });
             },
-            [E]
+            [f]
         ),
         x = (0, p.W)({ maxWidth: n }),
         T = (0, c.clamp)(C, p.C, n),
@@ -82,7 +82,7 @@ function E(e) {
                             style: { width: N }
                         }),
                         !x &&
-                            (0, s.jsx)(f, {
+                            (0, s.jsx)(E, {
                                 maxWidth: n,
                                 resizableNode: h,
                                 onResize: g,

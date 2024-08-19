@@ -17,10 +17,10 @@ var i = n(735250),
 function p(e) {
     let { userId: t, guildId: n } = e,
         p = (0, s.e7)([r.ZP], () => r.ZP.getGuildSidebarState(n), [n]),
-        { messagesCount: _, linksCount: f, mediaCount: E } = (0, c.P2)(t, n),
+        { messagesCount: _, linksCount: E, mediaCount: f } = (0, c.P2)(t, n),
         C = new Intl.NumberFormat(h.Z.getLocale()).format(_),
-        g = new Intl.NumberFormat(h.Z.getLocale()).format(f),
-        I = new Intl.NumberFormat(h.Z.getLocale()).format(E),
+        g = new Intl.NumberFormat(h.Z.getLocale()).format(E),
+        I = new Intl.NumberFormat(h.Z.getLocale()).format(f),
         x = a.useCallback(
             async (e) => {
                 if (null == p) return;
@@ -74,7 +74,7 @@ function p(e) {
                         children: h.Z.Messages.QUICKSEARCH_LINKS
                     }),
                     description:
-                        f === c.II
+                        E === c.II
                             ? (0, i.jsx)(l.Spinner, {
                                   type: l.SpinnerTypes.SPINNING_CIRCLE,
                                   className: m.loadingSpinner
@@ -84,7 +84,7 @@ function p(e) {
                                   color: 'interactive-normal',
                                   children: g
                               }),
-                    onNavigate: f > 0 ? () => x(c.mw.LINKS) : void 0
+                    onNavigate: E > 0 ? () => x(c.mw.LINKS) : void 0
                 }),
                 (0, i.jsx)(u._2, {
                     icon: (0, i.jsx)(l.ImagesIcon, {
@@ -98,7 +98,7 @@ function p(e) {
                         children: h.Z.Messages.QUICKSEARCH_MEDIA
                     }),
                     description:
-                        E === c.II
+                        f === c.II
                             ? (0, i.jsx)(l.Spinner, {
                                   type: l.SpinnerTypes.SPINNING_CIRCLE,
                                   className: m.loadingSpinner
@@ -108,7 +108,7 @@ function p(e) {
                                   color: 'interactive-normal',
                                   children: I
                               }),
-                    onNavigate: E > 0 ? () => x(c.mw.MEDIA) : void 0
+                    onNavigate: f > 0 ? () => x(c.mw.MEDIA) : void 0
                 })
             ]
         })

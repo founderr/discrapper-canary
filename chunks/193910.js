@@ -18,8 +18,8 @@ var i = n(735250),
     m = n(605236),
     p = n(706140),
     _ = n(243778),
-    f = n(488131),
-    E = n(375954),
+    E = n(488131),
+    f = n(375954),
     C = n(626135),
     g = n(585483),
     I = n(403182),
@@ -49,7 +49,7 @@ function b(e, t, a, s) {
 }
 let R = /(.*)```(\w+)\n(.*)```(.*)/s;
 function j() {
-    let e = (0, l.e7)([E.Z], () => E.Z.hasCurrentUserSentMessageSinceAppStart()),
+    let e = (0, l.e7)([f.Z], () => f.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
     let [n] = (0, p.cv)(t);
@@ -75,7 +75,7 @@ function j() {
     );
 }
 function L(e) {
-    let { channel: t, options: l, onFileUpload: c, onClose: p, onSelect: _, draftType: E, editorTextContent: L, setValue: P, openClips: O } = e,
+    let { channel: t, options: l, onFileUpload: c, onClose: p, onSelect: _, draftType: f, editorTextContent: L, setValue: P, openClips: O } = e,
         { analyticsLocations: y } = (0, h.ZP)();
     a.useEffect(() => {
         C.default.track(v.rMx.OPEN_POPOUT, {
@@ -85,7 +85,7 @@ function L(e) {
         });
     }, [t.guild_id, t.id]);
     function D() {
-        (0, f.R6)(t, void 0, 'Plus Button');
+        (0, E.R6)(t, void 0, 'Plus Button');
     }
     function k() {
         C.default.track(v.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, T.JM)('/'));
@@ -133,7 +133,7 @@ function L(e) {
             n = 'txt',
             i = '',
             a = L.match(R);
-        null != a && ((i = a[1]), (n = a[2]), (e = a[3]), (i += a[4])), (0, x.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), g.S.dispatchToLastSubscribed(v.CkL.CLEAR_TEXT), '' !== i && g.S.dispatchToLastSubscribed(v.CkL.INSERT_TEXT, { plainText: i });
+        null != a && ((i = a[1]), (n = a[2]), (e = a[3]), (i += a[4])), (0, x.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, f), g.S.dispatchToLastSubscribed(v.CkL.CLEAR_TEXT), '' !== i && g.S.dispatchToLastSubscribed(v.CkL.INSERT_TEXT, { plainText: i });
     }
     return (0, i.jsx)(o.Menu, {
         onSelect: _,

@@ -3,10 +3,10 @@ n.d(t, {
         return C;
     },
     Rq: function () {
-        return f;
+        return E;
     },
     So: function () {
-        return E;
+        return f;
     },
     Su: function () {
         return g;
@@ -102,7 +102,7 @@ function _(e, t) {
             guildId: t
         });
 }
-let f = a()(async (e, t) => {
+let E = a()(async (e, t) => {
         if (!c.Z.shouldFetch(e, t)) {
             r.Z.dispatch({
                 type: 'GUILD_DIRECTORY_CACHED_SEARCH',
@@ -131,7 +131,7 @@ let f = a()(async (e, t) => {
             r.Z.dispatch({ type: 'GUILD_DIRECTORY_FETCH_FAILURE' });
         }
     }, 200),
-    E = (e) => {
+    f = (e) => {
         r.Z.dispatch({
             type: 'GUILD_DIRECTORY_SEARCH_CLEAR',
             channelId: e

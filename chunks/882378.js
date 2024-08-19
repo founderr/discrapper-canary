@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(819640),
     p = n(665149),
     _ = n(134612),
-    f = n(689938),
-    E = n(622427);
+    E = n(689938),
+    f = n(622427);
 t.Z = a.memo(function (e) {
     let { channel: t } = e,
         C = (0, c.h)(t.id),
@@ -21,13 +21,13 @@ t.Z = a.memo(function (e) {
         I = (0, d.M)(t.id),
         x = (0, l.f9)(),
         T = (0, s.e7)([m.Z], () => m.Z.hasLayers()),
-        N = a.useCallback(() => (g ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null), [g, I]),
+        N = a.useCallback(() => (g ? E.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? E.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null), [g, I]),
         v = a.useMemo(() => (g || null != I) && !x && !T, [g, I, x, T]),
         [S, Z] = a.useState(N());
     a.useEffect(() => {
         null != I &&
             null != C &&
-            (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT),
+            (r.AccessibilityAnnouncer.announce(E.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT),
             setTimeout(() => {
                 (0, o.T)(t.id, [I.id]);
             }, 5000),
@@ -40,7 +40,7 @@ t.Z = a.memo(function (e) {
                 viewName: h.pb.SAFETY_TOOLS_NUDGE_TOOLTIP
             })),
             g &&
-                (r.AccessibilityAnnouncer.announce(f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT),
+                (r.AccessibilityAnnouncer.announce(E.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT),
                 setTimeout(() => {
                     (0, o.Ot)(t.id);
                 }, 5000));
@@ -95,13 +95,13 @@ t.Z = a.memo(function (e) {
               text: S,
               color: r.TooltipColors.BRAND,
               position: 'bottom',
-              tooltipClassName: E.tooltip,
-              tooltipContentClassName: E.tooltipContent,
+              tooltipClassName: f.tooltip,
+              tooltipContentClassName: f.tooltipContent,
               children: () =>
                   (0, i.jsx)(p.ZP.Icon, {
                       icon: r.ShieldIcon,
                       onClick: A,
-                      tooltip: f.Z.Messages.SAFETY_TOOLS_BUTTON_LABEL,
+                      tooltip: E.Z.Messages.SAFETY_TOOLS_BUTTON_LABEL,
                       tooltipDisabled: null != I
                   })
           });

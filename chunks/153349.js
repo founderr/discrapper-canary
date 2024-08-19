@@ -17,8 +17,8 @@ var i,
     m = n(239091),
     p = n(99690),
     _ = n(58540),
-    f = n(665149),
-    E = n(484459),
+    E = n(665149),
+    f = n(484459),
     C = n(103575),
     g = n(271383),
     I = n(496675),
@@ -34,21 +34,21 @@ var i,
     R = n(470407);
 let j = l.memo(function (e) {
         let { toggleRequestToSpeakSidebar: t, chatOpen: n } = e,
-            i = (0, s.jsx)(f.ZP.Icon, {
+            i = (0, s.jsx)(E.ZP.Icon, {
                 icon: h.XSmallIcon,
                 tooltip: b.Z.Messages.CLOSE,
                 onClick: t
             });
-        return (0, s.jsxs)(f.ZP, {
+        return (0, s.jsxs)(E.ZP, {
             toolbar: i,
             className: o()(R.headerContainer, { [R.chatOpen]: n }),
             children: [
-                (0, s.jsx)(f.ZP.Icon, {
+                (0, s.jsx)(E.ZP.Icon, {
                     icon: h.HandRequestSpeakIcon,
                     disabled: !0,
                     'aria-label': b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
                 }),
-                (0, s.jsx)(f.ZP.Title, { children: b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE })
+                (0, s.jsx)(E.ZP.Title, { children: b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE })
             ]
         });
     }),
@@ -60,14 +60,14 @@ let j = l.memo(function (e) {
             let e = setTimeout(() => c(!1), 1000);
             return () => clearTimeout(e);
         }, []);
-        let f = t.getGuildId();
-        u()(null != f, 'Channel cannot be guildless');
+        let E = t.getGuildId();
+        u()(null != E, 'Channel cannot be guildless');
         let { isMobile: I, status: N } = (0, d.cj)([x.Z], () => ({
                 isMobile: x.Z.isMobileOnline(i.user.id),
-                status: x.Z.getStatus(i.user.id, f)
+                status: x.Z.getStatus(i.user.id, E)
             })),
-            Z = (0, d.e7)([g.ZP], () => g.ZP.getMember(f, i.user.id)),
-            A = l.useMemo(() => ({ [f]: [i.user.id] }), [f, i.user.id]);
+            Z = (0, d.e7)([g.ZP], () => g.ZP.getMember(E, i.user.id)),
+            A = l.useMemo(() => ({ [E]: [i.user.id] }), [E, i.user.id]);
         (0, _.$)(A);
         let M = i.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function j() {
@@ -83,7 +83,7 @@ let j = l.memo(function (e) {
                     (0, s.jsx)(e, {
                         ...n,
                         user: i.user,
-                        guildId: f,
+                        guildId: E,
                         channel: t,
                         showMediaItems: !0
                     });
@@ -94,7 +94,7 @@ let j = l.memo(function (e) {
             children: [
                 (0, s.jsx)(h.Popout, {
                     preload: () =>
-                        (0, E.Z)(i.user.id, i.user.getAvatarURL(t.guild_id, 80), {
+                        (0, f.Z)(i.user.id, i.user.getAvatarURL(t.guild_id, 80), {
                             guildId: t.guild_id,
                             channelId: t.id
                         }),
@@ -103,7 +103,7 @@ let j = l.memo(function (e) {
                             ...e,
                             location: 'RequestToSpeakSidebar',
                             userId: i.user.id,
-                            guildId: f,
+                            guildId: E,
                             channelId: t.id
                         }),
                     position: 'left',

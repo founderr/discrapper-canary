@@ -259,7 +259,7 @@ function k(e) {
                                   guildId: a.id,
                                   channelId: o.id,
                                   roleId: c.id,
-                                  section: M.oh.USER_INFO_CONNECTIONS,
+                                  subsection: M.Tb.CONNECTIONS,
                                   sourceAnalyticsLocations: l,
                                   analyticsLocation: { section: b.jXE.CHANNEL }
                               }),

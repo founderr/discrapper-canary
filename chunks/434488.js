@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(403404),
     p = n(100527),
     _ = n(906732),
-    f = n(605236),
-    E = n(448239),
+    E = n(605236),
+    f = n(448239),
     C = n(626135),
     g = n(792125),
     I = n(607187),
@@ -246,10 +246,10 @@ function M(e) {
                             close_type: 'permanent',
                             n_participants: u
                         }),
-                            (0, f.EW)(r.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, E.EW)(r.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
-                        (0, i.jsx)(E.Z, {}),
+                        (0, i.jsx)(f.Z, {}),
                         (0, i.jsx)(c.Text, {
                             variant: 'text-sm/medium',
                             children: T.Z.Messages.DONT_SHOW_AGAIN

@@ -7,15 +7,15 @@ t.d(n, {
     }
 });
 var l = t(442837),
-    i = t(430824),
-    a = t(938475),
+    a = t(430824),
+    i = t(938475),
     r = t(981631);
 function s(e) {
     return (0, l.cj)(
-        [a.ZP, i.Z],
+        [i.ZP, a.Z],
         () => {
-            let n = a.ZP.countVoiceStatesForChannel(e.id),
-                t = i.Z.getGuild(e.getGuildId());
+            let n = i.ZP.countVoiceStatesForChannel(e.id),
+                t = a.Z.getGuild(e.getGuildId());
             return null == t
                 ? {
                       reachedLimit: !1,
@@ -35,8 +35,8 @@ function s(e) {
     );
 }
 function o(e) {
-    let n = a.ZP.countVoiceStatesForChannel(e.id),
-        t = i.Z.getGuild(e.getGuildId());
+    let n = i.ZP.countVoiceStatesForChannel(e.id),
+        t = a.Z.getGuild(e.getGuildId());
     return null == t
         ? {
               reachedLimit: !1,

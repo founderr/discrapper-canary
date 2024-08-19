@@ -45,7 +45,7 @@ function v(e) {
             }
         ],
         C = (0, u.ZP)(n.id, g ? j : void 0),
-        P = i.createRef();
+        M = i.createRef();
     return (0, s.jsx)(r.Gt, {
         value: L,
         children: (0, s.jsx)(c.Mt, {
@@ -59,7 +59,7 @@ function v(e) {
                     user: n,
                     displayProfile: C,
                     profileType: E.y0.FULL_SIZE,
-                    ref: P,
+                    ref: M,
                     children: (0, s.jsxs)('div', {
                         className: x.container,
                         children: [

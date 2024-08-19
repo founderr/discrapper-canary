@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var i = n(735250),
@@ -20,16 +20,16 @@ let _ = (e, t) => {
         (0, r.Cz)(e, t);
     });
 };
-function f(e) {
+function E(e) {
     let t,
         { embedId: n, className: l, style: r } = e,
-        f = (0, s.e7)([o.Z], () => o.Z.getWindow(p.KJ3.CHANNEL_CALL_POPOUT)),
-        E = (0, h.Z)(),
+        E = (0, s.e7)([o.Z], () => o.Z.getWindow(p.KJ3.CHANNEL_CALL_POPOUT)),
+        f = (0, h.Z)(),
         C = (0, s.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
-    if (null != E && !(0, d.Z)(E.channelId) && C === m.Ez.PANEL) t = window;
+    if (null != f && !(0, d.Z)(f.channelId) && C === m.Ez.PANEL) t = window;
     else {
         var g;
-        t = null !== (g = null == f ? void 0 : f.window) && void 0 !== g ? g : window;
+        t = null !== (g = null == E ? void 0 : E.window) && void 0 !== g ? g : window;
     }
     let I = a.useRef(null),
         x = a.useMemo(() => {

@@ -20,17 +20,17 @@ var i = n(470079),
     m = n(430824),
     p = n(819640),
     _ = n(375954),
-    f = n(496675),
-    E = n(709054),
+    E = n(496675),
+    f = n(709054),
     C = n(981631);
 function g(e, t) {
     return (0, l.cj)(
-        [f.Z],
+        [E.Z],
         () => ({
-            canInvite: (0, r.b)(f.Z, t, e),
-            canManageGuild: null != t && f.Z.can(C.Plq.MANAGE_GUILD, t),
-            canMessage: null != e && f.Z.can(C.Plq.SEND_MESSAGES, e),
-            canCreateChannel: null != t && f.Z.can(C.Plq.MANAGE_CHANNELS, t)
+            canInvite: (0, r.b)(E.Z, t, e),
+            canManageGuild: null != t && E.Z.can(C.Plq.MANAGE_GUILD, t),
+            canMessage: null != e && E.Z.can(C.Plq.SEND_MESSAGES, e),
+            canCreateChannel: null != t && E.Z.can(C.Plq.MANAGE_CHANNELS, t)
         }),
         [t, e]
     );
@@ -77,7 +77,7 @@ function I(e) {
                     let e = d.ZP.getChannels(null == t ? void 0 : t.id),
                         n = e[d.Zb];
                     function i(e) {
-                        return null != t && E.default.extractTimestamp(e.channel.id) - E.default.extractTimestamp(t.id) > 500;
+                        return null != t && f.default.extractTimestamp(e.channel.id) - f.default.extractTimestamp(t.id) > 500;
                     }
                     return e[d.sH].some(i) || n.some(i);
                 },

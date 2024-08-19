@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return f;
     }
 });
 var i = n(735250);
@@ -17,9 +17,9 @@ var a = n(442837),
     m = n(862679),
     p = n(981631),
     _ = n(596401),
-    f = n(689938);
-function E(e) {
-    let { channel: t, children: E } = e,
+    E = n(689938);
+function f(e) {
+    let { channel: t, children: f } = e,
         C = (0, a.e7)([u.Z], () => u.Z.isBlocked(t.getRecipientId()));
     (0, r.Z)(t.id);
     let g = (0, o.Z)(t.id),
@@ -30,16 +30,16 @@ function E(e) {
         let e = g
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      f.Z.Messages.SYSTEM_DM_OPEN_BLOG,
+                      E.Z.Messages.SYSTEM_DM_OPEN_BLOG,
                       (0, i.jsx)(s.WindowLaunchIcon, {
                           size: 'xs',
                           color: c.Z.HEADER_PRIMARY
                       })
                   ]
               })
-            : f.Z.Messages.LEARN_MORE;
-        (T.message = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION),
-            (T.subtitle = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION_SUBTEXT),
+            : E.Z.Messages.LEARN_MORE;
+        (T.message = E.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION),
+            (T.subtitle = E.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION_SUBTEXT),
             (T.buttonText = e),
             (T.onButtonClick = () => {
                 if (g) {
@@ -55,13 +55,13 @@ function E(e) {
             (T.imageSrc = n(780961));
     } else
         x &&
-            ((T.message = f.Z.Messages.DM_VERIFICATION_TEXT_BLOCKED),
-            (T.buttonText = f.Z.Messages.UNBLOCK),
+            ((T.message = E.Z.Messages.DM_VERIFICATION_TEXT_BLOCKED),
+            (T.buttonText = E.Z.Messages.UNBLOCK),
             (T.onButtonClick = () => {
                 l.Z.unblockUser(t.getRecipientId());
             }));
     return (0, i.jsx)(m.Z, {
         ...T,
-        children: E
+        children: f
     });
 }

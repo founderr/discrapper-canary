@@ -18,16 +18,16 @@ function c(e) {
             isFocused: d,
             buttonProps: { message: h, channel: m, groupId: p, compact: _ = !1 }
         } = e,
-        f = h.state === r.yb.SENDING,
-        E = h.id === p,
+        E = h.state === r.yb.SENDING,
+        f = h.id === p,
         C = (0, a.yE)(h.flags, r.iLy.EPHEMERAL),
         g = h.state === r.yb.SEND_FAILED;
-    return f || (C && !g)
+    return E || (C && !g)
         ? null
         : (0, i.jsx)(l.Z, {
               className: o.buttons,
               innerClassName: o.buttonsInner,
-              isHeader: !_ && E && !(0, s.Z)(h),
+              isHeader: !_ && f && !(0, s.Z)(h),
               channel: m,
               message: h,
               setPopout: t,

@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(699516),
     p = n(594174),
     _ = n(585483),
-    f = n(127654),
-    E = n(205822),
+    E = n(127654),
+    f = n(205822),
     C = n(731994),
     g = n(981631),
     I = n(689938);
@@ -34,7 +34,7 @@ t.Z = function (e) {
         P = b ? (g.TPd.GUILD_THREADS_ONLY.has(x.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD) : N ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(x, p.default, m.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
     return A || !L
         ? null
-        : (0, i.jsx)(E.Z, {
+        : (0, i.jsx)(f.Z, {
               className: t,
               style: n,
               title: P,
@@ -44,7 +44,7 @@ t.Z = function (e) {
                   if (A) return !1;
                   L &&
                       null != x &&
-                      ((0, f.d)(e, x, T, {
+                      ((0, E.d)(e, x, T, {
                           requireConfirm: N,
                           showLargeMessageDialog: !1
                       }),

@@ -16,15 +16,15 @@ var i = n(735250),
 function h(e) {
     let { children: t, enabled: n, animationContainerClassName: h, glowClassName: m, trinketsClassName: p } = e,
         _ = (0, s.e7)([u.Z], () => u.Z.hasCurrentUserSentMessageSinceAppStart()),
-        f = a.useMemo(() => {
+        E = a.useMemo(() => {
             let e = [];
             return _ && n && e.push(l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2), e;
         }, [_, n]),
-        E = () => {
+        f = () => {
             setTimeout(() => (0, o.EW)(l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: d.L.AUTO_DISMISS }), 10000);
         };
     return (0, i.jsx)(c.ZP, {
-        contentTypes: f,
+        contentTypes: E,
         children: (e) => {
             let { visibleContent: n } = e;
             if (n === l.z.ACTIVITIES_CHAT_BUTTON_NUX_V2)
@@ -32,7 +32,7 @@ function h(e) {
                     animationContainerClassName: h,
                     glowClassName: m,
                     trinketsClassName: p,
-                    onMount: E,
+                    onMount: f,
                     children: t
                 });
             return t;

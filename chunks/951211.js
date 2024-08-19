@@ -18,7 +18,7 @@ var i,
     d = n(981631),
     h = n(689938);
 function m(e) {
-    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: a, hasClips: m, channel: p, activities: _, newClipsCount: f, canPostPolls: E, canLaunchActivities: C, appContext: g } = e,
+    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: a, hasClips: m, channel: p, activities: _, newClipsCount: E, canPostPolls: f, canLaunchActivities: C, appContext: g } = e,
         I = [];
     return (
         t &&
@@ -39,7 +39,7 @@ function m(e) {
                 type: 'CLIPS',
                 icon: s.ClipsIcon,
                 display: h.Z.Messages.CLIPS_SHARE_A_CLIP,
-                badgeVal: f,
+                badgeVal: E,
                 badgeColor: o.Z.BG_BRAND
             }),
         n &&
@@ -48,7 +48,7 @@ function m(e) {
                 icon: s.ThreadPlusIcon,
                 display: h.Z.Messages.CREATE_THREAD
             }),
-        E &&
+        f &&
             I.push({
                 type: 'POLL',
                 icon: s.PollsIcon,

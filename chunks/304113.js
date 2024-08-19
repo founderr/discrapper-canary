@@ -18,7 +18,7 @@ var s = t(735250),
     _ = t(853825),
     f = t(41527),
     E = t(107889);
-let m = [a.Z.BITE_SIZE_PROFILE_POPOUT, a.Z.PROFILE_POPOUT, a.Z.PROFILE_PANEL];
+let m = [a.Z.BITE_SIZE_PROFILE_POPOUT, a.Z.PROFILE_PANEL];
 function p(e) {
     let { location: n, user: t, ...o } = e,
         a = (0, r.e7)([d.default], () => d.default.getCurrentUser());

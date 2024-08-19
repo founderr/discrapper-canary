@@ -12,8 +12,8 @@ var i,
     m = n(27931),
     p = n(260979),
     _ = n(766015),
-    f = n(401139),
-    E = n(12779),
+    E = n(401139),
+    f = n(12779),
     C = n(450369),
     g = n(689938),
     I = n(442545);
@@ -79,7 +79,7 @@ t.Z = (0, o.Z)((e) => {
                 return 0 === M
                     ? null
                     : (0, s.jsx)(
-                          E.Z,
+                          f.Z,
                           {
                               participantCount: M,
                               label: g.Z.Messages.SPEAKER_LABEL,
@@ -96,7 +96,7 @@ t.Z = (0, o.Z)((e) => {
                 return 0 === b
                     ? null
                     : (0, s.jsx)(
-                          E.Z,
+                          f.Z,
                           {
                               participantCount: b,
                               label: g.Z.Messages.AUDIENCE_LABEL,
@@ -134,7 +134,7 @@ t.Z = (0, o.Z)((e) => {
                     return (0, s.jsx)(
                         l.Fragment,
                         {
-                            children: (0, s.jsx)(f.Z, {
+                            children: (0, s.jsx)(E.Z, {
                                 tileWidth: H,
                                 channel: i,
                                 participants: a,

@@ -26,9 +26,9 @@ function _() {
         }, a.Z),
         n = (0, s.e7)([d.Z], () => d.Z.getGuild(e)),
         _ = (0, s.e7)([u.Z], () => (null == n ? u.Z.getChannel(t) : null)),
-        f = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        E = null != _ ? (0, r.x)(_) : null,
-        C = null != f ? f.getAvatarURL(e, 80) : m.pK['0'],
+        E = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+        f = null != _ ? (0, r.x)(_) : null,
+        C = null != E ? E.getAvatarURL(e, 80) : m.pK['0'],
         g = (0, i.jsx)(l.Avatar, {
             src: C,
             'aria-hidden': !0,
@@ -40,10 +40,10 @@ function _() {
         (I =
             null != n
                 ? (0, i.jsx)(o.Z, { guild: n })
-                : null != E
+                : null != f
                   ? (0, i.jsx)(l.Avatar, {
                         'aria-hidden': !0,
-                        src: E,
+                        src: f,
                         size: l.AvatarSizes.SIZE_80,
                         className: p.avatarSizeOverride
                     })

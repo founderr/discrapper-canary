@@ -23,8 +23,8 @@ var i,
     m = n(481060),
     p = n(626135),
     _ = n(792125),
-    f = n(600164),
-    E = n(981631),
+    E = n(600164),
+    f = n(981631),
     C = n(689938),
     g = n(834095);
 function I(e, t, n) {
@@ -44,10 +44,10 @@ function I(e, t, n) {
 class x extends c.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
-        p.default.track(E.rMx.SHOW_TUTORIAL, { tutorial: e });
+        p.default.track(f.rMx.SHOW_TUTORIAL, { tutorial: e });
     }
     componentWillUnmount() {
-        p.default.track(E.rMx.CLOSE_TUTORIAL, {
+        p.default.track(f.rMx.CLOSE_TUTORIAL, {
             tutorial: this.props.uniqueId,
             acknowledged: this.state.confirmed
         });
@@ -60,9 +60,9 @@ class x extends c.PureComponent {
             className: d()(g.popoutRoot, s),
             children: [
                 null != e &&
-                    (0, o.jsx)(f.Z, {
+                    (0, o.jsx)(E.Z, {
                         className: g.mediaContainer,
-                        justify: c ? f.Z.Justify.START : f.Z.Justify.CENTER,
+                        justify: c ? E.Z.Justify.START : E.Z.Justify.CENTER,
                         children: e()
                     }),
                 (0, o.jsx)(m.H, {
@@ -79,9 +79,9 @@ class x extends c.PureComponent {
                     }),
                     children: a
                 }),
-                (0, o.jsxs)(f.Z, {
+                (0, o.jsxs)(E.Z, {
                     className: g.buttonContainer,
-                    justify: c ? f.Z.Justify.BETWEEN : f.Z.Justify.CENTER,
+                    justify: c ? E.Z.Justify.BETWEEN : E.Z.Justify.CENTER,
                     children: [
                         (0, o.jsx)(m.Button, {
                             size: m.ButtonSizes.SMALL,
@@ -130,7 +130,7 @@ class T extends (s = c.PureComponent) {
             }),
             I(this, 'onClickSkipAll', (e) => {
                 let { onSkipAll: t, uniqueId: n } = this.props;
-                e(), t(), p.default.track(E.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
+                e(), t(), p.default.track(f.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
             }),
             I(this, 'renderPopoutContent', (e) => {
                 let { closePopout: t, position: n } = e,

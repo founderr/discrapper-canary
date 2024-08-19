@@ -11,8 +11,8 @@ var i = n(735250),
     m = n(665149),
     p = n(703558),
     _ = n(585483),
-    f = n(909820),
-    E = n(981631),
+    E = n(909820),
+    f = n(981631),
     C = n(921944),
     g = n(689938),
     I = n(437996);
@@ -22,7 +22,7 @@ t.Z = function (e) {
         (0, h.EW)(s.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: C.L.AUTO });
     }, []);
     let T = a.useCallback(() => {
-            r.Z.updateChatOpen(t.id, !1), _.S.safeDispatch(E.CkL.FOCUS_CHAT_BUTTON);
+            r.Z.updateChatOpen(t.id, !1), _.S.safeDispatch(f.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
         N = (0, i.jsx)(m.ZP.Icon, {
             icon: l.XSmallIcon,
@@ -32,7 +32,7 @@ t.Z = function (e) {
     return (0, i.jsxs)(u.Z, {
         sidebarType: u.y.CallChatSidebar,
         maxWidth: x,
-        floatingLayer: f.ZP,
+        floatingLayer: E.ZP,
         children: [
             (0, i.jsx)(o.Z, {
                 channel: t,

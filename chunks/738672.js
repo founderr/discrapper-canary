@@ -16,13 +16,13 @@ function d(e) {
     let { buttonRef: t, dismissed: n, onDismiss: d, renderComponent: h } = e,
         m = a.useContext(c.h9),
         [p, _] = a.useState(''),
-        [f, E] = a.useState(!1),
+        [E, f] = a.useState(!1),
         C = (0, s.e7)([o.ZP], () => o.ZP.callHeaderHeight),
         g = a.createRef(),
         I = a.useRef(0);
     a.useEffect(() => {
         var e, t;
-        _(String(I.current)), E(void 0 !== C && C < (null !== (t = null === (e = g.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (I.current += 1);
+        _(String(I.current)), f(void 0 !== C && C < (null !== (t = null === (e = g.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (I.current += 1);
     }, [C, g]);
     let { preventIdle: x, allowIdle: T } = (0, u.Y)('popup');
     return (null == t ? void 0 : t.current) == null
@@ -43,7 +43,7 @@ function d(e) {
                           onBlur: T,
                           onMouseLeave: T,
                           children: h({
-                              hidden: f || m || n,
+                              hidden: E || m || n,
                               onDismiss: d
                           })
                       })

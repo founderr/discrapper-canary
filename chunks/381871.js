@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(243778),
     p = n(543241),
     _ = n(633302),
-    f = n(970731),
-    E = n(594174),
+    E = n(970731),
+    f = n(594174),
     C = n(176354),
     g = n(823379),
     I = n(74538),
@@ -47,7 +47,7 @@ function w(e) {
     var t;
     let { channel: n, closePopout: _, onFocus: g } = e,
         j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        w = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
+        w = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
         B = I.ZP.canUseFancyVoiceChannelReactions(w),
         H = (0, l.e7)([T.Z], () => T.Z.getState().animationType),
         G = a.useRef(!1),
@@ -117,7 +117,7 @@ function w(e) {
                 renderPopout: () =>
                     (0, i.jsx)('div', {
                         onMouseEnter: g,
-                        children: (0, i.jsx)(f.ZP, {
+                        children: (0, i.jsx)(E.ZP, {
                             className: y.reducedMotionTooltip,
                             header: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
                             content: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
@@ -127,7 +127,7 @@ function w(e) {
                             markAsDismissed: a,
                             buttonCTA: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
                             secondaryButtonCTA: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
-                            caretPosition: f.DF.RIGHT_CENTER
+                            caretPosition: E.DF.RIGHT_CENTER
                         })
                     }),
                 children: () =>

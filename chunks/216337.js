@@ -21,10 +21,10 @@ t.Z = a.memo(function (e) {
     let { channel: t, isLastItem: n } = e,
         a = (0, s.e7)([r.Z], () => r.Z.useReducedMotion),
         _ = (0, s.e7)([u.Z], () => u.Z.can(d.Plq.SEND_MESSAGES_IN_THREADS, t)),
-        f = (0, o.Gu)(t),
-        E = (0, s.e7)([c.default], () => c.default.getId());
+        E = (0, o.Gu)(t),
+        f = (0, s.e7)([c.default], () => c.default.getId());
     return n
-        ? _ && !f && t.ownerId !== E
+        ? _ && !E && t.ownerId !== f
             ? (0, i.jsxs)('div', {
                   className: m.box,
                   children: [

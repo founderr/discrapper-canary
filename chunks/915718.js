@@ -18,8 +18,8 @@ var i = n(735250),
     m = n(358221),
     p = n(70097),
     _ = n(605236),
-    f = n(243778),
-    E = n(590293),
+    E = n(243778),
+    f = n(590293),
     C = n(970731),
     g = n(560688),
     I = n(173507),
@@ -81,16 +81,16 @@ class D extends a.PureComponent {
         if (t) return null;
         let m = c.isManaged(),
             _ = '',
-            E = !1;
-        s ? ((_ = m ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE), (e = r.Tooltip.Colors.RED), (E = !0)) : o ? ((_ = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (E = !0)) : (_ = a ? (m ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL) : m ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL);
+            f = !1;
+        s ? ((_ = m ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE), (e = r.Tooltip.Colors.RED), (f = !0)) : o ? ((_ = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (f = !0)) : (_ = a ? (m ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL) : m ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL);
         let g = (0, i.jsx)(b.ZP.Icon, {
             icon: r.PhoneCallIcon,
             onClick: this.handleVoiceClick,
-            disabled: E,
+            disabled: f,
             tooltip: _,
             tooltipColor: e
         });
-        return (0, i.jsx)(f.ZP, {
+        return (0, i.jsx)(E.ZP, {
             contentTypes: d,
             children: (e) => {
                 let { visibleContent: a, markAsDismissed: s } = e;
@@ -183,7 +183,7 @@ class D extends a.PureComponent {
 }
 function k(e) {
     let { channel: t } = e,
-        n = (0, E.Z)(),
+        n = (0, f.Z)(),
         r = (0, s.e7)([m.Z], () => m.Z.getMode(t.id)),
         o = (0, s.e7)([Z.Z], () => Z.Z.isInChannel(t.id)),
         c = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -191,12 +191,12 @@ function k(e) {
             callActive: x.Z.isCallActive(t.id),
             callUnavailable: x.Z.isCallUnavailable(t.id)
         })),
-        f = t.getRecipientId(),
+        E = t.getRecipientId(),
         { notFriend: C, isBlocked: g } = (0, s.cj)([v.Z], () => ({
-            notFriend: t.type === R.d4z.DM && null != f && !v.Z.isFriend(f),
-            isBlocked: t.type === R.d4z.DM && null != f && v.Z.isBlocked(f)
+            notFriend: t.type === R.d4z.DM && null != E && !v.Z.isFriend(E),
+            isBlocked: t.type === R.d4z.DM && null != E && v.Z.isBlocked(E)
         })),
-        I = (0, s.e7)([S.default], () => S.default.getUser(f)),
+        I = (0, s.e7)([S.default], () => S.default.getUser(E)),
         N = (0, u.bp)(),
         A = [],
         M = (0, h.Z)(t.id),

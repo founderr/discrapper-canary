@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(214906),
     p = n(612856),
     _ = n(137591),
-    f = n(299206),
-    E = n(727429),
+    E = n(299206),
+    f = n(727429),
     C = n(665149),
     g = n(359110),
     I = n(585483),
@@ -61,7 +61,7 @@ function S(e) {
 }
 function Z(e) {
     let { channel: t, closePopout: n, onSelect: a } = e,
-        E = (0, o.Z)(t, 'Sidebar Overflow'),
+        f = (0, o.Z)(t, 'Sidebar Overflow'),
         C = (0, u.Z)(t),
         x = (0, m.Z)(t),
         T = (0, p.Z)(t),
@@ -70,7 +70,7 @@ function Z(e) {
         A = (0, h.Z)(t.id),
         M = (0, d.Z)(t),
         b = (0, r.Z)(t),
-        R = (0, f.Z)({
+        R = (0, E.Z)({
             id: t.id,
             label: v.Z.Messages.COPY_ID_THREAD
         }),
@@ -86,7 +86,7 @@ function Z(e) {
         children: [
             (0, i.jsxs)(s.MenuGroup, {
                 children: [
-                    E,
+                    f,
                     (0, i.jsx)(s.MenuItem, {
                         id: 'open',
                         label: v.Z.Messages.OPEN_IN_FULL_VIEW,
@@ -139,7 +139,7 @@ function A(e) {
             (0, i.jsx)(C.ZP.Icon, {
                 icon: s.XSmallIcon,
                 tooltip: v.Z.Messages.CLOSE,
-                onClick: () => (0, T.vN)((0, E.e)(t), null != n ? n : t.parent_id)
+                onClick: () => (0, T.vN)((0, f.e)(t), null != n ? n : t.parent_id)
             })
         ]
     });

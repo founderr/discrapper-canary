@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var i = n(735250);
@@ -17,11 +17,11 @@ var a = n(399606),
     m = n(981631),
     p = n(689938),
     _ = n(446926);
-function f(e) {
+function E(e) {
     let { member: t } = e,
         n = (0, a.e7)([c.Z], () => c.Z.getGuild(t.guildId), [t.guildId]),
-        f = (0, r.mh)(t.userId, t.guildId),
-        E = (0, r.mV)(t.userId, t.guildId),
+        E = (0, r.mh)(t.userId, t.guildId),
+        f = (0, r.mV)(t.userId, t.guildId),
         C = (0, r.LD)(t.userId),
         g = (0, r.wi)(t.userId, t.guildId);
     return null == n
@@ -42,7 +42,7 @@ function f(e) {
                               color: 'text-normal',
                               children: p.Z.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
                           }),
-                          description: f
+                          description: E
                               ? (0, i.jsx)(s.CheckmarkLargeBoldIcon, {
                                     size: 'custom',
                                     width: h.Mn,
@@ -56,7 +56,7 @@ function f(e) {
                                     color: s.tokens.colors.INFO_DANGER_FOREGROUND
                                 })
                       }),
-                      E !== r.qc.NO_GATE &&
+                      f !== r.qc.NO_GATE &&
                           (0, i.jsx)(h._2, {
                               icon: (0, i.jsx)(s.BookCheckIcon, {
                                   size: 'custom',
@@ -69,7 +69,7 @@ function f(e) {
                                   children: p.Z.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
                               }),
                               description:
-                                  E === r.qc.AGREED
+                                  f === r.qc.AGREED
                                       ? (0, i.jsx)(s.CheckmarkLargeBoldIcon, {
                                             size: 'custom',
                                             width: h.Mn,

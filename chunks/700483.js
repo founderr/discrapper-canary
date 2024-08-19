@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(793865),
     p = n(575175),
     _ = n(258609),
-    f = n(74299),
-    E = n(924301),
+    E = n(74299),
+    f = n(924301),
     C = n(459502),
     g = n(856691),
     I = n(889161),
@@ -116,16 +116,16 @@ function ea(e) {
         a = (0, u.bp)(),
         { canManageGuildEvent: s } = (0, I.XJ)(t),
         c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]),
-        d = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
+        d = (0, r.e7)([f.ZP], () => f.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
         h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
         { suppress: m } = (0, v.Z)(t),
         p = j.default.getId(),
         [_] = (0, X.Z)(t),
-        f = H.ZP.isModerator(p, t.id),
+        E = H.ZP.isModerator(p, t.id),
         C = (0, w.B)(t.id),
         g = s(d);
     return h
-        ? (f || g) && null != c
+        ? (E || g) && null != c
             ? (0, i.jsx)(o.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: s } = e;
@@ -304,11 +304,11 @@ let er = a.memo(function (e) {
         { suppress: n, selfMute: a, mute: s } = (0, v.Z)(t),
         c = (0, w.B)(t.id),
         u = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: E, enabled: C } = (0, x.Z)(),
+        { cameraUnavailable: f, enabled: C } = (0, x.Z)(),
         g = (0, N.Z)(t),
         { limit: I, reachedLimit: M } = (0, T.Z)(t),
         j = (0, r.e7)([y.default], () => y.default.getCurrentUser()),
-        P = (0, r.e7)([L.Z], () => (0, f.Z)(L.Z)),
+        P = (0, r.e7)([L.Z], () => (0, E.Z)(L.Z)),
         D = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
         U = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]),
         B = (0, V.PK)(t.id),
@@ -332,7 +332,7 @@ let er = a.memo(function (e) {
                         centerButton: !0,
                         hasPermission: g,
                         enabled: C,
-                        cameraUnavailable: E,
+                        cameraUnavailable: f,
                         onChange: S.r,
                         onCameraUnavailable: Z.Z,
                         channelLimitReached: M,

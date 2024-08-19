@@ -12,7 +12,7 @@ var i = n(735250),
     m = n(585483),
     p = n(665149),
     _ = n(981631),
-    f = n(689938);
+    E = n(689938);
 t.Z = function (e) {
     let { channel: t } = e,
         n = (0, s.e7)(
@@ -23,7 +23,7 @@ t.Z = function (e) {
             },
             [t]
         ),
-        [E, C] = a.useState(!1),
+        [f, C] = a.useState(!1),
         g = (0, s.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         I = (0, o.Aq)(),
         x = (0, c.Dd)(t.id),
@@ -45,7 +45,7 @@ t.Z = function (e) {
     x)
         ? null
         : (0, i.jsx)(l.Popout, {
-              shouldShow: E,
+              shouldShow: f,
               animation: l.Popout.Animation.NONE,
               position: 'bottom',
               align: 'right',
@@ -64,9 +64,9 @@ t.Z = function (e) {
                   return (0, i.jsx)(p.JO, {
                       ...e,
                       onClick: T,
-                      tooltip: a ? null : f.Z.Messages.PINNED_MESSAGES,
+                      tooltip: a ? null : E.Z.Messages.PINNED_MESSAGES,
                       icon: l.PinIcon,
-                      'aria-label': f.Z.Messages.PINNED_MESSAGES,
+                      'aria-label': E.Z.Messages.PINNED_MESSAGES,
                       disabled: n,
                       showBadge: g,
                       selected: a

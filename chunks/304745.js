@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(374065),
     p = n(451576),
     _ = n(526846),
-    f = n(938655),
-    E = n(403404),
+    E = n(938655),
+    f = n(403404),
     C = n(906732),
     g = n(424602),
     I = n(243778),
@@ -49,7 +49,7 @@ function Z(e) {
         B = w.length > 0 ? w[w.length - 1] : 'open-activity-shelf';
     g.m1.useExperiment({ location: B }, { autoTrackExposure: !0 });
     let H = a.useCallback(() => {
-            (0, E.Z)({
+            (0, f.Z)({
                 channel: t,
                 guildId: t.guild_id,
                 locationObject: k.location,
@@ -106,11 +106,11 @@ function Z(e) {
                                     onMouseLeave: L
                                 }),
                                 P
-                                    ? (0, i.jsx)(f.A, {
+                                    ? (0, i.jsx)(E.A, {
                                           top: 4,
                                           right: 10,
                                           size: 12,
-                                          maskColor: f.T.BLACK
+                                          maskColor: E.T.BLACK
                                       })
                                     : null
                             ]

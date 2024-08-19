@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(353093),
     p = n(105671),
     _ = n(532490),
-    f = n(979264),
-    E = n(570938),
+    E = n(979264),
+    f = n(570938),
     C = n(550271),
     g = n(116175),
     I = n(308083),
@@ -28,12 +28,12 @@ function N(e) {
     return null == n || 0 === n.length
         ? (0, i.jsx)('div', {
               className: T.placeholderIcon,
-              children: (0, i.jsx)(E.Z, {
+              children: (0, i.jsx)(f.Z, {
                   height: 42,
                   width: 42
               })
           })
-        : (0, i.jsx)(f.aG, {
+        : (0, i.jsx)(E.aG, {
               guildId: t,
               className: T.charterClanTag,
               clanTag: n,
@@ -84,8 +84,8 @@ t.Z =
                       gameApplicationIds: l,
                       playstyle: r,
                       interests: p,
-                      tag: f,
-                      badgeKind: E,
+                      tag: E,
+                      badgeKind: f,
                       badgePrimaryColor: C,
                       badgeSecondaryColor: S
                   } = (0, c.cj)([h.ZP], () => {
@@ -98,8 +98,8 @@ t.Z =
                   children: [
                       (0, i.jsx)(N, {
                           guildId: t,
-                          tag: f,
-                          badge: E,
+                          tag: E,
+                          badge: f,
                           primaryColor: null != C ? C : g.Nh,
                           secondaryColor: null != S ? S : g.vY
                       }),

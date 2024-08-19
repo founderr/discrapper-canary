@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(706454),
     p = n(374129),
     _ = n(639351),
-    f = n(823379),
-    E = n(192918),
+    E = n(823379),
+    f = n(192918),
     C = n(22211),
     g = n(561308),
     I = n(919394),
@@ -47,7 +47,7 @@ t.Z = (e) => {
         { primaryColor: w, secondaryColor: B } = (0, T.Z)(j),
         H = (0, l.e7)([m.default], () => m.default.locale),
         { streamPreviewUrl: G, stream: V } = (0, C.Z)(s),
-        { displayParticipants: F, participant1: W, participant2: z, numOtherParticipants: Y } = (0, E.Z)(s, 3),
+        { displayParticipants: F, participant1: W, participant2: z, numOtherParticipants: Y } = (0, f.Z)(s, 3),
         K = a.useCallback(
             (e) => {
                 if (null == j || null == n || null == P) return;
@@ -133,7 +133,7 @@ t.Z = (e) => {
                           })
                   })
                 : null
-        ].filter(f.lm);
+        ].filter(E.lm);
     return (0, i.jsxs)(S.yR, {
         children: [
             Q,

@@ -17,10 +17,10 @@ t.Z = l.ZP.connectStores([c.Z], (e) => {
         muted: c.Z.isLocalMute(t, n)
     };
 })(function (e) {
-    let { className: t, iconClassName: n, sliderClassName: a, userId: l, currentVolume: c, muted: p, context: _, currentWindow: f = window } = e;
+    let { className: t, iconClassName: n, sliderClassName: a, userId: l, currentVolume: c, muted: p, context: _, currentWindow: E = window } = e;
     return (0, i.jsx)(h.Z, {
         children: (0, i.jsx)(o.Z, {
-            currentWindow: f,
+            currentWindow: E,
             iconClassName: s()(n, m.controlIcon),
             sliderClassName: a,
             className: t,

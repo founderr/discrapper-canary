@@ -27,7 +27,7 @@ let _ = {
         position: 'bottom',
         autoInvert: !1
     },
-    f = (e) => {
+    E = (e) => {
         let { region: t, className: n = m.regionSelectName } = e,
             a = t.name.replace(/ \(VIP\)$/, '');
         return (0, i.jsx)('div', {
@@ -35,14 +35,14 @@ let _ = {
             children: a
         });
     };
-class E extends a.PureComponent {
+class f extends a.PureComponent {
     render() {
         let { region: e, selected: t } = this.props;
         return (0, i.jsxs)(u.Z, {
             align: u.Z.Align.CENTER,
             className: l()({ selected: t }),
             children: [
-                (0, i.jsx)(f, {
+                (0, i.jsx)(E, {
                     region: e,
                     className: m.regionSelectName
                 }),
@@ -84,7 +84,7 @@ class C extends a.PureComponent {
         super(...e),
             p(this, 'renderOption', (e, t) =>
                 (0, i.jsx)(
-                    E,
+                    f,
                     {
                         region: e.value,
                         selected: t

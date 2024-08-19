@@ -1,6 +1,6 @@
 n.d(t, {
     E8: function () {
-        return B;
+        return R;
     },
     yc: function () {
         return P;
@@ -104,7 +104,7 @@ let L = () => i.Z.Messages.LIMITED_TIME,
             let s = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
             return null == s || null != e[s];
         }),
-    B = (e, t) => {
+    R = (e, t) => {
         let { overflowSrcStatic: n, overflowSrcAnimated: s, overflowSrcAnimatedBackground: r } = e;
         return null == n ? [] : t || null == s ? [n] : null == r ? [s] : [r, s];
     };

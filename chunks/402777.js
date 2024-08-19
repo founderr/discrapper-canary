@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(221292),
     p = n(318661),
     _ = n(78675),
-    f = n(113557),
-    E = n(169979),
+    E = n(113557),
+    f = n(169979),
     C = n(119096),
     g = n(502762),
     I = n(256059),
@@ -101,7 +101,7 @@ function L(e) {
                                         shown: B,
                                         className: j.toast
                                     }),
-                                    (0, i.jsx)(f.Z, {
+                                    (0, i.jsx)(E.Z, {
                                         location: 'SimplifiedProfilePanel',
                                         user: t,
                                         displayProfile: O,
@@ -115,7 +115,7 @@ function L(e) {
                                         setIsReplyInteraction: W,
                                         showReplyPopout: z === b.P.REPLY && K === b.n_.AVATAR
                                     }),
-                                    (0, i.jsx)(E.Z, {
+                                    (0, i.jsx)(f.Z, {
                                         location: 'SimplifiedProfilePanel',
                                         user: t,
                                         channelId: L.id,

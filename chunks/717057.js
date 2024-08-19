@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(271383),
     p = n(430824),
     _ = n(594174),
-    f = n(709054),
-    E = n(931240),
+    E = n(709054),
+    f = n(931240),
     C = n(645896),
     g = n(603368),
     I = n(532490),
@@ -34,7 +34,7 @@ function b(e) {
     var t;
     let { guildId: n, clanInfo: s, signed: r, onSignCharter: c } = e,
         d = a.useMemo(() => {
-            let e = f.default.extractTimestamp(n);
+            let e = E.default.extractTimestamp(n);
             return o()(new Date(e)).format('MMMM YYYY');
         }, [n]),
         h = a.useMemo(() => new Set(s.games), [s.games]);
@@ -95,7 +95,7 @@ function b(e) {
 function R(e) {
     var t;
     let { guildId: n, onClose: s, onAccept: r, ...o } = e,
-        f = (0, h.Dt)(),
+        E = (0, h.Dt)(),
         I = (0, C.Cc)(n),
         T = (0, C.E8)(n),
         [N, S] = a.useState(!0),
@@ -107,7 +107,7 @@ function R(e) {
         null == I && !T && L();
     }, [I, L, T]);
     let P = a.useCallback(() => {
-            N && (0, E.nE)(n, N, Z.Sbl.CREATE_JOIN_GUILD_MODAL), L();
+            N && (0, f.nE)(n, N, Z.Sbl.CREATE_JOIN_GUILD_MODAL), L();
         }, [n, L, N]),
         O = (0, c.e7)([p.Z], () => p.Z.getGuild(n)),
         y = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
@@ -124,7 +124,7 @@ function R(e) {
         : (0, i.jsx)(u.ModalRoot, {
               ...o,
               transitionState: o.transitionState,
-              'aria-labelledby': f,
+              'aria-labelledby': E,
               className: M.modal,
               size: u.ModalSize.DYNAMIC,
               children: (0, i.jsxs)(u.ModalContent, {

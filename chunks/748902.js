@@ -14,7 +14,7 @@ let m = {},
 function _(e) {
     return d.Z.isMessageRequest(e) || h.Z.isSpam(e);
 }
-function f(e, t) {
+function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (!_(e) || (null != t && e !== (null == t ? void 0 : t.channel_id))) return;
     let i = null == t ? null : (0, c.e5)(t);
@@ -24,7 +24,7 @@ function f(e, t) {
         message: i
     };
 }
-class E extends (i = r.ZP.Store) {
+class f extends (i = r.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, h.Z, u.default);
     }
@@ -44,7 +44,7 @@ class E extends (i = r.ZP.Store) {
     }
 }
 (l = 'MessageRequestPreviewStore'),
-    (s = 'displayName') in (a = E)
+    (s = 'displayName') in (a = f)
         ? Object.defineProperty(a, s, {
               value: l,
               enumerable: !0,
@@ -52,7 +52,7 @@ class E extends (i = r.ZP.Store) {
               writable: !0
           })
         : (a[s] = l),
-    (t.Z = new E(o.Z, {
+    (t.Z = new f(o.Z, {
         CONNECTION_OPEN: function () {
             (m = {}), p.clear();
         },
@@ -70,7 +70,7 @@ class E extends (i = r.ZP.Store) {
         },
         MESSAGE_CREATE: function (e) {
             if (e.isPushNotification) return !1;
-            f(e.message.channel_id, e.message);
+            E(e.message.channel_id, e.message);
         },
         MESSAGE_UPDATE: function (e) {
             let t = e.message.channel_id;
@@ -94,15 +94,15 @@ class E extends (i = r.ZP.Store) {
             let { requestedChannelIds: t, supplementalData: n } = e,
                 i = new Set([...t]);
             for (let e of (n.forEach((e) => {
-                f(e.channel_id, e.message_preview), i.delete(e.channel_id);
+                E(e.channel_id, e.message_preview), i.delete(e.channel_id);
             }),
             Array.from(i)))
-                f(e, null);
+                E(e, null);
         },
         LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR: function (e) {
             let { requestedChannelIds: t } = e;
             t.forEach((e) => {
-                f(e, null, !0);
+                E(e, null, !0);
             });
         }
     }));

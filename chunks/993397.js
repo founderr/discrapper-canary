@@ -12,7 +12,7 @@ var i = n(735250),
     m = n(689938),
     p = n(392997),
     _ = n(58755);
-function f(e) {
+function E(e) {
     let { expanded: t, onClick: n, count: a, compact: s, collapsedReason: l } = e;
     return (0, i.jsx)(o.Z, {
         compact: s,
@@ -46,16 +46,16 @@ t.Z = a.memo(function (e) {
     var t;
     let { messages: n, channel: s, compact: r = !1, unreadId: o, collapsedReason: d } = e,
         { hasJumpTarget: m = !1 } = n,
-        [E, C] = a.useState(m),
+        [f, C] = a.useState(m),
         g = a.useCallback(() => C((e) => !e), []),
         I = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, i.jsxs)('div', {
         className: l()({
             [_.groupStart]: !0,
-            [p.expanded]: E
+            [p.expanded]: f
         }),
         children: [
-            n.hasUnread && (!E || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER)
+            n.hasUnread && (!f || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER)
                 ? (0, i.jsx)(
                       u.Z,
                       {
@@ -66,17 +66,17 @@ t.Z = a.memo(function (e) {
                   )
                 : null,
             (0, i.jsx)(
-                f,
+                E,
                 {
                     count: I,
                     compact: r,
-                    expanded: E,
+                    expanded: f,
                     onClick: g,
                     collapsedReason: d
                 },
                 'collapsed-message-item'
             ),
-            E
+            f
                 ? n.content.map((e, t) => {
                       if (e.type === h.ys_.DIVIDER && t > 0) {
                           var a, l;

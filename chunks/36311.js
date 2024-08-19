@@ -12,7 +12,7 @@ var i = n(735250),
     m = n(981631),
     p = n(689938),
     _ = n(358267);
-function f(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-class E extends a.PureComponent {
+class f extends a.PureComponent {
     componentDidMount() {
         let { current: e } = this.scroller;
         null == e || e.scrollToBottom();
@@ -63,12 +63,12 @@ class E extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'scroller', a.createRef()),
-            f(this, 'handleDisagree', () => {
+            E(this, 'scroller', a.createRef()),
+            E(this, 'handleDisagree', () => {
                 let { guild: e } = this.props;
                 null != e && c.Z.nsfwReturnToSafety(e.id);
             }),
-            f(this, 'handleAgree', () => {
+            E(this, 'handleAgree', () => {
                 let { guild: e } = this.props;
                 null != e && c.Z.nsfwAgree(e.id);
             });
@@ -77,4 +77,4 @@ class E extends a.PureComponent {
 t.Z = r.ZP.connectStores([d.default], () => {
     var e;
     return { nsfwDisallowed: (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1 };
-})(E);
+})(f);

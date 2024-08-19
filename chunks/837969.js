@@ -20,7 +20,7 @@ function u(e) {
     null === (t = document.getElementById(e)) || void 0 === t || t.focus();
 }
 function d(e) {
-    let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: h, setFocus: m, getNewFocusIndex: p, maintainFocusPosition: _ = !0, includeSetSizes: f = !0, focusOnMount: E = !0, enabled: C = !0, onDispatch: g } = e,
+    let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: h, setFocus: m, getNewFocusIndex: p, maintainFocusPosition: _ = !0, includeSetSizes: E = !0, focusOnMount: f = !0, enabled: C = !0, onDispatch: g } = e,
         I = i.useCallback(
             (e, t) => {
                 let n = (0, a.Z)(e, t);
@@ -42,7 +42,7 @@ function d(e) {
             });
         }, [n]),
         (function (e) {
-            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: m = u, getNewFocusIndex: p, dispatch: _, maintainFocusPosition: f, includeSetSizes: E, focusOnMount: C, enabled: g, makeId: I = l.qR, getIndexFromId: x } = e,
+            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: m = u, getNewFocusIndex: p, dispatch: _, maintainFocusPosition: E, includeSetSizes: f, focusOnMount: C, enabled: g, makeId: I = l.qR, getIndexFromId: x } = e,
                 T = i.useRef(n),
                 N = i.useRef(x);
             (N.current = x), (T.current = n);
@@ -137,8 +137,8 @@ function d(e) {
                     S || Z(!0);
                 }, [S]),
                 O = i.useCallback(() => {
-                    if (!S) f ? M(I(t, d), d) : j(!0);
-                }, [I, t, M, f, S, d, j]),
+                    if (!S) E ? M(I(t, d), d) : j(!0);
+                }, [I, t, M, E, S, d, j]),
                 y = i.useCallback(
                     (e) => {
                         if (!e.currentTarget.contains(e.relatedTarget))
@@ -168,26 +168,26 @@ function d(e) {
             let k = i.useCallback(
                     () => ({
                         role: 'list',
-                        tabIndex: S && f ? -1 : 0,
+                        tabIndex: S && E ? -1 : 0,
                         id: t,
                         onKeyDown: L,
                         ref: D
                     }),
-                    [t, S, L, f]
+                    [t, S, L, E]
                 ),
                 U = i.useCallback(
                     (e) => {
                         let { index: n } = e;
                         return {
                             role: 'listitem',
-                            'aria-setsize': E ? T.current : void 0,
-                            'aria-posinset': E ? n + 1 : void 0,
+                            'aria-setsize': f ? T.current : void 0,
+                            'aria-posinset': f ? n + 1 : void 0,
                             id: I(t, n),
-                            tabIndex: f && n === d ? 0 : -1,
+                            tabIndex: E && n === d ? 0 : -1,
                             onFocus: A.get(null != N.current ? I(t, n) : n)
                         };
                     },
-                    [I, t, d, f, A, E]
+                    [I, t, d, E, A, f]
                 );
             return i.useMemo(
                 () => ({
@@ -206,8 +206,8 @@ function d(e) {
             setFocus: m,
             getNewFocusIndex: p,
             maintainFocusPosition: _,
-            includeSetSizes: f,
-            focusOnMount: E,
+            includeSetSizes: E,
+            focusOnMount: f,
             enabled: C
         })
     );

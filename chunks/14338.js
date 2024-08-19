@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return f;
     }
 });
 var i = n(735250),
@@ -16,10 +16,10 @@ var i = n(735250),
     m = n(237583),
     p = n(768581),
     _ = n(363422);
-function f(e) {
+function E(e) {
     let { channel: t, speaker: s, className: m } = e,
-        f = (0, u.bp)(),
-        { reducedMotion: E } = a.useContext(r.AccessibilityPreferencesContext),
+        E = (0, u.bp)(),
+        { reducedMotion: f } = a.useContext(r.AccessibilityPreferencesContext),
         C = (0, c.Z)({ userId: s.id }),
         g = null != s.member ? (0, p.CA)(s.member) : null,
         I = (e) => {
@@ -38,7 +38,7 @@ function f(e) {
                             showChatItems: !1
                         });
                 },
-                { context: f }
+                { context: E }
             );
         };
     return (0, i.jsx)(r.Popout, {
@@ -74,13 +74,13 @@ function f(e) {
                             size: r.AvatarSizes.SIZE_24,
                             className: l()(_.avatar, m),
                             'aria-label': s.userNick,
-                            isSpeaking: C && !E.enabled
+                            isSpeaking: C && !f.enabled
                         })
                     })
             })
     });
 }
-function E(e) {
+function f(e) {
     let { speakers: t, channel: n } = e;
     return (0, i.jsx)(m.Z, {
         className: _.summary,
@@ -89,7 +89,7 @@ function E(e) {
         max: 10,
         renderUser: (e, t, a) =>
             (0, i.jsx)(
-                f,
+                E,
                 {
                     channel: n,
                     speaker: e,

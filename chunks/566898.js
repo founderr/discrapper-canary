@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     Pb: function () {
-        return E;
+        return f;
     },
     XX: function () {
         return _;
@@ -15,7 +15,7 @@ n.d(t, {
         return h;
     },
     iv: function () {
-        return f;
+        return E;
     },
     pk: function () {
         return p;
@@ -51,7 +51,7 @@ function h(e) {
 function m(e) {
     let t,
         { groupStart: n = !1, compact: a = !1, attachmentSpecs: l, usernameWidth: u, usernameOpacity: m, className: p, style: _ } = e,
-        f = a ? 50 : r().random(40, 50);
+        E = a ? 50 : r().random(40, 50);
     return (
         !a && n
             ? (t = (0, i.jsxs)(i.Fragment, {
@@ -72,7 +72,7 @@ function m(e) {
                   children: [
                       a &&
                           (0, i.jsx)(h, {
-                              width: f,
+                              width: E,
                               className: s()({
                                   [c.compactTimestamp]: !0,
                                   [c.hidden]: !n
@@ -135,8 +135,8 @@ function m(e) {
 }
 let p = 44,
     _ = 22,
-    f = 26,
     E = 26,
+    f = 26,
     C = 6;
 function g(e) {
     let { messages: t, groupSpacing: n = 0, compact: a = !1, attachmentSpecs: s, className: l } = e,

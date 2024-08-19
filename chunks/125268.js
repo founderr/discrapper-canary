@@ -6,13 +6,13 @@ n.d(t, {
         return d;
     },
     Bo: function () {
-        return f;
+        return E;
     },
     Df: function () {
         return h;
     },
     LT: function () {
-        return E;
+        return f;
     },
     ZZ: function () {
         return m;
@@ -99,12 +99,12 @@ function _(e, t) {
         streamerId: t
     });
 }
-function f(e) {
+function E(e) {
     s.Z.dispatch({
         type: 'SHARED_CANVAS_SET_DRAW_MODE',
         drawMode: e
     });
 }
-function E() {
+function f() {
     s.Z.dispatch({ type: 'TOGGLE_OVERLAY_CANVAS' });
 }

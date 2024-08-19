@@ -18,8 +18,8 @@ var i = n(470079),
     m = n(479313),
     p = n(796974),
     _ = n(709054),
-    f = n(534469),
-    E = n(173033),
+    E = n(534469),
+    f = n(173033),
     C = n(959517),
     g = n(981631);
 function I(e, t, n) {
@@ -94,7 +94,7 @@ class N {
             {
                 channel: { id: n }
             } = this.props;
-        return null == t ? null : (0, f.AP)(t, n, e);
+        return null == t ? null : (0, E.AP)(t, n, e);
     }
     isScrolledToBottom() {
         let { scrollTop: e, scrollHeight: t, offsetHeight: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.getScrollerState();
@@ -166,7 +166,7 @@ class N {
             s = null === (i = this.ref.current) || void 0 === i ? void 0 : i.getScrollerNode();
         if (!(0, l.k)(a) || null == s) return null;
         let { offsetHeight: r } = a,
-            o = (0, E.Z)(a, s),
+            o = (0, f.Z)(a, s),
             c = o - t;
         return (
             null != n && (c = Math.max(-r, Math.min(n, c))),
@@ -366,7 +366,7 @@ class N {
             a = null === (n = this.ref.current) || void 0 === n ? void 0 : n.getScrollerNode();
         if (null == a) return 0;
         let s = this.getScrollerState(),
-            l = (0, E.Z)(e, a);
+            l = (0, f.Z)(e, a);
         return 'middle' === t ? Math.min(l - 0.5 * s.offsetHeight + 0.5 * e.offsetHeight + -8, l - i) : l - i;
     }
     restoreScroll() {

@@ -31,14 +31,14 @@ var s = t(735250),
     j = t(408277),
     L = t(455749);
 function R(e) {
-    let { user: n, guildId: t, channelId: R, messageId: b, roleId: C, sessionId: P, transitionState: O, onClose: M, sourceAnalyticsLocations: y = [] } = e,
+    let { user: n, guildId: t, channelId: R, messageId: b, roleId: C, sessionId: M, transitionState: O, onClose: P, sourceAnalyticsLocations: y = [] } = e,
         U = t === A.ME ? void 0 : t,
         D = (0, I.ZP)(n.id, U),
         { analyticsLocations: F } = (0, a.ZP)([...y, r.Z.SIMPLIFIED_PROFILE_MODAL]),
         B = (0, u.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
-            sourceSessionId: P,
+            sourceSessionId: M,
             guildId: U,
             channelId: R,
             messageId: b,
@@ -98,7 +98,7 @@ function R(e) {
                                         tags: (0, s.jsx)(f.Z, {
                                             displayProfile: D,
                                             profileType: T.y0.FULL_SIZE,
-                                            onClose: M
+                                            onClose: P
                                         })
                                     }),
                                     (0, s.jsx)(Z.Z.Overlay, {

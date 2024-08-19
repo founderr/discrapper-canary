@@ -24,15 +24,15 @@ function c(e) {
 t.Z = a.forwardRef(function (e, t) {
     let { renderPopout: n, children: u } = e,
         [d, h] = a.useState(!1),
-        { isHovered: m, setIsHovered: p, onMouseEnter: _, onMouseLeave: f, cancelTimers: E } = (0, l.Z)(200, 300);
+        { isHovered: m, setIsHovered: p, onMouseEnter: _, onMouseLeave: E, cancelTimers: f } = (0, l.Z)(200, 300);
     function C(e) {
         'focus' !== e.type && !d && _();
     }
     function g() {
-        !d && f();
+        !d && E();
     }
     function I(e) {
-        E(), h(!d), (!m || d) && e();
+        f(), h(!d), (!m || d) && e();
     }
     a.useImperativeHandle(
         t,

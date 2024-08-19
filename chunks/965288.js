@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(40851),
     p = n(184301),
     _ = n(103575),
-    f = n(271383),
-    E = n(709586),
+    E = n(271383),
+    f = n(709586),
     C = n(5192),
     g = n(590415),
     I = n(410370);
@@ -40,7 +40,7 @@ let x = a.memo(function (e) {
                     children: C.ZP.getName(t, n, a)
                 }),
                 s
-                    ? (0, i.jsx)(E.Z, {
+                    ? (0, i.jsx)(f.Z, {
                           className: I.boost,
                           color: u.Z.unsafe_rawColors.GUILD_BOOSTING_PINK.css
                       })
@@ -87,17 +87,17 @@ let x = a.memo(function (e) {
 t.Z = a.memo(function (e) {
     let { participant: t, channel: s } = e,
         { user: r, blocked: u } = t,
-        E = s.getGuildId(),
+        f = s.getGuildId(),
         C = (0, m.bp)(),
         g = (0, c.e7)(
-            [f.ZP],
+            [E.ZP],
             () => {
                 var e;
-                return null != E && (null === (e = f.ZP.getMember(E, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null;
+                return null != f && (null === (e = E.ZP.getMember(f, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null;
             },
-            [E, r.id]
+            [f, r.id]
         );
-    o()(null != E, 'Channel cannot be guildless');
+    o()(null != f, 'Channel cannot be guildless');
     let x = a.useCallback(
             (e) => {
                 (0, h.jW)(
@@ -108,7 +108,7 @@ t.Z = a.memo(function (e) {
                             (0, i.jsx)(e, {
                                 ...t,
                                 user: r,
-                                guildId: E,
+                                guildId: f,
                                 channel: s,
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
@@ -118,18 +118,18 @@ t.Z = a.memo(function (e) {
                     { context: C }
                 );
             },
-            [r, E, s, C]
+            [r, f, s, C]
         ),
         N = a.useCallback(
             (e) =>
                 (0, i.jsx)(_.Z, {
                     ...e,
                     location: 'AudienceTile',
-                    guildId: E,
+                    guildId: f,
                     channelId: s.id,
                     userId: r.id
                 }),
-            [s.id, E, r.id]
+            [s.id, f, r.id]
         );
     return (0, i.jsx)(d.Popout, {
         preload: () =>
@@ -150,7 +150,7 @@ t.Z = a.memo(function (e) {
                 ...e,
                 children: (0, i.jsx)(T, {
                     participant: t,
-                    guildId: E,
+                    guildId: f,
                     channel: s,
                     isPremium: g
                 })

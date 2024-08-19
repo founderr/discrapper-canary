@@ -20,8 +20,8 @@ var i = n(735250),
     m = n(223606),
     p = n(518738),
     _ = n(628238),
-    f = n(807092),
-    E = n(869765),
+    E = n(807092),
+    f = n(869765),
     C = n(703656),
     g = n(695346),
     I = n(592125),
@@ -67,12 +67,12 @@ function X(e) {
     } = e;
     o()(a.type === z.uaV.THREAD_STARTER_MESSAGE, 'Message must be a thread starter message');
     let { ...h } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''),
-        m = (0, u.e7)([E.Z], () => E.Z.getMessageByReference(s)),
+        m = (0, u.e7)([f.Z], () => f.Z.getMessageByReference(s)),
         { popouts: p, setPopout: _ } = (0, O.Z)(a.id, W.d$),
-        f = (0, M.ZP)(a),
+        E = (0, M.ZP)(a),
         C = (0, j.iG)(a),
         g = (0, j.Gx)(a);
-    return a.type === z.uaV.THREAD_STARTER_MESSAGE && null != m && m.state === E.Y.LOADED
+    return a.type === z.uaV.THREAD_STARTER_MESSAGE && null != m && m.state === f.Y.LOADED
         ? (0, i.jsx)(Q, {
               ...e,
               viewingChannelId: a.channel_id,
@@ -94,7 +94,7 @@ function X(e) {
                   setPopout: _,
                   messagePopouts: p,
                   replyReference: s,
-                  author: f
+                  author: E
               }),
               childrenSystemMessage: (0, F.Z)(e),
               childrenMessageContent: null,
@@ -109,7 +109,7 @@ function Q(e) {
             id: s,
             message: r,
             message: { id: o, channel_id: m },
-            channel: { guild_id: f },
+            channel: { guild_id: E },
             compact: I = !1,
             className: x,
             groupId: T,
@@ -121,7 +121,7 @@ function Q(e) {
         { popouts: G, selected: q, setPopout: X } = (0, O.Z)(r.id, W.d$),
         Q = g.RS.useSetting(),
         J = g.NA.useSetting(),
-        $ = (0, u.e7)([E.Z], () => E.Z.getMessageByReference(S)),
+        $ = (0, u.e7)([f.Z], () => f.Z.getMessageByReference(S)),
         ee = (0, _.A)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()),
         { handleMouseEnter: et, handleMouseLeave: en, isHovered: ei } = (0, L.tn)(T, r.author.id, q),
         ea = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled),
@@ -142,9 +142,9 @@ function Q(e) {
         ed = (0, j.iG)(r, T),
         eh = (0, j.Gx)(r),
         em = (0, H.Z)(e, er, !1),
-        ep = a.useCallback(() => (0, C.XU)(f, m, o), [f, m, o]),
+        ep = a.useCallback(() => (0, C.XU)(E, m, o), [E, m, o]),
         e_ = (0, p.p9)({
-            guildId: f,
+            guildId: E,
             roleId: eu.iconRoleId
         });
     return (0, i.jsxs)('div', {
@@ -222,16 +222,16 @@ t.ZP = a.memo(function (e) {
         { onFocus: ei, ...ea } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''),
         es = g.RS.useSetting(),
         el = g.NA.useSetting(),
-        er = (0, u.e7)([E.Z], () => E.Z.getMessageByReference(en)),
+        er = (0, u.e7)([f.Z], () => f.Z.getMessageByReference(en)),
         { popouts: eo, selected: ec, setPopout: eu } = (0, O.Z)(C.id, W.d$),
         ed = (0, L.qo)(C, q, eu),
         eh = (0, L.Go)(C, q),
-        { handleMouseEnter: em, handleMouseLeave: ep, hasHovered: e_, isHovered: ef } = (0, L.tn)(ee, C.author.id, ec),
-        { isFocused: eE, hasFocused: eC, handleFocus: eg, handleBlur: eI } = (0, L.bb)(ei),
+        { handleMouseEnter: em, handleMouseLeave: ep, hasHovered: e_, isHovered: eE } = (0, L.tn)(ee, C.author.id, ec),
+        { isFocused: ef, hasFocused: eC, handleFocus: eg, handleBlur: eI } = (0, L.bb)(ei),
         ex = (0, u.e7)([T.Z], () => T.Z.isEditing(X, Z), [X, Z]),
         eT = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled),
-        eN = ec || ex || (eT && eE),
-        ev = eN || ef,
+        eN = ec || ex || (eT && ef),
+        ev = eN || eE,
         eS = (0, u.e7)([I.Z], () => C.hasFlag(z.iLy.HAS_THREAD) && I.Z.getChannel(v.default.castMessageIdAsChannelId(C.id))),
         eZ = C.isFirstMessageInForumPost(q),
         eA = (0, _.A)((null !== (n = C.editedTimestamp) && void 0 !== n ? n : C.timestamp).valueOf()),
@@ -248,7 +248,7 @@ t.ZP = a.memo(function (e) {
         }),
         ej = (0, P.Z)(Z, X, eT),
         eL = (0, M.ZP)(C),
-        eP = (0, u.e7)([f.Z], () => f.Z.getPendingReply(X)),
+        eP = (0, u.e7)([E.Z], () => E.Z.getPendingReply(X)),
         eO = (function (e) {
             let t = a.useRef(e);
             return a.useEffect(() => void (t.current = null != e ? e : t.current)), null != e ? e : t.current;
@@ -331,7 +331,7 @@ t.ZP = a.memo(function (e) {
                                   buttonProps: e,
                                   setPopout: eu,
                                   messagePopouts: eo,
-                                  isFocused: ef || eE
+                                  isFocused: eE || ef
                               })
                             : void 0,
                     childrenSystemMessage: (0, F.Z)(e),

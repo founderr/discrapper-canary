@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(787014),
     p = n(911969),
     _ = n(933557),
-    f = n(605436),
-    E = n(185413),
+    E = n(605436),
+    f = n(185413),
     C = n(42311),
     g = n(626786),
     I = n(434404),
@@ -49,7 +49,7 @@ function P(e) {
                 null != P
                     ? o()(O)
                           .sortBy((e) => -e.position)
-                          .filter((e) => !(0, f.pM)(P, e.id))
+                          .filter((e) => !(0, E.pM)(P, e.id))
                           .value()
                     : [],
             [P, O]
@@ -207,7 +207,7 @@ function P(e) {
             n
                 ? (0, i.jsx)(h.Modal, {
                       renderModal: (e) =>
-                          (0, i.jsx)(E.default, {
+                          (0, i.jsx)(f.default, {
                               ...e,
                               onClose: () => (H(), e.onClose()),
                               channelId: t.id

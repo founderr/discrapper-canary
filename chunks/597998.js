@@ -19,8 +19,8 @@ var i,
     m = n(282256),
     p = n(925329),
     _ = n(833858),
-    f = n(223135),
-    E = n(374129),
+    E = n(223135),
+    f = n(374129),
     C = n(639351),
     g = n(630388),
     I = n(51144),
@@ -67,7 +67,7 @@ let A = (e) => {
                   {
                       className: S.iconSpacing,
                       text: (0, _.O8)(t),
-                      children: (0, a.jsx)(f.Z, {
+                      children: (0, a.jsx)(E.Z, {
                           hangStatusActivity: t,
                           className: r()(S.hangStatusIcon, n)
                       })
@@ -139,11 +139,11 @@ class b extends (i = s.Component) {
             : null;
     }
     renderIcons() {
-        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: s, serverDeaf: l, collapsed: c, video: d, isStreaming: m, disabled: p, isWatching: _, iconClassName: f, embeddedApplication: I, otherClientSessionType: Z, voicePlatform: A, hangStatusActivity: b, showHangStatus: L, isSelf: P, application: O, guildId: y, channelId: D, user: k, handleHoverHangStatus: U, handleHoverIcons: w, disconnected: B } = this.props;
+        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: s, serverDeaf: l, collapsed: c, video: d, isStreaming: m, disabled: p, isWatching: _, iconClassName: E, embeddedApplication: I, otherClientSessionType: Z, voicePlatform: A, hangStatusActivity: b, showHangStatus: L, isSelf: P, application: O, guildId: y, channelId: D, user: k, handleHoverHangStatus: U, handleHoverIcons: w, disconnected: B } = this.props;
         if (c || p) return null;
         let H = [],
             G = (0, a.jsx)(j, {
-                iconClassName: f,
+                iconClassName: E,
                 mute: e,
                 localMute: t,
                 serverMute: i,
@@ -161,7 +161,7 @@ class b extends (i = s.Component) {
                               children: (0, a.jsx)(o.VideoSlashIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: r()(S.icon, f),
+                                  className: r()(S.icon, E),
                                   colorClass: S.strikethrough
                               })
                           },
@@ -177,7 +177,7 @@ class b extends (i = s.Component) {
                               children: (0, a.jsx)(o.VideoIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: r()(S.icon, f)
+                                  className: r()(S.icon, E)
                               })
                           },
                           'video'
@@ -191,7 +191,7 @@ class b extends (i = s.Component) {
                             className: S.iconSpacing,
                             text: v.Z.Messages.NOTICE_USER_DISCONNECTED,
                             children: (0, a.jsx)(o.CircleWarningIcon, {
-                                className: r()(S.icon, f),
+                                className: r()(S.icon, E),
                                 color: o.tokens.colors.STATUS_WARNING_BACKGROUND
                             })
                         },
@@ -208,7 +208,7 @@ class b extends (i = s.Component) {
                             children: (0, a.jsx)(o.ActivitiesIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: r()(S.icon, f)
+                                className: r()(S.icon, E)
                             })
                         },
                         'activity'
@@ -220,7 +220,7 @@ class b extends (i = s.Component) {
                           'div',
                           {
                               className: r()(S.iconSpacing),
-                              children: (0, a.jsx)(C.Z, { className: r()(S.icon, f) })
+                              children: (0, a.jsx)(C.Z, { className: r()(S.icon, E) })
                           },
                           'xbox'
                       )
@@ -231,7 +231,7 @@ class b extends (i = s.Component) {
                           'div',
                           {
                               className: r()(S.iconSpacing),
-                              children: (0, a.jsx)(E.Z, { className: r()(S.icon, f) })
+                              children: (0, a.jsx)(f.Z, { className: r()(S.icon, E) })
                           },
                           'playstation'
                       )
@@ -257,7 +257,7 @@ class b extends (i = s.Component) {
                               children: (0, a.jsx)(o.EyeIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: r()(S.icon, f)
+                                  className: r()(S.icon, E)
                               })
                           },
                           'watch'
@@ -285,7 +285,7 @@ class b extends (i = s.Component) {
                                           R,
                                           {
                                               application: O,
-                                              iconClassName: f,
+                                              iconClassName: E,
                                               guildId: y,
                                               channelId: D,
                                               userId: k.id
@@ -294,7 +294,7 @@ class b extends (i = s.Component) {
                                       )
                                     : (0, a.jsx)(M, {
                                           hangStatusActivity: b,
-                                          iconClassName: f,
+                                          iconClassName: E,
                                           isSelf: P
                                       })
                             })

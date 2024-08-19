@@ -16,8 +16,8 @@ var a = n(481060),
     h = n(243113);
 function m(e) {
     var t;
-    let { user: n, guildId: m, channel: p, entry: _, onSelect: f } = e,
-        E = (0, c.Z)({
+    let { user: n, guildId: m, channel: p, entry: _, onSelect: E } = e,
+        f = (0, c.Z)({
             userId: n.id,
             guildId: m,
             channelId: p.id
@@ -46,12 +46,12 @@ function m(e) {
                     (0, s.Zy)(), t();
                 },
                 'aria-label': d.Z.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: f,
+                onSelect: E,
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)(a.MenuGroup, {
                             children: [
-                                E,
+                                f,
                                 null != I &&
                                     (0, i.jsx)(a.MenuItem, {
                                         id: 'game-profile',

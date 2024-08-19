@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(362721),
     p = n(574176),
     _ = n(106301),
-    f = n(512384),
-    E = n(470956),
+    E = n(512384),
+    f = n(470956),
     C = n(597998),
     g = n(199902),
     I = n(314897),
@@ -68,8 +68,8 @@ let y = a.memo((e) => {
         J = (0, m.Z)(l, !0, s),
         $ = (0, r.e7)([_.Z], () => (O ? _.Z.getHangStatusActivity() : null), [O]),
         ee = (0, r.e7)([v.Z], () => v.Z.findActivity(N, (e) => e.type === L.IIU.HANG_STATUS), [N]),
-        et = (0, E.Eu)(l.id, N);
-    return (0, i.jsx)(f.Z, {
+        et = (0, f.Eu)(l.id, N);
+    return (0, i.jsx)(E.Z, {
         shakeLocation: P.oZ.VOICE_USER,
         isShaking: w,
         children: (0, i.jsx)(j.ZP, {
@@ -99,11 +99,11 @@ let y = a.memo((e) => {
 y.displayName = 'ConnectedVoiceUser';
 let D = [];
 t.Z = function (e) {
-    let { allowPreviews: t = !0, allowDragging: n = !0, channel: s, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: m, location: p, numAudience: _, withGuildIcon: f = !1, className: g, children: x } = e,
+    let { allowPreviews: t = !0, allowDragging: n = !0, channel: s, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: m, location: p, numAudience: _, withGuildIcon: E = !1, className: g, children: x } = e,
         [T, S] = a.useState(null),
         [Z, A] = a.useState(!1),
         M = a.useRef(null),
-        b = (0, E.Es)(s.id, null != c ? c : D),
+        b = (0, f.Es)(s.id, null != c ? c : D),
         R = a.useRef(
             new o.sW(50, () => {
                 S(M.current), (M.current = null);
@@ -188,7 +188,7 @@ t.Z = function (e) {
         : (0, i.jsxs)(C.e, {
               className: l()(g, O.list, {
                   [O.collapsed]: u,
-                  [O.withGuildIcon]: f
+                  [O.withGuildIcon]: E
               }),
               collapsed: u,
               children: [B, x]

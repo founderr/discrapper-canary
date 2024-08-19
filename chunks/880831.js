@@ -20,8 +20,8 @@ var i = n(735250),
     m = n(904245),
     p = n(372900),
     _ = n(905405),
-    f = n(937889),
-    E = n(739566),
+    E = n(937889),
+    f = n(739566),
     C = n(267128),
     g = n(378233),
     I = n(419922),
@@ -39,7 +39,7 @@ function j(e) {
     var t;
     let { message: n } = e,
         s = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)),
-        r = (0, E.Uj)(n),
+        r = (0, f.Uj)(n),
         o = a.useContext(p.Z),
         [d, x] = a.useState(!1),
         v = (0, _.p)(),
@@ -57,7 +57,7 @@ function j(e) {
         ),
         Z =
             null != n.content && '' !== n.content
-                ? (0, f.ZP)(n, {
+                ? (0, E.ZP)(n, {
                       isInteracting: d,
                       shouldFilterKeywords: v
                   }).content
@@ -156,10 +156,10 @@ function L(e) {
                         });
                 }, [r]),
                 i && null == m.current ? (m.current = r) : !i && null != m.current && (m.current = null);
-            let f = null !== (t = m.current) && void 0 !== t ? t : r;
+            let E = null !== (t = m.current) && void 0 !== t ? t : r;
             return {
                 toastsHidden: u,
-                toastMessages: (0, c.Wu)([x.Z], () => f.map((e) => x.Z.getMessage(n, e)), [n, f]).filter(S.lm)
+                toastMessages: (0, c.Wu)([x.Z], () => E.map((e) => x.Z.getMessage(n, e)), [n, E]).filter(S.lm)
             };
         })({
             channelId: t,
@@ -168,7 +168,7 @@ function L(e) {
             lingerMs: R
         }),
         _ = a.useRef({}),
-        [f, E] = a.useState({}),
+        [E, f] = a.useState({}),
         C = a.useCallback((e, t) => {
             null == t ? delete _.current[e] : (_.current[e] = t);
         }, []);
@@ -180,12 +180,12 @@ function L(e) {
             let a = null !== (n = _.current[i.id]) && void 0 !== n ? n : 0;
             (e[i.id] = t), (t += a + 8);
         }
-        !(0, r.isEqual)(e, f) && E(e);
+        !(0, r.isEqual)(e, E) && f(e);
     }, [p]);
     let g = p.map((e) => ({
             message: e,
             height: _.current[e.id],
-            y: f[e.id]
+            y: E[e.id]
         })),
         I = (0, u.useTransition)(g, {
             keys: (e) => e.message.id,

@@ -16,11 +16,11 @@ var i = n(735250),
     m = n(314910),
     p = n(357768);
 let _ = { visibility: 'hidden' },
-    f = {
+    E = {
         precision: 0.0001,
         duration: 300
     },
-    E = {
+    f = {
         tension: 150,
         friction: 20,
         precision: 0.0001,
@@ -73,7 +73,7 @@ function g(e) {
                 ref: M,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: f
+                config: E
             },
             'animate-always'
         ),
@@ -110,7 +110,7 @@ function g(e) {
                         })()
                     })
                 },
-                config: g.enabled ? C : E,
+                config: g.enabled ? C : f,
                 onRest: (e, t) => {
                     null != t.item && null != v.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(T, t.item.timestamp);
                 }

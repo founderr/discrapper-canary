@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(40851),
     p = n(100527),
     _ = n(906732),
-    f = n(358221),
-    E = n(414910),
+    E = n(358221),
+    f = n(414910),
     C = n(909820),
     g = n(493010),
     I = n(788983),
@@ -71,7 +71,7 @@ function ea(e) {
         u = t.getGuildId(),
         d = (0, o.e7)([P.Z], () => P.Z.getMostRecentSelectedTextChannelId(u), [u]),
         h = b.default.getId(),
-        m = !(0, o.e7)([f.Z], () => f.Z.isFullscreenInContext(n)) && (!O.isPlatformEmbedded || (O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS))),
+        m = !(0, o.e7)([E.Z], () => E.Z.isFullscreenInContext(n)) && (!O.isPlatformEmbedded || (O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS))),
         p = null != c && c.type !== Q.fO.ACTIVITY && c.user.id !== h,
         _ = a.useMemo(() => {
             var e;
@@ -89,7 +89,7 @@ function ea(e) {
         children: [
             p
                 ? (0, i.jsx)(M.Z, {
-                      context: (0, E.Z)(c.type),
+                      context: (0, f.Z)(c.type),
                       userId: c.user.id,
                       currentWindow: _,
                       sliderClassName: $.volumeSlider
@@ -134,10 +134,10 @@ function el(e) {
     let t,
         { channel: n, toggleRequestToSpeakSidebar: s, showRequestToSpeakSidebar: c, popoutWindow: u, popoutWindowAlwaysOnTop: d, popoutOpen: h, chatOpen: p } = e,
         _ = (0, m.bp)(),
-        E = (0, o.e7)([P.Z], () => P.Z.getVoiceChannelId() === n.id, [n.id]),
+        f = (0, o.e7)([P.Z], () => P.Z.getVoiceChannelId() === n.id, [n.id]),
         g = (0, o.e7)([L.Z], () => L.Z.can(X.Plq.CONNECT, n)),
         I = (0, U.w8)(n.id, w.pV.SPEAKER),
-        x = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(n.id)),
+        x = (0, o.e7)([E.Z], () => E.Z.getSelectedParticipant(n.id)),
         T = h && _ !== X.IlC.POPOUT,
         [N, Z] = a.useState(0),
         { isOnStartStageScreen: A } = (0, H.ZP)();
@@ -149,10 +149,10 @@ function el(e) {
             ? (0, i.jsx)(Y.Z, {
                   channel: n,
                   onContinueClick: () => {
-                      (0, H.Ku)(!1), !E && (0, k.TM)(n);
+                      (0, H.Ku)(!1), !f && (0, k.TM)(n);
                   }
               })
-            : E
+            : f
               ? (0, i.jsx)(W.Z, {
                     channel: n,
                     onScroll: (e) => {
@@ -173,14 +173,14 @@ function el(e) {
             disableGradients: 0 === N && S.e.TOP,
             renderBottomLeft: () => (0, i.jsx)(es, { channel: n }),
             renderBottomCenter: () =>
-                E
+                f
                     ? (0, i.jsx)(z.Z, {
                           channel: n,
                           isOnStartStageScreen: A
                       })
                     : null,
             renderBottomRight: () =>
-                E
+                f
                     ? (0, i.jsx)(ea, {
                           channel: n,
                           appContext: _,
@@ -222,14 +222,14 @@ function er(e) {
         d = a.useCallback(() => {
             r(!s);
         }, [s, r]),
-        { popoutWindow: E, popoutWindowAlwaysOnTop: I } = (0, o.cj)([x.Z], () => ({
+        { popoutWindow: f, popoutWindowAlwaysOnTop: I } = (0, o.cj)([x.Z], () => ({
             popoutWindow: x.Z.getWindow(X.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: x.Z.getIsAlwaysOnTop(X.KJ3.CHANNEL_CALL_POPOUT)
         })),
-        T = null != E && !E.closed,
+        T = null != f && !f.closed,
         { analyticsLocations: N } = (0, _.ZP)(p.Z.STAGE_CHANNEL_CALL),
         v = (0, m.bp)(),
-        S = (0, o.e7)([f.Z], () => f.Z.getChatOpen(t.id), [t.id]),
+        S = (0, o.e7)([E.Z], () => E.Z.getChatOpen(t.id), [t.id]),
         Z = (0, o.e7)([j.Z], () => j.Z.getGuild(t.guild_id), [t.guild_id]);
     a.useEffect(() => {
         null == c.K.get(ee) &&
@@ -257,7 +257,7 @@ function er(e) {
                                 channel: t,
                                 toggleRequestToSpeakSidebar: d,
                                 showRequestToSpeakSidebar: s,
-                                popoutWindow: E,
+                                popoutWindow: f,
                                 popoutWindowAlwaysOnTop: I,
                                 popoutOpen: T,
                                 chatOpen: S

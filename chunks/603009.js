@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(645041),
     p = n(430824),
     _ = n(914010),
-    f = n(594174),
-    E = n(626135),
+    E = n(594174),
+    f = n(626135),
     C = n(645896),
     g = n(905362),
     I = n(603368),
@@ -34,7 +34,7 @@ function b(e) {
     var t;
     let { guild: n, showToast: s, onConfirm: o, onDismiss: m } = e,
         [p, _] = a.useState(!1),
-        E = a.useRef(null),
+        f = a.useRef(null),
         g = (0, C.Cc)(n.id),
         T = (0, d.ZP)(),
         S = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
@@ -45,17 +45,17 @@ function b(e) {
         }).hex(),
         R = (0, I.nj)(Z, b, 'top left', 0.3, '30%'),
         j = (0, u.e7)(
-            [f.default],
+            [E.default],
             () => {
                 var e;
-                return null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan;
+                return null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan;
             },
             []
         );
     a.useLayoutEffect(() => {
         var e;
-        if (null == E.current) return;
-        let t = null === (e = E.current) || void 0 === e ? void 0 : e.parentNode;
+        if (null == f.current) return;
+        let t = null === (e = f.current) || void 0 === e ? void 0 : e.parentNode;
         return (
             null != t && (t.style.zIndex = '1003'),
             () => {
@@ -119,7 +119,7 @@ function b(e) {
                     ...e,
                     ...R
                 },
-                ref: E,
+                ref: f,
                 children: (0, i.jsx)(c.ClickableContainer, {
                     'aria-label': U,
                     onClick: P,
@@ -193,7 +193,7 @@ function R(e) {
             n &&
                 (c.current = window.setTimeout(() => {
                     r(!0),
-                        E.default.track(S.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                        f.default.track(S.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                             type: o.C[o.C.ADOPT_CLAN_IDENTITY_NOTICE],
                             guild_id: null != t ? t : S.lds
                         });

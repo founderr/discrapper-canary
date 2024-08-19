@@ -17,19 +17,19 @@ var i = n(735250),
     m = n(282794),
     p = n(910212);
 function _(e) {
-    let { onClose: t, onConfirm: _, onCancel: f, channel: E, analyticsType: C, popoutText: g, animation: I } = e;
+    let { onClose: t, onConfirm: _, onCancel: E, channel: f, analyticsType: C, popoutText: g, animation: I } = e;
     a.useEffect(() => {
         u.default.track(d.rMx.OPEN_POPOUT, {
             type: C,
-            ...(0, o.v_)(E)
+            ...(0, o.v_)(f)
         });
-    }, [C, E]);
+    }, [C, f]);
     let x = a.useCallback(() => {
             null == _ || _(), t();
         }, [_, t]),
         T = a.useCallback(() => {
-            null == f || f(), t();
-        }, [f, t]),
+            null == E || E(), t();
+        }, [E, t]),
         N = a.useRef(null);
     return (
         a.useEffect(() => {

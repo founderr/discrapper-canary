@@ -16,9 +16,9 @@ var i = n(470079),
 function m(e) {
     var t;
     let { guildId: n, groupListingId: m, location: p, relevantSubscriptionListingIds: _ } = e,
-        f = (0, c.f)('useTrackRoleSubscriptionUpsellAnalytics'),
-        { activeSubscription: E } = (0, d.Z)(m),
-        C = null != E,
+        E = (0, c.f)('useTrackRoleSubscriptionUpsellAnalytics'),
+        { activeSubscription: f } = (0, d.Z)(m),
+        C = null != f,
         g = (0, a.Wu)(
             [u.Z],
             () =>
@@ -31,7 +31,7 @@ function m(e) {
         { analyticsLocations: I } = (0, l.ZP)(null !== (t = (0, r.DR)()) && void 0 !== t ? t : []),
         x = i.useRef(!1);
     i.useEffect(() => {
-        f &&
+        E &&
             null != m &&
             null != g &&
             !x.current &&
@@ -44,5 +44,5 @@ function m(e) {
                 location: p,
                 ...(0, s.hH)(n)
             }));
-    }, [n, m, f, p, g, C, I]);
+    }, [n, m, E, p, g, C, I]);
 }

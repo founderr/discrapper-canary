@@ -219,9 +219,8 @@ function j(e) {
                         }
                       : void 0,
               children: [
-                  (null === (n = I.Ve[c.skuId]) || void 0 === n ? void 0 : n.hideAttributionLogos) === !0
-                      ? (0, s.jsx)(l.Spacer, { size: 28 })
-                      : (0, s.jsxs)('div', {
+                  (null === (n = I.Ve[c.skuId]) || void 0 === n ? void 0 : n.addAttributionLogo)
+                      ? (0, s.jsxs)('div', {
                             className: L.discordLogo,
                             children: [
                                 (0, s.jsx)(l.ClydeIcon, {
@@ -233,15 +232,16 @@ function j(e) {
                                 }),
                                 (0, s.jsx)(p.Z, { className: L.discordWordmark })
                             ]
-                        }),
-                  (null === (r = I.Ve[c.skuId]) || void 0 === r ? void 0 : r.hideLogoOnBanner) === !0
-                      ? (0, s.jsx)(l.Spacer, { size: 96 })
-                      : (0, s.jsx)('img', {
+                        })
+                      : (0, s.jsx)(l.Spacer, { size: 28 }),
+                  (null === (r = I.Ve[c.skuId]) || void 0 === r ? void 0 : r.addLogo)
+                      ? (0, s.jsx)('img', {
                             className: L.categoryLogo,
                             src: (0, C.uV)(c.logo, { size: T }),
                             alt: c.name,
                             style: { maxWidth: null === (a = I.Ve[c.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth }
-                        }),
+                        })
+                      : (0, s.jsx)(l.Spacer, { size: 96 }),
                   (0, s.jsx)(l.Text, {
                       className: i()(L.summary, { [L.blackSummary]: v }),
                       variant: 'text-md/normal',

@@ -19,8 +19,8 @@ var i = n(735250),
     m = n(266910),
     p = n(352978),
     _ = n(928518),
-    f = n(204197),
-    E = n(470956),
+    E = n(204197),
+    f = n(470956),
     C = n(314897),
     g = n(271383),
     I = n(131951),
@@ -35,7 +35,7 @@ let M = o.AvatarSizes.SIZE_80,
     b = o.AvatarSizes.SIZE_40;
 function R(e) {
     let { channelId: t, userId: n } = e;
-    return (0, E.Eu)(t, n)
+    return (0, f.Eu)(t, n)
         ? (0, i.jsx)(o.Tooltip, {
               text: Z.Z.Messages.NOTICE_USER_DISCONNECTED,
               position: 'bottom',
@@ -50,7 +50,7 @@ function R(e) {
         : null;
 }
 function j(e) {
-    let { participant: t, channel: n, inCall: s, width: o, paused: E, selected: R, fit: j, onVideoResize: L, blocked: P, noVideoRender: O = !1, pulseSpeakingIndicator: y = !1 } = e,
+    let { participant: t, channel: n, inCall: s, width: o, paused: f, selected: R, fit: j, onVideoResize: L, blocked: P, noVideoRender: O = !1, pulseSpeakingIndicator: y = !1 } = e,
         D = I.Z.getVideoComponent(),
         k = (0, r.e7)([C.default], () => C.default.getId()),
         { user: U, streamId: w, speaking: B } = t,
@@ -63,7 +63,7 @@ function j(e) {
         Y = T.ZP.getName(n.getGuildId(), n.id, U) + (z ? ' '.concat(Z.Z.Messages.GUEST_NAME_SUFFIX) : ''),
         K = B && (F || V),
         q = o < 124 ? b : M,
-        { avatarSrc: X, avatarDecorationSrc: Q } = (0, f.Z)({
+        { avatarSrc: X, avatarDecorationSrc: Q } = (0, E.Z)({
             user: U,
             guildId: n.guild_id,
             size: q,
@@ -84,7 +84,7 @@ function j(e) {
                   streamId: w,
                   videoComponent: D,
                   fit: j,
-                  paused: E,
+                  paused: f,
                   videoSpinnerContext: U.id === k ? u.m.SELF_VIDEO : u.m.REMOTE_VIDEO,
                   userId: U.id
               },

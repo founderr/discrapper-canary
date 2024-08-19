@@ -20,7 +20,7 @@ function h(e) {
             let e = [];
             return p && e.push(l.z.DESKTOP_APP_LAUNCHER_ONBOARDING), e;
         }, [p]),
-        f = () => {
+        E = () => {
             setTimeout(() => (0, r.EW)(l.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: d.L.AUTO_DISMISS }), 10000);
         };
     return (0, i.jsx)(o.ZP, {
@@ -32,7 +32,7 @@ function h(e) {
                     animationContainerClassName: n,
                     glowClassName: h,
                     trinketsClassName: m,
-                    onMount: f,
+                    onMount: E,
                     children: t
                 });
             return t;

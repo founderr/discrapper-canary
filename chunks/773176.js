@@ -12,8 +12,8 @@ var i = n(735250),
     m = n(607070),
     p = n(110630),
     _ = n(706140),
-    f = n(543241),
-    E = n(689789),
+    E = n(543241),
+    f = n(689789),
     C = n(346610),
     g = n(868643),
     I = n(245216),
@@ -76,9 +76,9 @@ function en(e) {
 }
 let ei = a.memo(function (e) {
     let { channel: t, message: n } = e,
-        a = (0, f.wC)(t.guild_id),
-        s = (0, f.q5)(t.guild_id),
-        { canSplitFrecencyList: l } = (0, E.S)({
+        a = (0, E.wC)(t.guild_id),
+        s = (0, E.q5)(t.guild_id),
+        { canSplitFrecencyList: l } = (0, f.S)({
             location: 'ReactionSuggestions',
             autoTrackExposure: !0
         }),
@@ -143,8 +143,8 @@ function ea(e) {
             canDelete: r,
             canReport: o,
             canEdit: h,
-            canPublish: f,
-            canReact: E,
+            canPublish: E,
+            canReact: f,
             canConfigureJoin: x,
             canReply: T,
             canStartThread: v,
@@ -166,8 +166,8 @@ function ea(e) {
                 d = (0, c.e7)([L.default], () => L.default.getId()),
                 h = (0, R.$R)(t),
                 _ = (0, R.Gu)(t),
-                f = j.nc.useSetting(),
-                E = j.Sb.useSetting(),
+                E = j.nc.useSetting(),
+                f = j.Sb.useSetting(),
                 I = (0, c.e7)([D.Z], () => null == t.guild_id || D.Z.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: x, canAddNewReactions: T } = (0, c.cj)(
                     [k.Z],
@@ -191,7 +191,7 @@ function ea(e) {
                 { disableReactionCreates: Q } = (0, F.Z)({
                     channel: t,
                     canChat: I,
-                    renderReactions: f,
+                    renderReactions: E,
                     canAddNewReactions: T,
                     isLurking: P,
                     isGuest: U,
@@ -218,8 +218,8 @@ function ea(e) {
                 canViewThread: Z,
                 canForward: et && en,
                 canCopy: w.wS,
-                hasDeveloperMode: E,
-                canReact: !Q && f,
+                hasDeveloperMode: f,
+                canReact: !Q && E,
                 canPublish: J,
                 canConfigureJoin: ee,
                 isExpanded: es && !el && !i && !a && !s,
@@ -247,8 +247,8 @@ function ea(e) {
         eh = (0, R.$R)(t),
         em = n.hasFlag(X.iLy.CROSSPOSTED),
         [ep, e_] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
-        ef = ep === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
-        [eE, eC] = a.useState(!1),
+        eE = ep === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
+        [ef, eC] = a.useState(!1),
         eg = a.useCallback(() => {
             eC(!0);
         }, []),
@@ -358,7 +358,7 @@ function ea(e) {
                       ]
                   })
                 : null,
-            E && !eo
+            f && !eo
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           eT && !P
@@ -414,7 +414,7 @@ function ea(e) {
                           onClick: () => ex(t, n),
                           onTooltipShow: eg,
                           onTooltipHide: eI,
-                          showNewBadge: !eE && ef
+                          showNewBadge: !ef && eE
                       },
                       'forward'
                   )
@@ -441,7 +441,7 @@ function ea(e) {
                       'view-thread'
                   )
                 : null,
-            f
+            E
                 ? (0, i.jsx)(
                       W.sF,
                       {

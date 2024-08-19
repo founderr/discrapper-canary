@@ -11,8 +11,8 @@ var i = n(735250),
     m = n(5192),
     p = n(501655),
     _ = n(689938),
-    f = n(226409);
-let E = (e, t) => m.ZP.getName(e.getGuildId(), e.id, t.user);
+    E = n(226409);
+let f = (e, t) => m.ZP.getName(e.getGuildId(), e.id, t.user);
 t.Z = function (e) {
     var t, n;
     let { participants: m, channel: C, hasConnectPermission: g } = e,
@@ -24,10 +24,10 @@ t.Z = function (e) {
         N = 4 === T.length ? 2 : 3,
         v = (0, s.Wu)([o.Z], () => T.map((e) => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [C.id, T]);
     return (0, i.jsxs)('div', {
-        className: f.container,
+        className: E.container,
         children: [
             (0, i.jsx)('div', {
-                className: f.tiles,
+                className: E.tiles,
                 style: { maxWidth: 168 * N },
                 children: v.slice(0, 5).map((e) =>
                     (0, i.jsx)(
@@ -35,7 +35,7 @@ t.Z = function (e) {
                         {
                             participant: e,
                             channel: C,
-                            className: f.tile,
+                            className: E.tile,
                             paused: !0,
                             inCall: !0,
                             noVideoRender: !0,
@@ -47,12 +47,12 @@ t.Z = function (e) {
                 )
             }),
             (0, i.jsx)(l.Heading, {
-                className: f.channelName,
+                className: E.channelName,
                 variant: 'heading-xxl/semibold',
                 children: C.name
             }),
             (0, i.jsx)('div', {
-                className: f.participantsRow,
+                className: E.participantsRow,
                 children: (0, i.jsx)(l.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
@@ -61,16 +61,16 @@ t.Z = function (e) {
                         0 === (n = T).length
                             ? _.Z.Messages.CURRENTLY_IN_STAGE_EMPTY
                             : 1 === n.length
-                              ? _.Z.Messages.CURRENTLY_IN_STAGE_1.format({ a: E(t, n[0]) })
+                              ? _.Z.Messages.CURRENTLY_IN_STAGE_1.format({ a: f(t, n[0]) })
                               : 2 === n.length
                                 ? _.Z.Messages.CURRENTLY_IN_STAGE_2.format({
-                                      a: E(t, n[0]),
-                                      b: E(t, n[1])
+                                      a: f(t, n[0]),
+                                      b: f(t, n[1])
                                   })
                                 : n.length > 2
                                   ? _.Z.Messages.CURRENTLY_IN_STAGE_2_N.format({
-                                        a: E(t, n[0]),
-                                        b: E(t, n[1]),
+                                        a: f(t, n[0]),
+                                        b: f(t, n[1]),
                                         n: n.length - 2
                                     })
                                   : void 0)
@@ -78,7 +78,7 @@ t.Z = function (e) {
             }),
             (0, i.jsx)(l.Button, {
                 disabled: !g,
-                className: f.joinButton,
+                className: E.joinButton,
                 color: g ? l.Button.Colors.GREEN : l.Button.Colors.PRIMARY,
                 onClick: x,
                 size: l.Button.Sizes.MEDIUM,

@@ -16,8 +16,8 @@ var i = n(735250),
     m = n(496675),
     p = n(776767),
     _ = n(981631),
-    f = n(689938),
-    E = n(446926);
+    E = n(689938),
+    f = n(446926);
 function C(e) {
     let { member: t } = e,
         n = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guildId)),
@@ -44,26 +44,26 @@ function C(e) {
     return null == n
         ? null
         : (0, i.jsx)(o.FormItem, {
-              title: f.Z.Messages.ROLES,
-              titleClassName: E.infoTitle,
+              title: E.Z.Messages.ROLES,
+              titleClassName: f.infoTitle,
               children: (0, i.jsx)(p.WM, {
                   children: (0, i.jsx)(p._2, {
                       description:
                           t.roles.length > 0 || T
                               ? (0, i.jsxs)('div', {
-                                    className: E.roleContainer,
+                                    className: f.roleContainer,
                                     children: [
                                         (0, i.jsx)(o.Tooltip, {
-                                            'aria-label': f.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
+                                            'aria-label': E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
                                             allowOverflow: !0,
-                                            text: f.Z.Messages.GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE,
+                                            text: E.Z.Messages.GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE,
                                             children: (e) => {
                                                 let { onMouseEnter: n, onMouseLeave: a } = e;
                                                 return (0, i.jsx)(o.Clickable, {
                                                     onMouseEnter: n,
                                                     onMouseLeave: a,
                                                     children: (0, i.jsx)(d.Z, {
-                                                        className: l()(E.roleTooltipItem, E.highestRole),
+                                                        className: l()(f.roleTooltipItem, f.highestRole),
                                                         role: I,
                                                         guildId: t.guildId
                                                     })
@@ -74,7 +74,7 @@ function C(e) {
                                             (0, i.jsx)(
                                                 d.Z,
                                                 {
-                                                    className: E.roleTooltipItem,
+                                                    className: f.roleTooltipItem,
                                                     role: s[e],
                                                     guildId: t.guildId
                                                 },
@@ -83,20 +83,20 @@ function C(e) {
                                         ),
                                         T &&
                                             (0, i.jsx)(o.Tooltip, {
-                                                'aria-label': f.Z.Messages.ADD_ROLE_A11Y_LABEL,
+                                                'aria-label': E.Z.Messages.ADD_ROLE_A11Y_LABEL,
                                                 allowOverflow: !0,
-                                                text: f.Z.Messages.ADD_ROLE_A11Y_LABEL,
+                                                text: E.Z.Messages.ADD_ROLE_A11Y_LABEL,
                                                 children: (e) => {
                                                     let { onMouseEnter: t, onMouseLeave: n } = e;
                                                     return (0, i.jsx)(o.Clickable, {
-                                                        className: E.addRoleContainer,
+                                                        className: f.addRoleContainer,
                                                         onClick: x,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         children: (0, i.jsx)(o.CirclePlusIcon, {
                                                             size: 'custom',
                                                             color: 'currentColor',
-                                                            className: E.addRoleIcon,
+                                                            className: f.addRoleIcon,
                                                             width: 20,
                                                             height: 20
                                                         })
@@ -106,10 +106,10 @@ function C(e) {
                                     ]
                                 })
                               : (0, i.jsx)('div', {
-                                    className: E.noRoles,
+                                    className: f.noRoles,
                                     children: (0, i.jsx)(o.Text, {
                                         variant: 'text-sm/normal',
-                                        children: f.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES
+                                        children: E.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES
                                     })
                                 })
                   })

@@ -19,8 +19,8 @@ var i = n(735250),
     m = n(710845),
     p = n(590293),
     _ = n(863908),
-    f = n(871118),
-    E = n(517525),
+    E = n(871118),
+    f = n(517525),
     C = n(352978),
     g = n(590076),
     I = n(507675),
@@ -53,7 +53,7 @@ function H(e) {
             n ? null : (0, i.jsx)(P.Z, { participant: t }),
             a || null == c || c.state === y.jm8.ENDED || c.state === y.jm8.FAILED
                 ? null
-                : (0, i.jsx)(E.Z, {
+                : (0, i.jsx)(f.Z, {
                       size: h.ZP.Sizes.SMALL,
                       className: w.liveIndicator,
                       participant: t,
@@ -65,7 +65,7 @@ function H(e) {
     });
 }
 function G(e) {
-    let { participant: t, selected: n, onVideoResize: s, paused: h, fit: m, inPopout: E, width: P, focused: O } = e,
+    let { participant: t, selected: n, onVideoResize: s, paused: h, fit: m, inPopout: f, width: P, focused: O } = e,
         H = v.Z.getVideoComponent(),
         G = (0, r.e7)([T.default], () => T.default.getId()),
         V = (0, p.Z)(),
@@ -75,7 +75,7 @@ function G(e) {
         q = (0, r.e7)([x.Z], () => x.Z.getAllActiveStreams().length > 0),
         X = (0, r.e7)([S.Z], () => S.Z.isFocused()),
         Q = (null == K ? void 0 : K.ownerId) === G,
-        J = Q && !X && !E,
+        J = Q && !X && !f,
         $ = null != K ? (0, _.Z)(K, W, W.id === G, J) : null,
         ee = P < 195;
     if (
@@ -153,7 +153,7 @@ function G(e) {
                     : null,
                 (0, i.jsx)(M.Z, {
                     stream: F,
-                    inPopout: E
+                    inPopout: f
                 })
             ]
         });
@@ -161,7 +161,7 @@ function G(e) {
         return (0, i.jsxs)('div', {
             className: l()(w.content, w.streamPreview, { [w.small]: ee }),
             children: [
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(E.Z, {
                     noText: !0,
                     className: l()(w.absoluteFill, { [w.streamPreviewOpacity]: null == K }),
                     stream: t.stream

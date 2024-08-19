@@ -13,12 +13,12 @@ var i = n(481060),
     u = n(311960);
 let c = {
         page: o.ZY5.GUILD_CHANNEL,
-        section: o.jXE.PROFILE_POPOUT,
+        section: o.jXE.USER_PROFILE,
         object: o.qAy.EDIT_PER_SERVER_IDENTITY
     },
     d = {
         page: o.ZY5.USER_POPOUT,
-        section: o.jXE.PROFILE_POPOUT
+        section: o.jXE.USER_PROFILE
     };
 function _(e) {
     let { onSelect: t, onClose: n, guild: o } = e,

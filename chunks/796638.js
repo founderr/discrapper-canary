@@ -1,6 +1,6 @@
 n.d(t, {
     ZB: function () {
-        return E;
+        return f;
     },
     ZP: function () {
         return C;
@@ -24,12 +24,12 @@ var i = n(735250),
 let m = 112,
     p = (16 / 9) * m + 8,
     _ = 10 * o.Z.Millis.SECOND;
-function f(e) {
+function E(e) {
     var t;
     let n = r.default.getId();
     return e.type === d.fO.USER && e.user.id === n && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo);
 }
-function E(e, t) {
+function f(e, t) {
     let [n, i] = a.useState(Date.now());
     a.useEffect(() => {
         let e = setTimeout(() => {
@@ -70,14 +70,14 @@ function E(e, t) {
                     })(e, n)
                 ),
                 [a, o] = (0, s.partition)(i, d.Io),
-                u = a.findIndex(f),
+                u = a.findIndex(E),
                 h = null;
             -1 !== u && ((h = a[u]), a.splice(u, 1));
             let m = null != h ? e - p - 8 : e,
-                E = Math.max(0, Math.min(Math.floor((m - 8) / 132), 12, t.length)),
-                C = Math.min((m - 8) / E - 8, p),
-                g = Math.max(0, E - o.length),
-                I = o.slice(0, E),
+                f = Math.max(0, Math.min(Math.floor((m - 8) / 132), 12, t.length)),
+                C = Math.min((m - 8) / f - 8, p),
+                g = Math.max(0, f - o.length),
+                I = o.slice(0, f),
                 x = a.slice(0, g),
                 T = Array(g);
             if (g > 0) {
@@ -117,7 +117,7 @@ function C(e) {
         className: h.root,
         children: t.map((e) => {
             if (null == e) return null;
-            let t = f(e);
+            let t = E(e);
             return (0, i.jsx)(
                 'div',
                 {

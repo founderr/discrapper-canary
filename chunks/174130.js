@@ -21,12 +21,12 @@ function m(e) {
         { notifyFavoriteAdded: p } = (0, c.up)(),
         _ = (0, a.e7)([r.Z], () => r.Z.isFavorite(t.id));
     if (!n || m) return null;
-    let f = _ ? s.StarIcon : s.StarOutlineIcon,
-        E = _ ? h.Z.Messages.UNFAVORITE_CHANNEL : h.Z.Messages.FAVORITE_CHANNEL;
+    let E = _ ? s.StarIcon : s.StarOutlineIcon,
+        f = _ ? h.Z.Messages.UNFAVORITE_CHANNEL : h.Z.Messages.FAVORITE_CHANNEL;
     return (0, i.jsx)(l.ZP.Icon, {
-        icon: f,
-        tooltip: E,
-        'aria-label': E,
+        icon: E,
+        tooltip: f,
+        'aria-label': f,
         onClick: () => {
             _ ? (0, o.oC)(t.id) : (p(), (0, o.kj)(t.id));
         }

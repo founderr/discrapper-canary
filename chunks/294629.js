@@ -17,11 +17,11 @@ function u(e) {
             let { channel: n, authenticationStore: i = s.default, voiceStateStore: u = o.Z, mediaEngineStore: d = l.Z, permissionStore: h = r.Z, impersonateStore: m = a.Z } = e,
                 p = null != n ? u.getVoiceState(n.getGuildId(), i.getId()) : null,
                 _ = d.isSelfMute() || d.isSelfMutedTemporarily(),
-                f = null == n ? void 0 : n.getGuildId(),
-                E = m.isViewingRoles(f) && !h.can(c.Plq.SPEAK, n);
+                E = null == n ? void 0 : n.getGuildId(),
+                f = m.isViewingRoles(E) && !h.can(c.Plq.SPEAK, n);
             return {
                 selfMute: _,
-                suppress: (null == p ? void 0 : p.suppress) || E,
+                suppress: (null == p ? void 0 : p.suppress) || f,
                 mute: null !== (t = null == p ? void 0 : p.mute) && void 0 !== t && t
             };
         })({

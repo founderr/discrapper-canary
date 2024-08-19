@@ -12,25 +12,25 @@ var i = n(735250),
     m = n(626135),
     p = n(74538),
     _ = n(204197),
-    f = n(502762),
-    E = n(981631),
+    E = n(502762),
+    f = n(981631),
     C = n(921944),
     g = n(474936),
     I = n(689938),
     x = n(753821);
 function T() {
-    m.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
+    m.default.track(f.rMx.PREMIUM_UPSELL_INTERACTED, {
         cta_type: 'Learn more button',
         target: 'premium marketing page'
     }),
-        (0, d.uL)(E.Z5c.APPLICATION_STORE);
+        (0, d.uL)(f.Z5c.APPLICATION_STORE);
 }
 function N(e) {
     let { avatarSrc: t, username: n } = e,
         [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
     return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL
         ? null
-        : (0, i.jsxs)(f.Z.Overlay, {
+        : (0, i.jsxs)(E.Z.Overlay, {
               className: x.overlay,
               children: [
                   (0, i.jsxs)('div', {
@@ -85,7 +85,7 @@ function v(e) {
         [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
     return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL
         ? null
-        : (0, i.jsx)(f.Z.Overlay, {
+        : (0, i.jsx)(E.Z.Overlay, {
               className: x.overlay2,
               children: (0, i.jsxs)('div', {
                   className: x.contentGroup,
@@ -120,7 +120,7 @@ function v(e) {
 }
 function S(e) {
     let { avatarSrc: t, username: n } = e;
-    return (0, i.jsx)(f.Z.Overlay, {
+    return (0, i.jsx)(E.Z.Overlay, {
         className: x.overlay2,
         children: (0, i.jsxs)('div', {
             className: x.contentGroup,

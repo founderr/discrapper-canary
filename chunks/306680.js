@@ -1279,7 +1279,7 @@ let e0 = new eJ(p.Z, {
         return !1;
     },
     DRAWER_CLOSE: function () {
-        return ek(ed);
+        return !1;
     },
     BULK_ACK: function (e) {
         var t, n, r;

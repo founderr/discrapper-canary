@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(333535),
     p = n(566006),
     _ = n(443877),
-    f = n(60174),
-    E = n(216337),
+    E = n(60174),
+    f = n(216337),
     C = n(920888),
     g = n(287151),
     I = n(569471),
@@ -133,7 +133,7 @@ function j(e) {
                                 forceHideReactionCreates: !0
                             }),
                             !F &&
-                                (0, i.jsx)(f.X, {
+                                (0, i.jsx)(E.X, {
                                     type: p.O.NORMAL,
                                     message: H,
                                     channel: B,
@@ -199,7 +199,7 @@ function j(e) {
                 ]
             }),
             X && (0, i.jsx)(m.Z, { threadId: t }),
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(f.Z, {
                 channel: B,
                 isLastItem: s
             })

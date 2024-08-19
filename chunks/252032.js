@@ -18,14 +18,14 @@ var i = n(735250),
     m = n(496675),
     p = n(585483),
     _ = n(630388),
-    f = n(838440),
-    E = n(930282),
+    E = n(838440),
+    f = n(930282),
     C = n(955384),
     g = n(981631),
     I = n(58755);
 function x(e) {
     let { value: t, channel: n } = e;
-    return (0, f.v)({
+    return (0, E.v)({
         type: o.I.EDIT,
         content: t,
         channel: n,
@@ -38,10 +38,10 @@ function T(e) {
         { id: o } = t,
         { id: c } = n,
         p = t.getGuildId(),
-        f = (0, s.e7)([h.Z], () => h.Z.getGuild(p), [p]),
-        E = t.type === g.d4z.GUILD_ANNOUNCEMENT,
-        T = null != f && f.hasFeature(g.oNc.NEWS),
-        v = E && T,
+        E = (0, s.e7)([h.Z], () => h.Z.getGuild(p), [p]),
+        f = t.type === g.d4z.GUILD_ANNOUNCEMENT,
+        T = null != E && E.hasFeature(g.oNc.NEWS),
+        v = f && T,
         {
             editingMessage: S,
             editingTextValue: Z,
@@ -94,17 +94,17 @@ function N(e) {
     let { textValue: t, richValue: n, message: s, channel: l, onChange: r, onSubmit: u, onKeyDown: d } = e,
         [h, m] = a.useState(!0),
         _ = a.useCallback(() => m(!0), []),
-        f = a.useCallback(() => m(!1), []);
+        E = a.useCallback(() => m(!1), []);
     return (
         a.useEffect(
             () => (
                 p.S.subscribe(g.CkL.TEXTAREA_FOCUS, _),
-                p.S.subscribe(g.CkL.TEXTAREA_BLUR, f),
+                p.S.subscribe(g.CkL.TEXTAREA_BLUR, E),
                 () => {
-                    p.S.unsubscribe(g.CkL.TEXTAREA_FOCUS, _), p.S.unsubscribe(g.CkL.TEXTAREA_BLUR, f);
+                    p.S.unsubscribe(g.CkL.TEXTAREA_FOCUS, _), p.S.unsubscribe(g.CkL.TEXTAREA_BLUR, E);
                 }
             ),
-            [_, f]
+            [_, E]
         ),
         (0, i.jsx)(
             c.Z,
@@ -122,7 +122,7 @@ function N(e) {
                 onKeyDown: d,
                 focused: h,
                 onFocus: _,
-                onBlur: f
+                onBlur: E
             },
             s.id
         )
@@ -135,7 +135,7 @@ function v(e, t, n) {
               channel: s,
               message: a
           })
-        : (0, i.jsx)(E.ZP, {
+        : (0, i.jsx)(f.ZP, {
               message: a,
               content: t
           });

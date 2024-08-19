@@ -19,8 +19,8 @@ var i,
     m = n(442837),
     p = n(481060),
     _ = n(570140),
-    f = n(26151),
-    E = n(493683),
+    E = n(26151),
+    f = n(493683),
     C = n(758059),
     g = n(447543),
     I = n(708690),
@@ -627,7 +627,7 @@ class eh extends (i = s.PureComponent) {
                     { channel: n } = this.props,
                     i = (0, S.v_)(n),
                     a = !0;
-                1 === e.length && (a = null == E.Z._openCachedDMChannel(e[0])),
+                1 === e.length && (a = null == f.Z._openCachedDMChannel(e[0])),
                     z.default.track(et.rMx.CREATE_DM_USER_LIST_CLICKED, {
                         ...i,
                         is_new_dm: a,
@@ -637,19 +637,19 @@ class eh extends (i = s.PureComponent) {
                         num_searches: t,
                         affinity_score: this._getUserAffinities(e).affinities
                     }),
-                    E.Z.openPrivateChannel(e, !1, !1, 'New Group DM');
+                    f.Z.openPrivateChannel(e, !1, !1, 'New Group DM');
             }),
             el(this, 'pushToExistingDM', (e, t) => {
                 let n = this._searchCounter,
                     i = (0, S.v_)(e),
                     a = H.Z.getChannelId() === e.id;
-                E.Z.addRecipients(e.id, t, et.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
+                f.Z.addRecipients(e.id, t, et.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (!!a) {
                         if (e.isDM() && n !== e.id) {
-                            f.Z.call(n, !1, !0);
+                            E.Z.call(n, !1, !0);
                             return;
                         }
-                        f.Z.ring(n, t);
+                        E.Z.ring(n, t);
                     }
                 }),
                     z.default.track(et.rMx.CREATE_DM_USER_LIST_CLICKED, {
@@ -749,10 +749,10 @@ function ep(e) {
         ),
         [u, _]
     );
-    let { useV1: f, useV2Dm: E, useV2Communication: C } = O.Z.useExperiment({ location: 'desktop_dm_list' }, { autoTrackExposure: !1 });
+    let { useV1: E, useV2Dm: f, useV2Communication: C } = O.Z.useExperiment({ location: 'desktop_dm_list' }, { autoTrackExposure: !1 });
     return (s.useEffect(() => {
-        f && (0, P.W)(), E && (0, P._)(), C && (0, P._)();
-    }, [f, E, C]),
+        E && (0, P.W)(), f && (0, P._)(), C && (0, P._)();
+    }, [E, f, C]),
     m)
         ? null
         : (0, a.jsx)(p.Popout, {
@@ -780,17 +780,17 @@ function ep(e) {
           });
 }
 function e_(e) {
-    let t = ef(e);
+    let t = eE(e);
     return new Set(
         c()(U.Z.getMutablePrivateChannels())
             .values()
             .filter((e) => (0, k.bc)(e.type))
-            .filter((e) => ef(e.recipients) === t)
+            .filter((e) => eE(e.recipients) === t)
             .map((e) => e.id)
             .value()
     );
 }
-function ef(e) {
+function eE(e) {
     return JSON.stringify(e.sort());
 }
 el(eh, 'contextType', v.ZP);

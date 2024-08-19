@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var i = n(735250);
@@ -17,10 +17,10 @@ var a = n(442837),
     m = n(981631),
     p = n(689938),
     _ = n(349836);
-function f(e) {
+function E(e) {
     let { channel: t } = e,
         n = (0, r.ZP)(t, !0),
-        f = (0, a.e7)([u.Z], () => u.Z.can(m.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
+        E = (0, a.e7)([u.Z], () => u.Z.can(m.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
     return (0, i.jsxs)(h.ZP, {
         channelId: t.id,
         children: [
@@ -32,7 +32,7 @@ function f(e) {
                     topicHook: () => o.Z.parseTopic(t.topic, !0, { channelId: t.id })
                 })
             }),
-            f
+            E
                 ? (0, i.jsx)('div', {
                       className: _.buttonContainer,
                       children: (0, i.jsx)(d.Z, {

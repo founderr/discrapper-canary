@@ -17,7 +17,7 @@ var i = n(735250),
 let m = 'CameraPreviewPosition';
 function p(e) {
     let { width: t, onContextMenuParticipant: n, height: s, channel: p, participants: _ } = e,
-        [f, E] = (function () {
+        [E, f] = (function () {
             let [e, t] = a.useState(() => r.K.get(m, u.VD2.BOTTOM_RIGHT));
             return [
                 e,
@@ -36,10 +36,10 @@ function p(e) {
         (0, i.jsx)('div', {
             className: d.container,
             children: (0, i.jsx)(o._, {
-                position: f,
+                position: E,
                 id: 0,
                 ref: C,
-                onMove: (e, t) => E(t),
+                onMove: (e, t) => f(t),
                 maxX: t,
                 maxY: s,
                 edgeOffsetTop: g,

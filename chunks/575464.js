@@ -17,7 +17,7 @@ var a = n(120356),
     m = n(51144),
     p = n(808794);
 function _(e) {
-    let { user: t, row: n, hideDiscriminator: a, comparator: _, selected: f, checked: E, onClick: C, onMouseEnter: g, 'aria-setsize': I, 'aria-posinset': x } = e,
+    let { user: t, row: n, hideDiscriminator: a, comparator: _, selected: E, checked: f, onClick: C, onMouseEnter: g, 'aria-setsize': I, 'aria-posinset': x } = e,
         T = (0, r.e7)([h.Z], () => h.Z.getStatus(t.id)),
         N = (0, l.JA)(String(t.id));
     return (0, i.jsx)(o.Clickable, {
@@ -31,12 +31,12 @@ function _(e) {
         },
         ...N,
         role: 'option',
-        'aria-selected': E,
+        'aria-selected': f,
         'aria-setsize': I,
         'aria-posinset': x,
         children: (0, i.jsxs)(d.Z, {
             align: d.Z.Align.CENTER,
-            className: s()(p.friend, { [p.friendSelected]: f }),
+            className: s()(p.friend, { [p.friendSelected]: E }),
             children: [
                 (0, i.jsx)(u.Z, {
                     user: t,
@@ -67,7 +67,7 @@ function _(e) {
                 (0, i.jsx)(o.Checkbox, {
                     displayOnly: !0,
                     size: 22,
-                    value: E,
+                    value: f,
                     className: p.checkbox
                 })
             ]

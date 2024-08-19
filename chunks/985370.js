@@ -14,7 +14,7 @@ var i = n(735250),
     _ = n(177480);
 t.Z = (e) => {
     let { channel: t, className: n } = e,
-        { isHovered: s, setIsHovered: f, onMouseEnter: E, onMouseLeave: C, cancelTimers: g } = (0, u.Z)(200, 300),
+        { isHovered: s, setIsHovered: E, onMouseEnter: f, onMouseLeave: C, cancelTimers: g } = (0, u.Z)(200, 300),
         [I, x] = a.useState(!1),
         T = (0, r.e7)([h.Z], () => h.Z.effectCooldownEndTime),
         N = a.useMemo(() => (null != T ? (T.getTime() - Date.now()) / 1000 : 0), [T]),
@@ -22,9 +22,9 @@ t.Z = (e) => {
         S = v > 0,
         Z = a.useCallback(
             (e) => {
-                if ('focus' !== e.type) !I && !S && E();
+                if ('focus' !== e.type) !I && !S && f();
             },
-            [I, S, E]
+            [I, S, f]
         ),
         A = a.useCallback(() => {
             !I && C();
@@ -43,7 +43,7 @@ t.Z = (e) => {
         align: 'center',
         spacing: 16,
         onRequestClose: () => {
-            f(!1), x(!1);
+            E(!1), x(!1);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -51,7 +51,7 @@ t.Z = (e) => {
                 isHovered: b,
                 channel: t,
                 closePopout: n,
-                onMouseEnter: E,
+                onMouseEnter: f,
                 onMouseLeave: A,
                 onFocus: () => x(!0)
             });

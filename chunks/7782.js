@@ -11,8 +11,8 @@ var i = n(735250),
     m = n(86203),
     p = n(6025),
     _ = n(621853),
-    f = n(171368),
-    E = n(433355),
+    E = n(171368),
+    f = n(433355),
     C = n(699516),
     g = n(594174),
     I = n(768581),
@@ -83,7 +83,7 @@ let A = (e) => {
                       }),
                       (0, i.jsx)(r.Clickable, {
                           onClick: () => {
-                              (0, f.openUserProfileModal)({
+                              (0, E.openUserProfileModal)({
                                   userId: t,
                                   channelId: n,
                                   section: v.oh.MUTUAL_GUILDS,
@@ -211,10 +211,10 @@ let A = (e) => {
                 (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
             }, []),
             l = a.useCallback(() => {
-                p.Z.closeChannelSidebar(E.uZ);
+                p.Z.closeChannelSidebar(f.uZ);
             }, []),
             o = a.useCallback(() => {
-                p.Z.closeChannelSidebar(E.uZ);
+                p.Z.closeChannelSidebar(f.uZ);
             }, []),
             {
                 acceptMessageRequest: c,
@@ -222,14 +222,14 @@ let A = (e) => {
                 isAcceptLoading: h,
                 isRejectLoading: m,
                 isOptimisticAccepted: _,
-                isOptimisticRejected: f
+                isOptimisticRejected: E
             } = (0, d.m)({
                 user: g.default.getUser(n),
                 onError: s,
                 onAcceptSuccess: o,
                 onRejectSuccess: l
             }),
-            C = h || m || _ || f;
+            C = h || m || _ || E;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(r.Button, {
