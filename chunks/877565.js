@@ -23,8 +23,8 @@ function s(e) {
     );
 }
 function o(e) {
-    let { query: t, selectedIndex: n, autocompletes: a, onHover: o, onClick: l, titleWithQuery: u, titleWithoutQuery: c, Component: d, getProps: _, getQuery: E, key: f, indexOffset: h = 0, headerClassName: p, headerTrailingContent: I, footer: m } = e;
-    if (null == m && (null == a || 0 === a.length)) return null;
+    let { query: t, selectedIndex: n, autocompletes: a, onHover: o, onClick: l, titleWithQuery: u, titleWithoutQuery: c, Component: d, getProps: _, getQuery: E, key: f, indexOffset: h = 0, headerClassName: p, headerTrailingContent: m, footer: I } = e;
+    if (null == I && (null == a || 0 === a.length)) return null;
     let T =
         null == a
             ? void 0
@@ -51,11 +51,11 @@ function o(e) {
                           query: t,
                           getQuery: E,
                           headerClassName: p,
-                          headerTrailingContent: I
+                          headerTrailingContent: m
                       })
                     : null,
                 T,
-                m
+                I
             ]
         },
         f

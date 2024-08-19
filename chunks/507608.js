@@ -37,8 +37,8 @@ var l = i(735250),
     P = i(680005),
     k = i(519896),
     O = i(981631),
-    M = i(689938),
-    Z = i(637714);
+    Z = i(689938),
+    M = i(637714);
 function L(e) {
     let { app: n, subscriptionGroupListing: i, onlySubscribeServerSubForGuildId: r, subscriptionListings: a, otpListings: m } = e,
         g = t.useMemo(() => (0, R.y)(n, 100), [n]),
@@ -78,7 +78,7 @@ function L(e) {
                 });
         }, [N, n.id, I]),
         (0, l.jsxs)('div', {
-            className: Z.wrapper,
+            className: M.wrapper,
             children: [
                 (0, l.jsx)(s.j, {
                     title: n.name,
@@ -90,15 +90,15 @@ function L(e) {
                 a.length > 0 &&
                     null != i &&
                     (0, l.jsxs)('div', {
-                        className: Z.productSection,
+                        className: M.productSection,
                         children: [
                             (0, l.jsx)(d.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-secondary',
-                                children: M.Z.Messages.STOREFRONT_APP_SUBSCRIPTIONS
+                                children: Z.Z.Messages.STOREFRONT_APP_SUBSCRIPTIONS
                             }),
                             (0, l.jsx)('div', {
-                                className: Z.productList,
+                                className: M.productList,
                                 children: a.map((e) =>
                                     (0, l.jsx)(
                                         y,
@@ -117,15 +117,15 @@ function L(e) {
                     }),
                 m.length > 0 &&
                     (0, l.jsxs)('div', {
-                        className: Z.productSection,
+                        className: M.productSection,
                         children: [
                             (0, l.jsx)(d.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-secondary',
-                                children: M.Z.Messages.STOREFRONT_APP_PRODUCTS
+                                children: Z.Z.Messages.STOREFRONT_APP_PRODUCTS
                             }),
                             (0, l.jsx)('div', {
-                                className: Z.productList,
+                                className: M.productList,
                                 children: m.map((e) =>
                                     (0, l.jsx)(
                                         E,
@@ -141,14 +141,14 @@ function L(e) {
                     }),
                 (0, l.jsx)(d.Text, {
                     variant: 'text-md/normal',
-                    className: Z.legalText,
+                    className: M.legalText,
                     children:
                         null != n.termsOfServiceUrl && null != n.privacyPolicyUrl
-                            ? M.Z.Messages.STOREFRONT_VIEW_TOS_PP.format({
+                            ? Z.Z.Messages.STOREFRONT_VIEW_TOS_PP.format({
                                   tosUrl: n.termsOfServiceUrl,
                                   ppUrl: n.privacyPolicyUrl
                               })
-                            : M.Z.Messages.STOREFRONT_NO_TOS_PP
+                            : Z.Z.Messages.STOREFRONT_NO_TOS_PP
                 })
             ]
         })
@@ -240,16 +240,16 @@ function E(e) {
     if (null == f) return null;
     let R = null !== (i = f.name) && void 0 !== i ? i : '',
         k = null !== (t = null == x ? void 0 : null === (n = x.description) || void 0 === n ? void 0 : n.trim()) && void 0 !== t ? t : void 0,
-        Z = (null == x ? void 0 : x.headerBackground) != null && null !== (s = b.Z.toURLSafe((0, _._W)(u, x.headerBackground, 256))) && void 0 !== s ? s : void 0,
+        M = (null == x ? void 0 : x.headerBackground) != null && null !== (s = b.Z.toURLSafe((0, _._W)(u, x.headerBackground, 256))) && void 0 !== s ? s : void 0,
         L = f.type === O.epS.DURABLE && j,
-        y = f.type === O.epS.DURABLE ? (L ? M.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : M.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
+        y = f.type === O.epS.DURABLE ? (L ? Z.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : Z.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
         { price: E } = f;
     return null == E
         ? null
         : (0, l.jsx)(r.I, {
               title: R,
               description: k,
-              headerImage: Z,
+              headerImage: M,
               availabilityLabel: y,
               onDetails:
                   null != v

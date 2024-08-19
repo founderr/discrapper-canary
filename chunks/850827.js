@@ -13,8 +13,8 @@ var i = n(120356),
     f = n(592125),
     h = n(594174),
     p = n(979651),
-    I = n(374129),
-    m = n(639351),
+    m = n(374129),
+    I = n(639351),
     T = n(503438),
     g = n(802856),
     S = n(387903),
@@ -63,7 +63,7 @@ t.Z = (0, c.Z)((e) => {
                         look: k,
                         color: G,
                         onAction: F,
-                        Icon: m.Z
+                        Icon: I.Z
                     },
                     'ConnectPlatformActivityButton'
                 );
@@ -75,7 +75,7 @@ t.Z = (0, c.Z)((e) => {
                         color: G,
                         platform: d.Z.get(M.ABu.PLAYSTATION),
                         onAction: F,
-                        Icon: I.Z
+                        Icon: m.Z
                     },
                     'ConnectPlatformActivityButton'
                 );

@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     },
     _t: function () {
-        return I;
+        return m;
     },
     dp: function () {
         return p;
@@ -56,7 +56,7 @@ function d(e) {
 }
 function _(e) {
     let t,
-        { selectionManager: n, keyboardDelegate: _, ref: E, autoFocus: f = !1, shouldFocusWrap: h = !1, disallowEmptySelection: p = !1, disallowSelectAll: I = !1, selectOnFocus: m = 'replace' === n.selectionBehavior, disallowTypeAhead: T = !1, shouldUseVirtualFocus: g, allowsTabNavigation: S = !1, isVirtualized: A, scrollRef: N = E, linkBehavior: v = 'action' } = e,
+        { selectionManager: n, keyboardDelegate: _, ref: E, autoFocus: f = !1, shouldFocusWrap: h = !1, disallowEmptySelection: p = !1, disallowSelectAll: m = !1, selectOnFocus: I = 'replace' === n.selectionBehavior, disallowTypeAhead: T = !1, shouldUseVirtualFocus: g, allowsTabNavigation: S = !1, isVirtualized: A, scrollRef: N = E, linkBehavior: v = 'action' } = e,
         { direction: O } = (0, l.bU)(),
         R = (0, s.tv)(),
         C = (0, i.useRef)({
@@ -106,7 +106,7 @@ function _(e) {
                 if ((e.altKey && 'Tab' === e.key && e.preventDefault(), !E.current.contains(e.target))) return;
                 let A = (t, i) => {
                     if (null != t) {
-                        if (n.isLink(t) && 'selection' === v && m && !u(e)) {
+                        if (n.isLink(t) && 'selection' === v && I && !u(e)) {
                             (0, r.flushSync)(() => {
                                 n.setFocusedKey(t, i);
                             });
@@ -114,7 +114,7 @@ function _(e) {
                             R.open(a, e);
                             return;
                         }
-                        n.setFocusedKey(t, i), (!n.isLink(t) || 'override' !== v) && (e.shiftKey && 'multiple' === n.selectionMode ? n.extendSelection(t) : m && !u(e) && n.replaceSelection(t));
+                        n.setFocusedKey(t, i), (!n.isLink(t) || 'override' !== v) && (e.shiftKey && 'multiple' === n.selectionMode ? n.extendSelection(t) : I && !u(e) && n.replaceSelection(t));
                     }
                 };
                 switch (e.key) {
@@ -150,14 +150,14 @@ function _(e) {
                         if (_.getFirstKey) {
                             e.preventDefault();
                             let t = _.getFirstKey(n.focusedKey, c(e));
-                            n.setFocusedKey(t), c(e) && e.shiftKey && 'multiple' === n.selectionMode ? n.extendSelection(t) : m && n.replaceSelection(t);
+                            n.setFocusedKey(t), c(e) && e.shiftKey && 'multiple' === n.selectionMode ? n.extendSelection(t) : I && n.replaceSelection(t);
                         }
                         break;
                     case 'End':
                         if (_.getLastKey) {
                             e.preventDefault();
                             let t = _.getLastKey(n.focusedKey, c(e));
-                            n.setFocusedKey(t), c(e) && e.shiftKey && 'multiple' === n.selectionMode ? n.extendSelection(t) : m && n.replaceSelection(t);
+                            n.setFocusedKey(t), c(e) && e.shiftKey && 'multiple' === n.selectionMode ? n.extendSelection(t) : I && n.replaceSelection(t);
                         }
                         break;
                     case 'PageDown':
@@ -167,7 +167,7 @@ function _(e) {
                         _.getKeyPageAbove && (e.preventDefault(), A(_.getKeyPageAbove(n.focusedKey)));
                         break;
                     case 'a':
-                        c(e) && 'multiple' === n.selectionMode && !0 !== I && (e.preventDefault(), n.selectAll());
+                        c(e) && 'multiple' === n.selectionMode && !0 !== m && (e.preventDefault(), n.selectAll());
                         break;
                     case 'Escape':
                         e.preventDefault(), !p && n.clearSelection();
@@ -195,7 +195,7 @@ function _(e) {
                     if ((n.setFocused(!0), null == n.focusedKey)) {
                         var t, r;
                         let i = (e) => {
-                                null != e && (n.setFocusedKey(e), m && n.replaceSelection(e));
+                                null != e && (n.setFocusedKey(e), I && n.replaceSelection(e));
                             },
                             a = e.relatedTarget;
                         a && e.currentTarget.compareDocumentPosition(a) & Node.DOCUMENT_POSITION_FOLLOWING ? i(null !== (t = n.lastSelectedKey) && void 0 !== t ? t : _.getLastKey()) : i(null !== (r = n.firstSelectedKey) && void 0 !== r ? r : _.getFirstKey());
@@ -229,18 +229,18 @@ function _(e) {
     );
 }
 function E(e) {
-    let { selectionManager: t, key: n, ref: r, shouldSelectOnPressUp: l, shouldUseVirtualFocus: d, focus: _, isDisabled: E, onAction: p, allowsDifferentPressOrigin: I, linkBehavior: m = 'action' } = e,
+    let { selectionManager: t, key: n, ref: r, shouldSelectOnPressUp: l, shouldUseVirtualFocus: d, focus: _, isDisabled: E, onAction: p, allowsDifferentPressOrigin: m, linkBehavior: I = 'action' } = e,
         T = (0, s.tv)(),
         g = (e) => {
             if ('keyboard' === e.pointerType && u(e)) t.toggleSelection(n);
             else {
                 if ('none' === t.selectionMode) return;
                 if (t.isLink(n)) {
-                    if ('selection' === m) {
+                    if ('selection' === I) {
                         T.open(r.current, e), t.setSelectedKeys(t.selectedKeys);
                         return;
                     }
-                    if ('override' === m || 'none' === m) return;
+                    if ('override' === I || 'none' === I) return;
                 }
                 'single' === t.selectionMode ? (t.isSelected(n) && !t.disallowEmptySelection ? t.toggleSelection(n) : t.replaceSelection(n)) : e && e.shiftKey ? t.extendSelection(n) : 'toggle' === t.selectionBehavior || (e && (c(e) || 'touch' === e.pointerType || 'virtual' === e.pointerType)) ? t.toggleSelection(n) : t.replaceSelection(n);
             }
@@ -261,8 +261,8 @@ function E(e) {
                   e.target === r.current && t.setFocusedKey(n);
               }
           });
-    let A = t.isLink(n) && 'override' === m,
-        N = t.isLink(n) && 'selection' !== m && 'none' !== m,
+    let A = t.isLink(n) && 'override' === I,
+        N = t.isLink(n) && 'selection' !== I && 'none' !== I,
         v = !E && t.canSelectItem(n) && !A,
         O = (p || N) && !E,
         R = O && ('replace' === t.selectionBehavior ? !v : !v || t.isEmpty),
@@ -280,7 +280,7 @@ function E(e) {
         ? ((U.onPressStart = (e) => {
               (D.current = e.pointerType), (b.current = L), 'keyboard' === e.pointerType && (!y || h()) && g(e);
           }),
-          I
+          m
               ? ((U.onPressUp = R
                     ? null
                     : (e) => {
@@ -460,7 +460,7 @@ class p {
         'stack' === this.layout && 'vertical' === this.orientation && ((this.getKeyLeftOf = void 0), (this.getKeyRightOf = void 0));
     }
 }
-function I(e) {
+function m(e) {
     let { selectionManager: t, collection: n, disabledKeys: r, ref: a, keyboardDelegate: s } = e,
         o = (0, l.Xe)({
             usage: 'search',

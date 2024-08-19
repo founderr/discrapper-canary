@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(436660),
     h = n(887490),
     p = n(77224),
-    I = n(135223),
-    m = n(704875),
+    m = n(135223),
+    I = n(704875),
     T = n(653309),
     g = n(322317),
     S = n(910212);
@@ -47,7 +47,7 @@ class N extends i.PureComponent {
     decorate(e) {
         var t;
         let { editor: n, guildId: r, decorateExtra: i } = this.props;
-        return [...(0, I.Z)(n, e, r), ...(0, p.Z)(n, e), ...(null !== (t = null == i ? void 0 : i(n, e)) && void 0 !== t ? t : [])];
+        return [...(0, m.Z)(n, e, r), ...(0, p.Z)(n, e), ...(null !== (t = null == i ? void 0 : i(n, e)) && void 0 !== t ? t : [])];
     }
     renderElement(e) {
         var t;
@@ -58,7 +58,7 @@ class N extends i.PureComponent {
                 ...s.style,
                 textAlign: 'right'
             });
-        let l = null !== (t = null == a ? void 0 : a(e)) && void 0 !== t ? t : (0, m.Z)(e, n, i);
+        let l = null !== (t = null == a ? void 0 : a(e)) && void 0 !== t ? t : (0, I.Z)(e, n, i);
         return null != l
             ? l
             : (0, r.jsx)('div', {
@@ -277,7 +277,7 @@ class N extends i.PureComponent {
         null == n || n(e), !(e.isDefaultPrevented() || e.isPropagationStopped()) && !r && (t.insertData(e.clipboardData), e.preventDefault(), e.stopPropagation());
     }
     render() {
-        let { editor: e, className: t, containerClassName: n, canFocus: i, autoFocus: a, placeholder: l, channelId: u, guildId: c, onChange: d, onFocus: _, onBlur: E, onKeyDown: f, onKeyUp: h, decorateExtra: p, renderExtraElement: I, renderExtraLeaf: m, ...T } = this.props;
+        let { editor: e, className: t, containerClassName: n, canFocus: i, autoFocus: a, placeholder: l, channelId: u, guildId: c, onChange: d, onFocus: _, onBlur: E, onKeyDown: f, onKeyUp: h, decorateExtra: p, renderExtraElement: m, renderExtraLeaf: I, ...T } = this.props;
         return (0, r.jsxs)('div', {
             ref: this.containerRef,
             className: n,

@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(153867),
     h = n(410575),
     p = n(347469),
-    I = n(40851),
-    m = n(367907),
+    m = n(40851),
+    I = n(367907),
     T = n(907040),
     g = n(455708),
     S = n(314910),
@@ -43,7 +43,7 @@ let k = b.Om + P.Su.MEDIUM,
             'aria-controls': t ? o : void 0,
             ...l,
             onClick: () => {
-                m.ZP.trackWithMetadata(M.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
+                I.ZP.trackWithMetadata(M.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
                     tab: i,
                     badged: !1
                 }),
@@ -125,7 +125,7 @@ t.Z = i.memo(function (e) {
         }),
         er = (0, L.Iu)((e) => e.activeView),
         ei = (0, v.fQ)(Y),
-        { renderWindow: ea, windowDispatch: es } = i.useContext(I.ZP),
+        { renderWindow: ea, windowDispatch: es } = i.useContext(m.ZP),
         eo = (0, d.e7)([O.Z], () => !O.Z.hasLoadedStickerPacks),
         el = (0, A.P)('expression_picker'),
         eu = null != Q,
@@ -177,7 +177,7 @@ t.Z = i.memo(function (e) {
                     ? (null == J ? void 0 : null === (e = J.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == J || null === (t = J.current) || void 0 === t || t.onPickerOpen(), ($.current = !0))
                     : er === b.X1.STICKER
                       ? (null == J ? void 0 : null === (n = J.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !eo && (null == J || null === (r = J.current) || void 0 === r || r.onPickerOpen(), ($.current = !0))
-                      : (m.ZP.trackWithMetadata(M.rMx.EXPRESSION_PICKER_OPENED, {
+                      : (I.ZP.trackWithMetadata(M.rMx.EXPRESSION_PICKER_OPENED, {
                             width: ee.current.offsetWidth,
                             tab: er,
                             badged: !1
@@ -189,11 +189,11 @@ t.Z = i.memo(function (e) {
         ef = (null === (n = j.stickers) || void 0 === n ? void 0 : n.allowSending) && null != H,
         eh = !(null === (a = j.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (eE || ef),
         ep = 'left' === K ? 'right' : 'left',
-        eI = null != z ? z : 'left' === K ? G.positionLayerDefaultAlignLeft : G.positionLayerDefaultAlignRight;
+        em = null != z ? z : 'left' === K ? G.positionLayerDefaultAlignLeft : G.positionLayerDefaultAlignRight;
     return (0, r.jsx)(h.Z, {
         section: M.jXE.EXPRESSION_PICKER,
         children: (0, r.jsx)(S.W5, {
-            className: s()(G.positionLayer, eI),
+            className: s()(G.positionLayer, em),
             targetRef: o,
             position: W,
             align: K,

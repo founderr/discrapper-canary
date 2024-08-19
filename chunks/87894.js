@@ -28,20 +28,20 @@ n.d(t, {
     }
 });
 var i,
-    s,
-    a = n(497505);
+    a,
+    s = n(497505);
 function r(e) {
-    return [a.jn.GIFT_INVENTORY_FOR_YOU, a.jn.GIFT_INVENTORY_OTHER].includes(e);
+    return [s.jn.GIFT_INVENTORY_FOR_YOU, s.jn.GIFT_INVENTORY_OTHER].includes(e);
 }
 function l(e) {
-    return e === a.jn.GIFT_INVENTORY_FOR_YOU || !r(e);
+    return e === s.jn.GIFT_INVENTORY_FOR_YOU || !r(e);
 }
 function o(e) {
     let { quest: t, location: n } = e,
         { userStatus: i } = t;
     return ((null == i ? void 0 : i.enrolledAt) != null && null == i.completedAt) || l(n);
 }
-((i = s || (s = {}))[(i.FOR_YOU = 0)] = 'FOR_YOU'), (i[(i.OTHER = 1)] = 'OTHER');
+((i = a || (a = {}))[(i.FOR_YOU = 0)] = 'FOR_YOU'), (i[(i.OTHER = 1)] = 'OTHER');
 let c = 100,
     u = 20,
     d = 32,

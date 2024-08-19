@@ -9,13 +9,13 @@ n.d(t, {
     n(653041);
 var i = n(395041);
 n(349033);
-var s = n(999650);
+var a = n(999650);
 n(72006);
-var a = n(405656);
+var s = n(405656);
 n(981631);
 let r = {
-    [s.Qe.FILTER]: i.w,
-    [s.Qe.ANSWER]: i.O
+    [a.Qe.FILTER]: i.w,
+    [a.Qe.ANSWER]: i.O
 };
 function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
@@ -39,5 +39,5 @@ function l() {
 }
 function o(e, t) {
     let { focusOffset: n, anchorOffset: i } = t.getSelection();
-    return (0, a.g9)(e, n, i);
+    return (0, s.g9)(e, n, i);
 }

@@ -24,8 +24,8 @@ e.exports = function (e, t, n) {
                 f = n - c - 1,
                 h = i(c),
                 p = o(d.concat([u, E, d.alloc(1, 1), t], f), s(h, f)),
-                I = o(h, s(p, c));
-            return new l(d.concat([d.alloc(1), I, p], n));
+                m = o(h, s(p, c));
+            return new l(d.concat([d.alloc(1), m, p], n));
         })(f, t);
     else if (1 === _)
         E = (function (e, t, n) {

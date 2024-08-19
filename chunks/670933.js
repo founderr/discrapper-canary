@@ -15,7 +15,7 @@ function s(e, t) {
         p = (0, a.Z)(null !== (n = null == t ? void 0 : t.additionalDigits) && void 0 !== n ? n : 2);
     if (2 !== p && 1 !== p && 0 !== p) throw RangeError('additionalDigits must be 0, 1 or 2');
     if (!('string' == typeof e || '[object String]' === Object.prototype.toString.call(e))) return new Date(NaN);
-    var I = (function (e) {
+    var m = (function (e) {
         var t,
             n = {},
             r = e.split(o.dateTimeDelimiter);
@@ -26,8 +26,8 @@ function s(e, t) {
         }
         return n;
     })(e);
-    if (I.date) {
-        var m = (function (e, t) {
+    if (m.date) {
+        var I = (function (e, t) {
             var n = RegExp('^(?:(\\d{4}|[+-]\\d{' + (4 + t) + '})|(\\d{2}|[+-]\\d{' + (2 + t) + '})$)'),
                 r = e.match(n);
             if (!r)
@@ -41,7 +41,7 @@ function s(e, t) {
                 year: null === a ? i : 100 * a,
                 restDateString: e.slice((r[1] || r[2]).length)
             };
-        })(I.date, p);
+        })(m.date, p);
         s = (function (e, t) {
             if (null === t) return new Date(NaN);
             var n = e.match(l);
@@ -72,13 +72,13 @@ function s(e, t) {
                 })(t, i)
                 ? new Date(NaN)
                 : (c.setUTCFullYear(t, a, Math.max(i, s)), c);
-        })(m.restDateString, m.year);
+        })(I.restDateString, I.year);
     }
     if (!s || isNaN(s.getTime())) return new Date(NaN);
     var T = s.getTime(),
         g = 0;
     if (
-        I.time &&
+        m.time &&
         isNaN(
             (g = (function (e) {
                 var t = e.match(u);
@@ -91,11 +91,11 @@ function s(e, t) {
                 })(n, i, a)
                     ? NaN
                     : n * r.vh + i * r.yJ + 1000 * a;
-            })(I.time))
+            })(m.time))
         )
     )
         return new Date(NaN);
-    if (I.timezone) {
+    if (m.timezone) {
         if (
             isNaN(
                 (h = (function (e) {
@@ -110,7 +110,7 @@ function s(e, t) {
                     })(i, a)
                         ? NaN
                         : n * (i * r.vh + a * r.yJ);
-                })(I.timezone))
+                })(m.timezone))
             )
         )
             return new Date(NaN);

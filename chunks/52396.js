@@ -40,7 +40,7 @@ function C(e) {
                 ...r
             });
         case u.s.TOP_GAME:
-            return (0, t.jsx)(N, {
+            return (0, t.jsx)(_, {
                 entry: n,
                 ...r
             });
@@ -55,12 +55,12 @@ function C(e) {
                 ...r
             });
         case u.s.LISTENED_SESSION:
-            return (0, t.jsx)(g, {
+            return (0, t.jsx)(S, {
                 entry: n,
                 ...r
             });
         case u.s.LAUNCHED_ACTIVITY:
-            return (0, t.jsx)(_, {
+            return (0, t.jsx)(N, {
                 entry: n,
                 ...r
             });
@@ -75,7 +75,7 @@ function h(e) {
         children: (0, t.jsx)(C, { ...l })
     });
 }
-function _(e) {
+function N(e) {
     let { entry: n, children: l, ...r } = e,
         i = (0, o.Z)({
             entry: n,
@@ -103,7 +103,7 @@ function T(e) {
         children: l
     });
 }
-function N(e) {
+function _(e) {
     let { entry: n, children: l, ...r } = e,
         i = (0, d.Z)({
             entry: n,
@@ -145,7 +145,7 @@ function I(e) {
         children: l
     });
 }
-function g(e) {
+function S(e) {
     let { entry: n, children: l, ...r } = e,
         i = (0, m.Z)({
             entry: n,

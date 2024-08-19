@@ -7,9 +7,9 @@ n.d(t, {
     n(47120),
     n(390547);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(512722),
     o = n.n(l),
     c = n(442837),
@@ -41,7 +41,7 @@ let D = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
     j = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
     U = (0, M.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function y(e) {
-    let { members: t, membersOnline: n, isLarge: s, isStacked: a } = e,
+    let { members: t, membersOnline: n, isLarge: a, isStacked: s } = e,
         l = [];
     return (
         null != n &&
@@ -83,21 +83,21 @@ function y(e) {
             ),
         (0, i.jsx)('div', {
             className: r()(b.statusCounts, {
-                [b.large]: s,
-                [b.stacked]: a
+                [b.large]: a,
+                [b.stacked]: s
             }),
             children: l
         })
     );
 }
 function B(e) {
-    let { channel: t, guild: n, isStacked: s, hasEnded: a } = e;
+    let { channel: t, guild: n, isStacked: a, hasEnded: s } = e;
     if (null != t && null != n) {
         let e = (0, C.KS)(t, n);
         return (0, i.jsxs)('div', {
             className: r()(b.channel, {
-                [b.stacked]: s,
-                [b.ended]: a
+                [b.stacked]: a,
+                [b.ended]: s
             }),
             children: [
                 null != e
@@ -122,8 +122,8 @@ function B(e) {
     return null != n
         ? (0, i.jsx)('div', {
               className: r()(b.channel, {
-                  [b.stacked]: s,
-                  [b.ended]: a
+                  [b.stacked]: a,
+                  [b.ended]: s
               }),
               children: (0, i.jsx)(p.Z, {
                   children: (0, i.jsx)(d.Text, {
@@ -136,15 +136,15 @@ function B(e) {
 }
 function k(e) {
     var t, n;
-    let a,
+    let s,
         l,
         { invite: u, getAcceptInviteContext: C } = e,
         { approximate_member_count: p, approximate_presence_count: M, target_type: k, target_application: G } = u;
     o()(k === Z.Iq.EMBEDDED_APPLICATION && null != G, 'invalid application invite');
-    let F = s.useRef(null),
-        [w, V] = s.useState(!1),
-        [H, Y] = s.useState(!1);
-    s.useEffect(() => {
+    let F = a.useRef(null),
+        [w, V] = a.useState(!1),
+        [H, Y] = a.useState(!1);
+    a.useEffect(() => {
         let e = new ResizeObserver(() =>
                 (function () {
                     var e;
@@ -198,15 +198,15 @@ function k(e) {
         if (null == u.guild) return (0, i.jsx)(v.Z, {});
         W = new S.ZP(u.guild);
     }
-    let es = (ei && !X) || (ei && z),
-        ea = () => {
+    let ea = (ei && !X) || (ei && z),
+        es = () => {
             _.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: u.code,
                 context: C('Invite Button Embed'),
                 analyticsLocations: J
             });
         };
-    return (ei && z && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (a = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), (l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START), null == u.code || '' === u.code)
+    return (ei && z && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), (l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START), null == u.code || '' === u.code)
         ? null
         : (0, i.jsxs)('div', {
               className: b.container,
@@ -296,18 +296,18 @@ function k(e) {
                                                 })
                                               : null,
                                           (0, i.jsx)(d.Tooltip, {
-                                              text: a,
+                                              text: s,
                                               children: (e) => {
                                                   let { onClick: t, ...n } = e;
                                                   return (0, i.jsx)(d.Button, {
                                                       className: b.actionButton,
                                                       onClick: () => {
-                                                          ea(), null == t || t();
+                                                          es(), null == t || t();
                                                       },
                                                       wrapperClassName: b.tooltipButtonWrapper,
                                                       ...n,
                                                       submitting: en,
-                                                      disabled: es,
+                                                      disabled: ea,
                                                       color: d.ButtonColors.GREEN,
                                                       children: l
                                                   });

@@ -13,8 +13,8 @@ var i = n(367907),
     f = n(877565),
     h = n(590921),
     p = n(981631),
-    I = n(689938);
-let m = {
+    m = n(689938);
+let I = {
     results: {
         command: null,
         stickers: []
@@ -36,7 +36,7 @@ let g = {
     queryResults(e, t, n, r) {
         var i;
         let s = null === (i = a.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.name;
-        if (null == s) return m;
+        if (null == s) return I;
         let o = [];
         (0, u.$p)();
         let c = E.ZP.queryStickers([n], !0, [e, (e, t) => t === l.eb.SENDABLE]);
@@ -63,8 +63,8 @@ let g = {
                 autocompletes: t,
                 onHover: a,
                 onClick: s,
-                titleWithQuery: I.Z.Messages.STICKERS_MATCHING,
-                titleWithoutQuery: I.Z.Messages.STICKER,
+                titleWithQuery: m.Z.Messages.STICKERS_MATCHING,
+                titleWithoutQuery: m.Z.Messages.STICKER,
                 Component: o.ZP.Sticker,
                 getProps: (e) => {
                     let { comparator: t, sticker: n } = e;

@@ -1,8 +1,8 @@
 n(47120), n(653041);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(215569),
     o = n(481060),
     c = n(140710),
@@ -21,7 +21,7 @@ let N = (e, t) => (null == e && null == t) || e === t,
         let n = f(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class p extends s.PureComponent {
+class p extends a.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -34,7 +34,7 @@ class p extends s.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: s, isGuest: a, isPendingMember: N, isForumToolbar: f, channel: C, className: p, forceAddReactions: g, reactionClassName: S, useChatFontScaling: A, forceHideReactionCreates: R, remainingReactions: x, combinedReactions: O, visibleReactionsCount: M } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: N, isForumToolbar: f, channel: C, className: p, forceAddReactions: g, reactionClassName: S, useChatFontScaling: A, forceHideReactionCreates: R, remainingReactions: x, combinedReactions: O, visibleReactionsCount: M } = this.props,
             { disableTransitionAppear: v } = this.state,
             L = A ? h : T,
             Z = M > 0;
@@ -56,8 +56,8 @@ class p extends s.PureComponent {
                     reactions: O,
                     message: e,
                     readOnly: n,
-                    isLurking: s,
-                    isGuest: a,
+                    isLurking: a,
+                    isGuest: s,
                     isPendingMember: N,
                     isForumToolbar: f,
                     useChatFontScaling: A,
@@ -114,19 +114,19 @@ class p extends s.PureComponent {
     }
 }
 t.Z = (e) => {
-    let { message: t, maxReactions: n, hoistReaction: a } = e,
+    let { message: t, maxReactions: n, hoistReaction: s } = e,
         {
             combinedReactions: r,
             remainingReactions: l,
             visibleReactionsCount: o
-        } = s.useMemo(() => {
+        } = a.useMemo(() => {
             let e = [],
-                i = C(t.reactions, a),
-                s = null != n && n < i.length ? i.slice(0, n) : i,
-                r = i.length - s.length,
+                i = C(t.reactions, s),
+                a = null != n && n < i.length ? i.slice(0, n) : i,
+                r = i.length - a.length,
                 l = i.length;
             return (
-                s.forEach((t) => {
+                a.forEach((t) => {
                     t.burst_count > 0 &&
                         e.push({
                             ...t,
@@ -145,7 +145,7 @@ t.Z = (e) => {
                     remainingReactions: r
                 }
             );
-        }, [a, n, t.reactions]);
+        }, [s, n, t.reactions]);
     return (0, i.jsx)(p, {
         ...e,
         visibleReactionsCount: o,

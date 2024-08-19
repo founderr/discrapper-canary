@@ -35,8 +35,8 @@ function f(e) {
 }
 let h = ['http:', 'https:', 'discord:'],
     p = [d.b.TEXT, d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP],
-    I = [...p, d.b.EMOJI, d.b.CUSTOM_EMOJI],
-    m = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
+    m = [...p, d.b.EMOJI, d.b.CUSTOM_EMOJI],
+    I = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
     T = [d.b.TEXT],
     g = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
 function S(e, t) {
@@ -94,8 +94,8 @@ t.ZP = {
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0
             },
-            b = n.allowEmojiLinks ? I : p,
-            M = [...b, ...m],
+            b = n.allowEmojiLinks ? m : p,
+            M = [...b, ...I],
             P = [...T, ...g],
             U = S(t(O, L), M, [d.b.EMOJI]),
             w = S(t(R, L), P);

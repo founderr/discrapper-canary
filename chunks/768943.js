@@ -10,7 +10,7 @@ var r,
 let d = new l.h(
         (e) => {
             let { saveData: t } = e;
-            return [null != t.dueAt ? c._.REMINDER : c._.BOOKMARK];
+            return [null != t.dueAt ? c._l.REMINDER : c._l.BOOKMARK];
         },
         (e) => {
             let { saveData: t } = e;
@@ -29,10 +29,10 @@ class h extends (r = o.ZP.Store) {
         return d.values();
     }
     getMessageBookmarks() {
-        return d.values(c._.BOOKMARK);
+        return d.values(c._l.BOOKMARK);
     }
     getMessageReminders() {
-        return d.values(c._.REMINDER);
+        return d.values(c._l.REMINDER);
     }
     getOverdueMessageReminderCount() {
         return this.getMessageReminders().filter((e) => {

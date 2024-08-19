@@ -12,7 +12,7 @@ n.d(t, {
         return L;
     },
     b$: function () {
-        return I;
+        return m;
     },
     d9: function () {
         return y;
@@ -36,7 +36,7 @@ n.d(t, {
         return T;
     },
     wC: function () {
-        return m;
+        return I;
     }
 }),
     n(789020),
@@ -58,7 +58,7 @@ var r = n(442837),
     f = n(981631),
     h = n(372897);
 let p = new Date(1682488800000);
-function I(e) {
+function m(e) {
     return (0, r.e7)([l.Z, u.Z], () => {
         let t = l.Z.getGuild(e),
             n = !!(null == t ? void 0 : t.hasFeature(f.oNc.COMMUNITY)),
@@ -67,7 +67,7 @@ function I(e) {
         return n && r && i;
     });
 }
-function m(e) {
+function I(e) {
     let t = l.Z.getGuild(e),
         n = !!(null == t ? void 0 : t.hasFeature(f.oNc.COMMUNITY)),
         r = u.Z.can(f.Plq.MANAGE_GUILD, t),

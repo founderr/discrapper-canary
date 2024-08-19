@@ -26,7 +26,7 @@ function u(e) {
         l = t.Z.toURLSafe(n.proxyUrl);
     return null == l
         ? null
-        : (l.searchParams.append('format', 'jpeg'),
+        : (l.searchParams.append('format', 'webp'),
           (0, r.lV)({
               ...e,
               poster: l.toString(),

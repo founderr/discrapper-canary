@@ -4,17 +4,17 @@ n.d(t, {
     }
 });
 var i = n(689938);
-let s = ['a', 'b', 'c', 'd'],
-    a = (e) => e;
+let a = ['a', 'b', 'c', 'd'],
+    s = (e) => e;
 function r(e, t) {
     let n = {},
-        i = Math.min(e.length, s.length);
-    for (let a = 0; a < i; ++a) n[s[a]] = (n, i) => t(e[a], i);
+        i = Math.min(e.length, a.length);
+    for (let s = 0; s < i; ++s) n[a[s]] = (n, i) => t(e[s], i);
     return n;
 }
 class l {
     asString() {
-        return this.transformed(a);
+        return this.transformed(s);
     }
     isEmpty() {
         return 0 === this.items.length;

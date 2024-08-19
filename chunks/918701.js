@@ -124,7 +124,7 @@ n.d(t, {
         return k;
     },
     mN: function () {
-        return eI;
+        return em;
     },
     nP: function () {
         return ef;
@@ -133,7 +133,7 @@ n.d(t, {
         return eR;
     },
     oo: function () {
-        return em;
+        return eI;
     },
     ph: function () {
         return Q;
@@ -187,8 +187,8 @@ n(597688);
 var h = n(231757);
 n(706454);
 var p = n(572004),
-    I = n(70956),
-    m = n(630388),
+    m = n(70956),
+    I = n(630388),
     T = n(823379),
     g = n(49012),
     S = n(960048),
@@ -394,7 +394,7 @@ function ei(e) {
 function ea(e, t) {
     if (!ei(t)) return !1;
     let n = v.jn[t];
-    return (0, m.yE)(e.dismissedQuestContent, C.a_[n]);
+    return (0, I.yE)(e.dismissedQuestContent, C.a_[n]);
 }
 function es(e) {
     return (0, o.EQ)(e)
@@ -460,7 +460,7 @@ function ef(e) {
 }
 let eh = /\.([a-zA-Z0-9]+)$/,
     ep = /^data:video\/([a-zA-Z0-9]+)\;/;
-function eI(e) {
+function em(e) {
     var t, n, r, i, a;
     switch (null !== (a = null === (n = eh.exec(e)) || void 0 === n ? void 0 : null === (t = n[1]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== a ? a : null === (i = ep.exec(e)) || void 0 === i ? void 0 : null === (r = i[1]) || void 0 === r ? void 0 : r.toLowerCase()) {
         case 'webm':
@@ -471,7 +471,7 @@ function eI(e) {
             throw Error('Unexpected file extension: '.concat(e.substring(0, 15)));
     }
 }
-function em(e) {
+function eI(e) {
     let {
         quest: { config: t }
     } = e;
@@ -546,7 +546,7 @@ let ey = (e, t) => {
         let o = null === (s = e.userStatus) || void 0 === s ? void 0 : null === (i = s.progress) || void 0 === i ? void 0 : null === (r = i[t.eventName]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.lastBeatAt;
         if (null == o || !eL(e)) return 0;
         let l = Date.now() - new Date(o).valueOf();
-        return (0, a.floor)(l / I.Z.Millis.SECOND, 2);
+        return (0, a.floor)(l / m.Z.Millis.SECOND, 2);
     },
     eM = (e, t) => {
         var n, r, i;
@@ -572,7 +572,7 @@ let ey = (e, t) => {
         return {
             progressSeconds: _,
             targetSeconds: c,
-            targetMinutes: Math.round(c / I.Z.Seconds.MINUTE),
+            targetMinutes: Math.round(c / m.Z.Seconds.MINUTE),
             percentComplete: eD(c, _),
             taskType: o
         };
@@ -728,7 +728,7 @@ function eq(e) {
 function eQ(e) {
     var t, n, r, i;
     let { quest: a, rewardCode: s, selectedPlatformType: o, sharedQuestFields: l } = e,
-        u = em({ quest: a }),
+        u = eI({ quest: a }),
         c = null != o ? o : null == s ? void 0 : s.platform,
         d = u
             ? eR({

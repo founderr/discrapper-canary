@@ -12,7 +12,7 @@ n.d(t, {
         return c;
     },
     YD: function () {
-        return I;
+        return m;
     },
     aD: function () {
         return l;
@@ -190,7 +190,7 @@ function p(e) {
     }
     return f(c.hue, c.saturation, c.lightness);
 }
-function I(e) {
+function m(e) {
     return e
         .slice(0, 3)
         .map((e) => {
@@ -233,9 +233,9 @@ function I(e) {
                           }
             };
         })
-        .sort(m)[0].hex;
+        .sort(I)[0].hex;
 }
-function m(e, t) {
+function I(e, t) {
     let n = e.hsv,
         r = t.hsv;
     return r.s + r.v - (n.s + n.v);

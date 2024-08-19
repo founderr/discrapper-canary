@@ -21,11 +21,11 @@ function c(e, t, n) {
         f = (0, a.LD)(null == t ? void 0 : t.guild_id, !1),
         h = (0, s.vC)(null == t ? void 0 : t.guild_id, n);
     if (null == e || h) return !1;
-    let { context: p, userId: I, roleIds: m, isImpersonating: T } = _,
+    let { context: p, userId: m, roleIds: I, isImpersonating: T } = _,
         g = null === (u = f.result) || void 0 === u ? void 0 : null === (r = u.sections[e.applicationId]) || void 0 === r ? void 0 : r.descriptor;
     if (void 0 !== g) {
         let n = (0, l.ZJ)(g.permissions, t, null == t ? void 0 : t.guild_id),
-            r = (0, l.ML)(g.permissions, p.guild_id, I, m, T);
+            r = (0, l.ML)(g.permissions, p.guild_id, m, I, T);
         if (
             (0, l.Ft)(e, _, {
                 applicationAllowedForUser: r,

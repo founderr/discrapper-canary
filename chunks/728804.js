@@ -17,7 +17,7 @@ var r = n(690244),
         var n = h(e, t);
         return n && n.value;
     },
-    I = function (e, t, n) {
+    m = function (e, t, n) {
         var r = h(e, t);
         r
             ? (r.value = n)
@@ -60,7 +60,7 @@ e.exports = function () {
                                 key: {},
                                 next: null
                             }),
-                        I(n, r, i));
+                        m(n, r, i));
             }
         };
     return r;

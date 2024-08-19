@@ -12,7 +12,7 @@ var r = t(442837),
     _ = t(441061),
     E = t(167675),
     I = t(737013),
-    T = t(145474),
+    T = t(607783),
     N = t(299206),
     S = t(976192),
     A = t(819403),
@@ -67,7 +67,7 @@ n.default = (0, o.Z)(
                 ee = (0, M.Z)({ user: n }),
                 en = (0, H.Z)(n.id),
                 et = (0, U.Z)(n.id),
-                ei = (0, T.P)({
+                ei = (0, T.B)({
                     userId: n.id,
                     channelId: a.id,
                     location: 'GuildChannelUserContextMenu'

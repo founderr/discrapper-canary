@@ -1,6 +1,6 @@
 n.d(t, {
     sg: function () {
-        return I;
+        return m;
     },
     sk: function () {
         return h;
@@ -55,7 +55,7 @@ function p(e, t) {
         }
     let h = _ > 0 && f.aj.isType(e[_ - 1], 'blockQuote'),
         p = f.aj.isType(e[_], 'blockQuote'),
-        m = f.aj.isType(e[E], 'blockQuote'),
+        I = f.aj.isType(e[E], 'blockQuote'),
         T = [];
     for (let t = _; t <= E; t++) {
         let n = e[t];
@@ -74,19 +74,19 @@ function p(e, t) {
                           offset: s.offset
                       }
                     : void 0,
-            u = I(n, {
+            u = m(n, {
                 mode: i,
                 start: r,
                 end: o,
-                allowBlockQuotePrefix: null == a || null == s || (!h && (!p || m)),
+                allowBlockQuotePrefix: null == a || null == s || (!h && (!p || I)),
                 preventEmojiSurrogates: c
             });
         (!l || u.length > 0) && T.push(u);
     }
     return T.join(o);
 }
-function I(e, t) {
-    let { mode: n, start: r, allowBlockQuotePrefix: h = !1, preventEmojiSurrogates: I = !1 } = null != t ? t : {};
+function m(e, t) {
+    let { mode: n, start: r, allowBlockQuotePrefix: h = !1, preventEmojiSurrogates: m = !1 } = null != t ? t : {};
     if (f.LC.isText(e))
         return (function (e, t) {
             var n, r;
@@ -107,7 +107,7 @@ function I(e, t) {
         }
         case 'emoji': {
             let t = e.emoji;
-            if (!I && null != t.surrogate) return t.surrogate;
+            if (!m && null != t.surrogate) return t.surrogate;
             return t.name;
         }
         case 'customEmoji': {

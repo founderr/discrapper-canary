@@ -13,8 +13,8 @@ var i = n(392711),
     f = n(590921),
     h = n(689079),
     p = n(689938),
-    I = n(292130),
-    m = n(239840);
+    m = n(292130),
+    I = n(239840);
 let T = { results: { choices: [] } },
     g = {
         results: {
@@ -86,8 +86,8 @@ let T = { results: { choices: [] } },
             return i
                 ? (0, r.jsx)(s.Z, {
                       message: p.Z.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_FAILED,
-                      noResultsImageURL: m,
-                      className: I.noAutocompleteResults
+                      noResultsImageURL: I,
+                      className: m.noAutocompleteResults
                   })
                 : 0 !== t.length || n
                   ? (0, E.HI)({
@@ -108,8 +108,8 @@ let T = { results: { choices: [] } },
                     })
                   : (0, r.jsx)(s.Z, {
                         message: p.Z.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_NO_OPTIONS,
-                        noResultsImageURL: m,
-                        className: I.noAutocompleteResults
+                        noResultsImageURL: I,
+                        className: m.noAutocompleteResults
                     });
         },
         onSelect(e) {

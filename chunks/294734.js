@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    s = n(470079),
-    a = n(793030),
+    a = n(470079),
+    s = n(793030),
     r = n(442837),
     l = n(902704),
     o = n(692547),
@@ -37,7 +37,7 @@ function M() {
                 className: O.headerIcon,
                 color: o.Z.colors.TEXT_LOW_CONTRAST
             }),
-            (0, i.jsx)(a.x, {
+            (0, i.jsx)(s.x, {
                 className: O.headerText,
                 variant: 'text-sm/semibold',
                 color: 'text-low-contrast',
@@ -48,9 +48,9 @@ function M() {
 }
 function v(e) {
     let { message: t, snapshot: n, index: d } = e,
-        _ = s.useMemo(() => new g.r(t, n, d), [t, n, d]),
+        _ = a.useMemo(() => new g.r(t, n, d), [t, n, d]),
         E = (0, r.e7)([T.Z, p.default, C.Z, f.Z, N.Z, u.Z], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, u.Z).footerInfo, [_], l.Z),
-        I = s.useCallback(() => {
+        I = a.useCallback(() => {
             (0, S.Z)(t);
         }, [t]);
     return null == E
@@ -66,7 +66,7 @@ function v(e) {
                             alt: ''
                         })
                       : null,
-                  (0, i.jsx)(a.x, {
+                  (0, i.jsx)(s.x, {
                       className: O.footerText,
                       variant: 'text-sm/medium',
                       color: 'none',
@@ -81,8 +81,8 @@ function v(e) {
 }
 function L(e) {
     var t;
-    let { message: n, snapshot: a, index: l } = e,
-        o = s.useMemo(() => (0, A.Z)(n, a), [n, a]),
+    let { message: n, snapshot: s, index: l } = e,
+        o = a.useMemo(() => (0, A.Z)(n, s), [n, s]),
         c = m.RS.useSetting(),
         u = m.NA.useSetting(),
         N = (0, r.e7)([h.Z], () => h.Z.isDeveloper),
@@ -128,7 +128,7 @@ function L(e) {
                               }),
                               (0, i.jsx)(v, {
                                   message: n,
-                                  snapshot: a,
+                                  snapshot: s,
                                   index: l
                               })
                           ]

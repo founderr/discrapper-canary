@@ -38,8 +38,8 @@ var r = n(963663),
     f = n(779138),
     h = n(81272),
     p = n(306670),
-    I = n(320564),
-    m = n(25163),
+    m = n(320564),
+    I = n(25163),
     T = n(869940),
     g = n(904838),
     S = n(740519),
@@ -327,11 +327,11 @@ function J(e, t, n) {
             onCellAction: u
         }
     });
-    let I = $({
+    let m = $({
             selectionManager: c,
             hasItemActions: !!(l || u)
         }),
-        m = (0, B.zL)(e, { labelable: !0 }),
+        I = (0, B.zL)(e, { labelable: !0 }),
         T = (0, F.useCallback)(
             (e) => {
                 if (c.isFocused) {
@@ -351,7 +351,7 @@ function J(e, t, n) {
         ),
         S = (0, H.pu)(n, { isDisabled: 0 !== t.collection.size }),
         A = (0, B.dG)(
-            m,
+            I,
             {
                 role: 'grid',
                 id: p,
@@ -359,7 +359,7 @@ function J(e, t, n) {
             },
             t.isKeyboardNavigationDisabled ? g : h,
             0 === t.collection.size && { tabIndex: S ? -1 : 0 },
-            I
+            m
         );
     return r && ((A['aria-rowcount'] = t.collection.size), (A['aria-colcount'] = t.collection.columnCount)), Q({ getRowText: o }, t), { gridProps: A };
 }
@@ -521,8 +521,8 @@ q = {
     'he-IL': f.Z,
     'hr-HR': h.Z,
     'hu-HU': p.Z,
-    'it-IT': I.Z,
-    'ja-JP': m.Z,
+    'it-IT': m.Z,
+    'ja-JP': I.Z,
     'ko-KR': T.Z,
     'lt-LT': g.Z,
     'lv-LV': S.Z,

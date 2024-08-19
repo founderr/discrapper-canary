@@ -20,21 +20,21 @@ var r = l(442837),
 function v(e) {
     let { message: n } = (0, p.CJ)(),
         l = (0, r.e7)([d.Z], () => d.Z.getChannel(null == n ? void 0 : n.channel_id)),
-        { shouldHideMediaOptions: v, shouldRedactExplicitContent: C, gifAutoPlay: h, getGifFavButton: _, getOnMediaItemContextMenu: T } = (0, u.c)();
+        { shouldHideMediaOptions: v, shouldRedactExplicitContent: C, gifAutoPlay: h, getGifFavButton: N, getOnMediaItemContextMenu: T } = (0, u.c)();
     if (null == n || null == l) return null;
-    let N = e.items.map((e) => (0, c.j0)(e.media, E.VqG, v, C)).filter(f.lm),
+    let _ = e.items.map((e) => (0, c.j0)(e.media, E.VqG, v, C)).filter(f.lm),
         x = {
             source: 'Media Mosaic',
             guild_id: l.guild_id,
             channel_id: l.id,
             channel_type: l.type
         },
-        I = N.length > 1 ? (0, c.Cx)(N, x) : {};
-    function g(e, n) {
+        I = _.length > 1 ? (0, c.Cx)(_, x) : {};
+    function S(e, n) {
         let l = e.originalItem;
         return (0, i.lK)(l.media, n, l.spoiler);
     }
-    let S = e.items.map((e) => {
+    let g = e.items.map((e) => {
         let l = e.media,
             t = null == T ? void 0 : T(l),
             r = {
@@ -51,14 +51,14 @@ function v(e) {
                 },
                 onContextMenu: t,
                 autoPlayGif: h,
-                getObscureReason: g,
+                getObscureReason: S,
                 renderImageComponent: a.a,
                 renderVideoComponent: a.r,
                 renderAudioComponent: E.dG4,
                 renderPlaintextFilePreview: E.dG4,
                 renderGenericFileComponent: E.dG4,
                 renderMosaicItemFooter: E.dG4,
-                gifFavoriteButton: _(l),
+                gifFavoriteButton: N(l),
                 onPlay: (e, n, l) => {},
                 canRemoveItem: !1,
                 onRemoveItem: E.dG4
@@ -69,5 +69,5 @@ function v(e) {
             });
         return i in I && (r.onClick = I[i]), r;
     });
-    return (0, t.jsx)('div', { children: (0, t.jsx)(s.Z, { items: S }) });
+    return (0, t.jsx)('div', { children: (0, t.jsx)(s.Z, { items: g }) });
 }

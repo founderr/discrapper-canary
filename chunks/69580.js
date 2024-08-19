@@ -38,8 +38,8 @@ var r,
     f = n(442837),
     h = n(693789),
     p = n(952265),
-    I = n(21340),
-    m = n(922770),
+    m = n(21340),
+    I = n(922770),
     T = n(993365),
     g = n(481060),
     S = n(893776),
@@ -114,7 +114,7 @@ function en(e) {
         overlay: o,
         children: (0, a.jsx)('div', {
             className: l()(J.authorize, { [J.inApp]: n.inApp }),
-            children: (0, a.jsx)(I.zJ, {
+            children: (0, a.jsx)(m.zJ, {
                 orientation: 'auto',
                 children: d
             })
@@ -139,7 +139,7 @@ function er(e) {
               children: [
                   (0, a.jsx)('div', {
                       className: l()(J.authorize, { [J.inApp]: n.inApp }),
-                      children: (0, a.jsx)(I.zJ, {
+                      children: (0, a.jsx)(m.zJ, {
                           orientation: 'auto',
                           children: c
                       })
@@ -158,12 +158,12 @@ function er(e) {
 function ei(e) {
     var t, n, r, i, o;
     let p,
-        I,
+        m,
         v,
         C,
         D,
         z,
-        { clientId: et, responseType: en, redirectUri: er, codeChallenge: ei, codeChallengeMethod: ea, state: es, nonce: eo, prompt: el, authorizations: eu, scopes: ec, permissions: ed, guildId: e_, channelId: eE, integrationType: ef, disableGuildSelect: eh = !1, disableContinueUntilRead: ep = !1, showLogout: eI = !1, cancelCompletesFlow: em = !0, isTrustedName: eT = !1, isEmbeddedFlow: eg = !1, inApp: eS = !1, callback: eA, callbackWithoutPost: eN, onClose: ev, disclosures: eO } = e,
+        { clientId: et, responseType: en, redirectUri: er, codeChallenge: ei, codeChallengeMethod: ea, state: es, nonce: eo, prompt: el, authorizations: eu, scopes: ec, permissions: ed, guildId: e_, channelId: eE, integrationType: ef, disableGuildSelect: eh = !1, disableContinueUntilRead: ep = !1, showLogout: em = !1, cancelCompletesFlow: eI = !0, isTrustedName: eT = !1, isEmbeddedFlow: eg = !1, inApp: eS = !1, callback: eA, callbackWithoutPost: eN, onClose: ev, disclosures: eO } = e,
         eR = null != ef ? (null == eu ? void 0 : eu.get(ef)) : void 0,
         eC = (0, u.TH)(),
         ey = (0, f.e7)([y.Z], () => y.Z.hasLoadedExperiments);
@@ -243,7 +243,7 @@ function ei(e) {
                     eN(e);
                     return;
                 }
-                if (!e && !em) {
+                if (!e && !eI) {
                     null != eA &&
                         (eA({
                             application: null == eD ? void 0 : eD.application,
@@ -296,7 +296,7 @@ function ei(e) {
                     (null == e ? void 0 : e.message) != null && '' !== e.message ? eU(Error(e.message)) : eU(e), eM(1), ex(!1);
                 }
             },
-            [eN, em, eA, null == eD ? void 0 : eD.application, eK, ev, et, e0, en, er, ei, ea, es, eo, e2, eY, eF, ez, eH, e4]
+            [eN, eI, eA, null == eD ? void 0 : eD.application, eK, ev, et, e0, en, er, ei, ea, es, eo, e2, eY, eF, ez, eH, e4]
         ),
         e9 = s.useRef(!1),
         te = s.useCallback(async () => {
@@ -374,9 +374,9 @@ function ei(e) {
         to = !0;
     switch (eb) {
         case null:
-            return { body: (0, a.jsx)(m.$, {}) };
+            return { body: (0, a.jsx)(I.$, {}) };
         case 0:
-            if (null == eX) return { body: (0, a.jsx)(m.$, {}) };
+            if (null == eX) return { body: (0, a.jsx)(I.$, {}) };
             (p = (0, a.jsx)(K.Z, {
                 inApp: eS,
                 application: eX,
@@ -389,7 +389,7 @@ function ei(e) {
                 (to = !1);
             break;
         case 1:
-            if (null == eD || null == eW || null == ez) return { body: (0, a.jsx)(m.$, {}) };
+            if (null == eD || null == eW || null == ez) return { body: (0, a.jsx)(I.$, {}) };
             let tl = null == eP || eP instanceof Error ? {} : eP,
                 tu = null == eB ? void 0 : eB.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                 tc = ez === d.Y.GUILD_INSTALL && e0.includes(_.x.WEBHOOK_INCOMING),
@@ -424,11 +424,11 @@ function ei(e) {
                 ]
             })),
                 e0.includes(_.x.BOT) && !E.fS(e2, U.Hn) && (v = 2),
-                tt.length > 1 && (I = 0),
+                tt.length > 1 && (m = 0),
                 (ti = (td && null == eK) || (tc && null == eH));
             break;
         case 2:
-            if (null == eD) return { body: (0, a.jsx)(m.$, {}) };
+            if (null == eD) return { body: (0, a.jsx)(I.$, {}) };
             (p = (0, a.jsx)(Y.Z, {
                 application: eD.application,
                 permissions: e2,
@@ -438,7 +438,7 @@ function ei(e) {
                 },
                 guild: eK
             })),
-                (I = 1);
+                (m = 1);
     }
     if (ta && null != eD) {
         let e = null === (i = eD.bot) || void 0 === i ? void 0 : i.approximate_guild_count;
@@ -468,7 +468,7 @@ function ei(e) {
             application: eD.application,
             bot: eD.bot,
             accountScopes: e1,
-            showLogout: eI || !1,
+            showLogout: em || !1,
             location: eC,
             isTrustedName: eT
         }));
@@ -477,11 +477,11 @@ function ei(e) {
         (z = (0, a.jsxs)('div', {
             className: l()(J.footer, { [J.inApp]: eS }),
             children: [
-                null != I
+                null != m
                     ? (0, a.jsx)(h.zx, {
                           look: h.zx.Looks.LINK,
                           color: h.zx.Colors.PRIMARY,
-                          onClick: () => eM(I),
+                          onClick: () => eM(m),
                           children: $.Z.Messages.BACK
                       })
                     : (0, a.jsx)(h.zx, {

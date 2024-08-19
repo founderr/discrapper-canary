@@ -11,10 +11,10 @@ n.r(t),
             return g;
         },
         getPlatform: function () {
-            return I;
+            return m;
         },
         getPlatformName: function () {
-            return m;
+            return I;
         },
         isAndroid: function () {
             return h;
@@ -67,7 +67,7 @@ function d() {
     return l() || u() || c();
 }
 function _() {
-    return 'WEB' === I();
+    return 'WEB' === m();
 }
 function E() {
     return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile');
@@ -82,10 +82,10 @@ function h() {
 function p() {
     return 'ios' === o;
 }
-function I() {
+function m() {
     return l() ? 'WINDOWS' : u() ? 'OSX' : c() ? 'LINUX' : 'WEB';
 }
-function m() {
+function I() {
     return o;
 }
 function T() {

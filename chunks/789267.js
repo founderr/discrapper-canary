@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(739566),
-    a = n(834129),
+var a = n(739566),
+    s = n(834129),
     r = n(689938);
 function l(e) {
     let { message: t, compact: l, missed: o, joinable: c, usernameHook: u, onClickJoinCall: d } = e,
-        _ = (0, s.ZP)(t),
+        _ = (0, a.ZP)(t),
         E = _.nick,
         I = u(_),
         m = (function (e) {
@@ -18,7 +18,7 @@ function l(e) {
             return null != t ? t.humanize() : null;
         })(t);
     return o
-        ? (0, i.jsx)(a.Z, {
+        ? (0, i.jsx)(s.Z, {
               icon: n(154239),
               timestamp: t.timestamp,
               compact: l,
@@ -34,7 +34,7 @@ function l(e) {
                             usernameHook: I
                         })
           })
-        : (0, i.jsxs)(a.Z, {
+        : (0, i.jsxs)(s.Z, {
               icon: n(344163),
               timestamp: t.timestamp,
               compact: l,
@@ -50,7 +50,7 @@ function l(e) {
                             usernameHook: I
                         }),
                   c
-                      ? (0, i.jsx)(a.Z.Action, {
+                      ? (0, i.jsx)(s.Z.Action, {
                             onClick: d,
                             children: r.Z.Messages.SYSTEM_MESSAGE_JOIN_CALL
                         })

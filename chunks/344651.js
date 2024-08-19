@@ -22,8 +22,8 @@ var a = n(442837),
     f = n(686478),
     h = n(952537),
     p = n(218543),
-    I = n(48481),
-    m = n(131704),
+    m = n(48481),
+    I = n(131704),
     T = n(209747),
     g = n(598077),
     S = n(592125),
@@ -49,7 +49,7 @@ let M = new d.Z('ConnectionStore'),
                           type: 'CHANNEL_UPDATES',
                           channels: []
                       };
-            let r = (0, m.q_)(t),
+            let r = (0, I.q_)(t),
                 i = S.Z.getChannel(t.id),
                 a =
                     null == i
@@ -252,7 +252,7 @@ B(
                     e.presences = r(e.presences || []);
                 });
                 let a = e.presences ? r(e.presences) : [],
-                    s = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map((e) => (0, m.q_)(e)),
+                    s = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map((e) => (0, I.q_)(e)),
                     o = null !== (n = e.game_invites) && void 0 !== n ? n : [];
                 p.Z.dispatchReadySupplemental.measure(() => {
                     V({
@@ -316,14 +316,14 @@ B(
             }
             p.Z.ready.measure(() => {
                 a.ZP.Emitter.batched(() => {
-                    let t = (e = p.Z.hydrateReady.measure(() => D.IM(e, b.Wb.identifyStartTime, n))).private_channels.map((e) => (0, m.q_)(e)),
+                    let t = (e = p.Z.hydrateReady.measure(() => D.IM(e, b.Wb.identifyStartTime, n))).private_channels.map((e) => (0, I.q_)(e)),
                         r = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
                         i = e.guilds.filter((e) => !0 !== e.unavailable),
                         a = e.guilds.filter((e) => !0 === e.geo_restricted);
                     i.forEach((e) => {
                         e.presences = [];
                     });
-                    let s = null == e.user_settings_proto ? void 0 : (0, I.ac)(e.user_settings_proto);
+                    let s = null == e.user_settings_proto ? void 0 : (0, m.ac)(e.user_settings_proto);
                     p.Z.dispatchReady.measure(() => {
                         var n;
                         V({
@@ -510,7 +510,7 @@ B(
         (e, t) => {
             V({
                 type: t,
-                channel: (0, m.q_)(e)
+                channel: (0, I.q_)(e)
             });
         }
     ),
@@ -544,7 +544,7 @@ B(
             V({
                 type: t,
                 isNewlyCreated: n,
-                channel: (0, m.q_)(r)
+                channel: (0, I.q_)(r)
             });
         }
     ),
@@ -557,7 +557,7 @@ B(
                 guildId: e.guild_id,
                 threads: e.threads.map((e) => {
                     let t = S.Z.getChannel(e.parent_id);
-                    return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, m.q_)(e);
+                    return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, I.q_)(e);
                 }),
                 mostRecentMessages: e.most_recent_messages,
                 members: e.members ? i().map(e.members, h.Z) : void 0,
@@ -813,7 +813,7 @@ B(
         });
     }),
     k(['USER_SETTINGS_PROTO_UPDATE'], (e) => {
-        let t = (0, I.kI)(e.settings.type, e.settings.proto);
+        let t = (0, m.kI)(e.settings.type, e.settings.proto);
         if (null != t) {
             if ('string' == typeof t)
                 throw (

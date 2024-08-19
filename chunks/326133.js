@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(313201),
     h = n(314910),
     p = n(549006),
-    I = n(430824),
-    m = n(436896),
+    m = n(430824),
+    I = n(436896),
     T = n(590921),
     g = n(606992),
     S = n(51062),
@@ -25,10 +25,10 @@ t.Z = i.forwardRef(function (e, t) {
     let { channel: C, type: y, editorHeight: D, onVisibilityChange: L } = e,
         b = (0, f.Dt)(),
         M = (0, l.e7)(
-            [I.Z],
+            [m.Z],
             () => {
                 var e;
-                return null !== (e = I.Z.getGuild(C.guild_id)) && void 0 !== e ? e : null;
+                return null !== (e = m.Z.getGuild(C.guild_id)) && void 0 !== e ? e : null;
             },
             [C.guild_id]
         ),
@@ -43,8 +43,8 @@ t.Z = i.forwardRef(function (e, t) {
         ),
         G = (null === (n = y.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? p.ZP : h.ZP,
         k = (0, _.DJ)(U.selectedIndex);
-    (0, E.KR)(b, U.isVisible, k), m.Z.trackExposure({ location: '6e9811_1' });
-    let { usePopoutAutocomplete: B } = m.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
+    (0, E.KR)(b, U.isVisible, k), I.Z.trackExposure({ location: '6e9811_1' });
+    let { usePopoutAutocomplete: B } = I.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
         F = (0, g.Z)({
             editorHeight: D,
             type: y,

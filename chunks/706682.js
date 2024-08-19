@@ -12,7 +12,7 @@ n.d(t, {
         return A;
     },
     cW: function () {
-        return m;
+        return I;
     },
     ex: function () {
         return s;
@@ -73,7 +73,7 @@ function u(e) {
                     s = (t) => {
                         let n = t.target;
                         if (p(n, e.current)) l = e;
-                        else if (!I(n)) l = null;
+                        else if (!m(n)) l = null;
                     };
                 return (
                     a.addEventListener('focusin', s, !1),
@@ -106,12 +106,12 @@ function u(e) {
                         !a && ((i.currentNode = t.shiftKey ? r[r.length - 1].nextElementSibling : r[0].previousElementSibling), (a = t.shiftKey ? i.previousNode() : i.nextNode())), t.preventDefault(), a && g(a, !0);
                     },
                     u = (t) => {
-                        (!l || T(l, e)) && p(t.target, e.current) ? ((l = e), (n.current = t.target)) : f(e) && !I(t.target, e) ? (n.current ? n.current.focus() : l && l.current && S(l.current)) : f(e) && (n.current = t.target);
+                        (!l || T(l, e)) && p(t.target, e.current) ? ((l = e), (n.current = t.target)) : f(e) && !m(t.target, e) ? (n.current ? n.current.focus() : l && l.current && S(l.current)) : f(e) && (n.current = t.target);
                     },
                     c = (t) => {
                         a.current && cancelAnimationFrame(a.current),
                             (a.current = requestAnimationFrame(() => {
-                                if (s.activeElement && f(e) && !I(s.activeElement, e)) {
+                                if (s.activeElement && f(e) && !m(s.activeElement, e)) {
                                     if (((l = e), s.body.contains(t.target))) {
                                         var r;
                                         (n.current = t.target), null === (r = n.current) || void 0 === r || r.focus();
@@ -171,7 +171,7 @@ function u(e) {
                             do o = t.shiftKey ? s.previousNode() : s.nextNode();
                             while (p(o, e.current));
                             if ((t.preventDefault(), t.stopPropagation(), o)) g(o, !0);
-                            else if (I(a)) g(a, !0);
+                            else if (m(a)) g(a, !0);
                             else n.blur();
                         }
                     };
@@ -255,7 +255,7 @@ function u(e) {
             },
             [d]
         );
-    let m = (0, i.useMemo)(
+    let I = (0, i.useMemo)(
             () =>
                 (function (e) {
                     return {
@@ -329,10 +329,10 @@ function u(e) {
         ),
         N = (0, i.useMemo)(
             () => ({
-                focusManager: m,
+                focusManager: I,
                 parentNode: h
             }),
-            [h, m]
+            [h, I]
         );
     return i.createElement(
         o.Provider,
@@ -366,18 +366,18 @@ function f(e) {
     return !0;
 }
 function h(e) {
-    return I(e);
+    return m(e);
 }
 function p(e, t) {
     return !!e && !!t && t.some((t) => t.contains(e));
 }
-function I(e, t = null) {
+function m(e, t = null) {
     if (e instanceof Element && e.closest('[data-react-aria-top-layer]')) return !0;
     for (let { scopeRef: n } of C.traverse(C.getTreeNode(t))) if (n && p(e, n.current)) return !0;
     return !1;
 }
-function m(e) {
-    return I(e, l);
+function I(e) {
+    return m(e, l);
 }
 function T(e, t) {
     var n;

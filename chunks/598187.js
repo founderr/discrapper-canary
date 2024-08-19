@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(913527),
     o = n.n(l),
     c = n(722770),
@@ -41,8 +41,8 @@ function U() {
 }
 function y(e) {
     let { message: t, compact: n } = e,
-        { notificationType: s } = (0, f.FL)(t);
-    switch (s) {
+        { notificationType: a } = (0, f.FL)(t);
+    switch (a) {
         case f.nj:
         case u.p.RAID:
             return (0, i.jsx)(F, {
@@ -69,7 +69,7 @@ function B(e) {
     let { compact: t } = e;
     return (0, i.jsx)(V, {
         compact: t,
-        header: (0, i.jsxs)(s.Fragment, {
+        header: (0, i.jsxs)(a.Fragment, {
             children: [
                 (0, i.jsx)(I.CircleWarningIcon, {
                     size: 'xs',
@@ -93,7 +93,7 @@ function k(e) {
     let { compact: t } = e;
     return (0, i.jsx)(V, {
         compact: t,
-        header: (0, i.jsxs)(s.Fragment, {
+        header: (0, i.jsxs)(a.Fragment, {
             children: [
                 (0, i.jsx)(I.CircleWarningIcon, {
                     size: 'xs',
@@ -115,7 +115,7 @@ function k(e) {
 }
 function G(e) {
     var t;
-    let { message: n, compact: a } = e,
+    let { message: n, compact: s } = e,
         r = O.default.getUser((0, f.Sw)(n)),
         l = null === (t = R.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id,
         c = null != l && null != r ? x.ZP.getMember(l, r.id) : null,
@@ -129,8 +129,8 @@ function G(e) {
             size: 12
         });
     return (0, i.jsx)(V, {
-        compact: a,
-        header: (0, i.jsxs)(s.Fragment, {
+        compact: s,
+        header: (0, i.jsxs)(a.Fragment, {
             children: [
                 (0, i.jsx)(I.SettingsInfoIcon, {
                     size: 'xs',
@@ -151,7 +151,7 @@ function G(e) {
                     children:
                         null != c &&
                         null != r &&
-                        (0, i.jsxs)(s.Fragment, {
+                        (0, i.jsxs)(a.Fragment, {
                             children: [
                                 (0, i.jsx)(I.Text, {
                                     variant: 'text-xs/medium',
@@ -214,21 +214,21 @@ function G(e) {
 }
 function F(e) {
     var t;
-    let { message: n, compact: a } = e,
+    let { message: n, compact: s } = e,
         { joinAttempts: r, raidDatetime: l, dmsSent: u, raidType: m, resolvedReason: T } = (0, f.FL)(n),
         p = (0, _.e7)([R.Z], () => R.Z.getChannel(n.channel_id), [n.channel_id]),
         g = null !== (t = null == p ? void 0 : p.guild_id) && void 0 !== t ? t : null,
         { shouldShowIncidentActions: S } = (0, h.mI)(g),
         A = (0, v.sR)(n.author.id, n.channel_id),
-        x = s.useCallback(() => {
+        x = a.useCallback(() => {
             let e = null == p ? void 0 : p.guild_id;
             null != e && (0, C.kW)(n.id, e);
         }, [n.id, p]),
         O = m === d.$.DM_RAID,
         M = O ? I.CircleWarningIcon : I.ChatWarningIcon;
     return (0, i.jsx)(V, {
-        compact: a,
-        header: (0, i.jsxs)(s.Fragment, {
+        compact: s,
+        header: (0, i.jsxs)(a.Fragment, {
             children: [
                 (0, i.jsx)(M, {
                     size: 'xs',
@@ -257,7 +257,7 @@ function F(e) {
                         children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_DMS.format({ dmsSent: u })
                     }),
                 null != l &&
-                    (0, i.jsxs)(s.Fragment, {
+                    (0, i.jsxs)(a.Fragment, {
                         children: [
                             (0, i.jsx)(U, {}),
                             (0, i.jsx)(I.Text, {
@@ -328,12 +328,12 @@ function F(e) {
 }
 function w(e) {
     var t;
-    let { message: n, compact: a } = e,
+    let { message: n, compact: s } = e,
         r = null === (t = R.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id,
         { raidDatetime: l, decisionId: c, suspiciousMentionActivityUntil: u } = (0, f.FL)(n);
     return (0, i.jsx)(V, {
-        compact: a,
-        header: (0, i.jsxs)(s.Fragment, {
+        compact: s,
+        header: (0, i.jsxs)(a.Fragment, {
             children: [
                 (0, i.jsx)(I.CircleWarningIcon, {
                     size: 'xs',
@@ -408,7 +408,7 @@ function w(e) {
     });
 }
 function V(e) {
-    let { compact: t, header: n, subheader: s, content: a, footerButtons: l } = e;
+    let { compact: t, header: n, subheader: a, content: s, footerButtons: l } = e;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: r()(j.embedCard, { [j.compact]: t }),
@@ -423,14 +423,14 @@ function V(e) {
                                     className: j.cardHeader,
                                     children: n
                                 }),
-                                null != s &&
+                                null != a &&
                                     (0, i.jsx)('div', {
                                         className: j.subheader,
-                                        children: s
+                                        children: a
                                     })
                             ]
                         }),
-                        a
+                        s
                     ]
                 }),
                 null != l &&
@@ -443,12 +443,12 @@ function V(e) {
     });
 }
 function H(e) {
-    let { id: t, compact: n, message: s, channel: a } = e,
+    let { id: t, compact: n, message: a, channel: s } = e,
         {
             avatarSrc: l,
             eventHandlers: { onMouseEnter: o, onMouseLeave: c }
         } = (0, L.m)(!0),
-        { notificationType: d } = (0, f.FL)(s),
+        { notificationType: d } = (0, f.FL)(a),
         _ = null == d || d === u.p.RAID;
     return (0, i.jsx)('div', {
         onMouseEnter: o,
@@ -462,7 +462,7 @@ function H(e) {
                 className: r()(j.content, { [j.compact]: n }),
                 children: [
                     (0, i.jsx)(M.nD, {
-                        message: s,
+                        message: a,
                         messageClassname: j.spanCorrection,
                         className: r()(j.usernameContainer, j.spanCorrection, { [j.compact]: n }),
                         username: (0, i.jsxs)('div', {
@@ -494,7 +494,7 @@ function H(e) {
                     }),
                     (0, i.jsx)('div', { className: j.flexLineBreak }),
                     (0, i.jsx)(y, {
-                        message: s,
+                        message: a,
                         compact: n
                     })
                 ]

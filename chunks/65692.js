@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return d;
+        return _;
     }
 }),
     n(47120),
@@ -15,38 +15,38 @@ n.d(t, {
     n(492257),
     n(873817);
 var r = n(470079),
-    i = n(250683),
-    a = n(512722),
-    o = n.n(a),
-    s = n(442837),
-    u = n(253135),
-    l = n(314897),
-    c = n(19780),
-    E = n(760373);
-function d(e) {
+    s = n(250683),
+    E = n(512722),
+    i = n.n(E),
+    a = n(442837),
+    o = n(253135),
+    u = n(314897),
+    l = n(19780),
+    c = n(760373);
+function _(e) {
     let { userId: t } = e,
-        n = (0, s.e7)([l.default], () => l.default.getId());
-    o()(n !== t, '[useSecureFramesPairwiseFingerprint] Should not pass current user id.');
-    let [a, d] = r.useState(null),
-        [f, _] = r.useState(!1),
-        h = (0, s.e7)([c.Z], () => c.Z.getSecureFramesRosterMapEntry(t)),
-        y = (0, s.e7)([c.Z], () => c.Z.getSecureFramesRosterMapEntry(n)),
-        I = r.useCallback(async (e, t, n, r) => {
-            _(!0);
-            let a = await (0, u.Il)(E.Xj, new Uint8Array(t), e, new Uint8Array(r), n);
-            d(i.fromByteArray(a)), _(!1);
+        n = (0, a.e7)([u.default], () => u.default.getId());
+    i()(n !== t, '[useSecureFramesPairwiseFingerprint] Should not pass current user id.');
+    let [E, _] = r.useState(null),
+        [d, f] = r.useState(!1),
+        S = (0, a.e7)([l.Z], () => l.Z.getSecureFramesRosterMapEntry(t)),
+        I = (0, a.e7)([l.Z], () => l.Z.getSecureFramesRosterMapEntry(n)),
+        R = r.useCallback(async (e, t, n, r) => {
+            f(!0);
+            let E = await (0, o.Il)(c.Xj, new Uint8Array(t), e, new Uint8Array(r), n);
+            _(s.fromByteArray(E)), f(!1);
         }, []);
     return (
         r.useEffect(() => {
-            null != h && null != y && I(n, y, t, h);
-        }, [n, y, I, t, h]),
+            null != S && null != I && R(n, I, t, S);
+        }, [n, I, R, t, S]),
         r.useMemo(
             () => ({
-                fingerprint: a,
-                userKey: h,
-                loading: f
+                fingerprint: E,
+                userKey: S,
+                loading: d
             }),
-            [a, f, h]
+            [E, d, S]
         )
     );
 }

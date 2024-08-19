@@ -1,7 +1,7 @@
 var i = n(735250);
 n(470079);
-var s = n(481060),
-    a = n(230711),
+var a = n(481060),
+    s = n(230711),
     r = n(985754),
     l = n(91802),
     o = n(222727),
@@ -17,23 +17,23 @@ t.Z = (e) => {
     let T = m.countryCode,
         h = m.currency,
         N = m.paymentSourceTypes.length > 0;
-    return (0, i.jsxs)(s.Notice, {
-        color: I ? s.NoticeColors.BRAND : s.NoticeColors.PREMIUM_TIER_2,
+    return (0, i.jsxs)(a.Notice, {
+        color: I ? a.NoticeColors.BRAND : a.NoticeColors.PREMIUM_TIER_2,
         children: [
-            (0, i.jsx)(s.NoticeCloseButton, {
+            (0, i.jsx)(a.NoticeCloseButton, {
                 onClick: () => E(u.L.UNKNOWN),
                 noticeType: n
             }),
             !I &&
-                (0, i.jsx)(s.NitroWheelIcon, {
+                (0, i.jsx)(a.NitroWheelIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: _.premiumIcon
                 }),
             (0, r.Gv)(T, h, N, I),
-            (0, i.jsx)(s.PrimaryCTANoticeButton, {
+            (0, i.jsx)(a.PrimaryCTANoticeButton, {
                 onClick: () => {
-                    E(u.L.UNKNOWN), a.Z.open(c.oAB.PREMIUM);
+                    E(u.L.UNKNOWN), s.Z.open(c.oAB.PREMIUM);
                 },
                 noticeType: n,
                 children: d.Z.Messages.LEARN_MORE

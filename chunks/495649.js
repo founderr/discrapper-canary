@@ -25,8 +25,8 @@ function p(e, t, n) {
         e
     );
 }
-let I = null,
-    m = null;
+let m = null,
+    I = null;
 class T extends r.Z {
     constructor(...e) {
         super(...e),
@@ -37,14 +37,14 @@ class T extends r.Z {
             }),
             p(this, 'handleConnectionOpen', (e) => {
                 var t;
-                null != (I = null !== (t = null != I ? I : o.Z.getGuildId()) && void 0 !== t ? t : null) && this._openOnboardingIfIncomplete(I);
+                null != (m = null !== (t = null != m ? m : o.Z.getGuildId()) && void 0 !== t ? t : null) && this._openOnboardingIfIncomplete(m);
             }),
             p(this, 'handleChannelSelect', (e) => {
                 let { guildId: t, channelId: n } = e;
-                if (I === t && m === n) return;
-                if (((I = null != t ? t : null), (m = null != n ? n : null), null == I || null == m)) return;
+                if (m === t && I === n) return;
+                if (((m = null != t ? t : null), (I = null != n ? n : null), null == m || null == I)) return;
                 let r = s.Z.getGuild(t);
-                null != r && r.hasFeature(E.oNc.COMMUNITY) && d.Z.shouldFetchPrompts(I, 8 * l.Z.Millis.HOUR) && (0, c.rj)(I), this._openOnboardingIfIncomplete(I, n);
+                null != r && r.hasFeature(E.oNc.COMMUNITY) && d.Z.shouldFetchPrompts(m, 8 * l.Z.Millis.HOUR) && (0, c.rj)(m), this._openOnboardingIfIncomplete(m, n);
             }),
             p(this, 'handleGuildDelete', (e) => {
                 let { guild: t } = e;

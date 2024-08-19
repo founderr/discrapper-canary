@@ -45,7 +45,7 @@ function y(e) {
         _ = (0, l.e7)([g.Z], () => g.Z.getNickname(t.id)),
         T = (e) => {
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('17354')]).then(n.bind(n, 354589));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('17354')]).then(n.bind(n, 354589));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

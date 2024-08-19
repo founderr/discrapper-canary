@@ -3,10 +3,10 @@ n.d(t, {
         return g;
     },
     Zb: function () {
-        return I;
+        return m;
     },
     e$: function () {
-        return m;
+        return I;
     },
     ll: function () {
         return S;
@@ -27,7 +27,7 @@ var i = n(120356),
     f = n(687694),
     h = n(689938),
     p = n(182022);
-function I(e) {
+function m(e) {
     let { children: t, selected: n } = e,
         { showReplyIcon: i, openOnHover: s } = (0, f.C)({ location: 'ContentCard' });
     return (0, r.jsxs)('div', {
@@ -46,7 +46,7 @@ function I(e) {
         ]
     });
 }
-function m(e) {
+function I(e) {
     let { children: t } = e;
     return (0, r.jsx)('div', {
         className: p.infoSection,
@@ -91,7 +91,7 @@ function g(e) {
     let { guildId: t, channelId: n, entry: i, maxAvatars: a = 3 } = e,
         l = i.author_id,
         f = (0, s.e7)([d.default], () => d.default.getUser(l)),
-        { displayParticipants: I, participant1: m, participant2: g, numOtherParticipants: S } = (0, E.Z)(i, a),
+        { displayParticipants: m, participant1: I, participant2: g, numOtherParticipants: S } = (0, E.Z)(i, a),
         A = (0, s.e7)([u.ZP], () => u.ZP.getMember(t, l)),
         N = (0, s.e7)(
             [c.Z],
@@ -108,7 +108,7 @@ function g(e) {
         className: p.userSection,
         children: [
             (0, r.jsx)(T, {
-                users: I,
+                users: m,
                 guildId: t,
                 'aria-hidden': !0
             }),
@@ -133,7 +133,7 @@ function g(e) {
                 : null,
             (0, r.jsx)(o.HiddenVisually, {
                 children: h.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS.format({
-                    user1: _.ZP.getName(t, n, m),
+                    user1: _.ZP.getName(t, n, I),
                     user2: _.ZP.getName(t, n, g),
                     countOthers: S,
                     nameHook: (e, t) => (0, r.jsx)('span', { children: 'text' }, t)

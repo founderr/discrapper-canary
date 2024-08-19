@@ -159,7 +159,7 @@ class E extends i.Z {
         this.avatarDecorationData = (0, a.FG)(e);
     }
     constructor(e) {
-        var t, n, i, a, s, o, c, d, E, f, h, p, I, m, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P, U;
+        var t, n, i, a, s, o, c, d, E, f, h, p, m, I, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P, U;
         super(), _(this, 'id', void 0), _(this, 'username', void 0), _(this, 'discriminator', void 0), _(this, 'avatar', void 0), _(this, 'avatarDecorationData', void 0), _(this, 'banner', void 0), _(this, 'email', void 0), _(this, 'verified', void 0), _(this, 'bot', void 0), _(this, 'system', void 0), _(this, 'mfaEnabled', void 0), _(this, 'mobile', void 0), _(this, 'desktop', void 0), _(this, 'premiumType', void 0), _(this, 'flags', void 0), _(this, 'publicFlags', void 0), _(this, 'purchasedFlags', void 0), _(this, 'premiumUsageFlags', void 0), _(this, 'phone', void 0), _(this, 'nsfwAllowed', void 0), _(this, 'guildMemberAvatars', void 0), _(this, 'hasBouncedEmail', void 0), _(this, 'personalConnectionId', void 0), _(this, 'globalName', void 0), _(this, 'clan', void 0), _(this, 'hasFlag', (e) => !1), _(this, 'isStaff', () => !1), _(this, 'isStaffPersonal', () => !1), _(this, 'hasAnyStaffLevel', () => !1);
         let w = null !== (n = e.premium_type) && void 0 !== n ? n : e.premiumType;
         (this.id = e.id),
@@ -172,8 +172,8 @@ class E extends i.Z {
             (this.bot = null !== (E = e.bot) && void 0 !== E && E),
             (this.system = null !== (f = e.system) && void 0 !== f && f),
             (this.mfaEnabled = null !== (p = null !== (h = e.mfa_enabled) && void 0 !== h ? h : e.mfaEnabled) && void 0 !== p && p),
-            (this.mobile = null !== (I = e.mobile) && void 0 !== I && I),
-            (this.desktop = null !== (m = e.desktop) && void 0 !== m && m),
+            (this.mobile = null !== (m = e.mobile) && void 0 !== m && m),
+            (this.desktop = null !== (I = e.desktop) && void 0 !== I && I),
             (this.premiumType = w === l.WND ? null : w),
             (this.flags = null !== (T = e.flags) && void 0 !== T ? T : 0),
             (this.publicFlags = null !== (S = null !== (g = e.public_flags) && void 0 !== g ? g : e.publicFlags) && void 0 !== S ? S : 0),

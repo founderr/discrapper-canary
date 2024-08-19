@@ -12,8 +12,8 @@ var r = 'function' == typeof Map && Map.prototype,
     f = Boolean.prototype.valueOf,
     h = Object.prototype.toString,
     p = Function.prototype.toString,
-    I = String.prototype.match,
-    m = String.prototype.slice,
+    m = String.prototype.match,
+    I = String.prototype.slice,
     T = String.prototype.replace,
     g = String.prototype.toUpperCase,
     S = String.prototype.toLowerCase,
@@ -42,7 +42,7 @@ function U(e, t) {
         var r = e < 0 ? -R(-e) : R(e);
         if (r !== e) {
             var i = String(r),
-                a = m.call(t, i.length + 1);
+                a = I.call(t, i.length + 1);
             return T.call(i, n, '$&_') + '.' + T.call(T.call(a, /([0-9]{3})/g, '$&_'), /_$/, '');
         }
     }
@@ -71,7 +71,7 @@ e.exports = function e(t, r, i, o) {
         return (function e(t, n) {
             if (t.length > n.maxStringLength) {
                 var r = t.length - n.maxStringLength;
-                return e(m.call(t, 0, n.maxStringLength), n) + ('... ' + r + ' more character') + (r > 1 ? 's' : '');
+                return e(I.call(t, 0, n.maxStringLength), n) + ('... ' + r + ' more character') + (r > 1 ? 's' : '');
             }
             return k(T.call(T.call(t, /(['\\])/g, '\\$1'), /[\x00-\x1f]/g, W), 'single', n);
         })(t, l);
@@ -110,7 +110,7 @@ e.exports = function e(t, r, i, o) {
     if ('function' == typeof t && !F(t)) {
         var $ = (function (e) {
                 if (e.name) return e.name;
-                var t = I.call(p.call(e), /^function\s*([\w$]+)/);
+                var t = m.call(p.call(e), /^function\s*([\w$]+)/);
                 return t ? t[1] : null;
             })(t),
             J = X(t, H);
@@ -291,7 +291,7 @@ e.exports = function e(t, r, i, o) {
         var el = X(t, H),
             eu = P ? P(t) === Object.prototype : t instanceof Object || t.constructor === Object,
             ec = t instanceof Object ? '' : 'null prototype',
-            ed = !eu && b && Object(t) === t && b in t ? m.call(Y(t), 8, -1) : ec ? 'Object' : '',
+            ed = !eu && b && Object(t) === t && b in t ? I.call(Y(t), 8, -1) : ec ? 'Object' : '',
             e_ = (eu || 'function' != typeof t.constructor ? '' : t.constructor.name ? t.constructor.name + ' ' : '') + (ed || ec ? '[' + v.call(N.call([], ed || [], ec || []), ': ') + '] ' : '');
         return 0 === el.length ? e_ + '{}' : x ? e_ + '{' + Q(el, x) + '}' : e_ + '{ ' + v.call(el, ', ') + ' }';
     }

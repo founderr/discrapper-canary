@@ -13,8 +13,8 @@ var i = n(348327),
     f = n(486472),
     h = n(271383),
     p = n(430824),
-    I = n(412788),
-    m = n(9156),
+    m = n(412788),
+    I = n(9156),
     T = n(594174);
 function g(e, t, n) {
     return (
@@ -188,9 +188,9 @@ let w = (0, d.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
         );
     }),
     k = (0, d.oH)((e, t) => e.root.children.map(A));
-class B extends I.Z {
+class B extends m.Z {
     initialize() {
-        this.waitFor(p.Z, m.ZP, c.Z, f.Z, u.Z, E.Z);
+        this.waitFor(p.Z, I.ZP, c.Z, f.Z, u.Z, E.Z);
     }
     getGuildsTree() {
         return S;

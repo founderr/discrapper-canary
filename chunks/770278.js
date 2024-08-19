@@ -9,7 +9,7 @@ var r,
     s = n(470079),
     o = n(120356),
     l = n.n(o),
-    u = n(338545),
+    u = n(567526),
     c = n(481060),
     d = n(110924),
     _ = n(287122);
@@ -30,12 +30,12 @@ let E = s.forwardRef(function (e, t) {
             background: h,
             backdropFilter: 'blur(0px)'
         },
-        I = (0, d.Z)(r),
-        m = (0, c.useTransition)(
+        m = (0, d.Z)(r),
+        I = (0, c.useTransition)(
             o,
             {
                 keys: (e) => (e ? 'backdrop' : 'empty'),
-                config: { duration: r || I ? 0 : 300 },
+                config: { duration: r || m ? 0 : 300 },
                 from: p,
                 enter: {
                     background: f,
@@ -47,7 +47,7 @@ let E = s.forwardRef(function (e, t) {
         );
     if (null == s) {
         let e = { zIndex: 1000 + i };
-        return m((t, n) =>
+        return I((t, n) =>
             n
                 ? (0, a.jsx)(u.animated.div, {
                       className: _.backdrop,
@@ -61,7 +61,7 @@ let E = s.forwardRef(function (e, t) {
         );
     }
     return (0, a.jsx)(s, {
-        children: m((e, t) =>
+        children: I((e, t) =>
             t
                 ? (0, a.jsx)(u.animated.div, {
                       className: l()(_.backdrop, _.withLayer),

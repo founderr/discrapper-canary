@@ -2,7 +2,7 @@ n(411104), n(47120);
 var i,
     l = n(735250),
     r = n(470079),
-    a = n(338545),
+    a = n(567526),
     s = n(91192),
     o = n(442837),
     c = n(481060),
@@ -188,7 +188,7 @@ class R extends (i = r.PureComponent) {
                     i = t.type === T.d4z.DM ? E.default.getUser(t.getRecipientId()) : null;
                 null != i
                     ? (0, u.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('56826'), n.e('38834')]).then(n.bind(n, 131404));
+                          let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('56826'), n.e('38834')]).then(n.bind(n, 131404));
                           return (n) =>
                               (0, l.jsx)(e, {
                                   ...n,

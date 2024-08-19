@@ -8,9 +8,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(512722),
-    r = n.n(a),
+    a = n(470079),
+    s = n(512722),
+    r = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(131388),
@@ -54,10 +54,10 @@ function x(e) {
 }
 function O(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
-        s = I.QK.useSetting(),
-        a = (0, f.n)() && s,
-        [r, l] = (0, E.Z)(t, a),
-        o = a
+        a = I.QK.useSetting(),
+        s = (0, f.n)() && a,
+        [r, l] = (0, E.Z)(t, s),
+        o = s
             ? (0, i.jsx)(d.Z, {
                   autoPlay: !0,
                   loop: !0,
@@ -85,28 +85,28 @@ function O(e) {
     });
 }
 function M(e) {
-    var t, n, a;
+    var t, n, s;
     let { guild: d, subscriptionsSettings: E } = e,
         I = d.id;
     let { nickname: h, nickcolor: f } =
-            ((a = I),
+            ((s = I),
             (0, l.cj)(
                 [m.ZP, T.default],
                 () => {
                     var e, t;
                     let n = T.default.getCurrentUser();
                     r()(null != n, 'user cannot be null');
-                    let i = m.ZP.getMember(a, n.id);
+                    let i = m.ZP.getMember(s, n.id);
                     return {
                         nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : N.ZP.getName(n),
                         nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
                     };
                 },
-                [a]
+                [s]
             )),
         { isTruncated: M, ExpandableTextContainer: v } = (0, C.s)(),
         L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
-        [Z, P] = s.useState(1),
+        [Z, P] = a.useState(1),
         b = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: D, isPhantomPreview: j } = (0, p.m)(),
         U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,

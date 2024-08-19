@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(481060),
     h = n(430742),
     p = n(607070),
-    I = n(100527),
-    m = n(906732),
+    m = n(100527),
+    I = n(906732),
     T = n(998698),
     g = n(271668),
     S = n(931981),
@@ -58,10 +58,10 @@ var r = n(735250),
     ea = n(305489);
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
-        var a, l, es, eo, el, eu, ec, ed, e_, eE, ef, eh, ep, eI, em;
+        var a, l, es, eo, el, eu, ec, ed, e_, eE, ef, eh, ep, em, eI;
         let { textValue: eT, richValue: eg, className: eS, innerClassName: eA, editorClassName: eN, id: ev, required: eO, disabled: eR, placeholder: eC, accessibilityLabel: ey, channel: eD, type: eL, focused: eb, renderAttachButton: eM, renderApplicationCommandIcon: eP, pendingReply: eU, onChange: ew, onResize: ex, onBlur: eG, onFocus: ek, onKeyDown: eB, onSubmit: eF, promptToUpload: eV, highlighted: eH, canMentionRoles: eZ, canMentionChannels: eY, maxCharacterCount: ej, showRemainingCharsAfterCount: eW, allowNewLines: eK = !0, characterCountClassName: ez, 'aria-describedby': eq, 'aria-labelledby': eQ, setEditorRef: eX, autoCompletePosition: e$, children: eJ, disableThemedBackground: e0 = !1, emojiPickerCloseOnModalOuterClick: e1, parentModalKey: e2, onCommandSentinelTyped: e3 } = e;
         u()(null != eL, 'chat input type must be set');
-        let { analyticsLocations: e4 } = (0, m.ZP)(I.Z.CHANNEL_TEXT_AREA),
+        let { analyticsLocations: e4 } = (0, I.ZP)(m.Z.CHANNEL_TEXT_AREA),
             e5 = (function (e) {
                 let t = i.useRef(null);
                 if (null != e && 'function' == typeof e) throw Error('Only Ref objects are supported');
@@ -163,7 +163,7 @@ t.Z = i.memo(
                     handler: a
                 });
         })(eL, ti);
-        let { eventEmitter: tI, handleEditorSelectionChanged: tm } = (function (e, t, n) {
+        let { eventEmitter: tm, handleEditorSelectionChanged: tI } = (function (e, t, n) {
                 let [r] = i.useState(() => new o.EventEmitter());
                 return (
                     i.useEffect(() => {
@@ -185,11 +185,11 @@ t.Z = i.memo(
                 let [o, l] = i.useState(!1),
                     u = i.useCallback(
                         (i, c, d, _, E) => {
-                            var p, I, m;
+                            var p, m, I;
                             if (o) return;
                             l(!0);
-                            let T = null !== (I = null === (p = b.Z.getStickerPreview(s, t.drafts.type)) || void 0 === p ? void 0 : p.map((e) => e.id)) && void 0 !== I ? I : [],
-                                g = null !== (m = F.Z.getUploads(s, t.drafts.type)) && void 0 !== m ? m : [];
+                            let T = null !== (m = null === (p = b.Z.getStickerPreview(s, t.drafts.type)) || void 0 === p ? void 0 : p.map((e) => e.id)) && void 0 !== m ? m : [],
+                                g = null !== (I = F.Z.getUploads(s, t.drafts.type)) && void 0 !== I ? I : [];
                             if (null == c && !_ && !E && (0, C.CB)(g, s)) {
                                 l(!1),
                                     (0, f.openModalLazy)(async () => {
@@ -266,18 +266,18 @@ t.Z = i.memo(
                 [ep, ef, eh]
             ));
         let tR =
-                ((eI = e7),
+                ((em = e7),
                 i.useCallback(
                     function (e, t) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                            r = eI.current;
+                            r = em.current;
                         null != e && null != r && r.insertEmoji(e, t, n), t && (0, v._Q)();
                     },
-                    [eI]
+                    [em]
                 )),
             tC = (function (e) {
                 let { editorRef: t, disabled: n, textValue: r, channelId: a, chatInputType: s, submit: o } = e,
-                    { analyticsLocations: l } = (0, m.ZP)();
+                    { analyticsLocations: l } = (0, I.ZP)();
                 return i.useCallback(
                     (e, i) => {
                         var u, c;
@@ -310,13 +310,13 @@ t.Z = i.memo(
                 submit: eF
             });
         let ty =
-                ((em = e7),
+                ((eI = e7),
                 i.useCallback(
                     (e) => {
-                        let t = em.current;
+                        let t = eI.current;
                         null != e && null != t && t.insertSound(e), (0, v._Q)();
                     },
-                    [em]
+                    [eI]
                 )),
             tD = i.useCallback(() => {
                 var e;
@@ -389,8 +389,8 @@ t.Z = i.memo(
                     handleAutocompleteVisibilityChange: s,
                     handleOuterClick: o
                 };
-            })(eL, tI, e7);
-        (0, j.S)(tI, eD.guild_id, eD.id);
+            })(eL, tm, e7);
+        (0, j.S)(tm, eD.guild_id, eD.id);
         let tB = null != eU,
             tF = (ti && !((tn || tr) && to)) || (tT && (null === (es = eL.submit) || void 0 === es ? void 0 : es.useDisabledStylesOnSubmit)),
             tV = null;
@@ -408,8 +408,8 @@ t.Z = i.memo(
             tW = null != te || null != eU || tj,
             tK = !!(null === (eo = eL.emojis) || void 0 === eo ? void 0 : eo.button) && tL <= 44;
         return (0, r.jsx)(N.f6, {
-            value: tI,
-            children: (0, r.jsxs)(m.Gt, {
+            value: tm,
+            children: (0, r.jsxs)(I.Gt, {
                 value: e4,
                 children: [
                     tZ && tl
@@ -503,7 +503,7 @@ t.Z = i.memo(
                                                     onTab: tM,
                                                     onEnter: tP,
                                                     onMoveSelection: tU,
-                                                    onSelectionChanged: tm,
+                                                    onSelectionChanged: tI,
                                                     onMaybeShowAutocomplete: tN,
                                                     onHideAutocomplete: tv,
                                                     promptToUpload: eV,

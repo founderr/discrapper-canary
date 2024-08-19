@@ -14,8 +14,8 @@ var i = n(481060),
     f = n(734893),
     h = n(846121),
     p = n(931261),
-    I = n(460347),
-    m = n(372897);
+    m = n(460347),
+    I = n(372897);
 function T(e, t, n) {
     return (
         t in e
@@ -48,7 +48,7 @@ class g extends a.Z {
             T(this, 'handleGuildMemberUpdate', (e) => {
                 let { flags: t, user: a, guildId: s } = e;
                 if (a.id === o.default.getId()) {
-                    if (!this.onboardingCompleteGuilds.has(s) && (0, d.yE)(null != t ? t : 0, m.q.COMPLETED_HOME_ACTIONS)) {
+                    if (!this.onboardingCompleteGuilds.has(s) && (0, d.yE)(null != t ? t : 0, I.q.COMPLETED_HOME_ACTIONS)) {
                         var l, u;
                         this.onboardingCompleteGuilds.add(s);
                         let e = null !== (u = null === (l = E.Z.getNewMemberActions(s)) || void 0 === l ? void 0 : l.length) && void 0 !== u ? u : 0;
@@ -99,7 +99,7 @@ class g extends a.Z {
                     i = s.Z.isFullServerPreview(e);
                 if (!r && !i) return {};
                 let a = u.ZP.getSelfMember(e);
-                if (null == a || !(0, I.m)(null !== (t = a.joinedAt) && void 0 !== t ? t : void 0, null !== (n = a.flags) && void 0 !== n ? n : void 0)) return {};
+                if (null == a || !(0, m.m)(null !== (t = a.joinedAt) && void 0 !== t ? t : void 0, null !== (n = a.flags) && void 0 !== n ? n : void 0)) return {};
                 let [o, l] = await Promise.all([this._getOrLoadOnboardingHomeSettings(e, a), this._getOrLoadMemberActions(e, a)]);
                 return {
                     memberActions: o,
@@ -110,7 +110,7 @@ class g extends a.Z {
                 var n, r;
                 let i = E.Z.getNewMemberActions(e),
                     a = E.Z.getIsLoading(e);
-                if (!(null == i && !a && (0, I.m)(null !== (n = t.joinedAt) && void 0 !== n ? n : void 0, null !== (r = t.flags) && void 0 !== r ? r : void 0))) return i;
+                if (!(null == i && !a && (0, m.m)(null !== (n = t.joinedAt) && void 0 !== n ? n : void 0, null !== (r = t.flags) && void 0 !== r ? r : void 0))) return i;
                 {
                     let t = await (0, _.cP)(e);
                     return null == t ? void 0 : t.newMemberActions;
@@ -119,7 +119,7 @@ class g extends a.Z {
             T(this, '_getOrLoadMemberActions', async (e, t) => {
                 var n;
                 let { completedActions: r, loading: i } = h.Z.getState(e);
-                return null == r && !i && (0, d.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, m.q.STARTED_HOME_ACTIONS) ? await (0, _.Fg)(e) : r;
+                return null == r && !i && (0, d.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, I.q.STARTED_HOME_ACTIONS) ? await (0, _.Fg)(e) : r;
             });
     }
 }

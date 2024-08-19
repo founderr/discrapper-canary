@@ -3,13 +3,13 @@ n.d(t, {
         return T;
     },
     C3: function () {
-        return I;
+        return m;
     },
     It: function () {
         return v;
     },
     St: function () {
-        return m;
+        return I;
     },
     iN: function () {
         return _;
@@ -149,15 +149,15 @@ function p(e) {
             : l,
         f = d.length > 0 && r.enableClanCreation,
         p = _.length > 0 && n.enableClanCreation,
-        I = E.length > 0 && a.enableClanCreation,
-        m = [];
+        m = E.length > 0 && a.enableClanCreation,
+        I = [];
     return (
-        f && d.forEach((e) => m.push(e)),
-        p && _.forEach((e) => m.push(e)),
-        I && E.forEach((e) => m.push(e)),
+        f && d.forEach((e) => I.push(e)),
+        p && _.forEach((e) => I.push(e)),
+        m && E.forEach((e) => I.push(e)),
         {
-            guilds: m,
-            enableClanCreation: f || p || I,
+            guilds: I,
+            enableClanCreation: f || p || m,
             defaultGameId: h({
                 genshinConfig: f ? r : void 0,
                 valorantConfig: p ? n : void 0
@@ -165,7 +165,7 @@ function p(e) {
         }
     );
 }
-function I(e) {
+function m(e) {
     let { location: t, includeConverted: n, autoTrackExposure: a = !0 } = e,
         o = (0, i.Wu)([s.Z], () => Object.values(s.Z.getGuilds())),
         l = E.useExperiment({ location: t }, { autoTrackExposure: a }),
@@ -197,7 +197,7 @@ function I(e) {
         includeConverted: n
     });
 }
-function m(e) {
+function I(e) {
     let { guild: t, location: n, includeConverted: r, autoTrackExposure: i = !0 } = e,
         a = E.useExperiment({ location: n }, { autoTrackExposure: i }),
         s = f.useExperiment({ location: n }, { autoTrackExposure: i }),

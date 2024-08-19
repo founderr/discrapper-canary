@@ -39,10 +39,10 @@ function _(e) {
                 f = o.r.build(t.config).defaultReward.messages.nameWithArticle,
                 { targetMinutes: h } = n,
                 p = (0, i.zK)(t, l.S7.IN_HOUSE_CONSOLE_QUEST),
-                I = (0, i.Kr)(t.config),
-                m = (0, i.$J)(t) && (0, i.$H)(t),
+                m = (0, i.Kr)(t.config),
+                I = (0, i.$J)(t) && (0, i.$H)(t),
                 T = (0, s.T)({ location: r });
-            if (p && null != I)
+            if (p && null != m)
                 return (function (e) {
                     var t;
                     let { quest: n, taskDetails: r, withoutMarkdown: a } = e,
@@ -65,7 +65,7 @@ function _(e) {
                     taskDetails: n,
                     withoutMarkdown: _
                 });
-            if (m)
+            if (I)
                 return (function (e) {
                     var t;
                     let { quest: n, taskDetails: r, connectedConsoleLinkOnClick: a, withoutMarkdown: s, mobileGAExperiment: l } = e,
@@ -171,12 +171,12 @@ function _(e) {
                 });
             return null != d
                 ? d.description
-                : null != I
+                : null != m
                   ? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD[_ ? 'astFormat' : 'format']({
                         gameTitle: E,
                         streamingDurationRequirement: h,
                         questReward: f,
-                        duration: I
+                        duration: m
                     })
                   : a
                     ? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2[_ ? 'astFormat' : 'format']({

@@ -1,6 +1,6 @@
 n.d(t, {
     F4: function () {
-        return I;
+        return m;
     },
     So: function () {
         return g;
@@ -9,7 +9,7 @@ n.d(t, {
         return T;
     },
     vw: function () {
-        return m;
+        return I;
     }
 });
 var r = n(314897),
@@ -35,13 +35,13 @@ function p() {
     let n = i.Z.getChannel(t);
     if (null == n) return !1;
     let s = a.Z.getGuild(n.guild_id);
-    return null == s || s.premiumTier >= E.Eu4.TIER_2;
+    return null != s && s.premiumTier >= E.Eu4.TIER_2;
 }
-function I() {
+function m() {
     let { enabled: e } = d.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
     return e && c.Z.shouldFetch() && h() && !p();
 }
-function m(e) {
+function I(e) {
     let { enabled: t } = d.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
     return t && c.Z.shouldActivate(e) && h() && !p();
 }

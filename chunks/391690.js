@@ -37,7 +37,7 @@ function h(e) {
     null == r.installations[t] && (r.installations[t] = {}),
         (r.installations[t][n] = { installationPath: i }),
         !r.installationPaths.has(i) &&
-            I({
+            m({
                 path: i,
                 metadata: {}
             });
@@ -47,13 +47,13 @@ function p(e) {
     if (null == r.installations[t]) return !1;
     delete r.installations[t][n], 0 === Object.keys(r.installations[t]).length && delete r.installations[t];
 }
-function I(e) {
+function m(e) {
     if (r.installationPaths.has(e.path)) return !1;
     f(e.path, e.metadata);
     let t = new Set(r.installationPaths);
     t.add(e.path), (r.installationPaths = t);
 }
-class m extends (i = a.ZP.PersistedStore) {
+class I extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         let t = { ...e };
         null == t.installations && (t.installations = {}), null == t.defaultInstallationPath && (t.defaultInstallationPath = E), null == t.installationPaths ? (t.installationPaths = new Set([t.defaultInstallationPath])) : (t.installationPaths = new Set(Array.from(t.installationPaths))), null == t.pathLabels && (t.pathLabels = {}), (r = t);
@@ -100,9 +100,9 @@ class m extends (i = a.ZP.PersistedStore) {
               : '?';
     }
 }
-d(m, 'displayName', 'InstallationManagerStore'),
-    d(m, 'persistKey', 'InstallationManagerStore'),
-    (t.Z = new m(s.Z, {
+d(I, 'displayName', 'InstallationManagerStore'),
+    d(I, 'persistKey', 'InstallationManagerStore'),
+    (t.Z = new I(s.Z, {
         DISPATCH_APPLICATION_INSTALL: h,
         DISPATCH_APPLICATION_UNINSTALL: p,
         DISPATCH_APPLICATION_CANCEL: function (e) {
@@ -116,7 +116,7 @@ d(m, 'displayName', 'InstallationManagerStore'),
                     branchId: n
                 });
         },
-        INSTALLATION_LOCATION_ADD: I,
+        INSTALLATION_LOCATION_ADD: m,
         INSTALLATION_LOCATION_REMOVE: function (e) {
             var t;
             let { path: n } = e;

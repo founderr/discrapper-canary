@@ -1,6 +1,6 @@
 n.d(t, {
     HR: function () {
-        return I;
+        return m;
     },
     L5: function () {
         return p;
@@ -22,7 +22,7 @@ var r = n(735250),
 function p(e, t) {
     return e.type === _.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(_.iLy.SOURCE_MESSAGE_DELETED) ? E.Z.Messages.SOURCE_MESSAGE_DELETED : t;
 }
-function I(e, t) {
+function m(e, t) {
     var n, r;
     let { message: i } = t,
         { message: a } = e;
@@ -30,7 +30,7 @@ function I(e, t) {
 }
 t.ZP = i.memo(function (e) {
     var t;
-    let { className: n, message: a, children: o, content: u, onUpdate: I, contentRef: m } = e,
+    let { className: n, message: a, children: o, content: u, onUpdate: m, contentRef: I } = e,
         T = a.isEdited(),
         g = a.state === _.yb.SEND_FAILED,
         S = a.state === _.yb.SENDING,
@@ -39,11 +39,11 @@ t.ZP = i.memo(function (e) {
         v = i.useRef(!1);
     return (
         i.useLayoutEffect(() => {
-            v.current ? null != I && I() : (v.current = !0);
-        }, [I, a.content, u, N, o]),
+            v.current ? null != m && m() : (v.current = !0);
+        }, [m, a.content, u, N, o]),
         (0, r.jsxs)('div', {
             id: (0, c.ut)(a),
-            ref: m,
+            ref: I,
             className: s()(n, h.markup, {
                 [f.messageContent]: !0,
                 [f.isSending]: S && !A,
@@ -72,4 +72,4 @@ t.ZP = i.memo(function (e) {
             ]
         })
     );
-}, I);
+}, m);

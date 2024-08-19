@@ -1,6 +1,6 @@
 n.d(t, {
     $R: function () {
-        return I;
+        return m;
     },
     GA: function () {
         return A;
@@ -15,7 +15,7 @@ n.d(t, {
         return p;
     },
     Wq: function () {
-        return m;
+        return I;
     },
     ZB: function () {
         return i;
@@ -63,19 +63,19 @@ let p = {
         unreads: (e) => (e === f.i.ALL_MESSAGES ? 'unreads set to all messages' : e === f.i.ONLY_MENTIONS ? 'unreads set to mentions' : 'unreads set to the default'),
         notifications: (e) => (e === E.bL.ALL_MESSAGES ? 'notifications set to all messages' : e === E.bL.ONLY_MENTIONS ? 'notifications set to mentions' : e === E.bL.NO_MESSAGES ? 'notifications set to nothing' : 'notifications set to the default')
     },
-    I = Object.freeze({
+    m = Object.freeze({
         [E.bL.ALL_MESSAGES]: 'All',
         [E.bL.ONLY_MENTIONS]: 'Mentions',
         [E.bL.NO_MESSAGES]: 'Nothing',
         [E.bL.NULL]: null
     });
-function m(e, t, n, r, i) {
+function I(e, t, n, r, i) {
     var a, s;
     let u = function (e) {
             var t, n, r, i, a, s, o;
             let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 u = null != l.mute_config && null != l.mute_config.end_time ? new Date(l.mute_config.end_time).getTime() : e.guild_muted_until,
-                c = null != l.message_notifications ? I[l.message_notifications] : e.guild_message_notification_settings;
+                c = null != l.message_notifications ? m[l.message_notifications] : e.guild_message_notification_settings;
             return {
                 guild_muted_until: u,
                 guild_flags: null !== (t = l.flags) && void 0 !== t ? t : e.guild_flags,
@@ -92,8 +92,8 @@ function m(e, t, n, r, i) {
         d = u(A(e), t),
         f = T(c, d, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         p = null !== (a = f('guild_flags')) && void 0 !== a ? a : 0,
-        m = (null !== (s = d.guild_flags) && void 0 !== s ? s : 0) ^ p,
-        g = 0 === (0, _.M1)(m, h.vc.OPT_IN_CHANNELS_OFF, h.vc.OPT_IN_CHANNELS_ON);
+        I = (null !== (s = d.guild_flags) && void 0 !== s ? s : 0) ^ p,
+        g = 0 === (0, _.M1)(I, h.vc.OPT_IN_CHANNELS_OFF, h.vc.OPT_IN_CHANNELS_ON);
     o.ZP.trackWithMetadata(E.rMx.NOTIFICATION_SETTINGS_UPDATED, {
         ...d,
         ...l.Z.getStats(e),
@@ -122,11 +122,11 @@ function g(e) {
 }
 function S(e, t, n, r, i, a) {
     var s, d, f, p;
-    let m = function (t) {
+    let I = function (t) {
             var n, r;
             let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 a = null !== (n = i.muted) && void 0 !== n ? n : null == t ? void 0 : t.channel_is_muted,
-                s = null != i.message_notifications ? I[i.message_notifications] : null == t ? void 0 : t.channel_message_notification_settings,
+                s = null != i.message_notifications ? m[i.message_notifications] : null == t ? void 0 : t.channel_message_notification_settings,
                 o = null == e ? null : !0 === a || null != s;
             return {
                 channel_is_muted: a,
@@ -136,8 +136,8 @@ function S(e, t, n, r, i, a) {
                 channel_muted_until: g(i.mute_config)
             };
         },
-        S = m(r),
-        A = m(v(e, t), n),
+        S = I(r),
+        A = I(v(e, t), n),
         N = T(S, A, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         O = u.Z.getChannel(t),
         R = null !== (d = N('channel_flags')) && void 0 !== d ? d : 0,
@@ -172,7 +172,7 @@ function A(e) {
         guild_is_muted: t,
         guild_muted_until: null != n && null != n.end_time ? new Date(n.end_time).getTime() : null,
         guild_receive_mobile_push: d.ZP.isMobilePushEnabled(e),
-        guild_message_notification_settings: I[d.ZP.getMessageNotifications(e)],
+        guild_message_notification_settings: m[d.ZP.getMessageNotifications(e)],
         guild_notify_highlights: d.ZP.getNotifyHighlights(e),
         guild_flags: d.ZP.getGuildFlags(e)
     };
@@ -187,7 +187,7 @@ function v(e, t) {
     return {
         channel_is_muted: n,
         channel_muted_until: null != r && null != r.end_time ? new Date(r.end_time).getTime() : null,
-        channel_message_notification_settings: I[d.ZP.getChannelMessageNotifications(e, t)],
+        channel_message_notification_settings: m[d.ZP.getChannelMessageNotifications(e, t)],
         channel_flags: d.ZP.getChannelIdFlags(e, t)
     };
 }

@@ -3,7 +3,7 @@ l.d(n, {
         return T;
     },
     xX: function () {
-        return _;
+        return N;
     }
 });
 var t = l(735250);
@@ -23,7 +23,7 @@ var r = l(120356),
     v = l(770009),
     C = l(889515),
     h = l(751319);
-function _(e) {
+function N(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
@@ -32,7 +32,7 @@ function _(e) {
                         C.Z,
                         {
                             ...e,
-                            renderComponents: _
+                            renderComponents: N
                         },
                         n
                     );
@@ -69,7 +69,7 @@ function T(e) {
               className: i()([h.container, { [h.containerUikit]: n.isUIKitComponents() }]),
               children: (0, t.jsx)(u.Il, {
                   message: n,
-                  children: _(l)
+                  children: N(l)
               })
           });
 }

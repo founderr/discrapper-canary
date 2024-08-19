@@ -39,13 +39,13 @@ var r = n(995769),
                     f,
                     h,
                     p = c[E],
-                    I = p.indexOf(']='),
-                    m = -1 === I ? p.indexOf('=') : I + 1;
+                    m = p.indexOf(']='),
+                    I = -1 === m ? p.indexOf('=') : m + 1;
                 if (
-                    (-1 === m
+                    (-1 === I
                         ? ((f = t.decoder(p, s.decoder, _, 'key')), (h = t.strictNullHandling ? null : ''))
-                        : ((f = t.decoder(p.slice(0, m), s.decoder, _, 'key')),
-                          (h = r.maybeMap(o(p.slice(m + 1), t), function (e) {
+                        : ((f = t.decoder(p.slice(0, I), s.decoder, _, 'key')),
+                          (h = r.maybeMap(o(p.slice(I + 1), t), function (e) {
                               return t.decoder(e, s.decoder, _, 'value');
                           }))),
                     h && t.interpretNumericEntities && 'iso-8859-1' === _)

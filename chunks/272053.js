@@ -25,8 +25,8 @@ function p(e, t, n) {
         e
     );
 }
-let I = 1 * _.Z.Millis.MINUTE,
-    m = (e) => 'https://youtube.com/watch?v='.concat(e),
+let m = 1 * _.Z.Millis.MINUTE,
+    I = (e) => 'https://youtube.com/watch?v='.concat(e),
     T = 5 * _.Z.Millis.MINUTE,
     g = /live_user_(.*)-\{width\}/,
     S = null,
@@ -88,19 +88,19 @@ let y = new (class e {
             let { thumbnail_url: u, game_id: _, title: E } = l,
                 f = { large_image: null != u && null !== (r = (0, d.getAssetFromImageURL)(h.ABu.TWITCH, u)) && void 0 !== r ? r : void 0 },
                 p = await C(_, t),
-                I = c.Z.get(h.ABu.TWITCH);
-            let m = null !== ((a = u), (i = null === (s = g.exec(a)) || void 0 === s ? void 0 : s[1])) && void 0 !== i ? i : e.name,
+                m = c.Z.get(h.ABu.TWITCH);
+            let I = null !== ((a = u), (i = null === (s = g.exec(a)) || void 0 === s ? void 0 : s[1])) && void 0 !== i ? i : e.name,
                 T = null != E && '' !== E ? E.slice(0, 128) : void 0,
                 S = null != p && '' !== p ? p.slice(0, 128) : void 0;
             return {
                 url:
-                    null === (n = I.getPlatformUserUrl) || void 0 === n
+                    null === (n = m.getPlatformUserUrl) || void 0 === n
                         ? void 0
-                        : n.call(I, {
+                        : n.call(m, {
                               id: e.id,
-                              name: m
+                              name: I
                           }),
-                name: I.name,
+                name: m.name,
                 assets: f,
                 details: T,
                 state: S
@@ -138,7 +138,7 @@ let y = new (class e {
                 l = { large_image: null !== (n = (0, d.getAssetFromImageURL)(h.ABu.YOUTUBE, s.high.url)) && void 0 !== n ? n : void 0 },
                 u = null != a && '' !== a ? a.slice(0, 128) : void 0;
             return (N = {
-                url: m(i),
+                url: I(i),
                 name: c.Z.get(h.ABu.YOUTUBE).name,
                 details: u,
                 assets: l
@@ -173,7 +173,7 @@ let y = new (class e {
             });
     }
     _scheduleCheck() {
-        this._started && (this._nextCheck = setTimeout(() => this._check(), I));
+        this._started && (this._nextCheck = setTimeout(() => this._check(), m));
     }
     constructor() {
         p(this, '_nextCheck', void 0), p(this, '_started', void 0), (this._started = !1);

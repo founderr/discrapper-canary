@@ -12,7 +12,7 @@ var r = n(735250),
     f = n(357925);
 let h = l().memoize((e) => ''.concat(e * E.DC.NonDiversityPerRow, 'px ').concat(e * Math.ceil(c.ZP.numNonDiversitySprites / E.DC.NonDiversityPerRow), 'px')),
     p = l().memoize((e) => ''.concat(e * E.DC.DiversityPerRow, 'px ').concat(e * Math.ceil(c.ZP.numDiversitySprites / E.DC.DiversityPerRow), 'px')),
-    I = (e, t, r) => {
+    m = (e, t, r) => {
         let i, a, s;
         if (!e.useSpriteSheet) return;
         let o = null != e.index ? e.index : 0;
@@ -27,7 +27,7 @@ let h = l().memoize((e) => ''.concat(e * E.DC.NonDiversityPerRow, 'px ').concat(
             width: r
         };
     },
-    m = i.memo(function (e) {
+    I = i.memo(function (e) {
         let { emoji: t, size: n, surrogateCodePoint: a, allowAnimatedEmoji: o, 'aria-label': l, isLocked: c } = e,
             h = (() => {
                 if (!t.useSpriteSheet) {
@@ -52,7 +52,7 @@ let h = l().memoize((e) => ''.concat(e * E.DC.NonDiversityPerRow, 'px ').concat(
                 }
                 return (0, r.jsx)('div', {
                     className: s()(f.emojiSpriteImage, { [f.lockedEmoji]: c }),
-                    style: I(t, a, n),
+                    style: m(t, a, n),
                     children: (0, r.jsx)(u.HiddenVisually, { children: l })
                 });
             })();
@@ -72,4 +72,4 @@ let h = l().memoize((e) => ''.concat(e * E.DC.NonDiversityPerRow, 'px ').concat(
             ]
         });
     });
-t.Z = m;
+t.Z = I;

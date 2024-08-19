@@ -16,9 +16,9 @@ function c(e) {
     let { type: l, style: c, label: d, placeholder: m, minLength: f, maxLength: p, required: E, value: v } = e,
         [C, h] = r.useState(null != v ? v : ''),
         {
-            state: _,
+            state: N,
             executeStateUpdate: T,
-            error: N
+            error: _
         } = (0, u.Ee)(
             e,
             null != v
@@ -30,8 +30,8 @@ function c(e) {
         ),
         x = (0, s.hz)(e.id);
     r.useEffect(() => {
-        (null == _ ? void 0 : _.type) === l && h(_.value);
-    }, [l, _]);
+        (null == N ? void 0 : N.type) === l && h(N.value);
+    }, [l, N]);
     let I = {
         name: d,
         value: C,
@@ -59,7 +59,7 @@ function c(e) {
         title: d,
         required: E,
         className: o.formItem,
-        error: N,
+        error: _,
         children: n
     });
 }

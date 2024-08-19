@@ -12,31 +12,31 @@ function i(e) {
         name: e.mimeType.split('/').slice(1)[0]
     };
 }
-function a(e, t, n, a) {
-    var s, o, l;
-    let u = {},
-        c = {},
-        d = [],
-        _ = [];
+function a(e, t, n, a, s) {
+    var o, l, u;
+    let c = {},
+        d = {},
+        _ = [],
+        E = [];
     for (let t of e.values())
         switch (t.type) {
             case 'candidate-pair':
-                u[t.id] = t;
-                break;
-            case 'codec':
                 c[t.id] = t;
                 break;
+            case 'codec':
+                d[t.id] = t;
+                break;
             case 'inbound-rtp':
-                d.push(t);
+                _.push(t);
                 break;
             case 'outbound-rtp':
-                _.push(t);
+                E.push(t);
         }
-    let E = Object.values(u).find((e) => 'succeeded' === e.state);
-    if (void 0 === E) return null;
-    let f = [];
-    for (let e of _) {
-        let t = c[e.codecId];
+    let f = Object.values(c).find((e) => 'succeeded' === e.state);
+    if (void 0 === f) return null;
+    let h = [];
+    for (let e of E) {
+        let t = d[e.codecId];
         if (null == t) continue;
         let a = {
             type: e.kind,
@@ -49,11 +49,11 @@ function a(e, t, n, a) {
             packetsSent: e.packetsSent
         };
         if ('audio' === e.kind)
-            f.push({
+            h.push({
                 ...a,
                 type: 'audio'
             });
-        else if ('video' === e.kind) {
+        else if ('video' === e.kind && s) {
             let t =
                 null !== e.frameWidth
                     ? {
@@ -61,7 +61,7 @@ function a(e, t, n, a) {
                           height: e.frameHeight
                       }
                     : void 0;
-            f.push({
+            h.push({
                 ...a,
                 framesEncoded: e.framesEncoded,
                 keyFramesEncoded: e.keyFramesEncoded,
@@ -70,7 +70,7 @@ function a(e, t, n, a) {
                 pliCount: e.pliCount,
                 bitrateTarget: e.targetBitrate,
                 qpSum: e.qpSum,
-                averageEncodeTime: null == e.framesEncoded || null === (l = e.totalEncodeTime) || 0 === l ? void 0 : ((1000 * e.totalEncodeTime) / e.framesEncoded).toFixed(1),
+                averageEncodeTime: null == e.framesEncoded || null === (u = e.totalEncodeTime) || 0 === u ? void 0 : ((1000 * e.totalEncodeTime) / e.framesEncoded).toFixed(1),
                 resolution: t,
                 framesSent: e.framesSent,
                 frameRateInput: e.framesPerSecond,
@@ -78,9 +78,9 @@ function a(e, t, n, a) {
             });
         }
     }
-    let h = {};
-    for (let e of d) {
-        let s = c[e.codecId];
+    let p = {};
+    for (let e of _) {
+        let s = d[e.codecId];
         if (null == s) continue;
         let o = t(e.ssrc);
         if (null == o) continue;
@@ -98,15 +98,15 @@ function a(e, t, n, a) {
         };
         if ('audio' === e.kind) {
             let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round((1000 * e.jitterBufferDelay) / e.jitterBufferEmittedCount) : 0;
-            null == h[o] && (h[o] = []),
-                h[o].push({
+            null == p[o] && (p[o] = []),
+                p[o].push({
                     ...l,
                     audioLevel: e.audioLevel,
                     jitter: 1000 * e.jitter,
                     jitterBuffer: t
                 });
         } else if ('video' === e.kind) {
-            null == h[o] && (h[o] = []);
+            null == p[o] && (p[o] = []);
             let t =
                 null !== e.frameWidth
                     ? {
@@ -114,7 +114,7 @@ function a(e, t, n, a) {
                           height: e.frameHeight
                       }
                     : void 0;
-            h[o].push({
+            p[o].push({
                 ...l,
                 resolution: t,
                 framesDecoded: e.framesDecoded,
@@ -135,17 +135,17 @@ function a(e, t, n, a) {
             });
         }
     }
-    let p = (null !== (s = E.currentRoundTripTime) && void 0 !== s ? s : 0) * 1000;
+    let m = (null !== (o = f.currentRoundTripTime) && void 0 !== o ? o : 0) * 1000;
     return {
         transport: {
-            availableOutgoingBitrate: null !== (o = E.availableOutgoingBitrate) && void 0 !== o ? o : 0,
-            bytesReceived: E.bytesReceived,
-            bytesSent: E.bytesSent,
-            ping: p
+            availableOutgoingBitrate: null !== (l = f.availableOutgoingBitrate) && void 0 !== l ? l : 0,
+            bytesReceived: f.bytesReceived,
+            bytesSent: f.bytesSent,
+            ping: m
         },
         rtp: {
-            inbound: h,
-            outbound: f
+            inbound: p,
+            outbound: h
         }
     };
 }

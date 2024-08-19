@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
+    a = n(470079),
+    s = n(442837),
     r = n(481060),
     l = n(782568),
     o = n(31336),
@@ -15,9 +15,9 @@ var i = n(735250),
     d = n(665149),
     _ = n(689938);
 function E() {
-    let e = (0, a.e7)([c.Z], () => c.Z.isDeveloper),
-        [t, E] = s.useState(!1),
-        [I, m] = s.useState(0),
+    let e = (0, s.e7)([c.Z], () => c.Z.isDeveloper),
+        [t, E] = a.useState(!1),
+        [I, m] = a.useState(0),
         T = (e) => {
             clearTimeout(I),
                 m(
@@ -39,7 +39,7 @@ function E() {
             onRequestClose: () => E(!1),
             renderPopout: () =>
                 (function (e) {
-                    let { onClose: t, isDiscordDeveloper: s } = e;
+                    let { onClose: t, isDiscordDeveloper: a } = e;
                     return (0, i.jsx)(r.Menu, {
                         onSelect: () => {},
                         navId: 'staff-help-popout',
@@ -58,7 +58,7 @@ function E() {
                                             return (t) => (0, i.jsx)(e, { ...t });
                                         })
                                 }),
-                                s &&
+                                a &&
                                     (0, i.jsx)(r.MenuItem, {
                                         id: 'staff-devtools',
                                         label: 'Toggle DevTools',

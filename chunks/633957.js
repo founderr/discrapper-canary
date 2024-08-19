@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
+    a = n(470079),
+    s = n(442837),
     r = n(481060),
     l = n(2052),
     o = n(317381),
@@ -31,30 +31,30 @@ function R(e) {
     let { application: n, channelId: R, guildId: x } = e,
         { analyticsLocations: O } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
         M = (0, l.O)(),
-        v = (0, a.e7)([h.Z], () => h.Z.getChannel(R)),
+        v = (0, s.e7)([h.Z], () => h.Z.getChannel(R)),
         L = (null == v ? void 0 : null === (t = v.isThread) || void 0 === t ? void 0 : t.call(v)) ? (null == v ? void 0 : v.parent_id) : R,
-        Z = (0, a.e7)([T.default], () => T.default.getId()),
+        Z = (0, s.e7)([T.default], () => T.default.getId()),
         {
             embeddedActivity: P,
             currentEmbeddedActivity: b,
             activityLaunchState: D
-        } = (0, a.cj)([o.ZP], () => ({
+        } = (0, s.cj)([o.ZP], () => ({
             embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != L ? L : '').find((e) => e.applicationId === n.id),
             currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity(),
             activityLaunchState: o.ZP.getLaunchState(n.id, null != L ? L : void 0)
         })),
-        j = (0, a.Wu)([f.default], () => {
+        j = (0, s.Wu)([f.default], () => {
             var e;
             return Array.from(null !== (e = null == P ? void 0 : P.userIds) && void 0 !== e ? e : [])
                 .map((e) => f.default.getUser(e))
                 .filter(C.lm);
         }),
-        U = (0, a.e7)([N.Z], () => {
+        U = (0, s.e7)([N.Z], () => {
             var e;
             let t = null == P ? void 0 : P.userIds.values().next().value;
             return null == t ? null : null === (e = N.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
         }),
-        y = s.useMemo(() => {
+        y = a.useMemo(() => {
             let e = new m.Z(n);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = g.wT), e;
         }, [n]),
@@ -70,7 +70,7 @@ function R(e) {
             currentEmbeddedActivity: b,
             channel: v
         }),
-        F = s.useId(),
+        F = a.useId(),
         w = null != D && D.isLaunching && D.componentId === F,
         V = async () => {
             k
@@ -120,7 +120,7 @@ function R(e) {
                             tooltipContentClassName: A.tooltipContent,
                             children: (e) => {
                                 let { onClick: t, ...n } = e;
-                                return (0, s.createElement)(
+                                return (0, a.createElement)(
                                     r.Button,
                                     {
                                         ...n,

@@ -20,25 +20,25 @@ var r = l(120356),
     v = l(689938),
     C = l(917056);
 function h(e) {
-    let { entry: n, channel: l, title: r, subtitle: h, thumbnailUrl: _, onClickTitle: T, onClickSubtitle: N, onClickThumbnail: x, providerIconProps: I, style: g = {} } = e,
-        S = (0, f.Dt)(),
-        { primaryColor: O, secondaryColor: Z } = (0, c.Z)(_);
+    let { entry: n, channel: l, title: r, subtitle: h, thumbnailUrl: N, onClickTitle: T, onClickSubtitle: _, onClickThumbnail: x, providerIconProps: I, style: S = {} } = e,
+        g = (0, f.Dt)(),
+        { primaryColor: O, secondaryColor: Z } = (0, c.Z)(N);
     return (
-        null != _ && (g.background = 'linear-gradient(45deg, '.concat(O, ', ').concat(Z, ')')),
+        null != N && (S.background = 'linear-gradient(45deg, '.concat(O, ', ').concat(Z, ')')),
         (0, t.jsx)(a.ThemeContextProvider, {
             theme: E.BR.DARK,
             children: (0, t.jsxs)('figure', {
                 'aria-roledescription': v.Z.Messages.CONTENT_INVENTORY_ACTIVITY_CARD_ARIA_ROLE_DESCRIPTION,
-                'aria-labelledby': S,
+                'aria-labelledby': g,
                 'data-disable-adaptive-theme': !0,
                 className: i()(C.container, (0, p.Q)(E.BR.DARK)),
-                style: g,
+                style: S,
                 children: [
                     (0, t.jsx)(a.Clickable, {
                         onClick: x,
                         className: i()(C.thumbnailContainer, null != x && C.clickable),
                         children: (0, t.jsx)(m.f, {
-                            src: _,
+                            src: N,
                             constrain: 'width',
                             size: 64
                         })
@@ -55,7 +55,7 @@ function h(e) {
                             (0, t.jsx)(u.Z, {
                                 onClick: T,
                                 children: (0, t.jsx)(a.Heading, {
-                                    id: S,
+                                    id: g,
                                     variant: 'heading-md/medium',
                                     lineClamp: 1,
                                     className: i()(C.textPrimary, C.truncatedText),
@@ -68,7 +68,7 @@ function h(e) {
                                       children: [
                                           (0, t.jsx)(a.Spacer, { size: 2 }),
                                           (0, t.jsx)(u.Z, {
-                                              onClick: N,
+                                              onClick: _,
                                               children: (0, t.jsx)(a.Text, {
                                                   variant: 'text-sm/normal',
                                                   className: i()(C.textSecondary, C.truncatedText),

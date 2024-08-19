@@ -2,7 +2,7 @@ var s = n(735250),
     o = n(470079),
     r = n(120356),
     a = n.n(r),
-    l = n(338545),
+    l = n(567526),
     i = n(481060),
     c = n(569379),
     d = n(642145),
@@ -14,16 +14,16 @@ t.Z = o.forwardRef((e, t) => {
         f = r / 2 - p / 2,
         h = 2 * Math.PI * f,
         E = h - o * h,
-        T = {
+        S = {
             strokeDasharray: ''.concat(h, ' ').concat(h),
             strokeDashoffset: E
         },
-        S = {
+        T = {
             strokeDasharray: ''.concat(h, ' ').concat(h),
             strokeDashoffset: -o * h
         },
-        v = { boxShadow: '0 0 30px 0px '.concat(_.glow) },
-        { progressTextAnimation: A } = (0, i.useSpring)({
+        A = { boxShadow: '0 0 30px 0px '.concat(_.glow) },
+        { progressTextAnimation: v } = (0, i.useSpring)({
             progressTextAnimation: null != m && 1 !== o ? 1 : 0,
             config: d.Y
         });
@@ -33,11 +33,11 @@ t.Z = o.forwardRef((e, t) => {
         children: [
             (0, s.jsxs)('div', {
                 className: u.inner,
-                style: v,
+                style: A,
                 children: [
                     g,
                     (0, s.jsxs)(l.animated.div, {
-                        style: { opacity: A },
+                        style: { opacity: v },
                         className: a()(u.coverContent, u.progressTextWrapper),
                         children: [
                             (0, s.jsx)('div', { className: a()(u.coverContent, u.progressTextOverlay) }),
@@ -97,7 +97,7 @@ t.Z = o.forwardRef((e, t) => {
                         cx: C,
                         cy: C,
                         stroke: 'url(#linear)',
-                        style: S
+                        style: T
                     }),
                     (0, s.jsx)('circle', {
                         className: u.progress,
@@ -107,7 +107,7 @@ t.Z = o.forwardRef((e, t) => {
                         cx: C,
                         cy: C,
                         stroke: _.foreground,
-                        style: T
+                        style: S
                     })
                 ]
             })

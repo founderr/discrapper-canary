@@ -1,6 +1,6 @@
 n.d(t, {
     C: function () {
-        return I;
+        return m;
     }
 }),
     n(653041);
@@ -30,8 +30,8 @@ function p(e, t, n) {
         e
     );
 }
-let I = 100,
-    m = new l.Z({
+let m = 100,
+    I = new l.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
@@ -42,7 +42,7 @@ let I = 100,
             return null !== (n = null !== (t = d.Z.getGuild(e)) && void 0 !== t ? t : c.Z.getChannel(e)) && void 0 !== n ? n : c.Z.getChannel(c.Z.getDMFromUserId(e));
         },
         afterCompute: () => {},
-        numFrequentlyItems: I,
+        numFrequentlyItems: m,
         maxSamples: 10
     }),
     T = null,
@@ -56,7 +56,7 @@ function S(e) {
             null != n &&
                 f.Xyh.test(n) &&
                 ((r = !0),
-                m.track(n),
+                I.track(n),
                 N.pendingUsages.push({
                     key: n,
                     timestamp: Date.now()
@@ -66,7 +66,7 @@ function S(e) {
             null != t &&
                 f.Xyh.test(t) &&
                 ((r = !0),
-                m.track(t),
+                I.track(t),
                 N.pendingUsages.push({
                     key: t,
                     timestamp: Date.now()
@@ -78,7 +78,7 @@ function A() {
     var e;
     let t = null === (e = u.Z.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
     if (null == t) return !1;
-    m.overwriteHistory(
+    I.overwriteHistory(
         a().mapValues(t, (e) => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter((e) => e > 0)
@@ -98,21 +98,21 @@ class v extends (r = s.ZP.PersistedStore) {
         return N.pendingUsages.length > 0;
     }
     get frecencyWithoutFetchingLatest() {
-        return m;
+        return I;
     }
     getFrequentlyWithoutFetchingLatest() {
-        return m.frequently;
+        return I.frequently;
     }
     getScoreWithoutFetchingLatest(e) {
         var t;
-        return null !== (t = m.getFrecency(e)) && void 0 !== t ? t : 0;
+        return null !== (t = I.getFrecency(e)) && void 0 !== t ? t : 0;
     }
     getScoreForDMWithoutFetchingLatest(e) {
         let t = c.Z.getDMFromUserId(e);
         return null != t ? this.getScoreWithoutFetchingLatest(t) : 0;
     }
     getMaxScore() {
-        return 10 * I;
+        return 10 * m;
     }
     getBonusScore() {
         return 100;

@@ -18,7 +18,7 @@ n.d(t, {
         return h;
     },
     t1: function () {
-        return I;
+        return m;
     },
     v0: function () {
         return r;
@@ -126,7 +126,7 @@ function p() {
         });
     });
 }
-function I(e) {
+function m(e) {
     var t;
     let n = e.selectedGames,
         r = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;

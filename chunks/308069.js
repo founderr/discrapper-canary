@@ -2,7 +2,7 @@ var s = n(735250),
     o = n(470079),
     r = n(120356),
     a = n.n(r),
-    l = n(338545),
+    l = n(567526),
     i = n(481060),
     c = n(617136),
     d = n(497505),
@@ -17,24 +17,24 @@ var s = n(735250),
     h = n(689938),
     E = n(91242);
 t.Z = (e) => {
-    let { quest: t, expansionSpring: r, onCtxMenuSelect: T, onCtxMenuOpen: S, onCtxMenuClose: v, useReducedMotion: A, isExpanded: N, isExpansionAnimationComplete: j } = e,
+    let { quest: t, expansionSpring: r, onCtxMenuSelect: S, onCtxMenuOpen: T, onCtxMenuClose: A, useReducedMotion: v, isExpanded: N, isExpansionAnimationComplete: j } = e,
         B = o.useCallback(() => {
             (0, g.openDisclosureModal)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
-        b = o.useCallback(() => {
+        R = o.useCallback(() => {
             (0, u.FE)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK
             });
         }, [t]),
-        R = N && j,
+        b = N && j,
         y = (0, p.vI)(t, f.dr.QUESTS_BAR, !0),
         I = (0, s.jsx)(i.Clickable, {
-            onClick: b,
-            className: a()({ [E.logo]: R }),
+            onClick: R,
+            className: a()({ [E.logo]: b }),
             children: (0, s.jsx)(x.Z, {
                 quest: t,
                 withGameTile: !1
@@ -42,7 +42,7 @@ t.Z = (e) => {
         });
     return (0, s.jsxs)(l.animated.div, {
         className: a()(E.wrapper, {
-            [E.interactable]: R,
+            [E.interactable]: b,
             [E.rewardHighlightWrapper]: y
         }),
         style: {
@@ -87,16 +87,16 @@ t.Z = (e) => {
                     className: E.background,
                     animationClassName: E.backgroundAnimation,
                     quest: t,
-                    useReducedMotion: A
+                    useReducedMotion: v
                 })
             }),
             y
                 ? (0, s.jsx)(_.Z, {
                       quest: t,
                       expansionSpring: r,
-                      isFullyExpanded: R,
+                      isFullyExpanded: b,
                       partnerBranding: I,
-                      useReducedMotion: A
+                      useReducedMotion: v
                   })
                 : (0, s.jsxs)(s.Fragment, {
                       children: [
@@ -115,7 +115,7 @@ t.Z = (e) => {
                               style: {
                                   opacity: r.to({
                                       range: [0, 1],
-                                      output: [1, R ? 1 : 0.8]
+                                      output: [1, b ? 1 : 0.8]
                                   }),
                                   transform: (0, l.to)(
                                       [
@@ -184,9 +184,9 @@ t.Z = (e) => {
                         ]
                     }),
                     (0, s.jsx)(m.r, {
-                        onOpen: S,
-                        onClose: v,
-                        onSelect: T,
+                        onOpen: T,
+                        onClose: A,
+                        onSelect: S,
                         questContent: d.jn.QUEST_BAR_V2,
                         quest: t,
                         shouldShowDisclosure: !0,

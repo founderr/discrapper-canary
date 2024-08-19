@@ -37,7 +37,7 @@ var r = n(444675),
         n < i;
         o = r[++n]
     )
-        I(o) || !A(o) ? (s += ' ' + o) : (s += ' ' + u(o));
+        m(o) || !A(o) ? (s += ' ' + o) : (s += ' ' + u(o));
     return s;
 }),
     (t.deprecate = function (e, n) {
@@ -136,7 +136,7 @@ function _(e, n, r) {
             var n = "'" + JSON.stringify(t).replace(/^"|"$/g, '').replace(/'/g, "\\'").replace(/\\"/g, '"') + "'";
             return e.stylize(n, 'string');
         }
-        return m(t) ? e.stylize('' + t, 'number') : p(t) ? e.stylize('' + t, 'boolean') : I(t) ? e.stylize('null', 'null') : void 0;
+        return I(t) ? e.stylize('' + t, 'number') : p(t) ? e.stylize('' + t, 'boolean') : m(t) ? e.stylize('null', 'null') : void 0;
     })(e, n);
     if (o) return o;
     var l = Object.keys(n);
@@ -197,7 +197,7 @@ function f(e, t, n, r, i, a) {
         !D(r, i) && (s = '[' + i + ']'),
         !o &&
             (0 > e.seen.indexOf(l.value)
-                ? (o = I(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf('\n') > -1 &&
+                ? (o = m(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf('\n') > -1 &&
                   (o = a
                       ? o
                             .split('\n')
@@ -233,11 +233,11 @@ function h(e) {
 function p(e) {
     return 'boolean' == typeof e;
 }
-function I(e) {
+function m(e) {
     return null === e;
 }
-(t.types = n(842406)), (t.isArray = h), (t.isBoolean = p), (t.isNull = I);
-function m(e) {
+(t.types = n(842406)), (t.isArray = h), (t.isBoolean = p), (t.isNull = m);
+function I(e) {
     return 'number' == typeof e;
 }
 function T(e) {
@@ -246,7 +246,7 @@ function T(e) {
 (t.isNullOrUndefined = function (e) {
     return null == e;
 }),
-    (t.isNumber = m),
+    (t.isNumber = I),
     (t.isString = T);
 function g(e) {
     return void 0 === e;

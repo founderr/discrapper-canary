@@ -221,10 +221,10 @@ t.rsort = function (e, n) {
         return t.compareBuild(r, e, n);
     });
 };
-function I(e, t, n) {
+function m(e, t, n) {
     return p(e, t, n) > 0;
 }
-function m(e, t, n) {
+function I(e, t, n) {
     return 0 > p(e, t, n);
 }
 function T(e, t, n) {
@@ -252,11 +252,11 @@ function N(e, t, n, r) {
         case '!=':
             return g(e, n, r);
         case '>':
-            return I(e, n, r);
+            return m(e, n, r);
         case '>=':
             return S(e, n, r);
         case '<':
-            return m(e, n, r);
+            return I(e, n, r);
         case '<=':
             return A(e, n, r);
         default:
@@ -278,7 +278,7 @@ function v(e, t) {
     if (!(this instanceof v)) return new v(e, t);
     r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === O ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
 }
-(t.gt = I), (t.lt = m), (t.eq = T), (t.neq = g), (t.gte = S), (t.lte = A), (t.cmp = N), (t.Comparator = v);
+(t.gt = m), (t.lt = I), (t.eq = T), (t.neq = g), (t.gte = S), (t.lte = A), (t.cmp = N), (t.Comparator = v);
 var O = {};
 function R(e, t) {
     if (
@@ -577,7 +577,7 @@ t.minVersion = function (e, t) {
                     0 === t.prerelease.length ? t.patch++ : t.prerelease.push(0), (t.raw = t.format());
                 case '':
                 case '>=':
-                    (!n || I(n, t)) && (n = t);
+                    (!n || m(n, t)) && (n = t);
                     break;
                 case '<':
                 case '<=':
@@ -604,10 +604,10 @@ t.gtr = function (e, t, n) {
 function b(e, t, n, r) {
     switch (((e = new E(e, r)), (t = new R(t, r)), n)) {
         case '>':
-            (i = I), (a = A), (s = m), (o = '>'), (l = '>=');
+            (i = m), (a = A), (s = I), (o = '>'), (l = '>=');
             break;
         case '<':
-            (i = m), (a = S), (s = I), (o = '<'), (l = '<=');
+            (i = I), (a = S), (s = m), (o = '<'), (l = '<=');
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');

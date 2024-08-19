@@ -17,23 +17,23 @@ async function _(e) {
         h = (0, u.Z)(),
         p = i.default.getCurrentUser();
     if (null == t) return !1;
-    let I = await (0, l.Z)(t, _);
+    let m = await (0, l.Z)(t, _);
     return null == _
         ? (a.S.dispatch(d.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t }), !1)
         : null != r.Z.getChannel(_) &&
               null != p &&
-              null != I &&
+              null != m &&
               ((0, c.Z)({
                   type: d.q5t.LAUNCH,
                   userId: p.id,
-                  applicationId: I.id,
+                  applicationId: m.id,
                   locationObject: n,
                   analyticsLocations: E
               }),
-              s.tZ(I.id),
+              s.tZ(m.id),
               await (0, o.af)({
                   channelId: _,
-                  applicationId: I.id,
+                  applicationId: m.id,
                   isStart: !0,
                   embeddedActivitiesManager: h,
                   componentId: f

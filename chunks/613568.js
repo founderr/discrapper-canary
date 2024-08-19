@@ -39,7 +39,7 @@ class h {
         return new Promise((t, n) => {
             this._waitQueue.push(() => {
                 try {
-                    null == this.functionCache[e.type] && ((this.functionCache[e.type] = (e) => this._dispatchWithDevtools(e)), I(this.functionCache[e.type], 'dispatch_' + e.type)), this.functionCache[e.type](e), t();
+                    null == this.functionCache[e.type] && ((this.functionCache[e.type] = (e) => this._dispatchWithDevtools(e)), m(this.functionCache[e.type], 'dispatch_' + e.type)), this.functionCache[e.type](e), t();
                 } catch (e) {
                     n(e);
                 }
@@ -147,7 +147,7 @@ class p {
         for (let n in t) {
             let r = t[n],
                 i = (e) => r(e);
-            I(i, ''.concat(e, '_').concat(n)), (s[n] = i);
+            m(i, ''.concat(e, '_').concat(n)), (s[n] = i);
         }
         return (
             this._dependencyGraph.addNode(i, {
@@ -221,6 +221,6 @@ class p {
         _(this, '_orderedActionHandlers', {}), _(this, '_orderedCallbackTokens', null), _(this, '_lastID', 1), _(this, '_dependencyGraph', new r.DepGraph());
     }
 }
-function I(e, t) {
+function m(e, t) {
     Object.defineProperty(e, 'name', { value: t });
 }

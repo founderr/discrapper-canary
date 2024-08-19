@@ -13,8 +13,8 @@ var i,
     f = n(768419),
     h = n(314897),
     p = n(439170),
-    I = n(433355),
-    m = n(592125),
+    m = n(433355),
+    I = n(592125),
     T = n(486472),
     g = n(271383),
     S = n(430824),
@@ -34,7 +34,7 @@ function y(e, t) {
     let n = {};
     C.forEach((i) => {
         var a;
-        i !== O.Z.getGuildId() && i !== A.Z.getGuildId() && i !== (null === (a = m.Z.getChannel(v.Z.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == r || r.guildId !== i) && (C.clearWithoutFlushing(i, e), t && (n[i] = C.get(i)));
+        i !== O.Z.getGuildId() && i !== A.Z.getGuildId() && i !== (null === (a = I.Z.getChannel(v.Z.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == r || r.guildId !== i) && (C.clearWithoutFlushing(i, e), t && (n[i] = C.get(i)));
     }),
         !u().isEmpty(n) &&
             d.Z.dispatch({
@@ -43,11 +43,11 @@ function y(e, t) {
             });
 }
 function D(e, t) {
-    return C.subscribeToGuild(e), null != t && I.ZP.getSection(t) === R.ULH.MEMBERS && L(e, t, _.KV);
+    return C.subscribeToGuild(e), null != t && m.ZP.getSection(t) === R.ULH.MEMBERS && L(e, t, _.KV);
 }
 function L(e, t, n) {
     if (t === p.oL) return C.subscribeChannel(e, t, n);
-    let r = m.Z.getChannel(t);
+    let r = I.Z.getChannel(t);
     if (null == r) return !1;
     let i = r.getGuildId();
     return (i !== e && e === R.I_8 && C.subscribeToGuild(i), null != r && r.isThread()) ? (r.type === R.d4z.ANNOUNCEMENT_THREAD ? C.subscribeChannel(i, r.parent_id, n) : !!r.isActiveThread() && C.subscribeThreadMemberList(i, t, v.Z.getChannelId())) : C.subscribeChannel(i, t, n);
@@ -93,7 +93,7 @@ function U() {
 }
 class w extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, S.Z, O.Z, v.Z, A.Z, h.default, I.ZP, E.Z), this.syncWith([f.Z], U), this.syncWith([I.ZP], P);
+        this.waitFor(I.Z, S.Z, O.Z, v.Z, A.Z, h.default, m.ZP, E.Z), this.syncWith([f.Z], U), this.syncWith([m.ZP], P);
     }
     getSubscribedThreadIds() {
         return C.getSubscribedThreadIds();

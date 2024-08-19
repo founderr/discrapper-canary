@@ -185,16 +185,16 @@ var r;
                     n.current
                 );
             },
-            I = function (e) {
+            m = function (e) {
                 return null !== e && 'object' === i(e);
             },
-            m = '[object Object]',
+            I = '[object Object]',
             T = function e(t, n) {
-                if (!I(t) || !I(n)) return t === n;
+                if (!m(t) || !m(n)) return t === n;
                 var r = Array.isArray(t);
                 if (r !== Array.isArray(n)) return !1;
-                var i = Object.prototype.toString.call(t) === m;
-                if (i !== (Object.prototype.toString.call(n) === m)) return !1;
+                var i = Object.prototype.toString.call(t) === I;
+                if (i !== (Object.prototype.toString.call(n) === I)) return !1;
                 if (!i && !r) return t === n;
                 var a = Object.keys(t),
                     s = Object.keys(n);
@@ -210,9 +210,9 @@ var r;
                 );
             },
             g = function (e, t, n) {
-                return I(e)
+                return m(e)
                     ? Object.keys(e).reduce(function (i, s) {
-                          var o = !I(t) || !T(e[s], t[s]);
+                          var o = !m(t) || !T(e[s], t[s]);
                           return n.includes(s) ? (o && console.warn('Unsupported prop change: options.'.concat(s, ' is not a mutable property.')), i) : o ? r(r({}, i || {}), {}, a({}, s, e[s])) : i;
                       }, null)
                     : null;
@@ -221,13 +221,13 @@ var r;
             A = function (e) {
                 var t,
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
-                if (null === e || (I((t = e)) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)) return e;
+                if (null === e || (m((t = e)) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)) return e;
                 throw Error(n);
             },
             N = function (e) {
                 var t,
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
-                if (I((t = e)) && 'function' == typeof t.then)
+                if (m((t = e)) && 'function' == typeof t.then)
                     return {
                         tag: 'async',
                         stripePromise: Promise.resolve(e).then(function (e) {
@@ -450,19 +450,19 @@ var r;
                     },
                     [h, n]
                 );
-                var m = p(r);
+                var I = p(r);
                 t.useEffect(
                     function () {
                         if (!!d.customCheckoutSdk) {
-                            r.clientSecret && !I(m) && !T(r.clientSecret, m.clientSecret) && console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
+                            r.clientSecret && !m(I) && !T(r.clientSecret, I.clientSecret) && console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
                             var e,
                                 t,
-                                n = null == m ? void 0 : null === (e = m.elementsOptions) || void 0 === e ? void 0 : e.appearance,
+                                n = null == I ? void 0 : null === (e = I.elementsOptions) || void 0 === e ? void 0 : e.appearance,
                                 i = null == r ? void 0 : null === (t = r.elementsOptions) || void 0 === t ? void 0 : t.appearance;
                             i && !T(i, n) && d.customCheckoutSdk.changeAppearance(i);
                         }
                     },
-                    [r, m, d.customCheckoutSdk]
+                    [r, I, d.customCheckoutSdk]
                 ),
                     t.useEffect(
                         function () {
@@ -515,8 +515,8 @@ var r;
                                   _ = n.onReady,
                                   E = n.onChange,
                                   f = n.onEscape,
-                                  I = n.onClick,
-                                  m = n.onLoadError,
+                                  m = n.onClick,
+                                  I = n.onLoadError,
                                   T = n.onLoaderStart,
                                   S = n.onNetworksChange,
                                   A = n.onConfirm,
@@ -534,8 +534,8 @@ var r;
                               h(L, 'blur', c),
                                   h(L, 'focus', d),
                                   h(L, 'escape', f),
-                                  h(L, 'click', I),
-                                  h(L, 'loaderror', m),
+                                  h(L, 'click', m),
+                                  h(L, 'loaderror', I),
                                   h(L, 'loaderstart', T),
                                   h(L, 'networkschange', S),
                                   h(L, 'confirm', A),

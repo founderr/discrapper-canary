@@ -13,7 +13,7 @@ var r = n(735250),
     f = n(689938),
     h = n(23022);
 let p = i.forwardRef(function (e, t) {
-    let { emojiListRef: n, gridNavigatorId: a, isFullRow: p, onKeyDown: I, onFocus: m, autoFocus: T, className: g, defaultSearchPlaceholder: S } = e,
+    let { emojiListRef: n, gridNavigatorId: a, isFullRow: p, onKeyDown: m, onFocus: I, autoFocus: T, className: g, defaultSearchPlaceholder: S } = e,
         A = i.useRef(null),
         N = (0, d.Iu)((e) => e.searchQuery),
         [v, O] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.Z),
@@ -49,9 +49,9 @@ let p = i.forwardRef(function (e, t) {
                     case E.yXg.ARROW_DOWN:
                         document.activeElement !== e.target && e.preventDefault();
                 }
-                I(e);
+                m(e);
             },
-            onFocus: m,
+            onFocus: I,
             onQueryChange: R,
             className: s()(g, { [h.searchBarFullRow]: p }),
             preventEscapePropagation: !1,

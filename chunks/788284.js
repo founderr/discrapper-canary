@@ -55,16 +55,16 @@ function C(e) {
                 n = m.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
             return _(l.id, n);
         }, [l]),
-        T = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        S = !i && g;
+        S = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        T = !i && g;
     o.useEffect(() => {
         var e, t, n, s;
-        g ? S && (null === (s = C.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
-    }, [S, g]);
-    let v = o.useCallback(() => {
+        g ? T && (null === (s = C.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
+    }, [T, g]);
+    let A = o.useCallback(() => {
         h(!0);
     }, []);
-    return null == E || T
+    return null == E || S
         ? (0, s.jsx)('div', {
               className: x.backgroundFallback,
               style: { backgroundImage: 'linear-gradient(90deg, '.concat(l.config.colors.primary, ', ').concat(l.config.colors.secondary, ')') }
@@ -75,9 +75,9 @@ function C(e) {
                   d.LottieAnimation,
                   {
                       ref: C,
-                      onComplete: v,
+                      onComplete: A,
                       importData: () => E,
-                      shouldAnimate: !f && S,
+                      shouldAnimate: !f && T,
                       className: a()(x.lottieAnimation, x.lottieAnimationBackground, n),
                       loop: 0,
                       rendererSettings: { preserveAspectRatio: 'none' }

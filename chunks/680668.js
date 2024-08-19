@@ -6,8 +6,8 @@ n.d(t, {
     n(789020);
 var i = n(735250);
 n(470079);
-var s = n(533800),
-    a = n(481060),
+var a = n(533800),
+    s = n(481060),
     r = n(358555),
     l = n(955415),
     o = n(131704),
@@ -33,7 +33,7 @@ function h(e) {
         D = null != P,
         j = null != P && P.isGuildVocal(),
         U = null != P && P.isGuildStageVoice(),
-        y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, s.$.IS_GUEST_INVITE),
+        y = (0, c.yE)(null !== (t = A.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
         B = null !== (h = null == S ? void 0 : S.hasFeature(I.oNc.HUB)) && void 0 !== h && h;
     if (null == S) {
         if (null == A.guild) return (0, i.jsx)(E.Z, {});
@@ -66,10 +66,10 @@ function h(e) {
             ]
         })),
         y &&
-            (C = (0, i.jsx)(a.TooltipContainer, {
+            (C = (0, i.jsx)(s.TooltipContainer, {
                 className: T.tooltipContainer,
                 text: m.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
-                children: (0, i.jsx)(a.CircleInformationIcon, {
+                children: (0, i.jsx)(s.CircleInformationIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: T.infoIcon
@@ -132,12 +132,12 @@ function h(e) {
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)('div', { className: T.separator }),
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
                                 children: m.Z.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
                                     onClick: () =>
-                                        (0, a.openModalLazy)(async () => {
+                                        (0, s.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([n.e('95468'), n.e('46030')]).then(n.bind(n, 650233));
                                             return (t) => (0, i.jsx)(e, { ...t });
                                         })

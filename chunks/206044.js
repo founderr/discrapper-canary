@@ -1,9 +1,9 @@
 n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
-    l = n(338545),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
+    l = n(567526),
     o = n(722770),
     c = n(442837),
     u = n(846519),
@@ -29,11 +29,11 @@ var i = n(735250),
 let L = (0, l.animated)(d.ChevronSmallDownIcon),
     Z = (0, l.animated)(I.Z),
     P = (e) => {
-        let { quest: t, location: n, questContentPosition: a, ...r } = e,
-            [l, o] = s.useState(!1),
-            c = s.useRef(new u.V7());
+        let { quest: t, location: n, questContentPosition: s, ...r } = e,
+            [l, o] = a.useState(!1),
+            c = a.useRef(new u.V7());
         if (
-            (s.useEffect(() => {
+            (a.useEffect(() => {
                 let e = c.current;
                 return function () {
                     e.stop();
@@ -47,7 +47,7 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
                 questId: t.id,
                 questContent: n,
                 questContentCTA: h.jZ.COPY_QUEST_URL,
-                questContentPosition: a
+                questContentPosition: s
             }),
                 (0, T.JG)((0, C.Rs)(t.id)),
                 o(!0),
@@ -71,13 +71,13 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
     };
 t.Z = (e) => {
     var t;
-    let { isFocused: n, isQuestExpired: a, quest: u, location: I, size: T, expansionSpring: b, isAnimating: D, isExpanded: j, isInConcurrentQuestExperiment: U, contentPosition: y, toggleExpanded: B } = e,
+    let { isFocused: n, isQuestExpired: s, quest: u, location: I, size: T, expansionSpring: b, isAnimating: D, isExpanded: j, isInConcurrentQuestExperiment: U, contentPosition: y, toggleExpanded: B } = e,
         { ref: k, height: G } = (0, _.Z)(),
         { ref: F, width: w, scrollWidth: V } = (0, _.Z)(),
         H = (0, c.e7)([m.Z], () => m.Z.getState().theme),
         Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
-        W = s.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]),
-        K = s.useRef(null),
+        W = a.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]),
+        K = a.useRef(null),
         z = (0, x.uq)(I),
         Q = I === f.jn.QUESTS_EMBED,
         q = (0, N.t5)(u, O.dr.QUESTS_CARD, I),
@@ -103,7 +103,7 @@ t.Z = (e) => {
                     questContentPosition: y
                 });
         };
-    s.useEffect(() => {
+    a.useEffect(() => {
         W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), (K.current.currentTime = 0)));
     }, [n, W]);
     let et = (0, C.j8)(u);
@@ -252,13 +252,13 @@ t.Z = (e) => {
                                                     }),
                                                     (0, i.jsx)(d.Text, {
                                                         variant: 'text-xs/normal',
-                                                        children: X ? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: $ }) : a ? M.Z.Messages.QUESTS_EXPIRED_ON.format({ expirationDate: J }) : M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: J })
+                                                        children: X ? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: $ }) : s ? M.Z.Messages.QUESTS_EXPIRED_ON.format({ expirationDate: J }) : M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: J })
                                                     })
                                                 ]
                                             })
                                         ]
                                     }),
-                                    !a &&
+                                    !s &&
                                         z &&
                                         (0, i.jsx)(P, {
                                             quest: u,
@@ -286,7 +286,7 @@ t.Z = (e) => {
                                 questContentPosition: y,
                                 shouldShowDisclosure: !0,
                                 hideLearnMore: z,
-                                showShareLink: !a && Q,
+                                showShareLink: !s && Q,
                                 children: (e) =>
                                     (0, i.jsx)(l.animated.div, {
                                         style: {

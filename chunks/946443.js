@@ -8,9 +8,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(525654),
     o = n.n(l),
     c = n(91192),
@@ -31,28 +31,28 @@ var i = n(735250),
     A = n(689938),
     R = n(758046);
 function x(e) {
-    let { setTab: t, onJump: n, showTutorial: a, setSeenTutorial: l, closePopout: x, badgeState: M } = e,
-        v = s.useRef(null),
+    let { setTab: t, onJump: n, showTutorial: s, setSeenTutorial: l, closePopout: x, badgeState: M } = e,
+        v = a.useRef(null),
         [L, Z] = (0, g.ZP)(v),
         { loadState: P, channels: b } = L,
         { maybeLoadMore: D, markAllRead: j } = Z;
     (function (e, t, n) {
-        s.useLayoutEffect(() => {
+        a.useLayoutEffect(() => {
             var i;
-            let { scrollToChannelIndex: s } = t;
+            let { scrollToChannelIndex: a } = t;
             n.clearScrollToChannelIndex();
-            let { current: a } = e;
-            if (null == a || null == s) return;
-            let r = null === (i = a.getScrollerNode()) || void 0 === i ? void 0 : i.children;
+            let { current: s } = e;
+            if (null == s || null == a) return;
+            let r = null === (i = s.getScrollerNode()) || void 0 === i ? void 0 : i.children;
             if (null == r) return;
-            let l = r[s];
+            let l = r[a];
             if (null == l) return;
-            let { scrollTop: o, scrollHeight: c } = a.getScrollerState();
-            (l.offsetTop < o || l.offsetTop > o + c) && a.scrollTo({ to: l.offsetTop });
+            let { scrollTop: o, scrollHeight: c } = s.getScrollerState();
+            (l.offsetTop < o || l.offsetTop > o + c) && s.scrollTo({ to: l.offsetTop });
         });
     })(v, L, Z),
         (function (e, t) {
-            s.useEffect(() => {
+            a.useEffect(() => {
                 let n = () => {
                     let n = e.channels.find((e) => !e.collapsed);
                     null != n && t.markChannelRead(n);
@@ -65,10 +65,10 @@ function x(e) {
                 );
             }, [t, e.channels]);
         })(L, Z),
-        s.useEffect(() => {
+        a.useEffect(() => {
             T.default.track(S.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
-        s.useEffect(
+        a.useEffect(
             () => (
                 E.Z.subscribe('CONNECTION_OPEN', x),
                 () => {
@@ -116,16 +116,16 @@ function x(e) {
                 navigator: y,
                 children: (0, i.jsx)(c.SJ, {
                     children: (e) => {
-                        let { ref: t, ...s } = e;
+                        let { ref: t, ...a } = e;
                         return (0, i.jsxs)(_.AdvancedScrollerThin, {
                             ref: (e) => {
                                 var n;
                                 (v.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
-                            ...s,
+                            ...a,
                             onScroll: P === g.jd.Done ? void 0 : D,
                             className: R.scroller,
-                            children: [a ? (0, i.jsx)(O, { setSeenTutorial: l }) : null, (0, p.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: R.spinner })]
+                            children: [s ? (0, i.jsx)(O, { setSeenTutorial: l }) : null, (0, p.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: R.spinner })]
                         });
                     }
                 })
@@ -169,7 +169,7 @@ function O(e) {
     });
 }
 function M(e) {
-    let { setTab: t, badgeState: n, closePopout: s } = e;
+    let { setTab: t, badgeState: n, closePopout: a } = e;
     return (0, i.jsxs)('div', {
         className: R.container,
         children: [
@@ -177,7 +177,7 @@ function M(e) {
                 tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: n,
-                closePopout: s
+                closePopout: a
             }),
             (0, i.jsx)(f.Z, {
                 Icon: _.InboxIcon,

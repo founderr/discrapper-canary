@@ -1,6 +1,6 @@
 n.d(t, {
     Q: function () {
-        return S;
+        return T;
     }
 });
 var s = n(735250);
@@ -133,7 +133,7 @@ function E(e) {
         ]
     });
 }
-function T(e) {
+function S(e) {
     let { xboxAndPlaystationAccounts: t, quest: n } = e;
     return t.length > 0
         ? (0, s.jsx)(h, {
@@ -142,7 +142,7 @@ function T(e) {
           })
         : null;
 }
-function S(e) {
+function T(e) {
     let t = (0, x.P)({ location: m.dr.QUESTS_BAR });
     return (0, s.jsxs)(s.Fragment, {
         children: [
@@ -151,7 +151,7 @@ function S(e) {
                 variant: 'text-xs/medium',
                 children: _.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_CONNECT_ACCOUNT
             }),
-            t ? (0, s.jsx)(E, { ...e }) : (0, s.jsx)(T, { ...e })
+            t ? (0, s.jsx)(E, { ...e }) : (0, s.jsx)(S, { ...e })
         ]
     });
 }

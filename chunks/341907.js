@@ -26,7 +26,7 @@ var i = n(481060),
 function _(e) {
     let { questId: t, location: a, questContentPosition: s } = e;
     (0, i.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e('54535'), n.e('21378')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e('26138'), n.e('54535'), n.e('95688')]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(e, {
                 ...n,

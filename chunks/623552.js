@@ -111,14 +111,14 @@ function E(e) {
         E.current = !0;
     }, []);
     let p = Math.min(_.length - 1, a.length - 1),
-        I = _[Math.max(0, p)],
-        m = a.length > 4,
+        m = _[Math.max(0, p)],
+        I = a.length > 4,
         T = a.length - 3,
         g = T >= 10 ? 1 : 2,
-        S = I.map((e, t) => {
+        S = m.map((e, t) => {
             let i = a[t];
             if (null == i) return null;
-            let o = m && t === g;
+            let o = I && t === g;
             return (0, r.jsx)(
                 'div',
                 {

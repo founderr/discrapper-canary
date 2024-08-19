@@ -9,7 +9,7 @@ n.d(t, {
         return E;
     },
     jU: function () {
-        return I;
+        return m;
     },
     nG: function () {
         return h;
@@ -54,6 +54,6 @@ function h(e) {
 function p(e) {
     return (0, i.e7)([s.Z, l.Z], () => null != e && l.Z.can(_.Plq.MUTE_MEMBERS, s.Z.getChannel(e)), [e]);
 }
-function I(e) {
+function m(e) {
     return !!(null != e && e.isGuildStageVoice() && a.Z.isLurking(e.guild_id) && d.Z.isPublic(e.id)) && l.Z.can(c.gl, e);
 }

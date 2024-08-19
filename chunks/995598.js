@@ -1,6 +1,6 @@
 n.d(t, {
     Y: function () {
-        return s;
+        return a;
     }
 });
 let i = (0, n(818083).B)({
@@ -21,7 +21,7 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    s = () => {
+    a = () => {
         let { enabled: e } = i.getCurrentConfig({ location: 'checkout_recovery_nagbar_test' });
         return e;
     };

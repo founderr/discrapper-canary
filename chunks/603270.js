@@ -8,8 +8,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
+    a = n(470079),
+    s = n(442837),
     r = n(481060),
     l = n(241159),
     o = n(558381),
@@ -37,23 +37,23 @@ var i = n(735250),
 let L = b(function (e) {
         let { appId: t, message: o } = e,
             u = (0, A.R)(t),
-            [_, m, h, N, C, S, R] = (0, a.Wu)(
+            [_, m, h, N, C, S, R] = (0, s.Wu)(
                 [c.Z, T.Z, I.Z],
                 () => {
                     var e;
                     let n = c.Z.getApplication(t),
                         i = null != n ? (0, p.y)(n, 45) : void 0,
-                        s = null === (e = I.Z.getBasicChannel(o.channel_id)) || void 0 === e ? void 0 : e.guild_id;
-                    return [n, c.Z.isFetchingApplication(t), c.Z.didFetchingApplicationFail(t), T.Z.getStoreLayout(t), T.Z.getFetchStatus(t), s, i];
+                        a = null === (e = I.Z.getBasicChannel(o.channel_id)) || void 0 === e ? void 0 : e.guild_id;
+                    return [n, c.Z.isFetchingApplication(t), c.Z.didFetchingApplicationFail(t), T.Z.getStoreLayout(t), T.Z.getFetchStatus(t), a, i];
                 },
                 [t, o.channel_id]
             );
-        s.useEffect(() => {
+        a.useEffect(() => {
             C === T.N.NONE && (0, l.k)(t), null == _ && !m && !h && (0, d.UM)(t);
         }, [_, t, h, m, C]);
         let L = N.subscriptions.length,
             Z = N.otps.length,
-            b = s.useMemo(
+            b = a.useMemo(
                 () =>
                     L > 0 && Z > 0
                         ? M.Z.Messages.STOREFRONT_SUBSCRIPTION_AND_ITEMS_COUNT.format({
@@ -113,22 +113,22 @@ let L = b(function (e) {
     Z = b(function (e) {
         var t, l;
         let { skuId: d, message: T } = e,
-            [C, S, L, Z, b, D, j, U] = (0, a.Wu)(
+            [C, S, L, Z, b, D, j, U] = (0, s.Wu)(
                 [h.Z, N.Z, m.Z, I.Z, c.Z],
                 () => {
                     var e, t, n, i;
-                    let s = null === (e = I.Z.getBasicChannel(T.channel_id)) || void 0 === e ? void 0 : e.guild_id,
-                        a = h.Z.get(d),
-                        r = null !== (n = null == a ? void 0 : null === (t = a.application) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null == a ? void 0 : a.applicationId,
-                        l = null !== (i = null != r ? c.Z.getApplication(r) : void 0) && void 0 !== i ? i : null == a ? void 0 : a.application,
+                    let a = null === (e = I.Z.getBasicChannel(T.channel_id)) || void 0 === e ? void 0 : e.guild_id,
+                        s = h.Z.get(d),
+                        r = null !== (n = null == s ? void 0 : null === (t = s.application) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null == s ? void 0 : s.applicationId,
+                        l = null !== (i = null != r ? c.Z.getApplication(r) : void 0) && void 0 !== i ? i : null == s ? void 0 : s.application,
                         o = null != l ? (0, p.y)(l, 45) : void 0,
                         u = m.Z.getForSKU(d);
-                    return [a, l, N.Z.getForSKU(d), h.Z.isFetching(d), h.Z.didFetchingSkuFail(d), u.length > 0 ? u[0].toServerData() : null, s, o];
+                    return [s, l, N.Z.getForSKU(d), h.Z.isFetching(d), h.Z.didFetchingSkuFail(d), u.length > 0 ? u[0].toServerData() : null, a, o];
                 },
                 [T.channel_id, d]
             ),
             y = (0, A.R)(null !== (l = null == S ? void 0 : S.id) && void 0 !== l ? l : '');
-        s.useEffect(() => {
+        a.useEffect(() => {
             null == C && !Z && !b && (0, o.km)(d);
         }, [b, Z, C, d]);
         let { subscriptionGroupListing: B } = (0, u.F5)(null == S ? void 0 : S.id, j);
@@ -152,7 +152,7 @@ let L = b(function (e) {
                     let e = k ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
                         t = k ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
                     return (n) => {
-                        let s = () => {
+                        let a = () => {
                             n.onClose(), F();
                         };
                         return null != e && null != B
@@ -163,7 +163,7 @@ let L = b(function (e) {
                                   groupListingId: B.id,
                                   groupListingType: G ? 'user' : 'guild',
                                   onClose: n.onClose,
-                                  onHeaderTitleClick: s
+                                  onHeaderTitleClick: a
                               })
                             : null != t
                               ? (0, i.jsx)(t, {
@@ -171,7 +171,7 @@ let L = b(function (e) {
                                     appId: S.id,
                                     skuId: d,
                                     onClose: n.onClose,
-                                    onHeaderTitleClick: s
+                                    onHeaderTitleClick: a
                                 })
                               : null;
                     };
@@ -280,7 +280,7 @@ let L = b(function (e) {
         });
     });
 function P(e) {
-    let { appName: t, title: n, description: s, link: a, iconSrc: l, onIconClick: o, onLinkCopy: c, children: u } = e;
+    let { appName: t, title: n, description: a, link: s, iconSrc: l, onIconClick: o, onLinkCopy: c, children: u } = e;
     return (0, i.jsxs)('div', {
         className: v.wrapper,
         children: [
@@ -304,7 +304,7 @@ function P(e) {
                             size: r.ButtonSizes.ICON,
                             'aria-label': M.Z.Messages.COPY_LINK,
                             onClick: () => {
-                                (0, C.JG)(a), (0, r.showToast)((0, r.createToast)(M.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), c();
+                                (0, C.JG)(s), (0, r.showToast)((0, r.createToast)(M.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), c();
                             },
                             children: (0, i.jsx)(r.LinkIcon, { size: 'xs' })
                         })
@@ -329,20 +329,20 @@ function P(e) {
                                 }),
                             (0, i.jsxs)('div', {
                                 className: v.contentText,
-                                style: null == s ? { justifyContent: 'space-evenly' } : void 0,
+                                style: null == a ? { justifyContent: 'space-evenly' } : void 0,
                                 children: [
                                     (0, i.jsx)(r.Text, {
                                         variant: 'heading-md/semibold',
                                         tag: 'div',
                                         children: n
                                     }),
-                                    null != s &&
+                                    null != a &&
                                         (0, i.jsx)(r.Text, {
                                             variant: 'heading-md/medium',
                                             color: 'text-muted',
                                             tag: 'div',
                                             className: v.description,
-                                            children: s
+                                            children: a
                                         })
                                 ]
                             })

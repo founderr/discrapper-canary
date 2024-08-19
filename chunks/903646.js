@@ -53,8 +53,8 @@ class _ {
             h = 2;
         e < o(_, E, 3, 1) ? (h = 0) : l(E) && (h = 1);
         let p = Math.floor(((f + h) * 12 + 373) / 367),
-            I = e - o(_, E, p, 1) + 1;
-        return new j(_, E, p, I);
+            m = e - o(_, E, p, 1) + 1;
+        return new j(_, E, p, m);
     }
     toJulianDay(e) {
         return o(e.era, e.year, e.month, e.day);
@@ -190,12 +190,12 @@ function h(e, t) {
 function p(e, t) {
     return e.calendar.toJulianDay(e) - t.calendar.toJulianDay(t);
 }
-function I(e) {
+function m(e) {
     return 3600000 * e.hour + 60000 * e.minute + 1000 * e.second + e.millisecond;
 }
-let m = null;
+let I = null;
 function T() {
-    return null == m && (m = new Intl.DateTimeFormat().resolvedOptions().timeZone), m;
+    return null == I && (I = new Intl.DateTimeFormat().resolvedOptions().timeZone), I;
 }
 function g(e) {
     return e.subtract({ days: e.day - 1 });
@@ -564,7 +564,7 @@ class K {
         let t = p(this, e);
         if (0 === t) {
             var n, r;
-            return (n = this), (r = L(e)), I(n) - I(r);
+            return (n = this), (r = L(e)), m(n) - m(r);
         }
         return t;
     }
@@ -847,12 +847,12 @@ class eh extends ef {
 function ep(e) {
     return 460322 + i[e - 1300];
 }
-function eI(e, t) {
+function em(e, t) {
     return (r[e - 1300] & (1 << (11 - (t - 1)))) == 0 ? 29 : 30;
 }
-function em(e, t) {
+function eI(e, t) {
     let n = ep(e);
-    for (let r = 1; r < t; r++) n += eI(e, r);
+    for (let r = 1; r < t; r++) n += em(e, r);
     return n;
 }
 function eT(e) {
@@ -876,19 +876,19 @@ class eg extends ef {
                     break;
                 }
                 if (r < i) {
-                    let t = eI(e, n);
-                    for (n = 1; r > t; ) (r -= t), (t = eI(e, ++n));
+                    let t = em(e, n);
+                    for (n = 1; r > t; ) (r -= t), (t = em(e, ++n));
                     break;
                 }
             }
-            return new j(this, e, n, t - em(e, n) + 1);
+            return new j(this, e, n, t - eI(e, n) + 1);
         }
     }
     toJulianDay(e) {
-        return e.year < 1300 || e.year > 1600 ? super.toJulianDay(e) : 1948440 + em(e.year, e.month) + (e.day - 1);
+        return e.year < 1300 || e.year > 1600 ? super.toJulianDay(e) : 1948440 + eI(e.year, e.month) + (e.day - 1);
     }
     getDaysInMonth(e) {
-        return e.year < 1300 || e.year > 1600 ? super.getDaysInMonth(e) : eI(e.year, e.month);
+        return e.year < 1300 || e.year > 1600 ? super.getDaysInMonth(e) : em(e.year, e.month);
     }
     getDaysInYear(e) {
         return e.year < 1300 || e.year > 1600 ? super.getDaysInYear(e) : eT(e.year);
@@ -899,7 +899,7 @@ class eg extends ef {
             let e = 0;
             for (let t = 1300; t <= 1600; t++) {
                 i[t - 1300] = e;
-                for (let n = 1; n <= 12; n++) e += eI(t, n);
+                for (let n = 1; n <= 12; n++) e += em(t, n);
             }
         }
     }

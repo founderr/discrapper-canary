@@ -1,7 +1,7 @@
 n(47120), n(653041);
 var i,
-    s,
     a,
+    s,
     r,
     l = n(392711),
     o = n.n(l),
@@ -30,12 +30,12 @@ function R() {
             !m.Z.isFetchingApplication(n) && !m.Z.didFetchingApplicationFail(n) && I.Z.fetchApplication(n);
             continue;
         }
-        let s = f.Z.get(t);
-        if (null == s) {
+        let a = f.Z.get(t);
+        if (null == a) {
             !f.Z.isFetching(t) && !f.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
             continue;
         }
-        N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !s.available
+        N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !a.available
             ? null != g[t] && (delete g[t], (e = !0))
             : ((g[t] = {
                   skuId: t,
@@ -55,14 +55,14 @@ class x extends (i = c.ZP.Store) {
     }
 }
 (r = 'DetectedOffPlatformPremiumPerksStore'),
-    (a = 'displayName') in (s = x)
-        ? Object.defineProperty(s, a, {
+    (s = 'displayName') in (a = x)
+        ? Object.defineProperty(a, s, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = r),
+        : (a[s] = r),
     (t.Z = new x(d.Z, {
         LOGOUT: function () {
             (g = {}), (S = {});

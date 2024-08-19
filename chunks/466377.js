@@ -27,7 +27,7 @@ var r,
     s = n(470079),
     o = n(120356),
     l = n.n(o),
-    u = n(338545),
+    u = n(567526),
     c = n(990547),
     d = n(748780),
     _ = n(143450),
@@ -35,8 +35,8 @@ var r,
     f = n(693789),
     h = n(507274),
     p = n(84735),
-    I = n(337033),
-    m = n(261833),
+    m = n(337033),
+    I = n(261833),
     T = n(742746),
     g = n(147479),
     S = n(600164),
@@ -53,7 +53,7 @@ let R = Object.freeze({
 });
 function C(e) {
     var t;
-    let { transitionState: n, children: r, size: i = 'small', role: o = 'dialog', className: f, fullscreenOnMobile: I = !0, hideShadow: m = !1, onAnimationEnd: T = N.dG, returnRef: g, ...S } = e,
+    let { transitionState: n, children: r, size: i = 'small', role: o = 'dialog', className: f, fullscreenOnMobile: m = !0, hideShadow: I = !1, onAnimationEnd: T = N.dG, returnRef: g, ...S } = e,
         v = n === A.Dv.ENTERING || n === A.Dv.ENTERED,
         { reducedMotion: C } = s.useContext(E.S),
         y = (0, _.q)(
@@ -92,8 +92,8 @@ function C(e) {
             ...S,
             children: (0, a.jsx)(u.animated.div, {
                 className: l()(f, O.root, R[i], {
-                    [O.fullscreenOnMobile]: I,
-                    [O.rootWithShadow]: !m
+                    [O.fullscreenOnMobile]: m,
+                    [O.rootWithShadow]: !I
                 }),
                 ref: D,
                 style: y,
@@ -136,7 +136,7 @@ function D(e) {
         className: l()(O.content, t),
         ref: r,
         ...s,
-        children: (0, a.jsx)(I.y, { children: n })
+        children: (0, a.jsx)(m.y, { children: n })
     });
 }
 function L(e) {
@@ -149,7 +149,7 @@ function L(e) {
         align: null !== (r = e.align) && void 0 !== r ? r : S.Z.Align.STRETCH,
         wrap: null !== (i = e.wrap) && void 0 !== i ? i : S.Z.Wrap.NO_WRAP,
         className: l()(O.footer, e.className, { [O.footerSeparator]: null === (s = e.separator) || void 0 === s || s }),
-        children: (0, a.jsx)(I.y, { children: e.children })
+        children: (0, a.jsx)(m.y, { children: e.children })
     });
 }
 function b(e) {
@@ -164,7 +164,7 @@ function b(e) {
             [O.hideOnFullscreen]: e.hideOnFullscreen,
             [O.close]: !e.withCircleBackground
         }),
-        children: (0, a.jsx)(m.D, {
+        children: (0, a.jsx)(I.D, {
             size: 'md',
             color: 'currentColor',
             className: l()(e.innerClassName, O.closeIcon)

@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(785717),
     h = n(221292),
     p = n(481046),
-    I = n(318661),
-    m = n(78675),
+    m = n(318661),
+    I = n(78675),
     T = n(113557),
     g = n(169979),
     S = n(119096),
@@ -51,7 +51,7 @@ function P(e) {
     (0, l.$)(j);
     let { profileStatusEditEnabled: W } = (0, p.K)({ location: 'BiteSizeProfilePopout' }),
         K = i.useRef(null),
-        z = (0, I.ZP)(t.id, P),
+        z = (0, m.ZP)(t.id, P),
         q = (0, o.Z)(K),
         [Q, X] = i.useState(!1),
         [$, J] = i.useState(!1),
@@ -124,7 +124,7 @@ function P(e) {
                                 className: M.header,
                                 children: [
                                     null != en && (0, r.jsx)('div', { className: M.backdrop }),
-                                    (0, r.jsx)(m.Z, {
+                                    (0, r.jsx)(I.Z, {
                                         user: t,
                                         displayProfile: z,
                                         guildId: P,

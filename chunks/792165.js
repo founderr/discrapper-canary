@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(442837),
-    a = n(693789),
+var a = n(442837),
+    s = n(693789),
     r = n(260034),
     l = n(993365),
     o = n(481060),
@@ -24,7 +24,7 @@ var s = n(442837),
 function C(e) {
     var t;
     let { onClose: n, markAsDismissed: C } = e,
-        p = (0, s.e7)([_.default], () => _.default.getCurrentUser());
+        p = (0, a.e7)([_.default], () => _.default.getCurrentUser());
     let g = (t = null == p ? void 0 : p.premiumType) === T.p9.TIER_2 ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
         S = E.ZP.canUseCustomCallSounds(p);
     return (0, i.jsxs)(d.Z, {
@@ -64,7 +64,7 @@ function C(e) {
                 children: g
             }),
             S
-                ? (0, i.jsx)(a.zx, {
+                ? (0, i.jsx)(s.zx, {
                       onClick: function () {
                           c.Z.open(I.oAB.VOICE, h.GA), null == n || n(), null == C || C(m.L.PRIMARY);
                       },
@@ -77,7 +77,7 @@ function C(e) {
                           section: I.jXE.SOUNDBOARD_SOUND_PICKER,
                           object: I.qAy.BUTTON_CTA
                       },
-                      color: a.zx.Colors.GREEN,
+                      color: s.zx.Colors.GREEN,
                       onSubscribeModalClose: () => (null == C ? void 0 : C(m.L.PRIMARY))
                   })
         ]

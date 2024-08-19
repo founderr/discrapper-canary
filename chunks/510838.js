@@ -96,7 +96,7 @@ function _(e, t, n) {
     e = r.concat([E, e]);
     for (var h = f.modulus.byteLength(), p = [0, 1]; e.length + p.length + 1 < h; ) p.push(255);
     p.push(0);
-    for (var I = -1; ++I < e.length; ) p.push(e[I]);
+    for (var m = -1; ++m < e.length; ) p.push(e[m]);
     return a(p, f);
 }),
     (e.exports.getKey = c),

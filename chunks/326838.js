@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(913527),
-    r = n.n(a),
+    a = n(470079),
+    s = n(913527),
+    r = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(727637),
@@ -20,15 +20,15 @@ var i = n(735250),
     T = n(889657);
 function h(e) {
     let { invite: t, expired: n } = e,
-        a = (0, l.e7)([E.default], () => {
+        s = (0, l.e7)([E.default], () => {
             var e, n;
             return null !== (n = null === (e = E.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : '';
         }),
         u = (0, I.vc)(r()(t.created_at), 'LT'),
-        d = s.useRef(null),
+        d = a.useRef(null),
         h = (0, c.Z)(d);
     return (
-        s.useEffect(() => {
+        a.useEffect(() => {
             !n && (0, _.Br)(t);
         }, [t, n]),
         (0, i.jsxs)('div', {
@@ -47,7 +47,7 @@ function h(e) {
                             className: T.title,
                             variant: 'text-md/semibold',
                             color: 'interactive-active',
-                            children: m.Z.Messages.GAME_INVITES_SENT_YOU_AN_INVITE.format({ username: a })
+                            children: m.Z.Messages.GAME_INVITES_SENT_YOU_AN_INVITE.format({ username: s })
                         }),
                         (0, i.jsxs)('div', {
                             className: T.buttonContainer,
@@ -97,18 +97,18 @@ function h(e) {
     );
 }
 function N(e) {
-    let { expired: t, invite: n, isHoveringInvite: a } = e,
+    let { expired: t, invite: n, isHoveringInvite: s } = e,
         r = (0, l.e7)([d.Z], () => d.Z.isInviteGameInstalled(n)),
         c = (0, l.e7)([d.Z], () => d.Z.isInviteJoinable(n)),
-        [E, I] = s.useState(!1),
-        h = s.useCallback(async () => {
+        [E, I] = a.useState(!1),
+        h = a.useCallback(async () => {
             I(!0);
             try {
                 await (0, _.MH)(n);
             } catch {}
             I(!1);
         }, [n]),
-        N = s.useCallback(async () => {
+        N = a.useCallback(async () => {
             I(!0);
             try {
                 await (0, _.Ol)(n);
@@ -116,7 +116,7 @@ function N(e) {
             I(!1);
         }, [n]);
     if (t)
-        return r && a
+        return r && s
             ? (0, i.jsx)(o.Button, {
                   className: T.primaryButton,
                   color: o.ButtonColors.TRANSPARENT,

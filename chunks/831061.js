@@ -83,10 +83,10 @@ e.exports = function (e) {
             ]
         };
     h.contains.push(p);
-    let I = [...r, ...a, ...i],
-        m = {
+    let m = [...r, ...a, ...i],
+        I = {
             relevance: 0,
-            match: t.concat('\\b(?!', I.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
+            match: t.concat('\\b(?!', m.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
             className: 'variable'
         };
     return {
@@ -153,7 +153,7 @@ e.exports = function (e) {
             u,
             d,
             c,
-            m
+            I
         ]
     };
 };

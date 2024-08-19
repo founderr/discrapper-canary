@@ -1,6 +1,6 @@
 n.d(t, {
     Q: function () {
-        return m;
+        return I;
     }
 });
 var r = n(264344),
@@ -31,7 +31,7 @@ function h(e, t, n) {
 function p(e) {
     return e.split('-')[0];
 }
-class I extends o.Z {
+class m extends o.Z {
     destroy() {
         super.destroy(), this.pc.close();
     }
@@ -111,8 +111,8 @@ class I extends o.Z {
             (this.pc = o);
     }
 }
-function m(e, t, n, r) {
+function I(e, t, n, r) {
     let s = ''.concat(null != i().name && '' !== i().name ? i().name : 'unknown', ' ').concat(null != i().version && '' !== i().version ? i().version : 'unknown'),
         o = new a.Y('Connection('.concat(e, ')'));
-    return f.WS ? (o.info('Using Unified Plan ('.concat(s, ')')), new _.Z(e, t, n, r)) : (o.info('Using Plan B ('.concat(s, ')')), new I(e, t, n, r));
+    return f.WS ? (o.info('Using Unified Plan ('.concat(s, ')')), new _.Z(e, t, n, r)) : (o.info('Using Plan B ('.concat(s, ')')), new m(e, t, n, r));
 }

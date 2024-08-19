@@ -74,7 +74,7 @@ function b(e) {
                             return [
                                 {
                                     section: 'other_guilds',
-                                    items: e.slice(t),
+                                    items: e,
                                     sectionHeight: 16,
                                     itemHeight: 400,
                                     header: null,

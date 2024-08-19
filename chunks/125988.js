@@ -10,9 +10,9 @@ var r = n(470079),
     d = n(660097);
 t.Z = (e) => {
     var t;
-    let { user: n, guildId: _, size: E, onlyAnimateOnHover: f = !1, showPending: h = !1, showTryItOut: p = !1, avatarDecorationOverride: I } = e,
-        [m, T] = r.useState(!1),
-        { canAnimate: g } = (0, a.j)(m, f),
+    let { user: n, guildId: _, size: E, onlyAnimateOnHover: f = !1, showPending: h = !1, showTryItOut: p = !1, avatarDecorationOverride: m } = e,
+        [I, T] = r.useState(!1),
+        { canAnimate: g } = (0, a.j)(I, f),
         S = (0, i.e7)([o.ZP], () => (null != _ && null != n ? o.ZP.getMember(_, n.id) : null)),
         [A, N] = (0, i.Wu)([l.default], () => {
             var e;
@@ -29,11 +29,11 @@ t.Z = (e) => {
         D = r.useMemo(
             () =>
                 (0, u.NZ)({
-                    avatarDecoration: void 0 !== I ? I : y,
+                    avatarDecoration: void 0 !== m ? m : y,
                     canAnimate: g,
                     size: E
                 }),
-            [y, g, E, I]
+            [y, g, E, m]
         ),
         L = r.useCallback(() => T(!0), []);
     return {

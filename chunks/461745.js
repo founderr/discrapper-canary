@@ -1,6 +1,6 @@
 n.d(t, {
     BK: function () {
-        return m;
+        return I;
     },
     Fj: function () {
         return r;
@@ -34,14 +34,14 @@ function p(e, t, n) {
         e
     );
 }
-let I = Object.freeze({
+let m = Object.freeze({
     SMALL: h.small,
     MEDIUM: h.medium,
     LARGE: h.large
 });
 ((a = r || (r = {})).MEMBER = 'MEMBER'), (a.ROLE = 'ROLE'), (a.CHANNEL = 'CHANNEL'), (a.GUILD = 'GUILD'), (a.USER = 'USER');
-let m = (e) => {
-    let { hasContent: t, onClear: n, className: r, themeOverride: i, size: a = I.SMALL } = e;
+let I = (e) => {
+    let { hasContent: t, onClear: n, className: r, themeOverride: i, size: a = m.SMALL } = e;
     return (0, s.jsx)(c.Clickable, {
         className: u()(r, h.iconLayout, a, (0, _.Q)(i), { [h.clear]: t }),
         onClick: (e) => {
@@ -139,7 +139,7 @@ class T extends (i = o.Component) {
             }
     }
     render() {
-        let { autoFocus: e, query: t, placeholder: n = f.Z.Messages.DM_SEARCH_PLACEHOLDER, themeOverride: r, disabled: i, onClear: a, size: o, maxHeight: l, tags: E, onActivate: p, className: I, inputProps: T, focusAfterReady: g } = this.props,
+        let { autoFocus: e, query: t, placeholder: n = f.Z.Messages.DM_SEARCH_PLACEHOLDER, themeOverride: r, disabled: i, onClear: a, size: o, maxHeight: l, tags: E, onActivate: p, className: m, inputProps: T, focusAfterReady: g } = this.props,
             S = null != t && t.length > 0,
             A = !1,
             N = [];
@@ -219,7 +219,7 @@ class T extends (i = o.Component) {
                 ringTarget: this.containerRef,
                 children: (0, s.jsx)('div', {
                     ref: this.containerRef,
-                    className: u()(I, h.container, o, (0, _.Q)(r), { [h.disabled]: i }),
+                    className: u()(m, h.container, o, (0, _.Q)(r), { [h.disabled]: i }),
                     children: (0, s.jsxs)(c.ScrollerThin, {
                         className: h.inner,
                         style: { maxHeight: l },
@@ -243,7 +243,7 @@ class T extends (i = o.Component) {
                                 ...T
                             }),
                             null != a
-                                ? (0, s.jsx)(m, {
+                                ? (0, s.jsx)(I, {
                                       size: o,
                                       themeOverride: r,
                                       hasContent: S,
@@ -302,9 +302,9 @@ class T extends (i = o.Component) {
             });
     }
 }
-p(T, 'Sizes', I),
+p(T, 'Sizes', m),
     p(T, 'defaultProps', {
-        size: I.SMALL,
+        size: m.SMALL,
         query: '',
         sections: [],
         selectedSection: 0,

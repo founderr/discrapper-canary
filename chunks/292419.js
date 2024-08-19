@@ -69,7 +69,7 @@ function h(e) {
     return e
         .map((e, n) =>
             (function e(t, n, i) {
-                var s, u, _, E, h, I, m, T;
+                var s, u, _, E, h, m, I, T;
                 if (!f(t.type)) return null;
                 let { includeEmojiSrc: g } = n;
                 switch (t.type) {
@@ -173,7 +173,7 @@ function h(e) {
                             id: p(i),
                             customId: t.custom_id,
                             disabled: t.disabled,
-                            placeholder: null !== (I = t.placeholder) && void 0 !== I ? I : c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
+                            placeholder: null !== (m = t.placeholder) && void 0 !== m ? m : c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
                             minValues: t.min_values,
                             maxValues: t.max_values,
                             channelTypes: t.channel_types,
@@ -199,7 +199,7 @@ function h(e) {
                         return {
                             type: r.re.SEPARATOR,
                             id: p(i),
-                            divider: null === (m = t.divider) || void 0 === m || m,
+                            divider: null === (I = t.divider) || void 0 === I || I,
                             spacing: null !== (T = t.spacing) && void 0 !== T ? T : r.US.SMALL
                         };
                     case r.re.CONTENT_INVENTORY_ENTRY:

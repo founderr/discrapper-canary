@@ -54,13 +54,13 @@ a(l, s),
         return [r.redAdd(a).fromRed(), r.redSub(a).fromRed()];
     }),
     (l.prototype._getEndoBasis = function (e) {
-        for (var t, n, r, a, s, o, l, u, c, d = this.n.ushrn(Math.floor(this.n.bitLength() / 2)), _ = e, E = this.n.clone(), f = new i(1), h = new i(0), p = new i(0), I = new i(1), m = 0; 0 !== _.cmpn(0); ) {
+        for (var t, n, r, a, s, o, l, u, c, d = this.n.ushrn(Math.floor(this.n.bitLength() / 2)), _ = e, E = this.n.clone(), f = new i(1), h = new i(0), p = new i(0), m = new i(1), I = 0; 0 !== _.cmpn(0); ) {
             var T = E.div(_);
             (u = E.sub(T.mul(_))), (c = p.sub(T.mul(f)));
-            var g = I.sub(T.mul(h));
+            var g = m.sub(T.mul(h));
             if (!r && 0 > u.cmp(d)) (t = l.neg()), (n = f), (r = u.neg()), (a = c);
-            else if (r && 2 == ++m) break;
-            (l = u), (E = _), (_ = u), (p = f), (f = c), (I = h), (h = g);
+            else if (r && 2 == ++I) break;
+            (l = u), (E = _), (_ = u), (p = f), (f = c), (m = h), (h = g);
         }
         (s = u.neg()), (o = c);
         var S = r.sqr().add(a.sqr());
@@ -351,10 +351,10 @@ a(l, s),
                 f = a.redMul(d),
                 h = E.redSqr().redISub(f.redAdd(f)),
                 p = f.redISub(h),
-                I = E.redMul(p);
-            I = I.redIAdd(I).redISub(_);
-            var m = u.redMul(o);
-            t + 1 < e && (l = l.redMul(_)), (a = h), (o = m), (u = I);
+                m = E.redMul(p);
+            m = m.redIAdd(m).redISub(_);
+            var I = u.redMul(o);
+            t + 1 < e && (l = l.redMul(_)), (a = h), (o = I), (u = m);
         }
         return this.curve.jpoint(a, u.redMul(i), o);
     }),

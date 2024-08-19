@@ -21,8 +21,8 @@ var r,
     f = n(46973),
     h = n(379649),
     p = n(570140),
-    I = n(668781),
-    m = n(846027),
+    m = n(668781),
+    I = n(846027),
     T = n(304680),
     g = n(547727),
     S = n(710845),
@@ -497,7 +497,7 @@ class el extends E.Z {
             }),
             d.on(f.Sh.ToggleMuteFromNative, () => {
                 let { airpodsMuteSupported: e } = O.Z.getCurrentConfig({ location: 'RTCConnection ToggleMuteFromNative' }, { autoTrackExposure: !0 });
-                e && this.context === ei.Yn.DEFAULT && m.Z.toggleSelfMute({ playSoundEffect: !1 });
+                e && this.context === ei.Yn.DEFAULT && I.Z.toggleSelfMute({ playSoundEffect: !1 });
             }),
             d.on(f.Sh.NativeMuteChanged, (e) => {
                 this.context === ei.Yn.DEFAULT && g.Z.nativeMuteChanged(e);
@@ -1000,7 +1000,7 @@ class el extends E.Z {
     _alertMLSFailure(e, t) {
         let n = V.default.getCurrentUser();
         ((null == n ? void 0 : n.isStaff()) || (null == n ? void 0 : n.isStaffPersonal())) &&
-            I.Z.show({
+            m.Z.show({
                 title: 'MLS Error in '.concat(e),
                 body: 'Error: '.concat(t, '! Please upload your logs in A/V settings and ask everyone in the call to do the same, and ping us in #av-e2ee in Core Tech!')
             });

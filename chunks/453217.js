@@ -2,7 +2,7 @@ var s = n(735250);
 n(470079);
 var o = n(120356),
     r = n.n(o),
-    a = n(338545),
+    a = n(567526),
     l = n(481060),
     i = n(113434),
     c = n(497505),
@@ -16,15 +16,15 @@ var o = n(120356),
 t.Z = function (e) {
     var t;
     let { className: n, expansionSpring: o, isExpanded: C, isExpansionAnimationComplete: f, quest: h, useReducedMotion: E } = e,
-        T = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        { percentComplete: S } = (0, i.Rf)(h),
-        v = (0, i.Jf)(h),
-        A = null != v ? v.completedRatio > 0 : S > 0;
+        S = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        { percentComplete: T } = (0, i.Rf)(h),
+        A = (0, i.Jf)(h),
+        v = null != A ? A.completedRatio > 0 : T > 0;
     return (0, s.jsxs)(a.animated.div, {
         'aria-hidden': C && f,
         className: r()(n, _.contentCollapsed, {
             [_.contentCollapsedExpanded]: C,
-            [_.contentCollapsedAccepted]: T
+            [_.contentCollapsedAccepted]: S
         }),
         style: {
             opacity: o.to({
@@ -39,7 +39,7 @@ t.Z = function (e) {
             }),
             (0, s.jsx)('div', {
                 className: _.contentCollapsedWrapper,
-                children: T
+                children: S
                     ? (0, s.jsxs)('div', {
                           className: _.questProgressWrapper,
                           children: [
@@ -50,7 +50,7 @@ t.Z = function (e) {
                                   autoplay: !1,
                                   location: m.dr.QUESTS_BAR
                               }),
-                              A
+                              v
                                   ? (0, s.jsx)(u.Z, {
                                         className: _.questProgressBar,
                                         quest: h

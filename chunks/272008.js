@@ -27,7 +27,7 @@ n.d(t, {
         return N;
     },
     is: function () {
-        return I;
+        return m;
     },
     m0: function () {
         return T;
@@ -39,7 +39,7 @@ n.d(t, {
         return A;
     },
     xw: function () {
-        return m;
+        return I;
     }
 }),
     n(411104);
@@ -100,10 +100,10 @@ async function p(e) {
     }
     return { errorHints: [] };
 }
-async function I(e) {
+async function m(e) {
     await i.tn.post({ url: f.ANM.QUEST_ON_CONSOLE_STOP(e) });
 }
-async function m() {
+async function I() {
     if (!c.Z.isFetchingCurrentQuests) {
         a.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), u.Z.recordQuestRequestAttempt(f.ANM.QUESTS_CURRENT_QUESTS);
         try {

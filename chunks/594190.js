@@ -31,8 +31,8 @@ var i,
     f = n(570140),
     h = n(593472),
     p = n(726542),
-    I = n(439849),
-    m = n(710845),
+    m = n(439849),
+    I = n(710845),
     T = n(630699),
     g = n(855403),
     S = n(454991),
@@ -49,7 +49,7 @@ var i,
     M = n(370862),
     P = n(981631),
     U = n(987650);
-let w = new m.Z('RunningGameStore'),
+let w = new I.Z('RunningGameStore'),
     x = 'RunningGameStore',
     G = [
         {
@@ -317,7 +317,7 @@ function ep() {
         L.ZP.setGameCandidateOverrides(e);
     }
 }
-function eI(e) {
+function em(e) {
     if (null != e && 0 !== e.length)
         e.forEach((e) => {
             if (
@@ -349,9 +349,9 @@ function eI(e) {
         }),
             z.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
             eE(),
-            C.Z.setRecentGames(em().map((e) => ef(e)));
+            C.Z.setRecentGames(eI().map((e) => ef(e)));
 }
-function em() {
+function eI() {
     let e = u().values(z.gameOverrides);
     return z.gamesSeen.filter((e) => void 0 === z.gameOverrides[eu(e)]).concat(e);
 }
@@ -470,7 +470,7 @@ class eT extends (i = _.ZP.Store) {
             Array.isArray(i.gamesSeen))
         )
             for (let e of i.gamesSeen) 'number' == typeof e.id && ((e.nativeProcessObserverId = e.id), delete e.id, (a = !0));
-        eI(i.gamesSeen), this.waitFor(A.Z), this.syncWith([N.Z, A.Z, v.Z], u().throttle(eh, 1000)), a && eE();
+        em(i.gamesSeen), this.waitFor(A.Z), this.syncWith([N.Z, A.Z, v.Z], u().throttle(eh, 1000)), a && eE();
     }
     getVisibleGame() {
         return null == Y || e_(Y) ? Y : null;
@@ -518,7 +518,7 @@ class eT extends (i = _.ZP.Store) {
     }
     getGamesSeen(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = em();
+            n = eI();
         if (e) {
             let e = this.getVisibleGame();
             if (null != e) {
@@ -557,7 +557,7 @@ class eT extends (i = _.ZP.Store) {
     }
     addExecutableTrackedByAnalytics(e) {
         var t;
-        en.add(null !== (t = (0, I.F)(e)) && void 0 !== t ? t : e);
+        en.add(null !== (t = (0, m.F)(e)) && void 0 !== t ? t : e);
     }
 }
 (o = 'RunningGameStore'),
@@ -571,7 +571,7 @@ class eT extends (i = _.ZP.Store) {
         : (a[s] = o),
     (t.ZP = new eT(f.Z, {
         RUNNING_GAMES_CHANGE: function (e) {
-            eI(Z);
+            em(Z);
         },
         CANDIDATE_GAMES_CHANGE: function (e) {
             H = e.games;
@@ -604,7 +604,7 @@ class eT extends (i = _.ZP.Store) {
                     ...r,
                     add: !0
                 }),
-                eI(Z),
+                em(Z),
                 ep(),
                 eE(),
                 el();
@@ -695,7 +695,7 @@ class eT extends (i = _.ZP.Store) {
                     var t;
                     return {
                         pid: e.pid,
-                        cleanedExePath: null !== (t = (0, I.F)(e.exePath)) && void 0 !== t ? t : e.exePath
+                        cleanedExePath: null !== (t = (0, m.F)(e.exePath)) && void 0 !== t ? t : e.exePath
                     };
                 })
                 .filter((e) => {

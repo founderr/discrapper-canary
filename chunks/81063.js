@@ -59,8 +59,8 @@ let d = 'https://i.scdn.co/image/',
             serialize: (e) => e
         }
     },
-    I = {};
-async function m(e) {
+    m = {};
+async function I(e) {
     let { body: t } = await a.tn.get({
         url: c.ANM.APPLICATION_ASSETS(e),
         oldFormErrors: !0
@@ -105,19 +105,19 @@ async function S(e) {
     let t = await (function (e) {
         var t;
         let n = o.Z.getApplicationAssets(e);
-        return null == n || ((t = n.lastUpdated), Date.now() - t > 3600000) ? m(e) : Promise.resolve(n);
+        return null == n || ((t = n.lastUpdated), Date.now() - t > 3600000) ? I(e) : Promise.resolve(n);
     })(e);
     return null == t ? void 0 : t.assets;
 }
 async function A(e, t) {
-    let n = t.filter((e) => null != e && !Object.prototype.hasOwnProperty.call(I, e) && null == I[e]);
+    let n = t.filter((e) => null != e && !Object.prototype.hasOwnProperty.call(m, e) && null == m[e]);
     if (0 === n.length) return;
     let { body: r } = await a.tn.post({
         url: c.ANM.APPLICATION_EXTERNAL_ASSETS(e),
         body: { urls: n },
         oldFormErrors: !0
     });
-    for (let { url: e, external_asset_path: t } of r) I[e] = t;
+    for (let { url: e, external_asset_path: t } of r) m[e] = t;
 }
 function N(e, t) {
     let n = 0;
@@ -125,7 +125,7 @@ function N(e, t) {
         for (let r = 0; r < e.length; r++) {
             let i = e[r];
             if (null == i) continue;
-            let a = Object.prototype.hasOwnProperty.call(I, i) ? I[i] : void 0;
+            let a = Object.prototype.hasOwnProperty.call(m, i) ? m[i] : void 0;
             null != a && ((t[r] = T('mp', a)), n++);
         }
     return n === e.length;
@@ -162,7 +162,7 @@ async function O(e, t) {
           }),
           r)
         : v(t, r, await S(e), n)
-          ? m(e).then(() => O(e, t, n - 1))
+          ? I(e).then(() => O(e, t, n - 1))
           : (s.Z.dispatch({
                 type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
                 applicationId: e

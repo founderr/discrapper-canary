@@ -215,7 +215,7 @@ function p(e, t) {
         ]
     });
 }
-function I(e) {
+function m(e) {
     let t = e.size,
         n = e.size / (c.z3 + c.o),
         r = n * c.z3,
@@ -230,7 +230,7 @@ function I(e) {
         strokeMaskRadius: a
     };
 }
-function m(e) {
+function I(e) {
     let { totalSize: t, backAvatarSize: n, frontAvatarSize: r, backAvatarCenter: i, frontAvatarCenter: s, strokeMaskRadius: o } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -256,17 +256,17 @@ function m(e) {
     });
 }
 function T(e, t) {
-    let n = I((0, u.UC)(t));
+    let n = m((0, u.UC)(t));
     return (0, a.jsx)('mask', {
         id: e,
         maskContentUnits: 'objectBoundingBox',
         viewBox: '0 0 1 1',
-        children: m(n)
+        children: I(n)
     });
 }
 function g(e, t) {
     let n = (0, u.UC)(t),
-        r = I(n),
+        r = m(n),
         i = r.totalSize,
         s = n.status / 2;
     return (0, a.jsxs)('mask', {
@@ -274,7 +274,7 @@ function g(e, t) {
         maskContentUnits: 'objectBoundingBox',
         viewBox: '0 0 1 1',
         children: [
-            m(r),
+            I(r),
             (0, a.jsx)('circle', {
                 fill: 'black',
                 cx: (i - s - n.offset) / i,
@@ -286,7 +286,7 @@ function g(e, t) {
 }
 function S(e, t) {
     let n = (0, u.UC)(t),
-        r = I(n),
+        r = m(n),
         i = r.totalSize,
         s = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
         o = n.size - n.status - s - n.offset,
@@ -296,7 +296,7 @@ function S(e, t) {
         maskContentUnits: 'objectBoundingBox',
         viewBox: '0 0 1 1',
         children: [
-            m(r),
+            I(r),
             (0, a.jsx)('rect', {
                 fill: 'black',
                 x: o / i,
@@ -510,7 +510,7 @@ function D(e) {
 (D.Masks = i), (t.ZP = D);
 let L = s.memo(
     function () {
-        var e, t, n, r, i, s, o, l, c, _, I, m, D, L, b, M, P, U, w, x, G;
+        var e, t, n, r, i, s, o, l, c, _, m, I, D, L, b, M, P, U, w, x, G;
         return (0, a.jsxs)('svg', {
             viewBox: '0 0 1 1',
             style: {
@@ -920,9 +920,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((I = 'svg-mask-avatar-voice-call-80'),
+                ((m = 'svg-mask-avatar-voice-call-80'),
                 (0, a.jsxs)('mask', {
-                    id: I,
+                    id: m,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -942,9 +942,9 @@ let L = s.memo(
                 })),
                 f('svg-mask-avatar-call-icon', u.EF.SIZE_56, 1),
                 f('svg-mask-avatar-call-icon-32', u.EF.SIZE_32, 0.5),
-                ((m = 'svg-mask-sticker-rounded-rect'),
+                ((I = 'svg-mask-sticker-rounded-rect'),
                 (0, a.jsx)('mask', {
-                    id: m,
+                    id: I,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: (0, a.jsx)('path', {

@@ -57,16 +57,16 @@ var t, n;
                             for (var l = null, c = null, d = null, _ = -100000, E = 100000, f = [i.get(t.charCodeAt(0)), a], h = 0; h < f.length; h++) {
                                 var p = f[h];
                                 if (null != p)
-                                    for (var I = 0; I < p.length; I++) {
-                                        var m = p[I],
-                                            T = e[m],
+                                    for (var m = 0; m < p.length; m++) {
+                                        var I = p[m],
+                                            T = e[I],
                                             g = T.order;
                                         if (g > E) break;
                                         var S = null == s.prevCapture ? '' : s.prevCapture[0],
                                             A = T.match(t, s, S);
                                         if (A) {
                                             var N = T.quality ? T.quality(A, s, S) : 0;
-                                            (g < E || N > _) && ((l = m), (c = T), (d = A), (_ = N), (E = g));
+                                            (g < E || N > _) && ((l = I), (c = T), (d = A), (_ = N), (E = g));
                                         }
                                     }
                             }
@@ -100,10 +100,10 @@ var t, n;
                 };
                 return (t.regex = e), t;
             },
-            I = ('function' == typeof Symbol && Symbol.for && Symbol.for('react.element')) || 60103,
-            m = function (e, t, n) {
+            m = ('function' == typeof Symbol && Symbol.for && Symbol.for('react.element')) || 60103,
+            I = function (e, t, n) {
                 return {
-                    $$typeof: I,
+                    $$typeof: m,
                     type: e,
                     key: null == t ? void 0 : t,
                     ref: null,
@@ -300,7 +300,7 @@ var t, n;
                         };
                     },
                     react: function (e, t, n) {
-                        return m('h' + e.level, n.key, { children: t(e.content, n) });
+                        return I('h' + e.level, n.key, { children: t(e.content, n) });
                     },
                     html: function (e, t, n) {
                         return T('h' + e.level, t(e.content, n));
@@ -331,7 +331,7 @@ var t, n;
                     match: h(/^( *[-*_]){3,} *(?:\n *)+\n/),
                     parse: D,
                     react: function (e, t, n) {
-                        return m('hr', n.key, g);
+                        return I('hr', n.key, g);
                     },
                     html: function (e, t, n) {
                         return '<hr>';
@@ -348,8 +348,8 @@ var t, n;
                     },
                     react: function (e, t, n) {
                         var r = e.lang ? 'markdown-code-' + e.lang : void 0;
-                        return m('pre', n.key, {
-                            children: m('code', null, {
+                        return I('pre', n.key, {
+                            children: I('code', null, {
                                 className: r,
                                 children: e.content
                             })
@@ -381,7 +381,7 @@ var t, n;
                         return { content: t(e[0].replace(/^ *> ?/gm, ''), n) };
                     },
                     react: function (e, t, n) {
-                        return m('blockquote', n.key, { children: t(e.content, n) });
+                        return I('blockquote', n.key, { children: t(e.content, n) });
                     },
                     html: function (e, t, n) {
                         return T('blockquote', t(e.content, n));
@@ -421,10 +421,10 @@ var t, n;
                         };
                     },
                     react: function (e, t, n) {
-                        return m(e.ordered ? 'ol' : 'ul', n.key, {
+                        return I(e.ordered ? 'ol' : 'ul', n.key, {
                             start: e.start,
                             children: e.items.map(function (e, r) {
-                                return m('li', '' + r, { children: t(e, n) });
+                                return I('li', '' + r, { children: t(e, n) });
                             })
                         });
                     },
@@ -478,24 +478,24 @@ var t, n;
                                 return null == e.align[t] ? {} : { textAlign: e.align[t] };
                             },
                             i = e.header.map(function (e, i) {
-                                return m('th', '' + i, {
+                                return I('th', '' + i, {
                                     style: r(i),
                                     scope: 'col',
                                     children: t(e, n)
                                 });
                             }),
                             a = e.cells.map(function (e, i) {
-                                return m('tr', '' + i, {
+                                return I('tr', '' + i, {
                                     children: e.map(function (e, i) {
-                                        return m('td', '' + i, {
+                                        return I('td', '' + i, {
                                             style: r(i),
                                             children: t(e, n)
                                         });
                                     })
                                 });
                             });
-                        return m('table', n.key, {
-                            children: [m('thead', 'thead', { children: m('tr', null, { children: i }) }), m('tbody', 'tbody', { children: a })]
+                        return I('table', n.key, {
+                            children: [I('thead', 'thead', { children: I('tr', null, { children: i }) }), I('tbody', 'tbody', { children: a })]
                         });
                     },
                     html: function (e, t, n) {
@@ -542,7 +542,7 @@ var t, n;
                     match: h(/^((?:[^\n]|\n(?! *\n))+)(?:\n *)+\n/),
                     parse: y,
                     react: function (e, t, n) {
-                        return m('div', n.key, {
+                        return I('div', n.key, {
                             className: 'paragraph',
                             children: t(e.content, n)
                         });
@@ -653,7 +653,7 @@ var t, n;
                         };
                     },
                     react: function (e, t, n) {
-                        return m('a', n.key, {
+                        return I('a', n.key, {
                             href: S(e.target),
                             title: e.title,
                             children: t(e.content, n)
@@ -678,7 +678,7 @@ var t, n;
                         };
                     },
                     react: function (e, t, n) {
-                        return m('img', n.key, {
+                        return I('img', n.key, {
                             src: S(e.target),
                             alt: e.alt,
                             title: e.title
@@ -731,7 +731,7 @@ var t, n;
                         return { content: t(e[2] || e[1], n) };
                     },
                     react: function (e, t, n) {
-                        return m('em', n.key, { children: t(e.content, n) });
+                        return I('em', n.key, { children: t(e.content, n) });
                     },
                     html: function (e, t, n) {
                         return T('em', t(e.content, n));
@@ -746,7 +746,7 @@ var t, n;
                     },
                     parse: y,
                     react: function (e, t, n) {
-                        return m('strong', n.key, { children: t(e.content, n) });
+                        return I('strong', n.key, { children: t(e.content, n) });
                     },
                     html: function (e, t, n) {
                         return T('strong', t(e.content, n));
@@ -761,7 +761,7 @@ var t, n;
                     },
                     parse: y,
                     react: function (e, t, n) {
-                        return m('u', n.key, { children: t(e.content, n) });
+                        return I('u', n.key, { children: t(e.content, n) });
                     },
                     html: function (e, t, n) {
                         return T('u', t(e.content, n));
@@ -773,7 +773,7 @@ var t, n;
                     match: f(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/),
                     parse: y,
                     react: function (e, t, n) {
-                        return m('del', n.key, { children: t(e.content, n) });
+                        return I('del', n.key, { children: t(e.content, n) });
                     },
                     html: function (e, t, n) {
                         return T('del', t(e.content, n));
@@ -787,7 +787,7 @@ var t, n;
                         return { content: e[2].replace(w, '$1') };
                     },
                     react: function (e, t, n) {
-                        return m('code', n.key, { children: e.content });
+                        return I('code', n.key, { children: e.content });
                     },
                     html: function (e, t, n) {
                         return T('code', v(e.content));
@@ -799,7 +799,7 @@ var t, n;
                     match: p(/^ {2,}\n/),
                     parse: D,
                     react: function (e, t, n) {
-                        return m('br', n.key, g);
+                        return I('br', n.key, g);
                     },
                     html: function (e, t, n) {
                         return '<br>';
@@ -865,7 +865,7 @@ var t, n;
             ReactMarkdown: function (e) {
                 var t = {};
                 for (var n in e) 'source' !== n && Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-                return (t.children = J(e.source)), m('div', null, t);
+                return (t.children = J(e.source)), I('div', null, t);
             },
             defaultBlockParse: q,
             defaultInlineParse: function (e, t) {
@@ -879,7 +879,7 @@ var t, n;
             sanitizeUrl: S,
             unescapeUrl: R,
             htmlTag: T,
-            reactElement: m,
+            reactElement: I,
             defaultRawParse: z,
             ruleOutput: function (e, t) {
                 return (

@@ -11,7 +11,7 @@ var s = a(481060),
     c = a(441061),
     m = a(167675),
     Z = a(737013),
-    f = a(145474),
+    f = a(607783),
     h = a(299206),
     g = a(819403),
     M = a(777658),
@@ -30,22 +30,22 @@ var s = a(481060),
     T = a(991307),
     S = a(725119),
     G = a(700994),
-    P = a(332031),
-    w = a(981631),
+    w = a(332031),
+    P = a(981631),
     A = a(689938);
 n.default = (0, t.Z)(
     (0, d.Z)(
         function (e) {
             var n;
-            let { user: a, channel: d, context: t, showChatItems: u = !0, showMediaItems: w = !1, showChannelCallItems: b = !1, showModalItems: k = !0, onSelect: W, onHeightUpdate: y } = e,
+            let { user: a, channel: d, context: t, showChatItems: u = !0, showMediaItems: P = !1, showChannelCallItems: b = !1, showModalItems: k = !0, onSelect: W, onHeightUpdate: y } = e,
                 z = (0, S.Z)({
                     userId: a.id,
                     guildId: null
                 }),
                 D = (0, N.Z)(a, null, t),
                 L = (0, U.Z)(a.id, d.id),
-                F = (0, R.Z)(a.id, t),
-                B = (0, j.Z)({
+                B = (0, R.Z)(a.id, t),
+                F = (0, j.Z)({
                     user: a,
                     context: t
                 }),
@@ -58,7 +58,7 @@ n.default = (0, t.Z)(
                 Y = (0, G.Z)(a.id),
                 q = (0, O.Z)(a.id, d.id),
                 V = (0, T.Z)(a.id),
-                J = (0, f.P)({
+                J = (0, f.B)({
                     userId: a.id,
                     channelId: d.id,
                     location: 'GroupDMUserContextMenu'
@@ -72,7 +72,7 @@ n.default = (0, t.Z)(
                     id: a.id,
                     label: A.Z.Messages.COPY_ID_USER
                 }),
-                er = (0, P.Z)(a.id),
+                er = (0, w.Z)(a.id),
                 es = (0, m.Z)(a.id),
                 ei = (0, c.Z)(d.id),
                 ed = (0, g.Z)(a),
@@ -99,16 +99,16 @@ n.default = (0, t.Z)(
                             children: [
                                 (0, r.jsx)(s.MenuGroup, { children: ed }),
                                 (0, r.jsxs)(s.MenuGroup, {
-                                    children: [k && z, u && D, F, B, !ec && L, k && H, k && X, er]
+                                    children: [k && z, u && D, B, F, !ec && L, k && H, k && X, er]
                                 }),
-                                w && (0, r.jsx)(s.MenuGroup, { children: Y }),
+                                P && (0, r.jsx)(s.MenuGroup, { children: Y }),
                                 em &&
                                     (0, r.jsxs)(s.MenuGroup, {
                                         children: [!ec && q, el]
                                     }),
                                 (0, r.jsx)(s.MenuGroup, { children: k && $ }),
                                 (0, r.jsxs)(s.MenuGroup, {
-                                    children: [w && V, w && J, w && K, eo, k && Q, ee, k && en, w && et]
+                                    children: [P && V, P && J, P && K, eo, k && Q, ee, k && en, P && et]
                                 }),
                                 b &&
                                     (0, r.jsxs)(s.MenuGroup, {
@@ -120,7 +120,7 @@ n.default = (0, t.Z)(
                 ]
             });
         },
-        { object: w.qAy.CONTEXT_MENU }
+        { object: P.qAy.CONTEXT_MENU }
     ),
     [u.Z.CONTEXT_MENU, u.Z.GROUP_DM_USER_MENU]
 );

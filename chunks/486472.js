@@ -18,7 +18,7 @@ function p(e) {
     if (!f.has(e.guild.id)) return !1;
     f.delete(e.guild.id), E.info('Guild has become available: '.concat(e.guild.id));
 }
-class I extends (r = u.ZP.Store) {
+class m extends (r = u.ZP.Store) {
     initialize() {
         this.waitFor(_.Z);
     }
@@ -36,7 +36,7 @@ class I extends (r = u.ZP.Store) {
     }
 }
 (s = 'GuildAvailabilityStore'),
-    (a = 'displayName') in (i = I)
+    (a = 'displayName') in (i = m)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -44,7 +44,7 @@ class I extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new I(c.Z, {
+    (t.Z = new m(c.Z, {
         CONNECTION_OPEN: h,
         OVERLAY_INITIALIZE: h,
         GUILD_UNAVAILABLE: function (e) {

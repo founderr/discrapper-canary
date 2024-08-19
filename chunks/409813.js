@@ -6,7 +6,7 @@ n.d(t, {
         return A;
     },
     dZ: function () {
-        return T;
+        return I;
     },
     h8: function () {
         return r;
@@ -69,7 +69,7 @@ function c(e) {
     }
     return null;
 }
-function T(e, t, n) {
+function I(e, t, n) {
     u.useEffect(() => {
         null != e && 'review' !== e && t !== a.A.WAITING && t !== a.A.COMPLETED && n(a.A.WAITING);
     }, [e, t, n]);

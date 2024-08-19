@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(512722),
     o = n.n(l),
     c = n(91192),
@@ -51,11 +51,11 @@ let P = {
     };
 function D(e) {
     let { closePopout: t, throttledNow: n } = e,
-        s = (0, u.e7)([p.Z], () => {
+        a = (0, u.e7)([p.Z], () => {
             var e, t;
             return null !== (t = null === (e = p.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : d.Pr.ALL;
         }),
-        [a] = (0, u.Wu)([x.Z, p.Z], () => {
+        [s] = (0, u.Wu)([x.Z, p.Z], () => {
             var e, t;
             let n = null !== (t = null === (e = p.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : d.Pr.ALL;
             return [n === d.Pr.ALL ? x.Z.getSavedMessages() : n === d.Pr.BOOKMARKS ? x.Z.getMessageBookmarks() : x.Z.getMessageReminders(), x.Z.getVersion()];
@@ -86,7 +86,7 @@ function D(e) {
                             children: (0, i.jsxs)(_.TabBar, {
                                 type: 'top',
                                 look: 'brand',
-                                selectedItem: s,
+                                selectedItem: a,
                                 onItemSelect: b,
                                 className: Z.tabBar,
                                 children: [
@@ -111,7 +111,7 @@ function D(e) {
                     ]
                 }),
                 (0, i.jsx)(U, {
-                    savedMessages: a,
+                    savedMessages: s,
                     closePopout: t,
                     throttledNow: n
                 })
@@ -120,17 +120,17 @@ function D(e) {
     });
 }
 function j(e) {
-    let { onOpen: t, onClose: n, children: a, popoutPosition: r, popoutAlign: l } = e,
-        [o, c] = s.useState(!1),
-        d = s.useCallback(() => {
+    let { onOpen: t, onClose: n, children: s, popoutPosition: r, popoutAlign: l } = e,
+        [o, c] = a.useState(!1),
+        d = a.useCallback(() => {
             c(!1), o && (null == n || n());
         }, [n, o]),
-        E = s.useCallback(() => {
+        E = a.useCallback(() => {
             c(!o), o ? null == n || n() : null == t || t();
         }, [n, t, o]);
-    s.useEffect(() => (S.S.subscribe(v.CkL.TOGGLE_FOR_LATER, E), () => void S.S.unsubscribe(v.CkL.TOGGLE_FOR_LATER, E)), [E]);
-    let [I, m] = s.useState(new Date());
-    s.useEffect(() => {
+    a.useEffect(() => (S.S.subscribe(v.CkL.TOGGLE_FOR_LATER, E), () => void S.S.unsubscribe(v.CkL.TOGGLE_FOR_LATER, E)), [E]);
+    let [I, m] = a.useState(new Date());
+    a.useEffect(() => {
         let e = setInterval(() => m(new Date()), A.Z.Millis.MINUTE);
         return () => {
             clearInterval(e);
@@ -153,13 +153,13 @@ function j(e) {
         ignoreModalClicks: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return a(E, n, e, T);
+            return s(E, n, e, T);
         }
     });
 }
 function U(e) {
-    let { savedMessages: t, closePopout: n, throttledNow: a } = e,
-        r = s.useRef(null),
+    let { savedMessages: t, closePopout: n, throttledNow: s } = e,
+        r = a.useRef(null),
         l = (0, I.Z)('for-later', r);
     return 0 === t.length
         ? (0, i.jsx)(k, {})
@@ -167,11 +167,11 @@ function U(e) {
               navigator: l,
               children: (0, i.jsx)(c.SJ, {
                   children: (e) => {
-                      let { ref: s, ...l } = e;
+                      let { ref: a, ...l } = e;
                       return (0, i.jsx)(_.AdvancedScrollerThin, {
                           ref: (e) => {
                               var t;
-                              (r.current = e), (s.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+                              (r.current = e), (a.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
                           },
                           className: Z.messagesScroller,
                           ...l,
@@ -181,7 +181,7 @@ function U(e) {
                                   {
                                       savedMessage: e,
                                       closePopout: n,
-                                      throttledNow: a
+                                      throttledNow: s
                                   },
                                   ''.concat(e.saveData.messageId)
                               )
@@ -192,9 +192,9 @@ function U(e) {
           });
 }
 function y(e) {
-    let { savedMessage: t, closePopout: n, throttledNow: a } = e,
+    let { savedMessage: t, closePopout: n, throttledNow: s } = e,
         l = (0, u.e7)([g.Z], () => g.Z.getChannel(t.saveData.channelId)),
-        o = s.useCallback(
+        o = a.useCallback(
             (e) => {
                 !e.shiftKey && n(), (0, N.uL)(v.Z5c.CHANNEL(null == l ? void 0 : l.getGuildId(), t.saveData.channelId, t.saveData.messageId));
             },
@@ -237,7 +237,7 @@ function y(e) {
                   null != t.saveData.dueAt
                       ? (0, i.jsx)(M.Z, {
                             reminder: t,
-                            throttledNow: a
+                            throttledNow: s
                         })
                       : null,
                   (0, i.jsx)(O.Z, {
@@ -268,7 +268,7 @@ function y(e) {
           });
 }
 function B(e) {
-    let { savedMessage: t, jumpToMessage: s } = e;
+    let { savedMessage: t, jumpToMessage: a } = e;
     return (o()(null != t.message, 'Saved message must be cached for For Later action buttons'), null != t.saveData.dueAt)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -319,7 +319,7 @@ function B(e) {
                       {
                           label: L.Z.Messages.JUMP_TO_MESSAGE,
                           icon: _.ArrowLargeRightIcon,
-                          onClick: (e) => s(e)
+                          onClick: (e) => a(e)
                       },
                       'jump-to-message'
                   )
@@ -359,7 +359,7 @@ function B(e) {
                       {
                           label: L.Z.Messages.JUMP_TO_MESSAGE,
                           icon: _.ArrowLargeRightIcon,
-                          onClick: (e) => s(e)
+                          onClick: (e) => a(e)
                       },
                       'jump-to-message'
                   )

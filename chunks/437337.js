@@ -8,7 +8,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(338545),
+    o = n(567526),
     l = n(692547),
     u = n(186325),
     c = n(84735),
@@ -34,7 +34,7 @@ let f = {
         }
     },
     p = function (e) {
-        let { id: t, onChange: n, checked: a, disabled: p, className: I, focusProps: m, innerRef: T } = e,
+        let { id: t, onChange: n, checked: a, disabled: p, className: m, focusProps: I, innerRef: T } = e,
             { reducedMotion: g } = i.useContext(u.S),
             S = i.useRef(null),
             [A, N] = i.useState(!1),
@@ -49,11 +49,11 @@ let f = {
                 'animate-always'
             );
         return (0, r.jsx)(c.t, {
-            ...m,
+            ...I,
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(o.animated.div, {
-                className: s()(E.container, I, {
+                className: s()(E.container, m, {
                     [E.checked]: a,
                     [E.disabled]: p
                 }),

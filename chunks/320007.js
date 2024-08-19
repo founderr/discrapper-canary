@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
+    a = n(470079),
+    s = n(442837),
     r = n(481060),
     l = n(665149),
     o = n(618158),
@@ -28,7 +28,7 @@ function N(e) {
             lastClipsSession: S,
             remindersEnabled: A,
             hasAnyClipAnimations: R
-        } = (0, a.cj)([_.Z], () => ({
+        } = (0, s.cj)([_.Z], () => ({
             hasClips: _.Z.hasClips(),
             hasNewClips: _.Z.getNewClipIds().length > 0,
             lastClipsSession: _.Z.getLastClipsSession(),
@@ -38,7 +38,7 @@ function N(e) {
         x = null != S && S.newClipIds.length > 0,
         O = (0, I.n)((e) => e.clipsButtonRef),
         M = (0, I.n)((e) => e.setClipsButtonRef),
-        v = (0, a.e7)([c.Z], () => c.Z.hasLayers()),
+        v = (0, s.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: L, allowIdle: Z } = (0, o.Y)('animation');
     function P() {
         (0, r.openModalLazy)(
@@ -49,7 +49,7 @@ function N(e) {
             { modalKey: T.Qr }
         );
     }
-    return (s.useEffect(() => (R ? L() : Z(), () => Z()), [R, L, Z]), C && f && p)
+    return (a.useEffect(() => (R ? L() : Z(), () => Z()), [R, L, Z]), C && f && p)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   null != O &&

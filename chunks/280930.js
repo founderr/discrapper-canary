@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return m;
     },
     m: function () {
-        return m;
+        return I;
     }
 }),
     n(47120),
@@ -22,7 +22,7 @@ var r = n(470079),
     f = n(606301),
     h = n(549058);
 let p = (0, E.ad)(l.$p, h.J7),
-    I = (e, t, n) => {
+    m = (e, t, n) => {
         let i = (0, u.fQ)(n),
             a = (0, s.e7)([d.default], () => d.default.getCurrentUser());
         return r.useMemo(() => {
@@ -45,7 +45,7 @@ let p = (0, E.ad)(l.$p, h.J7),
             return s.length > 0 && ((d = s.slice(0, h.qm)), 0 !== l.length && (d.length === h.qm && d.pop(), d.push(l[0]))), d;
         }, [e, n, i, t, a]);
     },
-    m = (e) => {
+    I = (e) => {
         let { setTextInputValue: t, setHasDismissed: n, setHasSelection: i, setFocusedSuggestionType: s, delayBeforeSuggestions: o } = e,
             l = r.useRef(null),
             u = r.useRef(!1),

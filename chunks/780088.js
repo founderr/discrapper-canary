@@ -96,7 +96,7 @@ function v(e, t) {
             g = p.Z.toURLSafe(e.proxyUrl);
         return null == g
             ? null
-            : (g.searchParams.append('format', 'jpeg'),
+            : (g.searchParams.append('format', 'webp'),
               {
                   component: (0, l.jsx)(d.K, {
                       width: u,

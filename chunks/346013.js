@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(512722),
     o = n.n(l),
     c = n(772848),
@@ -40,15 +40,15 @@ var i = n(735250),
     U = n(494104),
     y = n(527455);
 function B(e) {
-    var t, n, a;
+    var t, n, s;
     let { embedUrl: l, message: B, channel: k } = e,
         G = (0, P.J)(l, B),
         { setPopout: F } = (0, g.Z)(B.id, D.d$),
         w = (0, p.qo)(B, k, F, !0),
         V = R.QK.useSetting(),
         H = (0, L.n)(),
-        [Y, W] = s.useState(!1),
-        [K, z] = s.useState((null == G ? void 0 : G.coverImage) == null),
+        [Y, W] = a.useState(!1),
+        [K, z] = a.useState((null == G ? void 0 : G.coverImage) == null),
         Q = (0, d.e7)([E.Z], () => E.Z.useReducedMotion),
         q = (0, d.e7)(
             [x.ZP, O.default],
@@ -60,19 +60,19 @@ function B(e) {
         ),
         X = (0, d.e7)([x.ZP], () => ((null == G ? void 0 : G.authorId) != null ? x.ZP.getMember(G.guildId, G.authorId) : null)),
         J = (0, T.Z)((null == X ? void 0 : X.avatarDecoration) != null ? (null == X ? void 0 : X.avatarDecoration) : null == G ? void 0 : null === (t = G.user) || void 0 === t ? void 0 : t.avatarDecoration),
-        [$, ee] = s.useMemo(() => {
+        [$, ee] = a.useMemo(() => {
             var e;
             return [null !== (e = null == X ? void 0 : X.colorString) && void 0 !== e ? e : 'inherit', null == X ? void 0 : X.colorRoleId];
         }, [X]),
-        { reducedMotion: et } = s.useContext(_.AccessibilityPreferencesContext),
-        [en, ei] = s.useState(!1),
-        es = s.useCallback(() => {
+        { reducedMotion: et } = a.useContext(_.AccessibilityPreferencesContext),
+        [en, ei] = a.useState(!1),
+        ea = a.useCallback(() => {
             W(!0);
         }, [W]),
-        ea = s.useCallback(() => {
+        es = a.useCallback(() => {
             W(!1);
         }, [W]),
-        er = s.useCallback(async () => {
+        er = a.useCallback(async () => {
             null != G &&
                 ((0, m.yw)(b.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
                     media_post_id: G.threadId,
@@ -82,7 +82,7 @@ function B(e) {
                 }),
                 G.canAccess ? (0, f.Z)(b.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId)) : q ? (0, f.Z)(b.Z5c.CHANNEL(G.guildId, G.parentChannelId)) : await v.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
         }, [G, k, q]),
-        el = s.useCallback(
+        el = a.useCallback(
             () => (
                 o()((null == G ? void 0 : G.authorId) != null, 'Author Id cannot be null when loading user profile'),
                 (0, S.Z)(G.authorId, G.avatarUrl, {
@@ -122,8 +122,8 @@ function B(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: U.thumbnailContainer,
-                onMouseEnter: es,
-                onMouseLeave: ea,
+                onMouseEnter: ea,
+                onMouseLeave: es,
                 children: [
                     !K &&
                         (!0 === G.shouldShowBlurredThumbnailImage
@@ -224,7 +224,7 @@ function B(e) {
                                                 children: (0, i.jsx)(_.Heading, {
                                                     variant: 'heading-md/semibold',
                                                     color: 'header-primary',
-                                                    children: null !== (a = G.channelName) && void 0 !== a ? a : G.guildName
+                                                    children: null !== (s = G.channelName) && void 0 !== s ? s : G.guildName
                                                 })
                                             })
                                         ]

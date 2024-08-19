@@ -13,8 +13,8 @@ var r = n(392711),
     f = n(146282),
     h = n(206583),
     p = n(981631);
-let I = h.YN.GLOBAL_FEED,
-    m = new Map(),
+let m = h.YN.GLOBAL_FEED,
+    I = new Map(),
     T = new Set(),
     g = new Map(),
     S = null,
@@ -27,11 +27,11 @@ function N(e, t) {
     });
 }
 function v() {
-    R(I);
+    R(m);
 }
 function O(e) {
     if (T.has(e) || (e === h.YN.GAME_PROFILE_FEED && (!(0, s._J)('ContentInventoryManager') || void 0 !== f.Z.getFeed(e)))) return !1;
-    if (e === I) {
+    if (e === m) {
         if (!(0, d.sA)('ContentInventoryManager') || (E.Z.hidden && null != f.Z.getFeed(e)) || !c.Z.isFocused() || !o.Z.isConnected()) return !1;
         let t = u.Z.getIdleSince();
         if (null != t && Date.now() - t > 900000) return !1;
@@ -40,22 +40,22 @@ function O(e) {
 }
 function R(e) {
     N(e, { loading: !1 });
-    let t = m.get(e);
-    void 0 !== t && (clearTimeout(t), m.delete(e));
+    let t = I.get(e);
+    void 0 !== t && (clearTimeout(t), I.delete(e));
 }
 function C() {
-    if ((R(I), !O(I))) return;
-    let e = f.Z.getFeed(I);
+    if ((R(m), !O(m))) return;
+    let e = f.Z.getFeed(m);
     if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == S) return;
     let t = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
         n = Math.max(0, null == S ? 0 : new Date(S).getTime() - Date.now(), t);
-    N(I, {
+    N(m, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + n)
     }),
-        m.set(
-            I,
-            setTimeout(() => y(I), n)
+        I.set(
+            m,
+            setTimeout(() => y(m), n)
         );
 }
 async function y(e) {
@@ -76,13 +76,13 @@ async function y(e) {
                 g.set(e, 0),
                 T.delete(e),
                 N(e, { loading: !1 }),
-                e === I && ((S = null), C());
+                e === m && ((S = null), C());
         } catch (a) {
             var n;
             let r = null !== (n = g.get(e)) && void 0 !== n ? n : 0;
             if (r < 3) {
                 let n = 1000 * Math.pow(5, r);
-                m.set(
+                I.set(
                     e,
                     setTimeout(() => y(e, { force: t }), n)
                 ),
@@ -104,7 +104,7 @@ function L(e) {
 }
 function b(e) {
     let { refreshAfterMs: t } = e,
-        n = f.Z.getFeed(I);
+        n = f.Z.getFeed(m);
     if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) (S = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), C();
 }
 function M(e) {

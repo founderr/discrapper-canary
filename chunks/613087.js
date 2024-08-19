@@ -14,7 +14,7 @@ n.d(t, {
 var s = n(735250),
     o = n(470079),
     r = n(699581),
-    a = n(338545),
+    a = n(567526),
     l = n(393238),
     i = n(743294);
 let c = o.createContext({
@@ -47,21 +47,21 @@ let c = o.createContext({
                     }
                 );
             }, [d, u, m, g]);
-        let T = o.useCallback(
+        let S = o.useCallback(
             (e) => {
                 let { height: t } = e;
                 E.current !== t && (x(), (E.current = t));
             },
             [x]
         );
-        (0, l.P)(f, T);
-        let S = null === (n = C.get(d)) || void 0 === n ? void 0 : n.current,
-            v = null;
+        (0, l.P)(f, S);
+        let T = null === (n = C.get(d)) || void 0 === n ? void 0 : n.current,
+            A = null;
         return (
-            null == S
-                ? (v = null)
+            null == T
+                ? (A = null)
                 : p && null != _
-                  ? (v = (0, s.jsxs)(s.Fragment, {
+                  ? (A = (0, s.jsxs)(s.Fragment, {
                         children: [
                             'collapsed' === u &&
                                 (0, r.createPortal)(
@@ -75,7 +75,7 @@ let c = o.createContext({
                                         },
                                         children: i(h)
                                     }),
-                                    S
+                                    T
                                 ),
                             'expanded' === u &&
                                 (0, r.createPortal)(
@@ -89,15 +89,15 @@ let c = o.createContext({
                                         },
                                         children: i(h)
                                     }),
-                                    S
+                                    T
                                 )
                         ]
                     }))
-                  : 'collapsed' === u && (v = (0, r.createPortal)(i(h), S)),
+                  : 'collapsed' === u && (A = (0, r.createPortal)(i(h), T)),
             (0, s.jsxs)('div', {
-                style: { opacity: (null == v && 'collapsed' === u) || null == S ? 1 : 0 },
+                style: { opacity: (null == A && 'collapsed' === u) || null == T ? 1 : 0 },
                 ref: t,
-                children: [i(f), v]
+                children: [i(f), A]
             })
         );
     }),

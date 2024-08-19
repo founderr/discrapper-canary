@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-    a = n(834129),
+var a = n(481060),
+    s = n(834129),
     r = n(689938),
     l = n(397381);
 function o(e) {
     let { message: t, compact: n } = e;
-    return (0, i.jsx)(a.Z, {
-        iconNode: (0, i.jsx)(s.ThreadIcon, {
+    return (0, i.jsx)(s.Z, {
+        iconNode: (0, i.jsx)(a.ThreadIcon, {
             size: 'md',
             color: 'currentColor',
             className: l.icon

@@ -13,13 +13,13 @@ var i,
     f = n(952537),
     h = n(592125),
     p = n(430824),
-    I = n(981631);
-let m = {},
+    m = n(981631);
+let I = {},
     T = !1;
 function g(e) {
     return (
-        null == m[e] &&
-            (m[e] = {
+        null == I[e] &&
+            (I[e] = {
                 searchId: e,
                 searchType: S(e),
                 isIndexing: !1,
@@ -38,16 +38,16 @@ function g(e) {
                 showBlockedResults: !1,
                 showNoResultsAlt: !1
             }),
-        m[e]
+        I[e]
     );
 }
 function S(e) {
-    return e === I.aib.DMS ? I.aib.DMS : e === I.I_8 ? I.aib.FAVORITES : null != p.Z.getGuild(e) ? I.aib.GUILD : null != h.Z.getChannel(e) ? I.aib.CHANNEL : null;
+    return e === m.aib.DMS ? m.aib.DMS : e === m.I_8 ? m.aib.FAVORITES : null != p.Z.getGuild(e) ? m.aib.GUILD : null != h.Z.getChannel(e) ? m.aib.CHANNEL : null;
 }
 function A(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     if (null == e) return n;
-    let r = m[e];
+    let r = I[e];
     return null == r ? n : t(r);
 }
 let N = 'SearchStore',
@@ -64,13 +64,13 @@ function C(e) {
 }
 function y(e) {
     let { searchId: t } = e,
-        n = m[t];
+        n = I[t];
     if (null == n) return !1;
-    null != n.searchFetcher && n.searchFetcher.cancel(), delete m[t];
+    null != n.searchFetcher && n.searchFetcher.cancel(), delete I[t];
 }
 function D(e) {
     if (e === R) return !1;
-    null != e && null == m[e] && g(e), (R = e);
+    null != e && null == I[e] && g(e), (R = e);
 }
 class L extends (i = c.ZP.Store) {
     initialize() {
@@ -203,7 +203,7 @@ class L extends (i = c.ZP.Store) {
                     searchId: i,
                     query: r
                 });
-            let c = i === I.I_8 ? (null === (t = h.Z.getChannel(i)) || void 0 === t ? void 0 : t.guild_id) : o === I.aib.GUILD ? i : null;
+            let c = i === m.I_8 ? (null === (t = h.Z.getChannel(i)) || void 0 === t ? void 0 : t.guild_id) : o === m.aib.GUILD ? i : null;
             l.fetch(
                 (e) => {
                     var t, n;
@@ -291,8 +291,8 @@ class L extends (i = c.ZP.Store) {
             d.K.remove(N), (O = {});
         },
         CONNECTION_OPEN: function () {
-            Object.keys(m).forEach((e) => {
-                null != m[e] && (m[e].searchType = S(e));
+            Object.keys(I).forEach((e) => {
+                null != I[e] && (I[e].searchType = S(e));
             });
         },
         SEARCH_MODAL_OPEN: function (e) {

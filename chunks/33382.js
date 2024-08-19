@@ -20,15 +20,15 @@ function a(e, t) {
             f = n[2],
             h = n[3],
             p = n[4],
-            I = n[5],
-            m = n[6],
+            m = n[5],
+            I = n[6],
             T = n[7];
         o && (r.push(o), (o = ''));
         var g = null != f && null != E && E !== f,
-            S = '+' === m || '*' === m,
-            A = '?' === m || '*' === m,
+            S = '+' === I || '*' === I,
+            A = '?' === I || '*' === I,
             N = n[2] || u,
-            v = p || I;
+            v = p || m;
         r.push({
             name: h || a++,
             prefix: f || '',

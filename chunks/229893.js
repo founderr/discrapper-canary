@@ -25,9 +25,9 @@ let c = [],
     f = null,
     h = { status: 'unloaded' },
     p = {},
-    I = new Set();
-function m(e) {
-    I.has(e.id) && I.delete(e.id),
+    m = new Set();
+function I(e) {
+    m.has(e.id) && m.delete(e.id),
         (d[e.id] = {
             lastFetchTimestamp: Date.now(),
             guild: e
@@ -48,7 +48,7 @@ class T extends (r = s.ZP.Store) {
         return E;
     }
     shouldFetchGuild(e) {
-        if (I.has(e)) return !1;
+        if (m.has(e)) return !1;
         let t = d[e];
         return null == t || t.lastFetchTimestamp < Date.now() - l.Z.Millis.HOUR;
     }
@@ -69,22 +69,22 @@ u(T, 'displayName', 'ClanDiscoveryStore'),
             E = !0;
         },
         FETCH_STATIC_CLAN_LIST_SUCCESS: function (e) {
-            (c = e.clans), (_ = !0), (E = !1), e.clans.forEach(m);
+            (c = e.clans), (_ = !0), (E = !1), e.clans.forEach(I);
         },
         FETCH_STATIC_CLAN_LIST_FAILURE: function () {
             E = !1;
         },
         FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: function (e) {
             let { searchResult: t, criteriaHash: n, recommendationId: r } = e;
-            return (p[n] = t), (f = r), t.items.forEach(m), (t.guildIds = t.guildIds.reduce((e, t) => (I.has(t) ? e : (e.push(t), e)), [])), !0;
+            return (p[n] = t), (f = r), t.items.forEach(I), (t.guildIds = t.guildIds.reduce((e, t) => (m.has(t) ? e : (e.push(t), e)), [])), !0;
         },
         FETCH_CLAN_DISCOVERY_PROFILE_LIST_SUCCESS: function (e) {
             var t;
             let { guilds: n, failedGuildIds: r } = e;
             return (
-                n.forEach(m),
+                n.forEach(I),
                 (t = r).forEach((e) => {
-                    delete d[e], I.add(e);
+                    delete d[e], m.add(e);
                 }),
                 Object.keys(p).forEach((e) => {
                     let n = p[e];

@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(349445),
+    a = n(470079),
+    s = n(349445),
     r = n(442837),
     l = n(524437),
     o = n(481060),
@@ -29,7 +29,7 @@ var i = n(735250),
 function R(e) {
     let { onOpen: t, onClose: n, children: R, badgeState: x, popoutPosition: O, popoutAlign: M } = e,
         { analyticsLocations: v } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
-        [L, Z] = s.useState(!1),
+        [L, Z] = a.useState(!1),
         [P, b] = (function () {
             let e = (0, r.e7)([m.Z], () => {
                 var e, t;
@@ -37,7 +37,7 @@ function R(e) {
             });
             return [
                 e,
-                s.useCallback((e) => {
+                a.useCallback((e) => {
                     I.hW.updateAsync(
                         'inbox',
                         (t) => {
@@ -54,7 +54,7 @@ function R(e) {
                     var e, t;
                     return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
                 }),
-                n = s.useCallback(() => {
+                n = a.useCallback(() => {
                     I.hW.updateAsync(
                         'inbox',
                         (e) => {
@@ -68,23 +68,23 @@ function R(e) {
                 setSeenTutorial: n
             };
         })(P),
-        U = s.useCallback(() => {
+        U = a.useCallback(() => {
             Z(!1), L && (null == n || n());
         }, [n, L]),
-        y = s.useCallback(() => {
+        y = a.useCallback(() => {
             Z(!L), L ? null == n || n() : null == t || t();
         }, [n, t, L]),
-        B = s.useCallback(() => {
+        B = a.useCallback(() => {
             y(), b(l.X.UNREADS);
         }, [b, y]);
-    s.useEffect(() => (T.S.subscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.S.unsubscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
+    a.useEffect(() => (T.S.subscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.S.unsubscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
     let { showReminders: k } = E.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
         { enabled: G } = _.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
         { enabled: F } = d.Z.useExperiment({ location: 'RecentsPopout' });
-    s.useEffect(() => {
+    a.useEffect(() => {
         ((!k && P === l.X.TODOS) || (!G && P === l.X.BOOKMARKS)) && b(l.X.MENTIONS);
     });
-    let w = s.useCallback(
+    let w = a.useCallback(
         (e) => {
             !e.shiftKey && U();
         },
@@ -134,7 +134,7 @@ function R(e) {
                                           onJump: w,
                                           closePopout: U
                                       })
-                                    : (0, i.jsx)(a.SV, {
+                                    : (0, i.jsx)(s.SV, {
                                           fallback: (0, i.jsx)(p.h, {
                                               setTab: b,
                                               closePopout: U,

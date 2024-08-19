@@ -30,11 +30,11 @@ function h(e) {
 function p() {
     return _.clear(), E.clear(), !0;
 }
-function I(e) {
+function m(e) {
     let { channelId: t, command: n } = e;
-    m(t, null == n ? void 0 : n.id);
+    I(t, null == n ? void 0 : n.id);
 }
-function m(e, t) {
+function I(e, t) {
     let n = c.Z.getActiveOptionName(e),
         r = E.get(e);
     return null != r && (t !== r.commandId || n !== r.optionName) && (null != t && t !== r.commandId && (r.optionNameToLastResults.clear(), r.optionNameToNonce.clear(), r.optionNameToLastQuery.clear(), r.optionNameToAutocompleteQueries.clear()), (r.lastErrored = !1), (r.commandId = t), (r.optionName = n), !0);
@@ -141,10 +141,10 @@ class T extends (r = o.ZP.Store) {
                 !0
             );
         },
-        APPLICATION_COMMAND_SET_ACTIVE_COMMAND: I,
-        APP_LAUNCHER_SET_ACTIVE_COMMAND: I,
+        APPLICATION_COMMAND_SET_ACTIVE_COMMAND: m,
+        APP_LAUNCHER_SET_ACTIVE_COMMAND: m,
         APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function (e) {
             let { channelId: t, command: n } = e;
-            m(t, null == n ? void 0 : n.id);
+            I(t, null == n ? void 0 : n.id);
         }
     }));

@@ -67,13 +67,13 @@ var h = f(function (e, t) {
             s = e.replace,
             c = e.to,
             p = e.innerRef,
-            I = (0, l.Z)(e, ['component', 'replace', 'to', 'innerRef']);
+            m = (0, l.Z)(e, ['component', 'replace', 'to', 'innerRef']);
         return a.createElement(r.s6.Consumer, null, function (e) {
             e || (0, u.Z)(!1);
             var n = e.history,
                 r = _(d(c, e.location), e.location),
                 l = r ? n.createHref(r) : '',
-                h = (0, o.Z)({}, I, {
+                h = (0, o.Z)({}, m, {
                     href: l,
                     navigate: function () {
                         var t = d(c, e.location);
@@ -83,12 +83,12 @@ var h = f(function (e, t) {
             return E !== f ? (h.ref = t || p) : (h.innerRef = p), a.createElement(i, h);
         });
     }),
-    I = function (e) {
+    m = function (e) {
         return e;
     },
-    m = a.forwardRef;
-void 0 === m && (m = I);
-m(function (e, t) {
+    I = a.forwardRef;
+void 0 === I && (I = m);
+I(function (e, t) {
     var n = e['aria-current'],
         i = void 0 === n ? 'page' : n,
         s = e.activeClassName,
@@ -139,6 +139,6 @@ m(function (e, t) {
                 },
                 R
             );
-        return I !== m ? (M.ref = t || O) : (M.innerRef = O), a.createElement(p, M);
+        return m !== I ? (M.ref = t || O) : (M.innerRef = O), a.createElement(p, M);
     });
 });

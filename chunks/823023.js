@@ -6,7 +6,7 @@ n.d(t, {
     n(47120);
 var r = n(735250),
     i = n(470079),
-    a = n(338545),
+    a = n(567526),
     s = n(481060),
     o = n(450096),
     l = n(981631),
@@ -50,9 +50,9 @@ function E(e) {
 function f(e) {
     let { readyState: t, aspectRatio: n, placeholder: c, placeholderVersion: d, placeholderStyle: f, children: h } = e,
         p = t === l.zo9.LOADING,
-        [I] = i.useState(p),
-        [m, T] = i.useState(!1),
-        g = (0, o.L)(c, d, I);
+        [m] = i.useState(p),
+        [I, T] = i.useState(!1),
+        g = (0, o.L)(c, d, m);
     i.useEffect(() => {
         let e = setTimeout(() => {
             T(!0);
@@ -60,8 +60,8 @@ function f(e) {
         return () => {
             clearTimeout(e);
         };
-    }, [I]);
-    let S = (0, s.useTransition)(p && m, _);
+    }, [m]);
+    let S = (0, s.useTransition)(p && I, _);
     return (0, r.jsxs)('div', {
         className: u.loadingOverlay,
         style: { aspectRatio: n },

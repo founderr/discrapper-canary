@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    s = n(470079),
-    a = n(287734),
+    a = n(470079),
+    s = n(287734),
     r = n(475468),
     l = n(358555),
     o = n(955415),
@@ -20,7 +20,7 @@ function m(e) {
     let { guild: n, channel: m, messageData: T } = e,
         h = u.Z.getGuildId(),
         N = c.Z.getChannelId(h),
-        f = s.useCallback(() => {
+        f = a.useCallback(() => {
             var e;
             d.default.track(_.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
                 author_id: null === (e = T.author) || void 0 === e ? void 0 : e.id,
@@ -31,7 +31,7 @@ function m(e) {
                 channel_id: N
             }),
                 (0, r.K)(n.id, m.id),
-                a.default.selectVoiceChannel(m.id);
+                s.default.selectVoiceChannel(m.id);
         }, [null === (t = T.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, h, N]),
         C = (0, i.jsx)(o.Z.Channel, { channel: m });
     return (0, i.jsx)(o.Z, {

@@ -26,8 +26,8 @@ var r,
     f = n(700785),
     h = n(199902),
     p = n(314897),
-    I = n(592125),
-    m = n(650774),
+    m = n(592125),
+    I = n(650774),
     T = n(271383),
     g = n(430824),
     S = n(158776),
@@ -106,7 +106,7 @@ function L(e, t, n) {
           };
 }
 function b(e) {
-    let t = I.Z.getChannel(e);
+    let t = m.Z.getChannel(e);
     return null == t
         ? C
         : null == t.memberListId
@@ -253,7 +253,7 @@ function G() {
 }
 class k extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(N.default, g.Z, I.Z, T.ZP, S.Z, A.Z, p.default, m.Z, h.Z, E.Z), this.syncWith([A.Z], G), this.syncWith([h.Z], x);
+        this.waitFor(N.default, g.Z, m.Z, T.ZP, S.Z, A.Z, p.default, I.Z, h.Z, E.Z), this.syncWith([A.Z], G), this.syncWith([h.Z], x);
     }
     getProps(e, t) {
         let n = P.get(e, b(t));

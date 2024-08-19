@@ -23,8 +23,8 @@ function _(e) {
             [o]
         ),
         p = i.useMemo(() => t.toDate(), [t]),
-        I = i.useMemo(() => (null == a ? void 0 : a.toDate()), [a]),
-        m = i.useMemo(() => (null == n ? void 0 : n.toDate()), [n]),
+        m = i.useMemo(() => (null == a ? void 0 : a.toDate()), [a]),
+        I = i.useMemo(() => (null == n ? void 0 : n.toDate()), [n]),
         T = (0, u.e7)([c.default], () => c.default.locale),
         g = i.useRef(null),
         S = i.useCallback((e) => {
@@ -48,8 +48,8 @@ function _(e) {
             fixedHeight: !0,
             inline: !0,
             locale: T,
-            maxDate: I,
-            minDate: m,
+            maxDate: m,
+            minDate: I,
             onKeyDown: S,
             onClickOutside: f
         })

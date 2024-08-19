@@ -13,8 +13,8 @@ var r = n(348327),
     f = n(173507),
     h = n(592125),
     p = n(131951),
-    I = n(944486),
-    m = n(358085),
+    m = n(944486),
+    I = n(358085),
     T = n(998502),
     g = n(981631),
     S = n(689938);
@@ -51,7 +51,7 @@ class N extends c.Z {
                 [T.tS.DEAFEN]: () => l.Z.toggleSelfDeaf(),
                 [T.tS.DISCONNECT]: () => u.default.disconnect()
             }),
-            A(this, 'isSupported', (0, m.isMac)() || (0, m.isWindows)()),
+            A(this, 'isSupported', (0, I.isMac)() || (0, I.isWindows)()),
             A(this, 'prevButtons', []),
             A(this, 'buttonClicked', (e) => {
                 if (!(e.buttonName in this.callbackActions)) {
@@ -64,7 +64,7 @@ class N extends c.Z {
                 this,
                 'handleViewUpdate',
                 s().debounce(() => {
-                    let e = I.Z.getVoiceChannelId();
+                    let e = m.Z.getVoiceChannelId();
                     if (null == e) {
                         this.setThumbarButtons([]);
                         return;

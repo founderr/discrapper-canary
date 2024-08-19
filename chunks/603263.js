@@ -35,16 +35,16 @@ n.d(t, {
 }),
     n(724458);
 var i = n(570140),
-    s = n(367907),
-    a = n(768119),
+    a = n(367907),
+    s = n(768119),
     r = n(405656),
     l = n(981631);
 function o(e, t, n, o) {
     (0, r.jW)(t, e), o && (t.search_everywhere = !0);
     let c = Object.keys(t);
-    s.ZP.trackWithMetadata(l.rMx.SEARCH_STARTED, {
-        search_type: a.Z.getSearchType(),
-        prev_search_id: a.Z.getAnalyticsId(e),
+    a.ZP.trackWithMetadata(l.rMx.SEARCH_STARTED, {
+        search_type: s.Z.getSearchType(),
+        prev_search_id: s.Z.getAnalyticsId(e),
         num_modifiers: c.length,
         modifiers: c.reduce((e, n) => {
             let i = t[n];
@@ -63,7 +63,7 @@ function c(e) {
     return 'relevance' === e.sort_by ? l.QIO.MOST_RELEVANT : 'asc' === e.sort_order ? l.QIO.OLDEST : l.QIO.NEWEST;
 }
 function u(e, t) {
-    let n = a.Z.getQuery(e),
+    let n = s.Z.getQuery(e),
         i = (function (e) {
             switch (e) {
                 case l.QIO.MOST_RELEVANT:
@@ -102,12 +102,12 @@ function E(e, t) {
     return m(e, t * l.vpv);
 }
 function I(e, t) {
-    let n = a.Z.getOffset(e);
+    let n = s.Z.getOffset(e);
     return m(e, n + t);
 }
 function m(e, t) {
-    let n = a.Z.getQuery(e),
-        i = a.Z.getTotalResults(e);
+    let n = s.Z.getQuery(e),
+        i = s.Z.getTotalResults(e);
     if (!(t < 0) && !(t > i))
         return o(e, {
             ...n,
@@ -129,7 +129,7 @@ function h(e, t) {
         });
 }
 function N(e) {
-    s.ZP.trackWithMetadata(l.rMx.SEARCH_CLOSED, { search_id: a.Z.getAnalyticsId(e) }),
+    a.ZP.trackWithMetadata(l.rMx.SEARCH_CLOSED, { search_id: s.Z.getAnalyticsId(e) }),
         i.Z.wait(() =>
             i.Z.dispatch({
                 type: 'SEARCH_EDITOR_STATE_CLEAR',

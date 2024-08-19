@@ -1,182 +1,182 @@
-n.d(t, {
+t.d(s, {
     J6: function () {
-        return Z;
+        return L;
     },
     LO: function () {
-        return T;
+        return p;
     },
     TQ: function () {
-        return C;
+        return h;
     },
     ZU: function () {
-        return M;
+        return R;
     },
     Zn: function () {
-        return m;
+        return x;
     },
     bo: function () {
-        return U;
+        return M;
     },
     kK: function () {
-        return w;
+        return f;
     },
     om: function () {
-        return F;
+        return v;
     },
     uX: function () {
-        return v;
+        return j;
     }
 }),
-    n(518263),
-    n(970173),
-    n(520712),
-    n(268111),
-    n(941497),
-    n(32026),
-    n(480839),
-    n(744285),
-    n(492257),
-    n(873817);
-var r = n(250683),
-    i = n(512722),
-    a = n.n(i),
-    o = n(913527),
-    s = n.n(o),
-    u = n(544891),
-    l = n(253135),
-    c = n(314897),
-    E = n(131951),
-    d = n(594174),
-    f = n(70956),
-    _ = n(960048),
-    h = n(51144),
-    y = n(718629),
-    I = n(615830),
-    S = n(352954),
-    g = n(571826),
-    A = n(760373),
-    R = n(981631),
-    p = n(689938);
-function C(e, t, n, r, i) {
-    n ? y.Z.createVerifiedKey(e, t) : y.Z.createSecureFramesTransientKey(e, t),
-        (0, g.M1)({
-            channelId: r,
+    t(518263),
+    t(970173),
+    t(520712),
+    t(268111),
+    t(941497),
+    t(32026),
+    t(480839),
+    t(744285),
+    t(492257),
+    t(873817);
+var n = t(250683),
+    a = t(512722),
+    i = t.n(a),
+    r = t(913527),
+    o = t.n(r),
+    l = t(544891),
+    c = t(253135),
+    d = t(314897),
+    _ = t(131951),
+    E = t(594174),
+    u = t(70956),
+    I = t(960048),
+    T = t(51144),
+    S = t(718629),
+    N = t(615830),
+    C = t(352954),
+    m = t(571826),
+    A = t(760373),
+    O = t(981631),
+    g = t(689938);
+function h(e, s, t, n, a) {
+    t ? S.Z.createVerifiedKey(e, s) : S.Z.createSecureFramesTransientKey(e, s),
+        (0, m.M1)({
+            channelId: n,
             userId: e,
-            analyticsLocation: i
+            analyticsLocation: a
         });
 }
-function T(e, t, n) {
-    if (n) {
-        let n = (0, l.MK)(new Uint8Array(t));
-        y.Z.deleteVerifiedKey(e, n);
-    } else y.Z.deleteSecureFramesTransientKey(e);
+function p(e, s, t) {
+    if (t) {
+        let t = (0, c.MK)(new Uint8Array(s));
+        S.Z.deleteVerifiedKey(e, t);
+    } else S.Z.deleteSecureFramesTransientKey(e);
 }
-function M(e, t) {
-    S.Z.openSecureFramesUpdateConfirmation({
-        title: p.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE,
-        subtitle: p.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE,
+function R(e, s) {
+    C.Z.openSecureFramesUpdateConfirmation({
+        title: g.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE,
+        subtitle: g.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE,
         onConfirm: () => {
-            y.Z.deleteVerifiedKey(e, t), (0, g.Pn)();
+            S.Z.deleteVerifiedKey(e, s), (0, m.Pn)();
         }
     });
 }
-function m(e) {
-    let t = d.default.getUser(e),
-        n = h.ZP.getName(t);
-    S.Z.openSecureFramesUpdateConfirmation({
-        title: p.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE.format({ username: n }),
-        subtitle: p.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE,
+function x(e) {
+    let s = E.default.getUser(e),
+        t = T.ZP.getName(s);
+    C.Z.openSecureFramesUpdateConfirmation({
+        title: g.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE.format({ username: t }),
+        subtitle: g.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE,
         onConfirm: () => {
-            y.Z.deleteAllUserVerifiedKeys(e), (0, g.DF)();
+            S.Z.deleteAllUserVerifiedKeys(e), (0, m.DF)();
         }
     });
 }
-function U(e) {
-    let t = s()(e),
-        n = s()().diff(t, 's');
-    if (n > 12 * f.Z.Seconds.DAYS_30) {
-        let e = Math.round(n / (12 * f.Z.Seconds.DAYS_30));
-        return p.Z.Messages.E2EE_USER_VERIFIED_YEARS_AGO.format({ count: e });
+function M(e) {
+    let s = o()(e),
+        t = o()().diff(s, 's');
+    if (t > 12 * u.Z.Seconds.DAYS_30) {
+        let e = Math.round(t / (12 * u.Z.Seconds.DAYS_30));
+        return g.Z.Messages.E2EE_USER_VERIFIED_YEARS_AGO.format({ count: e });
     }
-    if (n > f.Z.Seconds.DAYS_30) {
-        let e = Math.round(n / f.Z.Seconds.DAYS_30);
-        return p.Z.Messages.E2EE_USER_VERIFIED_MONTHS_AGO.format({ count: e });
+    if (t > u.Z.Seconds.DAYS_30) {
+        let e = Math.round(t / u.Z.Seconds.DAYS_30);
+        return g.Z.Messages.E2EE_USER_VERIFIED_MONTHS_AGO.format({ count: e });
     }
-    if (n > 7 * f.Z.Seconds.DAY) {
-        let e = Math.round(n / (7 * f.Z.Seconds.DAY));
-        return p.Z.Messages.E2EE_USER_VERIFIED_WEEKS_AGO.format({ count: e });
-    } else if (n > f.Z.Seconds.DAY) {
-        let e = Math.round(n / f.Z.Seconds.DAY);
-        return p.Z.Messages.E2EE_USER_VERIFIED_DAYS_AGO.format({ count: e });
-    } else if (n > f.Z.Seconds.HOUR) {
-        let e = Math.round(n / f.Z.Seconds.HOUR);
-        return p.Z.Messages.E2EE_USER_VERIFIED_HOURS_AGO.format({ count: e });
+    if (t > 7 * u.Z.Seconds.DAY) {
+        let e = Math.round(t / (7 * u.Z.Seconds.DAY));
+        return g.Z.Messages.E2EE_USER_VERIFIED_WEEKS_AGO.format({ count: e });
+    } else if (t > u.Z.Seconds.DAY) {
+        let e = Math.round(t / u.Z.Seconds.DAY);
+        return g.Z.Messages.E2EE_USER_VERIFIED_DAYS_AGO.format({ count: e });
+    } else if (t > u.Z.Seconds.HOUR) {
+        let e = Math.round(t / u.Z.Seconds.HOUR);
+        return g.Z.Messages.E2EE_USER_VERIFIED_HOURS_AGO.format({ count: e });
     } else {
-        if (!(n > f.Z.Seconds.MINUTE)) return p.Z.Messages.E2EE_USER_VERIFIED_SECONDS_AGO.format({ count: n });
-        let e = Math.round(n / f.Z.Seconds.MINUTE);
-        return p.Z.Messages.E2EE_USER_VERIFIED_MINUTES_AGO.format({ count: e });
+        if (!(t > u.Z.Seconds.MINUTE)) return g.Z.Messages.E2EE_USER_VERIFIED_SECONDS_AGO.format({ count: t });
+        let e = Math.round(t / u.Z.Seconds.MINUTE);
+        return g.Z.Messages.E2EE_USER_VERIFIED_MINUTES_AGO.format({ count: e });
     }
 }
-function w(e) {
-    let { isCurrentUserPersistent: t, isOtherUserPersistent: n, otherUserNickname: r } = e;
-    if (t && n) return p.Z.Messages.E2EE_PERSISTENT_VERIFICATION_DESC.format({ helpArticle: A.l4 });
-    if (t)
-        return p.Z.Messages.E2EE_OTHER_USER_TRANSIENT_VERIFICATION_DESC.format({
-            username: r,
+function f(e) {
+    let { isCurrentUserPersistent: s, isOtherUserPersistent: t, otherUserNickname: n } = e;
+    if (s && t) return g.Z.Messages.E2EE_PERSISTENT_VERIFICATION_DESC.format({ helpArticle: A.l4 });
+    if (s)
+        return g.Z.Messages.E2EE_OTHER_USER_TRANSIENT_VERIFICATION_DESC.format({
+            username: n,
             helpArticle: A.l4
         });
-    if (n) return p.Z.Messages.E2EE_CURRENT_USER_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: A.l4 });
-    else return p.Z.Messages.E2EE_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: A.l4 });
+    if (t) return g.Z.Messages.E2EE_CURRENT_USER_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: A.l4 });
+    else return g.Z.Messages.E2EE_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: A.l4 });
 }
-async function b(e) {
-    let t = c.default.getStaticAuthSessionId();
-    return a()(null != t, '[getCurrentUserPublicKey] session id should not be null'), await E.Z.getMLSSigningKey(t, e);
+async function D(e) {
+    let s = d.default.getStaticAuthSessionId();
+    return i()(null != s, '[getCurrentUserPublicKey] session id should not be null'), await _.Z.getMLSSigningKey(s, e);
 }
-function N(e) {
-    let t = r.fromByteArray(new Uint8Array(e));
-    return 'data:application/octet-stream;base64,'.concat(t);
+function P(e) {
+    let s = n.fromByteArray(new Uint8Array(e));
+    return 'data:application/octet-stream;base64,'.concat(s);
 }
-async function Z(e, t, n) {
+async function L(e, s, t) {
     try {
         return (
-            await u.tn.post({
-                url: R.ANM.VOICE_MATCH_PUBLIC_KEY(e),
+            await l.tn.post({
+                url: O.ANM.VOICE_MATCH_PUBLIC_KEY(e),
                 body: {
-                    public_key: N(t),
-                    key_version: n
+                    public_key: P(s),
+                    key_version: t
                 }
             })
         ).body.is_match;
     } catch (e) {
-        throw (_.Z.captureException(e), e);
+        throw (I.Z.captureException(e), e);
     }
 }
-async function D(e) {
-    let { key: t, signature: n } = await b(e);
+async function b(e) {
+    let { key: s, signature: t } = await D(e);
     try {
-        await u.tn.put({
-            url: R.ANM.VOICE_PUBLIC_KEYS(),
+        await l.tn.put({
+            url: O.ANM.VOICE_PUBLIC_KEYS(),
             body: {
-                public_key: N(t),
-                signature: N(n),
+                public_key: P(s),
+                signature: P(t),
                 key_version: e
             }
         }),
-            y.Z.addCurrentUserUploadedKeyVersionCached(e);
+            S.Z.addCurrentUserUploadedKeyVersionCached(e);
     } catch (e) {
-        throw (_.Z.captureException(e), e);
+        throw (I.Z.captureException(e), e);
     }
 }
-function L(e) {
-    return I.Z.getUploadedKeyVersionsCached().includes(e);
-}
-async function F(e) {
-    !L(e) && (await D(e));
+function Z(e) {
+    return N.Z.getUploadedKeyVersionsCached().includes(e);
 }
 async function v(e) {
-    if (!L(e)) return await D(e), !0;
-    let t = c.default.getId(),
-        { key: n } = await b(e),
-        r = await Z(t, n, e);
-    return !r && (0, g.KA)(e), r;
+    !Z(e) && (await b(e));
+}
+async function j(e) {
+    if (!Z(e)) return await b(e), !0;
+    let s = d.default.getId(),
+        { key: t } = await D(e),
+        n = await L(s, t, e);
+    return !n && (0, m.KA)(e), n;
 }

@@ -3,10 +3,10 @@ n.d(t, {
         return S;
     },
     KH: function () {
-        return m;
+        return I;
     },
     ZP: function () {
-        return I;
+        return m;
     }
 }),
     n(47120),
@@ -25,7 +25,7 @@ let E = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#
     f = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
     h = new Set(['line', 'blockQuote']),
     p = new Set(['applicationCommandOption']);
-function I(e, t, n) {
+function m(e, t, n) {
     let { isInline: r, isVoid: i, onChange: a } = e;
     (e.isVoid = (e) => !!f.has(e.type) || i(e)), (e.isInline = (e) => !!f.has(e.type) || r(e));
     let s = null,
@@ -35,7 +35,7 @@ function I(e, t, n) {
             let r = _.bN.richValue(e);
             (r !== s || e.previewMarkdown !== o) &&
                 (l.T.withMergedEntry(e, () => {
-                    _.bN.withoutNormalizing(e, () => m(e, t, n));
+                    _.bN.withoutNormalizing(e, () => I(e, t, n));
                 }),
                 (s = r),
                 (o = e.previewMarkdown)),
@@ -44,7 +44,7 @@ function I(e, t, n) {
         e
     );
 }
-function m(e, t, n) {
+function I(e, t, n) {
     let r = _.bN.areStylesDisabled(e);
     for (let i of _.bN.blocks(e))
         if (h.has(i[0].type)) r ? g(e, i, !0, null) : T(e, i, t, n);
@@ -74,7 +74,7 @@ function T(e, t, n, r) {
                     let h = s.children[c];
                     if (!_.LC.isText(h)) continue;
                     let p = _.C0.child(l, c),
-                        I = [];
+                        m = [];
                     for (E.lastIndex = 0; null != (f = E.exec(h.text)); ) {
                         if (0 !== f.index && null == h.text.charAt(f.index - 1).match(/(\t|\s)/)) {
                             E.lastIndex = f.index + 1;
@@ -94,14 +94,14 @@ function T(e, t, n, r) {
                             continue;
                         let i = (0, o.i)(f[0], n, r);
                         null != i && N(r, t[0], i)
-                            ? I.push({
+                            ? m.push({
                                   index: f.index,
                                   length: f[0].length,
                                   node: i
                               })
                             : (E.lastIndex = f.index + 1);
                     }
-                    for (let t of I.reverse())
+                    for (let t of m.reverse())
                         (function (e, t, n, r, a) {
                             let [s, o] = t,
                                 l = {

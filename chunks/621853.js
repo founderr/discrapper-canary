@@ -25,8 +25,8 @@ function h(e, t, n) {
     );
 }
 let p = new Set(),
-    I = new Set(),
-    m = {},
+    m = new Set(),
+    I = {},
     T = {},
     g = {},
     S = {},
@@ -35,11 +35,11 @@ let p = new Set(),
     v = {},
     O = !1;
 function R(e) {
-    let t = m[e];
+    let t = I[e];
     if ((null == t ? void 0 : t.profileEffectExpiresAt) == null) return;
     let n = 1000 * t.profileEffectExpiresAt - Date.now();
     if (n <= 0)
-        (m[e] = {
+        (I[e] = {
             ...t,
             profileEffectId: void 0,
             profileEffectExpiresAt: void 0
@@ -75,15 +75,15 @@ function C(e, t) {
     }
 }
 function y() {
-    p.clear(), I.clear(), (m = {}), (T = {}), (A = {}), (N = {}), (v = {}), (O = !1);
+    p.clear(), m.clear(), (I = {}), (T = {}), (A = {}), (N = {}), (v = {}), (O = !1);
 }
 function D(e) {
     let { userId: t } = e;
-    I.add(t);
+    m.add(t);
 }
 function L(e) {
     let { userId: t } = e;
-    I.delete(t);
+    m.delete(t);
 }
 function b(e) {
     return i()(e)
@@ -99,7 +99,7 @@ function b(e) {
         .value();
 }
 function M(e) {
-    I.delete(e.userId), (A[e.userId] = b(e.mutualFriends)), (N[e.userId] = e.mutualFriends.length);
+    m.delete(e.userId), (A[e.userId] = b(e.mutualFriends)), (N[e.userId] = e.mutualFriends.length);
 }
 function P() {
     if (0 === Object.keys(v).length) return !1;
@@ -110,7 +110,7 @@ function U(e) {
     delete v[e.user.id];
 }
 function w(e) {
-    var t, n, r, i, o, l, u, d, _, h, I, O, y, D, L, M, P, U, w, x, G, k, B, F;
+    var t, n, r, i, o, l, u, d, _, h, m, O, y, D, L, M, P, U, w, x, G, k, B, F;
     if ((p.delete(e.user.id), null != e.mutual_guilds)) {
         let t = {};
         e.mutual_guilds.forEach((e) => {
@@ -138,7 +138,7 @@ function w(e) {
         H = null != e.premium_guild_since ? new Date(e.premium_guild_since) : null,
         Z = e.application;
     if (
-        ((m[e.user.id] = {
+        ((I[e.user.id] = {
             userId: e.user.id,
             banner: null === (t = e.user_profile) || void 0 === t ? void 0 : t.banner,
             accentColor: null === (n = e.user_profile) || void 0 === n ? void 0 : n.accent_color,
@@ -186,7 +186,7 @@ function w(e) {
                       )
                     : e.badges
         }),
-        (null === (O = e.user_profile) || void 0 === O ? void 0 : null === (I = O.profile_effect) || void 0 === I ? void 0 : I.expires_at) != null)
+        (null === (O = e.user_profile) || void 0 === O ? void 0 : null === (m = O.profile_effect) || void 0 === m ? void 0 : m.expires_at) != null)
     ) {
         let t = new a.V7();
         (g[e.user.id] = t), R(e.user.id);
@@ -218,8 +218,8 @@ function x(e) {
 function G(e) {
     var t;
     let { userId: n } = e;
-    (m[n] =
-        null !== (t = m[n]) && void 0 !== t
+    (I[n] =
+        null !== (t = I[n]) && void 0 !== t
             ? t
             : {
                   connectedAccounts: [],
@@ -269,10 +269,10 @@ function B(e) {
               })(e)
             : !(function (e) {
                   let { userId: t, accent_color: n, banner: r, bio: i, pronouns: s, popout_animation_particle_type: o, theme_colors: l, profileEffectId: u, profileEffectExpiresAt: c } = e,
-                      d = m[t];
+                      d = I[t];
                   if (null == d) return !1;
                   if (
-                      ((m[t] = {
+                      ((I[t] = {
                           ...d,
                           accentColor: n,
                           banner: r,
@@ -295,11 +295,11 @@ function F(e) {
 }
 function V(e) {
     let { user: t } = e;
-    if (p.has(t.id) || null == m[t.id]) return !1;
-    m[t.id].lastFetched = 0;
+    if (p.has(t.id) || null == I[t.id]) return !1;
+    I[t.id].lastFetched = 0;
 }
 function H() {
-    p.clear(), (m = {}), (T = {});
+    p.clear(), (I = {}), (T = {});
 }
 class Z extends _.Z {
     initialize() {
@@ -309,13 +309,13 @@ class Z extends _.Z {
         return p.has(e);
     }
     isFetchingFriends(e) {
-        return I.has(e);
+        return m.has(e);
     }
     get isSubmitting() {
         return O;
     }
     getUserProfile(e) {
-        return m[e];
+        return I[e];
     }
     getGuildMemberProfile(e, t) {
         var n;
@@ -337,7 +337,7 @@ class Z extends _.Z {
             data: [
                 {
                     userId: e,
-                    profile: m[e]
+                    profile: I[e]
                 }
             ]
         };
@@ -367,7 +367,7 @@ class Z extends _.Z {
                 null != e &&
                     e.forEach((e) => {
                         let { userId: t, profile: n } = e;
-                        m[t] = n;
+                        I[t] = n;
                     });
             });
     }

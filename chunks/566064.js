@@ -16,13 +16,13 @@ function u(e) {
     return document.querySelector(e);
 }
 function c(e) {
-    let { navId: t, columnCounts: n, focusedX: c = 0, focusedY: d = 0, onSelect: _, prepareFocus: E, getNewFocusPosition: f, maintainFocusPosition: h = !0, enabled: p = !0, onDispatch: I, autoFocusElement: m = !0, useVirtualFocus: T = !1 } = e,
+    let { navId: t, columnCounts: n, focusedX: c = 0, focusedY: d = 0, onSelect: _, prepareFocus: E, getNewFocusPosition: f, maintainFocusPosition: h = !0, enabled: p = !0, onDispatch: m, autoFocusElement: I = !0, useVirtualFocus: T = !1 } = e,
         g = r.useCallback(
             (e, t) => {
                 let n = (0, i.Z)(e, t);
-                return null != I && I(e, n, t), n;
+                return null != m && m(e, n, t), n;
             },
-            [I]
+            [m]
         ),
         [S, A] = r.useReducer(g, {
             focusedX: c,
@@ -39,9 +39,9 @@ function c(e) {
             });
         }, [n]),
         (function (e) {
-            let { navId: t, columnCounts: n, focusedX: c, focusedY: d, onSelect: _, prepareFocus: E, getNewFocusPosition: f, dispatch: h, maintainFocusPosition: p, enabled: I, autoFocusElement: m, useVirtualFocus: T } = e,
+            let { navId: t, columnCounts: n, focusedX: c, focusedY: d, onSelect: _, prepareFocus: E, getNewFocusPosition: f, dispatch: h, maintainFocusPosition: p, enabled: m, autoFocusElement: I, useVirtualFocus: T } = e,
                 g = r.useRef();
-            g.current = I;
+            g.current = m;
             let S = u(l(t, c, d)),
                 [A, N] = r.useState(!1),
                 [v, O] = r.useState(!1),
@@ -63,10 +63,10 @@ function c(e) {
             r.useEffect(() => () => y.clean(), [y]);
             let D = r.useCallback(
                     (e) => {
-                        if (!g.current || !m) return !1;
+                        if (!g.current || !I) return !1;
                         e.focus();
                     },
-                    [m]
+                    [I]
                 ),
                 L = r.useCallback(
                     (e, n) => {
@@ -161,11 +161,11 @@ function c(e) {
                                 return;
                             case a.Us.SELECT_FOCUSED_ITEM:
                                 var r;
-                                if ((m && (null == (r = S) ? void 0 : r.ownerDocument.activeElement) !== r) || e.repeat) return;
+                                if ((I && (null == (r = S) ? void 0 : r.ownerDocument.activeElement) !== r) || e.repeat) return;
                                 e.preventDefault(), e.stopPropagation(), h({ type: t }), null != _ ? _(c, d, e) : null != S && S.click();
                         }
                     },
-                    [b, h, m, S, _, c, d]
+                    [b, h, I, S, _, c, d]
                 ),
                 x = r.useCallback((e) => (e.currentTarget !== e.target ? (!A && (N(!0), C(!0)), !1) : A ? (b(!1), !1) : void (p && null != S ? L(c, d) : b(!0))), [A, p, S, b, L, c, d]),
                 G = r.useCallback((e) => {
@@ -229,7 +229,7 @@ function c(e) {
             getNewFocusPosition: f,
             maintainFocusPosition: h,
             enabled: p,
-            autoFocusElement: m,
+            autoFocusElement: I,
             useVirtualFocus: T
         })
     );

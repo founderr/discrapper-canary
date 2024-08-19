@@ -18,8 +18,8 @@ var i,
     f = n(144140),
     h = n(314897),
     p = n(592125),
-    I = n(306680),
-    m = n(944486),
+    m = n(306680),
+    I = n(944486),
     T = n(823379),
     g = n(709054),
     S = n(882252);
@@ -38,7 +38,7 @@ let A = [],
     U = new Set();
 function w(e) {
     var t;
-    return null !== (t = I.ZP.lastMessageId(e)) && void 0 !== t ? t : e;
+    return null !== (t = m.ZP.lastMessageId(e)) && void 0 !== t ? t : e;
 }
 function x(e) {
     return function (t, n) {
@@ -53,7 +53,7 @@ function G() {
 }
 function k() {
     var e;
-    let t = m.Z.getChannelId();
+    let t = I.Z.getChannelId();
     if (null == t || !(null === (e = p.Z.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return G(), !1;
     F({ refreshThreadIds: !0 });
 }
@@ -103,7 +103,7 @@ function F(e) {
 }
 class V extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, E.Z, m.Z, I.ZP);
+        this.waitFor(p.Z, E.Z, I.Z, m.ZP);
     }
     getNewThreadCount() {
         return C;

@@ -26,23 +26,23 @@ var r = n(738774),
     f = n(185923);
 let h = new Set([f.Z5.PREMIUM_LOCKED, f.Z5.ROLE_SUBSCRIPTION_LOCKED]),
     p = new Set([f.Z5.PREMIUM_LOCKED, f.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, f.Z5.ROLE_SUBSCRIPTION_LOCKED, f.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE]),
-    I = new Set([f.Z5.DISALLOW_EXTERNAL, f.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, f.Z5.ONLY_GUILD_EMOJIS_ALLOWED]);
-function m(e) {
+    m = new Set([f.Z5.DISALLOW_EXTERNAL, f.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, f.Z5.ONLY_GUILD_EMOJIS_ALLOWED]);
+function I(e) {
     if (e.type === i.B.GUILD) return !0;
     return null != e.guildId;
 }
 function T(e, t) {
-    return null != e && null != t && (!m(e) || t === e.guildId);
+    return null != e && null != t && (!I(e) || t === e.guildId);
 }
 function g(e) {
     let { emoji: t, channel: n, guildId: i = null == n ? void 0 : n.getGuildId(), intention: u, forceIncludeExternalGuilds: c } = e;
-    if (!m(t)) return null;
+    if (!I(t)) return null;
     let d = null != n && (0, s.zi)(n.type),
         h = null != n && (0, s.bw)(n.type),
         p = T(t, i),
-        I = o.Z.can(E.Plq.USE_EXTERNAL_EMOJIS, n);
+        m = o.Z.can(E.Plq.USE_EXTERNAL_EMOJIS, n);
     if (u === f.Hz.COMMUNITY_CONTENT) return p && null != t.guildId && t.available ? null : f.Z5.DISALLOW_EXTERNAL;
-    if ((!(0, f.Gt)(u) && !T(t, i) && !c) || ((d || h) && !p && !I)) return f.Z5.DISALLOW_EXTERNAL;
+    if ((!(0, f.Gt)(u) && !T(t, i) && !c) || ((d || h) && !p && !m)) return f.Z5.DISALLOW_EXTERNAL;
     if (null != t.id && !t.available) return f.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE;
     let g = l.default.getCurrentUser();
     if (!_.ZP.canUseEmojisEverywhere(g) && !p) {
@@ -96,7 +96,7 @@ t.ZP = {
     getURL: c.Z.getURL,
     isInternalEmojiForGuildId: T,
     getEmojiUnavailableReason: g,
-    isCustomEmoji: m,
+    isCustomEmoji: I,
     getEmojiUnavailableReasons(e) {
         let { categoryEmojis: t, channel: n, guildId: r, intention: i, computeUnfiltered: a = !1 } = e,
             s = new Set(),
@@ -111,7 +111,7 @@ t.ZP = {
                 guildId: r,
                 intention: i
             });
-            null != t ? (I.has(t) ? o++ : a && (null == l || l.push(e)), h.has(t) && (!c && t === f.Z5.PREMIUM_LOCKED && (c = !0), null != e.id && s.add(e.id), u++)) : a && (null == l || l.push(e));
+            null != t ? (m.has(t) ? o++ : a && (null == l || l.push(e)), h.has(t) && (!c && t === f.Z5.PREMIUM_LOCKED && (c = !0), null != e.id && s.add(e.id), u++)) : a && (null == l || l.push(e));
         }
         return {
             emojisDisabled: s,
@@ -123,7 +123,7 @@ t.ZP = {
     },
     isEmojiFiltered(e) {
         let t = g(e);
-        return I.has(t);
+        return m.has(t);
     },
     isEmojiPremiumLocked(e) {
         let t = g(e);

@@ -18,7 +18,7 @@ function E(e) {
     let a,
         E,
         f,
-        { className: h, activeCommand: p, activeOption: I, optionStates: m, channelId: T } = e,
+        { className: h, activeCommand: p, activeOption: m, optionStates: I, channelId: T } = e,
         g = i.useCallback(
             (e) => {
                 var t;
@@ -47,9 +47,9 @@ function E(e) {
             });
         }, [T]);
     if (null == p) return null;
-    if (null != I) {
-        let e = m[I.name].lastValidationResult;
-        (a = I.displayName), (E = I.displayDescription), (f = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
+    if (null != m) {
+        let e = I[m.name].lastValidationResult;
+        (a = m.displayName), (E = m.displayDescription), (f = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
     } else (a = ''.concat(c.GI).concat(p.displayName)), (E = p.displayDescription), (f = null);
     return (0, r.jsxs)('div', {
         className: s()(h, _.bar),

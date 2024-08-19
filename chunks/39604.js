@@ -67,8 +67,8 @@ var r = n(46973),
     f = n(361291),
     h = n(199902),
     p = n(314897),
-    I = n(131951),
-    m = n(959457),
+    m = n(131951),
+    I = n(959457),
     T = n(33039),
     g = n(626135),
     S = n(358085),
@@ -199,20 +199,20 @@ async function F(e) {
         n = (0, O.Z)(e),
         r = ''.concat((0, v.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
         i = o.Z.fileManager.join(t, r),
-        a = I.Z.getMediaEngine(),
+        a = m.Z.getMediaEngine(),
         l = JSON.stringify(n),
         u = null != e ? (0, c.my)(e).ownerId : void 0,
         d = (function (e) {
             var t;
             let n, r, i;
             if (null != e) {
-                n = null != e ? m.Z.getRTCConnection(e) : null;
+                n = null != e ? I.Z.getRTCConnection(e) : null;
                 let t = (0, c.my)(e);
                 (r = t.guildId), (i = t.channelId);
             } else {
                 let e = p.default.getId(),
                     t = h.Z.getActiveStreamForUser(e, null);
-                (n = null != t ? m.Z.getRTCConnection((0, c.V9)(t)) : null), (r = null == t ? void 0 : t.guildId), (i = null == t ? void 0 : t.channelId);
+                (n = null != t ? I.Z.getRTCConnection((0, c.V9)(t)) : null), (r = null == t ? void 0 : t.guildId), (i = null == t ? void 0 : t.channelId);
             }
             let a = null == n ? void 0 : null === (t = n.analyticsContext) || void 0 === t ? void 0 : t.streamApplication;
             return {
@@ -269,12 +269,12 @@ async function V(e) {
         { enableViewerClipping: a } = _.Z.getCurrentConfig({ location: 'SaveClip' }, { autoTrackExposure: !1 });
     if (N.Z.getIsAtMaxSaveClipOperations()) return;
     let o = N.Z.getSettings().clipsEnabled && null != h.Z.getCurrentUserActiveStream(),
-        l = n && N.Z.getSettings().decoupledClipsEnabled && (null === (t = u.ZP.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null && I.Z.hasClipsSource(),
+        l = n && N.Z.getSettings().decoupledClipsEnabled && (null === (t = u.ZP.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null && m.Z.hasClipsSource(),
         E = null != e && null != h.Z.getActiveStreamForStreamKey(e) && a;
     if (!o && !l && !E) return;
     let f = h.Z.getCurrentUserActiveStream(),
-        m = null != f ? (0, c.V9)(f) : void 0,
-        g = null != e ? e : m,
+        I = null != f ? (0, c.V9)(f) : void 0,
+        g = null != e ? e : I,
         S = (() => {
             let e = null != g ? (0, c.my)(g).ownerId : void 0;
             return e === p.default.getId() ? D.X9.STREAMER : null != e ? D.X9.VIEWER : D.X9.DECOUPLED;
@@ -326,7 +326,7 @@ async function Z(e, t) {
         ...t
     };
     null != (await (0, R.w)(r)) &&
-        (await I.Z.getMediaEngine().updateClipMetadata(r.filepath, JSON.stringify(r)),
+        (await m.Z.getMediaEngine().updateClipMetadata(r.filepath, JSON.stringify(r)),
         g.default.track(L.rMx.CLIP_EDITED, { clip_id: r.id }),
         s.Z.dispatch({
             type: 'CLIPS_UPDATE_METADATA',
@@ -366,7 +366,7 @@ async function K(e) {
             });
 }
 async function z(e, t) {
-    let n = I.Z.getMediaEngine(),
+    let n = m.Z.getMediaEngine(),
         r = await n.exportClip(e.filepath, t);
     return (0, C.Z)(r);
 }

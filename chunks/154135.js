@@ -20,5 +20,5 @@ function a(e) {
 function s(e) {
     if (null == e) return;
     let { url: t, proxy_url: n } = e;
-    return null != t && null != n ? ((0, r.cb)(t) ? ''.concat(n, '?format=jpeg') : n) : t;
+    return null != t && null != n ? ((0, r.cb)(t) ? ''.concat(n, '?format=webp') : n) : t;
 }

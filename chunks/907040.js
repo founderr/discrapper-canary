@@ -19,8 +19,8 @@ var r,
     f = n(477690),
     h = n(481060),
     p = n(80932),
-    I = n(410575),
-    m = n(2052),
+    m = n(410575),
+    I = n(2052),
     T = n(100527),
     g = n(906732),
     S = n(243778),
@@ -116,8 +116,8 @@ let ea = (e, t) => {
             {
                 gridDispatch: f,
                 getItemProps: h,
-                getRowProps: I,
-                gridContainerProps: m,
+                getRowProps: m,
+                gridContainerProps: I,
                 handleGridContainerKeyDown: T,
                 isUsingKeyboardNavigation: g
             } = (0, y.VO)({
@@ -148,8 +148,8 @@ let ea = (e, t) => {
             ),
             {
                 getItemProps: h,
-                getRowProps: I,
-                gridContainerProps: m,
+                getRowProps: m,
+                gridContainerProps: I,
                 handleGridContainerKeyDown: T,
                 isUsingKeyboardNavigation: g
             }
@@ -185,8 +185,8 @@ t.Z = s.memo(
     s.forwardRef(function (e, t) {
         var n, r;
         let i,
-            { pickerIntention: o, channel: u, guildId: c, closePopout: d, emojiSize: f = X.Su.MEDIUM, hasTabWrapper: p = !1, containerContext: C = 0, includeCreateEmojiButton: L, onSelectEmoji: k, containerWidth: ea, onNavigateAway: e_, persistSearch: eE, className: ef, headerClassName: eh, analyticsOverride: ep = ed, searchProps: eI = {}, wrapper: em, shouldHidePickerActions: eT = !1, messageId: eg, renderHeader: eS, listHeaderClassName: eA } = e,
-            { onFocus: eN, onKeyDown: ev, autoFocus: eO = !0, accessory: eR } = eI,
+            { pickerIntention: o, channel: u, guildId: c, closePopout: d, emojiSize: f = X.Su.MEDIUM, hasTabWrapper: p = !1, containerContext: C = 0, includeCreateEmojiButton: L, onSelectEmoji: k, containerWidth: ea, onNavigateAway: e_, persistSearch: eE, className: ef, headerClassName: eh, analyticsOverride: ep = ed, searchProps: em = {}, wrapper: eI, shouldHidePickerActions: eT = !1, messageId: eg, renderHeader: eS, listHeaderClassName: eA } = e,
+            { onFocus: eN, onKeyDown: ev, autoFocus: eO = !0, accessory: eR } = em,
             eC = (0, _.e7)([U.ZP], () => (null != c ? U.ZP.getDefaultChannel(c) : null), [c]),
             [ey, eD] = s.useState(null),
             eL = s.useRef(''),
@@ -200,7 +200,7 @@ t.Z = s.memo(
             ek = w.default.getCurrentUser(),
             eB = (0, G.I5)(ek);
         s.useImperativeHandle(t, () => ({ onPickerOpen: e5 }));
-        let { location: eF } = (0, m.O)(),
+        let { location: eF } = (0, I.O)(),
             { page: eV, section: eH, object: eZ, openPopoutType: eY } = ep,
             ej = s.useMemo(
                 () => ({
@@ -344,7 +344,7 @@ t.Z = s.memo(
                 }
                 eL.current = eb;
             }, [eb, ej, eq, ez, o]);
-        let tr = null != em ? em : p ? 'div' : h.Dialog,
+        let tr = null != eI ? eI : p ? 'div' : h.Dialog,
             ti = null != eJ;
         if ((null == ey ? void 0 : ey.type) === W.Bg.PREMIUM) {
             let e = M.p.NONE;
@@ -388,7 +388,7 @@ t.Z = s.memo(
             }),
             ts = [];
         o === ee.Hz.REACTION && ts.push(E.z.SUPER_REACTIONS_NITRO_MARKETING), !A.ZP.hasFavoriteEmojis(ew) && ts.push(E.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
-        let to = (0, a.jsx)(I.Z, {
+        let to = (0, a.jsx)(m.Z, {
             ...ej,
             children: (0, a.jsxs)(tr, {
                 id: X.cZ,

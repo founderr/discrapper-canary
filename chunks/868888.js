@@ -128,7 +128,7 @@ let c = (e) => (t) => {
                 r,
                 i
             ),
-            I = () => {
+            m = () => {
                 var e;
                 if (!a) return;
                 (l = !1), d.forEach((e) => e(r()));
@@ -164,7 +164,7 @@ let c = (e) => (t) => {
                     var e;
                     null == (e = null == a ? void 0 : a.removeItem) || e.call(a, o.name);
                 },
-                rehydrate: () => I(),
+                rehydrate: () => m(),
                 hasHydrated: () => l,
                 onHydrate: (e) => (
                     d.add(e),
@@ -179,7 +179,7 @@ let c = (e) => (t) => {
                     }
                 )
             }),
-            I(),
+            m(),
             s || p
         );
     };

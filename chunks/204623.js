@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(176354),
     h = n(63063),
     p = n(358085),
-    I = n(792125),
-    m = n(998502),
+    m = n(792125),
+    I = n(998502),
     T = n(151851),
     g = n(981631),
     S = n(689938);
@@ -33,11 +33,11 @@ class N extends i.PureComponent {
     componentDidMount() {
         !(function () {
             let e = window.require('electron').remote.getCurrentWindow();
-            (m.ZP.minimize = () => e.minimize()),
-                (m.ZP.maximize = () => {
+            (I.ZP.minimize = () => e.minimize()),
+                (I.ZP.maximize = () => {
                     e.isMaximized() ? e.unmaximize() : e.maximize();
                 }),
-                (m.ZP.close = () => e.close());
+                (I.ZP.close = () => e.close());
         })();
     }
     render() {
@@ -61,7 +61,7 @@ class N extends i.PureComponent {
             });
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, I.Q)(g.BRd.DARK) }) }),
+                (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, m.Q)(g.BRd.DARK) }) }),
                 (0, r.jsx)(A, { type: this.getPlatform() }),
                 (0, r.jsx)(_.Z, {
                     title: S.Z.Messages.UNSUPPORTED_BROWSER_TITLE,

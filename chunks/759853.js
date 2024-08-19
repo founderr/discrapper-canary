@@ -5,7 +5,7 @@ var s = n(735250),
     a = n.n(r),
     l = n(887024),
     i = n(699581),
-    c = n(338545),
+    c = n(567526),
     d = n(442837),
     u = n(110924),
     p = n(607070),
@@ -17,24 +17,24 @@ var s = n(735250),
 let f = ['#51BC9D'];
 t.Z = (e) => {
     var t;
-    let { expansionSpring: n, overlayRef: r, quest: h, progressBarRef: E, isExpanded: T } = e,
-        { completionSpring: S, startCompletionAnimation: v } = (0, m.GX)(),
-        A = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+    let { expansionSpring: n, overlayRef: r, quest: h, progressBarRef: E, isExpanded: S } = e,
+        { completionSpring: T, startCompletionAnimation: A } = (0, m.GX)(),
+        v = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         N = o.useRef(!1),
         j = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         B = o.useRef(null),
-        b = (0, d.e7)([x.Z], () => x.Z.hasLayers()),
-        R = (0, u.Z)(b),
+        R = (0, d.e7)([x.Z], () => x.Z.hasLayers()),
+        b = (0, u.Z)(R),
         [y, I] = o.useState(null),
-        [k, M] = o.useState(null),
-        O = o.useRef(
+        [M, O] = o.useState(null),
+        k = o.useRef(
             new l.qA({
                 gravity: 0,
                 wind: 0
             })
         ),
-        U = (0, l.uR)(y, k),
-        L = o.useCallback(() => {
+        U = (0, l.uR)(y, M),
+        q = o.useCallback(() => {
             if (j) return;
             let e = E.current,
                 t = B.current;
@@ -90,21 +90,21 @@ t.Z = (e) => {
                 );
             }
         }, [E, B, U, j]),
-        q = (0, u.Z)(T);
+        Z = (0, u.Z)(S);
     return (o.useEffect(() => {
-        A && T && !q && (v(), L());
-    }, [T, A, v, L, q]),
+        v && S && !Z && (A(), q());
+    }, [S, v, A, q, Z]),
     o.useEffect(() => {
-        A &&
-            !b &&
-            R &&
+        v &&
+            !R &&
+            b &&
             setTimeout(() => {
-                v(), L();
+                A(), q();
             }, 200);
-    }, [A, R, b, v, L]),
+    }, [v, b, R, A, q]),
     o.useEffect(() => {
-        if (!!U.isReady) !N.current && A && (v(), L()), (N.current = A);
-    }, [A, N, L, v, U]),
+        if (!!U.isReady) !N.current && v && (A(), q()), (N.current = v);
+    }, [v, N, q, A, U]),
     j)
         ? null
         : (0, s.jsxs)('div', {
@@ -114,11 +114,11 @@ t.Z = (e) => {
               children: [
                   (0, s.jsx)(c.animated.div, {
                       className: _.background,
-                      style: { opacity: S }
+                      style: { opacity: T }
                   }),
                   (0, s.jsx)(c.animated.div, {
                       className: a()(_.borders, _.bordersTopLeft),
-                      style: { opacity: S }
+                      style: { opacity: T }
                   }),
                   (0, s.jsxs)(c.animated.div, {
                       className: _.confettiWrapper,
@@ -134,10 +134,10 @@ t.Z = (e) => {
                           (0, s.jsx)(l.O_, {
                               ref: I,
                               className: _.confetti,
-                              environment: O.current
+                              environment: k.current
                           }),
                           (0, s.jsx)(l.Ji, {
-                              ref: M,
+                              ref: O,
                               sprites: [C],
                               colors: f,
                               spriteWidth: g.Ko,
@@ -147,7 +147,7 @@ t.Z = (e) => {
                               (0, i.createPortal)(
                                   (0, s.jsx)(c.animated.div, {
                                       className: a()(_.borders, _.bordersBottom),
-                                      style: { opacity: S }
+                                      style: { opacity: T }
                                   }),
                                   r.current
                               )

@@ -33,10 +33,10 @@ var r,
     f = n(981631),
     h = n(689938);
 let p = {};
-function I(e, t) {
+function m(e, t) {
     return e + t;
 }
-function m(e, t) {
+function I(e, t) {
     return t.map((t) => e + t);
 }
 function T(e) {
@@ -105,7 +105,7 @@ function O(e) {
     };
 }
 async function R(e, t) {
-    let n = m(e, t),
+    let n = I(e, t),
         r = n.filter((e) => p[e] <= 1).map(T);
     if (0 === r.length) return [];
     g(n, 2);
@@ -121,9 +121,9 @@ async function R(e, t) {
             let { userId: t } = e;
             return a.push(t);
         });
-        let s = m(e, a),
+        let s = I(e, a),
             o = r.filter((e) => !a.includes(e)),
-            l = m(e, o);
+            l = I(e, o);
         return g(s, 3), g(l, 0), i;
     } catch (e) {
         g(n, 0);

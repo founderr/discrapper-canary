@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return I;
+        return m;
     }
 }),
     n(47120);
@@ -8,7 +8,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(338545),
+    o = n(567526),
     l = n(442837),
     u = n(481060),
     c = n(607070),
@@ -18,11 +18,11 @@ var r = n(735250),
     f = n(185923),
     h = n(689938),
     p = n(822387);
-let I = {
+let m = {
         tension: 800,
         friction: 24
     },
-    m = () => {
+    I = () => {
         let e = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
         return (0, r.jsxs)('div', {
             className: p.premiumTooltipContainer,
@@ -68,7 +68,7 @@ t.Z = function (e) {
         }, [v]),
         P = i.useCallback(() => (0, d.x)(f.qR.EmojiButtonFocused), []);
     return (0, r.jsx)(u.Tooltip, {
-        text: m(),
+        text: I(),
         'aria-label': ''.concat(h.Z.Messages.PREMIUM_REVERSE_TRIAL_EMOJI_TOOLTIP.format()),
         position: 'top',
         shouldShow: C && !T,
@@ -103,7 +103,7 @@ t.Z = function (e) {
                     null != c
                         ? c()
                         : (0, r.jsx)(u.Spring, {
-                              config: I,
+                              config: m,
                               to: { value: y ? 1 : 0 },
                               children: (e) => {
                                   let { value: t } = e;

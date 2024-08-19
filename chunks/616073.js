@@ -15,7 +15,7 @@ n.d(t, {
         return S;
     },
     bU: function () {
-        return I;
+        return m;
     },
     qb: function () {
         return g;
@@ -59,7 +59,7 @@ function h() {
     for (let e of ((E = _()), f)) e(E);
 }
 let p = r.createContext(null);
-function I() {
+function m() {
     let e = (function () {
         let e = (0, i.Av)(),
             [t, n] = (0, r.useState)(E);
@@ -82,20 +82,20 @@ function I() {
     })();
     return (0, r.useContext)(p) || e;
 }
-let m = new WeakMap();
+let I = new WeakMap();
 function T(e, t) {
     var n;
     let r;
-    return (t && (0, a.J).getGlobalDictionaryForPackage(t)) || ((n = e), !(r = m.get(n)) && ((r = new a.J(n)), m.set(n, r)), r);
+    return (t && (0, a.J).getGlobalDictionaryForPackage(t)) || ((n = e), !(r = I.get(n)) && ((r = new a.J(n)), I.set(n, r)), r);
 }
 function g(e, t) {
-    let { locale: n } = I(),
+    let { locale: n } = m(),
         i = T(e, t);
     return (0, r.useMemo)(() => new a.E(n, i), [n, i]);
 }
 function S(e) {
     e = (0, o.vE)(null != e ? e : {}, A);
-    let { locale: t } = I();
+    let { locale: t } = m();
     return (0, r.useMemo)(() => new s.CN(t, e), [t, e]);
 }
 function A(e, t) {
@@ -107,12 +107,12 @@ function A(e, t) {
     return !0;
 }
 function N(e = {}) {
-    let { locale: t } = I();
+    let { locale: t } = m();
     return (0, r.useMemo)(() => new l.e(t, e), [t, e]);
 }
 let v = new Map();
 function O(e) {
-    let { locale: t } = I(),
+    let { locale: t } = m(),
         n =
             t +
             (e

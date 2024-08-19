@@ -33,7 +33,7 @@ n.d(t, {
         return y;
     },
     r7: function () {
-        return m;
+        return I;
     },
     r_: function () {
         return el;
@@ -107,8 +107,8 @@ class p {
             (this.altKey = n.altKey);
     }
 }
-let I = Symbol('linkClicked');
-function m(e) {
+let m = Symbol('linkClicked');
+function I(e) {
     let {
             onPress: t,
             onPressChange: n,
@@ -120,7 +120,7 @@ function m(e) {
             preventFocusOnPress: c,
             shouldCancelOnPointerExit: d,
             allowTextSelectionOnPress: h,
-            ref: m,
+            ref: I,
             ...R
         } = (function (e) {
             let t = (0, i.useContext)(f);
@@ -219,7 +219,7 @@ function m(e) {
                         O(t.target, t.key) && t.preventDefault();
                         let n = t.target,
                             a = P(A(e.target, t), 'keyboard', e.target.contains(n));
-                        b(), a && t.stopPropagation(), 'Enter' !== t.key && T(e.target) && e.target.contains(n) && !t[I] && ((t[I] = !0), (0, r.nG)(e.target, t, !1)), (e.isPressed = !1), null === (i = e.metaKeyEvents) || void 0 === i || i.delete(t.key);
+                        b(), a && t.stopPropagation(), 'Enter' !== t.key && T(e.target) && e.target.contains(n) && !t[m] && ((t[m] = !0), (0, r.nG)(e.target, t, !1)), (e.isPressed = !1), null === (i = e.metaKeyEvents) || void 0 === i || i.delete(t.key);
                     } else if ('Meta' === t.key && (null === (n = e.metaKeyEvents) || void 0 === n ? void 0 : n.size)) {
                         let t = e.metaKeyEvents;
                         for (let n of ((e.metaKeyEvents = void 0), t.values())) null === (a = e.target) || void 0 === a || a.dispatchEvent(new KeyboardEvent('keyup', n));
@@ -985,7 +985,7 @@ function ec(e) {
     let { isDisabled: t, onLongPressStart: n, onLongPressEnd: a, onLongPress: s, threshold: o = 500, accessibilityDescription: l } = e,
         u = (0, i.useRef)(),
         { addGlobalListener: c, removeGlobalListener: d } = (0, r.xi)(),
-        { pressProps: _ } = m({
+        { pressProps: _ } = I({
             isDisabled: t,
             onPressStart(e) {
                 if (

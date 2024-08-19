@@ -28,8 +28,8 @@ var r,
     f = n(768119),
     h = n(944486),
     p = n(914010),
-    I = n(246946),
-    m = n(594174),
+    m = n(246946),
+    I = n(594174),
     T = n(483360),
     g = n(226951),
     S = n(51144),
@@ -88,7 +88,7 @@ function w(e) {
     let t;
     let n = e.getMatch(1),
         r = (e) => (null != e ? (null == e ? void 0 : e.id) : null);
-    return null != (t = A.Xyh.test(n) ? n : n === A.ME ? r(m.default.getCurrentUser()) : null != e.getMatch(4) ? r(m.default.findByTag(e.getMatch(4))) : r(m.default.findByTag(e.getMatch(2), e.getMatch(3)))) && (e.setData('userId', t), !0);
+    return null != (t = A.Xyh.test(n) ? n : n === A.ME ? r(I.default.getCurrentUser()) : null != e.getMatch(4) ? r(I.default.findByTag(e.getMatch(4))) : r(I.default.findByTag(e.getMatch(2), e.getMatch(3)))) && (e.setData('userId', t), !0);
 }
 function x(e, t) {
     let n, r;
@@ -195,7 +195,7 @@ function Y() {
     return f.Z.getSearchType() === A.aib.GUILD;
 }
 function j() {
-    return !I.Z.hidePersonalInformation;
+    return !m.Z.hidePersonalInformation;
 }
 let W = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
 ((i = r || (r = {})).FILTER = 'FILTER'), (i.ANSWER = 'ANSWER');

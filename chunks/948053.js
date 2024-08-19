@@ -53,11 +53,11 @@ e.exports = function (e) {
             })(E),
             built_in: h
         },
-        I = (e) => e.map((e) => e.replace(/\|\d+$/, '')),
-        m = {
+        m = (e) => e.map((e) => e.replace(/\|\d+$/, '')),
+        I = {
             variants: [
                 {
-                    match: [/new/, t.concat(c, '+'), t.concat('(?!', I(h).join('\\b|'), '\\b)'), i],
+                    match: [/new/, t.concat(c, '+'), t.concat('(?!', m(h).join('\\b|'), '\\b)'), i],
                     scope: {
                         1: 'keyword',
                         4: 'title.class'
@@ -105,16 +105,16 @@ e.exports = function (e) {
             begin: /\(/,
             end: /\)/,
             keywords: p,
-            contains: [S, a, g, e.C_BLOCK_COMMENT_MODE, d, _, m]
+            contains: [S, a, g, e.C_BLOCK_COMMENT_MODE, d, _, I]
         },
         N = {
             relevance: 0,
-            match: [/\b/, t.concat('(?!fn\\b|function\\b|', I(f).join('\\b|'), '|', I(h).join('\\b|'), '\\b)'), r, t.concat(c, '*'), t.lookahead(/(?=\()/)],
+            match: [/\b/, t.concat('(?!fn\\b|function\\b|', m(f).join('\\b|'), '|', m(h).join('\\b|'), '\\b)'), r, t.concat(c, '*'), t.lookahead(/(?=\()/)],
             scope: { 3: 'title.function.invoke' },
             contains: [A]
         };
     A.contains.push(N);
-    let v = [S, g, e.C_BLOCK_COMMENT_MODE, d, _, m];
+    let v = [S, g, e.C_BLOCK_COMMENT_MODE, d, _, I];
     return {
         case_insensitive: !1,
         keywords: p,
@@ -199,7 +199,7 @@ e.exports = function (e) {
                     3: 'variable.constant'
                 }
             },
-            m,
+            I,
             {
                 scope: 'function',
                 relevance: 0,

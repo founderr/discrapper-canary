@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return _;
+        return N;
     }
 });
 var t = l(735250);
@@ -37,31 +37,31 @@ function h(e) {
           })
         : null;
 }
-function _(e) {
+function N(e) {
     let n;
-    let { label: l, style: r, disabled: m, emoji: v, url: _, skuId: T } = e,
-        { executeStateUpdate: N, visualState: x, isDisabled: I } = (0, p.Ee)(e),
-        g = (0, d.I)(T),
-        S = null != T && r === c.ZJ.PREMIUM,
-        O = S && (null == g ? void 0 : g.disabled),
-        Z = S ? (null == g ? void 0 : g.label) : l,
+    let { label: l, style: r, disabled: m, emoji: v, url: N, skuId: T } = e,
+        { executeStateUpdate: _, visualState: x, isDisabled: I } = (0, p.Ee)(e),
+        S = (0, d.I)(T),
+        g = null != T && r === c.ZJ.PREMIUM,
+        O = g && (null == S ? void 0 : S.disabled),
+        Z = g ? (null == S ? void 0 : S.label) : l,
         j = null != v,
         L = null != Z && Z.length > 0,
-        A = r === c.ZJ.LINK && null != _ && _.length > 0,
-        R = x === E.gH.LOADING || (S && null == g);
+        A = r === c.ZJ.LINK && null != N && N.length > 0,
+        R = x === E.gH.LOADING || (g && null == S);
     return (
         (n = A
             ? () => {
                   (0, f.q)({
-                      href: null != _ ? _ : '',
+                      href: null != N ? N : '',
                       shouldConfirm: !0
                   });
               }
-            : S
-              ? null != g && !1 === g.disabled
-                  ? g.onClick
+            : g
+              ? null != S && !1 === S.disabled
+                  ? S.onClick
                   : a.noop
-              : () => N()),
+              : () => _()),
         (0, t.jsxs)(u.Button, {
             color: (function (e) {
                 switch (e) {
@@ -84,7 +84,7 @@ function _(e) {
                     (0, s.vq)(e, (e) =>
                         (0, t.jsx)(h, {
                             ...e,
-                            url: _
+                            url: N
                         })
                     );
             },
@@ -93,11 +93,11 @@ function _(e) {
                 (0, t.jsxs)('div', {
                     className: i()(C.content, {
                         [C.hidden]: R,
-                        [C.premium]: S
+                        [C.premium]: g
                     }),
                     'aria-hidden': R,
                     children: [
-                        S
+                        g
                             ? (0, t.jsx)('div', {
                                   className: C.shopIcon,
                                   children: (0, t.jsx)(u.ShopIcon, {

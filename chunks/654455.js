@@ -1,6 +1,6 @@
 n.d(t, {
     LU: function () {
-        return I;
+        return m;
     }
 }),
     n(47120),
@@ -31,14 +31,14 @@ function E(e, t, n) {
 }
 let f = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
     h = { pendingUsages: [] },
-    p = new u.Z({
+    p = new u.ZP({
         computeBonus: () => 1,
         computeWeight: (e) => (e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 1),
         lookupKey: (e) => e,
         afterCompute: () => {},
         numFrequentlyItems: d.yP
     });
-function I(e, t) {
+function m(e, t) {
     return e
         .filter((e) => {
             if (e.includes(':')) return null != t.guild && t.guild.id === e.split(':')[1];
@@ -46,7 +46,7 @@ function I(e, t) {
         })
         .map((e) => e.split(':')[0]);
 }
-function m(e, t) {
+function I(e, t) {
     return 0 > Number(t.id) ? t.id : null != e.guild && null != t.guildId ? ''.concat(t.id, ':').concat(e.guild.id) : t.id;
 }
 function T() {
@@ -75,7 +75,7 @@ class g extends (r = s.ZP.PersistedStore) {
     }
     getScoreWithoutLoadingLatest(e, t) {
         var n;
-        return null !== (n = p.getScore(m(e, t))) && void 0 !== n ? n : 0;
+        return null !== (n = p.getScore(I(e, t))) && void 0 !== n ? n : 0;
     }
     getTopCommandsWithoutLoadingLatest() {
         return p.frequently;
@@ -87,7 +87,7 @@ E(g, 'displayName', 'ApplicationCommandFrecencyStore'),
         APPLICATION_COMMAND_USED: function (e) {
             let { command: t, context: n } = e;
             if (!f.includes(t.type)) return !1;
-            let r = m(n, t);
+            let r = I(n, t);
             h.pendingUsages.push({
                 key: r,
                 timestamp: Date.now()

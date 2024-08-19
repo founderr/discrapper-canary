@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(275344),
-    a = n(938353);
+var a = n(275344),
+    s = n(938353);
 function r(e) {
     let {
         channelMessageProps: { message: t, channel: n, compact: r = !1 },
@@ -26,9 +26,9 @@ function r(e) {
     } = e;
     return u
         ? null
-        : (0, i.jsx)(s.Z, {
+        : (0, i.jsx)(a.Z, {
               message: t,
-              children: (0, i.jsx)(a.ZP, {
+              children: (0, i.jsx)(s.ZP, {
                   className: T,
                   isInteracting: c,
                   message: t,
@@ -45,10 +45,10 @@ function r(e) {
           });
 }
 function l(e, t) {
-    let { message: n, channel: s, compact: r = !1, renderThreadAccessory: l, disableReactionCreates: o, disableReactionUpdates: c, isSearchResult: u } = e;
-    return (0, i.jsx)(a.$p, {
+    let { message: n, channel: a, compact: r = !1, renderThreadAccessory: l, disableReactionCreates: o, disableReactionUpdates: c, isSearchResult: u } = e;
+    return (0, i.jsx)(s.$p, {
         message: n,
-        channel: s,
+        channel: a,
         compact: r,
         hasSpoilerEmbeds: t,
         renderThreadAccessory: l,

@@ -19,8 +19,8 @@ var r,
     f = n(438139),
     h = n(410030),
     p = n(726542),
-    I = n(600164),
-    m = n(686546),
+    m = n(600164),
+    I = n(686546),
     T = n(111028),
     g = n(925329),
     S = n(810568),
@@ -204,8 +204,8 @@ class Q extends (i = o.PureComponent) {
         else if ((0, D.dS)(e)) {
             let t = (0, D.rq)(e);
             if (null == t) return null;
-            f = (0, s.jsx)(m.ZP, {
-                mask: m.ZP.Masks.SQUIRCLE,
+            f = (0, s.jsx)(I.ZP, {
+                mask: I.ZP.Masks.SQUIRCLE,
                 width: F.Si.SMALL,
                 height: F.Si.SMALL,
                 children: (0, s.jsx)('img', {
@@ -523,14 +523,14 @@ class Q extends (i = o.PureComponent) {
             h = 'StreamPreview' === t,
             p = !1;
         (0, G.Z)(c) ? ((e = this.renderXboxImage()), (p = !0)) : null == (e = this.renderImage(c)) && (p = null != (e = this.renderGameImage(c)));
-        let m = this.renderName(c),
+        let I = this.renderName(c),
             T = this.renderDetails(c),
             g = this.renderState(c, i),
             S = this.renderTimePlayed(c),
             A = this.renderChannelDetails(c),
             N = null != n ? n() : null,
             v = this.renderTimeBar(c),
-            O = ![e, m, T, g, S, v, N].some((e) => null != e);
+            O = ![e, I, T, g, S, v, N].some((e) => null != e);
         return (0, s.jsxs)('div', {
             className: u()(this.getTypeClass('activity'), r),
             children: [
@@ -543,7 +543,7 @@ class Q extends (i = o.PureComponent) {
                             e,
                             this.isStreamerOnTypeActivityFeed()
                                 ? null
-                                : (0, s.jsxs)(I.Z.Child, {
+                                : (0, s.jsxs)(m.Z.Child, {
                                       className: u()((0, M.l)(Z, 'content', p ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
                                       children: [
                                           (0, s.jsxs)(E.Clickable, {
@@ -554,7 +554,7 @@ class Q extends (i = o.PureComponent) {
                                                             l(), null == o || o();
                                                         }
                                                       : void 0,
-                                              children: [m, T, g, S]
+                                              children: [I, T, g, S]
                                           }),
                                           A,
                                           d || h ? null : v,

@@ -27,7 +27,7 @@ n.Z = (e) => {
         { guildId: r, groupListingId: P, analyticsLocation: T, showBenefitsFirst: R, skuId: N, onComplete: S, forcesTransitionToGuild: L } = e,
         O = (0, l.e7)([f.Z], () => (null != N ? f.Z.get(N) : void 0), [N]),
         j = (0, l.e7)([g.Z], () => (null != N ? g.Z.getForSKU(N) : void 0), [N]),
-        y = (0, l.e7)([I.Z], () => (null != N ? I.Z.getForSKU(N) : void 0), [N]),
+        y = (0, l.Wu)([I.Z], () => (null != N ? I.Z.getForSKU(N) : []), [N]),
         D = null != y ? y[0] : void 0,
         Z = null == O ? void 0 : O.applicationId,
         M = (null == j ? void 0 : j.published) === !0 && null != O && (0, h.yE)(O.flags, b.l4R.AVAILABLE),

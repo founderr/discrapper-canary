@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return m;
     }
 }),
     n(47120),
@@ -144,6 +144,6 @@ function p(e, t, n, r) {
         u.Q.insertText(e, r ? i + ' ' : i);
     });
 }
-function I(e, t, n, i) {
+function m(e, t, n, i) {
     r.useImperativeHandle(e, () => f(t, n, i), [t, n, i]);
 }

@@ -13,8 +13,8 @@ var r,
     f = n(763296),
     h = n(697426),
     p = n(710111),
-    I = n(526761);
-function m(e, t, n) {
+    m = n(526761);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function m(e, t, n) {
 }
 let T = [],
     g = new (o())({ max: p.zb }),
-    S = new c.Z({
+    S = new c.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
@@ -81,8 +81,8 @@ class v extends (r = l.ZP.PersistedStore) {
         return S.frequently;
     }
 }
-m(v, 'displayName', 'SoundboardEventStore'),
-    m(v, 'persistKey', 'SoundboardEventStore'),
+I(v, 'displayName', 'SoundboardEventStore'),
+    I(v, 'persistKey', 'SoundboardEventStore'),
     (t.Z = new v(u.Z, {
         GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function (e) {
             let { sound: t, trigger: n } = e;
@@ -125,6 +125,6 @@ m(v, 'displayName', 'SoundboardEventStore'),
                 settings: { type: t },
                 wasSaved: n
             } = e;
-            N() && t === I.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (T = []);
+            N() && t === m.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (T = []);
         }
     }));

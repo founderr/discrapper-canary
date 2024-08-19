@@ -13,7 +13,7 @@ var r = n(108131),
     f = n(709054),
     h = n(38618);
 let p = new u.Z('EntityVersionsManager');
-class I extends o.Z {
+class m extends o.Z {
     _initialize() {
         s.Z.subscribe('CONNECTION_OPEN', T);
     }
@@ -27,7 +27,7 @@ class I extends o.Z {
             (n = 'actions'),
             (r = {
                 GUILD_CREATE: g,
-                DELETED_ENTITY_IDS: m
+                DELETED_ENTITY_IDS: I
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -39,7 +39,7 @@ class I extends o.Z {
                 : (t[n] = r);
     }
 }
-function m(e) {
+function I(e) {
     var t;
     let n = null === (t = E.Z.getGuild(e.guild_id)) || void 0 === t ? void 0 : t.name;
     p.fileOnly('received deleted guild entities (id: '.concat(e.guild_id, ', name: ').concat(n, ')')),
@@ -127,4 +127,4 @@ function S(e) {
 function A(e) {
     return i().v3(e.sort().join(',')).toString();
 }
-t.Z = new I();
+t.Z = new m();

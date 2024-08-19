@@ -30,9 +30,9 @@ var s = n(292419),
     h = n(408433),
     p = n(669079);
 n(358085), n(51144);
-var I = n(572804);
+var m = n(572804);
 n(739566);
-var m = n(959517),
+var I = n(959517),
     T = n(981631);
 n(689938);
 let g = new d.Z({
@@ -52,14 +52,14 @@ function S(e) {
     });
 }
 function A(e) {
-    var t, n, r, i, a, s, l, h, m, A;
+    var t, n, r, i, a, s, l, h, I, A;
     let { reactions: N, interactionData: v } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         O = S(e),
         C = null !== (i = null === (t = e.mentions) || void 0 === t ? void 0 : t.map((e) => e.id)) && void 0 !== i ? i : [],
         L = null !== (a = e.mention_roles) && void 0 !== a ? a : [],
         b = null !== (s = e.mention_channels) && void 0 !== s ? s : [],
         M = e.message_reference;
-    let P = null == (h = e).author ? g : null != h.webhook_id ? new d.Z(h.author) : null !== (m = f.default.getUser(h.author.id)) && void 0 !== m ? m : new d.Z(h.author),
+    let P = null == (h = e).author ? g : null != h.webhook_id ? new d.Z(h.author) : null !== (I = f.default.getUser(h.author.id)) && void 0 !== I ? I : new d.Z(h.author),
         U = null == e ? void 0 : e.gift_info,
         w = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
         x = e.type === T.uaV.THREAD_STARTER_MESSAGE ? (null === (r = e.referenced_message) || void 0 === r ? void 0 : null === (n = r.author) || void 0 === n ? void 0 : n.id) : void 0,
@@ -79,7 +79,7 @@ function A(e) {
             mentionRoles: L,
             mentionChannels: b,
             messageReference: M,
-            mentioned: (0, I.Sz)({
+            mentioned: (0, m.Sz)({
                 userId: _.default.getId(),
                 channelId: e.channel_id,
                 mentionEveryone: null !== (l = e.mention_everyone) && void 0 !== l && l,
@@ -139,7 +139,7 @@ function v(e, t) {
         r &&
             (n = n.set(
                 'mentioned',
-                (0, I.ZP)({
+                (0, m.ZP)({
                     message: n,
                     userId: _.default.getId()
                 })
@@ -152,7 +152,7 @@ function O(e) {
         ? []
         : e.attachments.map((e) => ({
               ...e,
-              spoiler: e.filename.startsWith(m._j)
+              spoiler: e.filename.startsWith(I._j)
           }));
 }
 function R(e, t) {

@@ -9,7 +9,7 @@ n.d(t, {
         return h;
     },
     WC: function () {
-        return I;
+        return m;
     },
     aW: function () {
         return _;
@@ -36,7 +36,7 @@ n.d(t, {
         return i;
     },
     z8: function () {
-        return m;
+        return I;
     }
 }),
     n(411104);
@@ -213,8 +213,8 @@ function p(e, t) {
         }
     };
 }
-let I = [p(720), p(1080), p(1440), p(0, () => d.Z.Messages.SCREENSHARE_SOURCE)],
-    m = [p(720), p(1080), p(1440)],
+let m = [p(720), p(1080), p(1440), p(0, () => d.Z.Messages.SCREENSHARE_SOURCE)],
+    I = [p(720), p(1080), p(1440)],
     T = (e) => (0 === e ? d.Z.Messages.SCREENSHARE_SOURCE : d.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: e })),
     g = [p(480, () => T(480)), p(720, () => T(720)), p(1080, () => T(1080)), p(1440, () => T(1440)), p(0, () => T(0))],
     S = [p(15), p(30), p(60)],

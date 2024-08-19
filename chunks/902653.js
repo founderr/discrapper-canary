@@ -7,7 +7,7 @@ n.r(t),
             return g;
         },
         playGiftSound: function () {
-            return m;
+            return I;
         }
     }),
     n(47120),
@@ -42,11 +42,11 @@ async function p(e) {
     let t = await fetch(n(451343)('./'.concat(e, '.mp3'))).then((e) => e.arrayBuffer());
     return (0, o.N)().decodeAudioData(t);
 }
-async function I(e) {
+async function m(e) {
     let t = h.get(e);
     return null == t && ((t = p(e)), h.set(e, t)), await t;
 }
-function m(e, t) {
+function I(e, t) {
     let n = new Audio((0, l.Z)(e));
     (n.volume = (0, u.Z)(t)), n.play();
 }
@@ -181,7 +181,7 @@ class S {
     async _ensureAudio() {
         if (null == this._ensureAudioPromise) {
             let e = Math.min((c.Z.getOutputVolume() / 100) * this._volume, 1);
-            this._ensureAudioPromise = I(this.name)
+            this._ensureAudioPromise = m(this.name)
                 .then((t) =>
                     null == t
                         ? Promise.reject(Error('Failed to load audio: '.concat(this.name)))

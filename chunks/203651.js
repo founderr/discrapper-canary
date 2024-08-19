@@ -25,8 +25,8 @@ let p = (t = e.exports);
         if (r.XMLHttpRequest) return new r.XMLHttpRequest();
         throw Error('Browser-only version of superagent could not find XHR');
     });
-let I = ''.trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, '');
-function m(e) {
+let m = ''.trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, '');
+function I(e) {
     if (!c(e)) return e;
     let t = [];
     for (let n in e)
@@ -120,7 +120,7 @@ function T(e) {
     for (let e = 0, a = i.length; e < a; ++e) -1 === (n = (t = i[e]).indexOf('=')) ? (r[decodeURIComponent(t)] = '') : (r[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1)));
     return r;
 }
-(p.serializeObject = m),
+(p.serializeObject = I),
     (p.parseString = T),
     (p.types = {
         html: 'text/html',
@@ -151,7 +151,7 @@ function S(e) {
             let a = e.split(/\r?\n/),
                 s = {};
             for (let e = 0, o = a.length; e < o; ++e) {
-                if (-1 !== (t = (n = a[e]).indexOf(':'))) (r = n.slice(0, t).toLowerCase()), (i = I(n.slice(t + 1))), (s[r] = i);
+                if (-1 !== (t = (n = a[e]).indexOf(':'))) (r = n.slice(0, t).toLowerCase()), (i = m(n.slice(t + 1))), (s[r] = i);
             }
             return s;
         })(this.xhr.getAllResponseHeaders())),
@@ -217,7 +217,7 @@ d(S.prototype, E.prototype),
         return this._auth(e, t, n, r);
     }),
     (A.prototype.query = function (e) {
-        return 'string' != typeof e && (e = m(e)), e && this._query.push(e), this;
+        return 'string' != typeof e && (e = I(e)), e && this._query.push(e), this;
     }),
     (A.prototype.attach = function (e, t, n) {
         if (t) {

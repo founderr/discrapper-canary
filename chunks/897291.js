@@ -14,7 +14,7 @@ t.Z = i.memo(function (e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: i } = (0, l.ZP)(o.Z.GIFT_BUTTON),
         h = (0, c.Ft)(n),
-        { Component: p, events: I, play: m } = (0, a.$)();
+        { Component: p, events: m, play: I } = (0, a.$)();
     if (t) return null;
     let T = () => {
         (0, u.Z)({
@@ -40,9 +40,9 @@ t.Z = i.memo(function (e) {
                 'aria-label': E.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                 'aria-haspopup': 'dialog',
                 onClick: () => {
-                    T(), m();
+                    T(), I();
                 },
-                ...I,
+                ...m,
                 children: (0, r.jsx)(p, { color: 'currentColor' })
             })
     });

@@ -1,21 +1,21 @@
 var i = n(544891),
-    s = n(570140),
-    a = n(981631);
+    a = n(570140),
+    s = n(981631);
 t.Z = {
     fetch() {
         i.tn
             .get({
-                url: a.ANM.OAUTH2_TOKENS,
+                url: s.ANM.OAUTH2_TOKENS,
                 oldFormErrors: !0
             })
             .then(
                 (e) =>
-                    s.Z.dispatch({
+                    a.Z.dispatch({
                         type: 'USER_AUTHORIZED_APPS_UPDATE',
                         apps: e.body
                     }),
                 () =>
-                    s.Z.dispatch({
+                    a.Z.dispatch({
                         type: 'USER_AUTHORIZED_APPS_UPDATE',
                         apps: []
                     })
@@ -24,7 +24,7 @@ t.Z = {
     delete(e) {
         i.tn
             .del({
-                url: a.ANM.OAUTH2_TOKEN(e),
+                url: s.ANM.OAUTH2_TOKEN(e),
                 oldFormErrors: !0
             })
             .then(() => {

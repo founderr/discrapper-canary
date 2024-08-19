@@ -113,14 +113,14 @@ function C(e) {
     });
 }
 function h(e) {
-    let { type: n, options: l, id: i, placeholder: a, maxValues: s, minValues: h, disabled: _ } = e,
+    let { type: n, options: l, id: i, placeholder: a, maxValues: s, minValues: h, disabled: N } = e,
         T = r.useMemo(() => l.filter((e) => e.default).map((e) => e.value), [l]),
         {
-            state: N,
+            state: _,
             executeStateUpdate: x,
             visualState: I,
-            isDisabled: g,
-            error: S
+            isDisabled: S,
+            error: g
         } = (0, d.Ee)(e, {
             type: n,
             values: T
@@ -132,14 +132,14 @@ function h(e) {
         [M, P] = r.useState(A),
         b = r.useMemo(() => l.some((e) => null != e.emoji), [l]);
     r.useEffect(() => {
-        if ((null == N ? void 0 : N.type) === o.re.STRING_SELECT) {
-            let e = new Set(N.values);
+        if ((null == _ ? void 0 : _.type) === o.re.STRING_SELECT) {
+            let e = new Set(_.values);
             R(e), P(e);
         } else {
             let e = new Set(T);
             R(e), P(e);
         }
-    }, [i, T, N]);
+    }, [i, T, _]);
     let y = r.useCallback(() => {
         if (M !== A)
             x({
@@ -163,7 +163,7 @@ function h(e) {
                 className: p.container,
                 children: [
                     (0, t.jsx)(u.Select, {
-                        isDisabled: _ || g,
+                        isDisabled: N || S,
                         className: p.select,
                         options: l.map((e) => ({
                             ...e,
@@ -195,9 +195,9 @@ function h(e) {
                         : null
                 ]
             }),
-            null != S
+            null != g
                 ? (0, t.jsx)(c.st, {
-                      ...(0, c.c4)(S),
+                      ...(0, c.c4)(g),
                       className: p.error
                   })
                 : null

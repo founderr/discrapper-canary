@@ -171,7 +171,7 @@ class e8 extends a.PureComponent {
         let a = eG.default.getUser(t.getRecipientId());
         o()(null != a, 'Missing user in Channel.openDMContextMenu'),
             (0, f.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('22036'), n.e('56826'), n.e('30295')]).then(n.bind(n, 131404));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('22036'), n.e('56826'), n.e('30295')]).then(n.bind(n, 131404));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

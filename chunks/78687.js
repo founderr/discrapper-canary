@@ -72,7 +72,7 @@ e.exports = function (e) {
     return {
         makeDetectable: function (e, l, d) {
             var f, h, p;
-            function I() {
+            function m() {
                 if (e.debug) {
                     var n = Array.prototype.slice.call(arguments);
                     if ((n.unshift(a.get(l), 'Scroll: '), t.log.apply)) t.log.apply(null, n);
@@ -80,7 +80,7 @@ e.exports = function (e) {
                 }
             }
             !d && ((d = l), (l = e), (e = null)), (e = e || {});
-            function m(e) {
+            function I(e) {
                 var t = i(e).container.childNodes[0],
                     n = window.getComputedStyle(t);
                 return !n.width || -1 === n.width.indexOf('px');
@@ -91,8 +91,8 @@ e.exports = function (e) {
                 return (t.position = e.position), (t.width = l.offsetWidth), (t.height = l.offsetHeight), (t.top = e.top), (t.right = e.right), (t.bottom = e.bottom), (t.left = e.left), (t.widthCSS = e.width), (t.heightCSS = e.height), t;
             }
             function g() {
-                if ((I('storeStyle invoked.'), !i(l))) {
-                    I('Aborting because element has been uninstalled');
+                if ((m('storeStyle invoked.'), !i(l))) {
+                    m('Aborting because element has been uninstalled');
                     return;
                 }
                 var e = T();
@@ -135,8 +135,8 @@ e.exports = function (e) {
                 return e;
             }
             function y() {
-                if ((I('Injecting elements'), !i(l))) {
-                    I('Aborting because element has been uninstalled');
+                if ((m('Injecting elements'), !i(l))) {
+                    m('Aborting because element has been uninstalled');
                     return;
                 }
                 !(function () {
@@ -160,7 +160,7 @@ e.exports = function (e) {
                     f = s.height,
                     h = u(['position: absolute', 'flex: none', 'overflow: hidden', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%', 'left: 0px', 'top: 0px']);
                 var p = u(['position: absolute', 'flex: none', 'overflow: hidden', 'z-index: -1', 'visibility: hidden'].concat(((n = -(1 + E)), (r = -(1 + f)), (a = -f), ['left: ' + (n = n ? n + 'px' : '0'), 'top: ' + (r = r ? r + 'px' : '0'), 'right: ' + (d = (d = -E) ? d + 'px' : '0'), 'bottom: ' + (a = a ? a + 'px' : '0')]))),
-                    m = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
+                    I = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
                     T = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
                     g = u(['position: absolute', 'left: 0', 'top: 0']),
                     S = u(['position: absolute', 'width: 200%', 'height: 200%']),
@@ -172,13 +172,13 @@ e.exports = function (e) {
                     y = document.createElement('div');
                 function D() {
                     var e = i(l);
-                    e && e.onExpand ? e.onExpand() : I('Aborting expand scroll handler: element has been uninstalled');
+                    e && e.onExpand ? e.onExpand() : m('Aborting expand scroll handler: element has been uninstalled');
                 }
                 function L() {
                     var e = i(l);
-                    e && e.onShrink ? e.onShrink() : I('Aborting shrink scroll handler: element has been uninstalled');
+                    e && e.onShrink ? e.onShrink() : m('Aborting shrink scroll handler: element has been uninstalled');
                 }
-                (A.dir = 'ltr'), (A.style.cssText = h), (A.className = o), (N.className = o), (N.style.cssText = p), (v.style.cssText = m), (O.style.cssText = g), (R.style.cssText = T), (y.style.cssText = S), v.appendChild(O), R.appendChild(y), N.appendChild(v), N.appendChild(R), A.appendChild(N), _.appendChild(A), c(v, 'scroll', D), c(R, 'scroll', L), (i(l).onExpandScroll = D), (i(l).onShrinkScroll = L);
+                (A.dir = 'ltr'), (A.style.cssText = h), (A.className = o), (N.className = o), (N.style.cssText = p), (v.style.cssText = I), (O.style.cssText = g), (R.style.cssText = T), (y.style.cssText = S), v.appendChild(O), R.appendChild(y), N.appendChild(v), N.appendChild(R), A.appendChild(N), _.appendChild(A), c(v, 'scroll', D), c(R, 'scroll', L), (i(l).onExpandScroll = D), (i(l).onShrinkScroll = L);
             }
             function D() {
                 function s(t, n, r) {
@@ -191,16 +191,16 @@ e.exports = function (e) {
                     var o = l.offsetWidth,
                         c = l.offsetHeight,
                         d = o !== i(l).lastWidth || c !== i(l).lastHeight;
-                    I('Storing current size', o, c),
+                    m('Storing current size', o, c),
                         S(l, o, c),
                         n.add(0, function () {
                             if (!!d) {
                                 if (!i(l)) {
-                                    I('Aborting because element has been uninstalled');
+                                    m('Aborting because element has been uninstalled');
                                     return;
                                 }
                                 if (!u()) {
-                                    I('Aborting because element container has not been initialized');
+                                    m('Aborting because element container has not been initialized');
                                     return;
                                 }
                                 if (e.debug) {
@@ -213,11 +213,11 @@ e.exports = function (e) {
                         }),
                         n.add(1, function () {
                             if (!i(l)) {
-                                I('Aborting because element has been uninstalled');
+                                m('Aborting because element has been uninstalled');
                                 return;
                             }
                             if (!u()) {
-                                I('Aborting because element container has not been initialized');
+                                m('Aborting because element container has not been initialized');
                                 return;
                             }
                             R(l, o, c);
@@ -226,11 +226,11 @@ e.exports = function (e) {
                             r &&
                             n.add(2, function () {
                                 if (!i(l)) {
-                                    I('Aborting because element has been uninstalled');
+                                    m('Aborting because element has been uninstalled');
                                     return;
                                 }
                                 if (!u()) {
-                                    I('Aborting because element container has not been initialized');
+                                    m('Aborting because element container has not been initialized');
                                     return;
                                 }
                                 r();
@@ -240,13 +240,13 @@ e.exports = function (e) {
                     return !!i(l).container;
                 }
                 function c() {
-                    I('notifyListenersIfNeeded invoked');
+                    m('notifyListenersIfNeeded invoked');
                     var e = i(l);
                     return void 0 === i(l).lastNotifiedWidth && e.lastWidth === e.startSize.width && e.lastHeight === e.startSize.height
-                        ? I('Not notifying: Size is the same as the start size, and there has been no notification yet.')
+                        ? m('Not notifying: Size is the same as the start size, and there has been no notification yet.')
                         : e.lastWidth === e.lastNotifiedWidth && e.lastHeight === e.lastNotifiedHeight
-                          ? I('Not notifying: Size already notified')
-                          : void (I('Current size not notified, notifying...'),
+                          ? m('Not notifying: Size already notified')
+                          : void (m('Current size not notified, notifying...'),
                             (e.lastNotifiedWidth = e.lastWidth),
                             (e.lastNotifiedHeight = e.lastHeight),
                             r(i(l).listeners, function (e) {
@@ -254,25 +254,25 @@ e.exports = function (e) {
                             }));
                 }
                 function d() {
-                    if ((I('Scroll detected.'), m(l))) {
-                        I('Scroll event fired while unrendered. Ignoring...');
+                    if ((m('Scroll detected.'), I(l))) {
+                        m('Scroll event fired while unrendered. Ignoring...');
                         return;
                     }
                     o(c);
                 }
-                if ((I('registerListenersAndPositionElements invoked.'), !i(l))) {
-                    I('Aborting because element has been uninstalled');
+                if ((m('registerListenersAndPositionElements invoked.'), !i(l))) {
+                    m('Aborting because element has been uninstalled');
                     return;
                 }
                 (i(l).onRendered = function () {
-                    if ((I('startanimation triggered.'), m(l))) {
-                        I('Ignoring since element is still unrendered...');
+                    if ((m('startanimation triggered.'), I(l))) {
+                        m('Ignoring since element is still unrendered...');
                         return;
                     }
-                    I('Element rendered.');
+                    m('Element rendered.');
                     var e = _(l),
                         t = E(l);
-                    (0 === e.scrollLeft || 0 === e.scrollTop || 0 === t.scrollLeft || 0 === t.scrollTop) && (I('Scrollbars out of sync. Updating detector elements...'), o(c));
+                    (0 === e.scrollLeft || 0 === e.scrollTop || 0 === t.scrollLeft || 0 === t.scrollTop) && (m('Scrollbars out of sync. Updating detector elements...'), o(c));
                 }),
                     (i(l).onExpand = d),
                     (i(l).onShrink = d);
@@ -280,8 +280,8 @@ e.exports = function (e) {
                 s(l, f.width, f.height);
             }
             function L() {
-                if ((I('finalizeDomMutation invoked.'), !i(l))) {
-                    I('Aborting because element has been uninstalled');
+                if ((m('finalizeDomMutation invoked.'), !i(l))) {
+                    m('Aborting because element has been uninstalled');
                     return;
                 }
                 var e = i(l).style;
@@ -292,27 +292,27 @@ e.exports = function (e) {
             }
             function M() {
                 var e;
-                I('Installing...'),
+                m('Installing...'),
                     (i(l).listeners = []),
                     (e = T()),
                     (i(l).startSize = {
                         width: e.width,
                         height: e.height
                     }),
-                    I('Element start size', i(l).startSize),
+                    m('Element start size', i(l).startSize),
                     n.add(0, g),
                     n.add(1, y),
                     n.add(2, D),
                     n.add(3, L),
                     n.add(4, b);
             }
-            if ((I('Making detectable...'), ((p = (h = f = l).getRootNode && h.getRootNode().contains(h)), (h === h.ownerDocument.body || h.ownerDocument.body.contains(h) || p) && null !== window.getComputedStyle(f)) ? 1 : 0)) M();
+            if ((m('Making detectable...'), ((p = (h = f = l).getRootNode && h.getRootNode().contains(h)), (h === h.ownerDocument.body || h.ownerDocument.body.contains(h) || p) && null !== window.getComputedStyle(f)) ? 1 : 0)) M();
             else
-                I('Element is detached'),
+                m('Element is detached'),
                     C(),
-                    I('Waiting until element is attached...'),
+                    m('Waiting until element is attached...'),
                     (i(l).onRendered = function () {
-                        I('Element is now attached'), M();
+                        m('Element is now attached'), M();
                     });
         },
         addListener: function (e, t) {

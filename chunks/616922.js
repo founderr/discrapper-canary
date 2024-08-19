@@ -1,6 +1,6 @@
 n.d(t, {
     C7: function () {
-        return I;
+        return m;
     },
     Hw: function () {
         return a;
@@ -18,7 +18,7 @@ n.d(t, {
         return _;
     },
     c8: function () {
-        return m;
+        return I;
     },
     kG: function () {
         return s;
@@ -44,7 +44,7 @@ function E(e) {
 let f = ['open.spotify.com', 'www.spotify.com'],
     h = 'https://api.spotify.com/v1',
     p = (e) => '?utm_source=discord&utm_medium='.concat(e),
-    I = Object.freeze({
+    m = Object.freeze({
         PROFILE: ''.concat(h, '/me'),
         NOTIFICATIONS_PLAYER: ''.concat(h, '/me/notifications/player'),
         PLAYER: ''.concat(h, '/me/player'),
@@ -74,7 +74,7 @@ let f = ['open.spotify.com', 'www.spotify.com'],
         APP_STORE: (0, l.isAndroid)() ? 'https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US' : 'https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8',
         IOS_APP_STORE: 'https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8'
     });
-function m(e) {
+function I(e) {
     if ('string' != typeof e) return null;
     switch (e) {
         case 'track':

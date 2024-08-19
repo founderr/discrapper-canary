@@ -12,7 +12,7 @@ n.d(t, {
         return z;
     },
     Du: function () {
-        return I;
+        return m;
     },
     HR: function () {
         return F;
@@ -60,7 +60,7 @@ n.d(t, {
         return A;
     },
     cG: function () {
-        return m;
+        return I;
     },
     cm: function () {
         return S;
@@ -132,8 +132,8 @@ var r,
     f = n.n(E),
     h = n(137920),
     p = n(689938);
-let I = 200,
-    m = 4,
+let m = 200,
+    I = 4,
     T = 'ClanSetupModal',
     g = 'ClanSettingsModal',
     S = 20,

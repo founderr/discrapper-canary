@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
+    a = n(470079),
+    s = n(442837),
     r = n(524437),
     l = n(481060),
     o = n(140155),
@@ -36,11 +36,11 @@ function C(e) {
 function p(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
         { initialized: N, items: p, loading: g, loadMore: S } = (0, d.y6)(),
-        A = (0, a.e7)([o.Z], () => o.Z.localItems),
-        R = s.useMemo(() => [...[...p, ...A].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [p, A]),
+        A = (0, s.e7)([o.Z], () => o.Z.localItems),
+        R = a.useMemo(() => [...[...p, ...A].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [p, A]),
         x = p.length > 0 ? p[0] : null,
         O = E.d$.useSetting(),
-        M = s.useMemo(() => {
+        M = a.useMemo(() => {
             if (null != x && 0 >= m.default.compare(x.id, O)) return !1;
             for (let e of R) {
                 if (0 >= m.default.compare(e.id, O)) break;

@@ -16,11 +16,11 @@ i = E && E.debuglog ? E.debuglog('stream') : function () {};
 var f = n(443551),
     h = n(887866),
     p = n(97703).getHighWaterMark,
-    I = n(531478).codes,
-    m = I.ERR_INVALID_ARG_TYPE,
-    T = I.ERR_STREAM_PUSH_AFTER_EOF,
-    g = I.ERR_METHOD_NOT_IMPLEMENTED,
-    S = I.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
+    m = n(531478).codes,
+    I = m.ERR_INVALID_ARG_TYPE,
+    T = m.ERR_STREAM_PUSH_AFTER_EOF,
+    g = m.ERR_METHOD_NOT_IMPLEMENTED,
+    S = m.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
 n(689118)(O, c);
 var A = h.errorOrDestroy,
     N = ['error', 'close', 'destroy', 'pause', 'resume'];
@@ -52,7 +52,7 @@ function R(e, t, n, r, a) {
         (!a &&
             (o = (function (e, t) {
                 var n, r;
-                if (((r = t), !d.isBuffer(r) && !(r instanceof _) && 'string' != typeof t && void 0 !== t && !e.objectMode)) n = new m('chunk', ['string', 'Buffer', 'Uint8Array'], t);
+                if (((r = t), !d.isBuffer(r) && !(r instanceof _) && 'string' != typeof t && void 0 !== t && !e.objectMode)) n = new I('chunk', ['string', 'Buffer', 'Uint8Array'], t);
                 return n;
             })(l, t)),
         o)

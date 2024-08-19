@@ -19,8 +19,8 @@ var r = n(729594),
     f = n(543842),
     h = n(754688),
     p = n(336197),
-    I = n(977156),
-    m = n(540709),
+    m = n(977156),
+    I = n(540709),
     T = n(881706),
     g = n(701190),
     S = n(944486),
@@ -107,7 +107,7 @@ function b(e) {
                 !0
             );
         };
-    if (null != s && s.type === c.g.QUESTS_EMBED && (0, I.cB)({ location: C.dr.EMBED_MOBILE }))
+    if (null != s && s.type === c.g.QUESTS_EMBED && (0, m.cB)({ location: C.dr.EMBED_MOBILE }))
         return (e) => (
             null == e || e.preventDefault(),
             Promise.resolve()
@@ -193,5 +193,5 @@ function b(e) {
                 !0
             );
     }
-    if (!t && null != (0, T.v)(e)) return (t) => (null == t || t.preventDefault(), m.Z.show(e), !0);
+    if (!t && null != (0, T.v)(e)) return (t) => (null == t || t.preventDefault(), I.Z.show(e), !0);
 }

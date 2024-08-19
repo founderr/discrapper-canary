@@ -179,7 +179,7 @@ function E(e, t) {
 class f {
     parse(e) {
         let t = this.sanitize(e);
-        if ((this.symbols.group && (t = I(t, this.symbols.group, '')), this.symbols.decimal && (t = t.replace(this.symbols.decimal, '.')), this.symbols.minusSign && (t = t.replace(this.symbols.minusSign, '-')), (t = t.replace(this.symbols.numeral, this.symbols.index)), 'percent' === this.options.style)) {
+        if ((this.symbols.group && (t = m(t, this.symbols.group, '')), this.symbols.decimal && (t = t.replace(this.symbols.decimal, '.')), this.symbols.minusSign && (t = t.replace(this.symbols.minusSign, '-')), (t = t.replace(this.symbols.numeral, this.symbols.index)), 'percent' === this.options.style)) {
             let e = t.indexOf('-'),
                 n = (t = t.replace('-', '')).indexOf('.');
             -1 === n && (n = t.length), (t = t.replace('.', '')), (t = n - 2 == 0 ? `0.${t}` : n - 2 == -1 ? `0.0${t}` : n - 2 == -2 ? '0.00' : `${t.slice(0, n - 2)}.${t.slice(n - 2)}`), e > -1 && (t = `-${t}`);
@@ -198,10 +198,10 @@ class f {
         return 'accounting' === this.options.currencySign && l.test(e) && (n *= -1), n;
     }
     sanitize(e) {
-        return (e = e.replace(this.symbols.literals, '')), this.symbols.minusSign && (e = e.replace('-', this.symbols.minusSign)), 'arab' === this.options.numberingSystem && (this.symbols.decimal && (e = (e = e.replace(',', this.symbols.decimal)).replace(String.fromCharCode(1548), this.symbols.decimal)), this.symbols.group && (e = I(e, '.', this.symbols.group))), 'fr-FR' === this.options.locale && (e = I(e, '.', String.fromCharCode(8239))), e;
+        return (e = e.replace(this.symbols.literals, '')), this.symbols.minusSign && (e = e.replace('-', this.symbols.minusSign)), 'arab' === this.options.numberingSystem && (this.symbols.decimal && (e = (e = e.replace(',', this.symbols.decimal)).replace(String.fromCharCode(1548), this.symbols.decimal)), this.symbols.group && (e = m(e, '.', this.symbols.group))), 'fr-FR' === this.options.locale && (e = m(e, '.', String.fromCharCode(8239))), e;
     }
     isValidPartialNumber(e, t = -1 / 0, n = 1 / 0) {
-        return (e = this.sanitize(e)), this.symbols.minusSign && e.startsWith(this.symbols.minusSign) && t < 0 ? (e = e.slice(this.symbols.minusSign.length)) : this.symbols.plusSign && e.startsWith(this.symbols.plusSign) && n > 0 && (e = e.slice(this.symbols.plusSign.length)), !((this.symbols.group && e.startsWith(this.symbols.group)) || (this.symbols.decimal && e.indexOf(this.symbols.decimal) > -1 && 0 === this.options.maximumFractionDigits)) && (this.symbols.group && (e = I(e, this.symbols.group, '')), (e = e.replace(this.symbols.numeral, '')), this.symbols.decimal && (e = e.replace(this.symbols.decimal, '')), 0 === e.length);
+        return (e = this.sanitize(e)), this.symbols.minusSign && e.startsWith(this.symbols.minusSign) && t < 0 ? (e = e.slice(this.symbols.minusSign.length)) : this.symbols.plusSign && e.startsWith(this.symbols.plusSign) && n > 0 && (e = e.slice(this.symbols.plusSign.length)), !((this.symbols.group && e.startsWith(this.symbols.group)) || (this.symbols.decimal && e.indexOf(this.symbols.decimal) > -1 && 0 === this.options.maximumFractionDigits)) && (this.symbols.group && (e = m(e, this.symbols.group, '')), (e = e.replace(this.symbols.numeral, '')), this.symbols.decimal && (e = e.replace(this.symbols.decimal, '')), 0 === e.length);
     }
     constructor(e, t = {}) {
         var n, r;
@@ -221,7 +221,7 @@ class f {
                     E = null !== (l = null === (i = c.find((e) => 'minusSign' === e.type)) || void 0 === i ? void 0 : i.value) && void 0 !== l ? l : '-',
                     f = null === (a = d.find((e) => 'plusSign' === e.type)) || void 0 === a ? void 0 : a.value;
                 !f && ((null == r ? void 0 : r.signDisplay) === 'exceptZero' || (null == r ? void 0 : r.signDisplay) === 'always') && (f = '+');
-                let I =
+                let m =
                         null ===
                             (s = new Intl.NumberFormat(e, {
                                 ...n,
@@ -233,7 +233,7 @@ class f {
                             ? void 0
                             : s.value,
                     T = null === (o = c.find((e) => 'group' === e.type)) || void 0 === o ? void 0 : o.value,
-                    g = [...new Set([...c.filter((e) => !h.has(e.type)).map((e) => m(e.value)), ..._.flatMap((e) => e.filter((e) => !h.has(e.type)).map((e) => m(e.value)))])].sort((e, t) => t.length - e.length),
+                    g = [...new Set([...c.filter((e) => !h.has(e.type)).map((e) => I(e.value)), ..._.flatMap((e) => e.filter((e) => !h.has(e.type)).map((e) => I(e.value)))])].sort((e, t) => t.length - e.length),
                     S = 0 === g.length ? RegExp('[\\p{White_Space}]', 'gu') : RegExp(`${g.join('|')}|[\\p{White_Space}]`, 'gu'),
                     A = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
                     N = new Map(A.map((e, t) => [e, t])),
@@ -241,7 +241,7 @@ class f {
                 return {
                     minusSign: E,
                     plusSign: f,
-                    decimal: I,
+                    decimal: m,
                     group: T,
                     literals: S,
                     numeral: v,
@@ -253,9 +253,9 @@ class f {
 }
 let h = new Set(['decimal', 'fraction', 'integer', 'minusSign', 'plusSign', 'group']),
     p = [0, 4, 2, 1, 11, 20, 3, 7, 100, 21, 0.1, 1.1];
-function I(e, t, n) {
+function m(e, t, n) {
     return e.replaceAll ? e.replaceAll(t, n) : e.split(t).join(n);
 }
-function m(e) {
+function I(e) {
     return e.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }

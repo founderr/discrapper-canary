@@ -8,15 +8,15 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-    a = n(592595);
+var a = n(481060),
+    s = n(592595);
 function r(e, t) {
     let { children: n } = e;
-    return (0, i.jsx)(s.Text, {
+    return (0, i.jsx)(a.Text, {
         variant: 'text-sm/medium',
         className: t,
         children: n
     });
 }
-let l = (e) => r(e, a.searchFilter),
-    o = (e) => r(e, a.searchAnswer);
+let l = (e) => r(e, s.searchFilter),
+    o = (e) => r(e, s.searchAnswer);

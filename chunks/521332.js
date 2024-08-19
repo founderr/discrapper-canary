@@ -35,10 +35,10 @@ function h(e) {
     );
 }
 function p(e) {
-    let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: l, reportType: p, reportSubType: I } = e,
-        m = (0, a.e7)([u.Z], () => u.Z.getChannel(n)),
-        T = (0, c.jc)(t, null == m ? void 0 : m.type),
-        g = (0, d.i_)(p, I, l);
+    let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: l, reportType: p, reportSubType: m } = e,
+        I = (0, a.e7)([u.Z], () => u.Z.getChannel(n)),
+        T = (0, c.jc)(t, null == I ? void 0 : I.type),
+        g = (0, d.i_)(p, m, l);
     return 0 === T.length
         ? null
         : (0, r.jsxs)('div', {

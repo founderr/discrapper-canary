@@ -73,8 +73,8 @@ let E = 365,
     f = 366,
     h = 4,
     p = [s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday],
-    I = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday],
-    m = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
+    m = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday],
+    I = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
     T = [s.Ci.SA.weekday, s.Ci.SU.weekday],
     g = [s.Ci.FR.weekday, s.Ci.SA.weekday],
     S = [s.Ci.SU.weekday, s.Ci.MO.weekday],
@@ -251,7 +251,7 @@ function B(e, t) {
 function F(e) {
     let t = D(e.toDate().getDay()),
         n = D(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? m : n.weekday - t.weekday < 0 ? I : p;
+    return n.weekday - t.weekday > 0 ? I : n.weekday - t.weekday < 0 ? m : p;
 }
 function V(e) {
     let t = D(e.toDate().getDay()),

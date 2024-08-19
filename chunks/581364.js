@@ -61,8 +61,8 @@ var E = n(703558),
     f = n(895924),
     h = n(531010),
     p = n(689079),
-    I = n(981631),
-    m = n(231338);
+    m = n(981631),
+    I = n(231338);
 function T(e) {
     var t, n, r;
     let i,
@@ -234,7 +234,7 @@ function g(e, t) {
     );
 }
 function S(e) {
-    return I.Xyh.test(e.trim());
+    return m.Xyh.test(e.trim());
 }
 function A(e, t, n, r) {
     let i = [];
@@ -266,7 +266,7 @@ function v(e) {
 let O = u.vB(0);
 function R(e) {
     let { PermissionStore: t, guild: n, selfMember: r, applicationLevelPermissions: i, commandLevelPermissions: a, defaultMemberPermissions: s } = e;
-    if (n.ownerId === r.userId || t.can(m.Pl.ADMINISTRATOR, n)) return !0;
+    if (n.ownerId === r.userId || t.can(I.Pl.ADMINISTRATOR, n)) return !0;
     let o = n.id;
     if (null != a) {
         let e = C(r, o, a);
@@ -338,7 +338,7 @@ function M(e, t, n) {
 function P(e) {
     var t, n;
     let { command: r, location: i, triggerSection: a, queryLength: s, sectionName: o, query: l, searchResultsPosition: u, source: c } = e;
-    (0, d.yw)(I.rMx.APPLICATION_COMMAND_SELECTED, {
+    (0, d.yw)(m.rMx.APPLICATION_COMMAND_SELECTED, {
         command_id: null !== (n = null === (t = r.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : r.id,
         application_id: r.applicationId,
         location: i,

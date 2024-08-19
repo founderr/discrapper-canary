@@ -13,11 +13,11 @@ var r = n(735250),
     f = n(689938),
     h = n(330708);
 t.Z = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: p, targetBoostedGuildTier: I, onClose: m = () => {}, closeLayer: T = () => {}, pauseAnimation: g = !1, applicationId: S, handleSubscribeModalClose: A, withHighlight: N = !1, ...v } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: p, targetBoostedGuildTier: m, onClose: I = () => {}, closeLayer: T = () => {}, pauseAnimation: g = !1, applicationId: S, handleSubscribeModalClose: A, withHighlight: N = !1, ...v } = e,
         { analyticsLocations: O } = (0, u.ZP)(),
         R = (0, l.bp)() === E.IlC.POPOUT,
         [C, y] = i.useState(!1),
-        D = null != I ? Math.max((0, d.KK)(a, I), 1) : 1,
+        D = null != m ? Math.max((0, d.KK)(a, m), 1) : 1,
         L = (0, d.aq)(),
         b = async () => {
             y(!0),
@@ -27,7 +27,7 @@ t.Z = (e) => {
                     analyticsSourceLocation: n,
                     guild: a,
                     numberOfBoostsToAdd: D,
-                    onClose: m,
+                    onClose: I,
                     closeLayer: T,
                     inPopout: R,
                     applicationId: S,

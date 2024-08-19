@@ -34,9 +34,9 @@ function C(e) {
 }
 function h(e) {
     let { selectActionComponent: n, queryOptions: l, renderIcon: t, renderOptionLabel: r, defaultValues: u } = e,
-        { type: h, placeholder: _, maxValues: T, disabled: N } = n,
+        { type: h, placeholder: N, maxValues: T, disabled: _ } = n,
         [x, I] = a.useState(!1),
-        [g, S] = a.useState(!1),
+        [S, g] = a.useState(!1),
         [O, Z] = a.useState(new Map(null == u ? void 0 : u.map((e) => [e.value, e]))),
         [j, L] = a.useState(new Set(O.keys())),
         [A, R] = a.useState(() => (null != u ? u : []).map((e) => e.value)),
@@ -72,20 +72,20 @@ function h(e) {
         }) && L(new Set(O.keys()));
     }, [y, h, O]);
     a.useEffect(() => {
-        if (!(x || g || (O.size === j.size && Array.from(O.keys()).every((e) => j.has(e))))) w();
-    }, [x, g, j, O, w]);
+        if (!(x || S || (O.size === j.size && Array.from(O.keys()).every((e) => j.has(e))))) w();
+    }, [x, S, j, O, w]);
     let G = 0 === O.size || x,
         H = {
-            isDisabled: N || k,
+            isDisabled: _ || k,
             wrapperClassName: E.select,
             options: (e) =>
                 new Promise((n) => {
                     n(l(e));
                 }),
-            placeholder: G ? (null != _ ? _ : p.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
+            placeholder: G ? (null != N ? N : p.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
             onClose: () => I(!1),
             onOpen: () => I(!0),
-            onBlur: () => S(!1),
+            onBlur: () => g(!1),
             maxVisibleItems: 5,
             optionClassName: E.__invalid_selectOption,
             renderOptionPrefix: (e, n) => {
@@ -113,7 +113,7 @@ function h(e) {
                                   className: E.badges,
                                   value: Array.from(O.values()),
                                   onChange: (e) => {
-                                      !x && S(!0), Z(new Map(e.map((e) => [e.value, e])));
+                                      !x && g(!0), Z(new Map(e.map((e) => [e.value, e])));
                                   },
                                   multi: !0,
                                   inputClassNames: s()({

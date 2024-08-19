@@ -39,8 +39,8 @@ var r,
     f = n(822245),
     h = n(399860),
     p = n(706454),
-    I = n(675478),
-    m = n(592125),
+    m = n(675478),
+    I = n(592125),
     T = n(430824),
     g = n(594174),
     S = n(626135),
@@ -242,7 +242,7 @@ class z extends (r = c.ZP.Store) {
         return (c.loading = c.loading || u), c;
     }
     maybeQueryForInstallLessApps(e, t) {
-        let n = m.Z.getChannel(t),
+        let n = I.Z.getChannel(t),
             r = P.Yq.includes(e) ? e : void 0;
         null != n &&
             null != r &&
@@ -258,7 +258,7 @@ class z extends (r = c.ZP.Store) {
             );
     }
     queryInstallOnDemandApp(e, t) {
-        let n = m.Z.getChannel(t);
+        let n = I.Z.getChannel(t);
         null != n &&
             this.query(
                 n,
@@ -433,7 +433,7 @@ let q = new z(d.Z, {
             a = null == i ? void 0 : null === (t = i.result) || void 0 === t ? void 0 : t.sectionIdsByBotId;
         if (null != a)
             for (let e in a) {
-                let t = m.Z.getDMFromUserId(e);
+                let t = I.Z.getDMFromUserId(e);
                 null != t &&
                     Y(
                         {
@@ -648,7 +648,7 @@ function et(e, t, n) {
 }
 function en(e) {
     var t, n, r, i, a, s;
-    let { permissionContext: o, contextState: u, userState: c, applicationStates: d, text: _, builtIns: E = R.D.ALLOW, allowApplicationCommands: h = !0, singleApplicationId: p, allowEmptySections: m = !1, scoreMethod: g = R.p.NONE, sortOptions: S = ee, installOnDemand: N = !1 } = e,
+    let { permissionContext: o, contextState: u, userState: c, applicationStates: d, text: _, builtIns: E = R.D.ALLOW, allowApplicationCommands: h = !0, singleApplicationId: p, allowEmptySections: I = !1, scoreMethod: g = R.p.NONE, sortOptions: S = ee, installOnDemand: N = !1 } = e,
         { commandTypes: O } = o,
         C = null == _ ? void 0 : _.toLowerCase(),
         y = null == C ? void 0 : C.split(' '),
@@ -659,7 +659,7 @@ function en(e) {
             permissionContext: o,
             query: C,
             splitQuery: y,
-            allowEmptySections: m,
+            allowEmptySections: I,
             scoreMethod: g,
             installOnDemand: N
         },
@@ -706,7 +706,7 @@ function en(e) {
         null != u && M.push(u);
     }
     if (
-        (S.applications.useFrecency && I.DZ.loadIfNecessary(),
+        (S.applications.useFrecency && m.DZ.loadIfNecessary(),
         M.sort((e, t) => {
             if (S.applications.useScore && g === R.p.APPLICATION_ONLY) {
                 var n, r, i, a;
@@ -721,7 +721,7 @@ function en(e) {
             }
             return eu(e.section.name, t.section.name);
         }),
-        L.length > 0 || !0 === m)
+        L.length > 0 || !0 === I)
     ) {
         let e = er(A.Tm[b.bi.BUILT_IN], L, !0, !0, P);
         null != e && M.push(e);
@@ -735,7 +735,7 @@ function en(e) {
     if (g === R.p.COMMAND_ONLY || g === R.p.COMMAND_OR_APPLICATION) {
         let e = o.context,
             t = T.Z.getGuild(o.context.guild_id);
-        S.commands.useFrecency && I.DZ.loadIfNecessary(),
+        S.commands.useFrecency && m.DZ.loadIfNecessary(),
             k.sort((n, r) => {
                 if (S.commands.useScore) {
                     var i, a;
@@ -775,16 +775,16 @@ function er(e, t, n, r, i) {
         { query: s, splitQuery: o, allowEmptySections: l, scoreMethod: u, permissionContext: c, installOnDemand: d } = i,
         { context: _, userId: E, roleIds: f, isImpersonating: h } = c,
         p = null != _.guild_id ? L.ML(e.permissions, _.guild_id, E, f, h) : null,
-        I = null != _.guild_id ? L.ZJ(e.permissions, _, _.guild_id) : null,
-        m = [];
+        m = null != _.guild_id ? L.ZJ(e.permissions, _, _.guild_id) : null,
+        I = [];
     for (let i of t)
         L.Ft(i, c, {
             applicationAllowedForUser: p,
-            applicationAllowedForChannel: I,
+            applicationAllowedForChannel: m,
             commandBotId: e.botId,
             isGuildInstalled: n,
             isUserInstalled: r || d
-        }) === L.mF.ALLOWED && m.push(i);
+        }) === L.mF.ALLOWED && I.push(i);
     return 0 !==
         (a =
             u !== R.p.NONE && null != s && null != o
@@ -828,8 +828,8 @@ function er(e, t, n, r, i) {
                                   });
                       }
                       return s;
-                  })(s, o, m, e, u)
-                : m).length || l
+                  })(s, o, I, e, u)
+                : I).length || l
         ? ((u === R.p.NONE || u === R.p.APPLICATION_ONLY) && a.sort((e, t) => eu(e.displayName, t.displayName)),
           {
               section: e,

@@ -17,8 +17,8 @@ var r = n(735250),
     f = n(65029),
     h = n(210887),
     p = n(695346),
-    I = n(430824),
-    m = n(451478),
+    m = n(430824),
+    I = n(451478),
     T = n(768581),
     g = n(392552),
     S = n(543241),
@@ -71,8 +71,8 @@ let P = (e) => {
                     allNamesString: null == H ? void 0 : H.name
                 };
         }
-        let Z = (0, a.e7)([I.Z], () => (null !== t && t.type === c.B.GUILD ? I.Z.getGuild(t.guildId) : null), [t]),
-            Y = (0, a.e7)([m.Z], () => m.Z.isFocused()),
+        let Z = (0, a.e7)([m.Z], () => (null !== t && t.type === c.B.GUILD ? m.Z.getGuild(t.guildId) : null), [t]),
+            Y = (0, a.e7)([I.Z], () => I.Z.isFocused()),
             j = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             W = p.Yk.useSetting(),
             K = (0, S.C1)(G, M(t) ? t : null),

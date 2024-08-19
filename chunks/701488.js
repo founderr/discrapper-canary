@@ -138,8 +138,8 @@ var r,
     f,
     h,
     p,
-    I,
     m,
+    I,
     T,
     g,
     S = n(911969),
@@ -176,11 +176,11 @@ let N = 160,
     },
     Q = ['in_development', 'activities_team', 'employee_release'],
     X = [Z, '235088799074484224', L, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1220052815590723654', '1222080278672179220', '1227719606223765687'];
-((_ = r || (r = {})).ADS = 'ADS'), (_.FAILED_LOAD = 'FAILED_LOAD'), (_.LAGGING = 'LAGGING'), (_.CONFUSING = 'CONFUSING'), (_.NOT_FUN = 'NOT_FUN'), (_.OTHER = 'OTHER'), ((E = i || (i = {}))[(E.PLAY = 0)] = 'PLAY'), (E[(E.SPECTATE = 1)] = 'SPECTATE'), ((f = a || (a = {})).DESKTOP = 'desktop'), (f.MOBILE = 'mobile'), ((h = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (h.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (h.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (h.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((p = o || (o = {}))[(p.UNLOCKED = 1)] = 'UNLOCKED'), (p[(p.PORTRAIT = 2)] = 'PORTRAIT'), (p[(p.LANDSCAPE = 3)] = 'LANDSCAPE'), ((I = l || (l = {}))[(I.DIRECTORY = 0)] = 'DIRECTORY'), (I[(I.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (I[(I.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
+((_ = r || (r = {})).ADS = 'ADS'), (_.FAILED_LOAD = 'FAILED_LOAD'), (_.LAGGING = 'LAGGING'), (_.CONFUSING = 'CONFUSING'), (_.NOT_FUN = 'NOT_FUN'), (_.OTHER = 'OTHER'), ((E = i || (i = {}))[(E.PLAY = 0)] = 'PLAY'), (E[(E.SPECTATE = 1)] = 'SPECTATE'), ((f = a || (a = {})).DESKTOP = 'desktop'), (f.MOBILE = 'mobile'), ((h = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (h.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (h.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (h.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((p = o || (o = {}))[(p.UNLOCKED = 1)] = 'UNLOCKED'), (p[(p.PORTRAIT = 2)] = 'PORTRAIT'), (p[(p.LANDSCAPE = 3)] = 'LANDSCAPE'), ((m = l || (l = {}))[(m.DIRECTORY = 0)] = 'DIRECTORY'), (m[(m.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (m[(m.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
 let $ = 'activity-shelf',
     J = new Set(['755600276941176913', C, y, U]),
     ee = new Set([C, y, U]);
-((m = u || (u = {})).DISCORD_TURNS_8 = 'DISCORD_TURNS_8'), (m.GDM_ACTIVITIES = 'GDM_ACTIVITIES'), (m.PUTT_PARTY = 'PUTT_PARTY'), (m.JAMSPACE_OLD = 'JAMSPACE'), (m.JAMSPACE = 'JAMSPACE2'), (m.POKER = 'POKER'), (m.FREE = 'FREE'), ((T = c || (c = {}))[(T.PORTRAIT = 0)] = 'PORTRAIT'), (T[(T.LANDSCAPE = 1)] = 'LANDSCAPE'), ((g = d || (d = {}))[(g.FOCUSED = 0)] = 'FOCUSED'), (g[(g.PIP = 1)] = 'PIP'), (g[(g.GRID = 2)] = 'GRID');
+((I = u || (u = {})).DISCORD_TURNS_8 = 'DISCORD_TURNS_8'), (I.GDM_ACTIVITIES = 'GDM_ACTIVITIES'), (I.PUTT_PARTY = 'PUTT_PARTY'), (I.JAMSPACE_OLD = 'JAMSPACE'), (I.JAMSPACE = 'JAMSPACE2'), (I.POKER = 'POKER'), (I.FREE = 'FREE'), ((T = c || (c = {}))[(T.PORTRAIT = 0)] = 'PORTRAIT'), (T[(T.LANDSCAPE = 1)] = 'LANDSCAPE'), ((g = d || (d = {}))[(g.FOCUSED = 0)] = 'FOCUSED'), (g[(g.PIP = 1)] = 'PIP'), (g[(g.GRID = 2)] = 'GRID');
 let et = {
         label_type: S.ww.NONE,
         release_phase: '',

@@ -1,9 +1,9 @@
 n.d(t, {
     W1: function () {
-        return I;
+        return m;
     },
     z6: function () {
-        return m;
+        return I;
     }
 }),
     n(653041);
@@ -34,8 +34,8 @@ let h = function (e, t) {
         let t = [];
         return null == e ? ['no match'] : (e.themes.includes(l.i.EROTIC) && t.push('nsfw'), (null == e.summary || 0 === e.summary.length) && t.push('no summary'), (null == e.summary || 0 === e.summary.length) && t.push('no summary'), (null == e.coverImageUrl || 0 === e.coverImageUrl.length) && t.push('no cover image'), t);
     },
-    I = (e) => 0 === p(e).length,
-    m = (e) => 0 === p(d.Z.getGame(e)).length;
+    m = (e) => 0 === p(e).length,
+    I = (e) => 0 === p(d.Z.getGame(e)).length;
 t.ZP = (e) => {
     let { location: t, applicationId: n = '', autoTrackExposure: r = !0, source: i, trackEntryPointImpression: s = !0 } = e,
         l = (0, E.xG)(t, r);
@@ -43,7 +43,7 @@ t.ZP = (e) => {
         l && null != n && '' !== n && c.Z.getDetectableGamesSupplemental([n]);
     }, [n, l]);
     let _ = (0, u.e7)([d.Z], () => d.Z.getGame(n)),
-        f = a.useMemo(() => null != _ && I(_), [_]);
+        f = a.useMemo(() => null != _ && m(_), [_]);
     return (
         a.useEffect(() => {
             l && s && !1 === d.Z.isFetching(n) && (o()(null != i, 'Cannot track a Game Profile Entry Point Impressions without a source.'), h(f, n, p(_), i));

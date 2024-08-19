@@ -16,12 +16,12 @@ var r = n(470079),
 function c(e, t) {
     let { inputElementType: n = 'input', isDisabled: c = !1, isRequired: d = !1, isReadOnly: _ = !1, type: E = 'text', validationBehavior: f = 'aria' } = e,
         [h, p] = (0, a.zk)(e.value, e.defaultValue || '', e.onChange),
-        { focusableProps: I } = (0, o.kc)(e, t),
-        m = (0, u.Q3)({
+        { focusableProps: m } = (0, o.kc)(e, t),
+        I = (0, u.Q3)({
             ...e,
             value: h
         }),
-        { isInvalid: T, validationErrors: g, validationDetails: S } = m.displayValidation,
+        { isInvalid: T, validationErrors: g, validationDetails: S } = I.displayValidation,
         {
             labelProps: A,
             fieldProps: N,
@@ -39,7 +39,7 @@ function c(e, t) {
         };
     return (
         (0, i.y$)(t, h, p),
-        (0, l.Q)(e, m, t),
+        (0, l.Q)(e, I, t),
         (0, r.useEffect)(() => {
             if (t.current instanceof (0, i.kR)(t.current).HTMLTextAreaElement) {
                 let e = t.current;
@@ -80,7 +80,7 @@ function c(e, t) {
                 onSelect: e.onSelect,
                 onBeforeInput: e.onBeforeInput,
                 onInput: e.onInput,
-                ...I,
+                ...m,
                 ...N
             }),
             descriptionProps: v,
