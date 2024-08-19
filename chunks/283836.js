@@ -19,20 +19,25 @@ function u(e, n) {
         c(e);
     }, [e]);
     let { subscriptionGroupListing: i } = (0, o.F5)(e, n),
-        s = null == i ? void 0 : i.subscription_listings;
-    return (0, t.cj)(
-        [d.Z],
-        () => {
-            var n;
-            let { subscriptions: l, otps: t } = d.Z.getStoreLayout(e),
-                r = new Set(l.map((e) => e.id));
-            return {
-                subs: null !== (n = null == s ? void 0 : s.filter((e) => r.has(e.id))) && void 0 !== n ? n : [],
-                otps: t,
-                subscriptionGroupListing: null != i ? i : void 0
-            };
-        },
-        [e, s, i]
+        s = null == i ? void 0 : i.subscription_listings,
+        r = (0, t.Wu)(
+            [d.Z],
+            () => {
+                var n;
+                let { subscriptions: i } = d.Z.getStoreLayout(e),
+                    l = new Set(i.map((e) => e.id));
+                return null !== (n = null == s ? void 0 : s.filter((e) => l.has(e.id))) && void 0 !== n ? n : [];
+            },
+            [e, s]
+        ),
+        a = (0, t.Wu)([d.Z], () => d.Z.getStoreLayout(e).otps, [e]);
+    return l.useMemo(
+        () => ({
+            subs: r,
+            otps: a,
+            subscriptionGroupListing: null != i ? i : void 0
+        }),
+        [r, a, i]
     );
 }
 function c(e) {
