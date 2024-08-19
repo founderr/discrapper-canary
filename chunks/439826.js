@@ -2,12 +2,15 @@ n.d(t, {
     Z: function () {
         return A;
     }
-});
+}),
+    n(47120),
+    n(571269),
+    n(298267);
 var i = n(735250),
     a = n(470079),
     s = n(120356),
     r = n.n(s),
-    l = n(338545),
+    l = n(567526),
     o = n(186325),
     c = n(780384),
     d = n(481060),
@@ -25,22 +28,42 @@ var i = n(735250),
     C = n(222307);
 function N(e) {
     var t;
-    let { quest: n, errorHints: a, warningHints: s } = e,
-        { ref: r, height: o = 0 } = (0, u.Z)([a]),
-        c = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        _ = (0, E.z)(n),
-        h = !c && !_ && a.length > 0,
-        m = (0, d.useSpring)({
-            opacity: h ? 1 : 0,
-            height: h ? o : 0,
-            config: T.Y
+    let { quest: n, errorHints: s, warningHints: r } = e,
+        { ref: o, height: c = 0 } = (0, u.Z)([s]),
+        _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+        h = (0, E.z)(n),
+        m = !_ && !h && s.length > 0,
+        I = !_ && !h && r.length > 0 && 0 === s.length,
+        [g, p] = a.useState(() => s),
+        [S, f] = a.useState(() => r),
+        N = (0, d.useSpring)({
+            opacity: m ? 1 : 0,
+            height: m ? c : 0,
+            config: T.Y,
+            onStart() {
+                m && p(s);
+            },
+            onRest() {
+                !m && p(s);
+            }
+        }),
+        A = (0, d.useSpring)({
+            opacity: I ? 1 : 0,
+            height: I ? c : 0,
+            config: T.Y,
+            onStart() {
+                I && f(r);
+            },
+            onRest() {
+                !I && f(r);
+            }
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.animated.div, {
-                style: m,
+                style: N,
                 children: (0, i.jsxs)('div', {
-                    ref: r,
+                    ref: o,
                     className: C.hints,
                     children: [
                         (0, i.jsx)(d.CircleWarningIcon, {
@@ -52,15 +75,16 @@ function N(e) {
                             children: (0, i.jsx)(d.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
-                                children: a.map((e) => e.message).join(' ')
+                                children: g.map((e) => e.message).join(' ')
                             })
                         })
                     ]
                 })
             }),
-            s.length > 0 &&
-                0 === a.length &&
-                (0, i.jsxs)('div', {
+            (0, i.jsx)(l.animated.div, {
+                style: A,
+                children: (0, i.jsxs)('div', {
+                    ref: o,
                     className: C.hints,
                     children: [
                         (0, i.jsx)(d.CircleInformationIcon, {
@@ -72,11 +96,12 @@ function N(e) {
                             children: (0, i.jsx)(d.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
-                                children: s.join(' ')
+                                children: S.at(0)
                             })
                         })
                     ]
                 })
+            })
         ]
     });
 }
