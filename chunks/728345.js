@@ -149,5 +149,6 @@ t.Z = {
 let c = (0, r.Kb)(o.Z, {
     get: (e) => (null != e ? o.Z.getApplication(e) : null),
     load: (e, t) => (null != t ? u(t, !1, e).then(l.dG4) : Promise.resolve()),
-    getIsLoading: (e) => null != e && o.Z.isFetchingApplication(e)
+    getIsLoading: (e) => null != e && o.Z.isFetchingApplication(e),
+    useStateHook: r.e7
 });
