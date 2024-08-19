@@ -48,8 +48,9 @@ class m extends u.Z {
     }
     async getStats() {
         if (!p.Fo) return null;
-        let e = await this.getRawStats();
-        return (0, f.Z)(e, this.getUserIdBySsrc, this.remoteVideoSinkWants, this.localVideoSinkWants);
+        let e = await this.getRawStats(),
+            t = null !== this.input.getVideoStreamId();
+        return (0, f.Z)(e, this.getUserIdBySsrc, this.remoteVideoSinkWants, this.localVideoSinkWants, t);
     }
     setInputMode(e, t) {
         this.input.setAudioMode(e, {
