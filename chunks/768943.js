@@ -13,8 +13,9 @@ let d = new l.h(
             return [null != t.dueAt ? c._l.REMINDER : c._l.BOOKMARK];
         },
         (e) => {
-            let { saveData: t } = e;
-            return -t.savedAt.getTime();
+            var t, n, r;
+            let { saveData: i } = e;
+            return null !== (r = null === (n = (t = i).dueAt) || void 0 === n ? void 0 : n.getTime()) && void 0 !== r ? r : 10000000000000 - t.savedAt.getTime();
         }
     ),
     _ = 0,
