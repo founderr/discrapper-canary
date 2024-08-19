@@ -1,9 +1,9 @@
 n.d(t, {
     tS: function () {
-        return h;
+        return p;
     },
     x3: function () {
-        return p;
+        return m;
     }
 }),
     n(47120);
@@ -16,60 +16,57 @@ var r = n(735250),
     u = n(481060),
     c = n(607070),
     d = n(706454),
-    _ = n(506071),
-    E = n(561308),
-    f = n(666818);
-function h(e, t) {
-    let [n, r] = i.useState(Date.now()),
-        a = (0, _.n)(),
-        s = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        u = i.useMemo(() => {
-            let { hours: t } = (0, E.JY)(e, n);
-            return t > 0 ? 300000 : 1000;
-        }, [e, n]);
+    _ = n(70956),
+    E = n(506071),
+    f = n(561308),
+    h = n(666818);
+function p(e) {
+    let [t, n] = i.useState(Date.now()),
+        r = (0, E.n)(),
+        a = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
     return (
         i.useEffect(() => {
-            let e = new l.Xp();
+            let t = new l.Xp();
             return (
-                e.start(u, () => {
-                    r(Date.now());
+                t.start(_.Z.Millis.SECOND, () => {
+                    n(Date.now());
                 }),
-                (!a || (s && !t)) && e.stop(),
-                () => e.stop()
+                (!r || (a && !e)) && t.stop(),
+                () => t.stop()
             );
-        }, [u, a, s, t]),
-        n
+        }, [r, a, e]),
+        t
     );
 }
-let p = (e) => {
+let m = (e) => {
     let { entry: t, inline: n = !1, textColor: a, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: c = !1 } = e,
-        d = h(t, o),
-        _ = i.useMemo(() => (0, E.T_)(t, d), [t, d]),
-        p = i.useRef(_);
+        d = p(o),
+        _ = i.useMemo(() => (0, f.T_)(t, d), [t, d]),
+        E = i.useRef(_);
     return (
         i.useEffect(() => {
-            p.current = _;
+            E.current = _;
         }, [t]),
         (0, r.jsx)(u.Text, {
-            className: s()(f.timestamp, {
-                [f.inlineTimestamp]: n,
-                [f.bold]: l
+            className: s()(h.timestamp, {
+                [h.inlineTimestamp]: n,
+                [h.bold]: l
             }),
             variant: 'text-xs/medium',
             tabularNumbers: !0,
             color: a,
             scaleFontToUserSetting: c,
-            'aria-label': p.current,
+            'aria-label': E.current,
             children: _
         })
     );
 };
 t.ZP = (e) => {
     let { entry: t, textColor: n, hovered: i = !1, bold: a = !1, scaleFontToUserSetting: s = !1 } = e,
-        l = (0, E.kr)(t),
+        l = (0, f.kr)(t),
         c = (0, o.e7)([d.default], () => d.default.locale);
     return l
-        ? (0, r.jsx)(p, {
+        ? (0, r.jsx)(m, {
               entry: t,
               textColor: n,
               hovered: i,
@@ -81,6 +78,6 @@ t.ZP = (e) => {
               color: n,
               lineClamp: 1,
               scaleFontToUserSetting: s,
-              children: (0, E.GL)(t, c)
+              children: (0, f.GL)(t, c)
           });
 };
