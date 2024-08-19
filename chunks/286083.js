@@ -7,6 +7,7 @@ n.d(t, {
 var i = n(652874),
     a = n(731965);
 function s(e, t) {
+    if (0 === t) return [e];
     let n = [];
     for (let i = 0; i < e.length; i += t) n.push(e.slice(i, i + t));
     return n;

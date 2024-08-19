@@ -46,6 +46,7 @@ function b(e) {
         s = Math.min(null != t ? t : 1024, 2000),
         r = o.useRef(null),
         c = o.useMemo(() => {
+            if (0 === s) return 1;
             let e = s / 256,
                 t = s / 376,
                 n = s / e,
