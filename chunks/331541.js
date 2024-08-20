@@ -228,59 +228,63 @@ function er(e) {
                     n ? ea(J.Skl.IDLE, e, t, u(J.Skl.IDLE)) : es(J.Skl.IDLE, e, t, u(J.Skl.IDLE)),
                     n ? ea(J.Skl.DND, e, t, u(J.Skl.DND)) : es(J.Skl.DND, e, t, u(J.Skl.DND)),
                     n ? ea(J.Skl.INVISIBLE, e, t, u(J.Skl.INVISIBLE)) : es(J.Skl.INVISIBLE, e, t, u(J.Skl.INVISIBLE)),
-                    (0, i.jsx)(d.MenuSeparator, {}, 'menu-separator-statuses'),
                     r || s
-                        ? (0, i.jsx)(
-                              d.MenuItem,
-                              {
-                                  id: 'quiet-mode',
-                                  'aria-label': 'focus mode',
-                                  className: et.expiringStatusMenuItem,
-                                  keepItemStyles: !0,
-                                  hasSubmenu: !0,
-                                  showIconFirst: !0,
-                                  label: () =>
-                                      (0, i.jsxs)('div', {
-                                          className: et.statusItem,
-                                          children: [
-                                              (0, i.jsx)(d.BellSlashIcon, {
-                                                  size: 'xxs',
-                                                  className: et.icon
-                                              }),
+                        ? (0, i.jsxs)(i.Fragment, {
+                              children: [
+                                  (0, i.jsx)(d.MenuSeparator, {}, 'menu-separator-statuses'),
+                                  (0, i.jsx)(
+                                      d.MenuItem,
+                                      {
+                                          id: 'quiet-mode',
+                                          'aria-label': 'focus mode',
+                                          className: et.expiringStatusMenuItem,
+                                          keepItemStyles: !0,
+                                          hasSubmenu: !0,
+                                          showIconFirst: !0,
+                                          label: () =>
                                               (0, i.jsxs)('div', {
-                                                  className: et.focusModeTitle,
+                                                  className: et.statusItem,
                                                   children: [
-                                                      ee.Z.Messages.FOCUS_MODE_TITLE,
-                                                      (0, i.jsx)(d.TextBadge, {
-                                                          text: s ? ee.Z.Messages.FOCUS_MODE_BADGE_ON : c ? ee.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : ee.Z.Messages.FOCUS_MODE_BADGE_OFF,
-                                                          color: s ? l.Z.BRAND_500 : c ? l.Z.RED_400 : l.Z.PRIMARY_500
+                                                      (0, i.jsx)(d.BellSlashIcon, {
+                                                          size: 'xxs',
+                                                          className: et.icon
+                                                      }),
+                                                      (0, i.jsxs)('div', {
+                                                          className: et.focusModeTitle,
+                                                          children: [
+                                                              ee.Z.Messages.FOCUS_MODE_TITLE,
+                                                              (0, i.jsx)(d.TextBadge, {
+                                                                  text: s ? ee.Z.Messages.FOCUS_MODE_BADGE_ON : c ? ee.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : ee.Z.Messages.FOCUS_MODE_BADGE_OFF,
+                                                                  color: s ? l.Z.BRAND_500 : c ? l.Z.RED_400 : l.Z.PRIMARY_500
+                                                              })
+                                                          ]
+                                                      }),
+                                                      (0, i.jsx)('div', {
+                                                          className: et.description,
+                                                          children:
+                                                              s && null != o && '0' !== o
+                                                                  ? ee.Z.Messages.STATUS_UNTIL.format({
+                                                                        endTime: new Date(Number(o)).toLocaleString(ee.Z.getLocale(), {
+                                                                            month: 'numeric',
+                                                                            day: 'numeric',
+                                                                            hour: 'numeric',
+                                                                            minute: '2-digit'
+                                                                        })
+                                                                    })
+                                                                  : ee.Z.Messages.FOCUS_MODE_DESCRIPTION
                                                       })
                                                   ]
                                               }),
-                                              (0, i.jsx)('div', {
-                                                  className: et.description,
-                                                  children:
-                                                      s && null != o && '0' !== o
-                                                          ? ee.Z.Messages.STATUS_UNTIL.format({
-                                                                endTime: new Date(Number(o)).toLocaleString(ee.Z.getLocale(), {
-                                                                    month: 'numeric',
-                                                                    day: 'numeric',
-                                                                    hour: 'numeric',
-                                                                    minute: '2-digit'
-                                                                })
-                                                            })
-                                                          : ee.Z.Messages.FOCUS_MODE_DESCRIPTION
-                                              })
-                                          ]
-                                      }),
-                                  action: () => {
-                                      (0, S.oW)(!s);
-                                  },
-                                  dontCloseOnAction: !0,
-                                  children: _
-                              },
-                              'quiet-mode'
-                          )
+                                          action: () => {
+                                              (0, S.oW)(!s);
+                                          },
+                                          dontCloseOnAction: !0,
+                                          children: _
+                                      },
+                                      'quiet-mode'
+                                  )
+                              ]
+                          })
                         : null
                 ]
             });
