@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return C;
     },
     r: function () {
         return I;
@@ -16,19 +16,19 @@ var i = n(735250),
     u = n(680287),
     d = n(470623),
     h = n(957730),
-    m = n(48854),
-    p = n(703558),
+    p = n(48854),
+    m = n(703558),
     _ = n(403182),
     f = n(928477),
     E = n(981631),
-    C = n(689938);
-function g(e) {
+    g = n(689938);
+function C(e) {
     let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: s, location: l, onThreadCreated: r, useDefaultThreadName: o } = e,
         u = a.useCallback((e, t, n, i) => {
             c.Z.uploadFiles({
                 channelId: e.id,
                 uploads: t,
-                draftType: p.d.FirstThreadMessage,
+                draftType: m.d.FirstThreadMessage,
                 options: { stickerIds: i },
                 parsedMessage: h.ZP.parse(e, n)
             });
@@ -62,7 +62,7 @@ function I(e) {
                 let h = new u.Z(e);
                 h.on('error', (e, a, s) => {
                     if (a === E.evJ.EXPLICIT_CONTENT) {
-                        let e = (0, m.r)();
+                        let e = (0, p.r)();
                         null != s &&
                             null != s.attachments &&
                             s.attachments.length > 0 &&
@@ -84,14 +84,14 @@ function I(e) {
                     } else if (a === E.evJ.ENTITY_TOO_LARGE) {
                         let e = (0, _.dg)(t.getGuildId());
                         o.Z.show({
-                            title: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-                            body: C.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: (0, _.Ng)(e) })
+                            title: g.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+                            body: g.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: (0, _.Ng)(e) })
                         });
                     } else
                         a === E.evJ.TOO_MANY_ATTACHMENTS &&
                             o.Z.show({
-                                title: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-                                body: C.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({ limit: E.dN1 })
+                                title: g.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+                                body: g.Z.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({ limit: E.dN1 })
                             });
                     d({ body: s });
                 }),

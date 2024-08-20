@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return v;
     }
 }),
     n(47120);
@@ -14,29 +14,29 @@ var i = n(735250),
     u = n(268350),
     d = n(926491),
     h = n(419922),
-    m = n(314897),
-    p = n(375954),
+    p = n(314897),
+    m = n(375954),
     _ = n(594174),
     f = n(626135),
     E = n(51144),
-    C = n(901461),
-    g = n(981631),
+    g = n(901461),
+    C = n(981631),
     I = n(689938),
     x = n(480325);
 let T = '749054660769218631';
-function N(e) {
+function v(e) {
     var t;
     let { channel: n } = e,
-        [s, N] = a.useState('');
+        [s, v] = a.useState('');
     a.useEffect(() => {
         (0, u.FQ)('847199849233514549', !0);
     }, []);
-    let v = (0, r.e7)(
-            [p.Z, m.default],
+    let N = (0, r.e7)(
+            [m.Z, p.default],
             () =>
-                !!l()(p.Z.getMessages(n.id).toArray())
+                !!l()(m.Z.getMessages(n.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== m.default.getId() && e.state === g.yb.SENT && !(0, C.Z)(e))
+                    .find((e) => e.author.id !== p.default.getId() && e.state === C.yb.SENT && !(0, g.Z)(e))
         ),
         S = (0, r.e7)([_.default], () => _.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
         Z = null !== (t = E.ZP.useName(S)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
@@ -45,14 +45,14 @@ function N(e) {
             if (null == s || '' === s)
                 try {
                     await c.Z.sendGreetMessage(n.id, T),
-                        f.default.track(g.rMx.DM_EMPTY_ACTION, {
+                        f.default.track(C.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
                             source: 'Wave',
                             type: 'Send wave'
                         });
                 } catch (e) {
-                    !e.ok && 429 === e.status && N(I.Z.Messages.RATE_LIMITED);
+                    !e.ok && 429 === e.status && v(I.Z.Messages.RATE_LIMITED);
                 }
         }, [n.id, n.type, s]),
         b = I.Z.Messages.WAVE_TO.format({ username: Z }),
@@ -65,7 +65,7 @@ function N(e) {
                       children: s
                   })
                 : null;
-    return v
+    return N
         ? (0, i.jsxs)('div', {
               className: x.containerCompact,
               children: [

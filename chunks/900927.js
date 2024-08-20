@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = n(735250);
@@ -14,25 +14,25 @@ var a = n(399606),
     u = n(430824),
     d = n(709054),
     h = n(689938),
-    m = n(91941);
-function p(e) {
-    let { userId: t, guildId: n, textClassName: p, tooltipDelay: _ } = e,
+    p = n(91941);
+function m(e) {
+    let { userId: t, guildId: n, textClassName: m, tooltipDelay: _ } = e,
         f = (0, a.e7)([o.default], () => o.default.locale),
         E = (0, a.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
-        C = (0, a.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
-        g = (0, l.FI)(d.default.extractTimestamp(t), f),
-        I = (0, l.FI)(null == C ? void 0 : C.joinedAt, f);
-    return null == E || null == C
+        g = (0, a.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
+        C = (0, l.FI)(d.default.extractTimestamp(t), f),
+        I = (0, l.FI)(null == g ? void 0 : g.joinedAt, f);
+    return null == E || null == g
         ? (0, i.jsx)(s.Text, {
               variant: 'text-sm/normal',
-              className: p,
-              children: g
+              className: m,
+              children: C
           })
         : (0, i.jsxs)('div', {
-              className: m.memberSinceWrapper,
+              className: p.memberSinceWrapper,
               children: [
                   (0, i.jsxs)('div', {
-                      className: m.memberSince,
+                      className: p.memberSince,
                       children: [
                           (0, i.jsx)(s.Tooltip, {
                               text: h.Z.Messages.DISCORD_NAME,
@@ -44,19 +44,19 @@ function p(e) {
                                       height: 28,
                                       color: 'currentColor',
                                       ...e,
-                                      className: m.discordIcon
+                                      className: p.discordIcon
                                   })
                           }),
                           (0, i.jsx)(s.Text, {
                               variant: 'text-sm/normal',
-                              className: p,
-                              children: g
+                              className: m,
+                              children: C
                           })
                       ]
                   }),
-                  (0, i.jsx)('div', { className: m.divider }),
+                  (0, i.jsx)('div', { className: p.divider }),
                   (0, i.jsxs)('div', {
-                      className: m.memberSince,
+                      className: p.memberSince,
                       children: [
                           (0, i.jsx)(s.Tooltip, {
                               text: E.name,
@@ -70,7 +70,7 @@ function p(e) {
                           }),
                           (0, i.jsx)(s.Text, {
                               variant: 'text-sm/normal',
-                              className: p,
+                              className: m,
                               children: I
                           })
                       ]

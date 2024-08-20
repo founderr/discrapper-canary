@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
@@ -14,7 +14,7 @@ var i = n(470079),
     u = n(897674),
     d = n(206583);
 let h = new Set([a.s.PLAYED_GAME, a.s.WATCHED_MEDIA, a.s.TOP_GAME, a.s.TOP_ARTIST, a.s.LISTENED_SESSION, a.s.LAUNCHED_ACTIVITY]);
-function m(e) {
+function p(e) {
     let t = (0, u.Z)(d.YN.GLOBAL_FEED);
     (t = (0, r.Z)({
         entries: t,

@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return j;
     },
     i: function () {
-        return j;
+        return L;
     }
 }),
     n(47120),
@@ -18,32 +18,32 @@ var i = n(735250),
     u = n(704215),
     d = n(481060),
     h = n(699682),
-    m = n(367907),
-    p = n(812206),
+    p = n(367907),
+    m = n(812206),
     _ = n(644914),
     f = n(434404),
     E = n(330010),
-    C = n(314897),
-    g = n(430824),
+    g = n(314897),
+    C = n(430824),
     I = n(594174),
     x = n(259580),
     T = n(585483),
-    N = n(63063),
-    v = n(358085),
+    v = n(63063),
+    N = n(358085),
     S = n(709054),
     Z = n(967128),
     A = n(981631),
     M = n(231873),
     b = n(689938),
     R = n(616616);
-function j(e) {
+function L(e) {
     let { className: t, iconUrl: n, icon: s, header: r, completed: o, onClick: c } = e,
-        [u, m] = a.useState(!1),
-        p = (0, h.Z)(o);
+        [u, p] = a.useState(!1),
+        m = (0, h.Z)(o);
     return (
         a.useEffect(() => {
-            null != p && o !== p && (m(!0), setTimeout(() => m(!1), 1000));
-        }, [o, p]),
+            null != m && o !== m && (p(!0), setTimeout(() => p(!1), 1000));
+        }, [o, m]),
         (0, i.jsxs)(d.Clickable, {
             className: l()(t, R.card, { [R.completed]: o }),
             onClick: c,
@@ -74,12 +74,12 @@ function j(e) {
         })
     );
 }
-function L(e) {
+function j(e) {
     let { channel: t } = e,
-        s = (0, c.e7)([g.Z], () => (null != t ? g.Z.getGuild(t.getGuildId()) : null), [t]),
+        s = (0, c.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
         h = null != s && S.default.extractTimestamp(s.id) < Date.now() - A._8R,
-        x = (0, c.e7)([C.default], () => (null == s ? void 0 : s.ownerId) === C.default.getId(), [s]),
-        { canInvite: L, canManageGuild: P, canMessage: O } = (0, _.TE)(t, s),
+        x = (0, c.e7)([g.default], () => (null == s ? void 0 : s.ownerId) === g.default.getId(), [s]),
+        { canInvite: j, canManageGuild: O, canMessage: P } = (0, _.TE)(t, s),
         y = (0, c.e7)([I.default], () => {
             var e, t;
             return (null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
@@ -93,7 +93,7 @@ function L(e) {
             handleAddApplication: V
         } = (function (e) {
             let t = a.useCallback(() => {
-                    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.INVITE
                     }),
@@ -110,7 +110,7 @@ function L(e) {
                             });
                 }, [e]),
                 s = a.useCallback(() => {
-                    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.SEND_MESSAGE
                     }),
@@ -120,14 +120,14 @@ function L(e) {
                         });
                 }, []),
                 l = a.useCallback(() => {
-                    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.PERSONALIZE_SERVER
                     }),
                         null != e && f.Z.open(e.id, A.pNK.OVERVIEW, { section: A.jXE.CHANNEL_WELCOME_CTA });
                 }, [e]),
                 r = a.useCallback(() => {
-                    m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: M.Ft.CHANNEL_WELCOME,
                         action: M.j7.DOWNLOAD
                     }),
@@ -147,7 +147,7 @@ function L(e) {
                 handleDownload: r,
                 handleAddApplication: a.useCallback(() => {
                     null != e &&
-                        (m.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        (p.ZP.trackWithMetadata(A.rMx.SERVER_SETUP_CTA_CLICKED, {
                             setup_type: M.Ft.CHANNEL_WELCOME,
                             action: M.j7.ADD_APP
                         }),
@@ -225,7 +225,7 @@ function L(e) {
                 }
             );
         })(F),
-        Y = (0, c.e7)([p.Z], () => p.Z.getGuildApplicationIds(null == s ? void 0 : s.id)).length > 0;
+        Y = (0, c.e7)([m.Z], () => m.Z.getGuildApplicationIds(null == s ? void 0 : s.id)).length > 0;
     if (
         (a.useEffect(() => {
             var e;
@@ -236,14 +236,14 @@ function L(e) {
         return null;
     let K = [];
     !h &&
-        (L &&
+        (j &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
                     {
                         className: R.cardWrapper,
                         style: F ? { opacity: z[K.length] } : {},
-                        children: (0, i.jsx)(j, {
+                        children: (0, i.jsx)(L, {
                             iconUrl: n(538548),
                             header: b.Z.Messages.WELCOME_CTA_INVITE_TITLE,
                             completed: D,
@@ -253,14 +253,14 @@ function L(e) {
                     'invite'
                 )
             ),
-        P &&
+        O &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
                     {
                         className: R.cardWrapper,
                         style: F ? { opacity: z[K.length] } : {},
-                        children: (0, i.jsx)(j, {
+                        children: (0, i.jsx)(L, {
                             iconUrl: n(753033),
                             header: b.Z.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
                             completed: U,
@@ -270,14 +270,14 @@ function L(e) {
                     'customize'
                 )
             ),
-        O &&
+        P &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
                     {
                         className: R.cardWrapper,
                         style: F ? { opacity: z[K.length] } : {},
-                        children: (0, i.jsx)(j, {
+                        children: (0, i.jsx)(L, {
                             iconUrl: n(15717),
                             header: b.Z.Messages.WELCOME_CTA_MESSAGE_TITLE,
                             completed: k,
@@ -287,14 +287,14 @@ function L(e) {
                     'message'
                 )
             ),
-        (0, v.isWeb)() &&
+        (0, N.isWeb)() &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
                     {
                         className: R.cardWrapper,
                         style: F ? { opacity: z[K.length] } : {},
-                        children: (0, i.jsx)(j, {
+                        children: (0, i.jsx)(L, {
                             iconUrl: n(435921),
                             header: b.Z.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
                             completed: y,
@@ -310,7 +310,7 @@ function L(e) {
                 {
                     className: R.cardWrapper,
                     style: F ? { opacity: z[K.length] } : {},
-                    children: (0, i.jsx)(j, {
+                    children: (0, i.jsx)(L, {
                         iconUrl: n(881454),
                         header: b.Z.Messages.WELCOME_CTA_APPS_RECOMMENDATION_TITLE,
                         completed: Y,
@@ -322,7 +322,7 @@ function L(e) {
         ));
     let q = x ? b.Z.Messages.WELCOME_CTA_SUBTITLE_OWNER : b.Z.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
     h && (q = b.Z.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-    let X = ''.concat(N.Z.getArticleURL(A.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+    let X = ''.concat(v.Z.getArticleURL(A.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
     return (0, i.jsx)(Z.ZP, {
         channelId: t.id,
         children: (0, i.jsx)('div', {

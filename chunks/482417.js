@@ -14,23 +14,23 @@ function u(e) {
         { entry: l, baseEntryData: u } = e,
         o = l.extra.entries[0].media,
         c = o.artists[0],
-        { title: d, provider: m, image_url: f } = o,
-        E = c.name,
+        { title: d, provider: m, image_url: E } = o,
+        f = c.name,
         p = {
             onClick: () => (0, r.o)(a.Hw.TRACK, o.external_id),
             ariaDescription: s.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: d })
         },
         C = {
             onClick: () => (0, r.o)(a.Hw.ARTIST, c.external_id),
-            ariaDescription: s.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: E })
+            ariaDescription: s.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: f })
         };
     return (
         m === t.p.SPOTIFY && (n = { type: i.kG.SPOTIFY }),
         {
             ...u,
             title: d,
-            subtitle: E,
-            thumbnailUrl: f,
+            subtitle: f,
+            thumbnailUrl: E,
             titleClickable: p,
             subtitleClickable: C,
             thumbnailClickable: p,

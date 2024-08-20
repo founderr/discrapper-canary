@@ -14,13 +14,13 @@ var i,
     u = n(481060),
     d = n(792125),
     h = n(542094),
-    m = n(182906),
-    p = n(556505),
+    p = n(182906),
+    m = n(556505),
     _ = n(513202),
     f = n(981631),
     E = n(689938),
-    C = n(774867);
-let g = ['embedded_cover'],
+    g = n(774867);
+let C = ['embedded_cover'],
     I = {
         tension: 800,
         friction: 24
@@ -30,8 +30,8 @@ function x(e) {
     let { channel: n, activityItem: i, onClick: a, aspectRatio: r = 0, animatedDivClass: x } = e,
         {
             onActivityItemSelected: T,
-            imageBackground: N,
-            activityAction: v,
+            imageBackground: v,
+            activityAction: N,
             labelType: S
         } = (0, h.ZP)({
             channel: n,
@@ -40,7 +40,7 @@ function x(e) {
             locationObject: {},
             onActivityItemSelected: a,
             embeddedActivitiesManager: _.Z,
-            assetNames: g
+            assetNames: C
         }),
         [Z, A] = l.useState(!1),
         M = l.useCallback(() => {
@@ -52,10 +52,10 @@ function x(e) {
         R = l.useMemo(
             () =>
                 (0, s.jsx)('div', {
-                    className: C.overlayBadge,
+                    className: g.overlayBadge,
                     children: (0, s.jsx)('div', {
-                        className: C.badgeContainer,
-                        children: (0, s.jsx)(p.Z, {
+                        className: g.badgeContainer,
+                        children: (0, s.jsx)(m.Z, {
                             name: i.application.name,
                             labelType: S
                         })
@@ -63,13 +63,13 @@ function x(e) {
                 }),
             [i.application.name, S]
         ),
-        j = l.useMemo(() => {
-            switch (v) {
+        L = l.useMemo(() => {
+            switch (N) {
                 case h.JS.JOIN:
                     return (0, s.jsx)('div', {
-                        className: C.activityAction,
+                        className: g.activityAction,
                         children: (0, s.jsx)('div', {
-                            className: C.activityActionButton,
+                            className: g.activityActionButton,
                             children: (0, s.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
@@ -79,9 +79,9 @@ function x(e) {
                     });
                 case h.JS.LEAVE:
                     return (0, s.jsx)('div', {
-                        className: C.activityAction,
+                        className: g.activityAction,
                         children: (0, s.jsx)('div', {
-                            className: o()(C.activityActionButton, C.activityActionButtonDanger),
+                            className: o()(g.activityActionButton, g.activityActionButtonDanger),
                             children: (0, s.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
@@ -93,7 +93,7 @@ function x(e) {
                 default:
                     return (0, s.jsx)(s.Fragment, {});
             }
-        }, [v]);
+        }, [N]);
     return (0, s.jsx)(u.Button, {
         onClick: T,
         color: 'transparent',
@@ -103,7 +103,7 @@ function x(e) {
         onBlur: b,
         onMouseEnter: M,
         onMouseLeave: b,
-        innerClassName: C.activityItemButtonInnerClass,
+        innerClassName: g.activityItemButtonInnerClass,
         children: (0, s.jsx)(u.Spring, {
             config: I,
             from: { value: 0 },
@@ -111,23 +111,23 @@ function x(e) {
             children: (e) => {
                 let { value: t } = e;
                 return (0, s.jsx)(c.animated.div, {
-                    className: o()((0, d.Q)(f.BRd.DARK), C.activityItem, x, {
-                        [C.activityItem_13_11]: 0 === r,
-                        [C.activityItem_16_9]: 1 === r
+                    className: o()((0, d.Q)(f.BRd.DARK), g.activityItem, x, {
+                        [g.activityItem_13_11]: 0 === r,
+                        [g.activityItem_16_9]: 1 === r
                     }),
                     style: {
                         transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))
                     },
                     children: (0, s.jsxs)(s.Fragment, {
                         children: [
-                            (0, s.jsx)(m.Z, {
-                                imageBackground: N,
+                            (0, s.jsx)(p.Z, {
+                                imageBackground: v,
                                 applicationName: i.application.name,
-                                imageClassName: C.activitySuggestionImage,
-                                imageNotFoundClassName: C.brokenImageIconWrapper
+                                imageClassName: g.activitySuggestionImage,
+                                imageNotFoundClassName: g.brokenImageIconWrapper
                             }),
                             R,
-                            j
+                            L
                         ]
                     })
                 });

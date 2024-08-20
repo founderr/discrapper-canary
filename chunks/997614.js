@@ -14,20 +14,20 @@ var i = n(735250),
     u = n(242291),
     d = n(792165),
     h = n(603074),
-    m = n(294629),
-    p = n(390322),
+    p = n(294629),
+    m = n(390322),
     _ = n(871499),
     f = n(131951),
     E = n(459273),
-    C = n(304388),
-    g = n(981631),
+    g = n(304388),
+    C = n(981631),
     I = n(689938);
 function x(e) {
     let { channel: t, themeable: x } = e,
         T = t.getGuildId(),
-        { mute: N, suppress: v } = (0, m.Z)(t),
+        { mute: v, suppress: N } = (0, p.Z)(t),
         S = (0, s.e7)([f.Z], () => f.Z.isDeaf()),
-        Z = N || v || S,
+        Z = v || N || S,
         A = (0, u.sR)({ isSoundboardButtonDisabled: Z }),
         [M, b] = (0, c.cv)(A);
     function R(e) {
@@ -41,21 +41,21 @@ function x(e) {
                     });
             });
     }
-    let j = a.useRef(null),
-        L = a.useCallback(() => {
+    let L = a.useRef(null),
+        j = a.useCallback(() => {
             var e;
-            null === (e = j.current) || void 0 === e || e.hidePopout();
+            null === (e = L.current) || void 0 === e || e.hidePopout();
         }, []);
     return (
         (0, E.yp)({
-            event: g.CkL.TOGGLE_SOUNDBOARD,
-            handler: L
+            event: C.CkL.TOGGLE_SOUNDBOARD,
+            handler: j
         }),
-        (0, i.jsx)(C.Z, {
-            ref: j,
+        (0, i.jsx)(g.Z, {
+            ref: L,
             renderPopout: (e) => {
                 let { closePopout: n } = e;
-                return (0, i.jsx)(p.Z, {
+                return (0, i.jsx)(m.Z, {
                     children: (0, i.jsx)(h.Z, {
                         guildId: T,
                         channel: t,
@@ -74,8 +74,8 @@ function x(e) {
                 (0, i.jsx)(_.Z, {
                     themeable: x,
                     label: (function () {
-                        if (N) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-                        if (v) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+                        if (v) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+                        if (N) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
                         if (S) return I.Z.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
                     })(),
                     iconComponent: r.SoundboardIcon,

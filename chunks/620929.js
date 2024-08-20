@@ -1,6 +1,6 @@
 n.d(t, {
     p: function () {
-        return v;
+        return N;
     }
 });
 var i = n(735250),
@@ -13,17 +13,17 @@ var i = n(735250),
     u = n(481060),
     d = n(430824),
     h = n(650461),
-    m = n(353093),
-    p = n(105671),
+    p = n(353093),
+    m = n(105671),
     _ = n(532490),
     f = n(979264),
     E = n(570938),
-    C = n(550271),
-    g = n(116175),
+    g = n(550271),
+    C = n(116175),
     I = n(308083),
     x = n(689938),
     T = n(329809);
-function N(e) {
+function v(e) {
     let { guildId: t, tag: n, badge: a, primaryColor: s, secondaryColor: l } = e;
     return null == n || 0 === n.length
         ? (0, i.jsx)('div', {
@@ -40,7 +40,7 @@ function N(e) {
               textVariant: 'heading-lg/semibold',
               textColor: 'text-normal',
               badgeSize: I.NC.SIZE_24,
-              clanBadge: (0, i.jsx)(C.A, {
+              clanBadge: (0, i.jsx)(g.A, {
                   className: T.charterClanBadge,
                   badge: a,
                   width: I.NC.SIZE_24,
@@ -50,10 +50,10 @@ function N(e) {
               })
           });
 }
-function v(e) {
+function N(e) {
     let { applicationIds: t, playstyle: n, className: s } = e,
         r = a.useMemo(() => Array.from(t), [t]),
-        o = (0, p.i)(r),
+        o = (0, m.i)(r),
         c = a.useMemo(() => {
             if (null == o) return null;
             let e = (0, I.mv)(n);
@@ -83,25 +83,25 @@ t.Z =
                   {
                       gameApplicationIds: l,
                       playstyle: r,
-                      interests: p,
+                      interests: m,
                       tag: f,
                       badgeKind: E,
-                      badgePrimaryColor: C,
+                      badgePrimaryColor: g,
                       badgeSecondaryColor: S
                   } = (0, c.cj)([h.ZP], () => {
                       var e;
                       return null !== (e = h.ZP.getStateForGuild(t).progress) && void 0 !== e ? e : n;
                   }),
-                  Z = a.useMemo(() => ((null == p ? void 0 : p.size) > 0 ? (0, m.f6)(Array.from(p), I.nt) : null), [p]);
+                  Z = a.useMemo(() => ((null == m ? void 0 : m.size) > 0 ? (0, p.f6)(Array.from(m), I.nt) : null), [m]);
               return (0, i.jsxs)(_.Z, {
                   ...e,
                   children: [
-                      (0, i.jsx)(N, {
+                      (0, i.jsx)(v, {
                           guildId: t,
                           tag: f,
                           badge: E,
-                          primaryColor: null != C ? C : g.Nh,
-                          secondaryColor: null != S ? S : g.vY
+                          primaryColor: null != g ? g : C.Nh,
+                          secondaryColor: null != S ? S : C.vY
                       }),
                       (0, i.jsx)(u.Heading, {
                           variant: 'heading-xl/normal',
@@ -121,7 +121,7 @@ t.Z =
                           className: T.overviewText,
                           children: x.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({ date: o()().format('MMMM YYYY') })
                       }),
-                      (0, i.jsx)(v, {
+                      (0, i.jsx)(N, {
                           applicationIds: l,
                           playstyle: r
                       }),

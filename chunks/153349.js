@@ -14,25 +14,25 @@ var i,
     u = n.n(c),
     d = n(442837),
     h = n(481060),
-    m = n(239091),
-    p = n(99690),
+    p = n(239091),
+    m = n(99690),
     _ = n(58540),
     f = n(665149),
     E = n(484459),
-    C = n(103575),
-    g = n(271383),
+    g = n(103575),
+    C = n(271383),
     I = n(496675),
     x = n(158776),
     T = n(471253),
-    N = n(431328),
-    v = n(145834),
+    v = n(431328),
+    N = n(145834),
     S = n(590415),
     Z = n(614173),
     A = n(618896),
     M = n(231338),
     b = n(689938),
     R = n(470407);
-let j = l.memo(function (e) {
+let L = l.memo(function (e) {
         let { toggleRequestToSpeakSidebar: t, chatOpen: n } = e,
             i = (0, s.jsx)(f.ZP.Icon, {
                 icon: h.XSmallIcon,
@@ -52,7 +52,7 @@ let j = l.memo(function (e) {
             ]
         });
     }),
-    L = l.memo(function (e) {
+    j = l.memo(function (e) {
         let { channel: t, participant: i, tempDisableOnInit: a = !1 } = e,
             [r, c] = l.useState(a);
         l.useEffect(() => {
@@ -62,22 +62,22 @@ let j = l.memo(function (e) {
         }, []);
         let f = t.getGuildId();
         u()(null != f, 'Channel cannot be guildless');
-        let { isMobile: I, status: N } = (0, d.cj)([x.Z], () => ({
+        let { isMobile: I, status: v } = (0, d.cj)([x.Z], () => ({
                 isMobile: x.Z.isMobileOnline(i.user.id),
                 status: x.Z.getStatus(i.user.id, f)
             })),
-            Z = (0, d.e7)([g.ZP], () => g.ZP.getMember(f, i.user.id)),
+            Z = (0, d.e7)([C.ZP], () => C.ZP.getMember(f, i.user.id)),
             A = l.useMemo(() => ({ [f]: [i.user.id] }), [f, i.user.id]);
         (0, _.$)(A);
         let M = i.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-        function j() {
+        function L() {
             (0, T.DT)(t, i.user.id, !1);
         }
-        function L() {
+        function j() {
             (0, T.DT)(t, i.user.id, !0);
         }
-        let P = (e) => {
-            (0, m.jW)(e, async () => {
+        let O = (e) => {
+            (0, p.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
                 return (n) =>
                     (0, s.jsx)(e, {
@@ -99,7 +99,7 @@ let j = l.memo(function (e) {
                             channelId: t.id
                         }),
                     renderPopout: (e) =>
-                        (0, s.jsx)(C.Z, {
+                        (0, s.jsx)(g.Z, {
                             ...e,
                             location: 'RequestToSpeakSidebar',
                             userId: i.user.id,
@@ -112,15 +112,15 @@ let j = l.memo(function (e) {
                         var t;
                         return (0, s.jsxs)(h.Clickable, {
                             className: R.participantMemberContainer,
-                            onContextMenu: P,
+                            onContextMenu: O,
                             ...e,
                             children: [
-                                (0, s.jsx)(p.Z, {
+                                (0, s.jsx)(m.Z, {
                                     size: h.AvatarSizes.SIZE_40,
                                     className: R.participantAvatar,
                                     user: i.user,
                                     isMobile: I,
-                                    status: N
+                                    status: v
                                 }),
                                 (0, s.jsxs)('div', {
                                     className: R.participantTextContainer,
@@ -133,7 +133,7 @@ let j = l.memo(function (e) {
                                         (0, s.jsx)(h.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-secondary',
-                                            children: (0, v.$)(i)
+                                            children: (0, N.$)(i)
                                         })
                                     ]
                                 })
@@ -149,7 +149,7 @@ let j = l.memo(function (e) {
                             innerClassName: R.buttonContainer,
                             look: h.Button.Looks.BLANK,
                             size: h.Button.Sizes.NONE,
-                            onClick: j,
+                            onClick: L,
                             disabled: M || r,
                             children: (0, s.jsx)(h.MicrophoneArrowRightIcon, {
                                 size: 'xs',
@@ -165,7 +165,7 @@ let j = l.memo(function (e) {
                             innerClassName: o()(R.buttonContainer, R.buttonMargin),
                             look: h.Button.Looks.BLANK,
                             size: h.Button.Sizes.NONE,
-                            onClick: L,
+                            onClick: j,
                             children: (0, s.jsx)(h.XSmallIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
@@ -175,7 +175,7 @@ let j = l.memo(function (e) {
             ]
         });
     }),
-    P = l.memo(function (e) {
+    O = l.memo(function (e) {
         let { channel: t } = e,
             [n, i] = (0, Z.h)(t.id);
         return (0, s.jsx)(h.FormSwitch, {
@@ -185,7 +185,7 @@ let j = l.memo(function (e) {
             children: b.Z.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
         });
     }),
-    O = l.memo(function () {
+    P = l.memo(function () {
         return (0, s.jsxs)('div', {
             className: R.emptyStateContainer,
             children: [
@@ -207,12 +207,12 @@ let j = l.memo(function (e) {
     });
 function y(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
-        a = (0, N.Fd)(t.id),
+        a = (0, v.Fd)(t.id),
         l = [(0, d.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, a.length)];
     return (0, s.jsxs)('div', {
         className: o()(R.container, { [R.chatOpen]: i }),
         children: [
-            (0, s.jsx)(j, {
+            (0, s.jsx)(L, {
                 toggleRequestToSpeakSidebar: n,
                 chatOpen: i
             }),
@@ -237,12 +237,12 @@ function y(e) {
                     let { section: n, row: i } = e;
                     switch (n) {
                         case 0:
-                            return (0, s.jsx)(P, { channel: t }, 'rts-toggle');
+                            return (0, s.jsx)(O, { channel: t }, 'rts-toggle');
                         case 1: {
-                            if (0 === a.length) return (0, s.jsx)(O, {}, 'participants-empty');
+                            if (0 === a.length) return (0, s.jsx)(P, {}, 'participants-empty');
                             let e = a[i];
                             return (0, s.jsx)(
-                                L,
+                                j,
                                 {
                                     channel: t,
                                     participant: e,

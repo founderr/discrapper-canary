@@ -8,23 +8,23 @@ var i = n(735250),
     u = n(481060),
     d = n(367907),
     h = n(499254),
-    m = n(424602),
-    p = n(541099),
+    p = n(424602),
+    m = n(541099),
     _ = n(827498),
     f = n(663924),
     E = n(998698),
-    C = n(873387),
-    g = n(605236),
+    g = n(873387),
+    C = n(605236),
     I = n(291407),
     x = n(981631),
     T = n(314734),
-    N = n(921944),
-    v = n(689938),
+    v = n(921944),
+    N = n(689938),
     S = n(664179);
 let Z = a.forwardRef(function (e, t) {
     let { type: n, animateRef: s } = e,
-        m = (0, r.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
-        { Component: f, events: E, play: C } = (0, c.w)();
+        p = (0, r.e7)([m.Z], () => m.Z.shouldShowPopup() && m.Z.activeViewType() === n),
+        { Component: f, events: E, play: g } = (0, c.w)();
     a.useImperativeHandle(
         s,
         () => ({
@@ -35,8 +35,8 @@ let Z = a.forwardRef(function (e, t) {
         [E]
     );
     let I = a.useCallback(() => {
-        (0, d.yw)(x.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, g.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h._(_._b.TEXT, n)), C();
-    }, [m, n, C]);
+        (0, d.yw)(x.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.y(_.ti.DISMISSED) : ((0, C.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: v.L.TAKE_ACTION }), h._(_._b.TEXT, n)), g();
+    }, [p, n, g]);
     return (0, i.jsx)('div', {
         className: l()(S.buttonContainer, T.t4),
         ref: t,
@@ -44,9 +44,9 @@ let Z = a.forwardRef(function (e, t) {
             look: u.Button.Looks.BLANK,
             size: u.Button.Sizes.NONE,
             tabIndex: 0,
-            className: l()(S.button, { [S.buttonActive]: m }),
+            className: l()(S.button, { [S.buttonActive]: p }),
             onClick: I,
-            'aria-label': v.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
+            'aria-label': N.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
             focusProps: {
                 offset: {
                     top: 4,
@@ -64,17 +64,17 @@ let Z = a.forwardRef(function (e, t) {
 t.Z = a.memo(function (e) {
     let { channel: t, type: n, animateRef: s } = e,
         l = a.useRef(null),
-        o = (0, C.g)(t),
+        o = (0, g.g)(t),
         { activeCommand: c } = (0, r.cj)([E.Z], () => {
             var e;
             return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? E.Z.getActiveCommand(t.id) : null };
         }),
-        u = m.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
+        u = p.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
         d = (0, r.e7)(
-            [p.Z],
+            [m.Z],
             () => {
-                let e = p.Z.activeViewType();
-                return null != e && e === n && p.Z.shouldShowPopup();
+                let e = m.Z.activeViewType();
+                return null != e && e === n && m.Z.shouldShowPopup();
             },
             [n]
         );

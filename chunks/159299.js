@@ -9,13 +9,13 @@ var i,
     u = n(797316),
     d = n(158776),
     h = n(885110),
-    m = n(594174),
-    p = n(823379),
+    p = n(594174),
+    m = n(823379),
     _ = n(700785),
     f = n(709054),
     E = n(51144),
-    C = n(981631);
-function g(e, t, n) {
+    g = n(981631);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -69,7 +69,7 @@ class x {
     }
     addUser(e, t, n, i, a) {
         this.allUserIds.add(e);
-        let s = m.default.getUser(e);
+        let s = p.default.getUser(e);
         if (null == s || '' === s.username) return;
         !(t in this.sections) &&
             (this.sections[t] = {
@@ -123,35 +123,35 @@ class x {
     calculateNewState(e, t) {
         var n, i;
         let a = c.ZP.getMember(this.guildId, e),
-            s = m.default.getUser(e),
-            l = m.default.getCurrentUser(),
+            s = p.default.getUser(e),
+            l = p.default.getCurrentUser(),
             r = (null == s ? void 0 : s.id) === (null == l ? void 0 : l.id) ? h.Z.getStatus() : d.Z.getStatus(e, this.guildId),
             o =
                 null != s &&
                 null != t &&
                 _.BT({
-                    permission: C.Plq.VIEW_CHANNEL,
+                    permission: g.Plq.VIEW_CHANNEL,
                     user: s,
                     context: t
                 }),
-            u = r !== C.Skl.OFFLINE && r !== C.Skl.INVISIBLE && r !== C.Skl.UNKNOWN ? (null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : 'online') : 'offline',
-            p = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : E.ZP.getName(s);
-        return [u, null == p ? void 0 : p.toLowerCase(), o];
+            u = r !== g.Skl.OFFLINE && r !== g.Skl.INVISIBLE && r !== g.Skl.UNKNOWN ? (null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : 'online') : 'offline',
+            m = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : E.ZP.getName(s);
+        return [u, null == m ? void 0 : m.toLowerCase(), o];
     }
     constructor(e, t, n) {
-        g(this, 'guildId', void 0), g(this, 'parentId', void 0), g(this, 'threadId', void 0), g(this, 'version', void 0), g(this, 'sections', void 0), g(this, 'allUserIds', void 0), (this.guildId = e), (this.parentId = t), (this.threadId = n), (this.version = 0), (this.sections = {}), (this.allUserIds = new Set());
+        C(this, 'guildId', void 0), C(this, 'parentId', void 0), C(this, 'threadId', void 0), C(this, 'version', void 0), C(this, 'sections', void 0), C(this, 'allUserIds', void 0), (this.guildId = e), (this.parentId = t), (this.threadId = n), (this.version = 0), (this.sections = {}), (this.allUserIds = new Set());
     }
 }
 function T(e) {
-    return N(e.user.id);
+    return v(e.user.id);
 }
-function N(e) {
+function v(e) {
     if (null == e) return !1;
     let t = !1;
     for (let n in I) I[n].updateUserId(e) && (t = !0);
     return t;
 }
-function v(e) {
+function N(e) {
     let { guildId: t } = e,
         n = !1;
     for (let e in I) I[e].guildId === t && (I[e].rebuild(), (n = !0));
@@ -159,7 +159,7 @@ function v(e) {
 }
 class S extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, c.ZP, u.Z, d.Z, h.Z, m.default),
+        this.waitFor(o.Z, c.ZP, u.Z, d.Z, h.Z, p.default),
             this.syncWith([u.Z], () => {
                 let e = u.Z.getSubscribedThreadIds(),
                     t = !1;
@@ -168,7 +168,7 @@ class S extends (i = l.ZP.Store) {
             }),
             this.syncWith([h.Z], () => {
                 var e;
-                return N(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+                return v(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
             });
     }
     getMemberListVersion(e) {
@@ -187,7 +187,7 @@ class S extends (i = l.ZP.Store) {
         return null !== (a = null == l ? void 0 : l.canViewChannel) && void 0 !== a && a;
     }
 }
-g(S, 'displayName', 'ThreadMemberListStore'),
+C(S, 'displayName', 'ThreadMemberListStore'),
     (t.Z = new S(r.Z, {
         CONNECTION_OPEN: function () {
             I = {};
@@ -233,7 +233,7 @@ g(S, 'displayName', 'ThreadMemberListStore'),
             return t
                 .map((e) => {
                     let { user: t } = e;
-                    return N(t.id);
+                    return v(t.id);
                 })
                 .some((e) => e);
         },
@@ -247,7 +247,7 @@ g(S, 'displayName', 'ThreadMemberListStore'),
                         var t;
                         return null === (t = e.user) || void 0 === t ? void 0 : t.id;
                     })
-                    .filter(p.lm)
+                    .filter(m.lm)
                     .uniq()
                     .value(),
                 i = !1;
@@ -263,9 +263,9 @@ g(S, 'displayName', 'ThreadMemberListStore'),
             }
             return n;
         },
-        GUILD_ROLE_UPDATE: v,
-        GUILD_ROLE_DELETE: v,
+        GUILD_ROLE_UPDATE: N,
+        GUILD_ROLE_DELETE: N,
         PASSIVE_UPDATE_V2: function (e) {
-            return e.members.reduce((e, t) => N(t.user.id) || e, !1);
+            return e.members.reduce((e, t) => v(t.user.id) || e, !1);
         }
     }));

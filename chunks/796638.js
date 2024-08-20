@@ -3,10 +3,10 @@ n.d(t, {
         return E;
     },
     ZP: function () {
-        return C;
+        return g;
     },
     cF: function () {
-        return m;
+        return p;
     }
 }),
     n(47120),
@@ -21,8 +21,8 @@ var i = n(735250),
     u = n(27457),
     d = n(354459),
     h = n(835894);
-let m = 112,
-    p = (16 / 9) * m + 8,
+let p = 112,
+    m = (16 / 9) * p + 8,
     _ = 10 * o.Z.Millis.SECOND;
 function f(e) {
     var t;
@@ -73,18 +73,18 @@ function E(e, t) {
                 u = a.findIndex(f),
                 h = null;
             -1 !== u && ((h = a[u]), a.splice(u, 1));
-            let m = null != h ? e - p - 8 : e,
-                E = Math.max(0, Math.min(Math.floor((m - 8) / 132), 12, t.length)),
-                C = Math.min((m - 8) / E - 8, p),
-                g = Math.max(0, E - o.length),
+            let p = null != h ? e - m - 8 : e,
+                E = Math.max(0, Math.min(Math.floor((p - 8) / 132), 12, t.length)),
+                g = Math.min((p - 8) / E - 8, m),
+                C = Math.max(0, E - o.length),
                 I = o.slice(0, E),
-                x = a.slice(0, g),
-                T = Array(g);
-            if (g > 0) {
+                x = a.slice(0, C),
+                T = Array(C);
+            if (C > 0) {
                 let e = [];
                 for (let t of x) {
                     let n = r.current[t.id];
-                    null != n && n < g ? (T[n] = t) : e.push(t);
+                    null != n && n < C ? (T[n] = t) : e.push(t);
                 }
                 for (let t = 0; t < T.length; t++) {
                     if (null != T[t]) continue;
@@ -93,15 +93,15 @@ function E(e, t) {
                     T[t] = n;
                 }
             }
-            let N = T.filter(c.lm),
-                v = (0, s.keyBy)((0, s.range)(N.length), (e) => N[e].id);
-            r.current = v;
-            let S = [...I, ...N];
+            let v = T.filter(c.lm),
+                N = (0, s.keyBy)((0, s.range)(v.length), (e) => v[e].id);
+            r.current = N;
+            let S = [...I, ...v];
             return (
                 null != h && S.push(h),
                 {
                     visibleParticipants: S,
-                    participantTileWidth: C
+                    participantTileWidth: g
                 }
             );
         }, [e, t, n]);
@@ -110,8 +110,8 @@ function E(e, t) {
         participantTileWidth: u
     };
 }
-function C(e) {
-    let { participants: t, participantTileWidth: n, selectedParticipantId: a, onDoubleClick: s, onContextMenu: l, onClick: r, channel: o, inCall: c, popoutWindow: d, paused: m = !1 } = e,
+function g(e) {
+    let { participants: t, participantTileWidth: n, selectedParticipantId: a, onDoubleClick: s, onContextMenu: l, onClick: r, channel: o, inCall: c, popoutWindow: d, paused: p = !1 } = e,
         _ = null != d;
     return (0, i.jsx)('div', {
         className: h.root,
@@ -132,9 +132,9 @@ function C(e) {
                         onClick: r,
                         onDoubleClick: s,
                         onContextMenu: l,
-                        width: t ? p : n,
+                        width: t ? m : n,
                         inCall: c,
-                        paused: m,
+                        paused: p,
                         inPopout: _
                     })
                 },

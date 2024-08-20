@@ -33,10 +33,10 @@ class h extends (i = s.PureComponent) {
             (0, a.jsx)(o.Modal, {
                 onCloseRequest: l,
                 renderModal: (t) => {
-                    let { onClose: h, ...m } = t;
+                    let { onClose: h, ...p } = t;
                     return (0, a.jsxs)(o.ModalRoot, {
                         className: u.modal,
-                        ...m,
+                        ...p,
                         children: [
                             (0, a.jsxs)(o.ModalHeader, {
                                 align: c.Z.Justify.BETWEEN,

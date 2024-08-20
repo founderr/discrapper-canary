@@ -14,28 +14,28 @@ var i = n(735250),
     u = n(144144),
     d = n(738619),
     h = n(561472),
-    m = n(607070),
-    p = n(100527),
+    p = n(607070),
+    m = n(100527),
     _ = n(906732),
     f = n(541716),
     E = n(752305),
-    C = n(893718),
-    g = n(303628),
+    g = n(893718),
+    C = n(303628),
     I = n(313201),
     x = n(967128),
     T = n(665149),
-    N = n(294218),
-    v = n(913663),
+    v = n(294218),
+    N = n(913663),
     S = n(268350),
     Z = n(695346),
     A = n(592125),
     M = n(703558),
     b = n(375954),
     R = n(496675),
-    j = n(117530),
-    L = n(459273),
-    P = n(838440),
-    O = n(127654),
+    L = n(117530),
+    j = n(459273),
+    O = n(838440),
+    P = n(127654),
     y = n(241309),
     D = n(928477),
     k = n(456077),
@@ -49,12 +49,12 @@ let F = f.I.THREAD_CREATION;
 function W(e) {
     let { parentChannelId: t, parentMessageId: n, location: a } = e,
         s = (0, r.e7)([A.Z], () => A.Z.getChannel(t)),
-        { analyticsLocations: l } = (0, _.ZP)(p.Z.CREATE_THREAD);
+        { analyticsLocations: l } = (0, _.ZP)(m.Z.CREATE_THREAD);
     return null == s
         ? null
         : (0, i.jsx)(_.Gt, {
               value: l,
-              children: (0, i.jsx)(L.I3, {
+              children: (0, i.jsx)(j.I3, {
                   children: (0, i.jsxs)('section', {
                       'aria-label': H.Z.Messages.CREATE_THREAD,
                       className: G.container,
@@ -90,15 +90,15 @@ function W(e) {
 }
 function z(e) {
     let { parentChannel: t, parentMessageId: n, location: s } = e,
-        u = (0, r.e7)([m.Z], () => m.Z.messageGroupSpacing),
+        u = (0, r.e7)([p.Z], () => p.Z.messageGroupSpacing),
         h = (function () {
-            let e = a.useContext(L.oo);
+            let e = a.useContext(j.oo);
             return a.useCallback(() => {
                 e.bumpDispatchPriority();
             }, [e]);
         })(),
         {
-            threadSettings: p,
+            threadSettings: m,
             setThreadSettings: _,
             updateThreadSettings: f
         } = (function (e, t) {
@@ -122,7 +122,7 @@ function z(e) {
                 updateThreadSettings: s
             };
         })(t, n),
-        { textAreaState: C, setTextAreaState: g } = (function (e, t) {
+        { textAreaState: g, setTextAreaState: C } = (function (e, t) {
             let [n, i] = a.useState((0, E.H2)());
             return (
                 a.useEffect(() => {
@@ -148,7 +148,7 @@ function z(e) {
         I = (0, D.vH)(t),
         {
             nameError: T,
-            messageError: N,
+            messageError: v,
             submit: Z
         } = (function (e) {
             let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: s, textAreaState: l, location: r } = e,
@@ -169,17 +169,17 @@ function z(e) {
                 submit: a.useCallback(
                     async (e, a, s) => {
                         var r, o, u;
-                        null == e && (e = l.textValue), (e = e.trim()), (null == a || 0 === a.length) && (a = null === (r = v.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == s || 0 === s.length) && (s = j.Z.getUploads(t.id, M.d.FirstThreadMessage));
-                        let m = null !== (o = i.name) && void 0 !== o ? o : '',
-                            p = null == n && 0 === m.length,
+                        null == e && (e = l.textValue), (e = e.trim()), (null == a || 0 === a.length) && (a = null === (r = N.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == s || 0 === s.length) && (s = L.Z.getUploads(t.id, M.d.FirstThreadMessage));
+                        let p = null !== (o = i.name) && void 0 !== o ? o : '',
+                            m = null == n && 0 === p.length,
                             _ = '' === e && (null == a || 0 === a.length) && 0 === s.length;
-                        if ((c(p ? (0, y.V_)() : null), d(_ ? (0, y.T4)() : null), p || _))
+                        if ((c(m ? (0, y.V_)() : null), d(_ ? (0, y.T4)() : null), m || _))
                             return {
                                 shouldClear: !1,
                                 shouldRefocus: !0
                             };
                         if (null == n) {
-                            let { valid: n } = await (0, P.v)({
+                            let { valid: n } = await (0, O.v)({
                                 content: e,
                                 stickers: a,
                                 uploads: s,
@@ -217,12 +217,12 @@ function z(e) {
         })({
             parentChannel: t,
             parentMessageId: n,
-            threadSettings: p,
+            threadSettings: m,
             privateThreadMode: I,
-            textAreaState: C,
+            textAreaState: g,
             location: s
         }),
-        A = (0, D.oD)(p, I) ? o.ThreadLockIcon : o.ThreadIcon;
+        A = (0, D.oD)(m, I) ? o.ThreadLockIcon : o.ThreadIcon;
     return (0, i.jsx)('div', {
         className: G.chat,
         onMouseDown: h,
@@ -251,14 +251,14 @@ function z(e) {
                                         (0, i.jsx)(K, {
                                             parentChannel: t,
                                             parentMessageId: n,
-                                            threadSettings: p,
+                                            threadSettings: m,
                                             updateThreadSettings: f,
                                             error: T
                                         }),
                                         t.type === B.d4z.GUILD_TEXT
                                             ? (0, i.jsx)(Y, {
                                                   startedFromMessage: null != n,
-                                                  threadSettings: p,
+                                                  threadSettings: m,
                                                   updateThreadSettings: f,
                                                   privateThreadMode: I
                                               })
@@ -277,10 +277,10 @@ function z(e) {
                         children: [
                             (0, i.jsx)(q, {
                                 parentChannel: t,
-                                textAreaState: C,
-                                setTextAreaState: g,
+                                textAreaState: g,
+                                setTextAreaState: C,
                                 submit: Z,
-                                error: N
+                                error: v
                             }),
                             (0, i.jsx)(d.Z, {
                                 channel: t,
@@ -339,16 +339,16 @@ function K(e) {
         c = null !== (t = s.name) && void 0 !== t ? t : '',
         d = (0, y.Op)(r, { content: c }),
         h = (0, D.Od)(n, a),
-        m = null != a,
-        p = (0, I.Dt)();
+        p = null != a,
+        m = (0, I.Dt)();
     return (0, i.jsx)(o.FormSection, {
         tag: 'label',
-        htmlFor: p,
-        title: H.Z.Messages.THREAD_NAME + (m ? ' (Optional)' : ''),
+        htmlFor: m,
+        title: H.Z.Messages.THREAD_NAME + (p ? ' (Optional)' : ''),
         className: G.formSection,
         children: (0, i.jsx)(o.TextInput, {
             value: c,
-            id: p,
+            id: m,
             placeholder: '' !== h ? h : H.Z.Messages.FORM_THREAD_NAME_PLACEHOLDER,
             maxLength: B.HN8,
             onChange: (e) => {
@@ -364,9 +364,9 @@ function K(e) {
 }
 function q(e) {
     let { parentChannel: t, textAreaState: n, setTextAreaState: s, submit: d, error: h } = e,
-        [m, p] = a.useState(!0),
-        _ = a.useCallback(() => p(!0), []),
-        f = a.useCallback(() => p(!1), []),
+        [p, m] = a.useState(!0),
+        _ = a.useCallback(() => m(!0), []),
+        f = a.useCallback(() => m(!1), []),
         E = a.useCallback(
             (e, n, i) => {
                 c.Z.saveDraft(t.id, n, M.d.FirstThreadMessage),
@@ -389,11 +389,11 @@ function q(e) {
             },
             [d]
         );
-    (0, L.yp)({
+    (0, j.yp)({
         event: B.CkL.TEXTAREA_FOCUS,
         handler: _
     }),
-        (0, L.yp)({
+        (0, j.yp)({
             event: B.CkL.TEXTAREA_BLUR,
             handler: f
         });
@@ -401,7 +401,7 @@ function q(e) {
         T = (0, y.Op)(h, { content: n.textValue });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(C.Z, {
                 channelId: t.id,
                 type: F,
                 canAttachFiles: x
@@ -410,20 +410,20 @@ function q(e) {
                 className: G.starterMessageError,
                 children: (0, i.jsx)(o.InputError, { error: T })
             }),
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(g.Z, {
                 type: F,
                 channel: t,
                 placeholder: H.Z.Messages.FORM_THREAD_STARTER_MESSAGE_PLACEHOLDER,
                 textValue: n.textValue,
                 richValue: n.richValue,
-                focused: m,
+                focused: p,
                 className: G.channelTextArea,
                 innerClassName: l()(G.channelTextAreaInner, { [G.channelTextAreaInnerError]: null != T }),
                 onFocus: _,
                 onBlur: f,
                 onChange: E,
                 onSubmit: I,
-                promptToUpload: O.d
+                promptToUpload: P.d
             })
         ]
     });
@@ -433,7 +433,7 @@ function X(e) {
         a = (0, r.e7)([b.Z], () => (null == n ? null : b.Z.getMessage(t.id, n))),
         s = Z.jU.useSetting();
     return null != a
-        ? (0, i.jsx)(N.Z, {
+        ? (0, i.jsx)(v.Z, {
               className: G.messagePreview,
               message: a,
               channel: t,

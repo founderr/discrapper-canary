@@ -9,30 +9,30 @@ var i,
     u = n(486527);
 let d = Object.freeze({}),
     h = !1,
-    m = {},
     p = {},
+    m = {},
     _ = {},
     f = {},
     E = {};
-class C extends (i = r.ZP.Store) {
+class g extends (i = r.ZP.Store) {
     isFetching() {
         return h;
     }
     getCurrentCategoryId(e) {
         var t;
-        return null !== (t = p[e]) && void 0 !== t ? t : u.AR.ALL;
+        return null !== (t = m[e]) && void 0 !== t ? t : u.AR.ALL;
     }
     getDirectoryEntries(e, t) {
         var n;
-        return null != t ? (null === (n = _[e]) || void 0 === n ? void 0 : n[t]) : m[e];
+        return null != t ? (null === (n = _[e]) || void 0 === n ? void 0 : n[t]) : p[e];
     }
     getDirectoryEntry(e, t) {
         var n;
-        return null === (n = m[e]) || void 0 === n ? void 0 : n[t];
+        return null === (n = p[e]) || void 0 === n ? void 0 : n[t];
     }
     getDirectoryAllEntriesCount(e) {
         var t;
-        return Object.keys(null !== (t = m[e]) && void 0 !== t ? t : {}).length;
+        return Object.keys(null !== (t = p[e]) && void 0 !== t ? t : {}).length;
     }
     getDirectoryCategoryCounts(e) {
         var t;
@@ -43,7 +43,7 @@ class C extends (i = r.ZP.Store) {
     }
 }
 (l = 'GuildDirectoryStore'),
-    (s = 'displayName') in (a = C)
+    (s = 'displayName') in (a = g)
         ? Object.defineProperty(a, s, {
               value: l,
               enumerable: !0,
@@ -51,7 +51,7 @@ class C extends (i = r.ZP.Store) {
               writable: !0
           })
         : (a[s] = l),
-    (t.Z = new C(o.Z, {
+    (t.Z = new g(o.Z, {
         GUILD_DIRECTORY_FETCH_START: function () {
             h = !0;
         },
@@ -64,7 +64,7 @@ class C extends (i = r.ZP.Store) {
                 let t = (0, c.MQ)(e);
                 (i[t.guildId] = t), null != a[t.primaryCategoryId] ? (a[t.primaryCategoryId][t.guildId] = t) : (a[t.primaryCategoryId] = { [t.guildId]: t });
             }),
-                (m[t] = i),
+                (p[t] = i),
                 (_[t] = a);
         },
         GUILD_DIRECTORY_FETCH_FAILURE: function () {
@@ -74,9 +74,9 @@ class C extends (i = r.ZP.Store) {
             var t, n, i, a, s;
             let { channelId: l, entry: r } = e,
                 o = (0, c.MQ)(r);
-            if (null == o || (null === (t = m[l]) || void 0 === t ? void 0 : t[o.guildId]) != null) return;
-            m[l] = {
-                ...m[l],
+            if (null == o || (null === (t = p[l]) || void 0 === t ? void 0 : t[o.guildId]) != null) return;
+            p[l] = {
+                ...p[l],
                 [o.guildId]: o
             };
             let d = null !== (i = o.primaryCategoryId) && void 0 !== i ? i : u.AR.UNCATEGORIZED;
@@ -100,11 +100,11 @@ class C extends (i = r.ZP.Store) {
         GUILD_DIRECTORY_ENTRY_DELETE: function (e) {
             var t, n;
             let { channelId: i, guildId: a } = e,
-                s = null === (t = m[i]) || void 0 === t ? void 0 : t[a];
+                s = null === (t = p[i]) || void 0 === t ? void 0 : t[a];
             if (null == s) return;
             let l = s.primaryCategoryId,
-                r = Object.assign({}, m[i]);
-            delete r[a], null === (n = E[i]) || void 0 === n || n.delete(a), (E[i] = new Set(E[i])), (m[i] = r);
+                r = Object.assign({}, p[i]);
+            delete r[a], null === (n = E[i]) || void 0 === n || n.delete(a), (E[i] = new Set(E[i])), (p[i] = r);
             let o = Object.assign({}, _[i][l]);
             if (
                 (delete o[a],
@@ -123,42 +123,42 @@ class C extends (i = r.ZP.Store) {
         },
         GUILD_DIRECTORY_ENTRY_UPDATE: function (e) {
             var t, n, i, a, s, l, r, o, d;
-            let { channelId: h, entry: p } = e,
-                E = (0, c.MQ)(p),
-                C = null === (t = m[h]) || void 0 === t ? void 0 : t[E.guildId];
-            m[h] = {
-                ...m[h],
+            let { channelId: h, entry: m } = e,
+                E = (0, c.MQ)(m),
+                g = null === (t = p[h]) || void 0 === t ? void 0 : t[E.guildId];
+            p[h] = {
+                ...p[h],
                 [E.guildId]: {
-                    ...C,
+                    ...g,
                     ...E
                 }
             };
-            let g = null !== (a = null == C ? void 0 : C.primaryCategoryId) && void 0 !== a ? a : u.AR.UNCATEGORIZED,
+            let C = null !== (a = null == g ? void 0 : g.primaryCategoryId) && void 0 !== a ? a : u.AR.UNCATEGORIZED,
                 I = null !== (s = E.primaryCategoryId) && void 0 !== s ? s : u.AR.UNCATEGORIZED,
-                x = Object.assign({}, null === (n = _[h]) || void 0 === n ? void 0 : n[g]);
-            null != C && g !== I && delete x[E.guildId],
+                x = Object.assign({}, null === (n = _[h]) || void 0 === n ? void 0 : n[C]);
+            null != g && C !== I && delete x[E.guildId],
                 (_[h] = {
                     ..._[h],
-                    [g]: x,
+                    [C]: x,
                     [I]: {
                         ...(null === (i = _[h]) || void 0 === i ? void 0 : i[I]),
                         [E.guildId]: {
-                            ...C,
+                            ...g,
                             ...E
                         }
                     }
                 }),
-                I !== g &&
+                I !== C &&
                     null != f[h] &&
                     (f[h] = {
                         ...f[h],
-                        [g]: (null === (l = f[h]) || void 0 === l ? void 0 : l[g]) > 0 ? (null === (r = f[h]) || void 0 === r ? void 0 : r[g]) - 1 : 0,
+                        [C]: (null === (l = f[h]) || void 0 === l ? void 0 : l[C]) > 0 ? (null === (r = f[h]) || void 0 === r ? void 0 : r[C]) - 1 : 0,
                         [I]: (null !== (d = null === (o = f[h]) || void 0 === o ? void 0 : o[I]) && void 0 !== d ? d : 0) + 1
                     });
         },
         GUILD_DIRECTORY_CATEGORY_SELECT: function (e) {
             let { channelId: t, categoryId: n } = e;
-            p[t] = n;
+            m[t] = n;
         },
         GUILD_DIRECTORY_COUNTS_FETCH_SUCCESS: function (e) {
             let { channelId: t, counts: n } = e;

@@ -9,46 +9,46 @@ var i = n(735250),
     u = n(430824),
     d = n(496675),
     h = n(768581),
-    m = n(400251),
-    p = n(486527),
+    p = n(400251),
+    m = n(486527),
     _ = n(981631),
     f = n(689938),
     E = n(125803),
-    C = n(703959),
-    g = n(584354),
+    g = n(703959),
+    C = n(584354),
     I = n(725060);
 let x = (0, c.Z)((e) => {
     let { searchQuery: t, setSearchQuery: n, handleClearSearch: a, handleSearchKeyPress: s, width: r } = e,
         c = null != r && r <= 800;
     return (0, i.jsxs)('div', {
-        className: C.header,
+        className: g.header,
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                className: C.headerImage,
-                src: c ? I : g
+                className: g.headerImage,
+                src: c ? I : C
             }),
             (0, i.jsx)('div', {
-                className: C.headerContentWrapper,
+                className: g.headerContentWrapper,
                 children: (0, i.jsxs)('div', {
-                    className: l()(C.headerContent, { [C.headerContentSmall]: c }),
+                    className: l()(g.headerContent, { [g.headerContentSmall]: c }),
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-xl/semibold',
-                            className: C.searchTitle,
+                            className: g.searchTitle,
                             children: f.Z.Messages.HUB_DIRECTORY_SEARCH_TITLE
                         }),
                         (0, i.jsx)(o.Text, {
                             variant: 'text-md/normal',
-                            className: C.searchSubtitle,
+                            className: g.searchSubtitle,
                             children: f.Z.Messages.HUB_DIRECTORY_SEARCH_SUBTITLE
                         }),
                         (0, i.jsx)(o.SearchBox, {
                             searchTerm: t,
-                            className: C.searchBox,
-                            inputClassName: C.searchBoxInput,
-                            closeIconClassName: C.closeIcon,
-                            searchIconClassName: C.searchIcon,
+                            className: g.searchBox,
+                            inputClassName: g.searchBoxInput,
+                            closeIconClassName: g.closeIcon,
+                            searchIconClassName: g.searchIcon,
                             label: f.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                             placeholder: f.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                             onChange: n,
@@ -74,7 +74,7 @@ function T(e) {
             var n, i;
             return (null !== (n = t.approximateMemberCount) && void 0 !== n ? n : 0) - (null !== (i = e.approximateMemberCount) && void 0 !== i ? i : 0);
         });
-    let p = h.ZP.getGuildSplashURL({
+    let m = h.ZP.getGuildSplashURL({
         id: t.id,
         splash: t.splash
     });
@@ -84,20 +84,20 @@ function T(e) {
             className: E.scroller,
             children: [
                 (0, i.jsxs)('div', {
-                    className: C.header,
+                    className: g.header,
                     children: [
-                        null != p
+                        null != m
                             ? (0, i.jsx)('img', {
                                   alt: '',
-                                  className: l()(C.headerImage, C.headerImageSimple),
-                                  src: p
+                                  className: l()(g.headerImage, g.headerImageSimple),
+                                  src: m
                               })
                             : null,
-                        (0, i.jsx)('div', { className: C.headerImageBG }),
+                        (0, i.jsx)('div', { className: g.headerImageBG }),
                         (0, i.jsx)('div', {
-                            className: C.headerContentWrapper,
+                            className: g.headerContentWrapper,
                             children: (0, i.jsx)('div', {
-                                className: l()(C.headerContent, C.headerContentSmall),
+                                className: l()(g.headerContent, g.headerContentSmall),
                                 children: (0, i.jsx)(o.Heading, {
                                     variant: 'heading-xl/semibold',
                                     color: 'always-white',
@@ -111,14 +111,14 @@ function T(e) {
                     ? (0, i.jsx)(o.Spinner, { className: E.spinner })
                     : (0, i.jsxs)('div', {
                           className: E.cardsContainer,
-                          children: [u.map((e) => (0, i.jsx)(m.Z, { entry: e }, e.guildId)), c && null != a ? (0, i.jsx)(m.m, { onClick: a }) : null]
+                          children: [u.map((e) => (0, i.jsx)(p.Z, { entry: e }, e.guildId)), c && null != a ? (0, i.jsx)(p.m, { onClick: a }) : null]
                       })
             ]
         })
     });
 }
 t.Z = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: s, searchQuery: l, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: h, currentCategoryId: g, handleSelectCategory: I, categoryCounts: N, allEntriesCount: v, isLoading: S } = e,
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: s, searchQuery: l, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: h, currentCategoryId: C, handleSelectCategory: I, categoryCounts: v, allEntriesCount: N, isLoading: S } = e,
         Z = (0, r.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
     return null != Z && Z.hasFeature(_.oNc.SHARD)
         ? (0, i.jsx)(T, {
@@ -141,10 +141,10 @@ t.Z = (e) => {
                       (0, i.jsx)(o.AdvancedScrollerThin, {
                           orientation: 'horizontal',
                           children: (0, i.jsxs)(o.TabBar, {
-                              className: C.tabBar,
+                              className: g.tabBar,
                               type: 'top',
                               look: 'brand',
-                              selectedItem: g,
+                              selectedItem: C,
                               onItemSelect: (e) => {
                                   I(e);
                               },
@@ -152,20 +152,20 @@ t.Z = (e) => {
                                   (0, i.jsx)(
                                       o.TabBar.Item,
                                       {
-                                          className: C.tabBarItem,
-                                          id: p.AR.ALL,
-                                          children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(v, ')')
+                                          className: g.tabBarItem,
+                                          id: m.AR.ALL,
+                                          children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(N, ')')
                                       },
-                                      p.AR.ALL
+                                      m.AR.ALL
                                   ),
-                                  (0, p.b7)(t.id).map((e) => {
+                                  (0, m.b7)(t.id).map((e) => {
                                       let { value: t, label: n } = e;
                                       return (0, i.jsx)(
                                           o.TabBar.Item,
                                           {
-                                              className: C.tabBarItem,
+                                              className: g.tabBarItem,
                                               id: t,
-                                              children: ''.concat(n, ' ').concat(null != N[t] ? '('.concat(N[t], ')') : '')
+                                              children: ''.concat(n, ' ').concat(null != v[t] ? '('.concat(v[t], ')') : '')
                                           },
                                           t
                                       );
@@ -185,13 +185,13 @@ t.Z = (e) => {
                                               void 0 !== e.header
                                                   ? (0, i.jsx)(o.Text, {
                                                         variant: 'text-md/semibold',
-                                                        className: C.sectionHeader,
+                                                        className: g.sectionHeader,
                                                         children: e.header
                                                     })
                                                   : null,
                                               (0, i.jsxs)('div', {
                                                   className: E.cardsContainer,
-                                                  children: [e.entries.map((e) => (0, i.jsx)(m.Z, { entry: e }, e.guildId)), e.appendEndCard && null != s ? (0, i.jsx)(m.m, { onClick: s }) : null]
+                                                  children: [e.entries.map((e) => (0, i.jsx)(p.Z, { entry: e }, e.guildId)), e.appendEndCard && null != s ? (0, i.jsx)(p.m, { onClick: s }) : null]
                                               })
                                           ]
                                       },

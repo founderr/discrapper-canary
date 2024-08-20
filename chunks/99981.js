@@ -12,13 +12,13 @@ var t = l(481060),
 async function o(e) {
     let { analyticsLocations: n, channelId: l, guildId: o, locationObject: c, initialSlide: d = s.ag.DIRECTORY, initialSelectedApplicationId: m } = e;
     if ((0, t.hasModalOpen)(s.AC)) return;
-    let f = i.Z.getChannel(l),
-        E = r.Z.getWindowOpen(u.KJ3.CHANNEL_CALL_POPOUT);
+    let E = i.Z.getChannel(l),
+        f = r.Z.getWindowOpen(u.KJ3.CHANNEL_CALL_POPOUT);
     await (0, a.Z)({
         analyticsLocations: n,
-        channel: f,
+        channel: E,
         guildId: o,
-        openInPopout: E,
+        openInPopout: f,
         initialSlide: d,
         initialSelectedApplicationId: m,
         locationObject: null != c ? c : {}

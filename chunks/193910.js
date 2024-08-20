@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return j;
     }
 }),
     n(653041),
@@ -15,18 +15,18 @@ var i = n(735250),
     u = n(566620),
     d = n(403404),
     h = n(906732),
-    m = n(605236),
-    p = n(706140),
+    p = n(605236),
+    m = n(706140),
     _ = n(243778),
     f = n(488131),
     E = n(375954),
-    C = n(626135),
-    g = n(585483),
+    g = n(626135),
+    C = n(585483),
     I = n(403182),
     x = n(127654),
     T = n(752305),
-    N = n(951211),
-    v = n(981631),
+    v = n(951211),
+    N = n(981631),
     S = n(921944),
     Z = n(489887),
     A = n(689938),
@@ -48,15 +48,15 @@ function b(e, t, a, s) {
     );
 }
 let R = /(.*)```(\w+)\n(.*)```(.*)/s;
-function j() {
+function L() {
     let e = (0, l.e7)([E.Z], () => E.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
-    let [n] = (0, p.cv)(t);
+    let [n] = (0, m.cv)(t);
     return (
         a.useEffect(
             () => () => {
-                n === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, m.EW)(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: S.L.TAKE_ACTION });
+                n === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: S.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -74,11 +74,11 @@ function j() {
         })
     );
 }
-function L(e) {
-    let { channel: t, options: l, onFileUpload: c, onClose: p, onSelect: _, draftType: E, editorTextContent: L, setValue: P, openClips: O } = e,
+function j(e) {
+    let { channel: t, options: l, onFileUpload: c, onClose: m, onSelect: _, draftType: E, editorTextContent: j, setValue: O, openClips: P } = e,
         { analyticsLocations: y } = (0, h.ZP)();
     a.useEffect(() => {
-        C.default.track(v.rMx.OPEN_POPOUT, {
+        g.default.track(N.rMx.OPEN_POPOUT, {
             type: 'Send Attachment',
             channel_id: t.id,
             guild_id: t.guild_id
@@ -88,13 +88,13 @@ function L(e) {
         (0, f.R6)(t, void 0, 'Plus Button');
     }
     function k() {
-        C.default.track(v.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, T.JM)('/'));
+        g.default.track(N.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O('/', (0, T.JM)('/'));
     }
     function U() {
-        O();
+        P();
     }
     function w() {
-        (0, m.EW)(r.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
+        (0, p.EW)(r.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
@@ -108,7 +108,7 @@ function L(e) {
             );
     }
     function B() {
-        C.default.track(v.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        g.default.track(N.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
@@ -117,10 +117,10 @@ function L(e) {
                 channel: t,
                 guildId: t.guild_id,
                 locationObject: {
-                    page: t.isPrivate() ? v.ZY5.DM_CHANNEL : v.ZY5.GUILD_CHANNEL,
-                    section: v.jXE.CHANNEL_TEXT_AREA,
-                    object: v.qAy.CONTEXT_MENU_ITEM,
-                    objectType: v.Qqv.ACTIVITY
+                    page: t.isPrivate() ? N.ZY5.DM_CHANNEL : N.ZY5.GUILD_CHANNEL,
+                    section: N.jXE.CHANNEL_TEXT_AREA,
+                    object: N.qAy.CONTEXT_MENU_ITEM,
+                    objectType: N.Qqv.ACTIVITY
                 },
                 openInPopout: !1,
                 enableSelectedTextChannelInvite: !0,
@@ -129,16 +129,16 @@ function L(e) {
             (0, u.w1)({ guildId: t.guild_id });
     }
     function H() {
-        let e = L,
+        let e = j,
             n = 'txt',
             i = '',
-            a = L.match(R);
-        null != a && ((i = a[1]), (n = a[2]), (e = a[3]), (i += a[4])), (0, x.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), g.S.dispatchToLastSubscribed(v.CkL.CLEAR_TEXT), '' !== i && g.S.dispatchToLastSubscribed(v.CkL.INSERT_TEXT, { plainText: i });
+            a = j.match(R);
+        null != a && ((i = a[1]), (n = a[2]), (e = a[3]), (i += a[4])), (0, x.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), C.S.dispatchToLastSubscribed(N.CkL.CLEAR_TEXT), '' !== i && C.S.dispatchToLastSubscribed(N.CkL.INSERT_TEXT, { plainText: i });
     }
     return (0, i.jsx)(o.Menu, {
         onSelect: _,
         navId: 'channel-attach',
-        onClose: p,
+        onClose: m,
         'aria-label': A.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
         className: M.menu,
         children: l.map(function (e) {
@@ -164,7 +164,7 @@ function L(e) {
                 ]
             });
             switch (e.type) {
-                case N.r.UPLOAD_A_FILE:
+                case v.r.UPLOAD_A_FILE:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -174,8 +174,8 @@ function L(e) {
                         },
                         'upload-file'
                     );
-                case N.r.UPLOAD_TEXT_AS_FILE:
-                    if ('' === L) return null;
+                case v.r.UPLOAD_TEXT_AS_FILE:
+                    if ('' === j) return null;
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -185,7 +185,7 @@ function L(e) {
                         },
                         'upload-text-as-file'
                     );
-                case N.r.CLIPS:
+                case v.r.CLIPS:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -195,7 +195,7 @@ function L(e) {
                         },
                         'clips'
                     );
-                case N.r.POLL:
+                case v.r.POLL:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -205,7 +205,7 @@ function L(e) {
                         },
                         'poll'
                     );
-                case N.r.INVITE_TO_PLAY_GAME:
+                case v.r.INVITE_TO_PLAY_GAME:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -215,18 +215,18 @@ function L(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (C.default.track(v.rMx.OPEN_MODAL, {
+                                    void (g.default.track(N.rMx.OPEN_MODAL, {
                                         type: 'Send Join Invite',
                                         application_id: n.application_id,
-                                        location: v.jXE.CHANNEL_TEXT_AREA
+                                        location: N.jXE.CHANNEL_TEXT_AREA
                                     }),
-                                    b(n, t, v.mFx.JOIN, y))
+                                    b(n, t, N.mFx.JOIN, y))
                                 );
                             }
                         },
                         'play'
                     );
-                case N.r.INVITE_TO_LISTEN:
+                case v.r.INVITE_TO_LISTEN:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -236,17 +236,17 @@ function L(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (C.default.track(v.rMx.OPEN_MODAL, {
+                                    void (g.default.track(N.rMx.OPEN_MODAL, {
                                         type: 'Send Listen Invite',
-                                        location: v.jXE.CHANNEL_TEXT_AREA
+                                        location: N.jXE.CHANNEL_TEXT_AREA
                                     }),
-                                    b(n, t, v.mFx.LISTEN, y))
+                                    b(n, t, N.mFx.LISTEN, y))
                                 );
                             }
                         },
                         'listen'
                     );
-                case N.r.INVITE_TO_WATCH:
+                case v.r.INVITE_TO_WATCH:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -256,17 +256,17 @@ function L(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (C.default.track(v.rMx.OPEN_MODAL, {
+                                    void (g.default.track(N.rMx.OPEN_MODAL, {
                                         type: 'Send Watch Invite',
-                                        location: v.jXE.CHANNEL_TEXT_AREA
+                                        location: N.jXE.CHANNEL_TEXT_AREA
                                     }),
-                                    b(n, t, v.mFx.WATCH, y))
+                                    b(n, t, N.mFx.WATCH, y))
                                 );
                             }
                         },
                         'watch'
                     );
-                case N.r.CREATE_THREAD:
+                case v.r.CREATE_THREAD:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -276,7 +276,7 @@ function L(e) {
                         },
                         'THREAD'
                     );
-                case N.r.SLASH_COMMAND:
+                case v.r.SLASH_COMMAND:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
@@ -286,14 +286,14 @@ function L(e) {
                         },
                         'SLASH_COMMAND'
                     );
-                case N.r.ACTIVITY:
+                case v.r.ACTIVITY:
                     return (0, i.jsx)(
                         o.MenuItem,
                         {
                             id: 'activity',
                             label: a,
                             action: B,
-                            hint: (0, i.jsx)(j, {})
+                            hint: (0, i.jsx)(L, {})
                         },
                         'activity'
                     );

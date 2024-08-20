@@ -13,29 +13,29 @@ var i = n(735250),
     u = n(481060),
     d = n(480137),
     h = n(906732),
-    m = n(884737),
-    p = n(376923),
+    p = n(884737),
+    m = n(376923),
     _ = n(472596),
     f = n(987707),
     E = n(501801),
-    C = n(271383),
-    g = n(430824),
+    g = n(271383),
+    C = n(430824),
     I = n(274730),
     x = n(5192),
     T = n(776767),
-    N = n(689938),
-    v = n(577904),
+    v = n(689938),
+    N = n(577904),
     S = n(395193),
     Z = n(446926);
 function A(e) {
     let { log: t, member: n, guild: s } = e,
         { analyticsLocations: r } = (0, h.ZP)(),
-        d = m.nm(t),
-        f = m.QM(t),
-        g = m.of(t),
-        I = m.J5(t),
-        T = (0, p.LJ)(t.id),
-        Z = (0, c.e7)([C.ZP], () => (null != t.userId ? C.ZP.getMember(n.guildId, t.userId) : null), [n.guildId, t.userId]),
+        d = p.nm(t),
+        f = p.QM(t),
+        C = p.of(t),
+        I = p.J5(t),
+        T = (0, m.LJ)(t.id),
+        Z = (0, c.e7)([g.ZP], () => (null != t.userId ? g.ZP.getMember(n.guildId, t.userId) : null), [n.guildId, t.userId]),
         A = a.useCallback(
             (e) => (t) => {
                 t.preventDefault(), t.stopPropagation(), null != e && (0, _.RE)(e, r);
@@ -47,13 +47,13 @@ function A(e) {
                 null == t.user
                     ? null
                     : (0, i.jsx)(u.Tooltip, {
-                          text: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
+                          text: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
                           children: (e) => {
                               var a;
                               let { onMouseEnter: s, onMouseLeave: l } = e;
                               return (0, i.jsx)(u.Clickable, {
                                   tag: 'span',
-                                  className: v.username,
+                                  className: N.username,
                                   onClick: A(Z),
                                   onMouseEnter: s,
                                   onMouseLeave: l,
@@ -74,13 +74,13 @@ function A(e) {
             [A, t.user, n.guildId, Z]
         )();
     return (0, i.jsxs)('div', {
-        className: l()(S.modInfoItem, v.auditLogItem),
+        className: l()(S.modInfoItem, N.auditLogItem),
         children: [
             (0, i.jsxs)('div', {
-                className: v.auditLogItemTitleContainer,
+                className: N.auditLogItemTitleContainer,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: v.auditLogItemTitle,
+                        className: N.auditLogItemTitle,
                         children: [
                             null != d &&
                                 (0, i.jsx)(u.Text, {
@@ -97,7 +97,7 @@ function A(e) {
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: v.auditLogItemDate,
+                        className: N.auditLogItemDate,
                         children: (0, i.jsx)(u.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-primary',
@@ -106,28 +106,28 @@ function A(e) {
                     })
                 ]
             }),
-            null != g &&
+            null != C &&
                 (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
+                    className: N.auditLogSecondaryContainer,
                     children: (0, i.jsxs)('div', {
-                        className: v.auditLogReason,
+                        className: N.auditLogReason,
                         children: [
                             M,
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 tag: 'span',
-                                children: g
+                                children: C
                             })
                         ]
                     })
                 }),
-            null == g &&
+            null == C &&
                 null != I &&
                 (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
+                    className: N.auditLogSecondaryContainer,
                     children: (0, i.jsxs)('div', {
-                        className: v.auditLogSecondary,
+                        className: N.auditLogSecondary,
                         children: [
                             M,
                             (0, i.jsx)(u.Text, {
@@ -139,12 +139,12 @@ function A(e) {
                         ]
                     })
                 }),
-            null == g &&
+            null == C &&
                 null == I &&
                 (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
+                    className: N.auditLogSecondaryContainer,
                     children: (0, i.jsx)('div', {
-                        className: v.auditLogSecondary,
+                        className: N.auditLogSecondary,
                         children: (0, i.jsx)(u.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
@@ -153,7 +153,7 @@ function A(e) {
                                 log: t,
                                 guild: s,
                                 onContentClick: () => {},
-                                className: v.auditLogExpandedChangeDetails
+                                className: N.auditLogExpandedChangeDetails
                             })
                         })
                     })
@@ -163,7 +163,7 @@ function A(e) {
 }
 function M(e) {
     let { member: t } = e,
-        n = (0, c.e7)([g.Z], () => g.Z.getGuild(t.guildId), [t.guildId]),
+        n = (0, c.e7)([C.Z], () => C.Z.getGuild(t.guildId), [t.guildId]),
         s = (0, c.e7)(
             [f.Z],
             () => {
@@ -180,7 +180,7 @@ function M(e) {
     null == n || 0 === s.length)
         ? null
         : (0, i.jsx)(u.FormItem, {
-              title: N.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
+              title: v.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
               titleClassName: Z.infoTitle,
               children:
                   s.length > 0

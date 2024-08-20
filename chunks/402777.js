@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return j;
     }
 }),
     n(47120);
@@ -14,35 +14,35 @@ var i = n(735250),
     u = n(906732),
     d = n(680295),
     h = n(785717),
-    m = n(221292),
-    p = n(318661),
+    p = n(221292),
+    m = n(318661),
     _ = n(78675),
     f = n(113557),
     E = n(169979),
-    C = n(119096),
-    g = n(502762),
+    g = n(119096),
+    C = n(502762),
     I = n(256059),
     x = n(437758),
     T = n(544989),
-    N = n(481932),
-    v = n(272510),
+    v = n(481932),
+    N = n(272510),
     S = n(171368),
     Z = n(926150),
     A = n(940885),
     M = n(625015),
     b = n(228168),
     R = n(689938),
-    j = n(317986);
-function L(e) {
-    let { user: t, currentUser: n, channel: L } = e,
-        P = __OVERLAY__,
-        O = (0, p.ZP)(t.id),
+    L = n(317986);
+function j(e) {
+    let { user: t, currentUser: n, channel: j } = e,
+        O = __OVERLAY__,
+        P = (0, m.ZP)(t.id),
         y = (0, o.ZP)(),
         { analyticsLocations: D } = (0, u.ZP)(c.Z.PROFILE_PANEL),
         k = (0, h.ZB)({
             layout: 'SIMPLIFIED_DM_PANEL',
             userId: t.id,
-            channelId: L.id
+            channelId: j.id
         }),
         U = a.useRef(null),
         w = (0, r.Z)(U),
@@ -65,50 +65,50 @@ function L(e) {
         value: D,
         children: (0, i.jsx)(h.Mt, {
             value: k,
-            children: (0, i.jsxs)(g.Z, {
+            children: (0, i.jsxs)(C.Z, {
                 ref: U,
                 user: t,
-                displayProfile: O,
+                displayProfile: P,
                 profileType: b.y0.PANEL,
                 themeOverride: y,
-                className: j.container,
+                className: L.container,
                 children: [
-                    null != z && (0, i.jsx)('div', { className: j.backdrop }),
+                    null != z && (0, i.jsx)('div', { className: L.backdrop }),
                     (0, i.jsxs)(s.u2, {
                         children: [
                             (0, i.jsxs)(T.Z, {
                                 profileType: b.y0.PANEL,
                                 children: [
-                                    (0, i.jsx)(N.Z, {
+                                    (0, i.jsx)(v.Z, {
                                         user: t,
                                         profileType: b.y0.PANEL
                                     }),
-                                    t.bot ? (0, i.jsx)(x.Z, { user: t }) : (0, i.jsx)(v.Z, { user: t })
+                                    t.bot ? (0, i.jsx)(x.Z, { user: t }) : (0, i.jsx)(N.Z, { user: t })
                                 ]
                             }),
                             (0, i.jsxs)('header', {
-                                className: j.header,
+                                className: L.header,
                                 children: [
                                     (0, i.jsx)(_.Z, {
                                         user: t,
-                                        displayProfile: O,
+                                        displayProfile: P,
                                         profileType: b.y0.PANEL,
                                         animateOnHover: !w
                                     }),
-                                    (0, i.jsx)(C.Z, {
+                                    (0, i.jsx)(g.Z, {
                                         isReply: F,
                                         sent: G,
                                         shown: B,
-                                        className: j.toast
+                                        className: L.toast
                                     }),
                                     (0, i.jsx)(f.Z, {
                                         location: 'SimplifiedProfilePanel',
                                         user: t,
-                                        displayProfile: O,
-                                        channelId: L.id,
+                                        displayProfile: P,
+                                        channelId: j.id,
                                         profileType: b.y0.PANEL,
                                         isInteractionSource: K === b.n_.AVATAR || K === b.n_.STATUS,
-                                        onOpenProfile: P ? void 0 : Q,
+                                        onOpenProfile: O ? void 0 : Q,
                                         onInteraction: X,
                                         setInteractionToastShown: H,
                                         setInteractionSent: V,
@@ -118,7 +118,7 @@ function L(e) {
                                     (0, i.jsx)(E.Z, {
                                         location: 'SimplifiedProfilePanel',
                                         user: t,
-                                        channelId: L.id,
+                                        channelId: j.id,
                                         profileType: b.y0.PANEL,
                                         isInteractionSource: K === b.n_.STATUS,
                                         onInteraction: X,
@@ -133,29 +133,29 @@ function L(e) {
                             (0, i.jsx)(Z.Z, {
                                 user: t,
                                 currentUser: n,
-                                displayProfile: O,
-                                channel: L,
+                                displayProfile: P,
+                                channel: j,
                                 isHovering: w,
-                                onOpenProfile: P ? void 0 : Q
+                                onOpenProfile: O ? void 0 : Q
                             }),
                             (0, i.jsx)(A.Z, { user: t }),
                             (0, i.jsx)(M.Z, {
                                 user: t,
-                                displayProfile: O
+                                displayProfile: P
                             })
                         ]
                     }),
-                    !P &&
+                    !O &&
                         (0, i.jsx)('footer', {
-                            className: j.footer,
+                            className: L.footer,
                             children: (0, i.jsx)(l.Button, {
                                 fullWidth: !0,
                                 size: l.Button.Sizes.LARGE,
                                 look: l.Button.Looks.BLANK,
-                                color: j.footerButtonColor,
+                                color: L.footerButtonColor,
                                 onClick: () => {
                                     Q(),
-                                        (0, m.pQ)({
+                                        (0, p.pQ)({
                                             action: 'PRESS_VIEW_PROFILE',
                                             analyticsLocations: D,
                                             ...k
@@ -164,9 +164,9 @@ function L(e) {
                                 children: R.Z.Messages.VIEW_FULL_PROFILE
                             })
                         }),
-                    (null == O ? void 0 : O.profileEffectId) != null &&
+                    (null == P ? void 0 : P.profileEffectId) != null &&
                         (0, i.jsx)(d.Z, {
-                            profileEffectId: null == O ? void 0 : O.profileEffectId,
+                            profileEffectId: null == P ? void 0 : P.profileEffectId,
                             isHovering: w
                         })
                 ]

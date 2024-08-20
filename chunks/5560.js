@@ -14,13 +14,13 @@ var i = n(735250),
     u = n(374470),
     d = n(442837),
     h = n(481060),
-    m = n(260300),
-    p = n(997638),
+    p = n(260300),
+    m = n(997638),
     _ = n(819640),
     f = n(451478),
     E = n(21825),
-    C = n(232495),
-    g = n(10401),
+    g = n(232495),
+    C = n(10401),
     I = n(216743);
 function x(e, t, n) {
     return (
@@ -75,21 +75,21 @@ class T extends a.PureComponent {
         (s.offsetX += null !== (e = this.props.offset.x) && void 0 !== e ? e : 0), (s.offsetY += null !== (t = this.props.offset.y) && void 0 !== t ? t : 0), this.setState(s);
     }
     handleSkipTips() {
-        m.Z.suppressAll();
+        p.Z.suppressAll();
     }
     getTutorialPopoutText() {
         let { tutorialId: e } = this.props;
-        return (0, C.k)(e);
+        return (0, g.k)(e);
     }
     render() {
         let { tutorialId: e, autoInvert: t, focused: n, origin: a } = this.props,
             s = (0, E.S)(e);
         if (null == s) return null;
-        let { media: r, textAlign: o, isLongText: c, highPriority: u, spacing: d, arrowAlignment: m = p.cy.TOP, popoutPosition: _ } = s,
-            { offsetX: f, offsetY: C } = this.state,
-            g = {
+        let { media: r, textAlign: o, isLongText: c, highPriority: u, spacing: d, arrowAlignment: p = m.cy.TOP, popoutPosition: _ } = s,
+            { offsetX: f, offsetY: g } = this.state,
+            C = {
                 left: null != f ? a.x + f : void 0,
-                top: null != C ? a.y + C : void 0
+                top: null != g ? a.y + g : void 0
             },
             x = (e) => {
                 let t = n && !e;
@@ -120,8 +120,8 @@ class T extends a.PureComponent {
                     [I.highPriority]: u
                 };
             },
-            N = this.getTutorialPopoutText();
-        return (0, i.jsx)(p.ZP, {
+            v = this.getTutorialPopoutText();
+        return (0, i.jsx)(m.ZP, {
             position: _,
             renderMedia: r,
             textAlign: o,
@@ -129,16 +129,16 @@ class T extends a.PureComponent {
             isLongText: c,
             uniqueId: e,
             autoInvert: t,
-            arrowAlignment: m,
+            arrowAlignment: p,
             onSkipAll: this.handleSkipTips,
             onComplete: this.handleDismiss,
-            ...N,
+            ...v,
             children: (e, t) => {
                 let { isShown: n } = t;
                 return (0, i.jsx)(h.Clickable, {
                     ...e,
                     className: I.indicator,
-                    style: g,
+                    style: C,
                     children: (0, i.jsxs)('div', {
                         className: l()(I.animationContainer, T(n)),
                         children: [x(n), (0, i.jsx)('div', { className: l()(I.innerCircle, T(n)) }), (0, i.jsx)('div', { className: l()(I.outerCircle, T(n)) })]
@@ -154,7 +154,7 @@ class T extends a.PureComponent {
                 offsetY: null
             }),
             x(this, 'handleDismiss', () => {
-                m.Z.dismiss(this.props.tutorialId);
+                p.Z.dismiss(this.props.tutorialId);
             });
     }
 }
@@ -166,10 +166,10 @@ t.Z =
                   tutorialData: t,
                   windowFocused: n,
                   shouldShowAny: a
-              } = (0, d.cj)([g.Z, f.Z, _.Z], () => ({
-                  indicators: g.Z.getIndicators(),
-                  tutorialData: g.Z.getData(),
-                  shouldShowAny: g.Z.shouldShowAnyIndicators() && !_.Z.hasLayers(),
+              } = (0, d.cj)([C.Z, f.Z, _.Z], () => ({
+                  indicators: C.Z.getIndicators(),
+                  tutorialData: C.Z.getData(),
+                  shouldShowAny: C.Z.shouldShowAnyIndicators() && !_.Z.hasLayers(),
                   windowFocused: f.Z.isFocused()
               }));
               return a

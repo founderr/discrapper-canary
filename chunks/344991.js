@@ -1,6 +1,6 @@
 l.d(n, {
     ZP: function () {
-        return v;
+        return _;
     },
     tE: function () {
         return t;
@@ -17,8 +17,8 @@ var t,
     c = l(911969),
     d = l(868819),
     m = l(970184),
-    f = l(280501),
-    E = l(689938),
+    E = l(280501),
+    f = l(689938),
     p = l(758183),
     C = l(252443);
 function N(e) {
@@ -32,22 +32,22 @@ function N(e) {
         children: n
     });
 }
-function v(e) {
+function _(e) {
     let { selectActionComponent: n, queryOptions: l, renderIcon: t, renderOptionLabel: r, defaultValues: s } = e,
-        { type: v, placeholder: _, maxValues: T, disabled: h } = n,
+        { type: _, placeholder: v, maxValues: T, disabled: h } = n,
         [I, x] = a.useState(!1),
         [O, S] = a.useState(!1),
         [g, Z] = a.useState(new Map(null == s ? void 0 : s.map((e) => [e.value, e]))),
-        [A, R] = a.useState(new Set(g.keys())),
-        [j, L] = a.useState(() => (null != s ? s : []).map((e) => e.value)),
+        [j, A] = a.useState(new Set(g.keys())),
+        [L, R] = a.useState(() => (null != s ? s : []).map((e) => e.value)),
         [M, P] = a.useState(0);
     a.useEffect(() => {
         let e = (null != s ? s : []).map((e) => e.value);
-        if (e.every((e) => j.includes(e)) && j.every((n) => e.includes(n))) return;
-        L(e);
+        if (e.every((e) => L.includes(e)) && L.every((n) => e.includes(n))) return;
+        R(e);
         let n = new Map(null == s ? void 0 : s.map((e) => [e.value, e]));
-        Z(n), R(new Set(n.keys())), P((e) => e + 1);
-    }, [s, j]);
+        Z(n), A(new Set(n.keys())), P((e) => e + 1);
+    }, [s, L]);
     let {
             state: b,
             executeStateUpdate: y,
@@ -55,26 +55,26 @@ function v(e) {
             isDisabled: k,
             error: D
         } = (0, m.Ee)(n, {
-            type: v,
+            type: _,
             selectedOptions: Array.from(g.values())
         }),
-        B = U === f.gH.LOADING;
+        G = U === E.gH.LOADING;
     a.useEffect(() => {
         if ((null == b ? void 0 : b.type) === c.re.USER_SELECT || (null == b ? void 0 : b.type) === c.re.ROLE_SELECT || (null == b ? void 0 : b.type) === c.re.MENTIONABLE_SELECT || (null == b ? void 0 : b.type) === c.re.CHANNEL_SELECT) {
             let e = new Map(b.selectedOptions.map((e) => [e.value, e]));
-            Z(e), R(new Set(e.keys()));
+            Z(e), A(new Set(e.keys()));
         }
     }, [b]);
-    let G = a.useCallback(() => {
+    let w = a.useCallback(() => {
         y({
-            type: v,
+            type: _,
             selectedOptions: Array.from(g.values())
-        }) && R(new Set(g.keys()));
-    }, [y, v, g]);
+        }) && A(new Set(g.keys()));
+    }, [y, _, g]);
     a.useEffect(() => {
-        if (!(I || O || (g.size === A.size && Array.from(g.keys()).every((e) => A.has(e))))) G();
-    }, [I, O, A, g, G]);
-    let w = 0 === g.size || I,
+        if (!(I || O || (g.size === j.size && Array.from(g.keys()).every((e) => j.has(e))))) w();
+    }, [I, O, j, g, w]);
+    let B = 0 === g.size || I,
         Y = {
             isDisabled: h || k,
             wrapperClassName: p.select,
@@ -82,7 +82,7 @@ function v(e) {
                 new Promise((n) => {
                     n(l(e));
                 }),
-            placeholder: w ? (null != _ ? _ : E.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
+            placeholder: B ? (null != v ? v : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
             onClose: () => x(!1),
             onOpen: () => x(!0),
             onBlur: () => S(!1),
@@ -119,7 +119,7 @@ function v(e) {
                                   inputClassNames: u()({
                                       [p.soloInput]: 0 === g.size,
                                       [p.inlineInput]: g.size > 0,
-                                      [p.hidden]: !w
+                                      [p.hidden]: !B
                                   }),
                                   closeOnSelect: !1,
                                   centerCaret: !0,
@@ -139,7 +139,7 @@ function v(e) {
                               },
                               M
                           ),
-                    B
+                    G
                         ? (0, i.jsx)('div', {
                               className: p.loading,
                               children: (0, i.jsx)(o.Dots, {

@@ -1,77 +1,77 @@
-n.d(e, {
+t.d(n, {
     J: function () {
-        return l;
+        return i;
     },
     l: function () {
-        return u;
+        return r;
     }
 }),
-    n(47120);
-var a = n(693824),
-    r = n(169040);
-function l(t) {
-    let e,
-        { canvas: n, badges: l, startPosition: u, maxWidth: i } = t;
-    for (let { iconPath: t, text: o } of (n.setFont({
+    t(47120);
+var a = t(693824),
+    l = t(169040);
+function i(e) {
+    let n,
+        { canvas: t, badges: i, startPosition: r, maxWidth: s } = e;
+    for (let { iconPath: e, text: o } of (t.setFont({
         size: 12,
-        family: r.I8,
-        weight: r.Ue,
+        family: l.I8,
+        weight: l.Ue,
         truncate: a.GX.None
     }),
-    l)) {
-        let a = null != e ? e.w + e.x + r.PW : u,
-            l = null != e ? e.w + e.x + r.PW + r.NC : u + r.NC;
-        n.drawPath(
-            t,
+    i)) {
+        let a = null != n ? n.w + n.x + l.PW : r,
+            i = null != n ? n.w + n.x + l.PW + l.NC : r + l.NC;
+        t.drawPath(
+            e,
             {
                 x: a,
-                y: r.f0
+                y: l.f0
             },
             !0,
             0.6
         ),
-            (e = n.drawText(
+            (n = t.drawText(
                 o,
                 {
-                    x: l,
-                    y: r.m2,
-                    w: i
+                    x: i,
+                    y: l.m2,
+                    w: s
                 },
                 !0
             ));
     }
 }
-function u(t) {
+function r(e) {
     let {
-        canvas: e,
-        avatarSrcs: n,
-        position: { x: r, y: l },
-        avatarImageSize: u
-    } = t;
-    for (let t = 0; t < n.length; t++)
-        t < n.length - 1 &&
-            e.clipRoundedRect(
+        canvas: n,
+        avatarSrcs: t,
+        position: { x: l, y: i },
+        avatarImageSize: r
+    } = e;
+    for (let e = 0; e < t.length; e++)
+        e < t.length - 1 &&
+            n.clipRoundedRect(
                 {
-                    x: r + (t + 1) * (u - 8) - 2,
-                    y: l - 1,
-                    w: u + 2,
-                    h: u + 2
+                    x: l + (e + 1) * (r - 8) - 2,
+                    y: i - 1,
+                    w: r + 2,
+                    h: r + 2
                 },
-                u / 2,
+                r / 2,
                 !0
             ),
-            e.drawRoundedImage(
-                n[t],
+            n.drawRoundedImage(
+                t[e],
                 {
-                    x: r + t * (u - 8),
-                    y: l
+                    x: l + e * (r - 8),
+                    y: i
                 },
                 {
-                    w: u,
-                    h: u
+                    w: r,
+                    h: r
                 },
                 50,
                 { fillMode: a.JU.Cover }
             ),
-            e.restoreContext();
+            n.restoreContext();
 }

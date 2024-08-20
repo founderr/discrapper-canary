@@ -109,12 +109,12 @@ t.ZP = l.memo(function (e) {
         U = !w && b.hasCommunityInfoSubheader(),
         G = (0, p.xR)(M) && D && !T,
         [k, B] = l.useState(!1),
-        V = l.useRef(),
-        H = l.useRef(null),
+        H = l.useRef(),
+        V = l.useRef(null),
         F = l.useRef(),
         W = h.QK.getSetting();
     l.useEffect(() => {
-        if (G && n && !V.current && W)
+        if (G && n && !H.current && W)
             return (
                 B(!0),
                 (F.current = setTimeout(() => {
@@ -126,7 +126,7 @@ t.ZP = l.memo(function (e) {
             );
     }, [G, n, W]),
         l.useEffect(() => {
-            V.current = n;
+            H.current = n;
         }, [n]);
     let z = () => {
             let { renderBanner: t, guildBanner: n } = e;
@@ -136,7 +136,7 @@ t.ZP = l.memo(function (e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                ref: H,
+                ref: V,
                 className: a()(s, {
                     [I.container]: !0,
                     [I.clickable]: null != S,
@@ -175,7 +175,7 @@ t.ZP = l.memo(function (e) {
                                                   'aria-controls': A,
                                                   'aria-expanded': L,
                                                   focusProps: {
-                                                      ringTarget: H,
+                                                      ringTarget: V,
                                                       offset: 4
                                                   },
                                                   onClick: S,

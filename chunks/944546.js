@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     },
     Z: function () {
-        return C;
+        return g;
     }
 });
 var i = n(735250);
@@ -17,8 +17,8 @@ var a = n(442837),
     u = n(785717),
     d = n(726059),
     h = n(171368),
-    m = n(981631),
-    p = n(689938),
+    p = n(981631),
+    m = n(689938),
     _ = n(431776);
 let f = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_40);
 function E(e) {
@@ -54,7 +54,7 @@ function E(e) {
         ]
     });
 }
-function C(e) {
+function g(e) {
     let { user: t, onClose: n } = e,
         { mutualFriends: a } = (0, d.Z)(t.id),
         { analyticsLocations: l } = (0, o.ZP)(),
@@ -65,7 +65,7 @@ function C(e) {
                     ...r,
                     userId: e,
                     sourceAnalyticsLocations: l,
-                    analyticsLocation: { section: m.jXE.USER_PROFILE_MUTUAL_FRIENDS }
+                    analyticsLocation: { section: p.jXE.USER_PROFILE_MUTUAL_FRIENDS }
                 });
         };
     return (0, i.jsx)(s.ScrollerThin, {
@@ -84,7 +84,7 @@ function C(e) {
                             (0, i.jsx)('div', { className: _.emptyIconFriends }),
                             (0, i.jsx)('div', {
                                 className: _.emptyText,
-                                children: p.Z.Messages.NO_MUTUAL_FRIENDS
+                                children: m.Z.Messages.NO_MUTUAL_FRIENDS
                             })
                         ]
                     })

@@ -16,14 +16,14 @@ var i,
     h = n(722326);
 ((a = i || (i = {}))[(a.MutualFriendsList = 0)] = 'MutualFriendsList'), (a[(a.MutualGuildList = 1)] = 'MutualGuildList');
 t.Z = (e) => {
-    let { header: t, children: n, itemType: i = 1, isLoadingHeader: a, isLoadingContents: r, loadingContentsCount: m = 0, className: p, onExpand: _, onHover: f, onFocus: E } = e,
-        [C, g] = l.useState(!0),
+    let { header: t, children: n, itemType: i = 1, isLoadingHeader: a, isLoadingContents: r, loadingContentsCount: p = 0, className: m, onExpand: _, onHover: f, onFocus: E } = e,
+        [g, C] = l.useState(!0),
         I = (0, s.jsx)('div', {
             className: h.iconWrapper,
-            children: (0, s.jsx)(d.Z, { direction: C ? d.Z.Directions.RIGHT : d.Z.Directions.DOWN })
+            children: (0, s.jsx)(d.Z, { direction: g ? d.Z.Directions.RIGHT : d.Z.Directions.DOWN })
         });
     return (0, s.jsxs)('div', {
-        className: p,
+        className: m,
         children: [
             (0, s.jsx)(c.Button, {
                 className: h.collapseBtn,
@@ -32,7 +32,7 @@ t.Z = (e) => {
                 onMouseEnter: f,
                 onFocus: E,
                 onClick: () => {
-                    g(!C), C && (null == _ || _());
+                    C(!g), g && (null == _ || _());
                 },
                 children: a
                     ? (0, s.jsxs)(s.Fragment, {
@@ -58,9 +58,9 @@ t.Z = (e) => {
                       })
             }),
             (0, s.jsx)('ul', {
-                className: o()(h.connectionList, { [h.isCollapsed]: C }),
+                className: o()(h.connectionList, { [h.isCollapsed]: g }),
                 children: r
-                    ? Array.from({ length: m }).map((e, t) =>
+                    ? Array.from({ length: p }).map((e, t) =>
                           (0, s.jsxs)(
                               'div',
                               {

@@ -14,12 +14,12 @@ function o(e) {
         n,
         o,
         c,
-        { isActivityActive: u, onMouseEnter: d, onMouseLeave: h, onClick: m, ...p } = e,
+        { isActivityActive: u, onMouseEnter: d, onMouseLeave: h, onClick: p, ...m } = e,
         { enabled: _ } = l.nS.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
-        { Component: f, events: E, play: C } = (0, a.s)(),
-        { Component: g, events: I, play: x } = (0, s.w)();
+        { Component: f, events: E, play: g } = (0, a.s)(),
+        { Component: C, events: I, play: x } = (0, s.w)();
     return (
-        _ ? ((n = g), (o = I), (c = x)) : ((n = f), (o = E), (c = C)),
+        _ ? ((n = C), (o = I), (c = x)) : ((n = f), (o = E), (c = g)),
         (0, i.jsx)(r.d, {
             isActive: u,
             color: t,
@@ -31,9 +31,9 @@ function o(e) {
                 null == h || h(e), o.onMouseLeave();
             },
             onClick: (e) => {
-                null == m || m(e), c();
+                null == p || p(e), c();
             },
-            ...p
+            ...m
         })
     );
 }

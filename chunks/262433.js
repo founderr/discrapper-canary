@@ -17,9 +17,9 @@ var i = n(392711),
     u = n(292793),
     d = n(88315),
     h = n(199766),
-    m = n(813900);
-let p = {
-        X_OFFSET: 2 * m.qh,
+    p = n(813900);
+let m = {
+        X_OFFSET: 2 * p.qh,
         Y_OFFSET: 25,
         X_SPEED: 0.5,
         Y_SPEED_MIN: -1,
@@ -27,8 +27,8 @@ let p = {
         OPACITY: 1,
         OPACITY_SPEED_MIN: 0.01,
         OPACITY_SPEED_MAX: 0.05,
-        SIZE_MIN: m.qh / 2,
-        SIZE_MAX: m.qh
+        SIZE_MIN: p.qh / 2,
+        SIZE_MAX: p.qh
     },
     _ = (0, l.Z)(() => ({
         particles: {},
@@ -40,12 +40,12 @@ function f(e, t) {
 }
 function E(e) {
     var t, n, i, l;
-    let { emojiHose: E, context: C, canvasWidth: g, canvasHeight: I, fallbackColor: x, outlineColorDark: T, outlineColorLight: N, streamerId: v, deadDrawables: S } = e;
-    C.save();
+    let { emojiHose: E, context: g, canvasWidth: C, canvasHeight: I, fallbackColor: x, outlineColorDark: T, outlineColorLight: v, streamerId: N, deadDrawables: S } = e;
+    g.save();
     let Z = c.Z.getEmojiImage(null !== (n = null !== (t = E.emojiId) && void 0 !== t ? t : E.emojiName) && void 0 !== n ? n : ''),
-        A = (0, d.np)(E.x, g),
+        A = (0, d.np)(E.x, C),
         M = (0, d.np)(E.y, I),
-        { outlineColor: b } = (0, d.bg)(E.userId, T, N, x);
+        { outlineColor: b } = (0, d.bg)(E.userId, T, v, x);
     if (
         (f(E, (e) => {
             var t, n;
@@ -77,13 +77,13 @@ function E(e) {
                                 (o = n),
                                 {
                                     id: (0, s.Z)(),
-                                    x: r + a().random(-p.X_OFFSET, p.X_OFFSET),
-                                    y: o + a().random(-p.Y_OFFSET, p.Y_OFFSET),
-                                    xSpeed: a().random(-p.X_SPEED, p.X_SPEED),
-                                    ySpeed: a().random(p.Y_SPEED_MIN, p.Y_SPEED_MAX),
-                                    opacity: p.OPACITY,
-                                    opacitySpeed: a().random(p.OPACITY_SPEED_MIN, p.OPACITY_SPEED_MAX),
-                                    size: a().random(p.SIZE_MIN, p.SIZE_MAX)
+                                    x: r + a().random(-m.X_OFFSET, m.X_OFFSET),
+                                    y: o + a().random(-m.Y_OFFSET, m.Y_OFFSET),
+                                    xSpeed: a().random(-m.X_SPEED, m.X_SPEED),
+                                    ySpeed: a().random(m.Y_SPEED_MIN, m.Y_SPEED_MAX),
+                                    opacity: m.OPACITY,
+                                    opacitySpeed: a().random(m.OPACITY_SPEED_MIN, m.OPACITY_SPEED_MAX),
+                                    size: a().random(m.SIZE_MIN, m.SIZE_MAX)
                                 });
                             c[e.id] = e;
                         }
@@ -91,8 +91,8 @@ function E(e) {
                     });
                 });
         })(E, A, M),
-        (0, h.I)(C, A, M, b, m.q2),
-        (0, h.T)(C, A, M, E.userId),
+        (0, h.I)(g, A, M, b, p.q2),
+        (0, h.T)(g, A, M, E.userId),
         f(E, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
@@ -100,11 +100,11 @@ function E(e) {
                     a = n.x - (i / 2) * window.devicePixelRatio,
                     s = n.y - 1.2 * i * window.devicePixelRatio;
                 (e.globalAlpha = n.opacity), e.drawImage(t, i / 2 + a, i / 2 + s, i, i);
-            })(C, Z, e)
+            })(g, Z, e)
         ),
-        E.lastUpdatedAt + m.FO < Date.now() && (0, o.ZZ)(v, E),
+        E.lastUpdatedAt + p.FO < Date.now() && (0, o.ZZ)(N, E),
         E.state === u.f.STOP && ((i = E), !(Object.keys(null !== (l = _.getState().particles[i.id]) && void 0 !== l ? l : {}).length > 0)))
     )
         S.push(E);
-    C.restore();
+    g.restore();
 }

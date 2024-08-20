@@ -15,15 +15,15 @@ var a = n(442837),
     d = n(967128);
 function h(e) {
     var t;
-    let { channel: n, children: h, user: m } = e,
-        p = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+    let { channel: n, children: h, user: p } = e,
+        m = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
         _ = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : '',
         {
             avatarDecorationSrc: f,
             eventHandlers: E,
-            isAnimating: C
+            isAnimating: g
         } = (0, u.Z)({
-            user: m,
+            user: p,
             size: s.AvatarSizes.SIZE_80,
             animateOnHover: !0
         });
@@ -32,7 +32,7 @@ function h(e) {
         ...E,
         children: [
             (() => {
-                let e = !p && C;
+                let e = !m && g;
                 return n.isMultiUserDM()
                     ? (0, i.jsx)(c.Z, {
                           channel: n,

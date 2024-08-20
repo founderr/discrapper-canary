@@ -1,10 +1,10 @@
-var n, r;
-a.d(s, {
+var t, r;
+n.d(a, {
     p: function () {
-        return n;
+        return t;
     }
 }),
-    ((r = n || (n = {}))[(r.OFFICIAL = 1)] = 'OFFICIAL'),
+    ((r = t || (t = {}))[(r.OFFICIAL = 1)] = 'OFFICIAL'),
     (r[(r.WIKIA = 2)] = 'WIKIA'),
     (r[(r.WIKIPEDIA = 3)] = 'WIKIPEDIA'),
     (r[(r.FACEBOOK = 4)] = 'FACEBOOK'),

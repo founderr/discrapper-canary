@@ -9,8 +9,8 @@ var i = n(735250),
     u = n(731290),
     d = n(306680),
     h = n(594174),
-    m = n(585483),
-    p = n(665149),
+    p = n(585483),
+    m = n(665149),
     _ = n(981631),
     f = n(689938);
 t.Z = function (e) {
@@ -23,21 +23,21 @@ t.Z = function (e) {
             },
             [t]
         ),
-        [E, C] = a.useState(!1),
-        g = (0, s.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
+        [E, g] = a.useState(!1),
+        C = (0, s.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         I = (0, o.Aq)(),
         x = (0, c.Dd)(t.id),
         T = a.useCallback(() => {
-            !n && C((e) => !e);
+            !n && g((e) => !e);
         }, [n]);
-    function N(e) {
+    function v(e) {
         !(null == e ? void 0 : e.shiftKey) && I.dispatch(_.CkL.POPOUT_CLOSE);
     }
     return (a.useEffect(
         () => (
-            m.S.subscribe(_.CkL.TOGGLE_CHANNEL_PINS, T),
+            p.S.subscribe(_.CkL.TOGGLE_CHANNEL_PINS, T),
             () => {
-                m.S.unsubscribe(_.CkL.TOGGLE_CHANNEL_PINS, T);
+                p.S.unsubscribe(_.CkL.TOGGLE_CHANNEL_PINS, T);
             }
         ),
         [T]
@@ -51,24 +51,24 @@ t.Z = function (e) {
               align: 'right',
               autoInvert: !1,
               ignoreModalClicks: !0,
-              onRequestClose: () => C(!1),
+              onRequestClose: () => g(!1),
               renderPopout: function (e) {
                   return (0, i.jsx)(r.Z, {
                       ...e,
-                      onJump: N,
+                      onJump: v,
                       channel: t
                   });
               },
               children: (e, t) => {
                   let { isShown: a } = t;
-                  return (0, i.jsx)(p.JO, {
+                  return (0, i.jsx)(m.JO, {
                       ...e,
                       onClick: T,
                       tooltip: a ? null : f.Z.Messages.PINNED_MESSAGES,
                       icon: l.PinIcon,
                       'aria-label': f.Z.Messages.PINNED_MESSAGES,
                       disabled: n,
-                      showBadge: g,
+                      showBadge: C,
                       selected: a
                   });
               }

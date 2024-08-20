@@ -9,17 +9,17 @@ var i = n(735250),
     u = n(579185),
     d = n(272929),
     h = n(456631),
-    m = n(643720),
-    p = n(981631),
+    p = n(643720),
+    m = n(981631),
     _ = n(177480);
 t.Z = (e) => {
     let { channel: t, className: n } = e,
-        { isHovered: s, setIsHovered: f, onMouseEnter: E, onMouseLeave: C, cancelTimers: g } = (0, u.Z)(200, 300),
+        { isHovered: s, setIsHovered: f, onMouseEnter: E, onMouseLeave: g, cancelTimers: C } = (0, u.Z)(200, 300),
         [I, x] = a.useState(!1),
         T = (0, r.e7)([h.Z], () => h.Z.effectCooldownEndTime),
-        N = a.useMemo(() => (null != T ? (T.getTime() - Date.now()) / 1000 : 0), [T]),
-        { seconds: v } = (0, c.Z)(null != T ? T : new Date()),
-        S = v > 0,
+        v = a.useMemo(() => (null != T ? (T.getTime() - Date.now()) / 1000 : 0), [T]),
+        { seconds: N } = (0, c.Z)(null != T ? T : new Date()),
+        S = N > 0,
         Z = a.useCallback(
             (e) => {
                 if ('focus' !== e.type) !I && !S && E();
@@ -27,13 +27,13 @@ t.Z = (e) => {
             [I, S, E]
         ),
         A = a.useCallback(() => {
-            !I && C();
-        }, [C, I]),
+            !I && g();
+        }, [g, I]),
         M = a.useCallback(
             (e, t) => {
-                g(), x(!I), (!s || I) && (null == t || t(e));
+                C(), x(!I), (!s || I) && (null == t || t(e));
             },
-            [g, I, s]
+            [C, I, s]
         ),
         b = s || I;
     return (0, i.jsx)(o.Popout, {
@@ -47,7 +47,7 @@ t.Z = (e) => {
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(m.Z, {
+            return (0, i.jsx)(p.Z, {
                 isHovered: b,
                 channel: t,
                 closePopout: n,
@@ -60,12 +60,12 @@ t.Z = (e) => {
             let { onClick: t, onKeyDown: a } = e;
             return (0, i.jsx)(d.Z, {
                 isCenterButton: !0,
-                totalCooldownSeconds: N,
-                remainingCooldownSeconds: v,
+                totalCooldownSeconds: v,
+                remainingCooldownSeconds: N,
                 className: l()(_.controlButton, n),
                 onKeyDown: (e) => {
                     var t, n;
-                    return (t = e), (n = a), void (t.keyCode === p.yXg.ENTER && t.keyCode === p.yXg.SPACE && M(t, n));
+                    return (t = e), (n = a), void (t.keyCode === m.yXg.ENTER && t.keyCode === m.yXg.SPACE && M(t, n));
                 },
                 onClick: (e) => {
                     M(e, t);

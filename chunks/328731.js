@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return E;
+        return f;
     }
 });
 var t = l(735250),
@@ -13,22 +13,22 @@ var t = l(735250),
     c = l(192918),
     d = l(256139),
     m = l(689938),
-    f = l(182408);
-function E(e) {
+    E = l(182408);
+function f(e) {
     let { entry: n, channel: l, className: r } = e,
-        { displayParticipants: E, participant1: p, participant2: C, numOtherParticipants: N } = (0, c.Z)(n, 3),
-        v = [p, C];
+        { displayParticipants: f, participant1: p, participant2: C, numOtherParticipants: N } = (0, c.Z)(n, 3),
+        _ = [p, C];
     return (0, t.jsxs)('div', {
-        className: i()(f.container, r),
+        className: i()(E.container, r),
         children: [
-            E.length > 0
+            f.length > 0
                 ? (0, t.jsxs)(t.Fragment, {
                       children: [
                           (0, t.jsx)(s.Z, {
                               maxUsers: 3,
-                              users: E,
+                              users: f,
                               size: a.AvatarSizes.SIZE_20,
-                              avatarClassName: f.stackedAvatar,
+                              avatarClassName: E.stackedAvatar,
                               hideOverflowCount: !0,
                               disableUsernameTooltip: !0
                           }),
@@ -41,21 +41,21 @@ function E(e) {
                 : null,
             (0, t.jsx)(a.Heading, {
                 variant: 'text-sm/semibold',
-                className: i()(f.textSecondary, f.truncatedText, f.usersHeader),
+                className: i()(E.textSecondary, E.truncatedText, E.usersHeader),
                 scaleFontToUserSetting: !0,
                 children: m.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS.format({
-                    user1: o.ZP.getName(l.guild_id, l.id, v[0]),
-                    user2: o.ZP.getName(l.guild_id, l.id, v[1]),
+                    user1: o.ZP.getName(l.guild_id, l.id, _[0]),
+                    user2: o.ZP.getName(l.guild_id, l.id, _[1]),
                     countOthers: N,
                     nameHook: (e, n) =>
                         (0, t.jsx)(d.Z, {
                             tag: 'span',
-                            onClick: () => (0, u.openUserProfileModal)({ userId: v[parseInt(n)].id }),
+                            onClick: () => (0, u.openUserProfileModal)({ userId: _[parseInt(n)].id }),
                             children: (0, t.jsx)(
                                 a.Text,
                                 {
                                     variant: 'text-sm/semibold',
-                                    className: i()(f.textPrimary, f.truncatedText),
+                                    className: i()(E.textPrimary, E.truncatedText),
                                     lineClamp: 1,
                                     scaleFontToUserSetting: !0,
                                     children: e

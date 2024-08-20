@@ -14,24 +14,24 @@ var a = n(120356),
     u = n(69882),
     d = n(251794),
     h = n(386696),
-    m = n(910693),
-    p = n(314897),
+    p = n(910693),
+    m = n(314897),
     _ = n(271383),
     f = n(430824),
     E = n(496675),
-    C = n(158776),
-    g = n(885110),
+    g = n(158776),
+    C = n(885110),
     I = n(594174),
     x = n(572004),
     T = n(5192),
-    N = n(51144),
-    v = n(981631),
+    v = n(51144),
+    N = n(981631),
     S = n(689938),
     Z = n(181861);
 function A(e) {
     let { user: t, guildId: n, onClose: a } = e,
         s = t.id,
-        o = (0, l.e7)([g.Z, C.Z, p.default], () => (s === p.default.getId() ? g.Z.getStatus() : C.Z.getStatus(s, n)), [s, n]);
+        o = (0, l.e7)([C.Z, g.Z, m.default], () => (s === m.default.getId() ? C.Z.getStatus() : g.Z.getStatus(s, n)), [s, n]);
     return (0, i.jsxs)('div', {
         className: Z.topRow,
         children: [
@@ -60,7 +60,7 @@ function A(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-md/medium',
                         color: 'text-normal',
-                        children: N.ZP.getUserTag(t)
+                        children: v.ZP.getUserTag(t)
                     })
                 ]
             }),
@@ -96,31 +96,31 @@ function b(e) {
     let { user: t, member: a, guildId: s } = e,
         _ = (0, l.e7)([f.Z], () => f.Z.getGuild(s)),
         {
-            canKickUser: C,
-            canBanUser: g,
+            canKickUser: g,
+            canBanUser: C,
             canModerateMembers: T
         } = (0, l.cj)(
             [E.Z, I.default, f.Z],
             () => ({
-                canKickUser: null != _ && E.Z.canManageUser(v.Plq.KICK_MEMBERS, t, _),
-                canBanUser: null != _ && E.Z.canManageUser(v.Plq.BAN_MEMBERS, t, _),
+                canKickUser: null != _ && E.Z.canManageUser(N.Plq.KICK_MEMBERS, t, _),
+                canBanUser: null != _ && E.Z.canManageUser(N.Plq.BAN_MEMBERS, t, _),
                 canModerateMembers: null != _ && (0, h.F)(_.id, t.id, [I.default, f.Z, E.Z])
             }),
             [t, _]
         ),
-        N = (0, u.b)(a),
+        v = (0, u.b)(a),
         { analyticsLocations: A, newestAnalyticsLocation: b } = (0, c.ZP)(),
-        R = (0, m.sE)(s, {
+        R = (0, p.sE)(s, {
             targetUserId: t.id,
             location: b,
             locations: A
         }),
-        j = (0, l.e7)([p.default], () => p.default.getId() === (null == t ? void 0 : t.id));
+        L = (0, l.e7)([m.default], () => m.default.getId() === (null == t ? void 0 : t.id));
     return (0, i.jsxs)('div', {
         className: Z.bottomRow,
         children: [
             (0, i.jsxs)(M, {
-                disabled: j,
+                disabled: L,
                 'aria-label': S.Z.Messages.SEND_DM,
                 onClick: () => {
                     o.Z.openPrivateChannel(t.id);
@@ -140,7 +140,7 @@ function b(e) {
                 ]
             }),
             (0, i.jsxs)(M, {
-                disabled: !C,
+                disabled: !g,
                 'aria-label': S.Z.Messages.KICK,
                 onClick: () => {
                     (0, r.openModalLazy)(async () => {
@@ -169,7 +169,7 @@ function b(e) {
                 ]
             }),
             (0, i.jsxs)(M, {
-                disabled: !g,
+                disabled: !C,
                 'aria-label': S.Z.Messages.BAN,
                 onClick: () => {
                     (0, r.openModalLazy)(async () => {
@@ -201,7 +201,7 @@ function b(e) {
                 disabled: !T,
                 'aria-label': S.Z.Messages.TIMEOUT_USER,
                 onClick: () => {
-                    N ? (0, d.q)(a.guildId, a.userId, A) : (0, d.z)(a.guildId, a.userId, A);
+                    v ? (0, d.q)(a.guildId, a.userId, A) : (0, d.z)(a.guildId, a.userId, A);
                 },
                 children: [
                     (0, i.jsx)(r.ClockWarningIcon, {
@@ -213,14 +213,14 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: N ? S.Z.Messages.REMOVE : S.Z.Messages.TIMEOUT_USER
+                        children: v ? S.Z.Messages.REMOVE : S.Z.Messages.TIMEOUT_USER
                     })
                 ]
             }),
             (0, i.jsxs)(M, {
                 'aria-label': S.Z.Messages.COPY_ID,
                 onClick: () => {
-                    R(m.jQ.COPY_ID), (0, x.JG)(t.id);
+                    R(p.jQ.COPY_ID), (0, x.JG)(t.id);
                 },
                 disabled: !x.wS,
                 children: [

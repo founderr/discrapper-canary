@@ -14,39 +14,39 @@ var i,
     u = n(442837),
     d = n(481060),
     h = n(393238),
-    m = n(434650),
-    p = n(607070),
+    p = n(434650),
+    m = n(607070),
     _ = n(594174),
     f = n(5192),
     E = n(603368),
-    C = n(856682),
-    g = n(284019),
+    g = n(856682),
+    C = n(284019),
     I = n(689938),
     x = n(556070);
 ((a = i || (i = {})).LEFT = 'left'), (a.RIGHT = 'right');
 t.Z = l.memo(function (e) {
-    let { guildId: t, primaryColor: n, children: i, canSignCharter: a = !0, signed: r, onSignCharter: T, animationDelayMs: N = 1000, signHintButtonText: v, signHintHelperText: S, signHintPosition: Z = 'left', className: A, fullHeight: M, showDisclaimer: b } = e,
+    let { guildId: t, primaryColor: n, children: i, canSignCharter: a = !0, signed: r, onSignCharter: T, animationDelayMs: v = 1000, signHintButtonText: N, signHintHelperText: S, signHintPosition: Z = 'left', className: A, fullHeight: M, showDisclaimer: b } = e,
         R = l.useRef(null),
-        j = l.useCallback(
+        L = l.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), null == T || T(!r);
             },
             [T, r]
         ),
-        [L, P] = l.useState(!1),
-        [O, y] = l.useState(!1),
+        [j, O] = l.useState(!1),
+        [P, y] = l.useState(!1),
         D = l.useRef(null),
         k = l.useCallback(
             (e) => {
                 e &&
                     (D.current = setTimeout(() => {
                         y(!0);
-                    }, N));
+                    }, v));
             },
-            [N]
+            [v]
         ),
-        U = (0, m.O)(k),
-        w = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
+        U = (0, p.O)(k),
+        w = (0, u.e7)([m.Z], () => m.Z.useReducedMotion),
         B = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
         [H, G] = (0, d.useSpring)(() => {
             var e, t;
@@ -68,11 +68,11 @@ t.Z = l.memo(function (e) {
             opacity: 0,
             top: -24,
             onRest: () => {
-                r && P(!0);
+                r && O(!0);
             }
         }));
     l.useEffect(() => {
-        if (O)
+        if (P)
             G({
                 ...('left' === Z
                     ? {
@@ -88,20 +88,20 @@ t.Z = l.memo(function (e) {
                     opacity: 1,
                     top: -24
                 });
-        O &&
+        P &&
             r &&
             F({
                 opacity: 0,
                 top: 0
             });
-    }, [O, r, Z]),
+    }, [P, r, Z]),
         l.useEffect(
             () => () => {
                 null != D.current && clearTimeout(D.current);
             },
             []
         );
-    let W = o()(x.signHintAnimationContainer, L && x.noDisplay, 'left' === Z ? x.signTextLeft : x.signTextRight),
+    let W = o()(x.signHintAnimationContainer, j && x.noDisplay, 'left' === Z ? x.signTextLeft : x.signTextRight),
         z = (0, d.useToken)(d.tokens.colors.BG_SURFACE_OVERLAY),
         Y = (0, d.useToken)(d.tokens.colors.BG_BRAND),
         K = null != n ? n : Y.hex(),
@@ -121,7 +121,7 @@ t.Z = l.memo(function (e) {
     return (0, s.jsx)('div', {
         className: o()(x.container, A),
         ref: U,
-        children: (0, s.jsx)(C.Z, {
+        children: (0, s.jsx)(g.Z, {
             fullHeight: M,
             children: (0, s.jsxs)('div', {
                 className: o()(x.overviewSidebarWrapper, M && x.fullHeight),
@@ -157,20 +157,20 @@ t.Z = l.memo(function (e) {
                                                     children: [
                                                         (0, s.jsx)('div', {
                                                             className: x.signContainerButton,
-                                                            children: (0, s.jsxs)(g.Z, {
+                                                            children: (0, s.jsxs)(C.Z, {
                                                                 themeColor: K,
                                                                 className: x.signButton,
                                                                 size: d.Button.Sizes.SMALL,
                                                                 onClick: (e) => {
                                                                     var t;
-                                                                    null === (t = R.current) || void 0 === t || t.scrollIntoView({ behavior: 'smooth' }), j(e);
+                                                                    null === (t = R.current) || void 0 === t || t.scrollIntoView({ behavior: 'smooth' }), L(e);
                                                                 },
                                                                 children: [
                                                                     (0, s.jsx)('div', {
                                                                         className: o()(x.signCarot, { [x.signCarotCustomColors]: null != q }),
                                                                         style: null != q ? q : { borderColor: K }
                                                                     }),
-                                                                    null != v ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
+                                                                    null != N ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
                                                                 ]
                                                             })
                                                         }),
@@ -178,7 +178,7 @@ t.Z = l.memo(function (e) {
                                                             variant: 'text-xs/normal',
                                                             color: 'text-muted',
                                                             className: x.signHintHelperText,
-                                                            children: null != S ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
+                                                            children: null != S ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
                                                         }),
                                                         b &&
                                                             (0, s.jsx)(d.Text, {
@@ -191,7 +191,7 @@ t.Z = l.memo(function (e) {
                                                 })
                                             }),
                                             (0, s.jsxs)(d.Clickable, {
-                                                onClick: j,
+                                                onClick: L,
                                                 className: o()(x.signatureContainer, { [x.clickable]: null != T }),
                                                 children: [
                                                     (0, s.jsx)(d.Text, {

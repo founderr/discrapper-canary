@@ -1,9 +1,9 @@
-n.d(t, {
+t.d(n, {
     a: function () {
-        return a;
+        return l;
     }
 });
-let i = (0, n(818083).B)({
+let a = (0, t(818083).B)({
         id: '2024-04_memberlist_one_click_reply',
         kind: 'user',
         label: 'Memberlist One Click Reply',
@@ -21,8 +21,8 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    a = (e) => {
-        let { location: t, autoTrackExposure: n = !0 } = e,
-            { enabled: a } = i.useExperiment({ location: t }, { autoTrackExposure: n });
-        return a;
+    l = (e) => {
+        let { location: n, autoTrackExposure: t = !0 } = e,
+            { enabled: l } = a.useExperiment({ location: n }, { autoTrackExposure: t });
+        return l;
     };

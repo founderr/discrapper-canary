@@ -3,7 +3,7 @@ l.d(n, {
         return C;
     },
     r: function () {
-        return v;
+        return _;
     }
 }),
     l(411104);
@@ -17,8 +17,8 @@ var t = l(735250),
     c = l(214597),
     d = l(498187),
     m = l(482417),
-    f = l(301419),
-    E = l(397035);
+    E = l(301419),
+    f = l(397035);
 let p = r.createContext(void 0);
 function C() {
     let e = r.useContext(p);
@@ -60,7 +60,7 @@ function N(e) {
                 ...r
             });
         case s.s.LAUNCHED_ACTIVITY:
-            return (0, t.jsx)(_, {
+            return (0, t.jsx)(v, {
                 entry: n,
                 ...r
             });
@@ -68,14 +68,14 @@ function N(e) {
             throw Error('Unsupported content type: '.concat(n.content_type));
     }
 }
-function v(e) {
+function _(e) {
     let { errorFallback: n, ...l } = e;
     return (0, t.jsx)(u.S, {
         fallback: n,
         children: (0, t.jsx)(N, { ...l })
     });
 }
-function _(e) {
+function v(e) {
     let { entry: n, children: l, ...r } = e,
         i = (0, o.Z)({
             entry: n,
@@ -91,7 +91,7 @@ function _(e) {
 }
 function T(e) {
     let { entry: n, children: l, ...r } = e,
-        i = (0, f.Z)({
+        i = (0, E.Z)({
             entry: n,
             ...r
         });
@@ -133,7 +133,7 @@ function I(e) {
 }
 function x(e) {
     let { entry: n, children: l, ...r } = e,
-        i = (0, E.Z)({
+        i = (0, f.Z)({
             entry: n,
             ...r
         });

@@ -16,16 +16,16 @@ function m(e) {
     let { entry: n } = e,
         l = (0, s.q)(n.extra.application_id),
         m = null == l ? void 0 : l.getIconURL(c.Si.LARGE),
-        f = (0, t.e7)([u.Z], () => u.Z.getGuildId()),
-        E = n.extra.activity_name,
+        E = (0, t.e7)([u.Z], () => u.Z.getGuildId()),
+        f = n.extra.activity_name,
         p = (0, r.O)(),
         { analyticsLocations: C } = (0, a.ZP)(),
         N = (0, o.kr)(n) && !(0, o.n2)(n) ? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-        v = {
+        _ = {
             onClick: () => {
-                null != f &&
+                null != E &&
                     (0, i.q)({
-                        guildId: f,
+                        guildId: E,
                         channelId: void 0,
                         locationObject: p.location,
                         initialSelectedApplicationId: n.extra.application_id,
@@ -33,13 +33,13 @@ function m(e) {
                         analyticsLocations: C
                     });
             },
-            ariaDescription: d.Z.Messages.CONTENT_INVENTORY_OPEN_ACTIVITY_A11Y_DESCRIPTION.format({ title: E })
+            ariaDescription: d.Z.Messages.CONTENT_INVENTORY_OPEN_ACTIVITY_A11Y_DESCRIPTION.format({ title: f })
         };
     return {
         thumbnailUrl: m,
-        title: E,
-        titleClickable: v,
-        thumbnailClickable: v,
+        title: f,
+        titleClickable: _,
+        thumbnailClickable: _,
         userDescription: N
     };
 }

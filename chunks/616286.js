@@ -15,15 +15,15 @@ var i = n(735250),
     u = n(358221),
     d = n(306680),
     h = n(944486),
-    m = n(111583),
-    p = n(459273),
+    p = n(111583),
+    m = n(459273),
     _ = n(880831),
     f = n(774168),
     E = n(871499),
-    C = n(981631),
-    g = n(689938);
+    g = n(981631),
+    C = n(689938);
 function I(e) {
-    let t = (0, o.e7)([m.Z], () => !(0, r.isEmpty)(m.Z.getTypingUsers(e)), [e]),
+    let t = (0, o.e7)([p.Z], () => !(0, r.isEmpty)(p.Z.getTypingUsers(e)), [e]),
         n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]),
         { unreadCount: i, mentionCount: a } = (0, o.cj)(
             [d.ZP],
@@ -53,9 +53,9 @@ function x(e) {
 }
 function T(e) {
     let t,
-        { channelId: n, className: s, showingClassName: r, onClick: d, inPopout: h, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: f, ...T } = e,
-        { disabled: N } = T,
-        v = a.useRef(null),
+        { channelId: n, className: s, showingClassName: r, onClick: d, inPopout: h, showRequestToSpeakSidebar: p, toggleRequestToSpeakSidebar: f, ...T } = e,
+        { disabled: v } = T,
+        N = a.useRef(null),
         S = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
         {
             isShowing: Z,
@@ -82,8 +82,8 @@ function T(e) {
             );
         })(n),
         b = a.useCallback(() => {
-            null == d || d(), !S && m && (null == f || f()), c.Z.updateChatOpen(n, !S);
-        }, [n, S, d, m, f]),
+            null == d || d(), !S && p && (null == f || f()), c.Z.updateChatOpen(n, !S);
+        }, [n, S, d, p, f]),
         R = a.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -94,47 +94,47 @@ function T(e) {
             },
             [n]
         ),
-        j = a.useCallback(() => {
+        L = a.useCallback(() => {
             var e;
-            null === (e = v.current) || void 0 === e || e.focus();
+            null === (e = N.current) || void 0 === e || e.focus();
         }, []);
-    (0, p.yp)({
-        event: C.CkL.FOCUS_CHAT_BUTTON,
-        handler: N ? null : j
+    (0, m.yp)({
+        event: g.CkL.FOCUS_CHAT_BUTTON,
+        handler: v ? null : L
     });
-    let [L, P] = a.useState(!1),
-        O = a.useCallback(() => {
-            h && P(!0);
+    let [j, O] = a.useState(!1),
+        P = a.useCallback(() => {
+            h && O(!0);
         }, [h]);
-    (0, p.yp)({
-        event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: O
+    (0, m.yp)({
+        event: g.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+        handler: P
     }),
         a.useEffect(() => {
             let e;
             return (
-                L &&
+                j &&
                     (e = setTimeout(() => {
-                        P(!1);
+                        O(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [L]);
-    let y = [(t = h && N ? g.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? g.Z.Messages.VIDEO_CALL_HIDE_CHAT : g.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
+        }, [j]);
+    let y = [(t = h && v ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
     return (
-        M > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })),
-        A > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
+        M > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })),
+        A > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
         (0, i.jsx)(E.Z, {
-            buttonRef: v,
+            buttonRef: N,
             onClick: b,
             label: t,
             'aria-label': y.join(', '),
             iconComponent: R,
             tooltipPosition: 'bottom',
             wrapperClassName: l()(s, null != r && { [r]: Z }),
-            forceTooltipOpen: L,
+            forceTooltipOpen: j,
             ...T
         })
     );

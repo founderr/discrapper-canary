@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return O;
     }
 });
 var i = n(735250),
@@ -13,33 +13,33 @@ var i = n(735250),
     u = n(906732),
     d = n(580552),
     h = n(680295),
-    m = n(5192),
-    p = n(785717),
+    p = n(5192),
+    m = n(785717),
     _ = n(221292),
     f = n(318661),
     E = n(78675),
-    C = n(741308),
-    g = n(588822),
+    g = n(741308),
+    C = n(588822),
     I = n(899007),
     x = n(900927),
     T = n(678738),
-    N = n(502762),
-    v = n(530),
+    v = n(502762),
+    N = n(530),
     S = n(256059),
     Z = n(679332),
     A = n(544989),
     M = n(171368),
     b = n(228168),
     R = n(689938),
-    j = n(317986),
-    L = n(27251);
-function P(e) {
+    L = n(317986),
+    j = n(27251);
+function O(e) {
     let { user: t, channel: n } = e,
-        P = __OVERLAY__ || !(0, d.Z)(t.id),
-        O = (0, f.ZP)(t.id),
+        O = __OVERLAY__ || !(0, d.Z)(t.id),
+        P = (0, f.ZP)(t.id),
         y = (0, o.ZP)(),
         { analyticsLocations: D } = (0, u.ZP)(c.Z.PROFILE_PANEL),
-        k = (0, p.ZB)({
+        k = (0, m.ZB)({
             layout: 'SIMPLIFIED_DM_PANEL',
             userId: t.id,
             channelId: n.id
@@ -55,15 +55,15 @@ function P(e) {
         };
     return (0, i.jsx)(u.Gt, {
         value: D,
-        children: (0, i.jsx)(p.Mt, {
+        children: (0, i.jsx)(m.Mt, {
             value: k,
-            children: (0, i.jsxs)(N.Z, {
+            children: (0, i.jsxs)(v.Z, {
                 ref: U,
                 user: t,
-                displayProfile: O,
+                displayProfile: P,
                 profileType: b.y0.PANEL,
                 themeOverride: y,
-                className: j.container,
+                className: L.container,
                 children: [
                     (0, i.jsxs)(s.u2, {
                         children: [
@@ -72,46 +72,46 @@ function P(e) {
                                 children: (0, i.jsx)(Z.Z, { user: t })
                             }),
                             (0, i.jsxs)('header', {
-                                className: j.header,
+                                className: L.header,
                                 children: [
                                     (0, i.jsx)(E.Z, {
                                         user: t,
-                                        displayProfile: O,
+                                        displayProfile: P,
                                         profileType: b.y0.PANEL,
                                         animateOnHover: !w
                                     }),
                                     (0, i.jsx)(I.Z, {
                                         user: t,
-                                        displayProfile: O,
+                                        displayProfile: P,
                                         channelId: n.id,
                                         profileType: b.y0.PANEL,
-                                        onOpenProfile: P ? void 0 : B
+                                        onOpenProfile: O ? void 0 : B
                                     }),
                                     (0, i.jsx)(S.Z, { user: t })
                                 ]
                             }),
                             (0, i.jsxs)('div', {
-                                className: L.body,
+                                className: j.body,
                                 children: [
-                                    (0, i.jsx)(v.Z, {
+                                    (0, i.jsx)(N.Z, {
                                         user: t,
                                         profileType: b.y0.PANEL,
-                                        nickname: m.ZP.getName(null, n.id, t),
-                                        pronouns: null == O ? void 0 : O.pronouns,
-                                        onOpenProfile: P ? void 0 : B,
-                                        tags: (0, i.jsx)(C.Z, {
-                                            displayProfile: O,
+                                        nickname: p.ZP.getName(null, n.id, t),
+                                        pronouns: null == P ? void 0 : P.pronouns,
+                                        onOpenProfile: O ? void 0 : B,
+                                        tags: (0, i.jsx)(g.Z, {
+                                            displayProfile: P,
                                             profileType: b.y0.PANEL
                                         })
                                     }),
-                                    (0, i.jsxs)(N.Z.Overlay, {
-                                        className: L.overlay,
+                                    (0, i.jsxs)(v.Z.Overlay, {
+                                        className: j.overlay,
                                         children: [
                                             (0, i.jsx)(T.Z, {
                                                 heading: R.Z.Messages.USER_POPOUT_ABOUT_ME,
                                                 headingColor: 'header-primary',
-                                                children: (0, i.jsx)(g.Z, {
-                                                    userBio: null == O ? void 0 : O.bio,
+                                                children: (0, i.jsx)(C.Z, {
+                                                    userBio: null == P ? void 0 : P.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
                                                     isHovering: w
@@ -128,14 +128,14 @@ function P(e) {
                             })
                         ]
                     }),
-                    !P &&
+                    !O &&
                         (0, i.jsx)('footer', {
-                            className: j.footer,
+                            className: L.footer,
                             children: (0, i.jsx)(l.Button, {
                                 fullWidth: !0,
                                 size: l.Button.Sizes.LARGE,
                                 look: l.Button.Looks.BLANK,
-                                color: j.footerButtonColor,
+                                color: L.footerButtonColor,
                                 onClick: () => {
                                     B(),
                                         (0, _.pQ)({
@@ -147,9 +147,9 @@ function P(e) {
                                 children: R.Z.Messages.VIEW_FULL_PROFILE
                             })
                         }),
-                    (null == O ? void 0 : O.profileEffectId) != null &&
+                    (null == P ? void 0 : P.profileEffectId) != null &&
                         (0, i.jsx)(h.Z, {
-                            profileEffectId: null == O ? void 0 : O.profileEffectId,
+                            profileEffectId: null == P ? void 0 : P.profileEffectId,
                             isHovering: w
                         })
                 ]

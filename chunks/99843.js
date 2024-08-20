@@ -12,15 +12,15 @@ var a = n(481060),
 t.Z = (e) => {
     let { channel: t } = e,
         n = (0, o.ZP)(t),
-        m = (0, r.Dd)(t.id),
-        p = (0, c.m$)({
+        p = (0, r.Dd)(t.id),
+        m = (0, c.m$)({
             channelId: t.id,
             location: 'ChannelName'
         });
     return (0, i.jsx)('div', {
         className: h.container,
         onDoubleClick: (e) => e.stopPropagation(),
-        children: m
+        children: p
             ? (0, i.jsx)('div', {
                   className: h.channelName,
                   children: n
@@ -38,7 +38,7 @@ t.Z = (e) => {
                               n !== e.currentTarget.value && s.Z.setName(t.id, e.currentTarget.value);
                           }
                       }),
-                      p &&
+                      m &&
                           (0, i.jsx)(a.Tooltip, {
                               text: d.Z.Messages.E2EE_CALL_VERIFIED_TOOLTIP,
                               children: (e) =>

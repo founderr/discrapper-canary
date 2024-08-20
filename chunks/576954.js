@@ -13,22 +13,22 @@ var i = n(735250),
     u = n(359119),
     d = n(473092),
     h = n(177342),
-    m = n(134612),
-    p = n(981631),
+    p = n(134612),
+    m = n(981631),
     _ = n(689938);
 function f(e) {
     let { channelId: t, warningId: f, senderId: E } = e,
-        C = a.useCallback(() => {
+        g = a.useCallback(() => {
             (0, c.T)(t, [f]);
         }, [t, f]),
-        g = a.useCallback(
+        C = a.useCallback(
             (e) => () => {
                 r.Z.addRelationship({
                     userId: E,
-                    context: { location: m.zr },
-                    type: p.OGo.BLOCKED
+                    context: { location: p.zr },
+                    type: m.OGo.BLOCKED
                 }),
-                    C(),
+                    g(),
                     (0, l.showToast)((0, l.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, l.ToastType.SUCCESS)),
                     (0, d.qc)({
                         channelId: t,
@@ -38,10 +38,10 @@ function f(e) {
                         cta: e
                     });
             },
-            [C, t, f, E]
+            [g, t, f, E]
         );
     a.useEffect(() => {
-        (0, d.MC)(p.rMx.SAFETY_WARNING_VIEWED, {
+        (0, d.MC)(m.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
             warningId: f,
             senderId: E,
@@ -74,7 +74,7 @@ function f(e) {
                     (0, i.jsx)(l, {
                         ...n,
                         userId: E,
-                        confirmBlock: g(e),
+                        confirmBlock: C(e),
                         onCancel: () => {
                             null == s || s(),
                                 (0, d.qc)({
@@ -95,7 +95,7 @@ function f(e) {
         warningType: u.pj.STRANGER_DANGER,
         header: _.Z.Messages.STRANGER_DANGER_BANNER_HEADER,
         description: _.Z.Messages.STRANGER_DANGER_BANNER_DESCRIPTION,
-        onDismiss: C,
+        onDismiss: g,
         buttons: [
             {
                 text: _.Z.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,

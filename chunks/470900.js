@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     Z: function () {
-        return N;
+        return v;
     }
 });
 var i = n(735250);
@@ -17,22 +17,22 @@ var a = n(120356),
     u = n(410030),
     d = n(44315),
     h = n(565138),
-    m = n(769654),
-    p = n(51144),
+    p = n(769654),
+    m = n(51144),
     _ = n(162267),
     f = n(228168),
     E = n(981631),
-    C = n(689938),
-    g = n(431776),
+    g = n(689938),
+    C = n(431776),
     I = n(712215);
 let x = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_16);
 function T(e) {
-    let { user: t, guild: a, nick: c, theme: u, onSelect: m } = e,
+    let { user: t, guild: a, nick: c, theme: u, onSelect: p } = e,
         _ = t.hasAvatarForGuild(a.id);
     return (0, i.jsxs)(r.Clickable, {
         focusProps: { offset: { right: 8 } },
-        className: g.listRow,
-        onClick: m,
+        className: C.listRow,
+        onClick: p,
         onContextMenu: (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('96427'), n.e('23755'), n.e('89350'), n.e('11751'), n.e('29549'), n.e('33053'), n.e('31605'), n.e('37581'), n.e('65840'), n.e('7654'), n.e('90508'), n.e('18146'), n.e('44156'), n.e('59743'), n.e('14203'), n.e('85552'), n.e('48804'), n.e('58227'), n.e('1187'), n.e('75531'), n.e('22036'), n.e('92557'), n.e('64679'), n.e('23693'), n.e('87713'), n.e('33213'), n.e('41127')]).then(n.bind(n, 545135));
@@ -48,7 +48,7 @@ function T(e) {
                 tabIndex: -1,
                 guild: a,
                 showBadge: !0,
-                className: s()(g.listAvatar, null == a.icon ? I.guildAvatarWithoutIcon : null),
+                className: s()(C.listAvatar, null == a.icon ? I.guildAvatarWithoutIcon : null),
                 badgeStrokeColor: (0, d.Lq)((0, l.wj)(u) ? E.Ilk.PRIMARY_600 : E.Ilk.WHITE_500),
                 badgeTooltipColor: r.TooltipColors.PRIMARY,
                 badgeTooltipDelay: f.vB,
@@ -56,10 +56,10 @@ function T(e) {
                 active: !0
             }),
             (0, i.jsxs)('div', {
-                className: g.listRowContent,
+                className: C.listRowContent,
                 children: [
                     (0, i.jsx)('div', {
-                        className: g.listName,
+                        className: C.listName,
                         children: a.toString()
                     }),
                     _ || null != c
@@ -73,7 +73,7 @@ function T(e) {
                                           className: I.guildAvatar,
                                           'aria-hidden': !0
                                       }),
-                                  null != c ? c : p.ZP.getName(t)
+                                  null != c ? c : m.ZP.getName(t)
                               ]
                           })
                         : null
@@ -82,30 +82,30 @@ function T(e) {
         ]
     });
 }
-function N(e) {
+function v(e) {
     let { user: t, onClose: n } = e,
         { mutualGuilds: a } = (0, _.Z)(t.id),
         s = (0, u.ZP)(),
         l = (e) => {
-            (0, m.X)(e), n(), (0, c.xf)();
+            (0, p.X)(e), n(), (0, c.xf)();
         };
     return (0, i.jsx)(r.ScrollerThin, {
-        className: g.listScroller,
+        className: C.listScroller,
         fade: !0,
         children:
             null == a
                 ? (0, i.jsx)('div', {
-                      className: g.empty,
+                      className: C.empty,
                       children: (0, i.jsx)(r.Spinner, {})
                   })
                 : 0 === a.length
                   ? (0, i.jsxs)('div', {
-                        className: g.empty,
+                        className: C.empty,
                         children: [
-                            (0, i.jsx)('div', { className: g.emptyIconGuilds }),
+                            (0, i.jsx)('div', { className: C.emptyIconGuilds }),
                             (0, i.jsx)('div', {
-                                className: g.emptyText,
-                                children: C.Z.Messages.NO_MUTUAL_GUILDS
+                                className: C.emptyText,
+                                children: g.Z.Messages.NO_MUTUAL_GUILDS
                             })
                         ]
                     })

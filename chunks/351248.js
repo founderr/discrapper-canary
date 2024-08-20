@@ -15,13 +15,13 @@ var i = n(735250),
     u = n(780384),
     d = n(481060),
     h = n(410030),
-    m = n(451478),
-    p = n(584511),
+    p = n(451478),
+    m = n(584511),
     _ = n(354459),
     f = n(817632),
     E = n(257995),
-    C = n(658371);
-function g(e, t, n) {
+    g = n(658371);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,8 +48,8 @@ let I = {
         EASING_OUT: r.Z.Easing.quad
     },
     T = 200,
-    N = 125;
-class v extends a.PureComponent {
+    v = 125;
+class N extends a.PureComponent {
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -93,7 +93,7 @@ class v extends a.PureComponent {
             r.Z.sequence(s),
             r.Z.timing(a, {
                 toValue: 0,
-                duration: N
+                duration: v
             })
         ]).start(e);
     }
@@ -130,8 +130,8 @@ class v extends a.PureComponent {
         let { theme: e, children: t, className: n } = this.props,
             a = (0, u.wj)(e),
             s = l()(f.sprite, {
-                [C.crossWhite]: a,
-                [C.crossGrey]: !a
+                [g.crossWhite]: a,
+                [g.crossGrey]: !a
             });
         return (0, i.jsxs)(r.Z.div, {
             className: l()(f.transition, n),
@@ -152,29 +152,29 @@ class v extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), g(this, 'scaleAnimation', new r.Z.Value(0)), g(this, 'spriteAnimation', new r.Z.Value(0)), g(this, 'spriteOpacity', new r.Z.Value(0)), g(this, 'widthAnimation', new r.Z.Value(0));
+        super(...e), C(this, 'scaleAnimation', new r.Z.Value(0)), C(this, 'spriteAnimation', new r.Z.Value(0)), C(this, 'spriteOpacity', new r.Z.Value(0)), C(this, 'widthAnimation', new r.Z.Value(0));
     }
 }
 function S(e) {
     var t, n;
-    let { participants: a, onContextMenu: s, className: r, onClick: u, width: E, guildId: C } = e,
-        g = (0, h.ZP)();
+    let { participants: a, onContextMenu: s, className: r, onClick: u, width: E, guildId: g } = e,
+        C = (0, h.ZP)();
     let I = ((t = E), (n = a.length), ((0, d.getAvatarSize)(d.AvatarSizes.SIZE_80) + 16) * n > t ? d.AvatarSizes.SIZE_40 : d.AvatarSizes.SIZE_80),
-        x = (0, o.e7)([m.Z], () => m.Z.isFocused()),
+        x = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         T = a.map((e) => {
             var t, n;
             if (e.type !== _.fO.USER) return null;
             let { user: a, voiceState: l, speaking: r, ringing: o } = e;
             return (0, i.jsx)(
-                v,
+                N,
                 {
                     className: f.participant,
                     width: (0, d.getAvatarSize)(I),
-                    theme: g,
+                    theme: C,
                     children: (0, i.jsx)(
-                        p.Z,
+                        m.Z,
                         {
-                            src: a.getAvatarURL(C, (0, d.getAvatarSize)(I), r && x),
+                            src: a.getAvatarURL(g, (0, d.getAvatarSize)(I), r && x),
                             size: I,
                             muted: null !== (t = null == l ? void 0 : l.isVoiceMuted()) && void 0 !== t && t,
                             deafen: null !== (n = null == l ? void 0 : l.isVoiceDeafened()) && void 0 !== n && n,

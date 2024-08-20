@@ -9,8 +9,8 @@ var i = n(735250),
     u = n(600164),
     d = n(903223),
     h = n(689938),
-    m = n(416652);
-function p(e, t, n) {
+    p = n(416652);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ let _ = {
         autoInvert: !1
     },
     f = (e) => {
-        let { region: t, className: n = m.regionSelectName } = e,
+        let { region: t, className: n = p.regionSelectName } = e,
             a = t.name.replace(/ \(VIP\)$/, '');
         return (0, i.jsx)('div', {
             className: n,
@@ -44,14 +44,14 @@ class E extends a.PureComponent {
             children: [
                 (0, i.jsx)(f, {
                     region: e,
-                    className: m.regionSelectName
+                    className: p.regionSelectName
                 }),
-                t ? (0, i.jsx)('i', { className: m.check }) : null
+                t ? (0, i.jsx)('i', { className: p.check }) : null
             ]
         });
     }
 }
-class C extends a.PureComponent {
+class g extends a.PureComponent {
     componentDidMount() {
         null == this.props.regions && c.Z.fetchRegions(null);
     }
@@ -77,12 +77,12 @@ class C extends a.PureComponent {
             onChange: this.handleChangeVoiceRegion,
             renderOption: this.renderOption,
             popoutProps: _,
-            popoutClassName: m.regionSelectPopout
+            popoutClassName: p.regionSelectPopout
         });
     }
     constructor(...e) {
         super(...e),
-            p(this, 'renderOption', (e, t) =>
+            m(this, 'renderOption', (e, t) =>
                 (0, i.jsx)(
                     E,
                     {
@@ -92,7 +92,7 @@ class C extends a.PureComponent {
                     e.value.id
                 )
             ),
-            p(this, 'getSelectedRegion', () => {
+            m(this, 'getSelectedRegion', () => {
                 var e;
                 let { regions: t, call: n } = this.props;
                 return n.regionUpdated && null != t && null != n.region
@@ -114,11 +114,11 @@ class C extends a.PureComponent {
                           hidden: !1
                       };
             }),
-            p(this, 'handleChangeVoiceRegion', (e) => {
+            m(this, 'handleChangeVoiceRegion', (e) => {
                 let { value: t } = e,
                     { channelId: n } = this.props.call;
                 c.Z.changeCallRegion(n, t.id);
             });
     }
 }
-t.Z = r.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(C);
+t.Z = r.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(g);

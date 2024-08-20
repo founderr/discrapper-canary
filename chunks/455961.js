@@ -1,6 +1,6 @@
 n.d(t, {
     b: function () {
-        return L;
+        return j;
     }
 }),
     n(47120),
@@ -15,18 +15,18 @@ var i = n(735250),
     u = n(46973),
     d = n(481060),
     h = n(846027),
-    m = n(607070),
-    p = n(361291),
+    p = n(607070),
+    m = n(361291),
     _ = n(131951),
     f = n(626135),
     E = n(120522),
-    C = n(386542),
-    g = n(933843),
+    g = n(386542),
+    C = n(933843),
     I = n(746599),
     x = n(1163),
     T = n(738672),
-    N = n(981631),
-    v = n(37113),
+    v = n(981631),
+    N = n(37113),
     S = n(689938),
     Z = n(375919);
 function A(e) {
@@ -44,22 +44,22 @@ function A(e) {
         })
     });
 }
-let M = v.LY.RESOLUTION_1440,
-    b = v.ws.FPS_60;
+let M = N.LY.RESOLUTION_1440,
+    b = N.ws.FPS_60;
 function R(e) {
     let { channel: t } = e,
-        n = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+        n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
         [s, l] = a.useState(!1),
-        { preset: o } = (0, c.cj)([p.Z], () => p.Z.getState()),
-        C = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()),
+        { preset: o } = (0, c.cj)([m.Z], () => m.Z.getState()),
+        g = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()),
         x = a.useCallback(() => {
             l(!0),
                 (0, E.S)(r.q.STREAM_HIGH_QUALITY)
                     .then((e) => {
                         if (e) {
                             if (
-                                ((0, I.J1)(!(0, g.mc)(M, b)),
-                                f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
+                                ((0, I.J1)(!(0, C.mc)(M, b)),
+                                f.default.track(v.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
                                     perk_type: r.q.STREAM_HIGH_QUALITY,
@@ -67,7 +67,7 @@ function R(e) {
                                     max_fps: b
                                 }),
                                 (0, I.cD)(!1),
-                                null == C)
+                                null == g)
                             )
                                 return;
                             let e = {
@@ -78,15 +78,15 @@ function R(e) {
                                 },
                                 context: u.Yn.STREAM
                             };
-                            null != C.desktopSource
+                            null != g.desktopSource
                                 ? (e.desktopSettings = {
-                                      sourceId: C.desktopSource.id,
+                                      sourceId: g.desktopSource.id,
                                       sound: !0
                                   })
-                                : null != C.cameraSource &&
+                                : null != g.cameraSource &&
                                   (e.cameraSettings = {
-                                      videoDeviceGuid: C.cameraSource.videoDeviceGuid,
-                                      audioDeviceGuid: C.cameraSource.audioDeviceGuid
+                                      videoDeviceGuid: g.cameraSource.videoDeviceGuid,
+                                      audioDeviceGuid: g.cameraSource.audioDeviceGuid
                                   }),
                                 h.Z.setGoLiveSource(e);
                         }
@@ -95,7 +95,7 @@ function R(e) {
                     .finally(() => {
                         l(!1);
                     });
-        }, [o, t, C]);
+        }, [o, t, g]);
     return (0, i.jsx)(d.ShinyButton, {
         fullWidth: !0,
         pauseAnimation: n,
@@ -107,7 +107,7 @@ function R(e) {
         children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_CTA_V2
     });
 }
-function j(e) {
+function L(e) {
     let { channel: t, hidden: n, onDismiss: a } = e,
         s = x.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, i.jsxs)('div', {
@@ -139,9 +139,9 @@ function j(e) {
         ]
     });
 }
-function L(e) {
+function j(e) {
     let { channel: t, ...n } = e,
-        { shouldShowOptInPopout: s } = (0, C.k)(r.q.STREAM_HIGH_QUALITY),
+        { shouldShowOptInPopout: s } = (0, g.k)(r.q.STREAM_HIGH_QUALITY),
         { enabled: l } = x.Z.useExperiment(
             { location: 'StreamButtonDemoOptInPopout' },
             {
@@ -155,7 +155,7 @@ function L(e) {
             l &&
             !o.current &&
             ((o.current = !0),
-            f.default.track(N.rMx.PERK_DEMO_OFFER_VIEWED, {
+            f.default.track(v.rMx.PERK_DEMO_OFFER_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
                 perk_type: r.q.STREAM_HIGH_QUALITY
@@ -165,7 +165,7 @@ function L(e) {
         ? (0, i.jsx)(T.h, {
               ...n,
               renderComponent: (e) =>
-                  (0, i.jsx)(j, {
+                  (0, i.jsx)(L, {
                       ...e,
                       channel: t
                   })

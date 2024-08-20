@@ -14,25 +14,25 @@ var i = n(735250),
     u = n(933793),
     d = n(13736),
     h = n(732393),
-    m = n(214906),
-    p = n(612856),
+    p = n(214906),
+    m = n(612856),
     _ = n(137591),
     f = n(299206),
     E = n(727429),
-    C = n(665149),
-    g = n(359110),
+    g = n(665149),
+    C = n(359110),
     I = n(585483),
     x = n(739830),
     T = n(488131),
-    N = n(981631),
-    v = n(689938);
+    v = n(981631),
+    N = n(689938);
 function S(e) {
     let { channel: t } = e,
         [n, l] = a.useState(!1);
     function r() {
         l((e) => !e);
     }
-    let o = v.Z.Messages.MORE;
+    let o = N.Z.Messages.MORE;
     return (0, i.jsx)(s.Popout, {
         shouldShow: n,
         animation: s.Popout.Animation.NONE,
@@ -48,7 +48,7 @@ function S(e) {
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(C.ZP.Icon, {
+            return (0, i.jsx)(g.ZP.Icon, {
                 ...e,
                 onClick: r,
                 tooltip: n ? null : o,
@@ -62,9 +62,9 @@ function S(e) {
 function Z(e) {
     let { channel: t, closePopout: n, onSelect: a } = e,
         E = (0, o.Z)(t, 'Sidebar Overflow'),
-        C = (0, u.Z)(t),
-        x = (0, m.Z)(t),
-        T = (0, p.Z)(t),
+        g = (0, u.Z)(t),
+        x = (0, p.Z)(t),
+        T = (0, m.Z)(t),
         S = (0, l.Z)(t),
         Z = (0, c.Z)(t),
         A = (0, h.Z)(t.id),
@@ -72,16 +72,16 @@ function Z(e) {
         b = (0, r.Z)(t),
         R = (0, f.Z)({
             id: t.id,
-            label: v.Z.Messages.COPY_ID_THREAD
+            label: N.Z.Messages.COPY_ID_THREAD
         }),
-        j = (0, _.Z)(t);
-    function L() {
-        (0, g.Kh)(t.id);
+        L = (0, _.Z)(t);
+    function j() {
+        (0, C.Kh)(t.id);
     }
     return (0, i.jsxs)(s.Menu, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': v.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
+        'aria-label': N.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
         onSelect: a,
         children: [
             (0, i.jsxs)(s.MenuGroup, {
@@ -89,8 +89,8 @@ function Z(e) {
                     E,
                     (0, i.jsx)(s.MenuItem, {
                         id: 'open',
-                        label: v.Z.Messages.OPEN_IN_FULL_VIEW,
-                        action: L
+                        label: N.Z.Messages.OPEN_IN_FULL_VIEW,
+                        action: j
                     })
                 ]
             }),
@@ -98,33 +98,33 @@ function Z(e) {
                 children: [x, T]
             }),
             (0, i.jsxs)(s.MenuGroup, {
-                children: [M, C, A]
+                children: [M, g, A]
             }),
             (0, i.jsxs)(s.MenuGroup, {
                 children: [
                     (0, i.jsx)(s.MenuItem, {
                         id: 'search',
-                        label: v.Z.Messages.SEARCH,
+                        label: N.Z.Messages.SEARCH,
                         icon: s.WindowLaunchIcon,
                         action: function () {
-                            L(),
+                            j(),
                                 setTimeout(() => {
-                                    I.S.dispatch(N.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    I.S.dispatch(v.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         }
                     }),
                     (0, i.jsx)(s.MenuItem, {
                         id: 'pins',
-                        label: v.Z.Messages.PINS,
+                        label: N.Z.Messages.PINS,
                         icon: s.WindowLaunchIcon,
                         action: function () {
-                            L(), I.S.dispatch(N.CkL.TOGGLE_CHANNEL_PINS);
+                            j(), I.S.dispatch(v.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]
             }),
             (0, i.jsxs)(s.MenuGroup, {
-                children: [j, S, Z, b]
+                children: [L, S, Z, b]
             }),
             (0, i.jsx)(s.MenuGroup, { children: R })
         ]
@@ -136,9 +136,9 @@ function A(e) {
         children: [
             t.isForumPost() ? null : (0, i.jsx)(x.Z, { channel: t }),
             (0, i.jsx)(S, { channel: t }),
-            (0, i.jsx)(C.ZP.Icon, {
+            (0, i.jsx)(g.ZP.Icon, {
                 icon: s.XSmallIcon,
-                tooltip: v.Z.Messages.CLOSE,
+                tooltip: N.Z.Messages.CLOSE,
                 onClick: () => (0, T.vN)((0, E.e)(t), null != n ? n : t.parent_id)
             })
         ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     },
     r: function () {
         return i;
@@ -17,8 +17,8 @@ var i,
     u = n(594174),
     d = n(981631),
     h = n(689938);
-function m(e) {
-    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: a, hasClips: m, channel: p, activities: _, newClipsCount: f, canPostPolls: E, canLaunchActivities: C, appContext: g } = e,
+function p(e) {
+    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: a, hasClips: p, channel: m, activities: _, newClipsCount: f, canPostPolls: E, canLaunchActivities: g, appContext: C } = e,
         I = [];
     return (
         t &&
@@ -32,9 +32,9 @@ function m(e) {
                 icon: s.FileUpIcon,
                 display: h.Z.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
             })),
-        m &&
+        p &&
             t &&
-            g !== d.IlC.POPOUT &&
+            C !== d.IlC.POPOUT &&
             I.push({
                 type: 'CLIPS',
                 icon: s.ClipsIcon,
@@ -61,7 +61,7 @@ function m(e) {
                 icon: s.AppsIcon,
                 display: h.Z.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
             }),
-        C &&
+        g &&
             I.push({
                 type: 'ACTIVITY',
                 icon: s.ActivitiesIcon,
@@ -75,7 +75,7 @@ function m(e) {
                         type: 'INVITE_TO_GAME',
                         icon: s.DpadIcon,
                         display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
-                            channel: (0, r.F6)(p, u.default, c.Z, !0),
+                            channel: (0, r.F6)(m, u.default, c.Z, !0),
                             game: null != e ? e.name : ''
                         }),
                         activity: e
@@ -86,7 +86,7 @@ function m(e) {
                             type: 'INVITE_TO_LISTEN',
                             icon: s.UserPlayIcon,
                             display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
-                                channel: (0, r.F6)(p, u.default, c.Z, !0),
+                                channel: (0, r.F6)(m, u.default, c.Z, !0),
                                 name: null != e ? e.name : ''
                             }),
                             activity: e
@@ -97,7 +97,7 @@ function m(e) {
                             type: 'INVITE_TO_WATCH',
                             icon: s.EyeIcon,
                             display: h.Z.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
-                                channel: (0, r.F6)(p, u.default, c.Z, !0),
+                                channel: (0, r.F6)(m, u.default, c.Z, !0),
                                 name: null != e ? e.name : ''
                             }),
                             activity: e

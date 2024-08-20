@@ -14,40 +14,40 @@ var i = n(735250),
     u = n(317381),
     d = n(683921),
     h = n(588580),
-    m = n(374065),
-    p = n(451576),
+    p = n(374065),
+    m = n(451576),
     _ = n(526846),
     f = n(938655),
     E = n(403404),
-    C = n(906732),
-    g = n(424602),
+    g = n(906732),
+    C = n(424602),
     I = n(243778),
     x = n(579185),
     T = n(301076),
-    N = n(981631),
-    v = n(921944),
+    v = n(981631),
+    N = n(921944),
     S = n(177480);
 function Z(e) {
     let { channel: t } = e,
         n = (0, s.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
-        Z = (0, m.KF)(t.id),
-        A = (0, m.g5)(Z),
-        M = Z !== m.jy.CAN_LAUNCH || n,
-        { isHovered: b, setIsHovered: R, onMouseEnter: j, onMouseLeave: L } = (0, x.Z)(200, 300),
-        P = (0, h.a)(),
-        O = (0, d.Z)({ channelId: t.id }),
+        Z = (0, p.KF)(t.id),
+        A = (0, p.g5)(Z),
+        M = Z !== p.jy.CAN_LAUNCH || n,
+        { isHovered: b, setIsHovered: R, onMouseEnter: L, onMouseLeave: j } = (0, x.Z)(200, 300),
+        O = (0, h.a)(),
+        P = (0, d.Z)({ channelId: t.id }),
         y = !M,
         D = a.useCallback(
             (e) => {
-                'focus' !== e.type && j();
+                'focus' !== e.type && L();
             },
-            [j]
+            [L]
         ),
         k = (0, o.O)(),
-        U = (0, c.bp)() === N.IlC.POPOUT,
-        { analyticsLocations: w } = (0, C.ZP)(),
+        U = (0, c.bp)() === v.IlC.POPOUT,
+        { analyticsLocations: w } = (0, g.ZP)(),
         B = w.length > 0 ? w[w.length - 1] : 'open-activity-shelf';
-    g.m1.useExperiment({ location: B }, { autoTrackExposure: !0 });
+    C.m1.useExperiment({ location: B }, { autoTrackExposure: !0 });
     let H = a.useCallback(() => {
             (0, E.Z)({
                 channel: t,
@@ -61,7 +61,7 @@ function Z(e) {
         G = [];
     return (
         !M && G.push(l.z.ACTIVITIES_MINI_SHELF_SPARKLES),
-        (0, p.Z)(t.id) && !M && G.push(l.z.ACTIVITY_GDM_ROCKET_SPARKLE),
+        (0, m.Z)(t.id) && !M && G.push(l.z.ACTIVITY_GDM_ROCKET_SPARKLE),
         (0, i.jsx)(I.ZP, {
             contentTypes: G,
             children: (e) => {
@@ -83,10 +83,10 @@ function Z(e) {
                                   ref: s,
                                   channel: t,
                                   closePopout: n,
-                                  onMouseEnter: j,
-                                  onMouseLeave: L,
+                                  onMouseEnter: L,
+                                  onMouseLeave: j,
                                   isHovered: b,
-                                  onClick: () => a(v.L.UNKNOWN)
+                                  onClick: () => a(N.L.UNKNOWN)
                               })
                             : (0, i.jsx)(i.Fragment, {});
                     },
@@ -97,15 +97,15 @@ function Z(e) {
                                     disabled: M,
                                     'aria-label': A,
                                     label: y ? void 0 : A,
-                                    isActivityActive: O || b,
+                                    isActivityActive: P || b,
                                     className: S.controlButton,
                                     onClick: () => {
-                                        H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(v.L.UNKNOWN);
+                                        H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(N.L.UNKNOWN);
                                     },
                                     onMouseEnter: D,
-                                    onMouseLeave: L
+                                    onMouseLeave: j
                                 }),
-                                P
+                                O
                                     ? (0, i.jsx)(f.A, {
                                           top: 4,
                                           right: 10,

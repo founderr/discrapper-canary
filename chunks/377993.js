@@ -15,34 +15,34 @@ var i = n(735250),
     u = n(100527),
     d = n(906732),
     h = n(385499),
-    m = n(82295),
-    p = n(554300),
+    p = n(82295),
+    m = n(554300),
     _ = n(556084),
     f = n(184301),
     E = n(103575),
-    C = n(158776),
-    g = n(699516),
+    g = n(158776),
+    C = n(699516),
     I = n(111583),
     x = n(594174),
     T = n(626135),
-    N = n(768581),
-    v = n(585483),
+    v = n(768581),
+    N = n(585483),
     S = n(233870),
     Z = n(51144),
     A = n(998502),
     M = n(276264),
     b = n(981631),
     R = n(689938),
-    j = n(410740),
-    L = n(460356);
-let P = [],
-    O = A.ZP.getEnableHardwareAcceleration();
+    L = n(410740),
+    j = n(460356);
+let O = [],
+    P = A.ZP.getEnableHardwareAcceleration();
 function y(e) {
     let { user: t, channel: a, status: u, activities: d } = e,
         h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(a.id)[t.id]),
-        m = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
-        p = (0, l.e7)([C.Z], () => C.Z.isMobileOnline(t.id)),
-        _ = (0, l.e7)([g.Z], () => g.Z.getNickname(t.id)),
+        p = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
+        m = (0, l.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
+        _ = (0, l.e7)([C.Z], () => C.Z.getNickname(t.id)),
         T = (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('17354')]).then(n.bind(n, 354589));
@@ -68,7 +68,7 @@ function y(e) {
         onShiftClick: () => {
             let e = '@'.concat(Z.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+            N.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }),
@@ -79,16 +79,16 @@ function y(e) {
                 M.Z,
                 {
                     user: t,
-                    currentUser: m,
+                    currentUser: p,
                     isOwner: t.id === a.ownerId,
                     ownerTooltipText: R.Z.Messages.GROUP_OWNER,
-                    shouldAnimateStatus: O,
+                    shouldAnimateStatus: P,
                     isTyping: h,
                     status: u,
                     activities: d,
                     channel: a,
                     onContextMenu: T,
-                    isMobile: p,
+                    isMobile: m,
                     nick: _,
                     ...e
                 },
@@ -114,7 +114,7 @@ function D(e) {
             [l, c]
         ),
         d = l.application.bot,
-        m = N.ZP.getApplicationIconURL({
+        p = v.ZP.getApplicationIconURL({
             id: l.application.id,
             icon: l.application.icon,
             bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
@@ -122,7 +122,7 @@ function D(e) {
         });
     return null != d
         ? (0, i.jsx)(r.Popout, {
-              preload: () => (0, f.Z)(d.id, m, { channelId: c.id }),
+              preload: () => (0, f.Z)(d.id, p, { channelId: c.id }),
               renderPopout: (e) =>
                   (0, i.jsx)(E.Z, {
                       ...e,
@@ -133,21 +133,21 @@ function D(e) {
               position: s.tq ? 'window_center' : 'left',
               spacing: 16,
               children: (e) =>
-                  (0, i.jsx)(p.Z, {
+                  (0, i.jsx)(m.Z, {
                       onContextMenu: u,
-                      className: j.member,
+                      className: L.member,
                       name: (0, i.jsx)('span', {
-                          className: j.username,
+                          className: L.username,
                           children: l.application.name
                       }),
                       avatar: (0, i.jsx)(r.Avatar, {
                           size: r.AvatarSizes.SIZE_32,
-                          src: m,
+                          src: p,
                           'aria-label': l.application.name,
                           statusTooltip: !0
                       }),
                       decorators: (0, i.jsx)(h.Z, {
-                          className: j.botTag,
+                          className: L.botTag,
                           verified: null == d ? void 0 : d.isVerifiedBot()
                       }),
                       id: l.application.id,
@@ -182,20 +182,20 @@ function U(e) {
     let { listItems: I } =
             ((t = s),
             (0, l.e7)(
-                [g.Z, x.default, C.Z],
+                [C.Z, x.default, g.Z],
                 () => {
                     let e = (0, S.T)(t.recipients, x.default),
                         n = {};
                     for (let t of e) {
                         var i, a, s;
-                        g.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
+                        C.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                             ? (n[t.id] = {
-                                  status: null !== (a = C.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
-                                  activities: null !== (s = C.Z.getActivities(t.id)) && void 0 !== s ? s : P
+                                  status: null !== (a = g.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
+                                  activities: null !== (s = g.Z.getActivities(t.id)) && void 0 !== s ? s : O
                               })
                             : (n[t.id] = {
                                   status: b.Skl.OFFLINE,
-                                  activities: P
+                                  activities: O
                               });
                     }
                     let l = [];
@@ -212,7 +212,7 @@ function U(e) {
                 [t],
                 k
             )),
-        { installedIntegrations: N, applicationsShelf: v, fetched: Z, appsInGDMEnabled: A, availableApplications: M } = (0, _.j)({ channelId: s.id });
+        { installedIntegrations: v, applicationsShelf: N, fetched: Z, appsInGDMEnabled: A, availableApplications: M } = (0, _.j)({ channelId: s.id });
     a.useEffect(() => {
         if (c)
             for (let e of I)
@@ -228,22 +228,22 @@ function U(e) {
                 guild_id: s.guild_id
             });
         }, [s.guild_id, s.id, s.type]);
-    let O = c && I.every((e) => e.user.isStaff());
+    let P = c && I.every((e) => e.user.isStaff());
     return (0, i.jsx)(d.Gt, {
         value: E,
         children: (0, i.jsx)('div', {
-            className: L.membersWrap,
+            className: j.membersWrap,
             children: (0, i.jsxs)(r.Scroller, {
-                className: L.members,
+                className: j.members,
                 fade: !0,
                 children: [
-                    (0, i.jsxs)(m.Z, {
-                        className: L.membersGroup,
+                    (0, i.jsxs)(p.Z, {
+                        className: j.membersGroup,
                         children: [
                             ''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(I.length, ' '),
-                            O
+                            P
                                 ? (0, i.jsx)(h.Z, {
-                                      className: L.__invalid_decorator,
+                                      className: j.__invalid_decorator,
                                       type: h.Z.Types.STAFF_ONLY_DM
                                   })
                                 : null
@@ -262,14 +262,14 @@ function U(e) {
                         )
                     ),
                     A &&
-                        (N.length > 0 || (Z && v.length > 0)) &&
+                        (v.length > 0 || (Z && N.length > 0)) &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(m.Z, {
-                                    className: L.membersGroup,
-                                    children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(N.length)
+                                (0, i.jsx)(p.Z, {
+                                    className: j.membersGroup,
+                                    children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(v.length)
                                 }),
-                                N.map((e) =>
+                                v.map((e) =>
                                     (0, i.jsx)(
                                         D,
                                         {
@@ -280,8 +280,8 @@ function U(e) {
                                     )
                                 ),
                                 M.length > 0 &&
-                                    (0, i.jsx)(p.Z, {
-                                        className: j.member,
+                                    (0, i.jsx)(m.Z, {
+                                        className: L.member,
                                         onClick: () => {
                                             (0, r.openModalLazy)(async () => {
                                                 let { default: e } = await n.e('4536').then(n.bind(n, 422677));
@@ -293,7 +293,7 @@ function U(e) {
                                             });
                                         },
                                         avatar: (0, i.jsx)('div', {
-                                            className: L.appIconWrapper,
+                                            className: j.appIconWrapper,
                                             children: (0, i.jsx)(r.PlusSmallIcon, {
                                                 size: 'sm',
                                                 color: 'currentColor'

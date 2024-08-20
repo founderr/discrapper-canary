@@ -14,27 +14,27 @@ var a = n(442837),
     u = n(592125),
     d = n(15274),
     h = n(482241),
-    m = n(389303),
-    p = n(554747),
+    p = n(389303),
+    m = n(554747),
     _ = n(689938),
     f = n(513128);
 function E(e) {
     let { channelId: t, onClick: n } = e,
         E = (0, l.bp)(),
-        C = (0, p.qY)(t),
-        g = (0, a.e7)([u.Z], () => u.Z.getChannel(t), [t]),
-        { canManageGuildEvent: I } = (0, r.XJ)(g),
-        x = I(C);
-    if (null == C) return null;
+        g = (0, m.qY)(t),
+        C = (0, a.e7)([u.Z], () => u.Z.getChannel(t), [t]),
+        { canManageGuildEvent: I } = (0, r.XJ)(C),
+        x = I(g);
+    if (null == g) return null;
     let T = () => {
-            if (null != g && (0, m.Z)(g)) {
-                (0, d.lC)(g, E);
+            if (null != C && (0, p.Z)(C)) {
+                (0, d.lC)(C, E);
                 return;
             }
             n();
         },
-        N = () => {
-            h.Z.endEvent(C.id, C.guild_id);
+        v = () => {
+            h.Z.endEvent(g.id, g.guild_id);
         };
     return x
         ? (0, i.jsx)(s.Popout, {
@@ -49,7 +49,7 @@ function E(e) {
                           children: (0, i.jsx)(s.MenuItem, {
                               id: 'end-voice-event',
                               color: 'danger',
-                              action: N,
+                              action: v,
                               label: _.Z.Messages.END_EVENT,
                               icon: s.CircleXIcon
                           })

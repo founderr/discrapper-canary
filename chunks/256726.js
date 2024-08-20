@@ -1,66 +1,66 @@
-n.d(t, {
+t.d(n, {
     CR: function () {
-        return p;
+        return E;
     },
     UU: function () {
-        return h;
+        return m;
     },
     jE: function () {
         return d;
     }
 }),
-    n(627494),
-    n(757143);
-var i = n(884439),
-    a = n(55000),
-    s = n(693824),
-    l = n(690725),
-    r = n(561308),
-    o = n(737583),
-    c = n(169040),
-    u = n(689938);
+    t(627494),
+    t(757143);
+var a = t(884439),
+    l = t(55000),
+    i = t(693824),
+    r = t(690725),
+    s = t(561308),
+    o = t(737583),
+    c = t(169040),
+    u = t(689938);
 let d = (e) => {
-        let { timestamp: t } = e;
+        let { timestamp: n } = e;
         return [
             {
                 iconPath: c.mb,
-                text: t
+                text: n
             }
         ];
     },
-    h = (e) => {
-        var t;
-        let n = null === (t = (0, r.PJ)(e, i.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
-        return null == n
+    m = (e) => {
+        var n;
+        let t = null === (n = (0, s.PJ)(e, a.N.AGGREGATE_COUNT)) || void 0 === n ? void 0 : n.count;
+        return null == t
             ? []
             : [
                   {
                       iconPath: c.eF,
-                      text: u.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: n })
+                      text: u.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: t })
                   }
               ];
     },
-    m = (e) => {
-        let { avatarSrc: t, mediaImageSrc: n } = e;
+    _ = (e) => {
+        let { avatarSrc: n, mediaImageSrc: t } = e;
         return {
-            AvatarImage: t,
-            ...(null != n && { MediaImage: n })
+            AvatarImage: n,
+            ...(null != t && { MediaImage: t })
         };
     },
-    p = async (e) => {
-        let { user: t, channel: n, mediaImageSrc: i, artist: r, description: u, colors: d, badges: h } = e,
-            p = m({
-                avatarSrc: t.getAvatarURL(n.guild_id, 128),
-                mediaImageSrc: i
+    E = async (e) => {
+        let { user: n, channel: t, mediaImageSrc: a, artist: s, description: u, colors: d, badges: m } = e,
+            E = _({
+                avatarSrc: n.getAvatarURL(t.guild_id, 128),
+                mediaImageSrc: a
             }),
-            _ = r.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
-        return await (0, l.f)({
-            assetsToLoad: p,
+            T = s.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
+        return await (0, r.f)({
+            assetsToLoad: E,
             drawImage: (e) => {
-                (function (e, t) {
-                    let n = t.map((e, t) => ({
+                (function (e, n) {
+                    let t = n.map((e, n) => ({
                         color: e,
-                        stop: t
+                        stop: n
                     }));
                     e.setSize(
                         {
@@ -70,7 +70,7 @@ let d = (e) => {
                         4
                     ),
                         e.drawRoundedGradientRect(
-                            n,
+                            t,
                             {
                                 x: 0,
                                 y: c.bg
@@ -100,10 +100,10 @@ let d = (e) => {
                                 h: c.Pu
                             },
                             8,
-                            { fillMode: s.JU.Contain }
-                        ) === s.vP.Failure &&
+                            { fillMode: i.JU.Contain }
+                        ) === i.vP.Failure &&
                             e.drawPath(
-                                a.Cv,
+                                l.Cv,
                                 {
                                     x: c.sB,
                                     y: c.sB
@@ -126,16 +126,16 @@ let d = (e) => {
                             50
                         );
                     })(e),
-                    (function (e, t) {
+                    (function (e, n) {
                         e.setColor('white'),
                             e.setFont({
                                 size: 16,
                                 family: c.I8,
                                 weight: c.Ue,
-                                truncate: s.GX.Wrap
+                                truncate: i.GX.Wrap
                             }),
                             e.drawText(
-                                t,
+                                n,
                                 {
                                     x: c.Iq,
                                     y: 64,
@@ -147,17 +147,17 @@ let d = (e) => {
                     })(e, u),
                     (0, o.J)({
                         canvas: e,
-                        badges: h,
+                        badges: m,
                         startPosition: c.Iq,
                         maxWidth: c.kC
                     });
             },
             exportConfigs: {
-                format: s.kH.CloudUpload,
+                format: i.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(_, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(T, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: n.id
+                channelId: t.id
             }
         });
     };

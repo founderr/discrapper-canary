@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return v;
+        return _;
     }
 }),
     l(47120);
@@ -14,20 +14,20 @@ var t = l(735250),
     c = l(868819),
     d = l(970184),
     m = l(280501),
-    f = l(689938),
-    E = l(252443);
+    E = l(689938),
+    f = l(252443);
 function p(e) {
     let { emoji: n, label: l, description: r, isDisabled: i, isOffset: s } = e,
-        o = a()(E.labelContainer, {
-            [E.disabled]: i,
-            [E.offset]: null == n && s
+        o = a()(f.labelContainer, {
+            [f.disabled]: i,
+            [f.offset]: null == n && s
         });
     return (0, t.jsxs)('div', {
-        className: E.option,
+        className: f.option,
         children: [
             null != n
                 ? (0, t.jsx)(u.Z, {
-                      className: E.emoji,
+                      className: f.emoji,
                       emojiId: n.id,
                       emojiName: n.name,
                       animated: n.animated
@@ -37,12 +37,12 @@ function p(e) {
                 className: o,
                 children: [
                     (0, t.jsx)('strong', {
-                        className: E.label,
+                        className: f.label,
                         children: l
                     }),
                     null != r
                         ? (0, t.jsx)('span', {
-                              className: E.description,
+                              className: f.description,
                               children: r
                           })
                         : null
@@ -54,13 +54,13 @@ function p(e) {
 function C(e) {
     let { emoji: n, label: l } = e;
     return (0, t.jsx)('div', {
-        className: E.option,
+        className: f.option,
         children: (0, t.jsxs)('div', {
-            className: a()(E.value, E.singleValue),
+            className: a()(f.value, f.singleValue),
             children: [
                 null != n
                     ? (0, t.jsx)(u.Z, {
-                          className: E.emoji,
+                          className: f.emoji,
                           src: n.src,
                           emojiId: n.id,
                           emojiName: n.name,
@@ -68,7 +68,7 @@ function C(e) {
                       })
                     : null,
                 (0, t.jsx)('span', {
-                    className: E.singleValueLabel,
+                    className: f.singleValueLabel,
                     children: l
                 })
             ]
@@ -78,18 +78,18 @@ function C(e) {
 function N(e) {
     let { options: n } = e;
     return (0, t.jsx)('div', {
-        className: E.option,
+        className: f.option,
         children: (0, t.jsx)('div', {
-            className: E.value,
+            className: f.value,
             children: n.map((e, n) =>
                 (0, t.jsxs)(
                     'div',
                     {
-                        className: E.optionTag,
+                        className: f.optionTag,
                         children: [
                             null != e.emoji
                                 ? (0, t.jsx)(u.Z, {
-                                      className: E.smallEmoji,
+                                      className: f.smallEmoji,
                                       src: e.emoji.src,
                                       emojiId: e.emoji.id,
                                       emojiName: e.emoji.name,
@@ -99,7 +99,7 @@ function N(e) {
                             (0, t.jsx)(
                                 'span',
                                 {
-                                    className: E.tag,
+                                    className: f.tag,
                                     children: e.label
                                 },
                                 e.value
@@ -112,8 +112,8 @@ function N(e) {
         })
     });
 }
-function v(e) {
-    let { type: n, options: l, id: i, placeholder: a, maxValues: u, minValues: v, disabled: _ } = e,
+function _(e) {
+    let { type: n, options: l, id: i, placeholder: a, maxValues: u, minValues: _, disabled: v } = e,
         T = r.useMemo(() => l.filter((e) => e.default).map((e) => e.value), [l]),
         {
             state: h,
@@ -127,58 +127,58 @@ function v(e) {
         }),
         g = u > 1,
         Z = x === m.gH.LOADING,
-        [A, R] = r.useState(!1),
-        [j, L] = r.useState(() => new Set(l.filter((e) => e.default).map((e) => e.value))),
-        [M, P] = r.useState(j),
+        [j, A] = r.useState(!1),
+        [L, R] = r.useState(() => new Set(l.filter((e) => e.default).map((e) => e.value))),
+        [M, P] = r.useState(L),
         b = r.useMemo(() => l.some((e) => null != e.emoji), [l]);
     r.useEffect(() => {
         if ((null == h ? void 0 : h.type) === o.re.STRING_SELECT) {
             let e = new Set(h.values);
-            L(e), P(e);
+            R(e), P(e);
         } else {
             let e = new Set(T);
-            L(e), P(e);
+            R(e), P(e);
         }
     }, [i, T, h]);
     let y = r.useCallback(() => {
-        if (M !== j)
+        if (M !== L)
             I({
                 type: o.re.STRING_SELECT,
-                values: Array.from(j)
-            }) && P(j);
-    }, [j, M, P, I]);
+                values: Array.from(L)
+            }) && P(L);
+    }, [L, M, P, I]);
     r.useEffect(() => {
-        if (!(A || (j.size === M.size && Array.from(M).every((e) => j.has(e))))) y();
-    }, [A, j, M, y]);
+        if (!(j || (L.size === M.size && Array.from(M).every((e) => L.has(e))))) y();
+    }, [j, L, M, y]);
     let U = s.singleSelect;
-    g ? (U = s.multiSelect) : 0 === v && (U = s.toggleSelect);
+    g ? (U = s.multiSelect) : 0 === _ && (U = s.toggleSelect);
     let k = (0, s.useVariableSelect)({
-        value: j,
-        onChange: (e) => L(e),
+        value: L,
+        onChange: (e) => R(e),
         onSelectInteraction: U
     });
     return (0, t.jsxs)(r.Fragment, {
         children: [
             (0, t.jsxs)('div', {
-                className: E.container,
+                className: f.container,
                 children: [
                     (0, t.jsx)(s.Select, {
-                        isDisabled: _ || O,
-                        className: E.select,
+                        isDisabled: v || O,
+                        className: f.select,
                         options: l.map((e) => ({
                             ...e,
-                            disabled: g && !j.has(e.value) && j.size === u
+                            disabled: g && !L.has(e.value) && L.size === u
                         })),
-                        placeholder: null != a ? a : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
-                        onClose: () => R(!1),
-                        onOpen: () => R(!0),
+                        placeholder: null != a ? a : E.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
+                        onClose: () => A(!1),
+                        onOpen: () => A(!0),
                         maxVisibleItems: 5,
                         closeOnSelect: !g,
-                        optionClassName: E.selectOption,
+                        optionClassName: f.selectOption,
                         renderOptionLabel: (e) =>
                             (0, t.jsx)(p, {
                                 ...e,
-                                isDisabled: g && !j.has(e.value) && j.size === u,
+                                isDisabled: g && !L.has(e.value) && L.size === u,
                                 isOffset: b
                             }),
                         renderOptionValue: (e) => (g ? (0, t.jsx)(N, { options: e }) : (0, t.jsx)(C, { ...e[0] })),
@@ -186,7 +186,7 @@ function v(e) {
                     }),
                     Z
                         ? (0, t.jsx)('div', {
-                              className: E.__invalid_loading,
+                              className: f.__invalid_loading,
                               children: (0, t.jsx)(s.Dots, {
                                   dotRadius: 3.5,
                                   themed: !0
@@ -198,7 +198,7 @@ function v(e) {
             null != S
                 ? (0, t.jsx)(c.st, {
                       ...(0, c.c4)(S),
-                      className: E.error
+                      className: f.error
                   })
                 : null
         ]

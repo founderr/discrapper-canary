@@ -8,24 +8,24 @@ var i = n(470079),
     u = n(665906),
     d = n(488131),
     h = n(695346),
-    m = n(314897),
-    p = n(592125),
+    p = n(314897),
+    m = n(592125),
     _ = n(323873),
     f = n(271383),
     E = n(607744),
-    C = n(375954),
-    g = n(496675),
+    g = n(375954),
+    C = n(496675),
     I = n(572004),
     x = n(585483),
     T = n(358085),
-    N = n(709054),
-    v = n(418476),
+    v = n(709054),
+    N = n(418476),
     S = n(901461),
     Z = n(432376),
     A = n(996861),
     M = n(981631);
 function b(e) {
-    return g.Z.can(M.Plq.MANAGE_MESSAGES, e);
+    return C.Z.can(M.Plq.MANAGE_MESSAGES, e);
 }
 t.Z = function (e, t, n) {
     let R = i.useRef(n);
@@ -33,17 +33,17 @@ t.Z = function (e, t, n) {
         (R.current = n),
         i.useCallback(
             (n) => {
-                var i, j, L, P, O;
+                var i, L, j, O, P;
                 if (!R.current || n.target !== n.currentTarget) return;
                 let y = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
                     D = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
                     k = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
                     U = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
                     w = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
-                    B = C.Z.getMessage(t, e),
-                    H = p.Z.getChannel(t);
+                    B = g.Z.getMessage(t, e),
+                    H = m.Z.getChannel(t);
                 if (null == B || null == H) return;
-                let G = m.default.getId();
+                let G = p.default.getId();
                 switch (n.key.toLowerCase()) {
                     case 'backspace':
                         y && (b(H) || B.canDeleteOwnMessage(G)) && (n.preventDefault(), (0, A.$Z)(H, B, n));
@@ -53,12 +53,12 @@ t.Z = function (e, t, n) {
                         break;
                     case 'e':
                         if (y) {
-                            if (((i = G), (j = H), (L = B), !j.isSystemDM() && (0, v.Z)(L, i))) n.preventDefault(), (0, A.Hd)(H, B);
+                            if (((i = G), (L = H), (j = B), !L.isSystemDM() && (0, N.Z)(j, i))) n.preventDefault(), (0, A.Hd)(H, B);
                         }
                         break;
                     case 'p':
                         if (y || w) {
-                            if (((P = H), (O = B), !P.isSystemDM() && !(0, S.Z)(O) && (b(P) || P.isPrivate()))) n.preventDefault(), (0, A.rY)(H, B, n);
+                            if (((O = H), (P = B), !O.isSystemDM() && !(0, S.Z)(P) && (b(O) || O.isPrivate()))) n.preventDefault(), (0, A.rY)(H, B, n);
                         }
                         break;
                     case '+':
@@ -70,7 +70,7 @@ t.Z = function (e, t, n) {
                                         channel: e,
                                         canChat: t,
                                         renderReactions: n,
-                                        canAddNewReactions: t && g.Z.can(M.Plq.ADD_REACTIONS, e),
+                                        canAddNewReactions: t && C.Z.can(M.Plq.ADD_REACTIONS, e),
                                         isLurking: null != e.guild_id && o.Z.isLurking(e.guild_id),
                                         isGuest: null != e.guild_id && f.ZP.isCurrentUserGuest(e.guild_id),
                                         isActiveChannelOrUnarchivableThread: (0, u.RG)(e)
@@ -96,7 +96,7 @@ t.Z = function (e, t, n) {
                     case 't':
                         if (y && (0, u.ki)(H, B)) n.preventDefault(), (0, d.R6)(H, B, 'Message Shortcut');
                         else if (B.hasFlag(M.iLy.HAS_THREAD)) {
-                            let e = p.Z.getChannel(N.default.castMessageIdAsChannelId(B.id));
+                            let e = m.Z.getChannel(v.default.castMessageIdAsChannelId(B.id));
                             null != e && (y || w) && (n.preventDefault(), (0, d.ok)(e, w));
                         }
                         break;

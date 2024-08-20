@@ -25,19 +25,19 @@ function d(e, t, n) {
 }
 function h(e) {
     var t;
-    let { className: n, children: s, keyExtractor: h, paddingTop: m = 0, paddingBottom: p = 0 } = e,
+    let { className: n, children: s, keyExtractor: h, paddingTop: p = 0, paddingBottom: m = 0 } = e,
         [_, f] = a.useState({
             width: 0,
             height: 0
         }),
-        { width: E, height: C } = _,
-        g = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0,
+        { width: E, height: g } = _,
+        C = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0,
         I = E - 16,
-        x = C - (m + p),
+        x = g - (p + m),
         {
             tileStyle: T,
-            tileWidth: N,
-            rows: v,
+            tileWidth: v,
+            rows: N,
             columns: S
         } = a.useMemo(
             () =>
@@ -81,17 +81,17 @@ function h(e) {
                         rows: i,
                         columns: a
                     };
-                })(g, I, x),
-            [g, I, x]
+                })(C, I, x),
+            [C, I, x]
         ),
         Z = S + 1,
-        A = Z * N + (Z - 1) * 8 <= E,
-        M = Math.floor(N / c) + 8,
-        b = Math.max(0, x - M * v) / 2;
+        A = Z * v + (Z - 1) * 8 <= E,
+        M = Math.floor(v / c) + 8,
+        b = Math.max(0, x - M * N) / 2;
     return (0, i.jsx)(r.Z, {
         fade: !0,
         className: n,
-        listPadding: [m + b, 0, p + b - 8, 8],
+        listPadding: [p + b, 0, m + b - 8, 8],
         renderRow: function (e) {
             var t;
             let n = e * S;
@@ -113,12 +113,12 @@ function h(e) {
                                             style: T,
                                             className: l()(o.tile, {
                                                 [o.padColumn]: A,
-                                                [o.noVerticalMargin]: s >= (v - 1) * S,
-                                                [o.noHorizontalMargin]: (s + 1) % S == 0 || s === g - 1
+                                                [o.noVerticalMargin]: s >= (N - 1) * S,
+                                                [o.noHorizontalMargin]: (s + 1) % S == 0 || s === C - 1
                                             }),
                                             children: (0, i.jsx)('div', {
                                                 className: o.tileSizer,
-                                                children: e(N)
+                                                children: e(v)
                                             })
                                         },
                                         null !== (a = null == h ? void 0 : h(s)) && void 0 !== a ? a : s
@@ -128,8 +128,8 @@ function h(e) {
                 e
             );
         },
-        rowCount: v,
-        rowCountBySection: [v],
+        rowCount: N,
+        rowCountBySection: [N],
         rowHeight: M,
         onResize: f
     });

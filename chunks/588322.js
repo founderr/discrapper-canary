@@ -13,29 +13,29 @@ var i = n(735250),
     u = n(541716),
     d = n(665149),
     h = n(910611),
-    m = n(703656),
-    p = n(664342),
+    p = n(703656),
+    m = n(664342),
     _ = n(592125),
     f = n(703558),
     E = n(430824),
-    C = n(228392),
-    g = n(689938),
+    g = n(228392),
+    C = n(689938),
     I = n(146238);
 function x(e) {
     let { channelId: t } = e,
         x = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
         T = (0, s.e7)([_.Z], () => _.Z.getChannel(null == x ? void 0 : x.parent_id)),
-        N = (0, s.e7)([E.Z], () => E.Z.getGuild(null == x ? void 0 : x.getGuildId())),
-        v = (0, o.ZP)(x),
+        v = (0, s.e7)([E.Z], () => E.Z.getGuild(null == x ? void 0 : x.getGuildId())),
+        N = (0, o.ZP)(x),
         S = a.useRef(!1);
     if (
         (a.useEffect(() => {
-            null != x && !S.current && ((S.current = !0), (0, C.lN)(x));
+            null != x && !S.current && ((S.current = !0), (0, g.lN)(x));
         }, [x]),
-        null == x || null == N)
+        null == x || null == v)
     )
         return null;
-    let Z = (0, i.jsx)(p.Z, { channel: x });
+    let Z = (0, i.jsx)(m.Z, { channel: x });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(r.Z, {
@@ -44,12 +44,12 @@ function x(e) {
             }),
             (0, i.jsx)(d.ZP, {
                 toolbar: Z,
-                'aria-label': g.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
+                'aria-label': C.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                 children: (0, h.ud)({
                     channel: x,
                     parentChannel: T,
-                    channelName: v,
-                    guild: N,
+                    channelName: N,
+                    guild: v,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, l.jW)(e, async () => {
@@ -62,7 +62,7 @@ function x(e) {
                         });
                     },
                     handleClick: function () {
-                        null != x && (0, m.XU)(x.guild_id, x.id);
+                        null != x && (0, p.XU)(x.guild_id, x.id);
                     }
                 })
             }),
@@ -72,7 +72,7 @@ function x(e) {
                     c.Z,
                     {
                         channel: x,
-                        guild: N,
+                        guild: v,
                         chatInputType: u.I.SIDEBAR
                     },
                     t

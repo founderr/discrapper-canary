@@ -9,7 +9,7 @@ var i,
 let u = [],
     d = {},
     h = {};
-class m extends (i = r.ZP.Store) {
+class p extends (i = r.ZP.Store) {
     getSearchState(e) {
         var t;
         return null !== (t = d[e]) && void 0 !== t
@@ -30,7 +30,7 @@ class m extends (i = r.ZP.Store) {
     }
 }
 (l = 'GuildDirectorySearchStore'),
-    (s = 'displayName') in (a = m)
+    (s = 'displayName') in (a = p)
         ? Object.defineProperty(a, s, {
               value: l,
               enumerable: !0,
@@ -38,7 +38,7 @@ class m extends (i = r.ZP.Store) {
               writable: !0
           })
         : (a[s] = l),
-    (t.Z = new m(o.Z, {
+    (t.Z = new p(o.Z, {
         GUILD_DIRECTORY_SEARCH_START: function (e) {
             let { channelId: t, query: n } = e;
             d[t] = {

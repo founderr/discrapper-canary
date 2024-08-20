@@ -15,20 +15,20 @@ var i = n(735250),
     u = n(390322),
     d = n(871499),
     h = n(819640),
-    m = n(797258),
-    p = n(446226),
+    p = n(797258),
+    m = n(446226),
     _ = n(937393),
     f = n(43982),
     E = n(721351),
-    C = n(420529),
-    g = n(927923),
+    g = n(420529),
+    C = n(927923),
     I = n(981631),
     x = n(921944),
     T = n(689938),
-    N = n(286419);
-function v(e) {
+    v = n(286419);
+function N(e) {
     let { onClose: t, channel: n } = e,
-        a = (0, C.Z)(n);
+        a = (0, g.Z)(n);
     return (0, i.jsx)(r.Menu, {
         onClose: t,
         onSelect: () => null,
@@ -38,23 +38,23 @@ function v(e) {
     });
 }
 function S(e) {
-    let { channel: t, showLeftDivider: n = !1, ...C } = e,
-        S = (0, p.Z)(),
-        Z = (0, s.e7)([m.Z], () => {
+    let { channel: t, showLeftDivider: n = !1, ...g } = e,
+        S = (0, m.Z)(),
+        Z = (0, s.e7)([p.Z], () => {
             var e, t;
-            return null === (e = m.Z.getSessionById(null !== (t = null == S ? void 0 : S.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
+            return null === (e = p.Z.getSessionById(null !== (t = null == S ? void 0 : S.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
         A = (0, s.e7)([h.Z], () => h.Z.hasLayers()),
         [M, b] = (0, s.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
         R = (0, r.useModalsStore)(r.hasAnyModalOpenSelector),
-        j = (0, _.Z)(),
-        L = j.filter((e) => e.twoWayLink),
-        [P, O] = a.useState(!1);
-    if ((null == S && 0 === j.length) || t.isBroadcastChannel()) return null;
+        L = (0, _.Z)(),
+        j = L.filter((e) => e.twoWayLink),
+        [O, P] = a.useState(!1);
+    if ((null == S && 0 === L.length) || t.isBroadcastChannel()) return null;
     let y = I.WtW.VOICE !== M && [I.AEg.NO_CHAT, I.AEg.FULL_SCREEN].includes(b) ? 'top' : 'bottom',
         D = [];
     return (
-        L.length > 0 && D.push(l.z.DONUT_DESKTOP_NUX),
+        j.length > 0 && D.push(l.z.DONUT_DESKTOP_NUX),
         (0, i.jsx)(c.ZP, {
             contentTypes: D,
             children: (e) => {
@@ -62,13 +62,13 @@ function S(e) {
                     o = a === l.z.DONUT_DESKTOP_NUX;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        n ? (0, i.jsx)('div', { className: N.leftDivider }) : null,
+                        n ? (0, i.jsx)('div', { className: v.leftDivider }) : null,
                         (0, i.jsx)(r.Popout, {
                             position: y,
                             spacing: o ? 16 : void 0,
                             positionKey: ''.concat(M, ':').concat(b),
-                            onRequestClose: () => O(!1),
-                            shouldShow: (o || P) && !A && !R,
+                            onRequestClose: () => P(!1),
+                            shouldShow: (o || O) && !A && !R,
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
                                 return (0, i.jsx)(u.Z, {
@@ -77,11 +77,11 @@ function S(e) {
                                               popoutPosition: y,
                                               onDismiss: () => s(x.L.UNKNOWN),
                                               onAccept: () => {
-                                                  s(x.L.UNKNOWN), O(!0);
+                                                  s(x.L.UNKNOWN), P(!0);
                                               },
-                                              gameConsoleAccounts: L
+                                              gameConsoleAccounts: j
                                           })
-                                        : (0, i.jsx)(v, {
+                                        : (0, i.jsx)(N, {
                                               onClose: () => {
                                                   n();
                                               },
@@ -93,9 +93,9 @@ function S(e) {
                                 var t;
                                 return (0, i.jsx)(d.Z, {
                                     ...e,
-                                    ...C,
-                                    onClick: () => O(!0),
-                                    label: null != (t = Z) ? (t === g.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
+                                    ...g,
+                                    onClick: () => P(!0),
+                                    label: null != (t = Z) ? (t === C.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
                                     iconComponent: (0, E.Z)(Z)
                                 });
                             }

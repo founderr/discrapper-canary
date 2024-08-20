@@ -10,8 +10,8 @@ var i = n(735250),
     d = n(792059);
 t.Z = a.memo(function (e) {
     let { children: t, isOverlay: n, contextGuildId: s, ...h } = e,
-        m = a.useRef(null),
-        [p, _] = a.useState({ maskImage: 'none' }),
+        p = a.useRef(null),
+        [m, _] = a.useState({ maskImage: 'none' }),
         f = a.useCallback(() => {
             var e, t;
             if (n) {
@@ -19,7 +19,7 @@ t.Z = a.memo(function (e) {
                 return;
             }
             let i = null === (e = E.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
-                a = null === (t = m.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+                a = null === (t = p.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
             if (null == i || null == a) {
                 _({ maskImage: 'none' });
                 return;
@@ -33,11 +33,11 @@ t.Z = a.memo(function (e) {
             _({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(l, 'px)') });
         }, []),
         E = (0, o.y)(f),
-        C = (0, c.p0)(h.userId, s);
+        g = (0, c.p0)(h.userId, s);
     a.useEffect(() => {
         if (null != E.current) f();
-    }, [C]);
-    let g = (0, r.O)(f);
+    }, [g]);
+    let C = (0, r.O)(f);
     return (0, i.jsxs)('div', {
         className: l()(d.container, n && d.isOverlayContainer),
         ref: E,
@@ -48,11 +48,11 @@ t.Z = a.memo(function (e) {
             }),
             (0, i.jsx)('div', {
                 className: d.chipletParent,
-                ref: g,
+                ref: C,
                 children: (0, i.jsx)('span', {
-                    className: l()(d.chipletContainer, !C && n && d.noPadding),
-                    ref: m,
-                    style: p,
+                    className: l()(d.chipletContainer, !g && n && d.noPadding),
+                    ref: p,
+                    style: m,
                     children: (0, i.jsx)(u.ZP, {
                         ...h,
                         contextGuildId: s,

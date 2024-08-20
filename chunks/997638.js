@@ -20,13 +20,13 @@ var i,
     u = n(120356),
     d = n.n(u),
     h = n(780384),
-    m = n(481060),
-    p = n(626135),
+    p = n(481060),
+    m = n(626135),
     _ = n(792125),
     f = n(600164),
     E = n(981631),
-    C = n(689938),
-    g = n(834095);
+    g = n(689938),
+    C = n(834095);
 function I(e, t, n) {
     return (
         t in e
@@ -44,10 +44,10 @@ function I(e, t, n) {
 class x extends c.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
-        p.default.track(E.rMx.SHOW_TUTORIAL, { tutorial: e });
+        m.default.track(E.rMx.SHOW_TUTORIAL, { tutorial: e });
     }
     componentWillUnmount() {
-        p.default.track(E.rMx.CLOSE_TUTORIAL, {
+        m.default.track(E.rMx.CLOSE_TUTORIAL, {
             tutorial: this.props.uniqueId,
             acknowledged: this.state.confirmed
         });
@@ -56,45 +56,45 @@ class x extends c.PureComponent {
         let { renderMedia: e, textAlign: t, isLongText: n, title: i, body: a, className: s, forceTheme: l, onClickSkipAll: r } = this.props,
             c = 'left' === t || n,
             u = 'center' === t || !c;
-        return (0, o.jsxs)(m.Dialog, {
-            className: d()(g.popoutRoot, s),
+        return (0, o.jsxs)(p.Dialog, {
+            className: d()(C.popoutRoot, s),
             children: [
                 null != e &&
                     (0, o.jsx)(f.Z, {
-                        className: g.mediaContainer,
+                        className: C.mediaContainer,
                         justify: c ? f.Z.Justify.START : f.Z.Justify.CENTER,
                         children: e()
                     }),
-                (0, o.jsx)(m.H, {
+                (0, o.jsx)(p.H, {
                     className: d()({
-                        [g.titleCenter]: u,
-                        [g.titleLeft]: c
+                        [C.titleCenter]: u,
+                        [C.titleLeft]: c
                     }),
                     children: i
                 }),
                 (0, o.jsx)('string' == typeof a ? 'p' : 'div', {
                     className: d()({
-                        [g.bodyCenter]: u,
-                        [g.bodyLeft]: c
+                        [C.bodyCenter]: u,
+                        [C.bodyLeft]: c
                     }),
                     children: a
                 }),
                 (0, o.jsxs)(f.Z, {
-                    className: g.buttonContainer,
+                    className: C.buttonContainer,
                     justify: c ? f.Z.Justify.BETWEEN : f.Z.Justify.CENTER,
                     children: [
-                        (0, o.jsx)(m.Button, {
-                            size: m.ButtonSizes.SMALL,
+                        (0, o.jsx)(p.Button, {
+                            size: p.ButtonSizes.SMALL,
                             onClick: this.handleDismiss,
-                            children: C.Z.Messages.TUTORIAL_CLOSE
+                            children: g.Z.Messages.TUTORIAL_CLOSE
                         }),
-                        (0, o.jsx)(m.Button, {
-                            size: m.ButtonSizes.SMALL,
-                            look: m.Button.Looks.BLANK,
+                        (0, o.jsx)(p.Button, {
+                            size: p.ButtonSizes.SMALL,
+                            look: p.Button.Looks.BLANK,
                             onClick: r,
-                            color: (0, h.ap)(l) ? m.Button.Colors.PRIMARY : m.Button.Colors.WHITE,
-                            className: c ? g.buttonSkipLeftAlign : g.buttonSkipCenterAlign,
-                            children: C.Z.Messages.SKIP_ALL_TIPS
+                            color: (0, h.ap)(l) ? p.Button.Colors.PRIMARY : p.Button.Colors.WHITE,
+                            className: c ? C.buttonSkipLeftAlign : C.buttonSkipCenterAlign,
+                            children: g.Z.Messages.SKIP_ALL_TIPS
                         })
                     ]
                 })
@@ -114,7 +114,7 @@ class T extends (s = c.PureComponent) {
     render() {
         let { renderMedia: e, textAlign: t, onComplete: n, onSkipAll: i, isLongText: a, title: s, body: l, children: r, spacing: c, forceTheme: u, ...d } = this.props,
             h = 'top' === d.position || 'bottom' === d.position ? 'center' : 'top';
-        return (0, o.jsx)(m.Popout, {
+        return (0, o.jsx)(p.Popout, {
             ...d,
             align: h,
             spacing: null != c ? c : 0,
@@ -130,7 +130,7 @@ class T extends (s = c.PureComponent) {
             }),
             I(this, 'onClickSkipAll', (e) => {
                 let { onSkipAll: t, uniqueId: n } = this.props;
-                e(), t(), p.default.track(E.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
+                e(), t(), m.default.track(E.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
             }),
             I(this, 'renderPopoutContent', (e) => {
                 let { closePopout: t, position: n } = e,
@@ -140,16 +140,16 @@ class T extends (s = c.PureComponent) {
                     ...this.props,
                     className: d()(
                         {
-                            [g.bottom]: 'bottom' === n,
-                            [g.contentNarrowNoMedia]: !a && !r,
-                            [g.contentNarrowWithMedia]: !a && r,
-                            [g.contentWideNoMedia]: a && !r,
-                            [g.contentWideWithMedia]: a && r,
-                            [g.right]: 'right' === n,
-                            [g.top]: 'top' === n,
-                            [g.left]: 'left' === n,
-                            [g.arrowAlignmentTop]: 'top' === s,
-                            [g.arrowAlignmentMiddle]: 'middle' === s,
+                            [C.bottom]: 'bottom' === n,
+                            [C.contentNarrowNoMedia]: !a && !r,
+                            [C.contentNarrowWithMedia]: !a && r,
+                            [C.contentWideNoMedia]: a && !r,
+                            [C.contentWideWithMedia]: a && r,
+                            [C.right]: 'right' === n,
+                            [C.top]: 'top' === n,
+                            [C.left]: 'left' === n,
+                            [C.arrowAlignmentTop]: 'top' === s,
+                            [C.arrowAlignmentMiddle]: 'middle' === s,
                             'force-theme': null != i
                         },
                         (0, _.Q)(i)

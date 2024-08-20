@@ -20,19 +20,19 @@ function u(e) {
     null === (t = document.getElementById(e)) || void 0 === t || t.focus();
 }
 function d(e) {
-    let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: h, setFocus: m, getNewFocusIndex: p, maintainFocusPosition: _ = !0, includeSetSizes: f = !0, focusOnMount: E = !0, enabled: C = !0, onDispatch: g } = e,
+    let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: h, setFocus: p, getNewFocusIndex: m, maintainFocusPosition: _ = !0, includeSetSizes: f = !0, focusOnMount: E = !0, enabled: g = !0, onDispatch: C } = e,
         I = i.useCallback(
             (e, t) => {
                 let n = (0, a.Z)(e, t);
-                return null != g && g(e, n, t), n;
+                return null != C && C(e, n, t), n;
             },
-            [g]
+            [C]
         ),
         [x, T] = i.useReducer(I, {
             focusedIndex: d,
             itemCount: n
         }),
-        { itemCount: N, focusedIndex: v } = x,
+        { itemCount: v, focusedIndex: N } = x,
         [S] = i.useState(() => (0, l.P2)(T, 16));
     return (
         i.useEffect(() => {
@@ -42,19 +42,19 @@ function d(e) {
             });
         }, [n]),
         (function (e) {
-            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: m = u, getNewFocusIndex: p, dispatch: _, maintainFocusPosition: f, includeSetSizes: E, focusOnMount: C, enabled: g, makeId: I = l.qR, getIndexFromId: x } = e,
+            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: p = u, getNewFocusIndex: m, dispatch: _, maintainFocusPosition: f, includeSetSizes: E, focusOnMount: g, enabled: C, makeId: I = l.qR, getIndexFromId: x } = e,
                 T = i.useRef(n),
-                N = i.useRef(x);
-            (N.current = x), (T.current = n);
-            let v = i.useRef();
+                v = i.useRef(x);
+            (v.current = x), (T.current = n);
+            let N = i.useRef();
             i.useEffect(() => {
-                v.current = g;
-            }, [g]);
+                N.current = C;
+            }, [C]);
             let [S, Z] = i.useState(!1),
                 [A] = i.useState(
                     () =>
                         new l.$o((e) => () => {
-                            let t = null != N.current && 'string' == typeof e ? N.current(e) : e;
+                            let t = null != v.current && 'string' == typeof e ? v.current(e) : e;
                             'number' == typeof t &&
                                 !(t < 0) &&
                                 _({
@@ -66,22 +66,22 @@ function d(e) {
             i.useEffect(() => () => A.clean(), [A]);
             let M = i.useCallback(
                     (e, t) => {
-                        v.current && m(e, t);
+                        N.current && p(e, t);
                     },
-                    [m]
+                    [p]
                 ),
                 [b, R] = i.useState(!0);
             i.useEffect(() => {
-                if (b && !C) {
+                if (b && !g) {
                     R(!1);
                     return;
                 }
                 M(I(t, d), d);
             }, [d]);
-            let j = i.useCallback(
+            let L = i.useCallback(
                     function () {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                            n = null != p ? p(d) : d;
+                            n = null != m ? m(d) : d;
                         n !== d &&
                             _({
                                 type: a.G.SET_FOCUSED_INDEX,
@@ -89,13 +89,13 @@ function d(e) {
                             }),
                             e && M(I(t, n), n);
                     },
-                    [I, d, p, _, t, M]
+                    [I, d, m, _, t, M]
                 ),
-                L = i.useCallback(
+                j = i.useCallback(
                     (e) => {
-                        if (!v.current) return;
+                        if (!N.current) return;
                         if (r.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
-                            e.preventDefault(), e.stopPropagation(), j();
+                            e.preventDefault(), e.stopPropagation(), L();
                             return;
                         }
                         let n = (function (e) {
@@ -131,14 +131,14 @@ function d(e) {
                                 null == a || a.click();
                         }
                     },
-                    [I, t, _, d, j, h]
+                    [I, t, _, d, L, h]
                 ),
-                P = i.useCallback(() => {
+                O = i.useCallback(() => {
                     S || Z(!0);
                 }, [S]),
-                O = i.useCallback(() => {
-                    if (!S) f ? M(I(t, d), d) : j(!0);
-                }, [I, t, M, f, S, d, j]),
+                P = i.useCallback(() => {
+                    if (!S) f ? M(I(t, d), d) : L(!0);
+                }, [I, t, M, f, S, d, L]),
                 y = i.useCallback(
                     (e) => {
                         if (!e.currentTarget.contains(e.relatedTarget))
@@ -157,23 +157,23 @@ function d(e) {
                 let e = D.current;
                 if (null != e)
                     return (
-                        e.addEventListener('focusin', P),
-                        e.addEventListener('focus', O),
+                        e.addEventListener('focusin', O),
+                        e.addEventListener('focus', P),
                         e.addEventListener('focusout', y),
                         () => {
-                            e.removeEventListener('focusin', P), e.removeEventListener('focus', O), e.removeEventListener('focusout', y);
+                            e.removeEventListener('focusin', O), e.removeEventListener('focus', P), e.removeEventListener('focusout', y);
                         }
                     );
-            }, [O, P, y]);
+            }, [P, O, y]);
             let k = i.useCallback(
                     () => ({
                         role: 'list',
                         tabIndex: S && f ? -1 : 0,
                         id: t,
-                        onKeyDown: L,
+                        onKeyDown: j,
                         ref: D
                     }),
-                    [t, S, L, f]
+                    [t, S, j, f]
                 ),
                 U = i.useCallback(
                     (e) => {
@@ -184,7 +184,7 @@ function d(e) {
                             'aria-posinset': E ? n + 1 : void 0,
                             id: I(t, n),
                             tabIndex: f && n === d ? 0 : -1,
-                            onFocus: A.get(null != N.current ? I(t, n) : n)
+                            onFocus: A.get(null != v.current ? I(t, n) : n)
                         };
                     },
                     [I, t, d, f, A, E]
@@ -199,16 +199,16 @@ function d(e) {
             );
         })({
             navId: t,
-            itemCount: N,
-            focusedIndex: v,
+            itemCount: v,
+            focusedIndex: N,
             dispatch: S,
             onSelect: h,
-            setFocus: m,
-            getNewFocusIndex: p,
+            setFocus: p,
+            getNewFocusIndex: m,
             maintainFocusPosition: _,
             includeSetSizes: f,
             focusOnMount: E,
-            enabled: C
+            enabled: g
         })
     );
 }

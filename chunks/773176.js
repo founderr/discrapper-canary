@@ -9,28 +9,28 @@ var i = n(735250),
     u = n(704215),
     d = n(481060),
     h = n(596454),
-    m = n(607070),
-    p = n(110630),
+    p = n(607070),
+    m = n(110630),
     _ = n(706140),
     f = n(543241),
     E = n(346610),
-    C = n(868643),
-    g = n(245216),
+    g = n(868643),
+    C = n(245216),
     I = n(223606),
     x = n(188597),
     T = n(41776),
-    N = n(222677),
-    v = n(995774),
+    v = n(222677),
+    N = n(995774),
     S = n(931651),
     Z = n(280845),
     A = n(768943),
     M = n(121254),
     b = n(665906),
     R = n(695346),
-    j = n(314897),
-    L = n(323873),
-    P = n(271383),
-    O = n(430824),
+    L = n(314897),
+    j = n(323873),
+    O = n(271383),
+    P = n(430824),
     y = n(607744),
     D = n(496675),
     k = n(626135),
@@ -80,7 +80,7 @@ let en = a.memo(function (e) {
     return (0, i.jsx)(i.Fragment, {
         children: a.map((e) => {
             var a;
-            let l = s.find((t) => (0, v.ir)(t.emoji, (0, v.g1)(e))),
+            let l = s.find((t) => (0, N.ir)(t.emoji, (0, N.g1)(e))),
                 r = null != l ? Q.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE : Q.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD,
                 o = null == e.id ? e.uniqueName : e.name,
                 c = null != l ? Q.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE_ALLY.format({ emojiName: o }) : Q.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD_ALLY.format({ emojiName: o });
@@ -110,7 +110,7 @@ let en = a.memo(function (e) {
                             emoji: e,
                             channel: t,
                             message: n,
-                            location: N.TW.MESSAGE_HOVER_BAR
+                            location: v.TW.MESSAGE_HOVER_BAR
                         }),
                     buttonClassName: $.reactionSuggestion,
                     children: (0, i.jsx)(h.Z, {
@@ -139,10 +139,10 @@ function ei(e) {
             canPublish: f,
             canReact: I,
             canConfigureJoin: x,
-            canReply: N,
-            canStartThread: v,
+            canReply: v,
+            canStartThread: N,
             canViewThread: S,
-            canForward: L,
+            canForward: j,
             isExpanded: Y,
             showMoreUtilities: J,
             showEmojiPicker: ee,
@@ -155,14 +155,14 @@ function ei(e) {
         } = (function (e) {
             let { channel: t, message: n, showEmojiPicker: i, showEmojiBurstPicker: a, showMoreUtilities: s, setPopout: l, isFocused: r } = e,
                 { author: o } = n,
-                u = (0, c.e7)([O.Z], () => O.Z.getGuild(t.guild_id), [t.guild_id]),
-                d = (0, c.e7)([j.default], () => j.default.getId()),
+                u = (0, c.e7)([P.Z], () => P.Z.getGuild(t.guild_id), [t.guild_id]),
+                d = (0, c.e7)([L.default], () => L.default.getId()),
                 h = (0, b.$R)(t),
                 _ = (0, b.Gu)(t),
                 f = R.nc.useSetting(),
-                g = R.Sb.useSetting(),
+                C = R.Sb.useSetting(),
                 I = (0, c.e7)([y.Z], () => null == t.guild_id || y.Z.canChatInGuild(t.guild_id), [t]),
-                { canManageMessages: x, canAddNewReactions: N } = (0, c.cj)(
+                { canManageMessages: x, canAddNewReactions: v } = (0, c.cj)(
                     [D.Z],
                     () => ({
                         canAddNewReactions: I && D.Z.can(q.Plq.ADD_REACTIONS, t),
@@ -170,11 +170,11 @@ function ei(e) {
                     }),
                     [t, I]
                 ),
-                v = (0, Z.U)(t, n),
+                N = (0, Z.U)(t, n),
                 S = (0, b.NE)(t, n),
-                L = (0, b.Ek)(n),
+                j = (0, b.Ek)(n),
                 k = (0, c.e7)([T.Z], () => null != t.guild_id && T.Z.isLurking(t.guild_id), [t]),
-                B = (0, c.e7)([P.ZP], () => null != t.guild_id && P.ZP.isCurrentUserGuest(t.guild_id), [t]),
+                B = (0, c.e7)([O.ZP], () => null != t.guild_id && O.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 F = o.id === d,
                 W = (x || n.canDeleteOwnMessage(d)) && h && !q.V$x.UNDELETABLE.has(n.type);
             n.type === q.uaV.AUTO_MODERATION_ACTION && (W = W && x);
@@ -185,20 +185,20 @@ function ei(e) {
                     channel: t,
                     canChat: I,
                     renderReactions: f,
-                    canAddNewReactions: N,
+                    canAddNewReactions: v,
                     isLurking: k,
                     isGuest: B,
                     isActiveChannelOrUnarchivableThread: h
                 }),
-                J = t.type === q.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(q.oNc.NEWS) && (F || x) && (0, p.Z)(n),
+                J = t.type === q.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(q.oNc.NEWS) && (F || x) && (0, m.Z)(n),
                 $ = t.getGuildId(),
                 ee = null != $ && (n.type === q.uaV.USER_JOIN || n.type === q.uaV.GUILD_INVITE_REMINDER) && D.Z.canWithPartialContext(q.Plq.MANAGE_GUILD, { guildId: $ }),
                 { canForwardMessages: et } = (0, E.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
-                en = (0, C.a)(n),
+                en = (0, g.a)(n),
                 { enabled: ei } = M.Z.useExperiment({ location: 'message_utilities' }, { autoTrackExposure: !1 }),
                 ea = (0, c.e7)([A.Z], () => A.Z.isMessageBookmarked(t.id, n.id)),
                 es = (0, K.Z)(),
-                el = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled);
+                el = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled);
             return {
                 channel: t,
                 message: n,
@@ -206,12 +206,12 @@ function ei(e) {
                 canEdit: X,
                 canDelete: W,
                 canReport: z,
-                canReply: v,
+                canReply: N,
                 canStartThread: S,
-                canViewThread: L,
+                canViewThread: j,
                 canForward: et && en,
                 canCopy: U.wS,
-                hasDeveloperMode: g,
+                hasDeveloperMode: C,
                 canReact: !Q && f,
                 canPublish: J,
                 canConfigureJoin: ee,
@@ -238,15 +238,15 @@ function ei(e) {
             es({ emojiPicker: !ee });
         }, [ee, es]),
         eh = (0, b.$R)(t),
-        em = n.hasFlag(q.iLy.CROSSPOSTED),
-        [ep, e_] = (0, _.cv)(L ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
-        ef = ep === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
-        [eE, eC] = a.useState(!1),
-        eg = a.useCallback(() => {
-            eC(!0);
+        ep = n.hasFlag(q.iLy.CROSSPOSTED),
+        [em, e_] = (0, _.cv)(j ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
+        ef = em === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
+        [eE, eg] = a.useState(!1),
+        eC = a.useCallback(() => {
+            eg(!0);
         }, []),
         eI = a.useCallback(() => {
-            eC(!1);
+            eg(!1);
         }, []),
         ex = a.useCallback(
             (e, t) => {
@@ -326,7 +326,7 @@ function ei(e) {
                                     'pin'
                                 )
                               : null,
-                          v && L
+                          N && j
                               ? (0, i.jsx)(
                                     F.sF,
                                     {
@@ -337,7 +337,7 @@ function ei(e) {
                                     'thread'
                                 )
                               : null,
-                          N && h
+                          v && h
                               ? (0, i.jsx)(
                                     F.sF,
                                     {
@@ -376,7 +376,7 @@ function ei(e) {
                       ]
                   })
                 : null,
-            N && !h
+            v && !h
                 ? (0, i.jsx)(
                       F.sF,
                       {
@@ -398,21 +398,21 @@ function ei(e) {
                       'edit'
                   )
                 : null,
-            L
+            j
                 ? (0, i.jsx)(
                       F.sF,
                       {
                           label: Q.Z.Messages.MESSAGE_ACTION_FORWARD,
-                          icon: g.Z,
+                          icon: C.Z,
                           onClick: () => ex(t, n),
-                          onTooltipShow: eg,
+                          onTooltipShow: eC,
                           onTooltipHide: eI,
                           showNewBadge: !eE && ef
                       },
                       'forward'
                   )
                 : null,
-            v && !L
+            N && !j
                 ? (0, i.jsx)(
                       F.sF,
                       {
@@ -423,7 +423,7 @@ function ei(e) {
                       'thread'
                   )
                 : null,
-            !v && S
+            !N && S
                 ? (0, i.jsx)(
                       F.sF,
                       {
@@ -438,10 +438,10 @@ function ei(e) {
                 ? (0, i.jsx)(
                       F.sF,
                       {
-                          label: em ? Q.Z.Messages.NEWS_CHANNEL_PUBLISHED : Q.Z.Messages.NEWS_CHANNEL_PUBLISH,
+                          label: ep ? Q.Z.Messages.NEWS_CHANNEL_PUBLISHED : Q.Z.Messages.NEWS_CHANNEL_PUBLISH,
                           icon: d.AnnouncementsIcon,
                           onClick: () => (0, W.Xl)(t, n),
-                          disabled: em
+                          disabled: ep
                       },
                       'publish'
                   )
@@ -528,10 +528,10 @@ function ea(e) {
 function es(e) {
     let { type: t, emoji: n, channel: i, message: a, location: s, isBurst: l = !1 } = e;
     if (null == n) return;
-    let r = (0, v.g1)(n);
+    let r = (0, N.g1)(n);
     'add' === t
-        ? (0, N.rU)(i.id, a.id, r, s, { burst: l })
-        : (0, N.WO)({
+        ? (0, v.rU)(i.id, a.id, r, s, { burst: l })
+        : (0, v.WO)({
               channelId: i.id,
               messageId: a.id,
               emoji: r,
@@ -546,7 +546,7 @@ function el(e, t, n) {
             ...(a && {
                 openPopoutType: 'message_super_reaction_emoji_picker',
                 page: null != e.getGuildId() ? q.ZY5.GUILD_CHANNEL : q.ZY5.DM_CHANNEL,
-                section: (0, v.s4)(e),
+                section: (0, N.s4)(e),
                 object: q.qAy.EMOJI_REACTION_PICKER_POPOUT
             })
         };
@@ -559,7 +559,7 @@ function el(e, t, n) {
                 emoji: i,
                 channel: e,
                 message: t,
-                location: N.TW.MESSAGE_REACTION_PICKER,
+                location: v.TW.MESSAGE_REACTION_PICKER,
                 isBurst: s
             }),
                 a && (s ? o()(n, 150)() : n());
@@ -570,7 +570,7 @@ function el(e, t, n) {
 }
 t.Z = a.memo(function (e) {
     let { channel: t, message: n, isHeader: a } = e,
-        s = (0, c.e7)([L.Z], () => L.Z.isEditing(t.id, n.id), [t.id, n.id]),
+        s = (0, c.e7)([j.Z], () => j.Z.isEditing(t.id, n.id), [t.id, n.id]),
         r = (function (e) {
             let { channel: t, message: n } = e;
             return n.state === q.yb.SEND_FAILED

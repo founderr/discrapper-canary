@@ -13,23 +13,23 @@ var t = l(735250),
     c = l(106976),
     d = l(488915),
     m = l(171246),
-    f = l(509545),
-    E = l(55563),
+    E = l(509545),
+    f = l(55563),
     p = l(551428),
     C = l(937615),
     N = l(147496),
-    v = l(519896),
-    _ = l(981631),
+    _ = l(519896),
+    v = l(981631),
     T = l(689938);
 function h(e) {
     r.useEffect(() => {
         if (null != e) (0, s.$N)('', e), (0, u.km)(e);
     }, [e]);
-    let n = (0, i.e7)([E.Z], () => (null != e ? E.Z.get(e) : void 0), [e]);
+    let n = (0, i.e7)([f.Z], () => (null != e ? f.Z.get(e) : void 0), [e]);
     r.useEffect(() => {
-        (null == n ? void 0 : n.type) === _.epS.SUBSCRIPTION && (0, o.GZ)(n.id);
+        (null == n ? void 0 : n.type) === v.epS.SUBSCRIPTION && (0, o.GZ)(n.id);
     }, [n]);
-    let l = (0, i.Wu)([f.Z], () => (null != e ? f.Z.getForSKU(e) : []), [e]),
+    let l = (0, i.Wu)([E.Z], () => (null != e ? E.Z.getForSKU(e) : []), [e]),
         h = r.useMemo(() => (null != l ? l.map((e) => e.id)[0] : void 0), [l]),
         I = (0, i.e7)([p.Z], () => (null != e ? p.Z.getForSKU(e) : void 0), [e]);
     r.useEffect(() => {
@@ -41,7 +41,7 @@ function h(e) {
             if ((null == n ? void 0 : n.applicationId) == null || (null == n ? void 0 : n.id) == null || (null == O ? void 0 : O.id) == null || (null == O ? void 0 : O.sku_flags) == null) return null;
             (0, a.openModal)((e) => {
                 let { onClose: l, transitionState: r } = e;
-                return (0, t.jsx)(v.SubscriptionDetailsModal, {
+                return (0, t.jsx)(_.SubscriptionDetailsModal, {
                     appId: n.applicationId,
                     groupListingId: O.id,
                     groupListingType: (0, m.KW)(O.sku_flags) ? 'user' : 'guild',
@@ -63,13 +63,13 @@ function h(e) {
                 });
             });
         }, [n]);
-    if (null != n && null != I && (null == n || n.type !== _.epS.SUBSCRIPTION || null != O)) {
+    if (null != n && null != I && (null == n || n.type !== v.epS.SUBSCRIPTION || null != O)) {
         if (null == e || (null != n && !n.available))
             return {
                 disabled: !0,
                 label: T.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
             };
-        if (n.type === _.epS.SUBSCRIPTION) {
+        if (n.type === v.epS.SUBSCRIPTION) {
             if (null == l || 0 === l.length)
                 return {
                     disabled: !0,

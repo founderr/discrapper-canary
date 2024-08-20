@@ -14,19 +14,19 @@ var i = n(470079),
     u = n(695346),
     d = n(626135),
     h = n(823162),
-    m = n(268699),
-    p = n(9389),
+    p = n(268699),
+    m = n(9389),
     _ = n(687683),
     f = n(981631);
 function E(e) {
     let { user: t, onAcceptSuccess: n, onRejectSuccess: a, onError: E } = e,
-        C = (0, p.Z)(),
-        [g, I] = i.useState(!1),
+        g = (0, m.Z)(),
+        [C, I] = i.useState(!1),
         [x, T] = i.useState(!1),
-        [N, v] = i.useState(!1),
+        [v, N] = i.useState(!1),
         [S, Z] = i.useState(!1),
         [A, M] = i.useState(!1),
-        b = g || x || N,
+        b = C || x || v,
         R = i.useCallback(
             async (e) => {
                 if (!b) {
@@ -43,7 +43,7 @@ function E(e) {
             },
             [b, n, E]
         ),
-        j = i.useCallback(
+        L = i.useCallback(
             async (e) => {
                 if (!b) {
                     T(!0);
@@ -59,7 +59,7 @@ function E(e) {
             },
             [b, a, E]
         ),
-        L = i.useCallback(
+        j = i.useCallback(
             async (e) => {
                 if (b) return;
                 T(!0);
@@ -76,11 +76,11 @@ function E(e) {
             },
             [b, a, E]
         ),
-        P = i.useCallback(
+        O = i.useCallback(
             async (e) => {
                 if (b) return;
                 if (null != t && null == o.Z.getMutualGuilds(t.id)) {
-                    v(!0);
+                    N(!0);
                     try {
                         await (0, c.Z)(t.id, t.getAvatarURL(void 0, 80), {
                             withMutualGuilds: !0,
@@ -88,7 +88,7 @@ function E(e) {
                         });
                     } catch (e) {
                     } finally {
-                        v(!1);
+                        N(!1);
                     }
                 }
                 let n = async () => {
@@ -102,7 +102,7 @@ function E(e) {
                     }),
                         await R(e);
                 };
-                (0, m.H)({
+                (0, p.H)({
                     channelId: e,
                     onConfirm: n,
                     onCancel: () => {
@@ -119,7 +119,7 @@ function E(e) {
             },
             [R, b, t]
         ),
-        O = i.useCallback(
+        P = i.useCallback(
             (e, t, n) => {
                 let i = (i, a) => {
                         a && u.kJ.updateSetting(i),
@@ -135,7 +135,7 @@ function E(e) {
                     },
                     a = u.kJ.getSetting();
                 null == a
-                    ? (0, m.V)({
+                    ? (0, p.V)({
                           channel: e,
                           onConfirm: i,
                           onCancel: () => {
@@ -150,13 +150,13 @@ function E(e) {
             [R]
         );
     return {
-        acceptMessageRequest: C ? P : R,
-        rejectMessageRequest: j,
-        rejectAll: L,
-        markAsNotSpam: O,
-        isAcceptLoading: g,
+        acceptMessageRequest: g ? O : R,
+        rejectMessageRequest: L,
+        rejectAll: j,
+        markAsNotSpam: P,
+        isAcceptLoading: C,
         isRejectLoading: x,
-        isUserProfileLoading: N,
+        isUserProfileLoading: v,
         isOptimisticAccepted: S,
         isOptimisticRejected: A
     };

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = n(735250),
@@ -13,25 +13,25 @@ var i = n(735250),
     u = n(893966),
     d = n(776767),
     h = n(689938),
-    m = n(446926);
-function p(e) {
+    p = n(446926);
+function m(e) {
     let { member: t } = e,
         n = t.userId,
-        p = t.guildId,
-        _ = (0, s.e7)([u.Z], () => u.Z.getEnhancedMember(p, n), [n, p]),
+        m = t.guildId,
+        _ = (0, s.e7)([u.Z], () => u.Z.getEnhancedMember(m, n), [n, m]),
         f = (null != _ ? _ : t).unusualDMActivityUntil,
         E = a.useCallback((e) => {
             if (null == e) return null;
             let t = new Date(e).getTime();
             return (0, c.fv)(t, c.jq.JOINED_AT);
         }, []),
-        C = a.useMemo(() => (null == t ? null : E(f)), [t, E, f]),
-        g = a.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
+        g = a.useMemo(() => (null == t ? null : E(f)), [t, E, f]),
+        C = a.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
         I = a.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
-    return null != f || g
+    return null != f || C
         ? (0, i.jsx)(l.FormItem, {
               title: h.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
-              titleClassName: m.infoTitle,
+              titleClassName: p.infoTitle,
               children: (0, i.jsxs)(d.WM, {
                   children: [
                       null != f &&
@@ -50,10 +50,10 @@ function p(e) {
                               description: (0, i.jsx)(l.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
-                                  children: C
+                                  children: g
                               })
                           }),
-                      g &&
+                      C &&
                           null != I &&
                           (0, i.jsx)(d._2, {
                               icon: (0, i.jsx)(l.ClockWarningIcon, {

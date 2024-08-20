@@ -14,12 +14,12 @@ var r = l(120356),
     c = l(297781),
     d = l(43205),
     m = l(313201),
-    f = l(792125),
-    E = l(231338),
+    E = l(792125),
+    f = l(231338),
     p = l(689938),
     C = l(917056),
     N = l(671656);
-function v(e) {
+function _(e) {
     let { className: n, clickableClassName: l, clickable: r, children: s } = e,
         u = (0, m.Dt)();
     if (null != r && 'href' in r) {
@@ -58,9 +58,9 @@ function v(e) {
         ]
     });
 }
-function _(e) {
+function v(e) {
     let { clickable: n, ...l } = e;
-    return (0, t.jsx)(v, {
+    return (0, t.jsx)(_, {
         ...l,
         clickable: {
             ...n,
@@ -72,19 +72,19 @@ function _(e) {
 function T(e) {
     let { entry: n, channel: l, title: r, subtitle: N, thumbnailUrl: T, titleClickable: h, subtitleClickable: I, thumbnailClickable: x, providerIconProps: O, style: S = {} } = e,
         g = (0, m.Dt)(),
-        { primaryColor: Z, secondaryColor: A } = (0, o.Z)(T);
+        { primaryColor: Z, secondaryColor: j } = (0, o.Z)(T);
     return (
-        null != T && (S.background = 'linear-gradient(45deg, '.concat(Z, ', ').concat(A, ')')),
+        null != T && (S.background = 'linear-gradient(45deg, '.concat(Z, ', ').concat(j, ')')),
         (0, t.jsx)(a.ThemeContextProvider, {
-            theme: E.BR.DARK,
+            theme: f.BR.DARK,
             children: (0, t.jsxs)('figure', {
                 'aria-roledescription': p.Z.Messages.CONTENT_INVENTORY_ACTIVITY_CARD_ARIA_ROLE_DESCRIPTION,
                 'aria-labelledby': g,
                 'data-disable-adaptive-theme': !0,
-                className: i()(C.container, (0, f.Q)(E.BR.DARK)),
+                className: i()(C.container, (0, E.Q)(f.BR.DARK)),
                 style: S,
                 children: [
-                    (0, t.jsx)(v, {
+                    (0, t.jsx)(_, {
                         className: C.thumbnailContainer,
                         clickableClassName: C.clickable,
                         clickable: x,
@@ -104,7 +104,7 @@ function T(e) {
                                 className: C.users
                             }),
                             (0, t.jsx)(a.Spacer, { size: 2 }),
-                            (0, t.jsx)(_, {
+                            (0, t.jsx)(v, {
                                 clickable: h,
                                 children: (0, t.jsx)(a.Heading, {
                                     id: g,
@@ -119,7 +119,7 @@ function T(e) {
                                 ? (0, t.jsxs)(t.Fragment, {
                                       children: [
                                           (0, t.jsx)(a.Spacer, { size: 2 }),
-                                          (0, t.jsx)(_, {
+                                          (0, t.jsx)(v, {
                                               clickable: I,
                                               children: (0, t.jsx)(a.Text, {
                                                   variant: 'text-sm/normal',

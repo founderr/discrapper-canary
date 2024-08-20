@@ -1,29 +1,29 @@
-n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(704215),
-    l = n(481060),
-    r = n(243778),
-    o = n(689938),
-    c = n(576306),
-    u = n(442937);
+t(47120);
+var a = t(735250),
+    l = t(470079),
+    i = t(704215),
+    r = t(481060),
+    s = t(243778),
+    o = t(689938),
+    c = t(576306),
+    u = t(442937);
 let d = () =>
-    (0, i.jsxs)('div', {
+    (0, a.jsxs)('div', {
         className: c.coachtipInner,
         children: [
-            (0, i.jsx)('img', {
+            (0, a.jsx)('img', {
                 src: u,
                 alt: o.Z.Messages.CONTENT_INVENTORY_COACHTIP_IMAGE_ALT,
                 className: c.coachtipAsset
             }),
-            (0, i.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: c.coachtipTextContainer,
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, a.jsx)(r.Heading, {
                         variant: 'heading-lg/semibold',
                         children: o.Z.Messages.CONTENT_INVENTORY_COACHTIP_HEADER
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, a.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'text-secondary',
                         children: o.Z.Messages.CONTENT_INVENTORY_COACHTIP_TEXT
@@ -32,19 +32,19 @@ let d = () =>
             })
         ]
     });
-t.Z = (e) => {
-    let { children: t } = e,
-        [n] = (0, r.US)([s.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP]),
-        [o, u] = a.useState(!1);
-    return (a.useEffect(() => {
+n.Z = (e) => {
+    let { children: n } = e,
+        [t] = (0, s.US)([i.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP]),
+        [o, u] = l.useState(!1);
+    return (l.useEffect(() => {
         setTimeout(() => {
             u(!0);
         }, 300);
     }),
-    n !== s.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP)
-        ? (0, i.jsx)(i.Fragment, { children: t })
-        : (0, i.jsx)(l.Tooltip, {
-              text: (0, i.jsx)(d, {}),
+    t !== i.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP)
+        ? (0, a.jsx)(a.Fragment, { children: n })
+        : (0, a.jsx)(r.Tooltip, {
+              text: (0, a.jsx)(d, {}),
               tooltipClassName: c.coachtip,
               tooltipContentClassName: c.coachtipContent,
               position: 'left',
@@ -54,9 +54,9 @@ t.Z = (e) => {
               hideOnClick: !1,
               'aria-label': 'test',
               children: (e) =>
-                  (0, i.jsx)('div', {
+                  (0, a.jsx)('div', {
                       ...e,
-                      children: t
+                      children: n
                   })
           });
 };

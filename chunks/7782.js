@@ -8,18 +8,18 @@ var i = n(735250),
     u = n(333984),
     d = n(486622),
     h = n(922409),
-    m = n(86203),
-    p = n(6025),
+    p = n(86203),
+    m = n(6025),
     _ = n(621853),
     f = n(171368),
     E = n(433355),
-    C = n(699516),
-    g = n(594174),
+    g = n(699516),
+    C = n(594174),
     I = n(768581),
     x = n(525541),
     T = n(981631),
-    N = n(377668),
-    v = n(228168),
+    v = n(377668),
+    N = n(228168),
     S = n(689938),
     Z = n(38487);
 let A = (e) => {
@@ -86,7 +86,7 @@ let A = (e) => {
                               (0, f.openUserProfileModal)({
                                   userId: t,
                                   channelId: n,
-                                  section: v.oh.MUTUAL_GUILDS,
+                                  section: N.oh.MUTUAL_GUILDS,
                                   analyticsLocation: { section: T.jXE.DIRECT_MESSAGE }
                               });
                           },
@@ -102,7 +102,7 @@ let A = (e) => {
     M = (e) => {
         var t;
         let { relationshipType: n, userId: a, showingBanner: s } = e,
-            l = null === (t = g.default.getUser(a)) || void 0 === t ? void 0 : t.bot,
+            l = null === (t = C.default.getUser(a)) || void 0 === t ? void 0 : t.bot,
             c = () => {
                 o.Z.addRelationship({
                     userId: a,
@@ -211,32 +211,32 @@ let A = (e) => {
                 (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
             }, []),
             l = a.useCallback(() => {
-                p.Z.closeChannelSidebar(E.uZ);
+                m.Z.closeChannelSidebar(E.uZ);
             }, []),
             o = a.useCallback(() => {
-                p.Z.closeChannelSidebar(E.uZ);
+                m.Z.closeChannelSidebar(E.uZ);
             }, []),
             {
                 acceptMessageRequest: c,
                 rejectMessageRequest: u,
                 isAcceptLoading: h,
-                isRejectLoading: m,
+                isRejectLoading: p,
                 isOptimisticAccepted: _,
                 isOptimisticRejected: f
             } = (0, d.m)({
-                user: g.default.getUser(n),
+                user: C.default.getUser(n),
                 onError: s,
                 onAcceptSuccess: o,
                 onRejectSuccess: l
             }),
-            C = h || m || _ || f;
+            g = h || p || _ || f;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(r.Button, {
                     className: Z.action,
                     size: r.Button.Sizes.TINY,
                     onClick: () => c(t),
-                    disabled: C,
+                    disabled: g,
                     submitting: h,
                     children: S.Z.Messages.MESSAGE_REQUEST_ACCEPT
                 }),
@@ -245,8 +245,8 @@ let A = (e) => {
                     size: r.Button.Sizes.TINY,
                     onClick: () => u(t),
                     color: r.Button.Colors.PRIMARY,
-                    disabled: C,
-                    submitting: m,
+                    disabled: g,
+                    submitting: p,
                     children: S.Z.Messages.MESSAGE_REQUEST_IGNORE
                 })
             ]
@@ -256,9 +256,9 @@ t.Z = (e) => {
     let { userId: t, channel: n, showingBanner: a } = e,
         { channelId: r } = (0, h._)(),
         o = (0, l.e7)([u.Z], () => null != r && u.Z.isSpam(r), [r]),
-        c = (0, l.e7)([C.Z], () => C.Z.getRelationshipType(t), [t]),
+        c = (0, l.e7)([g.Z], () => g.Z.getRelationshipType(t), [t]),
         d = n.id === r;
-    return t === N.fL
+    return t === v.fL
         ? null
         : o || d
           ? (0, i.jsxs)('div', {
@@ -278,7 +278,7 @@ t.Z = (e) => {
                                 channelId: n.id,
                                 otherUserId: t
                             }),
-                            (0, i.jsx)(m.Z, { channel: n })
+                            (0, i.jsx)(p.Z, { channel: n })
                         ]
                     })
                 ]

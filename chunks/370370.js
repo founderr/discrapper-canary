@@ -1,43 +1,43 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(297781),
-    l = n(443487),
-    r = n(43205),
-    o = n(797342),
-    c = n(182022);
-let u = [s.OV, s.Af, s.pQ];
-t.Z = a.memo((e) => {
-    let { entry: t, channel: n, selected: a, hovered: d } = e,
-        { iconUrl: h, iconTitle: m } = (0, o.n)(t);
-    return (0, i.jsxs)(l.Zb, {
-        selected: a,
+var a = t(735250),
+    l = t(470079),
+    i = t(297781),
+    r = t(443487),
+    s = t(43205),
+    o = t(797342),
+    c = t(182022);
+let u = [i.OV, i.Af, i.pQ];
+n.Z = l.memo((e) => {
+    let { entry: n, channel: t, selected: l, hovered: d } = e,
+        { iconUrl: m, iconTitle: _ } = (0, o.n)(n);
+    return (0, a.jsxs)(r.Zb, {
+        selected: l,
         children: [
-            (0, i.jsxs)(l.e$, {
+            (0, a.jsxs)(r.e$, {
                 children: [
-                    (0, i.jsx)(l.F9, {
-                        entry: t,
-                        channelId: n.id,
-                        guildId: n.guild_id
+                    (0, a.jsx)(r.F9, {
+                        entry: n,
+                        channelId: t.id,
+                        guildId: t.guild_id
                     }),
-                    (0, i.jsx)(l.ll, { children: t.extra.activity_name }),
-                    (0, i.jsx)(s.Gk, {
-                        location: s.Gt.CARD,
-                        children: u.map((e, n) =>
-                            (0, i.jsx)(
+                    (0, a.jsx)(r.ll, { children: n.extra.activity_name }),
+                    (0, a.jsx)(i.Gk, {
+                        location: i.Gt.CARD,
+                        children: u.map((e, t) =>
+                            (0, a.jsx)(
                                 e,
                                 {
-                                    entry: t,
+                                    entry: n,
                                     hovered: d
                                 },
-                                n
+                                t
                             )
                         )
                     })
                 ]
             }),
-            (0, i.jsx)(r.f, {
-                alt: m,
-                src: h,
+            (0, a.jsx)(s.f, {
+                alt: _,
+                src: m,
                 size: 48,
                 className: c.thumbnail
             })

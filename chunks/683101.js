@@ -14,8 +14,8 @@ var i = n(735250),
     u = n(294218),
     d = n(592125),
     h = n(689938),
-    m = n(374294);
-function p(e, t, n) {
+    p = n(374294);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,31 +35,31 @@ class _ extends a.PureComponent {
         if (null == r) return null;
         let c = d.Z.getChannel(r.channel_id);
         if (null == c) return null;
-        let p = 'search-result-'.concat(r.id);
+        let m = 'search-result-'.concat(r.id);
         return (0, i.jsx)(o.FocusRing, {
             ringTarget: this.hitRef,
-            ringClassName: m.__invalid_searchResultFocusRing,
+            ringClassName: p.__invalid_searchResultFocusRing,
             offset: 4,
             children: (0, i.jsxs)('li', {
-                className: m.container,
+                className: p.container,
                 ...t,
                 'aria-posinset': 1 + n + a,
                 'aria-setsize': s,
-                'aria-labelledby': p,
+                'aria-labelledby': m,
                 children: [
                     (0, i.jsx)(o.Clickable, {
                         tabIndex: -1,
                         onClick: this.handleMessageClick,
                         innerRef: this.containerRef,
-                        className: m.searchResult,
+                        className: p.searchResult,
                         focusProps: { enabled: !1 },
                         children: (0, i.jsx)(
                             'div',
                             {
                                 ref: this.hitRef,
-                                className: m.message,
+                                className: p.message,
                                 children: (0, i.jsx)(u.Z, {
-                                    id: p,
+                                    id: m,
                                     message: r,
                                     channel: c,
                                     onContextMenu: (e) => this.handleContextMenu(e, r),
@@ -73,10 +73,10 @@ class _ extends a.PureComponent {
                         )
                     }),
                     (0, i.jsx)('div', {
-                        className: m.buttonsContainer,
+                        className: p.buttonsContainer,
                         'aria-hidden': !0,
                         children: (0, i.jsx)(o.Clickable, {
-                            className: m.button,
+                            className: p.button,
                             onClick: this.jumpTo,
                             children: h.Z.Messages.JUMP
                         })
@@ -87,9 +87,9 @@ class _ extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'containerRef', a.createRef()),
-            p(this, 'hitRef', a.createRef()),
-            p(this, 'handleContextMenu', (e, t) => {
+            m(this, 'containerRef', a.createRef()),
+            m(this, 'hitRef', a.createRef()),
+            m(this, 'handleContextMenu', (e, t) => {
                 let a = d.Z.getChannel(t.channel_id);
                 if (null != a)
                     e.stopPropagation(),
@@ -103,13 +103,13 @@ class _ extends a.PureComponent {
                                 });
                         });
             }),
-            p(this, 'jumpTo', (e) => {
+            m(this, 'jumpTo', (e) => {
                 null != e && (e.preventDefault(), e.stopPropagation());
                 let { onJump: t, result: n } = this.props,
                     i = n.find((e) => e.isSearchHit);
                 null != i && t(i);
             }),
-            p(this, 'handleMessageClick', (e) => {
+            m(this, 'handleMessageClick', (e) => {
                 if (
                     (function (e, t) {
                         var n;

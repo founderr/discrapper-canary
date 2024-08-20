@@ -15,13 +15,13 @@ var i,
     d = n(153066),
     h = n(542590);
 ((a = i || (i = {})).CONTAIN = 'contain'), (a.COVER = 'cover');
-let m = l.memo(function (e) {
-    let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: a, className: r, fit: m = 'contain', mirror: p = !1, paused: _ = !1, streamPreviewURL: f, videoSpinnerContext: E, userId: C } = e,
-        [g, I] = l.useState(!0),
+let p = l.memo(function (e) {
+    let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: a, className: r, fit: p = 'contain', mirror: m = !1, paused: _ = !1, streamPreviewURL: f, videoSpinnerContext: E, userId: g } = e,
+        [C, I] = l.useState(!0),
         [x] = l.useState(() => new u.o('VideoStream'));
     l.useEffect(() => {
-        !_ && (g ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(E, C, t));
-    }, [g, _, t, x, E, C]);
+        !_ && (C ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(E, g, t));
+    }, [C, _, t, x, E, g]);
     let T = l.useCallback(() => {
         I(!1);
     }, []);
@@ -30,7 +30,7 @@ let m = l.memo(function (e) {
         children: [
             null != t &&
                 (0, s.jsx)(a, {
-                    className: o()(h.video, (0, d.l)(h, 'video', m), { [h.mirror]: p }, r),
+                    className: o()(h.video, (0, d.l)(h, 'video', p), { [h.mirror]: m }, r),
                     streamId: t,
                     onResize: n,
                     onReady: T,
@@ -39,9 +39,9 @@ let m = l.memo(function (e) {
             _
                 ? null
                 : (0, s.jsx)('div', {
-                      className: o()(h.previewWrapper, { [h.loading]: g }),
+                      className: o()(h.previewWrapper, { [h.loading]: C }),
                       children:
-                          g &&
+                          C &&
                           (0, s.jsxs)(l.Fragment, {
                               children: [
                                   null != f
@@ -61,4 +61,4 @@ let m = l.memo(function (e) {
         ]
     });
 });
-t.Z = m;
+t.Z = p;

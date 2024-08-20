@@ -13,7 +13,7 @@ var a = n(481060),
     c = n(140160),
     u = n(800350);
 function d(e) {
-    let { channel: t, guild: d, width: h, inPopout: m } = e;
+    let { channel: t, guild: d, width: h, inPopout: p } = e;
     return (0, i.jsx)(s.Z, {
         className: c.root,
         children: (0, i.jsx)(l.Z, {
@@ -32,7 +32,7 @@ function d(e) {
                                 source: r.t4x.CHANNEL_CALL
                             });
                     },
-                    { contextKey: m ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT }
+                    { contextKey: p ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT }
                 ),
             callToAction: o.Z.Messages.INSTANT_INVITE
         })

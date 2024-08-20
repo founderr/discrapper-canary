@@ -9,37 +9,37 @@ var i = n(735250),
     u = n(393238),
     d = n(607070),
     h = n(44315),
-    m = n(314897),
-    p = n(111583),
+    p = n(314897),
+    m = n(111583),
     _ = n(889901),
     f = n(64078),
     E = n(351780),
-    C = n(843693),
-    g = n(641033),
+    g = n(843693),
+    C = n(641033),
     I = n(989830),
     x = n(689938),
     T = n(37834);
-let N = a.memo(function (e) {
+let v = a.memo(function (e) {
         let { channelId: t, width: n } = e,
             s = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-            l = (0, o.e7)([C.ZP], () => C.ZP.getMostRecentMessageCombo(t), [t]),
+            l = (0, o.e7)([g.ZP], () => g.ZP.getMostRecentMessageCombo(t), [t]),
             [u, h] = a.useState(!1);
         a.useEffect(() => {
             if (null == l ? void 0 : l.displayed) return;
             h(!1),
                 setImmediate(() => {
-                    h((null != l ? (0, g.Eo)(l.combo) : 0) > 0);
+                    h((null != l ? (0, C.Eo)(l.combo) : 0) > 0);
                 });
             let e = setTimeout(() => {
                 h(!1), null != l && (0, f.ew)(l);
             }, 2000);
             return () => clearTimeout(e);
         }, [l]);
-        let m = null != l ? '100%' : '200%',
-            p = (0, c.useSpring)(
+        let p = null != l ? '100%' : '200%',
+            m = (0, c.useSpring)(
                 {
                     opacity: u ? 1 : 0,
-                    translateY: u ? '0' : m,
+                    translateY: u ? '0' : p,
                     pointerEvents: 'none',
                     width: n,
                     config: s ? r.config.stiff : r.config.slow
@@ -51,18 +51,18 @@ let N = a.memo(function (e) {
                 null != l &&
                 (0, i.jsx)(r.animated.div, {
                     className: T.messageComboScore,
-                    style: p,
+                    style: m,
                     children: (0, i.jsx)(c.Text, {
                         className: T.comboScore,
                         variant: 'text-sm/bold',
-                        children: (0, g.Eo)(l.combo)
+                        children: (0, C.Eo)(l.combo)
                     })
                 })
         });
     }),
-    v = a.memo(function (e) {
+    N = a.memo(function (e) {
         let { value: t, multiplier: n } = e,
-            { color: s, square: r, flair: o } = a.useMemo(() => (0, g.yz)(n), [n]),
+            { color: s, square: r, flair: o } = a.useMemo(() => (0, C.yz)(n), [n]),
             u = (0, h.Lq)(s);
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -126,17 +126,17 @@ let N = a.memo(function (e) {
     });
 t.Z = a.memo(function (e) {
     let { channelId: t } = e,
-        n = (0, o.e7)([m.default], () => m.default.getId()),
-        s = (0, o.e7)([p.Z], () => p.Z.isTyping(t, n), [t, n]),
+        n = (0, o.e7)([p.default], () => p.default.getId()),
+        s = (0, o.e7)([m.Z], () => m.Z.isTyping(t, n), [t, n]),
         l = (0, o.e7)([E.Z], () => E.Z.isEnabled()),
-        d = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [t, n]),
+        d = (0, o.e7)([g.ZP], () => g.ZP.isComboing(n, t), [t, n]),
         { ref: h, width: _ = 0 } = (0, u.Z)(),
-        [f, g] = a.useState(!1),
+        [f, C] = a.useState(!1),
         x = (0, I.Z)(t),
         S = l && d && s;
     a.useEffect(() => {
-        S && g(!0);
-        let e = setTimeout(() => g(S), 1000);
+        S && C(!0);
+        let e = setTimeout(() => C(S), 1000);
         return () => clearTimeout(e);
     }, [S]);
     let Z = (0, c.useSpring)({
@@ -168,7 +168,7 @@ t.Z = a.memo(function (e) {
     );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(N, {
+            (0, i.jsx)(v, {
                 channelId: t,
                 width: _
             }),
@@ -176,7 +176,7 @@ t.Z = a.memo(function (e) {
                 ref: h,
                 className: T.combo,
                 style: Z,
-                children: (0, i.jsx)(v, {
+                children: (0, i.jsx)(N, {
                     value: R,
                     multiplier: b
                 })

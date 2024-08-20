@@ -8,32 +8,32 @@ var i = n(735250),
     u = n(654904),
     d = n(314897),
     h = n(271383),
-    m = n(496675),
-    p = n(19780),
+    p = n(496675),
+    m = n(19780),
     _ = n(594174),
     f = n(626135),
     E = n(906605),
-    C = n(574176),
-    g = n(833858),
+    g = n(574176),
+    C = n(833858),
     I = n(866071),
     x = n(223135),
     T = n(625938),
-    N = n(981631),
-    v = n(689938),
+    v = n(981631),
+    N = n(689938),
     S = n(803565);
 t.Z = (e) => {
     let { hangStatusActivity: t, userId: s, channel: Z, previewIsOpen: A } = e,
-        { enableHangStatus: M } = C.n.useExperiment({
+        { enableHangStatus: M } = g.n.useExperiment({
             guildId: Z.guild_id,
             location: 'HangStatusPopout'
         }),
         b = (0, r.e7)([d.default], () => d.default.getId()),
         R = (0, r.e7)([_.default], () => _.default.getUser(s)),
-        j = (0, r.e7)([p.Z], () => p.Z.getChannelId() === Z.id),
-        L = (0, r.e7)([m.Z], () => m.Z.can(N.Plq.CONNECT, Z)),
-        P = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, Z),
-        O = (0, r.e7)([h.ZP], () => (null != Z.guild_id && null != R ? h.ZP.getMember(Z.guild_id, s) : null)),
-        y = a.useMemo(() => (null != R ? (0, u.SG)(void 0, O, R, { size: 40 }) : void 0), [O, R]);
+        L = (0, r.e7)([m.Z], () => m.Z.getChannelId() === Z.id),
+        j = (0, r.e7)([p.Z], () => p.Z.can(v.Plq.CONNECT, Z)),
+        O = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, Z),
+        P = (0, r.e7)([h.ZP], () => (null != Z.guild_id && null != R ? h.ZP.getMember(Z.guild_id, s) : null)),
+        y = a.useMemo(() => (null != R ? (0, u.SG)(void 0, P, R, { size: 40 }) : void 0), [P, R]);
     return (a.useEffect(() => {
         (0, E.UP)();
     }, []),
@@ -43,7 +43,7 @@ t.Z = (e) => {
             A &&
             null != R &&
             b !== s &&
-            f.default.track(N.rMx.VIEW_HANG_STATUS, {
+            f.default.track(v.rMx.VIEW_HANG_STATUS, {
                 source: 'HangStatusPopout',
                 guild_id: Z.guild_id,
                 channel_id: Z.id
@@ -74,13 +74,13 @@ t.Z = (e) => {
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-muted',
-                                                children: v.Z.Messages.STATUS_LEAD_IN_JUST
+                                                children: N.Z.Messages.STATUS_LEAD_IN_JUST
                                             }),
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-sm/semibold',
                                                 color: 'text-normal',
                                                 className: S.statusText,
-                                                children: (0, g.O8)(t)
+                                                children: (0, C.O8)(t)
                                             })
                                         ]
                                     }),
@@ -107,30 +107,30 @@ t.Z = (e) => {
                                     })
                                 ]
                             }),
-                            !j && L
+                            !L && j
                                 ? (0, i.jsx)(o.Button, {
                                       className: S.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
-                                          !j &&
-                                              L &&
+                                          !L &&
+                                              j &&
                                               (c.default.selectVoiceChannel(Z.id),
-                                              f.default.track(N.rMx.HANG_STATUS_CTA_CLICKED, {
+                                              f.default.track(v.rMx.HANG_STATUS_CTA_CLICKED, {
                                                   source: 'HangStatusPopout',
                                                   guild_id: Z.guild_id,
                                                   channel_id: Z.id
                                               }));
                                       },
-                                      children: v.Z.Messages.CUSTOM_HANG_STATUS_CTA
+                                      children: N.Z.Messages.CUSTOM_HANG_STATUS_CTA
                                   })
                                 : null,
-                            j && P
+                            L && O
                                 ? (0, i.jsx)(o.Button, {
                                       className: S.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           let e = t.state;
-                                          e === N.tNA.CUSTOM
+                                          e === v.tNA.CUSTOM
                                               ? (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('1631').then(n.bind(n, 333541));
                                                     return (n) =>
@@ -141,13 +141,13 @@ t.Z = (e) => {
                                                         });
                                                 })
                                               : (0, E.Zx)(e, !0),
-                                              f.default.track(N.rMx.SWIPE_HANG_STATUS, {
+                                              f.default.track(v.rMx.SWIPE_HANG_STATUS, {
                                                   guild_id: Z.guild_id,
                                                   channel_id: Z.id,
-                                                  media_session_id: p.Z.getMediaSessionId()
+                                                  media_session_id: m.Z.getMediaSessionId()
                                               });
                                       },
-                                      children: v.Z.Messages.CUSTOM_HANGS_STATUS_COPY_CTA
+                                      children: N.Z.Messages.CUSTOM_HANGS_STATUS_COPY_CTA
                                   })
                                 : null
                         ]

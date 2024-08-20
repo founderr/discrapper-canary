@@ -9,25 +9,25 @@ var i = n(735250),
     u = n(197115),
     d = n(703656),
     h = n(594174),
-    m = n(626135),
-    p = n(74538),
+    p = n(626135),
+    m = n(74538),
     _ = n(204197),
     f = n(502762),
     E = n(981631),
-    C = n(921944),
-    g = n(474936),
+    g = n(921944),
+    C = n(474936),
     I = n(689938),
     x = n(753821);
 function T() {
-    m.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
+    p.default.track(E.rMx.PREMIUM_UPSELL_INTERACTED, {
         cta_type: 'Learn more button',
         target: 'premium marketing page'
     }),
         (0, d.uL)(E.Z5c.APPLICATION_STORE);
 }
-function N(e) {
+function v(e) {
     let { avatarSrc: t, username: n } = e,
-        [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
+        [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
     return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL
         ? null
         : (0, i.jsxs)(f.Z.Overlay, {
@@ -48,7 +48,7 @@ function N(e) {
                               children: I.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({ username: n })
                           }),
                           (0, i.jsx)(r.Clickable, {
-                              onClick: () => c(C.L.USER_DISMISS),
+                              onClick: () => c(g.L.USER_DISMISS),
                               'aria-label': I.Z.Messages.DISMISS,
                               className: x.closeIconWrapper,
                               children: (0, i.jsx)(r.XSmallIcon, {
@@ -80,9 +80,9 @@ function N(e) {
               ]
           });
 }
-function v(e) {
+function N(e) {
     let { avatarSrc: t, username: n } = e,
-        [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
+        [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
     return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL
         ? null
         : (0, i.jsx)(f.Z.Overlay, {
@@ -105,7 +105,7 @@ function v(e) {
                           })
                       }),
                       (0, i.jsx)(r.Clickable, {
-                          onClick: () => c(C.L.USER_DISMISS),
+                          onClick: () => c(g.L.USER_DISMISS),
                           'aria-label': I.Z.Messages.DISMISS,
                           className: x.closeIconWrapper,
                           children: (0, i.jsx)(r.XSmallIcon, {
@@ -146,12 +146,12 @@ function S(e) {
 function Z(e) {
     let { variant: t, avatarSrc: n, username: a } = e;
     if (1 === t)
-        return (0, i.jsx)(N, {
+        return (0, i.jsx)(v, {
             avatarSrc: n,
             username: a
         });
     if (2 === t)
-        return (0, i.jsx)(v, {
+        return (0, i.jsx)(N, {
             avatarSrc: n,
             username: a
         });
@@ -169,7 +169,7 @@ let A = a.memo(function (e) {
             size: r.AvatarSizes.SIZE_32
         }),
         s = h.default.getCurrentUser(),
-        l = p.ZP.isPremium(s) || null == n || !p.ZP.isPremiumAtLeast(n.premiumType, g.p9.TIER_2),
+        l = m.ZP.isPremium(s) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, C.p9.TIER_2),
         { enabled: o, variant: u } = c.f.useExperiment(
             { location: 'SimplifiedProfilePanelPremiumUpsell' },
             {

@@ -14,25 +14,25 @@ var i = n(735250),
     u = n(317381),
     d = n(374065),
     h = n(213609),
-    m = n(358221),
-    p = n(381586),
+    p = n(358221),
+    m = n(381586),
     _ = n(159300),
     f = n(800329),
     E = n(470956),
-    C = n(430824),
-    g = n(496675),
+    g = n(430824),
+    C = n(496675),
     I = n(434488),
     x = n(27457),
     T = n(251564),
-    N = n(695492),
-    v = n(981631),
+    v = n(695492),
+    N = n(981631),
     S = n(456902);
 function Z(e) {
-    let { participants: t, onClick: n, onDoubleClick: Z, onContextMenu: A, channel: M, className: b, inCall: R, totalNumberOfParticipants: j, paused: L = !1 } = e,
-        P = (0, c.bp)() === v.IlC.POPOUT,
-        O = (0, r.e7)([C.Z], () => C.Z.getGuild(M.guild_id), [M.guild_id]),
+    let { participants: t, onClick: n, onDoubleClick: Z, onContextMenu: A, channel: M, className: b, inCall: R, totalNumberOfParticipants: L, paused: j = !1 } = e,
+        O = (0, c.bp)() === N.IlC.POPOUT,
+        P = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]),
         { dismissedActivityEntryPointTileChannel: y } = (0, T.d)(),
-        D = (0, r.e7)([m.Z], () => m.Z.getUserParticipantCount(M.id), [M]),
+        D = (0, r.e7)([p.Z], () => p.Z.getUserParticipantCount(M.id), [M]),
         k = (0, E.bt)(M.id, t),
         U = a.useCallback(() => {
             (0, l.j)(() => {
@@ -46,11 +46,11 @@ function Z(e) {
                 T.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [M.id, y]);
-    let w = (0, r.e7)([g.Z], () => M.isPrivate() || (0, _.b)(g.Z, O, M), [O, M]),
-        B = (null == O ? void 0 : O.afkChannelId) === M.id,
+    let w = (0, r.e7)([C.Z], () => M.isPrivate() || (0, _.b)(C.Z, P, M), [P, M]),
+        B = (null == P ? void 0 : P.afkChannelId) === M.id,
         H = M.userLimit <= 0 || M.userLimit > 1,
         G = (0, r.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(M.id).length <= 0),
-        V = (0, p.N)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        V = (0, m.N)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         F = (0, d.KF)(M.id) !== d.jy.CAN_LAUNCH,
         W = null != y && y === M.id,
         z = k.map(
@@ -61,13 +61,13 @@ function Z(e) {
                         participant: e,
                         channel: M,
                         className: S.tile,
-                        paused: L,
+                        paused: j,
                         onClick: n,
                         onDoubleClick: Z,
                         onContextMenu: A,
                         inCall: R,
                         width: t,
-                        inPopout: P
+                        inPopout: O
                     },
                     e.id
                 )
@@ -77,7 +77,7 @@ function Z(e) {
             type: s.ImpressionTypes.VIEW,
             name: s.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
             properties: {
-                total_participants: j,
+                total_participants: L,
                 can_invite: w,
                 is_afk_channel: B,
                 channel_user_limit: M.userLimit
@@ -86,7 +86,7 @@ function Z(e) {
         { trackOnInitialLoad: !0 },
         []
     ),
-        null != O &&
+        null != P &&
             !B &&
             (!(D >= 2) || !G || F || V || W
                 ? H &&
@@ -96,27 +96,27 @@ function Z(e) {
                       ? z.push((e) =>
                             (0, i.jsx)(I.h, {
                                 channel: M,
-                                guild: O,
+                                guild: P,
                                 width: e,
-                                inPopout: P,
+                                inPopout: O,
                                 handleClose: U,
                                 userParticipantCount: D
                             })
                         )
                       : z.push((e) =>
-                            (0, i.jsx)(N.Z, {
+                            (0, i.jsx)(v.Z, {
                                 width: e,
                                 channel: M,
-                                guild: O,
-                                inPopout: P
+                                guild: P,
+                                inPopout: O
                             })
                         ))
                 : z.push((e) =>
                       (0, i.jsx)(I.h, {
                           channel: M,
-                          guild: O,
+                          guild: P,
                           width: e,
-                          inPopout: P,
+                          inPopout: O,
                           handleClose: U,
                           userParticipantCount: D
                       })

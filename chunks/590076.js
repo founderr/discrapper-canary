@@ -13,17 +13,17 @@ var i = n(735250),
     u = n(822183),
     d = n(364125),
     h = n(610947),
-    m = n(706238);
-function p(e) {
+    p = n(706238);
+function m(e) {
     let { focused: t, channelId: n, streamerId: s, stream: u } = e,
-        p = a.useRef(null),
+        m = a.useRef(null),
         _ = (0, r.e7)([c.default], () => c.default.getCurrentUser());
-    l()(null != _, 'user cannot be null'), (0, h.Z)(p, _, s, n);
+    l()(null != _, 'user cannot be null'), (0, h.Z)(m, _, s, n);
     let {
         handleClick: f,
         handleMouseDown: E,
-        handleMouseEnter: C,
-        handleMouseMove: g,
+        handleMouseEnter: g,
+        handleMouseMove: C,
         handleMouseUp: I
     } = (0, d.Z)({
         user: _,
@@ -31,17 +31,17 @@ function p(e) {
         streamerId: s,
         stream: u,
         focused: t,
-        canvas: p.current
+        canvas: m.current
     });
     return (0, i.jsx)(o.Z, {
         children: (0, i.jsx)('canvas', {
-            ref: p,
+            ref: m,
             onClick: f,
             onMouseDown: E,
-            onMouseEnter: C,
-            onMouseMove: g,
+            onMouseEnter: g,
+            onMouseMove: C,
             onMouseUp: I,
-            className: m.sharedCanvas
+            className: p.sharedCanvas
         })
     });
 }
@@ -53,5 +53,5 @@ function _(e) {
         },
         { autoTrackExposure: !0 }
     );
-    return !t || e.hasScreenMessage ? null : (0, i.jsx)(p, { ...e });
+    return !t || e.hasScreenMessage ? null : (0, i.jsx)(m, { ...e });
 }

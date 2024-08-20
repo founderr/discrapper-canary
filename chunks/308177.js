@@ -9,27 +9,27 @@ var i,
     u = n(565799),
     d = n(431328),
     h = n(501655),
-    m = n(27931),
-    p = n(260979),
+    p = n(27931),
+    m = n(260979),
     _ = n(766015),
     f = n(401139),
     E = n(12779),
-    C = n(450369),
-    g = n(689938),
+    g = n(450369),
+    C = n(689938),
     I = n(442545);
 let x = 424,
     T = 624,
-    N = 824;
+    v = 824;
 ((a = i || (i = {}))[(a.SELECTED = 0)] = 'SELECTED'), (a[(a.SPEAKER = 1)] = 'SPEAKER'), (a[(a.AUDIENCE = 2)] = 'AUDIENCE');
-let v = (e, t) => {
+let N = (e, t) => {
         let n = Math.floor(e / t - 8),
-            i = Math.floor(n / C.Q);
+            i = Math.floor(n / g.Q);
         return {
             speakerTileWidth: n,
             speakerTileHeight: i
         };
     },
-    S = (e, t) => (e < x ? 1 : e < T ? 2 : e < N ? 3 : t ? 3 : 4),
+    S = (e, t) => (e < x ? 1 : e < T ? 2 : e < v ? 3 : t ? 3 : 4),
     Z = (e) => Math.floor((e - 32) / 102);
 function A(e) {
     return e.type === h.Ui.VOICE;
@@ -40,7 +40,7 @@ t.Z = (0, o.Z)((e) => {
         {
             selectedParticipantId: x,
             largeStream: T,
-            chatOpen: N
+            chatOpen: v
         } = (0, r.cj)(
             [c.Z],
             () => ({
@@ -53,20 +53,20 @@ t.Z = (0, o.Z)((e) => {
         M = (0, d.Io)(i.id),
         b = (0, d.Rk)(i.id, h.pV.AUDIENCE),
         R = (0, r.e7)([u.Z], () => (null != x ? u.Z.getParticipant(i.id, x) : null)),
-        j = (0, d.w8)(i.id, h.pV.SPEAKER),
-        L = j.filter(A),
-        P = null != j.find((e) => e.type === h.Ui.STREAM),
-        O = Z(a),
-        y = S(a, N),
+        L = (0, d.w8)(i.id, h.pV.SPEAKER),
+        j = L.filter(A),
+        O = null != L.find((e) => e.type === h.Ui.STREAM),
+        P = Z(a),
+        y = S(a, v),
         D = {
             [h.pV.SPEAKER]: y,
-            [h.pV.AUDIENCE]: O,
+            [h.pV.AUDIENCE]: P,
             [h.pV.SELECTED]: 1
         },
-        k = (0, m.Dx)(i.id),
-        [U, w] = (0, m.aP)(i.id, D, k),
+        k = (0, p.Dx)(i.id),
+        [U, w] = (0, p.aP)(i.id, D, k),
         B = [Math.max(null !== (t = U[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = U[1]) && void 0 !== n ? n : 1, 1), U[2]],
-        { speakerTileWidth: H, speakerTileHeight: G } = v(a, y),
+        { speakerTileWidth: H, speakerTileHeight: G } = N(a, y),
         V = T ? a - 32 : Math.min(a - 64, 3 * H + 8),
         F = (e) => e === U.length - 1 || (0 === b && 1 === e),
         [W, z] = l.useState(!1),
@@ -82,13 +82,13 @@ t.Z = (0, o.Z)((e) => {
                           E.Z,
                           {
                               participantCount: M,
-                              label: g.Z.Messages.SPEAKER_LABEL,
+                              label: C.Z.Messages.SPEAKER_LABEL,
                               className: I.header,
                               onClick: () => z(!W),
                               collapsed: W,
-                              speakers: L,
+                              speakers: j,
                               channel: i,
-                              isStreamLive: P
+                              isStreamLive: O
                           },
                           'speaker-header-'.concat(t)
                       );
@@ -99,7 +99,7 @@ t.Z = (0, o.Z)((e) => {
                           E.Z,
                           {
                               participantCount: b,
-                              label: g.Z.Messages.AUDIENCE_LABEL,
+                              label: C.Z.Messages.AUDIENCE_LABEL,
                               className: I.header,
                               onClick: () => K(!Y),
                               collapsed: Y,
@@ -121,7 +121,7 @@ t.Z = (0, o.Z)((e) => {
                         'div',
                         {
                             className: I.focusedRow,
-                            children: (0, s.jsx)(C.Z, {
+                            children: (0, s.jsx)(g.Z, {
                                 channel: i,
                                 participant: a[0],
                                 width: V
@@ -146,11 +146,11 @@ t.Z = (0, o.Z)((e) => {
                 case 2:
                     if (Y) return null;
                     return (0, s.jsx)(
-                        p.Z,
+                        m.Z,
                         {
                             channel: i,
                             participants: a,
-                            maxTiles: O
+                            maxTiles: P
                         },
                         'audience-'.concat(t, '-').concat(n)
                     );
@@ -158,7 +158,7 @@ t.Z = (0, o.Z)((e) => {
                     return null;
             }
         },
-        rowHeight: (e) => (null == w[e][0] ? 0 : 0 === e ? V / C.Q + 8 : 1 === e ? (W ? 0 : G) : Y ? 0 : 98),
+        rowHeight: (e) => (null == w[e][0] ? 0 : 0 === e ? V / g.Q + 8 : 1 === e ? (W ? 0 : G) : Y ? 0 : 98),
         renderFooter: (e) => {
             let { section: t } = e;
             return F(t) ? (0, s.jsx)('div', { className: I.spacer }, 'bottom-spacer') : null;

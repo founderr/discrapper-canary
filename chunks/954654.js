@@ -3,7 +3,7 @@ l.d(n, {
         return T;
     },
     xX: function () {
-        return _;
+        return v;
     }
 });
 var t = l(735250);
@@ -17,13 +17,13 @@ var r = l(120356),
     c = l(574597),
     d = l(378975),
     m = l(413991),
-    f = l(12067),
-    E = l(676149),
+    E = l(12067),
+    f = l(676149),
     p = l(861529),
     C = l(770009),
     N = l(889515),
-    v = l(751319);
-function _(e) {
+    _ = l(751319);
+function v(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
@@ -32,7 +32,7 @@ function _(e) {
                         N.Z,
                         {
                             ...e,
-                            renderComponents: _
+                            renderComponents: v
                         },
                         n
                     );
@@ -51,9 +51,9 @@ function _(e) {
                 case a.re.TEXT:
                     return (0, t.jsx)(p.Z, { ...e }, n);
                 case a.re.MEDIA_GALLERY:
-                    return (0, t.jsx)(f.Z, { ...e }, n);
-                case a.re.SEPARATOR:
                     return (0, t.jsx)(E.Z, { ...e }, n);
+                case a.re.SEPARATOR:
+                    return (0, t.jsx)(f.Z, { ...e }, n);
                 case a.re.CONTENT_INVENTORY_ENTRY:
                     return (0, t.jsx)(C.Z, { ...e }, n);
             }
@@ -66,10 +66,10 @@ function T(e) {
     return 0 === l.length
         ? null
         : (0, t.jsx)('div', {
-              className: i()([v.container, { [v.containerUikit]: n.isUIKitComponents() }]),
+              className: i()([_.container, { [_.containerUikit]: n.isUIKitComponents() }]),
               children: (0, t.jsx)(s.Il, {
                   message: n,
-                  children: _(l)
+                  children: v(l)
               })
           });
 }

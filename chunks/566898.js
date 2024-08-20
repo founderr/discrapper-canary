@@ -1,6 +1,6 @@
 n.d(t, {
     M9: function () {
-        return C;
+        return g;
     },
     Pb: function () {
         return E;
@@ -9,7 +9,7 @@ n.d(t, {
         return _;
     },
     ZP: function () {
-        return g;
+        return C;
     },
     ZT: function () {
         return h;
@@ -18,7 +18,7 @@ n.d(t, {
         return f;
     },
     pk: function () {
-        return p;
+        return m;
     }
 });
 var i = n(735250);
@@ -48,9 +48,9 @@ function h(e) {
         }
     });
 }
-function m(e) {
+function p(e) {
     let t,
-        { groupStart: n = !1, compact: a = !1, attachmentSpecs: l, usernameWidth: u, usernameOpacity: m, className: p, style: _ } = e,
+        { groupStart: n = !1, compact: a = !1, attachmentSpecs: l, usernameWidth: u, usernameOpacity: p, className: m, style: _ } = e,
         f = a ? 50 : r().random(40, 50);
     return (
         !a && n
@@ -61,7 +61,7 @@ function m(e) {
                           className: c.header,
                           children: (0, i.jsx)(h, {
                               width: u,
-                              opacity: m,
+                              opacity: p,
                               className: c.__invalid_username
                           })
                       })
@@ -82,14 +82,14 @@ function m(e) {
                           className: c.header,
                           children: (0, i.jsx)(h, {
                               width: u,
-                              opacity: m
+                              opacity: p
                           })
                       })
                   ]
               })),
         (0, i.jsxs)('div', {
             'aria-hidden': !0,
-            className: s()(p, {
+            className: s()(m, {
                 [c.wrapper]: !0,
                 [c.compact]: a,
                 [c.cozy]: !a
@@ -133,12 +133,12 @@ function m(e) {
         })
     );
 }
-let p = 44,
+let m = 44,
     _ = 22,
     f = 26,
     E = 26,
-    C = 6;
-function g(e) {
+    g = 6;
+function C(e) {
     let { messages: t, groupSpacing: n = 0, compact: a = !1, attachmentSpecs: s, className: l } = e,
         o = null != s ? (s.last ? t - 1 : r().random(0, t - 1)) : -1,
         c = r().random(80, 120),
@@ -148,7 +148,7 @@ function g(e) {
             .fill(null)
             .map((e, t) =>
                 (0, i.jsx)(
-                    m,
+                    p,
                     {
                         compact: a,
                         className: l,

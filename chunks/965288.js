@@ -1,6 +1,6 @@
 n.d(t, {
     y: function () {
-        return N;
+        return v;
     }
 });
 var i = n(735250),
@@ -13,13 +13,13 @@ var i = n(735250),
     u = n(692547),
     d = n(481060),
     h = n(239091),
-    m = n(40851),
-    p = n(184301),
+    p = n(40851),
+    m = n(184301),
     _ = n(103575),
     f = n(271383),
     E = n(709586),
-    C = n(5192),
-    g = n(590415),
+    g = n(5192),
+    C = n(590415),
     I = n(410370);
 let x = a.memo(function (e) {
         let { guildId: t, channelId: n, user: a, isPremium: s, isBlocked: l } = e;
@@ -37,7 +37,7 @@ let x = a.memo(function (e) {
                     className: I.text,
                     variant: 'text-sm/normal',
                     color: 'header-primary',
-                    children: C.ZP.getName(t, n, a)
+                    children: g.ZP.getName(t, n, a)
                 }),
                 s
                     ? (0, i.jsx)(E.Z, {
@@ -52,14 +52,14 @@ let x = a.memo(function (e) {
         var t;
         let { participant: n, guildId: a, channel: s, isPremium: r } = e,
             { user: o, blocked: c, rtsState: u } = n,
-            h = u === g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            m = u === g.xO.REQUESTED_TO_SPEAK || h;
+            h = u === C.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+            p = u === C.xO.REQUESTED_TO_SPEAK || h;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
                     className: I.avatarContainer,
                     children: [
-                        m &&
+                        p &&
                             (0, i.jsx)(d.HandRequestSpeakIcon, {
                                 size: 'md',
                                 color: 'currentColor',
@@ -83,13 +83,13 @@ let x = a.memo(function (e) {
             ]
         });
     }),
-    N = () => (0, i.jsx)('div', { className: I.tileBaseContainer });
+    v = () => (0, i.jsx)('div', { className: I.tileBaseContainer });
 t.Z = a.memo(function (e) {
     let { participant: t, channel: s } = e,
         { user: r, blocked: u } = t,
         E = s.getGuildId(),
-        C = (0, m.bp)(),
-        g = (0, c.e7)(
+        g = (0, p.bp)(),
+        C = (0, c.e7)(
             [f.ZP],
             () => {
                 var e;
@@ -115,12 +115,12 @@ t.Z = a.memo(function (e) {
                                 showChatItems: !1
                             });
                     },
-                    { context: C }
+                    { context: g }
                 );
             },
-            [r, E, s, C]
+            [r, E, s, g]
         ),
-        N = a.useCallback(
+        v = a.useCallback(
             (e) =>
                 (0, i.jsx)(_.Z, {
                     ...e,
@@ -133,18 +133,18 @@ t.Z = a.memo(function (e) {
         );
     return (0, i.jsx)(d.Popout, {
         preload: () =>
-            (0, p.Z)(r, {
+            (0, m.Z)(r, {
                 guildId: s.guild_id,
                 channelId: s.id
             }),
-        renderPopout: N,
+        renderPopout: v,
         position: 'right',
         spacing: 8,
         children: (e) =>
             (0, i.jsx)(d.Clickable, {
                 className: l()(I.tileContainer, {
-                    [I.singleIcon]: g || u,
-                    [I.doubleIcon]: g && u
+                    [I.singleIcon]: C || u,
+                    [I.doubleIcon]: C && u
                 }),
                 onContextMenu: x,
                 ...e,
@@ -152,7 +152,7 @@ t.Z = a.memo(function (e) {
                     participant: t,
                     guildId: E,
                     channel: s,
-                    isPremium: g
+                    isPremium: C
                 })
             })
     });

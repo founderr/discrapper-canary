@@ -38,8 +38,8 @@ var i = n(735250),
     G = n(810568),
     k = n(168524),
     B = n(569545),
-    V = n(382182),
-    H = n(74299),
+    H = n(382182),
+    V = n(74299),
     F = n(914923),
     W = n(165393),
     z = n(989941),
@@ -481,7 +481,7 @@ t.Z = (0, C.Z)(function (e) {
         g = (0, c.e7)([P.Z], () => P.Z.getActivityPanelTooltipAction()),
         { partnerGame: m, dropsActivityPanelExperienceBlocked: C, showDropsSparkles: E } = (0, O.c)(eE.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP),
         x = (0, c.e7)([N.ZP], () => (null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null)),
-        S = (0, c.e7)([en.Z, el.Z, et.ZP], () => (null != s ? V.JL(s, en.Z, el.Z, !1) : null != n && V.h_(et.ZP.getChannels(n), en.Z, el.Z).length > 0)),
+        S = (0, c.e7)([en.Z, el.Z, et.ZP], () => (null != s ? H.JL(s, en.Z, el.Z, !1) : null != n && H.h_(et.ZP.getChannels(n), en.Z, el.Z).length > 0)),
         [Z] = (0, v.Z)([
             null !==
                 (t = (function () {
@@ -492,7 +492,7 @@ t.Z = (0, C.Z)(function (e) {
                 ? t
                 : ''
         ]),
-        L = (0, c.e7)([ei.Z], () => (0, H.Z)(ei.Z) && (0, eh.isWindows)()),
+        L = (0, c.e7)([ei.Z], () => (0, V.Z)(ei.Z) && (0, eh.isWindows)()),
         b = (0, c.e7)([er.Z], () => (null != r ? er.Z.findActivity(r, (e) => e.type === eC.IIU.PLAYING) : null)),
         M = null != p && p.ownerId === r && p.state !== eC.jm8.ENDED,
         R = (0, c.e7)([eo.Z], () => eo.Z.getBroadcast()),

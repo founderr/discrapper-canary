@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = n(735250);
@@ -14,17 +14,17 @@ var a = n(512722),
     u = n(496675),
     d = n(871499),
     h = n(981631),
-    m = n(689938);
-function p(e) {
+    p = n(689938);
+function m(e) {
     var t, a;
-    let { applicationId: p, stream: _, channel: f, exitFullScreen: E, appContext: C, analyticsLocation: g, guildScheduledEvent: I, ...x } = e,
+    let { applicationId: m, stream: _, channel: f, exitFullScreen: E, appContext: g, analyticsLocation: C, guildScheduledEvent: I, ...x } = e,
         T = (0, o.bp)(),
-        N = null == f ? void 0 : f.getGuildId(),
-        v = (0, l.e7)([c.Z], () => (null != N ? c.Z.getGuild(N) : null), [N]);
-    return ((t = v), (a = f), null != t && null != a && u.Z.can(h.Plq.CREATE_INSTANT_INVITE, a))
+        v = null == f ? void 0 : f.getGuildId(),
+        N = (0, l.e7)([c.Z], () => (null != v ? c.Z.getGuild(v) : null), [v]);
+    return ((t = N), (a = f), null != t && null != a && u.Z.can(h.Plq.CREATE_INSTANT_INVITE, a))
         ? (0, i.jsx)(d.Z, {
               onClick: () => {
-                  s()(null != v, 'guild cannot be null'),
+                  s()(null != N, 'guild cannot be null'),
                       s()(null != f, 'channel cannot be null'),
                       !(function (e) {
                           let { guild: t, channel: a, streamUserId: s, applicationId: l, appContext: o, exitFullScreen: c, analyticsLocation: u, guildScheduledEvent: d } = e;
@@ -50,18 +50,18 @@ function p(e) {
                                   }
                               );
                       })({
-                          guild: v,
+                          guild: N,
                           channel: f,
                           streamUserId: null == _ ? void 0 : _.ownerId,
-                          applicationId: p,
-                          appContext: null != C ? C : T,
+                          applicationId: m,
+                          appContext: null != g ? g : T,
                           exitFullScreen: E,
-                          analyticsLocation: g,
+                          analyticsLocation: C,
                           guildScheduledEvent: I
                       });
               },
-              iconComponent: null != p ? r.ActivitiesPlusIcon : r.GroupPlusIcon,
-              label: null != p ? m.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY : m.Z.Messages.ACTIVITY_INVITE_MODAL_INVITE,
+              iconComponent: null != m ? r.ActivitiesPlusIcon : r.GroupPlusIcon,
+              label: null != m ? p.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY : p.Z.Messages.ACTIVITY_INVITE_MODAL_INVITE,
               ...x
           })
         : null;

@@ -14,18 +14,18 @@ var i = n(735250),
     u = n(100527),
     d = n(906732),
     h = n(111028),
-    m = n(150039),
-    p = n(171368),
+    p = n(150039),
+    m = n(171368),
     _ = n(271383),
     f = n(430824),
     E = n(594174),
-    C = n(251625),
-    g = n(823379),
+    g = n(251625),
+    C = n(823379),
     I = n(665149),
     x = n(981631),
     T = n(228168),
-    N = n(689938),
-    v = n(937798);
+    v = n(689938),
+    N = n(937798);
 function S(e, t, n) {
     return (
         t in e
@@ -58,7 +58,7 @@ class Z {
             return (
                 s.length > 0 &&
                     (l = (0, i.jsx)(o.TooltipContainer, {
-                        className: v.tooltip,
+                        className: N.tooltip,
                         text: s.join(', '),
                         position: 'bottom',
                         children: l
@@ -81,7 +81,7 @@ class Z {
             S(
                 this,
                 'generateNicknameGuildPairs',
-                (0, C.oH)((e) => {
+                (0, g.oH)((e) => {
                     var t;
                     return l()(_.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId))
                         .toPairs()
@@ -94,7 +94,7 @@ class Z {
                                         var t;
                                         return null === (t = f.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
                                     })
-                                    .filter(g.lm)
+                                    .filter(C.lm)
                             ];
                         })
                         .value();
@@ -104,15 +104,15 @@ class Z {
                 (0, i.jsx)(
                     o.TooltipContainer,
                     {
-                        text: N.Z.Messages.AKA_MORE_AVATARS_OVERFLOW,
+                        text: v.Z.Messages.AKA_MORE_AVATARS_OVERFLOW,
                         position: 'bottom',
                         children: (0, i.jsx)(o.Clickable, {
-                            className: v.moreAvatars,
+                            className: N.moreAvatars,
                             onClick: this.handleClick,
                             children: (0, i.jsx)(o.CirclePlusIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: v.plusIcon
+                                className: N.plusIcon
                             })
                         })
                     },
@@ -120,7 +120,7 @@ class Z {
                 )
             ),
             S(this, 'handleClick', () => {
-                (0, p.openUserProfileModal)({
+                (0, m.openUserProfileModal)({
                     userId: this.userId,
                     channelId: this.channelId,
                     sourceAnalyticsLocations: this.analyticsLocations,
@@ -137,9 +137,9 @@ class Z {
 function A(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
-        s = (0, m.gc)(n),
+        s = (0, p.gc)(n),
         l = Array(s.length).fill(null),
-        { analyticsLocations: p } = (0, d.ZP)(u.Z.AKA),
+        { analyticsLocations: m } = (0, d.ZP)(u.Z.AKA),
         _ = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: i } = e,
                 s = (0, r.e7)([E.default], () => E.default.getUser(t), [t]),
@@ -163,19 +163,19 @@ function A(e) {
             );
         })({
             userId: n,
-            analyticsLocations: p,
+            analyticsLocations: m,
             channelId: t.id
         });
     return 0 === _.getNicknameGuildPairs().length && 0 === s.length
-        ? (0, i.jsx)('div', { className: v.spacer })
+        ? (0, i.jsx)('div', { className: N.spacer })
         : (0, i.jsxs)(d.Gt, {
-              value: p,
+              value: m,
               children: [
                   (0, i.jsx)(I.iz, {}),
                   (0, i.jsx)(o.TextBadge, {
-                      text: N.Z.Messages.AKA,
+                      text: v.Z.Messages.AKA,
                       disableColor: !0,
-                      className: v.akaBadge
+                      className: N.akaBadge
                   }),
                   s.length > 0
                       ? (0, i.jsx)(c.Z, {
@@ -195,7 +195,7 @@ function A(e) {
                                               position: 'bottom',
                                               children: (0, i.jsx)('img', {
                                                   alt: '',
-                                                  className: v.avatar,
+                                                  className: N.avatar,
                                                   onClick: _.handleClick,
                                                   src: l.getAvatarURL(r, 16),
                                                   'aria-hidden': !0
@@ -207,13 +207,13 @@ function A(e) {
                             renderMoreUsers: _.renderMoreAvatars,
                             guildId: void 0,
                             max: 3,
-                            className: v.avatars
+                            className: N.avatars
                         })
                       : null,
                   _.getNicknameGuildPairs().length > 0
                       ? (0, i.jsx)(h.Z, {
                             position: 'bottom',
-                            className: v.nicknames,
+                            className: N.nicknames,
                             children: _.renderNicknamePairs()
                         })
                       : null

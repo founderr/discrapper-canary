@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var t = l(735250),
@@ -13,7 +13,7 @@ var t = l(735250),
     c = l(870456),
     d = l(869261),
     m = l(910212);
-function f(e) {
+function E(e) {
     let { content: n, className: l } = e,
         i = (function (e) {
             let n = (0, o.CJ)();

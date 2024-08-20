@@ -15,45 +15,45 @@ var a = n(481060),
     u = n(488021),
     d = n(822556),
     h = n(981631),
-    m = n(689938),
-    p = n(560353);
+    p = n(689938),
+    m = n(560353);
 function _(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: _ = !1, renderInputModes: f = !1, renderInputVolume: E = !1, renderOutputVolume: C = !1, onSelect: g } = e,
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: _ = !1, renderInputModes: f = !1, renderInputVolume: E = !1, renderOutputVolume: g = !1, onSelect: C } = e,
         I = (0, d.Z)(),
         x = (0, c.Z)(),
         T = (0, u.Z)(),
-        N = (0, l.Z)(),
-        v = (0, r.Z)(),
+        v = (0, l.Z)(),
+        N = (0, r.Z)(),
         S = (0, o.Z)();
     return (0, i.jsx)(s.Z, {
         object: h.qAy.CONTEXT_MENU,
         children: (0, i.jsxs)(a.Menu, {
-            onSelect: g,
-            className: p.menu,
+            onSelect: C,
+            className: m.menu,
             onClose: t,
             navId: 'audio-device-context',
-            'aria-label': m.Z.Messages.AUDIO_DEVICE_ACTIONS,
+            'aria-label': p.Z.Messages.AUDIO_DEVICE_ACTIONS,
             children: [
                 _
                     ? (0, i.jsx)(a.MenuGroup, {
-                          label: m.Z.Messages.INPUT_DEVICE,
+                          label: p.Z.Messages.INPUT_DEVICE,
                           children: x
                       })
                     : null,
                 n
                     ? (0, i.jsx)(a.MenuGroup, {
-                          label: m.Z.Messages.OUTPUT_DEVICE,
+                          label: p.Z.Messages.OUTPUT_DEVICE,
                           children: T
                       })
                     : null,
                 f
                     ? (0, i.jsx)(a.MenuGroup, {
-                          label: m.Z.Messages.FORM_LABEL_INPUT_MODE,
-                          children: N
+                          label: p.Z.Messages.FORM_LABEL_INPUT_MODE,
+                          children: v
                       })
                     : null,
                 (0, i.jsxs)(a.MenuGroup, {
-                    children: [E ? v : null, C ? S : null, I]
+                    children: [E ? N : null, g ? S : null, I]
                 })
             ]
         })

@@ -14,13 +14,13 @@ var i = n(735250),
     u = n(410030),
     d = n(231338),
     h = n(153544);
-let m = {
+let p = {
         mass: 1,
         tension: 400,
         friction: 60,
         clamp: !0
     },
-    p = {
+    m = {
         mass: 1,
         tension: 600,
         friction: 60,
@@ -162,20 +162,20 @@ function f(e) {
 function E(e) {
     let { children: t, fullHeight: n = !1 } = e,
         [s, E] = a.useState(!1),
-        { height: C, ref: g } = (0, c.Z)(),
+        { height: g, ref: C } = (0, c.Z)(),
         { height: I, ref: x } = (0, c.Z)(),
-        T = n ? I : 59 + (null != C ? C : 100) + 101,
-        N = (0, o.useSpring)({
+        T = n ? I : 59 + (null != g ? g : 100) + 101,
+        v = (0, o.useSpring)({
             from: { height: 0 },
             to: { height: T },
-            config: m,
+            config: p,
             delay: s ? 0 : 800,
             onRest: () => E(!0)
         }),
-        v = (0, o.useSpring)({
+        N = (0, o.useSpring)({
             from: { opacity: 0 },
             to: { opacity: 1 },
-            config: p,
+            config: m,
             delay: 1000
         }),
         S = (0, u.Fg)(),
@@ -188,7 +188,7 @@ function E(e) {
         children: (0, i.jsxs)(r.animated.div, {
             className: h.heightContainer,
             style: {
-                ...N,
+                ...v,
                 overflow: s ? 'initial' : 'hidden'
             },
             children: [
@@ -200,13 +200,13 @@ function E(e) {
                 }),
                 (0, i.jsx)('div', {
                     className: l()(h.content, n && h.fullHeight),
-                    ref: g,
+                    ref: C,
                     children: (0, i.jsx)('div', {
                         className: l()(h.innerContent, n && h.fullHeight),
                         style: { backgroundColor: Z },
                         children: (0, i.jsx)(r.animated.div, {
                             className: l()(h.contentAnimContainer, n && h.fullHeight),
-                            style: v,
+                            style: N,
                             children: t
                         })
                     })

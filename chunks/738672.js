@@ -14,16 +14,16 @@ var i = n(735250),
     u = n(618158);
 function d(e) {
     let { buttonRef: t, dismissed: n, onDismiss: d, renderComponent: h } = e,
-        m = a.useContext(c.h9),
-        [p, _] = a.useState(''),
+        p = a.useContext(c.h9),
+        [m, _] = a.useState(''),
         [f, E] = a.useState(!1),
-        C = (0, s.e7)([o.ZP], () => o.ZP.callHeaderHeight),
-        g = a.createRef(),
+        g = (0, s.e7)([o.ZP], () => o.ZP.callHeaderHeight),
+        C = a.createRef(),
         I = a.useRef(0);
     a.useEffect(() => {
         var e, t;
-        _(String(I.current)), E(void 0 !== C && C < (null !== (t = null === (e = g.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (I.current += 1);
-    }, [C, g]);
+        _(String(I.current)), E(void 0 !== g && g < (null !== (t = null === (e = C.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (I.current += 1);
+    }, [g, C]);
     let { preventIdle: x, allowIdle: T } = (0, u.Y)('popup');
     return (null == t ? void 0 : t.current) == null
         ? null
@@ -34,16 +34,16 @@ function d(e) {
                   align: 'center',
                   spacing: 0,
                   nudgeAlignIntoViewport: !1,
-                  positionKey: p,
+                  positionKey: m,
                   children: () =>
                       (0, i.jsx)('div', {
-                          ref: g,
+                          ref: C,
                           onMouseOver: x,
                           onFocus: x,
                           onBlur: T,
                           onMouseLeave: T,
                           children: h({
-                              hidden: f || m || n,
+                              hidden: f || p || n,
                               onDismiss: d
                           })
                       })

@@ -9,25 +9,25 @@ var i,
     u = n(594174),
     d = n(176354),
     h = n(292793),
-    m = n(88315),
-    p = n(813900);
+    p = n(88315),
+    m = n(813900);
 let _ = {},
     f = {},
     E = {},
-    C = !0,
-    g = null;
+    g = !0,
+    C = null;
 function I(e) {
     if (null == f[e]) {
         let t = u.default.getUser(e);
         if (null == t) return;
-        let n = t.getAvatarURL(null, p.Ks),
+        let n = t.getAvatarURL(null, m.Ks),
             i = new Image();
         (i.src = n), (f[e] = i);
     }
 }
 class x extends (i = r.ZP.Store) {
     get visibleOverlayCanvas() {
-        return C;
+        return g;
     }
     getDrawables(e) {
         return null != _[e] ? _[e] : [];
@@ -39,7 +39,7 @@ class x extends (i = r.ZP.Store) {
         return E[e];
     }
     getDrawMode() {
-        return g;
+        return C;
     }
 }
 (l = 'SharedCanvasStore'),
@@ -73,7 +73,7 @@ let T = new x(o.Z, {
                       userId: i,
                       points: n
                   })
-                : (0, m.P7)(e) && e.points.push(...n);
+                : (0, p.P7)(e) && e.points.push(...n);
         }
         I(i);
     },
@@ -104,7 +104,7 @@ let T = new x(o.Z, {
                         name: null !== (i = null != e ? e : a.emojiName) && void 0 !== i ? i : '',
                         animated: !1
                     },
-                    p.qh
+                    m.qh
                 ));
         }
         I(l);
@@ -118,11 +118,11 @@ let T = new x(o.Z, {
     },
     SHARED_CANVAS_SET_DRAW_MODE: function (e) {
         let { drawMode: t } = e;
-        g = t;
+        C = t;
     },
     TOGGLE_OVERLAY_CANVAS: function (e) {
         let {} = e;
-        C = !C;
+        g = !g;
     }
 });
 t.Z = T;

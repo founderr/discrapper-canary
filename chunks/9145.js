@@ -14,34 +14,34 @@ var i = n(735250),
     u = n(153867),
     d = n(110924),
     h = n(607070),
-    m = n(900211),
-    p = n(740492),
+    p = n(900211),
+    m = n(740492),
     _ = n(871499),
     f = n(402113),
     E = n(592125),
-    C = n(271383),
-    g = n(944486),
+    g = n(271383),
+    C = n(944486),
     I = n(594174),
     x = n(585483),
     T = n(792125),
-    N = n(51144),
-    v = n(566620),
+    v = n(51144),
+    N = n(566620),
     S = n(317381),
     Z = n(619915),
     A = n(988980),
     M = n(952561),
     b = n(563218),
     R = n(884338),
-    j = n(719296),
-    L = n(651612),
-    P = n(918559),
-    O = n(981631),
+    L = n(719296),
+    j = n(651612),
+    O = n(918559),
+    P = n(981631),
     y = n(689938),
     D = n(402137);
 let k = R.u.SIZE_32,
     U = {
-        [P.MI.NO_CHAT]: D.noChat,
-        [P.MI.RESIZABLE]: D.resizable
+        [O.MI.NO_CHAT]: D.noChat,
+        [O.MI.RESIZABLE]: D.resizable
     };
 function w(e) {
     var t, n;
@@ -52,12 +52,12 @@ function w(e) {
         F = (0, Z.gb)(G),
         W = (0, Z.uF)(F),
         z = a.useCallback(() => {
-            (0, v.tg)(P.Ez.PIP);
+            (0, N.tg)(O.Ez.PIP);
         }, []),
         Y = a.useRef(null),
         K = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
-        q = K !== P.MI.NO_CHAT,
-        [X, Q] = a.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : s),
+        q = K !== O.MI.NO_CHAT,
+        [X, Q] = a.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : s),
         J = a.useCallback((e) => {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
@@ -77,22 +77,22 @@ function w(e) {
         });
         return e.observe($.current), () => e.disconnect();
     }, []);
-    let en = ee.width / Math.max(ee.height, 1) < P.I0,
+    let en = ee.width / Math.max(ee.height, 1) < O.I0,
         ei = 0,
         ea = 0,
         es = (0, A.Z)(null == H ? void 0 : H.id);
     if (!es) {
         let e = ee.width,
             t = ee.height;
-        en ? ((t = ee.width / P.I0) > ee.height && (e = (t = ee.height) * P.I0), (ea = (ee.height - t) / 2)) : ((e = Math.min(ee.height * P.I0)) > ee.width && (t = (e = ee.width) / P.I0), (ei = (ee.width - e) / 2));
+        en ? ((t = ee.width / O.I0) > ee.height && (e = (t = ee.height) * O.I0), (ea = (ee.height - t) / 2)) : ((e = Math.min(ee.height * O.I0)) > ee.width && (t = (e = ee.width) / O.I0), (ei = (ee.width - e) / 2));
     }
     let el = W.get(null !== (n = null == H ? void 0 : H.id) && void 0 !== n ? n : ''),
-        er = (0, r.e7)([g.Z], () => g.Z.getChannelId()),
+        er = (0, r.e7)([C.Z], () => C.Z.getChannelId()),
         eo = (0, r.Wu)(
-            [C.ZP],
+            [g.ZP],
             () => {
                 var e;
-                return null == V ? [] : Array.from(null !== (e = null == el ? void 0 : el.embeddedActivity.userIds) && void 0 !== e ? e : []).map((e) => C.ZP.getMember(V.guild_id, e));
+                return null == V ? [] : Array.from(null !== (e = null == el ? void 0 : el.embeddedActivity.userIds) && void 0 !== e ? e : []).map((e) => g.ZP.getMember(V.guild_id, e));
             },
             [el, V]
         ),
@@ -143,7 +143,7 @@ function w(e) {
         var n;
         if (null == e || void 0 === e || void 0 === t) return null;
         let a = ec.get(e.id),
-            s = null !== (n = null == a ? void 0 : a.nick) && void 0 !== n ? n : N.ZP.getName(e);
+            s = null !== (n = null == a ? void 0 : a.nick) && void 0 !== n ? n : v.ZP.getName(e);
         return (0, i.jsx)(
             c.TooltipContainer,
             {
@@ -163,7 +163,7 @@ function w(e) {
         );
     };
     return (0, i.jsxs)('div', {
-        className: l()(D.wrapper, U[K], (0, T.Q)(O.BRd.DARK)),
+        className: l()(D.wrapper, U[K], (0, T.Q)(P.BRd.DARK)),
         ref: Y,
         style: eu,
         children: [
@@ -193,7 +193,7 @@ function w(e) {
                         ref: $,
                         children: (0, i.jsx)(b.Z, {
                             className: D.iframe,
-                            embedId: (0, j.Z)(w, H.id)
+                            embedId: (0, L.Z)(w, H.id)
                         })
                     }),
                     null != er
@@ -211,7 +211,7 @@ function w(e) {
                                   (0, i.jsxs)('div', {
                                       className: D.footerButtons,
                                       children: [
-                                          (0, i.jsx)(L.Z, {
+                                          (0, i.jsx)(j.Z, {
                                               channelId: er,
                                               className: D.circularButton
                                           }),
@@ -241,15 +241,15 @@ function w(e) {
                 ]
             }),
             q
-                ? (0, i.jsx)(m.Z, {
+                ? (0, i.jsx)(p.Z, {
                       minHeight: 480,
                       maxHeight: s,
                       resizableNode: Y,
                       onResize: (e) => {
-                          x.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), Q(e);
+                          x.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), Q(e);
                       },
                       onResizeEnd: (e) => {
-                          x.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
+                          x.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
                       }
                   })
                 : null

@@ -13,10 +13,10 @@ var t = l(735250),
     o = l(203079);
 function c(e) {
     let n;
-    let { type: l, style: c, label: d, placeholder: m, minLength: f, maxLength: E, required: p, value: C } = e,
-        [N, v] = r.useState(null != C ? C : ''),
+    let { type: l, style: c, label: d, placeholder: m, minLength: E, maxLength: f, required: p, value: C } = e,
+        [N, _] = r.useState(null != C ? C : ''),
         {
-            state: _,
+            state: v,
             executeStateUpdate: T,
             error: h
         } = (0, s.Ee)(
@@ -30,17 +30,17 @@ function c(e) {
         ),
         I = (0, u.hz)(e.id);
     r.useEffect(() => {
-        (null == _ ? void 0 : _.type) === l && v(_.value);
-    }, [l, _]);
+        (null == v ? void 0 : v.type) === l && _(v.value);
+    }, [l, v]);
     let x = {
         name: d,
         value: N,
         placeholder: m,
-        minLength: f,
-        maxLength: E,
+        minLength: E,
+        maxLength: f,
         required: p,
         onChange: (e) => {
-            v(e),
+            _(e),
                 T({
                     type: l,
                     value: e

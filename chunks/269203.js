@@ -14,26 +14,26 @@ var a = n(442837),
     u = n(594174),
     d = n(967128),
     h = n(689938),
-    m = n(422226);
-function p(e) {
+    p = n(422226);
+function m(e) {
     var t;
     let { joinRequest: n, guild: l } = e,
         c = (0, a.e7)([u.default], () => u.default.getUser(n.userId));
     return (0, i.jsxs)('div', {
-        className: m.summaryContainer,
+        className: p.summaryContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: m.summaryHeader,
+                className: p.summaryHeader,
                 children: [
                     null != l &&
                         (0, i.jsxs)('div', {
-                            className: m.summaryHeaderClanInfo,
+                            className: p.summaryHeaderClanInfo,
                             children: [
                                 (0, i.jsx)(r.Z, {
                                     guild: l,
                                     active: !0,
                                     size: r.Z.Sizes.SMOL,
-                                    className: m.guildIcon
+                                    className: p.guildIcon
                                 }),
                                 (0, i.jsx)(s.Heading, {
                                     variant: 'heading-sm/semibold',
@@ -58,9 +58,9 @@ function p(e) {
                           let t = e.field_type === o.QJ.MULTIPLE_CHOICE && null != e.response ? e.choices[e.response] : e.response;
                           return (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)('hr', { className: m.summarySeparator }),
+                                  (0, i.jsx)('hr', { className: p.summarySeparator }),
                                   (0, i.jsxs)('div', {
-                                      className: m.formResponseContainer,
+                                      className: p.formResponseContainer,
                                       children: [
                                           (0, i.jsx)(s.Text, {
                                               variant: 'text-xs/semibold',
@@ -85,15 +85,15 @@ function _(e) {
         { loading: n, joinRequest: a, joinRequestGuild: r } = (0, l.Z)(t.id);
     return (0, i.jsx)(d.ZP, {
         channelId: t.id,
-        className: m.container,
+        className: p.container,
         children: (0, i.jsx)(d.jz, {
             children:
                 null != a && null != a.formResponses
                     ? (0, i.jsxs)('div', {
-                          className: m.formContainer,
+                          className: p.formContainer,
                           children: [
                               (0, i.jsx)('div', {
-                                  children: (0, i.jsx)(p, {
+                                  children: (0, i.jsx)(m, {
                                       guild: r,
                                       joinRequest: a
                                   })

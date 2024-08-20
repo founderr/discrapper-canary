@@ -1,32 +1,32 @@
-var i,
+var r,
+    o,
     a,
-    s,
-    r,
-    l = n(442837),
-    o = n(570140),
-    c = n(592125),
-    u = n(757266),
-    d = n(375954);
-let _ = null;
-class E extends (r = l.ZP.Store) {
+    c,
+    i = n(442837),
+    l = n(570140),
+    u = n(592125),
+    s = n(757266),
+    E = n(375954);
+let d = null;
+class _ extends (c = i.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, u.Z, d.Z);
+        this.waitFor(u.Z, s.Z, E.Z);
     }
     getApps() {
-        return _;
+        return d;
     }
 }
-(s = 'AuthorizedAppsStore'),
-    (a = 'displayName') in (i = E)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(a = 'AuthorizedAppsStore'),
+    (o = 'displayName') in (r = _)
+        ? Object.defineProperty(r, o, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    (t.Z = new E(o.Z, {
+        : (r[o] = a),
+    (t.Z = new _(l.Z, {
         USER_AUTHORIZED_APPS_UPDATE: function (e) {
-            _ = e.apps;
+            d = e.apps;
         }
     }));

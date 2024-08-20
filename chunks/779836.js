@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return C;
     }
 });
 var i = n(735250);
@@ -14,17 +14,17 @@ var a = n(120356),
     u = n(446183),
     d = n(677281),
     h = n(765104),
-    m = n(477291),
-    p = n(531578),
+    p = n(477291),
+    m = n(531578),
     _ = n(959517),
     f = n(689938),
     E = n(774103);
-function C(e) {
+function g(e) {
     let { summary: t, channel: n } = e,
         a = (0, r.e7)([h.Z], () => h.Z.summaryFeedback(t)),
         s = (e, i) => {
             e.stopPropagation(),
-                (0, m.Z)({
+                (0, p.Z)({
                     summary: t,
                     channel: n,
                     rating: i
@@ -62,7 +62,7 @@ function C(e) {
                                   children: f.Z.Messages.SUMMARY_FEEDBACK
                               }),
                               (0, i.jsx)(o.Clickable, {
-                                  onClick: (e) => s(e, p.aZ.GOOD),
+                                  onClick: (e) => s(e, m.aZ.GOOD),
                                   children: (0, i.jsx)(d.Z, {
                                       className: E.thumbIcon,
                                       width: 12,
@@ -70,7 +70,7 @@ function C(e) {
                                   })
                               }),
                               (0, i.jsx)(o.Clickable, {
-                                  onClick: (e) => s(e, p.aZ.BAD),
+                                  onClick: (e) => s(e, m.aZ.BAD),
                                   children: (0, i.jsx)(u.Z, {
                                       className: E.thumbIcon,
                                       width: 12,
@@ -84,13 +84,13 @@ function C(e) {
         )
     });
 }
-function g(e) {
+function C(e) {
     var t, n;
     let a,
         { item: l, channel: u, index: d } = e,
-        m = (0, r.e7)([h.Z], () => h.Z.selectedSummary(u.id));
-    if (null == m) return null;
-    let p = null != l.unreadId,
+        p = (0, r.e7)([h.Z], () => h.Z.selectedSummary(u.id));
+    if (null == p) return null;
+    let m = null != l.unreadId,
         f = null != l.content;
     return (
         (a = f
@@ -106,8 +106,8 @@ function g(e) {
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(C, {
-                          summary: m,
+                      (0, i.jsx)(g, {
+                          summary: p,
                           channel: u
                       }),
                       (0, i.jsx)(o.TopicsIcon, {
@@ -122,8 +122,8 @@ function g(e) {
             {
                 className: s()(E.summaryDivider, f ? E.summaryDividerStart : E.summaryDividerEnd),
                 contentClassName: f ? E.summaryStartContent : E.summaryEndContent,
-                isUnread: p,
-                id: p ? _.j1 : void 0,
+                isUnread: m,
+                id: m ? _.j1 : void 0,
                 children: a
             },
             'divider-'.concat(null !== (n = null !== (t = l.contentKey) && void 0 !== t ? t : l.unreadId) && void 0 !== n ? n : d)

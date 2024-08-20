@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 }),
     n(47120);
@@ -14,35 +14,35 @@ var i = n(735250),
     u = n(981631),
     d = n(310402),
     h = n(256507);
-let m = 'CameraPreviewPosition';
-function p(e) {
-    let { width: t, onContextMenuParticipant: n, height: s, channel: p, participants: _ } = e,
+let p = 'CameraPreviewPosition';
+function m(e) {
+    let { width: t, onContextMenuParticipant: n, height: s, channel: m, participants: _ } = e,
         [f, E] = (function () {
-            let [e, t] = a.useState(() => r.K.get(m, u.VD2.BOTTOM_RIGHT));
+            let [e, t] = a.useState(() => r.K.get(p, u.VD2.BOTTOM_RIGHT));
             return [
                 e,
                 a.useCallback((e) => {
-                    r.K.set(m, e), t(e);
+                    r.K.set(p, e), t(e);
                 }, [])
             ];
         })(),
-        C = a.useRef(null),
-        g = null == p.getGuildId() ? 70 : 50;
+        g = a.useRef(null),
+        C = null == m.getGuildId() ? 70 : 50;
     return (
         a.useLayoutEffect(() => {
             var e;
-            null === (e = C.current) || void 0 === e || e.ensureIsInPosition();
+            null === (e = g.current) || void 0 === e || e.ensureIsInPosition();
         }, [_.length]),
         (0, i.jsx)('div', {
             className: d.container,
             children: (0, i.jsx)(o._, {
                 position: f,
                 id: 0,
-                ref: C,
+                ref: g,
                 onMove: (e, t) => E(t),
                 maxX: t,
                 maxY: s,
-                edgeOffsetTop: g,
+                edgeOffsetTop: C,
                 edgeOffsetBottom: 70,
                 edgeOffsetLeft: 16,
                 edgeOffsetRight: 16,
@@ -53,7 +53,7 @@ function p(e) {
                             c.ZP,
                             {
                                 participant: e,
-                                channel: p,
+                                channel: m,
                                 onContextMenu: n,
                                 className: l()(d.tile, h.elevationHigh),
                                 fit: c.BP.COVER,

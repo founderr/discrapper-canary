@@ -1,9 +1,9 @@
 l.d(n, {
     HI: function () {
-        return f;
+        return E;
     },
     _H: function () {
-        return E;
+        return f;
     },
     af: function () {
         return p;
@@ -24,8 +24,8 @@ var t = l(524846),
     d = l(5192),
     m = l(280501);
 l(892902);
-let f = 1000;
-function E(e, n, l) {
+let E = 1000;
+function f(e, n, l) {
     let t = i.Z.getChannel(l);
     if (null == t) return [];
     let a = e === r.re.USER_SELECT || e === r.re.MENTIONABLE_SELECT,
@@ -42,7 +42,7 @@ function E(e, n, l) {
             checkRecentlyTalkedOnEmptyQuery: !1,
             limit: 15
         }),
-        f = u.map((e) => {
+        E = u.map((e) => {
             var n;
             let r = d.ZP.getNickname(t.getGuildId(), l, e.user);
             return {
@@ -52,7 +52,7 @@ function E(e, n, l) {
             };
         });
     return [
-        ...f,
+        ...E,
         ...c.map((e) => ({
             type: m.tM.ROLE,
             value: e.id,

@@ -11,7 +11,7 @@ t.Z = a.memo(function (e) {
     let { channel: t, narrow: n } = e,
         a = (0, o.Z)(t),
         h = (0, s.Z)(),
-        { canRenderNotice: m, recordNoticeRender: p } = (0, l.Z)(t);
+        { canRenderNotice: p, recordNoticeRender: m } = (0, l.Z)(t);
     return t.isArchivedLockedThread()
         ? (0, i.jsx)(u.s, {
               channel: t,
@@ -27,10 +27,10 @@ t.Z = a.memo(function (e) {
                   channel: t,
                   narrow: n
               })
-            : m
+            : p
               ? (0, i.jsx)(r.Z, {
                     channel: t,
-                    onChannelChange: p
+                    onChannelChange: m
                 })
               : null;
 });

@@ -14,17 +14,17 @@ var i = n(735250),
     u = n(570140),
     d = n(596454),
     h = n(607070),
-    m = n(377107);
-let p = [m.emoji1, m.emoji2, m.emoji3, m.emoji4],
+    p = n(377107);
+let m = [p.emoji1, p.emoji2, p.emoji3, p.emoji4],
     _ = a.memo(function (e) {
         var t;
         let { emoji: n, onAnimationEnd: s } = e,
-            o = (0, r.sample)(p),
+            o = (0, r.sample)(m),
             c = a.useCallback(() => {
                 s(n.key);
             }, [n.key, s]);
         return (0, i.jsx)('div', {
-            className: l()(m.emoji, o),
+            className: l()(p.emoji, o),
             onAnimationEnd: c,
             children: (0, i.jsx)(d.Z, {
                 emojiId: n.id,
@@ -62,7 +62,7 @@ function f(e) {
     return s
         ? null
         : (0, i.jsx)('div', {
-              className: m.container,
+              className: p.container,
               style: { top: n - 16 },
               'aria-hidden': !0,
               children: l.map((e) =>

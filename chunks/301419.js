@@ -17,7 +17,7 @@ function u(e) {
             onClick: () => (0, r.o)(a.Hw.ALBUM, l.extra.media.external_parent_id),
             ariaDescription: s.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: l.extra.media.parent_title })
         },
-        f = {
+        E = {
             onClick: () => (0, r.o)(a.Hw.ARTIST, l.extra.artist.external_id),
             ariaDescription: s.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: d })
         };
@@ -27,7 +27,7 @@ function u(e) {
             ...u,
             title: d,
             thumbnailUrl: c,
-            titleClickable: f,
+            titleClickable: E,
             subtitleClickable: m,
             thumbnailClickable: m,
             userDescription: s.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
