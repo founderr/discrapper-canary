@@ -1,27 +1,24 @@
 n.d(t, {
     Hf: function () {
-        return I;
+        return m;
     },
     JT: function () {
-        return g;
-    },
-    Nk: function () {
-        return p;
+        return T;
     },
     Qm: function () {
-        return A;
+        return S;
     },
     VB: function () {
-        return m;
+        return p;
     },
     Xq: function () {
         return f;
     },
     YZ: function () {
-        return S;
+        return g;
     },
     wi: function () {
-        return T;
+        return I;
     }
 }),
     n(47120),
@@ -95,14 +92,6 @@ function h(e, t) {
         : void 0;
 }
 function p(e, t, n) {
-    var r, i, a, s, o, u, c, d;
-    let _ = l.ZP.getUserState(),
-        E = l.ZP.getContextState(e),
-        f = l.ZP.getApplicationState(n),
-        h = null !== (d = null !== (c = null === (i = _.result) || void 0 === i ? void 0 : null === (r = i.sections) || void 0 === r ? void 0 : r[n]) && void 0 !== c ? c : null === (s = E.result) || void 0 === s ? void 0 : null === (a = s.sections) || void 0 === a ? void 0 : a[n]) && void 0 !== d ? d : null === (u = f.result) || void 0 === u ? void 0 : null === (o = u.sections) || void 0 === o ? void 0 : o[n];
-    return null == h ? void 0 : h.descriptor;
-}
-function m(e, t, n) {
     let r = l.ZP.query(
         e,
         {
@@ -119,12 +108,12 @@ function m(e, t, n) {
         sections: r.descriptors
     };
 }
-function I(e) {
+function m(e) {
     let t = l.ZP.getUserState(),
         n = l.ZP.getContextState(e);
     return [null == t ? void 0 : t.result, null == n ? void 0 : n.result];
 }
-function T(e, t, n) {
+function I(e, t, n) {
     let s = (0, i.e7)([a.Z], () => a.Z.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
         {
             descriptors: u,
@@ -140,7 +129,7 @@ function T(e, t, n) {
     m.current = f;
     let I = r.useMemo(() => {
         var e;
-        return v(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
+        return N(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
     }, [t.commandTypes, n.placeholderCount]);
     return r.useMemo(() => {
         let e = {
@@ -186,16 +175,16 @@ function T(e, t, n) {
         return e;
     }, [c, u, h, d, f, I]);
 }
-function g(e, t, n) {
+function T(e, t, n) {
     var r;
     let { descriptors: i, commands: a, loading: s } = l.ZP.query(e, t, n),
-        u = v(s && null !== (r = n.placeholderCount) && void 0 !== r ? r : 0, t.commandTypes[0]);
+        u = N(s && null !== (r = n.placeholderCount) && void 0 !== r ? r : 0, t.commandTypes[0]);
     return {
         commands: s ? [...a, ...u] : a,
         sections: s && 0 === i.length ? [o.Tm[_.bi.BUILT_IN]] : i
     };
 }
-function S(e, t) {
+function g(e, t) {
     let n = (0, l.PL)(!0, !0),
         i = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
@@ -216,7 +205,7 @@ function S(e, t) {
         };
     }, [i.result, n.result, t]);
 }
-function A(e, t, n) {
+function S(e, t, n) {
     let i = (0, l.PL)(!0, !0),
         a = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
@@ -239,12 +228,12 @@ function A(e, t, n) {
         };
     }, [null == i ? void 0 : i.result, null == a ? void 0 : a.result, t, n]);
 }
-let N = {
+let A = {
     id: 'placeholder-section',
     type: c.Qi.APPLICATION,
     name: ''
 };
-function v(e, t) {
+function N(e, t) {
     let n = [];
     for (let r = 0; r < e; r++)
         n.push(
@@ -258,7 +247,7 @@ function v(e, t) {
                     description: '',
                     displayDescription: '',
                     applicationId: '',
-                    section: N
+                    section: A
                 };
             })(r, t)
         );
