@@ -1,91 +1,92 @@
-n(627494), n(757143);
-var i = n(735250),
-    a = n(470079),
-    s = n(317261),
-    l = n(70956),
-    r = n(5192),
-    o = n(561308),
-    c = n(919394),
-    u = n(206295),
-    d = n(227172),
-    h = n(555672),
-    m = n(297781),
-    p = n(591853),
-    _ = n(410441),
-    f = n(797342),
-    E = n(689938);
-let C = (e, t, n, i) => {
-        let a = (function (e) {
-                if (e === s._.WEEK) return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
-            })(i),
-            l = r.ZP.getName(t.guild_id, t.id, n),
+t(627494), t(757143);
+var a = t(735250),
+    l = t(470079),
+    i = t(317261),
+    r = t(70956),
+    s = t(5192),
+    o = t(561308),
+    c = t(919394),
+    u = t(206295),
+    d = t(227172),
+    m = t(555672),
+    _ = t(297781),
+    E = t(591853),
+    T = t(410441),
+    h = t(797342),
+    x = t(689938);
+let N = (e, n, t, a) => {
+        let l = (function (e) {
+                if (e === i._.WEEK) return x.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
+            })(a),
+            r = s.ZP.getName(n.guild_id, n.id, t),
             o = e.extra.game_name;
-        return a
+        return l
             .plainFormat({
                 gameName: o,
-                userName: l
+                userName: r
             })
             .replaceAll('*', '');
     },
-    g = (e, t) =>
-        E.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
-            username: t.username,
+    I = (e, n) =>
+        x.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+            username: n.username,
             activity: e.extra.game_name
         });
-t.Z = (e) => {
-    let { channel: t, entry: n, requestId: s, closePopout: r } = e,
-        { iconUrl: I, iconTitle: x, user: T, details: N, appName: v, coverImageUrl: S } = (0, f.n)(n),
-        { primaryColor: Z, secondaryColor: A } = (0, u.Z)(I),
-        M = (0, o.yA)(n),
-        b = (0, o.Nq)(n),
-        R = a.useCallback(
+n.Z = (e) => {
+    let { channel: n, entry: t, disableGameProfileLinks: i, onReaction: s, onVoiceChannelPreview: C } = e,
+        { iconUrl: p, iconTitle: g, user: f, details: v, appName: M, coverImageUrl: P } = (0, h.n)(t),
+        { primaryColor: Z, secondaryColor: S } = (0, u.Z)(p),
+        A = (0, o.yA)(t),
+        O = (0, o.Nq)(t),
+        j = l.useCallback(
             (e) => {
-                if (null != T && null != M && null != b && !!(0, h.qy)(b))
+                if (null != n && null != f && null != A && null != O && !!(0, m.qy)(O))
                     return (0, c.SO)({
-                        entry: n,
-                        applicationImageSrc: I,
-                        avatarSrcs: [T.getAvatarURL(t.guild_id, 128)],
-                        description: C(n, t, T, b),
-                        timestamp: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(M / l.Z.Seconds.HOUR) }),
-                        colors: [Z, A],
+                        entry: t,
+                        applicationImageSrc: p,
+                        avatarSrcs: [f.getAvatarURL(null == n ? void 0 : n.guild_id, 128)],
+                        description: N(t, n, f, O),
+                        timestamp: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(A / r.Z.Seconds.HOUR) }),
+                        colors: [Z, S],
                         channelId: e
                     });
             },
-            [I, t, M, n, Z, b, A, T]
+            [p, n, A, t, Z, O, S, f]
         );
-    if (null == T || null == M || null == b || !(0, h.qy)(b)) return null;
-    let j = null != n.extra.platform ? d.v[n.extra.platform] : null;
-    return (0, i.jsxs)(p.yR, {
+    if (null == f || null == A || null == O || !(0, m.qy)(O)) return null;
+    let R = null != t.extra.platform ? d.v[t.extra.platform] : null;
+    return (0, a.jsxs)(E.yR, {
         children: [
-            (0, i.jsx)(p.wG, {
-                thumbnailSrc: null != S ? S : I,
-                thumbnailTitle: x,
-                channel: t,
+            (0, a.jsx)(E.wG, {
+                thumbnailSrc: null != P ? P : p,
+                thumbnailTitle: g,
+                channel: n,
                 headerIcons:
-                    null == j
+                    null == R
                         ? null
-                        : (0, i.jsx)(_.Z, {
-                              Icon: j,
-                              'aria-label': E.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
+                        : (0, a.jsx)(T.Z, {
+                              Icon: R,
+                              'aria-label': x.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                           }),
-                entry: n,
-                userDescription: E.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-                title: v,
-                subtitle: N,
-                badges: (0, i.jsx)(m.Gk, {
-                    location: m.Gt.POPOUT,
-                    children: h.Hs.map((e, t) => (0, i.jsx)(e, { entry: n }, t))
-                })
+                entry: t,
+                userDescription: x.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+                title: M,
+                subtitle: v,
+                badges: (0, a.jsx)(_.Gk, {
+                    location: _.Gt.POPOUT,
+                    children: m.Hs.map((e, n) => (0, a.jsx)(e, { entry: t }, n))
+                }),
+                disableGameProfileLinks: i
             }),
-            (0, i.jsx)(p.St, {
-                children: (0, i.jsx)(p.WT, {
-                    closePopout: r,
-                    user: T,
-                    channel: t,
-                    generateReactionImage: R,
-                    reactionImageAltText: g(n, T),
-                    entry: n,
-                    requestId: s
+            (0, a.jsx)(E.St, {
+                children: (0, a.jsx)(E.WT, {
+                    onReaction: s,
+                    onVoiceChannelPreview: C,
+                    user: f,
+                    channel: n,
+                    generateReactionImage: j,
+                    reactionImageAltText: I(t, f),
+                    entry: t
                 })
             })
         ]

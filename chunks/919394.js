@@ -1,242 +1,202 @@
-n.d(e, {
-    QC: function () {
-        return R;
-    },
+t.d(n, {
     SO: function () {
-        return C;
+        return N;
     }
 }),
-    n(653041);
-var a = n(512722),
-    r = n.n(a),
-    l = n(913527),
-    u = n.n(l),
-    i = n(705512),
-    o = n(812206),
-    c = n(55000),
-    s = n(220082),
-    E = n(693824),
-    _ = n(690725),
-    f = n(706454),
-    d = n(594174),
-    M = n(70956),
-    h = n(709054),
-    g = n(561308),
-    Z = n(206295),
-    T = n(737583),
-    N = n(438226),
-    m = n(169040),
-    I = n(689938);
-let A = (t, e) => ({
-        AvatarImage1: t[0],
-        ...(null != t[1] && { AvatarImage2: t[1] }),
-        ...(null != t[2] && { AvatarImage3: t[2] }),
-        ...(null != e && { ApplicationImage: e })
+    t(653041),
+    t(512722);
+var a = t(913527),
+    l = t.n(a),
+    i = t(705512);
+t(812206);
+var r = t(55000);
+t(220082);
+var s = t(693824),
+    o = t(690725);
+t(706454), t(594174);
+var c = t(70956),
+    u = t(709054),
+    d = t(561308);
+t(206295);
+var m = t(737583);
+t(438226);
+var _ = t(169040),
+    E = t(689938);
+let T = (e, n) => ({
+        AvatarImage1: e[0],
+        ...(null != e[1] && { AvatarImage2: e[1] }),
+        ...(null != e[2] && { AvatarImage3: e[2] }),
+        ...(null != n && { ApplicationImage: n })
     }),
-    p = (t, e) => {
-        let n = [
+    h = (e, n) => {
+        let t = [
                 {
-                    iconPath: m.NM,
-                    text: e
+                    iconPath: _.NM,
+                    text: n
                 }
             ],
-            a = h.default.extractTimestamp(t.extra.application_id);
+            a = u.default.extractTimestamp(e.extra.application_id);
         if (
-            (7 >= u()().diff(u()(a), 'days') &&
-                n.push({
-                    iconPath: m.As,
-                    text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
+            (7 >= l()().diff(l()(a), 'days') &&
+                t.push({
+                    iconPath: _.As,
+                    text: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
                 }),
-            (0, g.Ol)(t) &&
-                n.push({
-                    iconPath: m.fO,
-                    text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
+            (0, d.Ol)(e) &&
+                t.push({
+                    iconPath: _.fO,
+                    text: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
                 }),
-            (0, g.q_)(t))
+            (0, d.q_)(e))
         ) {
-            let e = (0, g.vU)(t);
-            n.push({
-                iconPath: m.t1,
-                text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({ days: e })
+            let n = (0, d.vU)(e);
+            t.push({
+                iconPath: _.t1,
+                text: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({ days: n })
             });
         }
-        (0, g.ig)(t) === i.o.GLOBAL &&
-            n.push({
-                iconPath: m.Op,
-                text: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+        (0, d.ig)(e) === i.o.GLOBAL &&
+            t.push({
+                iconPath: _.Op,
+                text: E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
             });
-        let r = (0, g.dw)(t);
+        let r = (0, d.dw)(e);
         if (
             (null != r &&
-                n.push({
-                    iconPath: m.Z,
-                    text: (0, g.GE)(r)
+                t.push({
+                    iconPath: _.Z,
+                    text: (0, d.GE)(r)
                 }),
-            (0, g.V5)(t))
+            (0, d.V5)(e))
         ) {
-            let { text: e } = (0, g.zo)(t);
-            null != e &&
-                n.push({
-                    iconPath: m.Md,
-                    text: e
+            let { text: n } = (0, d.zo)(e);
+            null != n &&
+                t.push({
+                    iconPath: _.Md,
+                    text: n
                 });
         }
-        if ((0, g.Jd)(t)) {
-            let e = (0, g.yA)(t);
-            if (null != e) {
-                let t = I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({ hours: Math.round(e / M.Z.Seconds.HOUR) });
+        if ((0, d.Jd)(e)) {
+            let n = (0, d.yA)(e);
+            if (null != n) {
+                let e = E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({ hours: Math.round(n / c.Z.Seconds.HOUR) });
                 return [
                     {
-                        iconPath: m.eF,
-                        text: ''.concat(I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, ' \u2014 ').concat(t)
+                        iconPath: _.eF,
+                        text: ''.concat(E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, ' \u2014 ').concat(e)
                     }
                 ];
             }
         }
-        return n;
+        return t;
     },
-    v = (t, e) => {
-        let { timestamp: n, colors: a, description: r, entry: l, numAvatars: u } = e,
-            i = a.map((t, e) => ({
-                color: t,
-                stop: e
+    x = (e, n) => {
+        let { timestamp: t, colors: a, description: l, entry: i, numAvatars: o } = n,
+            c = a.map((e, n) => ({
+                color: e,
+                stop: n
             }));
-        t.setSize(
+        e.setSize(
             {
-                w: m.nx,
-                h: m.bg
+                w: _.nx,
+                h: _.bg
             },
             4
         ),
-            t.drawRoundedGradientRect(
-                i,
+            e.drawRoundedGradientRect(
+                c,
                 {
                     x: 0,
-                    y: m.bg
+                    y: _.bg
                 },
                 {
-                    x: m.nx,
+                    x: _.nx,
                     y: 0
                 },
                 {
                     x: 0,
                     y: 0,
-                    h: m.bg,
-                    w: m.nx
+                    h: _.bg,
+                    w: _.nx
                 },
                 8
             ),
-            t.setColor('white'),
-            t.drawRoundedImage(
+            e.setColor('white'),
+            e.drawRoundedImage(
                 'ApplicationImage',
                 {
-                    x: m.sB,
-                    y: m.sB
+                    x: _.sB,
+                    y: _.sB
                 },
                 {
-                    w: m.Pu,
-                    h: m.Pu
+                    w: _.Pu,
+                    h: _.Pu
                 },
                 8
-            ) === E.vP.Failure &&
-                t.drawPath(
-                    c.Cv,
+            ) === s.vP.Failure &&
+                e.drawPath(
+                    r.Cv,
                     {
-                        x: m.sB,
-                        y: m.sB
+                        x: _.sB,
+                        y: _.sB
                     },
                     !0,
                     2 + 2 / 3
                 );
-        (0, T.l)({
-            canvas: t,
-            avatarSrcs: ['AvatarImage1', 'AvatarImage2', 'AvatarImage3'].slice(0, u),
+        (0, m.l)({
+            canvas: e,
+            avatarSrcs: ['AvatarImage1', 'AvatarImage2', 'AvatarImage3'].slice(0, o),
             position: {
-                x: m.Iq,
-                y: m.sB
+                x: _.Iq,
+                y: _.sB
             },
-            avatarImageSize: m.$S
+            avatarImageSize: _.$S
         }),
-            t.setColor('white'),
-            t.setFont({
+            e.setColor('white'),
+            e.setFont({
                 size: 16,
-                family: m.I8,
-                weight: m.Ue,
-                truncate: E.GX.Wrap
+                family: _.I8,
+                weight: _.Ue,
+                truncate: s.GX.Wrap
             }),
-            t.drawText(
-                r,
+            e.drawText(
+                l,
                 {
-                    x: m.Iq,
+                    x: _.Iq,
                     y: 64,
                     h: 32,
-                    w: m.kC
+                    w: _.kC
                 },
                 !0
             );
-        let o = p(l, n);
-        (0, T.J)({
-            canvas: t,
-            badges: o,
-            startPosition: m.Iq,
-            maxWidth: m.kC
+        let u = h(i, t);
+        (0, m.J)({
+            canvas: e,
+            badges: u,
+            startPosition: _.Iq,
+            maxWidth: _.kC
         });
     },
-    C = async (t) => {
-        let { applicationImageSrc: e, entry: n, avatarSrcs: a, description: r, timestamp: l, colors: u, channelId: i } = t,
-            o = n.extra.game_name,
-            c = A(a, e);
-        return await (0, _.f)({
-            assetsToLoad: c,
-            drawImage: (t) =>
-                v(t, {
-                    timestamp: l,
-                    colors: u,
-                    description: r,
-                    entry: n,
+    N = async (e) => {
+        let { applicationImageSrc: n, entry: t, avatarSrcs: a, description: l, timestamp: i, colors: r, channelId: c } = e,
+            u = t.extra.game_name,
+            d = T(a, n);
+        return await (0, o.f)({
+            assetsToLoad: d,
+            drawImage: (e) =>
+                x(e, {
+                    timestamp: i,
+                    colors: r,
+                    description: l,
+                    entry: t,
                     numAvatars: a.length
                 }),
             exportConfigs: {
-                format: E.kH.CloudUpload,
+                format: s.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(o, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(u, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: i
+                channelId: c
             }
         });
     };
-async function R(t, e, n) {
-    let a = t.extra.game_name,
-        l = o.Z.getApplication(t.extra.application_id),
-        u = null == l ? void 0 : l.getIconURL(128),
-        i = d.default.getUser(t.author_id);
-    r()(null != i, 'Author must not be null'), await (0, s.vM)(null != u ? u : '');
-    let c = [null == i ? void 0 : i.getAvatarURL(e.guild_id, 128)],
-        M = A(c, u),
-        h = f.default.locale,
-        T = (0, g.yh)(t, h),
-        { primaryColor: m, secondaryColor: I } = (0, Z.w)(null != u ? u : ''),
-        p = (0, N.HV)(t, e, i),
-        C = {
-            format: n,
-            quality: 1,
-            fileName: 'user-reacting-to-'.concat(a, '.png').toLowerCase(),
-            fileType: 'png'
-        };
-    if (n === E.kH.CloudUpload) {
-        var R;
-        C.channelId = null !== (R = e.id) && void 0 !== R ? R : '';
-    }
-    return await (0, _.f)({
-        assetsToLoad: M,
-        drawImage: (e) =>
-            v(e, {
-                timestamp: T,
-                colors: [m, I],
-                description: p,
-                entry: t,
-                numAvatars: c.length
-            }),
-        exportConfigs: C
-    });
-}
