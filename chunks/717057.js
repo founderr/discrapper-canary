@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(532490),
     x = n(380365),
     T = n(979264),
-    v = n(620929),
-    N = n(284019),
+    N = n(620929),
+    v = n(284019),
     S = n(308083),
     Z = n(981631),
     A = n(689938),
@@ -77,7 +77,7 @@ function b(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(v.p, {
+                (0, i.jsx)(N.p, {
                     applicationIds: h,
                     playstyle: s.playstyle,
                     className: l()(M.charterBodyText, M.gameSection)
@@ -98,7 +98,7 @@ function R(e) {
         f = (0, h.Dt)(),
         I = (0, g.Cc)(n),
         T = (0, g.E8)(n),
-        [v, S] = a.useState(!0),
+        [N, S] = a.useState(!0),
         [R, L] = a.useState(!1),
         j = a.useCallback(() => {
             r(), s();
@@ -106,10 +106,10 @@ function R(e) {
     a.useEffect(() => {
         null == I && !T && j();
     }, [I, j, T]);
-    let O = a.useCallback(() => {
-            v && (0, E.nE)(n, v, Z.Sbl.CREATE_JOIN_GUILD_MODAL), j();
-        }, [n, j, v]),
-        P = (0, c.e7)([m.Z], () => m.Z.getGuild(n)),
+    let P = a.useCallback(() => {
+            N && (0, E.nE)(n, N, Z.Sbl.CREATE_JOIN_GUILD_MODAL), j();
+        }, [n, j, N]),
+        O = (0, c.e7)([m.Z], () => m.Z.getGuild(n)),
         y = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
         D = (0, c.e7)([p.ZP], () => (null != y ? p.ZP.getMember(n, y.id) : null)),
         k = (0, d.ZP)(),
@@ -119,7 +119,7 @@ function R(e) {
             saturation: 1
         }).hex(),
         B = (0, C.nj)(U, w, 'top center');
-    return null == P || null == y || null == D || null == I
+    return null == O || null == y || null == D || null == I
         ? null
         : (0, i.jsx)(u.ModalRoot, {
               ...o,
@@ -141,7 +141,7 @@ function R(e) {
                                           className: M.title,
                                           children: (0, i.jsx)(u.Heading, {
                                               variant: 'heading-xxl/medium',
-                                              children: A.Z.Messages.CLAN_JOIN_SUCCESS_TITLE.format({ name: P.name })
+                                              children: A.Z.Messages.CLAN_JOIN_SUCCESS_TITLE.format({ name: O.name })
                                           })
                                       }),
                                       (0, i.jsx)(u.Text, {
@@ -153,7 +153,7 @@ function R(e) {
                               }),
                               (0, i.jsx)(x.Z, {
                                   guildId: n,
-                                  isTagAdopted: v,
+                                  isTagAdopted: N,
                                   onChangeUseTag: S
                               })
                           ]
@@ -167,8 +167,8 @@ function R(e) {
                               onSignCharter: L
                           })
                       }),
-                      (0, i.jsx)(N.Z, {
-                          onClick: O,
+                      (0, i.jsx)(v.Z, {
+                          onClick: P,
                           color: u.Button.Colors.BRAND,
                           themeColor: U,
                           fullWidth: !1,

@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(173507),
     x = n(523746),
     T = n(819640),
-    v = n(131951),
-    N = n(699516),
+    N = n(131951),
+    v = n(699516),
     S = n(594174),
     Z = n(979651),
     A = n(585483),
@@ -35,8 +35,8 @@ var i = n(735250),
     R = n(981631),
     L = n(921944),
     j = n(65154),
-    O = n(689938),
-    P = n(517759);
+    P = n(689938),
+    O = n(517759);
 function y(e, t, n) {
     return (
         t in e
@@ -65,7 +65,7 @@ class D extends a.PureComponent {
             d = null,
             h = !1;
         return (
-            v.Z.supports(j.AN.VIDEO) ? (l ? ((d = O.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (h = !0)) : a && c === R.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (d = u ? O.Z.Messages.CONNECT : O.Z.Messages.JOIN_VIDEO_CALL)) : ((t = this.handleStartVideoCall), (d = u ? O.Z.Messages.CONNECT : O.Z.Messages.START_VIDEO_CALL))) : ((h = !0), (t = this.handleBrowserNotSupported), (d = O.Z.Messages.BROWSER_NOT_SUPPORTED)),
+            N.Z.supports(j.AN.VIDEO) ? (l ? ((d = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (h = !0)) : a && c === R.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (d = u ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VIDEO_CALL)) : ((t = this.handleStartVideoCall), (d = u ? P.Z.Messages.CONNECT : P.Z.Messages.START_VIDEO_CALL))) : ((h = !0), (t = this.handleBrowserNotSupported), (d = P.Z.Messages.BROWSER_NOT_SUPPORTED)),
             (0, i.jsx)(b.ZP.Icon, {
                 icon: r.VideoIcon,
                 onClick: t,
@@ -82,7 +82,7 @@ class D extends a.PureComponent {
         let p = c.isManaged(),
             _ = '',
             E = !1;
-        s ? ((_ = p ? O.Z.Messages.VOICE_UNAVAILABLE : O.Z.Messages.CALL_UNAVAILABLE), (e = r.Tooltip.Colors.RED), (E = !0)) : o ? ((_ = O.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (E = !0)) : (_ = a ? (p ? O.Z.Messages.CONNECT : O.Z.Messages.JOIN_VOICE_CALL) : p ? O.Z.Messages.CONNECT : O.Z.Messages.START_VOICE_CALL);
+        s ? ((_ = p ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE), (e = r.Tooltip.Colors.RED), (E = !0)) : o ? ((_ = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (E = !0)) : (_ = a ? (p ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL) : p ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL);
         let C = (0, i.jsx)(b.ZP.Icon, {
             icon: r.PhoneCallIcon,
             onClick: this.handleVoiceClick,
@@ -106,7 +106,7 @@ class D extends a.PureComponent {
                                 header: (0, i.jsxs)('div', {
                                     children: [
                                         (0, i.jsx)(m.Z, {
-                                            className: P.tooltipImage,
+                                            className: O.tooltipImage,
                                             autoPlay: !h,
                                             src: 'https://cdn.discordapp.com/attachments/860252504826445825/1078051428028924006/mobile_coachmark.mp4',
                                             width: 248,
@@ -117,7 +117,7 @@ class D extends a.PureComponent {
                                         (0, i.jsx)(r.Heading, {
                                             variant: 'heading-md/bold',
                                             color: 'always-white',
-                                            children: O.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_HEADER
+                                            children: P.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_HEADER
                                         })
                                     ]
                                 }),
@@ -126,19 +126,19 @@ class D extends a.PureComponent {
                                         (0, i.jsx)(r.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'always-white',
-                                            children: O.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
+                                            children: P.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
                                         }),
                                         (0, i.jsx)(r.Anchor, {
                                             href: M.Z.getArticleURL(R.BhN.ACTIVITIES),
-                                            children: O.Z.Messages.LEARN_MORE
+                                            children: P.Z.Messages.LEARN_MORE
                                         })
                                     ]
                                 }),
-                                buttonCTA: O.Z.Messages.GOT_IT,
+                                buttonCTA: P.Z.Messages.GOT_IT,
                                 onClick: () => {
                                     t(), s(L.L.UNKNOWN);
                                 },
-                                className: P.tooltip
+                                className: O.tooltip
                             });
                         },
                         children: () => C
@@ -192,12 +192,12 @@ function k(e) {
             callUnavailable: x.Z.isCallUnavailable(t.id)
         })),
         f = t.getRecipientId(),
-        { notFriend: g, isBlocked: C } = (0, s.cj)([N.Z], () => ({
-            notFriend: t.type === R.d4z.DM && null != f && !N.Z.isFriend(f),
-            isBlocked: t.type === R.d4z.DM && null != f && N.Z.isBlocked(f)
+        { notFriend: g, isBlocked: C } = (0, s.cj)([v.Z], () => ({
+            notFriend: t.type === R.d4z.DM && null != f && !v.Z.isFriend(f),
+            isBlocked: t.type === R.d4z.DM && null != f && v.Z.isBlocked(f)
         })),
         I = (0, s.e7)([S.default], () => S.default.getUser(f)),
-        v = (0, u.bp)(),
+        N = (0, u.bp)(),
         A = [],
         M = (0, h.Z)(t.id),
         b = (0, s.e7)([T.Z], () => T.Z.hasLayers());
@@ -219,7 +219,7 @@ function k(e) {
               callUnavailable: _,
               notFriend: g,
               isBlocked: C,
-              appContext: v,
+              appContext: N,
               canShowTooltip: L,
               canShowActivityGdmTooltip: M,
               dismissibleContentTypes: A,

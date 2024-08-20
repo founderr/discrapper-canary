@@ -38,7 +38,7 @@ function T() {
     let a = i !== C;
     return (C = i), a;
 }
-function v(e) {
+function N(e) {
     let { userId: t } = e;
     if (d.default.getId() === t) return !1;
     let n = (function (e) {
@@ -63,7 +63,7 @@ function v(e) {
         a = T();
     return n || i || a;
 }
-function N() {
+function v() {
     E.clear(), g.clear(), (C = !1);
 }
 class S extends (i = r.ZP.Store) {
@@ -90,11 +90,11 @@ class S extends (i = r.ZP.Store) {
           })
         : (a[s] = l),
     (t.Z = new S(c.Z, {
-        CONNECTION_OPEN: N,
+        CONNECTION_OPEN: v,
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
             if (t === I) return !1;
-            (I = t), N();
+            (I = t), v();
         },
         RTC_CONNECTION_STATE: function (e) {
             let { streamKey: t, state: n, context: i } = e;
@@ -104,20 +104,20 @@ class S extends (i = r.ZP.Store) {
                     if (null == t) return !1;
                     return g.delete(t), T();
                 case o.Yn.DEFAULT:
-                    N();
+                    v();
             }
         },
         RTC_CONNECTION_ROSTER_MAP_UPDATE: function (e) {
             let { userIds: t } = e,
                 n = d.default.getId(),
-                i = t.reduce((e, t) => (n === t ? e : !!v({ userId: t }) || e), !1),
+                i = t.reduce((e, t) => (n === t ? e : !!N({ userId: t }) || e), !1),
                 a = x(),
                 s = T();
             return i || a || s;
         },
-        SECURE_FRAMES_TRANSIENT_KEY_CREATE: v,
-        SECURE_FRAMES_TRANSIENT_KEY_DELETE: v,
-        SECURE_FRAMES_VERIFIED_KEY_CREATE: v,
-        SECURE_FRAMES_VERIFIED_KEY_DELETE: v,
-        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: v
+        SECURE_FRAMES_TRANSIENT_KEY_CREATE: N,
+        SECURE_FRAMES_TRANSIENT_KEY_DELETE: N,
+        SECURE_FRAMES_VERIFIED_KEY_CREATE: N,
+        SECURE_FRAMES_VERIFIED_KEY_DELETE: N,
+        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: N
     }));

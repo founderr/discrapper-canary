@@ -29,7 +29,7 @@ function E(e) {
         I = (0, s.e7)([o.Z], () => o.Z.getGuild(t), [t]),
         x = null == I ? void 0 : I.name,
         T = (0, s.e7)([r.Z], () => r.Z.getChannel(n)),
-        v = a.useMemo(() => {
+        N = a.useMemo(() => {
             let e = {};
             for (let t of g) for (let n of t.subscription_listings_ids) e[n] = t.id;
             return e;
@@ -63,13 +63,13 @@ function E(e) {
                   }),
                   (0, i.jsx)(h.Z, {
                       guildId: t,
-                      children: E.filter((e) => null != v[e.id]).map((e) =>
+                      children: E.filter((e) => null != N[e.id]).map((e) =>
                           (0, i.jsx)(
                               p.Z,
                               {
                                   guildId: t,
                                   listingId: e.id,
-                                  groupListingId: v[e.id],
+                                  groupListingId: N[e.id],
                                   analyticsLocation: m.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
                               },
                               e.id

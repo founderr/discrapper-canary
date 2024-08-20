@@ -33,7 +33,7 @@ function E(e) {
             }
             n();
         },
-        v = () => {
+        N = () => {
             h.Z.endEvent(g.id, g.guild_id);
         };
     return x
@@ -49,7 +49,7 @@ function E(e) {
                           children: (0, i.jsx)(s.MenuItem, {
                               id: 'end-voice-event',
                               color: 'danger',
-                              action: v,
+                              action: N,
                               label: _.Z.Messages.END_EVENT,
                               icon: s.CircleXIcon
                           })

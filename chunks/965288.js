@@ -1,6 +1,6 @@
 n.d(t, {
     y: function () {
-        return v;
+        return N;
     }
 });
 var i = n(735250),
@@ -83,7 +83,7 @@ let x = a.memo(function (e) {
             ]
         });
     }),
-    v = () => (0, i.jsx)('div', { className: I.tileBaseContainer });
+    N = () => (0, i.jsx)('div', { className: I.tileBaseContainer });
 t.Z = a.memo(function (e) {
     let { participant: t, channel: s } = e,
         { user: r, blocked: u } = t,
@@ -120,7 +120,7 @@ t.Z = a.memo(function (e) {
             },
             [r, E, s, g]
         ),
-        v = a.useCallback(
+        N = a.useCallback(
             (e) =>
                 (0, i.jsx)(_.Z, {
                     ...e,
@@ -137,7 +137,7 @@ t.Z = a.memo(function (e) {
                 guildId: s.guild_id,
                 channelId: s.id
             }),
-        renderPopout: v,
+        renderPopout: N,
         position: 'right',
         spacing: 8,
         children: (e) =>

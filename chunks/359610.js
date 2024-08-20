@@ -1,18 +1,18 @@
-i.d(n, {
+t.d(n, {
     Z: function () {
         return r;
     }
 });
-var t = i(735250);
-i(470079);
-var a = i(481060);
+var i = t(735250);
+t(470079);
+var a = t(481060);
 function r(e) {
-    let { children: n, className: i, size: r = a.Button.Sizes.SMALL, ...o } = e;
-    return (0, t.jsx)(a.Button, {
+    let { children: n, className: t, size: r = a.Button.Sizes.SMALL, ...o } = e;
+    return (0, i.jsx)(a.Button, {
         ...o,
         color: a.Button.Colors.BRAND,
         size: r,
-        className: i,
+        className: t,
         children: n
     });
 }

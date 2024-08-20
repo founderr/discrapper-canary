@@ -26,8 +26,8 @@ var i,
     I = n(708690),
     x = n(194359),
     T = n(425493),
-    v = n(461745),
-    N = n(40851),
+    N = n(461745),
+    v = n(40851),
     S = n(367907),
     Z = n(762914),
     A = n(43267),
@@ -36,8 +36,8 @@ var i,
     R = n(313201),
     L = n(366980),
     j = n(703656),
-    O = n(93127),
-    P = n(60349),
+    P = n(93127),
+    O = n(60349),
     y = n(814443),
     D = n(428598),
     k = n(131704),
@@ -269,13 +269,13 @@ class eh extends (i = s.PureComponent) {
             (0, a.jsxs)(b.Z, {
                 className: r()(ei.searchBar, es.marginTop20),
                 children: [
-                    (0, a.jsx)(v.ZP, {
+                    (0, a.jsx)(N.ZP, {
                         ref: this.searchBarRef,
                         className: ei.searchBarComponent,
                         autoFocus: !0,
                         placeholder: 0 === l.size ? en.Z.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
                         disabled: this.isPartyFull(),
-                        size: v.ZP.Sizes.MEDIUM,
+                        size: N.ZP.Sizes.MEDIUM,
                         query: t,
                         selectedRow: s,
                         sections: [null !== (e = null == i ? void 0 : i.length) && void 0 !== e ? e : 0],
@@ -488,7 +488,7 @@ class eh extends (i = s.PureComponent) {
         return {
             affinities: e.map((e) => {
                 var t, n, i;
-                let a = P.Z.getCurrentConfig({ location: 'desktop_dm_list' }, { autoTrackExposure: !1 });
+                let a = O.Z.getCurrentConfig({ location: 'desktop_dm_list' }, { autoTrackExposure: !1 });
                 if (a.useV1) {
                     let n = y.Z.getUserAffinity(e);
                     return null !== (t = null == n ? void 0 : n.affinity) && void 0 !== t ? t : -1;
@@ -716,7 +716,7 @@ class eh extends (i = s.PureComponent) {
 }
 function ep(e) {
     let { channel: t, ...n } = e;
-    P.Z.useExperiment({ location: 'desktop_dm_list' });
+    O.Z.useExperiment({ location: 'desktop_dm_list' });
     let i = (0, p.cj)([B.Z, w.Z, F.Z], () => {
         let e;
         return (
@@ -749,9 +749,9 @@ function em(e) {
         ),
         [u, _]
     );
-    let { useV1: f, useV2Dm: E, useV2Communication: g } = P.Z.useExperiment({ location: 'desktop_dm_list' }, { autoTrackExposure: !1 });
+    let { useV1: f, useV2Dm: E, useV2Communication: g } = O.Z.useExperiment({ location: 'desktop_dm_list' }, { autoTrackExposure: !1 });
     return (s.useEffect(() => {
-        f && (0, O.W)(), E && (0, O._)(), g && (0, O._)();
+        f && (0, P.W)(), E && (0, P._)(), g && (0, P._)();
     }, [f, E, g]),
     p)
         ? null
@@ -793,4 +793,4 @@ function e_(e) {
 function ef(e) {
     return JSON.stringify(e.sort());
 }
-el(eh, 'contextType', N.ZP);
+el(eh, 'contextType', v.ZP);

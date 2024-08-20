@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(313201),
     x = n(967128),
     T = n(665149),
-    v = n(294218),
-    N = n(913663),
+    N = n(294218),
+    v = n(913663),
     S = n(268350),
     Z = n(695346),
     A = n(592125),
@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(496675),
     L = n(117530),
     j = n(459273),
-    O = n(838440),
-    P = n(127654),
+    P = n(838440),
+    O = n(127654),
     y = n(241309),
     D = n(928477),
     k = n(456077),
@@ -148,7 +148,7 @@ function z(e) {
         I = (0, D.vH)(t),
         {
             nameError: T,
-            messageError: v,
+            messageError: N,
             submit: Z
         } = (function (e) {
             let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: s, textAreaState: l, location: r } = e,
@@ -169,7 +169,7 @@ function z(e) {
                 submit: a.useCallback(
                     async (e, a, s) => {
                         var r, o, u;
-                        null == e && (e = l.textValue), (e = e.trim()), (null == a || 0 === a.length) && (a = null === (r = N.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == s || 0 === s.length) && (s = L.Z.getUploads(t.id, M.d.FirstThreadMessage));
+                        null == e && (e = l.textValue), (e = e.trim()), (null == a || 0 === a.length) && (a = null === (r = v.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == s || 0 === s.length) && (s = L.Z.getUploads(t.id, M.d.FirstThreadMessage));
                         let p = null !== (o = i.name) && void 0 !== o ? o : '',
                             m = null == n && 0 === p.length,
                             _ = '' === e && (null == a || 0 === a.length) && 0 === s.length;
@@ -179,7 +179,7 @@ function z(e) {
                                 shouldRefocus: !0
                             };
                         if (null == n) {
-                            let { valid: n } = await (0, O.v)({
+                            let { valid: n } = await (0, P.v)({
                                 content: e,
                                 stickers: a,
                                 uploads: s,
@@ -280,7 +280,7 @@ function z(e) {
                                 textAreaState: g,
                                 setTextAreaState: C,
                                 submit: Z,
-                                error: v
+                                error: N
                             }),
                             (0, i.jsx)(d.Z, {
                                 channel: t,
@@ -423,7 +423,7 @@ function q(e) {
                 onBlur: f,
                 onChange: E,
                 onSubmit: I,
-                promptToUpload: P.d
+                promptToUpload: O.d
             })
         ]
     });
@@ -433,7 +433,7 @@ function X(e) {
         a = (0, r.e7)([b.Z], () => (null == n ? null : b.Z.getMessage(t.id, n))),
         s = Z.jU.useSetting();
     return null != a
-        ? (0, i.jsx)(v.Z, {
+        ? (0, i.jsx)(N.Z, {
               className: G.messagePreview,
               message: a,
               channel: t,

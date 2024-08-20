@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return N;
+        return v;
     }
 }),
     n(47120),
@@ -60,7 +60,7 @@ let T = {
     scrollHeight: 0,
     offsetHeight: 0
 };
-class v {
+class N {
     isReady() {
         return this.props.messages.ready;
     }
@@ -574,12 +574,12 @@ class v {
         }
     }
 }
-function N(e) {
+function v(e) {
     let { messages: t, channel: n, compact: a, hasUnreads: s, focusId: l, placeholderHeight: r, canLoadMore: o = !0, handleScrollToBottom: c, handleScrollFromBottom: d } = e,
         { windowId: h } = i.useContext(u.ZP),
         [p] = i.useState(
             () =>
-                new v({
+                new N({
                     messages: t,
                     channel: n,
                     compact: a,

@@ -27,14 +27,14 @@ var i = n(735250),
     I = n(419922),
     x = n(375954),
     T = n(699516),
-    v = n(768581),
-    N = n(70956),
+    N = n(768581),
+    v = n(70956),
     S = n(823379),
     Z = n(792125),
     A = n(981631),
     M = n(217702),
     b = n(118465);
-let R = 10 * N.Z.Millis.SECOND;
+let R = 10 * v.Z.Millis.SECOND;
 function L(e) {
     var t;
     let { message: n } = e,
@@ -42,7 +42,7 @@ function L(e) {
         r = (0, E.Uj)(n),
         o = a.useContext(m.Z),
         [d, x] = a.useState(!1),
-        N = (0, _.p)(),
+        v = (0, _.p)(),
         S = a.useCallback(
             (e) => {
                 if ('A' !== e.target.nodeName)
@@ -59,7 +59,7 @@ function L(e) {
             null != n.content && '' !== n.content
                 ? (0, f.ZP)(n, {
                       isInteracting: d,
-                      shouldFilterKeywords: N
+                      shouldFilterKeywords: v
                   }).content
                 : null,
         {
@@ -72,10 +72,10 @@ function L(e) {
             leadingIconClass: b.messageContentLeadingIcon,
             iconSize: M.WW
         }),
-        O = (0, C.cv)(n),
-        P =
-            O.length > 0
-                ? O.map((e) =>
+        P = (0, C.cv)(n),
+        O =
+            P.length > 0
+                ? P.map((e) =>
                       (0, i.jsx)(
                           I.ZP,
                           {
@@ -100,13 +100,13 @@ function L(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: l()(b.messageContentWrapper, { [b.mentioned]: n.mentioned }),
-                children: [null != P ? null : j, null !== (t = null != R ? R : P) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != P ? null : L]
+                children: [null != O ? null : j, null !== (t = null != R ? R : O) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != O ? null : L]
             }),
             (0, i.jsx)('img', {
                 alt: '',
                 src:
                     (null == r ? void 0 : r.guildMemberAvatar) != null && null != o
-                        ? (0, v.JM)({
+                        ? (0, N.JM)({
                               guildId: o,
                               userId: n.author.id,
                               avatar: r.guildMemberAvatar

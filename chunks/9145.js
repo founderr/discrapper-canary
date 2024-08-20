@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(594174),
     x = n(585483),
     T = n(792125),
-    v = n(51144),
-    N = n(566620),
+    N = n(51144),
+    v = n(566620),
     S = n(317381),
     Z = n(619915),
     A = n(988980),
@@ -34,14 +34,14 @@ var i = n(735250),
     R = n(884338),
     L = n(719296),
     j = n(651612),
-    O = n(918559),
-    P = n(981631),
+    P = n(918559),
+    O = n(981631),
     y = n(689938),
     D = n(402137);
 let k = R.u.SIZE_32,
     U = {
-        [O.MI.NO_CHAT]: D.noChat,
-        [O.MI.RESIZABLE]: D.resizable
+        [P.MI.NO_CHAT]: D.noChat,
+        [P.MI.RESIZABLE]: D.resizable
     };
 function w(e) {
     var t, n;
@@ -52,11 +52,11 @@ function w(e) {
         F = (0, Z.gb)(G),
         W = (0, Z.uF)(F),
         z = a.useCallback(() => {
-            (0, N.tg)(O.Ez.PIP);
+            (0, v.tg)(P.Ez.PIP);
         }, []),
         Y = a.useRef(null),
         K = (0, r.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
-        q = K !== O.MI.NO_CHAT,
+        q = K !== P.MI.NO_CHAT,
         [X, Q] = a.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : s),
         J = a.useCallback((e) => {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
@@ -77,14 +77,14 @@ function w(e) {
         });
         return e.observe($.current), () => e.disconnect();
     }, []);
-    let en = ee.width / Math.max(ee.height, 1) < O.I0,
+    let en = ee.width / Math.max(ee.height, 1) < P.I0,
         ei = 0,
         ea = 0,
         es = (0, A.Z)(null == H ? void 0 : H.id);
     if (!es) {
         let e = ee.width,
             t = ee.height;
-        en ? ((t = ee.width / O.I0) > ee.height && (e = (t = ee.height) * O.I0), (ea = (ee.height - t) / 2)) : ((e = Math.min(ee.height * O.I0)) > ee.width && (t = (e = ee.width) / O.I0), (ei = (ee.width - e) / 2));
+        en ? ((t = ee.width / P.I0) > ee.height && (e = (t = ee.height) * P.I0), (ea = (ee.height - t) / 2)) : ((e = Math.min(ee.height * P.I0)) > ee.width && (t = (e = ee.width) / P.I0), (ei = (ee.width - e) / 2));
     }
     let el = W.get(null !== (n = null == H ? void 0 : H.id) && void 0 !== n ? n : ''),
         er = (0, r.e7)([C.Z], () => C.Z.getChannelId()),
@@ -143,7 +143,7 @@ function w(e) {
         var n;
         if (null == e || void 0 === e || void 0 === t) return null;
         let a = ec.get(e.id),
-            s = null !== (n = null == a ? void 0 : a.nick) && void 0 !== n ? n : v.ZP.getName(e);
+            s = null !== (n = null == a ? void 0 : a.nick) && void 0 !== n ? n : N.ZP.getName(e);
         return (0, i.jsx)(
             c.TooltipContainer,
             {
@@ -163,7 +163,7 @@ function w(e) {
         );
     };
     return (0, i.jsxs)('div', {
-        className: l()(D.wrapper, U[K], (0, T.Q)(P.BRd.DARK)),
+        className: l()(D.wrapper, U[K], (0, T.Q)(O.BRd.DARK)),
         ref: Y,
         style: eu,
         children: [
@@ -246,10 +246,10 @@ function w(e) {
                       maxHeight: s,
                       resizableNode: Y,
                       onResize: (e) => {
-                          x.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), Q(e);
+                          x.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), Q(e);
                       },
                       onResizeEnd: (e) => {
-                          x.S.dispatch(P.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
+                          x.S.dispatch(O.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
                       }
                   })
                 : null

@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(246364),
     x = n(937111),
     T = n(270801),
-    v = n(652730),
-    N = n(41776),
+    N = n(652730),
+    v = n(41776),
     S = n(657352),
     Z = n(33154),
     A = n(144114),
@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(237904),
     L = n(271383),
     j = n(430824),
-    O = n(607744),
-    P = n(496675),
+    P = n(607744),
+    O = n(496675),
     y = n(594174),
     D = n(700785),
     k = n(862679),
@@ -70,7 +70,7 @@ class V extends a.PureComponent {
     }
     render() {
         let { isFollowable: e, isLurking: t, notClaimed: s, notPhoneVerified: l, notEmailVerified: r, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: h, theme: p, children: m, canSendMessages: _, channelFollowingUsersSeen: f, showLurkerModeUpsellPopout: E, showMemberVerificationModal: g, useReducedMotion: C, isStaff: x, guildJoinRequest: T } = this.props,
-            { shouldShowLurkerModeUpsellPopout: v, shouldShowLurkerModeSuccessPopout: N } = this.state,
+            { shouldShowLurkerModeUpsellPopout: N, shouldShowLurkerModeSuccessPopout: v } = this.state,
             S = {
                 theme: p,
                 useReducedMotion: C
@@ -105,7 +105,7 @@ class V extends a.PureComponent {
         return (0, i.jsx)(o.Popout, {
             position: 'top',
             align: 'left',
-            shouldShow: N,
+            shouldShow: v,
             onRequestClose: () => this.setState({ shouldShowLurkerModeSuccessPopout: !1 }),
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
@@ -117,7 +117,7 @@ class V extends a.PureComponent {
                             E
                                 ? (0, i.jsx)(o.Popout, {
                                       renderPopout: this.renderLurkerModeUpsellPopout,
-                                      shouldShow: v,
+                                      shouldShow: N,
                                       position: 'top',
                                       children: (e) =>
                                           (0, i.jsx)(o.Clickable, {
@@ -294,10 +294,10 @@ function F(e) {
     let { channel: s, children: l } = e,
         o = s.getGuildId(),
         c = (0, r.e7)([j.Z], () => j.Z.getGuild(o)),
-        u = (0, r.e7)([O.Z], () => O.Z.getCheck(o)),
+        u = (0, r.e7)([P.Z], () => P.Z.getCheck(o)),
         d = s.type === U.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(U.oNc.NEWS),
         p = (0, r.e7)([R.Z], () => (d ? R.Z.getFollowerStatsForChannel(s.id) : null)),
-        f = (0, r.e7)([N.Z], () => N.Z.isLurking(o)),
+        f = (0, r.e7)([v.Z], () => v.Z.isLurking(o)),
         E = (0, r.e7)([y.default], () => y.default.getCurrentUser()),
         C = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t,
         T = (0, r.e7)([L.ZP], () => {
@@ -306,8 +306,8 @@ function F(e) {
         }),
         S = !!(null == c ? void 0 : c.hasVerificationGate()),
         Z = (T || u.notClaimed) && S,
-        A = (0, r.e7)([v.Z], () => v.Z.shouldShowPopout(o)),
-        M = (0, r.e7)([P.Z], () => P.Z.can(U.Plq.SEND_MESSAGES, s)),
+        A = (0, r.e7)([N.Z], () => N.Z.shouldShowPopout(o)),
+        M = (0, r.e7)([O.Z], () => O.Z.can(U.Plq.SEND_MESSAGES, s)),
         k = (0, r.e7)([x.Z], () => x.Z.getRequest(o)),
         [w, B] = (0, m.L_)(o),
         H = (0, m.Cc)(o),

@@ -1,18 +1,18 @@
-i.d(n, {
+t.d(n, {
     n: function () {
         return a;
     }
 });
-var t,
+var i,
     a,
-    r = i(735250),
-    o = i(470079),
-    l = i(120356),
-    s = i.n(l),
-    c = i(748780),
-    d = i(215569),
-    u = i(607131);
-((t = a || (a = {}))[(t.RIGHT = -1)] = 'RIGHT'), (t[(t.LEFT = 1)] = 'LEFT');
+    r = t(735250),
+    o = t(470079),
+    l = t(120356),
+    s = t.n(l),
+    c = t(748780),
+    d = t(215569),
+    u = t(607131);
+((i = a || (a = {}))[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT');
 let _ = {
     friction: 7,
     tension: 40,
@@ -63,35 +63,35 @@ class p extends o.PureComponent {
         });
     }
     constructor(e) {
-        var n, i, t;
+        var n, t, i;
         super(e),
             (n = this),
-            (t = void 0),
-            (i = '_animated') in n
-                ? Object.defineProperty(n, i, {
-                      value: t,
+            (i = void 0),
+            (t = '_animated') in n
+                ? Object.defineProperty(n, t, {
+                      value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (n[i] = t),
+                : (n[t] = i),
             (this._animated = new c.Z.Value(-1 * e.direction));
     }
 }
 n.Z = (e) => {
-    let { children: n, step: i, direction: t, className: a, springSettings: o = _, fadeInOut: l = !1 } = e;
+    let { children: n, step: t, direction: i, className: a, springSettings: o = _, fadeInOut: l = !1 } = e;
     return (0, r.jsx)(d.W, {
         component: 'div',
         className: s()(u.animator, a),
         children: (0, r.jsx)(
             p,
             {
-                direction: t,
+                direction: i,
                 springSettings: o,
                 fadeInOut: l,
                 children: n
             },
-            i
+            t
         )
     });
 };

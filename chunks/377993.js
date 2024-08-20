@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(111583),
     x = n(594174),
     T = n(626135),
-    v = n(768581),
-    N = n(585483),
+    N = n(768581),
+    v = n(585483),
     S = n(233870),
     Z = n(51144),
     A = n(998502),
@@ -35,8 +35,8 @@ var i = n(735250),
     R = n(689938),
     L = n(410740),
     j = n(460356);
-let O = [],
-    P = A.ZP.getEnableHardwareAcceleration();
+let P = [],
+    O = A.ZP.getEnableHardwareAcceleration();
 function y(e) {
     let { user: t, channel: a, status: u, activities: d } = e,
         h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(a.id)[t.id]),
@@ -68,7 +68,7 @@ function y(e) {
         onShiftClick: () => {
             let e = '@'.concat(Z.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            N.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+            v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }),
@@ -82,7 +82,7 @@ function y(e) {
                     currentUser: p,
                     isOwner: t.id === a.ownerId,
                     ownerTooltipText: R.Z.Messages.GROUP_OWNER,
-                    shouldAnimateStatus: P,
+                    shouldAnimateStatus: O,
                     isTyping: h,
                     status: u,
                     activities: d,
@@ -114,7 +114,7 @@ function D(e) {
             [l, c]
         ),
         d = l.application.bot,
-        p = v.ZP.getApplicationIconURL({
+        p = N.ZP.getApplicationIconURL({
             id: l.application.id,
             icon: l.application.icon,
             bot: null === (t = l.application) || void 0 === t ? void 0 : t.bot,
@@ -191,11 +191,11 @@ function U(e) {
                         C.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                             ? (n[t.id] = {
                                   status: null !== (a = g.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
-                                  activities: null !== (s = g.Z.getActivities(t.id)) && void 0 !== s ? s : O
+                                  activities: null !== (s = g.Z.getActivities(t.id)) && void 0 !== s ? s : P
                               })
                             : (n[t.id] = {
                                   status: b.Skl.OFFLINE,
-                                  activities: O
+                                  activities: P
                               });
                     }
                     let l = [];
@@ -212,7 +212,7 @@ function U(e) {
                 [t],
                 k
             )),
-        { installedIntegrations: v, applicationsShelf: N, fetched: Z, appsInGDMEnabled: A, availableApplications: M } = (0, _.j)({ channelId: s.id });
+        { installedIntegrations: N, applicationsShelf: v, fetched: Z, appsInGDMEnabled: A, availableApplications: M } = (0, _.j)({ channelId: s.id });
     a.useEffect(() => {
         if (c)
             for (let e of I)
@@ -228,7 +228,7 @@ function U(e) {
                 guild_id: s.guild_id
             });
         }, [s.guild_id, s.id, s.type]);
-    let P = c && I.every((e) => e.user.isStaff());
+    let O = c && I.every((e) => e.user.isStaff());
     return (0, i.jsx)(d.Gt, {
         value: E,
         children: (0, i.jsx)('div', {
@@ -241,7 +241,7 @@ function U(e) {
                         className: j.membersGroup,
                         children: [
                             ''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(I.length, ' '),
-                            P
+                            O
                                 ? (0, i.jsx)(h.Z, {
                                       className: j.__invalid_decorator,
                                       type: h.Z.Types.STAFF_ONLY_DM
@@ -262,14 +262,14 @@ function U(e) {
                         )
                     ),
                     A &&
-                        (v.length > 0 || (Z && N.length > 0)) &&
+                        (N.length > 0 || (Z && v.length > 0)) &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p.Z, {
                                     className: j.membersGroup,
-                                    children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(v.length)
+                                    children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(N.length)
                                 }),
-                                v.map((e) =>
+                                N.map((e) =>
                                     (0, i.jsx)(
                                         D,
                                         {

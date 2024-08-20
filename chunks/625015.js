@@ -25,7 +25,7 @@ function T() {
     }),
         (0, d.uL)(E.Z5c.APPLICATION_STORE);
 }
-function v(e) {
+function N(e) {
     let { avatarSrc: t, username: n } = e,
         [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
     return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL
@@ -80,7 +80,7 @@ function v(e) {
               ]
           });
 }
-function N(e) {
+function v(e) {
     let { avatarSrc: t, username: n } = e,
         [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
     return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL
@@ -146,12 +146,12 @@ function S(e) {
 function Z(e) {
     let { variant: t, avatarSrc: n, username: a } = e;
     if (1 === t)
-        return (0, i.jsx)(v, {
+        return (0, i.jsx)(N, {
             avatarSrc: n,
             username: a
         });
     if (2 === t)
-        return (0, i.jsx)(N, {
+        return (0, i.jsx)(v, {
             avatarSrc: n,
             username: a
         });

@@ -24,8 +24,8 @@ var a = n(120356),
     I = n(594174),
     x = n(572004),
     T = n(5192),
-    v = n(51144),
-    N = n(981631),
+    N = n(51144),
+    v = n(981631),
     S = n(689938),
     Z = n(181861);
 function A(e) {
@@ -60,7 +60,7 @@ function A(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-md/medium',
                         color: 'text-normal',
-                        children: v.ZP.getUserTag(t)
+                        children: N.ZP.getUserTag(t)
                     })
                 ]
             }),
@@ -102,13 +102,13 @@ function b(e) {
         } = (0, l.cj)(
             [E.Z, I.default, f.Z],
             () => ({
-                canKickUser: null != _ && E.Z.canManageUser(N.Plq.KICK_MEMBERS, t, _),
-                canBanUser: null != _ && E.Z.canManageUser(N.Plq.BAN_MEMBERS, t, _),
+                canKickUser: null != _ && E.Z.canManageUser(v.Plq.KICK_MEMBERS, t, _),
+                canBanUser: null != _ && E.Z.canManageUser(v.Plq.BAN_MEMBERS, t, _),
                 canModerateMembers: null != _ && (0, h.F)(_.id, t.id, [I.default, f.Z, E.Z])
             }),
             [t, _]
         ),
-        v = (0, u.b)(a),
+        N = (0, u.b)(a),
         { analyticsLocations: A, newestAnalyticsLocation: b } = (0, c.ZP)(),
         R = (0, p.sE)(s, {
             targetUserId: t.id,
@@ -201,7 +201,7 @@ function b(e) {
                 disabled: !T,
                 'aria-label': S.Z.Messages.TIMEOUT_USER,
                 onClick: () => {
-                    v ? (0, d.q)(a.guildId, a.userId, A) : (0, d.z)(a.guildId, a.userId, A);
+                    N ? (0, d.q)(a.guildId, a.userId, A) : (0, d.z)(a.guildId, a.userId, A);
                 },
                 children: [
                     (0, i.jsx)(r.ClockWarningIcon, {
@@ -213,7 +213,7 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: v ? S.Z.Messages.REMOVE : S.Z.Messages.TIMEOUT_USER
+                        children: N ? S.Z.Messages.REMOVE : S.Z.Messages.TIMEOUT_USER
                     })
                 ]
             }),

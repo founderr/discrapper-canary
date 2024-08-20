@@ -27,15 +27,15 @@ n.Z = {
         });
     },
     openSecureFramesUpdateConfirmation: function (e) {
-        let { title: n, subtitle: l, onConfirm: o } = e;
+        let { title: n, subtitle: l, confirmText: o = s.Z.Messages.CONFIRM, onConfirm: r } = e;
         (0, i.openModalLazy)(async () => {
             let { ConfirmModal: e } = await Promise.resolve().then(t.bind(t, 481060));
             return (t) =>
                 (0, a.jsx)(e, {
                     header: n,
-                    confirmText: s.Z.Messages.CONFIRM,
+                    confirmText: o,
                     cancelText: s.Z.Messages.CANCEL,
-                    onConfirm: o,
+                    onConfirm: r,
                     ...t,
                     children: (0, a.jsx)(i.Text, {
                         variant: 'text-sm/normal',

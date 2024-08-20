@@ -18,8 +18,8 @@ var i = n(470079),
     I = n(572004),
     x = n(585483),
     T = n(358085),
-    v = n(709054),
-    N = n(418476),
+    N = n(709054),
+    v = n(418476),
     S = n(901461),
     Z = n(432376),
     A = n(996861),
@@ -33,7 +33,7 @@ t.Z = function (e, t, n) {
         (R.current = n),
         i.useCallback(
             (n) => {
-                var i, L, j, O, P;
+                var i, L, j, P, O;
                 if (!R.current || n.target !== n.currentTarget) return;
                 let y = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
                     D = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
@@ -53,12 +53,12 @@ t.Z = function (e, t, n) {
                         break;
                     case 'e':
                         if (y) {
-                            if (((i = G), (L = H), (j = B), !L.isSystemDM() && (0, N.Z)(j, i))) n.preventDefault(), (0, A.Hd)(H, B);
+                            if (((i = G), (L = H), (j = B), !L.isSystemDM() && (0, v.Z)(j, i))) n.preventDefault(), (0, A.Hd)(H, B);
                         }
                         break;
                     case 'p':
                         if (y || w) {
-                            if (((O = H), (P = B), !O.isSystemDM() && !(0, S.Z)(P) && (b(O) || O.isPrivate()))) n.preventDefault(), (0, A.rY)(H, B, n);
+                            if (((P = H), (O = B), !P.isSystemDM() && !(0, S.Z)(O) && (b(P) || P.isPrivate()))) n.preventDefault(), (0, A.rY)(H, B, n);
                         }
                         break;
                     case '+':
@@ -96,7 +96,7 @@ t.Z = function (e, t, n) {
                     case 't':
                         if (y && (0, u.ki)(H, B)) n.preventDefault(), (0, d.R6)(H, B, 'Message Shortcut');
                         else if (B.hasFlag(M.iLy.HAS_THREAD)) {
-                            let e = m.Z.getChannel(v.default.castMessageIdAsChannelId(B.id));
+                            let e = m.Z.getChannel(N.default.castMessageIdAsChannelId(B.id));
                             null != e && (y || w) && (n.preventDefault(), (0, d.ok)(e, w));
                         }
                         break;

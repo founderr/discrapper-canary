@@ -19,12 +19,12 @@ function m(e) {
     var t, a;
     let { applicationId: m, stream: _, channel: f, exitFullScreen: E, appContext: g, analyticsLocation: C, guildScheduledEvent: I, ...x } = e,
         T = (0, o.bp)(),
-        v = null == f ? void 0 : f.getGuildId(),
-        N = (0, l.e7)([c.Z], () => (null != v ? c.Z.getGuild(v) : null), [v]);
-    return ((t = N), (a = f), null != t && null != a && u.Z.can(h.Plq.CREATE_INSTANT_INVITE, a))
+        N = null == f ? void 0 : f.getGuildId(),
+        v = (0, l.e7)([c.Z], () => (null != N ? c.Z.getGuild(N) : null), [N]);
+    return ((t = v), (a = f), null != t && null != a && u.Z.can(h.Plq.CREATE_INSTANT_INVITE, a))
         ? (0, i.jsx)(d.Z, {
               onClick: () => {
-                  s()(null != N, 'guild cannot be null'),
+                  s()(null != v, 'guild cannot be null'),
                       s()(null != f, 'channel cannot be null'),
                       !(function (e) {
                           let { guild: t, channel: a, streamUserId: s, applicationId: l, appContext: o, exitFullScreen: c, analyticsLocation: u, guildScheduledEvent: d } = e;
@@ -50,7 +50,7 @@ function m(e) {
                                   }
                               );
                       })({
-                          guild: N,
+                          guild: v,
                           channel: f,
                           streamUserId: null == _ ? void 0 : _.ownerId,
                           applicationId: m,

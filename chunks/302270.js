@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(618158),
     x = n(390322),
     T = n(616286),
-    v = n(961048),
-    N = n(430824),
+    N = n(961048),
+    v = n(430824),
     S = n(496675),
     Z = n(626135),
     A = n(792125),
@@ -33,8 +33,8 @@ var i = n(735250),
     R = n(200498),
     L = n(146085),
     j = n(427679),
-    O = n(592473),
-    P = n(831002),
+    P = n(592473),
+    O = n(831002),
     y = n(903108),
     D = n(981631),
     k = n(474936),
@@ -46,7 +46,7 @@ function B(e) {
         f = (0, r.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
         E = (0, R.B)(n.id),
         g = (0, M.Rk)(n.id, b.pV.REQUESTED_TO_SPEAK_ONLY),
-        { preventIdle: N, allowIdle: S } = (0, I.Y)('popup');
+        { preventIdle: v, allowIdle: S } = (0, I.Y)('popup');
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(_.Z, { channelId: n.id }, 'clips-enabled-indicator'),
@@ -58,7 +58,7 @@ function B(e) {
                     align: 'right',
                     renderPopout: (e) =>
                         (0, i.jsx)(x.Z, {
-                            children: (0, i.jsx)(P.Z, {
+                            children: (0, i.jsx)(O.Z, {
                                 ...e,
                                 channelId: n.id,
                                 appContext: p
@@ -67,7 +67,7 @@ function B(e) {
                     autoInvert: !1,
                     children: (e, t) => {
                         let { isShown: n } = t;
-                        return (0, a.createElement)(v.Z, {
+                        return (0, a.createElement)(N.Z, {
                             ...e,
                             key: 'more-options',
                             isActive: n,
@@ -82,7 +82,7 @@ function B(e) {
             (0, i.jsx)(
                 C.Z,
                 {
-                    onOpen: N,
+                    onOpen: v,
                     onClose: S,
                     className: w.button
                 },
@@ -91,7 +91,7 @@ function B(e) {
             !o && E
                 ? (0, i.jsx)('div', {
                       className: w.button,
-                      children: (0, i.jsx)(O.Z, {
+                      children: (0, i.jsx)(P.Z, {
                           toggleRequestToSpeakSidebar: () => {
                               f && u.Z.updateChatOpen(n.id, !1), s();
                           },
@@ -120,29 +120,29 @@ function H(e) {
         C = (0, r.e7)([j.Z], () => j.Z.getStageInstanceByChannel(d.id)),
         I = (0, M.Io)(d.id),
         x = (0, M.Rk)(d.id, b.pV.AUDIENCE),
-        T = (0, r.e7)([N.Z], () => N.Z.getGuild(d.guild_id), [d.guild_id]),
-        v = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
-        R = (null == T ? void 0 : T.isCommunity()) ? v < D.TU7 : (null == T ? void 0 : T.premiumTier) !== D.Eu4.TIER_3 && v <= D.eez,
-        O = (0, y.Z)(d),
-        P = (0, r.e7)([S.Z], () => S.Z.can(L.yP, d)),
+        T = (0, r.e7)([v.Z], () => v.Z.getGuild(d.guild_id), [d.guild_id]),
+        N = null !== (t = null == T ? void 0 : T.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
+        R = (null == T ? void 0 : T.isCommunity()) ? N < D.TU7 : (null == T ? void 0 : T.premiumTier) !== D.Eu4.TIER_3 && N <= D.eez,
+        P = (0, y.Z)(d),
+        O = (0, r.e7)([S.Z], () => S.Z.can(L.yP, d)),
         H = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(d.id, !0),
                 Z.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: d.guild_id,
                     type: k.cd.VIDEO_STAGE_LIMIT,
-                    is_moderator: P,
+                    is_moderator: O,
                     action: k.T7.DISMISS
                 });
         };
     a.useEffect(() => {
-        O &&
+        P &&
             Z.default.track(D.rMx.BOOSTING_UPSELL_VIEWED, {
                 guild_id: d.guild_id,
                 type: k.cd.VIDEO_STAGE_LIMIT,
-                is_moderator: P,
+                is_moderator: O,
                 listener_count: I + x
             });
-    }, [O]);
+    }, [P]);
     let V = (0, i.jsxs)(E.ZP, {
         toolbar: (0, i.jsx)(B, {
             inPopout: s,
@@ -193,7 +193,7 @@ function H(e) {
             })
         ]
     });
-    return O
+    return P
         ? (0, i.jsxs)('div', {
               children: [
                   V,
@@ -238,7 +238,7 @@ function H(e) {
                                                         Z.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: d.guild_id,
                                                             type: k.cd.VIDEO_STAGE_LIMIT,
-                                                            is_moderator: P,
+                                                            is_moderator: O,
                                                             action: k.T7.BOOST
                                                         });
                                                 },

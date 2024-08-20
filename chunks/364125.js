@@ -48,7 +48,7 @@ function d(e) {
             },
             [C, f, p]
         ),
-        v = i.useCallback(
+        N = i.useCallback(
             (e) => {
                 if (!!_.current && null != f) C('handleMouseEnter', f, e);
             },
@@ -69,7 +69,7 @@ function d(e) {
                 [f, p]
             ),
             handleMouseDown: I,
-            handleMouseEnter: v,
+            handleMouseEnter: N,
             handleMouseMove: x,
             handleMouseUp: T
         }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return P;
     }
 });
 var i = n(735250),
@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(899007),
     x = n(900927),
     T = n(678738),
-    v = n(502762),
-    N = n(530),
+    N = n(502762),
+    v = n(530),
     S = n(256059),
     Z = n(679332),
     A = n(544989),
@@ -33,10 +33,10 @@ var i = n(735250),
     R = n(689938),
     L = n(317986),
     j = n(27251);
-function O(e) {
+function P(e) {
     let { user: t, channel: n } = e,
-        O = __OVERLAY__ || !(0, d.Z)(t.id),
-        P = (0, f.ZP)(t.id),
+        P = __OVERLAY__ || !(0, d.Z)(t.id),
+        O = (0, f.ZP)(t.id),
         y = (0, o.ZP)(),
         { analyticsLocations: D } = (0, u.ZP)(c.Z.PROFILE_PANEL),
         k = (0, m.ZB)({
@@ -57,10 +57,10 @@ function O(e) {
         value: D,
         children: (0, i.jsx)(m.Mt, {
             value: k,
-            children: (0, i.jsxs)(v.Z, {
+            children: (0, i.jsxs)(N.Z, {
                 ref: U,
                 user: t,
-                displayProfile: P,
+                displayProfile: O,
                 profileType: b.y0.PANEL,
                 themeOverride: y,
                 className: L.container,
@@ -76,16 +76,16 @@ function O(e) {
                                 children: [
                                     (0, i.jsx)(E.Z, {
                                         user: t,
-                                        displayProfile: P,
+                                        displayProfile: O,
                                         profileType: b.y0.PANEL,
                                         animateOnHover: !w
                                     }),
                                     (0, i.jsx)(I.Z, {
                                         user: t,
-                                        displayProfile: P,
+                                        displayProfile: O,
                                         channelId: n.id,
                                         profileType: b.y0.PANEL,
-                                        onOpenProfile: O ? void 0 : B
+                                        onOpenProfile: P ? void 0 : B
                                     }),
                                     (0, i.jsx)(S.Z, { user: t })
                                 ]
@@ -93,25 +93,25 @@ function O(e) {
                             (0, i.jsxs)('div', {
                                 className: j.body,
                                 children: [
-                                    (0, i.jsx)(N.Z, {
+                                    (0, i.jsx)(v.Z, {
                                         user: t,
                                         profileType: b.y0.PANEL,
                                         nickname: p.ZP.getName(null, n.id, t),
-                                        pronouns: null == P ? void 0 : P.pronouns,
-                                        onOpenProfile: O ? void 0 : B,
+                                        pronouns: null == O ? void 0 : O.pronouns,
+                                        onOpenProfile: P ? void 0 : B,
                                         tags: (0, i.jsx)(g.Z, {
-                                            displayProfile: P,
+                                            displayProfile: O,
                                             profileType: b.y0.PANEL
                                         })
                                     }),
-                                    (0, i.jsxs)(v.Z.Overlay, {
+                                    (0, i.jsxs)(N.Z.Overlay, {
                                         className: j.overlay,
                                         children: [
                                             (0, i.jsx)(T.Z, {
                                                 heading: R.Z.Messages.USER_POPOUT_ABOUT_ME,
                                                 headingColor: 'header-primary',
                                                 children: (0, i.jsx)(C.Z, {
-                                                    userBio: null == P ? void 0 : P.bio,
+                                                    userBio: null == O ? void 0 : O.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
                                                     isHovering: w
@@ -128,7 +128,7 @@ function O(e) {
                             })
                         ]
                     }),
-                    !O &&
+                    !P &&
                         (0, i.jsx)('footer', {
                             className: L.footer,
                             children: (0, i.jsx)(l.Button, {
@@ -147,9 +147,9 @@ function O(e) {
                                 children: R.Z.Messages.VIEW_FULL_PROFILE
                             })
                         }),
-                    (null == P ? void 0 : P.profileEffectId) != null &&
+                    (null == O ? void 0 : O.profileEffectId) != null &&
                         (0, i.jsx)(h.Z, {
-                            profileEffectId: null == P ? void 0 : P.profileEffectId,
+                            profileEffectId: null == O ? void 0 : O.profileEffectId,
                             isHovering: w
                         })
                 ]

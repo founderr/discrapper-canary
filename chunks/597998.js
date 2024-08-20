@@ -26,8 +26,8 @@ var i,
     I = n(51144),
     x = n(981631),
     T = n(354459),
-    v = n(927923),
-    N = n(689938),
+    N = n(927923),
+    v = n(689938),
     S = n(164952);
 function Z(e, t, n) {
     return (
@@ -57,7 +57,7 @@ let A = (e) => {
                   o.TooltipContainer,
                   {
                       className: S.iconSpacing,
-                      text: N.Z.Messages.HANG_STATUS_VC_ROW_ADD,
+                      text: v.Z.Messages.HANG_STATUS_VC_ROW_ADD,
                       children: (0, a.jsx)(o.PlusLargeIcon, { className: r()(S.icon, n) })
                   },
                   'add-status'
@@ -80,7 +80,7 @@ class b extends (i = s.Component) {
         let { speaking: e, priority: t, collapsed: n, mute: i, serverMute: s } = this.props;
         return t && !n
             ? (0, a.jsx)(o.Tooltip, {
-                  text: N.Z.Messages.PRIORITY_SPEAKER,
+                  text: v.Z.Messages.PRIORITY_SPEAKER,
                   children: (t) =>
                       (0, a.jsx)('div', {
                           className: r()(S.iconPriortySpeaker, { [S.iconPriortySpeakerSpeaking]: !i && !s && e }),
@@ -112,7 +112,7 @@ class b extends (i = s.Component) {
                     c
                         ? (0, a.jsxs)('span', {
                               className: S.guestSuffix,
-                              children: ['\xA0', N.Z.Messages.GUEST_NAME_SUFFIX]
+                              children: ['\xA0', v.Z.Messages.GUEST_NAME_SUFFIX]
                           })
                         : ''
                 ]
@@ -139,7 +139,7 @@ class b extends (i = s.Component) {
             : null;
     }
     renderIcons() {
-        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: s, serverDeaf: l, collapsed: c, video: d, isStreaming: p, disabled: m, isWatching: _, iconClassName: f, embeddedApplication: I, otherClientSessionType: Z, voicePlatform: A, hangStatusActivity: b, showHangStatus: j, isSelf: O, application: P, guildId: y, channelId: D, user: k, handleHoverHangStatus: U, handleHoverIcons: w, disconnected: B } = this.props;
+        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: s, serverDeaf: l, collapsed: c, video: d, isStreaming: p, disabled: m, isWatching: _, iconClassName: f, embeddedApplication: I, otherClientSessionType: Z, voicePlatform: A, hangStatusActivity: b, showHangStatus: j, isSelf: P, application: O, guildId: y, channelId: D, user: k, handleHoverHangStatus: U, handleHoverIcons: w, disconnected: B } = this.props;
         if (c || m) return null;
         let H = [],
             G = (0, a.jsx)(L, {
@@ -157,7 +157,7 @@ class b extends (i = s.Component) {
                           o.TooltipContainer,
                           {
                               className: S.iconSpacing,
-                              text: N.Z.Messages.LOCAL_VIDEO_DISABLED,
+                              text: v.Z.Messages.LOCAL_VIDEO_DISABLED,
                               children: (0, a.jsx)(o.VideoSlashIcon, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -173,7 +173,7 @@ class b extends (i = s.Component) {
                           o.TooltipContainer,
                           {
                               className: S.iconSpacing,
-                              text: N.Z.Messages.VIDEO,
+                              text: v.Z.Messages.VIDEO,
                               children: (0, a.jsx)(o.VideoIcon, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -189,7 +189,7 @@ class b extends (i = s.Component) {
                         o.TooltipContainer,
                         {
                             className: S.iconSpacing,
-                            text: N.Z.Messages.NOTICE_USER_DISCONNECTED,
+                            text: v.Z.Messages.NOTICE_USER_DISCONNECTED,
                             children: (0, a.jsx)(o.CircleWarningIcon, {
                                 className: r()(S.icon, f),
                                 color: o.tokens.colors.STATUS_WARNING_BACKGROUND
@@ -214,7 +214,7 @@ class b extends (i = s.Component) {
                         'activity'
                     )
                 ),
-            Z === v.YE.XBOX || A === T.wR.XBOX
+            Z === N.YE.XBOX || A === T.wR.XBOX
                 ? H.push(
                       (0, a.jsx)(
                           'div',
@@ -225,7 +225,7 @@ class b extends (i = s.Component) {
                           'xbox'
                       )
                   )
-                : (Z === v.YE.PLAYSTATION || A === T.wR.PLAYSTATION) &&
+                : (Z === N.YE.PLAYSTATION || A === T.wR.PLAYSTATION) &&
                   H.push(
                       (0, a.jsx)(
                           'div',
@@ -253,7 +253,7 @@ class b extends (i = s.Component) {
                           o.TooltipContainer,
                           {
                               className: S.iconSpacing,
-                              text: N.Z.Messages.WATCH_STREAM_WATCHING,
+                              text: v.Z.Messages.WATCH_STREAM_WATCHING,
                               children: (0, a.jsx)(o.EyeIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
@@ -263,7 +263,7 @@ class b extends (i = s.Component) {
                           'watch'
                       )
                   );
-        let V = null != P && !(0, C.yE)(P.flags, x.udG.EMBEDDED),
+        let V = null != O && !(0, C.yE)(O.flags, x.udG.EMBEDDED),
             F = null == b && V;
         return 0 !== H.length || null != G || j || F
             ? (0, a.jsxs)('div', {
@@ -284,7 +284,7 @@ class b extends (i = s.Component) {
                                     ? (0, a.jsx)(
                                           R,
                                           {
-                                              application: P,
+                                              application: O,
                                               iconClassName: f,
                                               guildId: y,
                                               channelId: D,
@@ -295,7 +295,7 @@ class b extends (i = s.Component) {
                                     : (0, a.jsx)(M, {
                                           hangStatusActivity: b,
                                           iconClassName: f,
-                                          isSelf: O
+                                          isSelf: P
                                       })
                             })
                           : null
@@ -372,8 +372,8 @@ function R(e) {
                 });
         }, [t.id, l, i, u, h]),
         (0, a.jsx)(o.TooltipContainer, {
-            text: N.Z.Messages.UNFORMATTED_PLAYING_GAME.format({ game: t.name }),
-            'aria-label': N.Z.Messages.UNFORMATTED_PLAYING_GAME.format({ game: t.name }),
+            text: v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({ game: t.name }),
+            'aria-label': v.Z.Messages.UNFORMATTED_PLAYING_GAME.format({ game: t.name }),
             className: S.iconSpacing,
             children: (0, a.jsx)('div', {
                 ref: _,
@@ -418,7 +418,7 @@ function L(e) {
             (0, a.jsx)(
                 o.TooltipContainer,
                 {
-                    text: i ? N.Z.Messages.LOCAL_MUTED : s ? N.Z.Messages.SERVER_MUTED : N.Z.Messages.VOICE_CHANNEL_MUTED,
+                    text: i ? v.Z.Messages.LOCAL_MUTED : s ? v.Z.Messages.SERVER_MUTED : v.Z.Messages.VOICE_CHANNEL_MUTED,
                     className: S.iconSpacing,
                     children: e
                 },
@@ -445,7 +445,7 @@ function L(e) {
                 o.TooltipContainer,
                 {
                     className: S.iconSpacing,
-                    text: c ? N.Z.Messages.SERVER_DEAFENED : N.Z.Messages.VOICE_CHANNEL_DEAFENED,
+                    text: c ? v.Z.Messages.SERVER_DEAFENED : v.Z.Messages.VOICE_CHANNEL_DEAFENED,
                     children: e
                 },
                 'deaf'

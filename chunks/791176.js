@@ -80,8 +80,8 @@ t.Z = a.memo(function (e) {
         I = Object.keys(c).length,
         x = Object.keys(u).length,
         T = a.useMemo(() => (null != s ? h.Z.getGuildPermissionSpecMap(s) : null), [s]),
-        v = a.useMemo(() => (null != s ? h.Z.generateGuildPermissionSpec(s) : null), [s]),
-        N = a.useMemo(() => {
+        N = a.useMemo(() => (null != s ? h.Z.generateGuildPermissionSpec(s) : null), [s]),
+        v = a.useMemo(() => {
             if (null == s || null == T) return null;
             if (0 === I)
                 return (0, i.jsx)('div', {
@@ -94,8 +94,8 @@ t.Z = a.memo(function (e) {
                 });
             let e = [];
             return (
-                null == v ||
-                    v.forEach((t) => {
+                null == N ||
+                    N.forEach((t) => {
                         t.permissions.forEach((t) => {
                             let n = t.flag,
                                 a = m.pd.find((e) => f.Plq[e] === n);
@@ -118,7 +118,7 @@ t.Z = a.memo(function (e) {
                     }),
                 e
             );
-        }, [s, I, c, v, T]);
+        }, [s, I, c, N, T]);
     return null == s
         ? null
         : (0, i.jsx)(o.FormItem, {
@@ -152,7 +152,7 @@ t.Z = a.memo(function (e) {
                   children: (0, i.jsx)(p._2, {
                       description: (0, i.jsx)('div', {
                           className: g.permissionsContainer,
-                          children: N
+                          children: v
                       })
                   })
               })

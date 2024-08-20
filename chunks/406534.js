@@ -26,8 +26,8 @@ var i = n(735250),
     I = n(88101),
     x = n(576954),
     T = n(280006),
-    v = n(347102),
-    N = n(765104),
+    N = n(347102),
+    v = n(765104),
     S = n(122707),
     Z = n(779836),
     A = n(23750),
@@ -36,8 +36,8 @@ var i = n(735250),
     R = n(944486),
     L = n(594174),
     j = n(55935),
-    O = n(70956),
-    P = n(709054),
+    P = n(70956),
+    O = n(709054),
     y = n(534091),
     D = n(900164),
     k = n(554838),
@@ -94,7 +94,7 @@ function et(e) {
         eh = (0, w.$)(r),
         ep = d.length > 0 && (null === (t = d.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(r)),
         em = (0, o.ts)(r),
-        e_ = (0, s.e7)([N.Z], () => N.Z.shouldShowTopicsBar() && !ec),
+        e_ = (0, s.e7)([v.Z], () => v.Z.shouldShowTopicsBar() && !ec),
         ef = (0, I.P)(r.id, Q.zr),
         eE = (0, g.z)(r.id, Q.zr),
         eg = (0, U.Z)(),
@@ -112,15 +112,15 @@ function et(e) {
                           senderId: e.getRecipientId()
                       })
                 : e.isGroupDM() && (0, T.f)({ location: 'blocked_user_banner' })
-                  ? (0, i.jsx)(v.e, { channel: e })
+                  ? (0, i.jsx)(N.e, { channel: e })
                   : null;
         })(r, null != ef ? ef : eE),
         eI = r.isForumPost() && !ep ? (0, i.jsx)(p.Z, { postId: r.id }) : null,
         ex = (0, _.Z)(r.id);
     (0, Y.Z)();
     let eT = null,
-        ev = [],
-        eN = ei.map((e, t) => {
+        eN = [],
+        ev = ei.map((e, t) => {
             if (e.type === X.ys_.DIVIDER) {
                 var n, a;
                 let s = null != e.unreadId;
@@ -172,7 +172,7 @@ function et(e) {
                     )
                 );
             }
-            if (null != er && er > e.content.timestamp.getTime() * O.Z.Millis.SECOND) return;
+            if (null != er && er > e.content.timestamp.getTime() * P.Z.Millis.SECOND) return;
             let s = M.Z.can(X.Plq.CREATE_INSTANT_INVITE, r);
             if ((0, D.Z)(e.content, s)) return;
             e.type === X.ys_.MESSAGE && null == eT && (eT = e);
@@ -193,7 +193,7 @@ function et(e) {
                 e.content.id
             );
         });
-    ev.push(...eN);
+    eN.push(...ev);
     let eS = ei[ei.length - 1];
     if (
         (null != eu &&
@@ -208,7 +208,7 @@ function et(e) {
                             author: eu
                         })
                     );
-                ev.push(
+                eN.push(
                     (0, i.jsx)(
                         ee,
                         {
@@ -224,7 +224,7 @@ function et(e) {
         d.hasMoreBefore && null == er)
     ) {
         d.length > 0 &&
-            ev.unshift(
+            eN.unshift(
                 (0, i.jsx)(
                     'div',
                     {
@@ -238,7 +238,7 @@ function et(e) {
             );
         let { useReducedMotion: e } = c.Z;
         ((e && ed()) || !e) &&
-            ev.unshift(
+            eN.unshift(
                 (0, i.jsx)(
                     W.ZP,
                     {
@@ -251,7 +251,7 @@ function et(e) {
     }
     if (
         ((!d.hasMoreBefore || null != er) &&
-            ev.unshift(
+            eN.unshift(
                 (0, i.jsx)(
                     h.Z,
                     {
@@ -262,7 +262,7 @@ function et(e) {
                 )
             ),
         d.hasMoreAfter &&
-            ev.push(
+            eN.push(
                 (0, i.jsx)(
                     W.ZP,
                     {
@@ -272,12 +272,12 @@ function et(e) {
                     'has-more-after'
                 )
             ),
-        !eo && eh && ed() && ev.push((0, i.jsx)(z.Z, { channel: r })),
+        !eo && eh && ed() && eN.push((0, i.jsx)(z.Z, { channel: r })),
         B > 0 && et && ed())
     ) {
         let e, t;
         let a = b.ZP.getOldestUnreadTimestamp(r.id),
-            s = 0 !== a ? a : P.default.extractTimestamp(r.id),
+            s = 0 !== a ? a : O.default.extractTimestamp(r.id),
             l = (0, j.KC)(new Date(), new Date(s));
         if ((b.ZP.isEstimated(r.id) ? ((e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE), (t = J.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES)) : ((e = l ? J.Z.Messages.NEW_MESSAGES : J.Z.Messages.NEW_MESSAGES_WITH_DATE), (t = J.Z.Messages.NEW_MESSAGES_SUMMARIES)), em && (0, o.tW)(r) && eg.includes(K.E.SUMMARIES))) {
             let a = b.ZP.ackMessageId(r.id),
@@ -434,7 +434,7 @@ function et(e) {
                     });
     }
     return {
-        channelStreamMarkup: ev,
+        channelStreamMarkup: eN,
         newMessagesBar: n,
         jumpToPresentBar: a,
         forumPostActionBar: eI,

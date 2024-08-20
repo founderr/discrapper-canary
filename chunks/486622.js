@@ -23,10 +23,10 @@ function E(e) {
         g = (0, m.Z)(),
         [C, I] = i.useState(!1),
         [x, T] = i.useState(!1),
-        [v, N] = i.useState(!1),
+        [N, v] = i.useState(!1),
         [S, Z] = i.useState(!1),
         [A, M] = i.useState(!1),
-        b = C || x || v,
+        b = C || x || N,
         R = i.useCallback(
             async (e) => {
                 if (!b) {
@@ -76,11 +76,11 @@ function E(e) {
             },
             [b, a, E]
         ),
-        O = i.useCallback(
+        P = i.useCallback(
             async (e) => {
                 if (b) return;
                 if (null != t && null == o.Z.getMutualGuilds(t.id)) {
-                    N(!0);
+                    v(!0);
                     try {
                         await (0, c.Z)(t.id, t.getAvatarURL(void 0, 80), {
                             withMutualGuilds: !0,
@@ -88,7 +88,7 @@ function E(e) {
                         });
                     } catch (e) {
                     } finally {
-                        N(!1);
+                        v(!1);
                     }
                 }
                 let n = async () => {
@@ -119,7 +119,7 @@ function E(e) {
             },
             [R, b, t]
         ),
-        P = i.useCallback(
+        O = i.useCallback(
             (e, t, n) => {
                 let i = (i, a) => {
                         a && u.kJ.updateSetting(i),
@@ -150,13 +150,13 @@ function E(e) {
             [R]
         );
     return {
-        acceptMessageRequest: g ? O : R,
+        acceptMessageRequest: g ? P : R,
         rejectMessageRequest: L,
         rejectAll: j,
-        markAsNotSpam: P,
+        markAsNotSpam: O,
         isAcceptLoading: C,
         isRejectLoading: x,
-        isUserProfileLoading: v,
+        isUserProfileLoading: N,
         isOptimisticAccepted: S,
         isOptimisticRejected: A
     };

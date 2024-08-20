@@ -26,7 +26,7 @@ function g(e) {
             joinRequest: I,
             isModmin: x,
             guildId: T,
-            maxMembers: v
+            maxMembers: N
         } = (0, a.cj)([h.Z, c.Z, u.Z], () => {
             let e = h.Z.getRequest(C),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
@@ -37,8 +37,8 @@ function g(e) {
                 maxMembers: null == t ? void 0 : t.maxMembers
             };
         }),
-        N = (0, a.e7)([o.Z], () => (null != T ? o.Z.getMemberCount(T) : 0)),
-        S = null != v && (null != N ? N : 0) >= v,
+        v = (0, a.e7)([o.Z], () => (null != T ? o.Z.getMemberCount(T) : 0)),
+        S = null != N && (null != v ? v : 0) >= N,
         { approveRequest: Z, rejectRequest: A, submitting: M } = (0, m.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId, null == I ? void 0 : I.joinRequestId);
     return null != I && I.applicationStatus === p.wB.SUBMITTED && x
         ? (0, i.jsxs)('div', {

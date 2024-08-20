@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(746599),
     x = n(1163),
     T = n(738672),
-    v = n(981631),
-    N = n(37113),
+    N = n(981631),
+    v = n(37113),
     S = n(689938),
     Z = n(375919);
 function A(e) {
@@ -44,8 +44,8 @@ function A(e) {
         })
     });
 }
-let M = N.LY.RESOLUTION_1440,
-    b = N.ws.FPS_60;
+let M = v.LY.RESOLUTION_1440,
+    b = v.ws.FPS_60;
 function R(e) {
     let { channel: t } = e,
         n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -59,7 +59,7 @@ function R(e) {
                         if (e) {
                             if (
                                 ((0, I.J1)(!(0, C.mc)(M, b)),
-                                f.default.track(v.rMx.PERK_DEMO_OFFER_ACCEPTED, {
+                                f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
                                     perk_type: r.q.STREAM_HIGH_QUALITY,
@@ -155,7 +155,7 @@ function j(e) {
             l &&
             !o.current &&
             ((o.current = !0),
-            f.default.track(v.rMx.PERK_DEMO_OFFER_VIEWED, {
+            f.default.track(N.rMx.PERK_DEMO_OFFER_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
                 perk_type: r.q.STREAM_HIGH_QUALITY

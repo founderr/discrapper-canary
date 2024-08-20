@@ -24,13 +24,13 @@ var i = n(735250),
     I = n(434488),
     x = n(27457),
     T = n(251564),
-    v = n(695492),
-    N = n(981631),
+    N = n(695492),
+    v = n(981631),
     S = n(456902);
 function Z(e) {
     let { participants: t, onClick: n, onDoubleClick: Z, onContextMenu: A, channel: M, className: b, inCall: R, totalNumberOfParticipants: L, paused: j = !1 } = e,
-        O = (0, c.bp)() === N.IlC.POPOUT,
-        P = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]),
+        P = (0, c.bp)() === v.IlC.POPOUT,
+        O = (0, r.e7)([g.Z], () => g.Z.getGuild(M.guild_id), [M.guild_id]),
         { dismissedActivityEntryPointTileChannel: y } = (0, T.d)(),
         D = (0, r.e7)([p.Z], () => p.Z.getUserParticipantCount(M.id), [M]),
         k = (0, E.bt)(M.id, t),
@@ -46,8 +46,8 @@ function Z(e) {
                 T.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [M.id, y]);
-    let w = (0, r.e7)([C.Z], () => M.isPrivate() || (0, _.b)(C.Z, P, M), [P, M]),
-        B = (null == P ? void 0 : P.afkChannelId) === M.id,
+    let w = (0, r.e7)([C.Z], () => M.isPrivate() || (0, _.b)(C.Z, O, M), [O, M]),
+        B = (null == O ? void 0 : O.afkChannelId) === M.id,
         H = M.userLimit <= 0 || M.userLimit > 1,
         G = (0, r.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(M.id).length <= 0),
         V = (0, m.N)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
@@ -67,7 +67,7 @@ function Z(e) {
                         onContextMenu: A,
                         inCall: R,
                         width: t,
-                        inPopout: O
+                        inPopout: P
                     },
                     e.id
                 )
@@ -86,7 +86,7 @@ function Z(e) {
         { trackOnInitialLoad: !0 },
         []
     ),
-        null != P &&
+        null != O &&
             !B &&
             (!(D >= 2) || !G || F || V || W
                 ? H &&
@@ -96,27 +96,27 @@ function Z(e) {
                       ? z.push((e) =>
                             (0, i.jsx)(I.h, {
                                 channel: M,
-                                guild: P,
+                                guild: O,
                                 width: e,
-                                inPopout: O,
+                                inPopout: P,
                                 handleClose: U,
                                 userParticipantCount: D
                             })
                         )
                       : z.push((e) =>
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(N.Z, {
                                 width: e,
                                 channel: M,
-                                guild: P,
-                                inPopout: O
+                                guild: O,
+                                inPopout: P
                             })
                         ))
                 : z.push((e) =>
                       (0, i.jsx)(I.h, {
                           channel: M,
-                          guild: P,
+                          guild: O,
                           width: e,
-                          inPopout: O,
+                          inPopout: P,
                           handleClose: U,
                           userParticipantCount: D
                       })

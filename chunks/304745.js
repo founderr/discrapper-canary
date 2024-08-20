@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(243778),
     x = n(579185),
     T = n(301076),
-    v = n(981631),
-    N = n(921944),
+    N = n(981631),
+    v = n(921944),
     S = n(177480);
 function Z(e) {
     let { channel: t } = e,
@@ -34,8 +34,8 @@ function Z(e) {
         A = (0, p.g5)(Z),
         M = Z !== p.jy.CAN_LAUNCH || n,
         { isHovered: b, setIsHovered: R, onMouseEnter: L, onMouseLeave: j } = (0, x.Z)(200, 300),
-        O = (0, h.a)(),
-        P = (0, d.Z)({ channelId: t.id }),
+        P = (0, h.a)(),
+        O = (0, d.Z)({ channelId: t.id }),
         y = !M,
         D = a.useCallback(
             (e) => {
@@ -44,7 +44,7 @@ function Z(e) {
             [L]
         ),
         k = (0, o.O)(),
-        U = (0, c.bp)() === v.IlC.POPOUT,
+        U = (0, c.bp)() === N.IlC.POPOUT,
         { analyticsLocations: w } = (0, g.ZP)(),
         B = w.length > 0 ? w[w.length - 1] : 'open-activity-shelf';
     C.m1.useExperiment({ location: B }, { autoTrackExposure: !0 });
@@ -86,7 +86,7 @@ function Z(e) {
                                   onMouseEnter: L,
                                   onMouseLeave: j,
                                   isHovered: b,
-                                  onClick: () => a(N.L.UNKNOWN)
+                                  onClick: () => a(v.L.UNKNOWN)
                               })
                             : (0, i.jsx)(i.Fragment, {});
                     },
@@ -97,15 +97,15 @@ function Z(e) {
                                     disabled: M,
                                     'aria-label': A,
                                     label: y ? void 0 : A,
-                                    isActivityActive: P || b,
+                                    isActivityActive: O || b,
                                     className: S.controlButton,
                                     onClick: () => {
-                                        H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(N.L.UNKNOWN);
+                                        H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(v.L.UNKNOWN);
                                     },
                                     onMouseEnter: D,
                                     onMouseLeave: j
                                 }),
-                                O
+                                P
                                     ? (0, i.jsx)(f.A, {
                                           top: 4,
                                           right: 10,

@@ -10,7 +10,7 @@ var a = n(27457),
     l = n(665367);
 function r(e) {
     let { aspectRatio: t, blocked: n, channel: r, className: o, focused: c, children: u, inCall: d, inPopout: h, noBorder: p, onClick: m, onContextMenu: _, onDoubleClick: f, onVideoResize: E, paused: g, pulseSpeakingIndicator: C, participant: I, width: x, ...T } = e,
-        v = s.Z.getVideoComponent();
+        N = s.Z.getVideoComponent();
     return (0, i.jsx)('div', {
         style: { width: x },
         className: l.spaceBetweenTiles,
@@ -33,7 +33,7 @@ function r(e) {
                     participant: I,
                     paused: g,
                     pulseSpeakingIndicator: C,
-                    videoComponent: v,
+                    videoComponent: N,
                     width: x,
                     ...T
                 }),

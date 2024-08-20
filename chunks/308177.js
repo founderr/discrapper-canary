@@ -19,9 +19,9 @@ var i,
     I = n(442545);
 let x = 424,
     T = 624,
-    v = 824;
+    N = 824;
 ((a = i || (i = {}))[(a.SELECTED = 0)] = 'SELECTED'), (a[(a.SPEAKER = 1)] = 'SPEAKER'), (a[(a.AUDIENCE = 2)] = 'AUDIENCE');
-let N = (e, t) => {
+let v = (e, t) => {
         let n = Math.floor(e / t - 8),
             i = Math.floor(n / g.Q);
         return {
@@ -29,7 +29,7 @@ let N = (e, t) => {
             speakerTileHeight: i
         };
     },
-    S = (e, t) => (e < x ? 1 : e < T ? 2 : e < v ? 3 : t ? 3 : 4),
+    S = (e, t) => (e < x ? 1 : e < T ? 2 : e < N ? 3 : t ? 3 : 4),
     Z = (e) => Math.floor((e - 32) / 102);
 function A(e) {
     return e.type === h.Ui.VOICE;
@@ -40,7 +40,7 @@ t.Z = (0, o.Z)((e) => {
         {
             selectedParticipantId: x,
             largeStream: T,
-            chatOpen: v
+            chatOpen: N
         } = (0, r.cj)(
             [c.Z],
             () => ({
@@ -55,18 +55,18 @@ t.Z = (0, o.Z)((e) => {
         R = (0, r.e7)([u.Z], () => (null != x ? u.Z.getParticipant(i.id, x) : null)),
         L = (0, d.w8)(i.id, h.pV.SPEAKER),
         j = L.filter(A),
-        O = null != L.find((e) => e.type === h.Ui.STREAM),
-        P = Z(a),
-        y = S(a, v),
+        P = null != L.find((e) => e.type === h.Ui.STREAM),
+        O = Z(a),
+        y = S(a, N),
         D = {
             [h.pV.SPEAKER]: y,
-            [h.pV.AUDIENCE]: P,
+            [h.pV.AUDIENCE]: O,
             [h.pV.SELECTED]: 1
         },
         k = (0, p.Dx)(i.id),
         [U, w] = (0, p.aP)(i.id, D, k),
         B = [Math.max(null !== (t = U[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = U[1]) && void 0 !== n ? n : 1, 1), U[2]],
-        { speakerTileWidth: H, speakerTileHeight: G } = N(a, y),
+        { speakerTileWidth: H, speakerTileHeight: G } = v(a, y),
         V = T ? a - 32 : Math.min(a - 64, 3 * H + 8),
         F = (e) => e === U.length - 1 || (0 === b && 1 === e),
         [W, z] = l.useState(!1),
@@ -88,7 +88,7 @@ t.Z = (0, o.Z)((e) => {
                               collapsed: W,
                               speakers: j,
                               channel: i,
-                              isStreamLive: O
+                              isStreamLive: P
                           },
                           'speaker-header-'.concat(t)
                       );
@@ -150,7 +150,7 @@ t.Z = (0, o.Z)((e) => {
                         {
                             channel: i,
                             participants: a,
-                            maxTiles: P
+                            maxTiles: O
                         },
                         'audience-'.concat(t, '-').concat(n)
                     );

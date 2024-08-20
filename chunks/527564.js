@@ -1,46 +1,46 @@
-i.d(n, {
+t.d(n, {
     M: function () {
         return x;
     }
 });
-var t = i(735250),
-    a = i(470079),
-    r = i(120356),
-    o = i.n(r),
-    l = i(442837),
-    s = i(481060),
-    c = i(765717),
-    d = i(283836),
-    u = i(507608),
-    _ = i(147496),
-    p = i(519896),
-    m = i(270144),
-    I = i(171246),
-    f = i(55563),
-    g = i(147890),
-    h = i(272242),
-    C = i(981631),
-    v = i(689938),
-    E = i(696672);
+var i = t(735250),
+    a = t(470079),
+    r = t(120356),
+    o = t.n(r),
+    l = t(442837),
+    s = t(481060),
+    c = t(765717),
+    d = t(283836),
+    u = t(507608),
+    _ = t(147496),
+    p = t(519896),
+    m = t(270144),
+    I = t(171246),
+    f = t(55563),
+    g = t(147890),
+    h = t(272242),
+    C = t(981631),
+    v = t(689938),
+    E = t(696672);
 function x(e) {
-    let { appId: n, guildId: i } = e,
-        { subscriptionGroupListing: a } = (0, m.F5)(n, i),
-        { subs: r, otps: l } = (0, d.q)(n, i);
-    return (0, t.jsxs)(t.Fragment, {
+    let { appId: n, guildId: t } = e,
+        { subscriptionGroupListing: a } = (0, m.F5)(n, t),
+        { subs: r, otps: l } = (0, d.q)(n, t);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
             r.length > 0 &&
                 null != a &&
-                (0, t.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     className: E.productSection,
                     children: [
-                        (0, t.jsx)(s.Heading, {
+                        (0, i.jsx)(s.Heading, {
                             variant: 'heading-lg/semibold',
                             children: v.Z.Messages.STOREFRONT_APP_SUBSCRIPTIONS
                         }),
-                        (0, t.jsx)('div', {
+                        (0, i.jsx)('div', {
                             className: o()(E.productList, E.subList),
                             children: r.map((e) =>
-                                (0, t.jsx)(
+                                (0, i.jsx)(
                                     u.zz,
                                     {
                                         appId: n,
@@ -61,17 +61,17 @@ function x(e) {
                     ]
                 }),
             l.length > 0 &&
-                (0, t.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     className: E.productSection,
                     children: [
-                        (0, t.jsx)(s.Heading, {
+                        (0, i.jsx)(s.Heading, {
                             variant: 'heading-lg/semibold',
                             children: v.Z.Messages.STOREFRONT_APP_PRODUCTS
                         }),
-                        (0, t.jsx)('div', {
+                        (0, i.jsx)('div', {
                             className: o()(E.productList, E.itemList),
                             children: l.map((e) =>
-                                (0, t.jsx)(
+                                (0, i.jsx)(
                                     u.hd,
                                     {
                                         skuId: e.sku.id,
@@ -89,11 +89,11 @@ function x(e) {
                         })
                     ]
                 }),
-            (0, t.jsx)(c.Z, {
+            (0, i.jsx)(c.Z, {
                 path: C.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
                 render: (e) =>
-                    (0, t.jsx)(b, {
+                    (0, i.jsx)(b, {
                         ...e,
                         subscriptionGroupListing: null != a ? a : void 0
                     })
@@ -104,11 +104,11 @@ function x(e) {
 function b(e) {
     let {
             match: {
-                params: { applicationId: n, skuId: i }
+                params: { applicationId: n, skuId: t }
             },
             subscriptionGroupListing: r
         } = e,
-        o = (0, l.e7)([f.Z], () => f.Z.get(i), [i]),
+        o = (0, l.e7)([f.Z], () => f.Z.get(t), [t]),
         c = a.useId();
     return (
         a.useLayoutEffect(() => {
@@ -116,13 +116,13 @@ function b(e) {
                 switch (o.type) {
                     case C.epS.CONSUMABLE:
                     case C.epS.DURABLE:
-                        return (function (e, n, i) {
+                        return (function (e, n, t) {
                             (0, s.openModal)(
                                 (e) => {
                                     let { onClose: a, transitionState: r } = e;
-                                    return (0, t.jsx)(_.ItemDetailsModal, {
+                                    return (0, i.jsx)(_.ItemDetailsModal, {
                                         appId: n,
-                                        skuId: i,
+                                        skuId: t,
                                         onClose: a,
                                         transitionState: r
                                     });
@@ -138,20 +138,20 @@ function b(e) {
                                     }
                                 }
                             );
-                        })(c, n, i);
+                        })(c, n, t);
                     case C.epS.SUBSCRIPTION: {
                         var e;
                         if (null == r) return;
-                        let a = null === (e = r.subscription_listings) || void 0 === e ? void 0 : e.find((e) => e.id === i);
+                        let a = null === (e = r.subscription_listings) || void 0 === e ? void 0 : e.find((e) => e.id === t);
                         if (null == a) return;
-                        return (function (e, n, i, a) {
+                        return (function (e, n, t, a) {
                             (0, s.openModal)(
                                 (e) => {
                                     let { onClose: r, transitionState: o } = e;
-                                    return (0, t.jsx)(p.SubscriptionDetailsModal, {
+                                    return (0, i.jsx)(p.SubscriptionDetailsModal, {
                                         appId: n,
-                                        groupListingId: i.id,
-                                        groupListingType: (0, I.KW)(i.sku_flags) ? 'user' : 'guild',
+                                        groupListingId: t.id,
+                                        groupListingType: (0, I.KW)(t.sku_flags) ? 'user' : 'guild',
                                         skuId: a.id,
                                         onClose: r,
                                         transitionState: o
@@ -171,7 +171,7 @@ function b(e) {
                         })(c, n, r, a);
                     }
                 }
-        }, [n, c, o, i, r]),
+        }, [n, c, o, t, r]),
         a.useLayoutEffect(
             () => () => {
                 (0, s.closeModal)(c);

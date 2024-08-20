@@ -19,8 +19,8 @@ var i,
     I = n(100527),
     x = n(906732),
     T = n(168551),
-    v = n(597952),
-    N = n(628123),
+    N = n(597952),
+    v = n(628123),
     S = n(686546),
     Z = n(151851),
     A = n(587061),
@@ -29,8 +29,8 @@ var i,
     R = n(892254),
     L = n(706454),
     j = n(210887),
-    O = n(740492),
-    P = n(451478),
+    P = n(740492),
+    O = n(451478),
     y = n(358085),
     D = n(792125),
     k = n(998502),
@@ -133,11 +133,11 @@ class F extends (i = s.Component) {
                             children: (0, a.jsx)('div', {
                                 'data-popout-root': !0,
                                 ref: this.rootRef,
-                                className: r()((0, D.Q)(e), (0, v.Z)(), A, I),
+                                className: r()((0, D.Q)(e), (0, N.Z)(), A, I),
                                 children: (0, a.jsx)(p.FocusRingScope, {
                                     containerRef: this.rootRef,
                                     children: (0, a.jsx)(E.Z, {
-                                        children: (0, a.jsxs)(N.Z, {
+                                        children: (0, a.jsxs)(v.Z, {
                                             children: [
                                                 (0, a.jsx)(S.Co, {}),
                                                 (0, a.jsx)(_.Wu, {
@@ -185,7 +185,7 @@ class F extends (i = s.Component) {
             V(this, 'rootRef', s.createRef()),
             V(this, '_cleanupWindowActionCreators', void 0),
             V(this, 'warnPopoutClose', (e) => {
-                if (this.props.connectedToEmbeddedActivity && !O.ZP.disableEmbeddedActivityPopOutAlert) {
+                if (this.props.connectedToEmbeddedActivity && !P.ZP.disableEmbeddedActivityPopOutAlert) {
                     if (((e.returnValue = H.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE), !!y.isPlatformEmbedded))
                         (0, C.Z)(() => {
                             w.Z.unmountWindow(this.props.windowKey), y.isPlatformEmbedded && k.ZP.close(this.props.windowKey);
@@ -208,7 +208,7 @@ let W = s.forwardRef(function (e, t) {
         focused: w.Z.getWindowFocused(e.windowKey)
     }));
     c()(null != n, 'Missing guestWindow reference');
-    let s = (0, h.e7)([P.Z], () => P.Z.isFocused()),
+    let s = (0, h.e7)([O.Z], () => O.Z.isFocused()),
         { locale: l, theme: r } = (0, h.cj)([j.Z, L.default], () => ({
             locale: L.default.locale,
             theme: j.Z.theme
@@ -221,7 +221,7 @@ let W = s.forwardRef(function (e, t) {
             fontScaleClass: _,
             saturation: E,
             systemForcedColors: C,
-            useForcedColors: v
+            useForcedColors: N
         } = (0, h.cj)([f.Z], () => ({
             fontScale: f.Z.fontScale,
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
@@ -231,7 +231,7 @@ let W = s.forwardRef(function (e, t) {
             systemForcedColors: f.Z.systemForcedColors,
             useForcedColors: f.Z.useForcedColors
         })),
-        N = (0, h.e7)([g.ZP], () => null != e.channelId && null !== g.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+        v = (0, h.e7)([g.ZP], () => null != e.channelId && null !== g.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, A.Z)(n, !1);
     let S = (0, M.Z)(n, i),
         { analyticsLocations: Z } = (0, x.ZP)(I.Z.POPOUT_WINDOW),
@@ -250,13 +250,13 @@ let W = s.forwardRef(function (e, t) {
                       locale: l,
                       theme: r,
                       forcedColors: o,
-                      useForcedColors: v,
+                      useForcedColors: N,
                       systemForcedColors: C,
                       fontScale: u,
                       keyboardModeEnabled: d,
                       mouseModeEnabled: S,
                       reducedMotionEnabled: m,
-                      connectedToEmbeddedActivity: N,
+                      connectedToEmbeddedActivity: v,
                       fontScaleClass: _,
                       saturation: E,
                       clientThemesClassName: b,

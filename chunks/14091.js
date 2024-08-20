@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(406326),
     x = n(994463),
     T = n(619753),
-    v = n(981631),
-    N = n(689938),
+    N = n(981631),
+    v = n(689938),
     S = n(718518);
 function Z(e, t, n) {
     return (
@@ -68,7 +68,7 @@ class A extends a.Component {
                         .forEach((e) => {
                             null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && s++), null != e.embeds && e.embeds.length > 0 && a++, null != e.attachments && e.attachments.length > 0 && i++;
                         }),
-                    p.ZP.trackWithMetadata(v.rMx.SEARCH_RESULT_VIEWED, {
+                    p.ZP.trackWithMetadata(N.rMx.SEARCH_RESULT_VIEWED, {
                         search_type: t.props.searchType,
                         search_id: t.props.searchAnalyticsId,
                         prev_search_id: e !== t.props.searchAnalyticsId ? e : null,
@@ -99,10 +99,10 @@ let M = (e) => {
 };
 class b extends a.PureComponent {
     componentDidMount() {
-        g.S.subscribe(v.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        g.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentWillUnmount() {
-        g.S.unsubscribe(v.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        g.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentDidUpdate(e) {
         let { search: t } = e;
@@ -121,7 +121,7 @@ class b extends a.PureComponent {
                               sort_by: n.sort_by,
                               sort_order: n.sort_order
                           })
-                        : v.QIO.NEWEST
+                        : N.QIO.NEWEST
             });
     }
     render() {
@@ -129,7 +129,7 @@ class b extends a.PureComponent {
             { offset: a, hasError: s, totalResults: l, isHistoricalIndexing: r } = this.props.search;
         return (0, i.jsxs)('section', {
             className: S.searchResultsWrap,
-            'aria-label': N.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
+            'aria-label': v.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
             children: [
                 this.renderHeader(),
                 (0, i.jsx)(u.AdvancedScroller, {
@@ -142,7 +142,7 @@ class b extends a.PureComponent {
                     searchAnalyticsId: e,
                     searchResults: n,
                     searchOffset: a,
-                    searchLimit: v.vpv,
+                    searchLimit: N.vpv,
                     searchHasError: s,
                     searchTotalResults: l,
                     searchIsIndexing: r
@@ -153,7 +153,7 @@ class b extends a.PureComponent {
     constructor(...e) {
         super(...e),
             Z(this, 'state', {
-                searchMode: v.QIO.NEWEST,
+                searchMode: N.QIO.NEWEST,
                 searchQuery: null
             }),
             Z(this, 'scrollerRef', a.createRef()),
@@ -196,7 +196,7 @@ class b extends a.PureComponent {
                     { searchMode: i } = this.state;
                 e !== i &&
                     !n &&
-                    (p.ZP.trackWithMetadata(v.rMx.SEARCH_RESULT_SORT_CHANGED, {
+                    (p.ZP.trackWithMetadata(N.rMx.SEARCH_RESULT_SORT_CHANGED, {
                         search_id: f.Z.getAnalyticsId(t),
                         new_sort_type: e
                     }),
@@ -223,7 +223,7 @@ class b extends a.PureComponent {
                 });
             }),
             Z(this, 'renderIndexing', () => {
-                let e = f.Z.getSearchType(this.props.searchId) === v.aib.GUILD ? N.Z.Messages.SEARCH_GUILD_STILL_INDEXING : N.Z.Messages.SEARCH_DM_STILL_INDEXING;
+                let e = f.Z.getSearchType(this.props.searchId) === N.aib.GUILD ? v.Z.Messages.SEARCH_GUILD_STILL_INDEXING : v.Z.Messages.SEARCH_DM_STILL_INDEXING;
                 return (0, i.jsxs)(M, {
                     children: [
                         (0, i.jsx)(x.Z, {}),
@@ -236,7 +236,7 @@ class b extends a.PureComponent {
             }),
             Z(this, 'renderNoResults', () => {
                 let { showNoResultsAlt: e } = this.props.search,
-                    t = e ? N.Z.Messages.SEARCH_NO_RESULTS_ALT : N.Z.Messages.SEARCH_NO_RESULTS;
+                    t = e ? v.Z.Messages.SEARCH_NO_RESULTS_ALT : v.Z.Messages.SEARCH_NO_RESULTS;
                 return (0, i.jsxs)(M, {
                     children: [
                         (0, i.jsx)('div', { className: l()(S.noResultsImage, { [S.alt]: e }) }),
@@ -253,7 +253,7 @@ class b extends a.PureComponent {
                         (0, i.jsx)('div', { className: S.errorImage }),
                         (0, i.jsx)('div', {
                             className: l()(S.emptyResultsText, S.errorMessage),
-                            children: N.Z.Messages.SEARCH_ERROR
+                            children: v.Z.Messages.SEARCH_ERROR
                         })
                     ]
                 })

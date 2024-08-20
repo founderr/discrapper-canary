@@ -1,6 +1,6 @@
 n.d(t, {
     p: function () {
-        return N;
+        return v;
     }
 });
 var i = n(735250),
@@ -23,7 +23,7 @@ var i = n(735250),
     I = n(308083),
     x = n(689938),
     T = n(329809);
-function v(e) {
+function N(e) {
     let { guildId: t, tag: n, badge: a, primaryColor: s, secondaryColor: l } = e;
     return null == n || 0 === n.length
         ? (0, i.jsx)('div', {
@@ -50,7 +50,7 @@ function v(e) {
               })
           });
 }
-function N(e) {
+function v(e) {
     let { applicationIds: t, playstyle: n, className: s } = e,
         r = a.useMemo(() => Array.from(t), [t]),
         o = (0, m.i)(r),
@@ -96,7 +96,7 @@ t.Z =
               return (0, i.jsxs)(_.Z, {
                   ...e,
                   children: [
-                      (0, i.jsx)(v, {
+                      (0, i.jsx)(N, {
                           guildId: t,
                           tag: f,
                           badge: E,
@@ -121,7 +121,7 @@ t.Z =
                           className: T.overviewText,
                           children: x.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({ date: o()().format('MMMM YYYY') })
                       }),
-                      (0, i.jsx)(N, {
+                      (0, i.jsx)(v, {
                           applicationIds: l,
                           playstyle: r
                       }),

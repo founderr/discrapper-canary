@@ -24,8 +24,8 @@ var i,
     I = n(496675),
     x = n(158776),
     T = n(471253),
-    v = n(431328),
-    N = n(145834),
+    N = n(431328),
+    v = n(145834),
     S = n(590415),
     Z = n(614173),
     A = n(618896),
@@ -62,7 +62,7 @@ let L = l.memo(function (e) {
         }, []);
         let f = t.getGuildId();
         u()(null != f, 'Channel cannot be guildless');
-        let { isMobile: I, status: v } = (0, d.cj)([x.Z], () => ({
+        let { isMobile: I, status: N } = (0, d.cj)([x.Z], () => ({
                 isMobile: x.Z.isMobileOnline(i.user.id),
                 status: x.Z.getStatus(i.user.id, f)
             })),
@@ -76,7 +76,7 @@ let L = l.memo(function (e) {
         function j() {
             (0, T.DT)(t, i.user.id, !0);
         }
-        let O = (e) => {
+        let P = (e) => {
             (0, p.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
                 return (n) =>
@@ -112,7 +112,7 @@ let L = l.memo(function (e) {
                         var t;
                         return (0, s.jsxs)(h.Clickable, {
                             className: R.participantMemberContainer,
-                            onContextMenu: O,
+                            onContextMenu: P,
                             ...e,
                             children: [
                                 (0, s.jsx)(m.Z, {
@@ -120,7 +120,7 @@ let L = l.memo(function (e) {
                                     className: R.participantAvatar,
                                     user: i.user,
                                     isMobile: I,
-                                    status: v
+                                    status: N
                                 }),
                                 (0, s.jsxs)('div', {
                                     className: R.participantTextContainer,
@@ -133,7 +133,7 @@ let L = l.memo(function (e) {
                                         (0, s.jsx)(h.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-secondary',
-                                            children: (0, N.$)(i)
+                                            children: (0, v.$)(i)
                                         })
                                     ]
                                 })
@@ -175,7 +175,7 @@ let L = l.memo(function (e) {
             ]
         });
     }),
-    O = l.memo(function (e) {
+    P = l.memo(function (e) {
         let { channel: t } = e,
             [n, i] = (0, Z.h)(t.id);
         return (0, s.jsx)(h.FormSwitch, {
@@ -185,7 +185,7 @@ let L = l.memo(function (e) {
             children: b.Z.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
         });
     }),
-    P = l.memo(function () {
+    O = l.memo(function () {
         return (0, s.jsxs)('div', {
             className: R.emptyStateContainer,
             children: [
@@ -207,7 +207,7 @@ let L = l.memo(function (e) {
     });
 function y(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
-        a = (0, v.Fd)(t.id),
+        a = (0, N.Fd)(t.id),
         l = [(0, d.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, a.length)];
     return (0, s.jsxs)('div', {
         className: o()(R.container, { [R.chatOpen]: i }),
@@ -237,9 +237,9 @@ function y(e) {
                     let { section: n, row: i } = e;
                     switch (n) {
                         case 0:
-                            return (0, s.jsx)(O, { channel: t }, 'rts-toggle');
+                            return (0, s.jsx)(P, { channel: t }, 'rts-toggle');
                         case 1: {
-                            if (0 === a.length) return (0, s.jsx)(P, {}, 'participants-empty');
+                            if (0 === a.length) return (0, s.jsx)(O, {}, 'participants-empty');
                             let e = a[i];
                             return (0, s.jsx)(
                                 j,

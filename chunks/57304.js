@@ -30,7 +30,7 @@ t.Z = function (e) {
         T = a.useCallback(() => {
             !n && g((e) => !e);
         }, [n]);
-    function v(e) {
+    function N(e) {
         !(null == e ? void 0 : e.shiftKey) && I.dispatch(_.CkL.POPOUT_CLOSE);
     }
     return (a.useEffect(
@@ -55,7 +55,7 @@ t.Z = function (e) {
               renderPopout: function (e) {
                   return (0, i.jsx)(r.Z, {
                       ...e,
-                      onJump: v,
+                      onJump: N,
                       channel: t
                   });
               },

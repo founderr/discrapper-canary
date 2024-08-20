@@ -143,15 +143,15 @@ class x {
     }
 }
 function T(e) {
-    return v(e.user.id);
+    return N(e.user.id);
 }
-function v(e) {
+function N(e) {
     if (null == e) return !1;
     let t = !1;
     for (let n in I) I[n].updateUserId(e) && (t = !0);
     return t;
 }
-function N(e) {
+function v(e) {
     let { guildId: t } = e,
         n = !1;
     for (let e in I) I[e].guildId === t && (I[e].rebuild(), (n = !0));
@@ -168,7 +168,7 @@ class S extends (i = l.ZP.Store) {
             }),
             this.syncWith([h.Z], () => {
                 var e;
-                return v(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+                return N(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
             });
     }
     getMemberListVersion(e) {
@@ -233,7 +233,7 @@ C(S, 'displayName', 'ThreadMemberListStore'),
             return t
                 .map((e) => {
                     let { user: t } = e;
-                    return v(t.id);
+                    return N(t.id);
                 })
                 .some((e) => e);
         },
@@ -263,9 +263,9 @@ C(S, 'displayName', 'ThreadMemberListStore'),
             }
             return n;
         },
-        GUILD_ROLE_UPDATE: N,
-        GUILD_ROLE_DELETE: N,
+        GUILD_ROLE_UPDATE: v,
+        GUILD_ROLE_DELETE: v,
         PASSIVE_UPDATE_V2: function (e) {
-            return e.members.reduce((e, t) => v(t.user.id) || e, !1);
+            return e.members.reduce((e, t) => N(t.user.id) || e, !1);
         }
     }));

@@ -21,9 +21,9 @@ t.Z = a.memo(function (e) {
         I = (0, d.M)(t.id),
         x = (0, l.f9)(),
         T = (0, s.e7)([p.Z], () => p.Z.hasLayers()),
-        v = a.useCallback(() => (C ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null), [C, I]),
-        N = a.useMemo(() => (C || null != I) && !x && !T, [C, I, x, T]),
-        [S, Z] = a.useState(v());
+        N = a.useCallback(() => (C ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP : null != I ? f.Z.Messages.INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP : null), [C, I]),
+        v = a.useMemo(() => (C || null != I) && !x && !T, [C, I, x, T]),
+        [S, Z] = a.useState(N());
     a.useEffect(() => {
         null != I &&
             null != g &&
@@ -57,9 +57,9 @@ t.Z = a.memo(function (e) {
                 });
         }, []),
         a.useEffect(() => {
-            let e = v();
+            let e = N();
             null != e && Z(e);
-        }, [C, I, v]);
+        }, [C, I, N]);
     let A = a.useCallback(() => {
         if ((null != I && (0, o.T)(t.id, [I.id]), null != g))
             (0, r.openModalLazy)(
@@ -91,7 +91,7 @@ t.Z = a.memo(function (e) {
     return null == g
         ? null
         : (0, i.jsx)(r.Tooltip, {
-              forceOpen: N,
+              forceOpen: v,
               text: S,
               color: r.TooltipColors.BRAND,
               position: 'bottom',

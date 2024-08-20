@@ -32,18 +32,18 @@ function x(e) {
             channelId: x,
             guildId: T
         } = e,
-        [v, N] = i.useState(!1),
+        [N, v] = i.useState(!1),
         { requestId: S, entries: Z, impressionCappedEntryIds: A } = (0, m.Z)(x),
         M = (0, a.e7)([h.Z], () => h.Z.hidden),
         b = (0, a.e7)([c.Z], () => c.Z.isFocused()),
         R = (0, a.e7)([r.Z], () => r.Z.getChannel(x)),
         L = (0, a.e7)([o.Z], () => o.Z.getGuild(T), [T]),
         j = (0, p.E)(L),
-        O = null != j && j && (null == R ? void 0 : R.isForumChannel()) === !1,
-        [P, y, D, k] = i.useMemo(() => {
+        P = null != j && j && (null == R ? void 0 : R.isForumChannel()) === !1,
+        [O, y, D, k] = i.useMemo(() => {
             let e;
-            if (null == Z || 0 === Z.length || null == S || !O) return [t, n, I];
-            let i = v ? Z.length : 3,
+            if (null == Z || 0 === Z.length || null == S || !P) return [t, n, I];
+            let i = N ? Z.length : 3,
                 a = Z.slice(0, i);
             e = M
                 ? [{ type: l.so.HIDDEN_CONTENT_INVENTORY }]
@@ -60,7 +60,7 @@ function x(e) {
                 index: n.length,
                 title: C.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
                 onToggleExpand: () => {
-                    N((e) => {
+                    v((e) => {
                         let t = !e;
                         return (
                             u.default.track(g.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
@@ -72,12 +72,12 @@ function x(e) {
                         );
                     });
                 },
-                expanded: v,
+                expanded: N,
                 expandedCount: Z.length,
                 feedHeight: e.map(_.iZ).reduce((e, t) => e + t, 0)
             };
             return [[s, ...t], [...n, s, ...e], Math.random(), e];
-        }, [x, Z, v, t, T, S, n, I, M, O]),
+        }, [x, Z, N, t, T, S, n, I, M, P]),
         U = i.useRef(0),
         w = i.useRef(Z),
         B = i.useRef(),
@@ -107,7 +107,7 @@ function x(e) {
                     if (null == S || null == B.current || Date.now() - B.current < 3000) return;
                     let n = null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t ? t : [],
                         i = n.slice(0, U.current);
-                    if (!M && !!b && !!O)
+                    if (!M && !!b && !!P)
                         u.default.track(g.rMx.RANKING_ITEMS_SEEN, {
                             request_id: S,
                             first_shown_at: B.current,
@@ -125,10 +125,10 @@ function x(e) {
                                 });
                 }
             ),
-            [S, x, T, M, b, O]
+            [S, x, T, M, b, P]
         ),
         {
-            groups: P,
+            groups: O,
             rows: y,
             version: D,
             updateMaxRowSeen: G

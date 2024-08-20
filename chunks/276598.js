@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(981631),
     x = n(921944),
     T = n(689938),
-    v = n(286419);
-function N(e) {
+    N = n(286419);
+function v(e) {
     let { onClose: t, channel: n } = e,
         a = (0, g.Z)(n);
     return (0, i.jsx)(r.Menu, {
@@ -49,7 +49,7 @@ function S(e) {
         R = (0, r.useModalsStore)(r.hasAnyModalOpenSelector),
         L = (0, _.Z)(),
         j = L.filter((e) => e.twoWayLink),
-        [O, P] = a.useState(!1);
+        [P, O] = a.useState(!1);
     if ((null == S && 0 === L.length) || t.isBroadcastChannel()) return null;
     let y = I.WtW.VOICE !== M && [I.AEg.NO_CHAT, I.AEg.FULL_SCREEN].includes(b) ? 'top' : 'bottom',
         D = [];
@@ -62,13 +62,13 @@ function S(e) {
                     o = a === l.z.DONUT_DESKTOP_NUX;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        n ? (0, i.jsx)('div', { className: v.leftDivider }) : null,
+                        n ? (0, i.jsx)('div', { className: N.leftDivider }) : null,
                         (0, i.jsx)(r.Popout, {
                             position: y,
                             spacing: o ? 16 : void 0,
                             positionKey: ''.concat(M, ':').concat(b),
-                            onRequestClose: () => P(!1),
-                            shouldShow: (o || O) && !A && !R,
+                            onRequestClose: () => O(!1),
+                            shouldShow: (o || P) && !A && !R,
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
                                 return (0, i.jsx)(u.Z, {
@@ -77,11 +77,11 @@ function S(e) {
                                               popoutPosition: y,
                                               onDismiss: () => s(x.L.UNKNOWN),
                                               onAccept: () => {
-                                                  s(x.L.UNKNOWN), P(!0);
+                                                  s(x.L.UNKNOWN), O(!0);
                                               },
                                               gameConsoleAccounts: j
                                           })
-                                        : (0, i.jsx)(N, {
+                                        : (0, i.jsx)(v, {
                                               onClose: () => {
                                                   n();
                                               },
@@ -94,7 +94,7 @@ function S(e) {
                                 return (0, i.jsx)(d.Z, {
                                     ...e,
                                     ...g,
-                                    onClick: () => P(!0),
+                                    onClick: () => O(!0),
                                     label: null != (t = Z) ? (t === C.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
                                     iconComponent: (0, E.Z)(Z)
                                 });

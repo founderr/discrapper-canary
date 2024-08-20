@@ -1,43 +1,43 @@
-i.d(n, {
+t.d(n, {
     Z: function () {
         return c;
     }
 });
-var t = i(735250);
-i(470079);
-var a = i(120356),
-    r = i.n(a),
-    o = i(481060),
-    l = i(422559),
-    s = i(812666);
+var i = t(735250);
+t(470079);
+var a = t(120356),
+    r = t.n(a),
+    o = t(481060),
+    l = t(422559),
+    s = t(812666);
 function c(e) {
-    let { grantedPermissions: n, disabledPermissions: i, grantedPermissionsHeader: a, disabledPermissionsHeader: c, className: d } = e;
-    return (0, t.jsxs)('div', {
+    let { grantedPermissions: n, disabledPermissions: t, grantedPermissionsHeader: a, disabledPermissionsHeader: c, className: d } = e;
+    return (0, i.jsxs)('div', {
         className: r()(s.list, d),
         children: [
             null != n && n.length > 0
-                ? (0, t.jsxs)(t.Fragment, {
+                ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != a
-                              ? (0, t.jsx)(o.FormTitle, {
+                              ? (0, i.jsx)(o.FormTitle, {
                                     className: s.permissionHeader,
                                     children: a
                                 })
                               : null,
-                          (0, t.jsx)('div', {
+                          (0, i.jsx)('div', {
                               className: s.container,
                               children: n.map((e) =>
-                                  (0, t.jsxs)(
+                                  (0, i.jsxs)(
                                       'div',
                                       {
                                           className: s.permission,
                                           children: [
-                                              (0, t.jsx)(o.CheckmarkLargeIcon, {
+                                              (0, i.jsx)(o.CheckmarkLargeIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
                                                   className: s.check
                                               }),
-                                              (0, t.jsx)(o.Text, {
+                                              (0, i.jsx)(o.Text, {
                                                   variant: 'text-sm/normal',
                                                   children: (0, l.wt)(e)
                                               })
@@ -50,29 +50,29 @@ function c(e) {
                       ]
                   })
                 : null,
-            null != i && i.length > 0
-                ? (0, t.jsxs)(t.Fragment, {
+            null != t && t.length > 0
+                ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != c
-                              ? (0, t.jsx)(o.FormTitle, {
+                              ? (0, i.jsx)(o.FormTitle, {
                                     className: s.permissionHeader,
                                     children: c
                                 })
                               : null,
-                          (0, t.jsx)('div', {
+                          (0, i.jsx)('div', {
                               className: s.container,
-                              children: i.map((e) =>
-                                  (0, t.jsxs)(
+                              children: t.map((e) =>
+                                  (0, i.jsxs)(
                                       'div',
                                       {
                                           className: s.permission,
                                           children: [
-                                              (0, t.jsx)(o.XSmallIcon, {
+                                              (0, i.jsx)(o.XSmallIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
                                                   className: s.cross
                                               }),
-                                              (0, t.jsx)(o.Text, {
+                                              (0, i.jsx)(o.Text, {
                                                   variant: 'text-sm/normal',
                                                   children: (0, l.wt)(e)
                                               })

@@ -24,17 +24,17 @@ function I(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: I } = e,
         x = (0, h.ZP)(t.id),
         T = (0, r.ZP)(),
-        { analyticsLocations: v } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL),
-        N = (0, u.ZB)({
+        { analyticsLocations: N } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL),
+        v = (0, u.ZB)({
             layout: 'BLOCKED_PROFILE_PANEL',
             userId: t.id,
             channelId: n.id
         }),
         S = a.useRef(null);
     return (0, i.jsx)(c.Gt, {
-        value: v,
+        value: N,
         children: (0, i.jsx)(u.Mt, {
-            value: N,
+            value: v,
             children: (0, i.jsx)(m.Z, {
                 ref: S,
                 user: t,
@@ -82,8 +82,8 @@ function I(e) {
                                             null == I || I(),
                                                 (0, d.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
-                                                    analyticsLocations: v,
-                                                    ...N
+                                                    analyticsLocations: N,
+                                                    ...v
                                                 });
                                         }
                                     })

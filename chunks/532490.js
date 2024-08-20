@@ -25,7 +25,7 @@ var i,
     x = n(556070);
 ((a = i || (i = {})).LEFT = 'left'), (a.RIGHT = 'right');
 t.Z = l.memo(function (e) {
-    let { guildId: t, primaryColor: n, children: i, canSignCharter: a = !0, signed: r, onSignCharter: T, animationDelayMs: v = 1000, signHintButtonText: N, signHintHelperText: S, signHintPosition: Z = 'left', className: A, fullHeight: M, showDisclaimer: b } = e,
+    let { guildId: t, primaryColor: n, children: i, canSignCharter: a = !0, signed: r, onSignCharter: T, animationDelayMs: N = 1000, signHintButtonText: v, signHintHelperText: S, signHintPosition: Z = 'left', className: A, fullHeight: M, showDisclaimer: b } = e,
         R = l.useRef(null),
         L = l.useCallback(
             (e) => {
@@ -33,17 +33,17 @@ t.Z = l.memo(function (e) {
             },
             [T, r]
         ),
-        [j, O] = l.useState(!1),
-        [P, y] = l.useState(!1),
+        [j, P] = l.useState(!1),
+        [O, y] = l.useState(!1),
         D = l.useRef(null),
         k = l.useCallback(
             (e) => {
                 e &&
                     (D.current = setTimeout(() => {
                         y(!0);
-                    }, v));
+                    }, N));
             },
-            [v]
+            [N]
         ),
         U = (0, p.O)(k),
         w = (0, u.e7)([m.Z], () => m.Z.useReducedMotion),
@@ -68,11 +68,11 @@ t.Z = l.memo(function (e) {
             opacity: 0,
             top: -24,
             onRest: () => {
-                r && O(!0);
+                r && P(!0);
             }
         }));
     l.useEffect(() => {
-        if (P)
+        if (O)
             G({
                 ...('left' === Z
                     ? {
@@ -88,13 +88,13 @@ t.Z = l.memo(function (e) {
                     opacity: 1,
                     top: -24
                 });
-        P &&
+        O &&
             r &&
             F({
                 opacity: 0,
                 top: 0
             });
-    }, [P, r, Z]),
+    }, [O, r, Z]),
         l.useEffect(
             () => () => {
                 null != D.current && clearTimeout(D.current);
@@ -170,7 +170,7 @@ t.Z = l.memo(function (e) {
                                                                         className: o()(x.signCarot, { [x.signCarotCustomColors]: null != q }),
                                                                         style: null != q ? q : { borderColor: K }
                                                                     }),
-                                                                    null != N ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
+                                                                    null != v ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_CTA
                                                                 ]
                                                             })
                                                         }),
@@ -178,7 +178,7 @@ t.Z = l.memo(function (e) {
                                                             variant: 'text-xs/normal',
                                                             color: 'text-muted',
                                                             className: x.signHintHelperText,
-                                                            children: null != S ? N : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
+                                                            children: null != S ? v : I.Z.Messages.CLAN_SETUP_OVERVIEW_SIGN_HELP
                                                         }),
                                                         b &&
                                                             (0, s.jsx)(d.Text, {

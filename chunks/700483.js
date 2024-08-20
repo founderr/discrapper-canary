@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(889161),
     x = n(923973),
     T = n(829750),
-    v = n(189771),
-    N = n(294629),
+    N = n(189771),
+    v = n(294629),
     S = n(793319),
     Z = n(560688),
     A = n(390322),
@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(25827),
     L = n(314897),
     j = n(131951),
-    O = n(496675),
-    P = n(944486),
+    P = n(496675),
+    O = n(944486),
     y = n(594174),
     D = n(881824),
     k = n(471253),
@@ -63,7 +63,7 @@ function et(e) {
     let { channel: a } = e,
         s = (0, K.Z)(a.id),
         [l, c] = (0, X.Z)(a),
-        u = (0, r.e7)([O.Z], () => O.Z.can(Q.Plq.REQUEST_TO_SPEAK, a));
+        u = (0, r.e7)([P.Z], () => P.Z.can(Q.Plq.REQUEST_TO_SPEAK, a));
     if (s) return null;
     return (0, i.jsx)(M.d, {
         isActive: l,
@@ -81,7 +81,7 @@ function et(e) {
 }
 let en = a.memo(function (e) {
     let { channel: t } = e,
-        n = (0, r.e7)([P.Z], () => P.Z.getVoiceChannelId() === t.id, [t.id]);
+        n = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]);
     return (0, i.jsxs)('div', {
         className: $.container,
         children: [(0, i.jsx)(el, { channelId: t.id }), n ? (0, i.jsx)(et, { channel: t }) : null, (0, i.jsx)(ea, { channel: t })]
@@ -117,8 +117,8 @@ function ea(e) {
         { canManageGuildEvent: s } = (0, I.XJ)(t),
         c = (0, r.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]),
         d = (0, r.e7)([E.ZP], () => E.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
-        h = (0, r.e7)([P.Z], () => P.Z.getVoiceChannelId() === t.id, [t.id]),
-        { suppress: p } = (0, N.Z)(t),
+        h = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
+        { suppress: p } = (0, v.Z)(t),
         m = L.default.getId(),
         [_] = (0, X.Z)(t),
         f = H.ZP.isModerator(m, t.id),
@@ -301,15 +301,15 @@ function el(e) {
 }
 let er = a.memo(function (e) {
     let { channel: t } = e,
-        { suppress: n, selfMute: a, mute: s } = (0, N.Z)(t),
+        { suppress: n, selfMute: a, mute: s } = (0, v.Z)(t),
         c = (0, w.B)(t.id),
         u = (0, r.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: E, enabled: g } = (0, x.Z)(),
-        C = (0, v.Z)(t),
+        C = (0, N.Z)(t),
         { limit: I, reachedLimit: M } = (0, T.Z)(t),
         L = (0, r.e7)([y.default], () => y.default.getCurrentUser()),
-        O = (0, r.e7)([j.Z], () => (0, f.Z)(j.Z)),
-        D = (0, r.e7)([P.Z], () => P.Z.getVoiceChannelId() === t.id, [t.id]),
+        P = (0, r.e7)([j.Z], () => (0, f.Z)(j.Z)),
+        D = (0, r.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
         U = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]),
         B = (0, V.PK)(t.id),
         H = I > 0,
@@ -346,7 +346,7 @@ let er = a.memo(function (e) {
                 channel: t,
                 currentUser: L,
                 exitFullScreen: () => null,
-                canGoLive: O,
+                canGoLive: P,
                 hasPermission: C,
                 disabled: G
             })
@@ -411,7 +411,7 @@ t.Z = a.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
         a = (0, K.Z)(t.id),
         s = (0, w.B)(t.id),
-        l = (0, r.e7)([O.Z], () => O.Z.can(B.yP, t), [t]),
+        l = (0, r.e7)([P.Z], () => P.Z.can(B.yP, t), [t]),
         o = (0, q.Z)(t.id),
         c = (0, r.e7)([d.Z], () => (null != t ? d.Z.getSelectedParticipant(t.id) : null)),
         u = !o && null == c;

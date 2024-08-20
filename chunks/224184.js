@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(866071),
     x = n(223135),
     T = n(625938),
-    v = n(981631),
-    N = n(689938),
+    N = n(981631),
+    v = n(689938),
     S = n(803565);
 t.Z = (e) => {
     let { hangStatusActivity: t, userId: s, channel: Z, previewIsOpen: A } = e,
@@ -30,10 +30,10 @@ t.Z = (e) => {
         b = (0, r.e7)([d.default], () => d.default.getId()),
         R = (0, r.e7)([_.default], () => _.default.getUser(s)),
         L = (0, r.e7)([m.Z], () => m.Z.getChannelId() === Z.id),
-        j = (0, r.e7)([p.Z], () => p.Z.can(v.Plq.CONNECT, Z)),
-        O = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, Z),
-        P = (0, r.e7)([h.ZP], () => (null != Z.guild_id && null != R ? h.ZP.getMember(Z.guild_id, s) : null)),
-        y = a.useMemo(() => (null != R ? (0, u.SG)(void 0, P, R, { size: 40 }) : void 0), [P, R]);
+        j = (0, r.e7)([p.Z], () => p.Z.can(N.Plq.CONNECT, Z)),
+        P = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, Z),
+        O = (0, r.e7)([h.ZP], () => (null != Z.guild_id && null != R ? h.ZP.getMember(Z.guild_id, s) : null)),
+        y = a.useMemo(() => (null != R ? (0, u.SG)(void 0, O, R, { size: 40 }) : void 0), [O, R]);
     return (a.useEffect(() => {
         (0, E.UP)();
     }, []),
@@ -43,7 +43,7 @@ t.Z = (e) => {
             A &&
             null != R &&
             b !== s &&
-            f.default.track(v.rMx.VIEW_HANG_STATUS, {
+            f.default.track(N.rMx.VIEW_HANG_STATUS, {
                 source: 'HangStatusPopout',
                 guild_id: Z.guild_id,
                 channel_id: Z.id
@@ -74,7 +74,7 @@ t.Z = (e) => {
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-muted',
-                                                children: N.Z.Messages.STATUS_LEAD_IN_JUST
+                                                children: v.Z.Messages.STATUS_LEAD_IN_JUST
                                             }),
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-sm/semibold',
@@ -115,22 +115,22 @@ t.Z = (e) => {
                                           !L &&
                                               j &&
                                               (c.default.selectVoiceChannel(Z.id),
-                                              f.default.track(v.rMx.HANG_STATUS_CTA_CLICKED, {
+                                              f.default.track(N.rMx.HANG_STATUS_CTA_CLICKED, {
                                                   source: 'HangStatusPopout',
                                                   guild_id: Z.guild_id,
                                                   channel_id: Z.id
                                               }));
                                       },
-                                      children: N.Z.Messages.CUSTOM_HANG_STATUS_CTA
+                                      children: v.Z.Messages.CUSTOM_HANG_STATUS_CTA
                                   })
                                 : null,
-                            L && O
+                            L && P
                                 ? (0, i.jsx)(o.Button, {
                                       className: S.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           let e = t.state;
-                                          e === v.tNA.CUSTOM
+                                          e === N.tNA.CUSTOM
                                               ? (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('1631').then(n.bind(n, 333541));
                                                     return (n) =>
@@ -141,13 +141,13 @@ t.Z = (e) => {
                                                         });
                                                 })
                                               : (0, E.Zx)(e, !0),
-                                              f.default.track(v.rMx.SWIPE_HANG_STATUS, {
+                                              f.default.track(N.rMx.SWIPE_HANG_STATUS, {
                                                   guild_id: Z.guild_id,
                                                   channel_id: Z.id,
                                                   media_session_id: m.Z.getMediaSessionId()
                                               });
                                       },
-                                      children: N.Z.Messages.CUSTOM_HANGS_STATUS_COPY_CTA
+                                      children: v.Z.Messages.CUSTOM_HANGS_STATUS_COPY_CTA
                                   })
                                 : null
                         ]

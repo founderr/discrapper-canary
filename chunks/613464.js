@@ -24,16 +24,16 @@ var i = n(735250),
     I = n(594174),
     x = n(189357),
     T = n(718617),
-    v = n(327250),
-    N = n(228168),
+    N = n(327250),
+    v = n(228168),
     S = n(662917);
 function Z(e) {
     let { userId: t, guildId: n, onClose: s, className: Z, infoPanelClassName: A, style: M } = e,
         b = (0, x.ms)(n),
         R = (0, r.e7)([I.default], () => I.default.getUser(t), [t]),
         L = (0, r.e7)([C.ZP], () => C.ZP.getMember(n, t), [n, t]),
-        [j, O] = a.useState(null == R || null == L),
-        P = (0, u.Z)(L),
+        [j, P] = a.useState(null == R || null == L),
+        O = (0, u.Z)(L),
         y = a.useRef(null),
         { analyticsLocations: D } = (0, m.ZP)(p.Z.GUILD_MEMBER_MOD_VIEW),
         k = (0, E.ZP)(t, n),
@@ -42,10 +42,10 @@ function Z(e) {
         !b && s();
     }, [b, s]),
     a.useEffect(() => {
-        null != P && null == L && !j && s();
-    }, [j, L, s, P]),
+        null != O && null == L && !j && s();
+    }, [j, L, s, O]),
     a.useEffect(() => {
-        null != R && null != L && O(!1);
+        null != R && null != L && P(!1);
     }, [R, L]),
     a.useEffect(() => {
         let e = null == L;
@@ -67,7 +67,7 @@ function Z(e) {
                     dispatchWait: !0
                 })
             ];
-            await Promise.all(e), O(!1);
+            await Promise.all(e), P(!1);
         })();
     }, [n, t]),
     b)
@@ -88,14 +88,14 @@ function Z(e) {
                       children: (0, i.jsx)(g.Z, {
                           user: R,
                           displayProfile: k,
-                          profileType: N.y0.MODAL,
+                          profileType: v.y0.MODAL,
                           themeOverride: U,
                           forceShowPremium: !0,
                           className: S.profileThemedContainer,
                           children: (0, i.jsxs)('div', {
                               className: S.innerContainer,
                               children: [
-                                  (0, i.jsx)(v.Z, {
+                                  (0, i.jsx)(N.Z, {
                                       userId: t,
                                       guildId: n,
                                       onClose: s

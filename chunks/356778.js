@@ -6,7 +6,7 @@ n.d(t, {
         return I;
     },
     P2: function () {
-        return v;
+        return N;
     },
     mw: function () {
         return i;
@@ -168,7 +168,7 @@ function T(e, t, n, i) {
         state: l
     };
 }
-function v(e, t, n) {
+function N(e, t, n) {
     var i, a, l;
     let { key: r, state: o } = T(e, t, 'messages', n),
         { key: c, state: u } = T(e, t, 'links', n),
@@ -244,13 +244,13 @@ function v(e, t, n) {
                     }
                 });
             }
-            N({});
+            v({});
         });
         return () => {
             e.cancel(), clearTimeout(n);
         };
     }, [e, t, f, E, x, C]);
-    let [v, N] = s.useState({});
+    let [N, v] = s.useState({});
     return {
         messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : m,
         linksCount: null !== (a = null == u ? void 0 : u.messageCount) && void 0 !== a ? a : m,

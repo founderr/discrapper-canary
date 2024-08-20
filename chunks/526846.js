@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(348600),
     x = n(566620),
     T = n(520599),
-    v = n(127255),
-    N = n(5200),
+    N = n(127255),
+    v = n(5200),
     S = n(558317),
     Z = n(403404),
     A = n(701488),
@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(57241),
     L = n(587952),
     j = n(736733),
-    O = n(932463);
-let P = 'vc-activities-'.concat((0, o.Z)()),
+    P = n(932463);
+let O = 'vc-activities-'.concat((0, o.Z)()),
     y = a.forwardRef(function (e, t) {
         let { channel: n, isHovered: s, closePopout: o, onMouseEnter: y, onMouseLeave: D, onClick: k, className: U } = e,
             { enabled: w } = I.Z.useExperiment({ location: '8009ca_3' }),
@@ -58,7 +58,7 @@ let P = 'vc-activities-'.concat((0, o.Z)()),
             K = W === M.IlC.POPOUT,
             q = (0, d.O)(),
             X = (function (e) {
-                return (0, v.Z)({ guildId: e }).slice(0, 5);
+                return (0, N.Z)({ guildId: e }).slice(0, 5);
             })(n.getGuildId());
         a.useEffect(() => {
             let e = setTimeout(() => x.ux(), 1000);
@@ -108,7 +108,7 @@ let P = 'vc-activities-'.concat((0, o.Z)()),
                         children: [
                             (0, i.jsx)('img', {
                                 alt: b.Z.Messages.EMBEDDED_ACTIVITIES_AMAZON_MUSIC_PROMO_BANNER_ALT,
-                                src: O,
+                                src: P,
                                 className: R.poster
                             }),
                             (0, i.jsx)('div', { className: R.posterDivider })
@@ -120,14 +120,14 @@ let P = 'vc-activities-'.concat((0, o.Z)()),
             children: (0, i.jsx)(g.Z, {
                 children: (0, i.jsxs)(u.Dialog, {
                     ref: t,
-                    'aria-labelledby': P,
+                    'aria-labelledby': O,
                     className: U,
                     children: [
                         (0, i.jsx)(u.HeadingLevel, {
                             forceLevel: 2,
                             children: (0, i.jsx)(u.HiddenVisually, {
                                 children: (0, i.jsx)(u.H, {
-                                    id: P,
+                                    id: O,
                                     children: b.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
                                 })
                             })
@@ -182,14 +182,14 @@ let P = 'vc-activities-'.concat((0, o.Z)()),
                                     children: [
                                         X.map((e) =>
                                             (0, i.jsx)(
-                                                N.Y,
+                                                v.Y,
                                                 {
                                                     channel: n,
                                                     activityItem: e,
                                                     onClick: () => {
                                                         o(), k();
                                                     },
-                                                    aspectRatio: N.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                    aspectRatio: v.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                     animatedDivClass: R.activitySuggestion
                                                 },
                                                 e.application.id

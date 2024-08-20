@@ -93,10 +93,10 @@ function E(e, t) {
                     T[t] = n;
                 }
             }
-            let v = T.filter(c.lm),
-                N = (0, s.keyBy)((0, s.range)(v.length), (e) => v[e].id);
-            r.current = N;
-            let S = [...I, ...v];
+            let N = T.filter(c.lm),
+                v = (0, s.keyBy)((0, s.range)(N.length), (e) => N[e].id);
+            r.current = v;
+            let S = [...I, ...N];
             return (
                 null != h && S.push(h),
                 {

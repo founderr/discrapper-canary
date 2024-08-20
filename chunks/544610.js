@@ -19,8 +19,8 @@ var a,
     I = n(592125),
     x = n(580005),
     T = n(699516),
-    v = n(594174),
-    N = n(981631);
+    N = n(594174),
+    v = n(981631);
 let S = !1,
     Z = '',
     A = 0,
@@ -31,10 +31,10 @@ let S = !1,
 function j() {
     (Z = ''), (A = 0), (M = []), (R = new Set()), (S = !1), (L = null);
 }
-function O(e) {
-    (Z = e), (A = 0), P();
+function P(e) {
+    (Z = e), (A = 0), O();
 }
-function P() {
+function O() {
     if (!S) return !1;
     let e = I.Z.getChannel(L);
     if (0 === Z.trim().length)
@@ -46,7 +46,7 @@ function P() {
                     (null == e ? void 0 : e.isPrivate()) && (t = t.filter((t) => !e.recipients.includes(t))),
                     t
                         .reduce((e, t) => {
-                            let n = v.default.getUser(t);
+                            let n = N.default.getUser(t);
                             return null == n ? e : (e.push({ user: n }), e);
                         }, [])
                         .sort(D)
@@ -88,7 +88,7 @@ function P() {
 function y() {
     if (!S) return !1;
     let e = b;
-    return (b = c().some(T.Z.getRelationships(), (e) => e === N.OGo.FRIEND)) !== e;
+    return (b = c().some(T.Z.getRelationships(), (e) => e === v.OGo.FRIEND)) !== e;
 }
 function D(e, t) {
     {
@@ -120,7 +120,7 @@ function k(e) {
         (M = t
             .map((e) => {
                 let { id: t } = e;
-                return { user: v.default.getUser(t) };
+                return { user: N.default.getUser(t) };
             })
             .filter((e) => null != e.user)),
             V.emitChange();
@@ -129,11 +129,11 @@ function U() {
     return null != i && (i.destroy(), (i = null)), h.Z.getSearchContext(k, 1000);
 }
 function w(e) {
-    if (e.key !== N.vTt) return !1;
-    (S = !0), y(), (i = U()), (L = null), O('');
+    if (e.key !== v.vTt) return !1;
+    (S = !0), y(), (i = U()), (L = null), P('');
 }
 function B(e) {
-    if (e.key !== N.vTt) return !1;
+    if (e.key !== v.vTt) return !1;
     H();
 }
 function H() {
@@ -141,7 +141,7 @@ function H() {
 }
 class G extends (a = u.ZP.Store) {
     initialize() {
-        this.waitFor(v.default, I.Z, T.Z, p.Z), this.syncWith([v.default, I.Z], P), this.syncWith([T.Z], y);
+        this.waitFor(N.default, I.Z, T.Z, p.Z), this.syncWith([N.default, I.Z], O), this.syncWith([T.Z], y);
     }
     getResults() {
         return M;
@@ -182,18 +182,18 @@ let V = new G(d.Z, {
         let { guildId: t, channelId: n } = e;
         if (null != t) return !1;
         let i = S;
-        return j(), (S = i), (L = n), P();
+        return j(), (S = i), (L = n), O();
     },
     MODAL_PUSH: w,
     SHOW_ACTION_SHEET: w,
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-        (S = !0), y(), (i = U()), (L = e.channelId), O('');
+        (S = !0), y(), (i = U()), (L = e.channelId), P('');
     },
     MODAL_POP: B,
     HIDE_ACTION_SHEET: B,
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: H,
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
-        (L = e.channelId), O(e.query);
+        (L = e.channelId), P(e.query);
     },
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
         A = e.row;

@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(74538),
     x = n(401062),
     T = n(696900),
-    v = n(456631),
-    N = n(963838),
+    N = n(456631),
+    v = n(963838),
     S = n(535879),
     Z = n(310892),
     A = n(12168),
@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(354459),
     L = n(185923),
     j = n(474936),
-    O = n(526761),
-    P = n(689938),
+    P = n(526761),
+    O = n(689938),
     y = n(172108);
 let D = L.Hz.CHAT,
     k = {
@@ -62,9 +62,9 @@ function w(e) {
                     })
             )
             .slice(0, R.e5),
-        W = (null !== (t = v.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name));
+        W = (null !== (t = N.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name));
     W.length > 0 && F.splice(F.length - 1, 1, W[0]);
-    let z = (0, N.Iu)(H),
+    let z = (0, v.Iu)(H),
         Y = (e) => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
@@ -112,27 +112,27 @@ function w(e) {
                 s = L && t === r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
             return (0, i.jsx)(o.Popout, {
                 position: 'left',
-                'aria-label': P.Z.Messages.VOICE_CHANNEL_EFFECTS_MORE,
+                'aria-label': O.Z.Messages.VOICE_CHANNEL_EFFECTS_MORE,
                 shouldShow: s,
                 renderPopout: () =>
                     (0, i.jsx)('div', {
                         onMouseEnter: C,
                         children: (0, i.jsx)(f.ZP, {
                             className: y.reducedMotionTooltip,
-                            header: P.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
-                            content: P.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
+                            header: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
+                            content: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
                             onClick: () => {
-                                u.Z.open(b.oAB.ACCESSIBILITY, null, { scrollPosition: O.rP.REDUCED_MOTION }), _();
+                                u.Z.open(b.oAB.ACCESSIBILITY, null, { scrollPosition: P.rP.REDUCED_MOTION }), _();
                             },
                             markAsDismissed: a,
-                            buttonCTA: P.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
-                            secondaryButtonCTA: P.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
+                            buttonCTA: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
+                            secondaryButtonCTA: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
                             caretPosition: f.DF.RIGHT_CENTER
                         })
                     }),
                 children: () =>
                     (0, i.jsx)(A.Z, {
-                        title: P.Z.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
+                        title: O.Z.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
                         channel: n,
                         closePopout: _,
                         onSelectEmoji: Y,
@@ -142,7 +142,7 @@ function w(e) {
                         analyticsOverride: k,
                         emojiSearchProps: {
                             accessory: (0, i.jsx)(S.Z, {
-                                labelText: P.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
+                                labelText: O.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
                                 value: $,
                                 onChange: () => {
                                     if (B)

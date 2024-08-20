@@ -24,16 +24,16 @@ var a = n(442837),
     I = n(530),
     x = n(7242),
     T = n(827313),
-    v = n(580512),
-    N = n(228168),
+    N = n(580512),
+    v = n(228168),
     S = n(981631),
     Z = n(689938),
     A = n(27251);
 function M(e) {
     let { user: t, currentUser: n, displayProfile: M, channel: b, isHovering: R, onOpenProfile: L } = e,
         { newActivityCardsEnabled: j } = (0, u.z)({ location: 'SimplifiedProfilePanelBody' }),
-        { activeInviteToCallCtaEnabled: O } = (0, c.l)({ location: 'SimplifiedProfilePanelBody' }),
-        P = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)),
+        { activeInviteToCallCtaEnabled: P } = (0, c.l)({ location: 'SimplifiedProfilePanelBody' }),
+        O = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)),
         y = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation),
         D = (0, a.e7)([o.Z], () => {
             var e;
@@ -44,13 +44,13 @@ function M(e) {
         children: [
             (0, i.jsx)(I.Z, {
                 user: t,
-                profileType: N.y0.PANEL,
+                profileType: v.y0.PANEL,
                 nickname: r.ZP.getName(null, b.id, t),
                 pronouns: null == M ? void 0 : M.pronouns,
                 onOpenProfile: L,
                 tags: (0, i.jsx)(d.Z, {
                     displayProfile: M,
-                    profileType: N.y0.PANEL
+                    profileType: v.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -64,21 +64,21 @@ function M(e) {
                     ]
                 })
             }),
-            P === S.OGo.PENDING_INCOMING &&
+            O === S.OGo.PENDING_INCOMING &&
                 (0, i.jsx)(C.Z.Overlay, {
                     children: (0, i.jsx)(f.Z, {
                         user: t,
                         channelId: b.id
                     })
                 }),
-            O && (0, i.jsx)(x.Z, { user: t }),
+            P && (0, i.jsx)(x.Z, { user: t }),
             j
                 ? (0, i.jsx)(m.Z, {
                       user: t,
                       currentUser: n,
                       className: A.activity
                   })
-                : (0, i.jsx)(v.Z, {
+                : (0, i.jsx)(N.Z, {
                       user: t,
                       channelId: b.id,
                       className: A.activity

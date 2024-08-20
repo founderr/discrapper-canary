@@ -23,8 +23,8 @@ var i = n(735250),
     I = n(592125),
     x = n(703558),
     T = n(430824),
-    v = n(979651),
-    N = n(664342),
+    N = n(979651),
+    v = n(664342),
     S = n(124368),
     Z = n(981631),
     A = n(689938),
@@ -35,7 +35,7 @@ function b(e) {
         L = (0, r.e7)([T.Z], () => T.Z.getGuild(null == R ? void 0 : R.getGuildId())),
         j = (0, m.ZP)(R);
     (function (e) {
-        let t = (0, r.e7)([v.Z], () => null != e && !l().isEmpty(v.Z.getVoiceStatesForChannel(e.id)));
+        let t = (0, r.e7)([N.Z], () => null != e && !l().isEmpty(N.Z.getVoiceStatesForChannel(e.id)));
         a.useEffect(() => {
             t &&
                 null != e &&
@@ -46,11 +46,11 @@ function b(e) {
                 (0, C.ad)(e, { source: S.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(R);
-    let O = a.useRef(!1);
+    let P = a.useRef(!1);
     if (
         (a.useEffect(() => {
-            if (null == R || O.current) return;
-            O.current = !0;
+            if (null == R || P.current) return;
+            P.current = !0;
             let e = (0, h.K)(I.Z.getChannel(R.id), !0);
             (0, d.yw)(Z.rMx.CHANNEL_OPENED, {
                 ...e,
@@ -62,7 +62,7 @@ function b(e) {
         null == R || null == L)
     )
         return null;
-    let P = (0, i.jsx)(N.Z, {
+    let O = (0, i.jsx)(v.Z, {
         channel: R,
         baseChannelId: s
     });
@@ -73,7 +73,7 @@ function b(e) {
                 draftType: x.d.ChannelMessage
             }),
             (0, i.jsx)(E.ZP, {
-                toolbar: P,
+                toolbar: O,
                 'aria-label': A.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                 children: (0, g.ud)({
                     channel: R,

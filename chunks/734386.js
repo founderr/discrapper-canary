@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return P;
     }
 }),
     n(47120);
@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(434404),
     x = n(454585),
     T = n(430824),
-    v = n(496675),
-    N = n(594174),
+    N = n(496675),
+    v = n(594174),
     S = n(700785),
     Z = n(51144),
     A = n(396769),
@@ -34,31 +34,31 @@ var i = n(735250),
     R = n(981631),
     L = n(689938),
     j = n(123197);
-function O(e) {
+function P(e) {
     let { channel: t } = e,
         [n, s] = a.useState(!1),
         r = (0, _.ZP)(t, !0),
-        O = t.guild_id,
-        P = (0, d.e7)([T.Z], () => (null != O ? T.Z.getRoles(O) : void 0)),
-        y = (0, d.e7)([N.default, T.Z], () => {
+        P = t.guild_id,
+        O = (0, d.e7)([T.Z], () => (null != P ? T.Z.getRoles(P) : void 0)),
+        y = (0, d.e7)([v.default, T.Z], () => {
             var e;
-            return N.default.getUser(null === (e = T.Z.getGuild(O)) || void 0 === e ? void 0 : e.ownerId);
+            return v.default.getUser(null === (e = T.Z.getGuild(P)) || void 0 === e ? void 0 : e.ownerId);
         }),
         D = a.useMemo(
             () =>
-                null != O
-                    ? o()(P)
+                null != P
+                    ? o()(O)
                           .sortBy((e) => -e.position)
-                          .filter((e) => !(0, f.pM)(O, e.id))
+                          .filter((e) => !(0, f.pM)(P, e.id))
                           .value()
                     : [],
-            [O, P]
+            [P, O]
         ),
         k = a.useMemo(
             () =>
                 o()(D)
                     .filter((e) => {
-                        if (null == O) return !1;
+                        if (null == P) return !1;
                         let n = S.I0({
                             forceRoles: { [e.id]: e },
                             context: t
@@ -66,15 +66,15 @@ function O(e) {
                         return c.e$(n, R.Plq.ADMINISTRATOR) || c.e$(n, R.Plq.VIEW_CHANNEL);
                     })
                     .value(),
-            [t, O, D]
+            [t, P, D]
         ),
         U = (0, d.Wu)(
-            [N.default],
+            [v.default],
             () => {
                 let e = {};
                 for (let n of (null != y && (e[y.id] = y), Object.values(t.permissionOverwrites))) {
                     if (n.type !== m.BN.MEMBER || null != e[n.id]) continue;
-                    let t = N.default.getUser(n.id);
+                    let t = v.default.getUser(n.id);
                     null != t && (e[t.id] = t);
                 }
                 return o()(e)
@@ -93,7 +93,7 @@ function O(e) {
             },
             [t, y]
         ),
-        w = v.Z.can(R.Plq.MANAGE_CHANNELS, t) || v.Z.can(R.Plq.MANAGE_ROLES, t);
+        w = N.Z.can(R.Plq.MANAGE_CHANNELS, t) || N.Z.can(R.Plq.MANAGE_ROLES, t);
     function B() {
         p.ZP.open(t.id);
     }

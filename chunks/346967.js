@@ -35,18 +35,18 @@ function E(e) {
             });
         }, [C, n.id]);
     let x = (0, r.e7)([c.Z], () => c.Z.isBlocked(C.id)),
-        [T, v] = a.useState(x),
-        N = (0, d.sS)({ location: t });
+        [T, N] = a.useState(x),
+        v = (0, d.sS)({ location: t });
     return (a.useEffect(() => {
-        v(x);
+        N(x);
     }, [x]),
     E)
         ? null
-        : T && N
+        : T && v
           ? (0, i.jsx)(m.Z, {
                 user: C,
                 channel: n,
-                onViewBlockedProfileClick: () => v(!1),
+                onViewBlockedProfileClick: () => N(!1),
                 ...s
             })
           : C.isNonUserBot()

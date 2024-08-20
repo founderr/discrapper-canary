@@ -30,7 +30,7 @@ function C(e, t) {
 }
 function I(e) {
     var t, n;
-    let { userId: I, guildId: x, onClose: T, analyticsLocation: v, className: N } = e,
+    let { userId: I, guildId: x, onClose: T, analyticsLocation: N, className: v } = e,
         S = (0, l.e7)([h.ZP], () => h.ZP.getGuildSidebarState(x), [x]),
         Z = null !== (t = null == S ? void 0 : S.details.modViewPanel) && void 0 !== t ? t : E.k.INFO,
         A = (0, c.Z)(I);
@@ -57,7 +57,7 @@ function I(e) {
             [T, Z, L]
         );
     a.useEffect(() => (u.Z.enable(), u.Z.enableTemp(j), () => u.Z.disableTemp()), [j]);
-    let O = (0, o.useTransition)(
+    let P = (0, o.useTransition)(
         Z,
         {
             value: 0,
@@ -74,7 +74,7 @@ function I(e) {
             flex: 1,
             overflow: 'hidden'
         },
-        children: O((e, t, n) => {
+        children: P((e, t, n) => {
             var a, l, r;
             let { key: o } = n;
             return (0, i.jsx)(
@@ -101,21 +101,21 @@ function I(e) {
                                     userId: I,
                                     guildId: x,
                                     onNavigate: L,
-                                    className: N
+                                    className: v
                                 });
                             case E.k.MESSAGE_HISTORY:
                                 return (0, i.jsx)(_.Z, {
                                     userId: I,
                                     guildId: x,
                                     onNavigate: () => L(E.k.INFO),
-                                    className: N
+                                    className: v
                                 });
                             case E.k.PERMISSIONS:
                                 return (0, i.jsx)(f.Z, {
                                     userId: I,
                                     guildId: x,
                                     onNavigate: () => L(E.k.INFO),
-                                    className: N
+                                    className: v
                                 });
                             default:
                                 return null;

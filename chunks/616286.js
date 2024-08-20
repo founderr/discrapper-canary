@@ -54,8 +54,8 @@ function x(e) {
 function T(e) {
     let t,
         { channelId: n, className: s, showingClassName: r, onClick: d, inPopout: h, showRequestToSpeakSidebar: p, toggleRequestToSpeakSidebar: f, ...T } = e,
-        { disabled: v } = T,
-        N = a.useRef(null),
+        { disabled: N } = T,
+        v = a.useRef(null),
         S = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
         {
             isShowing: Z,
@@ -96,38 +96,38 @@ function T(e) {
         ),
         L = a.useCallback(() => {
             var e;
-            null === (e = N.current) || void 0 === e || e.focus();
+            null === (e = v.current) || void 0 === e || e.focus();
         }, []);
     (0, m.yp)({
         event: g.CkL.FOCUS_CHAT_BUTTON,
-        handler: v ? null : L
+        handler: N ? null : L
     });
-    let [j, O] = a.useState(!1),
-        P = a.useCallback(() => {
-            h && O(!0);
+    let [j, P] = a.useState(!1),
+        O = a.useCallback(() => {
+            h && P(!0);
         }, [h]);
     (0, m.yp)({
         event: g.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: P
+        handler: O
     }),
         a.useEffect(() => {
             let e;
             return (
                 j &&
                     (e = setTimeout(() => {
-                        O(!1);
+                        P(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
         }, [j]);
-    let y = [(t = h && v ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
+    let y = [(t = h && N ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
     return (
         M > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })),
         A > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
         (0, i.jsx)(E.Z, {
-            buttonRef: N,
+            buttonRef: v,
             onClick: b,
             label: t,
             'aria-label': y.join(', '),

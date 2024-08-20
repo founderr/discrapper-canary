@@ -1,14 +1,14 @@
-var t = i(735250);
-i(470079);
-var a = i(302454),
-    r = i.n(a),
-    o = i(481060),
-    l = i(447543),
-    s = i(15470),
-    c = i(960904),
-    d = i(830121),
-    u = i(746878),
-    _ = i(241209);
+var i = t(735250);
+t(470079);
+var a = t(302454),
+    r = t.n(a),
+    o = t(481060),
+    l = t(447543),
+    s = t(15470),
+    c = t(960904),
+    d = t(830121),
+    u = t(746878),
+    _ = t(241209);
 let p = /^discord.gg\/[a-zA-Z0-9-]+/,
     m = {
         ..._.Z.rules,
@@ -17,9 +17,9 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
         inviteLink: {
             order: _.Z.rules.link.order + 1,
             match: (e, n) => (n.inline ? p.exec(e) : null),
-            parse: (e, n, i) => {
-                let t = (0, d.zO)(e[0]);
-                return null == t || t.type !== c.g.INVITE
+            parse: (e, n, t) => {
+                let i = (0, d.zO)(e[0]);
+                return null == i || i.type !== c.g.INVITE
                     ? {
                           type: 'text',
                           content: e[0]
@@ -35,23 +35,23 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
                           onClick: () => {
                               var e;
                               l.Z.acceptInviteAndTransitionToInviteChannel({
-                                  inviteKey: t.code,
+                                  inviteKey: i.code,
                                   context: { location: 'Application Directory' }
                               }),
-                                  null === (e = i.closeModal) || void 0 === e || e.call(i);
+                                  null === (e = t.closeModal) || void 0 === e || e.call(t);
                           }
                       };
             },
-            react: (e, n, i) =>
-                (0, t.jsx)(
+            react: (e, n, t) =>
+                (0, i.jsx)(
                     o.Anchor,
                     {
                         onClick: (n) => {
                             n.preventDefault(), e.onClick();
                         },
-                        children: (0, u.S)(e, n, i)
+                        children: (0, u.S)(e, n, t)
                     },
-                    i.key
+                    t.key
                 )
         }
     };

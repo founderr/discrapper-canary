@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(569471),
     x = n(346479),
     T = n(592125),
-    v = n(934415),
-    N = n(456269),
+    N = n(934415),
+    v = n(456269),
     S = n(109590),
     Z = n(228392),
     A = n(981631),
@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(952527);
 function L(e) {
     let { postId: t, isFirstMessage: n, isLastItem: s = !1, parentChannelId: L } = e,
-        { ref: j, width: O } = (0, u.Z)(),
-        [P, y] = a.useState(3),
+        { ref: j, width: P } = (0, u.Z)(),
+        [O, y] = a.useState(3),
         [D, k] = a.useState(!n),
         [U, w] = (0, d.Z)(!1, 2000),
         B = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
@@ -43,7 +43,7 @@ function L(e) {
         G = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)),
         { disableReactionUpdates: V, disableReactionCreates: F, isLurking: W, isGuest: z, isPendingMember: Y } = (0, _.Z)(B),
         K = (0, o.e7)([T.Z], () => T.Z.getChannel(L)),
-        q = (0, N.Bs)(K),
+        q = (0, v.Bs)(K),
         X = (0, o.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         Q = a.useCallback(
             (e) => {
@@ -70,8 +70,8 @@ function L(e) {
     let [J, $] = a.useState(!0);
     if (
         (a.useEffect(() => {
-            if (null != O) y(Math.floor((O - 280) / 58)), $(!1);
-        }, [O]),
+            if (null != P) y(Math.floor((P - 280) / 58)), $(!1);
+        }, [P]),
         null == B || null == H)
     )
         return null;
@@ -84,7 +84,7 @@ function L(e) {
                 postId: B.id,
                 location: { section: A.jXE.CHANNEL_HEADER }
             }),
-                (0, r.J)((0, v.EO)(B, K)),
+                (0, r.J)((0, N.EO)(B, K)),
                 w(!0);
         },
         ei = G ? c.CheckmarkLargeIcon : c.BellIcon;
@@ -126,7 +126,7 @@ function L(e) {
                                 isLurking: W,
                                 isGuest: z,
                                 isPendingMember: Y,
-                                maxReactions: P,
+                                maxReactions: O,
                                 className: b.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,

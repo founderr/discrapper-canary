@@ -19,13 +19,13 @@ var i = n(735250),
     _ = n(546240),
     f = n(952009);
 function E(e) {
-    let { checked: t, labelText: n, tooltipText: s, canToggle: E, iconAltText: g, onChange: C, tooltipColor: I, className: x, id: T = 'fancybutton-toggle', collapseWhenChecked: v = !0, onClick: N, disabled: S } = e,
+    let { checked: t, labelText: n, tooltipText: s, canToggle: E, iconAltText: g, onChange: C, tooltipColor: I, className: x, id: T = 'fancybutton-toggle', collapseWhenChecked: N = !0, onClick: v, disabled: S } = e,
         Z = (0, r.e7)([h.Z], () => h.Z.useReducedMotion),
         [A, M] = a.useState(!1),
         b = (0, d.ZP)(),
         R = (0, o.wj)(b) || t ? f : _,
         { width: L = 0, ref: j } = (0, u.Z)(),
-        { width: O = 0, ref: P } = (0, u.Z)();
+        { width: P = 0, ref: O } = (0, u.Z)();
     return (0, i.jsxs)(c.TooltipContainer, {
         text: (0, i.jsx)(p.X, {
             textColor: 'always-white',
@@ -45,7 +45,7 @@ function E(e) {
                         let e = !t;
                         M(!0), null == C || C(e);
                     }
-                    'function' == typeof N && N();
+                    'function' == typeof v && v();
                 },
                 id: T,
                 type: 'checkbox',
@@ -58,7 +58,7 @@ function E(e) {
                     [m.labelChecked]: t,
                     [m.labelUnchecked]: !t && !E
                 }),
-                style: v ? { width: t ? L : L + O } : void 0,
+                style: N ? { width: t ? L : L + P } : void 0,
                 children: [
                     t
                         ? (0, i.jsx)(c.Shine, {
@@ -72,10 +72,10 @@ function E(e) {
                         alt: g
                     }),
                     (0, i.jsx)('span', {
-                        ref: P,
+                        ref: O,
                         children: (0, i.jsx)(c.Text, {
                             className: l()(m.burstText, {
-                                [m.visuallyHidden]: t && v,
+                                [m.visuallyHidden]: t && N,
                                 [m.burstTextChecked]: t
                             }),
                             variant: 'text-sm/semibold',

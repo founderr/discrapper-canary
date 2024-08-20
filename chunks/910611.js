@@ -3,7 +3,7 @@ n.d(t, {
         return k;
     },
     ud: function () {
-        return O;
+        return P;
     },
     v0: function () {
         return y;
@@ -30,8 +30,8 @@ var i = n(735250),
     I = n(594174),
     x = n(768581),
     T = n(63063),
-    v = n(946734),
-    N = n(99843),
+    N = n(946734),
+    v = n(99843),
     S = n(372564),
     Z = n(984370),
     A = n(217314),
@@ -110,7 +110,7 @@ function j(e) {
         s
     );
 }
-function O(e) {
+function P(e) {
     let { channel: t, channelName: n, parentChannel: s, guild: r, inSidebar: o = !1, handleClick: u, handleContextMenu: d, handleParentClick: m, handleParentContextMenu: f, renderFollowButton: E } = e,
         C = (0, p.KS)(t, r),
         { prefix: x, level: T } = (function (e, t) {
@@ -155,7 +155,7 @@ function O(e) {
                     };
             }
         })(t.type, r),
-        v = (0, i.jsxs)(i.Fragment, {
+        N = (0, i.jsxs)(i.Fragment, {
             children: [
                 null != x
                     ? (0, i.jsxs)(c.HiddenVisually, {
@@ -175,7 +175,7 @@ function O(e) {
                 handleContextMenu: d
             });
         case M.d4z.GROUP_DM:
-            if (t.isManaged()) return v;
+            if (t.isManaged()) return N;
             return (0, i.jsxs)(a.Fragment, {
                 children: [
                     (0, i.jsx)(c.HiddenVisually, { children: R.Z.Messages.GROUP_DM }),
@@ -189,7 +189,7 @@ function O(e) {
                             className: L.avatar
                         })
                     }),
-                    (0, i.jsx)(N.Z, { channel: t }, 'channel-'.concat(t.id))
+                    (0, i.jsx)(v.Z, { channel: t }, 'channel-'.concat(t.id))
                 ]
             });
         case M.d4z.GUILD_ANNOUNCEMENT:
@@ -203,7 +203,7 @@ function O(e) {
                         level: T,
                         onContextMenu: d,
                         onClick: u,
-                        children: v
+                        children: N
                     }),
                     null != t.linkedLobby ? (0, i.jsx)(j, { channel: t }) : null,
                     null != E ? E() : null
@@ -217,7 +217,7 @@ function O(e) {
                         level: T,
                         onContextMenu: d,
                         onClick: u,
-                        children: v
+                        children: N
                     })
                 ]
             });
@@ -229,7 +229,7 @@ function O(e) {
                         level: T,
                         onContextMenu: d,
                         onClick: u,
-                        children: v
+                        children: N
                     })
                 ]
             });
@@ -266,12 +266,12 @@ function O(e) {
                             [L.cursorPointer]: o,
                             [L.forumPostTitle]: b
                         }),
-                        children: v
+                        children: N
                     })
                 ]
             });
         case M.d4z.GUILD_DIRECTORY:
-            let O = (null == r ? void 0 : r.hasFeature(M.oNc.HUB)) ? R.Z.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({ guildName: n }) : n;
+            let P = (null == r ? void 0 : r.hasFeature(M.oNc.HUB)) ? R.Z.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({ guildName: n }) : n;
             return (0, i.jsxs)(a.Fragment, {
                 children: [
                     null !== C
@@ -292,7 +292,7 @@ function O(e) {
                                   })
                                 : null,
                             ' ',
-                            O
+                            P
                         ]
                     })
                 ]
@@ -301,7 +301,7 @@ function O(e) {
             return null;
     }
 }
-let P = (e) => {
+let O = (e) => {
     let { channel: t } = e,
         n = (0, r.e7)([I.default], () => I.default.getCurrentUser()),
         a = (0, r.e7)([I.default], () => I.default.getUser(t.getRecipientId()));
@@ -311,7 +311,7 @@ function y(e, t) {
     switch (e.type) {
         case M.d4z.DM:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(P, { channel: e }), (0, i.jsx)(v.Z, { channel: e }, e.id)]
+                children: [(0, i.jsx)(O, { channel: e }), (0, i.jsx)(N.Z, { channel: e }, e.id)]
             });
         case M.d4z.GUILD_ANNOUNCEMENT:
         case M.d4z.GUILD_TEXT:

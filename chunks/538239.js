@@ -25,8 +25,8 @@ var i = n(735250),
     I = n(300429),
     x = n(838440),
     T = n(981631),
-    v = n(689938),
-    N = n(326290);
+    N = n(689938),
+    v = n(326290);
 function S(e, t, n) {
     return (
         t in e
@@ -57,18 +57,18 @@ class A extends a.PureComponent {
         let { activity: e } = this.props;
         switch (e.type) {
             case T.IIU.LISTENING:
-                return v.Z.Messages.INVITE_EMBED_LISTENING_INVITE;
+                return N.Z.Messages.INVITE_EMBED_LISTENING_INVITE;
             case T.IIU.PLAYING:
             case T.IIU.STREAMING:
             default:
-                return v.Z.Messages.INVITE_EMBED_GAME_INVITE;
+                return N.Z.Messages.INVITE_EMBED_GAME_INVITE;
         }
     }
     render() {
         let { textValue: e, richValue: t, textFocused: n, contentWarningProps: a } = this.state,
             { activity: s, analyticsLocations: r, channel: c, activityActionType: h, cooldown: p, application: m, transitionState: f, onClose: g } = this.props,
             C = p > 0,
-            I = C ? v.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((p + 1000) / 1000) }) : null;
+            I = C ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((p + 1000) / 1000) }) : null;
         return (0, i.jsxs)(o.ModalRoot, {
             size: o.ModalSize.SMALL,
             transitionState: f,
@@ -84,21 +84,21 @@ class A extends a.PureComponent {
                 (0, i.jsxs)(o.ModalContent, {
                     children: [
                         (0, i.jsx)('div', {
-                            className: N.subHeader,
-                            children: v.Z.Messages.MESSAGE_PREVIEW
+                            className: v.subHeader,
+                            children: N.Z.Messages.MESSAGE_PREVIEW
                         }),
                         (0, i.jsx)(u.Z, {
                             activityActionType: h,
                             activity: s,
-                            className: N.preview,
+                            className: v.preview,
                             application: m,
                             partyId: null != s.party ? s.party.id : null,
                             isPreview: !0,
                             analyticsLocations: r
                         }),
                         (0, i.jsx)('div', {
-                            className: N.subHeader,
-                            children: v.Z.Messages.ADD_A_COMMENT_OPTIONAL
+                            className: v.subHeader,
+                            children: N.Z.Messages.ADD_A_COMMENT_OPTIONAL
                         }),
                         (0, i.jsx)(o.Popout, {
                             position: 'top',
@@ -119,7 +119,7 @@ class A extends a.PureComponent {
                             },
                             children: () =>
                                 (0, i.jsx)(E.Z, {
-                                    className: N.textArea,
+                                    className: v.textArea,
                                     textValue: e,
                                     richValue: t,
                                     focused: n,
@@ -143,7 +143,7 @@ class A extends a.PureComponent {
                                     children: (0, i.jsx)(o.Button, {
                                         disabled: C,
                                         onClick: this.handleShare,
-                                        children: v.Z.Messages.INVITE_EMBED_SEND_INVITE
+                                        children: N.Z.Messages.INVITE_EMBED_SEND_INVITE
                                     })
                                 })
                         }),
@@ -151,7 +151,7 @@ class A extends a.PureComponent {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.PRIMARY,
                             onClick: g,
-                            children: v.Z.Messages.CANCEL
+                            children: N.Z.Messages.CANCEL
                         })
                     ]
                 })

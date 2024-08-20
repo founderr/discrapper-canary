@@ -24,8 +24,8 @@ var i = n(735250),
     I = n(788983),
     x = n(928518),
     T = n(703656),
-    v = n(493754),
-    N = n(880831),
+    N = n(493754),
+    v = n(880831),
     S = n(73563),
     Z = n(800965),
     A = n(107169),
@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(979696),
     L = n(430824),
     j = n(496675),
-    O = n(944486),
-    P = n(358085),
+    P = n(944486),
+    O = n(358085),
     y = n(792125),
     D = n(998502),
     k = n(922482),
@@ -69,9 +69,9 @@ let ee = 'HasBeenInStageChannel',
 function ea(e) {
     let { channel: t, appContext: n, popoutOpen: s, popoutWindow: l, popoutWindowAlwaysOnTop: r, selectedParticipant: c } = e,
         u = t.getGuildId(),
-        d = (0, o.e7)([O.Z], () => O.Z.getMostRecentSelectedTextChannelId(u), [u]),
+        d = (0, o.e7)([P.Z], () => P.Z.getMostRecentSelectedTextChannelId(u), [u]),
         h = b.default.getId(),
-        p = !(0, o.e7)([f.Z], () => f.Z.isFullscreenInContext(n)) && (!P.isPlatformEmbedded || (P.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS))),
+        p = !(0, o.e7)([f.Z], () => f.Z.isFullscreenInContext(n)) && (!O.isPlatformEmbedded || (O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS))),
         m = null != c && c.type !== Q.fO.ACTIVITY && c.user.id !== h,
         _ = a.useMemo(() => {
             var e;
@@ -84,7 +84,7 @@ function ea(e) {
             popoutWindow: l,
             currentWindow: _
         }),
-        C = n === X.IlC.POPOUT && P.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS);
+        C = n === X.IlC.POPOUT && O.isPlatformEmbedded && D.ZP.supportsFeature(X.eRX.POPOUT_WINDOWS);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             m
@@ -122,7 +122,7 @@ function es(e) {
         l = (0, o.e7)([B.Z], () => B.Z.getStageInstanceByChannel(t.id)),
         r = a || (null == l ? void 0 : l.invite_code) != null;
     return null != s && r
-        ? (0, i.jsx)(v.Z, {
+        ? (0, i.jsx)(N.Z, {
               channel: t,
               appContext: n,
               className: $.__invalid_leftTrayIcon,
@@ -134,12 +134,12 @@ function el(e) {
     let t,
         { channel: n, toggleRequestToSpeakSidebar: s, showRequestToSpeakSidebar: c, popoutWindow: u, popoutWindowAlwaysOnTop: d, popoutOpen: h, chatOpen: m } = e,
         _ = (0, p.bp)(),
-        E = (0, o.e7)([O.Z], () => O.Z.getVoiceChannelId() === n.id, [n.id]),
+        E = (0, o.e7)([P.Z], () => P.Z.getVoiceChannelId() === n.id, [n.id]),
         C = (0, o.e7)([j.Z], () => j.Z.can(X.Plq.CONNECT, n)),
         I = (0, U.w8)(n.id, w.pV.SPEAKER),
         x = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(n.id)),
         T = h && _ !== X.IlC.POPOUT,
-        [v, Z] = a.useState(0),
+        [N, Z] = a.useState(0),
         { isOnStartStageScreen: A } = (0, H.ZP)();
     (0, H.MV)(n);
     let M = (0, o.e7)([R.Z], () => R.Z.getToastsEnabled(n.id)),
@@ -170,7 +170,7 @@ function el(e) {
                 height: 'calc(100% - '.concat(b, ')'),
                 paddingTop: b
             },
-            disableGradients: 0 === v && S.e.TOP,
+            disableGradients: 0 === N && S.e.TOP,
             renderBottomLeft: () => (0, i.jsx)(es, { channel: n }),
             renderBottomCenter: () =>
                 E
@@ -201,7 +201,7 @@ function el(e) {
                 !M || m || T
                     ? null
                     : (0, i.jsx)(g.ZP, {
-                          children: (0, i.jsx)(N.Z, {
+                          children: (0, i.jsx)(v.Z, {
                               className: l()($.chatToasts, { [$.rtsSidebarOpen]: c }),
                               channelId: n.id
                           })
@@ -227,8 +227,8 @@ function er(e) {
             popoutWindowAlwaysOnTop: x.Z.getIsAlwaysOnTop(X.KJ3.CHANNEL_CALL_POPOUT)
         })),
         T = null != E && !E.closed,
-        { analyticsLocations: v } = (0, _.ZP)(m.Z.STAGE_CHANNEL_CALL),
-        N = (0, p.bp)(),
+        { analyticsLocations: N } = (0, _.ZP)(m.Z.STAGE_CHANNEL_CALL),
+        v = (0, p.bp)(),
         S = (0, o.e7)([f.Z], () => f.Z.getChatOpen(t.id), [t.id]),
         Z = (0, o.e7)([L.Z], () => L.Z.getGuild(t.guild_id), [t.guild_id]);
     a.useEffect(() => {
@@ -241,7 +241,7 @@ function er(e) {
     }, []);
     let { width: A = 0, ref: M } = (0, h.Z)();
     return (0, i.jsx)(_.Gt, {
-        value: v,
+        value: N,
         children: (0, i.jsxs)(g.B2, {
             children: [
                 (0, i.jsxs)('div', {
@@ -274,7 +274,7 @@ function er(e) {
                             className: $.channelChatWrapper,
                             children:
                                 S &&
-                                (!T || (T && N === X.IlC.POPOUT)) &&
+                                (!T || (T && v === X.IlC.POPOUT)) &&
                                 (0, i.jsx)(C.Z, {
                                     channel: t,
                                     guild: Z,

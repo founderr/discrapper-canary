@@ -22,8 +22,8 @@ function _(e) {
         I = (0, d.Z)(),
         x = (0, c.Z)(),
         T = (0, u.Z)(),
-        v = (0, l.Z)(),
-        N = (0, r.Z)(),
+        N = (0, l.Z)(),
+        v = (0, r.Z)(),
         S = (0, o.Z)();
     return (0, i.jsx)(s.Z, {
         object: h.qAy.CONTEXT_MENU,
@@ -49,11 +49,11 @@ function _(e) {
                 f
                     ? (0, i.jsx)(a.MenuGroup, {
                           label: p.Z.Messages.FORM_LABEL_INPUT_MODE,
-                          children: v
+                          children: N
                       })
                     : null,
                 (0, i.jsxs)(a.MenuGroup, {
-                    children: [E ? N : null, g ? S : null, I]
+                    children: [E ? v : null, g ? S : null, I]
                 })
             ]
         })
