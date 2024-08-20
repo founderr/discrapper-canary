@@ -1,95 +1,69 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return h;
     }
 });
 var r = n(735250);
 n(470079);
 var i = n(442837),
     a = n(481060),
-    s = n(782568),
-    o = n(100527),
-    l = n(906732),
-    u = n(326135),
-    c = n(299206),
-    d = n(389052),
-    _ = n(622724),
-    E = n(706454),
-    f = n(785717),
-    h = n(621853),
-    p = n(475413),
-    m = n(689938);
-function I(e) {
-    var t;
-    let { user: n, guildId: I, viewProfileItem: T } = e,
-        { trackUserProfileAction: g } = (0, f.KZ)(),
-        { analyticsLocations: S, newestAnalyticsLocation: A } = (0, l.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU),
-        N = (0, i.e7)([E.default], () => E.default.locale),
-        v = (0, i.e7)([h.Z], () => h.Z.getUserProfile(n.id)),
-        O = null == v ? void 0 : v.application,
-        R = (0, d.Z)({
-            user: n,
-            location: A,
+    s = n(100527),
+    o = n(906732),
+    l = n(299206),
+    u = n(389052),
+    c = n(622724),
+    d = n(785717),
+    _ = n(621853),
+    E = n(475413),
+    f = n(689938);
+function h(e) {
+    let { user: t, guildId: n, viewProfileItem: h } = e,
+        { trackUserProfileAction: p } = (0, d.KZ)(),
+        { analyticsLocations: m, newestAnalyticsLocation: I } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
+        T = (0, i.e7)([_.Z], () => _.Z.getUserProfile(t.id)),
+        g = null == T ? void 0 : T.application,
+        S = (0, u.Z)({
+            user: t,
+            location: I,
             color: 'danger',
             onBlock: () =>
-                g({
+                p({
                     action: 'BLOCK',
-                    analyticsLocations: S
+                    analyticsLocations: m
                 }),
             onUnblock: () =>
-                g({
+                p({
                     action: 'UNBLOCK',
-                    analyticsLocations: S
+                    analyticsLocations: m
                 })
         }),
-        C = (0, _.Z)({
-            user: n,
-            guildId: I,
-            location: A,
+        A = (0, c.Z)({
+            user: t,
+            guildId: n,
+            location: I,
             color: 'danger',
             onAction: () =>
-                g({
+                p({
                     action: 'REPORT',
-                    analyticsLocations: S
+                    analyticsLocations: m
                 })
         }),
-        y =
-            null == O
-                ? null
-                : (0, r.jsx)(a.MenuItem, {
-                      id: 'report-app',
-                      label: m.Z.Messages.REPORT_APP,
-                      color: 'danger',
-                      action: () => {
-                          g({
-                              action: 'REPORT_APP',
-                              analyticsLocations: S
-                          }),
-                              (0, s.Z)(
-                                  (0, u.G)({
-                                      id: O.id,
-                                      name: n.username,
-                                      locale: N
-                                  })
-                              );
-                      }
-                  }),
-        D = [
-            [T],
-            [R, C, y],
+        N = [
+            [h],
+            [S, A],
             [
-                (0, c.Z)({
-                    id: null == v ? void 0 : null === (t = v.application) || void 0 === t ? void 0 : t.id,
-                    label: m.Z.Messages.COPY_ID_APP,
+                (0, l.Z)({
+                    id: null == g ? void 0 : g.id,
+                    label: f.Z.Messages.COPY_ID_APP,
                     onSuccess: () =>
-                        g({
+                        p({
                             action: 'COPY_APP_ID',
-                            analyticsLocations: S
+                            analyticsLocations: m
                         })
                 })
             ]
         ];
-    return D.every((e) => e.every((e) => null == e))
+    return N.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(a.Popout, {
               renderPopout: (e) => {
@@ -98,15 +72,15 @@ function I(e) {
                       navId: 'user-bot-profile-overflow-menu',
                       onSelect: void 0,
                       onClose: t,
-                      'aria-label': m.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
-                      children: D.map((e, t) => (0, r.jsx)(a.MenuGroup, { children: e.map((e) => e) }, t))
+                      'aria-label': f.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
+                      children: N.map((e, t) => (0, r.jsx)(a.MenuGroup, { children: e.map((e) => e) }, t))
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(p.oY, {
+                  (0, r.jsx)(E.oY, {
                       action: 'PRESS_OPTIONS',
                       icon: a.MoreHorizontalIcon,
-                      tooltipText: m.Z.Messages.MORE,
+                      tooltipText: f.Z.Messages.MORE,
                       ...e
                   })
           });

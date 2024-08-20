@@ -105,7 +105,6 @@ function C(e) {
     (c.BLOCK = 'BLOCK'),
     (c.UNBLOCK = 'UNBLOCK'),
     (c.REPORT = 'REPORT'),
-    (c.REPORT_APP = 'REPORT_APP'),
     (c.COPY_USERNAME = 'COPY_USERNAME'),
     (c.COPY_USER_ID = 'COPY_USER_ID'),
     (c.COPY_APP_ID = 'COPY_APP_ID'),
