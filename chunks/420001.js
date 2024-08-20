@@ -114,19 +114,20 @@ let I = {
         });
     },
     onSelect(e) {
-        let { results: t, index: n, type: r, options: i, channel: a } = e,
-            o = h.Z.onSelect({
+        let { results: t, index: n, type: r, options: i, channel: a, guild: o } = e,
+            l = h.Z.onSelect({
                 results: t,
                 index: n,
                 type: r,
                 options: i,
                 channel: a,
+                guild: o,
                 location: s.Vh.SUGGESTION
             });
-        return null == o
+        return null == l
             ? null
             : {
-                  ...o,
+                  ...l,
                   type: f.z2.COMMAND_SUGGESTION
               };
     }

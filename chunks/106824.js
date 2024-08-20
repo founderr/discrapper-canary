@@ -161,6 +161,7 @@ class d extends r.EventEmitter {
                       type: t ? o.QB.SEND : o.QB.INSERT,
                       options: _,
                       channel: this.props.channel,
+                      guild: this.props.guild,
                       tabOrEnter: n,
                       queryText: null === (r = this.state.query) || void 0 === r ? void 0 : r.queryText
                   });
