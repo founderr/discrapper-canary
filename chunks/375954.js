@@ -236,7 +236,7 @@ class Y extends (r = u.ZP.Store) {
                 return;
             }
             if (!i.ready) return !1;
-            null != n.nonce && n.state !== w.yb.SENDING && x.has(n.nonce) && ((i = i.remove(n.nonce)), x.delete(n.nonce)), (i = i.receiveMessage(n, R.Z.isAtBottom(t))), d.Z.commit(i);
+            null != n.nonce && n.state !== w.yb.SENDING && x.has(n.nonce) && ((i = i.remove(n.nonce)), x.delete(n.nonce)), (i = i.receiveMessage(n, !0 === R.Z.isAtBottom(t))), d.Z.commit(i);
         },
         MESSAGE_SEND_FAILED: function (e) {
             let { channelId: t, messageId: n, reason: r } = e,

@@ -38,9 +38,9 @@ var i,
     g = t(783097),
     P = t(695676),
     L = t(176412),
-    b = t(226026),
-    R = t(753972),
-    S = t(981631),
+    S = t(226026),
+    b = t(753972),
+    R = t(981631),
     T = t(217702),
     M = t(231338),
     y = t(689938),
@@ -50,7 +50,7 @@ function Z(e) {
     var n;
     let { application: t, look: i = 'large_banner', isPartner: a, onClick: o, bannerImageStyle: r, enableVideoBanner: s = !0, children: c, sectionName: d, resultsPosition: m, tracksImpression: p = !0, disabled: _ = !1 } = e,
         C = null !== (n = (0, u.Z)(_)) && void 0 !== n ? n : _;
-    return (0, l.jsx)(H, {
+    return (0, l.jsx)(U, {
         application: t,
         onClick: o,
         sectionName: d,
@@ -60,11 +60,11 @@ function Z(e) {
         look: i,
         children:
             'icon' === i
-                ? (0, l.jsx)(U, {
+                ? (0, l.jsx)(H, {
                       application: t,
                       children: c
                   })
-                : (0, l.jsx)(k, {
+                : (0, l.jsx)(D, {
                       application: t,
                       look: i,
                       isPartner: a,
@@ -75,10 +75,10 @@ function Z(e) {
                   })
     });
 }
-function H(e) {
+function U(e) {
     let { application: n, onClick: t, children: i, sectionName: a, resultsPosition: r, tracksImpression: c, disabled: u, containerStyle: m, look: p } = e,
         { name: _, description: C } = o.useMemo(() => (0, g.sl)(n, { fakeAppIconURL: O }), [n]),
-        { trackItemImpressionRef: f } = (0, b.Z)({
+        { trackItemImpressionRef: f } = (0, S.Z)({
             applicationId: n.id,
             sectionName: a,
             sectionPosition: r
@@ -112,7 +112,7 @@ function H(e) {
               children: (0, l.jsx)(d.FocusBlock, { children: i })
           });
 }
-function U(e) {
+function H(e) {
     let { application: n, children: t } = e,
         { name: i, iconURL: a } = o.useMemo(() => (0, g.sl)(n, { fakeAppIconURL: O }), [n]);
     return (0, l.jsx)(d.Tooltip, {
@@ -124,7 +124,7 @@ function U(e) {
                 className: j.iconContainer,
                 ...n,
                 children: [
-                    (0, l.jsx)(R.Z, {
+                    (0, l.jsx)(b.Z, {
                         src: a,
                         className: j.iconCard,
                         'aria-hidden': !0,
@@ -136,7 +136,7 @@ function U(e) {
         }
     });
 }
-function k(e) {
+function D(e) {
     let { application: n, look: t, isPartner: i, bannerImageStyle: a, enableVideoBanner: r, disableBannerFadeIn: c, children: u } = e,
         { iconURL: m, name: p, description: _ } = o.useMemo(() => (0, g.sl)(n, { fakeAppIconURL: O }), [n]),
         C = o.useMemo(() => (null == _ ? null : (0, L.ae)(_)), [_]),
@@ -160,7 +160,7 @@ function k(e) {
                 children: [
                     (0, l.jsx)('span', {
                         className: a,
-                        children: (0, l.jsx)(B, {
+                        children: (0, l.jsx)(k, {
                             application: n,
                             fallbackColor: f,
                             showVideo: h,
@@ -188,7 +188,7 @@ function k(e) {
             (0, l.jsxs)('div', {
                 className: s()(j.appDetailsContainer, { [j.appDetailsRowContainer]: 'row' === t }),
                 children: [
-                    (0, l.jsx)(R.Z, {
+                    (0, l.jsx)(b.Z, {
                         src: m,
                         className: s()(j.icon, { [j.rowIcon]: 'row' === t }),
                         'aria-hidden': !0,
@@ -217,11 +217,11 @@ function k(e) {
         ]
     });
 }
-function B(e) {
+function k(e) {
     let { application: n, fallbackColor: t, showVideo: i, disableFadeIn: a } = e;
     if ((0, g.BQ)(n)) {
         if ((0, g.ye)({ application: n }))
-            return (0, l.jsx)(D, {
+            return (0, l.jsx)(B, {
                 application: n,
                 showVideo: i,
                 disableFadeIn: a
@@ -238,7 +238,7 @@ function B(e) {
         disableFadeIn: a
     });
 }
-function D(e) {
+function B(e) {
     let { application: n, showVideo: t, disableFadeIn: i } = e,
         a = (0, f.Z)({
             applicationId: n.id,
@@ -314,7 +314,7 @@ function W(e) {
     return o.useCallback(
         (e) => {
             e.stopPropagation(),
-                (0, A.yw)(S.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                (0, A.yw)(R.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                     application_id: n.id,
                     section_name: t,
                     search_results_position: i,

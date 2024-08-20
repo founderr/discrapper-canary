@@ -30,7 +30,7 @@ function _(e) {
     if (
         (function (e) {
             let { guild: t, isOwner: n, canManageGuildRoleSubscriptions: r, isGuildEligibleForRoleSubscriptions: i, isExpeditedMonetizationOnboardingGuild: a, isUserInCreatorMonetizationEligibleCountry: s, shouldRestrictUpdatingRoleSubscriptionSettings: o } = e;
-            return !!t.hasFeature(d.oNc.COMMUNITY) && !!r && (!o || !!n) && (!!(t.hasFeature(d.oNc.CREATOR_MONETIZABLE) || t.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || ((!!i || !!a) && n && s));
+            return !!r && (!o || !!n) && (!!(t.hasFeature(d.oNc.CREATOR_MONETIZABLE) || t.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!t.hasFeature(d.oNc.COMMUNITY) && (!!i || !!a) && n && s));
         })(e)
     )
         return 3;

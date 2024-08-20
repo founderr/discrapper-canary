@@ -28,9 +28,9 @@ function I(e) {
     let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
         P = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
         L = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        b = (0, _.ye)({ application: L }) ? g : A.Z,
-        R = a.useRef(null),
-        { iconURL: S, name: T } = a.useMemo(
+        S = (0, _.ye)({ application: L }) ? g : A.Z,
+        b = a.useRef(null),
+        { iconURL: R, name: T } = a.useMemo(
             () =>
                 (0, _.sl)(L, {
                     fakeAppIconURL: x,
@@ -45,22 +45,22 @@ function I(e) {
         (0, i.jsxs)(r.ScrollerNone, {
             className: v.container,
             fade: !0,
-            ref: R,
+            ref: b,
             role: 'region',
             'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: T }),
             children: [
                 (0, i.jsx)(h.Z, {
                     name: T,
-                    iconURL: S,
-                    scrollerRef: R
+                    iconURL: R,
+                    scrollerRef: b
                 }),
-                null != S &&
+                null != R &&
                     (0, i.jsx)(C.Z, {
-                        src: S,
+                        src: R,
                         className: v.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(b, {
+                (0, i.jsx)(S, {
                     channel: t,
                     application: L,
                     sectionName: c

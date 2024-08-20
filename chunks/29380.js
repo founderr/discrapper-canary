@@ -32,13 +32,13 @@ function E(e) {
             launchingComponentId: x,
             onSubmissionComplete: I
         }),
-        [L, b] = a.useState(!1),
-        R = (0, c.Qv)({
+        [L, S] = a.useState(!1),
+        b = (0, c.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
         {
-            onActivityItemSelected: S,
+            onActivityItemSelected: R,
             buttonColor: T,
             buttonText: M
         } = (0, C.P7)({
@@ -47,7 +47,7 @@ function E(e) {
             location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: E,
             commandName: N,
-            autoDismissOnClick: R === c.JS.LEAVE,
+            autoDismissOnClick: b === c.JS.LEAVE,
             launchingComponentId: x,
             submitting: null != P ? P : g
         }),
@@ -69,7 +69,7 @@ function E(e) {
             return o;
         })({
             channel: n,
-            activityAction: R
+            activityAction: b
         });
     return (0, i.jsx)(o.Tooltip, {
         shouldShow: y,
@@ -85,7 +85,7 @@ function E(e) {
                 disabled: y,
                 submitting: L,
                 onClick: () => {
-                    b(!0), S(), null == n || n();
+                    S(!0), R(), null == n || n();
                 },
                 'aria-label': h.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
                     buttonText: M,
