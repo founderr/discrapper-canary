@@ -1,44 +1,44 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
         return m;
     }
 });
-var t = l(735250);
-l(470079);
-var r = l(481060),
-    i = l(776862),
-    a = l(306680),
-    u = l(626135),
-    s = l(499254),
-    o = l(827498),
-    c = l(314734),
-    d = l(981631);
+var l = t(735250);
+t(470079);
+var i = t(481060),
+    r = t(776862),
+    a = t(306680),
+    o = t(626135),
+    s = t(499254),
+    c = t(827498),
+    u = t(314734),
+    d = t(981631);
 function m(e) {
     let { channel: n, openInPopout: m, analyticsLocation: f } = e;
-    m && (0, i.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
-    let p = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
-    (0, s.y)(o.ti.DISMISSED), (0, s._)(o._b.VOICE);
-    let E = n.id,
-        v = a.ZP.hasUnread(E) || a.ZP.getMentionCount(E) > 0;
+    m && (0, r.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
+    let _ = m ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+    (0, s.y)(c.ti.DISMISSED), (0, s._)(c._b.VOICE);
+    let p = n.id,
+        h = a.ZP.hasUnread(p) || a.ZP.getMentionCount(p) > 0;
     return (
-        u.default.track(d.rMx.VOICE_PANEL_TAB_OPENED, {
+        o.default.track(d.rMx.VOICE_PANEL_TAB_OPENED, {
             tab: 'activities',
             location: f,
-            source: o._b.VOICE,
-            is_chat_badged: v
+            source: c._b.VOICE,
+            is_chat_badged: h
         }),
-        (0, r.openModalLazy)(
+        (0, i.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([l.e('64714'), l.e('21351'), l.e('38536')]).then(l.bind(l, 743161));
-                return (l) =>
-                    (0, t.jsx)(e, {
+                let { default: e } = await Promise.all([t.e('64714'), t.e('21351'), t.e('38536')]).then(t.bind(t, 743161));
+                return (t) =>
+                    (0, l.jsx)(e, {
                         channel: n,
-                        ...l
+                        ...t
                     });
             },
             {
-                modalKey: c.e9,
-                contextKey: p
+                modalKey: u.e9,
+                contextKey: _
             }
         )
     );

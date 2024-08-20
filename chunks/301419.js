@@ -1,33 +1,33 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
         return s;
     }
 });
-var t = l(423875),
-    r = l(740605),
-    i = l(206583),
-    a = l(616922),
-    u = l(689938);
+var l = t(423875),
+    i = t(740605),
+    r = t(206583),
+    a = t(616922),
+    o = t(689938);
 function s(e) {
     let n,
-        { entry: l, baseEntryData: s } = e,
-        { provider: o, image_url: c } = l.extra.media,
-        d = l.extra.artist.name,
-        m = () => (0, r.o)(a.Hw.ALBUM, l.extra.media.external_parent_id);
+        { entry: t, baseEntryData: s } = e,
+        { provider: c, image_url: u } = t.extra.media,
+        d = t.extra.artist.name,
+        m = () => (0, i.o)(a.Hw.ALBUM, t.extra.media.external_parent_id);
     return (
-        o === t.p.SPOTIFY &&
+        c === l.p.SPOTIFY &&
             (n = {
-                type: i.kG.SPOTIFY,
-                'aria-label': u.Z.Messages.SPOTIFY
+                type: r.kG.SPOTIFY,
+                'aria-label': o.Z.Messages.SPOTIFY
             }),
         {
             ...s,
             title: d,
-            thumbnailUrl: c,
-            onClickTitle: () => (0, r.o)(a.Hw.ARTIST, l.extra.artist.external_id),
+            thumbnailUrl: u,
+            onClickTitle: () => (0, i.o)(a.Hw.ARTIST, t.extra.artist.external_id),
             onClickSubtitle: m,
             onClickThumbnail: m,
-            userDescription: u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
+            userDescription: o.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
             providerIconProps: n
         }
     );

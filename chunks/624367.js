@@ -7,8 +7,8 @@ n.d(t, {
     n(789020);
 var i = n(735250);
 n(470079);
-var a = n(613828),
-    s = n(442837),
+var s = n(613828),
+    a = n(442837),
     r = n(477690),
     l = n(481060),
     o = n(668781),
@@ -22,8 +22,8 @@ var a = n(613828),
     T = n(594174),
     h = n(630388),
     N = n(823379),
-    f = n(624138),
-    C = n(317381),
+    C = n(624138),
+    f = n(317381),
     p = n(638880),
     g = n(122613),
     S = n(147865),
@@ -34,23 +34,23 @@ var a = n(613828),
     M = n(981631),
     v = n(689938),
     L = n(671487);
-let Z = (0, f.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+let Z = (0, C.Mg)(r.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function P(e) {
-    var t, n, r, f;
-    let { applicationId: P, message: b } = e,
-        { analyticsLocations: D } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
+    var t, n, r, C;
+    let { applicationId: P, message: D } = e,
+        { analyticsLocations: b } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
         j = (0, c.O)(),
-        U = b.channel_id,
-        y = (0, s.e7)([m.Z], () => m.Z.getChannel(U), [U]),
+        U = D.channel_id,
+        y = (0, a.e7)([m.Z], () => m.Z.getChannel(U), [U]),
         B = null == y ? void 0 : y.guild_id,
         k = null != y && (y.isGuildVoice() || y.isPrivate()),
-        G = (0, s.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(U)),
-        F = (null == G ? void 0 : G.applicationId) === P,
-        [w] = (0, _.Z)([P, null !== (n = null == G ? void 0 : G.applicationId) && void 0 !== n ? n : '']),
+        F = (0, a.e7)([f.ZP], () => f.ZP.getSelfEmbeddedActivityForChannel(U)),
+        G = (null == F ? void 0 : F.applicationId) === P,
+        [w] = (0, _.Z)([P, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
         V = (0, S.ZP)(null !== (r = null == w ? void 0 : w.maxParticipants) && void 0 !== r ? r : 0),
-        [H] = (0, s.Wu)([C.ZP], () => (k ? C.ZP.getEmbeddedActivitiesForChannel(U).filter((e) => e.applicationId === P) : []), [P, U, k]),
-        Y = Array.from(null !== (f = null == H ? void 0 : H.userIds) && void 0 !== f ? f : []),
-        W = (0, s.Wu)([T.default], () => Y.map((e) => T.default.getUser(e)).filter(N.lm), [Y]),
+        [H] = (0, a.Wu)([f.ZP], () => (k ? f.ZP.getEmbeddedActivitiesForChannel(U).filter((e) => e.applicationId === P) : []), [P, U, k]),
+        Y = Array.from(null !== (C = null == H ? void 0 : H.userIds) && void 0 !== C ? C : []),
+        W = (0, a.Wu)([T.default], () => Y.map((e) => T.default.getUser(e)).filter(N.lm), [Y]),
         K = (0, A.Z)({
             applicationId: P,
             size: Z,
@@ -65,7 +65,7 @@ function P(e) {
                         applicationId: H.applicationId,
                         activityChannelId: U,
                         locationObject: j.location,
-                        analyticsLocations: D
+                        analyticsLocations: b
                     });
                 else {
                     let e = y.isPrivate() && !I.Z.isCallActive(U),
@@ -73,7 +73,7 @@ function P(e) {
                             await (0, g.Z)({
                                 targetApplicationId: P,
                                 channelId: U,
-                                analyticsLocations: D
+                                analyticsLocations: b
                             });
                     e
                         ? o.Z.show({
@@ -92,12 +92,12 @@ function P(e) {
                     openInPopout: z,
                     initialSelectedApplicationId: P,
                     initialSlide: O.ag.SELECT_CHANNEL,
-                    analyticsLocations: D
+                    analyticsLocations: b
                 });
         };
     return null != w && (0, h.yE)(w.flags, M.udG.EMBEDDED)
         ? (0, i.jsx)(d.Gt, {
-              value: D,
+              value: b,
               children: (0, i.jsxs)('div', {
                   className: L.container,
                   children: [
@@ -125,7 +125,7 @@ function P(e) {
                               (0, i.jsx)(l.Heading, {
                                   className: L.learnMore,
                                   variant: 'heading-sm/medium',
-                                  children: (0, i.jsx)(a.rU, {
+                                  children: (0, i.jsx)(s.rU, {
                                       to: M.Z5c.ACTIVITY_DETAILS(P),
                                       children: v.Z.Messages.LEARN_MORE
                                   })
@@ -162,7 +162,7 @@ function P(e) {
                                               onClick: q,
                                               className: L.button,
                                               color: l.ButtonColors.GREEN,
-                                              disabled: F,
+                                              disabled: G,
                                               children: Q
                                           })
                                       })

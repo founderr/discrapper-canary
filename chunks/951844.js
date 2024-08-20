@@ -1,6 +1,6 @@
 var i,
-    a,
     s,
+    a,
     r,
     l = n(735250),
     o = n(470079),
@@ -15,10 +15,10 @@ let I = {
 };
 class m extends (r = o.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: i = I.BLOCK, style: a } = this.props;
+        let { children: e, className: t, textClassName: n, type: i = I.BLOCK, style: s } = this.props;
         return (0, l.jsxs)('div', {
             className: u()(t, i),
-            style: a,
+            style: s,
             children: [
                 (0, l.jsxs)(d.Text, {
                     variant: 'text-sm/bold',
@@ -37,14 +37,14 @@ class m extends (r = o.PureComponent) {
     }
 }
 (i = m),
-    (a = 'Types'),
-    (s = I),
-    a in i
-        ? Object.defineProperty(i, a, {
-              value: s,
+    (s = 'Types'),
+    (a = I),
+    s in i
+        ? Object.defineProperty(i, s, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
+        : (i[s] = a),
     (t.Z = m);

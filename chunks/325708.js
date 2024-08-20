@@ -69,7 +69,7 @@ function E(e) {
     let v = null != r ? r : l.Fragment;
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            !x && (0, s.jsx)('div', { style: { minWidth: T } }),
+            !x && (0, s.jsx)('div', { style: { minWidth: N } }),
             (0, s.jsx)(v, {
                 children: (0, s.jsxs)('div', {
                     className: _.chatLayerWrapper,

@@ -4,28 +4,28 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(913527),
-    s = n.n(a),
+    s = n(913527),
+    a = n.n(s),
     r = n(481060),
     l = n(689938),
     o = n(782590);
 function c(e) {
     let t,
         n,
-        { reminder: a, throttledNow: c } = e;
-    return null == a.saveData.dueAt
+        { reminder: s, throttledNow: c } = e;
+    return null == s.saveData.dueAt
         ? null
-        : (a.saveData.dueAt > c
+        : (s.saveData.dueAt > c
               ? ((n = 'text-normal'),
                 (t = l.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
-                    duration: s()
-                        .duration(a.saveData.dueAt.getTime() - c.getTime(), 'millisecond')
+                    duration: a()
+                        .duration(s.saveData.dueAt.getTime() - c.getTime(), 'millisecond')
                         .humanize()
                 })))
               : ((n = 'text-danger'),
                 (t = l.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
-                    duration: s()
-                        .duration(c.getTime() - a.saveData.dueAt.getTime(), 'millisecond')
+                    duration: a()
+                        .duration(c.getTime() - s.saveData.dueAt.getTime(), 'millisecond')
                         .humanize()
                 }))),
           (0, i.jsxs)('div', {

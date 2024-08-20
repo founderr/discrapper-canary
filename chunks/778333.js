@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     r = n(493683),
     l = n(447543),
     o = n(955415),
@@ -20,17 +20,17 @@ var i = n(735250),
 function h(e) {
     var t;
     let { invite: n, getAcceptInviteContext: h } = e,
-        N = (0, s.e7)([u.default], () => u.default.getId()),
-        f = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === N,
-        C = n.state === I.r2o.ACCEPTING,
-        p = (0, s.e7)([_.Z], () => {
+        N = (0, a.e7)([u.default], () => u.default.getId()),
+        C = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === N,
+        f = n.state === I.r2o.ACCEPTING,
+        p = (0, a.e7)([_.Z], () => {
             var e;
             return null != n.inviter && _.Z.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id);
         }),
-        g = a.useCallback(() => {
+        g = s.useCallback(() => {
             null != n.inviter && null != d.Z.getDMFromUserId(n.inviter.id) && r.Z.openPrivateChannel([n.inviter.id]);
         }, [n.inviter]),
-        S = a.useCallback(() => {
+        S = s.useCallback(() => {
             let e = h('Invite Button Embed');
             l.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
@@ -41,8 +41,8 @@ function h(e) {
     let A = p ? g : S,
         R = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND,
         x = o.Z.Button.Colors.GREEN;
-    p ? ((R = m.Z.Messages.INVITE_BUTTON_ALREADY_FRIENDS), (x = o.Z.Button.Colors.PRIMARY)) : f && ((R = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND), (x = o.Z.Button.Colors.PRIMARY));
-    let O = f ? m.Z.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.Z.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
+    p ? ((R = m.Z.Messages.INVITE_BUTTON_ALREADY_FRIENDS), (x = o.Z.Button.Colors.PRIMARY)) : C && ((R = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND), (x = o.Z.Button.Colors.PRIMARY));
+    let O = C ? m.Z.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.Z.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
         M = null != n.inviter ? ''.concat(n.inviter.username) : '',
         v = null != n.inviter ? E.ZP.getUserTag(n.inviter) : '';
     return (0, i.jsxs)(o.Z, {
@@ -66,8 +66,8 @@ function h(e) {
                     }),
                     (0, i.jsx)(o.Z.Button, {
                         onClick: A,
-                        submitting: C,
-                        isDisabled: f,
+                        submitting: f,
+                        isDisabled: C,
                         color: x,
                         children: R
                     })

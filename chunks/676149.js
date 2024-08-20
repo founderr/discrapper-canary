@@ -1,20 +1,20 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
         return s;
     }
 });
-var t = l(735250);
-l(470079);
-var r = l(120356),
-    i = l.n(r),
-    a = l(911969),
-    u = l(178519);
+var l = t(735250);
+t(470079);
+var i = t(120356),
+    r = t.n(i),
+    a = t(911969),
+    o = t(178519);
 function s(e) {
-    let { divider: n, spacing: l } = e;
-    return (0, t.jsx)('div', {
-        className: i()({
-            [u.spacingLarge]: l === a.US.LARGE,
-            [u.divider]: n
+    let { divider: n, spacing: t } = e;
+    return (0, l.jsx)('div', {
+        className: r()({
+            [o.spacingLarge]: t === a.US.LARGE,
+            [o.divider]: n
         })
     });
 }

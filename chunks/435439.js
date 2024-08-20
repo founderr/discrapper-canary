@@ -1,28 +1,28 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
         return d;
     }
 });
-var t = l(735250),
-    r = l(481060),
-    i = l(374129),
-    a = l(639351),
-    u = l(908841),
-    s = l(410441),
-    o = l(206583);
-let c = {
-    [o.kG.SPOTIFY]: u.Z,
-    [o.kG.CRUNCHYROLL]: r.CrunchyrollNeutralIcon,
-    [o.kG.XBOX]: a.Z,
-    [o.kG.PLAYSTATION]: i.Z
+var l = t(735250),
+    i = t(481060),
+    r = t(374129),
+    a = t(639351),
+    o = t(908841),
+    s = t(410441),
+    c = t(206583);
+let u = {
+    [c.kG.SPOTIFY]: o.Z,
+    [c.kG.CRUNCHYROLL]: i.CrunchyrollNeutralIcon,
+    [c.kG.XBOX]: a.Z,
+    [c.kG.PLAYSTATION]: r.Z
 };
 function d(e) {
-    let { type: n, ...l } = e,
-        r = c[n];
-    return null == r
+    let { type: n, ...t } = e,
+        i = u[n];
+    return null == i
         ? null
-        : (0, t.jsx)(s.Z, {
-              Icon: r,
-              ...l
+        : (0, l.jsx)(s.Z, {
+              Icon: i,
+              ...t
           });
 }

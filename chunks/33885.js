@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(399606),
+    s = n(470079),
+    a = n(399606),
     r = n(704215),
     l = n(481060),
     o = n(605236),
@@ -18,9 +18,9 @@ var i = n(735250),
     m = n(689938);
 function T(e) {
     let { dismissCurrentNotice: t } = e,
-        n = (0, s.e7)([d.Z], () => d.Z.getGuildId(), []),
-        T = (0, s.e7)([u.Z], () => u.Z.getGuild(n), [n]);
-    return (a.useEffect(() => {
+        n = (0, a.e7)([d.Z], () => d.Z.getGuildId(), []),
+        T = (0, a.e7)([u.Z], () => u.Z.getGuild(n), [n]);
+    return (s.useEffect(() => {
         (0, o.kk)(r.z.GUILD_ONBOARDING_UPSELL_NAGBAR);
     }, []),
     null == T)

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(904245),
+var s = n(481060),
+    a = n(904245),
     r = n(739566),
     l = n(834129),
     o = n(689938);
@@ -18,15 +18,15 @@ function c(e) {
         m = () => {
             if (null == t.messageReference) return;
             let { channel_id: e, message_id: n } = t.messageReference;
-            s.Z.jumpToMessage({
+            a.Z.jumpToMessage({
                 channelId: e,
                 messageId: n,
                 flash: !0
             });
         },
-        T = (0, a.useRedesignIconContext)().enabled
+        T = (0, s.useRedesignIconContext)().enabled
             ? {
-                  iconNode: (0, i.jsx)(a.PinIcon, {
+                  iconNode: (0, i.jsx)(s.PinIcon, {
                       size: 'sm',
                       color: 'currentColor'
                   })

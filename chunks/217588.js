@@ -1,8 +1,8 @@
 n(724458), n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    r = n.n(a),
     l = n(442837),
     o = n(481060),
     c = n(749210),
@@ -15,8 +15,8 @@ var i = n(735250),
     T = n(524444),
     h = n(98278),
     N = n(197115),
-    f = n(430824),
-    C = n(594174),
+    C = n(430824),
+    f = n(594174),
     p = n(626135),
     g = n(74538),
     S = n(453070),
@@ -29,10 +29,10 @@ var i = n(735250),
     L = n(689938),
     Z = n(450304),
     P = n(78731);
-let b = (e, t) => (t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name })),
-    D = (e) => {
+let D = (e, t) => (t ? L.Z.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format({ stickerPackName: e.name }) : L.Z.Messages.STICKER_POPOUT_PACK_INFO_UNAVAILABLE.format({ stickerPackName: e.name })),
+    b = (e) => {
         let { sticker: t, stickerPack: n } = e;
-        return a.useMemo(() => (null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => (3 !== e.length && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
+        return s.useMemo(() => (null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => (3 !== e.length && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
     };
 function j(e) {
     p.default.track(M.rMx.PREMIUM_PROMOTION_OPENED, {
@@ -71,23 +71,23 @@ function U(e) {
     });
 }
 let y = (e) => {
-        let { closePopout: t, sticker: n, channel: s, refreshPositionKey: r } = e,
+        let { closePopout: t, sticker: n, channel: a, refreshPositionKey: r } = e,
             [c, d, _] = (0, l.Wu)([A.Z], () => [A.Z.getStickerPack(n.pack_id), !A.Z.hasLoadedStickerPacks, A.Z.isPremiumPack(n.pack_id)], [n]),
-            E = D({
+            E = b({
                 sticker: n,
                 stickerPack: c
             });
         (0, S.Pq)(n.pack_id);
-        let I = (0, S.Sd)(s);
-        return (a.useEffect(() => {
+        let I = (0, S.Sd)(a);
+        return (s.useEffect(() => {
             r();
         }, [d]),
-        a.useEffect(() => {
+        s.useEffect(() => {
             p.default.track(M.rMx.OPEN_POPOUT, {
                 type: M.jXE.STICKER_POPOUT,
-                guild_id: s.getGuildId(),
+                guild_id: a.getGuildId(),
                 sticker_pack_id: n.pack_id,
-                ...(0, u.v_)(s)
+                ...(0, u.v_)(a)
             });
         }, [n.pack_id]),
         d || null == c)
@@ -101,7 +101,7 @@ let y = (e) => {
                       }),
                       (0, i.jsx)(o.Text, {
                           variant: 'text-sm/normal',
-                          children: b(c, _)
+                          children: D(c, _)
                       }),
                       (0, i.jsx)('ul', {
                           className: Z.stickersList,
@@ -143,36 +143,36 @@ let y = (e) => {
     },
     B = (e) => {
         let t,
-            { sticker: n, channel: s, closePopout: _, refreshPositionKey: h } = e,
-            [S, A] = a.useState(null),
-            [R, O] = a.useState(!1),
-            b = C.default.getCurrentUser(),
-            D = g.ZP.canUseCustomStickersEverywhere(b),
-            y = (0, l.e7)([f.Z], () => f.Z.getGuild(n.guild_id)),
+            { sticker: n, channel: a, closePopout: _, refreshPositionKey: h } = e,
+            [S, A] = s.useState(null),
+            [R, O] = s.useState(!1),
+            D = f.default.getCurrentUser(),
+            b = g.ZP.canUseCustomStickersEverywhere(D),
+            y = (0, l.e7)([C.Z], () => C.Z.getGuild(n.guild_id)),
             B = null != y,
-            [k, G] = a.useState(!1),
-            [F, w] = a.useState(null),
-            V = a.useMemo(
+            [k, F] = s.useState(!1),
+            [G, w] = s.useState(null),
+            V = s.useMemo(
                 () => ({
-                    page: null != s.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
+                    page: null != a.guild_id ? M.ZY5.GUILD_CHANNEL : M.ZY5.DM_CHANNEL,
                     section: M.jXE.STICKER_POPOUT
                 }),
-                [s.guild_id]
+                [a.guild_id]
             ),
-            { current: H } = a.useRef({
-                guild_id: s.getGuildId(),
-                ...(0, u.v_)(s)
+            { current: H } = s.useRef({
+                guild_id: a.getGuildId(),
+                ...(0, u.v_)(a)
             });
-        a.useEffect(() => {
+        s.useEffect(() => {
             (async () => {
                 (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, I.Z)(n.id)), O(!0);
             })();
         }, [n.id, B]);
-        let Y = n.guild_id === s.getGuildId(),
+        let Y = n.guild_id === a.getGuildId(),
             W = null != S,
             K = !1,
             z = 'Custom Sticker Popout';
-        D
+        b
             ? (t = B ? (Y ? L.Z.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION) : W ? L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION)
             : B
               ? (Y ? (t = L.Z.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION) : (t = L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION), (K = !0), (z = 'Custom Sticker Popout (Upsell)'))
@@ -180,15 +180,15 @@ let y = (e) => {
                 ? ((t = L.Z.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION), (K = !0), (z = 'Custom Sticker Popout (Upsell)'))
                 : ((t = L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
                       openPremiumSettings: () => {
-                          j(s), _();
+                          j(a), _();
                       }
                   })),
                   (z = 'Custom Sticker Popout (Soft Upsell)'));
-        let Q = !K && !B && W && D;
-        return (a.useEffect(() => {
+        let Q = !K && !B && W && b;
+        return (s.useEffect(() => {
             h();
         }, [R, S]),
-        a.useEffect(() => {
+        s.useEffect(() => {
             p.default.track(M.rMx.OPEN_POPOUT, {
                 type: z,
                 ...H
@@ -244,7 +244,7 @@ let y = (e) => {
                                       .slice(0, 13)
                                       .filter((e) => e.id !== n.id)
                                       .slice(0, 12),
-                                  a = null != S ? E.JO.createFromDiscoverableGuild(S) : E.JO.createFromGuildRecord(y);
+                                  s = null != S ? E.JO.createFromDiscoverableGuild(S) : E.JO.createFromGuildRecord(y);
                               return (0, i.jsxs)('div', {
                                   className: P.guildSection,
                                   children: [
@@ -253,7 +253,7 @@ let y = (e) => {
                                           children: B ? L.Z.Messages.STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : L.Z.Messages.STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
                                       }),
                                       (0, i.jsx)(m.Oe, {
-                                          expressionSourceGuild: a,
+                                          expressionSourceGuild: s,
                                           hasJoinedExpressionSourceGuild: B,
                                           isDisplayingJoinGuildButtonInPopout: Q
                                       }),
@@ -262,7 +262,7 @@ let y = (e) => {
                                               children: [
                                                   (0, i.jsx)(o.Clickable, {
                                                       onClick: () => {
-                                                          h(), G(!k);
+                                                          h(), F(!k);
                                                       },
                                                       className: P.showMoreEmojis,
                                                       children: (0, i.jsxs)(d.Z, {
@@ -294,24 +294,24 @@ let y = (e) => {
                                                                       text: e.name,
                                                                       ...T.b_,
                                                                       children: (t) => {
-                                                                          let { onMouseEnter: n, onMouseLeave: a, ...s } = t;
+                                                                          let { onMouseEnter: n, onMouseLeave: s, ...a } = t;
                                                                           return (0, i.jsx)(
                                                                               'div',
                                                                               {
-                                                                                  className: r()(P.otherEmoji, { [Z.nonInteractingSticker]: null != F && F !== e.id }),
+                                                                                  className: r()(P.otherEmoji, { [Z.nonInteractingSticker]: null != G && G !== e.id }),
                                                                                   onMouseEnter: () => {
                                                                                       null == n || n(), w(e.id);
                                                                                   },
                                                                                   onMouseLeave: () => {
-                                                                                      null == a || a(), w(null);
+                                                                                      null == s || s(), w(null);
                                                                                   },
-                                                                                  ...s,
+                                                                                  ...a,
                                                                                   children: (0, i.jsx)(x.ZP, {
                                                                                       size: 32,
                                                                                       enlargeOnInteraction: !0,
                                                                                       enlargeWithName: !1,
                                                                                       enlargeScaleFactor: 2,
-                                                                                      isInteracting: F === e.id,
+                                                                                      isInteracting: G === e.id,
                                                                                       sticker: e
                                                                                   })
                                                                               },
@@ -333,11 +333,11 @@ let y = (e) => {
             : (0, i.jsx)(T.SE, { className: Z.popoutLoader });
     };
 function k(e) {
-    let { channel: t, closePopout: n, sticker: a } = e;
+    let { channel: t, closePopout: n, sticker: s } = e;
     return (0, i.jsx)(T.W_, {
         className: Z.popoutContent,
         children: (0, i.jsx)(U, {
-            sticker: a,
+            sticker: s,
             description: L.Z.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
                 openPremiumSettings: () => {
                     n(), j(t);
@@ -347,28 +347,28 @@ function k(e) {
     });
 }
 t.Z = (e) => {
-    let { renderableSticker: t, channel: n, closePopout: a, refreshPositionKey: s } = e,
+    let { renderableSticker: t, channel: n, closePopout: s, refreshPositionKey: a } = e,
         [r, l] = (0, S.XW)(t, !0);
     if (null != r && (0, R.jl)(r))
         return (0, i.jsx)(y, {
             sticker: r,
-            closePopout: a,
+            closePopout: s,
             channel: n,
-            refreshPositionKey: s
+            refreshPositionKey: a
         });
     if (null != r && (0, R.J8)(r))
         return (0, i.jsx)(B, {
             sticker: r,
             channel: n,
-            closePopout: a,
-            refreshPositionKey: s
+            closePopout: s,
+            refreshPositionKey: a
         });
     if (!l) return (0, i.jsx)(T.SE, {});
     else if (l && null == r)
         return (0, i.jsx)(k, {
             channel: n,
-            closePopout: a,
+            closePopout: s,
             sticker: t
         });
-    return a(), null;
+    return s(), null;
 };

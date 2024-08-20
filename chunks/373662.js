@@ -10,8 +10,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     r = n(481060),
     l = n(377171),
     o = n(951394),
@@ -19,10 +19,10 @@ var i = n(735250),
     u = n(689938),
     d = n(589960);
 function _(e) {
-    let { label: t, ariaLabel: n, tooltipText: a, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: h, disabled: N, dangerous: f, separator: C, sparkle: p, showNewBadge: g, buttonClassName: S, children: A, ...R } = e,
+    let { label: t, ariaLabel: n, tooltipText: s, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: h, disabled: N, dangerous: C, separator: f, sparkle: p, showNewBadge: g, buttonClassName: S, children: A, ...R } = e,
         { canShowReactionsOnMessageHover: x } = c.Z.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
     return (0, i.jsx)(r.Tooltip, {
-        text: null != a ? a : t,
+        text: null != s ? s : t,
         color: null != _ ? _ : r.TooltipColors.PRIMARY,
         'aria-label': t,
         onTooltipShow: T,
@@ -30,19 +30,19 @@ function _(e) {
         hideOnClick: !0,
         tooltipClassName: d.tooltip,
         children: (e) => {
-            let { onMouseEnter: a, onMouseLeave: c, onClick: _ } = e;
+            let { onMouseEnter: s, onMouseLeave: c, onClick: _ } = e;
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsxs)(o.zx, {
-                        className: s()(S, { [d.hoverBarButton]: x }),
-                        onMouseEnter: a,
+                        className: a()(S, { [d.hoverBarButton]: x }),
+                        onMouseEnter: s,
                         onMouseLeave: c,
                         onClick: (e) => {
                             null == _ || _(), m(e);
                         },
                         'aria-label': null != n ? n : t,
                         disabled: N,
-                        dangerous: f,
+                        dangerous: C,
                         ...R,
                         children: [
                             null != E
@@ -54,7 +54,7 @@ function _(e) {
                                 : null,
                             null != A
                                 ? (0, i.jsx)('div', {
-                                      className: s()(d.icon, d.buttonContent),
+                                      className: a()(d.icon, d.buttonContent),
                                       children: A
                                   })
                                 : null,
@@ -67,7 +67,7 @@ function _(e) {
                                 })
                         ]
                     }),
-                    C && (0, i.jsx)(o.Z0, {})
+                    f && (0, i.jsx)(o.Z0, {})
                 ]
             });
         }
@@ -75,13 +75,13 @@ function _(e) {
 }
 function E(e) {
     let { className: t } = e;
-    return (0, i.jsx)('div', { className: s()(d.separator, t) });
+    return (0, i.jsx)('div', { className: a()(d.separator, t) });
 }
 function I(e) {
     let { children: t, ...n } = e,
-        { canShowReactionsOnMessageHover: a } = c.Z.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
+        { canShowReactionsOnMessageHover: s } = c.Z.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
     return (0, i.jsx)(o.ZP, {
-        className: s()(n.className, d.popover, { [d.popoverReactionHoverBar]: a }),
+        className: a()(n.className, d.popover, { [d.popoverReactionHoverBar]: s }),
         children: t
     });
 }

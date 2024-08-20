@@ -478,7 +478,7 @@ function ev(e) {
 }
 class eO extends _.Z {
     initialize() {
-        this.waitFor(d.default);
+        this.waitFor(d.default, a.Z);
     }
     takeSnapshot() {
         let e = this.getCurrentUser();

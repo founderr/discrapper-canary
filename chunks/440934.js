@@ -1,90 +1,90 @@
-o.r(n),
-    o.d(n, {
+t.r(n),
+    t.d(n, {
         default: function () {
-            return _;
+            return f;
         },
         openInteractionModal: function () {
             return m;
         }
     });
-var t = o(735250);
-o(470079);
-var i = o(481060),
-    a = o(112831),
-    r = o(777036),
-    c = o(970184),
-    d = o(471073),
-    l = o(293979),
-    s = o(954654),
-    u = o(689938),
-    f = o(167990);
-function _(e) {
-    let { title: n, onClose: o, transitionState: _ } = e,
-        { components: m, applicationIconURL: p, applicationName: I, submissionState: h, error: b, validators: C, onSubmit: g } = (0, l.X9)(e, o);
-    return (0, t.jsx)('form', {
+var o = t(735250);
+t(470079);
+var i = t(481060),
+    a = t(112831),
+    r = t(777036),
+    l = t(970184),
+    s = t(471073),
+    u = t(293979),
+    d = t(954654),
+    c = t(689938),
+    p = t(167990);
+function f(e) {
+    let { title: n, onClose: t, transitionState: f } = e,
+        { components: m, applicationIconURL: h, applicationName: I, submissionState: _, error: C, validators: g, onSubmit: b } = (0, u.X9)(e, t);
+    return (0, o.jsx)('form', {
         onSubmit: (e) => {
-            e.preventDefault(), g();
+            e.preventDefault(), b();
         },
-        children: (0, t.jsxs)(i.ModalRoot, {
-            transitionState: _,
+        children: (0, o.jsxs)(i.ModalRoot, {
+            transitionState: f,
             children: [
-                (0, t.jsxs)(i.ModalHeader, {
+                (0, o.jsxs)(i.ModalHeader, {
                     separator: !1,
                     children: [
-                        (0, t.jsx)(i.Avatar, {
-                            src: p,
+                        (0, o.jsx)(i.Avatar, {
+                            src: h,
                             size: i.AvatarSizes.SIZE_24,
                             'aria-label': I,
-                            className: f.applicationIcon
+                            className: p.applicationIcon
                         }),
-                        (0, t.jsx)(a.Z, {
+                        (0, o.jsx)(a.Z, {
                             color: a.Z.Colors.HEADER_PRIMARY,
                             size: a.Z.Sizes.SIZE_24,
                             children: n
                         }),
-                        (0, t.jsx)(i.ModalCloseButton, {
-                            onClick: o,
-                            className: f.closeButton
+                        (0, o.jsx)(i.ModalCloseButton, {
+                            onClick: t,
+                            className: p.closeButton
                         })
                     ]
                 }),
-                (0, t.jsxs)(i.ModalContent, {
+                (0, o.jsxs)(i.ModalContent, {
                     children: [
-                        null != b && '' !== b
-                            ? (0, t.jsx)(r.Z, {
+                        null != C && '' !== C
+                            ? (0, o.jsx)(r.Z, {
                                   messageType: r.Q.ERROR,
-                                  className: f.submissionWarning,
-                                  children: b
+                                  className: p.submissionWarning,
+                                  children: C
                               })
                             : null,
-                        (0, t.jsx)(r.Z, {
+                        (0, o.jsx)(r.Z, {
                             messageType: r.Q.WARNING,
-                            className: f.submissionWarning,
-                            children: u.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({ applicationName: I })
+                            className: p.submissionWarning,
+                            children: c.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({ applicationName: I })
                         }),
-                        (0, t.jsx)(i.FormSection, {
-                            children: (0, t.jsx)(c.Il, {
+                        (0, o.jsx)(i.FormSection, {
+                            children: (0, o.jsx)(l.Il, {
                                 modal: e,
-                                validators: C,
-                                children: (0, s.xX)(m)
+                                validators: g,
+                                children: (0, d.xX)(m)
                             })
                         })
                     ]
                 }),
-                (0, t.jsxs)(i.ModalFooter, {
+                (0, o.jsxs)(i.ModalFooter, {
                     children: [
-                        (0, t.jsx)(i.Button, {
+                        (0, o.jsx)(i.Button, {
                             type: 'submit',
                             color: i.Button.Colors.BRAND,
                             size: i.Button.Sizes.MEDIUM,
-                            submitting: h === d.i.IN_FLIGHT,
-                            children: u.Z.Messages.SUBMIT
+                            submitting: _ === s.i.IN_FLIGHT,
+                            children: c.Z.Messages.SUBMIT
                         }),
-                        (0, t.jsx)(i.Button, {
+                        (0, o.jsx)(i.Button, {
                             look: i.Button.Looks.LINK,
                             color: i.Button.Colors.PRIMARY,
-                            onClick: o,
-                            children: u.Z.Messages.CANCEL
+                            onClick: t,
+                            children: c.Z.Messages.CANCEL
                         })
                     ]
                 })
@@ -94,7 +94,7 @@ function _(e) {
 }
 function m(e) {
     (0, i.openModal)((n) =>
-        (0, t.jsx)(_, {
+        (0, o.jsx)(f, {
             ...n,
             ...e
         })

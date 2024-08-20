@@ -1,8 +1,8 @@
 n(47120), n(653041);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    r = n.n(a),
     l = n(215569),
     o = n(481060),
     c = n(140710),
@@ -15,13 +15,13 @@ var i = n(735250),
     T = n(952527),
     h = n(219021);
 let N = (e, t) => (null == e && null == t) || e === t,
-    f = (e, t) => e.findIndex((e) => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
-    C = (e, t) => {
+    C = (e, t) => e.findIndex((e) => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
+    f = (e, t) => {
         if (null == t) return e;
-        let n = f(e, t);
+        let n = C(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class p extends a.PureComponent {
+class p extends s.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -34,14 +34,14 @@ class p extends a.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: N, isForumToolbar: f, channel: C, className: p, forceAddReactions: g, reactionClassName: S, useChatFontScaling: A, forceHideReactionCreates: R, remainingReactions: x, combinedReactions: O, visibleReactionsCount: M } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: s, isGuest: a, isPendingMember: N, isForumToolbar: C, channel: f, className: p, forceAddReactions: g, reactionClassName: S, useChatFontScaling: A, forceHideReactionCreates: R, remainingReactions: x, combinedReactions: O, visibleReactionsCount: M } = this.props,
             { disableTransitionAppear: v } = this.state,
             L = A ? h : T,
             Z = M > 0;
         if (!Z && !g) return null;
         let { enabled: P } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            b = P && Z,
-            D = (g && !Z) || b;
+            D = P && Z,
+            b = (g && !Z) || D;
         return (0, i.jsxs)(l.W, {
             component: 'div',
             className: r()(L.reactions, p),
@@ -56,17 +56,17 @@ class p extends a.PureComponent {
                     reactions: O,
                     message: e,
                     readOnly: n,
-                    isLurking: a,
-                    isGuest: s,
+                    isLurking: s,
+                    isGuest: a,
                     isPendingMember: N,
-                    isForumToolbar: f,
+                    isForumToolbar: C,
                     useChatFontScaling: A,
                     className: S
                 }),
                 x > 0 &&
                     (0, i.jsx)(o.Clickable, {
                         onClick: (t) => {
-                            t.stopPropagation(), (0, I.op)(C, e);
+                            t.stopPropagation(), (0, I.op)(f, e);
                         },
                         className: r()(L.reaction, S, L.remainingReactions),
                         'aria-label': m.Z.Messages.ADD_REACTION,
@@ -79,15 +79,15 @@ class p extends a.PureComponent {
                 !t &&
                     !R &&
                     (0, i.jsx)(d.X, {
-                        tabIndex: D || this.state.isHovered ? 0 : -1,
+                        tabIndex: b || this.state.isHovered ? 0 : -1,
                         type: u.O.NORMAL,
                         message: e,
-                        channel: C,
+                        channel: f,
                         useChatFontScaling: A,
                         isHovered: this.state.isHovered,
                         className: r()({
-                            [L.forceShow]: D,
-                            [L.forceShowLook]: g || b
+                            [L.forceShow]: b,
+                            [L.forceShowLook]: g || D
                         })
                     })
             ]
@@ -114,19 +114,19 @@ class p extends a.PureComponent {
     }
 }
 t.Z = (e) => {
-    let { message: t, maxReactions: n, hoistReaction: s } = e,
+    let { message: t, maxReactions: n, hoistReaction: a } = e,
         {
             combinedReactions: r,
             remainingReactions: l,
             visibleReactionsCount: o
-        } = a.useMemo(() => {
+        } = s.useMemo(() => {
             let e = [],
-                i = C(t.reactions, s),
-                a = null != n && n < i.length ? i.slice(0, n) : i,
-                r = i.length - a.length,
+                i = f(t.reactions, a),
+                s = null != n && n < i.length ? i.slice(0, n) : i,
+                r = i.length - s.length,
                 l = i.length;
             return (
-                a.forEach((t) => {
+                s.forEach((t) => {
                     t.burst_count > 0 &&
                         e.push({
                             ...t,
@@ -145,7 +145,7 @@ t.Z = (e) => {
                     remainingReactions: r
                 }
             );
-        }, [s, n, t.reactions]);
+        }, [a, n, t.reactions]);
     return (0, i.jsx)(p, {
         ...e,
         visibleReactionsCount: o,

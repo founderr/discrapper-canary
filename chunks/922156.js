@@ -1,6 +1,6 @@
 var i,
-    a,
     s,
+    a,
     r,
     l = n(442837),
     o = n(570140),
@@ -13,15 +13,15 @@ class E extends (r = l.ZP.Store) {
         return u;
     }
 }
-(s = 'DispatchApplicationErrorStore'),
-    (a = 'displayName') in (i = E)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(a = 'DispatchApplicationErrorStore'),
+    (s = 'displayName') in (i = E)
+        ? Object.defineProperty(i, s, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
+        : (i[s] = a),
     (t.Z = new E(o.Z, {
         DISPATCH_APPLICATION_LAUNCH_SETUP_START: function () {
             null != u && null != u.code && d.includes(u.code) && (u = null);

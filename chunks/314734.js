@@ -1,39 +1,39 @@
-var t, r;
-l.d(n, {
+var l, i;
+t.d(n, {
     Gy: function () {
         return s;
     },
     Jh: function () {
-        return i;
+        return r;
     },
     K7: function () {
-        return o;
+        return c;
     },
     bS: function () {
-        return t;
+        return l;
     },
     e9: function () {
         return a;
     },
     lv: function () {
-        return c;
+        return u;
     },
     t4: function () {
-        return u;
+        return o;
     },
     u$: function () {
         return d;
     }
 }),
-    ((r = t || (t = {}))[(r.POPULAR = 0)] = 'POPULAR'),
-    (r[(r.ALPHABETICAL = 1)] = 'ALPHABETICAL');
-let i = 'app-launcher-element',
+    ((i = l || (l = {}))[(i.POPULAR = 0)] = 'POPULAR'),
+    (i[(i.ALPHABETICAL = 1)] = 'ALPHABETICAL');
+let r = 'app-launcher-element',
     a = 'app-launcher-modal',
-    u = 'app-launcher-entrypoint',
+    o = 'app-launcher-entrypoint',
     s = 500,
-    o = 668,
-    c = 'min(100vh, '.concat(o, 'px)'),
+    c = 668,
+    u = 'min(100vh, '.concat(c, 'px)'),
     d = {
         '--custom-app-launcher-width': ''.concat(s, 'px'),
-        '--custom-app-launcher-height': c
+        '--custom-app-launcher-height': u
     };

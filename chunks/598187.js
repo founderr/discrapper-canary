@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    r = n.n(a),
     l = n(913527),
     o = n.n(l),
     c = n(722770),
@@ -19,8 +19,8 @@ var i = n(735250),
     T = n(385499),
     h = n(528011),
     N = n(533244),
-    f = n(825829),
-    C = n(226192),
+    C = n(825829),
+    f = n(226192),
     p = n(36459),
     g = n(434404),
     S = n(103575),
@@ -33,19 +33,19 @@ var i = n(735250),
     L = n(83561),
     Z = n(834129),
     P = n(981631),
-    b = n(674563),
-    D = n(689938),
+    D = n(674563),
+    b = n(689938),
     j = n(549766);
 function U() {
     return (0, i.jsx)('div', { className: j.dot });
 }
 function y(e) {
     let { message: t, compact: n } = e,
-        { notificationType: a } = (0, f.FL)(t);
-    switch (a) {
-        case f.nj:
+        { notificationType: s } = (0, C.FL)(t);
+    switch (s) {
+        case C.nj:
         case u.p.RAID:
-            return (0, i.jsx)(F, {
+            return (0, i.jsx)(G, {
                 message: t,
                 compact: n
             });
@@ -55,7 +55,7 @@ function y(e) {
                 compact: n
             });
         case u.p.ACTIVITY_ALERTS_ENABLED:
-            return (0, i.jsx)(G, {
+            return (0, i.jsx)(F, {
                 message: t,
                 compact: n
             });
@@ -69,7 +69,7 @@ function B(e) {
     let { compact: t } = e;
     return (0, i.jsx)(V, {
         compact: t,
-        header: (0, i.jsxs)(a.Fragment, {
+        header: (0, i.jsxs)(s.Fragment, {
             children: [
                 (0, i.jsx)(I.CircleWarningIcon, {
                     size: 'xs',
@@ -78,14 +78,14 @@ function B(e) {
                 (0, i.jsx)(I.Text, {
                     variant: 'text-md/semibold',
                     color: 'header-secondary',
-                    children: D.Z.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_TITLE
+                    children: b.Z.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_TITLE
                 })
             ]
         }),
         content: (0, i.jsx)(I.Text, {
             variant: 'text-md/normal',
             color: 'text-muted',
-            children: D.Z.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_DESCRIPTION
+            children: b.Z.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_DESCRIPTION
         })
     });
 }
@@ -93,7 +93,7 @@ function k(e) {
     let { compact: t } = e;
     return (0, i.jsx)(V, {
         compact: t,
-        header: (0, i.jsxs)(a.Fragment, {
+        header: (0, i.jsxs)(s.Fragment, {
             children: [
                 (0, i.jsx)(I.CircleWarningIcon, {
                     size: 'xs',
@@ -102,21 +102,21 @@ function k(e) {
                 (0, i.jsx)(I.Text, {
                     variant: 'text-md/semibold',
                     color: 'header-secondary',
-                    children: D.Z.Messages.GUILD_AUTOMOD_NOTFICATION_APP_INTERACTION_BLOCKED_TITLE
+                    children: b.Z.Messages.GUILD_AUTOMOD_NOTFICATION_APP_INTERACTION_BLOCKED_TITLE
                 })
             ]
         }),
         content: (0, i.jsx)(I.Text, {
             variant: 'text-md/normal',
             color: 'text-muted',
-            children: D.Z.Messages.GUILD_AUTOMOD_NOTFICATION_APP_INTERACTION_BLOCKED_DESCRIPTION
+            children: b.Z.Messages.GUILD_AUTOMOD_NOTFICATION_APP_INTERACTION_BLOCKED_DESCRIPTION
         })
     });
 }
-function G(e) {
+function F(e) {
     var t;
-    let { message: n, compact: s } = e,
-        r = O.default.getUser((0, f.Sw)(n)),
+    let { message: n, compact: a } = e,
+        r = O.default.getUser((0, C.Sw)(n)),
         l = null === (t = R.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id,
         c = null != l && null != r ? x.ZP.getMember(l, r.id) : null,
         {
@@ -129,8 +129,8 @@ function G(e) {
             size: 12
         });
     return (0, i.jsx)(V, {
-        compact: s,
-        header: (0, i.jsxs)(a.Fragment, {
+        compact: a,
+        header: (0, i.jsxs)(s.Fragment, {
             children: [
                 (0, i.jsx)(I.SettingsInfoIcon, {
                     size: 'xs',
@@ -139,7 +139,7 @@ function G(e) {
                 (0, i.jsx)(I.Text, {
                     variant: 'text-md/semibold',
                     color: 'text-positive',
-                    children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_TITLE
+                    children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_TITLE
                 })
             ]
         }),
@@ -151,12 +151,12 @@ function G(e) {
                     children:
                         null != c &&
                         null != r &&
-                        (0, i.jsxs)(a.Fragment, {
+                        (0, i.jsxs)(s.Fragment, {
                             children: [
                                 (0, i.jsx)(I.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-normal',
-                                    children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX
+                                    children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX
                                 }),
                                 (0, i.jsx)(I.Popout, {
                                     renderPopout: function (e) {
@@ -208,27 +208,27 @@ function G(e) {
         content: (0, i.jsx)(I.Text, {
             variant: 'text-md/normal',
             color: 'text-muted',
-            children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_DESCRIPTION
+            children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_DESCRIPTION
         })
     });
 }
-function F(e) {
+function G(e) {
     var t;
-    let { message: n, compact: s } = e,
-        { joinAttempts: r, raidDatetime: l, dmsSent: u, raidType: m, resolvedReason: T } = (0, f.FL)(n),
+    let { message: n, compact: a } = e,
+        { joinAttempts: r, raidDatetime: l, dmsSent: u, raidType: m, resolvedReason: T } = (0, C.FL)(n),
         p = (0, _.e7)([R.Z], () => R.Z.getChannel(n.channel_id), [n.channel_id]),
         g = null !== (t = null == p ? void 0 : p.guild_id) && void 0 !== t ? t : null,
         { shouldShowIncidentActions: S } = (0, h.mI)(g),
         A = (0, v.sR)(n.author.id, n.channel_id),
-        x = a.useCallback(() => {
+        x = s.useCallback(() => {
             let e = null == p ? void 0 : p.guild_id;
-            null != e && (0, C.kW)(n.id, e);
+            null != e && (0, f.kW)(n.id, e);
         }, [n.id, p]),
         O = m === d.$.DM_RAID,
         M = O ? I.CircleWarningIcon : I.ChatWarningIcon;
     return (0, i.jsx)(V, {
-        compact: s,
-        header: (0, i.jsxs)(a.Fragment, {
+        compact: a,
+        header: (0, i.jsxs)(s.Fragment, {
             children: [
                 (0, i.jsx)(M, {
                     size: 'xs',
@@ -237,7 +237,7 @@ function F(e) {
                 (0, i.jsx)(I.Text, {
                     variant: 'text-md/semibold',
                     color: 'text-danger',
-                    children: O ? D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
+                    children: O ? b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
                 })
             ]
         }),
@@ -248,16 +248,16 @@ function F(e) {
                     (0, i.jsx)(I.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-normal',
-                        children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_JOINS.format({ joinCount: r })
+                        children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_JOINS.format({ joinCount: r })
                     }),
                 null != u &&
                     (0, i.jsx)(I.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-normal',
-                        children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_DMS.format({ dmsSent: u })
+                        children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_DMS.format({ dmsSent: u })
                     }),
                 null != l &&
-                    (0, i.jsxs)(a.Fragment, {
+                    (0, i.jsxs)(s.Fragment, {
                         children: [
                             (0, i.jsx)(U, {}),
                             (0, i.jsx)(I.Text, {
@@ -274,7 +274,7 @@ function F(e) {
                 ? (0, i.jsx)(I.Text, {
                       variant: 'text-md/normal',
                       color: 'text-muted',
-                      children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({ dateTime: l.toLocaleString(D.Z.getLocale(), N.pQ) })
+                      children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({ dateTime: l.toLocaleString(b.Z.getLocale(), N.pQ) })
                   })
                 : null,
         footerButtons: S
@@ -300,7 +300,7 @@ function F(e) {
                                   (0, i.jsx)(I.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'text-link',
-                                      children: D.Z.Messages.ACTIONS
+                                      children: b.Z.Messages.ACTIONS
                                   })
                               ]
                           })
@@ -317,7 +317,7 @@ function F(e) {
                               children: (0, i.jsx)(I.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-link',
-                                  children: (0, f.ge)(T)
+                                  children: (0, C.ge)(T)
                               })
                           })
                       })
@@ -328,12 +328,12 @@ function F(e) {
 }
 function w(e) {
     var t;
-    let { message: n, compact: s } = e,
+    let { message: n, compact: a } = e,
         r = null === (t = R.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id,
-        { raidDatetime: l, decisionId: c, suspiciousMentionActivityUntil: u } = (0, f.FL)(n);
+        { raidDatetime: l, decisionId: c, suspiciousMentionActivityUntil: u } = (0, C.FL)(n);
     return (0, i.jsx)(V, {
-        compact: s,
-        header: (0, i.jsxs)(a.Fragment, {
+        compact: a,
+        header: (0, i.jsxs)(s.Fragment, {
             children: [
                 (0, i.jsx)(I.CircleWarningIcon, {
                     size: 'xs',
@@ -342,7 +342,7 @@ function w(e) {
                 (0, i.jsx)(I.Text, {
                     variant: 'text-md/semibold',
                     color: 'text-danger',
-                    children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_TITLE
+                    children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_TITLE
                 })
             ]
         }),
@@ -359,7 +359,7 @@ function w(e) {
         content: (0, i.jsx)(I.Text, {
             variant: 'text-md/normal',
             color: 'text-muted',
-            children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_DESCRIPTION
+            children: b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_DESCRIPTION
         }),
         footerButtons: (0, i.jsxs)('div', {
             className: j.dotSeparatedRow,
@@ -381,7 +381,7 @@ function w(e) {
                         children: (0, i.jsx)(I.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-link',
-                            children: D.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
+                            children: b.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
                         })
                     })
                 }),
@@ -399,7 +399,7 @@ function w(e) {
                         children: (0, i.jsx)(I.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-link',
-                            children: D.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
+                            children: b.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
                         })
                     })
                 })
@@ -408,7 +408,7 @@ function w(e) {
     });
 }
 function V(e) {
-    let { compact: t, header: n, subheader: a, content: s, footerButtons: l } = e;
+    let { compact: t, header: n, subheader: s, content: a, footerButtons: l } = e;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: r()(j.embedCard, { [j.compact]: t }),
@@ -423,14 +423,14 @@ function V(e) {
                                     className: j.cardHeader,
                                     children: n
                                 }),
-                                null != a &&
+                                null != s &&
                                     (0, i.jsx)('div', {
                                         className: j.subheader,
-                                        children: a
+                                        children: s
                                     })
                             ]
                         }),
-                        s
+                        a
                     ]
                 }),
                 null != l &&
@@ -443,12 +443,12 @@ function V(e) {
     });
 }
 function H(e) {
-    let { id: t, compact: n, message: a, channel: s } = e,
+    let { id: t, compact: n, message: s, channel: a } = e,
         {
             avatarSrc: l,
             eventHandlers: { onMouseEnter: o, onMouseLeave: c }
         } = (0, L.m)(!0),
-        { notificationType: d } = (0, f.FL)(a),
+        { notificationType: d } = (0, C.FL)(s),
         _ = null == d || d === u.p.RAID;
     return (0, i.jsx)('div', {
         onMouseEnter: o,
@@ -462,7 +462,7 @@ function H(e) {
                 className: r()(j.content, { [j.compact]: n }),
                 children: [
                     (0, i.jsx)(M.nD, {
-                        message: a,
+                        message: s,
                         messageClassname: j.spanCorrection,
                         className: r()(j.usernameContainer, j.spanCorrection, { [j.compact]: n }),
                         username: (0, i.jsxs)('div', {
@@ -473,10 +473,10 @@ function H(e) {
                                     color: 'text-brand',
                                     tag: 'span',
                                     className: j.username,
-                                    children: D.Z.Messages.GUILD_AUTOMOD_USERNAME
+                                    children: b.Z.Messages.GUILD_AUTOMOD_USERNAME
                                 }),
                                 (0, i.jsx)(T.Z, {
-                                    type: b.Hb.SYSTEM_DM,
+                                    type: D.Hb.SYSTEM_DM,
                                     className: j.systemTag
                                 }),
                                 _ &&
@@ -485,7 +485,7 @@ function H(e) {
                                         color: 'header-primary',
                                         tag: 'span',
                                         className: j.spanCorrection,
-                                        children: D.Z.Messages.GUILD_AUTOMOD_NOTFICATION_ALERT_TITLE
+                                        children: b.Z.Messages.GUILD_AUTOMOD_NOTFICATION_ALERT_TITLE
                                     })
                             ]
                         }),
@@ -494,7 +494,7 @@ function H(e) {
                     }),
                     (0, i.jsx)('div', { className: j.flexLineBreak }),
                     (0, i.jsx)(y, {
-                        message: a,
+                        message: s,
                         compact: n
                     })
                 ]

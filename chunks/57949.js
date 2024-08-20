@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(772848),
-    s = n(481060),
+var s = n(772848),
+    a = n(481060),
     r = n(976255),
     l = n(667),
     o = n(626135),
@@ -14,11 +14,11 @@ var a = n(772848),
 function u(e) {
     let { guildProductListing: t, guildId: u, sourceAnalyticsLocations: d } = e,
         _ = !1,
-        E = (0, a.Z)(),
+        E = (0, s.Z)(),
         I = () => {
             _ = !0;
         };
-    (0, s.openModalLazy)(
+    (0, a.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e('96427'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('47006'), n.e('32776'), n.e('18209'), n.e('82394')]).then(n.bind(n, 578780));
             return (n) =>

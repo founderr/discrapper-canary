@@ -1,65 +1,65 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
-        return c;
+        return u;
     }
 }),
-    l(47120);
-var t = l(735250),
-    r = l(470079),
-    i = l(481060),
-    a = l(911969),
-    u = l(970184),
-    s = l(293979),
-    o = l(203079);
-function c(e) {
+    t(47120);
+var l = t(735250),
+    i = t(470079),
+    r = t(481060),
+    a = t(911969),
+    o = t(970184),
+    s = t(293979),
+    c = t(203079);
+function u(e) {
     let n;
-    let { type: l, style: c, label: d, placeholder: m, minLength: f, maxLength: p, required: E, value: v } = e,
-        [C, h] = r.useState(null != v ? v : ''),
+    let { type: t, style: u, label: d, placeholder: m, minLength: f, maxLength: _, required: p, value: h } = e,
+        [C, v] = i.useState(null != h ? h : ''),
         {
-            state: N,
-            executeStateUpdate: T,
-            error: _
-        } = (0, u.Ee)(
+            state: x,
+            executeStateUpdate: E,
+            error: I
+        } = (0, o.Ee)(
             e,
-            null != v
+            null != h
                 ? {
-                      type: l,
-                      value: v
+                      type: t,
+                      value: h
                   }
                 : void 0
         ),
-        x = (0, s.hz)(e.id);
-    r.useEffect(() => {
-        (null == N ? void 0 : N.type) === l && h(N.value);
-    }, [l, N]);
-    let I = {
+        T = (0, s.hz)(e.id);
+    i.useEffect(() => {
+        (null == x ? void 0 : x.type) === t && v(x.value);
+    }, [t, x]);
+    let g = {
         name: d,
         value: C,
         placeholder: m,
         minLength: f,
-        maxLength: p,
-        required: E,
+        maxLength: _,
+        required: p,
         onChange: (e) => {
-            h(e),
-                T({
-                    type: l,
+            v(e),
+                E({
+                    type: t,
                     value: e
                 });
         },
-        autoFocus: x
+        autoFocus: T
     };
-    switch (c) {
+    switch (u) {
         case a.FO.SMALL:
-            n = (0, t.jsx)(i.TextInput, { ...I });
+            n = (0, l.jsx)(r.TextInput, { ...g });
             break;
         case a.FO.PARAGRAPH:
-            n = (0, t.jsx)(i.TextArea, { ...I });
+            n = (0, l.jsx)(r.TextArea, { ...g });
     }
-    return (0, t.jsx)(i.FormItem, {
+    return (0, l.jsx)(r.FormItem, {
         title: d,
-        required: E,
-        className: o.formItem,
-        error: _,
+        required: p,
+        className: c.formItem,
+        error: I,
         children: n
     });
 }

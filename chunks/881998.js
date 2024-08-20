@@ -1,6 +1,6 @@
 var i,
-    a,
     s,
+    a,
     r,
     l = n(442837),
     o = n(570140),
@@ -16,15 +16,15 @@ class E extends (r = l.ZP.Store) {
         return _;
     }
 }
-(s = 'AuthorizedAppsStore'),
-    (a = 'displayName') in (i = E)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(a = 'AuthorizedAppsStore'),
+    (s = 'displayName') in (i = E)
+        ? Object.defineProperty(i, s, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
+        : (i[s] = a),
     (t.Z = new E(o.Z, {
         USER_AUTHORIZED_APPS_UPDATE: function (e) {
             _ = e.apps;

@@ -1,26 +1,26 @@
-l.d(n, {
+t.d(n, {
     q: function () {
-        return o;
+        return c;
     }
 });
-var t = l(481060),
-    r = l(522474),
-    i = l(592125),
-    a = l(403404),
-    u = l(701488),
-    s = l(981631);
-async function o(e) {
-    let { analyticsLocations: n, channelId: l, guildId: o, locationObject: c, initialSlide: d = u.ag.DIRECTORY, initialSelectedApplicationId: m } = e;
-    if ((0, t.hasModalOpen)(u.AC)) return;
-    let f = i.Z.getChannel(l),
-        p = r.Z.getWindowOpen(s.KJ3.CHANNEL_CALL_POPOUT);
+var l = t(481060),
+    i = t(522474),
+    r = t(592125),
+    a = t(403404),
+    o = t(701488),
+    s = t(981631);
+async function c(e) {
+    let { analyticsLocations: n, channelId: t, guildId: c, locationObject: u, initialSlide: d = o.ag.DIRECTORY, initialSelectedApplicationId: m } = e;
+    if ((0, l.hasModalOpen)(o.AC)) return;
+    let f = r.Z.getChannel(t),
+        _ = i.Z.getWindowOpen(s.KJ3.CHANNEL_CALL_POPOUT);
     await (0, a.Z)({
         analyticsLocations: n,
         channel: f,
-        guildId: o,
-        openInPopout: p,
+        guildId: c,
+        openInPopout: _,
         initialSlide: d,
         initialSelectedApplicationId: m,
-        locationObject: null != c ? c : {}
+        locationObject: null != u ? u : {}
     });
 }

@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(739566),
+var s = n(481060),
+    a = n(739566),
     r = n(834129),
     l = n(689938),
     o = n(820843);
 function c(e) {
     let { message: t, compact: n, usernameHook: c } = e,
-        u = (0, s.ZP)(t),
+        u = (0, a.ZP)(t),
         d = c(u),
         _ = l.Z.Messages.SYSTEM_MESSAGE_STAGE_SPEAKER_HOOK.format({
             username: u.nick,
@@ -20,7 +20,7 @@ function c(e) {
         });
     return (0, i.jsx)(r.Z, {
         className: o.stageSystemMessage,
-        iconNode: (0, i.jsx)(a.MicrophoneArrowRightIcon, {
+        iconNode: (0, i.jsx)(s.MicrophoneArrowRightIcon, {
             size: 'md',
             color: 'currentColor'
         }),

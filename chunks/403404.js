@@ -1,49 +1,49 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var t = l(735250);
-l(470079);
-var r = l(481060),
-    i = l(424602),
-    a = l(397698),
-    u = l(776862),
-    s = l(701488),
-    o = l(981631);
-function c(e) {
-    let { channel: n, guildId: c, locationObject: d, openInPopout: m, initialSelectedApplicationId: f, initialSlide: p = s.ag.DIRECTORY, enableSelectedTextChannelInvite: E = !1, analyticsLocations: v, opensAppLauncherModal: C = !1 } = e,
-        h = v.length > 0 ? v[v.length - 1] : 'open-activity-shelf',
-        { enabled: N } = i.m1.getCurrentConfig({ location: h }, { autoTrackExposure: !1 });
-    if (C && N) {
+var l = t(735250);
+t(470079);
+var i = t(481060),
+    r = t(424602),
+    a = t(397698),
+    o = t(776862),
+    s = t(701488),
+    c = t(981631);
+function u(e) {
+    let { channel: n, guildId: u, locationObject: d, openInPopout: m, initialSelectedApplicationId: f, initialSlide: _ = s.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: h, opensAppLauncherModal: C = !1 } = e,
+        v = h.length > 0 ? h[h.length - 1] : 'open-activity-shelf',
+        { enabled: x } = r.m1.getCurrentConfig({ location: v }, { autoTrackExposure: !1 });
+    if (C && x) {
         null != n &&
             (0, a.Z)({
                 openInPopout: m,
                 channel: n,
-                analyticsLocation: h
+                analyticsLocation: v
             });
         return;
     }
-    m && (0, u.Z)(o.KJ3.CHANNEL_CALL_POPOUT);
-    let T = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
-    return (0, r.openModalLazy)(
+    m && (0, o.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
+    let E = m ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+    return (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([l.e('64714'), l.e('64430')]).then(l.bind(l, 471840));
-            return (l) =>
-                (0, t.jsx)(e, {
-                    ...l,
+            let { default: e } = await Promise.all([t.e('64714'), t.e('64430')]).then(t.bind(t, 471840));
+            return (t) =>
+                (0, l.jsx)(e, {
+                    ...t,
                     channel: n,
-                    guildId: c,
+                    guildId: u,
                     locationObject: d,
-                    initialSlide: p,
+                    initialSlide: _,
                     initialSelectedApplicationId: f,
-                    enableSelectedTextChannelInvite: E,
-                    analyticsLocations: v
+                    enableSelectedTextChannelInvite: p,
+                    analyticsLocations: h
                 });
         },
         {
             modalKey: s.AC,
-            contextKey: T
+            contextKey: E
         }
     );
 }
