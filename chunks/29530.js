@@ -4,13 +4,13 @@ t.d(n, {
     }
 }),
     t(627341);
-var s = t(278074),
-    i = t(162267),
+var i = t(278074),
+    s = t(162267),
     o = t(228168),
     l = t(689938);
 function r(e) {
     var n;
-    let t = null === (n = (0, i.Z)(e.id, !0).mutualGuilds) || void 0 === n ? void 0 : n.length;
+    let t = null === (n = (0, s.Z)(e.id, !0).mutualGuilds) || void 0 === n ? void 0 : n.length;
     return [
         {
             section: o.oh.BOT_INFO,
@@ -18,7 +18,7 @@ function r(e) {
         },
         {
             section: o.oh.MUTUAL_GUILDS,
-            text: (0, s.EQ)(t)
+            text: (0, i.EQ)(t)
                 .with(void 0, () => l.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER)
                 .with(0, () => l.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS)
                 .otherwise((e) => l.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: e }))

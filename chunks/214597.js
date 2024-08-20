@@ -1,22 +1,22 @@
 l.d(n, {
     Z: function () {
-        return s;
+        return u;
     }
 });
 var t = l(470079),
     r = l(902704),
     i = l(232567),
     a = l(720202),
-    u = l(594174);
-function s(e) {
+    s = l(594174);
+function u(e) {
     let { entry: n, channel: l } = e,
-        s = t.useRef([]);
+        u = t.useRef([]);
     return (
         t.useEffect(() => {
-            if (!(0, r.E)(s.current, n.participants))
-                (s.current = n.participants),
+            if (!(0, r.E)(u.current, n.participants))
+                (u.current = n.participants),
                     n.participants
-                        .filter((e) => null == u.default.getUser(e))
+                        .filter((e) => null == s.default.getUser(e))
                         .forEach((e) => {
                             null == l.guild_id ? (0, i.PR)(e) : a.Z.requestMember(l.guild_id, e);
                         });

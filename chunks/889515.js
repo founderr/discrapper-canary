@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return u;
+        return s;
     }
 });
 var t = l(735250);
@@ -8,9 +8,9 @@ l(470079);
 var r = l(868819),
     i = l(970184),
     a = l(53887);
-function u(e) {
+function s(e) {
     let { components: n, renderComponents: l } = e,
-        { message: u } = (0, i.CJ)();
+        { message: s } = (0, i.CJ)();
     return null == n || 0 === n.length
         ? null
         : (0, t.jsxs)('div', {
@@ -20,10 +20,10 @@ function u(e) {
                       className: a.children,
                       children: l(n)
                   }),
-                  null != u
+                  null != s
                       ? (0, t.jsx)(r.ZP, {
                             className: a.error,
-                            message: u,
+                            message: s,
                             component: e
                         })
                       : null

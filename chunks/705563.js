@@ -39,7 +39,7 @@ function C(e) {
         }),
         v = (0, a.e7)([o.Z], () => (null != T ? o.Z.getMemberCount(T) : 0)),
         S = null != N && (null != v ? v : 0) >= N,
-        { approveRequest: Z, rejectRequest: A, submitting: M } = (0, p.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId);
+        { approveRequest: Z, rejectRequest: A, submitting: M } = (0, p.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId, null == I ? void 0 : I.joinRequestId);
     return null != I && I.applicationStatus === m.wB.SUBMITTED && x
         ? (0, i.jsxs)('div', {
               className: E.buttons,

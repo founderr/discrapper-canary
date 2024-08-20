@@ -54,21 +54,21 @@ s.Z = {
             keyVersion: e
         });
     },
-    createVerifiedKey: function (e, s) {
+    createSecureFramesVerifiedKey: function (e, s) {
         n.Z.dispatch({
             type: 'SECURE_FRAMES_VERIFIED_KEY_CREATE',
             userId: e,
             key: s
         });
     },
-    deleteVerifiedKey: function (e, s) {
+    deleteSecureFramesVerifiedKey: function (e, s) {
         n.Z.dispatch({
             type: 'SECURE_FRAMES_VERIFIED_KEY_DELETE',
             userId: e,
             serializedKey: s
         });
     },
-    deleteAllUserVerifiedKeys: function (e) {
+    deleteSecureFramesUserVerifiedKeys: function (e) {
         n.Z.dispatch({
             type: 'SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE',
             userId: e

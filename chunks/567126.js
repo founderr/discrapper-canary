@@ -34,12 +34,12 @@ var l = t(735250),
     E = t(224706),
     _ = t(600164),
     S = t(152708),
-    g = t(594190),
-    h = t(569984),
+    h = t(594190),
+    g = t(569984),
     C = t(918701),
     I = t(977156),
-    N = t(28798),
-    x = t(131951),
+    x = t(28798),
+    N = t(131951),
     Z = t(449224),
     f = t(358085),
     R = t(463727),
@@ -52,8 +52,8 @@ var l = t(735250),
     O = t(689938),
     j = t(624743);
 async function P() {
-    let e = x.Z.getVideoDevices(),
-        n = (0, u.Z)(x.Z.getMediaEngine(), [o.vA.WINDOW, o.vA.SCREEN], {
+    let e = N.Z.getVideoDevices(),
+        n = (0, u.Z)(N.Z.getMediaEngine(), [o.vA.WINDOW, o.vA.SCREEN], {
             width: 176,
             height: 99
         }),
@@ -99,7 +99,7 @@ async function P() {
     };
 }
 async function D() {
-    let e = g.ZP.getRunningGames();
+    let e = h.ZP.getRunningGames();
     return (
         await Promise.all(
             e.map(async (e) => {
@@ -125,14 +125,14 @@ async function D() {
     ).filter((e) => null !== e);
 }
 function G(e) {
-    let n = (0, f.isWindows)() ? (0, T.Z)(g.ZP, Z.Z) : null,
-        t = g.ZP.getRunningGames();
+    let n = (0, f.isWindows)() ? (0, T.Z)(h.ZP, Z.Z) : null,
+        t = h.ZP.getRunningGames();
     return null != n && (0, A.Z)(e.id, n.windowHandle) ? 2 : null != t.find((n) => (0, A.Z)(e.id, n.windowHandle)) ? 1 : 0;
 }
 function U(e) {
     let { selectedSource: n, onChangeSelectedSource: t } = e,
         { enableGoLiveCaptureCard: a } = R.Z.useExperiment({ location: 'GoLive_Source_Select' }),
-        i = x.Z.supports(p.AN.GO_LIVE_HARDWARE),
+        i = N.Z.supports(p.AN.GO_LIVE_HARDWARE),
         [u, E] = s.useState(null),
         [Z, f] = s.useState(null),
         [T, D] = s.useState(null),
@@ -141,7 +141,7 @@ function U(e) {
         [k, B] = s.useState(!1),
         V = s.useRef(null),
         y = s.useRef(new d.Xp()),
-        H = (0, c.e7)([g.ZP], () => g.ZP.getRunningGames()),
+        H = (0, c.e7)([h.ZP], () => h.ZP.getRunningGames()),
         W = (function (e, n, t) {
             let l = (0, I.Zy)({ location: M.dr.STREAM_SOURCE_SELECT });
             return s.useMemo(() => {
@@ -160,7 +160,7 @@ function U(e) {
                 return null;
             }, [l, e, n, t]);
         })(
-            (0, c.e7)([h.Z], () => h.Z.quests),
+            (0, c.e7)([g.Z], () => g.Z.quests),
             H,
             Z
         ),
@@ -284,7 +284,7 @@ function U(e) {
                       className: j.sourceScroller,
                       onScroll: Q,
                       children: [
-                          b === o.vA.WINDOW && null != W && (0, l.jsx)(N.Z, { quest: W.quest }),
+                          b === o.vA.WINDOW && null != W && (0, l.jsx)(x.Z, { quest: W.quest }),
                           (0, l.jsx)(S.Z, {
                               layout: S.Z.Layout.WRAP,
                               columns: 2,
@@ -311,7 +311,7 @@ function b(e) {
     s.useEffect(() => {
         let e = u.current,
             n = () => {
-                let e = Object.entries(x.Z.getVideoDevices()).filter((e) => {
+                let e = Object.entries(N.Z.getVideoDevices()).filter((e) => {
                     let [n, t] = e;
                     return !t.disabled;
                 });

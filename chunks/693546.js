@@ -79,26 +79,26 @@ let _ = async (e) => {
             });
         }
     },
-    p = async function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.wB.APPROVED,
-            a = arguments.length > 3 ? arguments[3] : void 0;
+    p = async function (e, t, n) {
+        let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.wB.APPROVED,
+            o = arguments.length > 4 ? arguments[4] : void 0;
         (0, s.r2)({
             guildId: e,
-            actionType: n,
+            actionType: a,
             applicationUserId: t
         });
-        let o = await r.tn.patch({
-            url: d.ANM.GUILD_JOIN_REQUEST(e, t),
+        let l = await r.tn.patch({
+            url: d.ANM.GUILD_JOIN_REQUEST_ID(e, n),
             body: {
-                action: n,
-                rejection_reason: a
+                action: a,
+                rejection_reason: o
             }
         });
         i.Z.dispatch({
             type: 'GUILD_JOIN_REQUEST_UPDATE',
             guildId: e,
-            status: o.body.application_status,
-            request: o.body
+            status: l.body.application_status,
+            request: l.body
         });
     },
     m = async (e, t) => {

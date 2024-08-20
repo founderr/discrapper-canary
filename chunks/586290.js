@@ -18,15 +18,15 @@ var l = t(735250),
     E = t(537135),
     _ = t(176940),
     S = t(689938),
-    g = t(51449),
-    h = t(458623),
+    h = t(51449),
+    g = t(458623),
     C = t(224499);
 function I(e) {
     let { selectedSource: n, onChangeVideoDeviceSource: t, onChangeAudioDevice: a } = e;
     r()(null != n, 'Camera capture device cannot be null');
     let i = (0, _.Z)(),
         I = (0, u.e7)([m.Z], () => m.Z.getInputDevices()),
-        [N, x] = s.useState(
+        [x, N] = s.useState(
             (function (e, n, t) {
                 if (null != n && null != t) {
                     let l = n.find((n) => n.id === e);
@@ -37,22 +37,22 @@ function I(e) {
             })(n.id, i, I)
         );
     return (
-        null != N && a(N),
+        null != x && a(x),
         (0, l.jsx)(s.Fragment, {
             children: (0, l.jsxs)(d.FormItem, {
                 title: 'Capture Device',
-                className: h.modalContent,
+                className: g.modalContent,
                 children: [
                     (0, l.jsx)(d.FormItem, {
                         className: C.marginTop8,
                         children: (0, l.jsxs)(E.Z, {
                             children: [
                                 (0, l.jsx)('span', {
-                                    className: g.ellipsisText,
+                                    className: h.ellipsisText,
                                     children: n.name
                                 }),
                                 (0, l.jsx)(d.Button, {
-                                    className: g.changeButton,
+                                    className: h.changeButton,
                                     color: d.Button.Colors.PRIMARY,
                                     size: d.Button.Sizes.SMALL,
                                     onClick: t,
@@ -65,10 +65,10 @@ function I(e) {
                         className: C.marginTop8,
                         title: S.Z.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
                         children: (0, l.jsx)(d.SingleSelect, {
-                            value: N,
+                            value: x,
                             className: C.__invalid_marginaTop8,
                             onChange: (e) => {
-                                x(e), a(e);
+                                N(e), a(e);
                             },
                             options: o().map(I, (e) => {
                                 let { id: n, name: t } = e;

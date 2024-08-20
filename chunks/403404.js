@@ -8,23 +8,23 @@ l(470079);
 var r = l(481060),
     i = l(424602),
     a = l(397698),
-    u = l(776862),
-    s = l(701488),
+    s = l(776862),
+    u = l(701488),
     o = l(981631);
 function c(e) {
-    let { channel: n, guildId: c, locationObject: d, openInPopout: m, initialSelectedApplicationId: f, initialSlide: p = s.ag.DIRECTORY, enableSelectedTextChannelInvite: E = !1, analyticsLocations: v, opensAppLauncherModal: C = !1 } = e,
-        h = v.length > 0 ? v[v.length - 1] : 'open-activity-shelf',
-        { enabled: N } = i.m1.getCurrentConfig({ location: h }, { autoTrackExposure: !1 });
-    if (C && N) {
+    let { channel: n, guildId: c, locationObject: d, openInPopout: m, initialSelectedApplicationId: f, initialSlide: E = u.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: C, opensAppLauncherModal: N = !1 } = e,
+        v = C.length > 0 ? C[C.length - 1] : 'open-activity-shelf',
+        { enabled: _ } = i.m1.getCurrentConfig({ location: v }, { autoTrackExposure: !1 });
+    if (N && _) {
         null != n &&
             (0, a.Z)({
                 openInPopout: m,
                 channel: n,
-                analyticsLocation: h
+                analyticsLocation: v
             });
         return;
     }
-    m && (0, u.Z)(o.KJ3.CHANNEL_CALL_POPOUT);
+    m && (0, s.Z)(o.KJ3.CHANNEL_CALL_POPOUT);
     let T = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
     return (0, r.openModalLazy)(
         async () => {
@@ -35,14 +35,14 @@ function c(e) {
                     channel: n,
                     guildId: c,
                     locationObject: d,
-                    initialSlide: p,
+                    initialSlide: E,
                     initialSelectedApplicationId: f,
-                    enableSelectedTextChannelInvite: E,
-                    analyticsLocations: v
+                    enableSelectedTextChannelInvite: p,
+                    analyticsLocations: C
                 });
         },
         {
-            modalKey: s.AC,
+            modalKey: u.AC,
             contextKey: T
         }
     );

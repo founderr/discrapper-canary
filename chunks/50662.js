@@ -24,8 +24,8 @@ var t = n(913527),
 function m(e) {
     var s;
     let { guildJoinRequest: t, guild: m, guildJoinRequestUser: A } = e,
-        { createdAt: x, actionedAt: h, guildId: S, userId: P } = t,
-        { approveRequest: g, rejectRequest: b, submitting: j } = (0, N.s)(S, P),
+        { createdAt: x, actionedAt: h, guildId: S, userId: j } = t,
+        { approveRequest: P, rejectRequest: g, submitting: b } = (0, N.s)(S, j, t.joinRequestId),
         v = null === (s = t.actionedByUser) || void 0 === s ? void 0 : s.id,
         p = (0, l.e7)([E.default], () => E.default.getUser(v)),
         f = (0, l.e7)([I.ZP], () => (null != v ? I.ZP.getMember(S, v) : null), [v, S]),
@@ -126,16 +126,16 @@ function m(e) {
                                                 (0, a.jsx)(o.Button, {
                                                     ...e,
                                                     color: o.Button.Colors.GREEN,
-                                                    submitting: j,
+                                                    submitting: b,
                                                     disabled: B,
-                                                    onClick: g,
+                                                    onClick: P,
                                                     children: C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
                                                 })
                                         }),
                                         (0, a.jsx)(o.Button, {
                                             color: o.Button.Colors.RED,
-                                            onClick: b,
-                                            disabled: j,
+                                            onClick: g,
+                                            disabled: b,
                                             children: C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
                                         })
                                     ]

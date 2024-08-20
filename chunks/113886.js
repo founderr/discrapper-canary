@@ -6,24 +6,24 @@ var t = s(735250),
     u = s(246364),
     c = s(689938);
 a.default = (e) => {
-    let { guildId: a, userId: s, onConfirm: i, onError: I, modalProps: T } = e,
-        [_, l] = n.useState(),
-        C = async () => {
+    let { guildId: a, userId: s, guildJoinRequestId: i, onConfirm: I, onError: T, modalProps: _ } = e,
+        [l, C] = n.useState(),
+        d = async () => {
             try {
-                await r.Z.updateGuildJoinRequest(a, s, u.wB.REJECTED, _), null == i || i();
+                await r.Z.updateGuildJoinRequest(a, s, i, u.wB.REJECTED, l), null == I || I();
             } catch (e) {
-                null == I || I();
+                null == T || T();
             }
         };
     return (0, t.jsx)(E.ConfirmModal, {
         header: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_MODAL_TITLE,
         cancelText: c.Z.Messages.CANCEL,
         confirmText: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION,
-        onConfirm: C,
-        ...T,
+        onConfirm: d,
+        ..._,
         children: (0, t.jsx)(E.TextArea, {
-            value: _,
-            onChange: l,
+            value: l,
+            onChange: C,
             maxLength: 160
         })
     });

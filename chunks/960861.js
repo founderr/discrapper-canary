@@ -28,11 +28,11 @@ var r,
 ((r = c || (c = {}))[(r.Present = 0)] = 'Present'), (r[(r.Update = 1)] = 'Update'), (r[(r.Cancel = 2)] = 'Cancel'), (r[(r.Error = 3)] = 'Error');
 let I = 0,
     S = {};
-function E() {
+function T() {
     return h.Z.supports(v.AN.NATIVE_SCREENSHARE_PICKER);
 }
-function T() {
-    return E() && _.Z.getCurrentConfig({ location: 'NativeScreenSharePickerStore_enabled' }, { autoTrackExposure: !1 }).enableSystemPicker;
+function E() {
+    return T() && _.Z.getCurrentConfig({ location: 'NativeScreenSharePickerStore_enabled' }, { autoTrackExposure: !1 }).enableSystemPicker;
 }
 function N() {
     var e, t;
@@ -50,7 +50,7 @@ function A() {
     );
 }
 function P(e) {
-    if (T()) {
+    if (E()) {
         var t, n;
         N();
         let r = p.Z.getChannel(e),
@@ -66,10 +66,10 @@ class w extends (l = u.ZP.Store) {
         this.syncWith([h.Z, b.Z, p.Z, m.Z, g.Z], k), _.Z.subscribe({ location: 'NativeScreenSharePickerStore_initialize' }, k);
     }
     supported() {
-        return E();
+        return T();
     }
     enabled() {
-        return T();
+        return E();
     }
     presentPicker(e) {
         var t, n;

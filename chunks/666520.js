@@ -4,8 +4,8 @@ t.d(n, {
     }
 }),
     t(47120);
-var s,
-    i = t(735250),
+var i,
+    s = t(735250),
     o = t(470079),
     l = t(699581),
     r = t(442837),
@@ -29,7 +29,7 @@ function E(e, n, t) {
         e
     );
 }
-class m extends (s = o.PureComponent) {
+class m extends (i = o.PureComponent) {
     componentDidMount() {
         if (this.props.autoFocus && !this.props.hideNote) {
             let e = l.findDOMNode(this.noteRef.current);
@@ -37,12 +37,12 @@ class m extends (s = o.PureComponent) {
         }
     }
     render() {
-        let { className: e, loading: n, note: t, hideNote: s } = this.props;
-        return s
+        let { className: e, loading: n, note: t, hideNote: i } = this.props;
+        return i
             ? null
-            : (0, i.jsx)('div', {
+            : (0, s.jsx)('div', {
                   className: e,
-                  children: (0, i.jsx)(a.TextAreaAutosize, {
+                  children: (0, s.jsx)(a.TextAreaAutosize, {
                       ref: this.noteRef,
                       className: f.textarea,
                       disabled: n,
@@ -60,8 +60,8 @@ class m extends (s = o.PureComponent) {
             E(this, 'noteRef', o.createRef()),
             E(this, 'handleBlur', (e) => {
                 let n = e.currentTarget.value,
-                    { note: t, userId: s, onUpdate: i } = this.props;
-                if ((null != t ? t : '') !== n) null == i || i(), c.Z.updateNote(s, n);
+                    { note: t, userId: i, onUpdate: s } = this.props;
+                if ((null != t ? t : '') !== n) null == s || s(), c.Z.updateNote(i, n);
             }),
             E(this, 'handleKeyPress', (e) => {
                 if (13 === e.which) {
@@ -76,7 +76,7 @@ class m extends (s = o.PureComponent) {
 function p(e) {
     let n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
         t = (0, d.Z)(e.userId);
-    return (0, i.jsx)(m, {
+    return (0, s.jsx)(m, {
         ...e,
         ...t,
         hideNote: n

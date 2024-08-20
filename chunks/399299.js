@@ -16,12 +16,12 @@ var l = t(735250),
     E = t(954564),
     _ = t(98131),
     S = t(600164),
-    g = t(594190),
-    h = t(925329),
+    h = t(594190),
+    g = t(925329),
     C = t(565138),
     I = t(695346),
-    N = t(494620),
-    x = t(592125),
+    x = t(494620),
+    N = t(592125),
     Z = t(650774),
     f = t(430824),
     R = t(131951),
@@ -49,9 +49,9 @@ var l = t(735250),
     z = t(458623);
 function K(e) {
     let { selectedSource: n, selectSource: t, sourceChanged: s, onChangeSource: a } = e,
-        r = (0, i.e7)([g.ZP, v.Z], () => ((0, O.isWindows)() ? (0, P.Z)(g.ZP, v.Z) : null)),
+        r = (0, i.e7)([h.ZP, v.Z], () => ((0, O.isWindows)() ? (0, P.Z)(h.ZP, v.Z) : null)),
         c = (0, i.e7)([u.Z], () => ((null == r ? void 0 : r.id) != null ? u.Z.getApplication(r.id) : null)),
-        d = (0, i.e7)([g.ZP], () => g.ZP.getRunningGames()),
+        d = (0, i.e7)([h.ZP], () => h.ZP.getRunningGames()),
         m = (0, i.Wu)([u.Z], () => d.map((e) => (null != e.id ? u.Z.getApplication(e.id) : null)).filter(M.lm), [d]),
         E = null;
     if ((null != n ? (E = n.name) : null != r && (E = r.name), null == E)) return null;
@@ -70,9 +70,9 @@ function K(e) {
         children: (0, l.jsxs)(w.Z, {
             children: [
                 null != S
-                    ? (0, l.jsx)(h.Z, {
+                    ? (0, l.jsx)(g.Z, {
                           game: S,
-                          size: h.Z.Sizes.XSMALL,
+                          size: g.Z.Sizes.XSMALL,
                           className: F.selectedIcon
                       })
                     : (0, l.jsx)(C, { className: F.selectedIcon }),
@@ -192,8 +192,8 @@ function q(e) {
     });
 }
 function J(e) {
-    let { selectedSource: n, selectedFPS: t, selectedChannelId: a, selectedPreset: r, selectedResolution: o, sourceChanged: u, selectedGuildId: S, targetGuildPremiumTier: g, selectSource: h, selectGuild: C, sound: I, onClose: Z, onChangeSelectedFPS: f, onChangeSelectedResolution: v, onChangeSelectedPreset: L, onChangeSelectedChannelId: M, onChangeSource: O, onChangeAudioDevice: P, onChangeGuild: w, onChangeSound: B, isAnimationDone: V } = e,
-        z = (0, i.e7)([A.Z, x.Z], () => x.Z.getChannel(A.Z.getVoiceChannelId())),
+    let { selectedSource: n, selectedFPS: t, selectedChannelId: a, selectedPreset: r, selectedResolution: o, sourceChanged: u, selectedGuildId: S, targetGuildPremiumTier: h, selectSource: g, selectGuild: C, sound: I, onClose: Z, onChangeSelectedFPS: f, onChangeSelectedResolution: v, onChangeSelectedPreset: L, onChangeSelectedChannelId: M, onChangeSource: O, onChangeAudioDevice: P, onChangeGuild: w, onChangeSound: B, isAnimationDone: V } = e,
+        z = (0, i.e7)([A.Z, N.Z], () => N.Z.getChannel(A.Z.getVoiceChannelId())),
         J = (0, i.e7)([j.Z], () => j.Z.GPUDriversOutdated),
         $ = (0, i.e7)([j.Z], () => j.Z.problematicGPUDriver),
         ee = (0, i.e7)([T.default], () => T.default.getCurrentUser()),
@@ -224,7 +224,7 @@ function J(e) {
                 : (0, l.jsxs)('div', {
                       children: [
                           (0, l.jsx)(K, {
-                              selectSource: h,
+                              selectSource: g,
                               sourceChanged: u,
                               onChangeSource: O,
                               selectedSource: n
@@ -256,8 +256,8 @@ function J(e) {
             J ? (0, l.jsx)(Q, { text: W.Z.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED }) : null,
             $ ? (0, l.jsx)(Q, { text: W.Z.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({ helpCenterLink: p.Z.getArticleURL(y.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             eo &&
-                (0, l.jsx)(N.Z, {
-                    look: N.z.WARNING,
+                (0, l.jsx)(x.Z, {
+                    look: x.z.WARNING,
                     className: F.hardwareWarning,
                     children: W.Z.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
                         onClick: () => {
@@ -269,7 +269,7 @@ function J(e) {
                 selectedPreset: r,
                 selectedFPS: t,
                 selectedResolution: o,
-                targetGuildPremiumTier: g,
+                targetGuildPremiumTier: h,
                 onClose: Z,
                 onFPSChange: f,
                 onResolutionChange: v,

@@ -1,9 +1,9 @@
 l.d(n, {
     B: function () {
-        return v;
+        return C;
     },
     r: function () {
-        return h;
+        return v;
     }
 }),
     l(411104);
@@ -11,20 +11,20 @@ var t = l(735250),
     r = l(470079),
     i = l(512722),
     a = l.n(i),
-    u = l(876215),
-    s = l(775379),
+    s = l(876215),
+    u = l(775379),
     o = l(879046),
     c = l(214597),
     d = l(498187),
     m = l(482417),
     f = l(301419),
-    p = l(397035);
-let E = r.createContext(void 0);
-function v() {
-    let e = r.useContext(E);
+    E = l(397035);
+let p = r.createContext(void 0);
+function C() {
+    let e = r.useContext(p);
     return a()(null != e, 'useEntryDataContext must be used within a EntryDataContextProvider'), e;
 }
-function C(e) {
+function N(e) {
     let { entry: n, ...l } = e,
         r = {
             baseEntryData: (0, c.Z)({
@@ -34,33 +34,33 @@ function C(e) {
             ...l
         };
     switch (n.content_type) {
-        case u.s.TOP_ARTIST:
+        case s.s.TOP_ARTIST:
             return (0, t.jsx)(T, {
                 entry: n,
                 ...r
             });
-        case u.s.TOP_GAME:
-            return (0, t.jsx)(_, {
+        case s.s.TOP_GAME:
+            return (0, t.jsx)(h, {
                 entry: n,
                 ...r
             });
-        case u.s.PLAYED_GAME:
-            return (0, t.jsx)(x, {
-                entry: n,
-                ...r
-            });
-        case u.s.WATCHED_MEDIA:
+        case s.s.PLAYED_GAME:
             return (0, t.jsx)(I, {
                 entry: n,
                 ...r
             });
-        case u.s.LISTENED_SESSION:
-            return (0, t.jsx)(S, {
+        case s.s.WATCHED_MEDIA:
+            return (0, t.jsx)(x, {
                 entry: n,
                 ...r
             });
-        case u.s.LAUNCHED_ACTIVITY:
-            return (0, t.jsx)(N, {
+        case s.s.LISTENED_SESSION:
+            return (0, t.jsx)(O, {
+                entry: n,
+                ...r
+            });
+        case s.s.LAUNCHED_ACTIVITY:
+            return (0, t.jsx)(_, {
                 entry: n,
                 ...r
             });
@@ -68,20 +68,20 @@ function C(e) {
             throw Error('Unsupported content type: '.concat(n.content_type));
     }
 }
-function h(e) {
+function v(e) {
     let { errorFallback: n, ...l } = e;
-    return (0, t.jsx)(s.S, {
+    return (0, t.jsx)(u.S, {
         fallback: n,
-        children: (0, t.jsx)(C, { ...l })
+        children: (0, t.jsx)(N, { ...l })
     });
 }
-function N(e) {
+function _(e) {
     let { entry: n, children: l, ...r } = e,
         i = (0, o.Z)({
             entry: n,
             ...r
         });
-    return (0, t.jsx)(E.Provider, {
+    return (0, t.jsx)(p.Provider, {
         value: {
             parsedEntry: i,
             ...r
@@ -95,7 +95,7 @@ function T(e) {
             entry: n,
             ...r
         });
-    return (0, t.jsx)(E.Provider, {
+    return (0, t.jsx)(p.Provider, {
         value: {
             parsedEntry: i,
             ...r
@@ -103,27 +103,13 @@ function T(e) {
         children: l
     });
 }
-function _(e) {
+function h(e) {
     let { entry: n, children: l, ...r } = e,
         i = (0, d.Z)({
             entry: n,
             ...r
         });
-    return (0, t.jsx)(E.Provider, {
-        value: {
-            parsedEntry: i,
-            ...r
-        },
-        children: l
-    });
-}
-function x(e) {
-    let { entry: n, children: l, ...r } = e,
-        i = (0, d.Z)({
-            entry: n,
-            ...r
-        });
-    return (0, t.jsx)(E.Provider, {
+    return (0, t.jsx)(p.Provider, {
         value: {
             parsedEntry: i,
             ...r
@@ -133,11 +119,11 @@ function x(e) {
 }
 function I(e) {
     let { entry: n, children: l, ...r } = e,
-        i = (0, p.Z)({
+        i = (0, d.Z)({
             entry: n,
             ...r
         });
-    return (0, t.jsx)(E.Provider, {
+    return (0, t.jsx)(p.Provider, {
         value: {
             parsedEntry: i,
             ...r
@@ -145,13 +131,27 @@ function I(e) {
         children: l
     });
 }
-function S(e) {
+function x(e) {
+    let { entry: n, children: l, ...r } = e,
+        i = (0, E.Z)({
+            entry: n,
+            ...r
+        });
+    return (0, t.jsx)(p.Provider, {
+        value: {
+            parsedEntry: i,
+            ...r
+        },
+        children: l
+    });
+}
+function O(e) {
     let { entry: n, children: l, ...r } = e,
         i = (0, m.Z)({
             entry: n,
             ...r
         });
-    return (0, t.jsx)(E.Provider, {
+    return (0, t.jsx)(p.Provider, {
         value: {
             parsedEntry: i,
             ...r

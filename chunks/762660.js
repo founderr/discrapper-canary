@@ -45,35 +45,35 @@ function C(e) {
         [A, x] = t.useState(null),
         { user: h, createdAt: S } = i;
     if (null == h) throw Error('Missing user on this guild join request!');
-    let P = t.useMemo(() => new u.Z(h), [h]),
-        g = I.ZP.getUserAvatarURL(P),
-        b = s === _.wB.SUBMITTED,
-        j = t.useCallback(
+    let j = t.useMemo(() => new u.Z(h), [h]),
+        P = I.ZP.getUserAvatarURL(j),
+        g = s === _.wB.SUBMITTED,
+        b = t.useCallback(
             async (e, s) => {
                 let { guildId: n, userId: a } = e;
                 if (null == A) {
                     x(s);
                     try {
-                        await E.Z.updateGuildJoinRequest(n, a, s);
+                        await E.Z.updateGuildJoinRequest(n, a, i.joinRequestId, s);
                     } catch (e) {
                         (0, c.showToast)((0, c.createToast)(T.Z.Messages.ERROR_GENERIC_TITLE, c.ToastType.FAILURE)), x(null);
                     }
                 }
             },
-            [A]
+            [A, i.joinRequestId]
         ),
         v = async () => {
-            await j(i, _.wB.APPROVED);
+            await b(i, _.wB.APPROVED);
         },
         p = async () => {
-            await j(i, _.wB.REJECTED);
+            await b(i, _.wB.REJECTED);
         };
     return (0, a.jsxs)(c.Clickable, {
         className: l()(N.container, C),
         onClick: M,
         children: [
             (0, a.jsx)(c.Avatar, {
-                src: g,
+                src: P,
                 size: c.AvatarSizes.SIZE_40,
                 'aria-label': h.username,
                 className: N.__invalid_spacer
@@ -94,7 +94,7 @@ function C(e) {
                     })
                 ]
             }),
-            b &&
+            g &&
                 !m &&
                 (0, a.jsx)(R, {
                     icon: c.CheckmarkLargeIcon,
@@ -102,7 +102,7 @@ function C(e) {
                     submitting: A === _.wB.APPROVED,
                     disabled: null != A && A !== _.wB.APPROVED
                 }),
-            b &&
+            g &&
                 (0, a.jsx)(R, {
                     icon: c.XSmallIcon,
                     onClick: p,
@@ -120,7 +120,7 @@ function C(e) {
                                 (0, a.jsx)(e, {
                                     ...s,
                                     guild: r,
-                                    user: P
+                                    user: j
                                 });
                         },
                         {

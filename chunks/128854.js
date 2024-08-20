@@ -1,6 +1,6 @@
 l.d(n, {
     F: function () {
-        return u;
+        return s;
     },
     c: function () {
         return a;
@@ -15,7 +15,7 @@ function a() {
     if (null == e) throw Error('Could not find context for useMessageAccessoriesComponentContext.');
     return e;
 }
-function u(e) {
+function s(e) {
     let { children: n, ...l } = e;
     return (0, t.jsx)(i.Provider, {
         value: l,

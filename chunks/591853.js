@@ -721,6 +721,30 @@ function eI(e) {
                   (0, i.jsxs)('div', {
                       className: eu.streamingPopoutHero,
                       children: [
+                          (0, i.jsx)(eC, {
+                              onClick: I
+                                  ? () => {
+                                        _.default.selectVoiceChannel(r.channelId), (0, f.iV)(r);
+                                    }
+                                  : void 0,
+                              children: (0, i.jsxs)('div', {
+                                  style: { position: 'relative' },
+                                  children: [
+                                      (0, i.jsx)(b.Z, {
+                                          className: eu.streamingPopoutImg,
+                                          stream: r
+                                      }),
+                                      I &&
+                                          (0, i.jsx)('div', {
+                                              className: eu.streamCTA,
+                                              children: (0, i.jsx)(h.Text, {
+                                                  variant: 'text-md/normal',
+                                                  children: ec.Z.Messages.WATCH_STREAM
+                                              })
+                                          })
+                                  ]
+                              })
+                          }),
                           (0, i.jsxs)('div', {
                               className: eu.streamingPopoutHeader,
                               children: [
@@ -766,30 +790,6 @@ function eI(e) {
                                       ]
                                   })
                               ]
-                          }),
-                          (0, i.jsx)(eC, {
-                              onClick: I
-                                  ? () => {
-                                        _.default.selectVoiceChannel(r.channelId), (0, f.iV)(r);
-                                    }
-                                  : void 0,
-                              children: (0, i.jsxs)('div', {
-                                  style: { position: 'relative' },
-                                  children: [
-                                      (0, i.jsx)(b.Z, {
-                                          className: eu.streamingPopoutImg,
-                                          stream: r
-                                      }),
-                                      I &&
-                                          (0, i.jsx)('div', {
-                                              className: eu.streamCTA,
-                                              children: (0, i.jsx)(h.Text, {
-                                                  variant: 'text-md/normal',
-                                                  children: ec.Z.Messages.WATCH_STREAM
-                                              })
-                                          })
-                                  ]
-                              })
                           })
                       ]
                   })

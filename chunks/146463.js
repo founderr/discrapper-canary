@@ -63,10 +63,10 @@ function x(e) {
 s.Z = function (e) {
     var s;
     let { applicationStatus: n, guildJoinRequests: t, guildId: u, onScroll: I, listRef: h, atMaxMemberCapacity: S } = e,
-        P = (0, i.e7)([d.Z], () => d.Z.getGuild(u), [u]),
-        g = (0, i.e7)([_.Z], () => _.Z.isFetching()),
-        b = g ? [t.length + 25] : [t.length],
-        j = (0, N.L)({ guildId: u }),
+        j = (0, i.e7)([d.Z], () => d.Z.getGuild(u), [u]),
+        P = (0, i.e7)([_.Z], () => _.Z.isFetching()),
+        g = P ? [t.length + 25] : [t.length],
+        b = (0, N.L)({ guildId: u }),
         v = null !== (s = (0, R.A)({ guildId: u })) && void 0 !== s ? s : 0,
         p = (0, c.Z)('guild-join-requests'),
         f = (e) => {
@@ -78,10 +78,10 @@ s.Z = function (e) {
                       C.C,
                       {
                           className: r()({
-                              [m.selected]: j === l,
-                              [m.siblingSelected]: j === t[s - 1]
+                              [m.selected]: b === l,
+                              [m.siblingSelected]: b === t[s - 1]
                           }),
-                          guild: P,
+                          guild: j,
                           guildJoinRequest: l,
                           onClick: () => E.Z.setSelectedGuildJoinRequest(u, l),
                           applicationStatus: n,
@@ -90,7 +90,7 @@ s.Z = function (e) {
                       ''.concat(l.userId, '-').concat(l.applicationStatus, '-').concat(s)
                   );
         };
-    return g || 0 !== t.length
+    return P || 0 !== t.length
         ? (0, a.jsxs)(a.Fragment, {
               children: [
                   0 !== v &&
@@ -133,7 +133,7 @@ s.Z = function (e) {
                                       rowHeight: 64,
                                       renderSection: A,
                                       renderRow: f,
-                                      sections: b,
+                                      sections: g,
                                       onScroll: I,
                                       fade: !0,
                                       ...t

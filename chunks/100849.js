@@ -1,10 +1,10 @@
 t.d(n, {
     Z: function () {
-        return Z;
+        return v;
     }
 });
-var s = t(735250),
-    i = t(470079),
+var i = t(735250),
+    s = t(470079),
     o = t(120356),
     l = t.n(o),
     r = t(442837),
@@ -19,27 +19,27 @@ var s = t(735250),
     m = t(981631),
     p = t(711298),
     x = t(431776);
-function Z(e) {
-    let { user: n, type: t, showActions: o, onClose: Z } = e,
-        v = (0, r.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(n.id)),
+function v(e) {
+    let { user: n, type: t, showActions: o, onClose: v } = e,
+        Z = (0, r.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(n.id)),
         h = (0, r.e7)([_.Z], () => _.Z.getActivities(n.id)),
-        S = i.useMemo(() => h.filter((e) => e.type !== m.IIU.CUSTOM_STATUS), [h]),
-        T = i.useMemo(() => (v ? S.find((e) => e.type === m.IIU.PLAYING) : null), [S, v]),
-        A = i.useMemo(() => S.filter((e) => e !== T), [T, S]),
+        S = s.useMemo(() => h.filter((e) => e.type !== m.IIU.CUSTOM_STATUS), [h]),
+        T = s.useMemo(() => (Z ? S.find((e) => e.type === m.IIU.PLAYING) : null), [S, Z]),
+        A = s.useMemo(() => S.filter((e) => e !== T), [T, S]),
         { analyticsLocations: g, newestAnalyticsLocation: N } = (0, u.ZP)(),
-        { context: j, trackUserProfileAction: L } = (0, f.KZ)(),
-        R = {
+        { context: b, trackUserProfileAction: j } = (0, f.KZ)(),
+        L = {
             location: {
                 page: m.ZY5.USER_PROFILE,
                 section: m.jXE.PROFILE_MODAL
             }
         };
-    return (0, s.jsxs)(a.ScrollerThin, {
+    return (0, i.jsxs)(a.ScrollerThin, {
         className: x.listScroller,
         fade: !0,
         children: [
-            v
-                ? (0, s.jsx)(c.Z, {
+            Z
+                ? (0, i.jsx)(c.Z, {
                       type: t,
                       user: n,
                       source: N,
@@ -47,11 +47,11 @@ function Z(e) {
                       showChannelDetails: t === d.Y.SIMPLIFIED_PROFILE,
                       activity: T,
                       actionColor: p.actionColor,
-                      analyticsParams: R,
+                      analyticsParams: L,
                       showActions: o,
-                      onClose: Z,
+                      onClose: v,
                       onAction: () => {
-                          L({ action: 'JOIN_ACTIVITY' }),
+                          j({ action: 'JOIN_ACTIVITY' }),
                               (0, E.Ac)({
                                   activityType: m.IIU.STREAMING,
                                   activityName: null == T ? void 0 : T.name,
@@ -59,13 +59,13 @@ function Z(e) {
                                   activitySessionId: null == T ? void 0 : T.session_id,
                                   applicationId: null == T ? void 0 : T.application_id,
                                   analyticsLocations: g,
-                                  ...j
+                                  ...b
                               });
                       }
                   })
                 : null,
             A.map((e) =>
-                (0, s.jsx)(
+                (0, i.jsx)(
                     c.Z,
                     {
                         type: t,
@@ -76,11 +76,11 @@ function Z(e) {
                         className: l()(p.userProfileActivity, t === d.Y.SIMPLIFIED_PROFILE && p.simplifiedProfileActivity),
                         showChannelDetails: t === d.Y.SIMPLIFIED_PROFILE,
                         actionColor: p.actionColor,
-                        analyticsParams: R,
+                        analyticsParams: L,
                         showActions: o,
-                        onClose: Z,
+                        onClose: v,
                         onAction: () => {
-                            L({ action: 'JOIN_ACTIVITY' }),
+                            j({ action: 'JOIN_ACTIVITY' }),
                                 (0, E.Ac)({
                                     activityType: e.type,
                                     activityName: e.name,
@@ -88,7 +88,7 @@ function Z(e) {
                                     activitySessionId: e.session_id,
                                     applicationId: e.application_id,
                                     analyticsLocations: g,
-                                    ...j
+                                    ...b
                                 });
                         }
                     },

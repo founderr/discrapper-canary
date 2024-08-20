@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return h;
     }
 });
 var l = t(735250);
@@ -17,12 +17,12 @@ var s = t(442837),
     E = t(148381),
     _ = t(689938),
     S = t(787422);
-function g(e) {
-    let { selectedChannelId: n, guildId: t, onChangeSelectedChannelId: g } = e,
-        h = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
+function h(e) {
+    let { selectedChannelId: n, guildId: t, onChangeSelectedChannelId: h } = e,
+        g = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         C = (0, s.e7)([i.Z, r.ZP, o.Z], () => (0, d.h_)(r.ZP.getChannels(t), i.Z, o.Z)),
         I = (0, s.e7)([u.ZP], () => u.ZP.getVoiceStates(t)),
-        N = C.map((e) => {
+        x = C.map((e) => {
             var t;
             return {
                 name: (0, l.jsx)(m.Z, {
@@ -33,7 +33,7 @@ function g(e) {
                             : t
                                   .filter((e) => {
                                       let { user: n } = e;
-                                      return n.id !== (null == h ? void 0 : h.id);
+                                      return n.id !== (null == g ? void 0 : g.id);
                                   })
                                   .map((e) => {
                                       let { user: n } = e;
@@ -48,13 +48,13 @@ function g(e) {
         title: _.Z.Messages.GO_LIVE_MODAL_SELECT_CHANNEL_FORM_TITLE,
         scrollerInnerClassName: S.channelSelectScrollerInner,
         children: (0, l.jsx)(a.RadioGroup, {
-            options: N,
+            options: x,
             value: n,
             itemInfoClassName: S.channelInfoWrapper,
             itemTitleClassName: S.channelTitleWrapper,
             onChange: (e) => {
                 let { value: n } = e;
-                return g(n);
+                return h(n);
             }
         })
     });

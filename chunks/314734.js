@@ -1,7 +1,7 @@
 var t, r;
 l.d(n, {
     Gy: function () {
-        return s;
+        return u;
     },
     Jh: function () {
         return i;
@@ -19,7 +19,7 @@ l.d(n, {
         return c;
     },
     t4: function () {
-        return u;
+        return s;
     },
     u$: function () {
         return d;
@@ -29,11 +29,11 @@ l.d(n, {
     (r[(r.ALPHABETICAL = 1)] = 'ALPHABETICAL');
 let i = 'app-launcher-element',
     a = 'app-launcher-modal',
-    u = 'app-launcher-entrypoint',
-    s = 500,
+    s = 'app-launcher-entrypoint',
+    u = 500,
     o = 668,
     c = 'min(100vh, '.concat(o, 'px)'),
     d = {
-        '--custom-app-launcher-width': ''.concat(s, 'px'),
+        '--custom-app-launcher-width': ''.concat(u, 'px'),
         '--custom-app-launcher-height': c
     };

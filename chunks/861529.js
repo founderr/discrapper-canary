@@ -7,8 +7,8 @@ var t = l(735250),
     r = l(470079),
     i = l(120356),
     a = l.n(i),
-    u = l(454585),
-    s = l(937889),
+    s = l(454585),
+    u = l(937889),
     o = l(970184),
     c = l(870456),
     d = l(869261),
@@ -23,12 +23,12 @@ function f(e) {
                     ? null
                     : ((l =
                           null != n.message
-                              ? (0, s.rs)(n.message, c.u)
-                              : (0, s.p6)({
+                              ? (0, u.rs)(n.message, c.u)
+                              : (0, u.p6)({
                                     channelId: n.channelId,
                                     renderOptions: c.u
                                 })),
-                      u.Z.parse(e, !0, l));
+                      s.Z.parse(e, !0, l));
             }, [e, n]);
         })(n);
     return (0, t.jsx)('div', {

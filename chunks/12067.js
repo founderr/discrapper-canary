@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return v;
+        return C;
     }
 });
 var t = l(735250);
@@ -8,33 +8,33 @@ l(470079);
 var r = l(442837),
     i = l(169525),
     a = l(611170),
-    u = l(128854),
-    s = l(884182),
+    s = l(128854),
+    u = l(884182),
     o = l(546432),
     c = l(780088),
     d = l(592125),
     m = l(52824),
     f = l(823379),
-    p = l(970184),
-    E = l(981631);
-function v(e) {
-    let { message: n } = (0, p.CJ)(),
+    E = l(970184),
+    p = l(981631);
+function C(e) {
+    let { message: n } = (0, E.CJ)(),
         l = (0, r.e7)([d.Z], () => d.Z.getChannel(null == n ? void 0 : n.channel_id)),
-        { shouldHideMediaOptions: v, shouldRedactExplicitContent: C, gifAutoPlay: h, getGifFavButton: N, getOnMediaItemContextMenu: T } = (0, u.c)();
+        { shouldHideMediaOptions: C, shouldRedactExplicitContent: N, gifAutoPlay: v, getGifFavButton: _, getOnMediaItemContextMenu: T } = (0, s.c)();
     if (null == n || null == l) return null;
-    let _ = e.items.map((e) => (0, c.j0)(e.media, E.VqG, v, C)).filter(f.lm),
-        x = {
+    let h = e.items.map((e) => (0, c.j0)(e.media, p.VqG, C, N)).filter(f.lm),
+        I = {
             source: 'Media Mosaic',
             guild_id: l.guild_id,
             channel_id: l.id,
             channel_type: l.type
         },
-        I = _.length > 1 ? (0, c.Cx)(_, x) : {};
-    function S(e, n) {
+        x = h.length > 1 ? (0, c.Cx)(h, I) : {};
+    function O(e, n) {
         let l = e.originalItem;
         return (0, i.lK)(l.media, n, l.spoiler);
     }
-    let g = e.items.map((e) => {
+    let S = e.items.map((e) => {
         let l = e.media,
             t = null == T ? void 0 : T(l),
             r = {
@@ -50,24 +50,24 @@ function v(e) {
                     contentType: l.contentType
                 },
                 onContextMenu: t,
-                autoPlayGif: h,
-                getObscureReason: S,
+                autoPlayGif: v,
+                getObscureReason: O,
                 renderImageComponent: a.a,
                 renderVideoComponent: a.r,
-                renderAudioComponent: E.dG4,
-                renderPlaintextFilePreview: E.dG4,
-                renderGenericFileComponent: E.dG4,
-                renderMosaicItemFooter: E.dG4,
-                gifFavoriteButton: N(l),
+                renderAudioComponent: p.dG4,
+                renderPlaintextFilePreview: p.dG4,
+                renderGenericFileComponent: p.dG4,
+                renderMosaicItemFooter: p.dG4,
+                gifFavoriteButton: _(l),
                 onPlay: (e, n, l) => {},
                 canRemoveItem: !1,
-                onRemoveItem: E.dG4
+                onRemoveItem: p.dG4
             },
             i = (0, m.q)({
                 proxyURL: l.proxyUrl,
                 url: l.url
             });
-        return i in I && (r.onClick = I[i]), r;
+        return i in x && (r.onClick = x[i]), r;
     });
-    return (0, t.jsx)('div', { children: (0, t.jsx)(s.Z, { items: g }) });
+    return (0, t.jsx)('div', { children: (0, t.jsx)(u.Z, { items: S }) });
 }

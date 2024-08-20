@@ -16,18 +16,18 @@ function l(e) {
             E = l(3, m ? (d ? 5 : 7) : 7 & i),
             _ = l(3, m ? 7 & i : d ? 5 : 7),
             S = d ? (15 & e[5]) / 15 : 1,
-            g = (e[5] >> 4) / 15,
-            h = d ? 6 : 5,
+            h = (e[5] >> 4) / 15,
+            g = d ? 6 : 5,
             C = 0,
             I = (n, t, l) => {
                 let s = [];
-                for (let a = 0; a < t; a++) for (let r = a ? 0 : 1; r * t < n * (t - a); r++) s.push((((e[h + (C >> 1)] >> ((1 & C++) << 2)) & 15) / 7.5 - 1) * l);
+                for (let a = 0; a < t; a++) for (let r = a ? 0 : 1; r * t < n * (t - a); r++) s.push((((e[g + (C >> 1)] >> ((1 & C++) << 2)) & 15) / 7.5 - 1) * l);
                 return s;
             },
-            N = I(E, _, ((r >> 18) & 31) / 31),
-            x = I(3, 3, (((i >> 3) & 63) / 63) * 1.25),
+            x = I(E, _, ((r >> 18) & 31) / 31),
+            N = I(3, 3, (((i >> 3) & 63) / 63) * 1.25),
             Z = I(3, 3, (((i >> 9) & 63) / 63) * 1.25),
-            f = d && I(5, 5, g),
+            f = d && I(5, 5, h),
             R = (function (e) {
                 let n = e[3],
                     t = 128 & e[2],
@@ -43,21 +43,21 @@ function l(e) {
             for (let r = 0; r < A; r++, a += 4) {
                 let i = o,
                     m = c,
-                    g = u,
-                    h = S;
+                    h = u,
+                    g = S;
                 for (let e = 0, t = l(E, d ? 5 : 3); e < t; e++) L[e] = s((n / A) * (r + 0.5) * e);
                 for (let t = 0, a = l(_, d ? 5 : 3); t < a; t++) M[t] = s((n / T) * (e + 0.5) * t);
-                for (let e = 0, n = 0; e < _; e++) for (let t = e ? 0 : 1, l = 2 * M[e]; t * _ < E * (_ - e); t++, n++) i += N[n] * L[t] * l;
+                for (let e = 0, n = 0; e < _; e++) for (let t = e ? 0 : 1, l = 2 * M[e]; t * _ < E * (_ - e); t++, n++) i += x[n] * L[t] * l;
                 for (let e = 0, n = 0; e < 3; e++)
                     for (let t = e ? 0 : 1, l = 2 * M[e]; t < 3 - e; t++, n++) {
                         let e = L[t] * l;
-                        (m += x[n] * e), (g += Z[n] * e);
+                        (m += N[n] * e), (h += Z[n] * e);
                     }
-                if (d) for (let e = 0, n = 0; e < 5; e++) for (let t = e ? 0 : 1, l = 2 * M[e]; t < 5 - e; t++, n++) h += f[n] * L[t] * l;
+                if (d) for (let e = 0, n = 0; e < 5; e++) for (let t = e ? 0 : 1, l = 2 * M[e]; t < 5 - e; t++, n++) g += f[n] * L[t] * l;
                 let C = i - (2 / 3) * m,
-                    I = (3 * i - C + g) / 2,
-                    R = I - g;
-                (v[a] = l(0, 255 * t(1, I))), (v[a + 1] = l(0, 255 * t(1, R))), (v[a + 2] = l(0, 255 * t(1, C))), (v[a + 3] = l(0, 255 * t(1, h)));
+                    I = (3 * i - C + h) / 2,
+                    R = I - h;
+                (v[a] = l(0, 255 * t(1, I))), (v[a + 1] = l(0, 255 * t(1, R))), (v[a + 2] = l(0, 255 * t(1, C))), (v[a + 3] = l(0, 255 * t(1, g)));
             }
         return {
             w: A,

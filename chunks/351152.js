@@ -18,38 +18,38 @@ var s = t(120356),
     E = t(496675),
     _ = t(771845),
     S = t(259580),
-    g = t(382182),
-    h = t(148381),
+    h = t(382182),
+    g = t(148381),
     C = t(689938),
     I = t(458623),
-    N = t(544347);
-function x(e) {
+    x = t(544347);
+function N(e) {
     let { guildId: n, onClick: t } = e,
         s = (0, o.e7)([m.Z], () => m.Z.getGuild(n)),
         a = (0, o.e7)([d.ZP, m.Z, E.Z], () =>
             d.ZP.getChannels(n)[d.Zb].some((e) => {
                 let { channel: n } = e;
-                return (0, g.JL)(n, m.Z, E.Z);
+                return (0, h.JL)(n, m.Z, E.Z);
             })
         );
     return null != s && a
         ? (0, l.jsxs)(c.Clickable, {
               onClick: () => t(n),
-              className: N.guildRow,
+              className: x.guildRow,
               children: [
                   (0, l.jsx)(u.Z, {
                       guild: s,
                       size: u.Z.Sizes.SMALL,
-                      className: N.guildIcon
+                      className: x.guildIcon
                   }),
                   (0, l.jsx)(c.Text, {
                       variant: 'text-md/normal',
-                      className: N.guildName,
+                      className: x.guildName,
                       children: s.toString()
                   }),
                   (0, l.jsx)(S.Z, {
                       direction: S.Z.Directions.RIGHT,
-                      className: N.guildArrow
+                      className: x.guildArrow
                   })
               ]
           })
@@ -58,14 +58,14 @@ function x(e) {
 function Z(e) {
     let { onSelectGuild: n } = e,
         t = (0, o.e7)([_.ZP], () => _.ZP.getGuildFolders());
-    return (0, l.jsx)(h.Z, {
+    return (0, l.jsx)(g.Z, {
         title: C.Z.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
-        scrollerClassName: a()(N.guildScroller, I.marginBottom),
+        scrollerClassName: a()(x.guildScroller, I.marginBottom),
         children: i().flatMap(t, (e) => {
             let { guildIds: t } = e;
             return t.map((e) =>
                 (0, l.jsx)(
-                    x,
+                    N,
                     {
                         guildId: e,
                         onClick: n

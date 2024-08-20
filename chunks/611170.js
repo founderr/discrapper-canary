@@ -3,7 +3,7 @@ l.d(n, {
         return a;
     },
     r: function () {
-        return u;
+        return s;
     }
 });
 var t = l(591759),
@@ -21,7 +21,7 @@ function a(e) {
         renderForwardComponent: i.Vq
     });
 }
-function u(e) {
+function s(e) {
     let n = e.item.originalItem.media,
         l = t.Z.toURLSafe(n.proxyUrl);
     return null == l

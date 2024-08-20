@@ -3,7 +3,7 @@ l.d(n, {
         return T;
     },
     xX: function () {
-        return N;
+        return _;
     }
 });
 var t = l(735250);
@@ -11,33 +11,33 @@ l(470079);
 var r = l(120356),
     i = l.n(r),
     a = l(911969),
-    u = l(970184),
-    s = l(987106),
+    s = l(970184),
+    u = l(987106),
     o = l(927057),
     c = l(574597),
     d = l(378975),
     m = l(413991),
     f = l(12067),
-    p = l(676149),
-    E = l(861529),
-    v = l(770009),
-    C = l(889515),
-    h = l(751319);
-function N(e) {
+    E = l(676149),
+    p = l(861529),
+    C = l(770009),
+    N = l(889515),
+    v = l(751319);
+function _(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
                 case a.re.ACTION_ROW:
                     return (0, t.jsx)(
-                        C.Z,
+                        N.Z,
                         {
                             ...e,
-                            renderComponents: N
+                            renderComponents: _
                         },
                         n
                     );
                 case a.re.BUTTON:
-                    return (0, t.jsx)(s.Z, { ...e }, n);
+                    return (0, t.jsx)(u.Z, { ...e }, n);
                 case a.re.STRING_SELECT:
                     return (0, t.jsx)(d.Z, { ...e }, n);
                 case a.re.CHANNEL_SELECT:
@@ -49,13 +49,13 @@ function N(e) {
                 case a.re.INPUT_TEXT:
                     return (0, t.jsx)(m.Z, { ...e }, n);
                 case a.re.TEXT:
-                    return (0, t.jsx)(E.Z, { ...e }, n);
+                    return (0, t.jsx)(p.Z, { ...e }, n);
                 case a.re.MEDIA_GALLERY:
                     return (0, t.jsx)(f.Z, { ...e }, n);
                 case a.re.SEPARATOR:
-                    return (0, t.jsx)(p.Z, { ...e }, n);
+                    return (0, t.jsx)(E.Z, { ...e }, n);
                 case a.re.CONTENT_INVENTORY_ENTRY:
-                    return (0, t.jsx)(v.Z, { ...e }, n);
+                    return (0, t.jsx)(C.Z, { ...e }, n);
             }
         })(e, n.toString())
     );
@@ -66,10 +66,10 @@ function T(e) {
     return 0 === l.length
         ? null
         : (0, t.jsx)('div', {
-              className: i()([h.container, { [h.containerUikit]: n.isUIKitComponents() }]),
-              children: (0, t.jsx)(u.Il, {
+              className: i()([v.container, { [v.containerUikit]: n.isUIKitComponents() }]),
+              children: (0, t.jsx)(s.Il, {
                   message: n,
-                  children: N(l)
+                  children: _(l)
               })
           });
 }

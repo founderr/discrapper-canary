@@ -9,9 +9,9 @@ var r = l(481060),
     i = l(76927);
 function a(e) {
     let { onClick: n, Icon: l, 'aria-label': a } = e,
-        u = (0, r.useToken)(r.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY),
-        s = (0, t.jsx)(l, {
-            color: u.hex(),
+        s = (0, r.useToken)(r.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY),
+        u = (0, t.jsx)(l, {
+            color: s.hex(),
             size: 'custom',
             width: 16,
             height: 16
@@ -20,7 +20,7 @@ function a(e) {
         ? (0, t.jsx)('div', {
               className: i.container,
               'aria-label': a,
-              children: s
+              children: u
           })
         : (0, t.jsx)(r.Tooltip, {
               text: a,
@@ -29,7 +29,7 @@ function a(e) {
                       className: i.container,
                       ...e,
                       onClick: n,
-                      children: s
+                      children: u
                   })
           });
 }

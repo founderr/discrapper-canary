@@ -16,13 +16,13 @@ function d(e) {
     let { title: n, scrollerClassName: t, scrollerInnerClassName: a, children: d } = e,
         m = s.useRef(null),
         [E, _] = s.useState(!1),
-        [S, g] = s.useState(!1),
-        h = s.useCallback(() => {
+        [S, h] = s.useState(!1),
+        g = s.useCallback(() => {
             let { current: e } = m;
-            null != e && (_(!e.isScrolledToTop()), g(!e.isScrolledToBottom()));
+            null != e && (_(!e.isScrolledToTop()), h(!e.isScrolledToBottom()));
         }, []);
     return (
-        s.useLayoutEffect(() => h(), []),
+        s.useLayoutEffect(() => g(), []),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)('div', {
@@ -40,7 +40,7 @@ function d(e) {
                     children: (0, l.jsx)(i.AdvancedScroller, {
                         ref: m,
                         className: r()(u.scrollerInner, a, { [u.bottomSeparator]: S }),
-                        onScroll: h,
+                        onScroll: g,
                         children: d
                     })
                 })

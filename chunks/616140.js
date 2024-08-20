@@ -4,8 +4,8 @@ t.d(n, {
     }
 }),
     t(47120);
-var s = t(735250),
-    i = t(470079),
+var i = t(735250),
+    s = t(470079),
     o = t(442837),
     l = t(706898),
     r = t(481060),
@@ -20,47 +20,47 @@ var s = t(735250),
     m = t(970041),
     p = t(715388),
     x = t(879828),
-    Z = t(834534),
-    v = t(228168),
+    v = t(834534),
+    Z = t(228168),
     h = t(455749);
 function S(e) {
-    let { section: n, subsection: t, user: i, currentUser: o, displayProfile: l, onClose: r } = e,
+    let { section: n, subsection: t, user: s, currentUser: o, displayProfile: l, onClose: r } = e,
         { newActivityCardsEnabled: c } = (0, u.z)({ location: 'SimplifiedUserProfileModalTabs' });
-    return n === v.oh.ACTIVITY && c
-        ? (0, s.jsx)(x.Z, {
-              user: i,
+    return n === Z.oh.ACTIVITY && c
+        ? (0, i.jsx)(x.Z, {
+              user: s,
               currentUser: o,
               onClose: r
           })
-        : n === v.oh.ACTIVITY
-          ? (0, s.jsx)(I.Z, {
-                showActions: (null == o ? void 0 : o.id) !== i.id,
-                user: i,
+        : n === Z.oh.ACTIVITY
+          ? (0, i.jsx)(I.Z, {
+                showActions: (null == o ? void 0 : o.id) !== s.id,
+                user: s,
                 type: a.Y.SIMPLIFIED_PROFILE,
                 onClose: r
             })
-          : n === v.oh.MUTUAL_FRIENDS
-            ? (0, s.jsx)(_.Z, {
-                  user: i,
+          : n === Z.oh.MUTUAL_FRIENDS
+            ? (0, i.jsx)(_.Z, {
+                  user: s,
                   onClose: r
               })
-            : n === v.oh.MUTUAL_GUILDS
-              ? (0, s.jsx)(f.Z, {
-                    user: i,
+            : n === Z.oh.MUTUAL_GUILDS
+              ? (0, i.jsx)(f.Z, {
+                    user: s,
                     onClose: r
                 })
-              : n === v.oh.BOT_DATA_ACCESS
-                ? (0, s.jsx)(m.Z, { user: i })
-                : n === v.oh.BOT_INFO
-                  ? (0, s.jsx)(p.Z, {
-                        user: i,
+              : n === Z.oh.BOT_DATA_ACCESS
+                ? (0, i.jsx)(m.Z, { user: s })
+                : n === Z.oh.BOT_INFO
+                  ? (0, i.jsx)(p.Z, {
+                        user: s,
                         currentUser: o,
                         displayProfile: l,
                         subsection: t,
                         onClose: r
                     })
-                  : (0, s.jsx)(Z.Z, {
-                        user: i,
+                  : (0, i.jsx)(v.Z, {
+                        user: s,
                         currentUser: o,
                         displayProfile: l,
                         subsection: t,
@@ -69,10 +69,10 @@ function S(e) {
 }
 function T(e) {
     var n, t, a;
-    let { user: u, currentUser: I, displayProfile: _, items: f, initialSection: m = v.oh.USER_INFO, initialSubsection: p, onClose: x } = e,
-        { trackUserProfileAction: Z } = (0, d.KZ)(),
+    let { user: u, currentUser: I, displayProfile: _, items: f, initialSection: m = Z.oh.USER_INFO, initialSubsection: p, onClose: x } = e,
+        { trackUserProfileAction: v } = (0, d.KZ)(),
         T = (0, o.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        [{ section: A, subsection: g }, N] = i.useState({
+        [{ section: A, subsection: g }, N] = s.useState({
             section:
                 null !==
                     (a =
@@ -89,16 +89,16 @@ function T(e) {
                       : t.section,
             subsection: p
         });
-    i.useEffect(() => {
+    s.useEffect(() => {
         if (null == f.find((e) => e.section === A))
             N({
                 section: f[0].section,
                 subsection: void 0
             });
     }, [f, A]);
-    let j = i.useCallback(
+    let b = s.useCallback(
         (e) => {
-            Z({
+            v({
                 action: 'PRESS_SECTION',
                 section: e
             }),
@@ -107,30 +107,30 @@ function T(e) {
                     subsection: void 0
                 });
         },
-        [Z, N]
+        [v, N]
     );
     return T
-        ? (0, s.jsx)('div', {
+        ? (0, i.jsx)('div', {
               className: h.container,
-              children: (0, s.jsx)(E.Z, {})
+              children: (0, i.jsx)(E.Z, {})
           })
-        : (0, s.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               className: h.container,
               children: [
-                  (0, s.jsx)(l.n, {
+                  (0, i.jsx)(l.n, {
                       className: h.tabBar,
                       type: 'top',
                       selectedItem: A,
-                      onItemSelect: j,
+                      onItemSelect: b,
                       children: f.map((e) => {
                           let { section: n, text: t } = e;
-                          return (0, s.jsx)(
+                          return (0, i.jsx)(
                               l.n.Item,
                               {
                                   className: h.tabBarItem,
                                   id: n,
                                   'aria-label': t,
-                                  children: (0, s.jsx)(r.Text, {
+                                  children: (0, i.jsx)(r.Text, {
                                       variant: 'text-sm/normal',
                                       children: t
                                   })
@@ -139,7 +139,7 @@ function T(e) {
                           );
                       })
                   }),
-                  (0, s.jsx)(S, {
+                  (0, i.jsx)(S, {
                       items: f,
                       section: A,
                       subsection: g,

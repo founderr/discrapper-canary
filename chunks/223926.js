@@ -1,31 +1,31 @@
-s.r(a), s(47120);
+a.r(s), a(47120);
 var n,
     t,
-    o = s(735250),
-    l = s(470079),
-    i = s(442837),
-    R = s(481060),
-    E = s(313201),
-    r = s(496675),
-    A = s(5192),
-    _ = s(693546),
-    u = s(863249),
-    M = s(246364),
-    d = s(981631),
-    P = s(689938),
-    C = s(514045);
+    o = a(735250),
+    l = a(470079),
+    i = a(442837),
+    R = a(481060),
+    E = a(313201),
+    r = a(496675),
+    A = a(5192),
+    _ = a(693546),
+    u = a(863249),
+    d = a(246364),
+    M = a(981631),
+    P = a(689938),
+    C = a(514045);
 ((t = n || (n = {})).SPAM = 'spam'), (t.ABUSIVE = 'abusive'), (t.HARM = 'harm'), (t.PII = 'pii'), (t.OTHER = 'other');
-a.default = function (e) {
-    let { guild: a, guildJoinRequest: n, user: t, transitionState: c, onClose: N } = e,
+s.default = function (e) {
+    let { guild: s, guildJoinRequest: n, user: t, transitionState: c, onClose: N } = e,
         O = (0, E.Dt)(),
         [I, h] = l.useState(null),
         [T, p] = l.useState(''),
-        L = (0, i.e7)([r.Z], () => r.Z.canManageUser(d.Plq.BAN_MEMBERS, t, a)),
+        L = (0, i.e7)([r.Z], () => r.Z.canManageUser(M.Plq.BAN_MEMBERS, t, s)),
         [m, g] = l.useState(!1),
         x = l.useCallback(() => {
             var e;
             u.Z.reportApplication({
-                guild: a,
+                guild: s,
                 guildJoinRequest: n,
                 guildJoinRequestUser: t,
                 reason: I,
@@ -34,18 +34,18 @@ a.default = function (e) {
             }),
                 L &&
                     m &&
-                    (_.Z.updateGuildJoinRequest(a.id, t.id, M.wB.REJECTED, ''),
+                    (_.Z.updateGuildJoinRequest(s.id, t.id, n.joinRequestId, d.wB.REJECTED, ''),
                     null == N || N(),
                     (0, R.openModalLazy)(async () => {
-                        let { default: e } = await s.e('43350').then(s.bind(s, 98746));
-                        return (s) =>
+                        let { default: e } = await a.e('43350').then(a.bind(a, 98746));
+                        return (a) =>
                             (0, o.jsx)(e, {
-                                ...s,
-                                guildId: a.id,
+                                ...a,
+                                guildId: s.id,
                                 user: t
                             });
                     }));
-        }, [a, n, t, I, T, L, m, N]),
+        }, [s, n, t, I, T, L, m, N]),
         B = l.useCallback(
             (e) => {
                 h(e.value);
@@ -112,7 +112,7 @@ a.default = function (e) {
                         (0, o.jsx)(R.Checkbox, {
                             type: R.Checkbox.Types.INVERTED,
                             value: m,
-                            onChange: (e, a) => g(a),
+                            onChange: (e, s) => g(s),
                             children: (0, o.jsx)(R.Text, {
                                 variant: 'text-md/normal',
                                 children: P.Z.Messages.CLAN_MEMBER_APPLICATION_REPORT_BAN.format({ username: S })
