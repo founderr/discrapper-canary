@@ -1,24 +1,36 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
 var i = n(749210),
     a = n(336197),
     s = n(592125),
     r = n(430824),
-    l = n(900849),
-    o = n(981631);
-async function c(e) {
+    l = n(626135),
+    o = n(900849),
+    c = n(981631);
+async function u(e) {
+    var t;
     if (null == e.messageReference) return;
-    let t = e.messageReference.guild_id,
-        n = e.messageReference.channel_id,
-        c = s.Z.getChannel(n),
-        u = !1;
-    if (null == c && null != t && null == r.Z.getGuild(t))
+    let n = e.messageReference.guild_id,
+        u = e.messageReference.channel_id,
+        d = e.messageReference.message_id,
+        _ = s.Z.getChannel(u),
+        E = !1;
+    if (null == _ && null != n && null == r.Z.getGuild(n))
         try {
-            await (0, l.Ub)(t, { object: o.qAy.FORWARD_BREADCRUMB }, { shouldNavigate: !1 }), (u = !0), await (0, i.V)(t), (c = s.Z.getChannel(n));
+            await (0, o.Ub)(n, { object: c.qAy.FORWARD_BREADCRUMB }, { shouldNavigate: !1 }), (E = !0), await (0, i.V)(n), (_ = s.Z.getChannel(u));
         } catch {}
-    let d = u ? n : void 0;
-    (0, a.Z)(o.Z5c.CHANNEL(t, n, e.messageReference.message_id), { welcomeModalChannelId: d });
+    l.default.track(c.rMx.FORWARD_BREADCRUMB_CLICKED, {
+        guild_id: null === (t = s.Z.getBasicChannel(e.channel_id)) || void 0 === t ? void 0 : t.guild_id,
+        channel_id: e.channel_id,
+        message_id: e.id,
+        breadcrumb_guild_id: n,
+        breadcrumb_channel_id: u,
+        breadcrumb_message_id: d,
+        did_lurk: E
+    });
+    let I = E ? u : void 0;
+    (0, a.Z)(c.Z5c.CHANNEL(n, u, d), { welcomeModalChannelId: I });
 }

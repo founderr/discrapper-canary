@@ -4834,6 +4834,7 @@ let o8 = Object.freeze({
     (nN.FORWARD_EDIT_CONTEXT_MESSAGE = 'forward_edit_context_message'),
     (nN.FORWARD_ONE_TAP_UNDO = 'forward_one_tap_undo'),
     (nN.FORWARD_ONE_TAP_VIEW = 'forward_one_tap_view'),
+    (nN.FORWARD_BREADCRUMB_CLICKED = 'forward_breadcrumb_clicked'),
     (nN.CDM_LOAD_STATUS = 'cdm_load_status'),
     (nN.CDM_READY_COMPLETE = 'cdm_ready_complete'),
     (nN.RTC_PANEL_VIEWED = 'rtc_panel_viewed'),
