@@ -1,6 +1,6 @@
 n.d(t, {
     x: function () {
-        return M;
+        return P;
     }
 }),
     n(47120);
@@ -14,232 +14,234 @@ var r = n(735250),
     c = n(420660),
     d = n(385499),
     _ = n(693728),
-    E = n(979264),
-    f = n(554300),
-    h = n(33934),
-    p = n(736144),
-    m = n(113434),
-    I = n(918701),
-    T = n(553393),
-    g = n(204197),
-    S = n(699516),
-    A = n(594174),
-    N = n(709586),
-    v = n(624138),
-    O = n(51144),
-    R = n(788307),
-    C = n(981631),
-    y = n(674563),
-    D = n(524484),
-    L = n(689938),
-    b = n(410740);
-let M = (0, v.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+    E = n(750881),
+    f = n(979264),
+    h = n(554300),
+    p = n(33934),
+    m = n(736144),
+    I = n(113434),
+    T = n(918701),
+    g = n(553393),
+    S = n(204197),
+    A = n(699516),
+    N = n(594174),
+    v = n(709586),
+    O = n(624138),
+    R = n(51144),
+    C = n(788307),
+    y = n(981631),
+    D = n(674563),
+    L = n(524484),
+    b = n(689938),
+    M = n(410740);
+let P = (0, O.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.Z = function (e) {
     var t;
-    let { selected: n = !1, colorString: a, colorRoleName: l, isOwner: v, ownerTooltipText: M, lostPermissionTooltipText: P, isTyping: U = !1, nick: w, user: x, currentUser: G, activities: k, applicationStream: B, status: F, shouldAnimateStatus: V = !1, isMobile: H, premiumSince: Z, channel: Y, guildId: j, className: W, onMouseDown: K, onKeyDown: z, onClick: q, onContextMenu: Q, onClickPremiumGuildIcon: X, onFocus: $, 'aria-controls': J, 'aria-expanded': ee, 'aria-posinset': et, 'aria-setsize': en, id: er, tabIndex: ei, itemProps: ea } = e,
-        es = null == x ? void 0 : x.id,
-        eo = O.ZP.useName(x),
-        el = (null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === es,
-        eu = i.useRef(null),
-        [ec, ed] = i.useState(!1),
-        [e_, eE] = i.useState(null),
+    let { selected: n = !1, colorString: a, colorRoleName: l, isOwner: O, ownerTooltipText: P, lostPermissionTooltipText: U, isTyping: w = !1, nick: x, user: G, currentUser: k, activities: B, applicationStream: F, status: V, shouldAnimateStatus: H = !1, isMobile: Z, premiumSince: Y, channel: j, guildId: W, className: K, onMouseDown: z, onKeyDown: q, onClick: Q, onContextMenu: X, onClickPremiumGuildIcon: $, onFocus: J, 'aria-controls': ee, 'aria-expanded': et, 'aria-posinset': en, 'aria-setsize': er, id: ei, tabIndex: ea, itemProps: es } = e,
+        eo = null == G ? void 0 : G.id,
+        el = R.ZP.useName(G),
+        eu = (null === (t = N.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === eo,
+        ec = i.useRef(null),
+        [ed, e_] = i.useState(!1),
+        [eE, ef] = i.useState(null),
         {
-            avatarDecorationSrc: ef,
-            avatarSrc: eh,
-            eventHandlers: ep
-        } = (0, g.Z)({
-            user: x,
+            avatarDecorationSrc: eh,
+            avatarSrc: ep,
+            eventHandlers: em
+        } = (0, S.Z)({
+            user: G,
             size: u.AvatarSizes.SIZE_32,
-            animateOnHover: !(n || ec),
-            guildId: j
+            animateOnHover: !(n || ed),
+            guildId: W
         }),
-        em = i.useMemo(
+        eI = i.useMemo(
             () => ({
-                source: C.jXE.MEMBER_LIST,
-                tagUserId: es
+                source: y.jXE.MEMBER_LIST,
+                tagUserId: eo
             }),
-            [es]
+            [eo]
         ),
-        eI = (0, o.e7)([S.Z], () => S.Z.isBlocked(es)),
-        [eT, eg] = i.useState(!1);
+        eT = (0, o.e7)([A.Z], () => A.Z.isBlocked(eo)),
+        eg = (0, E.aK)('member_list_item'),
+        [eS, eA] = i.useState(!1);
     i.useEffect(() => {
-        n && eg(!1);
+        n && eA(!1);
     }, [n]);
-    let eS = (0, m.Fr)(k),
-        eA = null != eS && !el && n && !eT && (0, I.dl)(eS),
-        eN = () => {
-            ed(!0);
-        },
-        ev = () => {
-            ed(!1);
-        },
-        eO = (e) => {
-            eE(e);
+    let eN = (0, I.Fr)(B),
+        ev = null != eN && !eu && n && !eS && (0, T.dl)(eN),
+        eO = () => {
+            e_(!0);
         },
         eR = () => {
-            if (eI) return null;
-            let e = null != k ? k.find((e) => e.type === C.IIU.CUSTOM_STATUS) : null,
-                t = null != e && null != x && (0, h.Z)(e, x, Y);
-            return (0, r.jsx)(R.Z, {
-                className: b.activity,
-                textClassName: b.activityText,
-                emojiClassName: b.activityEmoji,
-                activities: k,
-                applicationStream: B,
-                animate: ec,
+            e_(!1);
+        },
+        eC = (e) => {
+            ef(e);
+        },
+        ey = () => {
+            if (eT && eg) return null;
+            let e = null != B ? B.find((e) => e.type === y.IIU.CUSTOM_STATUS) : null,
+                t = null != e && null != G && (0, p.Z)(e, G, j);
+            return (0, r.jsx)(C.Z, {
+                className: M.activity,
+                textClassName: M.activityText,
+                emojiClassName: M.activityEmoji,
+                activities: B,
+                applicationStream: F,
+                animate: ed,
                 hideEmoji: !t,
                 hideTooltip: !0,
-                user: x,
-                hasQuest: null != eS && (0, I.dl)(eS)
+                user: G,
+                hasQuest: null != eN && (0, T.dl)(eN)
             });
         },
-        eC = () =>
-            null != v && v && null == P
+        eD = () =>
+            null != O && O && null == U
                 ? (0, r.jsx)(u.Tooltip, {
-                      text: null != M ? M : L.Z.Messages.GUILD_OWNER,
+                      text: null != P ? P : b.Z.Messages.GUILD_OWNER,
                       children: (e) =>
                           (0, r.jsx)(u.CrownIcon, {
                               size: 'md',
                               color: 'currentColor',
                               ...e,
-                              className: b.ownerIcon
+                              className: M.ownerIcon
                           })
                   })
                 : null,
-        ey = () =>
-            null == Z
+        eL = () =>
+            null == Y
                 ? null
                 : (0, r.jsx)(u.Tooltip, {
-                      text: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({ date: Z }),
+                      text: b.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({ date: Y }),
                       children: (e) =>
                           (0, r.jsx)(u.Clickable, {
-                              onClick: X,
+                              onClick: $,
                               tabIndex: -1,
-                              children: (0, r.jsx)(N.Z, {
+                              children: (0, r.jsx)(v.Z, {
                                   ...e,
-                                  className: b.premiumIcon
+                                  className: M.premiumIcon
                               })
                           })
                   }),
-        eD = () => {
-            let e = (null == x ? void 0 : x.isClyde()) ? y.Hb.AI : y.Hb.BOT;
-            return null != x && x.bot
+        eb = () => {
+            let e = (null == G ? void 0 : G.isClyde()) ? D.Hb.AI : D.Hb.BOT;
+            return null != G && G.bot
                 ? (0, r.jsx)(d.Z, {
-                      className: b.botTag,
+                      className: M.botTag,
                       type: e,
-                      verified: x.isVerifiedBot()
+                      verified: G.isVerifiedBot()
                   })
                 : null;
         },
-        eL = () =>
+        eM = () =>
             (0, r.jsxs)(r.Fragment, {
-                children: [eD(), eC(), ey()]
+                children: [eb(), eD(), eL()]
             }),
-        eb = (e, t) => {
-            let n = V ? u.AnimatedAvatar : u.Avatar,
-                i = (0, c.Z)(k) ? C.Skl.STREAMING : F;
+        eP = (e, t) => {
+            let n = H ? u.AnimatedAvatar : u.Avatar,
+                i = (0, c.Z)(B) ? y.Skl.STREAMING : V;
             return (
                 (i = t ? void 0 : i),
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(n, {
-                            ...ep,
+                            ...em,
                             size: u.AvatarSizes.SIZE_32,
-                            src: eh,
-                            isMobile: H,
-                            isTyping: U,
+                            src: ep,
+                            isMobile: Z,
+                            isTyping: w,
                             status: i,
                             'aria-label': e.username,
                             statusTooltip: !0,
-                            avatarDecoration: ef,
-                            typingIndicatorRef: eO
+                            avatarDecoration: eh,
+                            typingIndicatorRef: eC
                         }),
-                        (0, r.jsx)(p.Z, {
-                            confettiSpawnRef: e_,
-                            shouldFire: U && null != G && e.id !== G.id,
-                            confettiLocation: D.Hn.MEMBER_USER
+                        (0, r.jsx)(m.Z, {
+                            confettiSpawnRef: eE,
+                            shouldFire: w && null != k && e.id !== k.id,
+                            confettiLocation: L.Hn.MEMBER_USER
                         })
                     ]
                 })
             );
         },
-        eM = () =>
+        eU = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(u.NameWithRole, {
                         roleName: l,
                         color: null != a ? a : void 0,
-                        name: null != w ? w : eo,
-                        className: b.name
+                        name: null != x ? x : el,
+                        className: M.name
                     }),
-                    (0, r.jsx)(E.ZP, {
-                        clan: null == x ? void 0 : x.clan,
-                        userId: null == x ? void 0 : x.id,
-                        contextGuildId: j,
+                    (0, r.jsx)(f.ZP, {
+                        clan: null == G ? void 0 : G.clan,
+                        userId: null == G ? void 0 : G.id,
+                        contextGuildId: W,
                         disableGuildProfile: !0,
-                        className: b.clanTag,
-                        profileViewedAnalytics: em
+                        className: M.clanTag,
+                        profileViewedAnalytics: eI
                     })
                 ]
             }),
-        eP = F === C.Skl.OFFLINE;
-    return null == x
+        ew = V === y.Skl.OFFLINE;
+    return null == G
         ? (0, r.jsx)(_.Z, {
               avatarSize: u.AvatarSizes.SIZE_32,
-              className: b.placeholder
+              className: M.placeholder
           })
         : (0, r.jsx)(u.Popout, {
               renderPopout: (e) =>
-                  (0, r.jsx)(T.Z, {
-                      quest: eS,
-                      memberListItemRef: eu,
-                      applicationStream: B,
+                  (0, r.jsx)(g.Z, {
+                      quest: eN,
+                      memberListItemRef: ec,
+                      applicationStream: F,
                       ...e,
-                      closePopout: () => eg(!0)
+                      closePopout: () => eA(!0)
                   }),
               position: 'bottom',
-              shouldShow: eA,
+              shouldShow: ev,
               nudgeAlignIntoViewport: !1,
               useRawTargetDimensions: !0,
               animation: u.Popout.Animation.NONE,
               spacing: -3,
               children: () =>
-                  (0, r.jsx)(f.Z, {
-                      ref: eu,
+                  (0, r.jsx)(h.Z, {
+                      ref: ec,
                       selected: n,
-                      className: s()(b.member, W, { [b.offline]: eP && !n }),
-                      innerClassName: b.memberInner,
-                      onClick: q,
-                      onKeyDown: z,
-                      onMouseDown: K,
-                      onContextMenu: Q,
-                      onMouseEnter: eN,
-                      onMouseLeave: ev,
+                      className: s()(M.member, K, { [M.offline]: ew && !n }),
+                      innerClassName: M.memberInner,
+                      onClick: Q,
+                      onKeyDown: q,
+                      onMouseDown: z,
+                      onContextMenu: X,
+                      onMouseEnter: eO,
+                      onMouseLeave: eR,
                       name:
-                          null == P
+                          null == U
                               ? (0, r.jsx)('span', {
-                                    className: b.username,
-                                    children: eM()
+                                    className: M.username,
+                                    children: eU()
                                 })
                               : (0, r.jsx)(u.Tooltip, {
-                                    text: P,
+                                    text: U,
                                     children: (e) =>
                                         (0, r.jsx)('span', {
                                             ...e,
-                                            className: s()(b.username, b.lostPermission),
-                                            children: eM()
+                                            className: s()(M.username, M.lostPermission),
+                                            children: eU()
                                         })
                                 }),
-                      avatar: eb(x, eP),
-                      subText: eR(),
-                      decorators: eL(),
-                      'aria-controls': J,
-                      'aria-expanded': ee,
-                      'aria-setsize': en,
-                      'aria-posinset': et,
-                      id: er,
-                      tabIndex: ei,
-                      onFocus: $,
+                      avatar: eP(G, ew),
+                      subText: ey(),
+                      decorators: eM(),
+                      'aria-controls': ee,
+                      'aria-expanded': et,
+                      'aria-setsize': er,
+                      'aria-posinset': en,
+                      id: ei,
+                      tabIndex: ea,
+                      onFocus: J,
                       focusProps: {
                           offset: {
                               top: 4,
@@ -248,7 +250,7 @@ t.Z = function (e) {
                               right: 4
                           }
                       },
-                      ...ea
+                      ...es
                   })
           });
 };
