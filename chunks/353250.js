@@ -1,23 +1,25 @@
-var a, e;
-function n(r) {
+var a, c;
+function i(r) {
+    var e;
     return {
         captchaService: r.captcha_service,
         sitekey: r.captcha_sitekey,
         options: {
             rqdata: r.captcha_rqdata,
-            rqtoken: r.captcha_rqtoken
+            rqtoken: r.captcha_rqtoken,
+            serveInvisible: null !== (e = r.should_serve_invisible) && void 0 !== e && e
         }
     };
 }
-c.r(t),
-    c.d(t, {
+t.r(e),
+    t.d(e, {
         CaptchaError: function () {
             return a;
         },
         extractCaptchaPropsFromResponseBody: function () {
-            return n;
+            return i;
         }
     }),
-    ((e = a || (a = {})).CANCEL = 'cancel'),
-    (e.ERROR = 'error'),
-    (e.EXPIRED = 'expired');
+    ((c = a || (a = {})).CANCEL = 'cancel'),
+    (c.ERROR = 'error'),
+    (c.EXPIRED = 'expired');

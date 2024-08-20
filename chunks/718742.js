@@ -5,8 +5,8 @@ n.r(t),
         }
     }),
     n(47120);
-var a = n(735250),
-    r = n(470079),
+var r = n(735250),
+    a = n(470079),
     i = n(481060),
     o = n(585483),
     c = n(637538),
@@ -17,50 +17,54 @@ var a = n(735250),
     l = n(480781);
 let u = new Set([i.ModalTransitionState.ENTERING, i.ModalTransitionState.ENTERED]);
 function f(e) {
-    let { onClose: t, onCaptchaVerify: n, onReject: f, transitionState: v, headerText: m, bodyText: y, rqtoken: C, ...E } = e,
-        R = (0, c.Z)(f);
-    return (r.useEffect(() => {
+    let { onClose: t, onCaptchaVerify: n, onReject: f, transitionState: v, headerText: m, bodyText: y, rqtoken: C, serveInvisible: E, ...R } = e,
+        _ = (0, c.Z)(f);
+    return (a.useEffect(() => {
         o.S.subscribe(p.CkL.LAYER_POP_ESCAPE_KEY, t);
     }, [t]),
     null != v && u.has(v))
-        ? (0, a.jsx)(i.ModalRoot, {
+        ? (0, r.jsx)(i.ModalRoot, {
               transitionState: v,
               'aria-label': 'CAPTCHA',
               className: h.modal,
-              children: (0, a.jsxs)(i.ModalContent, {
+              children: (0, r.jsxs)(i.ModalContent, {
                   className: h.container,
                   children: [
-                      (0, a.jsx)(i.ModalCloseButton, {
+                      (0, r.jsx)(i.ModalCloseButton, {
                           className: h.close,
                           onClick: t
                       }),
-                      (0, a.jsx)('div', {
+                      (0, r.jsx)('div', {
                           className: h.content,
                           children:
                               v !== i.ModalTransitionState.ENTERED
-                                  ? (0, a.jsx)(i.Spinner, { type: i.Spinner.Type.SPINNING_CIRCLE })
-                                  : (0, a.jsxs)(a.Fragment, {
+                                  ? (0, r.jsx)(i.Spinner, { type: i.Spinner.Type.SPINNING_CIRCLE })
+                                  : (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, a.jsx)('div', {
-                                                children: (0, a.jsx)('img', {
+                                            (0, r.jsx)('div', {
+                                                children: (0, r.jsx)('img', {
                                                     src: l,
                                                     alt: ''
                                                 })
                                             }),
-                                            (0, a.jsx)('div', {
+                                            (0, r.jsx)('div', {
                                                 className: h.title,
                                                 'aria-hidden': !0,
                                                 children: null != m ? m : d.Z.Messages.GENERIC_CAPTCHA_HEADER
                                             }),
-                                            (0, a.jsx)('div', { children: null != y ? y : d.Z.Messages.GENERIC_CAPTCHA_DESCRIPTION }),
-                                            (0, a.jsx)('div', {
+                                            (0, r.jsx)('div', { children: null != y ? y : d.Z.Messages.GENERIC_CAPTCHA_DESCRIPTION }),
+                                            (0, r.jsxs)('div', {
                                                 className: h.captchaContainer,
-                                                children: (0, a.jsx)(s.Z, {
-                                                    onVerify: (e) => {
-                                                        R(), n(e, C), t();
-                                                    },
-                                                    ...E
-                                                })
+                                                children: [
+                                                    E && (0, r.jsx)(i.Spinner, { type: i.Spinner.Type.SPINNING_CIRCLE }),
+                                                    (0, r.jsx)(s.Z, {
+                                                        size: E ? 'invisible' : void 0,
+                                                        onVerify: (e) => {
+                                                            _(), n(e, C), t();
+                                                        },
+                                                        ...R
+                                                    })
+                                                ]
                                             })
                                         ]
                                     })
