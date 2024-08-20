@@ -42,8 +42,8 @@ var l,
     L = n(689938),
     H = n(592733),
     V = n(458857),
-    B = n(910212),
-    R = n(736514);
+    R = n(910212),
+    B = n(736514);
 function P(e, t, n) {
     return (
         t in e
@@ -58,7 +58,7 @@ function P(e, t, n) {
     );
 }
 function W(e) {
-    let { className: t, iframeWrapperClassName: n, maxWidth: l, maxHeight: a, thumbnail: s, video: d, provider: u, allowFullScreen: m = !0, responsive: h = !1, renderImageComponent: c, renderVideoComponent: p, renderLinkComponent: b, renderForwardComponent: g = F.VqG, playable: v = !0, autoPlay: x = !1, autoMute: I, volume: y, onPlay: w, onPause: C, onEnded: S, onControlsHide: j, onControlsShow: N, onVolumeChange: A, onMute: k, href: L, messageId: V, channelId: B, placeholder: R, placeholderVersion: P } = e,
+    let { className: t, iframeWrapperClassName: n, maxWidth: l, maxHeight: a, thumbnail: s, video: d, provider: u, allowFullScreen: m = !0, responsive: h = !1, renderImageComponent: c, renderVideoComponent: p, renderLinkComponent: b, renderForwardComponent: g = F.VqG, playable: v = !0, autoPlay: x = !1, autoMute: I, volume: y, onPlay: w, onPause: C, onEnded: S, onControlsHide: j, onControlsShow: N, onVolumeChange: A, onMute: k, href: L, messageId: V, channelId: R, placeholder: B, placeholderVersion: P } = e,
         [W, O] = i.useState(x),
         G = null != d && null == d.proxyURL,
         D = i.useCallback(() => O(!1), [O]),
@@ -87,7 +87,7 @@ function W(e) {
             children: p({
                 poster: K,
                 src: d.proxyURL,
-                placeholder: R,
+                placeholder: B,
                 placeholderVersion: P,
                 width: U,
                 height: q,
@@ -175,7 +175,7 @@ function W(e) {
                 responsive: h,
                 containerClassName: H.embedVideoImageComponent,
                 imageClassName: H.embedVideoImageComponentInner,
-                placeholder: R,
+                placeholder: B,
                 placeholderVersion: P,
                 onClick: v && null != d ? Z : null,
                 renderForwardComponent: g
@@ -190,7 +190,7 @@ function W(e) {
                               externalURL: L,
                               renderLinkComponent: b,
                               messageId: V,
-                              channelId: B
+                              channelId: R
                           })
                         : null
                 })
@@ -452,19 +452,21 @@ class G extends (l = i.PureComponent) {
     handleImageHover(e, t, n) {
         if (n) {
             if (e && !this.state.isImageHovered) {
-                var l;
                 this.setState({ isImageHovered: !0 });
                 let e = w.Z.getChannel(this.props.channelId);
-                (0, u.a)({
-                    channelId: null !== (l = null == e ? void 0 : e.id) && void 0 !== l ? l : '',
-                    location: s.I.CONTEXTUAL_IMAGE,
-                    withCommands: !0
-                }),
-                    C.default.track(F.rMx.IMAGE_HOVERED, {
-                        guild_id: null == e ? void 0 : e.guild_id,
-                        channel_id: null == e ? void 0 : e.id,
-                        image_recommendations_shown: this.props.showImageRecs
+                if (this.props.showImageRecs) {
+                    var l;
+                    (0, u.a)({
+                        channelId: null !== (l = null == e ? void 0 : e.id) && void 0 !== l ? l : '',
+                        location: s.I.CONTEXTUAL_IMAGE,
+                        withCommands: !0
                     });
+                }
+                C.default.track(F.rMx.IMAGE_HOVERED, {
+                    guild_id: null == e ? void 0 : e.guild_id,
+                    channel_id: null == e ? void 0 : e.id,
+                    image_recommendations_shown: this.props.showImageRecs
+                });
             } else !e && this.state.isImageHovered && this.setState({ isImageHovered: !1 });
         }
     }
@@ -867,7 +869,7 @@ class G extends (l = i.PureComponent) {
                         [H.hiddenExplicitAttachment]: null != n && [v.wk.EXPLICIT_CONTENT, v.wk.POTENTIAL_EXPLICIT_CONTENT].includes(n),
                         [H.isHidden]: e,
                         [H.justifyAuto]: t.usesJustifiedAutoStyle(),
-                        [R.embedFlexGrow]: null != i
+                        [B.embedFlexGrow]: null != i
                     }),
                     style: { maxWidth: i },
                     children: t.renderMedia(e)
@@ -878,7 +880,7 @@ class G extends (l = i.PureComponent) {
                     { className: n, onSuppressEmbed: l, obscureReason: i } = t.props,
                     { provider: a, author: s, title: d, description: u, fields: m, thumbnail: h, media: c, footer: p } = t.renderAll();
                 return (0, r.jsx)('article', {
-                    className: o()(n, R.embedFlexGrow, H.embedFull, B.markup, {
+                    className: o()(n, B.embedFlexGrow, H.embedFull, R.markup, {
                         [H.isHidden]: e,
                         [H.spoilerEmbed]: i === v.wk.SPOILER,
                         [H.hiddenExplicitEmbed]: null != i && [v.wk.EXPLICIT_CONTENT, v.wk.POTENTIAL_EXPLICIT_CONTENT].includes(i),

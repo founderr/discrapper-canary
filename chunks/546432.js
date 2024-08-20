@@ -167,18 +167,19 @@ function H(e) {
             (e) => {
                 if (es && !ea && !0 !== U) {
                     if (e && !Y) {
-                        var n;
-                        ee(!0),
+                        if ((ee(!0), eo)) {
+                            var n;
                             (0, u.a)({
                                 channelId: null !== (n = null == et ? void 0 : et.id) && void 0 !== n ? n : '',
                                 location: a.I.CONTEXTUAL_IMAGE,
                                 withCommands: !0
-                            }),
-                            j.default.track(w.rMx.IMAGE_HOVERED, {
-                                guild_id: null == et ? void 0 : et.guild_id,
-                                channel_id: null == et ? void 0 : et.id,
-                                image_recommendations_shown: eo
                             });
+                        }
+                        j.default.track(w.rMx.IMAGE_HOVERED, {
+                            guild_id: null == et ? void 0 : et.guild_id,
+                            channel_id: null == et ? void 0 : et.id,
+                            image_recommendations_shown: eo
+                        });
                     } else !e && Y && ee(!1);
                 }
             },
