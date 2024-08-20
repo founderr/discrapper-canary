@@ -19,8 +19,8 @@ var s = n(442837),
     v = n(55935),
     C = n(74538),
     x = n(689938),
-    P = n(149441);
-let A = (e) => {
+    A = n(149441);
+let P = (e) => {
         var t;
         let { effectIsOwned: n, pendingProfileEffectRecord: l, product: c, purchase: d } = e,
             u = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
@@ -30,37 +30,37 @@ let A = (e) => {
             _ = (0, o.qS)(d),
             h = (0, o.G1)(c),
             g = (null == d ? void 0 : d.expiresAt) != null ? (0, v.TD)(Date.now(), d.expiresAt) : null,
-            A = Z(!E && _, h, E);
+            P = Z(!E && _, h, E);
         return null != l
             ? (0, r.jsx)('div', {
-                  className: n ? P.effectDescriptionNoGradient : P.effectDescriptionBorderWithGradient,
+                  className: n ? A.effectDescriptionNoGradient : A.effectDescriptionBorderWithGradient,
                   children: (0, r.jsxs)('div', {
-                      className: P.effectDescriptionContainer,
+                      className: A.effectDescriptionContainer,
                       children: [
                           (0, r.jsx)(i.Text, {
                               color: 'header-primary',
                               variant: 'text-sm/semibold',
-                              className: P.effectName,
+                              className: A.effectName,
                               children: null !== (t = null == d ? void 0 : d.name) && void 0 !== t ? t : null == f ? void 0 : f.name
                           }),
                           (0, r.jsx)(i.Text, {
                               color: 'text-normal',
                               variant: 'text-sm/normal',
-                              className: P.effectDescription,
-                              children: null != d ? d.summary : A
+                              className: A.effectDescription,
+                              children: null != d ? d.summary : P
                           }),
                           null != g &&
                               (0, r.jsx)(i.Text, {
                                   variant: 'text-xxs/normal',
                                   color: 'text-muted',
-                                  className: P.effectPurchasedAt,
+                                  className: A.effectPurchasedAt,
                                   children: x.Z.Messages.COLLECTIBLES_DAYS_LEFT.format({ days: g.days.toString() })
                               }),
                           null != d &&
                               (0, r.jsxs)(i.Text, {
                                   variant: 'text-xxs/normal',
                                   color: 'text-muted',
-                                  className: P.effectPurchasedAt,
+                                  className: A.effectPurchasedAt,
                                   children: [
                                       x.Z.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
                                           date: d.purchasedAt.toLocaleDateString(m, {
@@ -89,7 +89,7 @@ let A = (e) => {
                               (0, r.jsx)(i.Text, {
                                   variant: 'text-xxs/normal',
                                   color: 'text-muted',
-                                  className: P.effectPurchasedAt,
+                                  className: A.effectPurchasedAt,
                                   children: x.Z.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC
                               })
                       ]
@@ -142,7 +142,7 @@ t.Z = (e) => {
             onBannerChange: m.g_
         };
     return (0, r.jsxs)('div', {
-        className: P.previewContainer,
+        className: A.previewContainer,
         children: [
             (0, r.jsx)(f.Z, {
                 ...B,
@@ -150,7 +150,7 @@ t.Z = (e) => {
                 hideCustomStatus: !0
             }),
             !1,
-            (0, r.jsx)(A, {
+            (0, r.jsx)(P, {
                 effectIsOwned: a,
                 pendingProfileEffectRecord: i,
                 product: o,

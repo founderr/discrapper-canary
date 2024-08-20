@@ -57,8 +57,8 @@ var c = t(442837),
     k = t(592125),
     B = t(430824),
     U = t(496675),
-    D = t(699516),
-    G = t(9156),
+    G = t(699516),
+    D = t(9156),
     H = t(594174),
     Y = t(979651),
     V = t(938475),
@@ -145,8 +145,8 @@ function eE(e) {
                 N = l.useMemo(() => {
                     for (let e of h) {
                         let n = k.Z.getDMFromUserId(e.user.id),
-                            t = null != n && G.ZP.isChannelMuted(null, n),
-                            a = D.Z.isBlocked(e.user.id);
+                            t = null != n && D.ZP.isChannelMuted(null, n),
+                            a = G.Z.isBlocked(e.user.id);
                         if (t || a) return !0;
                     }
                     return !1;
@@ -766,7 +766,7 @@ function eI(e) {
                                                     onClick: null != x ? x : v,
                                                     children: (0, a.jsx)(m.Text, {
                                                         variant: 'text-sm/normal',
-                                                        className: ec.popoutHeroTextSecondary,
+                                                        className: ec.popoutTextSecondary,
                                                         children: i
                                                     })
                                                 })

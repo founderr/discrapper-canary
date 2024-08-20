@@ -27,15 +27,15 @@ let C = () => 80,
             children: t
         });
     },
-    P = (e) => {
+    A = (e) => {
         var t;
         let { user: n, profileEffect: i, innerRef: l, section: a, isSelected: u, ...h } = e,
             C = (0, p.V)(i.id),
-            P = (0, c.e7)([f.Z], () => {
+            A = (0, c.e7)([f.Z], () => {
                 let e = f.Z.getProduct(i.skuId);
                 return (0, m.G1)(e);
             }),
-            A = (0, m.Yq)(i.skuId),
+            P = (0, m.Yq)(i.skuId),
             Z = s.useRef(null),
             { accessibilityLabel: T, thumbnailPreviewSrc: N, title: S } = null !== (t = null == C ? void 0 : C.config) && void 0 !== t ? t : {},
             j = E.ZP.canUseCollectibles(n),
@@ -58,7 +58,7 @@ let C = () => 80,
                 }),
                 a === _.$0.PURCHASE || (a === _.$0.PREMIUM_PURCHASE && j)
                     ? null
-                    : A
+                    : P
                       ? (0, r.jsx)(d.PremiumBadge, {
                             className: I.newBadge,
                             text: (0, r.jsxs)('div', {
@@ -73,7 +73,7 @@ let C = () => 80,
                             })
                         })
                       : (0, r.jsx)(d.IconBadge, {
-                            icon: P
+                            icon: A
                                 ? () =>
                                       (0, r.jsx)(d.NitroWheelIcon, {
                                           size: 'custom',
@@ -166,7 +166,7 @@ t.Z = (e) => {
                     .otherwise((e) => {
                         let n = s === e.id;
                         return (0, r.jsx)(
-                            P,
+                            A,
                             {
                                 user: t,
                                 style: { ...u },

@@ -19,7 +19,7 @@ var s = n(442837),
     p = n(122269);
 function _(e) {
     var t;
-    let { user: n, displayProfile: _, guild: h, pendingAvatar: g, pendingNickname: I, pendingGlobalName: v, pendingBio: C, pendingPronouns: x, isTryItOutFlow: P, hideBioSection: A } = e,
+    let { user: n, displayProfile: _, guild: h, pendingAvatar: g, pendingNickname: I, pendingGlobalName: v, pendingBio: C, pendingPronouns: x, isTryItOutFlow: A, hideBioSection: P } = e,
         Z = (0, s.e7)([u.ZP], () => (null == h ? null : u.ZP.getMember(h.id, n.id))),
         T = (0, s.e7)([f.Z], () => f.Z.hidePersonalInformation),
         N = (0, i.Z)('ProfileCustomizationPreviewBody'),
@@ -48,7 +48,7 @@ function _(e) {
                 })(),
                 nickname: R,
                 pronouns: j,
-                isTryItOut: P,
+                isTryItOut: A,
                 tags: (0, r.jsx)(a.Z, {
                     displayProfile: _,
                     profileType: E.y0.BITE_SIZE
@@ -59,7 +59,7 @@ function _(e) {
                     userId: n.id,
                     inline: !1
                 }),
-            !A &&
+            !P &&
                 null != S &&
                 '' !== S &&
                 (0, r.jsx)(d.Z, {

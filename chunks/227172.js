@@ -44,7 +44,7 @@ n.Z = (e) => {
     var n;
     let { channel: t, entry: i, disableGameProfileLinks: E, onReaction: T, onVoiceChannelPreview: j } = e,
         { iconUrl: R, iconTitle: y, user: L, details: w, appName: b, activity: k, coverImageUrl: B, richIcon: U } = (0, Z.n)(i),
-        { primaryColor: D, secondaryColor: G } = (0, g.Z)(R),
+        { primaryColor: G, secondaryColor: D } = (0, g.Z)(R),
         H = (0, r.e7)([_.default], () => _.default.locale),
         { streamPreviewUrl: Y, stream: V } = (0, N.Z)(i),
         { displayParticipants: F, participant1: W, participant2: z, numOtherParticipants: q } = (0, x.Z)(i, 3),
@@ -66,16 +66,16 @@ n.Z = (e) => {
                     avatarSrcs: F.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: n,
                     timestamp: (0, I.yh)(i, H),
-                    colors: [D, G],
+                    colors: [G, D],
                     channelId: e
                 });
             },
-            [R, t, F, i, H, q, W, z, D, G, L]
+            [R, t, F, i, H, q, W, z, G, D, L]
         );
     if (null == L) return null;
     let J = null != i.extra.platform ? O[i.extra.platform] : null,
         X = (0, a.jsx)(v.Gk, {
-            location: v.Gt.POPOUT,
+            location: null == Y ? v.Gt.POPOUT : v.Gt.STREAMING_POPOUT,
             children: f.W.map((e, n) => (0, a.jsx)(e, { entry: i }, n))
         }),
         $ =

@@ -6,8 +6,8 @@ n.r(t),
     }),
     n(47120);
 var r = n(735250),
-    i = n(470079),
-    E = n(442837),
+    E = n(470079),
+    i = n(442837),
     s = n(481060),
     u = n(377171),
     a = n(592125),
@@ -28,17 +28,17 @@ var r = n(735250),
     y = n(756843);
 function U(e) {
     let { badgeText: t, badgeColor: n } = e,
-        E = i.useRef(t),
-        u = i.useRef(n);
+        i = E.useRef(t),
+        u = E.useRef(n);
     return (0, r.jsx)(s.TextBadge, {
-        text: E.current,
+        text: i.current,
         color: u.current
     });
 }
 function M(e) {
     let { transitionState: t, userId: n, channelId: M, onClose: F } = e,
-        N = (0, E.e7)([l.default], () => l.default.getUser(n)),
-        p = (0, E.e7)([a.Z], () => {
+        N = (0, i.e7)([l.default], () => l.default.getUser(n)),
+        p = (0, i.e7)([a.Z], () => {
             var e;
             return null === (e = a.Z.getChannel(M)) || void 0 === e ? void 0 : e.getGuildId();
         }),
@@ -49,7 +49,7 @@ function M(e) {
             chunkSize: A.iQ,
             desiredLength: A.KN
         }),
-        O = i.useCallback(() => {
+        O = E.useCallback(() => {
             (0, c.s$)({
                 userId: n,
                 channelId: M
@@ -61,14 +61,14 @@ function M(e) {
             location: 'WebSecureFramesUserVerificationModal'
         }),
         { isCurrentUserKeyPersistent: v, isOtherUserKeyPersistent: b, loading: w } = (0, d.y)({ userId: n }),
-        Y = i.useCallback(() => {
+        Y = E.useCallback(() => {
             null != D && ((0, _.TQ)(n, D, b, M, T.Sbl.E2EE_USER_VERIFY_MODAL), F());
         }, [D, n, b, M, F]),
-        k = i.useCallback(() => {
+        k = E.useCallback(() => {
             null != D && ((0, _.LO)(n, D, b), F());
         }, [D, n, b, F]),
-        [x, B] = i.useMemo(() => (L ? [g.Z.Messages.E2EE_VERIFIED, u.Z.BG_BRAND] : [g.Z.Messages.NEW, u.Z.STATUS_DANGER]), [L]),
-        P = i.useMemo(
+        [x, B] = E.useMemo(() => (L ? [g.Z.Messages.E2EE_VERIFIED, u.Z.BG_BRAND] : [g.Z.Messages.NEW, u.Z.STATUS_DANGER]), [L]),
+        P = E.useMemo(
             () =>
                 (0, _.kK)({
                     isCurrentUserKeyPersistent: v,
@@ -78,7 +78,7 @@ function M(e) {
             [v, b, m]
         );
     return (
-        i.useEffect(() => {
+        E.useEffect(() => {
             (0, c.Rq)({
                 userId: n,
                 channelId: M

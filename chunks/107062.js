@@ -52,8 +52,8 @@ n.ZP = (e) => {
     var n;
     let { channel: t, entry: h, onReaction: O, onVoiceChannelPreview: j } = e,
         { iconUrl: R, iconTitle: y, user: L, details: w, activity: b, coverImageUrl: k, richIcon: B } = (0, f.n)(h),
-        { primaryColor: U, secondaryColor: D } = (0, C.Z)(R),
-        G = (0, i.e7)([E.default], () => E.default.locale),
+        { primaryColor: U, secondaryColor: G } = (0, C.Z)(R),
+        D = (0, i.e7)([E.default], () => E.default.locale),
         { displayParticipants: H, participant1: Y, participant2: V, numOtherParticipants: F } = (0, x.Z)(h, 3),
         W = (0, s.O)(),
         { analyticsLocations: z } = (0, m.ZP)(),
@@ -85,12 +85,12 @@ n.ZP = (e) => {
                     applicationImageSrc: R,
                     avatarSrcs: H.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: n,
-                    timestamp: (0, N.yh)(h, G),
-                    colors: [U, D],
+                    timestamp: (0, N.yh)(h, D),
+                    colors: [U, G],
                     channelId: e
                 });
             },
-            [R, t, H, h, G, F, Y, V, U, D, L]
+            [R, t, H, h, D, F, Y, V, U, G, L]
         );
     if (null == L) return null;
     let X = (0, a.jsx)(p.PZ, {

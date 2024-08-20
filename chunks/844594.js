@@ -8,8 +8,8 @@ var a = n(735250),
     o = n(470079),
     r = n(481060),
     s = n(313201),
-    t = n(197115),
-    l = n(921813),
+    l = n(197115),
+    t = n(921813),
     c = n(318661),
     u = n(721987),
     d = n(626135),
@@ -19,12 +19,12 @@ var a = n(735250),
     p = n(689938),
     I = n(745117);
 function E(e) {
-    let { user: i, guildId: n, transitionState: E, imageSrc: A, uploadType: _, onSubscribe: T, onClose: h } = e,
-        P = (0, s.Dt)(),
-        Z = (0, c.ZP)(i.id, n),
+    let { user: i, guildId: n, transitionState: E, imageSrc: A, uploadType: _, onSubscribe: h, onClose: T } = e,
+        Z = (0, s.Dt)(),
+        P = (0, c.ZP)(i.id, n),
         { primaryColor: x, secondaryColor: N } = (0, u.Z)({
             user: i,
-            displayProfile: Z,
+            displayProfile: P,
             pendingAvatar: _ === m.pC.AVATAR ? A : void 0,
             isPreview: !0
         });
@@ -36,10 +36,10 @@ function E(e) {
             className: I.modalRoot,
             transitionState: E,
             size: r.ModalSize.SMALL,
-            'aria-labelledby': P,
+            'aria-labelledby': Z,
             hideShadow: !0,
             children: [
-                (0, a.jsx)(l.Z, {
+                (0, a.jsx)(t.Z, {
                     user: i,
                     canUsePremiumCustomization: !0,
                     disabledInputs: !0,
@@ -55,7 +55,7 @@ function E(e) {
                             variant: 'text-sm/normal',
                             children: _ === m.pC.AVATAR ? p.Z.Messages.PREMIUM_PREVIEW_JOIN_AVATAR : p.Z.Messages.PREMIUM_PREVIEW_JOIN_BANNER
                         }),
-                        (0, a.jsx)(t.Z, {
+                        (0, a.jsx)(l.Z, {
                             buttonText: p.Z.Messages.PREMIUM_PREVIEW_JOIN_NITRO,
                             subscriptionTier: v.Si.TIER_2,
                             className: I.premiumSubscribeButton,
@@ -65,11 +65,11 @@ function E(e) {
                                 object: f.qAy.BUTTON_CTA
                             },
                             onSubscribeModalClose: (e) => {
-                                e && (null == T || T(), h());
+                                e && (null == h || h(), T());
                             }
                         }),
                         (0, a.jsx)(r.Button, {
-                            onClick: h,
+                            onClick: T,
                             size: r.Button.Sizes.SMALL,
                             color: r.Button.Colors.PRIMARY,
                             look: r.Button.Looks.FILLED,

@@ -24,7 +24,7 @@ function I() {
             s = a.getUserIds();
         if (!s.has(t)) return E.delete(i), !0;
         let l = !0;
-        for (let e in s)
+        for (let e of s)
             if (e !== t && !0 !== f.get(e)) {
                 l = !1;
                 break;

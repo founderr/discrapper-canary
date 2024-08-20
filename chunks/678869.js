@@ -89,8 +89,8 @@ function j(e) {
         Z,
         j,
         { channel: R, entry: y, closePopout: L, onReaction: w, onVoiceChannelPreview: b } = e,
-        { activity: k, currentEntry: B, artist: U, imageUrl: D, title: G, user: H } = (0, C.pi)(y),
-        { primaryColor: Y, secondaryColor: V } = (0, I.Z)(D),
+        { activity: k, currentEntry: B, artist: U, imageUrl: G, title: D, user: H } = (0, C.pi)(y),
+        { primaryColor: Y, secondaryColor: V } = (0, I.Z)(G),
         F = (0, r.e7)([u.Z, E.default], () => ((null == k ? void 0 : k.type) === v.IIU.LISTENING && null != H ? (0, m.Z)(u.Z, E.default, H, k) : void 0), [k, H], s.Z),
         W = l.useCallback(() => {
             var e;
@@ -100,12 +100,12 @@ function j(e) {
             return (0, N.CR)({
                 user: H,
                 channel: R,
-                mediaImageSrc: D,
+                mediaImageSrc: G,
                 artist: U,
                 description: A(
                     {
                         artist: U,
-                        media: G
+                        media: D
                     },
                     R,
                     H
@@ -113,7 +113,7 @@ function j(e) {
                 colors: [Y, V],
                 badges: (0, N.jE)({ timestamp: t })
             });
-        }, [k, U, R, y, D, Y, V, G, H]);
+        }, [k, U, R, y, G, Y, V, D, H]);
     if (null == k || null == B) return null;
     let z = U,
         q = [];
@@ -151,7 +151,7 @@ function j(e) {
                 );
     }
     let K = (0, a.jsx)(p.wG, {
-        thumbnailSrc: D,
+        thumbnailSrc: G,
         onClickThumbnail: j,
         channel: R,
         entry: y,
@@ -164,7 +164,7 @@ function j(e) {
                   })
                 : null,
         userDescription: (0, x.kr)(y) ? P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
-        title: G,
+        title: D,
         onClickTitle: Z,
         subtitle: z,
         badges: null,
