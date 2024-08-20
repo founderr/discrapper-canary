@@ -1,4 +1,3 @@
-n(47120);
 var i,
     a,
     s = n(735250),
@@ -9,149 +8,133 @@ var i,
     d = n(481060),
     u = n(393238),
     _ = n(963202),
-    h = n(353093),
-    E = n(605236),
-    m = n(931515),
-    I = n(807933),
-    g = n(702646),
-    p = n(207796),
-    T = n(543550),
-    S = n(895068),
-    f = n(921944),
-    C = n(69878);
-((a = i || (i = {})).TOP_PICKS = 'top_picks'), (a.OTHER_GUILDS = 'other_guilds');
-let N = new Set([p.v0.ADMIN_UPSELL, p.v0.DISCOVERY]),
-    A = {
+    h = n(605236),
+    E = n(931515),
+    m = n(807933),
+    I = n(702646),
+    g = n(207796),
+    p = n(543550),
+    T = n(895068),
+    S = n(921944),
+    f = n(69878);
+((i = a || (a = {})).TOP_PICKS = 'top_picks'), (i.OTHER_GUILDS = 'other_guilds');
+let C = {
         mass: 1,
         tension: 600,
         friction: 60
     },
-    v = r.memo(function (e) {
+    N = r.memo(function (e) {
         let { mode: t, width: n } = e,
-            [i, a] = r.useState(!0),
-            o = (0, d.useSpring)({
+            i = (0, d.useSpring)({
                 from: { opacity: 0 },
-                to: { opacity: t === p.v0.GET_STARTED ? 0 : 1 },
-                config: A,
-                delay: 500,
-                onRest: () => a(!1)
+                to: { opacity: 1 },
+                config: C,
+                delay: 500
             }),
-            u = (0, E.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
+            a = (0, h.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
         switch (
             (r.useEffect(() => {
-                !u &&
-                    (0, E.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
-                        dismissAction: f.L.TAKE_ACTION,
+                !a &&
+                    (0, h.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
+                        dismissAction: S.L.TAKE_ACTION,
                         forceTrack: !0
                     });
-            }, [u]),
+            }, [a]),
             t)
         ) {
-            case p.v0.ADMIN_UPSELL:
-                return (0, s.jsx)(T.$, {});
-            case p.v0.GET_STARTED:
-                return (0, s.jsx)(T.J, { containerWidth: n });
-            case p.v0.DISCOVERY:
-            case p.v0.GAMES:
-            case p.v0.PLAYSTYLE:
-            case p.v0.TRAITS:
-            case p.v0.PREFERENCES:
+            case g.v0.ADMIN_UPSELL:
+                return (0, s.jsx)(p.$, {});
+            case g.v0.GET_STARTED:
+            case g.v0.DISCOVERY:
+            case g.v0.GAMES:
+            case g.v0.PLAYSTYLE:
+            case g.v0.TRAITS:
+            case g.v0.PREFERENCES:
                 return (0, s.jsxs)('div', {
-                    className: C.discoveryContainer,
+                    className: f.discoveryContainer,
                     children: [
                         (0, s.jsx)(l.animated.div, {
-                            className: C.toolbar,
+                            className: f.toolbar,
                             style: {
-                                opacity: o.opacity,
-                                transform: o.opacity.to([0, 1], [-40, 0]).to((e) => 'translateY('.concat(e, 'px)'))
+                                opacity: i.opacity,
+                                transform: i.opacity.to([0, 1], [-40, 0]).to((e) => 'translateY('.concat(e, 'px)'))
                             },
-                            children: (0, s.jsx)(g.Z, {})
+                            children: (0, s.jsx)(I.Z, {})
                         }),
                         (0, s.jsx)(l.animated.div, {
-                            className: C.content,
+                            className: f.content,
                             style: {
-                                opacity: o.opacity,
-                                transform: o.opacity.to([0, 1], [40, 0]).to((e) => 'translateY('.concat(e, 'px)'))
+                                opacity: i.opacity,
+                                transform: i.opacity.to([0, 1], [40, 0]).to((e) => 'translateY('.concat(e, 'px)'))
                             },
-                            children: (0, s.jsx)(S.ZP, {
+                            children: (0, s.jsx)(T.ZP, {
                                 width: n,
-                                isAnimating: i,
-                                variant: (0, S.s)(t)
+                                variant: (0, T.s)(t)
                             })
                         }),
                         (0, s.jsx)('div', {
-                            className: C.selectors,
-                            children: (0, s.jsx)(I.Z, { mode: t })
+                            className: f.selectors,
+                            children: (0, s.jsx)(m.Z, { mode: t })
                         })
                     ]
                 });
-            case p.v0.SAVED_GUILDS:
+            case g.v0.SAVED_GUILDS:
                 return (0, s.jsxs)('div', {
-                    className: C.discoveryContainer,
+                    className: f.discoveryContainer,
                     children: [
                         (0, s.jsx)('div', {
-                            className: C.toolbar,
-                            children: (0, s.jsx)(g.Z, {})
+                            className: f.toolbar,
+                            children: (0, s.jsx)(I.Z, {})
                         }),
                         (0, s.jsx)('div', {
-                            className: C.content,
-                            children: (0, s.jsx)(S.ZP, {
+                            className: f.content,
+                            children: (0, s.jsx)(T.ZP, {
                                 width: n,
-                                isAnimating: i,
-                                variant: (0, S.s)(t)
+                                variant: (0, T.s)(t)
                             })
                         }),
                         (0, s.jsx)('div', {
-                            className: C.selectors,
-                            children: (0, s.jsx)(I.Z, { mode: t })
+                            className: f.selectors,
+                            children: (0, s.jsx)(m.Z, { mode: t })
                         })
                     ]
                 });
         }
     });
-function Z(e) {
+function A(e) {
     let { mode: t, children: n } = e,
-        i = (0, p.GN)((e) => e.userUpsellScreen, o.Z),
-        a = (0, p.GN)((e) => e.started, o.Z),
-        { guilds: l, enableClanCreation: c } = (0, _.C3)({
+        { enableClanCreation: i } = (0, _.C3)({
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0
         }),
-        d = r.useMemo(() => l.filter((e) => !(0, h.EJ)(e)), [l]),
-        u = (0, _.iN)('ClanDiscoveryAdminContainer');
+        a = (0, _.iN)('ClanDiscoveryAdminContainer');
     return (
         r.useEffect(() => {
-            let e = l.length > 0,
-                n = N.has(t);
-            if (!e && !a && n) {
-                (0, p.fH)(p.v0.GET_STARTED);
+            if (i && !a && t !== g.v0.ADMIN_UPSELL) {
+                (0, g.fH)(g.v0.ADMIN_UPSELL);
                 return;
             }
-            if (c && !u && t !== p.v0.ADMIN_UPSELL) {
-                (0, p.fH)(p.v0.ADMIN_UPSELL);
-                return;
-            }
-        }, [d.length, l.length, a, t, i, c, u]),
+        }, [t, i, a]),
         (0, s.jsx)(s.Fragment, { children: n })
     );
 }
 t.Z = r.memo(function () {
-    let { loading: e } = (0, m.LE)(),
-        t = (0, p.GN)((e) => e.mode, o.Z),
+    let { loading: e } = (0, E.LE)(),
+        t = (0, g.GN)((e) => e.mode, o.Z),
         { ref: n, width: i } = (0, u.Z)();
     return (0, s.jsxs)('main', {
-        className: C.container,
+        className: f.container,
         ref: n,
         children: [
-            (0, s.jsx)('div', { className: C.dragRegion }),
+            (0, s.jsx)('div', { className: f.dragRegion }),
             e
                 ? (0, s.jsx)('div', {
-                      className: C.loading,
+                      className: f.loading,
                       children: (0, s.jsx)(d.Spinner, {})
                   })
-                : (0, s.jsx)(Z, {
+                : (0, s.jsx)(A, {
                       mode: t,
-                      children: (0, s.jsx)(v, {
+                      children: (0, s.jsx)(N, {
                           width: i,
                           mode: t
                       })

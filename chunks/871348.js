@@ -2,8 +2,7 @@ n.d(t, {
     U: function () {
         return f;
     }
-}),
-    n(47120);
+});
 var i = n(735250),
     a = n(470079),
     s = n(567526),
@@ -54,10 +53,9 @@ function T(e) {
 }
 function S(e) {
     let { onScroll: t } = e,
-        { ref: n, width: c } = (0, o.Z)(),
-        d = (0, h.GN)((e) => e.mode, r.Z),
-        [u, E] = a.useState(!0),
-        I = (0, l.useSpring)({
+        { ref: n, width: a } = (0, o.Z)(),
+        c = (0, h.GN)((e) => e.mode, r.Z),
+        d = (0, l.useSpring)({
             from: { opacity: 0 },
             to: { opacity: 1 },
             config: {
@@ -65,8 +63,7 @@ function S(e) {
                 tension: 600,
                 friction: 60
             },
-            delay: 200,
-            onRest: () => E(!1)
+            delay: 200
         });
     return (0, i.jsxs)('section', {
         ref: n,
@@ -74,17 +71,16 @@ function S(e) {
         children: [
             (0, i.jsx)(s.animated.div, {
                 className: p.list,
-                style: { opacity: I.opacity },
+                style: { opacity: d.opacity },
                 children: (0, i.jsx)(m.ZP, {
-                    width: null != c ? c : 0,
-                    isAnimating: u,
-                    variant: (0, m.s)(d, m.Bj.GLOBAL_DISCOVERY),
+                    width: null != a ? a : 0,
+                    variant: (0, m.s)(c, m.Bj.GLOBAL_DISCOVERY),
                     onScroll: t
                 })
             }),
             (0, i.jsx)('div', {
                 className: p.selectors,
-                children: (0, i.jsx)(_.Z, { mode: d })
+                children: (0, i.jsx)(_.Z, { mode: c })
             })
         ]
     });

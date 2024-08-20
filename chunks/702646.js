@@ -345,15 +345,14 @@ function v(e) {
 function Z(e) {
     let { className: t } = e,
         n = (0, h.GN)((e) => e.mode, l.Z),
-        s = (0, h.GN)((e) => e.started, l.Z),
-        o = a.useCallback(() => {
+        s = a.useCallback(() => {
             if (n !== h.v0.SAVED_GUILDS) return (0, h.fH)(h.v0.SAVED_GUILDS);
         }, [n]),
-        c = a.useCallback(() => (s ? (0, h.fH)(h.v0.DISCOVERY) : (0, h.fH)(h.v0.GET_STARTED)), [s]);
+        o = a.useCallback(() => (0, h.fH)(h.v0.DISCOVERY), []);
     return n === h.v0.SAVED_GUILDS
         ? (0, i.jsx)(v, {
               className: t,
-              onNavigateBack: c
+              onNavigateBack: o
           })
         : (0, i.jsxs)('div', {
               className: r()(I.toolbar, t),
@@ -365,7 +364,7 @@ function Z(e) {
                   (0, i.jsx)('div', { className: I.preferences }),
                   (0, i.jsxs)('div', {
                       className: I.actions,
-                      children: [(0, i.jsx)(N, {}), (0, i.jsx)(C, { onClick: o })]
+                      children: [(0, i.jsx)(N, {}), (0, i.jsx)(C, { onClick: s })]
                   })
               ]
           });

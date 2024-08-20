@@ -2,9 +2,6 @@ n.d(t, {
     Bj: function () {
         return a;
     },
-    ZP: function () {
-        return b;
-    },
     s: function () {
         return x;
     }
@@ -41,32 +38,33 @@ function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
     return e === C.v0.SAVED_GUILDS ? 'saved_guilds' : t;
 }
-function b(e) {
-    let { width: t, isAnimating: n, variant: i = 'default', onScroll: a } = e,
-        s = Math.min(null != t ? t : 1024, 2000),
-        r = o.useRef(null),
-        c = o.useMemo(() => {
-            if (0 === s) return 1;
-            let e = s / 256,
-                t = s / 376,
-                n = s / e,
-                i = s / t;
+((s = i || (i = {})).UPSELL = 'upsell'), (s.TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.HERO = 'hero'), (s.PAGINATION = 'pagination'), ((r = a || (a = {})).DEFAULT = 'default'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');
+t.ZP = o.memo(function (e) {
+    let { width: t, variant: n = 'default', onScroll: i } = e,
+        a = Math.min(null != t ? t : 1024, 2000),
+        s = o.useRef(null),
+        r = o.useMemo(() => {
+            if (0 === a) return 1;
+            let e = a / 256,
+                t = a / 376,
+                n = a / e,
+                i = a / t;
             return i > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e;
-        }, [s]),
-        { loaded: x, clans: b, searchResult: P, searchCriteria: M } = (0, S.ML)(c, 'saved_guilds' === i),
-        D = (0, C.GN)((e) => e.selectedTraits, u.Z),
-        y = (0, h.Z)(P),
-        { currentPage: j, updatePage: U, totalItems: G, pageSize: k } = (0, f.$)();
+        }, [a]),
+        { loaded: c, clans: x, searchResult: b, searchCriteria: P } = (0, S.ML)(r, 'saved_guilds' === n),
+        M = (0, C.GN)((e) => e.selectedTraits, u.Z),
+        D = (0, h.Z)(b),
+        { currentPage: y, updatePage: j, totalItems: U, pageSize: G } = (0, f.$)();
     o.useEffect(() => {
-        if (null != P && !!(0, v.Pw)(P))
-            (!(null != y && (0, v.Pw)(y)) || !(y.loadedAt >= P.loadedAt)) &&
+        if (null != b && !!(0, v.Pw)(b))
+            (!(null != D && (0, v.Pw)(D)) || !(D.loadedAt >= b.loadedAt)) &&
                 (0, E.Oe)(
-                    P.items.map((e) => e.id),
+                    b.items.map((e) => e.id),
                     'top_picks',
-                    M
+                    P
                 );
-    }, [M, P, y, n]);
-    let w = o.useMemo(
+    }, [P, b, D]);
+    let k = o.useMemo(
             () =>
                 (function (e, t, n, i) {
                     if (null == e) return [];
@@ -124,7 +122,7 @@ function b(e) {
                                     itemHeight: 0
                                 }
                             ].filter(I.lm);
-                        case 'upsell':
+                        case 'default':
                             return [
                                 {
                                     section: 'upsell',
@@ -132,31 +130,6 @@ function b(e) {
                                     sectionHeight: 268,
                                     itemHeight: 0
                                 },
-                                {
-                                    section: 'top_picks',
-                                    items: e.slice(0, t),
-                                    sectionHeight: R,
-                                    itemHeight: 400,
-                                    header: L.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
-                                    subtitle: L.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE,
-                                    skeletonCount: t
-                                },
-                                {
-                                    section: 'other_guilds',
-                                    items: e.slice(t),
-                                    sectionHeight: 0,
-                                    itemHeight: 400,
-                                    skeletonCount: 4 * t
-                                },
-                                {
-                                    section: 'pagination',
-                                    items: [],
-                                    sectionHeight: 86,
-                                    itemHeight: 0
-                                }
-                            ].filter(I.lm);
-                        case 'default':
-                            return [
                                 1 === i
                                     ? {
                                           section: 'top_picks',
@@ -186,65 +159,64 @@ function b(e) {
                         default:
                             return [];
                     }
-                })(b, c, i, j),
-            [b, c, i, j]
+                })(x, r, n, y),
+            [x, r, n, y]
         ),
-        B = o.useCallback(
+        w = o.useCallback(
             (e) => {
                 var t;
-                null === (t = r.current) ||
+                null === (t = s.current) ||
                     void 0 === t ||
                     t.scrollToTop({
                         callback: () => {
-                            U(e);
+                            j(e);
                         }
                     });
             },
-            [U]
+            [j]
         ),
-        H = o.useMemo(() => new Set(M.games), [M.games]),
-        V = o.useCallback(
-            (e, t, n, a) => {
+        B = o.useMemo(() => new Set(P.games), [P.games]),
+        H = o.useCallback(
+            (e, t, i, a) => {
                 var s;
-                let { items: r, section: o } = w[e];
-                if ('upsell' === o || 'hero' === o) return null;
+                let { items: o, section: c } = k[e];
+                if ('upsell' === c || 'hero' === c) return null;
                 let d =
                         (e -
                             (function (e) {
                                 switch (e) {
-                                    case 'upsell':
                                     case 'saved_guilds':
                                         return 0;
                                     case 'global_discovery':
                                     case 'default':
                                         return 1;
                                 }
-                            })(i)) *
-                            c +
+                            })(n)) *
+                            r +
                         t,
-                    u = r[t];
+                    u = o[t];
                 return (0, l.jsx)(
                     p.ZP,
                     {
                         clan: u,
                         index: d,
-                        affinity: null !== (s = u.affininty) && void 0 !== s ? s : (0, g.y)(u, M),
-                        traitsToHighlight: D,
+                        affinity: null !== (s = u.affininty) && void 0 !== s ? s : (0, g.y)(u, P),
+                        traitsToHighlight: M,
                         className: O.card,
-                        style: n,
+                        style: i,
                         source: Z.jXE.DISCOVER_SEARCH,
-                        prioritizedGameIds: H,
+                        prioritizedGameIds: B,
                         onlyAnimateIconOnHover: !0
                     },
                     a
                 );
             },
-            [M, w, D, H, c, i]
+            [P, k, M, B, r, n]
         ),
-        F = o.useCallback((e, t, n, i) => (0, l.jsx)(T.Z, { style: n }, i), []),
-        Y = o.useCallback(
+        V = o.useCallback((e, t, n, i) => (0, l.jsx)(T.Z, { style: n }, i), []),
+        F = o.useCallback(
             (e, t) => {
-                let { header: n, subtitle: i, section: a } = w[e];
+                let { header: n, subtitle: i, section: a } = k[e];
                 switch (a) {
                     case 'upsell':
                         return (0, l.jsx)(N.Z, {});
@@ -274,15 +246,15 @@ function b(e) {
                     case 'pagination':
                         return (0, l.jsx)(l.Fragment, {
                             children:
-                                G > k &&
+                                U > G &&
                                 (0, l.jsx)(_.Paginator, {
                                     className: d()(O.paginationInput),
-                                    totalCount: G,
-                                    pageSize: k,
+                                    totalCount: U,
+                                    pageSize: G,
                                     disablePaginationGap: !0,
                                     hideMaxPage: !0,
-                                    currentPage: j,
-                                    onPageChange: B
+                                    currentPage: y,
+                                    onPageChange: w
                                 })
                         });
                     default:
@@ -298,9 +270,9 @@ function b(e) {
                         });
                 }
             },
-            [j, B, k, w, G]
+            [y, w, G, k, U]
         );
-    if (0 === b.length && x && 'saved_guilds' === i)
+    if (0 === x.length && c && 'saved_guilds' === n)
         return (0, l.jsxs)('div', {
             className: O.emptySavedGuilds,
             children: [
@@ -316,7 +288,7 @@ function b(e) {
                 })
             ]
         });
-    if (0 === b.length && x)
+    if (0 === x.length && c)
         return (0, l.jsxs)('div', {
             className: O.emptySavedGuilds,
             children: [
@@ -332,12 +304,12 @@ function b(e) {
                 })
             ]
         });
-    let W = x
-        ? w.map((e) => {
+    let Y = c
+        ? k.map((e) => {
               let { items: t } = e;
               return t.length;
           })
-        : w.map((e) => {
+        : k.map((e) => {
               let { skeletonCount: t } = e;
               return null != t ? t : 0;
           });
@@ -345,28 +317,27 @@ function b(e) {
         children: (0, l.jsx)('div', {
             className: O.masonryListContainer,
             children: (0, l.jsx)(_.MasonryList, {
-                ref: r,
+                ref: s,
                 className: O.masonryList,
-                sections: W,
-                columns: c,
+                sections: Y,
+                columns: r,
                 itemGutter: 16,
                 paddingHorizontal: 32,
-                paddingVertical: 'upsell' === i ? 64 : 0,
+                paddingVertical: 0,
                 removeEdgeItemGutters: !0,
-                renderItem: x ? V : F,
-                renderSection: Y,
-                getSectionHeight: (e) => w[e].sectionHeight,
-                getItemKey: (e, t) => (x ? w[e].items[t].id : ''.concat(e, '-').concat(t)),
-                getItemHeight: (e) => w[e].itemHeight,
+                renderItem: c ? H : V,
+                renderSection: F,
+                getSectionHeight: (e) => k[e].sectionHeight,
+                getItemKey: (e, t) => (c ? k[e].items[t].id : ''.concat(e, '-').concat(t)),
+                getItemHeight: (e) => k[e].itemHeight,
                 getSectionProps: (e) => {
                     var t;
-                    return null !== (t = w[e].props) && void 0 !== t ? t : {};
+                    return null !== (t = k[e].props) && void 0 !== t ? t : {};
                 },
-                chunkSize: 4 * c,
+                chunkSize: 4 * r,
                 maxContentWidth: 2000,
-                onScroll: a
+                onScroll: i
             })
         })
     });
-}
-((s = i || (i = {})).UPSELL = 'upsell'), (s.TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.HERO = 'hero'), (s.PAGINATION = 'pagination'), ((r = a || (a = {})).DEFAULT = 'default'), (r.UPSELL = 'upsell'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');
+});

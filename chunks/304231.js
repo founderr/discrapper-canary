@@ -56,7 +56,7 @@ function C(e) {
     return e.toString();
 }
 t.Z = a.memo(function (e) {
-    let { setScreen: t } = e,
+    let { onDismiss: t } = e,
         n = a.useRef(null),
         d = a.useRef(null),
         u = a.useRef(null),
@@ -64,21 +64,20 @@ t.Z = a.memo(function (e) {
         [N, A] = a.useState(0),
         [v, Z] = a.useState(0),
         L = (0, m.GN)((e) => e.selectedPlaystyle, r.Z),
-        O = (0, m.GN)((e) => e.previousMode, r.Z),
-        R = a.useCallback(
+        O = a.useCallback(
             (e) => {
                 A(e), v < e && Z(e);
             },
             [v]
         ),
+        R = a.useCallback(() => {
+            0 === N ? t() : O(N - 1);
+        }, [N, O, t]),
         x = a.useCallback(() => {
-            0 === N ? (t(m.o2.USER_UPSELL), (0, m.fH)(O)) : R(N - 1);
-        }, [N, O, t, R]),
-        b = a.useCallback(() => {
-            2 === N ? (0, m.fH)(m.v0.DISCOVERY) : R(N + 1);
-        }, [N, R]),
-        P = a.useMemo(() => 1 === N && null == L, [L, N]),
-        M = a.useMemo(
+            2 === N ? t() : O(N + 1);
+        }, [N, O, t]),
+        b = a.useMemo(() => 1 === N && null == L, [L, N]),
+        P = a.useMemo(
             () => [
                 {
                     index: 0,
@@ -95,7 +94,7 @@ t.Z = a.memo(function (e) {
             ],
             []
         ),
-        D = (0, o.useSpring)(
+        M = (0, o.useSpring)(
             {
                 ref: n,
                 from: { opacity: 0 },
@@ -104,7 +103,7 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        y = (0, o.useSpring)(
+        D = (0, o.useSpring)(
             {
                 ref: d,
                 from: {
@@ -119,7 +118,7 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        j = (0, o.useSpring)(
+        y = (0, o.useSpring)(
             {
                 ref: u,
                 from: {
@@ -135,8 +134,8 @@ t.Z = a.memo(function (e) {
             'animate-always'
         );
     (0, s.useChain)([n, d, u], [0, 0.2, 0.5]);
-    let U = a.useMemo(() => [N], [N]),
-        G = a.useCallback((e) => {
+    let j = a.useMemo(() => [N], [N]),
+        U = a.useCallback((e) => {
             switch (e) {
                 case 0:
                     return (0, i.jsx)(T, {});
@@ -148,34 +147,34 @@ t.Z = a.memo(function (e) {
         }, []);
     return (0, i.jsxs)(s.animated.div, {
         className: g.container,
-        style: D,
+        style: M,
         children: [
             (0, i.jsx)(s.animated.div, {
                 className: g.sequencer,
-                style: y,
+                style: D,
                 children: (0, i.jsx)(h.Z, {
                     currentStep: N,
-                    items: U,
-                    renderItem: G,
+                    items: j,
+                    renderItem: U,
                     getItemKey: C
                 })
             }),
             (0, i.jsxs)(s.animated.div, {
                 className: g.footer,
-                style: j,
+                style: y,
                 children: [
                     (0, i.jsx)(_.T, {
                         currentStepIndex: N,
-                        steps: M,
+                        steps: P,
                         furthestStepIndex: v,
-                        onStepClick: R
+                        onStepClick: O
                     }),
                     (0, i.jsx)(_.i, {
                         className: g.footerButtons,
                         isBackDisabled: !1,
-                        isNextDisabled: P,
-                        onNextClick: b,
-                        onBackClick: x
+                        isNextDisabled: b,
+                        onNextClick: x,
+                        onBackClick: R
                     })
                 ]
             })

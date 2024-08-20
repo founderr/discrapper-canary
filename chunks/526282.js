@@ -1,44 +1,42 @@
 var i = n(735250),
     a = n(470079),
-    s = n(143927),
-    r = n(481060),
-    l = n(100527),
-    o = n(970606),
-    c = n(207796),
-    d = n(689938),
-    u = n(620080);
+    s = n(481060),
+    r = n(100527),
+    l = n(970606),
+    o = n(207796),
+    c = n(689938),
+    d = n(620080);
 t.Z = a.memo(function () {
-    let e = (0, c.GN)((e) => e.setUserUpsellScreen, s.Z);
     a.useEffect(() => {
-        (0, o.tv)({ location: l.Z.CLAN_DISCOVERY });
+        (0, l.tv)({ location: r.Z.CLAN_DISCOVERY });
     }, []);
-    let t = a.useCallback(() => {
-        (0, o.GS)({ location: l.Z.CLAN_DISCOVERY }), e(c.o2.USER_ONBOARDING);
-    }, [e]);
+    let e = a.useCallback(() => {
+        (0, l.GS)({ location: r.Z.CLAN_DISCOVERY }), (0, o.fH)(o.v0.GET_STARTED);
+    }, []);
     return (0, i.jsx)('div', {
-        className: u.upsellContainer,
+        className: d.upsellContainer,
         children: (0, i.jsxs)('div', {
-            className: u.upsellDetails,
+            className: d.upsellDetails,
             children: [
-                (0, i.jsx)(r.Heading, {
-                    className: u.upsellTitle,
+                (0, i.jsx)(s.Heading, {
+                    className: d.upsellTitle,
                     variant: 'heading-xxl/semibold',
                     color: 'header-primary',
-                    children: d.Z.Messages.CLAN_DISCOVERY_UPSELL_TITLE
+                    children: c.Z.Messages.CLAN_DISCOVERY_UPSELL_TITLE
                 }),
-                (0, i.jsxs)(r.Text, {
-                    className: u.upsellSubtitle,
+                (0, i.jsxs)(s.Text, {
+                    className: d.upsellSubtitle,
                     variant: 'text-md/medium',
                     color: 'header-secondary',
-                    children: [' ', d.Z.Messages.CLAN_DISCOVERY_UPSELL_SUBTITLE]
+                    children: [' ', c.Z.Messages.CLAN_DISCOVERY_UPSELL_SUBTITLE]
                 }),
-                (0, i.jsx)(r.Button, {
-                    onClick: t,
-                    children: (0, i.jsx)(r.Text, {
+                (0, i.jsx)(s.Button, {
+                    onClick: e,
+                    children: (0, i.jsx)(s.Text, {
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        className: u.customizeButton,
-                        children: d.Z.Messages.CLAN_DISCOVERY_UPSELL_USER_CTA
+                        className: d.customizeButton,
+                        children: c.Z.Messages.CLAN_DISCOVERY_UPSELL_USER_CTA
                     })
                 })
             ]
