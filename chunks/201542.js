@@ -211,6 +211,7 @@ t.Z = i.memo(function (e) {
             (0, r.jsx)(_.Z, {
                 className: T.volumeButton,
                 iconClassName: T.volumeButtonIcon,
+                iconColor: 'currentColor',
                 sliderWrapperClassName: T.volumeSlider,
                 muted: V,
                 value: (0, h.P)(X, 1),
