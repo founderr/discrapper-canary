@@ -11,5 +11,9 @@ e.exports = {
     enhancedUpsellText: 'enhancedUpsellText_f59576',
     extendedDemoContainer: 'extendedDemoContainer_f59576',
     extendedDemoDurationText: 'extendedDemoDurationText_f59576',
-    extendedDemoButton: 'extendedDemoButton_f59576'
+    extendedDemoButton: 'extendedDemoButton_f59576',
+    reverseTrialEducationBannerContainer: 'reverseTrialEducationBannerContainer_f59576',
+    reducedMotion: 'reducedMotion_f59576',
+    unlockAnimation: 'unlockAnimation_f59576',
+    reverseTrialEducationText: 'reverseTrialEducationText_f59576'
 };
