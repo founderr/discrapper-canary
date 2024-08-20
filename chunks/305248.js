@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(392711),
-    r = n.n(a),
+    a = n(470079),
+    s = n(392711),
+    r = n.n(s),
     l = n(442837),
     o = n(570140),
     c = n(45114),
@@ -20,9 +20,9 @@ var i = n(735250),
     T = n(709054),
     h = n(124368),
     N = n(742644);
-function C(e) {
-    let { channel: t, channelRecord: n, deleteChannel: a } = e,
-        C = (0, l.Wu)(
+function f(e) {
+    let { channel: t, channelRecord: n, deleteChannel: s } = e,
+        f = (0, l.Wu)(
             [_.Z, I.Z],
             () =>
                 r()(_.Z.getThreadsForParent(n.guild_id, n.id))
@@ -40,23 +40,23 @@ function C(e) {
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
-        f = s.useCallback((e, t) => {
+        C = a.useCallback((e, t) => {
             (0, E.ok)(e, t, h.on.INBOX);
         }, []);
     return (
-        s.useEffect(() => {
+        a.useEffect(() => {
             null != n &&
                 t.isFullyLoaded &&
                 !t.hasError &&
                 !t.collapsed &&
-                0 === C.length &&
+                0 === f.length &&
                 o.Z.wait(() => {
-                    (0, c.In)(t.channelId, !0), a(t.channelId);
+                    (0, c.In)(t.channelId, !0), s(t.channelId);
                 });
         }),
         (0, i.jsx)('div', {
             className: N.container,
-            children: C.map((e) =>
+            children: f.map((e) =>
                 (0, i.jsx)(
                     d.oL,
                     {
@@ -64,7 +64,7 @@ function C(e) {
                         children: (0, i.jsx)(u.ZP, {
                             className: N.forumPost,
                             threadId: e.id,
-                            goToThread: f
+                            goToThread: C
                         })
                     },
                     e.id

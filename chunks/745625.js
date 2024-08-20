@@ -1,5 +1,5 @@
-var a = n(15393),
-    r = n(919499),
+var r = n(15393),
+    a = n(919499),
     i = n(470079),
     o = n(520250),
     c = 'hcaptcha-api-script-id',
@@ -10,12 +10,12 @@ var a = n(15393),
         var t = (0, o.as)(e.scriptLocation);
         delete e.scriptLocation;
         var n = (0, o.$h)(t),
-            a = p.find(function (e) {
+            r = p.find(function (e) {
                 return e.scope === n.window;
             });
-        if (n.document.getElementById(c) && a) return a.promise;
-        var r = new Promise(function (a, r) {
-            n.window[s] = a;
+        if (n.document.getElementById(c) && r) return r.promise;
+        var a = new Promise(function (r, a) {
+            n.window[s] = r;
             var i = e.apihost || 'https://js.hcaptcha.com';
             delete e.apihost;
             var p = n.document.createElement('script');
@@ -24,17 +24,17 @@ var a = n(15393),
                 (p.async = void 0 === e.loadAsync || e.loadAsync),
                 delete e.loadAsync,
                 (p.onerror = function (e) {
-                    return r('script-error');
+                    return a('script-error');
                 });
             var d = (0, o.Ku)(e);
             (p.src += '' !== d ? '&' + d : ''), t.appendChild(p);
         });
         return (
             p.push({
-                promise: r,
+                promise: a,
                 scope: n.window
             }),
-            r
+            a
         );
     },
     h = (function (e) {
@@ -42,18 +42,18 @@ var a = n(15393),
             var n;
             return (
                 ((n = e.call(this, t) || this)._hcaptcha = void 0),
-                (n.renderCaptcha = n.renderCaptcha.bind((0, a.Z)(n))),
-                (n.resetCaptcha = n.resetCaptcha.bind((0, a.Z)(n))),
-                (n.removeCaptcha = n.removeCaptcha.bind((0, a.Z)(n))),
-                (n.isReady = n.isReady.bind((0, a.Z)(n))),
-                (n.loadCaptcha = n.loadCaptcha.bind((0, a.Z)(n))),
-                (n.handleOnLoad = n.handleOnLoad.bind((0, a.Z)(n))),
-                (n.handleSubmit = n.handleSubmit.bind((0, a.Z)(n))),
-                (n.handleExpire = n.handleExpire.bind((0, a.Z)(n))),
-                (n.handleError = n.handleError.bind((0, a.Z)(n))),
-                (n.handleOpen = n.handleOpen.bind((0, a.Z)(n))),
-                (n.handleClose = n.handleClose.bind((0, a.Z)(n))),
-                (n.handleChallengeExpired = n.handleChallengeExpired.bind((0, a.Z)(n))),
+                (n.renderCaptcha = n.renderCaptcha.bind((0, r.Z)(n))),
+                (n.resetCaptcha = n.resetCaptcha.bind((0, r.Z)(n))),
+                (n.removeCaptcha = n.removeCaptcha.bind((0, r.Z)(n))),
+                (n.isReady = n.isReady.bind((0, r.Z)(n))),
+                (n.loadCaptcha = n.loadCaptcha.bind((0, r.Z)(n))),
+                (n.handleOnLoad = n.handleOnLoad.bind((0, r.Z)(n))),
+                (n.handleSubmit = n.handleSubmit.bind((0, r.Z)(n))),
+                (n.handleExpire = n.handleExpire.bind((0, r.Z)(n))),
+                (n.handleError = n.handleError.bind((0, r.Z)(n))),
+                (n.handleOpen = n.handleOpen.bind((0, r.Z)(n))),
+                (n.handleClose = n.handleClose.bind((0, r.Z)(n))),
+                (n.handleChallengeExpired = n.handleChallengeExpired.bind((0, r.Z)(n))),
                 (n.ref = i.createRef()),
                 (n.apiScriptRequested = !1),
                 (n.state = {
@@ -65,7 +65,7 @@ var a = n(15393),
                 n
             );
         }
-        (0, r.Z)(t, e);
+        (0, a.Z)(t, e);
         var n = t.prototype;
         return (
             (n.componentDidMount = function () {
@@ -102,8 +102,8 @@ var a = n(15393),
                     var e = this.props,
                         t = e.apihost,
                         n = e.assethost,
-                        a = e.endpoint,
-                        r = e.host,
+                        r = e.endpoint,
+                        a = e.host,
                         i = e.imghost,
                         o = e.languageOverride,
                         c = e.reCaptchaCompat,
@@ -115,9 +115,9 @@ var a = n(15393),
                     d({
                         apihost: t,
                         assethost: n,
-                        endpoint: a,
+                        endpoint: r,
                         hl: o,
-                        host: r,
+                        host: a,
                         imghost: i,
                         recaptchacompat: !1 === c ? 'off' : null,
                         reportapi: s,
@@ -188,12 +188,12 @@ var a = n(15393),
             (n.handleSubmit = function (e) {
                 var t = this.props.onVerify,
                     n = this.state,
-                    a = n.isRemoved,
-                    r = n.captchaId,
+                    r = n.isRemoved,
+                    a = n.captchaId,
                     i = this._hcaptcha;
-                if (void 0 !== i && !a) {
-                    var o = i.getResponse(r),
-                        c = i.getRespKey(r);
+                if (void 0 !== i && !r) {
+                    var o = i.getResponse(a),
+                        c = i.getRespKey(a);
                     t && t(o, c);
                 }
             }),
@@ -206,8 +206,8 @@ var a = n(15393),
             (n.handleError = function (e) {
                 var t = this.props.onError,
                     n = this.state.captchaId,
-                    a = this._hcaptcha;
-                this.isReady() && a.reset(n), t && t(e);
+                    r = this._hcaptcha;
+                this.isReady() && r.reset(n), t && t(e);
             }),
             (n.isReady = function () {
                 var e = this.state,

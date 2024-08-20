@@ -1,7 +1,7 @@
-var l, i;
-t.d(n, {
+var t, r;
+l.d(n, {
     _: function () {
-        return l;
+        return t;
     }
 }),
-    ((i = l || (l = {}))[(i.EMBED = 1)] = 'EMBED');
+    ((r = t || (t = {}))[(r.EMBED = 1)] = 'EMBED');

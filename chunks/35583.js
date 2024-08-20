@@ -1,7 +1,7 @@
 n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
+    a = n(470079),
+    s = n(442837),
     r = n(481060),
     l = n(668781),
     o = n(431583),
@@ -24,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-class T extends s.PureComponent {
+class T extends a.PureComponent {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.memoizedMode
             ? {
@@ -85,4 +85,4 @@ class T extends s.PureComponent {
             });
     }
 }
-t.Z = a.ZP.connectStores([c.Z], () => ({ mode: c.Z.getState() }))(T);
+t.Z = s.ZP.connectStores([c.Z], () => ({ mode: c.Z.getState() }))(T);

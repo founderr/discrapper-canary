@@ -1,6 +1,6 @@
 var i,
-    s,
     a,
+    s,
     r,
     l = n(442837),
     o = n(570140);
@@ -15,15 +15,15 @@ class _ extends (r = l.ZP.Store) {
         return !c && !u;
     }
 }
-(a = 'CheckoutRecoveryStore'),
-    (s = 'displayName') in (i = _)
-        ? Object.defineProperty(i, s, {
-              value: a,
+(s = 'CheckoutRecoveryStore'),
+    (a = 'displayName') in (i = _)
+        ? Object.defineProperty(i, a, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[s] = a),
+        : (i[a] = s),
     (t.Z = new _(o.Z, {
         CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS: function (e) {
             (u = !0), (c = !1), (d = e.isTargeted);

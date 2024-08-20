@@ -1,9 +1,9 @@
-var l, i;
-t.d(n, {
+var t, r;
+l.d(n, {
     $: function () {
-        return l;
+        return t;
     }
 }),
-    ((i = l || (l = {})).USER = 'user'),
-    (i.ROLE = 'role'),
-    (i.CHANNEL = 'channel');
+    ((r = t || (t = {})).USER = 'user'),
+    (r.ROLE = 'role'),
+    (r.CHANNEL = 'channel');

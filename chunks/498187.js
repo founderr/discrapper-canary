@@ -1,54 +1,54 @@
-t.d(n, {
+l.d(n, {
     Z: function () {
-        return p;
+        return E;
     }
 });
-var l = t(876215),
-    i = t(758713),
-    r = t(835473),
-    a = t(810568),
-    o = t(168524),
-    s = t(561308),
-    c = t(206583),
-    u = t(96513),
-    d = t(701488),
-    m = t(689938);
+var t = l(876215),
+    r = l(758713),
+    i = l(835473),
+    a = l(810568),
+    u = l(168524),
+    s = l(561308),
+    o = l(206583),
+    c = l(96513),
+    d = l(701488),
+    m = l(689938);
 let f = {
-        [i.z.XBOX]: c.kG.XBOX,
-        [i.z.PLAYSTATION]: c.kG.PLAYSTATION
+        [r.z.XBOX]: o.kG.XBOX,
+        [r.z.PLAYSTATION]: o.kG.PLAYSTATION
     },
-    _ = { [u._.EMBED]: a.m1.Embed };
-function p(e) {
+    p = { [c._.EMBED]: a.m1.Embed };
+function E(e) {
     let n,
-        t,
-        { entry: i, location: a, baseEntryData: c } = e,
-        u = (0, r.q)(i.extra.application_id),
-        p = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
-        h = i.extra.game_name;
-    if (null != i.extra.platform) {
-        let e = f[i.extra.platform];
+        l,
+        { entry: r, location: a, baseEntryData: o } = e,
+        c = (0, i.q)(r.extra.application_id),
+        E = null == c ? void 0 : c.getIconURL(d.Si.LARGE),
+        v = r.extra.game_name;
+    if (null != r.extra.platform) {
+        let e = f[r.extra.platform];
         null != e &&
             (n = {
                 type: e,
                 'aria-label': m.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
             });
     }
-    t = i.content_type === l.s.PLAYED_GAME ? ((0, s.kr)(i) && !(0, s.n2)(i) ? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED) : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED;
-    let C = _[a],
-        v = (0, o.Z)({
+    l = r.content_type === t.s.PLAYED_GAME ? ((0, s.kr)(r) && !(0, s.n2)(r) ? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED) : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED;
+    let C = p[a],
+        h = (0, u.Z)({
             location: C,
-            applicationId: i.extra.application_id,
+            applicationId: r.extra.application_id,
             source: C,
             trackEntryPointImpression: !0,
-            sourceUserId: i.author_id
+            sourceUserId: r.author_id
         });
     return {
-        ...c,
-        thumbnailUrl: p,
-        title: h,
-        onClickTitle: v,
-        onClickThumbnail: v,
-        userDescription: t,
+        ...o,
+        thumbnailUrl: E,
+        title: v,
+        onClickTitle: h,
+        onClickThumbnail: h,
+        userDescription: l,
         providerIconProps: n
     };
 }

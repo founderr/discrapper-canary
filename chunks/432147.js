@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
+var a = n(120356),
+    s = n.n(a),
     r = n(442837),
     l = n(481060),
     o = n(239091),
@@ -20,37 +20,37 @@ var s = n(120356),
     T = n(488131),
     h = n(981631),
     N = n(689938),
-    C = n(384880);
-function f(e) {
+    f = n(384880);
+function C(e) {
     let { message: t, compact: n } = e,
-        s = (0, r.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
-    return null == s
+        a = (0, r.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
+    return null == a
         ? null
         : (0, i.jsx)(p, {
-              channel: s,
+              channel: a,
               compact: n,
               isSystemMessage: (0, c.Z)(t)
           });
 }
 function p(e) {
-    let { channel: t, compact: s, isSystemMessage: c } = e,
+    let { channel: t, compact: a, isSystemMessage: c } = e,
         u = (0, r.e7)([E.Z], () => E.Z.getCount(t.id)),
         d = (function (e) {
             var t;
             let n = (0, r.e7)([E.Z], () => E.Z.getMostRecentMessage(e.id)),
-                s = (0, r.e7)([E.Z], () => E.Z.getCount(e.id)),
-                a = (0, I.Ok)(e);
+                a = (0, r.e7)([E.Z], () => E.Z.getCount(e.id)),
+                s = (0, I.Ok)(e);
             return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived)
                 ? N.Z.Messages.NO_RECENT_THREAD_MESSAGES
-                : null == s || 0 === s
+                : null == a || 0 === a
                   ? N.Z.Messages.NO_THREAD_MESSAGES
                   : null == n
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)('span', { children: N.Z.Messages.NO_RECENT_THREAD_MESSAGES }),
                               (0, i.jsx)('span', {
-                                  className: C.timestamp,
-                                  children: (0, I.Ye)(a)
+                                  className: f.timestamp,
+                                  children: (0, I.Ye)(s)
                               })
                           ]
                       })
@@ -61,19 +61,19 @@ function p(e) {
                                   channel: e
                               }),
                               (0, i.jsx)('span', {
-                                  className: C.timestamp,
-                                  children: (0, I.Ye)(a)
+                                  className: f.timestamp,
+                                  children: (0, I.Ye)(s)
                               })
                           ]
                       });
         })(t),
-        f = null != u && u > 0;
+        C = null != u && u > 0;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: a()(C.spine, {
-                    [C.cozy]: !s,
-                    [C.systemMessageSpine]: c
+                className: s()(f.spine, {
+                    [f.cozy]: !a,
+                    [f.systemMessageSpine]: c
                 })
             }),
             (0, i.jsx)(l.Clickable, {
@@ -97,27 +97,27 @@ function p(e) {
                     });
                 },
                 'aria-roledescription': N.Z.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
-                className: a()(C.container, { [C.systemMessageContainer]: c }),
+                className: s()(f.container, { [f.systemMessageContainer]: c }),
                 children: (0, i.jsxs)(l.BlockInteractions, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: C.topLine,
+                            className: f.topLine,
                             children: [
                                 (0, i.jsx)(l.HiddenVisually, { children: N.Z.Messages.THREAD }),
                                 (0, i.jsx)('span', {
-                                    className: C.name,
+                                    className: f.name,
                                     children: t.name
                                 }),
                                 (0, i.jsx)('span', {
-                                    className: C.cta,
-                                    'aria-hidden': !f,
+                                    className: f.cta,
+                                    'aria-hidden': !C,
                                     children: (0, _.WE)(u, t.id)
                                 })
                             ]
                         }),
                         (0, i.jsx)('span', {
                             'aria-hidden': !0,
-                            className: a()(C.bottomLine),
+                            className: s()(f.bottomLine),
                             children: d
                         })
                     ]

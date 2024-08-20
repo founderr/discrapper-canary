@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(392711),
-    r = n.n(a),
+    a = n(470079),
+    s = n(392711),
+    r = n.n(s),
     l = n(442837),
     o = n(524437),
     c = n(481060),
@@ -19,28 +19,28 @@ var i = n(735250),
     m = n(689938),
     T = n(401098);
 function h(e) {
-    let { setTab: t, badgeState: a, closePopout: h } = e,
-        C = (0, l.Wu)([u.Z], () => u.Z.getInvites()),
-        f = (0, l.e7)([u.Z], () => u.Z.getInviteStatuses()),
-        [p, g] = s.useMemo(
+    let { setTab: t, badgeState: s, closePopout: h } = e,
+        f = (0, l.Wu)([u.Z], () => u.Z.getInvites()),
+        C = (0, l.e7)([u.Z], () => u.Z.getInviteStatuses()),
+        [p, g] = a.useMemo(
             () =>
-                r().partition(C, (e) => {
+                r().partition(f, (e) => {
                     var t;
-                    return (null === (t = f[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+                    return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
                 }),
-            [C, f]
+            [f, C]
         );
-    return (s.useEffect(() => {
+    return (a.useEffect(() => {
         (0, d.sJ)();
     }),
-    0 === C.length)
+    0 === f.length)
         ? (0, i.jsxs)('div', {
               className: T.container,
               children: [
                   (0, i.jsx)(E.Z, {
                       tab: o.X.GAME_INVITES,
                       setTab: t,
-                      badgeState: a,
+                      badgeState: s,
                       closePopout: h
                   }),
                   (0, i.jsx)('div', {
@@ -59,7 +59,7 @@ function h(e) {
                   (0, i.jsx)(E.Z, {
                       tab: o.X.GAME_INVITES,
                       setTab: t,
-                      badgeState: a,
+                      badgeState: s,
                       closePopout: h,
                       children: (0, i.jsx)(c.CircleIconButton, {
                           className: T.__invalid_deleteButton,

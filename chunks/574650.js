@@ -1,8 +1,8 @@
 n(653041), n(47120);
 var i = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
+var a = n(120356),
+    s = n.n(a),
     r = n(266067),
     l = n(442837),
     o = n(481060),
@@ -16,20 +16,20 @@ var s = n(120356),
     T = n(176505),
     h = n(689938),
     N = n(975870),
-    C = n(389397);
+    f = n(389397);
 t.Z = () => {
     var e, t;
-    let s = (0, l.e7)([u.Z], () => u.Z.getGuildId(), []),
-        f = (0, l.e7)([c.Z], () => c.Z.getGuild(s), [s]),
-        p = (0, l.e7)([I.Z], () => (null != s ? I.Z.getRequest(s) : null), [s]),
+    let a = (0, l.e7)([u.Z], () => u.Z.getGuildId(), []),
+        C = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
+        p = (0, l.e7)([I.Z], () => (null != a ? I.Z.getRequest(a) : null), [a]),
         g = (0, r.TH)(),
-        S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == f ? void 0 : f.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-    if (null == f || !f.hasVerificationGate() || S) return null;
+        S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == C ? void 0 : C.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+    if (null == C || !C.hasVerificationGate() || S) return null;
     let A = null !== (t = null == p ? void 0 : p.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
         R = null,
         x = null,
         O = null,
-        M = [N.notice, C.notice];
+        M = [N.notice, f.notice];
     switch (A) {
         case E.wB.SUBMITTED:
             (R = h.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE),
@@ -40,7 +40,7 @@ t.Z = () => {
                             header: h.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
                             confirmText: h.Z.Messages.CONFIRM,
                             cancelText: h.Z.Messages.CANCEL,
-                            onConfirm: () => d.Z.removeGuildJoinRequest(f.id),
+                            onConfirm: () => d.Z.removeGuildJoinRequest(C.id),
                             confirmButtonColor: o.Button.Colors.BRAND,
                             ...e,
                             children: (0, i.jsx)(o.Text, {
@@ -59,7 +59,7 @@ t.Z = () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
                         return (t) =>
                             (0, i.jsx)(e, {
-                                guildId: f.id,
+                                guildId: C.id,
                                 ...t
                             });
                     });
@@ -70,11 +70,11 @@ t.Z = () => {
             (R = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT),
                 (x = h.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
                 (O = () => {
-                    (0, _.hk)(f.id);
+                    (0, _.hk)(C.id);
                 });
     }
     return (0, i.jsxs)('div', {
-        className: a()(...M),
+        className: s()(...M),
         children: [
             (0, i.jsx)(o.Text, {
                 className: N.header,

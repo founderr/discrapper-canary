@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    s = n(470079),
-    a = n(512722),
-    r = n.n(a),
+    a = n(470079),
+    s = n(512722),
+    r = n.n(s),
     l = n(481060),
     o = n(976255),
     c = n(230711),
@@ -20,12 +20,12 @@ var i = n(735250),
     h = n(689938);
 function N(e) {
     let { onClose: t } = e,
-        a = d.default.getCurrentUser();
-    r()(void 0 !== a, 'User must not be null');
-    let N = (0, _.I5)(a),
-        C = N ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
+        s = d.default.getCurrentUser();
+    r()(void 0 !== s, 'User must not be null');
+    let N = (0, _.I5)(s),
+        f = N ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
     return (
-        s.useEffect(() => {
+        a.useEffect(() => {
             null == m.Z.cashAppPayComponent && (0, I.eI)();
         }, []),
         (0, i.jsxs)(l.Notice, {
@@ -38,7 +38,7 @@ function N(e) {
                 N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CONTENT : h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CONTENT,
                 (0, i.jsx)(l.PrimaryCTANoticeButton, {
                     onClick: () => {
-                        c.Z.open(C),
+                        c.Z.open(f),
                             setTimeout(() => {
                                 (0, l.openModalLazy)(
                                     async () => {

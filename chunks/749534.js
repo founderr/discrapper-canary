@@ -15,7 +15,7 @@ function o(e) {
         children: [
             (0, r.jsx)(i.Heading, {
                 className: s.header,
-                variant: 'heading-sm/semibold',
+                variant: 'text-sm/semibold',
                 children: a.Z.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
             }),
             (0, r.jsx)('div', {

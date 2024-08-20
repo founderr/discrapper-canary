@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(470079),
-    s = n(106351),
-    a = n(442837),
+    a = n(106351),
+    s = n(442837),
     r = n(434650),
     l = n(430824),
     o = n(63205),
@@ -14,7 +14,7 @@ var i = n(470079),
 function d(e) {
     var t, n;
     let { message: d, channel: _, enabled: E = !0 } = e,
-        I = (0, a.e7)(
+        I = (0, s.e7)(
             [l.Z],
             () => {
                 var e;
@@ -24,11 +24,11 @@ function d(e) {
             [_.guild_id]
         ),
         m = (null === (t = d.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != _.guild_id,
-        T = _.type === s.d.GUILD_ANNOUNCEMENT && I,
+        T = _.type === a.d.GUILD_ANNOUNCEMENT && I,
         h = !d.hasFlag(u.iLy.EPHEMERAL) && (m || T),
         N = m && null != d.messageReference ? d.messageReference.message_id : d.id,
-        C = m && null != d.messageReference ? d.messageReference.channel_id : _.id,
-        f = m && (null === (n = d.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : _.guild_id,
+        f = m && null != d.messageReference ? d.messageReference.channel_id : _.id,
+        C = m && (null === (n = d.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : _.guild_id,
         p = i.useCallback(
             (e) => {
                 e
@@ -36,12 +36,12 @@ function d(e) {
                           messageId: N,
                           channelId: _.id,
                           guildId: _.guild_id,
-                          sourceChannelId: C,
-                          sourceGuildId: f
+                          sourceChannelId: f,
+                          sourceGuildId: C
                       })
                     : c.Z.handleMessageLostVisibility(N);
             },
-            [N, _.id, _.guild_id, C, f]
+            [N, _.id, _.guild_id, f, C]
         ),
         g = o.Z.useExperiment(
             { location: '836a4b_1' },

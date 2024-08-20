@@ -12,9 +12,9 @@ n.d(t, {
     n(47120),
     n(653041);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(392711),
     o = n.n(l),
     c = n(91192),
@@ -27,8 +27,8 @@ var i = n(735250),
     T = n(294218),
     h = n(703656),
     N = n(210887),
-    C = n(592125),
-    f = n(375954),
+    f = n(592125),
+    C = n(375954),
     p = n(496675),
     g = n(933429),
     S = n(451478),
@@ -54,9 +54,9 @@ function L(e) {
     e.stopPropagation();
 }
 let Z = (e) => {
-        let { title: t, children: n, className: s } = e;
+        let { title: t, children: n, className: a } = e;
         return (0, i.jsxs)('div', {
-            className: r()(s, M.header),
+            className: r()(a, M.header),
             children: [
                 null == t
                     ? null
@@ -84,7 +84,7 @@ let Z = (e) => {
             ]
         });
     };
-class D extends s.PureComponent {
+class b extends a.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, i.jsxs)(d.Clickable, {
@@ -103,8 +103,8 @@ class D extends s.PureComponent {
         });
     }
     renderCloseButton() {
-        let { onCloseMessage: e, canCloseAllMessages: t, canManageMessages: n, channel: s } = this.props;
-        return null != e && (t || n || (null != s && s.isPrivate()))
+        let { onCloseMessage: e, canCloseAllMessages: t, canManageMessages: n, channel: a } = this.props;
+        return null != e && (t || n || (null != a && a.isPrivate()))
             ? (0, i.jsx)(d.Button, {
                   look: d.Button.Looks.BLANK,
                   size: d.Button.Sizes.NONE,
@@ -135,20 +135,20 @@ class D extends s.PureComponent {
             });
     }
 }
-let b = u.ZP.connectStores([p.Z], (e) => {
+let D = u.ZP.connectStores([p.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && p.Z.can(x.Plq.MANAGE_MESSAGES, t) };
-})(D);
+})(b);
 function j(e) {
-    let { analyticsName: t, items: n, hasMore: a, loading: l, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: h, getProTip: C, scrollerClassName: f, className: p, listName: v } = e,
-        Z = s.useRef(null),
+    let { analyticsName: t, items: n, hasMore: s, loading: l, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: h, getProTip: f, scrollerClassName: C, className: p, listName: v } = e,
+        Z = a.useRef(null),
         P = (0, I.Z)(v, Z),
-        D = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
-        b = (0, u.e7)([S.Z], () => S.Z.windowSize());
-    s.useEffect(() => {
+        b = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
+        D = (0, u.e7)([S.Z], () => S.Z.windowSize());
+    a.useEffect(() => {
         A.default.track(x.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
-        s.useEffect(() => {
+        a.useEffect(() => {
             function e() {
                 var e;
                 null === (e = Z.current) || void 0 === e || e.scrollPageUp({ animate: !0 });
@@ -165,11 +165,11 @@ function j(e) {
                 }
             );
         }, []);
-    let j = s.useCallback(() => {
+    let j = a.useCallback(() => {
             var e;
             let t = null === (e = Z.current) || void 0 === e ? void 0 : e.getScrollerState();
-            null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && a && !l && (null == _ || _());
-        }, [a, _, l]),
+            null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && s && !l && (null == _ || _());
+        }, [s, _, l]),
         U = [],
         y = !0;
     null == n
@@ -184,7 +184,7 @@ function j(e) {
               )
           ])
         : 0 === n.length
-          ? U.push((0, i.jsx)(s.Fragment, { children: T(N.Z.theme) }, 'empty-state'))
+          ? U.push((0, i.jsx)(a.Fragment, { children: T(N.Z.theme) }, 'empty-state'))
           : ((y = !1),
             (U = []),
             o().each(n, (e) => {
@@ -203,7 +203,7 @@ function j(e) {
                   },
                   'loading-more-after'
               )
-            : a
+            : s
               ? (0, i.jsx)('div', {
                     className: M.hasMore,
                     children: (0, i.jsx)(d.Button, {
@@ -218,8 +218,8 @@ function j(e) {
                     className: M.scrollingFooterWrap,
                     children: T(N.Z.theme)
                 }));
-    let k = null == C ? void 0 : C(),
-        F =
+    let k = null == f ? void 0 : f(),
+        G =
             y && null != k
                 ? (0, i.jsx)('div', {
                       className: M.footer,
@@ -233,12 +233,12 @@ function j(e) {
                       })
                   })
                 : null,
-        G = { maxHeight: b.height - 43 - 25 };
-    D && (G.maxHeight -= 40);
-    let w = null != _ && a;
+        F = { maxHeight: D.height - 43 - 25 };
+    b && (F.maxHeight -= 40);
+    let w = null != _ && s;
     return (0, i.jsx)('div', {
         className: r()(p, M.messagesPopoutWrap),
-        style: G,
+        style: F,
         onClick: L,
         onDoubleClick: L,
         'aria-label': e['aria-label'],
@@ -246,7 +246,7 @@ function j(e) {
             component: E(),
             children: [
                 (0, i.jsxs)(d.AdvancedScroller, {
-                    className: r()(M.messagesPopout, f),
+                    className: r()(M.messagesPopout, C),
                     onScroll: w ? j : void 0,
                     ref: Z,
                     children: [
@@ -266,42 +266,42 @@ function j(e) {
                         B
                     ]
                 }),
-                F
+                G
             ]
         })
     });
 }
 function U(e) {
-    let { analyticsName: t, onFetch: n, channel: a, messages: r, hasMore: l, loading: o, loadMore: c, onJump: d, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: N, renderMessage: p, getProTip: g, scrollerClassName: S, className: A, onCloseMessage: R, listName: v } = e,
-        L = (0, u.e7)([f.Z], () => {
-            let e = null != a ? f.Z.getMessages(a.id) : null;
+    let { analyticsName: t, onFetch: n, channel: s, messages: r, hasMore: l, loading: o, loadMore: c, onJump: d, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: N, renderMessage: p, getProTip: g, scrollerClassName: S, className: A, onCloseMessage: R, listName: v } = e,
+        L = (0, u.e7)([C.Z], () => {
+            let e = null != s ? C.Z.getMessages(s.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
     function Z(e, n) {
-        let { id: i, blocked: s, author: a, channel_id: r } = e;
-        if (s)
+        let { id: i, blocked: a, author: s, channel_id: r } = e;
+        if (a)
             _.Z.show({
                 title: O.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
-                body: O.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({ name: a.username }),
+                body: O.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({ name: s.username }),
                 confirmText: O.Z.Messages.OKAY
             });
         else if (!L) {
-            let e = C.Z.getChannel(r);
+            let e = f.Z.getChannel(r);
             null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(x.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
         }
     }
-    s.useEffect(() => {
-        n(a);
-    }, [a, n]);
-    let P = s.useMemo(
+    a.useEffect(() => {
+        n(s);
+    }, [s, n]);
+    let P = a.useMemo(
         () =>
             null == r
                 ? void 0
                 : r.map((e) => ({
                       message: e,
-                      channel: a
+                      channel: s
                   })),
-        [r, a]
+        [r, s]
     );
     return (0, i.jsx)(j, {
         className: A,
@@ -318,10 +318,10 @@ function U(e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];
             if (null != p) return p(t, (e) => Z(t, e));
-            let s = [];
+            let a = [];
             return null == n
                 ? []
-                : (s.push(
+                : (a.push(
                       (0, i.jsxs)(
                           'div',
                           {
@@ -332,8 +332,8 @@ function U(e) {
                                       message: t,
                                       channel: n
                                   }),
-                                  (0, i.jsx)(b, {
-                                      channel: a,
+                                  (0, i.jsx)(D, {
+                                      channel: s,
                                       message: t,
                                       jumping: L,
                                       canCloseAllMessages: I,
@@ -345,7 +345,7 @@ function U(e) {
                           t.id
                       )
                   ),
-                  s);
+                  a);
         },
         listName: v,
         'aria-label': e['aria-label']

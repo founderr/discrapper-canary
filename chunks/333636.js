@@ -1,17 +1,17 @@
 n.r(t), n(47120);
 var a = n(735250),
     l = n(470079),
-    o = n(481060),
-    r = n(238675),
-    s = n(677065);
-let i = Object.entries(r.fw).map((e) => {
+    s = n(481060),
+    o = n(238675),
+    r = n(677065);
+let i = Object.entries(o.fw).map((e) => {
         let [t, n] = e;
         return {
             label: t,
             value: n
         };
     }),
-    c = Object.entries(r.sJ)
+    c = Object.entries(o.sJ)
         .map((e) => {
             let [t, n] = e;
             return {
@@ -33,7 +33,7 @@ t.default = function (e) {
             if (u) {
                 p('');
                 try {
-                    await (0, r.qy)(u, {
+                    await (0, o.qy)(u, {
                         difficulty: null != A ? A : void 0,
                         should_serve_invisible: null != h ? h : void 0
                     });
@@ -42,57 +42,57 @@ t.default = function (e) {
                 }
             }
         };
-    return (0, a.jsxs)(o.ModalRoot, {
+    return (0, a.jsxs)(s.ModalRoot, {
         transitionState: n,
         children: [
-            (0, a.jsxs)(o.ModalHeader, {
-                className: s.header,
+            (0, a.jsxs)(s.ModalHeader, {
+                className: r.header,
                 children: [
-                    (0, a.jsx)(o.Heading, {
+                    (0, a.jsx)(s.Heading, {
                         variant: 'heading-lg/semibold',
                         children: 'Captcha Test Tool'
                     }),
-                    (0, a.jsx)(o.ModalCloseButton, { onClick: t })
+                    (0, a.jsx)(s.ModalCloseButton, { onClick: t })
                 ]
             }),
-            (0, a.jsxs)(o.ModalContent, {
-                className: s.content,
+            (0, a.jsxs)(s.ModalContent, {
+                className: r.content,
                 children: [
-                    (0, a.jsx)(o.SingleSelect, {
+                    (0, a.jsx)(s.SingleSelect, {
                         value: u,
                         options: i,
                         onChange: (e) => {
-                            e !== r.fw.HCAPTCHA_RQDATA && C(null), e !== r.fw.HCAPTCHA_EASY && f(null), d(e), p('');
+                            e !== o.fw.HCAPTCHA_RQDATA && C(null), e !== o.fw.HCAPTCHA_EASY && f(null), d(e), p('');
                         }
                     }),
-                    u === r.fw.HCAPTCHA_RQDATA &&
-                        (0, a.jsx)(o.SingleSelect, {
+                    u === o.fw.HCAPTCHA_RQDATA &&
+                        (0, a.jsx)(s.SingleSelect, {
                             value: A,
                             options: c,
                             onChange: (e) => {
-                                u === r.fw.HCAPTCHA_RQDATA && C(e);
+                                u === o.fw.HCAPTCHA_RQDATA && C(e);
                             }
                         }),
-                    u === r.fw.HCAPTCHA_EASY &&
-                        (0, a.jsx)(o.Checkbox, {
+                    u === o.fw.HCAPTCHA_EASY &&
+                        (0, a.jsx)(s.Checkbox, {
                             value: null != h && h,
                             onChange: (e, t) => f(t),
-                            children: (0, a.jsx)(o.Text, {
+                            children: (0, a.jsx)(s.Text, {
                                 variant: 'text-md/normal',
                                 children: 'Should serve invisible?'
                             })
                         })
                 ]
             }),
-            (0, a.jsxs)(o.ModalFooter, {
-                className: s.footer,
+            (0, a.jsxs)(s.ModalFooter, {
+                className: r.footer,
                 children: [
-                    (0, a.jsx)(o.Button, {
+                    (0, a.jsx)(s.Button, {
                         onClick: S,
                         disabled: !u,
                         children: 'Trigger Captcha'
                     }),
-                    '' !== T && (0, a.jsx)(o.InputError, { error: T })
+                    '' !== T && (0, a.jsx)(s.InputError, { error: T })
                 ]
             })
         ]

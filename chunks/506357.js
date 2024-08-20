@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
+    a = n(470079),
+    s = n(442837),
     r = n(481060),
     l = n(565138),
     o = n(241559),
@@ -19,18 +19,18 @@ var i = n(735250),
     T = n(533244),
     h = n(981631),
     N = n(176505),
-    C = n(689938),
-    f = n(679168);
+    f = n(689938),
+    C = n(679168);
 function p(e) {
     var t, p;
     let { onDismiss: g } = e,
-        S = (0, a.e7)([_.Z], () => _.Z.getGuildId()),
-        A = (0, a.e7)([d.Z], () => (null != S ? d.Z.getChannelId(S) : null), [S]),
+        S = (0, s.e7)([_.Z], () => _.Z.getGuildId()),
+        A = (0, s.e7)([d.Z], () => (null != S ? d.Z.getChannelId(S) : null), [S]),
         R = null != S ? S : null,
-        x = (0, a.e7)([u.Z], () => (null != R ? u.Z.getGuild(R) : null), [R]),
+        x = (0, s.e7)([u.Z], () => (null != R ? u.Z.getGuild(R) : null), [R]),
         { shouldShowIncidentActions: O, incidentData: M, isUnderLockdown: v } = (0, I.mI)(R),
         L = (0, o.n2)(null !== (t = null == x ? void 0 : x.id) && void 0 !== t ? t : h.lds),
-        Z = s.useCallback(() => null != x && (0, c._X)(x.id), [x]);
+        Z = a.useCallback(() => null != x && (0, c._X)(x.id), [x]);
     if (null == x || null == M || !O) return null;
     let P = (e) => {
             if (e && L && A !== N.oC.MEMBER_SAFETY && Z()) {
@@ -54,58 +54,58 @@ function p(e) {
                     });
             });
         },
-        D = (0, i.jsx)(l.Z, {
-            className: f.guildIcon,
+        b = (0, i.jsx)(l.Z, {
+            className: C.guildIcon,
             guild: x,
             size: l.Z.Sizes.MINI
         }),
-        b = (0, T.OY)(M, x.name);
+        D = (0, T.OY)(M, x.name);
     if (null != (null !== (p = M.dmsDisabledUntil) && void 0 !== p ? p : M.invitesDisabledUntil) && v)
         return (0, i.jsxs)(r.Notice, {
-            className: f.notice,
+            className: C.notice,
             color: r.NoticeColors.NEUTRAL,
             children: [
                 (0, i.jsx)(r.NoticeCloseButton, {
                     onClick: g,
                     noticeType: h.kVF.GUILD_RAID_NOTIFICATION
                 }),
-                D,
                 b,
+                D,
                 (0, i.jsx)(r.NoticeButton, {
-                    className: f.actionButton,
+                    className: C.actionButton,
                     onClick: () => P(!1),
                     children: (0, i.jsxs)('div', {
-                        className: f.actionButtonInner,
+                        className: C.actionButtonInner,
                         children: [
                             (0, i.jsx)(r.LockIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
                             }),
-                            (0, i.jsx)('span', { children: C.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_NAGBAR_ACTION })
+                            (0, i.jsx)('span', { children: f.Z.Messages.GUILD_ANTIRAID_LOCKDOWN_NAGBAR_ACTION })
                         ]
                     })
                 })
             ]
         });
-    let j = (0, T.CG)(M) ? C.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({ guildName: x.name }) : (0, T.kk)(M) ? C.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({ guildName: x.name }) : C.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({ guildName: x.name }),
+    let j = (0, T.CG)(M) ? f.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({ guildName: x.name }) : (0, T.kk)(M) ? f.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({ guildName: x.name }) : f.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({ guildName: x.name }),
         U = L && A === N.oC.MEMBER_SAFETY;
     return (0, i.jsxs)(r.Notice, {
-        className: f.notice,
+        className: C.notice,
         color: r.NoticeColors.WARNING,
         children: [
             (0, i.jsx)(r.NoticeCloseButton, {
                 onClick: g,
                 noticeType: h.kVF.GUILD_RAID_NOTIFICATION
             }),
-            D,
+            b,
             j,
             !U &&
                 (0, i.jsx)(r.NoticeButton, {
-                    className: f.actionButton,
+                    className: C.actionButton,
                     onClick: () => P(!0),
                     children: (0, i.jsx)('div', {
-                        className: f.actionButtonInner,
-                        children: (0, i.jsx)('span', { children: C.Z.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW })
+                        className: C.actionButtonInner,
+                        children: (0, i.jsx)('span', { children: f.Z.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW })
                     })
                 })
         ]

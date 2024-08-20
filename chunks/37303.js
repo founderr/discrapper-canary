@@ -3,13 +3,13 @@ n.d(t, {
         return N;
     },
     Z: function () {
-        return C;
+        return f;
     }
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(567526),
+    a = n(470079),
+    s = n(567526),
     r = n(442837),
     l = n(686777),
     o = n(113434),
@@ -24,21 +24,21 @@ var i = n(735250),
     h = n(861495);
 function N(e) {
     let { questId: t, ...n } = e,
-        s = (0, r.e7)([c.Z], () => c.Z.getQuest(t));
-    if (null == s) return null;
+        a = (0, r.e7)([c.Z], () => c.Z.getQuest(t));
+    if (null == a) return null;
     {
         let e = {
-            quest: s,
+            quest: a,
             ...n
         };
-        return (0, i.jsx)(C, { ...e });
+        return (0, i.jsx)(f, { ...e });
     }
 }
-function C(e) {
+function f(e) {
     let { quest: t, location: n, initiallyExpanded: r, contentPosition: c } = e,
-        [N, C] = s.useState(!1),
-        f = s.useCallback(() => C(!0), []),
-        p = s.useCallback(() => C(!1), []),
+        [N, f] = a.useState(!1),
+        C = a.useCallback(() => f(!0), []),
+        p = a.useCallback(() => f(!1), []),
         g = (0, o.tP)(t),
         { containerRef: S, size: A, height: R } = (0, m.h)(),
         x = (0, l.q)({ location: T.dr.QUESTS_CARD }),
@@ -64,7 +64,7 @@ function C(e) {
         trackGuildAndChannelMetadata: n === u.jn.QUESTS_EMBED,
         children: (e) =>
             (0, i.jsx)(i.Fragment, {
-                children: (0, i.jsx)(a.animated.div, {
+                children: (0, i.jsx)(s.animated.div, {
                     style: {
                         maxHeight:
                             n === u.jn.QUESTS_EMBED
@@ -75,8 +75,8 @@ function C(e) {
                                   })
                     },
                     className: h.questsCard,
-                    onFocus: f,
-                    onMouseEnter: f,
+                    onFocus: C,
+                    onMouseEnter: C,
                     onBlur: p,
                     onMouseLeave: p,
                     children: (0, i.jsxs)('div', {

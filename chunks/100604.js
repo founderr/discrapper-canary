@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(933557),
-    s = n(356264),
-    a = n(592125),
+    a = n(356264),
+    s = n(592125),
     r = n(430824),
     l = n(496675),
     o = n(699516),
@@ -48,12 +48,12 @@ function T(e, t) {
 class h {
     getForwardInfo() {
         var e, t, n, u, m;
-        let h = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.Z,
+        let h = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Z,
             N = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
-            C = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
-            f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
+            f = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
+            C = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
             p = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Z,
-            g = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : s.Z,
+            g = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.Z,
             { snapshotIndex: S, parentMessage: A, messageSnapshot: R } = this,
             { useOldIcon: x } = (0, E.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
             { showForwardBreadcrumb: O } = _.u.getCurrentConfig({ location: 'MessageForward' });
@@ -79,12 +79,12 @@ class h {
                           useOldIcon: x
                       };
             }
-            if (!f.can(e.accessPermissions, e))
+            if (!C.can(e.accessPermissions, e))
                 return {
                     snapshotIndex: S,
                     useOldIcon: x
                 };
-            let t = (0, i.F6)(e, N, C, !0);
+            let t = (0, i.F6)(e, N, f, !0);
             return {
                 snapshotIndex: S,
                 footerInfo: {
@@ -111,7 +111,7 @@ class h {
                 useOldIcon: x
             };
         let P = h.getChannel(null === (n = A.messageReference) || void 0 === n ? void 0 : n.channel_id);
-        return null == P || f.can(P.accessPermissions, P)
+        return null == P || C.can(P.accessPermissions, P)
             ? {
                   snapshotIndex: S,
                   footerInfo: T(Z, M),

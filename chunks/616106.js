@@ -1,6 +1,6 @@
 var i,
-    s,
     a,
+    s,
     r,
     l = n(913527),
     o = n.n(l),
@@ -16,15 +16,15 @@ class m extends (r = c.ZP.Store) {
         return !(0, E.I5)(e) && I;
     }
 }
-(a = 'SubscriptionRemindersStore'),
-    (s = 'displayName') in (i = m)
-        ? Object.defineProperty(i, s, {
-              value: a,
+(s = 'SubscriptionRemindersStore'),
+    (a = 'displayName') in (i = m)
+        ? Object.defineProperty(i, a, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[s] = a),
+        : (i[a] = s),
     (t.Z = new m(u.Z, {
         BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
             let { subscription: t } = e;

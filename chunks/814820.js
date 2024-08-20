@@ -1,12 +1,12 @@
 n.d(t, {
     f: function () {
-        return f;
+        return C;
     }
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
+    a = n(470079),
+    s = n(442837),
     r = n(481060),
     l = n(541716),
     o = n(419922),
@@ -20,11 +20,11 @@ var i = n(735250),
     T = n(981631),
     h = n(689938),
     N = n(298226);
-let C = (e) => {
+let f = (e) => {
         let { channel: t, message: n } = e,
-            [a, c] = s.useState(!1),
+            [s, c] = a.useState(!1),
             u = (0, m.y6)(n.id),
-            d = s.useCallback(() => {
+            d = a.useCallback(() => {
                 (0, I.v)({
                     type: l.I.FORM,
                     content: '',
@@ -46,7 +46,7 @@ let C = (e) => {
                 children: [
                     (0, i.jsx)(o.ZP, {
                         className: N.welcomeCTASticker,
-                        isInteracting: a,
+                        isInteracting: s,
                         sticker: u,
                         size: 28
                     }),
@@ -55,22 +55,22 @@ let C = (e) => {
             })
         });
     },
-    f = (e) => {
+    C = (e) => {
         let { message: t, channel: n } = e,
-            s = n.getGuildId(),
-            r = (0, a.e7)([E.default, _.Z, d.Z, u.ZP], () => {
+            a = n.getGuildId(),
+            r = (0, s.e7)([E.default, _.Z, d.Z, u.ZP], () => {
                 var e;
                 let i = E.default.getCurrentUser(),
-                    a = (0, c.xl)(n),
+                    s = (0, c.xl)(n),
                     r = _.Z.can(T.Plq.SEND_MESSAGES, n),
-                    l = null != s && null != i && (null === (e = u.ZP.getMember(s, i.id)) || void 0 === e ? void 0 : e.isPending),
+                    l = null != a && null != i && (null === (e = u.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending),
                     o = t.author.bot,
-                    I = d.Z.getGuild(s),
+                    I = d.Z.getGuild(a),
                     m = null != I && (I.systemChannelFlags & T.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-                return r && !a && !l && !o && m;
+                return r && !s && !l && !o && m;
             });
-        return null != s && r
-            ? (0, i.jsx)(C, {
+        return null != a && r
+            ? (0, i.jsx)(f, {
                   message: t,
                   channel: n
               })

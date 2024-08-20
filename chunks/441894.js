@@ -1,29 +1,29 @@
-n.d(t, {
+t.d(n, {
     J: function () {
-        return c;
+        return o;
     }
 }),
-    n(47120);
-var r = n(442837),
-    l = n(592125),
-    u = n(19780),
-    i = n(977059),
-    a = n(760373);
-function c(e) {
-    let { channelId: t, location: n } = e,
-        { enabled: c } = i.c.useExperiment({ location: n });
-    return (0, r.e7)(
-        [u.Z, l.Z],
+    t(47120);
+var i = t(442837),
+    r = t(592125),
+    u = t(19780),
+    l = t(977059),
+    a = t(760373);
+function o(e) {
+    let { channelId: n, location: t } = e,
+        { enabled: o } = l.c.useExperiment({ location: t });
+    return (0, i.e7)(
+        [u.Z, r.Z],
         () =>
-            (function (e, t) {
-                var n;
-                let [r, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [u.Z, l.Z];
-                if (!t || null == e || r.getChannelId() !== e) return !1;
-                let c = i.getChannel(e);
-                if (null == c || c.isGuildStageVoice()) return !1;
-                let o = null === (n = r.getSecureFramesState()) || void 0 === n ? void 0 : n.version;
-                return null != o && o > a.HK;
-            })(t, c, [u.Z, l.Z]),
-        [t, c]
+            (function (e, n) {
+                var t;
+                let [i, l] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [u.Z, r.Z];
+                if (!n || null == e || i.getChannelId() !== e) return !1;
+                let o = l.getChannel(e);
+                if (null == o || o.isGuildStageVoice()) return !1;
+                let d = null === (t = i.getSecureFramesState()) || void 0 === t ? void 0 : t.version;
+                return null != d && d > a.HK;
+            })(n, o, [u.Z, r.Z]),
+        [n, o]
     );
 }

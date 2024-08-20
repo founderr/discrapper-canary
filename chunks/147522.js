@@ -7,24 +7,24 @@ n.d(t, {
     n(653041);
 var i = n(735250);
 n(470079);
-var s = n(392711),
-    a = n.n(s),
+var a = n(392711),
+    s = n.n(a),
     r = n(661824),
     l = n(289481),
     o = n(809780),
     c = n(689938),
     u = n(379850);
 function d(e, t, n) {
-    let { markChannelRead: s, markGuildRead: d, deleteChannel: _, toggle: E, getNumUnreadChannels: I } = t,
+    let { markChannelRead: a, markGuildRead: d, deleteChannel: _, toggle: E, getNumUnreadChannels: I } = t,
         m = null;
-    return a().flatMap(e, (e) => {
+    return s().flatMap(e, (e) => {
         let t = e.sortOrder !== m;
         m = e.sortOrder;
-        let a = [];
+        let s = [];
         return (
             t &&
                 (e.hasLoadedAnything && e.sortOrder === o.As.ReallyOldChannel
-                    ? a.push(
+                    ? s.push(
                           (0, i.jsx)(
                               r.Z,
                               {
@@ -37,7 +37,7 @@ function d(e, t, n) {
                       )
                     : e.hasLoadedAnything &&
                       e.sortOrder === o.As.NoNotifications &&
-                      a.push(
+                      s.push(
                           (0, i.jsx)(
                               r.Z,
                               {
@@ -48,12 +48,12 @@ function d(e, t, n) {
                               'disabled-divider'
                           )
                       )),
-            a.push(
+            s.push(
                 (0, i.jsx)(
                     l.Z,
                     {
                         channel: e,
-                        markChannelRead: s,
+                        markChannelRead: a,
                         markGuildRead: d,
                         toggle: E,
                         deleteChannel: _,
@@ -63,7 +63,7 @@ function d(e, t, n) {
                     e.channelId
                 )
             ),
-            a
+            s
         );
     });
 }

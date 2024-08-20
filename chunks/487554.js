@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i,
-    s,
     a,
+    s,
     r,
     l,
     o = n(442837),
@@ -26,14 +26,14 @@ class _ extends o.yh {
     }
 }
 (r = 'MediaPostEmbedStore'),
-    (a = 'displayName') in (s = _)
-        ? Object.defineProperty(s, a, {
+    (s = 'displayName') in (a = _)
+        ? Object.defineProperty(a, s, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = r),
+        : (a[s] = r),
     (t.Z = new _(c.Z, {
         CONNECTION_OPEN: function () {
             (u = {}), (d = {});

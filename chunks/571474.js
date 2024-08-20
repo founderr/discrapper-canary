@@ -1,6 +1,6 @@
 var i,
-    s,
     a,
+    s,
     r,
     l = n(442837),
     o = n(570140),
@@ -18,15 +18,15 @@ class m extends (r = l.ZP.Store) {
         return I;
     }
 }
-(a = 'PremiumPromoStore'),
-    (s = 'displayName') in (i = m)
-        ? Object.defineProperty(i, s, {
-              value: a,
+(s = 'PremiumPromoStore'),
+    (a = 'displayName') in (i = m)
+        ? Object.defineProperty(i, a, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[s] = a),
+        : (i[a] = s),
     (t.Z = new m(o.Z, {
         CONNECTION_OPEN: function () {
             return I !== (I = _.Z.getFriendIDs().length >= 10 && u.default.extractTimestamp(d.default.getId()) < Date.now() - E);

@@ -3,24 +3,24 @@ n.d(t, {
         return c;
     }
 });
-var a = n(470079),
-    r = n(626135),
+var r = n(470079),
+    a = n(626135),
     i = n(353250),
     o = n(981631);
 function c(e) {
-    let t = a.useRef(!0);
+    let t = r.useRef(!0);
     return (
-        a.useEffect(
+        r.useEffect(
             () => () => {
                 t.current && (null == e || e(i.CaptchaError.CANCEL));
             },
             []
         ),
-        a.useEffect(
+        r.useEffect(
             () => (
-                r.default.track(o.rMx.OPEN_MODAL, { type: 'Guild Join Captcha' }),
+                a.default.track(o.rMx.OPEN_MODAL, { type: 'Guild Join Captcha' }),
                 () => {
-                    t.current && r.default.track(o.rMx.MODAL_DISMISSED, { type: 'Guild Join Captcha' });
+                    t.current && a.default.track(o.rMx.MODAL_DISMISSED, { type: 'Guild Join Captcha' });
                 }
             ),
             [t]

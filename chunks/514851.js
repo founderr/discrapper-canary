@@ -1,6 +1,6 @@
 var i,
-    s,
     a,
+    s,
     r,
     l = n(442837),
     o = n(570140);
@@ -16,15 +16,15 @@ class _ extends (r = l.ZP.Store) {
         return !c && !u;
     }
 }
-(a = 'CampaignContextStore'),
-    (s = 'displayName') in (i = _)
-        ? Object.defineProperty(i, s, {
-              value: a,
+(s = 'CampaignContextStore'),
+    (a = 'displayName') in (i = _)
+        ? Object.defineProperty(i, a, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[s] = a),
+        : (i[a] = s),
     (t.Z = new _(o.Z, {
         CAMPAIGN_CONTEXT_FETCH_SUCCESS: function (e) {
             (u = !0), (c = !1), (d = e.campaignContexts);

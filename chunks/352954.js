@@ -17,7 +17,7 @@ n.Z = {
     },
     openSecureFramesUserVerificationModal: function (e, n) {
         (0, i.openModalLazy)(async () => {
-            let i = (await Promise.all([t.e('95437'), t.e('36034'), t.e('3708')]).then(t.bind(t, 963410))).default;
+            let i = (await Promise.all([t.e('36034'), t.e('3708')]).then(t.bind(t, 963410))).default;
             return (t) =>
                 (0, a.jsx)(i, {
                     userId: e,

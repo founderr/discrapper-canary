@@ -1,6 +1,6 @@
 n.d(t, {
     El: function () {
-        return s;
+        return a;
     },
     RN: function () {
         return c;
@@ -18,7 +18,7 @@ n.d(t, {
         return u;
     },
     kS: function () {
-        return a;
+        return s;
     },
     n4: function () {
         return r;
@@ -28,8 +28,8 @@ n.d(t, {
     }
 });
 var i = n(689938);
-let s = ['XBOX', 'PLAYSTATION', 'SWITCH', 'PC'],
-    a = 25920000,
+let a = ['XBOX', 'PLAYSTATION', 'SWITCH', 'PC'],
+    s = 25920000,
     r = 'https://support.discord.com/hc/en-us/articles/9146392276375',
     l = { FORTNITE: 'FORTNITE' },
     o = {

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
+var a = n(120356),
+    s = n.n(a),
     r = n(91192),
     l = n(442837),
     o = n(481060),
@@ -20,8 +20,8 @@ var s = n(120356),
     T = n(199902),
     h = n(592125),
     N = n(430824),
-    C = n(158776),
-    f = n(594174),
+    f = n(158776),
+    C = n(594174),
     p = n(689938),
     g = n(394575);
 let S = {
@@ -31,7 +31,7 @@ let S = {
     right: -4
 };
 function A(e) {
-    let { channel: t, children: n, gotoChannel: s, mentionCount: a, channelState: l, toggleCollapsed: c } = e,
+    let { channel: t, children: n, gotoChannel: a, mentionCount: s, channelState: l, toggleCollapsed: c } = e,
         u = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, I.Dt)()));
     return (0, i.jsx)(o.FocusRing, {
         offset: S,
@@ -46,12 +46,12 @@ function A(e) {
             children: [
                 (0, i.jsx)(R, {
                     channel: t,
-                    gotoChannel: s
+                    gotoChannel: a
                 }),
                 (0, i.jsx)(M, {
                     channel: t,
-                    gotoChannel: s,
-                    mentionCount: a
+                    gotoChannel: a,
+                    mentionCount: s
                 }),
                 n
             ]
@@ -72,14 +72,14 @@ function R(e) {
 }
 function x(e) {
     let { channel: t, gotoChannel: n } = e,
-        s = (0, l.e7)([f.default], () => (t.isDM() ? f.default.getUser(t.getRecipientId()) : null)),
-        a = null == s ? (0, u.x)(t) : s.getAvatarURL(void 0, 40);
+        a = (0, l.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
+        s = null == a ? (0, u.x)(t) : a.getAvatarURL(void 0, 40);
     return (0, i.jsx)(o.Clickable, {
         onClick: n,
         tabIndex: -1,
         children: (0, i.jsx)('img', {
             className: g.dmIcon,
-            src: a,
+            src: s,
             alt: '',
             'aria-hidden': !0
         })
@@ -87,13 +87,13 @@ function x(e) {
 }
 function O(e) {
     let { channel: t, gotoChannel: n } = e,
-        s = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id));
-    return null == s
+        a = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id));
+    return null == a
         ? null
         : (0, i.jsx)(m.Z, {
               'aria-hidden': !0,
               className: g.guildIcon,
-              guild: s,
+              guild: a,
               size: m.Z.Sizes.MEDIUM,
               active: !0,
               onClick: n,
@@ -101,7 +101,7 @@ function O(e) {
           });
 }
 function M(e) {
-    let { channel: t, gotoChannel: n, mentionCount: s } = e,
+    let { channel: t, gotoChannel: n, mentionCount: a } = e,
         r = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id)),
         c = (0, l.e7)([h.Z], () => h.Z.getChannel(t.parent_id)),
         u = (0, _.KS)(t, r),
@@ -112,7 +112,7 @@ function M(e) {
             : t.isPrivate()
               ? (0, i.jsx)(v, { channel: t })
               : (0, i.jsx)(o.Clickable, {
-                    className: a()(g.subtext, g.guildName),
+                    className: s()(g.subtext, g.guildName),
                     onClick: n,
                     children: m
                 });
@@ -139,9 +139,9 @@ function M(e) {
                             className: g.channelNameSpan,
                             children: I
                         }),
-                        null != s && s > 0
+                        null != a && a > 0
                             ? (0, i.jsx)(E.Z, {
-                                  value: s,
+                                  value: a,
                                   className: g.badge
                               })
                             : null
@@ -161,23 +161,23 @@ function v(e) {
     let { channel: t } = e,
         {
             user: n,
-            activities: s,
-            applicationStream: a
-        } = (0, l.cj)([f.default, C.Z, T.Z], () => {
-            let e = f.default.getUser(t.getRecipientId());
+            activities: a,
+            applicationStream: s
+        } = (0, l.cj)([C.default, f.Z, T.Z], () => {
+            let e = C.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                activities: null != e ? C.Z.getActivities(e.id) : null,
+                activities: null != e ? f.Z.getActivities(e.id) : null,
                 applicationStream: null != e ? T.Z.getAnyStreamForUser(e.id) : null
             };
         });
-    return null == s
+    return null == a
         ? null
         : (0, i.jsx)(c.Z, {
               className: g.activityStatus,
               emojiClassName: g.activityEmoji,
-              activities: s,
-              applicationStream: a,
+              activities: a,
+              applicationStream: s,
               hideTooltip: !0,
               user: n
           });

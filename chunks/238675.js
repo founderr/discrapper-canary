@@ -1,22 +1,22 @@
 n.d(t, {
     fw: function () {
-        return o;
+        return s;
     },
     qy: function () {
         return c;
     },
     sJ: function () {
-        return r;
+        return o;
     }
 });
 var a,
     l,
+    s,
     o,
-    r,
-    s = n(544891),
+    r = n(544891),
     i = n(981631);
 async function c(e, t) {
-    await s.tn.post({
+    await r.tn.post({
         url: i.ANM.CAPTCHA_TEST,
         body: {
             decider: e,
@@ -24,4 +24,4 @@ async function c(e, t) {
         }
     });
 }
-((a = o || (o = {})).HCAPTCHA_EASY = 'hCaptchaEasy'), (a.HCAPTCHA_RQDATA = 'hCaptchaRqdata'), (a.SMITE_RQDATA = 'SmiteRqdata'), ((l = r || (r = {}))[(l.EASY = 1)] = 'EASY'), (l[(l.MODERATE = 2)] = 'MODERATE'), (l[(l.DIFFICULT = 3)] = 'DIFFICULT'), (l[(l.VERY_DIFFICULT = 4)] = 'VERY_DIFFICULT');
+((a = s || (s = {})).HCAPTCHA_EASY = 'hCaptchaEasy'), (a.HCAPTCHA_EASY_INVISIBLE = 'hCaptchaEasyInvisible'), (a.HCAPTCHA_RQDATA = 'hCaptchaRqdata'), (a.SMITE_RQDATA = 'SmiteRqdata'), ((l = o || (o = {}))[(l.EASY = 1)] = 'EASY'), (l[(l.MODERATE = 2)] = 'MODERATE'), (l[(l.DIFFICULT = 3)] = 'DIFFICULT'), (l[(l.VERY_DIFFICULT = 4)] = 'VERY_DIFFICULT');

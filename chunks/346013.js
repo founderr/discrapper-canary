@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(512722),
     o = n.n(l),
     c = n(772848),
@@ -20,8 +20,8 @@ var i = n(735250),
     T = n(676742),
     h = n(1585),
     N = n(841762),
-    C = n(336197),
-    f = n(406432),
+    f = n(336197),
+    C = n(406432),
     p = n(348238),
     g = n(38267),
     S = n(184301),
@@ -34,72 +34,72 @@ var i = n(735250),
     L = n(506071),
     Z = n(495114),
     P = n(170140),
-    D = n(981631),
-    b = n(959517),
+    b = n(981631),
+    D = n(959517),
     j = n(689938),
     U = n(494104),
     y = n(527455);
 function B(e) {
-    var t, n, a;
+    var t, n, s;
     let { embedUrl: l, message: B, channel: k } = e,
-        F = (0, P.J)(l, B),
-        { setPopout: G } = (0, g.Z)(B.id, b.d$),
-        w = (0, p.qo)(B, k, G, !0),
+        G = (0, P.J)(l, B),
+        { setPopout: F } = (0, g.Z)(B.id, D.d$),
+        w = (0, p.qo)(B, k, F, !0),
         V = R.QK.useSetting(),
         H = (0, L.n)(),
-        [Y, W] = s.useState(!1),
-        [K, z] = s.useState((null == F ? void 0 : F.coverImage) == null),
+        [Y, W] = a.useState(!1),
+        [K, z] = a.useState((null == G ? void 0 : G.coverImage) == null),
         Q = (0, d.e7)([E.Z], () => E.Z.useReducedMotion),
         q = (0, d.e7)(
             [x.ZP, O.default],
             () => {
                 var e;
-                return x.ZP.isMember(null == F ? void 0 : F.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+                return x.ZP.isMember(null == G ? void 0 : G.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
             },
-            [F]
+            [G]
         ),
-        X = (0, d.e7)([x.ZP], () => ((null == F ? void 0 : F.authorId) != null ? x.ZP.getMember(F.guildId, F.authorId) : null)),
-        J = (0, T.Z)((null == X ? void 0 : X.avatarDecoration) != null ? (null == X ? void 0 : X.avatarDecoration) : null == F ? void 0 : null === (t = F.user) || void 0 === t ? void 0 : t.avatarDecoration),
-        [$, ee] = s.useMemo(() => {
+        X = (0, d.e7)([x.ZP], () => ((null == G ? void 0 : G.authorId) != null ? x.ZP.getMember(G.guildId, G.authorId) : null)),
+        J = (0, T.Z)((null == X ? void 0 : X.avatarDecoration) != null ? (null == X ? void 0 : X.avatarDecoration) : null == G ? void 0 : null === (t = G.user) || void 0 === t ? void 0 : t.avatarDecoration),
+        [$, ee] = a.useMemo(() => {
             var e;
             return [null !== (e = null == X ? void 0 : X.colorString) && void 0 !== e ? e : 'inherit', null == X ? void 0 : X.colorRoleId];
         }, [X]),
-        { reducedMotion: et } = s.useContext(_.AccessibilityPreferencesContext),
-        [en, ei] = s.useState(!1),
-        es = s.useCallback(() => {
+        { reducedMotion: et } = a.useContext(_.AccessibilityPreferencesContext),
+        [en, ei] = a.useState(!1),
+        ea = a.useCallback(() => {
             W(!0);
         }, [W]),
-        ea = s.useCallback(() => {
+        es = a.useCallback(() => {
             W(!1);
         }, [W]),
-        er = s.useCallback(async () => {
-            null != F &&
-                ((0, m.yw)(D.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
-                    media_post_id: F.threadId,
+        er = a.useCallback(async () => {
+            null != G &&
+                ((0, m.yw)(b.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+                    media_post_id: G.threadId,
                     channel_id: k.id,
-                    can_access: F.canAccess,
+                    can_access: G.canAccess,
                     is_member: q
                 }),
-                F.canAccess ? (0, C.Z)(D.Z5c.CHANNEL(F.guildId, F.threadId, F.messageId)) : q ? (0, C.Z)(D.Z5c.CHANNEL(F.guildId, F.parentChannelId)) : await v.Ub(F.guildId, {}, { channelId: F.parentChannelId }));
-        }, [F, k, q]),
-        el = s.useCallback(
+                G.canAccess ? (0, f.Z)(b.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId)) : q ? (0, f.Z)(b.Z5c.CHANNEL(G.guildId, G.parentChannelId)) : await v.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
+        }, [G, k, q]),
+        el = a.useCallback(
             () => (
-                o()((null == F ? void 0 : F.authorId) != null, 'Author Id cannot be null when loading user profile'),
-                (0, S.Z)(F.authorId, F.avatarUrl, {
-                    guildId: F.guildId,
+                o()((null == G ? void 0 : G.authorId) != null, 'Author Id cannot be null when loading user profile'),
+                (0, S.Z)(G.authorId, G.avatarUrl, {
+                    guildId: G.guildId,
                     channelId: k.id
                 })
             ),
-            [F, k]
+            [G, k]
         );
-    if (null == F) return null;
+    if (null == G) return null;
     let eo = (e, t) => (
-            o()(null != F.authorId, 'Author Id cannot be null when rendering user popout'),
+            o()(null != G.authorId, 'Author Id cannot be null when rendering user popout'),
             (0, i.jsx)(A.Z, {
                 ...e,
                 location: 'MediaPostEmbed',
-                userId: F.authorId,
-                guildId: F.guildId,
+                userId: G.authorId,
+                guildId: G.guildId,
                 channelId: k.id,
                 messageId: B.id,
                 roleId: ee,
@@ -111,26 +111,26 @@ function B(e) {
             size: (0, h.y9)(_.AvatarSizes.SIZE_40),
             canAnimate: en
         }),
-        eu = null === (n = F.user) || void 0 === n ? void 0 : n.getAvatarURL(F.guildId, 40, en),
+        eu = null === (n = G.user) || void 0 === n ? void 0 : n.getAvatarURL(G.guildId, 40, en),
         ed = () => {
             if (!et.enabled) ei((e) => !e);
         },
-        e_ = F.coverImage,
-        eE = null != e_ && (0, f.d$)(e_);
+        e_ = G.coverImage,
+        eE = null != e_ && (0, C.d$)(e_);
     return (0, i.jsxs)('div', {
         className: U.postPreviewContainer,
         children: [
             (0, i.jsxs)('div', {
                 className: U.thumbnailContainer,
-                onMouseEnter: es,
-                onMouseLeave: ea,
+                onMouseEnter: ea,
+                onMouseLeave: es,
                 children: [
                     !K &&
-                        (!0 === F.shouldShowBlurredThumbnailImage
+                        (!0 === G.shouldShowBlurredThumbnailImage
                             ? (0, i.jsx)('img', {
                                   src: y,
                                   alt: j.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
-                                  className: r()(U.thumbnail, { [U.spoiler]: F.shouldSpoiler }),
+                                  className: r()(U.thumbnail, { [U.spoiler]: G.shouldSpoiler }),
                                   onContextMenu: w,
                                   onError: () => z(!0)
                               })
@@ -139,12 +139,12 @@ function B(e) {
                                   backgroundSrc: ''.concat(e_, '?format=png'),
                                   alt: j.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
                                   aspectRatio: 16 / 9,
-                                  className: r()(U.thumbnail, { [U.spoiler]: F.shouldSpoiler }),
+                                  className: r()(U.thumbnail, { [U.spoiler]: G.shouldSpoiler }),
                                   imageChildClassName: U.thumbnailImage,
                                   onContextMenu: w,
                                   onError: () => z(!0)
                               })),
-                    null != F.coverImageOverlayText &&
+                    null != G.coverImageOverlayText &&
                         (0, i.jsx)(_.Clickable, {
                             onClick: er,
                             children: (0, i.jsx)('div', {
@@ -156,7 +156,7 @@ function B(e) {
                                         (0, i.jsx)(_.Text, {
                                             variant: 'text-sm/semibold',
                                             color: 'always-white',
-                                            children: F.coverImageOverlayText
+                                            children: G.coverImageOverlayText
                                         })
                                     ]
                                 })
@@ -174,13 +174,13 @@ function B(e) {
                                 variant: 'text-md/semibold',
                                 color: 'text-normal',
                                 className: U.descriptionHeaderText,
-                                children: F.title
+                                children: G.title
                             }),
                             (0, i.jsx)(_.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 className: r()(U.descriptionHeaderText, U.descriptionSubtitle),
-                                children: F.subtitle
+                                children: G.subtitle
                             })
                         ]
                     }),
@@ -192,7 +192,7 @@ function B(e) {
                                     renderPopout: (e) => eo(e, [I.Z.AVATAR]),
                                     position: 'right',
                                     spacing: 12,
-                                    preload: null == F.authorId ? void 0 : el,
+                                    preload: null == G.authorId ? void 0 : el,
                                     children: (e) =>
                                         (0, i.jsx)('div', {
                                             onMouseEnter: ed,
@@ -212,7 +212,7 @@ function B(e) {
                                     (0, i.jsxs)('div', {
                                         className: U.descriptionFooterChannelName,
                                         children: [
-                                            null != F.channelName &&
+                                            null != G.channelName &&
                                                 (0, i.jsx)(_.ImageSparkleIcon, {
                                                     size: 'md',
                                                     color: 'currentColor',
@@ -224,29 +224,29 @@ function B(e) {
                                                 children: (0, i.jsx)(_.Heading, {
                                                     variant: 'heading-md/semibold',
                                                     color: 'header-primary',
-                                                    children: null !== (a = F.channelName) && void 0 !== a ? a : F.guildName
+                                                    children: null !== (s = G.channelName) && void 0 !== s ? s : G.guildName
                                                 })
                                             })
                                         ]
                                     }),
-                                    null != F.authorName &&
+                                    null != G.authorName &&
                                         (0, i.jsx)(_.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-muted',
                                             className: U.descriptionFooterAuthorContainer,
                                             children: j.Z.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
-                                                authorName: F.authorName,
+                                                authorName: G.authorName,
                                                 authorNameHook: () =>
                                                     (0, i.jsx)(
                                                         _.Popout,
                                                         {
                                                             renderPopout: (e) => eo(e, [I.Z.USERNAME]),
                                                             position: 'right',
-                                                            preload: null == F.authorId ? void 0 : el,
+                                                            preload: null == G.authorId ? void 0 : el,
                                                             children: (e) =>
                                                                 (0, i.jsx)(_.NameWithRoleAnchor, {
                                                                     ...e,
-                                                                    name: F.authorName,
+                                                                    name: G.authorName,
                                                                     color: $,
                                                                     className: U.authorName
                                                                 })
@@ -257,14 +257,14 @@ function B(e) {
                                         })
                                 ]
                             }),
-                            F.canAccess
+                            G.canAccess
                                 ? (0, i.jsx)(_.Button, {
                                       color: _.ButtonColors.BRAND,
                                       onClick: er,
                                       children: (0, i.jsx)(_.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
-                                          children: F.ctaText
+                                          children: G.ctaText
                                       })
                                   })
                                 : (0, i.jsx)(_.ShinyButton, {
@@ -275,7 +275,7 @@ function B(e) {
                                       children: (0, i.jsx)(_.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
-                                          children: F.ctaText
+                                          children: G.ctaText
                                       })
                                   })
                         ]

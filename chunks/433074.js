@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(873546),
+    a = n(470079),
+    s = n(873546),
     r = n(399606),
     l = n(481060),
     o = n(434650),
@@ -20,8 +20,8 @@ var i = n(735250),
     T = n(674588),
     h = n(264043),
     N = n(132871),
-    C = n(147890),
-    f = n(981631),
+    f = n(147890),
+    C = n(981631),
     p = n(689938),
     g = n(562039);
 function S(e) {
@@ -34,44 +34,44 @@ function S(e) {
             return null !== (e = _.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
         L = (0, r.e7)([E.default], () => E.default.getCurrentUser()),
-        [Z, P] = s.useState(!1),
-        D = s.useCallback((e) => {
+        [Z, P] = a.useState(!1),
+        b = a.useCallback((e) => {
             e && P(!0);
         }, []),
-        b = (0, o.O)(D);
-    s.useEffect(() => {
+        D = (0, o.O)(b);
+    a.useEffect(() => {
         (0, T.gZ)(S);
     }, [S]),
-        s.useEffect(() => {
+        a.useEffect(() => {
             Z &&
                 O === h.M.FETCHED &&
-                I.default.track(f.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+                I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: S,
-                    device_platform: a.tq ? 'mobile_web' : 'desktop_web',
+                    device_platform: s.tq ? 'mobile_web' : 'desktop_web',
                     sender_user_id: A.author.id,
                     guild_id: v,
                     channel_id: A.channel_id
                 });
         }, [Z, S, null == L ? void 0 : L.id, A.channel_id, v, A.author.id, O]),
-        s.useEffect(() => {
+        a.useEffect(() => {
             Z &&
                 x &&
-                I.default.track(f.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
-                    device_platform: a.tq ? 'mobile_web' : 'desktop_web',
+                I.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+                    device_platform: s.tq ? 'mobile_web' : 'desktop_web',
                     sender_user_id: A.author.id,
                     guild_id: v,
                     channel_id: A.channel_id
                 });
         }, [Z, v, x, A.author.id, A.channel_id]);
     let j = (e) => {
-        I.default.track(f.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
+        I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
             application_id: S,
-            device_platform: a.tq ? 'mobile_web' : 'desktop_web',
+            device_platform: s.tq ? 'mobile_web' : 'desktop_web',
             clicked_section: e,
             guild_id: v,
             channel_id: A.channel_id
         }),
-            (0, C.goToAppDirectory)({
+            (0, f.goToAppDirectory)({
                 view: N.ApplicationDirectoryViews.APPLICATION,
                 guildId: v,
                 applicationId: S,
@@ -80,7 +80,7 @@ function S(e) {
     };
     if (x)
         return (0, i.jsxs)(c.Z, {
-            containerRef: b,
+            containerRef: D,
             children: [
                 (0, i.jsx)(c.Z.Header, { text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER }),
                 (0, i.jsx)(c.Z.Body, {
@@ -100,7 +100,7 @@ function S(e) {
         });
     if (null == R || O === h.M.FETCHING)
         return (0, i.jsxs)(c.Z, {
-            containerRef: b,
+            containerRef: D,
             children: [(0, i.jsx)(c.Z.Header, { text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER }), (0, i.jsx)(c.Z.Body, { resolving: !0 })]
         });
     let U = new Intl.NumberFormat(M, {
@@ -108,7 +108,7 @@ function S(e) {
         compactDisplay: 'short'
     }).format(null !== (n = null === (t = R.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
     return (0, i.jsxs)(c.Z, {
-        containerRef: b,
+        containerRef: D,
         children: [
             (0, i.jsx)(c.Z.Header, { text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_HEADER }),
             (0, i.jsxs)(c.Z.Body, {
