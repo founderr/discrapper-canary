@@ -2993,6 +2993,7 @@ let oW = 'help_center_cta';
     (rZ.EMOJI_PICKER_FLOATING_UPSELL = 'Emoji Picker Floating Upsell'),
     (rZ.SOUND_PICKER_FLOATING_UPSELL = 'Sound Picker Floating Upsell'),
     (rZ.EMPTY_STICKER_PICKER_UPSELL = 'Empty Sticker Picker Upsell'),
+    (rZ.FOR_LATER_POPOUT_UPSELL = 'For Later Popout Upsell'),
     (rZ.CREATE_STICKER_MODAL = 'Create Sticker Modal'),
     (rZ.IOS_TWO_FA_MODAL = 'Two Factor Auth Modal'),
     (rZ.IOS_TWO_FA_EMAIL_VERIFICATION = 'Two Factor Email Verification'),

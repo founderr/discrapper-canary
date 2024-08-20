@@ -1,6 +1,6 @@
 n.d(t, {
     j: function () {
-        return N;
+        return v;
     }
 });
 var r = n(526167),
@@ -21,18 +21,20 @@ var r = n(526167),
     I = n(307244),
     T = n(669730),
     g = n(666828),
-    S = n(185672),
-    A = n(235731);
-function N() {
+    S = n(131999),
+    A = n(185672),
+    N = n(235731);
+function v() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return e ? A : i;
+    return e ? N : i;
 }
 t.Z = {
     DEFAULT_AVATARS: [a, s, o, l, u, c],
     DEFAULT_GROUP_DM_AVATARS: [d, _, E, f, h, p, m, I],
     BOT_AVATARS: {
-        clyde: S,
-        nitro: g
+        clyde: A,
+        nitro: g,
+        nitro_wumpus: S
     },
     DEFAULT_CHANNEL_ICON: T,
     canUseWebp: function () {
