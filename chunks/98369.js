@@ -63,18 +63,10 @@ function v(e) {
         a = T();
     return n || i || a;
 }
-function N(e) {
-    let { userIds: t } = e,
-        n = d.default.getId(),
-        i = t.reduce((e, t) => (n === t ? e : !!v({ userId: t }) || e), !1),
-        a = x(),
-        s = T();
-    return i || a || s;
-}
-function S() {
+function N() {
     E.clear(), g.clear(), (C = !1);
 }
-class Z extends (i = r.ZP.Store) {
+class S extends (i = r.ZP.Store) {
     initialize() {
         this.waitFor(m.Z, _.Z, h.Z, p.Z);
     }
@@ -89,7 +81,7 @@ class Z extends (i = r.ZP.Store) {
     }
 }
 (l = 'SecureFramesVerifiedStore'),
-    (s = 'displayName') in (a = Z)
+    (s = 'displayName') in (a = S)
         ? Object.defineProperty(a, s, {
               value: l,
               enumerable: !0,
@@ -97,12 +89,12 @@ class Z extends (i = r.ZP.Store) {
               writable: !0
           })
         : (a[s] = l),
-    (t.Z = new Z(c.Z, {
-        CONNECTION_OPEN: S,
+    (t.Z = new S(c.Z, {
+        CONNECTION_OPEN: N,
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
             if (t === I) return !1;
-            (I = t), S();
+            (I = t), N();
         },
         RTC_CONNECTION_STATE: function (e) {
             let { streamKey: t, state: n, context: i } = e;
@@ -112,14 +104,20 @@ class Z extends (i = r.ZP.Store) {
                     if (null == t) return !1;
                     return g.delete(t), T();
                 case o.Yn.DEFAULT:
-                    S();
+                    N();
             }
         },
-        RTC_CONNECTION_ROSTER_MAP_UPDATE: N,
+        RTC_CONNECTION_ROSTER_MAP_UPDATE: function (e) {
+            let { userIds: t } = e,
+                n = d.default.getId(),
+                i = t.reduce((e, t) => (n === t ? e : !!v({ userId: t }) || e), !1),
+                a = x(),
+                s = T();
+            return i || a || s;
+        },
         SECURE_FRAMES_TRANSIENT_KEY_CREATE: v,
         SECURE_FRAMES_TRANSIENT_KEY_DELETE: v,
         SECURE_FRAMES_VERIFIED_KEY_CREATE: v,
         SECURE_FRAMES_VERIFIED_KEY_DELETE: v,
-        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: v,
-        SECURE_FRAMES_ALL_VERIFIED_KEYS_DELETE: N
+        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: v
     }));

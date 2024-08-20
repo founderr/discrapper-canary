@@ -1,57 +1,52 @@
 t.d(s, {
     Z: function () {
-        return P;
+        return R;
     }
 });
 var n = t(735250),
     a = t(470079),
     i = t(442837),
     r = t(481060),
-    o = t(287734),
-    l = t(232567),
-    c = t(700582),
-    d = t(718629),
-    _ = t(615830),
-    E = t(630759),
-    u = t(931500),
-    I = t(921157),
-    T = t(171368),
-    S = t(314897),
-    N = t(592125),
-    C = t(594174),
-    m = t(979651),
-    A = t(51144),
-    O = t(981631),
-    g = t(760373),
-    h = t(689938),
-    p = t(288338),
-    R = t(224499);
-function x(e) {
+    o = t(232567),
+    l = t(700582),
+    c = t(718629),
+    d = t(615830),
+    _ = t(630759),
+    E = t(931500),
+    u = t(921157),
+    I = t(171368),
+    T = t(594174),
+    S = t(51144),
+    N = t(760373),
+    C = t(689938),
+    m = t(288338),
+    A = t(224499);
+function O(e) {
     let { userId: s, count: t } = e,
-        o = (0, i.e7)([C.default], () => C.default.getUser(s)),
-        d = A.ZP.getFormattedName(o),
-        _ = a.useCallback(() => {
-            (0, E.Zn)(s);
+        c = (0, i.e7)([T.default], () => T.default.getUser(s)),
+        d = S.ZP.getFormattedName(c),
+        E = a.useCallback(() => {
+            (0, _.Zn)(s);
         }, [s]),
-        u = a.useCallback(() => (0, T.openUserProfileModal)({ userId: s }), [s]);
+        u = a.useCallback(() => (0, I.openUserProfileModal)({ userId: s }), [s]);
     return (
         a.useEffect(() => {
-            (0, l.PR)(s);
+            (0, o.PR)(s);
         }, [s]),
         (0, n.jsxs)('div', {
-            className: p.section,
+            className: m.section,
             children: [
-                null != o &&
-                    (0, n.jsx)(c.Z, {
-                        className: p.avatar,
-                        user: o,
+                null != c &&
+                    (0, n.jsx)(l.Z, {
+                        className: m.avatar,
+                        user: c,
                         size: r.AvatarSizes.SIZE_40
                     }),
                 (0, n.jsxs)('div', {
-                    className: p.text,
+                    className: m.text,
                     children: [
                         (0, n.jsx)(r.Clickable, {
-                            className: p.username,
+                            className: m.username,
                             onClick: u,
                             children: (0, n.jsx)(r.Text, {
                                 variant: 'text-md/semibold',
@@ -62,35 +57,35 @@ function x(e) {
                         (0, n.jsx)(r.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: h.Z.Messages.E2EE_DEVICES_COUNT.format({ count: t })
+                            children: C.Z.Messages.E2EE_DEVICES_COUNT.format({ count: t })
                         })
                     ]
                 }),
                 (0, n.jsx)(r.Clickable, {
-                    onClick: _,
-                    className: p.sectionIconContainer,
+                    onClick: E,
+                    className: m.sectionIconContainer,
                     children: (0, n.jsx)(r.TrashIcon, { size: 'xs' })
                 })
             ]
         })
     );
 }
-function M(e) {
+function g(e) {
     let { className: s, userId: t, verification: i, index: o } = e,
-        l = (0, E.bo)(i.timestamp),
+        l = (0, _.bo)(i.timestamp),
         c = a.useCallback(() => {
-            (0, E.ZU)(t, i.verifiedKey);
+            (0, _.ZU)(t, i.verifiedKey);
         }, [i.verifiedKey, t]);
     return (0, n.jsxs)('div', {
         className: s,
         children: [
             (0, n.jsxs)('div', {
-                className: p.text,
+                className: m.text,
                 children: [
                     (0, n.jsx)(r.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-active',
-                        children: h.Z.Messages.E2EE_ANONYMOUS_DEVICE_TAG.format({ index: o + 1 })
+                        children: C.Z.Messages.E2EE_ANONYMOUS_DEVICE_TAG.format({ index: o + 1 })
                     }),
                     (0, n.jsx)(r.Text, {
                         variant: 'text-sm/medium',
@@ -100,7 +95,7 @@ function M(e) {
                 ]
             }),
             (0, n.jsx)(r.Clickable, {
-                className: p.icon,
+                className: m.icon,
                 onClick: c,
                 children: (0, n.jsx)(r.XSmallIcon, {
                     size: 'md',
@@ -110,12 +105,12 @@ function M(e) {
         ]
     });
 }
-function f(e) {
+function h(e) {
     let { userId: s } = e,
-        t = (0, u._)(s);
+        t = (0, E._)(s);
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(x, {
+            (0, n.jsx)(O, {
                 userId: s,
                 count: t.length
             }),
@@ -124,13 +119,13 @@ function f(e) {
                     a.Fragment,
                     {
                         children: [
-                            (0, n.jsx)(M, {
-                                className: p.row,
+                            (0, n.jsx)(g, {
+                                className: m.row,
                                 userId: s,
                                 index: i,
                                 verification: e
                             }),
-                            i !== t.length - 1 && (0, n.jsx)('div', { className: p.divider })
+                            i !== t.length - 1 && (0, n.jsx)('div', { className: m.divider })
                         ]
                     },
                     ''.concat(i, '-').concat(e.timestamp)
@@ -139,23 +134,23 @@ function f(e) {
         ]
     });
 }
-function D(e) {
+function p(e) {
     let { userIds: s } = e;
     return 0 === s.length
         ? null
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsxs)(r.FormItem, {
-                      className: R.marginBottom20,
+                      className: A.marginBottom20,
                       children: [
                           (0, n.jsx)(r.FormTitle, {
                               tag: r.FormTitleTags.H5,
-                              className: R.marginBottom8,
-                              children: h.Z.Messages.E2EE_VERIFIED_DEVICES
+                              className: A.marginBottom8,
+                              children: C.Z.Messages.E2EE_VERIFIED_DEVICES
                           }),
                           (0, n.jsx)(r.FormText, {
                               type: r.FormTextTypes.DESCRIPTION,
-                              children: h.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({ helpArticle: g.s9 })
+                              children: C.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({ helpArticle: N.s9 })
                           })
                       ]
                   }),
@@ -163,8 +158,8 @@ function D(e) {
                       (0, n.jsx)(
                           'div',
                           {
-                              className: p.item,
-                              children: (0, n.jsx)(f, { userId: e })
+                              className: m.item,
+                              children: (0, n.jsx)(h, { userId: e })
                           },
                           e
                       )
@@ -172,66 +167,39 @@ function D(e) {
               ]
           });
 }
-function P() {
-    let e = (0, i.e7)([_.Z], () => _.Z.getPersistentCodesEnabled()),
-        s = a.useCallback((e) => {
-            d.Z.updatePersistentCodesEnabled(e);
-        }, []),
-        l = a.useCallback(async (e, s) => {
-            o.default.disconnect(), await d.Z.updatePersistentCodesEnabled(s), o.default.selectVoiceChannel(e);
-        }, []),
-        c = a.useCallback(
-            (e) => {
-                let a = m.Z.getVoiceStateForUser(S.default.getId()),
-                    i = N.Z.getChannel(null == a ? void 0 : a.channelId);
-                S.default.getSessionId() === (null == a ? void 0 : a.sessionId) && null != i && i.type !== O.d4z.GUILD_STAGE_VOICE
-                    ? (0, r.openModalLazy)(async () => {
-                          let { default: s } = await t.e('34999').then(t.bind(t, 396473));
-                          return (t) =>
-                              (0, n.jsx)(s, {
-                                  title: e ? h.Z.Messages.E2EE_ENABLE_PERSISTENT_KEY_CONFIRM_TITLE : h.Z.Messages.E2EE_DISABLE_PERSISTENT_KEY_CONFIRM_TITLE,
-                                  subtitle: e ? h.Z.Messages.E2EE_ENABLE_PERSISTENT_KEY_CONFIRM_SUBTITLE : h.Z.Messages.E2EE_DISABLE_PERSISTENT_KEY_CONFIRM_SUBTITLE,
-                                  onConfirm: () => {
-                                      l(i.id, e);
-                                  },
-                                  ...t
-                              });
-                      })
-                    : s(e);
-            },
-            [s, l]
-        ),
-        E = (0, I.s)();
+function R() {
+    let e = (0, i.e7)([d.Z], () => d.Z.getPersistentCodesEnabled()),
+        s = (0, u.s)();
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(r.FormSection, {
                 tag: r.FormTitleTags.H1,
-                title: h.Z.Messages.E2EE_END_TO_END_ENCRYPTION,
+                title: C.Z.Messages.E2EE_END_TO_END_ENCRYPTION,
                 children: [
                     (0, n.jsx)(r.FormText, {
                         type: r.FormTextTypes.DESCRIPTION,
-                        className: R.marginBottom20,
-                        children: h.Z.Messages.E2EE_SETTINGS_SUBTITLE.format({ helpArticle: g.l4 })
+                        className: A.marginBottom20,
+                        children: C.Z.Messages.E2EE_SETTINGS_SUBTITLE.format({ helpArticle: N.l4 })
                     }),
                     (0, n.jsxs)(r.FormItem, {
                         children: [
                             (0, n.jsx)(r.FormTitle, {
                                 tag: r.FormTitleTags.H5,
-                                className: R.marginBottom8,
-                                children: h.Z.Messages.E2EE_VERIFICATION_CODES
+                                className: A.marginBottom8,
+                                children: C.Z.Messages.E2EE_VERIFICATION_CODES
                             }),
                             (0, n.jsx)(r.FormSwitch, {
-                                hideBorder: 0 === E.length,
+                                hideBorder: 0 === s.length,
                                 value: e,
-                                note: h.Z.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION.format({ helpArticle: g.$J }),
-                                onChange: c,
-                                children: h.Z.Messages.E2EE_ENABLE_PERSISTENT_CODES
+                                note: C.Z.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION.format({ helpArticle: N.$J }),
+                                onChange: c.Z.updatePersistentCodesEnabled,
+                                children: C.Z.Messages.E2EE_ENABLE_PERSISTENT_CODES
                             })
                         ]
                     })
                 ]
             }),
-            (0, n.jsx)(D, { userIds: E })
+            (0, n.jsx)(p, { userIds: s })
         ]
     });
 }

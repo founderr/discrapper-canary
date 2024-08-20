@@ -65,8 +65,5 @@ o(u, 'displayName', 'VerifiedKeyStore'),
         SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: function (e) {
             let { userId: t } = e;
             return null != c[t] && delete c[t];
-        },
-        SECURE_FRAMES_ALL_VERIFIED_KEYS_DELETE: function () {
-            c = {};
         }
     }));
