@@ -133,12 +133,10 @@ function g(e) {
                 : null,
             (0, r.jsx)(o.HiddenVisually, {
                 children: h.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS.format({
-                    user0: _.ZP.getName(t, n, I),
-                    user1: _.ZP.getName(t, n, g),
+                    user1: _.ZP.getName(t, n, I),
+                    user2: _.ZP.getName(t, n, g),
                     countOthers: S,
-                    name0Hook: (e, t) => (0, r.jsx)('span', { children: e }, t),
-                    name1Hook: (e, t) => (0, r.jsx)('span', { children: e }, t),
-                    countOthersHook: (e, t) => (0, r.jsx)('span', { children: e }, t)
+                    nameHook: (e, t) => (0, r.jsx)('span', { children: 'text' }, t)
                 })
             })
         ]

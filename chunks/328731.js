@@ -1,197 +1,68 @@
-t.d(n, {
+l.d(n, {
     Z: function () {
-        return N;
+        return p;
     }
 });
-var l = t(735250),
-    i = t(470079),
-    r = t(120356),
-    a = t.n(r),
-    o = t(442837),
-    s = t(481060),
-    c = t(239091),
-    u = t(318374),
-    d = t(751688),
-    m = t(184301),
-    f = t(103575),
-    _ = t(210887),
-    p = t(5192),
-    h = t(192918),
-    C = t(256139),
-    v = t(981631),
-    x = t(689938),
-    E = t(182408);
-function I(e) {
-    let { participants: n, channel: i } = e;
-    return (0, l.jsx)(s.Scroller, {
-        className: E.participantsPopout,
-        children: n.map((e) =>
-            (0, l.jsx)(
-                d.Z,
-                {
-                    guildId: i.guild_id,
-                    user: e,
-                    nick: p.ZP.getNickname(i.guild_id, i.id, e),
-                    onContextMenu: (n) => {
-                        (0, c.jW)(n, async () => {
-                            let { default: n } = await Promise.all([t.e('79695'), t.e('69220'), t.e('46611')]).then(t.bind(t, 881351));
-                            return (t) =>
-                                (0, l.jsx)(n, {
-                                    ...t,
-                                    user: e
-                                });
-                        });
-                    }
-                },
-                e.id
-            )
-        )
-    });
-}
-function T(e) {
-    let { children: n, participants: t, channel: r } = e,
-        a = (0, o.e7)([_.Z], () => _.Z.theme),
-        c = 0 === t.length ? t[0] : null,
-        u = (0, i.useCallback)(
-            (e) =>
-                null != c
-                    ? (0, l.jsx)(f.Z, {
-                          ...e,
-                          location: 'Content Inventory Embed',
-                          userId: c.id,
-                          guildId: r.guild_id,
-                          channelId: r.id,
-                          analyticsParams: {
-                              location: {
-                                  page: v.ZY5.GUILD_CHANNEL,
-                                  section: v.jXE.CONTENT_INVENTORY_EMBED
-                              }
-                          }
-                      })
-                    : (0, l.jsx)(I, {
-                          participants: t,
-                          channel: r
-                      }),
-            [r, t, c]
-        );
-    return (0, l.jsx)(s.ThemeContextProvider, {
-        theme: a,
-        children: (0, l.jsx)(s.Popout, {
-            renderPopout: u,
-            preload: () =>
-                null != c
-                    ? (0, m.Z)(c, {
-                          guildId: r.guild_id,
-                          channelId: r.id
-                      })
-                    : Promise.resolve(),
-            children: n
-        })
-    });
-}
-function g(e) {
-    let { user: n, text: t, channel: i } = e;
-    return (0, l.jsx)(T, {
-        participants: [n],
-        channel: i,
-        children: (e) =>
-            (0, l.jsx)(C.Z, {
-                ...e,
-                tag: 'span',
-                children: (0, l.jsx)(s.Text, {
-                    variant: 'text-sm/semibold',
-                    color: 'text-primary',
-                    lineClamp: 1,
-                    scaleFontToUserSetting: !0,
-                    children: t
-                })
-            })
-    });
-}
-function N(e) {
-    let { entry: n, channel: t, className: i } = e,
-        { displayParticipants: r, participant1: o, participant2: c, numOtherParticipants: d, orderedParticipants: m } = (0, h.Z)(n),
-        f = [o, c];
-    return (0, l.jsxs)('div', {
-        className: a()(E.container, i),
+var t = l(735250),
+    r = l(120356),
+    i = l.n(r),
+    a = l(481060),
+    u = l(318374),
+    s = l(171368),
+    o = l(5192),
+    c = l(192918),
+    d = l(256139),
+    m = l(689938),
+    f = l(182408);
+function p(e) {
+    let { entry: n, channel: l, className: r } = e,
+        { displayParticipants: p, participant1: E, participant2: v, numOtherParticipants: C } = (0, c.Z)(n, 3),
+        h = [E, v];
+    return (0, t.jsxs)('div', {
+        className: i()(f.container, r),
         children: [
-            r.length > 0
-                ? (0, l.jsxs)(l.Fragment, {
+            p.length > 0
+                ? (0, t.jsxs)(t.Fragment, {
                       children: [
-                          (0, l.jsx)(T, {
-                              participants: m,
-                              channel: t,
-                              children: (e) =>
-                                  (0, l.jsx)(s.Clickable, {
-                                      className: E.clickable,
-                                      ...e,
-                                      children: (0, l.jsx)(u.Z, {
-                                          maxUsers: 3,
-                                          users: r,
-                                          size: s.AvatarSizes.SIZE_20,
-                                          avatarClassName: E.stackedAvatar,
-                                          hideOverflowCount: !0,
-                                          disableUsernameTooltip: !0
-                                      })
-                                  })
+                          (0, t.jsx)(u.Z, {
+                              maxUsers: 3,
+                              users: p,
+                              size: a.AvatarSizes.SIZE_20,
+                              avatarClassName: f.stackedAvatar,
+                              hideOverflowCount: !0,
+                              disableUsernameTooltip: !0
                           }),
-                          (0, l.jsx)(s.Spacer, {
+                          (0, t.jsx)(a.Spacer, {
                               size: 6,
                               horizontal: !0
                           })
                       ]
                   })
                 : null,
-            (0, l.jsx)(s.Heading, {
+            (0, t.jsx)(a.Heading, {
                 variant: 'text-sm/semibold',
-                color: 'text-secondary',
-                className: a()(E.truncatedText, E.usersHeader),
+                className: i()(f.textSecondary, f.truncatedText, f.usersHeader),
                 scaleFontToUserSetting: !0,
-                children: x.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS.format({
-                    user0: p.ZP.getName(t.guild_id, t.id, f[0]),
-                    user1: p.ZP.getName(t.guild_id, t.id, f[1]),
-                    countOthers: d,
-                    name0Hook: (e, n) =>
-                        (0, l.jsx)(
-                            g,
-                            {
-                                text: e,
-                                user: f[0],
-                                channel: t
-                            },
-                            n
-                        ),
-                    name1Hook: (e, n) =>
-                        (0, l.jsx)(
-                            g,
-                            {
-                                text: e,
-                                user: f[1],
-                                channel: t
-                            },
-                            n
-                        ),
-                    countOthersHook: (e, n) =>
-                        (0, l.jsx)(
-                            T,
-                            {
-                                participants: m,
-                                channel: t,
-                                children: (n) =>
-                                    (0, l.jsx)(C.Z, {
-                                        ...n,
-                                        tag: 'span',
-                                        children: (0, l.jsx)(s.Text, {
-                                            variant: 'text-sm/semibold',
-                                            color: 'text-primary',
-                                            lineClamp: 1,
-                                            scaleFontToUserSetting: !0,
-                                            children: e
-                                        })
-                                    })
-                            },
-                            n
-                        )
+                children: m.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS.format({
+                    user1: o.ZP.getName(l.guild_id, l.id, h[0]),
+                    user2: o.ZP.getName(l.guild_id, l.id, h[1]),
+                    countOthers: C,
+                    nameHook: (e, n) =>
+                        (0, t.jsx)(d.Z, {
+                            tag: 'span',
+                            onClick: () => (0, s.openUserProfileModal)({ userId: h[parseInt(n)].id }),
+                            children: (0, t.jsx)(
+                                a.Text,
+                                {
+                                    variant: 'text-sm/semibold',
+                                    className: i()(f.textPrimary, f.truncatedText),
+                                    lineClamp: 1,
+                                    scaleFontToUserSetting: !0,
+                                    children: e
+                                },
+                                n
+                            )
+                        })
                 })
             })
         ]
