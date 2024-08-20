@@ -1,69 +1,72 @@
 n.d(t, {
     Af: function () {
-        return T;
-    },
-    B3: function () {
-        return S;
-    },
-    EK: function () {
-        return y;
-    },
-    GO: function () {
-        return I;
-    },
-    GS: function () {
-        return O;
-    },
-    Lp: function () {
-        return m;
-    },
-    Oe: function () {
-        return A;
-    },
-    Pq: function () {
-        return D;
-    },
-    Q2: function () {
-        return b;
-    },
-    Qh: function () {
-        return N;
-    },
-    TE: function () {
-        return R;
-    },
-    Vr: function () {
-        return h;
-    },
-    _9: function () {
-        return C;
-    },
-    aC: function () {
-        return L;
-    },
-    bH: function () {
-        return P;
-    },
-    dx: function () {
         return g;
     },
-    hx: function () {
-        return p;
+    B3: function () {
+        return A;
     },
-    pl: function () {
-        return U;
+    EK: function () {
+        return D;
     },
-    r: function () {
-        return w;
+    GO: function () {
+        return T;
     },
-    r2: function () {
+    GS: function () {
+        return R;
+    },
+    Lp: function () {
+        return I;
+    },
+    Oe: function () {
+        return N;
+    },
+    Pq: function () {
+        return L;
+    },
+    Q2: function () {
         return M;
     },
-    tv: function () {
+    Qh: function () {
         return v;
     },
-    u0: function () {
+    TE: function () {
+        return C;
+    },
+    Vr: function () {
+        return p;
+    },
+    _9: function () {
+        return y;
+    },
+    aC: function () {
+        return b;
+    },
+    bH: function () {
+        return U;
+    },
+    dx: function () {
+        return S;
+    },
+    hx: function () {
+        return m;
+    },
+    jK: function () {
         return f;
+    },
+    pl: function () {
+        return w;
+    },
+    r: function () {
+        return x;
+    },
+    r2: function () {
+        return P;
+    },
+    tv: function () {
+        return O;
+    },
+    u0: function () {
+        return h;
     }
 });
 var r = n(704215),
@@ -78,6 +81,19 @@ var r = n(704215),
     _ = n(976757),
     E = n(921944);
 function f(e) {
+    let { outcome: t, location: n } = null != e ? e : {},
+        r = (0, s.a)({
+            location: null != n ? n : 'getGuildRecommendationProperties',
+            autoTrackExposure: !1
+        }),
+        a = i.Z.getCurrentRecommendationId();
+    return {
+        recommendation_id: a,
+        recommendation_context: r ? _.Br.GLOBAL_DISCOVERY_TOP_PICKS : _.Br.TOP_PICKS,
+        recommendation_outcome: null != t ? t : _.qz.SHOWN
+    };
+}
+function h(e) {
     let { guildId: t, hasJoinRequest: n, source: r, messageId: i, tagUserId: a, location: s } = e,
         c = o.default.getId(),
         _ = l.ZP.getMember(t, o.default.getId()),
@@ -93,10 +109,11 @@ function f(e) {
         message_id: i
     });
 }
-function h(e) {
+function p(e) {
     let { guildId: t, source: n, location: r, messageId: i, tagUserId: a } = e,
         s = o.default.getId();
     u.default.track(d.rMx.CLAN_APPLY_TO_JOIN_VIEWED, {
+        ...f(),
         guild_id: t,
         source: n,
         location: r,
@@ -105,7 +122,7 @@ function h(e) {
         message_id: i
     });
 }
-function p(e) {
+function m(e) {
     let { guildId: t, userId: n, source: r } = e;
     u.default.track(d.rMx.CLAN_ADOPT_IDENTITY, {
         guild_id: t,
@@ -113,32 +130,33 @@ function p(e) {
         source: r
     });
 }
-function m(e, t) {
+function I(e, t) {
     u.default.track(d.rMx.CLAN_CONVERT_STEP_VIEWED, {
         guild_id: e,
         step: t
     });
 }
-function I(e, t) {
+function T(e, t) {
     u.default.track(d.rMx.CLAN_SETTINGS_VIEWED, {
         guild_id: e,
         page: t
     });
 }
-function T(e) {
+function g(e) {
     u.default.track(d.rMx.CLAN_SETTINGS_SAVED, { guild_id: e });
 }
-function g(e) {
+function S(e) {
     u.default.track(d.rMx.CLAN_CONVERT_SUCCESS_MODAL_VIEWED, { guild_id: e });
 }
-function S(e, t) {
+function A(e, t) {
     u.default.track(d.rMx.CLAN_CONVERT_SUCCESS_MODAL_CONFIRM, {
         guild_id: e,
         enable_tag: t
     });
 }
-function A(e, t, n) {
+function N(e, t, n) {
     u.default.track(d.rMx.CLAN_DISCOVERY_VIEWED, {
+        ...f(),
         guild_ids: e,
         section: t,
         application_ids: n.games,
@@ -146,7 +164,7 @@ function A(e, t, n) {
         traits: n.traits
     });
 }
-function N(e) {
+function v(e) {
     switch (e) {
         case c.Wy.GAMES:
             return 'games';
@@ -168,31 +186,32 @@ function N(e) {
             return e;
     }
 }
-function v(e) {
+function O(e) {
     let { location: t } = e;
     u.default.track(d.rMx.CLAN_USER_INVITE_VIEWED, { location: t });
 }
-function O(e) {
+function R(e) {
     let { location: t } = e;
     u.default.track(d.rMx.CLAN_USER_INVITE_CLICKED, { location: t });
 }
-function R(e) {
+function C(e) {
     let { guildId: t, location: n } = e;
     u.default.track(d.rMx.CLAN_ADMIN_INVITE_VIEWED, {
         guild_id: t,
         location: n
     });
 }
-function C(e) {
+function y(e) {
     let { guildId: t, location: n } = e;
     u.default.track(d.rMx.CLAN_ADMIN_INVITE_CLICKED, {
         guild_id: t,
         location: n
     });
 }
-function y(e) {
+function D(e) {
     let { guildId: t, isMember: n, hasJoinRequest: r, affinity: i, index: a } = e;
     u.default.track(d.rMx.CLAN_DISCOVERY_CARD_CLICKED, {
+        ...f(),
         guild_id: t,
         is_member: n,
         has_join_request: r,
@@ -200,10 +219,10 @@ function y(e) {
         index: a
     });
 }
-function D(e) {
+function L(e) {
     u.default.track(d.rMx.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id: e });
 }
-function L(e) {
+function b(e) {
     var t;
     let { guildId: n, messageId: r, channelId: i, joinRequestStatus: a, joinRequestUserId: s } = e,
         c = o.default.getId(),
@@ -218,7 +237,7 @@ function L(e) {
         join_request_user_id: s
     });
 }
-function b(e) {
+function M(e) {
     let { guildId: t, source: n, tab: r } = e;
     u.default.track(d.rMx.CLAN_APPLICATION_NAVIGATION, {
         guild_id: t,
@@ -226,7 +245,7 @@ function b(e) {
         tab: r
     });
 }
-function M(e) {
+function P(e) {
     let { guildId: t, actionType: n, applicationUserId: r } = e;
     u.default.track(d.rMx.CLAN_APPLICATION_ACTION, {
         guild_id: t,
@@ -235,7 +254,7 @@ function M(e) {
         viewing_user_id: o.default.getId()
     });
 }
-function P(e) {
+function U(e) {
     let { guildId: t, applicationUserId: n, applicationStatus: r } = e;
     u.default.track(d.rMx.CLAN_APPLICATION_VIEWED, {
         guild_id: t,
@@ -244,7 +263,7 @@ function P(e) {
         application_status: r
     });
 }
-function U(e) {
+function w(e) {
     let { originGuildId: t, tagGuildId: n, tagUserId: i, messageId: s, location: l } = e;
     if (!(0, a.un)(r.z.CLAN_TAG_WAITLIST))
         u.default.track(d.rMx.CLAN_APPLY_WAITLIST, {
@@ -260,18 +279,10 @@ function U(e) {
                 forceTrack: !0
             });
 }
-function w(e) {
-    let { guildId: t, position: n } = e,
-        r = (0, s.a)({
-            location: 'guild_application_intends_to_join',
-            autoTrackExposure: !1
-        }),
-        a = i.Z.getCurrentRecommendationId(),
-        o = r ? _.Br.GLOBAL_DISCOVERY_TOP_PICKS : _.Br.TOP_PICKS;
+function x(e) {
+    let { guildId: t, position: n } = e;
     u.default.track(d.rMx.GUILD_APPLICATION_INTENDS_TO_JOIN, {
-        recommendation_id: a,
-        recommendation_context: o,
-        recommendation_outcome: _.qz.HIT,
+        ...f({ outcome: _.qz.HIT }),
         guild_id: t,
         position: n
     });
