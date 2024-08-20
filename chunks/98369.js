@@ -6,101 +6,90 @@ var i,
     r = n(442837),
     o = n(46973),
     c = n(570140),
-    u = n(314897),
-    d = n(19780),
-    h = n(959457),
-    p = n(729303),
-    m = n(651941),
-    _ = n(981631);
-let f = new Map(),
-    E = new Map(),
-    g = !1,
-    C = null;
-function I() {
-    let e = h.Z.getRTCConnections(),
-        t = u.default.getId();
-    return Object.entries(e).reduce((e, n) => {
-        let [i, a] = n,
-            s = a.getUserIds();
-        if (!s.has(t)) return E.delete(i), !0;
-        let l = !0;
-        for (let e of s)
-            if (e !== t && !0 !== f.get(e)) {
-                l = !1;
-                break;
-            }
-        let r = E.get(i) !== l;
-        return E.set(i, l), !!r || e;
+    u = n(569545),
+    d = n(314897),
+    h = n(19780),
+    p = n(959457),
+    m = n(729303),
+    _ = n(651941),
+    f = n(981631);
+let E = new Map(),
+    g = new Map(),
+    C = !1,
+    I = null;
+function x() {
+    return p.Z.getAllActiveStreamKeys().reduce((e, t) => {
+        let { ownerId: n } = (0, u.my)(t),
+            i = !0 === E.get(n),
+            a = g.get(t) !== i;
+        return g.set(t, i), !!a || e;
     }, !1);
 }
-function x() {
+function T() {
     var e;
-    let t = null !== (e = d.Z.getUserIds()) && void 0 !== e ? e : new Set(),
-        n = h.Z.getAllActiveStreamKeys(),
-        i = u.default.getId(),
-        a = !0;
+    let t = null !== (e = h.Z.getUserIds()) && void 0 !== e ? e : new Set(),
+        n = d.default.getId(),
+        i = !0;
     for (let e of t)
-        if (i !== e && !0 !== f.get(e)) {
-            a = !1;
+        if (n !== e && !0 !== E.get(e)) {
+            i = !1;
             break;
         }
-    let s = n.every((e) => E.get(e)),
-        l = a && s,
-        r = l !== g;
-    return (g = l), r;
+    let a = i !== C;
+    return (C = i), a;
 }
-function T(e) {
+function v(e) {
     let { userId: t } = e;
-    if (u.default.getId() === t) return !1;
+    if (d.default.getId() === t) return !1;
     let n = (function (e) {
-            let t = d.Z.getSecureFramesRosterMapEntry(e);
+            let t = h.Z.getSecureFramesRosterMapEntry(e);
             if (null == t) return !1;
             let n = new Uint8Array(t),
-                i = m.Z.isKeyVerified(e, n) || p.Z.isKeyVerified(e, n),
-                a = h.Z.getAllActiveStreamKeys()
-                    .filter((t) => h.Z.isUserConnected(t, e))
+                i = _.Z.isKeyVerified(e, n) || m.Z.isKeyVerified(e, n),
+                a = p.Z.getAllActiveStreamKeys()
+                    .filter((t) => p.Z.isUserConnected(t, e))
                     .every((t) => {
-                        let i = h.Z.getSecureFramesRosterMapEntry(t, e);
+                        let i = p.Z.getSecureFramesRosterMapEntry(t, e);
                         if (null == i) return !1;
                         let a = new Uint8Array(i);
                         for (let e = 0; e < n.length; e++) if (n[e] !== a[e]) return !1;
                         return !0;
                     }),
                 s = i && a,
-                l = s !== f.get(e);
-            return f.set(e, s), l;
+                l = s !== E.get(e);
+            return E.set(e, s), l;
         })(t),
-        i = I(),
-        a = x();
+        i = x(),
+        a = T();
     return n || i || a;
 }
-function v(e) {
+function N(e) {
     let { userIds: t } = e,
-        n = u.default.getId(),
-        i = t.reduce((e, t) => (n === t ? e : !!T({ userId: t }) || e), !1),
-        a = I(),
-        s = x();
+        n = d.default.getId(),
+        i = t.reduce((e, t) => (n === t ? e : !!v({ userId: t }) || e), !1),
+        a = x(),
+        s = T();
     return i || a || s;
 }
-function N() {
-    f.clear(), E.clear(), (g = !1);
+function S() {
+    E.clear(), g.clear(), (C = !1);
 }
-class S extends (i = r.ZP.Store) {
+class Z extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, m.Z, d.Z, h.Z);
+        this.waitFor(m.Z, _.Z, h.Z, p.Z);
     }
     isCallVerified() {
-        return g;
+        return C;
     }
     isStreamVerified(e) {
-        return E.get(e);
+        return g.get(e);
     }
     isUserVerified(e) {
-        return f.get(e);
+        return E.get(e);
     }
 }
 (l = 'SecureFramesVerifiedStore'),
-    (s = 'displayName') in (a = S)
+    (s = 'displayName') in (a = Z)
         ? Object.defineProperty(a, s, {
               value: l,
               enumerable: !0,
@@ -108,29 +97,29 @@ class S extends (i = r.ZP.Store) {
               writable: !0
           })
         : (a[s] = l),
-    (t.Z = new S(c.Z, {
-        CONNECTION_OPEN: N,
+    (t.Z = new Z(c.Z, {
+        CONNECTION_OPEN: S,
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            if (t === C) return !1;
-            (C = t), N();
+            if (t === I) return !1;
+            (I = t), S();
         },
         RTC_CONNECTION_STATE: function (e) {
             let { streamKey: t, state: n, context: i } = e;
-            if (n !== _.hes.DISCONNECTED) return !1;
+            if (n !== f.hes.DISCONNECTED) return !1;
             switch (i) {
                 case o.Yn.STREAM:
                     if (null == t) return !1;
-                    return E.delete(t), x();
+                    return g.delete(t), T();
                 case o.Yn.DEFAULT:
-                    N();
+                    S();
             }
         },
-        RTC_CONNECTION_ROSTER_MAP_UPDATE: v,
-        SECURE_FRAMES_TRANSIENT_KEY_CREATE: T,
-        SECURE_FRAMES_TRANSIENT_KEY_DELETE: T,
-        SECURE_FRAMES_VERIFIED_KEY_CREATE: T,
-        SECURE_FRAMES_VERIFIED_KEY_DELETE: T,
-        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: T,
-        SECURE_FRAMES_ALL_VERIFIED_KEYS_DELETE: v
+        RTC_CONNECTION_ROSTER_MAP_UPDATE: N,
+        SECURE_FRAMES_TRANSIENT_KEY_CREATE: v,
+        SECURE_FRAMES_TRANSIENT_KEY_DELETE: v,
+        SECURE_FRAMES_VERIFIED_KEY_CREATE: v,
+        SECURE_FRAMES_VERIFIED_KEY_DELETE: v,
+        SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: v,
+        SECURE_FRAMES_ALL_VERIFIED_KEYS_DELETE: N
     }));
