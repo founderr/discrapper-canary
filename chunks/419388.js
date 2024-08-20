@@ -413,7 +413,7 @@ class N {
     updateStoreDimensions(e) {
         if (this.isJumping() || !this.isInitialized()) return;
         let { channel: t } = this.props;
-        if (this.isPinned()) r.Z.clearChannelDimensions(t.id, e);
+        if (this.isPinned()) r.Z.updateChannelDimensions(t.id, 1, 1, 0, e);
         else {
             let { placeholderHeight: n } = this.props,
                 { scrollTop: i, scrollHeight: a, offsetHeight: s } = this.getScrollerState();
@@ -481,8 +481,10 @@ class N {
     }
     constructor(e) {
         var t,
-            n = this;
-        I(this, 'props', void 0),
+            n,
+            a = this;
+        if (
+            (I(this, 'props', void 0),
             I(this, 'ref', i.createRef()),
             I(this, 'automaticAnchor', null),
             I(this, 'messageFetchAnchor', null),
@@ -541,19 +543,19 @@ class N {
             I(this, 'loadMore', function () {
                 let e,
                     t,
-                    i = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                    { messages: a } = n.props;
-                if (i) {
-                    let e = a.last();
+                    n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+                    { messages: i } = a.props;
+                if (n) {
+                    let e = i.last();
                     null != e && (t = e.id);
                 } else {
-                    let t = a.first();
+                    let t = i.first();
                     null != t && (e = t.id);
                 }
-                (n.messageFetchAnchor = n.findFetchAnchor(i)),
-                    (n.loading = !0),
+                (a.messageFetchAnchor = a.findFetchAnchor(n)),
+                    (a.loading = !0),
                     o.Z.fetchMessages({
-                        channelId: n.props.channel.id,
+                        channelId: a.props.channel.id,
                         before: e,
                         after: t,
                         limit: g.AQB,
@@ -562,9 +564,14 @@ class N {
             }),
             I(this, 'updateStoreDimensionsDebounced', s().debounce(this.updateStoreDimensions, 200)),
             (this.props = e),
-            (this.loading = e.messages.loadingMore);
-        let a = p.Z.getChannelDimensions(e.channel.id);
-        null != e.messages.jumpTargetId ? (this.pinned = !1) : ((this.initialScrollTop = null !== (t = null == a ? void 0 : a.scrollTop) && void 0 !== t ? t : null), (this.pinned = null == a));
+            (this.loading = e.messages.loadingMore),
+            null != e.messages.jumpTargetId)
+        )
+            this.pinned = !1;
+        else {
+            let i = p.Z.isAtBottom(e.channel.id);
+            (this.pinned = null == i || i), (this.initialScrollTop = i ? null : null !== (n = null === (t = p.Z.getChannelDimensions(e.channel.id)) || void 0 === t ? void 0 : t.scrollTop) && void 0 !== n ? n : null);
+        }
     }
 }
 function v(e) {
