@@ -63,10 +63,11 @@ function f(e, t, n) {
     } else
         for (let e of c) {
             let n = h(e, t);
-            return {
-                application: e.descriptor.application,
-                command: n
-            };
+            if (null != n)
+                return {
+                    application: e.descriptor.application,
+                    command: n
+                };
         }
     return {
         application: void 0,
