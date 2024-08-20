@@ -41,15 +41,9 @@ t.Z = a.memo(function (e) {
         v = a.useMemo(() => (null != S && (0, m.Pw)(S) ? T : []), [T, S]),
         Z = a.useCallback(
             (e) => {
-                e &&
-                    v.length > 0 &&
-                    (0, c.Oe)(
-                        v.map((e) => e.id),
-                        'top_picks',
-                        f
-                    );
+                e && (0, c.Oe)('top_picks', f);
             },
-            [v, f]
+            [f]
         );
     return 0 !== T.length && p
         ? (0, i.jsx)(o.$, {

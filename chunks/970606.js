@@ -154,14 +154,13 @@ function A(e, t) {
         enable_tag: t
     });
 }
-function N(e, t, n) {
+function N(e, t) {
     u.default.track(d.rMx.CLAN_DISCOVERY_VIEWED, {
         ...f(),
-        guild_ids: e,
-        section: t,
-        application_ids: n.games,
-        playstyle: n.playstyle,
-        traits: n.traits
+        section: e,
+        application_ids: t.games,
+        playstyle: t.playstyle,
+        traits: t.traits
     });
 }
 function v(e) {

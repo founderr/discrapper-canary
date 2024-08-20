@@ -56,13 +56,7 @@ t.ZP = o.memo(function (e) {
         D = (0, h.Z)(b),
         { currentPage: y, updatePage: j, totalItems: U, pageSize: G } = (0, f.$)();
     o.useEffect(() => {
-        if (null != b && !!(0, v.Pw)(b))
-            (!(null != D && (0, v.Pw)(D)) || !(D.loadedAt >= b.loadedAt)) &&
-                (0, E.Oe)(
-                    b.items.map((e) => e.id),
-                    'top_picks',
-                    P
-                );
+        if (null != b && !!(0, v.Pw)(b)) (!(null != D && (0, v.Pw)(D)) || !(D.loadedAt >= b.loadedAt)) && (0, E.Oe)('top_picks', P);
     }, [P, b, D]);
     let k = o.useMemo(
             () =>
