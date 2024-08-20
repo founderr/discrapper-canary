@@ -14,4 +14,5 @@ n.d(t, {
     (i.ClientConnect = 'client-connect'),
     (i.ClientDisconnect = 'client-disconnect'),
     (i.OutboundLossRate = 'outboundlossrate'),
-    (i.SecureFramesUpdate = 'secure-frames-update');
+    (i.SecureFramesUpdate = 'secure-frames-update'),
+    (i.RosterMapUpdate = 'roster-map-update');

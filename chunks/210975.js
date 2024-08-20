@@ -1,79 +1,62 @@
 n.d(t, {
     m$: function () {
-        return g;
+        return h;
     },
     wV: function () {
-        return E;
+        return u;
+    },
+    zU: function () {
+        return d;
     }
-}),
-    n(47120),
-    n(518263),
-    n(970173),
-    n(520712),
-    n(268111),
-    n(941497),
-    n(32026),
-    n(480839),
-    n(744285),
-    n(492257),
-    n(873817);
-var r = n(470079),
-    l = n(442837),
-    u = n(470956),
-    i = n(314897),
-    a = n(19780),
-    c = n(979651),
-    o = n(709054),
-    s = n(729303),
-    d = n(651941),
-    f = n(441894);
-function Z(e) {
-    let { voiceStates: t, version: n } = (0, l.cj)([c.Z], () => ({
-            voiceStates: c.Z.getVoiceStatesForChannel(e),
-            version: c.Z.getVoiceStateVersion()
-        })),
-        i = r.useMemo(() => o.default.keys(t), [t, n]);
-    return (0, u.Yp)(e, i);
+});
+var i = n(442837),
+    a = n(314897),
+    s = n(19780),
+    l = n(959457),
+    r = n(98369),
+    o = n(441894);
+function c(e, t) {
+    return 0 === e.size || (1 === e.size && e.has(t));
 }
-function C(e) {
-    let [t, n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, d.Z, s.Z];
-    if (null == e) return !1;
-    let l = t.getSecureFramesRosterMapEntry(e);
-    if (null == l) return !1;
-    let u = new Uint8Array(l);
-    return n.isKeyVerified(e, u) || r.isKeyVerified(e, u);
-}
-function E(e) {
-    let { userId: t, channelId: n, location: r } = e,
-        u = Z(n),
-        c = (0, f.J)({
+function u(e) {
+    let { userId: t, channelId: n, location: l } = e,
+        c = (0, o.J)({
             channelId: n,
-            location: r
-        }),
-        o = (0, l.e7)([i.default], () => i.default.getId()),
-        E = (0, l.e7)([a.Z, d.Z, s.Z], () => C(t, [a.Z, d.Z, s.Z])),
-        g = o !== t;
-    return c && g && E && u.has(o) && null != t && u.has(t);
+            location: l
+        });
+    return (0, i.e7)([r.Z, a.default, s.Z], () => null != t && c && s.Z.isUserConnected(t) && a.default.getId() !== t && r.Z.isUserVerified(t), [c, t]);
 }
-function g(e) {
+function d(e) {
+    let { streamKey: t, channelId: n, location: s } = e,
+        u = (0, o.J)({
+            channelId: n,
+            location: s
+        });
+    return (0, i.e7)(
+        [r.Z, l.Z, a.default],
+        () => {
+            if (!u || null == t) return !1;
+            let e = l.Z.getUserIds(t),
+                n = a.default.getId();
+            return !(null == e || c(e, n)) && r.Z.isStreamVerified(t);
+        },
+        [u, t]
+    );
+}
+function h(e) {
     let { channelId: t, location: n } = e,
-        r = (0, f.J)({
+        l = (0, o.J)({
             channelId: t,
             location: n
-        }),
-        u = Z(t),
-        c = (0, l.e7)([i.default], () => i.default.getId());
-    return (0, l.e7)(
-        [a.Z, d.Z, s.Z],
+        });
+    return (0, i.e7)(
+        [r.Z, s.Z, a.default],
         () => {
-            if (!r) return !1;
-            for (let e of u) {
-                if (e !== c) {
-                    if (!C(e, [a.Z, d.Z, s.Z])) return !1;
-                }
-            }
-            return !0;
+            if (!l) return !1;
+            let e = s.Z.getUserIds(),
+                t = a.default.getId();
+            return !(null == e || c(e, t)) && r.Z.isCallVerified();
         },
-        [c, r, u]
+        [l]
     );
 }

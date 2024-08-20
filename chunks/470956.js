@@ -3,38 +3,35 @@ n.d(t, {
         return d;
     },
     Eu: function () {
-        return C;
-    },
-    Yp: function () {
-        return Z;
+        return m;
     },
     bt: function () {
-        return f;
+        return h;
     }
 }),
     n(47120),
     n(653041);
-var r = n(470079),
-    l = n(392711),
-    u = n(442837),
-    i = n(413523),
-    a = n(314897),
-    c = n(878884),
-    o = n(19780),
-    s = n(979651);
+var i = n(470079),
+    a = n(392711),
+    s = n(442837),
+    l = n(413523),
+    r = n(314897),
+    o = n(878884),
+    c = n(19780),
+    u = n(979651);
 function d(e, t) {
-    let n = (0, u.e7)([c.Z, o.Z], () => (e === o.Z.getChannelId() ? c.Z.getDesyncedVoiceStates() : null));
-    return r.useMemo(
+    let n = (0, s.e7)([o.Z, c.Z], () => (e === c.Z.getChannelId() ? o.Z.getDesyncedVoiceStates() : null));
+    return i.useMemo(
         () =>
             (function (e, t) {
                 if (null == e || 0 === e.length) return t;
                 let n = [],
-                    r = new Set();
-                for (let e of t) n.push(e), r.add(e.user.id);
+                    i = new Set();
+                for (let e of t) n.push(e), i.add(e.user.id);
                 return (
                     e.forEach((e) => {
                         n.splice(
-                            (0, l.sortedIndexBy)(n, e, (e) => {
+                            (0, a.sortedIndexBy)(n, e, (e) => {
                                 let { comparator: t } = e;
                                 return t;
                             }),
@@ -48,10 +45,10 @@ function d(e, t) {
         [n, t]
     );
 }
-function f(e, t) {
+function h(e, t) {
     var n;
-    let a = ((n = e), (0, u.e7)([c.Z, o.Z], () => (n === o.Z.getChannelId() ? c.Z.getDesyncedParticipants() : null)));
-    return r.useMemo(
+    let r = ((n = e), (0, s.e7)([o.Z, c.Z], () => (n === c.Z.getChannelId() ? o.Z.getDesyncedParticipants() : null)));
+    return i.useMemo(
         () =>
             (function (e, t) {
                 if (null == e || 0 === e.length) return t;
@@ -59,52 +56,45 @@ function f(e, t) {
                 return (
                     e.forEach((e) => {
                         n.splice(
-                            (0, l.sortedIndexBy)(n, e, (e) => (0, i.Yr)(e)),
+                            (0, a.sortedIndexBy)(n, e, (e) => (0, l.Yr)(e)),
                             0,
                             e
                         );
                     }),
                     n
                 );
-            })(a, t),
-        [a, t]
+            })(r, t),
+        [r, t]
     );
 }
-function Z(e, t) {
-    let n = (0, u.e7)([c.Z, o.Z], () => (e === o.Z.getChannelId() ? c.Z.getDesyncedUserIds() : null));
-    return r.useMemo(() => {
-        let e = new Set();
-        return t.forEach((t) => e.add(t)), null == n || n.forEach((t) => e.add(t)), e;
-    }, [n, t]);
-}
-function C(e, t) {
-    let n = (0, u.e7)([a.default], () => a.default.getId() === t),
-        l = (0, u.e7)([o.Z], () => o.Z.getChannelId()),
-        i = r.useRef(null),
-        [c, d] = r.useState(!1),
-        [f, Z] = r.useState(!1),
-        C = (0, u.e7)([o.Z, s.Z], () => null != t && null != e && o.Z.getChannelId() === e && null != s.Z.isInChannel(e, t) && o.Z.isUserConnected(t)),
-        E = (0, u.e7)([o.Z, s.Z], () => null != t && null != e && o.Z.getChannelId() === e && null != s.Z.isInChannel(e, t) && !o.Z.isUserConnected(t));
+function m(e, t) {
+    let n = (0, s.e7)([r.default], () => r.default.getId() === t),
+        a = (0, s.e7)([c.Z], () => c.Z.getChannelId()),
+        l = i.useRef(null),
+        [o, d] = i.useState(!1),
+        [h, m] = i.useState(!1),
+        p = (0, s.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && c.Z.isUserConnected(t)),
+        _ = (0, s.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && !c.Z.isUserConnected(t));
     return (
-        r.useEffect(() => {
-            C && Z(!0);
-        }, [C]),
-        r.useEffect(() => {
-            l !== e && Z(!1);
-        }, [e, l]),
-        r.useEffect(
+        i.useEffect(() => {
+            p && m(!0);
+        }, [p]),
+        i.useEffect(() => {
+            a !== e && m(!1);
+        }, [e, a]),
+        i.useEffect(
             () => (
-                E && null == i.current
-                    ? (i.current = setTimeout(() => {
-                          (i.current = null), d(!0);
+                _ && null == l.current
+                    ? (l.current = setTimeout(() => {
+                          (l.current = null), d(!0);
                       }, 250))
-                    : (clearTimeout(i.current), (i.current = null), d(!1)),
+                    : (clearTimeout(l.current), (l.current = null), d(!1)),
                 () => {
-                    clearTimeout(i.current), (i.current = null);
+                    clearTimeout(l.current), (l.current = null);
                 }
             ),
-            [E]
+            [_]
         ),
-        !n && f && c
+        !n && h && o
     );
 }

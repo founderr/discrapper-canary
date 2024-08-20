@@ -190,6 +190,9 @@ class el extends E.Z {
     getUserIds() {
         return this._userIds;
     }
+    getIsUserConnected(e) {
+        return this._userIds.has(e);
+    }
     getVideoHealthManager() {
         return this._videoHealthManager;
     }
@@ -887,12 +890,13 @@ class el extends E.Z {
                   });
     }
     _handleSecureFramesRosterChange(e) {
+        let t = [];
         Object.entries(e).forEach((e) => {
-            let [t, n] = e;
-            if (null == n || 0 === n.byteLength) this._secureFramesRosterMap.delete(t);
-            else this._secureFramesRosterMap.set(t, n);
+            let [n, r] = e;
+            if ((t.push(n), null == r || 0 === r.byteLength)) this._secureFramesRosterMap.delete(n);
+            else this._secureFramesRosterMap.set(n, r);
         }),
-            this.emit(K.z.SecureFramesUpdate);
+            this.emit(K.z.RosterMapUpdate, t);
     }
     _handleSecureFramesPrepareTransition(e, t) {
         var n;

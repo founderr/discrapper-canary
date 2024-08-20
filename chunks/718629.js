@@ -32,7 +32,10 @@ async function _(e) {
                 type: 'SECURE_FRAMES_SETTINGS_UPDATE',
                 persistentCodesEnabled: e
             }),
-                n.Z.dispatch({ type: 'SECURE_FRAMES_ALL_VERIFIED_KEYS_DELETE' });
+                n.Z.dispatch({
+                    type: 'SECURE_FRAMES_ALL_VERIFIED_KEYS_DELETE',
+                    userIds: l.Z.getUserIds()
+                });
         };
         l.Z.getUserIds().length > 0
             ? r.Z.openSecureFramesUpdateConfirmation({

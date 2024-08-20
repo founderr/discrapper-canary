@@ -93,7 +93,8 @@ function C(e, t) {
                     type: 'RTC_CONNECTION_CLIENT_CONNECT',
                     userIds: e,
                     guildId: a.guildId,
-                    channelId: a.channelId
+                    channelId: a.channelId,
+                    context: a.context
                 });
             });
         }),
@@ -103,7 +104,8 @@ function C(e, t) {
                     type: 'RTC_CONNECTION_CLIENT_DISCONNECT',
                     userId: e,
                     guildId: a.guildId,
-                    channelId: a.channelId
+                    channelId: a.channelId,
+                    context: a.context
                 });
             });
         }),
@@ -120,6 +122,14 @@ function C(e, t) {
         a.on(d.z.SecureFramesUpdate, () => {
             c.Z.wait(() => {
                 c.Z.dispatch({ type: 'RTC_CONNECTION_SECURE_FRAMES_UPDATE' });
+            });
+        }),
+        a.on(d.z.RosterMapUpdate, (e) => {
+            c.Z.wait(() => {
+                c.Z.dispatch({
+                    type: 'RTC_CONNECTION_ROSTER_MAP_UPDATE',
+                    userIds: e
+                });
             });
         }),
         (N = new _.Z(p.default.getId(), t)),
@@ -215,12 +225,14 @@ class M extends (a = u.ZP.Store) {
     getWasEverRtcConnected() {
         return R;
     }
-    getSecureFramesState() {
-        return null == r ? void 0 : r.getSecureFramesState();
+    getUserIds() {
+        return null == r ? void 0 : r.getUserIds();
     }
     isUserConnected(e) {
-        let t = null == r ? void 0 : r.getUserIds();
-        return null != t && t.has(e);
+        return null == r ? void 0 : r.getIsUserConnected(e);
+    }
+    getSecureFramesState() {
+        return null == r ? void 0 : r.getSecureFramesState();
     }
     getSecureFramesRosterMapEntry(e) {
         let t = null == r ? void 0 : r.getSecureFramesRosterMap();

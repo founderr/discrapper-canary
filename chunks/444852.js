@@ -201,6 +201,14 @@ class L extends o.Z {
                 s.Z.wait(() => {
                     s.Z.dispatch({ type: 'RTC_CONNECTION_SECURE_FRAMES_UPDATE' });
                 });
+            }),
+            this.on(l.z.RosterMapUpdate, (e) => {
+                s.Z.wait(() => {
+                    s.Z.dispatch({
+                        type: 'RTC_CONNECTION_ROSTER_MAP_UPDATE',
+                        userIds: e
+                    });
+                });
             });
     }
     _getStreamAnalyticsProperties() {

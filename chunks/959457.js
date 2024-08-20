@@ -61,6 +61,9 @@ class F extends (a = E.ZP.Store) {
     getActiveStreamKey() {
         return (0, g.Z)(O.Z) ? i : null;
     }
+    getRTCConnections() {
+        return w;
+    }
     getAllActiveStreamKeys() {
         return Object.keys(w);
     }
@@ -145,9 +148,22 @@ class F extends (a = E.ZP.Store) {
     getStreamSourceId(e) {
         return P[e];
     }
+    getUserIds(e) {
+        let t = w[e];
+        return null == t ? void 0 : t.getUserIds();
+    }
+    isUserConnected(e, t) {
+        let n = w[e];
+        return null == n ? void 0 : n.getIsUserConnected(t);
+    }
     getSecureFramesState(e) {
         let t = w[e];
         return null == t ? void 0 : t.getSecureFramesState();
+    }
+    getSecureFramesRosterMapEntry(e, t) {
+        let n = w[e],
+            r = null == n ? void 0 : n.getSecureFramesRosterMap();
+        return null == r ? void 0 : r.get(t);
     }
 }
 (l = 'StreamRTCConnectionStore'),
