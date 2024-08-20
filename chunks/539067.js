@@ -36,9 +36,8 @@ function l(e) {
         }, [l, n, I, t]),
         {
             loading: o,
-            isCurrentUserPersistent: _,
-            isOtherUserPersistent: f,
-            isPersistentCode: _ && f
+            isCurrentUserKeyPersistent: _,
+            isOtherUserKeyPersistent: f
         }
     );
 }
