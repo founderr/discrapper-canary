@@ -13,45 +13,46 @@ var r = n(735250),
     u = n(689938),
     c = n(487596);
 function d(e) {
-    let { src: t, size: n, constrain: a = 'height', className: d, alt: _, fallbackSrc: E, showTooltip: f = !1 } = e,
-        h = (0, l.ZP)(),
-        p = ''.concat(n, 'px'),
-        [m, I] = i.useState(!1),
-        [T, g] = i.useState(!1),
-        S = null == E || T;
-    if (null == t || (m && S))
+    let { src: t, size: n, constrain: a = 'height', className: d, alt: _, fallbackSrc: E, 'aria-hidden': f, showTooltip: h = !1 } = e,
+        p = (0, l.ZP)(),
+        m = ''.concat(n, 'px'),
+        [I, T] = i.useState(!1),
+        [g, S] = i.useState(!1),
+        A = null == E || g;
+    if (null == t || (I && A))
         return (0, r.jsx)(o.UnknownGameIcon, {
             size: 'custom',
             width: '100%',
             height: '100%',
-            color: 'dark' === h ? 'white' : 'black',
-            style: { maxWidth: p },
+            color: 'dark' === p ? 'white' : 'black',
+            style: { maxWidth: m },
             className: s()(c.contentImage, d)
         });
-    let A =
+    let N =
         'height' === a
             ? {
-                  maxWidth: p,
-                  height: p
+                  maxWidth: m,
+                  height: m
               }
             : {
-                  maxWidth: p,
-                  minHeight: p
+                  maxWidth: m,
+                  minHeight: m
               };
     return (0, r.jsx)(
         o.Tooltip,
         {
             'aria-label': _,
             text: _,
-            shouldShow: f,
+            shouldShow: h,
             children: (e) =>
                 (0, r.jsx)('img', {
                     ...e,
-                    style: A,
+                    style: N,
                     className: s()(c.contentImage, d),
-                    src: m && null != E ? E : t,
-                    alt: null != _ ? _ : u.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
-                    onError: (e) => (m ? g(!0) : I(!0))
+                    src: I && null != E ? E : t,
+                    'aria-hidden': f,
+                    alt: null != _ ? _ : f ? void 0 : u.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
+                    onError: (e) => (I ? S(!0) : T(!0))
                 })
         },
         'voice-preview'
