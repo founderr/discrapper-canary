@@ -1,9 +1,6 @@
 n.d(t, {
     A5: function () {
-        return B;
-    },
-    B2: function () {
-        return S;
+        return k;
     },
     Bg: function () {
         return m;
@@ -21,28 +18,28 @@ n.d(t, {
         return f;
     },
     HW: function () {
-        return N;
-    },
-    Hp: function () {
         return A;
     },
+    Hp: function () {
+        return S;
+    },
     JO: function () {
-        return L;
+        return D;
     },
     Kw: function () {
-        return M;
+        return b;
     },
     MG: function () {
-        return O;
+        return v;
     },
     OT: function () {
         return o;
     },
     Qr: function () {
-        return C;
+        return R;
     },
     Ut: function () {
-        return R;
+        return O;
     },
     WM: function () {
         return I;
@@ -51,28 +48,28 @@ n.d(t, {
         return u;
     },
     XH: function () {
-        return v;
+        return N;
     },
     _U: function () {
-        return G;
+        return x;
     },
     dJ: function () {
         return l;
     },
     f_: function () {
-        return y;
+        return C;
     },
     i$: function () {
-        return w;
+        return U;
     },
     jF: function () {
         return h;
     },
     ji: function () {
-        return U;
+        return P;
     },
     jp: function () {
-        return P;
+        return M;
     },
     mg: function () {
         return g;
@@ -81,16 +78,16 @@ n.d(t, {
         return T;
     },
     wD: function () {
-        return D;
+        return y;
     },
     xd: function () {
-        return k;
+        return G;
     },
     xx: function () {
-        return x;
+        return w;
     },
     yl: function () {
-        return b;
+        return L;
     }
 });
 var r,
@@ -112,22 +109,21 @@ let E = 'alt+c',
     I = 1,
     T = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
     g = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
-    S = /(Apple M[12].*)/,
-    A = 0.1,
-    N = 25,
-    v = 0,
-    O = 200,
-    R = 'clips-edit',
-    C = 'clips-gallery',
-    y = 640,
-    D = 360,
-    L = 100,
-    b = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
-    M = 15,
-    P = 30000,
-    U = 30,
-    w = 10,
-    x = 14 * _.Z.Millis.DAY,
+    S = 0.1,
+    A = 25,
+    N = 0,
+    v = 200,
+    O = 'clips-edit',
+    R = 'clips-gallery',
+    C = 640,
+    y = 360,
+    D = 100,
+    L = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
+    b = 15,
+    M = 30000,
+    P = 30,
+    U = 10,
+    w = 14 * _.Z.Millis.DAY,
+    x = 5,
     G = 5,
-    k = 5,
-    B = 1;
+    k = 1;
