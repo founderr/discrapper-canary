@@ -303,7 +303,7 @@ function er(e) {
                 });
         },
         { newActivityCardsEnabled: em } = (0, L.z)({ location: 'AccountProfilePopout' }),
-        { accountPopoutStatusEditEnabled: eI } = (0, Z.K)({ location: 'AccountProfilePopout' }),
+        { customStatusBubbleEditEnabled: eI } = (0, Z.K)({ location: 'AccountProfilePopout' }),
         eg = (0, C.Z)({ analyticsLocations: el }),
         ep = (0, S.p)(),
         eT = ed === J.Skl.DND,
@@ -360,7 +360,6 @@ function er(e) {
                                 (0, i.jsx)(M.Z, {
                                     user: t,
                                     profileType: $.y0.BITE_SIZE,
-                                    editEnabled: eI,
                                     onClose: n
                                 })
                             ]
