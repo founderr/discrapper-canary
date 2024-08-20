@@ -89,7 +89,7 @@ let y = {
     [d.s.WATCHED_MEDIA]: [j, W],
     [d.s.LAUNCHED_ACTIVITY]: [U, P, k]
 };
-((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.GAME_PROFILE = 2)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 3)] = 'USER_PROFILE'), (r[(r.EMBED = 4)] = 'EMBED');
+((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (r[(r.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 4)] = 'USER_PROFILE'), (r[(r.EMBED = 5)] = 'EMBED');
 let D = s.createContext({});
 function L() {
     return s.useContext(D);
@@ -120,7 +120,7 @@ function M(e) {
                         variant: 'text-xs/normal',
                         color: o,
                         className: C.badgeLabel,
-                        scaleFontToUserSetting: 4 === u,
+                        scaleFontToUserSetting: 5 === u,
                         children: n
                     })
                 ]
@@ -131,7 +131,7 @@ function P(e) {
     let { entry: t } = e,
         { channel: n } = (0, S.Z)(t),
         { location: r } = L();
-    return null == n || (0, m.Hi)(r, [1, 2, 3])
+    return null == n || (0, m.Hi)(r, [1, 2, 3, 4])
         ? null
         : (0, a.jsx)(M, {
               Icon: h.VoiceNormalIcon,
@@ -141,13 +141,13 @@ function P(e) {
 function U(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: r, defaultIconColor: i, location: s } = L(),
-        o = (0, A.kr)(t) && (0, m.Hi)(s, [0, 3]),
+        o = (0, A.kr)(t) && (0, m.Hi)(s, [0, 4]),
         l = o ? h.tokens.colors.TEXT_POSITIVE : i,
         { streamPreviewUrl: u } = (0, S.Z)(t),
         c = null != u ? h.ScreenArrowIcon : (0, g.Mq)(t) ? h.ActivitiesIcon : h.GameControllerIcon;
     return (0, a.jsxs)(b, {
         children: [
-            2 === s
+            3 === s
                 ? null
                 : (0, a.jsx)(c, {
                       size: 'xxs',
@@ -158,7 +158,7 @@ function U(e) {
                 textColor: o ? 'text-positive' : r,
                 hovered: n,
                 bold: !0,
-                scaleFontToUserSetting: 4 === s
+                scaleFontToUserSetting: 5 === s
             })
         ]
     });
@@ -192,7 +192,7 @@ function x(e) {
         { defaultTextColor: i, defaultIconColor: s, location: o } = L(),
         l = (0, f.e7)([T.Z], () => T.Z.getMatchingActivity(n));
     if ((null == l ? void 0 : l.timestamps) == null) return null;
-    let u = (0, m.Hi)(o, [0, 3]),
+    let u = (0, m.Hi)(o, [0, 4]),
         c = u ? h.tokens.colors.TEXT_POSITIVE : s,
         d = null === (t = l.timestamps) || void 0 === t ? void 0 : t.start;
     return (0, a.jsxs)('div', {
@@ -214,7 +214,7 @@ function x(e) {
 function G(e) {
     let { entry: t } = e,
         { location: n } = L(),
-        r = (0, m.Hi)(n, [0, 2]) ? h.tokens.colors.STATUS_POSITIVE : void 0;
+        r = (0, m.Hi)(n, [0, 3]) ? h.tokens.colors.STATUS_POSITIVE : void 0;
     return (0, A.Ol)(t)
         ? (0, a.jsx)(M, {
               Icon: h.NewUserSimpleIcon,
@@ -285,7 +285,7 @@ function H(e) {
         { location: r } = L(),
         i = null === (t = (0, A.PJ)(n, _.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
     if (null == i) return null;
-    let s = (0, m.Hi)(r, [1, 4]) ? R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: i }) : R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({ count: i });
+    let s = (0, m.Hi)(r, [1, 2, 5]) ? R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: i }) : R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({ count: i });
     return (0, a.jsx)(M, {
         Icon: h.TrophyIcon,
         text: s
@@ -294,7 +294,7 @@ function H(e) {
 function Z(e) {
     let { entry: t } = e,
         { location: n } = L();
-    if (2 === n) return null;
+    if (3 === n) return null;
     let r = (0, A.ig)(t);
     return null == r || r === E.o.TRENDING_TYPE_UNSPECIFIED
         ? null
@@ -306,7 +306,7 @@ function Z(e) {
 function Y(e) {
     let { entry: t } = e,
         { location: n } = L();
-    if (2 === n) return null;
+    if (3 === n) return null;
     let r = I.default.extractTimestamp(t.extra.application_id);
     return c()().diff(c()(r), 'days') > O.G
         ? null
@@ -318,7 +318,7 @@ function Y(e) {
 function j(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: r, defaultIconColor: i, location: s } = L(),
-        o = (0, A.kr)(t) && 3 === s,
+        o = (0, A.kr)(t) && 4 === s,
         l = o ? h.tokens.colors.TEXT_POSITIVE : i;
     return (0, a.jsxs)('div', {
         className: C.badgeContainer,
@@ -350,14 +350,16 @@ function K(e) {
     let t,
         { location: n, children: r, className: i } = e;
     return (
-        (t = (0, m.Hi)(n, [1, 4])
+        (t = (0, m.Hi)(n, [1, 5])
             ? {
                   defaultTextColor: 'content-inventory-overlay-text-secondary',
                   defaultIconColor: h.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY
               }
             : 2 === n
-              ? { defaultTextColor: 'text-muted' }
-              : { defaultTextColor: 'text-secondary' }),
+              ? { defaultTextColor: 'interactive-normal' }
+              : 3 === n
+                ? { defaultTextColor: 'text-muted' }
+                : { defaultTextColor: 'text-secondary' }),
         (0, a.jsx)(D.Provider, {
             value: {
                 location: n,
@@ -368,8 +370,8 @@ function K(e) {
                     C.badgesContainer,
                     {
                         [C.badgesContainerCard]: 0 === n,
-                        [C.badgesContainerPopout]: 1 === n,
-                        [C.badgesContainerGameProfile]: 2 === n
+                        [C.badgesContainerPopout]: (0, m.Hi)(n, [1, 2]),
+                        [C.badgesContainerGameProfile]: 3 === n
                     },
                     i
                 ),
