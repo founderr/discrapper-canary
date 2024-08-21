@@ -14,17 +14,17 @@ var r = n(735250),
     d = n(534542),
     _ = n(57292);
 function E(e) {
-    let { value: t, disabled: n = !1, hideBorder: a = !1, tooltipNote: E, onChange: f, className: h, style: p, note: I, children: m } = e,
-        T = i.useRef(null),
+    let { value: t, disabled: n = !1, hideBorder: a = !1, tooltipNote: E, onChange: f, className: h, style: p, note: I, children: m, disabledText: T } = e,
         g = i.useRef(null),
-        S = i.useId(),
-        A = (0, r.jsx)(l.r, {
-            id: S,
+        S = i.useRef(null),
+        A = i.useId(),
+        N = (0, r.jsx)(l.r, {
+            id: A,
             checked: t,
             onChange: f,
             disabled: n,
             focusProps: { enabled: !1 },
-            innerRef: T
+            innerRef: g
         });
     return (0, r.jsxs)('div', {
         style: p,
@@ -33,14 +33,14 @@ function E(e) {
             (0, r.jsx)(o.t, {
                 within: !0,
                 offset: -4,
-                focusTarget: T,
-                ringTarget: g,
+                focusTarget: g,
+                ringTarget: S,
                 children: (0, r.jsxs)('div', {
                     className: _.labelRow,
-                    ref: g,
+                    ref: S,
                     children: [
                         (0, r.jsx)('label', {
-                            htmlFor: S,
+                            htmlFor: A,
                             className: _.title,
                             children: m
                         }),
@@ -50,9 +50,9 @@ function E(e) {
                                 null != E
                                     ? (0, r.jsx)(u.DY, {
                                           text: E,
-                                          children: A
+                                          children: N
                                       })
-                                    : A
+                                    : N
                         })
                     ]
                 })
@@ -64,6 +64,15 @@ function E(e) {
                         disabled: n,
                         type: d.g.DESCRIPTION,
                         children: I
+                    })
+                }),
+            n &&
+                null != T &&
+                (0, r.jsx)('div', {
+                    className: _.disabledText,
+                    children: (0, r.jsx)(d.R, {
+                        type: d.g.ERROR,
+                        children: T
                     })
                 }),
             !a && (0, r.jsx)(c.$, { className: _.dividerDefault })

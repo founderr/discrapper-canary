@@ -1,6 +1,6 @@
 s.d(t, {
     G: function () {
-        return ep;
+        return eN;
     },
     Z: function () {
         return eS;
@@ -24,8 +24,8 @@ var n = s(735250),
     g = s(771340),
     E = s(410575),
     T = s(852860),
-    p = s(129865),
-    N = s(902840),
+    N = s(129865),
+    p = s(902840),
     _ = s(933557),
     S = s(541716),
     x = s(752305),
@@ -36,8 +36,8 @@ var n = s(735250),
     R = s(633302),
     Z = s(109434),
     v = s(162389),
-    O = s(946458),
-    A = s(968437),
+    A = s(946458),
+    O = s(968437),
     L = s(665906),
     j = s(456077),
     b = s(747212),
@@ -47,8 +47,8 @@ var n = s(735250),
     P = s(388610),
     F = s(430824),
     B = s(496675),
-    U = s(903223),
-    H = s(594174),
+    H = s(903223),
+    U = s(594174),
     G = s(934415),
     k = s(70956),
     V = s(630388),
@@ -93,7 +93,7 @@ let el = (0, I.hQ)(),
         type: q.d4z.DM
     }),
     eT = 'AUTOMATIC_RTC_REGION',
-    ep = d.ZP.connectStores([P.Z], () => {
+    eN = d.ZP.connectStores([P.Z], () => {
         let { channel: e, submitting: t } = P.Z.getProps();
         return {
             channel: e,
@@ -103,7 +103,7 @@ let el = (0, I.hQ)(),
             },
             onSave() {
                 if (null == e) return;
-                let { name: t, type: s, topic: n, bitrate: l, userLimit: a, nsfw: i, flags: r, rateLimitPerUser: o, defaultThreadRateLimitPerUser: d, threadMetadata: c, defaultAutoArchiveDuration: u, template: h, rtcRegion: g, videoQualityMode: E, defaultReactionEmoji: T, availableTags: p, defaultSortOrder: N, defaultForumLayout: _ } = e;
+                let { name: t, type: s, topic: n, bitrate: l, userLimit: a, nsfw: i, flags: r, rateLimitPerUser: o, defaultThreadRateLimitPerUser: d, threadMetadata: c, defaultAutoArchiveDuration: u, template: h, rtcRegion: g, videoQualityMode: E, defaultReactionEmoji: T, availableTags: N, defaultSortOrder: p, defaultForumLayout: _ } = e;
                 e.isThread() && (t = (0, j.Z)(t, !0)),
                     (0, m.wk)(e.id, {
                         name: t,
@@ -123,14 +123,14 @@ let el = (0, I.hQ)(),
                         rtcRegion: g,
                         videoQualityMode: E,
                         defaultReactionEmoji: T,
-                        availableTags: p,
-                        defaultSortOrder: N,
+                        availableTags: N,
+                        defaultSortOrder: p,
                         defaultForumLayout: _
                     });
             }
         };
     })(T.Z);
-function eN(e) {
+function ep(e) {
     var t;
     let { channel: s, onChange: a } = e,
         [i, r] = l.useState(null !== (t = s.rateLimitPerUser) && void 0 !== t ? t : 0),
@@ -208,11 +208,11 @@ class e_ extends l.PureComponent {
     renderChannelInfo(e, t) {
         var s, l, a, d, u, m;
         let g, T;
-        let { canManageChannels: p, canSendMessages: N, isThreadModerator: _, canManageThread: x, guild: C, isForumPost: I, isOwner: M, showAdvancedSlowModeSetting: Z } = this.props,
+        let { canManageChannels: N, canSendMessages: p, isThreadModerator: _, canManageThread: x, guild: C, isForumPost: I, isOwner: M, showAdvancedSlowModeSetting: Z } = this.props,
             L = y.Ec.has(e.type),
             j = e.isForumLikeChannel(),
             D = j && (null === (s = e.availableTags) || void 0 === s ? void 0 : s.every((e) => e.moderated)),
-            w = (null === (l = H.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) === !0,
+            w = (null === (l = U.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) === !0,
             P = y.TK.has(e.type)
                 ? (0, n.jsxs)('div', {
                       children: [
@@ -247,7 +247,7 @@ class e_ extends l.PureComponent {
                                         onChange: this.handleChangeTopic,
                                         error: this.getError('topic'),
                                         maxLength: X.$x,
-                                        disabled: !p,
+                                        disabled: !N,
                                         autosize: !0
                                     })
                           }),
@@ -268,7 +268,7 @@ class e_ extends l.PureComponent {
                                       onChange: this.handleChangeTemplate,
                                       error: this.getError('template'),
                                       maxLength: $.Vb,
-                                      disabled: !p,
+                                      disabled: !N,
                                       autosize: !0
                                   })
                               }),
@@ -296,7 +296,7 @@ class e_ extends l.PureComponent {
                               ]
                           }),
                           (0, n.jsx)(h.Checkbox, {
-                              disabled: !p || D,
+                              disabled: !N || D,
                               value: e.hasFlag(X.zZ.REQUIRE_TAG),
                               type: h.Checkbox.Types.INVERTED,
                               onChange: (e, t) => this.handleRequireTagChanged(t),
@@ -309,7 +309,7 @@ class e_ extends l.PureComponent {
                       ]
                   })
                 : null,
-            U = e.isForumLikeChannel()
+            H = e.isForumLikeChannel()
                 ? (0, n.jsxs)('div', {
                       children: [
                           (0, n.jsxs)('div', {
@@ -340,7 +340,7 @@ class e_ extends l.PureComponent {
                                                       children: (e) =>
                                                           (0, n.jsx)(h.Button, {
                                                               ...e,
-                                                              disabled: !p,
+                                                              disabled: !N,
                                                               onClick: (t) => {
                                                                   var s;
                                                                   null === (s = e.onClick) || void 0 === s || s.call(e, t);
@@ -362,7 +362,7 @@ class e_ extends l.PureComponent {
                                           })
                                       ]
                                   }),
-                                  (0, n.jsx)(O.Z, { reactionEmoji: e.defaultReactionEmoji })
+                                  (0, n.jsx)(A.Z, { reactionEmoji: e.defaultReactionEmoji })
                               ]
                           }),
                           (0, n.jsx)(h.FormDivider, { className: i()(es.marginTop40, es.marginBottom40) })
@@ -440,7 +440,7 @@ class e_ extends l.PureComponent {
                       ]
                   })
                 : null,
-            V = L ? _ : p,
+            V = L ? _ : N,
             z = y.X_.has(e.type)
                 ? (0, n.jsxs)('div', {
                       children: [
@@ -458,7 +458,7 @@ class e_ extends l.PureComponent {
                                         })
                                       : null,
                                   !0 === Z
-                                      ? (0, n.jsx)(eN, {
+                                      ? (0, n.jsx)(ep, {
                                             channel: e,
                                             onChange: this.handleChangeSlowmode
                                         })
@@ -555,7 +555,8 @@ class e_ extends l.PureComponent {
                           onChange: this.handleNSFWChange,
                           value: e.isNSFW(),
                           hideBorder: !0,
-                          disabled: !p,
+                          disabled: !N || null != e.linkedLobby,
+                          disabledText: null != e.linkedLobby ? ee.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_NSFW_DISABLED_REASON : null,
                           children: ee.Z.Messages.FORM_LABEL_NSFW_CHANNEL
                       })
                   })
@@ -568,7 +569,7 @@ class e_ extends l.PureComponent {
                               onChange: this.handleNewsChange,
                               value: e.type === q.d4z.GUILD_ANNOUNCEMENT,
                               hideBorder: !0,
-                              disabled: !p,
+                              disabled: !N,
                               children: ee.Z.Messages.FORM_LABEL_NEWS_CHANNEL
                           })
                       })
@@ -580,11 +581,11 @@ class e_ extends l.PureComponent {
                           (0, n.jsx)(E.Z, {
                               page: q.ZY5.CHANNEL_SETTINGS,
                               children: (0, n.jsx)(b.Z, {
-                                  autoArchiveDuration: (0, A.WD)(e, null),
+                                  autoArchiveDuration: (0, O.WD)(e, null),
                                   guild: C,
                                   channel: e,
                                   onChange: this.handleChangeDefaultAutoArchiveDuration,
-                                  isDisabled: !p
+                                  isDisabled: !N
                               })
                           }),
                           (0, n.jsx)(h.FormText, {
@@ -601,7 +602,7 @@ class e_ extends l.PureComponent {
                       onChange: this.handleChannelSummariesToggled,
                       value: !e.hasFlag(X.zZ.SUMMARIES_DISABLED) && (null == C ? void 0 : C.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
                       hideBorder: !0,
-                      disabled: !p || !(null == C ? void 0 : C.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
+                      disabled: !N || !(null == C ? void 0 : C.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
                       children: (0, n.jsxs)('div', {
                           className: et.badgedItem,
                           children: [
@@ -623,7 +624,7 @@ class e_ extends l.PureComponent {
                               value: !e.hasFlag(X.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS),
                               note: ee.Z.Messages.MEDIA_CHANNEL_HIDE_MEDIA_DOWNLOAD_OPTIONS_TOGGLE_DESCRIPTION,
                               hideBorder: !0,
-                              disabled: !p,
+                              disabled: !N,
                               children: ee.Z.Messages.MEDIA_CHANNEL_HIDE_MEDIA_DOWNLOAD_OPTIONS_TOGGLE_LABEL
                           })
                       ]
@@ -642,7 +643,7 @@ class e_ extends l.PureComponent {
                             error: this.getError('name'),
                             name: g,
                             autoFocus: !0,
-                            disabled: M ? !N : !p,
+                            disabled: M ? !p : !N,
                             maxLength: q.HN8
                         })
                     }),
@@ -650,7 +651,7 @@ class e_ extends l.PureComponent {
                     P,
                     F,
                     B,
-                    U,
+                    H,
                     z,
                     K,
                     G,
@@ -1007,9 +1008,9 @@ class e_ extends l.PureComponent {
 }
 function eS() {
     let { errors: e, channel: t, submitting: s, subsection: a } = (0, d.cj)([P.Z], () => P.Z.getProps()),
-        i = (0, d.e7)([U.Z], () => {
+        i = (0, d.e7)([H.Z], () => {
             var e;
-            return U.Z.getRegions(null !== (e = null == t ? void 0 : t.getGuildId()) && void 0 !== e ? e : null);
+            return H.Z.getRegions(null !== (e = null == t ? void 0 : t.getGuildId()) && void 0 !== e ? e : null);
         }),
         r = (0, d.e7)([D.Z], () => D.Z.theme),
         o = (0, d.e7)([F.Z], () => F.Z.getGuild(null == t ? void 0 : t.getGuildId())),
@@ -1023,8 +1024,8 @@ function eS() {
         E = w.default.getId(),
         T = (0, Z.v)(),
         S = null == t ? void 0 : t.id,
-        x = (0, N.ts)(t, !1, !0),
-        f = p.Z.useExperiment({
+        x = (0, p.ts)(t, !1, !0),
+        f = N.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'ChannelSettingsOverview'
         }).enabled,
