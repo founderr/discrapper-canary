@@ -180,6 +180,7 @@ n.d(t, {
     (s.AUTHORIZE_PAYMENT = 'network_action_authorize_payment'),
     (s.BUG_REPORT_SUBMIT = 'network_action_bug_report_submit'),
     (s.CHANNEL_CREATE = 'network_action_channel_create'),
+    (s.DETECTABLE_APPLICATIONS_FETCH = 'network_action_detectable_applications_fetch'),
     (s.DIRECTORY_GUILD_ENTRY_CREATE = 'network_action_directory_guild_entry_create'),
     (s.DIRECTORY_GUILD_ENTRY_DELETE = 'network_action_directory_guild_entry_delete'),
     (s.EMAIL_SETTINGS_FETCH = 'network_action_email_settings_fetch'),
