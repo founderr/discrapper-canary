@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     Eo: function () {
-        return g;
+        return S;
     },
     Fe: function () {
         return r;
@@ -12,16 +12,19 @@ n.d(t, {
         return i;
     },
     IB: function () {
-        return S;
+        return A;
     },
     Ve: function () {
-        return I;
+        return T;
     },
-    iF: function () {
+    bq: function () {
         return p;
     },
+    iF: function () {
+        return I;
+    },
     jy: function () {
-        return T;
+        return g;
     }
 }),
     n(47120),
@@ -52,23 +55,42 @@ function f(e, t, n) {
 }
 ((a = r || (r = {}))[(a.REDEEMED = 1)] = 'REDEEMED'), (a[(a.PENDING = 2)] = 'PENDING'), (a[(a.CONVERTED = 3)] = 'CONVERTED'), ((s = i || (i = {}))[(s.SUCCESS = 1)] = 'SUCCESS'), (s[(s.FAIL = 2)] = 'FAIL');
 let h = new (class e {
-    set(e, t) {
-        this.cache.set(e, t);
-    }
-    get(e) {
-        return this._checkExpiration(), this.cache.get(e);
-    }
-    has(e) {
-        return this._checkExpiration(), this.cache.has(e);
-    }
-    _checkExpiration() {
-        this.expiration < Date.now() && this.cache.clear();
-    }
-    constructor() {
-        f(this, 'cache', void 0), f(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + 600000);
-    }
-})();
-async function p(e, t) {
+        set(e, t) {
+            this.cache.set(e, t);
+        }
+        get(e) {
+            return this._checkExpiration(), this.cache.get(e);
+        }
+        has(e) {
+            return this._checkExpiration(), this.cache.has(e);
+        }
+        _checkExpiration() {
+            this.expiration < Date.now() && this.cache.clear();
+        }
+        constructor() {
+            f(this, 'cache', void 0), f(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + 600000);
+        }
+    })(),
+    p = () => (
+        l.Z.dispatch({ type: 'BILLING_GET_REFERRAL_INCENTIVE_STATUS_START' }),
+        o.tn
+            .get({
+                url: E.ANM.GET_REFERRAL_INCENTIVE_ELIGIBILITY,
+                oldFormErrors: !0
+            })
+            .then(
+                (e) => {
+                    l.Z.dispatch({
+                        type: 'BILLING_GET_REFERRAL_INCENTIVE_STATUS_SUCCESS',
+                        isUserEligibleForIncentive: null != e.body ? e.body.is_eligible_for_incentive : null
+                    });
+                },
+                () => {
+                    l.Z.dispatch({ type: 'BILLING_GET_REFERRAL_INCENTIVE_STATUS_FAIL' });
+                }
+            )
+    );
+async function I(e, t) {
     let n = JSON.stringify({
         index: e,
         searchQuery: t
@@ -123,7 +145,7 @@ let m = () => (
                 }
             )
     ),
-    I = (e) => (
+    T = (e) => (
         l.Z.dispatch({
             type: 'BILLING_CREATE_REFERRAL_PREVIEW_START',
             recipientId: e
@@ -149,7 +171,7 @@ let m = () => (
                 }
             )
     );
-async function T(e) {
+async function g(e) {
     let t = [],
         n = new Map();
     for (let i of e)
@@ -172,7 +194,7 @@ async function T(e) {
         n
     );
 }
-async function g(e) {
+async function S(e) {
     try {
         var t;
         let n = await o.tn.post({
@@ -194,7 +216,7 @@ async function g(e) {
         }
     }
 }
-async function S(e) {
+async function A(e) {
     try {
         var t;
         let n = await o.tn.get({
