@@ -345,7 +345,8 @@ function eE(e) {
                 await (0, J.p)({
                     channel: t,
                     content: n,
-                    entry: T
+                    entry: T,
+                    whenReady: !1
                 });
             else {
                 var s;
