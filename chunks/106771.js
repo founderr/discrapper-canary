@@ -1,71 +1,91 @@
 t.d(n, {
     Z: function () {
-        return m;
+        return f;
     }
 });
 var i = t(735250),
     a = t(470079),
     l = t(481060),
-    o = t(783097),
-    r = t(176412),
-    s = t(753972),
-    c = t(532309),
-    d = t(728021),
-    u = t(413097);
-function m(e) {
+    o = t(239091),
+    r = t(823531),
+    s = t(695346),
+    c = t(973616),
+    d = t(783097),
+    u = t(176412),
+    m = t(753972),
+    p = t(532309),
+    _ = t(728021),
+    C = t(413097);
+function f(e) {
     var n;
-    let { command: t, application: m, onClick: p, query: _, searchResultsPosition: C } = e,
-        { iconURL: f, name: h, description: A } = a.useMemo(() => (0, o.sl)(m, { fakeAppIconURL: u }), [m]),
-        E = a.useMemo(() => {
+    let { command: t, application: f, onClick: h, query: A, searchResultsPosition: E } = e,
+        N = s.Sb.useSetting(),
+        v = a.useCallback(
+            (e) => {
+                if ((0, d.BQ)(f) && N) {
+                    let n = f instanceof c.Z ? f : c.Z.createFromServer(f);
+                    (0, o.vq)(e, (e) =>
+                        (0, i.jsx)(r.Z, {
+                            application: n,
+                            ...e
+                        })
+                    );
+                }
+            },
+            [f, N]
+        ),
+        { iconURL: x, name: I, description: g } = a.useMemo(() => (0, d.sl)(f, { fakeAppIconURL: C }), [f]),
+        P = a.useMemo(() => {
             var e;
-            let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : A;
-            return null == n ? null : (0, r.ae)(n, void 0);
-        }, [A, null == t ? void 0 : t.displayDescription]),
-        { trackSearchResultsItemImpressionRef: N } = (0, c.Z)({
-            applicationId: m.id,
+            let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : g;
+            return null == n ? null : (0, u.ae)(n, void 0);
+        }, [g, null == t ? void 0 : t.displayDescription]),
+        { trackSearchResultsItemImpressionRef: S } = (0, p.Z)({
+            applicationId: f.id,
             commandId: null == t ? void 0 : t.id,
-            query: _,
-            searchResultsPosition: C
+            query: A,
+            searchResultsPosition: E
         });
     return (0, i.jsx)(l.Clickable, {
-        className: d.clickable,
-        innerRef: (e) => (N.current = e),
-        onClick: p,
+        className: _.clickable,
+        innerRef: (e) => (S.current = e),
+        onClick: h,
+        onContextMenu: v,
         children: (0, i.jsxs)(l.FocusBlock, {
-            className: d.focusBlock,
+            className: _.focusBlock,
             children: [
-                (0, i.jsx)(s.Z, {
-                    src: f,
-                    className: d.icon,
+                (0, i.jsx)(m.Z, {
+                    src: x,
+                    className: _.icon,
                     'aria-hidden': !0,
                     rendersPlaceholder: !0
                 }),
                 (0, i.jsxs)('div', {
-                    className: d.cmdDetails,
+                    className: _.cmdDetails,
                     children: [
                         (0, i.jsx)(l.Heading, {
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
                             lineClamp: 1,
-                            children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : h
+                            children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : I
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
-                            children: E
+                            children: P
                         })
                     ]
                 }),
                 null != t
                     ? (0, i.jsx)(l.Text, {
-                          className: d.cmdAppName,
+                          className: _.cmdAppName,
                           variant: 'text-sm/normal',
                           color: 'text-secondary',
-                          children: h
+                          children: I
                       })
                     : null,
-                (0, i.jsx)('div', { className: d.underline })
+                (0, i.jsx)('div', { className: _.underline })
             ]
         })
     });
