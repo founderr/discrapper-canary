@@ -31,12 +31,14 @@ t.Z = () => {
                 colorOptions: E.VE.PREMIUM_TIER_2_WHITE_FILL
             }),
             (0, s.jsx)(l.Heading, {
+                color: 'always-white',
                 variant: 'heading-lg/extrabold',
                 children: R.Z.Messages.REVERSE_TRIAL_NITRO_HOME_HEADER_TITLE.format({ displayName: n })
             }),
             (0, s.jsx)('div', {
                 className: C.body,
                 children: (0, s.jsx)(l.Text, {
+                    color: 'always-white',
                     variant: 'text-md/medium',
                     children: R.Z.Messages.REVERSE_TRIAL_NITRO_HOME_HEADER_BODY.format({ duration: g })
                 })
