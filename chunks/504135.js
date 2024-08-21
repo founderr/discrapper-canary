@@ -15,102 +15,80 @@ var r = n(735250),
     _ = n(939350),
     E = n(837244);
 function f(e) {
-    let { color: t = 'default', label: n, icon: a, showIconFirst: f = !1, imageUrl: h, showImageFirst: p = !1, hint: I, subtext: m, subtextLineClamp: T, hasSubmenu: g, disabled: S, isFocused: A, menuItemProps: N, action: O, onClose: v, onFocus: R, className: C, focusedClassName: y, subMenuIconClassName: D, dontCloseOnActionIfHoldingShiftKey: L, dontCloseOnAction: b, iconProps: M, imageClassName: P, sparkle: U } = e,
-        w = i.useContext(u.r),
-        x = i.useRef(null),
-        G = i.useCallback(
+    let { color: t = 'default', label: n, icon: a, iconLeft: f, iconLeftSize: h = 'md', hint: p, subtext: I, subtextLineClamp: m, hasSubmenu: T, disabled: g, isFocused: S, menuItemProps: A, action: N, onClose: O, onFocus: v, className: R, focusedClassName: C, subMenuIconClassName: y, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: b, sparkle: M } = e,
+        P = i.useContext(u.r),
+        U = i.useRef(null),
+        w = i.useCallback(
             (e) => {
-                if (null == O) return !1;
-                !(e.shiftKey && L) && !b && v(), e.persist(), null == w || w(), requestAnimationFrame(() => O(e));
+                if (null == N) return !1;
+                !(e.shiftKey && D) && !L && O(), e.persist(), null == P || P(), requestAnimationFrame(() => N(e));
             },
-            [O, v, w, L, b]
+            [N, O, P, D, L]
         );
     return (
         i.useEffect(() => {
-            A && ((0, c.F)(x), null == R || R());
-        }, [A, R]),
+            S && ((0, c.F)(U), null == v || v());
+        }, [S, v]),
         (0, r.jsxs)(o.P, {
-            innerRef: x,
-            className: s()(E.item, E.labelContainer, _._[t], C, {
-                [E.disabled]: S,
-                [E.focused]: A,
-                [null != y ? y : '']: A
+            innerRef: U,
+            className: s()(E.item, E.labelContainer, _._[t], R, {
+                [E.disabled]: g,
+                [E.focused]: S,
+                [null != C ? C : '']: S
             }),
-            onClick: S ? void 0 : G,
-            'aria-disabled': S,
-            ...N,
+            onClick: g ? void 0 : w,
+            'aria-disabled': g,
+            ...A,
             'data-menu-item': 'true',
             children: [
-                f &&
-                    null != a &&
+                null != f &&
                     (0, r.jsx)('div', {
-                        className: E.iconContainerLeft,
-                        children: (0, r.jsx)(a, {
+                        className: s()(E.iconContainerLeft, { [E.iconContainerLarge]: 'lg' === h }),
+                        children: (0, r.jsx)(f, {
                             color: 'currentColor',
-                            ...M,
-                            className: s()(E.icon, null == M ? void 0 : M.className),
-                            isFocused: A
-                        })
-                    }),
-                p &&
-                    null != h &&
-                    (0, r.jsx)('div', {
-                        className: E.imageContainerLeft,
-                        children: (0, r.jsx)('img', {
-                            className: s()(E.image, P),
-                            src: (0, l.I)(h, e),
-                            alt: ''
+                            ...b,
+                            className: s()(E.icon, null == b ? void 0 : b.className),
+                            isFocused: S
                         })
                     }),
                 (0, r.jsxs)('div', {
                     className: E.label,
                     children: [
                         (0, l.I)(n, e),
-                        null != m &&
+                        null != I &&
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-xs/normal',
-                                className: s()(E.subtext, { [E.subtextLineClamp]: null != T }),
-                                lineClamp: T,
-                                children: m
+                                className: s()(E.subtext, { [E.subtextLineClamp]: null != m }),
+                                lineClamp: m,
+                                children: I
                             })
                     ]
                 }),
-                null != I &&
+                null != p &&
                     (0, r.jsx)('div', {
                         className: E.hintContainer,
-                        children: (0, l.I)(I, e)
+                        children: (0, l.I)(p, e)
                     }),
-                !f &&
-                    null != a &&
+                null != a &&
                     (0, r.jsx)('div', {
                         className: E.iconContainer,
                         children: (0, r.jsx)(a, {
                             color: 'currentColor',
-                            ...M,
-                            className: s()(E.icon, null == M ? void 0 : M.className),
-                            isFocused: A
+                            ...b,
+                            className: s()(E.icon, null == b ? void 0 : b.className),
+                            isFocused: S
                         })
                     }),
-                !p &&
-                    null != h &&
-                    (0, r.jsx)('div', {
-                        className: E.imageContainer,
-                        children: (0, r.jsx)('img', {
-                            className: s()(E.image, P),
-                            src: (0, l.I)(h, e),
-                            alt: ''
-                        })
-                    }),
-                g &&
+                T &&
                     (0, r.jsxs)('div', {
                         className: E.iconContainer,
                         children: [
                             (0, r.jsx)(d.ChevronSmallRightIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: s()(E.caret, D)
+                                className: s()(E.caret, y)
                             }),
-                            U && (0, r.jsx)(d.LottieSparkle, { className: E.sparkles })
+                            M && (0, r.jsx)(d.LottieSparkle, { className: E.sparkles })
                         ]
                     })
             ]

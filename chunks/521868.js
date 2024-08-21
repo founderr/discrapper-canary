@@ -32,7 +32,7 @@ function _(e) {
               id: 'edit-custom-status',
               label: d.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
               focusedClassName: a,
-              icon:
+              iconLeft:
                   null != t.emoji
                       ? (e) => {
                             let { className: n } = e;
@@ -44,7 +44,6 @@ function _(e) {
                             });
                         }
                       : void 0,
-              showIconFirst: !0,
               hint: (e) =>
                   (0, i.jsx)(r.Clickable, {
                       ...e,
@@ -74,8 +73,7 @@ function _(e) {
               id: 'add-custom-status',
               focusedClassName: a,
               label: d.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
-              icon: (e) => (0, i.jsx)('div', { className: s()(u.customEmojiPlaceholder, e) }),
-              showIconFirst: !0,
+              iconLeft: (e) => (0, i.jsx)('div', { className: s()(u.customEmojiPlaceholder, e) }),
               action: () => {
                   h({
                       action: 'PRESS_ADD_CUSTOM_STATUS',

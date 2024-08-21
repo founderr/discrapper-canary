@@ -12,8 +12,8 @@ n.d(t, {
 var i = n(470079),
     o = n(892814),
     a = n(442837),
-    l = n(581364),
-    r = n(768581),
+    l = n(895924),
+    r = n(581364),
     d = n(823379),
     c = n(399654),
     m = n(844439);
@@ -304,33 +304,35 @@ function _(e) {
                 ? []
                 : s
                       .map((t) => {
-                          let n;
-                          let i = e.find((e) => {
-                              var i;
-                              return null != (n = null === (i = e.commands) || void 0 === i ? void 0 : i.find((e) => e.id === t));
+                          var n, i;
+                          let o;
+                          let a = e.find((e) => {
+                              var n;
+                              return null != (o = null === (n = e.commands) || void 0 === n ? void 0 : n.find((e) => e.id === t));
                           });
-                          if (null == i) return null;
-                          let { application: o } = i;
-                          if (null == n) return null;
-                          let a = (0, l.Z8)({
-                              rootCommand: n,
-                              command: n,
-                              applicationId: o.id
+                          if (null == a) return null;
+                          let { application: d } = a;
+                          if (null == o) return null;
+                          let c = (0, r.Z8)({
+                              rootCommand: o,
+                              command: o,
+                              applicationId: d.id
                           });
                           return {
                               command: {
-                                  ...a,
-                                  name: a.name
+                                  ...c,
+                                  name: c.name
                                       .split(/[_ ]/)
                                       .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
                                       .join(' ')
                               },
-                              applicationImageURL: r.ZP.getApplicationIconURL({
-                                  id: o.id,
-                                  icon: o.icon,
-                                  bot: o.bot
-                              }),
-                              application: o
+                              section: {
+                                  type: l.Qi.APPLICATION,
+                                  id: d.id,
+                                  icon: d.icon,
+                                  name: null !== (i = null == d ? void 0 : null === (n = d.bot) || void 0 === n ? void 0 : n.username) && void 0 !== i ? i : d.name,
+                                  application: d
+                              }
                           };
                       })
                       .filter(d.lm);

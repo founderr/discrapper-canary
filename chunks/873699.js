@@ -20,13 +20,13 @@ var i = t(735250),
     m = t(689938);
 function _(e, n) {
     let { reducedMotion: t } = a.useContext(r.AccessibilityPreferencesContext),
-        _ = (0, d.$R)(n),
-        g = (0, l.e7)([c.Z], () => c.Z.can(I.Plq.MANAGE_MESSAGES, n) && _, [n, _]),
-        f = e.reactions.reduce((e, n) => {
+        E = (0, d.$R)(n),
+        M = (0, l.e7)([c.Z], () => c.Z.can(I.Plq.MANAGE_MESSAGES, n) && E, [n, E]),
+        _ = e.reactions.reduce((e, n) => {
             var t;
             return (null === (t = n.count_details) || void 0 === t ? void 0 : t.vote) != null || null != e.find((e) => (null != e.id && e.id === n.emoji.id) || e.name === n.emoji.name) ? e : [...e, n.emoji];
         }, []),
-        Z = (t, i) => {
+        f = (t, i) => {
             t.shiftKey
                 ? (0, u.$E)(n.id, e.id, i)
                 : s.Z.show({
@@ -39,35 +39,46 @@ function _(e, n) {
                       }
                   });
         };
-    return !g || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
+    return !M || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
         ? null
         : (0, i.jsx)(r.MenuItem, {
               id: 'remove-emoji-reactions',
               label: m.Z.Messages.REMOVE_EMOJI_REACTIONS,
               color: 'danger',
-              children: f.map((e) => {
+              children: _.map((e) => {
                   var n, a;
                   return (0, i.jsx)(
                       r.MenuItem,
                       {
                           id: 'remove-emoji-reactions-'.concat(null !== (n = e.name) && void 0 !== n ? n : e.id),
                           label: null == e.id ? e.name : ':'.concat(e.name, ':'),
-                          action: (n) => Z(n, e),
-                          imageUrl: (n) => {
-                              var i;
-                              let { isFocused: a } = n;
-                              return null != e.id
-                                  ? E.ZP.getEmojiURL({
-                                        id: e.id,
-                                        animated: e.animated && (!t.enabled || a),
-                                        size: 18
-                                    })
-                                  : M.ZP.getURL(null !== (i = e.name) && void 0 !== i ? i : '');
-                          },
+                          action: (n) => f(n, e),
+                          icon: (n) =>
+                              (0, i.jsx)(g, {
+                                  ...n,
+                                  reducedMotionEnabled: t.enabled,
+                                  emoji: e
+                              }),
                           dontCloseOnActionIfHoldingShiftKey: !0
                       },
                       null !== (a = e.name) && void 0 !== a ? a : e.id
                   );
               })
           });
+}
+function g(e) {
+    var n;
+    let { emoji: t, reducedMotionEnabled: a, className: l = '', isFocused: r = !1 } = e;
+    return (0, i.jsx)('img', {
+        className: l,
+        src:
+            null != t.id
+                ? E.ZP.getEmojiURL({
+                      id: t.id,
+                      animated: t.animated && (!a || r),
+                      size: 18
+                  })
+                : M.ZP.getURL(null !== (n = t.name) && void 0 !== n ? n : ''),
+        alt: ''
+    });
 }

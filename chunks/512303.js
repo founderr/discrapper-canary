@@ -28,28 +28,26 @@ function M(e) {
             ? (Z = (0, i.jsx)(l.MenuItem, {
                   className: E.interactionInfoMenuItem,
                   disabled: !0,
-                  icon: () =>
+                  iconLeft: () =>
                       (0, i.jsx)(o.Z, {
                           guild: g,
                           size: o.Z.Sizes.MINI
                       }),
                   id: 'integration-owner',
                   label: g.name,
-                  showIconFirst: !0,
                   subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({ application: e.author.username })
               }))
             : null != _ &&
               (Z = (0, i.jsx)(l.MenuItem, {
                   className: E.interactionInfoMenuItem,
                   disabled: !0,
-                  icon: () =>
+                  iconLeft: () =>
                       (0, i.jsx)(r.Z, {
                           user: _,
                           size: l.AvatarSizes.SIZE_20
                       }),
                   id: 'integration-owner',
                   label: _.username,
-                  showIconFirst: !0,
                   subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({ application: e.author.username })
               })),
         (0, i.jsxs)(l.MenuItem, {
@@ -61,14 +59,13 @@ function M(e) {
                     ? (0, i.jsx)(l.MenuItem, {
                           className: E.interactionInfoMenuItem,
                           disabled: !0,
-                          icon: () =>
+                          iconLeft: () =>
                               (0, i.jsx)(r.Z, {
                                   user: f,
                                   size: l.AvatarSizes.SIZE_20
                               }),
                           id: 'interaction-user',
                           label: f.username,
-                          showIconFirst: !0,
                           subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_TRIGGERED_BY
                       })
                     : null

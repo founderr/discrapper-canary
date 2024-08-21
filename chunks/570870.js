@@ -50,8 +50,7 @@ n.Z = (e) => {
                 {
                     id: e.id,
                     label: e.displayName,
-                    showIconFirst: !0,
-                    icon: () =>
+                    iconLeft: () =>
                         null != t
                             ? (0, i.jsx)(t, {
                                   channel: O,

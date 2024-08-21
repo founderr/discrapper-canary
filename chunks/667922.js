@@ -21,10 +21,10 @@ var i = t(735250),
     f = t(689938);
 function Z(e, n) {
     let { reducedMotion: t } = a.useContext(r.AccessibilityPreferencesContext),
-        Z = (0, d.$R)(n),
-        S = (0, l.e7)([E.Z], () => (n.isPrivate() || E.Z.can(_.Plq.ADD_REACTIONS, n)) && Z, [n, Z]),
+        M = (0, d.$R)(n),
+        Z = (0, l.e7)([E.Z], () => (n.isPrivate() || E.Z.can(_.Plq.ADD_REACTIONS, n)) && M, [n, M]),
         T = (0, s.MZ)(n.getGuildId());
-    if (!c.nc.getSetting() || !S || e.type === _.uaV.GUILD_INVITE_REMINDER) return null;
+    if (!c.nc.getSetting() || !Z || e.type === _.uaV.GUILD_INVITE_REMINDER) return null;
     let v = T.filter(
         (e) =>
             !m.ZP.isEmojiFilteredOrLocked({
@@ -42,17 +42,12 @@ function Z(e, n) {
                     color: 'default',
                     id: null !== (d = null !== (s = a.id) && void 0 !== s ? s : a.optionallyDiverseSequence) && void 0 !== d ? d : a.name,
                     label: ':'.concat(a.name, ':'),
-                    imageUrl: (e) => {
-                        var n;
-                        let { isFocused: i } = e;
-                        return null != a.id
-                            ? M.ZP.getEmojiURL({
-                                  id: a.id,
-                                  animated: a.animated && (!t.enabled || i),
-                                  size: 18
-                              })
-                            : m.ZP.getURL(null !== (n = a.optionallyDiverseSequence) && void 0 !== n ? n : '');
-                    },
+                    icon: (e) =>
+                        (0, i.jsx)(S, {
+                            ...e,
+                            reducedMotionEnabled: t.enabled,
+                            emoji: a
+                        }),
                     action: () => {
                         (0, o.rU)(n.id, e.id, (0, u.g1)(a), o.TW.MESSAGE_CONTEXT_MENU);
                     },
@@ -83,5 +78,21 @@ function Z(e, n) {
                 })
             ]
         })
+    });
+}
+function S(e) {
+    var n;
+    let { emoji: t, reducedMotionEnabled: a, className: l = '', isFocused: r = !1 } = e;
+    return (0, i.jsx)('img', {
+        className: l,
+        src:
+            null != t.id
+                ? M.ZP.getEmojiURL({
+                      id: t.id,
+                      animated: t.animated && (!a || r),
+                      size: 18
+                  })
+                : m.ZP.getURL(null !== (n = t.optionallyDiverseSequence) && void 0 !== n ? n : ''),
+        alt: ''
     });
 }

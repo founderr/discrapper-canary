@@ -101,8 +101,7 @@ function d(e) {
                       id: 'manage-subscription',
                       label: l.Z.Messages.BILLING_MANAGE_SUBSCRIPTION,
                       action: () => i.Z.open(o.oAB.SUBSCRIPTIONS),
-                      icon: a.LightbulbIcon,
-                      showIconFirst: !0,
+                      iconLeft: a.LightbulbIcon,
                       className: c.manageSubscription
                   })
                 : null

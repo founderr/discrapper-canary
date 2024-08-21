@@ -240,7 +240,6 @@ function er(e) {
                                           className: et.expiringStatusMenuItem,
                                           keepItemStyles: !0,
                                           hasSubmenu: !0,
-                                          showIconFirst: !0,
                                           label: () =>
                                               (0, i.jsxs)('div', {
                                                   className: et.statusItem,
@@ -429,7 +428,7 @@ function er(e) {
                                                                 d.MenuItem,
                                                                 {
                                                                     id: 'edit-profile',
-                                                                    icon: d.PencilIcon,
+                                                                    iconLeft: d.PencilIcon,
                                                                     label: ee.Z.Messages.EDIT_PROFILE,
                                                                     action: () => {
                                                                         (0, v.pQ)({
@@ -438,7 +437,6 @@ function er(e) {
                                                                         }),
                                                                             eg();
                                                                     },
-                                                                    showIconFirst: !0,
                                                                     focusedClassName: et.menuItemFocused,
                                                                     subMenuIconClassName: et.subMenuIcon
                                                                 },
@@ -492,8 +490,7 @@ function er(e) {
                                                                               );
                                                                       }
                                                                     : void 0,
-                                                                showIconFirst: !0,
-                                                                icon: (e) => {
+                                                                iconLeft: (e) => {
                                                                     let { className: t, isFocused: n } = e;
                                                                     return (0, i.jsx)(d.Status, {
                                                                         status: ed,
@@ -527,8 +524,7 @@ function er(e) {
                                                             focusedClassName: et.menuItemFocused,
                                                             subMenuIconClassName: et.subMenuIcon,
                                                             label: ee.Z.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                                                            icon: d.UserCircleIcon,
-                                                            showIconFirst: !0,
+                                                            iconLeft: d.UserCircleIcon,
                                                             action: () => {
                                                                 (0, v.pQ)({
                                                                     action: 'PRESS_SWITCH_ACCOUNTS',
