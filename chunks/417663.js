@@ -1,10 +1,10 @@
 t.r(s),
     t.d(s, {
         AccountConnectionResult: function () {
-            return v;
+            return h;
         },
         LinkPlatformLogo: function () {
-            return h;
+            return p;
         }
     }),
     t(47120);
@@ -13,15 +13,14 @@ var n = t(735250),
     a = t(120356),
     o = t.n(a),
     i = t(593473),
-    l = t(873546),
-    c = t(481060),
-    d = t(457330),
-    u = t(726542),
-    N = t(536285),
-    C = t(981631),
-    _ = t(689938),
-    m = t(957636);
-function f(e, s, t) {
+    l = t(481060),
+    c = t(457330),
+    d = t(726542),
+    u = t(536285),
+    N = t(981631),
+    m = t(689938),
+    C = t(957636);
+function _(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -34,97 +33,89 @@ function f(e, s, t) {
         e
     );
 }
-let g = null != window.opener,
-    p = 'https://dis.gd/Amazon-Music-Connection';
-function h(e) {
+let f = null != window.opener,
+    g = 'https://dis.gd/Amazon-Music-Connection';
+function p(e) {
     let { platform: s, className: t } = e;
     return (0, n.jsxs)('div', {
-        className: o()(m.logos, t),
+        className: o()(C.logos, t),
         children: [
-            (0, n.jsx)('div', { className: o()(m.logo, m.logoDiscord) }),
-            (0, n.jsx)('div', { className: m.logosDivider }),
+            (0, n.jsx)('div', { className: o()(C.logo, C.logoDiscord) }),
+            (0, n.jsx)('div', { className: C.logosDivider }),
             (0, n.jsx)('div', {
-                className: m.logo,
+                className: C.logo,
                 style: { backgroundImage: 'url("'.concat(s.icon.whiteSVG, '")') }
             })
         ]
     });
 }
-function v(e) {
+function h(e) {
     let s,
         t,
-        { verifying: a, verified: i, platformType: d } = e,
-        N = u.Z.get(d),
-        f = r.useCallback(() => {
+        { verifying: a, verified: i, platformType: c } = e,
+        u = d.Z.get(c),
+        _ = r.useCallback(() => {
             window.close();
         }, []);
     return (
         (s = a
             ? (0, n.jsx)('div', {
-                  className: m.message,
-                  children: _.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: N.name })
+                  className: C.message,
+                  children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: u.name })
               })
             : i
               ? (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)('div', {
-                            className: m.message,
-                            children: _.Z.Messages.CONNECTED_ACCOUNT_VERIFY_SUCCESS.format({ name: N.name })
+                            className: C.message,
+                            children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_SUCCESS.format({ name: u.name })
                         }),
                         (0, n.jsx)('div', {
-                            className: o()(m.message, m.details),
-                            children: _.Z.Messages.CONNECTED_ACCOUNT_VERIFY_SUCCESS_DETAILS
+                            className: o()(C.message, C.details),
+                            children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_SUCCESS_DETAILS
                         })
                     ]
                 })
               : (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)('div', {
-                            className: o()(m.message, m.error),
-                            children: _.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE.format({ name: N.name })
+                            className: o()(C.message, C.error),
+                            children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE.format({ name: u.name })
                         }),
                         (0, n.jsx)('div', {
-                            className: o()(m.message, m.details),
-                            children: _.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE_DETAILS
+                            className: o()(C.message, C.details),
+                            children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE_DETAILS
                         }),
-                        d !== C.ABu.AMAZON_MUSIC
+                        c !== N.ABu.AMAZON_MUSIC
                             ? null
                             : (0, n.jsx)('div', {
-                                  className: o()(m.message, m.details),
-                                  children: l.tq
-                                      ? _.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE_MOBILE.format({
-                                            link: () =>
-                                                (0, n.jsx)(c.Anchor, {
-                                                    href: p,
-                                                    children: p
-                                                })
-                                        })
-                                      : _.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE.format({
-                                            link: () =>
-                                                (0, n.jsx)(c.Anchor, {
-                                                    href: p,
-                                                    children: p
-                                                })
-                                        })
+                                  className: o()(C.message, C.details),
+                                  children: m.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE.format({
+                                      link: () =>
+                                          (0, n.jsx)(l.Anchor, {
+                                              href: g,
+                                              children: g
+                                          })
+                                  })
                               })
                     ]
                 })),
-        (g || a) &&
-            (t = (0, n.jsx)(c.Button, {
-                className: m.btn,
+        (f || a) &&
+            (t = (0, n.jsx)(l.Button, {
+                className: C.btn,
                 disabled: a,
-                onClick: f,
-                children: a ? (0, n.jsx)(c.Spinner, { itemClassName: m.spinnerItem }) : _.Z.Messages.DONE
+                onClick: _,
+                children: a ? (0, n.jsx)(l.Spinner, { itemClassName: C.spinnerItem }) : m.Z.Messages.DONE
             })),
         (0, n.jsx)('div', {
-            className: m.verifyConnectedAccount,
+            className: C.verifyConnectedAccount,
             children: (0, n.jsxs)('div', {
-                children: [(0, n.jsx)(h, { platform: N }), s, t]
+                children: [(0, n.jsx)(p, { platform: u }), s, t]
             })
         })
     );
 }
-class E extends r.Component {
+class v extends r.Component {
     componentDidMount() {
         let e;
         let s = (0, i.parse)(this.props.location.search),
@@ -142,7 +133,7 @@ class E extends r.Component {
                         verified: 204 === s || 200 === s
                     },
                     () => {
-                        this.state.verified && g && window.close();
+                        this.state.verified && f && window.close();
                     }
                 ),
                     (null == t ? void 0 : t.redirect) != null && (window.location = t.redirect);
@@ -152,24 +143,24 @@ class E extends r.Component {
                 openid_params: e,
                 state: n
             },
-            c = (e) => d.Z.callback(this.getType(), l, e).then(o, o);
-        if (g) {
-            c(!1);
+            d = (e) => c.Z.callback(this.getType(), l, e).then(o, o);
+        if (f) {
+            d(!1);
             return;
         }
-        N.default
-            .request(C.Etm.CONNECTIONS_CALLBACK, {
+        u.default
+            .request(N.Etm.CONNECTIONS_CALLBACK, {
                 ...l,
                 providerType: this.getType()
             })
-            .then(o, (e) => c('RPCError' !== e.name))
-            .then(() => N.default.disconnect());
+            .then(o, (e) => d('RPCError' !== e.name))
+            .then(() => u.default.disconnect());
     }
     render() {
         let { verifying: e, verified: s } = this.state,
             t = this.getType();
-        return u.Z.isSupported(t)
-            ? (0, n.jsx)(v, {
+        return d.Z.isSupported(t)
+            ? (0, n.jsx)(h, {
                   platformType: this.getType(),
                   verifying: e,
                   verified: s
@@ -178,11 +169,11 @@ class E extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', {
+            _(this, 'state', {
                 verifying: !0,
                 verified: !1
             }),
-            f(this, 'getType', () => this.props.match.params.type);
+            _(this, 'getType', () => this.props.match.params.type);
     }
 }
-s.default = E;
+s.default = v;
