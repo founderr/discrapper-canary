@@ -4,8 +4,8 @@ t.d(n, {
     }
 }),
     t(47120);
-var i,
-    s = t(735250),
+var s,
+    i = t(735250),
     o = t(470079),
     l = t(699581),
     r = t(442837),
@@ -15,8 +15,8 @@ var i,
     u = t(246946),
     I = t(981631),
     _ = t(689938),
-    f = t(682242);
-function E(e, n, t) {
+    E = t(682242);
+function f(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -29,7 +29,7 @@ function E(e, n, t) {
         e
     );
 }
-class m extends (i = o.PureComponent) {
+class m extends (s = o.PureComponent) {
     componentDidMount() {
         if (this.props.autoFocus && !this.props.hideNote) {
             let e = l.findDOMNode(this.noteRef.current);
@@ -37,14 +37,14 @@ class m extends (i = o.PureComponent) {
         }
     }
     render() {
-        let { className: e, loading: n, note: t, hideNote: i } = this.props;
-        return i
+        let { className: e, loading: n, note: t, hideNote: s } = this.props;
+        return s
             ? null
-            : (0, s.jsx)('div', {
+            : (0, i.jsx)('div', {
                   className: e,
-                  children: (0, s.jsx)(a.TextAreaAutosize, {
+                  children: (0, i.jsx)(a.TextAreaAutosize, {
                       ref: this.noteRef,
-                      className: f.textarea,
+                      className: E.textarea,
                       disabled: n,
                       placeholder: n ? _.Z.Messages.LOADING_NOTE : _.Z.Messages.NOTE_PLACEHOLDER,
                       'aria-label': _.Z.Messages.NOTE,
@@ -57,13 +57,13 @@ class m extends (i = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'noteRef', o.createRef()),
-            E(this, 'handleBlur', (e) => {
+            f(this, 'noteRef', o.createRef()),
+            f(this, 'handleBlur', (e) => {
                 let n = e.currentTarget.value,
-                    { note: t, userId: i, onUpdate: s } = this.props;
-                if ((null != t ? t : '') !== n) null == s || s(), c.Z.updateNote(i, n);
+                    { note: t, userId: s, onUpdate: i } = this.props;
+                if ((null != t ? t : '') !== n) null == i || i(), c.Z.updateNote(s, n);
             }),
-            E(this, 'handleKeyPress', (e) => {
+            f(this, 'handleKeyPress', (e) => {
                 if (13 === e.which) {
                     if (e.shiftKey) {
                         var n;
@@ -76,10 +76,10 @@ class m extends (i = o.PureComponent) {
 function p(e) {
     let n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
         t = (0, d.Z)(e.userId);
-    return (0, s.jsx)(m, {
+    return (0, i.jsx)(m, {
         ...e,
         ...t,
         hideNote: n
     });
 }
-E(m, 'defaultProps', { autoFocus: !1 });
+f(m, 'defaultProps', { autoFocus: !1 });
