@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return O;
+        return v;
     },
     Tb: function () {
         return h;
@@ -45,12 +45,12 @@ var r,
     S,
     A,
     N,
-    O,
-    v = n(981631);
+    v,
+    O = n(981631);
 let R = 300;
 function C(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
-    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(v.ANM.BADGE_ICON(e));
+    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(O.ANM.BADGE_ICON(e));
 }
 ((r = f || (f = {})).USER_INFO = 'USER_INFO'),
     (r.BOT_INFO = 'BOT_INFO'),
@@ -61,14 +61,10 @@ function C(e) {
     ((i = h || (h = {})).ROLES = 'ROLES'),
     (i.CONNECTIONS = 'CONNECTIONS'),
     (i.NOTE = 'NOTE'),
-    ((a = p || (p = {})).POPOUT = 'POPOUT'),
-    (a.MODAL = 'MODAL'),
-    (a.SETTINGS = 'SETTINGS'),
+    ((a = p || (p = {})).BITE_SIZE = 'BITE_SIZE'),
+    (a.FULL_SIZE = 'FULL_SIZE'),
     (a.PANEL = 'PANEL'),
     (a.CARD = 'CARD'),
-    (a.CANCEL_MODAL = 'CANCEL_MODAL'),
-    (a.BITE_SIZE = 'BITE_SIZE'),
-    (a.FULL_SIZE = 'FULL_SIZE'),
     ((s = I || (I = {})).LIVE = 'live'),
     (s.RECENT = 'recent'),
     ((o = m || (m = {})).BITE_SIZE_POPOUT = 'BITE_SIZE_POPOUT'),
@@ -116,7 +112,6 @@ function C(e) {
     (c.PRESS_BADGE = 'PRESS_BADGE'),
     (c.PRESS_SECTION = 'PRESS_SECTION'),
     (c.PRESS_PRONOUNS = 'PRESS_PRONOUNS'),
-    (c.PRESS_PREMIUM_UPSELL = 'PRESS_PREMIUM_UPSELL'),
     (c.PRESS_ADD_NOTE = 'PRESS_ADD_NOTE'),
     (c.PRESS_SET_STATUS = 'PRESS_SET_STATUS'),
     (c.PRESS_SET_CUSTOM_STATUS = 'PRESS_SET_CUSTOM_STATUS'),
@@ -201,5 +196,5 @@ function C(e) {
     ((_ = N || (N = {})).ACTIVITY = 'ACTIVITY'),
     (_.AVATAR = 'AVATAR'),
     (_.STATUS = 'STATUS'),
-    ((E = O || (O = {})).REPLY = 'REPLY'),
+    ((E = v || (v = {})).REPLY = 'REPLY'),
     (E.REACT = 'REACT');

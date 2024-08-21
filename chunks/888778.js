@@ -1,9 +1,6 @@
 n.d(t, {
     Z: function () {
         return l;
-    },
-    s: function () {
-        return r;
     }
 }),
     n(47120);
@@ -16,13 +13,13 @@ function l(e) {
     let { displayProfile: t, size: n, canAnimate: r, pendingBanner: i } = e,
         l = s.QK.getSetting(),
         u = null == t ? void 0 : t.getPreviewBanner(i, r, n),
-        [c, d] = (0, a.useState)((null == t ? void 0 : t.banner) == null ? 2 : 0);
+        [c, d] = (0, a.useState)((null == t ? void 0 : t.banner) == null ? 'COMPLETE' : 'SHOULD_LOAD');
     return (
         (0, a.useEffect)(() => {
-            if (null == u || 0 !== c) return;
-            d(1);
+            if (null == u || 'SHOULD_LOAD' !== c) return;
+            d('LOADING');
             let e = new Image();
-            (e.src = u), (e.onload = () => d(2));
+            (e.src = u), (e.onload = () => d('COMPLETE'));
         }, [u, c]),
         (0, a.useEffect)(() => {
             if (l) return;
@@ -35,4 +32,4 @@ function l(e) {
         }
     );
 }
-((i = r || (r = {}))[(i.SHOULD_LOAD = 0)] = 'SHOULD_LOAD'), (i[(i.LOADING = 1)] = 'LOADING'), (i[(i.COMPLETE = 2)] = 'COMPLETE');
+((i = r || (r = {})).SHOULD_LOAD = 'SHOULD_LOAD'), (i.LOADING = 'LOADING'), (i.COMPLETE = 'COMPLETE');

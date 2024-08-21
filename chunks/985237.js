@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(171368),
     A = n(215633),
     N = n(777887),
-    O = n(228168),
-    v = n(689938),
+    v = n(228168),
+    O = n(689938),
     R = n(122269);
 function C(e) {
     let { user: t, currentUser: n, guildId: C, channelId: y, messageId: D, roleId: L, closePopout: b, setPopoutRef: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
@@ -66,10 +66,10 @@ function C(e) {
                 children: (0, r.jsxs)(m.Z, {
                     user: t,
                     displayProfile: G,
-                    profileType: O.y0.BITE_SIZE,
+                    profileType: v.y0.BITE_SIZE,
                     children: [
                         (0, r.jsx)(g.Z, {
-                            profileType: O.y0.BITE_SIZE,
+                            profileType: v.y0.BITE_SIZE,
                             children: (0, r.jsx)(T.Z, {
                                 user: t,
                                 guildId: C,
@@ -77,7 +77,7 @@ function C(e) {
                                     ? null
                                     : (0, r.jsx)(s.MenuItem, {
                                           id: 'view-profile',
-                                          label: v.Z.Messages.VIEW_FULL_PROFILE,
+                                          label: O.Z.Messages.VIEW_FULL_PROFILE,
                                           action: () => {
                                               H(),
                                                   (0, E.pQ)({
@@ -96,20 +96,19 @@ function C(e) {
                                     user: t,
                                     displayProfile: G,
                                     guildId: C,
-                                    profileType: O.y0.BITE_SIZE,
-                                    hasProfileEffect: (null == G ? void 0 : G.profileEffectId) != null
+                                    profileType: v.y0.BITE_SIZE
                                 }),
                                 (0, r.jsx)(p.Z, {
                                     user: t,
                                     displayProfile: G,
                                     guildId: C,
                                     channelId: y,
-                                    profileType: O.y0.BITE_SIZE,
+                                    profileType: v.y0.BITE_SIZE,
                                     onOpenProfile: P ? void 0 : H
                                 }),
                                 (0, r.jsx)(I.Z, {
                                     user: t,
-                                    profileType: O.y0.BITE_SIZE,
+                                    profileType: v.y0.BITE_SIZE,
                                     onClose: b
                                 })
                             ]

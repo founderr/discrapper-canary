@@ -59,7 +59,6 @@ function I(e) {
                         guildId: null == n ? void 0 : n.id,
                         canUsePremiumCustomization: I,
                         pendingBanner: C,
-                        hasProfileEffect: null != w,
                         isTryItOutFlow: M,
                         disabledInputs: O,
                         onUpsellClick: () => (null == v ? void 0 : v({ object: _.qAy.EDIT_PROFILE_BANNER }))

@@ -347,8 +347,7 @@ function er(e) {
                                 (0, i.jsx)(R.Z, {
                                     user: t,
                                     displayProfile: q,
-                                    profileType: $.y0.BITE_SIZE,
-                                    hasProfileEffect: (null == q ? void 0 : q.profileEffectId) != null
+                                    profileType: $.y0.BITE_SIZE
                                 }),
                                 (0, i.jsx)(b.Z, {
                                     user: t,

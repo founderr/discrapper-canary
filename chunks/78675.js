@@ -1,6 +1,9 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return N;
+    },
+    p: function () {
+        return A;
     }
 }),
     n(47120);
@@ -14,57 +17,97 @@ var r = n(735250),
     c = n(481060),
     d = n(220082),
     _ = n(583405),
-    E = n(279745),
-    f = n(695346),
-    h = n(451478),
-    p = n(768581),
-    I = n(888778),
-    m = n(943217),
-    T = n(793397),
+    E = n(313201),
+    f = n(279745),
+    h = n(695346),
+    p = n(451478),
+    I = n(768581),
+    m = n(888778),
+    T = n(462997),
     g = n(439779);
-function S(e) {
+let S = (e) => {
+    let { size: t, stroke: n } = (0, c.getAvatarSpecs)(e);
+    return t / 2 + n;
+};
+function A(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: S, profileType: A, pendingBanner: N, children: O, animateOnHover: v = !1, hasProfileEffect: R = !1, canUsePremiumCustomization: C = !1 } = e,
-        y = C || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || !1,
-        [D, L] = i.useState(!1),
-        b = (0, l.e7)([h.Z], () => h.Z.isFocused()),
-        M = f.QK.getSetting(),
-        { bannerSrc: P, status: U } = (0, I.Z)({
+    let { user: n, displayProfile: a, guildId: T, pendingBanner: A, children: N, className: v, avatarSize: O, avatarOffsetX: R, avatarOffsetY: C, bannerWidth: y, bannerHeight: D, themePadding: L, animateOnHover: b = !1 } = e,
+        M = (0, E.Dt)(),
+        [P, U] = i.useState(!1),
+        w = (0, l.e7)([p.Z], () => p.Z.isFocused()),
+        x = h.QK.getSetting(),
+        { bannerSrc: G, status: k } = (0, m.Z)({
             displayProfile: a,
-            pendingBanner: N,
-            size: (0, T.e7)(A),
-            canAnimate: v || !M ? D : b
+            pendingBanner: A,
+            size: y,
+            canAnimate: b || !x ? P : w
         }),
-        w = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(),
-        x = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80),
-        G = (0, o._i)((0, d.ZP)(n.getAvatarURL(S, x), w, !1)),
-        k = (0, _.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : G).hsl;
-    return (0, r.jsx)(m.Z, {
-        isPremium: y,
-        hasThemeColors: y,
-        profileType: A,
-        hasBanner: null != P,
-        hasProfileEffect: R,
-        children: (0, r.jsxs)('div', {
-            className: s()(
-                g.banner,
-                g.divider,
-                (0, T.Ae)({
-                    profileType: A,
-                    user: {
-                        hasBanner: null != P,
-                        isPremium: y,
-                        hasProfileEffect: R
-                    }
-                })
-            ),
-            onMouseMove: () => L(!0),
-            onMouseLeave: () => L(!1),
-            style: {
-                backgroundImage: null != P ? 'url('.concat(P, ')') : void 0,
-                backgroundColor: U !== I.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : k
-            },
-            children: [!M && (0, p.F8)(P) && (0, r.jsx)(E.Z, { className: g.gifTag }), O]
-        })
+        B = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(),
+        F = n.getAvatarURL(T, (0, c.getAvatarSize)(O)),
+        V = (0, o._i)((0, d.ZP)(F, B, !1)),
+        H = (0, _.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : V).hsl,
+        Z = S(O),
+        Y = D - C - L;
+    return (0, r.jsxs)('svg', {
+        className: g.mask,
+        viewBox: '0 0 '.concat(y, ' ').concat(D),
+        style: {
+            minWidth: y,
+            minHeight: D
+        },
+        children: [
+            (0, r.jsxs)('mask', {
+                id: M,
+                children: [
+                    (0, r.jsx)('rect', {
+                        fill: 'white',
+                        x: '0',
+                        y: '0',
+                        width: '100%',
+                        height: '100%'
+                    }),
+                    (0, r.jsx)('circle', {
+                        fill: 'black',
+                        cx: Z + R - L,
+                        cy: Y,
+                        r: Z
+                    })
+                ]
+            }),
+            (0, r.jsxs)('foreignObject', {
+                x: '0',
+                y: '0',
+                width: '100%',
+                height: '100%',
+                overflow: 'visible',
+                mask: 'url(#'.concat(M, ')'),
+                children: [
+                    N,
+                    (0, r.jsxs)('div', {
+                        className: s()(g.banner, v),
+                        onMouseMove: () => U(!0),
+                        onMouseLeave: () => U(!1),
+                        style: {
+                            height: D,
+                            minHeight: D,
+                            backgroundImage: null != G ? 'url('.concat(G, ')') : void 0,
+                            backgroundColor: 'COMPLETE' !== k ? u.Z.unsafe_rawColors.PRIMARY_800.css : H
+                        },
+                        children: [!x && (0, I.F8)(G) && (0, r.jsx)(f.Z, { className: g.gifTag }), N]
+                    })
+                ]
+            })
+        ]
+    });
+}
+function N(e) {
+    let { profileType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1, ...a } = e,
+        s = T.q[t],
+        o = i || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
+    return (0, r.jsx)(A, {
+        ...a,
+        ...s,
+        displayProfile: n,
+        themePadding: o ? s.themePadding : 0
     });
 }

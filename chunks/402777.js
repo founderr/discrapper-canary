@@ -93,7 +93,8 @@ function j(e) {
                                         user: t,
                                         displayProfile: O,
                                         profileType: b.y0.PANEL,
-                                        animateOnHover: !w
+                                        animateOnHover: !w,
+                                        className: L.banner
                                     }),
                                     (0, i.jsx)(g.Z, {
                                         isReply: F,

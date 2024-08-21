@@ -150,8 +150,7 @@ function y(e) {
                                     (0, i.jsx)(x.Z, {
                                         user: n,
                                         displayProfile: ei,
-                                        profileType: C.y0.FULL_SIZE,
-                                        hasProfileEffect: (null == ei ? void 0 : ei.profileEffectId) != null
+                                        profileType: C.y0.FULL_SIZE
                                     }),
                                     (0, i.jsx)(h.Z, {
                                         isReply: e_,

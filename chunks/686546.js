@@ -116,8 +116,6 @@ var r,
     (r.AVATAR_DECORATION_STATUS_TYPING_80 = 'svg-mask-avatar-decoration-status-typing-80'),
     (r.AVATAR_DECORATION_STATUS_TYPING_100 = 'svg-mask-avatar-decoration-status-typing-100'),
     (r.AVATAR_DECORATION_STATUS_TYPING_120 = 'svg-mask-avatar-decoration-status-typing-120'),
-    (r.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80 = 'svg-mask-avatar-decoration-profile-status-square-80'),
-    (r.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80 = 'svg-mask-avatar-decoration-profile-status-mobile-square-80'),
     (r.AVATAR_VOICE_CALL_80 = 'svg-mask-avatar-voice-call-80'),
     (r.AVATAR_CALL_ICON = 'svg-mask-avatar-call-icon'),
     (r.AVATAR_CALL_ICON_32 = 'svg-mask-avatar-call-icon-32'),
@@ -345,7 +343,7 @@ function N(e, t) {
         ]
     });
 }
-function O(e, t) {
+function v(e, t) {
     let n = (0, u.UC)(t),
         r = n.status / 2,
         i = (r + n.stroke) / n.size / d.hs,
@@ -371,7 +369,7 @@ function O(e, t) {
         ]
     });
 }
-function v(e, t) {
+function O(e, t) {
     let n = (0, u.UC)(t),
         r = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
         i = n.size - n.status - r - n.offset,
@@ -510,7 +508,7 @@ function D(e) {
 (D.Masks = i), (t.ZP = D);
 let L = s.memo(
     function () {
-        var e, t, n, r, i, s, o, l, c, _, I, m, D, L, b, M, P, U, w, x, G;
+        var e, t, n, r, i, s, o, l, c, d, _, E, I, m, D, L, b, M, P, U, w;
         return (0, a.jsxs)('svg', {
             viewBox: '0 0 1 1',
             style: {
@@ -635,116 +633,58 @@ let L = s.memo(
                 h('svg-mask-channel-call-control-button-badge-29', 29),
                 A('svg-mask-avatar-default'),
                 N('svg-mask-avatar-status-round-16', u.EF.SIZE_16),
-                O('svg-mask-avatar-decoration-status-round-16', u.EF.SIZE_16),
+                v('svg-mask-avatar-decoration-status-round-16', u.EF.SIZE_16),
                 C('svg-mask-avatar-status-mobile-16', u.EF.SIZE_16),
                 y('svg-mask-avatar-decoration-status-mobile-16', u.EF.SIZE_16),
-                v('svg-mask-avatar-status-typing-16', u.EF.SIZE_16),
+                O('svg-mask-avatar-status-typing-16', u.EF.SIZE_16),
                 R('svg-mask-avatar-decoration-status-typing-16', u.EF.SIZE_16),
                 N('svg-mask-avatar-status-round-20', u.EF.SIZE_20),
-                O('svg-mask-avatar-decoration-status-round-20', u.EF.SIZE_20),
+                v('svg-mask-avatar-decoration-status-round-20', u.EF.SIZE_20),
                 C('svg-mask-avatar-status-mobile-20', u.EF.SIZE_20),
                 y('svg-mask-avatar-decoration-status-mobile-20', u.EF.SIZE_20),
-                v('svg-mask-avatar-status-typing-20', u.EF.SIZE_20),
+                O('svg-mask-avatar-status-typing-20', u.EF.SIZE_20),
                 R('svg-mask-avatar-decoration-status-typing-20', u.EF.SIZE_20),
                 N('svg-mask-avatar-status-round-24', u.EF.SIZE_24),
-                O('svg-mask-avatar-decoration-status-round-24', u.EF.SIZE_24),
+                v('svg-mask-avatar-decoration-status-round-24', u.EF.SIZE_24),
                 C('svg-mask-avatar-status-mobile-24', u.EF.SIZE_24),
                 y('svg-mask-avatar-decoration-status-mobile-24', u.EF.SIZE_24),
-                v('svg-mask-avatar-status-typing-24', u.EF.SIZE_24),
+                O('svg-mask-avatar-status-typing-24', u.EF.SIZE_24),
                 R('svg-mask-avatar-decoration-status-typing-24', u.EF.SIZE_24),
                 N('svg-mask-avatar-status-round-32', u.EF.SIZE_32),
-                O('svg-mask-avatar-decoration-status-round-32', u.EF.SIZE_32),
+                v('svg-mask-avatar-decoration-status-round-32', u.EF.SIZE_32),
                 C('svg-mask-avatar-status-mobile-32', u.EF.SIZE_32),
                 y('svg-mask-avatar-decoration-status-mobile-32', u.EF.SIZE_32),
-                v('svg-mask-avatar-status-typing-32', u.EF.SIZE_32),
+                O('svg-mask-avatar-status-typing-32', u.EF.SIZE_32),
                 R('svg-mask-avatar-decoration-status-typing-32', u.EF.SIZE_32),
                 N('svg-mask-avatar-status-round-40', u.EF.SIZE_40),
-                O('svg-mask-avatar-decoration-status-round-40', u.EF.SIZE_40),
+                v('svg-mask-avatar-decoration-status-round-40', u.EF.SIZE_40),
                 C('svg-mask-avatar-status-mobile-40', u.EF.SIZE_40),
                 y('svg-mask-avatar-decoration-status-mobile-40', u.EF.SIZE_40),
-                v('svg-mask-avatar-status-typing-40', u.EF.SIZE_40),
+                O('svg-mask-avatar-status-typing-40', u.EF.SIZE_40),
                 R('svg-mask-avatar-decoration-status-typing-40', u.EF.SIZE_40),
                 N('svg-mask-avatar-status-round-48', u.EF.SIZE_48),
-                O('svg-mask-avatar-decoration-status-round-48', u.EF.SIZE_48),
+                v('svg-mask-avatar-decoration-status-round-48', u.EF.SIZE_48),
                 C('svg-mask-avatar-status-mobile-48', u.EF.SIZE_48),
                 y('svg-mask-avatar-decoration-status-mobile-48', u.EF.SIZE_48),
-                v('svg-mask-avatar-status-typing-48', u.EF.SIZE_48),
+                O('svg-mask-avatar-status-typing-48', u.EF.SIZE_48),
                 R('svg-mask-avatar-decoration-status-typing-48', u.EF.SIZE_48),
                 N('svg-mask-avatar-status-round-56', u.EF.SIZE_56),
-                O('svg-mask-avatar-decoration-status-round-56', u.EF.SIZE_56),
+                v('svg-mask-avatar-decoration-status-round-56', u.EF.SIZE_56),
                 C('svg-mask-avatar-status-mobile-56', u.EF.SIZE_56),
                 y('svg-mask-avatar-decoration-status-mobile-56', u.EF.SIZE_56),
-                v('svg-mask-avatar-status-typing-56', u.EF.SIZE_56),
+                O('svg-mask-avatar-status-typing-56', u.EF.SIZE_56),
                 R('svg-mask-avatar-decoration-status-typing-56', u.EF.SIZE_56),
                 N('svg-mask-avatar-status-round-80', u.EF.SIZE_80),
-                O('svg-mask-avatar-decoration-status-round-80', u.EF.SIZE_80),
-                (function (e, t) {
-                    let n = (0, u.UC)(t),
-                        r = n.status / 2,
-                        i = (n.size * d.hs) / n.size,
-                        s = (r + n.stroke) / n.size / i,
-                        o = E((n.size - r - n.offset) / n.size, i);
-                    return (0, a.jsxs)('mask', {
-                        id: e,
-                        maskContentUnits: 'objectBoundingBox',
-                        viewBox: '0 0 1 1',
-                        children: [
-                            (0, a.jsx)('rect', {
-                                fill: 'white',
-                                x: 0,
-                                y: 0,
-                                width: '100%',
-                                height: '100%'
-                            }),
-                            (0, a.jsx)('circle', {
-                                fill: 'black',
-                                cx: o,
-                                cy: o,
-                                r: s
-                            })
-                        ]
-                    });
-                })('svg-mask-avatar-decoration-profile-status-square-80', u.EF.SIZE_80),
+                v('svg-mask-avatar-decoration-status-round-80', u.EF.SIZE_80),
                 C('svg-mask-avatar-status-mobile-80', u.EF.SIZE_80),
                 y('svg-mask-avatar-decoration-status-mobile-80', u.EF.SIZE_80),
-                (function (e, t) {
-                    let n = (0, u.UC)(t),
-                        r = (n.size * d.hs) / n.size,
-                        i = E((n.size - n.status - n.stroke - n.offset) / n.size, r),
-                        s = E((n.size - n.status * u.EW - n.stroke - n.offset) / n.size, r),
-                        o = (n.status + 2 * n.stroke) / n.size / r,
-                        l = (n.status * u.EW + 2 * n.stroke) / n.size / r;
-                    return (0, a.jsxs)('mask', {
-                        id: e,
-                        maskContentUnits: 'objectBoundingBox',
-                        viewBox: '0 0 1 1',
-                        children: [
-                            (0, a.jsx)('rect', {
-                                fill: 'white',
-                                x: 0,
-                                y: 0,
-                                width: '100%',
-                                height: '100%'
-                            }),
-                            (0, a.jsx)('rect', {
-                                fill: 'black',
-                                x: i,
-                                y: s,
-                                width: o,
-                                height: l,
-                                rx: ((n.status * u.EW + 2 * n.stroke) * u.ZC) / n.size,
-                                ry: ((n.status * u.EW + 2 * n.stroke) * u.ZC) / n.size
-                            })
-                        ]
-                    });
-                })('svg-mask-avatar-decoration-profile-status-mobile-square-80', u.EF.SIZE_80),
-                v('svg-mask-avatar-status-typing-80', u.EF.SIZE_80),
+                O('svg-mask-avatar-status-typing-80', u.EF.SIZE_80),
                 R('svg-mask-avatar-decoration-status-typing-80', u.EF.SIZE_80),
                 N('svg-mask-avatar-status-round-120', u.EF.SIZE_120),
-                O('svg-mask-avatar-decoration-status-round-120', u.EF.SIZE_120),
+                v('svg-mask-avatar-decoration-status-round-120', u.EF.SIZE_120),
                 C('svg-mask-avatar-status-mobile-120', u.EF.SIZE_120),
                 y('svg-mask-avatar-decoration-status-mobile-120', u.EF.SIZE_120),
-                v('svg-mask-avatar-status-typing-120', u.EF.SIZE_120),
+                O('svg-mask-avatar-status-typing-120', u.EF.SIZE_120),
                 R('svg-mask-avatar-decoration-status-typing-120', u.EF.SIZE_120),
                 T('svg-mask-diagonal-facepile-16', u.EF.SIZE_16),
                 g('svg-mask-diagonal-facepile-status-16', u.EF.SIZE_16),
@@ -903,9 +843,9 @@ let L = s.memo(
                         rx: 0.2
                     })
                 })),
-                ((_ = 'svg-mask-status-screenshare'),
+                ((d = 'svg-mask-status-screenshare'),
                 (0, a.jsxs)('mask', {
-                    id: _,
+                    id: d,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -920,9 +860,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((I = 'svg-mask-avatar-voice-call-80'),
+                ((_ = 'svg-mask-avatar-voice-call-80'),
                 (0, a.jsxs)('mask', {
-                    id: I,
+                    id: _,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -942,9 +882,9 @@ let L = s.memo(
                 })),
                 f('svg-mask-avatar-call-icon', u.EF.SIZE_56, 1),
                 f('svg-mask-avatar-call-icon-32', u.EF.SIZE_32, 0.5),
-                ((m = 'svg-mask-sticker-rounded-rect'),
+                ((E = 'svg-mask-sticker-rounded-rect'),
                 (0, a.jsx)('mask', {
-                    id: m,
+                    id: E,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: (0, a.jsx)('path', {
@@ -952,9 +892,9 @@ let L = s.memo(
                         fill: 'white'
                     })
                 })),
-                ((D = 'svg-mask-chat-input-button-notification'),
+                ((I = 'svg-mask-chat-input-button-notification'),
                 (0, a.jsxs)('mask', {
-                    id: D,
+                    id: I,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -971,9 +911,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((L = 'svg-mask-sticker-shop-notification'),
+                ((m = 'svg-mask-sticker-shop-notification'),
                 (0, a.jsxs)('mask', {
-                    id: L,
+                    id: m,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -990,9 +930,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((b = 'svg-mask-autocomplete-emoji-upsell-emoji'),
+                ((D = 'svg-mask-autocomplete-emoji-upsell-emoji'),
                 (0, a.jsxs)('mask', {
-                    id: b,
+                    id: D,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -1009,9 +949,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((M = 'svg-mask-event-ticket'),
+                ((L = 'svg-mask-event-ticket'),
                 (0, a.jsx)('mask', {
-                    id: M,
+                    id: L,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: (0, a.jsx)('path', {
@@ -1019,9 +959,9 @@ let L = s.memo(
                         fill: 'white'
                     })
                 })),
-                ((P = 'svg-mask-guild-icon-with-channel-type'),
+                ((b = 'svg-mask-guild-icon-with-channel-type'),
                 (0, a.jsxs)('mask', {
-                    id: P,
+                    id: b,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -1037,9 +977,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((U = 'svg-mask-content-inventory-card-face-pile-avatar'),
+                ((M = 'svg-mask-content-inventory-card-face-pile-avatar'),
                 (0, a.jsxs)('mask', {
-                    id: U,
+                    id: M,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -1056,9 +996,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((w = 'svg-mask-guild-popout-activity-icon'),
+                ((P = 'svg-mask-guild-popout-activity-icon'),
                 (0, a.jsxs)('mask', {
-                    id: w,
+                    id: P,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -1077,9 +1017,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((x = 'svg-mask-clan-icon'),
+                ((U = 'svg-mask-clan-icon'),
                 (0, a.jsx)('mask', {
-                    id: x,
+                    id: U,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: (0, a.jsx)('rect', {
@@ -1090,9 +1030,9 @@ let L = s.memo(
                         height: 1
                     })
                 })),
-                ((G = 'svg-mask-forward-attachment-pile-overflow'),
+                ((w = 'svg-mask-forward-attachment-pile-overflow'),
                 (0, a.jsx)('mask', {
-                    id: G,
+                    id: w,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: (0, a.jsx)('path', {

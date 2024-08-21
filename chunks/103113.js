@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(256059),
     A = n(679332),
     N = n(544989),
-    O = n(171368),
-    v = n(228168),
+    v = n(171368),
+    O = n(228168),
     R = n(689938),
     C = n(122269);
 function y(e) {
@@ -48,7 +48,7 @@ function y(e) {
     }, [k, b]);
     let F = () => {
             null == M || M(),
-                (0, O.openUserProfileModal)({
+                (0, v.openUserProfileModal)({
                     sourceAnalyticsLocations: x,
                     ...G
                 });
@@ -65,10 +65,10 @@ function y(e) {
                     (0, r.jsxs)(T.Z, {
                         user: t,
                         displayProfile: w,
-                        profileType: v.y0.BITE_SIZE,
+                        profileType: O.y0.BITE_SIZE,
                         children: [
                             (0, r.jsx)(N.Z, {
-                                profileType: v.y0.BITE_SIZE,
+                                profileType: O.y0.BITE_SIZE,
                                 children: (0, r.jsx)(A.Z, {
                                     user: t,
                                     viewProfileItem: V
@@ -94,15 +94,14 @@ function y(e) {
                                         user: t,
                                         displayProfile: w,
                                         guildId: n,
-                                        profileType: v.y0.BITE_SIZE,
-                                        hasProfileEffect: (null == w ? void 0 : w.profileEffectId) != null
+                                        profileType: O.y0.BITE_SIZE
                                     }),
                                     (0, r.jsx)(m.Z, {
                                         user: t,
                                         displayProfile: w,
                                         guildId: n,
                                         channelId: y,
-                                        profileType: v.y0.BITE_SIZE,
+                                        profileType: O.y0.BITE_SIZE,
                                         onOpenProfile: V ? F : void 0
                                     }),
                                     (0, r.jsx)(S.Z, { user: t })
@@ -114,12 +113,12 @@ function y(e) {
                                 children: [
                                     (0, r.jsx)(g.Z, {
                                         user: t,
-                                        profileType: v.y0.BITE_SIZE,
+                                        profileType: O.y0.BITE_SIZE,
                                         nickname: d.ZP.getName(n, y, t),
                                         onOpenProfile: V ? F : void 0,
                                         tags: (0, r.jsx)(p.Z, {
                                             displayProfile: w,
-                                            profileType: v.y0.BITE_SIZE,
+                                            profileType: O.y0.BITE_SIZE,
                                             onClose: M
                                         })
                                     }),

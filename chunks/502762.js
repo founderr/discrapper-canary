@@ -7,45 +7,35 @@ var r = n(735250),
     l = n(481060),
     u = n(721987),
     c = n(138655),
-    d = n(793397),
-    _ = n(652853),
-    E = n(228168),
-    f = n(280598);
-let h = (e, t) => {
+    d = n(652853),
+    _ = n(228168),
+    E = n(280598);
+let f = (e, t) => {
         let n = (0, o.EQ)(e)
-                .with(E.y0.MODAL, () => f.userProfileModalOuter)
-                .with(E.y0.PANEL, () => f.userPanelOuter)
-                .with(E.y0.CARD, () => f.userCardOuter)
-                .with(E.y0.BITE_SIZE, () => f.biteSizeOuter)
-                .with(E.y0.FULL_SIZE, () => f.fullSizeOuter)
-                .otherwise(() => f.userPopoutOuter),
-            r = t ? f.userProfileOuterThemed : f.userProfileOuterUnthemed;
+                .with(_.y0.BITE_SIZE, () => E.biteSizeOuter)
+                .with(_.y0.FULL_SIZE, () => E.fullSizeOuter)
+                .with(_.y0.PANEL, () => E.userPanelOuter)
+                .with(_.y0.CARD, () => E.userCardOuter)
+                .otherwise(() => E.userProfileOuter),
+            r = t ? E.userProfileOuterThemed : E.userProfileOuterUnthemed;
         return s()(n, r);
     },
-    p = (e, t, n) => {
+    h = (e, t, n) => {
         let r = (0, o.EQ)(e)
-                .with(E.y0.MODAL, E.y0.FULL_SIZE, () => f.userProfileModalInner)
-                .with(E.y0.PANEL, () => f.userPanelInner)
-                .with(E.y0.CARD, () => f.userCardInner)
-                .otherwise(() => f.userPopoutInner),
+                .with(_.y0.PANEL, () => E.userPanelInner)
+                .with(_.y0.FULL_SIZE, () => E.userProfileModalInner)
+                .with(_.y0.BITE_SIZE, () => E.biteSizeInner)
+                .with(_.y0.CARD, () => E.userCardInner)
+                .otherwise(() => E.userProfileInner),
             i = (0, o.EQ)(e)
-                .with(E.y0.PANEL, () => f.userPanelInnerThemed)
-                .with(E.y0.BITE_SIZE, () => f.biteSizeInnerThemed)
-                .with(E.y0.FULL_SIZE, () => f.fullSizeInnerThemed)
-                .otherwise(() =>
-                    (0, d.zW)({
-                        premiumUserWithBanner: f.userProfileInnerThemedWithBanner,
-                        premiumUserWithoutBanner: f.userProfileInnerThemedPremiumWithoutBanner,
-                        default: f.userProfileInnerThemedNonPremium
-                    })({
-                        isPremium: t,
-                        hasBanner: n
-                    })
-                );
+                .with(_.y0.PANEL, () => E.userPanelInnerThemed)
+                .with(_.y0.BITE_SIZE, () => E.biteSizeInnerThemed)
+                .with(_.y0.FULL_SIZE, () => E.fullSizeInnerThemed)
+                .otherwise(() => (n ? E.userProfileInnerThemedWithBanner : t ? E.userProfileInnerThemedPremiumWithoutBanner : E.userProfileInnerThemedNonPremium));
         return s()(r, i);
     },
-    I = i.forwardRef(function (e, t) {
-        let { user: n, displayProfile: i, profileType: a, className: o, pendingThemeColors: d, pendingProfileEffectId: E, themeOverride: I, children: m, forceShowPremium: T = !1, showOutOfBoundaryComponents: g = !1 } = e,
+    p = i.forwardRef(function (e, t) {
+        let { user: n, displayProfile: i, profileType: a, className: o, pendingThemeColors: _, pendingProfileEffectId: p, themeOverride: I, children: m, forceShowPremium: T = !1, showOutOfBoundaryComponents: g = !1 } = e,
             {
                 theme: S,
                 primaryColor: A,
@@ -53,25 +43,25 @@ let h = (e, t) => {
             } = (0, u.Z)({
                 user: n,
                 displayProfile: i,
-                pendingThemeColors: d,
+                pendingThemeColors: _,
                 isPreview: T
             }),
-            { profileThemeStyle: O, profileThemeClassName: v } = (0, c.Z)({
+            { profileThemeStyle: v, profileThemeClassName: O } = (0, c.Z)({
                 theme: null != I ? I : S,
                 primaryColor: A,
                 secondaryColor: N
             }),
             R = (null == i ? void 0 : i.canEditThemes) || T,
-            C = null !== E && ((null == i ? void 0 : i.banner) != null || void 0 !== E);
+            C = null !== p && ((null == i ? void 0 : i.banner) != null || void 0 !== p);
         return (0, r.jsx)('div', {
-            className: s()(h(a, R), g ? f.showOutOfBoundaryComponents : void 0, v, o),
-            style: O,
+            className: s()(f(a, R), g ? E.showOutOfBoundaryComponents : void 0, O, o),
+            style: v,
             ref: t,
             children: (0, r.jsx)('div', {
-                className: p(a, R, C),
+                className: h(a, R, C),
                 children: (0, r.jsx)(l.ThemeContextProvider, {
                     theme: null != I ? I : S,
-                    children: (0, r.jsx)(_.X, {
+                    children: (0, r.jsx)(d.X, {
                         profileType: a,
                         theme: null != I ? I : S,
                         primaryColor: A,
@@ -82,20 +72,18 @@ let h = (e, t) => {
             })
         });
     }),
-    m = (e) =>
+    I = (e) =>
         (0, o.EQ)(e)
-            .with(E.y0.POPOUT, E.y0.SETTINGS, () => f.userPopoutOverlayBackground)
-            .with(E.y0.MODAL, () => f.userProfileModalOverlayBackground)
-            .with(E.y0.BITE_SIZE, () => f.biteSizeOverlayBackground)
-            .with(E.y0.FULL_SIZE, () => f.fullSizeOverlayBackground)
-            .otherwise(() => f.overlayBackground),
-    T = i.forwardRef(function (e, t) {
+            .with(_.y0.BITE_SIZE, () => E.biteSizeOverlayBackground)
+            .with(_.y0.FULL_SIZE, () => E.fullSizeOverlayBackground)
+            .otherwise(() => E.overlayBackground),
+    m = i.forwardRef(function (e, t) {
         let { children: n, className: i } = e,
-            { profileType: a } = (0, _.z)();
+            { profileType: a } = (0, d.z)();
         return (0, r.jsx)('div', {
             ref: t,
-            className: s()(m(a), i),
+            className: s()(I(a), i),
             children: n
         });
     });
-t.Z = Object.assign(I, { Overlay: T });
+t.Z = Object.assign(p, { Overlay: m });

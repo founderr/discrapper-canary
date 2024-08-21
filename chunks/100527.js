@@ -204,7 +204,6 @@ var n, r;
     (r.LAST_NITRO_HOST_LEFT_ACTION_SHEET = 'last nitro host left action sheet'),
     (r.PREMIUM_TIER_0_ANNOUNCEMENT_ACTION_SHEET = 'premium tier 0 announcement action sheet'),
     (r.PS_VOICE_CONNECT_UPSELL = 'ps voice connect upsell'),
-    (r.PROFILE_THEME_UPSELL_MODAL = 'profile theme upsell modal'),
     (r.EDIT_AVATAR_DECORATION_MODAL = 'edit avatar decoration modal'),
     (r.EDIT_AVATAR_DECORATION_SHEET = 'edit avatar decoration sheet'),
     (r.EDIT_PROFILE_EFFECT_MODAL = 'edit profile effect modal'),

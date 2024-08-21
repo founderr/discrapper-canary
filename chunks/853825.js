@@ -71,8 +71,7 @@ function L(e) {
                                     (0, i.jsx)(_.Z, {
                                         user: n,
                                         displayProfile: D,
-                                        profileType: T.y0.FULL_SIZE,
-                                        hasProfileEffect: (null == D ? void 0 : D.profileEffectId) != null
+                                        profileType: T.y0.FULL_SIZE
                                     }),
                                     (0, i.jsx)('div', {
                                         className: N.headerInner,

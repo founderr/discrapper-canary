@@ -10,7 +10,6 @@ e.exports = {
     textSingleLineEllipsis: 'textSingleLineEllipsis_f4a859',
     profileCard: 'profileCard_f4a859',
     profileCardTier1: 'profileCardTier1_f4a859 profileCard_f4a859',
-    profileBanner: 'profileBanner_f4a859',
     profileAvatar: 'profileAvatar_f4a859',
     profileAvatarTier1: 'profileAvatarTier1_f4a859',
     profileInner: 'profileInner_f4a859',
