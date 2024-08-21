@@ -69,10 +69,10 @@ var r = n(470079),
     s = n(442837),
     o = n(367907),
     l = n(339085),
-    u = n(689789);
+    u = n(689789),
+    c = n(407477);
 n(353842);
-var c = n(558217),
-    d = n(364742),
+var d = n(558217),
     _ = n(675478),
     E = n(430824),
     f = n(771845),
@@ -92,7 +92,7 @@ var g = n(304852),
     C = n(689938);
 let y = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == t ? void 0 : t.getGuildId();
-        (0, c.O)(n);
+        (0, d.O)(n);
         let i = (0, O.Gt)(e),
             a = F(n),
             o = V(n),
@@ -100,7 +100,10 @@ let y = function (e, t) {
                 location: 'useEmojiCategories',
                 autoTrackExposure: !0
             }),
-            { canShowReactionsOnMessageHover: p } = d.Z.useExperiment({ location: 'useEmojiCategories' }, { autoTrackExposure: !0 }),
+            p = (0, c.p3)({
+                location: 'useEmojiCategories',
+                autoTrackExposure: !0
+            }),
             I = H(n),
             { topEmojis: N, newlyAddedEmojis: v } = (0, S.Z)(n, e),
             { allEmojis: R } = (0, g.Z)({

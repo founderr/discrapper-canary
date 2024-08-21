@@ -35,14 +35,6 @@ let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
             let t = 1;
             return e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t;
         },
-        recency_max: (e) => {
-            let t = 1;
-            return e <= 3 ? (t = 100) : e <= 7 ? (t = 70) : e <= 15 ? (t = 50) : e <= 30 ? (t = 20) : e <= 45 ? (t = 10) : e <= 80 && (t = 5), t;
-        },
-        fast_turnover: (e) => {
-            let t = 1;
-            return e <= 3 ? (t = 100) : e <= 7 ? (t = 70) : e <= 15 ? (t = 50) : e <= 30 ? (t = 20) : e <= 45 ? (t = 10) : e <= 80 && (t = 5), t;
-        },
         day_recency: (e) => {
             let t = 1;
             return e <= 1 ? (t = 100) : e <= 2 ? (t = 70) : e <= 3 ? (t = 50) : e <= 7 ? (t = 20) : e <= 15 ? (t = 15) : e <= 30 ? (t = 10) : e <= 45 ? (t = 5) : e <= 80 && (t = 2), t;
@@ -51,8 +43,6 @@ let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
     c = {
         original: l,
         safe: (e, t, n) => (null == n.maxTotalUse ? 0 : (e / n.maxTotalUse) * 0.2 + (t / 1000) * 0.8),
-        recency_max: (e, t, n) => (null == n.maxTotalUse ? 0 : (e / n.maxTotalUse) * 0.2 + (t / 1000) * 0.8),
-        fast_turnover: (e, t, n) => (null == n.maxTotalUse ? 0 : (e / n.maxTotalUse) * 0.05 + (t / 1000) * 0.95),
         day_recency: (e, t, n) => (null == n.maxTotalUse ? 0 : (e / n.maxTotalUse) * 0.05 + (t / 1000) * 0.95)
     };
 t.ZP = class e {
