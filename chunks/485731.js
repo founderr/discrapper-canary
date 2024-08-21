@@ -35,9 +35,12 @@ function f(e) {
     };
 }
 function h() {
+    f(() => d);
+}
+function p() {
     r = u.Z.getCurrentConfig({ location: 'handleExperimentFetch' }, { autoTrackExposure: !1 });
 }
-class p extends (i = a.ZP.PersistedStore) {
+class I extends (i = a.ZP.PersistedStore) {
     getState() {
         return E;
     }
@@ -48,9 +51,9 @@ class p extends (i = a.ZP.PersistedStore) {
         null != e && (E = e);
     }
 }
-c(p, 'displayName', 'PerksDemosUIState'),
-    c(p, 'persistKey', 'PerksDemosUIState'),
-    (t.Z = new p(s.Z, {
+c(I, 'displayName', 'PerksDemosUIState'),
+    c(I, 'persistKey', 'PerksDemosUIState'),
+    (t.Z = new I(s.Z, {
         PERMIUM_PERKS_DEMO_FRAME_ANIMATION_PLAYED: function () {
             f(() => ({ hqStreamingFrameAnimationPlayed: !0 }));
         },
@@ -76,9 +79,7 @@ c(p, 'displayName', 'PerksDemosUIState'),
                 hqStreamingDidEnable: t || e.hqStreamingDidEnable
             }));
         },
-        PREMIUM_PERKS_DEMO_UI_RESET: function () {
-            f(() => d);
-        },
+        PREMIUM_PERKS_DEMO_UI_RESET: h,
         VOICE_STATE_UPDATES: function () {
             if (null == l.Z.getVoiceStateForUser(o.default.getId()))
                 f(() => ({
@@ -86,7 +87,8 @@ c(p, 'displayName', 'PerksDemosUIState'),
                     hqStreamingFrameAnimationPlayed: !1
                 }));
         },
-        CONNECTION_OPEN: h,
-        EXPERIMENTS_FETCH_SUCCESS: h,
-        EXPERIMENT_OVERRIDE_BUCKET: h
+        CONNECTION_OPEN: p,
+        EXPERIMENTS_FETCH_SUCCESS: p,
+        EXPERIMENT_OVERRIDE_BUCKET: p,
+        LOGOUT: h
     }));
