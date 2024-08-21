@@ -8,8 +8,8 @@ var p,
     S = n(754700),
     A = n(887003),
     N = n(442837),
-    v = n(570140),
-    O = n(497505),
+    O = n(570140),
+    v = n(497505),
     R = n(918701),
     C = n(5881),
     y = n(46140);
@@ -100,7 +100,7 @@ class w extends (p = N.ZP.Store) {
               writable: !0
           })
         : (I[m] = T),
-    (t.Z = new w(v.Z, {
+    (t.Z = new w(O.Z, {
         LOGOUT: function () {
             D();
         },
@@ -109,7 +109,7 @@ class w extends (p = N.ZP.Store) {
         },
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function (e) {
             let { quests: t } = e;
-            for (let e of ((r = !1), (i = new Map()), t)) i.set(e.id, e), e.targetedContent.includes(O.jn.QUEST_BAR) && (0, C.T)({ location: y.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
+            for (let e of ((r = !1), (i = new Map()), t)) i.set(e.id, e), e.targetedContent.includes(v.jn.QUEST_BAR) && (0, C.T)({ location: y.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
         },
         QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function () {
             (a = 0), (r = !1);

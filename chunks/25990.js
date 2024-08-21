@@ -6,14 +6,14 @@ var I,
     S = n(979554),
     A = n(442837),
     N = n(570140),
-    v = n(981631);
-let O = v.QZA.CLOSED,
+    O = n(981631);
+let v = O.QZA.CLOSED,
     R = {};
 function C() {
-    (O = v.QZA.OPEN), (R = {});
+    (v = O.QZA.OPEN), (R = {});
 }
 function y() {
-    (O = v.QZA.CLOSED), (R = {});
+    (v = O.QZA.CLOSED), (R = {});
 }
 function D() {
     L(), b(), (R = {});
@@ -29,7 +29,7 @@ function M() {
 }
 class P extends (g = A.ZP.Store) {
     getFormState() {
-        return O;
+        return v;
     }
     getErrors() {
         return R;
@@ -38,7 +38,7 @@ class P extends (g = A.ZP.Store) {
         return void 0 !== r || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== c || void 0 !== d || void 0 !== a || void 0 !== s || void 0 !== i;
     }
     getIsSubmitDisabled() {
-        return void 0 !== l && l.length > v.tPV;
+        return void 0 !== l && l.length > O.tPV;
     }
     getPendingAvatar() {
         return r;
@@ -120,19 +120,19 @@ class P extends (g = A.ZP.Store) {
         USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: C,
         USER_SETTINGS_MODAL_SET_SECTION: function (e) {
             let { section: t } = e;
-            return t === v.oAB.ACCOUNT && C();
+            return t === O.oAB.ACCOUNT && C();
         },
         USER_SETTINGS_ACCOUNT_CLOSE: y,
         USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function () {
             D(), M(), y();
         },
         USER_SETTINGS_ACCOUNT_SUBMIT: function () {
-            (O = v.QZA.SUBMITTING), (R = {});
+            (v = O.QZA.SUBMITTING), (R = {});
         },
         USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function (e) {
             var t;
-            if (O !== v.QZA.SUBMITTING) return !1;
-            (O = v.QZA.OPEN), (R = null !== (t = e.errors) && void 0 !== t ? t : {});
+            if (v !== O.QZA.SUBMITTING) return !1;
+            (v = O.QZA.OPEN), (R = null !== (t = e.errors) && void 0 !== t ? t : {});
         },
         USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function (e) {
             let { avatar: t } = e;

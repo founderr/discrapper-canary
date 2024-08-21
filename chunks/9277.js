@@ -23,13 +23,13 @@ t.Z = i.memo(
                 var e, t;
                 return T && Object.values(null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
             }),
-            [A, N, v] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.Z),
-            O = i.useRef(0),
+            [A, N, O] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.Z),
+            v = i.useRef(0),
             R = i.useCallback(() => {
                 g(!0),
-                    clearTimeout(O.current),
-                    (O.current = setTimeout(() => {
-                        g(!1), (O.current = 0);
+                    clearTimeout(v.current),
+                    (v.current = setTimeout(() => {
+                        g(!1), (v.current = 0);
                     }, 2000));
             }, []);
         (0, E.yp)({
@@ -62,7 +62,7 @@ t.Z = i.memo(
                         'aria-label': I.Z.Messages.GIF_BUTTON_LABEL,
                         'aria-expanded': b,
                         'aria-haspopup': 'dialog',
-                        'aria-controls': v,
+                        'aria-controls': O,
                         children: (0, r.jsx)(y, { color: 'currentColor' })
                     })
                 })

@@ -25,15 +25,15 @@ var r = n(735250),
     S = n(158776),
     A = n(979651),
     N = n(6074),
-    v = n(981631),
-    O = n(955859);
+    O = n(981631),
+    v = n(955859);
 let R = '14px';
 function C(e) {
     let { emoji: t, className: n, animate: i = !0, hideTooltip: a, tooltipDelay: o } = e,
         c = I.Yk.useSetting(),
         d = null != t.id ? ':'.concat(t.name, ':') : E.ZP.translateSurrogatesToInlineEmoji(t.name),
         _ = {
-            className: s()(O.emoji, n),
+            className: s()(v.emoji, n),
             emojiId: t.id,
             emojiName: t.name,
             autoplay: !0,
@@ -76,7 +76,7 @@ let y = (e) => {
                             children: n
                         }),
                         (0, r.jsx)('div', {
-                            className: s()(O.textRuler, t),
+                            className: s()(v.textRuler, t),
                             ref: o,
                             'aria-hidden': !0,
                             children: n
@@ -89,9 +89,9 @@ let y = (e) => {
 t.Z = (e) => {
     var t;
     let { activities: n, applicationStream: i, className: a, textClassName: s, emojiClassName: u, animate: E = !0, hideTooltip: I = !1, hideEmoji: D = !1, user: L, hasQuest: b } = e,
-        M = null != n ? n.find((e) => e.type === v.IIU.CUSTOM_STATUS) : null,
+        M = null != n ? n.find((e) => e.type === O.IIU.CUSTOM_STATUS) : null,
         P = (0, o.e7)([m.default], () => m.default.getId() === (null == L ? void 0 : L.id)),
-        U = (0, o.e7)([h.Z], () => (P ? h.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === v.IIU.HANG_STATUS) : null)),
+        U = (0, o.e7)([h.Z], () => (P ? h.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === O.IIU.HANG_STATUS) : null)),
         w = (0, o.e7)([A.Z, T.Z], () => {
             var e;
             return null != U && null != L ? T.Z.getChannel(null === (e = A.Z.getVoiceStateForUser(L.id)) || void 0 === e ? void 0 : e.channelId) : null;
@@ -103,9 +103,9 @@ t.Z = (e) => {
             },
             { autoTrackExposure: !1 }
         ),
-        G = (0, _.Sl)(v.Ilk.BRAND_345),
+        G = (0, _.Sl)(O.Ilk.BRAND_345),
         k = null,
-        B = x && null != U && g.Z.can(v.Plq.CONNECT, w);
+        B = x && null != U && g.Z.can(O.Plq.CONNECT, w);
     B
         ? (k = (0, r.jsx)(p.Z, {
               className: u,
@@ -121,7 +121,7 @@ t.Z = (e) => {
               className: u
           }));
     let F = (0, o.e7)([S.Z], () => (null != L ? S.Z.getStatus(L.id) : null)),
-        V = null !== F && [v.Skl.OFFLINE, v.Skl.INVISIBLE].includes(F),
+        V = null !== F && [O.Skl.OFFLINE, O.Skl.INVISIBLE].includes(F),
         H = null === (t = (0, d.Z)(n, i, void 0, B)) || void 0 === t ? void 0 : t.activityText,
         Z = null != H && H.length > 0;
     return V || (null == k && !Z)
@@ -137,7 +137,7 @@ t.Z = (e) => {
                   b &&
                       (0, r.jsx)(l.QuestsIcon, {
                           size: 'custom',
-                          className: O.questsIcon,
+                          className: v.questsIcon,
                           height: R,
                           width: R,
                           color: G.hex
@@ -146,7 +146,7 @@ t.Z = (e) => {
                       ? (0, r.jsx)(N.Z, {
                             width: 16,
                             height: 16,
-                            className: O.icon
+                            className: v.icon
                         })
                       : null
               ]

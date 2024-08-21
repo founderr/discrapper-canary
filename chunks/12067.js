@@ -1,73 +1,73 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
         return C;
     }
 });
-var t = l(735250);
-l(470079);
-var r = l(442837),
-    i = l(169525),
-    a = l(611170),
-    s = l(128854),
-    u = l(884182),
-    o = l(546432),
-    c = l(780088),
-    d = l(592125),
-    m = l(52824),
-    E = l(823379),
-    f = l(970184),
-    p = l(981631);
+var l = t(735250);
+t(470079);
+var i = t(442837),
+    a = t(169525),
+    r = t(611170),
+    o = t(128854),
+    s = t(884182),
+    c = t(546432),
+    u = t(780088),
+    d = t(592125),
+    m = t(52824),
+    f = t(823379),
+    _ = t(970184),
+    p = t(981631);
 function C(e) {
-    let { message: n } = (0, f.CJ)(),
-        l = (0, r.e7)([d.Z], () => d.Z.getChannel(null == n ? void 0 : n.channel_id)),
-        { shouldHideMediaOptions: C, shouldRedactExplicitContent: N, gifAutoPlay: _, getGifFavButton: v, getOnMediaItemContextMenu: T } = (0, s.c)();
-    if (null == n || null == l) return null;
-    let h = e.items.map((e) => (0, c.j0)(e.media, p.VqG, C, N)).filter(E.lm),
-        I = {
+    let { message: n } = (0, _.CJ)(),
+        t = (0, i.e7)([d.Z], () => d.Z.getChannel(null == n ? void 0 : n.channel_id)),
+        { shouldHideMediaOptions: C, shouldRedactExplicitContent: h, gifAutoPlay: E, getGifFavButton: I, getOnMediaItemContextMenu: T } = (0, o.c)();
+    if (null == n || null == t) return null;
+    let x = e.items.map((e) => (0, u.j0)(e.media, p.VqG, C, h)).filter(f.lm),
+        N = {
             source: 'Media Mosaic',
-            guild_id: l.guild_id,
-            channel_id: l.id,
-            channel_type: l.type
+            guild_id: t.guild_id,
+            channel_id: t.id,
+            channel_type: t.type
         },
-        x = h.length > 1 ? (0, c.Cx)(h, I) : {};
-    function O(e, n) {
-        let l = e.originalItem;
-        return (0, i.lK)(l.media, n, l.spoiler);
+        v = x.length > 1 ? (0, u.Cx)(x, N) : {};
+    function g(e, n) {
+        let t = e.originalItem;
+        return (0, a.lK)(t.media, n, t.spoiler);
     }
-    let S = e.items.map((e) => {
-        let l = e.media,
-            t = null == T ? void 0 : T(l),
-            r = {
+    let b = e.items.map((e) => {
+        let t = e.media,
+            l = null == T ? void 0 : T(t),
+            i = {
                 message: n,
                 item: {
-                    uniqueId: l.proxyUrl,
+                    uniqueId: t.proxyUrl,
                     originalItem: e,
-                    type: (0, o.pU)(l, !0),
-                    downloadUrl: l.url,
-                    height: l.height,
-                    width: l.width,
+                    type: (0, c.pU)(t, !0),
+                    downloadUrl: t.url,
+                    height: t.height,
+                    width: t.width,
                     spoiler: e.spoiler,
-                    contentType: l.contentType
+                    contentType: t.contentType
                 },
-                onContextMenu: t,
-                autoPlayGif: _,
-                getObscureReason: O,
-                renderImageComponent: a.a,
-                renderVideoComponent: a.r,
+                onContextMenu: l,
+                autoPlayGif: E,
+                getObscureReason: g,
+                renderImageComponent: r.a,
+                renderVideoComponent: r.r,
                 renderAudioComponent: p.dG4,
                 renderPlaintextFilePreview: p.dG4,
                 renderGenericFileComponent: p.dG4,
                 renderMosaicItemFooter: p.dG4,
-                gifFavoriteButton: v(l),
-                onPlay: (e, n, l) => {},
+                gifFavoriteButton: I(t),
+                onPlay: (e, n, t) => {},
                 canRemoveItem: !1,
                 onRemoveItem: p.dG4
             },
-            i = (0, m.q)({
-                proxyURL: l.proxyUrl,
-                url: l.url
+            a = (0, m.q)({
+                proxyURL: t.proxyUrl,
+                url: t.url
             });
-        return i in x && (r.onClick = x[i]), r;
+        return a in v && (i.onClick = v[a]), i;
     });
-    return (0, t.jsx)('div', { children: (0, t.jsx)(u.Z, { items: S }) });
+    return (0, l.jsx)('div', { children: (0, l.jsx)(s.Z, { items: b }) });
 }

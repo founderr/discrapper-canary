@@ -53,9 +53,9 @@ var r = n(581031),
                     for (var S = o, A = 36; ; ) {
                         var N = A <= u ? 1 : A >= u + 26 ? 26 : A - u;
                         if (S < N) break;
-                        var v = S - N,
-                            O = 36 - N;
-                        f(r, d(T(N + (v % O)))), (S = c(v / O)), (A += 36);
+                        var O = S - N,
+                            v = 36 - N;
+                        f(r, d(T(N + (O % v)))), (S = c(O / v)), (A += 36);
                     }
                     f(r, d(T(S))), (u = g(o, I, h === _)), (o = 0), h++;
                 }

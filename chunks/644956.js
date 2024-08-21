@@ -25,8 +25,8 @@ var i = n(120356),
     S = n(184301),
     A = n(103575),
     N = n(592125),
-    v = n(271383),
-    O = n(430824),
+    O = n(271383),
+    v = n(430824),
     R = n(594174),
     C = n(689938),
     y = n(910212),
@@ -80,9 +80,9 @@ function b(e) {
                   },
                   renderPopout: (e) => {
                       let t = N.Z.getChannel(s),
-                          a = O.Z.getGuild(b),
-                          l = v.ZP.getMembers(a.id),
-                          u = O.Z.getRole(b, null != i ? i : a.getEveryoneRoleId()),
+                          a = v.Z.getGuild(b),
+                          l = O.ZP.getMembers(a.id),
+                          u = v.Z.getRole(b, null != i ? i : a.getEveryoneRoleId()),
                           E = o()(l)
                               .filter((e) => !!('@everyone' === m || e.roles.includes(i)) && null != R.default.getUser(e.userId))
                               .sortBy((e) => {

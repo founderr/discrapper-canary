@@ -20,8 +20,8 @@ var r,
     S = n(804739);
 let A = new Set(),
     N = {},
-    v = new Set(),
-    O = {},
+    O = new Set(),
+    v = {},
     R = new Set(),
     C = {},
     y = 10 * T.Z.Millis.MINUTE,
@@ -67,16 +67,16 @@ class x extends (r = u.ZP.Store) {
         return null == N[t] ? null : N[t].manifestIds;
     }
     hasNoBuild(e, t) {
-        return v.has(t);
+        return O.has(t);
     }
     isFetching(e, t) {
         return A.has(t);
     }
     needsToFetchBuildSize(e) {
-        return !O.hasOwnProperty(e);
+        return !v.hasOwnProperty(e);
     }
     getBuildSize(e) {
-        return O[e];
+        return v[e];
     }
 }
 (s = 'ApplicationBuildStore'),
@@ -111,7 +111,7 @@ class x extends (r = u.ZP.Store) {
                     return t;
                 }),
                 s = i.id;
-            v.delete(n),
+            O.delete(n),
                 (N[n] = {
                     id: s,
                     applicationId: t,
@@ -123,19 +123,19 @@ class x extends (r = u.ZP.Store) {
         },
         APPLICATION_BUILD_NOT_FOUND: function (e) {
             let { branchId: t } = e;
-            A.delete(t), v.add(t);
+            A.delete(t), O.add(t);
         },
         APPLICATION_BUILD_SIZE_FETCH_START: function (e) {
             let { buildId: t } = e;
-            !O.hasOwnProperty(t) && (O[t] = null);
+            !v.hasOwnProperty(t) && (v[t] = null);
         },
         APPLICATION_BUILD_SIZE_FETCH_SUCCESS: function (e) {
             let { buildId: t, sizeKB: n } = e;
-            O[t] = n;
+            v[t] = n;
         },
         APPLICATION_BUILD_SIZE_FETCH_FAIL: function (e) {
             let { buildId: t } = e;
-            null == O[t] && delete O[t];
+            null == v[t] && delete v[t];
         },
         APPLICATION_BRANCHES_FETCH_SUCCESS: function (e) {
             let { branches: t } = e,

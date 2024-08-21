@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     },
     T6: function () {
-        return v;
+        return O;
     },
     TW: function () {
         return i;
@@ -18,7 +18,7 @@ n.d(t, {
         return N;
     },
     wX: function () {
-        return O;
+        return v;
     }
 });
 var r,
@@ -179,7 +179,7 @@ async function N(e, t, n) {
             })
     );
 }
-function v(e) {
+function O(e) {
     let { channelId: t, messageId: n, emoji: r, key: i } = e;
     o.Z.dispatch({
         type: 'BURST_REACTION_EFFECT_PLAY',
@@ -189,7 +189,7 @@ function v(e) {
         key: i
     });
 }
-async function O(e, t, n) {
+async function v(e, t, n) {
     let r = null != n && !!n.isRetry;
     await c.Z.unarchiveThreadIfNecessary(e),
         a.tn
@@ -198,7 +198,7 @@ async function O(e, t, n) {
                 oldFormErrors: !0
             })
             .catch((n) => {
-                T(n, () => O(e, t, { isRetry: !0 }), { isRetry: r });
+                T(n, () => v(e, t, { isRetry: !0 }), { isRetry: r });
             });
 }
 async function R(e, t, n, r) {

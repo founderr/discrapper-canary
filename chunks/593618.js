@@ -29,8 +29,8 @@ var r = n(735250),
     S = n(160404),
     A = n(41776),
     N = n(777861),
-    v = n(565799),
-    O = n(501655),
+    O = n(565799),
+    v = n(501655),
     R = n(517334),
     C = n(344185),
     y = n(199902),
@@ -126,11 +126,11 @@ function K(e) {
                     });
                     return c ? (0, E.Qj)(r, o) : r;
                 }),
-                h = (0, u.Wu)([v.Z], () =>
+                h = (0, u.Wu)([O.Z], () =>
                     l().flatMap(a, (t) => {
                         if (t === e.afkChannelId) return [];
-                        let n = v.Z.getMutableParticipants(t, O.pV.SPEAKER)
-                            .filter((e) => e.type === O.Ui.VOICE)
+                        let n = O.Z.getMutableParticipants(t, v.pV.SPEAKER)
+                            .filter((e) => e.type === v.Ui.VOICE)
                             .map((e) => {
                                 let { user: t } = e;
                                 return t;
@@ -138,9 +138,9 @@ function K(e) {
                         return c ? (0, E.Qj)(n, o) : n;
                     })
                 ),
-                p = (0, u.e7)([v.Z], () => {
+                p = (0, u.e7)([O.Z], () => {
                     let e = 0;
-                    for (let t of a) e += v.Z.getParticipantCount(t, O.pV.AUDIENCE);
+                    for (let t of a) e += O.Z.getParticipantCount(t, v.pV.AUDIENCE);
                     return e;
                 }),
                 I = (0, u.Wu)(

@@ -1,8 +1,8 @@
 n(653041), n(47120), n(724458);
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     r = n(959078),
     l = n(442837),
     o = n(481060),
@@ -21,31 +21,31 @@ var a = n(120356),
 let p = (e) => (0 === e.length ? f.warning : f.danger),
     g = (e, t) => (0 === e.length ? C.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: t }) : C.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: t })),
     S = (e) => {
-        let { quest: t, location: n, errors: a, gameTitle: s, consoleHelpArticle: l, expiredCredentialsInteractable: c } = e;
-        if (0 === a.length)
+        let { quest: t, location: n, errors: s, gameTitle: a, consoleHelpArticle: l, expiredCredentialsInteractable: c } = e;
+        if (0 === s.length)
             return (0, i.jsx)(o.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: C.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: s })
+                children: C.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: a })
             });
         let E = [];
         (0, m.Nj)({ quest: t }) && E.push((0, d.isWeb)() ? C.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : C.Z.Messages.QUEST_PROGRESS_NO_GAME);
         let I = [
             ...E,
-            ...a.map((e) => {
+            ...s.map((e) => {
                 if (e.type !== r.K.EXPIRED_CREDENTIAL || !c) return e.message;
                 let i = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                    a = (0, m.C9)(e),
-                    s = (0, m._j)(e),
-                    l = s === N.ABu.XBOX;
-                return a.format({
+                    s = (0, m.C9)(e),
+                    a = (0, m._j)(e),
+                    l = a === N.ABu.XBOX;
+                return s.format({
                     account_name: null == i ? void 0 : i.name,
                     onClick: () => {
                         (0, m.fY)(
                             {
                                 quest: t,
                                 showInline: l,
-                                platformType: s
+                                platformType: a
                             },
                             {
                                 content: n,
@@ -66,7 +66,7 @@ let p = (e) => (0 === e.length ? f.warning : f.danger),
 t.Z = function (e) {
     let t = T.r.build(e.quest.config).application.name,
         n = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        a = (0, h.k3)(e.quest.id, e.location),
+        s = (0, h.k3)(e.quest.id, e.location),
         r = (0, E.n)(),
         u = (0, h.g2)({
             useReducedMotion: n,
@@ -89,7 +89,7 @@ t.Z = function (e) {
             afterRequest: u.stopAnimation
         });
     return (0, i.jsxs)('div', {
-        className: s()(f.container, { [f.inFlight]: m }),
+        className: a()(f.container, { [f.inFlight]: m }),
         children: [
             (0, i.jsxs)('div', {
                 className: f.info,
@@ -98,7 +98,7 @@ t.Z = function (e) {
                         className: f.header,
                         children: [
                             (0, i.jsx)(o.CircleWarningIcon, {
-                                className: s()(f.headerIcon, p(d)),
+                                className: a()(f.headerIcon, p(d)),
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
@@ -115,7 +115,7 @@ t.Z = function (e) {
                         errors: d,
                         gameTitle: t,
                         location: e.location,
-                        consoleHelpArticle: a,
+                        consoleHelpArticle: s,
                         expiredCredentialsInteractable: r
                     })
                 ]

@@ -28,8 +28,8 @@ var i = n(772848),
     S = n(585483),
     A = n(358085),
     N = n(24933),
-    v = n(115130),
-    O = n(566620),
+    O = n(115130),
+    v = n(566620),
     R = n(317381),
     C = n(969345),
     y = n(148720),
@@ -123,10 +123,10 @@ async function H(e) {
         S = E.find((e) => e.userId === m),
         A = p.Z.getChannel(s);
     if ((_ && null !== (a = null == A ? void 0 : A.isPrivate()) && void 0 !== a && a && u && null == S && o.Z.selectParticipant(s, null), null == S)) return;
-    let v = I.Z.getMediaSessionId(),
-        O = f.compositeInstanceId,
-        y = null == v && (null == A ? void 0 : A.isVocal()) === !0 && (null == A ? void 0 : A.isPrivate()) === !1;
-    if (null == O || y) return;
+    let O = I.Z.getMediaSessionId(),
+        v = f.compositeInstanceId,
+        y = null == O && (null == A ? void 0 : A.isVocal()) === !0 && (null == A ? void 0 : A.isPrivate()) === !1;
+    if (null == v || y) return;
     let D = (0, i.Z)(),
         L = 'location' in f ? 2 : 1,
         b = null == A ? void 0 : A.getGuildId(),
@@ -141,9 +141,9 @@ async function H(e) {
         F = 1 + w.findIndex((e) => e === l),
         { releasePhase: V } = B(x),
         H = await (0, d.Z)(),
-        Z = null != v ? [v] : [],
+        Z = null != O ? [O] : [],
         Y = {
-            activitySessionId: O,
+            activitySessionId: v,
             activityUserSessionId: D,
             launchId: f.launchId,
             mediaSessionIds: Z,
@@ -154,7 +154,7 @@ async function H(e) {
             channel_id: A.id,
             guild_id: A.getGuildId(),
             media_session_id: Z[0],
-            activity_session_id: O,
+            activity_session_id: v,
             application_id: l,
             location_stack: _ ? void 0 : k[l],
             user_premium_tier: M.premiumType,
@@ -212,7 +212,7 @@ class Y extends l.Z {
                         if (e.userIds.has(n)) {
                             let t = R.ZP.getSelfEmbeddedActivityForChannel(e.channelId);
                             null == t
-                                ? (0, O.rp)(e.channelId, e.applicationId)
+                                ? (0, v.rp)(e.channelId, e.applicationId)
                                 : null == r &&
                                   this.hidePIPEmbed({
                                       channelId: t.channelId,
@@ -230,8 +230,8 @@ class Y extends l.Z {
                 let { error: t, applicationId: n } = e,
                     r = w.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC;
                 if (t instanceof _.Z) {
-                    let e = v.Z.getFetchState();
-                    if ((E.Sb.getSetting() && 'loaded' !== e && (await (0, O.$h)()), t.reason === _.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND)) v.Z.inDevModeForApplication(n) && (r = w.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_MISSING_PRIMARY_APP_COMMAND);
+                    let e = O.Z.getFetchState();
+                    if ((E.Sb.getSetting() && 'loaded' !== e && (await (0, v.$h)()), t.reason === _.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND)) O.Z.inDevModeForApplication(n) && (r = w.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_MISSING_PRIMARY_APP_COMMAND);
                 } else
                     switch (t.code) {
                         case U.evJ.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
@@ -305,14 +305,14 @@ class Y extends l.Z {
                     return;
                 }
                 let d = null !== (n = null == o ? void 0 : o.getGuildId()) && void 0 !== n ? n : void 0,
-                    { activityConfigs: _, applications: E } = await (0, O.w1)({ guildId: d }),
+                    { activityConfigs: _, applications: E } = await (0, v.w1)({ guildId: d }),
                     h = (0, C.Z)({
                         applicationId: a,
                         activityConfigs: _,
                         applications: E
                     });
                 if (null == h) {
-                    let e = await (0, O.w1)({
+                    let e = await (0, v.w1)({
                         guildId: d,
                         force: !0
                     });

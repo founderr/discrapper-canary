@@ -41,4 +41,4 @@ function l(e) {
         messageId: e.message_id
     };
 }
-((r = i || (i = {})).REMINDER = 'REMINDER'), (r.BOOKMARK = 'BOOKMARK');
+((r = i || (i = {})).ALL = 'ALL'), (r.REMINDER = 'REMINDER'), (r.BOOKMARK = 'BOOKMARK');

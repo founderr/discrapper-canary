@@ -33,7 +33,7 @@ var r = n(735250),
     S = n(689938),
     A = n(702284);
 let N = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/quicktime', 'video/mp4'];
-function v(e) {
+function O(e) {
     let { alt: t, spoiler: n, renderContent: a, size: s } = e,
         [o, l] = i.useState(!1);
     return (0, r.jsx)(f.a.Provider, {
@@ -77,7 +77,7 @@ function v(e) {
         })
     });
 }
-function O(e) {
+function v(e) {
     let { file: t, alt: n, spoiler: a, size: o = g.q.MEDIUM, onMouseEnter: u } = e,
         [c, d] = i.useState(),
         [_, E] = i.useState({
@@ -145,7 +145,7 @@ function O(e) {
         children: (0, r.jsx)(l.Clickable, {
             onClick: p,
             className: A.clickableMedia,
-            children: (0, r.jsx)(v, {
+            children: (0, r.jsx)(O, {
                 size: o,
                 alt: n,
                 spoiler: a,
@@ -172,7 +172,7 @@ function R(e) {
         (0, r.jsx)('div', {
             onMouseEnter: l,
             className: A.mediaContainer,
-            children: (0, r.jsx)(v, {
+            children: (0, r.jsx)(O, {
                 size: o,
                 alt: n,
                 spoiler: a,
@@ -198,7 +198,7 @@ function C(e) {
         [l, u] = i.useState(!1),
         c = a === g.q.SMALL;
     return n.isImage && n.item.platform === d.ow.WEB
-        ? (0, r.jsx)(O, {
+        ? (0, r.jsx)(v, {
               file: n.item.file,
               alt: n.description,
               spoiler: n.spoiler,
@@ -232,9 +232,9 @@ function C(e) {
             });
 }
 function y(e) {
-    let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: f, size: h = g.q.MEDIUM, canEdit: I = !0, hideFileName: N = !1, clip: v } = e,
-        O = null != v,
-        R = (h = O ? g.q.CLIP : h) === g.q.SMALL,
+    let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: f, size: h = g.q.MEDIUM, canEdit: I = !0, hideFileName: N = !1, clip: O } = e,
+        v = null != O,
+        R = (h = v ? g.q.CLIP : h) === g.q.SMALL,
         y = (0, o.e7)([p.Z], () => {
             var e;
             return null === (e = p.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
@@ -264,7 +264,7 @@ function y(e) {
                 I
                     ? (0, r.jsx)(T.Z, {
                           className: s()({ [A.action]: R }),
-                          tooltip: O ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : S.Z.Messages.ATTACHMENT_UTILITIES_SPOILER,
+                          tooltip: v ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : S.Z.Messages.ATTACHMENT_UTILITIES_SPOILER,
                           onClick: () => u.Z.update(t, a.id, n, { spoiler: !a.spoiler }),
                           children: a.spoiler
                               ? (0, r.jsx)(l.EyeSlashIcon, {
@@ -279,7 +279,7 @@ function y(e) {
                                 })
                       })
                     : null,
-                I && !O
+                I && !v
                     ? (0, r.jsx)(T.Z, {
                           className: s()({ [A.action]: R }),
                           tooltip: S.Z.Messages.ATTACHMENT_UTILITIES_MODIFY,
@@ -293,7 +293,7 @@ function y(e) {
                     : null,
                 (0, r.jsx)(T.Z, {
                     className: s()({ [A.action]: R }),
-                    tooltip: O ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : S.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
+                    tooltip: v ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : S.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
                     onClick: () => u.Z.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, r.jsx)(l.TrashIcon, {
@@ -317,7 +317,7 @@ function y(e) {
                 size: h
             }),
             !N &&
-                !O &&
+                !v &&
                 (0, r.jsx)('div', {
                     className: A.filenameContainer,
                     children: (0, r.jsx)(l.Text, {
@@ -326,15 +326,15 @@ function y(e) {
                         children: null != f ? f : a.filename
                     })
                 }),
-            O &&
+            v &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(_.Z, {
                             className: A.clipsFooter,
-                            createdAt: m.default.extractTimestamp(v.id),
-                            participantIds: v.users,
-                            applicationId: v.applicationId,
-                            title: v.name,
+                            createdAt: m.default.extractTimestamp(O.id),
+                            participantIds: O.users,
+                            applicationId: O.applicationId,
+                            title: O.name,
                             guildId: y
                         }),
                         (0, r.jsx)(l.TextBadge, {

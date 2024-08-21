@@ -70,10 +70,10 @@ class N extends s.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                POST_CONNECTION_OPEN: v,
-                CONNECTION_RESUMED: v,
+                POST_CONNECTION_OPEN: O,
+                CONNECTION_RESUMED: O,
                 CONNECTION_CLOSED: R,
-                APP_STATE_UPDATE: O
+                APP_STATE_UPDATE: v
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -85,10 +85,10 @@ class N extends s.Z {
                 : (t[n] = r);
     }
 }
-function v() {
+function O() {
     (A = !0), y(T, !0);
 }
-function O(e) {
+function v(e) {
     A && 'active' !== e.state && (clearTimeout(S), (S = null), C(!1));
 }
 function R() {

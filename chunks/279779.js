@@ -129,7 +129,7 @@ class N {
             this.subscribe();
     }
 }
-class v extends l.Z {
+class O extends l.Z {
     _initialize() {
         this.rebootWebworker();
     }
@@ -320,4 +320,4 @@ class v extends l.Z {
             });
     }
 }
-t.Z = new v();
+t.Z = new O();

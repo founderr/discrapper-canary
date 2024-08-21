@@ -306,14 +306,14 @@ d(S.prototype, E.prototype),
         this._responseType && (t.responseType = this._responseType), this.emit('request', this), t.send(void 0 === n ? null : n);
     }),
     (p.agent = () => new f());
-for (var N = 0, v = ['GET', 'POST', 'OPTIONS', 'PATCH', 'PUT', 'DELETE']; N < v.length; N++) {
-    let e = v[N];
+for (var N = 0, O = ['GET', 'POST', 'OPTIONS', 'PATCH', 'PUT', 'DELETE']; N < O.length; N++) {
+    let e = O[N];
     f.prototype[e.toLowerCase()] = function (t, n) {
         let r = new p.Request(e, t);
         return this._setDefaults(r), n && r.end(n), r;
     };
 }
-function O(e, t, n) {
+function v(e, t, n) {
     let r = p('DELETE', e);
     return 'function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
 }
@@ -330,8 +330,8 @@ function O(e, t, n) {
         let r = p('OPTIONS', e);
         return 'function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
     }),
-    (p.del = O),
-    (p.delete = O),
+    (p.del = v),
+    (p.delete = v),
     (p.patch = (e, t, n) => {
         let r = p('PATCH', e);
         return 'function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;

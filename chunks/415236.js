@@ -25,13 +25,13 @@ function r(e) {
                             children: o
                         })
                     }),
-                    null != d && null != c
-                        ? (0, n.jsx)(l.Switch, {
-                              id: r,
-                              checked: c,
-                              onChange: d
-                          })
-                        : null
+                    null != d &&
+                        null != c &&
+                        (0, n.jsx)(l.Switch, {
+                            id: r,
+                            checked: c,
+                            onChange: d
+                        })
                 ]
             }),
             (0, n.jsx)(l.Text, {

@@ -20,8 +20,8 @@ let g = 2,
     S = new Map(),
     A = new Map(),
     N = null,
-    v = [],
-    O = null,
+    O = [],
+    v = null,
     R = !1,
     C = new Map(),
     y = (e, t) => {
@@ -54,7 +54,7 @@ let g = 2,
                 value: e.name.trim().toLocaleLowerCase()
             };
         if ((0, T.jl)(e)) {
-            let t = v.find((t) => t.id === e.pack_id),
+            let t = O.find((t) => t.id === e.pack_id),
                 i = [
                     r,
                     ...(null != n ? n : '').split(',').map((e) => ({
@@ -105,10 +105,10 @@ let g = 2,
     },
     P = (e, t, n) => {
         S.set(e.id, e);
-        let r = [...v];
+        let r = [...O];
         if (t) {
             let t = r.findIndex((t) => t.id === e.id);
-            -1 !== t ? (r[t] = e) : r.push(e), (v = r);
+            -1 !== t ? (r[t] = e) : r.push(e), (O = r);
         }
         (t || n) && e.stickers.forEach((e) => b(e));
     },
@@ -117,7 +117,7 @@ let g = 2,
             let n = p.Z.getGuild(t);
             null != n && e.forEach((e) => M(e, n));
         }),
-            v.forEach((e) => {
+            O.forEach((e) => {
                 e.stickers.forEach((e) => M(e));
             });
     };
@@ -139,7 +139,7 @@ class x extends (r = l.ZP.Store) {
         return L(), null == N && ((N = new Map()), U()), N;
     }
     get hasLoadedStickerPacks() {
-        return null != O && O + D > Date.now();
+        return null != v && v + D > Date.now();
     }
     get isFetchingStickerPacks() {
         return R;
@@ -151,10 +151,10 @@ class x extends (r = l.ZP.Store) {
         return S.get(e);
     }
     getPremiumPacks() {
-        return v;
+        return O;
     }
     isPremiumPack(e) {
-        return v.some((t) => t.id === e);
+        return O.some((t) => t.id === e);
     }
     getRawStickersByGuild() {
         return C;
@@ -200,14 +200,14 @@ class x extends (r = l.ZP.Store) {
                 (C = new Map(C));
         },
         LOGOUT: () => {
-            (g = 0), (v = []), A.clear(), S.clear(), (N = null), C.clear(), (C = new Map(C)), (R = !1), (O = null);
+            (g = 0), (O = []), A.clear(), S.clear(), (N = null), C.clear(), (C = new Map(C)), (R = !1), (v = null);
         },
         STICKER_PACKS_FETCH_START: () => {
             R = !0;
         },
         STICKER_PACKS_FETCH_SUCCESS: (e) => {
             let { packs: t } = e;
-            t.forEach((e) => P(e, !0)), (O = Date.now()), (R = !1);
+            t.forEach((e) => P(e, !0)), (v = Date.now()), (R = !1);
         },
         STICKER_PACK_FETCH_SUCCESS: (e) => {
             let { pack: t, ingestStickers: n } = e;

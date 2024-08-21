@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return A;
     }
 }),
     t(47120);
@@ -19,21 +19,21 @@ var i = t(735250),
     C = t(176412),
     f = t(231338),
     h = t(689938),
-    A = t(872674);
-function E(e) {
-    let { channel: n, application: t, sectionName: E, commandName: N, buttonSize: v = o.ButtonSizes.MEDIUM } = e,
-        x = a.useId(),
+    E = t(872674);
+function A(e) {
+    let { channel: n, application: t, sectionName: A, commandName: N, buttonSize: x = o.ButtonSizes.MEDIUM } = e,
+        v = a.useId(),
         I = a.useCallback(() => {
             m.y(p.ti.ACTIVITY);
         }, []),
         { submitting: g, wasSubmitting: P } = (0, _.Z)({
             applicationId: t.id,
             channelId: n.id,
-            launchingComponentId: x,
+            launchingComponentId: v,
             onSubmissionComplete: I
         }),
-        [S, L] = a.useState(!1),
-        b = (0, c.Qv)({
+        [L, b] = a.useState(!1),
+        S = (0, c.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
@@ -45,10 +45,10 @@ function E(e) {
             channel: n,
             application: t,
             location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: E,
+            sectionName: A,
             commandName: N,
-            autoDismissOnClick: b === c.JS.LEAVE,
-            launchingComponentId: x,
+            autoDismissOnClick: S === c.JS.LEAVE,
+            launchingComponentId: v,
             submitting: null != P ? P : g
         }),
         y = (function (e) {
@@ -69,23 +69,23 @@ function E(e) {
             return o;
         })({
             channel: n,
-            activityAction: b
+            activityAction: S
         });
     return (0, i.jsx)(o.Tooltip, {
         shouldShow: y,
-        tooltipContentClassName: A.tooltipContent,
+        tooltipContentClassName: E.tooltipContent,
         text: h.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START,
         children: (e) => {
             let { onClick: n, ...a } = e;
             return (0, i.jsx)(o.Button, {
                 ...a,
                 type: 'submit',
-                size: v,
+                size: x,
                 color: T,
                 disabled: y,
-                submitting: S,
+                submitting: L,
                 onClick: () => {
-                    L(!0), R(), null == n || n();
+                    b(!0), R(), null == n || n();
                 },
                 'aria-label': h.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
                     buttonText: M,

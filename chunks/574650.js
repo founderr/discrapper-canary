@@ -1,8 +1,8 @@
 n(653041), n(47120);
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     r = n(266067),
     l = n(442837),
     o = n(481060),
@@ -19,9 +19,9 @@ var a = n(120356),
     C = n(389397);
 t.Z = () => {
     var e, t;
-    let a = (0, l.e7)([u.Z], () => u.Z.getGuildId(), []),
-        f = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
-        p = (0, l.e7)([I.Z], () => (null != a ? I.Z.getRequest(a) : null), [a]),
+    let s = (0, l.e7)([u.Z], () => u.Z.getGuildId(), []),
+        f = (0, l.e7)([c.Z], () => c.Z.getGuild(s), [s]),
+        p = (0, l.e7)([I.Z], () => (null != s ? I.Z.getRequest(s) : null), [s]),
         g = (0, r.TH)(),
         S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == f ? void 0 : f.id, T.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
     if (null == f || !f.hasVerificationGate() || S) return null;
@@ -74,7 +74,7 @@ t.Z = () => {
                 });
     }
     return (0, i.jsxs)('div', {
-        className: s()(...M),
+        className: a()(...M),
         children: [
             (0, i.jsx)(o.Text, {
                 className: N.header,

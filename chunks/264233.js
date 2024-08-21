@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(392711),
-    r = n.n(s),
+    s = n(470079),
+    a = n(392711),
+    r = n.n(a),
     l = n(442837),
     o = n(524437),
     c = n(481060),
@@ -19,10 +19,10 @@ var i = n(735250),
     m = n(689938),
     T = n(401098);
 function h(e) {
-    let { setTab: t, badgeState: s, closePopout: h } = e,
+    let { setTab: t, badgeState: a, closePopout: h } = e,
         C = (0, l.Wu)([u.Z], () => u.Z.getInvites()),
         f = (0, l.e7)([u.Z], () => u.Z.getInviteStatuses()),
-        [p, g] = a.useMemo(
+        [p, g] = s.useMemo(
             () =>
                 r().partition(C, (e) => {
                     var t;
@@ -30,7 +30,7 @@ function h(e) {
                 }),
             [C, f]
         );
-    return (a.useEffect(() => {
+    return (s.useEffect(() => {
         (0, d.sJ)();
     }),
     0 === C.length)
@@ -40,7 +40,7 @@ function h(e) {
                   (0, i.jsx)(E.Z, {
                       tab: o.X.GAME_INVITES,
                       setTab: t,
-                      badgeState: s,
+                      badgeState: a,
                       closePopout: h
                   }),
                   (0, i.jsx)('div', {
@@ -59,7 +59,7 @@ function h(e) {
                   (0, i.jsx)(E.Z, {
                       tab: o.X.GAME_INVITES,
                       setTab: t,
-                      badgeState: s,
+                      badgeState: a,
                       closePopout: h,
                       children: (0, i.jsx)(c.CircleIconButton, {
                           className: T.__invalid_deleteButton,

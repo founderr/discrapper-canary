@@ -118,7 +118,7 @@ function N(e, t) {
         rating: t
     });
 }
-async function v() {
+async function O() {
     var e;
     let t, n;
     if (!f.Z.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -141,7 +141,7 @@ async function v() {
         receivedAt: Date.now()
     });
 }
-async function O(e) {
+async function v(e) {
     let t,
         n,
         { useQuickSwitcher: r = !0, useChannelAffinities: i = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -217,7 +217,7 @@ t.ZP = {
     },
     setHighlightedSummary: T,
     fetchSummaries: m,
-    fetchSummariesBulk: O,
+    fetchSummariesBulk: v,
     useChannelSummaries: function (e) {
         let { channelIds: t = [] } = e;
         return (
@@ -229,9 +229,9 @@ t.ZP = {
                     t && e();
                     async function e() {
                         try {
-                            await v();
+                            await O();
                         } catch (e) {}
-                        await O(n.split(','));
+                        await v(n.split(','));
                     }
                 }, [n, t]);
             })(t),

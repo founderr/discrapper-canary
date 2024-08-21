@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     r = n(481060),
     l = n(565138),
     o = n(241559),
@@ -24,13 +24,13 @@ var i = n(735250),
 function p(e) {
     var t, p;
     let { onDismiss: g } = e,
-        S = (0, s.e7)([_.Z], () => _.Z.getGuildId()),
-        A = (0, s.e7)([d.Z], () => (null != S ? d.Z.getChannelId(S) : null), [S]),
+        S = (0, a.e7)([_.Z], () => _.Z.getGuildId()),
+        A = (0, a.e7)([d.Z], () => (null != S ? d.Z.getChannelId(S) : null), [S]),
         R = null != S ? S : null,
-        x = (0, s.e7)([u.Z], () => (null != R ? u.Z.getGuild(R) : null), [R]),
+        x = (0, a.e7)([u.Z], () => (null != R ? u.Z.getGuild(R) : null), [R]),
         { shouldShowIncidentActions: O, incidentData: M, isUnderLockdown: v } = (0, I.mI)(R),
         L = (0, o.n2)(null !== (t = null == x ? void 0 : x.id) && void 0 !== t ? t : h.lds),
-        Z = a.useCallback(() => null != x && (0, c._X)(x.id), [x]);
+        Z = s.useCallback(() => null != x && (0, c._X)(x.id), [x]);
     if (null == x || null == M || !O) return null;
     let P = (e) => {
             if (e && L && A !== N.oC.MEMBER_SAFETY && Z()) {
@@ -54,12 +54,12 @@ function p(e) {
                     });
             });
         },
-        b = (0, i.jsx)(l.Z, {
+        D = (0, i.jsx)(l.Z, {
             className: f.guildIcon,
             guild: x,
             size: l.Z.Sizes.MINI
         }),
-        D = (0, T.OY)(M, x.name);
+        b = (0, T.OY)(M, x.name);
     if (null != (null !== (p = M.dmsDisabledUntil) && void 0 !== p ? p : M.invitesDisabledUntil) && v)
         return (0, i.jsxs)(r.Notice, {
             className: f.notice,
@@ -69,8 +69,8 @@ function p(e) {
                     onClick: g,
                     noticeType: h.kVF.GUILD_RAID_NOTIFICATION
                 }),
-                b,
                 D,
+                b,
                 (0, i.jsx)(r.NoticeButton, {
                     className: f.actionButton,
                     onClick: () => P(!1),
@@ -97,7 +97,7 @@ function p(e) {
                 onClick: g,
                 noticeType: h.kVF.GUILD_RAID_NOTIFICATION
             }),
-            b,
+            D,
             j,
             !U &&
                 (0, i.jsx)(r.NoticeButton, {

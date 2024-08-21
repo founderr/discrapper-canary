@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return O;
     }
 }),
     n(47120);
@@ -25,9 +25,9 @@ var r = n(735250),
     S = n(915108),
     A = n(881828);
 let N = 32;
-function v(e) {
-    let { user: t, children: n, onClose: v } = e,
-        { analyticsLocations: O } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
+function O(e) {
+    let { user: t, children: n, onClose: O } = e,
+        { analyticsLocations: v } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
         { context: R } = (0, f.KZ)(),
         { profileType: C, primaryColor: y } = (0, p.z)(),
         { selfPastActivityEnabled: D } = (0, h.z)({ location: 'UserProfileActivityEducationTooltipPopout' }),
@@ -44,10 +44,10 @@ function v(e) {
             (0, I.openUserProfileModal)({
                 userId: t.id,
                 section: m.oh.ACTIVITY,
-                sourceAnalyticsLocations: O,
+                sourceAnalyticsLocations: v,
                 ...R
             }),
-                null == v || v();
+                null == O || O();
         };
     return (0, r.jsx)(o.Popout, {
         shouldShow: null != w,

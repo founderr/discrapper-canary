@@ -27,11 +27,11 @@ var r,
     S = n(463396),
     A = n(944192),
     N = n(981631),
-    v = n(438379);
-function O(e) {
+    O = n(438379);
+function v(e) {
     let { compact: t } = e;
     return (0, a.jsx)(h.Z, {
-        className: t ? v.botTagCompact : v.botTagCozy,
+        className: t ? O.botTagCompact : O.botTagCozy,
         type: h.Z.Types.REMIX,
         useRemSizes: !0
     });
@@ -56,7 +56,7 @@ function R(e) {
             [i.id, i.author.id]
         ),
         W = {
-            className: v.username,
+            className: O.username,
             style: 'username' === Z && null != F ? { color: F } : void 0,
             onClick: L,
             onContextMenu: b,
@@ -69,7 +69,7 @@ function R(e) {
                           clan: r.clan,
                           userId: i.author.id,
                           contextGuildId: G,
-                          className: v.clanTagChiplet,
+                          className: O.clanTagChiplet,
                           profileViewedAnalytics: j
                       })
                     : null,
@@ -110,7 +110,7 @@ function R(e) {
                                   tag: 'span',
                                   ...n,
                                   ...W,
-                                  className: l()(W.className, v.clickable, D)
+                                  className: l()(W.className, O.clickable, D)
                               }),
                               K
                           ]
@@ -140,7 +140,7 @@ function R(e) {
                 ? (0, a.jsx)(d.RoleDot, {
                       color: F,
                       name: V,
-                      className: v.roleDot
+                      className: O.roleDot
                   })
                 : null,
             n,
@@ -151,7 +151,7 @@ function R(e) {
                             clan: r.clan,
                             userId: i.author.id,
                             contextGuildId: G,
-                            className: v.clanTagChiplet,
+                            className: O.clanTagChiplet,
                             profileViewedAnalytics: j
                         }),
                         (0, a.jsx)(A.Z, { message: i })
@@ -159,7 +159,7 @@ function R(e) {
                 }),
             null != q ? (0, a.jsx)(a.Fragment, { children: q }) : null,
             null == z || R ? null : z,
-            null != i && (0, S.f)(i) && Y && U ? (0, a.jsx)(O, {}) : null
+            null != i && (0, S.f)(i) && Y && U ? (0, a.jsx)(v, {}) : null
         ]
     });
 }

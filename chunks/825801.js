@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return O;
     },
     _: function () {
         return A;
@@ -44,8 +44,8 @@ let A = 1200,
                 (0, _.vE)(r);
         }
     };
-function v(e) {
-    let { user: t, channel: n, sourceType: i, sourceDetails: _, isVisible: v, isExpandable: O, onInteraction: R, setInteractionToastShown: C, setInteractionSent: y, setIsReplyInteraction: D, onClose: L } = e,
+function O(e) {
+    let { user: t, channel: n, sourceType: i, sourceDetails: _, isVisible: O, isExpandable: v, onInteraction: R, setInteractionToastShown: C, setInteractionSent: y, setIsReplyInteraction: D, onClose: L } = e,
         { trackUserProfileAction: b } = (0, f.KZ)(),
         { sendReact: M, pressReact: P, pressReply: U } = (0, p.Q)(i),
         w = (0, s.e7)([c.default], () => c.default.getId() === t.id),
@@ -78,15 +78,15 @@ function v(e) {
     };
     return (0, r.jsxs)(l.ZP, {
         className: a()(S.popover, {
-            [S.visible]: v,
-            [S.expandable]: O,
+            [S.visible]: O,
+            [S.expandable]: v,
             [S.statusPopover]: i === m.n_.STATUS,
             [S.avatarPopover]: i === m.n_.AVATAR
         }),
         children: [
             (0, r.jsx)(o.TooltipContainer, {
                 text: g.Z.Messages.USER_PROFILE_SEND_REACTION,
-                shouldShow: v,
+                shouldShow: O,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(o.Popout, {
@@ -136,7 +136,7 @@ function v(e) {
             }),
             (0, r.jsx)(o.TooltipContainer, {
                 text: g.Z.Messages.USER_PROFILE_REPLY,
-                shouldShow: v,
+                shouldShow: O,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(l.zx, {

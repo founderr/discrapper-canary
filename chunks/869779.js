@@ -18,8 +18,8 @@ var n = s(735250),
     g = s(471445),
     E = s(351123),
     T = s(665906),
-    p = s(210887),
-    N = s(131704),
+    N = s(210887),
+    p = s(131704),
     _ = s(533947),
     S = s(277053),
     x = s(388610),
@@ -30,8 +30,8 @@ var n = s(735250),
     R = s(585483),
     Z = s(787263),
     v = s(975316),
-    O = s(428813),
-    A = s(2147),
+    A = s(428813),
+    O = s(2147),
     L = s(856606),
     j = s(981631),
     b = s(689938),
@@ -59,7 +59,7 @@ class w extends l.PureComponent {
         (i || a || r) && (n !== j.QZA.CLOSED || n === t) && (a || l !== j.CoT.PERMISSIONS) && (r || l !== j.CoT.INTEGRATIONS) ? l !== s && y(l, s) : (0, d.xf)();
     }
     render() {
-        let { theme: e, sidebarTheme: t, section: s, channel: l, category: a, canManageRoles: r, canManageChannels: h, canDeleteChannels: T, canManageWebhooks: p } = this.props;
+        let { theme: e, sidebarTheme: t, section: s, channel: l, category: a, canManageRoles: r, canManageChannels: h, canDeleteChannels: T, canManageWebhooks: N } = this.props;
         return null == l
             ? null
             : (0, n.jsx)(c.ZP, {
@@ -72,8 +72,8 @@ class w extends l.PureComponent {
                       let { channel: t, category: s, canManageRoles: l, canManageChannels: a, canDeleteChannels: r, canManageWebhooks: c } = e,
                           h = (0, g.KS)(t),
                           { GUILD_CATEGORY: T } = j.d4z,
-                          p = N.Ec.has(t.type),
-                          f = t.type === T ? b.Z.Messages.DELETE_CATEGORY : p ? (t.isForumPost() ? b.Z.Messages.DELETE_FORUM_POST : b.Z.Messages.DELETE_THREAD) : b.Z.Messages.DELETE_CHANNEL;
+                          N = p.Ec.has(t.type),
+                          f = t.type === T ? b.Z.Messages.DELETE_CATEGORY : N ? (t.isForumPost() ? b.Z.Messages.DELETE_FORUM_POST : b.Z.Messages.DELETE_THREAD) : b.Z.Messages.DELETE_CHANNEL;
                       return [
                           {
                               section: u.ID.HEADER,
@@ -107,9 +107,9 @@ class w extends l.PureComponent {
                               section: j.CoT.OVERVIEW,
                               label: b.Z.Messages.OVERVIEW,
                               ariaLabel: b.Z.Messages.OVERVIEW,
-                              element: A.Z,
+                              element: O.Z,
                               notice: {
-                                  element: A.G,
+                                  element: O.G,
                                   stores: [x.Z]
                               }
                           },
@@ -121,14 +121,14 @@ class w extends l.PureComponent {
                                   element: L.n,
                                   stores: [S.Z]
                               },
-                              predicate: () => l && !p
+                              predicate: () => l && !N
                           },
                           {
                               section: j.CoT.INSTANT_INVITES,
                               label: b.Z.Messages.INVITES,
-                              element: O.Z,
+                              element: A.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => t.type !== T && a && !p
+                              predicate: () => t.type !== T && a && !N
                           },
                           {
                               section: j.CoT.INTEGRATIONS,
@@ -139,7 +139,7 @@ class w extends l.PureComponent {
                                   stores: [_.Z],
                                   element: v.B
                               },
-                              predicate: () => !!c && N.Ti.has(t.type)
+                              predicate: () => !!c && p.Ti.has(t.type)
                           },
                           { section: u.ID.DIVIDER },
                           {
@@ -167,7 +167,7 @@ class w extends l.PureComponent {
                       canManageRoles: r,
                       canManageChannels: h,
                       canDeleteChannels: T,
-                      canManageWebhooks: p
+                      canManageWebhooks: N
                   })
               });
     }
@@ -176,8 +176,8 @@ function P() {
     let { channel: e, analyticsLocation: t } = (0, a.cj)([x.Z], () => x.Z.getProps()),
         s = (0, a.e7)([x.Z], () => x.Z.getFormState()),
         l = (0, a.e7)([x.Z], () => x.Z.getSection()),
-        i = (0, a.e7)([p.Z], () => p.Z.theme),
-        r = (0, a.e7)([p.Z], () => (p.Z.darkSidebar ? j.BRd.DARK : void 0)),
+        i = (0, a.e7)([N.Z], () => N.Z.theme),
+        r = (0, a.e7)([N.Z], () => (N.Z.darkSidebar ? j.BRd.DARK : void 0)),
         o = (0, T.C7)(e),
         d = (0, T.Xb)(e),
         {

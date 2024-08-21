@@ -44,8 +44,8 @@ let A = {
         shouldShowNewActivityIndicator: !1
     },
     N = [],
-    v = [],
-    O = new Map(),
+    O = [],
+    v = new Map(),
     R = new Map(),
     C = new Map(),
     y = new Map(),
@@ -64,18 +64,18 @@ function B(e) {
 }
 function F(e) {
     var t, n, i, a;
-    let { guildId: s, channelId: o, location: E, applicationId: I, launchId: S, compositeInstanceId: A, participants: v } = e,
+    let { guildId: s, channelId: o, location: E, applicationId: I, launchId: S, compositeInstanceId: A, participants: O } = e,
         D = (0, h.Z)(I);
     if (null == D) return;
     let L = null !== (n = C.get(o)) && void 0 !== n ? n : N,
         b = 0 === L.length,
         M = L.find((e) => e.applicationId === I),
-        P = v.map((e) => e.userId),
+        P = O.map((e) => e.userId),
         U = l.default.getId(),
         w = P.some((e) => e === U),
-        k = null === (t = v.find((e) => e.userId === U)) || void 0 === t ? void 0 : t.sessionId,
-        F = v.some((e) => (0, p.J)(e)),
-        V = O.get(I),
+        k = null === (t = O.find((e) => e.userId === U)) || void 0 === t ? void 0 : t.sessionId,
+        F = O.some((e) => (0, p.J)(e)),
+        V = v.get(I),
         H = {
             applicationId: I,
             channelId: o,
@@ -85,18 +85,18 @@ function F(e) {
             compositeInstanceId: A,
             url: D,
             userIds: new Set(P),
-            participants: v
+            participants: O
         };
     w &&
         null != V &&
-        O.set(V.applicationId, {
+        v.set(V.applicationId, {
             ...V,
             ...H
         });
     null != V && o === V.channelId && I === (null == V ? void 0 : V.applicationId) && ((!w && Array.from(V.userIds).some((e) => e === U)) || !F)
         ? y.get(o) === I
             ? y.delete(o)
-            : (O.delete(I), _.S.dispatch(g.CkL.RELEASE_ACTIVITY_WEB_VIEW))
+            : (v.delete(I), _.S.dispatch(g.CkL.RELEASE_ACTIVITY_WEB_VIEW))
         : w &&
           (null == V || V.applicationId !== I || V.channelId !== o) &&
           (k === l.default.getSessionId() || (0, f.$)('EmbeddedActivitiesStore')) &&
@@ -105,14 +105,14 @@ function F(e) {
               let { channelId: i, applicationId: a, launchId: s, compositeInstanceId: o, location: E, participants: f, isFirstActivityInChannel: p, isStart: I } = e,
                   S = (0, h.Z)(a),
                   A = l.default.getSessionId();
-              if (null == S || null == A || (null === (t = O.get(a)) || void 0 === t ? void 0 : t.channelId) === i) return !1;
+              if (null == S || null == A || (null === (t = v.get(a)) || void 0 === t ? void 0 : t.channelId) === i) return !1;
               let N = u.Z.getChannel(i),
-                  v = null == N ? void 0 : N.getGuildId(),
+                  O = null == N ? void 0 : N.getGuildId(),
                   R = d.default.getCurrentUser();
-              if ((null == v && !(null !== (n = null == N ? void 0 : N.isPrivate()) && void 0 !== n && n)) || null == R) return !1;
+              if ((null == O && !(null !== (n = null == N ? void 0 : N.isPrivate()) && void 0 !== n && n)) || null == R) return !1;
               r = i;
               let C = {
-                  guildId: v,
+                  guildId: O,
                   channelId: i,
                   applicationId: a,
                   url: S,
@@ -123,7 +123,7 @@ function F(e) {
                   compositeInstanceId: o,
                   location: E
               };
-              O.set(a, C),
+              v.set(a, C),
                   _.S.dispatch(g.CkL.OPEN_EMBEDDED_ACTIVITY, {
                       channelId: i,
                       applicationId: a,
@@ -140,7 +140,7 @@ function F(e) {
               launchId: S,
               compositeInstanceId: A,
               location: E,
-              participants: v,
+              participants: O,
               isFirstActivityInChannel: b,
               isStart: null == M
           });
@@ -194,7 +194,7 @@ class j extends (i = a.ZP.PersistedStore) {
     getSelfEmbeddedActivityForChannel(e) {
         var t;
         return null !==
-            (t = Array.from(O.values()).find((t) => {
+            (t = Array.from(v.values()).find((t) => {
                 let { channelId: n } = t;
                 return e === n;
             })) && void 0 !== t
@@ -202,7 +202,7 @@ class j extends (i = a.ZP.PersistedStore) {
             : null;
     }
     getSelfEmbeddedActivities() {
-        return O;
+        return v;
     }
     getEmbeddedActivitiesForGuild(e) {
         var t;
@@ -225,7 +225,7 @@ class j extends (i = a.ZP.PersistedStore) {
     getShelfActivities(e) {
         var t;
         let n = B(e);
-        return null !== (t = L.get(n)) && void 0 !== t ? t : v;
+        return null !== (t = L.get(n)) && void 0 !== t ? t : O;
     }
     getShelfFetchStatus(e) {
         let t = B(e);
@@ -363,8 +363,8 @@ let W = new j(s.Z, {
     },
     EMBEDDED_ACTIVITY_CLOSE: function (e) {
         let { applicationId: t } = e,
-            n = O.get(t);
-        O.delete(t), (null == n ? void 0 : n.channelId) === r && (r = void 0);
+            n = v.get(t);
+        v.delete(t), (null == n ? void 0 : n.channelId) === r && (r = void 0);
     },
     EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
         let { applicationId: t, launchId: n, compositeInstanceId: r, location: i, participants: a } = e;
@@ -386,15 +386,15 @@ let W = new j(s.Z, {
         var t;
         let { activity: n } = e;
         if (null == n) return !1;
-        let r = O.get(null !== (t = n.application_id) && void 0 !== t ? t : '');
+        let r = v.get(null !== (t = n.application_id) && void 0 !== t ? t : '');
         if (null == r) return !1;
-        O.set(r.applicationId, { ...r });
+        v.set(r.applicationId, { ...r });
     },
     EMBEDDED_ACTIVITY_SET_CONFIG: function (e) {
         let { applicationId: t, config: n } = e,
-            r = O.get(t);
+            r = v.get(t);
         null != r &&
-            O.set(r.applicationId, {
+            v.set(r.applicationId, {
                 ...r,
                 config: n
             });
@@ -473,7 +473,7 @@ let W = new j(s.Z, {
     },
     CHANNEL_CALL_POPOUT_WINDOW_OPEN: function (e) {
         let { channel: t } = e,
-            n = Array.from(O.values()).find((e) => {
+            n = Array.from(v.values()).find((e) => {
                 let { channelId: n } = e;
                 return t.id === n;
             });

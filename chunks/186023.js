@@ -13,8 +13,8 @@ t.Z = (e) => {
     let { reportType: t, menu: n, modalProps: E, onSubmit: f, onNavigate: h, emailToken: p, isAuthenticated: I = !0 } = e,
         m = (0, o.Dt)(),
         { nodes: T, root_node_id: g, success_node_id: S, fail_node_id: A } = n,
-        [N, v] = i.useState(g),
-        [O, R] = i.useState(void 0),
+        [N, O] = i.useState(g),
+        [v, R] = i.useState(void 0),
         [C, y] = i.useState(void 0),
         [D, L] = i.useState([]),
         [b, M] = i.useState(void 0),
@@ -39,7 +39,7 @@ t.Z = (e) => {
                     next_node: a.id
                 });
             }
-            v(i);
+            O(i);
         },
         x = async (e) => {
             var r;
@@ -63,7 +63,7 @@ t.Z = (e) => {
                     next_node: T[a].id
                 });
             }
-            R(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state), y(null == i ? void 0 : i.textInput), v(a), L(r), null == h || h('..');
+            R(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state), y(null == i ? void 0 : i.textInput), O(a), L(r), null == h || h('..');
         },
         k = i.useMemo(() => {
             let e = [],
@@ -107,7 +107,7 @@ t.Z = (e) => {
                                 onModalClose: E.onClose,
                                 onSelectChild: w,
                                 onNavigateBack: G,
-                                multiSelect: O,
+                                multiSelect: v,
                                 textInput: C,
                                 successNodeId: S,
                                 failNodeId: A,

@@ -10,7 +10,7 @@ n.d(t, {
         return N;
     },
     Wf: function () {
-        return O;
+        return v;
     },
     XU: function () {
         return m;
@@ -22,7 +22,7 @@ n.d(t, {
         return y;
     },
     m1: function () {
-        return v;
+        return O;
     },
     op: function () {
         return C;
@@ -100,14 +100,14 @@ function A() {
 function N() {
     return a;
 }
-function v(e) {
+function O(e) {
     if (null == e) {
         var t;
         e = null !== (t = r.location.pathname) && void 0 !== t ? t : '';
     }
     return !e.startsWith(c.Z5c.HANDOFF) && !0;
 }
-function O(e) {
+function v(e) {
     if (null == e) {
         var t;
         e = null !== (t = r.location.pathname) && void 0 !== t ? t : '';

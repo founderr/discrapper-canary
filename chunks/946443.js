@@ -8,9 +8,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    r = n.n(a),
     l = n(525654),
     o = n.n(l),
     c = n(91192),
@@ -31,28 +31,28 @@ var i = n(735250),
     A = n(689938),
     R = n(758046);
 function x(e) {
-    let { setTab: t, onJump: n, showTutorial: s, setSeenTutorial: l, closePopout: x, badgeState: M } = e,
-        v = a.useRef(null),
+    let { setTab: t, onJump: n, showTutorial: a, setSeenTutorial: l, closePopout: x, badgeState: M } = e,
+        v = s.useRef(null),
         [L, Z] = (0, g.ZP)(v),
-        { loadState: P, channels: b } = L,
-        { maybeLoadMore: D, markAllRead: j } = Z;
+        { loadState: P, channels: D } = L,
+        { maybeLoadMore: b, markAllRead: j } = Z;
     (function (e, t, n) {
-        a.useLayoutEffect(() => {
+        s.useLayoutEffect(() => {
             var i;
-            let { scrollToChannelIndex: a } = t;
+            let { scrollToChannelIndex: s } = t;
             n.clearScrollToChannelIndex();
-            let { current: s } = e;
-            if (null == s || null == a) return;
-            let r = null === (i = s.getScrollerNode()) || void 0 === i ? void 0 : i.children;
+            let { current: a } = e;
+            if (null == a || null == s) return;
+            let r = null === (i = a.getScrollerNode()) || void 0 === i ? void 0 : i.children;
             if (null == r) return;
-            let l = r[a];
+            let l = r[s];
             if (null == l) return;
-            let { scrollTop: o, scrollHeight: c } = s.getScrollerState();
-            (l.offsetTop < o || l.offsetTop > o + c) && s.scrollTo({ to: l.offsetTop });
+            let { scrollTop: o, scrollHeight: c } = a.getScrollerState();
+            (l.offsetTop < o || l.offsetTop > o + c) && a.scrollTo({ to: l.offsetTop });
         });
     })(v, L, Z),
         (function (e, t) {
-            a.useEffect(() => {
+            s.useEffect(() => {
                 let n = () => {
                     let n = e.channels.find((e) => !e.collapsed);
                     null != n && t.markChannelRead(n);
@@ -65,10 +65,10 @@ function x(e) {
                 );
             }, [t, e.channels]);
         })(L, Z),
-        a.useEffect(() => {
+        s.useEffect(() => {
             T.default.track(S.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
-        a.useEffect(
+        s.useEffect(
             () => (
                 E.Z.subscribe('CONNECTION_OPEN', x),
                 () => {
@@ -79,7 +79,7 @@ function x(e) {
         );
     let U = (0, u.e7)([I.Z], () => I.Z.messageGroupSpacing),
         y = (0, m.Z)('unreads', v);
-    if (0 === b.length) {
+    if (0 === D.length) {
         var B;
         return (0, i.jsxs)('div', {
             className: R.container,
@@ -116,16 +116,16 @@ function x(e) {
                 navigator: y,
                 children: (0, i.jsx)(c.SJ, {
                     children: (e) => {
-                        let { ref: t, ...a } = e;
+                        let { ref: t, ...s } = e;
                         return (0, i.jsxs)(_.AdvancedScrollerThin, {
                             ref: (e) => {
                                 var n;
                                 (v.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
-                            ...a,
-                            onScroll: P === g.jd.Done ? void 0 : D,
+                            ...s,
+                            onScroll: P === g.jd.Done ? void 0 : b,
                             className: R.scroller,
-                            children: [s ? (0, i.jsx)(O, { setSeenTutorial: l }) : null, (0, p.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: R.spinner })]
+                            children: [a ? (0, i.jsx)(O, { setSeenTutorial: l }) : null, (0, p.Z)(D, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: R.spinner })]
                         });
                     }
                 })
@@ -169,7 +169,7 @@ function O(e) {
     });
 }
 function M(e) {
-    let { setTab: t, badgeState: n, closePopout: a } = e;
+    let { setTab: t, badgeState: n, closePopout: s } = e;
     return (0, i.jsxs)('div', {
         className: R.container,
         children: [
@@ -177,7 +177,7 @@ function M(e) {
                 tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: n,
-                closePopout: a
+                closePopout: s
             }),
             (0, i.jsx)(C.Z, {
                 Icon: _.InboxIcon,

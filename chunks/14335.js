@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(793030),
+    s = n(470079),
+    a = n(793030),
     r = n(442837),
     l = n(481060),
     o = n(230711),
@@ -32,7 +32,7 @@ function p() {
         ),
         { location: p } = (0, c.O)(),
         { analyticsLocations: g } = (0, u.ZP)(),
-        S = a.useCallback(() => {
+        S = s.useCallback(() => {
             (0, d.Z)({
                 subscriptionTier: I.ZP.getSkuIdForPremiumType(h.p9.TIER_2),
                 analyticsLocations: g,
@@ -43,10 +43,10 @@ function p() {
                 }
             });
         }, [g, p]),
-        A = a.useCallback(() => {
+        A = s.useCallback(() => {
             o.Z.open(N.oAB.INVENTORY), T.ZP.dismissOutboundPromotionNotice();
         }, []),
-        R = a.useCallback(() => {
+        R = s.useCallback(() => {
             E.default.track(N.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? S() : A();
         }, [n, S, A]);
     return (0, i.jsxs)(l.Notice, {
@@ -65,7 +65,7 @@ function p() {
             }),
             t
                 ? n
-                    ? (0, i.jsxs)(s.x, {
+                    ? (0, i.jsxs)(a.x, {
                           variant: 'text-sm/normal',
                           className: f.text,
                           children: [C.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE_V2, ' ', C.Z.Messages.LEARN_MORE_CLICK.format({ onClick: A })]

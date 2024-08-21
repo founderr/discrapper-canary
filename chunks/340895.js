@@ -1,91 +1,92 @@
+let r;
 n(47120);
-var r,
-    i,
+var i,
     a,
     s,
-    o = n(442837),
-    l = n(433517),
-    u = n(570140),
-    c = n(695346),
-    d = n(581883),
-    _ = n(314897),
-    E = n(592125),
-    f = n(885110),
-    h = n(981631);
-let p = 'IncomingCallStore',
-    I = {
+    o,
+    l = n(442837),
+    u = n(433517),
+    c = n(570140),
+    d = n(695346),
+    _ = n(581883),
+    E = n(314897),
+    f = n(592125),
+    h = n(885110),
+    p = n(451478),
+    I = n(981631);
+let m = {
         width: 232,
         height: 315
     },
-    m = new Set(),
-    T = [],
-    g = new Map(),
-    S = new Set(),
-    A = 0,
-    N = 0,
-    v = !1;
+    T = new Set(),
+    g = [],
+    S = new Map(),
+    A = new Set(),
+    N = !1;
 function O(e) {
-    if (null == e || null == g.get(e)) return !1;
-    g.delete(e), (S = new Set(S)).delete(e);
+    if (null == e || null == S.get(e)) return !1;
+    S.delete(e), (A = new Set(A)).delete(e);
 }
-function R(e) {
+function v(e) {
     let { channelId: t, ringing: n } = e,
-        r = n.includes(_.default.getId());
-    if (!S.has(t) && r) {
-        let e = E.Z.getChannel(t);
+        i = n.includes(E.default.getId());
+    if (!A.has(t) && i) {
+        let e = f.Z.getChannel(t);
         if (null == e) return !1;
-        let n = 10 * S.size;
-        g.set(t, {
-            channel: e,
-            x: A + n,
-            y: N + n
-        }),
-            (S = new Set(S)).add(t);
-    } else {
-        if (!S.has(t) || r) return !1;
-        O(t);
+        let n = 10 * A.size,
+            { x: i, y: a } = (function () {
+                let e = p.Z.windowSize();
+                return null != r && r.x + m.width < e.width && r.y + m.height < e.height
+                    ? r
+                    : {
+                          x: e.width / 2 - m.width / 2,
+                          y: e.height / 2 - m.height / 2
+                      };
+            })();
+        return (
+            S.set(t, {
+                channel: e,
+                x: i + n,
+                y: a + n
+            }),
+            (A = new Set(A)).add(t),
+            void 0
+        );
     }
+    return !!A.has(t) && !i && O(t);
 }
-!(function () {
-    let e = l.K.get(p);
-    if (null != e) (A = +e.x), (N = +e.y);
-    else {
-        let e = n(451478).Z.windowSize();
-        (A = e.width / 2 - I.width / 2), (N = e.height / 2 - I.height / 2);
-    }
-})();
-function C() {
-    v = f.Z.getStatus() === h.Skl.DND || c.QZ.getSetting();
+function R() {
+    N = h.Z.getStatus() === I.Skl.DND || d.QZ.getSetting();
 }
-class y extends (r = o.ZP.Store) {
+class C extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, f.Z), this.syncWith([f.Z], C), this.syncWith([d.Z], C);
+        this.waitFor(f.Z, h.Z), this.syncWith([h.Z], R), this.syncWith([_.Z], R);
     }
     getIncomingCalls() {
-        return v ? T : Array.from(g.values());
+        return N ? g : Array.from(S.values());
     }
     getIncomingCallChannelIds() {
-        return v ? m : S;
+        return N ? T : A;
     }
     getFirstIncomingCallId() {
-        return v ? null : S.values().next().value;
+        return N ? null : A.values().next().value;
     }
     hasIncomingCalls() {
-        return !v && S.size > 0;
+        return !N && A.size > 0;
     }
 }
-(s = 'IncomingCallStore'),
-    (a = 'displayName') in (i = y)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(o = 'IncomingCallStore'),
+    (s = 'displayName') in (a = C)
+        ? Object.defineProperty(a, s, {
+              value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    (t.Z = new y(u.Z, {
-        CALL_CREATE: R,
-        CALL_UPDATE: R,
+        : (a[s] = o),
+    (t.Z = new C(c.Z, {
+        CALL_CREATE: v,
+        CALL_UPDATE: v,
         CALL_DELETE: function (e) {
             let { channelId: t } = e;
             return O(t);
@@ -97,12 +98,11 @@ class y extends (r = o.ZP.Store) {
         INCOMING_CALL_MOVE: function (e) {
             let { x: t, y: n } = e;
             return (
-                (A = t),
-                (N = n),
-                l.K.set(p, {
-                    x: A,
-                    y: N
+                (r = {
+                    x: t,
+                    y: n
                 }),
+                u.K.set('IncomingCallStore', r),
                 !1
             );
         },

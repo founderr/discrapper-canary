@@ -20,9 +20,9 @@ var r = n(735250),
     S = n(689938),
     A = n(323276);
 let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
-    v = (0, l.Mg)(A.__invalid_stickerPickerPreviewPadding),
-    O = i.memo(function (e) {
-        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: O, gutterWidth: R, inspectedStickerPosition: C, isScrolling: y, isUsingKeyboardNavigation: D, onInspect: L, onSelect: b, rowIndex: M, stickerClassName: P, stickerDescriptors: U, stickerPadding: w = v, stickerSize: x = N, ownedStickerPacks: G, enlargeOnInteraction: k = !1, channel: B, currentUser: F, checkSendability: V = !0 } = e,
+    O = (0, l.Mg)(A.__invalid_stickerPickerPreviewPadding),
+    v = i.memo(function (e) {
+        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: v, gutterWidth: R, inspectedStickerPosition: C, isScrolling: y, isUsingKeyboardNavigation: D, onInspect: L, onSelect: b, rowIndex: M, stickerClassName: P, stickerDescriptors: U, stickerPadding: w = O, stickerSize: x = N, ownedStickerPacks: G, enlargeOnInteraction: k = !1, channel: B, currentUser: F, checkSendability: V = !0 } = e,
             { location: H } = (0, d.O)(),
             Z = x + 2 * w,
             Y = i.useMemo(
@@ -46,15 +46,15 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
         return (0, r.jsx)('div', {
             className: A.row,
             style: Y,
-            ...(null == O ? void 0 : O(M)),
+            ...(null == v ? void 0 : v(M)),
             children: U.map((e) => {
                 var d;
                 let _ = e.visibleRowIndex === (null == C ? void 0 : C.rowIndex) && e.columnIndex === (null == C ? void 0 : C.columnIndex),
                     N = e.type === p.al.STICKER && k && _,
-                    v = (0, o.throttle)(() => {
+                    O = (0, o.throttle)(() => {
                         (null == y ? void 0 : y.current) !== !0 && (null == D ? void 0 : D.current) !== !0 && !_ && (null == L || L(e));
                     }, 250),
-                    { ref: O, tabIndex: R, onFocus: U, ...w } = null !== (d = null == l ? void 0 : l(e.columnIndex, M)) && void 0 !== d ? d : {};
+                    { ref: v, tabIndex: R, onFocus: U, ...w } = null !== (d = null == l ? void 0 : l(e.columnIndex, M)) && void 0 !== d ? d : {};
                 switch (e.type) {
                     case p.al.CREATE_STICKER:
                         return (0, r.jsx)(
@@ -64,10 +64,10 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
                                 children: (0, r.jsxs)(u.Clickable, {
                                     'aria-label': e.name,
                                     className: s()(A.createSticker, P, { [A.createInspected]: _ }),
-                                    innerRef: O,
+                                    innerRef: v,
                                     tabIndex: R,
-                                    onFocus: null != U ? U : v,
-                                    onMouseMove: v,
+                                    onFocus: null != U ? U : O,
+                                    onMouseMove: O,
                                     onClick: () => {
                                         e.type === p.al.CREATE_STICKER &&
                                             (f.default.track(g.rMx.OPEN_MODAL, {
@@ -117,10 +117,10 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
                                     [A.stickerInspected]: _,
                                     [A.showPulse]: W === e.sticker.id
                                 }),
-                                innerRef: O,
+                                innerRef: v,
                                 tabIndex: R,
-                                onFocus: null != U ? U : v,
-                                onMouseMove: v,
+                                onFocus: null != U ? U : O,
+                                onMouseMove: O,
                                 onClick: (t) => {
                                     if ((null == y ? void 0 : y.current) === !0 || (null == D ? void 0 : D.current) === !0) return;
                                     let n = t.altKey;
@@ -165,4 +165,4 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
             })
         });
     });
-t.Z = O;
+t.Z = v;

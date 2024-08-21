@@ -26,8 +26,8 @@ var i = n(120356),
     S = n(938475),
     A = n(502762),
     N = n(652853),
-    v = n(194811),
-    O = n(373826),
+    O = n(194811),
+    v = n(373826),
     R = n(315324),
     C = n(582123),
     y = n(648926),
@@ -157,7 +157,7 @@ function k(e) {
                                           })
                                       ]
                                   }),
-                                  (0, r.jsx)(O.Z, {
+                                  (0, r.jsx)(v.Z, {
                                       variant: 'text-xs/normal',
                                       text: P.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({ guildName: W.name }),
                                       onClick: () => {
@@ -217,7 +217,7 @@ function k(e) {
                     className: a()(U.card, k),
                     ref: j,
                     children: [
-                        (0, r.jsx)(v.Z, {
+                        (0, r.jsx)(O.Z, {
                             text: P.Z.Messages.USER_ACTIVITY_STREAMING,
                             tags: (0, r.jsxs)(r.Fragment, {
                                 children: [

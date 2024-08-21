@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(189771),
     A = n(560688),
     N = n(871499),
-    v = n(136995),
-    O = n(25827),
+    O = n(136995),
+    v = n(25827),
     R = n(131951),
     C = n(594174),
     y = n(451478),
@@ -109,7 +109,7 @@ function Z(e) {
                     children: (e, t) => {
                         let { onClick: s } = e,
                             { isShown: u } = t;
-                        return (0, r.jsx)(O.C, {
+                        return (0, r.jsx)(v.C, {
                             join: !0,
                             enabled: o,
                             color: 'green',
@@ -127,7 +127,7 @@ function Z(e) {
                         });
                     }
                 }),
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(O.Z, {
                 channel: n,
                 color: 'green',
                 centerButton: !0,
@@ -144,10 +144,10 @@ function Y(e) {
         [g, S] = (0, l.Wu)([R.Z], () => [R.Z.supports(U.AN.VIDEO), Object.keys(R.Z.getVideoDevices()).length]),
         A = (0, l.e7)([y.Z], () => y.Z.isFocused()),
         N = (0, l.e7)([L.Z], () => L.Z.getMode(_.id)),
-        v = i.useCallback((e) => {
+        O = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
-        O = (0, u.useSpring)(
+        v = (0, u.useSpring)(
             {
                 value: p ? 1 : 0,
                 config: {
@@ -203,16 +203,16 @@ function Y(e) {
         },
         maxX: j.width,
         maxY: j.height,
-        onDragEnd: v,
+        onDragEnd: O,
         dragAnywhere: !0,
         children: (0, r.jsx)(r.Fragment, {
             children: (0, r.jsxs)(o.animated.div, {
                 className: s()(x.root, G.elevationHigh, { [x.previewCamera]: p }, p ? (0, D.Q)('dark') : null),
                 style: {
                     ...t,
-                    width: O.value.interpolate([0, 1], [Y.width, F]),
-                    minHeight: O.value.interpolate([0, 1], [Y.height, V]),
-                    translateX: O.value.interpolate([0, 1], [0, (-1 * Math.abs(F - Y.width)) / 2])
+                    width: v.value.interpolate([0, 1], [Y.width, F]),
+                    minHeight: v.value.interpolate([0, 1], [Y.height, V]),
+                    translateX: v.value.interpolate([0, 1], [0, (-1 * Math.abs(F - Y.width)) / 2])
                 },
                 children: [
                     p

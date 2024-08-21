@@ -88,7 +88,7 @@ function o(e) {
         N = r.useCallback(() => {
             !p && I(!0);
         }, [p]),
-        v = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 if (e.target !== e.currentTarget) {
                     if (!e.currentTarget.contains(e.relatedTarget)) p && I(!1);
@@ -96,7 +96,7 @@ function o(e) {
             },
             [p]
         ),
-        O = r.useCallback(() => {
+        v = r.useCallback(() => {
             E({
                 type: i.B.SET_FOCUS_PATH,
                 path: []
@@ -111,11 +111,11 @@ function o(e) {
                 tabIndex: -1,
                 onKeyDown: A,
                 onFocus: N,
-                onBlur: v,
-                onMouseLeave: O,
+                onBlur: O,
+                onMouseLeave: v,
                 'aria-activedescendant': h.length > 0 ? (0, s.qR)(t, h.join('--')) : void 0
             }),
-            [t, A, N, v, O, h]
+            [t, A, N, O, v, h]
         ),
         y = r.useCallback(
             (e) => {

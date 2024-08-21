@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return O;
     }
 }),
     n(47120);
@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(526761),
     A = n(689938),
     N = n(435880);
-function v(e) {
-    let { className: t, disabled: a, isEditor: v, renderCTAButtons: O } = e,
+function O(e) {
+    let { className: t, disabled: a, isEditor: O, renderCTAButtons: v } = e,
         [R, C] = (0, o.Wu)([p.Z], () => [p.Z.getCurrentDesktopIcon(), p.Z.isUpsellPreview]),
         { enabled: y } = E.Z.getCurrentConfig(
             { location: 'UserSettingsAppearanceInAppIcon' },
@@ -43,7 +43,7 @@ function v(e) {
             labelledBy: L
         }),
         M = (e) => {
-            if (y && !v && e !== I.aH.DEFAULT) {
+            if (y && !O && e !== I.aH.DEFAULT) {
                 (0, l.openModalLazy)(async () => {
                     let { default: e } = await n.e('69052').then(n.bind(n, 184250));
                     return (t) =>
@@ -77,7 +77,7 @@ function v(e) {
                             (0, r.jsxs)('div', {
                                 className: N.headings,
                                 children: [
-                                    !v &&
+                                    !O &&
                                         (0, r.jsxs)('div', {
                                             className: N.title,
                                             children: [
@@ -89,7 +89,7 @@ function v(e) {
                                             ]
                                         }),
                                     y
-                                        ? v
+                                        ? O
                                             ? null
                                             : (0, r.jsxs)('div', {
                                                   className: N.description,
@@ -115,11 +115,11 @@ function v(e) {
                                           })
                                 ]
                             }),
-                            null == O ? void 0 : O()
+                            null == v ? void 0 : v()
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: s()(N.presets, { [N.presetsJustified]: y && v }),
+                        className: s()(N.presets, { [N.presetsJustified]: y && O }),
                         children: T.UZ.filter((e) => {
                             let { isHidden: t } = e;
                             return !t;
@@ -132,7 +132,7 @@ function v(e) {
                                     onSelect: (e) => M(e),
                                     disabled: a,
                                     tabIndex: 0 !== t || a ? void 0 : 0,
-                                    locked: y && !v && e.id !== I.aH.DEFAULT
+                                    locked: y && !O && e.id !== I.aH.DEFAULT
                                 },
                                 e.id
                             )

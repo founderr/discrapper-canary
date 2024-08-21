@@ -38,8 +38,8 @@ var i,
     S = n(454991),
     A = n(77498),
     N = n(283595),
-    v = n(417363),
-    O = n(626135),
+    O = n(417363),
+    v = n(626135),
     R = n(70956),
     C = n(877481),
     y = n(823379),
@@ -290,7 +290,7 @@ function eh() {
             .reduce((t, n) => {
                 let r = A.Z.getDetectableGame(n.id);
                 if (null == r) return t;
-                for (let i of v.Z.getLaunchOptions(n.id, n.branchId)) {
+                for (let i of O.Z.getLaunchOptions(n.id, n.branchId)) {
                     let a = ''.concat(n.id, ':').concat(n.branchId);
                     !F.has(a) && ((e = !0), F.add(a));
                     let { fullExecutablePath: s } = i,
@@ -470,7 +470,7 @@ class eT extends (i = _.ZP.Store) {
             Array.isArray(i.gamesSeen))
         )
             for (let e of i.gamesSeen) 'number' == typeof e.id && ((e.nativeProcessObserverId = e.id), delete e.id, (a = !0));
-        eI(i.gamesSeen), this.waitFor(A.Z), this.syncWith([N.Z, A.Z, v.Z], u().throttle(eh, 1000)), a && eE();
+        eI(i.gamesSeen), this.waitFor(A.Z), this.syncWith([N.Z, A.Z, O.Z], u().throttle(eh, 1000)), a && eE();
     }
     getVisibleGame() {
         return null == Y || e_(Y) ? Y : null;
@@ -613,7 +613,7 @@ class eT extends (i = _.ZP.Store) {
             if (((z.enableOverlay[eu(e.game)] = e.newEnabledValue), eE(), !__OVERLAY__)) {
                 let t = null != e.game.id ? A.Z.getDetectableGame(e.game.id) : null;
                 null != t &&
-                    O.default.track(P.rMx.OVERLAY_TOGGLED, {
+                    v.default.track(P.rMx.OVERLAY_TOGGLED, {
                         enabled: e.newEnabledValue,
                         setting_type: 'overlay toggled - game',
                         application_id: t.id,
@@ -624,7 +624,7 @@ class eT extends (i = _.ZP.Store) {
         RUNNING_GAME_TOGGLE_DETECTION: function (e) {
             let { game: t } = e,
                 n = ed(t);
-            (z.enableDetection[eu(t)] = !n), eE(), O.default.track(P.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
+            (z.enableDetection[eu(t)] = !n), eE(), v.default.track(P.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
         },
         RUNNING_GAME_EDIT_NAME: function (e) {
             let t = eu(e.game),
@@ -705,7 +705,7 @@ class eT extends (i = _.ZP.Store) {
                 })
                 .map((e) => e.cleanedExePath);
             t.length > 0 &&
-                O.default.track(P.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
+                v.default.track(P.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
                     keywords: k,
                     paths: t,
                     debugging_level: er,

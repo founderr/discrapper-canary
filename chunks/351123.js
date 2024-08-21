@@ -13,8 +13,8 @@ var n = s(735250),
     g = s(385499),
     E = s(134433),
     T = s(600164),
-    p = s(156699),
-    N = s(693196),
+    N = s(156699),
+    p = s(693196),
     _ = s(434404),
     S = s(200498),
     x = s(146085),
@@ -25,8 +25,8 @@ var n = s(735250),
     R = s(430824),
     Z = s(496675),
     v = s(594174),
-    O = s(903386),
-    A = s(700785),
+    A = s(903386),
+    O = s(700785),
     L = s(605436),
     j = s(27544),
     b = s(415236),
@@ -36,84 +36,84 @@ var n = s(735250),
     P = s(231338),
     F = s(689938),
     B = s(343535);
-function U(e) {
+function H(e) {
     let { channel: t, roles: s, members: l, disabledReason: a, getRemoveTooltipHint: r } = e;
     return (0, n.jsx)(o.List, {
         className: B.roleMemberList,
         sections: [s.length, l.length],
         renderRow: function (e) {
             let u,
-                p,
                 N,
+                p,
                 { section: _, row: x } = e,
                 f = !1;
             switch (_) {
                 case y.m$.ROLES:
                     var C;
-                    (N =
-                        (p = s[x]).rowType === y.aC.ROLE && (null === (C = p.tags) || void 0 === C ? void 0 : C.guild_connections) === null
+                    (p =
+                        (N = s[x]).rowType === y.aC.ROLE && (null === (C = N.tags) || void 0 === C ? void 0 : C.guild_connections) === null
                             ? (0, n.jsx)(E.Z, {
                                   className: B.shield,
-                                  color: p.colorString,
+                                  color: N.colorString,
                                   size: 20
                               })
                             : (0, n.jsx)(o.ShieldUserIcon, {
                                   size: 'custom',
                                   className: B.shield,
-                                  color: p.colorString,
+                                  color: N.colorString,
                                   height: 20
                               })),
                         (u = (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)('div', {
                                     className: B.rowHeight,
-                                    children: N
+                                    children: p
                                 }),
                                 (0, n.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
                                     className: B.rowLabel,
-                                    color: p.disabled ? 'text-muted' : 'text-normal',
-                                    children: p.name
+                                    color: N.disabled ? 'text-muted' : 'text-normal',
+                                    children: N.name
                                 })
                             ]
                         })),
-                        (f = p.disabled);
+                        (f = N.disabled);
                     break;
                 case y.m$.MEMBERS:
-                    (p = l[x]),
+                    (N = l[x]),
                         (u = (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)(o.Avatar, {
-                                    src: p.avatarURL,
+                                    src: N.avatarURL,
                                     size: o.AvatarSizes.SIZE_24,
                                     'aria-hidden': !0
                                 }),
                                 (0, n.jsx)(o.Text, {
                                     className: B.rowLabel,
                                     variant: 'text-sm/normal',
-                                    children: p.name
+                                    children: N.name
                                 }),
-                                p.bot &&
+                                N.bot &&
                                     (0, n.jsx)(g.Z, {
-                                        verified: p.verifiedBot,
+                                        verified: N.verifiedBot,
                                         className: B.rowBotTag
                                     }),
-                                null != p.nickname &&
+                                null != N.nickname &&
                                     (0, n.jsx)(o.Text, {
                                         color: 'text-muted',
                                         className: B.rowLabelSubText,
                                         variant: 'text-sm/normal',
-                                        children: p.username
+                                        children: N.username
                                     })
                             ]
                         })),
-                        (f = p.disabled);
+                        (f = N.disabled);
                     break;
                 default:
-                    p = null;
+                    N = null;
             }
-            if (null == p) return null;
-            let I = !f && null == a && null != p.id;
+            if (null == N) return null;
+            let I = !f && null == a && null != N.id;
             return (0, n.jsxs)(
                 T.Z,
                 {
@@ -130,21 +130,21 @@ function U(e) {
                         (0, n.jsx)(o.Text, {
                             color: 'text-muted',
                             variant: 'text-xs/normal',
-                            children: L.zB(p.rowType)
+                            children: L.zB(N.rowType)
                         }),
-                        p.rowType !== y.aC.EMPTY_STATE &&
+                        N.rowType !== y.aC.EMPTY_STATE &&
                             (0, n.jsx)(o.TooltipContainer, {
                                 className: B.removeIconContainer,
-                                text: null != a ? a : r(p.rowType, p.disabled),
+                                text: null != a ? a : r(N.rowType, N.disabled),
                                 children: (0, n.jsx)(o.Clickable, {
                                     onClick: () => {
                                         var e, s, n;
                                         return (
                                             I &&
-                                            null != p &&
-                                            ((e = p.id),
-                                            (s = p.name),
-                                            (n = p.rowType),
+                                            null != N &&
+                                            ((e = N.id),
+                                            (s = N.name),
+                                            (n = N.rowType),
                                             void d.Z.show({
                                                 title: F.Z.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
                                                 body: F.Z.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({ name: s }),
@@ -170,7 +170,7 @@ function U(e) {
                             })
                     ]
                 },
-                p.id
+                N.id
             );
         },
         rowHeight: 40,
@@ -186,7 +186,7 @@ function U(e) {
         sectionHeight: 49
     });
 }
-function H(e) {
+function U(e) {
     let { guild: t, channel: l, permissionUpdates: a } = e,
         d = (0, r.e7)([R.Z], () => R.Z.getRoles(t.id)),
         c = L.RZ(t, d, l, x.yP, a),
@@ -245,7 +245,7 @@ function H(e) {
                             })
                         ]
                     }),
-                    (0, n.jsx)(U, {
+                    (0, n.jsx)(H, {
                         channel: l,
                         roles: c,
                         members: u,
@@ -260,12 +260,12 @@ function H(e) {
 function G(e) {
     let { guild: t, channel: l, isPrivateGuildChannel: a, roles: d, members: c } = e,
         u = (0, r.e7)([Z.Z], () => Z.Z.can(P.Pl.ADMINISTRATOR, t)),
-        h = A.Uu(P.Pl.VIEW_CHANNEL, t),
-        m = A.Uu(P.Pl.ADMINISTRATOR, t);
+        h = O.Uu(P.Pl.VIEW_CHANNEL, t),
+        m = O.Uu(P.Pl.ADMINISTRATOR, t);
     async function g() {
         let e = l.accessPermissions,
             i = v.default.getCurrentUser();
-        if (!a && null != (await (0, N.T)(t.id, l.id))) {
+        if (!a && null != (await (0, p.T)(t.id, l.id))) {
             (0, o.openModalLazy)(async () => {
                 let { ConfirmModal: e } = await Promise.resolve().then(s.bind(s, 878678));
                 return (s) =>
@@ -364,7 +364,7 @@ function G(e) {
                                             })
                                         ]
                                     }),
-                                    (0, n.jsx)(U, {
+                                    (0, n.jsx)(H, {
                                         channel: l,
                                         roles: d,
                                         members: c,
@@ -426,9 +426,9 @@ t.Z = r.ZP.connectStores([I.Z, Z.Z, M.ZP, R.Z], () => {
     };
 })(function (e) {
     let { canSyncChannel: t, category: a, channel: i, filteredMembers: r, filteredRoles: d, guild: c, isPrivateGuildChannel: h, locked: m, permissionUpdates: g } = e,
-        [E, T] = l.useState(!A.Uu(P.Pl.SEND_MESSAGES, i));
+        [E, T] = l.useState(!O.Uu(P.Pl.SEND_MESSAGES, i));
     if (null == i || null == c) return null;
-    function N() {
+    function p() {
         L.$e(i, P.Pl.SEND_MESSAGES, E), T(!E);
     }
     function _() {
@@ -443,7 +443,7 @@ t.Z = r.ZP.connectStores([I.Z, Z.Z, M.ZP, R.Z], () => {
                         onConfirm: async () => {
                             let { guild_id: e } = a,
                                 t = { ...a.permissionOverwrites };
-                            null != e && null == t[e] && (t[e] = A.we(e)), (await (0, p.u)(i, t[e].deny, t[e].allow)) && (0, u.wk)(i.id, { permissionOverwrites: Object.values(t) });
+                            null != e && null == t[e] && (t[e] = O.we(e)), (await (0, N.u)(i, t[e].deny, t[e].allow)) && (0, u.wk)(i.id, { permissionOverwrites: Object.values(t) });
                         }
                     });
             });
@@ -471,13 +471,13 @@ t.Z = r.ZP.connectStores([I.Z, Z.Z, M.ZP, R.Z], () => {
                         : (0, n.jsx)(D.Z, {
                               buttonText: F.Z.Messages.SYNC_NOW,
                               canSync: !0,
-                              icon: (0, o.makeIconCompat)(O.Z),
+                              icon: (0, o.makeIconCompat)(A.Z),
                               noticeText: F.Z.Messages.PERMISSIONS_UNSYNCED.format({ categoryName: a.name }),
                               onClick: _
                           })
                     : null,
                 i.isGuildStageVoice()
-                    ? (0, n.jsx)(H, {
+                    ? (0, n.jsx)(U, {
                           guild: c,
                           channel: i,
                           permissionUpdates: g

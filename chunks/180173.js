@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     r = n(442837),
     l = n(524437),
     o = n(481060),
@@ -32,7 +32,7 @@ let S = {
 };
 function A(e) {
     let { setTab: t, closePopout: n } = e,
-        a = (0, r.e7)([_.Z], () => _.Z.getMessageBookmarks());
+        s = (0, r.e7)([_.Z], () => _.Z.getMessageBookmarks());
     return (0, i.jsxs)('div', {
         className: p.container,
         children: [
@@ -41,14 +41,14 @@ function A(e) {
                 setTab: t,
                 closePopout: n
             }),
-            0 === a.length ? (0, i.jsx)(x, {}) : (0, i.jsx)(o.AdvancedScrollerThin, { children: a.map((e) => (0, i.jsx)(R, { savedMessage: e }, e.saveData.messageId)) })
+            0 === s.length ? (0, i.jsx)(x, {}) : (0, i.jsx)(o.AdvancedScrollerThin, { children: s.map((e) => (0, i.jsx)(R, { savedMessage: e }, e.saveData.messageId)) })
         ]
     });
 }
 function R(e) {
     let { savedMessage: t } = e,
         n = (0, r.e7)([I.Z], () => I.Z.getChannel(t.saveData.channelId)),
-        a = () => {
+        s = () => {
             (0, u.uL)(C.Z5c.CHANNEL(null == n ? void 0 : n.getGuildId(), t.saveData.channelId, t.saveData.messageId));
         };
     return (0, i.jsx)('div', {
@@ -59,7 +59,7 @@ function R(e) {
                       children: [
                           (0, i.jsx)(T.Z, {
                               channel: n,
-                              gotoChannel: a,
+                              gotoChannel: s,
                               children: (0, i.jsx)(o.CircleIconButton, {
                                   className: g.closeButton,
                                   tooltip: f.Z.Messages.MESSAGE_BOOKMARKS_REMOVE,
@@ -72,11 +72,11 @@ function R(e) {
                               })
                           }),
                           (0, i.jsxs)('div', {
-                              className: s()(g.messageContainer, p.unloadedMessage),
+                              className: a()(g.messageContainer, p.unloadedMessage),
                               children: [
                                   (0, i.jsx)(m.Z, {
                                       className: g.jumpMessageButton,
-                                      onJump: a
+                                      onJump: s
                                   }),
                                   (0, i.jsx)(
                                       c.Z,

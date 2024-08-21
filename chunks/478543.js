@@ -72,13 +72,13 @@ function T(e) {
 t.Z = (e) => {
     var t, n, a;
     let { loading: o = !1, currentOverrides: d, linkMeta: g, url: S, applyBuildOverride: A, clearBuildOverride: N } = e,
-        [v, O] = i.useState(!1),
+        [O, v] = i.useState(!1),
         R = i.useCallback(() => {
-            if (!v) O(!0), A().catch(() => O(!1));
-        }, [A, v]),
+            if (!O) v(!0), A().catch(() => v(!1));
+        }, [A, O]),
         C = i.useCallback(() => {
-            if (!v) O(!0), N().catch(() => O(!1));
-        }, [N, v]);
+            if (!O) v(!0), N().catch(() => v(!1));
+        }, [N, O]);
     return (0, r.jsxs)('div', {
         className: I.wrapper,
         children: [
@@ -157,7 +157,7 @@ t.Z = (e) => {
                               linkMeta: g,
                               applyBuildOverride: R,
                               clearBuildOverride: C,
-                              submitting: v
+                              submitting: O
                           })
                 ]
             })

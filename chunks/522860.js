@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(194082),
+var s = n(481060),
+    a = n(194082),
     r = n(739566),
     l = n(834129),
     o = n(689938);
@@ -33,13 +33,13 @@ function c(e) {
         (0, i.jsx)(l.Z, {
             iconNode:
                 null != m
-                    ? (0, i.jsx)(a.ScreenXIcon, {
+                    ? (0, i.jsx)(s.ScreenXIcon, {
                           size: 'custom',
                           color: 'currentColor',
                           width: 20,
                           height: 20
                       })
-                    : (0, i.jsx)(s.ZP, { size: s.ZP.Sizes.SMALL }),
+                    : (0, i.jsx)(a.ZP, { size: a.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
             compact: E,
             children: h

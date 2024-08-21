@@ -37,8 +37,8 @@ function _(e, t) {
         var S = T.getdayset(u)(m.year, m.month, m.day),
             A = S[0],
             N = S[1],
-            v = S[2],
-            O = (function (e, t, n, r, i) {
+            O = S[2],
+            v = (function (e, t, n, r, i) {
                 for (var a = !1, s = t; s < n; s++) {
                     var o = e[s];
                     (a = (function (e, t, n) {
@@ -53,9 +53,9 @@ function _(e, t) {
                     })(r, o, i)) && (e[o] = null);
                 }
                 return a;
-            })(A, N, v, T, t);
+            })(A, N, O, T, t);
         if ((0, l.Dw)(p)) {
-            for (var R = (0, c.f)(p, g, N, v, T, A), C = 0; C < R.length; C++) {
+            for (var R = (0, c.f)(p, g, N, O, T, A), C = 0; C < R.length; C++) {
                 var y = R[C];
                 if (h && y > h) return f(e);
                 if (y >= n) {
@@ -64,7 +64,7 @@ function _(e, t) {
                 }
             }
         } else
-            for (var C = N; C < v; C++) {
+            for (var C = N; C < O; C++) {
                 var L = A[C];
                 if (!!(0, l.EN)(L))
                     for (var b = (0, i.zU)(T.yearordinal + L), M = 0; M < g.length; M++) {
@@ -78,7 +78,7 @@ function _(e, t) {
                     }
             }
         if (0 === t.interval) return f(e);
-        if ((m.add(t, O), m.year > i.VQ)) return f(e);
+        if ((m.add(t, v), m.year > i.VQ)) return f(e);
         !(0, r.e)(u) && (g = T.gettimeset(u)(m.hour, m.minute, m.second, 0)), T.rebuild(m.year, m.month);
     }
 }

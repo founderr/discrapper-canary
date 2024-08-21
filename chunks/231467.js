@@ -28,8 +28,8 @@ var r = n(735250),
     S = n(686546),
     A = n(246364),
     N = n(937111),
-    v = n(703656),
-    O = n(271383),
+    O = n(703656),
+    v = n(271383),
     R = n(594174),
     C = n(778045),
     y = n(207796),
@@ -171,7 +171,7 @@ function G(e) {
 }
 function k(e) {
     var t;
-    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: f, prioritizedGameIds: h, className: T, position: A, showBrandingFooter: N = !1, showFavoriteButton: v = !1, bannerUrl: O, onlyAnimateIconOnHover: R = !1, hasPendingJoinRequest: D = !1, atMaxMemberCapacity: L = !1 } = e,
+    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: f, prioritizedGameIds: h, className: T, position: A, showBrandingFooter: N = !1, showFavoriteButton: O = !1, bannerUrl: v, onlyAnimateIconOnHover: R = !1, hasPendingJoinRequest: D = !1, atMaxMemberCapacity: L = !1 } = e,
         {
             tag: k,
             badge: B,
@@ -206,7 +206,7 @@ function k(e) {
             K(!1);
         }, []),
         en = M.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({ count: n.memberCount }),
-        er = null != O ? O : (0, p.pY)(n.id, H),
+        er = null != v ? v : (0, p.pY)(n.id, H),
         ei = null == a && null == er ? { background: 'linear-gradient(90deg, '.concat(F, ', ').concat(V, ')') } : void 0,
         ea =
             null != a
@@ -233,7 +233,7 @@ function k(e) {
             },
             [A, n.id]
         ),
-        el = $ && (v || W || X);
+        el = $ && (O || W || X);
     return (0, r.jsxs)('div', {
         className: s()(P.card, T, { [P.cardStaticHeight]: !u }),
         onMouseEnter: ee,
@@ -414,7 +414,7 @@ t.ZP = function (e) {
     let { style: t, prioritizedGameIds: a, ...s } = e,
         { clan: o, affinity: d, index: E, position: h, source: p } = s,
         I = (0, u.e7)([R.default], () => R.default.getCurrentUser()),
-        m = (0, u.e7)([O.ZP], () => O.ZP.isMember(o.id, null == I ? void 0 : I.id), [o, I]),
+        m = (0, u.e7)([v.ZP], () => v.ZP.isMember(o.id, null == I ? void 0 : I.id), [o, I]),
         T = (0, u.e7)([N.Z], () => {
             var e;
             return (null === (e = N.Z.getRequest(o.id)) || void 0 === e ? void 0 : e.applicationStatus) === A.wB.SUBMITTED;
@@ -433,11 +433,11 @@ t.ZP = function (e) {
                 }),
                 m)
             ) {
-                (0, v.XU)(o.id);
+                (0, O.XU)(o.id);
                 return;
             }
             if (e) {
-                (0, v.uL)(L.Z5c.GUILD_MEMBER_VERIFICATION(o.id));
+                (0, O.uL)(L.Z5c.GUILD_MEMBER_VERIFICATION(o.id));
                 return;
             }
             (0, f.q)(

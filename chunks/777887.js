@@ -25,8 +25,8 @@ var i = n(442837),
     S = n(580512),
     A = n(67152),
     N = n(579285),
-    v = n(287612),
-    O = n(228168),
+    O = n(287612),
+    v = n(228168),
     R = n(689938),
     C = n(122269),
     y = n(155330);
@@ -46,13 +46,13 @@ function D(e) {
         children: [
             (0, r.jsx)(I.Z, {
                 user: t,
-                profileType: O.y0.BITE_SIZE,
+                profileType: v.y0.BITE_SIZE,
                 onOpenProfile: M,
                 nickname: w,
                 pronouns: null == D ? void 0 : D.pronouns,
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: D,
-                    profileType: O.y0.BITE_SIZE,
+                    profileType: v.y0.BITE_SIZE,
                     onClose: U
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
@@ -67,7 +67,7 @@ function D(e) {
                     ]
                 })
             }),
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(O.Z, {
                 user: t,
                 onOpenProfile: (e) => (null == M ? void 0 : M({ section: e }))
             }),

@@ -21,7 +21,7 @@ n.d(t, {
         return R;
     },
     oQ: function () {
-        return O;
+        return v;
     },
     rX: function () {
         return C;
@@ -63,7 +63,7 @@ let { GUILD_VOICE: g, GUILD_CATEGORY: S, GUILD_STAGE_VOICE: A } = I.d4z;
 function N(e, t) {
     return e === t || e === S;
 }
-function v(e, t, n) {
+function O(e, t, n) {
     let i = h.Hn;
     return (
         ((0, u.r8)(t) || t === S) && (i = r.IH(i, I.Plq.VIEW_CHANNEL)),
@@ -76,7 +76,7 @@ function v(e, t, n) {
         }
     );
 }
-function O(e, t, n) {
+function v(e, t, n) {
     let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         s = [];
     if (n.length > 0 || a) {
@@ -99,16 +99,16 @@ function O(e, t, n) {
     }
     return (
         n.forEach((e) => {
-            s.push(v(e, t, i.BN.ROLE));
+            s.push(O(e, t, i.BN.ROLE));
         }),
         s
     );
 }
 function R(e, t) {
-    return v(e, t, i.BN.MEMBER);
+    return O(e, t, i.BN.MEMBER);
 }
 function C(e, t) {
-    return v(e, t, i.BN.ROLE);
+    return O(e, t, i.BN.ROLE);
 }
 function y(e) {
     return [

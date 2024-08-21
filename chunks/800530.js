@@ -46,8 +46,8 @@ n.d(t, {
     }
 });
 var i,
-    a,
     s,
+    a,
     r,
     l,
     o,
@@ -77,7 +77,7 @@ function N(e, t, n) {
 class C {}
 N(C, 'TOS_LINK', 'https://discord.com/terms'), N(C, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), N(C, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), N(C, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), N(C, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), N(C, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
 class f {}
-N(f, 'CLASSIFICATION_ID', 'classification_id'), N(f, 'INCIDENT_TIMESTAMP', 'incident_time'), ((a = d || (d = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (a.LEARN_MORE_LINK = 'learn_more_link');
+N(f, 'CLASSIFICATION_ID', 'classification_id'), N(f, 'INCIDENT_TIMESTAMP', 'incident_time'), ((s = d || (d = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (s.LEARN_MORE_LINK = 'learn_more_link');
 class p {}
 N(p, 'ICON_TYPE', 'icon_type'),
     N(p, 'HEADER', 'header'),
@@ -88,14 +88,14 @@ N(p, 'ICON_TYPE', 'icon_type'),
     N(p, 'CLIENT_VERSION_MESSAGE', 'client_version_message'),
     N(p, 'LEARN_MORE_LINK', 'learn_more_link'),
     N(p, 'CLASSIFICATION_ID', 'classification_id'),
-    ((s = _ || (_ = {}))[(s.ViewViolationDetail = 0)] = 'ViewViolationDetail'),
-    (s[(s.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'),
-    (s[(s.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'),
-    (s[(s.ClickAgeVerificationLink = 3)] = 'ClickAgeVerificationLink'),
-    (s[(s.ClickSpamWebformLink = 4)] = 'ClickSpamWebformLink'),
-    (s[(s.ClickLearnMoreLink = 5)] = 'ClickLearnMoreLink'),
-    (s[(s.ClickCommunityGuidelinesLink = 6)] = 'ClickCommunityGuidelinesLink'),
-    (s[(s.ClickWarningSystemHelpcenterLink = 7)] = 'ClickWarningSystemHelpcenterLink'),
+    ((a = _ || (_ = {}))[(a.ViewViolationDetail = 0)] = 'ViewViolationDetail'),
+    (a[(a.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'),
+    (a[(a.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'),
+    (a[(a.ClickAgeVerificationLink = 3)] = 'ClickAgeVerificationLink'),
+    (a[(a.ClickSpamWebformLink = 4)] = 'ClickSpamWebformLink'),
+    (a[(a.ClickLearnMoreLink = 5)] = 'ClickLearnMoreLink'),
+    (a[(a.ClickCommunityGuidelinesLink = 6)] = 'ClickCommunityGuidelinesLink'),
+    (a[(a.ClickWarningSystemHelpcenterLink = 7)] = 'ClickWarningSystemHelpcenterLink'),
     ((r = E || (E = {}))[(r.SystemDM = 0)] = 'SystemDM'),
     (r[(r.StandingTab = 1)] = 'StandingTab'),
     (r[(r.AppealIngestion = 2)] = 'AppealIngestion'),

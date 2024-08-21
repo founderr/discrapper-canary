@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     r = n(442837),
     l = n(481060),
     o = n(596454),
@@ -26,14 +26,14 @@ var a = n(120356),
     C = n(689938),
     f = n(28387);
 let p = (e) => {
-        let { onClose: t, listing: n, step: a, guildId: r } = e,
+        let { onClose: t, listing: n, step: s, guildId: r } = e,
             o = (0, I.YB)(r),
             d = (0, c.Z)(N.Xy),
             E = (() => {
                 var e;
                 if (d) return null;
                 let t = (null == o ? void 0 : null === (e = o.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null ? (0, _._W)(o.cover_image_asset.application_id, o.cover_image_asset, 440) : void 0;
-                return null == t && a !== u.h8.CONFIRM
+                return null == t && s !== u.h8.CONFIRM
                     ? null
                     : null == t
                       ? (0, i.jsx)('div', { className: f.headerImageEmpty })
@@ -44,11 +44,11 @@ let p = (e) => {
                         });
             })();
         return (0, i.jsxs)('div', {
-            className: s()(f.headerContainer, { [f.headerEmpty]: d || null == E }),
+            className: a()(f.headerContainer, { [f.headerEmpty]: d || null == E }),
             children: [
                 E,
                 (() => {
-                    if (a !== u.h8.CONFIRM) return null;
+                    if (s !== u.h8.CONFIRM) return null;
                     let e = null == n.image_asset ? void 0 : (0, _._W)(n.application_id, n.image_asset, 80);
                     return (0, i.jsx)('div', {
                         className: f.tierImageContainer,
@@ -73,9 +73,9 @@ let p = (e) => {
         });
     },
     g = (e) => {
-        let { onClose: t, listing: n, guildId: a } = e,
-            s = (0, r.e7)([d.Z], () => d.Z.getGuild(a), [a]),
-            c = (0, m.Z)(a).filter((e) => e.roles.includes(n.role_id)),
+        let { onClose: t, listing: n, guildId: s } = e,
+            a = (0, r.e7)([d.Z], () => d.Z.getGuild(s), [s]),
+            c = (0, m.Z)(s).filter((e) => e.roles.includes(n.role_id)),
             u = n.role_benefits.benefits.filter(E.rC).slice(0, null === c.length ? 4 : 3),
             _ = (0, T.Z)(u).slice(0, null === c.length ? 4 : 3);
         return (0, i.jsxs)('div', {
@@ -85,7 +85,7 @@ let p = (e) => {
                     className: f.confirmationHeader,
                     variant: 'heading-xl/semibold',
                     color: 'header-secondary',
-                    children: C.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE.format({ serverName: null == s ? void 0 : s.toString() })
+                    children: C.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE.format({ serverName: null == a ? void 0 : a.toString() })
                 }),
                 (0, i.jsx)(l.Text, {
                     className: f.confirmationSubtitle,
@@ -109,7 +109,7 @@ let p = (e) => {
                                         h.Z,
                                         {
                                             benefit: e,
-                                            guildId: a,
+                                            guildId: s,
                                             onClick: () => t(!0)
                                         },
                                         (0, E.ab)(e)

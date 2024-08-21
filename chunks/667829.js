@@ -26,8 +26,8 @@ var r = n(735250),
     S = n(403182),
     A = n(541716),
     N = n(752305),
-    v = n(30465),
-    O = n(140963),
+    O = n(30465),
+    v = n(140963),
     R = n(4484),
     C = n(925994),
     y = n(981631),
@@ -162,7 +162,7 @@ class U extends i.Component {
     }
     render() {
         var e, t, n, i, a, o;
-        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: E, onResize: f, onSubmit: h, channel: p, type: I, fontSize: m, useSlate: T, spellcheckEnabled: S, useNewSlashCommands: v, canOnlyUseTextCommands: C, className: D, id: b, required: M, maxCharacterCount: U, allowNewLines: w, 'aria-describedby': x, 'aria-labelledby': G, accessibilityLabel: k } = this.props,
+        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: E, onResize: f, onSubmit: h, channel: p, type: I, fontSize: m, useSlate: T, spellcheckEnabled: S, useNewSlashCommands: O, canOnlyUseTextCommands: C, className: D, id: b, required: M, maxCharacterCount: U, allowNewLines: w, 'aria-describedby': x, 'aria-labelledby': G, accessibilityLabel: k } = this.props,
             { submitting: B, popup: F } = this.state,
             V = {
                 channel: p,
@@ -197,7 +197,7 @@ class U extends i.Component {
                     [L.textAreaForUserProfile]: I === A.I.USER_PROFILE
                 }),
                 spellcheckEnabled: S,
-                useNewSlashCommands: v,
+                useNewSlashCommands: O,
                 disableAutoFocus: _.tq || (null !== (n = I.disableAutoFocus) && void 0 !== n && n),
                 disableEnterToSubmit: null !== (i = null === (e = I.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== i && i,
                 'aria-controls': null !== (a = F.id) && void 0 !== a ? a : void 0,
@@ -218,7 +218,7 @@ class U extends i.Component {
                       canUseCommands: null === (t = I.commands) || void 0 === t ? void 0 : t.enabled,
                       canOnlyUseTextCommands: C
                   })
-                : (0, r.jsx)(O.Z, {
+                : (0, r.jsx)(v.Z, {
                       ref: this.ref,
                       ...V,
                       value: c ? '' : l
@@ -420,7 +420,7 @@ class U extends i.Component {
                         !0)
                 );
             }),
-            (this._unsubscribe = v.p8.subscribe((e) => {
+            (this._unsubscribe = O.p8.subscribe((e) => {
                 requestAnimationFrame(() => {
                     this.setState({ popup: e });
                 });
@@ -428,7 +428,7 @@ class U extends i.Component {
             (this.state = {
                 focused: !1,
                 submitting: !1,
-                popup: v.p8.getState()
+                popup: O.p8.getState()
             });
     }
 }

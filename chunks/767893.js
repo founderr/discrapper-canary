@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     r = n(789978),
     l = n(657707),
     o = n(442837),
@@ -25,7 +25,7 @@ let N = {
     right: -4
 };
 function C(e) {
-    let { channel: t, children: n, jumpToMessage: a } = e;
+    let { channel: t, children: n, jumpToMessage: s } = e;
     return (0, i.jsx)(r.tE, {
         offset: N,
         children: (0, i.jsxs)('div', {
@@ -36,7 +36,7 @@ function C(e) {
                 t.isPrivate() ? null : (0, i.jsx)(l.Fbu, { size: 'xxs' }),
                 (0, i.jsx)(p, {
                     channel: t,
-                    jumpToMessage: a
+                    jumpToMessage: s
                 }),
                 n
             ]
@@ -46,17 +46,17 @@ function C(e) {
 function f(e) {
     let { channel: t } = e,
         n = (0, o.e7)([m.default], () => (t.isDM() ? m.default.getUser(t.getRecipientId()) : null)),
-        a = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
-    if (null != a)
+        s = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
+    if (null != s)
         return (0, i.jsx)(E.Z, {
             className: h.icon,
-            guild: a,
+            guild: s,
             size: E.Z.Sizes.SMALLER,
             'aria-hidden': !0
         });
     if (null != n)
         return (0, i.jsx)('div', {
-            className: s()(h.icon, h.dmIcon),
+            className: a()(h.icon, h.dmIcon),
             children: (0, i.jsx)(l.kBi, { size: 'xxs' })
         });
     let r = (0, u.x)(t);
@@ -69,11 +69,11 @@ function f(e) {
 }
 function p(e) {
     let { channel: t, jumpToMessage: n } = e,
-        a = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id)),
-        s = (0, d.ZP)(t, !1),
-        r = (0, _.KS)(t, a),
+        s = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id)),
+        a = (0, d.ZP)(t, !1),
+        r = (0, _.KS)(t, s),
         l = t.isPrivate() || null == r,
-        u = t.isDM() ? T.Z.Messages.FOR_LATER_DIRECT_MESSAGE_WITH.format({ username: s }) : s;
+        u = t.isDM() ? T.Z.Messages.FOR_LATER_DIRECT_MESSAGE_WITH.format({ username: a }) : a;
     return (0, i.jsxs)('div', {
         className: h.channelNameSection,
         children: [

@@ -60,20 +60,20 @@ function _(e, t, n) {
         S = !g && (null == n ? void 0 : n.hasTimestamp) !== !1,
         A = l(e, t),
         N = o(e),
-        v = g ? '' : ''.concat(c ? N : A, ' ').concat(r.Z0);
+        O = g ? '' : ''.concat(c ? N : A, ' ').concat(r.Z0);
     if (T) {
         let t = s(e);
-        v += ' '.concat(t);
+        O += ' '.concat(t);
     }
     if (I) {
         let t = d(e);
-        v += ' '.concat(t);
+        O += ' '.concat(t);
     }
     if (S) {
         let t = u(e);
-        v += ' '.concat(r.fy, ' ').concat(t);
+        O += ' '.concat(r.fy, ' ').concat(t);
     }
-    return v.trim();
+    return O.trim();
 }
 function E(e) {
     if (0 === e.reactions.length) return;

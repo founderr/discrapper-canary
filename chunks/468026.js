@@ -15,7 +15,7 @@ t.default = (e) => {
     let t,
         n,
         i,
-        { body: f, cancelText: h, className: p, confirmColor: I, confirmText: m = _.Z.Messages.OKAY, secondaryConfirmText: T, onCancel: g, onClose: S, onConfirm: A, onConfirmSecondary: N, title: v, transitionState: O, titleClassName: R } = e;
+        { body: f, cancelText: h, className: p, confirmColor: I, confirmText: m = _.Z.Messages.OKAY, secondaryConfirmText: T, onCancel: g, onClose: S, onConfirm: A, onConfirmSecondary: N, title: O, transitionState: v, titleClassName: R } = e;
     return (
         null != h &&
             '' !== h &&
@@ -53,9 +53,9 @@ t.default = (e) => {
                 })
             })),
         (0, r.jsx)(u.Y0, {
-            transitionState: O,
+            transitionState: v,
             className: a()(p, E.container),
-            'aria-label': v,
+            'aria-label': O,
             children: (0, r.jsxs)('form', {
                 onSubmit: (e) => {
                     null != e && e.preventDefault(), null == S || S(), null == A || A();
@@ -69,11 +69,11 @@ t.default = (e) => {
                             justify: d.Z.Justify.CENTER,
                             className: E.content,
                             children: [
-                                null != v &&
+                                null != O &&
                                     (0, r.jsx)(l.v, {
                                         tag: 'h2',
                                         className: a()(E.title, R),
-                                        children: v
+                                        children: O
                                     }),
                                 null != f &&
                                     (0, r.jsx)(c.x, {

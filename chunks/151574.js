@@ -20,8 +20,8 @@ var r,
     S = n(926491),
     A = n(373228),
     N = n(378233),
-    v = n(419922),
-    O = n(490095),
+    O = n(419922),
+    v = n(490095),
     R = n(652136),
     C = n(695346),
     y = n(626135),
@@ -52,13 +52,13 @@ function k(e) {
                 className: P.mask,
                 children: (0, a.jsx)('div', { className: P.maskBackground })
             }),
-            (0, a.jsx)(v.ZP, {
+            (0, a.jsx)(O.ZP, {
                 maskAsset: !0,
                 size: w,
                 sticker: s,
                 className: P.__invalid_sticker
             }),
-            r !== g.eb.SENDABLE && (0, a.jsx)(O.Z, { size: 14 })
+            r !== g.eb.SENDABLE && (0, a.jsx)(v.Z, { size: 14 })
         ]
     });
 }
@@ -67,7 +67,7 @@ t.Z = s.memo(function (e) {
     var t;
     let { editorRef: n, channel: r, isEditorFocused: i, onSelectSticker: o, stickerIconVisible: _ = !1, submitButtonVisible: E = !1 } = e,
         m = s.useContext(I.ZP),
-        [v, O] = s.useState(null),
+        [O, v] = s.useState(null),
         [U, w] = s.useState(!1),
         [B, F] = s.useState(null),
         V = (0, T.Iu)((e) => null != e.activeView),
@@ -82,7 +82,7 @@ t.Z = s.memo(function (e) {
             setTextInputValue: Y,
             setHasDismissed: w,
             setHasSelection: Q,
-            setFocusedSuggestionType: O
+            setFocusedSuggestionType: v
         });
     s.useEffect(() => {
         let e = (e) => {
@@ -92,7 +92,7 @@ t.Z = s.memo(function (e) {
                 let t = '' !== e && null != e;
                 if ((Q(t), t)) {
                     var r;
-                    O(null), null === (r = n.current) || void 0 === r || r.focus();
+                    v(null), null === (r = n.current) || void 0 === r || r.focus();
                 }
             };
         return (
@@ -105,8 +105,8 @@ t.Z = s.memo(function (e) {
         );
     }, [J, n, m]),
         s.useLayoutEffect(() => {
-            null == v && F(null);
-        }, [v]);
+            null == O && F(null);
+        }, [O]);
     let [et, en] = s.useState(!1);
     s.useLayoutEffect(() => {
         requestAnimationFrame(() => {
@@ -159,8 +159,8 @@ t.Z = s.memo(function (e) {
             editorRef: n,
             hasStickerResults: er,
             shouldRenderSuggestions: ei,
-            focusedSuggestionType: v,
-            setFocusedSuggestionType: O,
+            focusedSuggestionType: O,
+            setFocusedSuggestionType: v,
             setHasDismissed: w,
             setFocusedStickerListItem: F,
             setTextInputValue: Y
@@ -223,7 +223,7 @@ t.Z = s.memo(function (e) {
                                             t.current = e;
                                         },
                                         onMouseLeave: () => {
-                                            null == v && F(null);
+                                            null == O && F(null);
                                         },
                                         tabIndex: eu ? -1 : n,
                                         ...r,

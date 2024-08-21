@@ -10,7 +10,7 @@ var n = s(735250),
     u = s(591318);
 t.Z = function (e) {
     var t;
-    let { message: s, errorMessage: h, submitting: m, onReset: g, onSave: E, onSaveText: T, onResetText: p, onSaveButtonColor: N, disabled: _, saveButtonTooltip: S } = e,
+    let { message: s, errorMessage: h, submitting: m, onReset: g, onSave: E, onSaveText: T, onResetText: N, onSaveButtonColor: p, disabled: _, saveButtonTooltip: S } = e,
         x = l.useRef(null),
         [{ spring: f }, C] = (0, r.useSpring)(() => ({ spring: 0 }));
     l.useEffect(() => {
@@ -73,7 +73,7 @@ t.Z = function (e) {
                                     onClick: g,
                                     children: (0, n.jsx)(a.animated.span, {
                                         style: { color: I },
-                                        children: null != p ? p : c.Z.Messages.RESET
+                                        children: null != N ? N : c.Z.Messages.RESET
                                     })
                                 }),
                             null != E
@@ -82,7 +82,7 @@ t.Z = function (e) {
                                       children: (e) =>
                                           (0, n.jsx)(r.Button, {
                                               size: r.Button.Sizes.SMALL,
-                                              color: null != N ? N : r.Button.Colors.GREEN,
+                                              color: null != p ? p : r.Button.Colors.GREEN,
                                               submitting: m,
                                               disabled: _,
                                               onClick: E,

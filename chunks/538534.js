@@ -1,6 +1,6 @@
 n.d(t, {
     Ee: function () {
-        return v;
+        return O;
     },
     ar: function () {
         return A;
@@ -48,8 +48,8 @@ function g(e) {
     var t;
     let { disabled: n, checked: r, option: a, size: s, onClick: l, infoClassName: c, titleClassName: d, radioItemClassName: E, radioItemIconClassName: p, radioBarClassName: m, hasSelection: T, radioPosition: g = 'left', icon: S, withTransparentBackground: A } = e,
         N = null !== (t = a.color) && void 0 !== t ? t : '',
-        v = r || !T,
-        O = (0, i.jsxs)('div', {
+        O = r || !T,
+        v = (0, i.jsxs)('div', {
             className: p,
             children: [
                 r ? (0, i.jsx)(h.Z, { foreground: I.radioIconForeground }) : (0, i.jsx)(f.Z, {}),
@@ -65,7 +65,7 @@ function g(e) {
         role: 'radio',
         'aria-checked': r,
         onClick: n ? void 0 : l,
-        tabIndex: !n && v ? 0 : -1,
+        tabIndex: !n && O ? 0 : -1,
         className: o()(
             null != a.collapsibleContent ? I.collapsibleItem : I.item,
             {
@@ -88,7 +88,7 @@ function g(e) {
                 m
             ),
             children: [
-                'left' === g ? O : null,
+                'left' === g ? v : null,
                 (0, i.jsxs)('div', {
                     className: o()(I.info, c),
                     children: [
@@ -107,7 +107,7 @@ function g(e) {
                             : null
                     ]
                 }),
-                'right' === g ? O : null
+                'right' === g ? v : null
             ]
         })
     });
@@ -237,7 +237,7 @@ function N(e) {
         'aria-checked': t
     };
 }
-function v(e) {
+function O(e) {
     let { itemInfoClassName: t, itemTitleClassName: n, radioItemClassName: r, collapsibleClassName: a, className: s, value: o = null, size: l = T.MEDIUM, radioPosition: u = 'left', onChange: c = p.dG4, disabled: _ = !1, options: E = [], 'aria-labelledby': f, orientation: h, withTransparentBackground: I } = e,
         m = (0, d.Gc)(),
         g = A({
@@ -277,4 +277,4 @@ m(S, 'defaultProps', {
     withTransparentBackground: !1,
     radioPosition: 'left'
 }),
-    (v.Sizes = T);
+    (O.Sizes = T);

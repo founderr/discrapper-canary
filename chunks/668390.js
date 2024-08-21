@@ -47,7 +47,7 @@ function g(e) {
         : null;
 }
 function E(e) {
-    let { color: t, id: a, role: i, guild: c, children: E, isDragging: T, selectedItem: p, onItemSelect: N, itemType: _, locked: S, lockTooltip: x, showContextMenu: f, theme: C, roleStyle: I, 'aria-label': M } = e,
+    let { color: t, id: a, role: i, guild: c, children: E, isDragging: T, selectedItem: N, onItemSelect: p, itemType: _, locked: S, lockTooltip: x, showContextMenu: f, theme: C, roleStyle: I, 'aria-label': M } = e,
         R = l.useCallback(
             (e) => {
                 (0, d.jW)(e, async () => {
@@ -67,8 +67,8 @@ function E(e) {
         : (0, n.jsx)(o.TabBar.Item, {
               className: m.role,
               id: a,
-              selectedItem: p,
-              onItemSelect: N,
+              selectedItem: N,
+              onItemSelect: p,
               itemType: _,
               'aria-label': null != x ? ''.concat(M, ', ').concat(x) : M,
               children: (0, n.jsxs)('div', {

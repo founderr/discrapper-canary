@@ -43,11 +43,11 @@ let S = [u.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, u.Z.unsafe_rawColors.PR
         id: ''.concat(t),
         height: Math.floor(100 * Math.random()) + 120
     }));
-function v(e) {
+function O(e) {
     var t;
     return null !== (t = e.id) && void 0 !== t ? t : e.src;
 }
-function O(e, t) {
+function v(e, t) {
     let n = N[t];
     return null == n ? 0 : n.height;
 }
@@ -255,7 +255,7 @@ class L extends i.PureComponent {
             g(this, 'handleSelect', (e) => {
                 let t;
                 let { data: n } = this.props,
-                    r = n.findIndex((t) => v(t) === e);
+                    r = n.findIndex((t) => O(t) === e);
                 -1 !== r && (t = n[r]), null != t && this.selectItem(t, r);
             }),
             g(this, 'handleClickItem', (e, t) => {
@@ -288,7 +288,7 @@ class L extends i.PureComponent {
                                       className: T.favButton,
                                       ...s
                                   }),
-                              focused: v(s) === a,
+                              focused: O(s) === a,
                               imagePool: this.props.imagePool,
                               videoPool: this.props.videoPool
                           },
@@ -361,7 +361,7 @@ class L extends i.PureComponent {
                               columns: e,
                               itemGutter: 12,
                               getItemKey: C,
-                              getItemHeight: O,
+                              getItemHeight: v,
                               renderItem: R,
                               chunkSize: 128
                           },

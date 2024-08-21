@@ -108,7 +108,7 @@ let T = async (e, t) => {
                     guildId: e,
                     request: n
                 }),
-                setTimeout(v, 200),
+                setTimeout(O, 200),
                 n
             );
         } catch (t) {
@@ -141,7 +141,7 @@ let T = async (e, t) => {
             }
         }
     };
-function v() {
+function O() {
     i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW' });
 }
 t.Z = {

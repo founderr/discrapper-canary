@@ -6,7 +6,7 @@ t.d(n, {
         return I;
     },
     ae: function () {
-        return x;
+        return v;
     }
 });
 var i = t(470079),
@@ -24,13 +24,13 @@ var i = t(470079),
     C = t(499254),
     f = t(541099),
     h = t(827498),
-    A = t(981631),
-    E = t(689938);
+    E = t(981631),
+    A = t(689938);
 let N = {
         ...p.Z.RULES.commandMention,
         parse: (e, n, t) => ({ content: p.Z.RULES.commandMention.parse(e, n, t).content })
     },
-    v = l().pick(
+    x = l().pick(
         (0, _.Z)([
             p.Z.RULES,
             { commandMention: N },
@@ -41,7 +41,7 @@ let N = {
         ]),
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
-    x = o.w4(v);
+    v = o.w4(x);
 function I(e) {
     let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: o = !0, launchingComponentId: m, submitting: p = !1 } = e,
         _ = (0, s.O)(),
@@ -49,7 +49,7 @@ function I(e) {
             channelId: n.id,
             applicationId: t.id
         }),
-        v = (0, c.w1)({
+        x = (0, c.w1)({
             applicationId: t.id,
             embeddedActivitiesManager: d.Z,
             channelId: n.id,
@@ -58,7 +58,7 @@ function I(e) {
                 let { applicationId: n } = e,
                     t = f.Z.entrypoint();
                 o && C.y(h.ti.ACTIVITY),
-                    (0, u.yw)(A.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                    (0, u.yw)(E.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,
                         section_name: a,
@@ -68,14 +68,14 @@ function I(e) {
             },
             launchingComponentId: m
         }),
-        x = r.ButtonColors.BRAND,
-        I = null != l ? l : E.Z.Messages.LAUNCH;
+        v = r.ButtonColors.BRAND,
+        I = null != l ? l : A.Z.Messages.LAUNCH;
     return (
-        N === c.JS.JOIN ? ((x = r.ButtonColors.GREEN), (I = E.Z.Messages.JOIN_ACTIVITY)) : N === c.JS.LEAVE && !p && ((x = r.ButtonColors.RED), (I = E.Z.Messages.LEAVE)),
+        N === c.JS.JOIN ? ((v = r.ButtonColors.GREEN), (I = A.Z.Messages.JOIN_ACTIVITY)) : N === c.JS.LEAVE && !p && ((v = r.ButtonColors.RED), (I = A.Z.Messages.LEAVE)),
         {
-            onActivityItemSelected: v,
+            onActivityItemSelected: x,
             activityAction: N,
-            buttonColor: x,
+            buttonColor: v,
             buttonText: I
         }
     );
@@ -86,7 +86,7 @@ function g(e, n) {
             () =>
                 (0, a.debounce)(
                     (e, n) => {
-                        (0, u.yw)(A.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, u.yw)(E.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: n
                         });

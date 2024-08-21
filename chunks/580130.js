@@ -20,14 +20,14 @@ let h = {},
     S = new Set(),
     A = new Set(),
     N = {};
-function v(e) {
+function O(e) {
     (h[e.id] = d.Z.createFromServer(e)), null == I[e.sku_id] && (I[e.sku_id] = new Set()), null == m[e.application_id] && (m[e.application_id] = new Set()), null != e.subscription_id && (null == N[e.subscription_id] && (N[e.subscription_id] = new Set()), N[e.subscription_id].add(e.id)), m[e.application_id].add(e.id), I[e.sku_id].add(e.id);
 }
-function O(e) {
+function v(e) {
     p[e.id] = d.Z.createFromServer(e);
 }
 function R(e) {
-    return v(e.entitlement);
+    return O(e.entitlement);
 }
 class C extends (r = u.yh) {
     initialize() {
@@ -110,20 +110,20 @@ class C extends (r = u.yh) {
         },
         ENTITLEMENT_FETCH_APPLICATION_SUCCESS: function (e) {
             let { applicationId: t, entitlements: n } = e;
-            for (let e of (S.delete(t), A.add(t), n)) !0 !== e.consumed && v(e);
+            for (let e of (S.delete(t), A.add(t), n)) !0 !== e.consumed && O(e);
         },
         ENTITLEMENT_FETCH_APPLICATION_FAIL: function () {},
         ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function (e) {
             let { entitlements: t } = e;
-            (p = {}), t.forEach(O);
+            (p = {}), t.forEach(v);
         },
         SKU_PURCHASE_SUCCESS: function (e) {
             let { entitlements: t } = e;
-            for (let e of t) v(e);
+            for (let e of t) O(e);
         },
         LIBRARY_FETCH_SUCCESS: function (e) {
             let { libraryApplications: t } = e;
-            for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) v(t);
+            for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) O(t);
         },
         ENTITLEMENT_CREATE: R,
         ENTITLEMENT_UPDATE: R,
@@ -147,7 +147,7 @@ class C extends (r = u.yh) {
         },
         ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: function (e) {
             let { entitlements: t } = e;
-            for (let e of ((g = !0), (T = !1), t)) v(e);
+            for (let e of ((g = !0), (T = !1), t)) O(e);
         },
         ENTITLEMENTS_FETCH_FOR_USER_FAIL: function () {
             (g = !1), (T = !1);

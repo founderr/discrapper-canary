@@ -18,9 +18,9 @@ var i = t(735250),
     C = t(413097);
 function f(e) {
     var n;
-    let { command: t, application: f, onClick: h, query: A, searchResultsPosition: E } = e,
+    let { command: t, application: f, onClick: h, query: E, searchResultsPosition: A } = e,
         N = s.Sb.useSetting(),
-        v = a.useCallback(
+        x = a.useCallback(
             (e) => {
                 if ((0, d.BQ)(f) && N) {
                     let n = f instanceof c.Z ? f : c.Z.createFromServer(f);
@@ -34,28 +34,28 @@ function f(e) {
             },
             [f, N]
         ),
-        { iconURL: x, name: I, description: g } = a.useMemo(() => (0, d.sl)(f, { fakeAppIconURL: C }), [f]),
+        { iconURL: v, name: I, description: g } = a.useMemo(() => (0, d.sl)(f, { fakeAppIconURL: C }), [f]),
         P = a.useMemo(() => {
             var e;
             let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : g;
             return null == n ? null : (0, u.ae)(n, void 0);
         }, [g, null == t ? void 0 : t.displayDescription]),
-        { trackSearchResultsItemImpressionRef: S } = (0, p.Z)({
+        { trackSearchResultsItemImpressionRef: L } = (0, p.Z)({
             applicationId: f.id,
             commandId: null == t ? void 0 : t.id,
-            query: A,
-            searchResultsPosition: E
+            query: E,
+            searchResultsPosition: A
         });
     return (0, i.jsx)(l.Clickable, {
         className: _.clickable,
-        innerRef: (e) => (S.current = e),
+        innerRef: (e) => (L.current = e),
         onClick: h,
-        onContextMenu: v,
+        onContextMenu: x,
         children: (0, i.jsxs)(l.FocusBlock, {
             className: _.focusBlock,
             children: [
                 (0, i.jsx)(m.Z, {
-                    src: x,
+                    src: v,
                     className: _.icon,
                     'aria-hidden': !0,
                     rendersPlaceholder: !0

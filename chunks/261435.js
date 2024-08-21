@@ -43,19 +43,19 @@ var i,
     W = n(987650),
     Y = n(689938);
 ((o = i || (i = {}))[(o.GENERIC = 0)] = 'GENERIC'), (o[(o.TEXT = 1)] = 'TEXT'), (o[(o.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((r = s || (s = {}))[(r.NORMAL = 0)] = 'NORMAL'), (r[(r.HIGH = 1)] = 'HIGH'), (r[(r.URGENT = 2)] = 'URGENT');
-let F = 5 * V.Z.Millis.SECOND,
-    H = 8 * V.Z.Millis.SECOND,
+let H = 5 * V.Z.Millis.SECOND,
+    F = 8 * V.Z.Millis.SECOND,
     K = 30 * V.Z.Millis.SECOND,
     X = Object.freeze({
         priority: 0,
-        duration: F,
+        duration: H,
         expirationExternallyManaged: !1,
         type: 0
     }),
     Q = [],
     J = (e, t, n) => {
         let i = t ? G._1z.TIMED_OUT : G._1z.DISMISSED;
-        return setTimeout(() => g.Z.updateNotificationStatus(e, i), null != n ? n : F);
+        return setTimeout(() => g.Z.updateNotificationStatus(e, i), null != n ? n : H);
     };
 function q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : G._1z.DISMISSED;
@@ -157,7 +157,7 @@ class ei extends (a = f.ZP.Store) {
                       null != n &&
                           et(n, {
                               priority: 2,
-                              duration: H
+                              duration: F
                           });
                   },
                   OVERLAY_SET_INPUT_LOCKED: function (e) {

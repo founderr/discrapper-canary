@@ -19,12 +19,12 @@ var r = n(620014),
     S = n(706627),
     A = n(822480),
     N = n(58834),
-    v = n(453342),
-    O = '[object Arguments]',
+    O = n(453342),
+    v = '[object Arguments]',
     R = '[object Function]',
     C = '[object Object]',
     y = {};
-(y[O] = y['[object Array]'] = y['[object ArrayBuffer]'] = y['[object DataView]'] = y['[object Boolean]'] = y['[object Date]'] = y['[object Float32Array]'] = y['[object Float64Array]'] = y['[object Int8Array]'] = y['[object Int16Array]'] = y['[object Int32Array]'] = y['[object Map]'] = y['[object Number]'] = y[C] = y['[object RegExp]'] = y['[object Set]'] = y['[object String]'] = y['[object Symbol]'] = y['[object Uint8Array]'] = y['[object Uint8ClampedArray]'] = y['[object Uint16Array]'] = y['[object Uint32Array]'] = !0), (y['[object Error]'] = y[R] = y['[object WeakMap]'] = !1);
+(y[v] = y['[object Array]'] = y['[object ArrayBuffer]'] = y['[object DataView]'] = y['[object Boolean]'] = y['[object Date]'] = y['[object Float32Array]'] = y['[object Float64Array]'] = y['[object Int8Array]'] = y['[object Int16Array]'] = y['[object Int32Array]'] = y['[object Map]'] = y['[object Number]'] = y[C] = y['[object RegExp]'] = y['[object Set]'] = y['[object String]'] = y['[object Symbol]'] = y['[object Uint8Array]'] = y['[object Uint8ClampedArray]'] = y['[object Uint16Array]'] = y['[object Uint32Array]'] = !0), (y['[object Error]'] = y[R] = y['[object WeakMap]'] = !1);
 e.exports = function e(t, n, D, L, b, M) {
     var P,
         U = 1 & n,
@@ -39,7 +39,7 @@ e.exports = function e(t, n, D, L, b, M) {
         var k = f(t),
             B = k == R || '[object GeneratorFunction]' == k;
         if (T(t)) return l(t, U);
-        if (k == C || k == O || (B && !b)) {
+        if (k == C || k == v || (B && !b)) {
             if (((P = w || B ? {} : I(t)), !U)) return w ? d(t, o(P, t)) : c(t, s(P, t));
         } else {
             if (!y[k]) return b ? t : {};
@@ -58,7 +58,7 @@ e.exports = function e(t, n, D, L, b, M) {
               t.forEach(function (r, i) {
                   P.set(i, e(r, n, D, i, t, M));
               });
-    var V = x ? (w ? E : _) : w ? v : N,
+    var V = x ? (w ? E : _) : w ? O : N,
         H = G ? void 0 : V(t);
     return (
         i(H || t, function (r, i) {

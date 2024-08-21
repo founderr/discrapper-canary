@@ -23,12 +23,12 @@ let T = !1,
     S = {},
     A = new Set(),
     N = {},
-    v = {},
-    O = !1;
+    O = {},
+    v = !1;
 function R() {
     c.K.set(I, {
         ...m(),
-        activeLaunchOptionIds: v
+        activeLaunchOptionIds: O
     });
 }
 function C() {
@@ -64,7 +64,7 @@ class M extends (r = u.ZP.Store) {
     initialize() {
         this.waitFor(h.default);
         let e = c.K.get(I);
-        null != e && (null == e.activeLaunchOptionIds ? R() : (v = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (N = e.activeLibraryApplicationBranchIds));
+        null != e && (null == e.activeLaunchOptionIds ? R() : (O = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (N = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
         return (function (e) {
@@ -113,7 +113,7 @@ class M extends (r = u.ZP.Store) {
         return A.has((0, f.Tu)(e, t));
     }
     getActiveLaunchOptionId(e, t) {
-        return v[(0, f.Tu)(e, t)];
+        return O[(0, f.Tu)(e, t)];
     }
     get fetched() {
         return T;
@@ -126,7 +126,7 @@ class M extends (r = u.ZP.Store) {
             .value();
     }
     get hasRemovedLibraryApplicationThisSession() {
-        return O;
+        return v;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
@@ -159,13 +159,13 @@ class M extends (r = u.ZP.Store) {
             let { applicationId: t, branchId: n, flags: r } = e,
                 i = (0, f.Tu)(t, n),
                 a = L(t, n);
-            null != a && !a.isHidden() && E.yE(r, p.eHb.HIDDEN) && (O = !0), A.add(i);
+            null != a && !a.isHidden() && E.yE(r, p.eHb.HIDDEN) && (v = !0), A.add(i);
         },
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: D,
         LIBRARY_APPLICATION_UPDATE: D,
         LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function (e) {
             let { applicationId: t, branchId: n, launchOptionId: r } = e;
-            (v[(0, f.Tu)(t, n)] = r), R();
+            (O[(0, f.Tu)(t, n)] = r), R();
         },
         LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function (e) {
             let { applicationId: t, branchId: n } = e;

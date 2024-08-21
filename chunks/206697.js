@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     r = n(106351),
     l = n(657707),
     o = n(793030),
@@ -38,7 +38,7 @@ let M = {
 function L() {
     let e = (0, c.e7)([C.default], () => C.default.getCurrentUser()),
         t = (0, f.I5)(e, S.p9.TIER_2),
-        { fakeMessage: n, fakeChannel: a } = (function (e) {
+        { fakeMessage: n, fakeChannel: s } = (function (e) {
             let { showAttachment: t } = e,
                 n = new N.Z({
                     id: '1337',
@@ -85,8 +85,8 @@ function L() {
                 className: x.messageContainer,
                 children: (0, i.jsx)(I.Z, {
                     message: n,
-                    channel: a,
-                    className: s()(x.message, R.tutorialMessage),
+                    channel: s,
+                    className: a()(x.message, R.tutorialMessage),
                     compact: T.jU.getSetting(),
                     animateAvatar: !1,
                     focusProps: M,

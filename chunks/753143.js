@@ -33,15 +33,15 @@ function l(e) {
             getScrollerState: h,
             forceUpdate: I
         }),
-        { items: v } = m.current,
-        O = null,
+        { items: O } = m.current,
+        v = null,
         { scrollTop: R } = h();
-    for (let e of v) {
+    for (let e of O) {
         if (0 === R) break;
         if ('footer' === e.type || 'header' === e.type || null == e.anchorId) continue;
         let t = 'row' === e.type ? e.row : void 0;
         if (e.offsetTop >= R) {
-            O = {
+            v = {
                 id: e.anchorId,
                 section: e.section,
                 row: t,
@@ -77,7 +77,7 @@ function l(e) {
             ...y,
             listComputer: T,
             forceUpdateOnChunkChange: N,
-            anchor: O,
+            anchor: v,
             isSidebarVisible: C
         }
     );

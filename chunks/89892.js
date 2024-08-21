@@ -417,8 +417,8 @@ class I {
             S = null !== (n = e.isAfter) && void 0 !== n && n,
             A = null !== (r = e.jump) && void 0 !== r ? r : null,
             N = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
-            v = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
-            O = null !== (c = e.cached) && void 0 !== c && c,
+            O = null !== (l = e.hasMoreAfter) && void 0 !== l && l,
+            v = null !== (c = e.cached) && void 0 !== c && c,
             R = i()(T)
                 .reverse()
                 .map(a.Z.getCurrentConfig({ location: '2ecb25_2' }, { autoTrackExposure: !1 }).enabled ? (e) => (0, u.e5)(e) : (e) => h(this, e))
@@ -443,8 +443,8 @@ class I {
             jumpSequenceId: null != A ? C.jumpSequenceId + 1 : C.jumpSequenceId,
             jumpReturnTargetId: null !== (m = null == A ? void 0 : A.returnMessageId) && void 0 !== m ? m : null,
             hasMoreBefore: null == A && S ? C.hasMoreBefore : N,
-            hasMoreAfter: null == A && g ? C.hasMoreAfter : v,
-            cached: O,
+            hasMoreAfter: null == A && g ? C.hasMoreAfter : O,
+            cached: v,
             hasFetched: e.hasFetched,
             error: !1
         }));

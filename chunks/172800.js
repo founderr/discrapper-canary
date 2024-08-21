@@ -20,8 +20,8 @@ var r = n(735250),
     S = n(926243),
     A = n(149203),
     N = n(981631),
-    v = n(689938),
-    O = n(269003);
+    O = n(689938),
+    v = n(269003);
 let R = n(137321),
     C = n(233892),
     y = n(942315),
@@ -68,12 +68,12 @@ t.Z = (e) => {
                             children: (0, r.jsx)('button', {
                                 'aria-label': d,
                                 ref: f,
-                                className: s()(O.emojiItem, {
-                                    [O.emojiItemLarge]: ee,
-                                    [O.emojiItemMedium]: et,
-                                    [O.emojiItemSelected]: m,
+                                className: s()(v.emojiItem, {
+                                    [v.emojiItemLarge]: ee,
+                                    [v.emojiItemMedium]: et,
+                                    [v.emojiItemSelected]: m,
                                     [null != V ? V : '']: m,
-                                    [O.showPulse]: X === t
+                                    [v.showPulse]: X === t
                                 }),
                                 onFocus: null != p ? p : T,
                                 onMouseOver: T,
@@ -92,17 +92,17 @@ t.Z = (e) => {
                     return (
                         e.sectionCollapsedToThreeRows
                             ? ((i = (0, r.jsx)('img', {
-                                  className: O.icon,
+                                  className: v.icon,
                                   src: (0, o.wj)(K) ? R : C,
                                   alt: ''
                               })),
-                              (t = v.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION))
+                              (t = O.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION))
                             : ((i = (0, r.jsx)('img', {
-                                  className: O.icon,
+                                  className: v.icon,
                                   src: (0, o.wj)(K) ? y : D,
                                   alt: ''
                               })),
-                              (t = v.Z.Messages.EMOJI_PICKER_COLLAPSE_EMOJI_SECTION)),
+                              (t = O.Z.Messages.EMOJI_PICKER_COLLAPSE_EMOJI_SECTION)),
                         n({
                             handleSelect: (t) => {
                                 t.stopPropagation(),
@@ -128,8 +128,8 @@ t.Z = (e) => {
                     let t = (0, r.jsx)(l.CirclePlusIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: O.icon,
-                        colorClass: O.icon
+                        className: v.icon,
+                        colorClass: v.icon
                     });
                     return n({
                         handleSelect: (t) => {
@@ -143,7 +143,7 @@ t.Z = (e) => {
                                     h.Z.open(e.guildId, N.pNK.EMOJI, N.jXE.EMOJI_PICKER_POPOUT));
                         },
                         icon: t,
-                        ariaLabel: v.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE
+                        ariaLabel: O.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE
                     });
                 }
                 case g.ld.EMOJI: {
@@ -184,9 +184,9 @@ t.Z = (e) => {
         er = (e) =>
             (0, r.jsx)('ul', {
                 ...P(x),
-                className: s()(O.emojiListRow, {
-                    [O.emojiListRowLargeSize]: ee,
-                    [O.emojiListRowMediumSize]: et
+                className: s()(v.emojiListRow, {
+                    [v.emojiListRowLargeSize]: ee,
+                    [v.emojiListRowMediumSize]: et
                 }),
                 ref: J,
                 children: e.map(en)
@@ -197,34 +197,34 @@ t.Z = (e) => {
     return 0 === ea.length
         ? er(t)
         : (0, r.jsxs)('div', {
-              className: O.topEmojiSectionContainer,
+              className: v.topEmojiSectionContainer,
               children: [
                   (0, r.jsx)('div', {
-                      className: s()(O.topEmojiContainer, { [O.noEmojis]: 0 === ei.length }),
+                      className: s()(v.topEmojiContainer, { [v.noEmojis]: 0 === ei.length }),
                       children: er(ei)
                   }),
                   (0, r.jsxs)('div', {
-                      className: O.newlyAddedHighlightContainer,
+                      className: v.newlyAddedHighlightContainer,
                       children: [
                           (0, r.jsx)('div', {
-                              className: s()(O.newlyAddedHighlight, {
-                                  [O.oneItem]: 1 === ea.length,
-                                  [O.alignRight]: ei.length > 0
+                              className: s()(v.newlyAddedHighlight, {
+                                  [v.oneItem]: 1 === ea.length,
+                                  [v.alignRight]: ei.length > 0
                               }),
                               children: er(ea)
                           }),
                           (0, r.jsxs)('div', {
-                              className: s()(O.newlyAddedBadge, {
-                                  [O.newlyAddedBadgeLarge]: ee,
-                                  [O.newlyAddedBadgeMedium]: et,
-                                  [O.alignRight]: ei.length > 0
+                              className: s()(v.newlyAddedBadge, {
+                                  [v.newlyAddedBadgeLarge]: ee,
+                                  [v.newlyAddedBadgeMedium]: et,
+                                  [v.alignRight]: ei.length > 0
                               }),
                               children: [
-                                  (0, r.jsx)(I.Z, { foreground: O.newlyAddedBadgeStar }),
+                                  (0, r.jsx)(I.Z, { foreground: v.newlyAddedBadgeStar }),
                                   (0, r.jsx)(l.Text, {
                                       variant: 'text-xs/semibold',
                                       color: 'always-white',
-                                      children: v.Z.Messages.NEW
+                                      children: O.Z.Messages.NEW
                                   })
                               ]
                           })

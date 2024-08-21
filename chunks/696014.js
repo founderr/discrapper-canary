@@ -5,28 +5,28 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
+    s = n(470079),
+    a = n(120356),
+    r = n.n(a),
     l = n(702749);
 function o() {
-    let [e, t] = a.useState(!1);
+    let [e, t] = s.useState(!1);
     return {
         isTruncated: e,
-        ExpandableTextContainer: a.memo(function (e) {
-            let { showAll: n = !1, className: a, children: s, lineClamp: o = 2 } = e;
+        ExpandableTextContainer: s.memo(function (e) {
+            let { showAll: n = !1, className: s, children: a, lineClamp: o = 2 } = e;
             return (0, i.jsx)('div', {
                 ref: (e) => {
                     null != e && t(e.scrollHeight - e.clientHeight > 1);
                 },
-                className: r()(l.lineClamp, a),
+                className: r()(l.lineClamp, s),
                 style: n
                     ? void 0
                     : {
                           lineClamp: o,
                           WebkitLineClamp: o
                       },
-                children: s
+                children: a
             });
         })
     };

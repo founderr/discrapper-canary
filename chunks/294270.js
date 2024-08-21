@@ -52,7 +52,7 @@ function N(e) {
         r === s && ((T = [...T, t.name].slice(-1 * p)), i().isEqual(T, h) ? (S.play(), m.stop(), (T = []), (0, c.ME)(!l)) : m.start(E, () => (T = [])));
     }
 }
-function v(e) {
+function O(e) {
     let { completingUserId: t, waitingUserId: n, channelId: r } = e,
         i = I(''.concat(t).concat(n), r, !0);
     (g[i] = new a.sW(550, () => {
@@ -60,7 +60,7 @@ function v(e) {
     })),
         g[i].delay();
 }
-class O extends s.Z {
+class v extends s.Z {
     _terminate() {
         Object.values(g).forEach((e) => e.cancel()), (g = {});
     }
@@ -71,7 +71,7 @@ class O extends s.Z {
             (n = 'actions'),
             (r = {
                 VOICE_CHANNEL_EFFECT_SEND: N,
-                HIGH_FIVE_COMPLETE: v
+                HIGH_FIVE_COMPLETE: O
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -83,4 +83,4 @@ class O extends s.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new O();
+t.Z = new v();

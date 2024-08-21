@@ -98,9 +98,9 @@ t.Z = (e) => {
         { product: g, purchase: S } = (0, c.Z)(null == i ? void 0 : i.skuId),
         A = f.ZP.canUseCollectibles(t),
         N = (0, u.qS)(S),
-        v = (0, u.G1)(g),
-        O = !A && N;
-    return null != g && (null == S || O)
+        O = (0, u.G1)(g),
+        v = !A && N;
+    return null != g && (null == S || v)
         ? (0, r.jsxs)('div', {
               className: a()(I.modalPreview, I.shopPreviewContainer, d),
               children: [
@@ -121,9 +121,9 @@ t.Z = (e) => {
                           }),
                           (0, r.jsx)(l.Text, {
                               variant: 'text-sm/normal',
-                              children: O
+                              children: v
                                   ? p.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED
-                                  : (0, s.EQ)([v, A])
+                                  : (0, s.EQ)([O, A])
                                         .with([!0, !0], () => p.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM)
                                         .with([!0, !1], () => p.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER)
                                         .otherwise(() => p.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)

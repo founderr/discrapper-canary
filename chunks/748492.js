@@ -34,8 +34,8 @@ var i = n(120356),
     S = n(157813),
     A = n(25827),
     N = n(131951),
-    v = n(884338),
-    O = n(349619),
+    O = n(884338),
+    v = n(349619),
     R = n(981631),
     C = n(231338),
     y = n(689938),
@@ -52,7 +52,7 @@ function b(e) {
 }
 function M(e) {
     var t, n;
-    let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: m, onMouseLeave: S, onJumpToChannel: v, idle: y, selectedParticipant: b } = e,
+    let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: m, onMouseLeave: S, onJumpToChannel: O, idle: y, selectedParticipant: b } = e,
         M = (0, u.bp)() === R.IlC.POPOUT,
         P = (0, s.e7)([N.Z], () => N.Z.isVideoEnabled()),
         U = (0, s.e7)([N.Z], () => Object.values(N.Z.getVideoDevices())[0]),
@@ -73,7 +73,7 @@ function M(e) {
                 children: (0, r.jsx)(I.r, {
                     idle: y,
                     title: null !== (n = null == x ? void 0 : x.name) && void 0 !== n ? n : i.name,
-                    onJumpToChannel: v,
+                    onJumpToChannel: O,
                     preventIdleComponent: p.Z
                 })
             }),
@@ -120,7 +120,7 @@ function M(e) {
                                       className: D.rightPipIcon,
                                       popoutOpen: !1,
                                       onOpenPopout: () => {
-                                          (0, O.Z)(() => E.hP(i));
+                                          (0, v.Z)(() => E.hP(i));
                                       },
                                       onClosePopout: C.Vq
                                   }),
@@ -159,7 +159,7 @@ function P(e) {
             (0, r.jsxs)('div', {
                 className: L.bottomControls,
                 children: [
-                    (0, r.jsx)(v.Z, {
+                    (0, r.jsx)(O.Z, {
                         renderIcon: !1,
                         users: E,
                         size: 24,

@@ -47,8 +47,8 @@ var i,
     G = n(237997),
     W = n(136015),
     Y = n(51144),
-    F = n(145597),
-    H = n(658785),
+    H = n(145597),
+    F = n(658785),
     K = n(244073),
     X = n(876205),
     Q = n(906037),
@@ -72,7 +72,7 @@ function en(e, t, n) {
 }
 function ei(e) {
     let { flipped: t = !1, locked: n = !1, user: i, nick: o, displayNameMode: c, displayUserMode: d, size: u = q.ipw.LARGE, onClick: h, onContextMenu: p, context: f, guildId: _, voiceState: m } = e,
-        { showKeybindIndicators: E } = H.Z.useExperiment({ location: 'overlay_voice_widget' }),
+        { showKeybindIndicators: E } = F.Z.useExperiment({ location: 'overlay_voice_widget' }),
         Z = (0, l.e7)([G.Z], () => G.Z.showKeybindIndicators),
         I = (0, l.e7)([D.default], () => D.default.getId()),
         S = (0, l.e7)([k.Z], () => k.Z.isLocalMute(i.id)),
@@ -401,7 +401,7 @@ function ea(e) {
                     W.Q
                 ),
                 t = (0, l.e7)([D.default], () => D.default.getId()),
-                { showKeybindIndicators: n } = H.Z.useExperiment({ location: 'voice_widget' });
+                { showKeybindIndicators: n } = F.Z.useExperiment({ location: 'voice_widget' });
             return a.useMemo(() => (n ? [...e].sort((e, n) => (e.user.id === t ? -1 : n.user.id === t ? 1 : 0)) : e), [e, t, n]);
         })(),
         r = (0, l.e7)([P.Z], () => P.Z.getStreamerActiveStreamMetadata()),
@@ -418,7 +418,7 @@ function ea(e) {
                 displayUserMode: G.Z.getDisplayUserMode(),
                 displayNameMode: G.Z.getDisplayNameMode(),
                 avatarSizeMode: G.Z.getAvatarSizeMode(),
-                streamApplication: (null == r ? void 0 : r.pid) === (0, F.QF)() ? (0, O.Z)(e) : null,
+                streamApplication: (null == r ? void 0 : r.pid) === (0, H.QF)() ? (0, O.Z)(e) : null,
                 stream: t
             };
         });

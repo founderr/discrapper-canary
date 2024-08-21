@@ -32,8 +32,8 @@ var r = n(512722),
     S = n(346479),
     A = n(706454),
     N = n(430824),
-    v = n(117530),
-    O = n(594174),
+    O = n(117530),
+    v = n(594174),
     R = n(403182),
     C = n(823379),
     y = n(380684),
@@ -67,7 +67,7 @@ let V = (e, t) => {
         return t || n ? t : null;
     };
 async function Y(e) {
-    var t, n, r, s, l, c, d, f, h, p, I, m, T, g, N, O;
+    var t, n, r, s, l, c, d, f, h, p, I, m, T, g, N, v;
     let { command: R, optionValues: C, context: y, commandTargetId: D, maxSizeCallback: b, commandOrigin: P = w.bB.CHAT, sectionName: G, interactionLifecycleOptionsFactory: B = q } = e,
         F = null !== (r = U.Z.getCommandOrigin(y.channel.id)) && void 0 !== r ? r : P;
     null == y.autocomplete &&
@@ -101,7 +101,7 @@ async function Y(e) {
             }
             if (e.type === u.jw.ATTACHMENT) {
                 if (null != y.autocomplete) continue;
-                let n = v.Z.getUpload(y.channel.id, e.name, z);
+                let n = O.Z.getUpload(y.channel.id, e.name, z);
                 if (null == n) continue;
                 let r = W.length;
                 W.push(n),
@@ -219,7 +219,7 @@ async function Y(e) {
         version: R.version,
         id: null !== (N = null === (t = R.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== N ? N : R.id,
         guild_id: R.guildId,
-        name: null !== (O = null === (n = R.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== O ? O : R.name,
+        name: null !== (v = null === (n = R.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== v ? v : R.name,
         type: R.type,
         options: Y,
         application_command: R.rootCommand
@@ -354,7 +354,7 @@ async function q(e, t, n) {
             name: n.name,
             name_localized: e.displayName,
             type: u.B8.APPLICATION_COMMAND,
-            user: (0, T.pe)(O.default.getCurrentUser())
+            user: (0, T.pe)(v.default.getCurrentUser())
         },
         interaction_data: n
     };

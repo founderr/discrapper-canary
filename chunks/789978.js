@@ -326,12 +326,12 @@ var A = function (e, t, n, r) {
     return !0;
 };
 let N = !1,
-    v,
-    O = {};
+    O,
+    v = {};
 function R() {
     if (!N) return;
     let e = null == r ? void 0 : r.getStyle();
-    null == e || A(e, O) ? null != v && cancelAnimationFrame(v) : ((O = e), null == r || r.invalidate()), (v = requestAnimationFrame(R));
+    null == e || A(e, v) ? null != O && cancelAnimationFrame(O) : ((v = e), null == r || r.invalidate()), (O = requestAnimationFrame(R));
 }
 let C = !1,
     y = {
@@ -342,10 +342,10 @@ let C = !1,
             (C = e), null == r || r.invalidate();
         },
         enableAnimationTracking() {
-            (N = !0), (v = requestAnimationFrame(R));
+            (N = !0), (O = requestAnimationFrame(R));
         },
         disableAnimationTracking() {
-            (N = !1), null != v && cancelAnimationFrame(v);
+            (N = !1), null != O && cancelAnimationFrame(O);
         }
     };
 var D = { exports: {} },
@@ -474,13 +474,13 @@ function x(e) {
                 I.hide(), (f.current = !1), p(!1);
             }
         }, [t, N, r, I, a, s]);
-    let v = o.useCallback(
+    let O = o.useCallback(
             (e) => {
                 I.hide(), (f.current = !1), p(!1), null == T || T(e);
             },
             [T, I]
         ),
-        O = o.useCallback(
+        v = o.useCallback(
             (e) => {
                 let n = null == s ? void 0 : s.current;
                 e.currentTarget === e.target ? ((f.current = !0), I.showElement(null != n ? n : e.currentTarget, N)) : (p(!0), t && I.showElement(null != n ? n : e.currentTarget, N)), null == g || g(e);
@@ -491,8 +491,8 @@ function x(e) {
         ? o.cloneElement(m, {
               ...A,
               className: _(A.className, f.current ? u : void 0, h ? c : void 0),
-              onBlur: v,
-              onFocus: O
+              onBlur: O,
+              onFocus: v
           })
         : m;
 }

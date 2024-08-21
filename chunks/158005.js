@@ -40,8 +40,8 @@ function E(e, t, n) {
         }),
         { isInvalid: S, validationErrors: A, validationDetails: N } = t.displayValidation,
         {
-            labelProps: v,
-            fieldProps: O,
+            labelProps: O,
+            fieldProps: v,
             descriptionProps: R,
             errorMessageProps: C
         } = (0, l.U)({
@@ -52,7 +52,7 @@ function E(e, t, n) {
         });
     (g.onKeyDown = g.onKeyDownCapture), delete g.onKeyDownCapture;
     let y = (0, r.zL)(e, { labelable: !0 }),
-        D = (0, r.dG)(g, m, O),
+        D = (0, r.dG)(g, m, v),
         L = (0, r.Me)();
     return (
         _.set(t, {
@@ -63,7 +63,7 @@ function E(e, t, n) {
         }),
         {
             labelProps: {
-                ...v,
+                ...O,
                 onClick: () => {
                     !e.isDisabled && (n.current.focus(), (0, s._w)('keyboard'));
                 }
@@ -110,7 +110,7 @@ function E(e, t, n) {
                 onBlur: (n) => {
                     !n.currentTarget.contains(n.relatedTarget) && (e.onBlur && e.onBlur(n), e.onFocusChange && e.onFocusChange(!1), t.setFocused(!1));
                 },
-                'aria-labelledby': [O['aria-labelledby'], D['aria-label'] && !O['aria-labelledby'] ? D.id : null].filter(Boolean).join(' ')
+                'aria-labelledby': [v['aria-labelledby'], D['aria-label'] && !v['aria-labelledby'] ? D.id : null].filter(Boolean).join(' ')
             },
             descriptionProps: R,
             errorMessageProps: C,

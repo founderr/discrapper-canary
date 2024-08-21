@@ -25,10 +25,10 @@ function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     A(e).reset(t);
 }
-function v() {
+function O() {
     return !1;
 }
-function O(e) {
+function v(e) {
     let t = !1,
         n = A(e.guildId);
     return 'GUILD_ROLE_DELETE' === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t;
@@ -184,8 +184,8 @@ let y = new C(l.Z, {
         for (let e of t) n = A(e.guildId).updateServerMembers(e.members) || n;
         return n;
     },
-    GUILD_MEMBER_ADD: v,
-    GUILD_MEMBER_UPDATE: v,
+    GUILD_MEMBER_ADD: O,
+    GUILD_MEMBER_UPDATE: O,
     GUILD_MEMBER_UPDATE_LOCAL: function (e) {
         let { guildId: t } = e,
             n = u.default.getId();
@@ -195,8 +195,8 @@ let y = new C(l.Z, {
         let { guildId: t, user: n } = e;
         return A(t).removeMember(n.id);
     },
-    GUILD_ROLE_UPDATE: O,
-    GUILD_ROLE_DELETE: O,
+    GUILD_ROLE_UPDATE: v,
+    GUILD_ROLE_DELETE: v,
     GUILD_MEMBER_PROFILE_UPDATE: function (e) {
         let { guildId: t, guildMember: n } = e;
         return A(t).updateMembersByMemberIds([n.user.id]);

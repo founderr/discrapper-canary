@@ -32,8 +32,8 @@ function N(e, t, n) {
         e
     );
 }
-let v = 1 * f.Z.Millis.MINUTE,
-    O = 1 * f.Z.Millis.SECOND,
+let O = 1 * f.Z.Millis.MINUTE,
+    v = 1 * f.Z.Millis.SECOND,
     R = (0, T.T)({ location: S.dr.QUESTS_MANAGER }),
     C = (e) =>
         (0, u.V9)({
@@ -155,10 +155,10 @@ class M extends s.Z {
             }),
             N(this, 'calculateHeartbeatDurationMs', (e) => {
                 let t = p.Z.quests.get(e);
-                if (null == t || null == t.config || null == t.userStatus) return v;
+                if (null == t || null == t.config || null == t.userStatus) return O;
                 let { progressSeconds: n, targetSeconds: r } = (0, I.il)(t, a.T.DESKTOP),
                     i = Math.max(0, (r - n) * f.Z.Millis.SECOND);
-                return i <= v ? i + O : v;
+                return i <= O ? i + v : O;
             }),
             N(this, 'terminateHeartbeat', (e) => {
                 let { streamKey: t, sendTerminalHeartbeat: n } = e,

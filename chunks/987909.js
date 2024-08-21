@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     r = n(481060),
     l = n(904245),
     o = n(541716),
@@ -22,31 +22,31 @@ var i = n(735250),
     N = n(310004);
 function C(e) {
     let { assets: t, currentUser: n, message: i } = e,
-        a = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
-    return t[a];
+        s = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
+    return t[s];
 }
 function f(e) {
-    let { currentUser: t, channel: n, message: s, buttonLabels: u, stickers: d, event: _, eventProperties: E } = e,
-        [m, h] = a.useState(!1),
-        f = a.useMemo(
+    let { currentUser: t, channel: n, message: a, buttonLabels: u, stickers: d, event: _, eventProperties: E } = e,
+        [m, h] = s.useState(!1),
+        f = s.useMemo(
             () =>
                 C({
                     assets: d,
                     currentUser: t,
-                    message: s
+                    message: a
                 }),
-            [d, t, s]
+            [d, t, a]
         ),
-        p = a.useMemo(
+        p = s.useMemo(
             () =>
                 C({
                     assets: u,
                     currentUser: t,
-                    message: s
+                    message: a
                 }),
-            [u, t, s]
+            [u, t, a]
         ),
-        g = a.useCallback(async () => {
+        g = s.useCallback(async () => {
             let { valid: e } = await (0, T.v)({
                 type: o.I.FORM,
                 content: '',
@@ -67,7 +67,7 @@ function f(e) {
                     );
                 })({
                     channel: n,
-                    message: s,
+                    message: a,
                     sticker: f
                 }),
                 !(function (e) {
@@ -82,7 +82,7 @@ function f(e) {
                     event: _,
                     eventProperties: E
                 }));
-        }, [n, s, f, _, E]);
+        }, [n, a, f, _, E]);
     return (0, i.jsxs)(r.Button, {
         className: N.CTAMessageButtonOuter,
         innerClassName: N.CTAMessageButton,
@@ -102,19 +102,19 @@ function f(e) {
     });
 }
 function p(e) {
-    let { channel: t, message: n, buttonLabels: a, stickers: r, event: l, eventProperties: o } = e,
+    let { channel: t, message: n, buttonLabels: s, stickers: r, event: l, eventProperties: o } = e,
         c = E.default.getCurrentUser(),
         I = (function (e) {
             let { channel: t, message: n, currentUser: i } = e;
-            return (0, s.e7)([_.Z, d.ZP], () => {
+            return (0, a.e7)([_.Z, d.ZP], () => {
                 var e;
-                let a = t.guild_id;
-                if (null == i || null == a) return !1;
-                let s = (0, u.xl)(t),
+                let s = t.guild_id;
+                if (null == i || null == s) return !1;
+                let a = (0, u.xl)(t),
                     r = _.Z.can(h.Plq.SEND_MESSAGES, t),
-                    l = null === (e = d.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending,
+                    l = null === (e = d.ZP.getMember(s, i.id)) || void 0 === e ? void 0 : e.isPending,
                     o = n.author.bot;
-                return r && !s && !l && !o;
+                return r && !a && !l && !o;
             });
         })({
             channel: t,
@@ -128,7 +128,7 @@ function p(e) {
                   currentUser: c,
                   channel: t,
                   message: n,
-                  buttonLabels: a,
+                  buttonLabels: s,
                   stickers: r,
                   event: l,
                   eventProperties: o

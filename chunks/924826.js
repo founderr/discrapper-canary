@@ -18,28 +18,28 @@ function c(e) {
     let { id: t, defaultFocused: n, isEnabled: c, scrollToStart: d, scrollToEnd: _, onNavigatePreviousAtStart: E, onNavigateNextAtEnd: f, setFocus: h, setFocusOnList: p, preserveFocusPosition: I = !0, useVirtualFocus: m = !1, wrap: T = !1, orientation: g = o.hy.VERTICAL, disableClickOnSpace: S = !1 } = e,
         A = r.useRef(n ? (0, l.jb)(t, n) : null),
         N = r.useRef(!1),
-        v = r.useRef(null),
-        O = r.useRef(c);
+        O = r.useRef(null),
+        v = r.useRef(c);
     function R(e) {
         var t;
-        return (null !== (t = v.current) && void 0 !== t ? t : document).querySelector(e);
+        return (null !== (t = O.current) && void 0 !== t ? t : document).querySelector(e);
     }
     function C(e) {
         var t;
         null === (t = R(e)) || void 0 === t || t.focus();
     }
     r.useLayoutEffect(() => {
-        O.current = c;
+        v.current = c;
     }, [c]);
     let y = r.useCallback(
             (e, t) => {
-                O.current && (null != h ? h : C)(e, t);
+                v.current && (null != h ? h : C)(e, t);
             },
             [h]
         ),
         D = r.useCallback(
             (e) => {
-                O.current && (null != p ? p : C)(e);
+                v.current && (null != p ? p : C)(e);
             },
             [p]
         ),
@@ -55,10 +55,10 @@ function c(e) {
         b = r.useMemo(
             () =>
                 (0, i.E)({
-                    getFocusableElements: () => u(t, v),
+                    getFocusableElements: () => u(t, O),
                     getActiveElement() {
                         var e;
-                        return null === (e = v.current) || void 0 === e ? void 0 : e.ownerDocument.activeElement;
+                        return null === (e = O.current) || void 0 === e ? void 0 : e.ownerDocument.activeElement;
                     },
                     scrollToStart: d,
                     scrollToEnd: _
@@ -71,7 +71,7 @@ function c(e) {
         U.current = M;
     }, [M]),
         r.useLayoutEffect(() => {
-            let e = v.current;
+            let e = O.current;
             if (null != e) {
                 if (!c) return;
                 return (
@@ -96,7 +96,7 @@ function c(e) {
                         });
             }
             async function i() {
-                let e = v.current;
+                let e = O.current;
                 if (U.current || null == e) return;
                 let n = A.current;
                 if (I && null !== n) {
@@ -107,7 +107,7 @@ function c(e) {
                         if (await (0, s.JJ)(e, r)) return y(t, (0, l.x3)(n));
                     }
                 }
-                let r = await (0, s.KG)(e, u(t, v));
+                let r = await (0, s.KG)(e, u(t, O));
                 null !== r && L(r);
             }
             function a() {
@@ -141,7 +141,7 @@ function c(e) {
         }, [b, w, E, L]),
         k = r.useCallback(
             (e) => {
-                if (!O.current || (!m && !U.current)) return;
+                if (!v.current || (!m && !U.current)) return;
                 let n = g === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
                     r = g === o.hy.HORIZONTAL ? o.R8.LEFT : o.R8.UP;
                 switch (e.key) {
@@ -156,7 +156,7 @@ function c(e) {
                             e.preventDefault(),
                             d().then(() => {
                                 var e;
-                                let n = null === (e = u(t, v)[0]) || void 0 === e ? void 0 : e.getAttribute(l.ie);
+                                let n = null === (e = u(t, O)[0]) || void 0 === e ? void 0 : e.getAttribute(l.ie);
                                 null != n && L(n);
                             });
                         return;
@@ -165,7 +165,7 @@ function c(e) {
                             e.preventDefault(),
                             _().then(() => {
                                 var e;
-                                let n = u(t, v),
+                                let n = u(t, O),
                                     r = null === (e = n[n.length - 1]) || void 0 === e ? void 0 : e.getAttribute(l.ie);
                                 null != r && L(r);
                             });
@@ -198,19 +198,19 @@ function c(e) {
             id: t,
             containerProps: {
                 onKeyDown: k,
-                ref: v,
+                ref: O,
                 tabIndex: M && I ? -1 : 0
             },
             orientation: g,
             setFocus: B,
             async focusLastVisibleItem() {
                 var e;
-                let n = await (0, s.jo)(null !== (e = v.current) && void 0 !== e ? e : document.body, u(t, v));
+                let n = await (0, s.jo)(null !== (e = O.current) && void 0 !== e ? e : document.body, u(t, O));
                 null !== n && L(n);
             },
             async focusFirstVisibleItem() {
                 var e;
-                let n = await (0, s.KG)(null !== (e = v.current) && void 0 !== e ? e : document.body, u(t, v));
+                let n = await (0, s.KG)(null !== (e = O.current) && void 0 !== e ? e : document.body, u(t, O));
                 null !== n && L(n);
             },
             focusPreviousItem: G,

@@ -33,7 +33,7 @@ n.d(t, {
         return M;
     },
     Qh: function () {
-        return v;
+        return O;
     },
     TE: function () {
         return C;
@@ -75,7 +75,7 @@ n.d(t, {
         return P;
     },
     tv: function () {
-        return O;
+        return v;
     },
     u0: function () {
         return h;
@@ -175,7 +175,7 @@ function N(e, t) {
         traits: t.traits
     });
 }
-function v(e) {
+function O(e) {
     switch (e) {
         case c.Wy.GAMES:
             return 'games';
@@ -197,7 +197,7 @@ function v(e) {
             return e;
     }
 }
-function O(e) {
+function v(e) {
     let { location: t } = e;
     u.default.track(d.rMx.CLAN_USER_INVITE_VIEWED, { location: t });
 }

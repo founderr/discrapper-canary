@@ -6,13 +6,13 @@ n.d(t, {
         return L;
     },
     UI: function () {
-        return v;
+        return O;
     },
     Uu: function () {
         return S;
     },
     _N: function () {
-        return O;
+        return v;
     },
     cS: function () {
         return C;
@@ -73,10 +73,10 @@ function N(e) {
     for (let t of e.reactions) if (null == t.me_vote) return !0;
     return !1;
 }
-function v(e) {
+function O(e) {
     return (0, l.e7)([f.Z], () => !!(null != e && T.TPd.POLLS.has(e.type)) && (!!e.isPrivate() || (f.Z.can(T.Plq.SEND_MESSAGES, e) && f.Z.can(T.Plq.SEND_POLLS, e))));
 }
-function O() {
+function v() {
     return !1;
 }
 function R(e, t, n) {

@@ -97,8 +97,8 @@ function N(e, n) {
     }
 }
 'undefined' != typeof navigator && void 0 !== navigator.scheduling && void 0 !== navigator.scheduling.isInputPending && navigator.scheduling.isInputPending.bind(navigator.scheduling);
-var v = !1,
-    O = null,
+var O = !1,
+    v = null,
     R = -1,
     C = 5,
     y = -1;
@@ -106,16 +106,16 @@ function D() {
     return !(t.unstable_now() - y < C);
 }
 function L() {
-    if (null !== O) {
+    if (null !== v) {
         var e = t.unstable_now();
         y = e;
         var n = !0;
         try {
-            n = O(!0, e);
+            n = v(!0, e);
         } finally {
-            n ? s() : ((v = !1), (O = null));
+            n ? s() : ((O = !1), (v = null));
         }
-    } else v = !1;
+    } else O = !1;
 }
 if ('function' == typeof g)
     s = function () {
@@ -133,7 +133,7 @@ else if ('undefined' != typeof MessageChannel) {
         m(L, 0);
     };
 function P(e) {
-    (O = e), v || ((v = !0), s());
+    (v = e), O || ((O = !0), s());
 }
 function U(e, n) {
     R = m(function () {

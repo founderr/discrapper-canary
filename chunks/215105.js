@@ -25,11 +25,11 @@ var r = n(735250),
     S = n(228168),
     A = n(689938),
     N = n(227795);
-let v = (0, _.kt)({
+let O = (0, _.kt)({
         id: '1',
         type: o.d.DM
     }),
-    O = (e) => {
+    v = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case S.n_.ACTIVITY:
@@ -72,7 +72,7 @@ function C(e) {
             var n;
             if (null == e) return;
             P({ action: U });
-            let r = O({
+            let r = v({
                 input: e,
                 username: null !== (n = E.Z.getNickname(t.id)) && void 0 !== n ? n : p.ZP.getName(t),
                 sourceType: _,
@@ -112,7 +112,7 @@ function C(e) {
                 editorClassName: N.editor,
                 type: u.I.USER_PROFILE_REPLY,
                 placeholder: R(_).format({ username: h.ZP.getName(n, a, t) }),
-                channel: v,
+                channel: O,
                 textValue: w,
                 richValue: G,
                 onChange: (e, t, n) => {

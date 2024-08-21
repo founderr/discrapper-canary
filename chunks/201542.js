@@ -29,8 +29,8 @@ function S(e) {
 }
 t.Z = i.memo(function (e) {
     var t, n, a, d, A, N;
-    let v,
-        { src: O, volume: R = 1, onVolumeChange: C, onMute: y, waveform: D, durationSecs: L, onVolumeShow: b, onVolumeHide: M, onPlay: P, onPause: U, onError: w } = e,
+    let O,
+        { src: v, volume: R = 1, onVolumeChange: C, onMute: y, waveform: D, durationSecs: L, onVolumeShow: b, onVolumeHide: M, onPlay: P, onPause: U, onError: w } = e,
         x = i.useRef(null),
         [G, k] = i.useState(0),
         [B, F] = i.useState(L),
@@ -123,7 +123,7 @@ t.Z = i.memo(function (e) {
                 }
             );
         }, [t, n, a]),
-        (d = O),
+        (d = v),
         (A = Z),
         (N = Y),
         i.useEffect(() => {
@@ -143,11 +143,11 @@ t.Z = i.memo(function (e) {
     let e_ = Z ? l.PauseIcon : l.PlayIcon,
         eE = Z ? m.Z.Messages.PAUSE : m.Z.Messages.PLAY;
     'Safari' === platform.name
-        ? (v = (0, r.jsx)(i.Suspense, {
+        ? (O = (0, r.jsx)(i.Suspense, {
               children: (0, r.jsx)(g, {
                   ref: x,
                   className: T.audioElement,
-                  src: O,
+                  src: v,
                   preload: q,
                   playing: Z && !j,
                   onEnded: ei,
@@ -157,7 +157,7 @@ t.Z = i.memo(function (e) {
                   volume: X
               })
           }))
-        : (v = (0, r.jsx)(c.Z, {
+        : (O = (0, r.jsx)(c.Z, {
               ref: x,
               className: T.audioElement,
               controls: !1,
@@ -168,7 +168,7 @@ t.Z = i.memo(function (e) {
               muted: V,
               volume: X,
               playing: Z && !j,
-              children: (0, r.jsx)('source', { src: O })
+              children: (0, r.jsx)('source', { src: v })
           }));
     let ef = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         { enabled: eh } = (0, l.useRedesignIconContext)();
@@ -223,7 +223,7 @@ t.Z = i.memo(function (e) {
                 onVolumeShow: b,
                 onVolumeHide: M
             }),
-            v
+            O
         ]
     });
 });

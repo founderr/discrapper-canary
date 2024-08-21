@@ -29,8 +29,8 @@ var r,
     S = n(695346),
     A = n(430824),
     N = n(699516),
-    v = n(594174),
-    O = n(768581),
+    O = n(594174),
+    v = n(768581),
     R = n(51144),
     C = n(965386),
     y = n(981631),
@@ -267,7 +267,7 @@ M(
                 let { channel: e, category: t } = this.props,
                     n = e.type === y.d4z.GUILD_CATEGORY ? d.FolderIcon : (0, I.KS)(e);
                 return (0, i.jsxs)(C.RX, {
-                    children: [null != n && (0, i.jsx)(C.Tw, { children: (0, i.jsx)(n, { className: b.icon }) }), (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: (0, p.F6)(e, v.default, N.Z) }) }), null != t ? (0, i.jsx)(C.dY, { children: t.name }) : null]
+                    children: [null != n && (0, i.jsx)(C.Tw, { children: (0, i.jsx)(n, { className: b.icon }) }), (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: (0, p.F6)(e, O.default, N.Z) }) }), null != t ? (0, i.jsx)(C.dY, { children: t.name }) : null]
                 });
             }
         }
@@ -333,7 +333,7 @@ M(
                                   className: b.emojiImage,
                                   src:
                                       null != e.id
-                                          ? O.ZP.getEmojiURL({
+                                          ? v.ZP.getEmojiURL({
                                                 id: e.id,
                                                 animated: e.animated && r,
                                                 size: D.$U

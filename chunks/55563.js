@@ -34,7 +34,7 @@ function N() {
     if (r === c.default.locale) return !1;
     (r = c.default.locale), A();
 }
-class v extends (i = l.yh) {
+class O extends (i = l.yh) {
     initialize() {
         this.waitFor(c.default, _.Z), this.syncWith([c.default], N), (r = c.default.locale);
     }
@@ -56,7 +56,7 @@ class v extends (i = l.yh) {
     }
 }
 (o = 'SKUStore'),
-    (s = 'displayName') in (a = v)
+    (s = 'displayName') in (a = O)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -64,7 +64,7 @@ class v extends (i = l.yh) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new v(u.Z, {
+    (t.Z = new O(u.Z, {
         STORE_LISTINGS_FETCH_START: function (e) {
             let { skuId: t } = e;
             E.add(t);

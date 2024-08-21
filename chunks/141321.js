@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     r = n(481060),
     l = n(317632),
     o = n(602478),
@@ -20,11 +20,11 @@ var i = n(735250),
     h = n(166535);
 function N(e) {
     let { onOpen: t, onClose: n, className: N } = e,
-        C = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
-        f = a.useRef(null),
-        p = (0, s.e7)([u.ZP], () => (null == C ? void 0 : C.id) != null && u.ZP.getMentionCount(C.id, m.W.NOTIFICATION_CENTER) > 0),
+        C = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        f = s.useRef(null),
+        p = (0, a.e7)([u.ZP], () => (null == C ? void 0 : C.id) != null && u.ZP.getMentionCount(C.id, m.W.NOTIFICATION_CENTER) > 0),
         { enabled: g } = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
-        S = (0, s.e7)([l.Z], () => g && l.Z.getUnseenInviteCount() > 0);
+        S = (0, a.e7)([l.Z], () => g && l.Z.getUnseenInviteCount() > 0);
     return (0, i.jsx)(E.k, {
         onOpen: t,
         onClose: n,

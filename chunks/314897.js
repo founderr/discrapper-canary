@@ -19,8 +19,8 @@ var a,
     S = n(710845),
     A = n(703656),
     N = n(786213),
-    v = n(626135),
-    O = n(449934),
+    O = n(626135),
+    v = n(449934),
     R = n(960048),
     C = n(117240),
     y = n(412788),
@@ -83,7 +83,7 @@ function ed() {
 function e_(e) {
     let { withGuildExperiments: t } = e,
         n = {},
-        r = v.default.getSuperPropertiesBase64();
+        r = O.default.getSuperPropertiesBase64();
     null != r && (n['X-Super-Properties'] = r),
         null != F && (n['X-Fingerprint'] = F),
         (ei = f.tn
@@ -183,10 +183,10 @@ class em extends (a = E.ZP.Store) {
         return B;
     }
     getToken() {
-        return (0, O.LP)();
+        return (0, v.LP)();
     }
     isAuthenticated() {
-        return (0, O.$8)();
+        return (0, v.$8)();
     }
     getFingerprint() {
         return F;
@@ -299,7 +299,7 @@ class em extends (a = E.ZP.Store) {
                         ep();
                         return;
                     }
-                    v.default.track(D.rMx.APP_USER_DEAUTHENTICATED, { user_id: h.K.get(U) }), eI(), setImmediate(() => (0, A.uL)(D.Z5c.DEFAULT_LOGGED_OUT));
+                    O.default.track(D.rMx.APP_USER_DEAUTHENTICATED, { user_id: h.K.get(U) }), eI(), setImmediate(() => (0, A.uL)(D.Z5c.DEFAULT_LOGGED_OUT));
                 }
             },
             AUTH_SESSION_CHANGE: function (e) {
@@ -385,7 +385,7 @@ class em extends (a = E.ZP.Store) {
                 let t = e.fingerprint;
                 null == F
                     ? null != t
-                        ? (v.default.track(D.rMx.USER_FINGERPRINT_CHANGED, {
+                        ? (O.default.track(D.rMx.USER_FINGERPRINT_CHANGED, {
                               old_fingerprint: null != V ? (0, _.s)(V) : null,
                               new_fingerprint: (0, _.s)(t)
                           }),
@@ -395,7 +395,7 @@ class em extends (a = E.ZP.Store) {
                         : ed()
                     : null != t &&
                       F !== t &&
-                      v.default.track(D.rMx.EXTERNAL_FINGERPRINT_DROPPED, {
+                      O.default.track(D.rMx.EXTERNAL_FINGERPRINT_DROPPED, {
                           fingerprint: (0, _.s)(F),
                           dropped_fingerprint: (0, _.s)(t)
                       });

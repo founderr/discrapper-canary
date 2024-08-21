@@ -1,45 +1,45 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
         return m;
     }
 });
-var t = l(442837),
-    r = l(2052),
-    i = l(99981),
-    a = l(906732),
-    s = l(835473),
-    u = l(914010),
-    o = l(561308),
-    c = l(701488),
-    d = l(689938);
+var l = t(442837),
+    i = t(2052),
+    a = t(99981),
+    r = t(906732),
+    o = t(835473),
+    s = t(914010),
+    c = t(561308),
+    u = t(701488),
+    d = t(689938);
 function m(e) {
     let { entry: n } = e,
-        l = (0, s.q)(n.extra.application_id),
-        m = null == l ? void 0 : l.getIconURL(c.Si.LARGE),
-        E = (0, t.e7)([u.Z], () => u.Z.getGuildId()),
-        f = n.extra.activity_name,
-        p = (0, r.O)(),
-        { analyticsLocations: C } = (0, a.ZP)(),
-        N = (0, o.kr)(n) && !(0, o.n2)(n) ? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
-        _ = {
+        t = (0, o.q)(n.extra.application_id),
+        m = null == t ? void 0 : t.getIconURL(u.Si.LARGE),
+        f = (0, l.e7)([s.Z], () => s.Z.getGuildId()),
+        _ = n.extra.activity_name,
+        p = (0, i.O)(),
+        { analyticsLocations: C } = (0, r.ZP)(),
+        h = (0, c.kr)(n) && !(0, c.n2)(n) ? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+        E = {
             onClick: () => {
-                null != E &&
-                    (0, i.q)({
-                        guildId: E,
+                null != f &&
+                    (0, a.q)({
+                        guildId: f,
                         channelId: void 0,
                         locationObject: p.location,
                         initialSelectedApplicationId: n.extra.application_id,
-                        initialSlide: c.ag.SELECT_CHANNEL,
+                        initialSlide: u.ag.SELECT_CHANNEL,
                         analyticsLocations: C
                     });
             },
-            ariaDescription: d.Z.Messages.CONTENT_INVENTORY_OPEN_ACTIVITY_A11Y_DESCRIPTION.format({ title: f })
+            ariaDescription: d.Z.Messages.CONTENT_INVENTORY_OPEN_ACTIVITY_A11Y_DESCRIPTION.format({ title: _ })
         };
     return {
         thumbnailUrl: m,
-        title: f,
-        titleClickable: _,
-        thumbnailClickable: _,
-        userDescription: N
+        title: _,
+        titleClickable: E,
+        thumbnailClickable: E,
+        userDescription: h
     };
 }

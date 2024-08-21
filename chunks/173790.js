@@ -18,57 +18,57 @@ var i = t(735250),
     C = t(753972),
     f = t(387658),
     h = t(536650),
-    A = t(675993),
-    E = t(689079),
+    E = t(675993),
+    A = t(689079),
     N = t(689938),
-    v = t(254044),
-    x = t(413097);
+    x = t(254044),
+    v = t(413097);
 function I(e) {
     var n;
     let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
         P = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
-        S = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        L = (0, _.ye)({ application: S }) ? g : A.Z,
-        b = a.useRef(null),
+        L = null !== (n = (0, u.q)(s.id === A.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
+        b = (0, _.ye)({ application: L }) ? g : E.Z,
+        S = a.useRef(null),
         { iconURL: R, name: T } = a.useMemo(
             () =>
-                (0, _.sl)(S, {
-                    fakeAppIconURL: x,
+                (0, _.sl)(L, {
+                    fakeAppIconURL: v,
                     size: 84
                 }),
-            [S]
+            [L]
         );
     return (
         a.useEffect(() => {
-            I ? d.ZP.queryInstallOnDemandApp(S.id, t.id) : d.ZP.maybeQueryForInstallLessApps(S.id, t.id);
-        }, [S.id, t.id, I]),
+            I ? d.ZP.queryInstallOnDemandApp(L.id, t.id) : d.ZP.maybeQueryForInstallLessApps(L.id, t.id);
+        }, [L.id, t.id, I]),
         (0, i.jsxs)(r.ScrollerNone, {
-            className: v.container,
+            className: x.container,
             fade: !0,
-            ref: b,
+            ref: S,
             role: 'region',
             'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: T }),
             children: [
                 (0, i.jsx)(h.Z, {
                     name: T,
                     iconURL: R,
-                    scrollerRef: b
+                    scrollerRef: S
                 }),
                 null != R &&
                     (0, i.jsx)(C.Z, {
                         src: R,
-                        className: v.appIcon
+                        className: x.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(L, {
+                (0, i.jsx)(b, {
                     channel: t,
-                    application: S,
+                    application: L,
                     sectionName: c
                 }),
                 P === p._b.TEXT
                     ? (0, i.jsx)(f.Z, {
                           channel: t,
-                          application: S,
+                          application: L,
                           sectionName: c,
                           installOnDemand: I
                       })
@@ -86,7 +86,7 @@ function g(e) {
         }),
         o = (0, _.yJ)(t),
         r = null != o && null != o.activity_preview_video_asset_id ? (0, s.Z)(t.id, o.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(A.Z, {
+    return (0, i.jsx)(E.Z, {
         channel: n,
         application: t,
         imageCoverUrl: l.url,

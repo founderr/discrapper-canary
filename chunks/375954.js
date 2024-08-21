@@ -20,8 +20,8 @@ var r,
     S = n(706454),
     A = n(630388),
     N = n(709054),
-    v = n(314897),
-    O = n(592125),
+    O = n(314897),
+    v = n(592125),
     R = n(796974),
     C = n(984933),
     y = n(271383),
@@ -49,7 +49,7 @@ function B() {
 function F() {
     d.Z.forEach((e) => {
         let { channelId: t } = e;
-        null == O.Z.getChannel(t) && d.Z.clear(t);
+        null == v.Z.getChannel(t) && d.Z.clear(t);
     });
 }
 function V() {
@@ -61,7 +61,7 @@ function H(e) {
     let { type: t, channelId: n, messageId: r, userId: i, emoji: a, reactionType: s } = e,
         o = d.Z.get(n);
     if (null == o || !(0, g.sm)(e)) return !1;
-    let l = v.default.getId() === i;
+    let l = O.default.getId() === i;
     (o = o.update(r, (n) => ('MESSAGE_REACTION_ADD' === t ? n.addReaction(a, l, e.colors, s) : n.removeReaction(a, l, s)))), d.Z.commit(o);
 }
 function Z(e) {
@@ -79,11 +79,11 @@ function Z(e) {
 }
 class Y extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(U.default, O.Z, R.Z, y.ZP, S.default, M.Z, P.Z, D.Z, b.Z, C.ZP), this.syncWith([p.Z], () => {});
+        this.waitFor(U.default, v.Z, R.Z, y.ZP, S.default, M.Z, P.Z, D.Z, b.Z, C.ZP), this.syncWith([p.Z], () => {});
     }
     getMessages(e) {
         if (p.Z.hasViewingRoles()) {
-            let t = O.Z.getChannel(e),
+            let t = v.Z.getChannel(e),
                 n = null == t ? void 0 : t.getGuildId();
             if (p.Z.isViewingRoles(n) && !L.Z.can(w.Plq.VIEW_CHANNEL, t)) return new d.Z(e);
         }

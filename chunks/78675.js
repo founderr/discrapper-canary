@@ -31,7 +31,7 @@ let S = (e) => {
 };
 function A(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: T, pendingBanner: A, children: N, className: v, avatarSize: O, avatarOffsetX: R, avatarOffsetY: C, bannerWidth: y, bannerHeight: D, themePadding: L, animateOnHover: b = !1 } = e,
+    let { user: n, displayProfile: a, guildId: T, pendingBanner: A, children: N, className: O, avatarSize: v, avatarOffsetX: R, avatarOffsetY: C, bannerWidth: y, bannerHeight: D, themePadding: L, animateOnHover: b = !1 } = e,
         M = (0, E.Dt)(),
         [P, U] = i.useState(!1),
         w = (0, l.e7)([p.Z], () => p.Z.isFocused()),
@@ -43,10 +43,10 @@ function A(e) {
             canAnimate: b || !x ? P : w
         }),
         B = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(),
-        F = n.getAvatarURL(T, (0, c.getAvatarSize)(O)),
+        F = n.getAvatarURL(T, (0, c.getAvatarSize)(v)),
         V = (0, o._i)((0, d.ZP)(F, B, !1)),
         H = (0, _.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : V).hsl,
-        Z = S(O),
+        Z = S(v),
         Y = D - C - L;
     return (0, r.jsxs)('svg', {
         className: g.mask,
@@ -84,7 +84,7 @@ function A(e) {
                 children: [
                     N,
                     (0, r.jsxs)('div', {
-                        className: s()(g.banner, v),
+                        className: s()(g.banner, O),
                         onMouseMove: () => U(!0),
                         onMouseLeave: () => U(!1),
                         style: {

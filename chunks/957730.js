@@ -20,8 +20,8 @@ var r = n(392711),
     S = n(246946),
     A = n(594174),
     N = n(483360),
-    v = n(176354),
-    O = n(51144),
+    O = n(176354),
+    v = n(51144),
     R = n(981631),
     C = n(185923),
     y = n(689938);
@@ -232,10 +232,10 @@ let M = c.Z.RULES,
                 let { isNotification: r } = n,
                     i = A.default.getUser(e[1]);
                 if (null == i) return { content: e[0] };
-                let a = O.ZP.getUserTag(i, { identifiable: r && S.Z.enabled ? 'never' : 'always' });
+                let a = v.ZP.getUserTag(i, { identifiable: r && S.Z.enabled ? 'never' : 'always' });
                 if (!r) return { content: '@'.concat(a) };
                 {
-                    let e = O.ZP.getGlobalName(i);
+                    let e = v.ZP.getGlobalName(i);
                     return { content: null != e ? '@'.concat(e) : '@'.concat(a) };
                 }
             }
@@ -439,7 +439,7 @@ t.ZP = {
                 ((n = o.content),
                 (r = s),
                 (i = (t, n) => {
-                    v.ZP.isEmojiPremiumLocked({
+                    O.ZP.isEmojiPremiumLocked({
                         emoji: t,
                         channel: e,
                         intention: C.Hz.CHAT

@@ -19,14 +19,14 @@ t.Z = (e) => {
         g = d.Z.getDMFromUserId(t),
         S = (0, a.e7)([E.ZP], () => (null == g ? null : E.ZP.isChannelMuted(null, g))),
         [A, N] = i.useState(null != S && S),
-        [v, O] = i.useState(!1),
+        [O, v] = i.useState(!1),
         R = (0, a.e7)([f.default], () => f.default.getUser(t), [t]),
         C = (0, a.e7)([_.Z], () => _.Z.getRelationshipType(t), [t]) === p.OGo.BLOCKED;
     i.useEffect(() => {
-        O(C);
+        v(C);
     }, [C]);
     let y = i.useCallback(() => {
-            O(!0),
+            v(!0),
                 u.ZP.trackWithMetadata(p.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
                     other_user_id: t,
                     report_id: n
@@ -54,8 +54,8 @@ t.Z = (e) => {
                       (0, r.jsx)(c.Z, {
                           title: I.Z.Messages.IAR_UPSELLS_BLOCK_TITLE.format({ username: R.username }),
                           description: I.Z.Messages.IAR_UPSELLS_BLOCK_DESCRIPTION,
-                          buttonText: v ? I.Z.Messages.IAR_UPSELLS_BLOCKED_BUTTON : I.Z.Messages.IAR_UPSELLS_BLOCK_BUTTON,
-                          buttonDisabled: v,
+                          buttonText: O ? I.Z.Messages.IAR_UPSELLS_BLOCKED_BUTTON : I.Z.Messages.IAR_UPSELLS_BLOCK_BUTTON,
+                          buttonDisabled: O,
                           onButtonPress: y,
                           buttonColor: s.Button.Colors.RED
                       }),

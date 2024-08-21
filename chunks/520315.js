@@ -17,32 +17,32 @@ function o(e) {
         f = i.useRef(n),
         h = i.useRef(o);
     h.current = o;
-    let A = i.useRef(r);
-    A.current = r;
-    let E = i.useRef(s);
-    E.current = s;
+    let E = i.useRef(r);
+    E.current = r;
+    let A = i.useRef(s);
+    A.current = s;
     let N = i.useRef(c);
     N.current = c;
-    let [v, x] = i.useState(!1),
-        I = i.useCallback(() => x(!1), []);
+    let [x, v] = i.useState(!1),
+        I = i.useCallback(() => v(!1), []);
     return (
         i.useLayoutEffect(() => {
-            void 0 !== n && ((_.current = void 0), (C.current = void 0), x(!1));
+            void 0 !== n && ((_.current = void 0), (C.current = void 0), v(!1));
         }, [n]),
         i.useLayoutEffect(() => {
             var e, i, a;
             if (null == u) return;
             let { height: l } = u.getBoundingClientRect();
             !t && (null == _.current || l < _.current) && (_.current = l), t && (null == C.current || l > C.current) && (C.current = l);
-            let o = null !== (e = A.current) && void 0 !== e ? e : _.current,
-                r = null !== (i = E.current) && void 0 !== i ? i : C.current,
+            let o = null !== (e = E.current) && void 0 !== e ? e : _.current,
+                r = null !== (i = A.current) && void 0 !== i ? i : C.current,
                 s = f.current !== n;
             if (((f.current = n), null == o || null == r || s)) return;
             let c = Math.min(null !== (a = N.current) && void 0 !== a ? a : r, r),
                 d = t ? o : c,
                 m = t ? c : o;
             if (!(d !== m)) return;
-            x(!0), (u.style.height = ''.concat(d, 'px')), (u.style.transition = '');
+            v(!0), (u.style.height = ''.concat(d, 'px')), (u.style.transition = '');
             let p = null;
             return (
                 (p = requestAnimationFrame(() => {
@@ -52,11 +52,11 @@ function o(e) {
             );
         }, [n, u, t]),
         i.useLayoutEffect(() => {
-            if (null != u && !v) (u.style.height = ''), (u.style.transition = '');
-        }, [n, u, v]),
+            if (null != u && !x) (u.style.height = ''), (u.style.transition = '');
+        }, [n, u, x]),
         {
             ref: d ? p : m,
-            isTransitioning: v,
+            isTransitioning: x,
             onTransitionEnd: I
         }
     );

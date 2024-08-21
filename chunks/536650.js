@@ -31,13 +31,13 @@ function f(e) {
     let { name: n, iconURL: t, scrollerRef: _ } = e,
         f = (0, o.ap)((0, s.ZP)()),
         h = a.useRef(null),
-        A = a.useRef(null),
         E = a.useRef(null),
+        A = a.useRef(null),
         N = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        v = (0, c.ZP)('number' == typeof t ? '' : t, null != N ? N : ''),
-        x = a.useMemo(() => {
+        x = (0, c.ZP)('number' == typeof t ? '' : t, null != N ? N : ''),
+        v = a.useMemo(() => {
             var e, n;
-            let t = (0, l.compact)([d.Z.parseHexString(v), d.Z.parseHexString(f ? '#000000' : '#ffffff')]);
+            let t = (0, l.compact)([d.Z.parseHexString(x), d.Z.parseHexString(f ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -49,15 +49,15 @@ function f(e) {
                         ? void 0
                         : e.toHexString()) && void 0 !== n
                 ? n
-                : v;
-        }, [v, f]),
+                : x;
+        }, [x, f]),
         I = C(h),
-        g = C(A),
+        g = C(E),
         P = a.useCallback(() => {
             var e, n, t, i, a, o, r, s, c;
             let d = _.current,
                 u = h.current,
-                m = E.current,
+                m = A.current,
                 p = parseInt(null !== (e = null == I ? void 0 : I.height) && void 0 !== e ? e : ''),
                 C = parseInt(null !== (n = null == g ? void 0 : g.height) && void 0 !== n ? n : '');
             if (null != d && null != u && null != m && !isNaN(p) && !isNaN(C)) {
@@ -65,17 +65,17 @@ function f(e) {
                     n = 0 !== d.scrollHeight ? d.scrollHeight : C + 20,
                     _ = 0 !== d.clientHeight ? d.clientHeight : C + 20,
                     h = C - p,
-                    A = (0, l.clamp)(n - _, h + 1, C + 20);
-                let E = ((i = e), (a = h) === (o = A) ? 1 : (0, l.clamp)((i - a) / (o - a), 0, 1));
-                (u.style.filter = 'brightness('.concat(1 + ((f ? 1.4 : 0.6) - (r = 1)) * E, ')')),
+                    E = (0, l.clamp)(n - _, h + 1, C + 20);
+                let A = ((i = e), (a = h) === (o = E) ? 1 : (0, l.clamp)((i - a) / (o - a), 0, 1));
+                (u.style.filter = 'brightness('.concat(1 + ((f ? 1.4 : 0.6) - (r = 1)) * A, ')')),
                     (u.style.backgroundColor = 'color-mix(in oklab,'
-                        .concat(v, ' ')
-                        .concat((1 - E) * 100, '%, ')
-                        .concat(x, ')')),
-                    (m.style.opacity = ''.concat(0 + (1 - (s = 0)) * E)),
-                    (m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * E, 'px)'));
+                        .concat(x, ' ')
+                        .concat((1 - A) * 100, '%, ')
+                        .concat(v, ')')),
+                    (m.style.opacity = ''.concat(0 + (1 - (s = 0)) * A)),
+                    (m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * A, 'px)'));
             }
-        }, [x, v, null == g ? void 0 : g.height, f, _, null == I ? void 0 : I.height]);
+        }, [v, x, null == g ? void 0 : g.height, f, _, null == I ? void 0 : I.height]);
     return (
         a.useEffect(() => {
             P();
@@ -111,7 +111,7 @@ function f(e) {
                         (0, i.jsx)('div', {
                             className: p.nameContainer,
                             children: (0, i.jsx)(r.Heading, {
-                                ref: E,
+                                ref: A,
                                 className: p.textApplicationName,
                                 variant: 'heading-md/extrabold',
                                 children: n
@@ -120,9 +120,9 @@ function f(e) {
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    ref: A,
+                    ref: E,
                     className: p.bannerBackground,
-                    style: { backgroundColor: v }
+                    style: { backgroundColor: x }
                 })
             ]
         })

@@ -1,7 +1,7 @@
 n(411104);
 var i,
-    a,
     s,
+    a,
     r,
     l,
     o,
@@ -15,7 +15,7 @@ var i,
     T = n(646288),
     h = n(689938),
     N = n(677257);
-((r = i || (i = {}))[(r.DIRECTORY_HERO = 1)] = 'DIRECTORY_HERO'), (r[(r.DIRECTORY_TILE = 2)] = 'DIRECTORY_TILE'), (r[(r.DIRECTORY_SEARCH = 3)] = 'DIRECTORY_SEARCH'), (r[(r.LISTING = 4)] = 'LISTING'), (r[(r.EMBED = 5)] = 'EMBED'), ((l = a || (a = {}))[(l.IN_LIBRARY = 1)] = 'IN_LIBRARY'), (l[(l.ON_SALE = 2)] = 'ON_SALE'), (l[(l.PREMIUM = 3)] = 'PREMIUM'), (l[(l.DEFAULT = 4)] = 'DEFAULT'), (l[(l.ENTITLEMENT_BRANCH = 5)] = 'ENTITLEMENT_BRANCH');
+((r = i || (i = {}))[(r.DIRECTORY_HERO = 1)] = 'DIRECTORY_HERO'), (r[(r.DIRECTORY_TILE = 2)] = 'DIRECTORY_TILE'), (r[(r.DIRECTORY_SEARCH = 3)] = 'DIRECTORY_SEARCH'), (r[(r.LISTING = 4)] = 'LISTING'), (r[(r.EMBED = 5)] = 'EMBED'), ((l = s || (s = {}))[(l.IN_LIBRARY = 1)] = 'IN_LIBRARY'), (l[(l.ON_SALE = 2)] = 'ON_SALE'), (l[(l.PREMIUM = 3)] = 'PREMIUM'), (l[(l.DEFAULT = 4)] = 'DEFAULT'), (l[(l.ENTITLEMENT_BRANCH = 5)] = 'ENTITLEMENT_BRANCH');
 let C = (e) => {
         let { className: t } = e;
         return (0, d.jsxs)('div', {
@@ -79,7 +79,7 @@ let C = (e) => {
             children: h.Z.Messages.APPLICATION_STORE_FREE
         });
     };
-class x extends (s = _.PureComponent) {
+class x extends (a = _.PureComponent) {
     getState() {
         let { inLibrary: e, sku: t, hasEntitlementBranch: n } = this.props;
         if (n) return 5;

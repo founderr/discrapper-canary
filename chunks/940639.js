@@ -25,7 +25,7 @@ function T(e, t, s) {
         e
     );
 }
-class p extends (n = a.Component) {
+class N extends (n = a.Component) {
     getSelectedSection(e) {
         let { selectedSection: t } = this.state;
         if (null != t) return t;
@@ -222,4 +222,4 @@ class p extends (n = a.Component) {
             });
     }
 }
-T(p, 'defaultProps', { sections: [null] }), (t.Z = o.ZP.connectStores([c.Z], () => ({ keyboardModeEnabled: c.Z.keyboardModeEnabled }))(p));
+T(N, 'defaultProps', { sections: [null] }), (t.Z = o.ZP.connectStores([c.Z], () => ({ keyboardModeEnabled: c.Z.keyboardModeEnabled }))(N));

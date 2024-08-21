@@ -26,8 +26,8 @@ var r,
     S = n(810568),
     A = n(168524),
     N = n(565138),
-    v = n(833858),
-    O = n(223135),
+    O = n(833858),
+    v = n(223135),
     R = n(707409),
     C = n(769654),
     y = n(424678),
@@ -178,7 +178,7 @@ class Q extends (i = o.PureComponent) {
         if (e.type === V.IIU.HANG_STATUS)
             return (0, s.jsx)('div', {
                 className: Z.assets,
-                children: (0, s.jsx)(O.Z, {
+                children: (0, s.jsx)(v.Z, {
                     hangStatusActivity: e,
                     className: u()(Z.assetsHangStatus, this.getTypeClass('assetsSmallImage', 'WithoutLargeImage'))
                 })
@@ -310,7 +310,7 @@ class Q extends (i = o.PureComponent) {
             c = l;
         if (
             (a === V.IIU.HANG_STATUS
-                ? (c = (0, v.O8)(e))
+                ? (c = (0, O.O8)(e))
                 : o && null != n
                   ? (c = (0, s.jsx)('span', {
                         className: Z.activityName,
@@ -529,12 +529,12 @@ class Q extends (i = o.PureComponent) {
             S = this.renderTimePlayed(c),
             A = this.renderChannelDetails(c),
             N = null != n ? n() : null,
-            v = this.renderTimeBar(c),
-            O = ![e, m, T, g, S, v, N].some((e) => null != e);
+            O = this.renderTimeBar(c),
+            v = ![e, m, T, g, S, O, N].some((e) => null != e);
         return (0, s.jsxs)('div', {
             className: u()(this.getTypeClass('activity'), r),
             children: [
-                this.renderHeader(O),
+                this.renderHeader(v),
                 (0, s.jsx)('div', {
                     className: u()(p ? Z.bodyAlignCenter : Z.bodyNormal, a && !d && !h && Z.wrap),
                     children: (0, s.jsxs)('div', {
@@ -557,7 +557,7 @@ class Q extends (i = o.PureComponent) {
                                               children: [m, T, g, S]
                                           }),
                                           A,
-                                          d || h ? null : v,
+                                          d || h ? null : O,
                                           f ? N : null
                                       ]
                                   }),
@@ -570,7 +570,7 @@ class Q extends (i = o.PureComponent) {
                         ]
                     })
                 }),
-                d ? v : null,
+                d ? O : null,
                 d || h ? N : null,
                 (0, s.jsx)(q, { activity: c })
             ]

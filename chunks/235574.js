@@ -20,7 +20,7 @@ function s(e) {
         [T, g] = (0, i.zk)(h, p, I),
         [S, A] = (0, a.useState)(Array(T.length).fill(!1)),
         N = (0, a.useRef)(Array(T.length).fill(!0)),
-        [v, O] = (0, a.useState)(void 0),
+        [O, v] = (0, a.useState)(void 0),
         R = (0, a.useRef)(T),
         C = (0, a.useRef)(S),
         y = (e) => {
@@ -67,8 +67,8 @@ function s(e) {
             let r = C.current[e];
             (C.current = o(C.current, e, t)), D(C.current), m && r && !C.current.some(Boolean) && m(R.current);
         },
-        focusedThumb: v,
-        setFocusedThumb: O,
+        focusedThumb: O,
+        setFocusedThumb: v,
         getThumbPercent: (e) => L(T[e]),
         getValuePercent: L,
         getThumbValueLabel: (e) => w(T[e]),

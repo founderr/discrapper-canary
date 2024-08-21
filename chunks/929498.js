@@ -26,7 +26,7 @@ function m(e) {
         g = (0, a.e7)([_.Z], () => _.Z.getActivities(e)),
         S = (0, a.e7)([s.Z], () => (T ? s.Z.getUserOutbox(e) : void 0)),
         A = (0, a.e7)([c.Z], () => c.Z.getAnyStreamForUser(e)),
-        { live: N, recent: v } = (0, r.useMemo)(() => {
+        { live: N, recent: O } = (0, r.useMemo)(() => {
             let e = (0, i.uniqWith)(
                     g.filter((e) => {
                         let { type: t } = e;
@@ -42,7 +42,7 @@ function m(e) {
         }, [g, null == S ? void 0 : S.entries]);
     return {
         live: N,
-        recent: v,
+        recent: O,
         stream: A,
         outbox: S
     };

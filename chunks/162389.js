@@ -17,8 +17,8 @@ var n = s(735250),
     g = s(479099),
     E = s(710352),
     T = s(981631),
-    p = s(689938),
-    N = s(654244);
+    N = s(689938),
+    p = s(654244);
 function _(e) {
     let { channel: t } = e,
         a = (0, r.e7)([m.Z], () => m.Z.can(T.Plq.MANAGE_CHANNELS, t), [t]),
@@ -62,7 +62,7 @@ function _(e) {
             (0, c.pW)({ availableTags: e });
         });
     return (0, n.jsxs)('div', {
-        className: N.tags,
+        className: p.tags,
         children: [
             g
                 ? t.availableTags.map((e) =>
@@ -84,10 +84,10 @@ function _(e) {
             g
                 ? (0, n.jsx)(d.Clickable, {
                       onClick: _,
-                      className: i()(N.addTags, { [N.disabled]: !a || u }),
+                      className: i()(p.addTags, { [p.disabled]: !a || u }),
                       children: (0, n.jsx)(d.PlusSmallIcon, {
                           size: 'custom',
-                          'aria-label': p.Z.Messages.FORUM_TAG_CREATE,
+                          'aria-label': N.Z.Messages.FORUM_TAG_CREATE,
                           color: o.Z.unsafe_rawColors.WHITE_500.css,
                           width: 20,
                           height: 20
@@ -96,7 +96,7 @@ function _(e) {
                 : (0, n.jsx)(d.Button, {
                       disabled: !a,
                       onClick: _,
-                      children: p.Z.Messages.FORUM_TAG_CREATE
+                      children: N.Z.Messages.FORUM_TAG_CREATE
                   })
         ]
     });
@@ -118,9 +118,9 @@ function S(e) {
             onDragReset: d
         });
     return (0, n.jsx)('div', {
-        className: i()(N.container, {
-            [N.dropIndicatorBefore]: null != m && c < m,
-            [N.dropIndicatorAfter]: null != m && c > m
+        className: i()(p.container, {
+            [p.dropIndicatorBefore]: null != m && c < m,
+            [p.dropIndicatorAfter]: null != m && c > m
         }),
         ref: (e) => h(E(e)),
         onMouseEnter: () => T(l),
@@ -128,7 +128,7 @@ function S(e) {
         children: (0, n.jsx)(g.Z, {
             tag: t,
             disabled: !l,
-            ariaLabel: p.Z.Messages.FORUM_TAG_EDIT_LABEL.format({ name: t.name }),
+            ariaLabel: N.Z.Messages.FORUM_TAG_EDIT_LABEL.format({ name: t.name }),
             onClick: l ? () => a(t) : void 0
         })
     });

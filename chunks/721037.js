@@ -20,7 +20,7 @@ var r = n(735250),
     S = n(981631),
     A = n(918559),
     N = n(354459);
-function v(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function v(e, t, n) {
         e
     );
 }
-let O = {
+let v = {
     [S.NYg.VIDEO]: h.Z,
     [S.NYg.EMBED_IFRAME]: c.Z
 };
@@ -41,7 +41,7 @@ class R extends i.PureComponent {
     render() {
         let { selectedPIPWindow: e, pipWindows: t, pipWidth: n, maxX: i, maxY: a, theme: s, dockedRect: o, appContext: l, roundCorners: u } = this.props;
         return (0, r.jsx)(_.Z, {
-            pictureInPictureComponents: O,
+            pictureInPictureComponents: v,
             selectedPIPWindow: e,
             pipWindows: t,
             pipWidth: n,
@@ -57,10 +57,10 @@ class R extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            v(this, 'handleWindowMove', (e, t) => {
+            O(this, 'handleWindowMove', (e, t) => {
                 s.Ao(e, t);
             }),
-            v(this, 'handleWindowResize', (e, t) => {
+            O(this, 'handleWindowResize', (e, t) => {
                 s.d7(t);
             });
     }
@@ -72,8 +72,8 @@ t.Z = a.ZP.connectStores([E.Z, o.ZP, T.Z, f.Z, p.Z, m.Z, I.Z, d.Z], (e) => {
         c = E.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT),
         _ = o.ZP.getCurrentEmbeddedActivity(),
         h = null != _ && !(0, u.Z)(_.channelId, p.Z, m.Z),
-        v = o.ZP.getActivityPanelMode(),
-        O = h && v === A.Ez.PANEL,
+        O = o.ZP.getActivityPanelMode(),
+        v = h && O === A.Ez.PANEL,
         R = null != _ && (null === (t = d.Z.getSelectedParticipant(_.channelId)) || void 0 === t ? void 0 : t.type) === N.fO.ACTIVITY,
         C = T.Z.windowSize();
     if (s) {
@@ -87,12 +87,12 @@ t.Z = a.ZP.connectStores([E.Z, o.ZP, T.Z, f.Z, p.Z, m.Z, I.Z, d.Z], (e) => {
                   };
     }
     let y = s ? S.IlC.POPOUT : S.IlC.APP;
-    a = s && h ? null : s || !c || h ? (null != _ && O ? (null !== (n = I.Z.pipActivityWindow) && void 0 !== n ? n : I.Z.pipVideoWindow) : null !== (r = I.Z.pipVideoWindow) && void 0 !== r ? r : I.Z.pipActivityWindow) : null;
+    a = s && h ? null : s || !c || h ? (null != _ && v ? (null !== (n = I.Z.pipActivityWindow) && void 0 !== n ? n : I.Z.pipVideoWindow) : null !== (r = I.Z.pipVideoWindow) && void 0 !== r ? r : I.Z.pipActivityWindow) : null;
     let D = Array.from(I.Z.pipWindows.values()),
         L = I.Z.pipWidth,
         b = D.find((e) => e.component === S.NYg.VIDEO),
         M = [b, D.find((e) => e.component === S.NYg.EMBED_IFRAME)].filter(g.lm),
-        P = (O || R) && null != _ && (0, l.q)(_.applicationId);
+        P = (v || R) && null != _ && (0, l.q)(_.applicationId);
     return {
         selectedPIPWindow: a,
         pipWindows: M,

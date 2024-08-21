@@ -53,7 +53,7 @@ function N(e) {
         prompts: f
     };
 }
-function v(e, t) {
+function O(e, t) {
     if (null == T[e]) return;
     let n = {};
     Object.keys(T[e]).forEach((r) => {
@@ -69,7 +69,7 @@ function v(e, t) {
             responses: r
         });
 }
-let O = [],
+let v = [],
     R = [],
     C = [];
 class y extends (r = u.ZP.Store) {
@@ -78,11 +78,11 @@ class y extends (r = u.ZP.Store) {
     }
     getOnboardingPromptsForOnboarding(e) {
         var t, n;
-        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : O;
+        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : v;
     }
     getOnboardingPrompts(e) {
         var t, n;
-        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : O;
+        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : v;
     }
     getOnboardingResponses(e) {
         var t, n, r;
@@ -109,7 +109,7 @@ class y extends (r = u.ZP.Store) {
     getEnabledOnboardingPrompts(e) {
         var t, n;
         let r = m[e];
-        return d.Z.isFullServerPreview(e) ? (null !== (t = null == r ? void 0 : r.prompts) && void 0 !== t ? t : O) : null != r && r.enabled ? (null !== (n = r.prompts) && void 0 !== n ? n : O) : O;
+        return d.Z.isFullServerPreview(e) ? (null !== (t = null == r ? void 0 : r.prompts) && void 0 !== t ? t : v) : null != r && r.enabled ? (null !== (n = r.prompts) && void 0 !== n ? n : v) : v;
     }
     getDefaultChannelIds(e) {
         var t, n;
@@ -190,7 +190,7 @@ class y extends (r = u.ZP.Store) {
                 onboardingPromptsSeen: s,
                 onboardingResponsesSeen: o
             }),
-                !c && v(t, a),
+                !c && O(t, a),
                 (g[t] = Date.now());
         },
         GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function () {
@@ -202,7 +202,7 @@ class y extends (r = u.ZP.Store) {
         },
         GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: function (e) {
             let { guildId: t, options: n, prompts_seen: r, options_seen: i } = e;
-            v(t, n);
+            O(t, n);
             let a = m[t];
             if (null == a) return !1;
             let s = A(a.prompts, r, i);

@@ -55,13 +55,13 @@ function A(e) {
 function N() {
     (I = {}), null != p && A(p);
 }
-function v(e) {
+function O(e) {
     let {
         guild: { id: t }
     } = e;
     (I[t] = void 0), p === t && A(t);
 }
-function O(e) {
+function v(e) {
     let {
         channel: { guild_id: t }
     } = e;
@@ -111,16 +111,16 @@ class D extends (r = o.ZP.Store) {
         CONNECTION_OPEN: N,
         OVERLAY_INITIALIZE: N,
         CACHE_LOADED_LAZY: N,
-        GUILD_CREATE: v,
-        GUILD_UPDATE: v,
+        GUILD_CREATE: O,
+        GUILD_UPDATE: O,
         GUILD_DELETE: function (e) {
             let {
                 guild: { id: t }
             } = e;
             delete I[t];
         },
-        CHANNEL_CREATE: O,
-        CHANNEL_DELETE: O,
+        CHANNEL_CREATE: v,
+        CHANNEL_DELETE: v,
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e,
                 n = !1;

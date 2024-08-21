@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var a = n(442837),
-    s = n(481060),
+var s = n(442837),
+    a = n(481060),
     r = n(592125),
     l = n(739566),
     o = n(834129),
@@ -17,7 +17,7 @@ function d(e) {
     let { message: n, compact: d, usernameHook: _, onClickThread: E, onClickViewThreads: I, onContextMenuThread: m } = e,
         T = (0, l.ZP)(n),
         h = _(T),
-        N = (0, a.e7)([r.Z], () => {
+        N = (0, s.e7)([r.Z], () => {
             var e;
             return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
         }),
@@ -32,7 +32,7 @@ function d(e) {
             viewThreadsOnClick: I
         });
     return (0, i.jsx)(o.Z, {
-        iconNode: (0, i.jsx)(s.ThreadIcon, {
+        iconNode: (0, i.jsx)(a.ThreadIcon, {
             size: 'md',
             color: 'currentColor',
             className: u.icon

@@ -164,8 +164,8 @@ function N(e) {
               });
     });
 }
-var v = {},
-    O = 0;
+var O = {},
+    v = 0;
 function R(e, t) {
     void 0 === t && (t = {}), ('string' == typeof t || Array.isArray(t)) && (t = { path: t });
     var n = t,
@@ -181,14 +181,14 @@ function R(e, t) {
         if (t) return t;
         var r = (function (e, t) {
                 var n = '' + t.end + t.strict + t.sensitive,
-                    r = v[n] || (v[n] = {});
+                    r = O[n] || (O[n] = {});
                 if (r[e]) return r[e];
                 var i = [],
                     a = {
                         regexp: _()(e, i, t),
                         keys: i
                     };
-                return O < 10000 && ((r[e] = a), O++), a;
+                return v < 10000 && ((r[e] = a), v++), a;
             })(n, {
                 end: a,
                 strict: o,

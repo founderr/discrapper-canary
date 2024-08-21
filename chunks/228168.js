@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return v;
+        return O;
     },
     Tb: function () {
         return h;
@@ -45,12 +45,12 @@ var r,
     S,
     A,
     N,
-    v,
-    O = n(981631);
+    O,
+    v = n(981631);
 let R = 300;
 function C(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
-    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(O.ANM.BADGE_ICON(e));
+    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(v.ANM.BADGE_ICON(e));
 }
 ((r = f || (f = {})).USER_INFO = 'USER_INFO'),
     (r.BOT_INFO = 'BOT_INFO'),
@@ -199,5 +199,5 @@ function C(e) {
     ((_ = N || (N = {})).ACTIVITY = 'ACTIVITY'),
     (_.AVATAR = 'AVATAR'),
     (_.STATUS = 'STATUS'),
-    ((E = v || (v = {})).REPLY = 'REPLY'),
+    ((E = O || (O = {})).REPLY = 'REPLY'),
     (E.REACT = 'REACT');

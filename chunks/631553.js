@@ -48,8 +48,8 @@ var A = n(594190),
     G = n(237997),
     W = n(451478),
     Y = n(70956),
-    F = n(358085),
-    H = n(998502),
+    H = n(358085),
+    F = n(998502),
     K = n(13140),
     X = n(145597),
     Q = n(658785),
@@ -88,7 +88,7 @@ function eu(e) {
         return (t) => (0, s.jsx)(e, { ...t });
     });
 }
-F.isPlatformEmbedded;
+H.isPlatformEmbedded;
 let eh = (e) => {
         let { keybind: t, onClick: n, isPreviewingInGame: i, locked: a } = e,
             o = a ? _.Clickable : 'div';
@@ -190,9 +190,9 @@ class ef extends a.Component {
             E.Z.overlayMounted(p),
             window.addEventListener('resize', this.handleWindowResize),
             t && window.addEventListener('contextmenu', ed, !1),
-            F.isPlatformEmbedded)
+            H.isPlatformEmbedded)
         ) {
-            let e = H.ZP.requireModule('discord_overlay2');
+            let e = F.ZP.requireModule('discord_overlay2');
             void 0 !== e.setPerfInfoCallback &&
                 (e.setPerfInfoCallback((e) => {
                     E.Z.track(ea.rMx.OVERLAY_PERF_INFO, e);
@@ -201,9 +201,9 @@ class ef extends a.Component {
                     message: 'set_perf_report_interval',
                     interval: 15 * Y.Z.Millis.MINUTE
                 })),
-                H.ZP.on('REQUEST_OPEN_EXTERNAL_URL', (e, t) => {
+                F.ZP.on('REQUEST_OPEN_EXTERNAL_URL', (e, t) => {
                     G.Z.getDisableExternalLinkAlert() || t === V.Z.getLastURL()
-                        ? H.ZP.send('OPEN_EXTERNAL_URL', t)
+                        ? F.ZP.send('OPEN_EXTERNAL_URL', t)
                         : g.Z.show({
                               title: eo.Z.Messages.OVERLAY_LINK_ALERT_TITLE,
                               body: eo.Z.Messages.OVERLAY_LINK_ALERT_BODY,
@@ -211,9 +211,9 @@ class ef extends a.Component {
                               confirmText: eo.Z.Messages.CONTINUE,
                               cancelText: eo.Z.Messages.CANCEL,
                               onConfirmSecondary: () => {
-                                  E.Z.disableExternalLinkAlert(), H.ZP.send('OPEN_EXTERNAL_URL', t);
+                                  E.Z.disableExternalLinkAlert(), F.ZP.send('OPEN_EXTERNAL_URL', t);
                               },
-                              onConfirm: () => H.ZP.send('OPEN_EXTERNAL_URL', t)
+                              onConfirm: () => F.ZP.send('OPEN_EXTERNAL_URL', t)
                           });
                 });
         }

@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(933557),
-    a = n(356264),
-    s = n(592125),
+    s = n(356264),
+    a = n(592125),
     r = n(430824),
     l = n(496675),
     o = n(699516),
@@ -48,12 +48,12 @@ function T(e, t) {
 class h {
     getForwardInfo() {
         var e, t, n, u, m;
-        let h = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Z,
+        let h = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.Z,
             N = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
             C = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
             f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
             p = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Z,
-            g = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.Z,
+            g = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : s.Z,
             { snapshotIndex: S, parentMessage: A, messageSnapshot: R } = this,
             { useOldIcon: x } = (0, E.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
             { showForwardBreadcrumb: O } = _.u.getCurrentConfig({ location: 'MessageForward' });

@@ -23,8 +23,8 @@ function I(e) {
         { analyticsLocations: T, newestAnalyticsLocation: g } = (0, l.ZP)(),
         { context: S, trackUserProfileAction: A } = (0, _.KZ)(),
         N = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
-        { messageCtaEnabled: v } = (0, f.l)({ location: 'BiteSizeProfileActivitySection' }),
-        { isApplicationStreaming: O, activity: R } = (0, s.cj)([u.Z, c.Z], () => {
+        { messageCtaEnabled: O } = (0, f.l)({ location: 'BiteSizeProfileActivitySection' }),
+        { isApplicationStreaming: v, activity: R } = (0, s.cj)([u.Z, c.Z], () => {
             let e = null != u.Z.getAnyStreamForUser(t.id);
             return {
                 isApplicationStreaming: e,
@@ -51,7 +51,7 @@ function I(e) {
         onAction: () => {
             A({ action: 'JOIN_ACTIVITY' }),
                 (0, E.Ac)({
-                    activityType: O ? h.IIU.STREAMING : null == R ? void 0 : R.type,
+                    activityType: v ? h.IIU.STREAMING : null == R ? void 0 : R.type,
                     activityName: null == R ? void 0 : R.name,
                     activityPlatform: null == R ? void 0 : R.platform,
                     activitySessionId: null == R ? void 0 : R.session_id,
@@ -62,7 +62,7 @@ function I(e) {
                 null == m || m();
         },
         showActions: t.id !== (null == N ? void 0 : N.id),
-        actionColor: a()(p.buttonColor, v ? p.engagementExpButtonColor : void 0),
+        actionColor: a()(p.buttonColor, O ? p.engagementExpButtonColor : void 0),
         showChannelDetails: !0
     });
 }

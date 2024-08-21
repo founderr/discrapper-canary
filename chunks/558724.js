@@ -6,8 +6,8 @@ n.d(t, {
     n(47120),
     n(913527);
 var i,
-    a,
     s,
+    a,
     r = n(149765),
     l = n(442837);
 n(433517);
@@ -42,7 +42,7 @@ let h = {
     C = {},
     f = null,
     p = 86400000;
-((s = i || (i = {})).IS_OWNER = 'is_owner'), (s.IS_ADMIN = 'is_admin'), (s.IS_COMMUNITY = 'is_community'), (s.GUILD_SIZE = 'guild_size'), (s.IS_HUB = 'is_hub'), (s.IS_VIEWING = 'is_viewing'), (s.GUILD_PERMISSIONS = 'guild_permissions'), (s.GUILD_SIZE_ALL = 'guild_size_all');
+((a = i || (i = {})).IS_OWNER = 'is_owner'), (a.IS_ADMIN = 'is_admin'), (a.IS_COMMUNITY = 'is_community'), (a.GUILD_SIZE = 'guild_size'), (a.IS_HUB = 'is_hub'), (a.IS_VIEWING = 'is_viewing'), (a.GUILD_PERMISSIONS = 'guild_permissions'), (a.GUILD_SIZE_ALL = 'guild_size_all');
 let g = new Set(Object.values(i));
 function S(e) {
     return (
@@ -53,13 +53,13 @@ function S(e) {
             let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: i = [] } = e;
             if (0 === t.length) return !0;
             for (let e of t) if (!g.has(e)) return !1;
-            let a = t.includes('guild_size_all'),
-                s = !0;
+            let s = t.includes('guild_size_all'),
+                a = !0;
             for (let l of Object.values(d.Z.getGuilds())) {
-                if (a || t.includes('guild_size')) {
+                if (s || t.includes('guild_size')) {
                     let e = u.Z.getMemberCount(l.id);
                     if (null == e || (null != n[0] && e < n[0]) || (null != n[1] && e > n[1])) {
-                        s = !1;
+                        a = !1;
                         continue;
                     }
                 }
@@ -85,10 +85,10 @@ function S(e) {
                 let T = E.Z.getGuildId(),
                     h = null != T && T === l.id;
                 if (!t.includes('is_viewing') || !!h) {
-                    if (!a) return !0;
+                    if (!s) return !0;
                 }
             }
-            return (!!a && !!s) || !1;
+            return (!!s && !!a) || !1;
         })(e)
     );
 }
@@ -114,7 +114,7 @@ function R() {
         f = null;
     })();
 }
-class x extends (a = l.ZP.PersistedStore) {
+class x extends (s = l.ZP.PersistedStore) {
     initialize(e) {
         (N = null != e ? e : h), this.syncWith([E.Z], R);
     }

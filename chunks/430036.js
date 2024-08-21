@@ -47,8 +47,8 @@ var i = n(735250),
     G = n(237997),
     W = n(585483),
     Y = n(838440),
-    F = n(13140),
-    H = n(519591),
+    H = n(13140),
+    F = n(519591),
     K = n(906037),
     X = n(786906),
     Q = n(518084),
@@ -348,7 +348,7 @@ class es extends s.PureComponent {
             d = n && (c || s),
             u = n && s,
             h = n && c && !s,
-            p = (0, H.Z)(r);
+            p = (0, F.Z)(r);
         return (0, i.jsx)(Q.ZP, {
             className: o()(p, {
                 [ee.widgetWrapper]: !n,
@@ -447,7 +447,7 @@ function ea(e) {
         a = (0, c.e7)([V.Z], () => V.Z.getChannelId(s)),
         o = (0, c.e7)([P.Z], () => P.Z.getChannel(a)),
         r = (0, c.e7)([z.Z], () => z.Z.getOverlayChatKeybind()),
-        l = null != r ? (0, F.BB)(r.shortcut, !0) : ']',
+        l = null != r ? (0, H.BB)(r.shortcut, !0) : ']',
         [d, u, h] = (0, c.Wu)([G.Z], () => [G.Z.getTextWidgetOpacity(), G.Z.getActiveRegions(), !t && G.Z.isPreviewingInGame()]),
         p = (0, c.e7)([j.Z], () => j.Z.getGuild(s)),
         f = (0, c.e7)([w.Z], () => null != s && w.Z.didAgree(s)),

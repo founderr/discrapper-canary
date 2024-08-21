@@ -6,7 +6,7 @@ n.d(t, {
         return g;
     },
     bE: function () {
-        return v;
+        return O;
     },
     n4: function () {
         return C;
@@ -68,10 +68,10 @@ function N(e) {
         o = new Set(a.map((e) => e.id));
     return Array.from(s).filter((e) => o.has(e));
 }
-function v(e, t) {
+function O(e, t) {
     return Object.keys(i.Z.getThreadsForParent(e, t)).length;
 }
-function O(e) {
+function v(e) {
     let { loaded: t, firstMessage: n } = E.Z.getMessage(e);
     return t ? n : null;
 }
@@ -117,11 +117,11 @@ function C(e) {
               forum_post_id: p.id,
               forum_post_first_message_id: _.default.castChannelIdAsMessageId(p.id),
               forum_post_num_reactions: (function (e) {
-                  let t = O(e);
+                  let t = v(e);
                   return null == t ? 0 : t.reactions.reduce((e, t) => e + t.count, 0);
               })(p.id),
               forum_post_num_unique_reactions: (function (e) {
-                  let t = O(e);
+                  let t = v(e);
                   return null == t ? 0 : t.reactions.length;
               })(p.id),
               forum_post_applied_tag_ids: (function (e) {
@@ -139,7 +139,7 @@ function C(e) {
               forum_post_is_unread: null === (u = h.Z.getReadStateSnapshotAnalytics(p.id)) || void 0 === u ? void 0 : u.hasUnreads,
               forum_post_is_following: a.Z.hasJoined(p.id),
               forum_post_attachment_mimetypes: (function (e) {
-                  let t = O(e);
+                  let t = v(e);
                   return null == t
                       ? []
                       : t.attachments.map((e) => {

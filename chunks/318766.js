@@ -46,7 +46,7 @@ let g = {
     };
 t.Z = function (e) {
     var t;
-    let { tabIndex: n, className: a, renderButtonContents: A, active: N, onClick: v, 'aria-controls': O, focusProps: R } = e,
+    let { tabIndex: n, className: a, renderButtonContents: A, active: N, onClick: O, 'aria-controls': v, focusProps: R } = e,
         [C, y] = i.useState(!1),
         [D, L] = i.useState(50),
         b = (0, l.e7)([f.ZP], () => f.ZP.inReverseTrial()),
@@ -95,10 +95,10 @@ t.Z = function (e) {
                 onFocus: G,
                 onClick: (t) => {
                     var n;
-                    null == v || v(t), null === (n = e.onClick) || void 0 === n || n.call(e);
+                    null == O || O(t), null === (n = e.onClick) || void 0 === n || n.call(e);
                 },
                 'aria-label': m.Z.Messages.SELECT_EMOJI,
-                'aria-controls': O,
+                'aria-controls': v,
                 'aria-expanded': N,
                 'aria-haspopup': 'dialog',
                 focusProps: R,
