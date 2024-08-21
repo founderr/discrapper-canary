@@ -7,7 +7,7 @@ var t = n(481060),
     o = n(689938),
     c = n(859955);
 s.Z = function (e) {
-    let { pendingGuildJoinRequestsTotal: s, currentTab: n, onTabItemSelect: d, showSetupTab: u } = e;
+    let { pendingGuildJoinRequestsTotal: s, currentTab: n, onTabItemSelect: d, showSetupTab: u, canActionJoinRequests: I } = e;
     return (0, a.jsxs)(r.Z, {
         className: c.__invalid_container,
         hideSearch: !0,
@@ -36,18 +36,24 @@ s.Z = function (e) {
                               children: o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REVIEW_APPLICATION_TITLE
                           })
                         : null,
-                    (0, a.jsx)(t.TabBar.Item, {
-                        id: i.wB.SUBMITTED,
-                        children: 0 === s ? o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING : o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING_COUNT.format({ count: s })
-                    }),
-                    (0, a.jsx)(t.TabBar.Item, {
-                        id: i.wB.APPROVED,
-                        children: o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED
-                    }),
-                    (0, a.jsx)(t.TabBar.Item, {
-                        id: i.wB.REJECTED,
-                        children: o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED
-                    })
+                    I
+                        ? (0, a.jsx)(t.TabBar.Item, {
+                              id: i.wB.SUBMITTED,
+                              children: 0 === s ? o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING : o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING_COUNT.format({ count: s })
+                          })
+                        : null,
+                    I
+                        ? (0, a.jsx)(t.TabBar.Item, {
+                              id: i.wB.APPROVED,
+                              children: o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED
+                          })
+                        : null,
+                    I
+                        ? (0, a.jsx)(t.TabBar.Item, {
+                              id: i.wB.REJECTED,
+                              children: o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED
+                          })
+                        : null
                 ]
             })
         ]
