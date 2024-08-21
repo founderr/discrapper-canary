@@ -1,46 +1,47 @@
 t(411104);
-var a = t(735250);
+var r = t(735250);
 t(470079);
 var i = t(481060),
-    s = t(689938);
+    u = t(689938);
 n.Z = {
     openSecureFramesStreamVerification: function (e, n) {
         (0, i.openModalLazy)(async () => {
-            let i = (await Promise.all([t.e('36034'), t.e('98330')]).then(t.bind(t, 660250))).default;
+            let i = (await t.e('94904').then(t.bind(t, 660250))).default;
             return (t) =>
-                (0, a.jsx)(i, {
+                (0, r.jsx)(i, {
                     streamKey: e,
                     channelId: n,
                     ...t
                 });
         });
     },
-    openSecureFramesUserVerificationModal: function (e, n) {
-        (0, i.openModalLazy)(async () => {
-            let i = (await Promise.all([t.e('36034'), t.e('3708')]).then(t.bind(t, 963410))).default;
-            return (t) =>
-                (0, a.jsx)(i, {
-                    userId: e,
-                    channelId: n,
-                    ...t
-                });
-        });
+    openSecureFramesUserVerificationModal: function (e, n, u) {
+        u() &&
+            (0, i.openModalLazy)(async () => {
+                let i = (await t.e('33397').then(t.bind(t, 963410))).default;
+                return (t) =>
+                    (0, r.jsx)(i, {
+                        userId: e,
+                        channelId: n,
+                        ...t
+                    });
+            });
     },
     openSecureFramesUpdateConfirmation: function (e) {
-        let { title: n, subtitle: l, confirmText: o = s.Z.Messages.CONFIRM, onConfirm: r } = e;
+        let { title: n, subtitle: a, confirmText: E = u.Z.Messages.CONFIRM, onConfirm: o } = e;
         (0, i.openModalLazy)(async () => {
             let { ConfirmModal: e } = await Promise.resolve().then(t.bind(t, 481060));
             return (t) =>
-                (0, a.jsx)(e, {
+                (0, r.jsx)(e, {
                     header: n,
-                    confirmText: o,
-                    cancelText: s.Z.Messages.CANCEL,
-                    onConfirm: r,
+                    confirmText: E,
+                    cancelText: u.Z.Messages.CANCEL,
+                    onConfirm: o,
                     ...t,
-                    children: (0, a.jsx)(i.Text, {
+                    children: (0, r.jsx)(i.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: l
+                        children: a
                     })
                 });
         });

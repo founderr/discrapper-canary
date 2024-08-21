@@ -1,31 +1,38 @@
 t.d(n, {
     B: function () {
-        return c;
+        return E;
     }
 });
-var a = t(735250),
+var s = t(735250),
     i = t(470079),
-    s = t(442837),
-    l = t(481060),
+    l = t(442837),
+    a = t(481060),
     o = t(352954),
-    r = t(441894),
-    u = t(314897),
-    d = t(689938);
-function c(e) {
-    let { userId: n, channelId: t, location: c } = e,
-        E = (0, r.J)({
+    u = t(630759),
+    d = t(441894),
+    r = t(314897),
+    c = t(689938);
+function E(e) {
+    let { userId: n, channelId: t, guildId: E, location: Z } = e,
+        M = (0, d.J)({
             channelId: t,
-            location: c
+            location: Z
         }),
-        Z = (0, s.e7)([u.default], () => u.default.getId() === n),
-        M = i.useCallback(() => {
-            o.Z.openSecureFramesUserVerificationModal(n, t);
-        }, [t, n]);
-    return !E || Z
+        _ = (0, l.e7)([r.default], () => r.default.getId() === n),
+        f = i.useCallback(() => {
+            o.Z.openSecureFramesUserVerificationModal(n, t, () =>
+                (0, u.fz)({
+                    userId: n,
+                    channelId: t,
+                    guildId: E
+                })
+            );
+        }, [t, E, n]);
+    return !M || _
         ? null
-        : (0, a.jsx)(l.MenuItem, {
+        : (0, s.jsx)(a.MenuItem, {
               id: 'secure-frames-user-verification',
-              label: d.Z.Messages.E2EE_VIEW_VERIFICATION_CODE,
-              action: M
+              label: c.Z.Messages.E2EE_VIEW_VERIFICATION_CODE,
+              action: f
           });
 }

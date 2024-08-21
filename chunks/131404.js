@@ -10,18 +10,18 @@ var a = t(481060),
     d = t(100527),
     c = t(441061),
     _ = t(167675),
-    M = t(737013),
-    I = t(607783),
+    I = t(737013),
+    M = t(607783),
     f = t(702321),
     E = t(461535),
     N = t(776568),
     T = t(299206),
     A = t(895563),
     Z = t(212205),
-    C = t(62420),
-    h = t(455395),
-    x = t(581052),
-    g = t(875252),
+    g = t(62420),
+    C = t(455395),
+    h = t(581052),
+    x = t(875252),
     O = t(122074),
     S = t(819403),
     m = t(777658),
@@ -66,9 +66,10 @@ n.default = (0, u.Z)(
                 ea = (0, D.Z)(n.id, t.id),
                 el = (0, m.Z)(n),
                 er = (0, b.Z)(n.id),
-                eu = (0, I.B)({
+                eu = (0, M.B)({
                     userId: n.id,
                     channelId: t.id,
+                    guildId: t.getGuildId(),
                     location: 'DMUserContextMenu'
                 }),
                 es = (0, P.Z)(n.id, t.id),
@@ -79,15 +80,15 @@ n.default = (0, u.Z)(
                     id: n.id,
                     label: Y.Z.Messages.COPY_ID_USER
                 }),
-                eM = (0, T.Z)({
+                eI = (0, T.Z)({
                     id: t.id,
                     label: Y.Z.Messages.COPY_ID_CHANNEL
                 }),
-                eI = (0, E.Z)(t),
+                eM = (0, E.Z)(t),
                 ef = (0, _.Z)(n.id),
                 eE = (0, c.Z)(t.id),
                 eN = (0, S.Z)(n),
-                eT = (0, M.Z)(n.id),
+                eT = (0, I.Z)(n.id),
                 eA = (0, U.Z)({
                     commandType: s.yU.USER,
                     commandTargetId: n.id,
@@ -96,12 +97,12 @@ n.default = (0, u.Z)(
                     onHeightUpdate: H
                 }),
                 eZ = (0, A.l)(t),
-                eC = (0, A.P)(t),
-                eh = (0, Z.Z)(t),
-                ex = (0, C.Z)(t),
-                eg = (0, x.V)(t),
-                eO = (0, h.i)(t),
-                eS = (0, g.H)(t),
+                eg = (0, A.P)(t),
+                eC = (0, Z.Z)(t),
+                eh = (0, g.Z)(t),
+                ex = (0, h.V)(t),
+                eO = (0, C.i)(t),
+                eS = (0, x.H)(t),
                 em = t.isManaged(),
                 eR = n.isNonUserBot();
             return (0, i.jsxs)(a.Menu, {
@@ -110,12 +111,12 @@ n.default = (0, u.Z)(
                 'aria-label': Y.Z.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: W,
                 children: [
-                    (0, i.jsx)(a.MenuGroup, { children: !(eR && !(0, f.Z)(t.id)) && eI }),
-                    (0, i.jsx)(a.MenuGroup, { children: eg }),
+                    (0, i.jsx)(a.MenuGroup, { children: !(eR && !(0, f.Z)(t.id)) && eM }),
+                    (0, i.jsx)(a.MenuGroup, { children: ex }),
                     (0, i.jsx)(a.MenuGroup, { children: eS }),
                     (0, i.jsx)(a.MenuGroup, { children: eO }),
                     (0, i.jsxs)(a.MenuGroup, {
-                        children: [eZ, eh, ex]
+                        children: [eZ, eC, eh]
                     }),
                     (0, i.jsx)(a.MenuGroup, { children: !eR && eN }),
                     (0, i.jsxs)(a.MenuGroup, {
@@ -149,9 +150,9 @@ n.default = (0, u.Z)(
                         (0, i.jsxs)(a.MenuGroup, {
                             children: [u && ed, ec]
                         }),
-                    (0, i.jsx)(a.MenuGroup, { children: eC }),
+                    (0, i.jsx)(a.MenuGroup, { children: eg }),
                     (0, i.jsxs)(a.MenuGroup, {
-                        children: [e_, !B && eM]
+                        children: [e_, !B && eI]
                     })
                 ]
             });

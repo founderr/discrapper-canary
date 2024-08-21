@@ -1,56 +1,59 @@
-var i, r, u, l;
+var r, i, u, a;
 t.d(n, {
     $J: function () {
         return o;
     },
     GB: function () {
-        return S;
+        return T;
     },
     HK: function () {
-        return N;
+        return I;
     },
     KN: function () {
-        return I;
+        return f;
     },
     WK: function () {
         return _;
     },
-    Xj: function () {
-        return A;
-    },
-    YP: function () {
-        return c;
-    },
-    ak: function () {
-        return T;
-    },
-    iQ: function () {
-        return E;
-    },
-    l4: function () {
-        return a;
-    },
-    s9: function () {
-        return d;
-    },
-    tu: function () {
+    Xe: function () {
         return r;
     },
-    y6: function () {
+    Xj: function () {
+        return R;
+    },
+    YP: function () {
+        return l;
+    },
+    ak: function () {
+        return S;
+    },
+    iQ: function () {
+        return d;
+    },
+    l4: function () {
+        return E;
+    },
+    s9: function () {
         return s;
+    },
+    tu: function () {
+        return i;
+    },
+    y6: function () {
+        return c;
     }
 });
-let a = '',
+let E = '',
     o = '',
-    d = '',
-    s = 5,
-    c = 30,
+    s = '',
+    c = 5,
+    l = 30,
     _ = 3,
-    E = 5,
-    I = 60,
-    T = 4;
-((u = i || (i = {})).MATCH = 'match'), (u.OTHER_USER_ALREADY_VERIFIED = 'other_user_already_verified'), (u.MISMATCH = 'mismatch'), (u.UNABLE_TO_VERIFY = 'unable_to_verify'), (u.OTHER_USER_DISCONNECTED = 'other_user_disconnected'), (u.CURRENT_USER_DISCONNECTED = 'current_user_disconnected');
-let N = 100;
-((l = r || (r = {})).RTC_DEBUG_PANEL = 'rtc_debug_panel'), (l.RTC_SECURE_FRAMES = 'rtc_secure_frames');
-let S = 1,
-    A = 0;
+    d = 5,
+    f = 60,
+    S = 4;
+((u = r || (r = {})).MATCH = 'match'), (u.OTHER_USER_ALREADY_VERIFIED = 'other_user_already_verified'), (u.OTHER_USER_INCONSISTENT_KEYS = 'other_user_inconsistent_keys'), (u.FINGERPRINT_MISMATCH = 'fingerprint_mismatch'), (u.UNABLE_TO_VERIFY = 'unable_to_verify'), (u.OTHER_USER_DISCONNECTED = 'other_user_disconnected'), (u.CURRENT_USER_DISCONNECTED = 'current_user_disconnected');
+let I = 100;
+((a = i || (i = {})).RTC_DEBUG_PANEL = 'rtc_debug_panel'), (a.RTC_SECURE_FRAMES = 'rtc_secure_frames');
+let T = 1,
+    R = 0;
