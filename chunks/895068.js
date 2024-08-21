@@ -159,15 +159,19 @@ t.ZP = o.memo(function (e) {
         w = o.useCallback(
             (e) => {
                 var t;
-                null === (t = s.current) ||
-                    void 0 === t ||
-                    t.scrollToTop({
-                        callback: () => {
-                            j(e);
-                        }
-                    });
+                (0, E.Lx)({
+                    fromPage: y,
+                    toPage: e
+                }),
+                    null === (t = s.current) ||
+                        void 0 === t ||
+                        t.scrollToTop({
+                            callback: () => {
+                                j(e);
+                            }
+                        });
             },
-            [j]
+            [j, y]
         ),
         B = o.useMemo(() => new Set(P.games), [P.games]),
         H = o.useCallback(
@@ -188,13 +192,15 @@ t.ZP = o.memo(function (e) {
                             })(n)) *
                             r +
                         t,
-                    u = o[t];
+                    u = y * G + d,
+                    _ = o[t];
                 return (0, l.jsx)(
                     p.ZP,
                     {
-                        clan: u,
+                        clan: _,
                         index: d,
-                        affinity: null !== (s = u.affininty) && void 0 !== s ? s : (0, g.y)(u, P),
+                        position: u,
+                        affinity: null !== (s = _.affininty) && void 0 !== s ? s : (0, g.y)(_, P),
                         traitsToHighlight: M,
                         className: O.card,
                         style: i,
@@ -205,7 +211,7 @@ t.ZP = o.memo(function (e) {
                     a
                 );
             },
-            [P, k, M, B, r, n]
+            [P, k, M, B, r, n, y, G]
         ),
         V = o.useCallback((e, t, n, i) => (0, l.jsx)(T.Z, { style: n }, i), []),
         F = o.useCallback(

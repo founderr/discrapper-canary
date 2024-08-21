@@ -14,8 +14,14 @@ n.d(t, {
     GS: function () {
         return R;
     },
+    Gh: function () {
+        return B;
+    },
     Lp: function () {
         return m;
+    },
+    Lx: function () {
+        return G;
     },
     Oe: function () {
         return N;
@@ -27,7 +33,7 @@ n.d(t, {
         return M;
     },
     Qh: function () {
-        return v;
+        return O;
     },
     TE: function () {
         return C;
@@ -37,6 +43,9 @@ n.d(t, {
     },
     _9: function () {
         return y;
+    },
+    _v: function () {
+        return F;
     },
     aC: function () {
         return b;
@@ -49,6 +58,9 @@ n.d(t, {
     },
     hx: function () {
         return I;
+    },
+    j$: function () {
+        return k;
     },
     jK: function () {
         return f;
@@ -63,7 +75,7 @@ n.d(t, {
         return P;
     },
     tv: function () {
-        return O;
+        return v;
     },
     u0: function () {
         return h;
@@ -163,7 +175,7 @@ function N(e, t) {
         traits: t.traits
     });
 }
-function v(e) {
+function O(e) {
     switch (e) {
         case c.Wy.GAMES:
             return 'games';
@@ -185,7 +197,7 @@ function v(e) {
             return e;
     }
 }
-function O(e) {
+function v(e) {
     let { location: t } = e;
     u.default.track(d.rMx.CLAN_USER_INVITE_VIEWED, { location: t });
 }
@@ -208,14 +220,15 @@ function y(e) {
     });
 }
 function D(e) {
-    let { guildId: t, isMember: n, hasJoinRequest: r, affinity: i, index: a } = e;
+    let { guildId: t, isMember: n, hasJoinRequest: r, affinity: i, index: a, position: s } = e;
     u.default.track(d.rMx.CLAN_DISCOVERY_CARD_CLICKED, {
         ...f(),
         guild_id: t,
         is_member: n,
         has_join_request: r,
         affinity: i,
-        index: a
+        index: a,
+        position: s
     });
 }
 function L(e) {
@@ -281,6 +294,40 @@ function w(e) {
 function x(e) {
     let { guildId: t, position: n } = e;
     u.default.track(d.rMx.GUILD_APPLICATION_INTENDS_TO_JOIN, {
+        ...f({ outcome: _.qz.HIT }),
+        guild_id: t,
+        position: n
+    });
+}
+function G(e) {
+    let { fromPage: t, toPage: n } = e;
+    u.default.track(d.rMx.DISCOVERY_GUILD_PAGINATION_CLICKED, {
+        ...f(),
+        from_page: t,
+        to_page: n
+    });
+}
+function k(e) {
+    let { guildId: t, position: n, isFavorited: r } = e;
+    u.default.track(d.rMx.DISCOVERY_GUILD_FAVORITED, {
+        ...f(),
+        guild_id: t,
+        position: n,
+        favorite: r
+    });
+}
+function B(e) {
+    let { feature: t, guildId: n, position: r } = e;
+    u.default.track(d.rMx.DISCOVERY_GUILD_CARD_INTERACTION, {
+        ...f(),
+        guild_id: n,
+        feature: t,
+        position: r
+    });
+}
+function F(e) {
+    let { guildId: t, position: n } = e;
+    u.default.track(d.rMx.GUILD_APPLICATION_ABANDONED, {
         ...f({ outcome: _.qz.HIT }),
         guild_id: t,
         position: n
