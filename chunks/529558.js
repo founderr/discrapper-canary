@@ -18,46 +18,19 @@ let i = (0, r.B)({
         },
         treatments: [
             {
-                id: 6,
-                label: 'Can support secure frames above protocol version 10',
-                config: {
-                    protocolVersionFloor: 10,
-                    canSupportSecureFrames: !0,
-                    canSupportMls: !1
-                }
-            },
-            {
-                id: 7,
-                label: 'Can support secure frames above protocol version 110 (MLS)',
-                config: {
-                    protocolVersionFloor: 10,
-                    canSupportSecureFrames: !0,
-                    canSupportMls: !0
-                }
-            },
-            {
-                id: 8,
-                label: 'Can support secure frames above protocol version 11',
-                config: {
-                    protocolVersionFloor: 11,
-                    canSupportSecureFrames: !0,
-                    canSupportMls: !1
-                }
-            },
-            {
-                id: 9,
-                label: 'Can support secure frames above protocol version 111 (MLS)',
-                config: {
-                    protocolVersionFloor: 11,
-                    canSupportSecureFrames: !0,
-                    canSupportMls: !0
-                }
-            },
-            {
                 id: 10,
                 label: 'Can support secure frames above protocol version 112 (MLS)',
                 config: {
                     protocolVersionFloor: 12,
+                    canSupportSecureFrames: !0,
+                    canSupportMls: !0
+                }
+            },
+            {
+                id: 11,
+                label: 'Can support secure frames above protocol version 114 (MLS)',
+                config: {
+                    protocolVersionFloor: 14,
                     canSupportSecureFrames: !0,
                     canSupportMls: !0
                 }
