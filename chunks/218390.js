@@ -47,61 +47,69 @@ var n = t(735250),
     z = t(520314),
     Q = t(434691);
 function X() {
-    var e, s, t;
-    let a = (0, c.e7)([D.ZP], () => D.ZP.getPremiumTypeSubscription()),
-        i = (0, Z.t7)(),
-        o = (0, Z.lr)(),
-        d = (0, A.ZP)();
-    if (null == a || null == a.planIdFromItems) return null;
-    let u = null != a.trialId,
-        I = a.planIdFromItems === w.Xh.PREMIUM_YEAR_TIER_2,
-        S = i || u,
-        C = null != a.trialEndsAt ? l()(a.trialEndsAt).diff(l()(), 'd') : 0,
-        m = w.GP[a.planIdFromItems],
-        O = b.ZP.formatPriceString(b.ZP.getDefaultPrice(m.id), m.interval);
+    let e = (0, c.e7)([D.ZP], () => D.ZP.getPremiumTypeSubscription()),
+        s = (0, Z.t7)(),
+        t = (0, Z.lr)(),
+        a = (0, c.e7)([D.ZP], () => D.ZP.inReverseTrial()),
+        i = (0, A.ZP)();
+    if (null == e || null == e.planIdFromItems) return null;
+    let o = null != e.trialId,
+        d = e.planIdFromItems === w.Xh.PREMIUM_YEAR_TIER_2,
+        u = s || o,
+        I = null != e.trialEndsAt ? l()(e.trialEndsAt).diff(l()(), 'd') : 0,
+        S = w.GP[e.planIdFromItems],
+        C = b.ZP.formatPriceString(b.ZP.getDefaultPrice(S.id), S.interval);
     return (0, n.jsxs)('div', {
-        className: r()(W.tierCard, { [W.withTier2Rim]: S }),
+        className: r()(W.tierCard, { [W.withTier2Rim]: u }),
         children: [
             (0, n.jsxs)('div', {
                 className: W.tierInfo,
                 children: [
                     (0, n.jsx)(P.Z, { className: W.tierTitle }),
-                    S
+                    u
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  (u || !I) &&
+                                  (o || !d) &&
                                       (0, n.jsx)(G.Cy, {
-                                          text: u ? k.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : k.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
+                                          text: o ? k.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : k.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
                                           className: W.topRimPill,
-                                          colorOptions: (0, _.wj)(d) ? G.VE.PREMIUM_TIER_2_WHITE_FILL : G.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                                          colorOptions: (0, _.wj)(i) ? G.VE.PREMIUM_TIER_2_WHITE_FILL : G.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                       }),
-                                  (u || !I) && (0, n.jsx)('div', { className: W.rimGlowTier2 }),
+                                  (o || !d) && (0, n.jsx)('div', { className: W.rimGlowTier2 }),
                                   (0, n.jsx)(E.Heading, {
                                       variant: 'heading-md/normal',
                                       color: 'always-white',
                                       className: W.trialHeader,
-                                      children: u
-                                          ? k.Z.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
-                                                remainingTime: C,
-                                                price: O
-                                            })
-                                          : I
-                                            ? k.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
-                                                  percent: null !== (e = null == o ? void 0 : o.percentage) && void 0 !== e ? e : w.Bo,
-                                                  regularPrice: O
-                                              })
-                                            : k.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
-                                                  percent: null !== (s = null == o ? void 0 : o.percentage) && void 0 !== s ? s : w.M_,
-                                                  regularPrice: O,
-                                                  numMonths: null !== (t = null == o ? void 0 : o.duration) && void 0 !== t ? t : w.rt
-                                              })
+                                      children: (() => {
+                                          var s, n, i;
+                                          if (o) {
+                                              if (a) {
+                                                  let s = e.trialId === w.dO ? 1 : 2;
+                                                  return k.Z.Messages.REVERSE_TRIAL_SUBSCRIBER_MANAGEMENT_SUBHEADER.format({ weeks: s });
+                                              }
+                                              return k.Z.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
+                                                  remainingTime: I,
+                                                  price: C
+                                              });
+                                          }
+                                          if (d)
+                                              return k.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
+                                                  percent: null !== (s = null == t ? void 0 : t.percentage) && void 0 !== s ? s : w.Bo,
+                                                  regularPrice: C
+                                              });
+                                          return k.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
+                                              percent: null !== (n = null == t ? void 0 : t.percentage) && void 0 !== n ? n : w.M_,
+                                              regularPrice: C,
+                                              numMonths: null !== (i = null == t ? void 0 : t.duration) && void 0 !== i ? i : w.rt
+                                          });
+                                      })()
                                   })
                               ]
                           })
                         : (0, n.jsx)(F.Z, {
                               variant: void 0,
                               subscriptionTier: w.Si.TIER_2,
-                              interval: m.interval
+                              interval: S.interval
                           }),
                     (0, n.jsx)(G.nT, {}),
                     (0, n.jsx)(E.Button, {

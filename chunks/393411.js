@@ -1,6 +1,6 @@
 t.d(s, {
     R: function () {
-        return G;
+        return y;
     }
 }),
     t(411104);
@@ -10,60 +10,62 @@ var a = t(120356),
     i = t.n(a),
     r = t(512722),
     o = t.n(r),
-    l = t(481060),
-    c = t(366939),
-    d = t(100527),
-    _ = t(906732),
-    E = t(710845),
-    u = t(963249),
-    I = t(301766),
-    T = t(509545),
-    S = t(931331),
-    N = t(754347),
-    C = t(122289),
-    m = t(74538),
-    A = t(212895),
-    O = t(296848),
-    g = t(140465),
-    h = t(879463),
-    p = t(104494),
-    R = t(987997),
-    x = t(833569),
-    M = t(823188),
-    f = t(474936),
-    D = t(981631),
-    P = t(689938),
-    L = t(899482);
-let b = new E.Z('SubscriptionHeader.tsx'),
-    Z = {
-        page: D.ZY5.USER_SETTINGS,
-        section: D.jXE.SETTINGS_PREMIUM,
-        object: D.qAy.CARD
+    l = t(442837),
+    c = t(481060),
+    d = t(366939),
+    _ = t(100527),
+    E = t(906732),
+    u = t(710845),
+    I = t(963249),
+    T = t(301766),
+    S = t(509545),
+    N = t(78839),
+    C = t(931331),
+    m = t(754347),
+    A = t(122289),
+    O = t(74538),
+    g = t(212895),
+    h = t(296848),
+    p = t(140465),
+    R = t(879463),
+    x = t(104494),
+    M = t(987997),
+    f = t(833569),
+    D = t(823188),
+    P = t(474936),
+    L = t(981631),
+    b = t(689938),
+    Z = t(899482);
+let v = new u.Z('SubscriptionHeader.tsx'),
+    j = {
+        page: L.ZY5.USER_SETTINGS,
+        section: L.jXE.SETTINGS_PREMIUM,
+        object: L.qAy.CARD
     },
-    v = [D.O0b.PAUSED, D.O0b.PAUSE_PENDING, D.O0b.BILLING_RETRY];
-function j(e) {
+    B = [L.O0b.PAUSED, L.O0b.PAUSE_PENDING, L.O0b.BILLING_RETRY];
+function U(e) {
     let { wordMark: s, subscriptionInfo: t, buttons: a, statusClasses: r, shouldUseDiscountMarketing: o, discountAmount: l } = e;
     return (0, n.jsxs)('div', {
-        className: i()(L.banner, r),
+        className: i()(Z.banner, r),
         children: [
-            (0, n.jsx)('div', { className: L.bannerBackgroundImage }),
+            (0, n.jsx)('div', { className: Z.bannerBackgroundImage }),
             (0, n.jsxs)('div', {
-                className: L.detailsContainer,
+                className: Z.detailsContainer,
                 children: [
-                    (0, n.jsx)('div', { className: L.image }),
+                    (0, n.jsx)('div', { className: Z.image }),
                     (0, n.jsxs)('div', {
-                        className: L.details,
+                        className: Z.details,
                         children: [
                             (0, n.jsxs)('div', {
-                                className: L.headerLabel,
+                                className: Z.headerLabel,
                                 children: [
                                     s,
                                     o &&
                                         null != l &&
-                                        (0, n.jsx)(M.Cy, {
-                                            text: P.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: l }),
-                                            className: L.discountPill,
-                                            colorOptions: M.VE.PREMIUM_TIER_2_WHITE_FILL,
+                                        (0, n.jsx)(D.Cy, {
+                                            text: b.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: l }),
+                                            className: Z.discountPill,
+                                            colorOptions: D.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1
                                         })
                                 ]
@@ -74,36 +76,36 @@ function j(e) {
                 ]
             }),
             (0, n.jsx)('div', {
-                className: L.buttons,
+                className: Z.buttons,
                 children: a
             })
         ]
     });
 }
-function B(e) {
+function G(e) {
     let { wordMark: s, subscriptionInfo: t, buttons: a, statusClasses: r, shouldUseDiscountMarketing: o, discountAmount: l } = e;
     return (0, n.jsxs)('div', {
-        className: i()(L.banner, r, L.repositioned),
+        className: i()(Z.banner, r, Z.repositioned),
         children: [
-            (0, n.jsx)('div', { className: L.bannerBackgroundImage }),
+            (0, n.jsx)('div', { className: Z.bannerBackgroundImage }),
             (0, n.jsx)('div', {
-                className: L.detailsContainer,
+                className: Z.detailsContainer,
                 children: (0, n.jsx)('div', {
-                    className: L.details,
+                    className: Z.details,
                     children: (0, n.jsxs)('div', {
-                        className: L.headerLabel,
+                        className: Z.headerLabel,
                         children: [
-                            (0, n.jsx)('div', { className: L.image }),
+                            (0, n.jsx)('div', { className: Z.image }),
                             (0, n.jsxs)('div', {
-                                className: L.headerColumnB,
+                                className: Z.headerColumnB,
                                 children: [
                                     s,
                                     o &&
                                         null != l &&
-                                        (0, n.jsx)(M.Cy, {
-                                            text: P.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: l }),
-                                            className: L.discountPill,
-                                            colorOptions: M.VE.PREMIUM_TIER_2_WHITE_FILL,
+                                        (0, n.jsx)(D.Cy, {
+                                            text: b.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: l }),
+                                            className: Z.discountPill,
+                                            colorOptions: D.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1
                                         }),
                                     t
@@ -114,318 +116,322 @@ function B(e) {
                 })
             }),
             (0, n.jsx)('div', {
-                className: L.buttons,
+                className: Z.buttons,
                 children: a
             })
         ]
     });
 }
-function U() {
+function F() {
     return (0, n.jsxs)('div', {
-        className: L.wordMark,
+        className: Z.wordMark,
         children: [
-            (0, n.jsx)(N.Z, {
-                className: L.discordWordmark,
-                'aria-label': P.Z.Messages.PREMIUM_TIER_1
+            (0, n.jsx)(m.Z, {
+                className: Z.discordWordmark,
+                'aria-label': b.Z.Messages.PREMIUM_TIER_1
             }),
-            (0, n.jsx)('div', { className: L.classicWordmark })
+            (0, n.jsx)('div', { className: Z.classicWordmark })
         ]
     });
 }
-function G() {
-    let { analyticsLocations: e } = (0, _.ZP)(d.Z.ACCOUNT_CREDIT_BANNER);
-    return (0, n.jsx)(j, {
-        wordMark: (0, n.jsx)(U, {}),
+function y() {
+    let { analyticsLocations: e } = (0, E.ZP)(_.Z.ACCOUNT_CREDIT_BANNER);
+    return (0, n.jsx)(U, {
+        wordMark: (0, n.jsx)(F, {}),
         subscriptionInfo: (0, n.jsx)('div', {
-            className: L.planInfo,
-            children: P.Z.Messages.PREMIUM_TIER_1_ACCOUNT_CREDIT_BANNER_DESCRIPTION
+            className: Z.planInfo,
+            children: b.Z.Messages.PREMIUM_TIER_1_ACCOUNT_CREDIT_BANNER_DESCRIPTION
         }),
-        buttons: (0, n.jsx)(R.Z, {
-            className: L.toolsButton,
+        buttons: (0, n.jsx)(M.Z, {
+            className: Z.toolsButton,
             onClick: () =>
-                (0, u.Z)({
-                    subscriptionTier: f.Si.TIER_1,
+                (0, I.Z)({
+                    subscriptionTier: P.Si.TIER_1,
                     analyticsLocations: e,
-                    analyticsObject: Z
+                    analyticsObject: j
                 }),
-            children: P.Z.Messages.PREMIUM_TIER_1_ACCOUNT_CREDIT_BANNER_CTA
+            children: b.Z.Messages.PREMIUM_TIER_1_ACCOUNT_CREDIT_BANNER_CTA
         }),
-        statusClasses: { [L.tier1]: !0 }
+        statusClasses: { [Z.tier1]: !0 }
     });
 }
 s.Z = function (e) {
-    var s, a;
-    let { subscription: r, renewalInvoicePreview: E, paymentSource: M, busy: G, analyticsLocation: F } = e,
-        { analyticsLocations: y } = (0, _.ZP)(d.Z.SUBSCRIPTION_HEADER),
-        { enabled: V } = (0, h.ZP)({ location: 'subscription_header' });
-    (!f.pj.has(r.planId) || !D.JwP.ALL_PAUSEABLE.has(r.status)) && (V = !1);
-    let Y = (0, p.Ng)(),
-        w = null == Y ? void 0 : null === (s = Y.discount) || void 0 === s ? void 0 : s.amount,
-        H = (0, g.t7)(),
-        k = (0, g.lr)(),
-        W = () => {
-            if (r.status === D.O0b.ACTIVE || r.status === D.O0b.PAST_DUE || r.status === D.O0b.PAUSED) Q(x.Steps.PAUSE_SELECT);
-        },
-        K = () => {
-            if (r.status === D.O0b.ACTIVE || r.status === D.O0b.PAST_DUE || r.status === D.O0b.PAUSE_PENDING) Q();
-        },
+    var s;
+    let { subscription: a, renewalInvoicePreview: r, paymentSource: u, busy: D, analyticsLocation: y } = e,
+        { analyticsLocations: V } = (0, E.ZP)(_.Z.SUBSCRIPTION_HEADER),
+        { enabled: Y } = (0, R.ZP)({ location: 'subscription_header' });
+    (!P.pj.has(a.planId) || !L.JwP.ALL_PAUSEABLE.has(a.status)) && (Y = !1);
+    let w = (0, x.Ng)(),
+        H = null == w ? void 0 : null === (s = w.discount) || void 0 === s ? void 0 : s.amount,
+        k = (0, p.t7)(),
+        W = (0, p.lr)(),
+        K = (0, l.e7)([N.ZP], () => N.ZP.inReverseTrial()),
         z = () => {
-            if (r.status === D.O0b.BILLING_RETRY) Q(x.Steps.CONFIRM);
+            if (a.status === L.O0b.ACTIVE || a.status === L.O0b.PAST_DUE || a.status === L.O0b.PAUSED) q(f.Steps.PAUSE_SELECT);
         },
-        Q = (e) => {
-            (0, l.openModalLazy)(async () => {
+        Q = () => {
+            if (a.status === L.O0b.ACTIVE || a.status === L.O0b.PAST_DUE || a.status === L.O0b.PAUSE_PENDING) q();
+        },
+        X = () => {
+            if (a.status === L.O0b.BILLING_RETRY) q(f.Steps.CONFIRM);
+        },
+        q = (e) => {
+            (0, c.openModalLazy)(async () => {
                 let { default: s } = await Promise.resolve().then(t.bind(t, 833569));
                 return (t) =>
                     (0, n.jsx)(s, {
                         ...t,
-                        premiumSubscription: r,
-                        analyticsLocation: F,
-                        analyticsLocations: y,
+                        premiumSubscription: a,
+                        analyticsLocation: y,
+                        analyticsLocations: V,
                         initialStep: e
                     });
             });
         },
-        X = () => {
-            if (null != r && null != r.planIdFromItems) {
-                let e = T.Z.get(r.planIdFromItems);
+        J = () => {
+            if (null != a && null != a.planIdFromItems) {
+                let e = S.Z.get(a.planIdFromItems);
                 if (null == e) {
-                    b.info('Plan not fetched for plan id: '.concat(r.planIdFromItems));
+                    v.info('Plan not fetched for plan id: '.concat(a.planIdFromItems));
                     return;
                 }
-                let s = (0, A.DE)(e, null == M ? void 0 : M.id, !1),
-                    t = s.length > 0 ? s[0] : r.currency,
+                let s = (0, g.DE)(e, null == u ? void 0 : u.id, !1),
+                    t = s.length > 0 ? s[0] : a.currency,
                     n = !1;
-                1 === s.length && (null == M ? void 0 : M.id) === r.paymentSourceId && (0, A.tD)(e.id, t, null == M ? void 0 : M.id) && (n = !0),
+                1 === s.length && (null == u ? void 0 : u.id) === a.paymentSourceId && (0, g.tD)(e.id, t, null == u ? void 0 : u.id) && (n = !0),
                     n
-                        ? c.O5(r, y)
-                        : (0, u.Z)({
-                              initialPlanId: r.planIdFromItems,
-                              analyticsLocations: y,
-                              analyticsLocation: F,
-                              analyticsObject: Z,
-                              subscription: r
+                        ? d.O5(a, V)
+                        : (0, I.Z)({
+                              initialPlanId: a.planIdFromItems,
+                              analyticsLocations: V,
+                              analyticsLocation: y,
+                              analyticsObject: j,
+                              subscription: a
                           });
             }
         },
-        q = () => {
-            if (!v.includes(r.status) || null == r.pauseEndsAt) {
-                (0, C.q2)(Error('Invalid subscription to resume'), {
+        $ = () => {
+            if (!B.includes(a.status) || null == a.pauseEndsAt) {
+                (0, A.q2)(Error('Invalid subscription to resume'), {
                     extra: {
-                        subscriptionId: r.id,
-                        status: r.status,
-                        pauseEndsAt: r.pauseEndsAt
+                        subscriptionId: a.id,
+                        status: a.status,
+                        pauseEndsAt: a.pauseEndsAt
                     }
                 });
                 return;
             }
-            r.status === D.O0b.PAUSED
-                ? (0, u.Z)({
-                      initialPlanId: r.planIdFromItems,
-                      analyticsLocations: y,
-                      analyticsLocation: F,
-                      analyticsObject: Z,
-                      subscription: r,
+            a.status === L.O0b.PAUSED
+                ? (0, I.Z)({
+                      initialPlanId: a.planIdFromItems,
+                      analyticsLocations: V,
+                      analyticsLocation: y,
+                      analyticsObject: j,
+                      subscription: a,
                       skipConfirm: !0
                   })
-                : c.v4(r, y);
+                : d.v4(a, V);
         },
-        J = () => {
-            if (r.status === D.O0b.PAUSED) Q(x.Steps.PAUSE_SELECT);
+        ee = () => {
+            if (a.status === L.O0b.PAUSED) q(f.Steps.PAUSE_SELECT);
         },
-        $ = () => {
-            Q(x.Steps.WHAT_YOU_LOSE);
+        es = () => {
+            q(f.Steps.WHAT_YOU_LOSE);
         },
-        ee = m.ZP.getPlanIdFromInvoice(r, E);
-    if ((0, I.Q0)(ee)) return null;
-    let es = m.ZP.getStatusFromInvoice(r, E),
-        et = m.ZP.getPremiumType(ee),
-        en = {
-            [L.tier0]: et === f.p9.TIER_0,
-            [L.tier1]: et === f.p9.TIER_1,
-            [L.tier2]: et === f.p9.TIER_2,
-            [L.canceled]: es === D.O0b.CANCELED,
-            [L.pausePending]: es === D.O0b.PAUSE_PENDING,
-            [L.paused]: es === D.O0b.PAUSED,
-            [L.failedPayment]: (0, m.zV)(es)
+        et = O.ZP.getPlanIdFromInvoice(a, r);
+    if ((0, T.Q0)(et)) return null;
+    let en = O.ZP.getStatusFromInvoice(a, r),
+        ea = O.ZP.getPremiumType(et),
+        ei = {
+            [Z.tier0]: ea === P.p9.TIER_0,
+            [Z.tier1]: ea === P.p9.TIER_1,
+            [Z.tier2]: ea === P.p9.TIER_2,
+            [Z.canceled]: en === L.O0b.CANCELED,
+            [Z.pausePending]: en === L.O0b.PAUSE_PENDING,
+            [Z.paused]: en === L.O0b.PAUSED,
+            [Z.failedPayment]: (0, O.zV)(en)
         },
-        ea = null;
-    switch (et) {
-        case f.p9.TIER_0:
-            ea = (0, n.jsxs)('div', {
-                className: L.wordMark,
+        er = null;
+    switch (ea) {
+        case P.p9.TIER_0:
+            er = (0, n.jsxs)('div', {
+                className: Z.wordMark,
                 children: [
-                    (0, n.jsx)(N.Z, {
-                        className: L.discordWordmark,
-                        'aria-label': P.Z.Messages.PREMIUM_TIER_0
+                    (0, n.jsx)(m.Z, {
+                        className: Z.discordWordmark,
+                        'aria-label': b.Z.Messages.PREMIUM_TIER_0
                     }),
-                    (0, n.jsx)('div', { className: L.basicWordmark })
+                    (0, n.jsx)('div', { className: Z.basicWordmark })
                 ]
             });
             break;
-        case f.p9.TIER_1:
-            ea = (0, n.jsx)(U, {});
+        case P.p9.TIER_1:
+            er = (0, n.jsx)(F, {});
             break;
-        case f.p9.TIER_2:
-            ea = (0, n.jsx)(S.Z, {
-                className: L.planName,
-                'aria-label': P.Z.Messages.PREMIUM_TITLE
+        case P.p9.TIER_2:
+            er = (0, n.jsx)(C.Z, {
+                className: Z.planName,
+                'aria-label': b.Z.Messages.PREMIUM_TITLE
             });
     }
-    let ei = v.includes(r.status) ? B : j;
-    return (0, n.jsx)(ei, {
-        wordMark: ea,
-        subscriptionInfo:
-            ((a = ee),
-            o()(null != E, 'Expected renewalInvoicePreview'),
-            (0, n.jsx)('div', {
-                className: L.planInfo,
-                children: (0, m.qV)({
-                    planId: a,
-                    subscription: r,
-                    renewalInvoicePreview: E,
-                    hasDiscountApplied: H,
-                    activeDiscountInfo: k
-                })
-            })),
+    let eo = B.includes(a.status) ? G : U;
+    return (0, n.jsx)(eo, {
+        wordMark: er,
+        subscriptionInfo: ((e) => {
+            o()(null != r, 'Expected renewalInvoicePreview');
+            let s = a.trialId === P.dO ? 1 : 2;
+            return (0, n.jsx)('div', {
+                className: Z.planInfo,
+                children: K
+                    ? b.Z.Messages.REVERSE_TRIAL_SUBSCRIBER_MANAGEMENT_SUBHEADER.format({ weeks: s })
+                    : (0, O.qV)({
+                          planId: e,
+                          subscription: a,
+                          renewalInvoicePreview: r,
+                          hasDiscountApplied: k,
+                          activeDiscountInfo: W
+                      })
+            });
+        })(et),
         buttons: (() => {
-            let { status: e } = r;
-            if (r.isPurchasedExternally) {
-                let e = (0, m.JE)(r.paymentGateway, 'SUBSCRIPTION_MANAGEMENT');
-                return (0, n.jsx)(l.Anchor, {
+            let { status: e } = a;
+            if (a.isPurchasedExternally) {
+                let e = (0, O.JE)(a.paymentGateway, 'SUBSCRIPTION_MANAGEMENT');
+                return (0, n.jsx)(c.Anchor, {
                     href: e,
                     useDefaultUnderlineStyles: !1,
-                    children: (0, n.jsx)(l.Button, {
-                        className: i()(L.toolsButton, L.externalButton),
-                        size: l.Button.Sizes.SMALL,
-                        look: l.ButtonLooks.OUTLINED,
-                        color: l.ButtonColors.WHITE,
-                        submitting: G,
-                        children: P.Z.Messages.BILLING_MANAGE_SUBSCRIPTION
+                    children: (0, n.jsx)(c.Button, {
+                        className: i()(Z.toolsButton, Z.externalButton),
+                        size: c.Button.Sizes.SMALL,
+                        look: c.ButtonLooks.OUTLINED,
+                        color: c.ButtonColors.WHITE,
+                        submitting: D,
+                        children: b.Z.Messages.BILLING_MANAGE_SUBSCRIPTION
                     })
                 });
             }
-            if (m.ZP.isBaseSubscriptionCanceled(r))
-                return (0, n.jsx)(l.Button, {
-                    className: L.toolsButton,
-                    size: l.Button.Sizes.SMALL,
-                    color: l.ButtonColors.BRAND_INVERTED,
-                    submitting: G,
-                    onClick: X,
-                    children: P.Z.Messages.RESUBSCRIBE
+            if (O.ZP.isBaseSubscriptionCanceled(a))
+                return (0, n.jsx)(c.Button, {
+                    className: Z.toolsButton,
+                    size: c.Button.Sizes.SMALL,
+                    color: c.ButtonColors.BRAND_INVERTED,
+                    submitting: D,
+                    onClick: J,
+                    children: b.Z.Messages.RESUBSCRIBE
                 });
             switch (e) {
-                case D.O0b.BILLING_RETRY:
-                    return (0, n.jsx)(l.Button, {
-                        className: L.billingRetryCancel,
-                        size: l.Button.Sizes.SMALL,
-                        color: l.ButtonColors.CUSTOM,
-                        submitting: G,
-                        onClick: z,
-                        children: P.Z.Messages.CANCEL
+                case L.O0b.BILLING_RETRY:
+                    return (0, n.jsx)(c.Button, {
+                        className: Z.billingRetryCancel,
+                        size: c.Button.Sizes.SMALL,
+                        color: c.ButtonColors.CUSTOM,
+                        submitting: D,
+                        onClick: X,
+                        children: b.Z.Messages.CANCEL
                     });
-                case D.O0b.PAUSE_PENDING:
+                case L.O0b.PAUSE_PENDING:
                     return (0, n.jsxs)('div', {
-                        className: L.toolsButtons,
+                        className: Z.toolsButtons,
                         children: [
-                            (0, n.jsx)(l.Button, {
-                                className: L.toolsButton,
-                                size: l.Button.Sizes.SMALL,
-                                look: l.ButtonLooks.LINK,
-                                color: l.ButtonColors.WHITE,
-                                submitting: G,
-                                onClick: K,
-                                children: P.Z.Messages.PREMIUM_CANCEL_CONFIRM_BUTTON
+                            (0, n.jsx)(c.Button, {
+                                className: Z.toolsButton,
+                                size: c.Button.Sizes.SMALL,
+                                look: c.ButtonLooks.LINK,
+                                color: c.ButtonColors.WHITE,
+                                submitting: D,
+                                onClick: Q,
+                                children: b.Z.Messages.PREMIUM_CANCEL_CONFIRM_BUTTON
                             }),
-                            (0, n.jsx)(l.Button, {
-                                className: L.toolsButton,
-                                size: l.Button.Sizes.SMALL,
-                                color: l.ButtonColors.BRAND_INVERTED,
-                                submitting: G,
-                                onClick: q,
-                                children: P.Z.Messages.CANCEL_PAUSE
+                            (0, n.jsx)(c.Button, {
+                                className: Z.toolsButton,
+                                size: c.Button.Sizes.SMALL,
+                                color: c.ButtonColors.BRAND_INVERTED,
+                                submitting: D,
+                                onClick: $,
+                                children: b.Z.Messages.CANCEL_PAUSE
                             })
                         ]
                     });
-                case D.O0b.PAUSED:
-                    let { durations: s } = (0, O.AT)(r);
+                case L.O0b.PAUSED:
+                    let { durations: s } = (0, h.AT)(a);
                     return (0, n.jsxs)('div', {
-                        className: L.toolsButtons,
+                        className: Z.toolsButtons,
                         children: [
                             s.length > 0
-                                ? (0, n.jsx)(l.Button, {
-                                      className: L.linkButton,
-                                      size: l.Button.Sizes.SMALL,
-                                      look: l.ButtonLooks.LINK,
-                                      color: l.ButtonColors.WHITE,
-                                      submitting: G,
-                                      onClick: J,
-                                      children: P.Z.Messages.PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION
+                                ? (0, n.jsx)(c.Button, {
+                                      className: Z.linkButton,
+                                      size: c.Button.Sizes.SMALL,
+                                      look: c.ButtonLooks.LINK,
+                                      color: c.ButtonColors.WHITE,
+                                      submitting: D,
+                                      onClick: ee,
+                                      children: b.Z.Messages.PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION
                                   })
-                                : (0, n.jsx)(l.Button, {
-                                      className: L.linkButton,
-                                      size: l.Button.Sizes.SMALL,
-                                      look: l.ButtonLooks.LINK,
-                                      color: l.ButtonColors.WHITE,
-                                      submitting: G,
-                                      onClick: $,
-                                      children: P.Z.Messages.PREMIUM_CANCEL_CONFIRM_BUTTON
+                                : (0, n.jsx)(c.Button, {
+                                      className: Z.linkButton,
+                                      size: c.Button.Sizes.SMALL,
+                                      look: c.ButtonLooks.LINK,
+                                      color: c.ButtonColors.WHITE,
+                                      submitting: D,
+                                      onClick: es,
+                                      children: b.Z.Messages.PREMIUM_CANCEL_CONFIRM_BUTTON
                                   }),
-                            (0, n.jsx)(l.Button, {
-                                className: L.toolsButton,
-                                size: l.Button.Sizes.SMALL,
-                                color: l.ButtonColors.BRAND_INVERTED,
-                                submitting: G,
-                                onClick: q,
-                                children: P.Z.Messages.RESUME
+                            (0, n.jsx)(c.Button, {
+                                className: Z.toolsButton,
+                                size: c.Button.Sizes.SMALL,
+                                color: c.ButtonColors.BRAND_INVERTED,
+                                submitting: D,
+                                onClick: $,
+                                children: b.Z.Messages.RESUME
                             })
                         ]
                     });
-                case D.O0b.ACTIVE:
-                case D.O0b.PAST_DUE:
+                case L.O0b.ACTIVE:
+                case L.O0b.PAST_DUE:
                     let t = !1,
-                        a = null;
+                        r = null;
                     return (
-                        null != r.renewalMutations && ((t = !0), (a = r.renewalMutations.planId !== r.planId ? P.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PLAN : P.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION)),
-                        null != r.trialEndsAt && ((t = !0), (a = P.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_IN_TRIAL)),
-                        e === D.O0b.PAST_DUE && (t = !0),
+                        null != a.renewalMutations && ((t = !0), (r = a.renewalMutations.planId !== a.planId ? b.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PLAN : b.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION)),
+                        null != a.trialEndsAt && ((t = !0), (r = b.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_IN_TRIAL)),
+                        e === L.O0b.PAST_DUE && (t = !0),
                         (0, n.jsxs)('div', {
-                            className: L.toolsButtons,
+                            className: Z.toolsButtons,
                             children: [
-                                V
-                                    ? (0, n.jsx)(l.Button, {
-                                          className: L.toolsButton,
-                                          size: l.Button.Sizes.SMALL,
-                                          look: l.ButtonLooks.LINK,
-                                          color: l.ButtonColors.WHITE,
-                                          submitting: G,
-                                          onClick: W,
-                                          children: P.Z.Messages.PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION
+                                Y
+                                    ? (0, n.jsx)(c.Button, {
+                                          className: Z.toolsButton,
+                                          size: c.Button.Sizes.SMALL,
+                                          look: c.ButtonLooks.LINK,
+                                          color: c.ButtonColors.WHITE,
+                                          submitting: D,
+                                          onClick: z,
+                                          children: b.Z.Messages.PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION
                                       })
-                                    : (0, n.jsx)(l.Button, {
-                                          className: L.toolsButton,
-                                          size: l.Button.Sizes.SMALL,
-                                          look: l.ButtonLooks.LINK,
-                                          color: l.ButtonColors.WHITE,
-                                          submitting: G,
-                                          onClick: K,
-                                          children: P.Z.Messages.CANCEL
+                                    : (0, n.jsx)(c.Button, {
+                                          className: Z.toolsButton,
+                                          size: c.Button.Sizes.SMALL,
+                                          look: c.ButtonLooks.LINK,
+                                          color: c.ButtonColors.WHITE,
+                                          submitting: D,
+                                          onClick: Q,
+                                          children: b.Z.Messages.CANCEL
                                       }),
-                                (0, n.jsx)(l.Tooltip, {
-                                    text: a,
+                                (0, n.jsx)(c.Tooltip, {
+                                    text: r,
                                     children: (e) =>
-                                        (0, n.jsx)(R.Z, {
+                                        (0, n.jsx)(M.Z, {
                                             ...e,
                                             disabled: t,
-                                            className: L.toolsButton,
+                                            className: Z.toolsButton,
                                             onClick: () => {
-                                                (0, u.Z)({
-                                                    analyticsLocations: y,
-                                                    analyticsLocation: F,
-                                                    analyticsObject: Z,
-                                                    subscription: r
+                                                (0, I.Z)({
+                                                    analyticsLocations: V,
+                                                    analyticsLocation: y,
+                                                    analyticsObject: j,
+                                                    subscription: a
                                                 });
                                             },
-                                            children: P.Z.Messages.PREMIUM_SWITCH_PLANS
+                                            children: b.Z.Messages.PREMIUM_SWITCH_PLANS
                                         })
                                 })
                             ]
@@ -433,8 +439,8 @@ s.Z = function (e) {
                     );
             }
         })(),
-        statusClasses: en,
-        shouldUseDiscountMarketing: H,
-        discountAmount: w
+        statusClasses: ei,
+        shouldUseDiscountMarketing: k,
+        discountAmount: H
     });
 };
