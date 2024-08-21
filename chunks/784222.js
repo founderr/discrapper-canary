@@ -127,16 +127,17 @@ let B = (e) => {
                         C = null != S && N && et && en === M.B.WITH_TOP_LIST && ee[S.id].length < S.getMaxEmojiSlots(),
                         y = r && z && null != S && (O || R || C);
                     y && C && T.length === m && T.shift();
-                    let L = T.length > g && null != S && S.id !== A,
-                        b = er && L && !K.has(S.id);
-                    b && T.splice(g - 1);
-                    let U = et && y && !c,
-                        w = Math.ceil((y ? T.length + 1 : T.length) / m),
-                        G = [];
-                    for (let e = 0; e < w; e++) {
+                    let L = T.length > g,
+                        b = er && L && null != S && s.isNitroLocked,
+                        U = b && !K.has(S.id);
+                    U && T.splice(g - 1);
+                    let w = et && y && !c,
+                        G = Math.ceil((y || b ? T.length + 1 : T.length) / m),
+                        B = [];
+                    for (let e = 0; e < G; e++) {
                         let t = 0 === e,
-                            n = e * m - (U && e > 0 ? 1 : 0),
-                            r = n + m - (U && t ? 1 : 0),
+                            n = e * m - (w && e > 0 ? 1 : 0),
+                            r = n + m - (w && t ? 1 : 0),
                             i = T.slice(n, r).map((e, n) => {
                                 var r, i;
                                 return {
@@ -145,14 +146,14 @@ let B = (e) => {
                                     size: l,
                                     isDisabled: o.get(e),
                                     rowIndex: I,
-                                    columnIndex: U && t ? n + 1 : n,
+                                    columnIndex: w && t ? n + 1 : n,
                                     visibleRowIndex: p,
                                     category: s.type,
                                     subCategory: s.sectionId === x.En.TOP_GUILD_EMOJI ? (0, P.IP)(Y, j, null !== (i = null !== (r = e.id) && void 0 !== r ? r : e.uniqueName) && void 0 !== i ? i : e.name) : x.t0.NONE
                                 };
                             });
                         if (
-                            (U &&
+                            (w &&
                                 t &&
                                 !c &&
                                 (i = [
@@ -167,11 +168,11 @@ let B = (e) => {
                                     },
                                     ...i
                                 ]),
-                            G.push(i),
+                            B.push(i),
                             !c)
                         ) {
-                            if (!et && y && e === w - 1) {
-                                let t = G[e];
+                            if (!et && y && e === G - 1) {
+                                let t = B[e];
                                 t.push({
                                     type: 1,
                                     guildId: S.id,
@@ -182,8 +183,8 @@ let B = (e) => {
                                     visibleRowIndex: p
                                 });
                             }
-                            if (er && e === w - 1 && L) {
-                                let t = G[e];
+                            if (b && e === G - 1) {
+                                let t = B[e];
                                 t.push({
                                     type: 2,
                                     guildId: S.id,
@@ -192,18 +193,18 @@ let B = (e) => {
                                     rowIndex: e,
                                     columnIndex: t.length,
                                     visibleRowIndex: p,
-                                    sectionCollapsedToThreeRows: b
+                                    sectionCollapsedToThreeRows: U
                                 });
                             }
                             h.push(i.length), E.push(i), p++;
                         }
                         I++;
                     }
-                    let B = {
+                    let F = {
                         ...s,
                         count: a.length
                     };
-                    u.push(B), e.push(c ? 0 : w);
+                    u.push(F), e.push(c ? 0 : G);
                 };
             if (null != a)
                 0 !== a.unlocked.length &&
