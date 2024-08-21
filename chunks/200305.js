@@ -121,15 +121,16 @@ let y = (e) => {
     },
     D = (e) => {
         var s;
-        let { guildId: n, formState: t, updateFormState: l, isPreview: a = !1 } = e,
-            r = (0, d.e7)([v.Z], () => v.Z.get(n));
-        if (null == r) return null;
-        let o = null !== (s = null != t ? t : null == r ? void 0 : r.formFields) && void 0 !== s ? s : [],
-            u = a ? j.W : j.r;
-        return (0, i.jsx)(u, {
+        let { guildId: n, formState: t, updateFormState: l, isPreview: a = !1, disableVerification: r = !1 } = e,
+            o = (0, d.e7)([v.Z], () => v.Z.get(n));
+        if (null == o) return null;
+        let u = null !== (s = null != t ? t : null == o ? void 0 : o.formFields) && void 0 !== s ? s : [],
+            c = a ? j.W : j.r;
+        return (0, i.jsx)(c, {
             guildId: n,
-            formFields: o,
-            updateFormFields: l
+            formFields: u,
+            updateFormFields: l,
+            disableVerification: r
         });
     },
     k = () =>
@@ -189,38 +190,38 @@ let y = (e) => {
     };
 s.Z = (e) => {
     var s, n;
-    let { headerId: t, guildId: l, onClose: r, onComplete: c, inviteCode: j, isPreview: V = !1 } = e,
-        S = (0, F.rb)((e) => e.hasUnsubmittedChanges),
-        b = (0, d.e7)([f.Z], () => f.Z.getGuild(l)),
-        P = (0, d.e7)([v.Z], () => v.Z.get(l)),
-        D = null == P ? void 0 : P.formFields.some((e) => e.field_type !== A.QJ.TERMS),
-        k = (0, d.e7)([g.default], () => g.default.getCurrentUser()),
-        G = !(null == k ? void 0 : k.isClaimed()),
-        H = null == k ? void 0 : k.verified,
-        Y = null == k ? void 0 : k.isPhoneVerified(),
-        z = (0, d.e7)([m.ZP], () => m.ZP.getGuildEmoji(l)),
-        { storeMemberCount: J, storeOnlineCount: Q } = (0, d.cj)([x.Z], () => ({
+    let { headerId: t, guildId: l, onClose: r, onComplete: c, inviteCode: j, isPreview: V = !1, disableVerification: S = !1 } = e,
+        b = (0, F.rb)((e) => e.hasUnsubmittedChanges),
+        P = (0, d.e7)([f.Z], () => f.Z.getGuild(l)),
+        D = (0, d.e7)([v.Z], () => v.Z.get(l)),
+        k = null == D ? void 0 : D.formFields.some((e) => e.field_type !== A.QJ.TERMS),
+        G = (0, d.e7)([g.default], () => g.default.getCurrentUser()),
+        H = !(null == G ? void 0 : G.isClaimed()),
+        Y = null == G ? void 0 : G.verified,
+        z = null == G ? void 0 : G.isPhoneVerified(),
+        J = (0, d.e7)([m.ZP], () => m.ZP.getGuildEmoji(l)),
+        { storeMemberCount: Q, storeOnlineCount: q } = (0, d.cj)([x.Z], () => ({
             storeMemberCount: x.Z.getMemberCount(l),
             storeOnlineCount: x.Z.getOnlineCount(l)
         })),
-        [q, W] = a.useState(null !== (s = null == P ? void 0 : P.formFields) && void 0 !== s ? s : []),
-        [X, K] = a.useState(!1),
-        [$, ee] = a.useState(null),
-        [es, en] = a.useState(G ? 0 : 2),
-        [et, el] = a.useState(''),
-        [ei, ea] = a.useState(''),
-        [er, eo] = a.useState(null),
-        [ed, eu] = a.useState(null),
-        ec = null == P ? void 0 : P.guild,
-        eI = a.useMemo(() => (null != b ? b : null != ec ? new N.ZP(ec) : null), [b, ec]),
-        eE = null !== (n = null == eI ? void 0 : eI.hasFeature(L.oNc.CLAN)) && void 0 !== n && n,
+        [W, X] = a.useState(null !== (s = null == D ? void 0 : D.formFields) && void 0 !== s ? s : []),
+        [K, $] = a.useState(!1),
+        [ee, es] = a.useState(null),
+        [en, et] = a.useState(!S && H ? 0 : 2),
+        [el, ei] = a.useState(''),
+        [ea, er] = a.useState(''),
+        [eo, ed] = a.useState(null),
+        [eu, ec] = a.useState(null),
+        eI = null == D ? void 0 : D.guild,
+        eE = a.useMemo(() => (null != P ? P : null != eI ? new N.ZP(eI) : null), [P, eI]),
+        eM = null !== (n = null == eE ? void 0 : eE.hasFeature(L.oNc.CLAN)) && void 0 !== n && n,
         {
-            emojisToRender: eM,
-            remainingEmojis: em,
-            numGuildEmoji: e_
+            emojisToRender: em,
+            remainingEmojis: e_,
+            numGuildEmoji: eN
         } = a.useMemo(() => {
             var e;
-            let s = [...(null !== (e = 0 === z.length ? (null == ec ? void 0 : ec.emojis) : z) && void 0 !== e ? e : [])].reverse(),
+            let s = [...(null !== (e = 0 === J.length ? (null == eI ? void 0 : eI.emojis) : J) && void 0 !== e ? e : [])].reverse(),
                 n = 0,
                 t = s.length;
             return (
@@ -231,9 +232,9 @@ s.Z = (e) => {
                     numGuildEmoji: t
                 }
             );
-        }, [ec, z]),
-        eN = null != J ? J : null == ec ? void 0 : ec.approximate_member_count,
-        ex = null != Q ? Q : null == ec ? void 0 : ec.approximate_presence_count;
+        }, [eI, J]),
+        ex = null != Q ? Q : null == eI ? void 0 : eI.approximate_member_count,
+        eR = null != q ? q : null == eI ? void 0 : eI.approximate_presence_count;
     a.useEffect(
         () => (
             (0, F.a5)(!1),
@@ -247,14 +248,14 @@ s.Z = (e) => {
             T.Z.fetchVerificationForm(l, j);
         }, [l, j]),
         a.useEffect(() => {
-            null != P && W(P.formFields);
-        }, [P]),
+            null != D && X(D.formFields);
+        }, [D]),
         a.useEffect(() => {
-            null != k && k.isClaimed() && en(2);
-        }, [k]),
+            null != G && G.isClaimed() && et(2);
+        }, [G]),
         a.useEffect(() => {
-            1 === es && H && en(2);
-        }, [es, H]),
+            1 === en && Y && et(2);
+        }, [en, Y]),
         a.useEffect(() => {
             null != l &&
                 h.default.track(L.rMx.OPEN_MODAL, {
@@ -263,31 +264,31 @@ s.Z = (e) => {
                 });
         }, [l]),
         a.useEffect(() => {
-            let e = q.some((e) => e.field_type !== A.QJ.TERMS && (0, O.OA)(e));
-            e && !S ? (0, F.a5)(!0) : !e && S && (0, F.a5)(!1);
-        }, [q, S]);
-    let eR = a.useMemo(() => !((((null == eI ? void 0 : eI.verificationLevel) !== L.sFg.VERY_HIGH || (null == k ? void 0 : k.isStaff())) && H) || Y) || q.some((e) => !(0, O.OA)(e)), [q, eI, Y, H, k]),
-        ef = (0, d.e7)([E.Z], () => E.Z.useReducedMotion);
-    if (null == eI) return null;
-    let eg = async () => {
-            K(!0), eo(null), eu(null);
+            let e = W.some((e) => e.field_type !== A.QJ.TERMS && (0, O.OA)(e));
+            e && !b ? (0, F.a5)(!0) : !e && b && (0, F.a5)(!1);
+        }, [W, b]);
+    let ef = a.useMemo(() => !(S || (((null == eE ? void 0 : eE.verificationLevel) !== L.sFg.VERY_HIGH || (null == G ? void 0 : G.isStaff())) && Y) || z) || W.some((e) => !(0, O.OA)(e)), [W, eE, z, Y, G, S]),
+        eg = (0, d.e7)([E.Z], () => E.Z.useReducedMotion);
+    if (null == eE) return null;
+    let eh = async () => {
+            $(!0), ed(null), ec(null);
             try {
                 await (0, I.S2)({
-                    email: et,
-                    password: ei
+                    email: el,
+                    password: ea
                 }),
-                    K(!1),
-                    en(1);
+                    $(!1),
+                    et(1);
             } catch (n) {
                 var e, s;
-                eo(null == n ? void 0 : null === (e = n.body) || void 0 === e ? void 0 : e.email), eu(null == n ? void 0 : null === (s = n.body) || void 0 === s ? void 0 : s.password);
+                ed(null == n ? void 0 : null === (e = n.body) || void 0 === e ? void 0 : e.email), ec(null == n ? void 0 : null === (s = n.body) || void 0 === s ? void 0 : s.password);
             } finally {
-                K(!1);
+                $(!1);
             }
         },
-        eh = async () => {
-            K(!0), ee(null);
-            let e = null != k ? R.ZP.getMember(l, k.id) : null;
+        eC = async () => {
+            $(!0), es(null);
+            let e = null != G ? R.ZP.getMember(l, G.id) : null;
             if (null != e && !e.isPending) {
                 null == r || r(!0);
                 return;
@@ -296,16 +297,16 @@ s.Z = (e) => {
                 await (null == c
                     ? void 0
                     : c({
-                          ...(null != P ? P : v.t),
-                          formFields: q
+                          ...(null != D ? D : v.t),
+                          formFields: W
                       })),
                     null == r || r(!0);
             } catch (t) {
                 var s, n;
                 let e = null == t ? void 0 : t.body;
-                (null == e ? void 0 : null === (s = e.errors) || void 0 === s ? void 0 : s.version) != null || (null == e ? void 0 : null === (n = e.errors) || void 0 === n ? void 0 : n.form_fields) != null ? ee(p.Z.Messages.MEMBER_VERIFICATION_VERSION_MISMATCH_ERROR) : ee(null == e ? void 0 : e.message);
+                (null == e ? void 0 : null === (s = e.errors) || void 0 === s ? void 0 : s.version) != null || (null == e ? void 0 : null === (n = e.errors) || void 0 === n ? void 0 : n.form_fields) != null ? es(p.Z.Messages.MEMBER_VERIFICATION_VERSION_MISMATCH_ERROR) : es(null == e ? void 0 : e.message);
             } finally {
-                K(!1);
+                $(!1);
             }
         };
     return (0, i.jsxs)(i.Fragment, {
@@ -319,30 +320,30 @@ s.Z = (e) => {
                     (0, i.jsxs)('div', {
                         children: [
                             (0, i.jsx)(_.Z, {
-                                guild: eI,
+                                guild: eE,
                                 active: !0,
-                                className: o()(B.guildIcon, { [B.guildIconNoIcon]: null == eI.icon })
+                                className: o()(B.guildIcon, { [B.guildIconNoIcon]: null == eE.icon })
                             }),
                             (0, i.jsx)(u.Heading, {
                                 variant: 'heading-lg/semibold',
                                 className: B.guildName,
-                                children: null == eI ? void 0 : eI.name
+                                children: null == eE ? void 0 : eE.name
                             }),
                             (0, i.jsx)(u.Text, {
                                 className: B.guildDescription,
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: null == P ? void 0 : P.description
+                                children: null == D ? void 0 : D.description
                             }),
-                            null != eM && eM.length > 0
+                            null != em && em.length > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)('hr', { className: B.divider }),
-                                          (0, i.jsx)(u.FormTitle, { children: p.Z.Messages.MEMBER_VERIFICATION_NUM_EMOJIS.format({ emojis: e_ }) }),
+                                          (0, i.jsx)(u.FormTitle, { children: p.Z.Messages.MEMBER_VERIFICATION_NUM_EMOJIS.format({ emojis: eN }) }),
                                           (0, i.jsxs)('div', {
                                               className: B.emojisContainer,
                                               children: [
-                                                  eM.map((e) => {
+                                                  em.map((e) => {
                                                       let s = C.ZP.getEmojiURL({
                                                           id: e.id,
                                                           animated: !1,
@@ -365,12 +366,12 @@ s.Z = (e) => {
                                                           e.id
                                                       );
                                                   }),
-                                                  null != em && em > 0
+                                                  null != e_ && e_ > 0
                                                       ? (0, i.jsx)(u.Heading, {
                                                             variant: 'heading-deprecated-12/semibold',
                                                             className: B.emoji,
                                                             color: 'header-secondary',
-                                                            children: '+'.concat(em)
+                                                            children: '+'.concat(e_)
                                                         })
                                                       : null
                                               ]
@@ -382,7 +383,7 @@ s.Z = (e) => {
                     }),
                     (0, i.jsxs)('div', {
                         children: [
-                            null != ex &&
+                            null != eR &&
                                 (0, i.jsxs)(M.Z, {
                                     align: M.Z.Align.CENTER,
                                     className: B.onlineCount,
@@ -390,18 +391,18 @@ s.Z = (e) => {
                                         (0, i.jsx)('div', { className: B.dotOnline }),
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-sm/normal',
-                                            children: p.Z.Messages.MEMBER_VERIFICATION_NUM_ONLINE.format({ membersOnline: ex })
+                                            children: p.Z.Messages.MEMBER_VERIFICATION_NUM_ONLINE.format({ membersOnline: eR })
                                         })
                                     ]
                                 }),
-                            null != eN &&
+                            null != ex &&
                                 (0, i.jsxs)(M.Z, {
                                     align: M.Z.Align.CENTER,
                                     children: [
                                         (0, i.jsx)('div', { className: B.dotMembers }),
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-sm/normal',
-                                            children: p.Z.Messages.MEMBER_VERIFICATION_NUM_MEMBERS.format({ members: eN })
+                                            children: p.Z.Messages.MEMBER_VERIFICATION_NUM_MEMBERS.format({ members: ex })
                                         })
                                     ]
                                 })
@@ -415,41 +416,41 @@ s.Z = (e) => {
                     (0, i.jsx)(u.ModalContent, {
                         className: B.modalContent,
                         children: (0, i.jsx)(u.Sequencer, {
-                            className: o()(B.sequencer, { [B.centerContent]: 2 !== es }),
+                            className: o()(B.sequencer, { [B.centerContent]: 2 !== en }),
                             steps: [0, 1, 2],
-                            step: es,
+                            step: en,
                             children: (() => {
-                                switch (es) {
+                                switch (en) {
                                     case 0:
                                         return (0, i.jsx)(y, {
                                             headerId: t,
-                                            email: et,
-                                            password: ei,
-                                            setEmail: el,
-                                            setPassword: ea,
-                                            emailError: er,
-                                            passwordError: ed
+                                            email: el,
+                                            password: ea,
+                                            setEmail: ei,
+                                            setPassword: er,
+                                            emailError: eo,
+                                            passwordError: eu
                                         });
                                     case 1:
                                         return (0, i.jsx)(U, {
                                             headerId: t,
-                                            email: et
+                                            email: el
                                         });
                                     case 2:
                                         return (0, i.jsx)(w, {
                                             headerId: t,
                                             guildId: l,
-                                            formState: q,
-                                            updateFormState: W,
+                                            formState: W,
+                                            updateFormState: X,
                                             isPreview: V,
-                                            useReducedMotion: ef
+                                            useReducedMotion: eg
                                         });
                                 }
                             })()
                         })
                     }),
                     (() => {
-                        switch (es) {
+                        switch (en) {
                             case 0:
                                 return (0, i.jsxs)(u.ModalFooter, {
                                     className: B.footer,
@@ -457,9 +458,9 @@ s.Z = (e) => {
                                         (0, i.jsx)(u.Button, {
                                             className: B.submitButton,
                                             type: 'submit',
-                                            submitting: X,
-                                            onClick: eg,
-                                            disabled: 0 === et.length || 0 === ei.length,
+                                            submitting: K,
+                                            onClick: eh,
+                                            disabled: 0 === el.length || 0 === ea.length,
                                             children: p.Z.Messages.NEXT
                                         }),
                                         (0, i.jsx)(u.Text, {
@@ -478,20 +479,20 @@ s.Z = (e) => {
                                         (0, i.jsx)(u.Button, {
                                             className: B.submitButton,
                                             type: 'submit',
-                                            submitting: X,
-                                            onClick: eh,
+                                            submitting: K,
+                                            onClick: eC,
                                             color: u.Button.Colors.GREEN,
-                                            disabled: null == c || eR,
+                                            disabled: null == c || ef,
                                             children: p.Z.Messages.SUBMIT
                                         }),
-                                        null != $ &&
+                                        null != ee &&
                                             (0, i.jsx)(u.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'text-danger',
-                                                children: $
+                                                children: ee
                                             }),
-                                        null == $ &&
-                                            D &&
+                                        null == ee &&
+                                            k &&
                                             (0, i.jsxs)('div', {
                                                 className: B.disclaimerFooter,
                                                 children: [
@@ -500,7 +501,7 @@ s.Z = (e) => {
                                                         variant: 'text-xs/normal',
                                                         children: p.Z.Messages.MEMBER_VERIFICATION_WARNING
                                                     }),
-                                                    eE &&
+                                                    eM &&
                                                         (0, i.jsx)(u.Text, {
                                                             color: 'header-secondary',
                                                             variant: 'text-xs/normal',

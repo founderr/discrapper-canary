@@ -108,7 +108,8 @@ t.Z = (e) => {
                                 return (0, i.jsx)(T.Z, {
                                     guildId: v,
                                     inviteCode: Z,
-                                    onComplete: y
+                                    onComplete: y,
+                                    disableVerification: !0
                                 });
                         }
                     })()
